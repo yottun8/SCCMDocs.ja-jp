@@ -35,7 +35,7 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 >   
 >  -   Windows 10 Enterprise  
 > -   Windows 10 Pro  
-> -   Windows 10 Team \(Configuration Manager バージョン 1602 以降\)  
+> -   Windows 10 Team\( Configuration Manager バージョン 1602 以降\)  
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise
 
@@ -155,7 +155,7 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 
 4.  **[設定]**を開きます。  
 
-5.    **[アカウント]** > **[作業のアクセス]**が必要とするサイト システムの役割との間で信頼された通信を行うために必要です。 登録が正常に行われると、 **[企業のアプリ]**の下にアカウントが表示されます。  
+5.    [アカウント][作業のアクセス]が必要とするサイト システムの役割との間で信頼された通信を行うために必要です。 登録が正常に行われると、 **[企業のアプリ]**の下にアカウントが表示されます。  
 
 6.  アカウントをクリックし、**[同期]** をクリックすると、Configuration Manager による管理が開始します。  
 
@@ -164,7 +164,7 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 
 -   Configuration Manager コンソールを起動します。  
 
--    **[資産とコンプライアンス]** > **[概要]** > **[デバイス]**が必要とするサイト システムの役割との間で信頼された通信を行うために必要です。 登録されているデバイスが一覧に表示されます。  
+-    [資産とコンプライアンス][概要][デバイス]が必要とするサイト システムの役割との間で信頼された通信を行うために必要です。 登録されているデバイスが一覧に表示されます。  
 
 
 
