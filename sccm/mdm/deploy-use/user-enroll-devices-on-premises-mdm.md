@@ -33,7 +33,7 @@ System Center Configuration Manager オンプレミス モバイル デバイス
 >   
 >  -  Windows 10 Enterprise  
 > -   Windows 10 Pro  
-> -   Windows 10 Team \(Configuration Manager バージョン 1602 以降\)  
+> -   Windows 10 Team\( Configuration Manager バージョン 1602 以降\)  
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise
 
@@ -76,7 +76,7 @@ System Center Configuration Manager オンプレミス モバイル デバイス
 
 1.  Configuration Manager コンソールを起動します。  
 
-2.   **[資産とコンプライアンス]** > **[概要]** > **[デバイス]**が必要とするサイト システムの役割との間で信頼された通信を行うために必要です。 登録されているデバイスが一覧に表示されます。  
+2.   [資産とコンプライアンス][概要][デバイス]が必要とするサイト システムの役割との間で信頼された通信を行うために必要です。 登録されているデバイスが一覧に表示されます。  
 
 ## <a name="see-also"></a>関連項目  
  [System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスの登録](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)

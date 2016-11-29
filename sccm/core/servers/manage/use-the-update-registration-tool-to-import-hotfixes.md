@@ -69,7 +69,7 @@ ms.openlocfilehash: 176c1d7055ae8706b92886d59d8a048dd867c18b
 
      更新プログラムが登録されると、更新登録ツールを閉じることができます。  
 
-3.  Configuration Manager コンソールを開き、 **[管理]** > **[クラウド サービス]** > **[Updates and Servicing (更新プログラムとサービス)]**を選びます。 インポートされた修正プログラムは、インストールできるようになりました。 更新プログラムのインストールの詳細については、「[Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)」(System Center Configuration Manager の更新プログラムのコンソール内インストール) を参照してください。  
+3.  Configuration Manager コンソールを開き、 [管理][クラウド サービス][Updates and Servicing (更新プログラムとサービス)]を選びます。 インポートされた修正プログラムは、インストールできるようになりました。 更新プログラムのインストールの詳細については、「[Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)」(System Center Configuration Manager の更新プログラムのコンソール内インストール) を参照してください。  
 
 
 
