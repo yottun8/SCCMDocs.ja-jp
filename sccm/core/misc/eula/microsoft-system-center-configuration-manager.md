@@ -12,6 +12,7 @@ ms.assetid: e9704758-9572-49b6-a66f-fd480b9e3e20
 caps.latest.revision: 4
 author: Brenduns
 robots: noindex,nofollow
+
 ---
 # MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER
 
