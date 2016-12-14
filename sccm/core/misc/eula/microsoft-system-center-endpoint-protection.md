@@ -1,12 +1,15 @@
 ---
-title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER"
+title: "MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION | Microsoft Docs"
 ms.custom: na
 ms.date: 06/11/2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: ab0c8731-2dac-483c-bdb6-32f172f60a92
+ms.prod: configuration-manager
+ms.service:
+ms.technology:
+ - configmgr-other
+ms.assetid: e9704758-9572-49b6-a66f-fd480b9e3e20
 caps.latest.revision: 4
 caps.handback.revision: 3
 author: Brenduns
