@@ -1,18 +1,20 @@
 ---
-title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER"
+title: "MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION | Microsoft Docs"
 ms.custom: na
-ms.date: 06/11/2016
+ms.date: 10/06/2016
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: ab0c8731-2dac-483c-bdb6-32f172f60a92
+ms.prod: configuration-manager
+ms.technology: - configmgr-other
+ms.assetid: e9704758-9572-49b6-a66f-fd480b9e3e20
 caps.latest.revision: 4
-caps.handback.revision: 3
 author: Brenduns
 robots: noindex,nofollow
 ---
 # MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER
+
 **注意 :** お客様による本ソフトウェアの使用には、お客様 \(または貴社\) がマイクロソフトのサーバー ソフトウェアを取得された、またはマイクロソフトからオンライン サービスへのアクセスを取得されたライセンス契約の契約条件が適用されます。 たとえば、  
   
 -   ボリューム ライセンスのお客様またはサービス プロバイダーの場合、本ソフトウェアを使用するには、お客様のボリューム ライセンス契約またはサービス プロバイダー ライセンス契約に従う必要があります。  
