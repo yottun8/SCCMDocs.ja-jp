@@ -6,7 +6,7 @@ layout: HubPage
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.topic: hubpage
 ms.prod: configuration-manager
 ms.technology:
@@ -15,8 +15,8 @@ ms.suite: ems
 ms.assetid: a89ecd55-fe24-4f40-86c4-8a91dd683a1c
 toc_rel: /sccm/toc.json
 translationtype: Human Translation
-ms.sourcegitcommit: 06506ef41638c2c518b02b3b13ab3453fe5de5af
-ms.openlocfilehash: 2ed99aa90915903056ee43074e0d19a1e018b9a4
+ms.sourcegitcommit: a10fb140adfc1109a49760d601b5fca3d93d4b39
+ms.openlocfilehash: 690b516b6be4380b566649adacfafcc8f920373c
 
 ---
 # <a name="system-center-configuration-manager-documentation"></a>System Center Configuration Manager のドキュメント
@@ -35,7 +35,7 @@ ms.openlocfilehash: 2ed99aa90915903056ee43074e0d19a1e018b9a4
         <ul class="column column-half">
           <li><a href="/sccm/core/understand/introduction">Configuration Manager の概要</a></li>
           <li><a href="/sccm/core/get-started/evaluate-with-lab-environment">独自のラボ環境を構築して System Center Configuration Manager を評価する</a></li>
-          <li><a href="/sccm/core/plan-design/changes/whats-new-in-version-1606">System Center Configuration Manager のバージョン 1606 の新機能</a></li>
+          <li><a href="/sccm/core/plan-design/changes/whats-new-in-version-1610">System Center Configuration Manager のバージョン 1610 の新機能</a></li>
         </ul>
         <ul class="column column-half">
           <li><a href="/sccm/core/plan-design/changes/features-and-capabilities">System Center Configuration Manager の特徴と機能</a></li>
@@ -288,6 +288,43 @@ ms.openlocfilehash: 2ed99aa90915903056ee43074e0d19a1e018b9a4
               </ul>
             </section>
           </li>
+
+
+<li class="journey-step">
+            <header class="journey-step-header row">
+              <a href="/sccm/develop/core/misc/system-center-configuration-manager-sdk">
+                <div class="title column-third">
+                  <span class="step-number">8</span>
+                  <p>Configuration Manager の開発と自動化</p>
+                </div>
+                <p class="description column-two-thirds">Configuration Manager を自動化および拡張する方法について説明します。</p>
+              </a>
+            </header>
+            <section class="journey-step-elements content">
+              <ul class="row">
+                <li class="column-third">
+                  <a href="/sccm/develop/core/understand/configuration-manager-programming-fundamentals">
+                    <h3>Configuration Manager のプログラミングの基礎</h3>
+                    <p>Configuration Manager を適切にプログラムするための基本的なプログラミング技法について説明します。</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="/sccm/develop/reference/configuration-manager-reference">
+                    <h3>Configuration Manager リファレンス</h3>
+                    <p>管理対象の SMS プロバイダー ライブラリ、Configuration Manager クラス スキーマ、拡張 WMI クエリ言語 (WQL)、名前付きの値と修飾子、および Configuration Manager コンソール ライブラリの詳細について説明します。</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="https://docs.microsoft.com/powershell/sccm/configurationmanager/vlatest/configurationmanager">
+                    <h3>Configuration Manager コマンドレット</h3>
+                    <p>Configuration Manager コマンドレットのオンライン ヘルプ ファイルを提供します。各コマンドレットの詳細説明とコマンドレットの使用例が含まれています。</p>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </li>
+
+
       </section>
     </div>
     <div class="section-border">
@@ -317,6 +354,6 @@ ms.openlocfilehash: 2ed99aa90915903056ee43074e0d19a1e018b9a4
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 
