@@ -1,5 +1,5 @@
 ---
-title: "MICROSOFT SYSTEM CENTER ENDPOINT PROTECTION | Microsoft Docs"
+title: "MICROSOFT SYSTEM CENTER CONFIGURATION MANAGER | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
@@ -10,9 +10,11 @@ ms.prod: configuration-manager
 ms.service:
 ms.technology:
  - configmgr-other
-ms.assetid: e9704758-9572-49b6-a66f-fd480b9e3e20
+ms.assetid: ab0c8731-2dac-483c-bdb6-32f172f60a92
 caps.latest.revision: 4
 author: Brenduns
+ms.author: brenduns
+manager: angrobe
 robots: noindex,nofollow
 
 ---
