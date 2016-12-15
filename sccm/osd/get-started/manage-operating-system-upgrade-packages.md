@@ -1,8 +1,8 @@
 ---
-title: "オペレーティング システムのアップグレード パッケージの管理 | Configuration Manager"
+title: "オペレーティング システムのアップグレード パッケージの管理 | Microsoft ドキュメント"
 description: "System Center Configuration Manager でオペレーティング システムのアップグレード パッケージを管理する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 226e283b5d9a04d2a9e0f3ce6894a82a3683d972
+ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
+ms.openlocfilehash: 5fef04f26b12bced073332fd1f7b4e7c7bd7d398
 
 
 ---
@@ -63,7 +63,7 @@ System Center Configuration Manager のアップグレード パッケージに�
  オペレーティング システム イメージは、他のコンテンツを配布するのと同じ方法で配布ポイントに配布されます。 ほとんどの場合、オペレーティング システムを展開する前に、少なくとも 1 つの配布ポイントにオペレーティング システム イメージを配布する必要があります。 オペレーティング システム イメージを配布する手順については、「 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)」を参照してください。  
 
 ##  <a name="a-namebkmkosupgradepkgapplyupdatesa-apply-software-updates-to-an-operating-system-upgrade-package"></a><a name="BKMK_OSUpgradePkgApplyUpdates"></a> オペレーティング システム アップグレード パッケージへのソフトウェア更新プログラムの適用  
- Configuration Manager バージョン 1602 以降では、新しいソフトウェア更新プログラムをオペレーティング システム アップグレード パッケージのオペレーティング システム イメージに適用できます。 ソフトウェア更新プログラムをアップグレード パッケージに適用するには、ソフトウェア更新のインフラストラクチャをあらかじめ配置して、ソフトウェア更新プログラムを正常に同期しておく必要があります。 詳細については、「[ソフトウェアの更新の展開方法](../../sum/deploy-use/deploy-software-updates.md)」を参照してください。  
+ Configuration Manager バージョン 1602 以降では、新しいソフトウェア更新プログラムをオペレーティング システム アップグレード パッケージのオペレーティング システム イメージに適用できます。 アップグレード パッケージにソフトウェア更新プログラムを適用するには、あらかじめソフトウェアの更新のインフラストラクチャを配置し、ソフトウェア更新プログラムを正常に同期し、ソフトウェア更新プログラムをサイト サーバー上のコンテンツ ライブラリにダウンロードしておく必要があります。 詳細については、「[ソフトウェアの更新の展開方法](../../sum/deploy-use/deploy-software-updates.md)」を参照してください。  
 
  指定したスケジュールで、適用可能なソフトウェア更新プログラムをアップグレード パッケージに適用できます。 指定されたスケジュールで、Configuration Manager は選択されたソフトウェア更新プログラムをオペレーティング システム アップグレード パッケージに適用してから、更新されたアップグレード パッケージを必要に応じて配布ポイントに配布します。 インポート時点で適用されたソフトウェア更新プログラムなど、オペレーティング システム アップグレード パッケージに関する情報はサイト データベースに保管されます。 アップグレード パッケージが最初に追加された後にアップグレード パッケージに適用されたソフトウェア更新プログラムもサイト データベースに保管されます。 ソフトウェア更新プログラムをオペレーティング システム アップグレード パッケージに適用するウィザードを開始すると、アップグレード パッケージにまだ適用されていない適用可能なソフトウェア更新プログラムの一覧が取得されますので、その一覧から選択できます。 Configuration Manager は、サイト サーバー上のコンテンツ ライブラリからソフトウェア更新プログラムをコピーし、オペレーティング システム アップグレード パッケージにソフトウェア更新プログラムを適用します。  
 
@@ -95,6 +95,6 @@ System Center Configuration Manager のアップグレード パッケージに�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

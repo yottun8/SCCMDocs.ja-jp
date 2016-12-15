@@ -1,5 +1,5 @@
 ---
-title: "Windows アプリケーションの作成 |System Center Configuration Manager"
+title: "Windows アプリケーションの作成 | Microsoft Docs"
 description: "Windows デバイス用アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f776e624c7fff5f52b573e5066a6e7d20396ce91
+ms.sourcegitcommit: 557888d1f1f899e3198c430bbe5ccdd44178f824
+ms.openlocfilehash: 9c80cc42f9ce6775067a89a9f5a63c1bf4a0c7ca
 
 ---
 # <a name="create-windows-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager で Windows アプリケーションを作成する
@@ -27,9 +27,9 @@ ms.openlocfilehash: f776e624c7fff5f52b573e5066a6e7d20396ce91
 アプリケーションを作成するための System Center Configuration Manager の他の要件と手順に加えて、Windows デバイス用アプリケーションを作成および展開するときには次の考慮事項について検討する必要があります。  
 
 ## <a name="general-considerations"></a>一般的な考慮事項  
- Configuration Manager では、次のアプリの種類の展開がサポートされています。  
+ Configuration Manager では、次のアプリ ファイルの種類の展開がサポートされています。  
 
-|デバイスの種類|サポートされているファイル|  
+|デバイスの種類|サポートされているファイルの種類|  
 |-----------------|---------------------|  
 |Windows RT および Windows RT 8.1|*.appx、\*.appxbundle|  
 |モバイル デバイスとして登録された Windows 8.1 以降|*.appx、\*.appxbundle|  
@@ -38,11 +38,11 @@ ms.openlocfilehash: f776e624c7fff5f52b573e5066a6e7d20396ce91
 
 |デバイスの種類|サポートされている操作|  
 |-----------------|-----------------------|  
-|Windows 8.1 以降|利用可能、必須。 [アンインストール]|  
+|Windows 8.1 以降|利用可能、必須、アンインストール|  
 |Windows RT|利用可能、必須、アンインストール|  
 
 ## <a name="support-for-universal-windows-platform-uwp-apps"></a>ユニバーサル Windows プラットフォーム (UWP) アプリのサポート  
- Windows 10 デバイスで基幹業務アプリをインストールする場合、サイドローディング キーは不要です。 ただし、レジストリ キー **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps** は、サイドローディングを有効にするため、値は 1 である必要があります。  
+ Windows 10 デバイスで基幹業務アプリをインストールする場合、サイドローディング キーは不要です。 ただし、サイドローディングを有効にするため、レジストリ キー **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps** の値は 1 である必要があります。  
 
  このレジストリ キーが構成されていない場合は、アプリをデバイスに初めて展開する際に、Configuration Manager によってこの値が自動的に **1** に設定されます。 この値を **0**に設定した場合、Configuration Manager は値を自動的には変更することができず、基幹業務アプリの展開は失敗します。  
 
@@ -69,6 +69,6 @@ ms.openlocfilehash: f776e624c7fff5f52b573e5066a6e7d20396ce91
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

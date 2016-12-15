@@ -1,5 +1,5 @@
 ---
-title: "Android アプリケーションの作成 |System Center Configuration Manager"
+title: "Android アプリケーションの作成 | Microsoft Docs"
 description: "Android デバイス用アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,15 +16,15 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b600217338e2f0fb3b077036c59aaea13f76c0d6
+ms.sourcegitcommit: 6a28028faa5ecd7c3d3d4c055481c10467189b38
+ms.openlocfilehash: 5819613172d7ddf88133e802507e8e92c149a885
 
 ---
 # <a name="create-android-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager で Android アプリケーションを作成する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-アプリケーションを作成するための System Center Configuration Manager の他の要件と手順に加えて、Android デバイス用アプリケーションを作成および展開するときには次の考慮事項について検討する必要があります。  
+Android デバイス用アプリケーションを作成して展開するときに、以下の考慮事項について留意してください。  
 
 ## <a name="general-considerations"></a>一般的な考慮事項
 
@@ -38,10 +38,10 @@ Configuration Manager では、Android 用の次のアプリの種類の展開�
 
 |デバイスの種類|サポートされている操作|
 |-|-|
-|Android|**利用可能**、**必須** (ただし、ユーザーはインストールに同意する必要があります)、**アンインストール** (ここでも、同意が必要)。|
+|Android|**利用可能**、**必須**。 インストールとアンインストールの両方に、ユーザーが同意する必要があります。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

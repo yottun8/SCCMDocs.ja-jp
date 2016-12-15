@@ -1,5 +1,5 @@
 ---
-title: "iOS アプリケーションの作成 |System Center Configuration Manager"
+title: "iOS アプリケーションの作成 | Microsoft Docs"
 description: "iOS デバイス用アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4c3845635846cae183e81d0ddb9c8222dabd8929
+ms.sourcegitcommit: e9e34359f4412ba07b9fb49f871a1eb2d36cecf8
+ms.openlocfilehash: eb2d1245932d71bd10fd63d95a155eae7d128836
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 4c3845635846cae183e81d0ddb9c8222dabd8929
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-アプリケーションを作成するための System Center Configuration Manager の他の要件と手順に加えて、iOS デバイス用アプリケーションを作成および展開するときには次の考慮事項について検討する必要があります。  
+iOS デバイス用アプリケーションを作成して展開するときに、以下の考慮事項について留意してください。  
 
 ## <a name="general-considerations"></a>一般的な考慮事項  
  Configuration Manager では、次のアプリの種類の展開がサポートされています。  
@@ -38,13 +38,13 @@ ms.openlocfilehash: 4c3845635846cae183e81d0ddb9c8222dabd8929
 
 |デバイスの種類|サポートされている操作|  
 |-----------------|-----------------------|  
-|iOS|利用可能、必須 (ただし、ユーザーはインストールに同意する必要があります)、アンインストール|  
+|iOS|**利用可能**、**必須**。 インストールとアンインストールの両方に、ユーザーが同意する必要があります。
 
 > [!IMPORTANT]  
 >  現在、エンド ユーザーは iOS 向け Microsoft Intune 会社ポータル アプリから会社のアプリをインストールできません。 これは、iOS App Store に公開されたアプリに設けられた制限によるものです (「App Store レビューに関するガイドライン」の第 2 節をご覧ください)。 ユーザーが会社アプリ (管理されている App Store アプリ、基幹業務アプリ パッケージなど) をインストールするには、自身のデバイスで Intune Web ポータルを参照する必要があります (portal.manage.microsoft.com)。 Intune ポータル サイト アプリで有効化されるモバイル管理機能について詳しくは、「[Microsoft Intune の登録済みデバイス管理機能](https://technet.microsoft.com/library/dn600287.aspx)」をご覧ください。  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

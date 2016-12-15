@@ -1,4 +1,4 @@
-#   [理解と調査](understand/introduction.md)
+#   理解と調査
 ##  [Configuration Manager の概要](understand/introduction.md)
 ### [Configuration Manager のヘルプの検索](understand/find-help.md)
 ### [ユーザー補助機能](understand/accessibility-features.md)
@@ -19,13 +19,16 @@
 ##  [診断および使用状況データに関してよく寄せられる質問](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 
 #    [計画と設計](plan-design/get-ready.md)
-##   [製品の変更](plan-design/changes/features-and-capabilities.md)
+
+##   製品の変更
 ###  [特徴と機能](plan-design/changes/features-and-capabilities.md)
 ###  [Configuration Manager 2012 からの変更点](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [増分バージョンの新機能](plan-design/changes/whats-new-incremental-versions.md)
+###  [バージョン 1610 の新機能](plan-design/changes/whats-new-in-version-1610.md)
 ###  [バージョン 1606 の新機能](plan-design/changes/whats-new-in-version-1606.md)
 ###  [バージョン 1602 の新機能](plan-design/changes/whats-new-in-version-1602.md)
 ###  [削除された機能と非推奨の機能](plan-design/changes/removed-and-deprecated-features.md)
+
 ##   [サポートされている構成](plan-design/configs/supported-configurations.md)
 ###  [サイジングとスケールの数値](plan-design/configs/size-and-scale-numbers.md)
 ###  [サイトとサイト システムの前提条件](plan-design/configs/site-and-site-system-prerequisites.md)
@@ -37,6 +40,7 @@
 ###  [Active Directory ドメインのサポート](plan-design/configs/support-for-active-directory-domains.md)
 ###  [Windows の機能とネットワークのサポート](plan-design/configs/support-for-windows-features-and-networks.md)
 ###  [仮想環境のサポート](plan-design/configs/support-for-virtualization-environments.md)
+
 ##   [デバイス管理ソリューションの選択](plan-design/choose-a-device-management-solution.md)
 ##   [サイト階層の設計](plan-design/hierarchy/design-a-hierarchy-of-sites.md)
 ###  [SMS プロバイダーの計画](plan-design/hierarchy/plan-for-the-sms-provider.md)
@@ -47,25 +51,30 @@
 #### [プル配布ポイントの使用](plan-design/hierarchy/use-a-pull-distribution-point.md)
 #### [コンテンツ ライブラリ](plan-design/hierarchy/the-content-library.md)
 #### [コンテンツにアクセスするためのアカウントの管理](plan-design/hierarchy/manage-accounts-to-access-content.md)
+#### [Peer Cache for Configuration Manager clients](plan-design/hierarchy/client-peer-cache.md) (Configuration Manager クライアントのピア キャッシュ)
 #### [コンテンツ ソースの場所の例](plan-design/hierarchy/content-source-location-scenarios.md)
 #### [Package Transfer Manager](plan-design/hierarchy/package-transfer-manager.md)
 #### [コンテンツ管理でのネットワーク帯域幅の管理](plan-design/hierarchy/manage-network-bandwidth.md)
 #### [コンテンツ管理のセキュリティとプライバシー](plan-design/hierarchy/security-and-privacy-for-content-management.md)
 ###  [クライアントがリソースやサービスを検索する方法](plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)
 ###  [サイト管理のセキュリティとプライバシー](plan-design/hierarchy/security-and-privacy-for-site-administration.md)
+
 ##   [ネットワーク インフラストラクチャの計画](plan-design/network/configure-firewalls-ports-domains.md)
 ###  [Active Directory スキーマを拡張する](plan-design/network/extend-the-active-directory-schema.md)
 ###  [サイト システムをサポートするための Windows Server の準備](plan-design/network/prepare-windows-servers.md)
 ###  [サイト システム サーバーの Web サイト](plan-design/network/websites-for-site-system-servers.md)
 ###  [PKI 証明書の要件](plan-design/network/pki-certificate-requirements.md)
+
 ##   [診断結果と使用状況データ](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [診断結果と使用状況データの使用方法](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
 ###  [1511 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
 ###  [1602 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
 ###  [1606 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
+###  [1610 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
 ###  [診断と使用状況データを収集する方法](plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)
 ###  [診断および使用状況データを使用する方法](plan-design/diagnostics/view-diagnostics-and-usage-data.md)
 ###  [カスタマー エクスペリエンス向上プログラム (CEIP)](plan-design/diagnostics/customer-experience-improvement-program-ceip.md)
+
 ##   [Configuration Manager のセキュリティとプライバシー](plan-design/security/security-and-privacy.md)
 ###  [セキュリティの計画](plan-design/security/plan-for-security.md)
 ###  [セキュリティのベスト プラクティスとプライバシー情報](plan-design/security/security-best-practices-and-privacy-information.md)
@@ -73,10 +82,13 @@
 ###  [追加のプライバシー情報](plan-design/security/additional-privacy.md)
 ###  [セキュリティの構成](plan-design/security/configure-security.md)
 
-#    [概要](get-started/evaluate-with-lab-environment.md)
+#    作業開始
+
 ##   [ラボでの Configuration Manager の評価](get-started/evaluate-with-lab-environment.md)
 ###  [ラボのセットアップ](get-started/set-up-your-lab.md)
+
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [1611 の機能](get-started/capabilities-in-technical-preview-1611.md)
 ###  [1610 の機能](get-started/capabilities-in-technical-preview-1610.md)
 ###  [1609 の機能](get-started/capabilities-in-technical-preview-1609.md)
 ###  [1608 の機能](get-started/capabilities-in-technical-preview-1608.md)
@@ -89,6 +101,7 @@
 ###  [1601 の機能](get-started/capabilities-in-technical-preview-1601.md)
 ###  [1512 の機能](get-started/capabilities-in-technical-preview-1512.md)
 ###  [1511 の機能](get-started/capabilities-in-technical-preview-1511.md)
+
 ##   [階層間でのデータの移行](migration/migrate-data-between-hierarchies.md)
 ###  [移行の計画](migration/planning-for-migration.md)
 #### [移行の前提条件](migration/prerequisites-for-migration.md)
@@ -106,7 +119,8 @@
 ###  [移行のセキュリティとプライバシー](migration/security-and-privacy-for-migration.md)
 
 #    [サーバーおよび役割の展開](servers/deploy/start-using.md)
-##   [インフラストラクチャのインストール](servers/deploy/install/setup-downloader.md)
+
+##   インストール インフラストラクチャ
 ###  [セットアップを実行する前に](servers/deploy/install/setup-downloader.md)
 #### [セットアップ ダウンローダー](servers/deploy/install/setup-downloader.md)
 #### [前提条件チェッカー](servers/deploy/install/prerequisite-checker.md)
@@ -119,6 +133,7 @@
 #### [評価版インストールのアップグレード](servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md)
 #### [System Center Configuration Manager へのアップグレード](servers/deploy/install/upgrade-to-configuration-manager.md)
 #### [インストールを合理化するシナリオ](servers/deploy/install/scenarios-to-streamline-your-installation.md)
+
 ##   [サイトと階層の構成](servers/deploy/configure/configure-sites-and-hierarchies.md)
 ###  [サイト システムの役割を追加する](servers/deploy/configure/add-site-system-roles.md)
 #### [サイト システムの役割のインストール](servers/deploy/configure/install-site-system-roles.md)
@@ -142,7 +157,7 @@
 ###  [データベース ファイルのカスタムの場所](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [ロール ベース管理の構成](servers/deploy/configure/configure-role-based-administration.md)
 
-#    [インフラストラクチャの管理](servers/manage/maintenance-tasks.md)
+#    管理インフラストラクチャ
 ##   [メンテナンス タスク](servers/manage/maintenance-tasks.md)
 ##   [インフラストラクチャの変更](servers/manage/modify-your-infrastructure.md)
 ###  [CD.Latest フォルダー](servers/manage/the-cd.latest-folder.md)
@@ -154,10 +169,12 @@
 ###  [サービス接続ツールの使用](servers/manage/use-the-service-connection-tool.md)
 ###  [更新登録ツールの使用](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [修正プログラム インストーラーの使用](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+###  [1610 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1610.md)
 ###  [1606 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1606.md)
 ###  [1602 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1602.md)
 ###  [Current Branch バージョンのサポート](servers/manage/current-branch-versions-supported.md)
-##   [インフラストラクチャの監視](servers/manage/use-alerts-and-the-status-system.md)
+
+##   監視インフラストラクチャ
 ###  [アラートとステータス システムの使用](servers/manage/use-alerts-and-the-status-system.md)
 ###  [正常性構成証明書](servers/manage/health-attestation.md)
 ###  [階層とレプリケーション インフラストラクチャの監視](servers/manage/monitor-hierarchy-and-replication-infrastructure.md)
@@ -179,8 +196,8 @@
 #### [カスタム レポート モデルの作成](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [レポートのセキュリティとプライバシー](servers/manage/security-and-privacy-for-reporting.md)
 
-#    [クライアントの展開](clients/deploy/plan/client-installation-methods.md)
-##   [クライアント展開の計画](clients/deploy/plan/client-installation-methods.md)
+#    クライアントの展開
+##   クライアント展開の計画
 ###  [クライアント インストール方法](clients/deploy/plan/client-installation-methods.md)
 ###  [Windows コンピューターにクライアントを展開するための前提条件](clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)
 ###  [クライアントのサイト システムの役割の決定](clients/deploy/plan/determine-the-site-system-roles-for-clients.md)
@@ -191,10 +208,9 @@
 ###  [Mac コンピューターへのクライアント展開の計画](clients/deploy/plan/planning-for-client-deployment-to-mac-computers.md)
 ###  [Windows Embedded デバイスへのクライアント展開の計画](clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)
 ###  [クライアントをウェイクアップする方法の計画](clients/deploy/plan/plan-wake-up-clients.md)
-###  [インターネット ベースのクライアントを管理する計画](clients/deploy/plan/plan-for-managing-internet-based-clients.md)
 ###  [仮想デスクトップ インフラストラクチャ (VDI) でのクライアント管理の考慮事項](clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
 
-##   [クライアント展開タスク](clients/deploy/configure-client-communication-ports.md)
+##   クライアント展開タスク
 ###  [クライアント通信ポートを構成する方法](clients/deploy/configure-client-communication-ports.md)
 ###  [DNS 発行を使用して、管理ポイントを検出するようにクライアント コンピューターを構成する方法](clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md)
 ###  [クライアント設定を構成する方法](clients/deploy/configure-client-settings.md)
@@ -215,7 +231,13 @@
 ###  [Linux および UNIX クライアントを管理する方法](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [OMS へのデータの同期](clients/manage/sync-data-microsoft-operations-management-suite.md)
 
-##   [コレクション](clients/manage/collections/introduction-to-collections.md)
+##   [Manage clients on the Internet](clients/manage/manage-clients-internet.md) (インターネット上のクライアントの管理)
+###  [Plan for cloud management gateway](clients/manage/plan-cloud-management-gateway.md)(クラウド管理ゲートウェイの計画)
+###  [Set up cloud management gateway](clients/manage/setup-cloud-management-gateway.md) (クラウド管理ゲートウェイの設定)
+###  [Monitor clients on cloud management gateway](clients/manage/monitor-clients-cloud-management-gateway.md) (クラウド管理ゲートウェイでのクライアントの監視)
+###  [インターネット ベースのクライアント管理の計画](clients/manage/plan-internet-based-client-management.md)
+
+##   コレクション
 ###  [コレクションの概要](clients/manage/collections/introduction-to-collections.md)
 ### [コレクションの前提条件](clients/manage/collections/prerequisites-for-collections.md)
 ### [コレクションのベスト プラクティス](clients/manage/collections/best-practices-for-collections.md)
@@ -225,24 +247,24 @@
 ### [デバイスを自動的にコレクションごとに分類する方法](clients/manage/collections/automatically-categorize-devices-into-collections.md)
 ###  [コレクションのセキュリティとプライバシー](clients/manage/collections/security-and-privacy-for-collections.md)
 
-##   [ハードウェア インベントリ](clients/manage/inventory/hardware-inventory.md)
+##   ハードウェア インベントリ
 ###  [ハードウェア インベントリの概要](clients/manage/inventory/introduction-to-hardware-inventory.md)
 ###  [ハードウェア インベントリを拡張する方法](clients/manage/inventory/extend-hardware-inventory.md)
 ###  [ハードウェア インベントリを構成する方法](clients/manage/inventory/configure-hardware-inventory.md)
 ###  [ハイブリッド展開でモバイル デバイスのハードウェア インベントリを構成する方法](clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md)
-###  [ハードウェア インベントリの操作とメンテナンス](clients/manage/inventory/operations-and-maintenance-for-hardware-inventory.md)
+<!--- ###  [Operations and maintenance for hardware inventory](clients/manage/inventory/hardware-inventory.md) --->
 ###  [リソース エクスプローラーを使用してハードウェア インベントリを表示する方法](clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)
 ###  [Linux および UNIX のハードウェア インベントリ](clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)
 ###  [ハードウェア インベントリのセキュリティとプライバシー](clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)
 
-##   [ソフトウェア インベントリ](clients/manage/inventory/software-inventory.md)
+##   ソフトウェア インベントリ
 ###  [ソフトウェア インベントリの概要](clients/manage/inventory/introduction-to-software-inventory.md)
 ###  [ソフトウェア インベントリからフォルダーを除外する方法](clients/manage/inventory/exclude-folders-from-software-inventory.md)
 ###  [ソフトウェア インベントリを構成する方法](clients/manage/inventory/configure-software-inventory.md)
 ###  [リソース エクスプローラーを使用してソフトウェア インベントリを表示する方法](clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)
 ###  [ソフトウェア インベントリのセキュリティとプライバシー](clients/manage/inventory/security-and-privacy-for-software-inventory.md)
 
-##   [資産インテリジェンス](clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)
+##   資産インテリジェンス
 ###  [資産インテリジェンスの概要](clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)
 ###  [資産インテリジェンスの前提条件](clients/manage/asset-intelligence/prerequisites-for-asset-intelligence.md)
 ###  [資産インテリジェンスの構成](clients/manage/asset-intelligence/configuring-asset-intelligence.md)
@@ -251,7 +273,7 @@
 ###  [例となる資産インテリジェンスの検証状態の移行](clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md)
 ###  [資産インテリジェンスの一般的ライセンスのインポート ファイルの例](clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md)
 
-##   [リモート コントロール](clients/manage/remote-control/introduction-to-remote-control.md)
+##   リモート コントロール
 ###  [リモート コントロールの概要](clients/manage/remote-control/introduction-to-remote-control.md)
 ### [リモート コントロールの前提条件](clients/manage/remote-control/prerequisites-for-remote-control.md)
 ###  [リモート コントロールの構成](clients/manage/remote-control/configuring-remote-control.md)
@@ -259,7 +281,7 @@
 ### [リモート コントロール使用状況を監査する方法](clients/manage/remote-control/audit-remote-control-usage.md)
 ###  [リモート コントロールのセキュリティとプライバシー](clients/manage/remote-control/security-and-privacy-for-remote-control.md)
 
-##   [電源管理](clients/manage/power/introduction-to-power-management.md)
+##   電源管理
 ###  [電源管理の概要](clients/manage/power/introduction-to-power-management.md)
 ### [電源管理の前提条件](clients/manage/power/prerequisites-for-power-management.md)
 ### [電源管理のベスト プラクティス](clients/manage/power/best-practices-for-power-management.md)
@@ -270,12 +292,14 @@
 ###  [電源管理のセキュリティとプライバシー](clients/manage/power/security-and-privacy-for-power-management.md)
 
 ##   [クライアントをアップグレードする](clients/manage/upgrade/upgrade-clients.md)
-###  [実稼働前コレクションでクライアント アップグレードをテストする方法](clients/manage/upgrade/test-client-upgrades.md)
-###  [Windows コンピューター用クライアントをアップグレードする方法](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
-###  [Linux および UNIX サーバーのクライアントをアップグレードする方法](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
-###  [Mac コンピューター上のクライアントをアップグレードする方法](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)
+###  [Test client upgrades in a preproduction collection](clients/manage/upgrade/test-client-upgrades.md) (実稼働前コレクションでのクライアント アップグレードのテスト)
+###  [Exclude Windows clients from upgrades](clients/manage/upgrade/exclude-clients-windows.md) (アップグレードから Windows クライアントを除外する)
+###  [Upgrade Windows clients](clients/manage/upgrade/upgrade-clients-for-windows-computers.md) (Windows クライアントのアップグレード)
+###  [Upgrade Linux and UNIX clients](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md) (Linux および UNIX クライアントのアップグレード)
+###  [Upgrade Mac clients](clients/manage/upgrade/upgrade-clients-on-mac-computers.md) (Mac クライアントのアップグレード)
+###  [Upgrade analytics](clients/manage/upgrade/upgrade-analytics.md) (アップグレード分析)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

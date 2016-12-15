@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager を使用して、新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする"
+title: "System Center Configuration Manager を使用して、新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする | Microsoft ドキュメント"
 description: "System Center Configuration Manager で次の手順を実行し、PXE、OEM、またはスタンドアロン メディアを利用し、新しいコンピューターにオペレーティング システムをインストールします。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c672595a06a45bec840f17743636ef6f502af49f
+ms.sourcegitcommit: 06ade037c580d64503e6b8b5c3bf31004ab0650b
+ms.openlocfilehash: 93b3d99e7391feefc3d706f15f0fe8f8df3b75ac
 
 
 ---
@@ -33,7 +33,7 @@ ms.openlocfilehash: c672595a06a45bec840f17743636ef6f502af49f
 
 -   **インフラストラクチャの要件の計画と実装**  
 
-     オペレーティング システムを展開する前に解決しなければならないインフラストラクチャの要件として、Windows ADK、Windows 展開サービス (WDS)、Windows 展開サービス (WDS)、サポートされているハード ディスクの構成などがあります。詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](../plan-design/infrastructure-requirements-for-operating-system-deployment.md)」を参照してください。  
+     オペレーティング システムを展開する前に解決しなければならないインフラストラクチャの要件として、Windows ADK、Windows 展開サービス (WDS)、Windows 展開サービス (WDS)、サポートされているハード ディスクの構成などがあります。詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](../plan-design/infrastructure-requirements-for-operating-system-deployment.md)」を参照してください。
 
 ##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a> 構成  
 
@@ -81,6 +81,6 @@ ms.openlocfilehash: c672595a06a45bec840f17743636ef6f502af49f
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

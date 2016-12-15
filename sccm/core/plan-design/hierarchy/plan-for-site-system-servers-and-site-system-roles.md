@@ -1,5 +1,5 @@
 ---
-title: "サイト システムの役割の計画 | System Center Configuration Manager"
+title: "サイト システムの役割の計画 | Microsoft Docs"
 description: "System Center Configuration Manager の階層を計画するとき、サイト システム サーバーとサイト システムの役割を考慮します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 5f8d051a92cd74938f1a5235b37f02ebe0ff542c
+ms.sourcegitcommit: 2b00cfcec0959716d69a1605018f33d30287fee9
+ms.openlocfilehash: a2e57aac01fff3c28b4acfcf58bcd786bd3e62c4
 
 
 ---
@@ -72,6 +72,8 @@ ms.openlocfilehash: 5f8d051a92cd74938f1a5235b37f02ebe0ff542c
 -   **証明書登録ポイント** - ネットワーク デバイス登録サービスを実行するサーバーと通信することで Simple Certificate Enrollment Protocol (SCEP) を使用するデバイス証明書要求を管理する、サイト システムの役割です。  この役割は、プライマリ サイトと中央管理サイトでのみサポートされています。   単一の証明書登録ポイントにより階層全体に機能を提供できますが、証明書の要求を負荷分散するために、1 つのサイトまたは同じ階層の複数のサイトにこの役割の複数のインスタンスをインストールできます。 階層に複数のインスタンスが存在する場合、クライアントは証明書登録ポイントのいずれかに無作為に割り当てられます。  
 
      証明書登録ポイントごとに、ネットワーク デバイス登録サービスの個別のインスタンスにアクセスする必要があります。 2 つ以上の証明書登録ポイントで同じネットワーク デバイス登録サービスを使用するように構成することはできません。 また、証明書登録ポイントは、ネットワーク デバイス登録サービスを実行するサーバーと同じサーバーにインストールしないでください。  
+
+- **クラウド管理ゲートウェイ接続ポイント** - [クラウド管理ゲートウェイ](/sccm/core/clients/manage/setup-cloud-management-gateway)と通信するためのサイト システムの役割です。 
 
 -   **配布ポイント** - クライアントがダウンロードするソース ファイルを含む、サイト システムの役割です。このソースファイルには、アプリケーションのコンテンツ、ソフトウェア パッケージ、ソフトウェア更新プログラム、オペレーティング システム イメージ、ブート イメージなどがあります。 既定では、この役割は、サイトのインストール時に新しいプライマリ サイトおよびセカンダリ サイトのサイト サーバー コンピューターにインストールされますが、中央管理サイトではサポートされていません。  1 つのサポートされているサイトおよび同じ階層の複数のサイトにこの役割の複数のインスタンスをインストールできます。  詳細については、「[Fundamental concepts for content management in System Center Configuration Manager (System Center Configuration Manager のコンテンツ管理の基本的な概念)](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)」と「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」をご覧ください。  
 
@@ -150,6 +152,6 @@ ms.openlocfilehash: 5f8d051a92cd74938f1a5235b37f02ebe0ff542c
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 
