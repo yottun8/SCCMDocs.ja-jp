@@ -1,12 +1,12 @@
 ---
 
-title: "ソフトウェアの更新の計画 | System Center Configuration Manager"
+title: "ソフトウェア更新プログラムの計画 | Microsoft Docs"
 description: "System Center Configuration Manager の実稼働環境でソフトウェア更新プログラムを使用する前に、ソフトウェアの更新ポイント インフラストラクチャを計画する必要があります。"
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 69f2c9c3c098013679e12d8578a780130adb94be
+ms.sourcegitcommit: b1c68b233097ef3a744dd25b3fb919660f0b2244
+ms.openlocfilehash: 16415fb54a2cf91747990c94ffea0076effe525b
 
 
 ---
@@ -34,8 +34,16 @@ System Center Configuration Manager の実稼働環境でソフトウェア更�
 
 -   WSUS がソフトウェアの更新ポイント コンピューター上で実行されていて、ソフトウェアの更新ポイントがその他のサイト システムの役割と共存している場合、ソフトウェアの更新ポイントは、最大で 25,000 のクライアントをサポートできます。  
 
--   ソフトウェアの更新ポイントでは、最大 150,000 のクライアントをサポートできます。ただし、このクライアントの数をサポートするには、リモート コンピューターが WSUS の要件を満たしている必要があります。   
-    既定で、Configuration Manager はソフトウェアの更新ポイントを NLB クラスターとして構成することはサポートされていません。 ただし、Configuration Manager SDK を使って、NLB クラスターに最大 4 つのソフトウェアの更新ポイントを構成できます。  
+-   リモート コンピューターが WSUS の要件を満たしている場合、ソフトウェアの更新ポイントは最大クライアントを 150,000 までサポートできます。WSUS は Configuration Manager で使用し、次を構成します。
+
+    IIS アプリケーション プール:
+    - WsusPool キューの長さを 2000 に増やす
+    - WsusPool プライベート メモリの制限を 4 倍に増やすか、0 (無制限) に設定する      
+
+    ソフトウェアの更新ポイントのハードウェア要件の詳細については、「[Recommended hardware for site systems](/sccm/core/plan-design/configs/recommended-hardware#a-namebkmkscalesiesystemsa-site-systems)」 (サイト システムに推奨されるハードウェア) を参照してください。
+
+-   既定で、Configuration Manager はソフトウェアの更新ポイントを NLB クラスターとして構成することはサポートされていません。 ただし、Configuration Manager SDK を使って、NLB クラスターに最大 4 つのソフトウェアの更新ポイントを構成できます。  
+
 
 ### <a name="capacity-planning-for-software-updates-objects"></a>ソフトウェア更新オブジェクトの容量計画  
  次の容量情報を参照して、ソフトウェア更新オブジェクトの計画を立てます。  
@@ -242,7 +250,7 @@ Configuration Manager バージョン 1606 から、アクティブなソフト�
 > [!WARNING]  
 >  ベスト プラクティスとして、初めてソフトウェア更新プログラムを同期する前にすべての分類を消去します。 最初の同期の後、[ソフトウェアの更新ポイント コンポーネント] プロパティから分類を選択し、同期を再開します。  
 
-###  <a name="a-namebkmkupdateproductsa-products"></a><a name="BKMK_Update製品"></a> 製品  
+###  <a name="a-namebkmkupdateproductsa-products"></a><a name="BKMK_UpdateProducts"></a> 製品  
  各ソフトウェア更新プログラムのメタデータは、更新プログラムが適用される 1 つまたは複数の製品を定義します。 製品は、オペレーティング システムまたはアプリケーションの特定のエディションです。 製品の例として、Microsoft Windows Server 2008 があります。 製品ファミリは、個々の製品が派生する基礎となるオペレーティング システムまたはアプリケーションです。 製品ファミリの例として Microsoft Windows があり、Microsoft Windows Server 2008 はそのメンバーです。 製品ファミリまたは製品ファミリ内の個別製品を指定できます。  
 
  ソフトウェア更新プログラムが複数の製品に適用可能な状態で、少なくとも 1 つの製品の同期を選択している場合、選択されていない製品も含めてすべての製品が Configuration Manager コンソールに表示されます。 たとえば、サブスクライブしているオペレーティング システムが Windows Server 2012 だけで、ソフトウェア更新プログラムが Windows Server 2012 と Windows Server 2012 Datacenter Edition に適用される場合、サイト データベースには両方の製品が含まれます。  
@@ -269,7 +277,7 @@ Configuration Manager バージョン 1606 から、アクティブなソフト�
 
 -   置き換える方のソフトウェア更新プログラムが稼動環境での展開に承認されていない場合。  
 
-###  <a name="a-namebkmkupdatelanguagesa-languages"></a><a name="BKMK_Update言語"></a> 言語  
+###  <a name="a-namebkmkupdatelanguagesa-languages"></a><a name="BKMK_UpdateLanguages"></a> 言語  
  ソフトウェアの更新ポイントの言語設定を使用すると、ソフトウェア更新プログラムに同期される概要詳細 (ソフトウェア更新プログラムのメタデータ) の言語、およびソフトウェア更新プログラムにダウンロードされるソフトウェア更新ファイルの言語を構成できます。  
 
 #### <a name="software-update-file"></a>ソフトウェア更新ファイル  
@@ -300,6 +308,6 @@ Configuration Manager の以前のバージョンでは、Windows 8 およびそ
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 
