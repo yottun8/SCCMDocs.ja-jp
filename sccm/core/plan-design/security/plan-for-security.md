@@ -49,7 +49,7 @@ ms.openlocfilehash: f38d7275a39d16f9e6cf90334a46668fcc860bc1
 
 -   クライアントをクライアント プッシュでインストールしておらず、次のいずれかの条件が当てはまる。  
 
-    -   Active Directory スキーマが Configuration Manager 用に拡張されていない。  
+    -   Active Directory スキーマが Configuration Manager 用に拡張されていない。  
 
     -   クライアントのサイトが Active Directory Domain Services に発行されていない。  
 

@@ -197,7 +197,7 @@ Configuration Manager のバックアップ時に、この情報には、攻撃�
 
  ここでは、Configuration Manager 用の SQL Server をセキュリティで保護するときのベスト プラクティスについて説明します。  
 
- **別の SQL Server アプリケーションを実行するのに、Configuration Manager サイト データベース サーバーを使用しない**  
+ **別の SQL Server アプリケーションを実行するのに、Configuration Manager サイト データベース サーバーを使用しない**  
 
  Configuration Manager サイト データベース サーバーへのアクセスが増えると、Configuration Manager データのリスクが増加します。 Configuration Manager サイト データベースが侵害された場合、同じ SQL Server コンピューター上の他のアプリケーションも危険にさらされます。  
 

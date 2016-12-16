@@ -91,7 +91,7 @@ LTSB を使用して、以下の Windows コンピューター オペレーテ�
 
 **要件と制限事項**  
 
--   すべてのクライアント機能は、書き込みフィルターが有効化されていないサポート対象の Windows Embedded システムでサポートされます。  
+-   すべてのクライアント機能は、書き込みフィルターが有効化されていないサポート対象の Windows Embedded システムでサポートされます。  
 
 -   次のいずれかを使用するクライアントは、電源管理以外のすべての機能がサポートされます。  
 
@@ -101,7 +101,7 @@ LTSB を使用して、以下の Windows コンピューター オペレーテ�
 
     -   Unified Write Filter (UWF)  
 
--   アプリケーション カタログは、どのような Windows Embedded デバイスについてもサポートされません。  
+-   アプリケーション カタログは、どのような Windows Embedded デバイスについてもサポートされません。  
 
 -   Windows XP ベースの Windows Embedded デバイスで検出したマルウェアを監視するには、Embedded デバイスに Microsoft Windows WMI スクリプト パッケージを先にインストールしておく必要があります。 このパッケージは、Windows Embedded Target Designer を使用してインストールします。 検出したマルウェアが確実に報告されるようにするには、Embedded デバイスにファイル **WBEMDISP.DLL** および **WBEMDISP.TLB** が存在している必要があり、フォルダー **%windir%\System32\WBEM** に登録されている必要があります。  
 
@@ -120,13 +120,13 @@ LTSB を使用して、以下の Windows コンピューター オペレーテ�
 
 **要件と制限事項**  
 
--   モバイル デバイス クライアントには、0.78 MB またはクライアントをインストールする記憶領域が必要です。 モバイル デバイス上のログ記録に、最大 256 KB の追加の記憶領域が必要な場合があります。    
+-   モバイル デバイス クライアントには、0.78 MB またはクライアントをインストールする記憶領域が必要です。 モバイル デバイス上のログ記録に、最大 256 KB の追加の記憶領域が必要な場合があります。    
 
 -   これらのモバイル デバイスの機能は、プラットフォームとクライアントの種類によって異なります。 モバイル デバイス レガシ クライアントで Configuration Manager がサポートする管理機能の詳細については、「[Choose a device management solution for System Center Configuration Manager](/sccm/core/plan-design/choose-a-device-management-solution)」 (System Center Configuration Manager のデバイス管理ソリューションの選択) を参照してください。  
 
 **サポートされるオペレーティング システム:**  
 
--   Windows CE 7.0 (ARM および x86 プロセッサ)  
+-   Windows CE 7.0 (ARM および x86 プロセッサ)  
 
 **サポートされる言語:**  
 -   中国語 (簡体字、繁体字)    

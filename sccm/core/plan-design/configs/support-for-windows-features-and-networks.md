@@ -97,7 +97,7 @@ Configuration Manager では、次に示す DirectAccess を利用した操作�
 
 -   オペレーティング システムの展開  
 
--   Configuration Manager サイト間の通信  
+-   Configuration Manager サイト間の通信  
 
 -   サイト内の Configuration Manager サイト システム サーバー間の通信  
 
