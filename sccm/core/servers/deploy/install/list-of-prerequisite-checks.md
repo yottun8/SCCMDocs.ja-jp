@@ -450,7 +450,7 @@ ms.openlocfilehash: 96787d5c4ad92d86ad9172fcfacb92fe4138c7ba
 
     -   SQL Server  
 
-**セカンダリ サイトの SQL Server Express** - SQL Server Express をセカンダリ サイトのサイト サーバー コンピューターに正常にインストールできることを確認します。  
+**セカンダリ サイトの SQL Server Express** - SQL Server Express をセカンダリ サイトのサイト サーバー コンピューターに正常にインストールできることを確認します。  
 
 -   **重要度:** エラー  
 
