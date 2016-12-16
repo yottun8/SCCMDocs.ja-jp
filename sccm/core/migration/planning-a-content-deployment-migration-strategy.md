@@ -152,7 +152,7 @@ Configuration Manager コンソールで配布ポイントのアップグレー�
 
 共有配布ポイントをアップグレードしないことにした場合でも、以前の Configuration Manager 2007 配布ポイントに移行先階層の配布ポイントをインストールできます。 新しい配布ポイントをインストールする前に、まず、配布ポイントのコンピューターからすべての Configuration Manager 2007 サイト システムの役割をアンインストールする必要があります。 その際、Configuration Manager 2007 サイトがサイト サーバー コンピューターである場合は、これも含まれます。 Configuration Manager 2007 配布ポイントをアンインストールしても、配布ポイントに展開したコンテンツはコンピューターから削除されません。  
 
-###  <a name="a-namebkmkupgradessa-planning-to-upgrade-configuration-manager-2007-secondary-sites"></a><a name="BKMK_UpgradeSS"></a> Configuration Manager 2007 セカンダリ サイトへのアップグレードの計画  
+###  <a name="a-namebkmkupgradessa-planning-to-upgrade-configuration-manager-2007-secondary-sites"></a><a name="BKMK_UpgradeSS"></a> Planning to upgrade Configuration Manager 2007 secondary sites  
  移行を使用して、Configuration Manager 2007 セカンダリ サイト サーバーでホストされている共有配布ポイントをアップグレードすると、Configuration Manager は配布ポイント サイト システムの役割を移行先階層の配布ポイントにアップグレードするだけでなく、ソース階層からセカンダリ サイトをアンインストールします。 結果は、セカンダリ サイトではなく、System Center Configuration Manager 配布ポイントになります。  
 
  サイト サーバーのコンピューター上の配布ポイントがアップグレードに適合するためには、Configuration Manager が、そのコンピューターの各サイト システムの役割を含むセカンダリ サイトをアンインストールできる必要があります。 通常、Configuration Manager 2007 サーバー共有の共有配布ポイントはアップグレードすることができます。 ただし、セカンダリ サイト サーバー上にサーバー共有が存在する場合、そのコンピューター上のセカンダリ サイトおよび共有配布ポイントはアップグレードに適合していません。 これは、プロセスがセカンダリ サイトをアンインストールしようとすると、サーバー共有が追加のサイト システム オブジェクトとして扱われ、このオブジェクトをアンインストールできなくなるためです。 このシナリオでは、セカンダリ サイト サーバーで標準の配布ポイントを有効にしてから、その標準の配布ポイントにコンテンツを再配布する方法があります。 この方法ではネットワーク帯域幅を使用しません。また、完了したら、サーバー共有の配布ポイントをアンインストールし、サーバー共有を削除してから、配布ポイントとセカンダリ サイトをアップグレードすることができます。  

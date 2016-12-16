@@ -204,7 +204,7 @@ ms.openlocfilehash: dda2e3af6ae14a949af5c70f300f8c7c6772e1a8
 |アラートに対する電子メール サブスクリプションを構成する|このトピックの「 [Management tasks for alerts](#BKMK_Manage) 」セクションを参照してください。|  
 |アラートを監視する|このトピックの「 [アラートを監視する](#BKMK_MonitorAlerts)|  
 
-###  <a name="a-namebkmkmanagea-management-tasks-for-alerts"></a><a name="BKMK_Manage"></a> アラートの管理タスク  
+###  <a name="a-namebkmkmanagea-management-tasks-for-alerts"></a><a name="BKMK_Manage"></a> Management tasks for alerts  
 
 ##### <a name="to-manage-general-alerts"></a>一般的なアラートを管理するには  
 

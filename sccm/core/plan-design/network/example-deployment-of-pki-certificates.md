@@ -82,7 +82,7 @@ ms.openlocfilehash: 49dfa303453b26a64c1495a1259674e0d8a6bde2
 |Intel AMT 用証明書|Intel AMT ベースのコンピューターの帯域外管理に関する証明書には 3 つあります。AMT プロビジョニング証明書、AMT Web サーバー証明書、そしてオプションとして802.1X 有線または無線ネットーワークのクライアント認証証明書です。<br /><br /> AMT プロビジョニング証明書は、System Center Configuration Manager の外部から帯域外サービス ポイント コンピューターにインストールする必要があります。その後、帯域外サービス ポイントのプロパティでインストールした証明書を選択します。 AMT Web サーバー証明書およびクライアント認証証明書は AMT プロビジョニングおよび管理の間にインストールされます。帯域外管理コンポーネントのプロパティで構成した証明書テンプレートを選択します。<br /><br /> これらの証明書を構成する手順については、このトピックの「 [AMT 用の証明書の展開](#BKMK_AMT2008_cm2012) 」を参照してください。|  
 |Mac コンピューター用のクライアント証明書|System Center Configuration Manager の登録を使用し、構成済みの証明書テンプレートをモバイル デバイス クライアント設定として選択するときに、Mac コンピューターからこの証明書を要求してインストールすることができます。<br /><br /> この証明書を構成する手順は、このトピックの「 [Deploying the Client Certificate for Mac Computers](#BKMK_MacClient_SP1) 」を参照してください。|  
 
-##  <a name="a-namebkmkwebserver2008cm2012a-deploying-the-web-server-certificate-for-site-systems-that-run-iis"></a><a name="BKMK_webserver2008_cm2012"></a> IIS を実行するサイト システム用の Web サーバー証明書の展開  
+##  <a name="a-namebkmkwebserver2008cm2012a-deploying-the-web-server-certificate-for-site-systems-that-run-iis"></a><a name="BKMK_webserver2008_cm2012"></a> IIS を実行するサイト システム用のWeb サーバー証明書の展開  
  この証明書の展開には次の手順が含まれています。  
 
 -   証明機関での Web サーバー証明書テンプレートの作成と発行  
@@ -579,7 +579,7 @@ ms.openlocfilehash: 49dfa303453b26a64c1495a1259674e0d8a6bde2
 
 -   802.1X AMT ベース コンピューター用のクライアント認証証明書の作成と発行  
 
-###  <a name="a-namebkmkamtprovisioning2008a-creating-issuing-and-installing-the-amt-provisioning-certificate"></a><a name="BKMK_AMTprovisioning2008"></a> AMT プロビジョニング証明書の作成、発行、インストール  
+###  <a name="a-namebkmkamtprovisioning2008a-creating-issuing-and-installing-the-amt-provisioning-certificate"></a><a name="BKMK_AMTprovisioning2008"></a> Creating, Issuing, and Installing the AMT Provisioning Certificate  
  AMT ベースのコンピューターに内部ルート証明機関の証明書の拇印が設定されている場合、内部証明機関のプロビジョニング証明書を作成できます。 この条件に当てはまらず、外部証明機関を利用する必要がある場合、AMT プロビジョニング証明書を発行する企業からの指示に従います。この場合、通常はその企業の公開 Web サイトに証明書を要求します。 選択した外部 CA に応じた詳細な手順は、Intel vPro Expert Center でも確認できます。Microsoft vPro Manageability Web サイト ([http://go.microsoft.com/fwlink/?LinkId=132001](http://go.microsoft.com/fwlink/?LinkId=132001))。  
 
 > [!IMPORTANT]  
