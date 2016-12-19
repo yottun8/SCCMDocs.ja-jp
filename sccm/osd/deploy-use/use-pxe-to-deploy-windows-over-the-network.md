@@ -107,6 +107,6 @@ Configuration Manager バージョン 1606 では、PXE 対応配布ポイント
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

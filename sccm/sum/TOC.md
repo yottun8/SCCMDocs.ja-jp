@@ -1,14 +1,13 @@
-# [理解と調査](understand/software-updates-introduction.md)
-
+# 理解と調査
 ## [ソフトウェア更新プログラムの概要](understand/software-updates-introduction.md)
 ## [ソフトウェア更新プログラムに使用されるアイコン](understand/software-updates-icons.md)
 
-# [計画と設計](plan-design/plan-for-software-updates.md)
+# 計画と設計
 ## [ソフトウェア更新プログラムの計画](plan-design/plan-for-software-updates.md)
 ## [ソフトウェア更新プログラムの前提条件](plan-design/prerequisites-for-software-updates.md)
 ## [ソフトウェア更新プログラムのセキュリティとプライバシー](plan-design/security-and-privacy-for-software-updates.md)
 
-# [概要](get-started/prepare-for-software-updates-management.md)
+# 作業開始
 ## [ソフトウェア更新管理の準備](get-started/prepare-for-software-updates-management.md)
 ## [ソフトウェアの更新ポイントのインストール](get-started/install-a-software-update-point.md)
 ## [ソフトウェア更新プログラムの同期](get-started/synchronize-software-updates.md)
@@ -17,7 +16,7 @@
 ## [ソフトウェア更新の設定の管理](get-started/manage-settings-for-software-updates.md)
 ## [ソフトウェアの更新ポイントの削除](get-started/remove-a-software-update-point.md)
 
-# [展開と使用](deploy-use/deploy-software-updates.md)
+# 展開と使用
 ## [ソフトウェア更新プログラムのダウンロード](deploy-use/download-software-updates.md)
 
 ## [更新グループへのソフトウェア更新プログラムの追加](deploy-use/add-software-updates-to-an-update-group.md)
@@ -33,6 +32,6 @@
 ## [セキュリティ更新プログラムを展開するシナリオ例](deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
