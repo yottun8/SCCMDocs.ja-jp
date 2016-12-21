@@ -2,7 +2,7 @@
 title: "アプリケーション管理の計画と構成 | Microsoft Docs"
 description: "System Center Configuration Manager でアプリケーションを展開するために必要な依存関係を実装および構成します。"
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 12/13/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f1aaaf1c4fba8613b82d2c7a344a4dab572449a6
-ms.openlocfilehash: e9179a16d6fef73c7e50c3cf1dbfdc41623d1d15
+ms.sourcegitcommit: 7634d5326265d7947a01e5b83374f65911e33aeb
+ms.openlocfilehash: 3ab905192c091cb5ad013c8e0c8590597fb0422a
 
 
 ---
@@ -65,7 +65,11 @@ ms.openlocfilehash: e9179a16d6fef73c7e50c3cf1dbfdc41623d1d15
  使用するバージョンに関係なく、Windows PC に Configuration Manager クライアントをインストールすると、ソフトウェア センターが自動的にインストールされます。  
 
     > [!TIP]  
-    >  ユーザーに対して表示されるソフトウェア センターのバージョンは、Configuration Manager クライアント設定に基づきます。 これにより、コレクションに展開するカスタム クライアント設定に基づいて使用されるバージョンを柔軟に制御することができます。  
+    >  ユーザーに対して表示されるソフトウェア センターのバージョンは、Configuration Manager クライアント設定に基づきます。 これにより、コレクションに展開するカスタム クライアント設定に基づいて使用されるバージョンを柔軟に制御することができます。 
+
+    > [!IMPORTANT]
+    > 以前のバージョンのソフトウェア センターは、今後数か月の間に削除されて使用できなくなります。
+    > 新しいソフトウェア センターを使用するようにクライアントを構成するには、クライアント設定 **[コンピューター エージェント]** > **[新しいソフトウェア センターの使用]**を有効化します。 
 
 ## <a name="steps-to-install-and-configure-the-application-catalog-and-software-center"></a>アプリケーション カタログおよびソフトウェア センターのインストールと構成手順  
 
@@ -130,7 +134,7 @@ ms.openlocfilehash: e9179a16d6fef73c7e50c3cf1dbfdc41623d1d15
     詳細については、ログ ファイル、**awebsvcMSI.log** および **portlwebMSI.log** を検索してください。  
 
 ###  <a name="step-4-configure-the-client-settings-for-the-application-catalog-and-software-center"></a>ステップ 4: アプリケーション カタログおよびソフトウェア センターのクライアント設定の構成  
- この手順により、アプリケーション カタログおよびソフトウェア センターの既定のクライアント設定を階層のすべてのデバイスに適用します。 いくつかのデバイスにのみこの設定を適用するには、カスタムのクライアント設定を作成し、その特定の設定を適用するデバイスを含むコレクションに展開します。 デバイス設定をカスタマイズする方法の詳細は、「[System Center Configuration Manager でクライアント設定を構成する方法](../../core/clients/deploy/configure-client-settings.md)」の記事の「[カスタム クライアント設定を作成および展開する方法](../../core/clients/deploy/configure-client-settings.md#BKMK_CustomClientSettings)」セクションを参照してください。  
+ この手順により、アプリケーション カタログおよびソフトウェア センターの既定のクライアント設定を階層のすべてのデバイスに適用します。 いくつかのデバイスにのみこの設定を適用するには、カスタムのクライアント設定を作成し、その特定の設定を適用するデバイスを含むコレクションに展開します。 デバイス設定をカスタマイズする方法の詳細は、「[System Center Configuration Manager でクライアント設定を構成する方法](../../core/clients/deploy/configure-client-settings.md)」の記事の「[カスタム クライアント設定を作成および展開する方法](../../core/clients/deploy/configure-client-settings.md#create-and-deploy-custom-client-settings)」セクションを参照してください。  
 
 1.  Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** > **[既定のクライアント設定]** の順に選択します。  
 
@@ -224,6 +228,6 @@ ms.openlocfilehash: e9179a16d6fef73c7e50c3cf1dbfdc41623d1d15
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
