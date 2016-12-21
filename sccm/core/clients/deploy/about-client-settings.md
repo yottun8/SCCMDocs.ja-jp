@@ -1,8 +1,8 @@
 ---
-title: "クライアント設定 | System Center Configuration Manager"
+title: "クライアント設定 | Microsoft Docs"
 description: "System Center Configuration Manager の管理コンソールを使用して、クライアント設定を選択します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: cbe052891c55dd0c0d58c6e65d783314b0ec8ce9
+ms.sourcegitcommit: 809c7938968b4a6efce6ef37fe7b7baf2c9dd3e7
+ms.openlocfilehash: 1615c183c440b44084651d52bfc50be2d65c2e11
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager のクライアント設定について
@@ -27,82 +27,92 @@ ms.openlocfilehash: cbe052891c55dd0c0d58c6e65d783314b0ec8ce9
 
 System Center Configuration Manager のすべてのクライアント設定は、Configuration Manager コンソールの **[管理]** ワークスペースの **[クライアント設定]** ノードから管理できます。 Configuration Manager では、一連の既定の設定が用意されています。 既定のクライアント設定を変更すると、変更された設定が階層内のすべてのクライアントに適用されます。 カスタムのクライアント設定も構成でき、これらの設定をコレクションに割り当てると、既定のクライアント設定よりも優先されます。 クライアント設定の構成方法については、「 [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md)」を参照してください。  
 
- クライアント設定の多くはまさにその名のとおりです。 クライアント設定を構成する前に、個々のクライアント設定の情報が必要になる場合があります。個々のクライアント設定の詳細については、次のセクションを参照してください。  
+ クライアント設定の多くはまさにその名のとおりですが、そうでないものについてこちらで説明します。  
 
-##  <a name="a-namebkmkbitsa-background-intelligent-transfer"></a><a name="BKMK_BITS"></a> バックグラウンド インテリジェント転送  
+## <a name="background-intelligent-transfer"></a>バックグラウンド インテリジェント転送  
 
 -   **[BITS バックグラウンド転送の最大ネットワーク帯域幅を制限する]**  
 
-     このオプションが **[True]** または **[はい]** として構成されている場合、Configuration Manager クライアントは BITS 帯域幅調整を使用することになります。  
+   **[True]** または **[はい]** に設定されている場合、クライアントは BITS 帯域幅調整を使用します。  
 
 -   **[調整期間の開始時間]**  
 
-     BITS 調整期間を開始する時刻 (ローカル時刻) を指定します。  
+   BITS 調整期間の開始時間 (ローカル時刻)。  
 
 -   **[調整期間の終了時間]**  
 
-     BITS 調整期間を終了する時刻 (ローカル時刻) を指定します。 この値が [調整期間の開始時間 ****] と同じ場合、BITS 調整は常に有効になります。  
+  BITS 調整期間の終了時間 (ローカル時刻)。 **[調整期間の開始時間]** と同じ場合、BITS 調整は常に有効になります。  
 
 -   **[調整期間内の最大転送速度 (Kbps)]**  
 
-     指定した BITS 調整期間中に Configuration Manager クライアントで使用できる最大転送速度 (Kbps) を指定します。  
+   調整期間中にクライアントで使用できる最大転送速度を指定します。  
 
 -   **[調整期間外に BITS ダウンロードを許可する]**  
 
-     調整期間外に BITS ダウンロードを許可するには、このオプションを選択します。 このオプションを使用すると、Configuration Manager クライアントで、調整期間外に個別の BITS 設定を使用できます。  
+   Configuration Manager クライアントが、指定した調整期間外に個別の BITS 設定を使用できるようにします。  
 
 -   **[調整期間外の最大転送速度 (Kbps)]**  
 
-     指定した BITS 調整期間外に Configuration Manager クライアントで使用される最大転送速度 (Kbps) を指定します。 このオプションは、指定した期間外の BITS 調整の許可を選択した場合にのみ、構成できます。  
+   調整期間外の BITS 調整の許可を選択した場合に、BITS 調整期間外にクライアントで使用される最大転送速度です。  
 
-##  <a name="a-namebkmkclientpolicydevicesettingsa-client-policy"></a><a name="BKMK_ClientPolicyDeviceSettings"></a> クライアント ポリシー  
+## <a name="client-cache-settings"></a>クライアント キャッシュ設定
+
+- **BranchCache の構成**
+
+  バージョン 1606 以降で、クライアント コンピューターを [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache) 用に設定するために使用します。 クライアントで BranchCache のキャッシュを許可する場合は、**[BranchCache の有効化]** を **[はい]** に設定します。 
+
+- **クライアント キャッシュ サイズの構成**
+
+  Windows コンピューターのクライアント キャッシュには、アプリケーションとプログラムのインストールに使用する一時ファイルが格納されます。 **[はい]** を選択して、**[最大キャッシュ サイズ]** (MB またはディスク容量の割合) を指定します。 **[いいえ]** に設定した場合、既定サイズの 5120 MB になります。
+
+## <a name="client-policy"></a>クライアント ポリシー  
 
 -   **[クライアント ポリシーのポーリング間隔 (分)]**  
 
-     次の Configuration Manager クライアントがクライアント ポリシーをダウンロードする頻度を指定します。  
+   次の Configuration Manager クライアントがクライアント ポリシーをダウンロードする頻度を指定します。  
 
-    -   Windows コンピューター (デスクトップ、サーバー、ラップトップなど)  
+  -   Windows コンピューター (デスクトップ、サーバー、ラップトップなど)  
 
-    -   Configuration Manager に登録されたモバイル デバイス  
+  -   Configuration Manager に登録されたモバイル デバイス  
 
-    -   Mac コンピューター  
+  -   Mac コンピューター  
 
-    -   Linux または UNIX を実行しているコンピューター  
+  -   Linux または UNIX を実行しているコンピューター  
 
 -   **クライアント上でのユーザー ポリシーのポーリングを有効にする**  
 
-     この設定を **[True]** または **[はい]** として構成した場合、Configuration Manager がユーザーを検出すると、コンピューター上の Configuration Manager クライアントが、そのログオン ユーザーを対象としたアプリケーションとプログラムを受け取ります。 ユーザーの検出方法の詳細については、「[Active Directory User Discovery in Configuration Manager](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)」 (Configuration Manager での Active Directory ユーザー探索) を参照してください。  
+   **[True]** または **[はい]** に設定した場合、Configuration Manager が[ユーザーを検出](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)すると、コンピューター上のクライアントが、そのログオン ユーザーを対象としたアプリケーションとプログラムを受け取ります。  
 
-     アプリケーション カタログが、サイト サーバーからユーザーが利用可能なソフトウェアの一覧を受け取るので、アプリケーション カタログからユーザーがアプリケーションを表示、要求するために、この設定を [True **** ] または [はい **** ] に構成する必要はありません。 ただし、この設定が [False **** ] または [いいえ ****] の場合、ユーザーがアプリケーション カタログを使用する際、次のようになります。  
+   アプリケーション カタログが、サイト サーバーからユーザーが利用可能なソフトウェアの一覧を受け取るので、アプリケーション カタログからユーザーがアプリケーションを表示、要求するために、この設定を [True **** ] または [はい **** ] に構成する必要はありません。 ただし、この設定が [False **** ] または [いいえ ****] の場合、ユーザーがアプリケーション カタログを使用する際、次のようになります。  
 
-    -   アプリケーション カタログに表示されているアプリケーションはインストールできません。  
+  -   アプリケーション カタログに表示されているアプリケーションはインストールできません。  
 
-    -   ユーザーに、各自のアプリケーション承認要求に関する通知が表示されません。 その代わりに、ユーザーはアプリケーション カタログを更新して承認ステータスを確認する必要があります。  
+  -   ユーザーに、各自のアプリケーション承認要求に関する通知が表示されません。 その代わりに、ユーザーはアプリケーション カタログを更新して承認ステータスを確認する必要があります。  
 
-    -   ユーザーは、アプリケーション カタログに発行されるアプリケーションのリビジョンおよび更新を受け取りません。 ただし、ユーザーにはアプリケーション カタログのアプリケーション変更情報が表示されます。  
+  -   ユーザーは、アプリケーション カタログに発行されるアプリケーションのリビジョンおよび更新を受け取りません。 ただし、ユーザーにはアプリケーション カタログのアプリケーション変更情報が表示されます。  
 
-    -   アプリケーション カタログからクライアントにアプリケーションをインストールした後でアプリケーション展開を削除した場合、クライアントはアプリケーションがインストールされていることを最長 2 日間チェックします。  
+  -   アプリケーション カタログからクライアントにアプリケーションをインストールした後でアプリケーション展開を削除した場合、クライアントはアプリケーションがインストールされていることを最長 2 日間チェックします。  
 
-     また、この設定が [False **** ] または [いいえ ****] の場合、ユーザーは、ユーザーに展開される必要なアプリケーションや、ユーザー ポリシーに含まれているその他の管理操作を受け取りません。  
+   また、この設定が [False **** ] または [いいえ ****] の場合、ユーザーは、ユーザーに展開される必要なアプリケーションや、ユーザー ポリシーに含まれているその他の管理操作を受け取りません。  
 
-     この設定は、ユーザーのコンピューターがイントラネット上およびインターネット上にある場合に適用されます。ユーザー ポリシーをインターネット上で有効にする場合も、この設定を [True **** ] または [はい **** ] に構成する必要があります。  
+   この設定は、ユーザーのコンピューターがイントラネット上およびインターネット上にある場合に適用されます。ユーザー ポリシーをインターネット上で有効にする場合も、この設定を [True **** ] または [はい **** ] に構成する必要があります。  
 
 -   **インターネット クライアントからのユーザー ポリシー要求を有効にする**  
 
-     クライアントとサイトがインターネットベースのクライアント管理向けに構成されており、このオプションを [True **** ] または [はい **** ] に構成していて、次の両方の条件が当てはまる場合、ユーザーはコンピューターがインターネット上にあるときにユーザー ポリシーを受け取ります。  
+   クライアントとサイトがインターネットベースのクライアント管理向けに構成されており、このオプションを [True **** ] または [はい **** ] に構成していて、次の両方の条件が当てはまる場合、ユーザーはコンピューターがインターネット上にあるときにユーザー ポリシーを受け取ります。  
 
-    -   クライアント設定 [クライアント上でのユーザー ポリシーのポーリングを有効にする **** ] が [True **** ] に構成されているか、[クライアントでユーザー ポリシーを有効にする **** ] が [はい ****] に構成されている。  
+  -   クライアント設定 [クライアント上でのユーザー ポリシーのポーリングを有効にする **** ] が [True **** ] に構成されているか、[クライアントでユーザー ポリシーを有効にする **** ] が [はい ****] に構成されている。  
 
-    -   インターネットベースの管理ポイントが、Windows 認証 (Kerberos または NTLM) を使用してユーザーを正しく認証している。  
+  -   インターネットベースの管理ポイントが、Windows 認証 (Kerberos または NTLM) を使用してユーザーを正しく認証している。  
 
-     このオプションを [False **** ] または [いいえ ****] のままにしている場合、またはいずれかの条件が当てはまらない場合は、インターネット上のコンピューターはコンピューター ポリシーのみ受け取ります。 この場合は、ユーザーは、インターネットベースのアプリケーション カタログからアプリケーションを表示、要求、およびインストールできます。 この設定が [False **** ] または [いいえ **** ] になっていて、[クライアント上でのユーザー ポリシーのポーリングを有効にする **** ] が [True **** ] に構成されているか、[クライアントでユーザー ポリシーを有効にする **** ] が [はい ****] に構成されている場合、コンピューターがイントラネットに接続されるまでユーザーはユーザー ポリシーを受け取りません。  
+   このオプションを [False **** ] または [いいえ ****] のままにしている場合、またはいずれかの条件が当てはまらない場合は、インターネット上のコンピューターはコンピューター ポリシーのみ受け取ります。 この場合は、ユーザーは、インターネットベースのアプリケーション カタログからアプリケーションを表示、要求、およびインストールできます。 この設定が [False **** ] または [いいえ **** ] になっていて、[クライアント上でのユーザー ポリシーのポーリングを有効にする **** ] が [True **** ] に構成されているか、[クライアントでユーザー ポリシーを有効にする **** ] が [はい ****] に構成されている場合、コンピューターがイントラネットに接続されるまでユーザーはユーザー ポリシーを受け取りません。  
 
-     インターネットでのクライアント管理の詳細については、「[System Center Configuration Manager でのエンドポイント間の通信](../../../core/plan-design/hierarchy/communications-between-endpoints.md)」の「[インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)」を参照してください。  
+   インターネットでのクライアント管理の詳細については、「[System Center Configuration Manager でのエンドポイント間の通信](../../../core/plan-design/hierarchy/communications-between-endpoints.md)」の「[インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)」を参照してください。  
 
-    > [!NOTE]  
-    >  ユーザーからのアプリケーションの承認要求には、ユーザー ポリシーまたはユーザー認証は必要ありません。  
+  > [!NOTE]  
+  >  ユーザーからのアプリケーションの承認要求には、ユーザー ポリシーまたはユーザー認証は必要ありません。  
 
-##  <a name="a-namebkmkcompliancea-compliance-settings"></a><a name="BKMK_Compliance"></a> Compliance Settings  
+##  <a name="compliance-settings"></a>コンプライアンス設定  
 
 -   **[コンプライアンスの評価スケジュールを設定する]**  
 
@@ -110,11 +120,9 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
 -   **[ユーザー データとプロファイルを有効にする]**  
 
-     ユーザー データとプロファイルの構成項目を、階層内の Windows 8 コンピューターに展開する場合は、[ **はい** ] を選択します。  
+     [ユーザー データとプロファイル](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md)の構成項目を階層内の Windows 8 コンピューターに展開する場合は、**[はい]** を選択します。  
 
-     ユーザー データとプロファイルの詳細については、「[How to create user data and profiles configuration items in System Center Configuration Manager](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md)」 (System Center Configuration Manager でユーザー データとプロファイル構成項目を作成する方法) を参照してください。  
-
-##  <a name="a-namebkmkcomputeragentdevicesettingsa-computer-agent"></a><a name="BKMK_ComputerAgentDeviceSettings"></a> コンピューター エージェント  
+## <a name="computer-agent"></a>コンピューター エージェント  
 
 -   **既定のアプリケーション カタログ Web サイト ポイント**  
 
@@ -122,7 +130,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
     -   サイトにアプリケーション カタログ Web サイト ポイントが含まれている場合、サイトのアプリケーション カタログ Web サイト ポイントが自動的にクライアントに付与されます。  
 
-    -   HTTPS 向けに構成されているイントラネット上のアプリケーション カタログ Web サイト ポイントが、HTTPS 向けに構成されていないアプリケーション カタログ Web サイト ポイントより優先されるため、偽のサーバーからの保護が提供されます。  
+    -   HTTPS 向けに構成されているイントラネット上のアプリケーション カタログ Web サイト ポイントが、このように構成されていない Web サイト ポイントより優先されるため、偽のサーバーから保護できます。  
 
     -   クライアントがイントラネットおよびインターネットベースのクライアント管理向けに構成されている場合、ユーザーがインターネット上にある場合はインターネットベースのアプリケーション カタログ Web サイト ポイントが付与され、イントラネット上にある場合はイントラネットベースのアプリケーション カタログ Web ポイントが付与されます。  
 
@@ -247,12 +255,17 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
      構成された期限に達したときに、待機時間なしで、必要なソフトウェア更新プログラムをインストールする必要がある場合、この設定で [ **はい** ] を選択します。  
 
-##  <a name="a-namebkmkcomputerrestartdevicesettingsa-computer-restart"></a><a name="BKMK_ComputerRestartDeviceSettings"></a> コンピューターの再起動  
+-   **展開期限後の実施の猶予期間 (時間)** 
+    
+     場合によっては、必要なアプリケーション展開またはソフトウェア更新プログラムをインストールできるように、設定期限よりも長い時間をユーザーに与える必要があります。 これは通常、コンピューターが長期間オフになっていて、多数のアプリケーションや更新プログラムの展開をインストールする必要がある場合に必要になります。 たとえば、エンド ユーザーが休暇から戻って来たばかりの場合、期限切れのアプリケーションの展開がインストールされるまで、長時間待たなければならない場合があります。 この問題を解決するには、Configuration Manager クライアント設定をコレクションに展開することで、適用猶予期間を定義します。
+    猶予期間は 1 時間から 120 時間の間で設定できます。 この設定は、**[ユーザー設定に従い、この展開の実施を延期する]** 展開プロパティと組み合わせて使用します。 詳細については、[アプリケーションの展開](/sccm/apps/deploy-use/deploy-applications)に関するページを参照してください。
+
+##  <a name="computer-restart"></a>コンピューターの再起動  
  これらのコンピューター再起動設定を指定すると、再起動の一時的な通知の間隔の値および最終カウントダウンの間隔の値を、コンピューターに適用されている最短のメンテナンス ウィンドウよりも短くできます。  
 
  メンテナンス期間の詳細については、「[System Center Configuration Manager でメンテナンス期間を使用する方法](../../../core/clients/manage/collections/use-maintenance-windows.md)」を参照してください。  
 
-##  <a name="a-namebkmkendpointprotectiondevicesettingsa-endpoint-protection"></a><a name="BKMK_EndpointProtectionDeviceSettings"></a> Endpoint Protection  
+##  <a name="endpoint-protection"></a>Endpoint Protection  
 
 -   **クライアント コンピューターの Endpoint Protection クライアントを管理する**  
 
@@ -290,7 +303,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
      Configuration Manager に初期定義の更新プログラムのみをクライアント コンピューターにインストールさせる場合は、[**True**] または **[はい]** を選択します。 この設定は、定義ファイルの初回更新時に、不要なネットワーク接続を避けてネットワーク帯域幅を削減するのに役立ちます。  
 
-##  <a name="a-namebkmkhardwareinventorydevicesettingsa-hardware-inventory"></a><a name="BKMK_HardwareInventoryDeviceSettings"></a> ハードウェア インベントリ  
+##  <a name="hardware-inventory"></a>ハードウェア インベントリ  
 
 -   **カスタム MIF ファイルの最大サイズ (KB)**  
 
@@ -316,7 +329,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
     > [!NOTE]  
     >  この設定は、既定のクライアント設定でのみ使用できます。  
 
-##  <a name="a-namebkmkmeteredinternetconnetionssettingsa-metered-internet-connections"></a><a name="BKMK_MeteredInternetConnetionsSettings"></a> 従量制インターネット接続  
+##  <a name="metered-internet-connections"></a>従量制インターネット接続  
  Windows 8 クライアント コンピューターが従量制のインターネット接続を使用している場合に、Configuration Manager サイトと通信する方法を管理できます。 インターネット プロバイダーは、従量制インターネット接続を使用しているときに送受信したデータ量に基づいて課金することがあります。  
 
 > [!NOTE]  
@@ -348,7 +361,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
     -   **ブロック**: Configuration Manager クライアントは、従量制インターネット接続を使用している場合に、Configuration Manager サイトとの通信を試行しません。 これは既定値です。  
 
-##  <a name="a-namebkmkpowmgmtdevicesettingsa-power-management"></a><a name="BKMK_PowMgmtDeviceSettings"></a> 電源管理  
+##  <a name="power-management"></a>電源管理  
 
 -   **ユーザーがデバイスを電源管理対象から外せるようにする**  
 
@@ -376,7 +389,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
     > [!IMPORTANT]  
     >  この数値は、サイトの [プロパティ ****] の数値と一致する必要があります。 一方でこの数値を変更した場合、もう一方では自動的に更新されません。  
 
-##  <a name="a-namebkmkremotetoolsdevicesettingsa-remote-tools"></a><a name="BKMK_RemoteToolsDeviceSettings"></a> リモート ツール  
+##  <a name="remote-tools"></a>リモート ツール  
 
 -   **クライアントのリモート コントロールを有効にする** 」で、エラー コード「 **ファイアウォール例外プロファイル**  
 
@@ -460,7 +473,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
      ネットワーク レベルの認証を使用して、Windows Vista 以降を実行するクライアント コンピューターにリモート デスクトップ接続を確立する場合は、このより安全なオプションを選択します。 ネットワーク レベルの認証は、リモート デスクトップ接続を確立する前にユーザー認証を完了するため、最初に必要なリモート コンピューター リソースが少なくてすみます。 この方法は、悪意のあるユーザーやソフトウェアからコンピューターを保護するのに役立つため、より安全であり、サービス拒否攻撃からのリスクを軽減します。  
 
-##  <a name="a-namebkmksoftwaredeploymentdevicesettingsa-software-deployment"></a><a name="BKMK_SoftwareDeploymentDeviceSettings"></a> ソフトウェアの展開  
+## <a name="software-deployment"></a>ソフトウェアの展開  
 
 -   **展開の再評価スケジュールを指定する**  
 
@@ -471,7 +484,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
      この操作は、Configuration Manager クライアント コンピューターから開始することもできます。それには、コントロール パネルの **[Configuration Manager]** の **[アクション]** タブで、**[アプリケーション展開の評価サイクル]** アクションを選択します。  
 
-##  <a name="a-namebkmksoftinventorydevicesettingsa-software-inventory"></a><a name="BKMK_SoftInventoryDeviceSettings"></a> ソフトウェア インベントリ  
+##  <a name="software-inventory"></a>ソフトウェア インベントリ  
 
 -   **[インベントリ レポートの詳細]**  
 
@@ -524,7 +537,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
         >   
         >  [クライアント設定の構成] **** ダイアログ ボックスの [収集した全ファイルの最大サイズ (KB)] **** の値は、すべての収集されたファイルの最大サイズを示しています。 サイズがこの値に達すると、ファイルの収集は停止します。 既に収集されたファイルは保持され、サイト サーバーに送信されます。  
 
-        > [!IMPORTANT]  
+        > [!IMPORTANT]
         >  ソフトウェア インベントリをたくさんのサイズの大きなファイルを収集するよう構成すると、ネットワークとサイト サーバーのパフォーマンスに悪影響となる場合があります。  
 
          収集されたファイルを表示する方法については、「[System Center Configuration Manager でリソース エクスプローラーを使用してソフトウェア インベントリを表示する方法](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)」を参照してください。  
@@ -543,7 +556,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
     -   **インベントリされた名前:** - [新規] アイコンをクリックしてインベントリされる名前を新規で追加すると、ソフトウェア インベントリで [ **表示名** ] の一覧で選択された名前により置換されます。 置換する名前は複数追加することができます。  
 
-##  <a name="a-namebkmksoftwareupdatesdevicesettinga-software-updates"></a><a name="BKMK_SoftwareUpdatesDeviceSetting"></a> ソフトウェア更新プログラム  
+##  <a name="software-updates"></a>ソフトウェア更新プログラム  
 
 -   **クライアントのソフトウェア更新プログラムを有効にする**  
 
@@ -581,7 +594,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
      この設定を使用して、以前の設定に期間を指定します。 1 ～ 23 時間および 1 ～ 365 日の値を入力できます。 この設定の既定値は、7 日間です。  
 
-##  <a name="a-namebkmkuserdeviceaffinitydevicesettingsa-user-and-device-affinity"></a><a name="BKMK_UserDeviceAffinityDeviceSettings"></a> ユーザーとデバイスのアフィニティ  
+##  <a name="user-and-device-affinity"></a>ユーザーとデバイスのアフィニティ  
 
 -   **ユーザーとデバイスのアフィニティ使用状況のしきい値 (分)**  
 
@@ -598,23 +611,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
      収集された使用状況情報に基づいて Configuration Manager がユーザーとデバイスのアフィニティを自動構成できるようにする場合は、**[True]** または **[はい]** を選択します。  
 
-## <a name="client-cache-settings"></a>クライアント キャッシュ設定
-
-- **クライアント キャッシュ サイズの構成**
-
-  クライアント キャッシュ フォルダーは、アプリケーションとプログラムのインストールに使用される一時ファイルを格納するために、Windows コンピューターで使用されます。 バージョン 1606 以降では、**[最大キャッシュ サイズ]** 設定を使用してクライアント キャッシュ フォルダーのサイズを指定するには、**[はい]** を選択します。 **[いいえ]** に設定した場合、クライアント キャッシュ フォルダーは既定の 5120 MB に設定されます。
-
-  クライアントのインストール中に、その他のクライアント キャッシュ プロパティを設定できます。 詳細については、「 [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache)」を参照してください。
-
-- **最大キャッシュ サイズ (MB)**
-
-  バージョン 1606 以降では、クライアント キャッシュ フォルダーの最大サイズをメガバイト単位で指定します。
-
-- **最大キャッシュ サイズ (ディスクの割合)** (バージョン 1606 以降)
-
-  バージョン 1606 以降では、クライアント キャッシュ フォルダーの最大サイズをディスク サイズの割合で指定します。
-
-##  <a name="a-namebkmkmobiledevicesusersettingsa-mobile-devices"></a><a name="BKMK_MobileDevicesUserSettings"></a> モバイル デバイス  
+##  <a name="mobile-devices"></a>モバイル デバイス  
 
 -   **モバイル デバイス登録プロファイル**  
 
@@ -623,7 +620,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
     > [!IMPORTANT]  
     >  このオプションを構成する前に、モバイル デバイスの登録に使用する証明書テンプレートを構成していることを確認してください。  
 
-##  <a name="a-namebkmkenrollmentusersettingsa-enrollment"></a><a name="BKMK_登録UserSettings"></a> 登録  
+##  <a name="enrollment"></a>登録  
 
 -   **モバイル デバイス登録プロファイル**  
 
@@ -632,7 +629,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
     > [!IMPORTANT]  
     >  このオプションを構成する前に、モバイル デバイスの登録または Mac クライアント証明書の登録に使用する証明書テンプレートを構成しておきます。  
 
-##  <a name="a-namebkmkuserdeviceaffinityusersettingsa-user-and-device-affinity"></a><a name="BKMK_UserDeviceAffinityUserSettings"></a> ユーザーとデバイスのアフィニティ  
+## <a name="user-and-device-affinity"></a>ユーザーとデバイスのアフィニティ  
 
 -   **ユーザーがプライマリ デバイスを定義できるようにする**  
 
@@ -640,6 +637,6 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
