@@ -1,8 +1,8 @@
 ---
-title: "Endpoint Protection を監視する | System Center Configuration Manager"
+title: "Endpoint Protection の監視 | Microsoft Docs"
 description: "System Center Configuration Manager 階層内の Endpoint Protection を監視する方法を説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fb5b247ae3fc031cd0beea21b03a45affe3add68
+ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
+ms.openlocfilehash: 590d95f82a30167dcc0d5191feaa39ecab2b3136
 
 
 ---
@@ -25,13 +25,13 @@ ms.openlocfilehash: fb5b247ae3fc031cd0beea21b03a45affe3add68
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-**[監視]** ワークスペースの **[Endpoint Protection のステータス]** ノード、**[資産とコンプライアンス]** ワークスペースの **[Endpoint Protection]** ノード、およびレポートを使用して、Microsoft System Center 2012 Configuration Manager 階層内の Endpoint Protection を監視できます。  
+**[監視]** ワークスペースの **[セキュリティ]** の **[Endpoint Protection のステータス]** ノード、**[資産とコンプライアンス]** ワークスペースの **[Endpoint Protection]** ノード、およびレポートを使用して、Microsoft System Center Configuration Manager 階層内の Endpoint Protection を監視できます。  
 
 ##  <a name="a-namebkmk1a-how-to-monitor-endpoint-protection-by-using-the-endpoint-protection-status-node"></a><a name="BKMK_1"></a> [Endpoint Protection のステータス] ノードを使用して Endpoint Protection を監視する方法  
 
 1.  Configuration Manager コンソールで、[監視] をクリックします。 ****  
 
-2.  **[監視]** ワークスペースで、**[Endpoint Protection のステータス]** をクリックします。  
+2.  **[監視]** ワークスペースで **[セキュリティ]** を展開し、**[Endpoint Protection のステータス]** をクリックします。  
 
 3.  [コレクション] 一覧で、ステータス情報を確認するコレクションを選択します。 ****  
 
@@ -49,13 +49,13 @@ ms.openlocfilehash: fb5b247ae3fc031cd0beea21b03a45affe3add68
 
 ##  <a name="a-namebkmk2a-how-to-monitor-endpoint-protection-in-the-assets-and-compliance-workspace"></a><a name="BKMK_2"></a> [資産とコンプライアンス] ワークスペースで Endpoint Protection を監視する方法  
 
-1.  Configuration Manager コンソールで、[ **資産とコンプライアンス**] をクリックします。  
+1.  Configuration Manager コンソールで、 **[資産とコンプライアンス]**をクリックします。  
 
 2.  [資産とコンプライアンス] ワークスペースで、次のいずれかの操作を実行します。 ****  
 
     -   [デバイス] をクリックします。 **** **デバイス** ボックスの一覧、コンピューターを選択し、[クリックして、 **マルウェアの詳細** タブです。  
 
-    -   [デバイス コレクション] をクリックします。 ****  **[デバイス コレクション]** 一覧で、監視するコンピューターを含むコレクションを選んで、 **[ホーム]** タブの **[コレクション]** グループで、 **[メンバーの表示]**をクリックします。  
+    -   [デバイス コレクション] をクリックします。 ****  [デバイス コレクション] 一覧で、監視するコンピューターを含むコレクションを選んで、 [ホーム] タブの [コレクション] グループで、 [メンバーの表示]をクリックします。  
 
 3.  [<*コレクション名*\>] の一覧で、コンピューターを選択し、**[マルウェアの詳細]** タブをクリックします。  
 
@@ -84,6 +84,6 @@ ms.openlocfilehash: fb5b247ae3fc031cd0beea21b03a45affe3add68
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

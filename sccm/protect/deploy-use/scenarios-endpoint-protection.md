@@ -1,8 +1,8 @@
 ---
-title: "Endpoint Protection でマルウェアからコンピューターを保護するシナリオ | System Center Configuration Manager"
+title: "Endpoint Protection でマルウェアからコンピューターを保護するシナリオ | Microsoft Docs"
 description: "Configuration Manager で Endpoint Protection を実装してマルウェアからコンピューターを保護する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,8 +15,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d4506bbbe3533d6d9c2353f99658352ad1671a2f
+ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
+ms.openlocfilehash: 2cdc57b766b18a6fdf21ec8748172c12b11b08db
 
 
 ---
@@ -72,12 +72,12 @@ ms.openlocfilehash: d4506bbbe3533d6d9c2353f99658352ad1671a2f
 |Windows ファイアウォール ポリシーの作成ウィザードを使用して、ドメイン プロファイル用の次の設定を構成してポリシーを作成します。<br /><br /> 1) **Windows ファイアウォールを有効にする**: **はい**<br /><br /> 2)<br />                    **Windows ファイアウォールが新しいプログラムをブロックしたときにユーザーに通知する**: **はい**|「[System Center Configuration Manager の Endpoint Protection 用 Windows ファイアウォール ポリシーを作成および展開する方法](../../protect/deploy-use/create-windows-firewall-policies.md)」を参照してください。|  
 |新しいファイアウォール ポリシーを、先に作成した**「Endpoint Protection によって保護されたすべてのコンピューター」**コレクションに展開します。|「[System Center Configuration Manager の Endpoint Protection 用 Windows ファイアウォール ポリシーを作成および展開する方法](create-windows-firewall-policies.md)」を参照してください。|  
 |Endpoint Protection に関して利用可能な管理タスクを使用して、マルウェア対策および Windows ファイアウォールのポリシーの管理、必要に応じたオンデマンドのコンピューター スキャンの実行、コンピューターにおける最新の定義の自動ダウンロード、マルウェアが検出されるときに追加実行する操作の指定を行います。|「[System Center Configuration Manager での Endpoint Protection のためのマルウェア対策ポリシーとファイアウォール設定の管理方法](endpoint-antimalware-firewall.md)」を参照してください。|  
-|次の方法によって、Endpoint Protection の状態、および Endpoint Protection が実行する処置を監視します。<br /><br /> 1) **[監視]** ワークスペースの **[System Center 2012 Endpoint Protection の状態]** ノードを使用する。<br /><br /> 2) **[資産とコンプライアンス]** ワークスペースの **[Endpoint Protection]** ノードを使用する。<br /><br /> 3) Configuration Manager の組み込みレポートを使用する。|「[System Center Configuration Manager で Endpoint Protection を監視する方法](monitor-endpoint-protection.md)」を参照してください。|  
+|次の方法によって、Endpoint Protection の状態、および Endpoint Protection が実行する処置を監視します。<br /><br /> 1) **[監視]** ワークスペースの **[セキュリティ]** で **[Endpoint Protection のステータス]** ノードを使用する。<br /><br /> 2) **[資産とコンプライアンス]** ワークスペースの **[Endpoint Protection]** ノードを使用する。<br /><br /> 3) Configuration Manager の組み込みレポートを使用する。|「[System Center Configuration Manager で Endpoint Protection を監視する方法](monitor-endpoint-protection.md)」を参照してください。|  
 
  John は、Endpoint Protection が正常に実装されたことを上司に報告し、ウッドグローブ銀行のコンピューターが、上司によって指示されたビジネス要件に従ってマルウェアから保護されていることを伝えます。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

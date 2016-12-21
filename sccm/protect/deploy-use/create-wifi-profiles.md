@@ -2,7 +2,7 @@
 title: "Wi-Fi プロファイルを作成する | Microsoft Docs"
 description: "System Center Configuration Manager の Wi-Fi プロファイルを使用して、ワイヤレス ネットワーク設定を組織内のユーザーに展開する方法について説明します。"
 ms.custom: na
-ms.date: 12/04/2016
+ms.date: 12/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: e433fc450a2d033c24bc37333dd59fdec41dcdb6
-ms.openlocfilehash: c629d1bf8d17573cdbde783b4ec3264bed3f4b1e
+ms.sourcegitcommit: 22a74f3b12fe4f4559b682a8fcb287863a7686af
+ms.openlocfilehash: 1262cb7d524fdce21f778e2179275bd177e9330f
 
 
 ---
@@ -47,7 +47,7 @@ System Center Configuration Manager の Wi-Fi プロファイルを使用して�
 
 -   iOS 5、iOS 6、iOS 7 および iOS 8 を実行する iPad デバイス  
 
--   バージョン 4 を実行する Android デバイス  
+-   バージョン 4 以降を実行する Android デバイス
 
 > [!IMPORTANT]  
 >  プロファイルを Android、iOS、Windows Phone、および登録されている Windows 8.1 以降の各デバイスに展開するには、これらのデバイスを Microsoft Intune に登録する必要があります。 デバイスの登録方法については、「[管理するデバイスを Intune に登録する](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)」を参照してください。  
@@ -136,6 +136,6 @@ System Center Configuration Manager の Wi-Fi プロファイルを使用して�
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

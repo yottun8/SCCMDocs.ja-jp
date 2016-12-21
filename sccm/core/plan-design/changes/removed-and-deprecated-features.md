@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c899b4beaa2aae4eb609291dca0e23f3c266627a
-ms.openlocfilehash: 294166af3d5c6062e3508249c767779876b23931
+ms.sourcegitcommit: ffebee1e85008611a9841dc849bea735d15a88c6
+ms.openlocfilehash: 888b6de9fd2b70e8b4f58e32cca7cf5e615d1dca
 
 
 ---
@@ -51,7 +51,8 @@ ms.openlocfilehash: 294166af3d5c6062e3508249c767779876b23931
 |-|-|-|  
 |ネットワーク アクセス保護 (NAP) - System Center 2012 Configuration Manager の機能|2015/7/10|バージョン 1511|  
 |帯域外管理 - System Center 2012 Configuration Manager の機能|2015/10/16|バージョン 1511|
-|タスク シーケンス: <br /> - ディスクをダイナミックに変換 <br /> - 展開ツールのインストール |11/18/2016|2017 年 6 月 1 日以降にリリースされた最初の更新プログラムでこれらのタスク シーケンスのサポートは終了します|  
+|タスク シーケンス: <br /> - ディスクをダイナミックに変換 <br /> - 展開ツールのインストール |11/18/2016|2017 年 6 月 1 日以降にリリースされた最初の更新プログラムでこれらのタスク シーケンスのサポートは終了します|
+|新しいソフトウェア センターは現代的な新しい外観へと一新され、Silverlight を使用するアプリケーション カタログにしか表示されなかったアプリ (ユーザーが利用できるアプリ) が、ソフトウェア センターの **[アプリケーション]** タブに表示されるようになりました。 アプリケーション カタログには、ソフトウェア センターの **[インストールのステータス]** タブの下のリンクを使用してアクセスできます。<br><br>以前のバージョンのソフトウェア センターは、今後数か月の間に削除されて使用できなくなります。<br><br>新しいソフトウェア センターを使用するようにクライアントを構成するには、クライアント設定 **[コンピューター エージェント]** > **[新しいソフトウェア センターの使用]**を有効化します。<br><br>ソフトウェア センターの詳細については、「[System Center Configuration Manager のアプリケーション管理の計画と構成](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management)」を参照してください。|2016/12/13|後日発表| 
 
  **非推奨のサーバー オペレーティング システム:**  
 
@@ -111,6 +112,6 @@ ms.openlocfilehash: 294166af3d5c6062e3508249c767779876b23931
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

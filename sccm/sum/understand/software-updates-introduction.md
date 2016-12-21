@@ -1,6 +1,6 @@
 ---
 
-title: "ソフトウェア更新プログラムの概要 | Configuration Manager"
+title: "ソフトウェア更新プログラムの概要 | Microsoft Docs"
 description: "System Center Configuration Manager でのソフトウェア更新プログラムの基礎について説明します。"
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e41f91b9f796cb6a1a8eb2a500c7f615e07d60ac
+ms.sourcegitcommit: d8cace9edd58e8fa438dbb43e54e57cd0dc55d2b
+ms.openlocfilehash: 2904b904bbaf155f016f55fbd36af80308a42d76
 
 
 
@@ -29,10 +29,10 @@ System Center Configuration Manager のソフトウェア更新プログラム�
 ご使用の環境でのソフトウェア更新プログラムの展開方法を示したサンプル シナリオについては、「[Example scenario to deploy security software updates](../deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)」(セキュリティ ソフトウェア更新プログラムを展開するためのサンプル シナリオ) を参照してください。  
 
 ##  <a name="a-namebkmksynchronizationa-software-updates-synchronization"></a><a name="BKMK_Synchronization"></a> ソフトウェア更新プログラムの同期  
- Configuration Manager でのソフトウェア更新プログラムの同期では、Microsoft Update を使用してソフトウェア更新プログラムのメタデータを取得します。 最上位サイト (中央管理サイトまたはスタンドアロン プライマリ サイト) は、スケジュールに従って、または Configuration Manager コンソールで手動で同期を開始した際に、Microsoft Update と同期します。 Configuration Manager で、最上位サイトでのソフトウェア更新プログラムの同期が完了すると、子サイトでのソフトウェア更新プログラムの同期が開始されます (子サイトが存在する場合)。 各プライマリ サイトまたはセカンダリ サイトで同期が完了すると、クライアント コンピューターにソフトウェアの更新ポイントの場所を通知するサイト全体のポリシーが作成されます。  
+ Configuration Manager でのソフトウェア更新プログラムの同期では、Microsoft Update に接続してソフトウェア更新プログラムのメタデータを取得します。 最上位サイト (中央管理サイトまたはスタンドアロン プライマリ サイト) は、スケジュールに従って、または Configuration Manager コンソールで手動で同期を開始した際に、Microsoft Update と同期します。 Configuration Manager で、最上位サイトでのソフトウェア更新プログラムの同期が完了すると、子サイトでのソフトウェア更新プログラムの同期が開始されます (子サイトが存在する場合)。 各プライマリ サイトまたはセカンダリ サイトで同期が完了すると、クライアント コンピューターにソフトウェアの更新ポイントの場所を通知するサイト全体のポリシーが作成されます。  
 
 > [!NOTE]  
->  ソフトウェア更新プログラムは、既定ではクライアント設定で有効です。 ただし、[ **クライアントのソフトウェア更新プログラムを有効にする** ] クライアント設定を [ **いいえ** ] に設定して、コレクションまたは既定の設定でソフトウェア更新プログラムを無効にすると、ソフトウェアの更新ポイントの場所は、関連付けられたクライアントに送信されません。 詳細については、「[software updates client settings](../../core/clients/deploy/about-client-settings.md#BKMK_SoftwareUpdatesDeviceSetting)」(ソフトウェア更新プログラムのクライアント設定) を参照してください。  
+>  ソフトウェア更新プログラムは、既定ではクライアント設定で有効です。 ただし、[ **クライアントのソフトウェア更新プログラムを有効にする** ] クライアント設定を [ **いいえ** ] に設定して、コレクションまたは既定の設定でソフトウェア更新プログラムを無効にすると、ソフトウェアの更新ポイントの場所は、関連付けられたクライアントに送信されません。 詳細については、「[software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates)」(ソフトウェア更新プログラムのクライアント設定) を参照してください。  
 
  ポリシーを受信した後、クライアントは、ソフトウェア更新プログラムのコンプライアンス対応スキャンを開始し、情報を Windows Management Instrumentation (WMI) に書き込みます。 コンプライアンス情報は、次に管理ポイントに送信され、そこからサイト サーバーに送信されます。 コンプライアンス対応評価の詳細については、このトピックの「 [Software updates compliance assessment](#BKMK_SUMCompliance) 」セクションを参照してください。  
 
@@ -132,11 +132,11 @@ System Center Configuration Manager のソフトウェア更新プログラム�
 
  スキャン スケジュールも含め、ソフトウェア更新プログラムのコンプライアンス対応のスキャンは、次の方法で開始できます。  
 
--   **ソフトウェア更新プログラムのスキャンのスケジュール**: ソフトウェア更新プログラムのコンプライアンス対応のスキャンは、ソフトウェアの更新クライアント エージェント設定で構成されるスキャン スケジュールで指定された時刻に実行されます。 ソフトウェア更新プログラムのクライアント設定の構成方法の詳細については、「[software updates client settings](../../core/clients/deploy/about-client-settings.md#BKMK_SoftwareUpdatesDeviceSetting)」(ソフトウェア更新プログラムのクライアント設定) を参照してください。  
+-   **ソフトウェア更新プログラムのスキャンのスケジュール**: ソフトウェア更新プログラムのコンプライアンス対応のスキャンは、ソフトウェアの更新クライアント エージェント設定で構成されるスキャン スケジュールで指定された時刻に実行されます。 ソフトウェア更新プログラムのクライアント設定の構成方法の詳細については、「[software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates)」(ソフトウェア更新プログラムのクライアント設定) を参照してください。  
 
 -   **Configuration Manager のプロパティの操作**: ユーザーは、クライアント コンピューターの **[Configuration Manager のプロパティ]** ダイアログ ボックスの **[操作]** タブから **[ソフトウェア更新プログラムのスキャン サイクル]** 操作または **[ソフトウェア更新プログラムの展開評価サイクル]** 操作を開始できます。  
 
--   **展開の再評価スケジュール**: ソフトウェア更新プログラムのコンプライアンス対応の展開評価とスキャンは、ソフトウェアの更新クライアント エージェント設定で構成される展開再評価スケジュールで指定された時刻に実行されます。 ソフトウェア更新プログラムのクライアント設定の詳細については、「[software updates client settings](../../core/clients/deploy/about-client-settings.md#BKMK_SoftwareUpdatesDeviceSetting)」(ソフトウェア更新プログラムのクライアント設定) を参照してください。  
+-   **展開の再評価スケジュール**: ソフトウェア更新プログラムのコンプライアンス対応の展開評価とスキャンは、ソフトウェアの更新クライアント エージェント設定で構成される展開再評価スケジュールで指定された時刻に実行されます。 ソフトウェア更新プログラムのクライアント設定の詳細については、「[software updates client settings](../../core/clients/deploy/about-client-settings.md#software-updates)」(ソフトウェア更新プログラムのクライアント設定) を参照してください。  
 
 -   **更新プログラム ファイルのダウンロード前**: クライアント コンピューターが新しい必須の展開の割り当てポリシーを受信すると、ソフトウェア更新クライアント エージェントは、ソフトウェア更新プログラム ファイルをローカル クライアント キャッシュにダウンロードします。 ソフトウェア更新プログラム ファイルをダウンロードする前に、クライアント エージェントは、スキャンを開始し、ソフトウェア更新プログラムがまだ必要であることを確認します。  
 
@@ -285,6 +285,6 @@ System Center Configuration Manager のソフトウェア更新プログラム�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

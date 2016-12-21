@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX デバイスの構成項目を作成する | System Center Configuration Manager"
-description: "System Center Configuration Manager の Android と Samsung KNOX の構成項目を使用してデバイスの設定を管理します。"
+title: "System Center Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX Standard デバイスの構成項目を作成する | Microsoft Docs"
+description: "System Center Configuration Manager の Android と Samsung KNOX Standard の構成項目を使用してデバイスの設定を管理します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/14/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,20 +17,18 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 8d676d31d519b7b6099c878d94b4c81f1c972887
+ms.sourcegitcommit: d023df79e0bcb7d5583224802976a5059c4ee753
+ms.openlocfilehash: c699c9c807f864fe161255522a8d694ab71d1a4e
 
 
 ---
-# <a name="create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-system-center-configuration-manager-client"></a>System Center Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX デバイスの構成項目を作成する
+# <a name="create-configuration-items-for-android-and-samsung-knox-standard-devices-managed-without-the-system-center-configuration-manager-client"></a>System Center Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX Standard デバイスの構成項目を作成する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
+System Center Configuration Manager の **Android および Samsung KNOX** 構成項目を使用して、Microsoft Intune に登録されているか、Configuration Manager によってオンプレミスで管理されている Android デバイスおよび Samsung KNOX Standard デバイスの設定を管理します。  
 
-
- System Center Configuration Manager の **Android および Samsung KNOX** 構成項目を使用して、Microsoft Intune に登録されているか、Configuration Manager によって内部管理されている Android デバイスおよび Samsung KNOX デバイスの設定を管理します。  
-
-## <a name="create-an-android-and-samsung-knox-configuration-item"></a>Android および Samsung KNOX 構成項目を作成する  
+## <a name="create-an-android-and-samsung-knox-standard-configuration-item"></a>Android および Samsung KNOX Standard 構成項目を作成する  
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[コンプライアンス設定]** > **[構成項目]** の順にクリックします。  
 
@@ -42,9 +40,9 @@ ms.openlocfilehash: 8d676d31d519b7b6099c878d94b4c81f1c972887
 
 6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、[**カテゴリ**] をクリックします。  
 
-7.  [**サポートされているプラットフォーム**] ページで、構成項目を評価する特定の Android または Samsung KNOX プラットフォームを選択します。  
+7.  **[サポートされているプラットフォーム]** ページで、構成項目を評価する特定の Android または Samsung KNOX Standard プラットフォームを選択します。  
 
-8.  [**デバイスの設定**] ページで、構成する設定グループを選択します。 このトピックの「 [Android と Samsung KNOX の構成項目設定のリファレンス](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-and-samsung-knox-configuration-item-settings-reference) 」で詳細情報を確認し、 **[次へ]**をクリックします。  
+8.  [**デバイスの設定**] ページで、構成する設定グループを選択します。 このトピックの「[Android および Samsung KNOX Standard 構成項目の設定のリファレンス](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-and-samsung-knox-configuration-item-settings-reference)」で詳細情報を確認し、**[次へ]** をクリックします。  
 
     > [!TIP]  
     >  必要な設定が一覧にない場合は、 **[既定の設定グループに含まれない追加の設定を構成する]**チェック ボックスをオンにします。  
@@ -72,14 +70,14 @@ ms.openlocfilehash: 8d676d31d519b7b6099c878d94b4c81f1c972887
 
  新しい構成項目は、 **[資産とコンプライアンス]** ワークスペースの **[構成項目]** ノードに表示されます。  
 
-##  <a name="android-and-samsung-knox-configuration-item-settings-reference"></a>Android と Samsung KNOX の構成項目設定のリファレンス  
+##  <a name="android-and-samsung-knox-standard-configuration-item-settings-reference"></a>Android および Samsung KNOX Standard 構成項目の設定のリファレンス  
 
 ### <a name="password"></a>パスワード  
- これらの設定は Android と Samsung KNOX の両方のデバイスに適用されます。  
+ 次の設定は、Android と Samsung KNOX Standard の両方のデバイスに適用されます。  
 
 |設定|説明|  
 |-------------|-------------|  
-|**モバイル デバイスのパスワードの設定が必要**|サポート対象デバイスのパスワードが必要です。|  
+|**デバイスのパスワードの設定が必要**|サポート対象デバイスのパスワードが必要です。|  
 |**パスワードの最小文字数**|パスワードの最小の長さ。|  
 |**パスワードの有効期限 (日数)**|パスワードの変更が必要になるまでの日数。|  
 |**記憶するパスワードの数**|以前に使用したパスワードを再利用できないようにします。|  
@@ -87,42 +85,83 @@ ms.openlocfilehash: 8d676d31d519b7b6099c878d94b4c81f1c972887
 |**デバイスをロックするまでのアイドル時間**|使用されていない場合に、デバイスがロックされるまでの時間を選びます。|
 |**パスワードの品質**|必要なレベルのパスワードの複雑さと、生体認証デバイスを使用できるかどうかを選択します。|  
 |**Smart Lock と他の信頼のエージェントを許可する**|互換性のある Android デバイスで Smart Lock 機能が制御できるようになります。 信頼エージェントとも呼ばれるこの電話機能では、デバイスが特定の Bluetooth デバイスに接続したときや、NFC タグの近くにある場合など、信頼できる場所にある場合、デバイスのロック画面のパスワードを無効化またはバイパスすることができます。 この設定を使用して、エンド ユーザーが Smart Lock を構成することを禁止できます。|
+|ロック解除用のフィンガープリント (KNOX 5.0+)|互換性のあるデバイスのロック解除にユーザーがフィンガープリントを使用できるようにします。|
 
 ###  <a name="device"></a>デバイス  
- これらの設定は、Samsung KNOX デバイスのみに適用されます。  
+ 次の設定は、Samsung KNOX Standard デバイスのみに適用されます。  
 
 |設定の名前|説明|  
-|------------------|-------------|  
+|------------------|-------------|
+|**音声ダイヤル**|デバイスの音声ダイヤル機能を有効または無効にします。|
+|**音声アシスタント**|デバイスで音声アシスタント ソフトウェアを使用できるようにします。|
+|**画面の取り込み**|ユーザーが画面のコンテンツを画像として取り込めるようにします。|
+|**診断データの送信**|デバイスによる Google への診断情報の送信を許可します。|
+|**位置情報**|デバイスによる場所情報の使用を許可します。|
+|**コピーと貼り付け**|デバイスでコピーと貼り付け機能を使用できるようにします。|  
 |**出荷時の設定に戻す**|ユーザーがデバイスを出荷時の設定に戻せるようにします。|  
-|**アプリケーション間でのクリップボードの共有**|クリップボードを使用してアプリ間でコピーと貼り付けを実行します。|  
+|**アプリケーション間でのクリップボードの共有**|クリップボードを使用してアプリ間でコピーと貼り付けを実行します。|
+|**Bluetooth**|デバイスの Bluetooth 機能を使用できるようにします。|
+
+### <a name="store"></a>ストア
+|設定|説明|  
+|-------------|-------------|  
+|**アプリケーション ストア**|デバイスの Google Play ストア アプリにアクセスできるようにします。|
+
+### <a name="browser"></a>ブラウザー
+|設定|説明|  
+|-------------|-------------| 
+|**Web ブラウザーを許可する**|デバイスの既定の Web ブラウザーを使用できるようにするかどうかを指定します。|
+|**オートフィル**|Web ブラウザーのオートフィル機能を使用できるようにします。|
+|**アクティブ スクリプト**|デバイスの Web ブラウザーでアクティブ スクリプトを使用できるようにします。|
+|**ポップアップ ブロック**|Web ブラウザーでポップアップ ブロックを使用できるようにします。|
+|**Cookie**|デバイスの Web ブラウザーで Cookie を使用できるようにします。|
 
 ### <a name="cloud"></a>クラウド  
- これらの設定は、Samsung KNOX デバイスのみに適用されます。  
+ 次の設定は、Samsung KNOX Standard デバイスのみに適用されます。  
 
 |設定|説明|  
 |-------------|-------------|  
 |**Google へのバックアップ**|Google へのバックアップを使用できるようにします。|  
 |**Google アカウントの自動同期**|Google アカウントの設定を自動的に同期できるようにします。|  
 
+
+
 ### <a name="security"></a>セキュリティ  
 
 |設定|説明|  
 |-------------|-------------|  
-|**カメラ**|デバイスのカメラを使用できるようにします。<br /><br /> Android と Samsung KNOX のデバイスに適用されます。|  
-|**YouTube**|デバイスで YouTube アプリを使用できるようにします。<br /><br /> Samsung KNOX デバイスのみに適用されます。|  
-|**電源オフ**|デバイスの電源をオフにできるようにします。<br /><br /> Samsung KNOX デバイスのみに適用されます。|  
+|**SMS と MMS メッセージング**|デバイスで SMS と MMS メッセージングを使用できるようにします。|
+|**リムーバブル記憶域**|デバイスで SD カードなどのリムーバブル記憶域を使用できるようにします。|
+|**カメラ**|デバイスのカメラを使用できるようにします。<br /><br /> Android デバイスと Samsung KNOX Standard デバイスに適用されます。|  
+|**近距離無線通信 (NFC)**|近距離無線通信 (デバイスでサポートされている場合) を使用した操作を許可します。|
+|**YouTube**|デバイスで YouTube アプリを使用できるようにします。<br /><br /> Samsung KNOX Standard デバイスのみに適用されます。|  
+|**電源オフ**|デバイスの電源をオフにできるようにします。<br /><br /> Samsung KNOX Standard デバイスのみに適用されます。| 
+
+### <a name="roaming"></a>ローミング 
+|設定|説明|  
+|-------------|-------------|
+|**音声通話ローミング**|デバイスが移動体通信ネットワーク上にある場合の音声通話ローミングを許可します。|
+|**データ ローミング**|デバイスが移動体通信ネットワーク上にある場合のデータ ローミングを許可します。|
 
 ### <a name="encryption"></a>暗号化  
- これらの設定は Android と Samsung KNOX の両方のデバイスに適用されます。  
+ 次の設定は、Android と Samsung KNOX Standard の両方のデバイスに適用されます。  
 
 |設定|説明|  
 |-------------|-------------|  
+|**メモリ カードの暗号化**|デバイスのメモリ カードを暗号化する必要があるかどうかを指定します。|
 |**デバイスのファイルの暗号化**|モバイル デバイス上のファイルを必ず暗号化するようにします。|  
 
-### <a name="kiosk-mode-samsung-knox-only"></a>キオスク モード (Samsung KNOX のみ)  
+### <a name="wireless-communications"></a>ワイヤレス通信
+|設定|説明|  
+|-------------|-------------|
+|**ワイヤレス ネットワーク接続**|デバイスの Wi-Fi 機能を使用できるようにします。|
+|**Wi-Fi テザリング**|デバイスで Wi-Fi テザリングを使用できるようにします。|
+
+
+### <a name="kiosk-mode-samsung-knox-standard-only"></a>キオスク モード (Samsung KNOX Standard のみ)  
  キオスク モードでは、特定の機能のみ実行できるようにデバイスをロックできます。 たとえば、指定した 1 つの管理対象アプリの実行のみをデバイスに許可することや、デバイスのボリューム ボタンを無効にすることができます。 これらの設定は、デバイスのデモ モデルや、POS デバイスなどの 1 つの機能の実行専用のデバイス向けに使用できます。  
 
-#### <a name="to-configure-kiosk-mode-for-a-samsung-knox-device"></a>Samsung KNOX デバイスのキオスク モードを構成する方法  
+#### <a name="to-configure-kiosk-mode-for-a-samsung-knox-standard-device"></a>Samsung KNOX Standard デバイスのキオスク モードを構成する方法  
 
 **[構成項目の作成ウィザード]** の **[Samsung KNOX デバイス用にキオスク モードの設定を構成します]** ページで、次の情報を指定します。  
 
@@ -148,7 +187,7 @@ ms.openlocfilehash: 8d676d31d519b7b6099c878d94b4c81f1c972887
     |**削除**|選択したアプリを一覧から削除します。|  
     |**[インポート]**|コンマ区切り値ファイルで指定したアプリの一覧をインポートします。 ファイルの形式、アプリケーション名、発行者、アプリの URL を使用します。|  
 
-2.  終了したら、 **[次へ]**をクリックします。  
+2.  終了したら、 **[次へ]**をクリックします。 準拠アプリと非準拠アプリの設定を含む構成項目を、ユーザーのコレクションに展開する必要があります。
 
  次のレポートのいずれかを使用して、準拠アプリと非準拠アプリを監視できます。  
 
@@ -160,6 +199,6 @@ ms.openlocfilehash: 8d676d31d519b7b6099c878d94b4c81f1c972887
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
