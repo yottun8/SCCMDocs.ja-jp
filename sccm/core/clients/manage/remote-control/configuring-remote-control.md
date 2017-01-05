@@ -2,7 +2,7 @@
 title: "リモート コントロールの構成 |Microsoft Docs"
 description: "System Center Configuration Manager でリモート コントロールをセットアップします。"
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 809c7938968b4a6efce6ef37fe7b7baf2c9dd3e7
-ms.openlocfilehash: 6741c6aa11a8a7c868bff36916afe4d066b9924d
+ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
+ms.openlocfilehash: 20c28a625adb69f239b9c0e7673e57dd39e8d561
 
 
 ---
@@ -55,6 +55,21 @@ ms.openlocfilehash: 6741c6aa11a8a7c868bff36916afe4d066b9924d
 > ~!#@$%, などの特殊なキーは、正しく変換されません。
 
 
-<!--HONumber=Dec16_HO3-->
+## <a name="keyboard-shortcuts-for-the-remote-control-viewer"></a>リモート コントロール ビューアー用のキーボード ショートカット
+
+|ショートカット キー|説明|  
+|-----------------------|-----------------|  
+|Alt + PageUp|実行しているプログラムの間を左から右へ切り替えます。|  
+|Alt + PageDown|実行しているプログラムの間を右から左へ切り替えます。|  
+|Alt + Insert|実行しているプログラムを開いた順に繰り返し表示します。|  
+|Alt + Home|[開始] メニューを表示します。 ****|  
+|Ctrl + Alt + End|Windows セキュリティ ダイアログ ボックス (Ctrl+Alt+Del) を表示します。|  
+|Alt + Delete キー|Windows メニューを表示します。|  
+|Ctrl + Alt + (テンキーの) マイナス記号|ローカル コンピューターのアクティブ ウィンドウをリモート コンピューターのクリップボードにコピーします。|  
+|Ctrl + Alt + (テンキーの) プラス記号|ローカル コンピューターのウィンドウ領域全体をリモート コンピューターのクリップボードにコピーします。|  
+
+
+
+<!--HONumber=Dec16_HO5-->
 
 
