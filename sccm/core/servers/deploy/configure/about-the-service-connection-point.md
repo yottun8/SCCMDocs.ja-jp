@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8195abd403d94a96d193289ea6e6bf8880d06078
-ms.openlocfilehash: aaa9a80a8429ab315a25862a78d6eb8733fd2e89
+ms.sourcegitcommit: 4a8d98addcd463eb82d8b7100b44254a10d21992
+ms.openlocfilehash: b5f7ad01f7a32d69d0c75b3c80a053f3c020c036
 
 
 ---
@@ -40,7 +40,9 @@ System Center Configuration Manager サービス接続ポイントは、階層�
 
     -   使用する Configuration Manager のバージョンに適用する Configuration Manager の更新プログラムの識別  
 
-     「 [Usage data levels and settings](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage)」を参照してください。  
+  各レベルで収集されたデータについて、また、ロールがインストールされた後でコレクションのレベルを変更する方法については、「[System Center Configuration Manager の診断結果と使用状況データ](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data)」を参照して、使用する Configuration Manager のバージョンへのリンクをたどります。  
+
+    詳細については、「[使用状況データのレベルと設定](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage)」をご覧ください。  
 
 -   **Configuration Manager インフラストラクチャに適用される更新プログラムのダウンロード** – アップロードする使用データに基づいて、インフラストラクチャに関連する更新プログラムのみを入手することができます。  
 
@@ -117,6 +119,6 @@ Configuration Manager サービス マネージャーを使用するには、コ
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

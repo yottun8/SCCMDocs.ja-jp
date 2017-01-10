@@ -2,7 +2,7 @@
 title: "Windows Phone アプリケーションの作成 | Microsoft Docs"
 description: "Windows Phone デバイス用アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 557888d1f1f899e3198c430bbe5ccdd44178f824
-ms.openlocfilehash: 5cd1ba42afd13e98565d24d1ec8a3ee209e8532c
+ms.sourcegitcommit: 5aef08865b232ff2dacec6906098bebf4e42e6b1
+ms.openlocfilehash: c230212d72e1c00856d6869414f2db927b1b79ad
 
 
 ---
@@ -33,13 +33,14 @@ ms.openlocfilehash: 5cd1ba42afd13e98565d24d1ec8a3ee209e8532c
 |デバイスの種類|サポートされているファイルの種類|  
 |-----------------|---------------------|  
 |Windows Phone 8|.xap|  
-|Windows Phone 8.1|.xap、.appx、.appxbundle|  
+|Windows Phone 8.1|.xap、.appx、.appxbundle|
+|Windows 10 Mobile|.xap、.appx、.appxbundle|
 
  次の展開操作がサポートされています。  
 
 |デバイスの種類|サポートされている操作|  
 |-----------------|-----------------------|  
-|Windows Phone 8 および Windows Phone 8.1|利用可能、必須、アンインストール|  
+|Windows Phone 8、Windows Phone 8.1、および Windows 10 Mobile|利用可能、必須、アンインストール|  
 
 ## <a name="steps-to-deploy-the-latest-windows-phone-company-portal-app-with-supersedence"></a>最新の Windows Phone 会社ポータル アプリケーションに置き換え関係を展開する手順  
  次の表に、Windows Phone 8 用の最新の会社ポータル アプリケーションを作成する手順とその簡単な説明、および関連情報のある場所へのリンクをまとめます。  
@@ -56,6 +57,6 @@ ms.openlocfilehash: 5cd1ba42afd13e98565d24d1ec8a3ee209e8532c
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

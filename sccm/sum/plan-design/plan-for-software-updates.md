@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 01/04/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 translationtype: Human Translation
-ms.sourcegitcommit: b1c68b233097ef3a744dd25b3fb919660f0b2244
-ms.openlocfilehash: 16415fb54a2cf91747990c94ffea0076effe525b
+ms.sourcegitcommit: 46c8004afee4b18d5c7a2fcc5dac0f7d0d1f823c
+ms.openlocfilehash: 8a5efdce88127c71547c4f5ef85660a2983aa577
 
 
 ---
@@ -82,7 +82,7 @@ System Center Configuration Manager の実稼働環境でソフトウェア更�
 
 2.  クライアントは、30 分間隔で最小 4 回再試行します。 4 回目が失敗した場合、クライアントはさらに 2 分間待機して、ソフトウェアの更新ポイントの一覧にある次のソフトウェアの更新ポイントに移動します。  
 
-3.  スキャンが成功すると、クライアントはそのソフトウェアの更新ポイントへの接続を継続します。  
+3.  クライアントはソフトウェアの新しい更新ポイント上でも同じプロセスをたどります。 スキャンが成功すると、クライアントは引き続きソフトウェアの新しい更新ポイントへの接続を行います。
 
  ソフトウェアの更新ポイントの再試行と切り替えのシナリオで考慮できる追加情報を、次の一覧に示します。  
 
@@ -91,6 +91,13 @@ System Center Configuration Manager の実稼働環境でソフトウェア更�
 -   インターネット ベースのクライアント管理が有効で、インターネット上のクライアントからの通信を受け入れるように構成されているソフトウェアの更新ポイントが複数ある場合、切り替え処理は前のシナリオで説明した標準の再試行処理に従う。  
 
 -   スキャン処理が開始されたが、スキャンが完了する前にクライアントの電源がオフになった場合、スキャンの失敗とされず、4 回の再試行の 1 回としてカウントされない。  
+
+Configuration Manager は、次に示す Windows Update エージェントのエラー コードのいずれかを受信すると、クライアントに接続を再試行するよう指示します。  
+
+2149842970, 2147954429, 2149859352, 2149859362, 2149859338, 2149859344, 2147954430, 2147747475, 2149842974, 2149859342, 2149859372, 2149859341, 2149904388, 2149859371, 2149859367, 2149859366, 2149859364, 2149859363, 2149859361, 2149859360, 2149859359, 2149859358, 2149859357, 2149859356, 2149859354, 2149859353, 2149859350, 2149859349, 2149859340, 2149859339, 2149859332, 2149859333, 2149859334, 2149859337, 2149859336, 2149859335
+
+エラー コードの意味を調べるには、10 進数のエラー コードを 16 進数のエラーコードに変換し、[Windows Update Agent - Error Codes Wiki](https://social.technet.microsoft.com/wiki/contents/articles/15260.windows-update-agent-error-codes.aspx) (Windows Update エージェント - エラー コード Wiki) などのサイトで 16 進数値を検索してください。
+
 
 ###  <a name="a-namebkmkmanuallyswitchsupsamanually-switch-clients-to-a-new-software-update-point"></a><a name="BKMK_ManuallySwitchSUPs"></a> 手動でのクライアントの新しいソフトウェアの更新ポイントへの切り替え
 Configuration Manager バージョン 1606 から、アクティブなソフトウェア更新ポイントに問題がある場合に、Configuration Manager クライアントが新しいソフトウェア更新ポイントに切り替えるためのオプションを有効にできます。 このオプションでは、クライアントが管理ポイントから複数のソフトウェア更新ポイントを受信した場合にのみ変更が加えられます。  
@@ -114,7 +121,7 @@ Configuration Manager バージョン 1606 から、アクティブなソフト�
  たとえば、2 つのソフトウェアの更新ポイント (SUP01 および SUP02) があるフォレスト A に、プライマリ サイトがあるとします。 また、同一のプライマリ サイトに対して、フォレスト B に 2 つのソフトウェアの更新ポイント (SUP03 および SUP04) があるとします。この例で切り替えが発生した場合、クライアントと同じフォレストにあるソフトウェアの更新ポイントが最初に優先されます。  
 
 ###  <a name="a-namebkmkwsussyncsourcea-use-an-existing-wsus-server-as-the-synchronization-source-at-the-top-level-site"></a><a name="BKMK_WSUSSyncSource"></a> 最上位のサイトで同期ソースとして既存の WSUS サーバーを使う  
- 通常、階層内の最上位のサイトは、Microsoft Update とソフトウェア更新プログラムのメタデータを同期するように構成されています。 企業のセキュリティ ポリシーで、最上位サイトからインターネットへのアクセスが許可されていない場合、最上位サイトの同期ソースとして、Configuration Manager 階層にない既存の WSUS サーバーを使用するように構成できます。 たとえば、インターネットにアクセスできる 境界ネットワーク に WSUS サーバーがインストールされていて、最上位サイトにはないとします。 この 境界ネットワーク の WSUS サーバーを、ソフトウェア更新プログラムのメタデータの同期ソースとして構成できます。 境界ネットワークの WSUS サーバーが、Configuration Manager 階層で必要な条件を満たすソフトウェア更新プログラムを同期するようにします。 そうしないと、最上位サイトが必要なソフトウェア更新プログラムを同期できないことがあります。 ソフトウェアの更新ポイントをインストールする場合、境界ネットワーク の WSUS サーバーにアクセスする権限を持つ WSUS 接続アカウントを構成し、ファイアウォールで適切なポートのトラフィックを許可します。 詳細については、[ソフトウェアの更新ポイントから同期ソースへの接続に使うポート](../../core/plan-design/hierarchy/ports.md#BKMK_PortsSUP-WSUS)に関する説明を参照してください。  
+ 通常、階層内の最上位のサイトは、Microsoft Update とソフトウェア更新プログラムのメタデータを同期するように構成されています。 企業のセキュリティ ポリシーで、最上位サイトからインターネットへのアクセスが許可されていない場合、最上位サイトの同期ソースとして、Configuration Manager 階層にない既存の WSUS サーバーを使用するように構成できます。 たとえば、インターネットにアクセスできる境界ネットワーク に WSUS サーバーがインストールされていて、最上位サイトにはないとします。 この境界ネットワークの WSUS サーバーを、ソフトウェア更新プログラムのメタデータの同期ソースとして構成できます。 境界ネットワークの WSUS サーバーが、Configuration Manager 階層で必要な条件を満たすソフトウェア更新プログラムを同期するようにします。 そうしないと、最上位サイトが必要なソフトウェア更新プログラムを同期できないことがあります。 ソフトウェアの更新ポイントをインストールする場合、境界ネットワークの WSUS サーバーにアクセスする権限を持つ WSUS 接続アカウントを構成し、ファイアウォールで適切なポートのトラフィックを許可します。 詳細については、[ソフトウェアの更新ポイントから同期ソースへの接続に使うポート](../../core/plan-design/hierarchy/ports.md#BKMK_PortsSUP-WSUS)に関する説明を参照してください。  
 
 ###  <a name="a-namebkmknlbsupsp1a-software-update-point-configured-to-use-an-nlb"></a><a name="BKMK_NLBSUPSP1"></a> NLB を使うように構成されたソフトウェアの更新ポイント  
  ソフトウェアの更新ポイントの切り替えによって、一般的なフォールト トレランスのニーズに対応できます。 ただし、NLB は、純粋な負荷分散という点で、ソフトウェアの更新ポイントによるフェールオーバーよりも堅固です。また、NLB によって、ネットワークの信頼性とパフォーマンスが向上します。 Configuration Manager コンソールには、ソフトウェアの更新ポイントで NLB を使用するように構成するオプションはありませんが、Set-CMSoftwareUpdatePoint PowerShell コマンドレットを使用して、NLB を構成できます。 Set-CMSoftwareUpdatePoint PowerShell コマンドレットについて詳しくは、「[Set-CMSoftwareUpdatePoint](http://go.microsoft.com/fwlink/?LinkId=276834)」を参照してください。
@@ -308,6 +315,6 @@ Configuration Manager の以前のバージョンでは、Windows 8 およびそ
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

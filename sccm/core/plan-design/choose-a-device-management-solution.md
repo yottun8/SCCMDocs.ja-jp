@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 099e0001c01713224988e5b49d02cb358e3015d6
-ms.openlocfilehash: f4f0a8e8b1b5aae2586cc885734f405f7e7f9ff5
+ms.sourcegitcommit: f6a6aad6859cf962f6f94fa5385a1dbfae6c7ff2
+ms.openlocfilehash: bea86f7fce6af913339ba0d1b56822ad761af48f
 
 
 ---
@@ -30,38 +30,36 @@ System Center Configuration Manager (ConfgMgr または SCCM とも呼ばれま�
 
 
 ##  <a name="overview-of-device-management-solutions"></a>デバイス管理ソリューションの概要  
- この概要セクションの後には、各管理ソリューションを[サポートされているモバイル デバイス プラットフォーム別](#compare-device-management-solutions-based-on-supported-mobile-device-platforms)と[管理機能別](#compare-mobile-device-management-solutions-based-on-management-functionality)に比較した 2 つの表があります。
-  
+ この記事では、次の 4 つのデバイス管理ソリューションについて説明します: Configuration Manager クライアント アプリケーション、オンプレミス Configuration Manager インフラストラクチャ、Microsoft Intune、Exchange。 この記事では、各管理ソリューションを[サポートされているモバイル デバイス プラットフォーム別](#compare-device-management-solutions-based-on-supported-mobile-device-platforms)と[管理機能別](#compare-mobile-device-management-solutions-based-on-management-functionality)に比較した 2 つの表を示しています。
 
--   **Configuration Manager クライアントを使用したデバイスの管理**  
 
-     このオプションでは、デバイスに Configuration Manager クライアント アプリケーションをインストールする必要はありますが、環境内の PC、サーバー、およびその他のデバイスを管理するための機能が最も多く提供されます。   
+###  <a name="manage-devices-with-the-configuration-manager-client"></a>Configuration Manager クライアントを使用してデバイスを管理する  
 
-     詳細については、「[System Center Configuration Manager でのクライアントのインストール方法](/sccm/core/client/deploy/plan/client-installation-methods)」を参照してください。  
+このオプションでは、デバイスに Configuration Manager クライアント アプリケーションをインストールする必要はありますが、環境内の PC やサーバーなどのデバイスを管理するためのほとんどの機能が提供されます。 詳細については、「[System Center Configuration Manager でのクライアントのインストール方法](/sccm/core/client/deploy/plan/client-installation-methods)」を参照してください。  
 
--   **オンプレミス Configuration Manager インフラストラクチャでのモバイル デバイスの管理**  
+###  <a name="manage-devices-with-on-premises-configuration-manager-infrastructure"></a>オンプレミス Configuration Manager インフラストラクチャを使用してデバイスを管理する  
 
-     このオプションでは、一部のデバイス プラットフォームのオペレーティング システムに組み込まれているデバイス管理機能を使用します。 オンプレミス モバイル デバイス管理では、クライアント ベースの管理とは異なりフル機能は提供されませんが、管理するための簡略化された方法が提供されます。この方法では、オンプレミス Configuration Manager リソースを使用して、デバイスのアクセスと管理を行います。 オンプレミス モバイル デバイス管理は、現在、Windows 10 PC と Windows 10 Mobile デバイスのみでサポートされています。  
+このオプションでは、一部のデバイス プラットフォームのオペレーティング システムに組み込まれているデバイス管理機能を使用します。 オンプレミス モバイル デバイス管理では、クライアント ベースの管理とは異なりフル機能は提供されませんが、管理するための簡略化された方法が提供されます。この方法では、オンプレミス Configuration Manager リソースを使用して、デバイスのアクセスと管理を行います。 このオプションは、現在 Windows 10 PC と Windows 10 Mobile デバイスのみでサポートされています。  
 
-     このソリューションの詳細については、「[モバイル デバイスを管理するには、System Center Configuration Manager でオンプレミス インフラストラクチャを使用します。](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)」を参照してください。  
+詳細については、「[Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)」 (System Center Configuration Manager のオンプレミス インフラストラクチャとともにモバイル デバイスを管理する) を参照してください。  
 
--   **Microsoft Intune を使用してモバイル デバイスを管理する (ハイブリッド)**  
+###  <a name="manage-devices-with-microsoft-intune-hybrid"></a>Microsoft Intune を使用してデバイスを管理する (ハイブリッド)  
 
-     このオプションでは、Configuration Manager のオンプレミス リソースを使用する代わりに、Microsoft Intune を使用してデバイスを登録し、管理します。 Intune でデバイスが管理されている場合でも、Configuration Manager コンソールで管理タスクにアクセスできます。 このオプションは、Windows 10 Mobile、Windows Phone、iOS、Mac OS X、Android を含む主要なモバイル デバイス オペレーティング システムをすべてサポートします。 また、組織内の Windows 8.1 と Windows 10 のコンピューターの管理も提供します。  
+このオプションでは、Configuration Manager のオンプレミス リソースを使用する代わりに、Microsoft Intune を使用してデバイスを登録し、管理します。 Intune でデバイスが管理されている場合でも、Configuration Manager コンソールで管理タスクにアクセスできます。 このオプションは、Windows 10 Mobile、Windows Phone、iOS、Mac OS X、Android を含む主要なモバイル デバイス オペレーティング システムをすべてサポートします。 また、組織内の Windows 8.1 と Windows 10 のコンピューターの管理も提供します。  
 
-     このソリューションの詳細については、「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../mdm/understand/hybrid-mobile-device-management.md)」を参照してください。  
+詳細については、「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../mdm/understand/hybrid-mobile-device-management.md)」を参照してください。  
 
--   **Exchange によるモバイル デバイスの管理**  
+###  <a name="manage-devices-with-microsoft-exchange"></a>Microsoft Exchange を使用してデバイスを管理する  
 
-     このオプションでは、Exchange Server コネクタを使用して複数の Exchange サーバーを Configuration Manager に接続し、Exchange ActiveSync に接続可能なデバイスの管理を一元化します。 Configuration Manager コンソールから、複数の Exchange サーバー向けにリモート デバイス ワイプおよび設定コントロールといった、Exchange モバイル デバイス管理機能を構成できます。  
+このオプションでは、Exchange Server コネクタを使用して、Configuration Manager に複数の Exchange サーバーを接続します。 これにより、Exchange ActiveSync に接続できるデバイスが一元的に管理されます。 Configuration Manager コンソールから、複数の Exchange サーバー向けにリモート デバイス ワイプおよび設定コントロールといった、Exchange モバイル デバイス管理機能を構成できます。  
 
-     このソリューションの詳細については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)」を参照してください。  
+詳細については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)」を参照してください。  
 
- これらのデバイス管理ソリューションは、単独で使用することも、相互に組み合わせて使用することもできます。 たとえば、クライアントベースの管理方法を使用して組織内のコンピューターとサーバーの管理を行いつつ、Intune を使用してモバイル デバイスを管理することができます。 このようにアプローチを組み合わせることによって、Configuration Manager コンソールでデバイス管理のすべてのニーズに対応することができます。  
+これらのデバイス管理ソリューションは、単独で使用することも、相互に組み合わせて使用することもできます。 たとえば、クライアントベースの管理方法を使用して組織内のコンピューターとサーバーの管理を行いつつ、Intune を使用してモバイル デバイスを管理することができます。 このようにアプローチを組み合わせることによって、Configuration Manager コンソールでデバイス管理のすべてのニーズに対応することができます。  
 
 ## <a name="compare-device-management-solutions-based-on-supported-mobile-device-platforms"></a>サポートされているモバイル デバイス プラットフォームに基いたデバイス管理ソリューションの比較  
 
-|プラットフォーム|Configuration Manager クライアントを使用|Configuration Manager と Microsoft Intune の併用 (ハイブリッド)|オンプレミス モバイル デバイス管理|Configuration Manager と Exchange の併用|  
+|プラットフォーム|Configuration Manager クライアントを使用|Configuration Manager と Microsoft Intune の併用 (ハイブリッド)|オンプレミス モバイル デバイス管理\-|Configuration Manager と Exchange の併用|  
 |--------------|-------------------------------------------|-------------------------------------------------------------------|-------------------------------|-----------------------------------------|  
 |Android||○||○|  
 |iOS||○||○|  
@@ -79,9 +77,9 @@ System Center Configuration Manager (ConfgMgr または SCCM とも呼ばれま�
 
 ##  <a name="a-namebkmkcomp2a-compare-mobile-device-management-solutions-based-on-management-functionality"></a><a name="bkmk_comp2"></a> 管理機能に基づいたモバイル デバイス管理ソリューションの比較  
 
-|管理機能|Configuration Manager クライアントを使用|Configuration Manager と Microsoft Intune の併用 (ハイブリッド)|オンプレミス モバイル デバイス管理|Configuration Manager と Exchange の併用|  
+|管理機能|Configuration Manager クライアントを使用|Configuration Manager と Microsoft Intune の併用 (ハイブリッド)|オンプレミス モバイル デバイス管理\-|Configuration Manager と Exchange の併用|  
 |------------------------------|-------------------------------------------|-------------------------------------------------------------------|-------------------------------|-----------------------------------------|  
-|相互認証と SSL によるデータ転送暗号化を使用した、モバイル デバイスと Configuration Manager 間の公開キー基盤 (PKI) セキュリティ|○|[はい]|○||  
+|モバイル デバイスと Configuration Manager 間の公開キー基盤 (PKI) セキュリティ (相互認証と SSL によるデータ転送暗号化を使用)|○|[はい]|○||  
 |クライアントのインストール|○||||  
 |インターネット経由のサポート|○||||  
 |探索|○|||○|  
@@ -98,6 +96,6 @@ System Center Configuration Manager (ConfgMgr または SCCM とも呼ばれま�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

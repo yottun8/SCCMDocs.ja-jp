@@ -2,7 +2,7 @@
 title: "アプリケーション管理の概要 | Microsoft ドキュメント"
 description: "System Center Configuration Manager アプリケーションの管理と展開に必要な基本的な情報について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,8 +18,8 @@ manager: angrobe
 experimental: true
 experiment_id: rob-table-161101
 translationtype: Human Translation
-ms.sourcegitcommit: aa985dcb947803f7bc6d770f80a89a2fe6750681
-ms.openlocfilehash: 4be1fdaeeba2859389ea87b49b8e5891a28d052c
+ms.sourcegitcommit: 5aef08865b232ff2dacec6906098bebf4e42e6b1
+ms.openlocfilehash: 699adb5fac0c625c321db011af6989cc4c0778ec
 
 
 ---
@@ -33,7 +33,7 @@ ms.openlocfilehash: 4be1fdaeeba2859389ea87b49b8e5891a28d052c
 >  Configuration Manager でのアプリケーションの管理方法について既によく理解している場合は、このトピックをスキップし、サンプル アプリケーションの作成に進むことができます。 「[System Center Configuration Manager でのアプリケーションの作成と展開](../../apps/get-started/create-and-deploy-an-application.md)」を参照してください。  
 
 ## <a name="what-is-an-application"></a>アプリケーションとは  
- *"アプリケーション"*は広く使用されているコンピューター用語ですが、Configuration Manager では少し意味が異なります。 アプリケーションを 1 つの箱だと考えてみてください。 この箱には、ソフトウェア パッケージ (**展開の種類**と呼ばれる) のインストール ファイルが 1 つ以上入っており、さらにソフトウェアの展開方法に関する指示が付属しています。  
+ *"アプリケーション"* は広く使用されているコンピューター用語ですが、Configuration Manager では少し意味が異なります。 アプリケーションを 1 つの箱だと考えてみてください。 この箱には、ソフトウェア パッケージ (**展開の種類**と呼ばれる) のインストール ファイルが 1 つ以上入っており、さらにソフトウェアの展開方法に関する指示が付属しています。  
 
  アプリケーションをデバイスに展開すると、デバイスにインストールされる展開の種類が **要件** に応じて決まります。  
 
@@ -56,12 +56,12 @@ ms.openlocfilehash: 4be1fdaeeba2859389ea87b49b8e5891a28d052c
  Configuration Manager では、次の種類のアプリケーションを展開できます。  
 
 - Windows インストーラー (*.msi ファイル)
-- Windows アプリ パッケージ (*.appx、 \*.appxbundle)
+- Windows アプリケーション パッケージ (*.appx、*.appxbundle)
 - Windows アプリケーション パッケージ (Windows ストア内)
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization 5
 - Windows Mobile キャビネット
-- Mac OS X  
+- macOS  
 
 
 また、Microsoft Intune または Configuration Manager のオンプレミス デバイス管理でデバイスを管理すると、さらに次のアプリケーションの種類も管理できます。
@@ -113,6 +113,6 @@ ms.openlocfilehash: 4be1fdaeeba2859389ea87b49b8e5891a28d052c
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 
