@@ -99,7 +99,7 @@ ms.openlocfilehash: a2e57aac01fff3c28b4acfcf58bcd786bd3e62c4
 
 -   **レポート サービス ポイント** - SQL Server Reporting Services と連携し、Configuration Manager のレポートを作成して管理するサイト システムの役割です。 この役割は、プライマリ サイトと中央管理サイトでサポートされており、サポートされているサイトにこの役割の複数のインスタンスをインストールできます。 詳細については、「[System Center Configuration Manager のレポートの計画](../../../core/servers/manage/planning-for-reporting.md)」をご覧ください。  
 
--   **サービス接続ポイント** - Microsoft Intune およびオンプレミス MDM でモバイル デバイスを管理するために使用するサイト システムの役割です。 この役割によって、サイトから使用状況データもアップロードされます。この役割は、Configuration Manager コンソールで使用可能な Configuration Manager の更新を行うために必要です。 階層はこの役割の 1 つのインスタンスのみをサポートします。このインスタンスは、階層の最上位層サイト (中央管理サイトまたはスタンドアロン プライマリ サイト) に置く必要があります。 スタンドアロン プライマリ サイトをより大きな階層に拡張する場合、この役割をアンインストールする必要があり、その後、中央管理サイトにインストールすることができます。 詳細については、「 [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md)」をご覧ください。  
+-   **サービス接続ポイント** - Microsoft Intune およびオンプレミス MDM でモバイル デバイスを管理するために使用するサイト システムの役割です。 この役割によって、サイトから使用状況データもアップロードされます。この役割は、Configuration Manager コンソールで使用可能な Configuration Manager の更新を行うために必要です。 階層はこの役割の 1 つのインスタンスのみをサポートします。このインスタンスは、階層の最上位層サイト (中央管理サイトまたはスタンドアロン プライマリ サイト) に置く必要があります。 スタンドアロン プライマリ サイトをより大きな階層に拡張する場合、この役割をアンインストールする必要があり、その後、中央管理サイトにインストールすることができます。 詳細については、「[System Center Configuration Manager のサービス接続ポイントについて](../../../core/servers/deploy/configure/about-the-service-connection-point.md)」を参照してください。  
 
 -   **ソフトウェアの更新ポイント** - Windows Server Update Services (WSUS) と連携して、Configuration Manager クライアントがソフトウェア更新プログラムを利用できるようにするサイト システムの役割。 この役割は、すべてのサイトでサポートされています。  
 
