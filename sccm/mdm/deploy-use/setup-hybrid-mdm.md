@@ -1,5 +1,5 @@
 ---
-title: "ハイブリッド MDM のセットアップ | System Center Configuration Manager および Microsoft Intune"
+title: "ハイブリッド MDM のセットアップ | Microsoft Docs"
 description: "Configuration Manager と Intune を使用してハイブリッド デバイス登録をセットアップします。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 caps.latest.revision: 34
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 44c0947fcb7abdc4369fe0b4f47409b49d068861
+ms.sourcegitcommit: 48b91e88f78752cf7c05162b701ea2ca2f401de3
+ms.openlocfilehash: 85df3df19f01f8ed6f5240851c47afce01a92880
 
 ---
 
@@ -173,6 +173,7 @@ Configuration Manager を使用せずに Intune を使用する場合
   - [Windows の登録セットアップ](#windows-enrollment-setup): DNS を構成し、Windows PC、Windows 10 Mobile デバイス、Windows Phone デバイスのすべてで登録を有効にします
   - Android: Android デバイスの場合、登録を有効にするために必要な追加の手順はありません
 
+MDM 管理を有効にした後は、各ユーザーが登録できるデバイスの数を指定できます (ユーザーごとに最大 15 デバイス)。
 
 ### <a name="ios-and-mac-enrollment-setup"></a>iOS と Mac の登録セットアップ
   以下の手順で、Apple MDM プッシュ証明書を Intune サービスにアップロードして Apple デバイスの管理を有効にします。
@@ -245,7 +246,7 @@ Configuration Manager を Intune と共に使用して、Android を実行して
 - [Windows 10 デバイスと Windows 8.1 デバイス](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)
 - [Windows Phone デバイス](/sccm/compliance/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client)
 - [iOS デバイスと Mac デバイス](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)
-- [Android デバイスと Samsung KNOX デバイス](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)
+- [Android デバイスと Samsung KNOX Standard デバイス](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)
 
 管理対象デバイスには次の**アプリケーション**を展開できます。
 - [iOS アプリケーション](/sccm/apps/get-started/creating-ios-applications)
@@ -273,30 +274,38 @@ Configuration Manager を Intune と共に使用して、Android を実行して
 - ユーザー所有 (BYOD) のデバイス: [デバイスの登録方法をユーザーに伝えます](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)。登録に関するガイダンスは Intune 管理デバイスとハイブリッド管理デバイスで同じです。
 - 会社所有 (COD) のデバイス: [会社所有のデバイスを登録します](enroll-company-owned-devices.md)。会社所有のデバイスの登録方法に関するガイダンスはプラットフォームごとに異なります。
 
-### <a name="managing-intune-subscriptions-associated-with-configuration-manager"></a>Configuration Manager に関連付けられている Intune サブスクリプションの管理
- Microsoft Intune (試用版サブスクリプションまたは有料サブスクリプション) を Configuration Manager に追加してから、別の Intune サブスクリプションに切り替える必要がある場合は、**Microsoft Intune サブスクリプション**と**サービス接続ポイント**の両方を Configuration Manager コンソールから削除する必要があります。これにより、新しいサブスクリプションを追加することができるようになります。
+## <a name="managing-intune-subscriptions-associated-with-configuration-manager"></a>Configuration Manager に関連付けられている Intune サブスクリプションの管理
 
-#### <a name="how-to-delete-an-intune-subscription-from-configuration-manager"></a>Configuration Manager から Intune サブスクリプションを削除する方法
+Microsoft Intune (試用版サブスクリプションまたは有料サブスクリプション) を Configuration Manager に追加してから、別の Intune サブスクリプションに切り替える必要がある場合は、**Microsoft Intune サブスクリプション**と**サービス接続ポイント**の両方を Configuration Manager コンソールから削除する必要があります。これにより、新しいサブスクリプションを追加することができるようになります。
 
-1.  Configuration Manager コンソールで、[ **管理**] をクリックします。
+### <a name="how-to-delete-an-intune-subscription-from-configuration-manager"></a>Configuration Manager から Intune サブスクリプションを削除する方法
 
-2.  **[管理]** ワークスペースで **[概要]** を展開して、**[クラウド サービス]** に移動してから **[Microsoft Intune サブスクリプション]** をクリックします。
+> [!IMPORTANT]
+>  サブスクリプションを削除すると、Intune サブスクリプションによって管理されるデバイスに構成された、ユーザー登録、ポリシー、アプリの展開などのすべてのコンテンツが削除されます。
 
-3.  **[Microsoft Intune サブスクリプション]** を右クリックしてから、**[削除]** をクリックします。 次に、**[Microsoft Intune サブスクリプション]** を選びます。
+1.  Configuration Manager コンソールで、**[管理]** > **[概要]** > **[Cloud Services]** > **[Microsoft Intune サブスクリプション]** の順に移動します。
 
-    > [!IMPORTANT]
-    >  ユーザー登録、ポリシー、アプリの展開など、Intune 評価用サブスクリプションに関して構成されたすべての内容は失われます。
+2.  表示された **[Microsoft Intune サブスクリプション]** を右クリックしてから、**[削除]** をクリックします。
 
-4.  **[管理]** ワークスペースで **[概要]** を展開して、**[サイトの構成]** に移動してから **[サーバーとサイト システムの役割]** を選びます。
-
-5.  **[サービス接続ポイント]** の役割をホストするサーバーを選びます。
-
-6.  **[サイト システムの役割]** 一覧で、**[サービス接続ポイント]** を選んでから、リボンに表示されている **[役割の削除]** をクリックします。 ロールを削除することを確認します。 サービス接続ポイントが削除されます。
-
-7.  これで、新しいサービス接続ポイントを作成したり、Configuration Manager に新規 Intune サブスクリプションを追加したり、Configuration Manager を MDM 機関として設定したりできるようになります。
+3.   ウィザードで、**[Configuration Manager から Microsoft Intune サブスクリプションを削除]**、**[次へ]**、**[次へ]** の順にクリックして、サブスクリプションを削除します。
 
 
+### <a name="how-to-remove-the-service-connection-point-role"></a>サービス接続ポイントの役割を削除する方法
 
-<!--HONumber=Nov16_HO1-->
+1.  **[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動します。
+
+2.  **[サービス接続ポイント]** の役割をホストするサーバーを選びます。
+
+3.  **[サイト システムの役割]** 一覧で、**[サービス接続ポイント]** を選んでから、リボンに表示されている **[役割の削除]** をクリックします。 ロールを削除することを確認します。 サービス接続ポイントが削除されます。
+
+これで、新しいサービス接続ポイントを作成したり、Configuration Manager に新規 Intune サブスクリプションを追加したり、Configuration Manager を MDM 機関として設定したりできるようになります。
+
+### <a name="how-to-change-mdm-authority-to-intune"></a>MDM 機関を Intune に変更する方法
+
+バージョン 1610 以降では、MDM 機関を Configuration Manager から Intune に切り替えることができます。 この機能についての情報は間もなく公開されます。
+
+
+
+<!--HONumber=Dec16_HO3-->
 
 

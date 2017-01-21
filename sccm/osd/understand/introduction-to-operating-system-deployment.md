@@ -1,5 +1,5 @@
 ---
-title: "オペレーティング システム展開方法の概要 | Configuration Manager"
+title: "オペレーティング システムの展開の概要 | Microsoft Docs"
 description: "Configuration Manager 環境にオペレーティング システムを展開する前に理解する必要がある概念について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ece68bd30e31595226f154fd1148b0ee55feceaf
+ms.sourcegitcommit: 55a9f1caedcfa810e9a97e43626e4cf5fdbcfa0d
+ms.openlocfilehash: 2baa6b7dbd66ab41bc9b67e8f43c313be233153c
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: ece68bd30e31595226f154fd1148b0ee55feceaf
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager を使用してオペレーティング システムを展開する方法は数多くあります。 オペレーティング システムを展開し、タスクを自動化する方法については、このセクションの情報を参照してください。
+Configuration Manager を使用してオペレーティング システムを展開する方法は数多くあります。 オペレーティング システムを展開し、タスクを自動化する方法については、このセクションの情報を参照してください。 
 
 ##  <a name="a-namebkmkosdeploymentprocessa-the-operating-system-deployment-process"></a><a name="BKMK_OSDeploymentProcess"></a> オペレーティング システム展開プロセス  
  Configuration Manager では、オペレーティング システムの展開で使用できる数種類の方法を提供します。 次に示す操作は、使用する展開方法に関係なく必要となります。  
@@ -81,7 +81,7 @@ Configuration Manager を使用してオペレーティング システムを展
 ##  <a name="a-namebkmkbootimagesa-boot-images"></a><a name="BKMK_BootImages"></a> ブート イメージ  
  Configuration Manager のブート イメージは、オペレーティング システムの展開中に使用される Windows PE (WinPE) のイメージです。 ブート イメージは、WinPE でコンピューターを起動するために使用されます。WinPE は、セットアップ先のコンピューターで Windows のインストールを準備する限られたコンポーネントとサービスが含まれた、最小限のオペレーティング システムです。 Configuration Manager には 2 つのブート イメージがあります。一方は x86 プラットフォームをサポートし、もう一方は x64 プラットフォームをサポートします。 これらは、既定のブート イメージと見なされます。 作成して Configuration Manager に追加したブート イメージは、カスタム イメージと見なされます。 Configuration Manager を更新するときに、既定のブート イメージが自動的に置換されるようにできます。 ブート イメージの詳細については、「[ブート イメージの管理](../get-started/manage-boot-images.md)」を参照してください。  
 
-##  <a name="a-namebkmkosimagesa-operating-system-images"></a><a name="BKMK_OSImages"></a> オペレーティング システム イメージ  
+##  <a name="a-namebkmkosimagesa-operating--system-images"></a><a name="BKMK_OSImages"></a> オペレーティング システム イメージ  
  Configuration Manager のオペレーティング システム イメージは、Windows Imaging (WIM) ファイル形式で格納され、コンピューターのオペレーティング システムを正常にインストールおよび構成するのに必要な参照ファイルおよびフォルダーのコレクションを圧縮したものです。 オペレーティング システムのすべての展開シナリオで、オペレーティング システム イメージを選択する必要があります。 既定のオペレーティング システム イメージを使用するか、構成する参照コンピューターからオペレーティング システム イメージを構築することができます。 詳細については、「[オペレーティング システム イメージの管理](../get-started/manage-operating-system-images.md)」を参照してください。  
 
 ##  <a name="a-namebkmkosupgradepackagesa-operating-system-upgrade-packages"></a><a name="BKMK_OSUpgradePackages"></a> オペレーティング システムのアップグレード パッケージ  
@@ -135,6 +135,6 @@ Configuration Manager を使用してオペレーティング システムを展
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

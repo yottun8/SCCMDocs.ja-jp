@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager の Technical Preview 1607 の機能"
+title: "System Center Configuration Manager の Technical Preview 1607 の機能 | Microsoft Docs"
 description: "System Center Configuration Manager の Technical Preview バージョン 1607 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: e3cbc1adc6dc20a9e67adf76472aef0c6cf54ae0
-ms.openlocfilehash: 4d2a9f9b32b898bfe549f2613689c8dbfd22e339
+ms.sourcegitcommit: f6e34e39d267f3bba26d6aa6a912eb4ba4aa3ab2
+ms.openlocfilehash: 1f91cda68204346913bee382a8bbf52b5a58e227
 
 ---
 # <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1607 の機能
@@ -57,7 +57,7 @@ Configuration Manager クライアントの設定で、**エディションの�
 
 1. アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされていない場合は、[**コンピューター エージェント**] クライアント設定 [**ソフトウェア センターに表示される組織名**] に指定された組織名がソフトウェア センターに表示されます。 手順については、「[クライアント設定を構成する方法](../../core/clients/deploy/configure-client-settings.md)」をご覧ください。
 
-2. アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされている場合は、アプリケーション カタログ Web サイトのポイント サイト サーバーの役割プロパティに指定されている組織名と色がソフトウェア センターに表示されます。 詳細については、「[Configuration options for Application Catalog website point](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#Application-Catalog-website-point)」(アプリケーション カタログ Web サイト ポイントの構成オプション) をご覧ください。
+2. アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされている場合は、アプリケーション カタログ Web サイトのポイント サイト サーバーの役割プロパティに指定されている組織名と色がソフトウェア センターに表示されます。 詳細については、「[Configuration options for Application Catalog website point](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website)」(アプリケーション カタログ Web サイト ポイントの構成オプション) をご覧ください。
 
 3. Microsoft Intune サブスクリプションが構成されていて Configuration Manager 環境に接続されている場合は、Intune サブスクリプションのプロパティに指定されている組織名、色、および会社のロゴがソフトウェア センターに表示されます。 詳細については、「 [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription)」をご覧ください。
 
@@ -79,6 +79,6 @@ Technical Preview バージョン 1607 では、(複数のデバイスで使用�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

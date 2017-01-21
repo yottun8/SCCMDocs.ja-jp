@@ -1,5 +1,5 @@
 ---
-title: "クラウドベースの配布ポイントのインストール | System Center Configuration Manager"
+title: "クラウドベースの配布ポイントのインストール | Microsoft Docs"
 description: "Microsoft Azure でクラウドベース配布ポイントの使用を開始するために必要なことについて説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1dafd0b61a61a0fd2f2c597b89dea7cd6ac715a8
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: aba573b2822568236c006e7af19b421639faa8bc
 
 ---
 # <a name="install-cloud-based-distribution-points-in-microsoft-azure-for-system-center-configuration-manager"></a>Microsoft Azure for System Center Configuration Manager のクラウド ベース配布ポイントのインストール
@@ -133,6 +133,6 @@ Configuration Manager のクラウドベースの配布ポイントのサービ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

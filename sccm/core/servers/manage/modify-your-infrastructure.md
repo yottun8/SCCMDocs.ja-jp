@@ -1,5 +1,5 @@
 ---
-title: "インフラストラクチャを変更する | System Center Configuration Manager"
+title: "インフラストラクチャの変更 | Microsoft Docs"
 description: "展開した Configuration Manager のインフラストラクチャに影響する変更を加えたりアクションを実行したりする方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fc58e77841baedd45649d676e98c736fa91e5bf2
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: fa9881e06abd410438fe5985151309c45f337802
 
 
 ---
@@ -172,6 +172,8 @@ ms.openlocfilehash: fc58e77841baedd45649d676e98c736fa91e5bf2
 -   **[アクセスの構成]** : サイト データベースを新しいコンピューターに移動する場合は、SQL Server を実行するコンピューターの **ローカルの [Administrators]** グループにサイト サーバーのコンピューター アカウントを追加します。 サイト データベースに SQL Server クラスターを使用する場合は、各 Windows Server クラスター ノード コンピューターのローカルの [Administrators] グループにコンピューター アカウントを追加する必要があります。 ****  
 
 -   **共通言語ランタイム (CLR) 統合:**  データベースを SQL Server 上の新しいインスタンス、または新しい SQL Server コンピューターに移動する場合は、共通言語ランタイム (CLR) 統合を有効にする必要があります。 CLR を有効にするには、**SQL Server Management Studio** を使用して、サイト データベースをホストする SQL Server のインスタンスに接続し、ストアド プロシージャ **sp_configure 'clr enabled',1; reconfigure** をクエリとして実行します。  
+-  **新しい SQL Server がバックアップの場所にアクセスできることを確認する:** サイト データベースのバックアップを格納するために UNC を使っている場合は、データベースを新しいサーバーに移動した後で (SQL Server AlwaysOn 可用性グループまたは SQL Server クラスターの移動を含みます)、新しい SQL Server のコンピューター アカウントに UNC の場所への**書き込み**アクセス許可があることを確認します。  
+
 
 > [!IMPORTANT]  
 >  管理ポイントの 1 つまたは複数のデータベースのレプリカを持つデータベースを移動する場合は、最初にデータベースのレプリカを削除する必要があります。 データベースの移動が完了したら、データベースのレプリカを再構成できます。 詳細については、「 [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」をご覧ください。  
@@ -369,6 +371,6 @@ Configuration Manager によってサポートされているクライアント�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

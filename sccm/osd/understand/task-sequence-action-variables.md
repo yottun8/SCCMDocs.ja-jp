@@ -1,5 +1,5 @@
 ---
-title: "タスク シーケンスのアクション変数 | Configuration Manager"
+title: "タスク シーケンス アクション変数 | Microsoft Docs"
 description: "ネットワーク設定変数などのシーケンス アクション変数を使用して、Configuration Manager のタスク シーケンスでシングル ステップの構成設定を指定します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: cd0e74bff29110f5483c7132ba989d9933e7e223
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 6049ec2369e0a97b21ce6523ba8448335385ab9a
 
 
 ---
@@ -349,6 +349,6 @@ ms.openlocfilehash: cd0e74bff29110f5483c7132ba989d9933e7e223
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

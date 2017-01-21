@@ -1,5 +1,5 @@
 ---
-title: "証明書プロファイルの概要 | System Center Configuration Manager"
+title: "証明書プロファイルの概要 | Microsoft Docs"
 description: "System Center Configuration Manager の証明書プロファイルと Active Directory 証明書サービスの使用方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 41567ba411732baf9e920595203f699179dcb20a
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 25d57d25ca683608bbe9a0695b2463ad5b9a0833
 
 
 ---
@@ -108,6 +108,6 @@ System Center Configuration Manager では、Active Directory 証明書サービ
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

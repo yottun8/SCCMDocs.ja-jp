@@ -1,5 +1,5 @@
 ---
-title: "Configuration Manager を使用してハイブリッド展開用に会社所有のデバイスを登録する"
+title: "Configuration Manager を使用してハイブリッド展開用に会社所有のデバイスを登録する | Microsoft Docs"
 description: "Configuration Manager を使用してハイブリッド展開用に会社所有のデバイスを登録するさまざまな方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2754ce6-1460-4ddd-9050-2cc87e7964f4
 caps.latest.revision: 13
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 91f1d0d775236fe4cb6675b1017161520a281df5
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 490b89f8174667d232a2ca3729d36ead8fc4d46c
 
 
 ---
@@ -47,10 +47,10 @@ ms.openlocfilehash: 91f1d0d775236fe4cb6675b1017161520a281df5
 会社所有のデバイスの International station Mobile Equipment Identity (IMEI) 番号または iOS シリアル番号をインポートすることで、それらのデバイスを識別できます。 デバイスの IMEI 番号を含むコンマ区切り値 (.csv) ファイルをアップロードするか、デバイス情報を手動で入力することができます。  「[Predeclare devices with hardware ID numbers](../../mdm/deploy-use/predeclare-devices-with-hardware-id.md)」 (ハードウェア ID 番号によるデバイスの事前宣言) をご覧ください。
 
 ## <a name="see-also"></a>関連項目  
- [System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../mdm/plan-design/hybrid-mobile-device-management.md)
+ [System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

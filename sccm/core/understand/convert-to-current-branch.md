@@ -1,5 +1,5 @@
 ---
-title: "Long-Term Servicing Branch の Current Branch へのアップグレード | System Center Configuration Manager"
+title: "Long-Term Servicing Branch の Current Branch へのアップグレード | Microsoft Docs"
 description: "Long-Term Servicing Branch サイトを Current Branch サイトに変換する方法について説明します。"
 ms.custom: na
 ms.date: 10/12/2016
@@ -16,15 +16,15 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 835469e78e83bb54c43e530303d27b0918c531e6
-ms.openlocfilehash: efccff6e2a0b1708d4124648da4e173d41663bd1
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 37fa8da8b4acc3f22c9c435206eedde58d2754f0
 
 ---
 
 
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>Long-Term Servicing Branch の Current Branch へのアップグレード
 
-*適用対象: System Center Configuration Manager (Long-Term Servicing Branch)* 
+*適用対象: System Center Configuration Manager (Long-Term Servicing Branch)*
 
 このトピックでは、Configuration Manager の Long-Term Servicing Branch (LTSB) を実行するサイトと階層を Current Branch にアップグレード (変換) する方法について説明します。
 
@@ -56,6 +56,6 @@ Current Branch の使用権を付与する現在のソフトウェア アシュ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

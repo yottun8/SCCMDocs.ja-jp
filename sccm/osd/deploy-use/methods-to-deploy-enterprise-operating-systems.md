@@ -1,5 +1,5 @@
 ---
-title: "エンタープライズ オペレーティング システムを展開する方法 | Configuration Manager"
+title: "エンタープライズ オペレーティング システムを展開する方法 | Microsoft Docs"
 description: "System Center Configuration Manager 環境にエンタープライズ オペレーティング システムを展開するのに使用できる方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 40f6f414ff0a2687f250f101acbae775a777bf8a
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 6cec9275009ac19ad65a03792c1bc4d0c528ea4c
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 40f6f414ff0a2687f250f101acbae775a777bf8a
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 環境にオペレーティング システムを展開するには、さまざまな方法を使用できます。 
+System Center Configuration Manager 環境にオペレーティング システムを展開するには、さまざまな方法を使用できます。
 
 -   [PXE を使用したネットワーク経由での Windows の展開](use-pxe-to-deploy-windows-over-the-network.md)  
 
@@ -43,6 +43,6 @@ System Center Configuration Manager 環境にオペレーティング システ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

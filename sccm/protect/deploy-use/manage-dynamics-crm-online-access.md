@@ -1,5 +1,5 @@
 ---
-title: "Dynamics CRM Online アクセスの管理 | System Center Configuration Manager"
+title: "Dynamics CRM Online アクセスの管理 | Microsoft Docs"
 description: "Microsoft Intune 条件付きアクセスを使用して iOS および Android デバイスから Microsoft Dynamics CRM Online へのアクセスを制御する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c7cec31-f78d-46b9-93ae-a12ae27a1de6
 caps.latest.revision: 5
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: 61409cf78bef3991d096c5c9615ff667aca9cb43
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: 77bbe36b4662046b0f693fac6186f8b19615353a
 
 ---
 # <a name="manage-dynamics-crm-online-access-in-system-center-configuration-manager"></a>System Center Configuration Manager での Dynamics CRM Online アクセスの管理
@@ -101,6 +101,6 @@ Dynamics CRM ポリシーに適用する 2 つのグループの種類を指定�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

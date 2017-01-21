@@ -1,5 +1,5 @@
 ---
-title: SQL Server AlwaysOn | System Center Configuration Manager
+title: SQL Server AlwaysOn | Microsoft Docs
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -15,8 +15,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
 
 
 ---
@@ -123,9 +123,9 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 -   可用性グループには、少なくとも 1 つの **可用性グループ リスナー**が必要です。  可用性グループのサイト データベースを使用するよう Configuration Manager を構成するときには、このリスナーの仮想名が使用されます。 可用性グループに複数のリスナーを含めることができますが、Configuration Manager はそのうち 1 つだけを使用できます  
 
 -   各プライマリ レプリカおよびセカンダリ レプリカの要件は次のとおりです。  
-    -  **読み取り専用接続を許可**するように設定されている
-    -  **既定のインスタンス**を使用する
-    -  **手動フェールオーバー**に設定されている  
+    - **読み取り専用接続を許可**するように設定されている
+    - **既定のインスタンス**を使用する
+    - **手動フェールオーバー**に設定されている  
 
         > [!TIP]  
         >  System Center Configuration Manager は、自動フェールオーバーが設定されていると、可用性グループ レプリカの使用をサポートします。 ただし、セットアップを実行して可用性グループのサイト データベースの使用を指定するとき、および (サイト データベースに適用される更新プログラムだけでなく) すべての更新プログラムを Configuration Manager にインストールするときには、手動フェールオーバーに設定される必要があります。  
@@ -152,15 +152,7 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
      SQL Server のドキュメントの「 [データベースの復旧モデルの表示または変更](https://msdn.microsoft.com/library/ms189272\(v=sql.120\).aspx) 」を参照してください。 (可用性グループは完全のみをサポートします)。  
 
-3.  SQL Server を使用してサイト データベースの完全バックアップを作成します。  
-
-    -   現在のサイト データベース サーバーが可用性グループのメンバーではない場合、または可用性グループの初期プライマリ レプリカとして使用されない場合は、グループのプライマリ レプリカをホストするサーバーにサイト データベースのコピーを復元します。  
-
-    -   現在のサイト データベース サーバーが、可用性グループのメンバーである場合は、可用性グループのプライマリ レプリカのメンバーとしてこのサーバーを使用することを計画します。 これを行うときに、サイト データベースのコピーをこのサーバーまたは別のサーバーに復元する必要はありません。  
-
-    この手順を完了する方法については、SQL Server のドキュメントの「 [データベースの完全バックアップの作成](https://msdn.microsoft.com/library/ms187510\(v=sql.120\).aspx) 」および「 [データベースのバックアップの復元 (SQL Server Management Studio)](https://msdn.microsoft.com/library/ms177429\(v=sql.120\).aspx)」を参照してください。  
-
-4.  グループのプライマリ レプリカをホストするサーバーで、 **新しい可用性グループ ウィザード** を使用して可用性グループを作成します。 ウィザード:  
+3.  グループのプライマリ レプリカをホストするサーバーで、 **新しい可用性グループ ウィザード** を使用して可用性グループを作成します。 ウィザード:  
 
     -   **[データベースの選択]** ページで、 Configuration Manager サイトのデータベースを選びます  
 
@@ -174,15 +166,15 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
     詳細については、SQL Server のドキュメントの「 [可用性グループ ウィザードの使用](https://msdn.microsoft.com/library/hh403415\(v=sql.120\).aspx) 」を参照してください。  
 
-5.  可用性グループを構成した後、 **TRUSTWORTHY** プロパティを使用してプライマリ レプリカにサイト データベースを構成してから、 **[CLR 統合を有効にする]**を選びます。 これらの構成方法については、SQL Server のドキュメントの「 [TRUSTWORTHY データベース プロパティ](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) 」および「  [CLR 統合の有効化](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx) 」を参照してください。  
+4.  可用性グループを構成した後、 **TRUSTWORTHY** プロパティを使用してプライマリ レプリカにサイト データベースを構成してから、 **[CLR 統合を有効にする]**を選びます。 これらの構成方法については、SQL Server のドキュメントの「 [TRUSTWORTHY データベース プロパティ](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) 」および「  [CLR 統合の有効化](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx) 」を参照してください。  
 
-6.  次のことを実行して、可用性グループの各セカンダリ レプリカを構成します。  
+5.  次のことを実行して、可用性グループの各セカンダリ レプリカを構成します。  
 
     1.  現在のプライマリ レプリカをセカンダリ レプリカに手動でフェールオーバーします。 SQL Server のドキュメントの「 [可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)](https://msdn.microsoft.com/library/hh231018\(v=sql.120\).aspx) 」を参照してください。  
 
     2.  **TRUSTWORTHY** プロパティを使用して新しいプライマリ レプリカにサイト データベースを構成した後、 **[CLR 統合を有効にする]**を選びます。  
 
-7.  すべてのレプリカがプライマリ レプリカおよび構成されたデータベースに昇格されると、可用性グループを Configuration Manager で使用できるようになります。  
+6.  すべてのレプリカがプライマリ レプリカおよび構成されたデータベースに昇格されると、可用性グループを Configuration Manager で使用できるようになります。  
 
 
 
@@ -220,15 +212,13 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
 2.  **Preinst.exe /stopsite** を実行して、Configuration Manager サイトを停止します。詳細については、「[Hierarchy Maintenance Tool (Preinst.exe) for System Center Configuration Manager](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md)」(System Center Configuration Manager の階層メンテナンス ツール (Preinst.exe)) を参照してください。  
 
-3.  プライマリ レプリカからサイト データベースのバックアップを作成してから、新しいセカンダリ レプリカ サーバーにそのバックアップを復元します。 SQL Server のドキュメント ライブラリの「 [データベースの完全バックアップの作成](https://msdn.microsoft.com/library/ms187510\(v=sql.120\).aspx) 」および「 [データベースのバックアップの復元 (SQL Server Management Studio)](https://msdn.microsoft.com/library/ms177429\(v=sql.120\).aspx) 」を参照してください。  
-
-4.  各セカンダリ レプリカを構成します。 次のことを実行して、可用性グループの各セカンダリ レプリカを構成します。  
+3.  各セカンダリ レプリカを構成します。 次のことを実行して、可用性グループの各セカンダリ レプリカを構成します。  
 
     1.  プライマリ レプリカを新しいセカンダリ レプリカに手動でフェールオーバーします。 SQL Server のドキュメントの「 [可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)](https://msdn.microsoft.com/library/hh231018\(v=sql.120\).aspx) 」を参照してください。  
 
     2.  新しいサーバーのデータベースを Trustworthy に構成して、CLR 統合を有効にします。 SQL Server のドキュメントの「 [TRUSTWORTHY データベース プロパティ](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) 」および「  [CLR 統合の有効化](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx)」を参照してください。  
 
-5.  サイト コンポーネント マネージャー (**sitecomp**) および **SMS_Executive** サービスを起動して、サイトを再開します。  
+4.  サイト コンポーネント マネージャー (**sitecomp**) および **SMS_Executive** サービスを起動して、サイトを再開します。  
 
 #### <a name="to-remove-a-replica-member-from-the-availability-group"></a>可用性グループからレプリカ メンバーを削除するには  
 
@@ -270,6 +260,6 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager クライアントを使用して管理されている Windows 10 デバイスの構成項目を作成する方法 | System Center Configuration Manager"
+title: "System Center Configuration Manager クライアントを使用して管理されている Windows 10 デバイスの構成項目を作成する方法 | Microsoft Docs"
 description: "System Center Configuration Manager の Windows 10 構成項目を使用して、Configuration Manager クライアントで管理されている Windows 10 コンピューターの設定を管理します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d5248e7262f758c2de2a1deaf42282d4e77e3e0c
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 2b24570aa2e9d9aa45584842011dcd49c6e5e8cc
 
 
 ---
@@ -125,7 +125,7 @@ System Center Configuration Manager の **Windows 10** 構成項目を使用し�
 |**ウイルス対策**|ウイルス対策ソフトウェアをインストールして、構成する必要があります。|  
 |**ウイルス対策署名は最新です**|デバイス上のウイルス対策ソフトウェアの署名ファイルは、最新の状態にしておく必要があります。|  
 
-### <a name="windows-information-protection-formerly-enterprise-data-protection"></a>Windows 情報保護 (旧称エンタープライズ データ保護)
+### <a name="windows-information-protection"></a>Windows 情報保護
 
 企業内の従業員が所有するデバイスが増加していることに伴い、企業が制御できない電子メール、ソーシャル メディア、パブリック クラウドなどのアプリやサービスを介して発生する偶発的なデータ漏えいのリスクが増大しています。 たとえば、従業員が個人用の電子メール アカウントから最新のエンジニアリング画像を送信すると、製品情報がツイートにコピーして貼り付けられたり、作成中の営業レポートがパブリック クラウドの記憶域に保存されたりします。
 
@@ -137,6 +137,6 @@ Configuration Manage で Windows 情報保護を構成する方法について�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "ハードウェア インベントリの表示 | リソース エクスプローラー | System Center Configuration Manager"
+title: "ハードウェア インベントリを表示する | Microsoft Docs | リソース エクスプローラー"
 description: "System Center Configuration Manager でリソース エクスプローラーを使用してハードウェア インベントリを表示します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 12bf49b6a68d277c7f505ddfe37556363d0e3e53
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: 2cd138b3bbb437d84f0ff7c2aeef869518bd817d
 
 
 ---
@@ -56,6 +56,6 @@ System Center Configuration Manager のリソース エクスプローラーを�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "オペレーティング システムをキャプチャするタスク シーケンスを作成する | Configuration Manager"
+title: "オペレーティング システムをキャプチャするタスク シーケンスの作成 | Microsoft Docs"
 description: "構築およびキャプチャするタスク シーケンスは、オペレーティング システムとともに特定のドライバーとソフトウェアの更新プログラムを含めることができる参照コンピューターを構築します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 12ea958e18a291a1b88e342b204e633d3bdf869f
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: e9320e40b8e5031ffa3da5e5149c7da718cc87d5
 
 
 ---
@@ -166,7 +166,7 @@ System Center Configuration Manager でタスク シーケンスを使用して�
 
 7.  ウィザードを完了します。  
 
-8.   **[タスク シーケンス]**で、カスタム タスク シーケンスを選択し、 **[ホーム]** タブの **[タスク シーケンス]** グループで **[編集]** をクリックして、タスク シーケンス エディターを開きます。  
+8.  **[タスク シーケンス]**で、カスタム タスク シーケンスを選択し、 **[ホーム]** タブの **[タスク シーケンス]** グループで **[編集]** をクリックして、タスク シーケンス エディターを開きます。  
 
 9. このステップは、Configuration Manager クライアントが参照コンピューターにインストールされている場合にのみ使用します。  
 
@@ -235,6 +235,6 @@ System Center Configuration Manager でタスク シーケンスを使用して�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

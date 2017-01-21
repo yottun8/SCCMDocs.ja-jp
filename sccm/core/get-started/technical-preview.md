@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager の Technical Preview"
+title: "System Center Configuration Manager の Technical Preview | Microsoft Docs"
 description: "System Center Configuration Manager の新機能を体験できるテクニカル プレビュー リリースについて説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/16/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 39a9cde3bd955c84f301d25258b413fecaa4393b
-ms.openlocfilehash: 2aa78c20c919d04401f663063860df06c5262048
+ms.sourcegitcommit: 4b1b925a50d08d90e4e1250967e19c0bc5aac4d3
+ms.openlocfilehash: faef3537eed740a6177f00991615c978659e06c7
 
 
 ---
@@ -134,39 +134,55 @@ ms.openlocfilehash: 2aa78c20c919d04401f663063860df06c5262048
 
  |機能|Technical Preview バージョン|Current Branch バージョン|  
  |----------------|---------------------|--------------------|
- |自動展開規則でコンテンツのサイズでフィルター処理する|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#filter-by-content-size-in-automatic-deployment-rules)|![追加されていません](media/Red_X.gif)|
- |必要なソフトウェア ダイアログの機能向上|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#improved-functionality-for-required-software-dialogs)|![追加されていません](media/Red_X.gif)|
- |以前に承認されたアプリケーションの要求を拒否する|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#deny-previously-approved-application-requests)|![追加されていません](media/Red_X.gif)|
- |自動アップグレードからクライアントを除外する|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#exclude-clients-from-automatic-upgrade)|![追加されていません](media/Red_X.gif)|
+ |OData エンドポイントのデータ アクセス |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|![追加されていません](media/Red_X.gif)|
+ |データ ウェアハウス サービス ポイント |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#the-data-warehouse-service-point)|![追加されていません](media/Red_X.gif)|
+ |コンテンツ ライブラリのクリーンアップ ツール |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#content-library-cleanup-tool)|![追加されていません](media/Red_X.gif)|
+ |コンソール内検索の機能強化 |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#improvements-for-in-console-search)|![追加されていません](media/Red_X.gif)|
+ |指定したプログラムが実行されている場合、アプリケーションのインストールはできない|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#prevent-installation-of-an-application-if-a-specified-program-is-running)|![追加されていません](media/Red_X.gif)|
+ |エンド ユーザーを対象とした新しい Windows Hello for Business 通知|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#new-windows-hello-for-business-notification-for-end-users)|![追加されていません](media/Red_X.gif)|
+ |Configuration Manager でのビジネス向け Windows ストアのサポート|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#windows-store-for-business-support-in-configuration-manager)|![追加されていません](media/Red_X.gif)|
+ |タスク シーケンスが失敗した場合に前のページに戻る|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#return-to-previous-page-when-a-task-sequence-fails)|![追加されていません](media/Red_X.gif)|
+ |Windows 10 更新プログラムに対する高速インストール ファイルのサポート|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#express-installation-files-support-for-windows-10-updates)|![追加されていません](media/Red_X.gif)|
+ |Azure Active Directory のオンボーディング|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#azure-active-directory-onboarding)|![追加されていません](media/Red_X.gif)|
+|デバイス登録のための多要素認証の構成の変更|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#change-to-configuring-multi-factor-authentication-for-device-enrollment)|![追加されていません](media/Red_X.gif)|
+|展開とタスク シーケンスのコンテンツの事前キャッシュ |[Tech Preview 1611](capabilities-in-technical-preview-1611.md#pre-cache-content-for-available-deployments-and-task-sequences)|![追加されていません](media/Red_X.gif)|
+ |Windows Defender の構成設定|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#windows-defender-configuration-settings)|[バージョン 1610](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)|
+ |管理者コンソールからのポリシー同期の要求|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#request-policy-sync-from-administrator-console)|[バージョン 1610](/sccm/mdm/deploy-use/sync-intune-device)|
+ |[すべての企業所有のデバイス] ノードの追加セキュリティ ロールのサポート|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#additional-security-role-support)|[バージョン 1610](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management#new-hybrid-features-in-november-2016)|
+ |Windows 10 VPN プロファイルの条件付きアクセス|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#conditional-access-for-windows-10-vpn-profiles)|[バージョン 1610](/sccm/protect/deploy-use/create-vpn-profiles#configure-the-authentication-method-for-the-vpn-profile)|
+ |自動展開規則でコンテンツのサイズでフィルター処理する|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#filter-by-content-size-in-automatic-deployment-rules)|[バージョン 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610#filter-by-content-size-in-automatic-deployment-rules) |
+ |必要なソフトウェア ダイアログの機能向上|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#improved-functionality-for-required-software-dialogs)|[バージョン 1610](/sccm/apps/deploy-use/deploy-applications)|
+ |以前に承認されたアプリケーションの要求を拒否する|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#deny-previously-approved-application-requests)|[バージョン 1610](/sccm/apps/deploy-use/deploy-applications)|
+ |自動アップグレードからクライアントを除外する|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#exclude-clients-from-automatic-upgrade)|[バージョン 1610](/sccm/core/clients/manage/upgrade/exclude-clients-windows)|
  |Endpoint Protection の機能強化|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#improvements-to-endpoint-protection)|![追加されていません](media/Red_X.gif)|
  |登録されるデバイス数の増加|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#increased-number-of-enrolled-devices)|![追加されていません](media/Red_X.gif)|
- |Apple DEP 設定の追加|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#additional-apple-dep-settings)|![追加されていません](media/Red_X.gif)|
- |ビジネス向け Windows ストアと Configuration Manager のとの統合の強化|[Tech Preview 1609](capabilities-in-technical-preview-1609.md)|![追加されていません](media/Red_X.gif)|
- |構成アイテムの新しいコンプライアンス設定|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#new-compliance-settings-for-configuration-items)|![追加されていません](media/Red_X.gif)|
- |Upgrade Analytics との統合|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#integration-with-upgrade-analytics)|![追加されていません](media/Red_X.gif)|
+ |Apple DEP 設定の追加|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#additional-apple-dep-settings)|[バージョン 1610](/sccm/mdm/deploy-use/ios-device-enrollment-program-for-hybrid)|
+ |ビジネス向け Windows ストアと Configuration Manager のとの統合の強化|[Tech Preview 1609](capabilities-in-technical-preview-1609.md)|[バージョン 1610](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)|
+ |構成アイテムの新しいコンプライアンス設定|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#new-compliance-settings-for-configuration-items)|[バージョン 1610](/sccm/compliance/deploy-use/create-configuration-items)|
+ |Upgrade Analytics との統合|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#integration-with-upgrade-analytics)|[バージョン 1610](/sccm/core/clients/manage/upgrade/upgrade-analytics)|
  |Windows 10 VPN ハイブリッド プロファイルのネイティブ接続の種類|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#native-connection-types-for-windows-10-vpn-hybrid-profiles)|![追加されていません](media/Red_X.gif)|
- |境界グループの機能強化|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#improvements-for-boundary-groups)|![追加されていません](media/Red_X.gif)|
- |Office 365 クライアント管理ダッシュボード|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#office-365-client-management-dashboard)|![追加されていません](media/Red_X.gif)|
- |クライアントに Office 365 アプリを展開する|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#ceploy-office-365-apps-to-clients)|![追加されていません](media/Red_X.gif)|
- |BIOS から UEFI への変換の改善|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#improvements-for-bios-to-uefi-conversion)|![追加されていません](media/Red_X.gif)|
- |Intune 準拠チャート|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#intune-compliance-charts)|![追加されていません](media/Red_X.gif)|
- |ConfigMgr クライアントのキャプチャの準備タスク シーケンス ステップの向上|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-the-prepare-configmgr-client-for-capture-task-sequence-step)|![追加されていません](media/Red_X.gif)|
- |ソフトウェア センターの機能強化|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-software-center)|![追加されていません](media/Red_X.gif)|
+ |境界グループの機能強化|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#improvements-for-boundary-groups)|[バージョン 1610](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#BKMK_BoundaryGroups)|
+ |Office 365 クライアント管理ダッシュボード|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#office-365-client-management-dashboard)|[バージョン 1610](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard)|
+ |クライアントに Office 365 アプリを展開する|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#deploy-office-365-apps-to-clients)|![追加されていません](media/Red_X.gif)|
+ |BIOS から UEFI への変換の改善|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#BKMK_UEFIConversion)|[バージョン 1610](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion)|
+ |Intune 準拠チャート|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#intune-compliance-charts)|[バージョン 1610](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)|
+ |ConfigMgr クライアントのキャプチャの準備タスク シーケンス ステップの向上|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-the-prepare-configmgr-client-for-capture-task-sequence-step)|[バージョン 1610](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture)|
+ |ソフトウェア センターの機能強化|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-software-center)|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610#general-improvements-to-software-center)|
  |資産インテリジェンスの改善|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence)|![追加されていません](media/Red_X.gif)|
  |リモート コントロール キーボードの変換|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#remote-control-keyboard-translation)|![追加されていません](media/Red_X.gif)|
- |Windows 10 のエディションのアップグレード ポリシーの改善|[Tech Preview 1607](capabilities-in-technical-preview-1607.md#dmp_edition)|![追加されていません](media/Red_X.gif)|
- |ソフトウェア センター ダイアログにおけるカスタマイズ可能なブランド|[Tech Preview 1607](capabilities-in-technical-preview-1607.md#customizable-branding-for-software-denter-dialogs)|![追加されていません](media/Red_X.gif)|  
+ |Windows 10 のエディションのアップグレード ポリシーの改善|[Tech Preview 1607](capabilities-in-technical-preview-1607.md#dmp_edition)|[バージョン 1610](/sccm/compliance/deploy-use/upgrade-windows-version)|
+ |ソフトウェア センター ダイアログにおけるカスタマイズ可能なブランド|[Tech Preview 1607](capabilities-in-technical-preview-1607.md#customizable-branding-for-software-center-dialogs)|![追加されていません](media/Red_X.gif)|  
  |オンプレミス モバイル デバイス管理のための複数のデバイス管理ポイント|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_onprem)|[バージョン 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#on-premises-mobile-device-management)|
  |デバイスを自動的にコレクションごとに分類|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_category)|[バージョン 1606](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections) |
- |必要なアプリケーションとソフトウェア更新プログラムを展開するための適用猶予期間|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_grace)|![追加されていません](media/Red_X.gif)|
+ |必要なアプリケーションとソフトウェア更新プログラムを展開するための適用猶予期間|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_grace)|[バージョン 1610](/sccm/apps/deploy-use/deploy-applications)|
  |デバイス ガードにより Configuration Manager を管理インストーラーとして使用|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_devg)|![追加されていません](media/Red_X.gif)|
- |クラウド プロキシ サービス|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#cloud_proxy) | ![追加されていません](media/Red_X.gif)|  
+ |クラウド管理ゲートウェイ (旧クラウド プロキシ サービス)|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#cloud_proxy) | [バージョン 1610](/sccm/core/clients/manage/plan-cloud-management-gateway)|  
  |Configuration Manager で Office 365 のクライアント エージェントを管理|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#manage_o365) |[バージョン 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#software-updates)|  
  |OSDPreserveDriveLetter タスク シーケンス変数は使用されなくなった|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#osdpreservedriveletter) |[バージョン 1606](/sccm/osd/understand/task-sequence-built-in-variables) |
  |更新プログラムとサービス ノードの変更|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#updatesandservicing)|[バージョン 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#updates-and-servicing) |
  |Windows 10 デバイス向けのアプリごとの VPN|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_PerAppVPN)|[バージョン 1606](/sccm/protect/deploy-use/create-vpn-profiles)|  
  |ソフトウェア更新プログラムのインストール タスク シーケンスの向上|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_InstallSU)|[バージョン 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#operating-system-deployment)|  
- |ConfigMgr クライアントのキャプチャの準備タスク シーケンス ステップの向上 |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_PrepareConfigMgrClient)|![追加されていません](media/Red_X.gif) |
+ |ConfigMgr クライアントのキャプチャの準備タスク シーケンス ステップの向上 |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_PrepareConfigMgrClient)|[バージョン 1610](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture) |
  |必要なアプリケーション展開の猶予期間 |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_Grace)|![追加されていません](media/Red_X.gif)|  
  |リモート デバイスの操作の新しいエクスペリエンス |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_Remote)|[バージョン 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#device-configuration-and-protection)|  
  |ビジネス向け Windows ストアのアプリ |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_WSFB)|[バージョン 1606](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)|  
@@ -182,7 +198,7 @@ ms.openlocfilehash: 2aa78c20c919d04401f663063860df06c5262048
  |ビジネス向け Windows ストアからの一括購入アプリの管理| [Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_WindowsVPP)|[バージョン 1606](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)|  
  |Microsoft Passport for Work 管理の機能強化|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_PFW)|[バージョン 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#device-configuration-and-protection)|  
  |クライアントが新しいソフトウェア更新ポイントに切り替えるためのオプション|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_switchsup)|[バージョン 1606](/sccm/sum/plan-design/plan-for-software-updates#BKMK_ManuallySwitchSUPs)|  
- |クライアント キャッシュ設定とクライアント ピア キャッシュを管理するためのクライアント設定 |[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_peercache)|[バージョン 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#administration)|  
+ |クライアント キャッシュ設定とクライアント ピア キャッシュを管理するためのクライアント設定 |[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_peercache)|クライアント設定: [バージョン 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#administration)<br/>ピア キャッシュ: [バージョン 1610](/sccm/core/plan-design/hierarchy/client-peer-cache)|  
  |KSP としての Passport for Work のサポート |[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_passport)|[バージョン 1606](/sccm/protect/deploy-use/create-certificate-profiles)|  
  |オンプレミスのデバイス正常性構成証明書|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_onpremdha)|[バージョン 1606](/sccm/core/servers/manage/health-attestation)|  
  |Android デバイスの SmartLock 設定|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_Smart)|[バージョン 1606](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-and-samsung-knox-configuration-item-settings-reference)|  
@@ -209,6 +225,6 @@ ms.openlocfilehash: 2aa78c20c919d04401f663063860df06c5262048
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

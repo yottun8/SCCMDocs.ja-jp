@@ -1,5 +1,5 @@
 ---
-title: "リリース ノート | System Center Configuration Manager"
+title: "リリース ノート | Microsoft Docs"
 description: "製品でまだ修正されていないまたは Microsoft サポート技術情報の記事で説明されていない緊急の問題については以下のメモを参照してください。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 0b6c49f3c5e817f1dbd40b40c78d89c4a018e0f1
+ms.sourcegitcommit: ea723a6694feb2c9584b35498aa9c3519383f08d
+ms.openlocfilehash: a9dc046a54c15d9d299664cd1f2a149383f53489
 
 
 ---
@@ -35,16 +35,31 @@ System Center Configuration Manager の製品リリース ノートは、この�
 
 ## <a name="setup-and-upgrade"></a>セットアップとアップグレード  
 
+### <a name="when-installing-a-long-term-service-branch-site-using-version-1606-a-current-branch-site-is-installed"></a>バージョン 1606 を使用して Long-Term Service Branch をインストールすると、Current Branch サイトがインストールされる
+2016 年 10 月リリースのバージョン 1606 ベースライン メディアを使用して Long-Term Servicing Branch (LTSB) サイトをインストールすると、代わりに Current Branch サイトがインストールされます。 この問題は、サイトのインストールでサービス接続ポイントをインストールするオプションがオフのために発生します。
+
+ - サービス接続ポイントは必須ではありませんが、LTSB サイトをインストールするには、セットアップ時にインストールするオプションをオンにする必要があります。
+
+セットアップが完了したら、サービス接続ポイントをアンインストールすることができます。  ただし、Current Branch サイトと LTSB サイトの両方でテレメトリ データを送信し、セキュリティ更新プログラムを取得するには、オフライン モードまたはオンライン モードのサービス接続ポイントが存在する必要があります。
+
+既に Current Branch サイトとしてサイトがインストールされていて、LTSB をインストールする場合は、サイトをアンインストールしてから再インストールします。 不明な点については、[Microsoft ヘルプおよびサポート](http://go.microsoft.com/fwlink/?LinkId=243064)で検索または問い合わせてください。  
+
+インストールされているブランチを確認するには、コンソールで **[管理]** > **[サイトの構成]** > **[サイト]** を選択し、**[階層設定]** を開きます。 サイトを Current Branch サイトに変換するオプションは、サイトが LTSB を実行している場合にのみ使用できます。  
+
+**回避策:**  なし。   
 
 
-### <a name="the-sql-server-backup-model-in-use-by-configuration-manager-can-change-from-full-to-simple"></a>Configuration Managerで使用されている SQL Server のバックアップ モデルが完全版から簡易版に変更されることがあります。  
+
+
+
+### <a name="the--sql-server-backup-model-in-use-by-configuration-manager-can-change-from-full-to-simple"></a>Configuration Managerで使用されている SQL Server のバックアップ モデルが完全版から簡易版に変更されることがあります。  
  System Center Configuration Manager バージョン 1511 にアップグレードすると、Configuration Manager で使用されている SQL Server のバックアップ モデルが完全版から簡易版に変更されることがあります。  
 
 -   Configuration Manager の組み込みバックアップ タスクを使用せずに、SQL Server のカスタム バックアップ タスクと完全バックアップ モデルを組み合わせて使用している場合、アップグレードを実行すると、バックアップ モデルが完全版から簡易版に変更されることがあります。  
 
 **回避策**: バージョン 1511 にアップグレードした後、SQL Server の構成を確認し、必要であれば完全版に復元します。  
 
-### <a name="when-you-add-a-service-window-to-a-new-site-server-service-windows-that-were-configured-for-another-site-server-are-deleted"></a>サービス ウィンドウを新しいサイト サーバーに追加すると、別のサイト サーバーに構成されているサービス ウィンドウが削除されます。  
+### <a name="when-you-add-a-service-window-to-a-new-site-server-service-windows-that-were---configured-for-another-site-server-are-deleted"></a>サービス ウィンドウを新しいサイト サーバーに追加すると、別のサイト サーバーに構成されているサービス ウィンドウが削除されます。  
  System Center Configuration Manager バージョン 1511 でサービス ウィンドウを使用すると、階層内の 1 つのサイト サーバーにのみサービス ウィンドウを構成できます。 1 つのサーバー上でサービス ウィンドウを構成した後に、2 つ目のサイト サーバーでサービス ウィンドウを構成すると、警告やエラーが表示されることなく、最初のサイト サーバーのサービス ウィンドウが削除されます。  
 
 **回避策**: 修正プログラムを [Microsoft サポート技術情報の記事 3142341](http://support.microsoft.com/kb/3142341) からインストールします。 この問題は、System Center Configuration Manager の更新プログラム 1602 をインストールした場合にも解決されます。  
@@ -120,6 +135,32 @@ System Center Configuration Manager バージョン 1602 では 2 つのプレ�
 **回避策:** 次のいずれかを使用します。
  - セットアップ中には、CD.Latest フォルダーに含まれているファイルの代わりに、Microsoft から最新の再頒布可能ファイルをダウンロードすることを選択します。
  - *cd.latest\redist\languagepack\zhh* フォルダーを手動で削除してから、セットアップを再実行します。
+
+### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>SQL Server がリモートの場合、または共有メモリが無効な場合、サービス接続ツールから例外がスローされる
+バージョン 1606 以降、次のいずれかの条件に該当する場合、サービス接続ツールから例外が生成されます。  
+ -  サービス接続ポイントをホストし、標準以外のポート (1433 以外のポート) を使用しているコンピューターとは別のコンピューターにサイト データベースがある
+ -  サイト データベースがサービス接続ポイントと同じサーバー上にあるが、SQL プロトコルの**共有メモリ**が無効
+
+次のような例外がスローされます。
+ - *未処理の例外が発生しました: System.Data.SqlClient.SqlException: SQL Server への接続を確立しているときにネットワーク関連またはインスタンス固有のエラーが発生しました。サーバーが見つからなかったか、アクセスできませんでした。インスタンス名が正しいことと、SQL Server がリモート接続を許可するように構成されていることを確認してください。(プロバイダー: 名前付きパイプのプロバイダー、エラー: 40 - SQL Server への接続を開けませんでした) --*
+
+**回避策**: ツールの使用時に、サービス接続ポイントをホストするサーバーのレジストリを変更して、SQL Server ポートに関する情報を含める必要があります。
+
+   1.   このツールの使用前に、次のレジストリ キーを編集し、使用しているポート番号を SQL Server 名に追加します。
+    - キー: HKLM\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\
+      - 値: &lt;SQL Server 名>
+    - 追加: **,&lt;ポート番号>**
+
+    たとえば、ポート *15001* を *testserver.test.net* というサーバーに追加する場合、結果のキーは ***HKLM\Software\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\testserver.test.net,15001*** になります。
+
+   2.   ポートをレジストリに追加すると、ツールは正常に動作するようになります。  
+
+   3.   ツールの使用が完了したら、**-connect** ステップと **-import** ステップの両方について、レジストリ キーを元の値に変更します。  
+
+
+
+
+
 
 ## <a name="backup-and-recovery"></a>バックアップと回復
 ### <a name="pre-production-client-is-not-available-after-a-site-restore"></a>サイトの復元の後、実稼働前クライアントは利用不可
@@ -250,6 +291,6 @@ RAM が 4 GB 未満の Windows 10 RTM デバイスでフル ワイプを実行�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

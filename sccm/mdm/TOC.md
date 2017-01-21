@@ -1,14 +1,14 @@
-#  [理解と調査](understand/hybrid-mobile-device-management.md)
+#  理解と調査
 ## [ハイブリッド MDM](understand/hybrid-mobile-device-management.md)
 ## [Intune またはハイブリッド MDM の選択](understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
 ## [ハイブリッド MDM の新機能](understand/whats-new-in-hybrid-mobile-device-management.md)
 ## [オンプレミス MDM](understand/manage-mobile-devices-with-on-premises-infrastructure.md)
 
-# [計画と設計](plan-design/plan-hybrid-mobile-device-management.md)
+# 計画と設計
 ## [ハイブリッド MDM の計画](plan-design/plan-hybrid-mobile-device-management.md)
 ## [オンプレミス MDM の計画](plan-design/plan-on-premises-mdm.md)
 
-# [展開と使用](deploy-use/setup-hybrid-mdm.md)
+# 展開と使用
 
 ## [ハイブリッド MDM のセットアップ](deploy-use/setup-hybrid-mdm.md)
 ### [iOS および Mac](deploy-use/enroll-hybrid-ios-mac.md)
@@ -33,9 +33,10 @@
 ### [一括登録](deploy-use/bulk-enroll-devices-on-premises-mdm.md)
 
 ## [デバイスのインベントリからの削除、ロック、およびリセット](deploy-use/wipe-lock-reset-devices.md)
+## [Intune に登録されたデバイスの同期](deploy-use/sync-intune-device.md)
 ## [Exchange でのデバイスの管理](deploy-use/manage-mobile-devices-with-exchange-activesync.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

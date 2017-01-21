@@ -1,5 +1,5 @@
 ---
-title: "電源管理の概要 | System Center Configuration Manager"
+title: "電源管理の概要 | Microsoft Docs"
 description: "System Center Configuration Manager の電源管理の概要について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 14f83f6f0c96bcd6af09ab75f35d697b594b8a96
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: f46c9479021c814b1102d72c7d493f21a7243bf1
 
 
 ---
@@ -52,6 +52,6 @@ System Center Configuration Manager の電源管理は、組織内のコンピ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Active Directory スキーマ | System Center Configuration Manager"
+title: "発行と Active Directory スキーマ | Microsoft Docs"
 description: "System Center Configuration Manager の Active Directory スキーマを拡張して、クライアントの展開と構成のプロセスを簡略化します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,12 +17,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d4cdaa646265b2d05ec93aeaefaf3a6e7a2c269f
+ms.sourcegitcommit: 2083a2ca7a199771f26981cdbe04e4e2ef6e8958
+ms.openlocfilehash: 3bd18e2de76d886b275c80d0dce3b824f2598008
 
 
 ---
-# <a name="extend-the-active-directory-schema-for-system-center-configuration-manager"></a>System Center Configuration Manager 向けに Active Directory スキーマを拡張する
+# <a name="prepare-active-directory-for-site-publishing"></a>サイト発行のために Active Directory を準備する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -70,7 +70,7 @@ Configuration Manager のスキーマを拡張するには、次の操作が必�
 
 3.  前の手順で使用したコマンド ラインによって作成されたログ ファイルを確認することにより、スキーマの拡張が成功したことを確認できます。  
 
-## <a name="step-2-create-the-system-management-container-and-grant-sites-permissions-to-the-container"></a>手順 2.  System Management コンテナーの作成とコンテナーへのサイトに対するアクセス許可の付与  
+## <a name="step-2--create-the-system-management-container-and-grant-sites-permissions-to-the-container"></a>手順 2.  System Management コンテナーの作成とコンテナーへのサイトに対するアクセス許可の付与  
  スキーマを拡張したら、Active Directory Domain Services (AD DS) で **System Management** という名前のコンテナーを作成する必要があります。  
 
 -   データを Active Directory に発行するプライマリ サイトまたはセカンダリ サイトがあるドメインごとに、このコンテナーを 1 回作成します。  
@@ -114,6 +114,6 @@ Configuration Manager のスキーマを拡張するには、次の操作が必�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

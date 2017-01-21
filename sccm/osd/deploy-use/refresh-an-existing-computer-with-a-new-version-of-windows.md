@@ -1,5 +1,5 @@
 ---
-title: "新しいバージョンの Windows で既存のコンピューターを更新する | Configuration Manager"
+title: "新しいバージョンの Windows で既存のコンピューターを更新する | Microsoft Docs"
 description: "Configuration Manager でいくつかの方法を使用して、既存のコンピューターのパーティション分割とフォーマット (ワイプ) を行い、そのコンピューターに新しいオペレーティング システムをインストールする一般的な手順を説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ae331ee9f1cc276f64b7f6501b383c67648f72f3
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: b247cbb68ed63a8eb99715a248686d68a28c53e2
 
 
 ---
@@ -90,6 +90,6 @@ Configuration Manager でいくつかの方法を使用して、既存のコン�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "コンテンツの展開 | System Center Configuration Manager"
+title: "コンテンツの展開 | Microsoft Docs"
 description: "System Center Configuration Manager の配布ポイントをインストールした後に、その配布ポイントにコンテンツを展開する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 36b08285ef78d0acb9ba9c44abe2d57e311d44b3
 
 ---
 # <a name="deploy-and-manage-content-for-system-center-configuration-manager"></a>System Center Configuration Manager でのコンテンツの展開および管理
@@ -307,43 +307,19 @@ System Center Configuration Manager の配布ポイントをインストール�
 
 ##  <a name="a-namebkmkmanagea-manage-the-content-you-have-distributed"></a><a name="bkmk_manage"></a> 配布したコンテンツの管理  
  コンテンツを管理するために次のオプションを使用できます。  
+ - [コンテンツの更新](#update-content)
+ - [コンテンツの再配布](#redistribute-content)
+ - [コンテンツの削除](#remove-content)
+ - [コンテンツの検証](#validate-content)
 
-**コンテンツの更新:** 新しいファイルを追加するか、既存のファイルを新しいバージョンに置き換えることによって展開のソース ファイルの場所が更新された場合は、**[配布ポイントの更新]** 操作または **[コンテンツの更新]** 操作を使用して配布ポイントにあるコンテンツ ファイルを更新することができます。  
-
+### <a name="update-content"></a>コンテンツの更新
+新しいファイルを追加するか、既存のファイルを新しいバージョンに置き換えることによって展開のソース ファイルの場所が更新された場合は、**[配布ポイントの更新]** 操作または **[コンテンツの更新]** 操作を使用して配布ポイントにあるコンテンツ ファイルを更新することができます。  
 -   コンテンツ ファイルは、ソース ファイル パスからパッケージ コンテンツ ソースを所有するサイトのコンテンツ ライブラリにコピーされます。  
-
 -   パッケージのバージョンがインクリメントされます。  
-
 -   サイト サーバーと配布ポイントにあるコンテンツ ライブラリの各インスタンスは、変更されたファイルのみについて更新されます。  
 
 > [!WARNING]  
 >  アプリケーションのパッケージ バージョンは常に 1 です。 アプリケーションの展開の種類のコンテンツを更新すると、Configuration Manager は、その展開の種類用に新しいコンテンツ ID を作成し、パッケージはその新しいコンテンツ ID を参照します。  
-
-**コンテンツの再配布:** パッケージを再配布してパッケージ内のすべてのコンテンツ ファイルを配布ポイントまたは配布ポイント グループにコピーして、既存のファイルを上書きすることができます。  
-
- この操作は、パッケージ内のコンテンツ ファイルを修復するか、または初回配布が失敗した場合にコンテンツを再送信するときに使用します。 パッケージは、次の場所から再配布することができます。  
-
--   パッケージのプロパティ  
-
--   配布ポイントのプロパティ  
-
--   配布ポイント グループのプロパティ  
-
-**コンテンツの削除:** 配布ポイントでコンテンツが不要になった場合は、コンテンツ ファイルを削除することができます。  
-
--   パッケージのプロパティ  
-
--   配布ポイントのプロパティ  
-
--   配布ポイント グループのプロパティ  
-
- ただし、コンテンツが同じ配布ポイントに配布済みの別のパッケージに関連付けられている場合、そのコンテンツを削除することはできません。 コンテンツは次の場所から削除することができます。  
-
-**コンテンツの検証:** コンテンツの検証プロセスでは、配布ポイントにあるコンテンツ ファイルの整合性を検証します。 コンテンツの検証は、スケジュールに従って有効にするか、配布ポイントとパッケージのプロパティから手動で開始することができます。  
-
- コンテンツの検証プロセスの開始時に、Configuration Manager は、配布ポイントのコンテンツ ファイルを確認し、ファイルのハッシュが配布ポイント上のファイルには予期されていない場合、Configuration Manager は **[監視]** ワークスペースで確認できるステータス メッセージを作成します。  
-
- コンテンツ検証スケジュールの構成の詳細については、「[System Center Configuration Manager の配布ポイントのインストールと構成](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md)」トピックの「[配布ポイントの構成](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs)」をご覧ください。  
 
 #### <a name="to-update-content-on-distribution-points"></a>配布ポイントのコンテンツを更新するには  
 
@@ -372,6 +348,16 @@ System Center Configuration Manager の配布ポイントをインストール�
 
     > [!NOTE]  
     >  ブート イメージのコンテンツを更新する場合は、配布ポイントの管理ウィザードを開きます。 [概要 **** ] ページで情報を確認し、ウィザードを完了してコンテンツを更新します。  
+
+### <a name="redistribute-content"></a>コンテンツの再配布
+パッケージを再配布してパッケージ内のすべてのコンテンツ ファイルを配布ポイントまたは配布ポイント グループにコピーして、既存のファイルを上書きすることができます。  
+
+ この操作は、パッケージ内のコンテンツ ファイルを修復するか、または初回配布が失敗した場合にコンテンツを再送信するときに使用します。 パッケージは、次の場所から再配布することができます。  
+
+-   パッケージのプロパティ  
+-   配布ポイントのプロパティ  
+-   配布ポイント グループのプロパティ  
+
 
 #### <a name="to-redistribute-content-from-package-properties"></a>パッケージ プロパティを使用してコンテンツを再配布するには  
 
@@ -420,6 +406,23 @@ System Center Configuration Manager の配布ポイントをインストール�
     > [!IMPORTANT]  
     >  パッケージ内のコンテンツが配布ポイント グループ内のすべての配布ポイントに再配布されます。  
 
+
+#### <a name="use-the-sdk-to-force-replication-of-content"></a>SDK を使用してコンテンツのレプリケーションを強制する
+Configuration Manager SDK の **RetryContentReplication** Windows Management Instrumentation (WMI) クラス メソッドを使用して、配布マネージャーに対して、ソースの場所からコンテンツ ライブラリにコンテンツをコピーするように強制できます。  
+
+このメソッドを使用するのは、コンテンツの通常のレプリケーションに問題が発生した後にコンテンツを再配布する必要があり、レプリケーションを強制する場合のみです (通常、コンソールの監視ノードを使用して確認します)。   
+
+この SDK オプションの詳細については、MSDN.Microsoft.com の「[RetryContentReplication Method in Class SMS_CM_UpdatePackages](https://msdn.microsoft.com/library/mt762092(CMSDK.16).aspx)」(クラス SMS_CM_UpdatePackages の RetryContentReplication メソッド) を参照してください。
+
+### <a name="remove-content"></a>コンテンツの削除
+配布ポイントでコンテンツが不要になった場合は、コンテンツ ファイルを削除することができます。  
+
+-   パッケージのプロパティ  
+-   配布ポイントのプロパティ  
+-   配布ポイント グループのプロパティ  
+
+ただし、コンテンツが同じ配布ポイントに配布済みの別のパッケージに関連付けられている場合、そのコンテンツを削除することはできません。  
+
 #### <a name="to-remove-package-content-files-from-distribution-points"></a>コンテンツ ファイルを配布ポイントから削除するには  
 
 1.  Configuration Manager コンソールで、[ソフトウェア ライブラリ] ****をクリックします。  
@@ -464,6 +467,15 @@ System Center Configuration Manager の配布ポイントをインストール�
 
 4.  [コンテンツ **** ] タブをクリックし、削除するコンテンツを選択して、[削除 ****] をクリックし、[OK ****] をクリックします。  
 
+
+### <a name="validate-content"></a>コンテンツの検証
+コンテンツの検証プロセスは、配布ポイントにあるコンテンツ ファイルの整合性を検証します。 コンテンツの検証は、スケジュールに従って有効にするか、配布ポイントとパッケージのプロパティから手動で開始することができます。  
+
+ コンテンツの検証プロセスの開始時に、Configuration Manager は、配布ポイントのコンテンツ ファイルを確認し、ファイルのハッシュが配布ポイント上のファイルには予期されていない場合、Configuration Manager は **[監視]** ワークスペースで確認できるステータス メッセージを作成します。  
+
+ コンテンツ検証スケジュールの構成の詳細については、「[System Center Configuration Manager の配布ポイントのインストールと構成](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md)」トピックの「[配布ポイントの構成](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs)」をご覧ください。  
+
+
 #### <a name="to-initiate-content-validation-for-all-content-on-a-distribution-point"></a>配布ポイントにあるすべてのコンテンツの検証を開始するには  
 
 1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
@@ -504,6 +516,6 @@ System Center Configuration Manager の配布ポイントをインストール�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

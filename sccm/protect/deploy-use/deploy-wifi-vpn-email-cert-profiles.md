@@ -1,5 +1,5 @@
 ---
-title: "Wi-Fi、VPN、電子メール、および証明書のプロファイルの展開 | System Center Configuration Manager"
+title: "Wi-Fi、VPN、電子メール、および証明書プロファイルの展開 | Microsoft Docs"
 description: "System Center Configuration Manager で Wi-Fi、VPN、電子メール、および証明書のプロファイルを展開する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7e13c52c135850b1f449cf91bc81425208d16551
+ms.sourcegitcommit: c2e3aef41e9a890d136039f85777ab07284e5c27
+ms.openlocfilehash: 70372d5df13034b48f3e43b766776442f1be5823
 
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager でのプロファイルの展開
@@ -40,10 +40,10 @@ ms.openlocfilehash: 7e13c52c135850b1f449cf91bc81425208d16551
 > -   [System Center Configuration Manager で証明書プロファイルを作成する方法](create-certificate-profiles.md)    
 
 > [!IMPORTANT]  
->  Wi-Fi プロファイルの展開を削除するときに、Wi-Fi プロファイルはクライアント デバイスから削除されません。 デバイスからプロファイルを削除する場合、手動で削除する必要があります。
+>  VPN プロファイルの展開を削除するときに、VPN プロファイルはクライアント デバイスから削除されません。 デバイスからプロファイルを削除する場合、手動で削除する必要があります。
 >   
 
-## <a name="deploying-profiles"></a>プロファイルの展開  
+## <a name="deploying--profiles"></a>プロファイルの展開  
 
 
 1.  System Center Configuration Manager コンソールで、**[資産とコンプライアンス]** を選択します。  
@@ -75,6 +75,6 @@ ms.openlocfilehash: 7e13c52c135850b1f449cf91bc81425208d16551
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

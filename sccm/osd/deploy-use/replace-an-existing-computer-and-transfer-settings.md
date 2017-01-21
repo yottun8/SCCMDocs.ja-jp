@@ -1,5 +1,5 @@
 ---
-title: "既存のコンピューターを置き換え、設定を転送する | Configuration Manager"
+title: "既存のコンピューターの置き換えと設定の転送 | Microsoft Docs"
 description: "Configuration Manager で、起動可能なメディア、マルチキャスト、またはソフトウェア センターなどの展開方法から選択して、既存のコンピューターを新しいコンピューターに置き換えます。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 82a2ebb830b872f8e6368be75b6d9beb1955ec27
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 243433980e1720fd468d52a4a61f2c3a8e3659b5
 
 
 ---
@@ -86,6 +86,6 @@ ms.openlocfilehash: 82a2ebb830b872f8e6368be75b6d9beb1955ec27
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

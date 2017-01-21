@@ -1,8 +1,8 @@
 ---
-title: "クライアントのインストール方法 | System Center Configuration Manager"
+title: "クライアントのインストール方法 | Microsoft Docs"
 description: "System Center Configuration Manager でのクライアントのインストール方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 169e7871bc1fbc83964ecb17e277d64ce4fd472c
+ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
+ms.openlocfilehash: a7d5a04cf34c49246f768f9a4757c5da3b4db31a
 
 
 ---
@@ -26,9 +26,7 @@ ms.openlocfilehash: 169e7871bc1fbc83964ecb17e277d64ce4fd472c
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-社内の Windows デバイス、UNIX/Linux サーバー、および Mac コンピューターに System Center Configuration Manager クライアント ソフトウェアをインストールする場合、さまざまな方法を使用できます。 1 つの方法を使用するか、必要に応じて方法を任意に組み合わせて使用することもできます。  
-
- 次のセクションに説明されているそれぞれのクライアント インストール方法の長所と短所は、組織に最適な方法を判断するのに役立ちます。  
+Configuration Manager (ConfigMgr または SCCM とも呼ばれています) クライアント ソフトウェアはさまざまな方法でインストールできます。 1 つの方法を利用することも、複数の方法を組み合わせることもできます。 このトピックでは、それぞれの方法について説明します。組織にとって最適な方法を理解できます。  
 
 ## <a name="client-push-installation"></a>クライアント プッシュ インストール  
 
@@ -150,6 +148,6 @@ ms.openlocfilehash: 169e7871bc1fbc83964ecb17e277d64ce4fd472c
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

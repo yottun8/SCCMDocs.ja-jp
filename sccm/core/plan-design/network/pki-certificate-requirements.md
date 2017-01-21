@@ -1,8 +1,8 @@
 ---
-title: "PKI 証明書の要件 | System Center Configuration Manager"
+title: "PKI 証明書の要件 | Microsoft Docs"
 description: "System Center Configuration Manager で必要な PKI 証明書の要件について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fbc85f65e4ad952d40161e6f6282bb6c0796662b
+ms.sourcegitcommit: db0642e95bbd7e704d2052aa1e0f5c27cd7bf568
+ms.openlocfilehash: 00c3c355fc43eff18b86112b0b9272cbcdf38e85
 
 
 ---
@@ -32,7 +32,7 @@ System Center Configuration Manager で必要になる場合がある公開キ�
 -   Windows Server 2008: [Windows Server 2008 の Active Directory 証明書サービス](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
 
 > [!IMPORTANT]  
->  2017 年 1 月 1 日より、Windows は SHA-1 で署名された証明書を信頼しなくなります。  SHA-2 で署名された新しいサーバーおよびクライアント認証証明書を発行することをお勧めします。  
+>  2017 年 1 月 1 日より、Windows は SHA-1 で署名された証明書を信頼しなくなります。  SHA-2 で署名された新しいサーバーおよびクライアント認証証明書 (SHA-256 が含まれます) を発行することをお勧めします。  
 >   
 >  この変更と、今後生じる可能性のある期日の更新の詳細については、このブログの投稿をご覧ください: [Windows Enforcement of Authenticode Code Signing and Timestamping (Windows の Authenticode コード署名とタイムスタンプ処理の実施)](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-authenticode-code-signing-and-timestamping.aspx)  
 
@@ -86,6 +86,6 @@ System Center Configuration Manager で必要になる場合がある公開キ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

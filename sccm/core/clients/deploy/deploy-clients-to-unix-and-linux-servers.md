@@ -1,5 +1,5 @@
 ---
-title: "UNIX/Linux クライアントの展開 | System Center Configuration Manager"
+title: "UNIX または Linux クライアントの展開 | Microsoft Docs"
 description: "System Center Configuration Manager で UNIX または Linux サーバーにクライアントを展開する方法を説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 caps.latest.revision: 9
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 77a0825346b461cdc3b36e5aabcb1e4e83135d6e
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 0e5f65552045e9cef06f5286b0087153751c79b0
 
 
 ---
@@ -240,6 +240,6 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

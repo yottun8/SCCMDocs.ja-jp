@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection クライアント ヘルプ | System Center Configuration Manager"
+title: "Endpoint Protection クライアント ヘルプ | Microsoft Docs"
 description: "コンピューターを脅威から保護するのに役立つ Endpoint Protection の機能と拡張機能について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 3b3f16904de68a226db8cacc62bd6acf8dedd8c9
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 870aa9766c995a5c8858b9a8c9a5537cd5f82840
 
 
 ---
@@ -52,6 +52,6 @@ ms.openlocfilehash: 3b3f16904de68a226db8cacc62bd6acf8dedd8c9
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

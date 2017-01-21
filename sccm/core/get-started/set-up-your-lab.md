@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager ラボのセットアップ"
+title: "System Center Configuration Manager ラボを設定する | Microsoft Docs"
 description: "シミュレートされた現実のアクティビティを使用して Configuration Manager を評価するためのラボを設定します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ea084f30a1a6ec731e97cec46448d0ffbfca42e0
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 36e5307449bd843156307598ccdde717b4b59be3
 
 
 ---
@@ -29,7 +29,7 @@ ms.openlocfilehash: ea084f30a1a6ec731e97cec46448d0ffbfca42e0
 このトピックのガイダンスに従うことで、シミュレートされた実際のアクティビティで Configuration Manager を評価するためのラボを設定できます。  
 
 ##  <a name="a-namebkmklabcorea-core-components"></a><a name="BKMK_LabCore"></a> コア コンポーネント  
- System Center Configuration Manager 用に環境をセットアップするには、Configuration Manager のインストールをサポートするためにいくつかのコア コンポーネントが必要です。  
+ System Center Configuration Manager 用に環境をセットアップするには、Configuration Manager のインストールをサポートするためにいくつかのコア コンポーネントが必要です。    
 
 -   **ラボ環境では Windows Server 2012 R2 が使用**されています。これに対して System Center Configuration Manager のインストールをサポートするコア コンポーネントがいくつか必要です。  
 
@@ -164,7 +164,7 @@ ms.openlocfilehash: ea084f30a1a6ec731e97cec46448d0ffbfca42e0
 
 ##### <a name="to-install-net-and-activate-windows-communication-foundation"></a>.NET をインストールし、Windows Communication Foundation をアクティブ化するには:  
 
-1.  **Server Manager**を開き、 **[管理]**に移動します。  **[役割と機能の追加]** をクリックし、 **[役割と機能の追加] Wizard.**を開きます。  
+1.  **Server Manager**を開き、 **[管理]**に移動します。 **[役割と機能の追加]** をクリックし、 **[役割と機能の追加] Wizard.**を開きます。  
 
 2.  **[始める前に]** パネルの情報を確認し、 **[次へ]**をクリックします。  
 
@@ -340,7 +340,7 @@ IIS では、複数の種類のファイル拡張子と場所が、HTTP また�
 
 2.  **ホーム** 画面の下部で **[機能ビュー]** が選択されていることを確認します。 **IIS** に移動し、 **[要求のフィルタリング]**を開きます。  
 
-3.   **[アクション]** ウィンドウで、 **[ファイル名拡張子の許可]**をクリックします。  
+3.  **[アクション]** ウィンドウで、 **[ファイル名拡張子の許可]**をクリックします。  
 
 4.  ダイアログ ボックスに「 **.msi** 」と入力し、 **[OK]**をクリックします。  
 
@@ -381,7 +381,7 @@ IIS では、複数の種類のファイル拡張子と場所が、HTTP また�
 
 3.  **[Active Directory フォレストの探索]** をクリックし、 **[プロパティ]**をクリックします。  
 
-4.  **[プロパティ]** ダイアログ ボックスで、 **[Active Directory フォレストの探索を有効にする]**をオンにします。 これがアクティブになったら、 **[探索時に Active Directory サイトの境界を自動的に作成する]**をオンにします。 ダイアログ ボックスが表示され、 **[今すぐ完全な探索を実行しますか?]**  [はい]のインストールをサポートするコア コンポーネントがいくつか必要です。  
+4.  **[プロパティ]** ダイアログ ボックスで、 **[Active Directory フォレストの探索を有効にする]**をオンにします。 これがアクティブになったら、 **[探索時に Active Directory サイトの境界を自動的に作成する]**をオンにします。 ダイアログ ボックスが表示され、 **[今すぐ完全な探索を実行しますか?]** [はい]のインストールをサポートするコア コンポーネントがいくつか必要です。  
 
 5.  画面上部の **[探索方法]** グループで、 **[今すぐフォレスト探索を実行する]**をクリックし、サイドバーの **[Active Directory フォレスト]** に移動します。 Active Directory フォレストは、検出されたフォレストの一覧に表示されます。  
 
@@ -401,6 +401,6 @@ IIS では、複数の種類のファイル拡張子と場所が、HTTP また�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

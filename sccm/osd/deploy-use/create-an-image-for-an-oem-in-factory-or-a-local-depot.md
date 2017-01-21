@@ -1,5 +1,5 @@
 ---
-title: "工場出荷時の OEM 用、または現地保管場所用のイメージの作成 | Configuration Manager"
+title: "工場出荷時の OEM 用、または現地保管場所用のイメージの作成 | Microsoft Docs"
 description: "事前設定されたメディアによる展開を使用して、完全にはプロビジョニングされていないコンピューターにオペレーティング システムを展開する際のネットワーク トラフィックを軽減します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d604577fdb9af7c7789840ea6281c371e35c46b0
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 07aba04fb1b845e389a5f75b115d536136c1569c
 
 
 ---
@@ -58,6 +58,6 @@ System Center Configuration Manager における事前設定されたメディ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

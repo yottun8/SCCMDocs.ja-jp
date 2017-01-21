@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager のプライバシーに関する声明 - Configuration Manager Cmdlet Library"
+title: "System Center Configuration Manager のプライバシーに関する声明 - Configuration Manager Cmdlet Library | Microsoft Docs"
 description: "System Center Configuration Manager コマンドレット ライブラリに関連するデータを Microsoft が収集して使用する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 88d11aaed4a0e6575cb859f5dfc3ac425bd2bf38
+ms.sourcegitcommit: 767d0594eb871462df038997ea3b7e29615e05f7
+ms.openlocfilehash: 10d8e8948d66a6b9b74e16a02cfbfc4ced66596c
 
 
 ---
@@ -49,31 +49,10 @@ System Center Configuration Manager Cmdlet Library を利用すると、Windows 
 
  使用状況データ設定を変更する際は、コンピューターに応じて固有の変更を行います。  
 
- 使用状況データ (収集) の構成方法の詳細については、 [System Center Configuration Manager Cmdlet Library のドキュメント](https://technet.microsoft.com/en-us/library/dn958404.aspx)を参照してください。  
-
-## <a name="update-check"></a>更新チェック  
- **この機能のデータ:**   
-System Center Configuration Manager Cmdlet Library は、1 日 1 回、ライブラリの更新を自動的にチェックし、更新版のライブラリをダウンロードするようお客様に通知します。  
-
- **収集、処理、または送信される情報:**   
-Cmdlet Library の更新チェックの際に、バージョン チェックのために Microsoft ダウンロード センターから小さいテキスト ファイルがダウンロードされます。   このファイルはローカルに格納されません。  Cmdlet Library がソフトウェアを自動的にアップグレードすることはありません。  
-
- **情報の使用:**   
-マイクロソフトは、これらの情報をマイクロソフトが提供する製品およびサービスの品質、セキュリティ、および整合性の改善のために使用します。  
-
- **選択または制御:**   
-更新チェックは既定で有効になっています。  System Center Configuration Manager Cmdlet Library には、更新通知機能を制御する次のコマンドレットが含まれています。  
-
--   `Get-CMCmdletUpdateCheck` は、更新機能の構成を取得し、ユーザー ポリシーがシステム ポリシーで上書きされているかどうかを示します。  
-
--   `Send-CMCmdletUpdateCheck` を使用すると、スケジュール設定していない更新チェックを実行できます。 スケジュール設定していないチェックではポリシー設定は考慮されません。  
-
--   `Set-CMCmdletUpdateCheck` は、ユーザー単位またはシステム単位で更新チェック設定を構成します。 システム設定を行う場合、管理者として実行する必要があります。  
-
- 更新チェックの構成の詳細については、 [System Center Configuration Manager Cmdlet Library のドキュメント](https://technet.microsoft.com/en-us/library/dn958404.aspx)を参照してください。  
+ 使用状況データ (収集) の構成方法の詳細については、 [System Center Configuration Manager Cmdlet Library のドキュメント](https://technet.microsoft.com/en-us/library/dn958404.aspx)を参照してください。   
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "移行の完了 | System Center Configuration Manager"
+title: "移行完了 | Microsoft Docs"
 description: "ソース階層にデータが含まれなくなった後で、System Center Configuration Manager の移行先階層への移行を完了する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 862a039ada302c9432fc86d68f5ba9aad360f69b
+ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
+ms.openlocfilehash: 0595ab87222aca543ae67a33c2b9fab780c6160f
 
 
 ---
@@ -62,6 +62,6 @@ System Center Configuration Manager では、移行先階層に移行するデ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

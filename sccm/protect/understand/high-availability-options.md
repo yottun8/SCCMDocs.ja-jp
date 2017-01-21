@@ -1,5 +1,5 @@
 ---
-title: "高可用性 | System Center Configuration Manager"
+title: "高可用性 | Microsoft Docs"
 description: "利用可能なサービスを高いレベルで維持するためのオプションを利用し、System Center Configuration Manager を展開する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7d8dff8779fbf146a57f753dee9f98488fa5fa61
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: d3e9afb90cdc85bc7299626b642c52be659e3bdf
 
 ---
 # <a name="high-availability-options-for-system-center-configuration-manager"></a>System Center Configuration Manager の高可用性オプション
@@ -153,7 +153,7 @@ ms.openlocfilehash: 7d8dff8779fbf146a57f753dee9f98488fa5fa61
 
  各アプリケーション カタログ サイト システムの役割は、階層内のこのサイト サーバーの役割の場所に関係なく、そのサイト システムの役割の他のインスタンスと同じ情報を提供します。 そのため、クライアントがアプリケーション カタログを要求するときに、[既定のアプリケーション カタログ Web サイト ポイント] デバイス クライアント設定が [自動的に検出] に構成してある場合、クライアントは使用可能なインスタンスに振り向けられます。 クライアントの現在のネットワークの場所に基づき、ローカルのアプリケーション カタログ サイト システム サーバーに優先権が与えられます。  
 
- クライアント設定および自動検出の動作のしくみの詳細については、「[System Center Configuration Manager のクライアント設定について](../../core/clients/deploy/about-client-settings.md)」トピックの「[コンピューター エージェント](../../core/clients/deploy/about-client-settings.md#BKMK_ComputerAgentDeviceSettings)」セクションを参照してください。  
+ クライアント設定および自動検出の動作のしくみの詳細については、「[System Center Configuration Manager のクライアント設定について](../../core/clients/deploy/about-client-settings.md)」トピックの「[コンピューター エージェント](../../core/clients/deploy/about-client-settings.md#computer-agent)」セクションを参照してください。  
 
 ##  <a name="a-namebkmkclienta-high-availability-for-clients"></a><a name="bkmk_client"></a> クライアントの高可用性  
  **クライアントの操作が独立している:**  
@@ -264,6 +264,6 @@ ms.openlocfilehash: 7d8dff8779fbf146a57f753dee9f98488fa5fa61
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

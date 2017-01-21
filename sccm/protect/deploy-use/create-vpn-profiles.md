@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager で VPN プロファイルを作成する方法"
+title: "System Center Configuration Manager で VPN プロファイルを作成する方法 | Microsoft Docs"
 description: "System Center Configuration Manager で VPN プロファイルを作成する方法を説明します。"
-ms.custom: na
-ms.date: 10/28/2016
+ms.custom: 
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 caps.latest.revision: 15
+author: nbigman
 caps.handback.revision: 0
 ms.author: nbigman
 ms.manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a65de5feae2ff44f938ce8b7e3c8d23d560bb180
-ms.openlocfilehash: bcea8676c163a8aba1bc7f3364fde52375f52429
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: f674aa5502e4b3b45d0eda119419863892d72cff
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: bcea8676c163a8aba1bc7f3364fde52375f52429
 > [!NOTE]  
 >
 > - 各デバイス プラットフォームの種類に対して利用可能な接続タイプの詳細については、「[System Center Configuration Manager の VPN プロファイル](../../protect/deploy-use/vpn-profiles.md)」を参照してください。  
-> - サード パーティの VPN 接続の場合は、VPN プロファイルを展開する前に VPN アプリを配布します。 アプリを展開しないと、ユーザーが VPN に接続しようとしたときに、アプリを展開するように求められます。 アプリの展開方法については、「[System Center Configuration Manager でアプリケーションを展開する方法](../../apps/deploy-use/deploy-applications)」を参照してください。
+> - サード パーティの VPN 接続の場合は、VPN プロファイルを展開する前に VPN アプリを配布します。 アプリを展開しないと、ユーザーが VPN に接続しようとしたときに、アプリを展開するように求められます。 アプリの展開方法については、「[System Center Configuration Manager でアプリケーションを展開する方法](../../apps/deploy-use/deploy-applications.md)」を参照してください。
 
 ### <a name="start-the-create-vpn-profile-wizard"></a>VPN プロファイルの作成ウィザードを開始する  
 
@@ -131,11 +132,19 @@ ms.openlocfilehash: bcea8676c163a8aba1bc7f3364fde52375f52429
             >  
             >  IOS を実行するデバイスは、接続種類が PPTP の場合に認証方法として RSA SecurID と MSCHAP v2のみをサポートします。 エラーの報告を回避するには、iOS を実行するデバイスに、個別に PPTP VPN プロファイルを展開します。  
 
-               - Intune なしで Configuration Manager を使用する場合にのみサポートされる [**条件付きアクセス**] と [**エンタープライズ データ保護のプライマリ ドメイン**] の設定は、[**詳細**] を選ぶとアクセスできます。 エンタープライズ データ保護については、「[Microsoft Intune を使用して Windows 情報保護 (WIP) ポリシーを作成する](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune)」を参照してください。
-        
-        ![VPN に条件付きアクセスを構成する](../media/vpn-conditional-access.png)
+        - **条件付きアクセス**
+            - VPN に接続するデバイスについて、接続前に条件付きアクセスのコンプライアンスのためにテストするには、**[この VPN 接続に対して条件付きアクセスを有効にする]** をオンにします。 コンプライアンス ポリシーについては、「[Device compliance policies in System Center Configuration Manager](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/device-compliance-policies.md)」(System Center Configuration Manager でのデバイス コンプライアンス ポリシー) を参照してください。
+            - デバイスのコンプライアンスのために VPN 認証証明書以外の証明書を選択するには、**[別の証明書でのシングル サインオン (SSO) を有効にする]** をオンにします。 このオプションをオンにする場合は、VPN クライアントを特定できる正しい証明書の **EKU** (コンマ区切りリスト) と**発行元ハッシュ**を指定します。
 
-        -   認証方法によっては、[**構成**] をクリックして [Windows のプロパティ] ダイアログ ボックスを開きます (System Center Configuration Manager コンソールを実行している Windows のバージョンがこの認証方法をサポートしている場合)。ここで、ユーザーは認証方法のプロパティを構成できます。  
+         - **[Windows Information Protection]** - 企業が管理する企業 ID を指定します。通常、これは組織のプライマリ ドメインです (*contoso.com* など)。 組織が使用している複数のドメインを指定するには、"|" 文字で区切ります。 たとえば、「*contoso.com|newcontoso.com*」と指定します。   
+            Windows Information Protection については、「[Microsoft Intune を使用して Windows 情報保護 (WIP) ポリシーを作成する](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune)」を参照してください。   
+
+         ![VPN に条件付きアクセスを構成する](../media/vpn-conditional-access.png)
+
+
+        > [!NOTE]  
+        >
+        >認証方法によっては、[**構成**] をクリックして [Windows のプロパティ] ダイアログ ボックスを開きます (System Center Configuration Manager コンソールを実行している Windows のバージョンがこの認証方法をサポートしている場合)。ここで、ユーザーは認証方法のプロパティを構成できます。  
 
 ### <a name="configure-proxy-settings-for-the-vpn-profile"></a>VPN プロファイルのプロキシ設定を構成する  
 
@@ -194,12 +203,12 @@ VPN プロファイルの作成ウィザード **** の [サポートされて�
 
 ### <a name="next-steps"></a>次のステップ
 
-- サード パーティの VPN 接続の場合は、VPN プロファイルを展開する前に VPN アプリを配布します。 アプリを展開しないと、ユーザーが VPN に接続しようとしたときに、アプリを展開するように求められます。 アプリの展開方法については、「[System Center Configuration Manager でアプリケーションを展開する方法](../../apps/deploy-use/deploy-applications)」を参照してください。
+- サード パーティの VPN 接続の場合は、VPN プロファイルを展開する前に VPN アプリを配布します。 アプリを展開しないと、ユーザーが VPN に接続しようとしたときに、アプリを展開するように求められます。 アプリの展開方法については、「[System Center Configuration Manager でアプリケーションを展開する方法](../../apps/deploy-use/deploy-applications.md)」を参照してください。
 
 - 「[System Center Configuration Manager でのプロファイルの展開](deploy-wifi-vpn-email-cert-profiles.md)」に記載されているとおりに、VPN プロファイルを展開します。  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "WAN トラフィックを減らすための Windows PE ピア キャッシュの準備 | System Center Configuration Manager"
+title: "WAN トラフィックを削減するための Windows PE ピア キャッシュの準備 | Microsoft Docs"
 description: "Windows PE ピア キャッシュは、Windows PE で機能し、ローカルの配布ポイントがない場合にローカルのピアからコンテンツを取得して WAN のトラフィックを最小限に抑えます。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: dc21868f99e17070b25c8b490e86477227a96c8e
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 814c6133a30b1116d05aaeafddb0dfb7fe2a390e
 
 
 ---
@@ -52,17 +52,17 @@ ms.openlocfilehash: dc21868f99e17070b25c8b490e86477227a96c8e
 
 -   ソフトウェア更新プログラム  
 
-##  <a name="a-namebkmkpeercacheworka-how-does-windows-pe-peer-cache-work"></a><a name="BKMK_PeerCacheWork"></a> Windows PE ピア キャッシュのしくみ  
+##  <a name="a-namebkmkpeercacheworka-how-does--windows-pe-peer-cache-work"></a><a name="BKMK_PeerCacheWork"></a> Windows PE ピア キャッシュのしくみ  
  配布ポイントは存在しないものの、複数のクライアントで Windows PE ピア キャッシュの使用が有効になっている支社オフィスを使用したシナリオを考えてみます。 ピア キャッシュ ソースの一部として構成されている複数のクライアントに、ピア キャッシュを使用するように構成されたタスク シーケンスを展開します。 このタスク シーケンスを実行する最初のクライアントは、対象コンテンツが含まれるピアの要求をブロードキャストします。 それは見つからないため、WAN 経由で配布ポイントからコンテンツを取得します。 このクライアントは、新しいイメージをインストールしてから、コンテンツをその Configuration Manager クライアント キャッシュに保存するため、他のクライアントに対するピア キャッシュ ソースとして機能できます。 次のクライアントがタスク シーケンスを実行するときに、ピア キャッシュ ソース用のサブネット上で要求をブロードキャストし、最初のクライアントが応答してそのキャッシュされたコンテンツを使用できるようにします。  
 
-##  <a name="a-namebkmkpeercachedeterminea-determine-what-clients-will-be-part-of-the-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheDetermine"></a> Windows PE ピア キャッシュ ソースの一部となるクライアントの判別  
+##  <a name="a-namebkmkpeercachedeterminea-determine-what--clients-will-be-part-of-the-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheDetermine"></a> Windows PE ピア キャッシュ ソースの一部となるクライアントの判別  
  Windows PE ピア キャッシュ ソースとして選択するコンピューターを決定するときに、いくつかの考慮事項があります。  
 
 -   Windows PE ピア キャッシュ ソースは、常に電源が入り、ピア キャッシュ クライアントが使用できるデスクトップ コンピューターにする必要があります。  
 
 -   Windows PE ピア キャッシュには、イメージを格納するための十分なクライアント キャッシュ サイズが必要です。  
 
-##  <a name="a-namebkmkpeercacherequirementsa-requirements-for-a-client-to-use-a-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheRequirements"></a> Windows PE ピア キャッシュ ソースを使用するクライアントの要件  
+##  <a name="a-namebkmkpeercacherequirementsa-requirements-for-a-client-to-use-a--windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheRequirements"></a> Windows PE ピア キャッシュ ソースを使用するクライアントの要件  
  Windows PE ピア キャッシュ ソースを使用するクライアントは、次の要件を満たしている必要があります。  
 
 -   Configuration Manager クライアントは、ネットワーク上の次のポートを経由して通信できる必要があります。  
@@ -144,6 +144,6 @@ ms.openlocfilehash: dc21868f99e17070b25c8b490e86477227a96c8e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

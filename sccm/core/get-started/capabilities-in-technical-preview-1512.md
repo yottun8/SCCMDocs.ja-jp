@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager の Technical Preview 1512 の機能"
+title: "System Center Configuration Manager の Technical Preview 1512 の機能 | Microsoft Docs"
 description: "System Center Configuration Manager の Technical Preview バージョン 1512 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1d97e7646adbb02a03b33b5efc56c1658364956e
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: ea6cb27fc229854ba7c1c39bb735ed9b9a88bb61
 
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1512 の機能
@@ -85,7 +85,7 @@ Technical Preview 1512 以降、Configuration Manager を Microsoft Intune と�
 
          ![TechRef&#95;WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
 
-    さらに、Endpoint Protection マルウェア対策ポリシーの [除外の設定] セクションの既存の [**ファイルとフォルダーを除外する**] 設定が改善され、デバイスを除外できるようになりました。 たとえば、 **\device\mvfs** を除外するよう指定できます (Multiversion File System の場合)。 ポリシーはデバイスのパスを検証しません。Endpoint Protection のポリシー設定は、デバイスの文字列を解釈できるクライアントのマルウェア対策エンジンに提供されます。  
+    さらに、Endpoint Protection マルウェア対策ポリシーの [除外の設定] セクションの既存の **[ファイルとフォルダーを除外する]** 設定が改善され、デバイスを除外できるようになりました。 たとえば、 **\device\mvfs** を除外するよう指定できます (Multiversion File System の場合)。 ポリシーはデバイスのパスを検証しません。Endpoint Protection のポリシー設定は、デバイスの文字列を解釈できるクライアントのマルウェア対策エンジンに提供されます。  
 
 **Endpoint Protection ポリシーを使用するための前提条件:**  
 
@@ -93,6 +93,6 @@ Endpoint Protection ポリシーを使用するには、Endpoint Protection ク�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

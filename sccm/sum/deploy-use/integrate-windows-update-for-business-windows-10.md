@@ -1,6 +1,6 @@
 ---
 
-title: "Windows 10 における Windows Update for Business との統合 | Configuration Manager"
+title: "Windows 10 における Windows Update for Business との統合 | Microsoft Docs"
 description: "Windows Update サービスに接続しているデバイスに関して、Windows Update for Business を利用し、組織の Windows 10 デバイスを最新の状態に維持します。"
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c4c6e50d0e1a34653226369cffdc0bde905398fc
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 8bdbacd54632475ac69a0d0a9a34b2567c3daa13
 
 
 ---
@@ -45,7 +45,7 @@ Windows Update for Business (WUfB) を使用すると、組織内の Windows 10 
 
 -   ソフトウェア更新プログラムのインフラストラクチャを使用する Configuration Manager の完全なクライアント展開は、WUfB に接続して更新プログラムを受信するクライアントに対しては機能しません。  
 
-## <a name="identify-clients-that-use-wufb-for-windows-10-updates"></a>WUfB を使用して Windows 10 の更新プログラムを取得するクライアントを識別する  
+## <a name="identify-clients-that-use--wufb-for-windows-10-updates"></a>WUfB を使用して Windows 10 の更新プログラムを取得するクライアントを識別する  
  次の手順を使用して、Windows 10 の更新プログラムとアップグレードの取得に WUfB を使用するクライアントを識別し、WSUS を使用して更新プログラムを取得することをやめるようそれらのクライアントを構成して、これらのクライアントのソフトウェア更新ワークフローを無効にするためのクライアント エージェント設定を展開します。  
 
  **必要条件**  
@@ -69,6 +69,6 @@ Windows Update for Business (WUfB) を使用すると、組織内の Windows 10 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

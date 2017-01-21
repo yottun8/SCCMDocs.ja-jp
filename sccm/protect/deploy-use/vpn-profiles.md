@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager の VPN プロファイル | System Center Configuration Manager"
+title: "System Center Configuration Manager の VPN プロファイル | Microsoft Docs"
 description: "System Center Configuration Manager の VPN プロファイルを使用して、VPN 設定を組織内のユーザーに展開する方法について説明します。"
 ms.custom: na
-ms.date: 10/10/2016
+ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fbce476b8a9b91a88354fb4abfadfd2526ca5e8
-ms.openlocfilehash: dda572392884c54b63af09a9fae79c1e73eb3d95
+ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
+ms.openlocfilehash: 0ff83aed4d5e19806a8c69f4b45e39a6156dee7e
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: dda572392884c54b63af09a9fae79c1e73eb3d95
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 
-System Center Configuration Manager の VPN プロファイルを使用して、VPN 設定を組織内のユーザーに展開します。 これらの設定を展開して、企業ネットワーク上のリソースに接続するために必要なエンド ユーザーの作業を最小化します。  
+System Center Configuration Manager (ConfigMgr または SCCM とも呼ばれます) の VPN プロファイルを使用して、VPN 設定を組織内のユーザーに展開します。 これらの設定を展開して、企業ネットワーク上のリソースに接続するために必要なエンド ユーザーの作業を最小化します。  
 
  たとえば、iOS オペレーティング システムを実行するすべてのデバイスに対して、企業ネットワーク上のファイル共有に接続するために必要な設定をプロビジョニングできます。 企業ネットワークに接続するために必要な設定が含まれている VPN プロファイルを作成した後、階層内で iOS を実行するデバイスを持つすべてのユーザーにこのプロファイルを展開することができます。 iOS デバイスのユーザーに対して使用可能なネットワークの一覧で VPN 接続が表示されるため、最小限の作業でこのネットワークに接続できます。  
 
@@ -76,6 +76,6 @@ System Center Configuration Manager の VPN プロファイルを使用して、
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

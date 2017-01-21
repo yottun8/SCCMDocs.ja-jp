@@ -1,5 +1,5 @@
 ---
-title: "条件付きアクセス | System Center Configuration Manager"
+title: "条件付きアクセス | Microsoft Docs"
 description: "System Center Configuration Manager で条件付きアクセスを使用して、電子メールおよびその他のサービスをセキュリティで保護する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 76d86613-b87f-4fe5-9236-a573e00b613a
 caps.latest.revision: 26
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: 2dad04cb429ac854b5455c2af051f6f7caaadd66
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: d33a515ad2bf0a7fb8680447f2bf83544f2eb30f
 
 
 ---
@@ -81,7 +81,7 @@ Exchange Online への条件付きのアクセスでは、次を実行するデ�
 -   Windows 7.0 または Windows 8.1 (ドメインに参加している場合)
 -   Windows Phone 8.1 以降
 -   iOS 7.1 以降
--   Android 4.0 以降、Samsung Knox Standard 4.0 以降
+-   Android 4.0 以降、Samsung KNOX Standard 4.0 以降
 
  **補足**:
 -   デバイスをワークプレース参加させる必要があります。ワークプレース参加させると、デバイスは Azure Active Directory Device Registration Service (AAD DRS) に登録されます。<br />     
@@ -133,7 +133,7 @@ Exchange On-premises に対する条件付きアクセスでは、次のデバ�
 SharePoint Online への条件付きアクセスでは、次を実行するデバイスがサポートされます。
  -   iOS 7.1 以降
  -   Android 4.0 以降
- -   Samsung Knox Standard 4.0 以降
+ -   Samsung KNOX Standard 4.0 以降
 
 **さらに**、Skype for Business Online の先進認証を有効にする必要があります。 この [接続フォーム](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715) に必要事項を記入して、最新の認証プログラムに登録します。
 
@@ -145,7 +145,7 @@ SharePoint Online への条件付きアクセスでは、次を実行するデ�
  -   Windows 7.0 または Windows 8.1 (ドメインに参加している場合)
  -   Windows Phone 8.1 以降
  -   iOS 7.1 以降
- -   Android 4.0 以降、Samsung Knox Standard 4.0 以降
+ -   Android 4.0 以降、Samsung KNOX Standard 4.0 以降
 
  **補足**:
  -   デバイスをワークプレース参加させる必要があります。ワークプレース参加させると、デバイスは Azure Active Directory Device Registration Service (AAD DRS) に登録されます。
@@ -184,6 +184,6 @@ SharePoint Online への条件付きアクセスでは、次を実行するデ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

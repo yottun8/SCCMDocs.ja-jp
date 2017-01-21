@@ -1,17 +1,17 @@
-# [理解](understand/introduction-to-operating-system-deployment.md)
+# 理解と調査
 ## [オペレーティング システムの展開の概要](understand/introduction-to-operating-system-deployment.md)
 ## [タスク シーケンスのステップ](understand/task-sequence-steps.md)
 ## [タスク シーケンス アクション変数](understand/task-sequence-action-variables.md)
 ## [タスク シーケンス組み込み変数](understand/task-sequence-built-in-variables.md)
 ## [タスク シーケンス メディアの起動前コマンド](understand/prestart-commands-for-task-sequence-media.md)
 
-# [計画と設計](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
+# 計画と設計
 ## [オペレーティング システムの展開のインフラストラクチャ要件](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
 ## [タスクの自動化計画に関する考慮事項](plan-design/planning-considerations-for-automating-tasks.md)
 ## [オペレーティング システムの展開に関するセキュリティとプライバシー](plan-design/security-and-privacy-for-operating-system-deployment.md)
 ## [オペレーティング システムの展開の相互運用性に関する計画](plan-design/planning-for-operating-system-deployment-interoperability.md)
 
-# [概要](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
+# 作業開始
 ## [オペレーティング システムの展開用のサイト システムの役割を準備する](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
 ## [オペレーティング システムの展開の準備](get-started/prepare-for-operating-system-deployment.md)
 ### [ブート イメージの管理](get-started/manage-boot-images.md)
@@ -28,7 +28,7 @@
 
 ## [WAN トラフィックを削減するための Windows PE ピア キャッシュの準備](get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)
 
-# [展開と使用](deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
+# 展開と使用
 ## [エンタープライズ オペレーティング システムを展開するシナリオ](deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
 ### [Windows を最新バージョンにアップグレードする](deploy-use/upgrade-windows-to-the-latest-version.md)
 ### [新しいバージョンの Windows で既存のコンピューターを更新する](deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md)
@@ -54,8 +54,10 @@
 ### [ユーザー状態をキャプチャおよび復元するタスク シーケンスの作成](deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)
 ### [バーチャル ハード ディスクを管理するためのタスク シーケンスの使用](deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md)
 
-## [カスタム タスク シーケンスの作成](deploy-use/create-a-custom-task-sequence.md)
+## [カスタム タスク シーケンスのシナリオ](deploy-use/custom-task-sequence-scenarios.md)
+### [カスタム タスク シーケンスの作成](deploy-use/create-a-custom-task-sequence.md)
 ### [オペレーティング システム以外の展開用タスク シーケンスの作成](deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)
+### [BIOS からUEFI への変換を管理するためのタスク シーケンス手順](deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)
 
 ## [タスク シーケンス メディアの作成](deploy-use/create-task-sequence-media.md)
 ### [スタンドアロン メディアの作成](deploy-use/create-stand-alone-media.md)
@@ -64,6 +66,6 @@
 ### [キャプチャ メディアを作成する](deploy-use/create-capture-media.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

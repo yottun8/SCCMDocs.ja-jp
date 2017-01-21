@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager の Technical Preview 1604 の機能"
+title: "System Center Configuration Manager の Technical Preview 1604 の機能 | Microsoft Docs"
 description: "System Center Configuration Manager の Technical Preview バージョン 1604 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 512bbb1c8f2b4811be7770bda5fa2236a2dc7e06
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 7358e310ad672a1a0ba4cbcb6b008506aaaa5d2b
 
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1604 の機能
@@ -172,6 +172,6 @@ Passport を使用すると、パスワードの代わりにユーザー ジェ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

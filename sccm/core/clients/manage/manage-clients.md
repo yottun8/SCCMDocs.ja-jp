@@ -1,8 +1,8 @@
 ---
-title: "クライアントの管理 | System Center Configuration Manager"
+title: "クライアントの管理 | Microsoft Docs"
 description: "System Center Configuration Manager でクライアントを管理する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 caps.latest.revision: 17
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 67a814330123a1615a0663872bf4af64e5b81a84
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: dfdb5a95b672d3858d094750625cb5f6ef50700d
 
 
 ---
@@ -160,7 +160,7 @@ System Center Configuration Manager クライアントがインストールさ�
 
         デバイス リストで所有権値を表示するには、ビューに列を追加する必要が生じることがあります。そうするには、任意の列見出しを右クリックして **[デバイスの所有者]**を選びます。
 
-         詳細については、「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../../mdm/plan-design/hybrid-mobile-device-management.md)」を参照してください。  
+         詳細については、「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)」を参照してください。  
 
 ##  <a name="a-namebkmkmanagingclientsdevicecollectionsnodea-manage-clients-from-the-device-collections-node"></a><a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> [デバイス コレクション] ノードを使用してクライアントを管理する  
  [ **資産とコンプライアンス** ] ワークスペースの [ **デバイス コレクション** ] ノードからコレクション内のデバイスを管理するには、次の手順と表に従います。  
@@ -239,7 +239,7 @@ Configuration Manager クライアントは、展開を受けた後まもなく�
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > バージョン 1606 では、SMSCACHESIZE ではなく Configuration Manager コンソールの **[クライアント設定]** で使用可能なキャッシュ サイズ設定を使用します。 詳細については、「[クライアントのキャッシュ設定](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings)」を参照してください。
+        > バージョン 1606 では、SMSCACHESIZE ではなく Configuration Manager コンソールの **[クライアント設定]** で使用可能なキャッシュ サイズ設定を使用します。 詳細については、「[クライアントのキャッシュ設定](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)」を参照してください。
 
 CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用する方法の詳細については、「[System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
 
@@ -264,7 +264,7 @@ CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用�
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > バージョン 1606 では、SMSCACHESIZE ではなく Configuration Manager コンソールの **[クライアント設定]** で使用可能なキャッシュ サイズ設定を使用します。 詳細については、「[クライアントのキャッシュ設定](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings)」を参照してください。
+        > バージョン 1606 では、SMSCACHESIZE ではなく Configuration Manager コンソールの **[クライアント設定]** で使用可能なキャッシュ サイズ設定を使用します。 詳細については、「[クライアントのキャッシュ設定](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)」を参照してください。
 
        CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用する方法の詳細については、「[System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
 
@@ -323,6 +323,7 @@ CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用�
 
  コンピューター アカウントの Windows 認証または信頼されたソースからの PKI 証明書を使用して Configuration Manager が競合を解決できる場合、競合は自動的に解決されます。 ただし、Configuration Manager が競合を解決できない場合は階層設定が使用され、重複するハードウェア ID を検出したときにレコードを自動的にマージするか (既定の設定)、新しいクライアント レコードをマージ、ブロック、または作成するタイミングを管理者が決定できます。 重複レコードを手動で管理すると決定した場合、Configuration Manager コンソールを使用して競合するレコードを手動で解決する必要があります。  
 
+
 #### <a name="to-change-the-hierarchy-setting-for-managing-conflicting-records"></a>競合しているレコードの管理に関する階層の設定を変更するには  
 
 1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
@@ -351,6 +352,18 @@ CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用�
     -   [**新規** ]: 競合しているクライアント レコードに対して新しいレコードを作成します。  
 
     -   [**ブロック** ]: 競合しているクライアント レコードに対して新しいレコードを作成しますが、ブロックに設定します。  
+
+## <a name="manage-duplicate-hardware-identifiers"></a>重複するハードウェア識別子を管理する
+Configuration Manager バージョン 1610 より、PXE ブートとクライアント登録で Configuration Manager が無視するハードウェア ID の一覧を指定できます。 それにより 2 つの一般的な問題に対処できます。
+
+1. Surface Pro 3 など、新しいデバイスの多くにオンボード イーサネット ポートが含まれません。 オペレーティング システムの展開で有線接続を確立するとき、一般的に USB/イーサネット アダプターが使用されます。 しかしながら、コストや汎用性に起因し、多くの場合、共有アダプターになります。 そのアダプターの MAC アドレスを利用してデバイスを識別するため、展開ごとに管理者による追加措置がないと、アダプターの再利用が問題になります。 Configuration Manager の現行の Branch Version 1610 では、このアダプターの MAC アドレスを除外できます。そのため、このシナリオで簡単に再利用できます。
+2. SMBIOS ID は一意のハードウェア識別子ですが、専門的なハードウェア デバイスには ID が重複するものもあります。 上記の USB/イーサネット アダプターのシナリオほど一般的ではありませんが、ハードウェア ID の一覧を利用してこの問題に対処することもできます。
+
+#### <a name="to-add-hardware-identifiers-for-configuration-manager-to-ignore"></a>Configuration Manager で無視するハードウェア識別子を追加するには  
+1. Configuration Manager コンソールで、[**管理**] > [**概要**] > [**サイトの構成**] > [**サイト**] の順に移動します。
+2. **[ホーム]** タブの **[サイト]** グループで、 **[階層設定]**をクリックします。
+3. [**クライアントの承認と競合レコードの処理**] タブに移動します。
+4. [**重複するハードウェア ID**] セクションで [**追加**] をクリックして 新しいハードウェア識別子を追加します。
 
 ##  <a name="a-namebkmkpolicyretrievala-initiate-policy-retrieval-for-a-configuration-manager-client"></a><a name="BKMK_PolicyRetrieval"></a> Configuration Manager クライアントのポリシーの取得開始  
  Windows Configuration Manager クライアントは、クライアント設定として構成されているスケジュールに従ってクライアント ポリシーをダウンロードします。 ただし、トラブルシューティングのシナリオやテストなどで、クライアントからアドホックなポリシー取得を開始するケースもあり得ます。  
@@ -440,6 +453,6 @@ CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

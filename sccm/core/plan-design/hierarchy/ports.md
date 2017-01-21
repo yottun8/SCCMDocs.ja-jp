@@ -1,5 +1,5 @@
 ---
-title: "ポート | System Center Configuration Manager"
+title: "Configuration Manager で使用されるポート | Microsoft Docs"
 description: "System Center Configuration Manager が接続に使用する必要なポートとカスタマイズ可能なポートについて説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 2e0ccf8cc419545abe8c87c8d9379618f13f47b1
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 41000b978f1add9ec6910bfa86f13e92bf93c4e4
 
 
 ---
@@ -79,39 +79,39 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 
 -   &lt; -- > は、どちらのコンピューターからも通信を開始できる状態を示します。  
 
-###  <a name="a-namebkmkportsaia-asset-intelligence-synchronization-point----microsoft"></a><a name="BKMK_PortsAI"></a> 資産インテリジェンス同期ポイント  -- &gt; Microsoft  
+###  <a name="a-namebkmkportsaia-asset-intelligence-synchronization-point-----microsoft"></a><a name="BKMK_PortsAI"></a> 資産インテリジェンス同期ポイント  -- &gt; Microsoft  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|  
 
-###  <a name="a-namebkmkportsai-to-sqla-asset-intelligence-synchronization-point----sql-server"></a><a name="BKMK_PortsAI-to-SQL"></a> 資産インテリジェンス同期ポイント--&gt; SQL Server  
+###  <a name="a-namebkmkportsai-to-sqla-asset-intelligence-synchronization-point-----sql-server"></a><a name="BKMK_PortsAI-to-SQL"></a> 資産インテリジェンス同期ポイント--&gt; SQL Server  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433 (注 2「 **代替ポートを利用可能**」を参照)|  
 
-###  <a name="a-namebkmkportsappcatalogservice-sqla-application-catalog-web-service-point----sql-server"></a><a name="BKMK_PortsAppCatalogService-SQL"></a> アプリケーション カタログ Web サービス ポイント -- &gt; SQL Server  
+###  <a name="a-namebkmkportsappcatalogservice-sqla-application-catalog-web-service-point-----sql-server"></a><a name="BKMK_PortsAppCatalogService-SQL"></a> アプリケーション カタログ Web サービス ポイント -- &gt; SQL Server  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433 (注 2「 **代替ポートを利用可能**」を参照)|  
 
-###  <a name="a-namebkmkportsappcatalogwebsitepointappcatalogwebservicepointa-application-catalog-website-point----application-catalog-web-service-point"></a><a name="BKMK_PortsAppCatalogWebSitePoint_AppCatalogWebServicePoint"></a> アプリケーション カタログ Web サイト ポイント -- &gt; アプリケーション カタログ Web サービス ポイント  
+###  <a name="a-namebkmkportsappcatalogwebsitepointappcatalogwebservicepointa-application-catalog-website-point-----application-catalog-web-service-point"></a><a name="BKMK_PortsAppCatalogWebSitePoint_AppCatalogWebServicePoint"></a> アプリケーション カタログ Web サイト ポイント -- &gt; アプリケーション カタログ Web サービス ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 2「 **代替ポートを利用可能**」を参照)|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「 **代替ポートを利用可能**」を参照)|  
 
-###  <a name="a-namebkmkportsclient-appcatalogwebsitepointa-client----application-catalog-website-point"></a><a name="BKMK_PortsClient-AppCatalogWebsitePoint"></a> クライアント -- &gt; アプリケーション カタログ Web サイト ポイント  
+###  <a name="a-namebkmkportsclient-appcatalogwebsitepointa-client-----application-catalog-website-point"></a><a name="BKMK_PortsClient-AppCatalogWebsitePoint"></a> クライアント -- &gt; アプリケーション カタログ Web サイト ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 2「 **代替ポートを利用可能**」を参照)|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「 **代替ポートを利用可能**」を参照)|  
 
-###  <a name="a-namebkmkportsclient-clientwakeupa-client----client"></a><a name="BKMK_PortsClient-ClientWakeUp"></a> クライアント -- &gt; クライアント  
+###  <a name="a-namebkmkportsclient-clientwakeupa-client-----client"></a><a name="BKMK_PortsClient-ClientWakeUp"></a> クライアント -- &gt; クライアント  
  ウェイクアップ プロキシ用にクライアントを構成するときに、ウェイクアップ プロキシは、次の表に示すポートに加え、1 つのクライアントから別のクライアントに対して Internet Control Message Protocol (ICMP) のエコー要求メッセージも使用します。 この通信は、他のクライアント コンピューターがネットワークで起動しているかどうかを確認するために使用します。 ICMP は TCP/IP Ping コマンドとも呼ばれます。 ICMP には UDP または TCP プロトコル番号がないため、次の表には記載されていません。 ただし、サブネット内のこのようなクライアント コンピューターまたは介在するネットワーク デバイスに、ホストベースのファイアウォールがある場合、ウェイクアップ プロキシ通信が正常に実行されるように、そのファイアウォールで ICMP トラフィックを許可する必要があります。  
 
 |説明|UDP|TCP|  
@@ -119,34 +119,34 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |Wake On LAN|9 (注 2「 **代替ポートを利用可能**」を参照)|--|  
 |ウェイクアップ プロキシ|25536 (注 2「 **代替ポートを利用可能**」を参照)|--|  
 
-###  <a name="a-namebkmkportsclient-policymodulea-client----configuration-manager-policy-module-network-device-enrollment-service"></a><a name="BKMK_PortsClient-PolicyModule"></a> クライアント -- &gt; Configuration Manager ポリシー モジュール (ネットワーク デバイス登録サービス)  
+###  <a name="a-namebkmkportsclient-policymodulea-client-----configuration-manager-policy-module-network-device-enrollment-service"></a><a name="BKMK_PortsClient-PolicyModule"></a> クライアント -- &gt; Configuration Manager ポリシー モジュール (ネットワーク デバイス登録サービス)  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |ハイパーテキスト転送プロトコル (HTTP)||80|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|  
 
-###  <a name="a-namebkmkportsclient-clouddpa-client----cloud-based-distribution-point"></a><a name="BKMK_PortsClient-CloudDP"></a> クライアント -- &gt; クラウドベースの配布ポイント  
+###  <a name="a-namebkmkportsclient-clouddpa-client-----cloud-based-distribution-point"></a><a name="BKMK_PortsClient-CloudDP"></a> クライアント -- &gt; クラウドベースの配布ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|  
 
-###  <a name="a-namebkmkportsclient-dpa-client----distribution-point"></a><a name="BKMK_PortsClient-DP"></a> クライアント -- &gt; 配布ポイント  
+###  <a name="a-namebkmkportsclient-dpa-client-----distribution-point"></a><a name="BKMK_PortsClient-DP"></a> クライアント -- &gt; 配布ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 2「 **代替ポートを利用可能**」を参照)|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「 **代替ポートを利用可能**」を参照)|  
 
-###  <a name="a-namebkmkportsclient-dp2a-client----distribution-point-configured-for-multicast"></a><a name="BKMK_PortsClient-DP2"></a> クライアント -- &gt; マルチキャスト向けに構成された配布ポイント  
+###  <a name="a-namebkmkportsclient-dp2a-client-----distribution-point-configured-for-multicast"></a><a name="BKMK_PortsClient-DP2"></a> クライアント -- &gt; マルチキャスト向けに構成された配布ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |サーバー メッセージ ブロック (SMB)|--|445|  
 |マルチキャスト プロトコル|63000-64000|--|  
 
-###  <a name="a-namebkmkportsclient-dp3a-client----distribution-point-configured-for-pxe"></a><a name="BKMK_PortsClient-DP3"></a> クライアント -- &gt; PXE 向けに構成された配布ポイント  
+###  <a name="a-namebkmkportsclient-dp3a-client-----distribution-point-configured-for-pxe"></a><a name="BKMK_PortsClient-DP3"></a> クライアント -- &gt; PXE 向けに構成された配布ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -154,13 +154,13 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |簡易ファイル転送プロトコル (TFTP)|69 (注 4「 **簡易 FTP (TFTP) デーモン**」を参照)|--|  
 |Boot Information Negotiation Layer (BINL)|4011|--|  
 
-###  <a name="a-namebkmkportsclient-fspa-client----fallback-status-point"></a><a name="BKMK_PortsClient-FSP"></a> クライアント -- &gt; フォールバック ステータス ポイント  
+###  <a name="a-namebkmkportsclient-fspa-client-----fallback-status-point"></a><a name="BKMK_PortsClient-FSP"></a> クライアント -- &gt; フォールバック ステータス ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 2「 **代替ポートを利用可能**」を参照)|  
 
-###  <a name="a-namebkmkportsclient-gcdca-client----global-catalog-domain-controller"></a><a name="BKMK_PortsClient-GCDC"></a> クライアント -- &gt; グローバル カタログ ドメイン コントローラー  
+###  <a name="a-namebkmkportsclient-gcdca-client-----global-catalog-domain-controller"></a><a name="BKMK_PortsClient-GCDC"></a> クライアント -- &gt; グローバル カタログ ドメイン コントローラー  
  Configuration Manager クライアントは、ワークグループ コンピューターである場合やインターネットのみの通信用に構成されている場合、グローバル カタログ サーバーに接続しません。  
 
 |説明|UDP|TCP|  
@@ -168,7 +168,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |グローバル カタログ LDAP|--|3268|  
 |グローバル カタログ LDAP SSL|--|3269|  
 
-###  <a name="a-namebkmkportsclient-mpa-client----management-point"></a><a name="BKMK_PortsClient-MP"></a> クライアント -- &gt; 管理ポイント  
+###  <a name="a-namebkmkportsclient-mpa-client-----management-point"></a><a name="BKMK_PortsClient-MP"></a> クライアント -- &gt; 管理ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -176,14 +176,14 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 2「 **代替ポートを利用可能**」を参照)|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「 **代替ポートを利用可能**」を参照)|  
 
-###  <a name="a-namebkmkportsclient-supa-client----software-update-point"></a><a name="BKMK_PortsClient-SUP"></a> クライアント -- &gt; ソフトウェアの更新ポイント  
+###  <a name="a-namebkmkportsclient-supa-client-----software-update-point"></a><a name="BKMK_PortsClient-SUP"></a> クライアント -- &gt; ソフトウェアの更新ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |ハイパーテキスト転送プロトコル (HTTP)|--|80 または 8530 (注 3「 **Windows Server Update Services**」を参照)|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 または 8531 (注 3「 **Windows Server Update Services**」を参照)|  
 
-###  <a name="a-namebkmkportsclient-smpa-client----state-migration-point"></a><a name="BKMK_PortsClient-SMP"></a> クライアント -- &gt; 状態移行ポイント  
+###  <a name="a-namebkmkportsclient-smpa-client-----state-migration-point"></a><a name="BKMK_PortsClient-SMP"></a> クライアント -- &gt; 状態移行ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -191,20 +191,20 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「 **代替ポートを利用可能**」を参照)|  
 |サーバー メッセージ ブロック (SMB)|--|445|  
 
-###  <a name="a-namebkmkportsconsole-clienta-configuration-manager-console----client"></a><a name="BKMK_PortsConsole-Client"></a> Configuration Manager コンソール -- &gt; クライアント  
+###  <a name="a-namebkmkportsconsole-clienta-configuration-manager-console-----client"></a><a name="BKMK_PortsConsole-Client"></a> Configuration Manager コンソール -- &gt; クライアント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |リモート コントロール (コントロール)|--|2701|  
 |リモート アシスタンス (RDP および RTC)|--|3389|  
 
-###  <a name="a-namebkmkportsconsole-interneta-configuration-manager-console----internet"></a><a name="BKMK_PortsConsole-Internet"></a> Configuration Manager コンソール -- &gt; インターネット  
+###  <a name="a-namebkmkportsconsole-interneta-configuration-manager-console-----internet"></a><a name="BKMK_PortsConsole-Internet"></a> Configuration Manager コンソール -- &gt; インターネット  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |ハイパーテキスト転送プロトコル (HTTP)|--|80|  
 
-###  <a name="a-namebkmkportsconsole-rspa-configuration-manager-console----reporting-services-point"></a><a name="BKMK_PortsConsole-RSP"></a> Configuration Manager コンソール -- &gt; レポート サービス ポイント  
+###  <a name="a-namebkmkportsconsole-rspa-configuration-manager-console-----reporting-services-point"></a><a name="BKMK_PortsConsole-RSP"></a> Configuration Manager コンソール -- &gt; レポート サービス ポイント  
 
 ||||  
 |-|-|-|  
@@ -212,26 +212,26 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 2「 **代替ポートを利用可能**」を参照)|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「 **代替ポートを利用可能**」を参照)|  
 
-###  <a name="a-namebkmkportsconsole-sitea-configuration-manager-console----site-server"></a><a name="BKMK_PortsConsole-Site"></a> Configuration Manager コンソール -- &gt; サイト サーバー  
+###  <a name="a-namebkmkportsconsole-sitea-configuration-manager-console-----site-server"></a><a name="BKMK_PortsConsole-Site"></a> Configuration Manager コンソール -- &gt; サイト サーバー  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |RPC (プロバイダー システムを特定するための WMI への初期接続)|--|135|  
 
-###  <a name="a-namebkmkportsconsole-providera-configuration-manager-console----sms-provider"></a><a name="BKMK_PortsConsole-Provider"></a> Configuration Manager コンソール -- &gt; SMS プロバイダー  
+###  <a name="a-namebkmkportsconsole-providera-configuration-manager-console-----sms-provider"></a><a name="BKMK_PortsConsole-Provider"></a> Configuration Manager コンソール -- &gt; SMS プロバイダー  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkportscertificateregistationpointpolicymodulea-configuration-manager-policy-module-network-device-enrollment-service----certificate-registration-point"></a><a name="BKMK_PortsCertificateRegistationPoint_PolicyModule"></a> Configuration Manager ポリシー モジュール (ネットワーク デバイス登録サービス) -- &gt; 証明書登録ポイント  
+###  <a name="a-namebkmkportscertificateregistationpointpolicymodulea-configuration-manager-policy-module-network-device-enrollment-service-----certificate-registration-point"></a><a name="BKMK_PortsCertificateRegistationPoint_PolicyModule"></a> Configuration Manager ポリシー モジュール (ネットワーク デバイス登録サービス) -- &gt; 証明書登録ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「 **代替ポートを利用可能**」を参照)|  
 
-###  <a name="a-namebkmkportsdistmpa-distribution-point----management-point"></a><a name="BKMK_PortsDist_MP"></a> 配布ポイント --&gt; 管理ポイント  
+###  <a name="a-namebkmkportsdistmpa-distribution-point-----management-point"></a><a name="BKMK_PortsDist_MP"></a> 配布ポイント --&gt; 管理ポイント  
  配布ポイントは次のシナリオで管理ポイントと通信します。  
 
 -   事前設定されたコンテンツのステータスをレポートする  
@@ -247,49 +247,49 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 2「 **代替ポートを利用可能**」を参照)|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「 **代替ポートを利用可能**」を参照)|  
 
-###  <a name="a-namebkmkportsendpointprotectioninterneta-endpoint-protection-point----internet"></a><a name="BKMK_PortsEndpointProtection_Internet"></a> Endpoint Protection ポイント -- &gt; インターネット  
+###  <a name="a-namebkmkportsendpointprotectioninterneta-endpoint-protection-point-----internet"></a><a name="BKMK_PortsEndpointProtection_Internet"></a> Endpoint Protection ポイント -- &gt; インターネット  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |ハイパーテキスト転送プロトコル (HTTP)|--|80|  
 
-###  <a name="a-namebkmkportsep-to-sqla-endpoint-protection-point----sql-server"></a><a name="BKMK_PortsEP-to-SQL"></a> エンドポイント保護ポイント -- &gt; SQL Server  
+###  <a name="a-namebkmkportsep-to-sqla-endpoint-protection-point-----sql-server"></a><a name="BKMK_PortsEP-to-SQL"></a> エンドポイント保護ポイント -- &gt; SQL Server  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433 (注 2「 **代替ポートを利用可能**」を参照)|  
 
-###  <a name="a-namebkmkportsenrollmentproxyenrollmentpointa-enrollment-proxy-point----enrollment-point"></a><a name="BKMK_PortsEnrollmentProxyEnrollmentPoint"></a> 登録プロキシ ポイント -- &gt; 登録ポイント  
+###  <a name="a-namebkmkportsenrollmentproxyenrollmentpointa-enrollment-proxy-point-----enrollment-point"></a><a name="BKMK_PortsEnrollmentProxyEnrollmentPoint"></a> 登録プロキシ ポイント -- &gt; 登録ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「 **代替ポートを利用可能**」を参照)|  
 
-###  <a name="a-namebkmkportsenrollmentenrollmentsqla-enrollment-point----sql-server"></a><a name="BKMK_PortsEnrollmentEnrollmentSQL"></a> 登録ポイント -- &gt; SQL Server  
+###  <a name="a-namebkmkportsenrollmentenrollmentsqla-enrollment-point-----sql-server"></a><a name="BKMK_PortsEnrollmentEnrollmentSQL"></a> 登録ポイント -- &gt; SQL Server  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433 (注 2「 **代替ポートを利用可能**」を参照)|  
 
-###  <a name="a-namebkmkportsexchangeconnectorhosteda-exchange-server-connector----exchange-online"></a><a name="BKMK_PortsExchangeConnectorHosted"></a> Exchange Server コネクタ -- &gt; Exchange Online  
+###  <a name="a-namebkmkportsexchangeconnectorhosteda-exchange-server-connector-----exchange-online"></a><a name="BKMK_PortsExchangeConnectorHosted"></a> Exchange Server コネクタ -- &gt; Exchange Online  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS 経由の Windows リモート管理|--|5986|  
 
-###  <a name="a-namebkmkportsexchangeconnectoronprema-exchange-server-connector----on-premises-exchange-server"></a><a name="BKMK_PortsExchangeConnectorOnPrem"></a> Exchange Server コネクタ -- &gt; 社内の Exchange Server  
+###  <a name="a-namebkmkportsexchangeconnectoronprema-exchange-server-connector-----on-premises-exchange-server"></a><a name="BKMK_PortsExchangeConnectorOnPrem"></a> Exchange Server コネクタ -- &gt; 社内の Exchange Server  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTP 経由の Windows リモート管理|--|5985|  
 
-###  <a name="a-namebkmkportsmacenrollmentproxypointa-mac-computer----enrollment-proxy-point"></a><a name="BKMK_PortsMacEnrollmentProxyPoint"></a> Mac コンピューター -- &gt; 登録プロキシ ポイント  
+###  <a name="a-namebkmkportsmacenrollmentproxypointa-mac-computer-----enrollment-proxy-point"></a><a name="BKMK_PortsMacEnrollmentProxyPoint"></a> Mac コンピューター -- &gt; 登録プロキシ ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|  
 
-###  <a name="a-namebkmkportsmp-dca-management-point----domain-controller"></a><a name="BKMK_PortsMP-DC"></a> 管理ポイント -- &gt; ドメイン コントローラー  
+###  <a name="a-namebkmkportsmp-dca-management-point-----domain-controller"></a><a name="BKMK_PortsMP-DC"></a> 管理ポイント -- &gt; ドメイン コントローラー  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -300,7 +300,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkportsmp-sitea-management-point-lt----site-server"></a><a name="BKMK_PortsMP-Site"></a> 管理ポイント &lt; -- &gt; サイト サーバー  
+###  <a name="a-namebkmkportsmp-sitea-management-point-lt-----site-server"></a><a name="BKMK_PortsMP-Site"></a> 管理ポイント &lt; -- &gt; サイト サーバー  
  (注 5「 **サイト サーバーとサイト システムの間の通信**」を参照)  
 
 |説明|UDP|TCP|  
@@ -309,38 +309,38 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 |サーバー メッセージ ブロック (SMB)|--|445|  
 
-###  <a name="a-namebkmkportsmp-sqla-management-point----sql-server"></a><a name="BKMK_PortsMP-SQL"></a> 管理ポイント -- &gt; Microsoft SQL Server  
+###  <a name="a-namebkmkportsmp-sqla-management-point-----sql-server"></a><a name="BKMK_PortsMP-SQL"></a> 管理ポイント -- &gt; Microsoft SQL Server  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433 (注 2「 **代替ポートを利用可能**」を参照)|  
 
-###  <a name="a-namebkmkportsmobiledeviceclient-enrollmentproxypointa-mobile-device----enrollment-proxy-point"></a><a name="BKMK_PortsMobileDeviceClient-EnrollmentProxyPoint"></a> モバイル デバイス -- &gt; 登録プロキシ ポイント  
+###  <a name="a-namebkmkportsmobiledeviceclient-enrollmentproxypointa-mobile-device-----enrollment-proxy-point"></a><a name="BKMK_PortsMobileDeviceClient-EnrollmentProxyPoint"></a> モバイル デバイス -- &gt; 登録プロキシ ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|  
 
-###  <a name="a-namebkmkportsmobiledeviceclient-windowsintunea-mobile-device----microsoft-intune"></a><a name="BKMK_PortsMobileDeviceClient-WindowsIntune"></a> モバイル デバイス -- &gt; Microsoft Intune  
+###  <a name="a-namebkmkportsmobiledeviceclient-windowsintunea-mobile-device-----microsoft-intune"></a><a name="BKMK_PortsMobileDeviceClient-WindowsIntune"></a> モバイル デバイス -- &gt; Microsoft Intune  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|  
 
-###  <a name="a-namebkmkportsrsp-sqla-reporting-services-point----sql-server"></a><a name="BKMK_PortsRSP-SQL"></a> レポート サービス ポイント -- &gt; SQL Server  
+###  <a name="a-namebkmkportsrsp-sqla-reporting-services-point-----sql-server"></a><a name="BKMK_PortsRSP-SQL"></a> レポート サービス ポイント -- &gt; SQL Server  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433 (注 2「代替ポートを利用可能」を参照)|  
 
-###  <a name="a-namebkmkportsintuneconnector-windowsintunea-service-connection-point----microsoft-intune"></a><a name="BKMK_PortsIntuneConnector-WindowsIntune"></a> サービス接続ポイント -- &gt; Microsoft Intune  
+###  <a name="a-namebkmkportsintuneconnector-windowsintunea-service-connection-point-----microsoft-intune"></a><a name="BKMK_PortsIntuneConnector-WindowsIntune"></a> サービス接続ポイント -- &gt; Microsoft Intune  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|
 詳細については、サービス接続ポイントの[インターネット アクセス要件](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls)を参照してください。
 
-###  <a name="a-namebkmkportsappcatalogwebservicepointsiteservera-site-server-lt----application-catalog-web-service-point"></a><a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> サイト サーバー &lt; -- &gt; アプリケーション カタログ Web サービス ポイント  
+###  <a name="a-namebkmkportsappcatalogwebservicepointsiteservera-site-server-lt-----application-catalog-web-service-point"></a><a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> サイト サーバー &lt; -- &gt; アプリケーション カタログ Web サービス ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -348,7 +348,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkportsappcatalogwebsitepointsiteservera-site-server-lt----application-catalog-website-point"></a><a name="BKMK_PortsAppCatalogWebSitePoint_SiteServer"></a> サイト サーバー &lt; -- &gt; アプリケーション カタログ Web サイト ポイント  
+###  <a name="a-namebkmkportsappcatalogwebsitepointsiteservera-site-server-lt-----application-catalog-website-point"></a><a name="BKMK_PortsAppCatalogWebSitePoint_SiteServer"></a> サイト サーバー &lt; -- &gt; アプリケーション カタログ Web サイト ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -356,7 +356,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkportssite-aispa-site-server-lt----asset-intelligence-synchronization-point"></a><a name="BKMK_PortsSite-AISP"></a> サイト サーバー &lt; -- &gt; 資産インテリジェンス同期ポイント  
+###  <a name="a-namebkmkportssite-aispa-site-server-lt-----asset-intelligence-synchronization-point"></a><a name="BKMK_PortsSite-AISP"></a> サイト サーバー &lt; -- &gt; 資産インテリジェンス同期ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -364,19 +364,19 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkportssite-clienta-site-server----client"></a><a name="BKMK_PortsSite-Client"></a> サイト サーバー -- &gt; クライアント  
+###  <a name="a-namebkmkportssite-clienta-site-server-----client"></a><a name="BKMK_PortsSite-Client"></a> サイト サーバー -- &gt; クライアント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |Wake On LAN|9 (注 2「 **代替ポートを利用可能**」を参照)|--|  
 
-###  <a name="a-namebkmkportssiteserver-clouddpa-site-server----cloud-based-distribution-point"></a><a name="BKMK_PortsSiteServer-CloudDP"></a> サイト サーバー -- &gt; クラウドベースの配布ポイント  
+###  <a name="a-namebkmkportssiteserver-clouddpa-site-server-----cloud-based-distribution-point"></a><a name="BKMK_PortsSiteServer-CloudDP"></a> サイト サーバー -- &gt; クラウドベースの配布ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|  
 
-###  <a name="a-namebkmkportssite-dpa-site-server----distribution-point"></a><a name="BKMK_PortsSite-DP"></a> サイト サーバー -- &gt; 配布ポイント  
+###  <a name="a-namebkmkportssite-dpa-site-server-----distribution-point"></a><a name="BKMK_PortsSite-DP"></a> サイト サーバー -- &gt; 配布ポイント  
  (注 5「 **サイト サーバーとサイト システムの間の通信**」を参照)  
 
 |説明|UDP|TCP|  
@@ -385,7 +385,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkportssite-dca-site-server----domain-controller"></a><a name="BKMK_PortsSite-DC"></a> サイト サーバー -- &gt; ドメイン コントローラー  
+###  <a name="a-namebkmkportssite-dca-site-server-----domain-controller"></a><a name="BKMK_PortsSite-DC"></a> サイト サーバー -- &gt; ドメイン コントローラー  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -396,7 +396,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkportscertificateregistrationpointsiteservera-site-server-lt----certificate-registration-point"></a><a name="BKMK_PortsCertificateRegistrationPoint_SiteServer"></a> サイト サーバー &lt; -- &gt; 証明書登録ポイント  
+###  <a name="a-namebkmkportscertificateregistrationpointsiteservera-site-server-lt-----certificate-registration-point"></a><a name="BKMK_PortsCertificateRegistrationPoint_SiteServer"></a> サイト サーバー &lt; -- &gt; 証明書登録ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -404,7 +404,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkportsendpointprotectionsiteservera-site-server-lt----endpoint-protection-point"></a><a name="BKMK_PortsEndpointProtection_SiteServer"></a> サイト サーバー &lt; -- &gt; Endpoint Protection ポイント  
+###  <a name="a-namebkmkportsendpointprotectionsiteservera-site-server-lt-----endpoint-protection-point"></a><a name="BKMK_PortsEndpointProtection_SiteServer"></a> サイト サーバー &lt; -- &gt; Endpoint Protection ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -412,7 +412,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkenrollmentpointsiteservera-site-server-lt----enrollment-point"></a><a name="BKMK_EnrollmentPoint_SiteServer"></a> サイト サーバー &lt; -- &gt; 登録ポイント  
+###  <a name="a-namebkmkenrollmentpointsiteservera-site-server-lt-----enrollment-point"></a><a name="BKMK_EnrollmentPoint_SiteServer"></a> サイト サーバー &lt; -- &gt; 登録ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -420,7 +420,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkenrollmentproxypointsiteservera-site-server-lt----enrollment-proxy-point"></a><a name="BKMK_EnrollmentProxyPoint_SiteServer"></a> サイト サーバー &lt; -- &gt; 登録プロキシ ポイント  
+###  <a name="a-namebkmkenrollmentproxypointsiteservera-site-server-lt-----enrollment-proxy-point"></a><a name="BKMK_EnrollmentProxyPoint_SiteServer"></a> サイト サーバー &lt; -- &gt; 登録プロキシ ポイント  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -428,7 +428,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkportssite-fspa-site-server-lt----fallback-status-point"></a><a name="BKMK_PortsSite-FSP"></a> サイト サーバー &lt; -- &gt; フォールバック ステータス ポイント  
+###  <a name="a-namebkmkportssite-fspa-site-server-lt-----fallback-status-point"></a><a name="BKMK_PortsSite-FSP"></a> サイト サーバー &lt; -- &gt; フォールバック ステータス ポイント  
  (注 5「 **サイト サーバーとサイト システムの間の通信**」を参照)  
 
 |説明|UDP|TCP|  
@@ -437,13 +437,13 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkportsite-interneta-site-server----internet"></a><a name="BKMK_PortSite-Internet"></a> サイト サーバー -- &gt; インターネット  
+###  <a name="a-namebkmkportsite-interneta-site-server-----internet"></a><a name="BKMK_PortSite-Internet"></a> サイト サーバー -- &gt; インターネット  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 1「 **プロキシ サーバーのポート**」を参照)|  
 
-###  <a name="a-namebkmkportsissuingcasiteservera-site-server-lt----issuing-certification-authority-ca"></a><a name="BKMK_PortsIssuingCA_SiteServer"></a> サイト サーバー &lt; -- > 発行元の証明機関 (CA)  
+###  <a name="a-namebkmkportsissuingcasiteservera-site-server-lt-----issuing-certification-authority-ca"></a><a name="BKMK_PortsIssuingCA_SiteServer"></a> サイト サーバー &lt; -- > 発行元の証明機関 (CA)  
  この通信は、証明書登録ポイントを使用して、証明書プロファイルを展開するときに使用します。 通信は、階層のすべてのサイトで使用されるわけではありません。階層の最上位のサイト サーバーでのみ使用されます。  
 
 |説明|UDP|TCP|  
@@ -451,7 +451,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC エンドポイント マッパー|135|135|  
 |RPC (DCOM)|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkportssite-rspa-site-server-lt----reporting-services-point"></a><a name="BKMK_PortsSite-RSP"></a> サイト サーバー &lt; -- &gt; レポート サービス ポイント  
+###  <a name="a-namebkmkportssite-rspa-site-server-lt-----reporting-services-point"></a><a name="BKMK_PortsSite-RSP"></a> サイト サーバー &lt; -- &gt; レポート サービス ポイント  
  (注 5「 **サイト サーバーとサイト システムの間の通信**」を参照)  
 
 |説明|UDP|TCP|  
@@ -460,13 +460,13 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkportssite-sitea-site-server-lt----site-server"></a><a name="BKMK_PortsSite-Site"></a> サイト サーバー &lt; -- &gt; サイト サーバー  
+###  <a name="a-namebkmkportssite-sitea-site-server-lt-----site-server"></a><a name="BKMK_PortsSite-Site"></a> サイト サーバー &lt; -- &gt; サイト サーバー  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |サーバー メッセージ ブロック (SMB)|--|445|  
 
-###  <a name="a-namebkmkportssite-sqla-site-server----sql-server"></a><a name="BKMK_PortsSite-SQL"></a> サイト サーバー -- &gt; SQL Server  
+###  <a name="a-namebkmkportssite-sqla-site-server-----sql-server"></a><a name="BKMK_PortsSite-SQL"></a> サイト サーバー -- &gt; SQL Server  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -480,7 +480,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkportssite-providera-site-server----sms-provider"></a><a name="BKMK_PortsSite-Provider"></a> サイト サーバー -- &gt; SMS プロバイダー  
+###  <a name="a-namebkmkportssite-providera-site-server-----sms-provider"></a><a name="BKMK_PortsSite-Provider"></a> サイト サーバー -- &gt; SMS プロバイダー  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -488,7 +488,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="a-namebkmkportssite-supa-site-server-lt----software-update-point"></a><a name="BKMK_PortsSite-SUP"></a> サイト サーバー &lt; -- &gt; ソフトウェアの更新ポイント  
+###  <a name="a-namebkmkportssite-supa-site-server-lt-----software-update-point"></a><a name="BKMK_PortsSite-SUP"></a> サイト サーバー &lt; -- &gt; ソフトウェアの更新ポイント  
  (注 5「 **サイト サーバーとサイト システムの間の通信**」を参照)  
 
 |説明|UDP|TCP|  
@@ -497,7 +497,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |ハイパーテキスト転送プロトコル (HTTP)|--|80 または 8530 (注 3「Windows Server Update Services」を参照)|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 または 8531 (注 3「Windows Server Update Services」を参照)|  
 
-###  <a name="a-namebkmkportssite-smpa-site-server-lt----state-migration-point"></a><a name="BKMK_PortsSite-SMP"></a> サイト サーバー &lt; -- &gt; 状態移行ポイント  
+###  <a name="a-namebkmkportssite-smpa-site-server-lt-----state-migration-point"></a><a name="BKMK_PortsSite-SMP"></a> サイト サーバー &lt; -- &gt; 状態移行ポイント  
  (注 5「 **サイト サーバーとサイト システムの間の通信**」を参照)  
 
 |説明|UDP|TCP|  
@@ -505,19 +505,19 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |サーバー メッセージ ブロック (SMB)|--|445|  
 |RPC エンドポイント マッパー|135|135|  
 
-###  <a name="a-namebkmkportsprovider-sqla-sms-provider----sql-server"></a><a name="BKMK_PortsProvider-SQL"></a> SMS プロバイダー -- &gt; SQL Server  
+###  <a name="a-namebkmkportsprovider-sqla-sms-provider-----sql-server"></a><a name="BKMK_PortsProvider-SQL"></a> SMS プロバイダー -- &gt; SQL Server  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433 (注 2「代替ポートを利用可能」を参照)|  
 
-###  <a name="a-namebkmkportssup-interneta-software-update-point----internet"></a><a name="BKMK_PortsSUP-Internet"></a> ソフトウェアの更新ポイント -- &gt; インターネット  
+###  <a name="a-namebkmkportssup-interneta-software-update-point-----internet"></a><a name="BKMK_PortsSUP-Internet"></a> ソフトウェアの更新ポイント -- &gt; インターネット  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 1「 **プロキシ サーバーのポート**」を参照)|  
 
-###  <a name="a-namebkmkportssup-wsusa-software-update-point----upstream-wsus-server"></a><a name="BKMK_PortsSUP-WSUS"></a> ソフトウェアの更新ポイント -- &gt; 上流の WSUS サーバー  
+###  <a name="a-namebkmkportssup-wsusa-software-update-point-----upstream-wsus-server"></a><a name="BKMK_PortsSUP-WSUS"></a> ソフトウェアの更新ポイント -- &gt; 上流の WSUS サーバー  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -535,7 +535,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 > [!TIP]  
 >  Configuration Manager では、SQL Server Browser は必要ありません。SQL Server Browser は、UDP ポート 1434 を使用します。  
 
-###  <a name="a-namebkmkportsstatemigrationpoint-to-sqla-state-migration-point----sql-server"></a><a name="BKMK_PortsStateMigrationPoint-to-SQL"></a> 状態移行ポイント --&gt; SQL Server  
+###  <a name="a-namebkmkportsstatemigrationpoint-to-sqla-state-migration-point-----sql-server"></a><a name="BKMK_PortsStateMigrationPoint-to-SQL"></a> 状態移行ポイント --&gt; SQL Server  
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
@@ -711,6 +711,6 @@ SQL Server コンピューターのファイアウォールが有効に設定さ
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

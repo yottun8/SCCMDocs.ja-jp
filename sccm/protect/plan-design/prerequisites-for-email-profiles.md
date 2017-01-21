@@ -1,5 +1,5 @@
 ---
-title: "電子メール プロファイルの前提条件 | System Center Configuration Manager"
+title: "電子メール プロファイルの前提条件 | Microsoft Docs"
 description: "System Center Configuration Manager の電子メール プロファイル、およびそれらの外部依存関係と製品内依存関係の両方について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4c6dc38fe3cc8721cec642701a4be78536da4b23
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: a41bec089897717a7e73e751d58275af9e0a5fa3
 
 
 ---
@@ -43,6 +43,6 @@ System Center Configuration Manager の電子メール プロファイルには�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

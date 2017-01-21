@@ -1,5 +1,5 @@
 ---
-title: "シナリオ例 - Windows Embedded クライアントの展開 | System Center Configuration Manager"
+title: "シナリオ例 - Windows Embedded クライアントの展開 | Microsoft Docs"
 description: "Windows Embedded デバイスで System Center Configuration Manager クライアントを展開および管理するシナリオ例について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10049c89-b37c-472b-b317-ce4f56cd4be7
 caps.latest.revision: 8
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: dd97ae9afb2d0ecfc33266267a65f3c3f6d1dd29
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 7b5cd35b22b610902628142d9cc52b8f3d54069d
 
 
 ---
@@ -182,6 +182,6 @@ ms.openlocfilehash: dd97ae9afb2d0ecfc33266267a65f3c3f6d1dd29
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

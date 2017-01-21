@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager を使用したタスク シーケンス メディアの作成"
+title: "System Center Configuration Manager を使用したタスク シーケンス メディアの作成 | Microsoft Docs"
 description: "Configuration Manager 環境内で対象コンピューターにオペレーティング システムを展開するため、CD などのタスク シーケンス メディアを作成します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f00defcdb56e37476ac24d8ce25d1dc5fb2f3260
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: bd5448d70c2d465347de840cb197d4c33075c90a
 
 
 ---
@@ -72,6 +72,6 @@ System Center Configuration Manager 環境の参照コンピューターのオ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

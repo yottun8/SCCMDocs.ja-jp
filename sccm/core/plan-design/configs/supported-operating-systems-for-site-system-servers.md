@@ -1,5 +1,5 @@
 ---
-title: "サポートされているサイト システム サーバー | System Center Configuration Manager"
+title: "サポートされるサイト システム サーバー | Microsoft Docs"
 description: "System Center Configuration Manager サイトまたはサイト システムの役割をホストできる Windows バージョンについて説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,12 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 00d5d8d9ce90b2da79485250d25f943ca1c4547b
+ms.sourcegitcommit: d23b98b362fb016c53974f851c48fa7200d2b2e3
+ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
 
 ---
-# <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>System Center Configuration Manager サイト システム サーバーのサポートされるオペレーティング システム
+# <a name="supported-operating-systems-for-system-center-configuration-manager--site-system-servers"></a>System Center Configuration Manager サイト システム サーバーのサポートされるオペレーティング システム
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -36,7 +36,7 @@ ms.openlocfilehash: 00d5d8d9ce90b2da79485250d25f943ca1c4547b
 
 
 
-## <a name="windows-server-2016---standard-datacenter"></a>Windows Server 2016   - Standard、Datacenter
+## <a name="windows-server-2016-----standard-datacenter"></a>Windows Server 2016   - Standard、Datacenter
 Windows Server 2016 は、Configuration Manager バージョン 1606 以降および KB3186654 以降の修正プログラム ロールアップ (2016 年 10 月にリリースされた 1606 のベースライン バージョン) でサポートされています。
 
 **サイト サーバー:**  
@@ -68,6 +68,8 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 -   登録プロキシ ポイント  
 
 -   フォールバック ステータス ポイント  
+
+-   管理ポイント
 
 -   レポート サービス ポイント  
 
@@ -114,6 +116,8 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
 -   フォールバック ステータス ポイント  
 
+-   管理ポイント
+
 -   レポート サービス ポイント  
 
 -   サービス接続ポイント  
@@ -159,6 +163,8 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
 -   フォールバック ステータス ポイント  
 
+-   管理ポイント
+
 -   レポート サービス ポイント  
 
 -   サービス接続ポイント  
@@ -173,7 +179,7 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
 -   状態移行ポイント  
 
-## <a name="windows-server-2008-r2-with-sp1-x64---standard-enterprise-datacenter"></a>Windows Server 2008 R2 SP1 (x64)   - Standard、Enterprise、Datacenter  
+## <a name="windows-server-2008-r2-with-sp1-x64-----standard-enterprise-datacenter"></a>Windows Server 2008 R2 SP1 (x64)   - Standard、Enterprise、Datacenter  
  [マイクロソフト サポート ライフサイクル](https://support.microsoft.com/lifecycle)で詳述するように、Windows Server 2008 R2 が延長サポートになり、メインストリーム サポートが終了しました。 Configuration Manager を使用したサイト システム サーバーとしてのこれらのオペレーティング システムの将来のサポートの詳細については、「[System Center Configuration Manager から削除された機能と非推奨の機能](../../../core/plan-design/changes/removed-and-deprecated-features.md)」を参照してください。  
 
 **サイト サーバー:**  
@@ -205,6 +211,8 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 -   登録プロキシ ポイント  
 
 -   フォールバック ステータス ポイント  
+
+-   管理ポイント
 
 -   レポート サービス ポイント  
 
@@ -256,6 +264,8 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 -   登録プロキシ ポイント  
 
 -   フォールバック ステータス ポイント  
+
+-   管理ポイント
 
 -   レポート サービス ポイント  
 
@@ -331,6 +341,6 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

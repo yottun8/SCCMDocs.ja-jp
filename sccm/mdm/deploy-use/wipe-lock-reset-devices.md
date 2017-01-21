@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager によるリモート ワイプ、ロック、パスコードのリセットを使用したデータの保護"
+title: "System Center Configuration Manager によるリモート ワイプ、ロック、パスコードのリセットを使用したデータの保護 | Microsoft Docs"
 description: "System Center Configuration Manager によるフル ワイプ、選択的ワイプ、リモート ロック、パスコードのリセットを使用してデバイスのデータを保護します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 49a2220616bb6c6734643885bf969245e4c67c77
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: d3dd55b496a124c478f1cf2880a096e2fbdd9145
 
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-using-system-center-configuration-manager"></a>System Center Configuration Manager によるリモート ワイプ、ロック、パスコードのリセットを使用したデータの保護
@@ -65,9 +65,9 @@ Configuration Manager には、選択的ワイプ、フル ワイプ、リモー
 |管理エージェント|管理プロファイルは削除されます。|  
 |電子メール プロファイル|Intune によってプロビジョニングされた電子メール プロファイルの場合、電子メール アカウントと電子メールが削除されます。|  
 
- **Android および Android Samsung KNOX**  
+ **Android および Android Samsung Standard KNOX**  
 
-|デバイスをインベントリから削除したときに削除されるコンテンツ|Android|Samsung KNOX|  
+|デバイスをインベントリから削除したときに削除されるコンテンツ|Android|Samsung KNOX Standard|  
 |--------------------------------------------|-------------|------------------|  
 |Configuration Manager および Intune を使用してインストールされた会社のアプリと関連データ。|アプリとデータはインストールされたままです。|アプリはアンインストールされます。|  
 |VPN と Wi-Fi プロファイル|削除されます。|削除されます。|  
@@ -243,10 +243,10 @@ Configuration Manager には、選択的ワイプ、フル ワイプ、リモー
 
 ## <a name="see-also"></a>関連項目  
  [Windows のデバイス データ管理の選択的ワイプ (英語)](http://technet.microsoft.com/library/dn486874.aspx)   
- [System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../mdm/plan-design/hybrid-mobile-device-management.md)
+ [System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../mdm/understand/hybrid-mobile-device-management.md)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

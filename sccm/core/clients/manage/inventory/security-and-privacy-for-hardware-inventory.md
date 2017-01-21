@@ -1,5 +1,5 @@
 ---
-title: "ハードウェア インベントリのセキュリティとプライバシー | System Center Configuration Manager"
+title: "ハードウェア インベントリのセキュリティとプライバシー | Microsoft Docs"
 description: "System Center Configuration Manager におけるハードウェア インベントリのセキュリティとプライバシーの情報を確認します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 59c13b65cf93fa12218336e1a03b8f7c2d82aa5f
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: b12d4a1592ce4601fa1f0a6cd2a539a3664c0c37
 
 
 ---
@@ -59,6 +59,6 @@ ms.openlocfilehash: 59c13b65cf93fa12218336e1a03b8f7c2d82aa5f
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

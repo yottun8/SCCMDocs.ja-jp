@@ -1,5 +1,5 @@
 ---
-title: "Configuration Manager 2012 からの変更 | System Center Configuration Manager "
+title: "Configuration Manager 2012 からの変更点 | Microsoft Docs "
 description: "System Center 2012 Configuration Manager と比較した System Center Configuration Manger の新機能と変更をご確認いただけます。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 0f3b68fb17920b0abacc1428c8763ec8c06e6b22
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: 3ede76bd60372dcef2b1b3230577ee3c3f1e2dcd
 
 
 ---
@@ -73,7 +73,7 @@ ms.openlocfilehash: 0f3b68fb17920b0abacc1428c8763ec8c06e6b22
 ##  <a name="a-namebkmkamta-support-for-intel-active-management-technology-amt"></a><a name="bkmk_AMT"></a> Intel Active Management Technology (AMT) のサポート  
  System Center Configuration Manager では、Configuration Manager コンソール内からの AMT ベースのコンピューターに対するネイティブ サポートは削除されました。  
 
--    [Microsoft System Center Configuration Manager 用 Intel SCS アドオン](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html)を使用すれば、AMT ベースのコンピューターは引き続き完全に管理されます。  
+-   [Microsoft System Center Configuration Manager 用 Intel SCS アドオン](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html)を使用すれば、AMT ベースのコンピューターは引き続き完全に管理されます。  
 
 -   アドオンを使用することで、最新の機能にアクセスして AMT を管理できます。Configuration Manager にこれらの変更が組み込まれるまでに適用されていた制限は解除されます。  
 
@@ -140,7 +140,7 @@ System Center Configuration Manager での統合 AMT の削除には、次の内
 
     -   Configuration Manager クライアントを使用せずに管理されている iOS および Mac OS X デバイス  
 
-    -   Configuration Manager クライアントを使用せずに管理されている Android および Samsung KNOX デバイス  
+    -   Configuration Manager クライアントを使用せずに管理されている Android および Samsung KNOX Standard デバイス  
 
      「[System Center Configuration Manager で構成項目を作成する方法](../../../compliance/deploy-use/create-configuration-items.md)」を参照してください。  
 
@@ -158,7 +158,7 @@ System Center Configuration Manager での統合 AMT の削除には、次の内
 
 -   大量のデバイスを管理できるようにデバイス登録マネージャーの役割が追加されました。  
 
-Configuration Manager および Intune によるモバイル デバイス管理機能の詳細については、「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../../mdm/plan-design/hybrid-mobile-device-management.md)」を参照してください。  
+Configuration Manager および Intune によるモバイル デバイス管理機能の詳細については、「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)」を参照してください。  
 
 ## <a name="on-premises-mobile-device-management"></a>オンプレミス モバイル デバイス管理  
  System Center Configuration Manager では、オンプレミスの Configuration Manager インフラストラクチャを使用してモバイル デバイスを管理できるようになりました。 すべてのデバイス管理と管理データはオンプレミスで処理され、Microsoft Intune またはその他のクラウド サービスの一部ではなくなります。 この種類のデバイス管理では、Configuration Manager がデバイスを管理するために使用する機能がデバイスのオペレーティング システムに組み込まれているため、クライアント ソフトウェアが必要ありません。  
@@ -167,6 +167,6 @@ Configuration Manager および Intune によるモバイル デバイス管理�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

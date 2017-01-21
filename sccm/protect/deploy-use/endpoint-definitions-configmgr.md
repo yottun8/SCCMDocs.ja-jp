@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection のマルウェア定義 | System Center Configuration Manager"
+title: "Endpoint Protection のマルウェア定義 | Microsoft Docs"
 description: "クライアント コンピューターに定義ファイルの更新を配布するように Configuration Manager ソフトウェア更新プログラムを構成する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ead791ae0bf9d26ff02bea9a85973d7149b695a5
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: ca8dfd2882189065aecdb46b42205a04294dafed
 
 
 ---
@@ -121,6 +121,6 @@ ms.openlocfilehash: ead791ae0bf9d26ff02bea9a85973d7149b695a5
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "電源プランを作成して適用する | System Center Configuration Manager"
+title: "電源プランを作成して適用する | Microsoft Docs"
 description: "System Center Configuration Manager で電源プランを作成して適用します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 18017c64aa6e6769a1ea0921274d05625e99610d
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: de81da31b524cebe8e820766a64ecc5fdb7e4771
 
 
 ---
@@ -115,6 +115,6 @@ System Center Configuration Manager の電源管理では、Configuration Manage
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

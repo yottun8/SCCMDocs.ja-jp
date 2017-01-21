@@ -1,8 +1,8 @@
 ---
-title: "証明書プロファイルの前提条件 | System Center Configuration Manager"
+title: "証明書プロファイルの前提条件 | Microsoft Docs"
 description: "System Center Configuration Manager の証明書プロファイル、およびそれらの外部依存関係と製品内依存関係について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ba42385eb31fffd9f74b35108e71a1ae5a9c71f7
+ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
+ms.openlocfilehash: 08fb30da2060728142648f13846be737f98f2276
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: ba42385eb31fffd9f74b35108e71a1ae5a9c71f7
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 
-System Center Configuration Manager の証明書プロファイルには、外部依存関係と製品内依存関係があります。  
+System Center Configuration Manager (ConfigMgr、SCCM とも呼ばれます) の証明書プロファイルには、外部依存関係と製品内依存関係があります。  
 
 ## <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 外部の依存関係  
 
@@ -49,6 +49,6 @@ System Center Configuration Manager の証明書プロファイルには、外�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

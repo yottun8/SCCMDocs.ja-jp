@@ -1,8 +1,8 @@
 ---
-title: "ログ ファイル | System Center Configuration Manager"
+title: "Configuration Manager のログ ファイル | Microsoft Docs"
 description: "System Center Configuration Manager 階層内での問題に対してトラブルシューティングを行うには、ログ ファイルを使用します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/01/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: cb27f2f2a6e0b0e3d6fca2d616d8ab806b74f9df
+ms.sourcegitcommit: f36cdecd96d50bd62892b262024e43d64f7c8205
+ms.openlocfilehash: 5b7afc3e00bc8ee317b8d8c3660808c465758f91
 
 
 ---
@@ -70,6 +70,8 @@ System Center Configuration Manager では、クライアント コンポーネ�
 
     -   [証明書の登録](#BKMK_CertificateEnrollment)  
 
+    - [クラウド管理ゲートウェイ](#cloud-management-gateway)
+
     -   [コンプライアンス設定と会社のリソースへのアクセス](#BKMK_CompSettingsLog)  
 
     -   [Configuration Manager コンソール](#BKMK_ConsoleLog)  
@@ -105,6 +107,8 @@ System Center Configuration Manager では、クライアント コンポーネ�
     -   [ ソフトウェア更新プログラム](#BKMK_SU_NAPLog)  
 
     -   [Wake On LAN](#BKMK_WOLLog)  
+
+    -   [Windows 10 サービス](#BKMK_WindowsServicingLog)
 
     -   [Windows 更新エージェント](#BKMK_WULog)  
 
@@ -503,6 +507,15 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |BgbHttpProxy.log|HTTP を使用して通知サーバーとの間でクライアントのメッセージをリレーしたときに、通知 HTTP プロキシの処理を記録します。|クライアント|  
 |CCMNotificationAgent.log|クライアントとサーバー間の通信などの通知エージェントの処理、および受信して他のクライアント エージェントにディスパッチされたタスクに関する情報を記録します。|クライアント|  
 
+### <a name="cloud-management-gateway"></a>クラウド管理ゲートウェイ
+
+次の表に、クラウド管理ゲートウェイに関係のある情報を含むログ ファイルを示します。
+
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
+|--------------|-----------------|----------------------------|  
+|CloudMgr.log|クラウド管理ゲートウェイ サービスの展開、進行中のサービスの状態、およびサービスに関連する使用状況データについての情報を記録します。|サイト システム サーバー|
+|SMS_Cloud_ProxyConnector.log|クラウド管理ゲートウェイ サービスとクラウド管理ゲートウェイ接続ポイントの間の接続の設定に関する詳細を記録します。|サイト システム サーバー|
+
 ###  <a name="a-namebkmkcompsettingsloga-compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a> コンプライアンス設定と会社のリソースへのアクセス  
  次の表に、コンプライアンス設定と会社のリソースへのアクセスに関係のある情報を含むログ ファイルを示します。  
 
@@ -535,6 +548,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |PrestageContent.log|事前設定されたリモート配布ポイントの ExtractContent.exe の使用に関する詳細を記録します。 このツールは、ファイルにエクスポートされているコンテンツを抽出します。|サイト システムの役割|  
 |SMSdpmon.log|配布ポイントで構成されている、スケジュールに従った配布ポイントの正常性の監視タスクの詳細を記録します。|サイト システムの役割|  
 |smsdpprov.log|プライマリ サイトから受け取った圧縮ファイルの抽出に関する詳細を記録します。 このログは、リモート配布ポイントの WMI プロバイダーによって生成されます。|サイト サーバーに併置されていない配布ポイント コンピューター|  
+
 
 ###  <a name="a-namebkmkdiscoveryloga-discovery"></a><a name="BKMK_DiscoveryLog"></a> 探索  
 次の表に、探索に関係のある情報を含むログ ファイルを示します。  
@@ -731,11 +745,10 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |Statesys.log|モバイル デバイス管理メッセージの処理を記録します。|プライマリ サイトと中央管理サイト|  
 
 ###  <a name="a-namebkmksunaploga-software-updates"></a><a name="BKMK_SU_NAPLog"></a> ソフトウェア更新プログラム  
- 次の表に、ソフトウェアの更新プログラムに関連する情報を含むログ ファイルを一覧表示します。  また、System Center Configuration Manager で使用できなくなった機能であるネットワーク アクセス保護に関連する詳細の一部が残っています。  
+ 次の表に、ソフトウェアの更新プログラムに関連する情報を含むログ ファイルを一覧表示します。  
 
 |ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|ccmcca.log|Configuration Manager NAP ポリシー処理に基づくコンプライアンス評価処理に関するログが記録され、コンプライアンスに必要な各ソフトウェアの修復処理も含まれます。|クライアント|  
 |Ccmperf.log|メンテナンス操作、およびクライアントのパフォーマンス カウンターに関連するデータの取得操作を記録します。|クライアント|  
 |PatchDownloader.log|更新プログラムのソースから、ソフトウェア更新プログラムをサイト サーバーにダウンロードするプロセスの詳細を記録します。|ダウンロードを開始した Configuration Manager コンソールをホストしているコンピューター|  
 |PolicyEvaluator.log|ソフトウェア更新プログラムのポリシーを含む、クライアント コンピューターのポリシーの評価の詳細を記録します。|クライアント|  
@@ -743,13 +756,6 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |ScanAgent.log|ソフトウェア更新プログラムのスキャン要求、WSUS の場所、および関連する操作の詳細を記録します。|クライアント|  
 |SdmAgent.log|コンプライアンス対応状態と修復の追跡情報を記録します。 ただし、ソフトウェア更新プログラムのログ ファイル (Updateshandler.log) に、コンプライアンス対応に必要なソフトウェア更新プログラムのインストールのもっと詳しい情報が記録されます。<br /><br /> このログ ファイルは、コンプライアンス設定で共有されます。|クライアント|  
 |ServiceWindowManager.log|メンテナンス期間の評価の詳細を記録します。|クライアント|  
-|smssha.log|Configuration Manager ネットワーク アクセス保護クライアントのメイン ログ ファイルです。これには 2 つの Configuration Manager コンポーネント、ロケーション サービス (LS) と構成コンプライアンス エージェント (CCA) から結合された正常性情報のステートメントが含まれます。 このログ ファイルには、Configuration Manager システム正常性エージェントとオペレーティング システム NAP エージェント間、および Configuration Manager システム正常性エージェントと構成対応エージェントおよびロケーション サービス間の対話に関する情報も含まれます。 このログ ファイルで、エージェントが正常に初期化されたかどうかと、正常性ステートメントのデータと応答を見ることができます。|クライアント|  
-|Smsshv.log|システム正常性検証ツール ポイントのメイン ログ ファイルです。システム正常性検証サービスの初期化状況など、基本的な動作を記録します。|サイト システム サーバー|  
-|Smsshvadcacheclient.log|Active Directory Domain Services からの、Configuration Manager の正常性状態の基準取得に関する詳細を記録します。|サイト システム サーバー|  
-|SmsSHVCacheStore.log|ストアからの読み取りや、ローカル キャッシュ ストア ファイルからのエントリの削除など、Active Directory Domain Services から取得された Configuration Manager NAP 正常性状態の参照を保持するのに使用されるキャッシュ ストアの詳細情報を記録します。 キャッシュ ストアを構成することはできません。|サイト システム サーバー|  
-|smsSHVQuarValidator.log|クライアントの正常性ステートメント情報とその処理を記録します。 すべての情報を取得するには、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMSSHV\Logging\\@GLOBAL** にあるレジストリ キー **LogLevel** を 1 から 0 に変更します。|サイト システム サーバー|  
-|smsshvregistrysettings.log|サーバーの実行中にシステム正常性検証ツール コンポーネントの構成に加えられた動的な変更を記録します。|サイト システム サーバー|  
-|SMSSHVSetup.log|システム正常性検証ツール ポイントのインストールを記録します。インストールできなかった場合は、その原因も含まれます。|サイト システム サーバー|  
 |SmsWusHandler.log|Microsoft 更新プログラム用インベントリ ツールのスキャン プロセスの詳細を記録します。|クライアント|  
 |StateMessage.log|作成されて管理ポイントに送信されたソフトウェア更新プログラムの状態メッセージの詳細を記録します。|クライアント|  
 |SUPSetup.log|ソフトウェアの更新ポイントのインストールに関する詳細を記録します。 ソフトウェアの更新ポイントのインストールが完了すると、このログ ファイルに「 **Installation was successful** 」と書き込まれます。|サイト システム サーバー|  
@@ -772,6 +778,31 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |wolcmgr.log|ウェイクアップ パケットの送信先クライアント、送信したウェイクアップ パケットの数、ウェイクアップ パケット送信の再試行回数を記録します。|サイト サーバー|  
 |wolmgr.log|ウェイクアップ手順 (Wake On LAN 用に構成されている展開の開始日時など) の詳細を記録します。|サイト サーバー|  
 
+###  <a name="a-namebkmkwindowsservicinglogawindows-10-servicing"></a><a name="BKMK_WindowsServicingLog"></a>Windows 10 サービス  
+ 次の表に、Windows 10 サービスに関係のある情報を含むログ ファイルの一覧を示します。  
+
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
+|--------------|-----------------|----------------------------|  
+|Ccmperf.log|メンテナンス操作、およびクライアントのパフォーマンス カウンターに関連するデータの取得操作を記録します。|クライアント|  
+|CcmRepair.log|クライアント エージェントの修復処理を記録します。|クライアント|
+|PatchDownloader.log|更新プログラムのソースから、ソフトウェア更新プログラムをサイト サーバーにダウンロードするプロセスの詳細を記録します。|ダウンロードを開始した Configuration Manager コンソールをホストしているコンピューター|  
+|PolicyEvaluator.log|ソフトウェア更新プログラムのポリシーを含む、クライアント コンピューターのポリシーの評価の詳細を記録します。|クライアント|  
+|RebootCoordinator.log|ソフトウェア更新プログラムがインストールされた後のシステムの再起動の調整に関する詳細を記録します。|クライアント|  
+|ScanAgent.log|ソフトウェア更新プログラムのスキャン要求、WSUS の場所、および関連する操作の詳細を記録します。|クライアント|  
+|SdmAgent.log|コンプライアンス対応状態と修復の追跡情報を記録します。 ただし、ソフトウェア更新プログラムのログ ファイル (Updateshandler.log) に、コンプライアンス対応に必要なソフトウェア更新プログラムのインストールのもっと詳しい情報が記録されます。<br /><br /> このログ ファイルは、コンプライアンス設定で共有されます。|クライアント|  
+|ServiceWindowManager.log|メンテナンス期間の評価の詳細を記録します。|クライアント|  
+|setupact.log|Windows インストール プロセス中に発生するほとんどのエラーのプライマリ ログ ファイルです。 このログ ファイルは、*%windir%\$Windows.~BT\sources\panther* フォルダーにあります。|クライアント|
+|SmsWusHandler.log|Microsoft 更新プログラム用インベントリ ツールのスキャン プロセスの詳細を記録します。|クライアント|  
+|StateMessage.log|作成されて管理ポイントに送信されたソフトウェア更新プログラムの状態メッセージの詳細を記録します。|クライアント|  
+|SUPSetup.log|ソフトウェアの更新ポイントのインストールに関する詳細を記録します。 ソフトウェアの更新ポイントのインストールが完了すると、このログ ファイルに「 **Installation was successful** 」と書き込まれます。|サイト システム サーバー|  
+|UpdatesDeployment.log|ソフトウェア更新プログラムのクライアントへの展開の詳細 (アクティブ化と評価、強制実行など) を記録します。 ログ記録のレベルを "詳細" にしている場合は、クライアント ユーザー インターフェイスとの相互動作に関する情報も含まれます。|クライアント|  
+|UpdatesHandler.log|ソフトウェア更新プログラムのコンプライアンス スキャン、およびソフトウェア更新プログラムのダウンロードとクライアントへのインストールの詳細を記録します。|クライアント|  
+|UpdatesStore.log|コンプライアンス スキャンで評価された更新プログラムとのコンプライアンス対応状態の詳細を記録します。|クライアント|  
+|WCM.log|ソフトウェアの更新ポイントの構成と Windows Server Update Services (WSUS) サーバーとの接続 (サブスクライブしているカテゴリ、分類、言語の更新プログラムがあるかどうかを確認するため) に関する詳細を記録します。|サイト サーバー|  
+|WSUSCtrl.log|サイトの WSUS サーバーの構成、データベース接続、正常性に関する詳細を記録します。|サイト システム サーバー|  
+|wsyncmgr.log|ソフトウェア更新プログラムの同期プロセスの詳細を記録します。|サイト サーバー|  
+|WUAHandler.log|クライアントの Windows 更新エージェントによるソフトウェア更新プログラムの検索に関する詳細を記録します。|クライアント|  
+
 ###  <a name="a-namebkmkwuloga-windows-update-agent"></a><a name="BKMK_WULog"></a> Windows 更新エージェント  
  次の表に、Windows 更新エージェントのインストールに関係のある情報を含むログ ファイルを示します。  
 
@@ -789,6 +820,6 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

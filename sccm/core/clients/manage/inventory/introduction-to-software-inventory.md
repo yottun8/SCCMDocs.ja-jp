@@ -1,5 +1,5 @@
 ---
-title: "ソフトウェア インベントリ | System Center Configuration Manager"
+title: "ソフトウェア インベントリ | Microsoft Docs"
 description: "System Center Configuration Manager のソフトウェア インベントリの概要について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 8d664616e222119f7821a70a7c8f9cdbfca38538
+ms.sourcegitcommit: a468ce93e9536fe3f6bf0fc191ff9764dd1c3343
+ms.openlocfilehash: 401ba6e37d740310d49ab9e96112ce576d7130e4
 
 
 ---
@@ -34,7 +34,7 @@ System Center Configuration Manager のソフトウェア インベントリを�
 
 -   デバイス上で検出される、指定されたファイルを使用するデバイスを返すクエリを作成する。 詳細については、「[Configuration Manager のクエリ](../../../../core/servers/manage/queries-technical-reference.md)」を参照してください。  
 
--   デバイス上で検出される、指定されたファイルを使用する、クエリベースのコレクションを作成する。 クエリベースのコレクションのメンバーシップは、スケジュールに従って自動的に更新されます。 コレクションは、ソフトウェアの展開など各種のタスクに使用できます。 詳細については、「[Configuration Manager のコレクション](../../../../core/clients/manage/collections/collections-technical-reference.md)」を参照してください。  
+-   デバイス上で検出される、指定されたファイルを使用する、クエリベースのコレクションを作成する。 クエリベースのコレクションのメンバーシップは、スケジュールに従って自動的に更新されます。 コレクションは、ソフトウェアの展開など各種のタスクに使用できます。 詳細については、「[Introduction to collections in System Center Configuration Manager](../../../../core/clients/manage/collections/introduction-to-collections.md)」(System Center Configuration Manager でのコレクションの概要) をご覧ください。  
 
 -   組織内のデバイス上のファイルに関する特定の詳細情報を表示するレポートを実行する。 詳細については、「[System Center Configuration Manager のレポート](../../../../core/servers/manage/reporting.md)」を参照してください。  
 
@@ -54,6 +54,7 @@ System Center Configuration Manager のソフトウェア インベントリを�
 
 |プラットフォーム|個人所有のデバイス|会社所有のデバイス|  
 |--------------|---------------------------------|--------------------------------|  
+|Windows 10 (Configuration Manager クライアントを使用しない)|管理対象アプリのみ|管理対象アプリのみ| 
 |Windows 8.1 (Configuration Manager クライアントを使用しない)|管理対象アプリのみ|管理対象アプリのみ|  
 |Windows Phone 8|管理対象アプリのみ|管理対象アプリのみ|  
 |Windows RT|管理対象アプリのみ|管理対象アプリのみ|  
@@ -62,6 +63,6 @@ System Center Configuration Manager のソフトウェア インベントリを�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

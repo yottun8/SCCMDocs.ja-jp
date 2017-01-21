@@ -1,5 +1,5 @@
 ---
-title: "サイト システムの役割のインストール | System Center Configuration Manager"
+title: "サイト システムの役割のインストール | Microsoft Docs"
 description: "ウィザードを使用して、サイト内の既存の、または新しいサイト システム サーバーにサイト システムの役割を追加します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 780ef516ddc641d53e1d2d4a5f559795cfd22cbb
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 9c930db61139fd089554591f4ca0aa2271fb2289
 
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイト システム役割のインストール
@@ -84,6 +84,6 @@ System Center Configuration Manager コンソールには、サイト システ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

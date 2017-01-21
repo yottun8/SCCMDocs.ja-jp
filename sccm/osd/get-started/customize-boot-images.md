@@ -1,5 +1,5 @@
 ---
-title: "ブート イメージのカスタマイズ | Configuration Manager"
+title: "ブート イメージのカスタマイズ | Microsoft Docs"
 description: "Configuration Manager または展開イメージのサービスと管理 (DISM) コマンドライン ツールを使用して、ブート イメージをカスタマイズするいくつかの方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 5b78d68087bb5513723e1cc25291f7776d48f7b5
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 9312ad976986f97293d294c12161f78e5d6fee1e
 
 
 ---
@@ -303,6 +303,6 @@ Configuration Manager の各バージョンが、Windows アセスメントお�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

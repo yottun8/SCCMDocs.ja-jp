@@ -1,5 +1,5 @@
 ---
-title: "危険度の高い展開の管理 | System Center Configuration Manager"
+title: "危険度の高い展開の管理 | Microsoft Docs"
 description: "管理者が危険度の高い展開を作成した場合に管理者に警告するように System Center Configuration Manager のサイト設定を構成する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e265c2de8a1d29863d430e0e2b693c69ff4bda10
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 8b5564f39f07a67a3c9278379ed59ca415603d21
 
 
 ---
@@ -62,6 +62,6 @@ System Center Configuration Manager では、管理者が危険度の高いタ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

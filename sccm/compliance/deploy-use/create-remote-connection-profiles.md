@@ -1,5 +1,5 @@
 ---
-title: "リモート接続プロファイルを作成する | System Center Configuration Manager"
+title: "リモート接続プロファイルの作成 | Microsoft Docs"
 description: "System Center Configuration Manager のリモート接続プロファイルを使用して、ユーザーが会社のコンピューターにリモート接続できるようにします。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fd05211959d844c3658e3c5ead70b0c9a7f90116
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: 72fc94c6449649656a7e8b81659c2b5cc2551107
 
 
 ---
@@ -186,6 +186,6 @@ System Center Configuration Manager リモート接続プロファイルを使�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

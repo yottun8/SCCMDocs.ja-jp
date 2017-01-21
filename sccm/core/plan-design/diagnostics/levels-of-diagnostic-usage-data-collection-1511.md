@@ -1,5 +1,5 @@
 ---
-title: "1511 の診断データ | System Center Configuration Manager"
+title: "1511 の診断データ | Microsoft Docs"
 description: "System Center Configuration Manager バージョン 1511 で収集される診断結果および使用状況データの各種レベルについて説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -34,8 +34,8 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 3488efcd6638b538f05fae52dfd8918423a32b58
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: fa3c2f9c9bdc1f095b450babd675db4a160992d9
 
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1511-of-system-center-configuration-manager"></a>System Center Configuration Manager バージョン 1511 により収集される診断結果および使用状況データのレベル
@@ -48,7 +48,10 @@ System Center Configuration Manager バージョン 1511 では、**基本**、*
 >  Configuration Manager は、基本レベルとエンハンス レベルでは、サイト コードまたはサイト名、IP アドレス、ユーザー名またはコンピューター名、物理アドレス、電子メール アドレスを収集しません。 フル レベルで収集したこの情報 (ログ ファイルやメモリのスナップショットなどの詳細な診断情報に含まれる可能性があります) に特別な目的はなく 、Microsoft が個人の特定、連絡、広告の目的でこの情報を使用することはありません。  
 
 ##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> レベルを変更する方法  
- 管理者に指定された役割に基づいた管理スコープに、**サイト** オブジェクト クラスにおける**変更**アクセス許可が含まれる場合、その管理者は、Configuration Manager コンソールの診断結果と使用状況データの設定で収集されるデータ レベルを変更できます。  
+ 管理者に指定された役割に基づいた管理スコープに、**サイト** オブジェクト クラスにおける**変更**アクセス許可が含まれる場合、その管理者は、Configuration Manager コンソールの診断結果と使用状況データの設定で収集されるデータ レベルを変更できます。
+
+ そのためには、コンソールで Backstage タブ (ドロップダウン矢印の付いた左上のタブ) に移動し、**[使用状況データ]** を選んで、使うデータ レベルを選びます。  
+
 
 ##  <a name="a-namebkmklevel1a-level-1---basic"></a><a name="bkmk_level1"></a> レベル 1 - 基本  
  基本レベルには階層に関するデータが含まれています。このレベルのデータは、インストールまたはアップグレードのエクスペリエンスを向上させたり、どの Configuration Manager 更新プログラムを階層に適用できるかを判断したりする際に必要です。  
@@ -278,6 +281,6 @@ System Center Configuration Manager バージョン 1511 から、このレベ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

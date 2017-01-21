@@ -1,5 +1,5 @@
 ---
-title: "スキーマ拡張 | System Center Configuration Manager"
+title: "スキーマ拡張 | Microsoft Docs"
 description: "System Center Configuration Manager をサポートするように Active Directory スキーマを拡張します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -18,8 +18,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f8c8533da62d215ed22f5235eefa687d5df41394
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: f230b6cbe97b72fee4f5d2e45260e6217ef2cec0
 
 
 ---
@@ -150,6 +150,6 @@ System Center Configuration Manager のスキーマを拡張すると、次の�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

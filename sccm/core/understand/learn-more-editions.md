@@ -1,5 +1,5 @@
 ---
-title: "ライセンスとブランチの詳細 | System Center Configuration Manager"
+title: "ライセンスとブランチの詳細 | Microsoft Docs"
 description: "このトピックでは、2016 年 10 月リリースの System Center Configuration Manager で利用できるインストール オプションのライセンス要件について説明します。Current Branch バージョン 1606、Long-Term Servicing Branch (LTSB)、Current Branch の評価版インストールが対象となります。"
 ms.custom: na
 ms.date: 10/12/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 473d4f9a39898ff5a664013f91ab95e58cd6d161
-ms.openlocfilehash: 726c10fc536f9612bdf46090ef653388a5cfc969
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: d51a602de9e0cf85d80c74c034613002682e52ea
 
 ---
 
@@ -116,6 +116,6 @@ System Center Configuration Manager については、2016 年 10 月リリー�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

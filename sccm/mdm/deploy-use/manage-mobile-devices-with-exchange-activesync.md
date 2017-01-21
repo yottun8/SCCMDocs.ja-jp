@@ -1,5 +1,5 @@
 ---
-title: "モバイル デバイスの管理 | System Center Configuration Manager と Exchange"
+title: "モバイル デバイスの管理 | Microsoft Docs"
 description: "System Center Configuration Manager で Exchange Server コネクタを使用してモバイル デバイスを管理します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 18da1455796e265af2adb8852c9f2b610dc672a8
+ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
+ms.openlocfilehash: 4a2b60d893e8d430b107a5bc43ec0748177c27c3
 
 
 ---
@@ -138,6 +138,6 @@ Microsoft Exchange ActiveSync プロトコルを使って Exchange Server (社�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

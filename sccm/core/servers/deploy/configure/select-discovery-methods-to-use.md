@@ -1,5 +1,5 @@
 ---
-title: "探索方法の選択 | System Center Configuration Manager"
+title: "探索方法の選択 | Microsoft Docs"
 description: "使用する方法とそれらを実行するサイトの選択に関する考慮事項を確認します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7fa86796a9acd5e6baedd12f005bec58181f081b
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 54beff9bc8624d67efda7393db6334ebc96937d7
 
 ---
 # <a name="select-discovery-methods-to-use-for-system-center-configuration-manager"></a>System Center Configuration Manager に使用する探索方法の選択
@@ -125,6 +125,6 @@ Center Configuration Manager の探索を正常かつ効率的に使用するに
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

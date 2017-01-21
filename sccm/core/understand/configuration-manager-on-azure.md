@@ -1,5 +1,5 @@
 ---
-title: "Azure の Configuration Manager | System Center Configuration Manager"
+title: "Azure の Configuration Manager | Microsoft Docs"
 description: "Azure 環境での Configuration Manager の使用に関する情報。"
 ms.custom: na
 ms.date: 10/21/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6d304ddb87b9c9abe37b5dc9cf4252580cbcf048
-ms.openlocfilehash: d8f8ea98c4383783c95e6425af29987bdee1429a
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 5866c1d9ad88e49b69fa0c863b1ef8748a8c8111
 
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure の Configuration Manager - よく寄せられる質問
@@ -80,7 +80,7 @@ Azure でホストする場合、サイト間の近接通信 (ファイルベー
 ### <a name="how-can-i-make-my-database-highly-available-can-i-use-azure-sql-database-or-do-i-have-to-use-microsoft-sql-server-in-a-vm"></a>データベースに高可用性を持たせるにはどうすればよいですか?  Azure SQL Database を使用できますか?  それとも VM では Microsoft SQL Server を使用する必要がありますか?
 VM では Microsoft SQL Server を使用する必要があります。 現時点では、Configuration Manager では Azure SQL Server はサポートされていません。 ただし、SQL Server の AlwaysOn 可用性グループのような機能を使用することができます。 [AlwaysOn 可用性グループ](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)の使用をお勧めします。これは、Configuration Manager のバージョン 1602以降、公式にサポートされています。
 
-### <a name="can-i-use-azure-load-balancers-with-site-system-roles-like-management-points-or-software-update-points"></a>管理ポイントやソフトウェアの更新ポイントのようなサイト システムの役割で Azure Load Balancer を使用することはできますか?
+### <a name="can-i-use-azure-load-balancers-with-site-system-roles-like-management-points--or-software-update-points"></a>管理ポイントやソフトウェアの更新ポイントのようなサイト システムの役割で Azure Load Balancer を使用することはできますか?
 Configuration Manager は Azure Load Balancer でテストされていませんが、機能がアプリケーションに対して透過的である場合、通常の操作には悪影響はありません。
 
 
@@ -114,6 +114,9 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 |**最大 25 K**       | サイト サーバー: F4S </br>データベース サーバー: DS12_V2 | サイト サーバー: 1xP30 </br>データベース サーバー: 2xP30 |
 |**25 K から 50 K**      | サイト サーバー: F4S </br>データベース サーバー: DS13_V2 | サイト サーバー: 1xP30 </br>データベース サーバー: 2xP30 |
 |**50 K から 100 K**     | サイト サーバー: F8S </br>データベース サーバー: DS14_V2 | サイト サーバー: 2xP30 </br>データベース サーバー: 3xP30 |
+
+以下は、DS14_V2 で 50k ～ 100k クライアントを構成した例です。3xP30 のディスクがストライプ ボリュームで構成されており、別の論理ボリュームが Configuration Manager インストールとデータベース ファイルのために割り当てられています。  ![VM)disks](media/vm_disks.png)  
+
 
 
 ## <a name="user-experience"></a>ユーザー エクスペリエンス
@@ -177,6 +180,6 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

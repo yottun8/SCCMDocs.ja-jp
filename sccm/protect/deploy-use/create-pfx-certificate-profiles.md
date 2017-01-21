@@ -1,5 +1,5 @@
 ---
-title: "PFX 証明書プロファイルを作成する | System Center Configuration Manager"
+title: "PFX 証明書プロファイルの作成 | Microsoft Docs"
 description: "System Center Configuration Manager で PFX ファイルを使用して暗号化されたデータ交換をサポートするユーザーに固有の証明書を生成する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4a4025325e635061cb99caed9cdb07390e90ea90
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 36c20af00e5a83be7038c3a0c01a33c546011427
 
 
 ---
@@ -78,7 +78,7 @@ System Center Configuration Manager では、ユーザーのデバイスに Pers
 
 7.  **[次へ]**をクリックし、 **[概要]** ページを確認してウィザードを終了します。  
 
-8.  現在、PFX ファイルを含む証明書プロファイルは **[証明書プロファイル]** ワークスペースから取得できます。  **資産とコンプライアンス** ワークスペースで、 **コンプライアンス設定** > **会社のリソースへのアクセス** > **証明書プロファイル** の順に進み、右クリックして [ユーザー コレクション] に新しい証明書を配置します。  
+8.  現在、PFX ファイルを含む証明書プロファイルは **[証明書プロファイル]** ワークスペースから取得できます。 **資産とコンプライアンス** ワークスペースで、 **コンプライアンス設定** > **会社のリソースへのアクセス** > **証明書プロファイル** の順に進み、右クリックして [ユーザー コレクション] に新しい証明書を配置します。  
 
 9. ダウンロード センターから入手できる Windows 8.1 用 SDK を使用して ([http://go.microsoft.com/fwlink/?LinkId=613525](http://go.microsoft.com/fwlink/?LinkId=613525))、PFX 作成スクリプトを配置します。 Configuration Manager 2012 SP2 に追加された PFX 作成スクリプトは、SDK に SMS_ClientPfxCertificate クラスを追加します。 このクラスには、次のメソッドが含まれています。  
 
@@ -117,6 +117,6 @@ System Center Configuration Manager では、ユーザーのデバイスに Pers
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

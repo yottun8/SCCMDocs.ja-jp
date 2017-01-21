@@ -1,5 +1,5 @@
 ---
-title: "クライアント移行計画 | System Center Configuration Manager"
+title: "クライアント移行計画 | Microsoft Docs"
 description: "ソース階層からクライアントを System Center Configuration Manager の移行先階層に移行するタスクについて説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6044f9b8116687fca80deeea87abd4652f773db0
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 11da338af9d7dd4d6f9c5fc1c6c62e277139f852
 
 
 ---
@@ -43,7 +43,7 @@ ms.openlocfilehash: 6044f9b8116687fca80deeea87abd4652f773db0
 -   ** System Center 2012 Configuration Manager 以降のソース階層:** 同じ製品バージョンの階層間でクライアントを移行する場合、クライアント ソフトウェアは変更またはアップグレードされません。 代わりに、クライアントがソース階層から移行先階層内のサイトに再割り当てされます。  
 
     > [!NOTE]  
-    >  階層の製品バージョンが、移行先階層への移行でサポートされていない場合、ソース階層のすべてのサイトとクライアントを互換性のある製品バージョンにアップグレードします。 ソース階層をサポートされる製品バージョンにアップグレードした後で、階層間の移行を実行できます。 詳細については、「[移行がサポートされている Configuration Manager のバージョン](../../core/migration/prerequisites-for-migration.md#BKMK_supportedmigrationversions)」トピックの「 [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md)」(移行に必要な構成) セクションを参照してください。  
+    >  階層の製品バージョンが、移行先階層への移行でサポートされていない場合、ソース階層のすべてのサイトとクライアントを互換性のある製品バージョンにアップグレードします。 ソース階層をサポートされる製品バージョンにアップグレードした後で、階層間の移行を実行できます。 詳細については、「[移行がサポートされている Configuration Manager のバージョン](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions)」トピックの「 [Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md)」(移行に必要な構成) セクションを参照してください。  
 
 クライアントの移行を計画する際には、次の情報を参考にしてください。  
 
@@ -98,13 +98,13 @@ ms.openlocfilehash: 6044f9b8116687fca80deeea87abd4652f773db0
 
 さらに、一部のアプリケーションの再インストールが必要な場合もあります。  
 
-##  <a name="a-nameplanningforinventorydatamigrationa-plan-for-inventory-and-compliance-data-during-migration"></a><a name="Planning_for_Inventory_data_migration"></a> 移行時のインベントリとコンプライアンス対応データを計画する  
+##  <a name="a-nameplanningforinventorydatamigrationa-plan-for--inventory-and-compliance-data-during-migration"></a><a name="Planning_for_Inventory_data_migration"></a> 移行時のインベントリとコンプライアンス対応データを計画する  
 移行先階層にクライアントを移行するときに、クライアントのインベントリとコンプライアンス対応データは保存されません。 代わりに、割り当てられたサイトにクライアントから情報が初めて送信されたときに、この情報が移行先階層で再作成されます。 必要とされるネットワーク帯域幅とサーバーの処理量を低減するため、一度に多数のクライアントを移行する代わりに、段階的に少数のクライアントを移行するよう考慮してください。  
 
  また、ソース階層からハードウェア インベントリのカスタム設定を移行することはできません。 これらは、移行とは別に移行先階層に導入する必要があります。 カスタム ハードウェア インベントリを拡張する方法については、「[Configuration Manager でハードウェア インベントリを構成する方法](../../core/clients/manage/inventory/configure-hardware-inventory.md)」を参照してください。  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

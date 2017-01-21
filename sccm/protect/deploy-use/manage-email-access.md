@@ -1,5 +1,5 @@
 ---
-title: "メール アクセスの管理 | System Center Configuration Manager"
+title: "電子メール アクセスの管理 | Microsoft Docs"
 description: "System Center Configuration Manager の条件付きアクセスを使用して Exchange メールへのアクセスを管理する方法について説明します。"
 ms.custom: na
 ms.date: 10/04/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4544088a-4752-4e3a-aa0a-049f10d8f178
 caps.latest.revision: 24
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: c1797910f2b7ceda451c2ccb23f66a4b2bd4b6ff
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: 0bbe25598f38f9cf3c15375748fee09c43dfb928
 
 
 ---
@@ -37,7 +37,7 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
 次のプラットフォームでは、組み込みの電子メール クライアントから Exchange Online と Exchange On-premises へのアクセスを制御できます。  
 
--   Android 4.0 以降、Samsung Knox Standard 4.0 以降  
+-   Android 4.0 以降、Samsung KNOX Standard 4.0 以降  
 
 -   iOS 7.1 以降  
 
@@ -91,7 +91,7 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
  Exchange ActiveSync 電子メール クライアントを組み込まれた、以下のプラットフォームのデバイスから Exchange 電子メールへのアクセスをブロックできます。  
 
--   Android 4.0 以降、Samsung Knox Standard 4.0 以降  
+-   Android 4.0 以降、Samsung KNOX Standard 4.0 以降  
 
 -   iOS 7.1 以降  
 
@@ -363,6 +363,6 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

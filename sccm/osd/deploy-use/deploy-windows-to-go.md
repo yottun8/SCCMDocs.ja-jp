@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager を使用した Windows to Go の展開"
+title: "System Center Configuration Manager を使用した Windows to Go の展開 | Microsoft Docs"
 description: "System Center Configuration Manager で Windows To Go をプロビジョニングして、外部ドライブから起動する Windows To Go ワークスペースを作成する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 104355185c5bbb4c15f3b9cc80cf8fa0e529cf6d
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: a8b1a42c43438553cfbb62328bed933378bb344c
 
 
 ---
@@ -116,7 +116,7 @@ ms.openlocfilehash: 104355185c5bbb4c15f3b9cc80cf8fa0e529cf6d
 
     -   メディアが Configuration Manager で管理されていないコンピューターにオペレーティング システムを展開できるようにするには、**[不明なコンピューターのサポートを有効にする]** をオンにします。 これらのコンピューターのレコードは Configuration Manager データベースには存在しません。 不明なコンピューターには次のようなものがあります。  
 
-        -   Configuration Manager クライアントがインストールされていないコンピューター  
+        -   構成マネージャー クライアントがインストールされていないコンピューター  
 
         -   Configuration Manager にインポートされていないコンピューター  
 
@@ -400,7 +400,7 @@ ms.openlocfilehash: 104355185c5bbb4c15f3b9cc80cf8fa0e529cf6d
 
 2.  [ **ソフトウェア ライブラリ** ] ワークスペースで [ **オペレーティング システム**] を展開して、[ **タスク シーケンス**] をクリックします。  
 
-3.   [Prerequisites to provision Windows To Go](#BKMK_Prereqs) の手順で作成した Windows 8 のタスク シーケンスを選択します。  
+3.  [Prerequisites to provision Windows To Go](#BKMK_Prereqs) の手順で作成した Windows 8 のタスク シーケンスを選択します。  
 
 4.  [ **ホーム** ] タブの [ **展開** ] グループで、[ **展開**] をクリックします。  
 
@@ -450,7 +450,9 @@ ms.openlocfilehash: 104355185c5bbb4c15f3b9cc80cf8fa0e529cf6d
 
     -   **[ローカルの配布ポイントを利用できない場合は、リモートの配布ポイントを使用する]**: クライアントで低速ネットワーク上または信頼性の低いネットワーク上の配布ポイントを使用してタスク シーケンスに必要なコンテンツをダウンロードするかどうかを指定します。  
 
-    -   **[代替のコンテンツ ソースの場所の使用をクライアントに許可する]**: 優先配布ポイントでコンテンツを使用できない場合に、クライアントがフォールバックして、優先でない配布ポイントをコンテンツ ソースの場所として使用できるようにするかどうかを指定します。  
+    -   **代替のコンテンツ ソースの場所の使用をクライアントに許可する**:
+        - *バージョン 1610 より前では*、[代替のコンテンツ ソースの場所の使用を許可する] チェック ボックスをオンにすると、他に利用できる代替ポイントがない場合に、この境界グループ外のクライアントのフォールバックが許可され、配布ポイントをコンテンツ ソースの場所として使用できるようになります。
+        - *バージョン 1610 以降*、**[代替のコンテンツ ソースの場所の使用を許可する]** は構成できません。  代わりに、境界グループ間の関係を構成し、有効なコンテンツ ソースの場所を追加の境界グループからクライアントが検索するタイミングを決定するようにします。 
 
 11. ウィザードを完了します。  
 
@@ -468,6 +470,6 @@ ms.openlocfilehash: 104355185c5bbb4c15f3b9cc80cf8fa0e529cf6d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

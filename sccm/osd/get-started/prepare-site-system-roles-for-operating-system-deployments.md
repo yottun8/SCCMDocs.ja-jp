@@ -1,5 +1,5 @@
 ---
-title: "オペレーティング システム展開のサイト システムの役割の計画 | Configuration Manager"
+title: "オペレーティング システムの展開用のサイト システムの役割を準備する | Microsoft Docs"
 description: "System Center Configuration Manager でオペレーティング システムを展開する前に、サイト システムの役割を構成します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a9e682c855d5e1fb26f772b2af5066280e01851f
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
 
 
 ---
@@ -222,6 +222,6 @@ Configuration Manager バージョン 1606 では、PXE 対応配布ポイント
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

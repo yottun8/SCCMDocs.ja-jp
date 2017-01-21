@@ -1,5 +1,5 @@
 ---
-title: "概要 | System Center Configuration Manager"
+title: "概要 | Microsoft Docs"
 description: "System Center Configuration Manager の基本的な情報について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 46aa1fdf49dcdacb9d5e53963a0f799e5f0a1754
+ms.sourcegitcommit: b0b2f72d4b1eae3aa5b860a210ac3a4259e17069
+ms.openlocfilehash: 3bbbb6a00883a5e489696387fad9224fdc2082ba
 
 
 ---
@@ -222,6 +222,6 @@ Configuration Manager は以下も使用します。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

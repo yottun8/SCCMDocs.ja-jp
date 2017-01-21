@@ -1,5 +1,5 @@
 ---
-title: "ソフトウェア更新の前提条件 | Configuration Manager"
+title: "ソフトウェア更新プログラムの前提条件 | Microsoft Docs"
 description: "System Center Configuration Manager でのソフトウェア更新プログラムの前提条件について説明します。"
 keywords: 
 author: dougeby
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fe56129c09b8936ba59181add86acb239111fea7
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 179f076f228daa5adf612275a822cd379b0ce1e3
 
 
 ---
@@ -43,7 +43,7 @@ ms.openlocfilehash: fe56129c09b8936ba59181add86acb239111fea7
 > [!WARNING]  
 >  **アップグレード**のソフトウェア更新プログラムの分類は、WSUS 4.0 以降のみでサポートされています。 この新しい分類を同期し、Windows 10 サービス プランで Windows 10 コンピューターを評価できるようにする前に、ソフトウェアの更新ポイントとサイト サーバーに WSUS の [修正プログラム 3095113](https://support.microsoft.com/kb/3095113) をインストールする必要があります。 この修正プログラムは、Windows 10 の機能アップグレードを同期および配布するために、Windows Server 2012 ベースまたは Windows Server 2012 R2 ベースのサーバーで WSUS を有効にします。 詳細については、「[サービスとしての Windows の管理](../../osd/deploy-use/manage-windows-as-a-service.md)」を参照してください。  
 >   
->   **アップグレード** https://supportでのソフトウェア更新プログラムの前提条件を示します。microsoftでのソフトウェア更新プログラムの前提条件を示します。com/kb/3095113 [修正プログラム 3095113](https://support.microsoft.com/kb/3095113)分類のソフトウェア更新プログラムを同期する場合は、「 [Recover from synchronizing the アップグレード category before you install KB 3095113](#BKMK_RecoverUpgrades)でのソフトウェア更新プログラムの前提条件を示します。  
+>  **アップグレード** https://supportでのソフトウェア更新プログラムの前提条件を示します。microsoftでのソフトウェア更新プログラムの前提条件を示します。com/kb/3095113 [修正プログラム 3095113](https://support.microsoft.com/kb/3095113)分類のソフトウェア更新プログラムを同期する場合は、「 [Recover from synchronizing the アップグレード category before you install KB 3095113](#BKMK_RecoverUpgrades)でのソフトウェア更新プログラムの前提条件を示します。  
 
 ### <a name="wsus-administration-console"></a>WSUS 管理コンソール  
  ソフトウェアの更新ポイントがリモート サイトのシステム サーバー上にあり、WSUS がそのサイト サーバーにインストールされていない場合、Configuration Manager サイト サーバーには WSUS 管理コンソールが必要です。  
@@ -78,13 +78,13 @@ ms.openlocfilehash: fe56129c09b8936ba59181add86acb239111fea7
 
 -   [ソフトウェア更新プログラムのクライアントの設定](../get-started/manage-settings-for-software-updates.md#a-namebkmkclientsettingsa-client-settings-for-software-updates)  
 
--   [ソフトウェア更新プログラムのクライアントの設定](../../core/clients/deploy/about-client-settings.md#a-namebkmksoftwareupdatesdevicesettinga-software-updates)トピック  
+-   [ソフトウェア更新プログラムのクライアントの設定](../../core/clients/deploy/about-client-settings.md#software-updates)トピック  
 
 ### <a name="reporting-services-point"></a>レポート サービス ポイント  
  レポート サービス ポイントのサイト システムの役割は、ソフトウェア更新プログラムのレポートを表示できます。 この役割は任意ですが、使用することをお勧めします。 レポート サービス ポイント作成の詳細については、「[レポートの構成](../../core/servers/manage/configuring-reporting.md)」を参照してください。  
 
 ##  <a name="a-namebkmkrecoverupgradesa-recover-from-synchronizing-the-upgrades-category-before-you-install-kb-3095113"></a><a name="BKMK_RecoverUpgrades"></a> KB 3095113 をインストールする前のアップグレード カテゴリの同期からの回復  
- **アップグレード**分類を同期する前に、ソフトウェアの更新ポイントとサイト サーバーに WSUS の[修正プログラム 3095113](https://support.microsoft.com/kb/3095113) をインストールする必要があります。 **アップグレード** 分類が有効になっているときに修正プログラムがインストールされていない場合、WSUS は関連付けられているパッケージを適切にダウンロードおよび展開できない場合でも、Windows 10 ビルド 1511 の機能アップグレードを表示します。  [修正プログラム 3095113](https://support.microsoft.com/kb/3095113)を最初にインストールせずにアップグレードを同期する場合、アップグレードを適切に展開するには、WSUS データベース (SUSDB) に、クリアする必要がある使用不可のデータを読み込みます。  この問題から回復するには、次の手順を実行します。  
+ **アップグレード**分類を同期する前に、ソフトウェアの更新ポイントとサイト サーバーに WSUS の[修正プログラム 3095113](https://support.microsoft.com/kb/3095113) をインストールする必要があります。 **アップグレード** 分類が有効になっているときに修正プログラムがインストールされていない場合、WSUS は関連付けられているパッケージを適切にダウンロードおよび展開できない場合でも、Windows 10 ビルド 1511 の機能アップグレードを表示します。 [修正プログラム 3095113](https://support.microsoft.com/kb/3095113)を最初にインストールせずにアップグレードを同期する場合、アップグレードを適切に展開するには、WSUS データベース (SUSDB) に、クリアする必要がある使用不可のデータを読み込みます。  この問題から回復するには、次の手順を実行します。  
 
 #### <a name="to-recover-from-synchronizing-the-upgrades-classification-before-you-install-kb-3095113"></a>KB 3095113 をインストールする前に、アップグレード分類の同期から回復するには  
 
@@ -114,6 +114,6 @@ ms.openlocfilehash: fe56129c09b8936ba59181add86acb239111fea7
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

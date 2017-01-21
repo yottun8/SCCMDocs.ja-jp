@@ -1,5 +1,5 @@
 ---
-title: "Mac コンピューターのアプリケーションの作成 |System Center Configuration Manager"
+title: "Mac コンピューター アプリケーションの作成 | Microsoft Docs"
 description: "Mac コンピューター用アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 98b36c58506bcb82fe82f842b8c3ed9dbd2a75d1
+ms.sourcegitcommit: 8dcf9f310a4ea8e2f43f2fe79e5e3cfa2c8aeb61
+ms.openlocfilehash: c2feffad39a20519fd86ca9348b0855a51e05aa9
 
 
 ---
@@ -32,7 +32,7 @@ ms.openlocfilehash: 98b36c58506bcb82fe82f842b8c3ed9dbd2a75d1
 
 ## <a name="general-considerations"></a>一般的な考慮事項  
  System Center Configuration Manager を使用して、Configuration Manager Mac クライアントを実行する Mac コンピューターにアプリケーションを展開できます。 Mac コンピューターにソフトウェアを展開する手順は、Windows コンピューターにソフトウェアを展開する際に使用する手順と同様です。 ただし、Configuration Manager で管理する Mac コンピューターにアプリケーションを作成および展開する前に、次のことを考慮してください。  
-  
+
 -   Mac コンピューターに Mac アプリケーション パッケージを展開するには、その前に Mac コンピューターで **CMAppUtil** ツールを使用して、これらのアプリケーションを Configuration Manager で読み取り可能な形式に変換する必要があります。  
 
 -   Configuration Manager は、ユーザーへの Mac アプリケーションの展開はサポートしていません。これらの展開は、デバイスに対して行う必要があります。 同様に、Mac アプリケーションの展開では、Configuration Manager は、ソフトウェアの展開ウィザードの [**展開設定**] ページの [**ユーザーのプライマリ デバイスにソフトウェアを事前に展開する**] オプションをサポートしていません。  
@@ -71,9 +71,9 @@ ms.openlocfilehash: 98b36c58506bcb82fe82f842b8c3ed9dbd2a75d1
 -   Mac OS X インストーラー パッケージ (.pkg)  
 
 -   Mac OS X アプリケーション (.app)  
-  
+
 ツールによって情報が収集されると、次に、 **CMAppUtil** によって拡張子が **.cmmac**のファイルが作成されます。 このファイルには、Mac ソフトウェアのインストール ファイルと、アプリケーションが既にインストールされているかどうかを評価するために使用できる、検出方法に関する情報が含まれています。 また、**CMAppUtil** では、複数の Mac アプリケーションが含まれた **.dmg** ファイルを処理して、アプリケーションごとに異なる展開の種類を作成することもできます。  
-  
+
 1.  Mac ソフトウェア インストール パッケージを、Microsoft ダウンロード センターからダウンロードした **macclient.dmg** ファイルのコンテンツを抽出した Mac コンピューター上のフォルダーにコピーします。  
 
 2.  同じ Mac コンピューターで、ターミナル ウィンドウを開いて、 **macclient.dmg** ファイルのコンテンツを抽出したフォルダーに移動します。  
@@ -106,9 +106,9 @@ ms.openlocfilehash: 98b36c58506bcb82fe82f842b8c3ed9dbd2a75d1
 ###  <a name="create-a-configuration-manager-application-that-contains-the-mac-software"></a>Mac ソフトウェアが含まれた Configuration Manager アプリケーションを作成する  
 
 Configuration Manager で管理する Mac コンピューターのアプリケーションを作成するには、次の手順に従います。  
-  
+
 1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリケーション]** の順にクリックします。  
-  
+
 3.  [ **ホーム** ] タブの [ **作成** ] グループで [ **アプリケーションの作成**] をクリックします。  
 
 4.  アプリケーションの作成ウィザードの [ **全般** ] ページで、[ **このアプリケーションの情報をインストール ファイルから自動的に検出する**] を選択します。  
@@ -141,9 +141,9 @@ Configuration Manager で管理する Mac コンピューターのアプリケ�
 
 > [!NOTE]  
 >  アプリケーションの作成ウィザードでアプリケーションの情報を自動的にインポートした場合、アプリケーションの展開の種類が既に作成されている可能性があります。  
-  
+
 1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリケーション]** の順にクリックします。  
-  
+
 3.  アプリケーションを選択し、[ **ホーム** ] タブの [ **アプリケーション** ] グループで、[ **展開の種類の作成** ] をクリックして、アプリケーションの新しい展開の種類を作成します。  
 
     > [!NOTE]  
@@ -207,9 +207,9 @@ Configuration Manager で管理する Mac コンピューターのアプリケ�
 
 > [!NOTE]  
 >  Mac コンピューターのみが含まれたコレクションを作成できます。 そのためには、クエリ規則を使用するコレクションを作成して、トピック「[クエリを作成する方法](../../core/servers/manage/create-queries.md)」にある WQL クエリ例を使用します。  
-  
+
  詳細については、「[アプリケーションの展開](../../apps/deploy-use/deploy-applications.md)」をご覧ください。  
-  
+
 ###  <a name="step-5-monitor-the-deployment-of-the-mac-application"></a>手順 5:Mac アプリケーションの展開を監視する  
  Windows コンピューターへのアプリケーション展開で使用したのと同じプロセスを使用して、Mac コンピューターへのアプリケーション展開を監視できます。  
 
@@ -217,6 +217,6 @@ Configuration Manager で管理する Mac コンピューターのアプリケ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

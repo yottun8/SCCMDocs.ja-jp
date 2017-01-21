@@ -1,5 +1,5 @@
 ---
-title: "サイト リソースの検索 | System Center Configuration Manager"
+title: "サイト リソースを検索する |Microsoft Docs"
 description: "System Center Configuration Manager クライアントがサービスの場所を使用してサイト リソースを検索する方法とタイミングについて説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5d718d0f9b8c6121f3124a8ade7507c61b7313f2
-ms.openlocfilehash: cad4ebd3f8fa275d7d2cad9b2b87c32b971c580d
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: b006896091901fab7b141f99f4c95eb22ea61b82
 
 
 ---
@@ -176,7 +176,6 @@ System Center Configuration Manager クライアントは、そのクライア�
 **DNS サーバーが自動更新をサポートしている場合は**、イントラネットの管理ポイントが DNS に自動的に発行されるように Configuration Manager を構成することも、これらのレコードを DNS に手動で発行することもできます。 DNS に管理ポイントが発行されると、そのイントラネット FQDN とポート番号がサービスの場所 (SRV) レコードで公開されます。 サイトの管理ポイント コンポーネント プロパティで、サイトでの DNS 発行を構成します。 詳細については、「[Site components for System Center Configuration Manager](../../../core/servers/deploy/configure/site-components.md)」 (System Center Configuration Manager のサイト コンポーネント) を参照してください。  
 
 **DNS ゾーンが動的更新に対して "セキュアのみ" に設定されている場合**、DNS に発行する最初の管理ポイントのみを既定のアクセス許可で正常に動的更新できます。
-- 管理ポイントをホストする各サーバーを DnsAdmins グループに追加することで、その管理ポイントにレコードを変更するアクセス許可を持たせることができます。  
 - 正常に発行してその DNS レコードを変更できるのが 1 つの管理ポイントのみの場合は、その管理ポイント サーバーが正常である限り、クライアントはその管理ポイントから完全な MP リストを取得し、優先管理ポイントを検索できます。
 
 
@@ -251,6 +250,6 @@ DNS に発行するイントラネットの管理ポイントごとに、上記�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

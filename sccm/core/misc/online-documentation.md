@@ -1,5 +1,5 @@
 ---
-title: "オンライン ドキュメント | System Center Configuration Manager"
+title: "オンライン ドキュメント | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
@@ -8,25 +8,24 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ff3d67b8d8e038ecd87dac90e65b4c1ab7cb15bc
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 73bb5d4236469746102fd4893c53f20aaee122d5
 
 
 ---
 # <a name="online-documentation-for-system-center-configuration-manager"></a>System Center Configuration Manager のオンライン ドキュメント
 
-*適用対象: System Center Configuration Manager (現在のブランチ)*
 
 System Center Configuration Manager ドキュメント ライブラリへようこそ。  
-
- ご使用の製品のバージョンに対応するドキュメント ライブラリを見つけてください。  
+ご使用の製品のバージョンに対応するドキュメント ライブラリを見つけてください。  
 
 ## <a name="system-center-configuration-manager-current-branch"></a>System Center Configuration Manager (現在のブランチ)  
 **オンライン ドキュメント:** TechNet で、System Center Configuration Manager の現在のブランチに対応するオンライン ドキュメントを参照できます。  
@@ -49,19 +48,14 @@ System Center Configuration Manager ドキュメント ライブラリへよう�
 
 -   [System Center Configuration Manager の監視と保守](https://technet.microsoft.com/library/mt612855.aspx)  
 
--   [System Center Configuration Manager のテクニカル リファレンス](https://technet.microsoft.com/library/mt634283.aspx)  
-
 -   [System Center Configuration Manager のセキュリティとプライバシー](https://technet.microsoft.com/library/mt622694.aspx)  
 
-**リリース ノート:** リリース ノートには、製品ドキュメントに含まれていない情報、および System Center Configuration Manager を正しくインストールして使用するために必要な情報が記載されています。  
+**リリース ノート:** リリース ノートには、製品ドキュメントに含まれていない情報、および System Center Configuration Manager を正しくインストールして使用するために必要な情報が記載されています。 「[System Center Configuration Manager リリース ノート](https://technet.microsoft.com/library/mt592024.aspx)」を参照してください。  
 
--   [System Center Configuration Manager リリース ノート](https://technet.microsoft.com/library/mt592024.aspx)  
+**ヘルプの検索**: 「[System Center Configuration Manager の使用に関するヘルプの検索](https://technet.microsoft.com/library/mt628521.aspx)」を参照してください。  
 
-**アクセシビリティ」のセクションに含まれる、以下のセクションをご覧ください。** オンライン トピック「 [Find help for using System Center Configuration Manager (System Center Configuration Manager を使用するためのヘルプを見つける)](https://technet.microsoft.com/library/mt628521.aspx)」のセクションに含まれる、以下のセクションをご覧ください。  
+**ユーザー補助:** 「[Configuration Manager コンソールのユーザー補助機能](https://technet.microsoft.com/library/mt628521.aspx)」を参照してください。  
 
--   [Configuration Manager コンソールのユーザー補助機能](https://technet.microsoft.com/library/mt628521.aspx#bkmk_aconsole)  
-
--   [Configuration Manager ヘルプのユーザー補助機能](https://technet.microsoft.com/library/mt628521.aspx#bkmk_ahelp)  
 
 ## <a name="system-center-configuration-manager-technical-preview"></a>System Center Configuration Manager Technical Preview  
 **オンライン ドキュメント:** TechNet で、以下のガイドのオンライン ドキュメントを確認できます。  
@@ -111,6 +105,6 @@ TechNet で、以下のガイドのオンライン ドキュメントを確認�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

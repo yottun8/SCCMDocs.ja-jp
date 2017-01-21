@@ -1,5 +1,5 @@
 ---
-title: "オペレーティング システム展開のインフラストラクチャ要件 | Configuration Manager"
+title: "オペレーティング システムの展開のインフラストラクチャ要件 | Microsoft Docs"
 description: "オペレーティング システム展開に System Center 2012 Configuration Manager を利用する前に、外部依存関係と製品依存関係を理解しておきます。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e78cc0d45127df521e362e4cd96b492ddc110a2a
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 77ac69cecab7aa460001a8d2800e61f20a8565ed
 
 
 ---
@@ -240,6 +240,6 @@ System Center 2012 Configuration Manager のオペレーティング システ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

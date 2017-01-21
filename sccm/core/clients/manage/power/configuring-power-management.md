@@ -1,5 +1,5 @@
 ---
-title: "電源管理の構成 | System Center Configuration Manager"
+title: "電源管理の構成 | Microsoft Docs"
 description: "System Center Configuration Manager で電源管理をセットアップします。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ca1277ba0c2be68a393da930769151e25e997210
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: e111ac2545dd9e0b96a50c10246bb75d286a737a
 
 
 ---
@@ -47,7 +47,7 @@ System Center Configuration Manager で電源管理を使用するには、次�
 
     -   **[デバイスの電源管理を許可する]** – ドロップダウン リストから [TRUE] を選択して、電源管理を有効にします。 ****  
 
-7.  必要なクライアント設定を構成します。 構成できる電源管理のクライアント設定の一覧については、「[About client settings in System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md)」 (System Center Configuration Manager のクライアント設定について) トピックの「[Power Management](../../../../core/clients/deploy/about-client-settings.md#BKMK_PowMgmtDeviceSettings)」 (電源管理) セクションを参照してください。  
+7.  必要なクライアント設定を構成します。 構成できる電源管理のクライアント設定の一覧については、「[About client settings in System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md)」 (System Center Configuration Manager のクライアント設定について) トピックの「[Power Management](../../../../core/clients/deploy/about-client-settings.md#power-management)」 (電源管理) セクションを参照してください。  
 
 8.  [ **OK** ] をクリックして [ **既定のクライアント設定** ] ダイアログ ボックスを閉じます。  
 
@@ -88,6 +88,6 @@ System Center Configuration Manager で電源管理を使用するには、次�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "構成項目を作成する方法 | System Center Configuration Manager"
+title: "構成項目の作成方法 | Microsoft Docs"
 description: "構成を作成して、System Center Configuration Manager によって管理され、Microsoft Intune に登録されているデバイスに展開します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7c81d13abb9fc152804b09fb3e2c51870ae45250
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: bfe0e8e68f51e60508f91c806a94a505577cb50a
 
 
 ---
@@ -36,6 +36,6 @@ System Center Configuration Manager のコンプライアンス設定により�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "バージョン間の相互運用性 | System Center Configuration Manager"
+title: "Configuration Manager のバージョン間の相互運用性 | Microsoft Docs"
 description: "同じネットワーク上に複数の System Center Configuration Manager 階層がある場合に競合を回避する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: db0bf04b73050cb42f8230227c8db6ebfb3c6987
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 32182f06a90d768c40e29ed8a8e89cb45114bd15
 
 
 ---
@@ -61,12 +61,12 @@ System Center Configuration Manager の複数の独立した階層を同じネ�
 
  2 つの階層に重複する境界がある場合に、クライアントが正しくないサイトに割り当てられるのを防ぐため、クライアントを特定のサイトに割り当てるように Configuration Manager クライアント インストール パラメーターを構成します。  
 
-##  <a name="a-namebkmkmixeda-configuration-manager-limitations-in-a-mixed-version-hierarchy"></a><a name="bkmk_mixed"></a> バージョンが混在している階層内の Configuration Manager の制限  
+##  <a name="a-namebkmkmixeda-configuration-manager-limitations--in-a-mixed-version-hierarchy"></a><a name="bkmk_mixed"></a> バージョンが混在している階層内の Configuration Manager の制限  
  System Center Configuration Manager サイトのアップグレードの過程において、さまざまなサイトのバージョンが異なることがあります。  たとえば、中央管理サイトを新しいバージョンにアップグレードするものの、サイトのメンテナンス期間のために 1 つ以上のプライマリ サイトが後日までアップグレードできないことがあります。  
 
  特定の階層内にある各種サイトのバージョンが異なる場合、一部の機能は利用できません。 これが、Configuration Manager コンソールで Configuration Manager オブジェクトを管理する方法と、クライアントで使用できる機能に影響する可能性があります。 通常、Configuration Manager の新しいバージョンの機能を、古いサービス バック バージョンを実行しているサイトまたはクライアントで使用することはできません。  
 
-### <a name="limitations-when-upgrading-configuration-manager"></a>Configuration Manager のアップグレード時の制限事項  
+### <a name="limitations-when-upgrading--configuration-manager"></a>Configuration Manager のアップグレード時の制限事項  
 
 |オブジェクト|説明|  
 |------------|-------------|  
@@ -85,6 +85,6 @@ System Center Configuration Manager の複数の独立した階層を同じネ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

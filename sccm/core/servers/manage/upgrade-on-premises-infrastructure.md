@@ -1,5 +1,5 @@
 ---
-title: "オンプレミス インフラストラクチャのアップグレード | System Center Configuration Manager"
+title: "オンプレミス インフラストラクチャのアップグレード | Microsoft Docs"
 description: "SQL Server やサイト システムのサイト オペレーティング システムなどのインフラストラクチャをアップグレードする方法について説明します。"
 ms.custom: na
 ms.date: 10/28/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c8115fba0722fc902e60ce201d8a9914036c1245
-ms.openlocfilehash: 1239bf81991bb233a9640606bb47f598a70d5e50
+ms.sourcegitcommit: 8b4c80aa092369ec251757d82a1b4bb2863aa96a
+ms.openlocfilehash: f3742dcb930444bab7eb02374fd77ebd0e455734
 
 
 ---
@@ -78,7 +78,7 @@ System Center Configuration Manager を実行するインフラストラクチ�
 3. ルートの下のツリーを展開し、**[SMS]** ノードを選択して、**[セキュリティ]** をクリックします。  **SMS Admins** グループに次のアクセス許可が付与されていることを確認します。
   -     アカウントの有効化
   -     リモートの有効化
-4. 次に、**[セキュリティ] タブ**で、[SMS] ノードの下にある **[site_<sitecode>]** ノードを選択し、**[セキュリティ]** をクリックします。 **SMS Admins** グループに次のアクセス許可が付与されていることを確認します。
+4. 次に、**[セキュリティ] タブ**で、[SMS] ノードの下にある **[site_&lt;sitecode>]** ノードを選択し、**[セキュリティ]** をクリックします。 **SMS Admins** グループに次のアクセス許可が付与されていることを確認します。
   -   メソッドの実行
   -   プロバイダーによる書き込み
   -   アカウントの有効化
@@ -176,6 +176,19 @@ System Center Configuration Manager を実行するインフラストラクチ�
  2. セカンダリ サイトの親プライマリ サイトをアップグレードする前に、セカンダリ サイトをアップグレードします。
  3. 最後に親プライマリ サイトをアップグレードします。 これには、中央管理サイトに報告する子プライマリ サイトと、階層の最上位サイトであるスタンドアロンのプライマリ サイトの両方が含まれます。
 
+**SQL Server の基数推定レベルおよびサイト データベース:**   
+サイト データベースを以前のバージョンの SQL Server からアップグレードすると、既存の SQL 基数推定 (CE) レベルが SQL Server のそのインスタンスで許可されている最小レベルである場合に、データベースではそのレベルが保持されます。 許可レベルより低い互換性レベルのデータベースを持つ SQL Server をアップグレードすると、データベースは SQL で許可されている最も低い互換性レベルに設定されます。
+
+次の表に、Configuration Manager サイト データベースで推奨される互換性レベルを示します。
+
+|SQL Server バージョン | サポートされる互換性レベル |推奨レベル|
+|----------------|--------------------|--------|
+| SQL Server 2016| 130、120、110、100 | 130|
+| SQL Server 2014| 120、110、100      | 110|
+
+サイト データベースで使用されている SQL Server の CE 互換性レベルを識別するには、サイト データベース サーバーで **SELECT name, compatibility_level FROM sys.databases** という SQL クエリを実行します。
+
+ SQL CE の互換性レベルとその設定方法の詳細については、「[ALTER DATABASE 互換性レベル (Transact-SQL)](https://msdn.microsoft.com/library/bb510680.aspx)」を参照してください。
 
 
 **SQL Server の詳細については、TechNet にある SQL Server のドキュメントを参照してください。**  
@@ -196,6 +209,6 @@ System Center Configuration Manager を実行するインフラストラクチ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

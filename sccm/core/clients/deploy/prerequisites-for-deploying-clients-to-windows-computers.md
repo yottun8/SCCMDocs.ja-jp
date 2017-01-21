@@ -1,5 +1,5 @@
 ---
-title: "Windows クライアント展開の前提条件 | System Center Configuration Manager"
+title: "Windows クライアント展開の前提条件 | Microsoft Docs"
 description: "System Center Configuration Manager で Windows コンピューターにクライアントを展開するための前提条件について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 caps.latest.revision: 16
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 03ae6de34742ed0030e42c13639ef853d6b2bedc
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: cbcffea0fe2b4c8a05d3a835ff1193b528e55762
 
 
 ---
@@ -58,7 +58,7 @@ Configuration Manager クライアントを環境で展開するには、次の�
 |Microsoft Core XML Services (MSXML) バージョン 6.20.5002 以降|Windows で XML ドキュメントを処理できるようにするために必要となります。|  
 |Microsoft Remote Differential Compression (RDC)|ネットワークのデータ転送を最適化するために必要となります。|  
 |Microsoft Visual C++ 2013 再頒布可能パッケージ バージョン 12.0.21005.1|クライアントのオペレーションをサポートするために必要となります。 クライアント コンピューターにこの更新プログラムがインストールされていると、インストールを完了するために再起動が必要になる可能性があります。|  
-|Microsoft Visual C++ 2005 再頒布可能バージョン 8.0.50727.42|Microsoft SQL Server Compact オペレーションをサポートするために必要となります。|  
+|Microsoft Visual C++ 2005 再頒布可能バージョン 8.0.50727.42|1606 以前のバージョンの場合、Microsoft SQL Server Compact オペレーションをサポートするために必要です。|  
 |Windows Imaging APIs 6.0.6001.18000|Configuration Manager が Windows イメージ (.wim) ファイルを管理するのを許可するために必要となります。|  
 |Microsoft Policy Platform 1.2.3514.0|クライアントがコンプライアンス設定を評価するのを許可するために必要となります。|  
 |Microsoft Silverlight 5.1.41212.0 (Configuration Manager バージョン 1602 以降)|アプリケーション カタログ ウェブサイトのユーザー エクスペリエンスをサポートするために必要となります。|  
@@ -238,6 +238,6 @@ Configuration Manager クライアントを環境で展開するには、次の�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

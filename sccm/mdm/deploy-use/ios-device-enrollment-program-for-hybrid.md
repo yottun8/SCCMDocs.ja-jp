@@ -1,5 +1,5 @@
 ---
-title: "Configuration Manager とのハイブリッド展開に対応する iOS Device Enrollment Program (DEP) 登録"
+title: "Configuration Manager とのハイブリッド展開に対応する iOS Device Enrollment Program (DEP) 登録 | Microsoft Docs"
 description: "Configuration Manager と Intune のハイブリッド展開に対応するために、iOS Device Enrollment Program (DEP) 登録を有効にします。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
 caps.latest.revision: 9
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 730b0e6b0ad9eb0ee3bf58c9419920c3a28a27d1
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 0421589d928a88eee6f4629726fbd0171aba7436
 
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Configuration Manager とのハイブリッド展開に対応する iOS Device Enrollment Program (DEP) 登録
@@ -40,7 +40,7 @@ ms.openlocfilehash: 730b0e6b0ad9eb0ee3bf58c9419920c3a28a27d1
     Configuration Manager コンソールの **[管理]** ワークスペースで、**[階層の構成]**、**[クラウド サービス]** の順に展開してから、**[Windows Intune サブスクリプション]** をクリックします。 **[ホーム]** タブの **[DEP トークン要求の作成]** 、 **[参照]** の順にクリックして、DEP トークン要求をダウンロードする場所を指定してから、 **[ダウンロード]**をクリックします。 DEP トークン要求 (.pem) ファイルをローカルに保存します。 .pem ファイルは、Apple Device Enrollment Program ポータルから信頼されたトークン (.p7m) を要求するために使用します。  
 
 3.  **Device Enrollment Program トークンを取得する**   
-     [Device Enrollment Program ポータル](https://deploy.apple.com) (https://deploy.apple.com) に移動し、会社の Apple ID でサインインします。 この Apple ID は、将来 DEP トークンを更新するために使用する必要があります。  
+    [Device Enrollment Program ポータル](https://deploy.apple.com) (https://deploy.apple.com) に移動し、会社の Apple ID でサインインします。 この Apple ID は、将来 DEP トークンを更新するために使用する必要があります。  
 
     1.  [Device Enrollment Program ポータル](https://deploy.apple.com)で **[Device Enrollment Program]** > **[Manage Servers] (サーバーの管理)** に移動して、**[Add MDM Server]** (MDM サーバーの追加) をクリックします。  
 
@@ -91,22 +91,18 @@ ms.openlocfilehash: 730b0e6b0ad9eb0ee3bf58c9419920c3a28a27d1
 
             -   **無効** - **[設定]** メニューから管理プロファイルを削除できます  
 
-            -   有効 - (**[準備モード]** = **[監督下]** にする必要があります) 管理プロファイルの削除を許可する iOS 設定を無効にします  
+            -   **有効** - (**[準備モード]** = **[監督下]** にする必要があります) 管理プロファイルの削除を許可する iOS 設定を無効にします  
 
     3.  **[セットアップ アシスタント]** ページで、デバイスの電源が初めてオンになったときに起動する iOS セットアップ アシスタントをカスタマイズする設定を構成してから、 **[次へ]**をクリックします。 設定は次のとおりです。  
-
         -   **パスコード** - アクティブ化時にパスコードの入力を求めます。 デバイスがセキュリティで保護される場合や、他の何らかの方法 (デバイスを 1 つのアプリに制限するキオスク モードなど) でアクセスが制御されている場合を除き、パスコードは常に必須にしてください。  
-
         -   **位置情報サービス** - 有効にすると、アクティブ化時に、セットアップ アシスタントによってサービスがプロンプトされます  
-
         -   **復元** - 有効にすると、アクティブ化時に、セットアップ アシスタントによって iCloud バックアップがプロンプトされます  
-
         -   **Apple ID** - Intune でインストールされるアプリを含め、iOS App Store アプリをダウンロードする際に Apple ID が必須になります。 有効にして、Intune で ID を指定せずにアプリをインストールしようとすると、Apple ID の入力が求められます。  
-
         -   **使用条件** - 有効にすると、アクティブ化時に、セットアップ アシスタントによって Apple の使用条件に同意するように求められます  
-
+        -   **タッチ ID** - 有効にすると、アクティブ化時に、セットアップ アシスタントによってこのサービスがプロンプトされます
+        -   **Apple Pay** - 有効にすると、アクティブ化時に、セットアップ アシスタントによってこのサービスがプロンプトされます
+        -   **ズーム** - 有効にすると、アクティブ化時に、セットアップ アシスタントによってこのサービスがプロンプトされます
         -   **Siri** - 有効にすると、アクティブ化時に、セットアップ アシスタントによってこのサービスがプロンプトされます  
-
         -   **Apple に診断データを送信する** - 有効にすると、アクティブ化時に、セットアップ アシスタントによってこのサービスがプロンプトされます  
 
     4.  **[追加の管理]** ページで、追加の管理設定のために USB 接続の使用を許可するかどうかを指定します。 **[証明書が必要]**を選択する場合、このプロファイルに使用する Apple Configurator 管理証明書をインポートする必要があります。  **[許可しない]** に設定すると、ファイルの iTunes との同期と Apple Configurator 経由の管理が実行されなくなります。 **[許可しない]** を使用して証明書ありまたは証明書なしの手動の展開を許可するのではなく、[許可しない] を選択して、Apple Configurator からその他の構成をエクスポートし、カスタム iOS 構成プロファイルとして展開することをお勧めします。  
@@ -118,16 +114,16 @@ ms.openlocfilehash: 730b0e6b0ad9eb0ee3bf58c9419920c3a28a27d1
         -   **証明書が必要** - 登録プロファイルにインポートされた証明書を使用した Mac とのペアリングを許可します  
 
 2.  **DEP デバイスを管理対象にする**   
-     [Device Enrollment Program ポータル](https://deploy.apple.com) (https://deploy.apple.com) に移動し、会社の Apple ID でサインインします。  **[Deployment Program]** > **[Device Enrollment Program]** > **[デバイスの管理]**で管理することができます。 **デバイスの選択**方法を指定し、デバイス情報を入力して、デバイスの **シリアル番号**、 **注文番号**、または **CSV ファイルのアップロード**で詳細を指定します。 次に、**[Assign to Server]** (サーバーに割り当て) を選択し、手順 3 で指定した <*サーバー名*> を選択して、**[OK]** をクリックします。  
+    [Device Enrollment Program ポータル](https://deploy.apple.com) (https://deploy.apple.com) に移動し、会社の Apple ID でサインインします。 **[Deployment Program]** > **[Device Enrollment Program]** > **[デバイスの管理]**で管理することができます。 **デバイスの選択**方法を指定し、デバイス情報を入力して、デバイスの **シリアル番号**、 **注文番号**、または **CSV ファイルのアップロード**で詳細を指定します。 次に、**[Assign to Server]** (サーバーに割り当て) を選択し、手順 3 で指定した <*サーバー名*> を選択して、**[OK]** をクリックします。  
 
 3.  **DEP で管理されたデバイスの同期**   
-     **[資産とコンプライアンス]** ワークスペースで、 **[すべての企業所有のデバイス]** > **[iOS]** > **[デバイス情報]**で管理することができます。 **[ホーム]** タブの **[DEP の同期]**をクリックします。 同期要求が Apple に送信されます。 同期が完了すると、DEP で管理されたデバイスが表示されます。 管理されたデバイスの **登録状態** は、デバイスの電源がオンになり、セットアップ アシスタントを実行してデバイスを登録するまでは **[未接続]** となります。  
+    **[資産とコンプライアンス]** ワークスペースで、 **[すべての企業所有のデバイス]** > **[iOS]** > **[デバイス情報]**で管理することができます。 **[ホーム]** タブの **[DEP の同期]**をクリックします。 同期要求が Apple に送信されます。 同期が完了すると、DEP で管理されたデバイスが表示されます。 管理されたデバイスの **登録状態** は、デバイスの電源がオンになり、セットアップ アシスタントを実行してデバイスを登録するまでは **[未接続]** となります。  
 
 4.  **デバイスのユーザーへの配布**   
     これで、会社が所有するデバイスをユーザーに付与できるようになりました。 iOS デバイスの電源をオンにすると、iOS デバイスが Intune の管理対象として登録されます。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

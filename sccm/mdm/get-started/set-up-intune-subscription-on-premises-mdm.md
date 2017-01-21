@@ -1,8 +1,8 @@
 ---
-title: "Intune サブスクリプションをセットアップする | オンプレミス | System Center Configuration Manager"
+title: "Intune サブスクリプションを設定する | Microsoft Docs | オンプレミス"
 description: "System Center Configuration Manager でのオンプレミス モバイル デバイス管理のためのライセンスを追跡するように、Intune サブスクリプションをセットアップします。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4daf5d6ea30aa1fb4aa189ef6da9b364fe197805
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: 2cc9f59d9d32d149aa477ba61afba0094f302fc4
 
 
 ---
@@ -28,25 +28,17 @@ ms.openlocfilehash: 4daf5d6ea30aa1fb4aa189ef6da9b364fe197805
 
 System Center Configuration Manager のオンプレミス モバイル デバイス管理では、ライセンスを追跡するために Microsoft Intune サブスクリプションが必要です。 Intune サービスは、デバイスの管理または管理情報の保存には使用されません。 オンプレミス モバイル デバイス管理の場合、すべてのデバイス管理は、Configuration Manager インフラストラクチャによって処理されます。  
 
-> [!IMPORTANT]  
->  Configuration Manager では、Microsoft Intune とオンプレミスの Configuration Manager インフラストラクチャの両方を管理機関として同時に使用することはできません。 そのため、オンプレミス管理のために Intune サブスクリプションをセットアップする場合は、結果的に Intune での管理を無効にすることになります。  
-
- オンプレミス モバイル デバイス管理で動作するように Intune サービスをセットアップするには、次の概要手順のようにします。  
-
--   [Microsoft Intune のセットアップ](#bkmk_signup)  
-
--   [Configuration Manager に Intune サブスクリプションを追加する](#bkmk_addSub)  
-
--   [オンプレミス モバイル デバイス管理用の Intune サブスクリプションを構成する](#bkmk_configure)  
+> [!NOTE]  
+> バージョン 1610 以降の Configuration Manager では、Microsoft Intune とオンプレミスの Configuration Manager インフラストラクチャの両方で同時にモバイル デバイスを管理できます。   
 
 > [!TIP]  
 >  サイト システムの役割をインストールする前に、オンプレミス モバイル デバイス管理用の Intune サブスクリプションをセットアップすることによって、新しくインストールされたサイト システムの役割が機能するまでにかかる時間を最小限に抑えることをお勧めします。  
 
-##  <a name="a-namebkmksignupa-sign-up-for-microsoft-intune"></a><a name="bkmk_signup"></a> Microsoft Intune のセットアップ  
+##  <a name="sign-up-for-microsoft-intune"></a>Microsoft Intune のセットアップ  
  オンプレミス モバイル デバイス管理が機能するには、Intune が必要です。 試用版または有料のサブスクリプションに[サインアップ](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/)し、次の手順に進んでサブスクリプションを Configuration Manager に追加します。  
 
-##  <a name="a-namebkmkaddsuba-add-the-intune-subscription-to-configuration-manager"></a><a name="bkmk_addSub"></a> Configuration Manager に Intune サブスクリプションを追加する  
- サブスクリプションを Configuration Manager に追加するには、Intune でモバイル デバイス管理のサブスクリプションを追加する場合と同じ基本的な手順に従います。 以下の注意事項で具体的な違いを確認した後、「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../mdm/plan-design/hybrid-mobile-device-management.md)」の「[Microsoft Intune サブスクリプションを作成するには](../../mdm/plan-design/hybrid-mobile-device-management.md#bkmk_subscription)」の手順に従ってください。  
+##  <a name="add-the-intune-subscription-to-configuration-manager"></a>Configuration Manager に Intune サブスクリプションを追加する  
+ サブスクリプションを Configuration Manager に追加するには、Intune でモバイル デバイス管理のサブスクリプションを追加する場合と同じ基本的な手順に従います。 具体的な違いに関する以下のメモを参照して、「[Microsoft Intune サブスクリプションを作成するには](../deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription)」に記載されている手順を使用します。  
 
 > [!NOTE]  
 >  Intune サブスクリプションを追加する場合は、次の点に注意してください。  
@@ -55,14 +47,18 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 > -   ウィザードで指定したサイト コードの設定は、オンプレミス モバイル デバイス管理では無視されます。 使用されるのは、ユーザーに対してデバイスの登録の許可を与える登録プロファイルで指定されているサイト コードです。  
 > -   多要素認証を有効にしないでください。 オンプレミス モバイル デバイス管理ではサポートされていません。  
 
-##  <a name="a-namebkmkconfigurea-configure-the-intune-subscription-for-on-premises-mobile-device-management"></a><a name="bkmk_configure"></a> オンプレミス モバイル デバイス管理用の Intune サブスクリプションを構成する  
+##  <a name="configure-the-intune-subscription-for-on-premises-mobile-device-management"></a>オンプレミス モバイル デバイス管理用の Intune サブスクリプションを構成する  
 
 1.  Configuration Manager コンソールで、**[Microsoft Intune サブスクリプション]** を右クリックし、**[プロパティ]** をクリックします。  
 
-2.  オンプレミス モバイル デバイス管理のボックスで、 **[オンプレミスのデバイスのみを管理する]**の横にあるチェック ボックスをオンにして、 **[OK]**をクリックします。  
+2.  [オンプレミス モバイル デバイス管理] ボックスで、次のいずれかを選択します。
 
-    > [!NOTE]  
-    >  このチェック ボックスをオンにすると、すべての管理情報をオンプレミスで保持し、データをクラウドにレプリケートしないように Intune サブスクリプションが構成されます。  
+  - オンプレミスのみでデバイスを管理する場合は、**[オンプレミスのデバイスのみを管理する]** の横にあるチェック ボックスをオンにして、**[OK]** をクリックします。  
+
+      > [!NOTE]  
+      >  このチェック ボックスをオンにすると、すべての管理情報をオンプレミスで保持し、データをクラウドにレプリケートしないように Intune サブスクリプションが構成されます。  
+
+    - Intune とオンプレミス Configuration Manager の両方でデバイスを管理する場合は、ボックスをオフのままにします。
 
 3.  Windows 10 Mobile デバイスを管理する場合は、 **[Microsoft Intune サブスクリプション]**を右クリックし、 **[プラットフォームの構成]**、  **[Windows Phone]**の順にクリックします。  
 
@@ -74,6 +70,6 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

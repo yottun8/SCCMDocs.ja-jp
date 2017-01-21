@@ -1,5 +1,5 @@
 ---
-title: "Exchange ActiveSync 電子メール プロファイルを作成する | System Center Configuration Manager"
+title: "Exchange ActiveSync 電子メール プロファイルを作成する | Microsoft Docs"
 description: "Microsoft Intune と連携して機能する System Center Configuration Manager で電子メール プロファイルを作成および構成する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 613ed15742322e2eb90eec3c9f493e3b1755d93a
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 3ff5d53464c61e0dc1836d032bcb3815bae05d1f
 
 
 ---
@@ -42,7 +42,7 @@ ms.openlocfilehash: 613ed15742322e2eb90eec3c9f493e3b1755d93a
 -   iOS 5、iOS 6、iOS 7 および iOS 8 を実行する iPad デバイス  
 
 > [!IMPORTANT]  
->  プロファイルを iOS デバイス、Android Samsung KNOX デバイス、Windows Phone デバイス、および Windows 8.1 または Windows 10 デバイスに展開するには、これらのデバイスを Intune に登録する必要があります。 デバイスの登録方法については、「 [Microsoft Intune を使用したモバイル デバイスの管理](https://technet.microsoft.com/en-us/library/dn646962.aspx)」を参照してください。  
+>  プロファイルを iOS デバイス、Android Samsung KNOX Standard デバイス、Windows Phone デバイス、および Windows 8.1 または Windows 10 デバイスに展開するには、これらのデバイスを Intune に登録する必要があります。 デバイスの登録方法については、「 [Microsoft Intune を使用したモバイル デバイスの管理](https://technet.microsoft.com/en-us/library/dn646962.aspx)」を参照してください。  
 
  デバイスに電子メール アカウントを構成するだけでなく、アドレス帳、予定表と仕事の同期の設定を構成することもできます。  
 
@@ -57,7 +57,7 @@ ms.openlocfilehash: 613ed15742322e2eb90eec3c9f493e3b1755d93a
 
 2.  [ **資産とコンプライアンス** ] ワークスペースで、[ **コンプライアンス設定**]、[ **会社リソースのアクセス**] の順に展開してから、[ **電子メール プロファイル**] をクリックします。  
 
-3.  [ **ホーム** ] タブの [ **作成** ] グループで、[ **Exchange ActiveSync プロファイルの作成**] をクリックします。 
+3.  [ **ホーム** ] タブの [ **作成** ] グループで、[ **Exchange ActiveSync プロファイルの作成**] をクリックします。
 
 4.  ウィザードの指示に従います。   
 
@@ -173,7 +173,7 @@ ms.openlocfilehash: 613ed15742322e2eb90eec3c9f493e3b1755d93a
         -   **タスク**  
 
 ###  <a name="specify-supported-platforms-for-the-exchange-activesync-email-profile"></a>Exchange ActiveSync 電子メール プロファイルにサポートされているプラットフォームを指定します。  
- 
+
 1.  Exchange ActiveSync 電子メール プロファイルの作成ウィザードの [ **サポートされているプラットフォーム** ] ページで、電子メール プロファイルをインストールするオペレーティング システムを選択します。使用できるすべてのオペレーティング システムに電子メール プロファイルをインストールするには、[ **すべて選択** ] をクリックします。  
 
 2.  ウィザードを完了します。
@@ -182,6 +182,6 @@ Exchange ActiveSync 電子メール プロファイルを展開する方法に�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

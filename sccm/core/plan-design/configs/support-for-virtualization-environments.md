@@ -1,8 +1,8 @@
 ---
-title: "仮想化のサポート | System Center Configuration Manager"
+title: "仮想化のサポート | Microsoft Docs"
 description: "仮想化環境で System Center Configuration Manager クライアントとサイト システムの役割をインストールするための要件を取得します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: be32ccee17bc4829888d42dfff3f2818f4fc2810
+ms.sourcegitcommit: 13df135828e383e666bfc11051011207245a774c
+ms.openlocfilehash: 1c00324d2e7cc9a082ba837b29879e3a778d0c54
 
 
 ---
@@ -59,11 +59,13 @@ Configuration Manager では、バーチャル マシンがオンラインでな
 
 ネットワーク、サポート構成、ハードウェアには、物理的な企業ネットワークにオンプレミスで Configuration Manager をインストールするときと同じ System Center Configuration Manager の要件が、Microsoft Azure へのインストールにも適用されます。  
 
+詳しくは、「[Azure の Configuration Manager - よく寄せられる質問](/sccm/core/understand/configuration-manager-on-azure)」をご覧ください。
+
 > [!IMPORTANT]  
 >  Azure 仮想マシンで実行している Configuration Manager サイトおよびクライアントには、オンプレミス インストールと同じライセンス要件が課されます。  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

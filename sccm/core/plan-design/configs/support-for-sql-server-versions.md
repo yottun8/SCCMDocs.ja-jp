@@ -1,8 +1,8 @@
 ---
-title: "SQL Server のサポート | System Center Configuration Manager"
+title: "SQL Server のサポート | Microsoft Docs"
 description: "System Center Configuration Manager サイト データベースをホストするための SQL Server のバージョンおよび構成要件を取得します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
+ms.sourcegitcommit: 814feb4e833230285b4092a8feb6f11a75f2e4f6
+ms.openlocfilehash: ecf790893a5604250810310cfdb09c4cff7d97b6
 
 
 ---
@@ -29,7 +29,6 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 
 ##  <a name="a-namebkmkinstancesa-sql-server-instances-and-locations"></a><a name="bkmk_Instances"></a> SQL Server インスタンスと場所  
  **中央管理サイトとプライマリ サイト**  
-
 サイト データベースは SQL Server のフル インストールを使用する必要があります。  
 
  SQL Server の場所：  
@@ -49,7 +48,6 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 
 
  **セカンダリ サイト:**  
-
  サイト データベースは SQL Server または SQL Server Express のフル インストールの既定のインスタンスを使用できます。  
 
  SQL Server の場所はサイト サーバー コンピューターである必要があります。  
@@ -57,14 +55,19 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 ##  <a name="a-namebkmksqlversionsa-supported-versions-of-sql-server"></a><a name="bkmk_SQLVersions"></a> サポートされている SQL Server のバージョン  
  複数のサイトを含む階層では、それぞれのサイトが異なるバージョンの SQL Server を使用してサイト データベースをホストできます。ただし、使用する SQL Server のバージョンが Configuration Manager でサポートされている必要があります。  
 
- 次のバージョンの SQL Server は System Center Configuration Manager 1511 以降のバージョンでサポートされています。  
+ 他の指定がない限り、次のバージョンの SQL Server は System Center Configuration Manager 1511 以降のバージョンでサポートされています。  
 
 > [!IMPORTANT]  
 >  中央管理サイトでデータベース用に SQL Server Standard を使用すると、階層でサポートできるクライアントの合計数が制限されます。 「[サイジングとスケールの数値](../../../core/plan-design/configs/size-and-scale-numbers.md)」をご覧ください。
 
-### <a name="sql-server-2016---standard-enterprise"></a>SQL Server 2016 - Standard、Enterprise  
+### <a name="sql-server-2016-sp1---standard-enterprise"></a>SQL Server 2016 SP1 - Standard、Enterprise  
+次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
-バージョン 1606 での使用がサポートされています。   
+-   中央管理サイト  
+-   プライマリ サイト  
+-   セカンダリ サイト  
+
+### <a name="sql-server-2016---standard-enterprise"></a>SQL Server 2016 - Standard、Enterprise  
 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
@@ -73,8 +76,6 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 
 
 ### <a name="sql-server-2014-sp2---standard-enterprise"></a>SQL Server 2014 SP2 - Standard、Enterprise  
-
-バージョン 1511 以降でサポートされています。  
 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
@@ -84,8 +85,6 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 
 
 ### <a name="sql-server-2014-sp1---standard-enterprise"></a>SQL Server 2014 SP1 - Standard、Enterprise  
-
-バージョン 1511 以降でサポートされています。  
  次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
@@ -94,8 +93,6 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 
 
 ### <a name="sql-server-2012-sp3---standard-enterprise"></a>SQL Server 2012 SP3 - Standard、Enterprise  
-
-バージョン 1511 以降でサポートされています。  
  次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
@@ -103,9 +100,7 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 -   セカンダリ サイト  
 
 
-### <a name="sql-server-2012-sp2---standard-enterprise"></a>SQL Server 2012 SP2 - Standard、Enterprise  
-
-バージョン 1511 以降でサポートされています。  
+### <a name="sql-server-2012-sp2---standard-enterprise"></a>SQL Server 2012 SP2 - Standard、Enterprise   
  次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
@@ -113,41 +108,41 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 -   セカンダリ サイト  
 
 
-### <a name="sql-server-2008-r2-sp3---standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3 - Standard、Enterprise、Datacenter  
-
-バージョン 1511 以降でサポートされています。    
+### <a name="sql-server-2008-r2-sp3---standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3 - Standard、Enterprise、Datacenter     
 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
 -   プライマリ サイト  
 -   セカンダリ サイト  
 
-### <a name="sql-server-2016-express"></a>SQL Server 2016 Express
-バージョン 1606 での使用がサポートされています。  
+
+
+### <a name="sql-server-2016-express-sp1"></a>SQL Server 2016 Express SP1  
 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。
 -   セカンダリ サイト
 
-### <a name="sql-server-2014-express-sp2"></a>SQL Server 2014 Express SP2  
-バージョン 1511 以降での使用がサポートされています。  
+### <a name="sql-server-2016-express"></a>SQL Server 2016 Express
+次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。
+-   セカンダリ サイト
+
+
+### <a name="sql-server-2014-express-sp2"></a>SQL Server 2014 Express SP2   
 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   セカンダリ サイト  
 
 
-### <a name="sql-server-2014-express-sp1"></a>SQL Server 2014 Express SP1  
- バージョン 1511 以降での使用がサポートされています。   
+### <a name="sql-server-2014-express-sp1"></a>SQL Server 2014 Express SP1   
  次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   セカンダリ サイト  
 
 ### <a name="sql-server-2012-express-sp3"></a>SQL Server 2012 Express SP3  
-バージョン 1511 以降での使用がサポートされています。   
 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   セカンダリ サイト  
 
-### <a name="sql-server-2012-express-sp2"></a>SQL Server 2012 Express SP2  
- バージョン 1511 以降での使用がサポートされています。  
+### <a name="sql-server-2012-express-sp2"></a>SQL Server 2012 Express SP2   
  次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   セカンダリ サイト  
@@ -187,13 +182,11 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
     -   プライマリ サイト: 最小で 8 ギガバイト (GB)  
     -   セカンダリ サイト: 最小で 4 ギガバイト (GB)  
 
- **SQL の入れ子になったトリガー**  
-
+**SQL の入れ子になったトリガー**  
  [SQL の入れ子になったトリガー](http://go.microsoft.com/fwlink/?LinkId=528802) は、有効にする必要があります。  
 
  **SQL Server の CLR 統合**  
-
-  サイト データベースには、SQL Server 共通言語ランタイム (CLR) を有効にする必要があります。 これは、Configuration Manager のインストール時に自動的に有効になります。 CLR の詳細については、「 [SQL Server の CLR 統合の概要](https://msdn.microsoft.com/library/ms254498\(v=vs.110\).aspx)」をご覧ください。  
+  サイト データベースには、SQL Server 共通言語ランタイム (CLR) を有効にする必要があります。 これは、Configuration Manager のインストール時に自動的に有効になります。 CLR の詳細については、「[SQL Server の CLR 統合の概要](https://msdn.microsoft.com/library/ms254498\(v=vs.110\).aspx)」をご覧ください。  
 
 ##  <a name="a-namebkmkoptionala-optional-configurations-for-sql-server"></a><a name="bkmk_optional"></a> SQL Server のオプション構成  
  以下の構成は、SQL Server の完全インストールを使用する各データベースのオプションです。  
@@ -220,6 +213,10 @@ SQL サービスで使用されるアカウントを変更する方法につい�
 **SQL Server Reporting Services:**  
 レポートを実行できるように、レポート サービス ポイントをインストールする必要があります。  
 
+> [!IMPORTANT]  
+> 以前のバージョンから SQL Server をアップグレードした後、[*Report Builder Does Not Exist*] (レポート ビルダーが存在しません) というエラーが表示されることがあります。    
+> これを解決するには、レポート サービス ポイント サイト システムの役割を再インストールする必要があります。
+
 **SQL Server のポート:**  
 SQL Server データベース エンジンとの通信、およびサイト間のレプリケーションには、SQL Server の既定ポート構成を使用することも、カスタム ポートを指定することもできます。  
 
@@ -242,6 +239,6 @@ SQL Server を実行しているコンピューターのファイアウォール
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

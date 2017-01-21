@@ -1,5 +1,5 @@
 ---
-title: "移行の前提条件 | System Center Configuration Manager"
+title: "移行の前提条件 | Microsoft Docs"
 description: "Configuration Manager のサポートされているバージョン、サポートされているソース サイトの言語、および移行に必要な構成を理解します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1b310aeee487087e79c2d0fd6469f8f63b932045
+ms.sourcegitcommit: 6cbb790df47c9a87514b0233e2d0c12dd6f23ee9
+ms.openlocfilehash: 70e2531076abedc1381b6e3bccf15b5afe27b465
 
 
 ---
@@ -113,13 +113,6 @@ System Center 2012 Configuration Manager または System Center Configuration M
 
      また、System Center 2012 Configuration Manager または System Center Configuration Manager ソース サイトの配布ポイントを共有するには、**[ソース サイト アカウント]** (ソース サイト サーバーの SMS プロバイダーにアクセスするアカウント) に、ソース サイトの **[サイト]** オブジェクトの **[変更]** アクセス許可が必要です。 アカウントにこのアクセス許可を付与するには、ロールベースの管理を使用します。 ロール ベース管理の使用方法については、「 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。  
 
--   **配布ポイントの共有:**  
-
-     ソース サイトの配布ポイントを共有するためには、移行先階層の少なくとも 1 つのプライマリ サイトまたは中央管理サイトで、クライアントからの要求用にソース サイトと同じポート番号を使用している必要があります。 クライアント要求ポートの詳細については、「[System Center Configuration Manager でのクライアント通信ポートの構成方法](../../core/clients/deploy/configure-client-communication-ports.md)」を参照してください。  
-
-     各ソース サイトでは、FQDN で構成されているサイト システム サーバーにインストールされた配布ポイントのみ共有されます。  
-
-     また、System Center 2012 Configuration Manager または System Center Configuration Manager ソース サイトの配布ポイントを共有するには、**[ソース サイト アカウント]** (ソース サイト サーバーの SMS プロバイダーにアクセスするアカウント) に、ソース サイトの **[サイト]** オブジェクトの **[変更]** アクセス許可が必要です。 アカウントにこのアクセス許可を付与するには、ロールベースの管理を使用します。 ロール ベース管理の使用方法については、「 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。  
 
 -   **配布ポイントのアップグレードまたは再割り当て:**  
 
@@ -133,6 +126,6 @@ System Center 2012 Configuration Manager または System Center Configuration M
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

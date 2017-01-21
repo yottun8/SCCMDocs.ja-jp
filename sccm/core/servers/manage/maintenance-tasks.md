@@ -1,5 +1,5 @@
 ---
-title: "メンテナンス タスク | System Center Configuration Manager"
+title: "メンテナンス タスク | Microsoft Docs"
 description: "Configuration Manager のサイトおよび階層に対して実行するメンテナンス タスクと実行のタイミングについて説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ac47f1b88a89a42bb51b87b36147b731e37a5824
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 46a24145d28111d7611f393f5806d0d7cc47ed71
 
 
 ---
@@ -142,6 +142,6 @@ Configuration Manager サイトをインストールしたら、利用可能な�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

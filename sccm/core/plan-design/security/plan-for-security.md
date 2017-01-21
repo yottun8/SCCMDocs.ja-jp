@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager でのセキュリティの計画"
+title: "System Center Configuration Manager でのセキュリティの計画 | Microsoft Docs"
 description: "System Center Configuration Manager のセキュリティのベスト プラクティスとその他の情報を取得する。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f38d7275a39d16f9e6cf90334a46668fcc860bc1
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: dc78ecb308d385c04d821f51fc14650b306b5108
 
 
 ---
@@ -315,6 +315,6 @@ Client.msi プロパティ **RESETKEYINFORMATION = TRUE** と CCMSetup.exe を�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

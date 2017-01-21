@@ -1,5 +1,5 @@
 ---
-title: Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
+title: "System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM) | Microsoft Docs"
 description: "System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM) について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 caps.latest.revision: 34
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 22e673122f0f664d1240c11451b7e6db78481b26
-ms.openlocfilehash: 83832465e93997a2893e024c565ee00f471036d1
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: caedfa2f89daf9ebad72602161dd618f0d18b4ab
 
 ---
 # <a name="hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
@@ -66,7 +66,7 @@ Configuration Manager を Intune を利用して拡張すると、会社所有�
 
 | **方法** |  **ワイプ** |  **アフィニティ**    |   **ロック** | **詳細**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | いいえ|    [はい] |   × | [詳細](../deploy-use/setup-hybrid-mdm.md#set-up-device-management)|
+|**[BYOD](#byod)** | いいえ|    [はい] |   × | [詳細](../deploy-use/setup-hybrid-mdm.md#windows-enrollment-setup)|
 |**[DEM](#dem)**|   いいえ |いいえ |×  |[詳細](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
 
 適切な方法を見つけるのに役立つ質問集が「[Choose how to enroll devices](/intune/get-started/choose-how-to-enroll-devices1)」 (デバイスの登録方法を選択する) にあります。
@@ -117,6 +117,6 @@ Configuration Manager ハイブリッド MDM で管理できるデバイス プ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

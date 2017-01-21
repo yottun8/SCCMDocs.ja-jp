@@ -1,5 +1,5 @@
 ---
-title: "Windows Defender または Endpoint Protection クライアントのトラブルシューティング | System Center Configuration Manager"
+title: "Windows Defender または Endpoint Protection クライアントのトラブルシューティング | Microsoft Docs"
 description: "Windows Defender および Endpoint Protection の問題をトラブルシューティングする方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4d30cd85cb59f8f27704979074470bb06310054b
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: eda5eb85aada88b77166582bb116cc680b2c0631
 
 
 ---
@@ -244,7 +244,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 -   すべてのアプリケーションを閉じて、コンピューターを再起動します。  
 
-### <a name="step-2-make-sure-the-windows-defender-orbr-endpoint-protection-service-is-set-to-automatic-and-is-started"></a>手順 2: ”Windows Defender” または<br />      "Endpoint Protection" サービスが自動に設定されていて、開始されていることを確認する  
+### <a name="step-2-make-sure-the-windows-defender-orbr-------endpoint-protection-service-is-set-to-automatic-and-is-started"></a>手順 2: ”Windows Defender” または<br />      "Endpoint Protection" サービスが自動に設定されていて、開始されていることを確認する  
 
 1.  **[スタート]** をクリックし、 **services.msc**を検索して、 **Enter**キーを押します。  
 
@@ -325,6 +325,6 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

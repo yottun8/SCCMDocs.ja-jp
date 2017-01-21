@@ -1,5 +1,5 @@
 ---
-title: "1606 の新機能 | System Center Configuration Manager"
+title: "1606 の新機能 | Microsoft Docs"
 description: "System Center Configuration Manager のバージョン 1606 の変更点および導入された新機能について詳しく説明します。"
 ms.custom: na
 ms.date: 10/09/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fbce476b8a9b91a88354fb4abfadfd2526ca5e8
-ms.openlocfilehash: 8de28e112a2d7faf1d8aca9b7214498e9a65f919
+ms.sourcegitcommit: f6e34e39d267f3bba26d6aa6a912eb4ba4aa3ab2
+ms.openlocfilehash: 16d10bdf1ddd810800e776c33f3f059899b7f92b
 
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1606 の新機能
@@ -164,11 +164,11 @@ PXE 対応配布ポイントの RamDisk ウィンドウ サイズをカスタマ
 ## <a name="compliance-settings"></a>コンプライアンス設定
 
 ### <a name="smart-lock-setting-for-android-devices"></a>Android デバイスの Smart Lock 設定
-**[Smart Lock やその他の信頼できるエージェントを許可する]** という新しい設定が、Android および Samsung KNOX 構成項目に追加されました。
+**[Smart Lock やその他の信頼できるエージェントを許可する]** という新しい設定が、Android および Samsung KNOX Standard 構成項目に追加されました。
 
 この設定により、互換性のある Android デバイスで Smart Lock 機能を制御できるようになります。 信頼エージェントとも呼ばれるこの電話機能では、デバイスが特定の Bluetooth デバイスに接続したときや、NFC タグの近くにある場合など、信頼できる場所にある場合、デバイスのロック画面のパスワードを無効化またはバイパスすることができます。 この設定を使用して、エンド ユーザーが Smart Lock を構成することを禁止できます。
 
-詳細については、「[System Center Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX デバイスの構成項目を作成する方法](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)」をご覧ください。
+詳細については、「[System Center Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX Standard デバイスの構成項目を作成する](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)」を参照してください。
 
 ## <a name="device-configuration-and-protection"></a>デバイスの構成と保護
 
@@ -218,13 +218,13 @@ Microsoft Intune と Configuration Manager を使用している場合に、デ�
 
 オンプレミスのインフラストラクチャのみを使用して Windows 10 PC の正常性構成証明サービスの監視を有効にして、インターネットにアクセスできないコンピューターでもデバイス正常性構成証明 (DHA) を報告できるようになりました。
 
-詳細については、「[System Center Configuration Manager の正常性構成証明書](../../../core/servers/manage/health-attestation.md#How-to-enable-Health-Attestation-service-communication-on-Configuration-Manager-client-computers)」をご覧ください。  
+詳細については、「[System Center Configuration Manager の正常性構成証明書](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers)」をご覧ください。  
 
 ## <a name="remote-control"></a>リモート コントロール
 リモート コントロール セッションで共有クリップボードからコンテンツを転送する前に、エンド ユーザーはファイル転送を許可するかどうかを選択できます。 エンド ユーザーはセッションごとに一度アクセス許可を与えるだけで済みます。ビューアーはファイル転送を続行するためのアクセス許可を自身に与えることはできません。 この新しい設定を行うには、**[管理]** ワークスペースで、**[クライアント設定]** に移動し、**[既定の設定]** の **[リモート ツール]** パネルを開きます。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

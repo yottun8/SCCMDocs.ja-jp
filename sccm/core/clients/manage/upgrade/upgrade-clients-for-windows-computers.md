@@ -1,8 +1,8 @@
 ---
-title: "クライアントのアップグレード | Windows | System Center Configuration Manager"
+title: "クライアントのアップグレード | Microsoft Docs | Windows "
 description: "System Center Configuration Manager で Windows コンピューターのクライアントをアップグレードします。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 2b1600e6f04095506f18f4c2cd0988a320fbb951
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: 8a3028a562aa657ea39a0f5ff763311db6def00a
 
 
 ---
@@ -36,10 +36,16 @@ ms.openlocfilehash: 2b1600e6f04095506f18f4c2cd0988a320fbb951
 
 -   アップグレード インストール  
 
- クライアント インストール方法を使用してクライアントをアップグレードする場合は、「[How to deploy clients to Windows computers in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」 (System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法) でその方法について、詳細を確認してください。  
+ クライアント インストール方法を使用してクライアントをアップグレードする場合は、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」で、その方法について詳細を確認してください。
+
+ バージョン 1610 以降では、除外グループを指定して、クライアントをアップグレード対象から除外することができます。 詳細については、「[Windows コンピューター用クライアントをアップグレードする方法](exclude-clients-windows.md)」を参照してください。  
+
 
 > [!TIP]  
->  Configuration Manager の以前のバージョン \(Configuration Manager 2007 または System Center 2012 Configuration Manager など\) から、サーバー インフラストラクチャをアップグレードする場合は、Configuration Manager クライアントをアップグレードする前に、現在のすべてのブランチの更新プログラムのインストールを含む、サーバーのアップグレードを完了することをお勧めします。   現在のブランチの最新の更新プログラムには、クライアントの最新バージョンが含まれているため、使用するすべての Configuration Manager 更新プログラムをインストールした後に、クライアントのアップグレードを実行することをお勧めします。  
+>  Configuration Manager の以前のバージョン \(Configuration Manager 2007 または System Center 2012 Configuration Manager など\) から、サーバー インフラストラクチャをアップグレードする場合は、Configuration Manager クライアントをアップグレードする前に、現在のすべてのブランチの更新プログラムのインストールを含む、サーバーのアップグレードを完了することをお勧めします。   現在のブランチの最新の更新プログラムには、クライアントの最新バージョンが含まれているため、使用するすべての Configuration Manager 更新プログラムをインストールした後に、クライアントのアップグレードを実行することをお勧めします。
+
+> [!NOTE]
+> アップグレード中にクライアントのサイトを再割り当てする予定の場合は、SMSSITECODE client.msi プロパティを使用して新しいサイトを指定できます。 SITEREASSIGN で AUTO を使用する場合は、SITEREASSIGN=TRUE を指定して、アップグレード中にサイトの自動再割り当てを許可する必要があります。 詳細については、「[SMSSITECODE](../../deploy/about-client-installation-properties.md#smssitecode)」を参照してください。
 
 ## <a name="use-automatic-client-upgrade"></a>自動クライアント アップグレードの使用  
  Configuration Manager 階層に割り当てられているクライアントが階層内で使用しているバージョンよりも前のバージョンであることが Configuration Manager で識別された場合に、クライアント ソフトウェアを最新バージョンの Configuration Manager クライアントに自動的にアップグレードするように、Configuration Manager を構成することもできます。 このシナリオには、クライアントを Configuration Manager サイトに割り当てるときの最新バージョンへのアップグレードも含まれます。  
@@ -62,11 +68,11 @@ ms.openlocfilehash: 2b1600e6f04095506f18f4c2cd0988a320fbb951
 > [!NOTE]  
 >  Configuration Manager は、Configuration Manager のクラウドベースの配布ポイントには、クライアント アップグレード パッケージを自動的に送信しません。  
 
- 自動クライアント アップグレードは、主要なクライアント インストール方法に含まれなかった少数のクライアント コンピューターをアップグレードする場合に役立ちます。 たとえば、最初のクライアント アップグレードを完了したが、アップグレードの展開時に一部のクライアントがオフラインだった場合です。 その場合、この方法を使って、これらのコンピューターが次にアクティブになった時にクライアントをアップグレードすることができます。  
+ 階層全体の自動クライアント アップグレードを有効にすることをお勧めします。 そうすれば、最小の管理オーバーヘッドで更新されたクライアントが保持されます。  
 
  自動クライアント アップグレードを構成するには、次の手順に従います。 自動クライアント アップグレードは、中央管理サイトで構成し、階層内のすべてのクライアントにこの構成を適用する必要があります。  
 
-#### <a name="to-configure-automatic-client-upgrades"></a>自動クライアント アップグレードを構成するには  
+### <a name="to-configure-automatic-client-upgrades"></a>自動クライアント アップグレードを構成するには  
 
 1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
 
@@ -87,12 +93,14 @@ ms.openlocfilehash: 2b1600e6f04095506f18f4c2cd0988a320fbb951
     >     
     > この動作のために、平日の終業時に決まってシャットダウンされるコンピューターは、ランダムにスケジュールされたアップグレード時間が通常の業務時間内ではない場合、アップグレードされるまでに予想以上に時間がかかることがあります。
 
+7. バージョン 1610 以降では、クライアントをアップグレードから除外する場合に、**[指定したクライアントをアップグレードから除外する]** をクリックし、除外するコレクションを指定します。
+
 8.  事前設定されたコンテンツが有効になっている配布ポイントにクライアント インストール パッケージをコピーする場合は、 **[事前設定されたコンテンツ用に有効になっている配布ポイントにクライアント インストール パッケージを自動配布する]**をクリックします。  
 
 9. **[OK]** をクリックします。設定が保存され、 **[階層設定のプロパティ]** ダイアログ ボックスが閉じます。 次回クライアントでポリシーをダウンロードしたときに、これらの設定が受信されます。  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

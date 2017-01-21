@@ -1,5 +1,5 @@
 ---
-title: "適切なブランチを選択する | System Center Configuration Manager"
+title: "適切なブランチを選択する | Microsoft Docs"
 description: "System Center Configuration Manager の使用可能な各ブランチの相違点について説明します。"
 ms.custom: na
 ms.date: 10/12/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bbaaf9ed876f7693ea831be7c787dba904197a62
-ms.openlocfilehash: 3957e854e980246c410f7de27caed9d66fc4829f
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 153caaead350479441d1a94ccaed1b9f3f6c5ffe
 
 
 ---
@@ -74,7 +74,12 @@ LTSB では、新機能の提供や既存の機能の更新を行うコンソー
 LTSB を新しいサイトとしてインストールするか、またはサポートされている Configuration Manager 2012 サイトからのアップグレードとしてインストールするには、バージョン 1606 の[基準メディア](/sccm/core/servers/manage/updates#baseline-and-update-versions)を使用します。これは、System Center 2016 または System Center Configuration Manager (Current Branch および Long-Term Servicing Branch 1606) リリースの付属 DVD として提供されます。 基準メディアを使用して、Current Branch のバージョン 1606 を実行する新しいサイトをインストールするか、Long-Term Servicing Branch を実行する新しいサイトをインストールすることができます。
 
 > [!TIP]  
-> System Center 2016 の詳細については、[System Center 2016 のドキュメント](https://technet.microsoft.com/system-center-docs/System-Center-2016)をご覧ください。 このドキュメントでは、System Center 2016 の入手方法についても説明しています。この製品を入手するには、Microsoft ライセンス契約または同様の権利が必要です。  System Center 2016 の評価版は、[TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview) から入手することもできます。
+> System Center 2016 の詳細については、[System Center 2016 のドキュメント](https://technet.microsoft.com/system-center-docs/system-center)をご覧ください。 このドキュメントでは、System Center 2016 の入手方法についても説明しています。この製品を入手するには、Microsoft ライセンス契約または同様の権利が必要です。
+
+> ボリューム ランセンス サービス センター (VLSC) で System Center Configuration Manager バージョン 1606 を見つけるには、[VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) の **[Downloads and Keys (ダウンロードとキー)]** タブに移動し、「*system center config*」を検索し、**[System Center Config Mgr (current branch and LTSB 1606)]** (System Center Configuration Manager (現在のブランチと LTSB 1606) を選択します。
+
+>
+ System Center 2016 の評価版は、[TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview) から入手することもできます。
 
 **LTSB の機能:**
 -   重要なセキュリティ修正プログラムを提供するコンソール内の更新プログラムを受信します。
@@ -137,6 +142,6 @@ Technical Preview に最初に導入された機能は、多くの場合、以�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "オペレーティング システムの展開の相互運用性の計画 | Configuration Manager"
+title: "オペレーティング システムの展開の相互運用性に関する計画 | Microsoft Docs"
 description: "単一の階層内の異なる System Center Configuration Manager サイトで異なるバージョンを使用する場合の相互運用性の問題について理解します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1bcd81122c04b4f754326300365ff2c13ce7759d
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 50a4b75b8c8c1cb6f7a8e696abad285f99080fcd
 
 
 ---
@@ -74,6 +74,6 @@ ms.openlocfilehash: 1bcd81122c04b4f754326300365ff2c13ce7759d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

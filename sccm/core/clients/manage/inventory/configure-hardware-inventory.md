@@ -1,5 +1,5 @@
 ---
-title: "ハードウェア インベントリの構成 | System Center Configuration Manager"
+title: "ハードウェア インベントリの構成 | Microsoft Docs"
 description: "System Center Configuration Manager ですべてのクライアントまたは 1 つのコレクションに対してハードウェア インベントリを設定します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 41bf42228e41785a05359c08e8dfedae48d50e30
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: f39714e53e1b38c162e2c0418356d223432fdd87
 
 
 ---
@@ -51,7 +51,7 @@ System Center Configuration Manager のハードウェア インベントリを�
 
     -   **ハードウェア インベントリのスケジュール** - クライアントがハードウェア インベントリを収集する間隔を指定します。 規定値は [7 日] **** です。カスタムの間隔を構成するには、[スケジュール] **** をクリックします。  
 
-7.  必要な他のクライアント設定を構成します。 構成できるハードウェア インベントリのクライアント設定の一覧については、「[System Center Configuration Manager のクライアント設定について](../../../../core/clients/deploy/about-client-settings.md#BKMK_HardwareInventoryDeviceSettings)」トピックの「[ハードウェア インベントリ](../../../../core/clients/deploy/about-client-settings.md)」セクションを参照してください。  
+7.  必要な他のクライアント設定を構成します。 構成できるハードウェア インベントリのクライアント設定の一覧については、「[System Center Configuration Manager のクライアント設定について](../../../../core/clients/deploy/about-client-settings.md#hardware-inventory)」トピックの「[ハードウェア インベントリ](../../../../core/clients/deploy/about-client-settings.md)」セクションを参照してください。  
 
 8.  [OK] **** をクリックして [既定の設定] **** ダイアログ ボックスを閉じます。  
 
@@ -59,6 +59,6 @@ System Center Configuration Manager のハードウェア インベントリを�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

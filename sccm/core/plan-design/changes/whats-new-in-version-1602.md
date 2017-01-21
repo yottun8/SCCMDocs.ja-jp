@@ -1,5 +1,5 @@
 ---
-title: "1602 の新機能 | System Center Configuration Manager"
+title: "1602 の新機能 | Microsoft Docs"
 description: "System Center Configuration Manager のバージョン 1602 の変更点および導入された新機能について詳しく説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 0803a13bb58f0d02803c34e6a3cb20f5e6ba60b7
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 4d7b93c95730edde3af254e813c72df279c7285d
 
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1602 の新機能
@@ -114,10 +114,10 @@ System Center Configuration Manager の更新プログラム 1602 は、以前�
 
  詳細については、「[System Center Configuration Manager クライアントを使用せずに管理されている Windows 8.1 デバイスと Windows 10 デバイスの構成項目を作成する方法](../../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)」をご覧ください。  
 
-### <a name="kiosk-mode-settings-for-android-samsung-knox-devices"></a>Android Samsung KNOX デバイスのキオスク モードの設定  
- キオスク モードでは、特定の機能のみ実行できるようにデバイスをロックできます。 たとえば、指定した 1 つの管理対象アプリの実行のみをデバイスに許可することや、デバイスのボリューム ボタンを無効にすることができます。 これらの設定は、デバイスのデモ モデルや、POS デバイスなどの 1 つの機能の実行専用のデバイス向けに使用できます。 Configuration Manager では、Samsung KNOX デバイスのキオスク モードの設定を指定できるようになりました。  
+### <a name="kiosk-mode-settings-for-android-samsung-knox-standard-devices"></a>Android Samsung KNOX Standard デバイスのキオスク モードの設定  
+ キオスク モードでは、特定の機能のみ実行できるようにデバイスをロックできます。 たとえば、指定した 1 つの管理対象アプリの実行のみをデバイスに許可することや、デバイスのボリューム ボタンを無効にすることができます。 これらの設定は、デバイスのデモ モデルや、POS デバイスなどの 1 つの機能の実行専用のデバイス向けに使用できます。 Configuration Manager では、Samsung KNOX Standard デバイスのキオスク モードの設定を指定できるようになりました。  
 
- 詳細については、「[System Center Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX デバイスの構成項目を作成する方法](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)」をご覧ください。  
+ 詳細については、「[System Center Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX Standard デバイスの構成項目を作成する](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)」を参照してください。  
 
 ## <a name="conditional-access"></a>条件付きアクセス  
 
@@ -225,6 +225,6 @@ Configuration Manager では、iOS 7.1 以降を実行している監視対象�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

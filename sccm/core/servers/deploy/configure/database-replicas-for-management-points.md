@@ -1,5 +1,5 @@
 ---
-title: "管理ポイントのデータベース レプリカ | System Center Configuration Manager"
+title: "管理ポイントのデータベース レプリカ | Microsoft Docs"
 description: "管理ポイントがサイト データベース サーバーに加えられた CPU 負荷を軽減するように、データベース レプリカを使用します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a4d8af8662c907eb3b10b9e8dd4d50d954b5c19a
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 130c053c9f2a1817dd85b1f3c01285aab19d59cb
 
 
 ---
@@ -128,7 +128,7 @@ System Center Configuration Manager プライマリ サイトでは、データ�
 
         -   ConfigMgr_MPReplicaAccess: **読み取り**、**読み取りと実行**、**フォルダーの内容の一覧表示**  
 
-5.   **SQL Server Management Studio** を使用して、サイト データベースに接続し、ストアド プロシージャ **spCreateMPReplicaPublication**をクエリとして実行します。  
+5.  **SQL Server Management Studio** を使用して、サイト データベースに接続し、ストアド プロシージャ **spCreateMPReplicaPublication**をクエリとして実行します。  
 
 ストアド プロシージャが完了すると、サイト データベース サーバーはデータベースのレプリカを発行するように構成されています。  
 
@@ -513,6 +513,6 @@ Windows Server 2008 R2 コンピューターにデータベース レプリカ �
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

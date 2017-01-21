@@ -1,8 +1,8 @@
 ---
-title: "管理されている PC の O365 サービスへのアクセスを管理する | System Center Configuration Manager"
+title: "管理対象 PC の O365 サービスへのアクセスを管理する | Microsoft Docs"
 description: "System Center Configuration Manager で管理されている PC の条件付きアクセスを構成する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ccdb424a-b603-4ccc-af36-558924248022
 caps.latest.revision: 15
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: da5fcd65d7af8d73aa23f4a7d96cd8fc6e48f9dc
 
 
 ---
@@ -30,7 +30,7 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
  Configuration Manager のバージョン 1602 より、System Center Configuration Manager によって管理されている PC の条件付きアクセスを構成することができます。  
 
 > [!IMPORTANT]  
->  これは、更新プログラム 1602 と更新プログラム 1606 で使用できるプレリリース機能です。 プレリリース機能は、運用環境での早期テストのためにこの製品に含まれていますが、運用環境で使用することはできません。 詳細については、「[更新プログラムからプレリリース機能を使用する](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease)」を参照してください。
+>  これは、更新プログラム 1602、更新プログラム 1606、更新プログラム 1610 で使用できるプレリリース機能です。 プレリリース機能は、運用環境での早期テストのためにこの製品に含まれていますが、運用環境で使用することはできません。 詳細については、「[更新プログラムからプレリリース機能を使用する](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease)」を参照してください。
 > - 更新プログラム 1602 をインストールすると、プレリリース機能であっても機能の種類はリリース済みとして表示されます。
 > - その後 1602 から 1606 に更新した場合、プレリリース機能のままですが、機能の種類はリリース済みとして表示されます。
 > - バージョン 1511 から 1606 に直接更新した場合、機能の種類はプレリリースとして表示されます。
@@ -96,16 +96,16 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
 
  Active Directory セキュリティ ユーザー グループ。 これらのユーザー グループは、Azure Active Directory に同期される必要があります。 これらのグループを Office 365 管理センターまたは Intune アカウント ポータルで構成することもできます。  
 
- 各ポリシーには、次の 2 つのグループの種類を指定できます。  
+ 各ポリシーには、次の 2 つのグループの種類を指定できます。 :  
 
--   **対象グループ** – ポリシーが適用されるユーザー グループ  
+-   **対象グループ** – ポリシーが適用されるユーザー グループ。 コンプライアンスと条件付きアクセス ポリシーの両方に同じグループを使用してください。  
 
 -   **例外グループ** – ポリシーから除外されるユーザー グループ (省略可能)  
     ユーザーが両方に含まれている場合は、ポリシーから除外されます。  
 
      条件付きアクセス ポリシーの対象となるグループだけが評価されます。  
 
-### <a name="step-3-create-a-conditional-access-policy-for-exchange-online-and-sharepoint-online"></a>手順 3.  Exchange Online および SharePoint Online の条件付きアクセス ポリシーを作成します。  
+### <a name="step-3--create-a-conditional-access-policy-for-exchange-online-and-sharepoint-online"></a>手順 3.  Exchange Online および SharePoint Online の条件付きアクセス ポリシーを作成します。  
 
 1.  Configuration Manager コンソールで、 **[資産とコンプライアンス]**をクリックします。  
 
@@ -126,7 +126,7 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
 6.  **[対象グループ]**で、 **[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。  
 
     > [!NOTE]  
-    >  条件付きアクセス ポリシーが適用されるユーザー グループには、コンプライアンス ポリシーも適用されている必要があります。  
+    >  コンプライアンス ポリシーの展開と条件付きアクセス ポリシーの対象グループに同じセキュリティ ユーザー グループを使用してください。  
 
      **[例外グループ]**で、必要に応じて **[変更]** をクリックして、このポリシーから除外する Azure Active Directory セキュリティ グループを選択します。  
 
@@ -148,6 +148,6 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

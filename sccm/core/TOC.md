@@ -87,7 +87,8 @@
 ##   [ラボでの Configuration Manager の評価](get-started/evaluate-with-lab-environment.md)
 ###  [ラボのセットアップ](get-started/set-up-your-lab.md)
 
-##   [Technical Preview](get-started/technical-preview.md)
+##   [Technical Preview](get-started/technical-preview.md) 
+###  [1612 の機能](get-started/capabilities-in-technical-preview-1612.md)
 ###  [1611 の機能](get-started/capabilities-in-technical-preview-1611.md)
 ###  [1610 の機能](get-started/capabilities-in-technical-preview-1610.md)
 ###  [1609 の機能](get-started/capabilities-in-technical-preview-1609.md)
@@ -300,6 +301,6 @@
 ###  [Upgrade analytics](clients/manage/upgrade/upgrade-analytics.md) (アップグレード分析)
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

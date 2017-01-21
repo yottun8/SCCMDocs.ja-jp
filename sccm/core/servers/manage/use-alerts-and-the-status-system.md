@@ -1,5 +1,5 @@
 ---
-title: "アラートとステータス システム | System Center Configuration Manager"
+title: "アラートとステータス システム | Microsoft Docs"
 description: "アラートを構成し、組み込みステータス システムを使用して、Configuration Manager 展開の状態について常に通知される状態にします。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: dda2e3af6ae14a949af5c70f300f8c7c6772e1a8
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: ed692bdea055775890535d2666f09ba5f5c7c4e1
 
 
 ---
@@ -95,7 +95,7 @@ ms.openlocfilehash: dda2e3af6ae14a949af5c70f300f8c7c6772e1a8
 
     5.  ストレージ オブジェクトを削除するには、オブジェクトを選択して [削除] ボタンをクリックします。 ****  
 
-    6.  手順 7.b ～ 7.e を繰り返します  必要に応じて。 作業が完了したら [OK] をクリックして、要約機能のプロパティを閉じます。 ****  
+    6.  手順 7.b ～ 7.e を繰り返します 必要に応じて。 作業が完了したら [OK] をクリックして、要約機能のプロパティを閉じます。 ****  
 
     7.  [ **OK** ] をクリックして [ **ステータス サマライザー** ] ダイアログ ボックスを閉じ、この手順を完了します。  
 
@@ -313,6 +313,6 @@ ms.openlocfilehash: dda2e3af6ae14a949af5c70f300f8c7c6772e1a8
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

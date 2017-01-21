@@ -1,6 +1,6 @@
 ---
 
-title: "Endpoint Protection の構成 | System Center Configuration Manager"
+title: "Endpoint Protection の構成 | Microsoft Docs"
 description: "System Center Configuration Manager で Endpoint Protection を使用する方法を選択および構成し、クライアント コンピューターでマルウェア対策定義を最新の状態に保つ方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7988eb84d1384dbf1a3201a6a6e47aefdfbea447
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 9085a4daed409eeff4c95e5c467f123d0a38147a
 
 
 
@@ -76,6 +76,6 @@ ms.openlocfilehash: 7988eb84d1384dbf1a3201a6a6e47aefdfbea447
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

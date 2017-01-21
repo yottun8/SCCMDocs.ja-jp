@@ -1,5 +1,5 @@
 ---
-title: "コンテンツの移行 | System Center Configuration Manager"
+title: "コンテンツの移行 | Microsoft Docs"
 description: "配布ポイントを使用すると、System Center Configuration Manager の移行先階層にデータを移行している間にコンテンツを管理できます。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: aa88f18247b49995bff4a4a6f5fd1e1ed70ca214
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: c96fa0995b5de87f50e1146b338058f26daeb624
 
 
 ---
@@ -188,8 +188,23 @@ Configuration Manager コンソールの [**ソース階層**] ノードで再�
 
  配布ポイントを再割り当てするために、移行先階層は構成されている [ソース サイトのアクセス アカウント] を使用して、ソース サイトの SMS プロバイダーからデータを収集します。 必要なアクセス許可と追加の前提条件については、「[Prerequisites for migration in System Center Configuration Manager](../../core/migration/prerequisites-for-migration.md)」(System Center Configuration Manager の移行の前提条件) を参照してください。  
 
+## <a name="migrate-multiple-shared-distribution-points-at-the-same-time"></a>複数の共有配布ポイントを同時に移行する
+バージョン 1610 より、**配布ポイントを再割り当てする**オプションを利用し、Configuration Manager に、最大 50 の共有配布ポイントの同時再割り当てを並列処理させることができます。 これには、次を実行するソース サイトの共有配布ポイントが含まれます。  
+- Configuration Manager 2007
+- System Center 2012 Configuration Manager
+- System Center 2012 R2 Configuration Manager
+- System Center Configuration Manager Current Branch サイト
+
+配布ポイントを再割り当てするとき、各配布ポイントにアップグレードまたは再割り当ての資格を与える必要があります。 関係するアクションとプロセスの名称 (アップグレードまたは再割り当て) は、ソース サイトで実行される Configuration Manager のバージョンに依存します。 ただし、アップグレードでも、再割り当てでも、最終的な結果は同じです。配布ポイントが Current Branch サイトの 1 つに割り当てられ、コンテンツが配置されます。
+
+バージョン 1610 より前の場合、Configuration Manager で処理できる配布ポイントは一度に 1 つでした。 今では任意の数の配布ポイントを再割り当てできるようになりました (次の注意があります)。  
+- 再割り当てする配布ポイントを複数選択することはできませんが、複数の配布ポイントを待ち行列に入れると、Configuration Manager では、1 つの完了を待ってから次を始めるのではなく、複数の配布ポイントを並列処理します。  
+- 既定では、最大 50 の配布ポイントが一度に並列処理されます。 最初の配布ポイントの再割り当てが完了すると、Configuration Manager は 51 番目の処理を開始し、以降、同様に続けます。  
+- Configuration Manager SDK を使用するとき、**SharedDPImportThreadLimit** プロパティを変更し、Configuration Manager で並列処理できる、再割り当て配布ポイントの数を調整できます。
+
+
 ##  <a name="a-nameaboutmigratingcontenta-content-ownership-when-migrating-content"></a><a name="About_Migrating_Content"></a> コンテンツを移行するときのコンテンツの所有権  
- 展開のためにコンテンツを移行する場合は、コンテンツ オブジェクトを移行先階層内のサイトに割り当てる必要があります。 このサイトが移行先階層内のコンテンツの所有者になります。 移行先階層の最上位サイトは、コンテンツのメタデータを実際に移行するサイトですが、ネットワーク経由でコンテンツの元のソース ファイルにアクセスするのは、割り当てられているサイトです。  
+ 展開のためにコンテンツを移行する場合は、コンテンツ オブジェクトを移行先階層内のサイトに割り当てる必要があります。 このサイトが移行先階層内のコンテンツの所有者になります。 移行先階層の最上位サイトは、コンテンツのメタデータを移行するサイトですが、ネットワーク経由でコンテンツの元のソース ファイルにアクセスするのは、割り当てられているサイトです。  
 
  コンテンツを移行するときに使用されるネットワーク帯域幅を最小限に抑えるために、コンテンツの所有権をソース階層のコンテンツの場所にネットワーク上で近い移行先階層のサイトに移動することを検討します。 移行先階層のコンテンツに関する情報はグローバルに共有されるため、すべてのサイトで利用できます。  
 
@@ -197,6 +212,6 @@ Configuration Manager コンソールの [**ソース階層**] ノードで再�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

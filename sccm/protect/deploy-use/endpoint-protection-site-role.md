@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection の構成 | System Center Configuration Manager"
+title: "Endpoint Protection の構成 | Microsoft Docs"
 description: "構成マネージャー クライアント コンピューターのセキュリティとマルウェアを管理するように Endpoint Protection を構成する方法について説明します。"
 defintion: 
 definition: 
@@ -18,8 +18,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 3346a5ed596a62b0a74774a568739228d75ac050
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 4639203bf5e90486ce4b97abc2fc4f54eae3afe9
 
 
 ---
@@ -98,6 +98,6 @@ ms.openlocfilehash: 3346a5ed596a62b0a74774a568739228d75ac050
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

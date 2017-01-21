@@ -1,5 +1,5 @@
 ---
-title: "タスクの自動化計画に関する考慮事項 | Configuration Manager"
+title: "タスクの自動化計画に関する考慮事項 | Microsoft Docs"
 description: "System Center Configuration Manager でのタスクの自動化の前の計画"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a439d847adb129a341b33be8e1a1674c72184e77
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 830f715b688cc9929a179da94eba9c81de8db11a
 
 
 ---
@@ -183,7 +183,7 @@ System Center Configuration Manager 環境でタスクを自動化するため�
 > [!TIP]  
 >  タスク シーケンスによって、パッケージ ID と起動前コマンドライン (タスク シーケンスの変数の値を含む) が、Configuration Manager コンソールを実行しているコンピューターの CreateTSMedia.log というログ ファイルに書き込まれます。 このログ ファイルで、タスク シーケンスの変数の値を確認できます。  
 
-##  <a name="a-namebkmktscreatea-create-a-task-sequence"></a><a name="BKMK_TSCreate"></a> タスク シーケンスの作成  
+##  <a name="a-namebkmktscreatea-create-a--task-sequence"></a><a name="BKMK_TSCreate"></a> タスク シーケンスの作成  
  タスク シーケンスの作成ウィザードを使用して、タスク シーケンスを作成します。 ウィザードでは、特定のタスクを実行する組み込みタスク シーケンスまたはさまざまな異なるタスクを実行できるカスタム タスク シーケンスを作成できます。  
 
  たとえば、参照コンピューターからオペレーティング システム イメージを構築してキャプチャするタスク シーケンス、既存のオペレーティング システム イメージを展開先コンピューターにインストールするタスク シーケンス、またはカスタム タスクを実行するカスタム タスク シーケンスを作成できます。 カスタム タスク シーケンスを使用すると、特殊なオペレーティング システムの展開を実行できます。  
@@ -326,6 +326,6 @@ System Center Configuration Manager 環境でタスクを自動化するため�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

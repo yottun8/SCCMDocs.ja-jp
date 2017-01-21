@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection クライアントのよく寄せられる質問 | System Center Configuration Manager"
+title: "Endpoint Protection クライアントのよく寄せられる質問 | Microsoft Docs"
 description: "Windows Defender と Endpoint Protection についてよく寄せられる質問に回答します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d19e3bd20645bbde6f6f10b86b517a159cedc99c
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: f0352e59390ade7212a64cf0de883bbb1ca28bab
 
 
 ---
@@ -279,6 +279,6 @@ Windows Defender によって検出された望ましくない項目または有
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

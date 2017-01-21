@@ -1,5 +1,5 @@
 ---
-title: "サイズとスケール | System Center Configuration Manager"
+title: "サイズとスケール | Microsoft Docs"
 description: "System Center Configuration Manager 環境でデバイスをサポートするために必要になるサイト システムの役割とサイトの数を特定します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: aeeb902fad7444534cafa7f9cb984ce8764471b0
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 453d934d693d58e98cf800988dff702400daaf95
 
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイズとスケールの数
@@ -190,6 +190,6 @@ System Center Configuration Manager の各展開には、サポートできる�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

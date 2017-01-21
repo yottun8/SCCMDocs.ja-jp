@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager の Technical Preview 1608 の機能"
+title: "System Center Configuration Manager の Technical Preview 1608 の機能 | Microsoft Docs"
 description: "System Center Configuration Manager の Technical Preview バージョン 1608 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4d548f097f0d0b80ca314384c345f9bcd08fbc14
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: c41409e957f43aee3be994ab3e702232c7dfe6ea
 
 ---
 # <a name="capabilities-in-technical-preview-1608-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1608 の機能
@@ -65,6 +65,6 @@ ConfigMgr クライアントの準備手順で、キー情報だけではなく�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

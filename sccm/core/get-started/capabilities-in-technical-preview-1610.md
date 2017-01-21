@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager の Technical Preview 1610 の機能"
+title: "System Center Configuration Manager の Technical Preview 1610 の機能 | Microsoft Docs"
 description: "System Center Configuration Manager の Technical Preview バージョン 1610 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 10/21/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c9fe6961a63495d08a3e58e3ddf46c5d316e2613
-ms.openlocfilehash: 865b5078282bf240aa6a2aef5cb2662f2471fb71
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 6ffcb33e94f942fc9400457d3f16b65e12332956
 
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1610 の機能
@@ -82,7 +82,6 @@ Technical Preview 1610 では、クライアントのコレクションを更新
 > [!NOTE]
 > ユーザー インターフェイスにどの方法でもクライアントがアップグレードされないことが示されますが、これらの設定を無効にするために使用できる 2 つの方法があります。 クライアント プッシュ インストールと手動クライアント インストールを使用すると、この設定を無効にできます。 詳細については、次のセクションを参照してください。
 
-
 ### <a name="how-to-upgrade-a-client-that-is-in-an-excluded-collection"></a>除外されるコレクション内にあるクライアントをアップグレードする方法
 コレクションが除外されるように設定されている限り、そのコレクションのメンバーは、除外を無効にする 2 つの方法のいずれかでクライアント ソフトウェアを更新することしかできません。
  - **クライアント プッシュ インストール**: クライアント プッシュ インストールを使用して、除外されるコレクション内にあるクライアントをアップグレードすることができます。 これは管理者の意図と見なされるために許可され、除外からコレクション全体を削除しなくてもクライアントをアップグレードすることができます。       
@@ -92,12 +91,80 @@ Technical Preview 1610 では、クライアントのコレクションを更新
 
 クライアント インストール方法の詳細については、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)」をご覧ください。
 
+## <a name="windows-defender-configuration-settings"></a>Windows Defender の構成設定
+
+Configuration Manager コンソールの構成項目を使用して、Intune に登録されている Windows 10 コンピューターで Windows Defender クライアント設定を構成できるようになりました。
+
+具体的には、Windows Defender の次の設定を構成できます。
+- リアルタイム監視を許可する
+- 動作監視を許可する
+- ネットワーク検査システムを有効にする
+- すべてのダウンロードをスキャンする
+- スクリプトのスキャンを許可する
+- ファイルとプログラムのアクティビティを監視する
+  - 監視されるファイル
+- 解決済みマルウェアを追跡する日数
+- クライアント UI アクセスを許可する
+- システム スキャンを予定に入れる
+  - スケジュールされた日
+  - スケジュールされた時刻
+- 毎日のクイック スキャンのスケジュール
+  - スケジュールされた時刻
+- スキャン中の CPU 使用率 (%) を制限するアーカイブ ファイルをスキャンする
+- 電子メール メッセージをスキャンする
+- リムーバブル ドライブをスキャンする
+- マップされたドライブをスキャンする
+- ネットワーク共有から開かれたファイルをスキャンする
+- 署名更新間隔
+- クラウド保護を許可する
+- ユーザーにサンプルの入力を求める
+- 望ましくない可能性のあるアプリケーションの検出
+- 除外されたファイル/フォルダー
+- 除外されたファイルの拡張子
+- 除外されたプロセス
+
+> [!NOTE]
+> これらの設定は、Windows 10 の 11 月の更新プログラム (1511) またはそれ以降の更新プログラムを実行しているコンピューターでのみ構成することができます。
+
+### <a name="try-it-out"></a>試してみましょう。
+
+1.  Configuration Manager コンソールで、[**資産とコンプライアンス**] > [**概要**] > [**コンプライアンス設定**] > [**構成項目**] の順に移動し、新しい [**構成項目**] を作成します。
+2.  名前を入力し、[**Configuration Manager クライアントを使用しないで管理されるデバイスの設定**] で [**Windows 8.1 および Windows 10**] を選択し、[**次へ**] をクリックします。
+3.  [**すべての Windows 10 (64 ビット)**] と [**すべての Windows 10 (32 ビット)**] が [**サポートされているプラットフォーム**] ページで選択されていることを確認し、[**次へ**] をクリックします。
+4.  [**Windows Defender**] 設定グループを選択し、[**次へ**] をクリックします。
+5.  このページで目的の設定を構成し、[**次へ**] をクリックします。
+6.  ウィザードを完了します。
+7.  この構成項目を構成基準に追加し、さらにこの基準を Windows 10 の 11 月の更新プログラム (1511) またはそれ以降の更新プログラムを実行しているコンピューターに展開します。
+
+> [!NOTE]
+> 構成基準を展開する場合は、[**対応していない設定を修復する**] チェック ボックスをオンにすることを忘れないでください。
+
+## <a name="request-policy-sync-from-administrator-console"></a>管理者コンソールからのポリシー同期の要求
+
+Configuration Manager コンソールから、モバイル デバイスのポリシー同期を要求できるようになりましたので、デバイス自体から同期を要求する必要はありません。 同期要求の状態に関する情報は、デバイス ビュー内に [**Remote Sync State**] (リモート同期の状態) と呼ばれる新しい列として表示されます。 状態はまた、各モバイル デバイスの [**プロパティ**] ダイアログ ボックスの [**探索データ**] セクションにも表示されます。
+
+### <a name="try-it-out"></a>試してみましょう。
+
+1.  Configuration Manager コンソールで、[**資産とコンプライアンス**] > [**概要**] > [デバイス] の順に移動します。
+2.  [**リモート デバイスの操作**] メニューの [**同期要求の送信**] をクリックします。
+
+同期には 5 ～ 10 分かかることがあります。 ポリシーに変更が生じると、デバイスに反映されます。 同期要求の状態は、[**デバイス**] ビューの [**Remote Sync State**] (リモート同期の状態) 列で、またはデバイスの [**プロパティ**] ダイアログ ボックスで把握できます。
+
+## <a name="additional-security-role-support"></a>追加のセキュリティ ロールのサポート
+
+完全な権限を持つ管理者に加えて、次の組み込みのセキュリティ ロールが、**事前に宣言されたデバイス**、**iOS 登録プロファイル**、および **Windows 登録プロファイル**を含む**すべての企業所有のデバイス** ノードの項目にフル アクセスできるようになりました。• **資産マネージャー** • **会社リソース アクセス マネージャー**
+
+Configuration Manager コンソールのこれらの領域への読み取り専用アクセスは、引き続き**読み取り専用アナリスト** ロールに与えられます。
+
+## <a name="conditional-access-for-windows-10-vpn-profiles"></a>Windows 10 VPN プロファイルの条件付きアクセス
+
+Configuration Manager コンソールで作成した Windows 10 VPN プロファイル経由で VPN アクセスできるようにするためには、Azure Active Directory に登録された Windows 10 デバイスを対応させる必要があります。 これは、VPN プロファイル ウィザードの [**認証方法**] ページの新しい [**この VPN 接続の条件付きアクセスを有効にする**] チェックボックスおよび Windows 10 VPN プロファイルの VPN プロファイルのプロパティによって可能です。 プロファイルの条件付きアクセスを有効にした場合、シングル サインオン認証用の別の証明書を指定することもできます。
 
 ## <a name="see-also"></a>関連項目
 [System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

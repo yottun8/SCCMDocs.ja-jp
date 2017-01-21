@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager の Technical Preview 1605 の機能"
+title: "System Center Configuration Manager の Technical Preview 1605 の機能 | Microsoft Docs"
 description: "System Center Configuration Manager の Technical Preview バージョン 1605 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 0137d6e2c69480d6de88fbf8fa3450d1699007e5
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 06741d03e208c6f5c8093130780dcdc8f0fcfbf7
 
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1605 の機能
@@ -273,7 +273,7 @@ ms.openlocfilehash: 0137d6e2c69480d6de88fbf8fa3450d1699007e5
 
 -   [**アプリケーション**] タブは、[**更新**]、[**オペレーティング システム**] (どちらも以前は [**フィルター**] 一覧にありました)、および [**アプリケーション**] の 3 つの別々のタブに分割されています。  
 
-##  <a name="a-namebkmkservergroupsa-service-a-server-group"></a><a name="BKMK_ServerGroups"></a> サーバー グループの提供  
+##  <a name="a-namebkmkservergroupsa-service-a--server-group"></a><a name="BKMK_ServerGroups"></a> サーバー グループの提供  
  System Center Configuration Manager の Technical Preview バージョン 1511 には、コレクション内のすべてのデバイスがサーバー グループを構成するコレクションを作成する機能が含まれていました。 そして、サーバー グループにソフトウェアの更新プログラムを展開するときに使用するサーバー グループ設定を構成する、特定の時間に更新されるコンピューターの割合を制御する、および展開前および展開後の PowerShell スクリプトを構成してカスタム アクションを実行することができました。  
 
  System Center Configuration Manager の Technical Preview バージョン 1605 では、サーバー グループ内のコンピューターを定義した順番で更新できる機能と、サーバー グループ内のコンピューターの状態を表示するため強化された監視が追加されています。また、クライアントがソフトウェア更新プログラムのインストールに失敗し、他のクライアントのソフトウェア更新プログラムのインストールを妨げている場合に便利な、展開ロックを解除する機能も提供されています。  
@@ -472,6 +472,6 @@ ms.openlocfilehash: 0137d6e2c69480d6de88fbf8fa3450d1699007e5
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

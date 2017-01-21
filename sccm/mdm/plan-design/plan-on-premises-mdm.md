@@ -1,5 +1,5 @@
 ---
-title: "オンプレミス MDM の計画 | System Center Configuration Manager"
+title: "オンプレミス MDM の計画 | Microsoft Docs"
 description: "System Center Configuration Manager でモバイル デバイスを管理するために、オンプレミス モバイル デバイス管理を計画します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6bc3bf68d098fec7b6ac976d8e7ee7a7d71fab6a
+ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
+ms.openlocfilehash: cc5b04dc41b13993fca35f202437b71e96bc9cdd
 
 
 ---
@@ -40,7 +40,7 @@ Configuration Manager のインフラストラクチャでオンプレミス モ
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise   
 
-##  <a name="a-namebkmkintunea-use-of-the-microsoft-intune-subscription"></a><a name="bkmk_intune"></a> Microsoft Intune サブスクリプションの使用  
+##  <a name="a-namebkmkintunea-use-of-the--microsoft-intune-subscription"></a><a name="bkmk_intune"></a> Microsoft Intune サブスクリプションの使用  
  オンプレミス モバイル デバイス管理の使用を開始するには、Microsoft Intune のサブスクリプションが必要です。 このサブスクリプションは、デバイスのライセンスの追跡にのみ必要のみがあり、デバイスの管理情報の管理や格納には使用されません。 すべての管理は、オンプレミスの Configuration Manager インフラストラクチャを使用して組織のエンタープライズで処理されます。  
 
 > [!IMPORTANT]  
@@ -122,6 +122,6 @@ Configuration Manager のインフラストラクチャでオンプレミス モ
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

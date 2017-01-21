@@ -1,5 +1,5 @@
 ---
-title: "Wi-Fi および VPN プロファイルのセキュリティとプライバシー | System Center Configuration Manager"
+title: "Wi-Fi および VPN プロファイルのセキュリティとプライバシー | Microsoft Docs"
 description: "System Center Configuration Manager でデバイスの Wi-Fi および VPN プロファイルを管理する場合のセキュリティのベスト プラクティスについて説明します。"
 ms.custom: na
 ms.date: 10/19/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 32dff36aa8027b0563b999e7fe6ef41d0eb79020
-ms.openlocfilehash: b9d70018708ab5932a3032134b03aef236ef9fda
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: fb168e3af33648e06c2c6be77ddd7d0c1f65d95d
 
 
 ---
@@ -29,7 +29,7 @@ ms.openlocfilehash: b9d70018708ab5932a3032134b03aef236ef9fda
 
 このトピックには、System Center Configuration Manager の Wi-Fi および VPN プロファイルのセキュリティとプライバシーの情報が含まれています。  
 
-##  <a name="a-namebkmksecurityremoteconnectionsa-security-best-practices-for-wi-fi-and-vpn-profiles"></a><a name="BKMK_Security_RemoteConnections"></a> Wi-Fi および VPN プロファイルのセキュリティのベスト プラクティス  
+##  <a name="a-namebkmksecurityremoteconnectionsa-security-best-practices-for-wi-fi--and-vpn-profiles"></a><a name="BKMK_Security_RemoteConnections"></a> Wi-Fi および VPN プロファイルのセキュリティのベスト プラクティス  
  デバイスの Wi-Fi および VPN プロファイルを管理するときは、次のようなセキュリティのベスト プラクティスに従ってください。  
 
 |セキュリティのベスト プラクティス|説明|  
@@ -45,6 +45,6 @@ ms.openlocfilehash: b9d70018708ab5932a3032134b03aef236ef9fda
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

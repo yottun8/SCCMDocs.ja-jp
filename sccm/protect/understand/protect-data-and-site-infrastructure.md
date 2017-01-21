@@ -1,8 +1,8 @@
 ---
-title: "データとサイト インフラストラクチャの保護 | System Center Configuration Manager"
+title: "データとサイト インフラストラクチャの保護 | Microsoft Docs"
 description: "System Center Configuration Manager で組織のリソースを漏洩や悪意のある攻撃から保護する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 366a3626e2ab4894bbb515176890d508761b6561
+ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
+ms.openlocfilehash: c80750358d64cf87f8a3ce3a4c4f4030a9dfd742
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 366a3626e2ab4894bbb515176890d508761b6561
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 
-インフラストラクチャとデータの両方が公開や悪意のある攻撃から保護されるように、ユーザーが組織のリソースに安全にアクセスできるようにします。 次のトピックでは、そのアクセスを有効にする方法と組織のリソースを保護する方法を説明します。  
+インフラストラクチャとデータの両方が公開や悪意のある攻撃から保護されるように、ユーザーが組織のリソースに安全にアクセスできるようにします。 これらのトピックでは、System Center Configuration Manager (ConfigMgr、SCCM とも呼ばれます) を使用して、安全にアクセスできるようにする方法と、組織のリソースを保護する方法について説明します。  
 
 -   VPN プロファイルを使用して VPN 接続を有効にすると、企業リソースに接続するためのユーザーの作業を最小化できます。 詳細については、「[System Center Configuration Manager の VPN プロファイル](../deploy-use/vpn-profiles.md)」を参照してください。  
 
@@ -44,6 +44,6 @@ ms.openlocfilehash: 366a3626e2ab4894bbb515176890d508761b6561
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

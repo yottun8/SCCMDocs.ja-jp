@@ -1,5 +1,5 @@
 ---
-title: "移行チェックリスト | System Center Configuration Manager"
+title: "移行チェックリスト | Microsoft Docs"
 description: "監理者チェックリストを利用すると、System Center Configuration Manager への移行方針を計画するときに便利です。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f3912de04aa3e6196137a7034753013c35180d64
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
 
 ---
@@ -147,7 +147,7 @@ ms.openlocfilehash: f3912de04aa3e6196137a7034753013c35180d64
 
     たとえば、コンテンツを移行する場合、使用する移行ジョブにかかわらず、移行先階層内のサイトを、そのコンテンツの管理のために割り当てる必要があります。 この割り当てられたサイトは、コンテンツの元のソース ファイルがある場所にアクセスします。また、このサイトには、そのコンテンツを移行先階層内の配布ポイントに配布する役割があります。  
 
-    詳細については、「 [Create and Edit Migration Jobs for System Center Configuration Manager](../../core/migration/operations-for-migration.md#create_edit_migration_jobs) 」トピックの「 [Operations for migrating to System Center Configuration Manager](../../core/migration/operations-for-migration.md) 」セクションを参照してください。  
+    詳細については、「 [Create and Edit Migration Jobs for System Center Configuration Manager](../../core/migration/operations-for-migration.md#Create_Edit_migration_Jobs) 」トピックの「 [Operations for migrating to System Center Configuration Manager](../../core/migration/operations-for-migration.md) 」セクションを参照してください。  
 
 -   **クライアントを移行先階層に移行する。**  
 
@@ -167,7 +167,7 @@ ms.openlocfilehash: f3912de04aa3e6196137a7034753013c35180d64
 
     さらに、セカンダリ サイト サーバーに併置されている Configuration Manager 2007 の配布ポイントをアップグレードすることもできます。 この操作により、セカンダリ サイトが削除され、移行先階層の配布ポイントが唯一の配布ポイントになります。  
 
-    共有配布ポイントの詳細については、「 [Share Distribution Points Between Source and Destination Hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#about_shared_dps_in_migrations) 」トピックの「 [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) 」セクションを参照してください。  
+    共有配布ポイントの詳細については、「 [Share Distribution Points Between Source and Destination Hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) 」トピックの「 [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) 」セクションを参照してください。  
 
 -   **移行の完了:**  
 
@@ -175,6 +175,6 @@ ms.openlocfilehash: f3912de04aa3e6196137a7034753013c35180d64
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

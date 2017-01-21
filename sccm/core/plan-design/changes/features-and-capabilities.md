@@ -1,5 +1,5 @@
 ---
-title: "特徴と機能 | System Center Configuration Manager"
+title: "特徴と機能 | Microsoft Docs"
 description: "System Center Configuration Manager の主な管理機能について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc40912a3da034ac0e3f84c72593aa4a9df8d057
-ms.openlocfilehash: c558148104b6338e4038bf690491c88e76dfdcaf
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 851029368d97312ef2766505f933eac72d6950e5
 
 
 ---
@@ -58,7 +58,7 @@ System Center Configuration Manager の主な管理機能について次に説�
 
 **Microsoft Intune を使用したモバイル デバイスの管理**  
 
- Configuration Manager を使用すると、インターネット経由で Microsoft Intune サービスを利用して、iOS、Android (Samsung KNOX など)、Windows Phone、および Windows デバイスを管理することができます。
+ Configuration Manager を使用すると、インターネット経由で Microsoft Intune サービスを利用して、iOS、Android (Samsung KNOX Standard など)、Windows Phone、および Windows デバイスを管理することができます。
 
  Intune サービスを使用しますが、管理作業は Configuration Manager コンソール経由で使用可能なサービス接続ポイントのサイト システムの役割を使って実施します。 「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)」をご覧ください。  
 
@@ -104,6 +104,6 @@ System Center Configuration Manager の主な管理機能について次に説�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

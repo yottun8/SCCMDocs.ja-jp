@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager のプライバシーに関する声明 - Configuration Manager Cmdlet Library"
+title: "System Center Configuration Manager のプライバシーに関する声明 - 詳細情報 | Microsoft Docs"
 description: "System Center Configuration Manager 展開からデータを Microsoft が収集して使用する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -36,8 +36,8 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: bcac4e2b6f8377a27417cb2519814ad9e74ee542
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 613b7dbf81de84129e113468d554d8430cbc3182
 
 ---
 # <a name="additional-information-about-privacy-for-system-center-configuration-manager"></a>System Center Configuration Manager のプライバシーに関する詳細
@@ -97,7 +97,7 @@ Microsoft Cloud Protection Service が意図的に個人情報を収集するこ
 
 収集されるデータに関する詳細は、[http://go.microsoft.com/fwlink/?LinkId=823547](http://go.microsoft.com/fwlink/?LinkId=823547) にある製品ドキュメントで確認できます。
 
-## <a name="site-hierarchy-geographical-view-with-bing-maps"></a>サイト階層 – Bing Maps を使用した地図
+## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>サイト階層 – Bing Maps を使用した地図
 サイト階層の地図機能では、Microsoft Bing Maps の提供する地図を使って Configuration Manager 物理サーバー トポロジを表示できます。 この機能を実現するために、お客様の入力した場所情報が、サーバーから Bing Maps の Web サービスに送信されます。
 
 マイクロソフトではこの情報を、Microsoft Bing Maps およびその他の Microsoft のサイトとサービスを提供および向上するために役立てています。 詳細については、「Microsoft プライバシーに関する声明」(http://go.microsoft.com/fwlink/?LinkId=823548) を参照してください。
@@ -114,6 +114,6 @@ Microsoft Intune に接続されるデバイスを管理するために、一部
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

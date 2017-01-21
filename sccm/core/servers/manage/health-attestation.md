@@ -1,5 +1,5 @@
 ---
-title: "正常性構成証明書 | System Center Configuration Manager"
+title: "正常性構成証明書 | Microsoft Docs"
 description: "Configuration Manager コンソールに表示できるデバイス正常性構成証明書の機能について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7f3c95983f28d58bd0503570df9dc3b229059e82
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 937a168f79168b3e3a3a578513814abb2b368d9f
 
 
 ---
@@ -62,7 +62,7 @@ System Center Configuration Manager の現在のブランチであるバージ�
 
 1.  Configuration Manager コンソールで、**[管理]**  >  **[概要]**  >  **[クライアント設定]** を選択します。  **[コンピューター エージェント]** 設定のタブを選択します。  
 
-2.   **[既定の設定]** ダイアログ ボックスで、 **[コンピューター エージェント]** を選択して、 **[正常性構成証明書サービスとの通信を有効にする]**まで下にスクロールします。  
+2.  **[既定の設定]** ダイアログ ボックスで、 **[コンピューター エージェント]** を選択して、 **[正常性構成証明書サービスとの通信を有効にする]**まで下にスクロールします。  
 
 3.  **[正常性構成証明書サービスとの通信を有効にする]** を **[はい]**に設定し、 **[OK]**をクリックします。  
 
@@ -85,6 +85,6 @@ System Center Configuration Manager の現在のブランチであるバージ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "コンテンツ インフラストラクチャ | System Center Configuration Manager"
+title: "コンテンツ インフラストラクチャ | Microsoft Docs"
 description: "System Center Configuration Manager のコンテンツ管理インフラストラクチャを展開して管理する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ad009200bc410078cc32908d241c3e02992a61d8
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 35247425252cb3724de2871d713f08469e72555a
 
 
 ---
@@ -36,6 +36,6 @@ System Center Configuration Manager のコンテンツ管理インフラスト�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

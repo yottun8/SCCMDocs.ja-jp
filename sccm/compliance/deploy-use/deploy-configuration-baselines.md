@@ -1,5 +1,5 @@
 ---
-title: "構成基準の展開 | System Center Configuration Manager"
+title: "構成基準を展開する | Microsoft Docs"
 description: "構成基準を展開し、構成基準の展開の定義や、展開に対する構成基準の追加や削除を行います。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 47aad22bc88d3a466767e4d131122fbee38e3fd7
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: 9c9e6b7780c7c10c20a60dbbbf506e916031eb88
 
 
 ---
@@ -60,6 +60,6 @@ System Center Configuration Manager の構成基準は、1 つまたは複数の
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

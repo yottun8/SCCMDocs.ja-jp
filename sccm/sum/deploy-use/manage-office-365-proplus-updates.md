@@ -1,12 +1,11 @@
 ---
-
-title: "Office 365 ProPlus の更新プログラムの管理 | Configuration Manager"
+title: "Office 365 ProPlus 更新プログラムの管理 | Microsoft Docs"
 description: "Configuration Manager が WSUS カタログからサイト サーバーに Office 365 のクライアント更新プログラムを同期したら、その更新プログラムをクライアントに展開できるようになります。"
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 11/10/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,9 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 58a551425591332264592713fa3cc4e04d9939aa
-
+ms.sourcegitcommit: 5415bfa0ac4af14891a9445cdeab6a4509fffc38
+ms.openlocfilehash: 630ccdf7b7f45a88586c9ab530c164985267bec9
 
 ---
 
@@ -25,6 +23,32 @@ ms.openlocfilehash: 58a551425591332264592713fa3cc4e04d9939aa
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 Configuration Manager バージョン 1602 以降では、ソフトウェア更新管理のワークフローを使用して、Office 365 クライアントの更新プログラムを管理できます。 マイクロソフトが Office コンテンツ配信ネットワーク (CDN) に対する新しい Office 365 のクライアント更新プログラムを公開するときには、Windows Server Update Services (WSUS) に対する更新パッケージも公開します。 Configuration Manager が WSUS カタログからサイト サーバーに Office 365 クライアント更新プログラムを同期したら、その更新プログラムをクライアントに展開できるようになります。
+
+## <a name="office-365-client-management-dashboard"></a>Office 365 クライアント管理ダッシュボード  
+Configuration Manager バージョン 1610 より、Office 365 クライアント管理ダッシュボードを Configuration Manager コンソールで利用できます。 このダッシュボードを表示するには、**[ソフトウェア ライブラリ]** > **[概要]** > **[Office 365 クライアント管理]** に移動します。
+
+<!--- >[!NOTE]
+>In the **What's New** workspace in the Configuration Manager console, the new dashboard is incorrectly named **Office 365 Servicing dashboard**. --->
+
+ダッシュボードには、次のチャートが表示されます。
+
+- Office 365 クライアントの数
+- Office 365 クライアントのバージョン
+- Office 365 クライアントのバージョン
+- Office 365 クライアントのチャネル     
+詳細については、「[Office 365 ProPlus 更新プログラム チャネルの概要](https://technet.microsoft.com/library/mt455210.aspx)」をご覧ください。
+<!--- - Automatic deployment rules with Office 365 apps (have Office 365 Client selected in the set of available products). --->
+
+<!---You can take the following actions on the dashboard:
+- --->
+
+ダッシュボードの上部にある [**コレクション**] ドロップダウン設定を使用して、特定のコレクションのメンバーでダッシュボードのデータをフィルター処理します。
+
+<!---
+ On the upper-right side of the dashboard, click **Office 365 Installer** to start the Office 365 Client Installation Wizard to deploy Office 365 apps to clients. For details, see [Deploy Office 365 apps to clients](#deploy-office-365-apps-to-clients).
+- On the middle-right side of the dashboard, click **Create an ADR** to open the Automatic Deployment Rule Wizard to create a new automatic deployment rule (ADR). To create an ADR for Office 365 apps, select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
+- On the lower-right side of the dashboard, click **Create Client Agent Settings** to open Client Agent settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings).
+--->
 
 #### <a name="to-deploy-office-365-updates-with-configuration-manager"></a>Configuration Manager で Office 365 の更新プログラムを展開するには
 Configuration Manager で Office 365 の更新プログラムを展開するには、次の手順を使用します。
@@ -45,8 +69,11 @@ Configuration Manager で Office 365 の更新プログラムを展開するに�
 
 4. [Office 365 の更新プログラムをクライアントに展開します](deploy-software-updates.md)。  
 
+<!--- ## Next steps
+Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For details, see [Manage Office 365 apps](manage-office-365-apps.md). --->
 
 
-<!--HONumber=Nov16_HO1-->
+
+<!--HONumber=Dec16_HO3-->
 
 

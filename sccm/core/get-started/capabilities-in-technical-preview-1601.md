@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager の Technical Preview 1601 の機能"
+title: "System Center Configuration Manager の Technical Preview 1601 の機能 | Microsoft Docs"
 description: "System Center Configuration Manager の Technical Preview バージョン 1601 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: be158c1d893a1c1aae19c6cf2fd3a678a59d4f9e
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 7321645f17a143afe2fd848f45511a374de78c4b
 
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1601 の機能
@@ -211,8 +211,8 @@ Technical Preview 1601 以降、Configuration Manager コンソールでクラ�
 
  詳しくは、「[System Center Configuration Manager クライアントを使用せずに管理されている Windows 8.1 デバイスと Windows 10 デバイスの構成項目を作成する方法](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)」をご覧ください。  
 
-### <a name="android---kiosk-mode-for-samsung-knoxbr-hybrid"></a>Android - Samsung KNOX のキオスク モード<br />ハイブリッド  
- キオスク モードを使用すると、特定の機能のみ実行できるようにデバイスをロックできます。 たとえば、指定した 1 つの管理対象アプリの実行のみをデバイスに許可することや、デバイスのボリューム ボタンを無効にすることができます。 これらの設定は、デバイスのデモ モデルや、POS デバイスなどの 1 つの機能の実行専用のデバイス向けに使用できます。 これらの設定は、**Windows 8.1 および Windows 10** 構成項目 (Windows 10 デバイスのみに適用される設定) で Samsung KNOX デバイスには使用できません。  
+### <a name="android---kiosk-mode-for-samsung-knox-standardbr-hybrid"></a>Android - Samsung KNOX Standard のキオスク モード<br />ハイブリッド  
+ キオスク モードを使用すると、特定の機能のみ実行できるようにデバイスをロックできます。 たとえば、指定した 1 つの管理対象アプリの実行のみをデバイスに許可することや、デバイスのボリューム ボタンを無効にすることができます。 これらの設定は、デバイスのデモ モデルや、POS デバイスなどの 1 つの機能の実行専用のデバイス向けに使用できます。 これらの設定は、**Windows 8.1 および Windows 10** 構成項目 (Windows 10 デバイスのみに適用される設定) で Samsung KNOX Standard デバイスには使用できません。  
 
  新しい設定を確認するには、[**構成項目の作成**] ウィザードの構成項目 [**デバイス設定**] ページで、[**Kiosk Mode - Samsung KNOX**] (キオスク モード - Samsung KNOX) を選択します。  
 
@@ -220,6 +220,6 @@ Technical Preview 1601 以降、Configuration Manager コンソールでクラ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

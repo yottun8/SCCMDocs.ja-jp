@@ -1,5 +1,5 @@
 ---
-title: "独自のラボ環境を構築して System Center Configuration Manager を評価する"
+title: "独自のラボ環境を構築して System Center Configuration Manager を評価する | Microsoft Docs"
 description: "組織で使用するために System Center Configuration Manager を評価するラボ環境を作成します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 363e6a929b72e027d5fff7584905fb552dc695b0
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: e72acbe0a2f5592b5bdf9a3612db62bfb066fadf
 
 
 ---
@@ -64,12 +64,12 @@ ms.openlocfilehash: 363e6a929b72e027d5fff7584905fb552dc695b0
 
 -   「[System Center Configuration Manager のロール ベース管理の基礎](../../core/understand/fundamentals-of-role-based-administration.md)」。セキュリティ ロールの重要性について説明しています。  
 
--   「[コンテンツ管理の概念](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_Concepts)」。これらを理解することによって、コンテンツ管理に関連する特定の概念を得ることができます。  
+-   「[コンテンツ管理の概念](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)」。これらを理解することによって、コンテンツ管理に関連する特定の概念を得ることができます。  
 
 -   「[クライアントが System Center Configuration Manager のサイト リソースやサービスを検索する方法を理解する](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)」。展開全体での日常操作を適切にサポートします。  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

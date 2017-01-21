@@ -1,5 +1,5 @@
 ---
-title: "タスクを自動化するためのタスク シーケンスの管理 | Configuration Manager"
+title: "タスクを自動化するためのタスク シーケンスの管理 | Microsoft Docs"
 description: "System Center Configuration Manager 環境でタスク シーケンスを作成、編集、展開、インポート、およびエクスポートして管理できます。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 04e4e8193d427289a3b84a14efe18511bf5c9731
+ms.sourcegitcommit: d04d28bbd5116a841c0872cf3f9ca18783dddc78
+ms.openlocfilehash: 417b31fa1feb6d0f674f14ef9e5c7cebd7013916
 
 
 ---
@@ -237,6 +237,8 @@ System Center Configuration Manager 環境のステップを自動化するに�
 
 -   タスク シーケンスに含まれているパスワードはエクスポートされません。 パスワードを含むタスク シーケンスをエクスポートおよびインポートする場合は、インポートされたタスク シーケンスを編集して任意のパスワードを再指定する必要があります。 [Join Domain or Workgroup](../understand/task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)、 [Connect To Network Folder](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder)、 [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) アクションに対するパスワードが指定されていることをご確認ください。  
 
+- **動的変数の設定**手順でタスク シーケンスをエクスポートするとき、**秘密の値**設定で構成された変数の値はエクスポートされません。 タスク シーケンスのインポート後、変数の値を再入力する必要があります。
+
 -   ベスト プラクティスとして、複数のプライマリ サイトがある場合は、中央管理サイトにタスク シーケンスをインポートしてください。  
 
  タスク シーケンスのエクスポートおよびインポートは、次の手順に従います。  
@@ -367,6 +369,6 @@ System Center Configuration Manager 環境のステップを自動化するに�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

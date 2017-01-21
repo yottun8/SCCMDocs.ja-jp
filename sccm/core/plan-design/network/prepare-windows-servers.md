@@ -1,5 +1,5 @@
 ---
-title: "Windows Server の準備 | System Center Configuration Manager"
+title: "Windows Server の準備 | Microsoft Docs"
 description: "コンピューターが System Center Configuration Manager のサイト サーバーまたはサイト システム サーバーとして使用するための前提条件を満たしていることを確認します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f0a1cc32285fcb792c3f4cdec616668474708404
-ms.openlocfilehash: acf8a401f1ce67a4d8c905c0126c031b97484271
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: bd89f97f4252ddea2d1bf7ab329417477c77868d
 
 
 ---
@@ -42,11 +42,8 @@ System Center Configuration Manager のサイト システム サーバーとし
 -   **.NET Framework**: 次を含みます。  
 
     -   ASP.NET  
-
     -   HTTP アクティブ化  
-
     -   非 HTTP アクティブ化  
-
     -   WCF サービス  
 
     サイト システムの役割によって異なるバージョンの .NET Framework が必要となります。  
@@ -68,61 +65,37 @@ System Center Configuration Manager のサイト システム サーバーとし
  -   **ネットワーク デバイス登録サービス** (Active Directory 証明書サービス) の下:  この Windows の役割は Configuration Manager で証明書プロファイルを使用する前提条件です。  
 
  -   **Web サーバー (IIS)**: 次を含みます。  
-
     -   共通の HTTP 機能 >  
-
         -   HTTP リダイレクト  
-
     -   アプリケーションの開発 >  
-
         -   .NET 拡張機能  
-
         -   ASP.NET  
-
         -   ISAPI 拡張機能  
-
         -   ISAPI フィルター  
-
     -   管理ツール >  
-
         -   IIS 6 管理互換性  
-
         -   IIS 6 メタベース互換  
-
         -   IIS 6 WMI 互換  
-
     -   セキュリティ >  
-
         -   要求のフィルタリング  
-
         -   Windows 認証  
 
  以下に示すサイト システムの役割では、ここに記載した IIS の構成が使用されます。  
-
     -   アプリケーション カタログ Web サービス ポイント  
-
     -   アプリケーション カタログ Web サイト ポイント  
-
     -   配布ポイント  
-
     -   登録ポイント  
-
     -   登録プロキシ ポイント  
-
     -   フォールバック ステータス ポイント  
-
     -   管理ポイント  
-
     -   ソフトウェアの更新ポイント  
-
-    -   状態移行ポイント  
+    -   状態移行ポイント     
 
     サイト サーバーのオペレーティング システムに備わっている IIS のバージョンが、必要な IIS の最小バージョンとなります。  
 
     これらの IIS 構成に加えて、 [IIS の要求フィルター (配布ポイント用)](#BKMK_IISFiltering)の構成が必要になる場合があります。  
 
 -   **Windows 展開サービス**: この役割は、オペレーティング システムの展開で使用されます。  
-
 -   **Windows Server Update Services**: この役割は、ソフトウェア更新プログラムを展開するときに必要になります。  
 
 ##  <a name="a-namebkmkiisfilteringa-iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> IIS の要求フィルター (配布ポイント用)  
@@ -133,11 +106,8 @@ System Center Configuration Manager のサイト システム サーバーとし
  また、Configuration Manager では、パッケージとアプリケーションに次のファイル名拡張子が使用されます。 これらのファイル拡張子が要求フィルターの構成でブロックされないよう注意してください。  
 
 -   .PCK  
-
 -   .PKG  
-
 -   .STA  
-
 -   .TAR  
 
 たとえば、ソフトウェア展開のソース ファイルに **bin**という名前のフォルダーや **.mdb** というファイル名拡張子の付いたファイルが含まれている場合があります。  
@@ -167,12 +137,12 @@ System Center Configuration Manager のサイト システム サーバーとし
 **配布ポイント:** 配布ポイントでは、次の HTTP 動詞が許可されている必要があります。
  - GET
  - HEAD
- - PROFIND
+ - PROPFIND
 
 要求のフィルタリングを構成する方法の詳細については、TechNet の「[Configure Request Filtering in IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs)」 (IIS で要求フィルターを構成する) または管理ポイントをホストする Windows Server のバージョンに適用される同様のドキュメントを参照してください。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

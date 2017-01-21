@@ -1,5 +1,5 @@
 ---
-title: "Wake on LAN の構成 | System Center Configuration Manager"
+title: "Wake On LAN の構成 | Microsoft Docs"
 description: "System Center Configuration Manager で Wake On LAN 設定を選択します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 caps.latest.revision: 7
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b8274f9da1ec82aebf43115236f2409995a0052b
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 09f8bc7ee04ff64934030f825a791bc043341963
 
 ---
 # <a name="how-to-configure-wake-on-lan-in-system-center-configuration-manager"></a>System Center Configuration Manager で Wake on LAN を構成する方法
@@ -47,7 +47,7 @@ ms.openlocfilehash: b8274f9da1ec82aebf43115236f2409995a0052b
 1. Configuration Manager コンソールで、**[管理]、[クライアント設定]** に移動します。
 2. **[既定のクライアント設定]** をクリックし、**[プロパティ]** をクリックします。
 3. **[電力管理]** を選択し、**[ウェイクアップ プロキシを有効にする]** に対して **[はい]** を選択します。
-4. 設定を確認し、必要に応じてウェイクアップ プロキシ設定を変更します。 これらの設定の詳細については、「[電力管理設定](../../../core/clients/deploy/about-client-settings.md#BKMK_PowMgmtDeviceSettings)」を参照してください。
+4. 設定を確認し、必要に応じてウェイクアップ プロキシ設定を変更します。 これらの設定の詳細については、「[電力管理設定](../../../core/clients/deploy/about-client-settings.md#power-management)」を参照してください。
 5. **[OK]** をクリックしてダイアログ ボックスを閉じ、**[OK]** をクリックして [既定のクライアント設定] ダイアログ ボックスを閉じます。
 
 次の Wake on LAN レポートを使用して、ウェイクアップ プロキシのインストールと構成を監視します。
@@ -60,6 +60,6 @@ ms.openlocfilehash: b8274f9da1ec82aebf43115236f2409995a0052b
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

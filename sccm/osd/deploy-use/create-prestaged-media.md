@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager を使用した自薦設定されたメディアの作成"
+title: "System Center Configuration Manager を使用した事前設定されたメディアの作成 | Microsoft Docs"
 description: "いくつかのシナリオで Windows の展開を簡素化するため、System Center Configuration Manager で事前設定されたメディアを作成します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,12 +16,12 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fe02e36e7650858bcaac801a0a6d7d3c820b23b8
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 56cfc5837adf986e5d2bf4a73ef9de3b1f60b4f9
 
 
 ---
-# <a name="create-prestaged-media-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用した自薦設定されたメディアの作成
+# <a name="create-prestaged-media-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用した事前設定されたメディアの作成
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -146,6 +146,6 @@ System Center Configuration Manager で事前設定されたファイルは、Wi
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

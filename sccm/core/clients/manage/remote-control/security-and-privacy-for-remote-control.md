@@ -1,5 +1,5 @@
 ---
-title: "リモート コントロールのセキュリティとプライバシー | System Center Configuration Manager"
+title: "リモート コントロールのセキュリティとプライバシー | Microsoft Docs"
 description: "System Center Configuration Manager のリモート コントロールのセキュリティとプライバシーの情報を確認します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 9b36c01e6ea3a5e63523b5e32b151c0b972f9877
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: 342a58d2b7439f721381beb43188594b5278043d
 
 
 ---
@@ -65,6 +65,6 @@ ms.openlocfilehash: 9b36c01e6ea3a5e63523b5e32b151c0b972f9877
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

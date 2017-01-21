@@ -1,5 +1,5 @@
 ---
-title: "バックアップと回復 | System Center Configuration Manager"
+title: "バックアップと回復 | Microsoft Docs"
 description: "System Center Configuration Manager でサイトをバックアップする方法と、障害が発生したときやデータが損失したときにサイトを回復する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
 
 
 ---
@@ -114,9 +114,9 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
     -   **サイト サーバーおよび SQL Server のローカル ドライブ**: サイト サーバーのバックアップ ファイルが、サイト サーバーのローカル ドライブの指定したパスに保存され、サイト データベースのバックアップ ファイルが、サイト データベース サーバーのローカル ドライブの指定したパスに保存されるようにします。 バックアップ タスクを実行する前に、ローカル フォルダーを作成する必要があります。 サイト サーバーのコンピューター アカウントが、サイト サーバーに作成するフォルダーの NTFS **書き込み** 権限を持っている必要があります。 SQL Server のコンピューター アカウントが、サイト データベース サーバーに作成するフォルダーの NTFS **書き込み** 権限を持っている必要があります。 このオプションは、サイト データベースがサイト サーバーにインストールされていない場合のみ選択できます。  
 
     > [!NOTE]  
-    >    - バックアップ先を参照できるのは、UNC パスを指定した場合だけです。
+    >   - バックアップ先を参照できるのは、UNC パスを指定した場合だけです。
 
-    >- バックアップ先フォルダー名や共有名に Unicode 文字を含めることはできません。  
+    > - バックアップ先フォルダー名や共有名に Unicode 文字を含めることはできません。  
 
 
 6.  サイトのバックアップ タスクのスケジュールを構成します。 ベスト プラクティスとして、営業時間外に実行することをお勧めします。 階層構造がある場合は、サイトの障害発生に備え、データの保管期間が長くなるように、少なくとも 1 週間に 2 回実行するスケジュールを設定してください。  
@@ -190,7 +190,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
  サイト サーバーのファイル システムのバックアップに、コンテンツ ライブラリとパッケージ ソースの両方の場所を含めていることを確認してください。  
 
 #### <a name="back-up-custom-software-updates"></a>カスタム ソフトウェア更新プログラムのバックアップ  
-     System Center Updates Publisher 2011 is a stand-alone tool that lets you publish custom software updates to Windows Server Update Services (WSUS), synchronize the software updates to Configuration Manager, assess software updates compliance, and deploy the custom software updates to clients. Updates Publisher uses a local database for its software update repository. When you use Updates Publisher to manage custom software updates, determine whether you have to include the Updates Publisher database in your backup plan. For more information about Updates Publisher, see [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=228726) in the System Center TechCenter Library.  
+ System Center Updates Publisher 2011 は、カスタム ソフトウェア更新プログラムの Windows Server Update Services (WSUS) への発行、ソフトウェア更新プログラムの Configuration Manager との同期、ソフトウェア更新プログラムのコンプライアンスの評価、およびカスタム ソフトウェア更新プログラムのクライアントへの展開を行えるスタンドアロン ツールです。 Updates Publisher では、ソフトウェア更新プログラムのリポジトリとしてローカル データベースを使用します。 Updates Publisher を使ってカスタム ソフトウェア更新プログラムを管理している場合は、Updates Publisher データベースをバックアップに含める必要があるかどうかを検討してください。 Updates Publisher の詳細については、System Center TechCenter ライブラリの「 [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=228726) 」を参照してください。  
 
  次の手順に従って、Updates Publisher データベースをバックアップします。  
 
@@ -206,7 +206,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 ### <a name="user-state-migration-data"></a>ユーザー状態の移行データ  
  オペレーティング システムを展開するときに、現在のオペレーティング システムのユーザー状態を維持したい場合は、Configuration Manager のタスク シーケンスを使用し、ユーザー状態データをキャプチャして復元できます。 ユーザー状態データを格納しているフォルダーは、状態移行ポイントのプロパティに一覧されます。 このユーザー状態の移行データは、サイト サーバーのバックアップ メンテナンス タスクでバックアップされません。 そのため、ユーザー状態の移行データを格納するように指定したフォルダーを手動でバックアップする必要があります。   
 
-##### <a name="to-determine-the-folders-used-to-store-user-state-migration-data"></a>ユーザー状態の移行データを格納しているフォルダーを確認するには  
+#### <a name="to-determine-the-folders-used-to-store-user-state-migration-data"></a>ユーザー状態の移行データを格納しているフォルダーを確認するには  
 
 1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
 
@@ -384,7 +384,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
     -   **詳細:** 中央管理サイトを回復します  
 
- **RecoveryOptions**  
+**RecoveryOptions**  
 
 -   **キー名:** ServerRecoveryOptions  
 
@@ -454,7 +454,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
     -   **詳細:** サイト データベースのバックアップ セットへのパスを指定します。 **BackupLocation** キーは、 **ServerRecoveryOptions** キーを **1** か **4** に設定したときに必要です。このキーを指定したときは、 **DatabaseRecoveryOptions** キーを **10** に設定してください。  
 
- **Options**  
+**Options**  
 
 -   **キー名:** ProductID  
 
@@ -549,7 +549,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
     -   **詳細:** カスタマー エクスペリエンス向上プログラムに参加するかどうかを指定します。  
 
- **SQLConfigOptions**  
+**SQLConfigOptions**  
 
 -   **キー名:** SQLServerName  
 
@@ -597,7 +597,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
     -   **詳細:** プライマリ サイトを回復します  
 
- **RecoveryOptions**  
+**RecoveryOptions**  
 
 -   **キー名:** ServerRecoveryOptions  
 
@@ -653,7 +653,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
     -   **詳細:** サイト データベースのバックアップ セットへのパスを指定します。 **BackupLocation** キーは、 **ServerRecoveryOptions** キーを **1** か **4** に設定したときに必要です。このキーを指定したときは、 **DatabaseRecoveryOptions** キーを **10** に設定してください。  
 
- **Options**  
+**Options**  
 
 -   **キー名:** ProductID  
 
@@ -748,7 +748,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
     -   **詳細:** カスタマー エクスペリエンス向上プログラムに参加するかどうかを指定します。  
 
- **SQLConfigOptions**  
+**SQLConfigOptions**  
 
 -   **キー名:** SQLServerName  
 
@@ -783,7 +783,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
     -   **詳細:** SQL Server で使用する SQL Server Service Broker (SSB) のポート番号を指定します。 通常、TCP ポート 4022 に構成しますが、別のポートもサポートされています。 障害が発生する前に使用していた SSB ポート番号と同じ番号を指定する必要があります。  
 
- **Hierarchy ExpansionOption**  
+**Hierarchy ExpansionOption**  
 
 -   **キー名:** CCARSiteServer  
 
@@ -839,7 +839,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
  サイト サーバーの回復が終わったら、そのサイトに指定していた Windows サイドローディング キーを再入力する必要があります。これは、サイトの回復中にサイドローディング キーがリセットされるためです。 サイドローディング キーを再入力すると、Configuration Manager コンソールで Windows サイドローディング キーの **[使用済みライセンス認証数]** 列内のカウントがリセットされます。 たとえば、サイト エラーが発生する前に、**[合計ライセンス認証数]** カウントが **100** に設定され、**[使用済みライセンス認証数]** がデバイスで使用されていたキーの数に相当する **90** になっていたとします。 サイトの回復後、[ **合計ライセンス認証数** ] 列には **100**と表示されますが、[ **使用済みライセンス認証数** ] 列には誤って **0**と表示されます。 しかし、新しく 10 台のデバイスがサイドローディング キーを使用すると、ライセンスの残りがなくなってしまうので、11 台目以降、キーを取得できなくなります。  
 
 #### <a name="recreate-the-microsoft-intune-subscription"></a>Microsoft Intune サブスクリプションの再作成  
- サイト サーバー コンピューターが再イメージ化された後に Configuration Manager サイト サーバーを回復する場合、Microsoft Intune のサブスクリプションは復元されません。 サイトを回復した後、サブスクリプションを再作成する必要があります。 詳細については、「 [Configuring the Microsoft Intune subscription](../../mdm/plan-design/hybrid-mobile-device-management.md#bkmk_witsub)」をご覧ください。  
+ サイト サーバー コンピューターが再イメージ化された後に Configuration Manager サイト サーバーを回復する場合、Microsoft Intune のサブスクリプションは復元されません。 サイトを回復した後、サブスクリプションを再作成する必要があります。 詳細については、「 [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription)」をご覧ください。  
 
 #### <a name="configure-ssl-for-site-system-roles-that-use-iis"></a>IIS を使用するサイト システムの役割の SSL を構成する  
  IIS を実行するサイト システムを回復し、障害が発生する前に、そのシステムが HTTPS 接続用に構成されていた場合は、IIS で Web サーバー証明書を使用するように再構成する必要があります。  
@@ -913,6 +913,6 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

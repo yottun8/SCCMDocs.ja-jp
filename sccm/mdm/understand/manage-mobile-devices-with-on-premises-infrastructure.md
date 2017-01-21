@@ -1,5 +1,5 @@
 ---
-title: "オンプレミス モバイル デバイス管理 (MDM) | System Center Configuration Manager"
+title: "オンプレミス モバイル デバイス管理 (MDM) | Microsoft Docs"
 description: "System Center Configuration Manager のデバイス管理ソリューション、オンプレミス モバイル デバイス管理について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fd8168c0d7c1e7cd37f0a2c8c86fe63787c02ce9
+ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
+ms.openlocfilehash: cbd33bf3cf7d623d9ba7a657d4ca7d746d7e79da
 
 
 ---
@@ -53,6 +53,6 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

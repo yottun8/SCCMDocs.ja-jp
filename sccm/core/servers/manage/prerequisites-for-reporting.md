@@ -1,5 +1,5 @@
 ---
-title: "レポートの前提条件 | Configuration Manager"
+title: "レポートの前提条件 | Microsoft Docs"
 description: "System Center Configuration Manager のレポートの使用に影響するさまざまな依存関係について理解します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 8554221bc3aede86a255b7f0aa45948fe312b43d
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: ae750188b0258122d8561b163a5ecd85c4179f18
 
 
 ---
@@ -65,6 +65,6 @@ System Center Configuration Manager のレポートには、外部依存関係�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

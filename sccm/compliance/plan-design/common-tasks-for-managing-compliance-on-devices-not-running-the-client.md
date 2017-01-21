@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager クライアントが実行されていないデバイスのコンプライアンスを管理するための一般的なタスク | System Center Configuration Manager"
+title: "System Center Configuration Manager クライアントが実行されていないデバイスのコンプライアンスを管理するための一般的なタスク | Microsoft Docs"
 description: "いくつかの一般的なシナリオを使用して、System Center Configuration Manager のコンプライアンス設定について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f69250fbe51ea8902a0446a613d66be390ea7434
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: e24ef149e2a2648c9a7acaedfaa8f0b5bb173ab3
 
 
 ---
@@ -101,7 +101,7 @@ ms.openlocfilehash: f69250fbe51ea8902a0446a613d66be390ea7434
 
  これで、「[System Center Configuration Manager での構成基準の作成と展開に関する一般的なタスク](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)」トピックの情報を使用して、作成した構成をデバイスに簡単に展開できるようになります。  
 
-## <a name="scenarios-for-android-and-samsung-knox-devices-managed-without-the-configuration-manager-client"></a>Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX デバイスのシナリオ  
+## <a name="scenarios-for-android-and-samsung-knox-standard-devices-managed-without-the-configuration-manager-client"></a>Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX Standard デバイスのシナリオ  
 
 ### <a name="scenario-require-a-password-on-all-android-5-devices"></a>シナリオ: すべての Android 5 デバイスでパスワードを要求する  
  このシナリオでは、Android 5 デバイスに対してのみ、デバイスで 6 文字以上のパスワードを構成するようにユーザーに要求する構成アイテムを作成します。 さらに、ユーザーが 5 回正しくないパスワードを入力すると、デバイスがワイプされます。  
@@ -126,7 +126,6 @@ ms.openlocfilehash: f69250fbe51ea8902a0446a613d66be390ea7434
 
 
 
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

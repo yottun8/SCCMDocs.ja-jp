@@ -1,5 +1,5 @@
 ---
-title: "診断および使用状況データ | System Center Configuration Manager"
+title: "診断結果と使用状況データ | Microsoft Docs"
 description: "System Center Configuration Manager が収集する自身の診断および使用状況データについて説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 996efaeb89926b04d2f071cf600dcf45bd2edc89
+ms.sourcegitcommit: 3d113c55726efe674b79ef5ecb26aac8c893cba2
+ms.openlocfilehash: ac3395c82cb570960bf2c3b98cd06e282e64b1a5
 
 
 ---
@@ -43,7 +43,7 @@ System Center Configuration Manager では、自身の診断および使用状�
     - [1511 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
     - [1602 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
     - [1606 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)  
-    
+    - [1610 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610)  
 
 -   [System Center Configuration Manager が診断と使用状況データを収集する方法](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)  
 
@@ -58,6 +58,6 @@ System Center Configuration Manager では、自身の診断および使用状�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,9 +1,9 @@
 ---
-title: "モバイル デバイス管理の展開と使用 | System Center Configuration Manager"
+title: "モバイル デバイス管理の展開と使用 | Microsoft Docs"
 description: "System Center Configuration Manager でモバイル デバイスを管理するためのさまざまな方法を説明します。"
 keywords: 
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 ms.date: 10/06/2016
 ms.topic: article
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-hybrid
 ms.assetid: 756694f3-4d62-4463-9334-a21991c30ba3
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4347a305124e023d069aa28499fdc3eb3a7de7ef
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 7a7b64a187d66f0dc965fe3568dd14004b2d090e
 
 ---
 
@@ -31,6 +31,6 @@ System Center Configuration Manager を使用して、さまざまな方法で�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

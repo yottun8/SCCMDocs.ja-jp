@@ -1,5 +1,5 @@
 ---
-title: "オペレーティング システム イメージをカスタマイズする | Configuration Manager"
+title: "オペレーティング システム イメージのカスタマイズ | Microsoft ドキュメント"
 description: "キャプチャとビルドのタスク シーケンスもしくは手動構成、またはこの両方の組み合わせを使用して、オペレーティング システム イメージをカスタマイズします。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e7e0ecf394297799c2a3d0c14e719182b403e1e8
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: c183fbde6de29ccd7c78ae066d305f0e99e37bda
 
 
 ---
@@ -28,7 +28,7 @@ ms.openlocfilehash: e7e0ecf394297799c2a3d0c14e719182b403e1e8
 
 Configuration Manager のオペレーティング システム イメージは WIM 形式のファイルで、コンピューターにオペレーティング システムを正常にインストールして構成するのに必要な、参照ファイルとフォルダーのコレクションを圧縮したものです。 カスタムのオペレーティング システム イメージは、参照コンピューターから構築およびキャプチャし、オペレーティング システム ファイル、サポート ファイル、ソフトウェア更新プログラム、ツール、その他のソフトウェア アプリなど、必要なものをすべて含めて構成します。 参照コンピューターを手動で構成する範囲は、ユーザーが決められます。 参照コンピューターの構成は、構築およびキャプチャのタスク シーケンスを使用して完全に自動化することができます。また、参照コンピューターの特定の要素を手動で構成してから、タスク シーケンスを使用して残りを自動化したり、タスク シーケンスを使用せずに参照コンピューターを手動で構成したりもできます。 次のセクションを使用して、オペレーティング システムをカスタマイズします。
 
-##  <a name="a-namebkmkpreparereferencecomputera-prepare-for-the-reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a> 参照コンピューターの準備  
+##  <a name="a-namebkmkpreparereferencecomputera-prepare-for-the--reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a> 参照コンピューターの準備  
  参照コンピューターからオペレーティング システム イメージのキャプチャを行う前に、次の点をご検討ください。  
 
 ###  <a name="a-namebkmkrefcomputerdecidea-decide-between-an-automated-or-manual-configuration"></a><a name="BKMK_RefComputerDecide"></a> 自動または手動の構成の決定  
@@ -140,6 +140,6 @@ Configuration Manager のオペレーティング システム イメージは W
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

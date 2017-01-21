@@ -1,5 +1,5 @@
 ---
-title: "クライアントの展開ステータスを監視する | System Center Configuration Manager"
+title: "クライアントの展開ステータスを監視する | Microsoft Docs"
 description: "System Center Configuration Manager でクライアントの展開ステータスを監視します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: 20a573b3-53cb-4ed5-bae1-7542f533ed20
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 495c95b6add90619881291a551f394511d9eb36d
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 3bc82535955d937e5620ef2963ccc29bfd0124e3
 
 
 ---
@@ -33,9 +33,7 @@ ms.openlocfilehash: 495c95b6add90619881291a551f394511d9eb36d
 
  指定したコレクション内で実行されているクライアントの展開について、コンソールの **[監視]** ワークスペースで次のステータスを監視することができます。  
 
--   未開始   
-
--   準拠  
+-   [準拠]  
 
 -   進行中  
 
@@ -60,7 +58,7 @@ ms.openlocfilehash: 495c95b6add90619881291a551f394511d9eb36d
  実稼働前クライアント展開の詳細については、「[System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストする方法](../../../core/clients/manage/upgrade/test-client-upgrades.md)」を参照してください。
 
  > [!NOTE]
- > 実稼働前コレクションでサイト システムの役割をホストしているコンピューターの展開ステータスは、クライアントが正常に展開された場合でも、**未開始**として報告されることがあります。 クライアントを実稼働環境に昇格すると、展開のステータスが正しく報告されます。   
+ > 実稼働前コレクションでサイト システムの役割をホストしているコンピューターの展開ステータスは、クライアントが正常に展開された場合でも、**非対応**と報告されることがあります。 クライアントを実稼働環境に昇格すると、展開のステータスが正しく報告されます。   
 
  展開されたクライアントのステータスを監視するには、「[System Center Configuration Manager でクライアントを監視する方法](../../../core/clients/manage/monitor-clients.md)」を参照してください。  
 
@@ -68,6 +66,6 @@ ms.openlocfilehash: 495c95b6add90619881291a551f394511d9eb36d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "オペレーティング システムをインストールするタスク シーケンスを作成する | Configuration Manager"
+title: "オペレーティング システムをインストールするタスク シーケンスの作成 | Microsoft Docs"
 description: "System Center Configuration Manager でタスク シーケンスを使用して、オペレーティング システム イメージとその他のコンテンツをインストール先のコンピューターに自動的にインストールします。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 5c2823ddfc873864b7617d730e14742b7451ef0f
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 41aa6cf69a746f0ab67d804f1ee0c70db05d65ee
 
 
 ---
@@ -159,6 +159,6 @@ System Center Configuration Manager でタスク シーケンスを使用して�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

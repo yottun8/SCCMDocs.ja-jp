@@ -1,5 +1,5 @@
 ---
-title: "電源管理の前提条件 | System Center Configuration Manager"
+title: "電源管理の前提条件 | Microsoft Docs"
 description: "System Center Configuration Manager の電源管理の前提条件を確認します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e83b57997c702779dfa2a198a60c99c7205d7b51
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: 711ef491899846b86bfed0355ac7fd0f9d509c4f
 
 
 ---
@@ -45,6 +45,6 @@ System Center Configuration Manager の電源管理には、外部依存関係�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

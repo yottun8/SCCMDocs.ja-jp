@@ -1,5 +1,5 @@
 ---
-title: "前提条件チェッカー | System Center Configuration Manager"
+title: "前提条件チェッカー | Microsoft Docs"
 description: "前提条件チェッカーを使用して、実際のサイトやサイト システムの役割のインストールを妨げる可能性のある問題を特定し、修正する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4c2322ed0805b5f087409ec487ebec9d7c4f10d5
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: f30d7a451f47a3ab1efe6f7ac9c3e0151b8cda96
 
 ---
 # <a name="prerequisite-checker-for-system-center-configuration-manager"></a>System Center Configuration Manager の前提条件チェッカー
@@ -91,7 +91,7 @@ ms.openlocfilehash: 4c2322ed0805b5f087409ec487ebec9d7c4f10d5
 
 2.  「  **prereqchk.exe /LOCAL** 」と入力して、前提条件チェッカーを起動し、サーバーに対してすべての前提条件チェックを実行します。  
 
-## <a name="run-prerequisite-checker-from-a-command-prompt-for-specified-options"></a>コマンド プロンプトからオプションを指定して前提条件チェッカーを実行する  
+## <a name="run-prerequisite-checker-from-a-command-prompt--for-specified-options"></a>コマンド プロンプトからオプションを指定して前提条件チェッカーを実行する  
 
 1.  コマンド プロンプト ウィンドウを開いて、次のいずれかの場所に移動します。  
 
@@ -216,6 +216,6 @@ ms.openlocfilehash: 4c2322ed0805b5f087409ec487ebec9d7c4f10d5
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

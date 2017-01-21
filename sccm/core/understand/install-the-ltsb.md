@@ -1,5 +1,5 @@
 ---
-title: "1606 構成基準メディアを利用してサイトをインストールする | System Center Configuration Manager"
+title: "1606 構成基準メディアを使用したサイトのインストール | Microsoft Docs"
 description: "1606 構成基準メディアを利用し、System Center Configuration Manager のサイトをインストールまたはアップグレードする方法について説明します。"
 ms.custom: na
 ms.date: 10/12/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5e97fbcdc21022e98b4cbdb198273dfe544a561f
-ms.openlocfilehash: 3df46a00f2208ffa687c8c99ce610266e206eef0
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: a80095fb3b227653126a028ab4ab8f4e2dbd612b
 
 
 ---
@@ -83,7 +83,7 @@ LTSB でサポートされていないサイト システムの役割をアン�
   **キー名: SABranchOptions**
    -    **SSActive = 1**
    - **CurrentBranch = 1**
- 
+
 
 > [!IMPORTANT]  
 > **SABranchOptions** は、構成基準メディアからのセットアップでのみ機能します。 バージョン 1606 構成基準メディアを利用して以前にインストールしたサイトの CD.Latest フォルダーからセットアップを実行するときは適用されません。
@@ -148,6 +148,6 @@ LTSB サイトのバックアップの CD.Latest フォルダーからの Config
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

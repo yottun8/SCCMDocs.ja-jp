@@ -1,5 +1,5 @@
 ---
-title: "サイト システム役割のオプション | System Center Configuration Manager"
+title: "サイト システムの役割オプション | Microsoft Docs"
 description: "この記事では、必ずしも説明の必要がないとは言えない、Configuration Manager サイト システム役割の詳細を示します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a3c370dedc23e2eda38bd942b1d5bed91bdc3876
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 2ff7c8b35538cf475aad665b29a95304d794c4ff
 
 ---
 # <a name="configuration-options-for-site-system-roles-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイト システム役割の構成オプション
@@ -65,15 +65,12 @@ System Center Configuration Manager のサイト システム役割のほとん�
  マルチキャスト展開の配布ポイントの構成方法については、「[System Center Configuration Manager でマルチキャストを使用してネットワーク経由で Windows を展開する](../../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md)」を参照してください。  
 
  **Configuration Manager で必要な場合は IIS をインストールして構成する**  
-
  IIS がまだインストールされていない場合に、Configuration Manager で自動的に IIS をインストールして構成するには、このオプションを選択します。 IIS はすべての配布ポイントにインストールする必要があり、ウィザードを続行するにはこの設定を選択する必要があります。  
 
  **サイト システムのインストール アカウント**  
-
  サイト サーバーにインストールされている配布ポイントでは、サイト システムのインストール アカウントとしての使用がサポートされているのは、サイト サーバーのコンピューター アカウントだけです。  
 
  **自己署名入り証明書を作成するか、PKI クライアント証明書をインポートする**  
-
  この証明書には、次の 2 つの目的があります。  
 
 1.  配布ポイントがステータス メッセージを管理ポイントに送信する前に、管理ポイントから認証を受けるようにします。  
@@ -93,12 +90,12 @@ System Center Configuration Manager のサイト システム役割のほとん�
 証明書の要件の詳細については、「[System Center Configuration Manager での PKI 証明書の要件](../../../../core/plan-design/network/pki-certificate-requirements.md)」を参照してください。 この証明書の展開の例については、「[System Center Configuration Manager PKI 証明書の展開手順の例: Windows Server 2008 証明機関](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)」の「*配布ポイント用のクライアント証明書の展開*」セクションを参照してください。  
 
 **事前設定されたコンテンツ用にこの配布ポイントを有効にする**  
-
 事前設定されたコンテンツ用にこの配布ポイントを有効にするには、このチェック ボックスをオンにします。 このチェック ボックスがオンの場合、コンテンツの配布時の動作を構成できます。 配布ポイントで常にコンテンツを事前設定するか、パッケージの初期コンテンツを事前設定するかを選択できますが、コンテンツに更新がある場合には標準のコンテンツ配布プロセスを使用するか、パッケージ内のコンテンツに対して常に標準コンテンツ配布プロセスを使用するようにします。  
 
 **境界グループ**  
-
- 境界グループを配布ポイントに関連付けることができます。 コンテンツを展開するときに、クライアントがコンテンツ ソースの場所として配布ポイントを使用するには、クライアントは、その配布ポイントに関連付けられた境界グループ内になければなりません。 [代替のコンテンツ ソースの場所の使用を許可する] チェック ボックスをオンにすると、他に利用できる代替ポイントがない場合に、この境界グループ外のクライアントのフォールバックが許可され、配布ポイントをコンテンツ ソースの場所として使用できるようになります。 ****  
+ 境界グループを配布ポイントに関連付けることができます。 コンテンツを展開するときに、クライアントがコンテンツ ソースの場所として配布ポイントを使用するには、クライアントは、その配布ポイントに関連付けられた境界グループ内になければなりません。
+ - **バージョン 1610 より前では**、**[代替のコンテンツ ソースの場所の使用を許可する]** チェック ボックスをオンにすると、他に利用できる代替ポイントがない場合に、この境界グループ外のクライアントのフォールバックが許可され、配布ポイントをコンテンツ ソースの場所として使用できるようになります。
+ - **バージョン 1610 以降**、**[代替のコンテンツ ソースの場所の使用を許可する]** は構成できません。  代わりに、境界グループ間の関係を構成し、有効なコンテンツ ソースの場所を追加の境界グループからクライアントが検索するタイミングを決定するようにします。
 
 ##  <a name="a-namebkmkenrollmentpointa-enrollment-point"></a><a name="BKMK_Enrollment_Point"></a> 登録ポイント  
 登録ポイントは、Mac コンピューターをインストールし、オンプレミスのモバイル デバイス管理で管理するデバイスを登録するために使用します。 詳細については、次をご覧ください。  
@@ -108,7 +105,6 @@ System Center Configuration Manager のサイト システム役割のほとん�
 -   [System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスをユーザーが登録する方法](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)  
 
 **許可される接続**  
-
  HTTPS 設定が自動的に選択されます。HTTPS 設定では、登録プロキシ ポイントと帯域外サービス ポイントに対してサーバーを認証し、SSL を介してデータを暗号化するために、サーバー上に PKI 証明書があることが必要とされます。 証明書の要件の詳細については、「[System Center Configuration Manager での PKI 証明書の要件](../../../../core/plan-design/network/pki-certificate-requirements.md)」を参照してください。  
 
  サーバー証明書の展開例と、それを IIS で構成する方法については、「[System Center Configuration Manager PKI 証明書の展開手順の例: Windows Server 2008 証明機関](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)」の「*IIS を実行するサイト システム用の Web サーバー証明書の展開*」セクションを参照してください。  
@@ -117,14 +113,12 @@ System Center Configuration Manager のサイト システム役割のほとん�
 モバイル デバイスの登録プロキシ ポイントの構成方法については、「[System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスをユーザーが登録する方法](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)」を参照してください。  
 
 **クライアント接続**  
-
  HTTPS 設定が自動的に選択されます。HTTPS 設定では、Configuration Manager で登録されているモバイル デバイスと Mac コンピューターに対してサーバーを認証し、SSL (Secure Sockets Layer) を介してデータを暗号化するために、サーバー上に PKI 証明書がある必要があります。 証明書の要件の詳細については、「[System Center Configuration Manager での PKI 証明書の要件](../../../../core/plan-design/network/pki-certificate-requirements.md)」を参照してください。  
 
  サーバー証明書の展開例と、それを IIS で構成する方法については、「[System Center Configuration Manager PKI 証明書の展開手順の例: Windows Server 2008 証明機関](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)」の「*IIS を実行するサイト システム用の Web サーバー証明書の展開*」セクションを参照してください。  
 
 ##  <a name="a-namebkmkfallbackstatuspointa-fallback-status-point"></a><a name="BKMK_Fallback_Status_Point"></a> フォールバック ステータス ポイント  
 **状態メッセージの数** と **調整間隔 (秒)**  
-
 これらのオプションの既定の設定 (状態メッセージの数 10,000、調整間隔 3,600 秒) は、ほとんどの状況に十分に対応できますが、次の両方の条件に一致する場合には、設定の変更が必要になることがあります。  
 
 -   フォールバック ステータス ポイントがイントラネットからのみ接続を受け入れる。  
@@ -161,6 +155,6 @@ System Center 2012 Configuration Manager クライアントを正常にインス
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

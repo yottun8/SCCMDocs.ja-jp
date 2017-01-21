@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager の Technical Preview 1511 の機能"
+title: "System Center Configuration Manager の Technical Preview 1511 の機能 | Microsoft Docs"
 description: "System Center Configuration Manager の Technical Preview バージョン 1511 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4616ba44485e4c528297441f1cf99e25add2dcf3
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 8ef43a2f10a7ef1cbb101f6737c606c72ccdce4f
 
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1511 の機能
@@ -147,7 +147,7 @@ SQL Server 可用性グループを使用するサイトをインストールす
 
 3.  この情報を提供した後、通常のプロセスと構成を使ってセットアップを完了します。  
 
-##  <a name="a-namebkmkclusterserverupdatesa-service-a-server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a> サーバー クラスターの提供  
+##  <a name="a-namebkmkclusterserverupdatesa-service-a--server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a> サーバー クラスターの提供  
 クラスター内のサーバーを含むコレクションを作成してから、更新プログラムをクラスターに展開するときに使用するようにクラスター設定を構成できるようになりました。 任意の時点でオンラインになっているサーバーの割合を制御できるだけでなく、カスタム アクションを実行するように展開前および展開後の PowerShell スクリプトを構成できます。  
 
 **このリリースの既知の問題:**  
@@ -208,6 +208,6 @@ SQL Server 可用性グループを使用するサイトをインストールす
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

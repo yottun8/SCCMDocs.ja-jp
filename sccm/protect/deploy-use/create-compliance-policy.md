@@ -1,8 +1,8 @@
 ---
-title: "デバイス コンプライアンス ポリシーの作成と展開 | System Center Configuration Manager"
+title: "デバイス コンプライアンス ポリシーを作成して展開する | Microsoft Docs"
 description: "System Center Configuration Manager でのデバイス コンプライアンス ポリシーの作成および展開方法を説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/15/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0cba232e-319f-4ae6-9ffa-4cd76c8bcb29
 caps.latest.revision: 
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
 
 ---
 
@@ -79,7 +79,7 @@ ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
 
 ## <a name="monitor-the-compliance-policy"></a>コンプライアンス ポリシーの監視
 
-#### <a name="to-view-compliance-results-in-the-configuration-manager-console"></a>Configuration Manager コンソールでコンプライアンス結果を表示するには
+### <a name="to-view-compliance-results-in-the-configuration-manager-console"></a>Configuration Manager コンソールでコンプライアンス結果を表示するには
 
 1.  Configuration Manager コンソールで、[監視] をクリックします。 ****
 
@@ -98,6 +98,14 @@ ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
     -   **[非対応]**: 影響を受けた資産の数に基づいて、そのポリシー内のすべてのコンプライアンス非対応のルールの一覧を表示します。 ルールをクリックして、そのルールのコンプライアンスに非対応となったすべてのユーザーとデバイスを含む **[資産とコンプライアンス]** ワークスペースの **[ユーザー]** または **[デバイス]** のノードの下に一時ノードを作成できます。 ユーザーまたはデバイスを選択すると、[資産の詳細] **** ウィンドウは選択された問題に影響を受けているユーザーやデバイスを表示します。 一覧のユーザーまたはデバイスをダブルクリックすると、問題について追加の情報が表示されます。
 
     -   **[不明]**: 選択したポリシーの展開に対するコンプライアスが報告されなかったすべてのユーザーとデバイスの一覧が、現在のデバイスのクライアント ステータスと共に表示されます。
+
+### <a name="to-view-intune-compliance-policies-charts"></a>Intune のコンプライアンス ポリシー グラフを表示するには
+1. Configuration Manager のバージョン 1610 以降では、Configuration Manager コンソールで **[監視]** をクリックします。
+2. **[監視]** ワークスペースで、**[概要]** > **[コンプライアンス設定]** >  **[コンプライアンス ポリシー]** の順に移動します。
+3. 次のチャートが表示されます。
+    - **デバイスの全体の準拠**: すべてのコンプライアンス ポリシーに対するデバイスの全体の準拠が表示されます。
+    - **非準拠の主な理由**: デバイスが非準拠の上位ポリシーが表示されます。
+4. いずれかのチャートのセクションをクリックし、そのカテゴリ内のデバイスのリストまでドリル ダウンします。
 
 ### <a name="to-view-a-health-attestation-report"></a>正常性構成レポートを表示するには
 
@@ -214,10 +222,8 @@ ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
   **以下でサポートされています。**
   * Windows 10 および Windows 10 Mobile
 
-  
 
 
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

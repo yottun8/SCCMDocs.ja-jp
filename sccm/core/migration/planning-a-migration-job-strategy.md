@@ -1,5 +1,5 @@
 ---
-title: "ジョブ移行の計画 | System Center Configuration Manager"
+title: "移行ジョブ計画 | Microsoft Docs"
 description: "System Center Configuration Manager 環境に移行する特定のデータを構成するには、移行ジョブを使用します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -18,8 +18,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 21e00064a8ecad3dd1c24b7f02bd0a8a8c36924f
+ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
+ms.openlocfilehash: 4e1ad4e8a043d1a6ede5dc88ca6b6c703f46e9da
 
 
 ---
@@ -226,7 +226,7 @@ System Center Configuration Manager 環境に移行する特定のデータを�
 ### <a name="data-selection"></a>データの選択  
  コレクションの移行ジョブを作成する場合、1 つまたは複数のコレクションを選択する必要があります。 コレクションを選択すると、移行ジョブの作成ウィザードに、選択したコレクションに関連付けられているオブジェクトが表示されます。 既定では、選択したコレクションに関連付けられているすべてのオブジェクトが移行されますが、そのジョブで移行しないようにするオブジェクトはクリアすることができます。 依存するオブジェクトのあるオブジェクトをクリアすると、それらの依存するオブジェクトもクリアされます。 クリアされたすべてのオブジェクトが除外リストに追加されます。 除外リストのオブジェクトは、今後の移行ジョブの自動選択から削除されます。 今後作成する移行ジョブで移行に自動選択されるようにする必要があるオブジェクトを削除するには、除外リストを手動で編集する必要があります。  
 
-### <a name="site-ownership-for-migrated-content"></a>移行されるコンテンツのサイト所有権  
+### <a name="site-ownership-for--migrated-content"></a>移行されるコンテンツのサイト所有権  
  展開のためにコンテンツを移行する場合は、コンテンツ オブジェクトを移行先階層内のサイトに割り当てる必要があります。 このサイトが移行先階層内のコンテンツの所有者になります。 移行先階層の最上位サイトは、コンテンツのメタデータを実際に移行するサイトですが、ネットワーク経由でコンテンツの元のソース ファイルにアクセスするのは、割り当てられているサイトです。  
 
  移行時に使用されるネットワーク帯域幅を最小化するために、コンテンツの所有権を最も近い利用可能なサイトに移動することを検討してください。 コンテンツに関する情報は System Center Configuration Manager 内でグローバルに共有されるため、すべてのサイトで利用できます。  
@@ -322,6 +322,6 @@ System Center Configuration Manager 環境に移行する特定のデータを�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

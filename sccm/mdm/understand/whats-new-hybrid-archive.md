@@ -1,5 +1,5 @@
 ---
-title: "アーカイブ | ハイブリッド MDM の新機能 |Microsoft Intune |System Center Configuration Manager"
+title: "ハイブリッド MDM の新機能のアーカイブ | Microsoft Docs"
 description: "System Center Configuration Manager と Intune のハイブリッド展開で使用できる過去のモバイル デバイス管理機能のアーカイブです。"
 ms.custom: na
 ms.date: 10/25/2016
@@ -16,8 +16,8 @@ ms.author: mtillman
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: bfc4baefbdddc5125c38272f2087d214151c91d5
-ms.openlocfilehash: 4c0910ae365e1fda7b9747b79e13782a6056c0da
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 086b350005e9665e8b91c11e664563f9687aca27
 
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune での過去のハイブリッド機能
@@ -146,7 +146,7 @@ ms.openlocfilehash: 4c0910ae365e1fda7b9747b79e13782a6056c0da
 
 - **IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言**
 
-  会社が所有するデバイスの International station Mobile Equipment Identity (IMEI) 番号をインポートすることでデバイスを識別できるようになりました。 デバイスの IMEI 番号を含むコンマ区切り値 (.csv) ファイルをアップロードするか、デバイス情報を手動で入力することができます。  iOS デバイスのシリアル番号をインポートすることもできます。  詳細については、「[Capabilities in Technical Preview 1605 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605)」 (System Center Configuration Manager の Technical Preview 1605 の機能) の「[Pre-declare corporate-owned devices with IMEI or iOS serial number](../../core/get-started/capabilities-in-technical-preview-1605.md#pre-declare-corporate-owned-devices-with-with-imei-or-ios-serial-number)」 (IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言) を参照してください。  
+  会社が所有するデバイスの International station Mobile Equipment Identity (IMEI) 番号をインポートすることでデバイスを識別できるようになりました。 デバイスの IMEI 番号を含むコンマ区切り値 (.csv) ファイルをアップロードするか、デバイス情報を手動で入力することができます。  iOS デバイスのシリアル番号をインポートすることもできます。  詳細については、「[Capabilities in Technical Preview 1605 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605)」 (System Center Configuration Manager の Technical Preview 1605 の機能) の「[Pre-declare corporate-owned devices with IMEI or iOS serial number](../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_IMEI)」 (IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言) を参照してください。  
 
 - **Windows 情報保護 (WIP)**
 
@@ -202,7 +202,7 @@ ms.openlocfilehash: 4c0910ae365e1fda7b9747b79e13782a6056c0da
 
 - **Android デバイスの SmartLock 設定**
 
-  新しい設定が Android および Samsung KNOX 構成項目に追加され、互換性のある Android デバイスで SmartLock 機能を制御することができます。  この設定を使用して、エンドユーザーが SmartLock を構成することを禁止できます。 詳細については、「[Capabilities in Technical Preview 1604 for System Center Configuration Manage](/sccm/core/get-started/capabilities-in-technical-preview-1604.md)」 (System Center Configuration Manager の Technical Preview 1604 の機能) の「[SmartLock setting for Android devices](/sccm/get-started/capabilities-in-technical-preview-1604#smartlock-setting-for-android-devices)」 (Android デバイスの SmartLock 設定) を参照してください。  
+  新しい設定が Android および Samsung KNOX Standard 構成項目に追加され、互換性のある Android デバイスで SmartLock 機能を制御することができます。  この設定を使用して、エンドユーザーが SmartLock を構成することを禁止できます。 詳細については、「[Capabilities in Technical Preview 1604 for System Center Configuration Manage](/sccm/core/get-started/capabilities-in-technical-preview-1604.md)」 (System Center Configuration Manager の Technical Preview 1604 の機能) の「[SmartLock setting for Android devices](/sccm/get-started/capabilities-in-technical-preview-1604#smartlock-setting-for-android-devices)」 (Android デバイスの SmartLock 設定) を参照してください。  
 
 ### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (現在のブランチ) の新機能  
  2016 年 4 月の Configuration Manager (現在のブランチ) では、ハイブリッド新機能は導入されませんでした。  
@@ -281,11 +281,11 @@ ms.openlocfilehash: 4c0910ae365e1fda7b9747b79e13782a6056c0da
   -   Microsoft OneNote (iOS のみ)  
   -   Microsoft Outlook  
 
-  これらのアプリは Configuration Manager コンソールの [アプリケーション] ノードに表示されます。 アプリケーションの展開の詳細については、「[System Center Configuration Manager でアプリケーションを展開する方法](../../apps/deploy-use/deploy-applications.md)」を参照してください。  
+  これらのアプリは Configuration Manager コンソールの [アプリケーション] ノードに表示されます。 アプリケーションの展開の詳細については、「[System Center Configuration Manager でアプリケーションを展開する方法](../../apps/deploy-use/deploy-applications.md)」をご覧ください。  
 
-- **Android Samsung KNOX デバイスのキオスク モードの設定**
+- **Android Samsung KNOX Standard デバイスのキオスク モードの設定**
 
-  キオスク モードでは、特定の機能のみ実行できるようにデバイスをロックできます。  Configuration Manager (現在のブランチ) バージョン 1602 以降では、Samsung KNOX デバイスのキオスク モードの設定を指定できるようになりました。 詳細については、「[System Center Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX デバイスの構成項目を作成する方法](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)」を参照してください。  
+  キオスク モードでは、特定の機能のみ実行できるようにデバイスをロックできます。  Configuration Manager (現在のブランチ) バージョン 1602 以降では、Samsung KNOX Standard デバイスのキオスク モードの設定を指定できるようになりました。 詳細については、「[System Center Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX Standard デバイスの構成項目を作成する](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)」を参照してください。  
 
 - **iOS のアクティベーション ロック**
 
@@ -293,6 +293,6 @@ ms.openlocfilehash: 4c0910ae365e1fda7b9747b79e13782a6056c0da
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

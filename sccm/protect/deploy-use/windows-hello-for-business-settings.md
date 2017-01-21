@@ -1,5 +1,5 @@
 ---
-title: "Windows Hello for Business の設定 | System Center Configuration Manager"
+title: "Windows Hello for Business の設定 | Microsoft Docs"
 description: "System Center Configuration Manager に Windows Hello for Business を統合する方法について説明します。"
 ms.custom: na
 ms.date: 10/10/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2a45cfb3e00d8078fbf45bdc8a2668b7dd0a62c6
-ms.openlocfilehash: 80f586763d034891aac9b87dcb38120602aa2b85
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 1f254ee31bae1c3d7b1506e68c40baf78793bf66
 
 
 ---
@@ -109,7 +109,7 @@ Hello for Business を使用すると、パスワードの代わりに **ユー�
 
 この構成に加えて、「[証明書プロファイルの構成](#configure-a-certificate-profile)」で説明されているように、証明書プロファイルも展開する必要があります。
 
-### <a name="recommended-approach---configure-a-windows-hello-for-business-profile"></a>推奨される方法 - Windows Hello for Business プロファイルの構成  
+### <a name="recommended-approach----configure-a-windows-hello-for-business-profile"></a>推奨される方法 - Windows Hello for Business プロファイルの構成  
 
 管理コンソールの **[会社のリソースへのアクセス]** で、**[Windows Hello for Business プロファイル]** を右クリックし、**[新規]** を選択してプロファイル ウィザードを開始します。 ウィザードによって要求された設定を指定し、最後のページで設定を確認して、**[閉じる]** をクリックします。 設定の例を次に示します。  
 
@@ -166,6 +166,6 @@ Configuration Manager アプリケーション管理の詳細については、�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

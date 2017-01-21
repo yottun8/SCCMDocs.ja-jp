@@ -1,5 +1,5 @@
 ---
-title: "CD.Latest フォルダー | System Center Configuration Manager"
+title: "CD.Latest フォルダー | Microsoft Docs"
 description: "Configuration Manager コンソール内から製品の更新を提供する新しい更新プロセスについて説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fc63227aa4345fb58e7efc15abd55071fb33e5d5
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: dcf56f6b82f89e81d636ea920f36133e245cbb1e
 
 
 ---
@@ -28,6 +28,8 @@ ms.openlocfilehash: fc63227aa4345fb58e7efc15abd55071fb33e5d5
 System Center Configuration Manager は、Configuration Manager コンソール内から製品の更新を提供する新しい更新プロセスを導入します。 Configuration Manager を更新するこの新しいメソッドをサポートするために、サイトの更新されたバージョン用の Configuration Manager インストール ファイルのコピーを含む、**CD.Latest** という名前の新しいフォルダーが作成されます。  
 
 1606 以降の更新プログラムでは、CD.Latest フォルダーに **Redist** というフォルダーが含まれます。セットアップ時にダウンロードして使用される再頒布可能ファイルがここに入ります。 これらのファイルは、その CD.Latest フォルダーにある Configuration Manager ファイルのバージョンに一致します。 CD.Latest フォルダーからセットアップを実行する場合、そのセットアップのバージョンに一致するファイルを使用する必要があります。 そのためには、新しい現行のファイルを Microsoft からダウンロードするようにセットアップに指示するか、CD.Latest フォルダーに含まれている Redist フォルダーのファイルを使用するようにセットアップに指示できます。
+
+ただし、2016 年 10 月にリリースされた構成基準バージョン 1606 のような構成基準メディアには、Redist フォルダーは含まれません。 コンソール内の更新プログラムをインストールするまで、Redist フォルダーは作成されません。 それまでは、構成基準メディアからサイトをインストールするときに使った Redist フォルダーを使ってください。  
 
 > [!TIP]
 > バージョン 1606 をまだインストールしていない場合、使用する再頒布可能ファイルが現行のものであることを確認する必要があります。 再頒布可能ファイルを最近ダウンロードしていない場合は、Microsoft からダウンロードするようセットアップを計画します。   
@@ -61,6 +63,6 @@ CD.Latest フォルダーからのソース ファイルは、次に対してサ
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

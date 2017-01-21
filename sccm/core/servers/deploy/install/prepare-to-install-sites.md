@@ -1,5 +1,5 @@
 ---
-title: "サイトのインストールの準備 | System Center Configuration Manager"
+title: "サイトのインストールの準備 | Microsoft Docs"
 description: "複数のサイトのインストール中に時間を節約し、エラーを回避するために、これらの詳細を確認してください。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6f240f1da4561c05bee974b78f43bfcdba591df6
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 0534d1eb587cb01f35d811d72ddfe6ceb07e5b7c
 
 ---
-# <a name="prepare-to-install-system-center-configuration-manager-sites"></a> System Center Configuration Manager サイトのインストールを準備する
+# <a name="prepare-to-install-system-center-configuration-manager-sites"></a>System Center Configuration Manager サイトのインストールを準備する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -73,7 +73,7 @@ Configuration Manager コンソールを使用して、プライマリ サイト
 
 
 
-## <a name="a-namebkmktasksa-common-tasks-to-complete-before-starting-an-install"></a><a name="bkmk_tasks"></a>  インストールを開始する前に完了する一般的なタスク
+## <a name="a-namebkmktasksa--common-tasks-to-complete-before-starting-an-install"></a><a name="bkmk_tasks"></a>  インストールを開始する前に完了する一般的なタスク
 -   展開に使用する階層トポロジを把握します     
      (「[System Center Configuration Manager のサイト階層の設計](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)」を参照してください)。  
 
@@ -90,7 +90,7 @@ Configuration Manager コンソールを使用して、プライマリ サイト
 
 
 
-## <a name="a-namebkmksitecodesa-about-site-names-and-site-codes"></a><a name="bkmk_sitecodes"></a>  サイト名とサイト コードについて
+## <a name="a-namebkmksitecodesa--about-site-names-and-site-codes"></a><a name="bkmk_sitecodes"></a>  サイト名とサイト コードについて
 サイト コードとサイト名は、Configuration Manager 階層内でサイトを識別および管理するために使用します。 Configuration Manager コンソールには、サイト コードとサイト名が、&lt;サイト コード\> - &lt;サイト名\> の形式で表示されます。 階層にあるサイトごとに固有なサイト コードが付いている必要があります。 Active Directory スキーマが Configuration Manager 用に拡張されており、サイトがデータを発行する場合は、Active Directory フォレスト内で使用するサイト コードは、必ず固有でなければなりません。サイトが Configuration Manager の別の階層や以前の Configuration Manager のインストールで使用されていても、同じサイト コードを付けることはできません。 階層を展開する前に、どのようなサイト コードとサイト名を使用するかを、十分検討してください。
 
 ### <a name="specify-a-site-code-and-site-name"></a>サイト コードとサイト名の指定
@@ -126,7 +126,7 @@ Configuration Manager 階層内で中央管理サイトまたはプライマリ 
     -   Configuration Manager では、階層から子プライマリ サイトを移動して、スタンドアロン プライマリ サイトを作成したり異なる階層に接続したりすることはできません。 代わりに、子プライマリ サイトをアンインストールし、新しいスタンドアロンのプライマリ サイトまたは別の階層の中央管理サイトの子サイトとして再インストールします。  
 
 
-## <a name="a-namebkmkoptionalstepsa-optional-steps-to-run-before-starting-setup"></a><a name="bkmk_optionalsteps"></a>  セットアップを開始する前に実行するオプションの手順
+## <a name="a-namebkmkoptionalstepsa--optional-steps-to-run-before-starting-setup"></a><a name="bkmk_optionalsteps"></a>  セットアップを開始する前に実行するオプションの手順
 **[セットアップ ダウンローダー](../../../../core/servers/deploy/install/setup-downloader.md)**を手動で実行し、Configuration Manager の更新されたセットアップ ファイルをダウンロードすることができます。
 
 セットアップを実行するコンピューターがインターネットに接続されていない場合、または複数のサイト サーバーをインストールする場合は、セットアップ ダウンローダーを使用して、セットアップ ファイルの必要な更新プログラムをダウンロードすることをご検討ください。
@@ -148,6 +148,6 @@ Configuration Manager 階層内で中央管理サイトまたはプライマリ 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

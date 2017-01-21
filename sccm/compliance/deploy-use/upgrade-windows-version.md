@@ -1,8 +1,8 @@
 ---
-title: "Windows デバイスの新しいバージョンへのアップグレード | System Center Configuration Manager"
+title: "Windows デバイスを新しいバージョンにアップグレードする | Microsoft Docs"
 description: "Windows 10 Desktop、Windows 10 Mobile、Windows 10 Holographic を実行するデバイスを自動的に新しいバージョンにアップグレードします。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7ee088f6da266742e7836499a7f0e072bf446a62
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: f14dfb77be7b53e74d53e0c1fc7e7f1731952d40
 
 
 ---
@@ -35,12 +35,13 @@ System Center Configuration Manager **エディションのアップグレード
 - Windows 10 Holographic
 
 次のアップグレード パスがサポートされます。
+
 - Windows 10 Pro から Windows 10 Enterprise
 - Windows 10 Home から Windows 10 Education
 - Windows 10 Mobile から Windows 10 Mobile Enterprise
 - Windows 10 Holographic Pro から Windows 10 Holographic Enterprise
 
-デバイスを Microsoft Intune に登録する必要があります。 この機能は、Configuration Manager クライアント ソフトウェアを実行している PC またはオンプレミスの MDM で管理されている PC には、現在対応していません。
+デバイスは Microsoft Intune に登録するか、Configuration Manager クライアント ソフトウェアを実行する必要があります。 現在、このポリシーは、オンプレミス MDM で管理されている PC と互換性はありません。
 
 ## <a name="before-you-start"></a>アップグレードを開始する前に  
  デバイスを最新バージョンにアップグレードし始める前に、次のいずれかを用意する必要があります。  
@@ -78,7 +79,7 @@ System Center Configuration Manager **エディションのアップグレード
 
 6.  ウィザードを完了します。  
 
- 新しいポリシーは、 **[資産とコンプライアンス]** ワークスペースの **[Windows 10 エディション アップグレード]** ノードに表示されます。  
+新しいポリシーは、 **[資産とコンプライアンス]** ワークスペースの **[Windows 10 エディション アップグレード]** ノードに表示されます。  
 
 ## <a name="deploy-the-edition-upgrade-policy"></a>エディションのアップグレード ポリシーを展開する  
 
@@ -86,14 +87,14 @@ System Center Configuration Manager **エディションのアップグレード
 
 3.  展開する Windows 10 のエディションのアップグレード ポリシーを選び、 **[ホーム]** タブの **[展開]** グループで **[展開]**をクリックします。  
 
-4.  **[Windows 10 エディション アップグレードの展開]** ダイアログ ボックスで、ポリシーを展開するユーザーまたはデバイスのコレクションと、ポリシーを評価するスケジュールを選び、 **[OK]**をクリックします。  
+4.  **[Windows 10 エディション アップグレードの展開]** ダイアログ ボックスで、ポリシーを展開するコレクションと、ポリシーを評価するスケジュールを選択し、**[OK]**をクリックします。 Configuration Manager クライアントで管理されている PC の場合は、デバイス コレクションにポリシーを展開する必要があります。 Intune で登録されている PC の場合は、ユーザーまたはデバイス コレクションにポリシーを展開できます。 
 
- **[監視]** ワークスペースの **[展開]** ノードから、作成した展開を監視できます。  
+**[監視]** ワークスペースの **[展開]** ノードから、作成した展開を監視できます。  
 
- 対象の Windows PC にポリシーが到達すると、アップグレードを適用するために PC は 2 時間以内に再起動します。 ポリシーを展開するすべてのユーザーに通知するか、ポリシーの実行をユーザーの業務時間外にスケジュール設定します。
+ ポリシーが対象の Windows PC に到達し、評価されると、アップグレードを適用するために PC が 2 時間以内に再起動します。 ポリシーを展開するすべてのユーザーに通知するか、ポリシーの実行をユーザーの業務時間外にスケジュール設定します。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

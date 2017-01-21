@@ -1,5 +1,5 @@
 ---
-title: "増分バージョン | System Center Configuration Manager"
+title: "増分バージョン | Microsoft Docs"
 description: "System Center Configuration Manager の更新プログラムをインストールして管理する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 2b3fe48d0c878063886618d4390e6f5f53f311af
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: afc73be528c3ac4a35b72631e4479338e127e4dc
 
 ---
 # <a name="whats-new-in-system-center-configuration-manager-incremental-versions"></a>System Center Configuration Manager の増分バージョンの新機能
@@ -36,6 +36,7 @@ ms.openlocfilehash: 2b3fe48d0c878063886618d4390e6f5f53f311af
  これらの更新プログラム バージョンは、System Center Configuration Manager インストールの増分バージョンと、展開で使用できる機能を把握するための鍵となります。
 
  System Center Configuration Manager の現在のブランチの初期リリースは、バージョン 1511 と呼ばれることもあります。 この初期リリースから、追加の更新プログラムを利用できます。 次のリンクを使用して、各バージョンの新機能を確認できます。
+  - [バージョン 1610 の新機能](../../../core/plan-design/changes/whats-new-in-version-1610.md)
   - [バージョン 1606 の新機能](../../../core/plan-design/changes/whats-new-in-version-1606.md)
   - [バージョン 1602 の新機能](../../../core/plan-design/changes/whats-new-in-version-1602.md)
 
@@ -44,6 +45,6 @@ ms.openlocfilehash: 2b3fe48d0c878063886618d4390e6f5f53f311af
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

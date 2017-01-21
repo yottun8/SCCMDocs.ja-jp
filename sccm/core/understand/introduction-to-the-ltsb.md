@@ -1,5 +1,5 @@
 ---
-title: "Long-Term Servicing Branch の概要 | System Center Configuration Manager"
+title: "Long-Term Servicing Branch の概要 | Microsoft Docs"
 description: "System Center Configuration Manager の Long-Term Servicing Branch について説明します。"
 ms.custom: na
 ms.date: 10/12/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2a45cfb3e00d8078fbf45bdc8a2668b7dd0a62c6
-ms.openlocfilehash: 926d1b1299e7851bd1d9168237859c5cd7a65abe
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: c681068768eda992b570a10b5f1b25c6ff1e1e79
 
 
 ---
@@ -126,6 +126,6 @@ CD.Latest フォルダーの詳細については、「[The CD.Latest folder](/s
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

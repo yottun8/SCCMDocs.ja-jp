@@ -1,8 +1,8 @@
 ---
-title: "Wi-Fi および VPN プロファイルの前提条件 | System Center Configuration Manager"
+title: "Wi-Fi および VPN プロファイルの前提条件 | Microsoft Docs"
 description: "System Center Configuration Manager で証明書プロファイル、Wi-Fiプロファイル、および VPN プロファイルを管理するために必要なセキュリティ アクセス許可について説明します。"
 ms.custom: na
-ms.date: 0201-03-31
+ms.date: 11/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: c103735a0f5fab6b800a7e9fb808221aebb102cb
+ms.sourcegitcommit: 31b68ede677df8b86412a334d1d100041a0e659e
+ms.openlocfilehash: 309b0363f9b3ec4a31b8323b9e64c9f73060c281
 
 
 ---
@@ -54,6 +54,6 @@ System Center Configuration Manager の Wi-Fi プロファイルおよび VPN �
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

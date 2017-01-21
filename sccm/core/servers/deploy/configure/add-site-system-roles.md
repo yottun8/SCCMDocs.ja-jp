@@ -1,5 +1,5 @@
 ---
-title: "サイト システムの役割の追加 | System Center Configuration Manager"
+title: "サイト システムの役割の追加 | Microsoft Docs"
 description: "Configuration Manager のサイト システムの役割とそれを追加し、サイトの機能と容量を拡張する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f9437760936cdc4f9daad67205e635ab916207bd
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: e0cc69baa2fdc5bb9c1327c89840e28d0f885608
 
 
 ---
@@ -53,6 +53,6 @@ Configuration Manager では、単一のサイト システム サーバー上�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "セットアップ ウィザード | System Center Configuration Manager"
+title: "セットアップ ウィザード | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -15,8 +15,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ffcdf4285d5f182e8d625200989f65c748bc2067
-ms.openlocfilehash: 9552ac1b77acfce6a398ec6e74f1be3686ee15a4
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 28ce074469469b6a7c1c456da051b5f8dea43dbb
 
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>セットアップ ウィザードを使用した System Center Configuration Manager サイトのインストール
@@ -28,7 +28,7 @@ ms.openlocfilehash: 9552ac1b77acfce6a398ec6e74f1be3686ee15a4
 
 セカンダリ サイトをインストールするには、Configuration Manager コンソール内からサイトをインストールする必要があります。  セカンダリ サイトは、スクリプトを使用してコマンド ラインからインストールすることはできません。
 
-## <a name="a-namebkmkprimarya-install-a-central-administration-site-or-primary-site"></a><a name="bkmk_primary"></a>  中央管理サイトまたはプライマリ サイトをインストールする
+## <a name="a-namebkmkprimarya--install-a-central-administration-site-or-primary-site"></a><a name="bkmk_primary"></a>  中央管理サイトまたはプライマリ サイトをインストールする
 中央管理サイトまたはプライマリ サイトをインストールする場合や、評価版サイトをフル機能のライセンス版 Configuration Manager サイトにアップグレードする場合は、次の手順に従います。   
 
 サイトのインストールを開始する前に、次の記事で詳細を確認してください。
@@ -37,7 +37,7 @@ ms.openlocfilehash: 9552ac1b77acfce6a398ec6e74f1be3686ee15a4
 
 この手順をサイト展開シナリオの一部として実行する場合は、次の手順を使用する前に、このトピックの「[スタンドアロン プライマリ サイトを拡張する](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand)」セクションを確認してください。
 
-### <a name="a-namebkmkinstallpria-to-install-a-primary-or-central-administration-site"></a><a name="bkmk_installpri"></a>   プライマリ サイトまたは中央管理サイトをインストールするには
+### <a name="a-namebkmkinstallpria---to-install-a-primary-or-central-administration-site"></a><a name="bkmk_installpri"></a>   プライマリ サイトまたは中央管理サイトをインストールするには
 
 1.  サイトをインストールするコンピューターで、**&lt;InstallationMedia\>\SMSSETUP\BIN\X64\Setup.exe** を実行して **System Center Configuration Manager セットアップ ウィザード**を開始します。  
 
@@ -389,6 +389,6 @@ ms.openlocfilehash: 9552ac1b77acfce6a398ec6e74f1be3686ee15a4
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

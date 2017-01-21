@@ -1,5 +1,5 @@
 ---
-title: "デバイスをコレクションに自動的に分類する | System Center Configuration Manager"
+title: "デバイスを自動的にコレクションごとに分類する | Microsoft Docs"
 description: "System Center Configuration Manager でデバイスをコレクションに自動的に分類します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6e1e8c1da1209be03d4a1377dcc0c9ce9478a216
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: d5ef7260bcc2ab9cc56d8fed530a406aa1045c5a
 
 ---
 # <a name="automatically-categorize-devices-into-collections-with-system-center-configuration-manager"></a>System Center Configuration Manager でデバイスをコレクションに自動的に分類する
@@ -64,6 +64,6 @@ Microsoft Intune と Configuration Manager を使用している場合に、デ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

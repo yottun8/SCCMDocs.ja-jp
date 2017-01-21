@@ -1,5 +1,5 @@
 ---
-title: "レポートの操作とメンテナンス | Configuration Manager"
+title: "レポートの操作とメンテナンス | Microsoft Docs"
 description: "System Center Configuration Manager でのレポートおよびレポートのサブスクリプションの管理の詳細について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 2473aef3b5c9be51f45039735e975d1c0ca86277
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: f5a58ba9ecd9b0998c2859b6d3f45e493d7ef3cb
 
 
 ---
@@ -361,6 +361,6 @@ System Center Configuration Manager にレポートのためのインフラス�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

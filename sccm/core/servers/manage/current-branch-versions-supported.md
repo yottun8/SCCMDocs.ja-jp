@@ -1,5 +1,5 @@
 ---
-title: "Current Branch バージョン | System Center Configuration Manager"
+title: "Current Branch バージョン | Microsoft Docs"
 description: "System Center Configuration Manager のバージョン履歴を確認し、提供サービスのフェーズについて説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 2308e1f8bde4a93329dfe6ce96d781fcac1b495a
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: fecbdfa9ad99ca36f419cdda19a14b58f9f2b316
 
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>System Center Configuration Manager の Current Branch バージョンのサポート
@@ -44,9 +44,12 @@ Microsoft は一年に数回、System Center Configuration Manager の Current B
 |1511|2015 年 12 月 8 日|2016 年 12 月 8 日|  
 |1602|2016 年 3 月 11 日|2017 年 3 月 11 日|
 |1606|2016 年 7 月 22 日|2017 年 7 月 22 日|
+|1610|11/18/2016|2017 年 11 月 18 日|
+
+バージョン番号と、コンソール内の更新プログラムまたはベースラインとして入手可能かどうかについては、「[Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)」(ベースラインと更新プログラムのバージョン) を参照してください。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

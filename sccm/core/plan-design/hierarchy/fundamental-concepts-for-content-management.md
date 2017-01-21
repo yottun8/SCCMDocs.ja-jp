@@ -1,5 +1,5 @@
 ---
-title: "コンテンツ管理の基礎 | System Center Configuration Manager"
+title: "コンテンツ管理の基礎 | Microsoft Docs"
 description: "System Center Configuration Manager のツールとオプションを使用して、展開するコンテンツを管理します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 27342ef83d877c31f39bc232e3e19e37b78e62da
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 577d7e3acc27e3b50e22fc42d5db2f68d9cdde29
 
 
 ---
@@ -39,7 +39,7 @@ System Center Configuration Manager は、アプリケーション、パッケ�
 
      このアカウントは、リモート フォレスト内のソース配布ポイントからコンテンツを取得するためにプル配布ポイントによっても使用されます  
 
--   **パッケージ アクセス アカウント** - 既定では、Configuration Manager は、汎用アクセス アカウントである Users および Administrators に対して配布ポイント上のコンテンツへのアクセスを許可します。 ただし、追加のアクセス許可を構成してアクセスを制限することができます。 「&lt;パッケージ コンテンツにアクセスするためのアカウントの管理\>」をご覧ください。  
+-   **パッケージ アクセス アカウント** - 既定では、Configuration Manager は、汎用アクセス アカウントである Users および Administrators に対して配布ポイント上のコンテンツへのアクセスを許可します。 ただし、追加のアクセス許可を構成してアクセスを制限することができます。   
 
 -   **マルチキャスト接続アカウント** - オペレーティング システムの展開に使用します。  
 
@@ -75,8 +75,12 @@ BDR は、同じ階層内の親サイトと子サイト間でサポートされ�
 
 -   このため、同じサブネット上の後続のクライアントは配布ポイントからコンテンツをダウンロードする必要がなく、その後の転送ではコンテンツは複数のクライアントから配布されます。  
 
+## <a name="peer-cache"></a>ピア キャッシュ
+バージョン 1610 より、クライアントのピア キャッシュをリモート クライアントへのコンテンツ展開の管理に使用できるようになりました。 クライアントがローカル キャッシュから直接他のクライアントとコンテンツを共有するための組み込みの Configuration Manager ソリューションである、ピア キャッシュです。
 
+ピア キャッシュを有効にするクライアント設定をコレクションに展開すると、そのコレクションのメンバーは同じ境界グループ内の他のクライアントのピア コンテンツ ソースとして動作できます。
 
+詳細については、「[Configuration Manager クライアントのピア キャッシュ](/sccm/core/plan-design/hierarchy/client-peer-cache)」を参照してください。
 
 
 ## <a name="windows-pe-peer-cache"></a>Windows PE ピア キャッシュ
@@ -94,7 +98,7 @@ BDR は、同じ階層内の親サイトと子サイト間でサポートされ�
 
     -   オンプレミスの配布ポイントを使用できない場合、フォールバックとしてクラウドベースの配布ポイントのみを使用します  
 
--   **インターネット** :  
+-   **インターネット**:  
 
     -   HTTPS を受け入れるには配布ポイントが必要です  
 
@@ -111,7 +115,7 @@ BDR は、同じ階層内の親サイトと子サイト間でサポートされ�
 ## <a name="content-library"></a>コンテンツ ライブラリ  
  配布するコンテンツの合計サイズを減らすために Configuration Manager が使用する、コンテンツの単一インスタンス ストア。  
 
-[コンテンツ ライブラリ](../../../core/plan-design/hierarchy/the-content-library.md)の詳細
+[コンテンツ ライブラリ](../../../core/plan-design/hierarchy/the-content-library.md)の詳細を確認してください。
 
 
 ## <a name="distribution-point"></a>配布ポイント  
@@ -119,9 +123,9 @@ BDR は、同じ階層内の親サイトと子サイト間でサポートされ�
 
  基本的な (特殊化されていない) 配布ポイントは、標準配布ポイントとも呼ばれます。  標準配布ポイントには次の 2 つのバリエーションがあることに注目してください。  
 
--   **プル配布ポイント** - クライアントが配布ポイントからコンテンツをダウンロードするのと同様に、配布ポイントが他の配布ポイント (ソース配布ポイント) からコンテンツを取得する、配布ポイントのバリエーションの 1 つ。 プル配布ポイントを使用すると、サイト サーバーが各配布ポイントにコンテンツを直接配布する必要があるときに発生する可能性があるネットワーク帯域幅のボトルネックを解消することができます。  [System Center Configuration Manager でのプル配布ポイントの使用](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)  
+-   **プル配布ポイント** - クライアントが配布ポイントからコンテンツをダウンロードするのと同様に、配布ポイントが他の配布ポイント (ソース配布ポイント) からコンテンツを取得する、配布ポイントのバリエーションの 1 つ。 プル配布ポイントを使用すると、サイト サーバーが各配布ポイントにコンテンツを直接配布する必要があるときに発生する可能性があるネットワーク帯域幅のボトルネックを解消することができます。  [System Center Configuration Manager でプル配布ポイントを使用します](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)。
 
--   **クラウドベースの配布ポイント** - Microsoft Azure にインストールされている配布ポイントのバリエーションの 1 つ。 [System Center Configuration Manager でのクラウド ベースの配布ポイントの使用](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
+-   **クラウドベースの配布ポイント** - Microsoft Azure にインストールされている配布ポイントのバリエーションの 1 つ。 [System Center Configuration Manager でクラウド ベースの配布ポイントを使用します](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)。  
 
 
 標準配布ポイントは、調整とスケジュール、PXE、マルチキャスト、事前設定されたコンテンツなどの一連の構成および機能をサポートします。  
@@ -155,18 +159,29 @@ BDR は、同じ階層内の親サイトと子サイト間でサポートされ�
 >  また、プル配布ポイントは、優先順位の概念を使用して、ソース配布ポイントのシーケンスを決定しています。  
 >   
 >  -   配布ポイントにコンテンツを転送するための配布ポイントの優先順位は、プル配布ポイントがソース配布ポイントのコンテンツを検索するときに使用する優先順位とは異なります。  
-> -   詳細については、「[System Center Configuration Manager でのプル配布ポイントの使用](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)」を参照してください。  
+>  -   詳細については、「[System Center Configuration Manager でのプル配布ポイントの使用](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)」を参照してください。  
 
 
 ## <a name="fallback"></a>フォールバック  
- フォールバックの設定は、 **優先配布ポイント** の使用と、クライアントによって使用されるコンテンツ ソースの場所に関連しています。  
+ バージョン 1610 より、クライアントによる (フォールバックを含めた) コンテンツを含む配布ポイントの検索方法について、いくつかの概念が変更されています。 使用するバージョンに適用される、次の情報を使用してください。
+
+**バージョン 1610 およびそれ以降:**   
+現在の境界グループに関連付けられた配布ポイントのコンテンツが見つからないクライアントは、フォールバックを使用して近隣の境界グループに関連付けられたコンテンツ ソースの場所を使用することができます。 フォールバックとして使用するには、近隣の境界グループにクライアントの現在の境界グループとの関係が定義されている必要があります。 このリレーションシップには、コンテンツがローカルで見つからないクライアントが検索により近隣の境界グループのコンテンツ ソースを含めることができるまでに経過しなければならない時間が構成されています。
+
+優先配布ポイントの概念は使用されなくなりました。また、[代替のコンテンツ ソースの場所の使用を許可する] の設定も使用または適用されなくなりました。
+
+詳細については、「[境界グループ](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)」を参照してください。
+
+
+**バージョン 1511、1602、および 1606:**   
+フォールバックの設定は、 **優先配布ポイント** の使用と、クライアントによって使用されるコンテンツ ソースの場所に関連しています。
 
 -   既定では、クライアントは、優先配布ポイント (クライアントの境界グループに関連付けられている配布ポイント) からのみコンテンツをダウンロードします。  
 
 -   ただし、配布ポイントで **[クライアントがコンテンツの代替ソースの場所としてこのサイト システムを使用することを許可する]** が構成されている場合、優先配布ポイントのいずれかから展開を取得できないすべてのクライアントに対して、この配布ポイントを有効なコンテンツ ソースとしてのみ提供することができます。  
 
 
-さまざまなコンテンツの場所とフォールバック シナリオの詳細については、[コンテンツ ソースの場所の例](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)をご覧ください。
+さまざまなコンテンツの場所とフォールバック シナリオの詳細については、「[コンテンツ ソースの場所の例](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)」を参照してください。 境界グループの詳細については、「[Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606)」(バージョン 1511、1602、1606 の境界グループ) を参照してください。
 
 ## <a name="network-bandwidth"></a>ネットワークの帯域幅  
  コンテンツを配布するときに使用されるネットワーク帯域幅を管理するために、次のオプションを使用できます。  
@@ -178,16 +193,23 @@ BDR は、同じ階層内の親サイトと子サイト間でサポートされ�
 詳細については、「[ネットワーク帯域幅の管理](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)」を参照してください。
 
 ## <a name="network-connection-speed-to-content-source"></a>コンテンツ ソースへのネットワーク接続の速度  
+バージョン 1610 より、クライアントによる (コンテンツ ソースへのネットワーク接続速度を含めた) コンテンツを含む配布ポイントの検索方法について、いくつかの概念が変更されています。 使用するバージョンに適用される、次の情報を使用してください。
+
+**バージョン 1610 およびそれ以降:**   
+配布ポイントを **[高速]** または **[低速]** として定義するネットワーク接続速度は使用されなくなりました。 代わりに、境界グループに関連付けられている各サイト システムが同じように処理されます。
+
+詳細については、「[境界グループ](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)」を参照してください。
+
+
+**バージョン 1511、1602、および 1606:**   
+
  境界グループ内の配布ポイントごとにネットワーク接続速度を構成できます。  
 
 -   クライアントは、配布ポイントに接続するときにこの値を使用します。  
-
 -   ネットワーク接続速度は既定で **[高速]**に構成されていますが、 **[低速]**に設定することもできます。  
-
 -   **ネットワーク接続速度** と展開構成を基に、クライアントが関連付けられた境界グループ内にある場合に、コンテンツを配布ポイントからダウンロードできるかどうかが決定されます。  
 
-
-さまざまなコンテンツの場所とフォールバック シナリオの詳細については、[コンテンツ ソースの場所の例](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)をご覧ください。  
+さまざまなコンテンツの場所とフォールバック シナリオの詳細については、「[コンテンツ ソースの場所の例](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)」を参照してください。 境界グループの詳細については、「[Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606)」(バージョン 1511、1602、1606 の境界グループ) を参照してください。
 
 ## <a name="on-demand-content-distribution"></a>オンデマンドのコンテンツ配布  
  優先配布ポイントへのオンデマンドのコンテンツ配布を有効にするために個々のアプリケーションとパッケージ (展開) に対して設定できるオプション。  
@@ -198,26 +220,28 @@ BDR は、同じ階層内の親サイトと子サイト間でサポートされ�
 
 -   このオプションが有効になっていると、Configuration Manager によってクライアントの優先配布ポイントにコンテンツが自動的に配布されますが、クライアントの優先配布ポイントが展開を受け取る前にクライアントが他の配布ポイントからコンテンツを取得する可能性があります。 その場合、コンテンツは、その展開を必要とする他のクライアントで利用できるように、その配布ポイント上に保持されます。  
 
+1610 またはそれ以降のバージョンを使用する場合は、「[境界グループ](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)」を参照してください。
+バージョン 1511、1602、または 1606 を使用する場合は、「[コンテンツ ソースの場所の例](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)」を参照し、異なるコンテンツの場所とフォールバック シナリオについて確認してください。  
 
-さまざまなコンテンツの場所とフォールバック シナリオの詳細については、[コンテンツ ソースの場所の例](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)をご覧ください。  
 
 
 ## <a name="package-transfer-manager"></a>Package Transfer Manager  
  他のコンピューター上の配布ポイントにコンテンツを転送するサイト サーバー コンポーネント。  
 
- [Package Transfer Manager](../../../core/plan-design/hierarchy/package-transfer-manager.md) の詳細  
+ [Package Transfer Manager](../../../core/plan-design/hierarchy/package-transfer-manager.md) の詳細を確認してください。  
 
 ## <a name="preferred-distribution-point"></a>優先配布ポイント  
- クライアントの現在の境界グループに関連付けられている配布ポイント。  
+ 優先配布ポイントには、クライアントの現在の境界グループに関連付けられている配布ポイントがすべて含まれます。  
 
  各配布ポイントを 1 つまたは複数の境界グループに関連付けることができます。  
 
 -   この関連付けにより、コンテンツをダウンロードできる配布ポイントをクライアントが識別できるようになります。  
-
 -   既定では、クライアントは、優先配布ポイントからのみコンテンツをダウンロードできます。  
 
 
-さまざまなコンテンツの場所とフォールバック シナリオの詳細については、[コンテンツ ソースの場所の例](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)をご覧ください。  
+詳細情報:
+ - 1610 またはそれ以降のバージョンを使用する場合は、「[境界グループ](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)」を参照してください。
+ - バージョン 1511、1602、または 1606 を使用する場合は、「[コンテンツ ソースの場所の例](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)」を参照してください。
 
 ## <a name="prestage-content"></a>コンテンツの事前設定  
  ネットワーク経由でコンテンツを配布する際に Configuration Manager に依存することなく配布ポイントにコンテンツを転送するプロセス。  
@@ -226,6 +250,6 @@ BDR は、同じ階層内の親サイトと子サイト間でサポートされ�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
