@@ -13,11 +13,15 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
 translationtype: Human Translation
-ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
-ms.openlocfilehash: b89cec7cebb5342da32ec8e11a049edad12f1231
+ms.sourcegitcommit: af5f58dd5fe1f19d7a70cb9516af159c6682d194
+ms.openlocfilehash: ae09a02dd5d67113b9a7e2ce146c844efa4caf55
 
 
 ---
+>[!IMPORTANT]
+>これは Configuration Manager バージョン 1606 およびバージョン 1610 で使用できるプレリリース機能です。 プレリリース機能は、運用環境での早期テストのためにこの製品に含まれていますが、運用環境で使用することはできません。 使用するには、この機能を有効にする必要があります。 詳細については、「[更新プログラムからプレリリース機能を使用する](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)」を参照してください。
+
+
 # <a name="service-a-server-group"></a>サーバー グループの提供
 
 *適用対象: System Center Configuration Manager (Current Branch)*
@@ -88,6 +92,6 @@ System Center Configuration Manager バージョン 1606 以降では、コレ�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

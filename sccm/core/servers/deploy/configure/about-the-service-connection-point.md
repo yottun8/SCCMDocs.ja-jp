@@ -2,7 +2,7 @@
 title: "サービス接続ポイント | Microsoft Docs"
 description: "この Configuration Manager サイト システムの役割について学習し、その使用範囲を理解し計画します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4a8d98addcd463eb82d8b7100b44254a10d21992
-ms.openlocfilehash: b5f7ad01f7a32d69d0c75b3c80a053f3c020c036
+ms.sourcegitcommit: 4409d32593e3ab22482b08335005bd2a278a7e35
+ms.openlocfilehash: 36f33e0ce898ccdd5fa25aa59b8cf032805769b9
 
 
 ---
@@ -83,7 +83,7 @@ Configuration Manager サービス マネージャーを使用するには、コ
 -   サイト システム インストール アカウントを、サイト サーバー上の配布マネージャーがサービス接続ポイントから更新プログラムの転送に使用します。
 
 ##  <a name="a-namebkmkurlsa-internet-access-requirements"></a><a name="bkmk_urls"></a> インターネット アクセス要件  
-操作を有効にするには、サービス接続ポイントをホストするコンピューター、ならびにそのコンピューターとインターネットの間のファイアウォールにより、通信が **ポート TCP 443** を介して次のインターネット上の場所に届くようにする必要があります。 サービス接続ポイントは、Web プロキシ (認証あり、または認証なし) を使用して、これらの場所にアクセスすることもサポートしています。  
+操作を有効にするには、サービス接続ポイントをホストするコンピューター、ならびにそのコンピューターとインターネットの間のファイアウォールにより、通信が**ポート TCP 443** および**ポート TCP 443** を介して次のインターネット上の場所に届くようにする必要があります。 サービス接続ポイントは、Web プロキシ (認証あり、または認証なし) を使用して、これらの場所にアクセスすることもサポートしています。  
 
 **更新とサービス**  
 
@@ -96,6 +96,8 @@ Configuration Manager サービス マネージャーを使用するには、コ
 -   blob.core.windows.net  
 
 -   download.microsoft.com  
+
+-   download.windowsupdate.com
 
 -   sccmconnected-a01.cloudapp.net  
 
@@ -119,6 +121,6 @@ Configuration Manager サービス マネージャーを使用するには、コ
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

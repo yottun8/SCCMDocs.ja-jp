@@ -2,7 +2,7 @@
 title: "非推奨の機能 |Microsoft Docs"
 description: "System Center Configuration Manager でサポートされなくなった機能、製品、およびオペレーティング システムについて説明します。"
 ms.custom: na
-ms.date: 12/29/2016
+ms.date: 1/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 16781e281676c8c1092108d16beaf7e0b16d45a7
-ms.openlocfilehash: e788a3c54e3620db92f1cc3e8246e5469189a802
+ms.sourcegitcommit: f912bb82b8d753f01b15f96eec5099c3f92abe75
+ms.openlocfilehash: 18b411b05dd6fc9b572e1d3d201876172bb40d07
 
 
 ---
@@ -52,6 +52,7 @@ ms.openlocfilehash: e788a3c54e3620db92f1cc3e8246e5469189a802
 |帯域外管理 - System Center 2012 Configuration Manager の機能|2015 年 10 月 16 日|バージョン 1511|
 |タスク シーケンス: <br /> - ディスクをダイナミックに変換 <br /> - 展開ツールのインストール |2016 年 11 月 18 日|2017 年 6 月 1 日以降にリリースされる最初の更新プログラムでこれらのタスク シーケンスのサポートは終了します。|
 |ソフトウェア センターは新しい現代的な外観へと一新されます。 Silverlight を使用するアプリケーション カタログにしか表示されなかったアプリ (ユーザーが利用できるアプリ) がソフトウェア センターの **[アプリケーション]** タブに表示されるようになります。 アプリケーション カタログには、ソフトウェア センターの **[インストールのステータス]** タブ上にあるリンクを使用してアクセスできます。<br><br>以前のバージョンのソフトウェア センターは、今後数か月の間に使用できなくなります。<br><br>新しいソフトウェア センターを使用するようにクライアントをセットアップするには、クライアント設定 **[コンピューター エージェント]** > **[新しいソフトウェア センターの使用]** を有効化します。<br><br>ソフトウェア センターの詳細については、「[System Center Configuration Manager のアプリケーション管理の計画と構成](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management)」を参照してください。|2016 年 12 月 13 日|後日発表|
+|Configuration Manager によるバーチャル ハード ディスク (VHD) の管理。 </br></br>これには、新しい VHD の作成オプション、またはタスク シーケンスを使用した VHD の管理オプションの削除と、Configuration Manager コンソールからのバーチャル ハード ディスクのノードの削除が含まれます。 </br></br>このサポートが削除されると、既存の VHD は削除されませんが、Configuration Manager コンソール内からアクセスできなくなります。  |2017 年 1 月 6 日 |VHD のサポートは、2017 年 6 月 1 日より後にリリースされた最初の更新プログラムで終了します。|
 
 
 バージョン 1511 の System Center Configuration Manager リリースで削除された機能の詳細を次に示します。
@@ -111,7 +112,6 @@ ms.openlocfilehash: e788a3c54e3620db92f1cc3e8246e5469189a802
 
 
 
-
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 

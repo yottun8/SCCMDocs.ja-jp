@@ -2,7 +2,7 @@
 title: "クライアント ピア キャッシュ | System Center Configuration Manager"
 description: "System Center Configuration Manager でコンテンツを展開する場合は、クライアントのコンテンツ ソースの場所のピア キャッシュを使用します。"
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 1/9/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: e2a72fd9fb9ae5e64b7eb92e1d2106162fc7ea5d
-ms.openlocfilehash: 599ba03a1934b9feb030f27c827625c2c9471d8e
+ms.sourcegitcommit: f3e8cb3a7a4c1de9b8e9866ed192a8a0a7aec106
+ms.openlocfilehash: 86129a7fd5bfac676b5f03336cf97d07747b48d1
 
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Configuration Manager クライアントのピア キャッシュ
@@ -48,6 +48,8 @@ System Center Configuration Manager バージョン 1610 以降、**ピア キ�
 
 
 ## <a name="requirements-and-considerations-for-peer-cache"></a>ピア キャッシュの要件と考慮事項
+- ピア キャッシュは、Configuration Manager クライアントとしてサポートされているすべての Windows OS でサポートされています。 Windows 以外のオペレーティング システムは、ピア キャッシュではサポートされていません。
+
 - 各クライアントのキャッシュ フォルダーに対する**フル コントロール**を持つ**ネットワーク アクセス アカウント**を使用してサイトを構成する必要があります。 既定で、これは ***%windir%\ccmcache*** です。
 
 - クライアントは、現在の境界グループ内にあるピア キャッシュ クライアントのコンテンツのみを転送できます。
@@ -67,6 +69,6 @@ System Center Configuration Manager バージョン 1610 以降、**ピア キ�
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 
