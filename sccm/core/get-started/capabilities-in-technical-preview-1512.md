@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager の Technical Preview 1512 の機能 | Microsoft Docs"
+title: "Configuration Manager の Technical Preview 1512 の機能"
 description: "System Center Configuration Manager の Technical Preview バージョン 1512 で使用できる機能について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
-ms.openlocfilehash: ea6cb27fc229854ba7c1c39bb735ed9b9a88bb61
+ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
+ms.openlocfilehash: 7fff6f2807a679b621b736b8ad0b6561fb37affe
 
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1512 の機能
@@ -61,7 +61,7 @@ Technical Preview 1512 以降、Configuration Manager を Microsoft Intune と�
 
 -   リアルタイム保護: **望ましくない可能性のあるアプリケーションのダウンロード時およびインストール前のブロック**  
 
-    -   望ましくない可能性のあるアプリケーション (PUA) とは、評価および研究主導の識別に基づく脅威の分類の 1 つです。 ほとんどの場合、これらは望ましくないアプリケーションバンドラーか、そのバンドルされたアプリケーションです。  
+    -   望ましくない可能性のあるアプリケーション (PUA) とは、評価および研究主導の識別に基づく脅威の分類の&1; つです。 ほとんどの場合、これらは望ましくないアプリケーションバンドラーか、そのバンドルされたアプリケーションです。  
 
     -   この保護ポリシーの設定は既定で有効になっています ([はい] に設定)。 この設定が有効な場合、PUA はダウンロード時とインストール時にブロックされます。 ただし、特定のファイルやフォルダーに環境内の特定のニーズを満たすを除外することができます。  
 
@@ -93,6 +93,6 @@ Endpoint Protection ポリシーを使用するには、Endpoint Protection ク�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

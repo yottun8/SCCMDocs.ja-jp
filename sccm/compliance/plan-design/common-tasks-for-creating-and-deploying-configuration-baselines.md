@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager での構成基準の作成と展開に関する一般的なタスク | Microsoft Docs"
+title: "構成基準に関する一般的なタスク - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager の構成基準を作成して展開する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
-ms.openlocfilehash: 8e1736d6a523ae864be9e8dbfcfdbc2ac93dfdf9
+ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
+ms.openlocfilehash: 5682cacb43af5bf9248446f1c35b08f137bdae9d
 
 
 ---
@@ -93,6 +93,6 @@ ms.openlocfilehash: 8e1736d6a523ae864be9e8dbfcfdbc2ac93dfdf9
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

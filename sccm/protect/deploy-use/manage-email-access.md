@@ -1,5 +1,5 @@
 ---
-title: "電子メール アクセスの管理 | Microsoft Docs"
+title: "Configuration Manager を使用した Exchange メールへのアクセスの管理 | Microsoft Docs"
 description: "System Center Configuration Manager の条件付きアクセスを使用して Exchange メールへのアクセスを管理する方法について説明します。"
 ms.custom: na
 ms.date: 10/04/2016
@@ -16,12 +16,12 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: 0bbe25598f38f9cf3c15375748fee09c43dfb928
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: 26179c0c92773dc0b69be500c165a52e15afc6fd
 
 
 ---
-# <a name="manage-email-access-in-system-center-configuration-manager"></a>System Center Configuration Manager でのメール アクセスの管理
+# <a name="manage-email-access"></a>電子メールへのアクセスの管理 
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -117,7 +117,7 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
  レポートの実行方法の詳細については、「[System Center Configuration Manager のレポート](../../core/servers/manage/reporting.md)」を参照してください。  
 
- レポートを実行した後、ユーザーをブロックするかどうかを判断するために、次の 4 つの列を調べます。  
+ レポートを実行した後、ユーザーをブロックするかどうかを判断するために、次の&4; つの列を調べます。  
 
 -   **[管理チャネル]** - デバイスが Intune、Exchange ActiveSync、またはその両方によって管理されているかどうかを示します。  
 
@@ -146,7 +146,7 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
 -   **Exchange On-premises ポリシーの場合** - Configuration Manager ユーザー コレクションを対象。 [ **資産とコンプライアンス** ] ワークスペースでこれらを構成できます。  
 
- 各ポリシーには、次の 2 つのグループの種類を指定できます。  
+ 各ポリシーには、次の&2; つのグループの種類を指定できます。  
 
 -   **対象グループ** - ポリシーが適用されるユーザー グループまたはコレクション  
 
@@ -363,6 +363,6 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

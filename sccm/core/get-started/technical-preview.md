@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager の Technical Preview | Microsoft Docs"
 description: "System Center Configuration Manager の新機能を体験できるテクニカル プレビュー リリースについて説明します。"
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 1/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4b1b925a50d08d90e4e1250967e19c0bc5aac4d3
-ms.openlocfilehash: faef3537eed740a6177f00991615c978659e06c7
+ms.sourcegitcommit: 8e4ccaf26b83896d12efcbd7ebd4bda4d4bf6675
+ms.openlocfilehash: d7d03c4494338a1d4583b6c82d3d5009b7785cfe
 
 
 ---
@@ -134,6 +134,12 @@ ms.openlocfilehash: faef3537eed740a6177f00991615c978659e06c7
 
  |機能|Technical Preview バージョン|Current Branch バージョン|  
  |----------------|---------------------|--------------------|
+ |ソフトウェア更新ポイントの境界グループの改善 | [Tech Preview 1701](capabilities-in-technical-preview-1701.md#boundary-groups-improvements-for-software-update-points)    |![追加されていません](media/Red_X.gif)  |
+ |ハードウェア インベントリでの UEFI 情報の収集 | [Tech Preview 1701](capabilities-in-technical-preview-1701.md#hardware-inventory-collects-uefi-information)|![追加されていません](media/Red_X.gif)  |
+ |オペレーティング システムの展開に関する機能拡張| [Tech Preview 1701](capabilities-in-technical-preview-1701.md#improvements-to-operating-system-deployment)|![追加されていません](media/Red_X.gif)  |
+ |クラウドベースの配布ポイントでソフトウェアの更新をホストする| [Tech Preview 1701](capabilities-in-technical-preview-1701.md#host-software-updates-on-cloud-based-distribution-points)|![追加されていません](media/Red_X.gif) |
+ |管理ポイント経由でデバイス正常性構成証明データを検証する| [Tech Preview 1701](capabilities-in-technical-preview-1701.md#validate-device-health-attestation-data-via-management-points)|![追加されていません](media/Red_X.gif) |
+ |Microsoft Azure Government クラウドの OMS コネクタ |[Tech Preview 1701](capabilities-in-technical-preview-1701.md#use-the-oms-connector-for-microsoft-azure-government-cloud) |![追加されていません](media/Red_X.gif) |
  |OData エンドポイントのデータ アクセス |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|![追加されていません](media/Red_X.gif)|
  |データ ウェアハウス サービス ポイント |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#the-data-warehouse-service-point)|![追加されていません](media/Red_X.gif)|
  |コンテンツ ライブラリのクリーンアップ ツール |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#content-library-cleanup-tool)|![追加されていません](media/Red_X.gif)|
@@ -225,6 +231,6 @@ ms.openlocfilehash: faef3537eed740a6177f00991615c978659e06c7
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

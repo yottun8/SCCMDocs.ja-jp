@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager クライアントを使用して管理されている Windows デスクトップおよびサーバー コンピューターのカスタム構成項目を作成する | Microsoft Docs"
+title: "クライアントで管理されている Windows コンピューターの構成項目を作成する - Configuration Manager | Microsoft Docs"
 description: "カスタム Windows デスクトップおよびサーバーの構成項目を使用して Windows コンピューターとサーバーの設定を管理します。"
 ms.custom: na
 ms.date: 11/18/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: f5509d1ffb88bc128f7be6c74e6b65dc33605c9e
+ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
+ms.openlocfilehash: e55883471fde63036c91b315ed6db6dceb315207
 
 
 ---
@@ -62,7 +62,7 @@ System Center Configuration Manager **カスタム Windows デスクトップお
 
 3.  [バージョン **** ] ボックスには、選択した Windows インストーラー ファイルのバージョン番号が自動的に入力されます。 このボックスに表示された値が正しくない場合は新しいバージョン番号を入力することができます。  
 
-4.  コンピューターのユーザー プロファイルごとに検出を実行する場合は、 **[このアプリケーションは 1 人以上のユーザー用にインストールする]** チェック ボックスをオンにします。  
+4.  コンピューターのユーザー プロファイルごとに検出を実行する場合は、 **[このアプリケーションは&1; 人以上のユーザー用にインストールする]** チェック ボックスをオンにします。  
 
 ### <a name="to-detect-a-specific-application-and-deployment-type"></a>特定のアプリケーションおよび展開の種類を検出するには  
 
@@ -260,7 +260,7 @@ System Center Configuration Manager **カスタム Windows デスクトップお
 ##  <a name="configure-compliance-rules"></a>コンプライアンス規則の構成  
  構成項目のコンプライアンス規則を構成するには、次の手順に従います。  
 
- コンプライアンス規則は、構成項目のコンプライアンスを定義する条件を指定します。 設定に対してコンプライアンス評価が行われる前に、少なくとも 1 つのコンプライアンス規則を設ける必要があります。 WMI、レジストリ、およびスクリプトの設定により、コンプライアンス非対応となった値の修復ができます。 新しい規則を作成、または構成項目の既存の設定を参照して規則を選択することができます。  
+ コンプライアンス規則は、構成項目のコンプライアンスを定義する条件を指定します。 設定に対してコンプライアンス評価が行われる前に、少なくとも&1; つのコンプライアンス規則を設ける必要があります。 WMI、レジストリ、およびスクリプトの設定により、コンプライアンス非対応となった値の修復ができます。 新しい規則を作成、または構成項目の既存の設定を参照して規則を選択することができます。  
 
 ### <a name="to-create-a-compliance-rule"></a>コンプライアンス規則を作成するには  
 
@@ -296,8 +296,8 @@ System Center Configuration Manager **カスタム Windows デスクトップお
             |次の値の間|詳細情報なし|  
             |次の値以上|詳細情報なし|  
             |次の値以下|詳細情報なし|  
-            |次のいずれか|テキストボックスで 1 行ごとに 1 つのエントリを指定します。|  
-            |次のいずれでもない|テキストボックスで 1 行ごとに 1 つのエントリを指定します。|  
+            |次のいずれか|テキストボックスで&1; 行ごとに&1; つのエントリを指定します。|  
+            |次のいずれでもない|テキストボックスで&1; 行ごとに&1; つのエントリを指定します。|  
 
         -   **サポートされている場合は対応していない規則を修復する** - このオプションを選択すると、Configuration Manager がコンプライアンス非対応の規則を自動的に修復します。 Configuration Manager は次の規則の種類を自動的に修復できます。  
 
@@ -359,6 +359,6 @@ System Center Configuration Manager **カスタム Windows デスクトップお
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

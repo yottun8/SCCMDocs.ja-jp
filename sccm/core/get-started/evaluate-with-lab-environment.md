@@ -1,5 +1,5 @@
 ---
-title: "独自のラボ環境を構築して System Center Configuration Manager を評価する | Microsoft Docs"
+title: "Configuration Manager の評価 | Microsoft Docs"
 description: "組織で使用するために System Center Configuration Manager を評価するラボ環境を作成します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: e72acbe0a2f5592b5bdf9a3612db62bfb066fadf
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: ad3c849bd3ebfc6c0aa795e5b49a4850371cda47
 
 
 ---
@@ -40,7 +40,7 @@ ms.openlocfilehash: e72acbe0a2f5592b5bdf9a3612db62bfb066fadf
 -   オンプレミス サーバー アーキテクチャのスケールアップに関心のある管理者  
 
 ### <a name="what-this-lab-does"></a>このラボの実行内容  
- この環境を作成する主な目的は、Configuration Manager の使用を開始するための一般的な知識を提供すること、および、作業を通じて Configuration Manager についての理解を深めることです。 ここでは、最新バージョンの Configuration Manager で 2 台のサーバーを使用する、拡張された構成を例として説明します。  
+ この環境を作成する主な目的は、Configuration Manager の使用を開始するための一般的な知識を提供すること、および、作業を通じて Configuration Manager についての理解を深めることです。 ここでは、最新バージョンの Configuration Manager で&2; 台のサーバーを使用する、拡張された構成を例として説明します。  
 
 -   1 つ目のサーバーは、Active Directory、ドメイン コントローラー、および DNS サーバーをホストします。  
 
@@ -70,6 +70,6 @@ ms.openlocfilehash: e72acbe0a2f5592b5bdf9a3612db62bfb066fadf
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

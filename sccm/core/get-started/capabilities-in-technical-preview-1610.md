@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager の Technical Preview 1610 の機能 | Microsoft Docs"
+title: "Configuration Manager の Technical Preview 1610 の機能"
 description: "System Center Configuration Manager の Technical Preview バージョン 1610 で使用できる機能について説明します。"
 ms.custom: na
-ms.date: 10/21/2016
+ms.date: 01/23/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
-ms.openlocfilehash: 6ffcb33e94f942fc9400457d3f16b65e12332956
+ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
+ms.openlocfilehash: 59633ce68e2bb2d722900215751f345d6d098721
 
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1610 の機能
@@ -74,16 +74,16 @@ Technical Preview 1610 では、クライアントのコレクションを更新
 ### <a name="configure-exclusion-from-automatic-upgrade"></a>自動アップグレードからの除外を構成する
 自動アップグレードの除外を構成するには:
 1.  Configuration Manager コンソールで、**[管理] > [サイトの構成] > [サイト]** の下で [**階層設定**] を開き、[**クライアント アップグレード**] タブをクリックします。
-2.  [**指定したクライアントをアップグレードから除外する**] チェック ボックスをオンにして、[**除外コレクション**] で除外するコレクションを選択します。 除外するコレクションを 1 つだけ選択できます。
+2.  [**指定したクライアントをアップグレードから除外する**] チェック ボックスをオンにして、[**除外コレクション**] で除外するコレクションを選択します。 除外するコレクションを&1; つだけ選択できます。
 3.  [**OK**] をクリックしてコンソールを閉じ、構成を保存します。 クライアントがポリシーを更新すると、除外されるコレクション内のクライアントに、クライアント ソフトウェアの更新プログラムが自動的にインストールされなくなります。
 
   ![自動アップグレード除外の設定](media/automatic_upgrade_exclusion.png)
 
 > [!NOTE]
-> ユーザー インターフェイスにどの方法でもクライアントがアップグレードされないことが示されますが、これらの設定を無効にするために使用できる 2 つの方法があります。 クライアント プッシュ インストールと手動クライアント インストールを使用すると、この設定を無効にできます。 詳細については、次のセクションを参照してください。
+> ユーザー インターフェイスにどの方法でもクライアントがアップグレードされないことが示されますが、これらの設定を無効にするために使用できる&2; つの方法があります。 クライアント プッシュ インストールと手動クライアント インストールを使用すると、この設定を無効にできます。 詳細については、次のセクションを参照してください。
 
 ### <a name="how-to-upgrade-a-client-that-is-in-an-excluded-collection"></a>除外されるコレクション内にあるクライアントをアップグレードする方法
-コレクションが除外されるように設定されている限り、そのコレクションのメンバーは、除外を無効にする 2 つの方法のいずれかでクライアント ソフトウェアを更新することしかできません。
+コレクションが除外されるように設定されている限り、そのコレクションのメンバーは、除外を無効にする&2; つの方法のいずれかでクライアント ソフトウェアを更新することしかできません。
  - **クライアント プッシュ インストール**: クライアント プッシュ インストールを使用して、除外されるコレクション内にあるクライアントをアップグレードすることができます。 これは管理者の意図と見なされるために許可され、除外からコレクション全体を削除しなくてもクライアントをアップグレードすることができます。       
  - **手動クライアント インストール**: ccmsetup で、コマンド ライン スイッチ ***/ignoreskipupgrade*** を使用すると、除外されるコレクション内のクライアントを手動でアップグレードすることができます。
 
@@ -148,7 +148,7 @@ Configuration Manager コンソールから、モバイル デバイスのポリ
 1.  Configuration Manager コンソールで、[**資産とコンプライアンス**] > [**概要**] > [デバイス] の順に移動します。
 2.  [**リモート デバイスの操作**] メニューの [**同期要求の送信**] をクリックします。
 
-同期には 5 ～ 10 分かかることがあります。 ポリシーに変更が生じると、デバイスに反映されます。 同期要求の状態は、[**デバイス**] ビューの [**Remote Sync State**] (リモート同期の状態) 列で、またはデバイスの [**プロパティ**] ダイアログ ボックスで把握できます。
+同期には&5; ～&10; 分かかることがあります。 ポリシーに変更が生じると、デバイスに反映されます。 同期要求の状態は、[**デバイス**] ビューの [**Remote Sync State**] (リモート同期の状態) 列で、またはデバイスの [**プロパティ**] ダイアログ ボックスで把握できます。
 
 ## <a name="additional-security-role-support"></a>追加のセキュリティ ロールのサポート
 
@@ -165,6 +165,6 @@ Configuration Manager コンソールで作成した Windows 10 VPN プロファ
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

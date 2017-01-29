@@ -1,5 +1,5 @@
 ---
-title: "クライアントを監視する | Microsoft Docs"
+title: "クライアントを監視する - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager でクライアントを監視する詳細な方法を説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: d3b7e917ccf841f8f5687b0afa5acaf151730ba6
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: 85afe010e734d20ae1f1479b3edd166c54cc8fd2
 
 
 ---
@@ -81,7 +81,7 @@ ms.openlocfilehash: d3b7e917ccf841f8f5687b0afa5acaf151730ba6
 
 |クライアント チェック|修復処理|説明|  
 |------------------|------------------------|----------------------|  
-|最近クライアント チェックが実行されたかどうかの確認|クライアント チェックの実行|過去 3 日間にクライアント チェックが少なくとも 1 回実行されたことを確認します。|  
+|最近クライアント チェックが実行されたかどうかの確認|クライアント チェックの実行|過去&3; 日間にクライアント チェックが少なくとも&1; 回実行されたことを確認します。|  
 |クライアントの前提条件がインストールされているかどうかの確認|クライアントの前提条件のインストール|クライアントの前提条件がインストールされていることを確認します。 クライアント インストール フォルダーのファイル ccmsetup.xml を読み取って、前提条件を検出します。|  
 |WMI リポジトリの整合性テスト|Configuration Manager クライアントの再インストール|Configuration Manager クライアント エントリが WMI に存在することを確認します。|  
 |クライアント サービスが実行されているかどうかの確認|クライアント (SMS Agent Host) サービスの起動|詳細情報なし|  
@@ -112,6 +112,6 @@ ms.openlocfilehash: d3b7e917ccf841f8f5687b0afa5acaf151730ba6
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

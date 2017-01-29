@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: ec146270ef39d48673ae6f3ca405b3f0bd7e8afa
+ms.sourcegitcommit: 6bb2bf0a029bc21e9420ac0ba782e8ea21291896
+ms.openlocfilehash: 692e8331f39f7c9ce78a6b710b8990760bf128c4
 
 
 ---
@@ -27,9 +27,9 @@ ms.openlocfilehash: ec146270ef39d48673ae6f3ca405b3f0bd7e8afa
 
 System Center Configuration Manager のタスク シーケンスは、お客様の環境でさまざまなタスクを自動化するために使用します。 これらのタスクは、主にオペレーティング システムの展開のために設計され、テストされます。  Configuration Manager には、[アプリケーションのインストール](../../apps/understand/introduction-to-application-management.md)、[ソフトウェアの更新プログラムのインストール](../../sum/understand/software-updates-introduction.md)、[構成の設定](../../compliance/understand/ensure-device-compliance.md)、またはカスタム オートメーションなどのシナリオに使用する主要なテクノロジとなる、他の数多くの機能があります。 Microsoft System Center の他の自動化テクノロジとして、 [Orchestrator](https://technet.microsoft.com/library/hh237242.aspx) と [Service Management Automation](https://technet.microsoft.com/library/dn469260.aspx) などもご検討ください。  
 
- タスク シーケンスの機能には柔軟性があり、タスク シーケンスを使用して、クライアント設定の構成、ソフトウェアの配布、ドライバーの更新、ユーザー状態の編集など、オペレーティング システムの展開とは独立した他のタスクを実行できます。 カスタム タスク シーケンスを作成して、タスクをいくつでも追加できます。 オペレーティング システム以外の展開用にカスタム タスク シーケンスの基本的な使用がサポートされているものの、可能な構成すべてをテストする方法はなく、より複雑なタスク シーケンスを開発すると問題が発生する機会は増加します。  
+タスク シーケンスの機能には柔軟性があり、タスク シーケンスを使用して、クライアント設定の構成、ソフトウェアの配布、ドライバーの更新、ユーザー状態の編集など、オペレーティング システムの展開とは独立した他のタスクを実行できます。 カスタム タスク シーケンスを作成して、タスクをいくつでも追加できます。 カスタム タスク シーケンスを作成して、タスクをいくつでも追加できます。 Configuration Manager では、オペレーティング システム以外の展開用のカスタム タスク シーケンスの使用がサポートされています。 ただし、タスク シーケンスで好ましくない結果や矛盾する結果が生じる場合は、操作を簡略化する方法を考えてください。 より簡単なステップを使用するか、操作を複数のタスク シーケンスに分けるか、あるいは段階的にタスク シーケンスを作成してテストすることで、これを行うことができます。
 
- オペレーティング システム以外の展開用のカスタム タスク シーケンスでは、以下のステップを使用できます。  
+ オペレーティング システム以外の展開用のカスタム タスク シーケンスの使用では、以下のステップがサポートされています。  
 
 -   [準備の確認](../understand/task-sequence-steps.md#BKMK_CheckReadiness)  
 
@@ -58,6 +58,6 @@ System Center Configuration Manager のタスク シーケンスは、お客様�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

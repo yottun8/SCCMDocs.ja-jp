@@ -1,5 +1,5 @@
 ---
-title: "Configuration Manager を使用してハイブリッド展開用に会社所有のデバイスを登録する | Microsoft Docs"
+title: "会社所有のデバイスを登録する - Configuration Manager | Microsoft Docs"
 description: "Configuration Manager を使用してハイブリッド展開用に会社所有のデバイスを登録するさまざまな方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 490b89f8174667d232a2ca3729d36ead8fc4d46c
+ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
+ms.openlocfilehash: b797bf2c180478f6a9ee5a7228e8eb94194285ff
 
 
 ---
@@ -34,7 +34,7 @@ ms.openlocfilehash: 490b89f8174667d232a2ca3729d36ead8fc4d46c
  この方法では、管理者は、Apple Configurator を実行している Mac コンピューターに iOS デバイスを USB 経由で接続し、登録を事前構成する必要があります。 その後、デバイスは、セットアップ アシスタント プロセスを実行するユーザーに届けられ、そのユーザーの所属する職場や学校の資格情報を使用して構成されて、登録プロセスを完了します。 「[Apple Configurator と Configuration Manager を使用した iOS ハイブリッド登録](../../mdm/deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)」をご覧ください。  
 
 ## <a name="device-enrollment-manager"></a>デバイス登録マネージャー  
- 組織は Intune を使用して、デバイス登録マネージャー アカウントと呼ばれる単一のユーザー アカウントで多数のモバイル デバイスを管理することができます。 デバイス登録マネージャー アカウントを作成すると、そのアカウントをマネージャーが使用して、通常のユーザーに既定で許可されている標準の 5 台を超えるデバイスを登録することができます。 デバイス登録マネージャーを使用したデバイスの登録は、特定のユーザーが使用していないデバイスに対してのみ機能します。 これらのデバイスは、たとえば販売時点管理 (POS) アプリやユーティリティ アプリには適していますが、電子メールや会社のリソースにアクセスする必要があるユーザーには適していません。 「[デバイス登録マネージャーと Configuration Manager を使用したデバイスの登録](../../mdm/deploy-use/enroll-devices-with-device-enrollment-manager.md)」をご覧ください。  
+ 組織は Intune を使用して、デバイス登録マネージャー アカウントと呼ばれる単一のユーザー アカウントで多数のモバイル デバイスを管理することができます。 デバイス登録マネージャー アカウントを作成すると、そのアカウントをマネージャーが使用して、通常のユーザーに既定で許可されている標準の&5; 台を超えるデバイスを登録することができます。 デバイス登録マネージャーを使用したデバイスの登録は、特定のユーザーが使用していないデバイスに対してのみ機能します。 これらのデバイスは、たとえば販売時点管理 (POS) アプリやユーティリティ アプリには適していますが、電子メールや会社のリソースにアクセスする必要があるユーザーには適していません。 「[デバイス登録マネージャーと Configuration Manager を使用したデバイスの登録](../../mdm/deploy-use/enroll-devices-with-device-enrollment-manager.md)」をご覧ください。  
 
 ## <a name="user-affinity-for-managed-devices"></a>管理対象デバイスのユーザー アフィニティ  
  管理者は会社所有のデバイスのプロファイルを構成するときに、管理対象デバイスが*ユーザー アフィニティ*をサポートするかどうかを指定できます (ユーザー アフィニティはデバイスで特定のユーザーを識別します)。 **ユーザー アフィニティ**が構成されているデバイスは、会社のポータル アプリをインストールして実行することにより、アプリをダウンロードしてデバイスを管理できるようになります。 「[Configuration Manager でのハイブリッド管理のデバイス向けユーザー アフィニティ](../../mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md)」をご覧ください。  
@@ -51,6 +51,6 @@ ms.openlocfilehash: 490b89f8174667d232a2ca3729d36ead8fc4d46c
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

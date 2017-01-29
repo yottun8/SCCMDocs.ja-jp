@@ -1,5 +1,5 @@
 ---
-title: "ハードウェア インベントリ | Microsoft ドキュメント"
+title: "ハードウェア インベントリ - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager のハードウェア インベントリの概要について説明します。"
 ms.custom: na
 ms.date: 12/05/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 08a509cacb711ed6d1ae188d5512a026a12417f2
-ms.openlocfilehash: 61cd30696c28655e5c933a15f8e999293453107a
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: a543b945c4727540faa064c068b175ef63cb5a4b
 
 
 ---
@@ -48,7 +48,7 @@ System Center Configuration Manager のハードウェア インベントリを�
 >  Linux および UNIX を実行しているクライアントでハードウェア インベントリを使用する方法については、「[Hardware inventory for Linux and UNIX in System Center Configuration Manager](../../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)」(System Center Configuration Manager における Linux および UNIX のハードウェア インベントリ) を参照してください。  
 
 ## <a name="extending-configuration-manager-hardware-inventory"></a>Configuration Manager のハードウェア インベントリの拡張  
- Configuration Manager に組み込まれたハードウェア インベントリに加えて、次の方法のうちの 1 つを使用して、ハードウェア インベントリを拡張し、追加の情報を収集することができます。  
+ Configuration Manager に組み込まれたハードウェア インベントリに加えて、次の方法のうちの&1; つを使用して、ハードウェア インベントリを拡張し、追加の情報を収集することができます。  
 
 - Configuration Manager コンソールでは、ハードウェア インベントリのインベントリ クラスの有効化、無効化、追加、および削除を行うことができます。|  
 - NOIDMIF ファイルは、Configuration Manager ではインベントリできないクライアント デバイスに関する情報を収集するために使用します。 たとえば、デバイス上にラベルとしてのみ存在するデバイス資産番号情報を収集できます。 NOIDMIF のインベントリは、収集元のクライアント デバイスに自動的に関連付けられます。  
@@ -58,6 +58,6 @@ System Center Configuration Manager のハードウェア インベントリを�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

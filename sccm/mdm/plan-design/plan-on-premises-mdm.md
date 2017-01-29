@@ -17,8 +17,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: cc5b04dc41b13993fca35f202437b71e96bc9cdd
+ms.sourcegitcommit: cec595d473ca2459e43a7fa1c70b7668a8a48986
+ms.openlocfilehash: d529a058968cf99dce77997844b33ff5dc7c0004
 
 
 ---
@@ -43,8 +43,8 @@ Configuration Manager のインフラストラクチャでオンプレミス モ
 ##  <a name="a-namebkmkintunea-use-of-the--microsoft-intune-subscription"></a><a name="bkmk_intune"></a> Microsoft Intune サブスクリプションの使用  
  オンプレミス モバイル デバイス管理の使用を開始するには、Microsoft Intune のサブスクリプションが必要です。 このサブスクリプションは、デバイスのライセンスの追跡にのみ必要のみがあり、デバイスの管理情報の管理や格納には使用されません。 すべての管理は、オンプレミスの Configuration Manager インフラストラクチャを使用して組織のエンタープライズで処理されます。  
 
-> [!IMPORTANT]  
->  Configuration Manager では、Microsoft Intune とオンプレミスの Configuration Manager インフラストラクチャの両方を管理機関として同時に使用することはできません。 そのため、オンプレミス管理のために Intune サブスクリプションをセットアップする場合は、結果的に Intune での管理を無効にすることになります。  
+ > [!NOTE]  
+ > バージョン 1610 以降の Configuration Manager では、Microsoft Intune とオンプレミスの Configuration Manager インフラストラクチャの両方を同時に使用してモバイル デバイスを管理できます。   
 
  サイトにインターネット接続があるデバイスがある場合、Intune サービスを使用して、ポリシーの更新のデバイス管理ポイントを確認するようデバイスに通知することができます。 Intune のこの使用は、インターネットに接続されたデバイスの通知のみに限定されます。 インターネット接続のないデバイス (Intune が接続できない) は、管理機能のサイト システムの役割を使用してチェックインする場合に、構成されたポーリング間隔に依存します。  
 
@@ -54,13 +54,13 @@ Configuration Manager のインフラストラクチャでオンプレミス モ
  Intune サブスクリプションのセットアップ方法については、「[System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために Microsoft Intune サブスクリプションをセットアップする](../../mdm/get-started/set-up-intune-subscription-on-premises-mdm.md)」を参照してください。  
 
 ##  <a name="a-namebkmkrolesa-required-site-system-roles"></a><a name="bkmk_roles"></a> 必要なサイト システムの役割  
- オンプレミス モバイル デバイス管理には、次のサイト システムの役割がそれぞれ 1 つ以上必要です。  
+ オンプレミス モバイル デバイス管理には、次のサイト システムの役割がそれぞれ&1; つ以上必要です。  
 
 -   **登録プロキシ ポイント** 。登録要求をサポートします。  
 
 -   **登録ポイント** 。デバイスの登録をサポートします。  
 
--   **デバイス管理ポイント** 。ポリシー配信用です。 このサイト システムの役割は、モバイル デバイス管理を許可するように構成されている管理ポイントの役割のバリエーションの 1 つです。  
+-   **デバイス管理ポイント** 。ポリシー配信用です。 このサイト システムの役割は、モバイル デバイス管理を許可するように構成されている管理ポイントの役割のバリエーションの&1; つです。  
 
 -   **配布ポイント** 。コンテンツ配信用です。  
 
@@ -108,7 +108,7 @@ Configuration Manager のインフラストラクチャでオンプレミス モ
 ##  <a name="a-namebkmkenrollmenta-enrollment-considerations"></a><a name="bkmk_enrollment"></a> 登録の注意事項  
  オンプレミス モバイル デバイス管理のデバイスの登録を有効にするには、登録する権限がユーザーに付与され、かつ、ユーザーのデバイスが、必要なサイト システムの役割をホストするサイト システム サーバーとの信頼された通信を行うことができる必要があります。  
 
- ユーザーへの登録権限の付与は、Configuration Manager クライアントの設定で登録プロファイルを設定することによって行います。 既定のクライアント設定を使用して、検出されたすべてのユーザーに、登録プロファイルをプッシュするか、またはカスタム クライアント設定で、登録プロファイルを設定して、設定を 1 つまたは複数のユーザー コレクションにプッシュできます。  
+ ユーザーへの登録権限の付与は、Configuration Manager クライアントの設定で登録プロファイルを設定することによって行います。 既定のクライアント設定を使用して、検出されたすべてのユーザーに、登録プロファイルをプッシュするか、またはカスタム クライアント設定で、登録プロファイルを設定して、設定を&1; つまたは複数のユーザー コレクションにプッシュできます。  
 
  ユーザー登録権限が付与されたユーザーは、自分のデバイスを登録できます。 登録するには、ユーザーのデバイスに、Web サーバー証明書 (必要なサイト システムの役割をホストするサイト システム サーバーで使用されるもの) を発行した証明機関 (CA) のルート証明書がある必要があります。  
 
@@ -122,6 +122,6 @@ Configuration Manager のインフラストラクチャでオンプレミス モ
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager クライアントを使用せずに管理されている Windows 8.1 デバイスと Windows 10 デバイスの構成項目を作成する | Microsoft Docs"
+title: "クライアントを使用しない Windows 10 の構成項目の作成 - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager の Windows 10 構成項目使用して、Windows 10 コンピューターの設定を管理します。"
 ms.custom: na
 ms.date: 12/08/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8f6e6fd1d2a9a6352c9191ea7e2a1f9c6f6e2199
-ms.openlocfilehash: 7efde8dda724d71775313290b13a6aad2f9a7d6c
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 4c34ace72905b286c3582f09993bd897a87cce45
 
 
 ---
@@ -74,7 +74,7 @@ System Center Configuration Manager の **Windows 8.1 および Windows 10** 構
 ##  <a name="windows-81-and-windows-10-configuration-item-settings-reference"></a>Windows 8.1 と Windows 10 の構成項目設定のリファレンス  
 
 ### <a name="password"></a>パスワード  
- 
+
 |設定|説明|  
 |-------------|-------------|  
 |**デバイスのパスワードの設定が必要**|サポート対象デバイスのパスワードが必要です。|  
@@ -100,8 +100,8 @@ System Center Configuration Manager の **Windows 8.1 および Windows 10** 構
 |**Bluetooth**|デバイスの Bluetooth 機能を使用できるようにします。|  
 |**Bluetooth 検出可能モード**|デバイスを他の Bluetooth デバイスで検出できるようにします。<br>(Windows 10 のみ)|  
 |**Bluetooth 広告**|Bluetooth の広告を使用できるようにします。<br> (Windows 10 のみ)|  
-|**音声録音**|デバイスの音声録音機能を使用できるようにします。<br>(Windows 10 のみ)| 
-|**Cortana**|Cortana の音声アシスタントを有効または無効にします。| 
+|**音声録音**|デバイスの音声録音機能を使用できるようにします。<br>(Windows 10 のみ)|
+|**Cortana**|Cortana の音声アシスタントを有効または無効にします。|
 
 ### <a name="email-management"></a>電子メール管理  
 
@@ -153,7 +153,7 @@ System Center Configuration Manager の **Windows 8.1 および Windows 10** 構
 |**1 単語の入力でイントラネット サイトに移動する**|先頭に HTTP を付けずに有効なサイト名が入力された場合に Internet Explorer がイントラネット サイトに自動的にアクセスすることを許可する設定を有効または無効にします。|  
 |**[エンタープライズ モード] メニュー オプション**|ユーザーが Internet Explorer の **[ツール]** メニューでエンタープライズ モードをアクティブ化および非アクティブ化できるようにします。|  
 |**ログ レポートの場所 (URL)**|エンタープライズ モードがアクティブな場合に、アクセスされた Web サイトがログに記録される URL を指定します。|  
-|**エンタープライズ モード サイト リストの場所 (URL)**|エンタープライズ モードがアクティブな場合に、エンタープライズ モードを使用する Web サイトの一覧の場所を指定します。| 
+|**エンタープライズ モード サイト リストの場所 (URL)**|エンタープライズ モードがアクティブな場合に、エンタープライズ モードを使用する Web サイトの一覧の場所を指定します。|
 
 ### <a name="microsoft-edge"></a>Microsoft Edge  
  これらの設定は、Windows 10 以降を実行するデバイス専用です。  
@@ -175,7 +175,7 @@ System Center Configuration Manager の **Windows 8.1 および Windows 10** 構
  次の設定は、Windows 10 November Update (1511) 以降を実行するデバイス専用です。  
 
 |設定の名前|説明|  
-|------------------|-------------| 
+|------------------|-------------|
 |**リアルタイム監視を許可する**|マルウェア、スパイウェア、およびその他の望ましくないソフトウェアのリアルタイム スキャンを有効にします。|
 |**動作監視を許可する**|Defender により、デバイス上で既知の特定パターンの疑わしい動作をチェックできるようにします。|
 |**ネットワーク検査システムの有効化**|ネットワーク検査システム (NIS) を使用すると、Microsoft Endpoint Protection Center から提供された、不審なトラフィックの検出とブロックに役立つ既知の脆弱性の特徴を利用してネットワークの悪用からデバイスを保護できます。|
@@ -201,7 +201,7 @@ System Center Configuration Manager の **Windows 8.1 および Windows 10** 構
 |**ファイル拡張子の除外**|jpg や txt などのファイル拡張子を除外リストに追加します。 これらの拡張子を持つファイルは、リアルタイム スキャンまたはスケジュール設定されたスキャンの対象外になります。|
 |**プロセスの除外**|.exe、.com、.scr の型のプロセスを除外リストに追加します。 これらのプロセスは、リアルタイム スキャンまたはスケジュール設定されたスキャンの対象外になります。|
 
- 
+
 
 ###  <a name="cloud"></a>クラウド  
 
@@ -244,9 +244,9 @@ System Center Configuration Manager の **Windows 8.1 および Windows 10** 構
 |**ローミング中のデバイス管理**|デバイスがローミングされているときに、Configuration Manager でデバイスを管理できるようにします。<br>(Windows 10 のみ)|  
 |**ローミング中のソフトウェアのダウンロード**|ローミング中にアプリケーションやソフトウェアをダウンロードできるようにします。<br>(Windows 10 のみ)|  
 |**ローミング中の電子メールのダウンロード**|ローミング中に電子メールをダウンロードできるようにします。<br>(Windows 10 のみ)|  
-|**データ ローミング**|データへのアクセス中にネットワーク間のローミングを許可します。| 
+|**データ ローミング**|データへのアクセス中にネットワーク間のローミングを許可します。|
 |**移動体通信での VPN**|デバイスが移動体通信ネットワークに接続されているときに、VPN 接続にアクセスできるかどうかを制御します。<br>(Windows 10 のみ)|
-|**移動体通信での VPN ローミング**|デバイスが移動体通信ネットワークでローミングするときに、VPN 接続にアクセスできるかどうかを制御します。<br>(Windows 10 のみ)| 
+|**移動体通信での VPN ローミング**|デバイスが移動体通信ネットワークでローミングするときに、VPN 接続にアクセスできるかどうかを制御します。<br>(Windows 10 のみ)|
 
 ###  <a name="encryption"></a>暗号化  
 
@@ -287,7 +287,7 @@ System Center Configuration Manager の **Windows 8.1 および Windows 10** 構
 |**プロキシ サーバーの設定**|必要に応じて、 **[HTTP]** 、 **[WAP]** 、および **[Sockets]**の **[サーバー]** と **[ポート]**の設定値を指定します。|  
 |**802.1 X ネットワーク アクセスを有効にする**|EAP の種類を指定して接続をセキュリティで保護する場合は、このオプションを選択します。|  
 |**EAP の種類**|使用する EAP の種類を次の中から選択します。<br>- **PEAP**<br>- **スマート カードまたは証明書**|  
- 
+
 
 ### <a name="certificates"></a>証明書  
  モバイル デバイスに証明書をインポートしてインストールできるようにします。  
@@ -296,7 +296,7 @@ System Center Configuration Manager の **Windows 8.1 および Windows 10** 構
 
 -   **証明書ファイル** - [参照] をクリックし、インポートする証明書ファイル (拡張子 **.cer** ) を選択します。  
 
--   **保存先ストア** - インポートした証明書が追加されるモバイル デバイス上の保存先ストアを 1 つまたは複数選択します。  
+-   **保存先ストア** - インポートした証明書が追加されるモバイル デバイス上の保存先ストアを&1; つまたは複数選択します。  
 
     -   **ルート**  
 
@@ -356,11 +356,11 @@ System Center Configuration Manager の **Windows 8.1 および Windows 10** 構
 |------------------|-------------|  
 |**部屋にだれかがいることをセンサーが検知したときに画面のスリープ状態を自動的に解除する**|部屋にだれかがいるとセンサーで検出したときに、デバイスのスリープ状態を自動的に解除します。|  
 |**ワイヤレス投影には PIN を必要とする**|デバイスのワイヤレス投影機能を使用する前に暗証番号 (PIN) を入力しなければならないかどうかを指定します。|  
-|**メンテナンス期間**|デバイスで更新を実行する期間を設定します。 期間の開始時刻と長さ (1 ~ 5 時間) を設定できます。| 
+|**メンテナンス期間**|デバイスで更新を実行する期間を設定します。 期間の開始時刻と長さ (1 ~ 5 時間) を設定できます。|
 |**Azure Operational Insights**|Microsoft Operations Manager Suite に含まれる Azure Operational Insights では、Windows 10 Team デバイスからログ ファイルのデータを収集、格納、および分析します。<br>Azure Operational Insights に接続するには、**[ワークスペース ID]** と **[ワークスペース キー]** を指定する必要があります。|
 |**Miracast ワイヤレス投影**|Windows 10 Team デバイスで Miracast 対応デバイスを使用して投影できるようにする場合は、このオプションを有効にします。<br>このオプションを有効にする場合は、**[Miracast チャネルの選択]** で投影に使用する Miracast チャネルを選択します。|
 |**ようこそ画面に表示されるミーティング情報**|このオプションを有効にすると、ようこそ画面の **[ミーティング]** タイルに表示される情報を選択できます。 次の操作を行います。<br>- **開催者と時刻のみを表示する**<br>- **開催者、時刻、議題を表示する (非公開なミーティングの場合は議題を非表示)**|
-|**ロック画面の背景画像 URL**|Windows 10 Team デバイスの **[ようこそ]** 画面に指定した URL のカスタム背景を表示する場合は、この設定を有効にします。<br>画像は PNG 形式であり、URL は **https://** で始まる必要があります。| 
+|**ロック画面の背景画像 URL**|Windows 10 Team デバイスの **[ようこそ]** 画面に指定した URL のカスタム背景を表示する場合は、この設定を有効にします。<br>画像は PNG 形式であり、URL は **https://** で始まる必要があります。|
 
 ### <a name="windows-information-protection"></a>Windows Information Protection
  次の設定は、Windows 10 を実行するデバイス専用です。
@@ -393,7 +393,6 @@ Configuration Manage で Windows 情報保護を構成する方法について�
 
 
 
-
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Configuration Manager とのハイブリッド展開に対応する iOS Device Enrollment Program (DEP) 登録 | Microsoft Docs"
+title: "Device Enrollment Program (DEP) を使用したデバイスの登録 - Configuration Manager | Microsoft Docs"
 description: "Configuration Manager と Intune のハイブリッド展開に対応するために、iOS Device Enrollment Program (DEP) 登録を有効にします。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 0421589d928a88eee6f4629726fbd0171aba7436
+ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
+ms.openlocfilehash: 4222ca27e19ade46d53f8cd4598643ddd4fd5c8f
 
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Configuration Manager とのハイブリッド展開に対応する iOS Device Enrollment Program (DEP) 登録
@@ -94,7 +94,7 @@ ms.openlocfilehash: 0421589d928a88eee6f4629726fbd0171aba7436
             -   **有効** - (**[準備モード]** = **[監督下]** にする必要があります) 管理プロファイルの削除を許可する iOS 設定を無効にします  
 
     3.  **[セットアップ アシスタント]** ページで、デバイスの電源が初めてオンになったときに起動する iOS セットアップ アシスタントをカスタマイズする設定を構成してから、 **[次へ]**をクリックします。 設定は次のとおりです。  
-        -   **パスコード** - アクティブ化時にパスコードの入力を求めます。 デバイスがセキュリティで保護される場合や、他の何らかの方法 (デバイスを 1 つのアプリに制限するキオスク モードなど) でアクセスが制御されている場合を除き、パスコードは常に必須にしてください。  
+        -   **パスコード** - アクティブ化時にパスコードの入力を求めます。 デバイスがセキュリティで保護される場合や、他の何らかの方法 (デバイスを&1; つのアプリに制限するキオスク モードなど) でアクセスが制御されている場合を除き、パスコードは常に必須にしてください。  
         -   **位置情報サービス** - 有効にすると、アクティブ化時に、セットアップ アシスタントによってサービスがプロンプトされます  
         -   **復元** - 有効にすると、アクティブ化時に、セットアップ アシスタントによって iCloud バックアップがプロンプトされます  
         -   **Apple ID** - Intune でインストールされるアプリを含め、iOS App Store アプリをダウンロードする際に Apple ID が必須になります。 有効にして、Intune で ID を指定せずにアプリをインストールしようとすると、Apple ID の入力が求められます。  
@@ -124,6 +124,6 @@ ms.openlocfilehash: 0421589d928a88eee6f4629726fbd0171aba7436
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

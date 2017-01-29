@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager クライアントを使用せずに管理されている iOS デバイスと Mac OS X デバイスの構成項目を作成する | Microsoft Docs"
+title: "クライアントを使用しない iOS および Macs の構成項目の作成 - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager の iOS および Mac OS X 構成項目使用して、iOS デバイスと Mac OS X デバイスの設定を管理します。"
 ms.custom: na
 ms.date: 12/14/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d023df79e0bcb7d5583224802976a5059c4ee753
-ms.openlocfilehash: ea4024aaa07d40781663725127d64388055c6501
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 0614753a68e98675ccae99b792b03481f4ca7ab1
 
 
 ---
@@ -80,7 +80,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
 |**パスワードの最小文字数**|パスワードの最小の長さ。|  
 |**パスワードの有効期限 (日数)**|パスワードの変更が必要になるまでの日数。|  
 |**記憶するパスワードの数**|以前に使用したパスワードを再利用できないようにします。|  
-|**デバイスをワイプするまでのログオン失敗回数**|ログインの試みがこの回数だけ失敗した場合は、デバイスがワイプされます。<br>(iOS のみ)| 
+|**デバイスをワイプするまでのログオン失敗回数**|ログインの試みがこの回数だけ失敗した場合は、デバイスがワイプされます。<br>(iOS のみ)|
 |**デバイスをロックするまでのアイドル時間**|デバイスが自動的にロックされるまでの非アクティブな時間を分単位で指定します。|
 |**パスワードの複雑さ**|'1234' などの PIN を指定できるのか、または強力なパスワードを指定する必要があるのかを選択します。|
 |**単純なパスワードを許可する**|"0000" や "1234" などの単純なパスワードが使用できることを指定します。|
@@ -295,14 +295,14 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
         -   **重大 (イベント)**: このコンプライアンス規則を満たしていないデバイスは、Configuration Manager レポート用に**重大**というレベルで非対応重要度を報告します。 重要度のレベルは、アプリケーションのイベント ログでも Windows のイベントとしてログが登録されます。  
 
 ## <a name="how-to-create-a-configuration-profile-file"></a>構成プロファイル ファイルを作成する方法  
- カスタム ポリシーで使用される構成プロファイル ファイルは、次の 2 つの方法で作成できます。  
+ カスタム ポリシーで使用される構成プロファイル ファイルは、次の&2; つの方法で作成できます。  
 
 -   Apple Configurator ツールから、( **.mobileconfig**拡張子の) ファイルをエクスポートします。  
 
 -   [Apple 構成プロファイル キー参照](https://developer.apple.com/library/ios/featuredarticles/iPhoneConfigurationProfileRef/Introduction/Introduction.html)の適切なスキーマを使用して、ファイルを自分で作成します。  
 
 ###  <a name="kiosk-mode-ios"></a>キオスク モード (iOS)  
- キオスク モードでは、特定の機能のみ実行できるようにデバイスをロックできます。 たとえば、指定した 1 つの管理対象アプリの実行のみをデバイスに許可することや、デバイスのボリューム ボタンを無効にすることができます。 これらの設定は、デバイスのデモ モデルや、POS デバイスなどの 1 つの機能の実行専用のデバイス向けに使用できます。  
+ キオスク モードでは、特定の機能のみ実行できるようにデバイスをロックできます。 たとえば、指定した&1; つの管理対象アプリの実行のみをデバイスに許可することや、デバイスのボリューム ボタンを無効にすることができます。 これらの設定は、デバイスのデモ モデルや、POS デバイスなどの&1; つの機能の実行専用のデバイス向けに使用できます。  
 
 #### <a name="to-configure-kiosk-mode-for-ios-devices"></a>iOS デバイスのキオスク モードを構成するには  
 
@@ -370,6 +370,6 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

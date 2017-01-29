@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager の Technical Preview 1606 の機能 | Microsoft Docs"
+title: "Configuration Manager の Technical Preview 1606 の機能"
 description: "System Center Configuration Manager の Technical Preview バージョン 1606 で使用できる機能について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
-ms.openlocfilehash: 6bc3087768d8455a6ca6beb77a3afc8f313eb831
+ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
+ms.openlocfilehash: a84d3ab55066d26c3199ea374d8beb472d66f43f
 
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1606 の機能
@@ -88,7 +88,7 @@ Device Guard の詳細な概要とそのしくみについては、[この Techn
 これが完了したら、AppLocker ポリシー ファイルを構成します。 ポリシー ファイルを構成したら、それを互換性のある任意のクライアント デバイスに展開できます。
 
 
-すべての AppLocker ポリシーと同様に、管理インストーラー規則を含むポリシーは、次の 2 つのモードで実行できます。
+すべての AppLocker ポリシーと同様に、管理インストーラー規則を含むポリシーは、次の&2; つのモードで実行できます。
 
 - 監査モード: アプリケーションの実行は妨げられませんが、ブロックされたすべてのアプリケーションがログ ファイルに報告されます (これは今後の Configuration Manager のリリースでサポートされる予定です)。
 - 適用を有効にする: アプリケーションが実行できなくなります。
@@ -118,7 +118,7 @@ Configuration Manager での Device Guard の詳しい使用方法は、[Enterpr
 
 Configuration Manager コンソールを使用して、Azure にサービスをデプロイし、クラウド プロキシ コネクタ ポイントの役割を追加し、クラウド プロキシ トラフィックを許可するサイト システムの役割を構成します。 クラウド プロキシ サービスは現在、管理ポイント、配布ポイント、およびソフトウェアの更新ポイントの役割のみをサポートしています。
 
-コンピューターを認証し、異なる層のサービス間の通信を暗号化するには、クライアント証明書および Secure Socket Layer (SSL) 証明書が必要です。 クライアント コンピューターは通常、グループ ポリシーの適用を介してクライアント証明書を受け取ります。 クライアントと役割をホストしているサイト システム サーバー間のトラフィックを暗号化するには、CA からカスタム SSL 証明書を作成する必要があります。 これらの 2 種類の証明書に加え、クラウド プロキシ サービスのデプロイを Configuration Manager に許可する管理証明書を Azure で設定する必要もあります。  
+コンピューターを認証し、異なる層のサービス間の通信を暗号化するには、クライアント証明書および Secure Socket Layer (SSL) 証明書が必要です。 クライアント コンピューターは通常、グループ ポリシーの適用を介してクライアント証明書を受け取ります。 クライアントと役割をホストしているサイト システム サーバー間のトラフィックを暗号化するには、CA からカスタム SSL 証明書を作成する必要があります。 これらの&2; 種類の証明書に加え、クラウド プロキシ サービスのデプロイを Configuration Manager に許可する管理証明書を Azure で設定する必要もあります。  
 
 ### <a name="requirements-for-cloud-proxy-service-in-tp-1606"></a>TP 1606 でのクラウド プロキシ サービスの要件
 - クライアント コンピューターとクラウド プロキシ コネクタ ポイントを実行するサイト システム サーバー
@@ -261,6 +261,6 @@ Technical Preview 1606 では、Configuration Manager コンソールの [更新
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

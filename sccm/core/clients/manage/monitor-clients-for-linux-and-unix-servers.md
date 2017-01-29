@@ -1,5 +1,5 @@
 ---
-title: "クライアントを監視する | System Center Configuration Manager | Linux UNIX "
+title: "Linux/UNIX クライアントを監視する - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager で Linux および UNIX サーバーのクライアントを監視します。"
 ms.custom: na
 ms.date: 11/23/2016
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 620c1caf50b4859afc8f32490ab7945df810aefd
-ms.openlocfilehash: b2b7c88784eed6fbee6ac1f6348d7d6991df1fbb
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: e9965373db17a752c8ae7fddb5f91fa1df912d49
 
 
 ---
@@ -38,7 +38,7 @@ Windows ベースのクライアントからの情報を表示する場合と同
  以下のセクションでは、リソース エクスプローラーとレポートからこれらの詳細情報を取得する方法について説明します。  
 
 ##  <a name="a-namebkmkuseresourceexpforlnua-use-resource-explorer-to-view-inventory-for-linux-and-unix-servers"></a><a name="BKMK_UseResourceExpforLnU"></a> リソース エクスプローラーを使用して Linux および UNIX サーバーのインベントリを表示する  
- 
+
  Configuration Manager クライアントがハードウェア インベントリを Configuration Manager サイトに送信した後、リソース エクスプローラーを使用してこの情報を表示できます。 Linux および UNIX の Configuration Manager クライアントでは、インベントリの新しいクラスやビューをリソース エクスプローラーに追加しません。 Linux および UNIX のインベントリ データは、既存の WMI クラスにマップされます。 リソース エクスプローラーを使用して、Windows ベースの分類で Linux および UNIX サーバーのインベントリの詳細を表示できます。  
 
  たとえば、Linux および UNIX サーバーにある、ネイティブにインストールされているプログラムすべての一覧を収集できます。 ネイティブにインストールされているプログラムの例として、Linux の **.rpms** または Solaris の **.pkgs** があります。 インベントリが Linux または UNIX クライアントによって送信された後、ネイティブにインストールされている Linux または UNIX のすべてのプログラムの一覧は、Configuration Manager コンソールのリソース エクスプローラーで表示できます。  
@@ -56,6 +56,6 @@ Windows ベースのクライアントからの情報を表示する場合と同
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

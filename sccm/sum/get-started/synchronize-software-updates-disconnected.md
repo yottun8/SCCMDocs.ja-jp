@@ -1,12 +1,12 @@
 ---
 
-title: "切断されているソフトウェアの更新ポイントからのソフトウェア更新プログラムの同期 | Microsoft Docs"
-description: "次の手順に従って、ソフトウェア更新プログラムの同期がエクスポート サーバーで成功したことを確認し、更新プログラムをエクスポートして、更新プログラムのメタデータをインポートします。"
+title: "インターネットに接続されていない場合の更新プログラムの同期 - Configuration Manager | Microsoft Docs"
+description: "インターネットから切断されている最上位のソフトウェアの更新ポイントでソフトウェア更新プログラムの同期を実行します。"
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
-ms.openlocfilehash: 73a54ddb896bfa7fb770e02d188a262230762c7f
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: fd9c1e9418ff1956c6ef98753e23a293440179be
 
 
 
@@ -50,7 +50,7 @@ ms.openlocfilehash: 73a54ddb896bfa7fb770e02d188a262230762c7f
 >  ソフトウェア更新プログラムのメタデータをエクスポートするためには、WSUSUtil ツールをエクスポート サーバーでローカルに実行する必要があります。また、ソフトウェア更新プログラムのメタデータをインポートするためには、WSUSUtil ツールを切断されているソフトウェアの更新ポイント サーバーで実行する必要があります。 また、WSUSUtil ツールを実行するユーザーは、各サーバーのローカル Administrators グループのメンバーである必要があります。  
 
 ## <a name="export-process-for-software-updates"></a>ソフトウェア更新プログラムのエクスポート プロセス  
- ソフトウェア更新プログラムのエクスポート プロセスは、主に 2 つの手順で構成されます。1 つは、ローカルに保存されているライセンス条項ファイルを、切断されているソフトウェアの更新ポイントにコピーする手順で、もう 1 つは、ソフトウェア更新プログラムのメタデータをエクスポート サーバーの WSUS データベースからエクスポートする手順です。  
+ ソフトウェア更新プログラムのエクスポート プロセスは、主に&2; つの手順で構成されます。1 つは、ローカルに保存されているライセンス条項ファイルを、切断されているソフトウェアの更新ポイントにコピーする手順で、もう&1; つは、ソフトウェア更新プログラムのメタデータをエクスポート サーバーの WSUS データベースからエクスポートする手順です。  
 
  ローカルに保存されているライセンス条項メタデータを、切断されているソフトウェアの更新ポイントにコピーするには、次の手順に従います。  
 
@@ -111,6 +111,6 @@ ms.openlocfilehash: 73a54ddb896bfa7fb770e02d188a262230762c7f
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

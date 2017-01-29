@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager の Technical Preview 1611 の機能 | Microsoft Docs"
+title: "Configuration Manager の Technical Preview 1611 の機能"
 description: "System Center Configuration Manager の Technical Preview バージョン 1611 で使用できる機能について説明します。"
 ms.custom: na
-ms.date: 11/22/2016
+ms.date: 01/23/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 39f20eef1f82fc9f7baf92219ff6f626b456a783
-ms.openlocfilehash: 511418ab557d5ec915a4917e6b954502f8fc514a
+ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
+ms.openlocfilehash: 5e77ebbfd3f3d573d903fe58024a22feb9884e4a
 
 ---
 # <a name="capabilities-in-technical-preview-1611-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1611 の機能
@@ -29,7 +29,7 @@ ms.openlocfilehash: 511418ab557d5ec915a4917e6b954502f8fc514a
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1611 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 このバージョンの Technical Preview をインストールする前に、説明のトピック「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。    
 
 **この Technical Preview の既知の問題:**   
-- ***前提条件の状態***: バージョン 1611 をインストールする場合、前提条件の全体的な状態は、警告付きで合格として表示されます。ただし、警告の原因となった前提条は一覧表示されません。 この状況は、次の 2 つの前提条件によって発生することがあります。
+- ***前提条件の状態***: バージョン 1611 をインストールする場合、前提条件の全体的な状態は、警告付きで合格として表示されます。ただし、警告の原因となった前提条は一覧表示されません。 この状況は、次の&2; つの前提条件によって発生することがあります。
   - SQL インデックス作成メモリのオプション
   - SQL Server のバージョンがサポートされているかどうかの確認  
 
@@ -78,6 +78,6 @@ ms.openlocfilehash: 511418ab557d5ec915a4917e6b954502f8fc514a
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

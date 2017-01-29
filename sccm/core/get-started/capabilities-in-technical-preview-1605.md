@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager の Technical Preview 1605 の機能 | Microsoft Docs"
+title: "Configuration Manager の Technical Preview 1605 の機能"
 description: "System Center Configuration Manager の Technical Preview バージョン 1605 で使用できる機能について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -17,8 +17,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
-ms.openlocfilehash: 06741d03e208c6f5c8093130780dcdc8f0fcfbf7
+ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
+ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1605 の機能
@@ -132,7 +132,7 @@ ms.openlocfilehash: 06741d03e208c6f5c8093130780dcdc8f0fcfbf7
 
     6.  オフラインでライセンスされるアプリケーションを購入する場合、**オフラインでライセンスされたアプリの表示**ウィザードで、[**はい**] をクリックします。  
 
-4.  ビジネス向け Windows ストアから少なくとも 1 つのアプリを購入します。  
+4.  ビジネス向け Windows ストアから少なくとも&1; つのアプリを購入します。  
 
 5.  Configuration Manager コンソールの**管理**ワークスペースで、[**Cloud Services**] を展開して、[**ビジネス向け Windows ストア**] をクリックします。  
 
@@ -215,7 +215,7 @@ ms.openlocfilehash: 06741d03e208c6f5c8093130780dcdc8f0fcfbf7
 
         -   モバイル デバイスの接続を許可するオプションを選択する前に、既存のアプリケーション カタログの役割をアンインストールする必要があります。  
 
-        -   アプリケーション カタログの役割が 1 セットしかないことを確認し、その役割が登録ポイントと登録プロキシ ポイントの役割と同じサイト システムに併置されていることを確認します。  
+        -   アプリケーション カタログの役割が&1; セットしかないことを確認し、その役割が登録ポイントと登録プロキシ ポイントの役割と同じサイト システムに併置されていることを確認します。  
 
 2.  次のコンポーネントが Configuration Manager コンソールの [コンポーネント ステータス] ノードから動作可能であることを確認します。  
 
@@ -271,7 +271,7 @@ ms.openlocfilehash: 06741d03e208c6f5c8093130780dcdc8f0fcfbf7
 ##  <a name="a-namebkmksw1a-new-tabs-for-updates-and-operating-systems-in-software-center"></a><a name="BKMK_SW1"></a> ソフトウェア センターの更新プログラムおよびオペレーティング システムの新しいタブ  
  このリリースでは、ソフトウェア センター アプリケーションのレイアウトを改善するため、次の変更が加えられています。  
 
--   [**アプリケーション**] タブは、[**更新**]、[**オペレーティング システム**] (どちらも以前は [**フィルター**] 一覧にありました)、および [**アプリケーション**] の 3 つの別々のタブに分割されています。  
+-   [**アプリケーション**] タブは、[**更新**]、[**オペレーティング システム**] (どちらも以前は [**フィルター**] 一覧にありました)、および [**アプリケーション**] の&3; つの別々のタブに分割されています。  
 
 ##  <a name="a-namebkmkservergroupsa-service-a--server-group"></a><a name="BKMK_ServerGroups"></a> サーバー グループの提供  
  System Center Configuration Manager の Technical Preview バージョン 1511 には、コレクション内のすべてのデバイスがサーバー グループを構成するコレクションを作成する機能が含まれていました。 そして、サーバー グループにソフトウェアの更新プログラムを展開するときに使用するサーバー グループ設定を構成する、特定の時間に更新されるコンピューターの割合を制御する、および展開前および展開後の PowerShell スクリプトを構成してカスタム アクションを実行することができました。  
@@ -301,7 +301,7 @@ ms.openlocfilehash: 06741d03e208c6f5c8093130780dcdc8f0fcfbf7
 
     -   **[同時更新を許可するコンピューターの数]**: 任意の時点で特定の数のクライアントのみを更新するように指定します。  
 
-    -   **[メンテナンス シーケンスを指定する]**: コレクション内のクライアントが、構成した順番で 1 つずつ更新されるように指定します。 クライアントは、一覧で前にあるクライアントがソフトウェア更新プログラムのインストールを完了しないと、ソフトウェア更新プログラムをインストールできません。  
+    -   **[メンテナンス シーケンスを指定する]**: コレクション内のクライアントが、構成した順番で&1; つずつ更新されるように指定します。 クライアントは、一覧で前にあるクライアントがソフトウェア更新プログラムのインストールを完了しないと、ソフトウェア更新プログラムをインストールできません。  
 
 5.  展開前 (ノードのドレイン) スクリプトまたは展開後 (ノードの再開) スクリプトを使用するかどうかを指定します。  
 
@@ -472,6 +472,6 @@ ms.openlocfilehash: 06741d03e208c6f5c8093130780dcdc8f0fcfbf7
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

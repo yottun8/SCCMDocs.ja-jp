@@ -1,5 +1,5 @@
 ---
-title: "Apple Configurator と Configuration Manager を使用した iOS ハイブリッド登録 | Microsoft Docs"
+title: "Apple Configurator による iOS デバイスの登録 - Configuration Manager | Microsoft Docs"
 descriptions: Pre-enroll iOS devices by using Apple Configurator with Configuration Manager.
 ms.custom: na
 ms.date: 12/16/2016
@@ -16,8 +16,8 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fd410a6572acce685dc6cdb954c1c2d97d5ed8b
-ms.openlocfilehash: 33aebbbe0dc59fc9dcc8bee79d1465566403d204
+ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
+ms.openlocfilehash: 6c6e9edbc7b2fca3d1be4feabb238efab80465fa
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 33aebbbe0dc59fc9dcc8bee79d1465566403d204
 
 企業で、従業員が使用する iOS デバイスを購入した場合、Microsoft Intune を使用してそのデバイスを管理できます。 企業所有の iOS デバイスの登録を準備するには、Configuration Manager コンソールで登録プロファイルを構成し、Apple Configurator で使用できるようにプロファイルの URL をエクスポートします。 登録のための iOS デバイスの準備として、USB ケーブルで Mac コンピューターにデバイスを接続し、Apple Configurator を使ってデバイスをセットアップします。 Apple Configurator はデバイスを出荷時の設定に戻して登録プロファイルを追加し、ユーザーが最初に電源をオンにしてセットアップ アシスタントのプロセスを実行したときに、デバイスを登録できるようにします。
 
-そのデバイスを使用して企業の電子メールと企業のリソース (アプリやデータなど) にアクセスするユーザーが 1 人だけという専用 iOS デバイスの場合、次の手順が推奨されます。  
+そのデバイスを使用して企業の電子メールと企業のリソース (アプリやデータなど) にアクセスするユーザーが&1; 人だけという専用 iOS デバイスの場合、次の手順が推奨されます。  
 
 ## <a name="prerequisites"></a>必要条件  
 
@@ -92,7 +92,7 @@ ms.openlocfilehash: 33aebbbe0dc59fc9dcc8bee79d1465566403d204
 5.  編集したプロファイルの URL を保存します。 [次のセクション](#step-4-prepare-the-device-with-apple-configurator)では、このファイルを使って登録プロファイルの URL を Apple Configurator に追加します。  
 
 > [!NOTE]
-> 登録プロファイルの URL はエクスポートされてから 2 週間有効です。 2 週間が経過したら、iOS デバイスを登録するために新しい URL をエクスポートする必要があります。
+> 登録プロファイルの URL はエクスポートされてから&2; 週間有効です。 2 週間が経過したら、iOS デバイスを登録するために新しい URL をエクスポートする必要があります。
 
 ## <a name="step-4-prepare-the-device-with-apple-configurator"></a>ステップ 4: Apple Configurator を使用してデバイスを準備する
 
@@ -139,6 +139,6 @@ ms.openlocfilehash: 33aebbbe0dc59fc9dcc8bee79d1465566403d204
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

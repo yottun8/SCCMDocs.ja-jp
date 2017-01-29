@@ -1,6 +1,6 @@
 ---
-title: "Lookout for Work アプリの展開 | System Center Configuration Manager"
-description: "Lookout for Work アプリを構成し、展開します。"
+title: "Lookout for Work アプリを構成して展開する | Microsoft Docs"
+description: "Android デバイス用と iOS デバイス用の Lookout for Work アプリを構成し、展開する方法について説明します。"
 ms.custom: na
 ms.date: 11/18/2016
 ms.prod: configuration-manager
@@ -16,12 +16,12 @@ author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: 947393796043dcc3916a5f8e09898bb8a7cd347d
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: 5e7d67855dc7929b19ec1ae32457aa11700be56e
 
 
 ---
-# <a name="configure-and-deploy-lookout-for-work-apps"></a>Lookout for Work アプリを構成し、展開する
+# <a name="deploy-lookout-for-work-apps"></a>Lookout for Work アプリを展開する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -92,6 +92,6 @@ ms.openlocfilehash: 947393796043dcc3916a5f8e09898bb8a7cd347d
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX Standard デバイスの構成項目を作成する | Microsoft Docs"
+title: "Android および Samsung KNOX Standard の構成項目を作成する - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager の Android と Samsung KNOX Standard の構成項目を使用してデバイスの設定を管理します。"
 ms.custom: na
 ms.date: 12/14/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d023df79e0bcb7d5583224802976a5059c4ee753
-ms.openlocfilehash: c699c9c807f864fe161255522a8d694ab71d1a4e
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 12f5db5839fe66fb07d7055af45f8020abd43e24
 
 
 ---
@@ -109,7 +109,7 @@ System Center Configuration Manager の **Android および Samsung KNOX** 構�
 
 ### <a name="browser"></a>ブラウザー
 |設定|説明|  
-|-------------|-------------| 
+|-------------|-------------|
 |**Web ブラウザーを許可する**|デバイスの既定の Web ブラウザーを使用できるようにするかどうかを指定します。|
 |**オートフィル**|Web ブラウザーのオートフィル機能を使用できるようにします。|
 |**アクティブ スクリプト**|デバイスの Web ブラウザーでアクティブ スクリプトを使用できるようにします。|
@@ -135,9 +135,9 @@ System Center Configuration Manager の **Android および Samsung KNOX** 構�
 |**カメラ**|デバイスのカメラを使用できるようにします。<br /><br /> Android デバイスと Samsung KNOX Standard デバイスに適用されます。|  
 |**近距離無線通信 (NFC)**|近距離無線通信 (デバイスでサポートされている場合) を使用した操作を許可します。|
 |**YouTube**|デバイスで YouTube アプリを使用できるようにします。<br /><br /> Samsung KNOX Standard デバイスのみに適用されます。|  
-|**電源オフ**|デバイスの電源をオフにできるようにします。<br /><br /> Samsung KNOX Standard デバイスのみに適用されます。| 
+|**電源オフ**|デバイスの電源をオフにできるようにします。<br /><br /> Samsung KNOX Standard デバイスのみに適用されます。|
 
-### <a name="roaming"></a>ローミング 
+### <a name="roaming"></a>ローミング
 |設定|説明|  
 |-------------|-------------|
 |**音声通話ローミング**|デバイスが移動体通信ネットワーク上にある場合の音声通話ローミングを許可します。|
@@ -159,7 +159,7 @@ System Center Configuration Manager の **Android および Samsung KNOX** 構�
 
 
 ### <a name="kiosk-mode-samsung-knox-standard-only"></a>キオスク モード (Samsung KNOX Standard のみ)  
- キオスク モードでは、特定の機能のみ実行できるようにデバイスをロックできます。 たとえば、指定した 1 つの管理対象アプリの実行のみをデバイスに許可することや、デバイスのボリューム ボタンを無効にすることができます。 これらの設定は、デバイスのデモ モデルや、POS デバイスなどの 1 つの機能の実行専用のデバイス向けに使用できます。  
+ キオスク モードでは、特定の機能のみ実行できるようにデバイスをロックできます。 たとえば、指定した&1; つの管理対象アプリの実行のみをデバイスに許可することや、デバイスのボリューム ボタンを無効にすることができます。 これらの設定は、デバイスのデモ モデルや、POS デバイスなどの&1; つの機能の実行専用のデバイス向けに使用できます。  
 
 #### <a name="to-configure-kiosk-mode-for-a-samsung-knox-standard-device"></a>Samsung KNOX Standard デバイスのキオスク モードを構成する方法  
 
@@ -199,6 +199,6 @@ System Center Configuration Manager の **Android および Samsung KNOX** 構�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

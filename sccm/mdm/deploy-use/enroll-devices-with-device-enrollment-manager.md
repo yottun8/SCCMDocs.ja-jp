@@ -1,5 +1,5 @@
 ---
-title: "デバイス登録マネージャーと Configuration Manager を使用したデバイスの登録 | Microsoft Docs"
+title: "デバイス登録マネージャーを使用したデバイスの登録 - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager を使用して、会社所有のデバイスをデバイス登録マネージャー アカウントで登録します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: ed60b23f7e7a194676cd7b055da9bc3517af8026
+ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
+ms.openlocfilehash: b356d2351b8a28bdca78176fdf0ff3c913a36bd3
 
 
 ---
@@ -92,6 +92,6 @@ ms.openlocfilehash: ed60b23f7e7a194676cd7b055da9bc3517af8026
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

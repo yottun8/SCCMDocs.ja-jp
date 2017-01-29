@@ -1,6 +1,6 @@
 ---
-title: "クライアント管理 | インターネット | クラウド管理ゲートウェイ | Microsoft Docs"
-description: 
+title: "インターネット上のクライアントの管理 - Configuration Manager | Microsoft Docs"
+description: "Configuration Manager でクラウド管理ゲートウェイとインターネット ベースのクライアント管理を使用するクライアント管理について説明します。"
 ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.technology:
@@ -10,8 +10,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: e71ae1f654fcf3dd8c57a299c727588eed26ccac
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: 6104107429184f31df12db84089f41df1ef81539
 
 ---
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: e71ae1f654fcf3dd8c57a299c727588eed26ccac
 
 一般的に、Configuration Manager では、コンピューターやサーバーのほとんどは、管理機能を実行するサイト システム サーバーと同じ内部のプライベートまたはコーポレート ネットワークで物理的に管理されます。 ただし、インターネットに接続されている場合、サイト システム サーバーに到達するために仮想プライベート ネットワークを経由して接続することをクライアント コンピューターに要求せずに、コーポレート ネットワークの外部にあるクライアント コンピューターを管理できます。
 
-Configuration Manager では、インターネットに接続されているクライアントを 2 つの方法で管理できます。
+Configuration Manager では、インターネットに接続されているクライアントを&2; つの方法で管理できます。
 
 -   クラウド管理ゲートウェイ
 
@@ -73,6 +73,6 @@ Configuration Manager では、インターネットに接続されているク�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

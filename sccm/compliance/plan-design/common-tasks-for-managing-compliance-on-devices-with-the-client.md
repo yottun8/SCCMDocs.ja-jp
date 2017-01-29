@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager クライアントでデバイスのコンプライアンスを管理するための一般的なタスク | Microsoft Docs"
+title: "クライアントで管理されているデバイスのコンプライアンスを管理するための一般的なタスク - Configuration Manager | Microsoft Docs"
 description: "いくつかの一般的なシナリオを使用して、System Center Configuration Manager のコンプライアンス設定について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
-ms.openlocfilehash: feadb8b5b75832e914dfe62bd2d486e5bac1458d
+ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
+ms.openlocfilehash: 2012ab5e55da8d707fd668e0163b42fe7d56c72f
 
 
 ---
@@ -62,7 +62,7 @@ ms.openlocfilehash: feadb8b5b75832e914dfe62bd2d486e5bac1458d
  これで、「[System Center Configuration Manager での構成基準の作成と展開に関する一般的なタスク](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)」トピックの情報を使用して、作成した構成をデバイスに簡単に展開できるようになります。  
 
 ## <a name="scenarios-for-windows-desktop-and-server-computers-managed-with-the-configuration-manager-client"></a>Configuration Manager クライアントを使用して管理されている Windows デスクトップおよびサーバー コンピューターを対象としたシナリオ  
- Configuration Manager クライアントを実行している Mac コンピューターでは、コンプライアンスを評価するためのオプションが 2 つあります。  
+ Configuration Manager クライアントを実行している Mac コンピューターでは、コンプライアンスを評価するためのオプションが&2; つあります。  
 
 -   Mac OS X の設定 (plist) ファイルを評価します。  
 
@@ -113,6 +113,6 @@ ms.openlocfilehash: feadb8b5b75832e914dfe62bd2d486e5bac1458d
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

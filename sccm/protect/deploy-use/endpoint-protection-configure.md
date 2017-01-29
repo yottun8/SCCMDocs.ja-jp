@@ -16,13 +16,13 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 180d05d3493f8c4288ad4bf640da15bd599c2072
-ms.openlocfilehash: 783d8352e3e1f06af3a5d8534b4fa811f36fdc17
+ms.sourcegitcommit: 9db108fb2d4d16013f416b8ee87a57ff1c91e21f
+ms.openlocfilehash: 3b0092c203201fefa51d1f9d9fea7180e10735b0
 
 
 ---
 
-# <a name="configure-endpoint-protection-in-system-center-configuration-manager"></a>System Center Configuration Manager での Endpoint Protection の構成
+# <a name="configure-endpoint-protection"></a>Endpoint Protection の構成
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -47,6 +47,6 @@ Endpoint Protection を使用して構成マネージャー クライアント �
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager の Technical Preview 1511 の機能 | Microsoft Docs"
+title: "Configuration Manager の Technical Preview 1511 の機能"
 description: "System Center Configuration Manager の Technical Preview バージョン 1511 で使用できる機能について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
-ms.openlocfilehash: 8ef43a2f10a7ef1cbb101f6737c606c72ccdce4f
+ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
+ms.openlocfilehash: 2e0338267ea9fdc639d57f93adda1e46aea80eec
 
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1511 の機能
@@ -89,9 +89,9 @@ Microsoft から、Windows Server Updates Services (WSUS) に新しい Office 36
 
 -   Configuration Manager をインストールする前に、SQL Server 可用性グループを作成して構成する必要があります。  
 
--   可用性グループには、1 つのプライマリ レプリカを含める必要があり、最大 2 つの同期セカンダリ レプリカを含めることができます。  
+-   可用性グループには、1 つのプライマリ レプリカを含める必要があり、最大&2; つの同期セカンダリ レプリカを含めることができます。  
 
--   可用性グループには、少なくとも 1 つのエンドポイントを含める必要があります。  
+-   可用性グループには、少なくとも&1; つのエンドポイントを含める必要があります。  
 
 -   可用性グループ内の SQL Server からアクセス可能なネットワークの場所を用意する必要があります。 この場所は、可用性グループの構成時にセットアップで使用され、セットアップの完了後に削除することができます。  
 
@@ -114,19 +114,19 @@ Microsoft から、Windows Server Updates Services (WSUS) に新しい Office 36
 #### <a name="to-create-a-sql-server-alwayson-availability-group"></a>SQL Server AlwaysOn 可用性グループを作成するには  
 [SQL Server 可用性グループを作成する](https://technet.microsoft.com/library/ff878265\(v=sql.120\).aspx) プロセスは、SQL Server ドキュメント ライブラリに記載されています。  可用性グループを作成するときに、Configuration Manager で使用するための次の要件が満たされていることを確認します。  
 
--   最大 3 つのメンバー:  
+-   最大&3; つのメンバー:  
 
-    -   1 つのプライマリ レプリカと最大 2 つのセカンダリ レプリカ  
+    -   1 つのプライマリ レプリカと最大&2; つのセカンダリ レプリカ  
 
     -   セカンダリ レプリカは同期している必要があります。  
 
         > [!TIP]  
         >  セカンダリ レプリカは読み取り専用に構成することをお勧めします。 これにより、サイト操作のためのプライマリ レプリカのパフォーマンスを維持しながら、レポートなどの機能にセカンダリ レプリカを使用することができます。  
 
--   少なくとも 1 つのエンドポイント。 Configuration Manager サイトをインストールするときに、このエンドポイントの仮想名が使用されます。  
+-   少なくとも&1; つのエンドポイント。 Configuration Manager サイトをインストールするときに、このエンドポイントの仮想名が使用されます。  
 
     > [!TIP]  
-    >  グループには複数のエンドポイントを含めることができますが、Configuration Manager はそのうちの 1 つしか利用できません。  
+    >  グループには複数のエンドポイントを含めることができますが、Configuration Manager はそのうちの&1; つしか利用できません。  
 
 #### <a name="to-install-a-configuration-manager-site-that-uses-the-availability-group"></a>可用性グループを使用する Configuration Manager サイトをインストールするには  
 SQL Server 可用性グループを使用するサイトをインストールするには、次のようにします。  
@@ -173,7 +173,7 @@ SQL Server 可用性グループを使用するサイトをインストールす
 
 3.  [**全般**] タブで [**すべてのデバイスが同じサーバー クラスターに含まれる**] を選択し、[**設定**] をクリックします。  
 
-4.  [**クラスター設定**] ページで、ソフトウェア更新プログラムをインストールするために、同時にオフラインにできるサーバーの割合を選択します。 指定した割合に関係なく、クラスター サーバーは一度に 1 台ずつオフラインになります。 Configuration Manager では、一度にサービスを提供できるサーバー数の端数は切り捨てられます。 たとえば、51% を選択し、クラスターに 4 台のサーバーがある場合、2 台のサーバーが同時にオフラインになります。  
+4.  [**クラスター設定**] ページで、ソフトウェア更新プログラムをインストールするために、同時にオフラインにできるサーバーの割合を選択します。 指定した割合に関係なく、クラスター サーバーは一度に&1; 台ずつオフラインになります。 Configuration Manager では、一度にサービスを提供できるサーバー数の端数は切り捨てられます。 たとえば、51% を選択し、クラスターに 4 台のサーバーがある場合、2 台のサーバーが同時にオフラインになります。  
 
 5.  展開前 (ノードのドレイン) スクリプトまたは展開後 (ノードの再開) スクリプトを使用するかどうかを指定します。  
 
@@ -208,6 +208,6 @@ SQL Server 可用性グループを使用するサイトをインストールす
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager クライアントを使用して管理されている Windows 10 デバイスの構成項目を作成する方法 | Microsoft Docs"
+title: "クライアントで管理されている Windows 10 の構成項目を作成する - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager の Windows 10 構成項目を使用して、Configuration Manager クライアントで管理されている Windows 10 コンピューターの設定を管理します。"
 ms.custom: na
 ms.date: 11/18/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: 2b24570aa2e9d9aa45584842011dcd49c6e5e8cc
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 030cc33d98c81f3a6d5dff2d4c011e03fff12dc2
 
 
 ---
@@ -137,6 +137,6 @@ Configuration Manage で Windows 情報保護を構成する方法について�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

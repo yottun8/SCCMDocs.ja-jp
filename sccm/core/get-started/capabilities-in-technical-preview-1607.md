@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager の Technical Preview 1607 の機能 | Microsoft Docs"
+title: "Configuration Manager の Technical Preview 1607 の機能"
 description: "System Center Configuration Manager の Technical Preview バージョン 1607 で使用できる機能について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f6e34e39d267f3bba26d6aa6a912eb4ba4aa3ab2
-ms.openlocfilehash: 1f91cda68204346913bee382a8bbf52b5a58e227
+ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
+ms.openlocfilehash: 54fc16c104ab25f3650ad1c38a2044abaee96a31
 
 ---
 # <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1607 の機能
@@ -42,7 +42,7 @@ ms.openlocfilehash: 1f91cda68204346913bee382a8bbf52b5a58e227
 
 1. [既存エディションのアップグレード ポリシーのトピック](/sccm/compliance/deploy-use/upgrade-windows-version)にある情報を使用して、エディションのアップグレード ポリシーを作成します。
 2. このポリシーを Configuration Manager クライアントを実行している Windows 10 PC に展開します。
-対象の Windows PC にポリシーが到達すると、アップグレードを適用するために PC は 2 時間以内に再起動します。 現在、この再起動を抑制することはできません。 ポリシーを展開するすべてのユーザーに通知するか、ポリシーの実行をユーザーの業務時間外にスケジュール設定します。
+対象の Windows PC にポリシーが到達すると、アップグレードを適用するために PC は&2; 時間以内に再起動します。 現在、この再起動を抑制することはできません。 ポリシーを展開するすべてのユーザーに通知するか、ポリシーの実行をユーザーの業務時間外にスケジュール設定します。
 
 ### <a name="known-issue-with-this-release"></a>このリリースでの既知の問題
 Configuration Manager クライアントの設定で、**エディションのアップグレード**の設定が表示される場合があります。 このリリースでは、これらの設定は機能しません。 上記の手順に従って、Windows 10 を新しいバージョンにアップグレードします。
@@ -79,6 +79,6 @@ Technical Preview バージョン 1607 では、(複数のデバイスで使用�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager を使用して、新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする | Microsoft ドキュメント"
-description: "System Center Configuration Manager で次の手順を実行し、PXE、OEM、またはスタンドアロン メディアを利用し、新しいコンピューターにオペレーティング システムをインストールします。"
+title: "新しいコンピューターへの Windows のインストール - Configuration Manager | Microsoft Docs"
+description: "Configuration Manager で PXE、OEM、またはスタンドアロン メディアを使用して、新しいコンピューター (ベア メタル) にオペレーティング システムをインストールします。"
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 06ade037c580d64503e6b8b5c3bf31004ab0650b
-ms.openlocfilehash: 93b3d99e7391feefc3d706f15f0fe8f8df3b75ac
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: 584dad7d8b05a2da9f7a66b73028ae99ff1a594f
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 93b3d99e7391feefc3d706f15f0fe8f8df3b75ac
 
 このトピックでは、System Center Configuration Manager で新しいコンピューターにオペレーティング システムをインストールする一般的な手順を示します。 このシナリオでは、PXE、OEM、スタンドアロン メディアなど、展開のさまざまな方法の中から選択することができます。 適切なオペレーティング システムの展開シナリオがわからない場合は、「[エンタープライズ オペレーティング システムを展開するシナリオ](scenarios-to-deploy-enterprise-operating-systems.md)」を参照してください。  
 
- Windows の新しいバージョンで既存のコンピューターを更新する場合は、次のセクションを参考にします。  
+Windows の新しいバージョンで既存のコンピューターを更新する場合は、次のセクションを参考にします。  
 
 ##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> プラン  
 
@@ -81,6 +81,6 @@ ms.openlocfilehash: 93b3d99e7391feefc3d706f15f0fe8f8df3b75ac
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

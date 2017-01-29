@@ -1,8 +1,8 @@
 ---
-title: "ブート イメージの管理 | Microsoft Docs"
+title: "ブート イメージの管理 - Configuration Manager | Microsoft Docs"
 description: "Configuration Manager で、オペレーティング システムの展開中に使用する Windows PE ブート イメージを管理する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 8c41c39a7f984be2612ae882d3bc08d92278dba6
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: 3b7125e782b60853e750aeb7ba923490e46a76b0
 
 
 ---
@@ -29,7 +29,7 @@ ms.openlocfilehash: 8c41c39a7f984be2612ae882d3bc08d92278dba6
 Configuration Manager のブート イメージは、オペレーティング システムの展開中に使用される [Windows PE (WinPE)](https://msdn.microsoft.com/library/windows/hardware/dn938389%28v=vs.85%29.aspx) のイメージです。 ブート イメージは、WinPE でコンピューターを起動するために使用されます。WinPE は、セットアップ先のコンピューターで Windows のインストールを準備する限られたコンポーネントとサービスが含まれた、最小限のオペレーティング システムです。  ブート イメージを管理するときは、以下のセクションを参照してください。
 
 ##  <a name="a-namebkmkbootimagedefaulta-default-boot-images"></a><a name="BKMK_BootImageDefault"></a> 既定のブート イメージ  
- Configuration Manager には 2 つの既定のブート イメージがあります。一方は x86 プラットフォームをサポートし、もう一方は x64 プラットフォームをサポートします。 これらのイメージは次の場所に格納されています: \\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64 または i386*。  
+ Configuration Manager には&2; つの既定のブート イメージがあります。一方は x86 プラットフォームをサポートし、もう一方は x64 プラットフォームをサポートします。 これらのイメージは次の場所に格納されています: \\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64 または i386*。  
 
  Configuration Manager を新しいバージョンにアップグレードすると、Configuration Manager によってこの場所にある既定のブート イメージ、および既定のブート イメージに基づくカスタマイズされたブート イメージが更新されたファイルに置き換えられます。 サイトで既定のブート イメージに構成するオプション (省略可能なコンポーネントなど) は、ドライバーを含めて、ブート イメージが更新されたときに引き継がれます。 ソース ドライバー オブジェクトは、ドライバーのソース ファイルを含めて、有効である必要があり、そうでない場合、ドライバーは、サイトの更新されたブート イメージに追加されません。 同じ Windows ADK バージョンに基づく場合でも、既定のブート イメージに基づいていない他のブート イメージは更新されません。 ブート イメージが更新されたら、配布ポイントに再配布する必要があります。 ブート イメージを使用するメディアを再作成する必要があります。 カスタマイズした既定のブート イメージを自動的に更新しない場合、別の場所に保存する必要があります。  
 
@@ -96,13 +96,13 @@ Configuration Manager のブート イメージは、オペレーティング �
 >  Configuration Manager コンソールで **[ブート イメージ]** ノードを選ぶと、**[サイズ (KB)]** 列に、各ブート イメージの圧縮解除後のサイズが表示されます。 ただし、Configuration Manager がネットワーク経由でブート イメージを送信する際は、イメージの圧縮コピーを送信します。このコピーは通常、**[サイズ (KB)]** 列に示されているサイズよりもはるかに小さいサイズです。  
 
 ##  <a name="a-namebkmkdistributebootimagesa-distribute-boot-images-to-a-distribution-point"></a><a name="BKMK_DistributeBootImages"></a> 配布ポイントへのブート イメージの配布  
- ブート イメージは、他のコンテンツを配布するのと同じ方法で配布ポイントに配布されます。 ほとんどの場合は、オペレーティング システムを展開する前、およびメディアを作成する前に、少なくとも 1 つの配布ポイントにブート イメージを配布する必要があります。  
+ ブート イメージは、他のコンテンツを配布するのと同じ方法で配布ポイントに配布されます。 ほとんどの場合は、オペレーティング システムを展開する前、およびメディアを作成する前に、少なくとも&1; つの配布ポイントにブート イメージを配布する必要があります。  
 
 > [!NOTE]  
 >  PXE を使用してオペレーティング システムを展開するには、ブート イメージを配布する前に次の点を考慮します。  
 >   
 >  -   配布ポイントは、PXE 要求を受け入れるように構成する必要があります。  
-> -   x86 と x64 の両方の PXE 対応ブート イメージを、少なくとも 1 つの PXE 対応配布ポイントに配布する必要があります。  
+> -   x86 と x64 の両方の PXE 対応ブート イメージを、少なくとも&1; つの PXE 対応配布ポイントに配布する必要があります。  
 > -   Configuration Manager は、ブート イメージを、PXE 対応配布ポイント上の **RemoteInstall** フォルダーに配布します。  
 >   
 >  PXE を使用してオペレーティング システムを展開する方法の詳細については、「[PXE を使用したネットワーク経由での Windows の展開](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)」を参照してください。  
@@ -247,10 +247,10 @@ Configuration Manager のブート イメージは、オペレーティング �
 
 1.  ブート イメージを更新する前に、適切なタスク シーケンス リソース ファイル (tsres.dll) がサイト サーバーの対応する言語フォルダー内にあることを確認します。 たとえば、英語版のリソース ファイルは <*ConfigMgrInstallationFolder*>\OSD\bin\x64\00000409\tsres.dll にあります。  
 
-2.  起動前コマンドの一部として、SMSTSLanguageFolder 環境変数を適切な言語 ID に設定します。 言語 ID は、16 進数ではなく 10 進数を使用して指定する必要があります。 たとえば、言語 ID を英語に設定するには、フォルダー名に使用される 16 進数の 00000409 ではなく、10 進数の 1033 を指定します。  
+2.  起動前コマンドの一部として、SMSTSLanguageFolder 環境変数を適切な言語 ID に設定します。 言語 ID は、16 進数ではなく&10; 進数を使用して指定する必要があります。 たとえば、言語 ID を英語に設定するには、フォルダー名に使用される 16 進数の 00000409 ではなく、10 進数の 1033 を指定します。  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
