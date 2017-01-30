@@ -2,7 +2,7 @@
 title: Endpoint Protection | Microsoft Docs
 description: "Configuration Manager 階層内のクライアント コンピューターのマルウェア対策ポリシーと Windows ファイアウォールのセキュリティを管理する方法について説明します。"
 ms.custom: na
-ms.date: 12/9/2016
+ms.date: 01/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
-ms.openlocfilehash: 59313bd6f76433782a79ab3ee9d6240f767fbd76
+ms.sourcegitcommit: f66288f1c2e0566d5de8686a005624dd81557563
+ms.openlocfilehash: addb315afe3775722a58a16b00d41cbe32a5009c
 
 
 ---
@@ -108,10 +108,20 @@ Configuration Manager のバージョン 1606 (Current Branch) 以降、Endpoint
 
  これらの製品は、Configuration Manager コンソールから管理することができません。 ただし、System Center Operations Manager 管理パックがインストール ファイルに付属しているため、Operations Manager を使用して Linux 用のクライアントを管理することができます。  
 
+### <a name="how-to-get-the-endpoint-protection-client-for-mac-computers-and-linux-servers"></a>Mac コンピューターと Linux サーバー用の Endpoint Protection クライアントを取得する方法
+
+次の手順で、Mac コンピューターと Linux サーバー用の Endpoint Protection クライアント ソフトウェアとドキュメントを含む画像ファイルをダウンロードします。
+1. [Microsoft ボリューム ランセンス サービス センター](https://www.microsoft.com/licensing/servicecenter/default.aspx)にログインします。
+2. Web サイトの上部にある **[Downloads and Keys]**(ダウンロードとキー) タブを選択します。
+3. 製品 **System Center Endpoint Protection (Current Branch)** でフィルター処理します。
+4. **[ダウンロード]** リンクをクリックします。
+5. [ **続行**] をクリックします。 **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage 32/64 bit 1507 MB ISO** など、複数のファイルが表示されます。
+6. 矢印アイコンをクリックしてファイルをダウンロードします。 ファイル名は **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_EptProt_Lin_Mac_MLF_X21-30777.ISO** です。
+
  Linux コンピューターと Mac コンピューター用の Endpoint Protection クライアントをインストールして管理する方法については、 **Documentation** フォルダーに配置されたこれらの製品に付属のマニュアルを参照してください。
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
