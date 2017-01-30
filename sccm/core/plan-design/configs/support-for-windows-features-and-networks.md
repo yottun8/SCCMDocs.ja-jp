@@ -2,7 +2,7 @@
 title: "Windows の機能のサポート | Microsoft Docs"
 description: "System Center Configuration Manager でサポートされる Windows とネットワークの機能について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 29e4f8a70b56b772a54ee858a392533780ccbaf9
+ms.sourcegitcommit: 086efdd180ba3de12f84cabfa6c2abca1fe57537
+ms.openlocfilehash: 3315098f271a5b365914772943094c33f63f25c4
 
 
 ---
@@ -34,7 +34,9 @@ Windows BranchCache は、Configuration Manager に統合されています。 �
 
 BranchCache のすべての要件を満たしていると、リモートの場所にあるクライアントは、この機能を使用して、コンテンツの最新のキャッシュを持っているローカルのクライアントからコンテンツを取得できます。  
 
-たとえば、BranchCache が有効な最初のクライアント コンピューターが、BranchCache サーバーとして構成されている配布ポイントからコンテンツを要求するとき、クライアント コンピューターは、コンテンツをダウンロードしてキャッシュします。 これと同じコンテンツを要求する同じサブネット上のクライアントは、このコンテンツを利用できるようになります。また、これらのクライアントもそのコンテンツをキャッシュします。 このように、同じサブネット上の後続のクライアントは配布ポイントからコンテンツをダウンロードする必要がありません。コンテンツは、以後の転送で複数のクライアントから配布されます。  
+たとえば、BranchCache が有効な最初のクライアント コンピューターが、BranchCache サーバーとして構成されている配布ポイントからコンテンツを要求するとき、クライアント コンピューターは、コンテンツをダウンロードしてキャッシュします。 これと同じコンテンツを要求する同じサブネット上のクライアントは、このコンテンツを利用できるようになります。
+
+これらのクライアントもそのコンテンツをキャッシュします。 このように、同じサブネット上の後続のクライアントは配布ポイントからコンテンツをダウンロードする必要がありません。コンテンツは、以後の転送で複数のクライアントから配布されます。  
 
 **Configuration Manager で BranchCache をサポートするには:**  
 
@@ -50,7 +52,7 @@ BranchCache のすべての要件を満たしていると、リモートの場�
 
 -   BITS クライアントの設定に関するオペレーティング システムの設定で、BranchCache のサポートを有効にする必要があります。  
 
-**Windows BranchCache に対応しているオペレーティング システムは次のとおりです。**  
+**Configuration Manager は、Windows BranchCache に対応している以下のクライアント オペレーティング システムをサポートします。**  
 
 |オペレーティング システム|サポートの詳細|  
 |----------------------|---------------------|  
@@ -58,14 +60,14 @@ BranchCache のすべての要件を満たしていると、リモートの場�
 |Windows 8|既定でサポート|  
 |Windows 8.1|既定でサポート|  
 |Windows 10|既定でサポート|  
-|Windows Server 2008 SP2|**BITS 4.0 が必要**- BITS 4.0 リリースを Configuration Manager クライアントにインストールするには、ソフトウェアの更新プログラムまたはソフトウェアの配布を使用します。 BITS 4.0 リリースの詳細については、「 [Windows Management Framework](http://go.microsoft.com/fwlink/p/?LinkId=181979)」を参照してください。<br /><br /> このオペレーティング システムでは、BranchCache クライアント機能はネットワークから実行されるソフトウェアの配布または SMB ファイル転送ではサポートされません。 加えてこのオペレーティング システムでは、BranchCache の機能をクラウド ベースの配布ポイントで使用することができません。|  
+|Windows Server 2008 SP2|**BITS 4.0 が必要**: BITS 4.0 リリースを Configuration Manager クライアントにインストールするには、ソフトウェアの更新プログラムまたはソフトウェアの配布を使用します。 BITS 4.0 リリースの詳細については、「 [Windows Management Framework](http://go.microsoft.com/fwlink/p/?LinkId=181979)」を参照してください。<br /><br /> このオペレーティング システムでは、BranchCache クライアント機能はネットワークから実行されるソフトウェアの配布または SMB ファイル転送ではサポートされません。 加えてこのオペレーティング システムでは、BranchCache の機能をクラウド ベースの配布ポイントで使用することができません。|  
 |Windows Server 2008 R2|既定でサポート|  
 |Windows Server 2012|既定でサポート|  
 |Windows Server 2012 R2|既定でサポート|  
 
  BranchCache の詳細については、Windows Server のドキュメントの「 [BranchCache for Windows (Windows の BranchCache)](http://go.microsoft.com/fwlink/p/?LinkId=177945) 」を参照してください。  
 
-##  <a name="a-namebkmkworkgroupsa-computers-in-workgroups"></a><a name="bkmk_Workgroups"></a> ワークグループ内のコンピュータ  
+##  <a name="a-namebkmkworkgroupsa-computers-in-workgroups"></a><a name="bkmk_Workgroups"></a> ワークグループ内のコンピューター  
 Configuration Manager では、ワークグループ内のクライアントがサポートされます。  
 
 -   Configuration Manager では、ワークグループとドメインとの間でのクライアントの移動がサポートされます。 詳細については、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」のトピックの「[ワークグループ コンピューターへの Configuration Manager クライアントのインストール方法](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup)」のセクションを参照してください。  
@@ -89,7 +91,7 @@ Configuration Manager は、次に示すオペレーティング システム上
 ##  <a name="a-namebkmkdaa-directaccess"></a><a name="bkmk_DA"></a> DirectAccess  
 Configuration Manager では、サイト システム サーバーとクライアント間の通信用に、Windows Server 2008 R2 の DirectAccess 機能をサポートしています。  
 
--   DirectAccess の要件がすべて満たされているときに、この機能を使用することで、インターネット上の Configuration Manager クライアントは、イントラネット上にいるかのように割り当て先のサイトと通信できます。  
+-   DirectAccess の要件がすべて満たされているときに、DirectAccess を使用することで、インターネット上の Configuration Manager クライアントは、イントラネット上にいるかのように割り当て先のサイトと通信できます。  
 
 -   サーバーにより開始される操作 (リモート コントロールやクライアント プッシュ インストールなど) の場合、操作を開始するコンピューター (サイト サーバーなど) は、IPv6 を実行している必要があります。また、このプロトコルは、介在するすべてのネットワーク デバイスでサポートされている必要もあります。  
 
@@ -120,7 +122,9 @@ Configuration Manager では、次に示す DirectAccess を利用した操作�
  Configuration Manager では、ネットワーク アドレス変換 (NAT) はサポートされていません。ただし、サイトがインターネット上のクライアントをサポートしていて、クライアントがインターネットに接続されていることを検出する場合を除きます。 インターネット ベースのクライアント管理の詳細については、「[Plan for managing Internet-based clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-for-managing-internet-based-clients.md)」(System Center Configuration Manager でインターネット ベースのクライアントを管理する計画) を参照してください。  
 
 ##  <a name="a-namebkmkstoragea-specialized-storage-technology"></a><a name="bkmk_storage"></a> 特殊なストレージ技術  
- Configuration Manager は、Configuration Manager コンポーネントがインストールされているオペレーティング システムのバージョン用の Windows ハードウェア互換性リストで認定されているハードウェアで動作するように設計されています。 サイト サーバーの役割では、ディレクトリとファイルのアクセス許可を設定できるようにするために、NTFS ファイル システムが必要です。 Configuration Manager は論理ドライブの完全な所有権を保持していることを前提としていて、個別のコンピューターで実行するサイト システムはストレージ技術を問わず論理パーティションを共有できないためです。 ただし、各コンピューターは、共有ストレージ デバイスの同じ物理パーティションにある個別の論理パーティションを使用できます。  
+ Configuration Manager は、Configuration Manager コンポーネントがインストールされているオペレーティング システムのバージョン用の Windows ハードウェア互換性リストで認定されているハードウェアで動作するように設計されています。
+
+サイト サーバーの役割では、ディレクトリとファイルのアクセス許可を設定できるようにするために、NTFS ファイル システムが必要です。 Configuration Manager は論理ドライブの完全な所有権を保持していることを前提としていて、個別のコンピューターで実行するサイト システムはストレージ技術を問わず論理パーティションを共有できないためです。 ただし、各コンピューターは、共有ストレージ デバイスの同じ物理パーティションにある個別の論理パーティションを使用できます。  
 
  **サポートに関する考慮事項:**  
 
@@ -134,6 +138,6 @@ Configuration Manager では、次に示す DirectAccess を利用した操作�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

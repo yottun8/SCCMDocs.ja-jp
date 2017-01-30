@@ -2,7 +2,7 @@
 title: "ソフトウェア インベントリ | Microsoft Docs"
 description: "System Center Configuration Manager のソフトウェア インベントリの概要について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a468ce93e9536fe3f6bf0fc191ff9764dd1c3343
-ms.openlocfilehash: 401ba6e37d740310d49ab9e96112ce576d7130e4
+ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
+ms.openlocfilehash: c9956dd4ef94a1b109d761e44e42f512c42eb8d2
 
 
 ---
@@ -26,31 +26,31 @@ ms.openlocfilehash: 401ba6e37d740310d49ab9e96112ce576d7130e4
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager のソフトウェア インベントリを使用して、組織内のクライアント デバイスに格納されているファイルに関する情報を収集します。 また、ソフトウェア インベントリはクライアント デバイスからファイルを収集し、サイト サーバーに格納することができます。 ソフトウェア インベントリは、クライアント設定で [クライアントのソフトウェア インベントリを有効にする] が、有効になっているときに収集されます。 ****  
+ソフトウェア インベントリを利用し、クライアント デバイスでファイルに関する情報を収集します。 また、ソフトウェア インベントリはクライアント デバイスからファイルを収集し、サイト サーバーに格納することができます。 ソフトウェア インベントリは、クライアント設定で **[クライアントのソフトウェア インベントリを有効にする]** 設定を選択すると収集されます。この設定では、操作をスケジュールすることもできます。  
 
- ソフトウェア インベントリが有効化され、クライアントがソフトウェア インベントリを実行した後で、クライアントはインベントリ情報をクライアント サイトの管理ポイントに送信します。 インベントリ情報は、さらに管理ポイントによって Configuration Manager サイト サーバーに転送され、ここでサイト データベースに保存されます。 ソフトウェア インベントリは、クライアント設定で指定されたスケジュールに従って、クライアントに対して実行されます。  
+ソフトウェア インベントリが有効化され、クライアントがソフトウェア インベントリを実行した後で、クライアントは情報をクライアント サイトの管理ポイントに送信します。 インベントリ情報は、さらに管理ポイントによって Configuration Manager サイト サーバーに転送され、そこでサイト データベースに保存されます。   
 
- Configuration Manager が収集するソフトウェア インベントリ データは、各種の方法で表示することができます。 リポジトリには、次のものが含まれます。  
+ ソフトウェア インベントリ データの表示方法:  
 
--   デバイス上で検出される、指定されたファイルを使用するデバイスを返すクエリを作成する。 詳細については、「[Configuration Manager のクエリ](../../../../core/servers/manage/queries-technical-reference.md)」を参照してください。  
+-   指定のファイルとデバイスを返す[クエリを作成](../../../../core/servers/manage/queries-technical-reference.md)する。   
 
--   デバイス上で検出される、指定されたファイルを使用する、クエリベースのコレクションを作成する。 クエリベースのコレクションのメンバーシップは、スケジュールに従って自動的に更新されます。 コレクションは、ソフトウェアの展開など各種のタスクに使用できます。 詳細については、「[Introduction to collections in System Center Configuration Manager](../../../../core/clients/manage/collections/introduction-to-collections.md)」(System Center Configuration Manager でのコレクションの概要) をご覧ください。  
+-   指定のファイルとデバイスを含む[クエリベース コレクション](../../../../core/clients/manage/collections/introduction-to-collections.md)を作成する。   
 
--   組織内のデバイス上のファイルに関する特定の詳細情報を表示するレポートを実行する。 詳細については、「[System Center Configuration Manager のレポート](../../../../core/servers/manage/reporting.md)」を参照してください。  
+-   デバイスでファイルに関する詳細を提供する[レポートを実行](../../../../core/servers/manage/reporting.md)する。 
 
--   リソース エクスプローラーを使用して、クライアント デバイスから収集され、インベントリされたファイルに関する詳細情報を表示する。 詳細については、「[How to use Resource Explorer to view software inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)」(System Center Configuration Manager でリソース エクスプローラーを使用してソフトウェア インベントリを表示する方法) を参照してください。  
+-   [リソース エクスプローラー](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)を使用して、クライアント デバイスから収集され、インベントリされたファイルに関する詳細情報を表示する。   
 
- ソフトウェア インベントリをクライアント デバイス上で実行するときは、最初に返されるインベントリ レポートは必ず、完全なインベントリとなります。 その後のインベントリ レポートは差分のデルタ インベントリ情報のみを含みます。 サイト サーバーは受け取った順番に、デルタ インベントリ情報を処理します。 クライアントに関するデルタ インベントリ情報がない場合は、サイト サーバーはその後のデルタ インベントリ情報を拒否し、クライアントに完全なインベントリ サイクルを実行するように指示します。  
+ ソフトウェア インベントリをクライアント デバイス上で実行するとき、最初のレポートは完全なインベントリとなります。 その後のレポートは差分のデルタ インベントリ情報のみを含みます。 サイト サーバーは受け取った順番にデルタ情報を処理します。 クライアントに関するデルタ情報がない場合は、サイト サーバーはその後のデルタ情報を拒否し、クライアントに完全インベントリを実行するように指示します。  
 
- Configuration Manager のデュアル ブート コンピューターに対するサポートは限定的です。 Configuration Manager でデュアル ブート コンピューターを検出することはできますが、返す情報はインベントリ実行時にアクティブだったオペレーティング システムのインベントリ情報のみです。  
+ Configuration Manager でデュアル ブート コンピューターを検出することはできますが、返す情報はインベントリ実行時にアクティブだったオペレーティング システムのインベントリ情報のみです。  
 
 ## <a name="software-inventory-for-mobile-devices-enrolled-with-microsoft-intune"></a>Microsoft Intune に登録されているモバイル デバイスのソフトウェア インベントリ  
  モバイル デバイスにインストールされているアプリのインベントリを収集できます。 インベントリに収集されるアプリは、デバイスが会社所有か個人所有かによって異なります。 個人用デバイスの場合、インベントリに収集されるアプリは、Microsoft Intune で管理されているアプリのみです。  
 
 > [!NOTE]  
->  モバイル デバイスにインストールされているアプリのインベントリが、Configuration Manager のハードウェア インベントリ プロセスの一部として収集されます。 詳細については、「[Configuration Manager と Microsoft Intune で登録されたモバイル デバイスのハードウェア インベントリを構成する方法](../../../../core/clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md)」を参照してください。  
+>  モバイル デバイスにインストールされているアプリのインベントリが[ハードウェア インベントリ](../../../../core/clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md) プロセスの一部として収集されます。  
 
- 次の表は、個人所有のデバイスまたは会社所有のデバイスに対してインベントリされるアプリの一覧を示しています。  
+ 個人所有のデバイスまたは会社所有のデバイスのインベントリに次のアプリが収集されます。  
 
 |プラットフォーム|個人所有のデバイス|会社所有のデバイス|  
 |--------------|---------------------------------|--------------------------------|  
@@ -63,6 +63,8 @@ System Center Configuration Manager のソフトウェア インベントリを�
 
 
 
-<!--HONumber=Dec16_HO3-->
+
+
+<!--HONumber=Dec16_HO5-->
 
 

@@ -2,7 +2,7 @@
 title: "Linux および UNIX クライアントを管理する | Microsoft Docs"
 description: "System Center Configuration Manager で Linux および UNIX サーバーのクライアントを管理します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: d3a44d516bb1e2766a7a10b62d52405eecef31fc
+ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
+ms.openlocfilehash: 7a5ff0e75b8cdac68e3854c4f5aba01a7d423e9b
 
 
 ---
@@ -37,36 +37,32 @@ System Center Configuration Manager で Linux および UNIX サーバーを管�
 
 -   メンテナンス期間の適用  
 
- Linux または UNIX クライアントをそのオペレーティング システムまたはディストリビューションによって特定するには、そのクライアントからハードウェア インベントリを適切に収集しておく必要があります。 カスタム ハードウェア インベントリを収集する方法については、「[Hardware inventory for Linux and UNIX in System Center Configuration Manager](../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)」 (System Center Configuration Manager でのハードウェア インベントリ) を参照してください。  
+ Linux または UNIX クライアントをそのオペレーティング システムまたはディストリビューションによって特定するには、そのクライアントから[ハードウェア インベントリ](../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)を収集しておく必要があります。  
 
  ハードウェア インベントリの既定のクライアント設定には、クライアント コンピューターのオペレーティング システムに関する情報が含まれます。 **オペレーティング システム** クラスの **キャプション** プロパティを使用すると、Linux または UNIX サーバーのオペレーティング システムを特定できます。  
 
  Linux および UNIX 用の Configuration Manager クライアントを実行しているコンピューターに関する詳細は、 Configuration Manager コンソールの [資産とコンプライアンス] ワークスペースの [デバイス] ノードで確認できます。 Configuration Manager コンソールの [資産とコンプライアンス] ワークスペースでは、**[オペレーティング システム]** 列に、各コンピューターのオペレーティング システムの名前が表示されます。  
 
- 既定では、Linux および UNIX サーバーは、 **[すべてのシステム]** コレクションのメンバーです。 Linux および UNIX サーバーのみが含まれるカスタム コレクション、またはそのコレクションのサブセットを作成することをお勧めします。 これにより、ソフトウェアを展開する、適用可能なコンピューター グループにクライアント設定を割り当てる、などの操作を管理できます。 たとえば、RHEL6 x64 コンピューターのソフトウェアを、Windows と Linux の両方のコンピューターを含むコレクションに展開すると、展開のステータスは一部成功として表示されます。 ソフトウェアを、RHEL6 x64 コンピューターのみを含むコレクションに展開すると、ステータス メッセージとレポートを使用して、展開が成功したことを正確に特定できます。  
+ 既定では、Linux および UNIX サーバーは、 **[すべてのシステム]** コレクションのメンバーです。 Linux および UNIX サーバーのみが含まれるカスタム コレクション、またはそのコレクションのサブセットを作成することをお勧めします。 これにより、ソフトウェアを展開する、同じようなコンピューターのグループにクライアント設定を割り当てるなどの操作を管理できます。展開の成功を正確に判断できます。   
 
  Linux および UNIX サーバーのカスタム コレクションを作成する場合は、オペレーティング システム属性のキャプション属性が含まれるメンバーシップの規則クエリを追加します。 コレクションを作成する方法については、「[System Center Configuration Manager でコレクションを作成する方法](../../../core/clients/manage/collections/create-collections.md)」を参照してください。  
 
 ##  <a name="a-namebkmkmaintenancewindowsforlnua-maintenance-windows-for-linux-and-unix-servers"></a><a name="BKMK_MaintenanceWindowsforLnU"></a> Maintenance windows for Linux and UNIX servers  
- Linux および UNIX サーバー用の Configuration Manager クライアントでは、メンテナンス期間を使用できます。 これは、Windows ベースのクライアントから変更されていません。  
-
- メンテナンス期間の詳細については、「[System Center Configuration Manager でメンテナンス期間を使用する方法](../../../core/clients/manage/collections/use-maintenance-windows.md)」を参照してください。  
+ Linux および UNIX サーバー用の Configuration Manager クライアントでは、[メンテナンス期間](../../../core/clients/manage/collections/use-maintenance-windows.md)を使用できます。 これは、Windows ベースのクライアントから変更されていません。  
 
 ##  <a name="a-namebkmkclientsettingsforlnua-client-settings-for-linux-and-unix-servers"></a><a name="BKMK_ClientSettingsforLnU"></a> Client settings for Linux and UNIX servers  
- Linux および UNIX サーバーに適用されるクライアント設定は、他のクライアントの設定と同じ方法で構成できます。  
+ Linux および UNIX サーバーに適用される[クライアント設定](../../../core/clients/deploy/configure-client-settings.md)は、他のクライアントの設定と同じ方法で構成できます。  
 
- 既定では、 **[既定のクライアント エージェント設定]** が Linux および UNIX サーバーに適用されます。 カスタム クライアント設定を作成し、特定のクライアント オペレーティング システムが含まれるコレクション、または複数のクライアント オペレーティング システムが混在するコレクションに展開することもできます。  
+ 既定では、 **[既定のクライアント エージェント設定]** が Linux および UNIX サーバーに適用されます。 また、カスタムのクライアント設定を作成し、特定のクライアントのコレクションに展開できます。  
 
- Linux および UNIX クライアントにのみ適用される追加のクライアント設定はありません。 ただし、Linux および UNIX クライアントに適用されない既定のクライアント設定は存在します。 Linux および UNIX 用のクライアントには、そのクライアントがサポートする機能の設定のみが適用され、サポートされない機能の構成はすべて無視されます。  
+ Linux および UNIX クライアントにのみ適用される追加のクライアント設定はありません。 ただし、Linux および UNIX クライアントに適用されない既定のクライアント設定は存在します。 Linux と UNIX のクライアントは、それがサポートする機能の設定のみを適用します。  
 
- たとえば、ハードウェア インベントリのスケジュールを指定するカスタム クライアント デバイスの設定を作成し、Linux コンピューターを含むコレクションに割り当てると、 そのハードウェア インベントリのスケジュールは、Linux および UNIX サーバーに適用されます。 次に、リモート コントロールの設定を有効にして構成するカスタム クライアント デバイス設定を作成し、同じコレクションに割り当てます。 この場合、Linux および UNIX サーバーではリモート コントロールの設定が無視されます。 これは、Linux および UNIX 用のクライアントが、Configuration Manager でのリモート コントロールをサポートしていないためです。  
-
- クライアント設定の構成方法については、「[System Center Configuration Manager でクライアント設定を構成する方法](../../../core/clients/deploy/configure-client-settings.md)」を参照してください。  
+ たとえば、リモート コントロール設定を有効にし、構成するカスタムのクライアント デバイス設定は、Linux サーバーと UNIX サーバーでは無視されます。Linux と UNIX のクライアントはリモート コントロールをサポートしないためです。  
 
 ##  <a name="a-namebkmkpolicyforlnua-computer-policy-for-linux-and-unix-servers"></a><a name="BKMK_PolicyforLnU"></a> Computer policy for Linux and UNIX servers  
- Linux および UNIX サーバーの Configuration Manager クライアントは、そのサイトを定期的にポーリングしてコンピューター ポリシーを確認し、要求された構成に関する詳細情報を取得して、展開をチェックします。  
+ Linux および UNIX サーバーのクライアントは、そのサイトを定期的にポーリングしてコンピューター ポリシーを確認し、要求された構成に関する詳細情報を取得して、展開をチェックします。  
 
- Linux または UNIX サーバーのクライアントにコンピューター ポリシーのポーリングを直ちに実行するように強制することもできます。 ポーリングを直ちに実行するには、サーバーで **ルート** 資格情報を使用して、 **/opt/microsoft/configmgr/bin/ccmexec -rs policy**コマンドを実行します。  
+ Linux または UNIX サーバーのクライアントにコンピューター ポリシーのポーリングを直ちに実行するように強制することもできます。 それを実行するには、サーバーで **ルート** 資格情報を使用して、 **/opt/microsoft/configmgr/bin/ccmexec -rs policy**コマンドを実行します。  
 
  コンピューター ポリシーのポーリングの詳細が、共有クライアントのログ ファイル **scxcm.log**に入力されます。  
 
@@ -74,7 +70,7 @@ System Center Configuration Manager で Linux および UNIX サーバーを管�
 >  Linux および UNIX 用の Configuration Manager クライアントによって、ユーザー ポリシーの要求や処理が実行されることはありません。  
 
 ##  <a name="a-namebkmkmanagelinuxcertsa-how-to-manage-certificates-on-the-client-for-linux-and-unix"></a><a name="BKMK_ManageLinuxCerts"></a> How to manage certificates on the client for Linux and UNIX  
- Linux および UNIX 用のクライアントをインストールした後、 **certutil** ツールを使用して、新しい PKI 証明書でクライアントを更新し、新しい証明書失効リスト (CRL) をインポートできます。 Linux および UNIX 用のクライアントをインストールするとき、このツールは次の場所に配置されます: **/opt/microsoft/configmgr/bin/certutil**  
+ Linux および UNIX 用のクライアントをインストールした後、 **certutil** ツールを使用して、新しい PKI 証明書でクライアントを更新し、新しい証明書失効リスト (CRL) をインポートできます。 Linux および UNIX 用のクライアントをインストールするとき、このツールは **/opt/microsoft/configmgr/bin/certutil** に配置されます。 
 
  証明書を管理するには、各クライアントで、次のいずれかのオプションを指定して certutil を実行します。  
 
@@ -86,6 +82,6 @@ System Center Configuration Manager で Linux および UNIX サーバーを管�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

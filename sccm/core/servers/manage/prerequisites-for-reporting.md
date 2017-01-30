@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: ae750188b0258122d8561b163a5ecd85c4179f18
+ms.sourcegitcommit: 59e63cf223424f9930524e3ed3833c30dc9ca9a7
+ms.openlocfilehash: f43764acd13b0257481614fc79aebecac75542d7
 
 
 ---
@@ -50,21 +50,22 @@ System Center Configuration Manager のレポートには、外部依存関係�
 
 |SQL Server バージョン|レポート サービス ポイント|  
 |------------------------|------------------------------|  
-|累積的な更新プログラム 9 以上を適用した SQL Server 2008 SP2<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|?|  
-|累積的な更新プログラム 4 以上を適用した SQL Server 2008 SP3<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|?|  
-|SP1 と累積的な更新プログラム 6 以上を適用した SQL Server 2008 R2<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|?|  
-|SP2 を適用した SQL Server 2008 R2<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|?|  
+|累積的な更新プログラム 9 以上を適用した SQL Server 2008 SP2<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|○|  
+|累積的な更新プログラム 4 以上を適用した SQL Server 2008 SP3<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|○|  
+|SP1 と累積的な更新プログラム 6 以上を適用した SQL Server 2008 R2<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|○|  
+|SP2 を適用した SQL Server 2008 R2<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|○|  
 |SP1 と累積的な更新プログラム 4 以上を適用した SQL Server Express 2008 R2|サポートされません|  
 |SP2 を適用した SQL Server Express 2008 R2|サポートされません|  
-|累積的な更新プログラム 2 以上を適用した SQL Server 2012<br /><br /> -   Standard<br />-   Enterprise|?|  
-|SP1 を適用し、最小の累積的な更新プログラムを適用していない SQL Server 2012<br /><br /> -   Standard<br />-   Enterprise|?|  
-|SQL Server 2014<br /><br /> -   Standard<br />-   Enterprise|?|  
-
+|累積的な更新プログラム 2 以上を適用した SQL Server 2012<br /><br /> -   Standard<br />-   Enterprise|○|  
+|SP1 を適用し、最小の累積的な更新プログラムを適用していない SQL Server 2012<br /><br /> -   Standard<br />-   Enterprise|○|  
+|SQL Server 2016<br /><br /> -   Standard<br />-   Enterprise|○|
+|SQL Server 2016<br /><br /> -   Standard<br />-   Enterprise|○|
+|SQL Server 2016 SP1<br /><br /> -   Standard<br />-   Enterprise|○|
 ## <a name="next-steps"></a>次のステップ
 [レポートの操作とメンテナンス](operations-and-maintenance-for-reporting.md)
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

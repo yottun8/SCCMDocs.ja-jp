@@ -2,7 +2,7 @@
 title: "リモート コントロール |Microsoft Docs"
 description: "System Center Configuration Manager のリモート コントロールの概要"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 00c9e6bff02d534af2be975e0d5d41bcf0e7cb1c
+ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
+ms.openlocfilehash: 47bfeec5bd5d9b843e9064560d0cd0b14bd7d6a1
 
 
 ---
@@ -26,9 +26,9 @@ ms.openlocfilehash: 00c9e6bff02d534af2be975e0d5d41bcf0e7cb1c
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager のリモート コントロールを使用して、リモートでの管理、支援の提供、階層内の任意のコンピューターの表示ができます。 リモート コントロールを使用することで、クライアント コンピューターのハードウェアやソフトウェアの構成に関する問題のトラブルシューティングを行ったり、ユーザーのコンピューターへのアクセスが必要な場合にヘルプ デスク サポートを提供したりできます。 Configuration Manager は、ワークグループ コンピューターと Active Directory ドメインに参加しているコンピューターのリモート コントロールをサポートしています。  
+リモート コントロールを使用して、リモートでの管理、支援の提供、階層内の任意のコンピューターの表示ができます。 リモート コントロールを使用することで、クライアント コンピューターのハードウェアやソフトウェアの構成に関する問題のトラブルシューティングを行ったり、サポートを提供したりできます。 Configuration Manager は、ワークグループ コンピューターとドメインに参加しているコンピューターのリモート コントロールをサポートしています。  
 
- また、Configuration Manager によって、Configuration Manager コンソールから Windows リモート デスクトップとリモート アシスタンスを実行して、クライアント設定を構成することができます。  
+また、Configuration Manager によって、Configuration Manager コンソールから Windows リモート デスクトップとリモート アシスタンスを実行して、クライアント設定を構成することができます。  
 
 > [!NOTE]  
 >  次のシナリオでは、Configuration Manager コンソールからクライアント コンピューターに、リモート アシスタンス セッションを確立できません。  
@@ -40,6 +40,6 @@ System Center Configuration Manager のリモート コントロールを使用�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

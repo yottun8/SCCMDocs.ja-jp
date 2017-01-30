@@ -2,7 +2,7 @@
 title: "電子メール プロファイルのセキュリティとプライバシー | Microsoft Docs"
 description: "System Center Configuration Manager でデバイスの電子メール プロファイルを管理する場合のセキュリティのベスト プラクティスについて説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/28/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: d4977a592d9d49a93b974c129d2729d626ed9280
+ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
+ms.openlocfilehash: 17707f931a4fa58b225ce14f04c2a19648585bc4
 
 
 ---
@@ -26,14 +26,12 @@ ms.openlocfilehash: d4977a592d9d49a93b974c129d2729d626ed9280
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-このトピックには、System Center Configuration Manager の電子メール プロファイルのセキュリティとプライバシーの情報が含まれています。  
-
 ## <a name="security-best-practices-for-email-profiles"></a>電子メール プロファイルのセキュリティ上のベスト プラクティス  
  デバイスの電子メール プロファイルを管理するときには、次のセキュリティのベスト プラクティスに従ってください。  
 
 |セキュリティのベスト プラクティス|説明|  
 |----------------------------|----------------------|  
-|可能な限り、使用する電子メール インフラストラクチャとクライアント オペレーティング システムでサポートできる、最も安全なオプションを選択します。|電子メール プロファイルは、デバイスで既にサポートしている電子メール設定を中央から配付して管理するのに便利です。 System Center Configuration Manager では、電子メール機能は追加されません。<br /><br /> 使用するデバイスと電子メール インフラストラクチャに推奨されているセキュリティ上のベスト プラクティスを特定および実装し、それに従います。|  
+|可能な限り、使用する電子メール インフラストラクチャとクライアント オペレーティング システムでサポートできる、最も安全なオプションを選択します。|電子メール プロファイルは、デバイスで既にサポートしている電子メール設定を中央から配付して管理するのに便利です。 Configuration Manager では、電子メール機能は追加されません。<br /><br /> 使用するデバイスと電子メール インフラストラクチャに推奨されているセキュリティ上のベスト プラクティスを特定および実装し、それに従います。|  
 
 ## <a name="privacy-information-for-email-profiles"></a>電子メール プロファイルのプライバシー情報  
  既定では、デバイスは電子メール プロファイルを評価しません。 また、電子メール プロファイルを構成してから、電子メール プロファイルをユーザーに展開する必要があります。  
@@ -42,6 +40,6 @@ ms.openlocfilehash: d4977a592d9d49a93b974c129d2729d626ed9280
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

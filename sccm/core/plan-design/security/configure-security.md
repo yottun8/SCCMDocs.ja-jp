@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager でのセキュリティの構成 | Microsoft Docs"
 description: "System Center Configuration Manager のセキュリティ関連オプションを構成します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: c486c196335174290a925ca59fe42b806d50889d
+ms.sourcegitcommit: cf29123923436ed4cefc17c69630fc39989caeb4
+ms.openlocfilehash: 0034381a7a388ddc3eda5e774f3c63d741336301
 
 
 ---
@@ -25,36 +25,28 @@ ms.openlocfilehash: c486c196335174290a925ca59fe42b806d50889d
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-このトピック内の情報は、以下の System Center Configuration Manager 用のセキュリティ関連オプションを構成する上で参考になります。  
-
--   [Configure Settings for Client PKI Certificates](#BKMK_ConfigureClientPKI)  
-
--   [署名と暗号化の構成](#BKMK_ConfigureSigningEncryption)  
-
--   [Configure Role-Based Administration](#BKMK_ConfigureRBA)  
-
--   [Manage Accounts that are Used by Configuration Manager](#BKMK_ManageAccounts)  
+この記事の情報は、System Center Configuration Manager 用のセキュリティ関連オプションを設定する上で参考になります。  
 
 ##  <a name="a-namebkmkconfigureclientpkia-configure-settings-for-client-pki-certificates"></a><a name="BKMK_ConfigureClientPKI"></a> クライアント PKI 証明書の設定の構成  
 インターネット インフォメーション サービス (IIS) を使用するサイト システムへのクライアント接続に公開キー基盤 (PKI) 証明書を使用する場合、次の手順に従ってこれらの証明書の設定を構成します。  
 
 #### <a name="to-configure-client-pki-certificate-settings"></a>クライアント PKI 証明書の設定を構成するには  
 
-1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
+1.  Configuration Manager コンソールで、[**管理**] を選択します。  
 
-2.  **[管理]** ワークスペースで、 **[サイトの構成]**を展開して、 **[サイト]**をクリックしてから、構成するプライマリ サイトをクリックします。  
+2.  [**管理**] ワークスペースで、[**サイトの構成**] を展開して、[**サイト**] を選択してから、構成するプライマリ サイトを選択します。  
 
-3.  **[ホーム]** タブの **[プロパティ]** グループで、 **[プロパティ]**をクリックして、 **[クライアント コンピューターの通信方法]** タブをクリックします。  
+3.  [**ホーム**] タブの [**プロパティ**] グループで、[**プロパティ**] を選び、[**クライアント コンピューターの通信方法**] タブを選びます。  
 
     このタブは、プライマリ サイトでのみ使用できます。 [クライアント コンピューターの通信方法 **** ] タブが表示されない場合、中央管理サイトまたはセカンダリ サイトに接続されていないことを確認してください。  
 
-4.  サイトに割り当てられているクライアントが IIS を使用するサイト システムに接続するときに、常にクライアント PKI 証明書を使用する必要がある場合は、[HTTPS のみ] をクリックします。 **** または、クライアントが PKI 証明書を使用する必要がない場合は、[HTTPS または HTTP] をクリックします。 ****  
+4.  サイトに割り当てられているクライアントが IIS を使用するサイト システムに接続するときに、常にクライアント PKI 証明書を使用する必要がある場合は、[**HTTPS のみ**] を選びます。 または、クライアントが PKI 証明書を使用する必要がない場合は、[**HTTPS または HTTP**] を選びます。  
 
-5.  **[HTTPS または HTTP]**を選択した場合は、HTTP 接続にクライアント PKI 証明書を使用する際に、 **[使用可能な場合はクライアント PKI 証明書 (クライアント認証機能) を使用する]** をクリックします。 クライアントは、サイト システムに対する認証に、自己署名入り証明書ではなく、この証明書を使用します。 このオプションは、[HTTPS のみ] を選択すると自動的に選択されます。 ****  
+5.  [**HTTPS または HTTP**] を選択した場合は、HTTP 接続にクライアント PKI 証明書を使用する際に、[**使用可能な場合はクライアント PKI 証明書 (クライアント認証機能) を使用する**] を選びます。 クライアントは、サイト システムに対する認証に、自己署名入り証明書ではなく、この証明書を使用します。 このオプションは、[**HTTPS のみ**] を選択すると自動的に選択されます。  
 
     クライアントがインターネット上にあることが検出された場合、またはクライアントがインターネットのみでのクライアント管理向けに構成されている場合、このクライアントは常にクライアント PKI 証明書を使用します。  
 
-6.  **[変更]** をクリックして、クライアントで複数の有効な PKI クライアント証明書が使用可能な場合のために、選択したクライアント選択方法を構成してから、 **[OK]**をクリックします。  
+6.  [**変更**] を選び、クライアントで複数の有効な PKI クライアント証明書が使用可能な場合のために、選択したクライアント選択方法を構成してから、[**OK**] を選びます。  
 
     クライアント証明書の選択方法の詳細については、「[PKI クライアント証明書の選択の計画](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForClientCertificateSelection)」を参照してください。  
 
@@ -62,11 +54,11 @@ ms.openlocfilehash: c486c196335174290a925ca59fe42b806d50889d
 
     クライアントの CRL チェックの詳細については、「[PKI 証明書失効の計画](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs)」を参照してください。  
 
-8.  クライアントに信頼されたルート証明機関 (CA) 証明書を指定する必要がある場合は、 **[設定]**をクリックしてルート CA 証明書ファイルをインポートしてから、 **[OK]**をクリックします。  
+8.  クライアントに信頼されたルート証明機関 (CA) 証明書を指定する必要がある場合は、[**設定**] を選び、ルート CA 証明書ファイルをインポートしてから、[**OK**] を選びます。  
 
     この設定の詳細については、「[PKI 信頼されたルート証明書と証明書発行者リストの計画](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRootCAs)」を参照してください。  
 
-9. [OK] をクリックして、サイトの [プロパティ] ダイアログ ボックスを閉じます。 ****  
+9. [**OK**] を選び、サイトの [プロパティ] ダイアログ ボックスを閉じます。  
 
 階層内のすべてのプライマリ サイトで、この手順を繰り返します。  
 
@@ -75,29 +67,29 @@ ms.openlocfilehash: c486c196335174290a925ca59fe42b806d50889d
 
 #### <a name="to-configure-signing-and-encryption-for-a-site"></a>サイトに署名と暗号化を構成するには  
 
-1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
+1.  Configuration Manager コンソールで、[**管理**] を選択します。  
 
-2.  **[管理]** ワークスペースで、 **[サイトの構成]**を展開して、 **[サイト]**をクリックしてから、構成するプライマリ サイトをクリックします。  
+2.  [**管理**] ワークスペースで、[**サイトの構成**] を展開して、[**サイト**] を選択してから、構成するプライマリ サイトを選択します。  
 
-3.  **[ホーム]** タブの **[プロパティ]** グループで、 **[プロパティ]**をクリックして、 **[署名と暗号化]** タブをクリックします。  
+3.  [**ホーム**] タブの [**プロパティ**] グループで、[**プロパティ**] を選び、[**署名と暗号化**] タブを選びます。  
 
     このタブは、プライマリ サイトでのみ使用できます。 [署名および暗号化 **** ] タブが表示されない場合、中央管理サイトまたはセカンダリ サイトに接続されていないことを確認してください。  
 
-4.  必要な署名オプションと暗号化オプションを構成し、[OK] をクリックします。 ****  
+4.  必要な署名オプションと暗号化オプションを構成し、[**OK**] を選びます。  
 
     > [!WARNING]  
-    >  [SHA-256 を必要とする] を選択する場合は、サイトに割り当てられている可能性があるすべてのクライアントがこのハッシュ アルゴリズムをサポートできること、またはこれらのクライアントに有効な PKI クライアント認証証明書があることを確認してからにしてください。 **** SHA-256 をサポートするクライアントに対する更新プログラムまたは修正プログラムのインストールが必要な場合があります。 たとえば、Windows Server 2003 SP2 を実行しているコンピューターでは、 [サポート技術情報 938397](http://go.microsoft.com/fwlink/p/?LinkId=226666)に示されている修正プログラムをインストールする必要があります。  
+    >  [**SHA-256 を必要とする**] を選択する場合は、サイトに割り当てられている可能性があるすべてのクライアントがこのハッシュ アルゴリズムをサポートできること、またはこれらのクライアントに有効な PKI クライアント認証証明書があることを確認してからにしてください。 SHA-256 をサポートするクライアントに対する更新プログラムまたは修正プログラムのインストールが必要な場合があります。 たとえば、Windows Server 2003 SP2 を実行しているコンピューターでは、 [サポート技術情報 938397](http://go.microsoft.com/fwlink/p/?LinkId=226666)に示されている修正プログラムをインストールする必要があります。  
     >   
     >  このオプションを選択した場合、クライアントが SHA-256 をサポートしておらず、自己署名入り証明書を使用できないと、Configuration Manager はクライアントを拒否します。 この場合は、SMS_MP_CONTROL_MANAGER コンポーネントにメッセージ ID 5443 が記録されます。  
 
-5.  **[OK]** をクリックして、サイトの **[プロパティ]** ダイアログ ボックスを閉じます。  
+5.  [**OK**] を選び、サイトの [**プロパティ**] ダイアログ ボックスを閉じます。  
 
 階層内のすべてのプライマリ サイトで、この手順を繰り返します。  
 
 ##  <a name="a-namebkmkconfigurerbaa-configure-role-based-administration"></a><a name="BKMK_ConfigureRBA"></a> 役割に基づいた管理の構成  
 役割に基づいた管理では、セキュリティ ロール、セキュリティ スコープ、および割り当てられたコレクションを組み合わせて、各管理ユーザーの管理スコープを定義します。 管理スコープには、Configuration Manager コンソールで管理ユーザーが表示できるオブジェクト、および管理ユーザーが実行するアクセス許可を持っている、それらのオブジェクトに関連するタスクが含まれます。 役割に基づいた管理の構成は、階層内の各サイトに適用されます。  
 
-次のリンクが「[System Center Configuration Manager のロール ベース管理の構成](../../../core/servers/deploy/configure/configure-role-based-administration.md)」トピックから関連するセクションにつながっています。  
+次のリンクが「[System Center Configuration Manager のロール ベース管理の構成](../../../core/servers/deploy/configure/configure-role-based-administration.md)」の記事から関連するセクションにつながっています。  
 
 -   [カスタム セキュリティ ロールの作成](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole)  
 
@@ -121,23 +113,23 @@ Configuration Manager は、Windows アカウントのさまざまなタスク�
 
 #### <a name="to-manage-accounts-that-are-used-by-configuration-manager"></a>Configuration Manager で使用するアカウントを管理するには  
 
-1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
+1.  Configuration Manager コンソールで、[**管理**] を選択します。  
 
-2.  **[管理]** ワークスペースで、 **[セキュリティ]**を展開してから、 **[アカウント]** をクリックして、Configuration Manager に構成されたアカウントを表示します。  
+2.  [**管理**] ワークスペースで、[**セキュリティ**] を展開してから、[**アカウント**] を選び、Configuration Manager に構成されたアカウントを表示します。  
 
 3.  Configuration Manager に構成されているアカウントのパスワードを変更するには、そのアカウントを選択します。  
 
-4.  **[ホーム]** タブの **[プロパティ]** グループで、 **[プロパティ]**をクリックします。  
+4.  **[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** を選択します。  
 
-5.  **[設定]** をクリックして、 **[Windows ユーザー アカウント]** ダイアログ ボックスを開きます。Configuration Manager のアカウントに使用する新しいパスワードを指定します。  
+5.  [**設定**] を選び、[**Windows ユーザー アカウント**] ダイアログ ボックスを開きます。Configuration Manager のアカウントに使用する新しいパスワードを指定します。  
 
     > [!NOTE]  
     >  指定するパスワードが、Active Directory ユーザーとコンピューターのアカウントに指定されているパスワードと一致している必要があります。  
 
-6.  [OK] をクリックして手順を完了します。 ****  
+6.  [**OK**] を選び、手順を完了します。  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

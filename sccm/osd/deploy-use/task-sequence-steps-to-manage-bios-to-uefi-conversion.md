@@ -15,8 +15,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 54089ac8aa95154534d010bee8c7e2cbd70d1c7e
-ms.openlocfilehash: 30838ed3ad045f781a748f96c874bf543ea05462
+ms.sourcegitcommit: c92d88517b4e1d54add489a53cd34b0f23be0c4c
+ms.openlocfilehash: 04951b3ed50206941850ddcc893fcf9c9596f89f
 
 
 ---
@@ -28,7 +28,8 @@ Configuration Manager バージョン 1610 以降では、**コンピュータ�
 
 1. ファイルと設定をキャプチャする手順を完了したら、新しいタスク シーケンス グループを作成してから、オペレーティング システムをインストールするステップを実行します。 たとえば、[**キャプチャ ファイルと設定**] グループの後に、[**BIOS-to-UEFI**] という名前のグループを作成します。
 2. 新しいグループの [**オプション**] タブで、新しいタスク シーケンス変数を条件 **_SMSTSBootUEFI** is **not equal** to **true** (_SMSTSBootUEFI は true と等しくない) として追加します。 これにより、コンピューターが既に UEFI モードになっている場合に、グループのステップが実行されないようにします。
-![BIOS-to-UEFI グループ](../../core/get-started/media/BIOS-to-UEFI-group.png)
+
+   ![BIOS-to-UEFI グループ](../../core/get-started/media/BIOS-to-UEFI-group.png)
 3. 新しいグループの下に、[**コンピューターの再起動**] タスク シーケンスのステップを追加します。 [**再起動後に実行するものを指定してください**] で、[**このタスク シーケンスに割り当てられているブート イメージ**] をオンにして、Windows PE でコンピューターを起動します。  
 4. [**オプション**] タブで、タスク シーケンス変数を条件 (**_SMSTSInWinPE equals false**) として追加します。 これにより、コンピューターが既に Windows PE にある場合に、このステップが実行されないようにします。
 
@@ -36,14 +37,16 @@ Configuration Manager バージョン 1610 以降では、**コンピュータ�
 5. ファームウェアを BIOS から UEFI に変換する OEM ツールを起動するステップを追加します。 これは一般に、OEM ツールを起動するコマンド ラインを含む**コマンドラインの実行**タスク シーケンスのステップになります。
 6.  ハード ドライブをパーティションに分割してフォーマットするディスクのフォーマットとパーティション作成タスク シーケンスのステップを追加します。 このステップでは、次の操作を行います。
     1.  オペレーティング システムをインストールする前に、UEFI に変換される FAT32 パーティションを作成します。 [**ディスクの種類**] で [**GPT**] を選びます。
-    ![ディスクのフォーマットとパーティション作成のステップ](../../core/get-started/media/format-and-partition-disk.png)
+
+       ![ディスクのフォーマットとパーティション作成のステップ](../media/format-and-partition-disk.png)
     2.  FAT32 パーティションのプロパティに移動します。 [**変数**] フィールドに「**TSUEFIDrive**」を入力します。 タスク シーケンスでこの変数を検出すると、コンピューターを再起動する前に UEFI 移行のための準備をします。
-    ![パーティションのプロパティ](../../core/get-started/media/partition-properties.png)
+
+       ![パーティションのプロパティ](../../core/get-started/media/partition-properties.png)
     3. タスク シーケンス エンジンがその状態を保存し、ログ ファイルを保存するために使用する NTFS パーティションを作成します。
-6.  **コンピューターの再起動**タスク シーケンスのステップを追加します。 [**再起動後に実行するものを指定してください**] で、[**このタスク シーケンスに割り当てられているブート イメージ**] をオンにして、Windows PE でコンピューターを起動します。  
+7.  **コンピューターの再起動**タスク シーケンスのステップを追加します。 [**再起動後に実行するものを指定してください**] で、[**このタスク シーケンスに割り当てられているブート イメージ**] をオンにして、Windows PE でコンピューターを起動します。  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

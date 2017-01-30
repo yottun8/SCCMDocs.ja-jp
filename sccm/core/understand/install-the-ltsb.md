@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: a80095fb3b227653126a028ab4ab8f4e2dbd612b
+ms.sourcegitcommit: 0c084e9f630a96c7b22c3dbdd72e18ad4a86926d
+ms.openlocfilehash: 9631b5622fec19e0248eb919bc8bd876152f66d7
 
 
 ---
@@ -27,9 +27,9 @@ ms.openlocfilehash: a80095fb3b227653126a028ab4ab8f4e2dbd612b
 
 このトピックでは、Microsoft System Center 2016 または System Center Configuration Manager (Current Branch と Long-Term Servicing Branch 1606) リリースのバージョン 1606 構成基準メディアを使用するときに Configuration Manager のセットアップを実行する方法について学習します。 このメディアを利用して新しいサイトをインストールしたり、System Center 2012 Configuration Manager Service Pack 2 または System Center 2012 R2 Configuration Manager Service Pack 1 からアップグレードしたりできます。 セットアップ中、Current Branch または Long-Term Servicing Branch (LTSB) を選択できます。
 
-バージョン 1606 構成基準メディアを使用するときにインストールするサイト (あるいはアップグレードするサイト):
-- **Current Branch サイト**。1511 構成基準メディアを利用して最初にインストールし、バージョン 1606 に更新し、さらに 1606 修正プログラム KB3186654 を適用したサイトと同等のサイト。
--   **LTSB サイト**。バージョン 1606 に加えて 1606 修正プログラム KB3186654 を実行する Current Branch サイトと同等のサイト (この構成基準メディアには、この修正プログラムが既に含まれています)。  ただし、LTSB では、Current Branch で利用できる機能の一部をご利用いただけません。詳細は、「[Introduction to the Long-Term Servicing Branch of System Center Configuration Manager](introduction-to-the-ltsb.md)」 (System Center Configuration Manager の Long-Term Servicing Branch の概要) にあります。
+バージョン 1606 構成基準メディアを使用するときにインストールまたはアップグレードするサイト:
+- *Current Branch サイト*。1511 構成基準メディアを利用して最初にインストールし、バージョン 1606 に更新し、さらに 1606 修正プログラム KB3186654 を適用したサイトと同等のサイト。
+-   *LTSB サイト*。バージョン 1606 に加えて 1606 修正プログラム KB3186654 を実行する Current Branch サイトと同等のサイト。 この構成基準メディアには、この修正プログラム ロールアップが既に含まれています  ただし、LTSB では、Current Branch で利用できる機能の一部をご利用いただけません。詳細は、「[Introduction to the Long-Term Servicing Branch of System Center Configuration Manager](introduction-to-the-ltsb.md)」 (System Center Configuration Manager の Long-Term Servicing Branch の概要) にあります。
 
 System Center Configuration Manager のブランチに関する詳細については、「[Which branch of Configuration Manager should I use](which-branch-should-i-use.md)」 (Configuration Manager のどのブランチを使用すればよいですか) を参照してください。
 
@@ -43,15 +43,15 @@ System Center Configuration Manager のブランチに関する詳細につい�
 詳細については、「[System Center Configuration Manager のライセンスとブランチ](learn-more-editions.md)」を参照してください。
 
 ### <a name="software-assurance-expiration"></a>ソフトウェア アシュアランスの有効期限
-セットアップ中、「**ソフトウェア アシュアランスの有効期限**」を入力するオプションが与えられます。 便利なリマインダーを任意で指定できます。
+セットアップ中、「**ソフトウェア アシュアランスの有効期限**」値を入力するオプションが与えられます。 これは便利なリマインダーとして指定できる任意の値です。
 
 > [!NOTE]
 > Microsoft では、お客様が入力した有効期限の日付を確認していません。また、ライセンスを検証する場合もこの日付を使用しません。  お客様は有効期限を通知するアラームとして、この日付を使用することができます。 Configuration Manager ではオンラインで新しいソフトウェア更新プログラムが提供されていないか定期的に確認します。このような追加の更新プログラムを取得するためにはソフトウェア アシュアランス ライセンスが最新の状態になっている必要があります。このため有効期限を通知するアラーム機能は便利です。    
 
-- System Center Configuration Manager バージョン 1606 の基準メディアからセットアップを実行する場合は、セットアップ ウィザードの **[プロダクト キー]** ページで値を指定できます。
-- この日付は、Configuration Manager コンソールの **[階層設定のプロパティ]** の **[ライセンス]** タブで指定することもできます。
+- System Center Configuration Manager バージョン 1606 の基準メディアからセットアップを実行する場合は、セットアップ ウィザードの **[プロダクト キー]** ページで日付値を指定できます。
+- この日付は、Configuration Manager コンソールで **[階層設定のプロパティ]** > **[ライセンス]** の順に選択して指定することもできます。
 
-詳細については、「[System Center Configuration Manager のライセンスとブランチ](learn-more-editions.md)」の「*ソフトウェア アシュアランス契約*」を参照してください。
+詳細については、「[System Center Configuration Manager のライセンスとブランチ](learn-more-editions.md)」の "ソフトウェア アシュアランス契約" を参照してください。
 
 
 ### <a name="additional-pre-upgrade-configurations"></a>追加のアップグレード前の構成
@@ -64,18 +64,18 @@ LTSB でサポートされていないサイト システムの役割をアン�
 詳細については、「[System Center Configuration Manager へのアップグレード](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)」を参照してください。
 
 
-### <a name="new-scripted-install-options"></a>スクリプト化された新しいインストール オプション
+### <a name="new-scripted-installation-options"></a>スクリプト化された新しいインストール オプション
 バージョン 1606 構成基準メディアでは、新しい上位サイトのスクリプト化インストールのために無人のスクリプト ファイル キーに対応しています。 これは新しいスタンドアロン プライマリ サイトのインストールやサイト拡張シナリオの中央管理サイトの追加に適用されます。
 
-無人スクリプトを利用して「ライセンス取得」ブランチをインストールするとき、次のセクション、キー名、値をスクリプトのオプション セクションに追加する必要があります (これらの値を利用し、Current Branch の評価版のインストールをスクリプト化する必要はありません)。  
+ライセンスされるブランチを無人スクリプトでインストールするときは、次のセクション、キー名、値をスクリーンショットのオプション セクションに追加する必要があります。 Current Branch の評価版インストールをスクリプト化する場合、これらの値を使用する必要はありません。  
 
  **SABranchOptions**
 -   **キー名: SSActive**
-  - 値: 0 または 1  
+  - 値: 0 または 1。  
   - 詳細:  0 の場合、Current Branch の「ライセンスなし」評価版がインストールされます。1 の場合、「ライセンスを取得した」製品版がインストールされます。   
 
 - **CurrentBranch**
-  - 値: 0 または 1  
+  - 値: 0 または 1。  
   - 詳細: 0 の場合、Long-Term Servicing Branch がインストールされます。1 の場合、Current Branch がインストールされます。  
 
 たとえば、Current Branch のライセンス取得版をインストールするには、次の値を利用します。
@@ -97,49 +97,51 @@ LTSB でサポートされていないサイト システムの役割をアン�
 1606 構成基準メディアを利用していずれかのブランチの新しいサイトをインストールするとき、「[System Center Configuration Manager サイトのインストール](/sccm/core/servers/deploy/install/installing-sites)」トピックにあるサイト計画、準備、インストール手順を利用します。さらに、セットアップに関して次の事項を考慮します。
 
 - セットアップ中、インストールする Configuration Manager のブランチを選択する必要があります。ソフトウェア アシュアランス契約の詳細を指定できます。
--   スクリプト化された新しいインストール オプション
+-   スクリプト化された新しいインストール。 詳細については、この記事の "スクリプト化された新しいインストール オプション" を参照してください。
 
 ## <a name="expand-a-stand-alone-primary-site"></a>スタンドアロン プライマリ サイトを拡張する
 LTSB を実行するスタンドアロンのプライマリ サイトを拡張できます。  このプロセスは、Current Branch サイトに使用されるプロセスと変わりませんが、1 つ注意点があります。
 
-- 新しい中央管理サイトをインストールするとき、LTSB サイトのインストールで使用した元のソース メディアからのセットアップを利用する必要があります。 (このシナリオでは、CD.Latest フォルダーからのセットアップの実行はサポートされていません)。
+- 新しい中央管理サイトをインストールするとき、LTSB サイトのインストールで使用した元のソース メディアからのセットアップを利用する必要があります。 このシナリオは CD.Latest フォルダーからセットアップすることはできません。
 
-サイトの拡張に関する詳細については、「[Install a site using the Setup Wizard](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites)」 (セットアップ ウィザードを利用してサイトをインストールする) の「*スタンドアロン プライマリ サイトを拡張する*」を参照してください。
+サイトの拡張に関する詳細については、「[Install a site using the Setup Wizard](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites)」 (セットアップ ウィザードを利用してサイトをインストールする) の "スタンドアロン プライマリ サイトを拡張する" を参照してください。
 
 ## <a name="upgrade-from-system-center-2012-configuration-manager"></a>System Center 2012 Configuration Manager からアップグレードする
 System Center 2012 Configuration Manager からアップグレードするとき、「[System Center Configuration Manager へのアップグレード](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)」トピックにあるサイト計画、準備、手順を利用しますが、次の変更点があります。
 
 **Current Branch にアップグレードする:**
 - セットアップ中、Current Branch を選択する必要があります。ソフトウェア アシュアランス契約の詳細を指定できます。
--   スクリプト化された新しいインストール オプション
+-   スクリプト化された新しいインストール。 詳細については、この記事の "スクリプト化された新しいインストール オプション" を参照してください。
 
 **LTSB へのアップグレード:**  
-- アップグレード前チェックリストの追加手順
+- アップグレード前チェックリストの追加手順。
 - セットアップ中、LTSB を選択する必要があります。ソフトウェア アシュアランス契約の詳細を指定できます。
 - System Center 2012 Configuration Manager Service Pack 2 または System Center 2012 R2 Configuration Manager Service Pack 1 を実行しているサイトのみをアップグレードできます。
 
 ### <a name="in-place-upgrade-paths-for-the-1606-baseline-media"></a>1606 構成基準メディアの一括アップグレード パス
 1606 構成基準メディアを利用し、次を System Center Configuration Manager の製品版にアップグレードできます。
-- System Center 2012 Configuration Manager Service Pack 2
-- System Center 2012 R2 Configuration Manager Service Pack 1
+- System Center 2012 Configuration Manager Service Pack 2。
+- System Center 2012 R2 Configuration Manager Service Pack 1。
 
 また、このメディアを利用し、Current Branch の評価版を製品版にアップグレードできます。
 
 このメディアは、次のアップグレードに対応していません。
-- その他のバージョンの System Center 2012 Configuration Manager
-- Configuration Manager 2007 以前
-- System Center Configuration Manager のリリース候補版のインストール
+- その他のバージョンの System Center 2012 Configuration Manager。
+- Configuration Manager 2007 以前。
+- System Center Configuration Manager のリリース候補版のインストール。
 
 ## <a name="about-the-cdlatest-folder-and-the-ltsb"></a>CD.Latest フォルダーと LTSB について
-次は、サイト サーバーの CD.Latest フォルダーで Configuration Manager により作成されるメディアの利用に関する注意点です。 これらは LTSB を実行しているサイトに適用: CD.Latest フォルダーのメディアのサポート対象:
-- サイト復元
-- サイト保守
-- 追加の子プライマリ サイトのインストール
+次は、サイト サーバーの CD.Latest フォルダーで Configuration Manager により作成されるメディアの利用に関する制限です。 これらの制限は LTSB を実行するサイトに適用されます。
+
+CD.Latest フォルダーのメディアのサポート対象:
+- サイトの回復。
+- サイトの保守。
+- 追加の子プライマリ サイトのインストール。
 
 CD.Latest フォルダーのメディアのサポート対象外:  
 - サイト拡張シナリオの一部として中央管理サイトをインストールする。
 
-詳細については、「[CD.Latest フォルダー](/sccm/core/servers/manage/the-cd.latest-folder)」を参照してください
+詳細については、「[CD.Latest フォルダー](/sccm/core/servers/manage/the-cd.latest-folder)」を参照してください。
 
 ## <a name="backup-recovery-and-site-maintenance-for-the-ltsb"></a>LTSB のバックアップ、復元、サイト保守
 LTSB を実行しているサイトでバックアップ、復元、サイト保守を実行するには、「[System Center Configuration Manager のバックアップと回復](/sccm/protect/understand/backup-and-recovery)」のガイドと手順を利用してください。  
@@ -148,6 +150,6 @@ LTSB サイトのバックアップの CD.Latest フォルダーからの Config
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: "SQL Server のサポート | Microsoft Docs"
+title: "サポートされている SQL Server のバージョン | Microsoft ドキュメント"
 description: "System Center Configuration Manager サイト データベースをホストするための SQL Server のバージョンおよび構成要件を取得します。"
 ms.custom: na
-ms.date: 11/29/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 814feb4e833230285b4092a8feb6f11a75f2e4f6
-ms.openlocfilehash: ecf790893a5604250810310cfdb09c4cff7d97b6
+ms.sourcegitcommit: 25aa013896ca118f0689b71e5cddcb8baf049c66
+ms.openlocfilehash: 9bf4c1d9ee12da6801470165d33df50b2d08a810
 
 
 ---
-# <a name="support-for-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager の SQL Server バージョンのサポート
+# <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager のサポートされている SQL Server バージョン
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -31,17 +31,17 @@ ms.openlocfilehash: ecf790893a5604250810310cfdb09c4cff7d97b6
  **中央管理サイトとプライマリ サイト**  
 サイト データベースは SQL Server のフル インストールを使用する必要があります。  
 
- SQL Server の場所：  
+ SQL Server は次の場所に配置できます。  
 
--   サイト サーバー コンピューター  
--   サイト サーバーから離れたコンピューター  
+-   サイト サーバー コンピューター。  
+-   サイト サーバーから離れたコンピューター。  
 
 次のインスタンスがサポートされています。  
 
--   SQL Server の既定のインスタンスまたは名前付きインスタンス  
--   複数インスタンス構成  
--   SQL Server クラスター - 「[SQL Server クラスターを使用したサイト データベースのホスティング](../../../core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)」をご覧ください。
--   SQL Server AlwaysOn 可用性グループ - このオプションでは、Configuration Manager 1602 以降のバージョンが必要です。 詳細については、「[System Center Configuration Manager 用の高可用性サイト データベースの SQL Server AlwaysOn](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)」をご覧ください。  
+-   SQL Server の既定のインスタンスまたは名前付きインスタンス。  
+-   複数インスタンス構成。  
+-   SQL Server クラスター。 「[SQL Server クラスターを使用したサイト データベースのホスティング](../../../core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)」を参照してください。
+-   SQL Server AlwaysOn 可用性グループ。 このオプションでは、Configuration Manager 1602 以降のバージョンが必要です。 詳細については、「[System Center Configuration Manager 用の高可用性サイト データベースの SQL Server AlwaysOn](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)」を参照してください。
 
 > [!NOTE]  
 >  ネットワーク負荷分散 (NLB) クラスター構成では、SQL Server クラスターがサポートされていません。 また、SQL Server のデータベース ミラーリング テクノロジやピアツーピア レプリケーションはサポートされていません。 SQL Server の標準トランザクション レプリケーションは、 [データベース レプリカ](https://technet.microsoft.com/library/mt608546.aspx)を使用するように構成されている管理ポイントにオブジェクトをレプリケートする場合にのみサポートされます。  
@@ -50,7 +50,7 @@ ms.openlocfilehash: ecf790893a5604250810310cfdb09c4cff7d97b6
  **セカンダリ サイト:**  
  サイト データベースは SQL Server または SQL Server Express のフル インストールの既定のインスタンスを使用できます。  
 
- SQL Server の場所はサイト サーバー コンピューターである必要があります。  
+ SQL Server はサイト サーバー コンピューターに配置する必要があります。  
 
 ##  <a name="a-namebkmksqlversionsa-supported-versions-of-sql-server"></a><a name="bkmk_SQLVersions"></a> サポートされている SQL Server のバージョン  
  複数のサイトを含む階層では、それぞれのサイトが異なるバージョンの SQL Server を使用してサイト データベースをホストできます。ただし、使用する SQL Server のバージョンが Configuration Manager でサポートされている必要があります。  
@@ -58,24 +58,16 @@ ms.openlocfilehash: ecf790893a5604250810310cfdb09c4cff7d97b6
  他の指定がない限り、次のバージョンの SQL Server は System Center Configuration Manager 1511 以降のバージョンでサポートされています。  
 
 > [!IMPORTANT]  
->  中央管理サイトでデータベース用に SQL Server Standard を使用すると、階層でサポートできるクライアントの合計数が制限されます。 「[サイジングとスケールの数値](../../../core/plan-design/configs/size-and-scale-numbers.md)」をご覧ください。
+>  中央管理サイトでデータベース用に SQL Server Standard を使用する場合、階層でサポートできるクライアントの合計数が制限されます。 「[サイジングとスケールの数値](../../../core/plan-design/configs/size-and-scale-numbers.md)」をご覧ください。
 
-### <a name="sql-server-2016-sp1---standard-enterprise"></a>SQL Server 2016 SP1 - Standard、Enterprise  
+### <a name="sql-server-2016-sp1-standard-enterprise"></a>SQL Server 2016 SP1: Standard、Enterprise  
 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
 -   プライマリ サイト  
 -   セカンダリ サイト  
 
-### <a name="sql-server-2016---standard-enterprise"></a>SQL Server 2016 - Standard、Enterprise  
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
-
--   中央管理サイト  
--   プライマリ サイト  
--   セカンダリ サイト  
-
-
-### <a name="sql-server-2014-sp2---standard-enterprise"></a>SQL Server 2014 SP2 - Standard、Enterprise  
+### <a name="sql-server-2016-standard-enterprise"></a>SQL Server 2016: Standard、Enterprise  
 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
@@ -83,8 +75,24 @@ ms.openlocfilehash: ecf790893a5604250810310cfdb09c4cff7d97b6
 -   セカンダリ サイト  
 
 
+### <a name="sql-server-2014-sp2-standard-enterprise"></a>SQL Server 2014 SP2: Standard、Enterprise  
+次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
-### <a name="sql-server-2014-sp1---standard-enterprise"></a>SQL Server 2014 SP1 - Standard、Enterprise  
+-   中央管理サイト  
+-   プライマリ サイト  
+-   セカンダリ サイト
+
+
+
+### <a name="sql-server-2014-sp1-standard-enterprise"></a>SQL Server 2014 SP1: Standard、Enterprise  
+ 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+
+-   中央管理サイト  
+-   プライマリ サイト  
+-   セカンダリ サイト
+
+
+### <a name="sql-server-2012-sp3-standard-enterprise"></a>SQL Server 2012 SP3: Standard、Enterprise  
  次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
@@ -92,7 +100,7 @@ ms.openlocfilehash: ecf790893a5604250810310cfdb09c4cff7d97b6
 -   セカンダリ サイト  
 
 
-### <a name="sql-server-2012-sp3---standard-enterprise"></a>SQL Server 2012 SP3 - Standard、Enterprise  
+### <a name="sql-server-2012-sp2-standard-enterprise"></a>SQL Server 2012 SP2: Standard、Enterprise   
  次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
@@ -100,20 +108,12 @@ ms.openlocfilehash: ecf790893a5604250810310cfdb09c4cff7d97b6
 -   セカンダリ サイト  
 
 
-### <a name="sql-server-2012-sp2---standard-enterprise"></a>SQL Server 2012 SP2 - Standard、Enterprise   
- 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
-
--   中央管理サイト  
--   プライマリ サイト  
--   セカンダリ サイト  
-
-
-### <a name="sql-server-2008-r2-sp3---standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3 - Standard、Enterprise、Datacenter     
+### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3: Standard、Enterprise、Datacenter     
 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
--   プライマリ サイト  
--   セカンダリ サイト  
+-   プライマリ サイト
+-   セカンダリ サイト
 
 
 
@@ -148,7 +148,7 @@ ms.openlocfilehash: ecf790893a5604250810310cfdb09c4cff7d97b6
 -   セカンダリ サイト  
 
 ##  <a name="a-namebkmksqlconfiga-required-configurations-for-sql-server"></a><a name="bkmk_SQLConfig"></a> SQL Server の必須構成  
- サイト データベースに使用する SQL Server (SQL Server Express を含む) のすべてのインストールでの要件は次のとおりです。 Configuration Manager が SQL Server Express をセカンダリ サイト インストールの一部としてインストールするときには、これらの構成は自動的に行われます。  
+ サイト データベースに使用する SQL Server (SQL Server Express を含む) のすべてのインストールでの要件は次のとおりです。 Configuration Manager が SQL Server Express をセカンダリ サイト インストールの一部としてインストールするときには、これらの構成は自動的に作成されます。  
 
  **SQL Server アーキテクチャのバージョン:**  
  Configuration Manager には、サイト データベースをホストするために 64 ビット版の SQL Server が必要です。  
@@ -156,14 +156,14 @@ ms.openlocfilehash: ecf790893a5604250810310cfdb09c4cff7d97b6
  **データベース照合順序：**  
  各サイトでは、サイトとサイト データベースの両方に使用される SQL Server のインスタンスが、 **SQL_Latin1_General_CP1_CI_AS**の照合順序を使用する必要があります。  
 
- Configuration Manager は、GB18030 で定義されている中国で使用するための標準を満たすために、この照合順序に対して 2 つの例外をサポートしています。 詳細については、「[System Center Configuration Manager のインターナショナル サポート](../../../core/plan-design/hierarchy/international-support.md)」をご覧ください。  
+ Configuration Manager は、GB18030 で定義されている中国で使用するための標準を満たすために、この照合順序に対して&2; つの例外をサポートしています。 詳細については、「[System Center Configuration Manager のインターナショナル サポート](../../../core/plan-design/hierarchy/international-support.md)」をご覧ください。  
 
  **SQL Server の機能：**  
  各サイト サーバーに必要な機能は、 **データベース エンジン サービス** 機能のみです。  
 
  Configuration Manager データベース レプリケーションは、**SQL Server レプリケーション**機能を必要としません。 ただし、[System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)を使用する場合は、この SQL Server の構成が必要です。  
 
- **Windows 認証：**  
+ **Windows 認証:**  
  Configuration Manager は、データベースへの接続を検証するために、**Windows 認証**を必要とします。  
 
  **SQL Server インスタンス:**  
@@ -172,15 +172,15 @@ ms.openlocfilehash: ecf790893a5604250810310cfdb09c4cff7d97b6
  **SQL Server のメモリ：**  
  SQL Server Management Studio を使用して、 **[サーバー メモリ オプション]** で **[最小サーバー メモリ]**設定を指定して、SQL Server のメモリを予約します。 固定量のメモリを設定する方法の詳細については、「 [固定量のメモリを設定する方法 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759)」を参照してください。  
 
--   **サイト サーバーと同じコンピューターにインストールされたデータベース サーバー:** - SQL Server 用のメモリをアドレス可能なシステム メモリの 50 % から 80 % に制限します。  
+-   **サイト サーバーと同じコンピューターにインストールされたデータベース サーバーの場合:** SQL Server 用のメモリをアドレス可能なシステム メモリの 50% から 80% に制限します。  
 
--   **専用データベース サーバー (サイト サーバーからリモート):** -   SQL Server 用のメモリをアドレス指定可能なシステム メモリの 80% から 90% に制限します。  
+-   **専用データベース サーバー (サイト サーバーからリモート) の場合:** SQL Server 用のメモリをアドレス指定可能なシステム メモリの 80% から 90% に制限します。  
 
--   **使用中の各 SQL Server インスタンスのバッファー プール用のメモリ予約:**  
+-   **使用中の各 SQL Server インスタンスのバッファー プール用のメモリ予約の場合:**   
 
-    -   中央管理サイト: 最小で 8 ギガバイト (GB)  
-    -   プライマリ サイト: 最小で 8 ギガバイト (GB)  
-    -   セカンダリ サイト: 最小で 4 ギガバイト (GB)  
+    -   中央管理サイト: 最小で 8 ギガバイト (GB) に設定  
+    -   プライマリ サイト: 最小で 8 ギガバイト (GB) に設定  
+    -   セカンダリ サイト: 最小で 4 ギガバイト (GB) に設定  
 
 **SQL の入れ子になったトリガー**  
  [SQL の入れ子になったトリガー](http://go.microsoft.com/fwlink/?LinkId=528802) は、有効にする必要があります。  
@@ -204,18 +204,18 @@ ms.openlocfilehash: ecf790893a5604250810310cfdb09c4cff7d97b6
     -   ローカル システム アカウントを使用すると、Configuration Manager によって自動的に SQL Server サービスの SPN が登録されます。  
     -   SQL Server サービスにローカル システム アカウントを使用することは、SQL Server のベスト プラクティスではないことに注意してください。  
 
-SQL Server サービスを実行するコンピューターのローカル システム アカウントを SQL Server が使用しない場合は、SQL Server サービスを実行するアカウントのサービス プリンシパル名 (SPN) を Active Directory ドメイン サービスで構成する必要があります。 (システム アカウントを使用する場合、SPN が自動的に登録されます)。
+SQL Server を実行するコンピューターが、ローカル システム アカウントを使用して SQL Server サービスを実行していない場合、SQL Server サービスを実行するアカウントの SPN を Active Directory Domain Services で構成する必要があります  (システム アカウントを使用する場合、SPN が自動的に登録されます)。
 
-サイト データベースの SPN については、「  [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md#bkmk_SPN) 」トピックの「 [Manage the SPN for the site database server](../../../core/servers/manage/modify-your-infrastructure.md) 」をご覧ください。  
+サイト データベースの SPN については、「[Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md#bkmk_SPN)」 (System Center Configuration Manager インフラストラクチャの変更) トピックの「[Manage the SPN for the site database server](../../../core/servers/manage/modify-your-infrastructure.md)」 (サイト データベース サーバーの SPN の管理) を参照してください。  
 
-SQL サービスで使用されるアカウントを変更する方法については、「 [方法: SQL Server のサービス開始アカウントの変更 (SQL Server 構成マネージャー)](http://go.microsoft.com/fwlink/p/?LinkId=237661)」を参照してください。  
+SQL Server サービスで使用されるアカウントを変更する方法については、「 [方法: SQL Server のサービス開始アカウントの変更 (SQL Server 構成マネージャー)](http://go.microsoft.com/fwlink/p/?LinkId=237661)」を参照してください。  
 
 **SQL Server Reporting Services:**  
-レポートを実行できるように、レポート サービス ポイントをインストールする必要があります。  
+レポートを実行できるようにするレポート サービス ポイントをインストールするには、SQL Server Reporting Services が必要です。  
 
 > [!IMPORTANT]  
 > 以前のバージョンから SQL Server をアップグレードした後、[*Report Builder Does Not Exist*] (レポート ビルダーが存在しません) というエラーが表示されることがあります。    
-> これを解決するには、レポート サービス ポイント サイト システムの役割を再インストールする必要があります。
+> このエラーを解決するには、レポート サービス ポイント サイト システムの役割を再インストールする必要があります。
 
 **SQL Server のポート:**  
 SQL Server データベース エンジンとの通信、およびサイト間のレプリケーションには、SQL Server の既定ポート構成を使用することも、カスタム ポートを指定することもできます。  
@@ -228,7 +228,7 @@ SQL Server データベース エンジンとの通信、およびサイト間�
     -   レポート サービス ポイント  
     -   サイト サーバー  
 
-SQL Server が複数のサイトからのデータベースをホストする場合、各データベースは個別の SQL Server インスタンスを使用する必要があり、各インスタンスは一意のポート セットを使用するように構成する必要があります。  
+SQL Server を実行しているコンピューターが複数のサイトからデータベースをホストする場合、各データベースは個別の SQL Server インスタンスを使用する必要があります。 さらに、各インスタンスは一意のポート セットを使用するように構成されている必要があります。  
 
 > [!WARNING]  
 >  Configuration Manager は、動的ポートをサポートしていません。 SQL Server 名前付きインスタンスの既定動作では、データベース エンジンへの接続に動的ポートが使用されるため、名前付きインスタンスの使用時に、サイト内通信に使用する静的ポートを手動で構成する必要があります。  
@@ -239,6 +239,6 @@ SQL Server を実行しているコンピューターのファイアウォール
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

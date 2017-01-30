@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 856ee34621816155d4ad95ed7240cf585e322486
+ms.sourcegitcommit: 4a8d98addcd463eb82d8b7100b44254a10d21992
+ms.openlocfilehash: 7d252fbbdc23ff676b87643408caf977f5636b67
 
 
 ---
@@ -28,22 +28,25 @@ ms.openlocfilehash: 856ee34621816155d4ad95ed7240cf585e322486
 System Center Configuration Manager の診断および使用状況データに関してよく寄せられる質問は次のとおりです。  
 
 ###  <a name="a-namebkmkoffa-how-do-i-turn-off-telemetry"></a><a name="bkmk_off"></a> テレメトリを無効にするには、どうすればよいですか。  
- Configuration Manager の現在のブランチは、Windows 10 と Microsoft Intune の新しいバージョンをサポートするために、定期的に更新する必要があります。 製品を最新の状態に保ち、更新プログラムのエクスペリエンスおよび製品の品質とセキュリティを向上させるために、Microsoft は少なくとも基本レベルの診断および使用状況データを必要としています。  
+テレメトリを無効にすることはできません。 ただし、収集されるテレメトリ データのレベルを選択し、オフライン モードでサービス接続ポイントを使用することはできます。これは、テレメトリ データ送信時の管理に役立ちます。
+
+Configuration Manager の現在のブランチは、Windows 10 と Microsoft Intune の新しいバージョンをサポートするために、定期的に更新する必要があります。 製品を最新の状態に保ち、更新プログラムのエクスペリエンスおよび製品の品質とセキュリティを向上させるために、Microsoft は少なくとも基本レベルの診断および使用状況データを必要としています。
 
 ###  <a name="a-namebkmkretentiona-what-is-the-data-retention-period"></a><a name="bkmk_retention"></a> データの保存期間を教えてください。  
- 診断結果と使用状況データは 1 年間は保持されます。  
+ 診断結果と使用状況データは&1; 年間は保持されます。  
 
 ###  <a name="a-namebkmkupdatea-is-diagnostics-and-usage-data-sent-when-installing-or-updating-the-product"></a><a name="bkmk_update"></a> 製品をインストールまたは更新するときに、診断と使用状況のデータは送信されますか。  
  いいえ。 診断および使用状況データは、サイトがインストールされて使用できる状態になったら送信されます。  
 
 ###  <a name="a-namebkmkfrequencya-how-frequently-is-the-data-sent"></a><a name="bkmk_frequency"></a> データはどのくらいの頻度で送信されますか。  
- SQL ストアド プロシージャは (サイトがインストールされた日) から 7 日おきに実行されます。 オンライン モードでは、サービス接続ポイントはクエリの実行後にデータをアップロードするように構成されています。 オフライン モードでは、管理者はサービス接続ツールを使用してデータをアップロードします。 (注: サイトがインストールされてから 7 日間経過すると、初めてデータをオフラインで使用できるようにはなります。)  
+ SQL ストアド プロシージャは (サイトがインストールされた日) から&7; 日おきに実行されます。 オンライン モードでは、サービス接続ポイントはクエリの実行後にデータをアップロードするように構成されています。 オフライン モードでは、管理者はサービス接続ツールを使用してデータをアップロードします。 (注: サイトがインストールされてから&7; 日間経過すると、初めてデータをオフラインで使用できるようにはなります。)  
 
 ###  <a name="a-namebkmknetworka-can-the-data-be-used-to-form-a-network-map"></a><a name="bkmk_network"></a> データを使用してネットワーク マップを作成できますか。  
  System Center Configuration Manager での診断の使用状況データ収集レベルについての説明のとおり、サイトの詳細には各サイトからのタイムゾーン情報が含まれます。 これにより、階層の複数のサイトの広範な位置情報とグローバル分散を理解できます。 ただし、IP アドレスや詳細な地理情報など、ネットワークの詳細情報は収集されません。
  - [1511 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
  - [1602 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
  - [1606 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)
+ - [1610 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610)
 
 
 ###  <a name="a-namebkmktablesa-can-you-see-data-in-custom-tables"></a><a name="bkmk_tables"></a> カスタム テーブルのデータを確認できますか。  
@@ -57,6 +60,6 @@ System Center Configuration Manager の診断および使用状況データに�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

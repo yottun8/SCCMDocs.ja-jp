@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
-ms.openlocfilehash: 7321645f17a143afe2fd848f45511a374de78c4b
+ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
+ms.openlocfilehash: b250456c92f77bf76a56b32fedafa934096abe2e
 
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1601 の機能
@@ -28,7 +28,7 @@ ms.openlocfilehash: 7321645f17a143afe2fd848f45511a374de78c4b
 
  **この Technical Preview の既知の問題:**  
 
--   [**Client Update Options (クライアント更新オプション)**] を管理して、実稼働前クライアントを実稼働版に昇格するときに、このチェック ボックスのテキストに、実際のクライアント ビルド番号ではなく、クライアント バージョン 0 が表示されます。 実稼働前クライアントの正しいバージョンはこのオプションの上にある画面に表示され、このオプションを選択すると、実稼働版に昇格されるクライアント バージョンです。  
+-   [**Client Update Options (クライアント更新オプション)**] を管理して、実稼働前クライアントを実稼働版に昇格するときに、このチェック ボックスのテキストに、実際のクライアント ビルド番号ではなく、クライアント バージョン&0; が表示されます。 実稼働前クライアントの正しいバージョンはこのオプションの上にある画面に表示され、このオプションを選択すると、実稼働版に昇格されるクライアント バージョンです。  
 
 -   Technical Preview 1601 に更新し、実稼働前コレクションで Configuration Manager クライアントをテストするように選択した場合、コレクションのクライアント パッケージはアップグレードされません。 この問題は Technical Preview 1601 のみが対象です。  
 
@@ -212,7 +212,7 @@ Technical Preview 1601 以降、Configuration Manager コンソールでクラ�
  詳しくは、「[System Center Configuration Manager クライアントを使用せずに管理されている Windows 8.1 デバイスと Windows 10 デバイスの構成項目を作成する方法](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)」をご覧ください。  
 
 ### <a name="android---kiosk-mode-for-samsung-knox-standardbr-hybrid"></a>Android - Samsung KNOX Standard のキオスク モード<br />ハイブリッド  
- キオスク モードを使用すると、特定の機能のみ実行できるようにデバイスをロックできます。 たとえば、指定した 1 つの管理対象アプリの実行のみをデバイスに許可することや、デバイスのボリューム ボタンを無効にすることができます。 これらの設定は、デバイスのデモ モデルや、POS デバイスなどの 1 つの機能の実行専用のデバイス向けに使用できます。 これらの設定は、**Windows 8.1 および Windows 10** 構成項目 (Windows 10 デバイスのみに適用される設定) で Samsung KNOX Standard デバイスには使用できません。  
+ キオスク モードを使用すると、特定の機能のみ実行できるようにデバイスをロックできます。 たとえば、指定した&1; つの管理対象アプリの実行のみをデバイスに許可することや、デバイスのボリューム ボタンを無効にすることができます。 これらの設定は、デバイスのデモ モデルや、POS デバイスなどの&1; つの機能の実行専用のデバイス向けに使用できます。 これらの設定は、**Windows 8.1 および Windows 10** 構成項目 (Windows 10 デバイスのみに適用される設定) で Samsung KNOX Standard デバイスには使用できません。  
 
  新しい設定を確認するには、[**構成項目の作成**] ウィザードの構成項目 [**デバイス設定**] ページで、[**Kiosk Mode - Samsung KNOX**] (キオスク モード - Samsung KNOX) を選択します。  
 
@@ -220,6 +220,6 @@ Technical Preview 1601 以降、Configuration Manager コンソールでクラ�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -2,7 +2,7 @@
 title: "起動可能なメディアの作成 | Microsoft Docs"
 description: "Configuration Manager の起動可能なメディアは、新しいバージョンの Windows のインストールや、コンピューターの置き換えおよび設定の転送を容易にします。"
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 12/21/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 03722ff4f480cd26842e395fe1f7ec8359e2b33e
-ms.openlocfilehash: a7bdad82dc55b4c0fe7d892ef34cc6aa0dfbf476
+ms.sourcegitcommit: 66cd6d099acdd9db2bc913a69993aaf5e17237fe
+ms.openlocfilehash: 0a4c2b41f899f6e243e7eb825082514114226a8f
 
 
 ---
@@ -47,7 +47,7 @@ Configuration Manager の起動可能なメディアには、ブート イメー
 
  起動可能なメディアを作成するには、次の手順に従います。  
 
-#### <a name="to-create-bootable-media"></a>起動可能なメディアを作成するには  
+### <a name="to-create-bootable-media"></a>起動可能なメディアを作成するには  
 
 1.  Configuration Manager コンソールで、[ソフトウェア ライブラリ] ****をクリックします。  
 
@@ -79,7 +79,7 @@ Configuration Manager の起動可能なメディアには、ブート イメー
 
     -   **CD/DVD セット**を選択した場合は、メディアの容量および出力ファイルの名前とパスを指定します。 この場所に出力ファイルが書き込まれます。 例: **\\\servername\folder\outputfile.iso**  
 
-         メディアにコンテンツ全体を保存しきれない場合は、複数のファイルが作成されます。この場合、複数の CD または DVD を使用してコンテンツを保存する必要があります。 複数のメディアが必要な場合は、Configuration Manager が作成する各出力ファイルの名前に連番が付けられます。 さらに、オペレーティング システムと共にアプリケーションを展開し、アプリケーションが 1 つのメディアに収まらない場合、Configuration Manager は複数のメディアでアプリケーションを保存します。 スタンドアロン メディアを実行している場合、Configuration Manager は、アプリケーションを保存する次のメディアの指定をユーザーに求めます。  
+         メディアにコンテンツ全体を保存しきれない場合は、複数のファイルが作成されます。この場合、複数の CD または DVD を使用してコンテンツを保存する必要があります。 複数のメディアが必要な場合は、Configuration Manager が作成する各出力ファイルの名前に連番が付けられます。 さらに、オペレーティング システムと共にアプリケーションを展開し、アプリケーションが&1; つのメディアに収まらない場合、Configuration Manager は複数のメディアでアプリケーションを保存します。 スタンドアロン メディアを実行している場合、Configuration Manager は、アプリケーションを保存する次のメディアの指定をユーザーに求めます。  
 
         > [!IMPORTANT]  
         >  既存の .iso イメージを選択した場合は、タスク シーケンス メディア ウィザードの次のページに進むと、ドライブまたは共有フォルダーからイメージが削除されます。 既存のイメージは、ウィザードをキャンセルしても削除されます。  
@@ -146,11 +146,18 @@ Configuration Manager の起動可能なメディアには、ブート イメー
 
 10. ウィザードを完了します。  
 
+## <a name="create-bootable-media-on-a-usb-drive-from-a-network-share"></a>ネットワーク共有から USB ドライブで起動可能なメディアを作成する
+このセクションの情報は、Configuration Manager コンソールを実行しているコンピューターに USB フラッシュ ドライブが接続されているときに、そのフラッシュ ドライブで起動可能なメディアを作成する場合に役立ちます。 USB ドライブに起動可能なメディアを作成する場合、タスク シーケンス起動メディアを作成して、ISO をマウントし、ISO から USB ドライブにファイルを転送することができます。
+
+1. [タスク シーケンス起動メディアを作成します](#to-create-task-boobable-media)。 **[メディアの種類]** ページで、**[CD/DVD セット]** を選択します。 ウィザードで指定した場所に出力ファイルが書き込まれます。 たとえば、**\\\servername\folder\outputfile.iso** のようになります。  
+2. リムーバブル USB ドライブを準備します。 ドライブは書式設定され、空であり、かつ、起動可能である必要があります。
+3. 共有の場所から ISO をマウントし、ISO イメージから USB ドライブにファイルを転送します。
+
 ## <a name="next-steps"></a>次のステップ  
 [起動可能なメディアを使用したネットワーク経由での Windows の展開](use-bootable-media-to-deploy-windows-over-the-network.md)  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO4-->
 
 

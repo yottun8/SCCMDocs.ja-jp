@@ -2,7 +2,7 @@
 title: "特徴と機能 | Microsoft Docs"
 description: "System Center Configuration Manager の主な管理機能について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 851029368d97312ef2766505f933eac72d6950e5
+ms.sourcegitcommit: 53b27dcb5c8bb670556fe4cee9e990619a9a63e9
+ms.openlocfilehash: 4691f43dccdf73936107f4635321897b9779bead
 
 
 ---
@@ -40,7 +40,7 @@ System Center Configuration Manager の主な管理機能について次に説�
 
  **コンプライアンス設定**  
 
- 企業内のクライアント デバイスの構成対応状態を評価、追跡、および修復するのに役立つ一連のツールとリソースを提供します。  さらに、コンプライアンス設定を使用すると、管理対象デバイスでさまざまな機能とセキュリティ設定を構成できます。 「[System Center Configuration Manager でのデバイス コンプライアンスの確認](../../../compliance/understand/ensure-device-compliance.md)」をご覧ください。  
+ 企業内のクライアント デバイスの構成対応状態を評価、追跡、および修復するのに役立つ一連のツールとリソースを提供します。 さらに、コンプライアンス設定を使用すると、管理対象デバイスでさまざまな機能とセキュリティ設定を構成できます。 「[System Center Configuration Manager でのデバイス コンプライアンスの確認](../../../compliance/understand/ensure-device-compliance.md)」をご覧ください。  
 
  **Endpoint Protection**  
 
@@ -64,11 +64,11 @@ System Center Configuration Manager の主な管理機能について次に説�
 
  **オンプレミス モバイル デバイス管理**  
 
- (個別にインストールされている構成マネージャー クライアントではなく) デバイス プラットフォームに組み込まれたオンプレミスの Configuration Manager インフラストラクチャと管理機能を使用して、PC とモバイル デバイスを登録および管理します。 現時点で、Windows 10 Enterprise および Windows 10 Mobile デバイスの管理をサポートしています。  「[System Center Configuration Manager でオンプレミス インフラストラクチャを使用したモバイル デバイスの管理](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)」をご覧ください。  
+ (個別にインストールされている Configuration Manager クライアントではなく) デバイス プラットフォームに組み込まれたオンプレミスの Configuration Manager インフラストラクチャと管理機能を使用して、PC とモバイル デバイスを登録および管理します。 現時点で、Windows 10 Enterprise および Windows 10 Mobile デバイスの管理をサポートしています。 「[System Center Configuration Manager でオンプレミス インフラストラクチャを使用したモバイル デバイスの管理](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)」をご覧ください。  
 
  **オペレーティング システムの展開**  
 
- オペレーティング システム イメージを作成するためのツールを提供します。 これらのイメージを使用し、PXE ブートまたは CD セット、DVD、USB フラッシュ ドライブなどの起動可能メディアを用いて、Configuration Manager の管理対象のコンピューターおよび管理対象外のコンピューターにイメージを展開できます。 「[System Center Configuration Manager のオペレーティング システムの展開の概要](../../../osd/understand/introduction-to-operating-system-deployment.md)」をご覧ください。  
+ オペレーティング システム イメージを作成するためのツールを提供します。 これらのイメージを使用し、PXE ブートまたは CD セット、DVD、USB フラッシュ デバイスなどの起動可能メディアを用いて、コンピューターにオペレーティング システムを展開できます。 これは、Configuration Manager で管理されているコンピューターと、管理されていないコンピューターに適用されることに注意してください。 「[System Center Configuration Manager のオペレーティング システムの展開の概要](../../../osd/understand/introduction-to-operating-system-deployment.md)」をご覧ください。  
 
  **電源管理**  
 
@@ -76,15 +76,15 @@ System Center Configuration Manager の主な管理機能について次に説�
 
  **クエリ**  
 
- 階層内のリソースに関する情報、およびインベントリ データとステータス メッセージに関する情報を取得するためのツールを提供します。 この情報は、レポートに使用したり、ソフトウェア展開や構成設定でデバイスやユーザーのコレクションを定義するために使用できます。 「[System Center Configuration Manager のクエリの概要](../../../core/servers/manage/introduction-to-queries.md)」をご覧ください。  
+ 階層内のリソースに関する情報、およびインベントリ データとステータス メッセージに関する情報を取得するためのツールを提供します。 この情報は、レポートに使用したり、ソフトウェア展開や構成設定でデバイスやユーザーのコレクションを定義したりするために使用できます。 「[System Center Configuration Manager のクエリの概要](../../../core/servers/manage/introduction-to-queries.md)」をご覧ください。  
 
  **リモート接続プロファイル**  
 
- 組織のデバイスのリモート接続設定を作成、展開、監視する際に役立つツールのセットとリソースを提供します。 これらの設定を展開すると、会社のネットワークにコンピューターを接続するのに必要なエンドユーザーの労力が最小化されます。 「[System Center Configuration Manager でのリモート接続プロファイルの操作](/sccm/compliance/deploy-use/create-remote-connection-profiles)」をご覧ください。  
+ 組織のデバイスのリモート接続設定を作成、展開、監視する際に役立つ、一連のツールとリソースを提供します。 これらの設定を展開することにより、ユーザーが会社のネットワークにある自分のコンピューターに接続するときの手間をできるだけ省きます。 「[System Center Configuration Manager でのリモート接続プロファイルの操作](/sccm/compliance/deploy-use/create-remote-connection-profiles)」をご覧ください。  
 
  **ユーザー データとプロファイル構成項目**  
 
- Configuration Manager のユーザー データとプロファイル構成項目には、階層内のユーザーの Windows 8 以降のコンピューターのフォルダー リダイレクト、オフライン ファイル、およびローミング プロファイルを管理できる設定が含まれています。 「[System Center Configuration Manager でのユーザー データとプロファイル構成アイテムの操作](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items)」をご覧ください。  
+ Configuration Manager のユーザー データとプロファイル構成項目には、階層内のユーザーの Windows 8 以降を実行するコンピューターのフォルダー リダイレクト、オフライン ファイル、およびローミング プロファイルを管理できる設定が含まれています。 「[System Center Configuration Manager でのユーザー データとプロファイル構成アイテムの操作](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items)」をご覧ください。  
 
  **リモート コントロール**  
 
@@ -104,6 +104,6 @@ System Center Configuration Manager の主な管理機能について次に説�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

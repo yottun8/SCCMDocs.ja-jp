@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager のプライバシーに関する声明 - Configuration Manager Cmdlet Library | Microsoft Docs"
+title: "System Center Configuration Manager のプライバシーに関する声明 - Configuration Manager コマンドレット ライブラリ | Microsoft Docs"
 description: "System Center Configuration Manager コマンドレット ライブラリに関連するデータを Microsoft が収集して使用する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,12 +17,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 767d0594eb871462df038997ea3b7e29615e05f7
-ms.openlocfilehash: 10d8e8948d66a6b9b74e16a02cfbfc4ced66596c
+ms.sourcegitcommit: 3d6799ad46e0fe69333aba0662f18c9153c17bda
+ms.openlocfilehash: 3936075555cc0bb370ea6e42c7e720b864d565f7
 
 
 ---
-# <a name="system-center-configuration-manager-privacy-statement---configuration-manager-cmdlet-library"></a>System Center Configuration Manager のプライバシーに関する声明 - Configuration Manager Cmdlet Library
+# <a name="system-center-configuration-manager-privacy-statement---configuration-manager-cmdlet-library"></a>System Center Configuration Manager のプライバシーに関する声明 - Configuration Manager コマンドレット ライブラリ
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -30,18 +30,18 @@ ms.openlocfilehash: 10d8e8948d66a6b9b74e16a02cfbfc4ced66596c
 
 ## <a name="usage-data"></a>使用状況データ  
  **この機能のデータ:**   
-System Center Configuration Manager Cmdlet Library を利用すると、Windows PowerShell のコマンドレットおよびスクリプトを使用して Configuration Manager 階層を管理できます。 Cmdlet Library は、傾向および使用パターンを識別することを目的に、ライブラリに含まれるコマンドレットのお客様による使用方法に関する情報を収集します。  また、Cmdlet Library は、コマンドレットの使用時に発生したエラーの種類と数も収集します。  
+System Center Configuration Manager コマンドレット ライブラリを利用すると、Windows PowerShell のコマンドレットおよびスクリプトを使用して Configuration Manager 階層を管理できます。 コマンドレット ライブラリは、傾向および使用パターンを識別することを目的に、ライブラリのコマンドレットのお客様による使用方法に関する情報を収集します。 また、コマンドレット ライブラリは、コマンドレットの使用時に発生したエラーの種類と数も収集します。  
 
  **収集、処理、または送信される情報:**   
-収集される使用状況データには、コマンドレットの開始、停止、および終了、非推奨のコマンドレットの実行、コマンドレットに関する SMS プロバイダーの操作のアクティビティ  メトリックスが含まれます。 この情報は、個人を特定するものではありません。  収集されるエラー情報には、コマンドレットから返されるエラーのほか、例外エラーの詳細が含まれます。 エラーの詳細レポートには、お客様のコンピューターに接続されているデバイスのシリアル番号など、個人を特定できる情報が意図せず含まれる場合があります。 Cmdlet Library は、エラー レポートに含まれる情報のフィルター処理および匿名化を行い個人を特定できる情報を削除してから、当該レポートをマイクロソフトに送信します。  
+収集される使用状況データには、コマンドレットの開始、停止、および終了、非推奨のコマンドレットの実行、コマンドレットに関する Systems Management Server (SMS) プロバイダーの操作のアクティビティ メトリックスが含まれます。 この情報は、個人を特定するものではありません。  収集されるエラー情報には、コマンドレットから返されるエラーのほか、例外エラーの詳細が含まれます。 エラーの詳細レポートには、お客様のコンピューターに接続されているデバイスのシリアル番号など、個人を特定できる情報が意図せず含まれる場合があります。 コマンドレット ライブラリは、エラー レポートに含まれる情報のフィルター処理および匿名化を行い個人の特定が可能な情報を削除してから、当該レポートをマイクロソフトに送信します。  
 
  **情報の使用:**   
 マイクロソフトは、これらの情報をマイクロソフトが提供する製品およびサービスの品質、セキュリティ、および整合性の改善のために使用します。  
 
  **選択または制御:**   
-この使用状況データ機能は既定で有効になっています。 System Center Configuration Manager Cmdlet Library には、この機能を制御する 2 つのレジストリ キーが含まれます。  
+この使用状況データ機能は既定で有効になっています。 System Center Configuration Manager コマンドレット ライブラリには、この機能を制御する&2; つのレジストリ キーがあります。  
 
- この機能を完全に停止するには、Windows イベント トレーシング (ETW) プロバイダーごとに 1 つずつある、次の 2 つのレジストリ キーの値を設定する必要があります。  
+ この機能を完全に停止するには、Windows イベント トレーシング (ETW) プロバイダーごとに&1; つずつある、次の&2; つのレジストリ キーの値を設定する必要があります。  
 
 -   HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Provider:CeipLevel=0 (ドライブ プロバイダーの使用状況データの停止)  
 
@@ -49,10 +49,10 @@ System Center Configuration Manager Cmdlet Library を利用すると、Windows 
 
  使用状況データ設定を変更する際は、コンピューターに応じて固有の変更を行います。  
 
- 使用状況データ (収集) の構成方法の詳細については、 [System Center Configuration Manager Cmdlet Library のドキュメント](https://technet.microsoft.com/en-us/library/dn958404.aspx)を参照してください。   
+ 使用状況データ (収集) の構成方法の詳細については、[System Center Configuration Manager Cmdlet Library のドキュメント](https://technet.microsoft.com/en-us/library/dn958404.aspx)をご覧ください。   
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

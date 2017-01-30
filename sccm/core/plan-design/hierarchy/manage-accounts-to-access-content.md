@@ -2,7 +2,7 @@
 title: "コンテンツにアクセスするためのアカウント | Microsoft Docs"
 description: "クライアントが System Center Configuration Manager のコンテンツにアクセスするためのアカウントについて説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/4/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 4bf8dbd007f2ff122d1447ffcb2a963579034033
+ms.sourcegitcommit: 4d34a272a93100426cccd2308c5b3b0b0ae94a60
+ms.openlocfilehash: ee83aa6fdbd1a82384a4684055ed72620a3f474e
 
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>System Center Configuration Manager でコンテンツへのアクセスを管理する
@@ -30,7 +30,7 @@ System Center Configuration Manager でコンテンツを展開する前に、�
 
      このアカウントは、リモート フォレスト内のソース配布ポイントからコンテンツを取得するためにプル配布ポイントによっても使用されます  
 
--   **パッケージ アクセス アカウント** - 既定では、Configuration Manager は、汎用アクセス アカウントである "ユーザー" および "管理者" に対して配布ポイント上のコンテンツへのアクセスを許可します。 ただし、追加のアクセス許可を構成してアクセスを制限することができます。  
+-   **パッケージ アクセス アカウント** - 既定では、Configuration Manager は、**Users** および **Administrators** という名前の組み込みアカウントに対して配布ポイント上のコンテンツへのアクセスを許可します。 追加のアクセス許可を構成してアクセスを制限することができます。  
 
 -   **マルチキャスト接続アカウント** - オペレーティング システムの展開に使用します。  
 
@@ -120,6 +120,6 @@ System Center Configuration Manager でコンテンツを展開する前に、�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

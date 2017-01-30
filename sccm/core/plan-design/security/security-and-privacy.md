@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager のセキュリティとプライバシー | Microsoft Docs"
 description: "System Center Configuration Manager のセキュリティとプライバシーに関するリソースを参照してください。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: a0cc96d1bde1ab895a4560d89dbc162f34a8443b
+ms.sourcegitcommit: b470aee50669bcded176d55d8b1496768d1f3cde
+ms.openlocfilehash: de9df79c7adc24b415fd1be6e45a42aec7e16f9a
 
 
 ---
@@ -25,11 +25,11 @@ ms.openlocfilehash: a0cc96d1bde1ab895a4560d89dbc162f34a8443b
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-このトピックには、System Center Configuration Manager のセキュリティとプライバシーに関するリソースが含まれています。  
+この記事には、System Center Configuration Manager のセキュリティとプライバシーに関するリソースが含まれています。  
 
- 先に進む前に、[System Center Configuration Manager の基本](../../../core/understand/fundamentals.md)を理解しておく必要があります。 System Center Configuration Manager を既にインストールした場合は、実装に関する設計上の決定事項を特定してください。 Configuration Manager の計画および展開についての内容が記載されており、理解を深めることができます。  
+ 先に進む前に、[System Center Configuration Manager の基本](../../../core/understand/fundamentals.md)を学習しておく必要があります。 System Center Configuration Manager を既にインストールしている場合は、実装に関する設計上の決定事項を特定してください。 Configuration Manager の計画および展開についての内容が記載されており、理解を深めることができます。  
 
- 製品のセキュリティ関連の機能については、次のトピックをご覧ください。  
+ 製品のセキュリティ関連の機能については、次の記事をご覧ください。  
 
 -   [System Center Configuration Manager のオペレーティング システムの展開でのセキュリティとプライバシー](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  
 
@@ -59,7 +59,7 @@ ms.openlocfilehash: a0cc96d1bde1ab895a4560d89dbc162f34a8443b
 
 
 
- **セキュリティとプライバシーに関するトピック:**  
+ **セキュリティとプライバシーの記事**  
 
 -   [System Center Configuration Manager でのセキュリティの計画](../../../core/plan-design/security/plan-for-security.md)  
 
@@ -76,6 +76,6 @@ ms.openlocfilehash: a0cc96d1bde1ab895a4560d89dbc162f34a8443b
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

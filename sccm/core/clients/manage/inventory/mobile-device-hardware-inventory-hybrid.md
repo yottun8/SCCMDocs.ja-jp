@@ -2,7 +2,7 @@
 title: "ハードウェア インベントリの構成 | Microsoft Docs | モバイル デバイス"
 description: "Microsoft Intune と System Center Configuration Manager によって登録されたモバイル デバイス用のハードウェア インベントリを構成します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 6db22a2ddce1afb471cf8b603c6d98f7f0acbc15
+ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
+ms.openlocfilehash: be954724587e68e92e5d8f5cecd712dfd5df278e
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 6db22a2ddce1afb471cf8b603c6d98f7f0acbc15
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager では、Microsoft Intune コネクタを使って、iOS、Android、および Windows デバイスのハードウェア インベントリを収集することができます。 カスタム ハードウェア インベントリを構成する方法については、「[System Center Configuration Manager でのハードウェア インベントリの拡張方法](../../../../core/clients/manage/inventory/extend-hardware-inventory.md)」を参照してください。  
+Configuration Manager では、Microsoft Intune コネクタを使って、iOS、Android、および Windows デバイスのハードウェア インベントリを収集することができます。 カスタム ハードウェア インベントリを構成する方法については、「[System Center Configuration Manager でのハードウェア インベントリの拡張方法](../../../../core/clients/manage/inventory/extend-hardware-inventory.md)」を参照してください。  
 
  Microsoft Intune にデバイスを登録する方法については、「[Microsoft Intune を使用してモバイル デバイスを管理する](https://technet.microsoft.com/en-us/library/dn646962.aspx)」を参照してください。  
 
@@ -141,6 +141,6 @@ System Center Configuration Manager では、Microsoft Intune コネクタを使
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

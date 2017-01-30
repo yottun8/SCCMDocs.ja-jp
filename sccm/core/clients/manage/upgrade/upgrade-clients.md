@@ -2,7 +2,7 @@
 title: "クライアントのアップグレード | Microsoft Docs"
 description: "System Center Configuration Manager でクライアントをアップグレードする方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
+ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
+ms.openlocfilehash: f369bccb1da6d428fb321455272190e1a0439ec3
 
 
 ---
@@ -25,10 +25,10 @@ ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-社内の Windows コンピューター、UNIX/Linux サーバー、および Mac コンピューターで System Center Configuration Manager クライアント ソフトウェアをアップグレードするには、さまざまな方法があります。 次のセクションは、クライアントのアップグレード方法ごとの長所と短所を示したもので、どの方法が組織に適しているかを判断するのに役立ちます。  
+Windows コンピューター、UNIX/Linux サーバー、および Mac コンピューターで System Center Configuration Manager クライアント ソフトウェアをアップグレードするには、さまざまな方法があります。 各方法の利点と欠点の詳細について以下に説明します。  
 
 > [!TIP]  
->  Configuration Manager の以前のバージョン \(Configuration Manager 2007 または System Center 2012 Configuration Manager など\) から、サーバー インフラストラクチャをアップグレードする場合は、Configuration Manager クライアントをアップグレードする前に、現在のすべてのブランチの更新プログラムのインストールを含む、サーバーのアップグレードを完了することをお勧めします。   現在のブランチの最新の更新プログラムには、クライアントの最新バージョンが含まれているため、使用するすべての Configuration Manager 更新プログラムをインストールした後に、クライアントのアップグレードを実行することをお勧めします。  
+>  Configuration Manager の以前のバージョン \(Configuration Manager 2007 または System Center 2012 Configuration Manager など\) から、サーバー インフラストラクチャをアップグレードする場合は、Configuration Manager クライアントをアップグレードする前に、現在のすべてのブランチの更新プログラムのインストールを含む、サーバーのアップグレードを完了することをお勧めします。 これにより、クライアント ソフトウェアの最新バージョンも使用できます。  
 
 ## <a name="group-policy-installation"></a>グループ ポリシーによるインストール  
  **サポートされるクライアント プラットフォーム:** Windows  
@@ -45,11 +45,10 @@ ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
 
  **短所**  
 
--   多数のクライアントをアップグレードした場合、ネットワーク トラフィックが増加する可能性があります。  
+-   多数のクライアントをアップグレードする場合、大量のネットワーク トラフィックを発生させる可能性があります。  
 
--   Active Directory スキーマが Configuration Manager 向けに拡張されていない場合、グループ ポリシー設定を使用してサイト内のコンピューターにクライアント インストール プロパティを追加する必要があります。  
+-   Active Directory スキーマが Configuration Manager 向けに拡張されていない場合、[グループ ポリシー設定](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP)を使用してサイト内のコンピューターにクライアント インストール プロパティを追加する必要があります。  
 
- 詳細については、「[グループ ポリシーを使用した Configuration Manager クライアントのインストール方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP)」を参照してください。  
 
 ## <a name="logon-script-installation"></a>ログオン スクリプトによるインストール  
  **サポートされるクライアント プラットフォーム:** Windows  
@@ -64,7 +63,7 @@ ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
 
  **短所**  
 
--   多数のクライアントを短時間にアップグレードした場合、ネットワーク トラフィックが増加する可能性があります。  
+-   多数のクライアントをアップグレードする場合、短時間で大量のネットワーク トラフィックを発生させる可能性があります。  
 
 -   ユーザーがネットワークに頻繁にログオンしない場合は、すべてのクライアント コンピューターでアップグレードするのに長時間かかる場合があります。  
 
@@ -122,7 +121,7 @@ ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
 
 -   サイト内のクライアントを自動的に最新バージョンに保つのに使用できます。  
 
--   管理者による管理の手間はごくわずかしか必要ありません。  
+-   最小限の管理が必要です。  
 
  **短所**  
 
@@ -153,6 +152,6 @@ ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

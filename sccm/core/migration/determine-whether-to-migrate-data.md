@@ -2,7 +2,7 @@
 title: "移行するデータの選択 | Microsoft Docs"
 description: "System Center Configuration Manager に移行できるデータと移行できないデータについて説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
-ms.openlocfilehash: 66e01cbe84206cb1b29893b768c1bc831f2f6cfc
+ms.sourcegitcommit: d37261c03fddc3d576fcef73fabd7189e4c46d38
+ms.openlocfilehash: 9dc5f6c9f58e1fc33b2dc9dd76737ae23af81993
 
 
 ---
@@ -28,17 +28,19 @@ ms.openlocfilehash: 66e01cbe84206cb1b29893b768c1bc831f2f6cfc
 
 System Center Configuration Manager の移行では、作成したデータと構成を、サポートされているバージョンの Configuration Manager から新しい階層に転送するためのプロセスが提供されます。  これを使用して、次の操作を実行できます。  
 
--   複数の階層を 1 つに統合する  
+-   複数の階層を&1; つに統合する。  
 
--   データと構成をラボの展開から運用環境の展開に移動する  
+-   データと構成をラボの展開から運用環境の展開に移動する。
 
 -   System Center Configuration Manager へのアップグレード パスのない Configuration Manager 2007 などの以前のバージョンの Configuration Manager、または System Center 2012 Configuration Manager (System Center Configuration Manager へのアップグレード パスがサポートされている) からデータと構成を移動します。  
 
 配布ポイント サイト システムの役割と、配布ポイントをホストするコンピューターを除き、階層間で移行、転送、または共有できるインフラストラクチャ (サイト、サイト システムの役割、またはサイト システムの役割をホストするコンピューターを含む) はありません。  
 
- サーバー インフラストラクチャは移行できませんが、階層間で構成マネージャー クライアントを移行することはできます。 クライアントの移行には、ソース階層でクライアントが使用するデータを対象の階層に移行する処理と、クライアントが新しい階層にレポートするようにクライアント ソフトウェアのインストールまたは再割り当てを行う処理が必要です。 クライアントを新しい階層にインストールし、クライアントがそのデータを送信した後は、Configuration Manager で一意の Configuration Manager ID を使用して、以前に移行したデータを各クライアント コンピューターに関連付けることができます。  
+ サーバー インフラストラクチャは移行できませんが、階層間で構成マネージャー クライアントを移行することはできます。 クライアントの移行には、ソース階層でクライアントが使用するデータを対象の階層に移行する処理と、クライアントが新しい階層にレポートするようにクライアント ソフトウェアのインストールまたは再割り当てを行う処理が必要です。
 
- 移行によって提供される機能を利用することで、構成と展開にこれまで投資してきた資産を維持しながら、System Center 2012 Configuration Manager で最初に導入され、System Center Configuration Manager に引き継がれている主要な変更点を最大限に活用することができます。 これらの変更点には、より少ないサイトとリソースを使用するように簡素化された Configuration Manager 階層、64 ビット ハードウェア上で動作するネイティブ 64 ビット コードの使用により強化されたプロセッシング機能などが含まれます。  
+クライアントを新しい階層にインストールし、クライアントがそのデータを送信した後は、Configuration Manager で一意の Configuration Manager ID を使用して、以前に移行したデータを各クライアント コンピューターに関連付けることができます。  
+
+ 移行によって提供される機能は、構成と展開にこれまで投資してきた資産を維持しながら、(System Center 2012 Configuration Manager で最初に導入され、System Center Configuration Manager に引き継がれている) 主要な変更点を最大限に活用するのに役立ちます。 これらの変更点には、より少ないサイトとリソースを使用するように簡素化された Configuration Manager 階層、64 ビット ハードウェア上で実行されるネイティブ 64 ビット コードの使用により強化されたプロセッシング機能などが含まれます。  
 
  移行がサポートされている Configuration Manager のバージョンの詳細については、「[System Center Configuration Manager での移行の前提条件](../../core/migration/prerequisites-for-migration.md)」をご覧ください。  
 
@@ -49,11 +51,13 @@ System Center Configuration Manager の移行では、作成したデータと�
 -   [System Center Configuration Manager に移行できないデータ](#Cannot_migrate)  
 
 ##  <a name="a-namecanmigratea-data-that-you-can-migrate-to-system-center-configuration-manager"></a><a name="Can_Migrate"></a> System Center Configuration Manager に移行可能なデータ  
- 移行により、サポートされる Configuration Manager 階層間で大部分のオブジェクトを移行できます。 サポートされるバージョンの Configuration Manager 2007 のオブジェクトによっては、System Center 2012 Configuration Manager のスキーマとオブジェクト形式に準拠するように、移行されるインスタンスを変更する必要があります。 この変更は、ソース サイトのデータベース内のデータには影響しません。 サポートされているバージョンの System Center 2012 Configuration Manager または System Center Configuration Manager から移行されたオブジェクトは、変更する必要がありません。  
+ 移行により、サポートされる Configuration Manager 階層間で大部分のオブジェクトを移行できます。 サポートされるバージョンの Configuration Manager 2007 のオブジェクトによっては、System Center 2012 Configuration Manager のスキーマとオブジェクト形式に準拠するように、移行されるインスタンスを変更する必要があります。
 
- ソース階層の Configuration Manager のバージョンに基づいて移行できるオブジェクトを次に示します。 クエリと同様に、一部のオブジェクトは移行されません。 このような移行されないオブジェクトを引き続き使用するには、新しい階層で再作成する必要があります。 一部のクライアント データなど、他のオブジェクトは、新しい階層でクライアントを管理するときに自動的に再作成されます。  
+この変更は、ソース サイトのデータベース内のデータには影響しません。 サポートされているバージョンの System Center 2012 Configuration Manager または System Center Configuration Manager から移行されたオブジェクトは、変更する必要がありません。  
 
- **System Center 2012 Configuration Manager または System Center Configuration Manager の現在のブランチから移行できるオブジェクトは、次のとおりです。**  
+ ソース階層の Configuration Manager のバージョンに基づいて移行できるオブジェクトを次に示します。 クエリと同様に、一部のオブジェクトは移行されません。 このような移行されないオブジェクトを引き続き使用するには、新しい階層で再作成する必要があります。 一部のクライアント データを含む、他のオブジェクトは、新しい階層でクライアントを管理するときに自動的に再作成されます。  
+
+### <a name="objects-that-you-can-migrate-from-system-center-2012-configuration-manager-or-system-center-configuration-manager-current-branch"></a>System Center 2012 Configuration Manager または System Center Configuration Manager の現在のブランチから移行できるオブジェクト
 
 -   開示通知 (旧称「提供情報」)  
 
@@ -65,7 +69,7 @@ System Center Configuration Manager の移行では、作成したデータと�
 
 -   境界  
 
--   コレクション - サポートされているバージョンの System Center 2012 Configuration Manager または System Center Configuration Manager からコレクションを移行するには、オブジェクトの移行ジョブを使用します。  
+-   コレクション: サポートされているバージョンの System Center 2012 Configuration Manager または System Center Configuration Manager からコレクションを移行するには、オブジェクトの移行ジョブを使用します。  
 
 -   コンプライアンス設定:  
 
@@ -87,7 +91,7 @@ System Center Configuration Manager の移行では、作成したデータと�
 
     -   タスク シーケンス  
 
--   検索結果 - 保存された検索条件  
+-   検索結果: 保存された検索条件  
 
 -   ソフトウェア更新プログラム:  
 
@@ -105,7 +109,7 @@ System Center Configuration Manager の移行では、作成したデータと�
 
 -   仮想アプリケーション パッケージ  
 
- **Configuration Manager 2007 SP2 から移行できるオブジェクト:**  
+### <a name="objects-that-you-can-migrate-from-configuration-manager-2007-sp2"></a>Configuration Manager 2007 SP2 から移行できるオブジェクト
 
 -   開示通知 (旧称「提供情報」)  
 
@@ -117,7 +121,7 @@ System Center Configuration Manager の移行では、作成したデータと�
 
 -   境界  
 
--   コレクション - コレクションの移行ジョブを使用して、サポートされるバージョンの Configuration Manager 2007 からコレクションを移行します。  
+-   コレクション: コレクションの移行ジョブを使用して、サポートされるバージョンの Configuration Manager 2007 からコレクションを移行します。  
 
 -   コンプライアンス設定 (Configuration Manager 2007 では必要な構成管理とも呼ばれます):  
 
@@ -139,7 +143,7 @@ System Center Configuration Manager の移行では、作成したデータと�
 
     -   タスク シーケンス  
 
--   検索結果 - 検索フォルダー  
+-   検索結果: 検索フォルダー  
 
 -   ソフトウェア更新プログラム:  
 
@@ -162,7 +166,7 @@ System Center Configuration Manager の移行では、作成したデータと�
 
 -   AMT クライアントのプロビジョニング情報  
 
--   次を含むクライアント上のファイル:  
+-   次のような、クライアント上のファイル:  
 
     -   クライアント インベントリおよび履歴データ  
 
@@ -186,6 +190,6 @@ System Center Configuration Manager の移行では、作成したデータと�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

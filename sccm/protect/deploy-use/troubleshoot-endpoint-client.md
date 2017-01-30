@@ -2,7 +2,7 @@
 title: "Windows Defender または Endpoint Protection クライアントのトラブルシューティング | Microsoft Docs"
 description: "Windows Defender および Endpoint Protection の問題をトラブルシューティングする方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: eda5eb85aada88b77166582bb116cc680b2c0631
+ms.sourcegitcommit: 1432568286605d29683416885d7aa522c649016e
+ms.openlocfilehash: fde190f141fb55462755119b533519d05af3f3c3
 
 
 ---
@@ -29,80 +29,14 @@ ms.openlocfilehash: eda5eb85aada88b77166582bb116cc680b2c0631
 
 Windows Defender または Endpoint Protection で問題が発生した場合は、サポートについて組織のセキュリティ管理者に問い合わせてください。 また、次の問題のトラブルシューティングを試すこともできます。  
 
+-   [Windows Defender または Endpoint Protection の更新](#update-windows-defender-or-endpoint-protection)  
+-   [Windows Defender または Endpoint Protection サービスの開始](#starting-windows-defender-or-endpoint-protection-service)  
+-   [インターネット接続の問題](#internet-connection-issues)  
+-   [検出された脅威を修復できない](#detected-threat-cant-be-remediated)  
 -   [Endpoint Protection クライアントのインストール](#install-the-endpoint-protection-client)  
 
--   [Windows Defender または Endpoint Protection の更新](#update-windows-defender-or-endpoint-protection)  
-
--   [Windows Defender または Endpoint Protection サービスの開始](#starting-windows-defender-or-endpoint-protection-service)  
-
--   [インターネット接続の問題](#internet-connection-issues)  
-
--   [検出された脅威を修復できない](#detected-threat-cant-be-remediated)  
-
-##  <a name="install-the-endpoint-protection-client"></a>Endpoint Protection クライアントのインストール  
-
-> [!NOTE]  
->  Windows Defender は、Windows 10 PC のオペレーティング システムと共にインストールされます。  
-
- **現象**  
-
- インストールが不明な理由で失敗するか、0x80070643、0X8007064A、0x8004FF2E、0x8004FF01、0x8004FF07、0x80070002、0x8007064C、0x8004FF00、0x80070001、0x80070656、0x8004FF40、0xC0000156、0x8004FF41、0x8004FF0B、0x8004FF11、0x80240022、0x8004FF04、0x80070660、0x800106B5、0x80070715、0x80070005、0x8004EE00、0x8007003、0x800B0100、0x8007064E、0x8007007E などのエラー コードのエラー メッセージが表示されます。  
-
- コンピューターが Windows XP Service Pack 2 (SP2) を実行している場合は、以下のようなエラー メッセージが表示される場合があります。  
-
--   インストールを完了するために必要なフィルター マネージャー ロールアップ パッケージがインストール ウィザードで見つかりません。  
-
--   KB914882 セットアップ エラー、お使いのコンピューターにインストールされている言語が更新プログラムの言語と異なるため、Windows XP のファイルをセットアップで更新できません。  
-
- **原因**  
-
- Endpoint Protection は、他のセキュリティ プログラムが実行されているコンピューターにはインストールできません。 他のセキュリティ プログラムを削除しても、それらが完全にはアンインストールされない場合があります。 Endpoint Protection をインストールするには、正規品の Windows オペレーティング システムを実行している必要があります。  
-
- **解決方法**  
-
-> [!IMPORTANT]  
->  この問題の解決の途中で、コンピューターを再起動する必要があります。 このページにブックマークを設定して ([お気に入り] に追加して)、このトピックを簡単に再表示できるようにするか、印刷して簡単に参照できるようにしてください。  
-
-### <a name="step-1-remove-any-existing-security-programs"></a>手順 1: 既存のすべてのセキュリティ プログラムを削除する  
-
-1.  既存のすべてのインターネット セキュリティ プログラムを完全にアンインストールします。  
-
-2.  コンピューターを再起動する  
-
-3.  もう一度 Endpoint Protection をインストールします。 これで問題が解決しない場合は、次の手順に進みます。  
-
-### <a name="step-2-ensure-that-the-windows-installer-service-is-running"></a>手順 2: Windows インストーラー サービスが実行されていることを確認する  
-
-1.  **[スタート]** をクリックし、 **services.msc**を検索して、 **Enter**キーを押します。  
-
-2.  [ **Windows Installer**] を右クリックし、[ **開始**] をクリックします。 [ **開始** ] ボタンが使用できず、[ **停止** ] および [ **再開** ] ボタンが使用可能である場合は、このサービスが既に開始されていることを意味しています。  
-
-3.  [ **サービス** ] ページで [ **ファイル** ] メニューの [ **終了**] をクリックします。  
-
-4.  [ **開始**] をクリックします。 [ **プログラムとファイルの検索** ] ボックスで「 **command prompt**」と入力します。 [ **Command Prompt**] を右クリックし、[ **管理者として実行**] をクリックします。  
-
-5.  「 **MSIEXEC /REGSERVER**」と入力し、 **Enter**キーを押します。  
-
-    > [!NOTE]  
-    >  このコマンドが成功したか失敗したかは、表示されません。  
-
-6.  もう一度 Endpoint Protection をインストールします。 これで問題が解決しない場合は、次の手順に進みます。  
-
-### <a name="step-3-start-windows-in-selective-startup-mode"></a>手順 3: スタートアップのオプションを選択するモードで Windows を起動する  
-
-1.  **[スタート]** をクリックし、 **msconfig**を検索して、 **Enter**キーを押します。  
-
-2.  [ **全般** ] タブで [ **スタートアップのオプションを選択**] をクリックし、[ **スタートアップの項目を読み込む** ] チェック ボックスをオフにします。  
-
-3.  [ **サービス** ] タブで [ **Microsoft のサービスをすべて隠す** ] チェック ボックスをオンにし、一覧に残っているサービスのすべてのチェック ボックスをオフにします。  
-
-4.  [ **OK**] をクリックし、[ **再起動** ] をクリックして、コンピューターを再起動します。  
-
-5.  もう一度 Endpoint Protection をインストールしてみます。  
-
 ##  <a name="update-windows-defender-or-endpoint-protection"></a>Windows Defender または Endpoint Protection の更新  
- Windows Defender または   
-      Endpoint Protection は、ウイルスおよびスパイウェアの定義を最新の状態に維持するために、自動的に Microsoft Update と連携して動作します。  
+ Windows Defender または Endpoint Protection は、ウイルスおよびスパイウェアの定義を最新の状態に維持するために、自動的に Microsoft Update と連携して動作します。  
 
  **現象**  
 
@@ -156,15 +90,13 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 5.  **[OK]**をクリックします。  
 
-6.  Windows Defender または   
-          Endpoint Protection を開きます。 **[更新]** タブをクリックして、 **[更新]**をクリックします。  
+6.  Windows Defender または Endpoint Protection を開きます。 **[更新]** タブをクリックして、 **[更新]**をクリックします。  
 
 7.  問題が解決しない場合は、次の手順に進みます。  
 
 ### <a name="step-3-ensure-that-the-date-and-time-are-set-correctly-on-your-computer"></a>手順 3: コンピューターの日付と時刻が正しく設定されていることを確認する  
 
-1.  Windows Defender または   
-          Endpoint Protection  
+1.  Windows Defender または Endpoint Protection を開きます。  
 
 2.  受け取ったエラー メッセージにコード 0x80072f8f が含まれている場合、問題の原因はおそらく、コンピューターに設定されている日付と時刻が不正確なことです。  
 
@@ -206,9 +138,9 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
      **Cd\\**  
 
-     **Cd program files\microsoft security essentials**  
+     **Cd program files\windows defender**  
 
-     **Mpcmdrun â€“removedefinitions â€“all**  
+     **Mpcmdrun -RemoveDefinitions -all**  
 
      **終了**  
 
@@ -318,6 +250,70 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 -   ファイルの出所が明確でない場合、最も良い対処方法はコンピューターをフル スキャンすることです フル スキャンは完了までに時間がかかる場合がありますが、Windows Defender または Endpoint Protection で感染源を探し、除去できます。  
 
+##  <a name="install-the-endpoint-protection-client"></a>Endpoint Protection クライアントのインストール  
+
+> [!NOTE]  
+>  Windows Defender は、Windows 10 PC のオペレーティング システムと共にインストールされます。  
+
+ **現象**  
+
+ インストールが不明な理由で失敗するか、0x80070643、0X8007064A、0x8004FF2E、0x8004FF01、0x8004FF07、0x80070002、0x8007064C、0x8004FF00、0x80070001、0x80070656、0x8004FF40、0xC0000156、0x8004FF41、0x8004FF0B、0x8004FF11、0x80240022、0x8004FF04、0x80070660、0x800106B5、0x80070715、0x80070005、0x8004EE00、0x8007003、0x800B0100、0x8007064E、0x8007007E などのエラー コードのエラー メッセージが表示されます。  
+
+ コンピューターが Windows XP Service Pack 2 (SP2) を実行している場合は、以下のようなエラー メッセージが表示される場合があります。  
+
+-   インストールを完了するために必要なフィルター マネージャー ロールアップ パッケージがインストール ウィザードで見つかりません。  
+
+-   KB914882 セットアップ エラー、お使いのコンピューターにインストールされている言語が更新プログラムの言語と異なるため、Windows XP のファイルをセットアップで更新できません。  
+
+ **原因**  
+
+ Endpoint Protection は、他のセキュリティ プログラムが実行されているコンピューターにはインストールできません。 他のセキュリティ プログラムを削除しても、それらが完全にはアンインストールされない場合があります。 Endpoint Protection をインストールするには、正規品の Windows オペレーティング システムを実行している必要があります。  
+
+ **解決方法**  
+
+> [!IMPORTANT]  
+>  この問題の解決の途中で、コンピューターを再起動する必要があります。 このページにブックマークを設定して ([お気に入り] に追加して)、このトピックを簡単に再表示できるようにするか、印刷して簡単に参照できるようにしてください。  
+
+### <a name="step-1-remove-any-existing-security-programs"></a>手順 1: 既存のすべてのセキュリティ プログラムを削除する  
+**エンドポイント保護のみ**
+
+1.  既存のすべてのインターネット セキュリティ プログラムを完全にアンインストールします。  
+
+2.  コンピューターを再起動する  
+
+3.  もう一度 Endpoint Protection をインストールします。 これで問題が解決しない場合は、次の手順に進みます。  
+
+### <a name="step-2-ensure-that-the-windows-installer-service-is-running"></a>手順 2: Windows インストーラー サービスが実行されていることを確認する  
+
+1.  **[スタート]** をクリックし、 **services.msc**を検索して、 **Enter**キーを押します。  
+
+2.  [ **Windows Installer**] を右クリックし、[ **開始**] をクリックします。 [ **開始** ] ボタンが使用できず、[ **停止** ] および [ **再開** ] ボタンが使用可能である場合は、このサービスが既に開始されていることを意味しています。  
+
+3.  [ **サービス** ] ページで [ **ファイル** ] メニューの [ **終了**] をクリックします。  
+
+4.  [**スタート**] ボタンをクリックして [**コマンド プロンプト**] を検索します。 [ **Command Prompt**] を右クリックし、[ **管理者として実行**] をクリックします。  
+
+5.  「 **MSIEXEC /REGSERVER**」と入力し、 **Enter**キーを押します。  
+
+    > [!NOTE]  
+    >  このコマンドが成功したか失敗したかは、表示されません。  
+
+6.  もう一度 Endpoint Protection をインストールします。 これで問題が解決しない場合は、次の手順に進みます。  
+
+### <a name="step-3-start-windows-in-selective-startup-mode"></a>手順 3: スタートアップのオプションを選択するモードで Windows を起動する  
+
+1.  **[スタート]** をクリックし、 **msconfig**を検索して、 **Enter**キーを押します。  
+
+2.  [ **全般** ] タブで [ **スタートアップのオプションを選択**] をクリックし、[ **スタートアップの項目を読み込む** ] チェック ボックスをオフにします。  
+
+3.  [ **サービス** ] タブで [ **Microsoft のサービスをすべて隠す** ] チェック ボックスをオンにし、一覧に残っているサービスのすべてのチェック ボックスをオフにします。  
+
+4.  [ **OK**] をクリックし、[ **再起動** ] をクリックして、コンピューターを再起動します。  
+
+5.  もう一度 Endpoint Protection をインストールしてみます。  
+
+
+
 ### <a name="see-also"></a>関連項目  
  [Endpoint Protection クライアントのよく寄せられる質問](../../protect/deploy-use/endpoint-protection-client-faq.md)   
 
@@ -325,6 +321,6 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

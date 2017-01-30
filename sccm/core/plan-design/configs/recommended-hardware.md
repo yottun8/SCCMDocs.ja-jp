@@ -2,7 +2,7 @@
 title: "推奨ハードウェア | Microsoft Docs"
 description: "基本的な展開だけでなく、System Center Configuration Manager 環境を拡張するために役立つハードウェアの推奨事項を確認します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 3155c877a14f99e054cfa7ca4afaa73bae3f8cac
+ms.sourcegitcommit: d61c726d9690a1ec512b8dbab74b0f760012c880
+ms.openlocfilehash: 7caee70c327d84f1e016c689f824d843ccdb3b42
 
 
 ---
@@ -26,13 +26,13 @@ ms.openlocfilehash: 3155c877a14f99e054cfa7ca4afaa73bae3f8cac
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-以下の推奨事項は、サイト、サイト システム、およびクライアントのごく基本的な展開以上のものをサポートするために、 System Center Configuration Manager 環境を拡張する場合に役立つガイドラインです。 考えられるすべてのサイトと階層構成について説明することを意図したものではありません。  
+以下の推奨事項は、サイト、サイト システム、およびクライアントのごく基本的な展開以上のものをサポートするために、System Center Configuration Manager 環境を拡張する場合に役立つガイドラインです。 考えられるすべてのサイトと階層構成について説明することを意図したものではありません。  
 
  以下の各セクションの情報は、既定の構成で利用できる Configuration Manager 機能を使用するクライアントとサイトについて、その処理負荷に対応できるようにハードウェアを計画する場合のガイドとして使用してください。  
 
 
 ##  <a name="a-namebkmkscalesiesystemsa-site-systems"></a><a name="bkmk_ScaleSieSystems"></a> サイト システム  
- このセクションでは、最大数のクライアントをサポートし、大部分、あるいはすべての Configuration Manager 機能を使用する展開のための Configuration Manager サイト システムのお勧めのハードウェア構成を示します。 展開でサポートするクライアントが最大数よりも少なく、使用可能な機能をすべて使用するわけではない場合、必要なコンピューター リソースはより少なくて済みます。 一般的に、システム全体のパフォーマンスを制限する主な要因を順に挙げます。  
+ このセクションでは、最大数のクライアントをサポートし、大部分、あるいはすべての Configuration Manager 機能を使用する展開のための Configuration Manager サイト システムのお勧めのハードウェア構成を示します。 展開でサポートするクライアントが最大数よりも少なく、使用可能な機能をすべて使用するわけではない場合、必要なコンピューター リソースはより少なくて済む場合があります。 一般的に、システム全体のパフォーマンスを制限する主な要因を順に挙げます。  
 
 1.  ディスク I/O のパフォーマンス  
 
@@ -44,7 +44,7 @@ ms.openlocfilehash: 3155c877a14f99e054cfa7ca4afaa73bae3f8cac
 
 ###  <a name="a-namebkmkscalesiteservera-site-servers"></a><a name="bkmk_ScaleSiteServer"></a> サイト サーバー  
 
-|スタンドアロン プライマリ サイト|CPU コア|メモリ (GB)|SQL Server のメモリの割り当て (%)|  
+|スタンドアロン プライマリ サイト|CPU (コア)|メモリ (GB)|SQL Server のメモリの割り当て (%)|  
 |-------------------------------|---------------|---------------|----------------------------------------|  
 |同じサーバー上でデータベース サイトの役割を持つスタンドアロン プライマリ サイト サーバー<sup>1</sup>|16|96|80|  
 |リモート サイトのデータベースを使用するスタンドアロン プライマリ サイト サーバー|8|16|-|  
@@ -57,31 +57,31 @@ ms.openlocfilehash: 3155c877a14f99e054cfa7ca4afaa73bae3f8cac
 |子プライマリ サイトのリモート データベース サーバー|16|64|90|  
 |セカンダリ サイト サーバー|8|16|-|  
 
- <sup>1</sup> サイト サーバーと SQL Server が同じコンピューターにインストールされている場合、展開はサイトとクライアントの最大の [Sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers) をサポートします。 ただし、この構成により [System Center Configuration Manager の高可用性オプション](/sccm/protect/understand/high-availability-options) (SQL Server クラスターの使用など) が制限されることがあります。  さらに、SQL Server と Configuration Manager サイト サーバーの両方を同じコンピューターで実行する場合、その両方をサポートするためには高い I/O 要件が必要になるため、大規模な展開を使用するユーザーはリモート SQL Server コンピューターでの構成を使用することを検討する必要があります。  
+ <sup>1</sup> サイト サーバーと SQL Server が同じコンピューターにインストールされている場合、展開はサイトとクライアントの最大の [Sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers) をサポートします。 ただし、この構成により [System Center Configuration Manager の高可用性オプション](/sccm/protect/understand/high-availability-options) (SQL Server クラスターの使用など) が制限されることがあります。 また、SQL Server と Configuration Manager サイト サーバーの両方を同じコンピューターで実行する場合、その両方をサポートするためには高い I/O 要件が必要になるため、大規模な展開を使用するユーザーはリモート SQL Server コンピューターでの構成を使用することをお勧めします。  
 
 ###  <a name="a-namebkmkremotesitesystema-remote-site-system-servers"></a><a name="bkmk_RemoteSiteSystem"></a> リモート サイト システム サーバー  
  以下のガイダンスは、1 つのサイト システムの役割を保有しているコンピューター用です。 複数のサイト システムの役割を同じコンピューターにインストールする場合は、調整を計画します。  
 
-|サイト システムの役割|CPU コア|メモリ (GB)|ディスク領域: GB|  
+|サイト システムの役割|CPU (コア)|メモリ (GB)|ディスク領域 (GB)|  
 |----------------------|---------------|---------------|--------------------|  
 |管理ポイント|4|8|50|  
-|配布ポイント|2|8|オペレーティング システム、および展開するコンテンツの保存の必要による|  
+|配布ポイント|2|8|オペレーティング システムで必要とされ、展開するコンテンツを保存するために使用する|  
 |サイト システム コンピューター上の Web サービスと Web サイトによるアプリケーション カタログ|4|16|50|  
-|ソフトウェアの更新ポイント<sup>1</sup>|8|16|オペレーティング システム、また展開する更新プログラムの保存の必要による|  
+|ソフトウェアの更新ポイント<sup>1</sup>|8|16|オペレーティング システムで必要とされ、展開する更新プログラムを保存するために使用する|  
 |その他すべてのサイト システムの役割|4|8|50|  
 
  <sup>1</sup> ソフトウェアの更新ポイントをホストするコンピューターには、IIS アプリケーション プールの次の構成が必要です。  
 
 -   **WsusPool キューの長さ** を **2000**に増やす  
 
--   **WsusPool プライベート メモリの制限** を 4 倍に増やすか、 **0** (無制限) に設定する  
+-   **WsusPool プライベート メモリの制限** を 4 倍に増やすか、**0** (無制限) に設定する  
 
 ###  <a name="a-namebkmkdiskspacea-disk-space-for-site-systems"></a><a name="bkmk_DiskSpace"></a> サイト システムのディスク領域  
  ディスク割り当てと構成によって、Configuration Manager のパフォーマンスが向上します。 Configuration Manager 環境はそれぞれ異なるため、実装することの価値が以下のガイダンスとは異なる場合もあります。  
 
  最高のパフォーマンスを実現するには、個々の専用 RAID ボリュームに各オブジェクトを配置します。 また、最高のパフォーマンスを実現するには、すべてのデータ ボリューム (Configuration Manager およびそのデータベース ファイル) に RAID 10 を使用します。  
 
-|データの使用|最小限のディスク領域|クライアント数 25,000|クライアント数 50,000|クライアント数 100,000|クライアント数 150,000|クライアント数 700,000 (中央管理サイト)|  
+|データの使用|最小限のディスク領域|クライアント数&25;,000|クライアント数&50;,000|クライアント数&100;,000|クライアント数&150;,000|クライアント数&700;,000 (中央管理サイト)|  
 |----------------|------------------------|--------------------|--------------------|---------------------|---------------------|-----------------------------------------------------|  
 |オペレーティング システム|オペレーティング システムのガイダンスを参照してください。|オペレーティング システムのガイダンスを参照してください。|オペレーティング システムのガイダンスを参照してください。|オペレーティング システムのガイダンスを参照してください。|オペレーティング システムのガイダンスを参照してください。|オペレーティング システムのガイダンスを参照してください。|  
 |Configuration Manager のアプリケーションおよびログ ファイル|25 GB|50 GB|100 GB|200 GB|300 GB|200 GB|  
@@ -110,7 +110,7 @@ ms.openlocfilehash: 3155c877a14f99e054cfa7ca4afaa73bae3f8cac
     -   SQL Server 2014 Express: 10 GB  
 
 ##  <a name="a-namebkmkscaleclienta-clients"></a><a name="bkmk_ScaleClient"></a> クライアント  
- このセクションでは、Configuration Manager クライアント ソフトウェアをインストールして管理されているコンピューター用の推奨ハードウェア構成を示します。  
+ このセクションでは、Configuration Manager クライアント ソフトウェアを使用して管理するコンピューター用の推奨ハードウェア構成を示します。  
 
 ### <a name="client-for-windows-computers"></a>Windows コンピューターのクライアント  
  組み込みオペレーティング システムなど、Configuration Manager で管理する Windows ベースのコンピューターの最小要件は次のとおりです。  
@@ -119,7 +119,7 @@ ms.openlocfilehash: 3155c877a14f99e054cfa7ca4afaa73bae3f8cac
 
 -   **ディスク領域:** 500 MB の空きディスク領域。Configuration Manager クライアントのキャッシュには、5 GB の空きディスク領域をお勧めします。 次に示すように、カスタマイズした設定を使用して Configuration Manager クライアントをインストールすると、必要とされるディスク領域が少なくなります。  
 
-    -   CCMSetup のコマンドライン プロパティ /skipprereq を使用して、クライアントには不要なファイルがインストールされないようにします。 たとえば、クライアントがアプリケーション カタログを使用しない場合は、 **CCMSetup.exe /skipprereq:silverlight.exe** とします。  
+    -   CCMSetup のコマンドライン プロパティ /skipprereq を使用して、クライアントには不要なファイルがインストールされないようにします。 たとえば、クライアントがアプリケーション カタログを使用しない場合は、**CCMSetup.exe /skipprereq:silverlight.exe** を実行します。  
 
     -   Client.msi のプロパティ SMSCACHESIZE を使用して、既定の 5120 MB よりも小さいキャッシュ ファイルを設定します。 最小サイズは 1 MB です。 たとえば、 **CCMSetup.exe SMSCachesize=2** は、サイズが 2 MB のキャッシュを作成します。  
 
@@ -128,13 +128,15 @@ ms.openlocfilehash: 3155c877a14f99e054cfa7ca4afaa73bae3f8cac
     > [!TIP]  
     >  一般に、標準の Windows コンピューターよりもディスク サイズが小さい Windows Embedded デバイスの場合は、最小のディスク領域を使用するクライアントのインストールが実用的です。  
 
+
+
  Configuration Manager のオプション機能のための追加的な最小ハードウェア要件は、次のとおりです。  
 
--   **オペレーティング システムの展開: **384MB の RAM  
+-   **オペレーティング システムの展開:** 384 MB の RAM  
 
--   **ソフトウェア センター:** 500MHz のプロセッサ  
+-   **ソフトウェア センター:** 500 MHz のプロセッサ  
 
--   **リモート コントロール:** Pentium 4 ハイパー スレッド 3GHz (シングル コア) または同等の CPU。最適な結果を得るには少なくとも 1GB の RAM が必要です  
+-   **リモート コントロール:** Pentium 4 ハイパー スレッド 3 GHz (シングル コア) または同等の CPU。最適な結果を得るには少なくとも 1 GB の RAM が必要です。  
 
 ### <a name="client-for-linux-and-unix"></a>Linux および UNIX 用のクライアント  
  以下は、Configuration Manager で管理する Linux および UNIX サーバーの最小要件です。  
@@ -158,10 +160,10 @@ ms.openlocfilehash: 3155c877a14f99e054cfa7ca4afaa73bae3f8cac
 
 |DPI 設定|最小解像度|  
 |-----------------|------------------------|  
-|96/100%|1024 × 768|  
-|120/125%|1280 × 960|  
-|144/150%|1600 × 1200|  
-|196/200%|2500 × 1600|  
+|96/100%|1024 x 768|  
+|120/125%|1280 x 960|  
+|144/150%|1600 x 1200|  
+|196/200%|2500 x 1600|  
 
  **PowerShell のサポート:**  
 
@@ -175,9 +177,9 @@ PowerShell のほかに、Windows Management Framework (WMF) 3.0 および 4.0 �
 PowerShell は、Configuration Manager コンソールのインストールの前後を問わずインストールできます。  
 
 ##  <a name="a-namebkmkscalelaba-lab-deployments"></a><a name="bkmk_ScaleLab"></a> ラボ展開  
- Configuration Manager のラボ展開とテストの展開には、次の最小ハードウェア推奨事項を使用します。 これらの推奨事項はすべてのサイトの種類に当てはまり、最大 100 クライアントで使用する場合のものです。  
+ Configuration Manager のラボ展開とテストの展開には、次の最小ハードウェア推奨事項を使用します。 これらの推奨事項はすべてのサイトの種類に適用され、最大 100 のクライアントで使用する場合のものです。  
 
-|ロール|CPU コア|メモリ (GB)|ディスク領域 (GB)|  
+|ロール|CPU (コア)|メモリ (GB)|ディスク領域 (GB)|  
 |----------|---------------|-------------------|-----------------------|  
 |サイトとデータベース サーバー|2 - 4|7 - 12|100|  
 |サイト システム サーバー|1 - 4|2 - 4|50|  
@@ -185,6 +187,6 @@ PowerShell は、Configuration Manager コンソールのインストールの�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

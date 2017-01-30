@@ -2,7 +2,7 @@
 title: "サポートされるサイト システム サーバー | Microsoft Docs"
 description: "System Center Configuration Manager サイトまたはサイト システムの役割をホストできる Windows バージョンについて説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d23b98b362fb016c53974f851c48fa7200d2b2e3
-ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
+ms.sourcegitcommit: bebbeebba76ab5cf0c517fcb00b7b6a516a08e3e
+ms.openlocfilehash: 12fe730d924979eec2ef55ea80a1fa90b7b47464
 
 
 ---
-# <a name="supported-operating-systems-for-system-center-configuration-manager--site-system-servers"></a>System Center Configuration Manager サイト システム サーバーのサポートされるオペレーティング システム
+# <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>System Center Configuration Manager サイト システム サーバーのサポートされるオペレーティング システム
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -36,7 +36,7 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
 
 
-## <a name="windows-server-2016-----standard-datacenter"></a>Windows Server 2016   - Standard、Datacenter
+## <a name="windows-server-2016-standard-and-datacenter"></a>Windows Server 2016: Standard、Datacenter
 Windows Server 2016 は、Configuration Manager バージョン 1606 以降および KB3186654 以降の修正プログラム ロールアップ (2016 年 10 月にリリースされた 1606 のベースライン バージョン) でサポートされています。
 
 **サイト サーバー:**  
@@ -59,7 +59,7 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
 -   配布ポイント  
 
-     配布ポイントは、それぞれに要件の異なる、数種類の構成をサポートします。また、サーバーへのインストールだけでなく、クライアント オペレーティング システムへのインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
+     配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
 
 -   Endpoint Protection ポイント  
 
@@ -85,7 +85,7 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
 -   状態移行ポイント
 
-## <a name="windows-server-2012-r2-x64---standard-datacenter"></a>Windows Server 2012 R2 (x64) - Standard、Datacenter  
+## <a name="windows-server-2012-r2-x64-standard-and-datacenter"></a>Windows Server 2012 R2 (x64): Standard、Datacenter  
 **サイト サーバー:**  
 
 -   中央管理サイト  
@@ -106,7 +106,7 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
 -   配布ポイント  
 
-     配布ポイントは、それぞれに要件の異なる、数種類の構成をサポートします。また、サーバーへのインストールだけでなく、クライアント オペレーティング システムへのインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
+     配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
 
 -   Endpoint Protection ポイント  
 
@@ -132,7 +132,7 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
 -   状態移行ポイント  
 
-## <a name="windows-server-2012-x64---standard-datacenter"></a>Windows Server 2012 (x64) - Standard、Datacenter  
+## <a name="windows-server-2012-x64-standard-and-datacenter"></a>Windows Server 2012 (x64): Standard、Datacenter  
 **サイト サーバー:**  
 
 -   中央管理サイト  
@@ -153,7 +153,7 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
 -   配布ポイント  
 
-     配布ポイントは、それぞれに要件の異なる、数種類の構成をサポートします。また、サーバーへのインストールだけでなく、クライアント オペレーティング システムへのインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
+     配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
 
 -   Endpoint Protection ポイント  
 
@@ -179,7 +179,7 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
 -   状態移行ポイント  
 
-## <a name="windows-server-2008-r2-with-sp1-x64-----standard-enterprise-datacenter"></a>Windows Server 2008 R2 SP1 (x64)   - Standard、Enterprise、Datacenter  
+## <a name="windows-server-2008-r2-with-sp1-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 R2 SP1 (x64): Standard、Enterprise、Datacenter  
  [マイクロソフト サポート ライフサイクル](https://support.microsoft.com/lifecycle)で詳述するように、Windows Server 2008 R2 が延長サポートになり、メインストリーム サポートが終了しました。 Configuration Manager を使用したサイト システム サーバーとしてのこれらのオペレーティング システムの将来のサポートの詳細については、「[System Center Configuration Manager から削除された機能と非推奨の機能](../../../core/plan-design/changes/removed-and-deprecated-features.md)」を参照してください。  
 
 **サイト サーバー:**  
@@ -202,7 +202,7 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
 -   配布ポイント  
 
-     配布ポイントは、それぞれに要件の異なる、数種類の構成をサポートします。また、サーバーへのインストールだけでなく、クライアント オペレーティング システムへのインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
+     配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
 
 -   Endpoint Protection ポイント  
 
@@ -228,7 +228,7 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
 -   状態移行ポイント  
 
-## <a name="windows-server-2008-with-sp2-x86-x64---standard-enterprise-datacenter"></a>Windows Server 2008 SP2 (x86、x64) - Standard、Enterprise、Datacenter  
+## <a name="windows-server-2008-with-sp2-x86-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 SP2 (x86, x64): Standard、Enterprise、Datacenter  
  [マイクロソフト サポート ライフサイクル](https://support.microsoft.com/lifecycle)で詳述するように、Windows Server 2008 が延長サポートになり、メインストリーム サポートが終了しました。 Configuration Manager を使用したサイト システム サーバーとしてのこれらのオペレーティング システムの将来のサポートの詳細については、「[System Center Configuration Manager から削除された機能と非推奨の機能](../../../core/plan-design/changes/removed-and-deprecated-features.md)」を参照してください。  
 
 **サイト サーバー:**  
@@ -255,7 +255,7 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
     -   このオペレーティング システムの配布ポイントは、PXE ではサポートされますが、EFI モードでのクライアント コンピューターのネットワーク ブートはサポートしません。 クライアント コンピューターのレガシ モードでの BIOS ブートまたは EFI ブートはサポートされます。  
 
-    -   配布ポイントは、それぞれに要件の異なる、数種類の構成をサポートします。また、サーバーへのインストールだけでなく、クライアント オペレーティング システムへのインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
+    -   配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
 
 -   Endpoint Protection ポイント  
 
@@ -281,7 +281,7 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
 -   状態移行ポイント  
 
-## <a name="windows-10-x86-x64---pro-enterprise"></a>Windows 10 (x86、x64) - Pro、Enterprise  
+## <a name="windows-10-x86-x64-pro-and-enterprise"></a>Windows 10 (x86, x64): Pro、Enterprise  
 **サイト システム サーバー:**  
 
 -   配布ポイント  
@@ -290,9 +290,9 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
     -   このオペレーティング システムのバージョンの配布ポイントでは、マルチキャストをサポートしません。  
 
-    -   配布ポイントは、それぞれに要件の異なる、数種類の構成をサポートします。また、サーバーへのインストールだけでなく、クライアント オペレーティング システムへのインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
+    -   配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
 
-## <a name="windows-81-x86-x64---professional-enterprise"></a>Windows 8.1 (x86、x64) - Professional、Enterprise  
+## <a name="windows-81-x86-x64-professional-and-enterprise"></a>Windows 8.1 (x86、x64): Professional、Enterprise  
 **サイト システム サーバー:**  
 
 -   配布ポイント  
@@ -301,9 +301,9 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
     -   このオペレーティング システムのバージョンの配布ポイントでは、マルチキャストをサポートしません。  
 
-    -   配布ポイントは、それぞれに要件の異なる、数種類の構成をサポートします。また、サーバーへのインストールだけでなく、クライアント オペレーティング システムへのインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
+    -   配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
 
-## <a name="windows-8-x86-x64---professional-enterprise-distribution-point"></a>Windows 8 (x86、x64) - Professional、Enterprise の配布ポイント  
+## <a name="windows-8-x86-x64-professional-and-enterprise"></a>Windows 8 (x86、x64): Professional、Enterprise
 **サイト システム サーバー:**  
 
 -   配布ポイント  
@@ -312,9 +312,9 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
     -   このオペレーティング システムのバージョンの配布ポイントでは、マルチキャストをサポートしません。  
 
-    -   配布ポイントは、それぞれに要件の異なる、数種類の構成をサポートします。また、サーバーへのインストールだけでなく、クライアント オペレーティング システムへのインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
+    -   配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
 
-## <a name="windows-7-with-sp1-x86-x64---professional-enterprise-ultimate"></a>Windows 7 SP1 (x86、x64) - Professional、Enterprise、Ultimate  
+## <a name="windows-7-with-sp1-x86-x64-professional-enterprise-and-ultimate"></a>Windows 7 SP1 (x86、x64): Professional、Enterprise、Ultimate  
 **サイト システム サーバー:**  
 
 -   配布ポイント  
@@ -323,24 +323,24 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
     -   このオペレーティング システムのバージョンの配布ポイントでは、マルチキャストをサポートしません。  
 
-    -   配布ポイントは、それぞれに要件の異なる、数種類の構成をサポートします。また、サーバーへのインストールだけでなく、クライアント オペレーティング システムへのインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
+    -   配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
 
 ## <a name="the-server-core-installation-of-windows-server-2012"></a>Windows Server 2012 の Server Core のインストール  
- 前のオペレーティング システムだけでなく、Windows Server 2012 の Server Core インストールが、次の制限付きの配布ポイントとしての使用でサポートされます。  
+ 記載されている前のオペレーティング システムだけでなく、Windows Server 2012 の Server Core インストールが、次の制限付きの配布ポイントとしての使用でサポートされます。  
 
--   X64 のみがサポートされています。  
+-   64 ビット バージョンのみがサポートされています。  
 
--   このオペレーティング システムの配布ポイントでは、PXE またはマルチキャストをサポートしません。  
+-   このオペレーティング システムの配布ポイントでは、PXE またはマルチキャストをサポートしません。
 
 ## <a name="the-server-core-installation-of-windows-server-2012-r2"></a>Windows Server 2012 R2 の Server Core のインストール  
- 前のオペレーティング システムだけでなく、Windows Server 2012 R2 の Server Core インストールが、次の制限付きの配布ポイントとしての使用でサポートされます。  
+ 記載されている前のオペレーティング システムだけでなく、Windows Server 2012 R2 の Server Core インストールが、次の制限付きの配布ポイントとしての使用でサポートされます。  
 
--   X64 のみがサポートされています。  
+-   64 ビット バージョンのみがサポートされています。
 
 -   このオペレーティング システムの配布ポイントでは、PXE またはマルチキャストをサポートしません。  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

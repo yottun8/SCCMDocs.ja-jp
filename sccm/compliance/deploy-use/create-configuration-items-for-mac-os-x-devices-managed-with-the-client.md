@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager クライアントを使用して管理されている Mac OS X デバイスの構成項目を作成する方法 | Microsoft Docs"
 description: "System Center Configuration Manager の Mac OS X 構成項目使用して、Mac OS X デバイスの設定を管理します。"
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 12/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: f3d08d7f8efb592383e1099850665a2e9f3b2b5f
+ms.sourcegitcommit: 8bbc0d0132fa4276ade8914d5ac3945ef1d12a4b
+ms.openlocfilehash: be7a9464ef4ac6042a46652a325583a355f23846
 
 
 ---
@@ -54,7 +54,11 @@ System Center Configuration Manager の **Mac OS X (カスタム)** 構成項目
 
              たとえば、Safari Web ブラウザーの設定を編集する場合は、ことができます **com.apple.Safari.plist**です。  
 
-        -   **キー** – Mac コンピューターのコンプライアンスを評価するキーの名前を指定します。 */<ディクショナリ\>/<キー名\>* という構文を使用します。  
+        -   **キー** – Mac コンピューターのコンプライアンスを評価するキーの名前を指定します。 次の構文を使用します。 
+        
+            ```
+            */<dictionary\>/<keyname\>*.  
+            ```     
 
             > [!IMPORTANT]  
             >  キー名は大文字と小文字が区別され、Mac コンピューターのキー名と異なる場合は評価されません。 また、一度指定したキー名は編集できません。 キー名を編集する必要がある場合は、削除して、設定を再作成します。  
@@ -80,7 +84,7 @@ System Center Configuration Manager の **Mac OS X (カスタム)** 構成項目
 
 12. **[OK]** をクリックして設定を保存し、 **[設定の作成]** ダイアログ ボックスを閉じた後、必要な数だけ設定を追加します。  
 
-13. [**コンプライアンス規則**] ページで、構成項目のコンプライアンスを定義する条件を指定します。 設定のコンプライアンスを評価するには、コンプライアンス規則が少なくとも 1 つ必要です。 **[新規作成]** をクリックして、新しい規則を追加します。  
+13. [**コンプライアンス規則**] ページで、構成項目のコンプライアンスを定義する条件を指定します。 設定のコンプライアンスを評価するには、コンプライアンス規則が少なくとも&1; つ必要です。 **[新規作成]** をクリックして、新しい規則を追加します。  
 
 14. [規則の作成] **** ダイアログ ボックスで、次の情報を入力します。  
 
@@ -117,9 +121,9 @@ System Center Configuration Manager の **Mac OS X (カスタム)** 構成項目
 
             -   **次の値以下**  
 
-            -   **次のいずれか** - テキスト ボックスで 1 行ごとに 1 つのエントリを指定します。  
+            -   **次のいずれか** - テキスト ボックスで&1; 行ごとに&1; つのエントリを指定します。  
 
-            -   **次のいずれでもない** - テキスト ボックスで 1 行ごとに 1 つのエントリを指定します。  
+            -   **次のいずれでもない** - テキスト ボックスで&1; 行ごとに&1; つのエントリを指定します。  
 
         -   **サポートされている場合は対応していない規則を修復する** - このオプションを選択すると、Configuration Manager がコンプライアンス非対応の規則を自動的に修復します。  
 
@@ -173,6 +177,6 @@ System Center Configuration Manager の **Mac OS X (カスタム)** 構成項目
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

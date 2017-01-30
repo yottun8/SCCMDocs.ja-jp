@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager の Technical Preview 1612 の機能 | Microsoft Docs"
 description: "System Center Configuration Manager の Technical Preview バージョン 1612 で使用できる機能について説明します。"
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 15d442ba52b991ea7888d0113610fe4800424f8d
-ms.openlocfilehash: f0421efbc01443288d3591fa9748a8f71fef8a0d
+ms.sourcegitcommit: e7075eb675353be130fdcc867d9e4dd1009dab35
+ms.openlocfilehash: 2de36316b20b2a7b2937d767e618f4fec1affb69
 
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1612 の機能
@@ -55,7 +55,7 @@ Technical Preview バージョン 1612 以降、データ ウェアハウス サ
 | **3** |  データ ウェアハウス サービス ポイントでは、同期されたデータのコピーをデータ ウェアハウス データベースに転送して保存します。 |  
 | **A** |  組み込みのレポート機能を使用して、データに関する要求が作成され、SQL Server Reporting Services を使用してレポート サービス ポイントに渡されます。 |  
 | **B** |   レポートの大部分は最新の情報に関するものです、これらの要求は、サイト データベースに対して実行されます。 |  
-| **C** | レポートで履歴データを要求する場合は、*カテゴリ*が**データ ウェアハウス**になっているレポートの 1 つで、データ ウェアハウス データベースに対して要求が実行されます。   |  
+| **C** | レポートで履歴データを要求する場合は、*カテゴリ*が**データ ウェアハウス**になっているレポートの&1; つで、データ ウェアハウス データベースに対して要求が実行されます。   |  
 
 ### <a name="prerequisites-for-the-data-warehouse-service-point-and-database"></a>データ ウェアハウス サービス ポイントとデータベースの前提条件
 - 階層には、レポート サービス ポイント サイト システムロールがインストールされている必要があります。
@@ -67,10 +67,11 @@ Technical Preview バージョン 1612 以降、データ ウェアハウス サ
   - 既定のインスタンス、または名前付きインスタンス
   - *SQL Server クラスター*。 この構成は機能しますが、テストは行われておらず、ベスト エフォート形式のサポートとなります。
   - サイト データベースまたはレポート サービス ポイントのデータベースのいずれかと同じ場所に配置されている場合。 ただし、別々のサーバーへのインストールをお勧めします。  
+- *レポート サービス ポイントのアカウント*として使用されるアカウントには、データ ウェアハウス データベースへの **db_datareader** アクセス許可が必要です。  
 - データベースは、*SQL Server AlwaysOn 可用性グループ*ではサポートされません。
 
 ### <a name="install-the-data-warehouse"></a>データ ウェアハウスのインストール
-データ ウェアハウス サイト システムのロールは、**サイト システムのロールの追加ウィザード**または**サイト システム サーバーの作成ウィザード**を使用して中央管理サイトまたはプライマリ サイトにインストールします。 詳細については、[サイト システムのロールのインストール](/sccm/core/servers/deploy/configure/install-site-system-roles)に関するページを参照してください。 階層では、このロールの複数のインスタンスがサポートされますが、各サイトではそれぞれ 1 つのインスタンスのみサポートされます。  
+データ ウェアハウス サイト システムのロールは、**サイト システムのロールの追加ウィザード**または**サイト システム サーバーの作成ウィザード**を使用して中央管理サイトまたはプライマリ サイトにインストールします。 詳細については、[サイト システムのロールのインストール](/sccm/core/servers/deploy/configure/install-site-system-roles)に関するページを参照してください。 階層では、このロールの複数のインスタンスがサポートされますが、各サイトではそれぞれ&1; つのインスタンスのみサポートされます。  
 
 ロールをインストールすると、指定した SQL Server のインスタンス上にデータ ウェアハウス データベースが Configuration Manager によって作成されます。 既存のデータベース名を指定した場合 ([データ ウェアハウス データベースを新しい SQL Server に移動する場合と同様に](#move-the-data-warehouse-database))、Configuration Manager では、新しいデータベースは作成されず、代わりに指定したデータベースが使用されます。
 
@@ -100,6 +101,8 @@ Technical Preview バージョン 1612 以降、データ ウェアハウス サ
   - **同期の間隔 (分)** - 分単位で値を指定します。 指定の間隔が経過すると、新しい同期が開始されます。 サポートされる間隔の範囲は 60 分 ～ 1,440 分 (24 時間) です。
   - **スケジュール** - 同期を実行する日を指定します。
 
+**レポート ポイント アクセス**:   
+データ ウェアハウスの役割をインストールしたら、*レポート サービス ポイントのアカウント*として使用されるアカウントに、データ ウェアハウス データベースへの **db_datareader** アクセス許可があることを確認します。
 
 #### <a name="troubleshoot-installation-and-data-synchronization"></a>インストールおよびデータ同期のトラブルシューティング
 データ ウェアハウス サービス ポイントのインストールまたはデータの同期に関する問題を調査するには、次のログを使用します。
@@ -153,7 +156,7 @@ Technical Preview 1612 をインストールすると、Technical Preview サイ
 この Technical Preview でリリースされたツールは、以前の Configuration Manager 製品用にリリースされた旧バージョンの類似ツールに置き換わるものとして作成されました。 このツール バージョンは 2017 年 3 月 1 日を過ぎると機能しなくなります。ただし、このツールが Current Branch の一部として、または実稼働用の定例外リリースとしてリリースされるまで、今後の Technical Preview と一緒に新しいバージョンがリリースされる予定です。
 
 ### <a name="requirements"></a>［要件］  
- - このツールは、配布ポイントをホストするコンピューター上で直接実行することも、別のサーバーからリモートで実行することもできます。 ツールは、一度に 1 つの配布ポイントに対してのみ実行できます。
+ - このツールは、配布ポイントをホストするコンピューター上で直接実行することも、別のサーバーからリモートで実行することもできます。 ツールは、一度に&1; つの配布ポイントに対してのみ実行できます。
  - ツールを実行するユーザー アカウントは、Configuration Manager 階層の完全な権限を持つ管理者と同じロールベース管理権限を直接有する必要があります。  完全な権限を持つ管理者のアクセス許可がある Windows セキュリティ グループのメンバーとして、ユーザー アカウントにアクセス許可が付与された場合、このツールは機能しません。
 
 ### <a name="modes-of-operation"></a>操作モード
@@ -313,6 +316,6 @@ Azure Portal でデバイス登録のための多要素認証 (MFA) を設定で
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

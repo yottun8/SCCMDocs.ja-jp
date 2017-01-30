@@ -2,7 +2,7 @@
 title: CEIP | Microsoft Docs
 description: "System Center Configuration Manager のカスタマー エクスペリエンス向上プログラムの設定について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 76d268adda39b7d30f91d640ded81df85ba300d3
+ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
+ms.openlocfilehash: dddb6d960269a0d7655597cd9a1ccb31b382853c
 
 
 ---
@@ -25,18 +25,18 @@ ms.openlocfilehash: 76d268adda39b7d30f91d640ded81df85ba300d3
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager コンソールのインストール中には、**カスタマー エクスペリエンス向上プログラム** (CEIP) への参加を選ぶ機会があります。 既定では CEIP は無効になっていますが、以前に有効にした場合は、引き続き有効のままになります。  
+System Center Configuration Manager コンソールのインストール中に、**カスタマー エクスペリエンス向上プログラム** (CEIP) への参加を選択できます。 既定では CEIP は無効になっていますが、以前に有効にした場合は、引き続き有効のままになります。  
 
 -   CEIP は、[System Center Configuration Manager の診断結果と使用状況データ](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)とは別です。  
 
--   CEIP では、コンソールごとに、ユーザー インターフェイスで各要素がクリックされた回数などのデータが収集されます。  
+-   CEIP では、コンソールごとに、ユーザー インターフェイスで各要素が選択された回数などのデータが収集されます。  
 
 -   オンラインで公開されている [CEIP のプライバシーに関する声明](https://www.microsoft.com/products/ceip/en-us/privacypolicy.mspx)をお読みください。  
 
-CEIP 設定は、コンソールのインストールごとに変更できます。 コンソールで、コンソールの Backstage タブ (ドロップダウン矢印が表示されている左上のタブ) に移動し、 **[カスタマー エクスペリエンス向上プログラム]** を選んで設定を変更します。  
+CEIP 設定は、コンソールのインストールごとに変更できます。 コンソールで、コンソールの Backstage タブ (ドロップダウン矢印が示されている左上のタブ) に移動し、**[カスタマー エクスペリエンス向上プログラム]** を選択して設定を変更します。  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 
