@@ -2,7 +2,7 @@
 title: "1610 のチェックリスト | System Center Configuration Manager"
 description: "System Center Configuration Manager バージョン 1610 に更新する前に、実行するアクションについて説明します。"
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 1/7/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,15 +16,15 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0c7d32a80559a4aa684ea1533cd36d0ef977fbfc
-ms.openlocfilehash: 25bffa256cbe70fb590eccb641c94f572f618ef3
+ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
+ms.openlocfilehash: 3ad5ca180759769bc22300eb406df4f606bfbd13
 
 ---
 # <a name="checklist-for-installing-update-1610-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム 1610 をインストールするためのチェックリスト
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager の Current Branch を利用するとき、バージョン 1610 のコンソール内の更新プログラムをインストールし、階層をバージョン 1606 から更新できます。 階層でバージョン 1511、1602、1606 を実行している場合、バージョン 1610 に更新できます。 
+System Center Configuration Manager の Current Branch を利用するとき、バージョン 1610 のコンソール内の更新プログラムをインストールし、階層をバージョン 1606 から更新できます。 階層でバージョン 1511、1602、1606 を実行している場合、バージョン 1610 に更新できます。
 
 バージョン 1610 の更新プログラムを得るには、階層の最上位サイトでサービス接続ポイントのサイト システムの役割を利用する必要があります。 これはオンラインまたはオフライン モードで可能です。 階層で Microsoft からダウンロードした更新プログラム パッケージは、**[管理] &gt; [概要] &gt; [クラウド サービス] &gt; [更新とサービス]** にあります。
 
@@ -45,7 +45,7 @@ Current Branch バージョンの詳細については、「[System Center Confi
 **サイト:**  
 更新プログラム 1610 は、階層の最上位サイトのみにインストールすることができます。 つまり、中央管理サイトがある場合はそこからインストールを開始します。そうでない場合は、スタンドアロン プライマリ サイトからインストールを開始します。 更新プログラムを最上位サイトでインストールすると、子サイトで次の更新動作が行われます。
 
--   中央管理サイトで更新プログラムのインストールが完了したら、子プライマリ サイトで更新プログラムが自動的にインストールされます。 サービス期間を使用して、サイトが更新プログラムをインストールするタイミングを制御することができます。 バージョン 1606 より前では、サービス期間はメンテナンス期間と呼ばれました。 詳細については、「[Service Windows for site servers (サイト サーバーのサービス時間帯)](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_ServiceWindow)」を参照してください。
+-   中央管理サイトで更新プログラムのインストールが完了したら、子プライマリ サイトで更新プログラムが自動的にインストールされます。 サービス期間を使用して、サイトが更新プログラムをインストールするタイミングを制御することができます。 バージョン 1606 より前では、サービス期間はメンテナンス期間と呼ばれました。 詳細については、「[サイト サーバーのサービス ウィンドウ](/sccm/core/servers/manage/service-windows)」を参照してください。
 
 -   プライマリ親サイトが更新プログラムのインストールを完了したら、Configuration Manager コンソール内からセカンダリ サイトを手動で更新する必要があります。 セカンダリ サイト サーバーの自動更新はサポートされていません。
 
@@ -143,7 +143,7 @@ Configuration Manager では、セカンダリ サイトのバックアップと
 **サービス期間を使用する計画を立て、サイトが更新プログラムをインストールするタイミングを制御する:**   
 サービス期間を使用して、プライマリ サイト サーバーに適用される、そのサイトに対する更新プログラムをインストールできる期間を定義することができます。
 
-これは、階層内のサイトが更新プログラムをインストールするタイミングの制御に役立ちます。 バージョン 1606 より前では、サービス期間はメンテナンス期間と呼ばれました。 詳細については、「[Service Windows for site servers (サイト サーバーのサービス時間帯)](/sccm/core/servers/manage/install-in-console-updates#bkmk_servicewindow)」を参照してください。
+これは、階層内のサイトが更新プログラムをインストールするタイミングの制御に役立ちます。 バージョン 1606 より前では、サービス期間はメンテナンス期間と呼ばれました。 詳細については、「[サイト サーバーのサービス ウィンドウ](/sccm/core/servers/manage/service-windows)」を参照してください。
 
 **セットアップ前提条件チェッカーを実行する:**   
 更新プログラムが**利用可能**としてコンソールに表示されているとき、更新プログラムのインストール前に、前提条件チェッカーを別個に実行できます。 (サイトへの更新プログラムのインストール時に、前提条件チェッカーが再度実行されます。)
@@ -162,6 +162,6 @@ Configuration Manager では、セカンダリ サイトのバックアップと
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

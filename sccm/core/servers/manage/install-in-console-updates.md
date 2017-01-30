@@ -1,8 +1,8 @@
 ---
-title: "コンソール内の更新プログラム | System Center Configuration Manager"
+title: "コンソール内の更新プログラム | Microsoft Docs"
 description: "System Center Configuration Manager は Microsoft クラウドと同期して更新プログラムを取得します。その更新プログラムはコンソール内からインストールできます。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: b9721737b4181d8f5e41224c3e2c32ae41647554
+ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
+ms.openlocfilehash: 00d9738a271ba47abcbf3c4b427a05910a0c2355
 
 
 ---
@@ -51,11 +51,11 @@ System Center Configuration Manager は Microsoft クラウド サービスと�
 
 -   サービス接続ポイントは、サイトに関する使用状況の情報をアップロードするために使用します。 この情報は、Microsoft クラウド サービスが、インフラストラクチャの現在のバージョンで利用可能な更新プログラムを識別するのに役立ちます。 詳細については、「[System Center Configuration Manager の診断結果と使用状況データ](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)」を参照してください。  
 
--   サービス接続ポイントは、Microsoft Intune によるデバイス管理に使用されます。また、Configuration Manager オンプレミス モバイル デバイス管理を利用したデバイス管理に使用されます。 詳細については、「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../../mdm/plan-design/hybrid-mobile-device-management.md)」を参照してください。  
+-   サービス接続ポイントは、Microsoft Intune によるデバイス管理に使用されます。また、Configuration Manager オンプレミス モバイル デバイス管理を利用したデバイス管理に使用されます。 詳細については、「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)」を参照してください。  
 
 更新プログラムがダウンロードされるときの動作をよく理解するには、次のトピックを参照してください。  
 
--   [フローチャート - System Center Configuration Manager の更新プログラムのダウンロード](../../../core/servers/manage/download-updates-flowchart.md)。  
+-   [フローチャート - System Center Configuration Manager の更新プログラムのダウンロード](../../../core/servers/manage/download-updates-flowchart.md)
 
 -   [フローチャート - System Center Configuration Manager のレプリケーションの更新](../../../core/servers/manage/update-replication-flowchart.md)  
 
@@ -100,13 +100,14 @@ Configuration Manager コンソール内から新しい更新プログラムを�
 
 - 1511 または 1602 から 1606 に更新します。「[1606 に更新するためのチェックリスト](../../../core/servers/manage/checklist-for-installing-update-1606.md)」を参照してください。  
 
+- 1511、1602、または 1606 から 1610 に更新します。「[1606 に更新するためのチェックリスト](../../../core/servers/manage/checklist-for-installing-update-1610.md)」を参照してください。  
 
 ###  <a name="a-namebkmkstep2a-step-2-test-the-database-upgrade-before-installing-an-update"></a><a name="bkmk_step2"></a> 手順 2: 更新プログラムをインストールする前のデータベースのアップグレードのテスト  
 1602 の更新など、階層内の新しい更新プログラムをインストールする前に、サイト データベースのアップグレードをテストする必要があります。 サイト データベースのバックアップへの更新プログラムのインストールをテストするコマンド ライン オプションの名前は **testdbupgrade**です。  
 
 Configuration Manager の旧バージョンとは異なり、更新プログラムのインストールが失敗した場合に、サイトの回復を実行する必要はありません。代わりに、更新プログラムのインストールを再試行できます。 したがって、データベースのテスト アップグレードの重要度は以前の製品バージョンより低くなりますが、これは依然として推奨される手順です。  
 
-##### <a name="to-run-testdbupgrade-before-installing-an-update"></a>更新プログラムのインストール前に testdbupgrade を実行する方法  
+#### <a name="to-run-testdbupgrade-before-installing-an-update"></a>更新プログラムのインストール前に testdbupgrade を実行する方法  
 
 1.  更新後のバージョンを実行するサイトの **CD.Latest** フォルダーからソース ファイルのセットを取得します。 これには、そのバージョンの System Center Configuration Manager を実行するラボ環境またはテスト環境にサイトをまずインストールする必要がある場合があります。  
 
@@ -136,13 +137,13 @@ Configuration Manager の旧バージョンとは異なり、更新プログラ�
 ###  <a name="a-namebkmkstep3a-step-3-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step3"></a> 手順 3: 更新プログラムをインストールする前の前提条件チェッカーの実行  
 更新プログラムをインストールする前に、その更新プログラムに対して前提条件チェックを実行することを検討します。 次の場合には、更新プログラムをインストールする前に、前提条件チェックを実行します。  
 
--   更新ファイルは他のサイトにレプリケートされてから、実際にインストールされます。  
+-   更新ファイルは他のサイトにレプリケートされてからインストールされます。  
 
 -   更新プログラムのインストールを選択すると、前提条件チェックが再び自動的に実行されます。  
 
 その後に、更新プログラムをインストールするときには、前提条件チェックの警告を無視するように更新プログラムを構成するオプションがあります。  
 
-##### <a name="to-run-the-prerequisite-checker-before-installing-an-update"></a>更新プログラムをインストールする前に前提条件チェッカーを実行する方法  
+#### <a name="to-run-the-prerequisite-checker-before-installing-an-update"></a>更新プログラムをインストールする前に前提条件チェッカーを実行する方法  
 
 1.  Configuration Manager コンソールで、**[管理]**、**[クラウド サービス]**、**[更新サービス]** の順に進みます。  
 
@@ -161,7 +162,7 @@ Configuration Manager の旧バージョンとは異なり、更新プログラ�
 
  更新プログラムをインストールするプロセス、およびサイトのコンポーネントとサイト システムの役割を再インストールするアクションが業務に及ぼす影響が少ない場合は、各サイトの通常業務時間外に更新プログラムをインストールする計画を立てることをお勧めします。  
 
--   中央管理サイトが更新プログラムのインストールを完了したら、子プライマリ サイトが更新を自動的に開始します。 これは既定のプロセスであり、推奨されるプロセスです。 ただし、[サイト サーバーのサービス ウィンドウ](#bkmk_ServiceWindow)を使用して、プライマリ サイトが更新プログラムをインストールするタイミングを制御できます。  
+-   中央管理サイトが更新プログラムのインストールを完了したら、子プライマリ サイトが更新を自動的に開始します。 これは既定のプロセスであり、推奨されるプロセスです。 ただし、[サイト サーバーのサービス ウィンドウ](/sccm/core/servers/manage/service-windows)を使用して、プライマリ サイトが更新プログラムをインストールするタイミングを制御できます。  
 
 -   プライマリ親サイトへの更新プログラムのインストールが完了したら、Configuration Manager コンソール内からセカンダリ サイトを手動で更新する必要があります。 セカンダリ サイト サーバーの自動更新はサポートされていません。  
 
@@ -208,12 +209,13 @@ Configuration Manager の旧バージョンとは異なり、更新プログラ�
 -   Configuration Manager コンソールで、**[監視]**、**[概要]**、**[更新とサービスの状態]** ノードの順に進みます。 このノードには、現在インストールされている更新プログラム パッケージのみのインストール状況が表示されます。  
 
     バージョン 1606 以降では、監視しやすくするために、更新プログラム パックのインストールは次のフェーズに分割されます。 各フェーズについて、どのログ ファイルに詳細が表示されるかなど、追加の情報が提供されます。  
-    -   **ダウンロード** (これは、サービス接続ポイントのサイト システムの役割がインストールされている最上位層のサイトにのみ適用されます)
+    -   **ダウンロード** (このフェーズは、サービス接続ポイントのサイト システムの役割がインストールされている最上位層のサイトにのみ適用されます)
     -   **Replication**
-    - **前提条件の確認**
-    - **インストール**
+    -   **前提条件の確認**
+    -   **インストール**
+    -   **インストール後** (このフェーズはバージョン 1610 以降で利用可能)
 
--   **&lt;ConfigMgr_Installation_Directory>\Logs\\** の **CMUpdate.log** ファイルを表示します。  
+-   **&lt;ConfigMgr_Installation_Directory>\Logs** の **CMUpdate.log** ファイルを表示できます。  
 
 **4.更新プログラムのインストール完了時**  
 最初のサイトの更新完了後:  
@@ -323,7 +325,7 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 プレリリース機能は、運用環境での早期テストのためにこの製品に含まれていますが、運用環境で使用することはできません。
 
 同意するには、コンソールで、 **[管理]** > **[サイトの構成]** > **[サイト]**に移動してから、 **[階層設定]**を選択します。 **[全般]** タブで、 **[プレリリース機能を使用することに同意する]**を選択します。
- -  同意する操作は階層ごとに 1 回限りの操作であり、元に戻すことはできません  
+ -  同意する操作は階層ごとに&1; 回限りの操作であり、元に戻すことはできません  
  -  同意するまでは、更新プログラム 1606 またはそれ以降のバージョンの更新プログラムに含まれている新しいプレリリース機能を有効にすることはできません
 
  > [!NOTE]
@@ -344,21 +346,14 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 
  |機能                    |プレリリース版として追加 |完全機能として追加 |  
 |----------------------------|---------------------|------------------------|
+| クライアントへのコンテンツ配布のピア キャッシュ |  [バージョン 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| クラウド管理ゲートウェイ |  [バージョン 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| クライアント データ ソース ダッシュボード |  [バージョン 1610](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Microsoft Operations Management Suite (OMS) コネクタ  | [バージョン 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| クラスター対応のコレクションのサービス (サーバー グループの提供)| [バージョン 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#bkmk_servergroups)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| クラスター対応のコレクションのサービス (サーバー グループの提供)| [バージョン 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 |System Center Configuration Manager が管理する PC の条件付きアクセス | [バージョン 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
 
 
-
-
-##  <a name="a-namebkmkservicewindowa-service-windows-for-site-servers"></a><a name="bkmk_ServiceWindow"></a> サイト サーバーのサービス ウィンドウ  
-サイト サーバー上では、サービス ウィンドウを構成して、Configuration Manager のインフラストラクチャ更新プログラムをサイト サーバーにいつ適用できるかを制御できます。  各サイト サーバーは複数のウィンドウをサポートしており、インフラストラクチャの更新プログラムをインストールすることが許可されるウィンドウは、そのサイト サーバーのために構成されているすべてのウィンドウの組み合わせによって決まります。  
-
-**サービス ウィンドウを構成するには、以下を行います。**  
-
-1.  Configuration Manager コンソールで、**[管理]**、**[サイトの構成]**、**[サイト]** を開き、サービス ウィンドウを構成するサイト サーバーを選びます。  
-
-2.  次に、サイト サーバーの **[プロパティ]** を編集し、 **[サービス ウィンドウ]** タブを選びます。そのタブで、サイト サーバーのサービス ウィンドウを 1 つ以上設定できます。  
 
 ##  <a name="a-namebkmkfaqa-why-dont-i-see-certain-updates-in-my-console"></a><a name="bkmk_faq"></a> 特定の更新プログラムがコンソールに表示されない理由  
  Microsoft クラウド サービスと正常に同期した後に、特定の更新プログラムや他の更新プログラムがコンソールに表示されない理由としては、次のことが考えられます。  
@@ -369,10 +364,10 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 
 -   お使いのアカウントには、Configuration Manager コンソールに更新プログラムを表示するための適切なロール ベースの管理アクセス許可がありません。
 
-    更新プログラムを表示するために必要なアクセス許可について、このトピックの「[更新プログラムを管理するためのアクセス許可](../../../core/servers/manage/install-in-console-updates.md#Permissions-to-view-and-manage-updates-and-features)」を参照し、コンソール内から機能を有効にしてください。
+    更新プログラムを表示するために必要なアクセス許可について、このトピックの「[更新プログラムを管理するためのアクセス許可](../../../core/servers/manage/install-in-console-updates.md#permissions-to-view-and-manage-updates-and-features)」を参照し、コンソール内から機能を有効にしてください。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 

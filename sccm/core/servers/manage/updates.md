@@ -2,7 +2,7 @@
 title: "更新プログラム | Microsoft Docs"
 description: "推奨更新プログラムを簡単に特定してインストールできる、**更新とサービス**と呼ばれるコンソール内サービス方式について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6e964f015d5f007311f46f51126b31e181abd0ec
-ms.openlocfilehash: e7b19b6e1f4720c0bdc69ef7f78366fd5d3414d0
+ms.sourcegitcommit: 5314bcb434b5b540f80cdfe32002df7b8fed6195
+ms.openlocfilehash: 52d5ad7a348e0489f43ac6cb46af930499ef6cf2
 
 
 ---
@@ -26,7 +26,11 @@ ms.openlocfilehash: e7b19b6e1f4720c0bdc69ef7f78366fd5d3414d0
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager では、**更新とサービス**と呼ばれるコンソール内でのサービス提供方式が採られています。この方式により、Configuration Manager インフラストラクチャ向けの推奨される更新プログラムを簡単に特定し、インストールすることができます。 このコンソール内でのサービス提供方式は、環境固有の問題を解決する必要があるお客様向けの修正プログラムなど、アウトオブバンドの更新プログラムによって補完されます。  
+System Center Configuration Manager では、**更新とサービス**と呼ばれるコンソール内でのサービス提供方式が採られています。この方式により、Configuration Manager インフラストラクチャ向けの推奨される更新プログラムを簡単に検索し、インストールすることができます。 このコンソール内でのサービス提供方式は、環境固有の問題を解決する必要があるお客様向けの修正プログラムなど、アウトオブバンドの更新プログラムによって補完されます。  
+
+> [!TIP]
+> System Center Configuration Manager のサイトと階層のインフラストラクチャの管理において、*アップグレード*、*更新*、および*インストール* という用語は&3; つの異なる概念を説明するものです。 各用語の使用方法については、「[サイトと階層のインフラストラクチャでのアップグレード、更新、およびインストールについて](/sccm/core/understand/upgrade-update-install)」を参照してください。
+
 
  **次のトピックは、System Center Configuration Manager 向けのさまざまな更新プログラムを探してインストールする方法を理解するうえで役立ちます。**  
 
@@ -38,17 +42,18 @@ System Center Configuration Manager では、**更新とサービス**と呼ば�
 
 -   [修正プログラム インストーラーを使用して、System Center Configuration Manager の更新プログラムをインストールする](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
 
-> [!TIP]  
-> Technical Preview ブランチを使用する場合は、「[System Center Configuration Manager の Technical Preview](/sccm/core/get-started/technical-preview)」でブランチに固有の追加情報を参照してください。
+
+Technical Preview ブランチを使用する場合は、「[System Center Configuration Manager の Technical Preview](/sccm/core/get-started/technical-preview)」でブランチに固有の追加情報を参照してください。
+
 
 ##  <a name="a-namebkmkbaselinesa-baseline-and-update-versions"></a><a name="bkmk_Baselines"></a> 基準バージョンと更新プログラムのバージョン  
- この System Center Configuration Manager の現在のブランチの初期リリースは、バージョン 1511 です。 これが基準バージョンです。  
+ System Center Configuration Manager の現在のブランチの初期リリースは、バージョン 1511 です。これが基準バージョンです。 最近のバージョンでは、1606 が基準としてリリースされました。  
 
 -   新しい階層に新しいサイトをインストールするときは、最新の基準バージョンを使用してください。  
 
 -   System Center 2012 Configuration Manager からアップグレードする際には基準バージョンを使用する必要があります。  
 
--   新しい基準バージョンは定期的にリリースされます。 新しい基準バージョンを使用して新しい階層をインストールする場合は、元の 1511 の基準バージョンをインストールしてからインフラストラクチャをアップグレードしないようにしてください。  
+-   新しい基準バージョンは定期的にリリースされます。 最新の基準バージョンを使用して新しい階層をインストールする場合、古いバージョンの Configuration Manager をインストールした後に、インフラストラクチャのアップグレードを実行して最新の状態にしないでください。  
 
 基準バージョンのインストール後、Configuration Manager の新バージョンはコンソール内の更新プログラムとして提供されます。 コンソール内の更新プログラムにより、インフラストラクチャは最新バージョンの Configuration Manager に更新されます。  
 
@@ -70,10 +75,10 @@ Configuration Manager の次のバージョンは、基準バージョンと更�
 
 |バージョン|公開日|Baseline|コンソール内の更新プログラム|  
 |-------------|-----------------------|--------------|------------------------|  
-|**1511**<br /><br /> 5.00.8325.1000|2015 年 12 月 8 日|○|×|  
-|**1602**<br /><br /> 5.00.8355.1000|2016 年 3 月 11 日|×|○|
-|**1606**<br /><br /> 5.00.8412.1000|2016 年 7 月 22 日|いいえ|○|
-|**1606** と 1606 修正プログラム ロールアップ (KB3186654) </br></br>5.00.8412.1307 *(注 1)* |2016 年 10 月 12 日|○|いいえ|
+|**1511**<br /><br /> 5.00.8325.1000|2015 年&12; 月&8; 日|○|×|  
+|**1602**<br /><br /> 5.00.8355.1000|2016 年&3; 月&11; 日|×|○|
+|**1606**<br /><br /> 5.00.8412.1000|2016 年&7; 月&22; 日|いいえ|○|
+|**1606** と 1606 修正プログラム ロールアップ (KB3186654) </br></br>5.00.8412.1307 *(注 1)* |2016 年&10; 月&12; 日|○|いいえ|
 |**1610**<br /><br /> 5.00.8458.1000|11/18/2016|いいえ|○|
 *(注 1)* この 1606 基準メディアは、Microsoft System Center 2016 または System Center Configuration Manager (Current Branch および Long-Term Servicing Branch 1606) リリースの一部として使用できます。
 
@@ -115,7 +120,7 @@ Configuration Manager の次のバージョンは、基準バージョンと更�
 
 -   前提条件の確認が自動的に実行されます。 この確認は、インストールの開始前にも実行できます。  
 
--   更新プログラムは中央管理サイト (このサイトが存在する場合) とプライマリ サイトに自動的にインストールされます。 [サイト サーバーのサービス期間](../../../core/servers/manage/install-in-console-updates.md#bkmk_ServiceWindow)を利用することで、各プライマリ サイト サーバーでインフラストラクチャを更新するタイミングを制御できます。  
+-   更新プログラムは中央管理サイト (このサイトが存在する場合) とプライマリ サイトに自動的にインストールされます。 [サイト サーバーのサービス期間](../../../core/servers/manage/service-windows.md)を利用することで、各プライマリ サイト サーバーでインフラストラクチャを更新するタイミングを制御できます。  
 
 -   サイト サーバーが更新されると、関係するサイト システムの役割がすべて自動的に更新されます (SMS プロバイダーのインスタンスを含む)。 サイトに更新プログラムがインストールされた後で、Configuration Manager コンソールからコンソール ユーザーに対してコンソールの更新を求めるメッセージが表示されます。  
 
@@ -131,7 +136,7 @@ Configuration Manager の次のバージョンは、基準バージョンと更�
 
 通常、アウトオブバンドの修正プログラムについては、Configuration Manager の展開に伴う問題を解決する方法を探しているときに、Microsoft カスタマー サポート サービス、サポート技術情報の記事、[System Center Configuration Manager チーム ブログ](https://blogs.technet.microsoft.com/configmgrteam)を通じて調べることができます。  
 
-こうした更新プログラムは、以下の 2 つの方法のどちらかを使用して手動でインストールします。  
+こうした更新プログラムは、以下の&2; つの方法のどちらかを使用して手動でインストールします。  
 
 -   **更新登録ツール:** このツールを使うと、修正プログラムを手動で Configuration Manager コンソールにインポートできます。その後、自動的に検出されるコンソール内の更新プログラムと同様に、コンソールで更新プログラムをインストールできます。 この方式は、 **.update.exe**というファイル名の構造を持つ更新プログラムに使用されます。  この種の修正プログラムの完全なファイル名は、**&lt;製品\>-&lt;製品バージョン\>-&lt;サポート技術情報の記事 ID\>-ConfigMgr.Update.exe** となります。  
 
@@ -143,6 +148,6 @@ Configuration Manager の次のバージョンは、基準バージョンと更�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

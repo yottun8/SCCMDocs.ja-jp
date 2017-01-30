@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager へのアップグレード| Microsoft Docs"
 description: "System Center 2012 Configuration Manager を実行しているサイトおよび階層から適切に一括アップグレードを実行するための手順を説明します。"
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6cf3ac76ea3fb9c9b093ed4927255102930bbe26
-ms.openlocfilehash: d4e6a4c128ae077d2a3cb2883d80b6bf71b7f458
+ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
+ms.openlocfilehash: 27d18a7c5b13f488cafb36ace2e437fe6a50c598
 
 
 ---
@@ -29,6 +29,8 @@ System Center 2012 Configuration Manager を実行しているサイトおよび
 
  System Center 2012 Configuration Manager からアップグレードする前に、正常なアップグレードを妨げる可能性のある特定の構成を該当するサイトから削除し、複数のサイトが関係している場合は、特定のアップグレード順序に従う必要があります。  
 
+ > [!TIP]
+ > System Center Configuration Manager のサイトと階層のインフラストラクチャの管理において、*アップグレード*、*更新*、および*インストール* という用語は&3; つの異なる概念を説明するものです。 各用語の使用方法については、「[サイトと階層のインフラストラクチャでのアップグレード、更新、およびインストールについて](/sccm/core/understand/upgrade-update-install)」を参照してください。
 
 ##  <a name="a-namebkmkpatha-in-place-upgrade-paths"></a><a name="bkmk_path"></a> 一括アップグレード パス  
 **バージョン 1606 へのアップグレード**  
@@ -247,7 +249,7 @@ System Center Configuration Manager にアップグレードすると、自動�
 
 -   **ソフトウェア センター:**  
     次のソフトウェア センター項目が既定値にリセットされます。  
-    -   [**勤務先情報** ] は、月曜日から金曜日の **午前 5 時** から **午後 10 時** Monday から Friday.  
+    -   [**勤務先情報** ] は、月曜日から金曜日の **午前&5; 時** から **午後&10; 時** Monday から Friday.  
     -   [ **コンピューターのメンテナンス** ] の値は [ **コンピューターがプレゼンテーション モードのときはソフトウェア センターを停止する**] に設定されます。  
     -   [ **リモート コントロール** ] の値は、そのコンピューターに割り当てられているクライアント設定の値に設定されます。  
 -   **ソフトウェア更新プログラムの概要作成スケジュール：**  
@@ -386,6 +388,6 @@ Configuration Manager サイトをアップグレードするには、次の手�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

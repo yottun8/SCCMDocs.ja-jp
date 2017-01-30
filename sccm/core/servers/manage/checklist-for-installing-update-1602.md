@@ -2,7 +2,7 @@
 title: "1602 のチェックリスト | Microsoft Docs"
 description: "System Center Configuration Manager をバージョン 1511 からバージョン 1602 に更新する前に、実行するアクションについて説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 78f8e9474afe208c5d91d27e8d2a202f4ed6154e
+ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
+ms.openlocfilehash: bac7ad8558186c6f451956297f3a791ae12176de
 
 
 ---
@@ -31,7 +31,7 @@ System Center Configuration Manager をバージョン 1511 からバージョ�
 
  更新プログラム 1602 は、階層の最上位サイトのみにインストールすることができます。 つまり、中央管理サイトがある場合はそこからインストールを開始します。そうでない場合は、スタンドアロン プライマリ サイトからインストールを開始します。  
 
--   中央管理サイトで更新プログラムのインストールが完了したら、子プライマリ サイトで更新プログラムが自動的にインストールされます。 メンテナンス期間を使用して、サイトが更新プログラムをインストールするタイミングを制御できます。 1602 更新プログラムのリリース以降、メンテナンス期間はサービス時間帯に名前変更されています。 詳細については、「[Service Windows for site servers (サイト サーバーのサービス時間帯)](../../../core/servers/manage/install-in-console-updates.md#bkmk_ServiceWindow)」を参照してください。  
+-   中央管理サイトで更新プログラムのインストールが完了したら、子プライマリ サイトで更新プログラムが自動的にインストールされます。 メンテナンス期間を使用して、サイトが更新プログラムをインストールするタイミングを制御できます。 1602 更新プログラムのリリース以降、メンテナンス期間はサービス時間帯に名前変更されています。 詳細については、「[サイト サーバーのサービス ウィンドウ](/sccm/core/servers/manage/service-windows)」を参照してください。  
 
 -   プライマリ親サイトが更新プログラムのインストールを完了したら、Configuration Manager コンソール内からセカンダリ サイトを手動で更新する必要があります。 セカンダリ サイト サーバーの自動更新はサポートされていません。  
 
@@ -119,7 +119,7 @@ Configuration Manager では、セカンダリ サイトのバックアップと
  **メンテナンス期間の使用を計画**  
  **して、メンテナンス期間の使用を計画して、サイト サーバーが更新プログラムをインストールするタイミングを制御する:** メンテナンス期間を使用して、プライマリ サイト サーバーに適用される、そのサイトに対する更新プログラムをインストールできる期間を定義することができます。   
 これは、階層内のサイトが更新プログラムをインストールするタイミングの制御に役立ちます。   
-1602 更新プログラムのリリース以降、メンテナンス期間はサービス時間帯に名前変更されています。 詳細については、「[Service Windows for site servers (サイト サーバーのサービス時間帯)](../../../core/servers/manage/install-in-console-updates.md#bkmk_ServiceWindow)」を参照してください。  
+1602 更新プログラムのリリース以降、メンテナンス期間はサービス時間帯に名前変更されています。 詳細については、「[サイト サーバーのサービス ウィンドウ](/sccm/core/servers/manage/service-windows)」を参照してください。  
 
  **セットアップ前提条件チェッカーを実行する:**  1602 更新プログラムをインストールする前に、更新プログラムのインストールとは別に前提条件チェッカーを実行することができます。 サイトへの更新プログラムのインストールド時に、前提条件チェッカーが再度実行されます。  
 詳細については、「[System Center Configuration Manager の更新プログラム](../../../core/servers/manage/updates.md)」トピックの「**手順 3: 更新プログラムをインストールする前の前提条件チェッカーの実行**」を参照してください。  
@@ -135,6 +135,6 @@ Configuration Manager では、セカンダリ サイトのバックアップと
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

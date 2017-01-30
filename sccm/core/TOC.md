@@ -4,6 +4,7 @@
 ### [ユーザー補助機能](understand/accessibility-features.md)
 ##  [Configuration Manager の基本情報](understand/fundamentals.md)
 ### [サイトおよび階層の基礎](understand/fundamentals-of-sites-and-hierarchies.md)
+#### [サイトと階層のインフラストラクチャでのアップグレード、更新、およびインストールについて](understand/upgrade-update-install.md)
 ### [デバイスの管理の基礎](understand/fundamentals-of-managing-devices.md)
 ### [クライアント管理の基礎](understand/fundamentals-of-client-management-tasks.md)
 ### [セキュリティの基礎](understand/fundamentals-of-security.md)
@@ -60,7 +61,7 @@
 ###  [サイト管理のセキュリティとプライバシー](plan-design/hierarchy/security-and-privacy-for-site-administration.md)
 
 ##   [ネットワーク インフラストラクチャの計画](plan-design/network/configure-firewalls-ports-domains.md)
-###  [Active Directory スキーマを拡張する](plan-design/network/extend-the-active-directory-schema.md)
+###  [Active Directory スキーマの準備](plan-design/network/extend-the-active-directory-schema.md)
 ###  [サイト システムをサポートするための Windows Server の準備](plan-design/network/prepare-windows-servers.md)
 ###  [サイト システム サーバーの Web サイト](plan-design/network/websites-for-site-system-servers.md)
 ###  [PKI 証明書の要件](plan-design/network/pki-certificate-requirements.md)
@@ -87,7 +88,7 @@
 ##   [ラボでの Configuration Manager の評価](get-started/evaluate-with-lab-environment.md)
 ###  [ラボのセットアップ](get-started/set-up-your-lab.md)
 
-##   [Technical Preview](get-started/technical-preview.md) 
+##   [Technical Preview](get-started/technical-preview.md)
 ###  [1612 の機能](get-started/capabilities-in-technical-preview-1612.md)
 ###  [1611 の機能](get-started/capabilities-in-technical-preview-1611.md)
 ###  [1610 の機能](get-started/capabilities-in-technical-preview-1610.md)
@@ -122,7 +123,8 @@
 #    [サーバーおよび役割の展開](servers/deploy/start-using.md)
 
 ##   インストール インフラストラクチャ
-###  [セットアップを実行する前に](servers/deploy/install/setup-downloader.md)
+###  [インストール メディアを取得する](servers/deploy/install/get-install-media.md)
+###  セットアップを実行する前に
 #### [セットアップ ダウンローダー](servers/deploy/install/setup-downloader.md)
 #### [前提条件チェッカー](servers/deploy/install/prerequisite-checker.md)
 ###  [サイトのインストール](servers/deploy/install/installing-sites.md)
@@ -167,6 +169,7 @@
 ###  [コンソール内の更新プログラムのインストール](servers/manage/install-in-console-updates.md)
 #### [フローチャート - 更新プログラムのダウンロード](servers/manage/download-updates-flowchart.md)
 #### [フローチャート - レプリケーションの更新](servers/manage/update-replication-flowchart.md)
+###  [サイト サーバーのサービス ウィンドウ](servers/manage/service-windows.md)
 ###  [サービス接続ツールの使用](servers/manage/use-the-service-connection-tool.md)
 ###  [更新登録ツールの使用](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [修正プログラム インストーラーの使用](servers/manage/use-the-hotfix-installer-to-install-updates.md)
@@ -218,6 +221,7 @@
 ###  [Wake On LAN の構成方法](clients/deploy/configure-wake-on-lan.md)
 ###  [Windows コンピューターにクライアントを展開する方法](clients/deploy/deploy-clients-to-windows-computers.md)
 ###  [UNIX および Linux サーバーにクライアントを展開する方法](clients/deploy/deploy-clients-to-unix-and-linux-servers.md)
+###  [Mac にクライアントを展開する準備](clients/deploy/prepare-to-deploy-mac-clients.md)
 ###  [Mac にクライアントを展開する方法](clients/deploy/deploy-clients-to-macs.md)
 ###  [クライアントをサイトに割り当てる方法](clients/deploy/assign-clients-to-a-site.md)
 ###  [クライアント ステータスを構成する方法](clients/deploy/configure-client-status.md)
@@ -231,6 +235,7 @@
 ###  [クライアントを管理する方法](clients/manage/manage-clients.md)
 ###  [Linux および UNIX クライアントを管理する方法](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [OMS へのデータの同期](clients/manage/sync-data-microsoft-operations-management-suite.md)
+###  [Mac クライアントを維持する](clients/manage/maintain-mac-clients.md)
 
 ##   [Manage clients on the Internet](clients/manage/manage-clients-internet.md) (インターネット上のクライアントの管理)
 ###  [Plan for cloud management gateway](clients/manage/plan-cloud-management-gateway.md)(クラウド管理ゲートウェイの計画)
@@ -260,7 +265,6 @@
 
 ##   ソフトウェア インベントリ
 ###  [ソフトウェア インベントリの概要](clients/manage/inventory/introduction-to-software-inventory.md)
-###  [ソフトウェア インベントリからフォルダーを除外する方法](clients/manage/inventory/exclude-folders-from-software-inventory.md)
 ###  [ソフトウェア インベントリを構成する方法](clients/manage/inventory/configure-software-inventory.md)
 ###  [リソース エクスプローラーを使用してソフトウェア インベントリを表示する方法](clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)
 ###  [ソフトウェア インベントリのセキュリティとプライバシー](clients/manage/inventory/security-and-privacy-for-software-inventory.md)
@@ -293,7 +297,7 @@
 ###  [電源管理のセキュリティとプライバシー](clients/manage/power/security-and-privacy-for-power-management.md)
 
 ##   [クライアントをアップグレードする](clients/manage/upgrade/upgrade-clients.md)
-###  [Test client upgrades in a preproduction collection](clients/manage/upgrade/test-client-upgrades.md) (実稼働前コレクションでのクライアント アップグレードのテスト)
+###  [実稼働前コレクションのクライアント アップグレードをテストする方法](clients/manage/upgrade/test-client-upgrades.md)
 ###  [Exclude Windows clients from upgrades](clients/manage/upgrade/exclude-clients-windows.md) (アップグレードから Windows クライアントを除外する)
 ###  [Upgrade Windows clients](clients/manage/upgrade/upgrade-clients-for-windows-computers.md) (Windows クライアントのアップグレード)
 ###  [Upgrade Linux and UNIX clients](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md) (Linux および UNIX クライアントのアップグレード)
@@ -301,6 +305,6 @@
 ###  [Upgrade analytics](clients/manage/upgrade/upgrade-analytics.md) (アップグレード分析)
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

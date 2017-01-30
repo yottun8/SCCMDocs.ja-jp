@@ -2,7 +2,7 @@
 title: "サイトのインストールの準備 | Microsoft Docs"
 description: "複数のサイトのインストール中に時間を節約し、エラーを回避するために、これらの詳細を確認してください。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 0534d1eb587cb01f35d811d72ddfe6ceb07e5b7c
+ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
+ms.openlocfilehash: 42a7ae3b3c1064fe7cc7def9fdc3649e0d0829b2
 
 ---
 # <a name="prepare-to-install-system-center-configuration-manager-sites"></a>System Center Configuration Manager サイトのインストールを準備する
@@ -25,11 +25,11 @@ ms.openlocfilehash: 0534d1eb587cb01f35d811d72ddfe6ceb07e5b7c
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 1 つ以上の System Center Configuration Manager サイトの適切な展開を準備するには、この記事の詳細を理解してください。 次の手順で、複数のサイトのインストールの時間を節約し、1 つ以上のサイトの再インストールが必要になるような失敗を防ぎます。
- > [!TIP]
- >  次のシナリオは、次と同様が、System Center Configuration Manager の現在ブランチ サイトのインストールと似ていますが、異なります。
- > -  **アップグレード**: System Center Configuration Manager をインストールして System Center 2012 Configuration Manager から**アップグレード**します。「[Upgrade to System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md)」(System Center Configuration Manager へのアップグレード) を参照してください。
- > -  **更新**: コンソールで更新プログラムを使用して、新しい**更新プログラムのバージョン** を既存の System Center Configuration Manager サイトにインストールします。「[Updates for System Center Configuration Manager](../../../../core/servers/manage/updates.md)」 (System Center Configuration Manager の更新) を参照してください。
- > -  **移行**: 別の Configuration Manager 階層から現在の System Center Configuration Manager 階層に**データを移行**するには、「[Planning for migration to System Center Configuration Manager](../../../../core/migration/planning-for-migration.md)」(System Center Configuration Manager への移行の計画) を参照してください。
+
+> [!TIP]
+> System Center Configuration Manager のサイトと階層のインフラストラクチャの管理において、*アップグレード*、*更新*、および*インストール* という用語は&3; つの異なる概念を説明するものです。 各用語の使用方法については、「[サイトと階層のインフラストラクチャでのアップグレード、更新、およびインストールについて](/sccm/core/understand/upgrade-update-install)」を参照してください。
+
+
 
 
 
@@ -106,7 +106,7 @@ Configuration Manager のセットアップ時に、インストールする中�
 
 
 
-Configuration Manager のセットアップ中にサイト コードを指定するときは、必ず 3 文字の英数字を入力してください。 A ～ Z の文字、0 ～ 9 の数字、またはこれらの組み合わせだけを使用できます。 文字や数字の順序は、サイト間の通信には影響しません。 たとえば、プライマリ サイトに ABC、セカンダリ サイトに DEF という名前を付ける必要はありません。
+Configuration Manager のセットアップ中にサイト コードを指定するときは、必ず&3; 文字の英数字を入力してください。 A ～ Z の文字、0 ～ 9 の数字、またはこれらの組み合わせだけを使用できます。 文字や数字の順序は、サイト間の通信には影響しません。 たとえば、プライマリ サイトに ABC、セカンダリ サイトに DEF という名前を付ける必要はありません。
 
 サイト名とは、サイトを識別するわかりやすい名前のことです。 A ～ Z、a ～ z、0 ～ 9、およびハイフン (-) だけを使ってください。
 > [!IMPORTANT]
@@ -148,6 +148,6 @@ Configuration Manager 階層内で中央管理サイトまたはプライマリ 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

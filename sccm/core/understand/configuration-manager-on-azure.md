@@ -2,7 +2,7 @@
 title: "Azure の Configuration Manager | Microsoft Docs"
 description: "Azure 環境での Configuration Manager の使用に関する情報。"
 ms.custom: na
-ms.date: 10/21/2016
+ms.date: 01/04/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 5866c1d9ad88e49b69fa0c863b1ef8748a8c8111
+ms.sourcegitcommit: 6638d6e17d0eaeef731cce45e8cf5c827d6e0dfe
+ms.openlocfilehash: 4d953eedc7d5cceb8767dab8850cacb1e007194d
 
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure の Configuration Manager - よく寄せられる質問
@@ -72,7 +72,7 @@ Azure でホストする場合、サイト間の近接通信 (ファイルベー
 
 
 ## <a name="availability"></a>可用性
-### <a name="one-of-the-reasons-i-am-moving-infrastructure-to-azure-is-the-promise-of-high-availability-can-i-take-advantage-of-high-availability-options-like-azure-vm-availability-sets-for-vms-that-i-will-use-for-configuration-manager"></a>Azure にインフラストラクチャを移行する理由の 1 つは高可用性の保証です。 Configuration Manager で使用する VM の Azure VM 可用性セットのような高可用性オプションを利用できますか?
+### <a name="one-of-the-reasons-i-am-moving-infrastructure-to-azure-is-the-promise-of-high-availability-can-i-take-advantage-of-high-availability-options-like-azure-vm-availability-sets-for-vms-that-i-will-use-for-configuration-manager"></a>Azure にインフラストラクチャを移行する理由の&1; つは高可用性の保証です。 Configuration Manager で使用する VM の Azure VM 可用性セットのような高可用性オプションを利用できますか?
 はい。 Azure VM 可用性セットは、配布ポイントや管理ポイントのような冗長的なサイト システムの役割で使用できます。
 
 また、Configuration Manager サイト サーバーでも使用できます。 たとえば、中央管理サイトとプライマリ サイトをすべて同じ可用性セットに含めることができます。これは、同時に再起動されないようにするのに役立ちます。
@@ -120,7 +120,7 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 
 
 ## <a name="user-experience"></a>ユーザー エクスペリエンス
-### <a name="you-mention-that-user-experience-is-one-of-the-main-areas-of-importance-why-is-that"></a>ユーザー エクスペリエンスが主に重要な点の 1 つということですが、それはなぜですか?
+### <a name="you-mention-that-user-experience-is-one-of-the-main-areas-of-importance-why-is-that"></a>ユーザー エクスペリエンスが主に重要な点の&1; つということですが、それはなぜですか?
 ネットワーク、可用性、パフォーマンス、および Configuration Manager サイト サーバーの配置場所に関する決定事項が、ユーザーに直接影響する場合があります。 Azure への移行はユーザーに対して透過的であるため、Configuration Manager との日常的な対話は変わらないと考えています。
 
 ### <a name="ok-i-get-it-i-plan-to-install-a-single-stand-alone-primary-site-on-an-azure-virtual-machine-and-i-want-to-make-sure-my-costs-are-low-should-i-place-remote-site-systems-like-management-points-distribution-points-and-software-update-points-on-azure-virtual-machines-as-well-or-on-premises"></a>わかりました。 Azure Virtual Machine への単一のスタンドアロン プライマリ サイトのインストールを予定しており、コストを抑えられるかどうかを知りたいのですが、 Azure Virtual Machines にも (リモート) サイト システム (管理ポイント、配布ポイント、ソフトウェアの更新ポイントなど) を配置すべきですか? それともオンプレミスに配置すべきでしょうか?
@@ -139,9 +139,11 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 
 
 ### <a name="while-i-am-ok-with-the-limitations-of-cloud-based-distribution-points-i-dont-want-to-put-my-management-point-into-a-dmz-even-though-that-is-needed-to-support-my-internet-based-clients-do-i-have-any-other-options"></a>クラウドベース配布ポイントの制限についてはわかりましたが、インターネット ベースのクライアントをサポートするために必要でも、DMZ に管理ポイントを配置したくありません。 他の選択肢はありますか?
-もう少しだけお待ちください。 Configuration Manager Technical Preview バージョン 1606 で、[クラウド プロキシ サービス](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)が導入されました。 クラウド プロキシ サービスは、インターネット上で Configuration Manager クライアントを管理する簡単な方法を提供します。 Microsoft Azure にデプロイされ、Azure サブスクリプションを必要とするサービスは、クラウド プロキシ コネクタ ポイントと呼ばれる新しい役割を使用して、オンプレミスの Configuration Manager インフラストラクチャに接続します。 デプロイされ、構成されると、クライアントは内部のプライベート ネットワークに接続しているかどうか、またはインターネット上にあるかどうかに関係なく、オンプレミスの Configuration Manager サイト システムの役割にアクセスできます。
+はい。 Configuration Manager のバージョン 1610 では、プレリリース機能として[クラウド管理ゲートウェイ](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway)をご紹介しました  (この機能は、[クラウド プロキシ サービス](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)として、Technical Preview バージョン 1606 で初めて登場しました)。 
 
-ご使用のテスト環境でクラウド サービス プロキシのテストを開始できます。フィードバックをお送りいただくことで、改善することができます。
+**クラウド管理ゲートウェイ**は、インターネット上で Configuration Manager クライアントを管理する簡単な方法を提供します。 Microsoft Azure にデプロイされ、Azure サブスクリプションを必要とするサービスは、クラウド管理ゲートウェイ コネクタ ポイントと呼ばれる新しい役割を使用して、オンプレミスの Configuration Manager インフラストラクチャに接続します。 デプロイされ、構成されると、クライアントは内部のプライベート ネットワークに接続しているかどうか、またはインターネット上にあるかどうかに関係なく、オンプレミスの Configuration Manager サイト システムの役割にアクセスできます。
+
+実際の環境でクラウド管理ゲートウェイの使用を開始できます。フィードバックをお送りいただくことで、改善することができます。 プレリリース機能の詳細については、「[更新プログラムからプレリリース機能を使用する](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkprereleasea-use-pre-release-features-from-updates)」を参照してください。
 
 ### <a name="i-also-heard-that-you-have-another-new-feature-called-peer-cache-in-the-technical-preview-version-1604-is-that-different-than-branchcache-which-one-should-i-choose"></a>Technical Preview バージョン 1604 にはピア キャッシュという新機能もあると聞きましたが、 BranchCache とは異なるものですか?  どちらを選べばよいですか?
 はい、まったく異なるものです。 [ピア キャッシュ](/sccm/core/get-started/capabilities-in-technical-preview-1604#bkmk_peercache)は Configuration Manager の 100% ネイティブのテクノロジですが、BranchCache は Windows の機能の 1 つです。 どちらも便利ですが、BranchCache ではブロードキャストを使用して必要なコンテンツを検索するのに対して、ピア キャッシュでは Configuration Managers の通常の配布ワークフローと境界グループの設定を使用します。
@@ -180,6 +182,6 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
