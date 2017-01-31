@@ -2,7 +2,7 @@
 title: "移行完了 | Microsoft Docs"
 description: "ソース階層にデータが含まれなくなった後で、System Center Configuration Manager の移行先階層への移行を完了する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,12 +17,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
-ms.openlocfilehash: 0595ab87222aca543ae67a33c2b9fab780c6160f
+ms.sourcegitcommit: 0f4a10ba7bbe397f05d724141b562b6cd8b78ea8
+ms.openlocfilehash: eb1d2e320df02b26423ed4341d5bd1568b9444ad
 
 
 ---
-# <a name="planning-to-complete-migration-in-system-center-configuration-manager"></a>System Center Configuration Manager での移行完了の計画
+# <a name="plan-to-complete-migration-in-system-center-configuration-manager"></a>System Center Configuration Manager での移行完了の計画
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -47,21 +47,21 @@ System Center Configuration Manager では、移行先階層に移行するデ�
 
  ソース サイトからのデータ収集を停止すると、移行先階層内のクライアントは、コンテンツの場所としてソース サイトの共有配布ポイントを使用できなくなります。 そのため、移行先階層のクライアントで必要な移行済みコンテンツを引き続き使用できるようにするには、次のいずれかの方法を実行してください。  
 
--   移行先階層で、少なくとも 1 つの配布ポイントにコンテンツを配布する。  
+-   移行先階層で、少なくとも&1; つの配布ポイントにコンテンツを配布する。  
 
--   ソース サイトからのデータの収集を停止する前に、必要なコンテンツがある共有配布ポイントをアップグレードまたは再割り当てする。 共有配布ポイントのアップグレードまたは再割り当ての詳細については、「[System Center Configuration Manager のコンテンツ展開移行戦略の計画](../../core/migration/planning-a-content-deployment-migration-strategy.md) 」トピックの該当するセクションを参照してください。  
+-   ソース サイトからのデータの収集を停止する前に、必要なコンテンツがある共有配布ポイントをアップグレードまたは再割り当てする。 共有配布ポイントのアップグレードまたは再割り当ての詳細については、「[System Center Configuration Manager のコンテンツ展開移行戦略の計画](../../core/migration/planning-a-content-deployment-migration-strategy.md)」の該当するセクションを参照してください。  
 
 ソース階層内の各ソース サイトからのデータ収集を停止した後で、移行データをクリーンアップできます。 移行データをクリーンアップするまで、実行済み、または実行予定の各移行ジョブは Configuration Manager コンソール内でアクセス可能な状態のままになります。  
 
-ソース サイトとデータ収集の詳細については、「[Planning a source hierarchy strategy in System Center Configuration Manager](../../core/migration/planning-a-source-hierarchy-strategy.md)」(System Center Configuration Manager のソース階層戦略の計画) を参照してください。  
+ソース サイトとデータ収集の詳細については、「[System Center Configuration Manager でのソース階層戦略の計画](../../core/migration/planning-a-source-hierarchy-strategy.md)」を参照してください。  
 
 ##  <a name="a-nameplantocleanupa-plan-to-clean-up-migration-data"></a><a name="Plan_to_clean_up"></a> 移行データのクリーンアップを計画する  
- 移行完了の最終手順は、移行データのクリーンアップです。 ソース階層の各ソース サイトのデータ収集を停止した後で、[移行データのクリーン アップ **** ] コマンドを使用できます。 クリーンアップは任意ですが、実行すると、移行先階層のデータベースから現在のソース階層に関するデータが削除されます。  
+ 移行完了に必要な最終手順は、移行データのクリーンアップです。 ソース階層の各ソース サイトのデータ収集を停止した後で、[移行データのクリーン アップ **** ] コマンドを使用できます。 クリーンアップは任意ですが、実行すると、移行先階層のデータベースから現在のソース階層に関するデータが削除されます。  
 
- 移行データをクリーンアップすると、移行に関するほとんどのデータが移行先階層のデータベースから削除されます。 ただし、移行済みオブジェクトに関する詳細は維持されます。 これらの詳細を基に、[移行 **** ] ワークスペースを使用して、移行したデータを含むソース階層を再構成することで、そのソース階層から移行を再開したり、以前に移行したオブジェクトとオブジェクトのサイト所有権を確認したりできます。  
+ 移行データをクリーンアップすると、移行に関するほとんどのデータが移行先階層のデータベースから削除されます。 ただし、移行済みオブジェクトに関する詳細は維持されます。 これらの詳細を基に、**[移行]** ワークスペースを使用して、移行したデータを含むソース階層を再構成することで、そのソース階層から移行を再開したり、以前に移行したオブジェクトとオブジェクトのサイト所有権を確認したりできます。  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

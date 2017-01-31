@@ -2,7 +2,7 @@
 title: "LTSB のサポートされている構成 | Microsoft Docs"
 description: "System Center Configuration Manager の Long-Term Servicing branch で動作するオペレーティング システムと依存する製品について理解します。"
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 573115e54d734d492ca776a040bad804a792ada6
+ms.sourcegitcommit: 12aa9f0a1ad4ce8acf0b914e9911bb50ba887919
+ms.openlocfilehash: 5b2ab25d7f645ea9eada81d241ef14168b017304
 
 
 ---
@@ -36,58 +36,58 @@ ms.openlocfilehash: 573115e54d734d492ca776a040bad804a792ada6
 **今後のサポートに関する制限事項:** LTSB の今後のサーバーとクライアントのオペレーティング システムおよび製品の依存関係は、制限付きでサポートされます。 LTSB のプラットフォーム一覧は、そのリリースの有効期間にわたって固定されます。
 
 **Windows:**
-- Windows の品質更新プログラムおよびセキュリティ更新プログラムのみがサポートされます
-- Current Branches (CB)、Current Branch for Business (CBB)、または Windows 10 の LTSB に対してのサポートは追加されません
--   Windows Server の新しいメジャー バージョンはサポートされていません
+- Windows の品質更新プログラムおよびセキュリティ更新プログラムのみがサポートされます。
+- Current Branches (CB)、Current Branch for Business (CBB)、または Windows 10 の LTSB に対してのサポートは追加されません。
+-   Windows Server の新しいメジャー バージョンはサポートされていません。
 
 **SQL Server:**
-- SQL Server では、品質更新プログラムおよびセキュリティ更新プログラム、または Service Pack のようなマイナー アップグレードのみがサポートされる予定です
-- Windows Server の新しいメジャー バージョンはサポートされません  
+- SQL Server では、品質更新プログラムおよびセキュリティ更新プログラム、または Service Pack のようなマイナー アップグレードのみがサポートされる予定です。
+- SQL Server の新しいメジャー バージョンはサポートされません。  
 
 ## <a name="site-systems-and-servers"></a>サイト システムおよびサーバー
 LTSB では、サイト システムとして次の Windows コンピューターのオペレーティング システムの使用をサポートします。  各オペレーティング システムには、[サイト システム サーバーでサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)の同じエンティティと同じ要件と制限事項があります。  たとえば、Windows 2012 R2 の Server Core のインストール (x64 バージョンである必要があります) では、配布ポイントのホストのみがサポートされ、PXE やマルチキャストはサポートされません。
 
 **サポートされるオペレーティング システム:**
-- **Windows Server 2016**
-- **Windows Server 2012** (x64) – Standard、Datacenter
-- **Windows Server 2008 R2 SP1** (x64) – Standard、Enterprise、Datacenter
-- **Windows Server 2008 SP2** (x86, x64) – Standard、Enterprise、Datacenter
-- **Windows 10 Enterprise 2015 LTSB** (x86、x64)
-- **Windows 10 Enterprise 2016 LTSB** (x86、x64)
-- **Windows 8.1** (x86、x64) – Professional、Enterprise
-- **Windows 7 SP1** (x86、x64) – Professional、Enterprise、Ultimate
-- **Windows Server 2012 の Server Core のインストール**
-- **Windows Server 2012 R2 の Server Core のインストール**  
+- Windows Server 2016
+- Windows Server 2012 (x64): Standard、Datacenter
+- Windows Server 2008 R2 SP1 (x64): Standard、Enterprise、Datacenter
+- Windows Server 2008 SP2 (x86、x64): Standard、Enterprise、Datacenter
+- Windows 10 Enterprise 2015 LTSB (x86、x64)
+- Windows 10 Enterprise 2016 LTSB (x86、x64)
+- Windows 8.1 (x86、x64): Professional、Enterprise
+- Windows 7 SP1 (x86、x64): Professional、Enterprise、Ultimate
+- Windows Server 2012 の Server Core のインストール
+- Windows Server 2012 R2 の Server Core のインストール  
 
 ## <a name="client-management"></a>クライアント管理
 次のセクションでは、LTSB を使用して管理できるクライアントのオペレーティング システムを確認します。 LTSB では、サポートされるクライアントとして、新しいオペレーティング システムの追加をサポートしません。
 
 ### <a name="windows-computers"></a>Windows コンピューター
-LTSB を使用して、以下の Windows コンピューター オペレーティング システムと、Configuration Manager に含まれている Configuration Manager クライアント ソフトウェアを管理できます。 詳細については、「[How to deploy clients to Windows computers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)」 (System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法) を参照してください。
+LTSB を使用して、以下の Windows コンピューター オペレーティング システムと、Configuration Manager に含まれている Configuration Manager クライアント ソフトウェアを管理できます。 詳細については、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)」を参照してください。
 
 **サポートされるオペレーティング システム:**
-- **Windows Server 2016**
-- **Windows Server 2012 R2** (x64) – Standard、Datacenter (注 1)
-- **Windows Server 2012** (x64) – Standard、Datacenter (注 1)
-- **Windows Storage Server 2012 R2** (x64)
-- **Windows Storage Server 2012** (x64)
-- **Windows Server 2008 R2 SP1** (x64) – Standard、Enterprise、Datacenter (注 1)
-- **Windows Storage Server 2008 R2** (x86、x64) - Workgroup、Standard、Enterprise
-- **Windows Server 2008 SP2** (x86、x64) - Standard、Enterprise、Datacenter (注 1)
-- **Windows 10 Enterprise 2015 LTSB** (x86、x64)
-- **Windows 10 Enterprise 2016 LTSB** (x86、x64)
-- **Windows 8.1** (x86、x64) – Professional、Enterprise
-- **Windows 7 SP1** (x86、x64) – Professional、Enterprise、Ultimate
-- **Windows Server 2012 R2 の Server Core のインストール** (x64) (注 2)
-- **Windows Server 2012 の Server Core のインストール** (x64) (注 2)
-- **Windows Server 2008 R2 SP1 の Server Core のインストール** (x64)
-- **Windows Server 2008 SP2 の Server Core のインストール** (x86、x64)
+- Windows Server 2016
+- Windows Server 2012 R2 (x64): Standard、Datacenter (注 1)
+- Windows Server 2012 (x64): Standard、Datacenter (注 1)
+- Windows Storage Server 2012 R2 (x64)
+- Windows Storage Server 2012 (x64)
+- Windows Server 2008 R2 SP1 (x64): Standard、Enterprise、Datacenter (注 1)
+- Windows Storage Server 2008 R2 (x86、x64): Workgroup、Standard、Enterprise
+- Windows Server 2008 SP2 (x86、x64): Standard、Enterprise、Datacenter (注 1)
+- Windows 10 Enterprise 2015 LTSB (x86、x64)
+- Windows 10 Enterprise 2016 LTSB (x86、x64)
+- Windows 8.1 (x86、x64): Professional、Enterprise
+- Windows 7 SP1 (x86、x64): Professional、Enterprise、Ultimate
+- Windows Server 2012 R2 の Server Core のインストール (x64) (注 2)
+- Windows Server 2012 の Server Core のインストール (x64) (注 2)
+- Windows Server 2008 R2 SP1 の Server Core のインストール (x64)
+- Windows Server 2008 SP2 の Server Core のインストール (x86、x64)
 
 **(注 1)**Datacenter リリースは、Configuration Manager でサポートされますが動作は保障されません。  
-**(注 2)** クライアント プッシュ インストールをサポートするには、このオペレーティング システムのバージョンを実行するコンピューターで、ファイルおよびストレージ サービスのサーバーの役割のための、ファイル サーバーの役割サービスを実行する必要があります。 Server Core コンピューターに Windows 機能をインストールする詳細については、Windows Server 2012 TechNet ライブラリの「Server Core サーバーへのサーバーの役割と機能のインストール」を参照してください。
+**(注 2)** クライアント プッシュ インストールをサポートするには、このオペレーティング システムのバージョンを実行するコンピューターで、ファイルおよびストレージ サービスのサーバーの役割のための、ファイル サーバーの役割サービスを実行する必要があります。 Server Core コンピューターに Windows の機能をインストールする詳細については、Windows Server 2012 TechNet ライブラリの「[Server Core サーバーへのサーバーの役割と機能のインストール](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)」を参照してください。
 
-### <a name="windows-embedded"></a>Windows Embedded:
-デバイス上にクライアント ソフトウェアをインストールすることによって、LTSB を使用して以下の Windows Embedded デバイスを管理できます。  書き込みフィルターについて詳しくは「[Planning for client deployment to Windows Embedded devices in System Center Configuration Manager](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices)」 (System Center Configuration Manager での Windows Embedded デバイスへのクライアント展開の計画) を参照してください。
+### <a name="windows-embedded"></a>Windows Embedded
+デバイス上にクライアント ソフトウェアをインストールすることによって、LTSB を使用して以下の Windows Embedded デバイスを管理できます。  詳細については、「[System Center Configuration Manager での Windows Embedded デバイスへのクライアント展開の計画](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices)」をご覧ください。
 
 **要件と制限事項**  
 
@@ -103,26 +103,26 @@ LTSB を使用して、以下の Windows コンピューター オペレーテ�
 
 -   アプリケーション カタログは、どのような Windows Embedded デバイスについてもサポートされません。  
 
--   Windows XP ベースの Windows Embedded デバイスで検出したマルウェアを監視するには、Embedded デバイスに Microsoft Windows WMI スクリプト パッケージを先にインストールしておく必要があります。 このパッケージは、Windows Embedded Target Designer を使用してインストールします。 検出したマルウェアが確実に報告されるようにするには、Embedded デバイスにファイル **WBEMDISP.DLL** および **WBEMDISP.TLB** が存在している必要があり、フォルダー **%windir%\System32\WBEM** に登録されている必要があります。  
+-   Windows XP ベースの Windows Embedded デバイスで検出したマルウェアを監視するには、Embedded デバイスに Microsoft Windows WMI スクリプト パッケージを先にインストールしておく必要があります。 このパッケージは、Windows Embedded Target Designer を使用してインストールします。 検出したマルウェアが確実に報告されるようにするには、Embedded デバイスにファイル *WBEMDISP.DLL* および *WBEMDISP.TLB* が存在している必要があり、フォルダー %windir%\System32\WBEM に登録されている必要があります。  
 
 **サポートされるオペレーティング システム:**  
--   **Windows 10 Enterprise 2016 LTSB** (x86、x64)  
--   **Windows 10 Enterprise 2015 LTSB** (x86、x64)  
--   **Windows Embedded 8.1 Industry** (x86、x64)    
--   **Windows Thin PC** (x86、x64)    
--   **Windows Embedded POSReady 7** (x86、x64)    
--   **Windows Embedded Standard 7 SP1** (x86、x64)    
--   **Windows Embedded POSReady 2009** (x86)   
--   **Windows Embedded Standard 2009** (x86)  
+-   Windows 10 Enterprise 2016 LTSB (x86、x64)  
+-   Windows 10 Enterprise 2015 LTSB (x86、x64)  
+-   Windows Embedded 8.1 Industry (x86、x64)    
+-   Windows Thin PC (x86、x64)    
+-   Windows Embedded POSReady 7 (x86、x64)    
+-   Windows Embedded Standard 7 SP1 (x86、x64)    
+-   Windows Embedded POSReady 2009 (x86)   
+-   Windows Embedded Standard 2009 (x86)  
 
 ### <a name="windows-ce"></a>Windows CE  
  Configuration Manager に付属の Configuration Manager モバイル デバイス レガシ クライアントを持つ Windows CE デバイスを管理することができます。  
 
 **要件と制限事項**  
 
--   モバイル デバイス クライアントには、0.78 MB またはクライアントをインストールする記憶領域が必要です。 モバイル デバイス上のログ記録に、最大 256 KB の追加の記憶領域が必要な場合があります。    
+-   モバイル デバイス クライアントには、クライアントをインストールする記憶領域が 0.78 MB 必要です。 モバイル デバイスがサインインするには、さらに最大で 256 KB の追加の記憶領域が必要な場合があります。    
 
--   これらのモバイル デバイスの機能は、プラットフォームとクライアントの種類によって異なります。 モバイル デバイス レガシ クライアントで Configuration Manager がサポートする管理機能の詳細については、「[Choose a device management solution for System Center Configuration Manager](/sccm/core/plan-design/choose-a-device-management-solution)」 (System Center Configuration Manager のデバイス管理ソリューションの選択) を参照してください。  
+-   これらのモバイル デバイスの機能は、プラットフォームとクライアントの種類によって異なります。 モバイル デバイス レガシ クライアントで Configuration Manager がサポートする管理機能の種類の詳細については、「[System Center Configuration Manager のデバイス管理ソリューションの選択](/sccm/core/plan-design/choose-a-device-management-solution)」を参照してください。  
 
 **サポートされるオペレーティング システム:**  
 
@@ -143,23 +143,23 @@ LTSB を使用して、以下の Windows コンピューター オペレーテ�
 ### <a name="mac-computers"></a>Mac コンピューター  
  LTSB を使用して、Mac OS X コンピューターを Mac 向けの Configuration Manager クライアントとともに管理できます。
 
-Configuration Manager メディアでは、Mac クライアント インストール パッケージは提供されません。 これは、[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=525184)から、追加のオペレーティング システム用のクライアントのダウンロードの一環としてダウンロードできます。  
+Configuration Manager メディアでは、Mac クライアント インストール パッケージは提供されません。 これは、[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=525184)から、"追加のオペレーティング システム用のクライアント" のダウンロードの一環としてダウンロードできます。  
 
-Mac オペレーティング システムに対するサポートは、このセクションに記載されているものに制限されており、Current Branch の Mac クライアント インストール パッケージへの今後の更新プログラムによってサポートされる可能性のある追加のオペレーティング システムは含まれません。
+サポートされている Mac オペレーティング システムは、このセクションに記載されているものに限定されています。 Current Branch の Mac クライアント インストール パッケージへの今後の更新プログラムによってサポートされる可能性のあるその他のオペレーティング システムは、サポート対象には含まれていません。
 
 詳細については、「[How to deploy clients to Macs in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-macs)」 (System Center Configuration Manager でクライアントを Mac に展開する方法) を参照してください。
 
 **サポートされるバージョン:**  
--   **Mac OS X 10.9** (Mavericks)  
--   **Mac OS X 10.10** (Yosemite)  
--   **Mac OS X 10.11** (El Capitan)  
+-   Mac OS X 10.9 (Mavericks)  
+-   Mac OS X 10.10 (Yosemite)  
+-   Mac OS X 10.11 (El Capitan)  
 
 ## <a name="linux-and-unix-servers"></a>Linux および UNIX サーバー
 LTSB を使用して、Linux および UNIX サーバーを Linux および UNIX 用の Configuration Manager クライアントとともに管理できます。
 
 Configuration Manager メディアでは、Linux および UNIX クライアント インストール パッケージは提供されません。 これらは、[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=525184)から、追加のオペレーティング システム用のクライアントのダウンロードの一環としてダウンロードできます。 クライアント インストール パッケージに加え、クライアント ダウンロードには、各コンピューター上でクライアントのインストールを管理する install スクリプトも含まれています。
 
-Linux および UNIX オペレーティング システムに対するサポートは、このセクションに記載されているものに制限されており、Current Branch の Linux および UNIX クライアント インストール パッケージへの今後の更新プログラムによってサポートされる可能性のある追加のオペレーティング システムは含まれません。
+サポートされている Linux および UNIX オペレーティング システムは、このセクションに記載されているものに限定されています。 Current Branch の Linux および UNIX クライアント インストール パッケージへの今後の更新プログラムによってサポートされる可能性のあるその他のオペレーティング システムは、サポート対象には含まれていません。
 
 **要件と制限事項**  
 
@@ -266,61 +266,63 @@ Linux および UNIX オペレーティング システムに対するサポー�
 |バージョン 14.04 LTS x64|ccm-Universalx64.&lt;ビルド\>.tar|  
 
 ### <a name="exchange-server-connector"></a>Exchange Server コネクタ
- LTSB は、クライアント ソフトウェアをインストールすることがない、Exchange サーバーに接続するデバイスの限定された管理をサポートしています。 詳細については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync)」を参照してください。
+ LTSB は、クライアント ソフトウェアをインストールすることがない、Exchange サーバー インスタンスに接続するデバイスの限定された管理をサポートしています。 詳細については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync)」を参照してください。
 
  **要件と制限事項**  
 
--   Configuration Manager は、Exchange Server または Exchange Online を実行しているサーバーに接続する Exchange Active Sync (EAS) 対応デバイス向けに Exchange Server コネクタを使用する場合に、モバイル デバイスの限定された管理を提供します。  
+-   Configuration Manager では、モバイル デバイスを限定的に管理できます。 Exchange Server または Exchange Online を実行しているサーバーに接続する Exchange Active Sync (EAS) 対応デバイス向けに Exchange Server コネクタを使用する場合に、モバイル デバイスは限定的に管理できます。  
 
--   Exchange Server コネクタが管理するモバイル デバイスで Configuration Manager がサポートする管理機能の詳細については、「[Choose a device management solution for System Center Configuration Manager](/sccm/core/plan-design/choose-a-device-management-solution)」 (System Center Configuration Manager のデバイス管理ソリューションの選択) を参照してください。  
+-   Exchange Server コネクタが管理するモバイル デバイスで Configuration Manager がサポートする管理機能の詳細については、「[System Center Configuration Manager のデバイス管理ソリューションの選択](/sccm/core/plan-design/choose-a-device-management-solution)」を参照してください。  
 
 **サポートされている Exchange Server のバージョン:**  
--   **Exchange Server 2010 SP1**  
--   **Exchange Server 2010 SP2**  
--   **Exchange Server 2013**  
+-   Exchange Server 2010 SP1  
+-   Exchange Server 2010 SP2  
+-   Exchange Server 2013  
 
 > [!NOTE]
-> LTSB は、Exchange Online (Office 365) などのオンライン サービスを通じて接続するデバイスの管理をサポートしていません。
+> LTSB では、Exchange Online (Office 365) などのオンライン サービスを通じて接続するデバイスは管理できません。
 
 
 ## <a name="configuration-manager-console"></a>Configuration Manager コンソール
 LTSB は、Configuration Manager コンソールを実行するために、次のオペレーティング システムをサポートしています。 .NET Framework 4.6 以上を必要とする Windows 10 を除き、コンソールをホストする各コンピューターは、.NET Framework 4.5.2 以上のバージョンが必要です。
 
 **サポートされるオペレーティング システム:**
-- **Windows Server 2016**
-- **Windows Server 2012 R2** (x64) – Standard、Datacenter
-- **Windows Server 2012** (x64) – Standard、Datacenter
-- **Windows Server 2008 R2 SP1** (x64) – Standard、Enterprise、Datacenter
-- **Windows Server 2008 SP2** (x86, x64) – Standard、Enterprise、Datacenter
-- **Windows 10 Enterprise 2016 LTSB** (x86、x64)
-- **Windows 10 Enterprise 2015 LTSB** (x86、x64)
-- **Windows 8.1** (x86、x64) – Professional、Enterprise Windows 7 SP1** (x86、x64) – Professional、Enterprise、Ultimate
+- Windows Server 2016
+- Windows Server 2012 R2 (x64): Standard、Datacenter
+- Windows Server 2012 (x64): Standard、Datacenter
+- Windows Server 2008 R2 SP1 (x64): Standard、Enterprise、Datacenter
+- Windows Server 2008 SP2 (x86、x64): Standard、Enterprise、Datacenter
+- Windows 10 Enterprise 2016 LTSB (x86、x64)
+- Windows 10 Enterprise 2015 LTSB (x86、x64)
+- Windows 8.1 (x86、x64): Professional、Enterprise
+- Windows 7 SP1 (x86、x64): Professional、Enterprise、Ultimate
+
 
 ## <a name="sql-server-versions-supported-for-the-site-database-and-reporting-point"></a>サイト データベースとレポート ポイントでサポートされている SQL Server バージョン
 LTSB は、サイト データベースとレポート ポイントをホストする SQL Server の次のバージョンをサポートしています。 サポートされている各バージョンで、Current Branch の「[SQL Server バージョンのサポート](/sccm/core/plan-design/configs/support-for-sql-server-versions)」に記載されている同じ構成要件および制限事項が、LTSB に適用されます。  これには、SQL Server クラスター、または SQL Server AlwaysOn 可用性グループの使用が含まれます。  
 
 **サポートされるバージョン:**
 
-- **SQL Server 2016** - Standard、Enterprise
-- **SQL Server 2014 SP2** – Standard、Enterprise
-- **SQL Server 2014 SP1** – Standard、Enterprise
-- **SQL Server 2012 SP3** – Standard、Enterprise
-- **SQL Server 2012 SP2** – Standard、Enterprise
-- **SQL Server 2008 R2 SP3** – Standard、Enterprise、Datacenter
-- **SQL Server 2016 Express**
-- **SQL Server 2014 Express SP2**
-- **SQL Server 2014 Express SP1**
-- **SQL Server 2012 Express SP3**
-- **SQL Server 2012 Express SP2**
+- SQL Server 2016: Standard、Enterprise
+- SQL Server 2014 SP2: Standard、Enterprise
+- SQL Server 2014 SP1: Standard、Enterprise
+- SQL Server 2012 SP3: Standard、Enterprise
+- SQL Server 2012 SP2: Standard、Enterprise
+- SQL Server 2008 R2 SP3: Standard、Enterprise、Datacenter
+- SQL Server 2016 Express
+- SQL Server 2014 Express SP2
+- SQL Server 2014 Express SP1
+- SQL Server 2012 Express SP3
+- SQL Server 2012 Express SP2
 
 ## <a name="support-for-active-directory-domains"></a>Active Directory ドメインのサポート
 すべての LTSB サイト システムは、サポートされている Windows Active Directory ドメインのメンバーであることが必要です。 Active Directory ドメインのサポートは、[Active Directory ドメインのサポート](/sccm/core/plan-design/configs/support-for-active-directory-domains)に記載されるものと同じ要件と制限がありますが、次のドメイン機能レベルに制限されています。
 
 **サポートされているレベル:**
-- **Windows Server 2008**
-- **Windows Server 2008 R2**
-- **Windows Server 2012**
-- **Windows Server 2012 R2**
+- Windows Server 2008
+- Windows Server 2008 R2
+- Windows Server 2012
+- Windows Server 2012 R2
 
 ## <a name="additional-support-topics-that-apply-to-the-long-term-servicing-branch"></a>Long Term Servicing Branch に適用されるその他のサポートに関するトピック
 次の Current Branch トピックの情報は、LTSB に適用されます。
@@ -333,6 +335,6 @@ LTSB は、サイト データベースとレポート ポイントをホスト�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

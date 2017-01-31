@@ -1,64 +1,67 @@
----
-title: "バックアップと回復 | Microsoft Docs"
-description: "System Center Configuration Manager でサイトをバックアップする方法と、障害が発生したときやデータが損失したときにサイトを回復する方法について説明します。"
-ms.custom: na
-ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
-caps.latest.revision: 22
-author: Brenduns
-ms.author: brenduns
-manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
-
 
 ---
-# <a name="backup-and-recovery-for-system-center-configuration-manager"></a>System Center Configuration Manager のバックアップと回復
+title: "バックアップと回復 | Microsoft Docs" description: "System Center Configuration Manager でサイトをバックアップする方法と、障害が発生したときやデータが損失したときにサイトを回復する方法について説明します。"
+ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na ms.suite: na ms.technology:
+  - configmgr-other ms.tgt_pltfrm: na ms.topic: article ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f -caps.latest.revision: 22 -author: Brenduns ms.author: brendunsmanager: angrobe
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+----
 
-データの損失を防ぐためにバックアップと回復方法を準備します。 Configuration Manager サイトのバックアップと回復方法は、データの損失を最小限に抑え、サイトと階層をより迅速に回復するのに役立ちます。 このトピックのセクションは、サイトをバックアップする場合と、障害が発生したときやデータが損失したときにサイトを回復する場合に役立ちます。  
 
--   [Configuration Manager サイトのバックアップ](#BKMK_SiteBackup)  
+-# System Center Configuration Manager のバックアップと回復*適用先: System Center Configuration Manager (Current Branch)*
 
-    -   [バックアップ メンテナンス タスク](#BKMK_BackupMaintenanceTask)  
+-データの損失を防ぐバックアップと回復アプローチを準備します。 Configuration Manager サイトのバックアップと回復方法は、データの損失を最小限に抑え、サイトと階層をより迅速に回復するのに役立ちます。 このトピックのセクションは、サイトをバックアップする場合と、障害が発生したときやデータが損失したときにサイトを回復する場合に役立ちます。   
 
-    -   [Data Protection Manager を使用したサイト データベースのバックアップ](#BKMK_DPMBackup)  
+- [Configuration Manager サイトのバックアップ](#BKMK_SiteBackup)   
 
-    -   [バックアップ スナップショットのアーカイブ](#BKMK_ArchivingBackupSnapshot)  
+  - [バックアップ メンテナンス タスク](#BKMK_BackupMaintenanceTask)   
 
-    -   [AfterBackup.bat ファイルの使用](#BKMK_UsingAfterBackup)  
+  - [Data Protection Manager を使用したサイト データベースのバックアップ](#BKMK_DPMBackup)   
 
-    -   [その他のバックアップ タスク](#BKMK_SupplementalBackup)  
+  -  [バックアップ スナップショットのアーカイブ](#BKMK_ArchivingBackupSnapshot)   
 
--   [Configuration Manager サイトの回復](#BKMK_RecoverSite)  
+  -  [バックアップ スナップショットのアーカイブ](#BKMK_ArchivingBackupSnapshot)   
 
-    -   [回復オプションの検討](#BKMK_DetermineRecoveryOptions)  
+  -  [AfterBackup.bat ファイルの使用](#BKMK_UsingAfterBackup)   
 
-        -   [サイト サーバーの回復オプション](#BKMK_SiteServerRecoveryOptions)  
+  -  [AfterBackup.bat ファイルの使用](#BKMK_UsingAfterBackup)   
 
-        -   [サイト データベースの回復オプション](#BKMK_SiteDatabaseRecoveryOption)  
+  -  [その他のバックアップ タスク](#BKMK_SupplementalBackup)   
 
-        -   [SQL Server の変更の追跡の保有期間](#bkmk_SQLretention)  
+-  [Configuration Manager サイトの回復](#BKMK_RecoverSite)   
 
-        -   [サイトのデータまたはグローバル データの再初期化プロセス](#bkmk_reinit)  
+  -   [回復オプションの検討](#BKMK_DetermineRecoveryOptions)   
 
-        -   [サイト データベースの回復方法](#BKMK_SiteDBRecoveryScenarios)  
+         -   [サイト サーバーの回復オプション](#BKMK_SiteServerRecoveryOptions)   
 
-    -   [サイトの無人回復スクリプト ファイルのキー](#BKMK_UnattendedSiteRecoveryKeys)  
+         -   [サイト サーバーの回復オプション](#BKMK_SiteServerRecoveryOptions)   
 
-    -   [回復後の作業](#BKMK_PostRecovery)  
+         -   [サイト データベースの回復オプション](#BKMK_SiteDatabaseRecoveryOption)   
 
-    -   [セカンダリ サイトの回復](#BKMK_RecoverSecondarySite)  
+         -  [サイト データベースの回復オプション](#BKMK_SiteDatabaseRecoveryOption)   
 
+         -   [SQL Server の変更の追跡の保有期間](#bkmk_SQLretention)   
+
+         -   [SQL Server の変更の追跡の保有期間](#bkmk_SQLretention)   
+
+         -   [サイトのデータまたはグローバル データの再初期化プロセス](#bkmk_reinit)   
+
+         -   [サイトのデータまたはグローバル データの再初期化プロセス](#bkmk_reinit)   
+
+         -   [サイト データベースの回復方法](#BKMK_SiteDBRecoveryScenarios)  
+
+         -   [サイト データベースの回復方法](#BKMK_SiteDBRecoveryScenarios)  
+
+  -   [サイトの無人回復スクリプト ファイルのキー](#BKMK_UnattendedSiteRecoveryKeys)  
+
+  -   [サイトの無人回復スクリプト ファイルのキー](#BKMK_UnattendedSiteRecoveryKeys)  
+
+  -   [回復後の作業](#BKMK_PostRecovery)  
+
+  -   [回復後の作業](#BKMK_PostRecovery)  
+
+  -   [セカンダリ サイトの回復](#BKMK_RecoverSecondarySite)  
+
+  -   [セカンダリ サイトの回復](#BKMK_RecoverSecondarySite)  
 -   [SMS ライター サービス](#BKMK_SMSWriterService)  
 
 > [!NOTE]  
@@ -119,7 +122,7 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
     > - バックアップ先フォルダー名や共有名に Unicode 文字を含めることはできません。  
 
 
-6.  サイトのバックアップ タスクのスケジュールを構成します。 ベスト プラクティスとして、営業時間外に実行することをお勧めします。 階層構造がある場合は、サイトの障害発生に備え、データの保管期間が長くなるように、少なくとも 1 週間に 2 回実行するスケジュールを設定してください。  
+6.  サイトのバックアップ タスクのスケジュールを構成します。 ベスト プラクティスとして、営業時間外に実行することをお勧めします。 階層構造がある場合は、サイトの障害発生に備え、データの保管期間が長くなるように、少なくとも&1; 週間に&2; 回実行するスケジュールを設定してください。  
 
     バックアップを構成しているのと同じサイト サーバーで Configuration Manager コンソールを実行する場合は、サイト サーバーのバックアップ メンテナンス タスクのスケジュールでローカル時間が使用されます。 バックアップを構成しているサイトから離れたコンピューターから Configuration Manager コンソールが実行されている場合は、サイト サーバーのバックアップ メンテナンス タスクのスケジュールで UTC が使用されます。  
 
@@ -151,7 +154,7 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
  サイト データベースを復元したら、セットアップの手順に従ってサイトを回復します。 Data Protection Manager で回復したサイト データベースを使用するには、**[手動で回復したサイト データベースを使用する]** 回復オプションを選択します。  
 
 ###  <a name="a-namebkmkarchivingbackupsnapshota-archiving-the-backup-snapshot"></a><a name="BKMK_ArchivingBackupSnapshot"></a> バックアップ スナップショットのアーカイブ  
- サイト サーバーのバックアップ メンテナンス タスクを初めて実行するときに、障害が発生したサイト サーバーの復元に使用できるバックアップ スナップショットが作成されます。 その後、スケジュールに従って、バックアップ タスクが実行されると、新しいバックアップ スナップショットが作成され、前のスナップショットが上書きされます。 つまり、サイトのバックアップ スナップショットは 1 つだけになります。それより前のスナップショットに戻すことはできません。  
+ サイト サーバーのバックアップ メンテナンス タスクを初めて実行するときに、障害が発生したサイト サーバーの復元に使用できるバックアップ スナップショットが作成されます。 その後、スケジュールに従って、バックアップ タスクが実行されると、新しいバックアップ スナップショットが作成され、前のスナップショットが上書きされます。 つまり、サイトのバックアップ スナップショットは&1; つだけになります。それより前のスナップショットに戻すことはできません。  
 
  しかし、次のような状況を考慮して、バックアップ スナップショットを複数アーカイブしておくことをお勧めします。  
 
@@ -185,7 +188,7 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
 
 -   **コンテンツ ライブラリ**: コンテンツ ライブラリを復元してからでないと、配布ポイントにコンテンツを再配布することはできません。 コンテンツの再配布を開始すると、Configuration Manager によって、サイト サーバーにあるコンテンツ ライブラリから配布ポイントにファイルがコピーされます。 サイト サーバーのコンテンツ ライブラリは SCCMContentLib フォルダーにあります。このフォルダーは、通常、サイトがインストールされた時点で空きディスク領域が最も大きかったドライブにあります。  
 
--   **パッケージのソース ファイル**: パッケージのソース ファイルを復元してからでないと、配布ポイントのコンテンツを更新することはできません。 コンテンツの更新を開始すると、Configuration Manager によって、パッケージ ソースから新しいファイルや変更されたファイルがコンテンツ ライブラリにコピーされ、次に、関連する配布ポイントにコピーされます。 すべてのパッケージとアプリケーションのパッケージ ソースの場所を見つけるには、SQL Server で `SELECT * FROM v_Package`というクエリを実行します。 パッケージ ID の先頭の 3 文字を見ると、パッケージ ソースのサイトがわかります。 たとえば、CEN00001 というパッケージ ID では、CEN がソース サイトのサイト コードです。 パッケージのソース ファイルを復元するときは、障害発生前と同じ場所に復元する必要があります。  
+-   **パッケージのソース ファイル**: パッケージのソース ファイルを復元してからでないと、配布ポイントのコンテンツを更新することはできません。 コンテンツの更新を開始すると、Configuration Manager によって、パッケージ ソースから新しいファイルや変更されたファイルがコンテンツ ライブラリにコピーされ、次に、関連する配布ポイントにコピーされます。 すべてのパッケージとアプリケーションのパッケージ ソースの場所を見つけるには、SQL Server で `SELECT * FROM v_Package`というクエリを実行します。 パッケージ ID の先頭の&3; 文字を見ると、パッケージ ソースのサイトがわかります。 たとえば、CEN00001 というパッケージ ID では、CEN がソース サイトのサイト コードです。 パッケージのソース ファイルを復元するときは、障害発生前と同じ場所に復元する必要があります。  
 
  サイト サーバーのファイル システムのバックアップに、コンテンツ ライブラリとパッケージ ソースの両方の場所を含めていることを確認してください。  
 
@@ -214,16 +217,16 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
 
 3.  状態移行の役割をホストするサイト システムを選択し、**[サイト システムの役割]** で **[状態移行ポイント]** を選択します。  
 
-4.  **[サイトの役割** ] タブの **[プロパティ]** グループで、 **[プロパティ]**をクリックします。  
 
+4.  **[サイトの役割** ] タブの **[プロパティ]** グループで、 **[プロパティ]**をクリックします。  
 5.  ユーザー状態移行データが保存されているフォルダーが [ **全般** ] タブの [ **フォルダーの詳細** ] セクションに一覧表示されます。  
 
-##  <a name="a-namebkmkrecoversitea-recover-a-configuration-manager-site"></a><a name="BKMK_RecoverSite"></a> Configuration Manager サイトの回復  
+
  Configuration Manager サイトで障害が発生した場合や、サイト データベースのデータが損失した場合は、Configuration Manager サイトの回復が必要です。 サイトの回復の中心となる作業は、データの修復と同期です。これは、業務の中断を防ぐためにも必要な作業です。  
 
 > [!IMPORTANT]  
 >  サイトのデータベースを回復する場合:  
->   
+
 >  -   同じバージョンおよびエディションの SQL Server を使用する必要があります。 たとえば、SQL Server 2012 で実行したデータベースを SQL Server 2014 に復元することはできません。 同様に、SQL Server 2014 の Standard エディションで実行していたサイト データベースを SQL Server 2014 の Enterprise エディションに復元することはできません。  
 > -   SQL Server を **シングル ユーザー モード**に設定しないでください。  
 > -   MDF ファイルと LDF ファイルが有効であることを確認します。 サイトを回復するとき、復元するファイルの状態のチェックは行われません。  
@@ -233,17 +236,16 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
 
 > [!IMPORTANT]  
 >  サイト サーバーの **[スタート]** メニューから Configuration Manager セットアップを実行する場合は、**[サイトを回復する]** オプションは使用できません。  
->   
+
 >  Configuration Manager コンソール内から更新プログラムをインストールした後で、バックアップを作成した場合は、インストール メディアのセットアップまたは Configuration Manager のインストール パスを使用してサイトを正常に再インストールすることはできません。  
 
 > [!NOTE]  
 >  データベースのレプリカ用に構成されたサイト データベースを復元した後で、データベースのレプリカを使用するためには、データベースの各レプリカを再構成して、パブリケーションとサブスクリプションの両方を再作成する必要があります。  
 
 ###  <a name="a-namebkmkdeterminerecoveryoptionsa-determine-your-recovery-options"></a><a name="BKMK_DetermineRecoveryOptions"></a> 回復オプションの検討  
- Configuration Manager のプライマリ サイト サーバーと中央管理サイトの回復を検討するときには、サイト サーバーとサイト データベースという 2 つの要素を考慮する必要があります。 どのオプションを選択するかを決めるときに、次のセクションを参考にしてください。  
+ Configuration Manager のプライマリ サイト サーバーと中央管理サイトの回復を検討するときには、サイト サーバーとサイト データベースという&2; つの要素を考慮する必要があります。 どのオプションを選択するかを決めるときに、次のセクションを参考にしてください。  
 
 > [!NOTE]  
->  前に回復できなかったサイトや、完全にインストールされていないサイトを回復する場合は、まず、セットアップで **[Configuration Manager をアンインストールする]** オプションを選択しないと、サイトを回復するオプションを選択することはできません。 アンインストールしようとしているサイトに子サイトがある場合は、**[Configuration Manager をアンインストールする]** オプションを選択する前に、アンインストールするサイトのサイト データベースを手動で削除する必要があります。削除しないと、アンインストールが正常に完了しません。  
 
 ####  <a name="a-namebkmksiteserverrecoveryoptionsa-site-server-recovery-options"></a><a name="BKMK_SiteServerRecoveryOptions"></a> サイト サーバーの回復オプション  
  Configuration Manager インストール フォルダーの外に作成する CD.Latest フォルダーのコピーから、セットアップを開始する必要があります。 その後、 **[サイトを回復する]** オプションを選択します。 セットアップを実行したときに、選択できる回復オプションは次のとおりです。  
@@ -275,7 +277,11 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
 -   **データベースの回復をスキップする**: Configuration Manager サイト データベース サーバーのデータが失われていない場合にのみ、このオプションを使用してください。 このオプションは、回復しようとしているサイト サーバーとは別のコンピューターにサイト データベースがある場合だけ選択できます。  
 
 ####  <a name="a-namebkmksqlretentiona-sql-server-change-tracking-retention-period"></a><a name="bkmk_SQLretention"></a> SQL Server の変更の追跡の保有期間  
- SQL Server のサイト データベースでは、変更の追跡機能が有効になっています。 そのため、過去のある時点以後にデータベース テーブルに加えられた変更に関する情報を、Configuration Manager が照会することができます。 保有期間とは、この変更の追跡データを残しておく期間のことです。 既定では、サイト データベースの追跡データの保有期間は 5 日に構成されています。 サイト データベースを回復するときは、バックアップがこの保有期間内に作成されたかどうかによって、回復プロセスが異なります。 たとえば、サイト データベースで障害が発生した時点で、最も新しいバックアップが作成後 7 日経過している場合は、保有期間外に作成されていることになります。  
+ SQL Server のサイト データベースでは、変更の追跡機能が有効になっています。 そのため、過去のある時点以後にデータベース テーブルに加えられた変更に関する情報を、Configuration Manager が照会することができます。 保有期間とは、この変更の追跡データを残しておく期間のことです。 既定では、サイト データベースの追跡データの保有期間は 5 日に構成されています。 サイト データベースを回復するときは、バックアップがこの保有期間内に作成されたかどうかによって、回復プロセスが異なります。 たとえば、サイト データベースで障害が発生した時点で、最も新しいバックアップが作成後 7 日経過している場合は、保有期間外に作成されていることになります。
+
+ SQL Server の変更追跡の内部構造については、SQL Server チームのブログ「[Change Tracking Cleanup - part 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1)」(変更追跡のクリーンアップ - パート 1) と「[Change Tracking Cleanup - part 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2)」(変更追跡のクリーンアップ - パート 2) を参照してください。
+
+
 
 ####  <a name="a-namebkmkreinita-process-to-reinitialize-site-or-global-data"></a><a name="bkmk_reinit"></a> サイトのデータまたはグローバル データの再初期化プロセス  
  サイトのデータまたはグローバル データの再初期化とは、サイト データベースにある既存のデータを別のサイト データベースに置き換えるプロセスのことです。 たとえば、"ABC" というサイトのデータを "XYZ" というサイトのデータで再初期化するときは、次の処理が行われます。  
@@ -474,7 +480,7 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
 
     -   **値:** <Site code\>  
 
-    -   **詳細:** 階層内のサイトを一意に識別する英数字 3 文字。 障害が発生する前にサイトに付いていたサイト コードを指定する必要があります。  
+    -   **詳細:** 階層内のサイトを一意に識別する英数字&3; 文字。 障害が発生する前にサイトに付いていたサイト コードを指定する必要があります。  
 
 -   **キー名:** SiteName  
 
@@ -673,7 +679,7 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
 
     -   **値:** <Site code\>  
 
-    -   **詳細:** 階層内のサイトを一意に識別する英数字 3 文字。 障害が発生する前にサイトに付いていたサイト コードを指定する必要があります。  
+    -   **詳細:** 階層内のサイトを一意に識別する英数字&3; 文字。 障害が発生する前にサイトに付いていたサイト コードを指定する必要があります。  
 
 -   **キー名:** SiteName  
 
@@ -839,7 +845,7 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
  サイト サーバーの回復が終わったら、そのサイトに指定していた Windows サイドローディング キーを再入力する必要があります。これは、サイトの回復中にサイドローディング キーがリセットされるためです。 サイドローディング キーを再入力すると、Configuration Manager コンソールで Windows サイドローディング キーの **[使用済みライセンス認証数]** 列内のカウントがリセットされます。 たとえば、サイト エラーが発生する前に、**[合計ライセンス認証数]** カウントが **100** に設定され、**[使用済みライセンス認証数]** がデバイスで使用されていたキーの数に相当する **90** になっていたとします。 サイトの回復後、[ **合計ライセンス認証数** ] 列には **100**と表示されますが、[ **使用済みライセンス認証数** ] 列には誤って **0**と表示されます。 しかし、新しく 10 台のデバイスがサイドローディング キーを使用すると、ライセンスの残りがなくなってしまうので、11 台目以降、キーを取得できなくなります。  
 
 #### <a name="recreate-the-microsoft-intune-subscription"></a>Microsoft Intune サブスクリプションの再作成  
- サイト サーバー コンピューターが再イメージ化された後に Configuration Manager サイト サーバーを回復する場合、Microsoft Intune のサブスクリプションは復元されません。 サイトを回復した後、サブスクリプションを再作成する必要があります。 詳細については、「 [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription)」をご覧ください。  
+ サイト サーバー コンピューターが再イメージ化された後に Configuration Manager サイト サーバーを回復する場合、Microsoft Intune のサブスクリプションは復元されません。 サイトを回復した後、サブスクリプションを再接続する必要があります。  新しい APN 要求は作成しないでください。代わりに、最後に iOS 管理を構成または更新した現在の有効な .pem-file をアップロードしてください。 詳細については、「 [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription)」をご覧ください。  
 
 #### <a name="configure-ssl-for-site-system-roles-that-use-iis"></a>IIS を使用するサイト システムの役割の SSL を構成する  
  IIS を実行するサイト システムを回復し、障害が発生する前に、そのシステムが HTTPS 接続用に構成されていた場合は、IIS で Web サーバー証明書を使用するように再構成する必要があります。  
@@ -853,7 +859,7 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
 #### <a name="recover-content-files"></a>コンテンツ ファイルを回復する  
  サイト データベースには、サイト サーバーでのコンテンツ ファイルの保存場所に関する情報が含まれていますが、コンテンツ ファイル自体は、バックアップと復元プロセスで、バックアップも復元もされません。 コンテンツ ファイルを完全に回復するには、コンテンツ ライブラリのファイルとパッケージ ソース ファイルを元の場所に復元する必要があります。 コンテンツ ファイルを回復する方法はいくつかありますが、一番簡単なのは、サイト サーバーのファイル システムのバックアップからファイルを復元する方法です。  
 
- パッケージ ソース ファイル復元用のファイル システムのバックアップがない場合は、最初にパッケージを作成したときと同じようにして、ファイルを手動でコピーしたりダウンロードしたりする必要があります。 すべてのパッケージとアプリケーションのパッケージ ソースの場所を見つけるには、SQL Server で `SELECT * FROM v_Package`というクエリを実行します。 パッケージ ID の先頭の 3 文字を見ると、パッケージ ソースのサイトがわかります。 たとえば、CEN00001 というパッケージ ID では、CEN がソース サイトのサイト コードです。 パッケージのソース ファイルを復元するときは、障害発生前と同じ場所に復元する必要があります。  
+ パッケージ ソース ファイル復元用のファイル システムのバックアップがない場合は、最初にパッケージを作成したときと同じようにして、ファイルを手動でコピーしたりダウンロードしたりする必要があります。 すべてのパッケージとアプリケーションのパッケージ ソースの場所を見つけるには、SQL Server で `SELECT * FROM v_Package`というクエリを実行します。 パッケージ ID の先頭の&3; 文字を見ると、パッケージ ソースのサイトがわかります。 たとえば、CEN00001 というパッケージ ID では、CEN がソース サイトのサイト コードです。 パッケージのソース ファイルを復元するときは、障害発生前と同じ場所に復元する必要があります。  
 
  コンテンツ ライブラリが含まれているファイル システムのバックアップがない場合は、次の方法でコンテンツ ファイルを復元できます。  
 
@@ -912,7 +918,6 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
  VSS は、システムのアプリケーションがボリュームに書き込んでいる間にボリュームをバックアップできるようにするフレームワークを実装する COM API のセットです。 VSS は、ディスクのデータを更新するユーザー アプリケーション (SMS ライター サービス) と、アプリケーションのバックアップを取るユーザー アプリケーション (Backup Manager サービス) を連携させるインターフェイスとして機能します。 VSS の詳細については、Windows Server TechCenter の「 [Volume Shadow Copy Service (ボリューム シャドウ コピー サービス)](http://go.microsoft.com/fwlink/p/?LinkId=241968) 」を参照してください。  
 
 
-
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

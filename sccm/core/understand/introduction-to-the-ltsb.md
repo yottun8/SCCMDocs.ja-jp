@@ -2,7 +2,7 @@
 title: "Long-Term Servicing Branch の概要 | Microsoft Docs"
 description: "System Center Configuration Manager の Long-Term Servicing Branch について説明します。"
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 1/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: c681068768eda992b570a10b5f1b25c6ff1e1e79
+ms.sourcegitcommit: a86546eb513a2ef6f95013178b141fb1833ea8ab
+ms.openlocfilehash: fa4d7dd2e1edbbc0b136ebfc27560f20ab63c12e
 
 
 ---
@@ -55,7 +55,7 @@ Current Branch と比較すると、LTSB には次のサポートの制限があ
 
 - 新しい機能の更新プログラムを受信しません。
 - Microsoft Intune サブスクリプションの追加はサポートされません。そのため、以下は使用できません。
-  - ハイブリッド MDM 構成の Intune
+  - ハイブリッド モバイル デバイス管理 (MDM) 構成の Intune
   - オンプレミス MDM
 -   Windows 10 サービス ダッシュボード、サービス プランの使用、Windows 10 の Current Branch (CB) および Current Branch for Business (CBB) はサポートされません
 - Windows 10 LTSB および Windows Server の今後のリリースはサポートされません
@@ -72,22 +72,22 @@ Current Branch と比較すると、LTSB には次のサポートの制限があ
 ## <a name="documentation-for-the-ltsb"></a>LTSB のドキュメント
 LTSB はバージョン 1606 Current Branch に基づいているので、LTSB に使用するドキュメントは、[Current Branch に適用されるオンライン ドキュメント](https://docs.microsoft.com/sccm/)です。ただし、以下のトピックで説明するように、LTSB 固有の注意事項と制限事項があります。  
 
--   [Long-Term Servicing Branch の概要](introduction-to-the-ltsb.md) - (このトピック)
+-   [Long-Term Servicing Branch の概要](introduction-to-the-ltsb.md): (このトピック)
 
--   [Which branch of Configuration Manager should I use](which-branch-should-i-use.md) (どのブランチの Configuration Manager を使用すればよいですか) – ニーズに合わせて最適なブランチをインストールできるように、System Center Configuration Manager ブランチの違いについて説明しています。
+-   [適切な Configuration Manager のブランチを選択する](which-branch-should-i-use.md): ニーズに合わせて最適なブランチをインストールできるように、System Center Configuration Manager ブランチの違いについて説明しています。
 
--   [Install the  Long-Term Servicing Branch](install-the-ltsb.md) (Long-Term Servicing Branch のインストール) - 新しい LTSB サイトをインストールする方法、System Center 2012 Configuration Manager サイトを LTSB にアップグレードする方法について説明しています。
+-   [System Center Configuration Manager のバージョン 1606 構成基準メディアでインストールし、アップグレードする](install-the-ltsb.md): 新しい LTSB サイトをインストールする方法、System Center 2012 Configuration Manager サイトを LTSB にアップグレードする方法について説明しています。
 
--   [Upgrade the  Long-Term Servicing Branch to the Current Branch](convert-to-current-branch.md) (Long-Term Servicing Branch を Current Branch にアップグレードする) – LTSB インストールを Current Branch インストールに変換する方法について説明しています。
+-   [Long-Term Servicing Branch の Current Branch へのアップグレード](convert-to-current-branch.md): LTSB インストールを Current Branch インストールに変換する方法について説明しています。
 
--   [Licensing and branches for System Center Configuration Manager](learn-more-editions.md) (System Center Configuration Manager のライセンスとブランチ) – System Center Configuration Manager のソフトウェア アシュアランスと関連するライセンスの要件について説明しています。
--   [Supported Configurations for the Long-Term Servicing Branch](supported-configurations-for-ltsb.md) (Long-Term Servicing Branch のサポートされる構成) - LTSB で使用できるオペレーティング システムと依存する製品 (SQL Server など) のバージョンと要件について説明しています。
+-   [System Center Configuration Manager のライセンスとブランチ](learn-more-editions.md): System Center Configuration Manager のソフトウェア アシュアランスと関連するライセンスの要件について説明しています。
+-   [System Center Configuration Manager の Long-Term Servicing Branch のサポートされている構成](supported-configurations-for-ltsb.md): LTSB で使用できるオペレーティング システムと依存する製品 (SQL Server など) のバージョンと要件について説明しています。
 
 
 適用されるブランチ固有のドキュメントを区別するには、次のガイドを参照してください。  
 -   「*適用先: Current Branch*」という見出しがあるトピックは、Current Branch と Long-Term Servicing Branch の両方に適用されます (ただし、トピックの一部は新しいバージョンの Current Branch にのみ適用される場合もあります)。
 
--   LTSB に適用されないトピックの部分を特定するには、"バージョン 1610 以降" などの言葉で Current Branch のバージョン 1606 の後に導入された機能と変更点を特定します。 バージョン 1610 以降の機能は、1606 バージョンの Current Branch の後に導入されているので、LTSB では使用できません。
+-   LTSB に適用されないトピックの部分を特定するには、"*バージョン 1610 以降*" などの言葉で Current Branch のバージョン 1606 の後に導入された機能と変更点を特定します。 バージョン 1610 以降の機能は、1606 バージョンの Current Branch の後に導入されているので、LTSB では使用できません。
 
 ### <a name="similarities-between-the-current-branch-and-the-ltsb"></a>Current Branch と LTSB の類似点
 LTSB は Current Branch バージョン 1606 に基づいています (ただし、Intune の統合やクラウド関連の機能などの例外はあります)。そのため、2 つのブランチの展開計画、構成、管理に関するほとんどのタスクは同じです。
@@ -102,13 +102,13 @@ Configuration Manager サイトのバージョン情報を表示すると、ブ�
 
 サイトのブランチ (LTSB または Current Branch) を確認するには、コンソールで **[管理]** > **[サイトの構成]** > **[サイト]** を選択し、**[階層設定]** を開きます。  Current Branch に変換するオプションがあり、選択できる状態の場合、サイトは LTSB バージョンを実行しています。 サイトが Current Branch を実行している場合、このオプションは淡色表示されます。
 
-さまざまなバージョンの Configuration Manager については、「[Updates for Configuration Manager](/sccm/core/servers/manage/updates)」(Configuration Manager の更新プログラム) トピックの「**Baseline and update versions**」(基準と更新プログラムのバージョン) を参照してください。
+さまざまなバージョンの Configuration Manager については、「[System Center Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)」トピックの「基準バージョンと更新プログラムのバージョン」を参照してください。
 
 ## <a name="exceptions-for-using-the-ltsb"></a>LTSB の使用に関する例外
 ### <a name="updates-and-servicing-of-the-ltsb"></a>LTSB の更新プログラムとサービス
 LTSB のコンソール内更新プログラムでは、重要なセキュリティ更新プログラムのみを使用できます。
 
-ただし、コンソールには、以降の Current Branch リリース用の通常の更新プログラムに関する情報が表示されます。 これらの更新プログラムは LTSB に使用できないので、ダウンロードされず、インストールすることもできません。
+コンソールには、以降の Current Branch リリース用の通常の更新プログラムに関する情報が表示されますが、LTSB からは使用できません。 更新プログラムはダウンロードされず、インストールすることはできません。
 
 重要なセキュリティ修正プログラムについてコンソール内更新プログラムをサポートするには、LTSB で[サービス接続ポイント](/sccm/core/servers/deploy/configure/about-the-service-connection-point)を使用する必要があります。 Current Branch と同様に、このサイト システムの役割はオフライン モードまたはオンライン モードで構成できます。 LTSB は、Current Branch と同じテレメトリと使用状況データを収集および送信します。
 
@@ -117,7 +117,7 @@ LTSB は、Current Branch のドキュメントで説明されているように
 更新プログラムとサービスの全般的な情報については、「 [Updates for Configuration Manager](/sccm/core/servers/manage/updates)」(Configuration Manager の更新プログラム) を参照してください。
 
 ### <a name="changes-for-site-expansion-and-the-cdlatest-folder"></a>サイトの拡張と CD.Latest フォルダーの変更
-新しい中央管理サイトをインストールして LTSB を実行し、スタンドアロンのプライマリ サイトを実行する場合、1606 基準メディアのセットアップおよびソース ファイルを使用する必要があります  (Current Branch の場合、CD.Latest フォルダーのセットアップを実行し、ソース ファイルを使用します)。
+新しい中央管理サイトをインストールして LTSB を実行し、スタンドアロンのプライマリ サイトを実行する場合、1606 基準メディアのセットアップおよびソース ファイルを使用する必要があります  Current Branch の場合、CD.Latest フォルダーのセットアップを実行し、ソース ファイルを使用します。
 
 サイトの拡張には CD.Latest フォルダーのセットアップを実行しませんが、サイトの回復には CD.Latest フォルダーを使用します。また、最初の LTSB サイトが中央管理サイトだったときに、新しい子プライマリ サイトをインストールする場合にも、CD.Latest フォルダーを使用します。
 
@@ -126,6 +126,6 @@ CD.Latest フォルダーの詳細については、「[The CD.Latest folder](/s
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 
