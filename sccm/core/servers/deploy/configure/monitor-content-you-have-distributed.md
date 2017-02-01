@@ -2,7 +2,7 @@
 title: "コンテンツを監視する | Microsoft Docs"
 description: "Configuration Manager コンソールを使用して配布コンテンツを監視する方法を説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/4/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: 9a5d2c3a3c6bdca05b5b00fa4d746c437a56ef89
+ms.sourcegitcommit: 4d34a272a93100426cccd2308c5b3b0b0ae94a60
+ms.openlocfilehash: 60f30fd6477f1ee8755e50ceb9cc17d43ef8ea68
 
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>配布したコンテンツを System Center Configuration Manager で監視する
@@ -156,12 +156,21 @@ System Center Configuration Manager コンソールを使用して、配布コ�
 > [!TIP]  
 > バージョン 1610 では、ピア キャッシュとクライアント データ ソースのダッシュボードは、プレリリース機能です。 有効にするには、「[更新プログラムからのプレリリース機能の使用](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)」をご覧ください。
 
-コンソールで、**[監視]** > **[クライアント ステータス]** > **[Client Data Sources (クライアント データ ソース)]** に移動します。 ここで、ダッシュボードに適用する期間を選択できます。 次に、表示で、情報を表示する境界グループまたはパッケージを選択できます。 情報を表示しているときは、画面上にマウスを移動して、コンテンツまたはポリシーのソースのソースについての詳細を表示できます。  
+コンソールで、**[監視]** > **[クライアント ステータス]** > **[Client Data Sources (クライアント データ ソース)]** に移動します。 ここで、ダッシュボードに適用する期間を選択できます。 次に、表示で、情報を表示する境界グループまたはパッケージを選択できます。 情報を表示しているときは、画面上にマウスを移動して、コンテンツまたはポリシーのソースのソースについての詳細を表示できます。
+
+詳細:  
+- **クライアント コンテンツ ソース**: クライアントがコンテンツを取得するソースを表示します。
+- **配布ポイント**: 選択された境界グループに含まれる配布ポイントの数を表示します。
+- **配布ポイントを使用したクライアント**: 選択された境界グループに含まれるクライアントのうち、コンテンツの取得に配布ポイントを使用したクライアントの数を表示します。
+- **ピア キャッシュ ソース**: 選択された境界グループについて、ダウンロード履歴を報告したピア キャッシュ ソースの数を表示します。
+- **ピアを使用したクライアント**: 選択された境界グループに含まれるクライアントのうち、コンテンツの取得にピア キャッシュ ソースを使用したクライアントの数を表示します。
+
+
 
 各境界グループのクライアント データ ソースの概要を表示する、新しいレポート [**Client Data Sources - Summarization**] (クライアント データ ソース - 概要) を使用することもできます。
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

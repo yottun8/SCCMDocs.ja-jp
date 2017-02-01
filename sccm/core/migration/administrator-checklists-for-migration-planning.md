@@ -2,7 +2,7 @@
 title: "移行チェックリスト | Microsoft Docs"
 description: "監理者チェックリストを利用すると、System Center Configuration Manager への移行方針を計画するときに便利です。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
+ms.sourcegitcommit: 5e6e8a18a8fc705c993177b3c5b4113a351a45a4
+ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
 
 
 ---
@@ -26,13 +26,7 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-次の監理者チェックリストを利用すると、System Center Configuration Manager への移行方針を計画するときに便利です。  
-
--   [移行計画の管理者チェックリスト](#Checklist_Migraiton_Planning)  
-
--   [階層移行の管理者チェックリスト](#Checklist_Hierarchy_for_migration)  
-
--   [移行の管理者チェックリスト](#Checklisit_Migration)  
+次の監理者チェックリストを利用すると、System Center Configuration Manager への移行方針を計画するときに便利です。
 
 ##  <a name="a-namechecklistmigraitonplanninga-administrator-checklist-for-migration-planning"></a><a name="Checklist_Migraiton_Planning"></a> 移行計画の管理者チェックリスト  
  移行前の計画の手順については、次のチェックリストを使用してください。  
@@ -50,9 +44,7 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
     詳細については、「[System Center Configuration Manager のロール ベース管理の基礎](../../core/understand/fundamentals-of-role-based-administration.md)」をご覧ください。  
 
--   **ネットワークと Active Directory のトポロジを評価する。**  
-
-    既存のドメイン構造とネットワーク トポロジを見直し、これが階層の設計と移行タスクに及ぼす影響について検討します。  
+-   **ネットワークと Active Directory のトポロジを評価する。**既存のドメイン構造とネットワーク トポロジを見直し、これが階層の設計と移行タスクに及ぼす影響について検討します。  
 
 -   **移行先階層の設計を完成させる。**  
 
@@ -64,7 +56,7 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
 -   **オブジェクトの移行方法を計画する。**  
 
-    サイトの境界、コレクション、アドバタイズ、および展開を含め、複数のオブジェクトを移行するために、利用可能な移行ジョブの使用を計画します。 詳細については、「 [Plann」の「g a Migration Job Strategy 」の「 System Center Configuration Manager](../../core/migration/planning-a-migration-job-strategy.md#Types_of_Migration) 」の「 [Plann」の「g a migration job strategy 」の「 System Center Configuration Manager](../../core/migration/planning-a-migration-job-strategy.md)」を参照してください。  
+    サイトの境界、コレクション、アドバタイズ、および展開を含め、複数のオブジェクトを移行するために、利用可能な移行ジョブの使用を計画します。 詳細については、「[System Center Configuration Manager での移行ジョブ戦略の計画](../../core/migration/planning-a-migration-job-strategy.md)」の「[移行ジョブの種類](../../core/migration/planning-a-migration-job-strategy.md#Types_of_Migration)」をご覧ください。  
 
     Configuration Manager は、選択したオブジェクトのみを移行します。 移行先階層に必要なオブジェクトが移行されない場合は、そのオブジェクトを移行先階層で再作成する必要があります。  
 
@@ -72,7 +64,7 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
 -   **クライアントの移行方法を計画する。**  
 
-    クライアントを移行先階層に移行するときに、ネットワーク帯域幅とサーバー処理要件を制限する制御可能なアプローチを使用してクライアントを移行するように計画します。 クライアント移行戦略の計画の詳細については、「 [Planning a client migration strategy in System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md)」を参照してください。  
+    クライアントを移行先階層に移行するときに、ネットワーク帯域幅とサーバー処理要件を制限する制御可能なアプローチを使用してクライアントを移行するように計画します。 クライアント移行戦略の計画の詳細については、「[System Center Configuration Manager でのクライアント移行戦略の計画](../../core/migration/planning-a-client-migration-strategy.md)」を参照してください。  
 
 -   **インベントリとコンプライアンス データを計画する。**  
 
@@ -97,7 +89,7 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
     移行準備のために、プライマリ サイトを含む System Center Configuration Manager 移行先階層をインストールし、構成します。 たとえば、  
 
-    -   中央管理サイトをインストールしてから、少なくとも 1 つの子プライマリをインストールする  
+    -   中央管理サイトをインストールしてから、少なくとも&1; つの子プライマリをインストールする  
 
     -   中央管理サイトを使用する予定がない場合、スタンドアロン プライマリをインストールする  
 
@@ -108,7 +100,7 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
 -   **移行先階層に追加のサイト システムの役割をインストールして構成する。**  
 
-    追加のサイト システムの役割と必要とされるサイト システムを構成します。  
+    追加のサイト システムの役割と必要なサイト システムを構成します。  
 
 -   **移行先階層の運用機能を確認する。**  
 
@@ -126,11 +118,11 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
 -   **移行先階層で移行を有効にする。**  
 
-    ソース階層の最上位サイトを指定してソース階層を構成します。 ソース サイトの指定の詳細については、「 [Planning a source hierarchy strategy in System Center Configuration Manager](../../core/migration/planning-a-source-hierarchy-strategy.md)」を参照してください。  
+    ソース階層の最上位サイトを指定してソース階層を構成します。 ソース サイトの指定の詳細については、「[System Center Configuration Manager でのソース階層戦略の計画](../../core/migration/planning-a-source-hierarchy-strategy.md)」を参照してください。  
 
 -   **ソース階層が Configuration Manager 2007 SP2 を実行している場合、ソース階層で追加サイトを選択し、構成する。**  
 
-    Configuration Manager 2007 SP2 ソース階層内にデータを収集する追加サイトがある場合、各サイトでデータ収集のために資格情報を構成する必要があります。 各ソース サイトを構成すると、データ収集プロセスが直ちに開始され、移行期間中は、サイトのデータ収集を手動で停止するまで継続されます。 データ収集により、前回のデータ収集プロセス以降に更新されたオブジェクトや新しく追加されたオブジェクトが確実にソース階層から移行できるようになります。  
+    Configuration Manager 2007 SP2 ソース階層内にデータを収集する追加サイトがある場合、各サイトでデータ収集のために資格情報を構成する必要があります。 各ソース サイトを構成すると、データ収集プロセスが直ちに開始され、移行期間中は、サイトのデータ収集を停止するまで継続されます。 データ収集により、前回のデータ収集プロセス以降に更新されたオブジェクトや新しく追加されたオブジェクトが確実にソース階層から移行できるようになります。
 
     > [!NOTE]  
     >  ソース階層で System Center 2012 Configuration Manager 以降が実行されている場合、追加のソース サイトを構成する必要はありません。  
@@ -139,7 +131,7 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
     2 つの階層間で配布ポイントを共有することで、移行するオブジェクトのコンテンツを、移行先階層内のクライアントが使用できるようになります。 こうすることで、両方の階層内のクライアントが同じコンテンツを引き続き使用できるようになり、データ収集を停止して移行を完了するまで、このコンテンツを管理することができます。  
 
-    共有配布ポイントの詳細については、「 *Share Distribution Points Between Source and Destination Hierarchies* 」トピックの「 [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) 」セクションを参照してください。  
+    共有配布ポイントの詳細については、「[System Center Configuration Manager のコンテンツ展開移行戦略の計画](../../core/migration/planning-a-content-deployment-migration-strategy.md)」の「[ソース階層と移行先階層での配布ポイントの共有](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration)」を参照してください。  
 
 -   **ソース階層内のクライアントと関連付けられているオブジェクトを移行するための移行ジョブを作成して実行する。**  
 
@@ -147,7 +139,7 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
     たとえば、コンテンツを移行する場合、使用する移行ジョブにかかわらず、移行先階層内のサイトを、そのコンテンツの管理のために割り当てる必要があります。 この割り当てられたサイトは、コンテンツの元のソース ファイルがある場所にアクセスします。また、このサイトには、そのコンテンツを移行先階層内の配布ポイントに配布する役割があります。  
 
-    詳細については、「 [Create and Edit Migration Jobs for System Center Configuration Manager](../../core/migration/operations-for-migration.md#Create_Edit_migration_Jobs) 」トピックの「 [Operations for migrating to System Center Configuration Manager](../../core/migration/operations-for-migration.md) 」セクションを参照してください。  
+    詳細については、「[System Center Configuration Manager に移行するための操作](../../core/migration/operations-for-migration.md#Create_Edit_migration_Jobs)」で [System Center Configuration Manager の移行ジョブの作成と編集](../../core/migration/operations-for-migration.md)を参照してください。  
 
 -   **クライアントを移行先階層に移行する。**  
 
@@ -167,14 +159,14 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
     さらに、セカンダリ サイト サーバーに併置されている Configuration Manager 2007 の配布ポイントをアップグレードすることもできます。 この操作により、セカンダリ サイトが削除され、移行先階層の配布ポイントが唯一の配布ポイントになります。  
 
-    共有配布ポイントの詳細については、「 [Share Distribution Points Between Source and Destination Hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) 」トピックの「 [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) 」セクションを参照してください。  
+    共有配布ポイントの詳細については、「[System Center Configuration Manager のコンテンツ展開移行戦略の計画](../../core/migration/planning-a-content-deployment-migration-strategy.md)」の「[ソース階層と移行先階層での配布ポイントの共有](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration)」を参照してください。  
 
--   **移行の完了:**  
+-   **移行を完了する。**  
 
     ソース階層内のすべてのサイトからデータとクライアントを移行し、該当する配布ポイントをアップグレードしたら、移行を完了できます。 移行を完了するには、ソース階層内の各ソース サイトについてデータ収集を停止します。 次に不要な移行情報を削除し、ソース階層インフラストラクチャの使用を停止することができます。 詳細については、「 [Planning to complete migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md)」をご覧ください。  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

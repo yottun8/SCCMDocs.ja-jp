@@ -2,7 +2,7 @@
 title: "コンソールのサポート | Microsoft Docs"
 description: "System Center Configuration Manager コンソールがサポートするオペレーティング システムについて説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 1e00199e4c819bc4a12896db5d427efa986dc84e
+ms.sourcegitcommit: 4fdc8db6395b42468dd5f07012fa9767121960d6
+ms.openlocfilehash: 493fe98787591d44b2deb9a4474d38e54f4127e8
 
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-consoles"></a>System Center Configuration Manager コンソールのサポートされるオペレーティング システム
@@ -27,26 +27,26 @@ ms.openlocfilehash: 1e00199e4c819bc4a12896db5d427efa986dc84e
 
  System Center Configuration Manager コンソールをサポートするために、次のオペレーティング システムでバージョン 4.5.2 以降の .NET Framework が必要です。 例外は Windows 10 で、この場合 .NET Framework 4.6 以降が必要です。  
 
--   **Windows Server 2016**  – Standard、Datacenter  
+-   **Windows Server 2016**: Standard、Datacenter  
   - Windows Server 2016 は、Configuration Manager バージョン 1606 以降および KB3186654 以降の修正プログラム ロールアップ (2016 年 10 月にリリースされた 1606 のベースライン バージョン) でサポートされています。  
 
 
--   **Windows Server 2012 R2** (x64) – Standard、Datacenter  
+-   **Windows Server 2012 R2** (x64): Standard、Datacenter  
 
--   **Windows Server 2012** (x64) – Standard、Datacenter  
+-   **Windows Server 2012** (x64): Standard、Datacenter  
 
--   **Windows Server 2008 R2 SP1** (x64)   – Standard、Enterprise、Datacenter  
+-   **Windows Server 2008 R2 SP1** (x64): Standard、Enterprise、Datacenter  
 
--   **Windows 10** (x86、x64) – Pro、Enterprise  
+-   **Windows 10** (x86、x64): Pro、Enterprise  
 
--   **Windows 8.1** (x86、x64) – Professional、Enterprise  
+-   **Windows 8.1** (x86、x64): Professional、Enterprise  
 
--   **Windows 8** (x86、x64) – Professional、Enterprise  
+-   **Windows 8** (x86、x64): Professional、Enterprise  
 
--   **Windows 7 SP1** (x86、x64) – Professional、Enterprise、Ultimate  
+-   **Windows 7 SP1** (x86、x64): Professional、Enterprise、Ultimate  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
