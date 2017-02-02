@@ -16,8 +16,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 7327c969402b9b467cfb50d1dd3255797a9d4c4e
-ms.openlocfilehash: 27b75831f28860ca435b4a53aad31abd15b9e451
+ms.sourcegitcommit: 07578e3aaa93a06a2fa90e72de2b7c71ce2a14b9
+ms.openlocfilehash: f405514402d7140e26bff6da5e8c2759a80b8a7f
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
@@ -49,6 +49,12 @@ ms.openlocfilehash: 27b75831f28860ca435b4a53aad31abd15b9e451
 - **iOS デバイスがアクティブでないか、管理コンソールと通信できない問題を解決する**
 
   ユーザーのデバイスと Intune との接続が切れた場合、会社のリソースへ再度アクセスできるように、新しいトラブルシューティングの手順を指定できます。 「[Devices are inactive, or the admin console cannot communicate with them](/intune/troubleshoot/troubleshoot-device-enrollment-in-intune#devices-are-inactive-or-the-admin-console-cannot-communicate-with-them)」 (デバイスがアクティブでないか、管理コンソールと通信できない) を参照してください。
+
+### <a name="new-in-configuration-manager-technical-preview-1701"></a>Configuration Manager Technical Preview 1701 の新機能
+
+- **ハイブリッド MDM の作成ウィザードで Android と iOS のバージョン指定が不要に**
+
+  ハイブリッド モバイル デバイス管理 (MDM) の Technical Preview 1701 から、Intune で管理されるデバイスの新しいポリシーとプロファイルを作成する場合に Android および iOS の特定のバージョンを指定する必要がなくなりました。 この変更により、新しい Configuration Manager のリリースまたは拡張機能を必要とせずに、ハイブリッド展開で新しい Android および iOS のバージョンによりすばやくサポートを提供できます。 詳細については、「[作成ウィザードで Android と iOS のバージョン指定が不要に](/sccm/core/get-started/capabilities-in-technical-preview-1701#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)」を参照してください。
 
 
 ## <a name="new-hybrid-features-in-december-2016"></a>2016 年 12 月のハイブリッド新機能
@@ -164,6 +170,6 @@ Configuration Manager 2012 SP1 または R2 RTM でハイブリッド展開を�
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
