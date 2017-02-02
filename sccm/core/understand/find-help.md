@@ -53,7 +53,7 @@ ms.openlocfilehash: 6c864cc443801d2a21e06b7d2e7a4784c52ffc1e
 ###  <a name="a-namebkmksearchtipsa-search-the-documentation-library"></a><a name="BKMK_SearchTips"></a> ドキュメント ライブラリを検索する  
  必要な情報を検索するときに、以下の検索のヒントをご覧ください。  
 
--   お好みの検索エンジンを使用して System Center Configuration Manager のコンテンツを検索する場合、引用符を含む次の 2 つの語句を含めると、検索結果を現在のコンテンツ ライブラリに限定できます:   **"現在のブランチ"** および **"System Center Configuration Manager"**  
+-   お好みの検索エンジンを使用して System Center Configuration Manager のコンテンツを検索する場合、引用符を含む次の&2; つの語句を含めると、検索結果を現在のコンテンツ ライブラリに限定できます:   **"現在のブランチ"** および **"System Center Configuration Manager"**  
 
 -   ユーザー インターフェイス (UI) やオンライン ドキュメントに表示されているものと同じ検索語句を使用します。コミュニティのコンテンツで使われているような非公式の用語や略語は使用しないでください。 たとえば、「MP」ではなく「管理ポイント」、「DT」ではなく「展開の種類」、「SUM」ではなく「ソフトウェア更新プログラム」のように検索します。  
 
@@ -63,7 +63,7 @@ ms.openlocfilehash: 6c864cc443801d2a21e06b7d2e7a4784c52ffc1e
 
 -   可能な限り、ダウンロードしたドキュメントではなく、TechNet オンライン ライブラリを使用してください。 TechNet には最新の情報が掲載されています。ダウンロードしたドキュメントには探している情報が含まれていなかったり、オンラインに訂正や追加情報が掲載されている可能性があります。  
 
--   ローカルに保存した方がドキュメントを簡単に早く検索できる場合は、TechNet で複数のトピックを選択してローカルに保存することができます。 **TechNet にサインインし**、ローカル保存するページの上部で [ **エクスポート** ] ([ **印刷**] の横にあります) をクリックします。 [ **ページの複数のセットをエクスポート** ] バナーが表示されます。ここで保存するページを追加し、削除できます。 次に [ **ページの管理** ] をクリックし、エクスポートします。 詳細については、バナーの [ **ヘルプ** ] をクリックします。  
+-   ローカルに保存した方がドキュメントを簡単に早く検索できる場合は、TechNet で複数のトピックを選択してローカルに保存することができます。 **TechNet にサインインし**、ローカル保存するページの上部で 「 **エクスポート**」 (「 **印刷**」 の横にあります) をクリックします。 [ **ページの複数のセットをエクスポート** ] バナーが表示されます。ここで保存するページを追加し、削除できます。 次に [ **ページの管理** ] をクリックし、エクスポートします。 詳細については、バナーの [ **ヘルプ** ] をクリックします。  
 
 ###  <a name="a-namebkmkproductgroupbloga-the-system-center-configuration-manager-team-blog"></a><a name="BKMK_ProductGroupBlog"></a> System Center Configuration Manager チームのブログ  
  Configuration Manager のエンジニアリング チームとパートナー チームは、「[System Center Configuration Manager Team Blog](http://go.microsoft.com/fwlink/?LinkId=191941)」 (System Center Configuration Manager チームのブログ) を使用して、Configuration Manager と関連技術に関する技術情報やその他のニュースを提供しています。 ブログの記事は、製品ドキュメントとサポート情報を補足するものです。  
