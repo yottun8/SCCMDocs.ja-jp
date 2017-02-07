@@ -43,7 +43,7 @@ ms.openlocfilehash: 179f076f228daa5adf612275a822cd379b0ce1e3
 > [!WARNING]  
 >  **アップグレード**のソフトウェア更新プログラムの分類は、WSUS 4.0 以降のみでサポートされています。 この新しい分類を同期し、Windows 10 サービス プランで Windows 10 コンピューターを評価できるようにする前に、ソフトウェアの更新ポイントとサイト サーバーに WSUS の [修正プログラム 3095113](https://support.microsoft.com/kb/3095113) をインストールする必要があります。 この修正プログラムは、Windows 10 の機能アップグレードを同期および配布するために、Windows Server 2012 ベースまたは Windows Server 2012 R2 ベースのサーバーで WSUS を有効にします。 詳細については、「[サービスとしての Windows の管理](../../osd/deploy-use/manage-windows-as-a-service.md)」を参照してください。  
 >   
->  **アップグレード** https://supportでのソフトウェア更新プログラムの前提条件を示します。microsoftでのソフトウェア更新プログラムの前提条件を示します。com/kb/3095113 [修正プログラム 3095113](https://support.microsoft.com/kb/3095113)分類のソフトウェア更新プログラムを同期する場合は、「 [Recover from synchronizing the アップグレード category before you install KB 3095113](#BKMK_RecoverUpgrades)でのソフトウェア更新プログラムの前提条件を示します。  
+>  [修正プログラム 3095113](https://support.microsoft.com/kb/3095113) をインストールする前に**アップグレード**分類のソフトウェア更新プログラムを同期する場合は、「[KB 3095113 をインストールする前のアップグレード カテゴリの同期からの回復](#BKMK_RecoverUpgrades)」をご覧ください。  
 
 ### <a name="wsus-administration-console"></a>WSUS 管理コンソール  
  ソフトウェアの更新ポイントがリモート サイトのシステム サーバー上にあり、WSUS がそのサイト サーバーにインストールされていない場合、Configuration Manager サイト サーバーには WSUS 管理コンソールが必要です。  
