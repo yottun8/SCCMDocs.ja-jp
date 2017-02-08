@@ -225,10 +225,16 @@ Technical Preview 1606 を起動すると、グループ ポリシーの代わ�
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>Configuration Manager クライアント設定で Office 365 クライアント エージェントを管理するように設定する
 1.  Configuration Manager コンソールで、[**管理**] > [**概要**] > [**クライアント設定**] の順にクリックします。
-1. クライアント エージェントを有効にする適切なデバイスの設定を開きます。 既定およびカスタムのクライアント設定の詳細については、「[System Center Configuration Manager でクライアント設定を構成する方法](../../core/clients/deploy/configure-client-settings.md)」を参照してください。
-2. **[ソフトウェアの更新]** を選択し、**[Office 365 クライアント エージェントの管理を有効にする]** の設定に **[はい]** を設定します。
+2. クライアント エージェントを有効にする適切なデバイスの設定を開きます。 既定およびカスタムのクライアント設定の詳細については、「[System Center Configuration Manager でクライアント設定を構成する方法](../../core/clients/deploy/configure-client-settings.md)」を参照してください。
+3. **[ソフトウェアの更新]** を選択し、**[Office 365 クライアント エージェントの管理を有効にする]** の設定に **[はい]** を設定します。  
+
+
 ## <a name="a-nameosdpreservedriveletterathe-osdpreservedriveletter-task-sequence-variable-has-been-deprecated"></a><a name="osdpreservedriveletter"></a>OSDPreserveDriveLetter タスク シーケンス変数は使用されなくなった
-OSDPreserveDriveLetter タスク シーケンス変数は、タスク シーケンスが対象コンピューターにそのイメージを適用するときに、オペレーティング システム イメージ WIM ファイルにキャプチャされたドライブ文字を使用するかどうかを判断します。 Technical Preview 1606 では、このタスク シーケンス変数は使用されていません。 既定で、オペレーティング システムの展開中に、Windows セットアップが使用する最適なドライブ文字を決定するようになりました (通常は C:)。 別のドライブを使用するように指定する場合は、オペレーティング システムの適用タスク シーケンスのステップで場所を変更できます。 [**このオペレーティング システムの適用先を選択してください。**] 設定に移動し、[**特定の論理ドライブ文字**] を選択し、使用するドライブを選択します。 設定先のコンピューター上に、選択した文字が割り当てられたドライブが作成されているはずです。
+OSDPreserveDriveLetter タスク シーケンス変数は、タスク シーケンスが対象コンピューターにそのイメージを適用するときに、オペレーティング システム イメージ WIM ファイルにキャプチャされたドライブ文字を使用するかどうかを判断します。
+- Technical Preview 1606 では、このタスク シーケンス変数は使用されていません。
+
+既定で、オペレーティング システムの展開中に、Windows セットアップが使用する最適なドライブ文字を決定するようになりました (通常は C:)。 別のドライブを使用するように指定する場合は、オペレーティング システムの適用タスク シーケンスのステップで場所を変更できます。 [**このオペレーティング システムの適用先を選択してください。**] 設定に移動し、[**特定の論理ドライブ文字**] を選択し、使用するドライブを選択します。 設定先のコンピューター上に、選択した文字が割り当てられたドライブが作成されているはずです。 
+
 ## <a name="a-nameupdatesandservicingachanges-for-the-updates-and-servicing-node"></a><a name="updatesandservicing"></a>更新プログラムとサービス ノードの変更
 Technical Preview 1606 では、Configuration Manager コンソールの [更新とサービス] に適用されるいくつかの変更が導入されています。
 - **ノード名の変更:**

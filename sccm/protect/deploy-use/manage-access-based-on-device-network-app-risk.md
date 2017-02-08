@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4c0e6824-2dfe-4700-b817-d5631e0eb872
 caps.latest.revision: 
-author: nathbarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
@@ -93,11 +93,11 @@ Man-in-the-middle 攻撃のようなネットワークの脅威を検出し、�
 
 ## <a name="next-steps"></a>次のステップ
 このソリューションを実装するために必須となる主な手順:
-1.  [Lookout モバイル脅威防御のサブスクリプションを設定する](set-up-your-subscription-with-lookout.md)
-2.  [Intune で Lookout MTP の接続を有効にする](enable-lookout-connection-in-intune.md)
+1.    [Lookout モバイル脅威防御のサブスクリプションを設定する](set-up-your-subscription-with-lookout.md)
+2.    [Intune で Lookout MTP の接続を有効にする](enable-lookout-connection-in-intune.md)
 3.  [Lookout for work アプリケーションを構成し、展開する](configure-and-deploy-lookout-for-work-apps.md)
-4.  [コンプライアンス ポリシーを構成する](enable-device-threat-protection-rule-compliance-policy.md)
-5.  [Troubleshoot Lookout integration](troubleshoot-lookout-integration.md) (Lookout 統合のトラブルシューティング)
+4.    [コンプライアンス ポリシーを構成する](enable-device-threat-protection-rule-compliance-policy.md)
+5.    [Troubleshoot Lookout integration](troubleshoot-lookout-integration.md) (Lookout 統合のトラブルシューティング)
 
 
 
