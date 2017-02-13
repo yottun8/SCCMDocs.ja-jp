@@ -71,7 +71,7 @@ Configuration Manager のオペレーティング システム イメージは W
 
 -   **展開するオペレーティング システム**  
 
-     参照コンピューターには、対象となるコンピューターに展開するオペレーティング システムをインストールする必要があります。 展開できるオペレーティング システムの詳細については、「[Infrastructure requirements for operating system deployment](../plan-design/infrastructure-requirements-for-operating-system-deployment.md)」 (オペレーティング システムの展開のインフラストラクチャの要件) をご覧ください。  
+     参照コンピューターには、対象となるコンピューターに展開するオペレーティング システムをインストールする必要があります。 展開できるオペレーティング システムの詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](../plan-design/infrastructure-requirements-for-operating-system-deployment.md)」 (オペレーティング システムの展開のインフラストラクチャの要件) をご覧ください。  
 
 -   **適切なサービス パック**  
 
@@ -95,10 +95,10 @@ Configuration Manager のオペレーティング システム イメージは W
 
      /generalize オプションは、Windows インストールからシステム固有のデータを削除することを Sysprep に指示します。 システム固有の情報には、イベント ログ、一意なセキュリティ識別子 (SID)、その他の一意の情報が含まれています。 システム固有の情報を削除してから、コンピューターを再起動します。  
 
-     「 [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) 」タスク シーケンスのステップまたはキャプチャ メディアを使用して、Sysprep を自動化することができます。  
+     「 [Windows のキャプチャの準備](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) 」タスク シーケンスのステップまたはキャプチャ メディアを使用して、Sysprep を自動化することができます。  
 
     > [!IMPORTANT]  
-    >  「 [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) 」タスク シーケンス ステップは、Sysprep を実行する前に、参照コンピューターのローカル管理者のパスワードをリセットしようとします。 ローカルのセキュリティ ポリシー [パスワードは、複雑さの要件を満たす必要がある] **** が有効な場合、タスク シーケンス ステップは、管理者パスワードのリセットに失敗します。 この場合は、タスク シーケンスを実行する前にこのポリシーを無効にします。  
+    >  「 [Windows のキャプチャの準備](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) 」タスク シーケンス ステップは、Sysprep を実行する前に、参照コンピューターのローカル管理者のパスワードをリセットしようとします。 ローカルのセキュリティ ポリシー [パスワードは、複雑さの要件を満たす必要がある] **** が有効な場合、タスク シーケンス ステップは、管理者パスワードのリセットに失敗します。 この場合は、タスク シーケンスを実行する前にこのポリシーを無効にします。  
 
      Sysprep について詳しくは、「 [システムの準備 (Sysprep) テクニカル リファレンス](http://go.microsoft.com/fwlink/?LinkId=280286)」をご覧ください。  
 
@@ -136,7 +136,7 @@ Configuration Manager のオペレーティング システム イメージは W
 ##  <a name="a-namebkmkusetstobuildreferencea-use-a-task-sequence-to-build-a-reference-computer"></a><a name="BKMK_UseTSToBuildReference"></a> タスク シーケンスによる参照コンピューターの構築  
  オペレーティング システム、ドライバー、アプリケーションなどを展開するタスク シーケンスを使用して、参照コンピューターを作成するプロセスを自動化できます。  以下の手順を使用して参照コンピューターを構築し、その後、参照コンピューターからオペレーティング システム イメージをキャプチャします。  
 
--   タスク シーケンスを使用して、参照コンピューターからオペレーティング システム イメージを構築し、キャプチャします。  詳しい手順については、「 [Use a task sequence to build and capture a reference computer](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS)」を参照してください。  
+-   タスク シーケンスを使用して、参照コンピューターからオペレーティング システム イメージを構築し、キャプチャします。  詳しい手順については、「 [タスク シーケンスを使用して、参照コンピューターを構築およびキャプチャする](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS)」を参照してください。  
 
 
 
