@@ -2,7 +2,7 @@
 title: "ネットワーク共有からの Endpoint Protection のマルウェア定義 | Microsoft Docs"
 description: "Configuration Manager で Endpoint Protection のマルウェア定義を Microsoft Update からダウンロードできるようにする方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

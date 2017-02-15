@@ -2,7 +2,7 @@
 title: "Endpoint Protection のマルウェア定義 | Microsoft Docs"
 description: "クライアント コンピューターに定義ファイルの更新を配布するように Configuration Manager ソフトウェア更新プログラムを構成する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

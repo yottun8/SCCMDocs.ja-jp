@@ -3,7 +3,7 @@
 title: "Endpoint Protection の構成 | Microsoft Docs"
 description: "System Center Configuration Manager で Endpoint Protection を使用する方法を選択および構成し、クライアント コンピューターでマルウェア対策定義を最新の状態に保つ方法について説明します。"
 ms.custom: na
-ms.date: 01/31/2017
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

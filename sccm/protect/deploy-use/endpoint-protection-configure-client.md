@@ -2,7 +2,7 @@
 title: "Endpoint Protection クライアントの構成 | Microsoft Docs"
 description: "階層内のコンピューターのコレクションに展開できる Endpoint Protection のカスタム クライアント設定を構成する方法について説明します。"
 ms.custom: na
-ms.date: 01/31/2017
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

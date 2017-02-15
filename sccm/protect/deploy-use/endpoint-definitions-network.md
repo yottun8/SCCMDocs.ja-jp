@@ -2,7 +2,7 @@
 title: "ネットワーク共有からの Endpoint Protection のマルウェア定義 | Microsoft Docs"
 description: "Microsoft から最新の定義ファイルの更新を手動でダウンロードし、これらの定義をダウンロードするようにクライアントを構成する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
