@@ -1,5 +1,5 @@
 ---
-title: "ハードウェア インベントリの構成 | Microsoft Docs | モバイル デバイス"
+title: "モバイル デバイス インベントリを構成する - Configuration Manager | Microsoft Docs"
 description: "Microsoft Intune と System Center Configuration Manager によって登録されたモバイル デバイス用のハードウェア インベントリを構成します。"
 ms.custom: na
 ms.date: 12/26/2016
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
-ms.openlocfilehash: be954724587e68e92e5d8f5cecd712dfd5df278e
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: 13fd8d5e2ee6c2381129282aefa5e7b1aaf361eb
 
 
 ---
@@ -141,6 +141,6 @@ Configuration Manager では、Microsoft Intune コネクタを使って、iOS�
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Jan17_HO4-->
 
 

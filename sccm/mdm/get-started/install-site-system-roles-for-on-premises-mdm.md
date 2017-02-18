@@ -1,5 +1,5 @@
 ---
-title: "サイト システムの役割のインストール | オンプレミス MDM | System Center Configuration Manager"
+title: "オンプレミス MDM の役割のインストール - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager でのオンプレミス モバイル デバイス管理のサイト システムの役割のインストール"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d6a36acc53b8ccd85395a7543cbd0e361d093840
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: 916b971f851f968f6534ac834bd3182cc61614aa
 
 
 ---
@@ -74,6 +74,6 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

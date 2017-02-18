@@ -1,5 +1,5 @@
 ---
-title: "リリース ノート | Microsoft Docs"
+title: "リリース ノート - Configuration Manager | Microsoft Docs"
 description: "製品でまだ修正されていないまたは Microsoft サポート技術情報の記事で説明されていない緊急の問題については以下のメモを参照してください。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c6358d65609605bfef3ac533f4caa0df1cfce0c5
-ms.openlocfilehash: 73208c8e9ec15e96a6caaf20b74c1f94d92a8975
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: 9e853c8fda236125717c3912f6f3cb02d6dd1058
 
 
 ---
@@ -297,6 +297,6 @@ RAM が 4 GB 未満の Windows 10 RTM デバイスでフル ワイプを実行�
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Jan17_HO4-->
 
 

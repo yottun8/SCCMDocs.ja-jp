@@ -1,8 +1,8 @@
 ---
-title: "起動可能なメディアの作成 | Microsoft Docs"
+title: "起動可能なメディアを作成する - Configuration Manager | Microsoft Docs"
 description: "Configuration Manager の起動可能なメディアは、新しいバージョンの Windows のインストールや、コンピューターの置き換えおよび設定の転送を容易にします。"
 ms.custom: na
-ms.date: 12/21/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 66cd6d099acdd9db2bc913a69993aaf5e17237fe
-ms.openlocfilehash: 0a4c2b41f899f6e243e7eb825082514114226a8f
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: 9032698fa12bf453041ea06bf330d3b4687c2a97
 
 
 ---
@@ -158,6 +158,6 @@ Configuration Manager の起動可能なメディアには、ブート イメー
 
 
 
-<!--HONumber=Dec16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 

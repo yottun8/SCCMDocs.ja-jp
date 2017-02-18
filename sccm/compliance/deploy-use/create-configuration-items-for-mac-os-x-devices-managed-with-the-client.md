@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager クライアントを使用して管理されている Mac OS X デバイスの構成項目を作成する方法 | Microsoft Docs"
+title: "クライアントで管理されている Mac の構成項目を作成する - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager の Mac OS X 構成項目使用して、Mac OS X デバイスの設定を管理します。"
 ms.custom: na
 ms.date: 12/27/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8bbc0d0132fa4276ade8914d5ac3945ef1d12a4b
-ms.openlocfilehash: be7a9464ef4ac6042a46652a325583a355f23846
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 60d147986425e7a3048d57b5b7412feab12efafd
 
 
 ---
@@ -54,8 +54,8 @@ System Center Configuration Manager の **Mac OS X (カスタム)** 構成項目
 
              たとえば、Safari Web ブラウザーの設定を編集する場合は、ことができます **com.apple.Safari.plist**です。  
 
-        -   **キー** – Mac コンピューターのコンプライアンスを評価するキーの名前を指定します。 次の構文を使用します。 
-        
+        -   **キー** – Mac コンピューターのコンプライアンスを評価するキーの名前を指定します。 次の構文を使用します。
+
             ```
             */<dictionary\>/<keyname\>*.  
             ```     
@@ -177,6 +177,6 @@ System Center Configuration Manager の **Mac OS X (カスタム)** 構成項目
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Jan17_HO4-->
 
 
