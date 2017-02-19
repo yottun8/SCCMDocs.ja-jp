@@ -1,8 +1,8 @@
 ---
 title: "Endpoint Protection アラートの構成 | Microsoft Docs"
-description: "Microsoft System Center 2012 Configuration Manager で Endpoint Protection アラートを構成する方法について説明します。"
+description: "System Center Configuration Manager で Endpoint Protection のアラートを構成する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 7ade196766d036f5dbca2b39efad380c7895847c
+ms.sourcegitcommit: 9b20b50843cadc478d5b75a276d2a24aea30f2ff
+ms.openlocfilehash: 6e7b080c1e1876c0ccef9ce6568ce88b65dfca87
 
 
 ---
@@ -63,11 +63,11 @@ ms.openlocfilehash: 7ade196766d036f5dbca2b39efad380c7895847c
 
     -   **[マルウェア検出]** - このアラートは、監視するコレクション内のコンピューターでマルウェアが検出されると、生成されます。 **[マルウェア検出のしきい値]** で、このアラートが生成されるマルウェア検出のレベルを指定します。
 
-        -   **[高 - すべて検出]** - Endpoint Protection クライアントが実行する操作に関係なく、指定されたコレクションの 1 台以上のコンピューターでマルウェアが検出されると、アラートが生成されます。
+        -   **[高 - すべて検出]** - Endpoint Protection クライアントが実行する操作に関係なく、指定されたコレクションの&1; 台以上のコンピューターでマルウェアが検出されると、アラートが生成されます。
 
-        -   **[中 - 検出、操作を保留中]** - 指定されたコレクションの 1 台以上のコンピューターでマルウェアが検出されると、アラートが生成されます。マルウェアは、手動で削除する必要があります。
+        -   **[中 - 検出、操作を保留中]** - 指定されたコレクションの&1; 台以上のコンピューターでマルウェアが検出されると、アラートが生成されます。マルウェアは、手動で削除する必要があります。
 
-        -   **[低 - 検出、操作中]** - 指定されたコレクションの 1 台以上のコンピューターでマルウェアが検出されると、アラートが生成されますが、マルウェアはアクティブなままです。
+        -   **[低 - 検出、操作中]** - 指定されたコレクションの&1; 台以上のコンピューターでマルウェアが検出されると、アラートが生成されますが、マルウェアはアクティブなままです。
 
     -   **[マルウェア大量感染]** - このアラートは、監視するコレクション内の、指定した割合のコンピューターで特定のマルウェアが検出されると、生成されます。
 
@@ -98,6 +98,6 @@ ms.openlocfilehash: 7ade196766d036f5dbca2b39efad380c7895847c
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

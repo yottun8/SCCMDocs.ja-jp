@@ -2,7 +2,7 @@
 title: "Azure の Configuration Manager | Microsoft Docs"
 description: "Azure 環境での Configuration Manager の使用に関する情報。"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/30/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6638d6e17d0eaeef731cce45e8cf5c827d6e0dfe
-ms.openlocfilehash: 4d953eedc7d5cceb8767dab8850cacb1e007194d
+ms.sourcegitcommit: 264e009952db34a6f4929ecb70dc6857117ce4fe
+ms.openlocfilehash: e8798adc0e479417c682450d181611284c148e6d
 
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure の Configuration Manager - よく寄せられる質問
@@ -92,7 +92,7 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 一般に、コンピューティング (CPU およびメモリ) は [System Center Configuration Manager の推奨ハードウェア](/sccm/core/plan-design/configs/recommended-hardware)に対応する必要があります。 ただし、通常のコンピューター ハードウェアと Azure VM には、特にこれらの VM で使用されるディスクについて、いくつか異なる点があります。  使用する VM のサイズは使用環境の規模によって異なりますが、次のようないくつかの推奨事項があります。
 - 非常に大規模な運用環境の展開では、"**S**" クラスの Azure VM をお勧めします。 Premium Storage ディスクを活用できるためです。  "S" 以外のクラスの VM では BLOB ストレージが使用され、一般的に許容される運用エクスペリエンスで必要なパフォーマンス要件が満たされません。
 - 規模が大きい場合は複数の Premium Storage ディスクを使用する必要があり、最大 IOPS の Windows ディスク管理コンソールでストライピングする必要があります。  
-- 初期サイトの展開時にはより高性能なまたは複数の Premium ディスクを使用することをお勧めします (P20 ではなく P30、あるいは 1xP30 ではなく 2xP30 など)。 その後、サイトで負荷の増加に伴い VM サイズを大きくする必要がある場合は、より大きなサイズの VM で提供される追加の CPU とメモリを利用できます。 より大きいサイズの VM で許可される追加の IOPS スループットを、既存のディスクで利用することもできます。
+- 初期サイトの展開時にはより高性能な、または複数の Premium ディスクを使用することをお勧めします (P20 ではなく P30、あるいは 1xP30 ではなくストライプ ボリュームの 2xP30 など)。 その後、サイトで負荷の増加に伴い VM サイズを大きくする必要がある場合は、より大きなサイズの VM で提供される追加の CPU とメモリを利用できます。 より大きいサイズの VM で許可される追加の IOPS スループットを、既存のディスクで利用することもできます。
 
 
 
@@ -102,18 +102,18 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 
 | デスクトップ クライアント    |推奨 VM サイズ|推奨ディスク|
 |--------------------|-------------------|-----------------|
-|**最大 25 K**       |   DS4_V2          |2xP30            |
-|**25 K から 50 K**      |   DS13_V2         |2xP30            |
-|**50 K から 100 K**     |   DS14_V2         |3xP30            |
+|**最大 25 K**       |   DS4_V2          |2xP30 (ストライプ)  |
+|**25 K から 50 K**      |   DS13_V2         |2xP30 (ストライプ)  |
+|**50 K から 100 K**     |   DS14_V2         |3xP30 (ストライプ)  |
 
 
 **リモート サイト データベース** - リモート サーバー上のサイト データベースを持つプライマリまたは中央管理サイト:
 
 | デスクトップ クライアント    |推奨 VM サイズ|推奨ディスク |
 |--------------------|-------------------|------------------|
-|**最大 25 K**       | サイト サーバー: F4S </br>データベース サーバー: DS12_V2 | サイト サーバー: 1xP30 </br>データベース サーバー: 2xP30 |
-|**25 K から 50 K**      | サイト サーバー: F4S </br>データベース サーバー: DS13_V2 | サイト サーバー: 1xP30 </br>データベース サーバー: 2xP30 |
-|**50 K から 100 K**     | サイト サーバー: F8S </br>データベース サーバー: DS14_V2 | サイト サーバー: 2xP30 </br>データベース サーバー: 3xP30 |
+|**最大 25 K**       | サイト サーバー: F4S </br>データベース サーバー: DS12_V2 | サイト サーバー: 1xP30 </br>データベース サーバー: 2xP30 (ストライプ)  |
+|**25 K から 50 K**      | サイト サーバー: F4S </br>データベース サーバー: DS13_V2 | サイト サーバー: 1xP30 </br>データベース サーバー: 2xP30 (ストライプ)   |
+|**50 K から 100 K**     | サイト サーバー: F8S </br>データベース サーバー: DS14_V2 | サイト サーバー: 2xP30 (ストライプ)   </br>データベース サーバー: 3xP30 (ストライプ)   |
 
 以下は、DS14_V2 で 50k ～ 100k クライアントを構成した例です。3xP30 のディスクがストライプ ボリュームで構成されており、別の論理ボリュームが Configuration Manager インストールとデータベース ファイルのために割り当てられています。  ![VM)disks](media/vm_disks.png)  
 
@@ -139,7 +139,7 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 
 
 ### <a name="while-i-am-ok-with-the-limitations-of-cloud-based-distribution-points-i-dont-want-to-put-my-management-point-into-a-dmz-even-though-that-is-needed-to-support-my-internet-based-clients-do-i-have-any-other-options"></a>クラウドベース配布ポイントの制限についてはわかりましたが、インターネット ベースのクライアントをサポートするために必要でも、DMZ に管理ポイントを配置したくありません。 他の選択肢はありますか?
-はい。 Configuration Manager のバージョン 1610 では、プレリリース機能として[クラウド管理ゲートウェイ](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway)をご紹介しました  (この機能は、[クラウド プロキシ サービス](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)として、Technical Preview バージョン 1606 で初めて登場しました)。 
+はい。 Configuration Manager のバージョン 1610 では、プレリリース機能として[クラウド管理ゲートウェイ](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway)をご紹介しました  (この機能は、[クラウド プロキシ サービス](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)として、Technical Preview バージョン 1606 で初めて登場しました)。
 
 **クラウド管理ゲートウェイ**は、インターネット上で Configuration Manager クライアントを管理する簡単な方法を提供します。 Microsoft Azure にデプロイされ、Azure サブスクリプションを必要とするサービスは、クラウド管理ゲートウェイ コネクタ ポイントと呼ばれる新しい役割を使用して、オンプレミスの Configuration Manager インフラストラクチャに接続します。 デプロイされ、構成されると、クライアントは内部のプライベート ネットワークに接続しているかどうか、またはインターネット上にあるかどうかに関係なく、オンプレミスの Configuration Manager サイト システムの役割にアクセスできます。
 
@@ -182,6 +182,6 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO5-->
 
 

@@ -2,7 +2,7 @@
 title: "Configuration Manager のバージョン間の相互運用性 | Microsoft Docs"
 description: "同じネットワーク上に複数の System Center Configuration Manager 階層がある場合に競合を回避する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 32182f06a90d768c40e29ed8a8e89cb45114bd15
+ms.sourcegitcommit: f9886d9d83cd23ddd294d5af5eed3ec00946a4f4
+ms.openlocfilehash: 8a4c52f6adb18c7e170ea87764cc38c3bbfbf9ca
 
 
 ---
@@ -62,7 +62,7 @@ System Center Configuration Manager の複数の独立した階層を同じネ�
  2 つの階層に重複する境界がある場合に、クライアントが正しくないサイトに割り当てられるのを防ぐため、クライアントを特定のサイトに割り当てるように Configuration Manager クライアント インストール パラメーターを構成します。  
 
 ##  <a name="a-namebkmkmixeda-configuration-manager-limitations--in-a-mixed-version-hierarchy"></a><a name="bkmk_mixed"></a> バージョンが混在している階層内の Configuration Manager の制限  
- System Center Configuration Manager サイトのアップグレードの過程において、さまざまなサイトのバージョンが異なることがあります。  たとえば、中央管理サイトを新しいバージョンにアップグレードするものの、サイトのメンテナンス期間のために 1 つ以上のプライマリ サイトが後日までアップグレードできないことがあります。  
+ System Center Configuration Manager サイトのアップグレードの過程において、さまざまなサイトのバージョンが異なることがあります。  たとえば、中央管理サイトを新しいバージョンにアップグレードするものの、サイトのメンテナンス期間のために&1; つ以上のプライマリ サイトが後日までアップグレードできないことがあります。  
 
  特定の階層内にある各種サイトのバージョンが異なる場合、一部の機能は利用できません。 これが、Configuration Manager コンソールで Configuration Manager オブジェクトを管理する方法と、クライアントで使用できる機能に影響する可能性があります。 通常、Configuration Manager の新しいバージョンの機能を、古いサービス バック バージョンを実行しているサイトまたはクライアントで使用することはできません。  
 
@@ -81,10 +81,10 @@ System Center Configuration Manager の複数の独立した階層を同じネ�
 |相互運用環境|説明|  
 |----------------------------------|----------------------|  
 |System Center 2012 Configuration Manager と System Center Configuration Manager の両方がある環境|Configuration Manager サイトを管理するには、コンソール、およびそのコンソールが接続するサイトの両方が、同じバージョンの Configuration Manager でなければなりません。 たとえば、System Center 2012 Configuration Manager コンソールを使って、System Center Configuration Manager サイトを管理することはできません。また、その逆も同様です。<br /><br /> 同じコンピューターに、System Center 2012 Configuration Manager コンソールと System Center Configuration Manager コンソールの両方をインストールすることはできません。|  
-|System Center Configuration Manager の複数のバージョンがある環境|System Center Configuration Manager では、1 台のコンピューターに複数の Configuration Manager コンソールをインストールすることはできません。 System Center Configuration Manager の複数のバージョンのコンソールを使用したい場合は、それぞれ別のコンピューターにインストールする必要があります。<br /><br /> 階層内のサイトをアップグレードしているときに、コンソールを、新しいバージョンを実行しているサイトに接続して、その階層にある他のサイトの情報を見ることができます。 ただし、この構成は推奨されていません。コンソールのバージョン間と Configuration Manager サイトのバージョンが異なるとデータに問題が生じる可能性があり、最新の製品バージョンで利用できる一部の機能がコンソールで利用できなくなります。|  
+|System Center Configuration Manager の複数のバージョンがある環境|System Center Configuration Manager では、1 台のコンピューターに複数の Configuration Manager コンソールをインストールすることはできません。 System Center Configuration Manager の複数のバージョンのコンソールを使用したい場合は、それぞれ別のコンピューターにインストールする必要があります。<br /><br /> 階層内のサイトを更新しているときに、コンソールを、新しいバージョンを実行しているサイトに接続して、その階層にある他のサイトの情報を見ることができます。 ただし、この構成は推奨されていません。コンソールのバージョン間と Configuration Manager サイトのバージョンが異なるとデータに問題が生じる可能性があり、最新の製品バージョンで利用できる一部の機能がコンソールで利用できなくなります。 <br /></br /> サイトのバージョンと一致しないバージョンのコンソールを使用している場合は、サイトの管理がサポートされません。 これによりデータが失われ、サイトが危険にさらされる可能性があります。 たとえば、バージョン 1610 のコンソールを使用して、バージョン 1606 を実行しているサイトを管理することはサポートされません。 |
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO5-->
 
 
