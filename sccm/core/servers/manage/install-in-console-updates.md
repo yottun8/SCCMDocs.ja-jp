@@ -2,7 +2,7 @@
 title: "コンソール内の更新プログラム | Microsoft Docs"
 description: "System Center Configuration Manager は Microsoft クラウドと同期して更新プログラムを取得します。その更新プログラムはコンソール内からインストールできます。"
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 2/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
-ms.openlocfilehash: 00d9738a271ba47abcbf3c4b427a05910a0c2355
+ms.sourcegitcommit: 2f90f3204b3c31caaed1359e11451285b21eef50
+ms.openlocfilehash: b3a58503ea4d49825e93ea3a2e9bfedf975145e6
 
 
 ---
@@ -354,8 +354,9 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 |System Center Configuration Manager が管理する PC の条件付きアクセス | [バージョン 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
 
 
+## <a name="known-issues"></a>既知の問題
 
-##  <a name="a-namebkmkfaqa-why-dont-i-see-certain-updates-in-my-console"></a><a name="bkmk_faq"></a> 特定の更新プログラムがコンソールに表示されない理由  
+###  <a name="a-namebkmkfaqa-why-dont-i-see-certain-updates-in-my-console"></a><a name="bkmk_faq"></a> 特定の更新プログラムがコンソールに表示されない理由  
  Microsoft クラウド サービスと正常に同期した後に、特定の更新プログラムや他の更新プログラムがコンソールに表示されない理由としては、次のことが考えられます。  
 
 -   更新プログラムに必要な構成が、インフラストラクチャで使用されていません。あるいは、現在の製品バージョンが、更新プログラムを受信するための前提条件を満たしていません。  
@@ -366,8 +367,21 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 
     更新プログラムを表示するために必要なアクセス許可について、このトピックの「[更新プログラムを管理するためのアクセス許可](../../../core/servers/manage/install-in-console-updates.md#permissions-to-view-and-manage-updates-and-features)」を参照し、コンソール内から機能を有効にしてください。
 
+### <a name="why-do-i-see-two-updates-for-version-1610"></a>バージョン 1610 の更新プログラムが 2 つ表示されるのはなぜですか。
+コンソールから更新プログラムを表示した場合、バージョン 1610 をインストールするための更新プログラムが 2 つ表示されることがあります。 これらの更新プログラムは日付が異なります。 この現象は、次のいずれかの条件に該当した場合に発生します。   
+-   バージョン 1610 がリリースされた後に、以前のバージョン (1606 など) をインストールした。
+
+-   ご利用の階層でバージョン 1511 または 1602 が実行されており、バージョン 1606 をダウンロードすることができなかった。
+
+バージョン 1610 の更新プログラムに 2 つのリリースが存在するのは、一部のファイルのバイナリに対して小さな変更をいくつか加える関係上、この更新プログラムが初回リリース後に、再度リリースされているためです。 これらの変更は、Configuration Manager または更新プログラムの機能には影響しません。
+
+コンソールに&2; つの更新プログラムが表示される場合は、最新の日付の更新プログラムをインストールすることをお勧めします。 ただし、どちらの更新プログラムも働きは変わらないため、既にいずれかの更新プログラムをインストールしてしまったとしても、それに対してあえて対処する必要はありません。
+-   古い方の更新プログラムをインストールしたとしても、あえて日付の新しい方の更新プログラムをインストールする必要はありません。 一方、最初の更新プログラムをインストールした後に、新しい方の更新プログラムをインストールした場合、修正対象のバイナリは更新されますが、特に変化は生じず、ユーザー側で特別な対応は不要です。
+
+-   最新の更新プログラムをインストールした後で、日付の古い方の更新プログラムをインストールした場合も、特に対処していただく必要はありません。 既にインストールされている日付の新しい方のバイナリが、日付の古い方の更新プログラムに含まれていた同じバイナリで上書きされることはありません。
 
 
-<!--HONumber=Jan17_HO2-->
+
+<!--HONumber=Feb17_HO1-->
 
 
