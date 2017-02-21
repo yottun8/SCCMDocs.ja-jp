@@ -2,7 +2,7 @@
 title: "1602 のチェックリスト | Microsoft Docs"
 description: "System Center Configuration Manager をバージョン 1511 からバージョン 1602 に更新する前に、実行するアクションについて説明します。"
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
-ms.openlocfilehash: bac7ad8558186c6f451956297f3a791ae12176de
+ms.sourcegitcommit: a2e2bc5e873c48283d18ea6eaa5d1bb351f2a033
+ms.openlocfilehash: 1c3149b4c0247377ad556b6fe594047a6f14b989
 
 
 ---
@@ -31,19 +31,19 @@ System Center Configuration Manager をバージョン 1511 からバージョ�
 
  更新プログラム 1602 は、階層の最上位サイトのみにインストールすることができます。 つまり、中央管理サイトがある場合はそこからインストールを開始します。そうでない場合は、スタンドアロン プライマリ サイトからインストールを開始します。  
 
--   中央管理サイトで更新プログラムのインストールが完了したら、子プライマリ サイトで更新プログラムが自動的にインストールされます。 メンテナンス期間を使用して、サイトが更新プログラムをインストールするタイミングを制御できます。 1602 更新プログラムのリリース以降、メンテナンス期間はサービス時間帯に名前変更されています。 詳細については、「[サイト サーバーのサービス ウィンドウ](/sccm/core/servers/manage/service-windows)」を参照してください。  
+-   中央管理サイトで更新プログラムのインストールが完了したら、子プライマリ サイトで更新プログラムが自動的にインストールされます。 メンテナンス期間を使用して、サイトが更新プログラムをインストールするタイミングを制御できます。 1602 更新プログラムのリリース以降、メンテナンス期間は "*サービス時間帯*" に名称変更されています。 詳細については、「[サイト サーバーのサービス ウィンドウ](/sccm/core/servers/manage/service-windows)」を参照してください。  
 
 -   プライマリ親サイトが更新プログラムのインストールを完了したら、Configuration Manager コンソール内からセカンダリ サイトを手動で更新する必要があります。 セカンダリ サイト サーバーの自動更新はサポートされていません。  
 
 サイト サーバーが更新プログラムをインストールすると、サイト サーバーにインストールされたサイト システムの役割と、リモート コンピューターにインストールされたサイト システムの役割が自動的に更新されます。 したがって、更新プログラムをインストールする前に、各サイト システム サーバーが新しい更新プログラムのバージョンの操作の新しい前提条件をすべて満たしていることを確認してください。  
 
-更新の完了後に Configuration Manager コンソールを初めて使用する場合、そのコンソールの更新を求められます。  これを行うには、コンソールをホストするコンピューターで Configuration Manager セットアップを実行し、コンソールを更新するオプションを選択する必要があります。 コンソールへの更新プログラムのインストールを遅らせないことをお勧めします。  
+更新の完了後に Configuration Manager コンソールを初めて使用する場合、そのコンソールの更新を求められます。 これを行うには、コンソールをホストするコンピューターで Configuration Manager セットアップを実行し、コンソールを更新するオプションを選択する必要があります。 コンソールへの更新プログラムのインストールを遅らせないことをお勧めします。  
 
  **チェックリスト:**  
 
  **すべてのサイトがサポートされているバージョンの System Center Configuration Manager を実行することを確認する:**  更新プログラム 1602 のインストールを開始するには、階層内の各サイト サーバーが、System Center Configuration Manager バージョン 1511 を実行する必要があります。  
 
- **サイト システム サーバーにインストールされた .NET のバージョンを確認する:** .NET Framework 4.5 以降がまだインストールされていない場合、サイトで更新プログラム 1602 がインストールされると、Configuration Manager によって、次のいずれかのサイト システムの役割をホストする各コンピューターに .NET Framework 4.5.2 が自動的にインストールされます。  
+ **サイト システム サーバーにインストールされた Microsoft .NET のバージョンを確認する:** サイトで更新プログラム 1602 がインストールされると、Configuration Manager によって、次のいずれかのサイト システムの役割をホストする各コンピューターに .NET Framework 4.5.2 が自動的にインストールされます (.NET Framework 4.5 以降がまだインストールされていない場合)。  
 
 -   登録プロキシ ポイント  
 
@@ -55,15 +55,17 @@ System Center Configuration Manager をバージョン 1511 からバージョ�
 
 このインストールにより、サイト システム サーバーが再起動保留中の状態になり、Configuration Manager コンポーネント ステータス ビューアーにエラーが報告される場合があります。 さらに、サーバーが再起動されるまで、サーバー上の .NET アプリケーションでランダムにエラーが発生する場合があります。  
 
- 詳細については、「[サイトとサイト システムの前提条件](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)」を参照してください。  
+ 詳細については、「[サイトとサイト システムの前提条件](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)」をご覧ください。  
 
  **サイトと階層の状態を確認して、解決されていない問題がないことを確認する:** サイトを更新する前に、サイト サーバー、サイト データベース サーバー、リモート コンピューターにインストールされているサイト システムの役割で、運用上のすべての問題を解決します。 運用上の問題があると、サイトの更新が失敗する可能性があります。  
- 詳細については、「[System Center Configuration Manager のアラートとステータス システムの使用](../../../core/servers/manage/use-alerts-and-the-status-system.md)」を参照してください。  
+
+詳細については、「 [System Center Configuration Manager のアラートとステータス システムの使用](../../../core/servers/manage/use-alerts-and-the-status-system.md)」を参照してください。  
 
  **サイト間でファイルとデータのレプリケーションを確認する:**  サイト間のファイルとデータベースのレプリケーションが機能していて最新の状態であることを確認します。 遅延またはバックログにより、円滑で正常な更新が行われない場合があります。    
+
 データベース レプリケーションには、更新プログラムを開始する前に問題を解決するために、レプリケーション リンク アナライザーを使用できます。    
- 詳細については、「   
-「[System Center Configuration Manager での階層とレプリケーション インフラストラクチャの監視](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_RLA)」トピックの「[レプリケーション リンク アナライザーについて](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md)」。  
+
+ 詳細については、「[System Center Configuration Manager での階層とレプリケーション インフラストラクチャの監視](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md)」トピックの「[レプリケーション リンク アナライザーについて](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_RLA)」を参照してください。  
 
  **サイト、サイト データベース サーバー、リモートのサイト システムの役割をホストするコンピューターのオペレーティング システムに適用できる、重要な更新プログラムすべてをインストールする:** Configuration Manager に更新プログラムをインストールする前に、該当する各サイト システムの重要な更新プログラムをすべてインストールします。 更新のインストール時に再起動が必要な場合は、アップグレードを開始する前に該当するコンピューターを再起動します。  
 
@@ -73,15 +75,13 @@ System Center Configuration Manager をバージョン 1511 からバージョ�
 
 -   Configuration Manager の更新プログラムをインストールする  
 
-詳細については、次を参照してください:   
-[System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)  
+詳細については、「[System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」を参照してください。  
 
- **NLB を使うソフトウェアの更新ポイントを再構成する:** Configuration Manager では、ネットワーク負荷分散 (NLB) クラスターを使用してソフトウェアの更新ポイントをホストしているサイトを更新できません。  
-ソフトウェアの更新ポイントに NLB クラスターを使用している場合、PowerShell を使用して NLB クラスターを削除してください    
+ **NLB を使うソフトウェアの更新ポイントを再構成する:** Configuration Manager では、ネットワーク負荷分散 (NLB) クラスターを使用してソフトウェアの更新ポイントをホストしているサイトを更新できません。  ソフトウェアの更新ポイントに NLB クラスターを使用している場合、Windows PowerShell を使用して NLB クラスターを削除してください。    
 
- 詳細については、「[System Center Configuration Manager でのソフトウェア更新プログラムの計画](../../../sum/plan-design/plan-for-software-updates.md)」を参照してください。  
+ 詳細については、「[System Center Configuration Manager でのソフトウェア更新プログラムの計画](../../../sum/plan-design/plan-for-software-updates.md)」をご覧ください。  
 
- **各サイトの更新プログラムのインストールの実行中に、そのサイトのすべてのサイト メンテナンス タスクを無効にする:** 更新プログラムをインストールする前に、更新プロセスがアクティブな期間中に実行されるサイト メンテナンス タスクをすべて無効にします。 次のタスクが含まれますが、これらのタスクに限定されません。  
+ **各サイトの更新プログラムのインストールの実行中に、そのサイトのすべてのサイト メンテナンス タスクを無効にする:** 更新プログラムをインストールする前に、更新プロセスがアクティブな期間中に実行されるサイト メンテナンス タスクをすべて無効にします。 たとえば次のタスクが該当します。  
 
 -   サイト サーバーのバックアップ  
 
@@ -90,12 +90,14 @@ System Center Configuration Manager をバージョン 1511 からバージョ�
 -   期限切れの探索データの削除  
 
 更新プログラムのインストール中にサイト データベースのメンテナンス タスクを実行すると、更新プログラムのインストールが失敗することができます。 タスクを無効にする前に、更新プログラムをインストールした後で構成を復元できるように、タスクのスケジュールを記録してください。  
+
  詳細については、「[System Center Configuration Manager のメンテナンス タスク](../../../core/servers/manage/maintenance-tasks.md)」および「[System Center Configuration Manager のメンテナンス タスクのリファレンス](../../../core/servers/manage/reference-for-maintenance-tasks.md)」を参照してください。  
 
  **中央管理サイトとプライマリ サイトでサイト データベースのバックアップを作成する:** サイトを更新する前に、サイト データベースをバックアップして、障害復旧に使用する正常なバックアップがあるようにします。   
-詳細については、「 [Backup and recovery for System Center Configuration Manager](../../../protect/understand/backup-and-recovery.md)」をご覧ください。  
 
- **カスタマイズされた Configuration.mof ファイルをバックアップする:** ハードウェア インベントリで使用するデータ クラスを定義するためにカスタマイズされた Configuration.mof ファイルを使用する場合は、サイトを更新する前にこのファイルのバックアップを作成します。 その後、更新の後に、バージョン 1602 サイトにこのファイルを復元します。 サイトを更新するときに、現在のファイルは、ファイルの元の (既定の) バージョンで上書きされます。 このファイルの使用の詳細については、「[System Center Configuration Manager でのハードウェア インベントリの拡張方法](../../../core/clients/manage/inventory/extend-hardware-inventory.md)」を参照してください。  
+詳細については、「[Backup and recovery for System Center Configuration Manager](../../../protect/understand/backup-and-recovery.md)」 (System Center Configuration Manager のバックアップと回復) をご覧ください。  
+
+ **カスタマイズされた Configuration.mof ファイルをバックアップする:** ハードウェア インベントリで使用するデータ クラスを定義するためにカスタマイズされた Configuration.mof ファイルを使用する場合は、サイトを更新する前にこのファイルのバックアップを作成します。 更新の後に、バージョン 1602 サイトにこのファイルを復元します。 サイトを更新するときに、現在のファイルは、ファイルの元の (既定の) バージョンで上書きされます。 このファイルの使用の詳細については、「[System Center Configuration Manager でのハードウェア インベントリの拡張方法](../../../core/clients/manage/inventory/extend-hardware-inventory.md)」を参照してください。  
 
  **最新のサイト データベース バックアップのコピーで、データベースのアップグレードをテストする:** System Center Configuration Manager の中央管理サイトまたはプライマリ サイトを更新する前に、サイト データベースのコピーでサイト データベースのアップグレード処理をテストします。  
 
@@ -103,38 +105,40 @@ System Center Configuration Manager をバージョン 1511 からバージョ�
 
 -   データベースのアップグレード テストは必須ではありませんが、テストによって、実稼働データベースが影響を受ける前に、アップグレードの問題を特定することができます  
 
--   サイト データベースのアップグレードに失敗すると、サイト データベースが運用不可能になり、機能を復元するにはサイトの回復が必要になることがあります  
+-   サイト データベースのアップグレードが失敗すると、サイト データベースが運用不可能になり、機能を復元するにはサイトの回復が必要になる可能性があります。  
 
--   サイト データベースは階層内のサイト間で共有されますが、各サイトをアップグレードする前に、該当する各サイトのデータベースをテストする計画を立ててください  
+-   サイト データベースは階層内のサイトで共有されますが、そのサイトをアップグレードする前に、該当する各サイトのデータベースをテストするように計画してください。  
 
--   プライマリ サイトで管理ポイントにデータベース レプリカを使う場合、サイト データベースのバックアップを作成する前にレプリケーションを無効にします  
+-   プライマリ サイトで管理ポイントにデータベース レプリカを使用する場合、サイト データベースのバックアップを作成する前にレプリケーションを無効にします。  
 
 Configuration Manager では、セカンダリ サイトのバックアップとセカンダリ サイト データベースのテスト アップグレードのいずれもサポートされていません。   
-実稼働サイト データベースでテスト データベースのアップグレードを実行することはサポートされていません。 実行するとサイト データベースが更新され、サイトが機能しなくなる可能性があります。 詳細については、「[System Center Configuration Manager へのアップグレード](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md)」の「[サイト データベースのアップグレードをテストする](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test)」セクションを参照してください。  
+テスト データベースのアップグレードを実稼働サイト データベースで実行することは避けてください。 実行するとサイト データベースが更新され、サイトが機能しなくなる可能性があります。 詳細については、「[System Center Configuration Manager へのアップグレード](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md)」の「[サイト データベースのアップグレードをテストする](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test)」セクションを参照してください。  
 
  **クライアントのパイロット運用を計画する:** クライアントを更新する更新プログラムをインストールすると、すべてのアクティブなクライアントを展開してアップグレードする前に、実稼働前環境でその新しいクライアントの更新プログラムをテストできます。   
+
  このオプションを活用するには、更新プログラムのインストールを開始する前に、実稼働前環境の自動アップグレードをサポートするサイトを構成する必要があります。 詳細については、次を参照してください。「[System Center Configuration Manager でのクライアントのアップグレード](../../../core/clients/manage/upgrade/upgrade-clients.md)」および   
-[System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストする方法](../../../core/clients/manage/upgrade/test-client-upgrades.md)  
+「[System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストする方法](../../../core/clients/manage/upgrade/test-client-upgrades.md)」。  
 
- **メンテナンス期間の使用を計画**  
- **して、メンテナンス期間の使用を計画して、サイト サーバーが更新プログラムをインストールするタイミングを制御する:** メンテナンス期間を使用して、プライマリ サイト サーバーに適用される、そのサイトに対する更新プログラムをインストールできる期間を定義することができます。   
-これは、階層内のサイトが更新プログラムをインストールするタイミングの制御に役立ちます。   
-1602 更新プログラムのリリース以降、メンテナンス期間はサービス時間帯に名前変更されています。 詳細については、「[サイト サーバーのサービス ウィンドウ](/sccm/core/servers/manage/service-windows)」を参照してください。  
+ **サイト サーバーで更新プログラムがインストールされるタイミングをメンテナンス期間によって制御することを検討する:** メンテナンス期間を使用して、そのサイト サーバーの更新プログラムをインストールできる期間を定義することができます。 これは、階層内のサイトが更新プログラムをインストールするタイミングの制御に役立ちます。   
 
- **セットアップ前提条件チェッカーを実行する:**  1602 更新プログラムをインストールする前に、更新プログラムのインストールとは別に前提条件チェッカーを実行することができます。 サイトへの更新プログラムのインストールド時に、前提条件チェッカーが再度実行されます。  
+1602 更新プログラムのリリース以降、メンテナンス期間は "*サービス時間帯*" に名称変更されています。 詳細については、「[サイト サーバーのサービス ウィンドウ](/sccm/core/servers/manage/service-windows)」を参照してください。  
+
+ **セットアップ前提条件チェッカーを実行する:**  1602 更新プログラムをインストールする前に、更新プログラムのインストールとは別に前提条件チェッカーを実行することができます。 サイトへの更新プログラムのインストール時に、前提条件チェッカーが再度実行されます。  
+
 詳細については、「[System Center Configuration Manager の更新プログラム](../../../core/servers/manage/updates.md)」トピックの「**手順 3: 更新プログラムをインストールする前の前提条件チェッカーの実行**」を参照してください。  
 
 > [!IMPORTANT]  
 >  前提条件チェッカーを更新プログラムの一部として、または単独で実行すると、サイト メンテナンス タスクに使用される一部の製品ソース ファイルが更新されます。 このため、前提条件チェッカーを実行した後で、1602 更新プログラムをインストールする前に、サイト メンテナンス タスクを実行する必要がある場合は、サイト サーバーの CD.Latest フォルダーから **Setupwfe.exe** (Configuration Manager セットアップ) を実行する必要があります。  
 
- **サイトを更新する:** 階層の更新プログラムのインストールを開始する準備が整いました。  
-  更新プログラムをインストールするプロセス、およびサイトのコンポーネントとサイト システムの役割を再インストールするアクションが業務に及ぼす影響が少ない場合は、各サイトの通常業務時間外に更新プログラムをインストールする計画を立てることをお勧めします。 詳細については、「[System Center Configuration Manager の更新プログラム](../../../core/servers/manage/updates.md)」を参照してください。  
+ **サイトを更新する:** 階層の更新プログラムのインストールを開始する準備が整いました。 更新プログラムをインストールするプロセス、およびサイトのコンポーネントとサイト システムの役割を再インストールするアクションが業務に及ぼす影響が少ない場合は、各サイトの通常業務時間外に更新プログラムをインストールする計画を立てることをお勧めします。
+
+詳細については、「[System Center Configuration Manager の更新プログラム](../../../core/servers/manage/updates.md)」を参照してください。  
 
 ## <a name="see-also"></a>関連項目  
  [System Center Configuration Manager の更新プログラム](../../../core/servers/manage/updates.md)
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

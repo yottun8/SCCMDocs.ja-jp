@@ -2,7 +2,7 @@
 title: "スキーマ拡張 | Microsoft Docs"
 description: "System Center Configuration Manager をサポートするように Active Directory スキーマを拡張します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,8 +18,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: f230b6cbe97b72fee4f5d2e45260e6217ef2cec0
+ms.sourcegitcommit: 7479e54b5db2eff893bf9fbaf52c104836cda519
+ms.openlocfilehash: 5b5540c35c02df6e3d06e4aa9269b8da3238233e
 
 
 ---
@@ -27,9 +27,9 @@ ms.openlocfilehash: f230b6cbe97b72fee4f5d2e45260e6217ef2cec0
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager をサポートするように Active Directory スキーマを拡張することができます。 これにより、フォレストの Active Directory スキーマを編集し、新しいコンテナーといくつかの属性を追加します。これらは、Configuration Manager サイトにより、キー情報を Active Directory に発行するために使用されます。Active Directory でクライアントは安全にキー情報にアクセスできます。  この情報はクライアントの展開と構成を簡略化し、クライアントがサイト リソース (展開されるコンテンツを持つサーバーや、クライアントに各種サービスを提供するサーバーなど) を見つけるときに役立ちます。  
+Configuration Manager をサポートするように Active Directory スキーマを拡張することができます。 これにより、フォレストの Active Directory スキーマを編集し、新しいコンテナーといくつかの属性を追加します。これらは、Configuration Manager サイトにより、キー情報を Active Directory に発行するために使用されます。Active Directory でクライアントは安全にキー情報を使用できます。 この情報はクライアントの展開と構成を簡略化し、クライアントがサイト リソース (展開するコンテンツがあるサーバーや、クライアントに各種サービスを提供するサーバーなど) を見つけるときに役立ちます。  
 
--   Active Directory スキーマの拡張は必須ではありませんが、お勧めします。  
+-   Active Directory スキーマは拡張することをお勧めしますが、必須ではありません。  
 
 [Active Directory スキーマを拡張する](https://msdnstage.redmond.corp.microsoft.com/en-US/library/mt345589\(TechNet.10\).aspx)前に、Active Directory ドメイン サービスに精通し、 [Active Directory スキーマの変更](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx)に慣れておく必要があります。  
 
@@ -37,11 +37,11 @@ Configuration Manager をサポートするように Active Directory スキー�
 
 -   System Center Configuration Manager 用の Active Directory スキーマの拡張は、Configuration Manager 2007 と Configuration Manager 2012 で使用されているものから変更されていません。 どちらかのバージョンでスキーマを拡張した場合は、もう一度拡張する必要はありません。  
 
--   スキーマの拡張は、フォレスト全体で 1 回限り行う操作で、元に戻すことはできません。  
+-   スキーマの拡張は、フォレスト全体で&1; 回限り行う操作で、元に戻すことはできません。  
 
--   スキーマの拡張を行えるのは、スキーマ管理グループのメンバーまたはスキーマを変更するのに十分なアクセス許可を委任されたユーザーのみです。  
+-   スキーマを拡張できるのは、スキーマ管理グループのメンバーと、スキーマを変更するのに十分なアクセス許可を委任されたユーザーのみです。  
 
--   スキーマの拡張を行うのは Configuration Manager のセットアップ実行の前でも後でも構いませんが、サイトと階層の設定の構成を始める前に行うことをお勧めします。  これによって、後で行う多くの構成手順が簡単になります。  
+-   スキーマの拡張を行うのは Configuration Manager のセットアップ実行の前でも後でも構いませんが、サイトと階層の設定の構成を始める前に行うことをお勧めします。 これによって、後で行う多くの構成手順が簡単になります。  
 
 -   スキーマの拡張後、Active Directory グローバル カタログがフォレスト全体にレプリケートされます。 そのため、レプリケーションのトラフィックにより、ネットワークに依存する他のプロセスに悪影響が及ばない時間帯に、スキーマの拡張をご計画ください。  
 
@@ -70,9 +70,9 @@ Configuration Manager をサポートするように Active Directory スキー�
 ## <a name="capabilities-that-benefit-from-extending-the-schema"></a>スキーマの拡張によってメリットを受ける機能  
 **クライアント コンピューターのインストールとサイトの割り当て** - Windows コンピューターに新しいクライアントがインストールされると、クライアントが Active Directory Domain Services を検索して、インストールのプロパティを見つけます。  
 
--   **回避策:** スキーマを拡張しない場合は、次のいずれかのオプションを使って、インストールのためにコンピューターが必要とする構成詳細を提示する必要があります。  
+-   **回避策:** スキーマを拡張しない場合は、次のいずれかのオプションを使って、コンピューターにインストールが必要な構成詳細を提示する必要があります。  
 
-    -   **クライアント プッシュ インストールを使用する**。 クライアント インストール方法を使用する前に、すべての前提条件が満たされていることを確認してください。 詳細については、「コンピューター クライアントの前提条件」のセクション「インストール方法の依存関係」を参照してください。  
+    -   **クライアント プッシュ インストールを使用する**。 クライアント インストール方法を使用する前に、すべての前提条件が満たされていることを確認してください。 詳細については、「[Windows コンピューターにクライアントを展開するための前提条件](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers)」の「インストール方法の依存関係」セクションを参照してください。  
 
     -   **クライアントを手動でインストールし**、CCMSetup インストールのコマンドライン プロパティを使用してクライアント インストールのプロパティを指定する。 以下の手順を実行する必要があります。  
 
@@ -86,7 +86,7 @@ Configuration Manager をサポートするように Active Directory スキー�
 
 -   **回避策:** スキーマを拡張しない場合、以下のいずれかのオプションを使用して既存のクライアントに新しいポート構成を提供します。  
 
-    -   **クライアントを再インストール** します。  
+    -   新しいポートを構成するオプションを使用して**クライアントを再インストール**します。  
 
     -   **ポート情報を更新するカスタム スクリプトをクライアントに展開します**。 ポートが変更されたためにクライアントがサイトと通信できない場合は、Configuration Manager を使用してこのスクリプトを展開することはできません。 たとえば、グループ ポリシーを使用できます。  
 
@@ -94,7 +94,7 @@ Configuration Manager をサポートするように Active Directory スキー�
 
 -   **回避策:** スキーマを拡張しない場合は、階層のメンテナンス ツール **preinst.exe**を使用して、サイト間でセキュリティ キー情報を交換します。  
 
-     たとえば、プライマリ サイトでコンテンツを作成し、別のプライマリ サイト下にあるセカンダリ サイトにそのコンテンツを展開する場合は、セカンダリ サイトでソース プライマリ サイトの公開キーを取得できるように Active Directory スキーマを拡張するか、preinst.exe を使用して 2 つのサイト間で直接キーを共有することができます。  
+     たとえば、プライマリ サイトでコンテンツを作成し、別のプライマリ サイト下にあるセカンダリ サイトにそのコンテンツを展開する場合は、セカンダリ サイトでソース プライマリ サイトの公開キーを取得できるように Active Directory スキーマを拡張するか、preinst.exe を使用して&2; つのサイト間で直接キーを共有することができます。  
 
 ## <a name="active-directory-attributes-and-classes"></a>Active Directory 属性とクラス  
 System Center Configuration Manager のスキーマを拡張すると、次のクラスと属性がスキーマに追加され、Active Directory フォレスト内のすべての Configuration Manager サイトで利用できるようになります。  
@@ -141,7 +141,9 @@ System Center Configuration Manager のスキーマを拡張すると、次の�
     -   cn=MS-SMS-Site  
 
 > [!NOTE]  
->  スキーマの拡張には、旧バージョンの製品から継承され、Configuration Manager 2015 では使用されなくなった属性とクラスが含まれる場合があります。 たとえば、  
+
+>  スキーマの拡張には、旧バージョンの製品から継承され、System Center Configuration Manager では使用されなくなった属性とクラスが含まれる場合があります。 たとえば、  
+
 >   
 >  -   属性: cn=MS-SMS-Site-Boundaries  
 > -   クラス: cn=MS-SMS-Server-Locator-Point  
@@ -150,6 +152,6 @@ System Center Configuration Manager のスキーマを拡張すると、次の�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -5,7 +5,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 01/04/2017
+ms.date: 02/03/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 translationtype: Human Translation
-ms.sourcegitcommit: 46c8004afee4b18d5c7a2fcc5dac0f7d0d1f823c
-ms.openlocfilehash: fb2fc409c2f734816e4f3bf93d61a748d957ebf0
+ms.sourcegitcommit: 5ab49481a78eda044350addab86ee6f8ef1c0946
+ms.openlocfilehash: fe8bf45970e34af0795a5a9a4c3aa985e446784d
 
 ---
 
@@ -44,6 +44,18 @@ Configuration Manager バージョン 1610 より、Office 365 クライアン�
 
 ダッシュボードの上部にある [**コレクション**] ドロップダウン設定を使用して、特定のコレクションのメンバーでダッシュボードのデータをフィルター処理します。
 
+### <a name="display-data-in-the-office-365-client-management-dashboard"></a>Office 365 クライアント管理ダッシュボードにデータを表示する
+Office 365 クライアント管理ダッシュ ボードに表示されるデータは、ハードウェア インベントリから取得されます。 データがダッシュボードに表示される前に、ハードウェア インベントリを有効にし、**Office 365 ProPlus 構成**ハードウェア インベントリ クラスを選択する必要があります。
+#### <a name="to-display-data-in-the-office-365-client-management-dashboard"></a>Office 365 クライアント管理ダッシュボードにデータを表示するには
+1. ハードウェア インベントリがまだ有効になっていない場合は、有効にします。 詳細については、「[Configure hardware inventory](\sccm\core\clients\manage\configure-hardware-inventory)」(ハードウェア インベントリを構成する) を参照してください。
+2. Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** > **[既定のクライアント設定]** の順に選択します。  
+3. **[ホーム]** タブの **[プロパティ]** グループで、 **[プロパティ]**をクリックします。  
+4. [既定のクライアント設定 **** ] ダイアログ ボックスで、[ハードウェア インベントリ ****] をクリックします。  
+5. [デバイス設定 **** ] の一覧で、[クラスの設定 ****] をクリックします。  
+6. **[ハードウェア インベントリ クラス]** ダイアログ ボックスで、**[Office 365 ProPlus 構成]** を選択します。  
+7.  [OK **** ] をクリックして変更を保存し、[ハードウェア インベントリ クラス **** ] ダイアログ ボックスを閉じます。  
+ハードウェア インベントリが報告されると、Office 365 クライアント管理ダッシュボードにデータが表示されます。
+
 <!---
  On the upper-right side of the dashboard, click **Office 365 Installer** to start the Office 365 Client Installation Wizard to deploy Office 365 apps to clients. For details, see [Deploy Office 365 apps to clients](#deploy-office-365-apps-to-clients).
 - On the middle-right side of the dashboard, click **Create an ADR** to open the Automatic Deployment Rule Wizard to create a new automatic deployment rule (ADR). To create an ADR for Office 365 apps, select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
@@ -55,8 +67,7 @@ Configuration Manager で Office 365 の更新プログラムを展開するに�
 
 1.  Configuration Manager を使用して Office 365 クライアントの更新プログラムを管理するための[要件を確認します](https://technet.microsoft.com/library/mt628083.aspx) (このトピックの「**構成マネージャーを使用して Office 365 クライアントの更新を管理するための要件**」セクションを参照してください)。  
 
-2.  Office 365 のクライアント更新プログラムを同期するための[ソフトウェア更新ポイントを構成します](../get-started/configure-classifications-and-products.md)。 分類の**更新プログラム**を設定して、製品の **Office 365 クライアント**を選択します。 Office 365 クライアント製品を選択できるようになるには、ソフトウェア更新プログラムを少なくとも 1 回同期しておく必要があります。 分類の**更新プログラム**を使用するには、ソフトウェア更新ポイントの構成後にソフトウェア更新プログラムを同期する必要があります。  
-
+2.  Office 365 のクライアント更新プログラムを同期するための[ソフトウェア更新ポイントを構成します](../get-started/configure-classifications-and-products.md)。 分類の**更新プログラム**を設定して、製品の **Office 365 クライアント**を選択します。 Office 365 クライアント製品を選択できるようになるには、ソフトウェア更新プログラムを少なくとも 1 回同期しておく必要があります。 分類の**更新プログラム**を使用するには、ソフトウェア更新ポイントの構成後にソフトウェア更新プログラムを同期する必要があります。
 3.  Office 365 クライアントが Configuration Manager から更新プログラムを受信できるようにします。 そのためには、Configuration Manager クライアント設定またはグループ ポリシーを使用します。 次のいずれかの方法を使用してクライアントを有効にします。  
     - 方法 1: Configuration Manager バージョン 1606 以降では、Configuration Manager クライアント設定を使用して Office 365 のクライアント エージェントを管理できます。 この設定を構成し、Office 365 の更新プログラムを展開すると、Configuration Manager クライアント エージェントは、Office 365 のクライアント エージェントと通信して、配布ポイントから Office 365 の更新プログラムをダウンロードしてインストールします。 Configuration Manager は、Office 365 ProPlus クライアント エージェント設定のインベントリを取得します。
       1.  Configuration Manager コンソールで、**[管理]** > **[概要]** > **[クライアント設定]** の順にクリックします。  
@@ -67,47 +78,54 @@ Configuration Manager で Office 365 の更新プログラムを展開するに�
 
     - 方法 2: Office 展開ツールまたはグループ ポリシーを使用して、Configuration Manager から [Office 365 クライアントが更新プログラムを受信できるようにします](https://technet.microsoft.com/library/mt628083.aspx#BKMK_EnableClient)。  
 
-4. [Office 365 の更新プログラムをクライアントに展開します](deploy-software-updates.md)。  
+4. [Office 365 の更新プログラムをクライアントに展開します](deploy-software-updates.md)。   
 
-<!--  ## Add other languages for Office 365 update downloads
-Beginning in Configuration Manager version 1610, you can add support for Configuration Manager to download updates for any languages supported by Office 365 regardless of whether they are supported in Configuration Manager.
+## <a name="add-other-languages-for-office-365-update-downloads"></a>Office 365 更新プログラムのダウンロード対象言語を追加する
+バージョン 1610 以降の Configuration Manager では、Office 365 でサポートされている言語であれば、Configuration Manager でサポートされているかどうかに関係なく、その言語の更新プログラムをダウンロード対象に含めることができます。
+> [!IMPORTANT]  
+> Office 365 更新プログラムの言語を追加するための構成設定はサイト全体に適用されます。 以下の手順に従って言語を追加すると、その言語における Office 365 のすべての更新プログラムが、ソフトウェア更新プログラムの展開ウィザードまたはソフトウェア更新プログラムのダウンロード ウィザードの [言語の選択] ページで選択した言語に加えてダウンロードされます。
 
-### To add support to download updates for additional languages
-Use the following procedure on the central administration site, or stand-alone primary site, where the software update point site system role is installed.
-1. From a command prompt, type *wbemtest* as an administrative user to open the Windows Management Instrumentation Tester.
-2. Click **Connect**, and then type *root\sms\site_<siteCode>*.
-3. Click **Query**, and then run the following query:
-   *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*
-4. Double-click the object with the site code for the central administration site or stand-alone primary site.
+### <a name="to-add-support-to-download-updates-for-additional-languages"></a>更新プログラムのダウンロード対象言語を追加するには
+以下の手順は、ソフトウェアの更新ポイント サイト システムの役割がインストールされている中央管理サイト (またはスタンドアロンのプライマリ サイト) で実行してください。
+1. 管理ユーザーとしてコマンド プロンプトから「*wbemtest*」と入力し、Windows Management Instrumentation テストを開きます。
+2. **[接続]** をクリックして「*root\sms\site_&lt;siteCode&gt;*」と入力します。
+3. **[クエリ]** をクリックして、「*select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*」というクエリを実行します。  
+   ![WMI query](..\media\1-wmiquery.png)
+4. 結果ウィンドウで、目的のサイト コード (中央管理サイトまたはスタンドアロンのプライマリ サイト) に該当するオブジェクトをダブルクリックします。
+5. **Props** プロパティを選択し、**[プロパティの編集]** をクリックして、**[埋め込みを表示]** をクリックします。
+![Property editor](..\media\2-propeditor.png)
+6. 1 つ目のクエリ結果から順に各オブジェクトを開いていき、**PropertyName** プロパティが **AdditionalUpdateLanguagesForO365** であるオブジェクトを見つけます。
+7. **[Value2]** を選択し、**[プロパティの編集]** をクリックします。  
+![Edit the Value2 property](..\media\3-queryresult.png)
+8. 新しい言語を **Value2** プロパティに追加して **[プロパティの保存]** をクリックします。  
+たとえば、pt-pt (ポルトガル語 - ポルトガル)、af-za (アフリカーンス語 - 南アフリカ)、nn-no (ノルウェー語 (ニーノシク) - ノルウェー) を追加します。  
+![Add languages in Property Editor](..\media\4-props.png)  
+9. **[閉じる]** をクリックし、再度 **[閉じる]** をクリックして、**[プロパティの保存]** をクリックし、**[オブジェクトの保存]** (ここで **[閉じる]** をクリックした場合は、値が破棄されます) をクリックします。次に、**[閉じる]** をクリックし、**[終了]** をクリックして、Windows Management Instrumentation テストを終了します。
+10. Configuration Manager コンソールで **[ソフトウェア ライブラリ]** > **[概要]** > **[Office 365 クライアント管理]** > **[Office 365 Updates (Office 365 更新プログラム)]** に移動します。
+11. 以後、Office 365 更新プログラムをダウンロードすると、ウィザードで選択した言語およびこの手順で構成した言語の更新プログラムがダウンロードされます。 該当する言語の更新プログラムがダウンロードされたことを確認するには、その更新プログラムのパッケージ ソースにアクセスし、対応する言語コードを名前に含んだファイルを探します。  
+![Filenames with additional languages](..\media\5-verification.png)
 
-5. Browse the properties for View Embedded.
-3). Find the SMS_EmbeddedProperty instance with the PropertyName of "AdditionalUpdateLanguagesForO365"
-4). Set Value2 to be additional languages, e.g.:  pt-pt,af-za,nn-no, and save
-5). Right click to download an O365 update, choose languages from UI
-6). Verify that the language packs got downloaded including the UI specified ones plus the SDK specified ones. Admin can check the content package share specified to verify this.
--->
 
-<!-- ## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
-To change the update channel after you enable Office 365 clients to receive updates from Configuration Manager, you must distribute a registry key value change to Office 365 clients using group policy. Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** registry key to use one of the following values:
+## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>Configuration Manager から更新プログラムを適用できるように Office 365 クライアントを設定した後で更新チャネルを変更する
+Configuration Manager から更新プログラムを適用できるように Office 365 クライアントを設定した後で更新チャネルを変更するには、グループ ポリシーを使用して、レジストリ キー値の変更を Office 365 クライアントに配信します。 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** というレジストリ キーを次のいずれかの値を使用するように変更します。
 
-- Current Channel:  
-  **CDNBaseUrl** = http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60
+- 最新機能提供チャネル:  
+  **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60
 
-- Deferred Channel:  
-  **CDNBaseUrl** = http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114
+- 段階的提供チャネル:  
+  **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114
 
-- First Release for Current Channel:  
-  **CDNBaseUrl** = http://officecdn.microsoft.com/pr/64256afe-f5d9-4f86-8936-8840a6a4f5be
+- 最新機能提供チャネルの初回リリース:  
+  **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/64256afe-f5d9-4f86-8936-8840a6a4f5be
 
-- First Release for Deferred Channel:  
-  **CDNBaseUrl** = http://officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf
--->
+- 段階的提供チャネルの初回リリース:  
+  **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf
 
 <!--- ## Next steps
 Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For details, see [Manage Office 365 apps](manage-office-365-apps.md). --->
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

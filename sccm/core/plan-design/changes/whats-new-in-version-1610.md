@@ -1,8 +1,8 @@
 ---
-title: "1610 の新機能 | Microsoft Docs"
+title: "新しいバージョン 1610 |Microsoft Docs"
 description: "System Center Configuration Manager のバージョン 1610 の変更点および導入された新機能について詳しく説明します。"
 ms.custom: na
-ms.date: 
+ms.date: 11/23/2016
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -16,15 +16,15 @@ ms.author: brenduns
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: 5121073a335f6722ea1e6cf7669edbf13ba3f9db
+ms.sourcegitcommit: 831d8a66c827d246069c7415cdce7a7c4bb95b33
+ms.openlocfilehash: 19e3099773f887129374413482702de3f4b0a36f
 
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1610 の新機能
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager の現在のブランチの更新プログラム 1610 は、以前にインストールされておりバージョン 1511、1602、または 1606 を実行するサイトを対象とする、コンソール内の更新プログラムとして使用可能な更新プログラムです。
+System Center Configuration Manager の現在のブランチの更新プログラム 1610 は、以前にインストールされておりバージョン 1511、1602、または 1606 を実行するサイトを対象とする、コンソール内の更新プログラムとして使用可能です。
 
 
 > [!TIP]  
@@ -46,8 +46,8 @@ System Center Configuration Manager の現在のブランチの更新プログ�
 
 
 ## <a name="improvements-for-boundary-groups"></a>境界グループの機能強化
-バージョン 1610 では、境界グループとそれらが配布ポイントを扱う方法に重要な変更が加えられています。 これらの変更は、コンテンツのインフラストラクチャの設計を簡略化に役立つ一方で、クライアントがコンテンツ ソースの場所として追加の配布ポイントにフォールバックして検索する方法とタイミングをより細かく制御することもできます。 これには、オンプレミスとクラウド ベースの配布ポイントの両方が含まれます。
-これらの機能強化により、慣れ親しんだ概念と動作 (配布ポイントを高速または低速に設定するなど) が、より簡単にセットアップして管理できる新しいモデルに置き換えられています。 これらの変更も、境界グループに関連付けるその他のサイト システムの役割を向上させる将来の変更のための基礎です。
+バージョン 1610 では、境界グループとそれらが配布ポイントを扱う方法に重要な変更が加えられています。 これらの変更によって、コンテンツ インフラストラクチャの設計が単純化されると共に、クライアントがいつどのようにフォールバックしてコンテンツ ソースの場所となる他の配布ポイントを検索するかをより細かく制御することができます。 これには、オンプレミスとクラウド ベースの配布ポイントの両方が含まれます。
+従来からある概念や動作は、これらの機能強化によって一新されます (配布ポイントの [高速] と [低速] の構成など)。 セットアップとメンテナンスは、新しいモデルによって省力化されると考えられます。 これらの変更も、境界グループに関連付けるその他のサイト システムの役割を向上させる将来の変更のための基礎です。
 
 バージョン 1610 への更新時に、これらの変更が既存のコンテンツの配布の構成を妨げないように、アップグレードによって現在の境界グループ構成が新しいモデルに適合するように変換されます。
 
@@ -64,7 +64,7 @@ System Center Configuration Manager の現在のブランチの更新プログ�
 > [!TIP]  
 > バージョン 1610 では、ピア キャッシュとクライアント データ ソースのダッシュボードは、プレリリース機能です。 有効にするには、「[更新プログラムからのプレリリース機能の使用](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)」をご覧ください。
 
-詳細については、「[Peer Cache for Configuration Manager clients](/sccm/core/plan-design/hierarchy/client-peer-cache)」(Configuration Manager クライアントのピア キャッシュ) と「[Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard)」(クライアント データ ソース ダッシュボード) を参照してください。
+詳細については、「[Configuration Manager クライアントのピア キャッシュ](/sccm/core/plan-design/hierarchy/client-peer-cache)」と「[クライアント データ ソース ダッシュボード](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard)」を参照してください。
 
 
 ## <a name="migrate-multiple-shared-distribution-points-at-the-same-time"></a>複数の共有配布ポイントを同時に移行する
@@ -81,10 +81,10 @@ System Center Configuration Manager の現在のブランチの更新プログ�
 - Windows 10 Professional から、ハードウェアと互換性がある、ウィザードのプラットフォームのいずれかにアップグレードすることができます。
 
 ## <a name="manage-hardware-identifiers"></a>ハードウェア ID の管理
-PXE ブートとクライアント登録で Configuration Manager が無視するハードウェア ID の一覧を指定できるようになりました。 それにより 2 つの一般的な問題に対処できます。
+PXE ブートとクライアント登録で Configuration Manager が無視するハードウェア ID の一覧を指定できるようになりました。 それにより&2; つの一般的な問題に対処できます。
 
-1. Surface Pro 3 など、新しいデバイスの多くにオンボード イーサネット ポートが含まれません。 オペレーティング システムの展開で有線接続を確立するとき、一般的に USB/イーサネット アダプターが使用されます。 しかしながら、コストや汎用性に起因し、多くの場合、共有アダプターになります。 そのアダプターの MAC アドレスを利用してデバイスを識別するため、展開ごとに管理者による追加措置がないと、アダプターの再利用が問題になります。 Configuration Manager の現行の Branch Version 1610 では、このアダプターの MAC アドレスを除外できます。そのため、このシナリオで簡単に再利用できます。
-2. SMBIOS ID は一意のハードウェア識別子ですが、専門的なハードウェア デバイスには ID が重複するものもあります。 上記の USB/イーサネット アダプターのシナリオほど一般的ではありませんが、ハードウェア ID の一覧を利用してこの問題に対処することもできます。
+1. Surface Pro 3 など、デバイスの多くにオンボード イーサネット ポートが含まれません。 オペレーティング システムの展開で有線接続を確立するとき、一般的に USB/イーサネット アダプターが使用されます。 しかしながら、コストや汎用性に起因し、多くの場合、共有アダプターになります。 そのアダプターの MAC アドレスを利用してデバイスを識別するため、展開ごとに管理者による追加措置がないと、アダプターの再利用が問題になります。 Configuration Manager Version 1610 では、このアダプターの MAC アドレスを除外できます。そのため、このシナリオで簡単に再利用できます。
+2. SMBIOS ID は一意のハードウェア識別子ですが、専門的なハードウェア デバイスには ID が重複するものもあります。 この問題は、前述の USB/イーサネット アダプターのシナリオほどよく起こることではありませんが、除外するハードウェア ID の一覧を使用することによって解決できます。
 
 詳細については、「[Manage duplicate hardware identifiers](/sccm/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers)」(重複するハードウェア識別子を管理する) を参照してください。
 
@@ -95,17 +95,17 @@ PXE ブートとクライアント登録で Configuration Manager が無視す�
 - Azure Active Directory から取得したクライアントの秘密鍵を変更できるようになりました。
 - ストアに対するサブスクリプションを削除できるようになりました。
 
-詳細については、「[System Center Configuration Manager によるビジネス向け Windows ストアからのアプリの管理](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)」を参照してください。
+詳細については、「[System Center Configuration Manager によるビジネス向け Windows ストアからのアプリの管理](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)」をご覧ください。
 
 
 ## <a name="policy-sync-for-intune-enrolled-devices"></a>Intune に登録されたデバイスのポリシー同期
-デバイス自体のポータル サイト アプリから同期を要求するのではなく、Configuration Manager コンソールから Intune に登録されたデバイスのポリシー同期を要求できるようになりました。 同期要求の状態の情報を、デバイス ビューの新しい列 **[Remote Sync State]** (リモート同期の状態)、および各デバイスの **[プロパティ]** ダイアログ ボックスの [探索データ] セクションで、見ることができます。
-詳細については、「[Remotely synchronize policy on Intune-enrolled devices from the Configuration Manager console](/sccm/mdm/deploy-use/sync-intune-device)」(Intune に登録されたデバイスのポリシーを Configuration Manager コンソールからリモートで同期する) を参照してください。
+デバイス自体のポータル サイト アプリから同期を要求するのではなく、Configuration Manager コンソールから Intune に登録されたデバイスのポリシー同期を要求できるようになりました。 同期要求の状態に関する情報は、デバイス ビュー内に 「**Remote Sync State**」 (リモート同期の状態) と呼ばれる新しい列として表示されます。 この情報は、各デバイスの **[プロパティ]** ダイアログ ボックスの [探索データ] セクションにも表示されます。
+詳細については、「[Intune に登録されたデバイスのポリシーを Configuration Manager コンソールからリモートで同期する](/sccm/mdm/deploy-use/sync-intune-device)」を参照してください。
 
 
 ## <a name="use-compliance-settings-to-configure-windows-defender-settings"></a>コンプライアンス設定を使用して Windows Defender 設定を構成する
 Configuration Manager コンソールの構成項目を使用して、Intune に登録されている Windows 10 コンピューターで Windows Defender クライアント設定を構成できるようになりました。
-詳細については、「[Create configuration items for Windows 8.1 and Windows 10 devices managed without the System Center Configuration Manager client](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)」(System Center Configuration Manager クライアントを使用せずに管理されている Windows 8.1 デバイスと Windows 10 デバイスの構成項目を作成する方法) の「**Windows Defender**」セクションを参照してください。
+詳細については、「[System Center Configuration Manager クライアントを使用せずに管理されている Windows 8.1 デバイスと Windows 10 デバイスの構成項目を作成する](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)」の「**Windows Defender**」セクションを参照してください。
 
 
 
@@ -122,34 +122,34 @@ Configuration Manager コンソールの構成項目を使用して、Intune に
 
 ソフトウェア センターのカスタム ブランド設定は、次の規則に従って適用されます。
 
-1. アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされていない場合は、[**コンピューター エージェント**] クライアント設定 [**ソフトウェア センターに表示される組織名**] に指定された組織名がソフトウェア センターに表示されます。 手順については、「[クライアント設定を構成する方法](../../clients/deploy/configure-client-settings.md)」をご覧ください。
+- アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされていない場合は、**[ソフトウェア センターに表示される組織名]** という **[コンピューター エージェント]** クライアント設定で指定された組織名がソフトウェア センターに表示されます。 手順については、「[クライアント設定を構成する方法](../../clients/deploy/configure-client-settings.md)」をご覧ください。
 
-2. アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされている場合は、アプリケーション カタログ Web サイトのポイント サイト サーバーの役割プロパティに指定されている組織名と色がソフトウェア センターに表示されます。 詳細については、「[Configuration options for Application Catalog website point](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#Application-Catalog-website-point)」(アプリケーション カタログ Web サイト ポイントの構成オプション) をご覧ください。
+- アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされている場合は、アプリケーション カタログ Web サイトのポイント サイト サーバーの役割プロパティに指定されている組織名と色がソフトウェア センターに表示されます。 詳細については、「[Configuration options for Application Catalog website point](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#Application-Catalog-website-point)」(アプリケーション カタログ Web サイト ポイントの構成オプション) をご覧ください。
 
-3. Microsoft Intune サブスクリプションが構成されていて Configuration Manager 環境に接続されている場合は、Intune サブスクリプションのプロパティに指定されている組織名、色、および会社のロゴがソフトウェア センターに表示されます。 詳細については、「 [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription)」をご覧ください。
+- Microsoft Intune サブスクリプションが構成されていて Configuration Manager 環境に接続されている場合は、Intune サブスクリプションのプロパティに指定されている組織名、色、および会社のロゴがソフトウェア センターに表示されます。 詳細については、「 [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription)」をご覧ください。
 
 
 ## <a name="enforcement-grace-period-for-required-application-and-software-update-deployments"></a>必要なアプリケーションとソフトウェア更新プログラムを展開するための適用猶予期間
-場合によっては、必要なアプリケーション展開またはソフトウェア更新プログラムをインストールできるように、設定期限よりも長い時間をユーザーに与える必要があります。 これは通常、コンピューターが長期間オフになっていて、多数のアプリケーションや更新プログラムの展開をインストールする必要がある場合に必要になります。 たとえば、エンド ユーザーが休暇から戻って来たばかりの場合、期限切れのアプリケーションの展開がインストールされるまで、長時間待たなければならない場合があります。 この問題を解決するため、Configuration Manager クライアント設定をコレクションに展開することで、適用猶予期間を定義できるようになりました。
+場合によっては、必要なアプリケーション展開またはソフトウェア更新プログラムをインストールできるように、設定期限よりも長い時間をユーザーに与える必要があります。 これは、たとえばコンピューターが長期間オフになっていて、多数のアプリケーションや更新プログラムの展開をインストールする必要がある場合に必要になります。 たとえば、エンド ユーザーが休暇から戻って来たばかりの場合、期限切れのアプリケーションの展開がインストールされるまで、長時間待たなければならない場合があります。 この問題を解決するため、Configuration Manager クライアント設定をコレクションに展開することで、適用猶予期間を定義できるようになりました。 
 
 猶予期間を設定するには、次の操作を実行します。
 1.      クライアント設定の [**コンピューター エージェント**] ページで、新しいプロパティ [**展開期限後の実施の猶予期間 (時間)**] の値を **1** ～ **120** 時間で設定します。
-2.      新しい必須アプリケーションの展開、または既存の展開のプロパティで、**[スケジュール]** ページで **[ユーザー設定に従い、クライアント設定で定義された猶予期間が終了するまでこの展開の実施を延期する]** チェック ボックスをオンにします。 このチェック ボックスがオンになっていて、クライアント設定も展開するデバイスを対象としているすべての展開が、適用猶予期間を使用します。
+2.      新しい必須アプリケーションの展開または既存の展開のプロパティの **[スケジュール]** ページで、**[Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings (ユーザー設定に従い、クライアント設定で定義された猶予期間が終了するまでこの展開の実施を延期する)]** チェック ボックスをオンにします。 このチェック ボックスがオンになっていて、クライアント設定も展開するデバイスを対象としているすべての展開が、適用猶予期間を使用します。
 
 適用猶予期間を構成し、チェック ボックスをオンにすると、アプリケーションのインストール期限になると、ユーザーがその猶予期間までに設定した最初の非ビジネス ウィンドウで、アプリケーションがインストールされます。 ただし、ユーザーはソフトウェア センターを開いて、いつでもアプリケーションをインストールすることもできます。 猶予期間が切れると、適用は期限切れの展開に対する通常の動作に戻ります。 ソフトウェア更新プログラムの展開ウィザード、自動展開規則の作成ウィザード、およびプロパティ ページに、同様のオプションが追加されています。
 
 
 
-## <a name="improved-functionality-for-required-software-dialogs"></a>必要なソフトウェア ダイアログの機能向上
-ユーザーが必要なソフトウェアを受け取ったときに、[**次の時間が経過したら再通知する**] 設定で、次のドロップダウン リストから値を選択できます。
-- [後で]: クライアント エージェント設定で構成されている通知の設定に基づいて通知をスケジュールすることを指定します。
-- [定時]: 選択した時間後にもう一度通知を表示するように指定します。 たとえば、ユーザーが 30 分を選択した場合、その通知が 30 分後にもう一度表示されます。
+## <a name="improved-functionality-in-dialog-boxes-about-required-software"></a>必要なソフトウェアに関するダイアログ ボックスで改善された機能
+ユーザーが必要なソフトウェアを受け取ったときに、**[次の時間が経過したら再通知する]** 設定で、次のドロップダウン リストから値を選択できます。 
+- **[後で]**:  クライアント エージェント設定で構成されている通知の設定に基づいて通知をスケジュールすることを指定します。
+- **[定時]**:  選択した時間後にもう一度通知を表示するように指定します (30 分後など)。
 
 ![クライアント エージェント設定の [コンピューター エージェント] ページ](media/client-notification-settings.png)
 
-最大の再通知時間は、展開のタイムラインに沿って、クライアント エージェント設定で毎回構成された値に常に基づきます。 たとえば、[コンピューター エージェント] ページで [**展開期限まで 24 時間以上の場合に、ユーザーに通知する間隔 (時間)**] 設定が 10 時間に設定されていて、ダイアログが起動する期限まで 24 時間以上ある場合は、ユーザーに最大で 10 時間以内の再通知を設定するオプションが表示されます。 期限が近づくと、展開タイムラインの各コンポーネントに関連するクライアント エージェント設定に合わせて、ダイアログに表示されるオプションが減ります。
+最大の再通知時間は、クライアント エージェント設定で構成された値に基づきます。 たとえば、[コンピューター エージェント] ページで **[Deployment deadline greater than 24 hours, remind users every (hours) (展開期限まで 24 時間以上の場合に、ユーザーに通知する間隔 (時間))]** 設定が 10 時間に設定されていて、期限まで 24 時間以上ある場合は、ユーザーに最大で 10 時間以内の再通知を設定するオプションが表示されます。 期限が近づくにつれ、展開タイムラインの各コンポーネントに関連するクライアント エージェント設定に合わせて、選択できるオプションが減っていきます。
 
-さらに、オペレーティング システムを展開するタスク シーケンスなど、危険度の高い展開に対しては、エンドユーザー通知のエクスペリエンスがより煩わしいものになりました。 一時的なタスク バーの代わりに、重要なソフトウェア メンテナンスが必要なことがユーザーに通知されるたび、次のようなダイアログ ボックスがユーザーのコンピューターに表示されます。
+さらに、オペレーティング システムを展開するタスク シーケンスなど、危険度の高い展開に対しては、ユーザー通知のエクスペリエンスがより煩わしいものになりました。 一時的なタスク バーの代わりに、重要なソフトウェア メンテナンスが必要なことがユーザーに通知されるたび、次のようなダイアログ ボックスがユーザーのコンピューターに表示されます。
 
 ![必要なソフトウェアのダイアログ](media/client-toast-notification.png)
 
@@ -165,16 +165,18 @@ Configuration Manager コンソールの構成項目を使用して、Intune に
 
 
 ## <a name="improvements-to-the-application-request-process"></a>アプリケーション要求プロセスの改善
-アプリケーションのインストールを承認した後は、要求を拒否するには、Configuration Manager コンソールで **[拒否]** をクリックします (以前は、承認後にこのボタンは淡色表示されていました)。
+アプリケーションのインストールを承認した後は、要求を拒否するには、Configuration Manager コンソールで **[拒否]** をクリックします。 以前は、承認後にこのボタンが淡色表示されていました。
+
 この操作で、アプリケーションがデバイスからアンインストールされることはありませんが、 ユーザーはソフトウェア センターからアプリケーションの新しいコピーをインストールできなくなります。
 
 ## <a name="filter-by-content-size-in-automatic-deployment-rules"></a>自動展開規則でコンテンツのサイズでフィルター処理する
-自動展開規則でソフトウェア更新プログラムのコンテンツのサイズでフィルター処理できるようになりました。 たとえば、**コンテンツ サイズ (KB)** フィルターを **< 2048** に設定して、2 MB 未満のソフトウェア更新プログラムだけをダウンロードできます。 ネットワーク帯域幅が制限されている場合に、下位レベルの簡素化された Windows サービスのよりよいサポートのため、このフィルターを使用して、サイズの大きいソフトウェア更新プログラムが自動的にダウンロードされるのを防止します。 詳細については、以下を参照してください。
+自動展開規則でソフトウェア更新プログラムのコンテンツのサイズでフィルター処理できるようになりました。 たとえば、2 MB 未満のソフトウェア更新プログラムだけをダウンロードするには、**[コンテンツ サイズ (KB)]** フィルターを **[< 2048]** に設定します。 ネットワーク帯域幅が制限されている場合に、下位レベルの簡素化された Windows サービスのよりよいサポートのため、このフィルターを使用して、サイズの大きいソフトウェア更新プログラムが自動的にダウンロードされるのを防止します。 詳細については、以下を参照してください。
 - [Configuration Manager と下位レベルのオペレーティング システムでの簡素化された Windows サービス](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)
 - [ソフトウェア更新プログラムの自動展開](/sccm/sum/deploy-use/automatically-deploy-software-updates)
 
-#### <a name="to-configure-the-content-size-field"></a>[コンテンツ サイズ] フィールドを構成するには
-[**コンテンツ サイズ (KB)**] フィールドを構成するには、ADR を作成する際に、自動展開規則の作成ウィザードの [**ソフトウェアの更新**] ページに移動するか、既存の ADR のプロパティの [**ソフトウェアの更新**] タブに移動します。
+**[コンテンツ サイズ (KB)]** フィールドを構成するには、次のいずれかを実行します。
+- 自動展開規則を作成するときに、自動展開規則の作成ウィザードの **[ソフトウェア更新プログラム]** ページにアクセスします。
+- 既にある自動展開規則のプロパティの **[ソフトウェア更新プログラム]** タブにアクセスします。
 
 ## <a name="office-365-client-management-dashboard"></a>Office 365 クライアント管理ダッシュボード
 Configuration Manager コンソールで Office 365 クライアント管理ダッシュボードを使用できるようになりました。 このダッシュボードを表示するには、**[ソフトウェア ライブラリ]** > **[概要]** > **[Office 365 クライアント管理]** に移動します。
@@ -186,12 +188,12 @@ Configuration Manager コンソールで Office 365 クライアント管理ダ�
 - Office 365 クライアントのバージョン
 - Office 365 クライアントのチャネル     
 
-詳細については、「[Manage Office 365 ProPlus updates](/sccm/sum/deploy-use/manage-office-365-proplus-updates)」(Office 365 ProPlus の更新プログラムの管理) を参照してください。
+詳細については、[Office 365 ProPlus の更新プログラムの管理](/sccm/sum/deploy-use/manage-office-365-proplus-updates)に関するページを参照してください。
 
 ## <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>BIOS からUEFI への変換を管理するためのタスク シーケンス手順
-**コンピューターの再起動**のステップで、UEFI に移行するためにハード ドライブに FAT32 パーティションを準備するため、新しい変数 TSUEFIDrive を使用して、オペレーティング システムの展開タスク シーケンスをカスタマイズできるようになりました。 次の手順では、タスク シーケンスのステップを作成して BIOS からUEFI への変換のためにハード ドライブを準備する方法の例を示します。 詳細については、「[Task sequence steps to manage BIOS to UEFI conversion](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion)」(BIOS からUEFI への変換を管理するためのタスク シーケンス手順) を参照してください。
+**コンピューターの再起動**のステップで、UEFI に移行するためにハード ドライブに FAT32 パーティションを準備するため、新しい変数 TSUEFIDrive を使用して、オペレーティング システムの展開タスク シーケンスをカスタマイズできるようになりました。 次の手順では、タスク シーケンスのステップを作成して BIOS からUEFI への変換のためにハード ドライブを準備する方法の例を示します。 詳細については、「[BIOS から UEFI への変換を管理するためのタスク シーケンス手順](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion)」を参照してください。
 
-##  <a name="improvements-to-the-prepare-configmgr-client-for-capture-task-sequence-step"></a>ConfigMgr クライアントのキャプチャの準備タスク シーケンス ステップの向上  
+##  <a name="improvements-to-the-task-sequence-step-prepare-configmgr-client-for-capture"></a>タスク シーケンス ステップの向上: ConfigMgr クライアントのキャプチャの準備  
 ConfigMgr クライアントの準備手順で、キー情報だけではなく、Configuration Manager クライアントが完全に削除されるようになりました。 タスク シーケンスでキャプチャしたオペレーティング システム イメージを展開すると、毎回新しい Configuration Manager クライアントがインストールされます。 詳細については、「[Task sequence steps](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture)」(タスク シーケンスのステップ) を参照してください。
 
 
@@ -203,7 +205,7 @@ Configuration Manager コンソールの **[監視]** ワークスペースで�
 ## <a name="lookout-integration-for-hybrid-implementations-to-protect-ios-and-android-devices"></a>iOS デバイスと Android デバイスを保護するハイブリッド実装のための Lookout 統合
 Microsoft は、デバイス上のマルウェアやリスクの高いアプリなどを検出して iOS および Android モバイル デバイスを保護するため、Lookout のモバイル脅威保護ソリューションに統合しています。 Lookout のソリューションにより、構成可能な脅威レベルを決定できます。 System Center Configuration Manager に、Lookout によるリスク評価に基づいてデバイスのコンプライアンスを判断するためのコンプライアンス ポリシー規則を作成できます。 条件付きアクセス ポリシーを使用すると、デバイスのコンプライアンス状態に基づいて、会社のリソースへのアクセスを許可したりブロックしたりできます。 統合とそのしくみの詳細については、「[Manage access based on device, network, and application risk](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk)」(デバイス、ネットワーク、アプリケーションのリスクに基づいたアクセスの管理) を参照してください。
 
-非準拠 iOS デバイスのエンド ユーザーは登録が求められ、会社のデータへのアクセス権を得るにはデバイスへの Lookout for Work アプリのインストール、アプリのアクティブ化、Lookout for Work アプリケーションで報告された驚異の修復が必要となります。 詳細については、「[Configure and deploy Lookout for Work apps](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps)」(Lookout for Work アプリの構成と展開) を参照してください。
+コンプライアンスの要件を満たしていない iOS デバイスのユーザーは登録が求められ、 会社のデータへのアクセス権を得るにはデバイスへの Lookout for Work アプリのインストール、アプリのアクティブ化、Lookout for Work アプリケーションで報告された脅威の修復が必要となります。 詳細については、「[Configure and deploy Lookout for Work apps](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps)」(Lookout for Work アプリの構成と展開) を参照してください。
 
 
 
@@ -315,6 +317,6 @@ Microsoft は、デバイス上のマルウェアやリスクの高いアプリ�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

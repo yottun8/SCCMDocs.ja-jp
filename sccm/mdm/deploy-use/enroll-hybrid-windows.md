@@ -16,8 +16,8 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 808327495c66f4e6ad86ab144455014171a453b2
+ms.sourcegitcommit: 76cb0c41865859fd410a187435d73c6a23b0c57e
+ms.openlocfilehash: 7b53b094eeb1d59d052c63831eeab0e10edb5913
 
 
 ---
@@ -57,7 +57,7 @@ Configuration Manager を Intune と共に使用して、Windows を実行して
 
 5. Intune の URL を指定します。
 
-  - **[MDM Enrollment URL]** (MDM 登録 URL) – MDM 登録 URL には `https://enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc` を使用します。
+  - **[MDM Enrollment URL (MDM 登録 URL)]** – 既定値を使用します。
   - **[MDM 使用条件 URL]** – 既定値を使用します。 この URL は、デバイスを登録するときにユーザーの使用条件を表示します。
   - **[MDM 準拠 URL]** – 既定値を使用します。 非準拠のデバイスが見つかった場合、この URL と共に **"アクセスが拒否されました"** というメッセージが表示されます。 この URL からアクセスできるページで、ユーザーは、自身のデバイスがポリシーに準拠していない理由と、ポリシーに準拠するための方法について理解することができます。
 
@@ -74,6 +74,8 @@ Configuration Manager を Intune と共に使用して、Windows を実行して
 
 ### <a name="create-dns-alias-for-device-enrollment"></a>デバイス登録の DNS エイリアスの作成  
  DNS エイリアス (CNAME レコード タイプ) を作成すると、デバイスの登録時にサーバー名が自動的に入力されるため、ユーザーがデバイスを簡単に登録できるようになります。 DNS エイリアス (CNAME レコード タイプ) を作成するには、Microsoft のクラウド サービスのサーバーに、会社のドメインの URL に送信された要求をリダイレクトする会社の DNS レコードで CNAME を構成する必要があります。  たとえば、会社の Web サイトが contoso.com の場合、EnterpriseEnrollment.contoso.com を EnterpriseEnrollment-s.manage.microsoft.com にリダイレクトする CNAME を DNS に作成する必要があります。  
+
+ CNAME DNS エントリの作成は省略可能ですが、CNAME レコードにより、ユーザーによる登録が簡単になります。 CNAME レコードの登録が見つからない場合、ユーザーは手動で MDM サーバー名 enrollment.manage.microsoft.com を入力するように求められます。
 
 |型|ホスト名|指定先|  
 |----------|---------------|---------------|  
@@ -118,6 +120,6 @@ Configuration Manager を Intune と共に使用して、Windows を実行して
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

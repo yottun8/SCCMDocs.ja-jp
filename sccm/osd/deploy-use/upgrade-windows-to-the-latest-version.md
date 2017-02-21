@@ -1,8 +1,8 @@
 ---
 title: "Windows を最新バージョンにアップグレードする | Microsoft Docs"
-description: "スタンドアロン メディアまたは Configuration Manager のソフトウェア センターを使用して、オペレーティング システムを Windows 7 以降から Windows 10 にアップグレードする方法について説明します。"
+description: "Configuration Manager を使用して、オペレーティング システムを Windows 7 以降から Windows 10 にアップグレードする方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/06/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 147841212dbb85dd9d4ee7c8a79ca7869584fd99
+ms.sourcegitcommit: 288a4c649f371d9701fe7249449356aa222bf372
+ms.openlocfilehash: 35f04e237efffbdb12893f658950a99dc0b98b85
 
 
 ---
@@ -69,6 +69,9 @@ ms.openlocfilehash: 147841212dbb85dd9d4ee7c8a79ca7869584fd99
 
      「[オペレーティング システムをアップグレードするタスク シーケンスの作成](create-a-task-sequence-to-upgrade-an-operating-system.md)」の手順に従って、オペレーティング システムのアップグレードを自動化します。  
 
+    > [重要] スタンドアロン メディアを使用するときは、タスク シーケンス メディア ウィザードから使用できるようにブート イメージをタスク シーケンスに追加する必要があります。
+
+
     > [!NOTE]  
     >  オペレーティング システムを Windows 10 にアップグレードするタスク シーケンスを作成するには、通常、「[オペレーティング システムをアップグレードするタスク シーケンスの作成](create-a-task-sequence-to-upgrade-an-operating-system.md)」の手順を使用します。 タスク シーケンスには、オペレーティング システムのアップグレードの手順に加えて、エンド ツー エンドのアップグレード プロセスを処理するためのお勧めの追加ステップとグループが含まれます。 しかし、カスタム タスク シーケンスを作成し、[オペレーティング システムのアップグレード](../understand/task-sequence-steps.md#BKMK_UpgradeOS)のタスク シーケンス手順を追加して、オペレーティング システムをアップグレードすることができます。 これは、オペレーティング システムを Windows 10 にアップグレードする場合に必要な唯一の手順です。 この方法を選んだ場合は、オペレーティング システムのアップグレードの手順の後に、[コンピューターの再起動](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)の手順も追加してアップグレードを完了します。 必ず **[現在インストールされている既定のオペレーティング システム]** 設定を使用して、Windows PE ではなく、インストール対象のオペレーティング システムでコンピューターを再起動するようにします。  
 
@@ -88,6 +91,6 @@ ms.openlocfilehash: 147841212dbb85dd9d4ee7c8a79ca7869584fd99
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

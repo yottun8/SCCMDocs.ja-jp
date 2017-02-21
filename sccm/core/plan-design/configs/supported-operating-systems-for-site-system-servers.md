@@ -2,7 +2,7 @@
 title: "サポートされるサイト システム サーバー | Microsoft Docs"
 description: "System Center Configuration Manager サイトまたはサイト システムの役割をホストできる Windows バージョンについて説明します。"
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 2/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bebbeebba76ab5cf0c517fcb00b7b6a516a08e3e
-ms.openlocfilehash: 12fe730d924979eec2ef55ea80a1fa90b7b47464
+ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
+ms.openlocfilehash: bb017e575e0318b73cc5ea4e27fd33b1e9c2a02a
 
 
 ---
@@ -37,7 +37,7 @@ ms.openlocfilehash: 12fe730d924979eec2ef55ea80a1fa90b7b47464
 
 
 ## <a name="windows-server-2016-standard-and-datacenter"></a>Windows Server 2016: Standard、Datacenter
-Windows Server 2016 は、Configuration Manager バージョン 1606 以降および KB3186654 以降の修正プログラム ロールアップ (2016 年 10 月にリリースされた 1606 のベースライン バージョン) でサポートされています。
+バージョン 1606 以降および KB3186654 以降の修正プログラム ロールアップ (2016 年 10 月にリリースされた 1606 のベースライン バージョン) により、このオペレーティング システムは次の用途に対応します。
 
 **サイト サーバー:**  
 
@@ -325,12 +325,12 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
     -   配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
 
-## <a name="the-server-core-installation-of-windows-server-2012"></a>Windows Server 2012 の Server Core のインストール  
- 記載されている前のオペレーティング システムだけでなく、Windows Server 2012 の Server Core インストールが、次の制限付きの配布ポイントとしての使用でサポートされます。  
 
--   64 ビット バージョンのみがサポートされています。  
+## <a name="the-server-core-installation-of-windows-server-2016"></a>Windows Server 2016 の Server Core インストール
+バージョン 1606 以降および KB3186654 以降の修正プログラム ロールアップ (2016 年 10 月にリリースされた 1606 のベースライン バージョン) により、このオペレーティング システムは、配布ポイントとしての用途に対応します。ただし次の制限があります。  
+  -   64 ビット バージョンのみがサポートされています。
+  -   このオペレーティング システムの配布ポイントでは、PXE またはマルチキャストをサポートしません。  
 
--   このオペレーティング システムの配布ポイントでは、PXE またはマルチキャストをサポートしません。
 
 ## <a name="the-server-core-installation-of-windows-server-2012-r2"></a>Windows Server 2012 R2 の Server Core のインストール  
  記載されている前のオペレーティング システムだけでなく、Windows Server 2012 R2 の Server Core インストールが、次の制限付きの配布ポイントとしての使用でサポートされます。  
@@ -339,8 +339,15 @@ Windows Server 2016 は、Configuration Manager バージョン 1606 以降お�
 
 -   このオペレーティング システムの配布ポイントでは、PXE またはマルチキャストをサポートしません。  
 
+## <a name="the-server-core-installation-of-windows-server-2012"></a>Windows Server 2012 の Server Core のインストール  
+ 記載されている前のオペレーティング システムだけでなく、Windows Server 2012 の Server Core インストールが、次の制限付きの配布ポイントとしての使用でサポートされます。  
+
+-   64 ビット バージョンのみがサポートされています。  
+
+-   このオペレーティング システムの配布ポイントでは、PXE またはマルチキャストをサポートしません。
 
 
-<!--HONumber=Jan17_HO1-->
+
+<!--HONumber=Feb17_HO1-->
 
 

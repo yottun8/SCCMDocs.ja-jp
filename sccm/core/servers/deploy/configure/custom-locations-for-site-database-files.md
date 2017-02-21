@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 3de4d4138c377c1a231947ece956ed6748dacd1f
+ms.sourcegitcommit: 5e5155aa8c03b7e0c200d083024c8fa386f97aa7
+ms.openlocfilehash: cfac2c03c1b71b40c68d8acd5fbd96c5e98caaa9
 
 ---
 # <a name="custom-locations-for-system-center-configuration-manager-site-database-files"></a>System Center Configuration Manager のサイト データベース ファイルのカスタムの場所
@@ -29,22 +29,22 @@ ms.openlocfilehash: 3de4d4138c377c1a231947ece956ed6748dacd1f
 > [!NOTE]  
 >  既定以外のファイルの場所を指定するオプションは、SQL Server クラスターを使用する場合は使用できません。  
 
- 新しいプライマリ サイトまたは中央管理サイトの**セットアップ中** に、次のことができます。  
+ 新しいプライマリ サイトまたは中央管理サイトの**セットアップ中**に、次のことができます。  
 
--   サイト データベースの既定以外のファイルの場所の指定: Configuration Manager のセットアップによって、これらの場所を使用してサイト データベースが作成されます。  
+-   **サイト データベースの既定以外のファイルの場所の指定**: Configuration Manager のセットアップによって、これらの場所を使用してサイト データベースが作成されます。  
 
--   カスタムのファイルの場所を使用する、事前に作成した SQL Server データベースの使用の指定: Configuration Manager のセットアップでは、事前に作成したデータベースとその構成済みのファイルの場所を使用します。  
+-   **カスタムのファイルの場所を使用する、事前に作成した SQL Server データベースの使用の指定**: Configuration Manager のセットアップでは、事前に作成したデータベースとその構成済みのファイルの場所を使用します。  
 
-**セットアップ後に** 、サイト データベース ファイルの場所を変更できます。 これには、次のようにサイトを停止して、SQL Server でファイルの場所を編集する必要があります。  
+**セットアップ後に**、サイト データベース ファイルの場所を変更できます。 これには、次のようにサイトを停止して、SQL Server でファイルの場所を編集する必要があります。  
 
 -   Configuration Manager サイト サーバーで、**SMS_Executive** サービスを停止します。  
 
--   使用する SQL Server のバージョンのドキュメントを参照して、ユーザー データベースの移動方法に関する説明に従います。 たとえば、SQL Server 2014 を使用する場合は、TechNet の「 [ユーザー データベースの移動](https://technet.microsoft.com/library/ms345483\(v=sql.120\).aspx) 」をご覧ください。  
+-   該当するバージョンの SQL Server のドキュメントを参照し、説明に従ってユーザー データベースを移動します。 たとえば、SQL Server 2014 を使用する場合は、TechNet の「 [ユーザー データベースの移動](https://technet.microsoft.com/library/ms345483\(v=sql.120\).aspx) 」をご覧ください。  
 
--   データベース ファイルの移動が完了したら、Configuration Manager サイト サーバーで SMS_Executive サービスを再起動します。  
+-   データベース ファイルの移動が完了したら、Configuration Manager サイト サーバーで **SMS_Executive** サービスを再起動します。  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

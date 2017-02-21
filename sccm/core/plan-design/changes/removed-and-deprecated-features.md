@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f912bb82b8d753f01b15f96eec5099c3f92abe75
-ms.openlocfilehash: 18b411b05dd6fc9b572e1d3d201876172bb40d07
+ms.sourcegitcommit: 1948e2914fff91f156dd8956c018ff0fabcda2f9
+ms.openlocfilehash: 3a1edd1b59676e59d4bfcd4c01a23f7a04f91f4f
 
 
 ---
@@ -50,6 +50,7 @@ ms.openlocfilehash: 18b411b05dd6fc9b572e1d3d201876172bb40d07
 |-|-|-|  
 |ネットワーク アクセス保護 (NAP) - System Center 2012 Configuration Manager の機能|2015 年 7 月 10 日|バージョン 1511|  
 |帯域外管理 - System Center 2012 Configuration Manager の機能|2015 年 10 月 16 日|バージョン 1511|
+|タスク シーケンス: <br /> - OSDPreserveDriveLetter  <br /><br /> 既定で、オペレーティング システムの展開中に、Windows セットアップが使用する最適なドライブ文字を決定するようになりました (通常は C:)。 別のドライブを使用するように指定する場合は、オペレーティング システムの適用タスク シーケンスのステップで場所を変更できます。 [**このオペレーティング システムの適用先を選択してください。**] 設定に移動し、[**特定の論理ドライブ文字**] を選択し、使用するドライブを選択します。 |2016 年 6 月 20 日 |バージョン 1606 |
 |タスク シーケンス: <br /> - ディスクをダイナミックに変換 <br /> - 展開ツールのインストール |2016 年 11 月 18 日|2017 年 6 月 1 日以降にリリースされる最初の更新プログラムでこれらのタスク シーケンスのサポートは終了します。|
 |ソフトウェア センターは新しい現代的な外観へと一新されます。 Silverlight を使用するアプリケーション カタログにしか表示されなかったアプリ (ユーザーが利用できるアプリ) がソフトウェア センターの **[アプリケーション]** タブに表示されるようになります。 アプリケーション カタログには、ソフトウェア センターの **[インストールのステータス]** タブ上にあるリンクを使用してアクセスできます。<br><br>以前のバージョンのソフトウェア センターは、今後数か月の間に使用できなくなります。<br><br>新しいソフトウェア センターを使用するようにクライアントをセットアップするには、クライアント設定 **[コンピューター エージェント]** > **[新しいソフトウェア センターの使用]** を有効化します。<br><br>ソフトウェア センターの詳細については、「[System Center Configuration Manager のアプリケーション管理の計画と構成](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management)」を参照してください。|2016 年 12 月 13 日|後日発表|
 |Configuration Manager によるバーチャル ハード ディスク (VHD) の管理。 </br></br>これには、新しい VHD の作成オプション、またはタスク シーケンスを使用した VHD の管理オプションの削除と、Configuration Manager コンソールからのバーチャル ハード ディスクのノードの削除が含まれます。 </br></br>このサポートが削除されると、既存の VHD は削除されませんが、Configuration Manager コンソール内からアクセスできなくなります。  |2017 年 1 月 6 日 |VHD のサポートは、2017 年 6 月 1 日より後にリリースされた最初の更新プログラムで終了します。|
@@ -112,6 +113,6 @@ ms.openlocfilehash: 18b411b05dd6fc9b572e1d3d201876172bb40d07
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

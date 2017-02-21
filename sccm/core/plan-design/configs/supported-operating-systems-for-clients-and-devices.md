@@ -2,7 +2,7 @@
 title: "サポートされるクライアントとデバイス | Microsoft Docs"
 description: "System Center Configuration Manager がクライアントとデバイスをサポートするオペレーティング システムについて説明します。"
 ms.custom: na
-ms.date: 01/06/2017
+ms.date: 2/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 591a43d2243724cd784b5a3eb4779ceaf86a2ecb
-ms.openlocfilehash: 65e995c7e72dd3602ea6b19af8563aeb155bd86c
+ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
+ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>System Center Configuration Manager のクライアントとデバイスのサポートされるオペレーティング システム
@@ -39,7 +39,7 @@ ms.openlocfilehash: 65e995c7e72dd3602ea6b19af8563aeb155bd86c
 **サポートされるオペレーティング システム:**  
 
 -  **Windows Server 2016**: Standard、Datacenter <sup>1</sup>
-  - Windows Server 2016 は、Configuration Manager バージョン 1606 以降および KB3186654 以降の修正プログラム ロールアップ (2016 年 10 月にリリースされた 1606 のベースライン バージョン) でサポートされています。  
+  - このオペレーティング システムは、Configuration Manager バージョン 1606 以降および KB3186654 以降の修正プログラム ロールアップ (2016 年 10 月にリリースされた 1606 のベースライン バージョン) でサポートされています。  
 
 
 -   **Windows Server 2012 R2** (x64): Standard、Datacenter <sup>1</sup>    
@@ -65,6 +65,10 @@ ms.openlocfilehash: 65e995c7e72dd3602ea6b19af8563aeb155bd86c
 -   **Windows 8** (x86、x64): Professional、Enterprise    
 
 -   **Windows 7 SP1** (x86、x64): Professional、Enterprise、Ultimate    
+
+-   **Windows Server 2016 の Server Core インストール** (x64) <sup>2</sup>
+  - このオペレーティング システムは、バージョン 1606 以降および KB3186654 以降の修正プログラム ロールアップ (2016 年 10 月にリリースされた 1606 のベースライン バージョン) でサポートされています。 ただし、このオペレーティング システムでは、Endpoint Protection との同時使用がサポートされません。
+
 
 -   **Windows Server 2012 R2 の Server Core のインストールR2** (x64) <sup>2</sup>    
 
@@ -348,6 +352,6 @@ Configuration Manager は、Configuration Manager クライアントをインス
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

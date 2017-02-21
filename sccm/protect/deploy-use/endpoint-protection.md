@@ -2,7 +2,7 @@
 title: Endpoint Protection | Microsoft Docs
 description: "Configuration Manager 階層内のクライアント コンピューターのマルウェア対策ポリシーと Windows ファイアウォールのセキュリティを管理する方法について説明します。"
 ms.custom: na
-ms.date: 01/17/2017
+ms.date: 02/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,12 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f66288f1c2e0566d5de8686a005624dd81557563
-ms.openlocfilehash: addb315afe3775722a58a16b00d41cbe32a5009c
+ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
+ms.openlocfilehash: 90e6d82e7fd1ff0ad4f1d616cc23201769fe26e2
 
 
 ---
-# <a name="endpoint-protection-in-system-center-configuration-manager"></a>System Center Configuration Manager での Endpoint Protection
+# <a name="endpoint-protection"></a>Endpoint Protection
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -38,7 +38,7 @@ System Center Configuration Manager の Endpoint Protection を使用して、Co
 
 -   クライアント コンピューターでマルウェアが検出された場合は、電子メールによる通知送信、コンソール内の監視機能の使用、およびレポートの表示を行うことで管理ユーザーに通知することができます。  
 
-Windows 10 コンピューターでは、Endpoint Protection 管理のために追加のクライアントは不要です。 Windows 8.1 およびそれ以前のコンピューターでは、Endpoint Protection により、構成マネージャー クライアントに加え、独自のクライアントもインストールされます。 Endpoint Protection は管理できます。 Endpoint Protection クライアントには、次の機能があります。  
+Windows 10 および Windows Server 2016 以降のコンピューターでは、Endpoint Protection 管理のために追加のクライアントは不要です。 Windows 8.1 およびそれ以前のコンピューターでは、Endpoint Protection により、構成マネージャー クライアントに加え、独自のクライアントもインストールされます。 Endpoint Protection クライアントには、次の機能があります。  
 
 -   マルウェアとスパイウェアの検出と修復  
 
@@ -122,6 +122,6 @@ Configuration Manager のバージョン 1606 (Current Branch) 以降、Endpoint
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

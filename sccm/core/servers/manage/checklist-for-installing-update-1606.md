@@ -2,7 +2,7 @@
 title: "1606 のチェックリスト | Microsoft Docs"
 description: "System Center Configuration Manager をバージョン 1511 または 1602 からバージョン 1606 に更新する前に、実行するアクションについて説明します。"
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 2/7/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
-ms.openlocfilehash: ca0916791ccfba921866ebed7da0e2dc365f933b
+ms.sourcegitcommit: 7847396fa2ec79a6044c41c1b53572a81692ec8e
+ms.openlocfilehash: 8ab8e504c3881c4dc07ffb569a1f440f4318d689
 
 ---
 # <a name="checklist-for-installing-update-1606-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム 1606 をインストールするためのチェックリスト
@@ -40,19 +40,19 @@ System Center Configuration Manager (現在のブランチ) のバージョン 1
 
 サイト サーバーが更新プログラムをインストールすると、サイト サーバーにインストールされたサイト システムの役割と、リモート コンピューターにインストールされたサイト システムの役割が自動的に更新されます。 したがって、更新プログラムをインストールする前に、各サイト システム サーバーが新しい更新プログラムのバージョンの操作の新しい前提条件をすべて満たしていることを確認してください。  
 
- 更新の完了後に Configuration Manager コンソールを初めて使用する場合、そのコンソールの更新を求められます。  これを行うには、コンソールをホストするコンピューターで Configuration Manager セットアップを実行し、コンソールを更新するオプションを選択する必要があります。 コンソールへの更新プログラムのインストールを遅らせないことをお勧めします。
+更新プログラムのインストール後に Configuration Manager コンソールを初めて使用する場合、そのコンソールの更新を求められます。  これを行うには、コンソールをホストするコンピューターで Configuration Manager セットアップを実行し、コンソールを更新するオプションを選択する必要があります。 コンソールへの更新プログラムのインストールを遅らせないことをお勧めします。
 
  **この更新プログラムの既知の問題**   
-  [更新プログラム パッケージのインストール ステータス] を表示したときに、次の問題が発生します。
+  更新プログラム パッケージのインストール ステータスを表示したときに、次の問題が発生します。
   - バージョン 1602 から 1606 に更新する場合、ダウンロードが完了していても、**[更新プログラム パッケージのペイロードの抽出]** ステップで **[未開始]** というステータスが表示されます。
   - バージョン 1511 から 1606 に更新する際には、いくつかのステップで **[完了]** というステータスが表示されますが、**[最終更新時刻]** の値は表示されません。
 
 
 ## <a name="checklist"></a>チェックリスト  
 
- **すべてのサイトがサポートされているバージョンの System Center Configuration Manager を実行することを確認する:**  更新プログラム 1606 のインストールを開始する前に、階層内の各サイト サーバーで、同じバージョンの System Center Configuration Manager (バージョン 1511 または 1602) を実行する必要があります。
+ **すべてのサイトがサポートされているバージョンの System Center Configuration Manager を実行することを確認する:** 更新プログラム 1606 のインストールを開始する前に、階層内の各サイト サーバーで、同じバージョンの System Center Configuration Manager (バージョン 1511 または 1602) を実行する必要があります。
 
- **サイト システム サーバーにインストールされた .NET のバージョンを確認する:** .NET Framework 4.5 以降がまだインストールされていない場合、サイトで更新プログラム 1606 がインストールされると、Configuration Manager によって、次のいずれかのサイト システムの役割をホストする各コンピューターに .NET Framework 4.5.2 が自動的にインストールされます。  
+ **サイト システム サーバーにインストールされた Microsoft .NET のバージョンを確認する:** サイトで更新プログラム 1606 がインストールされると、Configuration Manager によって、次のいずれかのサイト システムの役割をホストする各コンピューターに .NET Framework 4.5.2 が自動的にインストールされます (.NET Framework 4.5 以降がまだインストールされていない場合)。  
 
 -   登録プロキシ ポイント  
 
@@ -66,13 +66,13 @@ System Center Configuration Manager (現在のブランチ) のバージョン 1
 
  詳細については、「[サイトとサイト システムの前提条件](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)」を参照してください。  
 
- **サイトと階層の状態を確認して、解決されていない問題がないことを確認する:** サイトを更新する前に、サイト サーバー、サイト データベース サーバー、リモート コンピューターにインストールされているサイト システムの役割で、運用上のすべての問題を解決します。 運用上の問題があると、サイトの更新が失敗する可能性があります。  
- 詳細については、「[System Center Configuration Manager のアラートとステータス システムの使用](../../../core/servers/manage/use-alerts-and-the-status-system.md)」を参照してください。  
+ **サイトと階層の状態を確認して、解決されていない問題がないことを確認する:** サイトを更新する前に、サイト サーバー、サイト データベース サーバー、リモート コンピューターにインストールされているサイト システムの役割で、運用上のすべての問題を解決します。 運用上の問題があると、サイトの更新が失敗する可能性があります。
+
+ 詳細については、「 [System Center Configuration Manager のアラートとステータス システムの使用](../../../core/servers/manage/use-alerts-and-the-status-system.md)」を参照してください。  
 
  **サイト間でファイルとデータのレプリケーションを確認する:**  サイト間のファイルとデータベースのレプリケーションが機能していて最新の状態であることを確認します。 遅延またはバックログにより、円滑で正常な更新が行われない場合があります。    
-データベース レプリケーションには、更新プログラムを開始する前に問題を解決するために、レプリケーション リンク アナライザーを使用できます。    
- 詳細については、「   
-「[System Center Configuration Manager での階層とレプリケーション インフラストラクチャの監視](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_RLA)」トピックの「[レプリケーション リンク アナライザーについて](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md)」。  
+
+データベース レプリケーションには、更新プログラムを開始する前に問題を解決するために、レプリケーション リンク アナライザーを使用できます。 詳細については、「[System Center Configuration Manager での階層とレプリケーション インフラストラクチャの監視](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md)」トピックの「[レプリケーション リンク アナライザーについて](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_RLA)」を参照してください。  
 
  **サイト、サイト データベース サーバー、リモートのサイト システムの役割をホストするコンピューターのオペレーティング システムに適用できる、重要な更新プログラムすべてをインストールする:** Configuration Manager に更新プログラムをインストールする前に、該当する各サイト システムの重要な更新プログラムをすべてインストールします。 更新のインストール時に再起動が必要な場合は、アップグレードを開始する前に該当するコンピューターを再起動します。  
 
@@ -82,16 +82,16 @@ System Center Configuration Manager (現在のブランチ) のバージョン 1
 
 -   Configuration Manager の更新プログラムをインストールする  
 
-詳細については、次を参照してください:   
-[System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)  
+詳細については、「[System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」を参照してください。  
 
  **SQL Server AlwaysOn 可用性グループを手動フェールオーバーに設定する:**  
  バージョン 1606 などの更新プログラムをインストールする前に、可用性グループで手動フェールオーバーを必ず設定してください。 サイト更新後に、自動フェールオーバーに復元できます。 詳細については、[サイト データベースの SQL Server AlwaysOn](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md) に関するページを参照してください。
 
  **NLB を使うソフトウェアの更新ポイントを再構成する:** Configuration Manager では、ネットワーク負荷分散 (NLB) クラスターを使用してソフトウェアの更新ポイントをホストしているサイトを更新できません。  
-ソフトウェアの更新ポイントに NLB クラスターを使用している場合、PowerShell を使用して NLB クラスターを削除してください    
 
- 詳細については、「[System Center Configuration Manager でのソフトウェア更新プログラムの計画](../../../sum/plan-design/plan-for-software-updates.md)」を参照してください。  
+ソフトウェアの更新ポイントに NLB クラスターを使用している場合、Windows PowerShell を使用して NLB クラスターを削除してください。    
+
+ 詳細については、「[System Center Configuration Manager でのソフトウェア更新プログラムの計画](../../../sum/plan-design/plan-for-software-updates.md)」をご覧ください。  
 
  **各サイトの更新プログラムのインストールの実行中に、そのサイトのすべてのサイト メンテナンス タスクを無効にする:** 更新プログラムをインストールする前に、更新プロセスがアクティブな期間中に実行されるサイト メンテナンス タスクをすべて無効にします。 次のタスクが含まれますが、これらのタスクに限定されません。  
 
@@ -102,10 +102,12 @@ System Center Configuration Manager (現在のブランチ) のバージョン 1
 -   期限切れの探索データの削除  
 
 更新プログラムのインストール中にサイト データベースのメンテナンス タスクを実行すると、更新プログラムのインストールが失敗することができます。 タスクを無効にする前に、更新プログラムをインストールした後で構成を復元できるように、タスクのスケジュールを記録してください。  
- 詳細については、「[System Center Configuration Manager のメンテナンス タスク](../../../core/servers/manage/maintenance-tasks.md)」および「[System Center Configuration Manager のメンテナンス タスクのリファレンス](../../../core/servers/manage/reference-for-maintenance-tasks.md)」を参照してください。  
+
+詳細については、「[System Center Configuration Manager のメンテナンス タスク](../../../core/servers/manage/maintenance-tasks.md)」および「[System Center Configuration Manager のメンテナンス タスクのリファレンス](../../../core/servers/manage/reference-for-maintenance-tasks.md)」を参照してください。  
 
  **中央管理サイトとプライマリ サイトでサイト データベースのバックアップを作成する:** サイトを更新する前に、サイト データベースをバックアップして、障害復旧に使用する正常なバックアップがあるようにします。   
-詳細については、「 [Backup and recovery for System Center Configuration Manager](../../../protect/understand/backup-and-recovery.md)」をご覧ください。  
+
+詳細については、「[Backup and recovery for System Center Configuration Manager](../../../protect/understand/backup-and-recovery.md)」 (System Center Configuration Manager のバックアップと回復) をご覧ください。  
 
 
  **最新のサイト データベース バックアップのコピーで、データベースのアップグレードをテストする:** System Center Configuration Manager の中央管理サイトまたはプライマリ サイトを更新する前に、サイト データベースのコピーでサイト データベースのアップグレード処理をテストします。  
@@ -114,35 +116,40 @@ System Center Configuration Manager (現在のブランチ) のバージョン 1
 
 -   データベースのアップグレード テストは必須ではありませんが、テストによって、実稼働データベースが影響を受ける前に、アップグレードの問題を特定することができます  
 
--   サイト データベースのアップグレードに失敗すると、サイト データベースが運用不可能になり、機能を復元するにはサイトの回復が必要になることがあります  
+-   サイト データベースのアップグレードが失敗すると、サイト データベースが運用不可能になり、機能を復元するにはサイトの回復が必要になる可能性があります。  
 
--   サイト データベースは階層内のサイト間で共有されますが、各サイトをアップグレードする前に、該当する各サイトのデータベースをテストする計画を立ててください  
+-   サイト データベースは階層内のサイトで共有されますが、そのサイトをアップグレードする前に、該当する各サイトのデータベースをテストするように計画してください。  
 
--   プライマリ サイトで管理ポイントにデータベース レプリカを使う場合、サイト データベースのバックアップを作成する前にレプリケーションを無効にします  
+-   プライマリ サイトで管理ポイントにデータベース レプリカを使用する場合、サイト データベースのバックアップを作成する前にレプリケーションを無効にします。  
 
 Configuration Manager では、セカンダリ サイトのバックアップとセカンダリ サイト データベースのテスト アップグレードのいずれもサポートされていません。   
-実稼働サイト データベースでテスト データベースのアップグレードを実行することはサポートされていません。 実行するとサイト データベースが更新され、サイトが機能しなくなる可能性があります。 詳細については、「[System Center Configuration Manager へのアップグレード](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md)」の「[サイト データベースのアップグレードをテストする](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test)」セクションを参照してください。  
+
+テスト データベースのアップグレードを実稼働サイト データベースで実行することは避けてください。 実行するとサイト データベースが更新され、サイトが機能しなくなる可能性があります。 詳細については、「[System Center Configuration Manager へのアップグレード](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md)」の「[サイト データベースのアップグレードをテストする](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test)」セクションを参照してください。  
 
  **クライアントのパイロット運用を計画する:** クライアントを更新する更新プログラムをインストールすると、すべてのアクティブなクライアントを展開してアップグレードする前に、実稼働前環境でその新しいクライアントの更新プログラムをテストできます。   
- このオプションを活用するには、更新プログラムのインストールを開始する前に、実稼働前環境の自動アップグレードをサポートするサイトを構成する必要があります。 詳細については、次を参照してください。「[System Center Configuration Manager でのクライアントのアップグレード](../../../core/clients/manage/upgrade/upgrade-clients.md)」および   
-[System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストする方法](../../../core/clients/manage/upgrade/test-client-upgrades.md)  
 
- **サービス期間の使用を計画**  
- **して、サイト サーバーが更新プログラムをインストールするタイミングを制御する:** サービス期間を使用して、プライマリ サイト サーバーに適用される、そのサイトに対する更新プログラムをインストールできる期間を定義することができます。   
+ このオプションを活用するには、更新プログラムのインストールを開始する前に、実稼働前環境の自動アップグレードをサポートするサイトを構成する必要があります。 詳細については、次を参照してください。「[System Center Configuration Manager でのクライアントのアップグレード](../../../core/clients/manage/upgrade/upgrade-clients.md)」および   
+「[System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストする方法](../../../core/clients/manage/upgrade/test-client-upgrades.md)」。  
+
+ **サイト サーバーで更新プログラムがインストールされるタイミングをサービス期間によって制御することを検討する:** サービス期間を使用して、そのサイト サーバーの更新プログラムをインストールできる期間を定義することができます。
+
 これは、階層内のサイトが更新プログラムをインストールするタイミングの制御に役立ちます。
 バージョン 1606 より前では、サービス期間はメンテナンス期間と呼ばれました。 詳細については、「[サイト サーバーのサービス ウィンドウ](/sccm/core/servers/manage/service-windows)」を参照してください。  
 
- **セットアップ前提条件チェッカーを実行する:**  1606 更新プログラムをインストールする前に、更新プログラムのインストールとは別に前提条件チェッカーを実行することができます。 サイトへの更新プログラムのインストールド時に、前提条件チェッカーが再度実行されます。  
+ **セットアップ前提条件チェッカーを実行する:**  1606 更新プログラムをインストールする前に、更新プログラムのインストールとは別に前提条件チェッカーを実行することができます。 サイトへの更新プログラムのインストール時に、前提条件チェッカーが再度実行されます。  
+
 詳細については、「[System Center Configuration Manager の更新プログラム](../../../core/servers/manage/install-in-console-updates.md)」トピックの「**手順 3: 更新プログラムをインストールする前の前提条件チェッカーの実行**」を参照してください。  
 
 > [!IMPORTANT]  
 >  前提条件チェッカーを更新プログラムの一部として、または単独で実行すると、サイト メンテナンス タスクに使用される一部の製品ソース ファイルが更新されます。 このため、前提条件チェッカーを実行した後で、1606 更新プログラムをインストールする前に、サイト メンテナンス タスクを実行する必要がある場合は、サイト サーバーの CD.Latest フォルダーから **Setupwpf.exe** (Configuration Manager セットアップ) を実行する必要があります。  
 
  **サイトを更新する:** 階層の更新プログラムのインストールを開始する準備が整いました。  
-  更新プログラムをインストールするプロセス、およびサイトのコンポーネントとサイト システムの役割を再インストールするアクションが業務に及ぼす影響が少ない場合は、各サイトの通常業務時間外に更新プログラムをインストールする計画を立てることをお勧めします。 詳細については、「[System Center Configuration Manager の更新プログラム](../../../core/servers/manage/updates.md)」を参照してください。  
+  更新プログラムをインストールするプロセス、およびサイトのコンポーネントとサイト システムの役割を再インストールするアクションが業務に及ぼす影響が少ない場合は、各サイトの通常業務時間外に更新プログラムをインストールする計画を立てることをお勧めします。
+
+詳細については、「[System Center Configuration Manager の更新プログラム](../../../core/servers/manage/updates.md)」を参照してください。  
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO2-->
 
 

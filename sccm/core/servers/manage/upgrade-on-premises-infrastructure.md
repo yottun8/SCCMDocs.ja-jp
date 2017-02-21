@@ -2,7 +2,7 @@
 title: "オンプレミス インフラストラクチャのアップグレード | Microsoft Docs"
 description: "SQL Server やサイト システムのサイト オペレーティング システムなどのインフラストラクチャをアップグレードする方法について説明します。"
 ms.custom: na
-ms.date: 10/28/2016
+ms.date: 2/2/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4a8d98addcd463eb82d8b7100b44254a10d21992
-ms.openlocfilehash: b79346968edf88443f8e30691aa4baec7b81699f
+ms.sourcegitcommit: 83c8492191f40fc4d582562268db0d58a0f9cdde
+ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
 
 
 ---
@@ -32,7 +32,7 @@ System Center Configuration Manager を実行するサーバー インフラス�
 
 - System Center Configuration Manager インフラストラクチャを新しいバージョンにアップグレードする場合は、「[System Center Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)」を参照してください。
 
-##  <a name="a-namebkmksupconfigupgradesitesrva-upgrade-site-operating-system-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a> サイト システムのサイト オペレーティング システムのアップグレード  
+##  <a name="a-namebkmksupconfigupgradesitesrva-upgrade-the-operating-system-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a> サイト システムのサイト オペレーティング システムのアップグレード  
  Configuration Manager には、次の状況で、サイト サーバーをホストするサーバーとサイト システムの役割をホストするリモート サーバーのオペレーティング システムの一括アップグレードをサポートしています。  
 
 -   アップグレード後のサービス パック レベルが Configuration Manager によってサポートされている場合の、Windows Server の上位サービス パックへの一括アップグレード。  
@@ -213,6 +213,6 @@ System Center Configuration Manager を実行するサーバー インフラス�
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 

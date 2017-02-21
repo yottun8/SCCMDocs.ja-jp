@@ -2,7 +2,7 @@
 title: "アプリケーション管理の計画と構成 | Microsoft Docs"
 description: "System Center Configuration Manager でアプリケーションを展開するために必要な依存関係を実装および構成します。"
 ms.custom: na
-ms.date: 01/17/2017
+ms.date: 02/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d2a12edcc6bc7413558e25b694b69133c2496019
-ms.openlocfilehash: 0a38ea116e589425048f6c46378df46ecc0d375b
+ms.sourcegitcommit: 50c08d63e7220a47d21dcbdcd7abafba7c7f5f75
+ms.openlocfilehash: 4eca69f54ec0bca5f1f972d3814ceb87d4a30d67
 
 
 ---
@@ -112,7 +112,7 @@ ms.openlocfilehash: 0a38ea116e589425048f6c46378df46ecc0d375b
 
 1.  Configuration Manager コンソールで、**[管理]**、**[サイトの構成]**、**[サーバーとサイト システムの役割]** の順に選択し、アプリケーション カタログに使用するサーバーを選択します。  
 
-3.  **[ホーム]** タブの **[作成]** グループで、**[サイト システムの役割の追加]** を選択します。  
+3.  **[ホーム]** タブの **[サーバー]** グループで、**[サイト システムの役割の追加]** を選択します。  
 
 4.  **[全般]** ページで、サイト システムの全般設定を指定し、**[次へ]** を選択します。  
 
@@ -228,6 +228,6 @@ ms.openlocfilehash: 0a38ea116e589425048f6c46378df46ecc0d375b
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

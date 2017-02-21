@@ -2,10 +2,10 @@
 title: Upgrade Analytics | System Center Configuration Manager
 description: "Upgrade Analytics と Configuration Manager を統合します。 管理コンソールでアップグレードの互換性データにアクセスします。 アップグレードまたは修復対象のデバイスを指定します。"
 keywords: 
-author: nbigman
-ms.author: nbigman
+author: brenduns
+ms.author: brenduns
 manager: angerobe
-ms.date: 11/23/2016
+ms.date: 12/3/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 translationtype: Human Translation
-ms.sourcegitcommit: bf28164fc2594d2557db5626a6f52c32ad99a1fe
-ms.openlocfilehash: fa90fa0da348e7cca186ff8066c7a9fa98c57cf5
+ms.sourcegitcommit: 831d8a66c827d246069c7415cdce7a7c4bb95b33
+ms.openlocfilehash: 07747b86bad0d1ce6302521093fc3c4433c59325
 
 
 ---
@@ -23,7 +23,7 @@ ms.openlocfilehash: fa90fa0da348e7cca186ff8066c7a9fa98c57cf5
 
 Upgrade Analytics を使用すると、デバイスの準備と Windows 10 との互換性を評価および分析して、簡単かつスムーズなアップグレードが可能になります。 Upgrade Analytics と System Center Configuration Manager を統合することで、クライアントは Configuration Manager 管理コンソールでアップグレードの互換性データにアクセスできるようになります。 その後、デバイス リストからアップグレードまたは修復対象のデバイスを指定できます。
 
-Upgrade Analytics は、Microsoft Operations Management Suite (OMS) のソリューションの 1 つです。 Upgrade Analytics の詳細については、「[Get started with Upgrade Analytics](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started)」(Upgrade Analytics の概要) をご覧ください。
+Upgrade Analytics は、Microsoft Operations Management Suite (OMS) のソリューションの&1; つです。 Upgrade Analytics の詳細については、「[Get started with Upgrade Analytics](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started)」(Upgrade Analytics の概要) をご覧ください。
 
 ## <a name="configure-clients"></a>クライアントを構成する
 
@@ -73,13 +73,13 @@ Upgrade Analytics 展開スクリプトは以下のことを行います。
 - 商用 ID キー、CommercialDataOptIn キー、RequestAllAppraiserVersions キーを設定します。  
 - ユーザーのコンピューターが Microsoft にデータを送信できることを確認します。  
 - コンピューターの再起動が保留されているかどうかを確認します。   
-- 最新バージョンの KB パッケージ 10.0.x (10.0.14348 以降のリリースが必要) がインストールされていることを検証します。  
+- 最新バージョンの KB パッケージ 10.0.x (10.0.14913 以降のリリースが必要) がインストールされていることを検証します。  
 - 有効な場合は、トラブルシューティングの詳細モードをオンにします。  
 - Microsoft が組織でのアップグレードの準備を評価するのに必要な製品利用統計情報データの収集を開始します。  
 - 有効な場合は、コマンド ウィンドウにスクリプトの進行状況を表示して問題 (ステップごとの成功または失敗) を確認できるようにし、ログ ファイルへの書き込みを行います。  
-  
+
 ### <a name="to-run-the-upgrade-analytics-deployment-script"></a>Upgrade Analytics 展開スクリプトを実行するには、次のようにします。  
-  
+
 1. [Upgrade Analytics 展開スクリプト](https://go.microsoft.com/fwlink/?LinkID=822966&clcid=0x409)をダウンロードし、UpgradeAnalytics.zip を抽出します。 トラブルシューティング モードでスクリプトを実行する予定の場合にのみ、**診断**フォルダー内のファイルが必要になります。  
 2. RunConfig.bat で以下のパラメーターを編集します。  
 - ログ情報の格納場所 ( %systemdrive%\uadiagnostics など)。 ログ情報は、リモート ファイル共有またはローカル ディレクトリに格納できます。 スクリプトで指定されたパスのログ ファイルを作成できない場合は、Windows ディレクトリのドライブにログ ファイルが作成されます。  
@@ -90,12 +90,12 @@ Upgrade Analytics 展開スクリプトは以下のことを行います。
     - logMode = 2: ファイルにのみログを記録  
     - トラブルシューティングを行う場合は、**isVerboseLogging** を **$true** に設定し、問題の診断に役立つログ情報を生成します。 既定では、**isVerboseLogging** は **$false** に設定されます。 診断フォルダーが、このモードを使用するためのスクリプトと同じディレクトリにインストールされていることを確認してください。  
     - コンピューターを再起動する必要がある場合はユーザーに通知します。 既定では、オフに設定されます。  
-  
+
 3. RunConfig.bat でのパラメーターの編集が終了したら、管理者としてスクリプトを実行します。  
-  
-  
+
+
 ## <a name="view-microsoft-upgrade-analytics-properties-in-configuration-manager"></a>Configuration Manager で Microsoft Upgrade Analytics プロパティを表示する  
-  
+
 1.  Configuration Manager コンソールで、**[クラウド サービス]** に移動し、**[OMS コネクタ]** を選択して **[OMS 接続のプロパティ]** ページを開きます。  
 
 2.  このページには、2 つのタブがあります。
@@ -113,6 +113,6 @@ Upgrade Analytics と Configuration Manager を統合したら、クライアン
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 
