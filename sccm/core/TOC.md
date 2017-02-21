@@ -17,10 +17,10 @@
 ### [Long-Term Servicing Branch の Current Branch へのアップグレード](understand/convert-to-current-branch.md)
 ##  [クラウド サービスの使用](understand/use-cloud-services.md)
 ### [Azure での Configuration Manager](understand/configuration-manager-on-azure.md)
-##  [診断および使用状況データに関してよく寄せられる質問](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
+##  [製品とライセンスに関する FAQ](understand/product-and-licensing-faq.md)
+##  [診断結果と使用状況データに関する FAQ](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 
 #    [計画と設計](plan-design/get-ready.md)
-
 ##   製品の変更
 ###  [特徴と機能](plan-design/changes/features-and-capabilities.md)
 ###  [Configuration Manager 2012 からの変更点](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
@@ -89,6 +89,7 @@
 ###  [ラボのセットアップ](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [1701 の機能](get-started/capabilities-in-technical-preview-1701.md)
 ###  [1612 の機能](get-started/capabilities-in-technical-preview-1612.md)
 ###  [1611 の機能](get-started/capabilities-in-technical-preview-1611.md)
 ###  [1610 の機能](get-started/capabilities-in-technical-preview-1610.md)
@@ -258,7 +259,6 @@
 ###  [ハードウェア インベントリを拡張する方法](clients/manage/inventory/extend-hardware-inventory.md)
 ###  [ハードウェア インベントリを構成する方法](clients/manage/inventory/configure-hardware-inventory.md)
 ###  [ハイブリッド展開でモバイル デバイスのハードウェア インベントリを構成する方法](clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md)
-<!--- ###  [Operations and maintenance for hardware inventory](clients/manage/inventory/hardware-inventory.md) --->
 ###  [リソース エクスプローラーを使用してハードウェア インベントリを表示する方法](clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)
 ###  [Linux および UNIX のハードウェア インベントリ](clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)
 ###  [ハードウェア インベントリのセキュリティとプライバシー](clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)
@@ -305,6 +305,6 @@
 ###  [Upgrade analytics](clients/manage/upgrade/upgrade-analytics.md) (アップグレード分析)
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
