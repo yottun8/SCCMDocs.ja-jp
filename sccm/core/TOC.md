@@ -35,6 +35,7 @@
 ###  [サイトとサイト システムの前提条件](plan-design/configs/site-and-site-system-prerequisites.md)
 ###  [サイト システム サーバーのサポートされるオペレーティング システム](plan-design/configs/supported-operating-systems-for-site-system-servers.md)
 ###  [クライアントとデバイスのサポートされるオペレーティング システム](plan-design/configs/supported-operating-systems-for-clients-and-devices.md)
+###  [クライアントとしての Windows 10 のサポート](plan-design/configs/support-for-windows-10.md)
 ###  [コンソールでサポートされているオペレーティング システム](plan-design/configs/supported-operating-systems-consoles.md)
 ###  [推奨ハードウェア](plan-design/configs/recommended-hardware.md)
 ###  [SQL Server バージョンのサポート](plan-design/configs/support-for-sql-server-versions.md)
@@ -89,6 +90,7 @@
 ###  [ラボのセットアップ](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+<!-- ###  [Capabilities in 1702](get-started/capabilities-in-technical-preview-1702.md) -->
 ###  [1701 の機能](get-started/capabilities-in-technical-preview-1701.md)
 ###  [1612 の機能](get-started/capabilities-in-technical-preview-1612.md)
 ###  [1611 の機能](get-started/capabilities-in-technical-preview-1611.md)
@@ -305,6 +307,6 @@
 ###  [Upgrade analytics](clients/manage/upgrade/upgrade-analytics.md) (アップグレード分析)
 
 
-<!--HONumber=Feb17_HO3-->
+<!--HONumber=Feb17_HO4-->
 
 
