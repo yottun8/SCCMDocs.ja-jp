@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: cabd1083a6d7c49ef1bc46c6ec35cffd6d858344
-ms.openlocfilehash: fccf655110c2ed7689c128a0a619838d18b3355a
+ms.sourcegitcommit: 72157aa0e94b99eb947fdd9891b7e91c1001ea22
+ms.openlocfilehash: 64964834b63167e1f78c44410396b8e18735875e
 
 
 ---
@@ -57,7 +57,8 @@ System Center Configuration Manager (Configuration Manager) のアプリ構成�
 
       *名前と値のペアを指定するには*
         1. 新しいペアを追加するには、**[新規作成]** を選択します。
-        2. **[名前と値のペアの追加]** ダイアログ ボックスで、次を指定します。        - **種類**。 一覧から、指定する値の種類を選択します。
+        2. **[名前と値のペアの追加]** ダイアログ ボックスで、次を指定します。
+            - **種類**。 一覧から、指定する値の種類を選択します。
             - **名前**。 値を指定するプロパティ リスト キーの名前を入力します。
             - **値**。 入力したキーに適用する値を入力します。
 
@@ -69,8 +70,9 @@ System Center Configuration Manager (Configuration Manager) のアプリ構成�
 
       XML プロパティ リストの詳細については、iOS 開発者ライブラリの [XML プロパティ リスト](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html)に関するページを参照してください。
 
-            The format of the XML property list varies depending on the app you are configuring. Contact the app supplier for details about the format to use.
-            Intune supports the following data types in a property list:
+        The format of the XML property list varies depending on the app you are configuring. Contact the app supplier for details about the format to use.
+        Intune supports the following data types in a property list:
+
             ```
             <integer>
             <real>
@@ -79,8 +81,9 @@ System Center Configuration Manager (Configuration Manager) のアプリ構成�
             <dict>
             <true /> or <false />
             ```
-            For more information about data types, see [About Property Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) in the iOS Developer Library.
-            Intune also supports the following token types in the property list:
+    データ型の詳細については、iOS 開発者ライブラリの[プロパティ リスト](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html)に関するページを参照してください。
+    Intune では、プロパティ リストで次の種類のトークンもサポートします。
+    
             ```
             {{userprincipalname}} - (Example: John@contoso.com)
             {{mail}} - (Example: John@contoso.com)
@@ -110,7 +113,7 @@ System Center Configuration Manager (Configuration Manager) のアプリ構成�
 
 ## <a name="example-format-for-the-mobile-app-configuration-xml-file"></a>モバイル アプリ構成 XML ファイルの形式の例
 
-モバイル アプリ構成ファイルを作成するとき、この形式を使用し、次の値の 1 つまたは複数指定できます。
+モバイル アプリ構成ファイルを作成するとき、この形式を使用し、次の値の&1; つまたは複数指定できます。
 
 ```
 <dict>
@@ -139,6 +142,6 @@ System Center Configuration Manager (Configuration Manager) のアプリ構成�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 
