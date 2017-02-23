@@ -2,7 +2,7 @@
 title: "資産インテリジェンスの構成 | Microsoft Docs"
 description: "System Center Configuration Manager で資産インテリジェンスをセットアップします。"
 ms.custom: na
-ms.date: 12/28/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
@@ -224,7 +224,7 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
 
 4.  [**ホーム**] タブの [**設定**] グループで、[**サイトのメンテナンス タスク**] を選択します。 タスクを選択して、[**編集**] を選択して設定を変更します。 
 
-    サイトのピーク時以外の時間帯に設定することをお勧めします。 時間帯とは、そのタスクを実行してもよい間隔のことです。 によって定義された、 **後に起動** と **最新の開始時刻** で指定されている、 **タスクのプロパティ**  ダイアログ ボックス。  
+      サイトのピーク時以外の時間帯に設定することをお勧めします。 時間帯とは、そのタスクを実行してもよい間隔のことです。 によって定義された、 **後に起動** と **最新の開始時刻** で指定されている、 **タスクのプロパティ**  ダイアログ ボックス。  
 
     現在の日付を選択し、[これ以後に開始] 時刻を現在時刻より&2; 分ほど後に設定すれば、タスクを直ちに実行することができます。 ****  
 
