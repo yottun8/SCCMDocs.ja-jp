@@ -2,7 +2,7 @@
 title: "Endpoint Protection クライアント ヘルプ | Microsoft Docs"
 description: "コンピューターを脅威から保護するのに役立つ Endpoint Protection の機能と拡張機能について説明します。"
 ms.custom: na
-ms.date: 01/03/2017
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1432568286605d29683416885d7aa522c649016e
-ms.openlocfilehash: ef2d8b540856b395575b99de79fa463de5d133ac
+ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
+ms.openlocfilehash: 212c73fcb947c3b56da6055bf47fe078301ad90d
 
 
 ---
@@ -29,14 +29,12 @@ ms.openlocfilehash: ef2d8b540856b395575b99de79fa463de5d133ac
 このバージョンの Windows Defender または Endpoint Protection には、コンピューターを脅威から保護するのに役立つ、次のような機能があります。  
 
 -   **Windows ファイアウォールとの統合。** Endpoint Protection セットアップで Windows ファイアウォールを有効または無効にできます。  
-
 -   **ネットワーク検査システム:** ネットワーク トラフィックを検査して、既知のネットワークベースの脆弱性の悪用を未然に防ぐことで、リアルタイム保護機能を強化します。  
-
 -   **保護エンジン。** リアルタイム保護では、PC にインストールされているか実行されているマルウェアを見つけて阻止します。 更新されたエンジンでは、保護機能と除去機能が拡張され、パフォーマンスが改善されています。  
 
 Windows Defender は、Windows 10 オペレーティング システムの一部として提供されます。  以前のバージョンの Windows では、管理者は、管理ソフトウェアを使用して Windows Defender または Endpoint Protection を提供することができます。
 
-トラブルシューティングについては、「[Windows Defender または Endpoint Protection クライアントのトラブルシューティング](troubleshoot-endpoint-client.md)」を参照してください。 新機能のリストについては、「[Windows Defender の新機能](https://support.microsoft.com/help/29276/windows-10-whats-new-in-windows-defender)」を参照してください。
+「[Windows Defender と Endpoint Protection についてよく寄せられる質問](endpoint-protection-client-faq.md)」の一覧もあります。 トラブルシューティングについては、「[Windows Defender または Endpoint Protection クライアントのトラブルシューティング](troubleshoot-endpoint-client.md)」を参照してください。 新機能のリストについては、「[Windows Defender の新機能](https://support.microsoft.com/help/29276/windows-10-whats-new-in-windows-defender)」を参照してください。
 
 ## <a name="windows-firewall-integration"></a>Windows ファイアウォールとの統合  
  Windows ファイアウォールは、攻撃者や悪意のあるソフトウェアがインターネットやネットワークを介してコンピューターにアクセスすることを防ぐうえで役立ちます。 Endpoint Protection のインストール時に、インストール ウィザードによって Windows ファイアウォールが有効であるかどうかが確認されるようになりました。 Windows ファイアウォールを意図的に無効にしていた場合は、チェック ボックスをオフにすることで有効にならないようにすることができます。 Windows ファイアウォールの設定は、コントロール パネルのシステムとセキュリティの設定からいつでも変更できます。  
@@ -60,11 +58,10 @@ Windows Defender の設定を表示するには、PC で `Windows Defender` を�
 
 ### <a name="see-also"></a>関連項目  
  [Endpoint Protection クライアントのよく寄せられる質問](endpoint-protection-client-faq.md)   
-
  [Windows Defender または Endpoint Protection クライアントのトラブルシューティング](troubleshoot-endpoint-client.md)
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

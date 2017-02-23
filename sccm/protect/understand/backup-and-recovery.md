@@ -1,15 +1,33 @@
+---
+title: "バックアップと回復 | Microsoft Docs"
+description: "System Center Configuration Manager でサイトをバックアップする方法と、障害が発生したときやデータが損失したときにサイトを回復する方法について説明します。"
+ms.custom: na
+ms.date: 1/3/2017
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+- configmgr-other
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
+caps.latest.revision: 22
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
+translationtype: Human Translation
+ms.sourcegitcommit: 3aa9f2e4d3f7210981b5b84942485de11fe15cb2
+ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 
 ---
-title: "バックアップと回復 | Microsoft Docs" description: "System Center Configuration Manager でサイトをバックアップする方法と、障害が発生したときやデータが損失したときにサイトを回復する方法について説明します。"
-ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na ms.suite: na ms.technology:
-  - configmgr-other ms.tgt_pltfrm: na ms.topic: article ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f -caps.latest.revision: 22 -author: Brenduns ms.author: brendunsmanager: angrobe
 
-----
+# <a name="backup-and-recovery"></a>バックアップと回復
+
+*適用対象: System Center Configuration Manager (Current Branch)*
+
+データの損失を防ぐためにバックアップと回復方法を準備します。 Configuration Manager サイトのバックアップと回復方法は、データの損失を最小限に抑え、サイトと階層をより迅速に回復するのに役立ちます。 このトピックのセクションは、サイトをバックアップする場合と、障害が発生したときやデータが損失したときにサイトを回復する場合に役立ちます。  
 
 
--# System Center Configuration Manager のバックアップと回復*適用先: System Center Configuration Manager (Current Branch)*
-
--データの損失を防ぐバックアップと回復アプローチを準備します。 Configuration Manager サイトのバックアップと回復方法は、データの損失を最小限に抑え、サイトと階層をより迅速に回復するのに役立ちます。 このトピックのセクションは、サイトをバックアップする場合と、障害が発生したときやデータが損失したときにサイトを回復する場合に役立ちます。   
 
 - [Configuration Manager サイトのバックアップ](#BKMK_SiteBackup)   
 
@@ -18,10 +36,6 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
   - [Data Protection Manager を使用したサイト データベースのバックアップ](#BKMK_DPMBackup)   
 
   -  [バックアップ スナップショットのアーカイブ](#BKMK_ArchivingBackupSnapshot)   
-
-  -  [バックアップ スナップショットのアーカイブ](#BKMK_ArchivingBackupSnapshot)   
-
-  -  [AfterBackup.bat ファイルの使用](#BKMK_UsingAfterBackup)   
 
   -  [AfterBackup.bat ファイルの使用](#BKMK_UsingAfterBackup)   
 
@@ -33,35 +47,20 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
          -   [サイト サーバーの回復オプション](#BKMK_SiteServerRecoveryOptions)   
 
-         -   [サイト サーバーの回復オプション](#BKMK_SiteServerRecoveryOptions)   
-
          -   [サイト データベースの回復オプション](#BKMK_SiteDatabaseRecoveryOption)   
 
-         -  [サイト データベースの回復オプション](#BKMK_SiteDatabaseRecoveryOption)   
-
          -   [SQL Server の変更の追跡の保有期間](#bkmk_SQLretention)   
-
-         -   [SQL Server の変更の追跡の保有期間](#bkmk_SQLretention)   
-
-         -   [サイトのデータまたはグローバル データの再初期化プロセス](#bkmk_reinit)   
 
          -   [サイトのデータまたはグローバル データの再初期化プロセス](#bkmk_reinit)   
 
          -   [サイト データベースの回復方法](#BKMK_SiteDBRecoveryScenarios)  
 
-         -   [サイト データベースの回復方法](#BKMK_SiteDBRecoveryScenarios)  
-
   -   [サイトの無人回復スクリプト ファイルのキー](#BKMK_UnattendedSiteRecoveryKeys)  
-
-  -   [サイトの無人回復スクリプト ファイルのキー](#BKMK_UnattendedSiteRecoveryKeys)  
-
-  -   [回復後の作業](#BKMK_PostRecovery)  
 
   -   [回復後の作業](#BKMK_PostRecovery)  
 
   -   [セカンダリ サイトの回復](#BKMK_RecoverSecondarySite)  
 
-  -   [セカンダリ サイトの回復](#BKMK_RecoverSecondarySite)  
 -   [SMS ライター サービス](#BKMK_SMSWriterService)  
 
 > [!NOTE]  
@@ -90,7 +89,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 >  Configuration Manager では、Configuration Manager のバックアップ メンテナンス タスク、または別のプロセスで作成したサイト データベース バックアップからサイト データベースを回復できます。 たとえば、Microsoft SQL Server のメンテナンス プランの一環として作成されたバックアップから、サイト データベースを復元することができます。 System Center 2012 Data Protection Manager (DPM) を使用して作成されたバックアップからサイト データベースを復元できます。 詳細については、「 [Data Protection Manager を使用したサイト データベースのバックアップ](#BKMK_DPMBackup)」をご覧ください。  
 
 ###  <a name="a-namebkmkbackupmaintenancetaska-backup-maintenance-task"></a><a name="BKMK_BackupMaintenanceTask"></a> バックアップ メンテナンス タスク  
- Configuration Manager サイトのバックアップは、定義済みのサイト サーバーのバックアップ メンテナンス タスクをスケジュール設定することで自動化できます。 中央管理サイトとプライマリ サイトをバックアップすることはできますが、セカンダリ サイトやサイト システム サーバーのバックアップはサポートされていません。 Configuration Manager のバックアップ サービスは、バックアップ コントロール ファイル (**<ConfigMgrInstallationFolder\>\Inboxes\Smsbkup.box\Smsbkup.ctl**) で定義されている指示に従って実行されます。 このバックアップ コントロール ファイルを変更して、バックアップ サービス動作を変更することができます。 サイトのバックアップ状態に関する情報は、 **Smsbkup.log** ファイルに書き込まれます。 このファイルは、サイト サーバーのバックアップ メンテナンス タスクのプロパティで指定した、バックアップ先フォルダーに保存されます。  
+ Configuration Manager サイトのバックアップは、定義済みのサイト サーバーのバックアップ メンテナンス タスクをスケジュール設定することで自動化できます。 中央管理サイトとプライマリ サイトをバックアップすることはできますが、セカンダリ サイトやサイト システム サーバーのバックアップはサポートされていません。 Configuration Manager のバックアップ サービスは、バックアップ コントロール ファイル (**&lt;ConfigMgrInstallationFolder\>\Inboxes\Smsbkup.box\Smsbkup.ctl**) で定義されている指示に従って実行されます。 このバックアップ コントロール ファイルを変更して、バックアップ サービス動作を変更することができます。 サイトのバックアップ状態に関する情報は、 **Smsbkup.log** ファイルに書き込まれます。 このファイルは、サイト サーバーのバックアップ メンテナンス タスクのプロパティで指定した、バックアップ先フォルダーに保存されます。  
 
 
 ##### <a name="to-enable-the-site-backup-maintenance-task"></a>サイトのバックアップ メンテナンス タスクを有効にするには  
@@ -117,7 +116,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
     -   **サイト サーバーおよび SQL Server のローカル ドライブ**: サイト サーバーのバックアップ ファイルが、サイト サーバーのローカル ドライブの指定したパスに保存され、サイト データベースのバックアップ ファイルが、サイト データベース サーバーのローカル ドライブの指定したパスに保存されるようにします。 バックアップ タスクを実行する前に、ローカル フォルダーを作成する必要があります。 サイト サーバーのコンピューター アカウントが、サイト サーバーに作成するフォルダーの NTFS **書き込み** 権限を持っている必要があります。 SQL Server のコンピューター アカウントが、サイト データベース サーバーに作成するフォルダーの NTFS **書き込み** 権限を持っている必要があります。 このオプションは、サイト データベースがサイト サーバーにインストールされていない場合のみ選択できます。  
 
     > [!NOTE]  
-    >   - バックアップ先を参照できるのは、UNC パスを指定した場合だけです。
+    >    - バックアップ先を参照できるのは、UNC パスを指定した場合だけです。
 
     > - バックアップ先フォルダー名や共有名に Unicode 文字を含めることはできません。  
 
@@ -140,7 +139,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   バックアップが失敗したら警告を生成するようにサイト サーバーのバックアップ メンテナンス タスクが構成されている場合は、[ **監視** ] ワークスペースの [ **アラート** ] ノードでバックアップ エラーを確認できます。  
 
-    -   <*ConfigMgrInstallationFolder*>\Logs にある Smsbkup.log で警告やエラーを確認します。 サイトのバックアップが問題なく完了している場合は、メッセージ ID " `Backup completed` " の " `STATMSG: ID=5035`" というメッセージとタイムスタンプが表示されているはずです。  
+    -   &lt;*ConfigMgrInstallationFolder*>\Logs にある Smsbkup.log で警告やエラーを確認します。 サイトのバックアップが問題なく完了している場合は、メッセージ ID " `Backup completed` " の " `STATMSG: ID=5035`" というメッセージとタイムスタンプが表示されているはずです。  
 
     > [!TIP]  
     >  サイト サーバーのバックアップ メンテナンス タスクが正常に実行されなかった場合は、SMS_SITE_BACKUP サービスを停止してから、再開してみてください。  
@@ -165,7 +164,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 -   サイトのバックアップ スナップショットがまったくない状態になる可能性があります。 たとえば、サイト サーバーのバックアップ タスクは現在のデータのバックアップを開始する前に以前のバックアップ スナップショットを削除するので、タスクが正常に実行されなかった場合は、有効なバックアップ スナップショットがなくなります。  
 
 ###  <a name="a-namebkmkusingafterbackupa-using-the-afterbackupbat-file"></a><a name="BKMK_UsingAfterBackup"></a> AfterBackup.bat ファイルの使用  
- サイト サーバーのバックアップ タスクでサイトが正常にバックアップされると、AfterBackup.bat というファイルが自動的に実行されます。 この AfterBackup.bat ファイルは、手動で作成して <*ConfigMgrInstallationFolder*>\Inboxes\Smsbkup に保存しておく必要があります。 AfterBackup.bat ファイルが存在し、正しいフォルダーに保存されている場合、バックアップ タスクの完了後に、このファイルが自動的に実行されます。 AfterBackup.bat を使って、バックアップが完了するたびにバックアップ スナップショットがアーカイブされるようにしたり、サイト サーバーのバックアップ メンテナンス タスクに含まれていない後処理が自動的に行われるようにすることができます。 前者の場合は、AfterBackup.bat でアーカイブ処理とバックアップ処理を統合することにより、常に新しいバックアップ スナップショットがアーカイブされるようにします。 AfterBackup.bat ファイルが存在しない場合は、バックアップ タスクでその実行がスキップされます。バックアップ処理自体には、何も影響ありません。 サイト バックアップ タスクによって AfterBackup.bat ファイルが正常に実行されたことを確認するには、[ **監視** ] ワークスペースの [ **コンポーネントのステータス** ] ノードを参照して、SMS_SITE_BACKUP のステータス メッセージを確認します。 AfterBackup.bat コマンド ファイルの実行が正常に開始された場合は、ID 5040 の付いたメッセージが表示されているはずです。  
+ サイト サーバーのバックアップ タスクでサイトが正常にバックアップされると、AfterBackup.bat というファイルが自動的に実行されます。 この AfterBackup.bat ファイルは、手動で作成して &lt;*ConfigMgrInstallationFolder*>\Inboxes\Smsbkup に保存しておく必要があります。 AfterBackup.bat ファイルが存在し、正しいフォルダーに保存されている場合、バックアップ タスクの完了後に、このファイルが自動的に実行されます。 AfterBackup.bat を使って、バックアップが完了するたびにバックアップ スナップショットがアーカイブされるようにしたり、サイト サーバーのバックアップ メンテナンス タスクに含まれていない後処理が自動的に行われるようにすることができます。 前者の場合は、AfterBackup.bat でアーカイブ処理とバックアップ処理を統合することにより、常に新しいバックアップ スナップショットがアーカイブされるようにします。 AfterBackup.bat ファイルが存在しない場合は、バックアップ タスクでその実行がスキップされます。バックアップ処理自体には、何も影響ありません。 サイト バックアップ タスクによって AfterBackup.bat ファイルが正常に実行されたことを確認するには、[ **監視** ] ワークスペースの [ **コンポーネントのステータス** ] ノードを参照して、SMS_SITE_BACKUP のステータス メッセージを確認します。 AfterBackup.bat コマンド ファイルの実行が正常に開始された場合は、ID 5040 の付いたメッセージが表示されているはずです。  
 
 > [!TIP]  
 >  サイト サーバーのバックアップ ファイルをアーカイブする AfterBackup.bat ファイルを作成するには、バッチ ファイルで、Robocopy などのコピー コマンド ツールを使用する必要があります。 たとえば、AfterBackup.bat ファイルを作成して、1 行目に `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`と記述します。 Robocopy の詳細については、「 [Robocopy](http://go.microsoft.com/fwlink/p/?LinkId=228408) 」のコマンド ライン リファレンスを参照してください。  
@@ -221,7 +220,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 4.  **[サイトの役割** ] タブの **[プロパティ]** グループで、 **[プロパティ]**をクリックします。  
 5.  ユーザー状態移行データが保存されているフォルダーが [ **全般** ] タブの [ **フォルダーの詳細** ] セクションに一覧表示されます。  
 
-
+## <a name="recover-a-configuration-manager-site"></a>Configuration Manager サイトの回復
  Configuration Manager サイトで障害が発生した場合や、サイト データベースのデータが損失した場合は、Configuration Manager サイトの回復が必要です。 サイトの回復の中心となる作業は、データの修復と同期です。これは、業務の中断を防ぐためにも必要な作業です。  
 
 > [!IMPORTANT]  
@@ -434,7 +433,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須** : 状況によって異なる  
 
-    -   **値:** <ReferenceSiteFQDN\>  
+    -   **値:** &lt;ReferenceSiteFQDN\>  
 
     -   **詳細:** データベースのバックアップが変更の追跡の保有期間より前に作成されているか、バックアップなしでサイトを回復する場合に、中央管理サイトでグローバル データを回復するために使用する基準プライマリ サイトを指定します。  
 
@@ -448,7 +447,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** いいえ  
 
-    -   **値:** <PathToSiteServerBackupSet\>  
+    -   **値:** &lt;PathToSiteServerBackupSet\>  
 
     -   **詳細:** サイト サーバーのバックアップ セットへのパスを指定します。 このキーは、 **ServerRecoveryOptions** キーを **1** か **2**に設定したときにオプションで指定するキーです。 サイトのバックアップを使ってサイトを回復したい場合に、 **SiteServerBackupLocation** キーでバックアップの場所を指定します。 値を指定しなかった場合は、バックアップを使わずにサイトが再インストールされます。  
 
@@ -456,7 +455,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須** : 状況によって異なる  
 
-    -   **値:** <PathToSiteDatabaseBackupSet\>  
+    -   **値:** &lt;PathToSiteDatabaseBackupSet\>  
 
     -   **詳細:** サイト データベースのバックアップ セットへのパスを指定します。 **BackupLocation** キーは、 **ServerRecoveryOptions** キーを **1** か **4** に設定したときに必要です。このキーを指定したときは、 **DatabaseRecoveryOptions** キーを **10** に設定してください。  
 
@@ -478,7 +477,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** はい  
 
-    -   **値:** <Site code\>  
+    -   **値:** &lt;サイト コード\>  
 
     -   **詳細:** 階層内のサイトを一意に識別する英数字&3; 文字。 障害が発生する前にサイトに付いていたサイト コードを指定する必要があります。  
 
@@ -494,7 +493,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** はい  
 
-    -   **値:** <*ConfigMgrInstallationPath*>  
+    -   **値:** &lt;*ConfigMgrInstallationPath*>  
 
     -   **詳細:** Configuration Manager のプログラム ファイルのインストール フォルダーを指定します。  
 
@@ -505,7 +504,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** はい  
 
-    -   **値:** <*FQDN of SMS Provider*>  
+    -   **値:** &lt;*FQDN of SMS Provider*>  
 
     -   **詳細:** SMS プロバイダーをホストするサーバーの FQDN を指定します。 障害が発生する前に SMS プロバイダーをホストしていたサーバーを指定する必要があります。  
 
@@ -527,7 +526,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** はい  
 
-    -   **値:** <*PathToSetupPrerequisiteFiles*>  
+    -   **値:** &lt;*PathToSetupPrerequisiteFiles*>  
 
     -   **詳細:** セットアップの前提条件ファイルのパスを指定します。 このパスは、 **PrerequisiteComp** キーに設定した値に応じて、ダウンロードしたファイルを保存するか、ダウンロード済みのファイルを見つけるために使われます。  
 
@@ -561,7 +560,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** はい  
 
-    -   **値:** *<SQLServerName\>*  
+    -   **値:** *&lt;SQLServerName\>*  
 
     -   **詳細:** サイト データベースをホストする SQL Server を実行しているサーバー、またはクラスター化されている場合はインスタンス名。 障害が発生する前にサイト データベースをホストしていたサーバーを指定する必要があります。  
 
@@ -573,9 +572,9 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
          *&lt;SiteDatabaseName\>*  
 
-         ] ダイアログ ボックスの [  
+         または  
 
-         *<InstanceName\>*\\*<SiteDatabaseName\>*  
+         *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*  
 
     -   **詳細:** 中央管理サイト データベースをインストールするために作成または使用する SQL Server データベースの名前。 障害が発生する前に使用していたデータベース名と同じ名前を指定する必要があります。  
 
@@ -586,7 +585,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** いいえ  
 
-    -   **値:** <*SSBPortNumber*>  
+    -   **値:** &lt;*SSBPortNumber*>  
 
     -   **詳細:** SQL Server で使用する SQL Server Service Broker (SSB) のポート番号を指定します。 通常、TCP ポート 4022 に構成しますが、別のポートもサポートされています。 障害が発生する前に使用していた SSB ポート番号と同じ番号を指定する必要があります。  
 
@@ -647,7 +646,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** いいえ  
 
-    -   **値:** <PathToSiteServerBackupSet\>  
+    -   **値:** &lt;PathToSiteServerBackupSet\>  
 
     -   **詳細:** サイト サーバーのバックアップ セットへのパスを指定します。 このキーは、 **ServerRecoveryOptions** キーを **1** か **2**に設定したときにオプションで指定するキーです。 サイトのバックアップを使ってサイトを回復したい場合に、 **SiteServerBackupLocation** キーでバックアップの場所を指定します。 値を指定しなかった場合は、バックアップを使わずにサイトが再インストールされます。  
 
@@ -655,7 +654,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須** : 状況によって異なる  
 
-    -   **値:** <PathToSiteDatabaseBackupSet\>  
+    -   **値:** &lt;PathToSiteDatabaseBackupSet\>  
 
     -   **詳細:** サイト データベースのバックアップ セットへのパスを指定します。 **BackupLocation** キーは、 **ServerRecoveryOptions** キーを **1** か **4** に設定したときに必要です。このキーを指定したときは、 **DatabaseRecoveryOptions** キーを **10** に設定してください。  
 
@@ -677,7 +676,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** はい  
 
-    -   **値:** <Site code\>  
+    -   **値:** &lt;サイト コード\>  
 
     -   **詳細:** 階層内のサイトを一意に識別する英数字&3; 文字。 障害が発生する前にサイトに付いていたサイト コードを指定する必要があります。  
 
@@ -693,7 +692,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** はい  
 
-    -   **値:** <*ConfigMgrInstallationPath*>  
+    -   **値:** &lt;*ConfigMgrInstallationPath*>  
 
     -   **詳細:** Configuration Manager のプログラム ファイルのインストール フォルダーを指定します。  
 
@@ -704,7 +703,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** はい  
 
-    -   **値:** <*FQDN of SMS Provider*>  
+    -   **値:** &lt;*FQDN of SMS Provider*>  
 
     -   **詳細:** SMS プロバイダーをホストするサーバーの FQDN を指定します。 障害が発生する前に SMS プロバイダーをホストしていたサーバーを指定する必要があります。  
 
@@ -726,7 +725,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** はい  
 
-    -   **値:** <*PathToSetupPrerequisiteFiles*>  
+    -   **値:** &lt;*PathToSetupPrerequisiteFiles*>  
 
     -   **詳細:** セットアップの前提条件ファイルのパスを指定します。 このパスは、 **PrerequisiteComp** キーに設定した値に応じて、ダウンロードしたファイルを保存するか、ダウンロード済みのファイルを見つけるために使われます。  
 
@@ -760,7 +759,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** はい  
 
-    -   **値:** *<SQLServerName\>*  
+    -   **値:** *&lt;SQLServerName\>*  
 
     -   **詳細:** サイト データベースをホストする SQL Server を実行しているサーバー、またはクラスター化されている場合はインスタンス名。 障害が発生する前にサイト データベースをホストしていたサーバーを指定する必要があります。  
 
@@ -774,7 +773,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
          ] ダイアログ ボックスの [  
 
-         *<InstanceName\>*\\*<SiteDatabaseName\>*  
+         *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*  
 
     -   **詳細:** 中央管理サイト データベースをインストールするために作成または使用する SQL Server データベースの名前。 障害が発生する前に使用していたデータベース名と同じ名前を指定する必要があります。  
 
@@ -785,7 +784,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** いいえ  
 
-    -   **値:** <*SSBPortNumber*>  
+    -   **値:** &lt;*SSBPortNumber*>  
 
     -   **詳細:** SQL Server で使用する SQL Server Service Broker (SSB) のポート番号を指定します。 通常、TCP ポート 4022 に構成しますが、別のポートもサポートされています。 障害が発生する前に使用していた SSB ポート番号と同じ番号を指定する必要があります。  
 
@@ -795,7 +794,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須** : 状況によって異なる  
 
-    -   **値:** <*SiteCodeForCentralAdministrationSite*>  
+    -   **値:** &lt;*SiteCodeForCentralAdministrationSite*>  
 
     -   **詳細:** プライマリ サイトを Configuration Manager 階層に含めるときに、アタッチする中央管理サイトを指定します。 障害が発生する前にプライマリ サイトが中央管理サイトにアタッチされていた場合は、この設定が必要です。 障害が発生する前に中央管理サイトに付いていたサイト コードを指定する必要があります。  
 
@@ -803,7 +802,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** いいえ  
 
-    -   **値:** <*Interval*>  
+    -   **値:** &lt;*間隔*>  
 
     -   **詳細:** 中央管理サイトとの接続が切断されたときに、接続を再試行する間隔 (分) を指定します。 たとえば、プライマリ サイトと中央管理サイトの接続が切断されると、プライマリ サイトは、このキーで指定された時間だけ待ってから、もう一度接続しようとします。  
 
@@ -811,7 +810,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
     -   **必須:** いいえ  
 
-    -   **値:** <*Timeout*>  
+    -   **値:** &lt;*タイムアウト*>  
 
     -   **詳細:** プライマリ サイトから中央管理サイトに接続するときのタイムアウトの最大値 (分) を指定します。 たとえば、プライマリ サイトから中央管理サイトに接続できなかった場合は、プライマリ サイトは、WaitForCASTimeout キーで指定された時間が経過するまで、CASRetryInterval キーの値に従って、中央管理サイトとの接続を再試行します。 0 ～ 100 に指定できます。  
 
@@ -904,7 +903,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
  SMS ライターは、バックアップ中にボリューム シャドー コピー サービス (VSS) と相互に動作するサービスです。 Configuration Manager サイトのバックアップを正常に完了するには、SMS ライター サービスが実行されていなければなりません。  
 
 ### <a name="purpose"></a>目的  
- SMS ライターは、VSS に登録して、そのインターフェイスとイベントをバインドします。 VSS がイベントをブロードキャストするか、SMS ライターに特定の通知を送信すると、SMS ライターは、その通知に応答して適切な措置を取ります。 SMS ライターは、<*<ConfigMgr のインストール先フォルダー>*>\inboxes\smsbkup.box にあるバックアップ コントロール ファイル (smsbkup.ctl) を読み取って、バックアップするファイルとデータを確認します。 次に、この情報、および、SMS レジストリ キーとサブキーの特定のデータに基づいて、さまざまなコンポーネントからなるメタデータを構築します。 SMS ライターは、このデータが要求されたときに VSS に送信します。 次に、VSS が、要求元のアプリケーション、つまり、Configuration Manager バックアップ マネージャーにこのメタデータを送信します。 バックアップ マネージャーは、バックアップするデータを選択し、そのデータを VSS 経由で SMS ライターに送信します。 SMS ライターは、バックアップを開始するのに必要な処理を行います。 その後、VSS がスナップショットを撮る準備ができたら、イベントを送信します。SMS ライターは、スナップショットが作成されている間は、Configuration Manager のすべてのサービスを停止して、Configuration Manager の動作を止めます。 スナップショットの作成が終わったら、SMS ライターが、停止していたサービスを再開します。  
+ SMS ライターは、VSS に登録して、そのインターフェイスとイベントをバインドします。 VSS がイベントをブロードキャストするか、SMS ライターに特定の通知を送信すると、SMS ライターは、その通知に応答して適切な措置を取ります。 SMS ライターは、&lt;*ConfigMgr Installation Path*>\inboxes\smsbkup.box にあるバックアップ コントロール ファイル (smsbkup.ctl) を読み取って、バックアップするファイルとデータを確認します。 次に、この情報、および、SMS レジストリ キーとサブキーの特定のデータに基づいて、さまざまなコンポーネントからなるメタデータを構築します。 SMS ライターは、このデータが要求されたときに VSS に送信します。 次に、VSS が、要求元のアプリケーション、つまり、Configuration Manager バックアップ マネージャーにこのメタデータを送信します。 バックアップ マネージャーは、バックアップするデータを選択し、そのデータを VSS 経由で SMS ライターに送信します。 SMS ライターは、バックアップを開始するのに必要な処理を行います。 その後、VSS がスナップショットを撮る準備ができたら、イベントを送信します。SMS ライターは、スナップショットが作成されている間は、Configuration Manager のすべてのサービスを停止して、Configuration Manager の動作を止めます。 スナップショットの作成が終わったら、SMS ライターが、停止していたサービスを再開します。  
 
  SMS ライター サービスは自動的にインストールされます。 VSS アプリケーションがバックアップまたは復元を要求したときに、このサービスが実行されていなければなりません。  
 
@@ -918,6 +917,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
  VSS は、システムのアプリケーションがボリュームに書き込んでいる間にボリュームをバックアップできるようにするフレームワークを実装する COM API のセットです。 VSS は、ディスクのデータを更新するユーザー アプリケーション (SMS ライター サービス) と、アプリケーションのバックアップを取るユーザー アプリケーション (Backup Manager サービス) を連携させるインターフェイスとして機能します。 VSS の詳細については、Windows Server TechCenter の「 [Volume Shadow Copy Service (ボリューム シャドウ コピー サービス)](http://go.microsoft.com/fwlink/p/?LinkId=241968) 」を参照してください。  
 
 
-<!--HONumber=Jan17_HO3-->
+
+<!--HONumber=Feb17_HO2-->
 
 

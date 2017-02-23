@@ -2,7 +2,7 @@
 title: "Endpoint Protection クライアントのよく寄せられる質問 | Microsoft Docs"
 description: "Windows Defender と Endpoint Protection についてよく寄せられる質問に回答します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: f0352e59390ade7212a64cf0de883bbb1ca28bab
+ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
+ms.openlocfilehash: b88bc5f734b85527b81e5848deb0617db4c8dfbc
 
 
 ---
@@ -29,39 +29,23 @@ ms.openlocfilehash: f0352e59390ade7212a64cf0de883bbb1ca28bab
 この FAQ は、IT 管理者が Windows Defender または Endpoint Protection を展開した管理対象コンピューターを使用しているユーザー向けです。 ここでの内容は、他のマルウェア対策ソフトウェアには当てはまらない場合があります。 Microsoft System Center Endpoint Protection は、Windows 10 の Windows Defender を管理します。 また、Windows 10 より前のコンピューターに Endpoint Protection クライアントを展開して管理することもできます。 この記事では Windows Defender について説明しますが、Endpoint Protection にも当てはまります。  
 
 -   [ウイルス対策およびスパイウェア対策ソフトウェアが必要な理由](#why-do-i-need-antivirus-and-antispyware-software)  
-
--   [コンピューターが悪意のあるソフトウェアに感染しているかどうかを確認する方法](#how-can-i-tell-if-my-computer-is-infected-with-malicious-software)  
-
+-   [コンピューターが悪意のあるソフトウェアに感染しているかどうかを確認する方法](#how-can-i-tell-if-my-computer-is-infected-with-malicious-software)
+-   [Windows Defender のバージョンを特定するにはどうすればよいですか。](#how-can-i-find-the-version-of-windows-defender)
 -   [Windows Defender または Endpoint Protection によってコンピューターで悪意のあるソフトウェアが検出された場合、どうすべきですか。](#what-should-i-do-if-windows-defender-or-endpoint-protection-detects-software-on-my-computer)  
-
 -   [ウイルスとは何ですか。](#what-is-a-virus)  
-
 -   [スパイウェアとは何ですか。](#what-is-spyware)  
-
 -   [ウイルス、スパイウェア、およびその他の有害なソフトウェアの違いは何ですか。](#hat-s-the-difference-between-viruses-spyware-and-other-potentially-harmful-software)  
-
 -   [ウイルス、スパイウェア、およびその他の望ましくない可能性があるソフトウェアはどこからくるのでしょうか。](#where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from)  
-
 -   [知らずに悪意のあるソフトウェアを入手してしまう恐れがありますか。](#can-i-get-malicious-software-without-knowing-it)  
-
 -   [ソフトウェアをインストールする前にライセンス契約を確認することはなぜ重要ですか。](#why-is-it-important-to-review-license-agreements-before-installing-software)  
-
 -   [Endpoint Protection と Windows Defender の違いは何ですか。](#what-s-the-difference-between-endpoint-protection-and-windows-defender)  
-
 -   [Windows Defender が Cookie を検出しないのはなぜですか。](#why-doesn-t-windows-defender-detect-cookies)  
-
 -   [マルウェアをどのように防げますか。](#how-can-i-prevent-malware)  
-
 -   [ウイルス定義およびスパイウェア定義とは](#what-are-virus-and-spyware-definitions)  
-
 -   [ウイルス定義とスパイウェア定義を最新の状態に保つ方法](#how-do-i-keep-virus-and-spyware-definitions-up-to-date)  
-
 -   [Windows Defender または Endpoint Protection によって検疫された項目をどのように削除または復元できますか。](#how-do-i-remove-or-restore-items-quarantined-by-windows-defender-or-endpoint-protection)  
-
 -   [リアルタイム保護とは何ですか。](#what-is-real-time-protection)  
-
 -   [コンピューターで Windows Defender または Endpoint Protection が実行中であることをどのように確認できますか。](#how-do-i-know-that-windows-defender-or-endpoint-protection-is-running-on-my-computer)
-
 -   [Windows Defender または Endpoint Protection のアラートをどのように設定できますか。](#how-to-set-up-windows-defender-or-endpoint-protection-alerts)  
 
 ##  <a name="why-do-i-need-antivirus-and-antispyware-software"></a>ウイルス対策およびスパイウェア対策ソフトウェアが必要な理由  
@@ -104,6 +88,9 @@ ms.openlocfilehash: f0352e59390ade7212a64cf0de883bbb1ca28bab
 -   コンピューターの動作が、突然、通常よりも遅くなる。 コンピューターのパフォーマンスの問題は悪意のあるソフトウェアが原因でないこともありますが、悪意のあるソフトウェア (特にスパイウェア) によって、認識できる変化が起きることがあります。  
 
 現象がまったく見られなくても、コンピューターに悪意のあるソフトウェアが存在している場合があります。 このようなソフトウェアでは、ユーザーが認識または同意していない状態で、ユーザーやユーザーのコンピューターについての情報が収集される可能性があります。 プライバシーとコンピューターを保護するために、Windows Defender または Endpoint Protection を常時実行してください。  
+
+## <a name="how-can-i-find-the-version-of-windows-defender"></a>Windows Defender のバージョンを特定するにはどうすればよいですか。
+ コンピューターで実行中の Windows Defender のバージョンを表示するには、Windows Defender を開き (**[スタート]** をクリックして **Windows Defender** を検索し)、**[設定]** をクリックし、Windows Defender 設定の最下部までスクロールして **[バージョン情報]** を見つけます。
 
 ##  <a name="what-should-i-do-if-windows-defender-or-endpoint-protection-detects-malicious-software-on-my-computer"></a>Windows Defender または Endpoint Protection によってコンピューターで悪意のあるソフトウェアが検出された場合、どうすべきですか。  
 
@@ -216,7 +203,7 @@ Windows Defender によって検出された望ましくない項目または有
 
 ##  <a name="what-is-real-time-protection"></a>リアルタイム保護とは何ですか。  
 
- リアルタイム保護を使用すると、Windows Defender はコンピューターを常時監視し、ウイルスやスパイウェアなどの潜在的な脅威がコンピューター上でインストールまたは実行を試みるとアラートを通知することができます。 この機能は、Windows Defender よるコンピューターの保護における重要な要素であるため、リアルタイム保護は常に有効にしてください。 リアルタイム保護がオフにされると、Windows Defender はユーザーに通知を行い、コンピューターの状態を "危険" に変更します。  
+ リアルタイム保護を使用すると、Windows Defender はコンピューターを常時監視し、ウイルスやスパイウェアなどの潜在的な脅威がコンピューター上でインストールまたは実行を試みるとアラートを通知することができます。 この機能は、Windows Defender よるコンピューターの保護における重要な要素であるため、リアルタイム保護は常に有効にしてください。 リアルタイム保護がオフにされると、Windows Defender はユーザーに通知を行い、コンピューターの状態を [危険] に変更します。  
 
  リアルタイム保護によって脅威や潜在的な脅威が検出されると、Windows Defender によって必ず通知が表示されます。 次のオプションから選択できます。  
 
@@ -279,6 +266,6 @@ Windows Defender によって検出された望ましくない項目または有
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 
