@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d3e6f011527f05b35e411af52d723f459aad66ca
-ms.openlocfilehash: 99b218f23ff8ad0fbac9dbdc28c46829e6800f85
+ms.sourcegitcommit: 3a24fe53cc243294694b779fad4c3ab83ca2ecb7
+ms.openlocfilehash: ae2cc7030c1fc404dcc7392b8c3067fc0f8cafc0
 
 
 ---
@@ -83,7 +83,7 @@ Configuration Manager サービス マネージャーを使用するには、コ
 -   サイト サーバー上の配布マネージャーは、サイト システムのインストール アカウントを使って、サービス接続ポイントから更新プログラムを転送します。
 
 ##  <a name="a-namebkmkurlsa-internet-access-requirements"></a><a name="bkmk_urls"></a> インターネット アクセス要件  
-操作を有効にするには、サービス接続ポイントをホストするコンピューター、ならびにそのコンピューターとインターネットの間のファイアウォールにより、通信が**ポート TCP 443** および**ポート TCP 443** を介して次のインターネット上の場所に届くようにする必要があります。 サービス接続ポイントから、これらの場所を利用する際は、Web プロキシ (認証あり、または認証なし) を使用することもできます。  
+操作を有効にするには、サービス接続ポイントをホストするコンピューター、ならびにそのコンピューターとインターネットの間のファイアウォールにより、通信が**ポート TCP 443** および**ポート TCP 443** を介して次のインターネット上の場所に届くようにする必要があります。 サービス接続ポイントから、これらの場所を利用する際は、Web プロキシ (認証あり、または認証なし) を使用することもできます。  Web プロキシ アカウントを構成する必要がある場合は、「[System Center Configuration Manager でのプロキシ サーバーのサポート](/sccm/core/plan-design/network/proxy-server-support)」を参照してください。
 
 **更新プログラムとサービス**  
 
@@ -121,6 +121,6 @@ Configuration Manager サービス マネージャーを使用するには、コ
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 
