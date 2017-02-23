@@ -2,7 +2,7 @@
 title: "クラウドベースの配布ポイント | Microsoft Docs"
 description: "System Center Configuration Manager でクラウドベースの配布ポイントを使用する際の構成および制限事項について説明します。"
 ms.custom: na
-ms.date: 2/14/2017
+ms.date: 2/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8800a497a8c1e26b89ad3817ee2c15258bd1d5c5
-ms.openlocfilehash: f9164eeb19027366525ebc41640c82de3a606e4d
+ms.sourcegitcommit: 97051d9c65ef5ea28c94468b24863120624e8de0
+ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 
 
 ---
@@ -185,9 +185,7 @@ ms.openlocfilehash: f9164eeb19027366525ebc41640c82de3a606e4d
 
 3.  優先配布ポイントまたはリモート配布ポイントを使用できない場合、クライアントは代わりにクラウドベースの配布ポイントのコンテンツを取得できます。  
 
-    > [!NOTE]  
-        >  展開のコンテンツの場所として、インターネットベースの配布ポイントとクラウドベースの配布ポイントの両方を受信するインターネットのクライアントは、インターネットベースの配布ポイントからのみコンテンツの取得を試行します。 インターネット上のクライアントがインターネットベースの配布ポイントからコンテンツを取得できなかった場合、クライアントは次にクラウドベースの配布ポイントへのアクセスを試行します。  
-
+    
 
   クライアントがコンテンツの場所としてクラウドベースの配布ポイントを使用する場合、クライアントは、Configuration Manager アクセス トークンを使用してクラウドベースの配布ポイントに対して自身を認証します。 クライアントが Configuration Manager クラウドベースの配布ポイント証明書を信頼している場合、クライアントは要求されたコンテンツをダウンロードできます。  
 
@@ -217,6 +215,6 @@ ms.openlocfilehash: f9164eeb19027366525ebc41640c82de3a606e4d
 
 
 
-<!--HONumber=Feb17_HO3-->
+<!--HONumber=Feb17_HO4-->
 
 
