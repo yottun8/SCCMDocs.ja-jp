@@ -2,7 +2,7 @@
 title: "アプリケーション管理の計画と構成 | Microsoft Docs"
 description: "System Center Configuration Manager でアプリケーションを展開するために必要な依存関係を実装および構成します。"
 ms.custom: na
-ms.date: 02/03/2017
+ms.date: 02/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 50c08d63e7220a47d21dcbdcd7abafba7c7f5f75
-ms.openlocfilehash: 4eca69f54ec0bca5f1f972d3814ceb87d4a30d67
+ms.sourcegitcommit: 1c43c4968f93985515249ddb117269f8ed61302a
+ms.openlocfilehash: 46cc3fcfd9516cf1c124e24b50d0aac0cb0025dc
 
 
 ---
@@ -127,7 +127,7 @@ ms.openlocfilehash: 4eca69f54ec0bca5f1f972d3814ceb87d4a30d67
 
     ステータス メッセージ:コンポーネント SMS_PORTALWEB_CONTROL_MANAGER **** および SMS_AWEBSVC_CONTROL_MANAGER ****を使用します。  
 
-    たとえば、SMS_PORTALWEB_CONTROL_MANAGER **** のステータス ID&1015; **** は、サイト コンポーネント マネージャーがアプリケーション カタログ Web サイト ポイントのインストールに成功したことを示します。  
+    たとえば、**SMS_PORTALWEB_CONTROL_MANAGER** のステータス ID **1015** は、サイト コンポーネント マネージャーがアプリケーション カタログ Web サイト ポイントのインストールに成功したことを示します。  
 
     ログ ファイル: **SMSAWEBSVCSetup.log** および **SMSPORTALWEBSetup.log**を検索します。  
 
@@ -228,6 +228,6 @@ ms.openlocfilehash: 4eca69f54ec0bca5f1f972d3814ceb87d4a30d67
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 
