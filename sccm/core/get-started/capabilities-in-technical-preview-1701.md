@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 34dded3a8caf8c2be0313bc012cbd8ad2a909fad
 ms.openlocfilehash: 20bcc1cd909eec13eaca0a6de66806bd496f729d
+ms.lasthandoff: 01/26/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1701 の機能
@@ -157,9 +158,4 @@ ms.openlocfilehash: 20bcc1cd909eec13eaca0a6de66806bd496f729d
 この変更により、新しい Configuration Manager のリリースまたは拡張機能を必要とせずに、ハイブリッド展開で新しい Android および iOS のバージョンによりすばやくサポートを提供できます。 Intune スタンドアロンで新しいバージョンがサポートされると、ユーザーはモバイル デバイスをそのバージョンにアップグレードできるようになります。
 
 以前のバージョンの Configuration Manager からアップグレードする場合の問題を防ぐため、モバイルのオペレーティング システムのバージョンが各項目の [プロパティ] ページに表示されています。 特定のバージョンを対象にする必要がある場合は、新しい項目を作成し、新しく作成された項目の [プロパティ] ページで、対象のバージョンを指定します。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
