@@ -90,7 +90,7 @@
 ###  [ラボのセットアップ](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
-<!-- ###  [Capabilities in 1702](get-started/capabilities-in-technical-preview-1702.md) -->
+###  [1702 の機能](get-started/capabilities-in-technical-preview-1702.md)
 ###  [1701 の機能](get-started/capabilities-in-technical-preview-1701.md)
 ###  [1612 の機能](get-started/capabilities-in-technical-preview-1612.md)
 ###  [1611 の機能](get-started/capabilities-in-technical-preview-1611.md)
@@ -305,8 +305,3 @@
 ###  [Upgrade Linux and UNIX clients](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md) (Linux および UNIX クライアントのアップグレード)
 ###  [Upgrade Mac clients](clients/manage/upgrade/upgrade-clients-on-mac-computers.md) (Mac クライアントのアップグレード)
 ###  [Upgrade analytics](clients/manage/upgrade/upgrade-analytics.md) (アップグレード分析)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
