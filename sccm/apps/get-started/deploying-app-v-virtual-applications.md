@@ -2,7 +2,7 @@
 title: "App-V 仮想アプリケーションの展開 | Microsoft Docs"
 description: "仮想アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。"
 ms.custom: na
-ms.date: 11/07/2016
+ms.date: 02/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0469aad1482c0619794c91bc530d8ec981e8f136
-ms.openlocfilehash: bc79cd157003cc7dcb63f925293c79fe477dd809
+ms.sourcegitcommit: c73373e6f2f28f8ddc197695e4b4e3488c9c1f5b
+ms.openlocfilehash: 0808edbb9a0433dd658d37e8d005c89a4778735c
+ms.lasthandoff: 02/17/2017
 
 
 ---
@@ -66,7 +67,13 @@ Microsoft Application Virtualization (App-V) を使用したアプリケーシ�
      また、仮想アプリケーションを正常に展開できるようにするには、サポート技術情報の記事 [2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) で説明されている修正プログラムで、App-V 4.6 SP1 クライアントを更新する必要があります。  
 
 -   **App-V 5、App-V 5.0 SP1、App-V 5.0 SP2、App-V 5.0 SP3、および App-V 5.1:** App-V 5.0 SP2 については、 [修正プログラム パッケージ 5](https://support.microsoft.com/en-us/kb/2963211) をインストールするか、App-V 5.0 SP3 を使用する必要があります。  
--   **APP-V 5.2**: これは、Windows 10 に組み込まれています (Anniversary Update 以降)。
+-   **APP-V 5.2**: これは、Windows 10 Enterprise に組み込まれています (Anniversary Update 以降)。
+
+Windows 10 の App-V の詳細については、次のトピックを参照してください。
+
+- [App-V の新着情報](https://technet.microsoft.com/itpro/windows/manage/appv-about-appv)
+- [Windows 10 向け App-V の概要](https://technet.microsoft.com/itpro/windows/manage/appv-getting-started)
+- [既存のインストールから Windows 10 向け App-V へのアップグレード](https://technet.microsoft.com/itpro/windows/manage/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
 
 ##  <a name="steps-to-manage-app-v-virtual-applications"></a>App-V 仮想アプリケーションの管理の手順  
  App-V 仮想アプリケーションを管理するには、次の手順を実行します。  
@@ -80,7 +87,7 @@ Microsoft Application Virtualization (App-V) を使用したアプリケーシ�
 4.   **展開** - 展開は、クライアント コンピューターでアプリケーションを使用できるようにするプロセスです。 これは、APP-V の完全なインフラストラクチャでは、ストリーミングと呼ばれます。  
 
 ##  <a name="configuration-manager-virtual-application-delivery-methods"></a>Configuration Manager の仮想アプリケーション配信方法  
-Configuration Manager では、仮想アプリケーションをクライアントに配信する方法として、ストリーミング配信とローカル配信 (ダウンロードして実行) の 2 つをサポートしています。
+Configuration Manager では、仮想アプリケーションをクライアントに配信する方法として、ストリーミング配信とローカル配信 (ダウンロードして実行) の&2; つをサポートしています。
 
 使用する配信方法を決定する場合、ストリーミング配信では必要なディスク容量が少なくなることと、ローカル配信では App-V アプリケーションの可用性が保証されることを比較してください。 ローカル配信ではクライアントで必要なディスク容量は増えますが、どのような場所からでも常にアプリケーションを使用できるため、ストリーミング配信よりも理想的です。  
 
@@ -100,7 +107,7 @@ Configuration Manager を使用して App-V クライアントを管理すると
 
 |長所|短所|  
 |----------------|-------------------|  
-|パッケージのダウンロードには、バックグラウンド インテリジェント転送サービス (BITS) を使用した標準の配布ポイントの機能が使用されます。<br /><br /> 仮想アプリケーション パッケージのコンテンツは、クライアントにローカルに配信されます。 つまり、コンピューターがネットワークに接続されていない場合にアプリケーションを実行できます。<br /><br /> この方法は、低速または信頼されないネットワーク接続と、ネットワークに接続する頻度が低いコンピューターに適しています。<br /><br /> Configuration Manager は、Remote Differential Compression (RDC) を使用して、仮想アプリケーション パッケージのコンテンツの更新時に変更されたファイル内のデータのみを、クライアントに送信します。 構成マネージャー クライアントは、RDC を使用して、現在のバージョンのパッケージと、クライアントに送信された変更を基に、新しいバージョンの仮想アプリケーション パッケージを作成します。<br /><br /> この方法では、モバイル ユーザーやネットワークに接続されていないユーザーに対して、アプリケーションの回復力が高くなります。 管理者は、仮想アプリケーションがインストール操作で展開された場合に、配信後も Configuration Manager キャッシュにパッケージを保持することを選択できます。 構成マネージャー クライアント キャッシュに保存されたパッケージは、App-V クライアントがパッケージをキャッシュにプルする場合に、ローカルの信頼できるストリーミング ソースとして使用できます。|仮想アプリケーションを Configuration Manager キャッシュに保持する場合、クライアントには、仮想アプリケーション パッケージのサイズの最大 2 倍のディスク容量が必要です。|  
+|パッケージのダウンロードには、バックグラウンド インテリジェント転送サービス (BITS) を使用した標準の配布ポイントの機能が使用されます。<br /><br /> 仮想アプリケーション パッケージのコンテンツは、クライアントにローカルに配信されます。 つまり、コンピューターがネットワークに接続されていない場合にアプリケーションを実行できます。<br /><br /> この方法は、低速または信頼されないネットワーク接続と、ネットワークに接続する頻度が低いコンピューターに適しています。<br /><br /> Configuration Manager は、Remote Differential Compression (RDC) を使用して、仮想アプリケーション パッケージのコンテンツの更新時に変更されたファイル内のデータのみを、クライアントに送信します。 構成マネージャー クライアントは、RDC を使用して、現在のバージョンのパッケージと、クライアントに送信された変更を基に、新しいバージョンの仮想アプリケーション パッケージを作成します。<br /><br /> この方法では、モバイル ユーザーやネットワークに接続されていないユーザーに対して、アプリケーションの回復力が高くなります。 管理者は、仮想アプリケーションがインストール操作で展開された場合に、配信後も Configuration Manager キャッシュにパッケージを保持することを選択できます。 構成マネージャー クライアント キャッシュに保存されたパッケージは、App-V クライアントがパッケージをキャッシュにプルする場合に、ローカルの信頼できるストリーミング ソースとして使用できます。|仮想アプリケーションを Configuration Manager キャッシュに保持する場合、クライアントには、仮想アプリケーション パッケージのサイズの最大&2; 倍のディスク容量が必要です。|  
 
 ###  <a name="deployment-from-an-image"></a>イメージからの展開
 
@@ -119,7 +126,7 @@ Configuration Manager を使用して App-V クライアントを管理すると
 |Configuration Manager で、仮想アプリケーションの最初の展開後に、クライアントでの仮想アプリケーションの管理を開始する。 その後、Configuration Manager はコンピューター上のすべての App-V アプリケーションを管理する必要があります。|詳細情報はありません。|  
 |コンテンツを適切な配布ポイントに配布し、アプリケーションのローカル配信を有効にする|「[コンテンツとコンテンツ インフラストラクチャの管理](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。|  
 |アプリケーションを構成マネージャー クライアントに展開する<br /><br /> App-V アプリケーションが、マニフェスト XML ファイルを作成しない以前のバージョンの Sequencer で作成されている場合、新しいバージョンの Sequencer でアプリケーションを開いて保存し、マニフェスト XML ファイルを作成できます。 このファイルは、Configuration Manager で仮想アプリケーションを展開するために必要です。<br /><br /> App-V は、SoftGrid 4.1 SP1 または 4.2 バージョンの Sequencer で作成された仮想アプリケーション パッケージをサポートします。<br /><br /> アプリケーションが以前にローカルでインストールされている場合、仮想バージョンのアプリケーションを展開する前に、そのアプリケーションをアンインストールする必要があります。|「[Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md)」 (System Center Configuration Manager でアプリケーションを展開する) を参照してください。|  
-|System Center Configuration Manager では、仮想アプリケーションを含むパッケージとプログラムの使用をサポートしなくなりました。 Configuration Manager 2007 から System Center Configuration Manager に移行すると、Configuration Manager によってこれらのパッケージがアプリケーションに変換されます。<br /><br /> Configuration Manager 2007 公開通知は、次の展開の種類に変換されます。<br /><br /> - 移行する App-V パッケージに公開通知がない場合: 展開の種類の既定設定を使用する展開の種類が 1 つ作成されます。<br /><br /> - 移行する App-V パッケージの公開通知が 1 つの場合: Configuration Manager 2007 の公開通知と同じ設定を使用する <br />                展開の種類が 1 つ作成されます。<br /><br /> - 移行する App-V パッケージの公開通知が複数の場合: Configuration Manager 2007 の各公開通知に対して展開の種類が 1 つ作成されます。 <br />                それぞれの展開の種類で使用する設定は、公開通知と同じになります。|「[Configuration Manager オブジェクトの System Center Configuration Manager への移行の計画](../../core/migration/planning-for-the-migration-of-objects.md)」をご覧ください。|  
+|System Center Configuration Manager では、仮想アプリケーションを含むパッケージとプログラムの使用をサポートしなくなりました。 Configuration Manager 2007 から System Center Configuration Manager に移行すると、Configuration Manager によってこれらのパッケージがアプリケーションに変換されます。<br /><br /> Configuration Manager 2007 公開通知は、次の展開の種類に変換されます。<br /><br /> - 移行する App-V パッケージに公開通知がない場合: 展開の種類の既定設定を使用する展開の種類が&1; つ作成されます。<br /><br /> - 移行する App-V パッケージの公開通知が&1; つの場合: Configuration Manager&2007; の公開通知と同じ設定を使用する <br />                展開の種類が 1 つ作成されます。<br /><br /> - 移行する App-V パッケージの公開通知が複数の場合: Configuration Manager&2007; の各公開通知に対して展開の種類が&1; つ作成されます。 <br />                それぞれの展開の種類で使用する設定は、公開通知と同じになります。|「[Configuration Manager オブジェクトの System Center Configuration Manager への移行の計画](../../core/migration/planning-for-the-migration-of-objects.md)」をご覧ください。|  
 
 ##  <a name="migrating-app-v-5-connection-groups-to-configuration-manager-virtual-environments"></a>App-V 5 接続グループの Configuration Manager 仮想環境への移行  
 Configuration Manager の App-V 仮想環境を使用すると、展開した仮想アプリケーションで、クライアント コンピューター上の同一のファイル システムとレジストリを共有できます。 つまり、標準の仮想アプリケーションとは異なり、これらのアプリケーションは、相互にデータを共有できます。 アプリケーションがインストールされると、クライアント コンピューターに仮想環境が作成されます。また、インストールされたアプリケーションがクライアントで次回評価されたときに、クライアント コンピューターの仮想環境が変更されます。 仮想環境は、スタンドアロンの App-V 5 の接続グループと同様です。  
@@ -206,9 +213,4 @@ Configuration Manager 環境で App-V を監視するには、次のレポート
 Configuration Manager は、仮想アプリケーションの展開に関する情報をログ ファイルに記録します。 仮想アプリケーションと Configuration Manager アプリケーション管理で使用されるログ ファイルについては、「[System Center Configuration Manager のログ ファイル](../../core/plan-design/hierarchy/log-files.md)」をご覧ください。  
 
 Windows Vista、Windows 7、Windows 8 の場合、App-V クライアントのログは C:\ProgramData\Microsoft\Application Virtualization Client にあります。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

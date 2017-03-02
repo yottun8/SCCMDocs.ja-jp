@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0c084e9f630a96c7b22c3dbdd72e18ad4a86926d
-ms.openlocfilehash: 9631b5622fec19e0248eb919bc8bd876152f66d7
+ms.sourcegitcommit: 1a3460143628ef297c99c364ded7ebea86d270dd
+ms.openlocfilehash: c266bb753ea69785b674508647c3857b2218cb77
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: 9631b5622fec19e0248eb919bc8bd876152f66d7
 
 バージョン 1606 構成基準メディアを使用するときにインストールまたはアップグレードするサイト:
 - *Current Branch サイト*。1511 構成基準メディアを利用して最初にインストールし、バージョン 1606 に更新し、さらに 1606 修正プログラム KB3186654 を適用したサイトと同等のサイト。
--   *LTSB サイト*。バージョン 1606 に加えて 1606 修正プログラム KB3186654 を実行する Current Branch サイトと同等のサイト。 この構成基準メディアには、この修正プログラム ロールアップが既に含まれています  ただし、LTSB では、Current Branch で利用できる機能の一部をご利用いただけません。詳細は、「[Introduction to the Long-Term Servicing Branch of System Center Configuration Manager](introduction-to-the-ltsb.md)」 (System Center Configuration Manager の Long-Term Servicing Branch の概要) にあります。
+-    *LTSB サイト*。バージョン 1606 に加えて 1606 修正プログラム KB3186654 を実行する Current Branch サイトと同等のサイト。 この構成基準メディアには、この修正プログラム ロールアップが既に含まれています  ただし、LTSB では、Current Branch で利用できる機能の一部をご利用いただけません。詳細は、「[Introduction to the Long-Term Servicing Branch of System Center Configuration Manager](introduction-to-the-ltsb.md)」 (System Center Configuration Manager の Long-Term Servicing Branch の概要) にあります。
 
 System Center Configuration Manager のブランチに関する詳細については、「[Which branch of Configuration Manager should I use](which-branch-should-i-use.md)」 (Configuration Manager のどのブランチを使用すればよいですか) を参照してください。
 
@@ -70,7 +71,7 @@ LTSB でサポートされていないサイト システムの役割をアン�
 ライセンスされるブランチを無人スクリプトでインストールするときは、次のセクション、キー名、値をスクリーンショットのオプション セクションに追加する必要があります。 Current Branch の評価版インストールをスクリプト化する場合、これらの値を使用する必要はありません。  
 
  **SABranchOptions**
--   **キー名: SSActive**
+-     **キー名: SAActive**
   - 値: 0 または 1。  
   - 詳細:  0 の場合、Current Branch の「ライセンスなし」評価版がインストールされます。1 の場合、「ライセンスを取得した」製品版がインストールされます。   
 
@@ -81,7 +82,7 @@ LTSB でサポートされていないサイト システムの役割をアン�
 たとえば、Current Branch のライセンス取得版をインストールするには、次の値を利用します。
 
   **キー名: SABranchOptions**
-   -    **SSActive = 1**
+   -    **SAActive = 1**
    - **CurrentBranch = 1**
 
 
@@ -97,7 +98,7 @@ LTSB でサポートされていないサイト システムの役割をアン�
 1606 構成基準メディアを利用していずれかのブランチの新しいサイトをインストールするとき、「[System Center Configuration Manager サイトのインストール](/sccm/core/servers/deploy/install/installing-sites)」トピックにあるサイト計画、準備、インストール手順を利用します。さらに、セットアップに関して次の事項を考慮します。
 
 - セットアップ中、インストールする Configuration Manager のブランチを選択する必要があります。ソフトウェア アシュアランス契約の詳細を指定できます。
--   スクリプト化された新しいインストール。 詳細については、この記事の "スクリプト化された新しいインストール オプション" を参照してください。
+-    スクリプト化された新しいインストール。 詳細については、この記事の "スクリプト化された新しいインストール オプション" を参照してください。
 
 ## <a name="expand-a-stand-alone-primary-site"></a>スタンドアロン プライマリ サイトを拡張する
 LTSB を実行するスタンドアロンのプライマリ サイトを拡張できます。  このプロセスは、Current Branch サイトに使用されるプロセスと変わりませんが、1 つ注意点があります。
@@ -111,7 +112,7 @@ System Center 2012 Configuration Manager からアップグレードするとき
 
 **Current Branch にアップグレードする:**
 - セットアップ中、Current Branch を選択する必要があります。ソフトウェア アシュアランス契約の詳細を指定できます。
--   スクリプト化された新しいインストール。 詳細については、この記事の "スクリプト化された新しいインストール オプション" を参照してください。
+-     スクリプト化された新しいインストール。 詳細については、この記事の "スクリプト化された新しいインストール オプション" を参照してください。
 
 **LTSB へのアップグレード:**  
 - アップグレード前チェックリストの追加手順。
@@ -147,9 +148,4 @@ CD.Latest フォルダーのメディアのサポート対象外:
 LTSB を実行しているサイトでバックアップ、復元、サイト保守を実行するには、「[System Center Configuration Manager のバックアップと回復](/sccm/protect/understand/backup-and-recovery)」のガイドと手順を利用してください。  
 
 LTSB サイトのバックアップの CD.Latest フォルダーからの Configuration Manager のセットアップを使用します。
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

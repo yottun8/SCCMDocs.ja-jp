@@ -16,8 +16,9 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
-ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
+ms.sourcegitcommit: bdd7961d9126dc6f3c1ae1fec1842c862e8a7c6d
+ms.openlocfilehash: 12633a7b9f799ffc74e0ee657e091595ed7eaf67
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>System Center Configuration Manager のクライアントとデバイスのサポートされるオペレーティング システム
@@ -34,13 +35,13 @@ ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 -   root 以外のアカウント下のコンピューターでは、Linux または UNIX の Configuration Manager クライアントや Mac 用クライアントをインストールすることも実行することもサポートされません。 そのようにすると、主要なサービスが正しく実行できなくなる可能性があります。  
 
 ##  <a name="windows-computers"></a>Windows コンピューター  
- Configuration Manager に付属の Configuration Manager クライアントを持つ Windows コンピューターを管理することができます。 詳細については、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」を参照してください。  
+ Configuration Manager に含まれている Configuration Manager クライアントを使用して、次の Windows オペレーティング システムを管理できます。 詳細については、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」を参照してください。  
 
 **サポートされるオペレーティング システム:**  
 
+
 -  **Windows Server 2016**: Standard、Datacenter <sup>1</sup>
   - このオペレーティング システムは、Configuration Manager バージョン 1606 以降および KB3186654 以降の修正プログラム ロールアップ (2016 年 10 月にリリースされた 1606 のベースライン バージョン) でサポートされています。  
-
 
 -   **Windows Server 2012 R2** (x64): Standard、Datacenter <sup>1</sup>    
 
@@ -56,9 +57,8 @@ ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 
 -   **Windows Server 2008 with SP2** (x86、x64): Standard、Enterprise、Datacenter <sup>1</sup>    
 
--   **Windows 10 Enterprise LTSB** (x86、x64) <sup>3</sup>    
-
--   **Windows 10** (x86、x64): Pro、Enterprise    
+-   **Windows 10**: Pro、Enterprise  
+   異なるバージョンの Configuration Manager でサポートされている、異なるリリース バージョンの Windows 10 の詳細については、[Windows 10 の各バージョンのサポート](/sccm/core/plan-design/configs/support-for-windows-10)に関するページを参照してください。
 
 -   **Windows 8.1** (x86、x64): Professional、Enterprise    
 
@@ -83,7 +83,6 @@ ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 
  <sup>2</sup> クライアント プッシュ インストールをサポートするには、このオペレーティング システムのバージョンを実行するコンピューターで、ファイルおよびストレージ サービスのサーバーの役割のための、ファイル サーバーの役割サービスを実行する必要があります。 Server Core コンピューターに Windows の機能をインストールする詳細については、Windows Server 2012 TechNet ライブラリの「[Server Core サーバーへのサーバーの役割と機能のインストール](http://go.microsoft.com/fwlink/p/?LinkId=299359)」を参照してください。  
 
- <sup>3</sup> このオペレーティング システムを使用するには、Configuration Manager 1602 以降のバージョンが必要です。  
 
 ##  <a name="windows-embedded-computers"></a>Windows Embedded コンピューター  
  Windows Embedded デバイスを管理するには、デバイス上に Configuration Manager クライアント ソフトウェアをインストールします。  詳細については、「[System Center Configuration Manager での Windows Embedded デバイスへのクライアント展開の計画](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)」をご覧ください。  
@@ -349,9 +348,4 @@ Configuration Manager は、Configuration Manager クライアントをインス
 -   **Exchange Server 2013**  
 
 -   **Exchange Online (Office 365)**: これは、Business Productivity Online Standard Suite を含みます。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

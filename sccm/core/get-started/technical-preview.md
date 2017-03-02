@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager の Technical Preview | Microsoft Docs"
 description: "System Center Configuration Manager の新機能を体験できるテクニカル プレビュー リリースについて説明します。"
 ms.custom: na
-ms.date: 1/20/2017
+ms.date: 2/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 916c39133ec3796b9cff97c3c3bdb49dcbb6d7e7
-ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
+ms.sourcegitcommit: 4b1daa727477b1273cdbee1bc7e3ac8af5911ff0
+ms.openlocfilehash: 4703178c5ce3e23cb9d2e4557466fcec571c2983
+ms.lasthandoff: 02/22/2017
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
  これはテクニカル プレビューであるため、詳細や機能は変更されることがあります。  
 
- このトピックでは、Technical Preview のすべてのバージョンに適用される情報を説明し、さらに、新しい機能 (またはフィーチャー) とそれが初めて導入された Technical Preview のバージョン (たとえば、2015 年 12 月であればバージョン 1512) を一覧に示します。 これらの機能の詳細は、各プレビュー バージョンに特化した個別のトピックで説明されています。  
+ このトピックでは、Technical Preview のすべてのバージョンに適用される情報を説明し、さらに、新しい機能 (またはフィーチャー) とそれが初めて導入された Technical Preview のバージョン (たとえば、2017 年 1 月であればバージョン 1701) を一覧に示します。 これらの機能の詳細は、各プレビュー バージョンに特化した個別のトピックで説明されています。  
 
  Configuration Manager の現在のブランチの新機能については、「[What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012)」 (System Center Configuration Manager の新機能) を参照してください。
 
@@ -37,7 +38,7 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
 ##  <a name="a-namebkmkreqsa-requirements-and-limitations-for-the-technical-preview"></a><a name="bkmk_reqs"></a> Technical Preview の要件と制限事項  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]     
 >  Technical Preview はラボ環境での使用目的に限定してライセンスされます。  Microsoft はサポート サービスを提供しない場合があり、また、プレビュー ソフトウェアでは特定の機能が使用できない場合があります。 さらに、プレビュー ソフトウェアは、製品版ソフトウェアに比べて、セキュリティ、プライバシー、アクセシビリティ、可用性および信頼性の基準が低いか、または異なる場合があります。  
 
  ほとんどの製品の前提条件については、「[Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md)」 (System Center Configuration Manager でサポートされる構成) を参照してください。 次の例外がテクニカル プレビュー リリースに適用されます。  
@@ -50,24 +51,22 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
 -   次のバージョンの SQL Server のみがサポートされます。  
 
-    -   累積的な更新プログラム 2 以降が適用された SQL Server 2012  
+    -   SQL Server 2016 (Service Pack なし、およびそれ以降)
+    -   SQL Server 2014 (Service Pack なし、およびそれ以降)
+    -   SQL Server 2012 (Service Pack 2、またはそれ以降)
 
-    -   SQL Server 2014  
 
 -   サイトは最大 10 台のクライアントをサポートします。各クライアントは次のいずれかを実行している必要があります。  
 
-    -   Windows 7  
+      -   Windows 10  
+      -   Windows 8.1  
+      -   Windows 8  
+      -   Windows 7  
 
-    -   Windows 8  
-
-    -   Windows 8.1  
-
-    -   Windows 10  
 
 -   次のインストール フラグ (スイッチ) のみがサポートされます。  
 
     -   **/silent**  
-
     -   **/testdbupgrade**  
 
 -   当てはまる場合には、Technical Preview の特定バージョンごとの詳細情報に、追加の制限または要件が含まれています。  
@@ -81,7 +80,9 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 ##  <a name="a-namebkmkinstalla-install-and-update-the-technical-preview"></a><a name="bkmk_install"></a> Technical Preview のインストールと更新  
  System Center Configuration Manager の Technical Preview は、System Center Configuration Manager の最新リリースとは異なります。  
 
- テクニカル プレビューを使用するには、テクニカル プレビュー ビルドの **ベースライン バージョン** を最初にインストールする必要があります。 ベースライン バージョンをインストールしたら、 **コンソール内更新** を使用して、最新のプレビュー バージョンでインストール環境を最新のものにできます。     通常、Technical Preview の新バージョンは毎月使用可能です。  
+ テクニカル プレビューを使用するには、テクニカル プレビュー ビルドの **ベースライン バージョン** を最初にインストールする必要があります。 ベースライン バージョンをインストールしたら、 **コンソール内更新** を使用して、最新のプレビュー バージョンでインストール環境を最新のものにできます。     通常、Technical Preview の新バージョンは毎月使用可能です。
+
+各プレビュー リリースは、3 つの連続したリリースが使用可能になるまでサポートされます。 つまり、バージョン 1702 がリリースされると、バージョン 1610 はサポートされなくなりますが、バージョン 1611、1612、1701 は引き続きサポートされます。 ただし、最終ベースラインが (バージョン 1610 のように) サポート対象でなくなっても、そのインストールをサポートされるバージョンに更新すれば新しい Technical Preview サイトのインストールがサポートされます。
 
 > [!TIP]  
 >  Technical Preview への更新をインストールするときに、プレビュー インストール環境を対象の新しい Technical Preview バージョンに更新します。    Technical Preview インストールでは、現在のブランチ インストールにアップグレードすることも、現在のブランチ リリースから更新を受け取ることもできません。  
@@ -91,13 +92,7 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
 -   **Technical Preview 1610** - Configuration Manager Technical Preview 1610 は、Configuration Manager Technical Preview のコンソール内更新と、[TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) Web サイトから入手できる新しいベースライン バージョンの両方として使用できます。
 
--   **System Center Technical Preview 5** の一部としての **Technical Preview 1603** - Configuration Manager Technical Preview 1603 は、Configuration Manager Technical Preview のコンソール内更新と、System Center Technical Preview 5 に含まれている新しいベースライン バージョンの両方として使用できます。    ベースライン インストールには、System Center Technical Preview 5 に含まれているバージョンのみを使用できます。  
 
-     [System Center Technical Preview 5 からの Configuration Manager Technical Preview](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) のベースライン バージョンの概要:  
-
-    -   セットアップと Configuration Manager コンソールの両方は、System Center Configuration Manager Technical Preview 1603 としてバージョンが表示されます。  
-
-    -   このベースライン バージョンは、コンソール内更新のサポートなど、Configuration Manager Technical Preview 1603 と同様に機能します。  
 
 
 ##  <a name="a-namebkmktpfeedbacka-providing-feedback"></a><a name="BKMK_TPFeedback"></a> フィードバックについて  
@@ -105,26 +100,7 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
  また、希望する新しい機能のアイデアがありましたら、その内容もお知らせください。 新しいアイデアを提出する、または、他の人が提出したアイデアに投票するには、 [ユーザー ボイスのページにアクセス](http://configurationmanager.uservoice.com)してください。  
 
-##  <a name="a-namebdmktpknownissuesa-general-changes-introduced-in-technical-previews"></a><a name="bdmk_tpknownissues"></a> Technical Preview に導入された一般的な変更  
-
--   **Technical Preview 1603:**  
-
-    -   Technical Preview 1603 以降では、クライアントがソフトウェア更新プログラムのインストールと再起動の直後に、ソフトウェア更新プログラムのコンプライアンス対応スキャンを実行するように、ソフトウェア更新プログラムの展開を構成できます。 これにより、クライアントは、クライアントの再起動後に適用可能になる追加のソフトウェア更新プログラムをチェックして、同じメンテナンス期間中にそれらをインストール (およびコンプライアンスに準拠) できます。  
-
-         展開に対してこれを構成するには、ソフトウェア更新プログラムの展開ウィザードの **[ユーザー エクスペリエンス]** ページで、オプション **[この展開の更新プログラムでシステムの再起動が必要な場合は、再起動後に更新プログラムの展開評価サイクルを実行する]**をオンにします。  
-
-    -   Technical Preview 1603 以降では、SMSTSRebootDelay タスク シーケンス変数の動作が変更されました。 SMSTSRebootDelay 変数は、コンピューターが再起動するまでの待機時間を秒単位で指定します。 この変数を 0 以外に設定すると、タスク シーケンス マネージャーは再起動の前に通知ダイアログ ボックスを表示します。  
-        この変数の値を構成すると、その値は、新しい値を構成するまで保持されます。 すべての後続のコンピューターの再起動の遅延は、同じ値になります。 Configuration Manager バージョン 1602 以前では、コンピューターの再起動後に変数が既定値 (30 秒) にリセットされます。   詳細については、「 [Task sequence built-in variables in System Center Configuration Manager](../../osd/understand/task-sequence-built-in-variables.md)」をご覧ください。
-
--   **Technical Preview 1602:** Technical Preview 1602 以降、Windows 2008 Server R2 から Windows 2012 Server R2 を実行するサイト システム サーバーのオペレーティング システムを一括アップグレードできます。  Windows Server 2012 R2 のアップグレード手順を使用する場合、アップグレード後に Configuration Manager サイト サーバーの復元を実行する必要はありません。  アップグレード手順については、「 [Windows Server 2012 R2 のアップグレード オプション](https://technet.microsoft.com/library/dn303416.aspx)」をご覧ください。  
-
-    > [!WARNING]  
-    >  Windows Server 2012 R2 にアップグレードする前に、サーバーから **WSUS 3.2 をアンインストールする必要があります** 。  
-    >   
-    >  この重要な手順の詳細については、Windows Server ドキュメントの「 [Windows Server Update Services の概要](https://technet.microsoft.com/library/hh852345.aspx) 」の「新機能と変更された機能」セクションを参照してください。  
-
--   **Technical Preview 1601:** 既定では、インストール時はサービス接続ポイントがオンライン モードに設定されており、オフライン モードへの変更はサポートされていません。  
-
+<!--   ##  <a name="bdmk_tpknownissues"></a> General changes introduced in Technical Previews    -->
 
 
 
@@ -212,26 +188,12 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
  |ソフトウェア センターの機能強化|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_SC1603)|[バージョン 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#application-management)|  
  |リモート制御の機能強化|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RC1603)|[バージョン 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#remote-control)|  
  |PXE 対応配布ポイント上の RamDisk TFTP ブロック サイズとウィンドウ サイズのカスタマイズ|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RamDiskTFTP)|[バージョン 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#operating-system-deployment)|  
- |モバイル デバイス管理の機能強化|[Tech Preview 1602](capabilities-in-technical-preview-1602.md#BKMK_MDM)|[バージョン 1602](/sccm/mdm/deploy-use/manage-ios-activation-lock) |  
- |バージョン 1602 でのソフトウェア センターの機能強化|[Tech Preview 1602](capabilities-in-technical-preview-1602.md#BKMK_SC1601)| [バージョン 1602](/sccm/core/plan-design/changes/whats-new-in-version-1602#client-management)|  
- |Windows 10 サービスの機能強化|[Tech Preview 1602](capabilities-in-technical-preview-1602.md#BKMK_Win10Servicing)|[バージョン 1602](/sccm/core/plan-design/changes/whats-new-in-version-1602#operating-system-deployment) |  
- |Microsoft Intune の統合の機能強化|[Tech Preview 1601](capabilities-in-technical-preview-1601.md#bkmk_hybrid1)|[バージョン 1602](/sccm/core/plan-design/changes/whats-new-in-version-1602#conditional-access)|  
- |クライアントのオンライン状態|[Tech Preview 1601](capabilities-in-technical-preview-1601.md#bkmk_clientStatus)|[バージョン 1602](/sccm/core/clients/manage/monitor-clients)|
- |アプリケーション管理の機能強化|[Tech Preview 1601](capabilities-in-technical-preview-1601.md#bkmk_appmgmt1601)|[バージョン 1602](/sccm/core/plan-design/changes/whats-new-in-version-1602#application-management)|  
- |コンプライアンス設定の機能強化|[Tech Preview 1601](capabilities-in-technical-preview-1601.md#bkmk_compliance1601)|[バージョン 1602](/sccm/core/plan-design/changes/whats-new-in-version-1602#compliance-settings)|  
- |デバイス正常性構成証明書|[Tech Preview 1512](capabilities-in-technical-preview-1512.md#bkmk_devicehealth)|[バージョン 1602](/sccm/core/servers/manage/health-attestation)|
- |使用条件のコンソール内での監視|[Tech Preview 1512](capabilities-in-technical-preview-1512.md#bkmk_viewterms)|[バージョン 1602](/sccm/mdm/deploy-use/terms-and-conditions)|  
- |Endpoint Protection のポリシー設定の機能強化|[Tech Preview 1512](capabilities-in-technical-preview-1512.md#bkmk_EPpolicy)|[バージョン 1602](/sccm/protect/deploy-use/endpoint-antimalware-policies)|  
- |Windows 10 における Windows Update for Business との統合|[Tech Preview 1511](capabilities-in-technical-preview-1511.md#BKMK_WUfB)|[バージョン 1602](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)|  
- |System Center Configuration Manager を使用した Office 365 ProPlus クライアント更新プログラムの管理|[Tech Preview 1511](capabilities-in-technical-preview-1511.md#BKMK_Office365ProPlus)|[バージョン 1602](/sccm/sum/deploy-use/manage-office-365-proplus-updates)|  
- |高可用性データベース用の SQL Server AlwaysOn のサポート|[Tech Preview 1511](capabilities-in-technical-preview-1511.md#BKMK_AlwasyOn)|[バージョン 1602](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)|  
- |サーバー クラスターの提供|[Tech Preview 1511](capabilities-in-technical-preview-1511.md#BKMK_ClusterServerUpdates)|[バージョン 1606](/sccm/sum/deploy-use/service-a-server-group)|  
+
+
+ Technical Preview リリースのすべての機能が Current Branch でサポートされる最小バージョンで使用可能になると、そのプレビュー バージョンの詳細がこのテーブルから削除されます。
+
+
 ## <a name="see-also"></a>関連項目  
 [System Center Configuration Manager の新機能](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [System Center Configuration Manager の概要](../../core/understand/introduction.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
