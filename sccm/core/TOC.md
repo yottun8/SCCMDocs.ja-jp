@@ -304,4 +304,4 @@
 ###  [Upgrade Windows clients](clients/manage/upgrade/upgrade-clients-for-windows-computers.md) (Windows クライアントのアップグレード)
 ###  [Upgrade Linux and UNIX clients](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md) (Linux および UNIX クライアントのアップグレード)
 ###  [Upgrade Mac clients](clients/manage/upgrade/upgrade-clients-on-mac-computers.md) (Mac クライアントのアップグレード)
-###  [Upgrade analytics](clients/manage/upgrade/upgrade-analytics.md) (アップグレード分析)
+###  [アップグレードの準備](clients/manage/upgrade/upgrade-analytics.md)
