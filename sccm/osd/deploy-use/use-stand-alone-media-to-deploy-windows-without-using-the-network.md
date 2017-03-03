@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 30ae794381c6894e11b21a8167d0af60463c5279
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -79,9 +80,4 @@ System Center Configuration Manager のスタンドアロン メディアには�
 
 ## <a name="install-the-operating-system-from-stand-alone-media"></a>スタンドアロン メディアからのオペレーティング システムのインストール  
  コンピューターの起動可能なドライブにスタンドアロン メディアを挿入し、電源を入れてオペレーティング システムをインストールします。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
 ms.openlocfilehash: f29d5834b82dd8888cff56fb0ad8024629f829ab
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -129,9 +130,4 @@ Lookout のデバイス脅威保護は、さまざまな種類のモバイル脅
 セットアップが完了すると、Lookout デバイス脅威保護は、指定された登録グループに対応するデバイスの Azure AD でのポーリングを開始します。  デバイス モジュールで登録されたデバイスに関する情報を検索できます。  デバイスの初期状態は保留中と表示されます。  デバイスで Lookout for Work アプリがインストールされ、開かれ、アクティブ化されると、デバイスの状態が変化します。  Lookout for Work アプリをデバイスにプッシュする方法の詳細については、「[Configure and deploy Lookout for work apps](configure-and-deploy-lookout-for-work-apps.md)」 (Lookout for work アプリを構成して展開する) トピックをご覧ください。
 ## <a name="next-steps"></a>次のステップ
 [Intune 管理コンソールで Lookout MTP の接続を有効にする](enable-lookout-connection-in-intune.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
