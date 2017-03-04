@@ -11,12 +11,9 @@
 # 展開と使用
 
 ## [アプリケーションの作成](deploy-use/create-applications.md)
-### [iOS アプリケーションの作成](get-started/creating-ios-applications.md)
 ### [Mac コンピューター アプリケーションの作成](get-started/creating-mac-computer-applications.md)
 ### [Windows アプリケーションの作成](get-started/creating-windows-applications.md)
-### [Windows Phone アプリケーションの作成](get-started/creating-windows-phone-applications.md)
 ### [Linux および UNIX のサーバー アプリケーションの作成](get-started/creating-linux-and-unix-server-applications.md)
-### [Android アプリケーションの作成](get-started/creating-android-applications.md)
 ### [Windows Embedded アプリケーションの作成](get-started/creating-windows-embedded-applications.md)
 ### [グローバル条件の作成](deploy-use/create-global-conditions.md)
 ### [パッケージとプログラム](deploy-use/packages-and-programs.md)
@@ -33,21 +30,10 @@
 ## アプリケーションを管理する
 ### [管理タスク](deploy-use/management-tasks-applications.md)
 ### [ユーザーとデバイスのアフィニティ](deploy-use/link-users-and-devices-with-user-device-affinity.md)
-### [iOS アプリ構成ポリシー](deploy-use/configure-ios-apps-with-app-configuration-policies.md)
-### [iOS 大量購入アプリ](deploy-use/manage-volume-purchased-ios-apps.md)
 ### [ビジネス向け一括購入アプリ向けの Windows ストア](deploy-use/manage-apps-from-the-windows-store-for-business.md)
 ### [App-V 仮想環境](deploy-use/create-app-v-virtual-environments.md)
-
-## アプリの保護
-### [モバイル アプリケーション管理ポリシー](deploy-use/protect-apps-using-mam-policies.md)
-### [管理対象ブラウザーのポリシー](deploy-use/manage-internet-access-using-managed-browser-policies.md)
 
 ## アプリケーションの更新とインベントリからの削除
 ### [アプリケーションの更新とインベントリからの削除](deploy-use/update-and-retire-applications.md)
 ### [アプリケーションを修正して置き換える方法](deploy-use/revise-and-supersede-applications.md)
 ### [アプリケーションのアンインストール](deploy-use/uninstall-applications.md)
-
-
-<!--HONumber=Dec16_HO3-->
-
-

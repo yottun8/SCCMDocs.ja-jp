@@ -8,7 +8,6 @@
 ## [コンプライアンス設定の計画と構成](plan-design/plan-for-and-configure-compliance-settings.md)
 ## [コンプライアンスを管理するための一般的なタスク](plan-design/common-tasks-for-managing-compliance.md)
 ### [Configuration Manager クライアントを使用したデバイス](plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md)
-### [Configuration Manager クライアントを実行しないデバイス](plan-design/common-tasks-for-managing-compliance-on-devices-not-running-the-client.md)
 ### [構成基準を展開する](plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)
 ## [セキュリティとプライバシー](plan-design/security-and-privacy-for-compliance-settings.md)
 
@@ -19,11 +18,6 @@
 #### [Windows 10](deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md)
 #### [Mac OS X](deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)
 #### [ デスクトップおよびサーバー (クライアント)](deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md)
-### [Configuration Manager クライアントを使用せずに管理されているデバイス](deploy-use/configuration-items-for-devices-managed-without-the-client.md)
-#### [Windows 8.1 および Windows 10](deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)
-#### [Windows Phone](deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client.md)
-#### [iOS および Mac OS X](deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)
-#### [Android デバイスと Samsung KNOX Standard デバイス](deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)
 ## [子構成項目の作成](deploy-use/create-child-configuration-items.md)
 
 ## [構成基準を作成する](deploy-use/create-configuration-baselines.md)
@@ -37,8 +31,3 @@
 ## [リモート接続プロファイルの作成](deploy-use/create-remote-connection-profiles.md)
 ## [Windows デバイスを新しいバージョンにアップグレードする](deploy-use/upgrade-windows-version.md)
 ## [コンプライアンス設定を監視する](deploy-use/monitor-compliance-settings.md)
-
-
-<!--HONumber=Dec16_HO3-->
-
-
