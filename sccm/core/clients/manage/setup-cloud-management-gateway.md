@@ -14,6 +14,7 @@ ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
 translationtype: Human Translation
 ms.sourcegitcommit: 2bcc5d9dde1f1a2d9c33575d6c463e281ac818e8
 ms.openlocfilehash: 61b8cd8458718b9a54edb129739c619f947ac380
+ms.lasthandoff: 12/16/2016
 
 ---
 
@@ -180,7 +181,7 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 
 2. クラウド管理ゲートウェイを使用して管理するクライアントのプライマリ サイトを選択し、**[プロパティ]** を選択します。
 
-3. プライマリ サイトのプロパティ シートの [Client Computer Communications] (クライアント コンピューターの通信方法) タブで、**[使用可能な場合は PKI クライアント証明書 (クライアント認証機能) を使用する]** をオンにします。
+3. プライマリ サイトのプロパティ シートの 「Client Computer Communications」 (クライアント コンピューターの通信方法) タブで、**「使用可能な場合は PKI クライアント証明書 (クライアント認証機能) を使用する」** をオンにします。
 
 4. **[サイト システムの証明書失効リスト (CRL) をチェックする]** がオフになっていることを確認します。 このオプションは、CRL をパブリックに公開した場合にのみ必要になります。
 
@@ -221,9 +222,4 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 ## <a name="next-steps"></a>次のステップ
 
 [クラウド管理ゲートウェイのクライアントの監視](monitor-clients-cloud-management-gateway.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
