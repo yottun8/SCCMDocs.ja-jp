@@ -15,6 +15,7 @@ ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 translationtype: Human Translation
 ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
 ms.openlocfilehash: 179f076f228daa5adf612275a822cd379b0ce1e3
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -111,9 +112,4 @@ ms.openlocfilehash: 179f076f228daa5adf612275a822cd379b0ce1e3
 
 ## <a name="next-steps"></a>次のステップ
 [ソフトウェア更新管理の準備](../get-started/prepare-for-software-updates-management.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
