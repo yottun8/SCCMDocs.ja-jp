@@ -2,7 +2,7 @@
 title: "Intune に登録されたデバイスのポリシーをリモートで同期する | Microsoft Docs"
 description: "Intune に登録されたデバイスのポリシーを Configuration Manager コンソールから同期する方法について説明します"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: dcdccc34fa55ce3d3e4459d209c7aeb74752214b
 ms.openlocfilehash: c6496e9694314f1910ca944f6c083a9f3fd2bf79
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="remotely-synchronize-policy-on-intune-enrolled-devices-from-the-configuration-manager-console"></a>Intune に登録されたデバイスのポリシーを Configuration Manager コンソールからリモートで同期する
@@ -30,14 +31,9 @@ ms.openlocfilehash: c6496e9694314f1910ca944f6c083a9f3fd2bf79
 
 手順は次のとおりです。
 
-1.  **[資産とコンプライアンス]** > **[概要]** > **[デバイス]** で、デバイスを選択します。
-2.  **[リモート デバイスの操作]** メニューの **[同期要求の送信]** をクリックします。
+1.    **[資産とコンプライアンス]** > **[概要]** > **[デバイス]** で、デバイスを選択します。
+2.    **[リモート デバイスの操作]** メニューの **[同期要求の送信]** をクリックします。
 
 
 5 ～ 10 分で、ポリシーのすべての変更がデバイスに同期されます。 同期要求の状態の情報を、デバイス ビューの新しい列 **[Remote Sync State]** (リモート同期の状態)、および各デバイスの **[プロパティ]** ダイアログ ボックスの [探索データ] セクションで、見ることができます。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

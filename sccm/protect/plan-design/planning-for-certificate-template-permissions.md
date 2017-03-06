@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
 ms.openlocfilehash: 3c3725678561c32fce316ed1209ac8fe73a0eed1
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -62,9 +63,4 @@ ms.openlocfilehash: 3c3725678561c32fce316ed1209ac8fe73a0eed1
     -   証明書登録ポイントをホストするサイト システム サーバーで、次の DWORD レジストリ キー値を 1 に設定して作成します。HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SCCM\CRP\SkipTemplateCheckOnlyIfAccountAccessDenied  
 
 3.  発行元 CA の証明書テンプレートのプロパティの [セキュリティ **** ] タブで、ユーザー アカウントまたはデバイス アカウントに読み取りと登録アクセス許可を付与する 1 つまたは複数のセキュリティ グループを追加します。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

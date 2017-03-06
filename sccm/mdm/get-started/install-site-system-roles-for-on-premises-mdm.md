@@ -2,7 +2,7 @@
 title: "オンプレミス MDM の役割のインストール - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager でのオンプレミス モバイル デバイス管理のサイト システムの役割のインストール"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: 916b971f851f968f6534ac834bd3182cc61614aa
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -71,9 +72,4 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
      これにより実際、管理ポイントがデバイス管理ポイントに変換されます。  
 
  最新のデバイスを管理するためのサイト システムの役割を追加して構成したら、管理対象のデバイスを登録して通信するために、信頼されるエンドポイントとしてそれらの役割をホストするサーバーを構成する必要があります。 詳細については、「[System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために信頼された通信用の証明書をセットアップする](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)」を参照してください。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

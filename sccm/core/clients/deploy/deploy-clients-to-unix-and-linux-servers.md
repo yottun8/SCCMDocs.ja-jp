@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 caps.latest.revision: 9
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 0e5f65552045e9cef06f5286b0087153751c79b0
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -237,9 +238,4 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
  Linux および UNIX 用の構成マネージャー クライアントは、クライアントのインストール時にこの管理ポイントに接続します。 クライアントによる管理ポイントへの接続が失敗した場合、クライアント ソフトウェアは成功するまで試行し続けます。  
 
  クライアントが管理ポイントを検出する方法の詳細については、「 [Locating Management Points](../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs)」を参照してください。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

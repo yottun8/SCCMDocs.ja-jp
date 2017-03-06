@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 56e0a1923305c5134386623b1e306b8ebd013d53
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="certificate-infrastructure"></a>証明書インフラストラクチャ
@@ -191,9 +192,4 @@ ms.openlocfilehash: 56e0a1923305c5134386623b1e306b8ebd013d53
  これでネットワーク デバイス登録サービスと依存する要素、証明書登録ポイント、および System Center Configuration Manager ポリシー モジュールをインストールする構成手順が完了しました。証明書プロファイルを作成し、展開することで、証明書をユーザーとデバイスに展開できます。 証明書プロファイルの作成方法の詳細については、「[System Center Configuration Manager で証明書プロファイルを作成する方法](../../protect/deploy-use/create-certificate-profiles.md)」を参照してください。  
 
  System Center Configuration Manager ポリシー モジュールをアンインストールする場合は、コントロール パネルの **[プログラムと機能]** を使用します。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

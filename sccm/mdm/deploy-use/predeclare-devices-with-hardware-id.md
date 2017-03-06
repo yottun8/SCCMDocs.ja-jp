@@ -2,7 +2,7 @@
 title: "IMEI または iOS シリアル番号によるデバイスの事前宣言 | Microsoft Docs"
 description: "IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言"
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 03/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 0fd410a6572acce685dc6cdb954c1c2d97d5ed8b
 ms.openlocfilehash: 2aa9c8c65904e573b6a81ac865e09d1cf2458509
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>IMEI または iOS シリアル番号を持つデバイスの事前宣言
@@ -28,17 +29,17 @@ ms.openlocfilehash: 2aa9c8c65904e573b6a81ac865e09d1cf2458509
 
 ## <a name="how-to-predeclare-corporate-owned-devices"></a>会社所有のデバイスを事前宣言する方法
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[概要]** > **[会社が所有しているすべてのデバイス]** > **[事前に宣言されたデバイス]** の順にクリックします。
+1.    Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[概要]** > **[会社が所有しているすべてのデバイス]** > **[事前に宣言されたデバイス]** の順にクリックします。
 
 2.  **[事前に宣言されたデバイスを作成します]** をクリックします。 事前に宣言されたデバイスを作成しますウィザードが開きます。
 
-3.  デバイス情報を追加する方法を選択します。
+3.    デバイス情報を追加する方法を選択します。
 
-     -  **IMEI またはシリアル番号と詳細を含む CSV ファイルをアップロードする**
+     -    **IMEI またはシリアル番号と詳細を含む CSV ファイルをアップロードする**
 
         このオプションでは、**[参照]** をクリックして情報を含む .csv ファイルを指定し、会社所有のデバイスを事前に宣言します。 .csv ファイルの形式は正しく指定する必要があります。 詳細については、「[アップロードする .csv ファイルの形式](#format-for-uploading-csv-files)」を参照してください。
 
-     -  **IMEI またはシリアル番号と詳細を手動で追加する**
+     -    **IMEI またはシリアル番号と詳細を手動で追加する**
 
         情報を手動で入力するには、IMEI 番号または iOS シリアル番号とデバイスの詳細を入力します。 エラーや警告を修正してから続行してください。
 
@@ -63,10 +64,10 @@ IMEI またはシリアル番号でデバイスを識別するために使用す
 | IMEI #  | iOS シリアル #  | OS | 説明 |
 |------------ |---------------|-----|-----|
 | 123456789012345    |   | WINDOWS | 会社所有の Windows デバイス|
-|   | A1B2C3D4E5C6 | IOS |  会社所有の iOS デバイス|
-| 223456789012345 | E6D5C4B3A210 |   IOS |  その他の iOS デバイス|
-| 323456789012345 |        |   IOS |    3 番目の iOS デバイス|
-| 123456789012346 |         |   ANDROID |   会社所有の Android デバイス|
+|   | A1B2C3D4E5C6 | IOS |     会社所有の iOS デバイス|
+| 223456789012345 | E6D5C4B3A210 |   IOS |     その他の iOS デバイス|
+| 323456789012345 |        |   IOS |     3 番目の iOS デバイス|
+| 123456789012346 |         |   ANDROID |     会社所有の Android デバイス|
 
 .csv ファイルにヘッダー行を含めないでください。 次に、CSV 形式の同じサンプル データの例を示します。
 
@@ -83,9 +84,4 @@ IMEI またはシリアル番号でデバイスを識別するために使用す
 | 列 1 | 列 2 | 列 3 | 列 4 |
 |---|---|---|---|
 |スペースなしの IMEI 番号 | iOS シリアル番号 | IOS、WINDOWS、または ANDROID | (省略可能) デバイスの詳細 (1,024 文字以内) |
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

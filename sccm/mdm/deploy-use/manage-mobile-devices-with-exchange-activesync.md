@@ -2,7 +2,7 @@
 title: "モバイル デバイスの管理 | Microsoft Docs"
 description: "System Center Configuration Manager で Exchange Server コネクタを使用してモバイル デバイスを管理します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
 ms.openlocfilehash: 4a2b60d893e8d430b107a5bc43ec0748177c27c3
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -135,9 +136,4 @@ Microsoft Exchange ActiveSync プロトコルを使って Exchange Server (社�
     -   サイト コンポーネント マネージャーが Exchange Server コネクタに正常にインストールされたことを確認するには、 **SMS_EXCHANGE_CONNECTOR** コンポーネントのステータス ID **1015** を探します。 Configuration Manager がコネクタを正常にインストールできない場合 (たとえば、指定したクライアント アクセス サーバーのコンピューターがオフラインであるため)、インストールが成功するか Exchange Server コネクタを削除するまで、Configuration Manager は 60 分ごとにインストールを再試行します。  
 
     -   サイト サーバー コンピューターにある SiteComp.log ファイルを見つけ、そのファイル内で「 `Component SMS_EXCHANGE_CONNECTOR flagged for installation`」というメッセージを探します。 インストールが正常に完了していると、「 `STATMSG: ID=1015`」という値が付いているはずです。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

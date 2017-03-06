@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 caps.latest.revision: 7
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
 ms.openlocfilehash: d51670b47aab77cc4e630a6aeaa0744f916bf3b9
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -99,9 +100,4 @@ System Center Configuration Manager の典型的なシナリオとして、接�
 -   デバイスが System Center Configuration Manager の階層からブロックされた場合。  
 
  証明書を失効させるために、サイト サーバーが、証明書の発行元の証明機関に失効コマンドを送信します。 この失効の理由は、「運用停止」です。 ****  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

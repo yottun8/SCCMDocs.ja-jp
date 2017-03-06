@@ -1,5 +1,5 @@
 ---
-title: "クライアントをアップグレードする - Configuration Manager | Microsoft Docs"
+title: "クライアントのアップグレード | Microsoft Docs"
 description: "System Center Configuration Manager でクライアントをアップグレードする方法について説明します。"
 ms.custom: na
 ms.date: 01/01/2017
@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 446c83b5-c292-4e74-ba19-0792ac6b3472
 caps.latest.revision: 8
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: 56a3ec8ddfaaa233b41347da0ff853fdf92c275c
+ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
+ms.openlocfilehash: f369bccb1da6d428fb321455272190e1a0439ec3
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -149,9 +150,4 @@ Windows コンピューター、UNIX/Linux サーバー、および Mac コン�
 -   クライアント ソフトウェアのアップグレードにのみ使用できます。新しいクライアントのインストールには使用できません。  
 
  [System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストする方法](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

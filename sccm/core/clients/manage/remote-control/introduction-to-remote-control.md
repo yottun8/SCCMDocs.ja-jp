@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 29350919-6a25-446b-a0da-05e8914fbb26
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
 ms.openlocfilehash: 47bfeec5bd5d9b843e9064560d0cd0b14bd7d6a1
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -37,9 +38,4 @@ ms.openlocfilehash: 47bfeec5bd5d9b843e9064560d0cd0b14bd7d6a1
 > -   Configuration Manager コンソールを実行するコンピューターは Windows XP Service Pack 3 を実行しているが、ホスト コンピューターは Windows XP Service Pack 3 を実行していない。 詳細については、Windows リモート アシスタンスのドキュメントを参照してください。  
 
  Configuration Manager コンソールの任意のデバイス コレクション、Windows コマンド プロンプト ウィンドウ、または Windows の **[スタート]** メニューから、リモート コントロール セッションを開始できます。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

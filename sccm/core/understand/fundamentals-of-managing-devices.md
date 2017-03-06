@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bca3db9-115a-451d-8c93-f073ceefe0c7
 caps.latest.revision: 6
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a71e37060937f40bcb1bdb1c6165b7799fc72675
 ms.openlocfilehash: a9847e67ab1935fb66824945637ff683c006bdbe
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -99,9 +100,4 @@ Configuration Manager クライアント ソフトウェアを使用してデバ
  **ソフトウェア センター**内のリンクを使用すると、ユーザーは**アプリケーション カタログ**に接続して、ソフトウェアの参照、インストール、および要求を行えます。 また**アプリケーション カタログ**により、優先設定を構成したり、モバイル デバイスをワイプしたり、設定されている場合はユーザーとデバイスのアフィニティのプライマリ デバイスを指定したりできます。   
 
  ユーザーはまた、ブラウザーのイントラネットまたはインターネット セッションを通して**アプリケーション カタログ**にアクセスすることができます。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

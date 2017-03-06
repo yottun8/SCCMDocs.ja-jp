@@ -2,7 +2,7 @@
 title: "iOS のアクティベーション ロックの管理 | Microsoft Docs"
 description: "System Center Configuration Manager を使用して iOS のアクティベーション ロックを管理します。"
 ms.custom: na
-ms.date: 12/15/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a25c6b409ea6501ead762fabb8cc11c62c84885d
 ms.openlocfilehash: cf98bbb9dee6142e8b085dbffcadb3ed712adcb9
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -104,9 +105,4 @@ Configuration Manager のコンプライアンス設定を使用して、 **iOS 
     - デバイスのプロパティ ダイアログ ボックスで、デバイスの検出データを確認する。
     - **[デバイス]** ビューの **[アクティブ化ロック バイパスの状態]** 列 (既定でこの列は非表示) で確認する。
     - 詳細ウィンドウの **[概要]** タブにある **[リモート デバイスの操作に関する情報]** セクション (デバイスが選ばれている状態) で確認する。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
 caps.latest.revision: 6
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 12ee719a6a8b072fab27d083aeb2b8439484058d
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="plan-how-to-wake-up-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアントをウェイク アップする方法を計画します
@@ -96,9 +97,4 @@ ms.openlocfilehash: 12ee719a6a8b072fab27d083aeb2b8439484058d
 
 > [!WARNING]  
 >  サブネット向けブロードキャストを使用するときは、セキュリティ上のリスクを伴うことに注意してください。攻撃者は、偽のソース アドレスからブロードキャスト アドレスに ICMP (Internet Control Message Protocol) エコー要求の連続ストリームを送信することが可能です。これにより、すべてのホストがそのソース アドレスに応答することになります。 この種のサービス拒否攻撃のことをスマーフ攻撃といいます。通常、サブネット向けブロードキャストを有効にしないことで防止できます。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -2,7 +2,7 @@
 title: "Apple Configurator による iOS デバイスの登録 - Configuration Manager | Microsoft Docs"
 descriptions: Pre-enroll iOS devices by using Apple Configurator with Configuration Manager.
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
 ms.openlocfilehash: 6c6e9edbc7b2fca3d1be4feabb238efab80465fa
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -136,9 +137,4 @@ ms.openlocfilehash: 6c6e9edbc7b2fca3d1be4feabb238efab80465fa
 ## <a name="step-5-distribute-devices"></a>ステップ 5: デバイスを配布する
 
 これで、デバイスを企業登録できるようになりました。 デバイスの電源を切り、ユーザーにデバイスを配布します。 デバイスの電源をオンにすると、セットアップ アシスタントが起動して、登録を開始する会社や学校のアカウントをユーザーに確認するプロンプトが表示されます。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 948664f2-239d-47a8-92fc-f8efeebd5796
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
 ms.openlocfilehash: 7a5ff0e75b8cdac68e3854c4f5aba01a7d423e9b
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -79,9 +80,4 @@ System Center Configuration Manager で Linux および UNIX サーバーを管�
 |importPFX|このオプションを使用すると、証明書を指定して、クライアントが現在使用している証明書と置き換えることができます。<br /><br /> **-importPFX** を使用する場合は、**-password** コマンド ライン パラメーターを使って、PKCS#12 ファイルに関連付けられているパスワードを指定する必要もあります。<br /><br /> 追加のルート証明書の要件を指定するには、 **-rootcerts** を使用します。<br /><br /> 例: **certutil -importPFX &lt;Path to the PKCS#12 certificate> -password &lt;Certificate password\> [-rootcerts &lt;証明書のコンマ区切りの一覧>]**|  
 |-importsitecert|このオプションを使用すると、管理サーバー上にあるサイト サーバー署名証明書を更新できます。<br /><br /> 例: **certutil -importsitecert &lt;DER 証明書のパス\>**|  
 |-importcrl|このオプションを使用すると、1 つ以上の CRL ファイル パスを指定してクライアント上の CRL を更新できます。<br /><br /> 例: **certutil -importcrl &lt;CRL ファイル パスのコンマ区切りの一覧\>**|  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

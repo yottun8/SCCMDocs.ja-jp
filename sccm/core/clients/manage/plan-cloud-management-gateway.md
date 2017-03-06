@@ -6,12 +6,13 @@ ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 1df2d8bcd73633ac1d37cc3ef31343be9c5bc95d
 ms.openlocfilehash: 6e2895565e868eb80a8f4f4b46b8a28eb4961e28
+ms.lasthandoff: 12/19/2016
 
 ---
 
@@ -94,9 +95,4 @@ Configuration Manager コンソールを使って、Azure にサービスを展�
 ## <a name="next-steps"></a>次のステップ
 
 [Set up cloud management gateway](setup-cloud-management-gateway.md) (クラウド管理ゲートウェイの設定)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

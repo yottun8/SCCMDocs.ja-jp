@@ -2,7 +2,7 @@
 title: "オンプレミス MDM の計画 | Microsoft Docs"
 description: "System Center Configuration Manager でモバイル デバイスを管理するために、オンプレミス モバイル デバイス管理を計画します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: cec595d473ca2459e43a7fa1c70b7668a8a48986
 ms.openlocfilehash: d529a058968cf99dce77997844b33ff5dc7c0004
+ms.lasthandoff: 01/21/2017
 
 
 ---
@@ -119,9 +120,4 @@ Configuration Manager のインフラストラクチャでオンプレミス モ
 -   [System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のデバイス登録の設定](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
 
 -   [System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスの登録](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)  
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

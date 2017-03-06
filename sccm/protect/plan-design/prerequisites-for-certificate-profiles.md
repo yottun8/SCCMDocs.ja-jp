@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
 caps.latest.revision: 9
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
 ms.openlocfilehash: 08fb30da2060728142648f13846be737f98f2276
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -46,9 +47,4 @@ System Center Configuration Manager (ConfigMgr、SCCM とも呼ばれます) の
 |System Center Configuration Manager ポリシー モジュールが、Active Directory 証明書サービス用のネットワーク デバイス登録サービスの役割サービスを実行するサーバーにインストールされていること|証明書プロファイルを展開するには、System Center Configuration Manager ポリシー モジュールをインストールする必要があります。 このポリシー モジュールは、System Center Configuration Manager インストール メディアに収録されています。|  
 |探索データ|証明書のサブジェクトとサブジェクトの別名の値は System Center Configuration Manager によって供給され、検出によって収集された情報から取得されます。<br /><br /> ユーザー証明書: Active Directory ユーザー探索<br /><br /> コンピューター証明書: Active Directory システム探索とネットワーク探索|  
 |証明書プロファイルを管理するためのセキュリティのアクセス許可|証明書プロファイル、Wi-Fi プロファイル、VPN プロファイルなど、会社のリソースへのアクセスの設定を管理するには、以下のセキュリティ アクセス許可を持っている必要があります。<br /><br /> 証明書のアラートとレポートを表示して管理する場合: **アラート**オブジェクトに対する **作成**、 **削除**、 **変更**、 **レポートの変更**、 **読み取り** 、 **レポートの実行** 。<br /><br /> 証明書プロファイルを作成して管理する場合: **証明書プロファイル**オブジェクトに対する **作成者ポリシー**、 **レポートの変更** 、 **読み取り** 、 **レポートの実行** 。<br /><br /> Wi-Fi プロファイル、証明書プロファイル、および VPN プロファイルの展開を管理する場合: **コレクション**オブジェクトに対する **構成ポリシーの展開**、 **クライアント ステータス アラートの変更**、 **読み取り** 、 **リソースの読み取り** 。<br /><br /> すべての構成ポリシーを管理する場合: **構成のポリシー**オブジェクトに対する **作成**、 **削除**、 **変更** 、 **読み取り** 、 **セキュリティ スコープの設定** 。<br /><br /> 証明書プロファイルに関連するクエリを実行する場合: **クエリ** オブジェクトの **読み取り** 。<br /><br /> System Center Configuration Manager コンソールで証明書プロファイル情報を表示する場合: **サイト** オブジェクトの **読み取り** アクセス許可。<br /><br /> 証明書プロファイルのステータス メッセージを表示する場合: **ステータス メッセージ** オブジェクトの **読み取り** アクセス許可。<br /><br /> 信頼された証明機関証明書プロファイルを作成および変更する場合: **信頼された証明機関証明書プロファイル**オブジェクトに対する **作成者ポリシー**、 **レポートの変更** 、 **読み取り** 、 **レポートの実行** 。<br /><br /> VPN プロファイルを作成して管理する場合: **VPN プロファイル**オブジェクトに対する **作成者ポリシー**、 **レポートの変更** 、 **読み取り** 、 **レポートの実行** 。<br /><br /> Wi-Fi プロファイルを作成して管理する場合: **Wi-Fi プロファイル**オブジェクトに対する **作成者ポリシー**、 **レポートの変更** 、 **読み取り** 、 **レポートの実行** 。<br /><br /> **[会社リソース アクセス マネージャー]** セキュリティ ロールには、System Center Configuration Manager で証明書プロファイルを管理するのに必要な上記のアクセス許可が付与されています。 詳細については、「 **Configure role-based administration** 」トピックの「 [Configure security in System Center Configuration Manager](../../core/plan-design/security/configure-security.md) 」セクションを参照してください。|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

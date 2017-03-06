@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
 ms.openlocfilehash: a7d5a04cf34c49246f768f9a4757c5da3b4db31a
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -145,9 +146,4 @@ Configuration Manager (ConfigMgr または SCCM とも呼ばれています) ク
 -   [System Center Configuration Manager で UNIX および Linux サーバーにクライアントを展開する方法](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md)  
 
 -   [System Center Configuration Manager で Mac にクライアントを展開する方法](../../../../core/clients/deploy/deploy-clients-to-macs.md)  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

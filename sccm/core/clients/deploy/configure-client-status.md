@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 22cc286baa72d3e356a07b91ee0a1be646fa8a9e
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -112,9 +113,4 @@ monitor System Center Configuration Manager クライアント ステータス�
 4.  レジストリ エディターを閉じます。  
 
  CCMSetup の NotifyOnly インストール プロパティを使用してクライアントをインストールしても、自動修復から除外することができます。 **** クライアント インストールのプロパティの詳細については、「[System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

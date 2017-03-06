@@ -5,7 +5,7 @@ keywords:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -15,6 +15,7 @@ ms.assetid: 756694f3-4d62-4463-9334-a21991c30ba3
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 7a7b64a187d66f0dc965fe3568dd14004b2d090e
+ms.lasthandoff: 12/16/2016
 
 ---
 
@@ -28,9 +29,4 @@ System Center Configuration Manager を使用して、さまざまな方法で�
 - [オンプレミス モバイル デバイス管理](enroll-devices-on-premises-mdm.md)
 - [管理対象デバイスのインベントリからの削除、ロック、およびリセット](wipe-lock-reset-devices.md)
 - [Exchange ActiveSync による管理](manage-mobile-devices-with-exchange-activesync.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -2,7 +2,7 @@
 title: "ハイブリッド MDM の新機能のアーカイブ | Microsoft Docs"
 description: "System Center Configuration Manager と Intune のハイブリッド展開で使用できる過去のモバイル デバイス管理機能のアーカイブです。"
 ms.custom: na
-ms.date: 10/25/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ ROBOTS: NOINDEX, NOFOLLOW
 translationtype: Human Translation
 ms.sourcegitcommit: bd870d66bb1a482cb5985f1fc0fe66a7dee206eb
 ms.openlocfilehash: d286b038c900873154d3a0761aa1eaface47e186
+ms.lasthandoff: 01/14/2017
 
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune での過去のハイブリッド機能
@@ -44,7 +45,7 @@ ms.openlocfilehash: d286b038c900873154d3a0761aa1eaface47e186
 
   Outlook など、Intune モバイル アプリケーション管理ポリシーをサポートするアプリからのアクセスのみを許可するように、Exchange Online へのアクセスを制限することができます。 [この新機能](/intune/deploy-use/allow-policy-managed-apps-access-to-o365)は、組み込みのメール クライアントや Intune MAM ポリシーが構成されていない他のアプリへのアクセスをブロックできるため、Intune のモバイル アプリ管理 (MAM) ポリシーと組み合わせると効果的です。 これにより、ユーザーが組織のデータにアクセスする際に、Intune MAM を使用して保護できるアプリを使用するようになります。 Intune モバイル アプリ管理は、Azure Portal から使用することができます。 [設定] ブレードの新しい [条件付きアクセス] セクションを探してください。
 
--   **Android 用 Intune アプリ ラッピング ツール**
+-    **Android 用 Intune アプリ ラッピング ツール**
 
   アプリで Intune モバイル アプリケーション管理 (MAM) ポリシーを使用できるようにするには、Intune アプリ ラッピング ツールを使用します。
 
@@ -55,10 +56,10 @@ ms.openlocfilehash: d286b038c900873154d3a0761aa1eaface47e186
   この影響を受けるモデル番号は次のとおりです。
 
   - SM-G313HU
-  - SM-G313HY
-  - SM-G313M
-  - SM-G313MY
-  - SM-G313U
+  -    SM-G313HY
+  -    SM-G313M
+  -    SM-G313MY
+  -    SM-G313U
 
   管理者とエンドユーザーは、これ以上操作を行う必要はありません。 詳細については、Samsung KNOX の Web サイトを参照してください。
 
@@ -212,14 +213,14 @@ ms.openlocfilehash: d286b038c900873154d3a0761aa1eaface47e186
 Configuration Manager Technical Preview リリースで以前提供されていた次の機能は、Intune と Configuration Manager (現在のブランチ) バージョン 1606 のハイブリッド展開で使用できるようになりました。
 
 * Configuration Manager コンソールから Windows 10 デバイスに対してビジネス向け Windows ストアのアプリを検索、管理、配布する ([1604](#new-in-1604-technical-preview))
-*   Android デバイス用の SmartLock 設定 ([1604](#new-in-1604-technical-preview))
-*   Windows 10 デバイス用のアプリトリガー VPN ([1605](#new-in-1605-technical-preview))
-*   リモート デバイスの操作の新しいエクスペリエンス ([1605](#new-in-1605-technical-preview))
-*   ビジネス向け Windows ストアのアプリ ([1605](#new-in-1605-technical-preview))
-*   ボリューム購入アプリの全般的な向上 ([1605](#new-in-1605-technical-preview))
-*   Windows 情報保護 (WIP) ([1605](#new-in-1605-technical-preview))
-*   IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言 ([1605](#new-in-1605-technical-preview))
-*   デバイスを自動的にコレクションごとに分類 ([1606](#new-in-1606-technical-preview))
+*     Android デバイス用の SmartLock 設定 ([1604](#new-in-1604-technical-preview))
+*    Windows 10 デバイス用のアプリトリガー VPN ([1605](#new-in-1605-technical-preview))
+*    リモート デバイスの操作の新しいエクスペリエンス ([1605](#new-in-1605-technical-preview))
+*    ビジネス向け Windows ストアのアプリ ([1605](#new-in-1605-technical-preview))
+*    ボリューム購入アプリの全般的な向上 ([1605](#new-in-1605-technical-preview))
+*    Windows 情報保護 (WIP) ([1605](#new-in-1605-technical-preview))
+*    IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言 ([1605](#new-in-1605-technical-preview))
+*    デバイスを自動的にコレクションごとに分類 ([1606](#new-in-1606-technical-preview))
 
 新機能については、特定の Technical Preview リリースに関するドキュメントを参照してください。
 
@@ -479,9 +480,4 @@ Configuration Manager Technical Preview リリースで以前提供されてい�
 - **iOS のアクティベーション ロック**
 
   Configuration Manager (現在のブランチ) バージョン 1602 以降では、iOS 7.1 以降用の「iPhone を探す」アプリの機能である、iOS のアクティベーション ロックを管理できます。 iPhone を探すアプリをデバイスで使用すると、アクティブ化ロックが自動的に有効になります。  詳細については、「[Manage iOS Activation Lock bypass for System Center Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock#bypass-activation-lock)」 (System Center Configuration Manager での iOS のアクティベーション ロック バイパスの管理) を参照してください。  
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

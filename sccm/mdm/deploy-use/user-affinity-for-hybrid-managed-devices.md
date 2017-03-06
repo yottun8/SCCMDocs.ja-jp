@@ -2,7 +2,7 @@
 title: "Configuration Manager でのハイブリッド管理のデバイス向けユーザー アフィニティ | Microsoft Docs"
 description: "Configuration Manager で管理対象デバイスのユーザー アフィニティを構成します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 74dcc0f4e680893db804956615248b7e1230d2b5
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="user-affinity-for-hybrid-managed-devices-in-configuration-manager"></a>Configuration Manager でのハイブリッド管理のデバイス向けユーザー アフィニティ
@@ -53,9 +54,4 @@ ms.openlocfilehash: 74dcc0f4e680893db804956615248b7e1230d2b5
 
 ##  <a name="a-namebkmknouaa-managed-devices-without-user-affinity"></a><a name="BKMK_noUA"></a> ユーザー アフィニティなしの管理対象デバイス  
  **ユーザー アフィニティなし**で構成されているデバイスは、会社ポータルをサポートしませんので、アプリをインストールしないでください。 会社ポータルは、会社の資格情報を持ち、カスタマイズされた企業リソース (電子メールなど) へのアクセスを必要とするユーザー向けです。 **ユーザー アフィニティなし** で登録されたデバイスは、専用ユーザー サインインのためのデバイスではありません。 キオスク、販売時点管理 (POS)、または共有ユーティリティ デバイスは、ユーザー アフィニティなしで登録されたデバイスの一般的なユース ケースです。 ユーザー アフィニティが必要な場合は、デバイスの登録プロファイルで **[ユーザー アフィニティ]** が選択されていることを確認してから、デバイスを登録します。 デバイスのアフィニティ ステータスを変更するには、デバイスをインベントリから削除してから再登録する必要があります。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

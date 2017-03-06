@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c63dcc5-a1bd-4037-959a-2e6ba0fd1b2c
 caps.latest.revision: 6
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 0f76ed3dd74a80d9e22cfa743e5aa484f6cd7d97
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -281,9 +282,4 @@ System Center Configuration Manager では、署名と暗号化を使用して�
 
 ##  <a name="about-ssl-vulnerabilities"></a>SSL の脆弱性について  
  Microsoft では、Configuration Manager サーバーのセキュリティを向上させるため、SSL 3.0 の無効化、TLS 1.1 と 1.2 の有効化、TLS 関連の暗号スイートの並べ替えを実行することを推奨しています。 [このサポート技術情報の記事](https://support.microsoft.com/en-us/kb/245030/)では、これらの操作方法について説明しています。 この操作は、Configuration Manager の機能には影響しません。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
