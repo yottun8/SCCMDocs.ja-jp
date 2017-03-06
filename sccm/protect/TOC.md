@@ -31,7 +31,6 @@
 
 ## [証明書プロファイル](deploy-use/introduction-to-certificate-profiles.md)
 ### [証明書プロファイルの作成](deploy-use/create-certificate-profiles.md)
-### [PFX 証明書プロファイルの作成](deploy-use/create-pfx-certificate-profiles.md)
 ### [証明書インフラストラクチャの構成](deploy-use/certificate-infrastructure.md)
 ### [暗号化コントロールのテクニカル リファレンス](deploy-use/cryptographic-controls-technical-reference.md)
 
@@ -56,25 +55,7 @@
 ### [Endpoint Protection クライアント ヘルプ](deploy-use/endpoint-protection-client-help.md)
 ### [クライアントのトラブルシューティング](deploy-use/troubleshoot-endpoint-client.md)
 
-## [電子メール プロファイル](deploy-use/introduction-to-email-profiles.md)
-### [電子メール プロファイルの作成](deploy-use/create-exchange-activesync-profiles.md)
-### [、VPN、電子メール、および証明書プロファイルの展開](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
-
-## [サービスへのアクセスの管理](deploy-use/manage-access-to-services.md)
-### [デバイス コンプライアンス ポリシー](deploy-use/device-compliance-policies.md)
-### [デバイス コンプライアンス ポリシーを作成する](deploy-use/create-compliance-policy.md)
-### [電子メールへのアクセスの管理](deploy-use/manage-email-access.md)
-### [SharePoint Online アクセスの管理](deploy-use/manage-sharepoint-online-access.md)
-### [Skype for Business Online のアクセスの管理](deploy-use/manage-skype-for-business-online-access.md)
-### [Dynamics CRM Online アクセスの管理](deploy-use/manage-dynamics-crm-online-access.md)
-### [O365 サービスへの PC アクセスの管理](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
-## [Manage access based on device, network, and application risk](deploy-use/configuration-manager-mobile-threat-defense.md) (デバイス、ネットワーク、アプリケーションのリスクに基づいたアクセスの管理)
-### [Configuration Manager の Lookout](deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md)
-#### [Set up Lookout device threat protection](deploy-use/set-up-your-subscription-with-lookout.md) (Lookout デバイス脅威保護の設定)
-#### [Enable Lookout in Intune](deploy-use/enable-lookout-connection-in-intune.md) (Intune で Lookout を有効にする)
-#### [Deploy Lookout for Work apps](deploy-use/configure-and-deploy-lookout-for-work-apps.md) (Lookout for Work アプリを展開する)
-#### [Enable device threat protection policy](deploy-use/enable-device-threat-protection-rule-compliance-policy.md) (デバイスの脅威保護ポリシーを有効にする)
-#### [Troubleshoot Lookout integration](deploy-use/troubleshoot-lookout-integration.md) (Lookout 統合のトラブルシューティング)
+## [、VPN、電子メール、および証明書プロファイルの展開](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
 
 ## [Windows Hello for Business の設定](deploy-use/windows-hello-for-business-settings.md)
 
