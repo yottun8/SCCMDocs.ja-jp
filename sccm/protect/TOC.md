@@ -36,7 +36,7 @@
 ### [暗号化コントロールのテクニカル リファレンス](deploy-use/cryptographic-controls-technical-reference.md)
 
 ## [Endpoint Protection](deploy-use/endpoint-protection.md)
-### [Endpoint Protection の構成](deploy-use/configure-endpoint-protection.md)
+### [Endpoint Protection の構成](deploy-use/endpoint-protection-configure.md)
 #### [サイト システムの役割](deploy-use/endpoint-protection-site-role.md)
 #### [警告](deploy-use/endpoint-configure-alerts.md)
 #### [定義の更新](deploy-use/endpoint-definition-updates.md)
@@ -68,12 +68,13 @@
 ### [Skype for Business Online のアクセスの管理](deploy-use/manage-skype-for-business-online-access.md)
 ### [Dynamics CRM Online アクセスの管理](deploy-use/manage-dynamics-crm-online-access.md)
 ### [O365 サービスへの PC アクセスの管理](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
-## [Manage access based on device, network, and application risk](deploy-use/manage-access-based-on-device-network-app-risk.md) (デバイス、ネットワーク、アプリケーションのリスクに基づいたアクセスの管理)
-### [Set up Lookout device threat protection](deploy-use/set-up-your-subscription-with-lookout.md) (Lookout デバイス脅威保護の設定)
-### [Enable Lookout in Intune](deploy-use/enable-lookout-connection-in-intune.md) (Intune で Lookout を有効にする)
-### [Deploy Lookout for Work apps](deploy-use/configure-and-deploy-lookout-for-work-apps.md) (Lookout for Work アプリを展開する)
-### [Enable device threat protection policy](deploy-use/enable-device-threat-protection-rule-compliance-policy.md) (デバイスの脅威保護ポリシーを有効にする)
-### [Troubleshoot Lookout integration](deploy-use/troubleshoot-lookout-integration.md) (Lookout 統合のトラブルシューティング)
+## [Manage access based on device, network, and application risk](deploy-use/configuration-manager-mobile-threat-defense.md) (デバイス、ネットワーク、アプリケーションのリスクに基づいたアクセスの管理)
+### [Configuration Manager の Lookout](deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md)
+#### [Set up Lookout device threat protection](deploy-use/set-up-your-subscription-with-lookout.md) (Lookout デバイス脅威保護の設定)
+#### [Enable Lookout in Intune](deploy-use/enable-lookout-connection-in-intune.md) (Intune で Lookout を有効にする)
+#### [Deploy Lookout for Work apps](deploy-use/configure-and-deploy-lookout-for-work-apps.md) (Lookout for Work アプリを展開する)
+#### [Enable device threat protection policy](deploy-use/enable-device-threat-protection-rule-compliance-policy.md) (デバイスの脅威保護ポリシーを有効にする)
+#### [Troubleshoot Lookout integration](deploy-use/troubleshoot-lookout-integration.md) (Lookout 統合のトラブルシューティング)
 
 ## [Windows Hello for Business の設定](deploy-use/windows-hello-for-business-settings.md)
 
@@ -83,8 +84,3 @@
 ### [Wi-Fi、電子メール、VPN プロファイルの監視](deploy-use/monitor-wifi-email-vpn-profiles.md)
 ### [証明書プロファイルの監視](deploy-use/monitor-certificate-profiles.md)
 ### [Endpoint Protection の監視](deploy-use/monitor-endpoint-protection.md)
-
-
-<!--HONumber=Dec16_HO3-->
-
-
