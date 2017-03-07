@@ -120,8 +120,7 @@
 #### [移行の監視の計画](migration/planning-to-monitor-migration-activity.md)
 #### [移行完了の計画](migration/planning-to-complete-migration.md)
 ###  [ソース階層とソース サイトを構成する](migration/configuring-source-hierarchies-and-source-sites-for-migration.md)
-###  [移行の操作](migration/operations-for-migration.md)
-###  [移行のセキュリティとプライバシー](migration/security-and-privacy-for-migration.md)
+###  [移行するための操作](migration/operations-for-migration.md)###  [移行のセキュリティとプライバシー](migration/security-and-privacy-for-migration.md)
 
 #    [サーバーおよび役割の展開](servers/deploy/start-using.md)
 
@@ -172,14 +171,20 @@
 ###  [コンソール内の更新プログラムのインストール](servers/manage/install-in-console-updates.md)
 #### [フローチャート - 更新プログラムのダウンロード](servers/manage/download-updates-flowchart.md)
 #### [フローチャート - レプリケーションの更新](servers/manage/update-replication-flowchart.md)
+###  [プレリリース機能](servers/manage/pre-release-features.md)
 ###  [サイト サーバーのサービス ウィンドウ](servers/manage/service-windows.md)
 ###  [サービス接続ツールの使用](servers/manage/use-the-service-connection-tool.md)
 ###  [更新登録ツールの使用](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [修正プログラム インストーラーの使用](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+<!-- 
+###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
+-->
 ###  [1610 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1610.md)
 ###  [1606 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1606.md)
-###  [1602 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1602.md)
-###  [Current Branch バージョンのサポート](servers/manage/current-branch-versions-supported.md)
+<!-- Deprecated from Content:
+###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
+###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
+-->
 
 ##   監視インフラストラクチャ
 ###  [アラートとステータス システムの使用](servers/manage/use-alerts-and-the-status-system.md)
@@ -202,6 +207,7 @@
 #### [レポートの操作とメンテナンス](servers/manage/operations-and-maintenance-for-reporting.md)
 #### [カスタム レポート モデルの作成](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [レポートのセキュリティとプライバシー](servers/manage/security-and-privacy-for-reporting.md)
+###  [データ ウェアハウス](servers/manage/data-warehouse.md)
 
 #    クライアントの展開
 ##   クライアント展開の計画
@@ -260,7 +266,6 @@
 ###  [ハードウェア インベントリの概要](clients/manage/inventory/introduction-to-hardware-inventory.md)
 ###  [ハードウェア インベントリを拡張する方法](clients/manage/inventory/extend-hardware-inventory.md)
 ###  [ハードウェア インベントリを構成する方法](clients/manage/inventory/configure-hardware-inventory.md)
-###  [ハイブリッド展開でモバイル デバイスのハードウェア インベントリを構成する方法](clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md)
 ###  [リソース エクスプローラーを使用してハードウェア インベントリを表示する方法](clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)
 ###  [Linux および UNIX のハードウェア インベントリ](clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)
 ###  [ハードウェア インベントリのセキュリティとプライバシー](clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)
