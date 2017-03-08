@@ -1,6 +1,6 @@
 ---
 
-title: "同期させる分類と製品を構成する | System Center Configuration Manager"
+title: "同期する分類と製品の構成 | Microsoft Docs"
 description: "Configuration Manager コンソールで次の手順を利用し、同期させる分類と製品を構成します。"
 keywords: 
 author: dougeby
@@ -14,8 +14,9 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 46cf461c92348e1a90533518355f2b5982ae5770
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 6add66e625c790b65edf64216c2262a5d082f820
+ms.lasthandoff: 12/16/2016
 
 
 
@@ -68,9 +69,4 @@ ms.openlocfilehash: 46cf461c92348e1a90533518355f2b5982ae5770
 
 ## <a name="next-steps"></a>次のステップ
 ソフトウェア更新プログラムの同期を開始し、新しい基準でソフトウェア更新プログラムを取得します。 詳細については、「[ソフトウェア更新プログラムの同期](synchronize-software-updates.md)」を参照してください。
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

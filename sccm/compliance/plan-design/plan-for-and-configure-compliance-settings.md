@@ -1,5 +1,5 @@
 ---
-title: "コンプライアンス設定の計画と構成 | System Center Configuration Manager"
+title: "コンプライアンス設定の計画と構成 | Microsoft Docs"
 description: "System Center Configuration Manager でコンプライアンス設定を行う場合の前提条件と構成タスクについて説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 43bbbacfcd0e873974c517f1cb870ebc4d5e003d
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: d26ac3de58d2f0ef447725e63fc2d8adda6ea06c
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -52,9 +53,4 @@ System Center Configuration Manager のコンプライアンス設定に取り�
 5. [OK] **** をクリックして [既定の設定] **** ダイアログ ボックスを閉じます。  
 
 クライアント コンピューターは、次にクライアント ポリシーをダウンロードするときに、これらの設定で構成されます。  
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 
