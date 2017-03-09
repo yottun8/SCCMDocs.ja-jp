@@ -2,7 +2,7 @@
 title: "オンプレミス MDM の対象となるデバイスをユーザーが登録する方法 - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスをユーザーが登録する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: 43a30709473939829d82d822503537d448159a1c
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 7d852843d0d3fe7c9ab0947c4b396cee0a92c754
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -45,7 +46,7 @@ System Center Configuration Manager オンプレミス モバイル デバイス
 
 -   [デバイス登録の確認](#bkmk_verify)  
 
-##  <a name="a-namebkmkenrolldeska-enroll-a-windows-10-computer"></a><a name="bkmk_enrollDesk"></a> Windows 10 コンピューターの登録  
+##  <a name="bkmk_enrollDesk"></a> Windows 10 コンピューターの登録  
 
 1.  Windows 10 コンピューターで、 **[設定]**に移動します。  
 
@@ -59,7 +60,7 @@ System Center Configuration Manager オンプレミス モバイル デバイス
 
 6.  サインイン情報を記憶するために **[スキップ]** をクリックします。少し経つと、デバイスが接続されます。  
 
-##  <a name="a-namebkmkenrollmoba-enroll-a-windows-10-mobile-device"></a><a name="bkmk_enrollMob"></a> Windows 10 Mobile デバイスの登録  
+##  <a name="bkmk_enrollMob"></a> Windows 10 Mobile デバイスの登録  
 
 1.  Windows 10 Mobile デバイスで、 **[設定]**に移動します。  
 
@@ -71,18 +72,10 @@ System Center Configuration Manager オンプレミス モバイル デバイス
 
 5.  次の画面で、職場の電子メール アドレスとパスワードを入力し、 **[サインイン]**をクリックします。 少し経つと、デバイスが登録されます。 **[完了]**をクリックします。  
 
-##  <a name="a-namebkmkverifya-verify-device-enrollment"></a><a name="bkmk_verify"></a> デバイス登録の確認  
+##  <a name="bkmk_verify"></a> デバイス登録の確認  
  Configuration Manager コンソールで、デバイスが正常に登録されていることを確認できます。  
 
 1.  Configuration Manager コンソールを起動します。  
 
 2.  [資産とコンプライアンス][概要][デバイス]が必要とするサイト システムの役割との間で信頼された通信を行うために必要です。 登録されているデバイスが一覧に表示されます。  
-
-## <a name="see-also"></a>関連項目  
- [System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスの登録](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -1,5 +1,5 @@
 ---
-title: "クライアントのアップグレード | Microsoft Docs | Windows "
+title: "クライアントのアップグレード | Microsoft Docs"
 description: "System Center Configuration Manager で Windows コンピューターのクライアントをアップグレードします。"
 ms.custom: na
 ms.date: 01/01/2017
@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
-ms.openlocfilehash: a35724a5b839b47904c46361709f248e432eff1e
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: a5b59a1d31d897473262edcd0912ef0fcbedd100
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -98,9 +99,4 @@ ms.openlocfilehash: a35724a5b839b47904c46361709f248e432eff1e
 8.  事前設定されたコンテンツが有効になっている配布ポイントにクライアント インストール パッケージをコピーする場合は、 **[事前設定されたコンテンツ用に有効になっている配布ポイントにクライアント インストール パッケージを自動配布する]**をクリックします。  
 
 9. **[OK]** をクリックします。設定が保存され、 **[階層設定のプロパティ]** ダイアログ ボックスが閉じます。 次回クライアントでポリシーをダウンロードしたときに、これらの設定が受信されます。  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

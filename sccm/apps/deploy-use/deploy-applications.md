@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 7be9abadeb51d4f9e862f69c332756b19ce3e110
-ms.openlocfilehash: a52bef3c8d12ffe2d9b13dc79cbc8950d3f36aea
+ms.sourcegitcommit: cb42b6f324dc0019c2109be4d91e0eab4dca4d70
+ms.openlocfilehash: 8c54bc455828712c7f9ea297f26c98c41848cf9c
+ms.lasthandoff: 03/08/2017
 
 
 ---
@@ -26,7 +27,7 @@ ms.openlocfilehash: a52bef3c8d12ffe2d9b13dc79cbc8950d3f36aea
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
- System Center Configuration Manager アプリケーションを展開する前に、アプリケーションの展開の種類を 1 つ以上作成する必要があります。 アプリケーションと展開の種類の作成の詳細については、「[Create applications](../../apps/deploy-use/create-applications.md)」 (アプリケーションの作成) をご覧ください。
+ System Center Configuration Manager アプリケーションを展開する前に、アプリケーションの展開の種類を&1; つ以上作成する必要があります。 アプリケーションと展開の種類の作成の詳細については、「[Create applications](../../apps/deploy-use/create-applications.md)」 (アプリケーションの作成) をご覧ください。
 
  アプリケーションの展開をシミュレーションすることもできます。 この展開の種類は、アプリケーションをインストールまたはアンインストールせずに、コンピューターに対するアプリケーションの展開の適用性をテストします。 シミュレーションされた展開は、展開の種類について検出された方法、要件、依存関係を評価し、**[監視]** ワークスペースの **[展開]** ノードに結果を表示します。 詳細については、「[Simulate application deployments](../../apps/deploy-use/simulate-application-deployments.md)」 (アプリケーションの展開をシミュレーションする) をご覧ください。
 
@@ -37,7 +38,7 @@ ms.openlocfilehash: a52bef3c8d12ffe2d9b13dc79cbc8950d3f36aea
 
 1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリケーション]** に移動します。
 
-2.  [ **アプリケーション** ] 一覧で、展開するアプリケーションを選択します。 次に、[ **ホーム** ] タブで、 **展開** グループで、[ **展開**です。
+2.  [ **アプリケーション** ] 一覧で、展開するアプリケーションを選択します。 次に、 **ホーム**  タブで、 **展開** グループで、 **展開**です。
 
 ### <a name="specify-general-information-about-the-deployment"></a>展開に関する全般情報を指定する
 
@@ -64,7 +65,7 @@ ms.openlocfilehash: a52bef3c8d12ffe2d9b13dc79cbc8950d3f36aea
 - **[操作]** -- ドロップダウン リストから、展開の目的がアプリケーションの **[インストール]** であるのか **[アンインストール]** であるのかを選択します。
 
     > [!NOTE]
-    >  アプリケーションがデバイスに 2 回展開され、[ **インストール** ] の操作が 1 回、[ **アンインストール**] の操作が 1 回の場合、[ **インストール** ] 操作を伴うアプリケーションの展開が優先されます。
+    >  アプリケーションがデバイスに&2; 回展開され、[ **インストール** ] の操作が&1; 回、[ **アンインストール**] の操作が&1; 回の場合、[ **インストール** ] 操作を伴うアプリケーションの展開が優先されます。
 
 展開の操作は、作成後には変更できません。
 
@@ -84,8 +85,8 @@ ms.openlocfilehash: a52bef3c8d12ffe2d9b13dc79cbc8950d3f36aea
 
     > [!NOTE]
     >  アプリケーション承認要求は、[ **ソフトウェア ライブラリ** ] ワークスペースの [ **アプリケーション管理** ] の下にある [ **承認要求** ] ノードに表示されます。 要求は、45 日以内に承認されなければ削除されます。 また、構成マネージャー クライアントを再インストールすると、保留承認要求が取り消される可能性があります。
-    > アプリケーションのインストールを承認した後は、要求を拒否するには、Configuration Manager コンソールで **[拒否]** をクリックします (以前は、承認後にこのボタンは淡色表示されていました)。
-    > この操作では、デバイスからアプリケーションはアンインストールされませんが、ユーザーはソフト センターからアプリケーションの新しいコピーをインストールできなくなります。
+    >  アプリケーションのインストールを承認した後は、要求を拒否するには、Configuration Manager コンソールで **[拒否]** をクリックします (以前は、承認後にこのボタンは淡色表示されていました)。
+    >  この操作では、デバイスからアプリケーションはアンインストールされませんが、ユーザーはソフト センターからアプリケーションの新しいコピーをインストールできなくなります。
 
 
 
@@ -116,8 +117,7 @@ ms.openlocfilehash: a52bef3c8d12ffe2d9b13dc79cbc8950d3f36aea
 
 >[!NOTE]
     >  アプリケーションを Windows Embedded デバイスに展開する場合、デバイスが、メンテナンス期間が構成されたコレクションのメンバーであることを確認します。 Windows Embedded デバイスにアプリケーションを展開するときの、メンテナンス期間の使用方法に関する詳細については、「[Windows Embedded アプリケーションの作成](../../apps/get-started/creating-windows-embedded-applications.md)」をご覧ください。
-
-    >  The options **Software Installation** and **System restart (if required to complete the installation)** are not used if the deployment purpose is set to **Available**. You can also configure the level of notification a user sees when the application is installed.
+    > 展開目的に [ **利用可能** ] が設定されていると、[ **ソフトウェアのインストール** ] オプションと [ **システムの再起動 (インストールの完了に必要な場合)**] オプションは使用されません。 アプリケーションがインストールされるときにユーザーに表示される通知のレベルを構成することもできます。
 
 ### <a name="specify-alert-options-for-the-deployment"></a>展開のアラート オプションを指定する
 
@@ -159,9 +159,4 @@ ms.openlocfilehash: a52bef3c8d12ffe2d9b13dc79cbc8950d3f36aea
 ## <a name="for-more-information"></a>詳細情報:
 - [危険度の高い展開を管理するための設定](../../protect/understand/settings-to-manage-high-risk-deployments.md)
 - [クライアント設定を構成する方法](../../core/clients/deploy/configure-client-settings.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
