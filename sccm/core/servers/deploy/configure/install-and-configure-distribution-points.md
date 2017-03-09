@@ -16,14 +16,15 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f83dc12aab96ad76a62582fc2f2fe3e0b99b3b67
-ms.openlocfilehash: efda1a8f010bb0125ef726d0b960317a4fdc4f28
+ms.sourcegitcommit: 8728d9f2ae63282a8f58b20105e488fb1a5ef55b
+ms.openlocfilehash: 4c94e4de5bbfe621492e8682c9424a48eb38196d
+ms.lasthandoff: 03/03/2017
 
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>System Center Configuration Manager の配布ポイントのインストールと構成
 
 *適用対象: System Center Configuration Manager (Current Branch)*
-
+ 
 System Center Configuration Manager 配布ポイントをインストールし、デバイスやユーザーに展開するコンテンツ (ファイルとソフトウェア) をホストします。 配布ポイント グループを作成することもできます。配布ポイントの管理と配布ポイントへのコンテンツの配布が簡単になります。  
 
  "*新しい配布ポイントをインストールする*" とき (インストール ウィザードを利用して)、あるいは "*既存の配布ポイントのプロパティを管理する*" とき (配布ポイントのプロパティを編集して)、ほとんどの配布ポイントの設定を構成できます。 インストールまたは編集のいずれか一方を行うときに使用可能な設定はいくつか用意されていますが、両方を行う設定はありません。  
@@ -44,7 +45,7 @@ System Center Configuration Manager 配布ポイントをインストールし�
 
     -   **配布ポイントへのデータ転送のスケジュールを構成する**  
 
-##  <a name="a-namebkmkinstalla-install-a-distribution-point"></a><a name="bkmk_install"></a> 配布ポイントをインストールする  
+##  <a name="bkmk_install"></a> 配布ポイントをインストールする  
  クライアント コンピューターでコンテンツを使用できるようにする前に、サイト システム サーバーを配布ポイントとして指定する必要があります。 配布ポイント サイトの役割を新しいサイト システム サーバーに追加するか、サイトの役割を既存のサイト システム サーバーに追加できます。  
 
  新しい配布ポイントをインストールするとき、インストール ウィザードを利用します。利用可能な設定を段階的に実行できます。 開始する前に、次の点を考慮してください。  
@@ -95,7 +96,7 @@ System Center Configuration Manager 配布ポイントをインストールし�
 
 4.  必要な変更を行った後は、設定を保存して配布ポイントのプロパティを閉じます。  
 
-##  <a name="a-namebkmkmanagea-manage-distribution-point-groups"></a><a name="bkmk_manage"></a> 配布ポイント グループの管理  
+##  <a name="bkmk_manage"></a> 配布ポイント グループの管理  
  配布ポイントを論理的な "配布ポイント グループ" に分けることができます。 これらのグループを使用して、複数のサイトに配置されている配布ポイントのコンテンツを&1; か所で管理および監視することができます。 次のことに注意してください。
 
 -   階層内の任意のサイトから&1; つまたは複数の配布ポイントを配布ポイント グループに追加できます。  
@@ -159,7 +160,7 @@ System Center Configuration Manager 配布ポイントをインストールし�
 
 3.  **[利用可能な配布ポイント グループ]** で、選択した配布ポイントがメンバーとして追加される配布ポイント グループを選択してから、**[OK]** を選択します。  
 
-##  <a name="a-namebkmkconfigsa-configure-a-distribution-point"></a><a name="bkmk_configs"></a> 配布ポイントの構成  
+##  <a name="bkmk_configs"></a> 配布ポイントの構成  
  それぞれの配布ポイントは、さまざまな構成をサポートします。 ただし、すべての配布ポイントの種類ですべての構成がサポートされるわけではありません。 たとえば、クラウドベースの配布ポイントでは、PXE やマルチキャストが有効なコンテンツの展開はサポートされません。 具体的な制限事項に関する情報については、次のトピックを参照してください。  
 
 -   [System Center Configuration Manager でのクラウド ベースの配布ポイントの使用](../../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
@@ -343,9 +344,9 @@ System Center Configuration Manager 配布ポイントをインストールし�
 
 補足:
 
-- 1610 より前では、**[クライアントがこのサイト システムを代替のコンテンツ ソースの場所として使用することを許可する]** をオンにすると、他に利用できる代替ポイントがない場合に、この境界グループ外のクライアントのフォールバックが許可され、配布ポイントをコンテンツ ソースの場所として使用できるようになります。 境界グループについて詳しくは、「[Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configur/boundary-groups-for-1511-1602-and-1606)」(バージョン 1511、1602、1606 の境界グループ) をご覧ください。 優先配布ポイントについて詳しくは、「[System Center Configuration Manager でのコンテンツ管理の基本的な概念](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)」をご覧ください。
+- 1610 より前では、**[クライアントがこのサイト システムを代替のコンテンツ ソースの場所として使用することを許可する]** をオンにすると、他に利用できる代替ポイントがない場合に、この境界グループ外のクライアントのフォールバックが許可され、配布ポイントをコンテンツ ソースの場所として使用できるようになります。 境界グループについて詳しくは、「[Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606)」(バージョン 1511、1602、1606 の境界グループ) をご覧ください。 優先配布ポイントについて詳しくは、「[System Center Configuration Manager でのコンテンツ管理の基本的な概念](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)」をご覧ください。
 
-- バージョン 1610 以降では、コンテンツを検索するために、いつ、どの境界グループまでフォールバックできるかを定義する、境界グループの "*関係*" を構成します。 詳細については、「[境界グループ](/sccm/core/servers/deploy/configur/define-site-boundaries-and-boundary-groups#boundary-groups)」を参照してください。
+- バージョン 1610 以降では、コンテンツを検索するために、いつ、どの境界グループまでフォールバックできるかを定義する、境界グループの "*関係*" を構成します。 詳細については、「[境界グループ](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)」を参照してください。
 
 
 ### <a name="schedule"></a>スケジュール  
@@ -388,9 +389,4 @@ Configuration Manager がコンテンツを配布ポイントに転送すると�
 -   **パルス モード**: このオプションは、配布ポイントに送信するデータ ブロックのサイズを指定します。 また、データ ブロックを送信する間隔を指定することもできます。 このオプションは、帯域幅が非常に小さなネットワーク接続でデータを配布ポイントに送信しなければならない場合に使用してください。 たとえば、リンク速度や特定の時間帯の使用率に関係なく、5 秒に 1 KB のデータを送信するように構成します。  
 
 -   指定された時間帯の最大転送率を制限する****:この設定を指定して、構成した時間の割合 (%) のみを使用してサイトが配布ポイントにデータを送信するようにします。 このオプションを使用すると、Configuration Manager ではネットワークの使用可能な帯域幅は考慮されず、代わりに、データを送信できる時間が分割されます。 その分割された短い時間にデータが送信され、次にデータが送信されない時間が続きます。 たとえば、最大転送率を **50%**に設定すると、Configuration Manager ではある一定の時間だけデータが転送され、その後、同じ長さの時間だけ転送が停止されます。 データの実際の量やデータ ブロックのサイズは考慮されません。 代わりに、どれだけの時間データを送信するかが管理されます。  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
