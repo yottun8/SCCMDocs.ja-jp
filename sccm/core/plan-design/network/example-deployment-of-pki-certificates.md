@@ -2,7 +2,7 @@
 title: "PKI 証明書の展開 | Microsoft Docs"
 description: "ステップバイステップの例に従って、System Center Configuration Manager で使用される PKI 証明書を作成および展開する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 caps.latest.revision: 11
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: efd4f5617568b8bff5de78d29d82202f798f8920
-ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
+ms.sourcegitcommit: 2a62ef64bf4e08d7027d10827d35d648bdbbeefe
+ms.openlocfilehash: 21fe718835bbbaa6382e0f0a87784e01e4c35283
+ms.lasthandoff: 02/14/2017
 
 
 ---
@@ -56,7 +57,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
  [Mac コンピューター用のクライアント証明書の展開](#BKMK_MacClient_SP1)  
 
-##  <a name="a-namebkmktestnetworkenvironmenta-test-network-requirements"></a><a name="BKMK_testnetworkenvironment"></a> テスト ネットワークの要件  
+##  <a name="BKMK_testnetworkenvironment"></a> テスト ネットワークの要件  
  手順には次の要件があります。  
 
 -   テスト ネットワークでは、Windows Server 2008 で Active Directory ドメイン サービスが動作しており、これが単一のドメイン、単一のフォレストとしてインストールされていること。  
@@ -69,7 +70,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 -   ルート ドメイン管理者のアカウントまたはエンタープライズ管理者のアカウントでサインインでき、そのアカウントを使ってこの展開例のすべての手順を実行できること。  
 
-##  <a name="a-namebkmkoverview2008a-overview-of-the-certificates"></a><a name="BKMK_overview2008"></a> 証明書の概要  
+##  <a name="BKMK_overview2008"></a> 証明書の概要  
  次の表では、System Center Configuration Manager に必要な PKI 証明書の種類の一覧を示し、それぞれの使用方法を説明しています。  
 
 |証明書の要件|証明書の説明|  
@@ -82,7 +83,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 |Intel AMT 用証明書|Intel AMT ベースのコンピューターの帯域外管理に関する証明書には&3; つあります。<ul><li>Active Management Technology (AMT) プロビジョニング証明書</li><li>AMT Web サーバー証明書</li><li>必要に応じて、802.1X 有線または無線ネットワークのクライアント認証証明書</li></ul>AMT プロビジョニング証明書は、System Center Configuration Manager の外部から帯域外サービス ポイント コンピューターにインストールする必要があります。その後、帯域外サービス ポイントのプロパティでインストールした証明書を選択します。 AMT Web サーバー証明書およびクライアント認証証明書は AMT プロビジョニングおよび管理の間にインストールされます。帯域外管理コンポーネントのプロパティで構成した証明書テンプレートを選択します。<br /><br /> これらの証明書を設定する手順については、このトピックの「[AMT 用の証明書の展開](#BKMK_AMT2008_cm2012)」を参照してください。|  
 |Mac コンピューター用のクライアント証明書|System Center Configuration Manager の登録を使用し、構成済みの証明書テンプレートをモバイル デバイス クライアント設定として選択するときに、Mac コンピューターからこの証明書を要求してインストールすることができます。<br /><br /> この証明書を構成する手順については、このトピックの「[Mac コンピューター用のクライアント証明書の展開](#BKMK_MacClient_SP1)」を参照してください。|  
 
-##  <a name="a-namebkmkwebserver2008cm2012a-deploy-the-web-server-certificate-for-site-systems-that-run-iis"></a><a name="BKMK_webserver2008_cm2012"></a> IIS を実行するサイト システム用の Web サーバー証明書の展開  
+##  <a name="BKMK_webserver2008_cm2012"></a> IIS を実行するサイト システム用の Web サーバー証明書の展開  
  この証明書の展開には次の手順が含まれています。  
 
 -   証明機関で Web サーバー証明書テンプレートを作成および発行する  
@@ -91,7 +92,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 -   IIS が Web サーバー証明書を使用するように構成する  
 
-###  <a name="a-namebkmkwebserver22008a-create-and-issue-the-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_webserver22008"></a> 証明機関で Web サーバー証明書テンプレートを作成および発行する  
+###  <a name="BKMK_webserver22008"></a> 証明機関で Web サーバー証明書テンプレートを作成および発行する  
  この手順により、System Center Configuration Manager サイト システムの証明書テンプレートを作成し、それを証明機関に追加します。  
 
 ##### <a name="to-create-and-issue-the-web-server-certificate-template-on-the-certification-authority"></a>証明機関で Web サーバー証明書テンプレートを作成および発行するには  
@@ -125,7 +126,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 13. これ以上証明書を作成して発行する必要がない場合は、**[証明機関]** を閉じます。  
 
-###  <a name="a-namebkmkwebserver32008a-request-the-web-server-certificate"></a><a name="BKMK_webserver32008"></a> Web サーバー証明書を要求する  
+###  <a name="BKMK_webserver32008"></a> Web サーバー証明書を要求する  
  この手順では、サイト システム サーバーのプロパティで設定されるイントラネットおよびインターネット FQDN を指定し、Web サーバー証明書を IIS を実行するメンバー サーバーにインストールできます。  
 
 ##### <a name="to-request-the-web-server-certificate"></a>Web サーバー証明書を要求するには  
@@ -175,7 +176,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 16. [証明書 (ローカル コンピューター) ****] を閉じます。  
 
-###  <a name="a-namebkmkwebserver42008a-configure-iis-to-use-the-web-server-certificate"></a><a name="BKMK_webserver42008"></a> IIS が Web サーバー証明書を使用するように構成する  
+###  <a name="BKMK_webserver42008"></a> IIS が Web サーバー証明書を使用するように構成する  
  この手順により、インストールした証明書を IIS の [既定の Web サイト] ****にバインドします。  
 
 ##### <a name="to-set-up-iis-to-use-the-web-server-certificate"></a>IIS が Web サーバー証明書を使用するように設定するには  
@@ -200,12 +201,9 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 > [!IMPORTANT]  
 >  System Center Configuration Manager サイト システム サーバーをこのコンピューターにインストールするときは、必ずサイト システムのプロパティで、証明書を要求するときに指定したものと同じ FQDN を指定します。  
 
-##  <a name="a-namebkmkclouddp2008cm2012a-deploy-the-service-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddp2008_cm2012"></a> クラウドベースの配布ポイント用のサービス証明書の展開  
+##  <a name="BKMK_clouddp2008_cm2012"></a> クラウドベースの配布ポイント用のサービス証明書の展開  
 
-> [!NOTE]  
->  クラウドベースの配布ポイント用のサービス証明書は、System Center Configuration Manager SP1 以降に適用されます。  
-
- この証明書の展開には次の手順が含まれています。  
+この証明書の展開には次の手順が含まれています。  
 
 -   [証明機関でカスタム Web サーバー証明書テンプレートを作成および発行する](#BKMK_clouddpcreating2008)  
 
@@ -213,7 +211,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 -   [クラウドベースの配布ポイント用にカスタム Web サーバー証明書をエクスポートする](#BKMK_clouddpexporting2008)  
 
-###  <a name="a-namebkmkclouddpcreating2008a-create-and-issue-a-custom-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_clouddpcreating2008"></a> 証明機関でカスタム Web サーバー証明書テンプレートを作成および発行する  
+###  <a name="BKMK_clouddpcreating2008"></a> 証明機関でカスタム Web サーバー証明書テンプレートを作成および発行する  
  この手順では、Web サーバー証明書テンプレートに基づいてカスタム証明書テンプレートを作成します。 この証明書は System Center Configuration Manager のクラウドベースの配布ポイント用であり、プライベート キーをエクスポート可能にする必要があります。 証明書テンプレートを作成したら、証明機関に追加します。  
 
 > [!NOTE]  
@@ -256,7 +254,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 13. これ以上証明書を作成して発行する必要がない場合は、**[証明機関]** を閉じます。  
 
-###  <a name="a-namebkmkclouddprequesting2008a-request-the-custom-web-server-certificate"></a><a name="BKMK_clouddprequesting2008"></a> カスタム Web サーバー証明書を要求する  
+###  <a name="BKMK_clouddprequesting2008"></a> カスタム Web サーバー証明書を要求する  
  この手順では、カスタム Web サーバー証明書を要求し、サイト サーバーを実行するメンバー サーバーにインストールします。  
 
 ##### <a name="to-request-the-custom-web-server-certificate"></a>カスタム Web サーバー証明書を要求するには  
@@ -298,7 +296,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 17. [証明書 (ローカル コンピューター) ****] を閉じます。  
 
-###  <a name="a-namebkmkclouddpexporting2008a-export-the-custom-web-server-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddpexporting2008"></a> クラウドベースの配布ポイント用にカスタム Web サーバー証明書をエクスポートする  
+###  <a name="BKMK_clouddpexporting2008"></a> クラウドベースの配布ポイント用にカスタム Web サーバー証明書をエクスポートする  
  この手順では、カスタム Web サーバー証明書をファイルにエクスポートして、クラウドベースの配布ポイントを作成するときに証明書をインポートできるようにします。  
 
 ##### <a name="to-export-the-custom-web-server-certificate-for-cloud-based-distribution-points"></a>クラウドベースの配布ポイント用に Web サーバー証明書をエクスポートするには  
@@ -326,7 +324,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
  これで、クラウドベースの配布ポイントを作成するときに、証明書をインポートできるようになりました。  
 
-##  <a name="a-namebkmkclient2008cm2012a-deploy-the-client-certificate-for-windows-computers"></a><a name="BKMK_client2008_cm2012"></a> Windows コンピューター用のクライアント証明書の展開  
+##  <a name="BKMK_client2008_cm2012"></a> Windows コンピューター用のクライアント証明書の展開  
  この証明書の展開には次の手順が含まれています。  
 
 -   証明機関でワークステーション認証証明書テンプレートを作成および発行する  
@@ -335,7 +333,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 -   ワークステーション認証証明書を自動登録し、コンピューターへのインストールを確認する  
 
-###  <a name="a-namebkmkclient02008a-create-and-issue-the-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_client02008"></a> 証明機関でワークステーション認証証明書テンプレートを作成および発行する  
+###  <a name="BKMK_client02008"></a> 証明機関でワークステーション認証証明書テンプレートを作成および発行する  
  この手順により、System Center Configuration Manager クライアント コンピューターの証明書テンプレートを作成し、それを証明機関に追加します。  
 
 ##### <a name="to-create-and-issue-the-workstation-authentication-certificate-template-on-the-certification-authority"></a>証明機関でワークステーション認証証明書テンプレートを作成および発行するには  
@@ -361,7 +359,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 9. これ以上証明書を作成して発行する必要がない場合は、**[証明機関]** を閉じます。  
 
-###  <a name="a-namebkmkclient12008a-configure-autoenrollment-of-the-workstation-authentication-template-by-using-group-policy"></a><a name="BKMK_client12008"></a> グループ ポリシーを使用してワークステーション認証テンプレートの自動登録を構成する  
+###  <a name="BKMK_client12008"></a> グループ ポリシーを使用してワークステーション認証テンプレートの自動登録を構成する  
  この手順により、コンピューターにクライアント証明書を自動登録するグループ ポリシーを設定します。  
 
 ##### <a name="to-set-up-autoenrollment-of-the-workstation-authentication-template-by-using-group-policy"></a>グループ ポリシーを使用してワークステーション認証テンプレートの自動登録を設定するには  
@@ -385,7 +383,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 8.  **[グループ ポリシー管理]**を閉じます。  
 
-###  <a name="a-namebkmkclient22008a-automatically-enroll-the-workstation-authentication-certificate-and-verify-its-installation-on-computers"></a><a name="BKMK_client22008"></a> ワークステーション認証証明書を自動登録し、コンピューターへのインストールを確認する  
+###  <a name="BKMK_client22008"></a> ワークステーション認証証明書を自動登録し、コンピューターへのインストールを確認する  
  この手順により、クライアント証明書をコンピューターにインストールし、インストールを確認します。  
 
 ##### <a name="to-automatically-enroll-the-workstation-authentication-certificate-and-verify-its-installation-on-the-client-computer"></a>ワークステーション認証証明書を自動登録し、クライアント コンピューターへのインストールを確認するには  
@@ -419,7 +417,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
  これで、コンピューターに System Center Configuration Manager のクライアント証明書が設定されました。  
 
-##  <a name="a-namebkmkclientdistributionpoint2008cm2012a-deploy-the-client-certificate-for-distribution-points"></a><a name="BKMK_clientdistributionpoint2008_cm2012"></a> 配布ポイント用のクライアント証明書の展開  
+##  <a name="BKMK_clientdistributionpoint2008_cm2012"></a> 配布ポイント用のクライアント証明書の展開  
 
 > [!NOTE]  
 >  この証明書は、PXE ブートを使用しないメディア イメージにも使用できます。これは、証明書の要件が同じためです。  
@@ -432,7 +430,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 -   配布ポイント用にクライアント証明書をエクスポートする  
 
-###  <a name="a-namebkmkclientdistributionpoint02008a-create-and-issue-a-custom-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_clientdistributionpoint02008"></a> カスタムのワークステーション認証証明書テンプレートを作成して証明機関に発行する  
+###  <a name="BKMK_clientdistributionpoint02008"></a> カスタムのワークステーション認証証明書テンプレートを作成して証明機関に発行する  
  この手順では、秘密キーをエクスポートできるように System Center Configuration Manager 配布ポイントのカスタム証明書テンプレートを作成して、証明書テンプレートを証明機関に追加します。  
 
 > [!NOTE]  
@@ -473,7 +471,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 12. これ以上証明書を作成して発行する必要がない場合は、**[証明機関]** を閉じます。  
 
-###  <a name="a-namebkmkclientdistributionpoint12008a-request-the-custom-workstation-authentication-certificate"></a><a name="BKMK_clientdistributionpoint12008"></a> カスタムのワークステーション認証証明書を要求する  
+###  <a name="BKMK_clientdistributionpoint12008"></a> カスタムのワークステーション認証証明書を要求する  
  この手順では、まずカスタムのクライアント証明書を要求し、次に IIS を実行しかつ配布ポイントとして設定されるメンバー サーバーにインストールします。  
 
 ##### <a name="to-request-the-custom-workstation-authentication-certificate"></a>カスタムのワークステーション認証証明書を要求するには  
@@ -504,7 +502,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 13. [証明書 (ローカル コンピューター) ****] を閉じないでください。  
 
-###  <a name="a-namebkmkexportclientdistributionpoint22008a-export-the-client-certificate-for-distribution-points"></a><a name="BKMK_exportclientdistributionpoint22008"></a> 配布ポイント用にクライアント証明書をエクスポートする  
+###  <a name="BKMK_exportclientdistributionpoint22008"></a> 配布ポイント用にクライアント証明書をエクスポートする  
  この手順では、カスタムのワークステーション認証証明書をファイルにエクスポートして、配布ポイントのプロパティにインポートできるようにします。  
 
 ##### <a name="to-export-the-client-certificate-for-distribution-points"></a>配布ポイント用にクライアント証明書をエクスポートするには  
@@ -535,7 +533,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 > [!TIP]  
 >  PXE ブートを使用しないオペレーティング システム展開用にメディア イメージを設定する場合、およびイメージをインストールするタスク シーケンスが HTTPS クライアント接続を必須とする管理ポイントに接続する必要がある場合に、同じ証明書ファイルを使用できます。  
 
-##  <a name="a-namebkmkmobiledevices2008cm2012a-deploy-the-enrollment-certificate-for-mobile-devices"></a><a name="BKMK_mobiledevices2008_cm2012"></a> モバイル デバイス用の登録証明書の展開  
+##  <a name="BKMK_mobiledevices2008_cm2012"></a> モバイル デバイス用の登録証明書の展開  
  この証明書の展開では、1 つの手順登録証明書テンプレートを作成し、証明機関に発行します。  
 
 ### <a name="create-and-issue-the-enrollment-certificate-template-on-the-certification-authority"></a>登録証明書テンプレートを作成して証明機関に発行する  
@@ -570,7 +568,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
  これで、クライアント設定でモバイル デバイス登録プロファイルを設定するときに、モバイル デバイス登録証明書テンプレートを選択できるようになりました。  
 
-##  <a name="a-namebkmkamt2008cm2012a-deploy-the-certificates-for-amt"></a><a name="BKMK_AMT2008_cm2012"></a> AMT 用の証明書の展開  
+##  <a name="BKMK_AMT2008_cm2012"></a> AMT 用の証明書の展開  
  この証明書の展開には次の手順が含まれています。  
 
 -   AMT プロビジョニング証明書を作成、発行、インストールする  
@@ -579,7 +577,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 -   802.1X AMT ベース コンピューター用のクライアント認証証明書を作成し発行する  
 
-###  <a name="a-namebkmkamtprovisioning2008a-create-issue-and-install-the-amt-provisioning-certificate"></a><a name="BKMK_AMTprovisioning2008"></a> AMT プロビジョニング証明書を作成、発行、インストールする  
+###  <a name="BKMK_AMTprovisioning2008"></a> AMT プロビジョニング証明書を作成、発行、インストールする  
  AMT ベースのコンピューターに内部ルート証明機関の証明書の拇印が設定されている場合、内部証明機関のプロビジョニング証明書を作成できます。 この条件に当てはまらず、外部証明機関を利用する必要がある場合、AMT プロビジョニング証明書を発行した企業からの指示に従います。この場合、通常はその企業の公開 Web サイトに証明書を要求します。 選択した外部 CA に応じた詳細な手順は、次の Intel vPro Expert Center でも確認できます。[Microsoft vPro Manageability Web サイト](http://go.microsoft.com/fwlink/?LinkId=132001)。  
 
 > [!IMPORTANT]  
@@ -735,14 +733,11 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
  これで、AMT ベース コンピューターが 802.1X クライアント認証用に使用できるよう、クライアント認証証明書テンプレートを使用して証明書を発行する準備が整いました。 帯域外管理コンポーネントのプロパティで、この証明書テンプレートを選択します。  
 
-##  <a name="a-namebkmkmacclientsp1a-deploy-the-client-certificate-for-mac-computers"></a><a name="BKMK_MacClient_SP1"></a> Mac コンピューター用のクライアント証明書の展開  
+##  <a name="BKMK_MacClient_SP1"></a> Mac コンピューター用のクライアント証明書の展開  
 
-> [!NOTE]  
->  Mac コンピューター用のクライアント証明書は、System Center Configuration Manager SP1 以降に適用されます。  
+この証明書の展開では、1 つの手順登録証明書テンプレートを作成し、証明機関に発行します。  
 
- この証明書の展開では、1 つの手順登録証明書テンプレートを作成し、証明機関に発行します。  
-
-###  <a name="a-namebkmkmacclientcreatingissuinga-create-and-issue-a-mac-client-certificate-template-on-the-certification-authority"></a><a name="BKMK_MacClient_CreatingIssuing"></a>Mac クライアント証明書テンプレートを作成して証明機関に発行する  
+###  <a name="BKMK_MacClient_CreatingIssuing"></a>Mac クライアント証明書テンプレートを作成して証明機関に発行する  
  この手順では、Mac コンピューターの System Center Configuration Manager 用にカスタム証明書テンプレートを作成し、その証明書テンプレートを証明機関に追加します。  
 
 > [!NOTE]  
@@ -782,9 +777,4 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 13. これ以上証明書を作成して発行する必要がない場合は、**[証明機関]** を閉じます。  
 
  これで、登録するクライアント設定を構成するときに、Mac クライアント証明書テンプレートを選択できるようになりました。
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 
