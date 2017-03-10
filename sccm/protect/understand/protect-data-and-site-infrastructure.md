@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 caps.latest.revision: 8
-author: Nbigman
-ms.author: nbigman
+author: Robstack
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
-ms.openlocfilehash: c80750358d64cf87f8a3ce3a4c4f4030a9dfd742
+ms.sourcegitcommit: 8679df3f8a3b692391537bacd6144a4f2fae357b
+ms.openlocfilehash: d527cb4bfb55ca50c8d2a0fed7c427af5747fe99
+ms.lasthandoff: 02/09/2017
 
 
 ---
@@ -30,7 +31,7 @@ ms.openlocfilehash: c80750358d64cf87f8a3ce3a4c4f4030a9dfd742
 
 -   VPN プロファイルを使用して VPN 接続を有効にすると、企業リソースに接続するためのユーザーの作業を最小化できます。 詳細については、「[System Center Configuration Manager の VPN プロファイル](../deploy-use/vpn-profiles.md)」を参照してください。  
 
--   Wi-Fi プロファイルには、組織内のデバイス用にワイヤレス ネットワーク設定を作成して展開し、監視するためのツールとリソースが用意されています。 この設定を展開することにより、エンド ユーザーが会社のワイヤレス ネットワークに接続するときの手間をできるだけ省きます。 詳細については、「[System Center Configuration Manager の Wi-Fi プロファイル](../deploy-use/introduction-to-wifi-profiles.md)」を参照してください。  
+-   Wi-Fi プロファイルには、組織内のデバイス用にワイヤレス ネットワーク設定を作成して展開し、監視するためのツールとリソースが用意されています。 この設定を展開することにより、エンド ユーザーが会社のワイヤレス ネットワークに接続するときの手間をできるだけ省きます。 詳細については、「[System Center Configuration Manager の Wi-Fi プロファイル](/sccm/protect/deploy-use/create-wifi-profiles)」を参照してください。  
 
 -   「[System Center Configuration Manager の証明書プロファイル](../deploy-use/introduction-to-certificate-profiles.md)」では、会社のリソースへの接続に必要な証明書を持つユーザーのデバイスをプロビジョニングする方法について説明します。  
 
@@ -41,9 +42,4 @@ ms.openlocfilehash: c80750358d64cf87f8a3ce3a4c4f4030a9dfd742
 -   電子メール プロファイルは、デバイスでの電子メール設定の作成、展開、監視を支援する一連のツールとリソースを提供する拡張機能です。 これにより、ユーザーは最小限の設定で個人のデバイスから会社の電子メールにアクセスできるようになります。 詳細については、「[System Center Configuration Manager の電子メール プロファイル](../deploy-use/introduction-to-email-profiles.md)」を参照してください。  
 
 -   Configuration Manager で、Windows Hello for Business (旧称 Microsoft Passport for Work) を統合できます。これは Active Directory や Azure Active Directory アカウントを使った代替サインイン方法であり、パスワード、スマート カード、または仮想スマート カードに取って代わります。 詳細については、「[System Center Configuration Manager における Windows Hello for Business 設定について](../deploy-use/windows-hello-for-business-settings.md)」を参照してください。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

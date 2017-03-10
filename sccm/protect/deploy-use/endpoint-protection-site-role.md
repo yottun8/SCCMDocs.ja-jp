@@ -4,7 +4,7 @@ description: "構成マネージャー クライアント コンピューター�
 defintion: 
 definition: 
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,8 +18,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9db108fb2d4d16013f416b8ee87a57ff1c91e21f
-ms.openlocfilehash: 25ce24d16bd55366d23a176b21b38ed53aa40644
+ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
+ms.openlocfilehash: 884b5f2ec3f1aa273128dfeaaf88d969c9d8669d
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -60,11 +61,6 @@ ms.openlocfilehash: 25ce24d16bd55366d23a176b21b38ed53aa40644
 
 8.  ウィザードを完了します。
 
-> [!div class="button"]
-[次のステップ >](endpoint-configure-alerts.md)
-
-> [!div class="button"]
-[戻る >](endpoint-protection-configure.md)
 
 ## <a name="existing-site-system-server"></a>既存のサイト システム サーバー
 
@@ -89,15 +85,4 @@ ms.openlocfilehash: 25ce24d16bd55366d23a176b21b38ed53aa40644
     >  このオプションで、既定で使用する Cloud Protection Service (旧称: MAPS) の設定を構成します。 構成した各マルウェア対策ポリシーのカスタム設定を構成できます。 詳細については、「[System Center Configuration Manager で Endpoint Protection 用にマルウェア対策ポリシーを作成し展開する方法](endpoint-antimalware-policies.md)」をご覧ください。
 
 8.  ウィザードを完了します。
-
-> [!div class="button"]
-[次のステップ >](endpoint-configure-alerts.md)
-
-> [!div class="button"]
-[戻る >](endpoint-protection-configure.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
