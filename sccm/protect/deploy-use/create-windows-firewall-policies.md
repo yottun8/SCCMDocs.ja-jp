@@ -2,7 +2,7 @@
 title: "Endpoint Protection 用 Windows ファイアウォール ポリシー | Microsoft Docs"
 description: "System Center 2012 Configuration Manager で Endpoint Protection のファイアウォール ポリシーを作成および展開する方法を説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 7a02ae3fb102ab85f98d3b7453fc0736e5a11200
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -62,7 +63,7 @@ System Center 2012 Configuration Manager の Endpoint Protection のファイア
 
 7.  [Windows ファイアウォール ポリシー **** ] の一覧に表示される新しい Windows ファイアウォール ポリシーを確認します。  
 
-##  <a name="a-namebkmkassigna-to-deploy-a-windows-firewall-policy"></a><a name="BKMK_Assign"></a> Windows ファイアウォール ポリシーを展開するには  
+##  <a name="BKMK_Assign"></a> Windows ファイアウォール ポリシーを展開するには  
 
 1.  Configuration Manager コンソールで、[ **資産とコンプライアンス**] をクリックします。  
 
@@ -78,9 +79,4 @@ System Center 2012 Configuration Manager の Endpoint Protection のファイア
 
     > [!IMPORTANT]  
     >  Windows ファイアウォール ポリシーをコレクションに展開すると、ネットワークに大きな負荷がかかるのを避けるため、このポリシーは 2 時間かけてランダムな順序でコンピューターに適用されます。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
