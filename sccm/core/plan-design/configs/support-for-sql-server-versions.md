@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 25aa013896ca118f0689b71e5cddcb8baf049c66
 ms.openlocfilehash: 9bf4c1d9ee12da6801470165d33df50b2d08a810
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 9bf4c1d9ee12da6801470165d33df50b2d08a810
 
 それぞれの System Center Configuration Manager サイトには、サイト データベースをホストするためにサポートされている SQL Server バージョンおよび構成が必要です。  
 
-##  <a name="a-namebkmkinstancesa-sql-server-instances-and-locations"></a><a name="bkmk_Instances"></a> SQL Server インスタンスと場所  
+##  <a name="bkmk_Instances"></a> SQL Server インスタンスと場所  
  **中央管理サイトとプライマリ サイト**  
 サイト データベースは SQL Server のフル インストールを使用する必要があります。  
 
@@ -52,7 +53,7 @@ ms.openlocfilehash: 9bf4c1d9ee12da6801470165d33df50b2d08a810
 
  SQL Server はサイト サーバー コンピューターに配置する必要があります。  
 
-##  <a name="a-namebkmksqlversionsa-supported-versions-of-sql-server"></a><a name="bkmk_SQLVersions"></a> サポートされている SQL Server のバージョン  
+##  <a name="bkmk_SQLVersions"></a> サポートされている SQL Server のバージョン  
  複数のサイトを含む階層では、それぞれのサイトが異なるバージョンの SQL Server を使用してサイト データベースをホストできます。ただし、使用する SQL Server のバージョンが Configuration Manager でサポートされている必要があります。  
 
  他の指定がない限り、次のバージョンの SQL Server は System Center Configuration Manager 1511 以降のバージョンでサポートされています。  
@@ -147,7 +148,7 @@ ms.openlocfilehash: 9bf4c1d9ee12da6801470165d33df50b2d08a810
 
 -   セカンダリ サイト  
 
-##  <a name="a-namebkmksqlconfiga-required-configurations-for-sql-server"></a><a name="bkmk_SQLConfig"></a> SQL Server の必須構成  
+##  <a name="bkmk_SQLConfig"></a> SQL Server の必須構成  
  サイト データベースに使用する SQL Server (SQL Server Express を含む) のすべてのインストールでの要件は次のとおりです。 Configuration Manager が SQL Server Express をセカンダリ サイト インストールの一部としてインストールするときには、これらの構成は自動的に作成されます。  
 
  **SQL Server アーキテクチャのバージョン:**  
@@ -188,7 +189,7 @@ ms.openlocfilehash: 9bf4c1d9ee12da6801470165d33df50b2d08a810
  **SQL Server の CLR 統合**  
   サイト データベースには、SQL Server 共通言語ランタイム (CLR) を有効にする必要があります。 これは、Configuration Manager のインストール時に自動的に有効になります。 CLR の詳細については、「[SQL Server の CLR 統合の概要](https://msdn.microsoft.com/library/ms254498\(v=vs.110\).aspx)」をご覧ください。  
 
-##  <a name="a-namebkmkoptionala-optional-configurations-for-sql-server"></a><a name="bkmk_optional"></a> SQL Server のオプション構成  
+##  <a name="bkmk_optional"></a> SQL Server のオプション構成  
  以下の構成は、SQL Server の完全インストールを使用する各データベースのオプションです。  
 
  **SQL Server サービス:**  
@@ -214,7 +215,7 @@ SQL Server サービスで使用されるアカウントを変更する方法に
 レポートを実行できるようにするレポート サービス ポイントをインストールするには、SQL Server Reporting Services が必要です。  
 
 > [!IMPORTANT]  
-> 以前のバージョンから SQL Server をアップグレードした後、[*Report Builder Does Not Exist*] (レポート ビルダーが存在しません) というエラーが表示されることがあります。    
+> 以前のバージョンから SQL Server をアップグレードした後、「*Report Builder Does Not Exist*」 (レポート ビルダーが存在しません) というエラーが表示されることがあります。    
 > このエラーを解決するには、レポート サービス ポイント サイト システムの役割を再インストールする必要があります。
 
 **SQL Server のポート:**  
@@ -236,9 +237,4 @@ SQL Server を実行しているコンピューターが複数のサイトから
 SQL Server を実行しているコンピューターのファイアウォールが有効に設定されている場合は、展開で使用されているポートと、SQL Server と通信するコンピューター間のネットワーク上のあらゆる場所にあるポートを許可するように構成してください。  
 
 特定のポートを使用するように SQL Server を構成する方法の例については、SQL Server TechNet ライブラリの「 [特定の TCP ポートで受信待ちするようにサーバーを構成する方法 (SQL Server 構成マネージャー)](http://go.microsoft.com/fwlink/p/?LinkID=226349) 」を参照してください。  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

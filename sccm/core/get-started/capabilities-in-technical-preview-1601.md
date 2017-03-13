@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 4da12425382c5d64602b2728e0e661c8cb89a5e4
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1601 の機能
@@ -59,7 +60,7 @@ ms.openlocfilehash: 4da12425382c5d64602b2728e0e661c8cb89a5e4
 
 **このバージョンでお試しいただける新機能を次に示します。**  
 
-##  <a name="a-namebkmkhybrid1a-improvements-to-microsoft-intune-integration"></a><a name="bkmk_hybrid1"></a> Microsoft Intune の統合の機能強化  
+##  <a name="bkmk_hybrid1"></a> Microsoft Intune の統合の機能強化  
 1601 Technical Preview では、次の機能のサポートが追加されました。  
 
 ### <a name="improvements-to-conditional-access"></a>条件付きアクセスの機能強化  
@@ -83,7 +84,7 @@ ms.openlocfilehash: 4da12425382c5d64602b2728e0e661c8cb89a5e4
 
     -   **Azure Active Directory への登録が必要**: このルールは、ユーザーのデバイスが Azure AD に社内参加しているかどうかをチェックし、参加していない場合には Azure AD に自動的に登録します。 自動登録がサポートされているのは Windows 8.1 のみです。 Windows 7 PC の場合には、MSI を展開して自動登録を実行します。 詳しくは、[こちら](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)をご覧ください。  
 
-    -   **必要な更新が特定の日数の期限を過ぎている場合、そのすべてをインストール:** このルールは、ユーザーが指定した期限および猶予期間内の必須のすべての更新 [**Required automatic updates**] (必須の自動更新) ルールで指定 がユーザーのデバイスに含まれているかどうかを確認し、保留されている必須の更新すべてを自動的にインストールします。  
+    -   **必要な更新が特定の日数の期限を過ぎている場合、そのすべてをインストール:** このルールは、ユーザーが指定した期限および猶予期間内の必須のすべての更新 「**Required automatic updates**」 (必須の自動更新) ルールで指定 がユーザーのデバイスに含まれているかどうかを確認し、保留されている必須の更新すべてを自動的にインストールします。  
 
     -   **BitLocker ドライブ暗号化が必要:** これは、デバイスのプライマリ ドライブ (C:\\ など) が BitLocker で暗号化されたかどうかをチェックします。 Bitlocker 暗号化がプライマリ デバイスで有効でない場合、電子メール サービスおよび SharePoint サービスへのアクセスがブロックされます。  
 
@@ -94,7 +95,7 @@ ms.openlocfilehash: 4da12425382c5d64602b2728e0e661c8cb89a5e4
 
 -   **正常性構成証明書サービスによる条件付きアクセス** 電子メール サービスと 0365 サービスへのアクセスを、正常性構成証明書サービスによってレポートされるデバイスの正常性に基づいて制限できるようになりました。  さらに、Intune で管理されているデバイスが、デバイスの正常性レポートに含まれます。  
 
-    新しいコンプライアンス ルールが Configuration Manager コンソールに追加されました。このルールを使用すると、デバイスの正常性の状態に基づいてアクセスを許可するかブロックするかを指定できます。  このルールを作成するには、[**コンプライアンス ポリシーの作成ウィザード**] を開き、新しいルールを追加します。  条件として [**Reported as health by Health Attestation Service**] (正常性構成証明書サービスによって正常と報告される) を選択し、値を **True** にします。  これにより、正常と報告されるデバイスのみが、会社のリソースにアクセスできるようになります。 正常性構成証明書サービスと Intune でデバイスの正常性を報告する方法に関する詳細については、「[デバイス正常性構成証明書](#bkmk_devicehealth)」をご覧ください。  
+    新しいコンプライアンス ルールが Configuration Manager コンソールに追加されました。このルールを使用すると、デバイスの正常性の状態に基づいてアクセスを許可するかブロックするかを指定できます。  このルールを作成するには、[**コンプライアンス ポリシーの作成ウィザード**] を開き、新しいルールを追加します。  条件として 「**Reported as health by Health Attestation Service**」 (正常性構成証明書サービスによって正常と報告される) を選択し、値を **True** にします。  これにより、正常と報告されるデバイスのみが、会社のリソースにアクセスできるようになります。 正常性構成証明書サービスと Intune でデバイスの正常性を報告する方法に関する詳細については、「[デバイス正常性構成証明書](#bkmk_devicehealth)」をご覧ください。  
 
 -   **新しいコンプライアンス ポリシーの設定:** 新しいコンプライアンス ポリシーの設定を使用すると、会社の電子メール サービスおよび SharePoint サービスにアクセスするために使用するデバイスのセキュリティと保護を強化できます。  
 
@@ -125,7 +126,7 @@ ms.openlocfilehash: 4da12425382c5d64602b2728e0e661c8cb89a5e4
 
      このオプションを使用するには、オンプレミスの Exchange の [**条件付きアクセス ポリシーの構成ウィザード**] の [**全般**] ページに移動します。  
 
-##  <a name="a-namebkmkclientstatusa-client-online-status"></a><a name="bkmk_clientStatus"></a> クライアントのオンライン状態  
+##  <a name="bkmk_clientStatus"></a> クライアントのオンライン状態  
 Technical Preview 1601 以降、Configuration Manager コンソールでクライアントがオンラインとオフラインのどちらであるかがすぐにわかるようになりました。 コンソール デバイス一覧の更新されたアイコンと列によって、環境内のクライアントの状態を把握し、問題の領域と、注意が必要なその他の問題を特定できます。  
 
 クライアントが Configuration Manager 管理ポイント サイト システムの役割に接続されている場合には、オンラインです。 管理ポイントが、クライアントから ping のようなメッセージを受信している場合には、状態はオンラインになります。 管理ポイントがメッセージを 5 分ほど何も受け取らないと、クライアントの状態はオフラインになります。  
@@ -158,7 +159,7 @@ Technical Preview 1601 以降、Configuration Manager コンソールでクラ�
 
  クライアントの状態に対する最近の変更を表示するには、コンソールを更新します。  
 
-##  <a name="a-namebkmkappmgmt1601a-improvements-to-application-management"></a><a name="bkmk_appmgmt1601"></a> アプリケーション管理の機能強化  
+##  <a name="bkmk_appmgmt1601"></a> アプリケーション管理の機能強化  
  1601 Technical Preview では、次の機能のサポートが追加されました。  
 
 ### <a name="manage-volume-purchased-apps-for-ios-devices"></a>iOS デバイス用のボリューム購入アプリの管理  
@@ -194,7 +195,7 @@ Technical Preview 1601 以降、Configuration Manager コンソールでクラ�
 
 -   [**ソフトウェアの展開**] ウィザードの [**App Configuration Policy**] (アプリ構成ポリシー) ページで、作成したアプリ構成ポリシーを、アプリケーションの互換性がある展開の種類と関連付けます。  
 
-##  <a name="a-namebkmkcompliance1601a-improvements-to-compliance-settings"></a><a name="bkmk_compliance1601"></a> コンプライアンス設定の機能強化  
+##  <a name="bkmk_compliance1601"></a> コンプライアンス設定の機能強化  
  1601 Technical Preview では、次の機能のサポートが追加されました。  
 
 ### <a name="microsoft-edge-browser-settings"></a>Microsoft Edge ブラウザーの設定  
@@ -217,9 +218,4 @@ Technical Preview 1601 以降、Configuration Manager コンソールでクラ�
  新しい設定を確認するには、[**構成項目の作成**] ウィザードの構成項目 [**デバイス設定**] ページで、[**Kiosk Mode - Samsung KNOX**] (キオスク モード - Samsung KNOX) を選択します。  
 
  詳しくは、「[System Center Configuration Manager クライアントを使用せずに管理されている Windows 8.1 デバイスと Windows 10 デバイスの構成項目を作成する方法](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)」をご覧ください。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
