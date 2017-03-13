@@ -2,7 +2,7 @@
 title: "Unicode および ASCII のサポート | Microsoft Docs"
 description: "System Center Configuration Manager オブジェクトでの Unicode および ASCII 文字のサポートについて説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 1888ce257232b63e4671aa619da190ea570b8a57
+ms.sourcegitcommit: b35e747c8c297d61bb549b9767c4318f51e5fdb4
+ms.openlocfilehash: 18f1c64c1f27001a0fdfbab4236d09a5bc279272
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -36,7 +37,7 @@ System Center Configuration Manager では、Unicode 文字を使用して、ほ
 
 -   [ローカライズされない Configuration Manager オブジェクト](#BKMK_LangNonLocalize)  
 
-##  <a name="a-namebkmkasciichara-objects-that-use-ascii-characters"></a><a name="BKMK_ASCIIchar"></a> ASCII 文字を使用するオブジェクト  
+##  <a name="BKMK_ASCIIchar"></a> ASCII 文字を使用するオブジェクト  
  Configuration Manager では、次のオブジェクトを作成する場合にのみ ASCII 文字セットがサポートされます。  
 
 -   サイト コード  
@@ -50,17 +51,17 @@ System Center Configuration Manager では、Unicode 文字を使用して、ほ
 
     -   クライアント プッシュ インストール アカウント  
 
-    -   稼動状態の基準の公開アカウント  
+    -   稼働状態の基準の公開アカウント  
 
-    -   稼動状態の基準のクエリ アカウント  
+    -   稼働状態の基準のクエリ アカウント  
 
     -   管理ポイント データベース接続アカウント  
 
     -   ネットワーク アクセス アカウント  
 
-    -   パッケージ アクセス アカウント  
+    -   ［パッケージ アクセス アカウント］  
 
-    -   標準センダー アカウント:  
+    -   標準センダー アカウント  
 
     -   サイト システムのインストール アカウント  
 
@@ -73,7 +74,7 @@ System Center Configuration Manager では、Unicode 文字を使用して、ほ
     >   
     >  レポート サービス ポイント アカウントは、Unicode をサポートしますが、RUS 文字の例外が適用されます。  
 
--   サイト サーバーとサイト システムの FQDN  
+-   サイト サーバーとサイト システムの完全修飾ドメイン名 (FQDN)  
 
 -   Configuration Manager のインストール パス  
 
@@ -133,20 +134,15 @@ System Center Configuration Manager では、Unicode 文字を使用して、ほ
 
 -   ブート メディアの .ISO ファイル名  
 
-##  <a name="a-namebkmkothercharlimitationsa-additional-limitations"></a><a name="BKMK_OtherCharLimitations"></a> その他の制限事項  
+##  <a name="BKMK_OtherCharLimitations"></a> その他の制限事項  
  サポートされる文字セットと言語バージョンに関するその他の制限事項は以下のとおりです。  
 
 -   Configuration Manager は、サイト サーバー コンピューターのロケールの変更をサポートしません。  
 
 -   エンタープライズ証明機関 (CA) は、2 バイト文字セット (DBCS) を使用するクライアント コンピューター名をサポートしません。 使用可能なクライアント コンピューター名は、PKI の IA5 文字の制限を受けます。 さらに、Configuration Manager では、DBCS を使用する CA 名またはサブネット名値をサポートしていません。  
 
-##  <a name="a-namebkmklangnonlocalizea-configuration-manager-objects-that-are-not-localized"></a><a name="BKMK_LangNonLocalize"></a> ローカライズされない Configuration Manager オブジェクト  
+##  <a name="BKMK_LangNonLocalize"></a> ローカライズされない Configuration Manager オブジェクト  
  Configuration Manager データベースは、保存されるほとんどのオブジェクトに対して Unicode をサポートし、可能な場合、この情報をコンピューターのロケールと一致するオペレーティング システム言語で表示します。 クライアント インターフェイスまたは Configuration Manager コンソールで、情報をコンピューターのオペレーティング システム言語で表示するためには、コンピューターのロケールが、サイトにインストールしているクライアントの言語またはサーバーの言語と一致している必要があります。  
 
  ただし、一部の Configuration Manager オブジェクトは Unicode をサポートしていないため、それらのオブジェクトは ASCII を使用してデータベースに保存されるか、言語に関する追加の制限事項が発生します。 この情報は常に、ASCII 文字セットを使用して表示されるか、オブジェクトの作成時に使用した言語で表示されます。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

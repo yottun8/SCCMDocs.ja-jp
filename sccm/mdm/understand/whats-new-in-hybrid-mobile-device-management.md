@@ -16,8 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 7972aa2c39f5b86e69087b1ed5a1c3b50ba69940
-ms.openlocfilehash: f74bd019b5403f3f5702795279759270261ce4db
+ms.sourcegitcommit: 69d3e7d51911d6195c2f62a5e81c0faca38ed306
+ms.openlocfilehash: a8fd3c24f3267ea451f4c94854e8577046efaeca
+ms.lasthandoff: 02/27/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
@@ -48,7 +49,21 @@ ms.openlocfilehash: f74bd019b5403f3f5702795279759270261ce4db
 
 - **Windows デバイス用の新しい MDM サーバー アドレス**
 
-  Windows および Windows Phone デバイスを登録するための MDM サーバー アドレスは、manage.microsoft.com から enrollment.manage.microsoft.com に変更されました。 Windows または Windows Phone デバイスを登録するときに求められた場合は、MDM サーバー アドレスとして enrollment.manage.microsoft.com を使用するようユーザーに通知してください。 この更新では、EnterpriseEnrollment.contoso.com を manage.microsoft.com にリダイレクトする DNS 内の CNAME を、EnterpriseEnrollment.contoso.com to EnterpriseEnrollment-s.manage.microsoft.com にリダイレクトする DNS 内の CNAME に置き換える必要もあります。 この変更にについて詳しくは、http://aka.ms/intuneenrollsvrchange をご覧ください。 
+  Windows および Windows Phone デバイスを登録するための MDM サーバー アドレスは、manage.microsoft.com から enrollment.manage.microsoft.com に変更されました。 Windows または Windows Phone デバイスを登録するときに求められた場合は、MDM サーバー アドレスとして enrollment.manage.microsoft.com を使用するようユーザーに通知してください。 この更新では、EnterpriseEnrollment.contoso.com を manage.microsoft.com にリダイレクトする DNS 内の CNAME を、EnterpriseEnrollment.contoso.com to EnterpriseEnrollment-s.manage.microsoft.com にリダイレクトする DNS 内の CNAME に置き換える必要もあります。 この変更にについて詳しくは、http://aka.ms/intuneenrollsvrchange をご覧ください。
+
+### <a name="new-in-configuration-manager-technical-preview-1702"></a>Configuration Manager Technical Preview 1702 の新機能
+
+- **Android for Work のサポート**
+
+  Configuration Manager Technical Preview 1702 を使用するハイブリッド MDM 環境で、Android for Work を使用して Android デバイスを管理できるようになりました。 サポートされている Android デバイスを、Android for Work デバイスとして登録できます。これによりデバイス上に作業プロファイルが作成され、Play for Work で承認されたアプリをそこに展開できます。 これらのデバイスの構成項目、コンプライアンス ポリシー、およびリソース アクセス プロファイルを展開することもできます。
+
+- **非準拠アプリのコンプライアンス設定**
+
+  コンプライアンス ポリシーで、Android および iOS のアプリの非準拠アプリの規則を作成できるようになりました。 デバイスに指定されたアプリケーションがインストールされている場合、それらは "非対応" としてマークされ、適用される条件付きアクセス ポリシーに従って、会社のリソースにアクセスできなくなります。
+
+- **PFX 証明書の作成と配布および S/MIME のサポート**
+
+  PFX 証明書を作成してハイブリッド環境のユーザーに展開できるようになりました。 これらの証明書は、ユーザーが登録したデバイスで S/MIME メールの暗号化と復号化に使用できます。
 
 ## <a name="new-hybrid-features-in-january-2017"></a>2017 年 1 月のハイブリッド新機能
 
@@ -177,13 +192,8 @@ Configuration Manager 2012 SP1 または R2 RTM でハイブリッド展開を�
 11 月に Windows 8、Windows Phone 8、および Windows RT に対する Intune サポートが廃止され、Windows Phone 8 ポータル サイトのサポートが終了するので、Configuration Manager コンソールでは、署名済みのポータル サイト アプリをアップロードする機能が廃止されました。  既に登録されている Windows 8、Windows Phone 8、および Windows RT デバイスは引き続きサポートされますが、これらのプラットフォームへの追加デバイスの登録はサポートされていません。
 
 
-## <a name="see-also"></a>関連項目
+### <a name="see-also"></a>関連項目
 
 - [過去のハイブリッド MDM 機能](whats-new-hybrid-archive.md)
 - [System Center 2012 Configuration Manager の MDM 向け新機能](https://technet.microsoft.com/library/mt445560.aspx)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

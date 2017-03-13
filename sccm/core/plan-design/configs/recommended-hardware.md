@@ -2,7 +2,7 @@
 title: "推奨ハードウェア | Microsoft Docs"
 description: "基本的な展開だけでなく、System Center Configuration Manager 環境を拡張するために役立つハードウェアの推奨事項を確認します。"
 ms.custom: na
-ms.date: 12/30/2016
+ms.date: 2/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d61c726d9690a1ec512b8dbab74b0f760012c880
-ms.openlocfilehash: 7caee70c327d84f1e016c689f824d843ccdb3b42
+ms.sourcegitcommit: 63ee782a718cf4a66ffe25b022aa317f3e45784c
+ms.openlocfilehash: 6701d5f21e8511ec9cf4fe7bc5804b3e2fdc4c71
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -31,7 +32,7 @@ ms.openlocfilehash: 7caee70c327d84f1e016c689f824d843ccdb3b42
  以下の各セクションの情報は、既定の構成で利用できる Configuration Manager 機能を使用するクライアントとサイトについて、その処理負荷に対応できるようにハードウェアを計画する場合のガイドとして使用してください。  
 
 
-##  <a name="a-namebkmkscalesiesystemsa-site-systems"></a><a name="bkmk_ScaleSieSystems"></a> サイト システム  
+##  <a name="bkmk_ScaleSieSystems"></a> サイト システム  
  このセクションでは、最大数のクライアントをサポートし、大部分、あるいはすべての Configuration Manager 機能を使用する展開のための Configuration Manager サイト システムのお勧めのハードウェア構成を示します。 展開でサポートするクライアントが最大数よりも少なく、使用可能な機能をすべて使用するわけではない場合、必要なコンピューター リソースはより少なくて済む場合があります。 一般的に、システム全体のパフォーマンスを制限する主な要因を順に挙げます。  
 
 1.  ディスク I/O のパフォーマンス  
@@ -42,24 +43,24 @@ ms.openlocfilehash: 7caee70c327d84f1e016c689f824d843ccdb3b42
 
 最適なパフォーマンスを得るには、すべてのデータ ドライブを RAID 10 構成にし、1 Gbps イーサネット ネットワークを使用します。  
 
-###  <a name="a-namebkmkscalesiteservera-site-servers"></a><a name="bkmk_ScaleSiteServer"></a> サイト サーバー  
+###  <a name="bkmk_ScaleSiteServer"></a> サイト サーバー  
 
 |スタンドアロン プライマリ サイト|CPU (コア)|メモリ (GB)|SQL Server のメモリの割り当て (%)|  
 |-------------------------------|---------------|---------------|----------------------------------------|  
 |同じサーバー上でデータベース サイトの役割を持つスタンドアロン プライマリ サイト サーバー<sup>1</sup>|16|96|80|  
 |リモート サイトのデータベースを使用するスタンドアロン プライマリ サイト サーバー|8|16|-|  
 |スタンドアロン プライマリ サイトのリモート データベース サーバー|16|64|90|  
-|同じサーバー上でデータベース サイトの役割を持つ中央管理サイト サーバー<sup>1</sup>|16|96|80|  
+|同じサーバー上でデータベース サイトの役割を持つ中央管理サイト サーバー<sup>1</sup>|20|128|80|  
 |リモート サイトのデータベースを使用する中央管理サイト サーバー|8|16|-|  
 |中央管理サイトのリモート データベース サーバー|16|96|90|  
 |同じサーバー上でデータベース サイトの役割を持つ子プライマリ サイト|16|96|80|  
 |リモート サイトのデータベースを使用する子プライマリ サイト サーバー|8|16|-|  
-|子プライマリ サイトのリモート データベース サーバー|16|64|90|  
+|子プライマリ サイトのリモート データベース サーバー|16|72|90|  
 |セカンダリ サイト サーバー|8|16|-|  
 
  <sup>1</sup> サイト サーバーと SQL Server が同じコンピューターにインストールされている場合、展開はサイトとクライアントの最大の [Sizing and scale numbers](/sccm/core/plan-design/configs/size-and-scale-numbers) をサポートします。 ただし、この構成により [System Center Configuration Manager の高可用性オプション](/sccm/protect/understand/high-availability-options) (SQL Server クラスターの使用など) が制限されることがあります。 また、SQL Server と Configuration Manager サイト サーバーの両方を同じコンピューターで実行する場合、その両方をサポートするためには高い I/O 要件が必要になるため、大規模な展開を使用するユーザーはリモート SQL Server コンピューターでの構成を使用することをお勧めします。  
 
-###  <a name="a-namebkmkremotesitesystema-remote-site-system-servers"></a><a name="bkmk_RemoteSiteSystem"></a> リモート サイト システム サーバー  
+###  <a name="bkmk_RemoteSiteSystem"></a> リモート サイト システム サーバー  
  以下のガイダンスは、1 つのサイト システムの役割を保有しているコンピューター用です。 複数のサイト システムの役割を同じコンピューターにインストールする場合は、調整を計画します。  
 
 |サイト システムの役割|CPU (コア)|メモリ (GB)|ディスク領域 (GB)|  
@@ -76,7 +77,7 @@ ms.openlocfilehash: 7caee70c327d84f1e016c689f824d843ccdb3b42
 
 -   **WsusPool プライベート メモリの制限** を 4 倍に増やすか、**0** (無制限) に設定する  
 
-###  <a name="a-namebkmkdiskspacea-disk-space-for-site-systems"></a><a name="bkmk_DiskSpace"></a> サイト システムのディスク領域  
+###  <a name="bkmk_DiskSpace"></a> サイト システムのディスク領域  
  ディスク割り当てと構成によって、Configuration Manager のパフォーマンスが向上します。 Configuration Manager 環境はそれぞれ異なるため、実装することの価値が以下のガイダンスとは異なる場合もあります。  
 
  最高のパフォーマンスを実現するには、個々の専用 RAID ボリュームに各オブジェクトを配置します。 また、最高のパフォーマンスを実現するには、すべてのデータ ボリューム (Configuration Manager およびそのデータベース ファイル) に RAID 10 を使用します。  
@@ -109,7 +110,7 @@ ms.openlocfilehash: 7caee70c327d84f1e016c689f824d843ccdb3b42
 
     -   SQL Server 2014 Express: 10 GB  
 
-##  <a name="a-namebkmkscaleclienta-clients"></a><a name="bkmk_ScaleClient"></a> クライアント  
+##  <a name="bkmk_ScaleClient"></a> クライアント  
  このセクションでは、Configuration Manager クライアント ソフトウェアを使用して管理するコンピューター用の推奨ハードウェア構成を示します。  
 
 ### <a name="client-for-windows-computers"></a>Windows コンピューターのクライアント  
@@ -147,7 +148,7 @@ ms.openlocfilehash: 7caee70c327d84f1e016c689f824d843ccdb3b42
 |ディスク領域|500MB の空きディスク領域。Configuration Manager クライアントのキャッシュには、5 GB の空きディスク領域をお勧めします。|  
 |ネットワーク接続|Configuration Manager のクライアント コンピューターには、管理を可能にするための、Configuration Manager サイト システムへのネットワーク接続が必要です。|  
 
-##  <a name="a-namebkmkscaleconsolea-configuration-manager-console"></a><a name="bkmk_ScaleConsole"></a> Configuration Manager コンソール  
+##  <a name="bkmk_ScaleConsole"></a> Configuration Manager コンソール  
  次の表に示された要件は、Configuration Manager コンソールを実行する各コンピューターに適用されます。  
 
  **最小ハードウェア構成:**  
@@ -176,7 +177,7 @@ ms.openlocfilehash: 7caee70c327d84f1e016c689f824d843ccdb3b42
 PowerShell のほかに、Windows Management Framework (WMF) 3.0 および 4.0 もサポートされます。   
 PowerShell は、Configuration Manager コンソールのインストールの前後を問わずインストールできます。  
 
-##  <a name="a-namebkmkscalelaba-lab-deployments"></a><a name="bkmk_ScaleLab"></a> ラボ展開  
+##  <a name="bkmk_ScaleLab"></a> ラボ展開  
  Configuration Manager のラボ展開とテストの展開には、次の最小ハードウェア推奨事項を使用します。 これらの推奨事項はすべてのサイトの種類に適用され、最大 100 のクライアントで使用する場合のものです。  
 
 |ロール|CPU (コア)|メモリ (GB)|ディスク領域 (GB)|  
@@ -184,9 +185,4 @@ PowerShell は、Configuration Manager コンソールのインストールの�
 |サイトとデータベース サーバー|2 - 4|7 - 12|100|  
 |サイト システム サーバー|1 - 4|2 - 4|50|  
 |クライアント|1 - 2|1 - 3|30|  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

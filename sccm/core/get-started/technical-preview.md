@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager の Technical Preview | Microsoft Docs"
 description: "System Center Configuration Manager の新機能を体験できるテクニカル プレビュー リリースについて説明します。"
 ms.custom: na
-ms.date: 2/1/2017
+ms.date: 2/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4b1daa727477b1273cdbee1bc7e3ac8af5911ff0
-ms.openlocfilehash: 4703178c5ce3e23cb9d2e4557466fcec571c2983
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 0d1f8eb9274dde96eb4295c007c0f49036d1a3de
+ms.openlocfilehash: e140ef9daad9fb4105cea543115af19a4378c903
+ms.lasthandoff: 02/27/2017
 
 
 ---
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/22/2017
 
 
 
-##  <a name="a-namebkmkreqsa-requirements-and-limitations-for-the-technical-preview"></a><a name="bkmk_reqs"></a> Technical Preview の要件と制限事項  
+##  <a name="bkmk_reqs"></a> Technical Preview の要件と制限事項  
 
 > [!IMPORTANT]     
 >  Technical Preview はラボ環境での使用目的に限定してライセンスされます。  Microsoft はサポート サービスを提供しない場合があり、また、プレビュー ソフトウェアでは特定の機能が使用できない場合があります。 さらに、プレビュー ソフトウェアは、製品版ソフトウェアに比べて、セキュリティ、プライバシー、アクセシビリティ、可用性および信頼性の基準が低いか、または異なる場合があります。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/22/2017
 
 -   このプレビュー ビルドから、製品版 (現在のブランチ) へのアップグレードはサポートされません。 ただし、プレビュー バージョンから更新プログラムが使用できる場合は、Configuration Manager コンソールの **[更新とサービス]** ノードから検索してからインストールできます。 コンソール内アップグレード プロセスに関する「 [ConfigMgr 更新プログラム パッケージをインストールする](https://www.youtube.com/embed/KBd_EGFbUT8) 」というビデオを youtube.com でご覧ください。  
 
-##  <a name="a-namebkmkinstalla-install-and-update-the-technical-preview"></a><a name="bkmk_install"></a> Technical Preview のインストールと更新  
+##  <a name="bkmk_install"></a> Technical Preview のインストールと更新  
  System Center Configuration Manager の Technical Preview は、System Center Configuration Manager の最新リリースとは異なります。  
 
  テクニカル プレビューを使用するには、テクニカル プレビュー ビルドの **ベースライン バージョン** を最初にインストールする必要があります。 ベースライン バージョンをインストールしたら、 **コンソール内更新** を使用して、最新のプレビュー バージョンでインストール環境を最新のものにできます。     通常、Technical Preview の新バージョンは毎月使用可能です。
@@ -95,7 +95,7 @@ ms.lasthandoff: 02/22/2017
 
 
 
-##  <a name="a-namebkmktpfeedbacka-providing-feedback"></a><a name="BKMK_TPFeedback"></a> フィードバックについて  
+##  <a name="BKMK_TPFeedback"></a> フィードバックについて  
  テクニカル プレビューに対するフィードバックをお待ちしています。 各プレビューで提供される機能に対するフィードバックを提出するには、Microsoft Connect サイトの「 [Configuration Manager フィードバック プログラム](https://connect.microsoft.com/ConfigurationManagervnext/Feedback) 」ページでフィードバック フォームへのリンクを辿ってください。  
 
  また、希望する新しい機能のアイデアがありましたら、その内容もお知らせください。 新しいアイデアを提出する、または、他の人が提出したアイデアに投票するには、 [ユーザー ボイスのページにアクセス](http://configurationmanager.uservoice.com)してください。  
@@ -105,11 +105,23 @@ ms.lasthandoff: 02/22/2017
 
 
 
-##  <a name="a-namebkmktpcapsa-capabilities-delivered-in-technical-previews"></a><a name="bkmk_tpCaps"></a> Technical Preview で提供される機能  
+##  <a name="bkmk_tpCaps"></a> Technical Preview で提供される機能  
  以下は、それぞれの Configuration Manager Technical Preview リリースで提供される機能です。  Technical Preview のバージョンで利用できるようになった機能は、以降のバージョンでも利用できます。 同様に、System Center Configuration Manager リリース (Current Branch) に追加された機能は、後続の Technical Preview でも引き続き利用できます。  特定の機能の詳細については、各プレビュー バージョンのコンテンツをクリックします。  
 
  |機能|Technical Preview バージョン|Current Branch バージョン|  
  |----------------|---------------------|--------------------|
+ |iOS デバイスの新しいコンプライアンス設定|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#new-compliance-settings-for-ios-devices)|![追加されていません](media/Red_X.gif)|
+ |S/MIME サポートを含む PFX 証明書を作成する|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#create-pfx-certificates-with-s-mime-support)|![追加されていません](media/Red_X.gif)|
+ |アプリケーションをインストールする前に実行中の実行可能ファイルを確認する|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#check-for-running-executable-files-before-installing-an-application)|![追加されていません](media/Red_X.gif)|
+ |Configuration Manager コンソールからフィードバックを送信する | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#send-feedback-from-the-configuration-manager-console)    |![追加されていません](media/Red_X.gif)  |
+ |更新プログラムとサービスの変更  | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#changes-for-updates-and-servicing)  |![追加されていません](media/Red_X.gif) |
+ |ピア キャッシュの改善  | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#peer-cache-improvements) |![追加されていません](media/Red_X.gif)|
+ |Azure Active Directory の使用  | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |![追加されていません](media/Red_X.gif)|
+ |条件付きアクセス デバイス コンプライアンス ポリシーの改善 | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#conditional-access-device-compliance-policy-improvements) |![追加されていません](media/Red_X.gif)|
+ |マルウェア対策クライアントのバージョンのアラート | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#antimalware-client-version-alert) |![追加されていません](media/Red_X.gif)|
+ |Windows Update for Business 更新プログラムのコンプライアンス評価 | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#compliance-assessment-for-windows-update-for-business-updates) |![追加されていません](media/Red_X.gif)|
+ |ソフトウェア センターの設定と影響の大きいタスク シーケンスの通知メッセージの改善| [Tech Preview 1702](capabilities-in-technical-preview-1702.md#improvements-to-software-center-settings-and-notification-messages-for-high-impact-task-sequences) |![追加されていません](media/Red_X.gif)|
+ |Android for Work のサポート| [Tech Preview 1702](capabilities-in-technical-preview-1702.md#android-for-work-support) |![追加されていません](media/Red_X.gif)|
  |ソフトウェア更新ポイントの境界グループの改善 | [Tech Preview 1701](capabilities-in-technical-preview-1701.md#boundary-groups-improvements-for-software-update-points)    |![追加されていません](media/Red_X.gif)  |
  |ハードウェア インベントリでの UEFI 情報の収集 | [Tech Preview 1701](capabilities-in-technical-preview-1701.md#hardware-inventory-collects-uefi-information)|![追加されていません](media/Red_X.gif)  |
  |オペレーティング システムの展開に関する機能拡張| [Tech Preview 1701](capabilities-in-technical-preview-1701.md#improvements-to-operating-system-deployment)|![追加されていません](media/Red_X.gif)  |

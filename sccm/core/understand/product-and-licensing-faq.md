@@ -2,7 +2,7 @@
 title: "製品とライセンスに関する FAQ | Microsoft Docs"
 description: "System Center Configuration Manager の一般的な製品とライセンスの質問に対する回答を検索できます。"
 ms.custom: na
-ms.date: 2/17/2017
+ms.date: 2/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 81689631899b626bd33df8853cf82646d7e57afc
-ms.openlocfilehash: 47e35018902c424dc492025bb08bd4df4d81fcbe
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: d8f1a1a5757bbc3e2b0c17b1a89fbd56bbae6019
+ms.openlocfilehash: c1a276ad1ed6d10d286ab389ab3f05ec780c4e58
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -32,10 +32,9 @@ ms.lasthandoff: 02/18/2017
 System Center Configuration Manager の機能の詳細については、Microsoft [System Center Configuration Manager](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) の製品ページを参照してください
 
 
-## <a name="details"></a>説明
-System Center Configuration Manager は...
 
-## <a name="faq"></a>FAQ
+
+## <a name="system-center-configuration-manager-licensing-faq"></a>System Center Configuration Manager のライセンスに関する FAQ
 
 1.    **Current Branch (CB) とは何ですか?**   
 Current Branch とは、アクティブなサービス モデルを提供する、System Center Configuration Manager の運用準備済みビルドです。 このサービス モデルは、Windows 10 または Windows Server 2016 Nano Server インストール オプションとエクスペリエンスが似ています。 このアプローチでは、"クラウドの歩調" で行動し、より迅速なイノベーションを求めるお客様をサポートします。 Current Branch サービス モデルでは、System Center Configuration Manager のお客様は継続して新しい特長と機能を受信します。 このため、System Center Configuration Manager のライセンスに対してソフトウェア アシュアランスがアクティブになっているお客様、または同等のサブスクリプション権限を持っているお客様のみが、System Center Configuration Manager の Current Branch をインストールして使用することができます。

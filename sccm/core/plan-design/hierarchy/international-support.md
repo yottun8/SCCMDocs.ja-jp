@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 37e45e604e89d3ce280bb2bff47d4a55b6cdfaf8
+ms.sourcegitcommit: 40e018084dd2703327ff653f962f488432b1ec98
+ms.openlocfilehash: 3bab51be96445f766e8f5bbf54eee854e5d09cee
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -26,7 +27,7 @@ ms.openlocfilehash: 37e45e604e89d3ce280bb2bff47d4a55b6cdfaf8
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-次のセクションでは、特定の国際的要件に準拠するように System Center Configuration Manager を構成するための技術詳細について説明します。  
+次のセクションでは、System Center Configuration Manager を特定の国際的要件に準拠させるための技術詳細について説明します。  
 
 ## <a name="gb18030-requirements"></a>GB18030 の要件  
  Configuration Manager は、GB18030 で定義された規格に対応しているため、中国で Configuration Manager を使用することができます。 GB18030 の要件を満たすには、Configuration Manager 展開に次の構成が必要です。  
@@ -43,9 +44,4 @@ ms.openlocfilehash: 37e45e604e89d3ce280bb2bff47d4a55b6cdfaf8
     >  これらのデータベース照合順序は、「[System Center Configuration Manager の SQL Server バージョンのサポート](../../../core/plan-design/configs/support-for-sql-server-versions.md)」に記載された要件の例外となります。  
 
 -   **GB18030.SMS** という名前のファイルを、階層内の各サイト サーバー コンピューターのシステム ボリュームのルート フォルダーに配置する必要があります。 このファイルにはデータは保存されません。この要件を満たす名前が付けられた空のテキスト ファイルを使用できます。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

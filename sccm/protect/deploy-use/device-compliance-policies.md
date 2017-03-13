@@ -17,8 +17,9 @@ ms.author: andredm
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: fd5830fef3759def7806dbbe1802872df19ca939
+ms.sourcegitcommit: b1295fff41d99b0bd6fc00ccab7a4b8bbdb60866
+ms.openlocfilehash: 99d1d14e89903d78167ec2f7d91f8393827bd616
+ms.lasthandoff: 02/27/2017
 
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager でのデバイス コンプライアンス ポリシー
@@ -40,6 +41,7 @@ System Center Configuration Manager の**コンプライアンス ポリシー**
 -   デバイスが脱獄またはルート化されているかどうか  
 
 -   デバイス上の電子メールが Intune のポリシーで管理されるかどうか、または Windows デバイスの正常性構成証明サービスでデバイスが異常であると報告されたかどうか  
+-   デバイスにインストールできないアプリ
 
 
  コンプライアンス ポリシーをユーザー コレクションに展開します。 コンプライアンス ポリシーがユーザーに展開されると、すべてのユーザー デバイスがコンプライアンスをチェックされます。  
@@ -54,7 +56,8 @@ System Center Configuration Manager の**コンプライアンス ポリシー**
 |**電子メールのプロファイル**|該当なし|該当なし|検疫済み|該当なし|  
 |**最小 OS バージョン**|検疫済み|検疫済み|検疫済み|検疫済み|  
 |**最大 OS バージョン**|検疫済み|検疫済み|検疫済み|検疫済み|  
-|**デバイス正常性構成証明 (1602 更新プログラム)**|設定を Windows 8.1 に適用できません<br /><br /> Windows 10 および Windows 10 Mobile は検疫されます。|該当なし|該当なし|該当なし|  
+|**デバイス正常性構成証明 (1602 更新プログラム)**|設定を Windows 8.1 に適用できません<br /><br /> Windows 10 および Windows 10 Mobile は検疫されます。|該当なし|該当なし|該当なし|
+|**アプリをインストールすることはできません。**|該当なし|該当なし|検疫済み|検疫済み|
 
  **修復** = デバイスのオペレーティング システムによってコンプライアンスが適用されます (たとえば、PIN の設定を求められます)。  設定が非準拠となる場合はありません。  
 
@@ -62,16 +65,10 @@ System Center Configuration Manager の**コンプライアンス ポリシー**
 
 -   ユーザーが条件付きアクセス ポリシーの対象となる場合は、デバイスがブロックされます。  
 
--   ポータル サイトまたは Web ポータルは、コンプライアンスの問題をユーザーに通知します。  
-
+-   ポータル サイトまたは Web ポータルは、コンプライアンスの問題をユーザーに通知します。
 
 ### <a name="next-steps"></a>次のステップ  
 [デバイス コンプライアンス ポリシーを作成して展開する](create-compliance-policy.md)
 ### <a name="see-also"></a>関連項目  
  [System Center Configuration Manager でサービスへのアクセスを管理する](../../protect/deploy-use/manage-access-to-services.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

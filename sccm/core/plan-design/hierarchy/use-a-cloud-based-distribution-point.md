@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 97051d9c65ef5ea28c94468b24863120624e8de0
-ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
+ms.sourcegitcommit: 3eab8e62ace29c0fcb24d47ec7e398d807347a38
+ms.openlocfilehash: a1d701c77afb4d6317d8a137fdf46422063df085
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -62,7 +63,7 @@ ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 
 クラウドベースの配布ポイントには、次の制限があります。  
 
--   クラウドベースの配布ポイントを使用して、ソフトウェア更新プログラム パッケージをホストすることはできません。  
+-  バージョン 1610 と修正プログラム KB4010155 を使用する前に、クラウドベースの配布ポイントを使用して、ソフトウェア更新プログラム パッケージをホストすることはできません。 バージョン 1610 の次の Current Branch のバージョンでは、このオプションがサポートされ、この修正プログラムをインストールする必要はありません。  
 
 -   クラウドベースの配布ポイントを、PXE やマルチキャストを有効にした環境で使用することはできません。  
 
@@ -76,7 +77,7 @@ ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 
 -   クラウドベースの配布ポイントは、プル配布ポイントとして構成できません。  
 
-##  <a name="a-namebkmkprereqsclouddpa-prerequisites-for-cloud-based-distribution-points"></a><a name="BKMK_PrereqsCloudDP"></a> クラウドベースの配布ポイントの前提条件  
+##  <a name="BKMK_PrereqsCloudDP"></a> クラウドベースの配布ポイントの前提条件  
  クラウドベースの配布ポイントを使用するための前提条件は、次のとおりです。  
 
 -   Azure のサブスクリプション (このトピックの「[サブスクリプションと証明書について](#BKMK_CloudDPCerts)」をご覧ください)。
@@ -91,7 +92,7 @@ ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 
 -   クライアントは、クラウドベースの配布ポイントを使用するためにインターネットにアクセスできなければなりません。  
 
-##  <a name="a-namebkmkclouddpcosta-cost-of-using-cloud-based-distribution"></a><a name="BKMK_CloudDPCost"></a> クラウドベースの配布にかかるコスト  
+##  <a name="BKMK_CloudDPCost"></a> クラウドベースの配布にかかるコスト  
  クラウドベースの配布ポイントを使用する場合、データ記憶域と Configuration Manager クライアントが実行するダウンロード転送のコストについて計画を立てます。  
 
  Configuration Manager には、コストの管理とデータ アクセスの監視を支援するためのオプションがあります。  
@@ -139,7 +140,7 @@ ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 
      クラウド サービスを停止するには、Configuration Manager コンソールの [**管理**] ワークスペースにある [**Cloud Services**] の [**クラウド配布ポイント**] ノードで、配布ポイントを選択します。 次に、[**サービスの停止**] をクリックして、Azure で実行されているクラウド サービスを停止します。  
 
-##  <a name="a-namebkmkclouddpcertsa-about-subscriptions-and-certificates-for-cloud-based-distribution-points"></a><a name="BKMK_CloudDPCerts"></a> クラウドベースの配布ポイントのサブスクリプションと証明書について  
+##  <a name="BKMK_CloudDPCerts"></a> クラウドベースの配布ポイントのサブスクリプションと証明書について  
  クラウドベースの配布ポイントで、Configuration Manager による配布ポイントをホストするクラウド サービスの管理を有効にし、クライアントが配布ポイントのコンテンツにアクセスできるようにするには、証明書が必要です。 これらの証明書の概要を次に示します。 詳細については、「[System Center Configuration Manager での PKI 証明書の要件](../../../core/plan-design/network/pki-certificate-requirements.md)」をご覧ください。  
 
  **証明書**  
@@ -163,7 +164,7 @@ ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 
    この証明書の展開の例については、「[System Center Configuration Manager PKI 証明書の展開手順の例: Windows Server 2008 証明機関](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)」トピックの「**クラウドベースの配布ポイント用のサービス証明書の展開**」セクションをご覧ください。  
 
-##  <a name="a-namebkmktasksa-common-management-tasks-for-cloud-based-distribution-points"></a><a name="bkmk_Tasks"></a> クラウドベースの配布ポイントの一般的な管理タスク  
+##  <a name="bkmk_Tasks"></a> クラウドベースの配布ポイントの一般的な管理タスク  
 
 -   **サイト サーバーからクラウドベースの配布ポイントへの通信**: クラウドベースの配布ポイントをインストールする場合は、クラウド サービスへのコンテンツの転送を管理する&1; つのプライマリ サイトを割り当てる必要があります。 これは、配布ポイント サイト システムの役割を特定のサイトにインストールする場合と同じです。  
 
@@ -185,7 +186,7 @@ ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 
 3.  優先配布ポイントまたはリモート配布ポイントを使用できない場合、クライアントは代わりにクラウドベースの配布ポイントのコンテンツを取得できます。  
 
-    
+
 
   クライアントがコンテンツの場所としてクラウドベースの配布ポイントを使用する場合、クライアントは、Configuration Manager アクセス トークンを使用してクラウドベースの配布ポイントに対して自身を認証します。 クライアントが Configuration Manager クラウドベースの配布ポイント証明書を信頼している場合、クライアントは要求されたコンテンツをダウンロードできます。  
 
@@ -212,9 +213,4 @@ ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 -   **クラウドベースの配布ポイントのアンインストール**: クラウドベースの配布ポイントをアンインストールするには、Configuration Manager コンソールで配布ポイントを選び、[**削除**] を選びます。  
 
     階層からクラウドベースの配布ポイントを削除すると、Configuration Manager によって Azure のクラウド サービスからコンテンツが削除されます。  
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 012d5b313487640faeebe5b49064c74d41a7edb9
+ms.sourcegitcommit: cec63ed7781e236dbf5e8baa0a468193ea794339
+ms.openlocfilehash: d4efe1f013dbb74efca79cd27f7248fc085c7424
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -26,18 +27,32 @@ ms.openlocfilehash: 012d5b313487640faeebe5b49064c74d41a7edb9
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-サイト データベース サーバーとは、サポートされている Microsoft SQL Server のバージョンを実行し、Configuration Manager サイトの情報を格納するコンピューターです。 Configuration Manager 階層内の各サイトには、サイト データベースと、サイト データベース サーバーの役割を持つサーバーがあります。  
+サイト データベース サーバーとは、Microsoft SQL Server のサポートされているバージョンを実行するコンピューターのことです。 SQL Server を使用して、Configuration Manager サイトの情報を格納します。 Configuration Manager 階層内の各サイトには、サイト データベースと、サイト データベース サーバーの役割を持つサーバーがあります。  
 
 -   中央管理サイトとプライマリ サイトでは、SQL Server をサイト サーバーにインストールすることも、サイト サーバー以外のサーバーにインストールすることもできます。  
 
--   一方、セカンダリ サイトでは、SQL Server の完全版の代わりに SQL Server Express を使えるものの、データベース サーバーは、セカンダリ サイト サーバーで実行されていなければなりません。  
+-   セカンダリ サイトでは、SQL Server の完全版の代わりに、SQL Server Express をインストールできます。 ただし、データベース サーバーは、セカンダリ サイト サーバーで実行する必要があります。  
 
-リモート データベース サーバーのコンピューターを使用する場合は、介在するネットワーク接続が可用性の高い広帯域のネットワーク接続であることを確認します。 これは、サイト サーバーとサイト システムの役割のいくつかは、サイト データベースをホストしている SQL Server と継続的に通信する必要があるからです。  
+次の SQL Server 構成を使用して、サイト データベースをホストできます。  
+
+-   SQL Server の既定のインスタンス  
+
+-   SQL Server を実行している&1; 台のコンピューターの名前付きインスタンス  
+
+-   SQL Server のクラスター化されたインスタンスの名前付きインスタンス  
+
+-   SQL Server AlwaysOn 可用性グループ (System Center Configuration Manager のバージョン 1602 以降)
 
 
-**リモート データベース サーバーの場所を決めるときは、次のことに注意してください。**  
+サイト データベースをホストするには、SQL Server が「[System Center Configuration Manager の SQL Server バージョンのサポート](../../../core/plan-design/configs/support-for-sql-server-versions.md)」に記載されている要件を満たしている必要があります。  
 
--   データベース サーバーとの通信に必要な帯域幅は、サイトとクライアントの構成によって異なります。そのため、実際に必要な帯域幅を的確に予想することはできません。  
+
+
+## <a name="remote-database-server-location-considerations"></a>リモート データベース サーバーの場所に関する考慮事項  
+
+リモート データベース サーバーのコンピューターを使用する場合は、介在するネットワーク接続が可用性の高い広帯域のネットワーク接続であることを確認します。 サイト サーバーとサイト システムの役割のいくつかは、サイト データベースをホストしているリモート サーバーと継続的に通信する必要があります。
+
+-   データベース サーバーとの通信に必要な帯域幅は、サイトとクライアントの構成によって異なります。 そのため、実際に必要な帯域幅を的確に予測することはできません。  
 
 -   SMS プロバイダーを実行し、サイト データベースに接続するコンピューターが多いほど、必要なネットワーク帯域幅が大きくなります。  
 
@@ -46,26 +61,5 @@ ms.openlocfilehash: 012d5b313487640faeebe5b49064c74d41a7edb9
 -   サイト データベースとサイト サーバーを併置する場合は、クラスター化された SQL Server をサイト データベース サーバーにすることはできません。  
 
 
-通常、1 つのサイト システム サーバーには、1 つの Configuration Manager サイトだけの役割を割り当てます。しかし、SQL Server クラスターのインスタンスごと、またはクラスター化されていない SQL Server のインスタンスごとに、異なる Configuration Manager サイトのデータベースをホストするように構成することができます。 この場合は、SQL Server の各インスタンスが、通信用に別々のポートを使用するように構成する必要があります。  
-
-
-**次の SQL Server 構成を使用して、サイト データベースをホストできます。**  
-
--   SQL Server の既定のインスタンス  
-
--   SQL Server を実行している 1 台のコンピューターの名前付きインスタンス  
-
--   SQL Server のクラスター化されたインスタンスの名前付きインスタンス  
-
--   SQL Server AlwaysOn 可用性グループ (バージョン 1602 以降)
-
-
-**サイト データベースの前提条件:**  
-
--   サイト データベースをホストするには、SQL Server が「[System Center Configuration Manager の SQL Server バージョンのサポート](../../../core/plan-design/configs/support-for-sql-server-versions.md)」に記載されている要件を満たしている必要があります。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
+通常、サイト システム サーバーは、1 つだけの Configuration Manager サイトのサイト システムの役割をサポートしています。 ただし、SQL Server を実行するクラスター化または非クラスター化サーバーで、SQL Server のさまざまなインスタンスを使用して、さまざまな Configuration Manager サイトのデータベースをホストできます。 この場合は、SQL Server の各インスタンスが、通信用に別々のポートを使用するように構成する必要があります。  
 

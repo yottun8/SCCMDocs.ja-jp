@@ -17,8 +17,9 @@ ms.author: andredm
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
+ms.sourcegitcommit: b1295fff41d99b0bd6fc00ccab7a4b8bbdb60866
+ms.openlocfilehash: dda0916fac15cf768ecc2a44fda3b8939bcd048e
+ms.lasthandoff: 02/27/2017
 
 ---
 
@@ -218,12 +219,14 @@ ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
   - **セキュア ブートが有効である:** セキュア ブートが有効である場合は、システムは強制的に工場出荷時の信頼された状態に起動されます。 また、セキュア ブートが有効である場合には、マシンの起動に使用するコア コンポーネントには、デバイスの製造者が信頼している適切な暗号署名が必要です。 マシンの開始前に、UEFI ファームウェアはこれを確認します。 ファイルが改ざんされて、その署名が破壊されると、システムは起動しません。
   - **起動時マルウェア対策が有効である (この設定は PC のみに適用されます):** 起動時マルウェア対策 (ELAM) は、ネットワーク内のコンピューターの起動時にサードパーティ製のドライバーが初期化する前に、コンピューターを保護します。<br />この規則は既定でオフになっています。
 
+- **Apps that cannot be installed on the device (デバイスにインストールできないアプリ):** ユーザーが管理非対応のアプリ リストからアプリをインストールした場合、ユーザーは会社の電子メールにアクセスを試みてもブロックされます。 この規則では、管理者によって定義された非対応リストにアプリを追加する場合、アプリ名とアプリ ID が必要です。 アプリの発行元を追加することもできますが、必須ではありません。
+
+  **以下でサポートされています。**
+  * iOS 6+
+  * Android 4.0 以降
+  * Samsung KNOX Standard 4.0+
+
   HAS サービスの動作については、「 [Health Attestation CSP (正常性構成証明 CSP)](https://msdn.microsoft.com/library/dn934876.aspx)」をご覧ください。
   **以下でサポートされています。**
   * Windows 10 および Windows 10 Mobile
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

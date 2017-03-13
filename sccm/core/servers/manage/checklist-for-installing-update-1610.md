@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 73feb75f6727134f977ea2baabf36a832812ccc1
-ms.openlocfilehash: 715dadc10fe86acd7e324ff8f80be057d0e01f11
+ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
+ms.openlocfilehash: 640fc5ddb4e0a6828901b7f406ca72fc210b2970
+ms.lasthandoff: 02/23/2017
 
 ---
 # <a name="checklist-for-installing-update-1610-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム 1610 をインストールするためのチェックリスト
@@ -137,7 +138,7 @@ Configuration Manager では、ネットワーク負荷分散 (NLB) クラスタ
 
 Configuration Manager では、セカンダリ サイトのバックアップとセカンダリ サイト データベースのテスト アップグレードのいずれもサポートされていません。
 
-テスト データベースのアップグレードを実稼働サイト データベースで実行することは避けてください。 実行するとサイト データベースが更新され、サイトが機能しなくなる可能性があります。 詳細については、「[System Center Configuration Manager へのアップグレード](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)」の「[サイト データベースのアップグレードをテストする](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#bkmk_test)」セクションを参照してください。
+テスト データベースのアップグレードを実稼働サイト データベースで実行することは避けてください。 実行するとサイト データベースが更新され、サイトが機能しなくなる可能性があります。 詳細については、「**コンソール内の更新プログラムをインストールする前に**」の「[手順 2: 更新プログラムをインストールする前のデータベースのアップグレードのテスト](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2)」を参照してください。
 
 **クライアントのパイロット運用を計画する:**   
 クライアントを更新する更新プログラムをインストールすると、すべてのアクティブなクライアントを展開してアップグレードする前に、実稼働前環境でその新しいクライアントの更新プログラムをテストできます。
@@ -167,9 +168,4 @@ Configuration Manager では、セカンダリ サイトのバックアップと
 更新プログラムをインストールするプロセス、およびサイトのコンポーネントとサイト システムの役割を再インストールするアクションが業務に及ぼす影響が少ない場合は、各サイトの通常業務時間外に更新プログラムをインストールする計画を立てることをお勧めします。
 
 詳細については、「[System Center Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)」を参照してください。
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

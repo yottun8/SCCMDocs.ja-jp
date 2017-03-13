@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager へのアップグレード| Microsoft Docs"
 description: "System Center 2012 Configuration Manager を実行しているサイトおよび階層から適切に一括アップグレードを実行するための手順を説明します。"
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 2/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
-ms.openlocfilehash: 27d18a7c5b13f488cafb36ace2e437fe6a50c598
+ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
+ms.openlocfilehash: 8af2a797ad4e87d870bb27873a7428e96f63b76d
+ms.lasthandoff: 02/23/2017
 
 
 ---
@@ -32,7 +33,7 @@ System Center 2012 Configuration Manager を実行しているサイトおよび
  > [!TIP]
  > System Center Configuration Manager のサイトと階層のインフラストラクチャの管理において、*アップグレード*、*更新*、および*インストール* という用語は&3; つの異なる概念を説明するものです。 各用語の使用方法については、「[サイトと階層のインフラストラクチャでのアップグレード、更新、およびインストールについて](/sccm/core/understand/upgrade-update-install)」を参照してください。
 
-##  <a name="a-namebkmkpatha-in-place-upgrade-paths"></a><a name="bkmk_path"></a> 一括アップグレード パス  
+##  <a name="bkmk_path"></a> 一括アップグレード パス  
 **バージョン 1606 へのアップグレード**  
 2016 年 12 月 15 日に、バージョン 1606 の基準メディアが再リリースされ、追加のアップグレード シナリオのサポートが追加されました。 この新しいリリースでは、次のバージョンを System Center Configuration Manager バージョン 1606 の正規ライセンス版にアップグレードできます。  
 -   System Center Configuration Manager バージョン 1606 の評価版
@@ -69,7 +70,7 @@ System Center 2012 Configuration Manager を実行しているサイトおよび
 
 -   Technical Preview から正規ライセンス版への移行はサポートされていません。  
 
-##  <a name="a-namebkmkchecklista-upgrade-checklists"></a><a name="bkmk_checklist"></a> アップグレードのチェックリスト  
+##  <a name="bkmk_checklist"></a> アップグレードのチェックリスト  
  次のチェック リストは、System Center Configuration Manager への適切なアップグレードの計画に役立ちます。  
 
 ### <a name="before-you-upgrade"></a>アップグレードする前に  
@@ -227,7 +228,7 @@ Configuration Manager では、セカンダリ サイトのバックアップと
 
 既存のクライアントをアップグレードする方法と新しいクライアントをインストールする方法については、「[System Center Configuration Manager で Windows コンピューター用クライアントをアップグレードする方法](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)」をご覧ください。  
 
-##  <a name="a-namebkmkconsiderationsa-considerations-for-upgrading"></a><a name="bkmk_considerations"></a> アップグレード時の考慮事項  
+##  <a name="bkmk_considerations"></a> アップグレード時の考慮事項  
 **自動アクション**:  
 System Center Configuration Manager にアップグレードすると、自動的に次のアクションが行われます。  
 
@@ -255,7 +256,9 @@ System Center Configuration Manager にアップグレードすると、自動�
 -   **ソフトウェア更新プログラムの概要作成スケジュール：**  
      ソフトウェア更新プログラムやソフトウェア更新プログラム グループ用のカスタムの概要スケジュールは、1 時間という既定値にリセットされます。 アップグレードが完了した後に、カスタムの概要値を目的の頻度にリセットしてください。  
 
-##  <a name="a-namebkmktesta-test-the-site-database-upgrade"></a><a name="bkmk_test"></a> サイト データベースのアップグレードをテストする  
+##  <a name="bkmk_test"></a> サイト データベースのアップグレードをテストする  
+次の情報は、System Center 2012 Configuration Manager などの以前のバージョンを System Center Configuration Manager にアップグレードする場合にのみ適用されます。 サイトで既に System Center Configuration Manager が実行されていて、新しい更新プログラムをインストールする場合は、「**コンソール内の更新プログラムをインストールする前に**」の「[手順 2: 更新プログラムをインストールする前のデータベースのアップグレードのテスト](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2)」を参照してください。
+
 サイトをアップグレードする前に、そのサイトのデータベースのコピーでアップグレードをテストします。  
 
 データベースでアップグレードをテストするために、まず、サイト データベースのコピーを Configuration Manager サイトをホストしていない SQL Server インスタンスに復元します。 データベースのコピーをホストするのに使用している SQL Server のバージョンが、データベースのコピーのソースである Configuration Manager のバージョンがサポートしている SQL Server のバージョンである必要があります。  
@@ -298,7 +301,7 @@ System Center Configuration Manager にアップグレードすると、自動�
 
 サイト データベースのコピーのアップグレードが成功したら、Configuration Manager サイトとそのサイト データベースのアップグレードに進みます。  
 
-##  <a name="a-namebkmkupgradea-upgrade-sites"></a><a name="bkmk_upgrade"></a> サイトをアップグレードする  
+##  <a name="bkmk_upgrade"></a> サイトをアップグレードする  
 サイトのアップグレード前の構成を完了して、データベースのコピーでサイト データベースのアップグレードをテストし、インストールを計画しているサービス パック バージョンの前提条件ファイルと言語パックをダウンロードしたら、Configuration Manager サイトをアップグレードできるようになります。  
 
 階層内のサイトをアップグレードする際、まず、階層の最上位サイトをアップグレードします。 この最上位サイトは、中央管理サイトまたはスタンドアロンのプライマリ サイトのいずれかです。 中央管理サイトのアップグレードが完了した後で、任意の順序で子プライマリ サイトをアップグレードできます。 プライマリ サイトをアップグレードした後で、そのサイトの子セカンダリ サイトをアップグレードするか、セカンダリ サイトをアップグレードする前に他のプライマリ サイトをアップグレードできます。  
@@ -378,16 +381,11 @@ Configuration Manager サイトをアップグレードするには、次の手�
 
 セカンダリ サイトのアップグレードは、バックグラウンドで進行します。 アップグレードが完了した後で、Configuration Manager コンソールでステータスを確認できます。 ステータスを確認するには、セカンダリ サイト サーバーを選択して、[ **ホーム** ] タブの [ **サイト** ] グループにある [ **インストール ステータスの表示**] をクリックします。  
 
-##  <a name="a-namebkmkpostupgradea-perform-post-upgrade-tasks"></a><a name="BKMK_PostUpgrade"></a> アップグレード後のタスクを実行する  
+##  <a name="BKMK_PostUpgrade"></a> アップグレード後のタスクを実行する  
 サイトを新しいサービス パックにアップグレードした後で、サイトのアップグレードまたは再構成を終了するために、追加のタスクを完了することが必要になる場合があります。 このようなタスクには、Configuration Manager クライアントまたは Configuration Manager コンソールのアップグレード、管理ポイントのデータベース レプリカの再有効化、サービス パックのアップグレード後は保持されない、使用する Configuration Manager 機能の設定の復元などがあります。  
 
 **セカンダリ サイトの既知の問題:**  
 - **バージョン 1511 にアップグレードする場合:** セカンダリ サイトのクライアントがセカンダリ サイトから管理ポイント (プロキシ管理ポイント) を検索できるようにするには、セカンダリ サイトの配布ポイントも含む境界グループに管理ポイントを手動で追加します。  
 
 - **バージョン 1606 以降にアップグレードする場合:** プロキシ管理ポイントは、セカンダリ サイトの配布ポイントを含む境界グループに自動的に追加されます。
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 
