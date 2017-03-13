@@ -2,7 +2,7 @@
 title: "PKI 証明書の要件 | Microsoft Docs"
 description: "System Center Configuration Manager で必要な PKI 証明書の要件について説明します。"
 ms.custom: na
-ms.date: 12/07/2016
+ms.date: 02/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 caps.latest.revision: 17
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: eff38aafbbbbb077ca63474cde738ee8ec57307a
-ms.openlocfilehash: 186a9f1a58c2c4d123c14a8774999dbc19e77dac
+ms.sourcegitcommit: b90519f6f6e3599cd34f5cf93b476739ec17847b
+ms.openlocfilehash: 64ed5982cfd1de6ec135f02c84b9396266001b42
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -32,9 +33,8 @@ System Center Configuration Manager で必要になる場合がある公開キ�
 -   Windows Server 2008: [Windows Server 2008 の Active Directory 証明書サービス](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
 
 > [!IMPORTANT]  
->  2017 年 1 月 1 日より、Windows は SHA-1 で署名された一部の証明書を信頼しなくなります。  SHA-2 で署名された新しいサーバーおよびクライアント認証証明書 (SHA-256 が含まれます) を発行することをお勧めします。  
->   
->  この変更と、今後生じる可能性のある期日の更新の詳細については、このブログの投稿をご覧ください: [Windows Enforcement of Authenticode Code Signing and Timestamping (Windows の Authenticode コード署名とタイムスタンプ処理の実施)](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-authenticode-code-signing-and-timestamping.aspx)  
+>  2017 年 2 月 14 日より、Windows は SHA-1 で署名された特定の証明書を信頼しなくなります。 これについては、「[Windows Enforcement of SHA1 certificates](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx)」(Windows の SHA1 証明書の適用) に記載されています。 一般に、SHA-2 で署名された新しいサーバーおよびクライアント認証証明書 (特に SHA-256 や SHA-512 を含む) を発行することをお勧めします。
+> さらに、インターネットに接続するサービスで SHA-2 証明書を使用することをお勧めします。 たとえば、クラウド管理ゲートウェイで使用する公開証明書を購入する場合は、SHA-2 証明書を購入するようにしてください。
 
  System Center Configuration Manager でモバイル デバイスと Mac コンピューターに登録するクライアント証明書、Microsoft Intune でモバイル デバイスの管理用に自動作成される証明書、および System Center Configuration Manager で AMT ベースのコンピューターにインストールされる証明書を除き、任意の PKI を使用して次の証明書を作成、展開、および管理できます。 ただし、Active Directory 証明書サービスと証明書テンプレートを使用する場合、この Microsoft PKI ソリューションを使用すると証明書の管理が簡単になります。 次の表の「 **使用する Microsoft 証明書テンプレート** 」列を確認し、証明書の要件に最も近い証明書テンプレートを特定してください。 テンプレート ベースの証明書を発行できるのは、Windows Server 2008 Enterprise や Windows Server 2008 Datacenter など、サーバー オペレーティング システムの Enterprise Edition または Datacenter Edition で実行されている企業証明機関だけです。  
 
@@ -46,7 +46,7 @@ System Center Configuration Manager で必要になる場合がある公開キ�
 
  次のセクションで証明書の要件を確認してください。  
 
-##  <a name="a-namebkmkpkicertificatesforserversa-pki-certificates-for-servers"></a><a name="BKMK_PKIcertificates_for_servers"></a> サーバー向け PKI 証明書  
+##  <a name="BKMK_PKIcertificates_for_servers"></a> サーバー向け PKI 証明書  
 
 |System Center Configuration Manager コンポーネント|証明書の目的|使用する Microsoft 証明書テンプレート|証明書の固有情報|System Center Configuration Manager での証明書の使用方法|  
 |-------------------------------------|-------------------------|-------------------------------------------|---------------------------------------------|----------------------------------------------------------|  
@@ -60,7 +60,7 @@ System Center Configuration Manager で必要になる場合がある公開キ�
 |帯域外サービス ポイント|AMT のプロビジョニング|**Web サーバー** (変更済み)|**[拡張キー使用法]** の値に " **サーバー認証 (1.3.6.1.5.5.7.3.1)** " とオブジェクト識別子 **2.16.840.1.113741.1.2.3**が含まれている必要があります。<br /><br /> [サブジェクト名] フィールドに、帯域外サービス ポイントをホストしているサーバーの FQDN が含まれている必要があります。<br /><br /> **注:** 独自の内部 CA ではなく外部 CA に AMT プロビジョニング証明書を要求する場合で、その CA が AMT プロビジョニング オブジェクト識別子である 2.16.840.1.113741.1.2.3 をサポートしていない場合は、証明書サブジェクト名の組織単位 (OU) 属性として、代わりに「 **Intel(R) Client Setup Certificate**」という文字列を指定できます。 この英語のテキスト文字列をそのまま (大文字小文字を区別、末尾にピリオドを付けない)、帯域外サービス ポイントをホストしているサーバーの FQDN に加えて使用する必要があります。<br /><br /> サポートされるキーの長さ: 1024 と 2048。 AMT 6.0 以降のバージョンでは、キーの長さとして 4096 ビットもサポートされます。|この証明書は、帯域外サービス ポイント サイト システム サーバーにあるコンピューター証明書ストア内の個人用ストアに保存されます。<br /><br /> この AMT プロビジョニング証明書は、帯域外管理用コンピューターを準備するために使用されます。<br /><br /> AMT プロビジョニング証明書を提供する CA から発行されるこの証明書を要求する必要があります。AMT ベースのコンピューターの BIOS 拡張は、このプロビジョニング証明書のルート証明書の拇印 (証明書ハッシュとも呼ばれる) を使用するように構成する必要があります。<br /><br /> VeriSign は、AMT プロビジョニング証明書を提供する外部 CA の一例ですが、独自の内部 CA を使用することもできます。<br /><br /> 帯域外サービス ポイントをホストするサーバーに証明書をインストールします。このサーバーは、証明書のルート CA に正常に連係できる必要があります (既定では、ルート CA 証明書と VeriSign に対する中間 CA 証明書は Windows のインストール時にインストールされます)。|  
 |Microsoft Intune コネクタを実行するサイト システム サーバー|クライアント認証|該当なし: この証明書は Intune で自動作成されます。|[拡張キー使用法] の値には「クライアント認証 (1.3.6.1.5.5.7.3.2)」が含まれます。<br /><br /> 3 つのカスタム拡張機能で、ユーザーの Intune サブスクリプションが一意に識別されます。<br /><br /> キーのサイズは 2,048 ビットであり、SHA-1 ハッシュ アルゴリズムを使用します。<br /><br /> **注:** この設定は変更できません。この情報は参考のためにのみ提供されます。|Microsoft Intune をサブスクライブすると、この証明書は自動的に要求され、Configuration Manager データベースにインストールされます。 Microsoft Intune コネクタをインストールすると、Microsoft Intune コネクタを実行しているサイト システム サーバーにこの証明書がインストールされます。 また、コンピューターの証明書ストアにインストールされます。<br /><br /> この証明書は、Microsoft Intune コネクタを使用して、Microsoft Intune に対して Configuration Manager 階層を認証するために使用されます。 これらのコンポーネント間で転送されるすべてのデータは、Secure Sockets Layer (SSL) を使用します。|  
 
-###  <a name="a-namebkmkpkicertificatesforproxyserversa-proxy-web-servers-for-internet-based-client-management"></a><a name="BKMK_PKIcertificates_for_proxyservers"></a> インターネット ベースのクライアント管理用のプロキシ Web サーバー  
+###  <a name="BKMK_PKIcertificates_for_proxyservers"></a> インターネット ベースのクライアント管理用のプロキシ Web サーバー  
  サイトがインターネット ベースのクライアント管理をサポートしており、SSL ターミネーションによるプロキシ Web サーバーを使用 (ブリッジング) してインターネット接続を受信している場合、プロキシ Web サーバーには次の表に示す証明書要件があります。  
 
 > [!NOTE]  
@@ -70,7 +70,7 @@ System Center Configuration Manager で必要になる場合がある公開キ�
 |--------------------------------------|-------------------------|-------------------------------------------|---------------------------------------------|----------------------------------------------------------|  
 |インターネット経由のクライアント接続を受け入れるプロキシ Web サーバー|サーバー認証およびクライアント認証|1. <br />                        **Web サーバー**<br /><br /> 2. <br />                        **ワークステーション認証**|[サブジェクト名] フィールドまたは [サブジェクトの別名] フィールドにインターネット FQDN が必要です (Microsoft 証明書テンプレートを使用している場合は、サブジェクトの別名はワークステーション テンプレートでのみ利用可能です)。<br /><br /> SHA-2 ハッシュ アルゴリズムがサポートされています。|この証明書は、次のサーバーをインターネット クライアントに対して認証するのに使用されます。また、クライアントとこのサーバーの間で転送されるすべてのデータを SSL で暗号化するのにも使用されます。<br /><br /> - インターネット ベースの管理ポイント<br /><br /> - インターネット ベースの配布ポイント<br /><br /> - インターネット ベースのソフトウェアの更新ポイント<br /><br /> クライアント認証は、System Center Configuration Manager クライアントとインターネット ベースのサイト システムの間のクライアント接続のブリッジに使用されます。|  
 
-##  <a name="a-namebkmkpkicertificatesforclientsa-pki-certificates-for-clients"></a><a name="BKMK_PKIcertificates_for_clients"></a> クライアント向け PKI 証明書  
+##  <a name="BKMK_PKIcertificates_for_clients"></a> クライアント向け PKI 証明書  
 
 |System Center Configuration Manager コンポーネント|証明書の目的|使用する Microsoft 証明書テンプレート|証明書の固有情報|System Center Configuration Manager での証明書の使用方法|  
 |-------------------------------------|-------------------------|-------------------------------------------|---------------------------------------------|----------------------------------------------------------|  
@@ -83,9 +83,4 @@ System Center Configuration Manager で必要になる場合がある公開キ�
 |Intel AMT ベースのコンピューター|サーバー認証|**Web サーバー** (変更済み)<br /><br /> **[Active Directory の情報から構築する]**で [サブジェクト名] を構成して、 **[サブジェクト名の形式]** で **[共通名]**を選択する必要があります。<br /><br /> 帯域外管理コンポーネントのプロパティで指定したユニバーサル セキュリティ グループに、 **読み取り** と **登録** の権限を付与する必要があります。|[拡張キー使用法] の値には「 サーバー認証 (1」をご覧ください。3」をご覧ください。6」をご覧ください。1」をご覧ください。5」をご覧ください。5」をご覧ください。7」をご覧ください。3」をご覧ください。1)」をご覧ください。<br /><br /> サブジェクト名は、AMT ベース コンピューターの FQDN を含んでいる必要があります。これは Active Directory Domain Services によって自動的に提供されます。|この証明書は、コンピューターの管理コントローラーに搭載された不揮発性 RAM に格納され、Windows ユーザー インターフェイスからは参照できません。<br /><br /> Intel AMT ベースの各コンピューターは、AMT プロビジョニング中、およびその後の更新中にこの証明書を要求します。 これらのコンピューターから AMT プロビジョニング情報を削除すると、この証明書は失効します。<br /><br /> この証明書を Intel AMT ベースのコンピューターにインストールすると、ルート CA への証明書チェーンもインストールされます。 AMT ベースのコンピューターは、キーの長さが 2048 ビットを超える CA 証明書をサポートできません。<br /><br /> 証明書を Intel AMT ベースのコンピューターにインストールすると、AMT ベースのコンピューターは、この証明書によって、帯域外サービス ポイント サイト システム サーバーと帯域外管理コンソールを実行しているコンピューターに対して認証されます。また、Transport Layer Security (TLS) を使用して、これらのコンピューター間のデータ転送がすべて暗号化されます。|  
 |Intel AMT 802.1X クライアント証明書|クライアント認証|**ワークステーション認証**<br /><br /> **[Active Directory の情報から構築する]**で [サブジェクト名] を構成し、 **[サブジェクト名の形式]** で **[共通名]**を選択して、DNS 名を消去し、サブジェクトの別名として [ユーザー プリンシパル名 (UPN)] を選択してください。<br /><br /> 帯域外管理コンポーネントのプロパティで指定したユニバーサル セキュリティ グループに、証明書テンプレートに対する **読み取り** と **登録** の権限を付与する必要があります。|[拡張キー使用法] の値には「 クライアント認証 (1」をご覧ください。3」をご覧ください。6」をご覧ください。1」をご覧ください。5」をご覧ください。5」をご覧ください。7」をご覧ください。3」をご覧ください。2)」をご覧ください。<br /><br /> サブジェクト名フィールドは、AMT ベース コンピューターの FQDN を含んでいる必要があります。また、サブジェクトの別名は UPN を含んでいる必要があります。<br /><br /> サポートされるキーの最大長: 2048 ビット。|この証明書は、コンピューターの管理コントローラーに搭載された不揮発性 RAM に格納され、Windows ユーザー インターフェイスからは参照できません。<br /><br /> Intel AMT ベースの各コンピューターは、AMT プロビジョニング中にこの証明書を要求しますが、AMT プロビジョニング情報が削除されたときに、この証明書を失効させません。<br /><br /> 証明書が AMT ベースのコンピューターにインストールされると、この証明書によって AMT ベースのコンピューターが RADIUS サーバーに対して認証され、その後でそのコンピューターによるネットワーク アクセスが認証されます。|  
 |Microsoft Intune で登録されるモバイル デバイス|クライアント認証|該当なし: この証明書は Intune で自動作成されます。|[拡張キー使用法] の値には「クライアント認証 (1.3.6.1.5.5.7.3.2)」が含まれます。<br /><br /> 3 つのカスタム拡張機能で、ユーザーの Intune サブスクリプションが一意に識別されます。<br /><br /> ユーザーは登録時に証明書のサブジェクト値を指定できます。 ただし、この値は Intune がデバイスを識別するときに使用されません。<br /><br /> キーのサイズは 2,048 ビットであり、SHA-1 ハッシュ アルゴリズムを使用します。<br /><br /> **注:** この設定は変更できません。この情報は参考のためにのみ提供されます。|認証済みユーザーが Microsoft Intune を使用して自分のモバイル デバイスを登録すると、この証明書が自動的に要求され、インストールされます。 デバイスの結果の証明書はコンピューター ストアに保存され、Intune で管理できるように、登録されたモバイル デバイスを Intune に対して認証するために使用されます。<br /><br /> 証明書にはカスタム拡張機能があるため、認証は、この組織用に設定されている Intune サブスクリプションに制限されます。|
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
