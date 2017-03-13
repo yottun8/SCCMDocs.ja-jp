@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1604 の機能
@@ -28,7 +29,7 @@ ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
 
  このバージョンでお試しいただける新機能を次に示します。  
 
-##  <a name="a-namebkmkwindowsvppa-manage-volume-purchased-apps-from-the-windows-store-for-business"></a><a name="BKMK_WindowsVPP"></a> ビジネス向け Windows ストアからの一括購入アプリの管理  
+##  <a name="BKMK_WindowsVPP"></a> ビジネス向け Windows ストアからの一括購入アプリの管理  
  [ビジネス向け Windows ストア](https://www.microsoft.com/en-us/business-store)は、組織向けのアプリを検索して、個別に、または一括で購入できる場所です。 ストアを Configuration Manager に接続すると、一括購入したアプリを Configuration Manager コンソールから管理できます。例を挙げます。  
 
 -   購入したアプリの一覧を Configuration Manager に同期させることができます。  
@@ -91,10 +92,10 @@ ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
 
 3.  ビジネス向け Windows ストアのアプリを含む Configuration Manager アプリケーションが作成されます。 他の Configuration Manager のアプリケーションと同様に、このアプリケーションを展開して監視できます。  
 
-##  <a name="a-namebkmkpfwa-improvements-to-microsoft-passport-for-work-management"></a><a name="BKMK_PFW"></a> Microsoft Passport for Work 管理の機能強化  
+##  <a name="BKMK_PFW"></a> Microsoft Passport for Work 管理の機能強化  
  Configuration Manager クライアントで管理されたドメインに参加している Windows 10 デバイスに Passport for Work ポリシーを展開できるようになりました。  
 
-##  <a name="a-namebkmkswitchsupa-option-for-clients-to-switch-to-a-new-software-update-point"></a><a name="bkmk_switchsup"></a> クライアントが新しいソフトウェア更新ポイントに切り替えるためのオプション  
+##  <a name="bkmk_switchsup"></a> クライアントが新しいソフトウェア更新ポイントに切り替えるためのオプション  
  1604 Technical Preview では、アクティブなソフトウェア更新ポイントに問題がある場合に、Configuration Manager クライアントが新しいソフトウェア更新ポイントに切り替えるためのオプションを有効にできます。 このオプションには、プライマリ サイトで利用可能な複数のソフトウェア更新ポイントが必要です。 デバイス コレクションでこのオプションを有効にします。有効にすると、コレクション内のクライアントは、次回のスキャンでアクティブなソフトウェアの更新ポイントへの接続に失敗したときに、別のソフトウェア更新ポイントを検索します。 WSUS の構成設定に応じて (更新プログラムの分類、製品など)、新しいソフトウェアの更新ポイントへの切り替えにより、追加のネットワーク トラフィックが発生します。 したがって、必要な場合に、このオプションのみを使用する必要があります。  
 
 #### <a name="to-enable-the-option-to-switch-software-update-points"></a>ソフトウェア更新ポイントを切り替えるオプションを有効にするには  
@@ -106,7 +107,7 @@ ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
 > [!NOTE]  
 >  このオプションは、複数のソフトウェア更新ポイントを持つサイトでのみ使用できます。  
 
-##  <a name="a-namebkmkpeercachea-client-settings-to-manage-client-cache-settings-and-client-peer-cache"></a><a name="bkmk_peercache"></a> クライアント キャッシュ設定とクライアント ピア キャッシュを管理するためのクライアント設定  
+##  <a name="bkmk_peercache"></a> クライアント キャッシュ設定とクライアント ピア キャッシュを管理するためのクライアント設定  
  Technical Preview 1604 で、クライアントのキャッシュの使用に影響する 2 つの新しいデバイス クライアント設定が導入されています。 両方とも個別に使用できますが、クライアント設定の同じプロパティ シートで構成されており、リモートの場所のクライアントへのコンテンツの展開を管理するために役立つよう結合されます。  
 
 -   1 つ目は、クライアントがローカル キャッシュから直接他のクライアントとコンテンツを共有するための組み込みの Configuration Manager ソリューションである、**クライアント ピア キャッシュ**です。 ピア キャッシュ クライアントがコンテンツを共有するには、同じ境界グループのメンバーである必要があります。 ピア キャッシュは、BracnchCache などのその他のソリューションの使用に取って代わるものではなく、並列動作し、配布ポイントなどの従来のコンテンツ展開ソリューションを拡張する他のオプションを提供します。  
@@ -117,7 +118,7 @@ ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
 
 クライアントが正常にクライアント ピア キャッシュの使用を把握しやすいように、**クライアント データ ソース** ダッシュボードを表示できます。 コンソールで、**[監視] > [クライアント ステータス] > [Client Data Sources (クライアント データ ソース)]** に移動します。 ここで、ダッシュボードに適用する期間を選択できます。 次に、表示で、情報を表示する境界グループまたはパッケージを選択できます。 情報を表示しているときは、画面上にマウスを移動して、コンテンツまたはポリシーのソースのソースについての詳細を表示できます。  
 
- 各境界グループのクライアント データ ソースの概要を表示する、新しいレポート [**Client Data Sources - Summarization**] (クライアント データ ソース - 概要) を使用することもできます。   
+ 各境界グループのクライアント データ ソースの概要を表示する、新しいレポート 「**Client Data Sources - Summarization**」 (クライアント データ ソース - 概要) を使用することもできます。   
 **ピア キャッシュを使用するための要件:**  
 
 -   各クライアントのキャッシュ フォルダーに対する**フル コントロール**を持つ**ネットワーク アクセス アカウント**を使用してサイトを構成する必要があります。 これは、既定では、**%windir%\ccmcache** です。  
@@ -146,7 +147,7 @@ ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
     > [!NOTE]  
     >  テクニカル プレビューと単一の配布ポイントに関するこのタスクを完了するには、すべてのクライアントのネットワークの場所で低速になるように配布ポイントを構成します。 その後、単一のクライアントにコンテンツを配布します。  そのクライアントがコンテンツを取得した後は、クライアントの場所から低速であると見なされる配布ポイントを使用する前に、コンテンツ ソースとして使用するローカルのピアを検索する別のクライアントにコンテンツを配布できます。  
 
-##  <a name="a-namebkmkpassporta-support-for-passport-for-work-as-a-ksp"></a><a name="bkmk_passport"></a> KSP としての Passport for Work のサポート  
+##  <a name="bkmk_passport"></a> KSP としての Passport for Work のサポート  
  System Center Configuration Manager により、Microsoft Passport for Work を統合できます。これは Active Directory や Azure Active Directory アカウントを使った代替サインイン方法であり、パスワード、スマート カード、または仮想スマート カードに置き換わります。  
 Passport を使用すると、パスワードの代わりにユーザー ジェスチャを使用してログインできます。 ユーザー ジェスチャには、単純な暗証番号 (PIN)、Windows Hello などの生体認証、または指紋リーダーなどの外部のデバイスがあります。  
 
@@ -156,7 +157,7 @@ Passport を使用すると、パスワードの代わりにユーザー ジェ�
 
 ユーザーが Passport の PIN を作成すると、Windows は、Configuration Manager がリッスンする通知を送信します。  これにより、Configuration Manager が、Passport の PIN を作成したユーザーをすぐに認識できるようになります。 その後、Passport が証明書プロファイルでのキー記憶域プロバイダーとして使用される場合に、Configuration Manager はそれらのユーザーに対して新しい証明書を発行することもできます。  
 
-##  <a name="a-namebkmkonpremdhaa-on-premises-device-health-attestation"></a><a name="bkmk_onpremdha"></a> オンプレミスのデバイス正常性構成証明書  
+##  <a name="bkmk_onpremdha"></a> オンプレミスのデバイス正常性構成証明書  
  オンプレミスのインフラストラクチャを使用して通信するように、Windows 10 デバイスの正常性構成証明書を構成できるようになりました。  管理者は、報告がクラウドを使用して行われるか、オンプレミスのリソースを使用して行われるかを指定できます。  正常性構成証明書の報告に**オンプレミス**が選択されている場合、サービスに URI を指定することができます。 これにより、インターネット アクセスを使用しないクライアント PC が、正常性構成証明書を使用してデバイスを有効化および管理できるようになります。  
 
 #### <a name="enable-health-attestation-for-on-premises-devices"></a>オンプレミス デバイス正常性構成証明書の有効化  
@@ -167,11 +168,6 @@ Passport を使用すると、パスワードの代わりにユーザー ジェ�
 
 これを試すには、クライアント エージェント設定を使用して、オンプレミスの正常性構成証明書サービスを構成します。  
 
-##  <a name="a-namebkmksmarta-smartlock-setting-for-android-devices"></a><a name="BKMK_Smart"></a> Android デバイスの SmartLock 設定  
+##  <a name="BKMK_Smart"></a> Android デバイスの SmartLock 設定  
  新しい設定の [**Allow SmartLock and other trust agents**] (SmartLock およびその他の信頼エージェントを許可) が [**Android and Samsung KNOX**] (Android および Samsung KNOX) 構成項目に追加され、互換性のある Android デバイスで SmartLock 機能を制御することができます。 信頼エージェントとも呼ばれるこの電話機能では、デバイスが特定の Bluetooth デバイスに接続したときや、NFC タグの近くにある場合など、信頼できる場所にある場合、デバイスのロック画面のパスワードを無効化またはバイパスすることができます。 この設定を使用して、エンドユーザーが SmartLock を構成することを禁止できます。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
