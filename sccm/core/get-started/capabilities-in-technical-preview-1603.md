@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 1d3adcf3310d88b1266388aa03ae5ea03e23f2a5
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1603-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1603 の機能
@@ -34,7 +35,7 @@ ms.openlocfilehash: 1d3adcf3310d88b1266388aa03ae5ea03e23f2a5
 
  **このバージョンでお試しいただける新機能を次に示します。**  
 
-##  <a name="a-namebkmksc1603a-improvements-to-software-center"></a><a name="BKMK_SC1603"></a> ソフトウェア センターの機能強化  
+##  <a name="BKMK_SC1603"></a> ソフトウェア センターの機能強化  
 
 ### <a name="new-tiled-view-for-apps"></a>アプリの新しいタイル化されたビュー  
  エンドユーザーは、ソフトウェア センターの [**アプリケーション**] タブでアプリのリストまたはアプリのタイル化されたビューを選択できるようになりました。  
@@ -42,16 +43,16 @@ ms.openlocfilehash: 1d3adcf3310d88b1266388aa03ae5ea03e23f2a5
 ### <a name="select-multiple-updates-in-software-center"></a>ソフトウェア センターでの複数の更新プログラムの選択  
  ソフトウェア センターの [**更新**] タブで、複数の更新プログラムを選択したり、[**すべて更新**] を選択したりして、同時に複数の更新プログラムのインストールを開始できるようになりました。  
 
-##  <a name="a-namebkmkrc1603a-improvements-to-remote-control"></a><a name="BKMK_RC1603"></a> リモート制御の機能強化  
+##  <a name="BKMK_RC1603"></a> リモート制御の機能強化  
 
 ### <a name="limit-shared-clipboard-access-in-a-remote-control-session"></a>リモート制御セッションでの共有クリップボードへのアクセスの制限  
- 新しいリモート ツール クライアントの設定 [**Prompt user for shared clipboard file transfer permission**] (ユーザーに共有クリップボードのファイル転送のアクセス許可を要求する) を有効にして、リモート コントロール セッションで共有クリップボードへのアクセスを制限できます。  
+ 新しいリモート ツール クライアントの設定 「**Prompt user for shared clipboard file transfer permission**」 (ユーザーに共有クリップボードのファイル転送のアクセス許可を要求する) を有効にして、リモート コントロール セッションで共有クリップボードへのアクセスを制限できます。  
 
  有効な場合、リモート セッションを共有しているエンドユーザーは、ビューア―が共有クリップボードを使用して、セッションからローカル コンピューターにファイルを転送できるように、そのセッションのビューア―にアクセス許可を与える必要があります。  
 
  前述のように、これにより、ビューア―にエンドユーザーのコンピューターのフル コントロールが付与された場合、エンドユーザーに完全に透過的な方法で、共有クリップボードを使用してセッションからローカル コンピューターにファイルを転送できるように、エンドユーザーに保護レイヤーが追加されます。  
 
-##  <a name="a-namebkmkramdisktftpa-customize-the-ramdisk-tftp-block-size-and-window-size-on-pxe-enabled-distribution-points"></a><a name="BKMK_RamDiskTFTP"></a> PXE 対応配布ポイント上の RamDisk TFTP ブロック サイズとウィンドウ サイズのカスタマイズ  
+##  <a name="BKMK_RamDiskTFTP"></a> PXE 対応配布ポイント上の RamDisk TFTP ブロック サイズとウィンドウ サイズのカスタマイズ  
  1603 Technical Preview では、PXE 対応配布ポイントの RamDisk TFTP ブロック サイズとウィンドウ サイズをカスタマイズできます。 ネットワークをカスタマイズしている場合、ブロックまたはウィンドウのサイズが大きすぎるために、ブート イメージのダウンロードがタイムアウト エラーで失敗する可能性があります。 RamDisk TFTP ブロック サイズとウィンドウ サイズのカスタマイズにより、特定のネットワーク要件に対応する PXE を使用する場合に、TFTP トラフィックを最適化できます。   
 最も効率的な内容を確認するために、環境内でカスタマイズした設定をテストする必要があります。  
 
@@ -91,9 +92,4 @@ ms.openlocfilehash: 1d3adcf3310d88b1266388aa03ae5ea03e23f2a5
      **値**: &lt;カスタマイズされたブロック サイズ\>  
 
  既定値は 4096 (4k) です。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
