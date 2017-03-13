@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3c8f968276cb6d412a4a06cb70f1c8e45e91c605
 ms.openlocfilehash: cd53f093056fbaa2ef6fd88d5451b7698f296569
+ms.lasthandoff: 02/11/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1612 の機能
@@ -216,7 +217,7 @@ User Voice に寄せられたご意見ご感想を基に、コンソール内検
 
 ### <a name="try-it-out"></a>試してみましょう
 実行可能ファイルの一覧を構成するには
-1.    任意の展開の種類のプロパティ ページで、[**Installer Handling**] (インストーラー処理) タブをクリックします。
+1.    任意の展開の種類のプロパティ ページで、「**Installer Handling**」 (インストーラー処理) タブをクリックします。
 2.    [**追加**] をクリックして、他の実行可能ファイルのいずれかを一覧に追加します (たとえば**Edge.exe**)。
 3.    [**OK**] をクリックして、[展開の種類プロパティ] ダイアログ ボックスを閉じます。
 
@@ -314,9 +315,4 @@ Azure 管理者資格情報が必要となるので、このタスクは Azure �
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>デバイス登録のための多要素認証の構成の変更
 
 Azure Portal でデバイス登録のための多要素認証 (MFA) を設定できるようになったので、Configuration Manager コンソールでは MFA オプションが削除されました。 登録用の MFA を設定する方法の詳細については、[こちらの Microsoft Intune に関するトピック](https://docs.microsoft.com/en-us/intune/deploy-use/multi-factor-authentication-azure-active-directory)を参照してください。
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
