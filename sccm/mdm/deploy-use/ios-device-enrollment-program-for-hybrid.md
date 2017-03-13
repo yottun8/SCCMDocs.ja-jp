@@ -43,7 +43,7 @@ ms.lasthandoff: 01/24/2017
 3.  **Device Enrollment Program トークンを取得する**   
     [Device Enrollment Program ポータル](https://deploy.apple.com) (https://deploy.apple.com) に移動し、会社の Apple ID でサインインします。 この Apple ID は、将来 DEP トークンを更新するために使用する必要があります。  
 
-    1.  [Device Enrollment Program ポータル](https://deploy.apple.com)で **[Device Enrollment Program]** > **[Manage Servers] (サーバーの管理)** に移動して、**[Add MDM Server]** (MDM サーバーの追加) をクリックします。  
+    1.  [Device Enrollment Program ポータル](https://deploy.apple.com)で **[Device Enrollment Program]** > **「Manage Servers」 (サーバーの管理)** に移動して、**[Add MDM Server]** (MDM サーバーの追加) をクリックします。  
 
     2.  **MDM サーバー名**を入力し、 **[Next]**をクリックします。 サーバー名は、自分が MDM サーバーを識別できるようにするための名前です。 Intune または Configuration Manager サーバーの名前または URL ではありません。  
 

@@ -2,7 +2,7 @@
 title: "SQL Server クラスター | Microsoft Docs"
 description: "SQL Server クラスターを使用して System Center Configuration Manager サイト データベースをホストします。 サポートされているオプションに関する情報が含まれます。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: e5a001ee018e240396498d134c5e75e325eae275
+ms.sourcegitcommit: ce0d7fc5f3d1812c4d62e551661c0ef89707567b
+ms.openlocfilehash: 53f119bbb1f8827a9c23c8b747840350bbb92790
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -29,18 +30,20 @@ ms.openlocfilehash: e5a001ee018e240396498d134c5e75e325eae275
 
  SQL Server クラスターを使用して System Center Configuration Manager サイト データベースをホストします。 サイト データベースは、サーバー クラスターでサポートされているサイト システムの役割として唯一のものです。  
 
-> [!NOTE]  
->  正常に構成して SQL Server クラスターを使用するには、SQL Server クラスターの構成が容易にこなせることが必要であり、SQL Server ドキュメント ライブラリで提供されているドキュメントと手順に従って作業します。  
+> [!IMPORTANT]  
+>  SQL Server クラスターの正常なセットアップは、SQL Server ドキュメント ライブラリで提供されるドキュメントと手順に依存します。  
 
- クラスターを使用すると、フェールオーバーをサポートできるため、サイト データベースの信頼性を高めることができます。 ただし、クラスター化されたサイト データベースを使用しても、処理や負荷分散に関するメリットが増えることはありません。 さらに、サイト サーバーが、サイト データベースに接続する前に SQL Server クラスターのアクティブ ノードを検索する必要があるため、パフォーマンスの低下が発生する可能性があります。  
+ クラスターは、フェールオーバーをサポートできるため、サイト データベースの信頼性を高めることができます。 ただし、処理や負荷分散に関するメリットが増えることはありません。 さらに、サイト サーバーが、サイト データベースに接続する前に SQL Server クラスターのアクティブ ノードを検索する必要があるため、パフォーマンスの低下が発生する可能性があります。  
 
  Configuration Manager をインストールする前に、Configuration Manager をサポートするために SQL Server クラスターを準備する必要があります。 (このセクションで後ほど説明する前提条件をご覧ください)。  
 
- Configuration Manager のセットアップ中に、[**サイト サーバーのバックアップ**] メンテナンス タスクをサポートするために、Microsoft Windows Server クラスターの各物理コンピューター ノードにボリューム シャドウ コピー サービス (VSS) ライターがインストールされます。  
+ Configuration Manager のセットアップ中に、Microsoft Windows Server クラスターの各物理コンピューター ノードに Windows ボリューム シャドウ コピー サービス ライターがインストールされます。 これは、**バックアップ サイト サーバー**のメンテナンス タスクをサポートしています。  
 
- サイトのインストール後に Configuration Manager は、1 時間ごとにクラスター ノードが変更されたかどうかを確認し、Configuration Manager コンポーネントのインストールに影響する、検出したすべての変更 (ノードのフェールオーバーや SQL Server クラスターへの新しいノードの追加など) を自動的に管理します。  
+ サイトのインストール後に Configuration Manager は、1 時間ごとにクラスター ノードが変更されたかどうかを確認します。 Configuration Manager は、Configuration Manager コンポーネントのインストールに影響する、検出したすべての変更 (ノードのフェールオーバーや SQL Server クラスターへの新しいノードの追加など) を自動的に管理します。  
 
 ## <a name="supported-options-for-using-a-sql-server-failover-cluster"></a>SQL Server フェールオーバー クラスターの使用でサポートされるオプション
+
+サイト データベースとして使用される SQL Server フェールオーバー クラスターでは、次のオプションがサポートされます。
 
 -   単一インスタンス クラスター  
 
@@ -48,19 +51,19 @@ ms.openlocfilehash: e5a001ee018e240396498d134c5e75e325eae275
 
 -   複数のアクティブ ノード  
 
--   名前付きインスタンスと既定のインスタンスの両方がサポートされます。  
+-   名前付きインスタンスと既定のインスタンスの両方  
 
-**必要条件:**  
+次の前提条件に注意してください。  
 
 -   サイト データベースは、サイト サーバーからリモートである必要があります (クラスターは、サイト システム サーバーを含めることはできません)。  
 
 -   サイト サーバーのコンピューター アカウントを、クラスター内の各サーバーのローカルの Administrators グループに追加しなければなりません。  
 
--   Kerberos 認証をサポートするには、 **TCP/IP** ネットワーク通信プロトコルを各 SQL Server クラスター ノードのネットワーク接続に対して有効にする必要があります。 **名前付きパイプ** は不要ですが、Kerberos 認証に問題が発生したときのトラブルシューティングに使用できます。 ネットワーク プロトコルの設定は、 **[SQL Server ネットワークの構成]** にある **[SQL Server 構成マネージャー]**で構成します。  
+-   Kerberos 認証をサポートするには、**TCP/IP** ネットワーク通信プロトコルを各 SQL Server クラスター ノードのネットワーク接続に対して有効にする必要があります。 **名前付きパイプ** は不要ですが、Kerberos 認証に問題が発生したときのトラブルシューティングに使用できます。 ネットワーク プロトコルの設定は、**[SQL Server ネットワークの構成]** にある **[SQL Server 構成マネージャー]**で構成します。  
 
--   PKI を使用する場合は、「&lt;Configuration Manager での PKI 証明書の要件>」を参照し、サイト データベースに SQL Server クラスターを使用する場合に必要となる特定の証明書の要件を確認します。  
+-   PKI を使用する場合は、「Configuration Manager での PKI 証明書の要件」を参照し、サイト データベースに SQL Server クラスターを使用する場合に必要となる特定の証明書の要件を確認します。  
 
-**考慮する制限事項:**  
+次の制限が適用されます。  
 
 -   **インストールおよび構成:**  
 
@@ -78,13 +81,15 @@ ms.openlocfilehash: e5a001ee018e240396498d134c5e75e325eae275
 
 -   **バックアップと回復:**  
 
-    -   Configuration Manager では、名前付きインスタンスを使用する SQL Server クラスターの DPM バックアップはサポートしていませんが、SQL Server の既定インスタンスを使用する SQL Server クラスターの DPM バックアップはサポートしています。  
+    -   Configuration Manager では、名前付きインスタンスを使用する SQL Server クラスターの Data Protection Manager (DPM) のバックアップはサポートしません。 ただし、SQL Server の既定のインスタンスを使用する SQL Server クラスター上の DPM バックアップはサポートします。  
 
-## <a name="to-prepare-a-clustered-sql-server-instance-for-the-site-database"></a>サイト データベースに対してクラスター化された SQL Server インスタンスを準備するには  
+## <a name="prepare-a-clustered-sql-server-instance-for-the-site-database"></a>サイト データベースに対してクラスター化された SQL Server インスタンスを準備する  
 
--   サイト データベースをホストする仮想 SQL Server クラスターを既存の Windows Server クラスター環境で作成します。 SQL Server クラスターをインストールおよび構成するための特定の手順については、使用している SQL Server のバージョンのドキュメントをご覧ください。 たとえば、SQL Server 2008 R2 を使用している場合は、  [SQL Server 2008 R2 フェールオーバー クラスターのインストール](http://go.microsoft.com/fwlink/p/?LinkId=240231)に関するページをご覧ください。 SQL Server 2014 を使用している場合は、「 [SQL Server フェールオーバー クラスターのインストール](https://technet.microsoft.com/library/hh231721\(v=sql.120\).aspx)」をご覧ください。  
+サイト データベースを準備するために完了する主なタスクを次に示します。
 
--   SQL Server クラスター内の各コンピューターで、ドライブのルート フォルダーに **NO_SMS_ON_DRIVE.SMS** という名前のファイルを配置すると、Configuration Manager はサイト コンポーネントをそのドライブにインストールしません。 既定では、Configuration Manager は各物理ノードにいくつかのコンポーネントをインストールして、バックアップなどの操作をサポートします。  
+-   サイト データベースをホストする仮想 SQL Server クラスターを既存の Windows Server クラスター環境で作成します。 SQL Server クラスターをインストールおよび設定するための特定の手順については、使用している SQL Server のバージョンのドキュメントをご覧ください。 たとえば、SQL Server 2008 R2 を使用している場合は、「 [SQL Server 2008 R2 フェールオーバー クラスターのインストール](http://go.microsoft.com/fwlink/p/?LinkId=240231)」を参照してください。  
+
+-   SQL Server クラスター内の各コンピューターで、ドライブのルート フォルダーにファイルを配置すると、Configuration Manager はサイト コンポーネントをそのドライブにインストールしません。 ファイル名は **NO_SMS_ON_DRIVE.SMS** にする必要があります。 既定では、Configuration Manager は各物理ノードにいくつかのコンポーネントをインストールして、バックアップなどの操作をサポートします。  
 
 -   サイト サーバーのコンピューター アカウントを、各 Windows Server クラスター ノード コンピューターのローカルの [Administrators] グループに追加します。 ****  
 
@@ -93,13 +98,8 @@ ms.openlocfilehash: e5a001ee018e240396498d134c5e75e325eae275
 ### <a name="to-install-a-new-site-using-a-clustered-sql-server"></a>クラスター化された SQL Server を使用して新しいサイトをインストールするには  
  クラスター化されたサイト データベースを使用するサイトをインストールするには、次の部分を変更したうえで通常のサイトのインストール プロセスに従って、Configuration Manager のセットアップを実行します。  
 
--   **[データベース情報]** ページで、サイト データベースをホストする仮想 SQL Server クラスター インスタンスの名前を指定します。  仮想インスタンスは、SQL Server を実行するコンピューターの名前を置き換えます。  
+-   **[データベース情報]** ページで、サイト データベースをホストする仮想 SQL Server クラスター インスタンスの名前を指定します。 仮想インスタンスは、SQL Server を実行するコンピューターの名前を置き換えます。  
 
     > [!IMPORTANT]  
     >  仮想 SQL Server クラスター インスタンスの名前を入力するとき、Windows Server クラスターによって作成される仮想 Windows Server 名を入力しないでください。 仮想 Windows Server 名を使用すると、サイト データベースが、アクティブな Windows Server クラスター ノードのローカル ハード ディスクにインストールされます。 これにより、そのノードに障害が発生しても、正常にフェールオーバーできません。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

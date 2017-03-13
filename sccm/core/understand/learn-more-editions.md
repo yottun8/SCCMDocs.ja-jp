@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: d51a602de9e0cf85d80c74c034613002682e52ea
+ms.sourcegitcommit: a0d4eb601948aa3abb12409f3475d69cacf4a6aa
+ms.openlocfilehash: 90e16b316872cb370c9c2e645f46ac12afab7107
+ms.lasthandoff: 02/28/2017
 
 ---
 
@@ -26,7 +27,7 @@ ms.openlocfilehash: d51a602de9e0cf85d80c74c034613002682e52ea
 
 *適用対象: System Center Configuration Manager (Current Branch)、(Long-Term Servicing Branch)*
 
-このトピックでは、2016 年 10 月リリースの System Center Configuration Manager バージョン 1606 で利用できるインストール オプションのライセンス要件について説明します。Current Branch バージョン 1606、Long-Term Servicing Branch (LTSB)、Current Branch バージョン 1606 の評価版インストールが対象となります。
+このトピックでは、2016 年 10 月リリースの System Center Configuration Manager バージョン 1606 で利用可能なインストール オプションのライセンス要件について説明します。 これらのインストール オプションには、Current Branch バージョン 1606、Long-Term Servicing Branch (LTSB)、および Current Branch バージョン 1606 の評価版インストールが含まれます。
 
 **ライセンスの概要:**   
 2016 年 10 月 1 日の時点で System Center Configuration Manager ライセンスに対してソフトウェア アシュアランス (SA) が有効になっているお客様または同等のサブスクリプション権限を持っているお客様には、2016 年 10 月リリースのバージョン 1606 の System Center Configuration Manager を使用する権限があります。 2016 年 10 月 1 日以降、System Center Configuration Manager に対する権限を持つお客様には、インストール時に Current Branch および Long-Term Servicing Branch (LTSB) の 2 つのライセンス オプションが表示されます。
@@ -51,8 +52,8 @@ Current Branch、LTSB、および Current Branch の評価版インストール�
 
 ## <a name="licensed-branches"></a>ライセンスされたブランチ
 2016 年 10 月 1 日の時点で System Center Configuration Manager ライセンスに対してソフトウェア アシュアランス (SA) が有効になっているお客様または同等のサブスクリプション権限を持っているお客様には、2016 年 10 月リリースのバージョン 1606 の System Center Configuration Manager を使用する権限があります。 2016 年 10 月 1 日以降、System Center Configuration Manager バージョン 1606 に対する権限を持つお客様には、インストール時に次の 2 つのライセンス オプションが表示されます。
--   **Current Branch**
--   **Long-Term Servicing Branch (LTSB)**
+-    **Current Branch**
+-    **Long-Term Servicing Branch (LTSB)**
 
 
 詳細については、前のセクションの表を参照してください。
@@ -83,15 +84,15 @@ LTSB は、Current Branch バージョン 1606 をベースにしており、次
 
 
 ### <a name="software-assurance-expiration-date"></a>ソフトウェア アシュアランスの有効期限
-System Center Configuration Manager については、2016 年 10 月リリースのバージョン 1606 基準メディア以降、ソフトウェア アシュアランス契約の有効期限の日付を指定できます。 そのためには、**ソフトウェア アシュアランスの有効期限の日付**を使用します。この値は、Configuration Manager のセットアップを実行するとき、またはこのセットアップを後で Configuration Manager コンソールから実行するときに指定できる省略可能な値であり、アラームとして利用できます。
+System Center Configuration Manager については、2016 年 10 月リリースのバージョン 1606 基準メディア以降、ソフトウェア アシュアランス契約の有効期限の日付を指定できます。 **ソフトウェア アシュアランスの有効期限の日付**は、Configuration Manager のセットアップを実行するとき、またはこのセットアップを後で Configuration Manager コンソールから実行するときに指定できる省略可能な値であり、アラームとして利用できます。
 
 >  [!NOTE]   
->  Microsoft では、お客様が入力した有効期限の日付を確認していません。また、ライセンスを検証する場合もこの日付を使用しません。  お客様は有効期限を通知するアラームとして、この日付を使用することができます。 Configuration Manager ではオンラインで新しいソフトウェア更新プログラムが提供されていないか定期的に確認します。このような追加の更新プログラムを取得するためにはソフトウェア アシュアランス ライセンスが最新の状態になっている必要があります。このため有効期限を通知するアラーム機能は便利です。    
+>  Microsoft では、お客様が指定した有効期限の日付を確認していません。また、ライセンスを検証する場合もこの日付を使用しません。  お客様は有効期限を通知するアラームとして、この日付を使用することができます。 Configuration Manager ではオンラインで新しいソフトウェア更新プログラムが提供されていないか定期的に確認します。このような追加の更新プログラムを取得するためにはソフトウェア アシュアランス ライセンスが最新の状態になっている必要があります。このため有効期限を通知するアラーム機能は便利です。    
 
 **日付を指定するには:**
-- System Center Configuration Manager バージョン 1606 の基準メディアからセットアップを実行する場合は、セットアップ ウィザードの**[プロダクト キー]** ページで値を指定できます。
+- System Center Configuration Manager バージョン 1606 の基準メディアからセットアップを実行する場合は、セットアップ ウィザードの [**プロダクト キー**] ページで値を指定できます。
 
-- この日付は、Configuration Manager コンソールの **[階層設定のプロパティ]** の **[ライセンス]** タブで指定することもできます。
+- Configuration Manager コンソールの [**階層設定のプロパティ**] の [**ライセンス**] タブで値を指定することができます。
 
 ソフトウェア アシュアランス ライセンスおよび System Center Configuration Manager の Current Branch の詳細については、「[Licensing and branches for System Center Configuration Manager](/sccm/core/understand/learn-more-editions)」 (System Center Configuration Manager のライセンスとブランチ) を参照してください。
 
@@ -113,9 +114,4 @@ System Center Configuration Manager については、2016 年 10 月リリー�
 - 有効なアクティブなソフトウェア アシュアランス契約を参照する場所 (約 43 秒で開始): [https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0)
 
 - VLSC のアクセス許可を取得する方法: [https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4).  VLSC の読み取りおよび書き込みのアクセス許可は、組織内の他のユーザーに委任することができます。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -2,7 +2,7 @@
 title: "Intune スタンドアロンまたはハイブリッド MDM の選択 | Microsoft Docs"
 description: "Intune と Configuration Manager を使用してハイブリッド モバイル デバイス管理を展開するか、Intune スタンドアロンを実行するかを選択します。"
 ms.custom: na
-ms.date: 11/07/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,15 +16,16 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a5c9e312641d91ff297fbcfa6066a93c2a0e1ee0
-ms.openlocfilehash: 3480484a96e96a191b4f02208fcf838db5cb6ba7
+ms.sourcegitcommit: 84e3896dd05a8c157f4e94625b0eca60aacc11d3
+ms.openlocfilehash: 8f2625aadfd0aed92d9922c7e3c0d3d166a78cdd
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="choose-between-microsoft-intune-standalone-and-hybrid-mobile-device-management-with-system-center-configuration-manager"></a>Microsoft Intune スタンドアロンか System Center Configuration Manager を使用するハイブリッド モバイル デバイス管理を選択する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Microsoft Intune によるモバイル デバイス管理 (MDM) について最もよく寄せられる質問の 1 つは、"Intune と Configuration Manager を統合するべきか (ハイブリッド MDM)、クラウドのみの構成で Intune スタンドアロンを実行すべきか" というものです。 その答えを見つけるためには、2 つの選択肢を注意深く比較してください。また、2017 年の早い段階で導入される Intune スタンドアロンの更新プログラムを考慮してください。
+Microsoft Intune によるモバイル デバイス管理 (MDM) について最もよく寄せられる質問の&1; つは、"Intune と Configuration Manager を統合するべきか (ハイブリッド MDM)、クラウドのみの構成で Intune スタンドアロンを実行すべきか" というものです。 その答えを見つけるためには、2 つの選択肢を注意深く比較してください。また、2017 年の早い段階で導入される Intune スタンドアロンの更新プログラムを考慮してください。
 
 ## <a name="what-is-intune-standalone"></a>Intune スタンドアロンとは何ですか。
 
@@ -44,16 +45,11 @@ Intune スタンドアロンはクラウドのみの MDM ソリューション�
 
 -   ロール ベースのアクセス制御 – 割り当てられた役割に基づき、管理機能へのアクセスを制限します。
 
--   規模 – 50,000 台以上のモバイル デバイスを展開し、管理します。
+-   規模 – 100,000 台以上のモバイル デバイスを展開し、管理します。
 
 -   1 枚のガラス窓 – 同じコンソールを利用し、従来の PC クライアントと Intune 管理デバイスの両方を管理します。
 
 Intune 展開の計画を開始するとき、試作、受け入れテスト、展開のために数か月の期間が確保されているのであれば、これからクラウド サービスに新しい機能が追加されることを考慮し、Intune スタンドアロンを選択するのも良い考えです。 2017 年の前半を通して、Intune スタンドアロンに更新プログラムが与えられます。そのプログラムで、Configuration Manager とのハイブリッド展開を構成する高度な機能の多くが提供されます。 Intune スタンドアロンは間もなく Microsoft Azure クラウド プラットフォームに移行します。拡張性が強化され、Azure Portal によるロール ベースのアクセス、カスタム レポート、Azure Graph API によるプログラミング アクセスといった機能が与えられます。
 
 ハイブリッドから Intune スタンドアロンに切り替えたり、スタンドアロンからハイブリッドに切り替えたりできますが、Microsoft のサポートと操作ヘルプが必要になります。 また、管理権限の変更後、あらゆるデバイスの登録を解除し、再登録する必要があります。  Microsoft は、今後のサービス更新で、更新切り替え機能の改善に取り組みます。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
