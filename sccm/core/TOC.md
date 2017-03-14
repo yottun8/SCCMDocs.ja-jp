@@ -53,7 +53,7 @@
 #### [プル配布ポイントの使用](plan-design/hierarchy/use-a-pull-distribution-point.md)
 #### [コンテンツ ライブラリ](plan-design/hierarchy/the-content-library.md)
 #### [コンテンツにアクセスするためのアカウントの管理](plan-design/hierarchy/manage-accounts-to-access-content.md)
-#### [Peer Cache for Configuration Manager clients](plan-design/hierarchy/client-peer-cache.md) (Configuration Manager クライアントのピア キャッシュ)
+#### [Configuration Manager クライアントのピア キャッシュ](plan-design/hierarchy/client-peer-cache.md)
 #### [コンテンツ ソースの場所の例](plan-design/hierarchy/content-source-location-scenarios.md)
 #### [Package Transfer Manager](plan-design/hierarchy/package-transfer-manager.md)
 #### [コンテンツ管理でのネットワーク帯域幅の管理](plan-design/hierarchy/manage-network-bandwidth.md)
@@ -248,10 +248,10 @@
 ###  [OMS へのデータの同期](clients/manage/sync-data-microsoft-operations-management-suite.md)
 ###  [Mac クライアントを維持する](clients/manage/maintain-mac-clients.md)
 
-##   [Manage clients on the Internet](clients/manage/manage-clients-internet.md) (インターネット上のクライアントの管理)
-###  [Plan for cloud management gateway](clients/manage/plan-cloud-management-gateway.md)(クラウド管理ゲートウェイの計画)
-###  [Set up cloud management gateway](clients/manage/setup-cloud-management-gateway.md) (クラウド管理ゲートウェイの設定)
-###  [Monitor clients on cloud management gateway](clients/manage/monitor-clients-cloud-management-gateway.md) (クラウド管理ゲートウェイでのクライアントの監視)
+##   [インターネット上のクライアントの管理](clients/manage/manage-clients-internet.md)
+###  [クラウド管理ゲートウェイの計画](clients/manage/plan-cloud-management-gateway.md)
+###  [クラウド管理ゲートウェイの設定](clients/manage/setup-cloud-management-gateway.md)
+###  [クラウド管理ゲートウェイでのクライアントの監視](clients/manage/monitor-clients-cloud-management-gateway.md)
 ###  [インターネット ベースのクライアント管理の計画](clients/manage/plan-internet-based-client-management.md)
 
 ##   コレクション
@@ -307,8 +307,8 @@
 
 ##   [クライアントをアップグレードする](clients/manage/upgrade/upgrade-clients.md)
 ###  [実稼働前コレクションのクライアント アップグレードをテストする方法](clients/manage/upgrade/test-client-upgrades.md)
-###  [Exclude Windows clients from upgrades](clients/manage/upgrade/exclude-clients-windows.md) (アップグレードから Windows クライアントを除外する)
-###  [Upgrade Windows clients](clients/manage/upgrade/upgrade-clients-for-windows-computers.md) (Windows クライアントのアップグレード)
-###  [Upgrade Linux and UNIX clients](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md) (Linux および UNIX クライアントのアップグレード)
-###  [Upgrade Mac clients](clients/manage/upgrade/upgrade-clients-on-mac-computers.md) (Mac クライアントのアップグレード)
+###  [アップグレードから Windows クライアントを除外する](clients/manage/upgrade/exclude-clients-windows.md)
+###  [Windows クライアントのアップグレード](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
+###  [Linux および UNIX クライアントのアップグレード](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
+###  [Mac クライアントのアップグレード](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)
 ###  [アップグレードの準備](clients/manage/upgrade/upgrade-analytics.md)
