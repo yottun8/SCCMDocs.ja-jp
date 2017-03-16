@@ -1,8 +1,8 @@
 ---
-title: "証明書を設定する | Microsoft Docs | オンプレミス MDM"
+title: "証明書のセットアップ | Microsoft Docs"
 description: "System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために信頼された通信用の証明書をセットアップします。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: d7aaad9298308b588f1bc13027082bf07066a3c2
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: ef35e98ccae0c708cd12767eef9f923f211849fb
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -49,7 +50,7 @@ ms.openlocfilehash: d7aaad9298308b588f1bc13027082bf07066a3c2
 
 -   [Web サーバー証明書と同じルートの証明書をエクスポートする](#bkmk_exportCert)  
 
-##  <a name="a-namebkmkconfigcaa-configure-the-certification-authority-ca-for-crl-publishing"></a><a name="bkmk_configCa"></a> CRL を公開するように証明機関 (CA) を構成する  
+##  <a name="bkmk_configCa"></a> CRL を公開するように証明機関 (CA) を構成する  
  既定では、証明機関 (CA) は、ドメインに参加しているデバイスの接続を許可する LDAP ベースの証明書失効リスト (CRL) を使用します。 ドメインに参加していないデバイスが CA から発行された証明書に基づいて信頼されるようにするには、HTTP ベースの CRL を CA に追加する必要があります。 これらの証明書は、Configuration Manager サイト システムの役割をホストするサーバーとオンプレミスのモバイル デバイス管理に登録されたデバイスの間の SSL 通信に必要です。  
 
  ドメインに参加しているデバイスとドメインに参加していないデバイスの信頼された接続を可能にする証明書を発行するための CRL 情報を自動公開するように CA を構成するには、次の手順に従います。  
@@ -60,7 +61,7 @@ ms.openlocfilehash: d7aaad9298308b588f1bc13027082bf07066a3c2
 
 3.  [証明機関] プロパティで **[拡張機能]** タブをクリックして、**[拡張機能を選択してください]** が **[CRL 配布ポイント (CDP)]** に設定されていることを確認します。  
 
-4.  **http://<ServerDNSName\>/CertEnroll/<CAName\><CRLNameSuffix\><DeltaCRLAllowed\>.crl** を選択します。 次の 3 つのオプションも選択します。  
+4.  **http://<ServerDNSName\>/CertEnroll/<CAName\><CRLNameSuffix\><DeltaCRLAllowed\>.crl** を選択します。 次の&3; つのオプションも選択します。  
 
     -   **CRL に含め、クライアントはこれを使って Delta CRL の場所を検索する**  
 
@@ -76,7 +77,7 @@ ms.openlocfilehash: d7aaad9298308b588f1bc13027082bf07066a3c2
 
 8.  [CRL の公開] ダイアログ ボックスで、**[Delta CRL のみ]** をクリックしてから **[OK]** をクリックします。  
 
-##  <a name="a-namebkmkcerttempla-create-the-web-server-certificate-template-on-the-ca"></a><a name="bkmk_certTempl"></a> CA で Web サーバー証明書テンプレートを作成する  
+##  <a name="bkmk_certTempl"></a> CA で Web サーバー証明書テンプレートを作成する  
  CA で新しい CRL を公開した後の次の手順では、Web サーバー証明書テンプレートを作成します。 登録ポイント、登録プロキシ ポイント、配布ポイント、およびデバイス管理ポイントのサイト システムの役割をホストするサーバーの証明書を発行するには、このテンプレートが必要です。 これらのサーバーは、サイト システムの役割と登録されたデバイスの間の信頼された通信のための SSL エンドポイントになります。    証明書テンプレートを作成するのには、次の手順に従います。  
 
 1.  登録されたデバイスとの信頼された通信を必要とするサイト システムを実行するサーバーを含む、「**ConfigMgr MDM Servers**」という名前のセキュリティ グループを作成します。  
@@ -113,8 +114,8 @@ ms.openlocfilehash: d7aaad9298308b588f1bc13027082bf07066a3c2
 
 12. **[証明書テンプレートの選択]** ダイアログ ボックスで、先ほど作成した新しいテンプレート **ConfigMgr MDM Web Server** を選択して、**[OK]** をクリックします。  
 
-##  <a name="a-namebkmkrequestcerta-request-the-web-server-certificate-for-each-site-system-role"></a><a name="bkmk_requestCert"></a> 各サイト システムの役割用の Web サーバー証明書を要求する  
- オンプレミスのモバイル デバイス管理に登録されたデバイスは、登録ポイント、登録プロキシ ポイント、配布ポイント、およびデバイス管理ポイントをホストしている SSL エンドポイントを信頼する必要があります。  次の手順では、IIS の Web サーバー証明書を要求する方法について説明します。 オンプレミスのモバイル デバイス管理に必要なサイト システムの役割の 1 つをホストしているサーバー (SSL エンドポイント) ごとに、これを行う必要があります。  
+##  <a name="bkmk_requestCert"></a> 各サイト システムの役割用の Web サーバー証明書を要求する  
+ オンプレミスのモバイル デバイス管理に登録されたデバイスは、登録ポイント、登録プロキシ ポイント、配布ポイント、およびデバイス管理ポイントをホストしている SSL エンドポイントを信頼する必要があります。  次の手順では、IIS の Web サーバー証明書を要求する方法について説明します。 オンプレミスのモバイル デバイス管理に必要なサイト システムの役割の&1; つをホストしているサーバー (SSL エンドポイント) ごとに、これを行う必要があります。  
 
 1.  プライマリ サイト サーバーで管理者権限を使用してコマンド プロンプトを開いて、**MMC** と入力してから、**Enter** キーを押します。  
 
@@ -130,9 +131,9 @@ ms.openlocfilehash: d7aaad9298308b588f1bc13027082bf07066a3c2
 
 7.  証明書を登録したら **[完了]** をクリックします。  
 
- それぞれのサーバーには一意の Web サーバー証明書が必要であることから、オンプレミスのモバイル デバイス管理に必要なサイト システムの役割の 1 つをホストしているすべてのサーバーに対して、この処理を繰り返す必要があります。  1 つのサーバーがすべてのサイト システムの役割をホストしている場合は、1 つの Web サーバー証明書のみを要求する必要があります。  
+ それぞれのサーバーには一意の Web サーバー証明書が必要であることから、オンプレミスのモバイル デバイス管理に必要なサイト システムの役割の&1; つをホストしているすべてのサーバーに対して、この処理を繰り返す必要があります。  1 つのサーバーがすべてのサイト システムの役割をホストしている場合は、1 つの Web サーバー証明書のみを要求する必要があります。  
 
-##  <a name="a-namebkmkbindcerta-bind-the-certificate-to-the-web-server"></a><a name="bkmk_bindCert"></a> Web サーバーに証明書をバインドする  
+##  <a name="bkmk_bindCert"></a> Web サーバーに証明書をバインドする  
  オンプレミスのモバイル デバイス管理に必要なサイト システムの役割をホストしている各サイトの Web サーバーに新しい証明書をバインドする必要があります。 登録ポイントと登録プロキシ ポイントのサイト システムの役割をホストする各サーバーを対象に、次の手順に従います。 1 つのサーバーですべてのサイト システムの役割をホストしている場合は、これらの手順に一度だけ従う必要があります。 配布ポイントとデバイス管理ポイントのサイト システムの役割は、必要な証明書を登録時に自動的に受信することから、このタスクを実行する必要はありません。  
 
 1.  登録ポイント、登録プロキシ ポイント、配布ポイント、またはデバイス管理ポイントをホストしているサーバーで、**[スタート]** > **[管理ツール]** > **[IIS マネージャー]** の順にクリックします。  
@@ -145,7 +146,7 @@ ms.openlocfilehash: d7aaad9298308b588f1bc13027082bf07066a3c2
 
 5.  [IIS マネージャー] コンソールの [接続] で、Web サーバーを選択してから、右側の [操作] パネルで **[再起動]** をクリックします。  
 
-##  <a name="a-namebkmkexportcerta-export-the-certificate-with-the-same-root-as-the-web-server-certificate"></a><a name="bkmk_exportCert"></a> Web サーバー証明書と同じルートの証明書をエクスポートする  
+##  <a name="bkmk_exportCert"></a> Web サーバー証明書と同じルートの証明書をエクスポートする  
  通常では Active Directory 証明書サービスは、ドメインに参加しているすべてのデバイスに CA からの必要な証明書をインストールします。 ドメインに参加していないデバイスは、ルート CA からの証明書なしでサイト システムの役割と通信することはできません。 サイト システムの役割と通信するデバイスに必要な証明書を取得するには、Web サーバーにバインドされている証明書からエクスポートできます。  
 
  Web サーバーの証明書のルート証明書をエクスポートするには、これらの手順に従います。  
@@ -171,9 +172,4 @@ ms.openlocfilehash: d7aaad9298308b588f1bc13027082bf07066a3c2
      [次へ] をクリックします。 ****  
 
 9. 設定を確認して、**[完了]** をクリックします。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
