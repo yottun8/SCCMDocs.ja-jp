@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: b90519f6f6e3599cd34f5cf93b476739ec17847b
-ms.openlocfilehash: 64ed5982cfd1de6ec135f02c84b9396266001b42
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
+ms.openlocfilehash: 991bf551899d810a55a30f1a833de28db6295cf4
+ms.lasthandoff: 03/09/2017
 
 
 ---
@@ -33,8 +33,11 @@ System Center Configuration Manager で必要になる場合がある公開キ�
 -   Windows Server 2008: [Windows Server 2008 の Active Directory 証明書サービス](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
 
 > [!IMPORTANT]  
->  2017 年 2 月 14 日より、Windows は SHA-1 で署名された特定の証明書を信頼しなくなります。 これについては、「[Windows Enforcement of SHA1 certificates](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx)」(Windows の SHA1 証明書の適用) に記載されています。 一般に、SHA-2 で署名された新しいサーバーおよびクライアント認証証明書 (特に SHA-256 や SHA-512 を含む) を発行することをお勧めします。
-> さらに、インターネットに接続するサービスで SHA-2 証明書を使用することをお勧めします。 たとえば、クラウド管理ゲートウェイで使用する公開証明書を購入する場合は、SHA-2 証明書を購入するようにしてください。
+> 2017 年 2 月 14 日より、Windows は SHA-1 で署名された特定の証明書を信頼しなくなります。 System Center Configuration Manager は SHA-2 証明書をサポートしています。SHA-2 証明書を使用すると、セキュリティの面で大きな利点があります。 そのため、以下のことを推奨します。
+> - SHA-2 で署名された新しいサーバーおよびクライアント認証証明書 (特に SHA-256 や SHA-512 を含む) を発行すること。
+> - インターネットに接続するサービスで SHA-2 証明書を使用すること。 たとえば、クラウド管理ゲートウェイで使用する公開証明書を購入する場合は、SHA-2 証明書を購入するようにしてください。  
+>
+> ほとんどの場合、SHA-2 証明書を変更しても操作に影響はありません。 詳細については、「[Windows Enforcement of SHA1 certificates](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx)」(Windows の SHA1 証明書の適用) を参照してください。
 
  System Center Configuration Manager でモバイル デバイスと Mac コンピューターに登録するクライアント証明書、Microsoft Intune でモバイル デバイスの管理用に自動作成される証明書、および System Center Configuration Manager で AMT ベースのコンピューターにインストールされる証明書を除き、任意の PKI を使用して次の証明書を作成、展開、および管理できます。 ただし、Active Directory 証明書サービスと証明書テンプレートを使用する場合、この Microsoft PKI ソリューションを使用すると証明書の管理が簡単になります。 次の表の「 **使用する Microsoft 証明書テンプレート** 」列を確認し、証明書の要件に最も近い証明書テンプレートを特定してください。 テンプレート ベースの証明書を発行できるのは、Windows Server 2008 Enterprise や Windows Server 2008 Datacenter など、サーバー オペレーティング システムの Enterprise Edition または Datacenter Edition で実行されている企業証明機関だけです。  
 
