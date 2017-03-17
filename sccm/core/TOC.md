@@ -55,7 +55,7 @@
 #### [コンテンツにアクセスするためのアカウントの管理](plan-design/hierarchy/manage-accounts-to-access-content.md)
 #### [Configuration Manager クライアントのピア キャッシュ](plan-design/hierarchy/client-peer-cache.md)
 #### [コンテンツ ソースの場所の例](plan-design/hierarchy/content-source-location-scenarios.md)
-#### [Package Transfer Manager](plan-design/hierarchy/package-transfer-manager.md)
+#### [パッケージ転送マネージャー](plan-design/hierarchy/package-transfer-manager.md)
 #### [コンテンツ管理でのネットワーク帯域幅の管理](plan-design/hierarchy/manage-network-bandwidth.md)
 #### [コンテンツ管理のセキュリティとプライバシー](plan-design/hierarchy/security-and-privacy-for-content-management.md)
 ###  [クライアントがリソースやサービスを検索する方法](plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)
