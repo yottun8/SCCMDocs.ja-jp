@@ -29,7 +29,7 @@ ms.lasthandoff: 01/21/2017
 
 Configuration Manager のインフラストラクチャでオンプレミス モバイル デバイス管理を処理する場合、次の要件を考慮します。
 
-##  <a name="a-namebkmkdevicesa-supported-devices"></a><a name="bkmk_devices"></a> サポートされるデバイス  
+##  <a name="bkmk_devices"></a> サポートされるデバイス  
  オンプレミス モバイル デバイス管理を使用すると、デバイスのオペレーティング システムに組み込まれている管理機能を使用してモバイル デバイスを管理できます。  管理機能は、Open Mobile Alliance (OMA) Device Management (DM) 標準に基づいており、多くのデバイス プラットフォームでは、この標準を使用して、デバイスを管理できます。  これらを (ドキュメントおよび Configuration Manager コンソールのユーザー インターフェイスの) **最新のデバイス**と呼び、管理するために Configuration Manager クライアントを必要とするその他のデバイスと区別します。  
 
  > [!NOTE]  
@@ -41,7 +41,7 @@ Configuration Manager のインフラストラクチャでオンプレミス モ
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise   
 
-##  <a name="a-namebkmkintunea-use-of-the--microsoft-intune-subscription"></a><a name="bkmk_intune"></a> Microsoft Intune サブスクリプションの使用  
+##  <a name="bkmk_intune"></a> Microsoft Intune サブスクリプションの使用  
  オンプレミス モバイル デバイス管理の使用を開始するには、Microsoft Intune のサブスクリプションが必要です。 このサブスクリプションは、デバイスのライセンスの追跡にのみ必要のみがあり、デバイスの管理情報の管理や格納には使用されません。 すべての管理は、オンプレミスの Configuration Manager インフラストラクチャを使用して組織のエンタープライズで処理されます。  
 
  > [!NOTE]  
@@ -54,7 +54,7 @@ Configuration Manager のインフラストラクチャでオンプレミス モ
 
  Intune サブスクリプションのセットアップ方法については、「[System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために Microsoft Intune サブスクリプションをセットアップする](../../mdm/get-started/set-up-intune-subscription-on-premises-mdm.md)」を参照してください。  
 
-##  <a name="a-namebkmkrolesa-required-site-system-roles"></a><a name="bkmk_roles"></a> 必要なサイト システムの役割  
+##  <a name="bkmk_roles"></a> 必要なサイト システムの役割  
  オンプレミス モバイル デバイス管理には、次のサイト システムの役割がそれぞれ&1; つ以上必要です。  
 
 -   **登録プロキシ ポイント** 。登録要求をサポートします。  
@@ -69,11 +69,11 @@ Configuration Manager のインフラストラクチャでオンプレミス モ
 
  これらのサイト システムの役割は、1 つのサイト システム サーバーにインストールできます。または、組織のニーズに応じて、異なるサーバー上で別々に実行することができます。 オンプレミス モバイル デバイス管理で使用される各サイト システム サーバーは信頼されているデバイスと通信するための HTTPS エンドポイントとして構成する必要があります。 詳細については、「 [必要な信頼された通信](#bkmk_trustedComs)」をご覧ください。  
 
- サイト システムの役割の計画の詳細については、「 [Plan for site system servers and site system roles for System Center Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)」を参照してください。  
+ サイト システムの役割の計画の詳細については、「[System Center Configuration Manager のサイト システム サーバーとサイト システムの役割の計画](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)」を参照してください。  
 
- 必要なサイト システムの役割の追加方法の詳細については、「 [Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)」を参照してください。  
+ 必要なサイト システムの役割の追加方法の詳細については、「[System Center Configuration Manager でのオンプレミス モバイル デバイス管理のサイト システムの役割のインストール](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)」を参照してください。  
 
-##  <a name="a-namebkmktrustedcomsa-required-trusted-communications"></a><a name="bkmk_trustedComs"></a> 必要な信頼された通信  
+##  <a name="bkmk_trustedComs"></a> 必要な信頼された通信  
  オンプレミス モバイル デバイス管理では、HTTPS 接続用にサイト システムの役割を有効にする必要があります。 必要に応じて、エンタープライズ証明機関 (CA) を使用して、サーバーとデバイスの間で信頼された接続を確立するか、または信頼された機関として一般的に利用できる CA を使用することができます。  いずれの場合も、必要なサイト システムの役割をホストしているサイト システム サーバー上で、IIS を使用して Web サーバー証明書を構成する必要があります。また、それらのサーバーに接続する必要があるデバイスにインストールされる、その CA のルート証明書が必要です。  
 
  信頼された通信を確立するためにエンタープライズ CA を使用する場合は、次のタスクを実行する必要があります。  
@@ -106,7 +106,7 @@ Configuration Manager のインフラストラクチャでオンプレミス モ
 
  詳細については、「 [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)」をご覧ください。  
 
-##  <a name="a-namebkmkenrollmenta-enrollment-considerations"></a><a name="bkmk_enrollment"></a> 登録の注意事項  
+##  <a name="bkmk_enrollment"></a> 登録の注意事項  
  オンプレミス モバイル デバイス管理のデバイスの登録を有効にするには、登録する権限がユーザーに付与され、かつ、ユーザーのデバイスが、必要なサイト システムの役割をホストするサイト システム サーバーとの信頼された通信を行うことができる必要があります。  
 
  ユーザーへの登録権限の付与は、Configuration Manager クライアントの設定で登録プロファイルを設定することによって行います。 既定のクライアント設定を使用して、検出されたすべてのユーザーに、登録プロファイルをプッシュするか、またはカスタム クライアント設定で、登録プロファイルを設定して、設定を&1; つまたは複数のユーザー コレクションにプッシュできます。  
