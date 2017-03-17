@@ -13,9 +13,9 @@ ms.technology:
 - configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 translationtype: Human Translation
-ms.sourcegitcommit: 460089ce58910b68eb0a613bce0166754850844b
-ms.openlocfilehash: 9361c66228cf54eb1daf8138cd03fc8f6139f48d
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
+ms.openlocfilehash: 986d0446209f6e7eac1b681066d1b2e2305e1975
+ms.lasthandoff: 03/09/2017
 
 
 ---
@@ -49,7 +49,7 @@ Upgrade Readiness は、Microsoft Operations Management Suite (OMS) のソリュ
 
 ### <a name="create-the-connection"></a>接続を作成する
 
-1.  Configuration Manager コンソールで、**[管理]** > **[クラウド サービス]** > **[Upgrade Readiness コネクタ]** > **[Upgrade Readiness への接続を作成します]** の順に選択し、**[Upgrade Readiness の接続を追加ウィザード]** を起動します。
+1.  Configuration Manager コンソールで、**[管理]** > **[クラウド サービス]** > **[Upgrade Readiness コネクタ]** > **[Upgrade Analytics への接続を作成します]** の順に選択し、**[Upgrade Analytics の接続を追加ウィザード]** を起動します。
 3.  **[Azure Active Directory]** 画面で、**[テナント]**、**[クライアント ID]**、**[クライアントの秘密鍵]** を指定し、**[次へ]** を選択します。
 4.  **[Upgrade Readiness]** 画面で、**[Azure サブスクリプション]**、**[Azure リソース グループ]**、および **[Operations Management Suite ワークスペース]** に入力し、接続設定を指定します。
 5.  **[概要]** 画面で、**[次へ]** の接続設定を確認します。

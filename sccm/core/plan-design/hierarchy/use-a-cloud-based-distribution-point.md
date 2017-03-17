@@ -2,7 +2,7 @@
 title: "クラウドベースの配布ポイント | Microsoft Docs"
 description: "System Center Configuration Manager でクラウドベースの配布ポイントを使用する際の構成および制限事項について説明します。"
 ms.custom: na
-ms.date: 2/24/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3eab8e62ace29c0fcb24d47ec7e398d807347a38
-ms.openlocfilehash: a1d701c77afb4d6317d8a137fdf46422063df085
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: 489f38d3f88391e42b5271c03151203d22b26d9e
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -63,7 +63,7 @@ ms.lasthandoff: 02/28/2017
 
 クラウドベースの配布ポイントには、次の制限があります。  
 
--  バージョン 1610 と修正プログラム KB4010155 を使用する前に、クラウドベースの配布ポイントを使用して、ソフトウェア更新プログラム パッケージをホストすることはできません。 バージョン 1610 の次の Current Branch のバージョンでは、このオプションがサポートされ、この修正プログラムをインストールする必要はありません。  
+-  バージョン 1610 と修正プログラム KB4010155 を使用する前に、クラウドベースの配布ポイントを使用して、ソフトウェア更新プログラム パッケージをホストすることはできません。 この問題は、バージョン 1702 以降で修正されています。  
 
 -   クラウドベースの配布ポイントを、PXE やマルチキャストを有効にした環境で使用することはできません。  
 
