@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,12 +29,12 @@ ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
 
 System Center Configuration Manager でオペレーティング システムを展開するには、まず特定の構成と考慮が必要な次のサイト システムの役割を準備する必要があります。
 
-##  <a name="a-namebkmkdistributionpointsa-distribution-points"></a><a name="BKMK_DistributionPoints"></a> 配布ポイント  
+##  <a name="BKMK_DistributionPoints"></a> 配布ポイント  
  配布ポイントのサイト システムの役割には、クライアントがダウンロードするソース ファイルが含まれます。このソース ファイルには、アプリケーションのコンテンツ、ソフトウェア更新プログラム、オペレーティング システム イメージ、ブート イメージなどがあります。 帯域幅、調整、およびスケジュールのオプションを使って、コンテンツの配布を制御できます。  
 
  コンピューターへのオペレーティング システムの展開をサポートできるだけの十分な配布ポイントを用意することが重要です。 さらに、階層内でこれらの配布ポイントをどのように配置するかについて計画を立てることも重要です。 この計画に関する情報の大部分は、「[コンテンツとコンテンツ インフラストラクチャの管理](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」にあります。 ただし、オペレーティング システムの展開に応じて、配布ポイントの計画時にはさらに考慮すべき事項があります。  
 
-###  <a name="a-namebkmkadditionalplanninga-additional-planning-considerations-for-distribution-points"></a><a name="BKMK_AdditionalPlanning"></a> 配布ポイントの計画に関する追加の考慮事項  
+###  <a name="BKMK_AdditionalPlanning"></a> 配布ポイントの計画に関する追加の考慮事項  
  配布ポイントの計画時にさらに考慮すべき事項は次のとおりです。  
 
 -   **不要なオペレーティング システムの展開を行わないようにする方法**  
@@ -54,8 +55,8 @@ System Center Configuration Manager でオペレーティング システムを�
 
      オペレーティング システムを配布ポイントに展開することはできますが、オペレーティング システム イメージは別の配布ポイントから受信する必要があります。  
 
-###  <a name="a-namebkmkpxedistributionpointa-configuring-distribution-points-to-accept-pxe-requests"></a><a name="BKMK_PXEDistributionPoint"></a> PXE 要求を受け入れるための配布ポイントの構成  
- PXE ブート要求を作成する Configuration Manager クライアントにオペレーティング システムを展開するには、PXE 要求を受け入れるように 1 つ以上の配布ポイントを構成する必要があります。 構成された配布ポイントは、PXE ブート要求に応答し、実行する適切な展開アクションを決定します。
+###  <a name="BKMK_PXEDistributionPoint"></a> PXE 要求を受け入れるための配布ポイントの構成  
+ PXE ブート要求を作成する Configuration Manager クライアントにオペレーティング システムを展開するには、PXE 要求を受け入れるように&1; つ以上の配布ポイントを構成する必要があります。 構成された配布ポイントは、PXE ブート要求に応答し、実行する適切な展開アクションを決定します。
 
 > [!IMPORTANT]  
 > すべての PXE 対応配布ポイントに [Windows Deployment Services](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDS) をインストールする必要があります。  
@@ -97,7 +98,7 @@ System Center Configuration Manager でオペレーティング システムを�
 
 11. [OK] をクリックし、配布ポイントのプロパティを更新します。 ****  
 
-###  <a name="a-namebkmkramdisktftpa-customize-the-ramdisk-tftp-block-size-and-window-size-on-pxe-enabled-distribution-points"></a><a name="BKMK_RamDiskTFTP"></a> PXE 対応配布ポイント上の RamDisk TFTP ブロック サイズとウィンドウ サイズのカスタマイズ  
+###  <a name="BKMK_RamDiskTFTP"></a> PXE 対応配布ポイント上の RamDisk TFTP ブロック サイズとウィンドウ サイズのカスタマイズ  
 Configuration Manager バージョン 1606 では、PXE 対応配布ポイントの RamDisk TFTP ブロック サイズとウィンドウ サイズをカスタマイズできます。 ネットワークをカスタマイズしている場合、ブロックまたはウィンドウのサイズが大きすぎるために、ブート イメージのダウンロードがタイムアウト エラーで失敗する可能性があります。 RamDisk TFTP ブロック サイズとウィンドウ サイズのカスタマイズにより、特定のネットワーク要件に対応する PXE を使用する場合に、TFTP トラフィックを最適化できます。   
 最も効率的な内容を確認するために、環境内でカスタマイズした設定をテストする必要があります。  
 
@@ -133,7 +134,7 @@ Configuration Manager バージョン 1606 では、PXE 対応配布ポイント
  既定値は 4096 (4k) です。  
 
 
-###  <a name="a-namebkmkdpmulticasta-configure-distribution-points-to-support-multicast"></a><a name="BKMK_DPMulticast"></a> マルチキャストをサポートする配布ポイントの構成  
+###  <a name="BKMK_DPMulticast"></a> マルチキャストをサポートする配布ポイントの構成  
  マルチキャストは、複数のクライアントが同じオペレーティング システム イメージを同時にダウンロードすることが多い配布ポイントで使用できるネットワーク最適化の方法です。 マルチキャストを使用すると、配布ポイントがデータのコピーを各々のクライアントに別々の接続で送信する代わりに、マルチキャストするため、複数のコンピューターが同時にオペレーティング システム イメージをダウンロードできます。 マルチキャストをサポートするように、1 つ以上の配布ポイントを構成する必要があります。 詳細については、「[Use multicast to deploy Windows over the network](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md)」(マルチキャストを使用した、ネットワーク経由での Windows の展開) を参照してください。  
 
  オペレーティング システムを展開する前に、マルチキャストをサポートするように配布ポイントを構成する必要があります。 次の手順に従って、マルチキャストサポート用の既存の配布ポイントを変更します。 新しい配布ポイントのインストール方法の詳細については、「 [Install and configure distribution points](../../core/servers/deploy/configure/install-and-configure-distribution-points.md)」(配布ポイントのインストールと構成) を参照してください。
@@ -176,7 +177,7 @@ Configuration Manager バージョン 1606 では、PXE 対応配布ポイント
 
 6.  **[OK]**をクリックします。  
 
-##  <a name="a-namebkmkstatemigrationpointsa-state-migration-point"></a><a name="BKMK_StateMigrationPoints"></a> 状態移行ポイント  
+##  <a name="BKMK_StateMigrationPoints"></a> 状態移行ポイント  
  状態移行ポイントには、あるコンピューターでキャプチャされて別のコンピューターで復元されるユーザー状態データが保存されます。 ただし、セットアップ先のコンピューターでオペレーティング システムを更新する展開など、同じコンピューター上のオペレーティング システム展開のユーザー設定をキャプチャする場合、データをハードリンクを使用して同じコンピューターに保存するか、または状態移行ポイントを使用して保存するかを選択することができます。 一部のコンピューター展開では、状態ストアを作成すると、Configuration Manager によって状態ストアと対象コンピューターの関連付けが自動的に作成されます。 状態移行ポイントを計画する際には、以下の点を検討してください。  
 
 ### <a name="user-state-size"></a>ユーザー状態のサイズ  
@@ -188,13 +189,13 @@ Configuration Manager バージョン 1606 では、PXE 対応配布ポイント
  USMT 10.0 のさまざまな移行シナリオの詳細については、「 [移行の一般的なシナリオ](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx)」を参照してください。  
 
 ### <a name="retention-policy"></a>ポリシーの保存  
- 状態移行ポイントを構成するときに、状態移行ポイントに格納されたユーザー状態データを保存する期間を指定することができます。 状態移行ポイントにデータを保存する期間を決定するには、次の 2 つの点を考慮する必要があります。  
+ 状態移行ポイントを構成するときに、状態移行ポイントに格納されたユーザー状態データを保存する期間を指定することができます。 状態移行ポイントにデータを保存する期間を決定するには、次の&2; つの点を考慮する必要があります。  
 
 -   格納されたデータがディスク記憶域に与える影響  
 
 -   データの移行が再度必要になる場合に備えて、データを一時的に保存するための要件  
 
- 状態移行は、データのキャプチャとデータの復元の 2 段階で行われます。 データをキャプチャするときに、ユーザー状態データが収集されて状態移行ポイントに保存されます。 データを復元するときに、ユーザー状態データが状態移行ポイントから取得されて対象コンピューターに書き込まれてから、[状態ストアのリリース **** ] タスク シーケンス ステップによって、格納されたデータがリリースされます。 データがリリースされるときに、保存期間の開始として認識されます。 移行データを即時削除するオプションを選択している場合、リリース直後にユーザー状態データが削除されます。 一定期間データを保存するオプションを選択している場合、状態データのリリース後、データは指定期間が経過すると削除されます。 設定した保存期間が長くなるほど、必要なディスク容量も大きくなります。  
+ 状態移行は、データのキャプチャとデータの復元の&2; 段階で行われます。 データをキャプチャするときに、ユーザー状態データが収集されて状態移行ポイントに保存されます。 データを復元するときに、ユーザー状態データが状態移行ポイントから取得されて対象コンピューターに書き込まれてから、[状態ストアのリリース **** ] タスク シーケンス ステップによって、格納されたデータがリリースされます。 データがリリースされるときに、保存期間の開始として認識されます。 移行データを即時削除するオプションを選択している場合、リリース直後にユーザー状態データが削除されます。 一定期間データを保存するオプションを選択している場合、状態データのリリース後、データは指定期間が経過すると削除されます。 設定した保存期間が長くなるほど、必要なディスク容量も大きくなります。  
 
 ### <a name="select-drive-to-store-user-state-migration-data"></a>ユーザー状態移行データを格納するドライブの選択  
  状態移行ポイントを構成するときに、ユーザー状態移行データの格納に使用するサーバー上のドライブを指定する必要があります。 ドライブは、固定リストから選択します。 ただし、CD ドライブなどの書き込みできないドライブや、ネットワーク共有でないドライブが表示されることがあります。 また、コンピューター上のどのドライブにもマップされていないドライブ文字が表示されることもあります。 状態移行ポイントを構成するときには、書き込み可能な共有ドライブを指定する必要があります。  
@@ -219,9 +220,4 @@ Configuration Manager バージョン 1606 では、PXE 対応配布ポイント
 -   状態移行ポイントがユーザー状態データの復元要求にのみ応答するかどうか (このオプションを有効にすると、状態移行ポイントを使用してユーザー状態データを保存できません。)  
 
  サイト システムの役割をインストールする手順については、「[Add site system roles](../../core/servers/deploy/configure/add-site-system-roles.md)」(サイト システムの役割の追加) を参照してください。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
