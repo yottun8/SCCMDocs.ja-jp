@@ -36,6 +36,7 @@ translation.priority.ht:
 translationtype: Human Translation
 ms.sourcegitcommit: 34a4c3d0d641c4ab03e068c6dad78300057861bd
 ms.openlocfilehash: 4c7717e4f5a20c5c8d20fef21d0c67172b3198bd
+ms.lasthandoff: 03/16/2017
 
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1511-of-system-center-configuration-manager"></a>System Center Configuration Manager バージョン 1511 により収集される診断結果および使用状況データのレベル
@@ -47,13 +48,13 @@ System Center Configuration Manager バージョン 1511 では、**基本**、*
 > [!IMPORTANT]  
 >  Configuration Manager は、基本レベルとエンハンス レベルでは、サイト コードまたはサイト名、IP アドレス、ユーザー名またはコンピューター名、物理アドレス、電子メール アドレスを収集しません。 フル レベルで収集したこの情報 (ログ ファイルやメモリのスナップショットなどの詳細な診断情報に含まれる可能性があります) に特別な目的はありません。 Microsoft が個人の特定、連絡、広告作成の目的でこの情報を使用することはありません。  
 
-##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> レベルを変更する方法  
+##  <a name="bkmk_change"></a> レベルを変更する方法  
  管理者に指定された役割に基づいた管理スコープに、**サイト** オブジェクト クラスにおける**変更**アクセス許可が含まれる場合、その管理者は、Configuration Manager コンソールの診断結果と使用状況データの設定で収集されるデータ レベルを変更できます。
 
  そのためには、コンソールで Backstage タブ (ドロップダウン矢印の付いた左上のタブ) に移動し、**[使用状況データ]** を選んで、使うデータ レベルを選びます。  
 
 
-##  <a name="a-namebkmklevel1a-level-1---basic"></a><a name="bkmk_level1"></a> レベル 1 - 基本  
+##  <a name="bkmk_level1"></a> レベル 1 - 基本  
  基本レベルには階層に関するデータが含まれています。これには、インストールまたはアップグレードのエクスペリエンスを向上させるために必要なデータや、階層に適用できる Configuration Manager 更新プログラムを判断するために役立つデータが含まれます。  
 
  System Center Configuration Manager バージョン 1511 から、このレベルには次の情報が含まれます。  
@@ -94,7 +95,7 @@ System Center Configuration Manager バージョン 1511 では、**基本**、*
 
 -   製品利用統計情報 (実行時、ランタイム、エラー)  
 
-##  <a name="a-namebkmklevel2a-level-2---enhanced"></a><a name="bkmk_level2"></a> レベル 2 - エンハンス  
+##  <a name="bkmk_level2"></a> レベル 2 - エンハンス  
 エンハンス レベルはセットアップ終了後の既定値です。 このレベルには、基本レベルで収集されたデータと機能固有のデータ (頻度と使用期間)、Configuration Manager クライアントの設定 (コンポーネント名、状態、ポーリング間隔などの特定の設定)、およびソフトウェアの更新に関する基本情報が含まれます。  
 
 これが推奨レベルです。このレベルでは、製品やサービスを今後適切に改善するために最小限必要なデータを Microsoft に提供します。 このレベルでは、オブジェクト名 (サイト、ユーザー、コンピューター、またはオブジェクト)、セキュリティ関連のオブジェクトの詳細、またはソフトウェア更新プログラムを必要とするシステムの数などの脆弱性が収集されます。  
@@ -251,7 +252,7 @@ System Center Configuration Manager バージョン 1511 から、このレベ�
 
     -   コレクションの数 (種類別)  
 
-##  <a name="a-namebkmklevel3a-level-3---full"></a><a name="bkmk_level3"></a> レベル 3 - フル  
+##  <a name="bkmk_level3"></a> レベル 3 - フル  
 フル レベルには、基本レベルとエンハンス レベルのすべてのデータが含まれます。 また、Endpoint Protection の詳細情報、更新プログラムの対応率、およびソフトウェア更新プログラム情報も含まれています。 このレベルには、キャプチャ時にメモリやログ ファイルに存在していた、個人情報が含まれる可能性があるシステム ファイルやメモリ スナップショットなどの詳細な診断情報を含めることもできます。  
 
 System Center Configuration Manager バージョン 1511 から、このレベルには次の情報が含まれます。  
@@ -281,9 +282,4 @@ System Center Configuration Manager バージョン 1511 から、このレベ�
 -   ソフトウェア更新プログラムのスキャン成功の割合  
 
 -   最後のソフトウェア更新プログラムのスキャンが実行されてからの経過時間の最小/最大/平均値  
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 
