@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager と Microsoft Intune を使ったハイブリッド Windows デバイス管理のセットアップ | Microsoft Docs"
 description: "System Center Configuration Manager と Microsoft Intune を使用して Windows デバイス管理を設定します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 76cb0c41865859fd410a187435d73c6a23b0c57e
-ms.openlocfilehash: 7b53b094eeb1d59d052c63831eeab0e10edb5913
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: a4fc4a16c78b0eaa0dcefdd596b049eacf1d255b
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -31,7 +32,7 @@ Configuration Manager を Intune と共に使用して、Windows を実行して
 次のような Windows 登録のオプションが用意されています。
 
 - [Azure AD での自動登録](#azure-active-directory-enrollment)
-- [Windows PC](#set-up-windows-device-enrollment)
+- [Windows PC](#configure-windows-pc-enrollment)
 - [Windows 10 Mobile および Windows Phone デバイス](#enable-windows-phone-devices)
 
 ## <a name="azure-active-directory-enrollment"></a>Azure Active Directory 登録
@@ -118,8 +119,6 @@ Configuration Manager を Intune と共に使用して、Windows を実行して
 
   セットアップが完了したら、デバイスを登録する方法をユーザーに知らせる必要があります。 「[デバイスの登録についてユーザーに通知する事柄](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)」に関する記事をご覧ください。 この情報は、Microsoft Intune と Configuration Manager の両方によって管理されるモバイル デバイスに適用されます。  
 
-
-
-<!--HONumber=Feb17_HO2-->
-
+  > [!div class="button"]
+  [< 前のステップ](create-service-connection-point.md)  [次のステップ >](set-up-additional-management.md)
 

@@ -2,7 +2,7 @@
 title: "ハイブリッド MDM の計画 | Microsoft Docs"
 description: "System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理を計画します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,26 +17,24 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 11e24eb24fdb563dd0be4f413b11622ceecab67b
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 814fb545dae35c582146450c316446c21191002f
+ms.lasthandoff: 03/06/2017
 
 ---
 # <a name="plan-for-hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM) を計画します
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Microsoft Intune を使用した Configuration Manager でモバイル デバイスを管理する場合には、次のモバイル デバイス プラットフォームがサポートされています。
-
-
-[!INCLUDE[../includes/mdm-supported-devices](../includes/mdm-supported-devices.md)]
-
 モバイル デバイスの管理には、モバイル デバイス管理機関という管理ソリューションのみ使用できます。 この設定を行う前に、[Microsoft Intune のスタンドアロンと Configuration Manager を使用したハイブリッド モバイル デバイス管理のいずれかを選択](../understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)する必要があります。
 
-## <a name="next-steps"></a>次のステップ
+また、「[Intune の展開計画、設計および実装ガイド](https://docs.microsoft.com/en-us/intune/plan-design/introduction)」には、展開計画の作成、設計の作成、Intune のオンボード、および運用環境のロールアウト実施のプロセスに関する詳細な情報が記載されています。
+
+- [サポートされているデバイス プラットフォーム](supported-device-platforms-for-hybrid.md)に関する記事では、Microsoft Intune を使用して Configuration Manager でサポートされるモバイル デバイス プラットフォームを示しています。
+
+- [デバイス登録方法](device-enrollment-methods.md)に関する記事では、企業所有のデバイスとユーザー所有のデバイス、およびサポートされている機能を登録する方法について説明しています。
+
+
+### <a name="next-steps"></a>次のステップ
  [ハイブリッド MDM をセットアップする](../deploy-use/setup-hybrid-mdm.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -1,13 +1,13 @@
 ---
-title: "準備手順 | Microsoft Docs | オンプレミス MDM"
+title: "準備手順 | Microsoft Docs"
 description: "System Center Configuration Manager でのオンプレミス モバイル デバイス管理でデバイスの管理を準備します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-- configmgr-client
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1ef60106-8f31-46d6-95a6-25a6495f22c7
@@ -16,8 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: a5c9fa5994f9b7bd13fe53edb6998609852b98ca
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 2ba11c8e2d8214ce9aca7c887fcb539b38da4e84
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -44,9 +45,4 @@ System Center Configuration Manager オンプレミス モバイル デバイス
 -   [System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のデバイス登録の設定](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
 
      このタスクでは、ユーザーにコンピューターとデバイスの登録の許可を与えます。またデバイス (通常は、ドメインに参加していないデバイス) に信頼されたルート証明書をインストールして、サイト システム サーバーへの HTTPS 接続を許可します。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

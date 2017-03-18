@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager によるリモート ワイプ、ロック、パスコードのリセットを使用したデータの保護 | Microsoft Docs"
 description: "System Center Configuration Manager によるフル ワイプ、選択的ワイプ、リモート ロック、パスコードのリセットを使用してデバイスのデータを保護します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: d3dd55b496a124c478f1cf2880a096e2fbdd9145
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 3aa4c2ad3568cc6ced70a65141a2c103af8b740f
+ms.lasthandoff: 03/06/2017
 
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-using-system-center-configuration-manager"></a>System Center Configuration Manager によるリモート ワイプ、ロック、パスコードのリセットを使用したデータの保護
@@ -241,12 +242,6 @@ Configuration Manager には、選択的ワイプ、フル ワイプ、リモー
 
 3.  **[デバイス グループ]** の **[リモート デバイスの操作]**をクリックし、 **[リモート ロック状態の表示]**を選択します。  
 
-## <a name="see-also"></a>関連項目  
+### <a name="see-also"></a>関連項目  
  [Windows のデバイス データ管理の選択的ワイプ (英語)](http://technet.microsoft.com/library/dn486874.aspx)   
- [System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../mdm/understand/hybrid-mobile-device-management.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

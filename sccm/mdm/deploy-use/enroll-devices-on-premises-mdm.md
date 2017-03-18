@@ -1,14 +1,14 @@
 ---
 
-title: "デバイスの登録 | Microsoft Docs | MDM System Center"
+title: "デバイスの登録 | Microsoft Docs"
 description: "System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスを登録する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-- configmgr-client
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b58472e3-31a5-4305-8eb6-2522befebe02
@@ -17,8 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: 9ecfef871b9082aad4c8f0cf933f963efd57c292
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 8f9667388c3557a84fc84c742e25f0c3bd2e2a5f
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -26,7 +27,7 @@ ms.openlocfilehash: 9ecfef871b9082aad4c8f0cf933f963efd57c292
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager のオンプレミス モバイル デバイス管理を使用してコンピューターとデバイスを管理するには、Configuration Manager がデバイスと通信して管理タスクを実行できるように、デバイスを登録する必要があります。 Configuration Manager には、デバイスを登録する 2 つの方法があります。  
+System Center Configuration Manager のオンプレミス モバイル デバイス管理を使用してコンピューターとデバイスを管理するには、Configuration Manager がデバイスと通信して管理タスクを実行できるように、デバイスを登録する必要があります。 Configuration Manager には、デバイスを登録する&2; つの方法があります。  
 
 -   **ユーザー登録** - この方法では、ユーザーが自分のデバイスで登録プロセスを開始します。 ユーザー登録を正常に行うには、信頼されたルート証明書がデバイスにインストールされている必要があります。また、ユーザーは登録のために Configuration Manager によってプロビジョニングされている必要があります。  デバイスを登録するために、ユーザーは作業の資格情報を提供するだけで、そのデバイスは管理の対象として登録されます。  
 
@@ -44,9 +45,4 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 > -   Windows 10 Team\( Configuration Manager バージョン 1602 以降\)  
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise   
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

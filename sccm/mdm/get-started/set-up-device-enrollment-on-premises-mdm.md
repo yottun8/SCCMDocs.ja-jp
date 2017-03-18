@@ -1,13 +1,13 @@
 ---
-title: "デバイス登録を設定する | Microsoft Docs | オンプレミス MDM"
+title: "デバイス登録のセットアップ | Microsoft Docs"
 description: "System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスを登録できるアクセス許可をユーザーに付与します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-- configmgr-client
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9ffaea91-1379-4b86-9953-b25e152f56a9
@@ -16,8 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: ee2bfd1b0bdd51322819cfef9fb6185642bd8796
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 1b32d755e23e1b1db2162bb117f45791a95b139b
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -35,7 +36,7 @@ ms.openlocfilehash: ee2bfd1b0bdd51322819cfef9fb6185642bd8796
 
 -   [登録するデバイスにルート証明書を格納する](#bkmk_storeCert)  
 
-##  <a name="a-namebkmkcreateprofa-create-an-enrollment-profile-that-allows-users-to-enroll-modern-devices"></a><a name="bkmk_createProf"></a> ユーザーが最新のデバイスを登録できるようにするための登録プロファイルを作成する  
+##  <a name="bkmk_createProf"></a> ユーザーが最新のデバイスを登録できるようにするための登録プロファイルを作成する  
  最新のデバイスをユーザーが登録するのに必要な設定をプッシュするため、新しい登録プロファイルを既定のクライアント設定に追加できます。これは、Configuration Manager サイトで検出されるすべてのユーザーに適用されます。  
 
 1.  Configuration Manager コンソールで、**[管理]** > **[概要]** > **[クライアント設定]**の順にクリックして **[既定のクライアント設定]** を開き、**[登録]** を選択します。  
@@ -51,7 +52,7 @@ ms.openlocfilehash: ee2bfd1b0bdd51322819cfef9fb6185642bd8796
 > [!NOTE]  
 >  検出されたユーザーのサブセットに登録プロファイルを展開する場合は、ユーザーのコレクションを使用し、そのコレクションに展開するためのカスタム クライアント設定を作成できます。 カスタム クライアント設定を作成する方法については、「 [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md)」をご覧ください。  
 
-##  <a name="a-namebkmkaddclienta-set-up-additional-client-settings-for-enrolled-devices"></a><a name="bkmk_addClient"></a> 登録されているデバイスの追加のクライアント設定のセットアップ  
+##  <a name="bkmk_addClient"></a> 登録されているデバイスの追加のクライアント設定のセットアップ  
  最新のデバイスの登録プロファイルをセットアップするだけでなく、登録時に、デバイスを構成する他のクライアント設定をセットアップすることができます。  クライアント設定をセットアップする方法については、「[System Center Configuration Manager でクライアント設定を構成する方法](../../core/clients/deploy/configure-client-settings.md)」を参照してください。  
 
  オンプレミス モバイル デバイス管理では使用できないクライアント設定があります。 Configuration Manager の現在のブランチでは、オンプレミス モバイル デバイス管理について、次のクライアント設定がサポートされています。  
@@ -65,10 +66,10 @@ ms.openlocfilehash: ee2bfd1b0bdd51322819cfef9fb6185642bd8796
     > [!NOTE]  
     >  オンプレミス モバイル デバイス管理の場合は、ソフトウェア展開の設定は、既定のクライアント設定としてのみ使用できます。 ソフトウェア展開の設定は、Configuration Manager の現在のブランチのカスタム クライアント設定では使用できません。  
 
-##  <a name="a-namebkmkenableusersa-enable-users-to-receive-the-modern-device-enrollment-profile"></a><a name="bkmk_enableUsers"></a> ユーザーが最新のデバイス登録プロファイルを受信できるようにする  
+##  <a name="bkmk_enableUsers"></a> ユーザーが最新のデバイス登録プロファイルを受信できるようにする  
  ユーザーは、変更されたクライアント設定をオンプレミス モバイル デバイス管理の登録プロファイルによって受信するために、Active Directory の探索方法で検出される必要があります。 必要とする全員が登録プロファイルを取得できるように、Active Directory ユーザーの探索を実行します。 ユーザーの検出方法の手順については、「 [Run discovery for System Center Configuration Manager](../../core/servers/deploy/configure/run-discovery.md)」をご覧ください。  
 
-##  <a name="a-namebkmkstorecerta-store-the-root-certificate-on-devices-to-be-enrolled"></a><a name="bkmk_storeCert"></a> 登録するデバイスにルート証明書を格納する  
+##  <a name="bkmk_storeCert"></a> 登録するデバイスにルート証明書を格納する  
  ドメインに参加しているデバイスを持つユーザーは、サイト システムの役割をホストするサーバーとの信頼された通信のための必要なルート証明書を既に持っていると考えられます。これは、Active Directory を使用したドメイン参加プロセスの一部としてルートが発行されているためです。 ドメインに参加していないコンピューターとモバイル デバイスは、デバイスにルート証明書を手動でインストールして、登録を実行できるようにする必要があります。 これらのデバイスが必要なルート証明書を自動的に持つことはありません。  
 
  エクスポートされた証明書ファイルを用意して、デバイスに手動でインストールできるようにする必要があります。 これは、メール、OneDrive、SD カード、USB メモリ、またはニーズに最適な方法を使用して実行できます。  
@@ -88,9 +89,4 @@ ms.openlocfilehash: ee2bfd1b0bdd51322819cfef9fb6185642bd8796
 6.  **[信頼されたルート証明機関]**をクリックして、 **[OK]**をクリックし、 **[次へ]**をクリックします。  
 
 7.  **[完了]**をクリックします。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

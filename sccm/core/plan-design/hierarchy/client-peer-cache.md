@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2dd898c9b022c6f0bc243623835af0eece94128f
-ms.openlocfilehash: 95d1671501f672e1d5abe3f0fbbd7d2dfb21e0a3
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: 895b8ae58a9fda3fd22f58d77129053df09c4ccb
+ms.lasthandoff: 03/04/2017
 
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Configuration Manager クライアントのピア キャッシュ
@@ -28,7 +29,7 @@ ms.openlocfilehash: 95d1671501f672e1d5abe3f0fbbd7d2dfb21e0a3
 System Center Configuration Manager バージョン 1610 以降、**ピア キャッシュ**を使用して、コンテンツをリモートの場所にあるクライアントに展開できます。 ピア キャッシュとは、クライアントがローカル キャッシュで他のクライアントとコンテンツを直接共有できるようにするための組み込みの Configuration Manager ソリューションです。   
 
 > [!TIP]  
-> バージョン 1610 では、ピア キャッシュとクライアント データ ソースのダッシュボードは、プレリリース機能です。 有効にするには、「[更新プログラムからのプレリリース機能の使用](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)」をご覧ください。
+> バージョン 1610 で導入されたピア キャッシュとクライアント データ ソースのダッシュボードは、プレリリース機能です。 有効にするには、「[更新プログラムからのプレリリース機能の使用](/sccm/core/servers/manage/pre-release-features)」をご覧ください。
 
  -     クライアント設定を使用してピア キャッシュを使用するクライアントを有効にできます。
  -     コンテンツを共有するには、両方のピア キャッシュ クライアントが、コンテンツをシークするクライアントの現在の境界グループのメンバーである必要があります。 クライアントがフォールバックを使用して近隣の境界グループからコンテンツをシークする場合は、近隣の境界グループのピア クライアントは使用可能なコンテンツ ソースの場所のプールに含まれません。 現在および近隣の境界グループの詳細については、「[境界グループ](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups)」を参照してください。
@@ -66,9 +67,4 @@ System Center Configuration Manager バージョン 1610 以降、**ピア キ�
   -  **ピアからのコンテンツのダウンロード用ポート (HTTP/HTTPS)**
 
 ピア キャッシュが有効になっている各コンピューターで Windows ファイアウォールを使用している場合、Configuration Manager はユーザーが構成したポートの使用を許可するようにします。
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

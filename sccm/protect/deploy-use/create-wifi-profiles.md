@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 321b19b2-a093-4b8f-995f-41f74b886eb5
 caps.latest.revision: 13
 caps.handback.revision: 0
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
-ms.openlocfilehash: 7d42ec89300d4eb6b02bafb3f83d341f8e3ca0c0
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: f1ae976899de1fd3efcbde0c7268f071a5d0218b
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -39,15 +40,9 @@ System Center Configuration Manager の Wi-Fi プロファイルを使用して�
 
 -   Windows RT 8.1 を実行するデバイス  
 
--   Windows Phone 8.1 を実行するデバイス  
-
 -   Windows 10 デスクトップまたは Windows 10 Mobile を実行するデバイス  
 
--   iOS 5、iOS 6、iOS 7 および iOS 8 を実行する iPhone デバイス  
-
--   iOS 5、iOS 6、iOS 7 および iOS 8 を実行する iPad デバイス  
-
--   バージョン 4 以降を実行する Android デバイス
+[モバイル デバイスの Wi-Fi プロファイルの作成](../../mdm/deploy-use/create-wifi-profiles.md)に関する記事では、Configuration Manager で Wi-Fi プロファイルを使用して、ワイヤレス ネットワーク設定をモバイル デバイス ユーザーに展開する方法について説明しています。
 
 > [!IMPORTANT]  
 >  プロファイルを Android、iOS、Windows Phone、および登録されている Windows 8.1 以降の各デバイスに展開するには、これらのデバイスを Microsoft Intune に登録する必要があります。 デバイスの登録方法については、「[管理するデバイスを Intune に登録する](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)」を参照してください。  
@@ -92,7 +87,7 @@ System Center Configuration Manager の Wi-Fi プロファイルを使用して�
     >  セキュリティの種類: **[WPA2 Enterprise]** または **[WPA2 Personal]**  
     > 暗号化の種類: **[AES]** または **[TKIP]**  
     > EAP の種類: **スマート カードまたはその他の証明書** または **PEAP**  
-  
+
     > Android デバイスの場合、セキュリティの種類のうち、**[WPA - パーソナル]**、 **[WPA2 - パーソナル]**、**[WEP]** はサポートされていません。  
 
 2.  ワイヤレス ネットワークで使用する暗号化方法を選択します。  
@@ -133,9 +128,4 @@ System Center Configuration Manager の Wi-Fi プロファイルを使用して�
 
 ### <a name="next-steps"></a>次のステップ
  Wi-Fi プロファイルの展開方法については、「[System Center Configuration Manager で Wi-Fi プロファイルを展開する方法](deploy-wifi-vpn-email-cert-profiles.md)」を参照してください。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

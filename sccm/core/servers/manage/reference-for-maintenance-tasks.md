@@ -2,7 +2,7 @@
 title: "メンテナンス タスクのリファレンス | Microsoft Docs"
 description: "System Center Configuration Manager サイトの各メンテナンス タスクの詳細およびそれらのタスクが既定で有効になるかどうかについて説明します。"
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 3/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6e19d1239cb61b570203fdd13563d5f8c5afc6ad
-ms.openlocfilehash: d2e53e7c0cd0dd1a97d3620a14a15369e1d7e0ec
+ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
+ms.openlocfilehash: 92d3c215569916a5557309d7f488aa88f387da92
+ms.lasthandoff: 03/09/2017
 
 
 ---
@@ -52,6 +53,11 @@ ms.openlocfilehash: d2e53e7c0cd0dd1a97d3620a14a15369e1d7e0ec
 -   **プライマリ サイト**: 有効    
 -   セカンダリ サイト: 利用不可  
 
+**期限切れのクライアントのダウンロード履歴の削除**: このタスクは、クライアントが使用するソースのダウンロードに関する履歴データを削除する場合に使用します。 ソースのダウンロードに関する情報は、[クライアント データ ソース ダッシュボード](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard)の設定に使用されます。  
+-  中央管理サイト – 利用不可
+-     **プライマリ サイト** - 有効
+-  セカンダリ サイト - 利用不可
+
 **期限切れのクライアント操作を削除**: このタスクは、クライアント操作のすべての期限切れデータをサイト データベースから削除する場合に使用します。 たとえば、これには古いまたは期限切れのクライアント通知のデータ (コンピューターまたはユーザーのポリシーのダウンロード要求など)、および Endpoint Protection のデータ (クライアントが更新された定義をスキャンまたはダウンロードするために管理ユーザーによって実行される要求など) が含まれます。
 
 -   **中央管理サイト**: 有効    
@@ -63,6 +69,12 @@ ms.openlocfilehash: d2e53e7c0cd0dd1a97d3620a14a15369e1d7e0ec
 -   **中央管理サイト**: 有効   
 -   **プライマリ サイト**: 有効    
 -   セカンダリ サイト: 利用不可  
+
+**期限切れのクラウド管理ゲートウェイ トラフィック データの削除**: このタスクは、サイト データベースから[クラウド管理ゲートウェイ](/sccm/core/clients/manage/plan-cloud-management-gateway)を通過するトラフィックに関するすべての期限切れデータを削除する場合に使用します。 たとえば、これには要求数、要求の合計バイト数、応答の合計バイト数、失敗した要求数、および最大同時要求数に関するデータが含まれます。  
+- **中央管理サイト** - 有効
+- **プライマリ サイト** - 有効
+- セカンダリ サイト - 利用不可
+
 
 **期限切れの収集ファイルの削除**: このタスクは、収集するファイルに関する期限切れの情報をデータベースから削除する場合に使用します。 また、このタスクは、選択したサイトのサイト サーバーのフォルダー構造から収集したファイルを削除します。 既定では、収集ファイルのうち、新しい順に&5; ファイルが、サイト サーバーの **Inboxes\sinv.box\FileCol** ディレクトリに格納されます。 詳細については、「[System Center Configuration Manager のソフトウェア インベントリの概要](/sccm/core/clients/manage/inventory/introduction-to-software-inventory)」を参照してください。  
 
@@ -112,7 +124,7 @@ ms.openlocfilehash: d2e53e7c0cd0dd1a97d3620a14a15369e1d7e0ec
 -   **プライマリ サイト**: 有効    
 -   セカンダリ サイト: 利用不可  
 
-**期限切れの登録デバイスの削除**: 1602 の更新プログラム以降、このタスクは既定で無効であり、 指定した期間サイトに情報を報告していないモバイル デバイスに関する期限切れデータをサイト データベースから削除する場合に、このタスクを使用することができます。
+**期限切れの登録デバイスの削除**: 1602 用の更新プログラム以降は、このタスクは既定で無効になっています。 このタスクは、指定された期間にサイトにまったく情報を報告しなかったモバイル デバイスに関する期限切れデータをサイト データベースから削除する場合に使用します。
 
 このタスクは、Microsoft Intune (ハイブリッド) によって登録されているデバイス、または Configuration Manager オンプレミス モバイル デバイス管理を使用して登録されているデバイスに適用されます。 Configuration Manager または Intune を使用して登録されたデバイスのオペレーティング システムについては、「[System Center Configuration Manager のクライアントとデバイスのサポートされるオペレーティング システム](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)」の「[Microsoft Intune で登録されるモバイル デバイス](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mobile-devices-enrolled-by-microsoft-intune)」セクションを参照してください。
 
@@ -227,6 +239,11 @@ ms.openlocfilehash: d2e53e7c0cd0dd1a97d3620a14a15369e1d7e0ec
 -   **プライマリ サイト**: 有効    
 -   セカンダリ サイト: 利用不可  
 
+**孤立したクライアントの展開状態レコードの削除**: このタスクは、クライアントの展開状態に関する情報を含むテーブルを定期的に消去する場合に使用します。 このタスクにより、古い、または使用停止になったデバイスに関連付けられたレコードが削除されます。  
+-   **中央管理サイト**: 有効    
+-   **プライマリ サイト**: 有効    
+-   セカンダリ サイト: 利用不可 
+
 **アプリケーションの使用されていないリビジョンの削除**: このタスクは、参照されなくなったアプリケーションのリビジョンを削除する場合に使用します。 詳細については、「[System Center Configuration Manager でアプリケーションを修正して置き換える方法](../../../apps/deploy-use/revise-and-supersede-applications.md)」を参照してください。  
 
 -   中央管理サイト: 利用不可    
@@ -288,9 +305,4 @@ ms.openlocfilehash: d2e53e7c0cd0dd1a97d3620a14a15369e1d7e0ec
 -   中央管理サイト: 利用不可    
 -   **プライマリ サイト**: 有効    
 -   セカンダリ サイト: 利用不可  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

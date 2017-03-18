@@ -17,8 +17,9 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
-ms.openlocfilehash: c9956dd4ef94a1b109d761e44e42f512c42eb8d2
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: 969f2d28649853ddc95860fe72597d6d2c9a94e9
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -36,7 +37,7 @@ ms.openlocfilehash: c9956dd4ef94a1b109d761e44e42f512c42eb8d2
 
 -   指定のファイルとデバイスを含む[クエリベース コレクション](../../../../core/clients/manage/collections/introduction-to-collections.md)を作成する。   
 
--   デバイスでファイルに関する詳細を提供する[レポートを実行](../../../../core/servers/manage/reporting.md)する。 
+-   デバイスでファイルに関する詳細を提供する[レポートを実行](../../../../core/servers/manage/reporting.md)する。
 
 -   [リソース エクスプローラー](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)を使用して、クライアント デバイスから収集され、インベントリされたファイルに関する詳細情報を表示する。   
 
@@ -44,27 +45,5 @@ ms.openlocfilehash: c9956dd4ef94a1b109d761e44e42f512c42eb8d2
 
  Configuration Manager でデュアル ブート コンピューターを検出することはできますが、返す情報はインベントリ実行時にアクティブだったオペレーティング システムのインベントリ情報のみです。  
 
-## <a name="software-inventory-for-mobile-devices-enrolled-with-microsoft-intune"></a>Microsoft Intune に登録されているモバイル デバイスのソフトウェア インベントリ  
- モバイル デバイスにインストールされているアプリのインベントリを収集できます。 インベントリに収集されるアプリは、デバイスが会社所有か個人所有かによって異なります。 個人用デバイスの場合、インベントリに収集されるアプリは、Microsoft Intune で管理されているアプリのみです。  
-
-> [!NOTE]  
->  モバイル デバイスにインストールされているアプリのインベントリが[ハードウェア インベントリ](../../../../core/clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md) プロセスの一部として収集されます。  
-
- 個人所有のデバイスまたは会社所有のデバイスのインベントリに次のアプリが収集されます。  
-
-|プラットフォーム|個人所有のデバイス|会社所有のデバイス|  
-|--------------|---------------------------------|--------------------------------|  
-|Windows 10 (Configuration Manager クライアントを使用しない)|管理対象アプリのみ|管理対象アプリのみ| 
-|Windows 8.1 (Configuration Manager クライアントを使用しない)|管理対象アプリのみ|管理対象アプリのみ|  
-|Windows Phone 8|管理対象アプリのみ|管理対象アプリのみ|  
-|Windows RT|管理対象アプリのみ|管理対象アプリのみ|  
-|iOS|管理対象アプリのみ|デバイスにインストールされているすべてのアプリ|  
-|Android|管理対象アプリのみ|デバイスにインストールされているすべてのアプリ|  
-
-
-
-
-
-<!--HONumber=Dec16_HO5-->
-
+**モバイル デバイス:** モバイル デバイスにインストールされているアプリのインベントリの収集に関しては、「[Software inventory for mobile devices enrolled with Microsoft Intune (Microsoft Intune に登録されているモバイル デバイスのソフトウェア インベントリ)](../../../../mdm/deploy-use/software-inventory-mobile-devices.md)」を参照してください。
 

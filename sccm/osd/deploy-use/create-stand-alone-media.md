@@ -17,8 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 66cd6d099acdd9db2bc913a69993aaf5e17237fe
-ms.openlocfilehash: 411ca1d13778521f7fa0dba71980158477cd0735
+ms.sourcegitcommit: ee7f69bd65152deffb2456d9807e1e8fee8802ec
+ms.openlocfilehash: 708525604c3f40cf75b5408c3666193186b7cf50
+ms.lasthandoff: 03/07/2017
 
 
 ---
@@ -36,7 +37,7 @@ Configuration Manager のスタンドアロン メディアには、Configuratio
 
  スタンドアロン メディアには、オペレーティング システムと他のすべて必要なコンテンツ (ブート イメージ、オペレーティング システム イメージ、およびデバイス ドライバーなど) をインストールするステップを自動化するタスク シーケンスが含まれています。 オペレーティング システムを展開するためのすべてがスタンドアロン メディアに保存されるため、スタンドアロン メディアのディスク容量は、他の種類のメディアで必要とされる容量よりもずっと大きなものである必要があります。 中央管理サイトにスタンドアロン メディアを作成すると、クライアントは割り当てられたサイト コードを Active Directory から取得します。 子サイトで作成されたスタンドアロン メディアは、そのサイトのサイト コードをクライアントに自動的に割り当てます。  
 
-##  <a name="a-namebkmkcreatestandalonemediaa-create-stand-alone-media"></a><a name="BKMK_CreateStandAloneMedia"></a> スタンドアロン メディアの作成  
+##  <a name="BKMK_CreateStandAloneMedia"></a> スタンドアロン メディアの作成  
  タスク シーケンス メディアの作成ウィザードを使用してスタンドアロン メディアを作成する前に、次の条件が満たされていることを確認します。  
 
 ### <a name="create-a-task-sequence-to-deploy-an-operating-system"></a>オペレーティング システムを展開するタスク シーケンスを作成する
@@ -53,115 +54,111 @@ Configuration Manager のスタンドアロン メディアには、Configuratio
 - 動的なアプリケーションはアプリケーションのインストール タスクを使用してインストールします。
 
 オペレーティング システムを展開するタスク シーケンスに [[パッケージのインストール]](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage) ステップが含まれる場合に、中央管理サイトでスタンドアロン メディアを作成すると、エラーが発生する可能性があります。 中央管理サイトには、タスク シーケンスの実行中に、ソフトウェアの配布エージェントを有効にするために必要なクライアント構成ポリシーがありません。 CreateTsMedia.log ファイルに次のエラーが表示される場合があります。<br /><br /> "WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"<br /><br /> **パッケージのインストール** ステップを含むスタンドアロン メディアの場合、ソフトウェアの配布エージェントが有効なプライマリ サイトにスタンドアロン メディアを作成するか、または [Windows と ConfigMgr のセットアップ](../understand/task-sequence-steps.md#BKMK_RunCommandLine) ステップの後かつタスク シーケンスの最初の**パッケージのインストール** ステップの前に[コマンド ラインの実行](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr)ステップを追加する必要があります。 [ **コマンド ラインの実行** ] ステップでは、最初の [パッケージのインストール] ステップを実行する前に、ソフトウェアの配布エージェントを有効にする WMIC コマンドを実行します。 [ **コマンド ラインの実行** ] タスク シーケンス ステップでは、次のコマンド ラインを使用できます。<br /><br />
-```WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE
+```
+WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE
 ```
 
-### Distribute all content associated with the task sequence
-You must distribute all content that is required by the task sequence the  to at least one distribution point. This includes the boot image, operating system image, and other associated files. The wizard gathers the information from the distribution point when it creates the stand-alone media. You must have **Read** access rights to the content library on that distribution point.  For details, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS).
+### <a name="distribute-all-content-associated-with-the-task-sequence"></a>タスク シーケンスに関連付けられているすべてのコンテンツを配布する
+少なくとも&1; つの配布ポイントに対して、タスク シーケンスで必要なすべてのコンテンツを配布する必要があります。 これには、ブート イメージ、オペレーティング システム イメージ、その他の関連するファイルが含まれます。 スタンドアロン メディアの作成時に、ウィザードによって配布ポイントから情報が収集されます。 その配布ポイントのコンテンツ ライブラリへの **読み取り** アクセス権を持っている必要があります。  詳細については、「[タスク シーケンスによって参照されるコンテンツの配布](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS)」を参照してください。
 
-### Prepare the removable USB drive
-*For a removable USB drive:*
+### <a name="prepare-the-removable-usb-drive"></a>リムーバブル USB ドライブを準備する
+*リムーバブル USB ドライブの場合:*
 
-If you are going to use a removable USB drive, the USB  drive must be connected to the computer where the wizard is run and the USB drive must be detectable by Windows as a removal device. The wizard writes directly to the USB drive when it creates the media. Stand-alone media uses a FAT32 file system. You cannot create stand-alone media on a USB flash drive whose content contains a file over 4 GB in size.
+リムーバブル USB ドライブを使用する場合は、ウィザードが実行されるコンピューターに USB ドライブが接続され、USB ドライブが Windows に取り外し可能なメディアとして検知されている必要があります。 メディアの作成時に、ウィザードによって USB ドライブに直接書き込まれます。 スタンドアロン メディアでは FAT32 ファイル システムが使用されています。 スタンドアロン メディアは、サイズが 4 GB を超えるコンテンツが入っている USB フラッシュ ドライブには作成できません。
 
-### Create an output folder
-*For a CD/DVD set:*
+### <a name="create-an-output-folder"></a>出力フォルダーを作成する
+*CD/DVD セットの場合:*
 
-Before you run the Create Task Sequence Media Wizard to create media for a CD or DVD set, you must create a folder for the output files created by the wizard. Media that is created for a CD or DVD set is written as .iso files directly to the folder.
+タスク シーケンス メディアの作成ウィザードを実行して CD または DVD セット用のメディアを作成する前に、ウィザードで作成される出力ファイル用のフォルダーを作成する必要があります。 CD または DVD セット用に作成されるメディアは、そのフォルダーに .iso ファイルとして直接書き込まれます。
 
 
- Use the following procedure to create stand-alone media for a removable USB drive or a CD/DVD set.  
+ リムーバブル USB ドライブまたは CD/DVD セット用のスタンドアロン メディアを作成するには、次の手順に従います。  
 
-## To create stand-alone media  
+## <a name="to-create-stand-alone-media"></a>スタンドアロン メディアを作成するには  
 
-1.  In the Configuration Manager console, click **Software Library**.  
+1.  Configuration Manager コンソールで、[ソフトウェア ライブラリ] ****をクリックします。  
 
-2.  In the **Software Library** workspace, expand **Operating Systems**, and then click **Task Sequences**.  
+2.  [ **ソフトウェア ライブラリ** ] ワークスペースで [ **オペレーティング システム**] を展開して、[ **タスク シーケンス**] をクリックします。  
 
-3.  On the **Home** tab, in the **Create** group, click **Create Task Sequence Media** to start the Create Task Sequence Media Wizard.  
+3.  [ **ホーム** ] タブの [ **作成** ] グループで [ **タスク シーケンス メディアの作成** ] をクリックして、タスク シーケンス メディアの作成ウィザードを起動します。  
 
-4.  On the **Select Media Type** page, specify the following options, and then click **Next**.  
+4.  [ **メディアの種類の選択** ] ページで次のオプションを指定し、[ **次へ**] をクリックします。  
 
-    -   Select **Stand-alone media**.  
+    -   [ **スタンドアロン メディア**] を選択します。  
 
-    -   Optionally, if you want to allow the operating system to be deployed without requiring user input, select **Allow unattended operating system deployment**. When you select this option the user is not prompted for network configuration information or for optional task sequences. However, the user is still prompted for a password if the media is configured for password protection.  
+    -   必要に応じて、ユーザーの入力なしにオペレーティング システムを展開できるようにするには、[ **オペレーティング システムの無人展開を許可する**] を選択します。 このオプションを選択すると、ネットワーク構成情報またはオプションのタスク シーケンスのプロンプトはユーザーに表示されません。 ただし、メディアにパスワード保護が構成されている場合は、パスワードの入力を求めるメッセージがユーザーに表示されます。  
 
-5.  On the **Media Type** page, specify whether the media is a flash drive or a CD/DVD set, and then click configure the following:  
+5.  **[メディアの種類]** ページで、メディアがフラッシュ ドライブか、または CD/DVD セットであるかを指定してから、次の構成をクリックします。  
 
     > [!IMPORTANT]  
-    >  Stand-alone media uses a FAT32 file system. You cannot create stand-alone media on a USB flash drive whose content contains a file over 4 GB in size.  
+    >  スタンドアロン メディアでは FAT32 ファイル システムが使用されています。 スタンドアロン メディアは、サイズが 4 GB を超えるコンテンツが入っている USB フラッシュ ドライブには作成できません。  
 
-    -   If you select **USB flash drive**, specify the drive where you want to store the content.  
+    -   **[USB フラッシュ ドライブ]**を選択した場合は、コンテンツを保存するドライブを指定します。  
 
-    -   If you select **CD/DVD set**, specify the capacity of the media and the name and path of the output files. The wizard writes the output files to this location. For example: **\\\servername\folder\outputfile.iso**  
+    -   **CD/DVD セット**を選択した場合は、メディアの容量および出力ファイルの名前とパスを指定します。 この場所に出力ファイルが書き込まれます。 例: **\\\servername\folder\outputfile.iso**  
 
-         If the capacity of the media is too small to store the entire content, multiple files are created and you must store the content on multiple CDs or DVDs. When multiple media is required, Configuration Manager adds a sequence number to the name of each output file that it creates. In addition, if you deploy an application along with the operating system and the application cannot fit on a single media, Configuration Manager stores the application across multiple media. When the stand-alone media is run, Configuration Manager prompts the user for the next media where the application is stored.  
+         メディアにコンテンツ全体を保存しきれない場合は、複数のファイルが作成されます。この場合、複数の CD または DVD を使用してコンテンツを保存する必要があります。 複数のメディアが必要な場合は、Configuration Manager が作成する各出力ファイルの名前に連番が付けられます。 さらに、オペレーティング システムと共にアプリケーションを展開し、アプリケーションが&1; つのメディアに収まらない場合、Configuration Manager は複数のメディアでアプリケーションを保存します。 スタンドアロン メディアを実行している場合、Configuration Manager は、アプリケーションを保存する次のメディアの指定をユーザーに求めます。  
 
         > [!IMPORTANT]  
-        >  If you select an existing .iso image, the Task Sequence Media Wizard deletes that image from the drive or share as soon as you proceed to the next page of the wizard. The existing image is deleted, even if you then cancel the wizard.  
+        >  既存の .iso イメージを選択した場合は、タスク シーケンス メディア ウィザードの次のページに進むと、ドライブまたは共有フォルダーからイメージが削除されます。 既存のイメージは、ウィザードをキャンセルしても削除されます。  
 
-     Click **Next**.  
+     [次へ] をクリックします。 ****  
 
-6.  On the **Security** page, enter a strong password to help protect the media, and then click **Next**. If you specify a password, the password is required to use the media.  
+6.  [ **セキュリティ** ] ページで、メディアを保護するために強力なパスワードを入力し、[ **次へ**] をクリックします。 パスワードを指定した場合は、メディアを使用する際にパスワードが必要になります。  
 
     > [!IMPORTANT]  
-    >  On stand-alone media, only the task sequence steps and their variables are encrypted. The remaining content of the media is not encrypted, so do not include any sensitive information in task sequence scripts. Store and implement all sensitive information by using task sequence variables.  
+    >  スタンドアロン メディアでは、タスク シーケンス ステップとその変数のみが暗号化されます。 メディアの残りのコンテンツは暗号化されません。このため、機密情報をタスク シーケンスのスクリプトに含めないでください。 機密情報はすべて、タスク シーケンスの変数を使用して保存し、実装します。  
 
-7.  On the **Stand-Alone CD/DVD** page, specify the task sequence that deploys the operating system, and then click **Next**. Choose **Detect associated application dependencies and add them to this media** to add content to the stand-alone media for application dependencies.
+7.  [ **スタンドアロン CD/DVD** ] ページで、オペレーティング システムを展開するタスク シーケンスを指定して [ **次へ**] をクリックします。 **[関連するアプリケーションの依存関係を検出し、このメディアに追加する]** を選択し、アプリケーションの依存関係のスタンドアロン メディアにコンテンツを追加します。
 > [!TIP]
-> If you do not see expected application dependencies, deselect and then reselect the **Detect associated application dependencies and add them to this media** setting to refresh the list.
+> 予想したアプリケーションの依存関係が表示されない場合は、**[関連するアプリケーションの依存関係を検出し、このメディアに追加する]** の設定の選択を解除してから再度選択し、一覧を更新します。
 
-The wizard lets you select only those task sequences that are associated with a boot image.  
+ウィザードでは、ブート イメージに関連付けられたタスク シーケンスのみを選択できます。  
 
-8.  On the **Distribution Points** page, specify the distribution points that contain the content required by the task sequence, and then click **Next**.  
+8.  **[配布ポイント]** ページで、タスク シーケンスに必要なコンテンツを含む配布ポイントを指定して、 **[次へ]**をクリックします。  
 
-     Configuration Manager will only display distribution points that have the content. You must distribute all of the content associated with the task sequence (boot image, operating system image, etc.) to at least one distribution point before you can continue. After you distribute the content, you can either restart the wizard or remove any distribution points that you already selected  on this page, go to the previous page, and then back to the **Distribution Points** page to refresh the distribution point list. For more information about distributing content, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS). For more information about distribution points and content management, see [Manage content and content infrastructure for System Center Configuration Manager](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+     Configuration Manager には、コンテンツが含まれる配布ポイントのみが表示されます。 続行する前に、タスク シーケンス (ブート イメージ、オペレーティング システム イメージなど) に関連付けられているすべてのコンテンツを少なくとも&1; つの配布ポイントに配布する必要があります。 コンテンツを配布した後、ウィザードを再起動するか、またはこのページで既に選択した配布ポイントを削除して、前のページに戻ってから **[配布ポイント]** ページに戻り、配布ポイントの一覧を更新できます。 コンテンツ配布の詳細については、「[タスク シーケンスによって参照されるコンテンツの配布](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS)」を参照してください。 配布ポイントとコンテンツを管理の詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」をご覧ください。  
 
     > [!NOTE]  
-    >  You must have **Read** access rights to the content library on the distribution points.  
+    >  配布ポイントのコンテンツ ライブラリへの **読み取り** アクセス権限を持っている必要があります。  
 
-9. On the **Customization** page, specify the following information, and then click **Next**.  
+9. [ **カスタマイズ** ] ページで、次の情報を指定して [ **次へ**] をクリックします。  
 
-    -   Specify the variables that the task sequence uses to deploy the operating system.  
+    -   オペレーティング システムを展開するためにタスク シーケンスで使用する変数を指定します。  
 
-    -   Specify any prestart commands that you want to run before the task sequence. Prestart commands are a script or an executable that can interact with the user in Windows PE before the task sequence runs to install the operating system. For more information about prestart commands for media, see [Prestart commands for task sequence media in System Center Configuration Manager](../understand/prestart-commands-for-task-sequence-media.md).  
+    -   タスク シーケンスの前に実行する起動前コマンドを指定します。 起動前コマンドは、タスク シーケンスを実行してオペレーティング システムをインストールする前に、Windows PE でユーザーと対話できるスクリプトまたは実行可能ファイルです。 メディアの起動前コマンドの詳細については、「[System Center Configuration Manager でのタスク シーケンス メディアの起動前コマンド](../understand/prestart-commands-for-task-sequence-media.md)」を参照してください。  
 
-         Optionally, select **Files for the prestart command** to include any required files for the prestart command.  
+         必要に応じて、 **[起動前コマンドのファイル]** を選択して、起動前コマンドに必要なファイルを含めます。  
 
         > [!TIP]  
-        >  During task sequence media creation, the task sequence writes the package ID and prestart command-line, including the value for any task sequence variables, to the CreateTSMedia.log log file on the computer that runs the Configuration Manager console. You can review this log file to verify the value for the task sequence variables.  
+        >  タスク シーケンス メディアの作成中に、パッケージ ID と起動前コマンドライン (タスク シーケンスの変数の値を含む) が、Configuration Manager コンソールを実行しているコンピューターの CreateTSMedia.log というログファイルに書き込まれます。 このログ ファイルで、タスク シーケンスの変数の値を確認できます。  
 
-10. Complete the wizard.  
+10. ウィザードを完了します。  
 
- The stand-alone media files (.iso) are created in the destination folder. If you selected **Stand-Alone CD/DVD**, you can now copy the output files to a set of CDs or DVDs.  
+ スタンドアロンのメディア ファイル (.iso) は、対象フォルダーに作成されます。 **[スタンドアロン CD/DVD]**を選択すると、一連の CD または DVD に出力ファイルをコピーできるようになります。  
 
-##  <a name="BKMK_StandAloneMediaTSExample"></a> Example task sequence for stand-alone media  
- Use the following table as a guide as you create a task sequence to deploy an operating system using stand-alone media. The table will help you decide the general sequence for your task sequence steps and how to organize and structure those task sequence steps into logical groups. The task sequence that you create might vary from this sample and can contain more or fewer task sequence steps and groups.  
+##  <a name="BKMK_StandAloneMediaTSExample"></a> スタンドアロン メディアのタスク シーケンス例  
+ スタンドアロン メディアを使用してオペレーティング システムを展開するタスク シーケンスを作成するときは、次の表をガイドとして使用してください。 この表を利用して、タスク シーケンス ステップの全般的な順序と、これらのタスク シーケンス ステップを論理的なグループに整理および構造化する方法を決定できます。 実際に作成するタスク シーケンスは、この例とは異なり、タスク シーケンス ステップやグループの数が違う場合があります。  
 
 > [!NOTE]  
->  You must always use the Task Sequence Media Wizard to create stand-alone media.  
+>  スタンドアロン メディアを作成するには、タスク シーケンス メディア ウィザードを常に使用する必要があります。  
 
-|Task Sequence Group or Step|Description|  
+|タスク シーケンス グループまたはステップ|説明|  
 |---------------------------------|-----------------|  
-|Capture File and Settings - **(New Task Sequence Group)**|Create a task sequence group. A task sequence group keeps similar task sequence steps together for better organization and error control.|  
-|Capture Windows Settings|Use this task sequence step to identify the Microsoft Windows settings that are captured from the existing operating system on the destination computer prior to reimaging. You can capture the computer name, user and organizational information, and the time zone settings.|  
-|Capture Network Settings|Use this task sequence step to capture network settings from the computer that receives the task sequence. You can capture the domain or workgroup membership of the computer and the network adapter setting information.|  
-|Capture User Files and Settings - **(New Task Sequence Sub-Group)**|Create a task sequence group within a task sequence group. This sub-group contains the steps needed to capture user state data from the existing operating system on the destination computer prior to reimaging. Similar to the initial group that you added, this sub-group keeps similar task sequence steps together for better organization and error control.|  
-|Set Local State Location|Use this task sequence step to specify a local location using the protected path task sequence variable. The user state is stored on a protected directory on the hard drive.|  
-|Capture User State|Use this task sequence step to capture the user files and settings you want to migrate to the new operating system.|  
-|Install Operating System - **(New Task Sequence Group)**|Create another task sequence sub-group. This sub-group contains the steps needed to install the operating system.|  
-|Reboot to Windows PE or hard disk|Use this task sequence step to specify restart options for the computer that receives this task sequence. This step will display a message to the user indicating that the computer will be restarted so that the installation can continue.<br /><br /> This step uses the read-only **_SMSTSInWinPE** task sequence variable. If the associated value equals **false** the task sequence step will continue.|  
-|Apply Operating System|Use this task sequence step to install the operating system image onto the destination computer. This step deletes all files on that volume (with the exception of Configuration Manager-specific control files) and then applies all volume images contained in the WIM file to the corresponding sequential disk volume. You can also specify a **sysprep** answer file to configure which disk partition to use for the installation.|  
-|Apply Windows Settings|Use this task sequence step to configure the Windows settings configuration information for the destination computer. The windows settings you can apply are user and organizational information, product or license key information, time zone, and the local administrator password.|  
-|Apply Network Settings|Use this task sequence step to specify the network or workgroup configuration information for the destination computer. You can also specify if the computer uses a DHCP server or you can statically assign the IP address information.|  
-|Apply Driver Package|Use this task sequence step to make all device drivers in a driver package available for use by Windows setup. All necessary device drivers must be contained on the stand-alone media.|  
-|Setup Operating System - **(New Task Sequence Group)**|Create another task sequence sub-group. This sub-group contains the steps needed to install the Configuration Manager client.|  
-|Setup Windows and ConfigMgr|Use this task sequence step to install the Configuration Manager client software. Configuration Manager installs and registers the Configuration Manager client GUID. You can assign the necessary installation parameters in the **Installation properties** window.|  
-|Restore User Files and Settings - **(New Task Sequence Group)**|Create another task sequence sub-group. This sub-group contains the steps needed to restore the user state.|  
-|Restore User State|Use this task sequence step to initiate the User State Migration Tool (USMT) to restore the user state and settings that were captured from the Capture User State Action to the destination computer.|  
-
-
-
-<!--HONumber=Dec16_HO4-->
-
+|ファイルと設定のキャプチャ **(新しいタスク シーケンス グループ)**|タスク シーケンス グループを作成します。 タスク シーケンス グループを使用すると、類似のタスク シーケンス ステップをまとめて、整理とエラー制御を向上させることができます。|  
+|Windows 設定のキャプチャ|このタスク シーケンス ステップを使用して、再イメージングする前に対象コンピューターの既存のオペレーティング システムからキャプチャした Microsoft Windows 設定を確認できます。 コンピューター名、ユーザーと組織の情報、およびタイム ゾーン設定をキャプチャできます。|  
+|ネットワーク設定のキャプチャ|このタスク シーケンス ステップを使用して、タスク シーケンスを受信するコンピューターからネットワーク設定をキャプチャできます。 コンピューターのドメインまたはワークグループのメンバーシップ、およびネットワーク アダプター設定情報をキャプチャできます。|  
+|ユーザーファイルと設定のキャプチャ - **(新規タスク シーケンス サブグループ)**|タスク シーケンス グループ内にタスク シーケンス グループを作成します。 このサブグループには、再イメージングの前に対象コンピューターの既存のオペレーティング システムからユーザー状態データをキャプチャするために必要なステップが含まれています。 追加した最初のグループと同様に、このサブグループは類似のタスク シーケンス ステップをまとめて、整理とエラー制御を向上させることができます。|  
+|ローカルの状態の場所の設定|このタスク シーケンス ステップを使用して、保護されたパス タスク シーケンス変数によりローカルの場所を指定できます。 ユーザーの状態は、ハード ドライブの保護されたディレクトリに保存されます。|  
+|ユーザー状態のキャプチャ|このタスク シーケンス ステップを使用して、新しいオペレーティング システムに移行するユーザー ファイルおよび設定をキャプチャできます。|  
+|オペレーティング システムのインストール - **(新規タスク シーケンス グループ)**|タスク シーケンス サブグループを作成します。 このサブグループには、オペレーティング システムのインストールに必要なステップが含まれています。|  
+|Windows PE またはハード ディスクでの再起動|このタスク シーケンス ステップを使用して、このタスク シーケンスを受信するコンピューターの再起動オプションを指定できます。 このステップでは、インストールを続行するためにコンピューターを再起動することをユーザーに示すメッセージが表示されます。<br /><br /> このステップでは、読み取り専用の **_SMSTSInWinPE** タスク シーケンス変数が使用されます。 関連する値が **false** の場合に、タスク シーケンス ステップが続行されます。|  
+|オペレーティング システムの適用|このタスク シーケンス ステップを使用して、オペレーティング システム イメージを対象のコンピューターにインストールできます。 このステップでは、ボリュームのファイルをすべて削除し (Configuration Manager 固有の制御ファイルは例外)、WIM ファイルに含まれるすべてのボリューム イメージを対応する順次ディスク ボリュームに適用します。 また、**sysprep** 応答ファイルを指定したり、インストールに使用するディスク パーティションを構成することもできます。|  
+|Windows 設定の適用|このタスク シーケンス ステップを使用して、対象コンピューターの Windows 設定の構成情報を構成できます。 適用できる Windows 設定は、ユーザーと組織の情報、製品またはライセンス キーの情報、タイム ゾーン、およびローカル管理者パスワードです。|  
+|ネットワーク設定の適用|このタスク シーケンス ステップを使用して、対象コンピューターのネットワークまたはワークグループの構成情報を指定できます。 コンピューターが DHCP サーバーを使用するかどうか、または IP アドレス情報を静的に割り当てられるかどうかも指定できます。|  
+|ドライバー パッケージの適用|このタスク シーケンス ステップを使用して、ドライバー パッケージ内のデバイス ドライバーをすべて Windows セットアップで使用できるようにします。 すべての必要なデバイス ドライバーをスタンドアロン メディアに含める必要があります。|  
+|オペレーティング システムのセットアップ - **(新規タスク シーケンス グループ)**|タスク シーケンス サブグループを作成します。 このサブグループには、Configuration Manager クライアントのインストールに必要なステップが含まれています。|  
+|Windows と ConfigMgr のセットアップ|このタスク シーケンス ステップを使用して Configuration Manager クライアント ソフトウェアをインストールします。 Configuration Manager は、Configuration Manager クライアントの GUID をインストールして登録します。 必要なインストール パラメーターは、 **[インストールのプロパティ]** ウィンドウで割り当てることができます。|  
+|ユーザーファイルと設定の復元 - **(新規タスク シーケンス グループ)**|タスク シーケンス サブグループを作成します。 このサブグループには、ユーザー状態の復元に必要なステップが含まれています。|  
+|ユーザー状態の復元|このタスク シーケンス ステップを使用して、ユーザー状態移行ツール (USMT) を起動し、ユーザー状態のキャプチャ アクションからキャプチャしたユーザーの状態および設定を対象コンピューターに復元できます。|  
 

@@ -17,8 +17,9 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
-ms.openlocfilehash: 0ff83aed4d5e19806a8c69f4b45e39a6156dee7e
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: c11440556abc11d2c19ee0ff3c2bc9e518951e49
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -29,11 +30,13 @@ ms.openlocfilehash: 0ff83aed4d5e19806a8c69f4b45e39a6156dee7e
 
 System Center Configuration Manager (ConfigMgr または SCCM とも呼ばれます) の VPN プロファイルを使用して、VPN 設定を組織内のユーザーに展開します。 これらの設定を展開して、企業ネットワーク上のリソースに接続するために必要なエンド ユーザーの作業を最小化します。  
 
- たとえば、iOS オペレーティング システムを実行するすべてのデバイスに対して、企業ネットワーク上のファイル共有に接続するために必要な設定をプロビジョニングできます。 企業ネットワークに接続するために必要な設定が含まれている VPN プロファイルを作成した後、階層内で iOS を実行するデバイスを持つすべてのユーザーにこのプロファイルを展開することができます。 iOS デバイスのユーザーに対して使用可能なネットワークの一覧で VPN 接続が表示されるため、最小限の作業でこのネットワークに接続できます。  
+ たとえば、Windows RT オペレーティング システムを実行するすべてのデバイスに対して、企業ネットワーク上のファイル共有に接続するために必要な設定をプロビジョニングするとします。 企業ネットワークに接続するために必要な設定が含まれている VPN プロファイルを作成した後、階層内で Windows RT を実行するデバイスを持つすべてのユーザーにこのプロファイルを展開することができます。 Windows RT デバイスのユーザーには利用可能なネットワークの一覧で VPN 接続が表示されるため、最小限の作業でこのネットワークに接続できます。  
 
  VPN プロファイルを作成するときに、System Center Configuration Manager 証明書プロファイルを使用してプロビジョニングされた、サーバー検証用の証明書、クライアント認証用の証明書などの幅広いセキュリティ設定を含めることができます。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](introduction-to-certificate-profiles.md)」を参照してください。  
 
- 以下のセクションでは、Configuration Manager を使用する場合または Configuration Manager と Microsoft Intune を併用する場合に、VPN プロファイルを使用して構成できるデバイスについて説明します。  
+ 以下のセクションでは、Configuration Manager を使用している場合に、VPN プロファイルを使用して構成できるデバイスについて説明します。
+
+ [モバイル デバイスの VPN プロファイル](/sccm/mdm/deploy-use/create-vpn-profiles)に関する記事を参照して、Microsoft Intune で Configuration Manager を使用する場合に構成できるデバイスを確認してください。  
 
 ## <a name="vpn-profiles-when-using-configuration-manager"></a>Configuration Manager を使用する場合の VPN プロファイル  
  次の表では、さまざまなデバイス プラットフォームに対して構成できる VPN プロファイルについて説明します。  
@@ -51,31 +54,10 @@ System Center Configuration Manager (ConfigMgr または SCCM とも呼ばれま
 |**PPTP**|○|[はい]|○|いいえ|  
 |**L2TP**|○|[はい]|○|いいえ|  
 
-## <a name="vpn-profiles-when-using-configuration-manager-together-with-intune"></a>Configuration Manager と Intune を併用する場合の VPN プロファイル  
- プロファイルを iOS、Android、Windows Phone、Windows 8.1 の各デバイスに展開するには、これらのデバイスを Microsoft Intune に登録する必要があります。 その他のプラットフォームのデバイスも、Intune に登録できます。 登録方法については、「[Microsoft Intune を使用したモバイル デバイスの管理](https://technet.microsoft.com/en-us/library/dn646962.aspx)」を参照してください。 次の表は、各デバイス プラットフォームでサポートされている接続の種類を示しています。  
-
-|接続の種類|iOS および Mac OS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop および Mobile|  
-|---------------------|----------------------|-------------|-----------------|----------------|--------------------|-----------------------|-----------------------------------|  
-|Cisco AnyConnect|○|○|いいえ|いいえ|いいえ|いいえ|はい (OMA-URI)|  
-|Pulse Secure|[はい]|[はい]|○|×|[はい]|[はい]|○|  
-|F5 Edge Client|[はい]|[はい]|○|×|[はい]|[はい]|○|  
-|Dell SonicWALL Mobile Connect|[はい]|[はい]|○|×|[はい]|[はい]|[はい]|  
-|チェック ポイント モバイル VPN|○|[はい]|○|×|[はい]|[はい]|○|  
-|Microsoft SSL (SSTP)|×|いいえ|[はい]|[はい]|○|いいえ|いいえ|  
-|Microsoft 自動|いいえ|いいえ|[はい]|[はい]|○|×|はい (OMA-URI)|  
-|IKEv2|はい (カスタム ポリシー)|いいえ|[はい]|[はい]|[はい]|○|はい (OMA-URI)|  
-|PPTP|○|×|[はい]|[はい]|○|×|はい (OMA-URI)|  
-|L2TP|[はい]|×|[はい]|[はい]|○|×|はい (OMA-URI)|  
-
 ### <a name="next-steps"></a>次のステップ  
  Configuration Managerで VPN プロファイルの計画、構成、操作、およびメンテナンスを行うときに、次のトピックを参考にしてください。  
 
 -   [System Center Configuration Manager の VPN プロファイルの前提条件](../plan-design/prerequisites-for-wifi-vpn-profiles.md)  
 
 -   [System Center Configuration Manager の VPN プロファイルのセキュリティとプライバシー](../plan-design/security-and-privacy-for-wifi-vpn-profiles.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -2,7 +2,7 @@
 title: "移行の前提条件 | Microsoft Docs"
 description: "Configuration Manager のサポートされているバージョン、サポートされているソース サイトの言語、および移行に必要な構成を理解します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6cbb790df47c9a87514b0233e2d0c12dd6f23ee9
-ms.openlocfilehash: 70e2531076abedc1381b6e3bccf15b5afe27b465
+ms.sourcegitcommit: ee7f69bd65152deffb2456d9807e1e8fee8802ec
+ms.openlocfilehash: cd90f5462ac4bb4c0a2021e6d5dde65161b9c5f6
+ms.lasthandoff: 03/07/2017
 
 
 ---
@@ -36,19 +37,22 @@ ms.openlocfilehash: 70e2531076abedc1381b6e3bccf15b5afe27b465
 
 -   [移行に必要な構成](#BKMK_Required_Configurations)  
 
-##  <a name="a-namebkmksupportedmigrationversionsa-versions-of-configuration-manager-that-are-supported-for-migration"></a><a name="BKMK_SupportedMigrationVersions"></a> 移行がサポートされている Configuration Manager のバージョン  
+##  <a name="BKMK_SupportedMigrationVersions"></a> 移行がサポートされている Configuration Manager のバージョン  
  次のいずれかのバージョンの Configuration Manager を実行しているソース階層からデータを移行できます。  
 
 -   Configuration Manager 2007 SP2 (移行の目的では、ソース サイト上の Configuration Manager 2007 R2 や R3 は考慮されません。 ソース サイトで SP2 を実行していれば、R2 と R3 のどちらかのアドオンがインストールされているサイトが System Center Configuration Manager への移行でサポートされます)。  
 
--   System Center 2012 Configuration Manager SP2 または System Center 2012 R2 Configuration Manager SP1  
+-   System Center 2012 Configuration Manager SP2 または System Center 2012 R2 Configuration Manager SP1。  
 
     > [!TIP]  
     >  移行だけでなく、System Center 2012 Configuration Manager を実行しているサイトの System Center Configuration Manager へのインプレース アップグレードを使用できます。  
 
--   同じまたは低いバージョンの System Center Configuration Manager の System Center Configuration Manager 階層  
+-   同じまたは低いバージョンの System Center Configuration Manager の System Center Configuration Manager 階層。  
 
-##  <a name="a-namebkmksorcesitelanguagea-source-site-languages-that-are-supported-for-migration"></a><a name="BKMK_SorceSiteLanguage"></a> 移行がサポートされているソース サイトの言語  
+  たとえば、移行先階層で System Center Configuration Manager 1606 を実行している場合は、移行を使用してバージョン 1606 または 1602 を実行するソース階層からデータをコピーすることができます。 ただし、1610 を実行しているソース階層からデータを移行することはできません。  
+
+
+##  <a name="BKMK_SorceSiteLanguage"></a> 移行がサポートされているソース サイトの言語  
  Configuration Manager 階層間でデータを移行すると、データは System Center Configuration Manager の言語に依存しない形式で移行先階層に保存されます。 Configuration Manager 2007 では、データは言語に依存しない形式では保存されないため、Configuration Manager 2007 からの移行中に、移行プロセスでオブジェクトをこの形式に変換する必要があります。 このため、以下の言語でインストールされている Configuration Manager 2007 ソース サイトのみ、移行がサポートされています。  
 
 -   英語  
@@ -69,7 +73,7 @@ ms.openlocfilehash: 70e2531076abedc1381b6e3bccf15b5afe27b465
 
 System Center 2012 Configuration Manager または System Center Configuration Manager 階層からデータを移行するときは、ソース サイトの言語の制限はありません。 ソース サイトのデータベースのオブジェクトは、常に言語に依存しない形式になります。  
 
-##  <a name="a-namebkmkrequiredconfigurationsa-required-configurations-for-migration"></a><a name="BKMK_Required_Configurations"></a> 移行に必要な構成  
+##  <a name="BKMK_Required_Configurations"></a> 移行に必要な構成  
 移行と移行操作を使用するために必要な構成は以下のとおりです。  
 
 -   **Configuration Manager コンソールでの移行の構成、実行、および監視を行うには:**  
@@ -78,11 +82,11 @@ System Center 2012 Configuration Manager または System Center Configuration M
 
 -   **データ収集:**  
 
-     移行先サイトでデータ収集を有効にするためには、各ソース サイトで使用する次の 2 つのソース サイト アクセス アカウントを構成する必要があります。  
+     移行先サイトでデータ収集を有効にするためには、各ソース サイトで使用する次の&2; つのソース サイト アクセス アカウントを構成する必要があります。  
 
     -   **ソース サイトのアカウント:** このアカウントを使用して、ソース サイトの SMS プロバイダーにアクセスします。  
 
-        -   Configuration Manager 2007 SP2 ソース サイトの場合は、このアカウントにはすべてのソース サイト オブジェクトへの**読み取り**アクセス許可が必要です。  
+        -   Configuration Manager&2007; SP2 ソース サイトの場合は、このアカウントにはすべてのソース サイト オブジェクトへの**読み取り**アクセス許可が必要です。  
 
         -   System Center 2012 Configuration Manager または System Center Configuration Manager ソース サイトの場合は、このアカウントにはすべてのソース サイト オブジェクトの **読み取り**アクセス許可が必要です。ロールベースの管理を使用して、このアクセス許可をアカウントに付与します。 ロール ベース管理の使用方法については、「 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。  
 
@@ -107,7 +111,7 @@ System Center 2012 Configuration Manager または System Center Configuration M
 
 -   **配布ポイントの共有:**  
 
-     ソース サイトの配布ポイントを共有するためには、移行先階層の少なくとも 1 つのプライマリ サイトまたは中央管理サイトで、クライアントからの要求用にソース サイトと同じポート番号を使用している必要があります。 クライアント要求ポートの詳細については、「[System Center Configuration Manager でのクライアント通信ポートの構成方法](../../core/clients/deploy/configure-client-communication-ports.md)」を参照してください。  
+     ソース サイトの配布ポイントを共有するためには、移行先階層の少なくとも&1; つのプライマリ サイトまたは中央管理サイトで、クライアントからの要求用にソース サイトと同じポート番号を使用している必要があります。 クライアント要求ポートの詳細については、「[System Center Configuration Manager でのクライアント通信ポートの構成方法](../../core/clients/deploy/configure-client-communication-ports.md)」を参照してください。  
 
      各ソース サイトでは、FQDN で構成されているサイト システム サーバーにインストールされた配布ポイントのみ共有されます。  
 
@@ -118,14 +122,9 @@ System Center 2012 Configuration Manager または System Center Configuration M
 
      ソース サイトの SMS プロバイダーからデータを収集するように構成された [ソース サイトのアクセス アカウント] には、次のアクセス許可が必要です。 ****  
 
-    -   Configuration Manager 2007 配布ポイントをアップグレードするためには、Configuration Manager 2007 ソース サイトから配布ポイントを削除するため、アカウントに Configuration Manager 2007 サイト サーバーの **[サイト]** クラスの **[読み取り]**、**[実行]**、**[削除]** アクセス許可が必要です。  
+    -   Configuration Manager&2007; 配布ポイントをアップグレードするためには、Configuration Manager&2007; ソース サイトから配布ポイントを削除するため、アカウントに Configuration Manager&2007; サイト サーバーの **[サイト]** クラスの **[読み取り]**、**[実行]**、**[削除]** アクセス許可が必要です。  
 
     -   System Center 2012 Configuration Manager または System Center Configuration Manager の配布ポイントを再割り当てするには、アカウントにソース サイト上の **[サイト]** オブジェクトの **[変更]** アクセス許可が必要です。 アカウントにこのアクセス許可を付与するには、ロールベースの管理を使用します。 ロール ベース管理の使用方法については、「 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。  
 
      配布ポイントを新しい階層に正常にアップグレードまたは再割り当てするには、ソース階層の配布ポイントを管理するサイトのクライアント要求用に構成されたポートが、配布ポイントを管理する移行先サイトのクライアント要求用に構成されたポートと一致している必要があります。 クライアント要求ポートの詳細については、「[System Center Configuration Manager でのクライアント通信ポートの構成方法](../../core/clients/deploy/configure-client-communication-ports.md)」を参照してください。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
