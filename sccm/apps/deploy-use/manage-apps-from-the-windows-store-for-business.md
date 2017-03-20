@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: f955b5aadfc617e08d5d933dee8e42de838f83c0
 ms.openlocfilehash: bf2937f5ba86db19d9cb40e2c98cbb8ba365f7eb
+ms.lasthandoff: 02/15/2017
 
 ---
 # <a name="manage-apps-from-the-windows-store-for-business-with-system-center-configuration-manager"></a>System Center Configuration Manager によるビジネス向け Windows ストアからのアプリの管理
@@ -83,7 +84,7 @@ Azure Active Directory で、Configuration Manager を Web アプリケーショ
 1. [https://manage.windowsazure.com](https://manage.windowsazure.com) の Active Directory ノードで、Azure Active Directory を選択し、**[アプリケーション]**、**[追加]** を選択します。
 2.  **[組織で開発中のアプリケーションを追加]** を選択します。
 3.  アプリケーションの名前を入力し、**[Web アプリケーション]** と **[Web API]** の一方または両方を選択し、**[次へ]** を選択します。
-4.  **[サインオン URL]** と **[アプリケーション ID/URI]** の両方に同じ URL を入力します。 URL はあらゆるものを使用でき、実際のアドレスに解決する必要はありません。 たとえば、*https://yourdomain>/sccm* を入力できます。
+4.  **[サインオン URL]** と **[アプリケーション ID/URI]** の両方に同じ URL を入力します。 URL はあらゆるものを使用でき、実際のアドレスに解決する必要はありません。 たとえば、*https://yourdomain/sccm* を入力できます。
 5.  ウィザードを終了します。
 
 Azure Active Directory で、登録済み管理ツールのクライアント キーを作成します。
@@ -150,9 +151,4 @@ Azure Active Directory からのクライアントの秘密鍵を変更します
 **[ソフトウェア ライブラリ]** ワークスペースで **[アプリケーション管理]** を展開し、**[ストア アプリのライセンス情報]** を選択します。
 
 管理するストア アプリごとに、アプリの情報を表示できます。これには、アプリの名前、プラットフォーム、所有しているアプリのライセンスの数、利用可能なライセンスの数が含まれます。
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
