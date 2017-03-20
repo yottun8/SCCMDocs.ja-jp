@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a8959c72608a1531fb323176c33a848a4a669b1c
 ms.openlocfilehash: dface33392c2a2a662522656eabf0936b52b28fc
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -42,7 +43,7 @@ ms.openlocfilehash: dface33392c2a2a662522656eabf0936b52b28fc
 
 -   複数のソース サイトから移行先階層内の&1; つのサイトにデータを移動することができます。  
 
-##  <a name="a-namebkmkmigrationconceptsa-concepts-for-migration"></a><a name="BKMK_MigrationConcepts"></a> 移行に関する概念  
+##  <a name="BKMK_MigrationConcepts"></a> 移行に関する概念  
  移行を使用するとき、次の概念や用語が出てくることがあります。  
 
 |概念または用語|説明|  
@@ -52,11 +53,11 @@ ms.openlocfilehash: dface33392c2a2a662522656eabf0936b52b28fc
 |移行先階層|ソース階層からのデータのインポートが実行される System Center Configuration Manager 階層。|  
 |データ収集|移行先階層に移行可能なソース階層内の情報を特定する継続的な処理。 Configuration Manager は、スケジュールに従ってソース階層を確認し、移行済みのソース階層内の情報に対する変更や、移行先階層で更新する可能性があるデータを識別します。<br /><br /> 詳しくは、「[System Center Configuration Manager でのソース階層戦略の計画](../../core/migration/planning-a-source-hierarchy-strategy.md)」の「[データ収集](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering)」を参照してください。|  
 |移行ジョブ|移行する特定のオブジェクトを構成してから、そのオブジェクトの移行先階層への移行を管理する処理。<br /><br /> 詳しくは、「[System Center Configuration Manager での移行ジョブ戦略の計画](../../core/migration/planning-a-migration-job-strategy.md)」を参照してください。|  
-|クライアントの移行|クライアントが使用する情報をソース サイトのデータベースから移行先階層のデータベースに転送する処理。 データの移行後、デバイス上のクライアント ソフトウェアを、移行先階層のクライアント ソフトウェアにアップグレードします。<br /><br /> 詳細については、「 [Planning a client migration strategy in System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md)」をご覧ください。|  
+|クライアントの移行|クライアントが使用する情報をソース サイトのデータベースから移行先階層のデータベースに転送する処理。 データの移行後、デバイス上のクライアント ソフトウェアを、移行先階層のクライアント ソフトウェアにアップグレードします。<br /><br /> 詳細については、[System Center Configuration Manager での移行ジョブ戦略の計画](../../core/migration/planning-a-client-migration-strategy.md)をご覧ください。|  
 |共有配布ポイント|移行期間中に移行先階層と共有されるソース階層の配布ポイント。<br /><br /> 移行期間中に、移行先階層内のサイトに割り当てられたクライアントは、共有配布ポイントからコンテンツを取得できます。<br /><br /> 詳しくは、「[System Center Configuration Manager のコンテンツ展開移行戦略の計画](../../core/migration/planning-a-content-deployment-migration-strategy.md)」の「[ソース階層と移行先階層で配布ポイントを共有する](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration)」を参照してください。|  
 |移行の監視|移行処理を監視する処理。 [**管理**] ワークスペースの [**移行**] ノードから、移行の進行状況と成功状態を監視します。<br /><br /> 詳しくは、「[System Center Configuration Manager での移行アクティビティの監視の計画](../../core/migration/planning-to-monitor-migration-activity.md)」を参照してください。|  
 |データ収集の停止|ソース サイトからのデータ収集を停止する処理。 ソース階層から移行するデータがなくなった場合や、移行関連のアクティビティを一時停止する場合、ソース階層からのデータ収集を停止するように移行先階層を構成できます。<br /><br /> 詳しくは、「[System Center Configuration Manager でのソース階層戦略の計画](../../core/migration/planning-a-source-hierarchy-strategy.md)」の「[データ収集](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering)」を参照してください。|  
-|移行データのクリーンアップ|移行先階層のデータベースから移行関連情報を削除することで、ソース階層からの移行を終了する処理。<br /><br /> 詳細については、「 [Planning to complete migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md)」をご覧ください。|  
+|移行データのクリーンアップ|移行先階層のデータベースから移行関連情報を削除することで、ソース階層からの移行を終了する処理。<br /><br /> 詳細については、[System Center Configuration Manager での移行完了の計画](../../core/migration/planning-to-complete-migration.md)をご覧ください。|  
 
 ## <a name="typical-workflow-for-migration"></a>移行の一般的なワークフロー  
 移行のワークフローを設定するには:
@@ -75,7 +76,7 @@ ms.openlocfilehash: dface33392c2a2a662522656eabf0936b52b28fc
 
 Configuration Manager ソース階層からデータを移行した後に、ソース階層を環境の管理に使用しない場合は、そのソース階層とインフラストラクチャの使用を停止できます。  
 
-##  <a name="a-namebkmkmigrationscenariosa-migration-scenarios"></a><a name="BKMK_MigrationScenarios"></a> 移行シナリオ  
+##  <a name="BKMK_MigrationScenarios"></a> 移行シナリオ  
  Configuration Manager は次の移行シナリオをサポートします。  
 
 > [!NOTE]  
@@ -110,9 +111,4 @@ Configuration Manager ソース階層からデータを移行した後に、ソ�
 
 ## <a name="see-also"></a>関連項目  
  [System Center Configuration Manager の使用の開始](../../core/servers/deploy/start-using.md)
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
