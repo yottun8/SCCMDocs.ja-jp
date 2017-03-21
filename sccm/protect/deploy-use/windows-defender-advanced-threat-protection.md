@@ -2,7 +2,7 @@
 title: "Windows Defender Advanced Threat Protection | Microsoft ドキュメント"
 description: "企業が高度な攻撃に対応するための新しいサービスである Windows Defender Advanced Threat Protection を管理および監視する方法について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/07/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -16,8 +16,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 299fada2b6587ace44e635c4f26cc7a482d44843
-ms.openlocfilehash: 880ea4fcb0730f0e9adbc9f142262f241f5df9dc
+ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
+ms.openlocfilehash: 237dc9cbccb973720a633490f096aed4bc16d183
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender Advanced Threat Protection
@@ -110,10 +111,6 @@ Windows Defender ATP は、[Windows セキュリティ センター](https://sec
 > Windows Defender ATP 構成ファイルには、セキュリティで保護する必要がある機密情報が含まれています。
 
 [Windows Defender Advanced Threat Protection](https://technet.microsoft.com/itpro/windows/keep-secure/windows-defender-advanced-threat-protection)
+
 [Windows Defender Advanced Threat Protection のオンボードの問題のトラブルシューティング](https://technet.microsoft.com/itpro/windows/keep-secure/troubleshoot-onboarding-windows-defender-advanced-threat-protection)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

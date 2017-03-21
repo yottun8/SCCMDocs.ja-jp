@@ -2,7 +2,7 @@
 title: "サポートされるサイト システム サーバー | Microsoft Docs"
 description: "System Center Configuration Manager サイトまたはサイト システムの役割をホストできる Windows バージョンについて説明します。"
 ms.custom: na
-ms.date: 2/1/2017
+ms.date: 3/9/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
-ms.openlocfilehash: bb017e575e0318b73cc5ea4e27fd33b1e9c2a02a
+ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
+ms.openlocfilehash: f175e11d9402e7c57c45edb4d5bbe969de5dcdf7
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -231,24 +232,9 @@ ms.openlocfilehash: bb017e575e0318b73cc5ea4e27fd33b1e9c2a02a
 ## <a name="windows-server-2008-with-sp2-x86-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 SP2 (x86, x64): Standard、Enterprise、Datacenter  
  [マイクロソフト サポート ライフサイクル](https://support.microsoft.com/lifecycle)で詳述するように、Windows Server 2008 が延長サポートになり、メインストリーム サポートが終了しました。 Configuration Manager を使用したサイト システム サーバーとしてのこれらのオペレーティング システムの将来のサポートの詳細については、「[System Center Configuration Manager から削除された機能と非推奨の機能](../../../core/plan-design/changes/removed-and-deprecated-features.md)」を参照してください。  
 
-**サイト サーバー:**  
-
--   中央管理サイト  
-
--   プライマリ サイト  
-
--   セカンダリ サイト  
+このオペレーティング システムは、サイト サーバーとして、または配布ポイントとプル配布ポイントを除くサイト システムの役割としてはサポートされていません。 このサポートの廃止が発表されるまで、またはこのオペレーティング システムの拡張サポート期間が終了するまでは、このオペレーティング システムを配布ポイントとして使用し続けることができます。 詳細については、「[Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)」 (Windows Server 2008 で System Center Configuration Manager CB および LTSB のインストールに失敗する) を参照してください。
 
 **サイト システム サーバー:**  
-
--   アプリケーション カタログ Web サービス ポイント  
-
--   アプリケーション カタログ Web サイト ポイント  
-
--   資産インテリジェンス同期ポイント  
-
--   証明書登録ポイント  
-
 -   配布ポイント  
 
     -   このオペレーティング システムの配布ポイントでは、マルチキャストをサポートしません。  
@@ -257,29 +243,7 @@ ms.openlocfilehash: bb017e575e0318b73cc5ea4e27fd33b1e9c2a02a
 
     -   配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
 
--   Endpoint Protection ポイント  
 
--   登録ポイント  
-
--   登録プロキシ ポイント  
-
--   フォールバック ステータス ポイント  
-
--   管理ポイント
-
--   レポート サービス ポイント  
-
--   サービス接続ポイント  
-
--   サイト データベース サーバー  
-
-     サイト データベース サーバーは、読み取り専用のドメイン コントローラー (RODC) ではサポートされていません。 詳細については、Microsoft サポート技術情報の「 [You may encounter problems when installing SQL Server on a domain controller (ドメイン コントローラーに SQL Server をインストールすると問題が発生する)](http://go.microsoft.com/fwlink/p/?LinkId=264856) 」を参照してください。 さらに、セカンダリ サイト サーバーは、ドメイン コントローラーではサポートされません。  
-
--   SMS_Provider  
-
--   ソフトウェアの更新ポイント  
-
--   状態移行ポイント  
 
 ## <a name="windows-10-x86-x64-pro-and-enterprise"></a>Windows 10 (x86, x64): Pro、Enterprise  
 **サイト システム サーバー:**  
@@ -345,9 +309,4 @@ ms.openlocfilehash: bb017e575e0318b73cc5ea4e27fd33b1e9c2a02a
 -   64 ビット バージョンのみがサポートされています。  
 
 -   このオペレーティング システムの配布ポイントでは、PXE またはマルチキャストをサポートしません。
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

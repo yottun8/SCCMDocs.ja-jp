@@ -1,7 +1,7 @@
 ---
 title: "Endpoint Protection の計画 | Microsoft Docs"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,8 +14,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 927732150b99bbe362a3ed36976b49a716efc14c
+ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
+ms.openlocfilehash: 6c4273dae99ec8db2cf827f463b973e876d0d35b
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -92,11 +93,7 @@ Configuration Manager のバージョン 1606 (Current Branch) 以降、Endpoint
  ![Endpoint Protection のワークフロー](../media/Endpoint-Protection-Workflow.gif)
 
 ## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>Mac コンピューターと Linux サーバー用の Endpoint Protection クライアント  
- System Center 2012 には、Linux コンピューターと Mac コンピューター用の Endpoint Protection クライアントが付属しています。 Configuration Manager にはこれらのクライアントが付属していないため、[Microsoft ボリューム ライセンス サービス センター](https://www.microsoft.com/licensing/servicecenter/default.aspx)から次の製品をダウンロードする必要があります。  
-
--   System Center 2012 Endpoint Protection for the Mac  
-
--   System Center 2012 Endpoint Protection for Linux  
+ System Center には、Linux コンピューターと Mac コンピューター用の Endpoint Protection クライアントが付属しています。 Configuration Manager にはこれらのクライアントが付属していないため、[Microsoft ボリューム ライセンス サービス センター](https://www.microsoft.com/licensing/servicecenter/default.aspx)から次の製品をダウンロードする必要があります。  
 
 > [!IMPORTANT]  
 >  Mac 用と Linux 用の Endpoint Protection インストール ファイルをダウンロードするには、Microsoft ボリューム ライセンスを購入する必要があります。  
@@ -114,16 +111,9 @@ Configuration Manager のバージョン 1606 (Current Branch) 以降、Endpoint
  カスタム クライアント設定を構成するときには、次の項目を実行できます。  
 
 -   組織内のさまざまな部分に応じてマルウェア対策とセキュリティ設定をカスタマイズする。  
-
 -   階層全体に展開する前に、コンピューターの小さなグループで Endpoint Protection を実行して、効果をテストする。  
-
 -   時間をかけて、さらに多くのクライアントをコレクションに追加して、Endpoint Protection クライアントを段階的に展開する。  
 
 ### <a name="distributing-definition-updates-by-using-software-updates"></a>ソフトウェア更新プログラムを使用した定義ファイルの更新の配布  
  Configuration Manager のソフトウェア更新プログラムを使用して定義ファイルの更新を配布する場合は、他のソフトウェア更新プログラムを含まないパッケージに定義ファイルの更新を配置することを検討します。 これによって、定義ファイルの更新パッケージのサイズが小さくなり、配布ポイントへより短時間でレプリケートすることができます。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

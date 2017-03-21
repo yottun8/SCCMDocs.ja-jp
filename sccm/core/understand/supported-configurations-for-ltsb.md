@@ -2,7 +2,7 @@
 title: "LTSB のサポートされている構成 | Microsoft Docs"
 description: "System Center Configuration Manager の Long-Term Servicing branch で動作するオペレーティング システムと依存する製品について理解します。"
 ms.custom: na
-ms.date: 1/12/2017
+ms.date: 3/9/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 12aa9f0a1ad4ce8acf0b914e9911bb50ba887919
-ms.openlocfilehash: 5b2ab25d7f645ea9eada81d241ef14168b017304
+ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
+ms.openlocfilehash: 78dcbf76f21a286506b9c605e2c176714736935b
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -38,7 +39,7 @@ ms.openlocfilehash: 5b2ab25d7f645ea9eada81d241ef14168b017304
 **Windows:**
 - Windows の品質更新プログラムおよびセキュリティ更新プログラムのみがサポートされます。
 - Current Branches (CB)、Current Branch for Business (CBB)、または Windows 10 の LTSB に対してのサポートは追加されません。
--   Windows Server の新しいメジャー バージョンはサポートされていません。
+-    Windows Server の新しいメジャー バージョンはサポートされていません。
 
 **SQL Server:**
 - SQL Server では、品質更新プログラムおよびセキュリティ更新プログラム、または Service Pack のようなマイナー アップグレードのみがサポートされる予定です。
@@ -51,13 +52,15 @@ LTSB では、サイト システムとして次の Windows コンピュータ�
 - Windows Server 2016
 - Windows Server 2012 (x64): Standard、Datacenter
 - Windows Server 2008 R2 SP1 (x64): Standard、Enterprise、Datacenter
-- Windows Server 2008 SP2 (x86、x64): Standard、Enterprise、Datacenter
+- Windows Server 2008 SP2 (x86、x64): Standard、Enterprise、Datacenter *(注 1 を参照)*
 - Windows 10 Enterprise 2015 LTSB (x86、x64)
 - Windows 10 Enterprise 2016 LTSB (x86、x64)
 - Windows 8.1 (x86、x64): Professional、Enterprise
 - Windows 7 SP1 (x86、x64): Professional、Enterprise、Ultimate
 - Windows Server 2012 の Server Core のインストール
-- Windows Server 2012 R2 の Server Core のインストール  
+- Windows Server 2012 R2 の Server Core のインストール    
+
+*注 1*: このオペレーティング システムは、サイト サーバーとして、または配布ポイントとプル配布ポイントを除くサイト システムの役割としてはサポートされていません。 このサポートの廃止が発表されるまで、またはこのオペレーティング システムの拡張サポート期間が終了するまでは、このオペレーティング システムを配布ポイントとして使用し続けることができます。 詳細については、「[Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)」 (Windows Server 2008 で System Center Configuration Manager CB および LTSB のインストールに失敗する) を参照してください。
 
 ## <a name="client-management"></a>クライアント管理
 次のセクションでは、LTSB を使用して管理できるクライアントのオペレーティング システムを確認します。 LTSB では、サポートされるクライアントとして、新しいオペレーティング システムの追加をサポートしません。
@@ -332,9 +335,4 @@ LTSB は、サイト データベースとレポート ポイントをホスト�
 - [推奨ハードウェア](/sccm/core/plan-design/configs/recommended-hardware)
 - [Windows の機能とネットワークのサポート](/sccm/core/plan-design/configs/support-for-windows-features-and-networks)
 - [仮想環境のサポート](/sccm/core/plan-design/configs/support-for-virtualization-environments)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

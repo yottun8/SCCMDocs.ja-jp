@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
-ms.openlocfilehash: 8af2a797ad4e87d870bb27873a7428e96f63b76d
-ms.lasthandoff: 02/23/2017
+ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
+ms.openlocfilehash: 49e3a9d6f4b8e1afbb76fcba33a7fb58e5a6b13f
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -60,7 +60,7 @@ System Center 2012 Configuration Manager を実行しているサイトおよび
 
 
 > [!TIP]  
->  System Center 2012 Configuration Manager のバージョンからアップグレードするときには、アップグレード プロセスを効率化できることがあります。 詳細については、次をご覧ください。  
+>  System Center 2012 Configuration Manager のバージョンから Current Branch にアップグレードするときには、アップグレード プロセスを効率化できることがあります。 詳細については、次をご覧ください。  
 >   
 >  -   [System Center Configuration Manager の更新プログラム](../../../../core/servers/manage/updates.md)の「[基準バージョンと更新プログラムのバージョン](../../../../core/servers/manage/updates.md#bkmk_Baselines)」セクション  
 >  -   [System Center Configuration Manager の CD.Latest フォルダー](../../../../core/servers/manage/the-cd.latest-folder.md)  

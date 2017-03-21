@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager と Microsoft Intune を使ったハイブリッド Windows デバイス管理のセットアップ | Microsoft Docs"
 description: "System Center Configuration Manager と Microsoft Intune を使用して Windows デバイス管理を設定します。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: dc1f70f5-64ab-42ab-aa91-d3858803e12f
 caps.latest.revision: 9
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: a4fc4a16c78b0eaa0dcefdd596b049eacf1d255b
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: a8218e23743dafaf8ff1166142cf2dcca1212133
+ms.openlocfilehash: 996d01d3c5d5be4544246a5f321f67b60a8f5508
+ms.lasthandoff: 03/14/2017
 
 
 ---
@@ -26,99 +26,80 @@ ms.lasthandoff: 03/06/2017
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager を Intune と共に使用して、Windows を実行しているデスクトップやノート PC、その他のデバイスをモバイル デバイスとして管理することができます。 Windows PC の自動登録を許可するように Azure Active Directory を設定することができます。 また、会社のポータル アプリを使用して登録を簡素化するように Configuration Manager を構成することもできます。
+このトピックでは、IT 管理者を対象に、ユーザーが Configuration Manager と Microsoft Intune を使用して、Windows PC とモバイル デバイスを管理できるようにする方法について説明します。 2 つの登録方法があります。
+-  ユーザーが自分のアカウントをデバイスに接続するときの Azure Active Directory (AD) による自動登録
+- 会社ポータル アプリをインストールしてサインインすることによる登録
 
+## <a name="choose-how-to-enroll-windows-devices"></a>Windows デバイスの登録方法を選択する
 
-次のような Windows 登録のオプションが用意されています。
+2 つの要素によって、Windows デバイスの登録方法が決まります。
+- **Azure Active Directory Premium を使用していますか?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) は、Enterprise Mobility + Security およびその他のライセンス プランに付属します。
+- **どのバージョンの Windows クライアントが登録されますか?** <br>Windows 10 デバイスは、職場または学校のアカウントを追加すると自動的に登録できます。 以前のバージョンでは、会社ポータル アプリを使用して登録する必要があります。
 
-- [Azure AD での自動登録](#azure-active-directory-enrollment)
-- [Windows PC](#configure-windows-pc-enrollment)
-- [Windows 10 Mobile および Windows Phone デバイス](#enable-windows-phone-devices)
+||**Azure AD Premium**|**その他の AD**|
+|----------|---------------|---------------|  
+|**Windows 10**|[自動登録](#automatic-enrollment) |[会社ポータルの登録](#company-portal-enrollment)|
+|**以前の Windows バージョン**|[会社ポータルの登録](#company-portal-enrollment)|[会社ポータルの登録](#company-portal-enrollment)|
 
-## <a name="azure-active-directory-enrollment"></a>Azure Active Directory 登録
+## <a name="automatic-enrollment"></a>自動登録
 
-自動登録を使用して、職場や学校のアカウントを追加し、管理されることに同意すると、会社所有のデバイスや個人の Windows 10 PC および Windows 10 Mobile デバイスを Intune に登録できます。 ユーザーのデバイスはバックグラウンドで登録され、Azure Active Directory に参加します。 登録されたデバイスは Intune で管理できるようになります。
+自動登録を使用して、職場や学校のアカウントを追加し、管理されることに同意すると、会社所有や個人の Windows 10 デバイスを登録できます。 ユーザーのデバイスはバックグラウンドで登録され、Azure Active Directory に接続されます。 登録されたデバイスは Intune で管理できるようになります。 管理対象のデバイスでは、タスクについては、引き続き会社ポータルを使用できますが、登録するためにインストールする必要はありません。
 
 **必要条件**
 - Azure Active Directory Premium サブスクリプション ([試用版サブスクリプション](http://go.microsoft.com/fwlink/?LinkID=816845))
 - Microsoft Intune サブスクリプション
 
+### <a name="configure-automatic-enrollment"></a>自動登録の構成
 
-### <a name="configure-automatic-mdm-enrollment"></a>自動 MDM 登録の構成
+1. [Azure Portal](https://manage.windowsazure.com) にサインインし、左側のウィンドウで **Active Directory** ノードに移動して、ディレクトリを選択します。
+2. **[構成]** タブをクリックし、**[デバイス]** というセクションまでスクロールします。
+3. **[Users may workplace join devices]** (ユーザーにデバイスのワークプレースへの参加を許可する) で **[すべて]** を選択します。
+4. ユーザーごとに承認するデバイスの最大数を選択します。
 
-1. [[Azure の管理ポータル]](https://manage.windowsazure.com) (https://manage.windowsazure.com) で、**[Active Directory]** ノードに移動して、ディレクトリを選択します。
+既定では、サービスの&2; 要素認証は有効になっていません。 ただし、デバイスを登録するときには&2; 要素認証をお勧めします。 このサービスの&2; 要素認証を要求する前に、Azure Active Directory で&2; 要素認証プロバイダーを構成し、多要素認証用にユーザー アカウントを構成する必要があります。 「[クラウドでの Azure Multi-Factor Authentication Server の概要](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)」を参照してください。
 
-2. **[アプリケーション]** タブをクリックすると、アプリケーションの一覧に **Microsoft Intune** が見つかります。
+## <a name="company-portal-enrollment"></a>会社ポータルの登録
+エンドユーザーまたは[デバイス登録マネージャー](enroll-devices-with-device-enrollment-manager.md)は、会社ポータル アプリをインストールし、作業用の資格情報を使用してサインインすることによって、Windows デバイスを登録することができます。 エンドユーザー向けの登録を簡略化するには、CNAME を DNS 登録に追加してください。
 
-    ![Microsoft Intune が含まれる Azure AD アプリ](../media/aad-intune-app.png)
+### <a name="enable-windows-device-management"></a>Windows デバイスの管理を有効にする
+PC やモバイル デバイスの Windows デバイスの管理を有効にするには、次の手順を使用します。
 
-3. **[Microsoft Intune]** の矢印をクリックすると、Microsoft Intune を構成できるページが表示されます。
-
-4. **[構成]** をクリックして、Microsoft Intune での自動 MDM 登録の構成を開始します。
-
-5. Intune の URL を指定します。
-
-  - **[MDM Enrollment URL (MDM 登録 URL)]** – 既定値を使用します。
-  - **[MDM 使用条件 URL]** – 既定値を使用します。 この URL は、デバイスを登録するときにユーザーの使用条件を表示します。
-  - **[MDM 準拠 URL]** – 既定値を使用します。 非準拠のデバイスが見つかった場合、この URL と共に **"アクセスが拒否されました"** というメッセージが表示されます。 この URL からアクセスできるページで、ユーザーは、自身のデバイスがポリシーに準拠していない理由と、ポリシーに準拠するための方法について理解することができます。
-
-6.  Microsoft Intune で管理するユーザーのデバイスを指定します。 これらのユーザーの Windows 10 デバイスは、Microsoft Intune の管理対象として自動的に登録されます。
-
-  - **すべて**
-  - **グループ**
-  - **なし**
-
-7. **[保存]** を選択します。
-
-## <a name="configure-windows-pc-enrollment"></a>Windows PC の登録の構成
- Windows モバイル デバイスの管理を有効にするには、オペレーティング システムの管理を有効にする必要があります。  DNS CNAME を追加してユーザーの登録を簡素化することもできます。
+1.  任意のプラットフォームの登録をセットアップする前に、「[ハイブリッド MDM をセットアップする](setup-hybrid-mdm.md)」に記載されている前提条件と手順を完了しておきます。  
+2.  Configuration Manager コンソールの **[管理]** ワークスペースで、**[概要]** > **[クラウド サービス]** > **[Microsoft Intune サブスクリプション]** に移動します。  
+3.  リボンで、**[プラットフォームの構成]** をクリックし、Windows プラットフォームを選択します。
+    - Windows PC やラップトップの場合は、**[Windows]** を選択し、次の手順を実行します。
+      1. **[全般]** タブで **[Windows の登録を有効にする]**をクリックします。
+      2. 証明書を使用して会社ポータル アプリにコード署名して展開する場合は、「**コード署名証明書**」を参照してください。 デバイスのユーザーが Windows ストアから会社ポータル アプリをインストールすることも、管理者がコード署名せずにビジネス向け Windows ストアからアプリを展開することもできます。
+      3. [Windows Hello for Business 設定](windows-hello-for-business-settings.md)を構成することもできます。
+    - Windows Phone やタブレットの場合は、**[Windows Phone]** を選択し、次の手順を実行します。
+      1. **[全般]** タブで、**[Windows Phone 8.1 と Windows 10 Mobile]** チェック ボックスをオンにします。 Windows Phone 8.0 はサポートされなくなりました。
+      2. 組織で会社アプリをサイドロードする必要がある場合は、必要なトークンやファイルをアップロードできます。 アプリのサイドローディングの詳細については、「[Windows アプリの作成](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications)」を参照してください。
+        - **アプリケーション登録トークン**
+        - **.pfx ファイル**
+        - **[なし]** Symantec 証明書を使用する場合は、**[Symantec 証明書の有効期限が切れる前にアラートを表示する]** を指定できます。
+4. [OK **** ] をクリックしてダイアログ ボックスを閉じます。  会社ポータルを使用して、登録プロセスを簡略化するには、デバイス登録用の DNS エイリアスを作成してください。 自分のデバイスを登録する方法をユーザーに通知することができます。
 
 ### <a name="create-dns-alias-for-device-enrollment"></a>デバイス登録の DNS エイリアスの作成  
- DNS エイリアス (CNAME レコード タイプ) を作成すると、デバイスの登録時にサーバー名が自動的に入力されるため、ユーザーがデバイスを簡単に登録できるようになります。 DNS エイリアス (CNAME レコード タイプ) を作成するには、Microsoft のクラウド サービスのサーバーに、会社のドメインの URL に送信された要求をリダイレクトする会社の DNS レコードで CNAME を構成する必要があります。  たとえば、会社の Web サイトが contoso.com の場合、EnterpriseEnrollment.contoso.com を EnterpriseEnrollment-s.manage.microsoft.com にリダイレクトする CNAME を DNS に作成する必要があります。  
+DNS エイリアス (CNAME レコード タイプ) により、ユーザーはサーバー アドレスを入力することなくサービスに接続することができ、デバイスの登録が容易になります。 DNS エイリアス (CNAME レコード タイプ) を作成するには、Microsoft のクラウド サービスのサーバーに、会社のドメインの URL に送信された要求をリダイレクトする会社の DNS レコードで CNAME を構成する必要があります。  たとえば、会社の Web サイトが contoso.com の場合、EnterpriseEnrollment.contoso.com を EnterpriseEnrollment-s.manage.microsoft.com にリダイレクトする CNAME を DNS に作成する必要があります。  
 
  CNAME DNS エントリの作成は省略可能ですが、CNAME レコードにより、ユーザーによる登録が簡単になります。 CNAME レコードの登録が見つからない場合、ユーザーは手動で MDM サーバー名 enrollment.manage.microsoft.com を入力するように求められます。
 
-|型|ホスト名|指定先|  
-|----------|---------------|---------------|  
-|CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com|  
-|CNAME|EnterpriseRegistration.company_domain.com|EnterpriseRegistration.windows.net|  
-### <a name="to-enable-enrollment-for-windows-devices"></a>Windows デバイスの登録の有効化  
+|型|ホスト名|指定先|TTL|  
+|----------|---------------|---------------|---|
+|CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 時間|
 
-1.  **前提条件** - 任意のプラットフォームの登録をセットアップする前に、「[ハイブリッド MDM をセットアップする](setup-hybrid-mdm.md)」の前提条件と手順を完了しておく必要があります。  
+複数の UPN サフィックスがある場合は、各ドメイン名について&1; つの CNAME レコードを作成し、それぞれで EnterpriseEnrollment s.manage.microsoft.com をポイントする必要があります。 たとえば、Contoso 社でユーザーが name@contoso.com を使用しており、電子メール/UPN として name@us.contoso.com と name@eu.constoso.com も使用している場合、Contoso の DNS 管理者は次の CNAME を作成する必要があります。
 
-2.  Configuration Manager コンソールの **[管理]** ワークスペースで、**[クラウド サービス]**  >  **[Microsoft Intune サブスクリプション]** に移動します。  
+|型|ホスト名|指定先|TTL|  
+|----------|---------------|---------------|---|
+|CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 時間|
+|CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 時間|
+|CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 時間|
 
-    > [!WARNING]  
-    >  他の Configuration Manager のダイアログ ボックスが開いている場合は、閉じてからこの手順を続行してください。  
+## <a name="tell-users-how-to-enroll-devices"></a>デバイスの登録方法をユーザーに通知する  
 
-3.  **[ホーム]** タブで、 **[プラットフォームの構成]**、 **[Windows]**の順にクリックします。  
+ セットアップが完了したら、デバイスを登録する方法をユーザーに知らせる必要があります。 ガイダンスとして[デバイスの登録についてユーザーに通知する項目](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)に関する記事を参照してください。 ユーザーに「[Enroll your Windows device in Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows)」 (Intune での Windows デバイスの登録) のページを案内します。 この情報は、Microsoft Intune と Configuration Manager の両方によって管理されるモバイル デバイスに適用されます。
 
-4.  **[全般]** タブで **[Windows の登録を有効にする]**を選択します。  
-
- セットアップが完了したら、デバイスを登録する方法をユーザーに知らせる必要があります。 「[デバイスの登録についてユーザーに通知する事柄](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)」に関する記事をご覧ください。 この情報は、Microsoft Intune と Configuration Manager の両方によって管理されるモバイル デバイスに適用されます。
-
-## <a name="enable-windows-phone-devices"></a>Windows Phone デバイスの有効化  
-  ユーザーが Windows Phone 8.1 以降のデバイスの登録のみを行い、Windows Phone デバイスに基幹業務アプリを展開しない場合は、Symantec 証明書は必要ありません。 Windows Phone の登録を有効にした後、ユーザーに Windows Phone ストアからポータル サイト アプリをインストールして使用デバイスを登録するよう指示する必要があります。  
-
-  管理する Windows Phone デバイスで、次の手順を実行します。  
-
-### <a name="to-enable-enrollment-for-windows-phone-81-and-later-devices"></a>Windows Phone 8.1 以降のデバイスの登録を有効にするには  
-
- 1.  **前提条件** - 任意のプラットフォームの登録をセットアップする前に、「[ハイブリッド MDM をセットアップする](setup-hybrid-mdm.md)」の前提条件と手順を完了しておく必要があります。  
-
- 2.  Configuration Manager コンソールの **[管理]** ワークスペースで、**[クラウド サービス]**  >  **[Microsoft Intune サブスクリプション]** に移動します。  
-
-     > [!WARNING]  
-     >  他の Configuration Manager のダイアログ ボックスが開いている場合は、閉じてからこの手順を続行してください。  
-
- 3.  **[ホーム]** タブで、 **[プラットフォームの構成]**、 **[Windows Phone]**の順にクリックします。  
-
- 4.  **[全般]** タブで、  **[Windows Phone 8.1 と Windows 10 Mobile]**を選びます。 AET .xml ファイルのデータまたは .pfx ファイルをアップロードして、会社のポータルの展開をサポートしたり、Windows Phone ストアから会社のポータルをダウンロードするようにユーザーに指示したりできます。  
-
-      **[OK]**をクリックします。  
-
-  セットアップが完了したら、デバイスを登録する方法をユーザーに知らせる必要があります。 「[デバイスの登録についてユーザーに通知する事柄](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)」に関する記事をご覧ください。 この情報は、Microsoft Intune と Configuration Manager の両方によって管理されるモバイル デバイスに適用されます。  
-
-  > [!div class="button"]
-  [< 前のステップ](create-service-connection-point.md)  [次のステップ >](set-up-additional-management.md)
+> [!div class="button"]
+[< 前のステップ](create-service-connection-point.md)  [次のステップ >](set-up-additional-management.md)
 

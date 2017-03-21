@@ -2,7 +2,7 @@
 title: "非推奨の機能 |Microsoft Docs"
 description: "System Center Configuration Manager でサポートされなくなった機能、製品、およびオペレーティング システムについて説明します。"
 ms.custom: na
-ms.date: 1/5/2017
+ms.date: 3/9/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1948e2914fff91f156dd8956c018ff0fabcda2f9
-ms.openlocfilehash: 3a1edd1b59676e59d4bfcd4c01a23f7a04f91f4f
+ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
+ms.openlocfilehash: cb57a8699081415af7e2e9dc29b0a321f100823d
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -58,14 +59,14 @@ ms.openlocfilehash: 3a1edd1b59676e59d4bfcd4c01a23f7a04f91f4f
 
 バージョン 1511 の System Center Configuration Manager リリースで削除された機能の詳細を次に示します。
 
-###  <a name="a-namebkmkamta-out-of-band-management"></a><a name="bkmk_amt"></a> 帯域外管理  
+###  <a name="bkmk_amt"></a> 帯域外管理  
  Configuration Manager では、Configuration Manager コンソール内からの AMT ベースのコンピューターに対するネイティブ サポートは削除されました。  
 
 -   [Microsoft System Center Configuration Manager 用 Intel SCS アドオン](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html)を使用すれば、AMT ベースのコンピューターは引き続き完全に管理されます。 アドオンを使用することで、最新の機能にアクセスして AMT を管理できます。Configuration Manager にこれらの変更が組み込まれるまでに適用されていた制限は解除されます。  
 
 -   System Center 2012 Configuration Manager での帯域外管理は、この変更の影響を受けません。  
 
-###  <a name="a-namebkmknapa-network-access-protection"></a><a name="bkmk_nap"></a> ネットワーク アクセス保護  
+###  <a name="bkmk_nap"></a> ネットワーク アクセス保護  
  System Center Configuration Manager では、ネットワーク アクセス保護のサポートが削除されました。 この機能は Windows Server 2012 R2 で非推奨となり、Windows 10 からは削除されています。  
 
  ネットワーク アクセス保護の代替方法については、「 *ネットワーク ポリシーとアクセス サービスの概要* 」で [非推奨の機能](https://technet.microsoft.com/library/hh831683.aspx)に関する説明を参照してください。  
@@ -76,10 +77,10 @@ ms.openlocfilehash: 3a1edd1b59676e59d4bfcd4c01a23f7a04f91f4f
 
 |**オペレーティング システム**|**最初に非推奨と発表**|**サポートの削除** |  
 |-|-|-|  
-|Windows Server 2008|2015 年 7 月 10 日|サポートは、2016 年 12 月 31 日より後にリリースされる最初の更新プログラムで終了します (注 1 をご覧ください)。|  
+|Windows Server 2008|2015 年 7 月 10 日|1511 </br></br>サイト システムとしてのサポートは削除されています  (注 1 をご覧ください)。|  
 |Windows Server 2008 R2|2015 年 7 月 10 日|サポートは、2016 年 12 月 31 日より後にリリースされる最初の更新プログラムで終了します (注 2 をご覧ください)。|  
 
--   注 1: サポート終了後は、サイト サーバーやほとんどのサイト システムの役割に対してこのオペレーティング システムはサポートされなくなります。 ただし、このサポートの廃止が発表されるまで、またはこのオペレーティング システムの延長サポート期間が終了するまで、配布ポイントのサイト システムの役割 (プル配布ポイントなど) に対してこのオペレーティング システムは引き続きサポートされます。  
+-   注 1: このオペレーティング システムは、サイト サーバーとして、または配布ポイントとプル配布ポイントを除くサイト システムの役割としてはサポートされていません。 このサポートの廃止が発表されるまで、またはこのオペレーティング システムの拡張サポート期間が終了するまでは、このオペレーティング システムを配布ポイントとして使用し続けることができます。 詳細については、「[Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)」 (Windows Server 2008 で System Center Configuration Manager CB および LTSB のインストールに失敗する) を参照してください。 
 
 -   注 2: サポート終了後は、サイト サーバーやほとんどのサイト システムの役割に対してこのオペレーティング システムはサポートされなくなります。 ただし、このサポートの廃止が発表されるまで、またはこのオペレーティング システムの延長サポート期間が終了するまで、状態移行ポイントおよび配布ポイントのサイト システムの役割 (プル配布ポイント、PXE およびマルチキャストの場合を含む) に対してこのオペレーティング システムは引き続きサポートされます。 バージョン 1602 より、サイト サーバーのオペレーティング システムを Windows Server 2008 R2 から Windows Server 2012 R2 にインプレース アップグレードできます。  
 
@@ -110,9 +111,4 @@ ms.openlocfilehash: 3a1edd1b59676e59d4bfcd4c01a23f7a04f91f4f
 |-|-|-|  
 |SQL Server 2008|2015 年 7 月 10 日|バージョン 1511|  
 |SQL Server 2008 R2|2015 年 7 月 10 日|サポートは、2016 年 12 月 31 日より後にリリースされた最初の更新プログラムで終了します。|  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
