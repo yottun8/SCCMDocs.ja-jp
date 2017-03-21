@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 2e711cce2435957f3e85dad08f17260e1a224fc2
 ms.openlocfilehash: c6448932e91a02984ca57cef0b75c10ea3f43fa1
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -32,7 +33,7 @@ System Center Configuration Manager を実行するサーバー インフラス�
 
 - System Center Configuration Manager インフラストラクチャを新しいバージョンにアップグレードする場合は、「[System Center Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)」を参照してください。
 
-##  <a name="a-namebkmksupconfigupgradesitesrva-upgrade-the-operating-system-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a> サイト システムのサイト オペレーティング システムのアップグレード  
+##  <a name="BKMK_SupConfigUpgradeSiteSrv"></a> サイト システムのサイト オペレーティング システムのアップグレード  
  Configuration Manager には、次の状況で、サイト サーバーをホストするサーバーとサイト システムの役割をホストするリモート サーバーのオペレーティング システムの一括アップグレードをサポートしています。  
 
 -   アップグレード後の Service Pack レベルが Configuration Manager によってサポートされている場合の、Windows Server の上位 Service Pack への一括アップグレード。  
@@ -148,7 +149,7 @@ System Center Configuration Manager を実行するサーバー インフラス�
 
 
 
-##  <a name="a-namebkmksupconfigupgradeclienta-upgrade-the-operating-system-of-configuration-manager-clients"></a><a name="BKMK_SupConfigUpgradeClient"></a> Configuration Manager クライアントのオペレーティング システムのアップグレード  
+##  <a name="BKMK_SupConfigUpgradeClient"></a> Configuration Manager クライアントのオペレーティング システムのアップグレード  
  次の状況で、Configuration Manager は Configuration Manager クライアントのオペレーティング システムの一括アップグレードをサポートします。  
 
 -   アップグレード後の Service Pack レベルが Configuration Manager によってサポートされている場合の、Windows の上位 Service Pack への一括アップグレード。  
@@ -157,7 +158,7 @@ System Center Configuration Manager を実行するサーバー インフラス�
 
 -   Windows 10 のビルドからビルドへのサービス アップグレード。  詳細については、「[System Center Configuration Manager を使用して、サービスとしての Windows を管理する](../../../osd/deploy-use/manage-windows-as-a-service.md)」をご覧ください。  
 
-##  <a name="a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server"></a><a name="BKMK_SupConfigUpgradeDBSrv"></a> サイト データベース サーバーでの SQL Server のアップグレード  
+##  <a name="BKMK_SupConfigUpgradeDBSrv"></a> サイト データベース サーバーでの SQL Server のアップグレード  
   Configuration Manager では、サイト データベース サーバー上の SQL のサポートされたバージョンからの、SQL Server の一括アップグレードをサポートしています。 このセクションの SQL Server のアップグレード シナリオは Configuration Manager でサポートされており、各シナリオの要件を含んでいます。
 
  Configuration Manager によってサポートされている SQL Server のバージョンの詳細については、「[System Center Configuration Manager の SQL Server バージョンのサポート](../../../core/plan-design/configs/support-for-sql-server-versions.md)」を参照してください。  
@@ -196,8 +197,8 @@ System Center Configuration Manager を実行するサーバー インフラス�
 
 
 SQL Server の詳細については、TechNet にある SQL Server のドキュメントを参照してください。
--   [SQL Server 2012 へのアップグレード](http://technet.microsoft.com/library/ms143393\(v=sql.110)
--   [SQL Server 2014 へのアップグレード](http://technet.microsoft.com/library/ms143393\(v=sql.120)  
+-   [SQL Server 2012 へのアップグレード](http://technet.microsoft.com/library/ms143393\(v=sql.110))
+-   [SQL Server 2014 へのアップグレード](http://technet.microsoft.com/library/ms143393\(v=sql.120))  
 -   [SQL Server 2016 へのアップグレード](https://technet.microsoft.com/library/bb677622(v=sql.130))
 
 
@@ -210,9 +211,4 @@ SQL Server の詳細については、TechNet にある SQL Server のドキュ�
 
 > [!NOTE]  
 >  中央管理サイトで使用している SQL Server のエディションを Standard エディションから Datacenter エディションまたは Enterprise エディションに変更する際には、階層がサポートするクライアントの数を制限するデータベースのパーティションは変更しません。
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
