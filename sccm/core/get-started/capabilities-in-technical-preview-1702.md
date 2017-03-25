@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ee7f69bd65152deffb2456d9807e1e8fee8802ec
-ms.openlocfilehash: dd28c8218c77686884bdcff508080185cae97489
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
+ms.openlocfilehash: 3bdbcd1a3c64a1d50f2f6219b2a5e17d60979864
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1702 の機能
@@ -313,6 +313,10 @@ Android for Work は Android とは別のプラットフォームです。仕事
   - **すべてのデバイスを Android として管理する** - (無効) Android for Work をサポートするデバイスを含め、すべての Android デバイスが従来の Android デバイスとして登録されます。
   - **サポートされているデバイスを Android for Work として管理する** - (有効) Android for Work をサポートするすべてのデバイスが Android for Work デバイスとして登録されます。 Android for Work をサポートしない Android デバイスは、従来の Android デバイスとして登録されます。
   - **これらのグループに所属するユーザーのサポートされているデバイスのみを Android for Work として管理する** - (テスト) Android for Work の管理を特定のユーザー グループを対象にしてみましょう。 選択したグループのメンバーのうち、Android for Work をサポートするデバイスを登録しているメンバーのみが、Android for Work デバイスとして登録されます。 それ以外は Android デバイスとして登録されます。
+  
+> [!NOTE]
+> ある既知の問題では、**[これらのグループに所属するユーザーのサポートされているデバイスのみを Android for Work として管理する]** オプションが期待どおり動作しません。 指定の Azure AD グループにあるユーザーのデバイスが Android for Work ではなく Android として登録されます。 Android for Work をテストするには、**[Manage all supported devices as Android for Work (サポートされているすべてのデバイスを Android for Work として管理する)]** を利用する必要があります。
+
 
   Android for Work の登録を有効にするには、下の&2; つのオプションのいずれかを選択する必要があります。 **[これらのグループに所属するユーザーのサポートされているデバイスのみを Android for Work として管理する]** オプションの場合、まず Azure Active Directory セキュリティ グループを設定する必要があります。
 
@@ -350,4 +354,7 @@ Android 6 以降を実行するデバイスでは、仕事用プロファイル�
 管理者は仕事用プロファイルのみを管理するので、Android for Work として登録されたデバイスに対してのみ、選択的なワイプを実行できます。 そのため、個人用プロファイルはワイプから保護されます。 Android for Work デバイスで選択的なワイプを実行すると、すべてのアプリとデータを含む仕事用プロファイルが削除され、デバイスの登録が削除されます。
 
 Android for Work デバイスで選択的なワイプを実行するには、Configuration Manager コンソールで通常の[選択的なワイプ プロセス](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)を使用します。
+
+#### <a name="known-issues-for-android-for-work"></a>Android for Work の既知の問題
+**Android for Work 電子メール プロファイルで同期スケジュールを設定すると、展開に失敗する** Android for Work 電子メール プロファイルの ConfigMgr UI のオプションの&1; つが "スケジュール" です。 他のプラットフォームでは、管理者はスケジュールを設定し、展開先のモバイル デバイスに電子メールやその他の電子メール アカウント データを同期できます。 ただし、Android for Work 電子メール プロファイルの場合は動作しません。"未構成" 以外のオプションを選択すると、プロファイルはいかなるデバイスにも展開されません。
 
