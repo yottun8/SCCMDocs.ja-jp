@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
@@ -69,6 +69,6 @@ Configuration Manager と Intune を使用して、BYOD ("Bring Your Own Device"
 
  セットアップが完了したら、デバイスを登録する方法をユーザーに知らせる必要があります。 「[デバイスの登録についてユーザーに通知する事柄](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)」に関する記事をご覧ください。 この情報は、Microsoft Intune と Configuration Manager の両方によって管理されるモバイル デバイスに適用されます。
 
- > [!div class="button"]
- [< 前のステップ](create-service-connection-point.md)  [次のステップ >](set-up-additional-management.md)
+> [!div class="button"]
+[< 前のステップ](create-service-connection-point.md)  [次のステップ >](set-up-additional-management.md)
 
