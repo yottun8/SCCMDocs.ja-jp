@@ -18,9 +18,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: ef68a9f998ea6ff9628e01f6ac622711de68375d
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: 507bad02c6e028f09a8b0c8a566ac55f7c3942a5
+ms.openlocfilehash: 8e93f6f7b65534d9e3f6b5e46909b076653659a9
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -31,14 +31,15 @@ ms.lasthandoff: 12/16/2016
 
 System Center Configuration Manager のオンプレミス モバイル デバイス管理での一括登録は、ユーザー登録 (デバイスを登録するためにユーザーが資格情報を入力する必要がある) と比較して、より自動化されたデバイスの登録手段です。  一括登録では、登録パッケージを使用して、登録時にデバイスを認証します。 パッケージ (.ppkg ファイル) には、証明書プロファイルが含まれています。また、必要に応じて、登録をサポートするためにデバイスでイントラネット接続が必要な場合には Wi-Fi プロファイルも含まれています。  
 
- > [!NOTE]  
+> [!NOTE]  
 >  Configuration Manager の現在のブランチでは、次のオペレーティング システムを実行しているデバイスをオンプレミス モバイル デバイス管理で登録することができます。  
 >   
->  -   Windows 10 Enterprise  
+> -  Windows 10 Enterprise  
 > -   Windows 10 Pro  
 > -   Windows 10 Team\( Configuration Manager バージョン 1602 以降\)  
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise
+> -   Windows 10 IoT Enterprise   
 
 次のタスクでは、オンプレミス モバイル デバイス管理の対象となるコンピューターとデバイスを一括登録する方法について説明します。  
 
@@ -67,7 +68,7 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
  Configuration Manager で Wi-Fi プロファイルを作成する場合は、「[System Center Configuration Manager で Wi-Fi プロファイルを作成する方法](../../protect/deploy-use/create-wifi-profiles.md)」の手順に従ってください。  
 
 > [!IMPORTANT]  
->一括登録のために Wi-Fi プロファイルを作成する場合は、次の 2 つの点に注意してください。
+>一括登録のために Wi-Fi プロファイルを作成する場合は、次の&2; つの点に注意してください。
 >
 > - Configuration Manager の現在のブランチでは、オンプレミス モバイル デバイス管理について、次の Wi-Fi セキュリティのみがサポートされます。  
 >   
@@ -76,7 +77,7 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 >   - EAP の種類: **[スマート カードまたは他の証明書]** または **[PEAP]**  
 >
 >
-> - Configuration Manager の Wi-Fi プロファイルにはプロキシ サーバー情報の設定がありますが、デバイスの登録時にプロキシは構成されません。 登録済みデバイスでプロキシ サーバーをセットアップする必要がある場合は、デバイスの登録後に構成アイテムを使用して設定を展開するか、Windows イメージングおよび構成デザイナー (ICD) を使用して 2 番目のパッケージを作成し、一括登録パッケージと共に展開することができます。
+> - Configuration Manager の Wi-Fi プロファイルにはプロキシ サーバー情報の設定がありますが、デバイスの登録時にプロキシは構成されません。 登録済みデバイスでプロキシ サーバーをセットアップする必要がある場合は、デバイスの登録後に構成アイテムを使用して設定を展開するか、Windows イメージングおよび構成デザイナー (ICD) を使用して&2; 番目のパッケージを作成し、一括登録パッケージと共に展開することができます。
 
 ##  <a name="bkmk_createEnroll"></a> 登録プロファイルの作成  
  登録プロファイルでは、デバイスの登録に必要な設定を指定できます。これには、信頼されたルート証明書をデバイスに動的にプロビジョニングする証明書プロファイル、および必要な場合には、ネットワークの設定をプロビジョニングする Wi-Fi プロファイルが含まれます。  
