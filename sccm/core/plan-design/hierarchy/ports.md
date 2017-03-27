@@ -2,7 +2,7 @@
 title: "Configuration Manager で使用されるポート | Microsoft Docs"
 description: "System Center Configuration Manager が接続に使用する必要なポートとカスタマイズ可能なポートについて説明します。"
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 3/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6bfc5c0e3c0bdc8408ad2dd2a7807ef3e018ef60
-ms.openlocfilehash: 8cd1c5363ba05dbb35ca5a0daf32979dd8b51b19
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: 4c2906c2a963e0ae92e3c0d223afb7a47377526a
+ms.openlocfilehash: ffc2adb34427aa62f4a377e887c2ff54d47abeff
+ms.lasthandoff: 03/20/2017
 
 
 ---
@@ -603,6 +603,14 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
     -   SQL Server サービスでは、既定のポート TCP 1433 が使用されます。  
 
 -   SQL Server データベース エンジンとさまざまな Configuration Manager サイト システムの役割の間のサイト内通信では、既定でポート TCP 1433 が使用されます。  
+
+- Configuration Manager は、サイト データベースをホストする各 SQL 可用性グループ レプリカがスタンドアロン SQL Server インスタンスであるかのように、同じポートとプロトコルを利用して各レプリカと通信します。
+
+Azure を利用するとき、サイト データベースが内部または外部の負荷分散装置の後ろにある場合は、各レプリカで次のファイアウォール例外を設定し、次のポートに負荷分散ルールを追加します。
+ - SQL over TCP: TCP 1433
+ - SQL Server Service Broker: TCP 4022
+ - サーバー メッセージ ブロック (SMB): TCP 445
+ - RPC エンドポイント マッパー: TCP 135
 
 > [!WARNING]  
 >  Configuration Manager は、動的ポートをサポートしていません。 SQL Server 名前付きインスタンスの既定動作では、データベース エンジンへの接続に動的ポートが使用されるため、名前付きインスタンスの使用時に、サイト内通信に使用する静的ポートを手動で構成する必要があります。  

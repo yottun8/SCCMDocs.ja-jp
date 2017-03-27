@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
-ms.openlocfilehash: c0648c8c6ca3b36e2c2cf311bc4ae9edc7e8f906
+ms.sourcegitcommit: 9e850bdbdf91d3b40a2044e5d5c04f468ed4809f
+ms.openlocfilehash: 093d24951e8d741bfcf2cedb7618ecf75300e035
+ms.lasthandoff: 03/20/2017
 
 
 ---
@@ -33,9 +34,4 @@ ms.openlocfilehash: c0648c8c6ca3b36e2c2cf311bc4ae9edc7e8f906
 -   [System Center Configuration Manager クライアントを使用して管理されている Mac OS X デバイスの構成項目を作成する方法](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)  
 
 -   [System Center Configuration Manager クライアントを使用して管理されている Windows デスクトップおよびサーバー コンピューターのカスタム構成項目を作成する方法](../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md)  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

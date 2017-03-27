@@ -15,8 +15,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4d34a272a93100426cccd2308c5b3b0b0ae94a60
-ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
+ms.sourcegitcommit: 4c2906c2a963e0ae92e3c0d223afb7a47377526a
+ms.openlocfilehash: 9c614a842fc9e3a01b0128db94fc12bc0be5b52f
+ms.lasthandoff: 03/20/2017
 
 
 ---
@@ -25,12 +26,18 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 
-
  System Center Configuration Manager バージョン 1602 以降では、高可用性および障害復旧のソリューションとして、SQL Server [AlwaysOn 可用性グループ](https://msdn.microsoft.com/library/hh510230\(v=sql.120\).aspx)を使用してプライマリ サイトと中央管理サイトでサイト データベースをホストできます。 可用性グループを社内または Microsoft Azure でホストできます。  
 
  Microsoft Azure を使用して可用性グループをホストする場合は、SQL Server AlwaysOn 可用性グループと Azure 可用性セットを使用することで、サイト データベースの可用性をさらに向上できます。 Azure 可用性セットの詳細については、「 [仮想マシンの可用性管理](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/)」を参照してください。  
 
- 可用性グループでサポートされるシナリオを次に示します。  
+ Configuration Manager では、内部または外部の負荷分散装置の後ろにある SQL 可用性グループでサイト データベースをホストできます。 各レプリカでのファイアウォール例外の設定に加えて、次のポートに負荷分散ルールを追加する必要があります。
+  - SQL over TCP: TCP 1433
+  - SQL Server Service Broker: TCP 4022
+  - サーバー メッセージ ブロック (SMB): TCP 445
+  - RPC エンドポイント マッパー: TCP 135
+
+
+可用性グループでサポートされるシナリオを次に示します。  
 
 -   サイト データベースを、可用性グループの既定のインスタンスに移動することができます  
 
@@ -78,7 +85,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
     - **読み取り専用接続を許可**
 
 
-##  <a name="a-namebkmkbnra-changes-for-backup-and-recovery-when-you-use-a-sql-server-alwayson-availability-group"></a><a name="bkmk_BnR"></a> SQL Server AlwaysOn 可用性グループを使用するときのバックアップと回復の変更  
+##  <a name="bkmk_BnR"></a> SQL Server AlwaysOn 可用性グループを使用するときのバックアップと回復の変更  
  **バックアップ:**  
 
  可用性グループでサイト データベースを実行するときには、一般的な Configuration Manager 設定とファイルをバックアップするために組み込み**バックアップ サイト** サーバー メンテナンス タスクを引き続き実行する必要がありますが、そのバックアップで作成された MDF ファイルと LDF ファイルを使用しないようご計画ください。 代わりに、SQL Server を使用して、サイト データベースの直接バックアップを作成することを計画します。  
@@ -93,7 +100,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 
  バックアップおよび回復の詳細については、「[System Center Configuration Manager のバックアップと回復](../../../../protect/understand/backup-and-recovery.md)」を参照してください。  
 
-##  <a name="a-namebkmkcreatea-configure-an-availability-group-for-use-with-configuration-manager"></a><a name="bkmk_create"></a> Configuration Manager で使用する可用性グループの構成  
+##  <a name="bkmk_create"></a> Configuration Manager で使用する可用性グループの構成  
  次の手順を開始する前に、この構成を完了するために必要な SQL Server プロシージャについて、および Configuration Manager 用に構成する可用性グループに当てはまる次の詳細について理解しておきます。  
 
  **System Center Configuration Manager を使用する AlwaysOn 可用性グループの要件:**  
@@ -118,8 +125,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
     >     ALTER DATABASE cm_ABC SET TRUSTWORTHY ON;  
     >     USE cm_ABC  
     >     EXEC sp_changedbowner 'sa'  
-    >     Exec sp_configure 'max text repl size (B)', 2147483647
-    >     reconfigure
+    >     Exec sp_configure 'max text repl size (B)', 2147483647 reconfigure
 
 
 
@@ -185,7 +191,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 
 
 
-##  <a name="a-namebkmkdirecta-move-a-site-database-to-an-availability-group"></a><a name="bkmk_direct"></a> 可用性グループへのサイト データベースの移動  
+##  <a name="bkmk_direct"></a> 可用性グループへのサイト データベースの移動  
  インストール済みサイトのサイト データベースを可用性グループに移動できます。 まず可用性グループを作成した後、可用性グループでの操作用にデータベースを構成する必要があります。  
 
  この手順を完了するには、Configuration Manager のセットアップを実行するユーザー アカウントが、可用性グループのメンバーである各コンピューターの**ローカル管理者**グループ メンバーである必要があります。  
@@ -208,7 +214,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 
 5.  新しいデータベースの場所の情報を入力したら、通常のプロセスと構成でセットアップを完了します。  
 
-##  <a name="a-namebkmkchangea-add-or-remove-members-of-an-active-availability-group"></a><a name="bkmk_change"></a> アクティブな可用性グループのメンバーを追加または削除する  
+##  <a name="bkmk_change"></a> アクティブな可用性グループのメンバーを追加または削除する  
  可用性グループでホストされるサイト データベースを Configuration Manager が使用するようになったら、レプリカのメンバーを削除したり、他のレプリカ メンバーを追加したりできます (1 つのプライマリ ノードおよび&2; つのセカンダリ ノードを超過しない範囲で)。  
 
 #### <a name="to-add-a-new-replica-member"></a>新しいレプリカ メンバーを追加するには  
@@ -229,7 +235,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 
 -   SQL Server のドキュメントの「 [可用性グループからのセカンダリ レプリカの削除](https://msdn.microsoft.com/library/hh213149\(v=sql.120\).aspx) 」の情報を使用します。  
 
-##  <a name="a-namebkmkremovea-move-the-site-database-from-an-availability-group-back-to-a-single-instance-sql-server"></a><a name="bkmk_remove"></a> 可用性グループから単一インスタンス SQL Server にサイト データベースを戻す  
+##  <a name="bkmk_remove"></a> 可用性グループから単一インスタンス SQL Server にサイト データベースを戻す  
  可用性グループでサイト データベースをホストする必要がなくなったときには、次の手順に従います。  
 
 #### <a name="to-move-the-site-database-from-an-availability-group-back-to-a-single-instance-sql-server"></a>可用性グループから単一インスタンス SQL Server にサイト データベースを戻すには  
@@ -262,9 +268,4 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 9. 新しいデータベースの場所の情報を入力したら、通常のプロセスと構成でセットアップを完了します。 セットアップが完了したら、サイトが再起動して新しいデータベースの場所の使用を開始します。  
 
 10. 可用性グループのメンバーであったサーバーをクリーンアップするには、SQL Server のドキュメントの「 [可用性グループの削除](https://msdn.microsoft.com/library/ff878113\(v=sql.120\).aspx) 」の説明に従います。
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

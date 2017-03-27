@@ -7,7 +7,7 @@ ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-- configmgr-client
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1e42b1c1-3d58-481f-8647-5c7ae640c5f5
@@ -17,9 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: f86eac30ed0eada92ddbd25891d1693ae55b4851
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
+ms.openlocfilehash: 5a81ec06e16992ae1c41b0fc98ebcd07386c5381
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -39,7 +39,7 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
  オンプレミス モバイル デバイス管理が機能するには、Intune が必要です。 試用版または有料のサブスクリプションに[サインアップ](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/)し、次の手順に進んでサブスクリプションを Configuration Manager に追加します。  
 
 ##  <a name="add-the-intune-subscription-to-configuration-manager"></a>Configuration Manager に Intune サブスクリプションを追加する  
- サブスクリプションを Configuration Manager に追加するには、Intune でモバイル デバイス管理のサブスクリプションを追加する場合と同じ基本的な手順に従います。 具体的な違いに関する以下のメモを参照して、「[Microsoft Intune サブスクリプションを作成するには](../deploy-use/setup-hybrid-mdm.md#configure-intune-subscription)」に記載されている手順を使用します。  
+ サブスクリプションを Configuration Manager に追加するには、Intune でモバイル デバイス管理のサブスクリプションを追加する場合と同じ基本的な手順に従います。 具体的な違いに関する以下のメモを参照して、[Intune サブスクリプションの構成](../deploy-use/configure-intune-subscription.md)に関するページに記載されている手順を使用します。  
 
 > [!NOTE]  
 >  Intune サブスクリプションを追加する場合は、次の点に注意してください。  

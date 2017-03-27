@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 0e5f65552045e9cef06f5286b0087153751c79b0
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 0988899047a0e3464e15055fceb5924ee20b0b88
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -34,14 +34,14 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
  クライアントをインストールした後、Configuration Manager コンソールでクライアント設定を指定して、Windows ベースのクライアントと同じ方法でクライアント エージェントを構成します。 詳細については、「  [Client settings for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU)」をご覧ください。  
 
-##  <a name="a-namebkmkaboutinstallpackagesa-about-client-installation-packages-and-the-universal-agent"></a><a name="BKMK_AboutInstallPackages"></a> クライアント インストール パッケージと Universal Agent について  
+##  <a name="BKMK_AboutInstallPackages"></a> クライアント インストール パッケージと Universal Agent について  
  特定のプラットフォーム上に Linux および UNIX 用クライアントをインストールするには、クライアントをインストールするコンピューターに適したクライアント インストール パッケージを使用する必要があります。 適切なクライアント インストール パッケージは、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=525184)から各クライアントにダウンロードされるデータの一部として含まれています。 クライアント インストール パッケージに加え、クライアント ダウンロードには、各コンピューター上でクライアントのインストールを管理する **install** スクリプトも含まれています。  
 
  クライアントをインストールする場合は、使用するクライアント インストール パッケージに関係なく同じプロセスとコマンド ライン プロパティを使用できます。  
 
- Linux および UNIX 用の構成マネージャー クライアントの各リリースでサポートされるオペレーティング システム、プラットフォーム、およびクライアント インストール パッケージの詳細については、「[Linux and UNIX servers](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_LinuxOS)」 (Linux および UNIX サーバー) をご覧ください。  
+ Linux および UNIX 用の構成マネージャー クライアントの各リリースでサポートされるオペレーティング システム、プラットフォーム、およびクライアント インストール パッケージの詳細については、「[Linux and UNIX servers](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#linux-and-unix-servers)」 (Linux および UNIX サーバー) をご覧ください。  
 
-##  <a name="a-namebkmkinstalllnuclienta-install-the-client-on-linux-and-unix-servers"></a><a name="BKMK_InstallLnUClient"></a> Linux および UNIX サーバーにクライアントをインストールします。  
+##  <a name="BKMK_InstallLnUClient"></a> Linux および UNIX サーバーにクライアントをインストールします。  
  Linux および UNIX 用クライアントをインストールするには、各 Linux または UNIX コンピューターでスクリプトを実行します。 スクリプトの名前は **インストール** コマンド ライン プロパティをインストールの動作を変更して、クライアント インストール パッケージの参照をサポートしています。 クライアントには、インストール スクリプトとクライアントのインストール パッケージを配置する必要があります。 クライアント インストール パッケージには、特定の Linux または UNIX オペレーティング システムおよびプラットフォーム用の構成マネージャー クライアント ファイルが含まれています。
 各クライアント インストール パッケージでは、クライアントのインストールを完了に必要なすべてのファイルが含まれていて、Windows ベースのコンピューターとは異なりがダウンロードしない追加のファイル、管理ポイントまたはその他のソースの場所からします。  
 
@@ -72,7 +72,7 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
      例: ccm-Universal-x64.&lt;build\>.tar  
 
-###  <a name="a-namebkmktoinstalllnuclinenta-to-install-the-configuration-manager-client-on-linux-and-unix-servers"></a><a name="BKMK_ToInstallLnUClinent"></a> Linux および UNIX サーバーに Configuration Manager クライアントをインストールするには  
+###  <a name="BKMK_ToInstallLnUClinent"></a> Linux および UNIX サーバーに Configuration Manager クライアントをインストールするには  
 
 1.  Windows コンピューターで、管理する [Linux または UNIX サーバーの適切なクライアント ファイルをダウンロードします](http://go.microsoft.com/fwlink/?LinkID=525184) 。  
 
@@ -91,7 +91,7 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
 6.  スクリプトを実行した後は、 **/var/opt/microsoft/scxcm.log** ファイルを確認することで、インストールを検証します。 さらに、Configuration Manager コンソールの **[資産とコンプライアンス]** ワークスペースの **[デバイス]** ノードでクライアントの詳細を表示することによって、クライアントがインストールされ、サイトと通信していることを確認できます。  
 
-###  <a name="a-namebkmkcmdlineinstalllnuclienta-command-line-properties-for-installing-the-client-on-linux-and-unix-servers"></a><a name="BKMK_CmdLineInstallLnUClient"></a> Linux サーバーおよび UNIX サーバーにクライアントをインストールするためのコマンド ライン プロパティ  
+###  <a name="BKMK_CmdLineInstallLnUClient"></a> Linux サーバーおよび UNIX サーバーにクライアントをインストールするためのコマンド ライン プロパティ  
  次のプロパティを使って、インストール スクリプトの動作を変更することができます。  
 
 > [!NOTE]  
@@ -117,7 +117,7 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
      任意。 状態メッセージを送信するクライアントが使用するフォールバック ステータス ポイント サーバーの FQDN を指定します。  
 
-     フォールバック ステータス ポイントの詳細については、「 [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP) 」を参照してください。  
+     フォールバック ステータス ポイントの詳細については、「[フォールバック ステータス ポイントが必要かどうかを判断する](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point)」を参照してください。  
 
 -   **-dir &lt;directory\>**  
 
@@ -143,7 +143,7 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
 -   **-UsePKICert &lt;parameter\>**  
 
-     任意。 公開キーの証明書標準 (PKCS #12) 形式では、X.509 の PKI 証明書に完全なパスとファイル名を指定します。 この証明書は、クライアント認証に使用されます。 証明書がインストール時に指定されていない場合、また証明書を追加または変更する必要がある場合、 **certutil** ユーティリティを使用します。 certutil については、「 [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 」を参照してください。  
+     任意。 公開キーの証明書標準 (PKCS&#12;) 形式では、X.509 の PKI 証明書に完全なパスとファイル名を指定します。 この証明書は、クライアント認証に使用されます。 証明書がインストール時に指定されていない場合、また証明書を追加または変更する必要がある場合、 **certutil** ユーティリティを使用します。 certutil については、「 [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 」を参照してください。  
 
      **-UsePKICert**を使用する場合は、 **-certpw** コマンド ライン パラメーターを使って、PKCS#12 ファイルに関連付けられているパスワードも指定する必要があります。  
 
@@ -158,7 +158,7 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
 -   **-certpw &lt;parameter\>**  
 
-     任意。 使用して、指定した PKCS #12 ファイルに関連付けられたパスワードを示す、 **- UsePKICert** プロパティです。  
+     任意。 使用して、指定した PKCS&#12; ファイルに関連付けられたパスワードを示す、 **- UsePKICert** プロパティです。  
 
      例: -UsePKICert &lt;Full path and filename\> -certpw &lt;password\>  
 
@@ -216,14 +216,14 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
      例: -rootcerts &lt;Full path and file name\>,&lt;Full path and file name\>  
 
-###  <a name="a-namebkmkuninstalllnuclienta-uninstalling-the-client-from-linux-and-unix-servers"></a><a name="BKMK_UninstallLnUClient"></a> Linux および UNIX サーバーからクライアントをアンインストールする  
+###  <a name="BKMK_UninstallLnUClient"></a> Linux および UNIX サーバーからクライアントをアンインストールする  
  Linux および UNIX 用の構成マネージャー クライアントをアンインストールするには、アンインストール ユーティリティ **uninstall** を使用します。 既定では、このファイルにある、 **/選択/microsoft/configmgr/bin/** 、クライアント コンピューター上のフォルダーです。 これはアンインストール コマンドは、コマンド ライン パラメーターのサポートし、サーバーからクライアント ソフトウェアに関連するすべてのファイルが削除されます。  
 
  クライアントをアンインストールするには、次のコマンドラインを使用します **/opt/microsoft/configmgr/bin/uninstall**。  
 
  Linux および UNIX 用の構成マネージャー クライアントをアンインストールした後、コンピューターを再起動する必要はありません。  
 
-##  <a name="a-namebkmkconfiglnuclientcommuincationsa-configure-request-ports-for-the-client-for-linux-and-unix"></a><a name="BKMK_ConfigLnUClientCommuincations"></a> Linux および UNIX 用のクライアントの要求ポートを構成します。  
+##  <a name="BKMK_ConfigLnUClientCommuincations"></a> Linux および UNIX 用のクライアントの要求ポートを構成します。  
  Windows ベースのクライアントと同様に、Linux および UNIX 用の構成マネージャー クライアントは、HTTP および HTTPS を使用して Configuration Manager サイト システムと通信します。 構成マネージャー クライアントが通信に使用するポートは、要求ポートと呼ばれます。  
 
  Linux および UNIX 用の構成マネージャー クライアントをインストールするときに、**-httpport** および **-httpsport** インストール プロパティを指定することによって、クライアントの既定の要求ポートを変更することができます。 インストールのプロパティとカスタムの値を指定しなかった場合、クライアントは、既定値を使用します。 既定値は **80** HTTP トラフィック用と **443** HTTPS トラフィック用です。  
@@ -232,10 +232,10 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
  クライアント通信のポート番号の詳細については、「[System Center Configuration Manager でのクライアント通信ポートの構成方法](../../../core/clients/deploy/configure-client-communication-ports.md)」を参照してください。  
 
-##  <a name="a-namebkmkconfigclientmpa-configure-the-client-for-linux-and-unix-to-locate-management-points"></a><a name="BKMK_ConfigClientMP"></a> 管理ポイントを探すには、Linux および UNIX 用クライアントを構成します。  
+##  <a name="BKMK_ConfigClientMP"></a> 管理ポイントを探すには、Linux および UNIX 用クライアントを構成します。  
  Linux および UNIX 用の構成マネージャー クライアントをインストールする場合、最初の接続ポイントとして使用する管理ポイントを指定する必要があります。  
 
  Linux および UNIX 用の構成マネージャー クライアントは、クライアントのインストール時にこの管理ポイントに接続します。 クライアントによる管理ポイントへの接続が失敗した場合、クライアント ソフトウェアは成功するまで試行し続けます。  
 
- クライアントが管理ポイントを検出する方法の詳細については、「 [Locating Management Points](../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs)」を参照してください。
+ クライアントが管理ポイントを検出する方法の詳細については、「 [Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points)」を参照してください。
 

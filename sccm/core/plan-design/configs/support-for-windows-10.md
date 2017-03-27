@@ -16,9 +16,9 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3702993d6cf9644d5aebaadd168749668fbcb62c
-ms.openlocfilehash: 4b90384621dd20475ab9ea33ea062c24f5ecf5fa
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: eb2092640f7bd68a25e4826cd7f88cda6822a33a
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="support-for-windows-10-as-a-client-of-system-center-configuration-manager"></a>System Center Configuration Manager のクライアントとしての Windows 10 のサポート
@@ -38,11 +38,11 @@ Configuration Manager は、Windows 10 の新しいバージョンがリリー�
 |Windows 10 のバージョン |Configuration Manager 1602|Configuration Manager 1606|Configuration Manager 1610|
 |---------------------|-----|-----|-----|
 |Enterprise 2015 LTSB |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
-|1507 <br />Enterprise、Pro | ![サポートされています](media/green_check.png)| ![サポートされています](media/green_check.png)|![サポートされています](media/green_check.png) |
-|1511 <br />Enterprise、Pro <br />(CB)、(CBB) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
+|1507 <br />Enterprise, Education, Pro | ![サポートされています](media/green_check.png)| ![サポートされています](media/green_check.png)|![サポートされています](media/green_check.png) |
+|1511 <br />Enterprise, Education, Pro <br />(CB)、(CBB) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
 |Enterprise 2016 LTSB    |![サポートされていません](media/Red_X.png) |![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png)|
-|1607 <br />Enterprise、Pro<br /> (CB)    |![サポートされていません](media/Red_X.png) |![下位互換性あり](media/blue_compat.png) |![サポートされています](media/green_check.png) |
-|1607 <br />Enterprise、Pro <br />(CBB)    |![サポートされていません](media/Red_X.png) |![下位互換性あり](media/Red_X.png) |![サポートされています](media/green_check.png) |
+|1607 <br />Enterprise, Education, Pro<br /> (CB)    |![サポートされていません](media/Red_X.png) |![下位互換性あり](media/blue_compat.png) |![サポートされています](media/green_check.png) |
+|1607 <br />Enterprise, Education, Pro <br />(CBB)    |![サポートされていません](media/Red_X.png) |![下位互換性あり](media/Red_X.png) |![サポートされています](media/green_check.png) |
 
 
 |キー|

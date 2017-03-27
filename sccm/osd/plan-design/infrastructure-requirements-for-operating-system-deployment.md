@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 77ac69cecab7aa460001a8d2800e61f20a8565ed
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 562e81df12e46a2332aa5e4de8b7c9e5819bde80
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 77ac69cecab7aa460001a8d2800e61f20a8565ed
 
 System Center 2012 Configuration Manager のオペレーティング システム展開には、外部依存関係と製品内部依存関係があります。 オペレーティング システムの展開を準備するには、次のセクションを使用します。  
 
-##  <a name="a-namebkmkexternaldependenciesa-dependencies-external-to-configuration-manager"></a><a name="BKMK_ExternalDependencies"></a> Configuration Manager 外部の依存関係  
+##  <a name="BKMK_ExternalDependencies"></a> Configuration Manager 外部の依存関係  
  Configuration Manager でオペレーティング システムを展開するのに必要な外部ツール、インストール キット、オペレーティング システムに関する情報を以下に示します。  
 
 ### <a name="windows-adk-for-windows-10"></a>Windows 10 用 Windows ADK  
@@ -104,7 +105,7 @@ System Center 2012 Configuration Manager のオペレーティング システ�
 ### <a name="windows-device-drivers"></a>Windows デバイス ドライバー  
  Windows デバイス ドライバーは、対象コンピューターにオペレーティング システムをインストールする場合と、ブート イメージを使って Windows PE を実行する場合に使用できます。 デバイス ドライバーの詳細については、「[ドライバーの管理](../get-started/manage-drivers.md)」を参照してください。  
 
-##  <a name="a-namebkmkinternaldependenciesa-configuration-manager-dependencies"></a><a name="BKMK_InternalDependencies"></a> Configuration Manager の依存関係  
+##  <a name="BKMK_InternalDependencies"></a> Configuration Manager の依存関係  
  Configuration Manager オペレーティング システムの展開の前提条件について、以下に示します。  
 
 ### <a name="operating-system-image"></a>オペレーティング システム イメージ  
@@ -124,10 +125,10 @@ System Center 2012 Configuration Manager のオペレーティング システ�
  配布ポイントをインストールして、コンテンツを管理する方法の詳細については、「[コンテンツとコンテンツ インフラストラクチャの管理](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
 
 ### <a name="pxe-enabled-distribution-point"></a>PXE 対応配布ポイント  
- PXE を使った展開を行うには、クライアントからの PXE 要求を受け入れるように配布ポイントを構成する必要があります。 配布ポイントを構成する方法の詳細については、「 [配布ポイントの構成](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations) 」を参照し、表内で PXE の構成カテゴリを検索します。  
+ PXE を使った展開を行うには、クライアントからの PXE 要求を受け入れるように配布ポイントを構成する必要があります。 配布ポイントの構成方法の詳細については、「[配布ポイントの構成](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pxe)」をご覧ください。  
 
 ### <a name="multicast-enabled-distribution-point"></a>マルチキャスト対応の配布ポイント  
- マルチキャストを使ってオペレーティング システムの展開を最適化するには、配布ポイントがマルチキャストをサポートするように構成する必要があります。 配布ポイントを構成する方法の詳細については、「 [配布ポイントの構成](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations) 」を参照し、表内でマルチキャストの構成カテゴリを検索します。  
+ マルチキャストを使ってオペレーティング システムの展開を最適化するには、配布ポイントがマルチキャストをサポートするように構成する必要があります。 配布ポイントの構成方法の詳細については、「[配布ポイントの構成](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#multicast)」をご覧ください。   
 
 ### <a name="state-migration-point"></a>状態移行ポイント  
  並列展開および更新展開用にユーザー状態のデータをキャプチャして復元する場合、別のコンピューターにユーザー状態データを格納するように状態移行ポイントを構成する必要があります。  
@@ -162,7 +163,7 @@ System Center 2012 Configuration Manager のオペレーティング システ�
 ### <a name="security-scopes-for-operating-system-deployments"></a>オペレーティング システム展開のセキュリティ スコープ  
  セキュリティ スコープを使用すると、管理者は、オペレーティング システムとブート イメージ、ドライバー パッケージ、タスク シーケンス パッケージなど、オペレーティング システムの展開で使用される保護可能なオブジェクトにアクセスすることができます。 詳細については、「 [セキュリティ スコープ](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope)」をご覧ください。  
 
-##  <a name="a-namebkmkwdsa-windows-deployment-services"></a><a name="BKMK_WDS"></a> Windows 展開サービス  
+##  <a name="BKMK_WDS"></a> Windows 展開サービス  
  Windows 展開サービス (WDS) は、PXE やマルチキャストをサポートするように構成する配布ポイントと同じサーバー上にインストールする必要があります。 WDS は、サーバーのオペレーティング システムに含まれています。 PXE 展開では、PXE ブートを行うサービスは WDS です。 PXE 用に配布ポイントがインストールされ、有効化された場合、Configuration Manager は、WDS PXE ブート機能を使用する WDS にプロバイダーをインストールします。  
 
 > [!NOTE]  
@@ -176,7 +177,7 @@ System Center 2012 Configuration Manager のオペレーティング システ�
 
 -   プロバイダーがリモート サーバーにインストールされている場合は、サイト サーバーとリモート プロバイダーに WDS をインストールする必要があります。  
 
-###  <a name="a-namebkmkwdsanddhcpa-considerations-when-you-have-wds-and-dhcp-on-the-same-server"></a><a name="BKMK_WDSandDHCP"></a> 同じサーバー上に、WDS と DHCP がある場合の考慮事項  
+###  <a name="BKMK_WDSandDHCP"></a> 同じサーバー上に、WDS と DHCP がある場合の考慮事項  
  DHCP を実行するサーバーで配布ポイントを同時にホストする場合は、次の構成の問題を考慮する必要があります。  
 
 -   アクティブなスコープを持つ、機能している DHCP サーバーが必要です。 Windows 展開サービスは PXE を使用しますが、PXE には DHCP サーバーが必要です。  
@@ -208,10 +209,10 @@ System Center 2012 Configuration Manager のオペレーティング システ�
     > [!NOTE]  
     >  さらに、サーバーで DHCP の承認が必要な場合、サーバーで DHCP クライアント用のポート 68 を開く必要があります。  
 
-##  <a name="a-namebkmksupportedosa-supported-operating-systems"></a><a name="BKMK_SupportedOS"></a> サポート対象のオペレーティング システム  
+##  <a name="BKMK_SupportedOS"></a> サポート対象のオペレーティング システム  
  「[クライアントとデバイスでサポートされるオペレーティング システム](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)」でサポート対象クライアント オペレーティング システムとして示されているすべての Windows オペレーティング システムは、オペレーティング システム展開に対応しています。  
 
-##  <a name="a-namebkmksupporteddiskconfiga-supported-disk-configurations"></a><a name="BKMK_SupportedDiskConfig"></a> 対応するディスク構成  
+##  <a name="BKMK_SupportedDiskConfig"></a> 対応するディスク構成  
  次の表は、Configuration Manager オペレーティング システムの展開での使用がサポートされている参照コンピューターおよび展開先コンピューターのハード ディスク構成の組み合わせを示します。  
 
 |参照コンピューターのハード ディスク構成|展開先コンピューターのハード ディスク構成|  
@@ -237,9 +238,4 @@ System Center 2012 Configuration Manager のオペレーティング システ�
 
 ## <a name="next-steps"></a>次のステップ
 [オペレーティング システムの展開の準備](../get-started/prepare-for-operating-system-deployment.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

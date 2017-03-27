@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager へのアップグレード| Microsoft Docs"
 description: "System Center 2012 Configuration Manager を実行しているサイトおよび階層から適切に一括アップグレードを実行するための手順を説明します。"
 ms.custom: na
-ms.date: 2/23/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
-ms.openlocfilehash: 49e3a9d6f4b8e1afbb76fcba33a7fb58e5a6b13f
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
+ms.openlocfilehash: ca07b46db0967ca03cc5e858b835d2c2108f1210
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -34,6 +34,7 @@ System Center 2012 Configuration Manager を実行しているサイトおよび
  > System Center Configuration Manager のサイトと階層のインフラストラクチャの管理において、*アップグレード*、*更新*、および*インストール* という用語は&3; つの異なる概念を説明するものです。 各用語の使用方法については、「[サイトと階層のインフラストラクチャでのアップグレード、更新、およびインストールについて](/sccm/core/understand/upgrade-update-install)」を参照してください。
 
 ##  <a name="bkmk_path"></a> 一括アップグレード パス  
+
 **バージョン 1606 へのアップグレード**  
 2016 年 12 月 15 日に、バージョン 1606 の基準メディアが再リリースされ、追加のアップグレード シナリオのサポートが追加されました。 この新しいリリースでは、次のバージョンを System Center Configuration Manager バージョン 1606 の正規ライセンス版にアップグレードできます。  
 -   System Center Configuration Manager バージョン 1606 の評価版
@@ -78,8 +79,8 @@ System Center Configuration Manager へのアップグレードに必要な**サ
 
 サイト システムの役割をホストするために使うサーバー オペレーティング システムについて確認します。  
 
--   System Center 2012 Configuration Manager でサポートされている一部の古いオペレーティング システムは System Center Configuration Manager でサポートされていないため、アップグレードする前に、これらのオペレーティング システム上のサイト システムの役割を再配置するか削除する必要があります。  
--   Configuration Manager の前提条件チェッカーでは、サイト サーバーやリモート コンピューターでのサイト システムの役割の前提条件は検証されません。  
+-   System Center 2012 Configuration Manager でサポートされている一部の古いオペレーティング システムは System Center Configuration Manager でサポートされていないため、アップグレードする前に、これらのオペレーティング システム上のサイト システムの役割を再配置するか削除する必要があります。 「[サイト システム サーバーでサポートされるオペレーティング システム](../../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)」の文書を参照してください。   
+-   Configuration Manager の前提条件チェッカーでは、サイト サーバーやリモート サイト システムでのサイト システムの役割の前提条件は検証されません。  
 
 サイト システムの役割をホストする各コンピューターについて、必要な前提条件を確認します。  
 

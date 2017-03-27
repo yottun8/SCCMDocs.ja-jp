@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
-ms.openlocfilehash: 92d3c215569916a5557309d7f488aa88f387da92
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: c3ca3b895d54b6dc886068b92b39d0d95c466de2
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -207,6 +207,11 @@ ms.lasthandoff: 03/09/2017
 -   **プライマリ サイト**: 有効    
 -   セカンダリ サイト: 利用不可  
 
+**期限切れの MDM 一括登録パッケージのレコードの削除**: このタスクを利用し、登録証明書の有効期限切れ後、古い一括登録証明書と対応するプロファイルを削除します。 詳細については、「[証明書プロファイルの作成](/sccm/protect/deploy-use/create-certificate-profiles)」をご覧ください。
+-   **中央管理サイト**: 有効
+-   **プライマリ サイト**: 有効
+-   セカンダリ サイト: 利用不可
+
 **非アクティブ クライアントの探索データの削除**: このタスクは、非アクティブ クライアントの探索データをデータベースから削除する場合に使用します。 クライアントが不使用としてフラグ付けされたときに、クライアントのステータスに設定されている構成によって、クライアントは非アクティブとしてマークされます。
 
 このタスクは、Configuration Manager クライアントであるリソースでしか動作しません。 期限切れの探索データ レコードをすべて削除する **[期限切れの探索データの削除]** タスクとは異なります。 このタスクを&1; つのサイトで実行すると、階層内のすべてのサイトのデータベースからそのデータが削除されます。 詳細については、「 [System Center Configuration Manager でクライアント ステータスを構成する方法](../../../core/clients/deploy/configure-client-status.md)」をご覧ください。  
@@ -242,7 +247,7 @@ ms.lasthandoff: 03/09/2017
 **孤立したクライアントの展開状態レコードの削除**: このタスクは、クライアントの展開状態に関する情報を含むテーブルを定期的に消去する場合に使用します。 このタスクにより、古い、または使用停止になったデバイスに関連付けられたレコードが削除されます。  
 -   **中央管理サイト**: 有効    
 -   **プライマリ サイト**: 有効    
--   セカンダリ サイト: 利用不可 
+-   セカンダリ サイト: 利用不可
 
 **アプリケーションの使用されていないリビジョンの削除**: このタスクは、参照されなくなったアプリケーションのリビジョンを削除する場合に使用します。 詳細については、「[System Center Configuration Manager でアプリケーションを修正して置き換える方法](../../../apps/deploy-use/revise-and-supersede-applications.md)」を参照してください。  
 

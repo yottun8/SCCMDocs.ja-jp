@@ -17,8 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
-ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
+ms.sourcegitcommit: 79135bcea4b0ed21fe8017045226f393a1e09dac
+ms.openlocfilehash: dd1ccc6ac0e9f4add38f2431c13c6b5a5c8e1357
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 次のタスク シーケンス ステップは、Configuration Manager のタスク シーケンスに追加できます。 タスク シーケンスの編集については、「 [Edit a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence)」を参照してください。  
 
 
-##  <a name="a-namebkmkapplydataimagea-apply-data-image-task-sequence-step"></a><a name="BKMK_ApplyDataImage"></a> [データ イメージの適用] タスク シーケンス ステップ  
+##  <a name="BKMK_ApplyDataImage"></a> [データ イメージの適用] タスク シーケンス ステップ  
  [ **データ イメージの適用** ] タスク シーケンス ステップを使用して、データ イメージを指定された対象パーティションにコピーします。  
 
  このステップは Windows PE でのみ実行されます。 このステップは標準のオペレーティング システムでは実行できません。 このアクションのタスク シーケンス変数の詳細については、「[Task sequence action variables](task-sequence-action-variables.md)」 (タスク シーケンスのアクション変数) を参照してください。  
@@ -71,7 +72,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **イメージを適用する前にパーティションのすべてのコンテンツを削除する**  
  このオプションを選択すると、イメージのインストール前に対象パーティションのすべてのファイルが削除されます。 パーティションのコンテンツを削除しないことにより、このステップを使用して、以前にターゲットにしたパーティションに追加コンテンツを適用できます。  
 
-##  <a name="a-namebkmkapplydriverpackagea-apply-driver-package"></a><a name="BKMK_ApplyDriverPackage"></a> ドライバー パッケージの適用  
+##  <a name="BKMK_ApplyDriverPackage"></a> ドライバー パッケージの適用  
  [ **ドライバー パッケージの適用** ] タスク シーケンス ステップを使用して、ドライバー パッケージ内のすべてのドライバーをダウンロードし、Windows オペレーティング システムにインストールします。
 
  [ **ドライバー パッケージの適用** ] タスク シーケンス ステップでは、ドライバー パッケージ内のすべてのデバイス ドライバーを Windows セットアップで使用できるようにします。 **[オペレーティング システムの適用]**  ステップと **[Windows と ConfigMgr のセットアップ]** ステップの間のタスク シーケンスにこのステップを追加して、ドライバー パッケージ内のデバイス ドライバーを Windows で使用可能にすることができます。 通常、[ **ドライバー パッケージの適用** ] タスク シーケンス ステップは、順番上、[ **ドライバーの自動適用** ] タスク シーケンス ステップの後に置かれます。 [ **ドライバー パッケージの適用** ] タスク シーケンス ステップは、スタンドアロンのメディア展開シナリオでも便利です。  
@@ -114,7 +115,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **署名されていないドライバーの無人インストールが許可されているバージョンの Windows でドライバーの無人インストールを行う**  
  参照コンピューターで署名されていないドライバーを Windows がインストールすることを許可するには、このオプションを選択します。  
 
-##  <a name="a-namebkmkapplynetworksettingsa-apply-network-settings-step"></a><a name="BKMK_ApplyNetworkSettings"></a> ネットワーク設定の適用ステップ  
+##  <a name="BKMK_ApplyNetworkSettings"></a> ネットワーク設定の適用ステップ  
  [ **ネットワーク設定の適用** ] タスク シーケンス ステップを使用すると、対象のコンピューターに対してネットワークまたはワークグループの構成情報を指定できます。 指定された値は適切な応答ファイル形式で保存され、[ **Windows と ConfigMgr のセットアップ** ] タスク シーケンス ステップの実行中に Windows セットアップによって使用されます。  
 
  このタスク シーケンスのステップは標準のオペレーティング システムまたは Windows PE で実行されます。 このアクションのタスク シーケンス変数の詳細については、「 [Apply Network Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyNetworkSettings)」を参照してください。  
@@ -148,7 +149,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **アダプター設定**  
  コンピューターの各ネットワーク アダプターのネットワーク構成を指定します。 [ **新規** ] をクリックして [ **ネットワーク設定** ] ダイアログ ボックスを開き、ネットワーク設定を指定します。 以前の [ **ネットワーク設定のキャプチャ** ] タスク シーケンスのステップでネットワーク設定がキャプチャされた場合は、ネットワーク アダプターに対して以前の設定が適用され、このステップで指定された設定は適用されません。 ネットワーク設定が過去にキャプチャされていない場合は、[ **ネットワーク設定の適用** ] ステップで指定された設定が Windows のデバイス列挙の順番にネットワーク アダプターに適用されます。  
 
-##  <a name="a-namebkmkapplyoperatingsystemimagea-apply-operating-system-image"></a><a name="BKMK_ApplyOperatingSystemImage"></a> オペレーティング システム イメージの適用  
+##  <a name="BKMK_ApplyOperatingSystemImage"></a> オペレーティング システム イメージの適用  
  対象コンピューターにオペレーティング システムをインストールするには、[ **オペレーティング システム イメージの適用** ] タスク シーケンス ステップを使用します。 このタスク シーケンス ステップは、オペレーティング システムのインストールにオペレーティング システムのイメージまたはインストール パッケージのどちらを使用しているかによって、一連のアクションを実行します。  
 
  [ **オペレーティング システム イメージの適用** ] ステップは、オペレーティング システム イメージを使用する場合に次のアクションを実行します。  
@@ -231,7 +232,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 
 -   **変数に格納されている論理ドライブ文字** – Windows PE によりパーティションに割り当てられたドライブ文字を含むタスク シーケンス変数を指定します。 この変数は通常、[ **ディスクのフォーマットとパーティション作成** ] タスク シーケンス アクションにある [ **パーティションのプロパティ** ] ダイアログ ボックスの [詳細設定] セクションで設定されます。  
 
-##  <a name="a-namebkmkapplywindowssettingsa-apply-windows-settings"></a><a name="BKMK_ApplyWindowsSettings"></a> Windows 設定の適用  
+##  <a name="BKMK_ApplyWindowsSettings"></a> Windows 設定の適用  
  [ **Windows 設定の適用** ] タスク シーケンス ステップを使用すると、対象のコンピューターに対して Windows 設定を構成できます。 指定された値は適切な応答ファイル形式で保存され、[ **Windows と ConfigMgr のセットアップ** ] タスク シーケンス ステップの実行中に Windows セットアップによって使用されます。  
 
  このタスク シーケンス ステップは Windows PE でのみ実行されます。 このステップは標準のオペレーティング システムでは実行できません。 このアクションのタスク シーケンス変数の詳細については、「 [Apply Windows Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyWindowsSettings)」を参照してください。  
@@ -277,7 +278,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **タイム ゾーン**  
  対象のコンピューターに構成するタイム ゾーンを指定します。 この値は、[ **Windows 設定のキャプチャ** ] タスク シーケンス ステップでキャプチャされた値によって上書きされます。  
 
-##  <a name="a-namebkmkautoapplydriversa-auto-apply-drivers"></a><a name="BKMK_AutoApplyDrivers"></a> ドライバーの自動適用  
+##  <a name="BKMK_AutoApplyDrivers"></a> ドライバーの自動適用  
  オペレーティング システムの展開の一部としてドライバーを適合およびインストールするには、[ **ドライバーの自動適用** ] タスク シーケンス ステップを使用します。  
 
  [ **ドライバーの自動適用** ] タスク シーケンス ステップでは次の手順を実行します。  
@@ -336,7 +337,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 > [!IMPORTANT]  
 >  このオプションは、ドライバーの署名ポリシーを構成できないオペレーティング システムには適用されません。  
 
-##  <a name="a-namebkmkcapturenetworksettingsa-capture-network-settings"></a><a name="BKMK_CaptureNetworkSettings"></a> ネットワーク設定のキャプチャ  
+##  <a name="BKMK_CaptureNetworkSettings"></a> ネットワーク設定のキャプチャ  
  [ **ネットワーク設定のキャプチャ** ] タスク シーケンス ステップを使用して、タスク シーケンスを実行しているコンピューターから Microsoft ネットワーク設定をキャプチャします。 設定は、[ **ネットワーク設定の適用** ] タスク シーケンス ステップで構成する既定の設定を上書きする、タスク シーケンス変数に保存されます。  
 
  このタスク シーケンス ステップは、標準のオペレーティング システムでのみ実行できます。 Windows PE では実行できません。 このアクションのタスク シーケンス変数の詳細については、「 [Capture Network Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureNetworkSettings)」を参照してください。  
@@ -364,7 +365,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **ネットワーク アダプター構成を移行する**  
  対象のコンピューターのネットワーク アダプター構成をキャプチャします。 キャプチャされた情報には、グローバル ネットワーク設定、アダプター数、各アダプターに関連付けられているネットワーク設定が含まれます。 これらの設定には、DNS、WINS、IP、ポート フィルターに関連付けられている設定が含まれます。  
 
-##  <a name="a-namebkmkcaptureoperatingsystemimagea-capture-operating-system-image"></a><a name="BKMK_CaptureOperatingSystemImage"></a> オペレーティング システム イメージのキャプチャ  
+##  <a name="BKMK_CaptureOperatingSystemImage"></a> オペレーティング システム イメージのキャプチャ  
  参照コンピューターから&1; つ以上のイメージをキャプチャし、指定したネットワーク共有上にある WIM ファイルに保存するには、[ **オペレーティング システム イメージのキャプチャ** ] タスク シーケンス ステップを使用します。 次に、オペレーティング システム イメージの追加ウィザードを使用して、イメージベースのオペレーティング システムの展開に使用できるように、この .WIM ファイルを Configuration Manager にインポートします。  
 
  参照コンピューターの各ボリューム (ドライブ) は、.wim ファイル内に別イメージとしてキャプチャされます。 参照コンピューターに複数のボリュームがある場合、作成される WIM ファイルには、ボリュームごとに異なるイメージが含まれています。 NTFS または FAT32 としてフォーマットされているボリュームのみがキャプチャされます。 その他のフォーマットのボリュームおよび USB のボリュームはスキップされます。  
@@ -407,7 +408,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **オペレーティング システム イメージのキャプチャ アカウント**  
  指定したネットワーク共有へのアクセス許可がある Windows アカウントを入力する必要があります。 その Windows アカウントの名前を指定するには、[ **設定** ] をクリックします。  
 
-##  <a name="a-namebkmkcaptureuserstatea-capture-user-state"></a><a name="BKMK_CaptureUserState"></a> ユーザー状態のキャプチャ  
+##  <a name="BKMK_CaptureUserState"></a> ユーザー状態のキャプチャ  
  ユーザー状態移行ツール (USMT) を使用して、タスク シーケンスを実行しているコンピューターからユーザーの状態と設定をキャプチャするには、[ **ユーザー状態のキャプチャ** ] タスク シーケンス ステップを使用します。 このタスク シーケンス ステップは、[ **ユーザー状態の復元** ] タスク シーケンス ステップと共に使用します。 USMT 3.0.1 以降では、このオプションにより Configuration Manager が生成および管理する暗号化キーを使った USMT 状態ストアの暗号化が必ず行われます。  
 
  オペレーティング システムを展開するときに、ユーザー状態の移行を管理する方法の詳細については、「[Manage user state](../get-started/manage-user-state.md)」 (ユーザー状態の管理) を参照してください。  
@@ -473,7 +474,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **ボリューム シャドウ コピー サービス (VSS) を使用してキャプチャする**  
  このオプションを指定すると、ファイルが他のアプリケーションによる編集のためにロックされている場合でもそのファイルをキャプチャできます。  
 
-##  <a name="a-namebkmkcapturewindowssettingsa-capture-windows-settings"></a><a name="BKMK_CaptureWindowsSettings"></a> Windows 設定のキャプチャ  
+##  <a name="BKMK_CaptureWindowsSettings"></a> Windows 設定のキャプチャ  
  [ **Windows 設定のキャプチャ** ] タスク シーケンス ステップを使用して、タスク シーケンスを実行しているコンピューターから Windows 設定をキャプチャします。 設定は、[ **Windows 設定の適用** ] タスク シーケンス ステップで構成する既定の設定を上書きする、タスク シーケンス変数に保存されます。  
 
  このタスク シーケンスのステップは Windows PE または標準のオペレーティング システムで実行されます。 このアクションのタスク シーケンス変数の詳細については、「 [Capture Windows Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureWindowsSettings)」を参照してください。  
@@ -504,7 +505,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **タイム ゾーンを移行する**  
  コンピューターのタイム ゾーン設定をキャプチャするには、このオプションを選択します。  
 
-##  <a name="a-namebkmkcheckreadinessa-check-readiness"></a><a name="BKMK_CheckReadiness"></a> 準備の確認  
+##  <a name="BKMK_CheckReadiness"></a> 準備の確認  
  [ **準備の確認** ] タスク シーケンス ステップを使用して、指定した展開の前提条件を対象のコンピューターが満たしていることを確認します。  
 
 ### <a name="details"></a>説明  
@@ -536,7 +537,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **現在の OS の更新を確認する**  
  対象のコンピューターにインストールされているオペレーティング システムが、指定された要件を満たしていることを確認するには、この設定を選択します。 既定では、この設定が選択され、 **CLIENT**という値が設定されています。  
 
-##  <a name="a-namebkmkconnecttonetworkfoldera-connect-to-network-folder"></a><a name="BKMK_ConnectToNetworkFolder"></a> ネットワーク フォルダーへの接続  
+##  <a name="BKMK_ConnectToNetworkFolder"></a> ネットワーク フォルダーへの接続  
  共有ネットワーク フォルダーへの接続を作成するには、[ **ネットワーク フォルダーへの接続** ] タスク シーケンス ステップを使用します。  
 
  このタスク シーケンス ステップは標準のオペレーティング システムまたは Windows PE で実行できます。 このアクションのタスク シーケンス変数の詳細については、「 [Connect to Network Folder Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ConnecttoNetworkFolder)」を参照してください。  
@@ -552,7 +553,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 
 -   このステップの実行のために必要な条件を指定する。  
 
-##  <a name="a-namebkmkconvertdisktodynamica-convert-disk-to-dynamic"></a><a name="BKMK_ConvertDisktoDynamic"></a> ディスクをダイナミックに変換  
+##  <a name="BKMK_ConvertDisktoDynamic"></a> ディスクをダイナミックに変換  
  [ **ダイナミック ディスクに変換** ] タスク シーケンス ステップを使用して、ベーシック ディスク タイプからダイナミック ディスク タイプに物理ディスクを変換します。  
 
  このステップは標準のオペレーティング システムまたは Windows PE で実行できます。 このアクションのタスク シーケンス変数の詳細については、「 [Convert Disk to Dynamic Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ConvertDisk)」を参照してください。  
@@ -577,7 +578,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **ディスク番号**  
  変換するディスクの物理ディスク番号。  
 
-##  <a name="a-namebkmkdisablebitlockera-disable-bitlocker"></a><a name="BKMK_DisableBitLocker"></a> BitLocker の無効化  
+##  <a name="BKMK_DisableBitLocker"></a> BitLocker の無効化  
  現在のオペレーティング システム ドライブ、または特定のドライブの BitLocker 暗号化を無効にするには、[ **BitLocker の無効化** ] タスク シーケンス ステップを使用します。 この操作では、キー プロテクターがハード ドライブ上にクリア テキストで表示されますが、ドライブの内容は解読されません。 結果として、このアクションはほぼ瞬時に完了します。  
 
 > [!NOTE]  
@@ -610,7 +611,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **特定のドライブ**  
  特定のドライブで BitLocker を無効にします。 ドロップダウン リストを使用して、BitLocker を無効にするドライブを指定します。  
 
-##  <a name="a-namebkmkdownloadpackagecontenta-download-package-content"></a><a name="BKMK_DownloadPackageContent"></a> パッケージ コンテンツのダウンロード  
+##  <a name="BKMK_DownloadPackageContent"></a> パッケージ コンテンツのダウンロード  
  **[パッケージ コンテンツのダウンロード]** タスク シーケンスのステップを使用して、次のパッケージの種類のいずれかをダウンロードします。  
 
 -   オペレーティング システム イメージ  
@@ -664,7 +665,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **パッケージのダウンロードに失敗した場合に、リストにある他のパッケージのダウンロードを続行する**  
  パッケージのダウンロードに失敗した場合に、リスト内の次のパッケージに進み、ダウンロードを開始するように指定します。  
 
-##  <a name="a-namebkmkenablebitlockera-enable-bitlocker"></a><a name="BKMK_EnableBitLocker"></a> BitLocker の有効化  
+##  <a name="BKMK_EnableBitLocker"></a> BitLocker の有効化  
  ハードドライブの少なくとも&2; つのパーティション上の BitLocker 暗号化を無効にするには、[ **BitLocker の有効化** ] を使用します。 片方のアクティブなパーティションには Windows のブートストラップ コードを格納します。 もう片方のパーティションにはオペレーティング システムを格納します。 ブートストラップのパーティションは暗号化されていない必要があります。  
 
  Windows PE のドライブで BitLocker を有効にするには、[ **BitLocker の事前プロビジョニング** ] タスク シーケンス ステップを使用します。 詳細については、このトピックの「 [BitLocker の事前プロビジョニング](#BKMK_PreProvisionBitLocker) 」セクションを参照してください。  
@@ -738,7 +739,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 
  大容量のハード ドライブを暗号化する場合、暗号化処理の完了には数時間かかる場合があります。 このオプションを選択しないと、タスク シーケンスは直ちに続行されます。  
 
-##  <a name="a-namebkmkformatandpartitiondiska-format-and-partition-disk"></a><a name="BKMK_FormatandPartitionDisk"></a> ディスクのフォーマットとパーティション作成  
+##  <a name="BKMK_FormatandPartitionDisk"></a> ディスクのフォーマットとパーティション作成  
  [ **ディスクのフォーマットとパーティション作成** ] タスク シーケンス ステップを使用して、対象となっているコンピューター上に指定したディスクのフォーマットとパーティション作成を行います。  
 
 > [!IMPORTANT]  
@@ -791,7 +792,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 
  パーティションを削除するには、削除するパーティションを選択してから、[ **削除**] をクリックします。  
 
-##  <a name="a-namebkmkinstallapplicationa-install-application"></a><a name="BKMK_InstallApplication"></a> アプリケーションのインストール  
+##  <a name="BKMK_InstallApplication"></a> アプリケーションのインストール  
  タスク シーケンスの一環としてアプリケーションをインストールするには、[ **アプリケーションのインストール** ] タスク シーケンス ステップを使用します。 このステップでは、タスク シーケンス ステップで指定された一連のアプリケーション、またはタスク シーケンス変数のダイナミック リストにより指定された一連のアプリケーションをインストールできます。 このステップが実行されると、アプリケーションのインストールはポリシーのポーリング間隔を待たずにすぐ開始されます。  
 
  インストールされるアプリケーションは、次の条件を満たしている必要があります。  
@@ -872,7 +873,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **アプリケーションのインストールに失敗した場合は、一覧にあるその他のアプリケーションのインストールを続行します。**  
  この設定は個々のアプリケーションのインストールが失敗してもステップを続行することを指定します。 この設定が指定されると、インストールのエラーが発生したとしても、タスク シーケンスは続行されます。 これが指定されておらず、インストールが失敗すると、タスク シーケンス ステップは即座に終了します。  
 
-##  <a name="a-namebkmkinstalldeploymenttoolsa-install-deployment-tools"></a><a name="BKMK_InstallDeploymentTools"></a> 展開ツールのインストール  
+##  <a name="BKMK_InstallDeploymentTools"></a> 展開ツールのインストール  
  Sysprep 展開ツールを含む Configuration Manager パッケージをインストールするには、[**展開ツールのインストール**] タスク シーケンス ステップを使用します。  
 
 ### <a name="details"></a>説明  
@@ -901,7 +902,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 
 -   Windows Server 2003 SP2  
 
-##  <a name="a-namebkmkinstallpackagea-install-package"></a><a name="BKMK_InstallPackage"></a> パッケージのインストール
+##  <a name="BKMK_InstallPackage"></a> パッケージのインストール
 
  タスク シーケンスの一環としてソフトウェアをインストールするには、[ **パッケージアプリケーションのインストール** ] タスク シーケンス ステップを使用します。 このステップが実行されると、インストールはポリシーのポーリング間隔を待たずにすぐ開始されます。  
 
@@ -981,7 +982,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **ソフトウェア パッケージのインストールに失敗した場合に、一覧にある他のパッケージのインストールを続行する**  
  この設定は個々のソフトウェア パッケージのインストールが失敗してもステップを続行することを指定します。 この設定が指定されると、インストールのエラーが発生したとしても、タスク シーケンスは続行されます。 これが指定されておらず、インストールが失敗すると、タスク シーケンス ステップは即座に終了します。  
 
-##  <a name="a-namebkmkinstallsoftwareupdatesa-install-software-updates"></a><a name="BKMK_InstallSoftwareUpdates"></a> ソフトウェア更新プログラムのインストール  
+##  <a name="BKMK_InstallSoftwareUpdates"></a> ソフトウェア更新プログラムのインストール  
  ソフトウェア更新プログラムを対象コンピューターにインストールするには、[ **ソフトウェア更新プログラムのインストール** ] タスク シーケンスのステップを使用します。 このタスク シーケンス ステップが実行されるまで、対象のコンピューターは適用可能なソフトウェア更新プログラムが評価されません。 実行されると、インストール先のコンピューターでは、Configuration Manager で管理されている他のクライアントと同様に、ソフトウェアの更新状態が評価されます。 特に、このステップは、コンピューターが現在メンバーであるコレクションを対象としたソフトウェア更新プログラムのみをインストールします。  
 >  [!IMPORTANT]
 >ソフトウェア更新プログラムのインストール タスク シーケンス ステップを使用する場合は、パフォーマンスをより向上させるために、Windows Update エージェントの最新バージョンをインストールすることを強くお勧めします。
@@ -1027,7 +1028,7 @@ Configuration Manager バージョン 1606 以降では、キャッシュされ�
 新しいタスク シーケンス変数 SMSTSSoftwareUpdateScanTimeout は、Configuration Manager バージョン 1606 で導入されたものです。この変数では、タスク シーケンスの「ソフトウェア更新プログラム インストール」ステップの間に、ソフトウェア更新プログラムのスキャンのタイムアウトを制御できます。 既定値は 30 分です。 組み込みのタスク シーケンス変数の詳細については、「[タスク シーケンス組み込み変数](task-sequence-built-in-variables.md)」を参照してください。
 
 
-##  <a name="a-namebkmkjoindomainorworkgroupa-join-domain-or-workgroup"></a><a name="BKMK_JoinDomainorWorkgroup"></a> ドメインまたはワークグループへの参加  
+##  <a name="BKMK_JoinDomainorWorkgroup"></a> ドメインまたはワークグループへの参加  
  対象コンピューターをワークグループまたはドメインに追加するには、[ **ドメインまたはワークグループへの参加** ] タスク シーケンス ステップを使用します。  
 
  このタスク シーケンス ステップは、標準のオペレーティング システムでのみ実行できます。 Windows PE では実行できません。 このタスク シーケンス アクション用のタスク シーケンス変数の詳細については、「 [Join Domain or Workgroup Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_JoinDomainWorkgroup)」を参照してください。  
@@ -1062,7 +1063,7 @@ Configuration Manager バージョン 1606 以降では、キャッシュされ�
 
  *ドメイン\アカウント*  
 
-## <a name="a-namebkmkprepareconfigmgrclientforcapturea-prepare-configmgr-client-for-capture"></a><a name="BKMK_PrepareConfigMgrClientforCapture"></a> ConfigMgr クライアントのキャプチャの準備  
+## <a name="BKMK_PrepareConfigMgrClientforCapture"></a> ConfigMgr クライアントのキャプチャの準備  
 イメージ作成プロセスでのキャプチャの準備として、参照コンピューター上の Configuration Manager クライアントを削除したり、クライアントを構成したりするには、**[ConfigMgr クライアントのキャプチャの準備]** ステップを使います。
 
 Configuration Manager バージョン 1610 以降の ConfigMgr クライアントの準備手順では、キー情報だけではなく、Configuration Manager クライアントが完全に削除されます。 タスク シーケンスでキャプチャしたオペレーティング システム イメージを展開すると、毎回新しい Configuration Manager クライアントがインストールされます。  
@@ -1100,7 +1101,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
  **説明**  
  このステップで実行されるアクションの詳細情報。  
 
-##  <a name="a-namebkmkpreparewindowsforcapturea-prepare-windows-for-capture"></a><a name="BKMK_PrepareWindowsforCapture"></a> Windows のキャプチャの準備  
+##  <a name="BKMK_PrepareWindowsforCapture"></a> Windows のキャプチャの準備  
  参照コンピューターでオペレーティング システム イメージをキャプチャするときに使用する Sysprep オプションを指定するには、[ **Windows のキャプチャの準備** ] タスク シーケンス ステップを使用します。 このタスク シーケンスのアクションは Sysprep を実行してから、タスク シーケンスで指定した Windows PE ブート イメージにコンピューターを再起動します。 このアクションを正常に完了するには、参照コンピューターをドメインに参加させないでください。  
 
  このタスク シーケンス ステップは、標準のオペレーティング システムでのみ実行できます。 Windows PE では実行できません。 このタスク シーケンス アクション用のタスク シーケンス変数の詳細については、「 [Prepare Windows for Capture Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_PrepareWindowsCapture)」を参照してください。  
@@ -1128,7 +1129,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
  **アクティブ化フラグをリセットしない**  
  このオプションをオンにすると、Sysprep によってプロダクト アクティベーション フラグがリセットされなくなります。  
 
-##  <a name="a-namebkmkpreprovisionbitlockera-pre-provision-bitlocker"></a><a name="BKMK_PreProvisionBitLocker"></a> BitLocker の事前プロビジョニング  
+##  <a name="BKMK_PreProvisionBitLocker"></a> BitLocker の事前プロビジョニング  
  Windows PE のドライブで BitLocker を有効にするには、[ **BitLocker の事前プロビジョニング** ] タスク シーケンス ステップを使用します。 使用されているドライブ領域のみが暗号化されるため、暗号化にかかる時間が大幅に短くなります。 オペレーティング システムのインストール後に [BitLocker の有効化](#BKMK_EnableBitLocker) タスク シーケンス ステップを使用することで、キー管理オプションを適用します。 このステップは Windows PE でのみ実行されます。 このステップは標準のオペレーティング システムでは実行できません。  
 
 > [!IMPORTANT]  
@@ -1157,7 +1158,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
  **TPM がないか、TPM が有効ではない場合は、コンピューターでこの手順はスキップされます。**  
  コンピューターのハードウェアが TPM をサポートしていない場合や TPM が有効でない場合にドライブの暗号化をスキップするには、このオプションを選択します。 たとえば、仮想マシンにオペレーティング システムを展開するときに、このオプションを使用することができます。  
 
-##  <a name="a-namebkmkreleasestatestorea-release-state-store"></a><a name="BKMK_ReleaseStateStore"></a> 状態ストアのリリース  
+##  <a name="BKMK_ReleaseStateStore"></a> 状態ストアのリリース  
  キャプチャ処理または復元処理が完了したことを、状態移行ポイントに通知するには、[ **状態ストアのリリース** ] タスク シーケンス ステップを使用します。 [状態ストアのリリース] タスク シーケンス ステップは、状態移行ポイントおよびユーザー状態移行ツール (USMT) を使用してユーザー状態を移行するときに、[ **状態ストアの要求**]、[ **ユーザー状態のキャプチャ**]、および [ **ユーザー状態の復元** ] の各タスク シーケンス ステップと共に使用します。  
 
  オペレーティング システムを展開するときに、ユーザー状態の移行を管理する方法の詳細については、「[Manage user state](../get-started/manage-user-state.md)」 (ユーザー状態の管理) を参照してください。  
@@ -1188,7 +1189,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
  **説明**  
  このステップで実行されるアクションの詳細情報。  
 
-##  <a name="a-namebkmkrequeststatestorea-request-state-store"></a><a name="BKMK_RequestStateStore"></a> 状態ストアの要求  
+##  <a name="BKMK_RequestStateStore"></a> 状態ストアの要求  
  コンピューターから状態をキャプチャするとき、またはコンピューターに状態を保存するときに [ **状態ストアの要求** ] タスク シーケンス ステップを使用して、状態移行ポイントへのアクセスを要求します。  
 
  オペレーティング システムを展開するときに、ユーザー状態の移行を管理する方法の詳細については、「[Manage user state](../get-started/manage-user-state.md)」 (ユーザー状態の管理) を参照してください。  
@@ -1236,7 +1237,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
  **コンピューター アカウントで状態ストアに接続できない場合、ネットワーク アクセス アカウントを使用する**  
  Configuration Manager クライアントがコンピューター アカウントを使用して SMP 状態ストアにアクセスできない場合、Configuration Manager ネットワーク アクセス アカウント資格情報を使用して状態移行ポイントに接続されるように指定します。 他のコンピューターがネットワーク アクセス アカウントを使用して保存された状態にアクセスできる可能性があるため、このオプションは安全性が低くなりますが、対象コンピューターがドメインに参加していない場合はこのオプションが必要になる場合があります。  
 
-##  <a name="a-namebkmkrestartcomputera-restart-computer"></a><a name="BKMK_RestartComputer"></a> コンピューターの再起動  
+##  <a name="BKMK_RestartComputer"></a> コンピューターの再起動  
  [ **コンピューターの再起動** ] タスク シーケンス ステップを使用して、タスク シーケンスを実行しているコンピューターを再起動します。 コンピューターは再起動後、タスク シーケンスを次の手順から自動的に続行します。  
 
  このステップは、標準のオペレーティング システムでも、Windows PE でも実行できます。 このタスク シーケンス アクションのタスク シーケンス変数の詳細については、「[Restart Computer Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RestartComputer)」 (コンピューターの再起動タスク シーケンス アクション変数) を参照してください。  
@@ -1273,7 +1274,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
  **メッセージ表示のタイムアウト**  
  対象コンピューターが再起動されるまでにユーザーに与えられる時間を秒単位で指定します。 既定の時間は&60; 秒です。  
 
-##  <a name="a-namebkmkrestoreuserstatea-restore-user-state"></a><a name="BKMK_RestoreUserState"></a> ユーザー状態の復元  
+##  <a name="BKMK_RestoreUserState"></a> ユーザー状態の復元  
  [ **ユーザー状態の復元** ] タスク シーケンス ステップを使用すると、ユーザー状態移行ツール (USMT) を起動して、対象コンピューターにユーザー状態と設定を復元できます。 このタスク シーケンス ステップは、[ **ユーザー状態のキャプチャ** ] タスク シーケンス ステップと共に使用します。  
 
  オペレーティング システムを展開するときに、ユーザー状態の移行を管理する方法の詳細については、「[Manage user state](../get-started/manage-user-state.md)」 (ユーザー状態の管理) を参照してください。  
@@ -1322,7 +1323,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
  **詳細ログ記録を有効にする**  
  詳細なログ ファイル情報を生成するには、このオプションを有効にします。 状態を復元すると、ログ Loadstate.log が生成され、既定では \windows\system32\ccm\logs フォルダー内にあるタスク シーケンス ログ フォルダーに保存されます。  
 
-##  <a name="a-namebkmkruncommandlinea-run-command-line"></a><a name="BKMK_RunCommandLine"></a> コマンド ラインの実行  
+##  <a name="BKMK_RunCommandLine"></a> コマンド ラインの実行  
  [ **コマンド ラインの実行** ] タスク シーケンス ステップを使用して、コマンドラインを実行します。  
 
  このステップは、標準のオペレーティング システムでも、Windows PE でも実行できます。 このタスク シーケンス アクション用のタスク シーケンス変数の詳細については、「 [Run Command Line Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RunCommand)」を参照してください。  
@@ -1396,7 +1397,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
 > [!IMPORTANT]  
 >  ユーザー アカウントを指定する [ **コマンド ラインの実行** ] タスク シーケンス アクションが Windows PE で実行されると、Windows PE はドメインに参加できないため、このアクションは失敗します。 エラーは smsts.log ファイルに記録されます。  
 
-##  <a name="a-namebkmkrunpowershellscripta-run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a> PowerShell スクリプトの実行  
+##  <a name="BKMK_RunPowerShellScript"></a> PowerShell スクリプトの実行  
  指定した PowerShell スクリプトを実行するには、[ **PowerShell スクリプトの実行** ] タスク シーケンス ステップを使用します。  
 
  このステップは、標準のオペレーティング システムでも、Windows PE でも実行できます。 Windows PE でのこのステップを実行するには、ブート イメージで PowerShell を有効にする必要があります。 ブート イメージのプロパティの [ **オプション コンポーネント** ] タブで、Windows PowerShell (WinPE PowerShell) を有効にすることができます。 ブート イメージを変更する方法について詳しくは、「[Manage boot images](../get-started/manage-boot-images.md)」 (ブート イメージの管理) を参照してください。  
@@ -1453,7 +1454,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
 > [!IMPORTANT]  
 >  PowerShell 1.0 は [未定義] および [バイパス] の実行ポリシーをサポートしていません。  
 
-##  <a name="a-namebkmksetdynamicvariablesa-set-dynamic-variables"></a><a name="BKMK_SetDynamicVariables"></a> 動的変数の設定  
+##  <a name="BKMK_SetDynamicVariables"></a> 動的変数の設定  
  [ **動的変数の設定** ] タスク シーケンス ステップを使用して次の手順を実行します。  
 
 1.  コンピューターとその環境から情報を収集し、指定したタスク シーケンス変数に情報を設定します。  
@@ -1521,7 +1522,7 @@ true と評価される規則に&1; つ以上の変数を設定して指定す�
 > [!IMPORTANT]  
 >  [動的変数の設定] ステップでタスク シーケンスをインポートするときに、変数の値に対して [ **秘密の値** ] が選択されている場合、タスク シーケンスをインポートするときに値が削除されます。 その結果、タスク シーケンスをインポートした後、動的変数の値を再入力する必要があります。  
 
-##  <a name="a-namebkmksettasksequencevariablea-set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a> タスク シーケンス変数の設定  
+##  <a name="BKMK_SetTaskSequenceVariable"></a> タスク シーケンス変数の設定  
  [タスク シーケンス変数の設定] タスク シーケンス ステップを使用して、タスク シーケンスで使用する変数を設定します。 ****  
 
  このステップは、標準のオペレーティング システムでも、Windows PE でも実行できます。 タスク シーケンス変数はタスク シーケンス アクションによって読み取られます。また、これらのアクションの動作はタスク シーケンス変数によって指定されます。 特定のタスク シーケンス変数の詳細については、「[Task sequence action variables](task-sequence-action-variables.md)」 (タスク シーケンス アクション変数) を参照してください。  
@@ -1549,7 +1550,7 @@ true と評価される規則に&1; つ以上の変数を設定して指定す�
  **値**  
  タスク シーケンス変数に関連付けられた値。 この値は、%<varname\>% という構文で、別のタスク シーケンス変数にすることができます。  
 
-##  <a name="a-namebkmksetupwindowsandconfigmgra-setup-windows-and-configmgr"></a><a name="BKMK_SetupWindowsandConfigMgr"></a> Windows と ConfigMgr のセットアップ  
+##  <a name="BKMK_SetupWindowsandConfigMgr"></a> Windows と ConfigMgr のセットアップ  
  [ **Windows と ConfigMgr のセットアップ** ] タスク シーケンス ステップを使用すると、Windows PE から新しいオペレーティング システムへの移行を実施できます。 このタスク シーケンス ステップはあらゆるオペレーティング システム展開に必要です。 このステップでは、Configuration Manager クライアントを新しいオペレーティング システムにインストールして、新しいオペレーティング システムでタスク シーケンスの実行を継続できるようにします。  
 
  このステップは Windows PE でのみ実行されます。 このステップは標準のオペレーティング システムでは実行できません。 このタスク シーケンス アクション用のタスク シーケンス変数の詳細については、「[Windows と ConfigMgr のセットアップ タスク シーケンス アクション変数](task-sequence-action-variables.md#BKMK_SetupWindows)」を参照してください。  
@@ -1629,7 +1630,7 @@ true と評価される規則に&1; つ以上の変数を設定して指定す�
 
  クライアントのインストール時に使用するコマンド ライン オプションを指定できます。 たとえば、「 **/skipprereq: silverlight.exe** 」と入力すると、CCMSetup.exe に Microsoft Silverlight 前提条件をインストールしないように通知できます。 CCMSetup.exe の使用可能なコマンド ライン オプションの詳細については、「[クライアント インストールのプロパティについて](../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
 
-##  <a name="a-namebkmkupgradeosa-upgrade-operating-system"></a><a name="BKMK_UpgradeOS"></a> オペレーティング システムのアップグレード  
+##  <a name="BKMK_UpgradeOS"></a> オペレーティング システムのアップグレード  
  **[オペレーティング システムのアップグレード]** タスク シーケンス ステップを使用して、既存の Windows 7、Windows 8、Windows 8.1、または Windows 10 オペレーティング システムを Windows 10 にアップグレードします。  
 
  このタスク シーケンス ステップは、標準のオペレーティング システムでのみ実行できます。 Windows PE では実行できません。  
@@ -1693,9 +1694,4 @@ true と評価される規則に&1; つ以上の変数を設定して指定す�
  更新プログラムの検索、ダウンロード、インストールなどの動的な更新操作をセットアップで行うかどうかを指定します (/DynamicUpdate コマンド ライン オプションに対応)。 この設定は、Configuration Manager ソフトウェア更新プログラムと互換性がありませんが、WSUS (スタンドアロン) または Windows Update を使用して更新プログラムを処理するときに有効にすることができます。  
 
  **ポリシーを上書きして既定の Microsoft Update を使う**: リアルタイムでローカル ポリシーを一時的に無効にして動的な更新操作を実行し、コンピューターに Windows Update から更新プログラムを取得するには、この設定を選択します。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

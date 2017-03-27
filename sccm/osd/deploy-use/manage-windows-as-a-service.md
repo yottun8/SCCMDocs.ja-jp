@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
-ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 57478d9a9ee5f933000018b47e8a11a80e281252
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -32,7 +33,7 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
  サービスとしての Windows を管理する場合は、次のセクションを参考にします。
 
-##  <a name="a-namebkmkprerequisitesa-prerequisites"></a><a name="BKMK_Prerequisites"></a> 必要条件  
+##  <a name="BKMK_Prerequisites"></a> 必要条件  
  Windows 10 サービス ダッシュボードにデータを表示するには、次の操作を行う必要があります。  
 
 -   ソフトウェアの更新管理のために、Windows 10 コンピューターで、Windows Server Update Services (WSUS) の Configuration Manager ソフトウェア更新プログラムを使用する必要があります。 コンピューターで、Windows Update for Business (または Windows Insider) を使用してソフトウェアの更新管理を行っている場合、そのコンピューターは Windows 10 サービス プランでは評価されません。 詳細については、「 [Integration with Windows Update for Business in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md)」をご覧ください。  
@@ -58,7 +59,7 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
 -   ソフトウェア更新プログラムが構成および同期されている必要があります。 Windows 10 の機能のアップグレードを Configuration Manager コンソールで使用するには、**アップグレード**分類を選択し、ソフトウェア更新プログラムを同期する必要があります。 詳細については、「[Prepare for software updates management](../../sum/get-started/prepare-for-software-updates-management.md)」 (ソフトウェア更新管理の準備) を参照してください。  
 
-##  <a name="a-namebkmkservicingdashboarda-windows-10-servicing-dashboard"></a><a name="BKMK_ServicingDashboard"></a> Windows 10 サービス ダッシュボード  
+##  <a name="BKMK_ServicingDashboard"></a> Windows 10 サービス ダッシュボード  
  Windows 10 サービス ダッシュボードは、その環境の Windows 10 コンピューターに関する情報、アクティブなサービス プラン、コンプライアンス情報などを提供します。 Windows 10 サービス ダッシュボードのデータは、サービス接続ポイントがインストールされていることに依存します。 ダッシュボードには、次のタイルがあります。  
 
 -   **Windows 10 の使用状況のタイル**: Windows 10 のパブリック ビルドの内訳を提供します。 Windows Insider のビルドは、そのサイトにまだ認識されていないすべてのビルドと同様、 **[その他]** として一覧表示されます。 サービス接続ポイントによって、Windows のビルドに関する情報を示すメタデータがダウンロードされ、その後、そのデータが探索データと比較されます。  
@@ -91,7 +92,7 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
  アップグレードが条件を満たしている場合、サービス プランによってアップグレードが展開パッケージに追加され、配布ポイントに配布され、サービス プランで構成した設定に基づいてコレクションに展開されます。  Windows 10 サービス ダッシュボードのサービス プランの監視のタイルで展開を監視することができます。 詳細については、「[Monitor software updates](../../sum/deploy-use/monitor-software-updates.md)」 (ソフトウェア更新プログラムの監視) を参照してください。  
 
-##  <a name="a-namebkmkservicingplana-windows-10-servicing-plan"></a><a name="BKMK_ServicingPlan"></a> Windows 10 サービス プラン  
+##  <a name="BKMK_ServicingPlan"></a> Windows 10 サービス プラン  
  Windows 10 CB を展開するとき、1 つ以上のサービス プランを作成して、環境に必要な展開リングを定義し、その後 Windows 10 サービス ダッシュボードで監視することができます。   
 サービス プランは、 **アップグレード** ソフトウェア更新分類のみを使用し、Windows 10 の累積的な更新プログラムを使用しません。 これらの更新プログラムは、ソフトウェア更新プログラムのワークフローを使用して展開する必要があります。  サービス プランに対するエンド ユーザー エクスペリエンスは、サービス プランで構成する設定を含め、ソフトウェア更新プログラムの場合と同じです。  
 
@@ -203,7 +204,7 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
     4.  **送信の優先順位**: 展開パッケージの送信の優先順位を指定します。 Configuration Manager は、展開パッケージを配布ポイントに送信するときに、展開パッケージの送信の優先順位を使用します。 展開パッケージは優先順位に従って送信されます。[高]、[中]、[低] の順です。 パッケージの優先順位が同じ場合は、作成された順に送信されます。 バックログがない場合、パッケージは優先順位に関係なく直ちに処理されます。  
 
-11. [配布ポイント] ページで、更新ファイルをホストする配布ポイントまたは配布ポイント グループを指定します。 配布ポイントの詳細については、「 [Distribution point configurations](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations)」を参照してください。  
+11. [配布ポイント] ページで、更新ファイルをホストする配布ポイントまたは配布ポイント グループを指定します。 配布ポイントの詳細については、「[配布ポイントの構成](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs)」を参照してください。
 
     > [!NOTE]  
     >  このページは、ソフトウェア更新プログラムの新しい展開パッケージを作成する場合にのみ、使用することができます。  
@@ -220,7 +221,7 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
  ウィザードの完了後、サービス プランが実行されます。 指定された条件に一致する更新プログラムがソフトウェア更新プログラム グループに追加されて、更新プログラムがサイト サーバーのコンテンツ ライブラリにダウンロードされ、構成された配布ポイントに配布されて、ターゲット コレクション内のクライアントに展開されます。  
 
-##  <a name="a-namebkmkmodifyservicingplana-modify-a-servicing-plan"></a><a name="BKMK_ModifyServicingPlan"></a> サービス プランの変更  
+##  <a name="BKMK_ModifyServicingPlan"></a> サービス プランの変更  
 Windows 10 サービス ダッシュボードから基本的なサービス プランを作成した後、または既存のサービス プランの設定を変更する必要がある場合、サービス プランのプロパティに移動することができます。
 
 > [!NOTE]
@@ -274,9 +275,4 @@ Windows 10 サービス ダッシュボードから基本的なサービス プ�
 
     > [!NOTE]  
     >  ソフトウェア更新プログラムに関する最新のアラートは、[ソフトウェア ライブラリ **** ] ワークスペースの [ソフトウェア更新プログラム **** ] ノードで確認することができます。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

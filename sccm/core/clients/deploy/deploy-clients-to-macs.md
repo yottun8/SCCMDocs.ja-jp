@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c74b553ab76a2b77b0d893151351132da05a640d
-ms.openlocfilehash: 76ce5f413f406088862fb310bbea24140317ca06
-ms.lasthandoff: 01/04/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 9cab5b91a94e8bf2ad96a8a706f46c58e2a3d712
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 01/04/2017
 
 このトピックでは、Mac コンピューターに Configuration Manager クライアントを展開して管理する方法について説明します。 Mac コンピューターにクライアントを展開する前に構成する必要がある内容の詳細については、「[Mac コンピューターにクライアント ソフトウェアを展開するための準備](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients)」を参照してください。
 
-Mac コンピューター用の新しいクライアントをインストールする場合は、Configuration Manager の更新プログラムをインストールして、Configuration Manager コンソールで新しいクライアント情報を反映する必要もあります。 
+Mac コンピューター用の新しいクライアントをインストールする場合は、Configuration Manager の更新プログラムをインストールして、Configuration Manager コンソールで新しいクライアント情報を反映する必要もあります。
 
 これらの手順には、クライアント証明書をインストールするための&2; つのオプションがあります。 Mac コンピューターのクライアント証明書の詳細については、「[Mac コンピューターにクライアント ソフトウェアを展開するための準備](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#certificate-requirements)」を参照してください。  
 
@@ -84,7 +84,7 @@ Mac コンピューター用の新しいクライアントをインストール�
 >  構成マネージャー クライアント設定の詳細については、「[System Center Configuration Manager でクライアント設定を構成する方法](../../../core/clients/deploy/configure-client-settings.md)」をご覧ください。  
 
 ## <a name="download-the-client-source-files-for-macs"></a>Mac 用のクライアント ソース ファイルをダウンロードする  
-  
+
 1.  Mac OS X クライアント ファイル パッケージ ( **ConfigmgrMacClient.msi**) をダウンロードして、Windows を実行しているコンピューターに保存します。  
 
      このファイルは Configuration Manager インストール メディアに含まれていません。 このファイルは、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=525184)からダウンロードできます。  
@@ -95,7 +95,7 @@ Mac コンピューター用の新しいクライアントをインストール�
 
 4.  Mac コンピューターで、Macclient.dmg ファイルを実行して、ローカル ディスクのフォルダーにファイルを抽出します。  
 
-5.  フォルダーに Ccmsetup と CMClient.pkg ファイルが抽出されていることと、Tools という名前のフォルダーが作成され、CMDiagnostics、CMUninstall、CMAppUtil and CMEnroll ツールが含まれていることを確認します。 
+5.  フォルダーに Ccmsetup と CMClient.pkg ファイルが抽出されていることと、Tools という名前のフォルダーが作成され、CMDiagnostics、CMUninstall、CMAppUtil and CMEnroll ツールが含まれていることを確認します。
 
     -  **Ccmsetup**: Mac コンピューターに Configuration Manager クライアントをインストールします。  
 
@@ -108,7 +108,7 @@ Mac コンピューター用の新しいクライアントをインストール�
     -   **CMEnroll**: Mac コンピューター用のクライアント証明書を要求してインストールし、Configuration Manager クライアントをインストールできるようにします。   
 
 ## <a name="install-the-client-and-then-enroll-the-client-certificate-on-the-mac"></a>Mac にクライアントをインストールし、クライアント証明書を登録する  
-  
+
 [Mac コンピューターの登録ウィザード](#enroll-the-client-with-the-mac-computer-enrollment-wizard)で個々のクライアントを登録することができます。
 
 多数のクライアントを登録できる自動化の場合、[CMEnroll ツール](#client-and-certificate-automation-with-cmenroll)を使用します。   
@@ -124,7 +124,7 @@ Mac コンピューター用の新しいクライアントをインストール�
 
         -   'ドメイン\名前' (たとえば、'contoso\mnorth')  
 
-        -   'user@domain' にする必要があります。 例: 'mnorth@contoso.com'  
+        -   'user@domain'. 例: 'mnorth@contoso.com'  
 
             > [!IMPORTANT]  
             >  電子メール アドレスを使用して **[ユーザー名]** フィールドを指定すると、Configuration Manager により、電子メール アドレスのドメイン名と登録プロキシ ポイント サーバーの既定の名前を使用して **[サーバー名]** フィールドが自動的に指定されます。 このドメイン名とサーバー名が登録プロキシ ポイント サーバーの名前と一致しない場合は、Mac コンピューターを登録するときに使用する正しい名前をユーザーに知らせます。  
@@ -156,7 +156,7 @@ CMEnroll ツールでクライアントのインストール、クライアン�
 
     -   'ドメイン\名前' (たとえば、'contoso\mnorth')  
 
-    -   'user@domain' にする必要があります。 例: 'mnorth@contoso.com'  
+    -   'user@domain'. 例: 'mnorth@contoso.com'  
 
      ユーザー名と、対応するパスワードは、Mac クライアント証明書テンプレートに対する読み取り権限と登録権限が付与された Active Directory ユーザー アカウントと一致している必要があります。  
 
@@ -196,12 +196,12 @@ CMEnroll ツールでクライアントのインストール、クライアン�
 > -   構成マネージャー クライアントのインストールで作成される Bill of Materials (BOM) ファイルとプロパティ一覧 (.plist) ファイル  
 > -   /Library/Application Support/Microsoft/CCM/Logs フォルダーの内容  
 >   
->  CmDiagnostics で収集された情報は、コンピューターのデスクトップに保存される zip ファイルに追加され、cmdiag-*<ホスト名\>***-***<日付と時刻\>*.zip という名前が付けられます。  
+>  CmDiagnostics で収集された情報は、コンピューターのデスクトップに保存される zip ファイルに追加され、cmdiag-*<ホスト名\>***-***&gt;日付と時刻\>*.zip という名前が付けられます。***
 
 
 ##  <a name="use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager"></a>Configuration Manager とは独立した証明書要求およびインストール方法を使用する  
 
-まず、「[Mac コンピューターにクライアント ソフトウェアを展開するための準備](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients)」の以下の特定のタスクを実行します。 
+まず、「[Mac コンピューターにクライアント ソフトウェアを展開するための準備](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients)」の以下の特定のタスクを実行します。
 
 1. [Web サーバー証明書をサイト システム サーバーに展開する](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#deploy-a-web-server-certificate-to-site-system-servers)
 

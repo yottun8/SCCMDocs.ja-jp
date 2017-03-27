@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a8cb3c9850b183eec156c37a181c04088b71805e
-ms.openlocfilehash: 40837306816639ff8cea8930fec75b05edc5164a
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: ddf2ad1cae51c1e36df5a6d86822e2b9abe604e2
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -65,7 +66,7 @@ System Center Configuration Manager では、ロール ベース管理を使用�
 > [!IMPORTANT]  
 >  サイト間のレプリケーションの遅延のために、サイトが役割に基づいた管理権限の変更を受信できない場合があります。 サイト間のデータベース レプリケーションを監視する方法については、「[System Center Configuration Manager のサイト間でのデータの転送](../../core/servers/manage/data-transfers-between-sites.md)」トピックをご覧ください。  
 
-##  <a name="a-namebkmkplanrolesa-security-roles"></a><a name="bkmk_Planroles"></a> セキュリティ ロール  
+##  <a name="bkmk_Planroles"></a> セキュリティ ロール  
  セキュリティ ロールは、管理ユーザーにセキュリティのアクセス許可を付与するために使用します。 セキュリティ ロールは、管理タスクを実行できるように管理ユーザーに割り当てられる、セキュリティのアクセス許可のグループです。 これらのセキュリティのアクセス許可では、管理ユーザーが実行できる管理操作、および特定のオブジェクトの種類に付与されるアクセス許可を定義します。 セキュリティ運用方法として、最低限のアクセス許可を提供するセキュリティ ロールを割り当てることをお勧めします。  
 
  Configuration Manager には、一般的な管理タスクのグループをサポートするさまざまな組み込みのセキュリティ ロールが用意されています。また、特定のビジネス要件に対応するように、独自のカスタム セキュリティ ロールを作成することもできます。 組み込みのセキュリティ ロールの例を次に示します。  
@@ -79,7 +80,7 @@ System Center Configuration Manager では、ロール ベース管理を使用�
 > [!TIP]  
 >  組み込みのセキュリティ ロールおよび作成したカスタム セキュリティ ロールの一覧を、セキュリティ ロールの説明を含めて Configuration Manager コンソールに表示できます。 ロールを表示するには、**[管理]** ワークスペースで **[セキュリティ]** を展開し、**[セキュリティ ロール]** を選択します。  
 
- 各セキュリティ ロールに、さまざまなオブジェクトの種類に対する個別のアクセス許可があります。 たとえば、*アプリケーション MMM* セキュリティ ロールには、アプリケーションに関して、承認、作成、削除、変更、フォルダーの変更、オブジェクトの移動、読み取り/展開、セキュリティ スコープの設定の各アクセス許可があります。
+ 各セキュリティ ロールに、さまざまなオブジェクトの種類に対する個別のアクセス許可があります。 たとえば、*アプリケーション作成者*セキュリティ ロールには、アプリケーションに関して、承認、作成、削除、変更、フォルダーの変更、オブジェクトの移動、読み取り、レポート実行、セキュリティ スコープの設定の各アクセス許可があります。
 
  組み込みのセキュリティ ロールのアクセス許可は変更できませんが、ロールをコピーして変更し、この変更を新しいカスタム セキュリティ ロールとして保存できます。 別の階層 (テスト ネットワークなど) からエクスポートしたセキュリティ ロールをインポートすることもできます。 セキュリティ ロールとそのアクセス許可を確認し、組み込みのセキュリティ ロールを使用するのか、独自のカスタム セキュリティ ロールを作成する必要があるかを判断します。  
 
@@ -95,7 +96,7 @@ System Center Configuration Manager では、ロール ベース管理を使用�
 
 ロール ベース管理のセキュリティ ロールを作成して構成する方法については、「[System Center Configuration Manager のロール ベース管理の構成](../../core/servers/deploy/configure/configure-role-based-administration.md)」トピックの「[カスタム セキュリティ ロールの作成](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole)」と「[セキュリティ ロールの構成](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecRole)」をご覧ください。  
 
-##  <a name="a-namebkmkplancola-collections"></a><a name="bkmk_planCol"></a> コレクション  
+##  <a name="bkmk_planCol"></a> コレクション  
  コレクションでは、管理ユーザーが表示または管理できる、ユーザーとコンピューターのリソースを指定します。 たとえば、アプリケーションを展開したりリモート コントロールを実行する管理ユーザーの場合、この管理者に対して、これらのリソースが含まれているコレクションへのアクセスを許可するセキュリティ ロールを割り当てる必要があります。 ユーザーまたはデバイスのコレクションを選択できます。  
 
  コレクションの詳細については、「[System Center Configuration Manager のコレクションの概要](../../core/clients/manage/collections/introduction-to-collections.md)」をご覧ください。  
@@ -112,7 +113,7 @@ System Center Configuration Manager では、ロール ベース管理を使用�
 
 ロール ベース管理のコレクションを構成する方法については、「[System Center Configuration Manager のロール ベース管理の構成](../../core/servers/deploy/configure/configure-role-based-administration.md)」トピックの「[セキュリティを管理するコレクションの構成](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl)」をご覧ください。  
 
-##  <a name="a-namebkmkplanscopea-security-scopes"></a><a name="bkmk_PlanScope"></a> セキュリティ スコープ  
+##  <a name="bkmk_PlanScope"></a> セキュリティ スコープ  
  セキュリティ スコープは、保護可能なオブジェクトへのアクセスを管理ユーザーに提供するために使用します。 セキュリティ スコープは、管理ユーザーにグループとして割り当てられる保護可能なオブジェクトの名前付きセットです。 セキュリティ保護可能なすべてのオブジェクトは&1; つ以上のセキュリティ スコープに割り当てられる必要があります。 Configuration Manager には次の&2; つの組み込みセキュリティ スコープがあります。  
 
 -   *すべて*: この組み込みのセキュリティ スコープで、すべてのスコープへのアクセス権を付与します。 このセキュリティ スコープにオブジェクトを割り当てることはできません。  
@@ -212,9 +213,4 @@ System Center Configuration Manager では、ロール ベース管理を使用�
 -   複数の管理ユーザーが、1 つのオブジェクトの種類の複数のインスタンスに対して異なるアクセス権を必要としている。 たとえば、ある管理ユーザー グループには特定のソフトウェアの更新プログラム グループに対する読み取りアクセス許可が必要で、別の管理ユーザー グループには別のソフトウェア更新プログラム グループに対する変更および削除アクセス許可が必要だとします。 これらのソフトウェア更新プログラム グループに対して、異なるセキュリティ スコープを作成します。  
 
 ロール ベース管理のセキュリティ スコープを構成する方法については、「[System Center Configuration Manager のロール ベース管理の構成](../../core/servers/deploy/configure/configure-role-based-administration.md)」トピックの「[オブジェクトのセキュリティ スコープの構成](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope)」をご覧ください。  
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 
