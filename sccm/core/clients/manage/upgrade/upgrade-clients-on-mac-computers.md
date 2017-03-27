@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 74c60941-5eae-4905-9e58-252bdb39df96
 caps.latest.revision: 10
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: 6bdc5cca01bf5a79a6177d7cf1de96b8ff2c2305
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -64,7 +65,7 @@ System Center Configuration Manager アプリケーションを使用して Mac 
 
  Configuration Manager の登録を使用せず、Configuration Manager とは独立したクライアント証明書をインストールする場合は、「[アップグレードしたクライアントが既存の証明書を使用するように構成する](#BKMK_UpgradingClient_MachineEnrollment)」を参照してください。  
 
-##  <a name="a-namebkmkupgradingclientmachineenrollmenta-configure-the-upgraded-client-to-use-an-existing-certificate"></a><a name="BKMK_UpgradingClient_MachineEnrollment"></a> Configure the upgraded client to use an existing certificate  
+##  <a name="BKMK_UpgradingClient_MachineEnrollment"></a> Configure the upgraded client to use an existing certificate  
  次の手順に従って、コンピューターの登録ウィザードの実行を回避し、アップグレードしたクライアントが既存のクライアント証明書を使用するように構成します。  
 
 -   Configuration Manager コンソールで、種類が **[Mac OS X]** の構成項目を作成します。  
@@ -102,9 +103,4 @@ System Center Configuration Manager アプリケーションを使用して Mac 
 -   構成項目を構成基準に追加し、Configuration Manager とは独立して証明書をインストールする構成基準をすべての Mac コンピューターに展開します。  
 
  Mac コンピューター用の構成項目を作成し、展開する方法の詳細については、「[System Center Configuration Manager クライアントを使用して管理されている Mac OS X デバイスの構成項目を作成する方法](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)」と「[System Center Configuration Manager で構成基準を展開する方法](../../../../compliance/deploy-use/deploy-configuration-baselines.md)」を参照してください。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

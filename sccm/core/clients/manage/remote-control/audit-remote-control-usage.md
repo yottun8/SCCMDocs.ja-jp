@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 5c975e69-0cc0-4afd-b7fb-b7182162a933
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: e3082e1d608f60a539fc58b0129132e33c8af833
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -61,9 +62,4 @@ System Center Configuration Manager のレポートを使用して、リモー�
 4.  レポートを選択 **リモート_コントロール - リモート_コントロール情報すべて**, 、[、 **ホーム** ] タブで、 **レポート グループ**, 、] をクリックして **実行** を開くには、 **リモート_コントロール - リモート_コントロール情報すべて** ウィンドウです。  
 
 5.  レポートのデータの確認が終わったら、レポート ウィンドウを閉じます。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

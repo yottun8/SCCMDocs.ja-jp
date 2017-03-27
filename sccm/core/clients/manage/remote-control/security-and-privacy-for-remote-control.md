@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 272ee86b-d3d9-4fd9-b5c4-73e490e1a1e4
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 342a58d2b7439f721381beb43188594b5278043d
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: 342a58d2b7439f721381beb43188594b5278043d
 
 このトピックには、System Center 2012 Configuration Manager のリモート コントロールのセキュリティとプライバシーの情報が含まれています。  
 
-##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-remote-control"></a><a name="BKMK_Security_HardwareInventory"></a> リモート コントロールのセキュリティのベスト プラクティス  
+##  <a name="BKMK_Security_HardwareInventory"></a> リモート コントロールのセキュリティのベスト プラクティス  
  ここでは、リモート コントロールを使用してクライアント コンピューターを管理するときのセキュリティのベスト プラクティスについて説明します。  
 
 |セキュリティのベスト プラクティス|説明|  
@@ -54,7 +55,7 @@ ms.openlocfilehash: 342a58d2b7439f721381beb43188594b5278043d
 
      Configuration Manager コンソールのインストールではなく、リモート コントロールのバイナリ ファイルをコピーしてから、コマンド プロンプトでリモート コントロールを実行すると、監査メッセージは送信されません。  
 
-##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-remote-control"></a><a name="BKMK_Privacy_HardwareInventory"></a> リモート コントロールのプライバシー情報  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> リモート コントロールのプライバシー情報  
  リモート コントロールを使用すると、Configuration Manager クライアント コンピューターでアクティブなセッションを表示することや、場合によってはそれらのコンピューターに保存されたあらゆる情報を表示することが可能です。 既定では、リモート コントロールは無効になっています。  
 
  リモート コントロールは、リモート コントロール セッションの開始前に明確に通知してユーザーの同意を得るように構成することができますが、ユーザーに許可を得たり気付かれたりすることなくユーザーを監視するように構成することもできます。 "表示のみ" アクセス レベルを構成して、リモート コントロールやフル コントロールでは何も変更できないようにすることができます。 リモート コントロール セッションで接続中の管理者のアカウントが表示されるので、コンピューターに接続しているユーザーを識別することができます。  
@@ -62,9 +63,4 @@ ms.openlocfilehash: 342a58d2b7439f721381beb43188594b5278043d
  既定では、Configuration Manager は、ローカルの Administrators グループにリモート コントロール権限を付与します。  
 
  リモート コントロールを構成する前に、プライバシー要件について検討してください。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

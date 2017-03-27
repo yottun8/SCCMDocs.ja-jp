@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 7d2bb377-1005-4a55-bd1f-b80a6d0b22e1
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: eea9faaac579ecafd67eaac05dc7ee7ca7819db7
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -61,9 +62,4 @@ ms.openlocfilehash: eea9faaac579ecafd67eaac05dc7ee7ca7819db7
      たとえば、次のコマンド ラインを使用してスクリプトを実行します。**at -f /tmp/upgrade.sh -m now + 5 minutes**  
 
  **upgrade.sh** スクリプトの実行が正常にスケジュールされたら、クライアントはソフトウェアの展開が正常に完了したことを示すステータス メッセージを送信します。 ただし、実際のクライアントのインストールは、遅延後に、コンピューターによって管理されます。 クライアントのアップグレードが完了したら、クライアント コンピューター上の **/var/opt/microsoft/scxcm.log** ファイルを調査してインストールを確認します。 さらに、Configuration Manager コンソールの **[資産とコンプライアンス]** ワークスペースの **[デバイス]** ノードでクライアントの詳細を表示することによって、クライアントがインストールされ、サイトと通信していることを確認できます。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

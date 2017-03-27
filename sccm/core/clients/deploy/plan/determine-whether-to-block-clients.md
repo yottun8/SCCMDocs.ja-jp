@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 54ef5fbb-521d-4ca5-a1c5-61e6f538d71e
 caps.latest.revision: 8
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: c1b3b3e7fe756ce3e0c82ffc15693999d8e817d2
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -36,7 +37,7 @@ ms.openlocfilehash: c1b3b3e7fe756ce3e0c82ffc15693999d8e817d2
 
  サイト システムが HTTPS クライアント接続に対応しており、公開キー インフラストラクチャで証明書失効リスト (CRL) がサポートされている場合、危険の可能性のある証明書に対しては、証明書失効が第 1 の防御ラインとなることを常に考慮してください。 Configuration Manager でクライアントをブロックすることは、階層を保護するための第 2 の防御ラインとなります。  
 
-##  <a name="a-namebkmkblockvscrla-considerations-for-blocking-clients"></a><a name="BKMK_Block_vs_CRL"></a> クライアントのブロックに関する考慮事項  
+##  <a name="BKMK_Block_vs_CRL"></a> クライアントのブロックに関する考慮事項  
 
 -   このオプションは、HTTP および HTTPS クライアント接続で使用できますが、クライアントが HTTP でサイトシステムに接続するときは、セキュリティが制限されます。  
 
@@ -71,9 +72,4 @@ ms.openlocfilehash: c1b3b3e7fe756ce3e0c82ffc15693999d8e817d2
 
     > [!NOTE]  
     >  IIS の証明書信頼リスト (CTL) を構成すると、IIS を実行するサイト システムを、未知のクライアントから一層保護できます。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

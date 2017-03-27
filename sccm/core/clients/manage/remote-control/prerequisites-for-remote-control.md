@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: eafa0d85935c2009cc63d17b06ed83a4666d7fac
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -65,9 +66,4 @@ System Center Configuration Manager のリモート コントロールには、�
 |クライアントでリモート コントロールが有効になっている必要があります。|既定では、Configuration Manager をインストールする場合にリモート コントロールは有効化されていません。 電源管理を有効化して構成する方法の詳細については、「[Configuring remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/configuring-remote-control.md)」(System Center Configuration Manager でリモート コントロールを構成する) を参照してください。|  
 |レポート サービス ポイント|リモート コントロールに対してレポートを実行するには、事前に Reporting Services ポイント サイト システムの役割がインストールされている必要があります。 詳細については、「[System Center Configuration Manager のレポート](../../../../core/servers/manage/reporting.md)」を参照してください。|  
 |リモート コントロールを管理するためのセキュリティのアクセス許可|Configuration Manager コンソールからコレクション リソースにアクセスしてリモート コントロール セッションを開始する場合: **コレクション** オブジェクトに対する **AMT の制御**、**読み取り**、**リソースの読み取り**、**リモート コントロール** のアクセス許可<br /><br /> [**リモート ツール オペレーター**] セキュリティ ロールには、Configuration Manager でリモート コントロールを管理するのに必要な、これらのアクセス許可が含まれます。<br /><br /> 詳細については、「[Configure role-based administration for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-role-based-administration.md)」(System Center Configuration Manager の役割ベースの管理の構成) を参照してください。<br /><br /> さらに、オプションを使用して、リモート_コントロールとリモート アシスタンスをリモート制御の許可されているビューの一覧を使用するためのアクセス許可を付与するユーザーを追加する必要があります **リモート_コントロールとリモート アシスタンスのあるユーザーが許可されている** で、 **リモート ツール** クライアント設定します。|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

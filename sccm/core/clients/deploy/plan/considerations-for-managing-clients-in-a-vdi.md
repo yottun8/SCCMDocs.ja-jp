@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 58251f6a4eebac4cba9f3d51f8d0aaad068c3ab8
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -48,9 +49,4 @@ System Center Configuration Manager では、次の仮想デスクトップ イ�
 >  保守モードの Windows Embedded クライアントを除き、仮想化環境で実行されていない Configuration Manager クライアントも、このランダム待機時間を使用します。 多くのクライアントが展開されている場合、この動作によって、ネットワーク帯域幅のピークを回避し、管理ポイントやサイト サーバーなどの Configuration Manager サイト システムの CPU 処理要件を減らすことができます。 待機時間の間隔は、Configuration Manager の機能によって変わります。  
 >   
 >  次のクライアント設定を使用して、必要なソフトウェア更新プログラムと必要なアプリケーション展開のランダム待機時間を既定で無効にできます。 **コンピューター エージェント**: **期限のランダム化を無効にする**。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
