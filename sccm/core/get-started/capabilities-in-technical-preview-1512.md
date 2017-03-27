@@ -15,9 +15,11 @@ caps.latest.revision: 6
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 7fff6f2807a679b621b736b8ad0b6561fb37affe
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1512 の機能
@@ -28,7 +30,7 @@ ms.openlocfilehash: 7fff6f2807a679b621b736b8ad0b6561fb37affe
 
  このバージョンでお試しいただける新機能を次に示します。  
 
-##  <a name="a-namebkmkdevicehealtha-device-health-attestation"></a><a name="bkmk_devicehealth"></a> デバイス正常性構成証明書  
+##  <a name="bkmk_devicehealth"></a> デバイス正常性構成証明書  
  Technical Preview 1512 以降、管理者は Configuration Manager コンソールで Windows 10 デバイス正常性構成証明書の状態を確認できます。  この機能は、Configuration Manager および Configuration Manager と Microsoft Intune の併用で利用できます。 デバイス正常性構成証明書により、管理者はクライアント コンピューターの BIOS、TPM、ブート ソフトウェア構成が信頼のおけるものであることを確認できます。 デバイス正常性構成証明書をサポートするために、クライアント デバイスは、TPM 2 を有効にして Win10 を実行している必要があります。 デバイス正常性構成証明書には、次のそれぞれに対応しているデバイスの数が表示されます。  
 
 -   起動時マルウェア対策  
@@ -43,7 +45,7 @@ ms.openlocfilehash: 7fff6f2807a679b621b736b8ad0b6561fb37affe
 
 デバイス正常性構成証明書のプレビューを表示するには、Configuration Manager コンソールで [**監視**] ワークスペースに移動し、[**セキュリティ**] ノードをクリックしてから [**正常性構成証明書**] をクリックします。  
 
-##  <a name="a-namebkmkviewtermsa-in-console-monitoring-for-terms-and-conditions"></a><a name="bkmk_viewterms"></a> 使用条件のコンソール内での監視  
+##  <a name="bkmk_viewterms"></a> 使用条件のコンソール内での監視  
 Technical Preview 1512 以降、Configuration Manager を Microsoft Intune と統合すると、Configuration Manager コンソールを使用して、IT 部門が構成した使用条件に同意したユーザーと同意していないユーザーを表示できます。  
 
 **概要情報を表示するには:**  
@@ -56,7 +58,7 @@ Technical Preview 1512 以降、Configuration Manager を Microsoft Intune と�
 
 2.  コンソールの下部にある [**展開**] タブを選び、展開を選んだら、[**状態の表示**] をクリックします。  
 
-##  <a name="a-namebkmkeppolicya-improvements-to-endpoint-protection-policy-settings"></a><a name="bkmk_EPpolicy"></a> Endpoint Protection のポリシー設定の機能強化  
+##  <a name="bkmk_EPpolicy"></a> Endpoint Protection のポリシー設定の機能強化  
 1512 Technical Preview では、Endpoint Protection マルウェア対策ポリシーに次の新しい設定が追加されました。  
 
 -   リアルタイム保護: **望ましくない可能性のあるアプリケーションのダウンロード時およびインストール前のブロック**  
@@ -90,9 +92,4 @@ Technical Preview 1512 以降、Configuration Manager を Microsoft Intune と�
 **Endpoint Protection ポリシーを使用するための前提条件:**  
 
 Endpoint Protection ポリシーを使用するには、Endpoint Protection クライアント設定を使用して、Endpoint Protection クライアントのインストールと管理をしておく必要があります。 これは、Windows 7、Windows 8、Windows 8.1 用の System Center Endpoint Protection クライアント、または Windows 10 用の管理されている Windows Defender を使用して行います。 「[System Center Configuration Manager での Endpoint Protection](../../protect/deploy-use/endpoint-protection.md)」を参照してください。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

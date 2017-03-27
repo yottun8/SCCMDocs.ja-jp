@@ -15,10 +15,11 @@ caps.latest.revision: 36
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
+ms.lasthandoff: 01/24/2017
+
 
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1605 の機能
@@ -35,7 +36,7 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
  **このバージョンでお試しいただける新機能を次に示します。**  
 
-##  <a name="a-namebkmkperappvpna-per-app-vpn-for-windows-10-devices"></a><a name="BKMK_PerAppVPN"></a> Windows 10 デバイス向けのアプリごとの VPN  
+##  <a name="BKMK_PerAppVPN"></a> Windows 10 デバイス向けのアプリごとの VPN  
  Configuration Manager と Intune を使用して管理されている Windows 10 デバイスの場合、Configuration Manager 管理コンソールで構成した VPN 接続を自動的に開くアプリの一覧を追加できます。 これらのアプリへの VPN トラフィックを制限するか、VPN 接続を介してすべてのトラフィックを許可し続けることができます。  
 
  **要件**:  
@@ -44,17 +45,17 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
 -   少なくとも 1 つのデバイスに展開されている Windows 10 の VPN プロファイル  
 
-##  <a name="a-namebkmkinstallsua-improvements-to-the-install-software-updates-task-sequence"></a><a name="BKMK_InstallSU"></a> ソフトウェア更新プログラムのインストール タスク シーケンスの向上  
+##  <a name="BKMK_InstallSU"></a> ソフトウェア更新プログラムのインストール タスク シーケンスの向上  
  ソフトウェア更新プログラムのインストール タスク シーケンスに次の改良が加えられています。  
 
 -   新しいタスク シーケンス変数 SMSTSSoftwareUpdateScanTimeout が使用可能になり、タスク シーケンスの「ソフトウェア更新プログラム インストール」ステップの間に、ソフトウェア更新プログラムのスキャンのタイムアウトを制御できます。 既定値は 30 分です。  
 
 -   ログ記録が改善されています。 smsts.log ログ ファイルには、ソフトウェア更新プログラムのインストール プロセス中に問題をトラブルシューティングするのに役立つその他のログ ファイルを参照する新しいログ エントリが格納されます。  
 
-##  <a name="a-namebkmkprepareconfigmgrclienta-improvements-to-the-prepare-configmgr-client-for-capture-task-sequence-step"></a><a name="BKMK_PrepareConfigMgrClient"></a> ConfigMgr クライアントのキャプチャの準備タスク シーケンス ステップの向上  
+##  <a name="BKMK_PrepareConfigMgrClient"></a> ConfigMgr クライアントのキャプチャの準備タスク シーケンス ステップの向上  
  ConfigMgr クライアントの準備手順で、キー情報だけではなく、Configuration Manager クライアントが完全に削除されるようになりました。 タスク シーケンスでキャプチャしたオペレーティング システム イメージを展開すると、毎回新しい Configuration Manager クライアントがインストールされます。  
 
-##  <a name="a-namebkmkgracea-grace-period-for-required-application-deployments"></a><a name="BKMK_Grace"></a> 必要なアプリケーション展開の猶予期間  
+##  <a name="BKMK_Grace"></a> 必要なアプリケーション展開の猶予期間  
  場合によっては、必要なアプリケーション展開のインストールに、設定した期限よりも多くの時間をユーザーに与えることができます。 たとえば、エンド ユーザーが休暇から戻って来たばかりの場合、期限切れのアプリケーションの展開がインストールされるまで、長時間待たなければならない場合があります。 ただし、必要なときにいつでもアプリケーションをすぐにインストールできます。  
 
  この問題を解決するため、Configuration Manager クライアント設定をコレクションに展開することで、**猶予期間**を定義できるようになりました。  
@@ -71,7 +72,7 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
  ソフトウェア更新プログラムの展開ウィザード、自動展開規則の作成ウィザード、およびプロパティ ページに、同様のオプションが追加されています。 ただし、現在、これらはこの Technical Preview には実装されていません。  
 
-##  <a name="a-namebkmkremotea-new-experience-for-remote-device-actions"></a><a name="BKMK_Remote"></a> リモート デバイスの操作の新しいエクスペリエンス  
+##  <a name="BKMK_Remote"></a> リモート デバイスの操作の新しいエクスペリエンス  
  Configuration Manager コンソールからリモート デバイスの操作を実行するため、エクスペリエンスが改善されました。  
 [**削除/ワイプ**]、[**パスコードのリセット**]、[**リモート ロック**]、および [**アクティブ化ロックのバイパス**] などの一般的なアクションは、[**資産とコンプライアンス**] ワークスペースからアクセスする [**リモート デバイスの操作**] メニューに移動しました。  
 
@@ -87,7 +88,7 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
  iOS のアクティブ化ロックのバイパスの詳細については、「[Help protect iOS devices with Activation Lock bypass for Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock)」(Configuration Manager のアクティブ化ロックのバイパスで iOS デバイスを保護する) の「**Current known issues with Activation Lock bypass in the Configuration Manager Technical Preview**」(Configuration Manager の Technical Preview におけるのアクティブ化ロックのバイパスの現在の既知の問題) セクションをご覧ください。  
 
-##  <a name="a-namebkmkwsfba-windows-store-for-business-apps"></a><a name="BKMK_WSFB"></a> ビジネス向け Windows ストアのアプリ  
+##  <a name="BKMK_WSFB"></a> ビジネス向け Windows ストアのアプリ  
  [ビジネス向け Windows ストア](https://www.microsoft.com/business-store)は、組織向けのアプリを検索して、個別に、または一括で購入できる場所です。 ストアを Configuration Manager に接続すると、一括購入したアプリを Configuration Manager コンソールから管理できます。例を挙げます。  
 
 -   購入したアプリの一覧を Configuration Manager に同期させることができます。  
@@ -158,7 +159,7 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 >   
 >  現在、Configuration Manager でオフライン ライセンス付きアプリを展開することはできません。  
 
-##  <a name="a-namebkmkvpp2a-general-improvements-for-volume-purchased-apps"></a><a name="BKMK_VPP2"></a> ボリューム購入アプリの全般的な向上  
+##  <a name="BKMK_VPP2"></a> ボリューム購入アプリの全般的な向上  
 
 -   このリリースでは、ビジネス向け Windows ストアおよび iOS App Store のボリューム購入アプリが同じビューの [**ストア アプリのライセンス情報**] に統合されています。  
 
@@ -170,14 +171,14 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
 -   ボリューム購入アプリの Apple VPP トークンの取得とアップロードに使用する Configuration Manager コンソール内の場所が変更されました。 これは、[**Cloud Services**] > [**Apple Volume Purchase Program のトークン**] ノードの下の [**管理者**] ワークスペースで行えます。  
 
-##  <a name="a-namebkmkvppa-enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a> エンタープライズ データ保護 (EDP)  
+##  <a name="BKMK_VPP"></a> エンタープライズ データ保護 (EDP)  
  エンタープライズ データ保護 (EDP) ポリシー (保護されているアプリ、EDP 保護レベル、およびネットワーク上の企業データを検索する方法を選択できるようにするなど) を展開するのに便利な構成項目を作成することができます。 EDP の詳細については、次のトピックを参照してください。  
 
 -   [エンタープライズ データ保護 (EDP) を使用した企業のデータの保護](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-edp)  
 
 -   [System Center Configuration Manager を使用したエンタープライズ データ保護 (EDP) ポリシーの作成と展開](https://technet.microsoft.com/itpro/windows/keep-secure/create-edp-policy-using-sccm)  
 
-##  <a name="a-namebkmkenda-end-users-can-install-apps-from-the-company-portal"></a><a name="BKMK_End"></a> エンド ユーザーはポータル サイトからアプリをインストールできる  
+##  <a name="BKMK_End"></a> エンド ユーザーはポータル サイトからアプリをインストールできる  
  オンプレミスの MDM は、System Center Configuration Manager バージョン 1511 で導入されました。 以前のバージョンでは、オンプレミスの MDM で管理されているデバイスへの**必須**インストールの展開目的で、MDM で管理された Windows 10 デバイスにアプリケーションを展開することができました。  
 
  このリリースでは、オンプレミスの MDM で管理された Windows 10 コンピューターのユーザーにアプリを**使用可能にする**目的で展開できるようになり、ユーザーはこれらのアプリをポータル サイトから自身でインストールできるようになりました。
@@ -268,12 +269,12 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
      会社のポータルを開くと、[**System Center Configuration Manager**] という認証ダイアログ ボックスが表示されます。ユーザーの Active Directory の資格情報を指定 (user@domain またはドメイン\ユーザーのいずれかの形式で) してログインします。  
 
-##  <a name="a-namebkmksw1a-new-tabs-for-updates-and-operating-systems-in-software-center"></a><a name="BKMK_SW1"></a> ソフトウェア センターの更新プログラムおよびオペレーティング システムの新しいタブ  
+##  <a name="BKMK_SW1"></a> ソフトウェア センターの更新プログラムおよびオペレーティング システムの新しいタブ  
  このリリースでは、ソフトウェア センター アプリケーションのレイアウトを改善するため、次の変更が加えられています。  
 
 -   [**アプリケーション**] タブは、[**更新**]、「**オペレーティング システム**」 (どちらも以前は 「**フィルター**」 一覧にありました)、および [**アプリケーション**] の&3; つの別々のタブに分割されています。  
 
-##  <a name="a-namebkmkservergroupsa-service-a--server-group"></a><a name="BKMK_ServerGroups"></a> サーバー グループの提供  
+##  <a name="BKMK_ServerGroups"></a> サーバー グループの提供  
  System Center Configuration Manager の Technical Preview バージョン 1511 には、コレクション内のすべてのデバイスがサーバー グループを構成するコレクションを作成する機能が含まれていました。 そして、サーバー グループにソフトウェアの更新プログラムを展開するときに使用するサーバー グループ設定を構成する、特定の時間に更新されるコンピューターの割合を制御する、および展開前および展開後の PowerShell スクリプトを構成してカスタム アクションを実行することができました。  
 
  System Center Configuration Manager の Technical Preview バージョン 1605 では、サーバー グループ内のコンピューターを定義した順番で更新できる機能と、サーバー グループ内のコンピューターの状態を表示するため強化された監視が追加されています。また、クライアントがソフトウェア更新プログラムのインストールに失敗し、他のクライアントのソフトウェア更新プログラムのインストールを妨げている場合に便利な、展開ロックを解除する機能も提供されています。  
@@ -340,7 +341,7 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
 2.  **[ホーム]** タブの **[展開]** グループで、**[サーバー グループ展開のロックを解除]** をクリックします。 クライアントがソフトウェア更新プログラムのインストールに失敗し他のクライアントのソフトウェア更新プログラムのインストールを妨げている場合は、展開のロックを手動でクリアできます。  
 
-##  <a name="a-namebkmkatpa-support-for-windows-defender-advanced-threat-protection-service"></a><a name="BKMK_ATP"></a> Windows Defender Advanced Threat Protection サービスのサポート  
+##  <a name="BKMK_ATP"></a> Windows Defender Advanced Threat Protection サービスのサポート  
  Windows Defender Advanced Threat Protection (ATP) は、企業が自社のネットワーク上の攻撃を検出、調査、および対応するのに役立つ新しいサービスです。 Windows Defender ATP の詳細は、[こちら](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection)をご覧ください。 Configuration Manager は、管理対象の Windows 10 Anniversary Edition クライアント デバイスのオンボードと監視に役立ちます。  
 
 ### <a name="try-it-now"></a>今すぐ試す  
@@ -407,7 +408,7 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
         -   **非オンボード**: ポリシーは適用されましたが、エージェントがポリシー オンボードを報告していません。  
 
-##  <a name="a-namebkmkdhaa-on-premises-device-health-attestation"></a><a name="BKMK_DHA"></a> オンプレミスのデバイス正常性構成証明書  
+##  <a name="BKMK_DHA"></a> オンプレミスのデバイス正常性構成証明書  
  オンプレミスのインフラストラクチャを使用して通信するように、Windows 10 デバイスの正常性構成証明書を構成できるようになりました。 管理者は、報告がクラウドを使用して行われるか、オンプレミスのリソースを使用して行われるかを指定できます。 正常性構成証明書の報告にオンプレミスが選択されている場合、サービスに URL を指定することができます。 これにより、インターネット アクセスを使用しないクライアント PC が、正常性構成証明書を使用してデバイスを有効化および管理できるようになります。  
 
 ### <a name="enable-health-attestation-for-on-premises-devices"></a>オンプレミス デバイス正常性構成証明書の有効化  
@@ -417,10 +418,10 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
 2.  **[オンプレミスの正常性構成証明書サービスの URL]** を指定し、**[OK]** をクリックします。  
 
-##  <a name="a-namebkmkrestartoptionsa-new-restart-options-for-windows-10-clients-after-software-update-installation"></a><a name="BKMK_RestartOptions"></a> Windows 10 クライアントにおけるソフトウェア更新プログラムのインストール後の新しい再起動オプション  
+##  <a name="BKMK_RestartOptions"></a> Windows 10 クライアントにおけるソフトウェア更新プログラムのインストール後の新しい再起動オプション  
  再起動の必要なソフトウェア更新プログラムが Configuration Manager により展開され、コンピューターにインストールされた場合、再起動が保留中としてスケジュールされ、再起動のダイアログ ボックスが表示されます。 現在、Windows 8 以降のコンピューターでは、再起動が保留中となっているときに、(再起動ダイアログから行う代わりに) Windows 電源オプションを使用してコンピューターをシャットダウンまたは再起動する場合、再起動ダイアログはコンピューターの再起動後もそのまま表示され、コンピューターも構成された期限までに再起動が必要になります。 この Technical Preview では、Configuration Manager ソフトウェアの更新のために再起動が保留中となっているときはいつでも Windows 10 コンピューターの Windows 電源オプションで [**更新と再起動**]および [**更新とシャットダウン**] のオプションを利用できるようになりました。 これらのオプションのいずれかを使用した場合、コンピューターの再起動後に再起動ダイアログは表示されません。  
 
-##  <a name="a-namebkmkimeia-pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a><a name="BKMK_IMEI"></a> IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言  
+##  <a name="BKMK_IMEI"></a> IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言  
  会社が所有するデバイスの International station Mobile Equipment Identity (IMEI) 番号をインポートすることでデバイスを識別できるようになりました。 デバイスの IMEI 番号を含むコンマ区切り値 (.csv) ファイルをアップロードするか、デバイス情報を手動で入力することができます。  iOS デバイスのシリアル番号をインポートすることもできます。  インポートされた情報によって登録するデバイスの所有権が "企業" として設定されます。  Intune ライセンスも、サービスにアクセスする各ユーザーに必要です。  
 
 ### <a name="try-it-out"></a>試してみましょう。  
@@ -469,9 +470,4 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
      [次へ] をクリックします。 ****  
 
 4.  ファイル インポートの結果を確認します。 以前にインポートした IMEI またはシリアル番号には、新しい詳細で更新された詳細があります。  [**次へ**] をクリックして続行するか、[**戻る**] をクリックして最新の詳細を保持して、ウィザードを完了します。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

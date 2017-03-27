@@ -2,7 +2,7 @@
 title: "診断データの表示 | Microsoft Docs"
 description: "診断および使用状況データを表示して、System Center Configuration Manager 階層に機密情報が含まれていないことを確認します。"
 ms.custom: na
-ms.date: 12/29/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 688e05aae0e0b15b54835f8d64a98487f4d7b64d
 ms.openlocfilehash: fcd7ac43f7b2d2c92d6aadd7c490f198ac99e5e6
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -36,7 +37,7 @@ ms.openlocfilehash: fcd7ac43f7b2d2c92d6aadd7c490f198ac99e5e6
 
 サービス接続ポイントがオフライン モードの場合は、サービス接続ツールを使用して、現在の診断および使用状況データをコンマ区切り値 (CSV) ファイルにエクスポートできます。 サービス接続ポイントで **-Export** パラメーターを使用してサービス接続ツールを実行します。  
 
-##  <a name="a-namebkmkhashesa-one-way-hashes"></a><a name="bkmk_hashes"></a> 一方向のハッシュ  
+##  <a name="bkmk_hashes"></a> 一方向のハッシュ  
 一部のデータは、任意の英数字の文字列で構成されています。 Configuration Manager は、一方向のハッシュを使用する SHA-256 アルゴリズムを使用して、機密データを収集していないことを確認します。 このアルゴリズムでは、収集と比較を目的として引き続きデータを使用できる状態にデータが維持されます。 たとえば、サイト データベースのテーブルの名前を収集するのではなく、テーブル名ごとに一方向のハッシュがキャプチャされます。 これにより、ユーザーが作成したカスタム テーブル名や、他社の製品のアドオンが非表示になります。 その後、製品に既定で付属している SQL テーブルの名前に対して同じ一方向のハッシュを行い、2 つのクエリの結果を比較して、ユーザーのデータベース スキーマと製品の既定値の差異を確認します。 これは、SQL スキーマへの変更が必要な更新プログラムの向上に役立てられます。  
 
 生データを表示するときには、共通のハッシュ値がデータの各行に表示されます。 これは階層 ID です。 このハッシュ値は、顧客またはソースを特定せずに、同じ階層内のデータを関連付けるのに使用されます。  
@@ -66,9 +67,4 @@ ms.openlocfilehash: fcd7ac43f7b2d2c92d6aadd7c490f198ac99e5e6
     $result = [Convert]::ToBase64String($hashedBytes)    
     return $result   
     ```  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

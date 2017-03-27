@@ -15,9 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 2e0338267ea9fdc639d57f93adda1e46aea80eec
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1511 の機能
@@ -28,7 +30,7 @@ ms.openlocfilehash: 2e0338267ea9fdc639d57f93adda1e46aea80eec
 
 このバージョンでお試しいただける新機能を次に示します。  
 
-##  <a name="a-namebkmkwufba-integration-with-windows-update-for-business-in-windows-10"></a><a name="BKMK_WUfB"></a> Windows 10 における Windows Update for Business との統合  
+##  <a name="BKMK_WUfB"></a> Windows 10 における Windows Update for Business との統合  
  Configuration Manager では、Windows Update for Business (WUfB) を介して直接接続されている Windows 10 コンピューターと、Windows 10 の更新プログラムとアップグレードを取得するために WSUS に接続されているコンピューターとを区別できるようになりました。  WUfB を介して接続されているコンピューターの場合、更新プログラムとアップグレードは、管理ユーザーによってグループ ポリシーまたは MDM ポリシーを使用して設定された間隔で管理でき、これらの更新プログラムやアップグレードを WUfB から直接インストールできます。    
 WUfB を介して接続されているコンピューターの場合、Configuration Manager で、対応ステータス (Windows Update や定義の更新プログラムを含む) についてレポートすることはできません。 また、Configuration Manager では、これらのコンピューターに Microsoft Update やサード パーティの更新プログラムを展開することもできません。  
 
@@ -52,7 +54,7 @@ WUfB を介して接続されているコンピューターの場合、Configura
 
 5.  WUfB を介して管理されているコンピューターの対応ステータスには **[不明]** と表示され、全体のコンプライアンス対応率をカウントする際に、これらのコンピューターは除外されます。  
 
-##  <a name="a-namebkmkoffice365proplusa-managing-office-365-proplus-client-update-through-system-center-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a> System Center Configuration Manager を使用した Office 365 ProPlus クライアント更新プログラムの管理  
+##  <a name="BKMK_Office365ProPlus"></a> System Center Configuration Manager を使用した Office 365 ProPlus クライアント更新プログラムの管理  
  Configuration Manager では、Configuration Manager ソフトウェア更新管理のワークフローを使用して、Office 365 デスクトップ クライアントの更新プログラムを管理できます。    
 Microsoft から、Windows Server Updates Services (WSUS) に新しい Office 365 デスクトップ クライアントの更新プログラムが公開されると、Office 365 の更新プログラムがカタログの同期の一部として構成されている場合、Configuration Manager で、この更新プログラムをそのカタログと同期することができます。  Configuration Manager サイト サーバーでは、Office 365 クライアントの更新プログラムをダウンロードして、そのパッケージを Configuration Manager 配布ポイントに配布します。  次に、Configuration Manager クライアントにより、更新プログラムの取得場所とそのインストール プロセスの開始時期が、Office 365 デスクトップ クライアントに通知されます。  
 
@@ -71,7 +73,7 @@ Microsoft から、Windows Server Updates Services (WSUS) に新しい Office 36
 
  詳しい手順については、「 [System Center Configuration Manager Technical Preview による Office 365 クライアント更新プログラムの管理](https://technet.microsoft.com/library/mt628083.aspx)」をご覧ください。  
 
-##  <a name="a-namebkmkalwasyona-support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a> 高可用性データベース用の SQL Server AlwaysOn のサポート  
+##  <a name="BKMK_AlwasyOn"></a> 高可用性データベース用の SQL Server AlwaysOn のサポート  
  Configuration Manager は、SQL Server AlwaysOn 可用性グループを使用したサイト データベースのホスティングをサポートします。  新しいサイトをインストールするときに、SQL Server の通常のインスタンスではなく、可用性グループを使用するようにセットアップに指示できます。  
 
 > [!NOTE]  
@@ -147,7 +149,7 @@ SQL Server 可用性グループを使用するサイトをインストールす
 
 3.  この情報を提供した後、通常のプロセスと構成を使ってセットアップを完了します。  
 
-##  <a name="a-namebkmkclusterserverupdatesa-service-a--server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a> サーバー クラスターの提供  
+##  <a name="BKMK_ClusterServerUpdates"></a> サーバー クラスターの提供  
 クラスター内のサーバーを含むコレクションを作成してから、更新プログラムをクラスターに展開するときに使用するようにクラスター設定を構成できるようになりました。 任意の時点でオンラインになっているサーバーの割合を制御できるだけでなく、カスタム アクションを実行するように展開前および展開後の PowerShell スクリプトを構成できます。  
 
 **このリリースの既知の問題:**  
@@ -205,9 +207,4 @@ SQL Server 可用性グループを使用するサイトをインストールす
 1.  サーバー クラスター コレクションにソフトウェア[更新プログラムを展開します](https://technet.microsoft.com/library/gg712304.aspx)。  
 
 2.  [ソフトウェア更新プログラムの展開を監視します](https://technet.microsoft.com/library/gg712304.aspx)。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
