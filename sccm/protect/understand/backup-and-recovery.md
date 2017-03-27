@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3aa9f2e4d3f7210981b5b84942485de11fe15cb2
-ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 67441d0c19114f628e8b4308f58165ba67c738df
+ms.lasthandoff: 03/21/2017
 
 ---
 
@@ -66,7 +67,7 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 > [!NOTE]  
 >  SQL Server AlwaysOn 可用性グループを使用してサイト データベースをホストする場合は、「[System Center Configuration Manager の高可用性サイト データベースの SQL Server AlwaysOn](../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#bkmk_BnR)」トピックの「[SQL Server AlwaysOn 可用性グループを使用するときのバックアップと回復の変更](../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)」セクションの説明に従って、バックアップと回復の計画を変更します。  
 
-##  <a name="a-namebkmksitebackupa-back-up-a-configuration-manager-site"></a><a name="BKMK_SiteBackup"></a> Configuration Manager サイトのバックアップ  
+##  <a name="BKMK_SiteBackup"></a> Configuration Manager サイトのバックアップ  
  Configuration Manager には、次の処理を実行するバックアップ メンテナンス タスクが用意されています。  
 
 -   スケジュールに従って実行する  
@@ -88,7 +89,7 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 > [!NOTE]  
 >  Configuration Manager では、Configuration Manager のバックアップ メンテナンス タスク、または別のプロセスで作成したサイト データベース バックアップからサイト データベースを回復できます。 たとえば、Microsoft SQL Server のメンテナンス プランの一環として作成されたバックアップから、サイト データベースを復元することができます。 System Center 2012 Data Protection Manager (DPM) を使用して作成されたバックアップからサイト データベースを復元できます。 詳細については、「 [Data Protection Manager を使用したサイト データベースのバックアップ](#BKMK_DPMBackup)」をご覧ください。  
 
-###  <a name="a-namebkmkbackupmaintenancetaska-backup-maintenance-task"></a><a name="BKMK_BackupMaintenanceTask"></a> バックアップ メンテナンス タスク  
+###  <a name="BKMK_BackupMaintenanceTask"></a> バックアップ メンテナンス タスク  
  Configuration Manager サイトのバックアップは、定義済みのサイト サーバーのバックアップ メンテナンス タスクをスケジュール設定することで自動化できます。 中央管理サイトとプライマリ サイトをバックアップすることはできますが、セカンダリ サイトやサイト システム サーバーのバックアップはサポートされていません。 Configuration Manager のバックアップ サービスは、バックアップ コントロール ファイル (**&lt;ConfigMgrInstallationFolder\>\Inboxes\Smsbkup.box\Smsbkup.ctl**) で定義されている指示に従って実行されます。 このバックアップ コントロール ファイルを変更して、バックアップ サービス動作を変更することができます。 サイトのバックアップ状態に関する情報は、 **Smsbkup.log** ファイルに書き込まれます。 このファイルは、サイト サーバーのバックアップ メンテナンス タスクのプロパティで指定した、バックアップ先フォルダーに保存されます。  
 
 
@@ -144,7 +145,7 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
     > [!TIP]  
     >  サイト サーバーのバックアップ メンテナンス タスクが正常に実行されなかった場合は、SMS_SITE_BACKUP サービスを停止してから、再開してみてください。  
 
-###  <a name="a-namebkmkdpmbackupa-using-data-protection-manager-to-back-up-your-site-database"></a><a name="BKMK_DPMBackup"></a> Data Protection Manager を使用したサイト データベースのバックアップ  
+###  <a name="BKMK_DPMBackup"></a> Data Protection Manager を使用したサイト データベースのバックアップ  
  System Center 2012 Data Protection Manager (DPM) を使用してサイト データベースをバックアップできます。 DPM でサイト データベース コンピューターの新しい保護グループを作成する必要があります。 新しい保護グループの作成ウィザードの [ **グループ メンバーの選択** ] ページで、データ ソース一覧から SMS ライター サービスを選択してから、該当するメンバーとしてサイト データベースを選択します。 DPM を使用したサイト データベースのバックアップの詳細については、TechNet の「 [Data Protection Manager](http://go.microsoft.com/fwlink/?LinkId=272772) 」ドキュメント ライブラリを参照してください。  
 
 > [!IMPORTANT]  
@@ -152,7 +153,7 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 
  サイト データベースを復元したら、セットアップの手順に従ってサイトを回復します。 Data Protection Manager で回復したサイト データベースを使用するには、**[手動で回復したサイト データベースを使用する]** 回復オプションを選択します。  
 
-###  <a name="a-namebkmkarchivingbackupsnapshota-archiving-the-backup-snapshot"></a><a name="BKMK_ArchivingBackupSnapshot"></a> バックアップ スナップショットのアーカイブ  
+###  <a name="BKMK_ArchivingBackupSnapshot"></a> バックアップ スナップショットのアーカイブ  
  サイト サーバーのバックアップ メンテナンス タスクを初めて実行するときに、障害が発生したサイト サーバーの復元に使用できるバックアップ スナップショットが作成されます。 その後、スケジュールに従って、バックアップ タスクが実行されると、新しいバックアップ スナップショットが作成され、前のスナップショットが上書きされます。 つまり、サイトのバックアップ スナップショットは&1; つだけになります。それより前のスナップショットに戻すことはできません。  
 
  しかし、次のような状況を考慮して、バックアップ スナップショットを複数アーカイブしておくことをお勧めします。  
@@ -163,7 +164,7 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 
 -   サイトのバックアップ スナップショットがまったくない状態になる可能性があります。 たとえば、サイト サーバーのバックアップ タスクは現在のデータのバックアップを開始する前に以前のバックアップ スナップショットを削除するので、タスクが正常に実行されなかった場合は、有効なバックアップ スナップショットがなくなります。  
 
-###  <a name="a-namebkmkusingafterbackupa-using-the-afterbackupbat-file"></a><a name="BKMK_UsingAfterBackup"></a> AfterBackup.bat ファイルの使用  
+###  <a name="BKMK_UsingAfterBackup"></a> AfterBackup.bat ファイルの使用  
  サイト サーバーのバックアップ タスクでサイトが正常にバックアップされると、AfterBackup.bat というファイルが自動的に実行されます。 この AfterBackup.bat ファイルは、手動で作成して &lt;*ConfigMgrInstallationFolder*>\Inboxes\Smsbkup に保存しておく必要があります。 AfterBackup.bat ファイルが存在し、正しいフォルダーに保存されている場合、バックアップ タスクの完了後に、このファイルが自動的に実行されます。 AfterBackup.bat を使って、バックアップが完了するたびにバックアップ スナップショットがアーカイブされるようにしたり、サイト サーバーのバックアップ メンテナンス タスクに含まれていない後処理が自動的に行われるようにすることができます。 前者の場合は、AfterBackup.bat でアーカイブ処理とバックアップ処理を統合することにより、常に新しいバックアップ スナップショットがアーカイブされるようにします。 AfterBackup.bat ファイルが存在しない場合は、バックアップ タスクでその実行がスキップされます。バックアップ処理自体には、何も影響ありません。 サイト バックアップ タスクによって AfterBackup.bat ファイルが正常に実行されたことを確認するには、[ **監視** ] ワークスペースの [ **コンポーネントのステータス** ] ノードを参照して、SMS_SITE_BACKUP のステータス メッセージを確認します。 AfterBackup.bat コマンド ファイルの実行が正常に開始された場合は、ID 5040 の付いたメッセージが表示されているはずです。  
 
 > [!TIP]  
@@ -171,7 +172,7 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 
  AfterBackup.bat を使用する本来の目的は、バックアップ スナップショットをアーカイブすることですが、バックアップするたびに何らかの後処理を行うための AfterBackup.bat を作成することもできます。  
 
-###  <a name="a-namebkmksupplementalbackupa-supplemental-backup-tasks"></a><a name="BKMK_SupplementalBackup"></a> その他のバックアップ タスク  
+###  <a name="BKMK_SupplementalBackup"></a> その他のバックアップ タスク  
  サイト サーバーのバックアップ メンテナンス タスクによって、サイト サーバー ファイルとサイト データベースのバックアップ スナップショットが作成されますが、この他にも、バックアップすることを検討した方がよい項目があります。 以下のセクションは、Configuration Manager のバックアップ戦略を立てる場合に役立ちます。  
 
 #### <a name="back-up-custom-reporting-services-reports"></a>Reporting Services のカスタム レポートのバックアップ  
@@ -241,12 +242,12 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 > [!NOTE]  
 >  データベースのレプリカ用に構成されたサイト データベースを復元した後で、データベースのレプリカを使用するためには、データベースの各レプリカを再構成して、パブリケーションとサブスクリプションの両方を再作成する必要があります。  
 
-###  <a name="a-namebkmkdeterminerecoveryoptionsa-determine-your-recovery-options"></a><a name="BKMK_DetermineRecoveryOptions"></a> 回復オプションの検討  
+###  <a name="BKMK_DetermineRecoveryOptions"></a> 回復オプションの検討  
  Configuration Manager のプライマリ サイト サーバーと中央管理サイトの回復を検討するときには、サイト サーバーとサイト データベースという&2; つの要素を考慮する必要があります。 どのオプションを選択するかを決めるときに、次のセクションを参考にしてください。  
 
 > [!NOTE]  
 
-####  <a name="a-namebkmksiteserverrecoveryoptionsa-site-server-recovery-options"></a><a name="BKMK_SiteServerRecoveryOptions"></a> サイト サーバーの回復オプション  
+####  <a name="BKMK_SiteServerRecoveryOptions"></a> サイト サーバーの回復オプション  
  Configuration Manager インストール フォルダーの外に作成する CD.Latest フォルダーのコピーから、セットアップを開始する必要があります。 その後、 **[サイトを回復する]** オプションを選択します。 セットアップを実行したときに、選択できる回復オプションは次のとおりです。  
 
 -   **既存のバックアップを使用してこのサイト サーバーを回復する**: サイトで障害が発生する前に、**サイト サーバーのバックアップ** メンテナンス タスクの一環としてサイト サーバーに作成された Configuration Manager サイト サーバーをバックアップしている場合に、このオプションを使用します。 サイトが再インストールされ、バックアップされているサイトに基づいて、サイト設定が構成されます。  
@@ -256,7 +257,7 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 > [!NOTE]  
 >  セットアップにより、サーバーで既存の Configuration Manager サイトが検出された場合、サイトの回復を開始できますが、サイト サーバーの回復オプションが限られます。 たとえば、既存のサイト サーバーでセットアップを実行した場合は、サイト データベース サーバーは回復できますが、サイト サーバーの回復オプションは無効になっています。  
 
-####  <a name="a-namebkmksitedatabaserecoveryoptiona-site-database-recovery-options"></a><a name="BKMK_SiteDatabaseRecoveryOption"></a> サイト データベースの回復オプション  
+####  <a name="BKMK_SiteDatabaseRecoveryOption"></a> サイト データベースの回復オプション  
  セットアップを実行するときに、次のサイト データベースの回復オプションを選択できます。  
 
 -   **バックアップ セットを使用してサイト データベースを復元する**: サイト データベースで障害が発生する前に、**サイト サーバーのバックアップ** メンテナンス タスクで Configuration Manager サイト データベースをバックアップしている場合に、このオプションを使用します。 階層構造がある場合は、サイト データベースの最後のバックアップ以後に加えられた変更が、中央管理サイト (プライマリ サイトを回復するとき)、または基準プライマリ サイト (中央管理サイトを回復するとき) から取得されます。 スタンドアロンのプライマリ サイトのサイト データベースを回復する場合は、最後のバックアップ以後にサイトに加えられた変更を回復することはできません。  
@@ -275,14 +276,14 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 
 -   **データベースの回復をスキップする**: Configuration Manager サイト データベース サーバーのデータが失われていない場合にのみ、このオプションを使用してください。 このオプションは、回復しようとしているサイト サーバーとは別のコンピューターにサイト データベースがある場合だけ選択できます。  
 
-####  <a name="a-namebkmksqlretentiona-sql-server-change-tracking-retention-period"></a><a name="bkmk_SQLretention"></a> SQL Server の変更の追跡の保有期間  
+####  <a name="bkmk_SQLretention"></a> SQL Server の変更の追跡の保有期間  
  SQL Server のサイト データベースでは、変更の追跡機能が有効になっています。 そのため、過去のある時点以後にデータベース テーブルに加えられた変更に関する情報を、Configuration Manager が照会することができます。 保有期間とは、この変更の追跡データを残しておく期間のことです。 既定では、サイト データベースの追跡データの保有期間は 5 日に構成されています。 サイト データベースを回復するときは、バックアップがこの保有期間内に作成されたかどうかによって、回復プロセスが異なります。 たとえば、サイト データベースで障害が発生した時点で、最も新しいバックアップが作成後 7 日経過している場合は、保有期間外に作成されていることになります。
 
  SQL Server の変更追跡の内部構造については、SQL Server チームのブログ「[Change Tracking Cleanup - part 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1)」(変更追跡のクリーンアップ - パート 1) と「[Change Tracking Cleanup - part 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2)」(変更追跡のクリーンアップ - パート 2) を参照してください。
 
 
 
-####  <a name="a-namebkmkreinita-process-to-reinitialize-site-or-global-data"></a><a name="bkmk_reinit"></a> サイトのデータまたはグローバル データの再初期化プロセス  
+####  <a name="bkmk_reinit"></a> サイトのデータまたはグローバル データの再初期化プロセス  
  サイトのデータまたはグローバル データの再初期化とは、サイト データベースにある既存のデータを別のサイト データベースに置き換えるプロセスのことです。 たとえば、"ABC" というサイトのデータを "XYZ" というサイトのデータで再初期化するときは、次の処理が行われます。  
 
 -   サイト "XYZ" からサイト "ABC" にデータがコピーされます。  
@@ -297,7 +298,7 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 ##### <a name="example-scenario-2"></a>例 2  
  **中央管理サイトで、プライマリ サイトからサイト データを再初期化する**: 回復プロセスで、中央管理サイト データベースにある、該当するプライマリ サイト用サイト データが削除され、そのプライマリ サイトからコピーされたサイト データに置き換えられます。 他のサイト用のサイト データは影響を受けません。  
 
-####  <a name="a-namebkmksitedbrecoveryscenariosa-site-database-recovery-scenarios"></a><a name="BKMK_SiteDBRecoveryScenarios"></a> サイト データベースの回復方法  
+####  <a name="BKMK_SiteDBRecoveryScenarios"></a> サイト データベースの回復方法  
  サイト データベースがバックアップから復元されると、Configuration Manager は前回のデータベースのバックアップ以後にサイト データとグローバル データに加えられた変更の回復を試みます。 以下に、サイト データベースがバックアップから復元された後に Configuration Manager で開始される処理について説明します。  
 
  **回復したサイトが中央管理サイトの場合:**  
@@ -362,7 +363,7 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 >   
 >  **ALTER QUEUE [dbo].[ConfigMgrDRSSiteQueue] WITH STATUS = ON**  
 
-###  <a name="a-namebkmkunattendedsiterecoverykeysa-unattended-site-recovery-script-file-keys"></a><a name="BKMK_UnattendedSiteRecoveryKeys"></a> サイトの無人回復スクリプト ファイルのキー  
+###  <a name="BKMK_UnattendedSiteRecoveryKeys"></a> サイトの無人回復スクリプト ファイルのキー  
  Configuration Manager の中央管理サイト、またはプライマリ サイトの無人回復を実行するには、無人インストール スクリプトを作成して、Setup コマンドに /script オプションを付けて実行します。 このスクリプトで、セットアップ ウィザードで入力するのと同じ種類の情報を指定します。ただし、既定の設定はありません。 使用する回復方法に該当するセットアップ キーの値をすべて指定する必要があります。  
 
  Configuration Manager の無人セットアップを実行するには、初期化ファイルと、/script Setup コマンドライン オプションを使用します。 無人セットアップは、Configuration Manager の中央管理サイトとプライマリ サイトの回復でサポートされています。 /script Setup コマンド ライン オプションを使用するには、初期化ファイルを作成して、/script Setup コマンド ライン オプションの後ろに、その初期化ファイル名を入力する必要があります。 .ini という拡張子が付いている限り、ファイル名そのものは重要ではありません。 コマンド ラインでセットアップ初期化ファイルを指定するときは、そのファイルの完全パスを入力する必要があります。 たとえば、C:\setup フォルダーにある setup.ini というセットアップ初期化ファイルを使う場合は、コマンド ラインに次のように入力します。  
@@ -572,7 +573,7 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 
          *&lt;SiteDatabaseName\>*  
 
-         または  
+         ] ダイアログ ボックスの [  
 
          *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*  
 
@@ -814,7 +815,7 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 
     -   **詳細:** プライマリ サイトから中央管理サイトに接続するときのタイムアウトの最大値 (分) を指定します。 たとえば、プライマリ サイトから中央管理サイトに接続できなかった場合は、プライマリ サイトは、WaitForCASTimeout キーで指定された時間が経過するまで、CASRetryInterval キーの値に従って、中央管理サイトとの接続を再試行します。 0 ～ 100 に指定できます。  
 
-###  <a name="a-namebkmkpostrecoverya-post-recovery-tasks"></a><a name="BKMK_PostRecovery"></a> 回復後の作業  
+###  <a name="BKMK_PostRecovery"></a> 回復後の作業  
  サイトを回復した後で行わなければならない作業がいくつかあります。 次のセクションの情報を、サイトの回復プロセスを完了させるときの参考にしてください。  
 
 #### <a name="re-enter-user-account-passwords"></a>ユーザー アカウントのパスワードを再入力する  
@@ -844,7 +845,7 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
  サイト サーバーの回復が終わったら、そのサイトに指定していた Windows サイドローディング キーを再入力する必要があります。これは、サイトの回復中にサイドローディング キーがリセットされるためです。 サイドローディング キーを再入力すると、Configuration Manager コンソールで Windows サイドローディング キーの **[使用済みライセンス認証数]** 列内のカウントがリセットされます。 たとえば、サイト エラーが発生する前に、**[合計ライセンス認証数]** カウントが **100** に設定され、**[使用済みライセンス認証数]** がデバイスで使用されていたキーの数に相当する **90** になっていたとします。 サイトの回復後、[ **合計ライセンス認証数** ] 列には **100**と表示されますが、[ **使用済みライセンス認証数** ] 列には誤って **0**と表示されます。 しかし、新しく 10 台のデバイスがサイドローディング キーを使用すると、ライセンスの残りがなくなってしまうので、11 台目以降、キーを取得できなくなります。  
 
 #### <a name="recreate-the-microsoft-intune-subscription"></a>Microsoft Intune サブスクリプションの再作成  
- サイト サーバー コンピューターが再イメージ化された後に Configuration Manager サイト サーバーを回復する場合、Microsoft Intune のサブスクリプションは復元されません。 サイトを回復した後、サブスクリプションを再接続する必要があります。  新しい APN 要求は作成しないでください。代わりに、最後に iOS 管理を構成または更新した現在の有効な .pem-file をアップロードしてください。 詳細については、「 [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription)」をご覧ください。  
+ サイト サーバー コンピューターが再イメージ化された後に Configuration Manager サイト サーバーを回復する場合、Microsoft Intune のサブスクリプションは復元されません。 サイトを回復した後、サブスクリプションを再接続する必要があります。  新しい APN 要求は作成しないでください。代わりに、最後に iOS 管理を構成または更新した現在の有効な .pem-file をアップロードしてください。 詳細については、「 [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription)」をご覧ください。  
 
 #### <a name="configure-ssl-for-site-system-roles-that-use-iis"></a>IIS を使用するサイト システムの役割の SSL を構成する  
  IIS を実行するサイト システムを回復し、障害が発生する前に、そのシステムが HTTPS 接続用に構成されていた場合は、IIS で Web サーバー証明書を使用するように再構成する必要があります。  
@@ -888,7 +889,7 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 #### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>クラウドベースの配布ポイントに使用する証明書の更新  
  Configuration Manager では、サイト サーバーからクラウドベースの配布ポイントへの通信に使用する管理証明書が必要です。 サイトの回復後に、クラウドベースの配布ポイントの証明書を更新する必要があります。  
 
-####  <a name="a-namebkmkrecoversecondarysitea-recover-a-secondary-site"></a><a name="BKMK_RecoverSecondarySite"></a> セカンダリ サイトの回復  
+####  <a name="BKMK_RecoverSecondarySite"></a> セカンダリ サイトの回復  
  Configuration Manager はセカンダリ サイトのデータベースのバックアップをサポートしていませんが、セカンダリ サイトの再インストールによる回復はサポートしています。 セカンダリ サイトの回復は、Configuration Manager セカンダリ サイトで障害が発生した場合に必要になります。 Configuration Manager コンソールの **[サイト]** ノードから、**[セカンダリ サイトの回復]** アクションを使用してセカンダリ サイトを回復することができます。 中央管理サイトまたはプライマリ サイトの回復とは異なり、セカンダリ サイトの回復ではバックアップ ファイルを使用せず、代わりに障害が発生したセカンダリ サイトのコンピューターにセカンダリ サイトのファイルを再インストールします。 次に、セカンダリ サイトのデータが、親プライマリ サイトからのデータで再初期化されます。 回復プロセスで、Configuration Manager は、セカンダリ サイトのコンピューターにコンテンツ ライブラリが存在することと、適切なコンテンツが使用できることを確認します。 適切なコンテンツが含まれている場合、セカンダリ サイトでは、既存のコンテンツ ライブラリが使用されます。 それ以外の場合、回復したセカンダリ サイトのコンテンツ ライブラリを回復するには、回復したサイトにコンテンツを再配布するかまたは事前設定する必要があります。 使用する配布ポイントがセカンダリ サイトに存在するのではない場合は、セカンダリ サイトの回復中に配布ポイントを再インストールする必要はありません。 セカンダリ サイトの回復後に、サイトが配布ポイントと自動的に同期されます。  
 
  Configuration Manager コンソールの **[サイト]** ノードから **[インストール ステータスの表示]** アクションを使用して、セカンダリ サイトの回復のステータスを確認することができます。  
@@ -899,7 +900,7 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 > [!IMPORTANT]  
 >  コンピューターに SQL Server Express がインストールされていない場合、セカンダリ サイトの回復中に Configuration Manager によってインストールされません。 そのため、セカンダリ サイトを回復する前に、SQL Server Express または SQL Server を手動でインストールする必要があります。 障害が発生する前にセカンダリ サイト データベースで使用していたのと同じバージョンの SQL Server および同じ SQL Server インスタンスを使用する必要があります。  
 
-##  <a name="a-namebkmksmswriterservicea-sms-writer-service"></a><a name="BKMK_SMSWriterService"></a> SMS ライター サービス  
+##  <a name="BKMK_SMSWriterService"></a> SMS ライター サービス  
  SMS ライターは、バックアップ中にボリューム シャドー コピー サービス (VSS) と相互に動作するサービスです。 Configuration Manager サイトのバックアップを正常に完了するには、SMS ライター サービスが実行されていなければなりません。  
 
 ### <a name="purpose"></a>目的  
@@ -915,9 +916,4 @@ ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 
 ### <a name="volume-shadow-copy-service"></a>ボリューム シャドウ コピー サービス  
  VSS は、システムのアプリケーションがボリュームに書き込んでいる間にボリュームをバックアップできるようにするフレームワークを実装する COM API のセットです。 VSS は、ディスクのデータを更新するユーザー アプリケーション (SMS ライター サービス) と、アプリケーションのバックアップを取るユーザー アプリケーション (Backup Manager サービス) を連携させるインターフェイスとして機能します。 VSS の詳細については、Windows Server TechCenter の「 [Volume Shadow Copy Service (ボリューム シャドウ コピー サービス)](http://go.microsoft.com/fwlink/p/?LinkId=241968) 」を参照してください。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

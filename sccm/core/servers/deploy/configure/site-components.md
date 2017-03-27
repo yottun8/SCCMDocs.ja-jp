@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9e170271e1b690289085e80eeff453219bc24010
-ms.openlocfilehash: 9a61162cb992c1947a4ad52b51710740a1b6c4c6
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 83550fbf0ef1f9adb0bb2c51a4f3c26a7500d352
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -69,7 +69,7 @@ ms.lasthandoff: 02/28/2017
     -   Configuration Manager 内の管理ポイント用に指定された完全修飾ドメイン名 (FQDN) に DNS のホスト エントリ (A または AAA レコード) がある。  
 
     > [!WARNING]  
-    >  クライアントが DNS で発行された管理ポイントを見つけるには、自動サイト割り当てを使用せずに、クライアントを特定のサイトに割り当てる必要があります。 管理ポイントのドメイン サフィックスを持つサイト コードを使用するには、これらのクライアントを設定します。 詳細については、「[How to assign clients to a site in System Center Configuration Manager](../../../../core/clients/deploy/assign-clients-to-a-site.md)」(System Center Configuration Manager のサイトにクライアントを割り当てる方法) の「[Locating Management Points](../../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs)」(管理ポイントの特定) を参照してください。  
+    >  クライアントが DNS で発行された管理ポイントを見つけるには、自動サイト割り当てを使用せずに、クライアントを特定のサイトに割り当てる必要があります。 管理ポイントのドメイン サフィックスを持つサイト コードを使用するには、これらのクライアントを設定します。 詳細については、「[How to assign clients to a site in System Center Configuration Manager](/sccm/core/clients/deploy/assign-clients-to-a-site)」(System Center Configuration Manager のサイトにクライアントを割り当てる方法) の「[Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points)」(管理ポイントの特定) を参照してください。  
 
      Configuration Manager クライアントがイントラネット上の管理ポイントの検索に Active Directory Domain Services も DNS も使用できない場合は、[WINS](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_wins) を使用します。 イントラネット上の HTTP クライアント接続を受信するように設定されている場合、サイトで最初にインストールされた管理ポイントが自動的に WINS に発行されます。  
 

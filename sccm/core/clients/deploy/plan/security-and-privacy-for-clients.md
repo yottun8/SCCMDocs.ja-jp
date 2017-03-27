@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 192c3685092df6310b7129877c7fb5dfd9ef7ad5
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
 この記事では、System Center Configuration Manager のクライアントおよび Exchange Server コネクタで管理されるモバイル デバイスに関するセキュリティ情報とプライバシー情報を紹介します。  
 
-##  <a name="a-namebkmksecuritycliientsa-security-best-practices-for-clients"></a><a name="BKMK_Security_Cliients"></a> クライアントのセキュリティのベスト プラクティス  
+##  <a name="BKMK_Security_Cliients"></a> クライアントのセキュリティのベスト プラクティス  
  Configuration Manager クライアントを実行するデバイスからのデータを Configuration Manager が受け入れる際には、サイトが攻撃されるリスクが伴います。 たとえば、クライアントが形式の正しくないインベントリを送信したり、サイト システムに過剰な負荷をかけようとしたりする可能性があります。 Configuration Manager クライアントは、信頼されているデバイスにのみ展開してください。 また、セキュリティに関する次のベスト プラクティスに従うと、許可されていないデバイスや危険性のあるデバイスからサイトを保護するのに役立ちます。  
 
  **IIS を実行するサイト システムとのクライアント通信には公開キー基盤 (PKI) 証明書を使用します。**  
@@ -53,7 +54,7 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
  **クライアントが Configuration Manager 階層にアクセスするのを防ぐためにブロックに依存しない**  
 
- ブロックされたクライアントは、Configuration Manager インフラストラクチャによって拒否されるため、サイト システムと通信してポリシーをダウンロードしたり、インベントリ データをアップロードしたり、状態またはステータス メッセージを送信したりすることはできなくなります。 ただし、サイト システムで HTTP クライアント接続を受け入れる場合、信頼されていないコンピューターから Configuration Manager 階層を保護するためにブロックに依存しないでください。 このシナリオでは、ブロックされているクライアントが、新しい自己署名証明書とハードウェア ID でサイトに再参加できる可能性があります。 ブロック機能は、オペレーティングシステムをクライアントに展開するとき、また、すべてのサイト システムが HTTPS クライアント接続を受け入れるとき、失われた、またはセキュリティ上問題のあるブート メディアをブロックするように設計されています。 公開キー基盤 (PKI) を使用する場合に証明書失効リスト (CRL) がサポートされているのであれば、危険性がある証明書に対しては、常に証明書失効が第 1 の防御ラインとなるものと考えてください。 Configuration Manager でクライアントをブロックすることは、階層を保護するための第 2 の防御ラインとなります。  
+ ブロックされたクライアントは、Configuration Manager インフラストラクチャによって拒否されるため、サイト システムと通信してポリシーをダウンロードしたり、インベントリ データをアップロードしたり、状態またはステータス メッセージを送信したりすることはできなくなります。 ただし、サイト システムで HTTP クライアント接続を受け入れる場合、信頼されていないコンピューターから Configuration Manager 階層を保護するためにブロックに依存しないでください。 このシナリオでは、ブロックされているクライアントが、新しい自己署名証明書とハードウェア ID でサイトに再参加できる可能性があります。 ブロック機能は、オペレーティングシステムをクライアントに展開するとき、また、すべてのサイト システムが HTTPS クライアント接続を受け入れるとき、失われた、またはセキュリティ上問題のあるブート メディアをブロックするように設計されています。 公開キー基盤 (PKI) を使用する場合に証明書失効リスト (CRL) がサポートされているのであれば、危険性がある証明書に対しては、常に証明書失効が第&1; の防御ラインとなるものと考えてください。 Configuration Manager でクライアントをブロックすることは、階層を保護するための第&2; の防御ラインとなります。  
 
  詳細については、「[System Center Configuration Manager でクライアントをブロックするかどうかの判断](../../../../core/clients/deploy/plan/determine-whether-to-block-clients.md)」を参照してください。  
 
@@ -146,7 +147,7 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
  このクライアント設定は、Configuration Manager クライアントが署名されていない PowerShell スクリプトを実行することを許可するものであり、その結果、マルウェアがクライアント コンピューターで実行されるのを許可することになる可能性があります。 このオプションを選択する必要がある場合は、カスタム クライアント設定を使用し、署名されていない PowerShell スクリプトを実行しなければならないクライアント コンピューターにのみ、そのカスタム クライアント設定を割り当ててください。  
 
-##  <a name="a-namebkmkmobilea-security-best-practices-for-mobile-devices"></a><a name="bkmk_mobile"></a> モバイル デバイスのセキュリティのベスト プラクティス  
+##  <a name="bkmk_mobile"></a> モバイル デバイスのセキュリティのベスト プラクティス  
  **Configuration Manager に登録され、インターネットでサポートされるモバイル デバイスの場合:登録プロキシ ポイントを境界ネットワークにインストールし、登録ポイントをイントラネットにインストールする**  
 
  このようにロールを分けることで、登録ポイントを攻撃から保護するのに役立ちます。 登録ポイントが侵害された場合、攻撃者が認証用の証明書を取得して、モバイル デバイスを登録しているユーザーの資格情報を盗み出す可能性があります。  
@@ -175,7 +176,7 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
  **モバイル デバイスの場合: 次のシナリオでは、Configuration Manager または Microsoft Intune で登録されたモバイル デバイスを持つユーザーにアプリケーションを展開しません。**  
 
--   複数のユーザーが 1 台のモバイル デバイスを使用する場合。  
+-   複数のユーザーが&1; 台のモバイル デバイスを使用する場合。  
 
 -   ユーザーの代理で管理者がデバイスを登録する場合。  
 
@@ -199,7 +200,7 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
  Exchange Server コネクタで最低限必要とされるコマンドレットの一覧については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](../../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)」をご覧ください。  
 
-##  <a name="a-namebkmkmacsa-security-best-practices-for-macs"></a><a name="bkmk_macs"></a> Mac コンピューターのセキュリティのベスト プラクティス  
+##  <a name="bkmk_macs"></a> Mac コンピューターのセキュリティのベスト プラクティス  
  **Mac コンピューターの場合: クライアント ソース ファイルを安全な場所に保存し、アクセスします。**  
 
  Configuration Manager では、Mac コンピューターにクライアントをインストールまたは登録する前に、クライアント ソース ファイルが改ざんされたかどうかを検証しません。 信頼できるソースからこれらのファイルをダウンロードして、安全な場所に保存し、アクセスしてください。  
@@ -208,7 +209,7 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
  業務の継続性を確保するには、Mac コンピューター用に使用する証明書の有効期間を監視および追跡します。 Configuration Manager はこの証明書の自動更新をサポートしたり、証明書の期限切れが近いことを警告したりしません。 一般的な有効期間は 1 年間です。  
 
- 証明書の更新方法については、「  [Renewing the Mac Client Certificate Manually](../../../../core/clients/deploy/deploy-clients-to-macs.md#BKMK_Man)」をご覧ください。  
+ 証明書の更新方法については、「  [Renewing the Mac Client Certificate Manually](../../../../core/clients/deploy/deploy-clients-to-macs.md#renewing-the-mac-client-certificate)」をご覧ください。  
 
  **Mac コンピューターの場合: 特権の昇格から保護するために、SSL プロトコルに対してのみ、信頼されたルート CA 証明書を信頼するように、証明書を構成することを考慮します。**  
 
@@ -237,7 +238,7 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
 6.  ダイアログ ボックスを閉じ、管理者のバスワードを入力するように求められたら、パスワードを入力して、[**設定の更新**] をクリックします。  
 
-##  <a name="a-namebkmksecurityissuesclientsa-security-issues-for-configuration-manager-clients"></a><a name="BKMK_SecurityIssues_Clients"></a> Configuration Manager クライアントのセキュリティの問題  
+##  <a name="BKMK_SecurityIssues_Clients"></a> Configuration Manager クライアントのセキュリティの問題  
  次のセキュリティに関する問題には軽減策がありません。  
 
 -   ステータス メッセージが認証されない  
@@ -282,7 +283,7 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
      Windows Embedded デバイスが、Windows 7 よりも前のオペレーティング システムを実行し、Configuration Manager による変更をコミットするために書き込みフィルターが無効にされている間に、ユーザーがログオンしようとすると、アカウントが使用不可になるまで許容されるログオン試行回数が実質的に半分になります。 たとえば、[ **アカウントのロックアウトのしきい値** ] を 6 と構成し、ユーザーがパスワードの入力を 3 回間違えると、アカウントが使用不可になり、実質的にサービス拒否の状況が作られます。  このシナリオでユーザーが組み込みデバイスにログオンする必要がある場合、使用不可のしきい値が低くなる可能性についてユーザーに注意してください。  
 
-##  <a name="a-namebkmkprivacycliientsa-privacy-information-for-configuration-manager-clients"></a><a name="BKMK_Privacy_Cliients"></a> Configuration Manager クライアントのプライバシー情報  
+##  <a name="BKMK_Privacy_Cliients"></a> Configuration Manager クライアントのプライバシー情報  
  Configuration Manager クライアントを展開すると、クライアント設定を有効にして Configuration Manager 管理機能を使用できます。 機能を構成するために使用する設定は Configuration Manager 階層内のすべてのクライアントに適用されます。これは、クライアントが企業ネットワークに直接接続しているか、リモート セッションを介して接続しているか、インターネットに接続しているが Configuration Manager にサポートされているかに関係ありません。  
 
  クライアント情報は Configuration Manager データベースに格納されます。Microsoft に送信されることはありません。 情報は、90 日ごとに実行されるサイトのメンテナンス タスク [ **期限切れの探索データの削除** ] によって削除されるまで、データベースに保持されます。 削除間隔は構成できます。  
@@ -299,15 +300,10 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
  Configuration Manager クライアントをクライアント ステータス チェック機能と共にインストールする前に、プライバシー要件を検討してください。  
 
-##  <a name="a-namebkmkprivacyexchangeconnectora-privacy-information-for-mobile-devices-that-are-managed-with-the-exchange-server-connector"></a><a name="BKMK_Privacy_ExchangeConnector"></a> Exchange Server コネクタを使用して管理されるモバイル デバイスのプライバシー情報  
+##  <a name="BKMK_Privacy_ExchangeConnector"></a> Exchange Server コネクタを使用して管理されるモバイル デバイスのプライバシー情報  
  Exchange Server コネクタは、Exchange Server (内部設置型またはホスト型) に ActiveSync プロトコルで接続するデバイスを見つけて管理します。 Exchange Server コネクタにより検出されたレコードは、Configuration Manager データベースに格納されます。 この情報は、Exchange Server から収集されます。 これには、モバイル デバイスが Exchange Server に送信したその他の情報は一切含まれません。  
 
  モバイル デバイス情報がマイクロソフトに送信されることはありません。 その後、モバイル デバイス情報が Configuration Manager データベースに格納されます。 情報は、90 日ごとに実行されるサイトのメンテナンス タスク [ **期限切れの探索データの削除** ] によって削除されるまで、データベースに保持されます。 削除間隔は構成できます。  
 
  Exchange Server をインストールして構成する前に、プライバシー要件を検討してください。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

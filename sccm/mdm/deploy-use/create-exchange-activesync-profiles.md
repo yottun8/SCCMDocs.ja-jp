@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 1cbe1d8f34b0a7482232488e907190a7a9cadf30
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 8c7bf901caa49c8585a9ed3913d4a5a2aac57013
+ms.openlocfilehash: 74083f65d906fde967081229b244df24e9e08e0a
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/06/2017
 
  デバイスに電子メール アカウントを構成するだけでなく、アドレス帳、予定表と仕事の同期の設定を構成することもできます。  
 
- 電子メール プロファイルを作成するときに、System Center Configuration Manager 証明書プロファイルを使用してプロビジョニングされた ID、暗号化および署名に関する証明書などの幅広いセキュリティ設定を含めることができます。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](introduction-to-certificate-profiles.md)」を参照してください。    
+ 電子メール プロファイルを作成するときに、System Center Configuration Manager 証明書プロファイルを使用してプロビジョニングされた ID、暗号化および署名に関する証明書などの幅広いセキュリティ設定を含めることができます。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](create-pfx-certificate-profiles.md)」を参照してください。    
 
 
 ## <a name="create-a-new-exchange-activesync-email-profile"></a>新しい Exchange ActiveSync 電子メール プロファイルを作成する  
@@ -101,7 +101,7 @@ ms.lasthandoff: 03/06/2017
     -   **ID 証明書:** **[選択]** をクリックし、ID として使用する証明書を選択します。  
 
         > [!NOTE]  
-        >  ID 証明書を選択する前に、それを Simple Certificate Enrollment Protocol (SCEP) の証明書プロファイルとして最初に構成する必要があります。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](introduction-to-certificate-profiles.md)」を参照してください。  
+        >  ID 証明書を選択する前に、それを Simple Certificate Enrollment Protocol (SCEP) の証明書プロファイルとして最初に構成する必要があります。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](create-pfx-certificate-profiles.md)」を参照してください。  
 
          このオプションは、[ **認証方法** ] の下で [ **証明書**] を選択した場合にのみ利用できます。  
 
@@ -110,14 +110,14 @@ ms.lasthandoff: 03/06/2017
     -   **暗号化証明書:** **[選択]** をクリックし、暗号化に使用する証明書を選択します。 このオプションは iOS デバイスにのみ適用されます。  
 
         > [!NOTE]  
-        >  暗号化証明書を選択する前に、それを Simple Certificate Enrollment Protocol (SCEP) の証明書プロファイルとして最初に構成する必要があります。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](introduction-to-certificate-profiles.md)」を参照してください。  
+        >  暗号化証明書を選択する前に、それを Simple Certificate Enrollment Protocol (SCEP) の証明書プロファイルとして最初に構成する必要があります。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](create-pfx-certificate-profiles.md)」を参照してください。  
 
          このオプションは、[ **S/MIME を使用する**] を選択した場合にのみ利用できます。  
 
     -   **署名証明書:** **[選択]** をクリックし、署名に使用する証明書を選択します。 このオプションは iOS デバイスにのみ適用されます。  
 
         > [!NOTE]  
-        >  署名証明書を選択する前に、それを Simple Certificate Enrollment Protocol (SCEP) の証明書プロファイルとして最初に構成する必要があります。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](introduction-to-certificate-profiles.md)」を参照してください。  
+        >  署名証明書を選択する前に、それを Simple Certificate Enrollment Protocol (SCEP) の証明書プロファイルとして最初に構成する必要があります。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](create-pfx-certificate-profiles.md)」を参照してください。  
 
          このオプションは、[ **S/MIME を使用する**] を選択した場合にのみ利用できます。  
 

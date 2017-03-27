@@ -16,9 +16,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: 4222ca27e19ade46d53f8cd4598643ddd4fd5c8f
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 2ace86cc842d6a3a5b2114c4e4c33c2d65c2f256
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Configuration Manager とのハイブリッド展開に対応する iOS Device Enrollment Program (DEP) 登録
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/24/2017
 ###  <a name="enable-dep-enrollment-in-configuration-manager-with-intune"></a>Configuration Manager と Intune で DEP 登録を有効にする  
 
 1.  **Configuration Manager を使用して iOS デバイス管理を開始する**   
-    iOS Device Enrollment Program (DEP) デバイスを登録する前に、[iOS の登録をサポートする手順](../deploy-use/setup-hybrid-mdm.md#ios-and-mac-enrollment-setup)を含む「[Set up Hybrid mobile device management](../../mdm/deploy-use/setup-hybrid-mdm.md)」(ハイブリッド モバイル デバイス管理のセットアップ) の手順を完了する必要があります。
+    iOS Device Enrollment Program (DEP) デバイスを登録する前に、[iOS の登録をサポートする手順](../deploy-use/enroll-hybrid-ios-mac.md)を含む「[Set up Hybrid mobile device management](../../mdm/deploy-use/setup-hybrid-mdm.md)」(ハイブリッド モバイル デバイス管理のセットアップ) の手順を完了する必要があります。
 
 2.  **DEP トークン要求の作成**   
     Configuration Manager コンソールの **[管理]** ワークスペースで、**[階層の構成]**、**[クラウド サービス]** の順に展開してから、**[Windows Intune サブスクリプション]** をクリックします。 **[ホーム]** タブの **[DEP トークン要求の作成]** 、 **[参照]** の順にクリックして、DEP トークン要求をダウンロードする場所を指定してから、 **[ダウンロード]**をクリックします。 DEP トークン要求 (.pem) ファイルをローカルに保存します。 .pem ファイルは、Apple Device Enrollment Program ポータルから信頼されたトークン (.p7m) を要求するために使用します。  
