@@ -39,6 +39,7 @@
 ### [Windows Phone](deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client.md)
 ### [iOS および Mac OS X](deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)
 ### [Android デバイスと Samsung KNOX Standard デバイス](deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)
+### [Android for Work](deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client.md)
 
 ## [Intune に登録されたデバイスの同期](deploy-use/sync-intune-device.md)
 
@@ -71,10 +72,11 @@
 ### [O365 サービスへの PC アクセスの管理](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
 
 ## [リスクに基づいたアクセスを管理する](deploy-use/manage-access-based-on-device-network-app-risk.md)
-### [Set up Lookout device threat protection](deploy-use/set-up-your-subscription-with-lookout.md) (Lookout デバイス脅威保護の設定)
+### [Lookout Mobile Threat Defense のセットアップ](deploy-use/set-up-your-subscription-with-lookout.md)
 ### [Enable Lookout in Intune](deploy-use/enable-lookout-connection-in-intune.md) (Intune で Lookout を有効にする)
 ### [Deploy Lookout for Work apps](deploy-use/configure-and-deploy-lookout-for-work-apps.md) (Lookout for Work アプリを展開する)
 ### [Enable device threat protection policy](deploy-use/enable-device-threat-protection-rule-compliance-policy.md) (デバイスの脅威保護ポリシーを有効にする)
+### [Mobile Threat Defense の監視](deploy-use/monitor-mobile-threat-defense-compliance.md)
 ### [Troubleshoot Lookout integration](deploy-use/troubleshoot-lookout-integration.md) (Lookout 統合のトラブルシューティング)
 
 # オンプレミス モバイル デバイス管理 (MDM)

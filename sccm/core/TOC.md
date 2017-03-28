@@ -25,9 +25,12 @@
 ###  [特徴と機能](plan-design/changes/features-and-capabilities.md)
 ###  [Configuration Manager 2012 からの変更点](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [増分バージョンの新機能](plan-design/changes/whats-new-incremental-versions.md)
+###  [バージョン 1702 の新機能](plan-design/changes/whats-new-in-version-1702.md)
 ###  [バージョン 1610 の新機能](plan-design/changes/whats-new-in-version-1610.md)
 ###  [バージョン 1606 の新機能](plan-design/changes/whats-new-in-version-1606.md)
-###  [バージョン 1602 の新機能](plan-design/changes/whats-new-in-version-1602.md)
+<!--
+###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
+-->
 ###  [削除された機能と非推奨の機能](plan-design/changes/removed-and-deprecated-features.md)
 
 ##   [サポートされている構成](plan-design/configs/supported-configurations.md)
@@ -52,6 +55,7 @@
 #### [クラウドベースの配布ポイントの使用](plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
 #### [プル配布ポイントの使用](plan-design/hierarchy/use-a-pull-distribution-point.md)
 #### [コンテンツ ライブラリ](plan-design/hierarchy/the-content-library.md)
+#### [コンテンツ ライブラリのクリーンアップ ツール](plan-design/hierarchy/content-library-cleanup-tool.md)
 #### [コンテンツにアクセスするためのアカウントの管理](plan-design/hierarchy/manage-accounts-to-access-content.md)
 #### [Configuration Manager クライアントのピア キャッシュ](plan-design/hierarchy/client-peer-cache.md)
 #### [コンテンツ ソースの場所の例](plan-design/hierarchy/content-source-location-scenarios.md)
@@ -69,10 +73,13 @@
 
 ##   [診断結果と使用状況データ](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [診断結果と使用状況データの使用方法](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
-###  [1511 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
-###  [1602 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
-###  [1606 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
+###  [1702 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md) 
 ###  [1610 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
+###  [1606 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
+<!--
+###  [Diagnostic data for 1511](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
+###  [Diagnostic data for 1602](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
+-->
 ###  [診断と使用状況データを収集する方法](plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)
 ###  [診断および使用状況データを使用する方法](plan-design/diagnostics/view-diagnostics-and-usage-data.md)
 ###  [カスタマー エクスペリエンス向上プログラム (CEIP)](plan-design/diagnostics/customer-experience-improvement-program-ceip.md)
@@ -102,10 +109,12 @@
 ###  [1605 の機能](get-started/capabilities-in-technical-preview-1605.md)
 ###  [1604 の機能](get-started/capabilities-in-technical-preview-1604.md)
 ###  [1603 の機能](get-started/capabilities-in-technical-preview-1603.md)
-###  [1602 の機能](get-started/capabilities-in-technical-preview-1602.md)
-###  [1601 の機能](get-started/capabilities-in-technical-preview-1601.md)
-###  [1512 の機能](get-started/capabilities-in-technical-preview-1512.md)
-###  [1511 の機能](get-started/capabilities-in-technical-preview-1511.md)
+<!--
+###  [Capabilities in 1602](get-started/capabilities-in-technical-preview-1602.md)
+###  [Capabilities in 1601](get-started/capabilities-in-technical-preview-1601.md)
+###  [Capabilities in 1512](get-started/capabilities-in-technical-preview-1512.md)
+###  [Capabilities in 1511](get-started/capabilities-in-technical-preview-1511.md)
+-->
 
 ##   [階層間でのデータの移行](migration/migrate-data-between-hierarchies.md)
 ###  [移行の計画](migration/planning-for-migration.md)
@@ -120,7 +129,8 @@
 #### [移行の監視の計画](migration/planning-to-monitor-migration-activity.md)
 #### [移行完了の計画](migration/planning-to-complete-migration.md)
 ###  [ソース階層とソース サイトを構成する](migration/configuring-source-hierarchies-and-source-sites-for-migration.md)
-###  [移行するための操作](migration/operations-for-migration.md)###  [移行のセキュリティとプライバシー](migration/security-and-privacy-for-migration.md)
+###  [移行の操作](migration/operations-for-migration.md)
+###  [移行のセキュリティとプライバシー](migration/security-and-privacy-for-migration.md)
 
 #    [サーバーおよび役割の展開](servers/deploy/start-using.md)
 
@@ -133,7 +143,8 @@
 #### [サイトのインストールの準備](servers/deploy/install/prepare-to-install-sites.md)
 #### [サイトをインストールするための前提条件](servers/deploy/install/prerequisites-for-installing-sites.md)
 #### [セットアップ ウィザードの使用](servers/deploy/install/use-the-setup-wizard-to-install-sites.md)
-#### [コマンド ラインの使用](servers/deploy/install/use-a-command-line-to-install-sites.md)
+#### [コマンドラインの使用](servers/deploy/install/use-a-command-line-to-install-sites.md)
+##### [コマンドライン オプション](servers/deploy/install/command-line-options-for-setup.md)
 #### [コンソールのインストール](servers/deploy/install/install-consoles.md)
 #### [評価版インストールのアップグレード](servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md)
 #### [System Center Configuration Manager へのアップグレード](servers/deploy/install/upgrade-to-configuration-manager.md)
@@ -157,6 +168,8 @@
 #### [探索方法の選択](servers/deploy/configure/select-discovery-methods-to-use.md)
 #### [探索方法の構成](servers/deploy/configure/configure-discovery-methods.md)
 ###  [サイト境界と境界グループ](servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)
+#### [境界](servers/deploy/configure/boundaries.md)
+#### [境界グループ](servers/deploy/configure/boundary-groups.md)
 ###  [SQL Server AlwaysOn の使用](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
 ###  [SQL Server クラスターの使用](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [データベース ファイルのカスタムの場所](servers/deploy/configure/custom-locations-for-site-database-files.md)
@@ -164,6 +177,7 @@
 
 #    管理インフラストラクチャ
 ##   [メンテナンス タスク](servers/manage/maintenance-tasks.md)
+###  [メンテナンス タスクのリファレンス](servers/manage/reference-for-maintenance-tasks.md)
 ##   [インフラストラクチャの変更](servers/manage/modify-your-infrastructure.md)
 ###  [CD.Latest フォルダー](servers/manage/the-cd.latest-folder.md)
 ##   [オンプレミス インフラストラクチャのアップグレード](servers/manage/upgrade-on-premises-infrastructure.md)
@@ -176,14 +190,11 @@
 ###  [サービス接続ツールの使用](servers/manage/use-the-service-connection-tool.md)
 ###  [更新登録ツールの使用](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [修正プログラム インストーラーの使用](servers/manage/use-the-hotfix-installer-to-install-updates.md)
-<!--
-###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
--->
+###  [1702 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1702.md)
 ###  [1610 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1610.md)
 ###  [1606 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1606.md)
-<!-- Deprecated from Content:
+<!-- Deprecated from Content - still published but out of TOC:
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
-###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
 -->
 ###  [Current Branch バージョンのサポート](servers/manage/current-branch-versions-supported.md)  
 
