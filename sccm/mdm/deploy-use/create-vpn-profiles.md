@@ -17,9 +17,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 32190ec39af2cf1568b3d57c2c2f25d9ff2f9e20
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 8c7bf901caa49c8585a9ed3913d4a5a2aac57013
+ms.openlocfilehash: 82f7db908f83d69a86c82ed97b845ff84e78f8b3
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager のモバイル デバイスの VPN プロファイル
@@ -32,8 +32,8 @@ System Center Configuration Manager の VPN プロファイルを使用して、
 
  VPN プロファイルを作成するときに、System Center Configuration Manager 証明書プロファイルを使用してプロビジョニングされた、サーバー検証用の証明書、クライアント認証用の証明書などの幅広いセキュリティ設定を含めることができます。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](../../protect/deploy-use/introduction-to-certificate-profiles.md)」を参照してください。  
 
- ## <a name="vpn-profiles-when-using-configuration-manager-together-with-intune"></a>Configuration Manager と Intune を併用する場合の VPN プロファイル 
- 
+ ## <a name="vpn-profiles-when-using-configuration-manager-together-with-intune"></a>Configuration Manager と Intune を併用する場合の VPN プロファイル
+
  プロファイルを iOS、Android、Windows Phone、Windows 8.1 の各デバイスに展開するには、これらのデバイスを Microsoft Intune に登録する必要があります。 その他のプラットフォームのデバイスも、Intune に登録できます。 登録方法については、「[Microsoft Intune を使用したモバイル デバイスの管理](https://technet.microsoft.com/en-us/library/dn646962.aspx)」を参照してください。 次の表は、各デバイス プラットフォームでサポートされている接続の種類を示しています。  
 
  |接続の種類|iOS および Mac OS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop および Mobile|  
@@ -91,7 +91,7 @@ VPN プロファイルの作成に関する一般情報は、「[System Center C
 
         -   **ログオンのたびにユーザーの資格情報を記憶する**: ユーザーが接続するたびに入力しなくても済むように、ユーザーの資格情報が記憶されます。  
 
-        -   **クライアント認証用のクライアント証明書を選択** - 事前に作成した、VPN 接続の認証に使用するクライアント [SCEP 証明書](introduction-to-certificate-profiles.md)を選択します。   
+        -   **クライアント認証用のクライアント証明書を選択** - 事前に作成した、VPN 接続の認証に使用するクライアント [SCEP 証明書](create-pfx-certificate-profiles.md)を選択します。   
 
             > [!NOTE]  
             >  iOS デバイスの場合、選択する SCEP プロファイルは VPN プロファイルに埋め込まれます。 その他のプラットフォームでは、証明書が存在しないか準拠していない場合に VPN プロファイルがインストールされないようにする適用規則が追加されます。  
