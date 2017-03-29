@@ -73,7 +73,7 @@
 
 ##   [診断結果と使用状況データ](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [診断結果と使用状況データの使用方法](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
-###  [1702 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md) 
+###  [1702 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md)
 ###  [1610 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
 ###  [1606 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
 <!--
