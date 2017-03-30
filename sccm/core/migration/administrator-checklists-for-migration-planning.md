@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 5e6e8a18a8fc705c993177b3c5b4113a351a45a4
 ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
 
 次の監理者チェックリストを利用すると、System Center Configuration Manager への移行方針を計画するときに便利です。
 
-##  <a name="a-namechecklistmigraitonplanninga-administrator-checklist-for-migration-planning"></a><a name="Checklist_Migraiton_Planning"></a> 移行計画の管理者チェックリスト  
+##  <a name="Checklist_Migraiton_Planning"></a> 移行計画の管理者チェックリスト  
  移行前の計画の手順については、次のチェックリストを使用してください。  
 
 -   **現在の環境を評価する。**  
@@ -37,7 +38,7 @@ ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
 
 -   **使用する Configuration Manager のバージョンで使用できる機能と変更内容を確認し、その情報を移行先階層の設計に役立てる。**  
 
-    詳細については、「 [Fundamentals of System Center Configuration Manager](../../core/understand/fundamentals.md) 」および「 [What's new in System Center Configuration Manager](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md)」をご覧ください。  
+    詳細については、[System Center Configuration Manager の基本](../../core/understand/fundamentals.md)および[System Center Configuration Manager の新機能](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md)をご覧ください。  
 
 
 -   **役割に基づく管理に使用する管理セキュリティ モデルを決定する。**  
@@ -76,7 +77,7 @@ ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
 
     オブジェクトとクライアントを移行するタイミングを決定します。 移行が完了したら、ソース階層内のソース サーバーの使用停止を計画できます。  
 
-##  <a name="a-namechecklisthierarchyformigrationa-administrator-checklist-for-hierarchy-migration"></a><a name="Checklist_Hierarchy_for_migration"></a> 階層移行の管理者チェック リスト  
+##  <a name="Checklist_Hierarchy_for_migration"></a> 階層移行の管理者チェック リスト  
 移行の開始前に移行先階層を計画する際には、次のチェックリストを参考にしてください。  
 
 -   **移行先階層で使用するコンピューターを特定する。**  
@@ -89,7 +90,7 @@ ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
 
     移行準備のために、プライマリ サイトを含む System Center Configuration Manager 移行先階層をインストールし、構成します。 たとえば、  
 
-    -   中央管理サイトをインストールしてから、少なくとも&1; つの子プライマリをインストールする  
+    -   中央管理サイトをインストールしてから、少なくとも 1 つの子プライマリをインストールする  
 
     -   中央管理サイトを使用する予定がない場合、スタンドアロン プライマリをインストールする  
 
@@ -113,7 +114,7 @@ ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
     -   移行先階層にインストールする Configuration Manager クライアントが、割り当て済みサイトと正常に通信できることを確認します。  
 
 
-##  <a name="a-namechecklisitmigrationa-administrator-checklist-for-migration"></a><a name="Checklisit_Migration"></a> 移行の管理者チェックリスト  
+##  <a name="Checklisit_Migration"></a> 移行の管理者チェックリスト  
 ソース階層から移行先階層にデータを移行する際には、次のチェックリストを参考にしてください。  
 
 -   **移行先階層で移行を有効にする。**  
@@ -151,7 +152,7 @@ ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
 
     クライアントを移行先階層に移行すると、クライアントは、その移行先階層に移行済みのデータと関連付けられます。  
 
-    詳細については、「 [Planning a client migration strategy in System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md)」をご覧ください。  
+    詳細については、[System Center Configuration Manager での移行ジョブ戦略の計画](../../core/migration/planning-a-client-migration-strategy.md)をご覧ください。  
 
 -   **共有配布ポイントをアップグレードするか、または再び割り当てる。**  
 
@@ -163,10 +164,5 @@ ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
 
 -   **移行を完了する。**  
 
-    ソース階層内のすべてのサイトからデータとクライアントを移行し、該当する配布ポイントをアップグレードしたら、移行を完了できます。 移行を完了するには、ソース階層内の各ソース サイトについてデータ収集を停止します。 次に不要な移行情報を削除し、ソース階層インフラストラクチャの使用を停止することができます。 詳細については、「 [Planning to complete migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md)」をご覧ください。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
+    ソース階層内のすべてのサイトからデータとクライアントを移行し、該当する配布ポイントをアップグレードしたら、移行を完了できます。 移行を完了するには、ソース階層内の各ソース サイトについてデータ収集を停止します。 次に不要な移行情報を削除し、ソース階層インフラストラクチャの使用を停止することができます。 詳細については、[System Center Configuration Manager での移行完了の計画](../../core/migration/planning-to-complete-migration.md)をご覧ください。  
 
