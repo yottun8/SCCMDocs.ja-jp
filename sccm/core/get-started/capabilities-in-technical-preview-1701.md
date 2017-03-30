@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 34dded3a8caf8c2be0313bc012cbd8ad2a909fad
-ms.openlocfilehash: 20bcc1cd909eec13eaca0a6de66806bd496f729d
-ms.lasthandoff: 01/26/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: b330c97a0853d1673f1cf7e0691891b72407fa51
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1701 の機能
@@ -41,23 +41,23 @@ ms.lasthandoff: 01/26/2017
 - 新しいソフトウェアの更新ポイントをシークしているクライアントは、現在の境界グループに関連付けられているものの使用を試みます。
 - クライアントが、現在のソフトウェアの更新ポイントに到達できず、現在の境界グループからの更新ポイントも見つけられない場合、フォールバック動作を使用して、使用可能なソフトウェアの更新ポイントのプールを拡張します。    
 
-境界グループの詳細については、Current Branch のコンテンツの[境界グループ](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#BKMK_BoundaryGroups)に関する記述を参照してください。
+境界グループの詳細については、Current Branch のコンテンツの[境界グループ](/sccm/core/servers/deploy/configure/boundary-groups)に関する記述を参照してください。
 
 ただし、このプレビューでは、ソフトウェアの更新ポイントの境界グループの一部のみが実装されています。 ソフトウェアの更新ポイントを追加して、ソフトウェアの更新ポイントを含む近隣の境界グループを構成することはできますが、ソフトウェアの更新ポイントのフォールバック時間がまだサポートされていないため、クライアントはフォールバックが開始されるまで 2 時間待機することになります。
 
 以下に、このテクニカル プレビューでのソフトウェアの更新ポイントの動作について説明します。  
 
--   **新しいクライアントでは境界グループを使用して、ソフトウェアの更新ポイントを選択します。**バージョン 1701 をインストールした後にインストールしたクライアントは、ソフトウェアの更新ポイントを、クライアントの境界グループに関連付けられているものの中から選択します。
+-    **新しいクライアントでは境界グループを使用して、ソフトウェアの更新ポイントを選択します。**バージョン 1701 をインストールした後にインストールしたクライアントは、ソフトウェアの更新ポイントを、クライアントの境界グループに関連付けられているものの中から選択します。
 
   これは、クライアントが、クライアント フォレストを共有するソフトウェアの更新ポイントのリストからランダムに選択する以前の動作に置き換わるものです。   
 
--   **以前にインストールされたクライアントは、フォールバックして新しいソフトウェアの更新ポイントを見つけるまで、引き続き、現在のものを使用します。**
+-    **以前にインストールされたクライアントは、フォールバックして新しいソフトウェアの更新ポイントを見つけるまで、引き続き、現在のものを使用します。**
 以前にインストールされ、既にソフトウェアの更新ポイントがあるクライアントは、フォールバックするまで引き続き、そのソフトウェアの更新ポイントを使用します。 これには、クライアントの現在の境界グループに関連付けられていないソフトウェアの更新ポイントが含まれます。 その場合、現在の境界グループからソフトウェアの更新ポイントをすぐに見つけて使用を試みることはありません。
 
   ソフトウェアの更新ポイントが既にあるクライアントがこの新しい境界グループの動作の使用を開始するのは、現在のソフトウェアの更新ポイントに到達できず、フォールバックを開始した場合のみです。
 この遅延は、新しい動作への切り替えの際に生じるもので意図的なものです。 これは、ソフトウェアの更新ポイントが変更されると、クライアントがデータと新しいソフトウェアの更新ポイントを同期する場合に、ネットワーク帯域幅が多く使用される可能性があるためです。 遷移の遅延は、すべてのクライアントが新しいソフトウェアの更新ポイントに同時に切り替える場合に、ネットワークの飽和を回避するのに役立ちます。
 
--   **フォールバック時間の構成:** このテクニカル プレビューでは、新しいソフトウェアの更新ポイントを検索するためにクライアントがフォールバックを開始する時間の構成はサポートされていません。 これには、さまざまな境界グループの関係に対して構成する場合がある、**[フォールバック時間 (分)]** と **[フォールバックしない]** の構成が含まれます。
+-    **フォールバック時間の構成:** このテクニカル プレビューでは、新しいソフトウェアの更新ポイントを検索するためにクライアントがフォールバックを開始する時間の構成はサポートされていません。 これには、さまざまな境界グループの関係に対して構成する場合がある、**[フォールバック時間 (分)]** と **[フォールバックしない]** の構成が含まれます。
 
   したがって、クライアントは、使用可能な新しいソフトウェアの更新ポイントを検索するために、フォールバックを開始するまで 2 時間、現在のソフトウェアの更新ポイントへの接続を試みる現在の動作を保持します。
 
@@ -133,9 +133,9 @@ ms.lasthandoff: 01/26/2017
     &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>https://login.microsoftonline.com/&lt;/value>
 
-2.  2 つの変更を含むファイルを保存したら、同じコンピューター上で Configuration Manager コンソールを再起動し、そのコンソールを使用して OMS コネクタをインストールします。 コネクタをインストールするには、「[Microsoft Operations Management Suite に Configuration Manager からのデータを同期](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)」の情報を使用し、Microsoft Azure Government クラウド上にある **Operations Management Suite のワークスペース**を選択します。
+2.    2 つの変更を含むファイルを保存したら、同じコンピューター上で Configuration Manager コンソールを再起動し、そのコンソールを使用して OMS コネクタをインストールします。 コネクタをインストールするには、「[Microsoft Operations Management Suite に Configuration Manager からのデータを同期](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)」の情報を使用し、Microsoft Azure Government クラウド上にある **Operations Management Suite のワークスペース**を選択します。
 
-3.  OMS コネクタをインストールしたら、サイトに接続されているコンソールを使用する際に Government クラウドへの接続を使用できます。
+3.    OMS コネクタをインストールしたら、サイトに接続されているコンソールを使用する際に Government クラウドへの接続を使用できます。
 
 ## <a name="android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm"></a>ハイブリッド MDM の作成ウィザードで Android と iOS のバージョン指定が不要に
 

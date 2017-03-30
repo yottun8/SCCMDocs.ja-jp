@@ -16,9 +16,9 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: b7c55ce5629565cb1e3aede6680ef1796f56cb20
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
+ms.openlocfilehash: e9028a54e538b4ec987dbaeb5ba1ee22ad091728
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/06/2017
 
 -   Windows 8.1  
 
--   Windows 10 はまだ完全にサポートされていません。  Windows 10 PC の条件付きアクセスを設定しようとすると、問題が発生する可能性があります。  詳細については [既知の問題](#bkmk_KnownIssues) を参照してください。  
+-   Windows 10 
 
 ## <a name="configure-conditional-access"></a>条件付きアクセスの構成  
  条件付きアクセスをセットアップするには、最初にコンプライアンス ポリシーを作成して、条件付きアクセス ポリシーを構成する必要があります。 コンプライアンス ポリシーに対応している PC のみが Exchange Online サービスと SharePoint Online サービスにアクセスできるように、PC の条件付きアクセス ポリシーを構成できます。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 03/06/2017
 
  Active Directory セキュリティ ユーザー グループ。 これらのユーザー グループは、Azure Active Directory に同期される必要があります。 これらのグループを Office 365 管理センターまたは Intune アカウント ポータルで構成することもできます。  
 
- 各ポリシーには、次の&2; つのグループの種類を指定できます。 :  
+ 各ポリシーには、次の 2 つのグループの種類を指定できます。 :  
 
 -   **対象グループ** – ポリシーが適用されるユーザー グループ。 コンプライアンスと条件付きアクセス ポリシーの両方に同じグループを使用してください。  
 
@@ -135,15 +135,16 @@ ms.lasthandoff: 03/06/2017
 
  非対応であるためにブロックされているエンドユーザーに対しては、System Center Configuration Manager ソフトウェア センターにコンプライアンス情報が表示されます。コンプライアンスに関する問題が解決されたら、そのようなエンドユーザーが新しいポリシー評価を開始します。  
 
-##  <a name="bkmk_KnownIssues"></a> 既知の問題  
- この機能の使用時には、以下の問題が発生する可能性があります。  
+<!---
+##  <a name="bkmk_KnownIssues"></a> Known issues  
+ You may see the following issues when using this feature:  
 
--   この 1602 更新では、5 日間対応は適用されません。 エンドユーザーのデバイスでコンプライアンス チェックが実行されてから 5 日経過した後にも、ユーザーは Office 365 と SharePoint Online に引き続きアクセスできます。  
+-   In this 1602 update,  the 5 day compliance is not enforced. Even if compliance check on the end-user's device has happened more than 5 days ago, users still can access Office 365 and SharePoint online.  
 
--   デバイスがコンプライアンス ポリシーに対応していないときに、その理由が自動的に表示されることはありません。 エンド ユーザーは、新しいソフトウェア センターに移動して、非対応の理由を確認する必要があります。 その理由は、ソフトウェア センターのデバイスのコンプライアンスのセクションに表示されます。  
+-   When a device is not compliant with the compliance policy, the reason is not automatically displayed. The end- user must go to the new Software Center to find the reason for non-compliance. The reason is displayed in the Device compliance section of the Software Center.  
 
--   Windows 10 のユーザーが O365 や SharePoint Online のリソースにアクセスしようとすると、複数のアクセス エラーが発生する可能性があります。 Windows 10 の条件付きアクセスは完全にはサポートされていないことに注意してください。  
-
+-   Windows 10 users may see multiple access failures when trying to reach O365 and/or SharePoint online resources. Note that conditional access is not fully supported for Windows 10.  
+--->
 ### <a name="see-also"></a>関連項目  
  [System Center Configuration Manager でのデータとサイト インフラストラクチャの保護](../../protect/understand/protect-data-and-site-infrastructure.md)
 

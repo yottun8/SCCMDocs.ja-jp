@@ -18,9 +18,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 507bad02c6e028f09a8b0c8a566ac55f7c3942a5
-ms.openlocfilehash: 8e93f6f7b65534d9e3f6b5e46909b076653659a9
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: 3b1451edaed69a972551bd060293839aa11ec8b2
+ms.openlocfilehash: be9596537e9c80a6d78aa0685d33382bfd242afe
+ms.lasthandoff: 03/28/2017
 
 
 ---
@@ -36,7 +36,7 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 >   
 > -  Windows 10 Enterprise  
 > -   Windows 10 Pro  
-> -   Windows 10 Team\( Configuration Manager バージョン 1602 以降\)  
+> -   Windows 10 Team  
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise
 > -   Windows 10 IoT Enterprise   
@@ -68,7 +68,7 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
  Configuration Manager で Wi-Fi プロファイルを作成する場合は、「[System Center Configuration Manager で Wi-Fi プロファイルを作成する方法](../../protect/deploy-use/create-wifi-profiles.md)」の手順に従ってください。  
 
 > [!IMPORTANT]  
->一括登録のために Wi-Fi プロファイルを作成する場合は、次の&2; つの点に注意してください。
+>一括登録のために Wi-Fi プロファイルを作成する場合は、次の 2 つの点に注意してください。
 >
 > - Configuration Manager の現在のブランチでは、オンプレミス モバイル デバイス管理について、次の Wi-Fi セキュリティのみがサポートされます。  
 >   
@@ -77,7 +77,7 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 >   - EAP の種類: **[スマート カードまたは他の証明書]** または **[PEAP]**  
 >
 >
-> - Configuration Manager の Wi-Fi プロファイルにはプロキシ サーバー情報の設定がありますが、デバイスの登録時にプロキシは構成されません。 登録済みデバイスでプロキシ サーバーをセットアップする必要がある場合は、デバイスの登録後に構成アイテムを使用して設定を展開するか、Windows イメージングおよび構成デザイナー (ICD) を使用して&2; 番目のパッケージを作成し、一括登録パッケージと共に展開することができます。
+> - Configuration Manager の Wi-Fi プロファイルにはプロキシ サーバー情報の設定がありますが、デバイスの登録時にプロキシは構成されません。 登録済みデバイスでプロキシ サーバーをセットアップする必要がある場合は、デバイスの登録後に構成アイテムを使用して設定を展開するか、Windows イメージングおよび構成デザイナー (ICD) を使用して 2 番目のパッケージを作成し、一括登録パッケージと共に展開することができます。
 
 ##  <a name="bkmk_createEnroll"></a> 登録プロファイルの作成  
  登録プロファイルでは、デバイスの登録に必要な設定を指定できます。これには、信頼されたルート証明書をデバイスに動的にプロビジョニングする証明書プロファイル、および必要な場合には、ネットワークの設定をプロビジョニングする Wi-Fi プロファイルが含まれます。  

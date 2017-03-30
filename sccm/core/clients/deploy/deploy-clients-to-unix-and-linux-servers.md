@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: 0988899047a0e3464e15055fceb5924ee20b0b88
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: b63367dbaacde60a364e9da6afca65383b635840
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -117,7 +117,8 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
      任意。 状態メッセージを送信するクライアントが使用するフォールバック ステータス ポイント サーバーの FQDN を指定します。  
 
-     フォールバック ステータス ポイントの詳細については、「[フォールバック ステータス ポイントが必要かどうかを判断する](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point)」を参照してください。  
+     フォールバック ステータス ポイントの詳細については、「 [Determine Whether You Require a Fallback Status Point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) 」を参照してください。  
+
 
 -   **-dir &lt;directory\>**  
 
@@ -143,7 +144,7 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
 -   **-UsePKICert &lt;parameter\>**  
 
-     任意。 公開キーの証明書標準 (PKCS&#12;) 形式では、X.509 の PKI 証明書に完全なパスとファイル名を指定します。 この証明書は、クライアント認証に使用されます。 証明書がインストール時に指定されていない場合、また証明書を追加または変更する必要がある場合、 **certutil** ユーティリティを使用します。 certutil については、「 [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 」を参照してください。  
+     任意。 公開キーの証明書標準 (PKCS #12) 形式では、X.509 の PKI 証明書に完全なパスとファイル名を指定します。 この証明書は、クライアント認証に使用されます。 証明書がインストール時に指定されていない場合、また証明書を追加または変更する必要がある場合、 **certutil** ユーティリティを使用します。 certutil については、「 [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 」を参照してください。  
 
      **-UsePKICert**を使用する場合は、 **-certpw** コマンド ライン パラメーターを使って、PKCS#12 ファイルに関連付けられているパスワードも指定する必要があります。  
 
@@ -158,7 +159,7 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
 -   **-certpw &lt;parameter\>**  
 
-     任意。 使用して、指定した PKCS&#12; ファイルに関連付けられたパスワードを示す、 **- UsePKICert** プロパティです。  
+     任意。 使用して、指定した PKCS #12 ファイルに関連付けられたパスワードを示す、 **- UsePKICert** プロパティです。  
 
      例: -UsePKICert &lt;Full path and filename\> -certpw &lt;password\>  
 

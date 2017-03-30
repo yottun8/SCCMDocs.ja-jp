@@ -17,9 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 8f9667388c3557a84fc84c742e25f0c3bd2e2a5f
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 3b1451edaed69a972551bd060293839aa11ec8b2
+ms.openlocfilehash: 4abaef35969ef1a5340ae8ca8aa5699cd3942642
+ms.lasthandoff: 03/28/2017
 
 
 ---
@@ -27,7 +27,7 @@ ms.lasthandoff: 03/06/2017
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager のオンプレミス モバイル デバイス管理を使用してコンピューターとデバイスを管理するには、Configuration Manager がデバイスと通信して管理タスクを実行できるように、デバイスを登録する必要があります。 Configuration Manager には、デバイスを登録する&2; つの方法があります。  
+System Center Configuration Manager のオンプレミス モバイル デバイス管理を使用してコンピューターとデバイスを管理するには、Configuration Manager がデバイスと通信して管理タスクを実行できるように、デバイスを登録する必要があります。 Configuration Manager には、デバイスを登録する 2 つの方法があります。  
 
 -   **ユーザー登録** - この方法では、ユーザーが自分のデバイスで登録プロセスを開始します。 ユーザー登録を正常に行うには、信頼されたルート証明書がデバイスにインストールされている必要があります。また、ユーザーは登録のために Configuration Manager によってプロビジョニングされている必要があります。  デバイスを登録するために、ユーザーは作業の資格情報を提供するだけで、そのデバイスは管理の対象として登録されます。  
 
@@ -42,7 +42,7 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 >   
 >  -   Windows 10 Enterprise  
 > -   Windows 10 Pro  
-> -   Windows 10 Team\( Configuration Manager バージョン 1602 以降\)  
+> -   Windows 10 Team 
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise   
 

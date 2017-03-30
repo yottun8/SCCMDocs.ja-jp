@@ -1,7 +1,7 @@
 ---
 title: "クラウド管理ゲートウェイの計画 | Microsoft Docs"
 description: 
-ms.date: 12/19/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
@@ -10,9 +10,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1df2d8bcd73633ac1d37cc3ef31343be9c5bc95d
-ms.openlocfilehash: 6e2895565e868eb80a8f4f4b46b8a28eb4961e28
-ms.lasthandoff: 12/19/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: c61769cc97c320452c9ee27a924cb01480e6f33d
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -39,11 +39,11 @@ Configuration Manager コンソールを使って、Azure にサービスを展�
 ## <a name="specifications-for-cloud-management-gateway"></a>クラウド管理ゲートウェイの仕様
 
 - クラウド管理ゲートウェイの各インスタンスは、4,000 クライアントをサポートします。
-- 可用性を高めるため、クラウド管理ゲートウェイのインスタンスを少なくとも&2; つ作成することをお勧めします。
+- 可用性を高めるため、クラウド管理ゲートウェイのインスタンスを少なくとも 2 つ作成することをお勧めします。
 - クラウド管理ゲートウェイは、管理ポイントとソフトウェアの更新ポイントの役割のみをサポートしています。
 -   クラウド管理ゲートウェイに関しては、Configuration Manager の次の機能が現在のところサポートされていません。
 
-    -   クライアント プッシュによるクライアントの展開とアップグレード
+    -   クライアント展開
     -   サイトの自動割り当て
     -   ユーザー ポリシー
     -   アプリケーション カタログ (ソフトウェア承認要求を含む)
@@ -66,7 +66,7 @@ Configuration Manager コンソールを使って、Azure にサービスを展�
 
 -   バーチャル マシン
 
-    -   現在のところ、クラウド管理ゲートウェイには Standard\_A2 バーチャル マシンが必要になります。 サービスを作成するとき、サービスをサポートする VM の数を選択できます (既定は&1; です)。
+    -   現在のところ、クラウド管理ゲートウェイには Standard\_A2 バーチャル マシンが必要になります。 サービスを作成するとき、サービスをサポートする VM の数を選択できます (既定は 1 です)。
 
     -   1 台の Azure Standard\_A2 バーチャル マシンでインターネット ベースのクライアントを約 2,000 台同時にサポートできると予想されます (この数値は見積もり目的でのみ提供されます)。
 
