@@ -62,7 +62,7 @@ SCEP 証明書のコンプライアンスを監視するには、コンソール
     |0x00000004|登録を延期する必要があります。|  
     |0x00000010|エラーが発生しました。|  
     |0x00000020|登録ステータスが不明です。|  
-    |0x00000040|ステータス情報がスキップされました。 これは、ハイパーリンク "http://msdn.microsoft.com/ja-jp/windows/ms721572"\l"_security_certification_authority_gly" の証明機関が無効であるか監視対象に選択されていない場合に発生することがあります。|  
+    |0x00000040|ステータス情報がスキップされました。 これは、ハイパーリンク "http://msdn.microsoft.com/ja-jp/windows/ms721572" \l "_security_certification_authority_gly" の証明機関が無効であるか監視対象に選択されていない場合に発生することがあります。|  
     |0x00000100|登録が拒否されました。|  
 
 ##  <a name="view-compliance-results-by-using-reports"></a>レポートを使用してコンプライアンス結果を表示する
