@@ -128,7 +128,7 @@ ms.lasthandoff: 01/04/2017
 
     -   **[選択した設定]:** **[参照]** を選択し、前に指定した探索スクリプトを選びます。  
 
-    -   **[次の値]** フィールドに「 **The domain/default pair of (com.microsoft.ccmclient, SMSID) does not exist**」と入力します。  
+    -   **[次の値]** フィールドに「**存在しないドメインと既定のペア (com.microsoft.ccmclient, SMSID)**」と入力します。  
 
     -   オプション [この設定が対応していない場合に指定した修復スクリプトを実行する ****] を有効にします。  
 
