@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
 サンプルのレポート モデルは System Center Configuration Manager に含まれていますが、それぞれの業務要件に適したレポート モデルを定義し、そのレポート モデルを Configuration Manager に展開して、新しいモデルベースのレポートの作成時に使用できます。 次の表に、基本レポート モデルを作成して展開するための手順を示します。  
 
 > [!NOTE]  
->  詳細なレポート モデルを作成する手順については、このトピックの「 [Steps for Creating an Advanced Report Model in SQL Server Reporting Services](#AdvancedReportModel) 」セクションを参照してください。  
+>  詳細なレポート モデルを作成する手順については、このトピックの「 [SQL Server Reporting Services で詳細レポート モデルを作成する手順](#AdvancedReportModel) 」セクションを参照してください。  
 
 |手順|説明|説明|  
 |----------|-----------------|----------------------|  
@@ -46,7 +47,7 @@ ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
 
  これらの手順を実行するコンピューターに SQL Server Business Intelligence Development がインストールされていること、また、このコンピューターからネットワーク接続を介してレポート サービス ポイント サーバーにアクセスできることを確認します。 SQL Server Business Intelligence Development Studio の詳細については、SQL Server 2008 のドキュメントを参照してください。  
 
-###  <a name="a-namebkmkcreatereportmodelprojecta-to-create-the-report-model-project"></a><a name="BKMK_CreateReportModelProject"></a> To create the report model project  
+###  <a name="BKMK_CreateReportModelProject"></a> To create the report model project  
 
 1.  デスクトップで、 **[スタート]**、 **[Microsoft SQL Server 2008]**、 **[SQL Server Business Intelligence Development Studio]**の順にクリックします。  
 
@@ -63,7 +64,7 @@ ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
     > [!NOTE]  
     >  **[ソリューション エクスプローラー]** ウィンドウが表示されない場合は、 **[表示]**、 **[ソリューション エクスプローラー]**の順にクリックします。  
 
-###  <a name="a-namebkmkdefinereportmodeldatasourcea-to-define-the-data-source-for-the-report-model"></a><a name="BKMK_DefineReportModelDataSource"></a> To define the data source for the report model  
+###  <a name="BKMK_DefineReportModelDataSource"></a> To define the data source for the report model  
 
 1.  **SQL Server Business Intelligence Development Studio** の **[ソリューション エクスプローラー]**ウィンドウで **[データ ソース]** を右クリックし、 **[新しいデータ ソースの追加]**を選択します。  
 
@@ -92,7 +93,7 @@ ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
     > [!NOTE]  
     >  既存のデータ ソースのプロパティを編集するには、 **[ソリューション エクスプローラー]** ウィンドウの **[データ ソース]** フォルダーでデータ ソースをダブルクリックし、データ ソースのプロパティをデータ ソース デザイナーに表示します。  
 
-###  <a name="a-namebkmkdefinereportmodeldatasourceviewa-to-define-the-data-source-view-for-the-report-model"></a><a name="BKMK_DefineReportModelDataSourceView"></a> To define the data source view for the report model  
+###  <a name="BKMK_DefineReportModelDataSourceView"></a> To define the data source view for the report model  
 
 1.  **[ソリューション エクスプローラー]**で **[データ ソース ビュー]** を右クリックし、 **[新しいデータ ソース ビューの追加]**を選択します。  
 
@@ -113,7 +114,7 @@ ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
 
 8.  **[完了]**をクリックします。 **Simple_Model.dsv** データ ソース ビューが、 **[ソリューション エクスプローラー]** の **[データ ソース ビュー]**フォルダーに表示されます。  
 
-###  <a name="a-namebkmkcreatereportmodela-to-create-the-report-model"></a><a name="BKMK_CreateReportModel"></a> To create the report model  
+###  <a name="BKMK_CreateReportModel"></a> To create the report model  
 
 1.  **[ソリューション エクスプローラー]**で **[レポート モデル]** を右クリックし、 **[新しいレポート モデルの追加]**を選択します。  
 
@@ -131,7 +132,7 @@ ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
 
 8.  ウィザードを終了するには、[完了] をクリックします。 **** レポート モデルがデザイン ウィンドウに表示されます。  
 
-###  <a name="a-namebkmkpublishreportmodela-to-publish-the-report-model-for-use-in-sql-server-reporting-services"></a><a name="BKMK_PublishReportModel"></a> To publish the report model for use in SQL Server Reporting Services  
+###  <a name="BKMK_PublishReportModel"></a> To publish the report model for use in SQL Server Reporting Services  
 
 1.  **[ソリューション エクスプローラー]**で、レポート モデルを右クリックして、 **[展開]**を選択します。 この例では、「Simple_Model」というレポート モデルを使用します。 ****  
 
@@ -139,7 +140,7 @@ ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
 
 3.  **[ファイル]**、 **[すべて保存]**の順にクリックして、 **SQL Server Business Intelligence Development Studio**を閉じます。  
 
-###  <a name="a-namebkmkdeployreportmodela-to-deploy-the-custom-report-model-to-configuration-manager"></a><a name="BKMK_DeployReportModel"></a> To deploy the custom report model to Configuration Manager  
+###  <a name="BKMK_DeployReportModel"></a> To deploy the custom report model to Configuration Manager  
 
 1.  レポート モデル プロジェクトを作成したフォルダーを検索します。 例: *USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;プロジェクト名\>*  
 
@@ -180,7 +181,7 @@ ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
     > [!IMPORTANT]  
     >  レポート モデル ファイルを Configuration Manager サイト サーバーにコピーした後は、まず Configuration Manager コンソールを終了し再起動しないと、**レポートの作成ウィザード**でレポート モデルを使用できません。  
 
-##  <a name="a-nameadvancedreportmodela-steps-for-creating-an-advanced-report-model-in-sql-server-reporting-services"></a><a name="AdvancedReportModel"></a> Steps for Creating an Advanced Report Model in SQL Server Reporting Services  
+##  <a name="AdvancedReportModel"></a> Steps for Creating an Advanced Report Model in SQL Server Reporting Services  
  以下の手順に従って、サイト内のユーザーが Configuration Manager データベースの複数のビューのデータに基づいて、特定のモデルベースのレポートを作成する際に使用できる詳細レポート モデルを作成できます。 クライアント コンピューターとそれらのコンピューターにインストールされているオペレーティング システムに関する情報をレポート作成者に示す、レポート モデルを作成します。 この情報は、Configuration Manager データベースの次のビューから取得します。  
 
 -   **V_R_System**: 検出されたコンピューターと Configuration Manager クライアントに関する情報が含まれています。  
@@ -422,9 +423,4 @@ ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
 
     > [!IMPORTANT]  
     >  レポート モデル ファイルを Configuration Manager サイト サーバーにコピーした後は、まず Configuration Manager コンソールを終了し再起動しないと、**レポートの作成ウィザード**でレポート モデルを使用できません。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
