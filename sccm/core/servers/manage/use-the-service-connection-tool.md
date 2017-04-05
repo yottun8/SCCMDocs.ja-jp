@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: b4642186e42745640f088b7046e70019616935ea
 ms.openlocfilehash: 9a5cd5ce3ce6868b44768d3cbe7b7c594f44d42c
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -150,7 +151,7 @@ USB ドライブに ServiceConnectionTool フォルダーとその中身をす�
 
 9. Configuration Manager コンソールを開き、**[管理]** >**[Cloud Services]** > **[更新とサービス]** に移動します。 インポートされた更新プログラムは、インストールできるようになりました。 更新プログラムのインストールの詳細については、「[System Center Configuration Manager のコンソール内の更新プログラムのインストール](../../../core/servers/manage/install-in-console-updates.md)」を参照してください。  
 
-## <a name="a-namebkmkcmda-command-line-options"></a><a name="bkmk_cmd"></a> コマンド ライン オプション  
+## <a name="bkmk_cmd"></a> コマンド ライン オプション  
  サービス接続ポイント ツールのヘルプ情報を表示するには、コマンド プロンプトを開き、ツールを格納するフォルダーに移動して、コマンド  **serviceconnectiontool.exe**を実行します。  
 
 |コマンド ライン オプション|説明|  
@@ -159,9 +160,4 @@ USB ドライブに ServiceConnectionTool フォルダーとその中身をす�
 |**-connect -usagedatasrc [drive:][path] -updatepackdest [drive:][path] -proxyserveruri [FQDN of proxy server] -proxyusername [username]** <br /> <br /> 1606 より前のバージョンの Configuration Manager を使用する場合は、.cab ファイルの名前を指定する必要があり、プロキシ サーバーのオプションを使用することはできません。  サポートされているコマンド パラメーターは次のとおりです。 <br /> **-connect -usagedatasrc [drive:][path][filename] -updatepackdest [drive:][path]** |このコマンドは、Configuration Manager のクラウド サービスに接続し、指定した場所から使用状況データの .cab ファイルをアップロードしたり、利用可能な更新パックとコンソールのコンテンツをダウンロードしたりします。 プロキシ サーバーのオプションは省略できます。<br /><br /> インターネットに接続できるコンピューターで、 **ローカル管理者** としてこのコマンドを実行します。<br /><br /> プロキシ サーバーを使用せずに接続する例: **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> プロキシ サーバーを使用して接続する例: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> 1606 より前のバージョンを使用する場合は、.cab ファイルのファイル名を指定する必要があります。また、プロキシ サーバーを指定することはできません。 次のコマンド ラインの例を使用します: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
 |**-import -updatepacksrc [drive:][path]**|このコマンドは、先ほど Configuration Manager コンソールにダウンロードした更新パックとコンソールのコンテンツをインポートします。<br /><br /> サービス接続ポイントをホストするサーバーで、 **ローカル管理者** としてこのコマンドを実行します。<br /><br /> 例:  **-import -updatepacksrc D:\USB\UpdatePacks**|  
 |**-export -dest [drive:][path][filename.csv]**|このコマンドは使用状況データを .csv ファイルにエクスポートします。このファイルでデータを確認できます。<br /><br /> サービス接続ポイントをホストするサーバーで、 **ローカル管理者** としてこのコマンドを実行します。<br /><br /> 例: **-export -dest D:\USB\usagedata.csv**|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

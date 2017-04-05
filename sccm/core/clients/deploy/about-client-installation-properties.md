@@ -27,7 +27,7 @@ ms.lasthandoff: 01/05/2017
 
 System Center Configuration Manager CCMSetup.exe コマンドを使用して、Configuration Manager クライアントを手動でインストールします。  
 
-##  <a name="a-nameaboutccmsetupa-about-ccmsetupexe"></a><a name="aboutCCMSetup"></a> CCMSetup.exe について  
+##  <a name="aboutCCMSetup"></a> CCMSetup.exe について  
  CCMSetup.exe コマンドは、クライアントのインストールに必要なファイルを管理ポイントまたはソースの場所からダウンロードします。 次のようなファイルが含まれます。  
 
 -   クライアント ソフトウェアをインストールする Windows インストーラー パッケージ Client.msi。  
@@ -217,7 +217,7 @@ CCMSetup がインストール ファイルのダウンロードの試行を開�
 > [!NOTE]  
 >  このリリースでは、 **ClientUI** が、 **/ExcludeFeatures** プロパティでサポートされる唯一の値です。  
 
-##  <a name="a-nameccmsetupreturncodesa-ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> CCMSetup.exe のリターン コード  
+##  <a name="ccmsetupReturnCodes"></a> CCMSetup.exe のリターン コード  
  CCMSetup.exe コマンドは、完了すると次のリターン コードを提供します。 問題を解決するには、クライアント コンピューターで ccmsetup.log ファイルを確認して、リターン コードのコンテキストと詳細を確認します。  
 
 |リターン コード|意味|  
@@ -229,7 +229,7 @@ CCMSetup がインストール ファイルのダウンロードの試行を開�
 |9|前提条件の評価エラー|  
 |10|セットアップのマニフェスト ハッシュ検証エラー|  
 
-##  <a name="a-nameclientmsipropsa-clientmsi-properties"></a><a name="clientMsiProps"></a> Client.msi のプロパティ  
+##  <a name="clientMsiProps"></a> Client.msi のプロパティ  
  次のプロパティを使って、client.msi のインストールの動作を変更することができます。 クライアント プッシュ インストール方式を使用する場合は、[ **クライアント プッシュ インストールのプロパティ** ] ダイアログ ボックスの [ **クライアント** ] タブでプロパティを指定することもできます。  
 
 ### <a name="ccmadmins"></a>CCMADMINS  
@@ -563,7 +563,7 @@ Configuration Manager クライアントが使用する最初の管理ポイン�
 
  例: `CCMSetup.exe SMSSITECODE=XZY`  
 
-##  <a name="a-namebkmkattributevaluesa-supported-attribute-values-for-the-pki-certificate-selection-criteria"></a><a name="BKMK_attributevalues"></a> PKI 証明書の選択条件としてサポートされている属性値  
+##  <a name="BKMK_attributevalues"></a> PKI 証明書の選択条件としてサポートされている属性値  
  Configuration Manager は、PKI 証明書の選択条件として次の属性値をサポートしています。  
 
 |OID 属性|識別名属性|属性の定義|  
