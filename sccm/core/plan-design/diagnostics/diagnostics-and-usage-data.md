@@ -2,7 +2,7 @@
 title: "診断結果と使用状況データ | Microsoft Docs"
 description: "System Center Configuration Manager が収集する自身の診断および使用状況データについて説明します。"
 ms.custom: na
-ms.date: 12/29/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
-ms.openlocfilehash: 54ec4886eaad6999cdf3ffff7411942859f1a5b2
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 4a4b7c9c0d40b6bd3ea2f318e37d744f1a0cc084
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -40,10 +41,14 @@ System Center Configuration Manager では、それ自体の診断および使�
 -   [System Center Configuration Manager での診断結果と使用状況データの使用方法](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)  
 
 -   診断の使用状況データ収集のレベル
-    - [1511 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
-    - [1602 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
-    - [1606 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)  
+    - [1702 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702)      
     - [1610 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610)  
+    - [1606 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)    
+
+<!--
+    - [Diagnostic data for 1602](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
+    - [Diagnostic data for  1511](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
+-->
 
 -   [System Center Configuration Manager が診断と使用状況データを収集する方法](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)  
 
@@ -55,9 +60,4 @@ System Center Configuration Manager では、それ自体の診断および使�
 
 ## <a name="see-also"></a>関連項目  
  [System Center Configuration Manager のサービス接続ポイントについて](../../../core/servers/deploy/configure/about-the-service-connection-point.md)
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

@@ -2,7 +2,7 @@
 title: "非推奨の機能 |Microsoft Docs"
 description: "System Center Configuration Manager でサポートされなくなった機能、製品、およびオペレーティング システムについて説明します。"
 ms.custom: na
-ms.date: 3/9/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
-ms.openlocfilehash: cb57a8699081415af7e2e9dc29b0a321f100823d
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 57b9ab13bda0bb5fa5139e52a4c55ef9524e4097
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -45,31 +45,7 @@ ms.lasthandoff: 03/10/2017
  - [Microsoft サポート ライフサイクル](https://support.microsoft.com/lifecycle) Web サイト
  - [Configuration Manager の Current Branch バージョンのサポート](/sccm/core/servers/manage/current-branch-versions-supported)
 
-## <a name="deprecated-features"></a>非推奨の機能  
 
-|**機能**|**最初に非推奨と発表**|**サポートの削除**|  
-|-|-|-|  
-|ネットワーク アクセス保護 (NAP) - System Center 2012 Configuration Manager の機能|2015 年 7 月 10 日|バージョン 1511|  
-|帯域外管理 - System Center 2012 Configuration Manager の機能|2015 年 10 月 16 日|バージョン 1511|
-|タスク シーケンス: <br /> - OSDPreserveDriveLetter  <br /><br /> 既定で、オペレーティング システムの展開中に、Windows セットアップが使用する最適なドライブ文字を決定するようになりました (通常は C:)。 別のドライブを使用するように指定する場合は、オペレーティング システムの適用タスク シーケンスのステップで場所を変更できます。 [**このオペレーティング システムの適用先を選択してください。**] 設定に移動し、[**特定の論理ドライブ文字**] を選択し、使用するドライブを選択します。 |2016 年 6 月 20 日 |バージョン 1606 |
-|タスク シーケンス: <br /> - ディスクをダイナミックに変換 <br /> - 展開ツールのインストール |2016 年 11 月 18 日|2017 年 6 月 1 日以降にリリースされる最初の更新プログラムでこれらのタスク シーケンスのサポートは終了します。|
-|ソフトウェア センターは新しい現代的な外観へと一新されます。 Silverlight を使用するアプリケーション カタログにしか表示されなかったアプリ (ユーザーが利用できるアプリ) がソフトウェア センターの **[アプリケーション]** タブに表示されるようになります。 アプリケーション カタログには、ソフトウェア センターの **[インストールのステータス]** タブ上にあるリンクを使用してアクセスできます。<br><br>以前のバージョンのソフトウェア センターは、今後数か月の間に使用できなくなります。<br><br>新しいソフトウェア センターを使用するようにクライアントをセットアップするには、クライアント設定 **[コンピューター エージェント]** > **[新しいソフトウェア センターの使用]** を有効化します。<br><br>ソフトウェア センターの詳細については、「[System Center Configuration Manager のアプリケーション管理の計画と構成](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management)」を参照してください。|2016 年 12 月 13 日|後日発表|
-|Configuration Manager によるバーチャル ハード ディスク (VHD) の管理。 </br></br>これには、新しい VHD の作成オプション、またはタスク シーケンスを使用した VHD の管理オプションの削除と、Configuration Manager コンソールからのバーチャル ハード ディスクのノードの削除が含まれます。 </br></br>このサポートが削除されると、既存の VHD は削除されませんが、Configuration Manager コンソール内からアクセスできなくなります。  |2017 年 1 月 6 日 |VHD のサポートは、2017 年 6 月 1 日より後にリリースされた最初の更新プログラムで終了します。|
-
-
-バージョン 1511 の System Center Configuration Manager リリースで削除された機能の詳細を次に示します。
-
-###  <a name="bkmk_amt"></a> 帯域外管理  
- Configuration Manager では、Configuration Manager コンソール内からの AMT ベースのコンピューターに対するネイティブ サポートは削除されました。  
-
--   [Microsoft System Center Configuration Manager 用 Intel SCS アドオン](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html)を使用すれば、AMT ベースのコンピューターは引き続き完全に管理されます。 アドオンを使用することで、最新の機能にアクセスして AMT を管理できます。Configuration Manager にこれらの変更が組み込まれるまでに適用されていた制限は解除されます。  
-
--   System Center 2012 Configuration Manager での帯域外管理は、この変更の影響を受けません。  
-
-###  <a name="bkmk_nap"></a> ネットワーク アクセス保護  
- System Center Configuration Manager では、ネットワーク アクセス保護のサポートが削除されました。 この機能は Windows Server 2012 R2 で非推奨となり、Windows 10 からは削除されています。  
-
- ネットワーク アクセス保護の代替方法については、「 *ネットワーク ポリシーとアクセス サービスの概要* 」で [非推奨の機能](https://technet.microsoft.com/library/hh831683.aspx)に関する説明を参照してください。  
 
 
 ## <a name="deprecated-operating-systems"></a>非推奨オペレーティング システム
@@ -77,12 +53,12 @@ ms.lasthandoff: 03/10/2017
 
 |**オペレーティング システム**|**最初に非推奨と発表**|**サポートの削除** |  
 |-|-|-|  
-|Windows Server 2008|2015 年 7 月 10 日|1511 </br></br>サイト システムとしてのサポートは削除されています  (注 1 をご覧ください)。|  
-|Windows Server 2008 R2|2015 年 7 月 10 日|サポートは、2016 年 12 月 31 日より後にリリースされる最初の更新プログラムで終了します (注 2 をご覧ください)。|  
+|Windows Server 2008|2015 年 7 月 10 日|バージョン 1511 </br></br>サイト システムとしてのサポートは削除されています  (注 1 をご覧ください)。|  
+|Windows Server 2008 R2|2015 年 7 月 10 日| バージョン 1702 (注 2 を参照)|  
 
--   注 1: このオペレーティング システムは、サイト サーバーとして、または配布ポイントとプル配布ポイントを除くサイト システムの役割としてはサポートされていません。 このサポートの廃止が発表されるまで、またはこのオペレーティング システムの拡張サポート期間が終了するまでは、このオペレーティング システムを配布ポイントとして使用し続けることができます。 詳細については、「[Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)」 (Windows Server 2008 で System Center Configuration Manager CB および LTSB のインストールに失敗する) を参照してください。 
+-   注 1: このオペレーティング システムは、サイト サーバーとして、または配布ポイントとプル配布ポイントを除くサイト システムの役割としてはサポートされていません。 このサポートの廃止が発表されるまで、またはこのオペレーティング システムの拡張サポート期間が終了するまでは、このオペレーティング システムを配布ポイントとして使用し続けることができます。 詳細については、「[Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)」 (Windows Server 2008 で System Center Configuration Manager CB および LTSB のインストールに失敗する) を参照してください。
 
--   注 2: サポート終了後は、サイト サーバーやほとんどのサイト システムの役割に対してこのオペレーティング システムはサポートされなくなります。 ただし、このサポートの廃止が発表されるまで、またはこのオペレーティング システムの延長サポート期間が終了するまで、状態移行ポイントおよび配布ポイントのサイト システムの役割 (プル配布ポイント、PXE およびマルチキャストの場合を含む) に対してこのオペレーティング システムは引き続きサポートされます。 バージョン 1602 より、サイト サーバーのオペレーティング システムを Windows Server 2008 R2 から Windows Server 2012 R2 にインプレース アップグレードできます。  
+-   注 2: バージョン 1702 以降では、このオペレーティング システムはサイト サーバーやほとんどのサイト システムの役割でサポートされていません。ただし、1702 より前のバージョンで引き続き使用することはできます。 このサポートの廃止が発表されるまで、またはこのオペレーティング システムの延長サポート期間が終了するまで、状態移行ポイントおよび配布ポイントのサイト システムの役割 (プル配布ポイント、PXE およびマルチキャストの場合を含む) に対してこのオペレーティング システムは引き続きサポートされます。 バージョン 1602 より、サイト サーバーのオペレーティング システムを Windows Server 2008 R2 から Windows Server 2012 R2 にインプレース アップグレードできます。  
 
      サイト サーバーのオペレーティング システムのインプレース アップグレードに関する詳細については、「[System Center Configuration Manager の変更点](../../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md)」の「[Windows Server 2008 R2 を実行するサイト サーバーのオペレーティング システムのインプレース アップグレード](../../../core/plan-design/changes/whats-new-in-version-1602.md#bkmk_UpgradeOS)」セクションを参照してください。
 
@@ -95,7 +71,7 @@ ms.lasthandoff: 03/10/2017
 |**オペレーティング システム**|**最初に非推奨と発表**|**サポートの削除**|  
 |-|-|-|  
 |Windows XP|2015 年 7 月 10 日|バージョン 1511|  
-|Windows XP Embedded|2015 年 7 月 10 日|サポートは、2016 年 12 月 31 日より後にリリースされた最初の更新プログラムで終了します。|  
+|Windows XP Embedded|2015 年 7 月 10 日|バージョン 1702|  
 |Windows Server 2003|2015 年 7 月 10 日|バージョン 1511|  
 |Windows Server 2003 R2|2015 年 7 月 10 日|バージョン 1511|  
 |Windows Vista|2015 年 7 月 10 日|バージョン 1511|  
@@ -110,5 +86,39 @@ ms.lasthandoff: 03/10/2017
 |**SQL Server バージョン**|**最初に非推奨と発表**|**サポートの削除**|   
 |-|-|-|  
 |SQL Server 2008|2015 年 7 月 10 日|バージョン 1511|  
-|SQL Server 2008 R2|2015 年 7 月 10 日|サポートは、2016 年 12 月 31 日より後にリリースされた最初の更新プログラムで終了します。|  
+|SQL Server 2008 R2|2015 年 7 月 10 日|バージョン 1702|  
+
+使用している SQL Server のバージョンをアップグレードする必要がある場合は、次の方法 (簡単な方法から順に示されています) を使用することをお勧めします。
+1. [SQL Server をインプレースでアップグレードします](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (推奨)。
+2. 新しいコンピューターに新しいバージョンの SQL Server をインストールしてから、Configuration Manager セットアップの[データベースの移動オプションを使用](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)して、サイト サーバーを新しい SQL Server にポイントします。
+3. [バックアップと回復](/sccm/protect/understand/backup-and-recovery)を使用します。
+
+
+## <a name="deprecated-features"></a>非推奨の機能  
+
+|**機能**|**最初に非推奨と発表**|**サポートの削除**|  
+|-|-|-|  
+|ネットワーク アクセス保護 (NAP) - System Center 2012 Configuration Manager の機能|2015 年 7 月 10 日|バージョン 1511|  
+|帯域外管理 - System Center 2012 Configuration Manager の機能|2015 年 10 月 16 日|バージョン 1511|
+|タスク シーケンス: <br /> - OSDPreserveDriveLetter  <br /><br /> 既定で、オペレーティング システムの展開中に、Windows セットアップが使用する最適なドライブ文字を決定するようになりました (通常は C:)。 別のドライブを使用するように指定する場合は、オペレーティング システムの適用タスク シーケンスのステップで場所を変更できます。 [**このオペレーティング システムの適用先を選択してください。**] 設定に移動し、[**特定の論理ドライブ文字**] を選択し、使用するドライブを選択します。 |2016 年 6 月 20 日 |バージョン 1606 |
+|タスク シーケンス: <br /> - ディスクをダイナミックに変換 <br /> - 展開ツールのインストール |2016 年 11 月 18 日|2017 年 6 月 1 日以降にリリースされる最初の更新プログラムでこれらのタスク シーケンスのサポートは終了します。|
+|ソフトウェア センターは新しい現代的な外観へと一新されます。 Silverlight を使用するアプリケーション カタログにしか表示されなかったアプリ (ユーザーが利用できるアプリ) がソフトウェア センターの **[アプリケーション]** タブに表示されるようになります。 アプリケーション カタログには、ソフトウェア センターの **[インストールのステータス]** タブ上にあるリンクを使用してアクセスできます。<br><br>以前のバージョンのソフトウェア センターは、今後数か月の間に使用できなくなります。<br><br>新しいソフトウェア センターを使用するようにクライアントをセットアップするには、クライアント設定 **[コンピューター エージェント]** > **[新しいソフトウェア センターの使用]** を有効化します。<br><br>ソフトウェア センターの詳細については、「[System Center Configuration Manager のアプリケーション管理の計画と構成](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management)」を参照してください。|2016 年 12 月 13 日|後日発表|
+|Configuration Manager によるバーチャル ハード ディスク (VHD) の管理。 </br></br>これには、新しい VHD の作成オプション、またはタスク シーケンスを使用した VHD の管理オプションの削除と、Configuration Manager コンソールからのバーチャル ハード ディスクのノードの削除が含まれます。 </br></br>このサポートが削除されると、既存の VHD は削除されませんが、Configuration Manager コンソール内からアクセスできなくなります。  |2017 年 1 月 6 日 |VHD のサポートは、2017 年 6 月 1 日より後にリリースされた最初の更新プログラムで終了します。|
+|System Center Configuration Manager Upgrade Assessment Tool。 </br></br>Upgrade Assessment Tool は、System Center Configuration Manager と Application Compatibility Toolkit (ACT) 6.x の両方に依存します。 ACT の最終バージョンは、Windows 10 v1511 ADK に同梱されていました。 今後、ACT が更新されることはないため、Upgrade Assessment Tool のサポートは廃止されます。 </br></br>Upgrade Assessment Tool は、[アップグレードの準備](/sccm/core/clients/manage/upgrade/upgrade-analytics)機能に置き換えられます。 非推奨に関する注記は、9/12/2016 に [UAT のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=37145)に追加されました。 |9/12/2016  | 2017 年 7 月 11 日 |  
+
+
+<br></br>
+バージョン 1511 の System Center Configuration Manager リリースで削除された機能の詳細を次に示します。
+
+###  <a name="bkmk_amt"></a> 帯域外管理  
+ Configuration Manager では、Configuration Manager コンソール内からの AMT ベースのコンピューターに対するネイティブ サポートは削除されました。  
+
+-   [Microsoft System Center Configuration Manager 用 Intel SCS アドオン](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html)を使用すれば、AMT ベースのコンピューターは引き続き完全に管理されます。 アドオンを使用することで、最新の機能にアクセスして AMT を管理できます。Configuration Manager にこれらの変更が組み込まれるまでに適用されていた制限は解除されます。  
+
+-   System Center 2012 Configuration Manager での帯域外管理は、この変更の影響を受けません。  
+
+###  <a name="bkmk_nap"></a> ネットワーク アクセス保護  
+ System Center Configuration Manager では、ネットワーク アクセス保護のサポートが削除されました。 この機能は Windows Server 2012 R2 で非推奨となり、Windows 10 からは削除されています。  
+
+ ネットワーク アクセス保護の代替方法については、「 *ネットワーク ポリシーとアクセス サービスの概要* 」で [非推奨の機能](https://technet.microsoft.com/library/hh831683.aspx)に関する説明を参照してください。
 

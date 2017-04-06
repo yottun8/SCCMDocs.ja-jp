@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: 3c3725678561c32fce316ed1209ac8fe73a0eed1
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 832be8c9fda727804f57e83768cd8799db722c67
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/16/2016
 
 -   System Center Configuration Manager コンソールを実行するアカウント: 読み取り  
 
- これらのセキュリティ アクセス許可の詳細については、「[手順 1: ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成する](../deploy-use/certificate-infrastructure.md#step-1-install-and-configure-the-network-device-enrollment-service-and-dependencies)」を参照してください。  
+ これらのセキュリティ アクセス許可の詳細については、「[証明書インフラストラクチャ](../deploy-use/certificate-infrastructure.md)」を参照してください。  
 
  上記の既定の構成を使うと、ユーザーとデバイスは証明書テンプレートから直接証明書を要求することはできず、すべての要求が、必ず、ネットワーク デバイス登録サービスから発信されるようになります。 この制限は、セキュリティ上、重要なことです。というのは、これらの証明書テンプレートでは、証明書のサブジェクトを [要求に含まれる **** ] に構成しなければならないので、権限のないはずのユーザーやデバイスが正規ユーザーになりすまして証明書を要求する可能性があるからです。 既定の構成では、必ず、ネットワーク デバイス登録サービスが要求を開始しなければなりません。 ただし、ネットワーク デバイス登録サービスを実行するサービスが侵害された場合、依然として、このなりすましのリスクがあります。 このリスクを回避するには、ネットワーク デバイス登録サービスおよびこの役割サービスを実行するコンピューターに対する、セキュリティ上のすべてのベスト プラクティスに従ってください。  
 

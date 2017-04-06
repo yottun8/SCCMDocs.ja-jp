@@ -2,7 +2,7 @@
 title: "ハイブリッド MDM と Configuration Manager の最新情報 | Microsoft Docs"
 description: "Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。"
 ms.custom: na
-ms.date: 03/16/2017
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 79135bcea4b0ed21fe8017045226f393a1e09dac
-ms.openlocfilehash: fcaead7cbe637fa76d16976f5052cdcd9975b6e8
-ms.lasthandoff: 03/22/2017
+ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
+ms.openlocfilehash: cc3e4055ce6b648e4554773518fc928cfb51c5f3
+ms.lasthandoff: 03/28/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
@@ -82,6 +82,47 @@ ms.lasthandoff: 03/22/2017
 
   iOS と Android 向けの Microsoft Teams アプリが Intune モバイル アプリ管理 (MAM) 機能で有効になりました。会話や会社のデータは常に保護された状態で、デバイスを問わず、自由に働く能力をチームに与えることができるようになりました。 詳細については、Enterprise Mobility and Security ブログの「[Microsoft Teams announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/03/14/microsoft-teams-is-now-generally-available-and-mam-enabled-on-ios-and-android/)」 (Microsoft Teams からの告知) を参照してください。
 
+### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (現在のブランチ) の新機能
+
+Configuration Manager Technical Preview リリースで以前に提供されていた次の機能は、Intune と Configuration Manager (Current Branch) バージョン 1702 のハイブリッド展開で使用できるようになりました。
+
+- [Android for Work のサポート](/sccm/core/plan-design/changes/whats-new-in-version-1702##android-for-work-support)
+- [非準拠アプリのコンプライアンス設定](/sccm/core/plan-design/changes/whats-new-in-version-1702#conditional-access-device-compliance-policy-improvements)
+- [PFX 証明書の作成と配布および S/MIME のサポート](/sccm/core/plan-design/changes/whats-new-in-version-1702#improvements-to-certificate-profiles)
+- [ハイブリッド MDM の作成ウィザードで Android と iOS のバージョン指定が不要に](/sccm/core/plan-design/changes/whats-new-in-version-1702#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)
+
+次の追加のハイブリッド機能も、Configuration Manager (Current Branch) のバージョン 1702 に含まれます。
+
+- **Apple Volume Purchase Program (VPP) のサポートの向上**
+
+  - ライセンスされたアプリをユーザーだけでなくデバイスにも展開できるようになりました。 デバイス ライセンスをサポートするアプリ機能に応じて、次のように、展開時に適切なライセンスが要求されます。
+
+    | Configuration Manager バージョン | アプリでのデバイス ライセンスのサポート | 展開コレクションの種類 | 要求されるライセンス |
+    |-|-|-|-|
+    |1702 より前|○|ユーザー|ユーザー ライセンス|
+    |1702 より前|×|ユーザー|ユーザー ライセンス|
+    |1702 より前|○|デバイス|ユーザー ライセンス|
+    |1702 より前|×|デバイス|ユーザー ライセンス|
+    |1702 以降|○|ユーザー|ユーザー ライセンス|
+    |1702 以降|×|ユーザー|ユーザー ライセンス|
+    |1702 以降|○|デバイス|デバイス ライセンス|
+    |1702 以降|×|デバイス|ユーザー ライセンス|
+
+  - iOS Volume Purchase Program for Education から購入したアプリを展開し追跡できるようになりました。
+
+  - 複数の Apple Volume Purchase Program トークンを Configuration Manager に関連付けることができるようになりました。
+
+  ボリューム購入した iOS アプリの詳細については、[「ボリューム購入 iOS アプリの管理」](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps) を参照してください。
+
+- **ビジネス向け Windows ストアで基幹業務アプリをサポートする**
+
+  ビジネス向け Windows ストアから、カスタマイズされた基幹業務アプリを同期できるようになりました。
+
+- **新しい Mobile Threat Defense 監視ツール**
+
+    Mobile Threat Defense サービス プロバイダーでコンプライアンス状態を監視する新しい方法を利用できるようになりました。
+
+    詳細については、[「Mobile Threat Defense コンプライアンスの監視」](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance) を参照してください。
 
 ## <a name="new-hybrid-features-in-february-2017"></a>2017 年 2 月のハイブリッド新機能
 
@@ -101,15 +142,19 @@ ms.lasthandoff: 03/22/2017
 
 - **Android for Work のサポート**
 
-  Configuration Manager Technical Preview 1702 を使用するハイブリッド MDM 環境で、Android for Work を使用して Android デバイスを管理できるようになりました。 サポートされている Android デバイスを、Android for Work デバイスとして登録できます。これによりデバイス上に作業プロファイルが作成され、Play for Work で承認されたアプリをそこに展開できます。 これらのデバイスの構成項目、コンプライアンス ポリシー、およびリソース アクセス プロファイルを展開することもできます。
+  Configuration Manager Technical Preview 1702 を使用するハイブリッド MDM 環境で、Android for Work を使用して Android デバイスを管理できるようになりました。 サポートされている Android デバイスを、Android for Work デバイスとして登録できます。これによりデバイス上に作業プロファイルが作成され、Play for Work で承認されたアプリをそこに展開できます。 これらのデバイスの構成項目、コンプライアンス ポリシー、およびリソース アクセス プロファイルを展開することもできます。 詳細については、[「Android for Work のサポート」](/sccm/core/get-started/capabilities-in-technical-preview-1702#android-for-work-support) を参照してください。
 
 - **非準拠アプリのコンプライアンス設定**
 
-  コンプライアンス ポリシーで、Android および iOS のアプリの非準拠アプリの規則を作成できるようになりました。 デバイスに指定されたアプリケーションがインストールされている場合、それらは "非対応" としてマークされ、適用される条件付きアクセス ポリシーに従って、会社のリソースにアクセスできなくなります。
+  コンプライアンス ポリシーで、Android および iOS のアプリの非準拠アプリの規則を作成できるようになりました。 デバイスに指定されたアプリケーションがインストールされている場合、それらは "非対応" としてマークされ、適用される条件付きアクセス ポリシーに従って、会社のリソースにアクセスできなくなります。 詳細については、[「条件付きアクセス デバイス コンプライアンス ポリシーの改善」](/sccm/core/get-started/capabilities-in-technical-preview-1702#conditional-access-device-compliance-policy-improvements) を参照してください。
 
 - **PFX 証明書の作成と配布および S/MIME のサポート**
 
-  PFX 証明書を作成してハイブリッド環境のユーザーに展開できるようになりました。 これらの証明書は、ユーザーが登録したデバイスで S/MIME メールの暗号化と復号化に使用できます。
+  PFX 証明書を作成してハイブリッド環境のユーザーに展開できるようになりました。 これらの証明書は、ユーザーが登録したデバイスで S/MIME メールの暗号化と復号化に使用できます。 詳細については、[「S/MIME サポートを含む PFX 証明書を作成する」](/sccm/core/get-started/capabilities-in-technical-preview-1702#create-pfx-certificates-with-s-mime-support) を参照してください。
+
+- **追加の iOS 構成設定のサポート**
+   
+    構成項目の一部として、構成できる 42 個の iOS 設定が追加されました。 これらの設定の大部分 (35 個) は、監視対象の iOS デバイスに対して追加されました。 詳細については、[「iOS デバイスの新しいコンプライアンス設定」](/sccm/core/get-started/capabilities-in-technical-preview-1702#new-compliance-settings-for-ios-devices) を参照してください。
 
 ## <a name="new-hybrid-features-in-january-2017"></a>2017 年 1 月のハイブリッド新機能
 

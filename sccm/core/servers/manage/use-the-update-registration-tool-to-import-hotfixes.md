@@ -2,7 +2,7 @@
 title: "更新登録ツール | Microsoft Docs"
 description: "Configuration Manager コンソールに更新プログラムを手動でインポートするために、どのような場合に、どのような方法で更新登録ツールを使用するかについて説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: c729212d38168acfff3f11ea41f3d52b234c70c8
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 35a4c201f73469fdfaa5bb8629e91886f7ae8751
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -60,15 +60,15 @@ ms.lasthandoff: 12/16/2016
 
     -   **&lt;製品\>-&lt;製品バージョン\>-&lt;サポート技術情報の記事 ID\>-ConfigMgr.Update.exe**  
 
-    修正プログラムが登録されると、24 時間以内にコンソールに新しい更新プログラムとして表示されます。  次のいずれかを使用して、プロセスを高速化できます。  
+    修正プログラムが登録されると、24 時間以内にコンソールに新しい更新プログラムとして表示されます。  次のようにして、プロセスを高速化できます。
 
-    -   バージョン 1511: Configuration Manager コンソールで、**[管理] > [Cloud Services] > [更新とサービス]** に移動し、**[Start update discovery process immediately]** (今すぐ更新プログラムの検出プロセスを開始) を選びます。  これにより、登録プロセスの完了時に修正プログラムのインポートが直ちに開始され、コンソールで利用できるようになります。  
-
-    -   バージョン 1602 以降: Configuration Manager コンソールで、**[管理] > [Cloud Services] > [更新とサービス]** に移動し、**[更新プログラムの確認]** をクリックします。  
+    - Configuration Manager コンソールを開き、**[管理]** > **[更新とサービス]** の順に移動して、**[更新プログラムの確認]** をクリックします  (1702 より前のバージョンでは、[更新とサービス] は、**[管理]** > **[クラウド サービス]** にありました)。 
 
     更新登録ツールは、ローカル コンピューター上の .log ファイルにその操作を記録します。 ログ ファイルは、修正プログラムの .exe ファイルと同じ名前で、**%SystemRoot%Temp** フォルダーに保存されます。  
 
      更新プログラムが登録されると、更新登録ツールを閉じることができます。  
 
-3.  Configuration Manager コンソールを開き、 [管理][クラウド サービス][Updates and Servicing (更新プログラムとサービス)]を選びます。 インポートされた修正プログラムは、インストールできるようになりました。 更新プログラムのインストールの詳細については、「[Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)」(System Center Configuration Manager の更新プログラムのコンソール内インストール) を参照してください。  
+3.  Configuration Manager コンソールを開き、**[管理]** > **[更新とサービス]** の順に移動します。 インポートされた修正プログラムは、インストールできるようになりました  (1702 より前のバージョンでは、[更新とサービス] は、**[管理]** > **[クラウド サービス]** にありました)。
+
+ 更新プログラムのインストールの詳細については、「[Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)」(System Center Configuration Manager の更新プログラムのコンソール内インストール) を参照してください。  
 

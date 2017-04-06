@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager によるリモート ワイプ、ロック、パスコードのリセットを使用したデータの保護 | Microsoft Docs"
 description: "System Center Configuration Manager によるフル ワイプ、選択的ワイプ、リモート ロック、パスコードのリセットを使用してデバイスのデータを保護します。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,13 +13,13 @@ ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 3aa4c2ad3568cc6ced70a65141a2c103af8b740f
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ef020a0409c1f1a68f76ecadc9885801e6c1ad4e
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-using-system-center-configuration-manager"></a>System Center Configuration Manager によるリモート ワイプ、ロック、パスコードのリセットを使用したデータの保護
@@ -77,19 +77,22 @@ Configuration Manager には、選択的ワイプ、フル ワイプ、リモー
 |管理エージェント|デバイス管理者特権は無効になります。|デバイス管理者特権は無効になります。|  
 |電子メール プロファイル|該当なし。|Intune によってプロビジョニングされた電子メール プロファイルの場合、電子メール アカウントと電子メールが削除されます。|  
 
+**Android for Work**
+
+Android for Work デバイスで選択的ワイプを行うと、そのデバイスの仕事用プロファイルが削除され、プロファイルに含まれるすべてのデータ、アプリケーション、設定が削除されます。 Configuration Manager と Intune の管理対象からそのデバイスが外れます。 Android for Work の場合、完全なワイプには対応していません。
+
  **Windows 10、Windows 8.1、Windows RT 8.1、および Windows RT**  
 
-|デバイスをインベントリから削除したときに削除されるコンテンツ|Windows 10、Windows 8.1、および Windows RT 8.1|Windows RT|  
-|---------------------------------|-------------|-----------|
-|Configuration Manager および Intune を使用してインストールされた会社のアプリと関連データ。|アプリケーションがアンインストールされて、サイドローディング キーが削除されます。 Windows 選択型ワイプを使用するアプリケーションでは、暗号化キーが失効になり、データにアクセスできなくなります。|サイドローディング キーは削除されますが、アプリケーションはインストールされたままになります。|  
-|VPN と Wi-Fi プロファイル|削除されます。|該当なし。|  
-|証明書|削除されて失効します。|該当なし。|  
-|設定|要件が削除されます。||  
-|管理エージェント|該当なし。 管理エージェントは組み込まれています。|該当なし。 管理エージェントは組み込まれています。|  
-|電子メール プロファイル|Windows の電子メールと添付ファイル用のメール アプリを含む EFS 対応の電子メールを削除します。|該当なし。|  
+|デバイスをインベントリから削除したときに削除されるコンテンツ|Windows 10、Windows 8.1、および Windows RT 8.1|  
+|---------------------------------|-------------|
+|Configuration Manager および Intune を使用してインストールされた会社のアプリと関連データ。|アプリケーションがアンインストールされて、サイドローディング キーが削除されます。 Windows 選択型ワイプを使用するアプリケーションでは、暗号化キーが失効になり、データにアクセスできなくなります。|  
+|VPN と Wi-Fi プロファイル|削除されます。|  
+|証明書|削除されて失効します。|  
+|設定|要件が削除されます。|
+|管理エージェント|該当なし。 管理エージェントは組み込まれています。|  
+|電子メール プロファイル|Windows の電子メールと添付ファイル用のメール アプリを含む EFS 対応の電子メールを削除します。|  
 
- **Windows 10 Mobile、Windows Phone 8.0、および Windows Phone 8.1**  
-
+ **Windows 10 Mobile、Windows Phone 8.0、および Windows Phone 8.1**
 
  |デバイスをインベントリから削除したときに削除されるコンテンツ|Windows 10 Mobile、Windows Phone 8、および Windows Phone 8.1|  
 |-|-|
@@ -102,53 +105,29 @@ Configuration Manager には、選択的ワイプ、フル ワイプ、リモー
  Windows 10 Mobile および Windows Phone 8.1 のデバイスからは、次の設定も削除されます。  
 
 -   モバイル デバイスのロックを解除するパスワードを要求する  
-
 -   単純なパスワードを許可する  
-
 -   最小のパスワードの長さ  
-
 -   必要なパスワードの種類  
-
 -   パスワードの有効期限 (日)  
-
 -   パスワードの履歴を記憶する  
-
 -   デバイスをワイプするまでの連続サインイン エラーの数  
-
 -   パスワードが必要になるまでの非アクティブ状態の時間 (分)  
-
 -   必要なパスワードの種類 - 文字セットの最小数  
-
 -   カメラを許可する  
-
 -   モバイル デバイスの暗号化を要求する  
-
 -   リムーバブル記憶域を許可する  
-
 -   Web ブラウザーを許可する  
-
 -   アプリケーション ストアを許可する  
-
 -   画面のキャプチャを許可する  
-
 -   位置情報を許可する  
-
 -   Microsoft アカウントを許可する  
-
 -   コピーと貼り付けを許可する  
-
 -   Wi-Fi テザリングを許可する  
-
 -   無料 Wi-Fi スポットへの自動接続を許可する  
-
 -   Wi-Fi スポットの報告を許可する  
-
 -   工場出荷時のリセットを許可する  
-
 -   Bluetooth を許可する  
-
 -   NFC を許可する  
-
 -   Wi-Fi を許可する  
 
 ### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>Configuration Manager コンソールからリモート ワイプを開始するには  
@@ -192,10 +171,11 @@ Configuration Manager には、選択的ワイプ、フル ワイプ、リモー
 |プラットフォーム|パスコードのリセット|  
 |--------------|--------------------|  
 |iOS|デバイスからパスコードをクリアする場合にサポートされます。 新しい一時的なパスコードは作成されません。|  
-|Android|サポートされます。一時的なパスコードが作成されます。|  
+|Android|サポートされます。一時的なパスコードが作成されます。|
+|Android for Work | サポートされていません|
 |Windows 10|現時点ではサポートされていません。|  
 |Windows Phone 8 および Windows Phone 8.1|サポートされています|  
-|Windows RT 8.1 および Windows RT|サポートされません|  
+|Windows RT 8.1 |サポートされません|  
 |Windows 8.1|サポートされません|  
 
 ### <a name="to-reset-the-passcode-on-a-mobile-device-remotely-in-configuration-manager"></a>Configuration Manager を使用してリモートでモバイル デバイスのパスコードをリセットするには  
@@ -223,7 +203,7 @@ Configuration Manager には、選択的ワイプ、フル ワイプ、リモー
 |Android|サポートされています|  
 |Windows 10|現時点ではサポートされていません。|  
 |Windows Phone 8 および Windows Phone 8.1|サポートされています|  
-|Windows RT 8.1 および Windows RT|デバイスの現在のユーザーが、デバイスを登録したユーザーと同じ場合にはサポートされます。|  
+|Windows RT 8.1 |デバイスの現在のユーザーが、デバイスを登録したユーザーと同じ場合にはサポートされます。|  
 |Windows 8.1|デバイスの現在のユーザーが、デバイスを登録したユーザーと同じ場合にはサポートされます。|  
 
 ### <a name="to-lock-a-mobile-device-remotely-through-the-configuration-manager-console"></a>Configuration Manager コンソールを使用してリモートでモバイル デバイスをロックするには  

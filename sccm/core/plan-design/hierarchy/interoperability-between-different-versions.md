@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b458284961171f11acc3e84f82749addc1b6afb
-ms.openlocfilehash: 890cc72f7ca0619b48ceae7c3a8c731a62341ef7
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 28593d271603ff9775425327996d844d7ed358cd
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -41,7 +41,7 @@ System Center Configuration Manager の複数の独立した階層を同じネ�
 
  System Center Configuration Manager のサイトまたは階層は既存の System Center 2012 Configuration Manager のサイトまたは階層と並列展開できるため、一方のバージョンのサイトにもう一方のバージョンのクライアントが参加することがないように計画することをお勧めします。
 
-たとえば、複数の Configuration Manager 階層に重複する境界がある場合には、同じネットワークの場所が含まれる「[重複する境界について](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md#BKMK_BoundaryOverlap)」を参照してください。サイトの自動割り当てを使用する代わりに、新しい各クライアントを特定のサイトに割り当てるのが最善です。 System Center 2012 Configuration Manager のサイトの自動割り当ての詳細については、「[System Center Configuration Manager でクライアントをサイトに割り当てる方法](../../../core/clients/deploy/assign-clients-to-a-site.md)」を参照してください。  
+たとえば、複数の Configuration Manager 階層に、同じネットワークの場所が含まれる、重複する境界がある場合には、(「[重複する境界について](/sccm/core/servers/deploy/configure/boundary-groups#overlapping-boundaries)」を参照)、サイトの自動割り当てを使用する代わりに、新しい各クライアントを特定のサイトに割り当てるのが最善です。 System Center 2012 Configuration Manager のサイトの自動割り当ての詳細については、「[System Center Configuration Manager でクライアントをサイトに割り当てる方法](../../../core/clients/deploy/assign-clients-to-a-site.md)」を参照してください。  
 
  また、System Center Configuration Manager のサイト システムの役割をホストしているコンピューターに System Center 2012 Configuration Manager のクライアントをインストールすることや、System Center 2012 Configuration Manager のサイト システムの役割をホストしているコンピューターに System Center Configuration Manager クライアントをインストールすることはできません。  
 
@@ -65,7 +65,7 @@ System Center Configuration Manager の複数の独立した階層を同じネ�
  2 つの階層に重複する境界がある場合に、クライアントが正しくないサイトに割り当てられるのを防ぐため、クライアントを特定のサイトに割り当てるように Configuration Manager クライアント インストール パラメーターを構成することをお勧めします。  
 
 ##  <a name="bkmk_mixed"></a> バージョンが混在している階層内の Configuration Manager の制限  
- System Center Configuration Manager サイトのアップグレードの過程において、サイトごとにバージョンが異なることがあります。 たとえば、中央管理サイトを新しいバージョンにアップグレードするものの、サイトのメンテナンス期間のために&1; つ以上のプライマリ サイトが後日までアップグレードできないことがあります。  
+ System Center Configuration Manager サイトのアップグレードの過程において、サイトごとにバージョンが異なることがあります。 たとえば、中央管理サイトを新しいバージョンにアップグレードするものの、サイトのメンテナンス期間のために 1 つ以上のプライマリ サイトが後日までアップグレードできないことがあります。  
 
  特定の階層内にある各種サイトのバージョンが異なる場合、一部の機能は利用できません。 これが、Configuration Manager コンソールで Configuration Manager オブジェクトを管理する方法と、クライアントで使用できる機能に影響する可能性があります。 通常、Configuration Manager の新しいバージョンの機能を、古いサービス バック バージョンを実行しているサイトまたはクライアントで使用することはできません。  
 

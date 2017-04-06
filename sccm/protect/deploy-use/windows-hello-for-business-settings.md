@@ -2,7 +2,7 @@
 title: "Windows Hello for Business の設定 | Microsoft Docs"
 description: "System Center Configuration Manager に Windows Hello for Business を統合する方法について説明します。"
 ms.custom: na
-ms.date: 10/10/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: ec3d130674d606410e6da7babee126e017aff234
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: c9a6842958e6fa3f740caabbaf20aabb9df4e8a8
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -30,7 +30,7 @@ System Center Configuration Manager を、Windows 10 デバイスの代替サイ
 
 Hello for Business を使用すると、パスワードの代わりに **ユーザー ジェスチャ** を使用してログインできます。 ユーザー ジェスチャには、単純な暗証番号 (PIN)、生体認証、または指紋リーダーなどの外部のデバイスがあります。  
 
- Configuration Manager と Windows Hello for Business を統合するには、次の&2; つの方法があります。  
+ Configuration Manager と Windows Hello for Business を統合するには、次の 2 つの方法があります。  
 
 -   Configuration Manager を使用して、ユーザーがサインインに使用できるジェスチャと使用できないジェスチャを制御できます。  
 
@@ -47,13 +47,13 @@ Hello for Business を使用すると、パスワードの代わりに **ユー�
 
 この構成に加えて、「[証明書プロファイルの構成](#configure-a-certificate-profile)」で説明されているように、証明書プロファイルも展開する必要があります。
 
-### <a name="recommended-approach----configure-a-windows-hello-for-business-profile"></a>推奨される方法 - Windows Hello for Business プロファイルの構成  
+## <a name="recommended-approach----configure-a-windows-hello-for-business-profile"></a>推奨される方法 - Windows Hello for Business プロファイルの構成  
 
-管理コンソールの **[会社のリソースへのアクセス]** で、**[Windows Hello for Business プロファイル]** を右クリックし、**[新規]** を選択してプロファイル ウィザードを開始します。 ウィザードによって要求された設定を指定し、最後のページで設定を確認して、**[閉じる]** をクリックします。 設定の例を次に示します。  
+Configuration Manager コンソールの **[会社のリソースへのアクセス]** で、**[Windows Hello for Business プロファイル]** を右クリックし、**[新規]** を選択してプロファイル ウィザードを開始します。 ウィザードによって要求された設定を指定し、最後のページで設定を確認して、**[閉じる]** をクリックします。 設定の例を次に示します。  
 
 ![Windows Hello for Business の設定](../media/Hello-for-Business-settings.png)
 
-### <a name="configure-windows-hello-for-business-with-group-policy-in-active-directory"></a>Active Directory のグループ ポリシーを使用して Windows Hello for Business を構成する  
+## <a name="configure-windows-hello-for-business-with-group-policy-in-active-directory"></a>Active Directory のグループ ポリシーを使用して Windows Hello for Business を構成する  
 
 Active Directory のグループ ポリシーを使用して、ユーザーが Windows にログインするときに、そのユーザーの Hello for Business 資格情報をプロビジョニングするように Windows 10 ドメイン参加デバイスを構成できます。
 
@@ -79,12 +79,10 @@ Active Directory のグループ ポリシーを使用して、ユーザーが W
 
    Azure AD に自動的に登録される Windows 10 ドメイン参加コンピューターを含む特定のセキュリティ グループ。    
 
-#### <a name="configure-windows-hello-for-business-by-deploying-a-powershell-script-with-configuration-manager"></a>Configuration Manager で PowerShell スクリプトを展開して Windows Hello for Business を構成する    
+## <a name="configure-windows-hello-for-business-by-deploying-a-powershell-script-with-configuration-manager"></a>Configuration Manager で PowerShell スクリプトを展開して Windows Hello for Business を構成する    
 Configuration Manager アプリケーション管理を使用して、次の PowerShell スクリプトを作成して展開できます。    
 
-```    
-powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -Command "& {New-ItemProperty "HKLM:\Software\Policies\Microsoft\PassportForWork" -Name "Enabled" -Value 1 -PropertyType "DWord" -Force}"  
-```  
+**powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -Command "& {New-ItemProperty "HKLM:\Software\Policies\Microsoft\PassportForWork" -Name "Enabled" -Value 1 -PropertyType "DWord" -Force}"** 
 
 Configuration Manager アプリケーション管理の詳細については、「[System Center Configuration Manager でのアプリケーション管理の概要](/sccm/apps/understand/introduction-to-application-management)」をご覧ください。  
 
@@ -95,9 +93,25 @@ Configuration Manager アプリケーション管理の詳細については、�
 
 -   証明書プロファイルで、スマート カード ログオンの EKU を使用するテンプレートを選びます。  
 
+-    ビジネス向け Windows Hello キー コンテナーに証明書プロファイルを保存する場合、証明書プロファイルで**スマート カード ログオン** EKU が使用されているときには、キー登録で証明書が正しく検証されるように次のアクセス許可を構成する必要があります。
+最初に **Key Admins** グループを作成しておき、すべての Configuration Manager 管理ポイント コンピューターをこのグループに追加する必要があります。
+
+    1.    ドメイン管理者または同等の資格情報でドメイン コントローラーまたは管理ワークステーションにログインします。
+    2.    **[Active Directory Users and Computers]** を開きます。
+    3.    ナビゲーション ウィンドウで、ドメイン名を右クリックし、**[プロパティ]** をクリックします。
+    4.    **[*<domain name>* のプロパティ]** ダイアログ ボックスの **[セキュリティ]** タブで、**[詳細設定]** をクリックします。 **[セキュリティ]** タブが表示されない場合、**[Active Directory Users and Computers]** の **[表示]** メニューの **[高度な機能]** をオンにします。
+    5.    [ **追加**] をクリックします。
+    6.    **[*<domain name>* のアクセス許可エントリ]** ダイアログ ボックスで **[プリンシパルの選択]** をクリックします。
+    7.    **[ユーザー、コンピューター、サービス アカウント、またはグループの選択]** ダイアログ ボックスの **[選択するオブジェクト名を入力します]** テキスト ボックスに「**Key Admins**」と入力します。  **[OK]**をクリックします。
+    8.    **[適用先]** リストから **[Descendant User objects (子孫ユーザー オブジェクト)]** を選択します。
+    9.    ページの一番下までスクロールし、**[すべてクリア]** をクリックします。
+    10.    **[プロパティ]** セクションで **[Read msDS-KeyCredentialLink (msDS-KeyCredentialLink を読む)]** を選択します。
+    11.    **[OK]** を 3 回クリックし、タスクを完了します。
+
+
  詳細については、「[Certificate profiles](introduction-to-certificate-profiles.md)」 (証明書プロファイル) をご覧ください。  
 
-### <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>関連項目  
  [System Center Configuration Manager でのデータとサイト インフラストラクチャの保護](../../protect/understand/protect-data-and-site-infrastructure.md)
 
  [Windows Hello for Business を使用した本人確認の管理](https://technet.microsoft.com/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport)  

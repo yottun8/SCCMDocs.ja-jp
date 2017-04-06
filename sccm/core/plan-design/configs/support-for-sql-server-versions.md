@@ -2,7 +2,7 @@
 title: "サポートされている SQL Server のバージョン | Microsoft ドキュメント"
 description: "System Center Configuration Manager サイト データベースをホストするための SQL Server のバージョンおよび構成要件を取得します。"
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 25aa013896ca118f0689b71e5cddcb8baf049c66
-ms.openlocfilehash: 9bf4c1d9ee12da6801470165d33df50b2d08a810
-ms.lasthandoff: 01/03/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ea9edf6392c41e31276900454cd78ce4bc32be7b
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -56,7 +56,10 @@ ms.lasthandoff: 01/03/2017
 ##  <a name="bkmk_SQLVersions"></a> サポートされている SQL Server のバージョン  
  複数のサイトを含む階層では、それぞれのサイトが異なるバージョンの SQL Server を使用してサイト データベースをホストできます。ただし、使用する SQL Server のバージョンが Configuration Manager でサポートされている必要があります。  
 
- 他の指定がない限り、次のバージョンの SQL Server は System Center Configuration Manager 1511 以降のバージョンでサポートされています。  
+ 特に指定のない限り、次のバージョンの SQL Server はすべてのアクティブ バージョンの System Center Configuration Manager でサポートされます。 新しい SQL Server バージョンまたは Service Pack のサポートが追加されている場合、そのサポートを追加する Configuration Manager バージョンが示されます。 同様に、サポートが推奨されていない場合は、Configuration Manager の影響を受けるバージョンの詳細を確認してください。   
+ 
+特定の SQL Server Service Pack のサポートには、基本の Service Pack バージョンに戻せない場合を除き、その Service Pack の累積的な更新プログラムが含まれます。 Service Pack のバージョンが示されない場合、サポートは、そのバージョンの Service Pack なしの SQL Server に対するものです。 今後、そのバージョンの Service Pack がリリースされた場合、その新しい Service Pack バージョンがサポートされる前に、別のサポート ステートメントが宣言されます。
+
 
 > [!IMPORTANT]  
 >  中央管理サイトでデータベース用に SQL Server Standard を使用する場合、階層でサポートできるクライアントの合計数が制限されます。 「[サイジングとスケールの数値](../../../core/plan-design/configs/size-and-scale-numbers.md)」をご覧ください。
@@ -110,7 +113,10 @@ ms.lasthandoff: 01/03/2017
 
 
 ### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3: Standard、Enterprise、Datacenter     
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+  [バージョン 1702 以降](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database)では、このバージョンの SQL Server はサポートされていません。  
+ 1702 より前のバージョンの Configuration Manager を使用している場合、このバージョンの SQL Server は引き続きサポートされます。
+
+使用しているバージョンの Configuration Manager でサポートされている場合は、次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
 -   プライマリ サイト
@@ -157,7 +163,7 @@ ms.lasthandoff: 01/03/2017
  **データベース照合順序：**  
  各サイトでは、サイトとサイト データベースの両方に使用される SQL Server のインスタンスが、 **SQL_Latin1_General_CP1_CI_AS**の照合順序を使用する必要があります。  
 
- Configuration Manager は、GB18030 で定義されている中国で使用するための標準を満たすために、この照合順序に対して&2; つの例外をサポートしています。 詳細については、「[System Center Configuration Manager のインターナショナル サポート](../../../core/plan-design/hierarchy/international-support.md)」をご覧ください。  
+ Configuration Manager は、GB18030 で定義されている中国で使用するための標準を満たすために、この照合順序に対して 2 つの例外をサポートしています。 詳細については、「[System Center Configuration Manager のインターナショナル サポート](../../../core/plan-design/hierarchy/international-support.md)」をご覧ください。  
 
  **SQL Server の機能：**  
  各サイト サーバーに必要な機能は、 **データベース エンジン サービス** 機能のみです。  
@@ -237,4 +243,10 @@ SQL Server を実行しているコンピューターが複数のサイトから
 SQL Server を実行しているコンピューターのファイアウォールが有効に設定されている場合は、展開で使用されているポートと、SQL Server と通信するコンピューター間のネットワーク上のあらゆる場所にあるポートを許可するように構成してください。  
 
 特定のポートを使用するように SQL Server を構成する方法の例については、SQL Server TechNet ライブラリの「 [特定の TCP ポートで受信待ちするようにサーバーを構成する方法 (SQL Server 構成マネージャー)](http://go.microsoft.com/fwlink/p/?LinkID=226349) 」を参照してください。  
+
+## <a name="upgrade-options-for-sql-server"></a>SQL Server のアップグレード オプション
+使用している SQL Server のバージョンをアップグレードする必要がある場合は、次の方法 (簡単な方法から順に示されています) を使用することをお勧めします。
+1. [SQL Server をインプレースでアップグレードします](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (推奨)。
+2. 新しいコンピューターに新しいバージョンの SQL Server をインストールしてから、Configuration Manager セットアップの[データベースの移動オプションを使用](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)して、サイト サーバーを新しい SQL Server にポイントします。
+3. [バックアップと回復](/sccm/protect/understand/backup-and-recovery)を使用します。
 

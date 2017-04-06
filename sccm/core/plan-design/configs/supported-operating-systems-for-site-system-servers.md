@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
-ms.openlocfilehash: f175e11d9402e7c57c45edb4d5bbe969de5dcdf7
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 86109f7186422c2b29ee933e827a7d14123e5792
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -182,6 +182,11 @@ ms.lasthandoff: 03/10/2017
 
 ## <a name="windows-server-2008-r2-with-sp1-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 R2 SP1 (x64): Standard、Enterprise、Datacenter  
  [マイクロソフト サポート ライフサイクル](https://support.microsoft.com/lifecycle)で詳述するように、Windows Server 2008 R2 が延長サポートになり、メインストリーム サポートが終了しました。 Configuration Manager を使用したサイト システム サーバーとしてのこれらのオペレーティング システムの将来のサポートの詳細については、「[System Center Configuration Manager から削除された機能と非推奨の機能](../../../core/plan-design/changes/removed-and-deprecated-features.md)」を参照してください。  
+
+ Configuration Manager バージョン 1702 以降では、このオペレーティング システムはサイト サーバーやほとんどのサイト システムの役割でサポートされませんが、状態移行ポイントおよび配布ポイントのサイト システムの役割 (プル配布ポイント、PXE およびマルチキャストの場合を含む) では引き続きサポートされます。
+ 
+ 1702 より前のバージョンでは、以下の使用が引き続きサポートされます。
+
 
 **サイト サーバー:**  
 

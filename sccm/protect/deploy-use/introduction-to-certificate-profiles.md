@@ -2,7 +2,7 @@
 title: "証明書プロファイルの概要 | Microsoft Docs"
 description: "System Center Configuration Manager の証明書プロファイルと Active Directory 証明書サービスの使用方法について説明します。"
 ms.custom: na
-ms.date: 12/28/2016
+ms.date: 03/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,13 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
-ms.openlocfilehash: d51670b47aab77cc4e630a6aeaa0744f916bf3b9
-ms.lasthandoff: 12/30/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ba1d5b04cb0cb0284525e295a6086a3c0ac67e9f
+ms.lasthandoff: 03/27/2017
 
 
 ---
+
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager における証明書プロファイルの概要
 
 *適用対象: System Center Configuration Manager (Current Branch)*
@@ -44,12 +45,12 @@ ms.lasthandoff: 12/30/2016
 **例:** PKI を使用中の場合に、セキュリティを損なうことなく、ユーザーの個人のデバイスから会社のリソースへのアクセスを可能にする証明書をプロビジョニングする方法として、セキュリティで保護されたさらに柔軟なメソッドに移行する必要がある場合。 特定のデバイス プラットフォーム用にサポートされている設定とプロトコルを使用して、証明書プロファイルを構成します。 デバイスは、インターネットに接続された登録サーバーに対してこれらの証明書を自動的に要求することができます。 それから、デバイスが会社のリソースにアクセスできるように、これらの証明書を使用するように VPN プロファイルを構成します。  
 
 ## <a name="types-of-certificate-profiles"></a>証明書プロファイルの種類  
- 次の&3; 種類の証明書プロファイルがあります。  
+ 次の 3 種類の証明書プロファイルがあります。  
 
 -   **信頼された CA 証明書** - デバイスがサーバーを認証する必要があるときに信頼できる証明書チェーンを形成するために、信頼されたルート CA または中間 CA 証明書を展開することができます。  
 
 -   **Simple Certificate Enrollment Protocol (SCEP)** - Windows Server 2012 R2 を実行するサーバーで、SCEP プロトコルおよびネットワーク デバイス登録サービスを使用して、デバイス用やユーザー用の証明書を要求することができます。
--   -   **Personal information Exchange (.pfx)** - デバイスまたはユーザーの .pfx (別名、PKCS #12) を要求できます。
+-   **Personal information Exchange (.pfx)** - デバイスまたはユーザーの .pfx (別名、PKCS #12) 証明書を要求できます。
 
     > [!NOTE]  
     >  **Simple Certificate Enrollment Protocol (SCEP)** タイプの証明書プロファイルを作成する前に、**信頼された証明機関証明書**タイプの証明書プロファイルを作成する必要があります。  
@@ -80,7 +81,7 @@ System Center Configuration Manager の典型的なシナリオとして、接�
 
 デバイスが SCEP 証明書プロファイルを使用して証明書を要求するためには、そのデバイスにエンタープライズ ルート CA 証明書がインストールされていなければなりません。  
 
-さまざまな環境や接続要件に合わせてカスタマイズされた証明書を要求するように、SCEP 証明書プロファイルにさまざまな設定を指定できます。 **** 証明書プロファイルの作成ウィザードには、登録パラメーター用のページが&2; つあります。 1 つ目の [SCEP 登録 ****] には、登録要求の設定と証明書のインストール先の設定が含まれています。 もう&1; つの [証明書のプロパティ] は、要求する証明書自体を説明するページです。 ****  
+さまざまな環境や接続要件に合わせてカスタマイズされた証明書を要求するように、SCEP 証明書プロファイルにさまざまな設定を指定できます。 **** 証明書プロファイルの作成ウィザードには、登録パラメーター用のページが 2 つあります。 1 つ目の [SCEP 登録 ****] には、登録要求の設定と証明書のインストール先の設定が含まれています。 もう 1 つの [証明書のプロパティ] は、要求する証明書自体を説明するページです。 ****  
 
 ## <a name="deploying-certificate-profiles"></a>証明書プロファイルの展開  
  証明書プロファイルを展開すると、プロファイル内の証明書ファイルがクライアント デバイスにインストールされます。 SCEP パラメーターも展開されて、SCEP 要求がクライアント デバイス上で処理されます。 証明書プロファイルをユーザー コレクションまたはデバイス コレクションに展開して、各証明書の保存先のストアを指定できます。 適用規則によって、証明書をデバイスにインストールできるかどうかが決まります。 証明書プロファイルをユーザー コレクションに展開する場合は、ユーザーとデバイスのアフィニティによって、ユーザーのどのデバイスに証明書をインストールするのかが決まります。 ユーザー証明書が含まれた証明書プロファイルをデバイス コレクションに展開すると、既定では、証明書はユーザーの各プライマリ デバイスにインストールされます。 この動作を変更して、**証明書プロファイルの作成ウィザード** の **[SCEP 登録]** のページにあるユーザーの任意のデバイス上に証明書をインストールできます。 また、デバイスがワークグループ コンピューターの場合、デバイスにユーザー証明書は展開されません。  
@@ -100,4 +101,3 @@ System Center Configuration Manager の典型的なシナリオとして、接�
 -   デバイスが System Center Configuration Manager の階層からブロックされた場合。  
 
  証明書を失効させるために、サイト サーバーが、証明書の発行元の証明機関に失効コマンドを送信します。 この失効の理由は、「運用停止」です。 ****  
-

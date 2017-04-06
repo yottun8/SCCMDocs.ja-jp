@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: b4642186e42745640f088b7046e70019616935ea
-ms.openlocfilehash: 9a5cd5ce3ce6868b44768d3cbe7b7c594f44d42c
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 7a9c5bb9890b00cf3485998aa46286c890429cc0
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -149,7 +149,9 @@ USB ドライブに ServiceConnectionTool フォルダーとその中身をす�
 
 8.  インポートが完了したら、コマンド プロンプトを閉じることができます。 (該当する階層の更新プログラムのみがインポートされます)。  
 
-9. Configuration Manager コンソールを開き、**[管理]** >**[Cloud Services]** > **[更新とサービス]** に移動します。 インポートされた更新プログラムは、インストールできるようになりました。 更新プログラムのインストールの詳細については、「[System Center Configuration Manager のコンソール内の更新プログラムのインストール](../../../core/servers/manage/install-in-console-updates.md)」を参照してください。  
+9. Configuration Manager コンソールを開き、**[管理]** > **[更新とサービス]** の順に移動します。 インポートされた更新プログラムは、インストールできるようになりました  (1702 より前のバージョンでは、[更新とサービス] は、**[管理]** > **[クラウド サービス]** にありました)。
+
+ 更新プログラムのインストールの詳細については、「[System Center Configuration Manager のコンソール内の更新プログラムのインストール](../../../core/servers/manage/install-in-console-updates.md)」を参照してください。  
 
 ## <a name="bkmk_cmd"></a> コマンド ライン オプション  
  サービス接続ポイント ツールのヘルプ情報を表示するには、コマンド プロンプトを開き、ツールを格納するフォルダーに移動して、コマンド  **serviceconnectiontool.exe**を実行します。  

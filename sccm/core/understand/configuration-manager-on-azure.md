@@ -2,7 +2,7 @@
 title: "Azure の Configuration Manager | Microsoft Docs"
 description: "Azure 環境での Configuration Manager の使用に関する情報。"
 ms.custom: na
-ms.date: 01/30/2017
+ms.date: 03/27/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 264e009952db34a6f4929ecb70dc6857117ce4fe
-ms.openlocfilehash: e8798adc0e479417c682450d181611284c148e6d
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 5276ad999fc871496d79e6efff34d5edc6335380
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure の Configuration Manager - よく寄せられる質問
@@ -39,11 +40,11 @@ Azure でホストする場合、サイト間の近接通信 (ファイルベー
 
 ### <a name="what-areas-should-i-pay-attention-to-when-considering-a-move-of-my-configuration-manager-infrastructure-to-azure"></a>Azure への Configuration Manager インフラストラクチャの移行を検討する場合、どのような点に注意すべきですか?
 いい質問です。この決定を行う際に最も重要な点はいくつかあるため、このトピックでは次のようにそれぞれ別々に説明します。
-1.  ネットワーク
-2.  可用性
-3.  パフォーマンス
-4.  コスト
-5.  ユーザー エクスペリエンス
+1.    ネットワーク
+2.    可用性
+3.    パフォーマンス
+4.    コスト
+5.    ユーザー エクスペリエンス
 
 ## <a name="networking"></a>ネットワーク
 ### <a name="what-about-networking-requirements-should-i-use-expressroute-or-an-azure-vpn-gateway"></a>ネットワーク要件はどうなっていますか? ExpressRoute または Azure VPN Gateway を使用する必要がありますか?
@@ -72,7 +73,7 @@ Azure でホストする場合、サイト間の近接通信 (ファイルベー
 
 
 ## <a name="availability"></a>可用性
-### <a name="one-of-the-reasons-i-am-moving-infrastructure-to-azure-is-the-promise-of-high-availability-can-i-take-advantage-of-high-availability-options-like-azure-vm-availability-sets-for-vms-that-i-will-use-for-configuration-manager"></a>Azure にインフラストラクチャを移行する理由の&1; つは高可用性の保証です。 Configuration Manager で使用する VM の Azure VM 可用性セットのような高可用性オプションを利用できますか?
+### <a name="one-of-the-reasons-i-am-moving-infrastructure-to-azure-is-the-promise-of-high-availability-can-i-take-advantage-of-high-availability-options-like-azure-vm-availability-sets-for-vms-that-i-will-use-for-configuration-manager"></a>Azure にインフラストラクチャを移行する理由の 1 つは高可用性の保証です。 Configuration Manager で使用する VM の Azure VM 可用性セットのような高可用性オプションを利用できますか?
 はい。 Azure VM 可用性セットは、配布ポイントや管理ポイントのような冗長的なサイト システムの役割で使用できます。
 
 また、Configuration Manager サイト サーバーでも使用できます。 たとえば、中央管理サイトとプライマリ サイトをすべて同じ可用性セットに含めることができます。これは、同時に再起動されないようにするのに役立ちます。
@@ -120,7 +121,7 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 
 
 ## <a name="user-experience"></a>ユーザー エクスペリエンス
-### <a name="you-mention-that-user-experience-is-one-of-the-main-areas-of-importance-why-is-that"></a>ユーザー エクスペリエンスが主に重要な点の&1; つということですが、それはなぜですか?
+### <a name="you-mention-that-user-experience-is-one-of-the-main-areas-of-importance-why-is-that"></a>ユーザー エクスペリエンスが主に重要な点の 1 つということですが、それはなぜですか?
 ネットワーク、可用性、パフォーマンス、および Configuration Manager サイト サーバーの配置場所に関する決定事項が、ユーザーに直接影響する場合があります。 Azure への移行はユーザーに対して透過的であるため、Configuration Manager との日常的な対話は変わらないと考えています。
 
 ### <a name="ok-i-get-it-i-plan-to-install-a-single-stand-alone-primary-site-on-an-azure-virtual-machine-and-i-want-to-make-sure-my-costs-are-low-should-i-place-remote-site-systems-like-management-points-distribution-points-and-software-update-points-on-azure-virtual-machines-as-well-or-on-premises"></a>わかりました。 Azure Virtual Machine への単一のスタンドアロン プライマリ サイトのインストールを予定しており、コストを抑えられるかどうかを知りたいのですが、 Azure Virtual Machines にも (リモート) サイト システム (管理ポイント、配布ポイント、ソフトウェアの更新ポイントなど) を配置すべきですか? それともオンプレミスに配置すべきでしょうか?
@@ -145,8 +146,8 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 
 実際の環境でクラウド管理ゲートウェイの使用を開始できます。フィードバックをお送りいただくことで、改善することができます。 プレリリース機能の詳細については、「[更新プログラムからプレリリース機能を使用する](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkprereleasea-use-pre-release-features-from-updates)」を参照してください。
 
-### <a name="i-also-heard-that-you-have-another-new-feature-called-peer-cache-in-the-technical-preview-version-1604-is-that-different-than-branchcache-which-one-should-i-choose"></a>Technical Preview バージョン 1604 にはピア キャッシュという新機能もあると聞きましたが、 BranchCache とは異なるものですか?  どちらを選べばよいですか?
-はい、まったく異なるものです。 [ピア キャッシュ](/sccm/core/get-started/capabilities-in-technical-preview-1604#bkmk_peercache)は Configuration Manager の 100% ネイティブのテクノロジですが、BranchCache は Windows の機能の 1 つです。 どちらも便利ですが、BranchCache ではブロードキャストを使用して必要なコンテンツを検索するのに対して、ピア キャッシュでは Configuration Managers の通常の配布ワークフローと境界グループの設定を使用します。
+### <a name="i-also-heard-that-you-have-another-new-feature-called-peer-cache-introduced-as-a-pre-release-feature-in-version-1610-is-that-different-than-branchcache-which-one-should-i-choose"></a>バージョン 1610 のプレリリース機能として導入されたピア キャッシュという新機能もあると聞きましたが、 BranchCache とは異なるものですか?  どちらを選べばよいですか?
+はい、まったく異なるものです。 [ピア キャッシュ](/sccm/core/plan-design/hierarchy/client-peer-cache)は Configuration Manager の 100% ネイティブのテクノロジですが、BranchCache は Windows の機能の 1 つです。 どちらも便利ですが、BranchCache ではブロードキャストを使用して必要なコンテンツを検索するのに対して、ピア キャッシュでは Configuration Managers の通常の配布ワークフローと境界グループの設定を使用します。
 
 任意のクライアントをピア キャッシュのソースとして構成することができます。 そうすれば、管理ポイントがコンテンツ ソースの場所に関する情報を提供する際に、クライアントで必要なコンテンツがあるピア キャッシュ ソースと配布ポイントの両方の詳細が提供されます。
 
@@ -179,9 +180,4 @@ Configuration Manager は Azure Load Balancer でテストされていません�
  - ExpressRoute の詳細: http://azure.microsoft.com/documentation/articles/expressroute-introduction/
 
  
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 

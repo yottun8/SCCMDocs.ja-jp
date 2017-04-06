@@ -2,7 +2,7 @@
 title: "Windows クライアント展開の前提条件 | Microsoft Docs"
 description: "System Center Configuration Manager で Windows コンピューターにクライアントを展開するための前提条件について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: cbcffea0fe2b4c8a05d3a835ff1193b528e55762
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 7ed1b9e6802cc20defcb92a8e536983fd757bd29
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -36,7 +36,7 @@ Configuration Manager クライアントを環境で展開するには、次の�
 > [!NOTE]  
 >  この記事に示されているソフトウェア バージョンの番号は、必要な最小のバージョン番号のみを示します。  
 
-##  <a name="a-namebkmkprereqscomputersa-prerequisites-for-computer-clients"></a><a name="BKMK_prereqs_computers"></a> コンピューター クライアントの前提条件  
+##  <a name="BKMK_prereqs_computers"></a> コンピューター クライアントの前提条件  
  コンピューターに Configuration Manager クライアントをいつインストールするかの前提条件を判断するには次の情報に従います。  
 
 ### <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 外部の依存関係  
@@ -65,9 +65,10 @@ Configuration Manager クライアントを環境で展開するには、次の�
 |Microsoft Silverlight 5.1.41212.0 (Configuration Manager バージョン 1602 以降)|アプリケーション カタログ ウェブサイトのユーザー エクスペリエンスをサポートするために必要となります。|  
 |Microsoft .NET Framework バージョン 4.5.2|クライアントのオペレーションをサポートするために必要となります。 Microsoft .NET Framework バージョン 4.5 以降がインストールされていない場合は、クライアント コンピューターに自動的にインストールされます。 詳細については、「[Microsoft .NET Framework バージョン 4.5.2 に関する追加情報](#dotNet)」を参照してください。|  
 |Microsoft SQL Server Compact 3.5 SP2 コンポーネント|クライアント オペレーションに関連した情報を保存するために必要となります。|  
-|Microsoft Windows Imaging Component|Microsoft .NET Framework 4.0 で、64 ビット コンピューター向け Windows Server 2003 または Windows XP SP2 に必要となります。|  
+|Microsoft Windows Imaging Component|Microsoft .NET Framework 4.0 で、64 ビット コンピューター向け Windows Server 2003 または Windows XP SP2 に必要となります。|
+|Microsoft Intune PC ソフトウェア クライアント|Intune PC ソフトウェア クライアントと Configuration Manager クライアントを同じ PC で実行することはできません。 Configuration Manager クライアントをインストールする前に、必ず、Intune クライアントを削除してください。|
 
-####  <a name="a-namedotneta-additional-details-about-microsoft-net-framework-version-452"></a><a name="dotNet"></a> Microsoft .NET Framework バージョン 4.5.2 に関する追加情報  
+####  <a name="dotNet"></a> Microsoft .NET Framework バージョン 4.5.2 に関する追加情報  
 
 > [!NOTE]  
 >  2016 年 1 月 12 日に、.NET 4.0、4.5、および 4.5.1 のサポートが期限切れになりました。 詳細については、support.microsoft.com の [Microsoft .NET Framework のサポート ライフサイクル ポリシーに関する FAQ](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) を参照してください。  
@@ -162,7 +163,7 @@ Configuration Manager クライアントを環境で展開するには、次の�
 ### <a name="firewall-requirements"></a>ファイアウォールの要件  
  サイト システム サーバーと Configuration Manager クライアントをインストールするコンピューターとの間にファイアウォールがある場合、「[System Center Configuration Manager におけるクライアントの Windows ファイアウォールとポートの設定](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md)」を参照してください。  
 
-##  <a name="a-namebkmkprereqsmobiledevicesa-prerequisites-for-mobile-device-clients"></a><a name="BKMK_prereqs_mobiledevices"></a> モバイル デバイス クライアントの前提条件  
+##  <a name="BKMK_prereqs_mobiledevices"></a> モバイル デバイス クライアントの前提条件  
  Configuration Manager クライアントをいつモバイル デバイスにインストールし、それらの登録に Configuration Manager を使用するかの前提条件を判断する際には次の情報を参考にします。  
 
 ### <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 外部の依存関係  

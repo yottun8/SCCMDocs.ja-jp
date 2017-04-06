@@ -2,7 +2,7 @@
 title: "コマンド ライン インストール | Microsoft Docs"
 description: "さまざまなサイトのインストールで、コマンド プロンプトから System Center Configuration Manager セットアップを実行する方法について説明します。"
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 34e24deb90a39bf655a2e24d16cdbe07528e6193
-ms.openlocfilehash: 0fb8ba4bb3d4abe66f71cc83312281cecbb92c41
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: fefa5f3aa12d82b66a251cf0525475496e1e35cf
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>コマンド ラインを使用して System Center Configuration Manager サイトをインストールする
@@ -33,7 +33,7 @@ ms.lasthandoff: 03/01/2017
 -   **コマンド プロンプトから中央管理サイトまたはプライマリ サイトをインストールする**  
   [セットアップのコマンド ライン オプション](../../../../core/servers/deploy/install/command-line-options-for-setup.md)を表示する
 
- -  **中央管理サイトまたはプライマリ サイトで使用する言語を変更する**  
+-  **中央管理サイトまたはプライマリ サイトで使用する言語を変更する**  
     サイトにインストールされている言語 (モバイル デバイスの言語を含む) をコマンド プロンプトから変更するには、次の操作を実行する必要があります。  
 
      -   サイト サーバーの **&lt;ConfigMgrInstallationPath\>\Bin\X64** からセットアップを実行します
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/01/2017
 
     言語スクリプト ファイルを作成するには、「[Command line options to manage languages](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Lang)」(言語を管理するためのコマンド ライン オプション) に記載されている情報を参考にしてください。  
 
- -  **サイトの無人インストールまたはサイトの回復にインストール スクリプト ファイルを使用する**  
+-  **サイトの無人インストールまたはサイトの回復にインストール スクリプト ファイルを使用する**  
     インストール スクリプトを使用してコマンド プロンプトからセットアップを実行し、サイトの無人インストールを実行できます。 また、この方法で、サイトを回復することもできます。    
 
     セットアップでスクリプトを使用するには:  
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/01/2017
     -   Identification    
     -   Options    
     -   SQLConfigOptions    
-    -   HierarchyOptions    
+      -   HierarchyOptions    
     -   CloudConnectorOptions   
 
     サイトを回復するには、スクリプト ファイルの次のセクションも含める必要があります。  
@@ -66,12 +66,11 @@ ms.lasthandoff: 03/01/2017
     -   Identification  
     -   復元
 
-    バックアップと回復について詳しくは、「[Configuration Manager のバックアップと回復](../../../../protect/understand/backup-and-recovery.md)」トピックの「[サイトの無人回復スクリプト ファイルのキー](../../../../protect/understand/backup-and-recovery.md#BKMK_UnattendedSiteRecoveryKeys)」を参照してください。  
+バックアップと回復について詳しくは、「[Configuration Manager のバックアップと回復](../../../../protect/understand/backup-and-recovery.md)」トピックの「[サイトの無人回復スクリプト ファイルのキー](../../../../protect/understand/backup-and-recovery.md#BKMK_UnattendedSiteRecoveryKeys)」を参照してください。  
 
-    無新インストールのスクリプト ファイルで使用するキーと値の一覧を確認するには、「[Unattended Setup script file keys](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended)」(無人セットアップ スクリプト ファイルのキー) を参照してください。  
+無新インストールのスクリプト ファイルで使用するキーと値の一覧を確認するには、「[Unattended Setup script file keys](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended)」(無人セットアップ スクリプト ファイルのキー) を参照してください。  
 
 ## <a name="about-the-command-line-script-file"></a>コマンド ライン スクリプト ファイルについて  
-
  Configuration Manager の無人インストールの場合は、コマンド ライン オプション **/SCRIPT** を使用してセットアップを実行し、インストール オプションを含むスクリプト ファイルを指定できます。 この方法では、次のタスクがサポートされています。  
 
 -   中央管理サイトをインストールする  
@@ -81,6 +80,18 @@ ms.lasthandoff: 03/01/2017
 
 > [!NOTE]  
 >  評価サイトを製品版の Configuration Manager にアップグレードする場合、無人スクリプト ファイルを使用することはできません。  
+
+### <a name="the-cdlatest-key-name"></a>CDLatest キー名
+CD.Latest フォルダーのメディアを使用して、次の 4 つのインストール オプションのスクリプト インストールを実行する場合は、値が **1** の **CDLatest** キーを含める必要があります。
+- 新しい中央管理サイトをインストールする
+- 新しいプライマリ サイトをインストールする
+- 中央管理サイトを回復する
+- プライマリ サイトを回復する 
+
+この値は、Microsoft ボリューム ライセンス サイトから取得したインストール メディアでは使用できません。
+スクリプト ファイルでこのキー名を使用する方法の詳細については、[コマンド ライン オプション](/sccm/core/servers/deploy/install/command-line-options-for-setup)を参照してください。
+
+
 
 ### <a name="create-the-script"></a>スクリプトを作成する
 [サイトをインストールするためにユーザー インターフェイスを使用してセットアップを実行する](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)と、インストール スクリプトが自動的に作成されます。  ウィザードの **[概要]** ページで設定を確認するときに、次の処理が実行されます。  

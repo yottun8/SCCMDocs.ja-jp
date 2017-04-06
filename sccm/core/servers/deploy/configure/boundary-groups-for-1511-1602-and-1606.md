@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 139dcf9bc2a9bd253592b969b6f9d814ffcdfd8e
-ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 640cdc67f301a81a45bf27f95eb03cbc8754a9aa
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -26,10 +27,10 @@ ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 このトピックの情報は、System Center Configuration Manager のバージョン 1511、1602、1606 での境界グループの使用に関するものです。
-1610 以降のバージョンを使用する場合、再設計された境界グループの使用方法については、「*System Center Configuration Manager のサイト境界と境界グループの定義*」の「[境界グループ](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#a-namebkmkboundarygroupsa-boundary-group/)」を参照してください。  
+バージョン 1610 以降を使用する場合、再設計された境界グループの使用方法については「[境界グループを構成する](/sccm/core/servers/deploy/configure/boundary-groups)」を参照してください。  
 
 
-##  <a name="a-namebkmkboundarygroupsa-boundary-groups"></a><a name="BKMK_BoundaryGroups"></a> Boundary groups  
+##  <a name="BKMK_BoundaryGroups"></a> Boundary groups  
  境界グループを作成すると、関連するネットワークの場所 (境界) を論理的にグループ化して、インフラストラクチャを管理しやすくできます。 境界グループを使用するには、先に境界を境界グループに割り当てておく必要があります。 クライアントは、次の目的で境界グループの構成を使用します。  
 
 -   サイトの自動割り当て  
@@ -40,7 +41,7 @@ ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
 
     優先管理ポイントを使用する場合は、境界グループの構成内ではなく、階層に対してこのオプションを有効にする必要があります。 このトピックの次の手順「*優先管理ポイントの使用を有効にする*」を参照してください。  
 
-境界グループを設定するときは、その境界グループに少なくとも&1; つの境界を追加します。 そのうえで、それらの境界にあるクライアントが使用するための追加設定を構成します。  
+境界グループを設定するときは、その境界グループに少なくとも 1 つの境界を追加します。 そのうえで、それらの境界にあるクライアントが使用するための追加設定を構成します。  
 
 #### <a name="to-create-a-boundary-group"></a>境界グループを作成するには  
 
@@ -122,7 +123,7 @@ ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
 
  次のセクションでは、境界グループの構成に関する追加情報について説明します。  
 
-###  <a name="a-namebkmkboundarysiteassignmenta-about-site-assignment"></a><a name="BKMK_BoundarySiteAssignment"></a> サイトの割り当てについて  
+###  <a name="BKMK_BoundarySiteAssignment"></a> サイトの割り当てについて  
  各境界グループごとに、クライアント用の割り当てられたサイトを設定できます。  
 
 -   サイトの自動割り当てを使用する新しくインストールされたクライアントは、クライアントの現在のネットワークの場所を含む境界グループの割り当て済みサイトに参加します。  
@@ -137,8 +138,8 @@ ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
 
 クライアントのサイトの割り当ての詳細については、「[System Center Configuration Manager でクライアントをサイトに割り当てる方法](../../../../core/clients/deploy/assign-clients-to-a-site.md)」の「[コンピューターにサイトの自動割り当てを使用する](../../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_AutomaticAssignment)」をご覧ください。  
 
-###  <a name="a-namebkmkboundarycontentlocationa-about-content-location"></a><a name="BKMK_BoundaryContentLocation"></a> コンテンツの場所について  
- 各境界グループに&1; つまたは複数の配布ポイントと状態移行ポイントを含めるよう設定し、同じ配布ポイントと状態移行ポイントを複数の境界グループに関連付けることができます。  
+###  <a name="BKMK_BoundaryContentLocation"></a> コンテンツの場所について  
+ 各境界グループに 1 つまたは複数の配布ポイントと状態移行ポイントを含めるよう設定し、同じ配布ポイントと状態移行ポイントを複数の境界グループに関連付けることができます。  
 
 -   **ソフトウェアの配布時に**、クライアントは展開コンテンツ用の場所を要求します。 Configuration Manager は、クライアントの現在のネットワークの場所を含む各境界グループに関連付けられた配布ポイントのリストをクライアントに送信します。  
 
@@ -146,7 +147,7 @@ ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
 
 この動作により、コンテンツまたは状態移行情報の転送元となる最も近いサーバーをクライアントが選択できるようになります。  
 
-###  <a name="a-namebkmkpreferredmpa-about-preferred-management-points"></a><a name="BKMK_PreferredMP"></a> 優先管理ポイントについて  
+###  <a name="BKMK_PreferredMP"></a> 優先管理ポイントについて  
  優先管理ポイントを使用すると、クライアントは、その現在のネットワークの場所 (境界) に関連付けられた管理ポイントを特定できます。  
 
 -   クライアントは、優先として設定されていない割り当て済みサイトの管理ポイントを使用する前に、割り当て済みサイトの優先管理ポイントを使用しようとします。  
@@ -158,7 +159,7 @@ ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
 > [!NOTE]  
 >  クライアントのローミング時 (ラップトップ コンピューターをリモート オフィスに持って行き、そのネットワークの場所を変更するときなど) に、クライアントは新しい場所でローカル サイトの管理ポイント (またはプロキシ管理ポイント) を使用してから、割り当て済みサイト (優先管理ポイントがあるサイト) の管理ポイントを使用する場合があります。  詳細については、「[クライアントが System Center Configuration Manager のサイト リソースやサービスを検索する方法を理解する](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)」をご覧ください。  
 
-###  <a name="a-namebkmkboundaryoverlapa-about-overlapping-boundaries"></a><a name="BKMK_BoundaryOverlap"></a> 重複する境界について  
+###  <a name="BKMK_BoundaryOverlap"></a> 重複する境界について  
  Configuration Manager は、コンテンツの場所について、重複する境界を持つ構成をサポートします。  
 
 -   **クライアントがコンテンツを要求し**、クライアントのネットワークの場所が複数の境界グループに属している場合、Configuration Manager はコンテンツが格納されているすべての配布ポイントのリストをクライアントに送信します。  
@@ -167,15 +168,10 @@ ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
 
 この動作により、コンテンツまたは状態移行情報の転送元となる最も近いサーバーをクライアントが選択できるようになります。  
 
-###  <a name="a-namebkmkboudnarynetworkspeeda-about-network-connection-speed"></a><a name="BKMK_BoudnaryNetworkSpeed"></a> ネットワーク接続速度について  
+###  <a name="BKMK_BoudnaryNetworkSpeed"></a> ネットワーク接続速度について  
  境界グループ内の各サイト システム サーバーのネットワーク接続速度を設定できます。 この設定は、この境界グループの構成に基づいてサイト システムに接続するクライアントに適用されます。 異なる境界グループ内で、同じサイト システム サーバーに異なる接続速度を設定できます。  
 
  既定では、ネットワーク接続が **[高速]** に設定されますが、ネットワーク速度を **[低速]** に設定することもできます。 ネットワーク接続速度と展開構成を基に、クライアントが関連付けられた境界グループ内にある場合に、コンテンツを配布ポイントからダウンロードできるかどうかが決定されます。  
 
  ネットワーク接続速度の構成がクライアントのコンテンツ取得方法に及ぼす影響の詳細については、[コンテンツ ソースの場所に関するシナリオ](../../../../core/plan-design/hierarchy/content-source-location-scenarios.md)を紹介したページをご覧ください。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

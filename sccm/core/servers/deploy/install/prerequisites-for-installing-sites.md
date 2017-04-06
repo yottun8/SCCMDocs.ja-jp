@@ -2,7 +2,7 @@
 title: "サイトの前提条件 | Microsoft Docs"
 description: "さまざまな種類の System Center Configuration Manager サイトをインストールするための前提条件について説明します。"
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: b6c570d8addbe7df5aace461ee725a7df1d35a31
-ms.openlocfilehash: 76c8bb6d0922fad996e27c04a86cb9b4ad32a810
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ff89d4aea6be871e64e0a788f054ba4cadb3e51d
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="prerequisites-for-installing-system-center-configuration-manager-sites"></a>System Center Configuration Manager サイトのインストールの前提条件
@@ -56,18 +56,18 @@ ms.lasthandoff: 03/01/2017
     -  インストールを開始する前に、[セットアップ ダウンローダー](../../../../core/servers/deploy/install/setup-downloader.md)を使用して、これらのファイルのコピーをダウンロードしてローカル ネットワークに保存することができます。
     -  これらのファイルのローカル コピーを使用できない場合は、サイト サーバーからインターネットにアクセスしてインストール中に Microsoft からこのファイルをダウンロードできる必要があります。
 
-- サービス接続ポイント サイト システムの役割がインストールされているスタンドアロン プライマリ サイトを拡張するには、先にサービス接続ポイントをアンインストールする必要があります。 この役割のインスタンスは、階層内で&1; つだけ許可されており、階層の最上位サイトでのみ許可されます。 中央管理サイトのインストール時に、この役割を再インストールできます。
+- サービス接続ポイント サイト システムの役割がインストールされているスタンドアロン プライマリ サイトを拡張するには、先にサービス接続ポイントをアンインストールする必要があります。 この役割のインスタンスは、階層内で 1 つだけ許可されており、階層の最上位サイトでのみ許可されます。 中央管理サイトのインストール時に、この役割を再インストールできます。
 - サイト サーバーとサイト データベース コンピューターは、すべての前提条件の構成を満たしている必要があります。 セットアップを開始する前に、[前提条件チェッカーを手動で実行して](../../../../core/servers/deploy/install/prerequisite-checker.md)、問題を特定し、修正することができます。  
 
 
-### <a name="bkmk_expand"></a> スタンドアロン プライマリ サイトを拡張する
+### <a name="bkmk_expand"></a> スタンドアロン プライマリ サイトを拡張するための前提条件
 スタンドアロン プライマリ サイトを中央管理サイトがある階層に拡張するには、スタンドアロン プライマリ サイトが次の前提条件を満たしている必要があります。
 
--   **スタンドアロン プライマリ サイトのバージョンと一致する新しい中央管理サイト インストール メディア (ソース ファイルを含む) をインストールする必要がある**
+-   **スタンドアロン プライマリ サイトのバージョンと一致する新しい中央管理サイトを CD.Latest フォルダー (ソース ファイルを含む) のメディアを使用してインストールする必要がある**
 
-     バージョンを確実に一致させるには、スタンドアロン プライマリ サイト上の [CD.Latest](../../../../core/servers/manage/the-cd.latest-folder.md) フォルダー内にあるソース ファイルを使用して、新しいサイトをインストールします。
+ バージョンを確実に一致させるには、スタンドアロン プライマリ サイト上の [CD.Latest フォルダー](/sccm/core/servers/manage/the-cd.latest-folder)内にあるソース ファイルを使用します。
 
-     別のサイトのインストールに使用する適切なソース ファイルについては、「[サイトのインストールの準備](../../../../core/servers/deploy/install/prepare-to-install-sites.md)」トピックの「[異なる種類のサイトをインストールするためのオプション](../../../../core/servers/deploy/install/prepare-to-install-sites.md#bkmk_options)」を参照してください。
+ 別のサイトのインストールに使用する適切なソース ファイルについては、「[サイトのインストールの準備](../../../../core/servers/deploy/install/prepare-to-install-sites.md)」トピックの「[異なる種類のサイトをインストールするためのオプション](../../../../core/servers/deploy/install/prepare-to-install-sites.md#bkmk_options)」を参照してください。
 
 
 -   **スタンドアロン プライマリ サイトは、別の Configuration Manager 階層からデータを移行するように構成できない**  
@@ -98,7 +98,7 @@ ms.lasthandoff: 03/01/2017
 
 -   **スタンドアロン プライマリ サイトと、中央管理サイトをインストールするコンピューターの間で、SQL Server Service Broker (SSB) のポートが開かれている必要がある**  
 
-     Configuration Manager で、中央管理サイトとプライマリ サイト間でデータを正常にレプリケートするには、SSB で使用されるポートが&2; つのサイト間で開かれている必要があります。 中央管理サイトをインストールし、スタンドアロン プライマリ サイトを拡張するときに、前提条件のチェックでは、SSB 用に指定したポートがプライマリ サイトで開かれていることを確認しません。  
+     Configuration Manager で、中央管理サイトとプライマリ サイト間でデータを正常にレプリケートするには、SSB で使用されるポートが 2 つのサイト間で開かれている必要があります。 中央管理サイトをインストールし、スタンドアロン プライマリ サイトを拡張するときに、前提条件のチェックでは、SSB 用に指定したポートがプライマリ サイトで開かれていることを確認しません。  
 
 
 ## <a name="bkmk_secondary"></a> セカンダリ サイト

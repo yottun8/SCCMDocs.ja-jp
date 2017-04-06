@@ -2,7 +2,7 @@
 title: "Windows 10 のサポート | Microsoft Docs"
 description: "System Center Configuration Manager クライアントの実行がサポートされている Windows 10 のバージョンについて説明します。"
 ms.custom: na
-ms.date: 2/10/2017
+ms.date: 3/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: eb2092640f7bd68a25e4826cd7f88cda6822a33a
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
+ms.openlocfilehash: 188c6b1d7ae7768bb4075688d7d47607ee83be17
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="support-for-windows-10-as-a-client-of-system-center-configuration-manager"></a>System Center Configuration Manager のクライアントとしての Windows 10 のサポート
@@ -31,19 +31,24 @@ ms.lasthandoff: 03/21/2017
 - これは、「[クライアントとデバイスのサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)」の補足です。
 - Configuration Manager の Long-Term Servicing Branch を使用する場合は、「[Long-Term Servicing Branch でサポートされている構成](/sccm/core/understand/supported-configurations-for-ltsb)」を参照してください。
 
-Configuration Manager は、Windows 10 の新しいバージョンがリリースされると、できるだけ早く、そのバージョンに対するサポートを提供しようとします。 製品には個別の開発およびリリースのスケジュールがあるため、Configuration Manager で提供するサポートは、各製品のバージョンおよびブランチのリリース時期によって異なります。  
+Configuration Manager は、Windows 10 の新しいバージョンがリリースされると、できるだけ早く、そのバージョンに対するサポートを提供しようとします。 製品には個別の開発およびリリースのスケジュールがあるため、Configuration Manager で提供するサポートは、各製品のバージョンおよびブランチのリリース時期によって異なります。
+
+たとえば、Configuration Manager バージョンは、[そのバージョンのサポート](/sccm/core/servers/manage/current-branch-versions-supported)の終了後に、マトリックスから除外されます。 同様に、Enterprise 2015 LTSB または 1607 (CBB) などの Windows 10 バージョンのサポートは、Configuration Manager でサポートされる構成リストから削除されると、マトリックスから除外されます。 詳細については、「[非推奨オペレーティング システム](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems)」を参照してください。
 
 
 
-|Windows 10 のバージョン |Configuration Manager 1602|Configuration Manager 1606|Configuration Manager 1610|
+|Windows 10 のバージョン                    |Configuration Manager 1606          |Configuration Manager 1610          |    Configuration Manager 1702 |
 |---------------------|-----|-----|-----|
-|Enterprise 2015 LTSB |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
-|1507 <br />Enterprise, Education, Pro | ![サポートされています](media/green_check.png)| ![サポートされています](media/green_check.png)|![サポートされています](media/green_check.png) |
-|1511 <br />Enterprise, Education, Pro <br />(CB)、(CBB) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
-|Enterprise 2016 LTSB    |![サポートされていません](media/Red_X.png) |![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png)|
-|1607 <br />Enterprise, Education, Pro<br /> (CB)    |![サポートされていません](media/Red_X.png) |![下位互換性あり](media/blue_compat.png) |![サポートされています](media/green_check.png) |
-|1607 <br />Enterprise, Education, Pro <br />(CBB)    |![サポートされていません](media/Red_X.png) |![下位互換性あり](media/Red_X.png) |![サポートされています](media/green_check.png) |
+|Enterprise 2015 LTSB                   |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
+|1507 <br />(*エディションを参照*)            |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
+|1511 (CB)、(CBB)<br />(*エディションを参照*) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
+|Enterprise 2016 LTSB                   |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
+|1607 (CB)    <br />(*エディションを参照*)      |![下位互換性あり](media/blue_compat.png) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
+|1607 (CBB)    <br />(*エディションを参照*)      |![サポートされていません](media/Red_X.png)   |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
 
+
+
+**エディション:** Enterprise、Pro、Education、Pro Education   
 
 |キー|
 |--|

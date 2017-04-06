@@ -2,7 +2,7 @@
 title: "実稼働前コレクションでのクライアント アップグレードのテスト | Microsoft ドキュメント"
 description: "System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストします。"
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
-ms.openlocfilehash: 250c9312b932670c408554f3968ae43ae4f3dbaa
-ms.lasthandoff: 01/03/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 533c8e8b30519d83b8fc7a9d204d51e76974c4b1
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/03/2017
 
      **[階層設定のプロパティ]** の **[クライアント アップグレード]**タブで次の操作を実行します。  
 
-    -    **[実稼働前クライアントを使用して実稼働前コレクション内のすべてのクライアントを自動的にアップグレードする]**を選びます。  
+    -   **[実稼働前クライアントを使用して実稼働前コレクション内のすべてのクライアントを自動的にアップグレードする]**を選びます。  
 
     -   実稼働前コレクションとして使用するコレクションの名前を入力します。  
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/03/2017
 
 ##  <a name="to-install-a-configuration-manager-update-that-includes-a-new-version-of-the-client"></a>新しいバージョンのクライアントを含む Configuration Manager の更新プログラムをインストールするには  
 
-1.  Configuration Manager コンソールで、**[管理]** > **[Cloud Services]** > **[更新プログラムとサービス]** の順に開き、**利用可能な**更新プログラムを選択して、**[更新パックのインストール]** を選択します。  
+1.  Configuration Manager コンソールで、**[管理]** > **[更新とサービス]** の順に開き、**利用可能な**更新プログラムを選択して、**[更新パックのインストール]** を選択します  (1702 より前のバージョンでは、[更新とサービス] は、**[管理]** > **[クラウド サービス]** にありました)。
 
      更新プログラムのインストールの詳細については、「[System Center Configuration Manager の更新プログラム](../../../../core/servers/manage/updates.md)」を参照してください  
 
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/03/2017
 
 ##  <a name="to-promote-the-new-client-to-production"></a>新しいクライアントを実稼働環境に昇格するには  
 
-1.  Configuration Manager コンソールで、**[管理]** > **[Cloud Services]** > **[更新プログラムとサービス]** の順に開き、**[実稼働前クライアントの昇格]** を選択します。
+1.  Configuration Manager コンソールで、**[管理]** > **[更新とサービス]** の順に開き、**[実稼働前クライアントの昇格]** を選択します  (1702 より前のバージョンでは、[更新とサービス] は、**[管理]** > **[クラウド サービス]** にありました)。
 
     > [!TIP]
     > **[実稼働前クライアントの昇格]** ボタンは、コンソールの **[監視]** > **[クライアント ステータス]** > **[実稼働前クライアント展開]**で、クライアント展開を監視中である場合も使用することができます。

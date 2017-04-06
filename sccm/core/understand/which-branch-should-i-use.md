@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 26a362b4e5f25414178cae6843869a54eb99028c
-ms.openlocfilehash: b190b6116fba8080ad4e144e4e349e0926d1340b
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ef044af5f6b32e4161d54c0ab1fb2ef2d245264b
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/28/2017
 >  [!TIP]
 > Current Branch は、ライセンスを必要としない評価版としてインストールすることもできます。 評価版は 180 日間使用でき、Current Branch のライセンス取得済みエディションへのアップグレードをサポートしています。
 
-Current Branch は年に数回更新され、新機能が追加されます。 更新プログラムの各バージョンは、リリース後&1; 年間サポートされます。 その&1; 年間の有効期間が切れる前に、最新バージョンの Current Branch に更新する必要があります。 新しいバージョンへの更新プログラムは、コンソール内の更新プログラムとして利用できます。
+Current Branch は年に数回更新され、新機能が追加されます。 更新プログラムの各バージョンは、リリース後 1 年間サポートされます。 その 1 年間の有効期間が切れる前に、最新バージョンの Current Branch に更新する必要があります。 新しいバージョンへの更新プログラムは、コンソール内の更新プログラムとして利用できます。
 
 Current Branch を新しいサイトとしてインストールするか、System Center 2012 Configuration Manager (Service Pack 2 を適用済み) または System Center 2012 R2 Configuration Manager (Service Pack 1 を適用済み) からのアップグレードとしてインストールするには、System Center Configuration Manager の[基準メディア](/sccm/core/servers/manage/updates#baseline-and-update-versions)を使用します。これは、System Center 2016 の付属 DVD として提供されており、また、System Center Configuration Manager のスタンドアロン リリースの一部として利用できます。 このメディアへのアクセス方法は、System Center Configuration Manager のライセンス形態によって異なります。
 
@@ -58,7 +58,7 @@ Current Branch を新しいサイトとしてインストールするか、Syste
 - 以前のバージョンの Configuration Manager からのアップグレードをサポートします。
 - 評価版としてのインストールをサポートしており、後でフル ライセンスのインストールにアップグレードすることができます。
 
-Current Branch の初期リリースは、バージョン 1511 でした。 以降の更新プログラムには、バージョン 1602 や 1606 などがあります。 各バージョンのサポート期間は&1; 年間であるため、最新バージョンがリリースされたら、すぐにそのリリースに更新することをお勧めします。 新しいバージョンに更新するまで最大&1; 年間待つことができるので、ある更新プログラムをスキップして、後から利用可能な最新バージョンをインストールすることもできます。 各バージョンは累積的な内容となっており、ある更新プログラムをスキップしてから最新バージョンをインストールしても、以前のバージョン以降に追加されたすべての機能と改善点を利用できます。
+Current Branch の初期リリースは、バージョン 1511 でした。 以降の更新プログラムには、バージョン 1602 や 1606 などがあります。 各バージョンのサポート期間は 1 年間であるため、最新バージョンがリリースされたら、すぐにそのリリースに更新することをお勧めします。 新しいバージョンに更新するまで最大 1 年間待つことができるので、ある更新プログラムをスキップして、後から利用可能な最新バージョンをインストールすることもできます。 各バージョンは累積的な内容となっており、ある更新プログラムをスキップしてから最新バージョンをインストールしても、以前のバージョン以降に追加されたすべての機能と改善点を利用できます。
 
 詳細については、「[Current Branch バージョンのサポート](/sccm/core/servers/manage/current-branch-versions-supported)」をご覧ください。
 
@@ -70,7 +70,7 @@ Current Branch の初期リリースは、バージョン 1511 でした。 以�
 ##  <a name="long-term-servicing-branch-of-system-center-configuration"></a>System Center Configuration Manager の Long-Term Servicing Branch
 これは、実稼働環境で使用するためにライセンスされるブランチで、Current Branch を使用しており Configuration Manager ソフトウェア アシュアランス (SA) またはそれと同等のサブスクリプション権が 2016 年 10 月 1 日以降に失効することに同意した Configuration Manager ユーザーが対象となります。 ソフトウェア アシュアランスとライセンス オプションについては、「[System Center Configuration Manager のライセンスとブランチ](learn-more-editions.md)」をご覧ください。
 
-LTSB では、新機能の提供や既存の機能の更新を行うコンソール内の更新プログラムを受信しません。 ただし、重要なセキュリティ修正プログラムは提供されます。
+LTSB はバージョン 1606 に基づいています。 このブランチは、新機能の提供や既存の機能の更新を行うコンソール内の更新プログラムを受信しません。 ただし、重要なセキュリティ修正プログラムは提供されます。 LTSB をインストールするには、バージョン 1606 の [基準メディア](/sccm/core/servers/manage/updates#baseline-and-update-versions) (System Center 2016 または System Center Configuration Manager が収録された DVD として取得) を使用する必要があります。
 
 LTSB を新しいサイトとしてインストールするか、またはサポートされている Configuration Manager 2012 サイトからのアップグレードとしてインストールするには、バージョン 1606 の[基準メディア](/sccm/core/servers/manage/updates#baseline-and-update-versions)を使用します。これは、System Center 2016 または System Center Configuration Manager (Current Branch および Long-Term Servicing Branch 1606) リリースの付属 DVD として提供されます。 基準メディアを使用して、Current Branch のバージョン 1606 を実行する新しいサイトをインストールするか、Long-Term Servicing Branch を実行する新しいサイトをインストールすることができます。
 

@@ -2,7 +2,7 @@
 title: "タスク シーケンス組み込み変数 | Microsoft Docs"
 description: "タスク シーケンス組み込み変数は、タスク シーケンスが実行されている環境に関する情報を提供し、その値は、タスク シーケンス全体で使用できます。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c9fb0fa46058c773eec6ac23999357d35d9f970f
-ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: a3e6cca8d58055cc2d54aff3cb70a276fb40e829
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -51,7 +52,7 @@ ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
 |_SMSTSMachineName|コンピューター名を格納します。 タスク シーケンスがすべてのステータス メッセージを記録するために使用するコンピューターの名前を格納します。 新しいオペレーティング システムで使用するコンピューター名を変更するには、 **OSDComputerName** 変数を使用します。<br /><br /> 例:<br /><br /> **ABC**|  
 |_SMSTSMDataPath|SMSTSLocalDataDrive の値が定義するパスを指定します。 コレクション変数の設定などのように、タスク シーケンスが起動する前に SMSTSLocalDataDrive を定義すると、Configuration Manager はそのタスク シーケンスが起動された後で _SMSTSMDataPath 値を定義します。|  
 |_SMSTSMediaType|インストールを開始するために使用するメディアの種類を指定します。 メディアの種類の例としては、ブート メディア、フル メディア、PXE、事前設定されたメディアなどがあります。|  
-|_SMSTSMP|Configuration Manager の管理ポイントの IP アドレスを格納します。|  
+|_SMSTSMP|Configuration Manager の管理ポイントの URL または IP アドレスを格納します。|  
 |_SMSTSMPPort|Configuration Manager の管理ポイントの管理ポイント ポート番号を格納します。<br /><br /> 例:<br /><br /> **80**|  
 |_SMSTSOrgName|タスク シーケンスの進行状況を示すユーザー インターフェイス ダイアログ ボックスに表示されるブランド タイトル名を格納します。<br /><br /> 例:<br /><br /> **XYZ 社**|  
 |_SMSTSOSUpgradeActionReturnCode|セットアップから返される終了コード値 (成功または失敗を示す値) を格納します。  この変数は、オペレーティング システム アップグレードのタスク シーケンスのステップ中に設定されます。 これは、Windows 10 セットアップ コマンド ライン オプション /Compat で使用すると便利です。<br /><br /> 例:<br /><br /> /Compat が完了したら、終了コードが失敗か成功かに応じて、以降のステップでアクションを実行できます。 成功の場合は、アップグレードを開始できます。 または、環境にマーカーを設定して (たとえば、ファイルを追加したり、レジストリ キーを設定したりして)、アップグレードの準備ができているコンピューターや、アップグレード前にアクションが必要なコンピューターのコレクションを作成するときに使用できます。|  
@@ -79,6 +80,7 @@ ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
 |TSErrorOnWarning|タスク シーケンス エンジンがタスク シーケンスのステップのアプリケーションのインストール中に、検出された警告をエラーとしてと見なされるかどうかを指定するには、この変数を使用します。 1 つまたは複数のアプリケーション、または、必要な依存関係がインストールされていない場合、要件を満たしていないため、タスク シーケンスは _TSAppInstallStatus 変数を **警告** に設定します。 TSErrorOnWarning 変数を **True** に設定し、_TSAppInstallStatus 変数を [警告] に設定すると、エラーとして扱われます。 値 **False** が既定の動作です。|  
 |SMSTSLanguageFolder|言語に依存しないブート イメージの表示言語を変更するときに使用します。|  
 |SMSTSLocalDataDrive|タスク シーケンスの実行中に一時ファイルを対象コンピューターに格納する場所を指定します。<br /><br /> この変数は、コレクション変数の設定によって行うなど、タスク シーケンスが開始する前に設定される必要があります。 タスク シーケンスが開始された後で、Configuration Manager は _SMSTSMDataPath 変数を定義します。|  
+|SMSTSMP|この変数を使用して、Configuration Manager の管理ポイントの URL または IP アドレスを指定します。|  
 |SMSTSMPListRequestTimeout|タスク シーケンスでロケーション サービスから管理ポイント一覧を取得できなかった場合に、アプリケーションまたはソフトウェア更新プログラムのインストールを再試行するまでの待ち時間をミリ秒単位で指定します。 既定では、タスク シーケンスは 60,000 ミリ秒 (60 秒) 待機してからステップを再試行します。再試行は 3 回までです。 この変数の値は、[アプリケーションのインストール] および [ソフトウェア更新プログラムのインストール] タスク シーケンス ステップにのみ適用されます。|  
 |SMSTSMPListRequestTimeoutEnabled|クライアントがイントラネット上にない場合に、繰り返しの MPList 要求を有効にしてクライアントを更新するには、この変数を使用します。 <br />既定では、この変数は True に設定されます。 クライアントがインターネット上にある場合は、不必要な遅延を回避するためにこの変数を False に設定することができます。 この変数の値は、[アプリケーションのインストール] および [ソフトウェア更新プログラムのインストール] タスク シーケンス ステップにのみ適用されます。|  
 |SMSTSPeerDownload|この変数を使用して、クライアントに Windows PE ピア キャッシュの使用を許可します。<br /><br /> 例:<br /><br /> この機能は、SMSTSPeerDownload  = **TRUE** により有効になります。|  
@@ -94,9 +96,4 @@ ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
 |SMSTSSoftwareUpdateScanTimeout| [ソフトウェア更新プログラムのインストール](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) タスク シーケンスのステップ中に、ソフトウェア更新プログラムのスキャンのタイムアウトを制御することができます。 たとえば、多数のソフトウェア更新プログラムをインストールする必要がある場合は、既定値を上げる場合があります。 既定値は 30 分です。 |
 |SMSTSUDAUsers|対象のコンピューターのプライマリ ユーザーを指定します。 次の形式を使ってユーザーを指定します。 複数のユーザーは、コンマ (,) で区切ります。<br /><br /> 例:<br /><br /> **domain\user1, domain\user2, domain\user3**<br /><br /> ユーザーを対象コンピューターに関連付ける方法の詳細については、「[Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md)」 (ユーザーをセットアップ先のコンピューターに関連付ける) を参照してください。|  
 |SMSTSWaitForSecondReboot|Configuration Manager バージョン 1602 以降、ソフトウェア更新プログラムのインストールで 2 回再起動が必要な場合に、クライアントの動作を制御するのに役立つ、この省略可能なタスク シーケンス変数を使用できます。 この変数は、ソフトウェア更新プログラムのインストールからの 2 つ目の再起動によってタスク シーケンスが失敗するのを防ぐために、[ソフトウェア更新プログラムのインストール](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) ステップの前に設定する必要があります。<br /><br /> SMSTSWaitForSecondReboot 値を秒単位で設定し、コンピューターを再起動する場合のソフトウェア更新プログラムのインストール ステップ中のタスク シーケンスの一時停止の長さを指定し、2 つ目の再起動がある場合に十分な時間を取るようにします。 <br />たとえば、SMSTSWaitForSecondReboot を 600 に設定した場合、再起動してから追加のタスク シーケンス ステップが実行されるまで、タスク シーケンスが 10 分間一時停止します。 これは、何百ものソフトウェア更新プログラムが 1 つのソフトウェア更新プログラムのインストール タスク シーケンス ステップでインストールされる場合に便利です。|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

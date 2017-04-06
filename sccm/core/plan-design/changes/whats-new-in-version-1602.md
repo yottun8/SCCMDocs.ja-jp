@@ -15,9 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: 221228890b12bd6875de51e17a1124303b318201
-ms.openlocfilehash: 0314513bed65457c63508bfe2212e3e52d8d03da
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 9a548f43625a907173e7b967d26356bd80f1c5d9
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1602 の新機能
@@ -38,7 +40,7 @@ System Center Configuration Manager の更新プログラム 1602 は、以前�
 
 ## <a name="site-infrastructure"></a>サイトのインフラストラクチャ  
 
-###  <a name="a-namebkmkupgradeosa-in-place-upgrade-the-operating-system-of-site-servers-that-run-windows-server-2008-r2"></a><a name="bkmk_UpgradeOS"></a> Windows Server 2008 R2 を実行するサイト サーバーのオペレーティング システムのインプレース アップグレード  
+###  <a name="bkmk_UpgradeOS"></a> Windows Server 2008 R2 を実行するサイト サーバーのオペレーティング システムのインプレース アップグレード  
  1602 またはそれ以降のバージョンを実行する Configuration Manager サイトでは、Windows Server 2008 R2 から Windows Server 2012 R2 へのサイト サーバーのオペレーティング システムのインプレース アップグレードをサポートします。  
 
 > [!WARNING]  
@@ -48,7 +50,7 @@ System Center Configuration Manager の更新プログラム 1602 は、以前�
 
  サーバーをアップグレードするには、Windows Server 2012 R2 のアップグレード手順を使用します。 アップグレード後に Configuration Manager サイト サーバーの復元を実行する必要はありません。 アップグレード手順については、Windows Server のドキュメントの「[Windows Server 2012 R2 のアップグレード オプション](https://technet.microsoft.com/library/dn303416.aspx)」をご覧ください。  
 
-###  <a name="a-namebkmkaoaga-sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a> SQL Server AlwaysOn 可用性グループ  
+###  <a name="bkmk_AOAG"></a> SQL Server AlwaysOn 可用性グループ  
  高可用性と障害復旧ソリューションとして、SQL Server AlwaysOn 可用性グループを使用して、プライマリ サイトと中央管理サイトでサイト データベースをホストします。  
 
  詳細については、「[System Center Configuration Manager 用の高可用性サイト データベースの SQL Server AlwaysOn](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)」を参照してください。  
@@ -112,7 +114,7 @@ System Center Configuration Manager の更新プログラム 1602 は、以前�
  詳細については、「[System Center Configuration Manager クライアントを使用せずに管理されている Windows 8.1 デバイスと Windows 10 デバイスの構成項目を作成する方法](../../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)」をご覧ください。  
 
 ### <a name="kiosk-mode-settings-for-android-samsung-knox-standard-devices"></a>Android Samsung KNOX Standard デバイスのキオスク モードの設定  
- キオスク モードでは、特定の機能のみ実行できるようにデバイスをロックできます。 たとえば、指定した&1; つの管理対象アプリの実行のみをデバイスに許可することや、デバイスのボリューム ボタンを無効にすることができます。 これらの設定は、デバイスのデモ モデルや、POS デバイスなどの&1; つの機能の実行専用のデバイス向けに使用できます。 Configuration Manager では、Samsung KNOX Standard デバイスのキオスク モードの設定を指定できるようになりました。  
+ キオスク モードでは、特定の機能のみ実行できるようにデバイスをロックできます。 たとえば、指定した 1 つの管理対象アプリの実行のみをデバイスに許可することや、デバイスのボリューム ボタンを無効にすることができます。 これらの設定は、デバイスのデモ モデルや、POS デバイスなどの 1 つの機能の実行専用のデバイス向けに使用できます。 Configuration Manager では、Samsung KNOX Standard デバイスのキオスク モードの設定を指定できるようになりました。  
 
  詳細については、「[System Center Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX Standard デバイスの構成項目を作成する](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)」を参照してください。  
 
@@ -218,9 +220,4 @@ Configuration Manager では、iOS 7.1 以降を実行している監視対象�
 -   **[非対応]**: ユーザーが最新のバージョンではない使用条件に同意しました  
 
 -   **[不明]**: 登録済みデバイスのない使用条件を含めて、ユーザーが使用条件に同意したことはありません  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

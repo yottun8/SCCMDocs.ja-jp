@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 03/26/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,19 +14,20 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
-ms.openlocfilehash: 7d37f3c5e398c914482c45ab837fe41d00fce8ea
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: fe4a8f56e0b554e206bcc4503a0268dc761ded81
+ms.lasthandoff: 03/27/2017
 
 
 ---
 
-#  <a name="a-namebkmkmanagesusettingsa-manage-settings-for-software-updates"></a><a name="BKMK_ManageSUSettings"></a> ソフトウェア更新の設定の管理  
+#  <a name="BKMK_ManageSUSettings"></a> ソフトウェア更新の設定の管理  
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 Configuration Manager でソフトウェアの更新を同期したら、以下のセクションで設定を構成および確認します。
 
-##  <a name="a-namebkmkclientsettingsa-client-settings-for-software-updates"></a><a name="BKMK_ClientSettings"></a> ソフトウェア更新プログラムのクライアントの設定  
+##  <a name="BKMK_ClientSettings"></a> ソフトウェア更新プログラムのクライアントの設定  
 ソフトウェアの更新ポイントのインストール後に、既定でソフトウェア更新プログラムのクライアントが有効になり、クライアント設定の **[ソフトウェア更新プログラム]** ページには既定値が入ります。 クライアント設定はサイト全体で使用され、ソフトウェア更新プログラムのコンプライアンス対応をいつスキャンするか、ソフトウェア更新プログラムをクライアント コンピューターにいつどのようにインストールするかに影響します。 ソフトウェア更新プログラムを展開する前に、クライアント設定がサイトでのソフトウェア更新プログラムに適していることを確認します。  
 
 > [!IMPORTANT]  
@@ -36,7 +37,7 @@ Configuration Manager でソフトウェアの更新を同期したら、以下�
 
 これらのクライアント設定の詳細については、「[クライアント設定について](../../core/clients/deploy/about-client-settings.md)」を参照してください。  
 
-##  <a name="a-namebkmkgrouppolicya-group-policy-settings-for-software-updates"></a><a name="BKMK_GroupPolicy"></a> ソフトウェア更新プログラムのグループ ポリシー設定  
+##  <a name="BKMK_GroupPolicy"></a> ソフトウェア更新プログラムのグループ ポリシー設定  
 クライアント コンピューターで Windows Update エージェント (WUA) が、ソフトウェアの更新ポイントで実行されている WSUS に接続するために使用する専用のグループ ポリシー設定があります。 これらのグループ ポリシー設定は、ソフトウェア更新プログラムのコンプライアンスのためにスキャンを実行する場合、およびソフトウェア更新プログラムおよび WUA を自動的に更新する場合にも使用されます。
 
 ### <a name="specify-intranet-microsoft-update-service-location-local-policy"></a>[イントラネットの Microsoft 更新サービスの場所を指定する] ローカル ポリシー  
@@ -65,10 +66,10 @@ Configuration Manager でソフトウェアの更新を同期したら、以下�
    > [!NOTE]  
    >  **[すべてのソフトウェア更新プログラム]** ノードで Configuration Manager が表示するソフトウェア更新プログラムは、過去 30 日以内にリリースされた、**[重大]** および **[セキュリティ]** に分類されたソフトウェア更新プログラムのみです。  
 
-###  <a name="a-namebkmksoftwareupdatesinformationa-review-software-updates-information"></a><a name="BKMK_SoftwareUpdatesInformation"></a> ソフトウェア更新プログラムの情報の確認  
+###  <a name="BKMK_SoftwareUpdatesInformation"></a> ソフトウェア更新プログラムの情報の確認  
 ソフトウェア更新プログラムのプロパティで、ソフトウェア更新プログラムの詳細情報を確認できます。 詳細情報は、複数のソフトウェア更新プログラムを選択した場合は表示されません。 次のセクションでは、選択したソフトウェア更新プログラムについて利用可能な情報を紹介します。  
 
-####  <a name="a-namebkmksoftwareupdatedetailsa-software-update-details"></a><a name="BKMK_SoftwareUpdateDetails"></a> ソフトウェア更新プログラムの詳細  
+####  <a name="BKMK_SoftwareUpdateDetails"></a> ソフトウェア更新プログラムの詳細  
 [更新プログラムの詳細 **** ] タブで、選択したソフトウェア更新プログラムに関する次の概要情報を確認できます。  
 
 - **セキュリティ情報 ID**: セキュリティ ソフトウェア更新プログラムに関連するセキュリティ情報 ID を示します。 「 [Microsoft Security Bulletin Search](http://go.microsoft.com/fwlink/p/?LinkId=58313) 」Web ページで、セキュリティ ID を使用して検索し、セキュリティ情報の詳細を確認することができます。  
@@ -85,7 +86,7 @@ Configuration Manager でソフトウェアの更新を同期したら、以下�
 
 - **影響を受ける製品**: ソフトウェア更新プログラムが適用される製品を一覧表示します。  
 
-####  <a name="a-namebkmkcontentinformationa-content-information"></a><a name="BKMK_ContentInformation"></a> コンテンツ情報  
+####  <a name="BKMK_ContentInformation"></a> コンテンツ情報  
 [コンテンツ情報 **** ] タブでは、選択したソフトウェア更新プログラムに関連付けられているコンテンツに関する次の情報を確認します。  
 
 -   **コンテンツ ID**: ソフトウェア更新プログラムのコンテンツ ID を指定します。  
@@ -98,35 +99,35 @@ Configuration Manager でソフトウェアの更新を同期したら、以下�
 
 -   **サイズ (MB)**: ソフトウェア更新プログラムのソース ファイルのサイズを指定します。  
 
-####  <a name="a-namebkmkcustombundleinformationa-custom-bundle-information"></a><a name="BKMK_CustomBundleInformation"></a> カスタム バンドル情報  
+####  <a name="BKMK_CustomBundleInformation"></a> カスタム バンドル情報  
 [カスタム バンドル情報 **** ] タブでは、ソフトウェア更新プログラムのカスタム バンドル情報を確認します。 選択したソフトウェア更新プログラムに、ソフトウェア更新ファイルに組み込まれるバンドル ソフトウェア更新プログラムが含まれている場合は、[バンドル情報 **** ] セクションに表示されます。 [コンテンツ情報 **** ] タブに表示されるバンドル ソフトウェア更新プログラム (各種の言語用の更新ファイルなど) は、このタブには表示されません。  
 
-####  <a name="a-namebkmksupersedenceinformationa-supersedence-information"></a><a name="BKMK_SupersedenceInformation"></a> 更新の置き換えに関する情報  
+####  <a name="BKMK_SupersedenceInformation"></a> 更新の置き換えに関する情報  
 [更新プログラムの置き換えに関する情報 **** ] タブでは、ソフトウェア更新プログラムの置き換えに関する次の情報を確認することができます。  
 
 - **この更新を置き換える更新**: この更新プログラムを置き換えるソフトウェア更新プログラムを示します。つまり、一覧に表示されている更新プログラムの方が新しいことを意味します。 ほとんどの場合、ソフトウェア更新プログラムを置き換えるソフトウェア更新プログラムを展開します。 一覧に表示されているソフトウェア更新プログラムに設定されたハイパーリンクから、ソフトウェア更新プログラムの詳細情報を示す Web ページにアクセスできます。 この更新プログラムが置き換えられない場合は、[なし **** ] と表示されます。  
 
 - **この更新に置き換えられる更新**: このソフトウェア更新プログラムによって置き換えられるソフトウェア更新プログラムを示します。つまり、このソフトウェア更新プログラムの方が新しいことを意味します。 ほとんどの場合、置き換えられるソフトウェア更新プログラムの代わりに、このソフトウェア更新プログラムを展開します。 一覧に表示されているソフトウェア更新プログラムに設定されたハイパーリンクから、ソフトウェア更新プログラムの詳細情報を示す Web ページにアクセスできます。 この更新プログラムによって置き換えられる他の更新プログラムがない場合は、[なし **** ] と表示されます。  
 
-###  <a name="a-namebkmksoftwareupdatessettingsa-configure-software-updates-settings"></a><a name="BKMK_SoftwareUpdatesSettings"></a> ソフトウェア更新設定の構成  
+###  <a name="BKMK_SoftwareUpdatesSettings"></a> ソフトウェア更新設定の構成  
 プロパティでは、1 つまたは複数のソフトウェア更新プログラムのソフトウェア更新設定を構成できます。 ほとんどのソフトウェア更新設定は、中央管理サイトまたはスタンドアロン プライマリ サイトでのみ構成できます。 次のセクションでは、ソフトウェア更新設定の構成について説明します。  
 
-####  <a name="a-namebkmksetmaxruntimea-set-maximum-run-time"></a><a name="BKMK_SetMaxRunTime"></a> 最長実行時間の設定  
+####  <a name="BKMK_SetMaxRunTime"></a> 最長実行時間の設定  
 [最長実行時間 **** ] タブでは、クライアント コンピューターでソフトウェア更新プログラムが完了するまでに割り当てられた最大時間を設定します。 更新が最長実行時間の値を超えると、Configuration Manager によってステータス メッセージが作成され、ソフトウェア更新プログラムのインストールの展開は監視されなくなります。 この設定を構成できるのは、中央管理サイトまたはスタンドアロン プライマリ サイトのみです。  
 
 Configuration Manager は、この設定を使用して、構成されたメンテナンス期間内でソフトウェア更新プログラムのインストールを開始すべきかどうかを判別します。 最長実行時間の値がメンテナンス期間の利用可能な残り時間を超える場合、ソフトウェア更新プログラムのインストールは、次回のメンテナンス期間が開始するまで延期されます。 構成されたメンテナンス期間 (時間帯) でクライアント コンピューターにインストールされるソフトウェア更新プログラムが複数ある場合は、最大実行時間が最も短いソフトウェア更新プログラムが最初にインストールされ、その後、次に最大実行時間が短いソフトウェア更新プログラムが順にインストールされます。 クライアントは、それぞれのソフトウェア更新プログラムをインストールする前に、使用可能なメンテナンス期間でソフトウェア更新プログラムをインストールするのに十分な時間があるかどうかを確認します。 ソフトウェア更新プログラムのインストールが開始されると、メンテナンス期間が終了してもインストールは続行されます。 メンテナンス期間の詳細については、「[System Center Configuration Manager でメンテナンス期間を使用する方法](../../core/clients/manage/collections/use-maintenance-windows.md)」を参照してください。  
 
 [最長実行時間 **** ] タブでは、次の設定を確認して構成できます。  
 
-- **最長実行時間**: ソフトウェア更新プログラムのインストールを完了するために割り当てられた最大時間 (分単位) を指定します。この時間を過ぎると、Configuration Manager でインストールが監視されなくなります。 この設定は、メンテナンス期間の終了までに更新プログラムをインストールするための十分な時間が残っているかどうかを判断するためにも使用されます。 既定値は、サービス パックが 60 分、その他のすべての種類のソフトウェア更新プログラムが 5 分です。 設定可能な値の範囲は 5 ～ 9999 分です。  
+- **最長実行時間**: ソフトウェア更新プログラムのインストールを完了するために割り当てられた最大時間 (分単位) を指定します。この時間を過ぎると、Configuration Manager でインストールが監視されなくなります。 この設定は、メンテナンス期間の終了までに更新プログラムをインストールするための十分な時間が残っているかどうかを判断するためにも使用されます。 Service Pack の既定値は 60 分です。 他の種類のソフトウェア更新プログラムの既定値は、Configuration Manager バージョン 1511 以降の新規インストールを実行した場合は 10 分、以前のバージョンからアップグレードした場合は 5 分になります。 設定可能な値の範囲は 5 ～ 9999 分です。  
 
 > [!IMPORTANT]  
 >  最長実行時間の値は、構成済みのメンテナンス期間よりも小さくしてください。 そうしないと、ソフトウェア更新プログラムのインストールが開始されません。  
 
-####  <a name="a-namebkmksetcustomseveritya-set-custom-severity"></a><a name="BKMK_SetCustomSeverity"></a> カスタム重要度の設定  
+####  <a name="BKMK_SetCustomSeverity"></a> カスタム重要度の設定  
 ソフトウェア更新プログラムのプロパティで、[カスタム重要度 **** ] タブを使用して、ソフトウェア更新プログラムのカスタム重要度を構成できます。 この設定は、事前定義された重要度の値が要件に合っていない場合に必要になることがあります。 カスタム値は、Configuration Manager コンソールの **[カスタム重要度]** 列に表示されます。 定義されているカスタム重要度の値に基づいて、ソフトウェア更新プログラムを並べ替えることができます。また、それらの値に基づいてフィルタリングできるクエリやレポートを作成することもできます。 この設定を構成できるのは、中央管理サイトまたはスタンドアロン プライマリ サイトのみです。  
 
-[[カスタム重要度 **** ] タブでは、次の設定を構成することができます。  
+カスタム重要度 ****  タブでは、次の設定を構成することができます。  
 
 - **カスタム重要度**: ソフトウェア更新プログラムに対してカスタム重要度の値を設定します。 一覧で、[重大 ****]、[重要 ****]、[中程度 ****]、または [低 **** ] を選択します。 既定では、カスタム重要度の値は空白です。
 
@@ -139,9 +140,4 @@ CRL チェックを使用する場合は、ソフトウェア更新プログラ�
 CRL チェックを実行するコンピューターで、製品 DVD から、コマンドプロンプトで **\SMSSETUP\BIN\X64\\**<*言語*>**\UpdDwnldCfg.exe /checkrevocation** を実行します。  
 
 たとえば、英語 (米国) の場合、**\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation** を実行します。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

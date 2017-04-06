@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3c8f968276cb6d412a4a06cb70f1c8e45e91c605
-ms.openlocfilehash: cd53f093056fbaa2ef6fd88d5451b7698f296569
-ms.lasthandoff: 02/11/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: bcb14a2be312d4d8a4a9c235652c7bf971a7a976
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1612 の機能
@@ -56,7 +56,7 @@ Technical Preview バージョン 1612 以降、データ ウェアハウス サ
 | **3** |  データ ウェアハウス サービス ポイントでは、同期されたデータのコピーをデータ ウェアハウス データベースに転送して保存します。 |  
 | **A** |  組み込みのレポート機能を使用して、データに関する要求が作成され、SQL Server Reporting Services を使用してレポート サービス ポイントに渡されます。 |  
 | **B** |      レポートの大部分は最新の情報に関するものです、これらの要求は、サイト データベースに対して実行されます。 |  
-| **C** | レポートで履歴データを要求する場合は、*カテゴリ*が**データ ウェアハウス**になっているレポートの&1; つで、データ ウェアハウス データベースに対して要求が実行されます。   |  
+| **C** | レポートで履歴データを要求する場合は、*カテゴリ*が**データ ウェアハウス**になっているレポートの 1 つで、データ ウェアハウス データベースに対して要求が実行されます。   |  
 
 ### <a name="prerequisites-for-the-data-warehouse-service-point-and-database"></a>データ ウェアハウス サービス ポイントとデータベースの前提条件
 - 階層には、レポート サービス ポイント サイト システムロールがインストールされている必要があります。
@@ -72,7 +72,7 @@ Technical Preview バージョン 1612 以降、データ ウェアハウス サ
 - データベースは、*SQL Server AlwaysOn 可用性グループ*ではサポートされません。
 
 ### <a name="install-the-data-warehouse"></a>データ ウェアハウスのインストール
-データ ウェアハウス サイト システムのロールは、**サイト システムのロールの追加ウィザード**または**サイト システム サーバーの作成ウィザード**を使用して中央管理サイトまたはプライマリ サイトにインストールします。 詳細については、[サイト システムのロールのインストール](/sccm/core/servers/deploy/configure/install-site-system-roles)に関するページを参照してください。 階層では、このロールの複数のインスタンスがサポートされますが、各サイトではそれぞれ&1; つのインスタンスのみサポートされます。  
+データ ウェアハウス サイト システムのロールは、**サイト システムのロールの追加ウィザード**または**サイト システム サーバーの作成ウィザード**を使用して中央管理サイトまたはプライマリ サイトにインストールします。 詳細については、[サイト システムのロールのインストール](/sccm/core/servers/deploy/configure/install-site-system-roles)に関するページを参照してください。 階層では、このロールの複数のインスタンスがサポートされますが、各サイトではそれぞれ 1 つのインスタンスのみサポートされます。  
 
 ロールをインストールすると、指定した SQL Server のインスタンス上にデータ ウェアハウス データベースが Configuration Manager によって作成されます。 既存のデータベース名を指定した場合 ([データ ウェアハウス データベースを新しい SQL Server に移動する場合と同様に](#move-the-data-warehouse-database))、Configuration Manager では、新しいデータベースは作成されず、代わりに指定したデータベースが使用されます。
 
@@ -157,7 +157,7 @@ Technical Preview 1612 をインストールすると、Technical Preview サイ
 この Technical Preview でリリースされたツールは、以前の Configuration Manager 製品用にリリースされた旧バージョンの類似ツールに置き換わるものとして作成されました。 このツール バージョンは 2017 年 3 月 1 日を過ぎると機能しなくなります。ただし、このツールが Current Branch の一部として、または実稼働用の定例外リリースとしてリリースされるまで、今後の Technical Preview と一緒に新しいバージョンがリリースされる予定です。
 
 ### <a name="requirements"></a>［要件］  
- - このツールは、配布ポイントをホストするコンピューター上で直接実行することも、別のサーバーからリモートで実行することもできます。 ツールは、一度に&1; つの配布ポイントに対してのみ実行できます。
+ - このツールは、配布ポイントをホストするコンピューター上で直接実行することも、別のサーバーからリモートで実行することもできます。 ツールは、一度に 1 つの配布ポイントに対してのみ実行できます。
  - ツールを実行するユーザー アカウントは、Configuration Manager 階層の完全な権限を持つ管理者と同じロールベース管理権限を直接有する必要があります。  完全な権限を持つ管理者のアクセス許可がある Windows セキュリティ グループのメンバーとして、ユーザー アカウントにアクセス許可が付与された場合、このツールは機能しません。
 
 ### <a name="modes-of-operation"></a>操作モード
@@ -183,9 +183,15 @@ Technical Preview 1612 をインストールすると、Technical Preview サイ
 
 
 ### <a name="run-the-tool"></a>ツールを実行します。
-ツールを実行するには、**ContentLibraryCleanup.exe** を含むフォルダーに対して管理コマンド プロンプトを開きます。  
+ツールを実行するには:
+1. 管理コマンド プロンプトで、**ContentLibraryCleanup.exe** を含むフォルダーを開きます。  
+2. 次に、必須のコマンド ライン スイッチと、使用する省略可能なスイッチを含めたコマンドラインを入力します。
 
-次に、必須のコマンド ライン スイッチと、使用する省略可能なスイッチを含めたコマンドラインを入力します。
+**既知の問題** パッケージまたは展開が失敗した場合、または進行中の場合、ツールを実行すると、次のようなエラーが返される可能性があります。
+-  *System.InvalidOperationException: This content library cannot be cleaned up right now because package <packageID> is not fully installed.* (System.InvalidOperationException: パッケージ <パッケージ ID> が完全にインストールされていないため、このコンテンツ ライブラリを今すぐクリーンアップすることはできません。)
+
+**対応策 :** なし。 コンテンツの展開が進行中または失敗した場合、このツールは孤立ファイルを確実に識別することはできません。 したがって、その問題が解決されるまで、ツールではコンテンツのクリーンアップが許可されません。
+
 
 
 ### <a name="command-line-switches"></a>コマンド ライン スイッチ  

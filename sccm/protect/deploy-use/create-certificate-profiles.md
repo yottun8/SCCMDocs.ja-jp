@@ -2,7 +2,7 @@
 title: "SCEP 証明書プロファイルの作成方法 | Microsoft Docs"
 description: "証明書プロファイルを使用して、System Center Configuration Manager で必要な証明書で、管理されているデバイスをプロビジョニングする方法について説明します。"
 ms.custom: na
-ms.date: 11/22/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,11 +17,13 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
-ms.openlocfilehash: cb9351fc63e49af611c494ec82a6c8651afae30f
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: f919ac97b24604babca4f70f184220604227eb0e
+ms.lasthandoff: 03/27/2017
 
 
 ---
+
 # <a name="create-certificate-profiles"></a>証明書プロファイルの作成
 
 *適用対象: System Center Configuration Manager (Current Branch)*
@@ -56,14 +58,16 @@ Configuration Manager (SCCM) で証明書プロファイルを使用して、会
 
 -   **SCEP (Simple Certificate Enrollment Protocol) 設定**: Simple Certificate Enrollment Protocol とネットワーク デバイス登録サービスの役割を使用して、デバイスまたはユーザーの証明書を要求する場合は、この証明書プロファイルの種類を選択します。
 
--   **Personal Information Exchange – PKCS #12 (PFX) 設定のインポート**: PFX 証明書をインポートする場合に、これを選択します。 PFX 証明書の作成の詳細については、「[PFX 証明書プロファイルを作成する方法](../../protect/deploy-use/create-pfx-certificate-profiles.md)」をご覧ください。
+-   **Personal Information Exchange -- PKCS #12 (PFX) 設定 -- インポート**: PFX 証明書をインポートするには、これを選びます。 PFX 証明書の作成の詳細については、「[PFX 証明書プロファイルを作成する方法](../../protect/deploy-use/create-pfx-certificate-profiles.md)」をご覧ください。
+
+- **Personal Information Exchange -- PKCS #12 (PFX) 設定 -- 作成**: 新しい PFX 証明書プロファイルを作成するには、これを選びます。 PFX 証明書の作成の詳細については、「[PFX 証明書プロファイルを作成する方法](../../protect/deploy-use/create-pfx-certificate-profiles.md)」をご覧ください。
 
 
 
 ### <a name="configure-a-trusted-ca-certificate"></a>信頼された証明機関証明書を構成する  
 
 > [!IMPORTANT]  
->  SCEP 証明書プロファイルを作成する前に、少なくとも&1; つの信頼された証明機関証明書を構成する必要があります。    
+>  SCEP 証明書プロファイルを作成する前に、少なくとも 1 つの信頼された証明機関証明書を構成する必要があります。    
 >  
 >  証明書を展開後に次のいずれかの値を変更すると、新しい証明書が要求されます。
 >  -  キー格納プロバイダー
@@ -81,7 +85,7 @@ Configuration Manager (SCCM) で証明書プロファイルを使用して、会
 
  -   **証明書ファイル**: [インポート] をクリックし、使用したい証明書ファイルを見つけます。 ****  
 
- -   **保存先ストア**: デバイスに証明書ストアが複数ある場合に、この証明書の保存先を指定します。 ストアが&1; つのみのデバイスの場合、この設定は無視されます。  
+ -   **保存先ストア**: デバイスに証明書ストアが複数ある場合に、この証明書の保存先を指定します。 ストアが 1 つのみのデバイスの場合、この設定は無視されます。  
 
 2.  [証明書の拇印 **** ] 値を使用して、正しい証明書がインポートされたことを確認します。  
 
@@ -150,7 +154,7 @@ Configuration Manager (SCCM) で証明書プロファイルを使用して、会
 
  -   **証明書の有効期間**: 発行元 CA で certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE コマンドを実行してカスタム有効期間を設定できるようにした場合は、証明書が失効するまでの期間を指定します。 このコマンドの詳細については、[System Center Configuration Manager の証明書インフラストラクチャ](../../protect/deploy-use/certificate-infrastructure.md)のトピックをご覧ください。  
 
-   指定した証明書テンプレートの有効期限よりも小さい値を指定できますが、大きい値は指定できません。 たとえば、証明書テンプレートで証明書の有効期限が&2; 年になっている場合は、この値を&1; 年することはできますが、5 年にすることはできません。 また、発行元の CA の証明書の残りの有効期限よりも小さい値を指定する必要があります。  
+   指定した証明書テンプレートの有効期限よりも小さい値を指定できますが、大きい値は指定できません。 たとえば、証明書テンプレートで証明書の有効期限が 2 年になっている場合は、この値を 1 年することはできますが、5 年にすることはできません。 また、発行元の CA の証明書の残りの有効期限よりも小さい値を指定する必要があります。  
 
  -   **キー使用法**: 証明書のキー使用法のオプションを指定します。 次のオプションから選択できます。  
 
@@ -160,7 +164,7 @@ Configuration Manager (SCCM) で証明書プロファイルを使用して、会
 
    [ **参照**] を使って証明書テンプレートを選択した場合は、別の証明書テンプレートを選択しないと、これらの設定を変更できないことがあります。  
 
-   選択した証明書テンプレートには、上記のキー使用法オプションの&1; つまたは両方が構成されている必要があります。 構成されていないと、 **CSR のキー使用法とチャレンジが一致しない** というメッセージが証明書の登録ポイントのログ ファイル ( **Crp.log**) に記録されます。  
+   選択した証明書テンプレートには、上記のキー使用法オプションの 1 つまたは両方が構成されている必要があります。 構成されていないと、 **CSR のキー使用法とチャレンジが一致しない** というメッセージが証明書の登録ポイントのログ ファイル ( **Crp.log**) に記録されます。  
 
 
    -   **キー サイズ (ビット)**: ビット単位のキーのサイズを選択します。  
@@ -168,7 +172,7 @@ Configuration Manager (SCCM) で証明書プロファイルを使用して、会
    -   **拡張キー使用法**: [**選択**] をクリックして、証明書の使用目的に対応する値を追加します。 ほとんどの場合、ユーザーまたはデバイスがサーバーに対して認証できるように、証明書には [ **クライアント認証** ] が必要です。 ただし、必要に応じてその他のキー使用法を追加できます。  
 
 
-   -   **ハッシュ アルゴリズム**: この証明書で使用するハッシュ アルゴリズムの種類を&1; つ選択します。 接続しているデバイスをサポートするセキュリティの最も強力なレベルを選択します。  
+   -   **ハッシュ アルゴリズム**: この証明書で使用するハッシュ アルゴリズムの種類を 1 つ選択します。 接続しているデバイスをサポートするセキュリティの最も強力なレベルを選択します。  
 
    > [!NOTE]  
    > 
@@ -183,10 +187,7 @@ Configuration Manager (SCCM) で証明書プロファイルを使用して、会
 ###  <a name="specify-supported-platforms-for-the-certificate-profile"></a>証明書プロファイルの対応プラットフォームを指定する  
 
 1. 証明書プロファイルの作成ウィザードの [ **サポートされているプラットフォーム** ] ページで、証明書プロファイルをインストールするオペレーティング システムを選択します。 すべての使用可能なオペレーティング システムに証明書プロファイルをインストールするには、[ **すべて選択** ] を選択します。
-2. ウィザードの [**概要**] ページを確認して、[**完了**] を選びます。 新しい証明書プロファイルが [**資産とコンプライアンス**] ワークスペースの [**証明書プロファイル**] ノードに表示され、「[How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md)」(System Center Configuration Manager でプロファイルを展開する方法) で説明されているように、ユーザーまたはデバイスに展開できるようになります。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
-
+2. ウィザードの [**概要**] ページを確認して、[**完了**] を選びます。 
+ 
+ 
+新しい証明書プロファイルが [**資産とコンプライアンス**] ワークスペースの [**証明書プロファイル**] ノードに表示され、「[How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md)」(System Center Configuration Manager でプロファイルを展開する方法) で説明されているように、ユーザーまたはデバイスに展開できるようになります。  

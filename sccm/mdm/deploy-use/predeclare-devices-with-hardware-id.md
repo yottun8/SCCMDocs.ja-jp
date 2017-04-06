@@ -2,7 +2,7 @@
 title: "IMEI または iOS シリアル番号によるデバイスの事前宣言 | Microsoft Docs"
 description: "IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/24/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddb4c68e-e7f7-475a-89e2-7379a86e44c4
 caps.latest.revision: 3
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fd410a6572acce685dc6cdb954c1c2d97d5ed8b
-ms.openlocfilehash: 2aa9c8c65904e573b6a81ac865e09d1cf2458509
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: 7573590763c68a4c97d388be1e64054c318da9cc
+ms.openlocfilehash: 4fe6741481c79ed4e4496846152902d6d8ca1f96
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>IMEI または iOS シリアル番号を持つデバイスの事前宣言
@@ -26,6 +26,8 @@ ms.lasthandoff: 12/16/2016
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 会社が所有するデバイスの International station Mobile Equipment Identity (IMEI) 番号または iOS シリアル番号をインポートすることでデバイスを識別できるようになりました。 デバイスの IMEI 番号を含むコンマ区切り値 (.csv) ファイルをアップロードするか、デバイス情報を手動で入力することができます。  インポートされた情報によって登録するデバイスの**所有権**が、デバイスの一覧で**企業**として設定されます。 Intune ライセンスも、サービスにアクセスする各ユーザーに必要です。  
+
+会社所有の iOS デバイスのシリアル番号をアップロードする場合は、企業登録プロファイルとペアにする必要があります。 したがって、デバイスを Apple の DEP (Device Enrollment Program) または Apple Configurator を使用して登録し、会社所有であることを示す必要があります。 
 
 ## <a name="how-to-predeclare-corporate-owned-devices"></a>会社所有のデバイスを事前宣言する方法
 

@@ -2,7 +2,7 @@
 title: "Exchange ActiveSync 電子メール プロファイルを作成する | Microsoft Docs"
 description: "Microsoft Intune と連携して機能する System Center Configuration Manager で電子メール プロファイルを作成および構成する方法について説明します。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8c7bf901caa49c8585a9ed3913d4a5a2aac57013
-ms.openlocfilehash: 74083f65d906fde967081229b244df24e9e08e0a
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: c90e5ebc2aca3f2133227fa59057aad8db3713f4
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -32,39 +32,37 @@ ms.lasthandoff: 03/21/2017
 
  次の種類のデバイスに電子メール プロファイルを構成できます。  
 
--   Windows Phone 8.1 を実行するデバイス  
+- Windows 10
+- Windows Phone 8.1
+- Windows Phone 8.0
+- iPhone (iOS 5、iOS 6、iOS 7、iOS 8)  
+- iPad (iOS 5、iOS 6、iOS 7、iOS 8)  
+- Samsung KNOX Standard (4 以降)
+- Android for Work
 
--   Windows Phone 8.1 を実行するデバイス  
+電子メール プロファイルをデバイスに展開するには、デバイスが Intune に登録されている必要があります。 デバイスの登録方法については、「 [Microsoft Intune を使用したモバイル デバイスの管理](https://technet.microsoft.com/en-us/library/dn646962.aspx)」を参照してください。
 
--   Windows 10 Mobile を実行するデバイス  
-
--   iOS 5、iOS 6、iOS 7 および iOS 8 を実行する iPhone デバイス  
-
--   iOS 5、iOS 6、iOS 7 および iOS 8 を実行する iPad デバイス  
-
-> [!IMPORTANT]  
->  プロファイルを iOS デバイス、Android Samsung KNOX Standard デバイス、Windows Phone デバイス、および Windows 8.1 または Windows 10 デバイスに展開するには、これらのデバイスを Intune に登録する必要があります。 デバイスの登録方法については、「 [Microsoft Intune を使用したモバイル デバイスの管理](https://technet.microsoft.com/en-us/library/dn646962.aspx)」を参照してください。  
+>[!NOTE]
+>Intune には Android for Work 電子メール プロファイルが 2 つあります。Gmail 用と Nine Work 電子メール アプリ用です。 これらのアプリは Google Play ストアで入手できます。また、Exchange への接続をサポートしています。 電子メール接続を有効にするには、いずれかの電子メール アプリをユーザーのデバイスに展開し、適切なプロファイルを作成して展開します。 Nine Work などの電子メール アプリは無料とは限りません。 アプリケーションのライセンスの詳細を確認するか、アプリの会社に問い合わせてください。
 
  デバイスに電子メール アカウントを構成するだけでなく、アドレス帳、予定表と仕事の同期の設定を構成することもできます。  
 
- 電子メール プロファイルを作成するときに、System Center Configuration Manager 証明書プロファイルを使用してプロビジョニングされた ID、暗号化および署名に関する証明書などの幅広いセキュリティ設定を含めることができます。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](create-pfx-certificate-profiles.md)」を参照してください。    
-
+ 電子メール プロファイルを作成するときに、System Center Configuration Manager 証明書プロファイルを使用してプロビジョニングされた ID、暗号化および署名に関する証明書などの幅広いセキュリティ設定を含めることができます。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](/sccm/protect/deploy-use/introduction-to-certificate-profiles)」を参照してください。    
 
 ## <a name="create-a-new-exchange-activesync-email-profile"></a>新しい Exchange ActiveSync 電子メール プロファイルを作成する  
 
 [Exchange ActiveSync 電子メール プロファイルの作成ウィザード] を開始する  
 
-1.  System Center Configuration Manager コンソールで、[**資産とコンプライアンス**] をクリックします。  
+1.  Configuration Manager コンソールで、[ **資産とコンプライアンス**] をクリックします。  
 
 2.  [ **資産とコンプライアンス** ] ワークスペースで、[ **コンプライアンス設定**]、[ **会社リソースのアクセス**] の順に展開してから、[ **電子メール プロファイル**] をクリックします。  
 
-3.  [ **ホーム** ] タブの [ **作成** ] グループで、[ **Exchange ActiveSync プロファイルの作成**] をクリックします。
-
-4.  ウィザードの指示に従います。   
-
-### <a name="to-configure-exchange-activesync-settings-for-the-exchange-activesync-email-profile"></a>Exchange ActiveSync 電子メール プロファイルの Exchange ActiveSync 設定を構成するには  
-
-1.  Exchange ActiveSync 電子メール プロファイルの作成ウィザードの [ **Exchange ActiveSync** ] ページで、次の情報を指定します。  
+3.  **[ホーム]** タブの **[作成]** グループで、**[Exchange ActiveSync 電子メール プロファイルの作成]** をクリックします。
+4.  ウィザードの [全般] ページで、次のように構成します。
+    - **[名前]** - 電子メール プロファイルにわかりやすい名前を指定します。
+    - **[説明]** - 必要に応じて、Configuration Manager コンソールで識別するのに役立つ電子メール プロファイルの説明を指定します。
+    - **[これは Android for Work に関するメール プロファイルです]** - この電子メール プロファイルを Android for Work デバイスのみに展開する場合は、このオプションを選びます。 このチェック ボックスをオンにした場合、**サポートされているプラットフォーム** ウィザードのページは表示されません。 Android for Work の電子メール プロファイルのみが構成されます。
+4.  Exchange ActiveSync 電子メール プロファイルの作成ウィザードの [ **Exchange ActiveSync** ] ページで、次の情報を指定します。  
 
     -   **Exchange ActiveSync ホスト:** Exchange ActiveSync サービスをホストする社内 Exchange Server のホスト名を指定します。  
 
@@ -74,7 +72,7 @@ ms.lasthandoff: 03/21/2017
 
         -   [**ユーザー プリンシパル名** ] 完全ユーザー プリンシパル名を使用し、Exchange にログオンします。  
 
-        -   **sAMAccountName**  
+        -   **[アカウント名]** Active Directory の完全なユーザー アカウント名を使います
 
         -   [**プライマリ SMTP アドレス** ] ユーザーのプライマリ SMTP アドレスを使用し、Exchange にログオンします。  
 
@@ -92,7 +90,7 @@ ms.lasthandoff: 03/21/2017
 
          このフィールドは、[ **sAMAccountName** ] が [ **アカウントのユーザー名** ] ドロップボックス リストで選択されている場合にのみ該当します。  
 
-    -   **認証方法:** Exchange ActiveSync への接続の認証に使用する認証方法を次から&1; つ選択します。  
+    -   **認証方法:** Exchange ActiveSync への接続の認証に使用する認証方法を次から 1 つ選択します。  
 
         -   [**証明書** ] ID 証明書を Exchange ActiveSync 接続の認証に使用します。  
 
@@ -101,25 +99,26 @@ ms.lasthandoff: 03/21/2017
     -   **ID 証明書:** **[選択]** をクリックし、ID として使用する証明書を選択します。  
 
         > [!NOTE]  
-        >  ID 証明書を選択する前に、それを Simple Certificate Enrollment Protocol (SCEP) の証明書プロファイルとして最初に構成する必要があります。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](create-pfx-certificate-profiles.md)」を参照してください。  
+        >  ID 証明書を選択する前に、それを Simple Certificate Enrollment Protocol (SCEP) の証明書プロファイルとして最初に構成する必要があります。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](/sccm/protect/deploy-use/introduction-to-certificate-profiles)」を参照してください。  
 
          このオプションは、[ **認証方法** ] の下で [ **証明書**] を選択した場合にのみ利用できます。  
 
-    -   [**S/MIME を使用する** ] S/MIME 暗号化を使用して電子メールを送信します。 このオプションは iOS デバイスにのみ適用されます。  
+    -   **[S/MIME を使用する]** (iOS デバイスの場合のみ) - S/MIME 暗号化を使って電子メールを送信します。 次のオプションを選択します。
 
-    -   **暗号化証明書:** **[選択]** をクリックし、暗号化に使用する証明書を選択します。 このオプションは iOS デバイスにのみ適用されます。  
+        -   **署名証明書:** **[選択]** をクリックし、署名に使用する証明書を選択します。 このオプションは iOS デバイスにのみ適用されます。  
+
+            > [!NOTE]  
+            >  署名証明書を選ぶ前に、それを Simple Certificate Enrollment Protocol (SCEP) または PFX の証明書プロファイルとして最初に構成する必要があります。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](/sccm/protect/deploy-use/introduction-to-certificate-profiles)」を参照してください。  
+
+        -   **暗号化証明書:** **[選択]** をクリックし、暗号化に使用する証明書を選択します。 このオプションは iOS デバイスにのみ適用されます。 暗号化証明書として使うことができるのは、PFX 証明書だけです。
+
+        暗号化証明書と署名証明書の両方を選ぶ場合は、どちらも PFX 形式でなければなりません。
 
         > [!NOTE]  
-        >  暗号化証明書を選択する前に、それを Simple Certificate Enrollment Protocol (SCEP) の証明書プロファイルとして最初に構成する必要があります。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](create-pfx-certificate-profiles.md)」を参照してください。  
+        >  証明書を選ぶ前に、それを Simple Certificate Enrollment Protocol (SCEP) または PFX の証明書プロファイルとして最初に構成する必要があります。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](/sccm/protect/deploy-use/introduction-to-certificate-profiles)」を参照してください。  
 
-         このオプションは、[ **S/MIME を使用する**] を選択した場合にのみ利用できます。  
 
-    -   **署名証明書:** **[選択]** をクリックし、署名に使用する証明書を選択します。 このオプションは iOS デバイスにのみ適用されます。  
 
-        > [!NOTE]  
-        >  署名証明書を選択する前に、それを Simple Certificate Enrollment Protocol (SCEP) の証明書プロファイルとして最初に構成する必要があります。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](create-pfx-certificate-profiles.md)」を参照してください。  
-
-         このオプションは、[ **S/MIME を使用する**] を選択した場合にのみ利用できます。  
 
 ###   <a name="configure-synchronization-settings-for-the-exchange-activesync-email-profile"></a>Exchange ActiveSync 電子メール プロファイルの同期設定を構成します。  
 

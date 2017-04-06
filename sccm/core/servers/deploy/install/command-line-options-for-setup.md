@@ -2,7 +2,7 @@
 title: "セットアップ コマンドライン オプション | Microsoft Docs"
 description: "この記事の情報を使用して、スクリプトの構成やコマンド ラインからの System Center Configuration Manager のインストールを行います。"
 ms.custom: na
-ms.date: 13/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 36b1ab794bb1dc80c673bd41dae11f46053f3be3
-ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 04fe7b3e674287c4255563ab4a308e54d0b6c3aa
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>System Center Configuration Manager でのセットアップに使用されるコマンドライン オプション
@@ -27,7 +28,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
  次の情報を使用して、スクリプトの構成やコマンド ラインからの System Center Configuration Manager のインストールを行います。  
 
-##  <a name="a-namebkmksetupa-command-line-options-for-setup"></a><a name="bkmk_setup"></a> セットアップに使用されるコマンドライン オプション  
+##  <a name="bkmk_setup"></a> セットアップに使用されるコマンドライン オプション  
  **/DEINSTALL**  
  サイトをアンインストールします。 サイト サーバーのコンピューターからセットアップを実行する必要があります。  
 
@@ -68,7 +69,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
  **/MANAGELANGS <*言語スクリプトのパス*>**  
  事前にインストールしたサイトにインストールされている言語を管理します。このオプションを使用するには、サイト サーバーの **<*Configuration Manager のインストール パス*>\BIN\X64** からセットアップを実行し、言語設定が含まれている言語スクリプト ファイルの場所を指定する必要があります。 言語セットアップ スクリプト ファイルで設定できる言語オプションの詳細については、このトピックの「[言語を管理するためのコマンド ライン オプション](#bkmk_Lang)」を参照してください。  
 
-##  <a name="a-namebkmklanga-command-line-options-to-manage-languages"></a><a name="bkmk_Lang"></a> 言語を管理するためのコマンド ライン オプション  
+##  <a name="bkmk_Lang"></a> 言語を管理するためのコマンド ライン オプション  
  **Identification**  
 
 -   **キー名:** Action  
@@ -145,7 +146,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **詳細:** セットアップの前提条件ファイルのパスを指定します。 このパスは、 **PrerequisiteComp** キーに設定した値に応じて、ダウンロードしたファイルを保存するか、ダウンロード済みのファイルを見つけるために使われます。  
 
-##  <a name="a-namebkmkunattendeda-unattended-setup-script-file-keys"></a><a name="bkmk_Unattended"></a> 無人セットアップ スクリプト ファイルのキー  
+##  <a name="bkmk_Unattended"></a> 無人セットアップ スクリプト ファイルのキー  
  次に、無人セットアップ スクリプトを記述するときに役立つ情報を示します。 一覧には、セットアップ スクリプトで指定できるキーとその値、必須かどうかの別、該当するインストールの方法、およびキーの説明が示されています。  
 
 ### <a name="unattended-install-for-a-central-administration-site"></a>中央管理サイトの無人インストール  
@@ -161,13 +162,21 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **詳細:** 中央管理サイトをインストールします。  
 
+-   **キー名:** CDLatest  
+
+    -   **必須:** はい – CD.Latest フォルダーのメディアを使う場合のみ。    
+
+    -   **値:** 1。1 以外の値は CD.Latest を使わないものと見なされます。
+
+    -   **詳細:** プライマリ サイトまたは中央管理サイトのインストールまたは回復を目的として、CD.Latest フォルダーのメディアからセットアップを実行するときは、スクリプトにこのキーと値が含まれる必要があります。 この値は、CD.Latest のメディアが使われていることを、セットアップに通知します。
+
 **Options**  
 
 -   **キー名:** ProductID  
 
     -   **必須:** はい  
 
-    -   **値:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> * または* Eval  
+    -   **値:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *または* Eval  
 
     -   **詳細:** ダッシュを含め、インストールする Configuration Manager のプロダクト キーを指定します。 Configuration Manager の評価版をインストールするには、「**Eval**」と入力します。  
 
@@ -177,7 +186,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **値:** <*サイト コード*>  
 
-    -   **詳細:** 階層内のサイトを一意に識別する英数字&3; 文字を指定します。  
+    -   **詳細:** 階層内のサイトを一意に識別する英数字 3 文字を指定します。  
 
 -   **キー名:** サイト名  
 
@@ -399,13 +408,21 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **詳細:** プライマリ サイトをインストールします。  
 
+-   **キー名:** CDLatest  
+
+    -   **必須:** はい – CD.Latest フォルダーのメディアを使う場合のみ。    
+
+    -   **値:** 1。1 以外の値は CD.Latest を使わないものと見なされます。
+
+    -   **詳細:** プライマリ サイトまたは中央管理サイトのインストールまたは回復を目的として、CD.Latest フォルダーのメディアからセットアップを実行するときは、スクリプトにこのキーと値が含まれる必要があります。 この値は、CD.Latest のメディアが使われていることを、セットアップに通知します。
+
 **Options**  
 
 -   **キー名:** ProductID  
 
     -   **必須:** はい  
 
-    -   **値:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> * または* Eval  
+    -   **値:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *または* Eval  
 
     -   **詳細:** ダッシュを含め、インストールする Configuration Manager のプロダクト キーを指定します。 Configuration Manager の評価版をインストールするには、「**Eval**」と入力します。  
 
@@ -415,7 +432,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **値:** <*サイト コード*>  
 
-    -   **詳細:** 階層内のサイトを一意に識別する英数字&3; 文字を指定します。  
+    -   **詳細:** 階層内のサイトを一意に識別する英数字 3 文字を指定します。  
 
 -   **キー名:** SiteName  
 
@@ -717,6 +734,14 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **詳細:** 中央管理サイトを回復します。  
 
+-   **キー名:** CDLatest  
+
+    -   **必須:** はい – CD.Latest フォルダーのメディアを使う場合のみ。    
+
+    -   **値:** 1。1 以外の値は CD.Latest を使わないものと見なされます。
+
+    -   **詳細:** プライマリ サイトまたは中央管理サイトのインストールまたは回復を目的として、CD.Latest フォルダーのメディアからセットアップを実行するときは、スクリプトにこのキーと値が含まれる必要があります。 この値は、CD.Latest のメディアが使われていることを、セットアップに通知します。
+
 **RecoveryOptions**  
 
 -   **キー名:** ServerRecoveryOptions  
@@ -789,7 +814,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **必須:** はい  
 
-    -   **値:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> * または* Eval  
+    -   **値:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *または* Eval  
 
     -   **詳細:** ダッシュを含め、インストールする Configuration Manager のプロダクト キーを指定します。 Configuration Manager の評価版をインストールするには、「**Eval**」と入力します。  
 
@@ -799,7 +824,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **値:** <*サイト コード*>  
 
-    -   **詳細:** 階層内のサイトを一意に識別する英数字&3; 文字を指定します。 障害が発生する前にサイトで使用していたサイト コードを指定する必要があります。
+    -   **詳細:** 階層内のサイトを一意に識別する英数字 3 文字を指定します。 障害が発生する前にサイトで使用していたサイト コードを指定する必要があります。
 
 -   **キー名:** SiteName  
 
@@ -979,6 +1004,14 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **詳細:** プライマリ サイトを回復します。  
 
+-   **キー名:** CDLatest  
+
+    -   **必須:** はい – CD.Latest フォルダーのメディアを使う場合のみ。    
+
+    -   **値:** 1。1 以外の値は CD.Latest を使わないものと見なされます。
+
+    -   **詳細:** プライマリ サイトまたは中央管理サイトのインストールまたは回復を目的として、CD.Latest フォルダーのメディアからセットアップを実行するときは、スクリプトにこのキーと値が含まれる必要があります。 この値は、CD.Latest のメディアが使われていることを、セットアップに通知します。    
+
 **RecoveryOptions**  
 
 -   **キー名:** ServerRecoveryOptions  
@@ -1051,7 +1084,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **値:** <*サイト コード*>  
 
-    -   **詳細:** 階層内のサイトを一意に識別する英数字&3; 文字を指定します。 障害が発生する前にサイトで使用していたサイト コードを指定する必要があります。
+    -   **詳細:** 階層内のサイトを一意に識別する英数字 3 文字を指定します。 障害が発生する前にサイトで使用していたサイト コードを指定する必要があります。
 
 -   **キー名:** SiteName  
 
@@ -1243,9 +1276,4 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
     -   **値:** <*ポート番号*>  
 
     -   **詳細:** プロキシ ポートに使用するポート番号を指定します。  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

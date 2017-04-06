@@ -2,7 +2,7 @@
 title: "構成項目の作成方法 | Microsoft Docs"
 description: "構成を作成して、System Center Configuration Manager によって管理され、Microsoft Intune に登録されているデバイスに展開します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
-ms.openlocfilehash: bfe0e8e68f51e60508f91c806a94a505577cb50a
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: cddf549f017792add1b17b722bf51769060520b7
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -32,10 +33,5 @@ System Center Configuration Manager のコンプライアンス設定により�
 
 -   [System Center Configuration Manager クライアントを使用して管理されているデバイスの構成項目](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)  
 
--   [System Center Configuration Manager クライアントを使用せずに管理されているデバイスの構成項目](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
+-   [Intune で管理されているデバイスの構成項目](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)  
 

@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 688e05aae0e0b15b54835f8d64a98487f4d7b64d
-ms.openlocfilehash: fcd7ac43f7b2d2c92d6aadd7c490f198ac99e5e6
-ms.lasthandoff: 12/30/2016
+ms.sourcegitcommit: 199096db7a23fb14db98b95e75246ed254848ab7
+ms.openlocfilehash: 0932e2b2a4f3e13c35d6b7b0446083f1c233ce03
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/30/2016
 
 #### <a name="to-see-how-the-one-way-hash-works"></a>一方向のハッシュの動作を確認するには  
 
-1.  SQL Management Studio で、Configuration Manager データベースに対して、SQL ステートメント **select [dbo].[fnGetHierarchyID](\)** を実行して、階層 ID を取得します。  
+1.  SQL Management Studio で、Configuration Manager データベースに対して、SQL ステートメント **select [dbo].[fnGetHierarchyID]\(\)** を実行して、階層 ID を取得します。  
 
 2.  以下の Windows PowerShell スクリプトを使用して、データベースから取得した GUID の一方向のハッシュを実行します。 これをデータ階層 ID と比較して、このデータを分かり難くする方法を確認できます。  
 
@@ -52,12 +52,12 @@ ms.lasthandoff: 12/30/2016
     Param( [Parameter(Mandatory=$True)] [string]$value )  
       $guid = [System.Guid]::NewGuid()  
       if( [System.Guid]::TryParse($value,[ref] $guid) -eq $true ) {  
-         #many of the values we hash are Guids  
-         $bytesToHash = $guid.ToByteArray()  
+      #many of the values we hash are Guids  
+      $bytesToHash = $guid.ToByteArray()  
     } else {  
-         #otherwise hash as string (unicode)  
-         $ue = New-Object System.Text.UnicodeEncoding  
-         $bytesToHash = $ue.GetBytes($value)   
+      #otherwise hash as string (unicode)  
+      $ue = New-Object System.Text.UnicodeEncoding  
+      $bytesToHash = $ue.GetBytes($value)   
     }  
       # Load Hash Provider (https://en.wikipedia.org/wiki/SHA-2)   
     $hashAlgorithm = [System.Security.Cryptography.SHA256Cng]::Create()    

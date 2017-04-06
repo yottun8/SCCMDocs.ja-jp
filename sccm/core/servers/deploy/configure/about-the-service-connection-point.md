@@ -2,7 +2,7 @@
 title: "サービス接続ポイント | Microsoft Docs"
 description: "この Configuration Manager サイト システムの役割について学習し、その使用範囲を理解し計画します。"
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 3/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3a24fe53cc243294694b779fad4c3ab83ca2ecb7
-ms.openlocfilehash: ae2cc7030c1fc404dcc7392b8c3067fc0f8cafc0
+ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
+ms.openlocfilehash: ad6df047beff670411d203220576b87f7d56d50c
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -42,18 +43,19 @@ System Center Configuration Manager サービス接続ポイントは、階層�
 
   各レベルで収集されたデータについて、また、ロールがインストールされた後でコレクションのレベルを変更する方法については、「[System Center Configuration Manager の診断結果と使用状況データ](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data)」を参照して、使用する Configuration Manager のバージョンへのリンクをたどります。  
 
-    詳細については、「[使用状況データのレベルと設定](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage)」をご覧ください。  
+  詳細については、「[使用状況データのレベルと設定](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage)」をご覧ください。  
 
 -   **Configuration Manager インフラストラクチャに適用される更新プログラムのダウンロード** – アップロードする使用データに基づいて、インフラストラクチャに関連する更新プログラムのみを入手することができます。  
 
- **各階層は、この役割の単一インスタンスをサポートします。**  
+- **各階層は、この役割の単一インスタンスをサポートします。**  
 
-    -   このサイト システムの役割は、階層の最上位層サイト (中央管理サイトまたはスタンドアロン プライマリ サイト) のみにインストールできます。  
+ -   このサイト システムの役割は、階層の最上位層サイト (中央管理サイトまたはスタンドアロン プライマリ サイト) のみにインストールできます。  
 
-    -   スタンドアロン プライマリ サイトをより大きな階層に拡張する場合、この役割をアンインストールする必要があり、その後、中央管理サイトにインストールすることができます。  
+  -   スタンドアロン プライマリ サイトをより大きな階層に拡張する場合、この役割をアンインストールする必要があり、その後、中央管理サイトにインストールすることができます。  
 
-##  <a name="a-namebkmkmodesa-modes-of-operation"></a><a name="bkmk_modes"></a> 操作モード  
- サービス接続ポイントは、操作の&2; つのモードをサポートしています。  
+
+##  <a name="bkmk_modes"></a> 操作モード  
+ サービス接続ポイントは、操作の 2 つのモードをサポートしています。  
 
 -   **オンライン モード**。このモードでは、サービス接続ポイントは、更新プログラムの 24 時間ごとの確認と、現在のインフラストラクチャおよび製品バージョンで使用可能な新しい更新プログラムのダウンロードを自動的に行い、Configuration Manager コンソールで使用できるようにします。  
 
@@ -82,7 +84,7 @@ Configuration Manager サービス マネージャーを使用するには、コ
 
 -   サイト サーバー上の配布マネージャーは、サイト システムのインストール アカウントを使って、サービス接続ポイントから更新プログラムを転送します。
 
-##  <a name="a-namebkmkurlsa-internet-access-requirements"></a><a name="bkmk_urls"></a> インターネット アクセス要件  
+##  <a name="bkmk_urls"></a> インターネット アクセス要件  
 操作を有効にするには、サービス接続ポイントをホストするコンピューター、ならびにそのコンピューターとインターネットの間のファイアウォールにより、通信が**ポート TCP 443** および**ポート TCP 443** を介して次のインターネット上の場所に届くようにする必要があります。 サービス接続ポイントから、これらの場所を利用する際は、Web プロキシ (認証あり、または認証なし) を使用することもできます。  Web プロキシ アカウントを構成する必要がある場合は、「[System Center Configuration Manager でのプロキシ サーバーのサポート](/sccm/core/plan-design/network/proxy-server-support)」を参照してください。
 
 **更新プログラムとサービス**  
@@ -119,8 +121,10 @@ Configuration Manager サービス マネージャーを使用するには、コ
 
 [セットアップ] を実行した後、またはサイト システムの役割を再インストールする場合は、**サイト システムの役割の追加**ウィザード、または**サイト システム サーバーの作成**ウィザードを使用して、サーバー上のサイト システムを階層の最上位サイト (中央管理サイトまたはスタンドアロン プライマリ サイト) にインストールします。 どちらのウィザードも、コンソールの **[ホーム]** タブの、**[管理]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** にあります。
 
+## <a name="log-files-used-by-the-service-connection-point"></a>サービス接続ポイントにより使用されるログ ファイル
+Microsoft へのアップロードに関する情報については、サービス接続ポイントを実行するコンピューターの **Dmpuploader.log** をご覧ください。  更新プログラムのダウンロード進捗状況など、ダウンロードについては、**Dmpdownloader.log** をご覧ください。 サービス接続ポイント関連のログの完全な一覧については、Configuration Manager ログ ファイル トピックの「[サービス接続ポイント](/sccm/core/plan-design/hierarchy/log-files#BKMK_WITLog)」を参照してください。
 
-
-<!--HONumber=Feb17_HO3-->
-
+更新プログラムをダウンロードするプロセスと更新プログラムを他のサイトに複製するプロセスの流れや重要なログ エントリについては、次のフローチャートを使用して理解に役立てることもできます。
+ - [フローチャート - 更新プログラムのダウンロード](/sccm/core/servers/manage/download-updates-flowchart)
+ - [フローチャート - レプリケーションの更新](/sccm/core/servers/manage/update-replication-flowchart)
 

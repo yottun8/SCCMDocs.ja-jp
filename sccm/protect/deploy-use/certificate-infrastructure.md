@@ -2,7 +2,7 @@
 title: "証明書インフラストラクチャの構成 | Microsoft Docs"
 description: "System Center Configuration Manager で証明書の登録を構成する方法を説明します。"
 ms.custom: na
-ms.date: 10/10/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,36 +17,28 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 56e0a1923305c5134386623b1e306b8ebd013d53
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 859a8da10f55e314b205b7a4a415a1d2a60a920a
+ms.lasthandoff: 03/27/2017
 
 ---
+
 # <a name="certificate-infrastructure"></a>証明書インフラストラクチャ
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
+ここでは、System Center Configuration Manager で証明書を構成する方法の手順、説明、詳細情報を示します。 また、作業を始める前に、「[System Center Configuration Manager での証明書プロファイルの前提条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)」にある前提条件を確認してください。  
 
- ここでは、System Center Configuration Manager で証明書の登録を構成する方法の手順、説明、詳細情報を示します。 また、作業を始める前に、「[System Center Configuration Manager での証明書プロファイルの前提条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)」にある前提条件を確認してください。  
+次の手順を使用し、SCEP のインフラストラクチャまたは PFX 証明書を構成します。
 
- 以下の作業が終わり、正常にインストールされていることを確認したら、証明書プロファイルの構成と展開を行うことができます。 詳細については、「[System Center Configuration Manager で証明書プロファイルを作成する方法](../../protect/deploy-use/create-certificate-profiles.md)」をご覧ください。  
+## <a name="step-1---install-and-configure-the-network-device-enrollment-service-and-dependencies-for-scep-certificates-only"></a>手順 1 - ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成する (SCEP 証明書の場合のみ)
 
-
-**手順 1:** ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成します。 Active Directory 証明書サービス (AD CS) 用のネットワークデバイス登録サービスの役割サービスは、Windows Server 2012 R2 オペレーティング システムで実行する必要があります。
-     **重要:** System Center Configuration Manager でネットワーク デバイス登録サービスを使用するには、さらに構成手順を実行する必要があります。
-**手順 2:** 証明書登録ポイントをインストールして構成します。 証明書登録ポイントを少なくとも 1 つインストールする必要があります。 この登録ポイントは、中央管理サイトとプライマリ サイトのどちらにあってもかまいません。
-**手順 3:** System Center Configuration Manager ポリシー モジュールをインストールします。 ネットワーク デバイス登録サービスを実行するサーバーにポリシー モジュールをインストールします。
-
-## <a name="supplemental-procedures-to-configure-certificate-enrollment-in-configuration-manager"></a>Configuration Manager で証明書の登録を構成するための補足手順  
- 前の表の手順で補足手順が必要な場合は、次の情報を参考にしてください。  
-
-###  <a name="step-1-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>手順 1: ネットワーク デバイス登録サービスおよび依存する要素をインストールおよび構成する  
  Active Directory 証明書サービス (AD CS) 用のネットワーク デバイス登録サービスの役割サービスをインストールして構成し、証明書テンプレートのセキュリティ アクセスを変更し、公開キー基盤 (PKI) クライアント認証証明書を展開して、レジストリでインターネット インフォメーション サービス (IIS) の既定の URL サイズの制限を上げます。 必要に応じて、証明書の発行元証明機関 (CA) でカスタムの有効期限を使えるように構成します。  
 
 > [!IMPORTANT]  
 >  System Center Configuration Manager でネットワーク デバイス登録サービスを使用するように構成する前に、ネットワーク デバイス登録サービスがインストールされ、構成されていることを確認してください。 サービスに依存する要素が正しく動作しないと、System Center Configuration Manager による証明書登録のトラブルシューティングが難しくなります。  
 
-##### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成するには  
+### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成するには  
 
 1.  Windows Server 2012 R2 を実行しているサーバーに、ネットワーク デバイス登録サービスの役割サービスをインストールし、Active Directory 証明書サービス サーバーの役割用に構成します。 詳細については、TechNet の Active Directory 証明書サービスの「 [Network Device Enrollment Service Guidance (ネットワーク デバイス登録サービス ガイド)](http://go.microsoft.com/fwlink/p/?LinkId=309016) 」を参照してください。  
 
@@ -107,10 +99,12 @@ ms.lasthandoff: 12/16/2016
 
 8.  次のようなリンクを使用して、ネットワーク デバイス登録サービスが動作していることを確認してください。例: **https://server.contoso.com/certsrv/mscep/mscep.dll**。 組み込まれているネットワーク デバイス登録サービスの Web ページが表示されるはずです。 この Web ページには、登録サービスの紹介と、ネットワーク デバイスが証明書要求を送信する URL の説明が記載されています。  
 
- ネットワーク デバイス登録サービスと依存する要素の構成が完了したら、証明書登録ポイントをインストールおよび構成することができます。  
+ ネットワーク デバイス登録サービスと依存する要素の構成が完了したら、証明書登録ポイントをインストールおよび構成することができます。
 
-###  <a name="step-2-install-and-configure-the-certificate-registration-point"></a>手順 2:証明書登録ポイントをインストールおよび構成する  
- System Center Configuration Manager の階層に証明書登録ポイントを少なくとも 1 つインストールして構成する必要があります。このサイト システムの役割は、中央管理サイトまたはプライマリ サイトにインストールできます。  
+
+## <a name="step-2---install-and-configure-the-certificate-registration-point"></a>手順 2 - 証明書登録ポイントをインストールおよび構成する
+
+System Center Configuration Manager の階層に証明書登録ポイントを少なくとも 1 つインストールして構成する必要があります。このサイト システムの役割は、中央管理サイトまたはプライマリ サイトにインストールできます。  
 
 > [!IMPORTANT]  
 >  証明書登録ポイントをインストールする前に、「 **サイト システムの要件** 」の「 [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md) 」で、証明書登録ポイントに必要なオペレーティング システムとその他の条件を確認してください。  
@@ -127,18 +121,23 @@ ms.lasthandoff: 12/16/2016
 
 5.  [プロキシ **** ] ページで [次へ ****] をクリックします。 証明書登録ポイントでは、インターネット プロキシ設定を使用しません。  
 
-6.  [システムの役割の選択 **** ] ページで、利用可能な役割の一覧から [証明書登録ポイント **** ] を選択してから、[次へ ****] をクリックします。  
+6.  [システムの役割の選択 **** ] ページで、利用可能な役割の一覧から [証明書登録ポイント **** ] を選択してから、[次へ ****] をクリックします。 
 
-7.  [証明書登録ポイント **** ] ページで、既定の設定をそのまま使用するか変更して、[追加 ****] をクリックします。  
+8. **証明書の登録モード** ページで、この証明書登録ポイントで **SCEP 証明書要求を処理する**のか、**PFX 証明書要求を処理する**のか選択します。 1 つの証明書登録ポイントで 2 種類の要求を処理することはできません。ただし、両方の種類の証明書を使用している場合、複数の証明書登録ポイントを作成できます。
 
+7.  **証明書登録ポイント設定**ページでは、行う設定は、証明書登録ポイントで処理される証明書の種類によって変わります。
+    -   **[SCEP 証明書要求を処理する]** を選択した場合、次を構成します。
+        -   証明書登録ポイントの **[Web サイト名]**、**[HTTPS ポート番号]**、**[仮想アプリケーション名]**。 これらのフィールドには既定値が自動的に入力されます。 
+        -   **ネットワーク デバイス登録サービスの URL とルート CA 証明書** - **[追加]** をクリックし、**[URL とルート証明機関証明書の追加]** ダイアログ ボックスで次を指定します。
+            - **ネットワーク デバイス登録サービスの URL**: https://*<server_FQDN>*/certsrv/mscep/mscep.dll たとえば、ネットワーク デバイス登録サービスを実行している FQDN が「server1.contoso.com」の場合は、「 **https://server1.contoso.com/certsrv/mscep/mscep.dll**」と入力します。
+            - **ルート CA 証明書**:証明書 (.cer) ファイルを参照して選択します。これは、 **手順 1: ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成する**で作成および保存したファイルです。 このルート CA 証明書を使用することで、証明書登録ポイントで、System Center Configuration Manager ポリシー モジュールが使用するクライアント認証証明書を検証できます。  
+    - **[PFX 証明書要求を処理する]** を選択した場合、次を構成します。
+        - **証明機関 (CA) と各 CA に接続するために必要なアカウント** - **[追加]** をクリックし、**[証明機関とアカウントを追加する]** ダイアログ ボックスで次を指定します。
+            - **証明機関のサーバー名** - 証明機関サーバーの名前を入力します。
+            - **証明機関アカウント** - **[設定]** をクリックし、証明機関のテンプレートで登録するアクセス許可が与えられているアカウントを選択するか、作成します。
+        - **証明書登録ポイント接続アカウント** - 証明書登録ポイントを Configuration Manager データベースに接続するアカウントを選択するか、作成します。 あるいは、証明書登録ポイントをホストしているコンピューターのローカル コンピューター アカウントを利用できます。
+        - **Active Directory 証明書の公開アカウント** - Active Directory のユーザー オブジェクトに証明書を公開するためのアカウントを選択するか、新規作成します。
 8.  [URL とルート CA 証明書の追加 **** ] ダイアログ ボックスで、次の項目を指定し、[OK ****] をクリックします。  
-
-    1.  **ネットワーク デバイス登録サービスの URL**: https://*<server_FQDN>*/certsrv/mscep/mscep.dll たとえば、ネットワーク デバイス登録サービスを実行している FQDN が「server1.contoso.com」の場合は、「 **https://server1.contoso.com/certsrv/mscep/mscep.dll**」と入力します。  
-
-    2.  **ルート CA 証明書**:証明書 (.cer) ファイルを参照して選択します。これは、 **手順 1: ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成する**で作成および保存したファイルです。 このルート CA 証明書を使用することで、証明書登録ポイントで、System Center Configuration Manager ポリシー モジュールが使用するクライアント認証証明書を検証できます。  
-
-    > [!NOTE]  
-    >  ネットワーク デバイス登録サービスを実行するサーバーが複数ある場合は、[追加 **** ] をクリックして、他のサーバーの詳細を指定します。  
 
 9. **[次へ]** をクリックして、ウィザードを完了します。  
 
@@ -155,10 +154,10 @@ ms.lasthandoff: 12/16/2016
     > [!TIP]  
     >  この証明書ファイルは、上に示されているフォルダー内にすぐに格納されません。 System Center Configuration Manager がこの場所にファイルをコピーするまで、しばらく (30 分ほど) 待つ必要がある場合があります。  
 
- 証明書登録ポイントのインストールと構成が完了したら、ネットワーク デバイス登録サービスの System Center Configuration Manager ポリシー モジュールをインストールできます。  
 
-###  <a name="step-3-install-the-configuration-manager-policy-module"></a>手順 3:Configuration Manager ポリシー モジュールをインストールする  
- 「**手順 2: 証明書登録ポイントをインストールおよび構成する **」で指定した各サーバーに、System Center Configuration Manager ポリシー モジュールをインストールして、証明書登録ポイントのプロパティの **[ネットワーク デバイス登録サービスの URL]** として構成する必要があります。  
+## <a name="step-3----install-the-system-center-configuration-manager-policy-module-for-scep-certificates-only"></a>手順 3 - System Center Configuration Manager ポリシー モジュールをインストールする (SCEP 証明書の場合のみ)
+
+「**手順 2: 証明書登録ポイントをインストールおよび構成する**」で指定した各サーバーに、System Center Configuration Manager ポリシー モジュールをインストールして、証明書登録ポイントのプロパティの **[ネットワーク デバイス登録サービスの URL]** として構成する必要があります。  
 
 ##### <a name="to-install-the-policy-module"></a>ポリシー モジュールをインストールするには  
 
@@ -168,7 +167,7 @@ ms.lasthandoff: 12/16/2016
 
     -   PolicyModuleSetup.exe  
 
-     さらに、インストール メディアのに LanguagePack フォルダーがある場合、そのフォルダーとフォルダーの内容をコピーします。  
+    さらに、インストール メディアのに LanguagePack フォルダーがある場合、そのフォルダーとフォルダーの内容をコピーします。  
 
 2.  一時フォルダーから PolicyModuleSetup.exe を実行して、System Center Configuration Manager ポリシー モジュールのセットアップ ウィザードを起動します。  
 
@@ -189,7 +188,8 @@ ms.lasthandoff: 12/16/2016
 
 9. **[次へ]** をクリックして、ウィザードを完了します。  
 
- これでネットワーク デバイス登録サービスと依存する要素、証明書登録ポイント、および System Center Configuration Manager ポリシー モジュールをインストールする構成手順が完了しました。証明書プロファイルを作成し、展開することで、証明書をユーザーとデバイスに展開できます。 証明書プロファイルの作成方法の詳細については、「[System Center Configuration Manager で証明書プロファイルを作成する方法](../../protect/deploy-use/create-certificate-profiles.md)」を参照してください。  
+ System Center Configuration Manager ポリシー モジュールをアンインストールする場合は、コントロール パネルの **[プログラムと機能]** を使用します。 
 
- System Center Configuration Manager ポリシー モジュールをアンインストールする場合は、コントロール パネルの **[プログラムと機能]** を使用します。  
+ 
+これで構成手順が完了したので、証明書をユーザーやデバイスに展開できます。証明書をユーザーやデバイスに展開するには、証明書プロファイルを作成して展開します。 証明書プロファイルの作成方法の詳細については、「[System Center Configuration Manager で証明書プロファイルを作成する方法](../../protect/deploy-use/create-certificate-profiles.md)」を参照してください。  
 

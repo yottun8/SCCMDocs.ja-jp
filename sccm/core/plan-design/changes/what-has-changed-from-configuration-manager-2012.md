@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
-ms.openlocfilehash: de30afa200404d977f56c08d24a9b11e21f9ae88
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 6b1a4584ebcd4dadd983677b714486402c93e190
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -30,29 +31,31 @@ ms.openlocfilehash: de30afa200404d977f56c08d24a9b11e21f9ae88
 
 
 
- 2015 年 12 月リリースの System Center Configuration Manager (バージョン 1511) が、Microsoft から提供される Configuration Manager の最新の製品リリースです。 これは一般に System Center Configuration Manager の Current Branch と呼ばれます。 *Current Branch* は、これが製品の増分更新をサポートするバージョンであることを示します。 さらに、Configuration Manager のこのリリースと以前のリリースを区別する手段も提供します。  
+ 2015 年 12 月リリースの System Center Configuration Manager (バージョン 1511) は、Microsoft から提供される現在の Configuration Manager 製品の最初のリリースでした。 これは一般に System Center Configuration Manager の Current Branch と呼ばれます。 *Current Branch* は、これが製品の増分更新をサポートするバージョンであることを示します。 さらに、Configuration Manager のこのリリースと以前のリリースを区別する手段も提供します。  
 
- System Center Configuration Manager の今回のリリースの特徴:  
+ System Center Configuration Manager:  
 
 -   Configuration Manager 2007 や System Center 2012 Configuration Manager などの過去のバージョンとは異なり、製品名に年や製品識別子を使用していません。
 
--   製品組み込みの増分更新をサポートしているため、更新プログラム バージョンとも呼ばれます。 初回リリースはバージョン 1511 です。 後続のバージョンは、バージョン 1602 や 1606 のように、コンソール内の更新プログラムとして年に数回リリースされます。
+-   製品組み込みの増分更新をサポートしているため、更新プログラム バージョンとも呼ばれます。 最初のリリースはバージョン 1511 でした。 後続のバージョンは、バージョン 1610 のように、コンソール内の更新プログラムとして年に数回リリースされます。
+-   基準バージョンを使用してインストールします。 1511 は元の基準バージョンでしたが、新しい基準バージョンも、1606 のように、ときどきリリースされます。 基準バージョンを使用して、新しい System Center Configuration Manager サイトと階層をインストールしたり、サポート対象バージョンの Configuration Manager 2012 からアップグレードしたりすることができます。
 
 
 
 
-##  <a name="a-namebkmkupdatesa-in-console-updates-for-configuration-manager"></a><a name="bkmk_updates"></a> Configuration Manager のコンソール内更新  
+##  <a name="bkmk_updates"></a> Configuration Manager のコンソール内更新  
  System Center Configuration Manager では、**更新とサービス**と呼ばれるコンソール内でのサービス提供方式が採られています。この方式により、推奨される更新プログラムを簡単に特定し、インストールすることができます。  
 
  バージョンによっては、(Configuration Manager コンソール内から) 既存のサイトに対する更新プログラムとしてのみ使用できて、新規 Configuration Manager サイトのインストールに使用できないものがあります。   
-たとえば、1602 更新プログラムは、Configuration Manager コンソール内からのみ使用可能です。 これは、1511 の基準バージョンを実行しているサイトをバージョン 1602 に更新するために使用します。  
+たとえば、1610 更新プログラムは、Configuration Manager コンソール内からのみ使用可能です。 任意のバージョンの System Center Configuration Manager を既に実行しているサイトを更新する場合に使用されます。
 
-更新プログラム バージョンは、新しい基準バージョン (更新プログラム 1606 など) として定期的にリリースされます。 このような更新プログラムを使用すれば、古い基準バージョン (1511 など) から開始して最新バージョンまでアップグレードしなくても、新しい階層をインストールできます。
+更新プログラム バージョンも、新しい基準バージョン (更新プログラム 1606 など) として定期的にリリースされます。 このような更新プログラムを使用すれば、古い基準バージョン (1511 など) から開始して最新バージョンまでアップグレードしなくても、新しい階層をインストールできます。
 
 
- 更新プログラムの使用の詳細については、「[System Center Configuration Manager の更新プログラム](../../../core/servers/manage/updates.md)」を参照してください。  
+更新プログラムの使用の詳細については、「[System Center Configuration Manager の更新プログラム](../../../core/servers/manage/updates.md)」を参照してください。  
+基準の詳細については、「[基準バージョンと更新プログラムのバージョン](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)」を参照してください。
 
-##  <a name="a-namebkmkservicepointa-new-site-system-role-service-connection-point"></a><a name="bkmk_servicepoint"></a>新しいサイト システムの役割: サービス接続ポイント  
+##  <a name="bkmk_servicepoint"></a>新しいサイト システムの役割: サービス接続ポイント  
  **Microsoft Intune コネクタ**は新しいサイト システムの役割に置き換えられ、新たに追加された**サービス接続ポイント**機能が有効になります。 サービス接続ポイント:  
 
 -   Intune を System Center Configuration Manager オンプレミス モバイル デバイス管理と統合するときに、Microsoft Intune コネクタに置き換えられます  
@@ -65,19 +68,19 @@ ms.openlocfilehash: de30afa200404d977f56c08d24a9b11e21f9ae88
 
 このサイト システムの役割は、オンラインとオフラインの両方の操作モードをサポートしています。 詳細については、「 [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md)」をご覧ください。  
 
-##  <a name="a-namebkmkusagea-usage-data-collection"></a><a name="bkmk_usage"></a> 使用状況データの収集  
+##  <a name="bkmk_usage"></a> 使用状況データの収集  
  System Center Configuration Manager は、サイトとインフラストラクチャに関する使用状況データを収集します。 この情報がコンパイルされ、サービス接続ポイントによって Microsoft クラウド サービスに送信されます。 使用している Configuration Manager のバージョンに適用される更新プログラムをダウンロードするには、Configuration Manager を有効にする必要があります。 サービス接続ポイントを設定するときには、収集するデータのレベルと、そのデータを自動的に送信するか (オンライン モード)、手動で送信するか (オフライン モード) の両方を設定できます。  
 
  詳細については、「[使用状況データのレベルと設定](../../../core/servers/deploy/install/setup-reference.md#bkmk_usage)」を参照してください。  
 
-##  <a name="a-namebkmkamta-support-for-intel-active-management-technology-amt"></a><a name="bkmk_AMT"></a> Intel Active Management Technology (AMT) のサポート  
+##  <a name="bkmk_AMT"></a> Intel Active Management Technology (AMT) のサポート  
  System Center Configuration Manager では、Configuration Manager コンソール内からの AMT ベースのコンピューターに対するネイティブ サポートは削除されました。 [Microsoft System Center Configuration Manager 用 Intel SCS アドオン](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html)を使用すれば、AMT ベースのコンピューターは引き続き完全に管理されます。 アドオンを使用することで、最新の機能にアクセスして AMT を管理できます。Configuration Manager にこれらの変更が組み込まれるまでに適用されていた制限は解除されます。  
 
 System Center Configuration Manager での統合 AMT の削除には、帯域外管理が含まれています。 帯域外管理ポイント サイト システムの役割は、もう使用されず、使用できなくなります。  
 
 System Center 2012 Configuration Manager での帯域外管理は、この変更の影響を受けません。
 
-##  <a name="a-namebkmkouta-deprecated-functionality"></a><a name="bkmk_out"></a> 非推奨機能  
+##  <a name="bkmk_out"></a> 非推奨機能  
  ネイティブな [Intel Active Management Technology (AMT) のサポート](#bkmk_AMT)などのいくつかの機能は、Configuration Manager コンソールから削除されます。 ネットワーク アクセス保護などの他の機能は、完全に削除されます。 さらに、Windows Vista、Windows Server 2008、SQL Server 2008 などの古い Microsoft 製品の一部はサポートされていません。  
 
  非推奨機能の一覧については、「[System Center Configuration Manager から削除された機能と非推奨の機能](../../../core/plan-design/changes/removed-and-deprecated-features.md)」を参照してください。  
@@ -165,9 +168,4 @@ Configuration Manager および Intune によるモバイル デバイス管理�
  オンプレミス Configuration Manager インフラストラクチャを使用してモバイル デバイスを管理できるようになりました。 すべてのデバイス管理と管理データはオンプレミスで処理され、Microsoft Intune またはその他のクラウド サービスの一部ではなくなります。 この種類のデバイスの管理には、クライアント ソフトウェアは必要ありません。 Configuration Manager では、デバイスのオペレーティング システムに組み込まれている機能を使用してデバイスを管理します。  
 
  詳細については、「[System Center Configuration Manager でオンプレミス インフラストラクチャを使用したモバイル デバイスの管理](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)」を参照してください。
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

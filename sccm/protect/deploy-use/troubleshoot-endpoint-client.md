@@ -17,8 +17,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1432568286605d29683416885d7aa522c649016e
-ms.openlocfilehash: fde190f141fb55462755119b533519d05af3f3c3
+ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
+ms.openlocfilehash: 1b096e71f5131214fb4e235e84d0b7f63e566831
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -167,8 +168,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 ##  <a name="starting-windows-defender-or-endpoint-protection-service"></a>Windows Defender または Endpoint Protection サービスの開始  
  **現象**  
 
- ”**Windows Defender または**  
- **Endpoint Protection は、プログラムのサービスが停止しているためコンピューターを監視していません。今すぐサービスを再起動してください。**" というメッセージが表示されます。  
+ "**Windows Defender または Endpoint Protection は、プログラムのサービスが停止しているためコンピューターを監視していません。今すぐサービスを再起動してください**" というメッセージが表示されます。 
 
  **解決方法**  
 
@@ -176,7 +176,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 -   すべてのアプリケーションを閉じて、コンピューターを再起動します。  
 
-### <a name="step-2-make-sure-the-windows-defender-orbr-------endpoint-protection-service-is-set-to-automatic-and-is-started"></a>手順 2: ”Windows Defender” または<br />      "Endpoint Protection" サービスが自動に設定されていて、開始されていることを確認する  
+### <a name="step-2-make-sure-the-windows-defender-or-endpoint-protection-service-is-set-to-automatic-and-is-started"></a>手順 2: "Windows Defender" または "Endpoint Protection サービス" が自動に設定され、開始していることを確認する  
 
 1.  **[スタート]** をクリックし、 **services.msc**を検索して、 **Enter**キーを押します。  
 
@@ -318,9 +318,4 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
  [Endpoint Protection クライアントのよく寄せられる質問](../../protect/deploy-use/endpoint-protection-client-faq.md)   
 
  [Endpoint Protection クライアント ヘルプ](../../protect/deploy-use/endpoint-protection-client-help.md)
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

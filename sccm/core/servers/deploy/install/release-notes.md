@@ -2,7 +2,7 @@
 title: "リリース ノート - Configuration Manager | Microsoft Docs"
 description: "製品でまだ修正されていないまたは Microsoft サポート技術情報の記事で説明されていない緊急の問題については以下のメモを参照してください。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/27
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: 9e853c8fda236125717c3912f6f3cb02d6dd1058
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: aca3525fc143b281f41c3d9bd20bb93b1d91f6ce
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -35,7 +36,27 @@ System Center Configuration Manager の製品リリース ノートは、この�
 
 ## <a name="setup-and-upgrade"></a>セットアップとアップグレード  
 
+### <a name="after-you-update-a-configuration-manager-console-using-consolesetupexe-from-the-site-server-folder-recent-language-pack-changes-are-not-available"></a>サイト サーバー フォルダーの ConsoleSetup.exe を使用して Configuration Manager コンソールを更新すると、最近の言語パックの変更内容が利用できなくなります。
+<!--  SMS 486420  Applicability should be 1610 and 1702.  -->
+サイト サーバーのインストール フォルダーの ConsoleSetup.exe を使用して、コンソールに対してインプレース更新を実行すると、最近インストールした更新パックが使用できなくなる場合があります。 この問題は次のような場合に発生します。
+- サイトでバージョン 1610 または 1702 を実行している。
+- コンソールが、サイト サーバーのインストール フォルダーの ConsoleSetup.exe を使用して更新されている。
+
+この問題が発生した場合、再インストールしたコンソールでは、構成済みの最新の言語パック セットは使用されません。 エラーは返されませんが、コンソールで使用可能な言語パックは変更されません。  
+
+**対応策:** 現在のコンソールをアンインストールしてから、新しいインストールとしてコンソールを再インストールします。 サイト サーバーのインストール フォルダーの ConsoleSetup.exe を使用することができます。 インストール時に、必ず、使用する言語バック ファイルを選択してください。
+
+
+### <a name="with-version-1702-the-default-site-boundary-group-is-configured-for-use-for-site-assignment"></a>バージョン 1702 では、既定サイトの境界グループはサイトの割り当て用に構成されます。
+<!--  SMS 486380   Applicability should only be to 1702. -->
+バージョン 1702 では、既定サイトの境界グループの [参照] タブの **[サイト割り当てにこの境界グループを使用する]** がオンになっており、**[割り当て済みサイト]** としてサイトがリストされ、構成を編集したり、削除したりできないように灰色表示されます。
+
+**対応策 :** なし。 この設定は無視してかまいません。 グループはサイト割り当てに対して有効になっていますが、既定サイトの境界グループはサイト割り当てでは使用されません。 1702 では、この構成により、既定サイトの境界グループが確実に正しいサイトに関連付けられます。
+
+
+
 ### <a name="when-installing-a-long-term-service-branch-site-using-version-1606-a-current-branch-site-is-installed"></a>バージョン 1606 を使用して Long-Term Service Branch をインストールすると、Current Branch サイトがインストールされる
+<!-- Consider move to core content  -->
 2016 年 10 月リリースのバージョン 1606 ベースライン メディアを使用して Long-Term Servicing Branch (LTSB) サイトをインストールすると、代わりに Current Branch サイトがインストールされます。 この問題は、サイトのインストールでサービス接続ポイントをインストールするオプションがオフのために発生します。
 
  - サービス接続ポイントは必須ではありませんが、LTSB サイトをインストールするには、セットアップ時にインストールするオプションをオンにする必要があります。
@@ -50,21 +71,19 @@ System Center Configuration Manager の製品リリース ノートは、この�
 
 
 
-
-
 ### <a name="the--sql-server-backup-model-in-use-by-configuration-manager-can-change-from-full-to-simple"></a>Configuration Managerで使用されている SQL Server のバックアップ モデルが完全版から簡易版に変更されることがあります。  
+<!-- Confirm applicability for upgrade to later baselines. 1511 is out of support. 1606 is minmum supported baseline  -->
+
  System Center Configuration Manager バージョン 1511 にアップグレードすると、Configuration Manager で使用されている SQL Server のバックアップ モデルが完全版から簡易版に変更されることがあります。  
 
 -   Configuration Manager の組み込みバックアップ タスクを使用せずに、SQL Server のカスタム バックアップ タスクと完全バックアップ モデルを組み合わせて使用している場合、アップグレードを実行すると、バックアップ モデルが完全版から簡易版に変更されることがあります。  
 
 **回避策**: バージョン 1511 にアップグレードした後、SQL Server の構成を確認し、必要であれば完全版に復元します。  
 
-### <a name="when-you-add-a-service-window-to-a-new-site-server-service-windows-that-were---configured-for-another-site-server-are-deleted"></a>サービス ウィンドウを新しいサイト サーバーに追加すると、別のサイト サーバーに構成されているサービス ウィンドウが削除されます。  
- System Center Configuration Manager バージョン 1511 でサービス ウィンドウを使用すると、階層内の 1 つのサイト サーバーにのみサービス ウィンドウを構成できます。 1 つのサーバー上でサービス ウィンドウを構成した後に、2 つ目のサイト サーバーでサービス ウィンドウを構成すると、警告やエラーが表示されることなく、最初のサイト サーバーのサービス ウィンドウが削除されます。  
 
-**回避策**: 修正プログラムを [Microsoft サポート技術情報の記事 3142341](http://support.microsoft.com/kb/3142341) からインストールします。 この問題は、System Center Configuration Manager の更新プログラム 1602 をインストールした場合にも解決されます。  
 
 ### <a name="an-update-is-stuck-with-a-state-of-downloading-in-the-updates-and-servicing-node-of-the-configuration-manager-console"></a>更新プログラムが Configuration Manager コンソールの更新プログラムとサービス ノードでダウンロード中の状態でスタックする  
+<!-- Source bug pending. Consider move to core content.  -->
 オンライン サービス接続ポイントによる更新プログラムの自動ダウンロード中には、更新プログラムがダウンロード中の状態でスタックする場合があります。 更新プログラムのダウンロードがスタックしている場合、指定されたログ ファイルに、次のようなエントリが表示されます。  
 
 DMPdownloader ログ:  
@@ -81,52 +100,12 @@ ConfigMgrSetup.log:
 
 -   **編集するキー**: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\WinTrust\Trust Providers\Software Publishing  
 
--   **状態の値**: **146944** の&10; 進数または **0x00023e00** の&16; 進数に設定  
+-   **状態の値**: **146944** の 10 進数または **0x00023e00** の 16 進数に設定  
 
-### <a name="pre-release-features-introduced-in-system-center-configuration-manager-1602"></a>System Center Configuration Manager 1602 で導入されたプレリリース機能  
-
-プレリリース機能は、運用環境での早期テストのためにこの製品に含まれていますが、運用環境で使用することはできません。  
-
-更新プログラム 1606 から開始する場合、プレリリース機能を使用する前に同意する必要があります。 詳細については、「[更新プログラムからプレリリース機能を使用する](../../../../core/servers/manage/install-in-console-updates.md)」を参照してください。
-
-System Center Configuration Manager バージョン 1602 では 2 つのプレリリース機能が導入されました。  
-
--   System Center Configuration Manager が管理する PC の条件付きアクセス。 詳細については、「[System Center Configuration Manager で管理されている PC の O365 サービスへのアクセスを管理する](../../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)」を参照してください
-    - 更新プログラム 1602 をインストールすると、プレリリース機能であっても機能の種類はリリース済みとして表示されます。
-    - その後 1602 から 1606 に更新した場合、プレリリース機能のままですが、機能の種類はリリース済みとして表示されます。
-    - バージョン 1511 から 1606 に直接更新した場合、機能の種類はプレリリースとして表示されます。
-
-
--   クラスター対応のコレクションのサービス。 詳細については、「[System Center Configuration Manager 向けテクニカル プレビュー 1605 の機能](../../../../core/get-started/capabilities-in-technical-preview-1605.md)」の「[サーバー グループのサービス](../../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)」を参照してください。  
-
-
-
-
-### <a name="recovery-options-for-a-secondary-site-are-not-available-in-the-console"></a>セカンダリ サイトの回復オプションは、コンソールで利用不可  
-セカンダリ サイトの回復が失敗した後、オプション **[セカンダリ サイトの回復]** が Configuration Manager コンソールで利用できなくなる場合があります。  
-
-この問題は、System Center Configuration Manager バージョン 1511 および 1602 に影響し、今後の更新プログラムで解決される予定です。  
-
-**回避策**: 次の方法のいずれかを使用して、セカンダリ サイトを回復 (再インストール) します。  
-
--   **Preinst.exe** および **/delsite** コマンドを使用して、セカンダリ サイトを削除してから、セカンダリ サイトを再インストールします。 preinst.exe の詳細については、「[System Center Configuration Manager の階層メンテナンス ツール (Preinst.exe)](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md)」を参照してください。  
-
--   セカンダリ サイトの回復を開始するには、次のスクリプトを実行します。 回復するセカンダリ サイトのプライマリ親サイトのデータベースでこのスクリプトを実行します。  
-
-    ```  
-    declare @SiteCode NVARCHAR(3)=N'<replace with secondary site code>'   
-
-    UPDATE Sites SET Status = 9  
-                    , DetailedStatus = 3  
-    FROM Sites WHERE SiteCode = @SiteCode  
-
-    UPDATE SCP SET SCP.Value1 = 9  
-                    , SCP.Value2 = N'3'  
-    FROM SC_SiteDefinition_Property SCP INNER JOIN SC_SiteDefinition SC ON SC.SiteNumber = SCP.SiteNumber  
-    WHERE SC.SiteCode = @SiteCode AND SCP.[Name] = N'Requested Status'  
-  ```  
 
 ###  <a name="setup-fails-when-using-redist-files-from-the-cdlatest-folder-with-a-manifest-verification-error"></a>CD.Latest フォルダーの再頒布可能ファイルを使用するとマニフェストの検証エラーのためにセットアップが失敗します。
+<!-- Source bug pending  -->
+
 バージョン 1606 用に作成された CD.Latest フォルダーからセットアップを実行し、その CD.Latest フォルダーに含まれている再頒布可能ファイルを使用すると、Configuration Manager のセットアップ ログに次のエラーが記録されてセットアップが失敗します。
 
   - エラー: File hash check failed for defaultcategories.dll (defaultcategories.dll のファイル ハッシュのチェックが失敗しました)
@@ -138,77 +117,38 @@ System Center Configuration Manager バージョン 1602 では 2 つのプレ�
 
 ### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>SQL Server がリモートの場合、または共有メモリが無効な場合、サービス接続ツールから例外がスローされる
 バージョン 1606 以降、次のいずれかの条件に該当する場合、サービス接続ツールから例外が生成されます。  
- -  サービス接続ポイントをホストし、標準以外のポート (1433 以外のポート) を使用しているコンピューターとは別のコンピューターにサイト データベースがある
- -  サイト データベースがサービス接続ポイントと同じサーバー上にあるが、SQL プロトコルの**共有メモリ**が無効
+ -    サービス接続ポイントをホストし、標準以外のポート (1433 以外のポート) を使用しているコンピューターとは別のコンピューターにサイト データベースがある
+ -     サイト データベースがサービス接続ポイントと同じサーバー上にあるが、SQL プロトコルの**共有メモリ**が無効
 
 次のような例外がスローされます。
  - *未処理の例外が発生しました: System.Data.SqlClient.SqlException: SQL Server への接続を確立しているときにネットワーク関連またはインスタンス固有のエラーが発生しました。サーバーが見つからなかったか、アクセスできませんでした。インスタンス名が正しいことと、SQL Server がリモート接続を許可するように構成されていることを確認してください。(プロバイダー: 名前付きパイプのプロバイダー、エラー: 40 - SQL Server への接続を開けませんでした) --*
 
 **回避策**: ツールの使用時に、サービス接続ポイントをホストするサーバーのレジストリを変更して、SQL Server ポートに関する情報を含める必要があります。
 
-   1.   このツールの使用前に、次のレジストリ キーを編集し、使用しているポート番号を SQL Server 名に追加します。
+   1.    このツールの使用前に、次のレジストリ キーを編集し、使用しているポート番号を SQL Server 名に追加します。
     - キー: HKLM\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\
       - 値: &lt;SQL Server 名>
     - 追加: **,&lt;ポート番号>**
 
     たとえば、ポート *15001* を *testserver.test.net* というサーバーに追加する場合、結果のキーは ***HKLM\Software\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\testserver.test.net,15001*** になります。
 
-   2.   ポートをレジストリに追加すると、ツールは正常に動作するようになります。  
+   2.    ポートをレジストリに追加すると、ツールは正常に動作するようになります。  
 
-   3.   ツールの使用が完了したら、**-connect** ステップと **-import** ステップの両方について、レジストリ キーを元の値に変更します。  
-
-
+   3.    ツールの使用が完了したら、**-connect** ステップと **-import** ステップの両方について、レジストリ キーを元の値に変更します。  
 
 
 
 
-## <a name="backup-and-recovery"></a>バックアップと回復
-### <a name="pre-production-client-is-not-available-after-a-site-restore"></a>サイトの復元の後、実稼働前クライアントは利用不可
-バージョン 1602 で実稼働前クライアントを使用してバックアップから最上階層のサイトを復元すると、サイトが復元された後、実稼働前クライアント バージョンは利用できなくなります。  
-
-**回避策:** 最上階層のサイトを復元した後、実稼働前クライアント ファイルを手動でコピーする必要があります。そうすると、Configuration Manager がそれらのファイルを使用できるように処理と復元を行います。
-1. 最上位サイト サーバー コンピューターで、*&lt;CM_Install_Location\>\\Client* フォルダーの内容を *&lt;CM_Install_Location\>\\StagingClient* フォルダーにコピーします。
-
-2. **client.acu** という名前の空のファイルを作成し、このファイルをサイト サーバーの *&lt;CM_Install_Location\>\\Inboxes\\hman*.box フォルダーにコピーまたはペーストします。 (このファイルはテキスト ファイルを名前変更したものでもかまいません。ただし、txt 拡張子は除去します。) hman.box フォルダーにこのファイルを配置すると、サイト サーバーの階層マネージャーは起動してクライアント ファイルを処理し、実稼働前クライアント ファイルを使用できるように復元します。
-
-この問題は、バージョン 1606 で解決されます。
+<!-- No current Backup and Recovery relenotes
+## Backup and recovery
+-->
 
 
-## <a name="client-deployment-and-upgrade"></a>クライアントの展開とアップグレード  
+<!-- No current  Client deployment and upgrade relenotes
+## Client deployment and upgrade  
+-->
 
-### <a name="expansion-to-central-administration-site-stops-automatic-client-upgrades"></a>中央管理サイトに拡張すると自動クライアント アップグレードが停止する  
-バージョン 1511 のみで、プライマリ サイトから中央管理サイトに拡張されたすべてのサイトで、自動クライアント アップグレードを実行することはできません。 サイトが拡張されると、クライアント アップグレード パッケージの権限を持つサイトが、新しい中央管理サイトに正しく設定されないため、自動クライアント アップグレードを正常に実行できなくなります。 この問題は、バージョン 1511 にのみ存在します。 1602 およびそれ以降のバージョンでは、この問題は修正されています。  
 
-**回避策:** 中央管理サイト データベースで次の SQL スクリプトを実行します。 スクリプトを実行すると、自動クライアント アップグレードの実行が正常に開始されます。  
-
-  ```  
-  DECLARE @RootSite AS NVARCHAR(3)  
-  DECLARE @SourceServer AS NVARCHAR(255)  
-  DECLARE @FullClientPkgSource AS NVARCHAR(255)  
-  DECLARE @UpgradePkgSource AS NVARCHAR(255)  
-
-  SELECT @RootSite = SiteCode, @SourceServer = SiteServer  
-  FROM sites  
-  WHERE ISNULL(ReportToSite, N'') = N''  
-
-  SELECT @FullClientPkgSource = N'\\' + @SourceServer + N'\SMS_' + @RootSite + N'\Client'  
-  SELECT @UpgradePkgSource = N'\\' + @SourceServer + N'\SMS_' + @RootSite + N'\ClientUpgrade'  
-
-  UPDATE SMSPackages_G  
-  SET Source = @FullClientPkgSource, SourceSite = @RootSite  
-  WHERE PkgID IN  
-      (SELECT FullPackageID FROM ClientDeploymentSettings)  
-
-  UPDATE SMSPackages_G  
-  SET Source = @UpgradePkgSource, SourceSite = @RootSite  
-  WHERE PkgID IN  
-      (SELECT UpgradePackageID FROM ClientDeploymentSettings)  
-
-  UPDATE ProgramOffers_G  
-  SET SourceSite = @RootSite  
-  WHERE OfferID IN  
-      (SELECT UpgradeAdvertisementID FROM ClientDeploymentSettings)  
-  ```  
 
 ## <a name="operating-system-deployment"></a>オペレーティング システムの展開  
 
@@ -273,9 +213,9 @@ RAM が 4 GB 未満の Windows 10 RTM デバイスでフル ワイプを実行�
 
 ### <a name="when-a-user-belongs-to-two-or-more-user-collections-that-a-terms-and-conditions-policy-is-deployed-to-the-user-sees-multiple-sets-of-the-same-terms"></a>1 人のユーザーが、使用条件ポリシーが展開されている複数のユーザー コレクションに属する場合は、同じ条項が複数表示されます。  
 
-管理者が複数のユーザー コレクションに一連の条項を展開し、ユーザーがその中の複数のコレクションのメンバーである場合、ユーザーが会社のポータルを開くと、同じ条項のコピーが複数表示されます。  たとえば、"SampleUser" という名前のユーザーが&2; つの別のユーザー コレクション ("CompanyEmployeesFTE" と "CompanyEmployeesNA") のメンバーであり、"CompanyTerms" と呼ばれる使用条件が CompanyEmployeesFTE と CompanyEmployeesNA の両方に展開されている場合、SampleUser の使用条件への同意ページには、2 つの同じ CompanyTerms が表示されます。 ユーザーが同意または拒否できるのはすべての条項に関してのみであるため、(ユーザーが同意と拒否の両方を行って) 条件に関してあいまいな状態になるという危険はありません。 使用条件への同意レポートには、ユーザーごとにそれぞれの条件セットに対して&1; 行ずつしか含まれません。レポートにエラーは含まれません。 唯一の影響は、同意ページに&2; セットの条項が表示されることです。  
+管理者が複数のユーザー コレクションに一連の条項を展開し、ユーザーがその中の複数のコレクションのメンバーである場合、ユーザーが会社のポータルを開くと、同じ条項のコピーが複数表示されます。  たとえば、"SampleUser" という名前のユーザーが 2 つの別のユーザー コレクション ("CompanyEmployeesFTE" と "CompanyEmployeesNA") のメンバーであり、"CompanyTerms" と呼ばれる使用条件が CompanyEmployeesFTE と CompanyEmployeesNA の両方に展開されている場合、SampleUser の使用条件への同意ページには、2 つの同じ CompanyTerms が表示されます。 ユーザーが同意または拒否できるのはすべての条項に関してのみであるため、(ユーザーが同意と拒否の両方を行って) 条件に関してあいまいな状態になるという危険はありません。 使用条件への同意レポートには、ユーザーごとにそれぞれの条件セットに対して 1 行ずつしか含まれません。レポートにエラーは含まれません。 唯一の影響は、同意ページに 2 セットの条項が表示されることです。  
 
-**回避策**: 各ユーザーが、条項が展開される&1; つのコレクションにのみ含まれていることを確認します。  
+**回避策**: 各ユーザーが、条項が展開される 1 つのコレクションにのみ含まれていることを確認します。  
 
 ## <a name="reports-and-monitoring"></a>レポートおよび監視  
 
@@ -294,9 +234,4 @@ RAM が 4 GB 未満の Windows 10 RTM デバイスでフル ワイプを実行�
 この問題は、更新プログラム 1602 の **Exchange On-premises** の ystem Center Configuration Manager 条件付きアクセスに影響を与え、今後の更新プログラムでの解決を予定しています。  
 
 **回避策:** **例外コレクション** ページで**ユーザー コレクション**を選ぶ前に**対象となるコレクション ページ**に**ユーザー コレクション**を追加して、例外コレクションと対象となるコレクションの両方に同じ**ユーザー コレクション**を追加していないことを確認します。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -1,17 +1,18 @@
 ---
 title: "クラウド管理ゲートウェイを監視する - Configuration Manager | Microsoft Docs"
 description: 
-ms.date: 11/18/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
 ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ef12c9b966a1b83b61243311b30e1a925c20d2e3
-ms.openlocfilehash: 4475205c37c20631a189e0c315dc48e288c15ba6
+ms.sourcegitcommit: 199096db7a23fb14db98b95e75246ed254848ab7
+ms.openlocfilehash: df32a7d95799d8ae685fd66e2d9ddf25e32b37d0
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -49,16 +50,5 @@ Configuration Manager コンソールを使用して、クラウド管理ゲー�
 
 ## <a name="monitor-logs"></a>監視ログ
 
-クラウド管理ゲートウェイ サービスは、次のログ ファイルにエントリを生成します。
-
--   **Cloudmgr.log** – クラウド管理ゲートウェイ サービスの展開、進行中のサービスの状態、およびサービスに関連する使用状況データについてのエントリが含まれます。
-
--   **SMS\_Cloud\_ProxyConnector.log** – クラウド管理ゲートウェイ サービスとクラウド管理ゲートウェイ接続ポイントの間の接続の設定に関する詳細が含まれます。
-
-詳細については、「[System Center Configuration Manager のログ ファイル](/sccm/core/plan-design/hierarchy/log-files)」を参照してください。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
+クラウド管理ゲートウェイ サービスは、複数のログ ファイルにエントリを生成します。 詳細については、「[System Center Configuration Manager のログ ファイル](/sccm/core/plan-design/hierarchy/log-files)」を参照してください。
 
