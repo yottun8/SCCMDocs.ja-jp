@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: c90e5ebc2aca3f2133227fa59057aad8db3713f4
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: aa8924a013ebdbee888cab33001fddbe7ad2d67e
+ms.openlocfilehash: a0353c49360cd99bc92b4546e12a52c3d13d1d14
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -105,10 +105,6 @@ ms.lasthandoff: 03/27/2017
 
     -   **[S/MIME を使用する]** (iOS デバイスの場合のみ) - S/MIME 暗号化を使って電子メールを送信します。 次のオプションを選択します。
 
-        -   **署名証明書:** **[選択]** をクリックし、署名に使用する証明書を選択します。 このオプションは iOS デバイスにのみ適用されます。  
-
-            > [!NOTE]  
-            >  署名証明書を選ぶ前に、それを Simple Certificate Enrollment Protocol (SCEP) または PFX の証明書プロファイルとして最初に構成する必要があります。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](/sccm/protect/deploy-use/introduction-to-certificate-profiles)」を参照してください。  
 
         -   **暗号化証明書:** **[選択]** をクリックし、暗号化に使用する証明書を選択します。 このオプションは iOS デバイスにのみ適用されます。 暗号化証明書として使うことができるのは、PFX 証明書だけです。
 

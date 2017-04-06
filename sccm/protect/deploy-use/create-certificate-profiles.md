@@ -17,9 +17,9 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: f919ac97b24604babca4f70f184220604227eb0e
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: aa8924a013ebdbee888cab33001fddbe7ad2d67e
+ms.openlocfilehash: 80a716f5a42a81e5550eb1b5c7f14534e14a4fb7
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -59,8 +59,6 @@ Configuration Manager (SCCM) で証明書プロファイルを使用して、会
 -   **SCEP (Simple Certificate Enrollment Protocol) 設定**: Simple Certificate Enrollment Protocol とネットワーク デバイス登録サービスの役割を使用して、デバイスまたはユーザーの証明書を要求する場合は、この証明書プロファイルの種類を選択します。
 
 -   **Personal Information Exchange -- PKCS #12 (PFX) 設定 -- インポート**: PFX 証明書をインポートするには、これを選びます。 PFX 証明書の作成の詳細については、「[PFX 証明書プロファイルを作成する方法](../../protect/deploy-use/create-pfx-certificate-profiles.md)」をご覧ください。
-
-- **Personal Information Exchange -- PKCS #12 (PFX) 設定 -- 作成**: 新しい PFX 証明書プロファイルを作成するには、これを選びます。 PFX 証明書の作成の詳細については、「[PFX 証明書プロファイルを作成する方法](../../protect/deploy-use/create-pfx-certificate-profiles.md)」をご覧ください。
 
 
 
