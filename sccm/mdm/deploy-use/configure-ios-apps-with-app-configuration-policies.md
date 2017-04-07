@@ -17,9 +17,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 84f21f2e86212bc3fb6a505ff62c886e62b77d52
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
+ms.openlocfilehash: 50aea2afaf34974ca92ac58b6569bff56403a9ab
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager でアプリ構成ポリシーを使用し、iOS アプリに設定を適用する
@@ -70,8 +70,9 @@ System Center Configuration Manager (Configuration Manager) のアプリ構成�
 
       XML プロパティ リストの詳細については、iOS 開発者ライブラリの [XML プロパティ リスト](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html)に関するページを参照してください。
 
-            The format of the XML property list varies depending on the app you are configuring. Contact the app supplier for details about the format to use.
-            Intune supports the following data types in a property list:
+XML プロパティ リストの形式は、構成するアプリによって異なります。 使う形式について詳しくは、アプリの供給元にお問い合わせください。
+Intune は、プロパティ リストの次のデータ型をサポートしています。
+            
             ```
             <integer>
             <real>
@@ -80,8 +81,9 @@ System Center Configuration Manager (Configuration Manager) のアプリ構成�
             <dict>
             <true /> or <false />
             ```
-            For more information about data types, see [About Property Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) in the iOS Developer Library.
-            Intune also supports the following token types in the property list:
+データ型の詳細については、iOS 開発者ライブラリの[プロパティ リスト](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html)に関するページを参照してください。
+Intune では、プロパティ リストで次の種類のトークンもサポートします。
+            
             ```
             {{userprincipalname}} - (Example: John@contoso.com)
             {{mail}} - (Example: John@contoso.com)
@@ -92,11 +94,11 @@ System Center Configuration Manager (Configuration Manager) のアプリ構成�
             {{username}} - (Example: John Doe)
             {{serialnumber}} - (Example: F4KN99ZUG5V2) for iOS devices
             {{serialnumberlast4digits}} - (Example: G5V2) for iOS devices
-
-            The {{ and }} characters are used by token types only and must not be used for other purposes.
             ```
 
-      2.  先に作成した XML ファイルをインポートするには、**[ファイルの選択]** を選択します。
+{{ 文字と }} 文字を使うことができるのはトークンの種類のみであり、他の目的には使わないでください。
+            
+5. 先に作成した XML ファイルをインポートするには、**[ファイルの選択]** を選択します。
 6. **[次へ]** を選択します。 XML コードにエラーがある場合、続行する前に修正する必要があります。
 7. ウィザードの手順を完了します。
 
@@ -111,7 +113,7 @@ System Center Configuration Manager (Configuration Manager) のアプリ構成�
 
 ## <a name="example-format-for-the-mobile-app-configuration-xml-file"></a>モバイル アプリ構成 XML ファイルの形式の例
 
-モバイル アプリ構成ファイルを作成するとき、この形式を使用し、次の値の&1; つまたは複数指定できます。
+モバイル アプリ構成ファイルを作成するとき、この形式を使用し、次の値の 1 つまたは複数指定できます。
 
 ```
 <dict>
