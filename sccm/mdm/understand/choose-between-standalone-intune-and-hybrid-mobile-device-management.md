@@ -25,7 +25,7 @@ ms.lasthandoff: 02/25/2017
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Microsoft Intune によるモバイル デバイス管理 (MDM) について最もよく寄せられる質問の&1; つは、"Intune と Configuration Manager を統合するべきか (ハイブリッド MDM)、クラウドのみの構成で Intune スタンドアロンを実行すべきか" というものです。 その答えを見つけるためには、2 つの選択肢を注意深く比較してください。また、2017 年の早い段階で導入される Intune スタンドアロンの更新プログラムを考慮してください。
+Microsoft Intune によるモバイル デバイス管理 (MDM) について最もよく寄せられる質問の 1 つは、"Intune と Configuration Manager を統合するべきか (ハイブリッド MDM)、クラウドのみの構成で Intune スタンドアロンを実行すべきか" というものです。 その答えを見つけるためには、2 つの選択肢を注意深く比較してください。また、2017 年の早い段階で導入される Intune スタンドアロンの更新プログラムを考慮してください。
 
 ## <a name="what-is-intune-standalone"></a>Intune スタンドアロンとは何ですか。
 
