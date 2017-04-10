@@ -41,7 +41,7 @@ ms.lasthandoff: 12/30/2016
 
 -   1 つのソース サイトから移行先階層の複数のサイトにデータを移行することができます。  
 
--   複数のソース サイトから移行先階層内の&1; つのサイトにデータを移動することができます。  
+-   複数のソース サイトから移行先階層内の 1 つのサイトにデータを移動することができます。  
 
 ##  <a name="BKMK_MigrationConcepts"></a> 移行に関する概念  
  移行を使用するとき、次の概念や用語が出てくることがあります。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/30/2016
 
 2.  データ収集を設定します。 データ収集によって、Configuration Manager は、ソース階層から移行できるデータに関する情報を収集できます。  
 
-     データ収集プロセスを停止するまで、Configuration Manager は、簡単なスケジュールに基づいてデータを収集するプロセスを自動的に繰り返します。 既定では、データ収集プロセスは&4; 時間間隔で繰り返されるため、Configuration Manager は、移行対象であるソース階層内のデータの変更を特定できます。 データ収集は、ソース階層から移行先階層への配布ポイントを共有するためにも必要です。  
+     データ収集プロセスを停止するまで、Configuration Manager は、簡単なスケジュールに基づいてデータを収集するプロセスを自動的に繰り返します。 既定では、データ収集プロセスは 4 時間間隔で繰り返されるため、Configuration Manager は、移行対象であるソース階層内のデータの変更を特定できます。 データ収集は、ソース階層から移行先階層への配布ポイントを共有するためにも必要です。  
 
 3.  ソース階層と移行先階層間でデータを移行する移行ジョブを作成します。  
 
@@ -97,7 +97,7 @@ Configuration Manager ソース階層からデータを移行した後に、ソ�
 >  System Center 2012 Configuration Manager で初めて導入された設計の変更のため、Configuration Manager 2007 のインフラストラクチャを System Center Configuration Manager にアップグレードすることはできません。 System Center 2012 Configuration Manager から System Center Configuration Manager へのインプレース アップグレードはサポートされています。  
 
 ### <a name="migration-from-configuration-manager-2012-or-another-system-center-configuration-manager-hierarchy"></a>Configuration Manager 2012 または他の System Center Configuration Manager 階層からの移行  
- System Center 2012 Configuration Manager 階層または System Center Configuration Manager 階層からデータを移行するプロセスは同じです。 たとえば、会社が Configuration Manager によって既に管理されている追加のリソースを獲得する場合などに、複数のソース階層のデータを&1; つの移行先階層に移行することができます。 さらに、テスト環境のデータを Configuration Manager 運用環境に移行することもできます。 そのため、Configuration Manager テスト環境への投資を維持できます。  
+ System Center 2012 Configuration Manager 階層または System Center Configuration Manager 階層からデータを移行するプロセスは同じです。 たとえば、会社が Configuration Manager によって既に管理されている追加のリソースを獲得する場合などに、複数のソース階層のデータを 1 つの移行先階層に移行することができます。 さらに、テスト環境のデータを Configuration Manager 運用環境に移行することもできます。 そのため、Configuration Manager テスト環境への投資を維持できます。  
 
 ## <a name="additional-topics-for-migration"></a>移行に関連するトピック:  
 
