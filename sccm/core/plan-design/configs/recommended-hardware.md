@@ -2,7 +2,7 @@
 title: "推奨ハードウェア | Microsoft Docs"
 description: "基本的な展開だけでなく、System Center Configuration Manager 環境を拡張するために役立つハードウェアの推奨事項を確認します。"
 ms.custom: na
-ms.date: 2/28/2017
+ms.date: 3/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 63ee782a718cf4a66ffe25b022aa317f3e45784c
-ms.openlocfilehash: 6701d5f21e8511ec9cf4fe7bc5804b3e2fdc4c71
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 8d3791bcf737e63308155787ed23c9cc84e7e99c
+ms.openlocfilehash: fd9f5b25a1e40b5f0df823dcbe9c13a77c534c59
+ms.lasthandoff: 03/31/2017
 
 
 ---
@@ -82,7 +82,7 @@ ms.lasthandoff: 02/28/2017
 
  最高のパフォーマンスを実現するには、個々の専用 RAID ボリュームに各オブジェクトを配置します。 また、最高のパフォーマンスを実現するには、すべてのデータ ボリューム (Configuration Manager およびそのデータベース ファイル) に RAID 10 を使用します。  
 
-|データの使用|最小限のディスク領域|クライアント数&25;,000|クライアント数&50;,000|クライアント数&100;,000|クライアント数&150;,000|クライアント数&700;,000 (中央管理サイト)|  
+|データの使用|最小限のディスク領域|クライアント数 25,000|クライアント数 50,000|クライアント数 100,000|クライアント数 150,000|クライアント数 700,000 (中央管理サイト)|  
 |----------------|------------------------|--------------------|--------------------|---------------------|---------------------|-----------------------------------------------------|  
 |オペレーティング システム|オペレーティング システムのガイダンスを参照してください。|オペレーティング システムのガイダンスを参照してください。|オペレーティング システムのガイダンスを参照してください。|オペレーティング システムのガイダンスを参照してください。|オペレーティング システムのガイダンスを参照してください。|オペレーティング システムのガイダンスを参照してください。|  
 |Configuration Manager のアプリケーションおよびログ ファイル|25 GB|50 GB|100 GB|200 GB|300 GB|200 GB|  
@@ -168,14 +168,12 @@ ms.lasthandoff: 02/28/2017
 
  **PowerShell のサポート:**  
 
- Configuration Manager コンソールを実行するコンピューターに PowerShell のサポートをインストールすると、そのコンピューターで Configuration Manager を管理するために PowerShell のコマンドレットを実行できるようになります。 以下の最小バージョンがサポートされています。  
+ Configuration Manager コンソールを実行するコンピューターに PowerShell のサポートをインストールすると、そのコンピューターで Configuration Manager を管理するために PowerShell のコマンドレットを実行できるようになります。
 
--   PowerShell 3.0  
+ - PowerShell 3.0 以降がサポートされています。
 
--   PowerShell 4.0  
+PowerShell のほかに、Windows Management Framework (WMF) Version 3.0 以降もサポートされます。   
 
-PowerShell のほかに、Windows Management Framework (WMF) 3.0 および 4.0 もサポートされます。   
-PowerShell は、Configuration Manager コンソールのインストールの前後を問わずインストールできます。  
 
 ##  <a name="bkmk_ScaleLab"></a> ラボ展開  
  Configuration Manager のラボ展開とテストの展開には、次の最小ハードウェア推奨事項を使用します。 これらの推奨事項はすべてのサイトの種類に適用され、最大 100 のクライアントで使用する場合のものです。  

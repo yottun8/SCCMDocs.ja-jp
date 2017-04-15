@@ -2,7 +2,7 @@
 title: "Windows の機能のサポート | Microsoft Docs"
 description: "System Center Configuration Manager でサポートされる Windows とネットワークの機能について説明します。"
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 3/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 086efdd180ba3de12f84cabfa6c2abca1fe57537
-ms.openlocfilehash: 3315098f271a5b365914772943094c33f63f25c4
+ms.sourcegitcommit: 3eb48942c1259d2aa1b3c200fad73b39b11c0b8c
+ms.openlocfilehash: 39361102d77441488bf61c9cbbfb0086774e0c09
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -29,28 +30,30 @@ ms.openlocfilehash: 3315098f271a5b365914772943094c33f63f25c4
 このトピックでは、System Center Configuration Manager による一般的な Windows とネットワークの機能のサポートを示します。  
 
 
-##  <a name="a-namebkmkbranchcachea-branchcache"></a><a name="bkmk_branchcache"></a> BranchCache  
-Windows BranchCache は、Configuration Manager に統合されています。 アプリケーションの展開の種類、パッケージの展開、およびタスク シーケンスに関する BranchCache の設定を構成できます。  
+##  <a name="bkmk_branchcache"></a> BranchCache  
+配布ポイントで BranchCache を有効にして、分散キャッシュ モードで BranchCache を使用するようにクライアントを構成している場合、Windows BranchCache を Configuration Manager と共に使用することができます。
 
-BranchCache のすべての要件を満たしていると、リモートの場所にあるクライアントは、この機能を使用して、コンテンツの最新のキャッシュを持っているローカルのクライアントからコンテンツを取得できます。  
+アプリケーションの展開の種類、パッケージの展開、およびタスク シーケンスに関する BranchCache の設定を構成できます。  
+
+BranchCache の要件を満たしている場合、リモートの場所にあるクライアントは、この機能を使用して、コンテンツの最新のキャッシュを持っているローカルのクライアントからコンテンツを取得できます。  
 
 たとえば、BranchCache が有効な最初のクライアント コンピューターが、BranchCache サーバーとして構成されている配布ポイントからコンテンツを要求するとき、クライアント コンピューターは、コンテンツをダウンロードしてキャッシュします。 これと同じコンテンツを要求する同じサブネット上のクライアントは、このコンテンツを利用できるようになります。
 
 これらのクライアントもそのコンテンツをキャッシュします。 このように、同じサブネット上の後続のクライアントは配布ポイントからコンテンツをダウンロードする必要がありません。コンテンツは、以後の転送で複数のクライアントから配布されます。  
 
-**Configuration Manager で BranchCache をサポートするには:**  
+**Configuration Manager で BranchCache をサポートするための要件:**  
+-   **配布ポイントの構成:**  
+    配布ポイントとして構成されたサイト システム サーバーに **Windows BranchCache** 機能を追加します。    
 
--   配布ポイントとして構成されたサイト システム サーバーに **Windows BranchCache** 機能を追加します。  
-
-    -   BranchCache をサポートするように構成されたサーバー上の配布ポイントには、追加の構成は必要ありません。  
-
+    -   BranchCache をサポートするように構成されたサーバー上の配布ポイントには、追加の構成は必要ありません。   
     -   Windows BranchCache をクラウド ベースの配布ポイントに追加することはできませんが、クラウド ベースの配布ポイントは、Windows BranchCache が構成されているクライアントによるコンテンツのダウンロードをサポートしています。  
 
-**クライアントから BranchCache を使用できるようにするには:**  
+-   **クライアントの構成:**    
+    -   BranchCache に対応したクライアントが、BranchCache 分散キャッシュ モード用に構成されている必要があります。  
+    -   BITS クライアントの設定に関するオペレーティング システムの設定で、BranchCache のサポートを有効にする必要があります。   <br /> <br />
+        
+    BranchCache をサポートするようにクライアントを構成する方法については、「[Windows 10 更新プログラム向けの BranchCache の構成](https://technet.microsoft.com/itpro/windows/manage/waas-branchcache)」の「[BranchCache クライアントの構成](https://technet.microsoft.com/itpro/windows/manage/waas-branchcache#configure-clients-for-branchcache)」セクションを参照してください。
 
--   BranchCache に対応したクライアントが、BranchCache 分散モード用に構成されている必要があります。  
-
--   BITS クライアントの設定に関するオペレーティング システムの設定で、BranchCache のサポートを有効にする必要があります。  
 
 **Configuration Manager は、Windows BranchCache に対応している以下のクライアント オペレーティング システムをサポートします。**  
 
@@ -67,7 +70,7 @@ BranchCache のすべての要件を満たしていると、リモートの場�
 
  BranchCache の詳細については、Windows Server のドキュメントの「 [BranchCache for Windows (Windows の BranchCache)](http://go.microsoft.com/fwlink/p/?LinkId=177945) 」を参照してください。  
 
-##  <a name="a-namebkmkworkgroupsa-computers-in-workgroups"></a><a name="bkmk_Workgroups"></a> ワークグループ内のコンピューター  
+##  <a name="bkmk_Workgroups"></a> ワークグループ内のコンピューター  
 Configuration Manager では、ワークグループ内のクライアントがサポートされます。  
 
 -   Configuration Manager では、ワークグループとドメインとの間でのクライアントの移動がサポートされます。 詳細については、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」のトピックの「[ワークグループ コンピューターへの Configuration Manager クライアントのインストール方法](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup)」のセクションを参照してください。  
@@ -76,7 +79,7 @@ Configuration Manager では、ワークグループ内のクライアントが�
 >  ワークグループのクライアントはサポートされますが、すべてのサイト システムは、サポートされた Active Directory ドメインのメンバーである必要があります。  
 
 
-##  <a name="a-namebkmmkdatadedupa-data-deduplication"></a><a name="bkmmk_datadedup"></a> データ重複除去  
+##  <a name="bkmmk_datadedup"></a> データ重複除去  
 Configuration Manager は、次に示すオペレーティング システム上の配布ポイントで、データ重複除去の使用をサポートしています。  
 
 -   Windows Server 2012  
@@ -88,7 +91,7 @@ Configuration Manager は、次に示すオペレーティング システム上
 
 詳細については、Configuration Manager チームのブログ「[ Configuration Manager Distribution Points and Windows Server 2012 Data Deduplication](http://blogs.technet.com/b/configmgrteam/archive/2014/02/18/configuration-manager-distribution-points-and-windows-server-2012-data-deduplication.aspx)」(Configuration Manager の配布ポイントと Windows Server 2012 のデータ重複除去) および Windows Server TechNet ライブラリの「[データ重複除去の概要](http://technet.microsoft.com/library/hh831602.aspx)」を参照してください。  
 
-##  <a name="a-namebkmkdaa-directaccess"></a><a name="bkmk_DA"></a> DirectAccess  
+##  <a name="bkmk_DA"></a> DirectAccess  
 Configuration Manager では、サイト システム サーバーとクライアント間の通信用に、Windows Server 2008 R2 の DirectAccess 機能をサポートしています。  
 
 -   DirectAccess の要件がすべて満たされているときに、DirectAccess を使用することで、インターネット上の Configuration Manager クライアントは、イントラネット上にいるかのように割り当て先のサイトと通信できます。  
@@ -103,13 +106,13 @@ Configuration Manager では、次に示す DirectAccess を利用した操作�
 
 -   サイト内の Configuration Manager サイト システム サーバー間の通信  
 
-##  <a name="a-namebkmkdualboota-dual-boot-computers"></a><a name="bkmk_dualboot"></a> デュアル ブート コンピューター  
+##  <a name="bkmk_dualboot"></a> デュアル ブート コンピューター  
  Configuration Manager では、1 台のコンピューター上の複数のオペレーティング システムを管理できません。 1 台の管理対象コンピューターに複数のオペレーティング システムがある場合は、管理対象のオペレーティング システムのみに Configuration Manager クライアントがインストールされるようにするために使用される探索およびインストール方法を調整します。  
 
-##  <a name="a-namebkmkipv6a-internet-protocol-version-6"></a><a name="bkmk_IPv6"></a> インターネット プロトコル バージョン 6  
+##  <a name="bkmk_IPv6"></a> インターネット プロトコル バージョン 6  
  Configuration Manager では、インターネット プロトコル バージョン 4 (IPv4) に加えて、インターネット プロトコル バージョン 6 (IPv6) をサポートしています。ただし次の例外があります。  
 
-|機能|IPv6 のサポートの例外|  
+|機能| IPv6 のサポートの例外|  
 |--------------|-------------------------------|  
 |クラウドベースの配布ポイント|Microsoft Azure とクラウド ベースの配布ポイントをサポートするには、IPv4 が必要です。|  
 |Microsoft Intune および Microsoft サービス コネクタで登録されるモバイル デバイス|Microsoft Intune および Microsoft サービス コネクタで登録されるモバイル デバイスをサポートするには、IPv4 が必要です。|  
@@ -118,10 +121,10 @@ Configuration Manager では、次に示す DirectAccess を利用した操作�
 |ウェイクアップ プロキシ通信|クライアントのウェイクアップ プロキシ パケットをサポートするには、IPv4 が必要です。|  
 |Windows CE|Windows CE デバイスで Configuration Manager クライアントをサポートするには、IPv4 が必要です。|  
 
-##  <a name="a-namebkmknata-network-address-translation"></a><a name="bkmk_NAT"></a> ネットワーク アドレス変換  
+##  <a name="bkmk_NAT"></a> ネットワーク アドレス変換  
  Configuration Manager では、ネットワーク アドレス変換 (NAT) はサポートされていません。ただし、サイトがインターネット上のクライアントをサポートしていて、クライアントがインターネットに接続されていることを検出する場合を除きます。 インターネット ベースのクライアント管理の詳細については、「[Plan for managing Internet-based clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-for-managing-internet-based-clients.md)」(System Center Configuration Manager でインターネット ベースのクライアントを管理する計画) を参照してください。  
 
-##  <a name="a-namebkmkstoragea-specialized-storage-technology"></a><a name="bkmk_storage"></a> 特殊なストレージ技術  
+##  <a name="bkmk_storage"></a> 特殊なストレージ技術  
  Configuration Manager は、Configuration Manager コンポーネントがインストールされているオペレーティング システムのバージョン用の Windows ハードウェア互換性リストで認定されているハードウェアで動作するように設計されています。
 
 サイト サーバーの役割では、ディレクトリとファイルのアクセス許可を設定できるようにするために、NTFS ファイル システムが必要です。 Configuration Manager は論理ドライブの完全な所有権を保持していることを前提としていて、個別のコンピューターで実行するサイト システムはストレージ技術を問わず論理パーティションを共有できないためです。 ただし、各コンピューターは、共有ストレージ デバイスの同じ物理パーティションにある個別の論理パーティションを使用できます。  
@@ -135,9 +138,4 @@ Configuration Manager では、次に示す DirectAccess を利用した操作�
      さらに、Configuration Manager のクライアントのキャッシュは、SIS が有効なボリュームではサポートされていません。  
 
 -   **リムーバブル ディスク ドライブ**: Configuration Manager では、リムーバブル ディスク ドライブへの Configuration Manager サイト システムまたはクライアントのインストールはサポートされていません。  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

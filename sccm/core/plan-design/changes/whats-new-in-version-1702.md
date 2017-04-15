@@ -2,7 +2,7 @@
 title: "新しいバージョン 1702 | Microsoft Docs"
 description: "System Center Configuration Manager のバージョン 1702 で導入された変更点および新機能について詳しく説明します。"
 ms.custom: na
-ms.date: 3/28/2017
+ms.date: 3/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -14,9 +14,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 15debff961c872ed90c1365d4f8e9946fbc70cdc
-ms.openlocfilehash: 10e0c2108594253a8e6cb39bc47f84c72c073e6c
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 70034213442f4c3d5a28ab65c2ceb51aa64320ad
+ms.openlocfilehash: 9332278e960051caf6875f45212af644e2ea7890
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1702 の新機能
@@ -28,9 +28,9 @@ System Center Configuration Manager の現在のブランチの更新プログ�
 > [!TIP]  
 > 新しいサイトをインストールするには、Configuration Manager の基準バージョンを使用する必要があります。  
 >  詳細については、下記のリンクをクリックしてください。    
->  -   [新しいサイトのインストール](https://technet.microsoft.com/library/mt590197.aspx)  
->  -   [サイトで更新プログラムをインストールする](https://technet.microsoft.com/library/mt607046.aspx)  
->  -   [基準バージョンと更新プログラムのバージョン](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [新しいサイトのインストール](https://technet.microsoft.com/library/mt590197.aspx)  
+>   - [サイトで更新プログラムをインストールする](https://technet.microsoft.com/library/mt607046.aspx)  
+>   - [基準バージョンと更新プログラムのバージョン](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
 次の各セクションでは、Configuration Manager のバージョン 1702 で導入された変更点および新機能について詳しく説明します。  
 
@@ -216,6 +216,8 @@ HTTP カタログの要求時に [ドライバーの自動適用] タスク シ�
 ### <a name="default-boot-image-source-path-can-no-longer-be-changed"></a>既定のブート イメージのソース パスを変更できなくなりました
 既定のブート イメージは Configuration Manager で管理され、既定のブート イメージのソース パスは Configuration Manager コンソールや Configuration Manager SDK を使用して変更できなくなりました。 カスタム ブート イメージのカスタム ソース パスは引き続き構成可能です。
 
+### <a name="default-boot-images-are-regenerated-after-upgrading-configuration-manager-to-a-new-version"></a>Configuration Manager を新しいバージョンにアップグレードした後、既定のブート イメージが再生成される
+このリリース以降、Windows ADK のバージョンをアップグレードし、更新プログラムとサービスを使用して、Configuration Manager の最新バージョンをインストールするときに、Configuration Manager によって既定のブート イメージが再生成されます。 これには、更新された Windows ADK の新しい Windows PE バージョン、新しいバージョンの Configuration Manager クライアント、ドライバー、カスタマイズが含まれます。カスタム ブート イメージは変更されません。 詳細については、「[ブート イメージの管理](/sccm/osd/get-started/manage-boot-images#BKMK_BootImageDefault)」を参照してください。
 
 ## <a name="software-updates"></a>ソフトウェア更新プログラム
 
@@ -267,16 +269,6 @@ HTTP カタログの要求時に [ドライバーの自動適用] タスク シ�
 - [Android for Work の電子メール プロファイル](/sccm/mdm/deploy-use/create-exchange-activesync-profiles)
 - [Android for Work のコンプライアンス ポリシー](/sccm/mdm/deploy-use/create-compliance-policy)
 
-
-### <a name="improvements-to-certificate-profiles"></a>証明書プロファイルの機能の向上
-
-S/MIME をサポートする PFX 証明書プロファイルを作成できるようになりました。  この証明書は、ユーザーが登録した iOS デバイス全体で S/MIME の暗号化とサインオンに使用できます。
-詳細については、[「PFX 証明書プロファイルを作成する方法」](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) と [「Exchange ActiveSync 電子メール プロファイル」](/sccm/mdm/deploy-use/create-exchange-activesync-profiles) を参照してください。
-
-また、複数の証明書登録ポイントのサイト システムの役割に対して複数の証明機関 (CA) を指定し、証明書プロファイルの一部として要求を処理する CA を割り当てることできるようになりました。
-詳細については、[「証明書インフラストラクチャ」](/sccm/protect/deploy-use/certificate-infrastructure) をご覧ください。
-
-証明書に関するこれらの新機能は、現在プレリリースであるため、変更されることがあります。
 
 ### <a name="deploy-volume-purchased-ios-apps-to-device-collections"></a>ボリューム購入 iOS アプリをデバイス コレクションに展開する
 

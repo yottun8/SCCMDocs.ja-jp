@@ -2,7 +2,7 @@
 title: "クライアント ピア キャッシュ | System Center Configuration Manager"
 description: "System Center Configuration Manager でコンテンツを展開する場合は、クライアントのコンテンツ ソースの場所のピア キャッシュを使用します。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 4/4/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 5298f1c836c1a872862b0e972180ac0c99c59751
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 26feb0b166beb7e48cb800a5077d00dbc3eec51a
+ms.openlocfilehash: dcd05d7d120f8997562da7d92b38c8b52a512357
+ms.lasthandoff: 04/04/2017
 
 ---
 
@@ -70,7 +70,7 @@ System Center Configuration Manager バージョン 1610 以降、**ピア キ�
 バージョン 1702 以降では、3 つのレポートを使ってピア キャッシュの使用状況を表示できます。 コンソールで、**[監視]** > **[レポート]** > **[レポート]** に移動します。 すべてのレポートの種類は**ソフトウェア配布コンテンツ**です。
 1.  **ピア キャッシュ ソース コンテンツの拒否**:  
 境界グループ内のピア キャッシュ ソースがコンテンツ要求を拒否した頻度を把握するには、このレポートを使います。
- - **既知の問題:** *MaxCPULoad* や *MaxDiskIO* などの結果にドリルダウンすると、レポートまたは詳細情報が見つからないことを示すエラーが発生する場合があります。 この問題を回避するには、結果を直接表示する次の 2 つのレポートを使ってください。 
+ - **既知の問題:** *MaxCPULoad* や *MaxDiskIO* などの結果にドリルダウンすると、レポートまたは詳細情報が見つからないことを示すエラーが発生する場合があります。 この問題を回避するには、結果を直接表示する次の 2 つのレポートを使ってください。
 
 2. **条件別のピア キャッシュ ソース コンテンツの拒否**:  
 指定した境界グループまたは拒否の種類についての拒否の詳細を把握するには、このレポートを使います。 以下を指定できます
@@ -87,9 +87,11 @@ System Center Configuration Manager バージョン 1610 以降、**ピア キ�
 
 
 ## <a name="requirements-and-considerations-for-peer-cache"></a>ピア キャッシュの要件と考慮事項
-- ピア キャッシュは、Configuration Manager クライアントとしてサポートされているすべての Windows OS でサポートされています。 Windows 以外のオペレーティング システムは、ピア キャッシュではサポートされていません。
+-   ピア キャッシュは、Configuration Manager クライアントとしてサポートされているすべての Windows OS でサポートされています。 Windows 以外のオペレーティング システムは、ピア キャッシュではサポートされていません。
 
-- クライアントは、現在の境界グループ内にあるピア キャッシュ クライアントのコンテンツのみを転送できます。
+-   クライアントは、現在の境界グループ内にあるピア キャッシュ クライアントのコンテンツのみを転送できます。
+
+-   クライアントがピア キャッシュを使用する各サイトは、[ネットワーク アクセス アカウント](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account)を使用して構成する必要があります。 アカウントは、ピア キャッシュ ソース コンピューターによって、ピアからのダウンロード要求を認証するために使用され、この目的にはドメイン ユーザーのアクセス許可のみが必要です。
 
 -     ピア キャッシュ コンテンツ ソースの現在の境界は、そのクライアントの最後のハードウェア インベントリ送信によって決定されるため、ネットワークの場所に移動し別の境界グループ内にあるクライアントは、ピア キャッシュを目的として、その以前の境界グループのメンバーであると見なされる場合があります。 これにより、クライアントが、直接のネットワークの場所にない、ピア キャッシュ コンテンツ ソースが提供されます。 この構成の傾向のあるクライアントをピア キャッシュ ソースとして参加させないようにすることをお勧めします。
 

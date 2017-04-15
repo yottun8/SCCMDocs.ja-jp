@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager の Technical Preview | Microsoft Docs"
 description: "System Center Configuration Manager の新機能を体験できるテクニカル プレビュー リリースについて説明します。"
 ms.custom: na
-ms.date: 3/28/2017
+ms.date: 4/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f326eb961be400187c2dcadd564a7e344dc4b175
-ms.openlocfilehash: 66b57ec07ebaffd63791741c0ac038d14ab5f367
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 9b31fab8fa93195c60e9026e2df99311aa6e328f
+ms.openlocfilehash: 61d4b7017769609caf8fcb8fcdd510f5a0b5b712
+ms.lasthandoff: 04/03/2017
 
 
 ---
@@ -85,15 +85,16 @@ ms.lasthandoff: 03/29/2017
 
  テクニカル プレビューを使用するには、テクニカル プレビュー ビルドの **ベースライン バージョン** を最初にインストールする必要があります。 ベースライン バージョンをインストールしたら、 **コンソール内更新** を使用して、最新のプレビュー バージョンでインストール環境を最新のものにできます。     通常、Technical Preview の新バージョンは毎月使用可能です。
 
-各プレビュー リリースは、3 つの連続したリリースが使用可能になるまでサポートされます。 つまり、バージョン 1702 がリリースされると、バージョン 1610 はサポートされなくなりますが、バージョン 1611、1612、1701 は引き続きサポートされます。 ただし、最終ベースラインが (バージョン 1610 のように) サポート対象でなくなっても、そのインストールをサポートされるバージョンに更新すれば、(新しいベースライン バージョンが使用できるようになるまで) 新しい Technical Preview サイトのインストールがサポートされます。
+各プレビュー リリースは、3 つの連続したリリースが使用可能になるまでサポートされます。 つまり、バージョン 1702 がリリースされると、バージョン 1610 はサポートされなくなりますが、バージョン 1611、1612、1701 は引き続きサポートされます。 ベースラインが (バージョン 1610 のように) サポート対象でなくなっても、そのインストールをサポートされるバージョンに更新すれば、(新しいベースライン バージョンが使用できるようになるまで) 新しい Technical Preview サイトのインストールがサポートされます。 更新時に利用可能な最新バージョンがコンソールに表示されない場合、提供されている最新のバージョンに更新した後、最新バージョンのテクニカル プレビューをインストールできるようになるまでそのプロセスを繰り返します。
 
 > [!TIP]  
 >  Technical Preview への更新をインストールするときに、プレビュー インストール環境を対象の新しい Technical Preview バージョンに更新します。    Technical Preview インストールでは、現在のブランチ インストールにアップグレードすることも、現在のブランチ リリースから更新を受け取ることもできません。  
 
- **Technical Preview のアクティブ ベースライン バージョン:**  
- リリース後、最長 1 年間、ベースライン バージョンをインストールできます。 ただし、新しい Technical Preview サイトをインストールする場合は、利用可能な最新のベースライン バージョンを使用することをお勧めします。
+**Technical Preview のアクティブ ベースライン バージョン:**  
+リリース後、最長 1 年間、ベースライン バージョンをインストールできます。 ただし、新しい Technical Preview サイトをインストールする場合は、利用可能な最新のベースライン バージョンを使用することをお勧めします。
+-  **Technical Preview 1703** - Configuration Manager Technical Preview 1703 は、Configuration Manager Technical Preview のコンソール内更新と、TechNet Evaluation Center Web サイトから入手できる新しいベースライン バージョンの両方として使用できます。
 
--   **Technical Preview 1610** - Configuration Manager Technical Preview 1610 は、Configuration Manager Technical Preview のコンソール内更新と、[TechNet Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) Web サイトから入手できるベースライン バージョンの両方として使用できます。
+-  **Technical Preview 1610** - Configuration Manager Technical Preview 1610 は、Configuration Manager Technical Preview のコンソール内更新と、ベースライン バージョンの両方として使用できました。 1610 をインストールするためのメディアがある場合は、バージョン 1703 をダウンロードし、そのバージョンを代わりにインストールすることをお勧めします。
 
 
 
@@ -113,6 +114,13 @@ ms.lasthandoff: 03/29/2017
 
  |機能|Technical Preview バージョン|Current Branch バージョン|  
  |----------------|---------------------|--------------------|
+ |ボリューム購入 iOS アプリをデバイス コレクションに展開する|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#deploy-volume-purchased-ios-apps-to-device-collections)|[バージョン 1702](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)|
+ |ソフトウェア センターでのアプリケーションへの直接リンク|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#direct-links-to-applications-in-software-center)|![追加されていません](media/Red_X.gif)
+ |Configuration Manager の Windows クライアント コンピューター用の PFX 証明書|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#pfx-certificates-for-configuration-manager-windows-client-computers)|![追加されていません](media/Red_X.gif)|
+ |Azure サービスの構成ウィザード|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#configure-azure-services-wizard)|![追加されていません](media/Red_X.gif)|
+ |オペレーティング システムのアップグレード タスク シーケンスでの BIOS から UEFI への変換| [Tech Preview 1703](capabilities-in-technical-preview-1703.md#convert-from-bios-to-uefi-during-an-in-place-upgrade) |[バージョン 1702](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)|
+ |折りたたみ可能なタスク シーケンス グループ| [Tech Preview 1703](capabilities-in-technical-preview-1703.md#collapsible-task-sequence-groups) |![追加されていません](media/Red_X.gif)|
+ |Windows Analytics for Upgrade Readiness を構成するためのクライアント設定 | [Tech Preview 1703](capabilities-in-technical-preview-1703.md#client-settings-to-configure-windows-analytics-for-upgrade-readiness) |![追加されていません](media/Red_X.gif)|
  |iOS デバイスの新しいコンプライアンス設定|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#new-compliance-settings-for-ios-devices)|[バージョン 1702](/sccm/mdm/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)|
  |S/MIME サポートを含む PFX 証明書を作成する|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#create-pfx-certificates-with-s-mime-support)|[バージョン 1702](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)|
  |アプリケーションをインストールする前に実行中の実行可能ファイルを確認する|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#check-for-running-executable-files-before-installing-an-application)|[バージョン 1702](/sccm/apps/deploy-use/deploy-applications)|
