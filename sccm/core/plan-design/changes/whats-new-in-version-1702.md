@@ -14,16 +14,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 70034213442f4c3d5a28ab65c2ceb51aa64320ad
-ms.openlocfilehash: 9332278e960051caf6875f45212af644e2ea7890
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
+ms.openlocfilehash: 3e97184dc923cd3972c23252c1bc001edb73fe3f
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1702 の新機能
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager の現在のブランチの更新プログラム 1702 は、以前にインストールされておりバージョン 1606 または 1610 を実行しているサイトを対象とする、コンソール内の更新プログラムとして利用可能です。
+System Center Configuration Manager の現在のブランチの更新プログラム 1702 は、以前にインストールされておりバージョン 1602, 1606 または 1610 を実行しているサイトを対象とする、コンソール内の更新プログラムとして利用可能です。
 
 > [!TIP]  
 > 新しいサイトをインストールするには、Configuration Manager の基準バージョンを使用する必要があります。  
