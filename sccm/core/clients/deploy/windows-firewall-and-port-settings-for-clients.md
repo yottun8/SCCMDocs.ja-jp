@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
 caps.latest.revision: 8
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
@@ -31,7 +31,7 @@ Windows ファイアウォールを実行する System Center Configuration Mana
 
  こうした管理機能を特定し、Windows ファイアウォールで例外を構成する方法の詳細については、次のセクションを参照してください。  
 
-##  <a name="a-namebkmkmodifyingwindowsfirewalla-modifying-the-ports-and-programs-permitted-by-windows-firewall"></a><a name="BKMK_ModifyingWindowsFirewall"></a> Windows ファイアウォールが許可するポートおよびプログラムの変更  
+##  <a name="BKMK_ModifyingWindowsFirewall"></a> Windows ファイアウォールが許可するポートおよびプログラムの変更  
  構成マネージャー クライアント用に Windows ファイアウォール上のポートやプログラムを変更するには、次の手順に従います。  
 
 #### <a name="to-modify-the-ports-and-programs-permitted-by-windows-firewall"></a>Windows ファイアウォールが許可するポートおよびプログラムを変更するには  

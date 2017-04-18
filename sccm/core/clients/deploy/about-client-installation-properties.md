@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 caps.latest.revision: 15
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a1fc9f2db7c9c2b40d986bb39a0b27d6cc699987
@@ -167,7 +167,7 @@ CCMSetup がインストール ファイルのダウンロードの試行を開�
 
 ### <a name="usepkicert"></a>/UsePKICert
 
- 指定されるとクライアントは、利用可能であれば、クライアントの認証を含んだ PKI 証明書を使用します。 有効な証明書が見つからない場合、クライアントは、HTTP 接続と自己署名証明書を使用します。これはこのプロパティを使用しない場合の動作でもあります。 
+ 指定されるとクライアントは、利用可能であれば、クライアントの認証を含んだ PKI 証明書を使用します。 有効な証明書が見つからない場合、クライアントは、HTTP 接続と自己署名証明書を使用します。これはこのプロパティを使用しない場合の動作でもあります。
 
 > [!NOTE]  
 >  クライアントをインストールし、クライアントの証明書を引き続き使用する場合には、このプロパティを指定する必要はありません。 これらのシナリオには、クライアント プッシュおよびソフトウェアの更新ポイント ベースを使用したクライアントのインストールが含まれます。 しかし、手動でクライアントをインストールするときは、このプロパティを指定し、 **/mp** プロパティを使用して HTTPS クライアント接続のみを許可するように構成された管理ポイントを指定する必要があります。 また、インターネット通信のみのクライアントをインストールする場合も、(インターネットベースの管理ポイントおよびサイト コードと共に) CCMALWAYSINF=1 プロパティを使って、このプロパティを指定する必要があります。 インターネット ベースのクライアント管理の詳細については、「[System Center Configuration Manager でのエンドポイント間の通信](../../plan-design/hierarchy/communications-between-endpoints.md)」の「[インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)」を参照してください。  
@@ -186,9 +186,9 @@ CCMSetup がインストール ファイルのダウンロードの試行を開�
 
 ### <a name="configltconfiguration-file"></a>/config:&lt;構成ファイル\>
 
-クライアント インストールのプロパティを含むテキスト ファイルの名前を指定します。 
+クライアント インストールのプロパティを含むテキスト ファイルの名前を指定します。
 
-- **/noservice** CCMSetup プロパティを指定しない場合、このファイルは CCMSetup フォルダーに置く必要があります。このフォルダーは、32 ビット版と 64 ビット版のいずれのオペレーティング システムでも %Windir%\\Ccmsetup にあります。 
+- **/noservice** CCMSetup プロパティを指定しない場合、このファイルは CCMSetup フォルダーに置く必要があります。このフォルダーは、32 ビット版と 64 ビット版のいずれのオペレーティング システムでも %Windir%\\Ccmsetup にあります。
 - **/noservice** プロパティを指定する場合、このファイルは CCMSetup.exe を実行するフォルダーと同じフォルダーに存在する必要があります。  
 
 例: `CCMSetup.exe /config:&lt;Configuration File Name.txt\>`  
@@ -200,7 +200,7 @@ CCMSetup がインストール ファイルのダウンロードの試行を開�
 ### <a name="skipprereqltfilename"></a>/skipprereq:&lt;ファイル名\>
 
  Configuration Manager クライアントがインストールされた場合は、指定した前提条件のプログラムを CCMSetup.exe がインストールしないように指定します。 このプロパティは複数値の入力をサポートします。 個々の値を区切るには、セミコロン文字 (;) を使用します。  
- 
+
 
  例: `CCMSetup.exe /skipprereq:silverlight.exe` または `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe;Silverlight.exe`  
 
