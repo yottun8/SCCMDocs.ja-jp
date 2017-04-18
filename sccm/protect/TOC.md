@@ -54,9 +54,9 @@
 ### [Endpoint Protection のシナリオ](deploy-use/scenarios-endpoint-protection.md)
 ### [Endpoint Protection クライアント ヘルプ](deploy-use/endpoint-protection-client-help.md)
 ### [クライアントのトラブルシューティング](deploy-use/troubleshoot-endpoint-client.md)
+### [デバイスの保護の設定](deploy-use/use-device-guard-with-configuration-manager.md)
 
 ## [、VPN、電子メール、および証明書プロファイルの展開](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
-
 ## [Windows Hello for Business の設定](deploy-use/windows-hello-for-business-settings.md)
 
 ## [使用条件の設定](../mdm/deploy-use/terms-and-conditions.md)
