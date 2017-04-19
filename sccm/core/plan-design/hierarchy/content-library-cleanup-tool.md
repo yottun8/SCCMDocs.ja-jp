@@ -2,7 +2,7 @@
 title: "コンテンツ ライブラリ クリーンアップ ツール | Microsoft Docs"
 description: "System Center Configuration Manager の展開と関連付けられなくなった孤立コンテンツを削除するには、コンテンツ ライブラリ クリーンアップ ツールを使います。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 4/7/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
-ms.openlocfilehash: 718e9b9eaa2dace2c72b031c244c72ef5f7e7b2f
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
+ms.openlocfilehash: 76e6772bdd5cbd32d525e728f6ebc988b045da78
+ms.lasthandoff: 04/08/2017
 
 ---
 # <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>System Center Configuration Manager のコンテンツ ライブラリ クリーンアップ ツール
@@ -74,7 +74,7 @@ ms.lasthandoff: 03/29/2017
 |**/delete**  |**省略可能** </br> 配布ポイントからコンテンツを削除する場合は、このスイッチを使用します。 コンテンツが削除される前に確認を求めるメッセージが表示されます。 </br></br> このスイッチが使われていない場合、ツールはどのコンテンツが削除対象かについて結果をログに記録しますが、配布ポイントからコンテンツを削除しません。 </br></br> 例: ***ContentLibraryCleanup.exe /dp server1.contoso.com /delete*** |
 | **/q**       |**省略可能** </br> このスイッチを指定すると、ツールはすべてのプロンプト (コンテンツを削除する場合のプロンプトなど) を非表示にする Quiet モードで実行し、ログ ファイルは自動的に開かれません。 </br></br> 例: ***ContentLibraryCleanup.exe /q /dp server1.contoso.com*** |
 | **/dp &lt;配布ポイント FQDN>**  | **必須** </br> クリーニングする配布ポイントの完全修飾ドメイン名 (FQDN) を指定します。 </br></br> 例: ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
-| **/ps &lt;プライマリ サイト FQDN>**       | プライマリ サイトで配布ポイントからコンテンツをクリーニングする場合は**省略可能**。</br>セカンダリ サイトで配布ポイントからコンテンツをクリーニングする場合は**必須**。 </br></br> 配布ポイントが属するプライマリ サイトの FQDN を指定します。または、配布ポイントがセカンダリ サイトにある場合は、親であるプライマリ サイトの FQDN を指定します。 </br></br> 例: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
+| **/ps &lt;プライマリ サイト FQDN>**       | プライマリ サイトで配布ポイントからコンテンツをクリーニングする場合は**省略可能**。</br>セカンダリ サイトで配布ポイントからコンテンツをクリーニングする場合は**必須**。 </br></br>このツールは、親プライマリ サイトに接続して、SMS_Provider に対するクエリを実行します。 このクエリによって、どのコンテンツを配布ポイントに置くかをツールが決定して、孤立しているコンテンツや削除できるコンテンツを特定できるようになります。 必要な情報がセカンダリ サイトからは直接入手できないため、親プライマリ サイトへのこの接続はセカンダリ サイトの配布ポイントに対して行う必要があります。</br></br> 配布ポイントが属するプライマリ サイトの FQDN を指定します。または、配布ポイントがセカンダリ サイトにある場合は、親であるプライマリ サイトの FQDN を指定します。 </br></br> 例: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
 | **/sc &lt;プライマリ サイト コード>**  | プライマリ サイトで配布ポイントからコンテンツをクリーニングする場合は**省略可能**。</br>セカンダリ サイトで配布ポイントからコンテンツをクリーニングする場合は**必須**。 </br></br> 配布ポイントが属するプライマリ サイトのサイト コードを指定します。あるいは、配布ポイントがセカンダリ サイトにある場合は親であるプライマリ サイトのサイト コードを指定します。</br></br> 例: ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
 | **/log <log file directory>**       |**省略可能** </br> ツールがログ ファイルを書き込む場所を指定します。 ローカル ドライブやネットワーク共有上の場所を指定できます。</br></br> このスイッチを指定しないと、ログ ファイルは、ツールが実行されているコンピューター上のユーザーの一時フォルダーに格納されます。</br></br> ローカル ドライブの例: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>ネットワーク共有の例: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
 

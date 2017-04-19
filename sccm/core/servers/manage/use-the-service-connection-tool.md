@@ -2,7 +2,7 @@
 title: "サービス接続ツール | Microsoft Docs"
 description: "このツールによって、Configuration Manager クラウド サービスに接続し、使用状況の情報を手動でアップロードできます。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 7a9c5bb9890b00cf3485998aa46286c890429cc0
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
+ms.openlocfilehash: 0da80521bf223a765c3731f8ad59623d85a4c9fa
+ms.lasthandoff: 04/08/2017
 
 
 ---
@@ -26,9 +26,9 @@ ms.lasthandoff: 03/27/2017
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager サイト システム サーバーがインターネットに接続されていないものの、最新の更新プログラムによって Configuration Manager を最新の状態に保つには、 **サービス接続ツール** を使用します。  
+サービス接続ポイントがオフライン モードになっている場合、または Configuration Manager のサイト システム サーバーがインターネットに接続されていない場合は、**サービス接続ツール**を使用してください。 このツールは、Configuration Manager に最新の更新プログラムを適用することで、サイトを最新の状態に保つことができます。  
 
- このツールによって、Configuration Manager クラウド サービスに接続し、階層の使用状況の情報を手動でアップロードしたり、更新プログラムをダウンロードしたりすることができます。 ご使用の展開に適切な更新プログラムをクラウド サービスが提供できるようにするには、使用状況データのアップロードが必要です。  
+実行時に、ツールを手動で Configuration Manager クラウド サービスに接続し、階層の使用状況の情報をアップロードしたり、更新プログラムをダウンロードしたりすることができます。 ご使用の展開に適切な更新プログラムをクラウド サービスが提供できるようにするには、使用状況データのアップロードが必要です。  
 
 ## <a name="prerequisites-for-using-the-service-connection-tool"></a>サービス接続ツールを使用するための前提条件
 次の前提条件と既知の問題があります。
@@ -85,11 +85,11 @@ USB ドライブに ServiceConnectionTool フォルダーとその中身をす�
 ### <a name="overview"></a>概要
 **サービス接続ツールを使用するための 3 つの主要なステップがあります。**  
 
-1.  **準備**:  このステップでは、使用状況データを .cab ファイルに格納し、そのファイルを USB ドライブ (または指定した代替の転送場所) に保存します。  
+1.  **準備**: このステップは、サービス接続ポイントをホストするコンピューターで実行されます。 ツールが実行されると、使用状況データが .cab ファイルに格納され、そのファイルが USB ドライブ (または指定した代替の転送場所) に保存されます。  
 
-2.  **接続**: このステップでは、インターネットに接続されたリモート コンピューターでツールを実行し、データのアップロードおよび更新プログラムのダウンロードを行います。  
+2.  **接続**: このステップでは、インターネットに接続されたリモート コンピューターでツールを実行し、使用状況データのアップロードおよび更新プログラムのダウンロードを行います。  
 
-3.  **インポート**: このステップでは、Configuration Manager コンソールから更新プログラムを表示およびインストールできるように、Configuration Manager の更新プログラムをサイトにインポートします。  
+3.  **インポート**: このステップは、サービス接続ポイントをホストするコンピューターで実行されます。 実行すると、ダウンロードした更新プログラムがツールによってインポートされ、サイトに追加されるため、Configuration Manager コンソールから更新プログラムを表示したり、インストールしたりできるようになります。  
 
 バージョン 1606 以降では、Microsoft に接続すると複数の .cab ファイルを (別の階層からそれぞれ) 一度にアップロードして、プロキシ サーバーとプロキシ サーバーのユーザーを指定できます。   
 

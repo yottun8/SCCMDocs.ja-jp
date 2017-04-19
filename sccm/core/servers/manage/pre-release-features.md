@@ -2,7 +2,7 @@
 title: "プレリリース機能 | Microsoft Docs"
 description: "System Center Configuration Manager のプレリリース機能"
 ms.custom: na
-ms.date: 3/29/2017
+ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
-ms.openlocfilehash: c1c8cf505bbc5cab1b6dfb7637eda4a87941c722
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
+ms.openlocfilehash: a7ebfea849afcaf236d7e630aad2c7f3f1807a23
+ms.lasthandoff: 04/08/2017
 
 
 ---
@@ -43,6 +43,8 @@ ms.lasthandoff: 03/29/2017
   -   **まだ同意していない場合:** 更新プログラムのインストール時に、プレリリース機能は [更新とサービス] ウィザードに表示されますが、灰色表示になっていて、有効にすることはできません。 更新プログラムをインストールした後は、**[機能]** ノードにこれらの機能が表示されますが、**[階層設定]** で同意するまで有効にすることはできません。
 
 スタンドアロン プライマリ サイトで同意し、新しい中央管理サイトをインストールして階層を拡張する場合、中央管理サイトでもう一度同意する必要があります。
+
+ プレリリース機能を有効にすると、Configuration Manager の階層マネージャー (HMAN) は機能が利用可能になる前に変更を処理する必要があります。 多くの場合、変更の処理はすぐに行われますが、HMAN の処理サイクルによっては完了までに最大で 30 分かかることがあります。 変更が処理された後、その機能に関連する新しい UI が表示されるようにするには、コンソールを再起動する必要があります。
 
 **利用できるプレリリース機能:**
 

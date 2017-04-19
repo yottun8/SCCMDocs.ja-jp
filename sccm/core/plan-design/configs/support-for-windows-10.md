@@ -16,9 +16,9 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
-ms.openlocfilehash: 188c6b1d7ae7768bb4075688d7d47607ee83be17
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 2cdd25343cf68a79067a317b820572491a3633a2
+ms.openlocfilehash: 84d6fdcec2c539f0fd3043f01d18e165da8c52c9
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="support-for-windows-10-as-a-client-of-system-center-configuration-manager"></a>System Center Configuration Manager のクライアントとしての Windows 10 のサポート
@@ -43,8 +43,9 @@ Configuration Manager は、Windows 10 の新しいバージョンがリリー�
 |1507 <br />(*エディションを参照*)            |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
 |1511 (CB)、(CBB)<br />(*エディションを参照*) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
 |Enterprise 2016 LTSB                   |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
-|1607 (CB)    <br />(*エディションを参照*)      |![下位互換性あり](media/blue_compat.png) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
-|1607 (CBB)    <br />(*エディションを参照*)      |![サポートされていません](media/Red_X.png)   |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
+|1607 (CB)    <br />Anniversary Update<br />(*エディションを参照*)      |![下位互換性あり](media/blue_compat.png) |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
+|1607 (CBB)    <br />Anniversary Update<br />(*エディションを参照*)      |![サポートされていません](media/Red_X.png)   |![サポートされています](media/green_check.png) |![サポートされています](media/green_check.png) |
+|1703 (CBB)    <br />Creators Update<br />(*エディションを参照*)      |![サポートされていません](media/Red_X.png)   |![サポートされていません](media/Red_X.png) |![下位互換性あり](media/blue_compat.png) |
 
 
 

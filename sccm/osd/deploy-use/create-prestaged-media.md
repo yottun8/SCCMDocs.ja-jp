@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager を使用した事前設定されたメディアの作成 | Microsoft Docs"
 description: "いくつかのシナリオで Windows の展開を簡素化するため、System Center Configuration Manager で事前設定されたメディアを作成します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 56cfc5837adf986e5d2bf4a73ef9de3b1f60b4f9
+ms.sourcegitcommit: ae9488a34c6b1e04397c4875de4b3bc607f7116c
+ms.openlocfilehash: 33abf3853d912d423e427db4d35fb4a16167164e
+ms.lasthandoff: 04/11/2017
 
 
 ---
@@ -36,7 +37,7 @@ System Center Configuration Manager で事前設定されたファイルは、Wi
 
  事前設定されたメディアを適用して初めてコンピューターを起動すると、コンピューターは Windows PE を起動し、オペレーティング システム展開プロセスを完了するタスク シーケンスが置かれている管理ポイントに接続します。 事前設定されたメディアの一部として、アプリケーション、パッケージ、およびドライバー パッケージを含めることができます。 事前設定されたメディアを使用するタスク シーケンスを展開すると、ウィザードによって、まずローカルのタスク シーケンス キャッシュ内に有効なコンテンツがあることが確認され、コンテンツが見つからない場合、またはコンテンツが改訂された場合は、配布ポイントからコンテンツがダウンロードされます。  
 
-##  <a name="a-namebkmkcreateprestagedmediaa-how-to-create-prestaged-media"></a><a name="BKMK_CreatePrestagedMedia"></a> 事前設定されたメディアの作成方法  
+##  <a name="BKMK_CreatePrestagedMedia"></a> 事前設定されたメディアの作成方法  
  タスク シーケンス メディアの作成ウィザードを使用して、事前設定されたメディアを作成する前に、次の条件がすべて満たされていることを確認してください。  
 
 |タスク|説明|  
@@ -47,7 +48,7 @@ System Center Configuration Manager で事前設定されたファイルは、Wi
 |展開先のコンピューター上のハード ディスク ドライブ|事前設定メディアをコンピューターのハード ドライブにステージングする前に、セットアップ先のコンピューターのハード ドライブをフォーマットする必要があります。 メディアの適用時にハード ドライブがフォーマットされていないと、オペレーティング システムを展開するタスク シーケンスが対象コンピューターを起動しようとしたときに、このタスク シーケンスは失敗します。|  
 
 > [!NOTE]  
->  タスク シーケンス メディアの作成ウィザードは、次のタスク シーケンス変数条件をメディアに設定します: **_SMSTSMedia = OEMMedia**。 この条件をタスク シーケンスで使用できます。  
+>  タスク シーケンス メディアの作成ウィザードは、次のタスク シーケンス変数条件をメディアに設定します: **_SMSTSMediaType = OEMMedia**。 この条件をタスク シーケンスで使用できます。  
 
  事前設定メディアを作成するには、次の手順に従います。  
 
@@ -143,9 +144,4 @@ System Center Configuration Manager で事前設定されたファイルは、Wi
 
 ## <a name="next-steps"></a>次のステップ
 [エンタープライズ オペレーティング システムを展開するシナリオ](scenarios-to-deploy-enterprise-operating-systems.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
