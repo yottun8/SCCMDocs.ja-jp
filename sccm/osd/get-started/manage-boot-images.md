@@ -17,9 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 70034213442f4c3d5a28ab65c2ceb51aa64320ad
-ms.openlocfilehash: 207975538b63390fb5789b19c519db89db62e0a5
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: 0cf2ac6440588ccf4848baa7a195f78e8675447d
+ms.openlocfilehash: c6a1eb9ccaee45eb242fb320cb6b492d1a39d349
+ms.lasthandoff: 04/11/2017
 
 
 ---
@@ -29,18 +29,10 @@ ms.lasthandoff: 03/31/2017
 
 Configuration Manager のブート イメージは、オペレーティング システムの展開中に使用される [Windows PE (WinPE)](https://msdn.microsoft.com/library/windows/hardware/dn938389%28v=vs.85%29.aspx) のイメージです。 ブート イメージは、WinPE でコンピューターを起動するために使用されます。WinPE は、セットアップ先のコンピューターで Windows のインストールを準備する限られたコンポーネントとサービスが含まれた、最小限のオペレーティング システムです。  ブート イメージを管理するときは、以下のセクションを参照してください。
 
-##  <a name="BKMK_BootImageDefault"></a> 既定のブート イメージ  
-Version 1702 以降、Windows ADK のバージョンをアップグレードし、Configuration Manager の最新バージョンに更新すると、既定のブート イメージが更新されます。 これには、更新された Windows ADK の新しい Windows PE バージョン、新しいバージョンの Configuration Manager クライアントが含まれ、すべてのカスタマイズは変更されません。 カスタム ブート イメージは更新されません。 Version 1702 より前のバージョンでは、新しいバージョンの Windows ADK を使用するために、ブート イメージを手動で更新する必要があります。
-
-セットアップ プロセスを使用して、Configuration Manager の新しいメジャー バージョンへのアップグレードを実行する場合、Configuration Manager は既定のブート イメージを更新するだけでなく、既定の場所に格納されている既定のブート イメージに基づいてカスタマイズされたブート イメージも更新することがあります。
-
-サイトで既定のブート イメージに構成するオプション (省略可能なコンポーネントなど) は、ドライバーを含めて、ブート イメージが更新されたときに引き継がれます。 ソース ドライバー オブジェクトは、ドライバーのソース ファイルを含めて、有効である必要があり、そうでない場合、ドライバーは、サイトの更新されたブート イメージに追加されません。 同じ Windows ADK バージョンに基づく場合でも、既定のブート イメージに基づいていない他のブート イメージは更新されません。 ブート イメージが更新されたら、配布ポイントに再配布する必要があります。 ブート イメージを使用するメディアを再作成する必要があります。 カスタマイズした/既定のブート イメージを自動的に更新しない場合、別の場所に保存する必要があります。  
-
-
 ## <a name="BKMK_BootImageDefault"></a> 既定のブート イメージ
 Configuration Manager には 2 つの既定のブート イメージがあります。一方は x86 プラットフォームをサポートし、もう一方は x64 プラットフォームをサポートします。 これらのイメージは次の場所に格納されています: \\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64*> または <*i386*>。 既定のブート イメージは、実行する操作に応じて更新または再生成されます。
 
-**更新プログラムとサービスを使用して、Configuration Manager の最新バージョンをインストールする** Version 1702 以降のバージョンでは、Windows ADK のバージョンをアップグレードし、更新プログラムとサービスを使用して、Configuration Manager の最新バージョンをインストールするときに、Configuration Manager によって既定のブート イメージが再生成されます。 これには、更新された Windows ADK の新しい Windows PE バージョン、新しいバージョンの Configuration Manager クライアント、ドライバー、カスタマイズが含まれます。カスタム ブート イメージは変更されません。 
+**更新プログラムとサービスを使用して、Configuration Manager の最新バージョンをインストールする** Version 1702 以降のバージョンでは、Windows ADK のバージョンをアップグレードし、更新プログラムとサービスを使用して、Configuration Manager の最新バージョンをインストールするときに、Configuration Manager によって既定のブート イメージが再生成されます。 これには、更新された Windows ADK の新しい Windows PE バージョン、新しいバージョンの Configuration Manager クライアント、ドライバー、カスタマイズが含まれます。カスタム ブート イメージは変更されません。
 
 Version 1702 より前のバージョンでは、 Configuration Manager は、クライアント コンポーネント、ドライバー、カスタマイズなどを使用して既存のブート イメージ (boot.wim) を更新しますが、Windows ADK に含まれる Windows PE の最新バージョンは使用されません。 新しいバージョンの Windows ADK を使用するために、ブート イメージを手動で変更する必要があります。
 
