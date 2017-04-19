@@ -2,7 +2,7 @@
 title: "コンソール内の更新プログラム | Microsoft Docs"
 description: "System Center Configuration Manager は Microsoft クラウドと同期して更新プログラムを取得します。その更新プログラムはコンソール内からインストールできます。"
 ms.custom: na
-ms.date: 3/7/2017
+ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 3b50ada9f63e41d1b6f01009c141b8f361f5180e
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
+ms.openlocfilehash: 18c199e78750eadc06b9635fa6104d36c2ac018d
+ms.lasthandoff: 04/08/2017
 
 
 ---
@@ -319,6 +319,10 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 使用可能な機能とそれらの状態を表示するには、コンソールで **[管理]** > **[更新とサービス]** > **[機能]** に移動します。
 
 オプションでない機能は、自動的にインストールされ、**[機能]** ノードには表示されません。  
+
+
+新機能またはプレリリース機能を有効にすると、Configuration Manager の階層マネージャー (HMAN) は機能が利用可能になる前に変更を処理する必要があります。 多くの場合、変更の処理はすぐに行われますが、HMAN の処理サイクルによっては完了までに最大で 30 分かかることがあります。 変更が処理された後、その機能に関連する新しい UI が表示されるようにするには、コンソールを再起動する必要があります。
+
 
 ##  <a name="bkmk_prerelease"></a> 更新プログラムからのプレリリース機能の使用
 プレリリース機能は、運用環境での初期テストの Current Branch に含まれている機能です。 これらの機能は実稼働の準備ができていると見なすべきではありませんが、実稼働環境で使用することはできます。 現在の環境で有効にする方法など、プレリリース機能の詳細については、「[Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features)」(System Center Configuration Manager のプレリリース機能) を参照してください。                |
