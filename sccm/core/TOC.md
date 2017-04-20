@@ -67,6 +67,7 @@
 
 ##   [ネットワーク インフラストラクチャの計画](plan-design/network/configure-firewalls-ports-domains.md)
 ###  [Active Directory スキーマの準備](plan-design/network/extend-the-active-directory-schema.md)
+#### [スキーマ拡張](plan-design/network/schema-extensions.md)
 ###  [サイト システムをサポートするための Windows Server の準備](plan-design/network/prepare-windows-servers.md)
 ###  [サイト システム サーバーの Web サイト](plan-design/network/websites-for-site-system-servers.md)
 ###  [PKI 証明書の要件](plan-design/network/pki-certificate-requirements.md)
@@ -138,8 +139,10 @@
 ##   インストール インフラストラクチャ
 ###  [インストール メディアを取得する](servers/deploy/install/get-install-media.md)
 ###  セットアップを実行する前に
+#### [リファレンスの設定](servers/deploy/install/setup-reference.md)
 #### [セットアップ ダウンローダー](servers/deploy/install/setup-downloader.md)
 #### [前提条件チェッカー](servers/deploy/install/prerequisite-checker.md)
+#### [前提条件の確認](servers/deploy/install/list-of-prerequisite-checks.md)
 ###  [サイトのインストール](servers/deploy/install/installing-sites.md)
 #### [サイトのインストールの準備](servers/deploy/install/prepare-to-install-sites.md)
 #### [サイトをインストールするための前提条件](servers/deploy/install/prerequisites-for-installing-sites.md)
@@ -150,6 +153,7 @@
 #### [評価版インストールのアップグレード](servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md)
 #### [System Center Configuration Manager へのアップグレード](servers/deploy/install/upgrade-to-configuration-manager.md)
 #### [インストールを合理化するシナリオ](servers/deploy/install/scenarios-to-streamline-your-installation.md)
+#### [サイトと階層のアンインストール](servers/deploy/install/uninstall-sites-and-hierarchies.md)
 
 ##   [サイトと階層の構成](servers/deploy/configure/configure-sites-and-hierarchies.md)
 ###  [サイト システムの役割を追加する](servers/deploy/configure/add-site-system-roles.md)
@@ -171,10 +175,24 @@
 ###  [サイト境界と境界グループ](servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)
 #### [境界](servers/deploy/configure/boundaries.md)
 #### [境界グループ](servers/deploy/configure/boundary-groups.md)
+#### [1610 より前のバージョンの境界グループ](servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md)
 ###  [SQL Server AlwaysOn の使用](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
 ###  [SQL Server クラスターの使用](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [データベース ファイルのカスタムの場所](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [ロール ベース管理の構成](servers/deploy/configure/configure-role-based-administration.md)
+##   テクニカル リファレンス
+###  [アカウント](plan-design/hierarchy/accounts.md)
+###  [エンドポイント間の通信](plan-design/hierarchy/communications-between-endpoints.md)
+###  [Hierarchy Maintenance ツール](servers/manage/hierarchy-maintenance-tool-preinst.exe.md)
+###  [インターナショナル サポート](plan-design/hierarchy/international-support.md)
+###  [異なるバージョンの相互運用性](plan-design/hierarchy/interoperability-between-different-versions.md)
+###  [言語パック](servers/deploy/install/language-packs.md)
+###  [ログ ファイル](plan-design/hierarchy/log-files.md)
+###  [ポート](plan-design/hierarchy/ports.md)
+###  [プロキシ サーバーのサポート](plan-design/network/proxy-server-support.md)
+###  [リリース ノート](servers/deploy/install/release-notes.md)
+###  [Unicode および ASCII のサポート](plan-design/hierarchy/unicode-and-ascii-support.md)
+
 
 #    管理インフラストラクチャ
 ##   [メンテナンス タスク](servers/manage/maintenance-tasks.md)
