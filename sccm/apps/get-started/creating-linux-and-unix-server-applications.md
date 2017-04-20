@@ -2,7 +2,7 @@
 title: "Linux および UNIX のサーバー アプリケーションの作成 | Microsoft Docs"
 description: "Linux および UNIX デバイス用アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: b599a58f25a868c638b7ee00cefff80b2f71244e
-ms.openlocfilehash: f4373c888434aa6cd22e5f9b871e172cc50a7d30
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: 4b9261db93c9bf72c492e3c9be5b30f81835134a
+ms.openlocfilehash: 72ebd8bd29b5ecdd817631e447291c04f49d9808
+ms.lasthandoff: 04/13/2017
 
 
 ---
@@ -146,7 +146,7 @@ Linux および UNIX を実行するコンピューター用のアプリケー�
 
     -   **[調整期間内の最大転送速度 (Kbps)]**  
 
-    -   **[調整期間内の最大転送速度 (Kbps)]**  
+    -   **[調整期間外の最大転送速度 (Kbps)]**  
 
 バックグラウンド インテリジェント転送の次の構成はサポートされていません。Linux および UNIX のクライアントでは無視されます。  
 

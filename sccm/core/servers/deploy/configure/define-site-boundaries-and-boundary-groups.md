@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: e9d6f53961c4eb410a56774443e357cca7c18dcc
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: dda2f4c01078fbbd174cbcb30357554c24f6abeb
+ms.openlocfilehash: 0fea1dece0768a2b7bcd3fcedc2288ea2d52e73d
+ms.lasthandoff: 04/17/2017
 
 
 ---
@@ -45,7 +45,7 @@ System Center Configuration Manager の境界は、管理するデバイスを�
 
 **作業方法:**
 - 最初に、[境界としてネットワークの場所を定義](/sccm/core/servers/deploy/configure/boundaries)します。
-- 次に、[境界グループを構成](/sccm/core/servers/deploy/configure/boundary-groups)し、境界内のクライアントを、クライアントが使用できるサイト システム サーバーに関連付けます。 
+- 次に、[境界グループを構成](/sccm/core/servers/deploy/configure/boundary-groups)し、境界内のクライアントを、クライアントが使用できるサイト システム サーバーに関連付けます。
 
 
 
