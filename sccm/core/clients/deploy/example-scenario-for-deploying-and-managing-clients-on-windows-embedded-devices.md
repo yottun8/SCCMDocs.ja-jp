@@ -2,7 +2,7 @@
 title: "シナリオ例 - Windows Embedded クライアントの展開 | Microsoft Docs"
 description: "Windows Embedded デバイスで System Center Configuration Manager クライアントを展開および管理するシナリオ例について説明します。"
 ms.custom: na
-ms.date: 01/12/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

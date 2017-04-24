@@ -2,7 +2,7 @@
 title: "デバイスを自動的にコレクションごとに分類する | Microsoft Docs"
 description: "System Center Configuration Manager でデバイスをコレクションに自動的に分類します。"
 ms.custom: na
-ms.date: 01/07/2016
+ms.date: 04/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
 ms.openlocfilehash: b1bac05e9335dd757b8f499f97daea24e0f4acbd
+ms.lasthandoff: 01/03/2017
 
 ---
 # <a name="automatically-categorize-devices-into-collections-with-system-center-configuration-manager"></a>System Center Configuration Manager でデバイスをコレクションに自動的に分類する
@@ -55,9 +56,4 @@ Microsoft Intune と Configuration Manager を使用している場合に、デ�
 [**デバイス カテゴリ**] 列が表示されない場合、[**デバイス**] 一覧のいずれかの列の見出し ([**名前**] など) を右クリックし、[**デバイス カテゴリ**] を選択します。
 
 デバイスをカテゴリに割り当て、その後、カテゴリを削除した場合、[**Microsoft Intune に各ユーザーが登録したデバイス一覧**] レポートには、[**デバイス カテゴリ**] 列にカテゴリ名ではなく GUID が表示されます。
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

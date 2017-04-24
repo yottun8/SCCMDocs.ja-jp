@@ -2,7 +2,7 @@
 title: "クライアントをサイトに割り当てる | Microsoft Docs"
 description: "System Center Configuration Manager でクライアントをサイトに割り当てます。"
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 caps.latest.revision: 10
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 08afca8b422474639cbdb860e555fe0da27361a4
@@ -56,7 +56,7 @@ Configuration Manager の登録中にモバイル デバイス クライアン�
 > [!NOTE]  
 >  クライアント コンピューターを存在しない Configuration Manager サイト コードに手動で割り当てると、サイトの割り当ては失敗します。   
 
-##  <a name="a-namebkmkautomaticassignmenta-using-automatic-site-assignment-for-computers"></a><a name="BKMK_AutomaticAssignment"></a> コンピューターにサイトの自動割り当てを使用する  
+##  <a name="BKMK_AutomaticAssignment"></a> コンピューターにサイトの自動割り当てを使用する  
  サイトの自動割り当ては、クライアントの展開時に実行できます。または [Configuration Manager のプロパティ **** ] の [詳細設定 **** ] タブにある [サイトの探索 **** ] をクリックしても、実行できます。 Configuration Manager クライアントは、自身のネットワークの場所を、Configuration Manager 階層内に構成されている境界と比較します。 クライアントのネットワークの場所が、サイトの割り当てが有効な境界グループ内にある場合や、階層がフォールバック サイト用に構成されている場合、サイト コードを指定する必要なく、クライアントは自動的にそのサイトに割り当てられます。  
 
  次の&1; つまたは複数を使用して境界を構成できます。  

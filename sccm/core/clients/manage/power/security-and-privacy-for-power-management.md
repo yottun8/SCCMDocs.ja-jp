@@ -2,7 +2,7 @@
 title: "電源管理のセキュリティとプライバシー | Microsoft Docs"
 description: "System Center Configuration Manager の電源管理のセキュリティとプライバシーの情報を確認します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: f72059973057e707f58cb6b7aa495226b6c1962c
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -37,9 +38,4 @@ ms.openlocfilehash: f72059973057e707f58cb6b7aa495226b6c1962c
  Configuration Manager データベースに格納される電力使用状況情報は、Microsoft に送信されることはありません。 データベースに、詳細情報は 31 日間保持され、概要情報は 13 か月間保持されます。 削除間隔は構成できません。  
 
  電源管理を構成する前に、プライバシー要件について検討してください。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

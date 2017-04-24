@@ -2,7 +2,7 @@
 title: "Windows クライアントの展開 | Microsoft Docs"
 description: "System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法を説明します。"
 ms.custom: na
-ms.date: 12/27/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 caps.latest.revision: 13
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 9555a16d97224a1cf49a426ab225468b07403f60
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/30/2016
 
 Configuration Manager クライアントをインストールする前に、すべての[前提条件](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)を満たしており、必要なすべての展開構成を完了していることを確認します。   
 
-##  <a name="a-namebkmkclientpusha-how-to-install-clients-with-client-push"></a><a name="BKMK_ClientPush"></a> クライアント プッシュを使用したクライアントのインストール方法  
+##  <a name="BKMK_ClientPush"></a> クライアント プッシュを使用したクライアントのインストール方法  
 
 クライアント プッシュ インストールはサイトに対して構成でき、サイトの境界が境界グループとして構成されている場合、クライアント インストールはこれらの構成済みの境界内で検出されたコンピューターで自動的に実行されます。 特定のコレクションまたはコレクション内のリソースでクライアント プッシュ インストール ウィザードを実行して、クライアント プッシュ インストールを開始することもできます。  
 
@@ -102,7 +102,7 @@ Configuration Manager クライアントをインストールする前に、す�
 > [!NOTE]  
 >  サイトがクライアント プッシュ用に構成されていない場合でも、ウィザードを使用してクライアントをインストールできます。  
 
-##  <a name="a-namebkmkclientsupa-how-to-install-clients-with-software-update-based-installation"></a><a name="BKMK_ClientSUP"></a> ソフトウェアの更新に基づいたインストールを使用したクライアントのインストール方法  
+##  <a name="BKMK_ClientSUP"></a> ソフトウェアの更新に基づいたインストールを使用したクライアントのインストール方法  
  ソフトウェアの更新に基づいたクライアント インストールでは、クライアントをソフトウェア更新プログラムとしてソフトウェアの更新ポイントに発行します。 初回のインストールまたはアップグレードには、この方法を使用します。  
 
  コンピューターに Configuration Manager クライアントがインストールされている場合は、Configuration Manager により、ソフトウェア更新プログラムを取得するソフトウェアの更新ポイントのサーバー名とポートを含むクライアント ポリシーがクライアントに提供されます。   
@@ -161,7 +161,7 @@ Configuration Manager クライアントがインストールされていない�
 
 構成マネージャー クライアント用のソフトウェア更新プログラムは、新しいバージョンが存在する場合に自動的に更新されるわけではありません。 新しいクライアント バージョンが含まれるようにサイトをアップグレードするには、手順 6 でこの手順を繰り返して [**はい**] をクリックする必要があります。  
 
-##  <a name="a-namebkmkclientgpa-how-to-install-clients-with-group-policy"></a><a name="BKMK_ClientGP"></a> グループ ポリシーを使用したクライアントのインストール方法  
+##  <a name="BKMK_ClientGP"></a> グループ ポリシーを使用したクライアントのインストール方法  
  Active Directory Domain Services のグループ ポリシーを使用して、企業内のコンピューターにインストールするように構成マネージャー クライアントを割り当てたり、発行したりできます。 クライアントは、コンピューターの起動時にインストールされます。 グループ ポリシーを使用すると、コントロール パネルの [**プログラムの追加と削除**] ダイアログ ボックスにクライアントが表示され、ユーザーがインストールできるようになります。  
 
  グループ ポリシーに基づいたインストールには、Windows インストーラー パッケージ (CCMSetup.msi) を使用します。 このファイルは、Configuration Manager サイト サーバーの **&lt;ConfigMgr インストール ディレクトリ\>\bin\i386** フォルダーにあります。 このファイルにプロパティを追加してインストールの動作を変更することはできません。  
@@ -175,7 +175,7 @@ Configuration Manager クライアントがインストールされていない�
 
 Active Directory Domain Services のグループ ポリシーを使用してソフトウェアをインストールする方法については、Windows Server のドキュメントを参照してください。  
 
-##  <a name="a-namebkmkmanuala-how-to-install-clients-manually"></a><a name="BKMK_Manual"></a> クライアントの手動インストール方法  
+##  <a name="BKMK_Manual"></a> クライアントの手動インストール方法  
  CCMSetup.exe プログラムを使用して、企業内のコンピューターにクライアント ソフトウェアを手動でインストールできます。 このプログラムとそのサポート ファイルは、サイト サーバー上の Configuration Manager インストール フォルダーの **Client** フォルダーおよびサイトの管理ポイントにあります。 このフォルダーは次のようにネットワークで共有されます。  
 
  \\\\*&lt;サイト サーバー名\>*\SMS_*&lt;サイト コード\>*\Client\  
@@ -229,14 +229,14 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 ```  
 この例では、Active Directory Domain Services で提供される自動構成を上書きしており、クライアントのネットワークの場所がクライアントの割り当て用に構成された境界グループに含まれている必要はありません。 代わりに、インストールで、サイト、イントラネットの管理ポイントとインターネットベースの管理ポイント、インターネットからの接続を受け入れるフォールバック ステータス ポイント、および有効期限の最も長い、使用するクライアント PKI 証明書 (使用可能な場合) を指定しています。  
 
-##  <a name="a-namebkmkclientlogonscripta-how-to-install-clients-with-logon-scripts"></a><a name="BKMK_ClientLogonScript"></a> ログオン スクリプトを使用したクライアントのインストール方法  
+##  <a name="BKMK_ClientLogonScript"></a> ログオン スクリプトを使用したクライアントのインストール方法  
  Configuration Manager では、構成マネージャー クライアント ソフトウェアをインストールするログオン スクリプトをサポートしています。 **CCMSetup.exe** プログラム ファイルをログオン スクリプトで使用して、クライアント インストールを開始できます。  
 
  ログオン スクリプト インストールの使用方法は、手動のクライアント インストールと同じです。 CCMSsetup.exe に **/logon** インストール プロパティを指定して、既にクライアントがコンピューターに存在する場合は、クライアントをインストールしないようにすることができます。 これにより、ログオン スクリプトが実行されるたびにクライアントの再インストールが発生することはなくなります。  
 
  **/Source** プロパティを使用しているインストール ソースが指定されておらず、インストールの取得元となる管理ポイントが **/MP** プロパティを使用して指定されていない場合に、Configuration Manager 用にスキーマが拡張されており、サイトが Active Directory Domain Services に発行されていれば、CCMSetup.exe は Active Directory Domain Services を検索して管理ポイントを特定できます。 または、クライアントが DNS または WINS を使用して管理ポイントを特定することもできます。  
 
-##  <a name="a-namebkmkclientappa-how-to-install-clients-with-a-package-and-program"></a><a name="BKMK_ClientApp"></a> パッケージとプログラムを使用したクライアントのインストール方法  
+##  <a name="BKMK_ClientApp"></a> パッケージとプログラムを使用したクライアントのインストール方法  
  Configuration Manager を使用し、階層内の選択したコンピューターのクライアント ソフトウェアをアップグレードするパッケージとプログラムを作成して展開できます。 Configuration Manager には、通常使用される値をパッケージ プロパティに適用する、パッケージ定義ファイルが付属しています。 追加のコマンド ライン プロパティを指定することで、クライアント インストールの動作をカスタマイズできます。  
 
 > [!NOTE]  
@@ -285,7 +285,7 @@ Microsoft Intune に登録されているコンピューターにクライアン
 
 3. 登録済みの Windows コンピューターに[アプリを展開](/intune/deploy-use/deploy-apps-in-microsoft-intune)します。
 
-##  <a name="a-namebkmkclientimagea-how-to-install-clients-with-a-computer-image"></a><a name="BKMK_ClientImage"></a> コンピューター イメージングを使用したクライアントのインストール方法  
+##  <a name="BKMK_ClientImage"></a> コンピューター イメージングを使用したクライアントのインストール方法  
 他のコンピューターをイメージ化するために使用するマスター イメージ コンピューターに Configuration Manager クライアント ソフトウェアをプレインストールできます。   
 
 ### <a name="to-prepare-the-client-computer-for-imaging"></a>クライアント コンピューターのイメージングを準備するには  
@@ -307,7 +307,7 @@ Microsoft Intune に登録されているコンピューターにクライアン
 
 6.  イメージを対象コンピューターに展開します。  
 
-##  <a name="a-namebkmkclientworkgroupa-how-to-install-clients-on-workgroup-computers"></a><a name="BKMK_ClientWorkgroup"></a> ワークグループ コンピューターへのクライアントのインストール方法  
+##  <a name="BKMK_ClientWorkgroup"></a> ワークグループ コンピューターへのクライアントのインストール方法  
  Configuration Manager は、ワークグループ内のコンピューターへのクライアント インストールをサポートします。 「[Configuration Manager クライアントの手動インストール方法](#BKMK_Manual)」で指定された方法を使用して、ワークグループ コンピューターにクライアントをインストールします。  
 
  必要条件:  
@@ -344,7 +344,7 @@ Microsoft Intune に登録されているコンピューターにクライアン
 
       
 
-##  <a name="a-namebkmkclientinterneta-how-to-install-clients-for-internet-based-client-management"></a><a name="BKMK_ClientInternet"></a> インターネット ベースのクライアント管理用クライアントのインストール方法  
+##  <a name="BKMK_ClientInternet"></a> インターネット ベースのクライアント管理用クライアントのインストール方法  
  Configuration Manager サイトが、イントラネット上にある場合とインターネット上にある場合があるクライアントに対してインターネットベースのクライアント管理をサポートするときは、次の&2; つの方法のいずれかを使用して、イントラネット上のクライアントをインストールできます。  
 
 -   たとえば、手動インストールやクライアント プッシュを使ってクライアントをインストールするときには、CCMHOSTNAME=*&lt;インターネットベースの管理ポイントのインターネット FQDN\>* という Client.msi プロパティを含めることができます。 この方法を使用するときには、クライアントをサイトに直接割り当てる必要があります。また、サイトの自動割り当ては使用できません。 このトピックの「[Configuration Manager クライアントの手動インストール方法](#BKMK_Manual)」セクションに、この構成方法の例を示します。  
@@ -391,7 +391,7 @@ Microsoft Intune に登録されているコンピューターにクライアン
 
    この例では、クライアント PKI 証明書を使用するように設定された D ドライブのフォルダーからクライアント ソース ファイルをインストールし、インターネットのみのクライアント管理用の有効期限の最も長い証明書を選択し、SERVER1 というインターネットベースの管理ポイントおよび contoso.com domain 内のインターネットベースのフォールバック ステータス ポイントを使用するようにクライアントを割り当てて、ABC サイトにクライアントを割り当てています。  
 
-###  <a name="a-namebkmkconfigureibcmmpato-configure-clients-for-internet-based-client-management-after-client-installation"></a><a name="BKMK_ConfigureIBCM_MP"></a> クライアント インストール後のインターネット ベースのクライアント管理用のクライアントを構成するには  
+###  <a name="BKMK_ConfigureIBCM_MP"></a> クライアント インストール後のインターネット ベースのクライアント管理用のクライアントを構成するには  
  クライアントのインストール後にインターネットベースの管理ポイントを割り当てるには、次のいずれかの手順に従います。 1 つ目の手順では手動で構成します。クライアントが少数の場合に適しています。 クライアントの数が多い場合は、2 つ目の手順が適しています。  
 
 #### <a name="to-configure-clients-for-internet-based-client-management-after-client-installation-by-assigning-the-internet-based-management-point-in-configuration-manager-properties"></a>クライアントのインストール後に、Configuration Manager のプロパティでインターネットベースの管理ポイントを割り当てて、インターネットベースのクライアント管理用のクライアントを構成するには  
@@ -445,7 +445,7 @@ Microsoft Intune に登録されているコンピューターにクライアン
 
  変更を適用するために、クライアントの再起動が必要になることがあります。  
 
-##  <a name="a-namebkmkprovisiona-how-to-provision-client-installation-properties-group-policy-and-software-update-based-client-installation"></a><a name="BKMK_Provision"></a> クライアント インストールのプロパティの準備方法 (グループ ポリシーおよびソフトウェア更新ベースのクライアント インストール)  
+##  <a name="BKMK_Provision"></a> クライアント インストールのプロパティの準備方法 (グループ ポリシーおよびソフトウェア更新ベースのクライアント インストール)  
  Windows グループ ポリシーを使用して、コンピューターに Configuration Manager クライアントのインストール プロパティを事前に準備しておくことができます。 これらのプロパティは、コンピューターのレジストリに格納され、クライアント ソフトウェアがインストールされるときに読み込まれます。 この手順は、通常必要ありませんが、次のような一部のクライアント インストール シナリオで必要となる場合があります。  
 
 -   グループ ポリシー設定またはソフトウェア更新ベースのクライアント インストール方法を使用し、Active Directory スキーマを Configuration Manager 用に拡張していない場合。  

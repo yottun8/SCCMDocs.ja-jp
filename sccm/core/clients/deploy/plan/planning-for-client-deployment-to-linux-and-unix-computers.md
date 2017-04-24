@@ -2,7 +2,7 @@
 title: "Linux および UNIX コンピューターへのクライアント展開の計画 | Microsoft Docs"
 description: "System Center Configuration Manager での Linux コンピューターおよび UNIX コンピューターへのクライアント展開の計画"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
@@ -47,10 +47,10 @@ System Center Configuration Manager クライアントは、Linux または UNIX
 
  この記事の情報を使用して、Linux および UNIX 用のConfiguration Manager クライアントの展開の計画に役立てます。  
 
-##  <a name="a-namebkmkclientdeployprereqforlnua-prerequisites-for-client-deployment-to-linux-and-unix-servers"></a><a name="BKMK_ClientDeployPrereqforLnU"></a> Linux および UNIX サーバーへのクライアントの展開の前提条件  
+##  <a name="BKMK_ClientDeployPrereqforLnU"></a> Linux および UNIX サーバーへのクライアントの展開の前提条件  
  前提条件が正常に適切な場所にいる必要がありますが Linux および UNIX 用クライアントをインストールするのにには、次の情報を使用します。  
 
-###  <a name="a-namebkmkclientdeployexternalforlnua-dependencies-external-to-configuration-manager"></a><a name="BKMK_ClientDeployExternalforLnU"></a> Configuration Manager 外部の依存関係:  
+###  <a name="BKMK_ClientDeployExternalforLnU"></a> Configuration Manager 外部の依存関係:  
  次の表は、必要な UNIX および Linux オペレーティング システムおよびパッケージ依存関係を示しています。  
 
  **Red Hat Enterprise Linux ES リリース 4**  
@@ -249,15 +249,15 @@ System Center Configuration Manager クライアントは、Linux または UNIX
 
  クライアントの通信および要求のポートの詳細については、「  [Configure the Client for Linux and UNIX to Locate Management Points](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP)」を参照してください。  
 
-##  <a name="a-namebkmkplanningforcommunicationsforlnua-planning-for-communication-across-forest-trusts-for-linux-and-unix-servers"></a><a name="BKMK_PlanningforCommunicationsforLnU"></a> Linux および UNIX サーバーのフォレストの信頼間の通信の計画  
+##  <a name="BKMK_PlanningforCommunicationsforLnU"></a> Linux および UNIX サーバーのフォレストの信頼間の通信の計画  
  Configuration Manager で管理する Linux および UNIX サーバーはワークグループ クライアントとして動作するため、ワークグループに含まれる Windows ベースのクライアントと同様の構成が必要です。 ワークグループ内にあるコンピューターからの通信の詳細については、「[System Center Configuration Manager でのエンドポイント間の通信](../../../../core/plan-design/hierarchy/communications-between-endpoints.md)」トピックの「[複数の Active Directory フォレスト間での通信](../../../../core/plan-design/hierarchy/communications-between-endpoints.md#Plan_Com_X-Forest)」セクションをご覧ください。  
 
-###  <a name="a-namebkmkservicelocationforlnua-service-location-by-the-client-for-linux-and-unix"></a><a name="BKMK_ServiceLocationforLnU"></a> Linux および UNIX 用のクライアントによるサービスの場所  
+###  <a name="BKMK_ServiceLocationforLnU"></a> Linux および UNIX 用のクライアントによるサービスの場所  
  クライアントにサービスを提供するサイト システム サーバーを特定のタスクは、サービスの場所と呼ばれます。 Windows ベースのクライアントと異なり Linux および UNIX 用クライアントは、サービスの場所の Active Directory を使用しません。 さらに、Linux および UNIX 用の Configuration Manager クライアントは、管理ポイントのドメイン サフィックスを指定するクライアント プロパティをサポートしていません。 代わりに、クライアントは、クライアント ソフトウェアをインストールするときに割り当てる、既知の管理ポイントからクライアントにサービスを提供する追加のサイト システム サーバーについて学習します。  
 
  サービスの場所の詳細については、「[クライアントが System Center Configuration Manager のサイト リソースやサービスを検索する方法を理解する](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)」トピックの「[サービスの場所とクライアントが割り当て済み管理ポイントを特定する方法](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location)」セクションをご覧ください。  
 
-##  <a name="a-namebkmksecurityforlnua-planning-for-security-and-certificates-for-linux-and-unix-servers"></a><a name="BKMK_SecurityforLnU"></a> Linux および UNIX サーバーのセキュリティと証明書の計画  
+##  <a name="BKMK_SecurityforLnU"></a> Linux および UNIX サーバーのセキュリティと証明書の計画  
  Configuration Manager サイトとセキュリティで保護された認証済みの通信を行うために、Linux および UNIX 用の Configuration Manager クライアントは、Windows 用の Configuration Manager クライアントと同じ通信モデルを使用します。  
 
  Linux および UNIX クライアントのインストール時に、Configuration Manager サイトとの HTTPS を使用した通信を可能にする PKI 証明書をクライアントに割り当てることができます。 PKI 証明書を割り当てない場合、クライアントは自己署名証明書を作成し、HTTP でのみ通信します。  
@@ -270,21 +270,21 @@ System Center Configuration Manager クライアントは、Linux または UNIX
 
  Configuration Manager での証明書の使用方法については、「[System Center Configuration Manager での PKI 証明書の要件](../../../../core/plan-design/network/pki-certificate-requirements.md)」を参照してください。  
 
-###  <a name="a-namebkmkaboutcertsforlnua-about-certificates-for-use-by-linux-and-unix-servers"></a><a name="BKMK_AboutCertsforLnU"></a> Linux および UNIX サーバーで使用するための証明書について  
+###  <a name="BKMK_AboutCertsforLnU"></a> Linux および UNIX サーバーで使用するための証明書について  
  Linux および UNIX 用の Configuration Manager クライアントは、Windows ベースのクライアントと同じように自己署名証明書または X.509 PKI 証明書を使用します。 Linux および UNIX クライアントを管理する際の Configuration Manager サイト システムの PKI 要件に変更はありません。  
 
  Configuration Manager サイト システムと通信する Linux および UNIX クライアントに使用する証明書は、公開キー証明書標準 (PKCS #12) 形式でなければなりません。また、パスワードは、PKI 証明書を指定するときにクライアントに指定できるように既知である必要があります。  
 
  Linux および UNIX 用の Configuration Manager クライアントは単一の PKI 証明書をサポートし、複数の証明書はサポートしていません。 したがって、Configuration Manager サイトに構成する証明書の選択基準は適用されません。  
 
-###  <a name="a-namebkmkconfigcertsforlnua-configuring-certificates-for-linux-and-unix-servers"></a><a name="BKMK_ConfigCertsforLnU"></a> Linux および UNIX サーバーの証明書の構成  
+###  <a name="BKMK_ConfigCertsforLnU"></a> Linux および UNIX サーバーの証明書の構成  
  HTTPS 通信を使用するように Linux および UNIX サーバー対応の Configuration Manager クライアントを構成するには、クライアントのインストール時に、PKI 証明書を使用するようにクライアントを構成する必要があります。 クライアント ソフトウェアのインストール前に証明書をプロビジョニングすることはできません。  
 
  コマンド ライン パラメーターを使用する、PKI 証明書を使用するクライアントをインストールするときに **- UsePKICert** PKI 証明書を含む PKCS #12 ファイルの名前と場所を指定します。 さらに、コマンド ライン パラメーターを使用する必要があります **- certpw** 証明書のパスワードを指定します。  
 
  指定しない場合 **- UsePKICert**, 、クライアントは、自己署名証明書を生成し、HTTP をのみを使用してサイト システム サーバーと通信しようとしています。  
 
-##  <a name="a-namebkmknosha-256a-about-linux-and-unix-operating-systems-that-do-not-support-sha-256"></a><a name="BKMK_NoSHA-256"></a> SHA-256 をサポートしていない Linux および UNIX オペレーティング システムについて  
+##  <a name="BKMK_NoSHA-256"></a> SHA-256 をサポートしていない Linux および UNIX オペレーティング システムについて  
  Configuration Manager のクライアントとしてサポートされている以下の Linux および UNIX オペレーティング システムは、SHA-256 をサポートしないバージョンの OpenSSL でリリースされました。  
 
 -   Red Hat Enterprise Linux バージョン 4 (x86 と x64)  

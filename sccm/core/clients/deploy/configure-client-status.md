@@ -2,7 +2,7 @@
 title: "クライアント ステータスの構成 | Microsoft Docs"
 description: "System Center Configuration Manager のクライアント ステータス設定を選択します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/16/2016
 
 monitor System Center Configuration Manager クライアント ステータスを監視し、問題を見つけて解決するには、まず、サイトを構成してクライアントを非アクティブとマークするのに使用するパラメーターを指定し、さらにオプションを構成してクライアント アクティビティが指定されたしきい値以下になった場合にアラートを生成するようにしておく必要があります。 また、コンピューターが、クライアント ステータスが見つけた問題を自動的に修復する機能を無効化することもできます。  
 
-##  <a name="a-namebkmk1a-to-configure-client-status"></a><a name="BKMK_1"></a> クライアント ステータスを構成するには  
+##  <a name="BKMK_1"></a> クライアント ステータスを構成するには  
 
 1.  Configuration Manager コンソールで、[監視] をクリックします。 ****  
 
@@ -56,7 +56,7 @@ monitor System Center Configuration Manager クライアント ステータス�
 
 5.  **[OK]** をクリックして、プロパティを保存し、[ **クライアント ステータス設定のプロパティ** ] ダイアログ ボックスを閉じます。  
 
-##  <a name="a-namebkmkschedulea-to-configure-the-schedule-for-client-status"></a><a name="BKMK_Schedule"></a> クライアント ステータスのスケジュールを構成するには  
+##  <a name="BKMK_Schedule"></a> クライアント ステータスのスケジュールを構成するには  
 
 1.  Configuration Manager コンソールで、[監視] をクリックします。 ****  
 
@@ -67,7 +67,7 @@ monitor System Center Configuration Manager クライアント ステータス�
     > [!NOTE]  
     >  クライアント ステータスの更新スケジュールを変更した場合は、以前に構成されたスケジュールでクライアント ステータス更新が次に行われるまで、変更内容は有効になりません。  
 
-##  <a name="a-namebkmk2a-to-configure-alerts-for-client-status"></a><a name="BKMK_2"></a> クライアント ステータスのアラートを構成するには  
+##  <a name="BKMK_2"></a> クライアント ステータスのアラートを構成するには  
 
 1.  Configuration Manager コンソールで、[ **資産とコンプライアンス**] をクリックします。  
 
@@ -95,7 +95,7 @@ monitor System Center Configuration Manager クライアント ステータス�
 
 7.  **[OK]** をクリックして *[&lt;コレクション名\>***のプロパティ]** ダイアログ ボックスを閉じます。  
 
-##  <a name="a-namebkmk3a-to-exclude-computers-from-automatic-remediation"></a><a name="BKMK_3"></a> コンピューターを自動修復から除外するには  
+##  <a name="BKMK_3"></a> コンピューターを自動修復から除外するには  
 
 1.  自動修復を無効化するクライアント コンピューターのレジストリ エディターを開きます。  
 

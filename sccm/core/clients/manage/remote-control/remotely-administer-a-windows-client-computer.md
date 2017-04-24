@@ -2,7 +2,7 @@
 title: "Windows クライアント コンピューターのリモート管理 | Microsoft Docs"
 description: "System Center Configuration Manager を使用してリモートの Windows クライアント コンピューターを管理します。"
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: 3c9648c4-645e-4e47-ae10-2da817b8c83b
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 08afca8b422474639cbdb860e555fe0da27361a4

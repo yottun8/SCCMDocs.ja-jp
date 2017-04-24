@@ -2,7 +2,7 @@
 title: "UNIX/Linux クライアントのコンポーネント サービスとコマンド | Microsoft Docs"
 description: "System Center Configuration Manager での Linux クライアントおよび UNIX クライアントに対するコンポーネント サービスとコマンドについて説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

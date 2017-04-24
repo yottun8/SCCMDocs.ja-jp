@@ -2,7 +2,7 @@
 title: "クライアントの管理 | Microsoft Docs"
 description: "System Center Configuration Manager でクライアントを管理する方法について説明します。"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 caps.latest.revision: 17
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 19e111e0cb174f11ad08f98d2516e52c4c183d86
@@ -35,7 +35,7 @@ System Center Configuration Manager クライアントがインストールさ�
 >   
 >  Configuration Manager コンソールで **[クライアント]** 列を使用して、Configuration Manager クライアントがインストールされていて Configuration Manager コンソールから管理できるかどうかを判断できます。  
 
-##  <a name="a-namebkmkmanagingclientsdevicesnodea-manage-clients-from-the-devices-node"></a><a name="BKMK_ManagingClients_DevicesNode"></a> [デバイス] ノードを使用してクライアントを管理する  
+##  <a name="BKMK_ManagingClients_DevicesNode"></a> [デバイス] ノードを使用してクライアントを管理する  
 
 デバイスの種類によっては、一部のオプションを使用できません。  
 
@@ -153,7 +153,7 @@ System Center Configuration Manager クライアントがインストールさ�
 
          詳細については、「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)」を参照してください。  
 
-##  <a name="a-namebkmkmanagingclientsdevicecollectionsnodea-manage-clients-from-the-device-collections-node"></a><a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> [デバイス コレクション] ノードを使用してクライアントを管理する  
+##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> [デバイス コレクション] ノードを使用してクライアントを管理する  
   **[デバイス]** ノードの&1; つのデバイスまたは複数のデバイスに対して実行できる多くのタスクは、コレクションに対しても実行できます。 コレクションに対して実行すると、コレクション内の対象となるすべてのデバイスに操作が適用されます。 この処理で多数のネットワーク パケットが生成され、サイト サーバーの CPU 使用率が増加する点に注意してください。  
 
   コレクション レベルのクライアント管理タスクを実行する前に、コレクションにどの程度の数のデバイスが含まれているのか、それらのデバイスが低帯域幅のネットワーク接続で接続されていないかどうか、およびすべてのデバイスでタスクを完了するのにどの程度の時間がかかるのかを検討します。 タスクの開始後にコンソールからタスクを停止することはできません。  
@@ -186,7 +186,7 @@ System Center Configuration Manager クライアントがインストールさ�
 
          クライアント通知タスクは、[ **監視** ] ワークスペースの [ **クライアントの操作** ] ノードに表示されます。  
 
-##  <a name="a-namebkmkclientcachea-configure-the-client-cache-for-configuration-manager-clients"></a><a name="BKMK_ClientCache"></a> Configuration Manager クライアントにクライアントキャッシュを構成する  
+##  <a name="BKMK_ClientCache"></a> Configuration Manager クライアントにクライアントキャッシュを構成する  
 クライアントでアプリケーションとプログラムをインストールすると、一時ファイルがクライアント キャッシュに格納されます。 ソフトウェアの更新ではクライアント キャッシュも使用されますが、ソフトウェアの更新は構成されているキャッシュ サイズには制限されず、常にキャッシュへのダウンロードが試みられます。 Configuration Manager クライアントを手動でインストールする際、クライアント プッシュ インストールを使用する際、またはクライアントのインストール後に、クライアント キャッシュ設定 (サイズや場所など) を構成できます。
 
 Configuration Manager バージョン 1606 以降では、Configuration Manager コンソールでクライアント設定を使用してキャッシュ フォルダー サイズを指定できます。   
@@ -275,7 +275,7 @@ CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用�
 
      Configuration Manager クライアントは、次のクライアント ポリシーがダウンロードされるときにこれらの設定値を使ってキャッシュ サイズを構成します。
 
-##  <a name="a-namebkmkuninstalclienta-uninstall-the-configuration-manager-client"></a><a name="BKMK_UninstalClient"></a> Configuration Manager クライアントをアンインストールする  
+##  <a name="BKMK_UninstalClient"></a> Configuration Manager クライアントをアンインストールする  
  **/Uninstall** プロパティを付けて **CCMSetup.exe** を使用すると、Windows Configuration Manager クライアント ソフトウェアをコンピューターからアンインストールできます。 個々のコンピューター上でコマンド プロンプトから CCMSetup.exe を実行するか、パッケージとプログラムを展開して、コンピューターのコレクションからクライアントをアンインストールします。  
 
 > [!WARNING]  
@@ -290,7 +290,7 @@ CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用�
 > [!NOTE]  
 >  アンインストールを実行しても、画面に結果は表示されません。 クライアントのアンインストールが成功したことを確認するには、クライアント コンピューター上の **%windir%\ ccmsetup** 内にあるログ ファイル *CCMSetup.log* を確認します。  
 
-##  <a name="a-namebkmkconflictingrecordsa-manage-conflicting-records-for-configuration-manager-clients"></a><a name="BKMK_ConflictingRecords"></a> Configuration Manager クライアントの競合しているレコードを管理する  
+##  <a name="BKMK_ConflictingRecords"></a> Configuration Manager クライアントの競合しているレコードを管理する  
  Configuration Manager は、ハードウェア ID を使用して重複している可能性のあるクライアントを特定し、競合するレコードについて警告を発します。 たとえば、コンピューターを再インストールする場合、ハードウェア ID が同じであっても Configuration Manager の使用する GUID が異なる可能性があります。  
 
  コンピューター アカウントの Windows 認証または信頼されたソースからの PKI 証明書を使用して Configuration Manager が競合を解決できる場合、競合は自動的に解決されます。 ただし、Configuration Manager が競合を解決できない場合は階層設定が使用され、重複するハードウェア ID を検出したときにレコードを自動的にマージするか (既定の設定)、新しいクライアント レコードをマージ、ブロック、または作成するタイミングを管理者が決定できます。 重複レコードを手動で管理すると決定した場合、Configuration Manager コンソールを使用して競合するレコードを手動で解決する必要があります。  
@@ -326,7 +326,7 @@ Configuration Manager バージョン 1610 より、PXE ブートとクライア
 2. **[ホーム]** タブの **[サイト]** グループで、**[階層設定]** を選択します。
 3. **[クライアントの承認と競合レコードの処理]** タブの **[重複するハードウェア ID]** セクションの **[追加]** を選択して、新しいハードウェア識別子を追加します。
 
-##  <a name="a-namebkmkpolicyretrievala-initiate-policy-retrieval-for-a-configuration-manager-client"></a><a name="BKMK_PolicyRetrieval"></a> Configuration Manager クライアントのポリシーの取得開始  
+##  <a name="BKMK_PolicyRetrieval"></a> Configuration Manager クライアントのポリシーの取得開始  
  Windows Configuration Manager クライアントは、クライアント設定として構成されているスケジュールに従ってクライアント ポリシーをダウンロードします。 ただし、トラブルシューティングやテストなどで、クライアントから特別なポリシー取得を開始する場合があります。  
 
 次の方法でポリシーの取得を開始できます。
