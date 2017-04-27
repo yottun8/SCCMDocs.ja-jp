@@ -2,7 +2,7 @@
 title: "コレクションの管理 | Microsoft Docs"
 description: "System Center Configuration Manager で一般的なコレクション管理タスクを実行します。"
 ms.custom: na
-ms.date: 2/22/2017
+ms.date: 4/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: b41b50c75f1b89c8fc712b53988bd8e24813106d
+ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
+ms.openlocfilehash: 4d44f98eb0755619cdd2101203a13725186b835b
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -40,7 +41,7 @@ System Center Configuration Manager でコレクションの管理タスクを�
 |---------------------|-------------|----------------------|  
 |**メンバーの表示**|[デバイス] **** ノードの一時ノードで選択されたコレクションのメンバーであるすべてのリソースを表示します。|詳細情報はありません。|  
 |**選択された項目の追加**|次のアクションのいずれかを行うために次のオプションを提供します。<br /><br /> - <br />                    **選択した項目を既存のデバイス コレクションに追加する** - 選択したコレクションのメンバーを追加するコレクションを選択できる **[コレクションの選択]** ダイアログ ボックスを開きます。 [コレクションを含める] **** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。<br /><br /> - **選択した項目を新しいデバイス コレクションに追加する** - 新しいコレクションを作成できる**デバイス コレクションの作成ウィザード**を開きます。 [コレクションを含める] **** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。|[System Center Configuration Manager でコレクションを作成する方法](../../../../core/clients/manage/collections/create-collections.md)|  
-|**クライアントのインストール**|クライアント プッシュのインストールを使用して、Configuration Manager クライアントを選択したコレクションのすべてのコンピューターにインストールする**クライアントのインストール ウィザード**を開きます。|[System Center Configuration Manager のクライアント展開タスク](../../../../core/clients/deploy/client-deployment-tasks.md)|  
+|**クライアントのインストール**|クライアント プッシュのインストールを使用して、Configuration Manager クライアントを選択したコレクションのすべてのコンピューターにインストールする**クライアントのインストール ウィザード**を開きます。|[Windows コンピューターにクライアントを展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)|  
 |**アフィニティ要求の管理**|保留中の要求を承認または拒否して選択されたコレクションのデバイスにおけるユーザーとデバイスのアフィニティを確立できる [ユーザーとデバイスのアフィニティ要求の管理] **** ダイアログボックスを開きます。|[System Center Configuration Manager でのユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)|  
 |**必須の PXE 展開の消去**|選択されたコレクションのすべてのメンバーから必要な PXE ブート展開を消去します。|[オペレーティング システムの展開の概要](../../../../osd/understand/introduction-to-operating-system-deployment.md)|  
 |**メンバーシップの更新**|選択されたコレクションのメンバーシップを評価します。 多くのメンバーからなるコレクションでは、更新の完了には時間がかかることがあります。 更新が完了したら、[リフレッシュ] **** アクションを使用して、新しいコレクションのメンバーで画面を更新します。|詳細情報はありません。|  
@@ -71,7 +72,7 @@ System Center Configuration Manager でコレクションの管理タスクを�
 |**展開のシミュレート**|アプリケーションをインストールしたりアンインストールしたりせずにアプリケーションの展開結果をテストできる、アプリケーションのシミュレート ウィザード **** を開きます。|[System Center Configuration Manager でアプリケーションの展開をシミュレーションする方法](../../../../apps/deploy-use/simulate-application-deployments.md)|  
 |**デプロイ**|次のオプションを表示します。<br /><br /> - **アプリケーション** - 選択したコレクションへのアプリケーションの展開を選択して構成できる、**ソフトウェアの展開ウィザード**を開きます。<br /><br /> - <br />                    **プログラム** – 選択したコレクションへのパッケージやプログラムの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - **構成基準** - 選択されたコレクションへの 1 つ以上の構成基準の展開を構成できる **[構成基準の展開]** ダイアログ ボックスを開きます。|[System Center Configuration Manager でアプリケーションを展開する方法](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager のパッケージとプログラム](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [System Center Configuration Manager で構成基準を展開する方法](../../../../compliance/deploy-use/deploy-configuration-baselines.md)|  
 
-##  <a name="a-namebkmkcollpropa-collection-properties"></a><a name="BKMK_CollProp"></a> コレクションのプロパティ  
+##  <a name="BKMK_CollProp"></a> コレクションのプロパティ  
  コレクションの [プロパティ] **** ダイアログ ボックスを開くと、コレクションの次のプロパティを表示し構成することができます。  
 
 |タブ名|説明|  
@@ -85,9 +86,4 @@ System Center Configuration Manager でコレクションの管理タスクを�
 |**配布ポイント グループ**|1 つ以上の配布ポイント グループを選択されたコレクションのメンバーに関連付けることができます。 詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。|  
 |**セキュリティ**|関連付けられた役割やセキュリティの範囲で選択されたコレクションへの権限を持つ管理者ユーザーを表示します。|  
 |**モニター**|クライアント ステータスや Endpoint Protection に関するアラートが生成されたときの設定ができます。 詳細については、「[How to configure client status in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-status.md)」 (System Center Configuration Manager でクライアント ステータスを構成する方法) および「[System Center Configuration Manager で Endpoint Protection を監視する方法](../../../../protect/deploy-use/monitor-endpoint-protection.md)」を参照してください。|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
