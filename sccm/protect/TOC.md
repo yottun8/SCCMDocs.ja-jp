@@ -54,6 +54,7 @@
 ### [Endpoint Protection のシナリオ](deploy-use/scenarios-endpoint-protection.md)
 ### [Endpoint Protection クライアント ヘルプ](deploy-use/endpoint-protection-client-help.md)
 ### [クライアントのトラブルシューティング](deploy-use/troubleshoot-endpoint-client.md)
+### [Windows Defender FAQ](deploy-use/endpoint-protection-client-faq.md)
 ### [デバイスの保護の設定](deploy-use/use-device-guard-with-configuration-manager.md)
 
 ## [、VPN、電子メール、および証明書プロファイルの展開](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)

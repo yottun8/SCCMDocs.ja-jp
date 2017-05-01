@@ -58,14 +58,10 @@
 ### [カスタム タスク シーケンスの作成](deploy-use/create-a-custom-task-sequence.md)
 ### [オペレーティング システム以外の展開用タスク シーケンスの作成](deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)
 ### [BIOS からUEFI への変換を管理するためのタスク シーケンス手順](deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)
+### [Windows PE での BitLocker の事前準備](deploy-use/preprovision-bitlocker-in-windows-pe.md)
 
 ## [タスク シーケンス メディアの作成](deploy-use/create-task-sequence-media.md)
 ### [スタンドアロン メディアの作成](deploy-use/create-stand-alone-media.md)
 ### [事前設定されたメディアの作成](deploy-use/create-prestaged-media.md)
 ### [起動可能なメディアの作成](deploy-use/create-bootable-media.md)
 ### [キャプチャ メディアを作成する](deploy-use/create-capture-media.md)
-
-
-<!--HONumber=Dec16_HO3-->
-
-

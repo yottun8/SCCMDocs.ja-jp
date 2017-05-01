@@ -5,6 +5,7 @@
 # 計画と設計
 ## [ソフトウェア更新プログラムの計画](plan-design/plan-for-software-updates.md)
 ## [ソフトウェア更新プログラムの前提条件](plan-design/prerequisites-for-software-updates.md)
+## [ソフトウェア更新プログラムについて推奨する運用方法](plan-design/software-updates-best-practices.md)
 ## [ソフトウェア更新プログラムのセキュリティとプライバシー](plan-design/security-and-privacy-for-software-updates.md)
 
 # 作業開始
@@ -28,10 +29,6 @@
 ## [ソフトウェア更新プログラムのメンテナンス](deploy-use/software-updates-maintenance.md)
 ## [サーバー グループの提供](deploy-use/service-a-server-group.md)
 ## [Office 365 ProPlus の更新プログラムの管理](deploy-use/manage-office-365-proplus-updates.md)
+## [Windows 10 更新プログラムに対する高速インストール ファイルの管理](deploy-use/manage-express-installation-files-for-windows-10-updates.md)
 ## [Windows 10 における Windows Update for Business との統合](deploy-use/integrate-windows-update-for-business-windows-10.md)
 ## [セキュリティ更新プログラムを展開するシナリオ例](deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
-
-
-<!--HONumber=Dec16_HO3-->
-
-
