@@ -13,13 +13,13 @@ ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: bd2cf7b0df4a1f50c006e8280bf59ea91f1b4477
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
+ms.openlocfilehash: d1d2ec7c053d13ebaeb00d0dfeb126716b5f7ae5
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager のクライアント設定について
@@ -505,7 +505,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
     -   **[新規]** アイコンを選んで、インベントリに新しいファイルの種類を追加します。 その後、**[インベントリされるファイルのプロパティ]** ダイアログ ボックスで次の情報を指定します。  
 
-        -   **[名前]**: インベントリの対象にするファイルの名前を指定します。 任意の文字列の代わりに "**\**"、任意の 1 文字の代わりに"**?**" を使用できます。たとえば、拡張子 .doc を持つすべてのファイルをインベントリの対象にするには、ファイル名「**\*.doc**」を指定します。  
+        -   **[名前]**: インベントリの対象にするファイルの名前を指定します。 任意の文字列の代わりに「**\**」を、任意の 1 文字の代わりに「**?**」 を使用できます。 たとえば、拡張子 .doc を持つすべてのファイルをインベントリの対象にするには、ファイル名「**\*.doc**」を指定します。  
 
         -   **[場所]**: **[設定]** を選んで **[パスのプロパティ]** ダイアログ ボックスを開きます。 ソフトウェア インベントリは、すべてのクライアントのハード ディスクで、特定のファイル、特定のパス (たとえば、**C:\Folder**) または特定の変数 (たとえば、*%windir%*) を検索するように構成できます。 特定のパスにあるすべてのサブフォルダーを検索するように構成することもできます。  
 
@@ -528,7 +528,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
     -   [収集するファイルのプロパティ] **** ダイアログ ボックスで、次の情報を入力します。  
 
-        -   **[名前]**: 収集するファイルの名前を指定します。 任意の文字列の代わりに "**\**"、任意の 1 文字の代わりに "**?*" を使用できます。  
+        -   **[名前]**: 収集するファイルの名前を指定します。 任意の文字列の代わりに「**\**」を、任意の 1 文字の代わりに「**?**」 を使用できます。  
 
         -   **[場所]**: **[設定]** を選んで **[パスのプロパティ]** ダイアログ ボックスを開きます。 ソフトウェア インベントリは、すべてのクライアントのハード ディスクで、収集するファイル、特定のパス (たとえば、**C:\Folder**) または特定の変数 (たとえば、*%windir%*) を検索するように構成できます。 特定のパスにあるすべてのサブフォルダーを検索するように構成することもできます。  
 

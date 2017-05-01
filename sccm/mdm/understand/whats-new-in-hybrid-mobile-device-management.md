@@ -16,9 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3eb48942c1259d2aa1b3c200fad73b39b11c0b8c
-ms.openlocfilehash: 51560360a0cb7ecb4a2b0d7eaeb4fdd62d6afc13
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: 489defeae18c219fe2f717d5caa1f15bcdaf07cf
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
@@ -37,11 +37,31 @@ ms.lasthandoff: 03/30/2017
 |**Configuration Manager Technical Preview の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Technical Preview リリースでのみ動作します。 これらの機能を試すには、機能の説明で指定されたバージョンの Technical Preview をインストールする必要があります。 詳細については、「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」をご覧ください。|
 |**Configuration Manager (現在のブランチ) の新機能**| このカテゴリに一覧表示されたすべての機能は、バージョン 1511 や 1602 など、指定されたバージョンの Configuration Manager (現在のブランチ) でのみ動作します。 ハイブリッド展開に旧バージョンの Configuration Manager を使用している場合は、機能の説明で指定されたバージョンの Configuration Manager (現在の分岐) にアップグレードする必要があります。 詳細については、「[System Center Configuration Manager へのアップグレード](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)」を参照してください。|
 
-## <a name="new-hybrid-features-in-march-2017"></a>2017 年 3 月のハイブリッド新機能
+## <a name="april-2017"></a>2017 年 4 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
-2017 年 3 月に導入された次の Intune 機能は、ハイブリッド展開で動作します。
+- **管理対象ブラウザーで利用できる MyApps**
+
+  Microsoft MyApps では、管理対象ブラウザー内のサポートが改善されました。 管理対象ではない管理対象ブラウザーのユーザーは MyApps サービスに直接移動します。そこで管理者によってプロビジョニングされた自分の SaaS アプリにアクセスできます。 Intune 管理の対象になっているユーザーは、組み込まれている管理対象ブラウザーのブックマークから MyApps に引き続きアクセスできます。
+
+- **管理対象ブラウザーとポータル サイトの新しいアイコン**
+
+  管理対象ブラウザーは、Android 版アプリと iOS 版アプリの両方で更新されたアイコンを受け取ります。 新しいアイコンには更新された Intune バッジが含まれ、Enterprise Mobility + Security (EM+S) の他のアプリとの一貫性が向上します。 管理対象ブラウザーの新しいアイコンは、[Intune アプリ UI の新機能に関するページ](/intune/whats-new/whats-new-in-intune-app-ui.md)で確認できます。
+
+  ポータル サイトは、Android 版アプリ、iOS 版アプリ、Windows 版アプリの更新されたアイコンを受け取り、EM+S の他のアプリとの一貫性を向上させます。 アイコンは 4 月から 5 月後半にかけてすべてのプラットフォームに徐々に提供されます。
+
+- **Android ポータル サイトのサインイン進捗状況インジケーター**
+
+  Android ポータル サイト アプリの更新プログラムには、ユーザーがアプリを起動または再開したとき、サインイン進捗状況インジケーターが表示されます。 このインジケーターには新しい状態が次々と表示されます。"接続しています..." から始まり、"サインインしています..." に進み、さらに "セキュリティ要件を確認しています..." に進み、その後、ユーザーはアプリにアクセスできます。 Android のポータル サイト アプリの新しい画面は [Intune アプリ UI の新機能に関するページ](/intune/whats-new/whats-new-in-intune-app-ui.md)で確認できます。
+
+- **アプリが SharePoint Online にアクセスすることを禁止する**
+
+    アプリ基準の条件付きアクセス ポリシーを作成し、アプリ保護ポリシーが適用されていないアプリが [SharePoint Online](/InTune/deploy-use/mam-ca-for-sharepoint-online) にアクセスすることを禁止できるようになりました。 アプリ基準の条件付きアクセス シナリオでは、Azure ポータルを利用して SharePoint Online へのアクセスを与えるアプリを指定できます。
+
+## <a name="march-2017"></a>2017 年 3 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
 - **Android 用ポータル サイト アプリに関する新しいユーザー エクスペリエンス**
 
@@ -53,7 +73,7 @@ ms.lasthandoff: 03/30/2017
   - アプリ ナビゲーション: **[すべてのアプリ]** ビューで **[おすすめ]**、**[すべて]**、**[カテゴリ]** のタブ付きビューが表示され、移動がより簡単になりました。
   - サポート: **[マイ デバイス]** タブと **[IT に連絡]** タブが更新され、読みやすくなりました。
 
-  以上の変更に関する詳細については、「[Intune とエンド ユーザー アプリの UI の更新](/intune/enduser/whats-new-in-intune-app-ui)」を参照してください。
+  以上の変更に関する詳細については、「[Intune とエンド ユーザー アプリの UI の更新](/intune/whats-new/whats-new-in-intune-app-ui)」を参照してください。
 
 - **Windows 10 ポータル サイトの署名スクリプト**
 
@@ -134,11 +154,9 @@ Configuration Manager Technical Preview リリースで以前に提供されて�
 
     詳細については、[「Mobile Threat Defense コンプライアンスの監視」](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance) を参照してください。
 
-## <a name="new-hybrid-features-in-february-2017"></a>2017 年 2 月のハイブリッド新機能
+## <a name="february-2017"></a>2017 年 2 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
-
-2017 年 2 月に導入された次の Intune 機能は、ハイブリッド デプロイで動作します。
 
 - **ポータル Web サイトのモダナイズ**
 
@@ -166,11 +184,9 @@ Configuration Manager Technical Preview リリースで以前に提供されて�
    
     構成項目の一部として、構成できる 42 個の iOS 設定が追加されました。 これらの設定の大部分 (35 個) は、監視対象の iOS デバイスに対して追加されました。 詳細については、[「iOS デバイスの新しいコンプライアンス設定」](/sccm/core/get-started/capabilities-in-technical-preview-1702#new-compliance-settings-for-ios-devices) を参照してください。
 
-## <a name="new-hybrid-features-in-january-2017"></a>2017 年 1 月のハイブリッド新機能
+## <a name="january-2017"></a>2017 年 1 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
-
-2017 年 1 月に導入された次の Intune 機能は、ハイブリッド展開で動作します。
 
 - **Android 7.1.1 のサポート**
 
@@ -187,11 +203,9 @@ Configuration Manager Technical Preview リリースで以前に提供されて�
   ハイブリッド モバイル デバイス管理 (MDM) の Technical Preview 1701 から、Intune で管理されるデバイスの新しいポリシーとプロファイルを作成する場合に Android および iOS の特定のバージョンを指定する必要がなくなりました。 この変更により、新しい Configuration Manager のリリースまたは拡張機能を必要とせずに、ハイブリッド展開で新しい Android および iOS のバージョンによりすばやくサポートを提供できます。 詳細については、「[作成ウィザードで Android と iOS のバージョン指定が不要に](/sccm/core/get-started/capabilities-in-technical-preview-1701#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)」を参照してください。
 
 
-## <a name="new-hybrid-features-in-december-2016"></a>2016 年 12 月のハイブリッド新機能
+## <a name="december-2016"></a>2016 年 12 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
-
-2016 年 12 月に導入された次の Intune 機能は、ハイブリッド展開で動作します。
 
 - **登録での Multi-Factor Authentication (MFA) が Azure Portal に移動する**
 
@@ -218,11 +232,9 @@ Configuration Manager Technical Preview リリースで以前に提供されて�
   | パスコードのリセット | | |        
 
 
-## <a name="new-hybrid-features-in-november-2016"></a>2016 年 11 月のハイブリッド新機能
+## <a name="november-2016"></a>2016 年 11 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
-
-2016 年 11 月に導入された次の Intune 機能は、ハイブリッド展開で動作します。
 
 - **新しい Microsoft Intune ポータル サイトが Windows 10 デバイスで利用可能になる**
 

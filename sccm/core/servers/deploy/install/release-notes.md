@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: aca3525fc143b281f41c3d9bd20bb93b1d91f6ce
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: 44338c705e308896c5203be239c160a8220369a8
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -234,4 +234,11 @@ RAM が 4 GB 未満の Windows 10 RTM デバイスでフル ワイプを実行�
 この問題は、更新プログラム 1602 の **Exchange On-premises** の ystem Center Configuration Manager 条件付きアクセスに影響を与え、今後の更新プログラムでの解決を予定しています。  
 
 **回避策:** **例外コレクション** ページで**ユーザー コレクション**を選ぶ前に**対象となるコレクション ページ**に**ユーザー コレクション**を追加して、例外コレクションと対象となるコレクションの両方に同じ**ユーザー コレクション**を追加していないことを確認します。
+
+## <a name="endpoint-protection"></a>Endpoint Protection
+<!--  Product Studio bug 485370 added by Nathbarn 04 19 2017 -->
+### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>マルウェア対策ポリシーを Windows Server 2016 Core に適用できません
+マルウェア対策ポリシーを Windows Server 2016 Core に適用できません。  エラー コードは 0x80070002 です。  ConfigSecurityPolicy.exe に依存関係がありません。
+
+**回避策:**  なし。  管理者はグループ ポリシーを使用し、Windows Server 2016 Core の設定を管理できます。
 

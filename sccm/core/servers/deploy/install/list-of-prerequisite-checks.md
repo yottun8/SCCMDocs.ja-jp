@@ -2,7 +2,7 @@
 title: "前提条件の確認 | Microsoft Docs"
 description: "System Center Configuration Manager の利用可能な前提条件の確認について説明します。 セキュリティ権限の前提条件の確認も対象となります。"
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 4/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,16 +16,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 496c1444822a4601fad67f421115a609e976386d
-ms.openlocfilehash: 5a8f4a84ef5b4ccb4434ca8eb260c1c7899207ab
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dda2f4c01078fbbd174cbcb30357554c24f6abeb
+ms.openlocfilehash: 14834f62ffaa8fcba5ddb7536a0b76e18b557e53
+ms.lasthandoff: 04/17/2017
 
 ---
 # <a name="list-of-prerequisite-checks-for-system-center-configuration-manager"></a>System Center Configuration Manager の前提条件の確認の一覧
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-次のセクションでは、利用可能な前提条件の確認について詳しく説明しています。 
+次のセクションでは、利用可能な前提条件の確認について詳しく説明しています。
 
 前提条件チェッカーの使用の詳細については、[前提条件チェッカー](prerequisite-checker.md)に関するページを参照してください。  
 
@@ -117,7 +117,7 @@ ms.lasthandoff: 03/01/2017
 |**ドメインのメンバーシップ**|Configuration Manager コンピューターが Windows ドメインのメンバーであることを確認します。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト、 <br>SMS プロバイダー、 <br>SQL Server|
 |**ドメインのメンバーシップ**|Configuration Manager コンピューターが Windows ドメインのメンバーであることを確認します。|警告|管理ポイント、 <br>配布ポイント|
 |**サイト サーバー上の FAT ドライブ**|ディスク ドライブが FAT ファイル システムでフォーマットされているかどうかを確認します。 セキュリティを強化するには、NTFS ファイル システムでフォーマットされたディスク ドライブにサイト サーバー コンポーネントをインストールします。|警告|プライマリ サイト|
-|**サイト サーバーの空きディスク領域**|サイト サーバーをインストールするには、サイト サーバー コンピューターに少なくとも 5 GB の空きディスク領域が必要です。 同じコンピューターに SMS プロバイダーのサイト システムの役割をインストールする場合は、さらに 1 GB の空きディスク領域が必要です。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト|
+|**サイト サーバーの空きディスク領域**|サイト サーバーをインストールするには、サイト サーバー コンピューターに少なくとも 15 GB の空きディスク領域が必要です。 同じコンピューターに SMS プロバイダーのサイト システムの役割をインストールする場合は、さらに 1 GB の空きディスク領域が必要です。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト|
 |**保留中のシステムの再起動**|セットアップを実行する前にサーバーを再起動することが別のプログラムで要求されているかどうかをチェックします。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト、 <br>Configuration Manager コンソール、 <br>SMS プロバイダー、 <br>SQL Server、 <br>管理ポイント、 <br>配布ポイント|
 |**読み取り専用のドメイン コントローラー**|サイト データベース サーバーとセカンダリ サイト サーバーは、読み取り専用のドメイン コントローラー (RODC) ではサポートされていません。 詳細については、Microsoft サポート技術情報の「[You may encounter problems when installing SQL Server on a domain controller (ドメイン コントローラーに SQL Server をインストールすると問題が発生する)](http://go.microsoft.com/fwlink/p/?LinkId=264856)」を参照してください。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト|
 |**スキーマ拡張**|Active Directory ドメイン サービスのスキーマが拡張されているかどうかを判定し、拡張されている場合は、使用されたスキーマ拡張のバージョンを確認します。 Configuration Manager の Active Directory スキーマ拡張は、サイト サーバーのインストールには必要ありませんが、Configuration Manager のすべての機能を利用するためには、スキーマの拡張をお勧めします。 スキーマ拡張の詳細については、「[サイト発行のために Active Directory を準備する](../../../../core/plan-design/network/extend-the-active-directory-schema.md)」を参照してください。|警告|中央管理サイト、 <br>プライマリ サイト|

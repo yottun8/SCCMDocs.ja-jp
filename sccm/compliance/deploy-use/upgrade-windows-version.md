@@ -1,8 +1,8 @@
 ---
-title: "Windows デバイスを新しいバージョンにアップグレードする | Microsoft Docs"
-description: "Windows 10 Desktop、Windows 10 Mobile、Windows 10 Holographic を実行するデバイスを自動的に新しいバージョンにアップグレードします。"
+title: "Configuration Manager を利用し、Windows デバイスを別のバージョンにアップグレードする | Microsoft Docs"
+description: "Configuration Manager を利用し、Windows 10 Desktop、Windows 10 Mobile、Windows 10 Holographic を実行するデバイスを自動的に別のエディションにアップグレードします。"
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 04/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: f14dfb77be7b53e74d53e0c1fc7e7f1731952d40
+ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
+ms.openlocfilehash: cfde0a43947013bbd3a1093688cee19fe309fd03
+ms.lasthandoff: 04/18/2017
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: f14dfb77be7b53e74d53e0c1fc7e7f1731952d40
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 
-System Center Configuration Manager **エディションのアップグレード ポリシー**を使用して、次に挙げる Windows 10 のバージョンのいずれかを実行するデバイスを自動的に新しいエディションにアップグレードできます。
+System Center Configuration Manager **エディションのアップグレード ポリシー**を使用して、次に挙げる Windows 10 のバージョンのいずれかを実行するデバイスを自動的に別のエディションにアップグレードできます。
 
 - Windows 10 Desktop
 - Windows 10 Mobile
@@ -92,9 +93,4 @@ System Center Configuration Manager **エディションのアップグレード
 **[監視]** ワークスペースの **[展開]** ノードから、作成した展開を監視できます。  
 
  ポリシーが対象の Windows PC に到達し、評価されると、アップグレードを適用するために PC が 2 時間以内に再起動します。 ポリシーを展開するすべてのユーザーに通知するか、ポリシーの実行をユーザーの業務時間外にスケジュール設定します。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

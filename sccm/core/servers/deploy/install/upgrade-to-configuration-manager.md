@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager へのアップグレード| Microsoft Docs"
 description: "System Center 2012 Configuration Manager を実行しているサイトおよび階層から適切に一括アップグレードを実行するための手順を説明します。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 4/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
-ms.openlocfilehash: ca07b46db0967ca03cc5e858b835d2c2108f1210
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: e75413d0b03681bf7244bd3917cd6099394ee3c9
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -31,7 +31,7 @@ System Center 2012 Configuration Manager を実行しているサイトおよび
  System Center 2012 Configuration Manager からアップグレードする前に、正常なアップグレードを妨げる可能性のある特定の構成を該当するサイトから削除し、複数のサイトが関係している場合は、特定のアップグレード順序に従う必要があります。  
 
  > [!TIP]
- > System Center Configuration Manager のサイトと階層のインフラストラクチャの管理において、*アップグレード*、*更新*、および*インストール* という用語は&3; つの異なる概念を説明するものです。 各用語の使用方法については、「[サイトと階層のインフラストラクチャでのアップグレード、更新、およびインストールについて](/sccm/core/understand/upgrade-update-install)」を参照してください。
+ > System Center Configuration Manager のサイトと階層のインフラストラクチャの管理において、*アップグレード*、*更新*、および*インストール* という用語は 3 つの異なる概念を説明するものです。 各用語の使用方法については、「[サイトと階層のインフラストラクチャでのアップグレード、更新、およびインストールについて](/sccm/core/understand/upgrade-update-install)」を参照してください。
 
 ##  <a name="bkmk_path"></a> 一括アップグレード パス  
 
@@ -75,6 +75,9 @@ System Center 2012 Configuration Manager を実行しているサイトおよび
  次のチェック リストは、System Center Configuration Manager への適切なアップグレードの計画に役立ちます。  
 
 ### <a name="before-you-upgrade"></a>アップグレードする前に  
+
+**System Center 2012 Configuration Manager 環境を確認し**、問題を解決する (詳細は KB4018655 にあり): [Configuration Manager クライアントが繰り返し発生する再試行タスクに起因して 5 時間おきに再インストールし、不注意なクライアント アップグレードを引き起こす可能性があります](https://support.microsoft.com/help/4018655)。
+
 System Center Configuration Manager へのアップグレードに必要な**サポート対象構成をコンピューター環境が満たしていることを確認する**:  
 
 サイト システムの役割をホストするために使うサーバー オペレーティング システムについて確認します。  
@@ -251,7 +254,7 @@ System Center Configuration Manager にアップグレードすると、自動�
 
 -   **ソフトウェア センター:**  
     次のソフトウェア センター項目が既定値にリセットされます。  
-    -   [**勤務先情報** ] は、月曜日から金曜日の **午前&5; 時** から **午後&10; 時** Monday から Friday.  
+    -   [**勤務先情報** ] は、月曜日から金曜日の **午前 5 時** から **午後 10 時** Monday から Friday.  
     -   [ **コンピューターのメンテナンス** ] の値は [ **コンピューターがプレゼンテーション モードのときはソフトウェア センターを停止する**] に設定されます。  
     -   [ **リモート コントロール** ] の値は、そのコンピューターに割り当てられているクライアント設定の値に設定されます。  
 -   **ソフトウェア更新プログラムの概要作成スケジュール：**  

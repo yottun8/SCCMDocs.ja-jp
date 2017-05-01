@@ -16,9 +16,9 @@ author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4bf5cc25c4ffb89df620b02044f43a13adc1443e
-ms.openlocfilehash: c87841ee1b30ebbcbbe8cd06309d909c38c01fdf
-ms.lasthandoff: 04/06/2017
+ms.sourcegitcommit: 329de5ffb6eb1403c02cd1db634c32f045e82488
+ms.openlocfilehash: 47348baeac26bfa2ad5016622fe4dbcb9f572483
+ms.lasthandoff: 04/14/2017
 
 
 ---
@@ -47,35 +47,64 @@ PC やモバイル デバイスの Windows デバイスの管理を有効にす�
 4. [OK **** ] をクリックしてダイアログ ボックスを閉じます。  会社ポータルを使用して、登録プロセスを簡略化するには、デバイス登録用の DNS エイリアスを作成してください。 自分のデバイスを登録する方法をユーザーに通知することができます。
 
 ## <a name="choose-how-to-enroll-windows-devices"></a>Windows デバイスの登録方法を選択する
-2 つの要素によって、Windows デバイスの登録方法が決まります。
+
+Intune ライセンスをユーザーに割り当てたら、Windows デバイスを追加の手順なしで登録できますが、ユーザーのために登録を簡単にすることができます。
+
+Windows デバイスの登録を簡単にする方法は次の 2 つの要素で決まります。
 - **Azure Active Directory Premium を使用していますか?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) は、Enterprise Mobility + Security およびその他のライセンス プランに付属します。
 - **どのバージョンの Windows クライアントが登録されますか?** <br>Windows 10 デバイスは、職場または学校のアカウントを追加すると自動的に登録できます。 以前のバージョンでは、会社ポータル アプリを使用して登録する必要があります。
 
 ||**Azure AD Premium**|**その他の AD**|
 |----------|---------------|---------------|  
-|**Windows 10**|[自動登録](#automatic-enrollment) |[会社ポータルの登録](#company-portal-enrollment)|
-|**以前の Windows バージョン**|[会社ポータルの登録](#company-portal-enrollment)|[会社ポータルの登録](#company-portal-enrollment)|
+|**Windows 10**|[自動登録](#enable-windows-10-automatic-enrollment) |[ユーザー登録](#enable-windows-enrollment-without-azure-ad-premium)|
+|**以前の Windows バージョン**|[ユーザー登録](#enable-windows-enrollment-without-azure-ad-premium)|[ユーザー登録](#enable-windows-enrollment-without-azure-ad-premium)|
 
-## <a name="automatic-enrollment"></a>自動登録
+## <a name="enable-windows-10-automatic-enrollment"></a>Windows 10 の自動登録を有効にする
 
-自動登録を使用して、職場や学校のアカウントを追加し、管理されることに同意すると、会社所有や個人の Windows 10 デバイスを登録できます。 ユーザーのデバイスはバックグラウンドで登録され、Azure Active Directory に接続されます。 登録されたデバイスは Intune で管理できるようになります。 管理対象のデバイスでは、タスクについては、引き続き会社ポータルを使用できますが、登録するためにインストールする必要はありません。
+自動登録を使用して、職場や学校のアカウントを追加し、管理されることに同意すると、会社所有のデバイスや個人の Windows 10 PC および Windows 10 Mobile デバイスを Intune に登録できます。 このように簡単です。 ユーザーのデバイスはバックグラウンドで登録され、Azure Active Directory に参加します。 登録されると、デバイスは Intune で管理されます。
 
 **必要条件**
 - Azure Active Directory Premium サブスクリプション ([試用版サブスクリプション](http://go.microsoft.com/fwlink/?LinkID=816845))
 - Microsoft Intune サブスクリプション
 
-### <a name="configure-automatic-enrollment"></a>自動登録の構成
 
-1. [Azure Portal](https://manage.windowsazure.com) にサインインし、左側のウィンドウで **Active Directory** ノードに移動して、ディレクトリを選択します。
-2. **[構成]** タブをクリックし、**[デバイス]** というセクションまでスクロールします。
-3. **[Users may workplace join devices]** (ユーザーにデバイスのワークプレースへの参加を許可する) で **[すべて]** を選択します。
-4. ユーザーごとに承認するデバイスの最大数を選択します。
+### <a name="configure-automatic-mdm-enrollment"></a>自動 MDM 登録の構成
+
+1. [Azure 管理ポータル](https://portal.azure.com) (https://manage.windowsazure.com) にサインインし、**[Azure Active Directory]** を選択します。
+
+  ![Azure ポータルのスクリーンショット](../media/auto-enroll-azure-main.png)
+
+2. **[モビリティ (MDM および MAM)]** を選択します。
+
+  ![Azure ポータルのスクリーンショット](../media/auto-enroll-mdm.png)
+
+3. **[Microsoft Intune]** を選択します。
+
+  ![Azure ポータルのスクリーンショット](../media/auto-enroll-intune.png)
+
+4. **[MDM ユーザー スコープ]** を構成します。 Microsoft Intune で管理するユーザーのデバイスを指定します。 これらのユーザーの Windows 10 デバイスは、Microsoft Intune の管理対象として自動的に登録されます。
+
+    - **なし**
+    - **一部**
+    - **すべて**
+
+   ![Azure ポータルのスクリーンショット](../media/auto-enroll-scope.png)
+
+5. 次の URL の既定値を使用します。
+    - **MDM 使用条件 URL**
+    - **MDM 探索 URL**
+    - **MDM 準拠 URL**
+
+6. **[保存]** を選択します。
+
 
 既定では、サービスの 2 要素認証は有効になっていません。 ただし、デバイスを登録するときには 2 要素認証をお勧めします。 このサービスの 2 要素認証を要求する前に、Azure Active Directory で 2 要素認証プロバイダーを構成し、多要素認証用にユーザー アカウントを構成する必要があります。 「[クラウドでの Azure Multi-Factor Authentication Server の概要](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)」を参照してください。
 
+## <a name="enable-windows-enrollment-without-azure-ad-premium"></a>Azure AD Premium なしで Windows 登録を有効にする
+Azure AD Premium 自動登録なしでデバイスを登録することをユーザーに許可できます。 ライセンスを割り当てると、ユーザーは、自分の職場のアカウントを個人所有のデバイスに追加するか、会社所有のデバイスを Azure AD に参加させることで登録できます。 DNS エイリアス (CNAME レコード タイプ) を作成すると、ユーザーは自分のデバイスを簡単に登録できるようになります。 DNS CNAME リソース レコードを作成すると、ユーザーは Intune サーバー名を入力することなく Intune に接続して登録できます。
 
-### <a name="create-dns-alias-for-device-enrollment"></a>デバイス登録の DNS エイリアスの作成  
-DNS エイリアス (CNAME レコード タイプ) により、ユーザーはサーバー アドレスを入力することなくサービスに接続することができ、デバイスの登録が容易になります。 DNS エイリアス (CNAME レコード タイプ) を作成するには、Microsoft のクラウド サービスのサーバーに、会社のドメインの URL に送信された要求をリダイレクトする会社の DNS レコードで CNAME を構成する必要があります。  たとえば、会社のドメインが contoso.com の場合、EnterpriseEnrollment.contoso.com を EnterpriseEnrollment-s.manage.microsoft.com にリダイレクトする CNAME を DNS に作成する必要があります。  
+### <a name="create-cnames-to-simplify-enrollment"></a>CNAME を作成して登録を簡単にする
+会社のドメインの CNAME DNS リソース レコードを作成します。 たとえば、会社の Web サイトが contoso.com の場合、EnterpriseEnrollment.contoso.com を enterpriseenrollment-s.manage.microsoft.com にリダイレクトする CNAME を DNS に作成します。
 
 CNAME DNS エントリの作成は省略可能ですが、CNAME レコードにより、ユーザーによる登録が簡単になります。 CNAME レコードの登録が見つからない場合、ユーザーは手動で MDM サーバー名 enrollment.manage.microsoft.com を入力するように求められます。
 
@@ -90,6 +119,10 @@ CNAME DNS エントリの作成は省略可能ですが、CNAME レコードに�
 |CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 時間|
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 時間|
 |CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 時間|
+
+`EnterpriseEnrollment-s.manage.microsoft.com` – Intune サービスへのリダイレクトと電子メールのドメイン名によるドメイン認識をサポートします。
+
+DNS レコードの変更が反映されるまでには、最大で 72 時間かかります。 DNS レコードの変更が反映されるまで、Intune で DNS の変更を確認することはできません。
 
 ## <a name="tell-users-how-to-enroll-devices"></a>デバイスの登録方法をユーザーに通知する  
 
