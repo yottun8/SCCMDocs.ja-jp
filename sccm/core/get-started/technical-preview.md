@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9b31fab8fa93195c60e9026e2df99311aa6e328f
-ms.openlocfilehash: 61d4b7017769609caf8fcb8fcdd510f5a0b5b712
-ms.lasthandoff: 04/03/2017
+ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
+ms.openlocfilehash: 8ffaee12bd826e2f19653b215ee19423ea672433
+ms.lasthandoff: 04/21/2017
 
 
 ---
@@ -112,8 +112,13 @@ ms.lasthandoff: 04/03/2017
 ##  <a name="bkmk_tpCaps"></a> Technical Preview で提供される機能  
  以下は、それぞれの Configuration Manager Technical Preview リリースで提供される機能です。  Technical Preview のバージョンで利用できるようになった機能は、以降のバージョンでも利用できます。 同様に、System Center Configuration Manager リリース (Current Branch) に追加された機能は、後続の Technical Preview でも引き続き利用できます。  特定の機能の詳細については、各プレビュー バージョンのコンテンツをクリックします。  
 
- |機能|Technical Preview バージョン|Current Branch バージョン|  
- |----------------|---------------------|--------------------|
+ |機能 |Technical Preview バージョン |Current Branch バージョン|  
+|----------------|---------------------|--------------------|
+ |アプリ構成ポリシーを使用した Android アプリの構成  |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#configure-android-apps-with-app-configuration-policies)|![追加されていません](media/Red_X.gif)|
+ |ハードウェア インベントリでのセキュア ブート情報の収集 |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#hardware-inventory-collects-secure-boot-information)|![追加されていません](media/Red_X.gif)|
+ |子タスク シーケンスをタスク シーケンスに追加する|[Tech Preview 1704](capabilities-in-technical-preview-1704.md#add-child-task-sequences-to-a-task-sequence)|![追加されていません](media/Red_X.gif)|
+ |最新バージョンの Windows PE を使用してブート イメージを再読み込みする |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#reload-boot-images-with-current-windows-pe-version)|![追加されていません](media/Red_X.gif)|
+ |オペレーティング システムの展開に関する機能拡張|[Tech Preview 1704](capabilities-in-technical-preview-1704.md#improvements-to-operating-system-deployment)|![追加されていません](media/Red_X.gif)|
  |ボリューム購入 iOS アプリをデバイス コレクションに展開する|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#deploy-volume-purchased-ios-apps-to-device-collections)|[バージョン 1702](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)|
  |ソフトウェア センターでのアプリケーションへの直接リンク|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#direct-links-to-applications-in-software-center)|![追加されていません](media/Red_X.gif)
  |Configuration Manager の Windows クライアント コンピューター用の PFX 証明書|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#pfx-certificates-for-configuration-manager-windows-client-computers)|![追加されていません](media/Red_X.gif)|
@@ -208,11 +213,11 @@ ms.lasthandoff: 04/03/2017
  |KSP としての Passport for Work のサポート |[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_passport)|[バージョン 1606](/sccm/protect/deploy-use/create-certificate-profiles)|  
  |オンプレミスのデバイス正常性構成証明書|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_onpremdha)|[バージョン 1606](/sccm/core/servers/manage/health-attestation)|  
  |Android デバイスの SmartLock 設定|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_Smart)|[バージョン 1606](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-and-samsung-knox-configuration-item-settings-reference)|  
- |ソフトウェア センターの機能強化|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_SC1603)|[バージョン 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#application-management)|  
- |リモート制御の機能強化|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RC1603)|[バージョン 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#remote-control)|  
- |PXE 対応配布ポイント上の RamDisk TFTP ブロック サイズとウィンドウ サイズのカスタマイズ|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RamDiskTFTP)|[バージョン 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#operating-system-deployment)|  
-
-
+ <!--  TP 1603 Aged out of support and all features in Current Branch Builds:
+ |Improvements to Software Center|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_SC1603)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#application-management)|  
+ |Improvements to remote control|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RC1603)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#remote-control)|  
+ |Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RamDiskTFTP)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#operating-system-deployment)|  
+-->
  Technical Preview リリースのすべての機能が Current Branch でサポートされる最小バージョンで使用可能になると、そのプレビュー バージョンの詳細がこのテーブルから削除されます。
 
 

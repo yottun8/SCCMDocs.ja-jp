@@ -14,8 +14,9 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
 translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
-ms.openlocfilehash: ea365491dd334980693375fbb7730653af9cd8e4
+ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
+ms.openlocfilehash: 5df20f3703442de1be6220ca2770e182e330c036
+ms.lasthandoff: 04/26/2017
 
 
 
@@ -41,7 +42,7 @@ ms.openlocfilehash: ea365491dd334980693375fbb7730653af9cd8e4
  Configuration Manager と WSUS のデータベースが同じ SQL Server を使用し、SQL Server の同じインスタンスを共有する場合は、この 2 つのアプリケーション間のリソースの使用状況を容易に判別できなくなります。 Configuration Manager と WSUS に異なる SQL Server インスタンスを使用すると、それぞれのアプリケーションで発生する可能性のあるリソース使用の問題のトラブルシューティングおよび診断が容易になります。  
 
 ### <a name="specify-the-store-updates-locally-setting-for-the-wsus-installation"></a>WSUS インストールで [更新プログラムをローカルに保存する] 設定をオンにする  
- WSUS 3.0 をインストールするときに、[更新プログラムをローカルに保存する **** ] 設定をオンにします。 この設定をオンにすると、同期プロセス時にソフトウェア更新プログラムに関連付けられたライセンス条項がダウンロードされ、WSUS サーバーのローカル ハード ドライブに保存されます。 この設定を選択しないと、クライアント コンピューターがライセンス条項が含まれる更新プログラムでのソフトウェア更新プログラム対応のスキャンに失敗することがあります。 ソフトウェアの更新のポイントをインストールすると、WSUS 同期マネージャーが、規定では 60 分ごとにこの設定が有効になっているかを確認します。  
+ WSUS をインストールするときに、**[更新プログラムをローカルに保存する]** 設定をオンにします。 この設定をオンにすると、同期プロセス時にソフトウェア更新プログラムに関連付けられたライセンス条項がダウンロードされ、WSUS サーバーのローカル ハード ドライブに保存されます。 この設定を選択しないと、クライアント コンピューターがライセンス条項が含まれる更新プログラムでのソフトウェア更新プログラム対応のスキャンに失敗することがあります。 ソフトウェアの更新のポイントをインストールすると、WSUS 同期マネージャーが、規定では 60 分ごとにこの設定が有効になっているかを確認します。  
 
 ## <a name="operational-best-practices"></a>操作について推奨する運用方法  
  ソフトウェア更新プログラムを使用するときには、次の推奨する運用方法を使用してください。  
@@ -57,9 +58,4 @@ ms.openlocfilehash: ea365491dd334980693375fbb7730653af9cd8e4
 
 ## <a name="see-also"></a>関連項目  
  [System Center Configuration Manager でのソフトウェア更新プログラムの計画](../../sum/plan-design/plan-for-software-updates.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -13,13 +13,13 @@ ms.topic: article
 ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8c7bf901caa49c8585a9ed3913d4a5a2aac57013
-ms.openlocfilehash: 82f7db908f83d69a86c82ed97b845ff84e78f8b3
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 699b79b68440b61904a9053e5004318a2a248bfd
+ms.openlocfilehash: 8adc41a30bf12a91a272029db49e50ba003d3e9c
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager のモバイル デバイスの VPN プロファイル
@@ -75,10 +75,10 @@ VPN プロファイルの作成に関する一般情報は、「[System Center C
 
     -   **認証方法**: VPN 接続で使用する認証方法を選択します。 使用可能な方法は、この表に示されている接続の種類によって異なります。  
 
-        |[認証方法]|サポートされる接続の種類|  
+        |[認証方法]|サポートされる&nbsp;接続&nbsp;の種類|  
         |---------------------------|--------------------------------|  
-        |**証明書**<br /><br /> **メモ:** RADIUS サーバー (ネットワーク ポリシー サーバーなど) への認証にクライアント証明書を使用する場合は、証明書のサブジェクトの別名をユーザー プリンシパル名に設定する必要があります。|- <br />                            Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - チェック ポイント モバイル VPN|  
-        |**ユーザー名とパスワード**|- <br />                            Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - チェック ポイント モバイル VPN|  
+        |**証明書**<br /><br /> **注:**<br />- RADIUS サーバー (ネットワーク ポリシー サーバーなど) での認証にクライアント証明書を使用する場合は、証明書のサブジェクトの別名をユーザーのプリンシパル名に設定する必要があります。<br/><br />- Android 向けに展開する場合は、EKU 識別子と、証明書発行者の拇印のハッシュ値を選択します。  それ以外の場合は、ユーザーは適切な証明書を手動で選択する必要があります。  |- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - チェック ポイント モバイル VPN|  
+        |**ユーザー名とパスワード**|- Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - チェック ポイント モバイル VPN|  
         |**Microsoft EAP-TTLS**|- Microsoft SSL (SSTP)<br /><br /> - Microsoft 自動<br /><br /> - PPTP<br /><br /> - IKEv2<br /><br /> - L2TP|  
         |**Microsoft 保護された EAP (PEAP)**|- Microsoft SSL (SSTP)<br /><br /> - Microsoft 自動<br /><br /> - IKEv2<br /><br /> - PPTP<br /><br /> - L2TP|  
         |**Microsoft セキュリティで保護されたパスワード (EAP-MSCHAP v2)**|- Microsoft SSL (SSTP)<br /><br /> - Microsoft 自動<br /><br /> - IKEv2<br /><br /> - PPTP<br /><br /> - L2TP|  
@@ -109,18 +109,15 @@ VPN プロファイルの作成に関する一般情報は、「[System Center C
 
          ![VPN に条件付きアクセスを構成する](media/vpn-conditional-access.png)
 
+         Configuration Manager を実行する Windows のバージョンが機能をサポートしていて、_かつ_、認証方法が選択されている場合は、**[構成]** をクリックすることができ、[Windows プロパティ] ダイアログ ボックスを開いて認証方法のプロパティを構成できます。  **[構成]** が無効になっている場合は、別の方法で認証方法のプロパティを構成してください。
 
-> [!NOTE]  
-> 認証方法によっては、**[構成]** をクリックして Windows のプロパティ ダイアログ ボックスを開くことができます (Configuration Manager コンソールを実行している Windows のバージョンで、この認証方法がサポートされている場合)。そこで、認証方法のプロパティを構成できます。  
-
-
-1.  VPN 接続でプロキシ サーバーを使用する場合は、VPN プロファイルの作成ウィザード **** の [プロキシの設定 ****] ページで、[この VPN プロファイルのプロキシ設定の構成 **** ] チェック ボックスをオンにします。 次に、プロキシ サーバーの情報を指定します。 詳細については、Windows Server のドキュメントを参照してください。  
+2.  VPN 接続でプロキシ サーバーを使用する場合は、VPN プロファイルの作成ウィザード **** の [プロキシの設定 ****] ページで、[この VPN プロファイルのプロキシ設定の構成 **** ] チェック ボックスをオンにします。 次に、プロキシ サーバーの情報を指定します。 詳細については、Windows Server のドキュメントを参照してください。  
 
     > [!NOTE]  
     >  Windows 8.1 コンピューターでは、VPN とそのコンピューターを接続するまで、VPN プロファイルにプロキシ情報は表示されません。  
 
 
-2. 詳細な DNS 設定を構成する (必要な場合)  
+3. 詳細な DNS 設定を構成する (必要な場合)  
  **[自動 VPN 接続の構成]** ページで、次のように構成することができます。  
 
     -   **要求に応じて VPN を有効にする** - Windows Phone 8.1 デバイス用の DNS の詳細設定を構成する場合に使用します。 この設定は Windows Phone 8.1 デバイスのみに適用され、Windows Phone 8.1 デバイスに展開することになっている VPN プロファイルでのみ有効にします。
@@ -153,9 +150,9 @@ VPN プロファイルの作成に関する一般情報は、「[System Center C
     >  **[VPN 接続を介してすべてのネットワーク トラフィックを送信する]** オプションの選択がオフで、かつ VPN 接続が分割トンネリングを使用している場合、VPN 接続は、ルート、または接続固有の DNS サフィックスを構成している場合に自動的に開きます。  
 
 
-1. VPN プロファイルの作成ウィザード **** の [サポートされているプラットフォーム ****] ページで、VPN プロファイルをインストールするオペレーティング システムを選択します。使用できるすべてのオペレーティング システムに VPN プロファイルをインストールするには、[すべて選択 **** ] をクリックします。  
+4. VPN プロファイルの作成ウィザード **** の [サポートされているプラットフォーム ****] ページで、VPN プロファイルをインストールするオペレーティング システムを選択します。使用できるすべてのオペレーティング システムに VPN プロファイルをインストールするには、[すべて選択 **** ] をクリックします。  
 
-2. ウィザードを完了します。 新しい VPN プロファイルは、[資産とコンプライアンス **** ] ワークスペースの [VPN プロファイル **** ] ノードに表示されます。  
+5. ウィザードを完了します。 新しい VPN プロファイルは、[資産とコンプライアンス **** ] ワークスペースの [VPN プロファイル **** ] ノードに表示されます。  
 
 
 **展開:** VPN プロファイルの展開については、[Wi-Fi、VPN、電子メール、および証明書プロファイルの展開](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)に関する記事を参照してください。

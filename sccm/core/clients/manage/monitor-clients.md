@@ -2,7 +2,7 @@
 title: "クライアントを監視する - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager でクライアントを監視する詳細な方法を説明します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 caps.latest.revision: 23
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: 85afe010e734d20ae1f1479b3edd166c54cc8fd2
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: 08a4d9b29871b49e3118aef949572cef64940f96
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/24/2017
 
  System Center Configuration Manager クライアント アプリケーションがサイト内の Windows コンピューターとデバイスにインストールされたら、それらのヘルスとアクティビティを Configuration Manager コンソールで監視できます。  
 
-##  <a name="a-namebkmkabouta-about-client-status"></a><a name="bkmk_about"></a> クライアントのステータスについて  
+##  <a name="bkmk_about"></a> クライアントのステータスについて  
  Configuration Manager はクライアント ステータスとして次の種類の情報を提供します。  
 
 -   **クライアント オンライン ステータス**: Configuration Manager のバージョン 1602 以降、コンピューターがオンラインかどうかがこのステータスによって示されます。 割り当てられている管理ポイントに接続されているコンピューターは、オンラインであると見なされます。  クライアントがオンラインであることを示すには、ping のようにメッセージを管理ポイントに送信します。 管理ポイントがメッセージを 5 分ほど何も受け取らないと、クライアントはオフラインであると見なされます。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/24/2017
 
      ビジネスにとって重要なサーバーなどの特定のコンピューターに対して修復を実行しないように構成することもできます。 また、評価する追加項目がある場合は、Configuration Manager コンプライアンス設定を使用して、組織内のコンピューターの全体的な正常性、アクティビティ、コンプライアンスを監視する総合的なソリューションを設定することもできます。 コンプライアンス設定の詳細については、「[System Center Configuration Manager におけるコンプライアンス設定の計画と構成](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)」を参照してください。  
 
-##  <a name="a-namebkmkindstatusa-monitor-the-status-of-individual-clients"></a><a name="bkmk_indStatus"></a> 各クライアントのステータスの監視  
+##  <a name="bkmk_indStatus"></a> 各クライアントのステータスの監視  
 
 1.  Configuration Manager コンソールで **[資産とコンプライアンス]** > **[デバイス]** の順にクリックするか、**[デバイス コレクション]** でコレクションを選択します。  
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/24/2017
 
 3.  クライアントのアクティビティやクライアント チェックに関する情報を含む詳細ウィンドウに複数の状態を表示するには、リスト ウィンドウ領域の各クライアントをクリックします。  
 
-##  <a name="a-namebkmkallstatusa-monitor-the-status-of-all-clients"></a><a name="bkmk_allStatus"></a> すべてのクライアントのステータスの監視  
+##  <a name="bkmk_allStatus"></a> すべてのクライアントのステータスの監視  
 
 1.  Configuration Manager コンソールで、**[監視]** > **[クライアントのステータス]** の順にクリックします。 コンソールのこのページでは、サイト全体でのクライアントのアクティビティとクライアント チェックの全体的な統計情報を確認できます。  別のコレクションを選択して、情報のスコープを変更することもできます。  
 
@@ -77,12 +77,12 @@ ms.lasthandoff: 01/24/2017
 
  クライアント チェックの結果またはクライアント アクティビティがコレクション内の指定した割合のクライアントより少なくなった場合、または、指定した割合のクライアントで修復が失敗した場合に通知するアラートを構成できます。 クライアント ステータスの構成方法については、「[System Center Configuration Manager でクライアント ステータスを構成する方法](../../../core/clients/deploy/configure-client-status.md)」を参照してください。  
 
-##  <a name="a-namebkmkclienthealtha-checks-and-remediations-made-by-client-check"></a><a name="BKMK_ClientHealth"></a> クライアント チェックで実行される確認と修復  
+##  <a name="BKMK_ClientHealth"></a> クライアント チェックで実行される確認と修復  
  次の確認と修復をクライアント チェックで実行できます。  
 
 |クライアント チェック|修復処理|説明|  
 |------------------|------------------------|----------------------|  
-|最近クライアント チェックが実行されたかどうかの確認|クライアント チェックの実行|過去&3; 日間にクライアント チェックが少なくとも&1; 回実行されたことを確認します。|  
+|最近クライアント チェックが実行されたかどうかの確認|クライアント チェックの実行|過去 3 日間にクライアント チェックが少なくとも 1 回実行されたことを確認します。|  
 |クライアントの前提条件がインストールされているかどうかの確認|クライアントの前提条件のインストール|クライアントの前提条件がインストールされていることを確認します。 クライアント インストール フォルダーのファイル ccmsetup.xml を読み取って、前提条件を検出します。|  
 |WMI リポジトリの整合性テスト|Configuration Manager クライアントの再インストール|Configuration Manager クライアント エントリが WMI に存在することを確認します。|  
 |クライアント サービスが実行されているかどうかの確認|クライアント (SMS Agent Host) サービスの起動|詳細情報なし|  
@@ -110,4 +110,7 @@ ms.lasthandoff: 01/24/2017
 |クライアント WMI プロバイダーが正常であるかどうかの確認|Windows Management Instrumentation サービスの再起動|このクライアント チェックの修復は、Windows Server 2003 以前のバージョンまたは Windows XP (64 ビット) 以前のバージョンを実行するコンピューターでのみ実行されます。|  
 |ウェイクアップ プロキシ サービス (ConfigMgr Wake-up Proxy) が実行されているかどうかの確認|ConfigMgr Wakeup Proxy サービスの起動|[ **電源管理**] が次の場合にのみ、このクライアント チェックが行われます。[ **ウェイクアップ プロキシを有効にする** ] のクライアント設定は、サポートされるクライアント オペレーティング システム上で [ **はい** ] に設定されています。|  
 |ウェイクアップ プロキシ サービス (ConfigMgr Wake-up Proxy) のスタートアップの種類が自動であるかどうかの確認|ConfigMgr Wakeup Proxy サービスのスタートアップの種類の自動へのリセット|[ **電源管理**] が次の場合にのみ、このクライアント チェックが行われます。[ **ウェイクアップ プロキシを有効にする** ] のクライアント設定は、サポートされるクライアント オペレーティング システム上で [ **はい** ] に設定されています。|  
+
+## <a name="client-deployment-log-files"></a>クライアント展開のログ ファイル
+クライアント展開と管理操作で使用するログ ファイルの詳細については、「[System Center Configuration Manager のログ ファイル](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs)を参照してください。
 

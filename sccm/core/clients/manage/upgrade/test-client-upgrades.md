@@ -2,7 +2,7 @@
 title: "実稼働前コレクションでのクライアント アップグレードのテスト | Microsoft ドキュメント"
 description: "System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストします。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,13 +13,13 @@ ms.topic: article
 ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 533c8e8b30519d83b8fc7a9d204d51e76974c4b1
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: 7edd3e46b4813dd50df7d01b367f8e73bb350a7d
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -54,6 +54,9 @@ ms.lasthandoff: 03/27/2017
 
 ![クライアントのアップグレードをテストする](media/test-client-upgrades.png)
 
+>[!NOTE]
+>これらの設定を変更するには、アカウントが **[完全な権限を持つ管理者]** のセキュリティ ロールと **[すべて]** のセキュリティ スコープのメンバーである必要があります。
+
 
 ##  <a name="to-install-a-configuration-manager-update-that-includes-a-new-version-of-the-client"></a>新しいバージョンのクライアントを含む Configuration Manager の更新プログラムをインストールするには  
 
@@ -80,4 +83,7 @@ ms.lasthandoff: 03/27/2017
 2.  実稼働および実稼働前のクライアント バージョンを確認し、正しい実稼働前コレクションが指定されていることを確認して、**[昇格]**、**[はい]** の順にクリックします。  
 
 3.  ダイアログ ボックスが閉じた後、階層で使われているクライアントのバージョンが、更新されたクライアントのバージョンに置き換えられます。 その後、サイト全体のクライアントをアップグレードできます。 詳細については、「[System Center Configuration Manager で Windows コンピューター用クライアントをアップグレードする方法](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)」を参照してください。  
+
+>[!NOTE]
+>実稼働前クライアントを有効にする、または実稼働前クライアントを実稼働クライアントに昇格するには、アカウントが**更新プログラム パッケージ** オブジェクトを **[読み取り]**、**[変更]** する権限をもつセキュリティ ロールのメンバーである必要があります。
 

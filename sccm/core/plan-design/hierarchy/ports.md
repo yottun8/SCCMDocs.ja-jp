@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4c2906c2a963e0ae92e3c0d223afb7a47377526a
-ms.openlocfilehash: ffc2adb34427aa62f4a377e887c2ff54d47abeff
-ms.lasthandoff: 03/20/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: 78caa69e10f5d386daab1e61e484d4d134469708
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -552,13 +552,13 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 
 2.  **代替ポートを利用可能**: この値に対して代替ポートを Configuration Manager 内で定義できます。 カスタム ポートを定義済みの場合、IPsec ポリシーまたはファイアウォールの構成用の IP フィルター情報を定義するときは、そのカスタム ポートを代わりに使用してください。  
 
-3.  **Windows Server Update Services (WSUS)**: WSUS は、既定の Web サイト (ポート 80) 上にインストールすることも、カスタム Web サイト (ポート 8530) 上にインストールすることもできます。  
+3.  **Windows Server Update Services (WSUS)**: WSUS をインストールする際、クライアント接続用にポート 80/443 を使用するかポート 8530/8531 を使用するかを選択できます。 Windows Server 2012 または Windows Server 2016 で WSUS を実行する場合、WSUS は既定で HTTP にはポート 8530 を、HTTPS にはポート 8531 を使うように構成されています。  
 
      インストール後にポートを変更できます。 サイト階層全体で同じポート番号を使用する必要はありません。  
 
     -   HTTP ポートが 80 の場合、HTTPS ポートは 443 の必要があります。  
 
-    -   HTTP ポートがその他の場合、HTTPS ポートは 1 大きくする必要があります (8530 や 8531 など)。  
+    -   HTTP ポートがその他の場合、HTTPS ポートは 1 大きくする必要があります (8530 と 8531 など)。   
 
     > [!NOTE]  
     >  HTTPS を使用するようソフトウェアの更新ポイントを構成するときには、HTTP ポートも開いている必要があります。 特定の更新プログラムの使用許諾契約書などの暗号化されていないデータは、HTTP ポートを使用します。  
