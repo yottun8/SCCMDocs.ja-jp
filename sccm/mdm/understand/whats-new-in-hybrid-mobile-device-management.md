@@ -2,7 +2,7 @@
 title: "ハイブリッド MDM と Configuration Manager の最新情報 | Microsoft Docs"
 description: "Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。"
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 04/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
-ms.openlocfilehash: 489defeae18c219fe2f717d5caa1f15bcdaf07cf
-ms.lasthandoff: 04/19/2017
+ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
+ms.openlocfilehash: 0af5ae68353fcf1db846e2e27f3391fe87dcfc42
+ms.lasthandoff: 04/21/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
@@ -57,7 +57,13 @@ ms.lasthandoff: 04/19/2017
 
 - **アプリが SharePoint Online にアクセスすることを禁止する**
 
-    アプリ基準の条件付きアクセス ポリシーを作成し、アプリ保護ポリシーが適用されていないアプリが [SharePoint Online](/InTune/deploy-use/mam-ca-for-sharepoint-online) にアクセスすることを禁止できるようになりました。 アプリ基準の条件付きアクセス シナリオでは、Azure ポータルを利用して SharePoint Online へのアクセスを与えるアプリを指定できます。
+  アプリ基準の条件付きアクセス ポリシーを作成し、アプリ保護ポリシーが適用されていないアプリが [SharePoint Online](/InTune/deploy-use/mam-ca-for-sharepoint-online) にアクセスすることを禁止できるようになりました。 アプリ基準の条件付きアクセス シナリオでは、Azure ポータルを利用して SharePoint Online へのアクセスを与えるアプリを指定できます。
+
+### <a name="new-in-configuration-manager-technical-preview-1704"></a>Configuration Manager Technical Preview 1704 の新機能
+
+- **アプリ構成ポリシーを使用した Android アプリの構成**
+
+  System Center Configuration Manager (Configuration Manager) のアプリ構成ポリシーを使用して、ユーザーが Android for Work デバイス上でアプリを実行するときに事前に構成された設定を配布できます。 Android アプリ構成ポリシーは、Android for Work が動作しているデバイス上でのみ使用でき、Play for Work ストアの承認済みアプリに適用されます。 この機能を試用する方法については、「[アプリ構成ポリシーを使用した Android アプリの構成](/sccm/core/get-started/capabilities-in-technical-preview-1704#configure-android-apps-with-app-configuration-policies)」をご覧ください。
 
 ## <a name="march-2017"></a>2017 年 3 月
 
