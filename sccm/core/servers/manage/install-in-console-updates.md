@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
-ms.openlocfilehash: 18c199e78750eadc06b9635fa6104d36c2ac018d
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
+ms.openlocfilehash: 29a55948a1897e1345ba14ec685b9288a844feaa
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -325,7 +325,7 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 
 
 ##  <a name="bkmk_prerelease"></a> 更新プログラムからのプレリリース機能の使用
-プレリリース機能は、運用環境での初期テストの Current Branch に含まれている機能です。 これらの機能は実稼働の準備ができていると見なすべきではありませんが、実稼働環境で使用することはできます。 現在の環境で有効にする方法など、プレリリース機能の詳細については、「[Pre-release features in System Center Configuration Manager](/sccm/core/servers/manage/pre-release-features)」(System Center Configuration Manager のプレリリース機能) を参照してください。                |
+プレリリース機能は、運用環境での初期テストの Current Branch に含まれている機能です。 これらの機能は運用の準備ができていると見なすべきではありませんが、運用環境で使用することはできます。 現在使用している環境でプレリリース機能を有効にする方法など詳細については、[プレリリース機能](/sccm/core/servers/manage/pre-release-features)に関する記事を参照してください。             
 
 
 ## <a name="known-issues"></a>既知の問題
