@@ -2,7 +2,7 @@
 title: "新しいバージョン 1702 | Microsoft Docs"
 description: "System Center Configuration Manager のバージョン 1702 で導入された変更点および新機能について詳しく説明します。"
 ms.custom: na
-ms.date: 3/31/2017
+ms.date: 05/02/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -14,16 +14,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
-ms.openlocfilehash: 3e97184dc923cd3972c23252c1bc001edb73fe3f
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: 4616ebb84ae63acbe6af892918aa2dd1a0be4825
+ms.lasthandoff: 05/02/2017
 
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1702 の新機能
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager の現在のブランチの更新プログラム 1702 は、以前にインストールされておりバージョン 1602, 1606 または 1610 を実行しているサイトを対象とする、コンソール内の更新プログラムとして利用可能です。
+System Center Configuration Manager の現在のブランチの更新プログラム 1702 は、以前にインストールされておりバージョン 1602, 1606 または 1610 を実行しているサイトを対象とする、コンソール内の更新プログラムとして利用可能です。 また、新しい展開をインストールするときに使用する基準のバージョンとしても利用可能です。
 
 > [!TIP]  
 > 新しいサイトをインストールするには、Configuration Manager の基準バージョンを使用する必要があります。  
