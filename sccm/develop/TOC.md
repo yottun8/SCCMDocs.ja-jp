@@ -438,8 +438,3 @@
 ### [提供情報ステータスを判断する方法](core/servers/manage/how-to-determine-advertisement-status.md)
 
 # [Configuration Manager リファレンス](reference/configuration-manager-reference.md)
-
-
-<!--HONumber=Jan17_HO3-->
-
-
