@@ -15,9 +15,10 @@ caps.latest.revision: 11
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
 ms.openlocfilehash: f2d9da1c584f78e27e84b7f55e7ffe4dd052a27c
+ms.contentlocale: ja-jp
 ms.lasthandoff: 03/29/2017
 
 ---
@@ -88,7 +89,7 @@ Configuration Manager クライアントを含む Windows 10 PC にオンライ�
 1. [https://manage.windowsazure.com](https://manage.windowsazure.com) の Active Directory ノードで、Azure Active Directory を選択し、**[アプリケーション]** > **[追加]** をクリックします。
 2.  **[組織で開発中のアプリケーションを追加]** をクリックします。
 3.  アプリケーションの名前を入力し、**[Web アプリケーション]** または **[Web API]**、あるいはその両方を選択し、**次へ進む**矢印をクリックします。
-4.  **[サインオン URL]** と **[アプリケーション ID/URI]** の両方に同じ URL を入力します。 URL はあらゆるものを使用でき、実際のアドレスに解決する必要はありません。 たとえば、*https://yourdomain>/sccm* を入力できます。
+4.  **[サインオン URL]** と **[アプリケーション ID/URI]** の両方に同じ URL を入力します。 URL はあらゆるものを使用でき、実際のアドレスに解決する必要はありません。 たとえば、*https://yourdomain>/sccm*を入力できます。
 5.  ウィザードを完了します。
 
 **Azure Active Directory で、登録済み管理ツールのクライアント キーを作成します。**
