@@ -2,7 +2,7 @@
 title: "ボリューム購入 iOS アプリの管理 | Microsoft Docs"
 description: "iOS アプリ ストアから購入したアプリを展開および管理し、そのライセンスを追跡します。"
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 05/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
-ms.openlocfilehash: a63acf0d80edba1e965ba8ea99fe90edb8aa2faf
-ms.lasthandoff: 03/28/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
+ms.openlocfilehash: 55f1204b088a7b636a90561f20aa41c7de72bc05
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/04/2017
 
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>Manage volume-purchased iOS apps with System Center Configuration Manager
@@ -90,7 +91,7 @@ System Center Configuration Manager 1702 以降では、デバイスとユーザ
 
     -   **[カテゴリの割り当て (検索とフィルター処理が向上します)]** - 必要に応じて、Configuration Manager コンソールで検索しやすくするために VPP トークンにカテゴリを割り当てることができます。  
     -   **Apple ID** - VPP トークンに関連付けられている Apple の電子メール ID を入力します。
-    -   **トークンの種類** - 使用する VPP トークンの種類を選択します。 トークンの種類は **[ビジネス]** と **[EDU]**から選択できます。
+    -   **トークンの種類** - 使用する VPP トークンの種類を選択します。 トークンの種類は **[ビジネス]** と **[EDU]** から選択できます。
 
 5.  **[次へ]** を選択し、ウィザードを完了します。  
 
@@ -112,7 +113,7 @@ System Center Configuration Manager 1702 以降では、デバイスとユーザ
 
  **[ストア アプリのライセンス情報]** ノードからアプリを作成すると、選択したアプリのトークンのライセンスにアプリが関連付けられます。  たとえば、ノードに同じアプリの 2 つのバージョンが表示される場合があります。 これは、アプリの各バージョンが異なる Apple VPP トークンに関連付けられているためです。  したがって、各トークンからアプリを作成し、それらを個別に展開することができます。
 
- ライセンスを再利用するには、展開アクションを **アンインストール**に変更する必要があります。 アプリがアンインストールされた後、ライセンスが再利用されます。  
+ ライセンスを再利用するには、**[アンインストール]** の展開アクションを使用してアプリの新しい展開を作成する必要があります。 元の展開では展開アクションを変更できません。 アプリがアンインストールされた後、ライセンスが再利用されます。  
 
 ## <a name="step-3---monitor-ios-vpp-apps"></a>手順 3 - iOS VPP アプリの監視  
  **ソフトウェア ライブラリ** ワークスペースの**ストア アプリのライセンス情報**ノードに、ボリューム購入した iOS アプリに関する情報が表示されます。 この情報には、アプリごとに所有しているライセンスの合計数と展開されている数が含まれます。 さらに、ビューには、アプリが関連付けられている VPP トークンと、そのトークンの種類が表示されます。
