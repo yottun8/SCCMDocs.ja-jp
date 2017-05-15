@@ -2,7 +2,7 @@
 title: "推奨ハードウェア | Microsoft Docs"
 description: "基本的な展開だけでなく、System Center Configuration Manager 環境を拡張するために役立つハードウェアの推奨事項を確認します。"
 ms.custom: na
-ms.date: 3/30/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 8d3791bcf737e63308155787ed23c9cc84e7e99c
-ms.openlocfilehash: fd9f5b25a1e40b5f0df823dcbe9c13a77c534c59
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
+ms.openlocfilehash: 8dac6df60b07461d6410d305723b3f03fb09fa16
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/31/2017
 |-------------------------------|---------------|---------------|----------------------------------------|  
 |同じサーバー上でデータベース サイトの役割を持つスタンドアロン プライマリ サイト サーバー<sup>1</sup>|16|96|80|  
 |リモート サイトのデータベースを使用するスタンドアロン プライマリ サイト サーバー|8|16|-|  
-|スタンドアロン プライマリ サイトのリモート データベース サーバー|16|64|90|  
+|スタンドアロン プライマリ サイトのリモート データベース サーバー|16|72|90|  
 |同じサーバー上でデータベース サイトの役割を持つ中央管理サイト サーバー<sup>1</sup>|20|128|80|  
 |リモート サイトのデータベースを使用する中央管理サイト サーバー|8|16|-|  
 |中央管理サイトのリモート データベース サーバー|16|96|90|  
