@@ -2,7 +2,7 @@
 title: "境界グループの定義 | Microsoft Docs"
 description: "System Center Configuration Manager でクライアントとサイト システムをつなげる境界グループを理解します。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 10
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 8da48e89e8376cc23109faa1c74b29a64699aa87
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d940fd1bbf96767d44f8c55315e814be55a83897
+ms.openlocfilehash: 5684fd4fbfd0ffb8f3ffbcfa122eef3dafd77327
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/08/2017
 
 
 ---
@@ -111,6 +112,8 @@ System Center Configuration Manager の境界グループを利用し、関連�
 バージョン 1702 以降では、クライアントは境界グループを利用し、新しいソフトウェア更新ポイントを検出します。 ソフトウェアの更新ポイントをそれぞれ異なる境界グループに追加して、クライアントで検索できるサーバーを制御できます。
 
 1702 より前のバージョンから更新すると、すべての既存ソフトウェア更新ポイントが各サイトで既定のサイト境界グループに追加されます。 それにより、自分の階層に対して自分で構成した利用できるソフトウェア更新ポイント プールからクライアントがソフトウェア更新ポイントを選択するという更新以前の動作が維持されます。  この動作は、選択とフォールバックの動作が制御されている異なる境界グループに個々のソフトウェア更新ポイントを追加するまで維持されます。
+
+バージョン 1702 以降を実行している新しいサイトをインストールする場合は、ソフトウェア更新ポイントを境界グループに割り当てる必要があります。その後、クライアントでこれを検索して使用できます。
 
 
 ソフトウェア更新ポイントのフォールバックは他のサイト システムの役割と同様に構成されますが、次のような注意点があります。
