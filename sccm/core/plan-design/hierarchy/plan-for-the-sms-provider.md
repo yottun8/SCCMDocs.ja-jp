@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 11ac851696ce52642412ca29e4873679d50cf398
 ms.openlocfilehash: 547dc39d5659c7c2e6f1ca670caddc127dbf22c4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -28,7 +30,7 @@ ms.openlocfilehash: 547dc39d5659c7c2e6f1ca670caddc127dbf22c4
 System Center Configuration Manager の管理には、**SMS プロバイダー**のインスタンスに接続する Configuration Manager コンソールを使用する必要があります。 既定では、中央管理サイトまたはプライマリ サイトのインストール時に、SMS プロバイダーがサイト サーバーにインストールされます。 
 
 
-##  <a name="a-namebkmkplansmsprova-about-the-sms-provider"></a><a name="BKMK_PlanSMSProv"></a> SMS プロバイダーについて  
+##  <a name="BKMK_PlanSMSProv"></a> SMS プロバイダーについて  
  SMS プロバイダーは、サイトで Configuration Manager データベースの**読み取り**と**書き込み**アクセス権を割り当てる、Windows Management Instrumentation (WMI) プロバイダーの&1; つです。  
 
 -   それぞれの中央管理サイトとプライマリ サイトには、SMS プロバイダーが少なくとも&1; つなければなりません。 必要に応じて、さらにプロバイダーをインストールできます。  
@@ -60,7 +62,7 @@ Configuration Manager の管理ユーザーは、SMS プロバイダーを使用
 
 -   SMS プロバイダーと共にインストールされる Windows 自動展開キット (Windows ADK) コンポーネントをサポートするために、650 MB 以上の空きディスク領域が必要です。 Windows ADK と SMS プロバイダーの詳細については、このトピックの「 [SMS プロバイダーのオペレーティング システム展開要件](#BKMK_WAIKforSMSProv) 」を参照してください。  
 
-##  <a name="a-namebkmklocationa-sms-provider-locations"></a><a name="bkmk_location"></a> SMS プロバイダの場所  
+##  <a name="bkmk_location"></a> SMS プロバイダの場所  
  サイトをインストールするときに、そのサイトの&1; つ目の SMS プロバイダーが自動的にインストールされます。 SMS プロバイダーのインストール先として、次のいずれかを指定できます。  
 
 -   サイト サーバー コンピューター  
@@ -122,7 +124,7 @@ Configuration Manager の管理ユーザーは、SMS プロバイダーを使用
 
     -   SMS プロバイダーが、他のサービスで占有できるはずのシステム リソースを使用します。  
 
-##  <a name="a-namebkmksmsprovlanguagesa-about-sms-provider-languages"></a><a name="BKMK_SMSProvLanguages"></a> SMS プロバイダーの言語について  
+##  <a name="BKMK_SMSProvLanguages"></a> SMS プロバイダーの言語について  
  SMS プロバイダーは、そのインストール先のコンピューターの表示言語とは独立して動作します。  
 
  管理者ユーザーまたは Configuration Manager プロセスが、SMS プロバイダーでデータを要求すると、SMS プロバイダーは、要求元のコンピューターのオペレーティング システムの言語に合う形式でデータを返そうとします。
@@ -135,7 +137,7 @@ Configuration Manager の管理ユーザーは、SMS プロバイダーを使用
 
 -   管理ユーザーが作成したオブジェクトは、作成時に使われた言語でデータベースに保存されます。 これらのオブジェクトが Configuration Manager コンソールに表示されるときにも、同じ言語が使われます。 SMS プロバイダーで変換することはできず、多言語のオプションもありません。  
 
-##  <a name="a-namebkmkmultismsprova-use-multiple-sms-providers"></a><a name="BKMK_MultiSMSProv"></a> 複数の SMS プロバイダーの使用  
+##  <a name="BKMK_MultiSMSProv"></a> 複数の SMS プロバイダーの使用  
  サイトのインストールが完了したら、そのサイト用に追加の SMS プロバイダーをインストールすることができます。 追加の SMS プロバイダーをインストールするには、サイト サーバーで Configuration Manager のセットアップを実行します。 次の場合に、SMS プロバイダーの追加インストールを検討してください。  
 
 -   Configuration Manager コンソールを実行する管理ユーザーが多数存在し、サイトに同時に接続することになる。  
@@ -152,7 +154,7 @@ Configuration Manager の管理ユーザーは、SMS プロバイダーを使用
 
 たとえば、Configuration Manager コンソールをサイトに初めて接続すると、サイト サーバーで WMI のクエリが実行されて、コンソールで使用する SMS プロバイダーのインスタンスが特定されます。 SMS プロバイダーのこの特定のインスタンスは、Configuration Manager コンソールのセッションが終了するまで Configuration Manager コンソールで使用されたままになります。 SMS プロバイダーのコンピューターがネットワークで使用できなくなったためにセッションが終了した場合には、Configuration Manager コンソールを再接続したときに、接続先の SMS プロバイダーのインスタンスを特定するタスクが単純に繰り返されます。 したがって、前と同じ SMS プロバイダーのコンピューター、つまり使用できない SMS プロバイダーが、割り当てられることもあり得ます。 このような場合は、使用可能な SMS プロバイダーのコンピューターが割り当てられるまで、Configuration Manager コンソールの接続を繰り返すことになります。  
 
-##  <a name="a-namebkmkaboutsmsadminsa-about-the-sms-admins-group"></a><a name="BKMK_AboutSMSAdmins"></a> SMS Admins グループについて  
+##  <a name="BKMK_AboutSMSAdmins"></a> SMS Admins グループについて  
  SMS 管理者グループは、SMS プロバイダーの管理アクセス権を持っています。 このグループは、サイトをインストールするときに、サイト サーバーおよび SMS プロバイダーの各インストール先コンピューターに自動的に作成されます。 SMS 管理者グループの特長は、次のとおりです。  
 
 -   コンピューターがメンバー サーバーの場合は、SMS 管理者グループがローカル グループとして作成されます。  
@@ -172,7 +174,7 @@ SMS 管理者グループの権限とアクセス許可を表示して構成す�
 >  リモートの Configuration Manager コンソールを使用する管理ユーザーには、サイト サーバー コンピューターと SMS プロバイダーのコンピューターの DCOM をリモートから有効にするアクセス許可が必要です。 これらの権限はどのグループにも付与することができますが、権限の管理が簡単になるように、SMS 管理者グループに付与することをお勧めします。 詳細については、「 [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 」トピックの「 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) 」セクションを参照してください。  
 
 
-##  <a name="a-namebkmksmsprovnamespacea-about-the-sms-provider-namespace"></a><a name="BKMK_SMSProvNamespace"></a> SMS プロバイダーの名前空間について  
+##  <a name="BKMK_SMSProvNamespace"></a> SMS プロバイダーの名前空間について  
 SMS プロバイダーの構造は、WMI スキーマによって決まります。 SMS プロバイダーのスキーマ内の Configuration Manager データの場所は、スキーマの名前空間で記述します。 次の表に、SMS プロバイダーで使用する一般的な名前空間をいくつか示します。  
 
 |Namespace|説明|  
@@ -183,7 +185,7 @@ SMS プロバイダーの構造は、WMI スキーマによって決まります
 |Root\CCM|Configuration Manager クライアントの構成ポリシーとクライアント データ。|  
 |root\CIMv2\SMS|インベントリのクライアント エージェントによって収集されるインベントリ レポート クラスの場所。 これらの設定は、コンピューターのポリシーの評価中にクライアントによってコンパイルされ、コンピューターのクライアント設定の構成に基づいています。|  
 
-##  <a name="a-namebkmkwaikforsmsprova-operating-system-deployment-requirements-for-the-sms-provider"></a><a name="BKMK_WAIKforSMSProv"></a> SMS プロバイダーのオペレーティング システム展開要件  
+##  <a name="BKMK_WAIKforSMSProv"></a> SMS プロバイダーのオペレーティング システム展開要件  
 SMS プロバイダーのインスタンスをインストールするコンピューターには、使用する Configuration Manager のバージョンで必要な Windows ADK のバージョンが必要です。  
 
  -   たとえば Configuration Manager のバージョン 1511 では、Windows ADK の Windows 10 RTM (10.0.10240) バージョンが必要です。  
@@ -200,9 +202,4 @@ Windows ADK をインストールすることで、オペレーティング シ�
 
 
 Windows ADK をインストールするには、SMS プロバイダーのインストール先コンピューターに 650 MB 以上の空きディスク領域が必要です。 このような大きな空きディスク領域が必要なのは、Configuration Manager によって Windows PE ブート イメージがインストールされるためです。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

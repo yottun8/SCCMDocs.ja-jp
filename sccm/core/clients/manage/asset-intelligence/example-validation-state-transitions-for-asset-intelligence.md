@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: d1e320c6498e034307557e8a182c36cef2de640b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,14 +30,14 @@ ms.openlocfilehash: d1e320c6498e034307557e8a182c36cef2de640b
 
 System Center Configuration Manager の資産インテリジェンスの検証の状態は固定したものではなく、資産インテリジェンス カタログに保持されたデータに影響を与える管理操作によって変化することがあります。 このトピックでは、考えられる検証状態の変化について例を挙げて説明します。
 
-##  <a name="a-namebkmkuncategorizediscategorizeda-uncategorized-catalog-item-is-categorized-by-the-administrative-user"></a><a name="BKMK_UncategorizedIsCategorized"></a> カテゴリ化されていないカタログ項目が管理ユーザーによってカテゴリ化される  
+##  <a name="BKMK_UncategorizedIsCategorized"></a> カテゴリ化されていないカタログ項目が管理ユーザーによってカテゴリ化される  
 
 |**状態の変化**|**状態の変化の説明**|  
 |--------------------------|--------------------------------------|  
 |**カテゴリ化されていない**|System Center Online または管理ユーザーによってカテゴリ化されたことがない、インベントリされたソフトウェア タイトルが、資産インテリジェンス カタログに入力されます。|  
 |**カテゴリ化されていない** に **ユーザー定義**|カテゴリ化されていない項目が、管理ユーザーによってカテゴリ化されます。|  
 
-##  <a name="a-namebkmkcategorizedisrecategorizeda-categorized-catalog-item-is-recategorized-by-the-administrative-user"></a><a name="BKMK_CategorizedIsReCategorized"></a> カテゴリ化されたカタログ項目が管理ユーザーによって再カテゴリ化される  
+##  <a name="BKMK_CategorizedIsReCategorized"></a> カテゴリ化されたカタログ項目が管理ユーザーによって再カテゴリ化される  
 
 |**状態の変化**|**状態の変化の説明**|  
 |--------------------------|--------------------------------------|  
@@ -45,7 +47,7 @@ System Center Configuration Manager の資産インテリジェンスの検証�
 > [!NOTE]  
 >  System Center Online から取得したカテゴリ化情報はデータベースに格納されて削除できないため、管理ユーザーは、後で System Center Online のカテゴリ化を復元することができます。  
 
-##  <a name="a-namebkmkuserdefinedisrecategorizeda-user-defined-catalog-item-is-recategorized-by-system-center-online"></a><a name="BKMK_UserDefinedIsRecategorized"></a> ユーザー定義のカタログ項目が System Center Online によって再カテゴリ化される  
+##  <a name="BKMK_UserDefinedIsRecategorized"></a> ユーザー定義のカタログ項目が System Center Online によって再カテゴリ化される  
 
 |**状態の変化**|**状態の変化の説明**|  
 |--------------------------|--------------------------------------|  
@@ -59,7 +61,7 @@ System Center Configuration Manager の資産インテリジェンスの検証�
 > [!NOTE]  
 >  System Center Online から取得したカテゴリ化情報はデータベースに格納されて削除できないため、管理ユーザーは、後で System Center Online のカテゴリ化を復元することができます。  
 
-##  <a name="a-namebkmkuncategorizedissubmitteda-uncategorized-catalog-item-is-submitted-to-system-center-online-for-categorization"></a><a name="BKMK_UncategorizedIsSubmitted"></a> カテゴリ化されていないカタログ項目が、カテゴリ化のために System Center Online に送信される  
+##  <a name="BKMK_UncategorizedIsSubmitted"></a> カテゴリ化されていないカタログ項目が、カテゴリ化のために System Center Online に送信される  
 
 |**状態の変化**|**状態の変化の説明**|  
 |--------------------------|--------------------------------------|  
@@ -67,7 +69,7 @@ System Center Configuration Manager の資産インテリジェンスの検証�
 |**カテゴリ化されていない** から **保留中**|カテゴリ化されていない項目が、管理ユーザーによるカテゴリ化のために System Center Online に送信されます。|  
 |**保留中** から **検証済み**|この項目は System Center Online によってカテゴリ化されています。 管理ユーザーは、一括カタログ更新または資産インテリジェンス カタログの同期化を使用して、この項目を資産インテリジェンス カタログにインポートします。 資産インテリジェンス同期ポイント サイト システムの役割を使用すると、両方を使用できます。|  
 
-##  <a name="a-namebkmkuserdefinedissubmitteda-user-defined-catalog-item-is-submitted-to-system-center-online-for-categorization"></a><a name="BKMK_UserDefinedIsSubmitted"></a> ユーザー定義のカタログ項目が、カテゴリ化のために System Center Online に送信される  
+##  <a name="BKMK_UserDefinedIsSubmitted"></a> ユーザー定義のカタログ項目が、カテゴリ化のために System Center Online に送信される  
 
 |**状態の変化**|**状態の変化の説明**|  
 |--------------------------|--------------------------------------|  
@@ -81,9 +83,4 @@ System Center Configuration Manager の資産インテリジェンスの検証�
 
 > [!NOTE]  
 >  System Center Online から取得したカテゴリ化情報はデータベースに格納されて削除できないため、後で System Center Online のカテゴリ化を復元することができます。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

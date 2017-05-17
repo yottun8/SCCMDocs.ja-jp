@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
 ms.openlocfilehash: deed112cca011b3b410c1197b7abf0f36a864f3c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -48,9 +50,4 @@ ms.openlocfilehash: deed112cca011b3b410c1197b7abf0f36a864f3c
 7.  必要なその他の[ハードウェア インベントリのクライアント設定](../../../../core/clients/deploy/about-client-settings.md#hardware-inventory)を構成します。  
 
 クライアント デバイスは、次の機会にクライアント ポリシーをダウンロードしたときに、これらの設定で構成されます。 1 つのクライアントのポリシーの取得を開始する場合は、「 [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md)」を参照してください。  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

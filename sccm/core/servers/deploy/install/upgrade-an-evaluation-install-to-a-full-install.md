@@ -15,9 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: d1bf0fdc3e735eb31492476fd46f008620150c0b
 ms.openlocfilehash: 8f951805c2fc25059965c15c94934c0f8546735c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="upgrade-an-evaluation-installation-of-system-center-configuration-manager-to-a-full-installation"></a>評価版の System Center Configuration Manager を製品版にアップグレードする方法
@@ -52,9 +54,4 @@ System Center Configuration Manager を評価版としてインストールす�
 
     > [!NOTE]  
     >  アップグレードしたサイトに Configuration Manager コンソールを接続したままの場合は、サイトに接続し直さないと、コンソールのタイトル バーに評価版と表示される可能性があります。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

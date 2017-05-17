@@ -13,9 +13,11 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: fd9c1e9418ff1956c6ef98753e23a293440179be
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 
@@ -108,9 +110,4 @@ ms.openlocfilehash: fd9c1e9418ff1956c6ef98753e23a293440179be
 最初にソフトウェア更新プログラムを同期した後、または使用可能な新しい分類または製品があったら、[新しい分類と製品を構成](configure-classifications-and-products.md)して、新しい条件のソフトウェア更新プログラムを同期します。
 
 必要な条件でソフトウェア更新プログラムを同期した後、[ソフトウェア更新プログラムの設定を管理します](manage-settings-for-software-updates.md)。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

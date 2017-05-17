@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 5acf800ff5aebd849e294393337755145a60cca5
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -30,7 +32,7 @@ Configuration Manager のキャプチャ メディアにより、オペレーテ
 
 -   [オペレーティング システムをキャプチャするタスク シーケンスの作成](create-a-task-sequence-to-capture-an-operating-system.md)  
 
-##  <a name="a-namebkmkcreatecapturemediaa-how-to-create-capture-media"></a><a name="BKMK_CreateCaptureMedia"></a> キャプチャ メディアの作成方法  
+##  <a name="BKMK_CreateCaptureMedia"></a> キャプチャ メディアの作成方法  
  オペレーティング システム イメージを参照コンピューターからキャプチャするには、キャプチャ メディアを使用します。 キャプチャ メディアには、参照コンピューターを起動するブート イメージとオペレーティング システム イメージをキャプチャするタスク シーケンスが含まれています。
 
 キャプチャ メディアは、タスク シーケンス メディアの作成ウィザードを使用して作成します。 ウィザードを実行する前に、次の条件がすべて満たされていることを確認します。  
@@ -80,9 +82,4 @@ Configuration Manager のキャプチャ メディアにより、オペレーテ
         >  配布ポイントのコンテンツ ライブラリへの読み取りアクセス権を持っている必要があります。  
 
 7.  ウィザードを完了します。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

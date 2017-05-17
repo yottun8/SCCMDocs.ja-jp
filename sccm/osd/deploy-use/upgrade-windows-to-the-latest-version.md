@@ -15,9 +15,11 @@ caps.latest.revision: 13
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 288a4c649f371d9701fe7249449356aa222bf372
 ms.openlocfilehash: 35f04e237efffbdb12893f658950a99dc0b98b85
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -37,7 +39,7 @@ ms.openlocfilehash: 35f04e237efffbdb12893f658950a99dc0b98b85
 
  タスク シーケンスを使用してネットワーク経由でオペレーティング システムを展開するには、次のセクションを使用します。  
 
-##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> プラン  
+##  <a name="BKMK_Plan"></a> プラン  
 
 -   **オペレーティング システムをアップグレードするタスク シーケンスの制限を確認する**  
 
@@ -59,7 +61,7 @@ ms.openlocfilehash: 35f04e237efffbdb12893f658950a99dc0b98b85
 
      アップグレード シナリオの唯一の前提条件は、オペレーティング システムのアップグレード パッケージとタスク シーケンスに含める他のパッケージのための利用可能な配布ポイントがあることです。 詳細については、[配布ポイントのインストールと変更に関するトピック](../../core/servers/deploy/configure/install-and-configure-distribution-points.md)を参照してください。
 
-##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a> 構成  
+##  <a name="BKMK_Configure"></a> 構成  
 
 1.  **オペレーティング システムのアップグレード パッケージを準備する**  
 
@@ -75,7 +77,7 @@ ms.openlocfilehash: 35f04e237efffbdb12893f658950a99dc0b98b85
     > [!NOTE]  
     >  オペレーティング システムを Windows 10 にアップグレードするタスク シーケンスを作成するには、通常、「[オペレーティング システムをアップグレードするタスク シーケンスの作成](create-a-task-sequence-to-upgrade-an-operating-system.md)」の手順を使用します。 タスク シーケンスには、オペレーティング システムのアップグレードの手順に加えて、エンド ツー エンドのアップグレード プロセスを処理するためのお勧めの追加ステップとグループが含まれます。 しかし、カスタム タスク シーケンスを作成し、[オペレーティング システムのアップグレード](../understand/task-sequence-steps.md#BKMK_UpgradeOS)のタスク シーケンス手順を追加して、オペレーティング システムをアップグレードすることができます。 これは、オペレーティング システムを Windows 10 にアップグレードする場合に必要な唯一の手順です。 この方法を選んだ場合は、オペレーティング システムのアップグレードの手順の後に、[コンピューターの再起動](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)の手順も追加してアップグレードを完了します。 必ず **[現在インストールされている既定のオペレーティング システム]** 設定を使用して、Windows PE ではなく、インストール対象のオペレーティング システムでコンピューターを再起動するようにします。  
 
-##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a> デプロイ  
+##  <a name="BKMK_Deploy"></a> デプロイ  
 
 -   オペレーティング システムを展開するには、次の展開方法のいずれかを使用します。  
 
@@ -88,9 +90,4 @@ ms.openlocfilehash: 35f04e237efffbdb12893f658950a99dc0b98b85
 -   **タスク シーケンスの展開の監視**  
 
      オペレーティング システムをアップグレードするために、タスク シーケンスの展開を監視するには、「[オペレーティング システムの展開の監視](monitor-operating-system-deployments.md)」を参照してください。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

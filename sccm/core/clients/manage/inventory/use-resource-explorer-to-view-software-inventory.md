@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
 ms.openlocfilehash: 6189726bbcade8229e0b2e929ebedeefdbf266a4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -53,9 +55,4 @@ System Center Configuration Manager のリソース エクスプローラーを�
 
 4.  [リソース エクスプローラー] の右ペインで、項目のどれかを右クリックしてから、**[プロパティ]** を選択すると、より読みやすい形式で、収集されたインベントリ情報が表示されます。  
  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

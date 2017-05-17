@@ -15,9 +15,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 831d8a66c827d246069c7415cdce7a7c4bb95b33
 ms.openlocfilehash: 19e3099773f887129374413482702de3f4b0a36f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1610 の新機能
@@ -314,9 +316,4 @@ Microsoft は、デバイス上のマルウェアやリスクの高いアプリ�
 
 #### <a name="device-capability-settings"></a>デバイスの機能の設定
 - **無料 Wi-Fi スポットへの自動接続を許可する**
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

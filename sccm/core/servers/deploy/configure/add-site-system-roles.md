@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 7fa191ce37a68f604673fe9b9724f76c3ff10032
 ms.openlocfilehash: 1ad4abf1f06ed24bd1d505648280b5e5d80220c7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -50,9 +52,4 @@ Configuration Manager では、単一のサイト システム サーバー上�
 -   [System Center Configuration Manager のサイト システム役割の構成オプション](../../../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md)  
 
      サイト システムの一部の役割は、ユーザー インターフェイス内で説明可能な詳細情報を必要とする構成をサポートします。 このトピックでは、それらの詳細情報を提供します。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

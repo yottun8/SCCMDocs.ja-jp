@@ -15,9 +15,11 @@ caps.latest.revision: 6
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: b12d4a1592ce4601fa1f0a6cd2a539a3664c0c37
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -27,7 +29,7 @@ ms.openlocfilehash: b12d4a1592ce4601fa1f0a6cd2a539a3664c0c37
 
 このトピックには、System Center Configuration Manager におけるハードウェア インベントリのセキュリティとプライバシーの情報が含まれています。  
 
-##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-hardware-inventory"></a><a name="BKMK_Security_HardwareInventory"></a> ハードウェア インベントリについて推奨するセキュリティ運用方法  
+##  <a name="BKMK_Security_HardwareInventory"></a> ハードウェア インベントリについて推奨するセキュリティ運用方法  
  ここでは、クライアントからハードウェア インベントリを収集するときの、セキュリティのベスト プラクティスについて説明します。  
 
 |セキュリティのベスト プラクティス|説明|  
@@ -48,7 +50,7 @@ ms.openlocfilehash: b12d4a1592ce4601fa1f0a6cd2a539a3664c0c37
 
  既定では、ハードウェア インベントリはクライアント設定として有効になっています。  
 
-##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-hardware-inventory"></a><a name="BKMK_Privacy_HardwareInventory"></a> ハードウェア インベントリに関するプライバシー情報  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> ハードウェア インベントリに関するプライバシー情報  
  ハードウェア インベントリを使うと、Configuration Manager クライアントのレジストリと WMI に格納されているすべての情報を取得できます。 ソフトウェア インベントリにより、クライアントにある指定された種類のすべてのファイルの探索、および指定されたすべてのファイルの収集を行うことができます。 資産インテリジェンスは、ハードウェアおよびソフトウェア インベントリを拡張し、新しいライセンス管理機能を追加することで、インベントリの機能を強化します。  
 
  ハードウェア インベントリは、クライアント設定として既定で有効になっており、収集される WMI 情報は選択するオプションによって決まります。 ソフトウェア インベントリは、既定で有効になっていますが、ファイルは既定では収集されません。 有効にするハードウェア インベントリ レポート クラスを選択することは可能ですが、資産インテリジェンス データ コレクションは自動的に有効化されます。  
@@ -56,9 +58,4 @@ ms.openlocfilehash: b12d4a1592ce4601fa1f0a6cd2a539a3664c0c37
  インベントリ情報がマイクロソフトに送信されることはありません。 インベントリ情報は Configuration Manager データベースに格納されます。 クライアントが HTTPS を使用して管理ポイントに接続する場合、クライアントがサイトに送信するインベントリ データは転送中、暗号化されます。 クライアントが HTTP を使用して管理ポイントに接続する場合は、インベントリの暗号化を有効にするかどうか選択できます。 インベントリ データは、暗号化された形式でデータベースに格納されるわけではありません。 サイトの保守タスクによって削除されるまでに、データベースに情報が保持されます **期限切れのインベントリ履歴の削除** または **期限切れの収集ファイルの削除** 90 日ごとです。 削除間隔は構成できます。  
 
  ハードウェア インベントリ、ソフトウェア インベントリ、ファイル コレクション、または資産インテリジェンス データ コレクションを構成する前に、プライバシー要件について検討してください。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

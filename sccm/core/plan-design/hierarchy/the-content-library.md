@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: d31fecdb71b498864df2bce7403a4290ea9700ae
 ms.openlocfilehash: 0fa9f431c00476d71b2b08f92f914d76636d1a27
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="the-content-library-in-system-center-configuration-manager"></a>System Center Configuration Manager のコンテンツ ライブラリ
@@ -64,9 +66,4 @@ Configuration Manager は、優先順位が最も高いドライブの空き領�
 -   コンテンツ ライブラリが特定のドライブにインストールされないようにするには、コンテンツ ライブラリを作成する前に、**no_sms_on_drive.sms** という名前の空のファイルを作成して、ドライブのルート フォルダーにコピーしておきます。  
 
 -   コンテンツ ライブラリを作成したら、System Center 2012 R2 Configuration Manager Toolkit の **Content Library Transfer ツール**を使用して、コンテンツ ライブラリの場所を管理します。 この Toolkit は、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkId=279566)からダウンロードできます。  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

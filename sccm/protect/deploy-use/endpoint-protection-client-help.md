@@ -15,9 +15,11 @@ caps.latest.revision: 6
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
 ms.openlocfilehash: 212c73fcb947c3b56da6055bf47fe078301ad90d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -59,9 +61,4 @@ Windows Defender の設定を表示するには、PC で `Windows Defender` を�
 ### <a name="see-also"></a>関連項目  
  [Endpoint Protection クライアントのよく寄せられる質問](endpoint-protection-client-faq.md)   
  [Windows Defender または Endpoint Protection クライアントのトラブルシューティング](troubleshoot-endpoint-client.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 584dad7d8b05a2da9f7a66b73028ae99ff1a594f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -29,13 +31,13 @@ ms.openlocfilehash: 584dad7d8b05a2da9f7a66b73028ae99ff1a594f
 
 Windows の新しいバージョンで既存のコンピューターを更新する場合は、次のセクションを参考にします。  
 
-##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> プラン  
+##  <a name="BKMK_Plan"></a> プラン  
 
 -   **インフラストラクチャの要件の計画と実装**  
 
      オペレーティング システムを展開する前に解決しなければならないインフラストラクチャの要件として、Windows ADK、Windows 展開サービス (WDS)、Windows 展開サービス (WDS)、サポートされているハード ディスクの構成などがあります。詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](../plan-design/infrastructure-requirements-for-operating-system-deployment.md)」を参照してください。
 
-##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a> 構成  
+##  <a name="BKMK_Configure"></a> 構成  
 
 1.  **ブート イメージの準備**  
 
@@ -59,7 +61,7 @@ Windows の新しいバージョンで既存のコンピューターを更新す
 
      ネットワーク経由でのオペレーティング システムのインストールを自動化するタスク シーケンスを使用します。 「[オペレーティング システムをインストールするタスク シーケンスの作成](create-a-task-sequence-to-install-an-operating-system.md)」の手順でオペレーティング システムを展開するためのタスク シーケンスを作成します。 選択した展開方法に応じて、タスク シーケンスに追加の考慮事項があります。  
 
-##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a> デプロイ  
+##  <a name="BKMK_Deploy"></a> デプロイ  
 
 -   オペレーティング システムを展開するには、次の展開方法のいずれかを使用します。  
 
@@ -78,9 +80,4 @@ Windows の新しいバージョンで既存のコンピューターを更新す
 -   **タスク シーケンスの展開の監視**  
 
      オペレーティング システムをインストールするために、タスク シーケンスの展開を監視するには、「[オペレーティング システムの展開の監視](monitor-operating-system-deployments.md)」を参照してください。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

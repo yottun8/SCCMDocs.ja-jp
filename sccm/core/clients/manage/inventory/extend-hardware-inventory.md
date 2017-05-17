@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
 ms.openlocfilehash: 80d5a13ea5d40150ddd537251e837083e649ac52
+ms.contentlocale: ja-jp
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -52,7 +54,7 @@ Configuration.mof ファイルは、クライアント上でハードウェア �
 ## <a name="procedures-to-extend-hardware-inventory"></a>ハードウェア インベントリを拡張する手順  
 この手順に従うと、ハードウェア インベントリに既定のクライアント設定を構成して、これらの設定を階層内のすべてのクライアントに適用できます。 これらの設定を一部のクライアントにのみ適用するには、カスタム クライアント デバイス設定を作成して、特定のクライアントのコレクションに割り当てます。 「[System Center Configuration Manager でクライアント設定を構成する方法](../../../../core/clients/deploy/configure-client-settings.md)」を参照してください。  
 
-###  <a name="a-namebkmkenablea-to-enable-or-disable-existing-inventory-classes"></a><a name="BKMK_Enable"></a> 既存のインベントリ クラスを有効または無効にするには  
+###  <a name="BKMK_Enable"></a> 既存のインベントリ クラスを有効または無効にするには  
 
 1.  Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** > **[既定のクライアント設定]** の順に選択します。  
 
@@ -68,7 +70,7 @@ Configuration.mof ファイルは、クライアント上でハードウェア �
     >  構成マネージャー ハードウェア インベントリに新しいクラスを追加すると、収集されてサイト サーバーに送信されるインベントリ ファイルのサイズが大きくなります。 そのため、ネットワークと Configuration Manager サイトのパフォーマンスが低下する可能性があります。 収集するインベントリ クラスのみ有効にしてください。  
 
 
-###  <a name="a-namebkmkadda-to-add-a-new-inventory-class"></a><a name="BKMK_Add"></a> 新しいインベントリ クラスを追加するには  
+###  <a name="BKMK_Add"></a> 新しいインベントリ クラスを追加するには  
 
 インベントリ クラスは、既定のクライアント設定を変更して、階層内の最上位のサーバーからのみ追加できます。 このオプションは、カスタム デバイス設定を作成する場合は使用できません。
 
@@ -101,7 +103,7 @@ Configuration.mof ファイルは、クライアント上でハードウェア �
      プロパティの構成が終了したら、**[OK]** をクリックして **[クラスの修飾子]** ダイアログ ボックスとその他の開いているダイアログを閉じます。 
 
 
-###  <a name="a-namebkmkimporta-to-import-hardware-inventory-classes"></a><a name="BKMK_Import"></a> ハードウェア インベントリ クラスをインポートするには  
+###  <a name="BKMK_Import"></a> ハードウェア インベントリ クラスをインポートするには  
 
 既定のクライアント設定を変更している場合は、インベントリ クラスのみインポートできます。 ただし、カスタム クライアント設定を使用して、[True **** ] から [False ****] への既存のクラスのプロパティの変更などの、スキーマ変更が含まれていない情報をインポートできます。  
 
@@ -117,7 +119,7 @@ Configuration.mof ファイルは、クライアント上でハードウェア �
 
 8.  **[インポート]** ダイアログ ボックスで、インポートする管理オブジェクト フォーマット (MOF) ファイルを選択し、**[OK]** を選択します。 インポートされる項目を確認したら、**[インポート]** をクリックします。  
 
-###  <a name="a-namebkmkexporta-to-export-hardware-inventory-classes"></a><a name="BKMK_Export"></a> ハードウェア インベントリ クラスをエクスポートするには  
+###  <a name="BKMK_Export"></a> ハードウェア インベントリ クラスをエクスポートするには  
 
 1.  Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** > **[既定のクライアント設定]** の順に選択します。  
 
@@ -140,7 +142,7 @@ Configuration.mof ファイルは、クライアント上でハードウェア �
 > [!IMPORTANT]  
 >  MIF ファイルの情報を Configuration Manager データベースに追加する前に、そのクラス情報を作成またはインポートする必要があります。 詳細については、このトピックの「 [新しいインベントリ クラスを追加するには](#BKMK_Add) 」セクションと「 [ハードウェア インベントリ クラスをインポートするには](#BKMK_Import) 」セクションを参照してください。  
 
-###  <a name="a-namebkmknoidmifa-to-create-noidmif-files"></a><a name="BKMK_NOIDMIF"></a> NOIDMIF ファイルを作成するには  
+###  <a name="BKMK_NOIDMIF"></a> NOIDMIF ファイルを作成するには  
  NOIDMIF ファイルを使用すると、Configuration Manager では通常収集できない、特定のクライアント デバイスに関連付けられている情報をクライアント ハードウェア インベントリに追加できます。 たとえば、多くの企業では、組織内の各コンピューターに資産番号を示すラベルを付けてから、これらを手動でカタログ化しています。 NOIDMIF ファイルを作成すると、この情報を Configuration Manager データベースに追加してクエリやレポートに使用できます。 NOIDMIF ファイルの作成の詳細については、Configuration Manager の SDK ドキュメントをご覧ください。  
 
 > [!IMPORTANT]  
@@ -148,16 +150,11 @@ Configuration.mof ファイルは、クライアント上でハードウェア �
 
  NOIDMIF ファイルを作成したら、各クライアントの *%Windir%***\System32\CCM\Inventory\Noidmifs** フォルダーに保存します。 Configuration Manager は、次回のスケジュールされたハードウェア インベントリ サイクル中に、このフォルダーの NODMIF ファイルから情報を収集します。  
 
-###  <a name="a-namebkmkidmifa-to-create-idmif-files"></a><a name="BKMK_IDMIF"></a> IDMIF ファイルを作成するには  
+###  <a name="BKMK_IDMIF"></a> IDMIF ファイルを作成するには  
  IDMIF ファイルを使用すると、Configuration Manager では通常インベントリできない、特定のクライアント デバイスに関連付けられていない資産に関する情報を Configuration Manager データベースに追加できます。 たとえば、IDMIFS を使用して、プロジェクター、DVD プレーヤー、複写機、または構成マネージャー クライアントが含まれていないその他の機器に関する情報を収集できます。 IDMIF ファイルの作成の詳細については、Configuration Manager の SDK ドキュメントをご覧ください。  
 
  IDMIF ファイルを作成したら、クライアント コンピューターの *%Windir%***\System32\CCM\Inventory\Idmifs** フォルダーに保存します。 Configuration Manager は、次回のスケジュールされたハードウェア インベントリ サイクル中に、このファイルから情報を収集します。 クラスを追加またはインポートして、ファイルに含まれる情報の新しいクラスを宣言する必要があります。  
 
 > [!NOTE]
 > MIF ファイルは大量のデータを格納することができ、このデータを収集するのはサイトのパフォーマンスに悪影響を与える場合があります。 MIF コレクションは必要なときだけ有効化し、ハードウェア インベントリ設定の **[カスタム MIF ファイルの最大サイズ (KB)]** オプションを構成します。 詳細については、「[System Center Configuration Manager のハードウェア インベントリの概要](introduction-to-hardware-inventory.md)」をご覧ください。
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

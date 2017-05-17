@@ -15,9 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 860815010068422f2d8854ed2d574c24cc386891
 ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>System Center Configuration Manager の探索方法を構成する
@@ -44,7 +46,7 @@ ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
 4.  **[OK]** をクリックして構成を保存します。  
 
 
-##  <a name="a-namebkmkconfigadforestdisca-configure-active-directory-forest-discovery"></a><a name="BKMK_ConfigADForestDisc"></a> Active Directory フォレストの探索の構成  
+##  <a name="BKMK_ConfigADForestDisc"></a> Active Directory フォレストの探索の構成  
 Active Directory フォレストの探索の構成を完了するには、次の&2; つの場所で設定を構成する必要があります。  
 
 -   **[探索方法]** ノードで、次の操作を行います。
@@ -98,7 +100,7 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
 
 4.  このフォレストを Active Directory フォレストの探索で使用するための構成が完了したら、**[OK]** をクリックして構成を保存します。  
 
-##  <a name="a-namebkmkconfigaddiscgenerala-configure-active-directory-discovery-for-computers-users-or-groups"></a><a name="BKMK_ConfigADDiscGeneral"></a> Active Directory のコンピューター、ユーザー、またはグループの探索の構成  
+##  <a name="BKMK_ConfigADDiscGeneral"></a> Active Directory のコンピューター、ユーザー、またはグループの探索の構成  
  次のセクションの情報を参照して、コンピューター、ユーザー、またはグループの探索を構成します。 次の探索方法を使用します。  
 
 -   Active Directory グループの探索  
@@ -210,7 +212,7 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
 
 8.  このサイトの Active Directory ユーザー探索の構成が完了したら、**[OK]** をクリックして構成を保存します。  
 
-##  <a name="a-namebkmkconfighbdisca-configure-heartbeat-discovery"></a><a name="BKMK_ConfigHBDisc"></a> 定期探索の構成  
+##  <a name="BKMK_ConfigHBDisc"></a> 定期探索の構成  
  既定では、定期探索は、Configuration Manager プライマリ サイトをインストールすると有効になります。 そのため、初期設定の&7; 日おきを利用しない場合のみ、管理ポイントにクライアントが定期探索データ レコードを送信する頻度を指定するスケジュールを構成する必要があります。  
 
 > [!NOTE]  
@@ -226,10 +228,10 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
 
 4.  クライアントが定期探索データ レコードを送信する頻度を構成し、**[OK]** をクリックして構成を保存します。  
 
-##  <a name="a-namebkmkconfignetworkdisca-configure-network-discovery"></a><a name="BKMK_ConfigNetworkDisc"></a> ネットワーク探索の構成  
+##  <a name="BKMK_ConfigNetworkDisc"></a> ネットワーク探索の構成  
  ネットワーク探索を構成するときに、次のセクションの情報を参照してください。  
 
-###  <a name="a-namebkmkaboutconfignetworkdisca-about-configuring-network-discovery"></a><a name="BKMK_AboutConfigNetworkDisc"></a> ネットワーク探索の構成について  
+###  <a name="BKMK_AboutConfigNetworkDisc"></a> ネットワーク探索の構成について  
  ネットワーク探索を構成する前に、次のことを把握しておく必要があります。  
 
 -   利用可能なレベルのネットワーク探索  
@@ -244,14 +246,14 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
 
  たとえば、特定の SNMP コミュニティ名を使用するすべての簡易ネットワーク管理プロトコル (SNMP) デバイスを探索することが必要な場合があります。 また、同じ探索を実行する際に、特定のサブネットで探索を無効にする場合があります。 探索の実行時に、ネットワーク探索では、無効になっているサブネットで指定のコミュニティ名を持つ SNMP デバイスは探索されません。  
 
-####  <a name="a-namebkmkdeterminenettopologya-determine-your-network-topology"></a><a name="BKMK_DetermineNetTopology"></a> ネットワーク トポロジの確認  
+####  <a name="BKMK_DetermineNetTopology"></a> ネットワーク トポロジの確認  
  トポロジのみの探索を使用してネットワークをマップできます。 この種の探索では、存在する可能性があるクライアントは探索されません。 トポロジのみのネットワーク探索では、SNMP が使用されます。  
 
  ネットワーク トポロジをマップする場合、**[ネットワーク探索のプロパティ]** ダイアログ ボックスの **[SNMP]** タブで、**[最大ホップ数]** を構成する必要があります。 わずか数ホップで、探索の実行時に使用されるネットワーク帯域幅を制御できます。 探索するネットワークが増えるにつれて、ホップ数を増やすと、ネットワーク トポロジをさらに把握できるようになります。  
 
  ネットワーク トポロジを把握したら、利用可能な構成を使用してネットワーク探索で検索するネットワーク セグメントを制限しながら、存在する可能性があるクライアントおよびそれらのクライアントのオペレーティング システムを検出するように、ネットワーク探索の追加のプロパティを構成できます。  
 
-####  <a name="a-namebkmklimitbysubneta-limit-searches-by-using-subnets"></a><a name="BKMK_LimitBySubnet"></a> サブネットを使用した検索の制限  
+####  <a name="BKMK_LimitBySubnet"></a> サブネットを使用した検索の制限  
  探索の実行中に特定のサブネットを検索するように、ネットワーク探索を構成できます。 既定では、ネットワーク探索では、探索を実行しているサーバーのサブネットが検索されます。 構成して有効にした追加のサブネットは、SNMP 検索オプションおよび動的ホスト構成プロトコル (DHCP) 検索オプションにのみ適用されます。 ネットワーク探索でドメインを検索する場合、サブネットの構成によって検索が制限されることはありません。  
 
  [ **ネットワーク探索のプロパティ** ]  ダイアログ ボックスの [ **サブネット** ] タブで、1 つまたは複数のサブネットを指定する場合、[ **有効** ] とマークされているサブネットのみが検索されます。  
@@ -264,7 +266,7 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
 
 -   ドメイン ベースのクエリで、そのサブネットに配置されたリソースを探索できます。  
 
-####  <a name="a-namebkmksearchbydomaina-search-a-specific-domain"></a><a name="BKMK_SearchByDomain"></a> 特定のドメインの検索  
+####  <a name="BKMK_SearchByDomain"></a> 特定のドメインの検索  
  探索の実行中に特定ドメインまたはドメインのセットを検索するように、ネットワーク探索を構成できます。 既定では、ネットワーク探索では、探索を実行しているサーバーのローカル ドメインが検索されます。  
 
  [ **ネットワーク探索のプロパティ** ]  ダイアログ ボックスの [ **ドメイン** ] タブで、1 つまたは複数のドメインを指定する場合、[ **有効** ] とマークされているドメインのみが検索されます。  
@@ -277,7 +279,7 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
 
 -   DHCP サーバーは、そのドメイン内に配置されたリソースの一覧で引き続き応答できます。  
 
-####  <a name="a-namebkmklimitbysnmpnamea-limit-searches-by-using-snmp-community-names"></a><a name="BKMK_LimitBySNMPname"></a> SNMP コミュニティ名を使用した検索の制限  
+####  <a name="BKMK_LimitBySNMPname"></a> SNMP コミュニティ名を使用した検索の制限  
  探索の実行中に特定の SNMP コミュニティまたはコミュニティのセットを検索するように、ネットワーク探索を構成できます。 既定では、コミュニティ名 [public] を使用するように構成されています。 ****  
 
  ネットワーク探索は、コミュニティ名を使用して、SNMP デバイスになっているルーターへのアクセスを取得します。 ルーターは、最初のルーターにリンクされている他のルーターやサブネットに関する情報をネットワーク探索に提供できます。  
@@ -290,7 +292,7 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
 > [!NOTE]  
 >  SNMP コミュニティ名を使用できるだけでなく、特定の SNMP デバイスの IP アドレスまたは解決可能な名前も指定できます。 これは、**［ネットワーク探索のプロパティ］**ダイアログ ボックスの **［SNMP デバイス］**タブで行います。  
 
-####  <a name="a-namebkmksearchbydhcpa-search-a-specific-dhcp-server"></a><a name="BKMK_SearchByDHCP"></a> 特定の DHCP サーバーの検索  
+####  <a name="BKMK_SearchByDHCP"></a> 特定の DHCP サーバーの検索  
  特定の DHCP サーバーまたは複数のサーバーを使用して探索の実行中に DHCP クライアントを探索するように、ネットワーク探索を構成できます。  
 
  ネットワーク探索は、[ **ネットワーク探索のプロパティ** ] ダイアログ ボックスの [ **DHCP** ] タブで指定する各 DHCP サーバーを検索します。 探索を実行しているサーバーが DHCP サーバーから IP アドレスをリースしている場合、**[サイト サーバーで使用するように構成されている DHCP サーバーを含める]** チェック ボックスをオンにして、その DHCP サーバーを検索するように探索を構成できます。  
@@ -298,7 +300,7 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
 > [!NOTE]  
 >  ネットワーク探索時に使用する DHCP サーバーを構成するには、環境で IPv4 をサポートしている必要があります。 ネイティブの IPv6 環境で、ネットワーク探索時に使用する DHCP サーバーを構成することはできません。  
 
-###  <a name="a-namebkmkhowtoconfignetdisca-how-to-configure-network-discovery"></a><a name="BKMK_HowToConfigNetDisc"></a> ネットワーク探索の構成方法  
+###  <a name="BKMK_HowToConfigNetDisc"></a> ネットワーク探索の構成方法  
  次の手順に従って、まずネットワーク トポロジのみ探索します。次に、1 つまたは複数の使用可能なネットワーク探索オプションを使用して、存在する可能性があるクライアントを探索するようにネットワーク探索を構成します。  
 
 ##### <a name="to-determine-your-network-topology"></a>ネットワークのトポロジを決定するには  
@@ -407,7 +409,7 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
 
 12. **[OK]** をクリックして構成を保存します。  
 
-###  <a name="a-namebkmkhowtoverifynetdisca-how-to-verify-that-network-discovery-has-finished"></a><a name="BKMK_HowToVerifyNetDisc"></a> ネットワーク探索の終了を確認する方法  
+###  <a name="BKMK_HowToVerifyNetDisc"></a> ネットワーク探索の終了を確認する方法  
  ネットワーク検索が完了するのに必要な時間は、さまざまな要因によって異なります。 この要因としては、次のうちのいずれかまたは複数が該当する可能性があります。  
 
 -   ネットワークの規模  
@@ -454,9 +456,4 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
     -   説明: **このコンポーネントが開始しました。**  
 
     この情報は、ネットワーク探索が開始したことを確認するものです。 この情報が表示されない場合は、ネットワーク探索のスケジュールを変更します。  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

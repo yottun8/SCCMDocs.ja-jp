@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: e592a732259147ee71d404a68982c28e5138e243
 ms.openlocfilehash: 0e982d08d54af39b13f553fc531a200f921e94a6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>System Center Configuration Manager でコンテンツへのアクセスを管理する
@@ -34,7 +36,7 @@ System Center Configuration Manager でコンテンツを展開する前に、�
 
 -   **マルチキャスト接続アカウント**: オペレーティング システムの展開に使用します。  
 
-##  <a name="a-namebkmknaaa-network-access-account"></a><a name="bkmk_NAA"></a> ネットワーク アクセス アカウント  
+##  <a name="bkmk_NAA"></a> ネットワーク アクセス アカウント  
  ネットワーク アクセス アカウントは、クライアント コンピューターが、そのローカルのコンピューター アカウントで配布ポイントのコンテンツにアクセスできない場合に使用します。 たとえば、このアカウントは、ワークグループ クライアントや信頼されていないドメインのコンピューターに適用されます。 このアカウントは、オペレーティング システムの展開中に、オペレーティング システムをインストールするコンピューターにドメインのコンピューター アカウントがない場合にも使用されます。  
 
 -   クライアントでは、ネットワーク上のリソースにアクセスする場合のみネットワーク アクセス アカウントが使用されます。  
@@ -66,7 +68,7 @@ System Center Configuration Manager でコンテンツを展開する前に、�
 
 3.  **[ネットワーク アクセス アカウント]** タブを選択します。 1 つまたは複数のアカウントを設定して、**[OK]** を選択します。  
 
-##  <a name="a-namebkmkpaaa-package-access-accounts"></a><a name="bkmk_Paa"></a> パッケージ アクセス アカウント  
+##  <a name="bkmk_Paa"></a> パッケージ アクセス アカウント  
  パッケージ アクセス アカウントを使用すると、NTFS ファイル システムのアクセス許可を設定して、配布ポイントのパッケージ コンテンツにアクセスできるユーザーおよびユーザー グループを指定することができます。 既定では、汎用の**ユーザー** アカウントと**管理者**アカウントにのみ、Configuration Manager によってアクセス権が付与されます。 その他の Windows アカウントや Windows グループを使用してクライアント コンピューターのアクセスを制御することもできます。 パッケージ アクセス アカウントは、モバイル デバイスでは使用されません。モバイル デバイスでは常に、パッケージのコンテンツが匿名で取得されます。  
 
  既定では、Configuration Manager がパッケージ内のコンテンツ ファイルを配布ポイントにコピーするときに、ローカルの **Users** グループに**読み取り**アクセスを、ローカルの **Administrators** グループに**フル コントロール**を許可します。 実際にどのようなアクセス許可が必要になるかはパッケージによって異なります。 クライアントがワークグループや信頼されていないフォレストに含まれている場合は、そのクライアントはネットワーク アクセス アカウントを使用してパッケージ コンテンツにアクセスします。 定義されたパッケージ アクセス アカウントを使用して、パッケージに対するアクセス許可がネットワーク アクセス アカウントにあることを確認してください。  
@@ -102,7 +104,7 @@ System Center Configuration Manager でコンテンツを展開する前に、�
     > [!NOTE]  
     >  アカウントのユーザー名を追加したときに Configuration Manager が同じ名前のローカル ユーザー アカウントとドメイン ユーザー アカウントを検出した場合、Configuration Manager は、ローカル ユーザー アカウントのアクセス権を設定します。  
 
-##  <a name="a-namebkmkmultia-multicast-connection-account"></a><a name="bkmk_multi"></a> マルチキャスト接続アカウント  
+##  <a name="bkmk_multi"></a> マルチキャスト接続アカウント  
  マルチキャスト接続アカウントは、サイト データベースから情報を読み取るために、マルチキャスト用に設定されている配布ポイントで使用されます。  
 
 -   マルチキャストの Configuration Manager データベース接続を設定するときに使用するアカウントを指定します。  
@@ -119,9 +121,4 @@ System Center Configuration Manager でコンテンツを展開する前に、�
 
 > [!IMPORTANT]  
 >  このアカウントに対話型サインイン権限を付与しないでください。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

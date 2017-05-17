@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 88649111ea3a38c027efb4952211546afd0bf27e
 ms.openlocfilehash: 58beef440db8e019a06ce7c4c8eaabc8e85ce954
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -110,9 +112,4 @@ Configuration Manager のスキーマを拡張するには
  コンテナーを設定してアクセス許可を付与し、Configuration Manager プライマリ サイトをインストールした後、Active Directory にデータを発行するようにそのサイトを設定できます。  
 
  発行の詳細については、「[System Center Configuration Manager のサイト データの発行](../../../core/servers/deploy/configure/publish-site-data.md)」をご覧ください。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

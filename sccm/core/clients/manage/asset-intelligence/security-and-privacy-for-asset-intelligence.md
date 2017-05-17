@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: d577a16725c2b167d1ff9f77096018433a2fa580
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,7 +30,7 @@ ms.openlocfilehash: d577a16725c2b167d1ff9f77096018433a2fa580
 
 このトピックには、System Center Configuration Manager の資産インテリジェンスのセキュリティとプライバシーの情報が含まれています。  
 
-##  <a name="a-namebkmksecurityaia-security-best-practices-for-asset-intelligence"></a><a name="BKMK_Security_AI"></a> 資産インテリジェンスに関するセキュリティのベスト プラクティス  
+##  <a name="BKMK_Security_AI"></a> 資産インテリジェンスに関するセキュリティのベスト プラクティス  
  資産インテリジェンスを使用する場合は、次のセキュリティ上のベスト プラクティスに従ってください。  
 
 |セキュリティのベスト プラクティス|説明|  
@@ -36,7 +38,7 @@ ms.openlocfilehash: d577a16725c2b167d1ff9f77096018433a2fa580
 |ライセンス ファイル (マイクロソフト ボリューム ライセンス ファイル、または一般的なライセンス ステートメント ファイル) をインポートするときは、ファイルと通信チャネルをセキュリティ保護してください。|NTFS ファイルシステムの権限を使って、許可されたユーザーだけがライセンス ファイルにアクセスできるようにします。また、サーバー メッセージ ブロック (SMB) の署名によって、インポートの過程でサイト サーバーに転送されるとき、データの整合性を保つようにします。|  
 |ライセンスのインポートでは最小限の特権という原則を使用してください。|役割に基づいた管理を行って、資産インテリジェンスの管理権限を、ライセンス ファイルをインポートする管理者に付与します。 資産管理者の組み込みロールには次の権限が含まれます。|  
 
-##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-asset-intelligence"></a><a name="BKMK_Privacy_HardwareInventory"></a> 資産インテリジェンスに関するプライバシー情報  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> 資産インテリジェンスに関するプライバシー情報  
  資産インテリジェンスは、企業の資産をより高いレベルから表示するように Configuration Manager のインベントリ機能を拡張します。 資産インテリジェンス情報コレクションは自動で有効化されません。 収集される情報の種類は、ハードウェア インベントリ レポート クラスを有効にすると変更できます。 詳細については、「[System Center Configuration Manager での資産インテリジェンスの構成](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)」を参照してください。  
 
  資産インテリジェンス情報は、インベントリ情報と同じ方法で Configuration Manager データベースに保存されます。 HTTPS を使用してクライアントが管理ポイントに接続するときは、データは管理ポイントへの転送中必ず暗号化されます。 HTTP を使用してクライアントが接続するときは、インベントリ データの転送に署名して暗号化するよう構成することができます。 インベントリ データは、暗号化された形式でデータベースに格納されるわけではありません。 情報は、90 日ごとに実行されるサイトのメンテナンス タスク [期限切れのインベントリ履歴の削除] によって削除されるまでデータベースに保持されます。 **** 削除間隔は構成できます。  
@@ -58,9 +60,4 @@ ms.openlocfilehash: d577a16725c2b167d1ff9f77096018433a2fa580
 -   アップロードされたデータを取り消すことはできません。  
 
  資産インテリジェンス データ コレクションを構成して情報を System Center Online に送信するかどうかを判断する前に、所属組織のプライバシー要件を考慮してください。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

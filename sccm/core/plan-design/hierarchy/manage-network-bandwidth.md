@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 37e4f27fcea0bbdd39c9fd3ab38aa46e3059f73a
 ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -26,7 +28,7 @@ ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
 # <a name="manage-network-bandwidth-for-content"></a>コンテンツのネットワーク帯域幅の管理
 System Center Configuration Manager のコンテンツ管理プロセスに使用されるネットワーク帯域幅を効率よく利用するために、組み込みの制御機構を使用してスケジューリングと帯域幅調整を行うことができます。 事前設定されたコンテンツを使用することもできます。 以降のセクションでは、これらの方法について詳しく説明します。
 
-##  <a name="a-namebkmkplanningforthrottlingascheduling-and-throttling"></a><a name="BKMK_PlanningForThrottling"></a>スケジュールと調整  
+##  <a name="BKMK_PlanningForThrottling"></a>スケジュールと調整  
 
  パッケージの作成、コンテンツのソース パスの変更、または配布ポイントのコンテンツの更新を行うと、ファイルがソース パスからサイト サーバー上のコンテンツ ライブラリにコピーされます。 その後、コンテンツはサイト サーバー上のコンテンツ ライブラリから配布ポイント上のコンテンツ ライブラリにコピーされます。 コンテンツのソース ファイルが更新され、ソース ファイルが既に配布されている場合、Configuration Manager は新しいファイルまたは更新されたファイルのみを取得して、配布ポイントに送信します。
 
@@ -41,7 +43,7 @@ System Center Configuration Manager のコンテンツ管理プロセスに使�
 
 詳細については、「[System Center Configuration Manager の配布ポイントのインストールと構成](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points)」を参照してください。  
 
-##  <a name="a-namebkmkprestagingcontentaprestaged-content"></a><a name="BKMK_PrestagingContent"></a>事前設定されたコンテンツ  
+##  <a name="BKMK_PrestagingContent"></a>事前設定されたコンテンツ  
  コンテンツを配布する前に、サイト サーバーのコンテンツ ライブラリまたは配布ポイントにコンテンツ ファイルを追加するための事前設定をすることができます。 コンテンツ ファイルは既にコンテンツ ライブラリに格納されているため、コンテンツを配布するときにネットワークを介してファイルが転送されることはありません。 アプリケーションおよびパッケージ用にコンテンツ ファイルを事前設定することができます。  
 
 Configuration Manager コンソールで、事前設定するコンテンツを選択し、**事前設定コンテンツ ファイルの作成ウィザード**を使用します。 そのコンテンツのファイルや関連するメタデータが格納された、圧縮された事前設定コンテンツ ファイルがこのウィザードによって作成されます。 次に、サイト サーバーまたは配布ポイントで、コンテンツを手動でインポートすることができます。 次の点に注意してください。  
@@ -58,7 +60,7 @@ Configuration Manager コンソールで、事前設定するコンテンツを�
 
 -   パッケージのコンテンツに対して、常に標準のコンテンツ配布プロセスを使用する。  
 
-###  <a name="a-namebkmkdeterminetoprestagecontentadetermine-whether-to-prestage-content"></a><a name="BKMK_DetermineToPrestageContent"></a>コンテンツを事前設定するかどうかの判断  
+###  <a name="BKMK_DetermineToPrestageContent"></a>コンテンツを事前設定するかどうかの判断  
  次のような場合は、アプリケーションおよびパッケージのコンテンツを事前設定することを検討してください。  
 
 -   **サイト サーバーから配布ポイントへのネットワーク帯域幅不足の問題を解決する。** スケジューリングと帯域幅調整だけでは帯域幅の問題が解消されないおそれがある場合は、配布ポイントにコンテンツを事前設定することを検討してください。 各配布ポイントには、配布ポイントのプロパティで選択できる **[事前設定されたコンテンツ用にこの配布ポイントを有効にする]** 設定があります。 このオプションを有効にすると、配布ポイントは事前設定された配布ポイントとして識別され、パッケージごとにコンテンツを管理する方法を選択できます。  
@@ -75,9 +77,4 @@ Configuration Manager コンソールで、事前設定するコンテンツを�
     >  上記のオプションは、パッケージごとに適用でき、配布ポイントにコンテンツが事前設定されている場合だけ使用されます。 事前設定されていない配布ポイントでは、上記の設定が無視されます。 この場合は、コンテンツがサイト サーバーから配布ポイントにネットワーク経由で配付されます。  
 
 -   **サイト サーバーのコンテンツ ライブラリを復元する。** サイト サーバーで障害が発生した場合に、コンテンツ ライブラリに含まれているパッケージとアプリケーションに関する情報は復元処理の一部でサイト データベースに復元されますが、コンテンツ ライブラリ ファイルは復元されません。 コンテンツ ライブラリを復元するためのファイル システム バックアップがない場合は、必要なパッケージおよびアプリケーションがある別のサイトから事前設定のコンテンツ ファイルを作成して、 回復したサイト サーバーに展開できます。 サイト サーバーのバックアップおよび回復の詳細については、[System Center Configuration Manager のバックアップと回復](/sccm/protect/understand/backup-and-recovery)に関するページを参照してください。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

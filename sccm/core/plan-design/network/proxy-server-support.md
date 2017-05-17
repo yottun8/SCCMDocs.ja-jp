@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: c4f30e4839709722b216262b21d7b51c07d24d1e
 ms.openlocfilehash: dc36be47310d2c2178c974a2b503d0b5f9f6e2ec
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -85,9 +87,4 @@ Microsoft Azure のクラウドベースの配布ポイントでは、プロキ�
 3.  [サイト システムのプロパティ] で **[プロキシ]** タブを選択し、そのプライマリ サイト サーバーのプロキシ設定を構成します。  
 
 4.  **[OK]** をクリックして新しいプロキシ サーバー構成を保存します。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

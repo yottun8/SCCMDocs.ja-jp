@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -37,7 +39,7 @@ ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
  以下のセクションを参照して、ユーザー データをキャプチャして復元してください。
 
 
-##  <a name="a-namebkmkstoringuserdataa-store-user-state-data"></a><a name="BKMK_StoringUserData"></a> ユーザー状態データの保存  
+##  <a name="BKMK_StoringUserData"></a> ユーザー状態データの保存  
  ユーザー状態をキャプチャするとき、セットアップ先のコンピューターまたは状態移行ポイントにユーザー状態データを保存できます。 ユーザー状態移行ポイント上にユーザー状態を保存するには、状態移行ポイント サイト システムの役割をホストする Configuration Manager サイト システム サーバーを使用する必要があります。 展開先コンピューター上にユーザー状態を保存するには、タスク シーケンスを構成し、リンクを使用してローカルにデータを保存する必要があります。  
 
 > [!NOTE]  
@@ -54,7 +56,7 @@ ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
 
 -   ユーザー データを元の場所に復元するために使用するハード リンクを指定できます。 このシナリオでは、古いオペレーティング システムが消去されてもユーザー状態データはドライブに保持されます。 そして、新しいオペレーティング システムが展開された後、 **復元** のタスク シーケンスがハードリンクを使用して、元の場所にユーザー状態データを復元します。  
 
-###  <a name="a-namebkmkuserdatasmpa-store-user-data-on-a-state-migration-point"></a><a name="BKMK_UserDataSMP"></a> 状態移行ポイントにユーザー状態データを保存する  
+###  <a name="BKMK_UserDataSMP"></a> 状態移行ポイントにユーザー状態データを保存する  
  状態移行ポイントにユーザー状態データを保存するには、次の操作を行う必要があります。  
 
 1.  ユーザー状態データを保存するために、[Configure a state migration point](#BKMK_StateMigrationPoint) 。  
@@ -71,7 +73,7 @@ ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
 
     -   [状態ストアのリリース](../understand/task-sequence-steps.md#BKMK_ReleaseStateStore)で、キャプチャ アクションまたは復元アクションが完了した状態移行ポイントを通知します。  
 
-###  <a name="a-namebkmkuserdatadestinationa-store-user-data-locally"></a><a name="BKMK_UserDataDestination"></a> ユーザー データをローカルに保存する  
+###  <a name="BKMK_UserDataDestination"></a> ユーザー データをローカルに保存する  
  ユーザー状態データをローカルに保存するには、次の操作を行う必要があります。  
 
 -   [ユーザー状態をキャプチャおよび復元するタスク シーケンスの作成](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)。 具体的には、コンピューターからユーザー データをキャプチャし、ハードリンクを使用してユーザー データをコンピューターに復元するために、次のタスク シーケンスのステップを追加する必要があります。  
@@ -83,7 +85,7 @@ ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
         > [!NOTE]  
         >  タスク シーケンスが古いオペレーティング システムを削除した後、ハードリンクが参照するユーザー状態データがコンピューターに残ります。 新しいオペレーティング システムが展開される際、このデータを使用してユーザー状態を復元します。  
 
-##  <a name="a-namebkmkstatemigrationpointa-configure-a-state-migration-point"></a><a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
+##  <a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
  状態移行ポイントには、あるコンピューターでキャプチャされて別のコンピューターで復元されるユーザー状態データが保存されます。 ただし、セットアップ先のコンピューターでオペレーティング システムを更新する展開など、同じコンピューター上のオペレーティング システム展開のユーザー設定をキャプチャする場合、データは、ハードリンクを使用して同じコンピューターに保存したり、状態移行ポイントに保存したりすることができます。 一部のコンピューター展開では、状態ストアを作成すると、Configuration Manager によって状態ストアと対象コンピューターの関連付けが自動的に作成されます。 次の方法を使用して、ユーザー移行ポイントがユーザー状態データを保存するように構成できます。  
 
 -   サイト システム サーバーの作成ウィザードを使用して、状態移行ポイント用の新しいサイト システム サーバーを作成します。 ****  
@@ -104,7 +106,7 @@ ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
 
  状態移行ポイントおよびそれを構成する手順の詳細については、「[State migration point](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)」 (状態移行ポイント) を参照してください。  
 
-##  <a name="a-namebkmkcomputerassociationa-create-a-computer-association"></a><a name="BKMK_ComputerAssociation"></a> Create a computer association  
+##  <a name="BKMK_ComputerAssociation"></a> Create a computer association  
  新しいハードウェアにオペレーティング システムをインストールするときに、ユーザー データの設定をキャプチャおよび復元する場合は、ソース コンピューターとセットアップ先のコンピューターの間の関係を定義するために、コンピューターの関連付けを作成します。 ソース コンピューターは、Configuration Manager で管理される既存のコンピューターです。 新しいオペレーティング システムを展開先コンピューターに展開する際、ソース コンピューターには、展開先コンピューターに移行されるユーザー状態が含まれます。  
 
 > [!NOTE]  
@@ -128,11 +130,6 @@ ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
 
     -   **特定のユーザー アカウントをキャプチャして復元する**: この設定は、指定したアカウントのみをキャプチャして復元します。 この設定を選択するときには、同じソース コンピューターに対する複数の関連付けを作成できません。  
 
-##  <a name="a-namebkmkmigrationfailsa-restore-user-state-data-when-an-operating-system-deployment-fails"></a><a name="BKMK_MigrationFails"></a> オペレーティング システムの展開が失敗したときにユーザー状態データを復元する  
+##  <a name="BKMK_MigrationFails"></a> オペレーティング システムの展開が失敗したときにユーザー状態データを復元する  
  オペレーティング システムの展開が失敗する場合、USMT 10.0 LoadState 機能を使用して、展開プロセス中にキャプチャされたユーザー状態データを取得します。 このデータには、状態移行ポイントに保存されているデータや、移行先コンピューターのローカルに保存されているデータが含まれます。 この USMT 機能の詳細については、「 [LoadState 構文](https://technet.microsoft.com/library/mt299188\(v=vs.85\).aspx)」をご覧ください。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

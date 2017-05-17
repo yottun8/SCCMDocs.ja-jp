@@ -17,9 +17,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 7479e54b5db2eff893bf9fbaf52c104836cda519
 ms.openlocfilehash: 5b5540c35c02df6e3d06e4aa9269b8da3238233e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -149,9 +151,4 @@ System Center Configuration Manager のスキーマを拡張すると、次の�
 > -   クラス: cn=MS-SMS-Server-Locator-Point  
 
 上記のリストが最新のものであることをご確認ください。そのためには、System Center Configuration Manager インストール メディアの **\SMSSETUP\BIN\x64** フォルダーから **ConfigMgr_ad_schema.LDF** ファイルを確認します。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: a543b945c4727540faa064c068b175ef63cb5a4b
+ms.contentlocale: ja-jp
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -55,9 +57,4 @@ System Center Configuration Manager のハードウェア インベントリを�
 - IDMIF ファイルは、プロジェクター、複写機、ネットワーク プリンターなどの、構成マネージャー クライアントに関連付けられていない資産に関する情報を収集するために使用します。  
 
  これらの方法を使用して Configuration Manager ハードウェア インベントリを拡張する方法については、「[How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md)」(System Center Configuration Manager でハードウェア インベントリを構成する方法) を参照してください。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: ab2ecb64c9c80b4effed79ba08769c99473db0c4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -300,9 +302,4 @@ Configuration Manager の各バージョンが、Windows アセスメントお�
     3.  手順 3 で確認したブート イメージ ID をクリックします。  
 
     4.  [ **ホーム** ] タブの [ **展開** ] グループで、[ **配布ポイントの更新**] をクリックします。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

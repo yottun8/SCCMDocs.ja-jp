@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 9032698fa12bf453041ea06bf330d3b4687c2a97
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -32,7 +34,7 @@ Configuration Manager の起動可能なメディアには、ブート イメー
 
 -   [既存のコンピューターの置き換えと設定の転送](replace-an-existing-computer-and-transfer-settings.md)  
 
-##  <a name="a-namebkmkcreatebootablemediaa-create-bootable-media"></a><a name="BKMK_CreateBootableMedia"></a> 起動可能なメディアの作成  
+##  <a name="BKMK_CreateBootableMedia"></a> 起動可能なメディアの作成  
  起動可能なメディアを使用して起動すると、展開先のコンピューターが起動し、ネットワークに接続され、指定されたタスク シーケンス、オペレーティング システム イメージ、その他の必要なコンテンツをネットワークから取得します。 タスク シーケンスはメディアにはないため、タスク シーケンスやコンテンツを更新しても、メディアを再作成する必要はありません。 起動可能なメディアのパッケージは暗号化されていません。 メディアにパスワードを設定するなど、適切なセキュリティ手段を講じて、承認されていないユーザーからパッケージのコンテンツを守る必要があります。  
 
  タスク シーケンス メディアの作成ウィザードを使用して起動可能なメディアを作成する前に、次の条件がすべて満たされていることを確認してください。  
@@ -155,9 +157,4 @@ Configuration Manager の起動可能なメディアには、ブート イメー
 
 ## <a name="next-steps"></a>次のステップ  
 [起動可能なメディアを使用したネットワーク経由での Windows の展開](use-bootable-media-to-deploy-windows-over-the-network.md)  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

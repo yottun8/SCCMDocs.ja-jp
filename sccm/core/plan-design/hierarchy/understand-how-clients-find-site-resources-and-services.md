@@ -15,9 +15,11 @@ caps.latest.revision: 10
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a181171cc1a92ec4519f4e4b34ca3274a0aa0440
 ms.openlocfilehash: 1c9e7ada6a8aa228b30e58865baae0f6e529e6af
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -35,7 +37,7 @@ System Center Configuration Manager クライアントは、そのクライア�
 
 
 
-##  <a name="a-namebkmkfunda-fundamentals-of-service-location"></a><a name="bkmk_fund"></a> Fundamentals of service location  
+##  <a name="bkmk_fund"></a> Fundamentals of service location  
  クライアントは、サービスの場所を使用して通信可能な管理ポイントを検索する際に、現在のネットワークの場所、通信プロトコル設定、割り当て済みサイトを評価します。  
 
  **クライアントは、以下の操作を実行するために管理ポイントと通信します。**  
@@ -56,7 +58,7 @@ System Center Configuration Manager クライアントは、そのクライア�
 
 -   インターネット インフォメーション サービス (IIS) を使用し、クライアントからの通信をサポートするサイト システムの役割を展開する場合は、そのサイト システムにクライアントが接続するときに HTTP と HTTPS のどちらを使用するかを指定する必要があります HTTP を使用する場合は、署名と暗号化のオプションについても検討してください。 詳しくは、「[System Center Configuration Manager でのセキュリティの計画](../../../core/plan-design/security/plan-for-security.md)」の「[署名と暗号化の計画](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption)」をご覧ください。  
 
-##  <a name="a-namebkmkplanservicelocationa-service-location-and-how-clients-determine-their-assigned-management-point"></a><a name="BKMK_Plan_Service_Location"></a> サービスの場所とクライアントが割り当て済み管理ポイントを特定する方法  
+##  <a name="BKMK_Plan_Service_Location"></a> サービスの場所とクライアントが割り当て済み管理ポイントを特定する方法  
 クライアントが最初にプライマリ サイトへの割り当てを行うときは、そのサイトの既定の管理ポイントが選択されます。 プライマリ サイトは複数の管理ポイントをサポートしており、各クライアントが&1; つの管理ポイントを既定の管理ポイントとして個別に識別します。 その結果、既定の管理ポイントは、そのクライアントの割り当て済み管理ポイントとなります。 (クライアント インストール コマンドを使用して、インストール時にクライアントの割り当て済み管理ポイントを設定することもできます)。  
 
 クライアントは、そのクライアントの現在のネットワークの場所および境界グループの構成に基づき、通信する管理ポイントを選択します。 割り当て済み管理ポイントがある場合でも、その管理ポイントをクライアントが使用するとは限りません。  
@@ -83,7 +85,7 @@ TechNet.com にある[管理ポイントのアフィニティ](http://blogs.tech
 
 インターネット用に構成されていないクライアントには、インターネットのみに接続する管理ポイントが提供されません。 インターネット用に構成されたワークグループ クライアントは、インターネットに接続する管理ポイントとのみ通信します。  
 
-##  <a name="a-namebkmkmplista-the-mp-list"></a><a name="BKMK_MPList"></a> 管理パック リスト  
+##  <a name="BKMK_MPList"></a> 管理パック リスト  
 管理パック リストは、クライアントが以前に特定した管理ポイントの優先順位リストであるため、クライアントのサービスの場所の優先ソースです。 このリストは、クライアントがリストを更新する際に、ネットワークの場所に基づいてクライアントごとにソートされてから、WMI にローカルに保存されます。  
 
 ### <a name="building-the-initial-mp-list"></a>最初の管理パック リストの作成  
@@ -134,7 +136,7 @@ TechNet.com にある[管理ポイントのアフィニティ](http://blogs.tech
 
 その後、クライアントは使用する新しい管理ポイントをランダムに選択します。  
 
-##  <a name="a-namebkmkada-active-directory"></a><a name="bkmk_ad"></a> Active Directory  
+##  <a name="bkmk_ad"></a> Active Directory  
 ドメインに参加しているクライアントは、サービスの場所として AD DS を使用できます。 この場合、 [データを Active Directory に発行する](http://technet.microsoft.com/library/hh696543.aspx)ためのサイトが必要になります。  
 
 次のすべての条件に該当する場合、クライアントはサービスの場所として AD DS を使用できます。  
@@ -145,7 +147,7 @@ TechNet.com にある[管理ポイントのアフィニティ](http://blogs.tech
 
 クライアントは、AD DS からサービスの場所として使用する管理ポイントを見つけられない場合、DNS の使用を試みます。  
 
-##  <a name="a-namebkmkdnsa-dns"></a><a name="bkmk_dns"></a> DNS  
+##  <a name="bkmk_dns"></a> DNS  
 イントラネット上のクライアントは、サービスの場所として DNS を使用できます。 この場合、DNS に管理ポイントに関する情報を発行するためのサイトが階層内に少なくとも&1; つは必要になります。  
 
 次の条件のいずれかに該当する場合は、サービスの場所として DNS の使用を検討してください。
@@ -243,15 +245,10 @@ Windows Server DNS を使用する場合、次の手順に従って、イント�
 
 DNS に発行するイントラネットの管理ポイントごとに、上記の手順を繰り返します。  
 
-##  <a name="a-namebkmkwinsa-wins"></a><a name="bkmk_wins"></a> WINS  
+##  <a name="bkmk_wins"></a> WINS  
 他のサービスの場所が見つからない場合は、クライアントは WINS で接続する管理ポイントを探します。  
 
 既定では、プライマリ サイトで、HTTP 用に構成されているサイトの最初の管理ポイントと HTTPS 用に構成されている最初の管理ポイントを WINS に発行します。  
 
 クライアントが WINS で HTTP 管理ポイントを探さないようにする場合は、クライアントの CCMSetup.exe の Client.msi のプロパティで **SMSDIRECTORYLOOKUP=NOWINS**と指定します。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

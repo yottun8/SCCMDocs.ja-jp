@@ -15,9 +15,11 @@ caps.latest.revision: 6
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: cb1ac4f33b9ef291050a3406291b8cc1f112b586
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -44,7 +46,7 @@ Linux および UNIX 用の System Center Configuration Manager クライアン�
 > [!TIP]  
 >  **[オペレーティング システム]** クラスの **[キャプション]** 値を使用して、クエリとコレクション内の各種 Linux および UNIX オペレーティング システムを識別できます。  
 
-##  <a name="a-namebkmkconfighardwareforlnua-configuring-hardware-inventory-for-linux-and-unix-servers"></a><a name="BKMK_ConfigHardwareforLnU"></a> Linux および UNIX サーバーのハードウェア インベントリを構成する  
+##  <a name="BKMK_ConfigHardwareforLnU"></a> Linux および UNIX サーバーのハードウェア インベントリを構成する  
  ハードウェア インベントリを構成するには、既定のクライアント設定を使用することもできますし、カスタム クライアント デバイス設定を作成することも可能です。 カスタム クライアント デバイス設定を使用する場合は、ご使用の Linux および UNIX サーバーからのみ収集するクラスとプロパティを構成できます。 また、使用している Linux および UNIX サーバーから、完全なインベントリと差分のインベントリを収集するカスタムのスケジュールを指定できます。  
 
  Linux および UNIX 用のクライアントでは、Linux および UNIX サーバーで使用できる次のハードウェア インベントリ クラスがサポートされています。  
@@ -75,7 +77,7 @@ Linux および UNIX 用の System Center Configuration Manager クライアン�
 
  これらのインベントリ クラスのすべてのプロパティが、Configuration Manager の Linux および UNIX コンピューターで有効になるわけではありません。  
 
-##  <a name="a-namebkmkoperationsforhardwareforlnua-operations-for-hardware-inventory"></a><a name="BKMK_OperationsforHardwareforLnU"></a> ハードウェア インベントリの操作  
+##  <a name="BKMK_OperationsforHardwareforLnU"></a> ハードウェア インベントリの操作  
  ご使用の Linux および UNIX サーバーからハードウェア インベントリを収集すると、他のコンピューターから収集したインベントリを表示する場合と同じように、その情報を次のように表示および使用できます。  
 
 -   リソース エクスプローラーを使用して、Linux および UNIX サーバーからのハードウェア インベントリに関する詳細情報を表示します。  
@@ -92,7 +94,7 @@ Linux および UNIX 用の System Center Configuration Manager クライアン�
 
  ハードウェア インベントリの操作は、クライアント ログ ファイル **scxcm.log**に記録されます。  
 
-##  <a name="a-namebkmkcustomhinvforlinuxa-how-to-use-open-management-infrastructure-to-create-custom-hardware-inventory"></a><a name="BKMK_CustomHINVforLinux"></a> Open Management Infrastructure を使用してカスタムのハードウェア インベントリを作成する方法  
+##  <a name="BKMK_CustomHINVforLinux"></a> Open Management Infrastructure を使用してカスタムのハードウェア インベントリを作成する方法  
  Linux および UNIX 用クライアントは、Open Management Infrastructure (OMI) を使用して作成できるカスタムのハードウェア インベントリをサポートします。 作成するには、次の手順に従います。  
 
 1.  OMI ソースを使用してカスタム インベントリ プロバイダーを作成します  
@@ -101,12 +103,12 @@ Linux および UNIX 用の System Center Configuration Manager クライアン�
 
 3.  Configuration Manager で新しいプロバイダーのサポートを有効にする  
 
-###  <a name="a-namebkmklinuxprovidera-create-a-custom-hardware-inventory-provider-for-linux-and-unix-computers"></a><a name="BKMK_LinuxProvider"></a> Linux および UNIX コンピューターのカスタム ハードウェア インベントリを作成する:  
+###  <a name="BKMK_LinuxProvider"></a> Linux および UNIX コンピューターのカスタム ハードウェア インベントリを作成する:  
  Linux および UNIX 用の構成マネージャー クライアントのカスタム ハードウェア インベントリ プロバイダーを作成するには、**OMI ソース - v.1.0.6** を使用し、OMI 入門ガイドの指示に従います。 このプロセスには、新しいプロバイダーのスキーマを定義する管理オブジェクト フォーマット (MOF) ファイルの作成が含まれます。 後ほど、この MOF ファイルを Configuration Manager にインポートし、新しいカスタム インベントリ クラスのサポートを有効にします。  
 
  OMI ソース- v.1.0.6 およびソース OMI 入門ガイドはどちらも「 [Open Group](http://go.microsoft.com/fwlink/p/?LinkId=262317) 」Web サイトからダウンロードできます。 ダウンロードの場所は、OpenGroup.org の Web サイトの **Open Management Infrastructure (OMI)** Web ページの [[Documents]](http://go.microsoft.com/fwlink/p/?LinkId=286805)タブにあります。  
 
-###  <a name="a-namebkmkaddprovidertolinuxa-configure-each-computer-that-runs-linux-or-unix-with-the-custom-hardware-inventory-provider"></a><a name="BKMK_AddProvidertoLinux"></a> カスタム ハードウェア インベントリ プロバイダーを使用して Linux または UNIX を実行する各コンピューターを次のように構成します。  
+###  <a name="BKMK_AddProvidertoLinux"></a> カスタム ハードウェア インベントリ プロバイダーを使用して Linux または UNIX を実行する各コンピューターを次のように構成します。  
  カスタム インベントリ プロバイダーを作成した後、収集対象のインベントリが含まれる各コンピューターで、プロバイダー ライブラリ ファイルをコピーして登録する必要があります。  
 
 1.  インベントリを収集する各 Linux および UNIX コンピューターに対してプロバイダー ライブラリをコピーします。 プロバイダー ライブラリの名前は、 **XYZ_MyProvider.so**のようになります。  
@@ -120,13 +122,8 @@ Linux および UNIX 用の System Center Configuration Manager クライアン�
 > [!TIP]  
 >  ソフトウェアの配布を使用して、それぞれの Linux および UNIX クライアント コンピューターにおけるカスタム プロバイダーの展開と、カスタム プロバイダーの登録を行います。  
 
-###  <a name="a-namebkmkaddlinuxprovidertocma-enable-the-new-inventory-class-in-configuration-manager"></a><a name="BKMK_AddLinuxProvidertoCM"></a> Configuration Manager で、新しいインベントリ クラスを次のように有効にします。  
+###  <a name="BKMK_AddLinuxProvidertoCM"></a> Configuration Manager で、新しいインベントリ クラスを次のように有効にします。  
  Configuration Manager で、Linux および UNIX コンピューターの新しいプロバイダーがレポートするインベントリについてレポートを作成するには、その前に、カスタム プロバイダーのスキーマを定義する管理オブジェクト フォーマット (MOF) ファイルをインポートする必要があります。  
 
  カスタム MOF ファイルを Configuration Manager にインポートするには、「[System Center Configuration Manager でハードウェア インベントリを構成する方法](../../../../core/clients/manage/inventory/configure-hardware-inventory.md)」をご覧ください。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

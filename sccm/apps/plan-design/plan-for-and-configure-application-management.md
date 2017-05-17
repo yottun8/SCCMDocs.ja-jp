@@ -15,9 +15,11 @@ caps.latest.revision: 13
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 1c43c4968f93985515249ddb117269f8ed61302a
 ms.openlocfilehash: 46cc3fcfd9516cf1c124e24b50d0aac0cb0025dc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -225,9 +227,4 @@ ms.openlocfilehash: 46cc3fcfd9516cf1c124e24b50d0aac0cb0025dc
 
 > [!WARNING]  
 >  アプリケーション カタログのサイト システムの役割をインストールした直後には、ソフトウェア センターの **[アプリケーション カタログで追加アプリケーションを検索する]** のリンクを選択しても、アプリケーション カタログは表示されません。 アプリケーション カタログは、クライアントの次のダウンロードでクライアント ポリシーをダウンロードした後、またはアプリケーション カタログのサイト システムの役割をインストールしてから最大で 25 時間後に、ソフトウェア センターから利用可能になります。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

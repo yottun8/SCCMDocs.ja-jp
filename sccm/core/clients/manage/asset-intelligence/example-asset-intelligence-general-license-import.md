@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 6ee39d311108253ece1c9d60c25ac06017867c1f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -40,9 +42,4 @@ ms.openlocfilehash: 6ee39d311108253ece1c9d60c25ac06017867c1f
 |ソフトウェア タイトル 8|ソフトウェア発行元|1.08|英語|1|購入数|販売店名|2010/10/10|0|2012/10/10|コメント|  
 |ソフトウェア タイトル 9|ソフトウェア発行元|1.09|英語|1|購入数|販売店名|2010/10/10|0|2012/10/10|コメント|  
 |ソフトウェア タイトル 10|ソフトウェア発行元|1.10|英語|1|購入数|販売店名|2010/10/10|0|2012/10/10|コメント|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

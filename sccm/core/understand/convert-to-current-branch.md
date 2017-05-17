@@ -15,9 +15,11 @@ caps.latest.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 60631bc0346bd78d704e7129bb755af504c59b1b
 ms.openlocfilehash: 6e7edc85630d22c5bbba1ff66bd1199903db76db
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 
@@ -54,9 +56,4 @@ Current Branch の使用権を付与する現在のソフトウェア アシュ�
  2. Current Branch に変換するためのオプションを選択し、**[適用]** を選択します。  
 
 サイトが Current Branch に変換されると、以前は使用できなかった機能が使用できるようになります。
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

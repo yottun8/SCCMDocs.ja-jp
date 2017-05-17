@@ -14,9 +14,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 81d7516b814d2db74d4d857871071c8911755754
 ms.openlocfilehash: 6e53f501281e31f2b7df54b9740eac970f108257
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>System Center Configuration Manager の探索方法について
@@ -25,7 +27,7 @@ ms.openlocfilehash: 6e53f501281e31f2b7df54b9740eac970f108257
 
 System Center Configuration Manager の各探索方法では、ネットワーク上のさまざまなデバイス、または Active Directory のデバイスおよびユーザーを検索できます。 探索方法を効率的に使用するには、使用可能な構成および制限について理解する必要があります。  
 
-##  <a name="a-namebkmkaboutforesta-active-directory-forest-discovery"></a><a name="bkmk_aboutForest"></a> Active Directory フォレストの探索  
+##  <a name="bkmk_aboutForest"></a> Active Directory フォレストの探索  
  **構成可能:** ○  
 
  **既定で有効:** ×  
@@ -78,7 +80,7 @@ Active Directory フォレストの探索時に行われた処理は、次のロ
 
 この探索方法を構成する方法の詳細については、「[Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md)」 (System Center Configuration Manager の探索方法の構成) を参照してください。  
 
-##  <a name="a-namebkmkaboutgroupa-active-directory-group-discovery"></a><a name="bkmk_aboutGroup"></a> Active Directory グループの探索  
+##  <a name="bkmk_aboutGroup"></a> Active Directory グループの探索  
 **構成可能:** ○  
 
 **既定で有効:** ×  
@@ -120,7 +122,7 @@ Active Directory グループの探索時に行われた処理は、サイト �
 
 この探索方法を構成する方法の詳細については、「[Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md)」 (System Center Configuration Manager の探索方法の構成) を参照してください。  
 
-##  <a name="a-namebkmkaboutsystema-active-directory-system-discovery"></a><a name="bkmk_aboutSystem"></a> Active Directory システムの探索  
+##  <a name="bkmk_aboutSystem"></a> Active Directory システムの探索  
 **構成可能:** ○  
 
 **既定で有効:** ×  
@@ -158,7 +160,7 @@ Active Directory システムの探索時に行われた処理は、サイト �
 
 この探索方法を構成する方法の詳細については、「[Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md)」 (System Center Configuration Manager の探索方法の構成) を参照してください。  
 
-##  <a name="a-namebkmkaboutusera-active-directory-user-discovery"></a><a name="bkmk_aboutUser"></a> Active Directory ユーザー探索  
+##  <a name="bkmk_aboutUser"></a> Active Directory ユーザー探索  
 **構成可能:** ○  
 
 **既定で有効:** ×  
@@ -188,7 +190,7 @@ Active Directory ユーザーの探索時に行われた処理は、サイト �
 
 この探索方法を構成する方法の詳細については、「[Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md)」 (System Center Configuration Manager の探索方法の構成) を参照してください。  
 
-##  <a name="a-namebkmkaboutheartbeata-heartbeat-discovery"></a><a name="bkmk_aboutHeartbeat"></a> 定期探索  
+##  <a name="bkmk_aboutHeartbeat"></a> 定期探索  
 **構成可能:** ○  
 
 **既定で有効:** ○  
@@ -224,7 +226,7 @@ Active Directory ユーザーの探索時に行われた処理は、サイト �
 
 この探索方法を構成する方法の詳細については、「[Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md)」 (System Center Configuration Manager の探索方法の構成) を参照してください。  
 
-##  <a name="a-namebkmkaboutnetworka-network-discovery"></a><a name="bkmk_aboutNetwork"></a> ネットワーク探索  
+##  <a name="bkmk_aboutNetwork"></a> ネットワーク探索  
 **構成可能:** ○  
 
 **既定で有効:** ×  
@@ -268,7 +270,7 @@ Active Directory ユーザーの探索時に行われた処理は、サイト �
 > [!NOTE]  
 >  複雑なネットワークや帯域幅の狭い接続では、ネットワーク探索の実行に時間がかかり、大量のネットワーク トラフィックが発生する可能性があります。 ベスト プラクティスとして、検出しなければならないデバイスが、他の方法で見つからない場合だけ、ネットワーク探索を実行してください。 たとえば、ワークグループのコンピューターを見つけなければならない場合に、ネットワーク探索を実行します。 他の探索方法では、ワークグループのコンピューターが検出されません。  
 
-###  <a name="a-namebkmknetdisclevelsa-levels-of-network-discovery"></a><a name="BKMK_NetDiscLevels"></a> ネットワーク探索のレベル  
+###  <a name="BKMK_NetDiscLevels"></a> ネットワーク探索のレベル  
 ネットワーク探索を構成するときは、次の&3; つのレベルの&1; つを指定します。  
 
 |探索のレベル|説明|  
@@ -281,7 +283,7 @@ Active Directory ユーザーの探索時に行われた処理は、サイト �
 
  たとえば、ネットワーク探索を初めて実行するときは、トポロジ レベルに設定して、ネットワーク インフラストラクチャを確認するだけで十分かもしれません。 次に、デバイスやオペレーティング システムを確認しなければならなくなったときに、高いレベルに構成し直します。 ネットワーク探索の対象を特定の範囲のネットワーク セグメントに制限する設定を構成することもできます。 こうすることで、必要なネットワーク上のオブジェクトを検出し、不要なネットワーク トラフィックを回避すると共に、エッジ ルータやネットワーク外のオブジェクトを検出することができます。  
 
-###  <a name="a-namebkmknetdiscoptionsa-network-discovery-options"></a><a name="BKMK_NetDiscOptions"></a> ネットワーク探索のオプション  
+###  <a name="BKMK_NetDiscOptions"></a> ネットワーク探索のオプション  
 ネットワーク探索で、IP アドレスを持つことができるデバイスを見つけるには、デバイスを照会する方法を決める次のオプションを指定する必要があります。  
 
 > [!NOTE]  
@@ -329,7 +331,7 @@ Active Directory ユーザーの探索時に行われた処理は、サイト �
 
 -   ネットワーク探索でデバイスのコミュニティ名を使用するように構成してください。このように構成しないと、SNMP クエリがデバイスによって拒否されます。  
 
-###  <a name="a-namebkmklimitnetdisca-limiting-network-discovery"></a><a name="BKMK_LimitNetDisc"></a> ネットワーク探索を制限する  
+###  <a name="BKMK_LimitNetDisc"></a> ネットワーク探索を制限する  
 ネットワーク探索時に、ネットワークの端にある SNMP デバイスを照会する場合は、ネットワークのすぐ外にあるサブネットと SNMP デバイスの情報を識別することができます。 次の情報を使用してネットワーク探索の範囲を制限するには、ネットワーク探索時に通信する SNMP デバイスと、照会するネットワーク セグメントを構成します。  
 
 **サブネット:**  
@@ -374,12 +376,12 @@ Active Directory ユーザーの探索時に行われた処理は、サイト �
 > [!WARNING]  
 >  ルーターのホップ数を上げるに従って、検出可能なリソースの数が大幅に増える可能性があります。ただし、消費されるネットワーク帯域幅も大きくなります。  
 
-##  <a name="a-namebkmkaboutservera-server-discovery"></a><a name="bkmk_aboutServer"></a> サーバー探索  
+##  <a name="bkmk_aboutServer"></a> サーバー探索  
 **構成可能:** ×  
 
 Configuration Manager では、ユーザーが構成できる探索方法だけでなく、**サーバー探索**というプロセス (SMS_WINNT_SERVER_DISCOVERY_AGENT) も使います。 このプロセスでは、サイト システムのコンピューター (管理ポイントとして構成されているコンピューターなど) のリソースのレコードが作成されます。  
 
-##  <a name="a-namebkmkshareda-common-features-of-active-directory-group-discovery-system-discovery-and-user-discovery"></a><a name="bkmk_shared"></a> Active Directory グループの探索、Active Directory システムの探索、Active Directory ユーザーの探索に共通の機能  
+##  <a name="bkmk_shared"></a> Active Directory グループの探索、Active Directory システムの探索、Active Directory ユーザーの探索に共通の機能  
 ここでは、次の探索方法に共通する機能ついて説明します。  
 
 -   Active Directory グループの探索  
@@ -421,7 +423,7 @@ Configuration Manager では、ユーザーが構成できる探索方法だけ�
 
 -   [Active Directory のカスタマイズされた属性を検索する](#bkmk_customAD)  
 
-###  <a name="a-namebkmkdeltaa-delta-discovery"></a><a name="bkmk_delta"></a> 差分探索  
+###  <a name="bkmk_delta"></a> 差分探索  
 次の探索方法に使用できます。  
 
 -   Active Directory グループの探索  
@@ -450,7 +452,7 @@ Configuration Manager では、ユーザーが構成できる探索方法だけ�
 
 差分検索を構成するには、該当する探索方法のプロパティの [ポーリングのスケジュール] タブを使います。 ****  
 
-###  <a name="a-namebkmkstalelogona-filter-stale-computer-records-by-domain-logon"></a><a name="bkmk_stalelogon"></a> 古いコンピューター レコードをドメインへのログオン日時に基づいて除外する  
+###  <a name="bkmk_stalelogon"></a> 古いコンピューター レコードをドメインへのログオン日時に基づいて除外する  
 次の探索方法に使用できます。  
 
 -   Active Directory グループの探索  
@@ -472,7 +474,7 @@ Configuration Manager では、ユーザーが構成できる探索方法だけ�
 > [!WARNING]  
 >  このフィルターと、**古いレコードをコンピューターのパスワードに基づいて除外する**フィルターを有効にした場合は、どちらかのフィルターの基準を満たしたコンピューターが探索から除外されます。  
 
-###  <a name="a-namebkmkstalepassworda-filter-stale-records-by-computer-password"></a><a name="bkmk_stalepassword"></a> 古いレコードをコンピューターのパスワードに基づいて除外する  
+###  <a name="bkmk_stalepassword"></a> 古いレコードをコンピューターのパスワードに基づいて除外する  
 次の探索方法に使用できます。  
 
 -   Active Directory グループの探索  
@@ -492,7 +494,7 @@ Configuration Manager では、ユーザーが構成できる探索方法だけ�
 > [!WARNING]  
 >  このフィルターと、**古いレコードをドメインへのログイン日時に基づいて除外する**フィルターを有効にした場合は、どちらかのフィルターの基準を満たしたコンピューターが探索から除外されます。  
 
-###  <a name="a-namebkmkcustomada-search-customized-active-directory-attributes"></a><a name="bkmk_customAD"></a> Active Directory のカスタマイズされた属性を検索する  
+###  <a name="bkmk_customAD"></a> Active Directory のカスタマイズされた属性を検索する  
  次の探索方法に使用できます。  
 
 -   Active Directory システムの探索  
@@ -502,9 +504,4 @@ Configuration Manager では、ユーザーが構成できる探索方法だけ�
 探索方法ごとに、検出可能な Active Directory 属性の一覧が用意されています。  
 
 カスタマイズされた属性の一覧を表示および構成するには、**[Active Directory System Discovery Properties (Active Directory システム探索のプロパティ)]** ダイアログ ボックス、または **[Active Directory User Discovery Properties (Active Directory ユーザー探索のプロパティ)]** ダイアログボックスの **[Active Directory の属性]** タブを使います。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dd102603356864add4084c6881c39bebcbd635f2
 ms.openlocfilehash: 9b97dedb5d2be0bd2e47260033e6e4361467dc4e
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -34,7 +36,7 @@ System Center Configuration Manager のサイト システム サーバーとし
 
 この記事の情報では、Configuration Manager サイト システムのサポートに必要な Windows の構成の種類の概要を説明します。 特定のサイト システムの役割の構成の詳細については、「[サイトとサイト システムの前提条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)」をご覧ください。
 
-##  <a name="a-namebkmkwinfeaturesa-windows-features-and-roles"></a><a name="BKMK_WinFeatures"></a> Windows の機能と役割  
+##  <a name="BKMK_WinFeatures"></a> Windows の機能と役割  
  コンピューターに対して Windows の機能や役割を設定するときは、コンピューターを再起動してその構成を完了させることが必要な場合があります。 そのため、Configuration Manager のサイトまたはサイト システム サーバーをインストールする前に、どのコンピューターでどのサイト システムの役割をホストするかを決めておくことをお勧めします。
 ### <a name="features"></a>機能  
  特定のサイト システム サーバーでは次の Windows 機能が必要となります。これらは、コンピューターにサイト システムの役割をインストールする前に設定しておく必要があります。  
@@ -98,7 +100,7 @@ System Center Configuration Manager のサイト システム サーバーとし
 -   **Windows 展開サービス**: この役割は、オペレーティング システムの展開で使用されます。  
 -   **Windows Server Update Services**: この役割は、ソフトウェア更新プログラムを展開するときに必要になります。  
 
-##  <a name="a-namebkmkiisfilteringa-iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a> IIS の要求フィルター (配布ポイント用)  
+##  <a name="BKMK_IISFiltering"></a> IIS の要求フィルター (配布ポイント用)  
  特定のファイル名拡張子とフォルダーの場所は、IIS の要求フィルターによって、HTTP または HTTPS 通信によるアクセスがブロックされるように既定で設定されています。 そのままでは、ブロックされた拡張子やフォルダーの場所を含んだパッケージをクライアントが配布ポイントからダウンロードできません。  
 
  IIS の要求フィルター構成によってブロックされる拡張子がパッケージのソース ファイルに含まれている場合、それらを許可するように要求フィルターを設定する必要があります。 そのためには、配布ポイント コンピューターの IIS マネージャーで [要求フィルター機能を編集](https://technet.microsoft.com/library/hh831621.aspx) します。  
@@ -140,9 +142,4 @@ System Center Configuration Manager のサイト システム サーバーとし
  - PROPFIND
 
 要求のフィルタリングを構成する方法の詳細については、TechNet の「[Configure Request Filtering in IIS](https://technet.microsoft.com/library/hh831621.aspx#Verbs)」 (IIS で要求フィルターを構成する) または管理ポイントをホストする Windows Server のバージョンに適用される同様のドキュメントを参照してください。
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

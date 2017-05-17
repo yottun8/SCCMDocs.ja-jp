@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 26bbec1e8d6c53ce297689ba4390b9347229eb15
 ms.openlocfilehash: 886ff3b8e867fc340c79648a57feae81653b0ccd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -34,7 +36,7 @@ ms.openlocfilehash: 886ff3b8e867fc340c79648a57feae81653b0ccd
 
 
 
-##  <a name="a-namebkmkwhat2knowa-what-to-know-before-choosing-to-use-custom-websites"></a><a name="BKMK_What2Know"></a> カスタム Web サイトを使用する前に理解しておくこと  
+##  <a name="BKMK_What2Know"></a> カスタム Web サイトを使用する前に理解しておくこと  
  既定では、サイト システムの役割は、IIS の **既定の Web サイト** を使用します。 これは、サイト システムの役割のインストール時に自動的に設定されます。 ただし、プライマリ サイトでは、カスタム Web サイトを使用するように選択できます。 カスタム Web サイトを使用する場合。  
 
 -   カスタム Web サイトは、個々のサイト システム サーバーまたは役割に対してではなく、サイト全体に対して有効になります。  
@@ -132,9 +134,4 @@ ms.openlocfilehash: 886ff3b8e867fc340c79648a57feae81653b0ccd
     2.  **SMSWEB** Web サイトを起動します。  
 
     3.  そのサイトのサイト サーバーの **SMS_SITE_COMPONENT_MANAGER** サービスを再開します。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

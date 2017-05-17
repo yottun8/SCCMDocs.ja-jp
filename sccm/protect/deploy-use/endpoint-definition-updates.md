@@ -16,9 +16,11 @@ caps.latest.revision: 21
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 9085a4daed409eeff4c95e5c467f123d0a38147a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/16/2016
 
 
 
@@ -73,9 +75,4 @@ ms.openlocfilehash: 9085a4daed409eeff4c95e5c467f123d0a38147a
 -   [Microsoft Malware Protection Center から配信された更新プログラム] - この方法では、Microsoft Malware Protection Center から定義ファイルの更新をダウンロードします。
 
 -   [[UNC ファイル共有から更新する]](endpoint-definitions-network.md) - この方法では、最新の定義とエンジンの更新プログラムをネットワーク上の共有に保存できます。 各クライアントは、ネットワークにアクセスして更新プログラムをインストールできます。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

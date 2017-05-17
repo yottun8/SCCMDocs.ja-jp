@@ -15,9 +15,11 @@ caps.latest.revision: 31
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: a84d3ab55066d26c3199ea374d8beb472d66f43f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1606 の機能
@@ -36,7 +38,7 @@ ms.openlocfilehash: a84d3ab55066d26c3199ea374d8beb472d66f43f
 
 **このバージョンでお試しいただける新機能を次に示します。**  
 
-## <a name="a-namedmpcategorya-automatically-categorize-devices-into-collections"></a><a name="dmp_category"></a> デバイスを自動的にコレクションごとに分類
+## <a name="dmp_category"></a> デバイスを自動的にコレクションごとに分類
 Microsoft Intune と Configuration Manager を使用している場合に、デバイス コレクションにデバイスを自動的に配置するために使用できるデバイス カテゴリを作成することができます。 ユーザーは Intune にデバイスを登録するときに、デバイス カテゴリの選択を求められます。 Configuration Manager コンソールから、デバイスのカテゴリをさらに変更できます。
 
 **重要:** この機能は、Microsoft Intune の **2016 年 6 月** のリリースで機能します。 これらの手順を実行する前に、今回のリリースに更新していることを確認してください。
@@ -59,7 +61,7 @@ Microsoft Intune と Configuration Manager を使用している場合に、デ�
 2.  [**デバイス**] の一覧からデバイスを選択して、[**ホーム**] タブの [**デバイス**] グループで [**カテゴリの変更**] をクリックします。
 3.  [**デバイス カテゴリの編集**] ダイアログ ボックスで、このデバイスに適用するカテゴリを選択し、[**OK**] をクリックします。
 
-## <a name="a-namedmpgracea-enforcement-grace-period-for-required-application-and-software-update-deployments"></a><a name="dmp_grace"></a> 必要なアプリケーションとソフトウェア更新プログラムを展開するための適用猶予期間
+## <a name="dmp_grace"></a> 必要なアプリケーションとソフトウェア更新プログラムを展開するための適用猶予期間
 
 場合によっては、必要なアプリケーション展開またはソフトウェア更新プログラムのインストールに、設定した期限よりも多くの時間をユーザーに与えることができます。 これは通常、コンピューターが長期間オフになっていて、多数のアプリケーションや更新プログラムの展開をインストールする必要がある場合に必要になります。
 たとえば、エンド ユーザーが休暇から戻って来たばかりの場合、期限切れのアプリケーションの展開がインストールされるまで、長時間待たなければならない場合があります。
@@ -76,7 +78,7 @@ Microsoft Intune と Configuration Manager を使用している場合に、デ�
 適用猶予期間を構成し、チェック ボックスをオンにすると、アプリケーションのインストール期限になると、ユーザーがその猶予期間までに設定した最初の非ビジネス ウィンドウで、アプリケーションがインストールされます。 ただし、ユーザーはソフトウェア センターを開いて、いつでもアプリケーションをインストールすることもできます。 猶予期間が切れると、適用は期限切れの展開に対する通常の動作に戻ります。
 ソフトウェア更新プログラムの展開ウィザード、自動展開規則の作成ウィザード、およびプロパティ ページに、同様のオプションが追加されています。
 
-##  <a name="a-namedmpdevgausing-configuration-manager-as-a-managed-installer-with-device-guard"></a><a name="dmp_devg"></a> デバイス ガードにより Configuration Manager を管理インストーラーとして使用
+##  <a name="dmp_devg"></a> デバイス ガードにより Configuration Manager を管理インストーラーとして使用
 
 Device Guard は、ハードウェアとソフトウェアの機能を使用して、デバイスでの実行を許可する条件を厳密に制御する Windows 10 の機能です。
 
@@ -101,7 +103,7 @@ Configuration Manager での Device Guard の詳しい使用方法は、[Enterpr
 - [Device Guard certification and compliance](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance) (Device Guard の証明書とコンプライアンス)
 - [Device Guard 展開ガイド](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
 
- ##  <a name="a-namedmponprema-multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a> オンプレミス モバイル デバイス管理のための複数のデバイス管理ポイント  
+ ##  <a name="dmp_onprem"></a> オンプレミス モバイル デバイス管理のための複数のデバイス管理ポイント  
  Technical Preview 1606 では、オンプレミスのモバイル デバイス管理 (MDM) で、複数のデバイス管理ポイントが使用できるように登録済みのデバイスを自動的に構成する Windows 10 Anniversary Update の新機能をサポートしています。 この機能により、通常使用しているデバイスの管理ポイントが使用できない場合に、デバイスが別のデバイス管理ポイントにフォールバックすることができます。 この機能は、Windows 10 Anniversary Update がインストールされている PC でのみ機能します。  
 
 ### <a name="try-it-out"></a>試してみましょう。  
@@ -112,7 +114,7 @@ Configuration Manager での Device Guard の詳しい使用方法は、[Enterpr
 
 サイトを準備して、デバイスをオンプレミスのモバイル デバイス管理に登録する方法の詳細については、「[Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)」(System Center Configuration Manager でオンプレミス インフラストラクチャを使用してモバイル デバイスを管理する) をご覧ください。  
 
-## <a name="a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet"></a><a name="cloud_proxy"></a>インターネット上でクライアントを管理するためのクラウド プロキシ サービス
+## <a name="cloud_proxy"></a>インターネット上でクライアントを管理するためのクラウド プロキシ サービス
 
 クラウド プロキシ サービスは、インターネット上で Configuration Manager クライアントを管理する簡単な方法を提供します。 Microsoft Azure にデプロイされ、Azure サブスクリプションを必要とするサービスは、クラウド プロキシ コネクタ ポイントと呼ばれる新しい役割を使用して、オンプレミスの Configuration Manager インフラストラクチャに接続します。 完全にデプロイされ、構成されると、クライアントは内部のプライベート ネットワークに接続しているかどうか、またはインターネット上にあるかどうかに関係なく、オンプレミスの Configuration Manager サイト システムの役割にアクセスできるようになります。
 
@@ -217,7 +219,7 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 
 クライアントがクラウド プロキシ サービスの新しい場所の情報を取得したら、不要になった内部のプライベート ネットワーク上にあってインターネットにアクセスを持つクライアントの状態を確認してください。 **[管理] > [Cloud Services] > [クラウド プロキシ サービス]** の順に移動して、リスト ウィンドウでサービスを選択し、詳細ペインでトラフィックの情報を表示することで、クラウド プロキシ サービスのトラフィックを監視することもできます。   
 
-## <a name="a-namemanageo365amanage-the-office-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>Configuration Manager で Office 365 のクライアント エージェントを管理  
+## <a name="manage_o365"></a>Configuration Manager で Office 365 のクライアント エージェントを管理  
 
 Technical Preview 1606 を起動すると、グループ ポリシーの代わりに Configuration Manager クライアント エージェント設定を使用して、Office 365 クライアントが Configuration Manager から更新プログラムを受信できるようにすることができます。 この設定を構成し、Office 365 の更新プログラムを展開すると、Configuration Manager クライアント エージェントは、Office 365 のクライアント エージェントと通信して、配布ポイントから Office 365 の更新プログラムをダウンロードしてインストールします。 Configuration Manager は、クライアント エージェント設定のインベントリも取得します。
 
@@ -229,13 +231,13 @@ Technical Preview 1606 を起動すると、グループ ポリシーの代わ�
 3. **[ソフトウェアの更新]** を選択し、**[Office 365 クライアント エージェントの管理を有効にする]** の設定に **[はい]** を設定します。  
 
 
-## <a name="a-nameosdpreservedriveletterathe-osdpreservedriveletter-task-sequence-variable-has-been-deprecated"></a><a name="osdpreservedriveletter"></a>OSDPreserveDriveLetter タスク シーケンス変数は使用されなくなった
+## <a name="osdpreservedriveletter"></a>OSDPreserveDriveLetter タスク シーケンス変数は使用されなくなった
 OSDPreserveDriveLetter タスク シーケンス変数は、タスク シーケンスが対象コンピューターにそのイメージを適用するときに、オペレーティング システム イメージ WIM ファイルにキャプチャされたドライブ文字を使用するかどうかを判断します。
 - Technical Preview 1606 では、このタスク シーケンス変数は使用されていません。
 
 既定で、オペレーティング システムの展開中に、Windows セットアップが使用する最適なドライブ文字を決定するようになりました (通常は C:)。 別のドライブを使用するように指定する場合は、オペレーティング システムの適用タスク シーケンスのステップで場所を変更できます。 [**このオペレーティング システムの適用先を選択してください。**] 設定に移動し、[**特定の論理ドライブ文字**] を選択し、使用するドライブを選択します。 設定先のコンピューター上に、選択した文字が割り当てられたドライブが作成されているはずです。 
 
-## <a name="a-nameupdatesandservicingachanges-for-the-updates-and-servicing-node"></a><a name="updatesandservicing"></a>更新プログラムとサービス ノードの変更
+## <a name="updatesandservicing"></a>更新プログラムとサービス ノードの変更
 Technical Preview 1606 では、Configuration Manager コンソールの [更新とサービス] に適用されるいくつかの変更が導入されています。
 - **ノード名の変更:**
 
@@ -264,9 +266,4 @@ Technical Preview 1606 では、Configuration Manager コンソールの [更新
 -   **実稼働前の名前変更されたオプション:**
 
     [更新とサービス] ノードで、[**クライアント オプション**] という名前だったボタンが [**実稼働前クライアントの昇格**] に変更されました。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

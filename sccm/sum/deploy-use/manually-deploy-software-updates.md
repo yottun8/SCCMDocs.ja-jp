@@ -13,14 +13,16 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
 ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
 
-#  <a name="a-namebkmkmanualdeploya-manually-deploy-software-updates"></a><a name="BKMK_ManualDeploy"></a> ソフトウェア更新プログラムの手動展開  
+#  <a name="BKMK_ManualDeploy"></a> ソフトウェア更新プログラムの手動展開  
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -28,7 +30,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
  以下のセクションでは、ソフトウェア更新プログラムを手動で展開する手順について説明します。  
 
-##  <a name="a-namebkmk1searchcriteriaa-step-1-specify-search-criteria-for-software-updates"></a><a name="BKMK_1SearchCriteria"></a> 手順 1: ソフトウェア更新プログラムの検索条件を指定する  
+##  <a name="BKMK_1SearchCriteria"></a> 手順 1: ソフトウェア更新プログラムの検索条件を指定する  
  Configuration Manager コンソールに表示されるソフトウェア更新プログラムの数は、数千個になることがあります。 手動でのソフトウェア更新プログラムの展開のワークフローでは、第一段階として、展開するソフトウェア更新プログラムを特定します。 たとえば、50 を超えるクライアント デバイスで必要であり、「 **セキュリティ** 」または「 **重大** 」に分類されているすべてのソフトウェア更新プログラムを取得するというような条件を指定できます。  
 
 > [!IMPORTANT]  
@@ -54,7 +56,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
     > [!TIP]  
     >  [検索 **** ] タブおよび [保存 **** ] グループに、フィルター条件を保存するためのオプションがあります。  
 
-##  <a name="a-namebkmk2updategroupa-step-2-create-a-software-update-group-that-contains-the-software-updates"></a><a name="BKMK_2UpdateGroup"></a> 手順 2: ソフトウェア更新プログラムを含むソフトウェア更新プログラム グループを作成する  
+##  <a name="BKMK_2UpdateGroup"></a> 手順 2: ソフトウェア更新プログラムを含むソフトウェア更新プログラム グループを作成する  
  ソフトウェア更新プログラム グループは、展開に備えてソフトウェア更新プログラムを整理するための有効な手段です。 ソフトウェア更新プログラムをソフトウェア更新プログラム グループに手動で追加したり、Configuration Manager の ADR を使用して、新規または既存のソフトウェア更新プログラム グループに自動的に追加したりできます。 ソフトウェア更新プログラムを新しいソフトウェア更新プログラム グループに手動で追加するには、次の手順に従います。  
 
 #### <a name="to-manually-add-software-updates-to-a-new-software-update-group"></a>ソフトウェア更新プログラムを新しいソフトウェア更新プログラム グループに手動で追加するには  
@@ -73,7 +75,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
 7.  ソフトウェア更新プログラム グループを選択し、[ホーム **** ] タブの [更新 **** ] グループで [メンバーの表示 **** ] をクリックして、グループに含まれているソフトウェア更新プログラムの一覧を表示します。  
 
-##  <a name="a-namebkmk3downloadcontenta-step-3-download-the-content-for-the-software-update-group"></a><a name="BKMK_3DownloadContent"></a> 手順 3: ソフトウェア更新プログラム グループのコンテンツをダウンロードする  
+##  <a name="BKMK_3DownloadContent"></a> 手順 3: ソフトウェア更新プログラム グループのコンテンツをダウンロードする  
  必要に応じて、ソフトウェア更新プログラムを展開する前に、ソフトウェア更新プログラム グループに含めるソフトウェア更新プログラムのコンテンツをダウンロードできます。 この方法を選択すると、ソフトウェア更新プログラムを展開する前に、そのコンテンツが配布ポイントで使用可能になっていることを確認できます。 これにより、コンテンツの配布に関して、予期せぬ問題を回避できます。 この手順は省略することができ、その場合、コンテンツは展開プロセスの過程で配布ポイントにダウンロードされ、コピーされます。 ソフトウェア更新プログラムのコンテンツをソフトウェア更新プログラム グループにダウンロードするには、次の手順に従います。  
 
 
@@ -160,7 +162,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
 4. [ホーム **** ] タブの [コンテンツ **** ] グループで、[ステータスの表示 ****] をクリックします。  
 
-##  <a name="a-namebkmk4deployupdategroupa-step-4-deploy-the-software-update-group"></a><a name="BKMK_4DeployUpdateGroup"></a> 手順 4: ソフトウェア更新プログラム グループを展開する  
+##  <a name="BKMK_4DeployUpdateGroup"></a> 手順 4: ソフトウェア更新プログラム グループを展開する  
  展開するソフトウェア更新プログラムを判別してソフトウェア更新プログラム グループに追加したら、ソフトウェア更新プログラム グループ内のソフトウェア更新プログラムを手動で展開できます。 ソフトウェア更新プログラム グループ内のソフトウェア更新プログラムを手動で展開するには、次の手順に従います。  
 
 #### <a name="to-manually-deploy-the-software-updates-in-a-software-update-group"></a>ソフトウェア更新プログラム グループ内のソフトウェア更新プログラムを手動で展開するには  
@@ -315,9 +317,4 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
 ## <a name="next-steps"></a>次のステップ
 [ソフトウェア更新プログラムの監視](monitor-software-updates.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

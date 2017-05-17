@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 7b6674f331c82cc7899b8661cf38b9d3022cf21b
 ms.openlocfilehash: 647826e9d340d3ef97abab0dba51041a3727dedc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -64,7 +66,7 @@ ms.openlocfilehash: 647826e9d340d3ef97abab0dba51041a3727dedc
 
 -   クライアント設定および関連する構成を展開する。
 
-##  <a name="a-namebkmkddrsa-about-discovery-data-records"></a><a name="BKMK_DDRs"></a> 探索データ レコードについて  
+##  <a name="BKMK_DDRs"></a> 探索データ レコードについて  
  DDR は、各探索方法によって作成されるファイルです。 Configuration Manager で管理できるリソース (コンピューターやユーザー、場合によってはネットワーク インフラストラクチャなど) についての情報が保存されています。 DDR は、プライマリ サイトか中央管理サイトで処理されます。 DDR にあるリソースの情報がデータベースに挿入されると、その DDR は削除され、階層内のすべてのサイトに情報がグローバル データとしてレプリケートされます。  
 
  DDR を処理するサイトは、DDR に含まれている情報によって異なります。  
@@ -87,9 +89,4 @@ DDR ファイルには、.ddr という拡張子が付き、サイズは通常 1
 -   [System Center Configuration Manager に使用する探索方法の選択](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md)  
 
 その後、使用しようとしている方法が理解できたら、「[System Center Configuration Manager の探索方法を構成する](../../../../core/servers/deploy/configure/configure-discovery-methods.md)」でそれぞれの方法の構成の手引きを探します。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

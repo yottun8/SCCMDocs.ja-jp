@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 156d6679817b81ca27fbd2b8836431396e1e6b23
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -48,9 +50,4 @@ System Center Configuration Manager の資産インテリジェンスには、�
 |ソフトウェア メータリング クライアント エージェントの依存関係|資産インテリジェンス ソフトウェアのレポートの多くは、ソフトウェア使用状況測定クライアント エージェントのデータを使用します。 ソフトウェア使用状況測定クライアント エージェントを有効にする方法については、「[Monitor app usage with software metering in System Center Configuration Manager](../../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)」(System Center Configuration Manager のソフトウェア使用状況測定でアプリの使用を監視する) を参照してください。<br /><br /> 次の資産インテリジェンス レポートでは、ソフトウェア使用状況測定クライアント エージェントを使用してデータを取得します。<br /><br /> -   ソフトウェア 07A - 複数のコンピューターによって最近使用された実行可能ファイル<br />-   ソフトウェア 07B - 指定した実行可能ファイルを最近使用したコンピューター<br />-   ソフトウェア 07C - 特定のコンピューターで最近使用した実行可能ファイル<br />-   ソフトウェア 08A - 複数のユーザーによって最近使用された実行可能ファイル<br />-   ソフトウェア 08B - 指定した実行可能ファイルを最近使用したユーザー<br />-   ソフトウェア 08C - 指定したユーザーが最近使用した実行可能ファイル|  
 |資産インテリジェンス ハードウェア インベントリ レポート クラスの前提条件|Configuration Manager の資産インベントリ レポートは、特定のハードウェア インベントリ レポート クラスに依存します。 ハードウェア インベントリ レポート クラスが有効になり、クライアントがこれらのクラスに基づいてハードウェア インベントリをレポートするまで、関連付けられた資産インテリジェンス レポートにはデータが表示されません。 次のハードウェア インベントリ レポート クラスを有効にすると、資産インテリジェンス レポートの要件をサポートできます。<br /><br /> -   SMS_SystemConsoleUsage<sup>1</sup><br />-   SMS_SystemConsoleUser<sup>1</sup><br />-   SMS_InstalledSoftware<br />-   SMS_AutoStartSoftware<br />-   SMS_BrowserHelperObject<br />-   Win32_USBDevice<br />-   SMS_InstalledExecutable<br />-   SMS_SoftwareShortcut<br />-   SoftwareLicensingService<br />-   SoftwareLicensingProduct<br />-   SMS_SoftwareTag<br /><br /> <sup>1</sup> 既定では **SMS_SystemConsoleUsage** および **SMS_SystemConsoleUser** の資産インテリジェンス ハードウェア インベントリ レポート クラスは有効になっています。<br /><br /> **[資産とコンプライアンス]** ワークスペースで **[資産インテリジェンス]** ノードをクリックすると、Configuration Manager コンソールで資産インテリジェンス ハードウェア インベントリ レポート クラスを編集できます。 詳細については、「[Configuration Manager の資産インテリジェンスの構成](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)」トピックの「[資産インテリジェンスのハードウェア インベントリ レポート クラスの有効化](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence)」セクションを参照してください。|  
 |レポート サービス ポイント|ソフトウェア更新レポートを表示するには、事前にレポート サービス ポイント サイト システムの役割がインストールされている必要があります。 レポート サービス ポイント作成の詳細については、「 [Configuration Manager のレポートの構成](http://go.microsoft.com/fwlink/p/?LinkId=232661)」を参照してください。|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bd20983eeca47bdd63e0385440e6c8d64901b902
 ms.openlocfilehash: 4a2a8f96a900a2c4959ae3ff59232771ece95991
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -34,9 +36,4 @@ System Center Configuration Manager をサポートするためにネットワ�
 |サイト サーバーとクライアントが使用する可能性のある**ドメインとサービス**。|Configuration Manager 機能では、サイト サーバーおよびクライアントが Windowsudpate.microsoft.com や Microsoft Intune サービスなどのインターネット上の特定のサービスおよびドメインにアクセスする必要がある場合があります。<br /><br /> Microsoft Intune を使用してモバイル デバイスを管理する場合は、[Intune で必要なポートとドメイン](https://docs.microsoft.com/en-us/intune/get-started/network-infrastructure-requirements-for-microsoft-intune)へのアクセスも設定する必要があります。|  
 |サイト システム サーバーとクライアント通信用の**プロキシ サーバー** 。 異なるサイト システム サーバーとクライアントに対して別のプロキシ サーバーを指定することができます。|これらの構成はサイト システムの役割またはクライアントのインストール時に行われるため、サイト システムの役割とクライアントを構成するときに注意が必要なのは、後で参照するプロキシ サーバー構成のみです。<br /><br /> 展開でプロキシ サーバーを使用する必要があるかどうかがわからない場合は、「[System Center Configuration Manager でのプロキシ サーバーのサポート](../../../core/plan-design/network/proxy-server-support.md)」を確認し、プロキシ サーバーを使用できるサイト システムの役割とクライアントの動作についてご理解ください。|   
 |  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

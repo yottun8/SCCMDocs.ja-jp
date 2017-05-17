@@ -15,9 +15,11 @@ caps.latest.revision: 15
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
 ms.openlocfilehash: b88bc5f734b85527b81e5848deb0617db4c8dfbc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -263,9 +265,4 @@ Windows Defender によって検出された望ましくない項目または有
  [Windows Defender または Endpoint Protection クライアントのトラブルシューティング](troubleshoot-endpoint-client.md)   
 
  [Endpoint Protection クライアント ヘルプ](endpoint-protection-client-help.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

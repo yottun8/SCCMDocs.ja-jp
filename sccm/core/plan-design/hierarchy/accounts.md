@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 72263ec5e7104924a1ca46dc2000be9f8568599f
 ms.openlocfilehash: a776667cc9f24bd4a468afea76e466c34ce66864
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -344,9 +346,4 @@ Configuration Manager は、このグループを使用して、ソフトウェ�
 >  アカウントのスコープを制限する たとえば、タスク シーケンスごとに異なるタスク シーケンスの別のユーザーとして実行アカウントを作成すると、1 つのアカウントが侵害された場合に侵害されるのは、そのアカウントがアクセスできるクライアント コンピューターのみになります。  
 >   
 >  コマンド ラインにコンピューターの管理アクセスが必要な場合は、該当するタスク シーケンスを実行するすべてのコンピューターに、タスク シーケンスの実行アカウント専用のローカル管理者アカウントを作成することを検討してください。 そのアカウントは、不要になり次第、削除してください。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

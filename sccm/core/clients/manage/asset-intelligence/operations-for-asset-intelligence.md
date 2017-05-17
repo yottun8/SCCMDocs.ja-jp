@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,10 +30,10 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 このトピックでは、System Center Configuration Manager 階層で資産インテリジェンスの一般的なタスクを管理する方法について説明します。  
 
-##  <a name="a-namebkmkviewinformationa-view-asset-intelligence-information"></a><a name="BKMK_ViewInformation"></a> 資産インテリジェンス情報の閲覧  
+##  <a name="BKMK_ViewInformation"></a> 資産インテリジェンス情報の閲覧  
  資産インテリジェンスの情報は [資産インテリジェンス] **** ホームページと資産インテリジェンスレポートで閲覧することができます。  
 
-###  <a name="a-namebkmkassetintelligencehomepagea-asset-intelligence-home-page"></a><a name="BKMK_AssetIntelligenceHomePage"></a> 資産インテリジェンス ホーム ページ  
+###  <a name="BKMK_AssetIntelligenceHomePage"></a> 資産インテリジェンス ホーム ページ  
  資産インテリジェンス **** ホーム ページには、資産インテリジェンス カタログ情報の概要ダッシュボードが表示されます。 ホーム ページでは、カタログの同期やインベントリされたソフトウェア ステータスなどの情報を閲覧できます。 資産インテリジェンス **** ホーム ページは、次のセクションに分かれています。  
 
 -   **カタログ同期**: 資産インテリジェンスが有効になっているかどうか、資産インテリジェンス同期ポイントの現在の状態、同期スケジュール、カスタマー ライセンス ステートメントがインポートされているかどうか、前回状態が更新された日時と次回の更新予定の日時、資産インテリジェンス同期ポイント サイト システムがインストールされてから加えられた変更の数が情報として提供されます。  
@@ -49,7 +51,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 2.  [資産とコンプライアンス] **** ワークスペースで [資産インテリジェンス] ****をクリックします。 資産インテリジェンス レポートが表示されます。  
 
-###  <a name="a-namebkmkassetintelligencereportsa-asset-intelligence-reports"></a><a name="BKMK_AssetIntelligenceReports"></a> 資産インテリジェンス レポート  
+###  <a name="BKMK_AssetIntelligenceReports"></a> 資産インテリジェンス レポート  
  資産インテリジェンスによって収集された情報を表示する資産インテリジェンス レポートには 60 種類以上があります。 これらのレポートの多くは、さらに詳細なレポートにリンクしており、全般的な情報を検索したり、詳細情報にドリルダウンしたりできます。 資産インテリジェンス レポートは、Configuration Manager コンソールの **[監視]** ワークスペースの **[レポート]** ノードの下に位置します。 レポートはハードウェア、ライセンス管理、ソフトウェアに関する情報を示します。 Configuration Manager でのレポートに関して詳しくは、「[System Center Configuration Manager のレポート](../../../../core/servers/manage/reporting.md)」を参照してください。  
 
 > [!NOTE]  
@@ -68,7 +70,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 3.  実行する試算インテリジェンス レポートを選択し、[ホーム] **** タブの [レポート グループ] **** セクションで、[実行] ****をクリックします。  
 
-##  <a name="a-namebkmksynchronizethecataloga-synchronize-the-asset-intelligence-catalog"></a><a name="BKMK_SynchronizeTheCatalog"></a> 資産インテリジェンス カタログの同期  
+##  <a name="BKMK_SynchronizeTheCatalog"></a> 資産インテリジェンス カタログの同期  
  ローカルの資産インテリジェンス カタログを System Center Online と同期して、最新のソフトウェア タイトルのカテゴリを取得することができます。 System Center Online とのカタログ同期を手動で要求すると、System Center Online との同期プロセスが完了するのに 15 分以上かかる場合があります。 Configuration Manager は、同期が問題なく完了した時刻で、**資産インテリジェンス** ホーム ページの **[最後の更新完了日]** の設定を更新します。  
 
 > [!NOTE]  
@@ -96,7 +98,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 > [!WARNING]  
 >  System Center Online は12時間に手動による同期要求を 1 つだけ受け付けます。  
 
-###  <a name="a-namebkmkmanuallysynchronizecataloga-to-manually-synchronize-the-asset-intelligence-catalog"></a><a name="BKMK_ManuallySynchronizeCatalog"></a> 資産インテリジェンス カタログを手動で同期するには  
+###  <a name="BKMK_ManuallySynchronizeCatalog"></a> 資産インテリジェンス カタログを手動で同期するには  
 
 1.  Configuration Manager コンソールで、[ **資産とコンプライアンス**] をクリックします。  
 
@@ -104,10 +106,10 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 3.  [ホーム] **** タブの [作成] **** グループで、[同期] ****、[資産インテリジェンス カタログの同期] ****を順にクリックして [OK] ****をクリックします。  
 
-##  <a name="a-namebkmkcustomizecataloga-customize-the-asset-intelligence-catalog"></a><a name="BKMK_CustomizeCatalog"></a> 資産インテリジェンス カタログのカスタマイズ  
+##  <a name="BKMK_CustomizeCatalog"></a> 資産インテリジェンス カタログのカスタマイズ  
  System Center Online から受信した資産インテリジェンス カタログのカテゴリ分類の情報は、読み取りのアクセス許可でサイト データベースに保存され、変更および削除することはできません。 しかし、カスタムのソフトウェア カテゴリ、ソフトウェア ファミリー、ソフトウェア ラベル、およびハードウェア要求カタログ情報については、作成、更新、削除ができます。 そして、既存またはカスタムのソフトウェア タイトル情報に対して、System Center Online が提供する情報ではなくユーザー定義のカテゴリ分類データを使用できます。 カテゴリ分類の情報を変更したり、追加したりすると、ユーザー定義のカタログ情報とみなされます。 ユーザー定義のカテゴリ分類の情報は、検証されたカタログ情報とは異なるデータベース テーブルに格納されます。  
 
-###  <a name="a-namebkmksoftwarecategoriesa-software-categories"></a><a name="BKMK_SoftwareCategories"></a> ［ソフトウェア カテゴリ］  
+###  <a name="BKMK_SoftwareCategories"></a> ［ソフトウェア カテゴリ］  
  資産インテリジェンス ソフトウェア カテゴリは、インベントリされたソフトウェア タイトルを広範にカテゴリ化するために使用しますが、詳細なソフトウェア ファミリに分類する高レベルのグループ化機能としても使用できます。 たとえば、ソフトウェア カテゴリがエネルギー関連企業である場合、このソフトウェア カテゴリ内のソフトウェア ファミリとして石油ガスまたは水力発電などを設定できます。 多くのソフトウェア カテゴリは、資産インテリジェンス カタログ内で定義されていますが、インベントリされたソフトウェアを詳細に定義するために、ユーザー定義済みの追加的なカテゴリを作成することもできます。 事前定義されたソフトウェア カテゴリが [検証済み] ****となる一方で、資産インテリジェンス カタログに追加したカスタムのソフトウェア カテゴリ情報は [ユーザー定義] ****となります。  
 
  ユーザー定義のソフトウェア カテゴリを作成するには、次の手順に従います。  
@@ -131,7 +133,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 6.  [ **完了** ] ページで [ **閉じる** ] をクリックして、ウィザードを閉じます。  
 
-###  <a name="a-namebkmksoftwarefamiliesa-software-families"></a><a name="BKMK_SoftwareFamilies"></a> ［ソフトウェア ファミリ］  
+###  <a name="BKMK_SoftwareFamilies"></a> ［ソフトウェア ファミリ］  
  資産インテリジェンス ソフトウェア ファミリは、ソフトウェア カテゴリ内でインベントリされたソフトウェア タイトルを詳細に定義するために使用します。 たとえば、ソフトウェア カテゴリがエネルギー関連企業である場合、このソフトウェア カテゴリ内のソフトウェア ファミリとして石油ガスまたは水力発電などを設定できます。 多くのソフトウェア ファミリーは、資産インテリジェンス カタログ内で定義されていますが、インベントリされたソフトウェアを定義するために、ユーザー定義のファミリーを追加で作成することもできます。 事前定義されたソフトウェア ファミリーが [検証済み] ****になる一方で、資産インテリジェンス カタログに追加したカスタムのソフトウェア ファミリー情報は [ユーザー定義] ****になります。  
 
  ユーザー定義のソフトウェア ファミリーを作成するには、次の手順に従います。  
@@ -153,7 +155,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 6.  [ **完了** ] ページで [ **閉じる** ] をクリックして、ウィザードを閉じます。  
 
-###  <a name="a-namebkmksoftwarelabelsa-software-labels"></a><a name="BKMK_SoftwareLabels"></a> ソフトウェア ラベル  
+###  <a name="BKMK_SoftwareLabels"></a> ソフトウェア ラベル  
  資産インテリジェンスのカスタムのソフトウェア ラベルを使用すると、ソフトウェア タイトルをグループ化できるフィルターを作成し、資産インテリジェンスレポートを使用してそれを閲覧することができます。 たとえば、"シェアウェア" という名前のソフトウェア ラベルを作成し、任意のアプリケーションに関連付けてレポートを実行すると、"シェアウェア" のソフトウェア ラベルを持つすべてのタイトルを表示できます。 資産インテリジェンスカタログに追加するカスタムのソフトウェア ラベルの検証状態はすべて、[ユーザー定義] **** になります。  
 
  ユーザー定義のソフトウェア ラベルを作成するには、次の手順に従います。  
@@ -175,7 +177,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 6.  [ **完了** ] ページで [ **閉じる** ] をクリックして、ウィザードを閉じます。  
 
-###  <a name="a-namebkmkhardwarerequirementsa-hardware-requirements"></a><a name="BKMK_HardwareRequirements"></a> ハードウェア要件  
+###  <a name="BKMK_HardwareRequirements"></a> ハードウェア要件  
  ハードウェアの要件情報は、ソフトウェアの展開前に、コンピューターがソフトウェア タイトルのハードウェア要件を満たしていることを検証するのに役立ちます。 資産インテリジェンス カタログでは、多くのハードウェア要求が事前定義されていますが、カスタムの要求を満たす新しいユーザー定義のハードウェア要求情報を作成することもできます。 事前定義されたハードウェア要求が [検証済み] ****になる一方で、資産インテリジェンス カタログに追加したユーザー定義のハードウェア要求情報は [ユーザー定義] ****になります。  
 
 > [!IMPORTANT]  
@@ -211,7 +213,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 6.  [ **完了** ] ページで [ **閉じる** ] をクリックして、ウィザードを閉じます。  
 
-###  <a name="a-namebkmkmodifycategorizationa-modify-categorization-information-for-inventoried-software"></a><a name="BKMK_ModifyCategorization"></a> インベントリされたソフトウェアのカテゴリ分類の情報の変更  
+###  <a name="BKMK_ModifyCategorization"></a> インベントリされたソフトウェアのカテゴリ分類の情報の変更  
  資産インテリジェンス カタログの事前定義されたソフトウェアは、製品名や、ベンダー、ソフトウェア カテゴリ、ソフトウェア ファミリーといった特定のカテゴリ分類の情報で構成されています。 事前定義されたカテゴリ分類の情報が要件を満たさない場合は、ソフトウェア タイトルのプロパティで情報を変更することができます。 事前設定されたソフトウェアのカテゴリ分類の情報を変更すると、そのソフトウェアの検証の状態は [検証済み] **** から [ユーザー定義] ****に変わります。  
 
 > [!IMPORTANT]  
@@ -265,7 +267,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 6.  資産インテリジェンス カタログにあるソフトウェアのカテゴリ化情報を元に戻すと、検証の状態が [ユーザー定義済み **** ] から [検証済み ****] に変わります。 カタログにないソフトウェアのカテゴリ化情報を元に戻すと、検証の状態が [ユーザー定義済み **** ] から [カテゴリ化されていない ****] に変わります。  
 
-##  <a name="a-namebkmkrequestcatalogupdatea-request-a-catalog-update-for-uncategorized-software-titles"></a><a name="BKMK_RequestCatalogUpdate"></a> カテゴリ化されていないソフトウェア タイトルのカタログ更新の要求  
+##  <a name="BKMK_RequestCatalogUpdate"></a> カテゴリ化されていないソフトウェア タイトルのカタログ更新の要求  
  カテゴリ化されていないソフトウェア タイトル情報は、調査およびカテゴリ化のために System Center Online に送信できます。 カテゴリ化されていないソフトウェア タイトルが送信されたあとで、お客様から同じソフトウェア タイトルで少なくとも 4 つのカテゴリ化要求があった場合、調査担当者はソフトウェア タイトルのカテゴリ化情報を特定、カテゴリ化して、System Center Online サービスを使用しているすべてのお客様が使用できるようにします。 Microsoft では、カテゴリ化要求の最も多いソフトウェア タイトルに最も高い優先順位を与えています。 カスタムのソフトウェアや基幹業務アプリケーションにカテゴリを与えることはほとんどありません。ベスト プラクティスとして、これらのソフトウェア タイトルをカテゴリ化のために Microsoft に送信しないでください。  
 
  ソフトウェア タイトル情報がカテゴリ化のために System Center Online に送信されるときは、次の条件が適用されます。  
@@ -308,7 +310,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
     > [!NOTE]  
     >  カテゴリ化のために System Center Online に送信されたソフトウェアの検証の状態は、中央管理サイトでは [保留中 **** ] と表示されますが、子プライマリ サイトではまだ [カテゴリ化されていない **** ] と表示されます。  
 
-##  <a name="a-namebkmkresolvesoftwaredetailsa-resolve-software-details-conflicts"></a><a name="BKMK_ResolveSoftwareDetails"></a> ソフトウェア詳細の競合の解決  
+##  <a name="BKMK_ResolveSoftwareDetails"></a> ソフトウェア詳細の競合の解決  
  既存のソフトウェアの詳細情報と競合している、新しく更新されたソフトウェアのカテゴリ化詳細を System Center Online から受け取ったあとに、競合を解決する方法を選択できます。 現在競合があるソフトウェアの検証の状態は [更新可能 ****] になります。 ソフトウェア詳細の競合が解決すると、指定した設定に従って、資産インテリジェンス カタログにソフトウェアのカテゴリ化情報が保持されます。 ソフトウェア詳細の競合を解決してから System Center Online の値が変更された場合を除き、同じソフトウェアのカテゴリ化の値に対してソフトウェア詳細の競合は発生しません。  
 
  ソフトウェア詳細の競合を解決するには、次の手順に従います。  
@@ -336,9 +338,4 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
     -   **ローカルで編集されたカタログ情報値をダウンロードした System Center Online の値で上書きする**: 資産インテリジェンス カタログ内の既存のソフトウェアのカテゴリ分類の情報を新しい System Center Online から取得した新しい情報で上書きし、ソフトウェア詳細の競合を解決します。 この設定を選択すると、ソフトウェア タイトルの状態が [更新可能 **** ] から [検証済み ****] に変わります。  
 
      [OK] をクリックして競合の解決を保存します。 ****  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

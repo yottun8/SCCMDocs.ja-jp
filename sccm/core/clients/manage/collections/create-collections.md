@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9555a16d97224a1cf49a426ab225468b07403f60
 ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -44,7 +46,7 @@ ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
 
  Linux および UNIX を実行しているコンピューターのコレクションの作成については、「[System Center Configuration Manager で Linux および UNIX サーバーのクライアントを管理する方法](../../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md)」を参照してください。  
 
-##  <a name="a-namebkmk1a-to-create-a-device-collection"></a><a name="BKMK_1"></a> デバイス コレクションを作成するには  
+##  <a name="BKMK_1"></a> デバイス コレクションを作成するには  
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[デバイス コレクション]** の順に選択します。  
 
@@ -120,7 +122,7 @@ ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
 > [!NOTE]  
 >  コレクション メンバーを表示するには、Configuration Manager コンソールを更新または再読み込みする必要があります。 ただし、メンバーは、スケジュールされた最初の更新が行われるか、コレクションに対して **[メンバーシップの更新]** を手動で選択するまでコレクションに表示されません。 コレクションの更新が完了するまで、しばらく時間がかかる場合があります。  
 
-##  <a name="a-namebkmk2a-to-create-a-user-collection"></a><a name="BKMK_2"></a> ユーザー コレクションを作成するには  
+##  <a name="BKMK_2"></a> ユーザー コレクションを作成するには  
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[ユーザー コレクション]** の順に選択します。  
 
@@ -192,7 +194,7 @@ ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
 > [!NOTE]  
 >  コレクション メンバーを表示するには、Configuration Manager コンソールを更新または再読み込みする必要があります。 ただし、メンバーは、スケジュールされた最初の更新が行われるか、コレクションに対して **[メンバーシップの更新]** を手動で選択するまでコレクションに表示されません。 コレクションの更新が完了するまで、しばらく時間がかかる場合があります。  
 
-##  <a name="a-namebkmk3a-to-import-a-collection"></a><a name="BKMK_3"></a> コレクションをインポートするには  
+##  <a name="BKMK_3"></a> コレクションをインポートするには  
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[ユーザー コレクション]** または **[デバイス コレクション]** の順に選択します。  
 
@@ -206,9 +208,4 @@ ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
     >  インポートするファイルは、同じバージョンの Configuration Manager が動作するサイトからエクスポートされたものである必要があります。 コレクションのエクスポートの詳細については、「[System Center Configuration Manager でコレクションを管理する方法](../../../../core/clients/manage/collections/manage-collections.md)」を参照してください。  
 
 6.  コレクションをインポートするウィザードを完了します。 新しいコレクションは、 **[資産とコンプライアンス]** ワークスペースの **[ユーザー コレクション]** または **[デバイス コレクション]** ノードに表示されます。 新しくインポートされたコレクションのコレクション メンバーを表示するには、Configuration Manager コンソールを更新または再読み込みします。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

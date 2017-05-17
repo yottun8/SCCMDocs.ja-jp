@@ -15,9 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fff93794afdfa9f890b1f06d6c330d8cffc5796c
 ms.openlocfilehash: b4db5d86cc0ed020ed176feb2e8f1f9dc51a2280
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="configuration-options-for-site-system-roles-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイト システム役割の構成オプション
@@ -26,7 +28,7 @@ ms.openlocfilehash: b4db5d86cc0ed020ed176feb2e8f1f9dc51a2280
 
 System Center Configuration Manager のサイト システム役割のほとんどの構成オプションについては、説明の必要がないか、構成時にウィザードかダイアログ ボックスで説明されます。 以下のセクションでは、追加情報を必要とする設定があるサイト システムの役割について説明します。  
 
-##  <a name="a-namebkmkapplicationcatalogwebsitea-application-catalog-website-point"></a><a name="BKMK_ApplicationCatalog_Website"></a> アプリケーション カタログ Web サイト ポイント  
+##  <a name="BKMK_ApplicationCatalog_Website"></a> アプリケーション カタログ Web サイト ポイント  
  アプリケーション カタログのアプリケーション カタログ Web サイト ポイントの設定方法については、「[System Center Configuration Manager のアプリケーション管理の計画と構成](../../../../apps/plan-design/plan-for-and-configure-application-management.md)」を参照してください。  
 
  **クライアント接続**  
@@ -45,7 +47,7 @@ System Center Configuration Manager のサイト システム役割のほとん�
 
  アプリケーション カタログのユーザーに表示される名称を入力します。 ユーザーがこの Web サイトを信頼されるソースとして認識する際に、この組織情報が役立ちます。  
 
-##  <a name="a-namebkmkapplicationcatalogwebservicea-application-catalog-web-service-point"></a><a name="BKMK_ApplicationCatalog_WebService"></a> アプリケーション カタログ Web サービス ポイント  
+##  <a name="BKMK_ApplicationCatalog_WebService"></a> アプリケーション カタログ Web サービス ポイント  
  アプリケーション カタログのアプリケーション カタログ Web サービス ポイントの設定方法については、「[System Center Configuration Manager のアプリケーション管理の計画と構成](../../../../apps/plan-design/plan-for-and-configure-application-management.md)」を参照してください。  
 
  **HTTPS**  
@@ -54,10 +56,10 @@ System Center Configuration Manager のサイト システム役割のほとん�
 
  サーバー証明書の展開例と、それを IIS で構成する方法については、「[System Center Configuration Manager PKI 証明書の展開手順の例: Windows Server 2008 証明機関](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)」の「*IIS を実行するサイト システム用の Web サーバー証明書の展開*」セクションを参照してください。  
 
-##  <a name="a-namebkmkcertificateregistrationpointa-certificate-registration-point"></a><a name="BKMK_CertificateRegistrationPoint"></a> 証明書登録ポイント  
+##  <a name="BKMK_CertificateRegistrationPoint"></a> 証明書登録ポイント  
  証明書登録ポイントの設定方法の詳細については、「[証明書プロファイルの概要](/sccm/protect/deploy-use/introduction-to-certificate-profiles)」を参照してください。  
 
-##  <a name="a-namebkmkdistributionpointa-distribution-point"></a><a name="BKMK_Distribution_Point"></a> 配布ポイント  
+##  <a name="BKMK_Distribution_Point"></a> 配布ポイント  
  コンテンツ展開の配布ポイントの構成方法については、「[Manage content and content infrastructure for System Center Configuration Manager](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md) (System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理)」を参照してください。  
 
  PXE 展開の配布ポイントの設定方法については、「[System Center Configuration Manager で PXE を使用してネットワーク経由で Windows を展開する](../../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md)」を参照してください。  
@@ -97,7 +99,7 @@ System Center Configuration Manager のサイト システム役割のほとん�
  - **バージョン 1610 より前では**、**[代替のコンテンツ ソースの場所の使用を許可する]** チェック ボックスをオンにすると、他に利用できる代替ポイントがない場合に、この境界グループ外のクライアントのフォールバックが許可され、配布ポイントをコンテンツ ソースの場所として使用できるようになります。
  - **バージョン 1610 以降**、**[代替のコンテンツ ソースの場所の使用を許可する]** は構成できません。  代わりに、境界グループ間の関係を設定してください。有効なコンテンツ ソースの場所を追加の境界グループからクライアントが検索できるようになるタイミングが、その関係によってチェックされるようにします。
 
-##  <a name="a-namebkmkenrollmentpointa-enrollment-point"></a><a name="BKMK_Enrollment_Point"></a> 登録ポイント  
+##  <a name="BKMK_Enrollment_Point"></a> 登録ポイント  
 登録ポイントは、Mac コンピューターをインストールし、オンプレミスのモバイル デバイス管理で管理するデバイスを登録するために使用します。 詳細については、次をご覧ください。  
 
 -   [System Center Configuration Manager で Mac にクライアントを展開する方法](../../../../core/clients/deploy/deploy-clients-to-macs.md)  
@@ -109,7 +111,7 @@ System Center Configuration Manager のサイト システム役割のほとん�
 
  サーバー証明書の展開例と、それを IIS で構成する方法については、「[System Center Configuration Manager PKI 証明書の展開手順の例: Windows Server 2008 証明機関](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)」の「*IIS を実行するサイト システム用の Web サーバー証明書の展開*」セクションを参照してください。  
 
-##  <a name="a-namebkmkenrollmentproxypointa-enrollment-proxy-point"></a><a name="BKMK_Enrollment_Proxy_Point"></a> 登録プロキシ ポイント  
+##  <a name="BKMK_Enrollment_Proxy_Point"></a> 登録プロキシ ポイント  
 モバイル デバイスの登録プロキシ ポイントの構成方法について詳しくは、「[System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスをユーザーが登録する方法](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)」をご覧ください。  
 
 **クライアント接続**  
@@ -117,7 +119,7 @@ System Center Configuration Manager のサイト システム役割のほとん�
 
  サーバー証明書の展開例と、それを IIS で構成する方法については、「[System Center Configuration Manager PKI 証明書の展開手順の例: Windows Server 2008 証明機関](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)」の「*IIS を実行するサイト システム用の Web サーバー証明書の展開*」セクションを参照してください。  
 
-##  <a name="a-namebkmkfallbackstatuspointa-fallback-status-point"></a><a name="BKMK_Fallback_Status_Point"></a> フォールバック ステータス ポイント  
+##  <a name="BKMK_Fallback_Status_Point"></a> フォールバック ステータス ポイント  
 **状態メッセージの数** と **調整間隔 (秒)**  
 これらのオプションの既定の設定 (状態メッセージの数 10,000、調整間隔 3,600 秒) は、ほとんどの状況に十分に対応できますが、次の両方の条件に一致する場合には、設定の変更が必要になることがあります。  
 
@@ -152,9 +154,4 @@ System Center 2012 Configuration Manager クライアントを正常にインス
 -   現在の調整設定では、サイト サーバーの CPU 負荷が高くなる場合。  
 
 フォールバック ステータス ポイントの調整設定を変更する場合は、変更により生じる結果について理解していることが条件となります。 たとえば、調整設定を高くすると、サイト サーバーの CPU 負荷が高くなり、すべてのサイト操作の速度が遅くなります。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 485cb3ca4988f983c1ec71b6c8daf136571bf0ea
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -28,10 +30,10 @@ ms.openlocfilehash: 485cb3ca4988f983c1ec71b6c8daf136571bf0ea
 
 Configuration Manager のオペレーティング システム イメージは WIM 形式のファイルで、コンピューターにオペレーティング システムを正常にインストールして構成するのに必要な、参照ファイルとフォルダーのコレクションを圧縮したものです。 カスタムのオペレーティング システム イメージは、参照コンピューターから構築およびキャプチャし、オペレーティング システム ファイル、サポート ファイル、ソフトウェア更新プログラム、ツール、その他のソフトウェア アプリなど、必要なものをすべて含めて構成します。 参照コンピューターを手動で構成する範囲は、ユーザーが決められます。 参照コンピューターの構成は、構築およびキャプチャのタスク シーケンスを使用して完全に自動化することができます。また、参照コンピューターの特定の要素を手動で構成してから、タスク シーケンスを使用して残りを自動化したり、タスク シーケンスを使用せずに参照コンピューターを手動で構成したりもできます。 次のセクションを使用して、オペレーティング システムをカスタマイズします。
 
-##  <a name="a-namebkmkpreparereferencecomputera-prepare-for-the--reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a> 参照コンピューターの準備  
+##  <a name="BKMK_PrepareReferenceComputer"></a> 参照コンピューターの準備  
  参照コンピューターからオペレーティング システム イメージのキャプチャを行う前に、次の点をご検討ください。  
 
-###  <a name="a-namebkmkrefcomputerdecidea-decide-between-an-automated-or-manual-configuration"></a><a name="BKMK_RefComputerDecide"></a> 自動または手動の構成の決定  
+###  <a name="BKMK_RefComputerDecide"></a> 自動または手動の構成の決定  
  次に、参照コンピューターの自動構成と手動構成の長所と短所を示します。  
 
 #### <a name="automated-configuration"></a>自動構成  
@@ -66,7 +68,7 @@ Configuration Manager のオペレーティング システム イメージは W
 
 -   プロセス全体にアクティブに関わる人が必要です。  
 
-###  <a name="a-namebkmkrefcomputerconsiderationsa-considerations-for-the-reference-computer"></a><a name="BKMK_RefComputerConsiderations"></a> 参照コンピューターの考慮事項  
+###  <a name="BKMK_RefComputerConsiderations"></a> 参照コンピューターの考慮事項  
  次に、参照コンピューターを構成するときに考慮する基本項目の一覧を示します。  
 
 -   **展開するオペレーティング システム**  
@@ -110,7 +112,7 @@ Configuration Manager のオペレーティング システム イメージは W
 
      参照コンピューターのオペレーティングシステムをキャプチャするときに含めるデスクトップのカスタマイズ プロパティで参照コンピューターを構成できます。 デスクトップのプロパティには、壁紙、組織のブランド、標準の既定ユーザー プロファイルが含まれます。  
 
-##  <a name="a-namebkmkmanuallybuildreferencea-manually-build-a-reference-computer"></a><a name="BKMK_ManuallyBuildReference"></a> 参照コンピューターの手動による構築  
+##  <a name="BKMK_ManuallyBuildReference"></a> 参照コンピューターの手動による構築  
  次の手順を使用して、参照コンピューターを手動で構築します。  
 
 > [!NOTE]  
@@ -133,13 +135,8 @@ Configuration Manager のオペレーティング システム イメージは W
 
  参照コンピューターの準備ができた後、タスク シーケンスを使用して、参照コンピューターからオペレーティング システム イメージをキャプチャします。  詳しい手順については、「 [オペレーティング システム イメージを既存の参照コンピューターからキャプチャする](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer)」をご覧ください。  
 
-##  <a name="a-namebkmkusetstobuildreferencea-use-a-task-sequence-to-build-a-reference-computer"></a><a name="BKMK_UseTSToBuildReference"></a> タスク シーケンスによる参照コンピューターの構築  
+##  <a name="BKMK_UseTSToBuildReference"></a> タスク シーケンスによる参照コンピューターの構築  
  オペレーティング システム、ドライバー、アプリケーションなどを展開するタスク シーケンスを使用して、参照コンピューターを作成するプロセスを自動化できます。  以下の手順を使用して参照コンピューターを構築し、その後、参照コンピューターからオペレーティング システム イメージをキャプチャします。  
 
 -   タスク シーケンスを使用して、参照コンピューターからオペレーティング システム イメージを構築し、キャプチャします。  詳しい手順については、「 [タスク シーケンスを使用して、参照コンピューターを構築およびキャプチャする](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS)」を参照してください。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

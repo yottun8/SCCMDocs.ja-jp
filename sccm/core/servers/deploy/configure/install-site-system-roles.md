@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 8370e3b102afed518e8154d4944ab420188faccf
 ms.openlocfilehash: 76b070f8e203cc0c751f35e5a4b4904504786c04
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイト システム役割のインストール
@@ -38,7 +40,7 @@ System Center Configuration Manager コンソールには、サイト システ�
 
 -   Configuration Manager では、**サイト システムのインストール アカウント**を使用してサイト システムの役割をインストールします。 適切なウィザードを実行して、新しいサイト システム サーバーを作成したり、既存のサイト システム サーバーにサイト システムの役割を追加したりするときに、このアカウントを指定します。 既定では、このアカウントはサイト サーバー コンピューターのローカル システム アカウントですが、ドメイン ユーザー アカウントをサイト システムのインストール アカウントとして使用するように指定できます。 詳細については、「[System Center Configuration Manager で使用されるアカウント](../../../../core/plan-design/hierarchy/accounts.md)」を参照してください。  
 
-##  <a name="a-namebkmkinstalla-to-install-site-system-roles-on-an-existing-site-system-server"></a><a name="bkmk_Install"></a> 既存のサイト システム サーバーにサイト システムの役割をインストールするには  
+##  <a name="bkmk_Install"></a> 既存のサイト システム サーバーにサイト システムの役割をインストールするには  
 
 1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
 
@@ -81,9 +83,4 @@ System Center Configuration Manager コンソールには、サイト システ�
 
 > [!TIP]  
 >  Windows PowerShell コマンドレット New-CMSiteSystemServer で、この手順と同じ機能が実行されます。 詳細については、System Center 2012 Configuration Manager SP1 コマンドレット リファレンス ドキュメントの「[New-CMSiteSystemServer](http://go.microsoft.com/fwlink/p/?LinkID=271414)」を参照してください。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

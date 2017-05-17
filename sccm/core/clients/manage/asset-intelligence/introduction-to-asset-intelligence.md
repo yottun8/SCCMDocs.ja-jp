@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 6a851ddfeee78574fbb0b1eff0c7cc518a7bb598
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,7 +30,7 @@ ms.openlocfilehash: 6a851ddfeee78574fbb0b1eff0c7cc518a7bb598
 
 System Center Configuration Manager の資産インテリジェンスでは、アセット資産カタログを使用して、ソフトウェア ライセンスの使用状況をインベントリに記録して、企業全体にわたって管理することができます。 多数のハードウェア インベントリ Windows Management Instrumentation (WMI) クラスが用意されているので、使用されているハードウェアおよびソフトウェア タイトルについて収集される情報の幅が広がります。 この情報を使いやすい形式で表示するレポートが 60 以上あります。 これらのレポートの多くはさらに具体的なレポートにリンクしており、それらのレポートで、全般情報を検索したり、詳細情報にドリルダウンしたりすることができます。 資産インテリジェンス カタログにはカスタム情報 (カスタム ソフトウェア カテゴリ、ソフトウェア ファミリ、ソフトウェア ラベル、ハードウェア要件など) を追加することができます。 また、System Center Online に接続し、最新情報を使用して資産インテリジェンス カタログを動的に更新することができます。 ソフトウェア ライセンス情報を Configuration Manager サイト データベースにインポートすることにより、使用されている購入ソフトウェア ライセンスで企業ソフトウェア ライセンスの使用状況を調整することもできます。  
 
-##  <a name="a-namebkmkassetintelligencecataloga-asset-intelligence-catalog"></a><a name="BKMK_AssetIntelligenceCatalog"></a> 資産インテリジェンス カタログ  
+##  <a name="BKMK_AssetIntelligenceCatalog"></a> 資産インテリジェンス カタログ  
 
  Configuration Manager の資産インテリジェンス カタログは、サイト データベースに格納されている一連のデータベース テーブルであり、300,000 を超えるソフトウェア タイトルとバージョンの分類情報および識別情報を提供します。 これらのテーブルは、特定のソフトウェア タイトルのハードウェア要件を管理するために使用することもできます。  
 
@@ -36,22 +38,22 @@ System Center Configuration Manager の資産インテリジェンスでは、�
 
  新しくリリースされたソフトウェアを含む資産インテリジェンス カタログ更新を定期的にダウンロードし、一括カタログ更新を実行できます。 また、資産インテリジェンス同期ポイントのサイト システムの役割を使用すると、このカタログを動的に更新できます。  
 
-###  <a name="a-namebkmksoftwarecategoriesa-software-categories"></a><a name="BKMK_SoftwareCategories"></a> ［ソフトウェア カテゴリ］  
+###  <a name="BKMK_SoftwareCategories"></a> ［ソフトウェア カテゴリ］  
  資産インテリジェンス ソフトウェア カテゴリを使用して、インベントリされたソフトウェア タイトルをおおまかに分類することができ、比較的細かく分類されているソフトウェア ファミリをグループ化することもできます。 たとえば、ソフトウェア カテゴリがエネルギー関連企業である場合、このソフトウェア カテゴリ内のソフトウェア ファミリとして石油ガスまたは水力発電などを設定できます。 資産インテリジェンス カタログには多数のソフトウェア カテゴリが事前に定義されていますが、インベントリされたソフトウェアをさらに細かく定義するためにユーザー定義のカテゴリを作成することもできます。 すべての事前定義のソフトウェア カテゴリの検証の状態は常に [検証済み ****] になります。一方、資産インテリジェンス カタログに追加されるカスタムのソフトウェア カテゴリ情報の検証の状態は [ユーザー定義 ****] になります。 ソフトウェア カテゴリを管理する方法の詳細については、「[Configuring Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)」(System Center Configuration Manager の資産インテリジェンスの構成) を参照してください。  
 
 > [!NOTE]  
 >  資産インテリジェンス カタログに保存されている事前定義のソフトウェア カテゴリ情報は、読み取り専用であり、変更または削除することはできません。 管理ユーザーは、ユーザー定義のソフトウェア カテゴリを追加、変更、または削除することができます。  
 
-###  <a name="a-namebkmksoftwarefamiliesa-software-families"></a><a name="BKMK_SoftwareFamilies"></a> ［ソフトウェア ファミリ］  
+###  <a name="BKMK_SoftwareFamilies"></a> ［ソフトウェア ファミリ］  
  資産インテリジェンス ソフトウェア ファミリは、ソフトウェア カテゴリ内でインベントリされたソフトウェア タイトルを定義するために使用します。 資産インテリジェンス カタログには多数のソフトウェア ファミリが事前に定義されていますが、インベントリされたソフトウェアをさらに細かく定義するためにユーザー定義のカテゴリを作成することもできます。 すべての事前定義のソフトウェア ファミリの検証の状態は常に [検証済み ****] になります。一方、資産インテリジェンス カタログに追加されるカスタムのソフトウェア ファミリ情報の検証の状態は [ユーザー定義 ****] になります。 ソフトウェア ファミリを管理する方法の詳細については、「[Configuring Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)」(System Center Configuration Manager の資産インテリジェンスの構成) を参照してください。  
 
 > [!NOTE]  
 >  定義済みのソフトウェア ファミリ情報は読み取り専用であり、変更できません。 管理ユーザーは、ユーザー定義のソフトウェア ファミリを追加、変更、または削除することができます。  
 
-###  <a name="a-namebkmkcustomlabelsa-software-labels"></a><a name="BKMK_CustomLabels"></a> ソフトウェア ラベル  
+###  <a name="BKMK_CustomLabels"></a> ソフトウェア ラベル  
  資産インテリジェンスのカスタム ソフトウェア ラベルを使用すると、ソフトウェア タイトルをグループ化したり、資産インテリジェンス レポートでソフトウェア タイトルを確認したりするためのフィルターを作成することができます。 ソフトウェア ラベルを使用して、共通の属性をもつソフトウェア タイトルから構成されるユーザー定義のグループを作成することができます。 たとえば、「シェアウェア」という名前のソフトウェア ラベルを作成し、そのソフトウェア ラベルをインベントリされているソフトウェア タイトルに関連付けてレポートを実行し、関連付けられている「シェアウェア」というソフトウェア ラベルが付いているすべてのソフトウェアを確認することができます。 ソフトウェア ラベルは事前定義されていません。 ソフトウェア ラベルの検証の状態は常に [ユーザー定義 ****] です。 ソフトウェア ラベルを管理する方法の詳細については、「[Configuring Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)」(System Center Configuration Manager の資産インテリジェンスの構成) を参照してください。  
 
-###  <a name="a-namebkmkhardwarerequirementsa-hardware-requirements"></a><a name="BKMK_HardwareRequirements"></a> ハードウェア要件  
+###  <a name="BKMK_HardwareRequirements"></a> ハードウェア要件  
  ハードウェア要件情報は、コンピューターをソフトウェアの展開の対象として指定する前に、それらがソフトウェア タイトルのハードウェア要件を満たしていることを検証するために使用することができます。 ソフトウェア タイトルのハードウェア要件は、[資産インテリジェンス **** ] ノードの下にある [ハードウェアの要件 **** ] ノードの [資産とコンプライアンス **** ] ワークスペースで管理することができます。 資産インテリジェンス カタログでは、多くのハードウェア要求が事前定義されていますが、カスタムの要求を満たす新しいユーザー定義のハードウェア要求情報を作成することもできます。 すべての事前定義のハードウェア要件の検証の状態は常に [検証済み ****] になります。一方、資産インテリジェンス カタログに追加されるカスタムのハードウェア要件情報の検証の状態は [ユーザー定義 ****] になります。 ハードウェア要件を管理する方法の詳細については、「[Configuring Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)」(System Center Configuration Manager の資産インテリジェンスの構成) を参照してください。  
 
 > [!NOTE]  
@@ -73,7 +75,7 @@ System Center Configuration Manager の資産インテリジェンスでは、�
 
  資産インテリジェンス カテゴリに保存されている事前定義のハードウェア要件は、読み取り専用であり、削除することはできません。  管理ユーザーは、資産インテリジェンス カタログに保存されていないユーザー定義のハードウェア要件を追加、変更、または削除することができます。  
 
-##  <a name="a-namebkmkinventoriedsoftwaretitlesa-inventoried-software-titles"></a><a name="BKMK_InventoriedSoftwareTitles"></a> ［インベントリされたソフトウェア タイトル］  
+##  <a name="BKMK_InventoriedSoftwareTitles"></a> ［インベントリされたソフトウェア タイトル］  
  インベントリされたソフトウェア タイトル情報は、[資産インテリジェンス **** ] ノードの下にある [インベントリされたソフトウェア **** ] ノードの [資産とコンプライアンス **** ] ワークスペースで管理することができます。 ハードウェア インベントリのクライアント エージェントは、インベントリされたソフトウェア情報を、資産インテリジェンス カタログに保存されているソフトウェア タイトルに基づいて Configuration Manager クライアントから収集します。  
 
 > [!WARNING]  
@@ -100,7 +102,7 @@ System Center Configuration Manager の資産インテリジェンスでは、�
 > [!NOTE]  
 >  インベントリされたソフトウェアの分類情報 (製品名、ベンダー、ソフトウェア カテゴリ、およびソフトウェア ファミリ) は、階層の最上位サイトでのみ、変更することができます。 事前定義のソフトウェアの分類情報を変更すると、ソフトウェアの検証の状態が [検証済み **** ] から [ユーザー定義 ****] に変わります。  
 
-##  <a name="a-nameassetintelligencesycnronizationpointa-asset-intelligence-synchronization-point"></a><a name="AssetIntelligenceSycnronizationPoint"></a> 資産インテリジェンス同期ポイント  
+##  <a name="AssetIntelligenceSycnronizationPoint"></a> 資産インテリジェンス同期ポイント  
  資産インテリジェンス同期ポイントは、System Center Online に接続して (TCP ポート 443 を使用) 資産インテリジェンス カタログ情報の動的な更新を管理するために使用される、Configuration Manager サイト システムの役割です。 このサイトの役割は、階層の最上位サイトにのみ、インストールすることができます。 資産インテリジェンス カタログのすべてのカスタマイズ設定は、すべて、最上位サイトに接続する Configuration Manager コンソールを使用して構成する必要があります。 更新情報はすべて最上位サイトで構成する必要がありますが、資産インテリジェンス カテゴリ情報は階層内の他のサイトにレプリケートされます。 資産インテリジェンス同期ポイント サイトの役割を使用すると、System Center Online とのオンデマンドのカタログ同期を要求したり、自動カタログ同期をスケジュールしたりすることができます。 資産インテリジェンス同期ポイントは、新しい資産インテリジェンス カタログ情報をダウンロードするだけでなく、カスタム ソフトウェア タイトル情報をカテゴリ分類用に System Center Online にアップロードできます。 Microsoft は、カテゴリ化のために System Center Online にアップロードされたすべてのソフトウェア タイトルを公共の情報として扱います。 そのため、カスタム ソフトウェア タイトルに機密情報や企業情報が含まれていないことを確認してください。  
 
 > [!NOTE]  
@@ -109,7 +111,7 @@ System Center Configuration Manager の資産インテリジェンスでは、�
 > [!NOTE]  
 >  System Center Online に接続するには、資産インテリジェンス同期ポイント サイト システムの役割が必要です。 資産インテリジェンス同期ポイントをインストールする方法の詳細については、「[System Center Configuration Manager での資産インテリジェンスの構成](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)」を参照してください。  
 
-##  <a name="a-namebkmkassetintelligencehomepagea-asset-intelligence-home-page"></a><a name="BKMK_AssetIntelligenceHomePage"></a> 資産インテリジェンス ホーム ページ  
+##  <a name="BKMK_AssetIntelligenceHomePage"></a> 資産インテリジェンス ホーム ページ  
  **[資産とコンプライアンス]** ワークスペースの **[資産インテリジェンス]** ノードは、Configuration Manager の資産インテリジェンスのホーム ページです。 [資産インテリジェンス **** ] ホーム ページには、資産インテリジェンス カタログ情報の概要ダッシュボード ビューが表示されます。  
 
 > [!NOTE]  
@@ -124,28 +126,28 @@ System Center Configuration Manager の資産インテリジェンスでは、�
 
 -   **インベントリされたソフトウェアのステータス**: インベントリされたソフトウェアの数と割合、ソフトウェア カテゴリ、ソフトウェア ファミリが、確認状態と共に表示されます。確認状態には、[Microsoft により確認済み]、[管理者により確認済み]、[オンライン確認保留中]、[未確認で確認待ちになっていない] があります。 表形式で表示される情報はそれぞれの数値を示し、グラフ形式で表示される情報はそれぞれの割合を示します。  
 
-##  <a name="a-namebkmkassetintelligencereportsa-asset-intelligence-reports"></a><a name="BKMK_AssetIntelligenceReports"></a> 資産インテリジェンス レポート  
+##  <a name="BKMK_AssetIntelligenceReports"></a> 資産インテリジェンス レポート  
  資産インテリジェンス レポートは、Configuration Manager コンソールの **[監視]** ワークスペースにある **[レポート]** ノードの下の [資産インテリジェンス] フォルダーにあります。 レポートはハードウェア、ライセンス管理、ソフトウェアに関する情報を示します。 Configuration Manager でのレポートに関して詳しくは、「[System Center Configuration Manager のレポート](../../../../core/servers/manage/reporting.md)」を参照してください。  
 
 > [!NOTE]  
 >  資産インテリジェンス レポートに表示されるインストール済みのソフトウェア タイトルおよびライセンス情報は、環境でインストールされているソフトウェア タイトルまたは使用されているライセンスの実際の数と異なる場合があります。 これは、エンタープライズ環境にインストールされるソフトウェア タイトルのソフトウェア ライセンス情報のインベントリには複雑な依存関係と制限事項が伴うためです。 資産インテリジェンス レポートのみに基づいて購入済みソフトウェア ライセンスのコンプライアンスを判断しないでください。  
 
-###  <a name="a-namebkmkhardwarereportsa-asset-intelligence-hardware-reports"></a><a name="BKMK_HardwareReports"></a> 資産インテリジェンス ハードウェア レポート  
+###  <a name="BKMK_HardwareReports"></a> 資産インテリジェンス ハードウェア レポート  
  資産インテリジェンス ハードウェア レポートは、組織内のハードウェア資産に関する情報を提供します。 処理速度、メモリ、周辺機器などのハードウェア インベントリ情報を使用することにより、ハードウェア資産インテリジェンス レポートで、USB デバイス、アップグレードが必要なハードウェア、および特定のソフトウェア アップグレードの準備ができていないコンピューターに関する情報を提供することができます。  
 
 > [!NOTE]  
 >  資産インテリジェンス ハードウェア レポートの一部のユーザー データは、システム セキュリティ イベント ログから収集されます。 レポートの精度向上のため、新規ユーザーにコンピューターを再度割り当てる際には、このログをクリアすることをお勧めします。  
 
-###  <a name="a-namebkmklicensemanagementreportsa-asset-intelligence-license-management-reports"></a><a name="BKMK_LicenseManagementReports"></a> 資産インテリジェンス ライセンス管理レポート  
+###  <a name="BKMK_LicenseManagementReports"></a> 資産インテリジェンス ライセンス管理レポート  
  資産インテリジェンス ライセンス管理レポートには、使用中のライセンスに関するデータが表示されます。 ライセンス台帳レポートには、インストールされた Microsoft アプリケーションが Microsoft ライセンス ステートメント (MLS) と対応する形で一覧表示されます。 これにより、購入したライセンスと使用したライセンスを簡単に一致させることができます。 他のライセンス管理レポートは、オペレーティング システムのアクティベーション統計のため、キー管理サービス (KMS) を実行するサーバーとして機能するコンピューターに関する情報を提供します。  
 
 > [!IMPORTANT]  
 >  一部の資産インテリジェンス ライセンス管理レポートは、ボリューム ライセンスの管理手法であるキー管理サービス (KMS) の機能に関する情報を提供します。 KMS サーバーが実装されていない場合、レポートによってはデータが取得されないこともあります。 KMS の詳細については、 [Microsoft TechNet](http://go.microsoft.com/fwlink/?linkid=3225)で KMS に関する情報を検索してください。  
 
-###  <a name="a-namebkmksoftwarereportsa-asset-intelligence-software-reports"></a><a name="BKMK_SoftwareReports"></a> 資産インテリジェンス ソフトウェア レポート  
+###  <a name="BKMK_SoftwareReports"></a> 資産インテリジェンス ソフトウェア レポート  
  資産インテリジェンス ソフトウェア レポートは、組織内のコンピューターにインストールされているソフトウェア ファミリ、カテゴリ、および特定のソフトウェア タイトルに関する情報を提供します。 ソフトウェア レポートには、ブラウザー ヘルパー オブジェクトや自動的に始動するソフトウェアなどの情報が表示されます。 このレポートは、アドウェアやスパイウェアなどのマルウェアを識別するのに使用することができます。また、余剰ソフトウェアを特定して、ソフトウェアの購入とサポートを合理化するのに役立ちます。  
 
-###  <a name="a-namebkmksoftwareidtagreportsa-asset-intelligence-software-identification-tag-reports"></a><a name="BKMK_SoftwareIdTagReports"></a> 資産インテリジェンス ソフトウェア識別タグ レポート  
+###  <a name="BKMK_SoftwareIdTagReports"></a> 資産インテリジェンス ソフトウェア識別タグ レポート  
  資産インテリジェンス ソフトウェア識別タグ レポートには、ISO/IEC 19770-2 に準拠したソフトウェア識別タグが含まれるソフトウェアに関する情報が示されます。 ソフトウェア識別タグは、インストールされたソフトウェアの識別に使用される信頼できる情報を提供します。 SMS_SoftwareTag ハードウェア インベントリ レポート クラスを有効にすると、Configuration Manager によって、ソフトウェア識別タグを含むソフトウェアに関する情報が収集されます。 ソフトウェアに関する情報を提供するレポートは次のとおりです。  
 
 -   **ソフトウェア 14A - ソフトウェア識別タグが有効になっているソフトウェアの検索**: ソフトウェア識別タグが有効になっている、インストール済みソフトウェアの数が示されます。  
@@ -154,10 +156,10 @@ System Center Configuration Manager の資産インテリジェンスでは、�
 
 -   **ソフトウェア 14C - 特定のコンピューターでインストール済み識別タグが有効になっているソフトウェア**: 特定のコンピューターで特定のソフトウェア識別タグが有効になっているインストール済みソフトウェアが一覧表示されます。  
 
-###  <a name="a-namebkmkreportinglimitationsa-asset-intelligence-reporting-limitations"></a><a name="BKMK_ReportingLImitations"></a> 資産インテリジェンス レポートの制限事項  
+###  <a name="BKMK_ReportingLImitations"></a> 資産インテリジェンス レポートの制限事項  
  資産インテリジェンス レポートは、使用されているインストール済みソフトウェア タイトルおよび購入済みソフトウェア ライセンスに関する大量の情報を提供することができます。 ただし、それらの情報のみに基づいて購入済みソフトウェア ライセンスのコンプライアンスを判断しないでください。  
 
-####  <a name="a-namebkmkexampledependenciesa-example-dependencies"></a><a name="BKMK_ExampleDependencies"></a> 依存関係の例  
+####  <a name="BKMK_ExampleDependencies"></a> 依存関係の例  
  資産インテリジェンス レポートに表示されるインストール済みのソフトウェア タイトルおよびライセンス情報は、使用されているライセンスの実際の数と異なる場合があります。 これは、エンタープライズ環境で使用されているソフトウェア タイトルのソフトウェア ライセンス情報のインベントリには複雑な依存関係が伴うためです。 次の例は、資産インテリジェンスを使用した企業における、インストール済みソフトウェアのインベントリに関連する依存関係を示しています。これらの依存関係は、資産インテリジェンス レポートの精度に影響を与える可能性があります。  
 
  **クライアント ハードウェア インベントリの依存関係**  
@@ -166,7 +168,7 @@ System Center Configuration Manager の資産インテリジェンスでは、�
  **ソフトウェア パッケージの依存関係**  
  資産インテリジェンス レポートは、標準の Configuration Manager クライアントのハードウェア インベントリ プロセスを使用して収集されるインストール済みソフトウェア タイトルのデータに基づいて作成されるため、一部のソフトウェア タイトルのデータが正しく収集されないことがあります。 たとえば、標準のインストール プロセスに従っていないソフトウェア インストールや、インストール前に変更されたソフトウェア インストールの影響により、資産インテリジェンス レポートの精度が損なわれることがあります。  
 
-####  <a name="a-namebkmklegallimitationsa-legal-limitations"></a><a name="BKMK_LegalLimitations"></a> 法律上の制限事項  
+####  <a name="BKMK_LegalLimitations"></a> 法律上の制限事項  
  資産インテリジェンス レポートに表示される情報には多くの制限事項があります。また、表示される情報は法律、会計、またはその他の専門的アドバイスを示すものではありません。 資産インテリジェンス レポートが提供する情報は情報提供のみを目的としています。この情報のみを使用してソフトウェア ライセンス使用の対応状況を判断しないでください。  
 
  資産インテリジェンスを使用している企業における、インストール済みソフトウェアとライセンスの使用状況のインベントリに関連した制限の例を次に示します。これらの制限は、資産インテリジェンス レポートの精度に影響を与える可能性があります。  
@@ -188,7 +190,7 @@ System Center Configuration Manager の資産インテリジェンスでは、�
  **ライセンス調整の制限**  
  インストール済みソフトウェア タイトルと購入済みソフトウェア ライセンス数の調整は、管理者が指定したライセンス数と、管理者が設定したスケジュールに基づく Configuration Manager クライアントのハードウェア インベントリから収集されたインストール済みソフトウェア タイトル数を比較して計算されます。 この比較は、Microsoft による最終的なライセンス場所の結論を示すものではありません。 実際のライセンス場所は、特定のソフトウェア タイトルのライセンスおよびライセンス条項で許可された使用権によって異なります。  
 
-##  <a name="a-namebkmkvalidationstatesa-asset-intelligence-validation-states"></a><a name="BKMK_ValidationStates"></a> 資産インテリジェンスの検証の状態  
+##  <a name="BKMK_ValidationStates"></a> 資産インテリジェンスの検証の状態  
  資産インテリジェンスの検証の状態は、資産インテリジェンス カタログ情報のソースと現在の検証の状態を表します。 資産インテリジェンスの検証の状態と、それぞれの状態を生み出す可能性がある管理者の操作を、次の表に示します。  
 
 |**状態**|**定義**|**管理者の操作**|**コメント**|  
@@ -206,9 +208,4 @@ System Center Configuration Manager の資産インテリジェンスでは、�
 >  カテゴリ化の競合が解決されると、その後のカテゴリ化の更新で、項目に関する新しい情報が導入されない限り、項目は、競合として再び検証されることはありません。  
 
  検証の状態がある状態から別の状態に移行するタイミングの例については、「[Example validation state transitions for Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md)」(System Center Configuration Manager の資産インテリジェンスで検証の状態が移行する例) を参照してください。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

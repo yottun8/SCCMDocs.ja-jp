@@ -15,9 +15,11 @@ caps.latest.revision: 21
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 2d7ec9cc626f3ccfded990cf8ba392c4979adfee
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -173,9 +175,4 @@ Configuration Manager でのオペレーティング システムの展開の詳
 上記の手順を完了したら、参照コンピューターのイメージングを準備できます。 Configuration Manager でのオペレーティング システムの展開の詳細については、「[System Center Configuration Manager でのオペレーティング システム イメージの管理](/sccm/osd/get-started/manage-operating-system-images)」をご覧ください。
 
 Endpoint Protection クライアント ソフトウェアが含まれたイメージが展開されると、コンピューターが割り当てられている Configuration Manager サイトに Endpoint Protection クライアントから情報が自動的にレポートされて、このクライアント コンピューターに適用可能なポリシーがダウンロードされて適用されます。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

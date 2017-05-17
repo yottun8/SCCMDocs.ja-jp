@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
 ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -39,7 +41,7 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
 - **手順 6**: [資産インテリジェンスのメンテナンス タスクの構成](#BKMK_ConfigureMaintenanceTasks) 
 
 
-###  <a name="a-namebkmkenableassetintelligencea-enable-asset-intelligence-hardware-inventory-reporting-classes"></a><a name="BKMK_EnableAssetIntelligence"></a> Enable Asset Intelligence hardware inventory reporting classes  
+###  <a name="BKMK_EnableAssetIntelligence"></a> Enable Asset Intelligence hardware inventory reporting classes  
  Configuration Manager サイトで資産インテリジェンスを有効にするには、1 つ以上の資産インテリジェンス ハードウェア インベントリ レポート クラスを有効にする必要があります。 [資産インテリジェンス] **** ホームページ、または [管理] **** ワークスペースの [クライアント設定] **** ノードにあるクライアント設定プロパティでクラスを有効にすることができます。 次のいずれかの手順に従います。  
 
 ##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-the-asset-intelligence-home-page"></a>資産インテリジェンスのホームページから資産インテリジェンス ハードウェア インベントリ レポート クラスを有効にするには  
@@ -70,7 +72,7 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
     >  この手順を使用して有効にしたハードウェア インベントリ クラスに依存する資産インテリジェンス レポートには、クライアントがスキャンを行い、ハードウェア インベントリが返されるまで、データは表示されません。  
   
 
-###  <a name="a-namebkmkinstallassetintelligencesynchronizationpointa-install-an-asset-intelligence-synchronization-point"></a><a name="BKMK_InstallAssetIntelligenceSynchronizationPoint"></a> Install an Asset Intelligence Synchronization Point  
+###  <a name="BKMK_InstallAssetIntelligenceSynchronizationPoint"></a> Install an Asset Intelligence Synchronization Point  
 
 資産インテリジェンス同期ポイント サイト システムの役割は、Configuration Manager サイトを System Center Online に接続して資産インテリジェンス カタログ情報を同期するために使用されます。 資産インテリジェンス同期ポイントは、Configuration Manager 階層の最上位サイトに存在しているサイト システムにのみインストール可能であり、インターネット アクセスで TCP ポート 443 を使用して System Center Online と同期する必要があります。
 
@@ -110,7 +112,7 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
 
 10. ウィザードを完了する 
 
-###  <a name="a-namebkmkenablesuccesslogoneventsa-enable-auditing-of-success-logon-events"></a><a name="BKMK_EnableSuccessLogonEvents"></a> Enable auditing of success logon events  
+###  <a name="BKMK_EnableSuccessLogonEvents"></a> Enable auditing of success logon events  
  4 つの資産インテリジェンス レポートには、クライアント コンピューターの Windows セキュリティ イベント ログから収集された情報が表示されます。 コンピューター セキュリティ ポリシーのログオン設定を構成してログオンに成功したイベントの監査を有効にする手順は次のとおりです。  
 
 ##### <a name="to-enable-success-logon-event-logging-by-using-a-local-security-policy"></a>ローカル セキュリティ ポリシーを使用して、ログオンに成功したイベントを記録できるようにするには  
@@ -129,7 +131,7 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
 
 3.  結果ウィンドウで、[**ログオン イベントの監査**] をダブルクリックし、[**成功**] チェックボックスがオンになっていることを確認して [**OK**] を選択します。  
 
-###  <a name="a-namebkmkimportsoftwarelicenseinformationa-import-software-license-information"></a><a name="BKMK_ImportSoftwareLicenseInformation"></a> Import software license information  
+###  <a name="BKMK_ImportSoftwareLicenseInformation"></a> Import software license information  
  次のセクションでは、ソフトウェア ライセンスのインポート ウィザードを使用して、Microsoft および一般的なソフトウェア ライセンス情報を Configuration Manager サイト データベースにインポートするのに必要な手順について説明します。 ライセンス ステートメント ファイルからサイト データベースへソフトウェア ライセンス情報をインポートするときは、サイト サーバー コンピューターのアカウントに NTFS ファイル システムのソフトウェア ライセンス情報をインポートするのに使用されるファイル共有に対して [フル コントロール] **** のアクセス許可が必要です。  
 
 > [!IMPORTANT]  
@@ -153,7 +155,7 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
 
 6. ウィザードを完了します。  
 
-###  <a name="a-namebkmkcreategenerallicensestatementa-create-a-general-license-statement-information-file-for-import"></a><a name="BKMK_CreateGeneralLicenseStatement"></a> Create a general license statement information file for import  
+###  <a name="BKMK_CreateGeneralLicenseStatement"></a> Create a general license statement information file for import  
  手動で作成したコンマ区切りの .csv ファイル形式のライセンス インポート ファイルを使用すると、一般的なライセンス ステートメントも資産インテリジェンス カタログにインポートできます。  
 
 > [!NOTE]  
@@ -209,7 +211,7 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
 |サポートの有効期限|次の形式の日付の値: MM/DD/YYYY|×|購入したサポートの終了日|  
 |コメント|255 文字まで|×|備考|  
 
-###  <a name="a-namebkmkconfiguremaintenancetasksa-configure-asset-intelligence-maintenance-tasks"></a><a name="BKMK_ConfigureMaintenanceTasks"></a> Configure Asset Intelligence maintenance tasks  
+###  <a name="BKMK_ConfigureMaintenanceTasks"></a> Configure Asset Intelligence maintenance tasks  
  次のメンテナンス タスクが資産インテリジェンスで使用できます。  
 
 -   **インベントリ情報のアプリケーション タイトルの確認**: ソフトウェア インベントリで報告されたソフトウェア タイトルが、資産インテリジェンス カタログのソフトウェア タイトルと一致しているかどうかを確認します。 既定では、このタスクは有効になっており、土曜日の午前 0 時から午前 5 時の間に実行されるように スケジュールされています。 このメンテナンス タスクは、Configuration Manager 階層の最上位サイトでのみ使用できます。  
@@ -232,9 +234,4 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
 
     > [!NOTE]  
     >  最初の試行でタスクの実行に失敗した場合、タスクが正常に実行されるか、タスクの実行可能な時間帯が過ぎるまで、Configuration Manager はタスクの再実行を試みます。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

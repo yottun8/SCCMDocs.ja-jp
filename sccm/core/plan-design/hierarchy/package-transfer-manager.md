@@ -15,9 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 099345d59891841a336cbada896ec349751fecd3
 ms.openlocfilehash: 54e54409a1792c7e28620a5e3cea3e8d8695c7d4
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="package-transfer-manager-in-system-center-configuration-manager"></a>System Center Configuration Manager の Package Transfer Manager
@@ -87,9 +89,4 @@ Package Transfer Manager が標準配布ポイントにコンテンツを転送�
     -   **標準配布ポイント:** Package Transfer Manager は、指定されたすべてのリモート配布ポイントにファイルを転送し終えると、配布ポイントにあるコンテンツのハッシュを検証し、 配布が完了したことを配布マネージャーに知らせます。  
 
     -   **プル配布ポイント:** プル配布ポイントは、コンテンツのダウンロードが完了した後に、コンテンツのハッシュを検証して、 配布が正常に完了したことを知らせるステータス メッセージをサイト管理ポイントに送信します。 60 分が経過してもこのステータスが届かなかった場合、Package Transfer Manager が再度起動します。 プル配布ポイントに問い合わせて、コンテンツがダウンロードされたかどうかが確認されます。 コンテンツのダウンロードが進行中の場合は、Package Transfer Manager は、さらに 60 分後にプル配布ポイントをもう一度確認するまで休止状態に入ります。 この一連の動作が、プル配布ポイントがコンテンツの転送を完了するまで繰り返されます。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

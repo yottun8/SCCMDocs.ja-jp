@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 87ab9925717a307cbda3cea1f2e470ae012fa067
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -28,10 +30,10 @@ ms.openlocfilehash: 87ab9925717a307cbda3cea1f2e470ae012fa067
 
 System Center Configuration Manager には、Configuration Manager 環境で Windows デバイス ドライバーを管理するために使用できるドライバー カタログが用意されています。 このドライバー カタログを使用して、デバイス ドライバーを Configuration Manager にインポートしたり、デバイス ドライバーをパッケージにグループ化したり、オペレーティング システムを展開するときにアクセスできる配布ポイントにこれらのパッケージを配布したりすることができます。 デバイス ドライバーは、対象コンピューターにフル オペレーティング システムをインストールする場合と、ブート イメージを使って Windows PE をインストールする場合に使用できます。 Windows デバイス ドライバーには、セットアップ情報 (INF) ファイル、およびデバイスをサポートするのに必要なその他のファイルが含まれます。 オペレーティング システムが展開されると、Configuration Manager は .INF ファイルからそのデバイス用に、ハードウェアやプラットフォーム情報を取得します。 Configuration Manager 環境でドライバーを管理するには、次のものを使用します。
 
-##  <a name="a-namebkmkdrivercategoriesa-device-driver-categories"></a><a name="BKMK_DriverCategories"></a> デバイス ドライバーのカテゴリ  
+##  <a name="BKMK_DriverCategories"></a> デバイス ドライバーのカテゴリ  
  デバイス ドライバーをインポートする場合、デバイス ドライバーをカテゴリに割り当てることができます。 デバイス ドライバーのカテゴリはドライバー カタログで同じように使用されるデバイス ドライバーをグループ化するのに役立ちます。 たとえば、すべてのネットワーク アダプター デバイス ドライバーを特定のカテゴリに割り当てることができます。 そのあと、「 [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers) 」ステップなどのタスク シーケンスを作成する場合に、特定のカテゴリのデバイス ドライバーを指定できます。 Configuration Manager によってハードウェアがスキャンされ、そのカテゴリから、使用する Windows セットアップのシステムの段階に適用できるドライバーが選択されます。  
 
-##  <a name="a-namebkmkmanagingdriverpackagesa-driver-packages"></a><a name="BKMK_ManagingDriverPackages"></a> ドライバー パッケージ  
+##  <a name="BKMK_ManagingDriverPackages"></a> ドライバー パッケージ  
  類似したデバイス ドライバーをパッケージにグループ化すると、オペレーティング システムの展開の合理化に役立ちます。 たとえば、ネットワーク上のコンピューターの製造元ごとにドライバー パッケージを作成できます。 ドライバー パッケージは、ドライバーをドライバー カタログにインポートするときに **[ドライバー パッケージ]** ノードに直接作成できます。 ドライバー パッケージを作成した後、配布ポイントに配布して、要求に応じて Configuration Manager クライアント コンピューターがそこからドライバーをインストールできるようにする必要があります。 次の点を考慮します。  
 
 -   ドライバー パッケージを作成する場合は、パッケージのソースの場所として他のドライバー パッケージが使用していない空のネットワーク共有を指していることが必要です。また、SMS プロバイダーは、その場所の [読み取り] および [書き込み] アクセス許可が必要です。  
@@ -42,7 +44,7 @@ System Center Configuration Manager には、Configuration Manager 環境で Win
 
  ドライバー パッケージを作成および管理する場合は、次のセクションを参考にします。  
 
-###  <a name="a-namecreatingdriverpackagesa-create-a-driver-package"></a><a name="CreatingDriverPackages"></a> ドライバー パッケージの作成  
+###  <a name="CreatingDriverPackages"></a> ドライバー パッケージの作成  
  新しいドライバー パッケージを作成するには、次の手順に従います。  
 
 > [!IMPORTANT]  
@@ -74,7 +76,7 @@ System Center Configuration Manager には、Configuration Manager 環境で Win
 
  [ドライバー パッケージ **** ] ノードに複数のパッケージが含まれている場合は、ノードにフォルダーを追加してパッケージを論理グループに分けることができます。  
 
-###  <a name="a-namebkmkpackageactionsa-additional-actions-for-driver-packages"></a><a name="BKMK_PackageActions"></a> ドライバー パッケージに対するその他のアクション  
+###  <a name="BKMK_PackageActions"></a> ドライバー パッケージに対するその他のアクション  
  1 つまたは複数のドライバー パッケージを [ドライバー パッケージ **** ] ノードで選択するときに、ドライバー パッケージ管理のためのその他の操作を実行することができます。 必要となる操作には、次のようなものがあります。  
 
 |操作|[説明]|  
@@ -87,10 +89,10 @@ System Center Configuration Manager には、Configuration Manager 環境で Win
 |**配布ポイントの更新**|デバイス ドライバー パッケージが格納されているすべての配布ポイントでパッケージを更新します。 この操作では、前回の配布以降に変更されたコンテンツのみがコピーされます。|  
 |**プロパティ**|[プロパティ **** ] ダイアログ ボックスを開いて、デバイス ドライバーのコンテンツとプロパティを確認および変更することができます。 たとえば、デバイス ドライバーの名前と説明を変更する、デバイス ドライバーを有効にする、デバイス ドライバーを実行できるプラットフォームを指定するといったことができます。|  
 
-##  <a name="a-namebkmkdevicedriversa-device-drivers"></a><a name="BKMK_DeviceDrivers"></a> デバイス ドライバー  
+##  <a name="BKMK_DeviceDrivers"></a> デバイス ドライバー  
  展開するオペレーティング システム イメージにデバイス ドライバーを含まなくても、対象となるコンピューターにインストールできます。 Configuration Manager は、Configuration Manager にインポートするすべてのデバイス ドライバーへの参照を含むドライバー カタログを提供します。 ドライバー カタログは [ **ソフトウェア ライブラリ** ] ワークスペースに保存されており、2 つのノードで構成されます。 **ドライバー** と **ドライバー パッケージ**。 [ **ドライバー** ] ノードにはドライバー カタログにインポートしたすべてのドライバーが一覧になっています。 このノードを使用して、インポートした各ドライバーの詳細な情報を検出したり、ドライバー パッケージやブート イメージ内のドライバーを変更したり、ドライバーを有効または無効にしたりすることができます。  
 
-###  <a name="a-namebkmkimportdriversa-import-device-drivers-into-the-driver-catalog"></a><a name="BKMK_ImportDrivers"></a> ドライバー カタログへのデバイス ドライバーのインポート  
+###  <a name="BKMK_ImportDrivers"></a> ドライバー カタログへのデバイス ドライバーのインポート  
  オペレーティング システムを展開する場合、デバイス ドライバーを使用する前に、これをドライバー カタログにインポートする必要があります。 デバイス ドライバーをよりよく管理するために、オペレーティング システムの展開の一環としてインストールする予定のデバイス ドライバーだけをインポートします。 しかし一方で、複数のバージョンのデバイス ドライバーをドライバー カタログに保存しておくと、ネットワーク上でハードウェア デバイス要件が変更されたときに既存のデバイス ドライバーを簡単にアップグレードできます。  
 
  Configuration Manager は、デバイス ドライバーのインポート プロセスの過程で、デバイスに関連付けられているプロバイダー、クラス、バージョン、署名、サポートされているハードウェア、およびサポートされているプラットフォームといった情報を読み込みます。 既定では、デバイス ドライバーには、サポートしている最初のハードウェア デバイスにちなんだ名前が付けられますが、後で名前を変更することができます。 サポートされているプラットフォームの一覧は、ドライバーの INF ファイルの情報に基づいて作成されます。 この情報の精度は状況によって異なることがあるので、デバイス ドライバーをドライバー カタログにインポートした後にそのドライバーがサポートされていることを手動で確認してください。  
@@ -166,7 +168,7 @@ System Center Configuration Manager には、Configuration Manager 環境で Win
 
 8.  ウィザードを完了します。  
 
-###  <a name="a-namebkmkmodifydriverpackagea-manage-device-drivers-in-a-driver-package"></a><a name="BKMK_ModifyDriverPackage"></a> ドライバー パッケージ内のデバイス ドライバーの管理  
+###  <a name="BKMK_ModifyDriverPackage"></a> ドライバー パッケージ内のデバイス ドライバーの管理  
  ドライバー パッケージおよびブート イメージに変更を加えるには、次の手順に従います。 デバイス ドライバーを追加または削除するには、ドライバーを [ドライバー **** ] ノードで見つけ、選択したドライバーが関連付けられているパッケージまたはブート イメージを編集します。  
 
 #### <a name="to-modify-the-device-drivers-in-a-driver-package"></a>ドライバー パッケージ内のデバイス ドライバーを変更するには  
@@ -187,7 +189,7 @@ System Center Configuration Manager には、Configuration Manager 環境で Win
 
      [ **OK**] をクリックします。  
 
-###  <a name="a-namebkmkmanagedriversbootimagea-manage-device-drivers-in-a-boot-image"></a><a name="BKMK_ManageDriversBootImage"></a> ブート イメージ内のデバイス ドライバーの管理  
+###  <a name="BKMK_ManageDriversBootImage"></a> ブート イメージ内のデバイス ドライバーの管理  
  ドライバー カタログにインポートされている Windows デバイス ドライバーを、ブート イメージに追加できます。 デバイス ドライバーをブート イメージに追加するときは、次のガイドラインに従います。  
 
 -   ブート イメージには、大容量記憶装置とネットワーク アダプターのデバイス ドライバーのみ追加します。一般にその他の種類のドライバーが必要になることはありません。 必要のないドライバーはブート イメージのサイズを不必要に増大させる結果となります。  
@@ -228,7 +230,7 @@ System Center Configuration Manager には、Configuration Manager 環境で Win
 
 7.  [ **OK**] をクリックします。  
 
-###  <a name="a-namebkmkdriveractionsa-additional-actions-for-device-drivers"></a><a name="BKMK_DriverActions"></a> デバイス ドライバーに対するその他のアクション  
+###  <a name="BKMK_DriverActions"></a> デバイス ドライバーに対するその他のアクション  
  1 つまたは複数のデバイス ドライバーを [ドライバー **** ] ノードで選択するときに、デバイス ドライバー管理のためのその他の操作を実行することができます。 必要となる操作には、次のようなものがあります。  
 
 |操作|[説明]|  
@@ -240,7 +242,7 @@ System Center Configuration Manager には、Configuration Manager 環境で Win
 |**移動**|デバイス ドライバーを [ドライバー **** ] ノード内の他のフォルダーに移動します。|  
 |**プロパティ**|[プロパティ **** ] ダイアログ ボックスを開いて、デバイス ドライバーのプロパティを確認および変更することができます。 たとえば、デバイス ドライバーの名前と説明を変更する、デバイス ドライバーを有効にする、デバイス ドライバーを実行できるプラットフォームを指定するといったことができます。|  
 
-##  <a name="a-namebkmktsdriversa-use-task-sequences-to-install-device-drivers"></a><a name="BKMK_TSDrivers"></a> タスク シーケンスを使用したデバイス ドライバーのインストール  
+##  <a name="BKMK_TSDrivers"></a> タスク シーケンスを使用したデバイス ドライバーのインストール  
  タスク シーケンスを使うと、オペレーティング システムの展開を自動化できます。 タスク シーケンスの各ステップは、デバイス ドライバーのインストールなど、特定のアクションを実行することができます。 次のタスク シーケンス ステップを使うと、オペレーティング システムを展開しているときにデバイス ドライバーをインストールできます。  
 
 -   [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers): このステップでは、オペレーティング システムの展開の一部として、デバイス ドライバーのマッチとインストールを行うことができます。 タスク シーケンス ステップを構成して、検出された各ハードウェア デバイスに最適なドライバーのみをインストールしたり、検出された各ハードウェア デバイスと互換性のあるすべてのドライバーをインストールするように指定して、Windows セットアップで最適なドライバーを選択できるようにすることができます。 さらに、デバイス ドライバーのカテゴリを指定して、そのステップで利用できるドライバーの数を制限することもできます。  
@@ -249,7 +251,7 @@ System Center Configuration Manager には、Configuration Manager 環境で Win
 
  こうしたタスク シーケンス ステップを使用する場合、オペレーティング システムを展開するコンピューターにデバイス ドライバーをどのようにインストールするかも指定できます。 詳細については、「[タスクを自動化するためのタスク シーケンスの管理](../deploy-use/manage-task-sequences-to-automate-tasks.md)」をご覧ください。  
 
-##  <a name="a-namebkmkinstallingdevicediriverstsa-use-task-sequences-to-install-device-drivers-on-computers"></a><a name="BKMK_InstallingDeviceDiriversTS"></a> タスク シーケンスを使用したコンピューターへのデバイス ドライバーのインストール  
+##  <a name="BKMK_InstallingDeviceDiriversTS"></a> タスク シーケンスを使用したコンピューターへのデバイス ドライバーのインストール  
  オペレーティング システム展開の一部としてデバイス ドライバーをインストールするには、次の手順に従います。  
 
 #### <a name="use-a-task-sequence-to-install-device-drivers"></a>タスク シーケンスを使用したデバイス ドライバーのインストール  
@@ -273,11 +275,6 @@ System Center Configuration Manager には、Configuration Manager 環境で Win
 
  オペレーティング システムをインストールするタスク シーケンスの作成方法の詳細については、「[Create a task sequence to install an operating system](../deploy-use/create-a-task-sequence-to-install-an-operating-system.md)」 (オペレーティング システムをインストールするタスク シーケンスの作成) を参照してください。  
 
-##  <a name="a-namebkmkdriverreportsa-driver-management-reports"></a><a name="BKMK_DriverReports"></a> ドライバー管理レポート  
+##  <a name="BKMK_DriverReports"></a> ドライバー管理レポート  
  [ドライバー管理] レポート カテゴリにある複数のレポートを使って、ドライバー カタログのデバイス ドライバーに関する一般的な情報を確認できます。 **** レポートの詳細については、「[Reporting](../../core/servers/manage/reporting.md)」 (レポート) を参照してください。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

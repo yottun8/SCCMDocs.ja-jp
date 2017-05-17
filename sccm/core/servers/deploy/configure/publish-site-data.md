@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: e7629fdf7fdf615fa27894158c3d101432c95a04
 ms.openlocfilehash: bcfb002c503485f03ba27d7346acb61d0d3c6087
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -71,9 +73,4 @@ System Center Configuration Manager の Active Directory スキーマを拡張�
     >  サイトをフォレストに発行できるようにする場合は、Configuration Manager 用にそのフォレストの Active Directory スキーマを拡張する必要があります。 Active Directory フォレスト アカウントには、そのフォレストの System コンテナーに対するフル コントロールのアクセス許可が必要です。  
 
 5.  このフォレストを Active Directory フォレストの探索で使用するための構成が完了したら、[ **OK** ] をクリックして構成を保存します。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

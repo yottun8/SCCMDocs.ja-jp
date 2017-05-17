@@ -15,9 +15,11 @@ caps.latest.revision: 7
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
 ms.openlocfilehash: 6265ee70b70a715862b1651d2f3760bef096ee8a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -49,10 +51,5 @@ System Center Configuration Manager のリソース エクスプローラーを�
 3.  表示するインベントリが含まれているコンピューターをクリックしたら、**[ホーム]** タブの **[デバイス]** グループで **[開始]** >  **[リソース エクスプローラー]** の順に選択します。   
 
 4.  **[リソース エクスプローラー]** ウィンドウの右ウィンドウの項目を右クリックし、**[プロパティ]** をクリックして、*[<項目名\>***のプロパティ]** ダイアログ ボックスを開くことができます。このダイアログ ボックスには、収集されたインベントリ情報を、より読みやすい形式で表示できます。  
-
-
-
-
-<!--HONumber=Jan17_HO1-->
 
 

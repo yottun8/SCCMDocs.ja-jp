@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 3379494824804c6be5c051c67a79d25e7eed88f0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -45,9 +47,4 @@ ms.openlocfilehash: 3379494824804c6be5c051c67a79d25e7eed88f0
 -   コレクション変数を使用すると、ローカル管理者が機密情報を読めてしまう可能性があります。  
 
      コレクション変数は、オペレーティング システムを展開する際に使用することができます。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

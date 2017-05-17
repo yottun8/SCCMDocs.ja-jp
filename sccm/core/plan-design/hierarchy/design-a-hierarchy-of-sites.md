@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
 ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -32,7 +34,7 @@ ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
 > [!NOTE]
 > Configuration Manager の新規インストールを計画するときは、[リリース ノート]( /sccm/core/servers/deploy/install/release-notes)でアクティブなバージョンでの現在の問題の詳細を確認してください。 リリース ノートは、Configuration Manager のすべてのブランチに適用されます。  ただし、[Technical Preview ブランチ]( /sccm/core/get-started/technical-preview)を使用する場合は、Technical Preview の各バージョンのドキュメントで、そのブランチにのみ固有の問題を確認してください。  
 
-##  <a name="a-namebkmktopologya-hierarchy-topology"></a><a name="bkmk_topology"></a> 階層トポロジ  
+##  <a name="bkmk_topology"></a> 階層トポロジ  
  階層トポロジの範囲は、単一のスタンドアロンのプライマリ サイトから、階層の最上位 (上位層) にある中央管理サイトに接続されているプライマリ サイトおよびセカンダリ サイトのグループに及びます。   通常、階層で使用するサイトの種類と数を決定するうえで重要となるのは、次のような、サポートする必要があるデバイスの数と種類です。   
 
  **スタンドアロンのプライマリ サイト:**&1; つのプライマリ サイトですべてのデバイスおよびユーザーの管理をサポートできる場合には、スタンドアロン プライマリ サイトを使用します (「[サイジングとスケールの数値](/sccm/core/plan-design/configs/size-and-scale-numbers)」をご覧ください)。 このトポロジは、会社の複数の地理的な場所を&1; つのプライマリ サイトで正常にサービスできる場合にも有効です。  ネットワーク トラフィックを管理する場合、優先管理ポイントと、慎重に計画されたコンテンツ インフラストラクチャを使用できます (「[System Center Configuration Manager でのコンテンツ管理の基本的な概念](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)」を参照してください)。  
@@ -57,7 +59,7 @@ ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
 
  次のセクションは、どんな状況で、特定のサイトを使用するか、または追加のサイトの代わりに、コンテンツ管理オプションを使用するかを理解するのに役立ちます。  
 
-##  <a name="a-namebkmkchoosecasa-determine-when-to-use-a-central-administration-site"></a><a name="BKMK_ChooseCAS"></a> 中央管理サイトを使用する場合の判別  
+##  <a name="BKMK_ChooseCAS"></a> 中央管理サイトを使用する場合の判別  
  中央管理サイトは、階層全体の設定を構成して、階層内のすべてのサイトとオブジェクトを監視する場所です。 このサイトの種類では、クライアントを直接管理しませんが、階層全体のサイトやクライアントの構成を含め、サイト間のデータ レプリケーションを調整します。  
 
 **以下の情報を参考にして、中央管理サイトをインストールするかどうかを判別できます。**  
@@ -82,7 +84,7 @@ ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
 
 -   ファイル レプリケーションとデータベース レプリケーションを構成し、階層内のサイト間の通信を制御できます。 これには、サイト データのデータベース レプリケーションのスケジュール設定と、サイト間のファイルベースのデータの転送に使用する帯域幅の管理が含まれます。  
 
-##  <a name="a-namebkmkchoosepriimarya-determine-when-to-use-a-primary-site"></a><a name="BKMK_ChoosePriimary"></a> プライマリ サイトを使用する場合の判別  
+##  <a name="BKMK_ChoosePriimary"></a> プライマリ サイトを使用する場合の判別  
  プライマリ サイトは、クライアントを管理するために使用します。 プライマリ サイトは、中央管理サイトの下の子プライマリ サイトとしてインストールするか、新しいサイトの&1; 番目のサイトとしてインストールすることができます。 階層の&1; 番目のサイトとしてインストールされたプライマリ サイトでは、スタンドアロン プライマリ サイトが作成されます。 子プライマリ サイトもスタンドアロン プライマリサイトも、その子としてセカンダリ サイトを持つことができます。  
 
  次のような場合にプライマリ サイトの使用を検討します。  
@@ -108,7 +110,7 @@ ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
 
 -   プライマリ サイトは、データベース レプリケーションを使用して中央管理サイトと直接通信します (新しいサイトをインストールすると、自動的に構成されます)。  
 
-##  <a name="a-namebkmkchoosesecondarya-determine-when-to-use-a-secondary-site"></a><a name="BKMK_ChooseSecondary"></a> セカンダリ サイトを使用する場合の判別  
+##  <a name="BKMK_ChooseSecondary"></a> セカンダリ サイトを使用する場合の判別  
  セカンダリ サイトは、低帯域幅のネットワーク経由で展開コンテンツとクライアント データの転送を管理するために使用します。  
 
  セカンダリ サイトは、中央管理サイトまたはセカンダリ サイトの直接の親プライマリ サイトから管理します。 セカンダリ サイトは、プライマリ サイトに接続されている必要があります。また、セカンダリ サイトを別の親サイトに移動するには、セカンダリ サイトをアンインストールして新しいプライマリ サイトの下に子サイトとして再インストールする必要があります。
@@ -138,7 +140,7 @@ ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
 
 -   セカンダリ サイトのインストール時に、管理ポイントと配布ポイントが自動的に展開されて、セカンダリ サイト サーバーに配置されます。  
 
-##  <a name="a-namebkmkchoosesecondaryordpa-determine-when-to-use-content-management-options"></a><a name="BKMK_ChooseSecondaryorDP"></a> コンテンツ管理オプションを使用する場合の判別  
+##  <a name="BKMK_ChooseSecondaryorDP"></a> コンテンツ管理オプションを使用する場合の判別  
  リモートのネットワークの場所にクライアントがある場合、プライマリ サイトまたはセカンダリ サイトの代わりにコンテンツ管理オプションを使用することを検討します。 Windows BranchCache を使用するか、帯域幅制御に配布ポイントを構成するか、または配布ポイントにコンテンツを手動でコピー (コンテンツを事前準備) すると、多くの場合、サイトをインストールする必要がなくなります。  
 
 
@@ -150,7 +152,7 @@ ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
 
  Configuration Manager でのコンテンツ管理オプションの詳細については、「[System Center Configuration Manager でのコンテンツ管理の基本的な概念](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)」をご覧ください。  
 
-##  <a name="a-namebkmkbeyonda-beyond-hierarchy-topology"></a><a name="bkmk_beyond"></a> 階層トポロジ以外  
+##  <a name="bkmk_beyond"></a> 階層トポロジ以外  
  最初の階層トポロジに加え、階層内の別のサイトでどのようなサービスまたは機能が使用できるか (サイト システムの役割)、インフラストラクチャ内で階層規模の構成や機能をどのように管理するかも検討してください。 次の一般的な考慮事項は別のトピックで説明します。 これらは、階層の設計によって影響を与えたり、受けたりする可能性があるため、重要です。  
 
 -   [System Center Configuration Manager を使用したコンピューターおよびデバイスの管理を行う](/sccm/core/clients/manage/manage-clients)準備をする場合、管理するデバイスがオンプレミスまたはクラウドに配置されているか、あるいはユーザーが所有するデバイス (BYOD) が含まれるかどうかを検討します。  さらに、Configuration Manager によって直接、または Microsoft Intune との統合によって管理できる Windows 10 コンピューターなどの、複数の管理オプションによってサポートされるデバイスを管理する方法を検討します。  
@@ -186,9 +188,4 @@ ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
 -   [System Center Configuration Manager のサイト間でのデータの転送](../../../core/servers/manage/data-transfers-between-sites.md)  
 
 -   [System Center Configuration Manager のロール ベース管理の基礎](../../../core/understand/fundamentals-of-role-based-administration.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

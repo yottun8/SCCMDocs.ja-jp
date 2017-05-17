@@ -16,9 +16,10 @@ caps.handback.revision: 0
 author: arob98
 ms.author: angrobe
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: af06fb10d905e3fe447c6cd6ed35dac10488161f
 ms.openlocfilehash: 1bf519ad4593f6a08d7dc393f9fab91c70b51b25
+ms.contentlocale: ja-jp
 ms.lasthandoff: 01/05/2017
 
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 01/05/2017
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-##  <a name="a-namebkmkplanningforcertificatesa-plan-for-certificates-self-signed-and-pki"></a><a name="BKMK_PlanningForCertificates"></a> 証明書の計画 (自己署名および PKI)  
+##  <a name="BKMK_PlanningForCertificates"></a> 証明書の計画 (自己署名および PKI)  
  Configuration Manager は、自己署名入り証明書と公開キー基盤 (PKI) 証明書の組み合わせを使用します。  
 
  セキュリティの運用方法として、できるかぎり PKI 証明書を使用することをお勧めします。 PKI 証明書の要件の詳細については、「[System Center Configuration Manager での PKI 証明書の要件](../../../core/plan-design/network/pki-certificate-requirements.md)」をご覧ください。 モバイル デバイスの登録中や Intel Active Management Technology (AMT) プロビジョニング中などに Configuration Manager が PKI 証明書を要求する場合、Active Directory Domain Services およびエンタープライズ証明機関を使用する必要があります。 他のすべての PKI 証明書の場合、Configuration Manager とは別にそれらの証明書を展開および管理する必要があります。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/05/2017
 
 3.  Client.msi のプロパティ **SMSSIGNCERT=***&lt;フル パスおよびファイル名\>* と CCMSetup.exe を使用して、クライアントをインストールします。  
 
-###  <a name="a-namebkmkplanningforcrlsa-plan-for-pki-certificate-revocation"></a><a name="BKMK_PlanningForCRLs"></a> PKI 証明書失効の計画  
+###  <a name="BKMK_PlanningForCRLs"></a> PKI 証明書失効の計画  
 PKI 証明書を Configuration Manager で使用する場合、接続するコンピューターの証明書をクライアントとサーバーが証明書失効リスト (CRL) を使用して検証する方法、およびクライアントとサーバーがその方法で検証するかどうかを計画します。 CRL は証明機関 (CA) が作成して署名したファイルであり、これには CA による発行後に失効した証明書のリストが含まれます。 CA 管理者は、発行した証明書が侵害された場合、または侵害が疑われる場合などに、証明書を失効できます。  
 
 > [!IMPORTANT]  
@@ -79,7 +80,7 @@ CRL を Configuration Manager クライアントでチェックするかどう�
 
 -   PKI 証明書を使用するように構成されているサイト システムに接続するたびに CRL を確認する必要性が、クライアントの高速接続および効率的な処理の必要性より高く、クライアントが CRL を検出できない場合にサーバーに接続できないリスクより高い。  
 
-###  <a name="a-namebkmkplanningforrootcasa-plan-for-the-pki-trusted-root-certificates-and-the-certificate-issuers-list"></a><a name="BKMK_PlanningForRootCAs"></a> PKI 信頼されたルート証明書と証明書発行者リストの計画  
+###  <a name="BKMK_PlanningForRootCAs"></a> PKI 信頼されたルート証明書と証明書発行者リストの計画  
 IIS サイト システムで HTTP 経由のクライアント認証または HTTPS 経由のクライアント認証と暗号化に PKI クライアント証明書を使用する場合、ルート CA 証明書をサイト プロパティとしてインポートする必要があります。 2 つのシナリオを次に示します。  
 
 -   Configuration Manager を使用してオペレーティング システムを展開し、管理ポイントで HTTPS クライアント接続のみを受け入れる。  
@@ -101,7 +102,7 @@ Configuration Manager 用にルート CA 証明書をインポートする必要
 
 モバイル デバイスまたは Mac コンピューターを登録するとき、および Intel AMT 搭載コンピューターをワイヤレス ネットワーク用に設定するときに、サイト構成とは関係なく、ルート CA 証明書をインポートすることが必要になる場合があります。  
 
-###  <a name="a-namebkmkplanningforclientcertificateselectiona-plan-for-pki-client-certificate-selection"></a><a name="BKMK_PlanningForClientCertificateSelection"></a> PKI クライアント証明書の選択の計画  
+###  <a name="BKMK_PlanningForClientCertificateSelection"></a> PKI クライアント証明書の選択の計画  
  IIS サイト システムで、HTTP 経由のクライアント認証または HTTPS 経由のクライアント認証と暗号化に PKI クライアント証明書を使用する場合、Configuration Manager に対して使用する証明書を、Windows クライアントが選択する方法を計画します。  
 
 > [!NOTE]  
@@ -175,7 +176,7 @@ Configuration Manager 用にルート CA 証明書をインポートする必要
 
 クライアント証明書の設定を構成する方法については、記事「[System Center Configuration Manager でのセキュリティの構成](../../../core/plan-design/security/configure-security.md)」の「[クライアント PKI 証明書の設定の構成](../../../core/plan-design/security/configure-security.md#BKMK_ConfigureClientPKI)」セクションをご覧ください。  
 
-###  <a name="a-namebkmkplanningforpkitransitiona-plan-a-transition-strategy-for-pki-certificates-and-internet-based-client-management"></a><a name="BKMK_PlanningForPKITransition"></a> PKI 証明書とインターネットベースのクライアント管理の移行戦略の計画  
+###  <a name="BKMK_PlanningForPKITransition"></a> PKI 証明書とインターネットベースのクライアント管理の移行戦略の計画  
 Configuration Manager の柔軟な構成オプションを使用すると、PKI 証明書を使用するようにクライアントとサイトを徐々に移行して、クライアント エンドポイントをセキュリティで保護することができます。 PKI 証明書は優れたセキュリティを提供し、インターネット クライアントを管理できるようにします。  
 
 Configuration Manager の構成オプションと選択肢の数のために、すべてのクライアントが HTTPS 接続を使用するようにサイトを移行する方法は&1; つではありません。 ただし、ガイダンスとして、次の手順に従うことができます。  
@@ -223,7 +224,7 @@ Configuration Manager の構成オプションと選択肢の数のために、�
 
  この計画に従って PKI 証明書をまず HTTP 経由での認証にのみ導入し、次に HTTPS 経由での認証と暗号化に導入すると、クライアントが管理不能になるリスクが軽減されます。 また、セキュリティを Configuration Manager がサポートしている最大限のレベルにまで高めることができます。  
 
-##  <a name="a-namebkmkplanningforrtka-plan-for-the-trusted-root-key"></a><a name="BKMK_PlanningForRTK"></a> 信頼されたルート キーの計画  
+##  <a name="BKMK_PlanningForRTK"></a> 信頼されたルート キーの計画  
 Configuration Manager の信頼されたルート キーは、サイト システムが階層に属していることを Configuration Manager クライアントが確認するメカニズムを提供します。 すべてのサイト サーバーが、他のサイトと通信するためにサイト交換キーを生成します。 階層内の最上位のサイトのサイト交換キーは、信頼されたルート キーと呼ばれます。  
 
 Configuration Manager の信頼されたルート キーの機能は、信頼されたルート キーの秘密キーによって署名されたすべてのものが階層の下位で信頼されるという点で、公開キー基盤のルート証明書に似ています。 たとえば、信頼されたルート キー ペアの秘密キーで管理ポイントの証明書に署名し、クライアントで使用できる信頼されたルート キー ペアの公開キーをコピーすると、クライアントは階層内の管理ポイントと階層内にない管理ポイントを区別できます。 クライアントは、Windows Management Instrumentation (WMI) を使って、信頼されたルート キーのコピーを **root\ccm\locationservices** 名前空間に保存します。  
@@ -295,7 +296,7 @@ Client.msi プロパティ **RESETKEYINFORMATION = TRUE** と CCMSetup.exe を�
 
 9. [**TrustedRootKey=@ のオブジェクト エディター**] ダイアログ ボックスの [**プロパティ**] セクションで、[**TrustedRootKey CIM_STRING**] までスクロールダウンします。 右側の列の文字列が信頼されたルート キーです。 この文字列が、*&lt;Configuration Manager ディレクトリ\>***\bin\mobileclient.tcf** ファイルの **SMSPublicRootKey** の値と一致することを確認します。  
 
-##  <a name="a-namebkmkplanningforsigningencryptiona-plan-for-signing-and-encryption"></a><a name="BKMK_PlanningForSigningEncryption"></a> 署名と暗号化の計画  
+##  <a name="BKMK_PlanningForSigningEncryption"></a> 署名と暗号化の計画  
  すべてのクライアント通信に PKI 証明書を使用する場合は、クライアント データの通信をセキュリティで保護するために、署名と暗号化を計画する必要はありません。 ただし、HTTP クライアント接続を許可するように IIS を実行しているサイト システムを設定する場合は、サイトのクライアント接続をどのようにセキュリティで保護するのかを決める必要があります。  
 
  管理ポイントにクライアントが送信するデータを保護するために、データに署名することを要求できます。 また、HTTP を使用するクライアントからのすべての署名入りデータが SHA-256 アルゴリズムを使用して署名されるように要求することもできます。 これはより安全な設定ですが、すべてのクライアントが SHA-256 をサポートしているのでない限り、このオプションを有効にしないでください。 多くのオペレーティング システムは SHA-256 をネイティブにサポートしていますが、以前のオペレーティング システムには更新または修正プログラムが必要になる場合があります。 たとえば、Windows Server 2003 SP2 を実行しているコンピューターでは、 [サポート技術情報 938397](http://go.microsoft.com/fwlink/p/?LinkId=226666)に示されている修正プログラムをインストールする必要があります。  
@@ -304,7 +305,7 @@ Client.msi プロパティ **RESETKEYINFORMATION = TRUE** と CCMSetup.exe を�
 
  署名と暗号化の設定を構成する方法については、記事「[System Center Configuration Manager でのセキュリティの構成](../../../core/plan-design/security/configure-security.md)」の「[署名と暗号化の構成](../../../core/plan-design/security/configure-security.md#BKMK_ConfigureSigningEncryption)」セクションをご覧ください。  
 
-##  <a name="a-namebkmkplanningforrbaa-plan-for-role-based-administration"></a><a name="BKMK_PlanningForRBA"></a> 役割に基づいた管理の計画  
+##  <a name="BKMK_PlanningForRBA"></a> 役割に基づいた管理の計画  
  詳細については、「[System Center Configuration Manager のロール ベース管理の基礎](../../../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。  
 
 ### <a name="see-also"></a>関連項目
