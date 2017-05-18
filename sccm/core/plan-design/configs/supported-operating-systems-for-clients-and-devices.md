@@ -15,10 +15,11 @@ caps.latest.revision: 5
 author: arob98
 ms.author: angrobe
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 507bad02c6e028f09a8b0c8a566ac55f7c3942a5
-ms.openlocfilehash: 4afba7b7702aa12b1cfcaf454e23b0dfb3274e7f
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
+ms.openlocfilehash: cd7b8bf35aeb26c8b7b37f6faa51c9a09138fdb9
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>System Center Configuration Manager のクライアントとデバイスのサポートされるオペレーティング システム
@@ -67,7 +68,7 @@ ms.lasthandoff: 03/22/2017
 -   **Windows 7 SP1** (x86、x64): Professional、Enterprise、Ultimate    
 
 -   **Windows Server 2016 の Server Core インストール** (x64) <sup>2</sup>
-  - このオペレーティング システムは、バージョン 1606 以降および KB3186654 以降の修正プログラム ロールアップ (2016 年 10 月にリリースされた 1606 のベースライン バージョン) でサポートされています。 ただし、このオペレーティング システムでは、Endpoint Protection との同時使用がサポートされません。
+  - このオペレーティング システムは、バージョン 1606 以降および KB3186654 以降の修正プログラム ロールアップ (2016 年 10 月にリリースされた 1606 のベースライン バージョン) でサポートされています。 
 
 
 -   **Windows Server 2012 R2 の Server Core のインストールR2** (x64) <sup>2</sup>    
@@ -304,7 +305,7 @@ ms.lasthandoff: 03/22/2017
 |バージョン 14.04 LTS x64|ccm-Universalx64.&lt;ビルド\>.tar|  
 
 ##  <a name="mobile-devices-enrolled-by-microsoft-intune"></a>Microsoft Intune で登録されるモバイル デバイス  
- Microsoft Intune を Configuration Manager と統合する場合に管理できるコンピューターとデバイスの詳細については、Microsoft Intune ドキュメント ライブラリの次の&2; つのトピックを参照してください。  
+ Microsoft Intune を Configuration Manager と統合する場合に管理できるコンピューターとデバイスの詳細については、Microsoft Intune ドキュメント ライブラリの次の 2 つのトピックを参照してください。  
 
 -   [Microsoft Intune のモバイル デバイス管理機能](https://docs.microsoft.com/intune/get-started/choose-how-to-manage-devices)  
 -   [Microsoft Intune の Windows PC 管理機能](https://docs.microsoft.com/intune/get-started/windows-pc-management-capabilities-in-microsoft-intune)  

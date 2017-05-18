@@ -2,7 +2,7 @@
 title: "インターネットベースのクライアント管理 | Microsoft Docs"
 description: "System Center Configuration Manager でインターネット ベースのクライアントを管理する計画を作成します。"
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: 82867e77840e14e9b8170801ea3c4a9f399c9890
+ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
+ms.openlocfilehash: 90c30bfb22735f73422f1547301552bf42022bb9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 12/16/2016
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/16/2016
 
  次のセクションの情報を、インターネットベースのクライアント管理を計画するときの参考にしてください。  
 
-##  <a name="BKMK_IBCM_FeaturesNotSupported"></a> インターネットでサポートされない機能  
+##  <a name="features-that-are-not-supported-on-the-internet"></a>インターネットでサポートされない機能  
  クライアント管理機能の中には、インターネットでの使用に適していないものがあります。クライアントをインターネット上で管理する場合は、そのような機能はサポートされません。 サポートされない機能は、主に Active Directory ドメイン サービスに依存する機能や、ネットワーク探索や Wake On LAN (WOL) など、公衆ネットワークに適していない機能です。  
 
  クライアントをインターネット上で管理する場合は、次の機能がサポートされません。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/16/2016
 
  インターネットからの接続を受け付けるように構成したソフトウェアの更新ポイントがある場合は、インターネット上にある Configuration Manager のインターネット ベースのクライアントは、必ずこのソフトウェアの更新ポイントをスキャンして、どのソフトウェア更新プログラムが必要かを判断します。 ただし、これらのクライアントがインターネット上にある場合は、インターネット ベースの配布ポイントからではなく、まず Microsoft Update からソフトウェア更新プログラムをダウンロードしようとします。 Microsoft Update からダウンロードできなかった場合だけ、クライアントに割り当てられているサイトのインターネットベースの配布ポイントからダウンロードします。 インターネット ベースのクライアント管理用に構成されていないクライアントは、Microsoft Update からはソフトウェア更新プログラムをダウンロードせず、常に Configuration Manager の配布ポイントを使用します。  
 
-##  <a name="BKMK_PlanforInternetSiteSystems"></a> インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項  
+##  <a name="considerations-for-client-communications-from-the-internet-or-untrusted-forest"></a>インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項  
  プライマリ サイトにインストールされた次のサイト システムの役割では、インターネットや信頼されていないフォレストなどの信頼されていない場所にあるクライアントからの接続がサポートされます (セカンダリ サイトでは信頼されていない場所からのクライアント接続はサポートされません)。  
 
 -   アプリケーション カタログ Web サイト ポイント  
@@ -96,7 +96,7 @@ ms.lasthandoff: 12/16/2016
 -   **トンネリング**:   
     プロキシ Web サーバーが SSL ブリッジングの要件をサポートできない場合や、Configuration Manager によって登録されたモバイル デバイスに対してインターネット サポートを構成する場合は、SSL トンネリングもサポートされます。 ただし、この方法は、安全性が低くなります。これは、インターネットからの SSL パケットが SSL 終了なしにサイト システムに転送されるので、悪意のあるコンテンツがないかどうかを検査できないためです。 SSL トンネリングを使用する場合は、プロキシ Web サーバーに証明書は必要ありません。  
 
-##  <a name="BKMK_PlanforInternetClients"></a> インターネット ベースのクライアントの計画  
+##  <a name="planning-for-internet-based-clients"></a>インターネット ベースのクライアントの計画  
  インターネット上で管理することになるクライアント コンピューターを、イントラネットとインターネットの両方で管理できるようにするか、それともインターネット専用として構成するかを決める必要があります。 このクライアントの管理オプションは、クライアントをインストールするときしか構成できません。 選択したオプションを変更したい場合は、クライアントを再インストールする必要があります。  
 
 > [!NOTE]  
@@ -116,7 +116,7 @@ ms.lasthandoff: 12/16/2016
 
  インターネット ベースのクライアント管理とイントラネット クライアント管理が自動的に切り替わることの長所は、クライアント コンピューターがイントラネットに接続しているときは常に Configuration Manager のすべての機能を使用することができ、インターネットに接続したときも、主要な管理機能によって引き続き管理されているという点です。 また、インターネット上で開始したダウンロードをイントラネットに接続したときに再開したり、その逆も行えます。  
 
-##  <a name="BKMK_PrerequisitsForInternetClientMgmt"></a> インターネット ベースのクライアント管理の前提条件  
+##  <a name="prerequisites-for-internet-based-client-management"></a>インターネット ベースのクライアント管理の前提条件  
  Configuration Manager でインターネット ベースのクライアント管理を行うには、次の条件を満たしている必要があります。  
 
 -   インターネット上で管理されるクライアントは、インターネットに接続できる必要があります。  
