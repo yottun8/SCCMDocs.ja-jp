@@ -2,7 +2,7 @@
 title: "コンテンツ管理の基礎 | Microsoft Docs"
 description: "System Center Configuration Manager のツールとオプションを使用して、展開するコンテンツを管理します。"
 ms.custom: na
-ms.date: 3/15/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 238e460885b6490b3744690640f9ff040902b35f
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
+ms.openlocfilehash: f73dde64e0e8a0fc49f45b3afb3b8f00c926a820
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -29,9 +30,12 @@ ms.lasthandoff: 03/27/2017
 
 System Center Configuration Manager は、アプリケーション、パッケージ、ソフトウェア更新プログラム、およびオペレーティング システム展開として展開するコンテンツを管理するための、信頼性の高いツールとオプションのシステムをサポートしています。  
 
- 展開するコンテンツは、サイト サーバーと配布ポイント サイト システム サーバーの両方に格納されます。 このコンテンツを地点間で転送するときに、大きなネットワーク帯域幅が必要になる場合があります。 コンテンツ管理インフラストラクチャを効果的に計画および使用するには、使用可能なオプションと構成を理解したうえで、ネットワーク環境とコンテンツ展開のニーズに合うように効果的に使用する方法を検討することをお勧めします。  
+展開するコンテンツは、サイト サーバーと配布ポイント サイト システム サーバーの両方に格納されます。 このコンテンツを地点間で転送するときに、大きなネットワーク帯域幅が必要になる場合があります。 コンテンツ管理インフラストラクチャを効果的に計画および使用するには、使用可能なオプションと構成を理解したうえで、ネットワーク環境とコンテンツ展開のニーズに合うように効果的に使用する方法を検討することをお勧めします。  
 
-以下はコンテンツ管理の主要概念です。 概念について追加情報または複雑な情報が必要な場合は、該当する詳細情報へのリンクが示されています。  
+> [!TIP]    
+> コンテンツ配布プロセスの詳細と、一般的なコンテンツ配布の問題の診断および解決方法のヘルプについては、 support.microsoft.com の「[Understanding and Troubleshooting Content Distribution in Microsoft Configuration Manager](https://support.microsoft.com/help/4000401/content-distribution-in-mcm)」(Microsoft Configuration Manager のコンテンツ配布の概要とトラブルシューティング) を参照してください。
+
+コンテンツ管理の主要概念を以下に示します。 概念について追加情報または複雑な情報が必要な場合は、該当する詳細情報へのリンクが示されています。
 
 ## <a name="accounts-used-for-content-management"></a>コンテンツ管理に使用されるアカウント  
  コンテンツ管理では、次のアカウントを使用できます。  

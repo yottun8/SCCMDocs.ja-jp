@@ -2,7 +2,7 @@
 title: "実稼働前コレクションでのクライアント アップグレードのテスト | Microsoft ドキュメント"
 description: "System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストします。"
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
-ms.openlocfilehash: 7edd3e46b4813dd50df7d01b367f8e73bb350a7d
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
+ms.openlocfilehash: 572ef13883f7930e69ec1f1f53c9bfe029898c81
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -86,4 +87,5 @@ ms.lasthandoff: 04/24/2017
 
 >[!NOTE]
 >実稼働前クライアントを有効にする、または実稼働前クライアントを実稼働クライアントに昇格するには、アカウントが**更新プログラム パッケージ** オブジェクトを **[読み取り]**、**[変更]** する権限をもつセキュリティ ロールのメンバーである必要があります。
+>Configuration Manager のメンテナンス期間を構成している場合、クライアントのアップグレードではそれが優先されます。
 

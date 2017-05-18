@@ -15,10 +15,11 @@ caps.latest.revision: 24
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: 562e81df12e46a2332aa5e4de8b7c9e5819bde80
-ms.lasthandoff: 03/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 065b1fcb25d7c7845b6f26e757b36e7fb97ce013
+ms.openlocfilehash: ef4536578456c13de5afaa5cd1977d2e6b4b6bd1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -52,6 +53,9 @@ System Center 2012 Configuration Manager のオペレーティング システ�
 -   [IT 担当者向け Windows ADK for Windows 10 シナリオ](https://technet.microsoft.com/library/mt280162\(v=vs.85\).aspx)  
 
 -   [Windows ADK for Windows 10 をダウンロードする](https://msdn.microsoft.com/windows/hardware/dn913721.aspx#adkwin10)  
+
+-   [Windows 10 のサポート](/sccm/core/plan-design/configs/support-for-windows-10)  
+
 
 ### <a name="user-state-migration-tool-usmt"></a>ユーザー状態移行ツール (USMT)  
  Configuration Manager では、USMT 10 ソース ファイルを含む USMT パッケージを使用して、オペレーティング システムの展開の一部として、ユーザーの状態をキャプチャして復元します。 最上位サイトに Configuration Manager をセットアップすると、USMT パッケージが自動的に作成されます。 USMT 10 では、Windows 7、Windows 8、Windows 8.1 および Windows 10 からユーザー状態をキャプチャできます。 USMT 10 は、Windows 10 用 Windows アセスメント & デプロイメント キット (Windows ADK) に含まれています。  

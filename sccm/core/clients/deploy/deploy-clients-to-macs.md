@@ -2,7 +2,7 @@
 title: "Mac クライアントの展開 | Microsoft Docs"
 description: "System Center Configuration Manager でクライアントを Mac コンピューターに展開する方法を説明します。"
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 12
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: 9cab5b91a94e8bf2ad96a8a706f46c58e2a3d712
-ms.lasthandoff: 03/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
+ms.openlocfilehash: 6ce212c6745b70a47553891e5dbc124b4c4e50fa
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -30,11 +31,14 @@ ms.lasthandoff: 03/21/2017
 
 Mac コンピューター用の新しいクライアントをインストールする場合は、Configuration Manager の更新プログラムをインストールして、Configuration Manager コンソールで新しいクライアント情報を反映する必要もあります。
 
-これらの手順には、クライアント証明書をインストールするための&2; つのオプションがあります。 Mac コンピューターのクライアント証明書の詳細については、「[Mac コンピューターにクライアント ソフトウェアを展開するための準備](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#certificate-requirements)」を参照してください。  
+これらの手順には、クライアント証明書をインストールするための 2 つのオプションがあります。 Mac コンピューターのクライアント証明書の詳細については、「[Mac コンピューターにクライアント ソフトウェアを展開するための準備](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#certificate-requirements)」を参照してください。  
 
 -   [CMEnroll ツール](#install-the-client-and-then-enroll-the-client-certificate-on-the-mac) を使用して Configuration Manager 登録を使用する。 登録プロセスでは自動証明書更新がサポートされていないため、インストールされている証明書が期限切れになる前に、Mac コンピューターを再登録する必要があります。    
 
--   [Configuration Manager とは独立した証明書の要求とインストールの方法を使用する](#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager)。  
+-   [Configuration Manager とは独立した証明書の要求とインストールの方法を使用する](#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager)。 
+
+>[!IMPORTANT]
+>  Mac OS Sierra を実行しているデバイスにクライアントを展開するには、管理ポイント証明書のサブジェクト名を正しく構成する必要があります。たとえば、管理ポイント サーバーの FQDN を指定します。
 
 
 ## <a name="configure-client-settings-for-enrollment"></a>登録のためのクライアント設定を構成する  
@@ -59,7 +63,7 @@ Mac コンピューター用の新しいクライアントをインストール�
 7.  [登録プロファイルの作成 **** ] ダイアログ ボックスで、この登録プロファイルの名前を入力し、[管理サイト コード ****] を構成します。 Mac コンピューターを管理する管理ポイントを含む Configuration Manager プライマリ サイトを選択します。  
 
     > [!NOTE]  
-    >  サイトを選択できない場合は、そのサイト内で少なくとも&1; つの管理ポイントがモバイル デバイスをサポートするように構成されていることを確認してください。  
+    >  サイトを選択できない場合は、そのサイト内で少なくとも 1 つの管理ポイントがモバイル デバイスをサポートするように構成されていることを確認してください。  
 
 8.  **[追加]** を選びます。  
 
@@ -118,7 +122,7 @@ Mac コンピューター用の新しいクライアントをインストール�
 
 1.  クライアントのインストールを完了したら、コンピューターの登録ウィザードが開きます。 ウィザードが開かない場合や、間違ってウィザードを閉じてしまった場合は、**Configuration Manager** の環境設定ページで **[登録]** をクリックして、ウィザードを開いてください。  
 
-2.  ウィザードの&2; 番目のページで、次のように指定します。  
+2.  ウィザードの 2 番目のページで、次のように指定します。  
 
     -   **ユーザー名** : 次の形式で入力できます。  
 
@@ -299,7 +303,7 @@ CMEnroll ツールでクライアントのインストール、クライアン�
 
     -   **[選択した設定]:** **[参照]** を選択し、前に指定した探索スクリプトを選びます。  
 
-    -   **[次の値]** フィールドに「 **The domain/default pair of (com.microsoft.ccmclient, SMSID) does not exist**」と入力します。  
+    -   **[次の値]** フィールドに「**存在しないドメインと既定のペア (com.microsoft.ccmclient, SMSID)**」と入力します。  
 
     -   オプション [この設定が対応していない場合に指定した修復スクリプトを実行する ****] を有効にします。  
 
@@ -322,7 +326,7 @@ CMEnroll ツールでクライアントのインストール、クライアン�
 17. 再起動します。  
 
 
-### <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
 [Mac クライアントを維持する](/sccm/core/clients/manage/maintain-mac-clients)
 

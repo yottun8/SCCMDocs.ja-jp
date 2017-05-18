@@ -15,10 +15,11 @@ caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: fa5919b72114d71e1fbad74418c662d199827690
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
+ms.openlocfilehash: 8edf83a0f761dfc16274ce49c3aa2b878c7fe6cd
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -68,10 +69,11 @@ Mobile Threat Defense のステータスを監視するには、次のように�
 |**脅威の状態**| ○ | デバイスの脅威の現在の状態。 使用可能な値は、**Active** (アクティブ)、**Resolved** (解決済み)、**Ignored** (無視) です。無視の場合、ユーザーはデバイスの脅威を無視したが、脅威はまだ存在していることを意味します。 |
 |**脅威の種類**| ○ | Mobile Threat Defense パートナーの脅威の種類。 使用可能な値: **App** (アプリ)、**File** (ファイル)、**OS** |
 |**AAD アカウント ID**| × | Azure Active Directory の一意の識別子です。 |
-|**分類**| ○ | Mobile Threat Defense パートナーにより提供される脅威の分類。 使用可能な値: **Root Enabler, Riskware, Adware, Chargeware, DataLeak, Trojan, Worm, Virus, Exploit, Backdoor, Bot, AppDropper, ClickFraud, Spam, Spyware, SurveillanceWare, Vulnerability, Unknown, RootJailbrake, Connectivity, TollFraud, SideloadedApp (ルート イネーブラー、リスクウェア、アドウェア、チャージウェア、データのリーク、トロイの木馬、ワーム、ウイルス、エクスプロイト、バックドア、ボット、アプリ ドロッパー、クリック詐欺、スパム、スパイウェア、監視ウェア、脆弱性、不明、root 化/脱獄、接続、料金詐欺、サイドロードされたアプリ)** |
+|**分類**| ○ | Mobile Threat Defense パートナーにより提供される脅威の分類。 使用可能な値: **Root Enabler, Riskware, Adware, Chargeware, DataLeak, Trojan, Worm, Virus, Exploit, Backdoor, Bot, AppDropper, ClickFraud, Spam, Spyware, SurveillanceWare, Vulnerability, Unknown, Root Jailbrake, Connectivity, TollFraud, SideloadedApp (ルート イネーブラー、リスクウェア、アドウェア、チャージウェア、データのリーク、トロイの木馬、ワーム、ウイルス、エクスプロイト、バックドア、ボット、アプリ ドロッパー、クリック詐欺、スパム、スパイウェア、監視ウェア、脆弱性、不明、root 化/脱獄、接続、料金詐欺、サイドロードされたアプリ)** |
 |**デバイス ID**| × | 脅威にさらされている社内参加済みデバイスに関する情報を示す Azure Active Directory のオブジェクト ID。 |
 |**脅威 ID**| × | Mobile Threat Defense パートナーで生成される脅威の一意の識別子。 脅威 ID は解決方法を追跡するために使用されます。 |
 |**脅威 URL**| × | 脅威 URL がある場合は、特定の脅威の Mobile Threat Defense パートナーの管理コンソール ビューに戻るリンクが示されます。 |
 
 > [!TIP] 
 > **既定で表示**されない列を有効にして、デバイスの Mobile Threat Defense コンプライアンス ステータスの詳細を確認できるようにしてください。
+
