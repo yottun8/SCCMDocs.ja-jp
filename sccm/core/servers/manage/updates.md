@@ -2,7 +2,7 @@
 title: "更新プログラム | Microsoft Docs"
 description: "推奨更新プログラムを簡単に特定してインストールできる、**更新とサービス**と呼ばれるコンソール内サービス方式について説明します。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: bd72d17e463cb65e79b78613b631b0267b2b26a0
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: a33960fb89b71c0f8128e21a5054f5b63cfc6b17
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -48,7 +49,7 @@ Technical Preview ブランチを使用する場合は、「[System Center Confi
 
 
 ##  <a name="bkmk_Baselines"></a> 基準バージョンと更新プログラムのバージョン  
- System Center Configuration Manager の現在のブランチの最初のリリースは、バージョン 1511 です。これが基準バージョンです。 最新の基準バージョンは 1606 です。
+ System Center Configuration Manager の現在のブランチの最初のリリースは、バージョン 1511 です。これが基準バージョンです。 最新の基準バージョンにはバージョン 1606 と 1702 が含まれています。
 
 -   新しい階層に新しいサイトをインストールするときは、最新の基準バージョンを使用してください。  
 
@@ -76,7 +77,7 @@ Configuration Manager の次のバージョンは、基準バージョンと更�
 
 |バージョン |公開日|[サポート終了日](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|コンソール内の更新プログラム|  
 |-------------|-----------|------------|--------------|------------------------|  
-|[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|2017 年 3 月 27 日| 2018 年 3 月 27 日|×|○|
+|[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|2017 年 3 月 27 日| 2018 年 3 月 27 日|○|○|
 |[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|11/18/2016| 2017 年 11 月 18 日|×|○|
 |[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|2016 年 7 月 22 日| 2017 年 7 月 22 日|×|○|
 |[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) と 1606 修正プログラム ロールアップ (KB3186654) </br></br>5.00.8412.1307 *(注 1)* |2016 年 10 月 12 日| 2017 年 7 月 22 日|○|×|

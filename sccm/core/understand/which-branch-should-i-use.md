@@ -2,7 +2,7 @@
 title: "適切なブランチを選択する | Microsoft Docs"
 description: "System Center Configuration Manager の使用可能な各ブランチの相違点について説明します。"
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: ef044af5f6b32e4161d54c0ab1fb2ef2d245264b
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: f791278b0aa8efc734a894da7dab1704bb567ed0
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -29,16 +30,19 @@ ms.lasthandoff: 03/27/2017
 
 2016 年 10 月以降、System Center Configuration Manager の 3 つのブランチを使用できます。 このトピックは、適切なブランチを選択するのに役立ちます。
 
+> [!TIP]  
+> 階層内のすべてのサイトは同じブランチを実行する必要があります。 階層内でサイトがそれぞれ異なるブランチをもつことはサポートされません。
+
 ## <a name="current-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager の Current Branch
 これは、実稼働環境で使用するためにライセンスされるブランチで、最新の機能を使用することができます。 System Center Datacenter、System Center Standard、System Center Configuration Manager、またはそれらと同等のサブスクリプション権を保有している場合は、このブランチを使用します。 ソフトウェア アシュアランスとライセンス オプションについては、「[System Center Configuration Manager のライセンスとブランチ](learn-more-editions.md)」をご覧ください。
 
 
 >  [!TIP]
-> Current Branch は、ライセンスを必要としない評価版としてインストールすることもできます。 評価版は 180 日間使用でき、Current Branch のライセンス取得済みエディションへのアップグレードをサポートしています。
+> Current Branch は、ライセンスを必要としない評価版としてインストールできます。 評価版は 180 日間使用でき、Current Branch のライセンス取得済みエディションへのアップグレードをサポートしています。
 
 Current Branch は年に数回更新され、新機能が追加されます。 更新プログラムの各バージョンは、リリース後 1 年間サポートされます。 その 1 年間の有効期間が切れる前に、最新バージョンの Current Branch に更新する必要があります。 新しいバージョンへの更新プログラムは、コンソール内の更新プログラムとして利用できます。
 
-Current Branch を新しいサイトとしてインストールするか、System Center 2012 Configuration Manager (Service Pack 2 を適用済み) または System Center 2012 R2 Configuration Manager (Service Pack 1 を適用済み) からのアップグレードとしてインストールするには、System Center Configuration Manager の[基準メディア](/sccm/core/servers/manage/updates#baseline-and-update-versions)を使用します。これは、System Center 2016 の付属 DVD として提供されており、また、System Center Configuration Manager のスタンドアロン リリースの一部として利用できます。 このメディアへのアクセス方法は、System Center Configuration Manager のライセンス形態によって異なります。
+Current Branch を新しいサイトとしてインストールするか、System Center 2012 Configuration Manager (Service Pack 2 を適用済み) または System Center 2012 R2 Configuration Manager (Service Pack 1 を適用済み) からのアップグレードとしてインストールするには、System Center Configuration Manager の[基準メディア](/sccm/core/servers/manage/updates#baseline-and-update-versions)を使用します。これは、System Center 2016 の付属 DVD として提供されており、また、System Center Configuration Manager のスタンドアロン リリースの一部として利用できます。 このメディアへのアクセス方法は、System Center Configuration Manager のライセンス形態によって異なります。 1702 などの新しい基準バージョンでは、LTSB のインストールはサポートされません。
 
 この基準メディアを使用して、Current Branch の評価版の新しいサイトをインストールすることもできます。 評価版のみをインストールする場合は、[TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) の Web サイトからソフトウェアを入手できます。
 
@@ -139,4 +143,15 @@ Technical Preview に最初に導入された機能は、多くの場合、以�
 **更新のオプション**
 -    新しい Technical Preview バージョン向けのコンソール内の更新プログラムをインストールできます。
 -    Technical Preview を Current Branch または LTSB に変換するオプションはありません。
+
+
+## <a name="identify-your-branch-and-version"></a>ブランチとバージョンを確認する
+Configuration Manager サイトのバージョン情報を表示すると、ブランチも確認できます。
+
+**バージョン**   
+お使いのサイトのバージョンを確認するには、コンソールの左上にある **[System Center Configuration Manager のバージョン情報]** を選択して、**[サイトのバージョン]** を表示します。 サイトのバージョンの一覧については、[]()をご覧ください。
+
+**ブランチ**  
+サイトのブランチ (LTSB または Current Branch) を確認するには、コンソールで **[管理]** > **[サイトの構成]** > **[サイト]** を選択し、**[階層設定]** を開きます。 Current Branch に変換するオプションがあり、選択できる状態の場合、サイトは LTSB バージョンを実行しています。 サイトが Current Branch を実行している場合、このオプションは淡色表示されます。
+さまざまなバージョンの Configuration Manager については、[Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)に関するページの「基準バージョンと更新プログラムのバージョン」をご覧ください。
 

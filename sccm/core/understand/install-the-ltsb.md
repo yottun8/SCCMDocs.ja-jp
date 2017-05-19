@@ -1,8 +1,8 @@
 ---
 title: "1606 構成基準メディアを使用したサイトのインストール | Microsoft Docs"
-description: "1606 構成基準メディアを利用し、System Center Configuration Manager のサイトをインストールまたはアップグレードする方法について説明します。"
+description: "System Center Configuration Manager 用 LTSB をインストールするか、アップグレードします。"
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1a3460143628ef297c99c364ded7ebea86d270dd
-ms.openlocfilehash: c266bb753ea69785b674508647c3857b2218cb77
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
+ms.openlocfilehash: 39653604ba5fd8e1fe9dd4d42889221d983f9bec
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -26,13 +27,18 @@ ms.lasthandoff: 02/18/2017
 
 *適用対象: System Center Configuration Manager (Current Branch)、(Long-Term Servicing Branch)*
 
-このトピックでは、Microsoft System Center 2016 または System Center Configuration Manager (Current Branch と Long-Term Servicing Branch 1606) リリースのバージョン 1606 構成基準メディアを使用するときに Configuration Manager のセットアップを実行する方法について学習します。 このメディアを利用して新しいサイトをインストールしたり、System Center 2012 Configuration Manager Service Pack 2 または System Center 2012 R2 Configuration Manager Service Pack 1 からアップグレードしたりできます。 セットアップ中、Current Branch または Long-Term Servicing Branch (LTSB) を選択できます。
+Configuration Manager のバージョン 1606 基準メディアからセットアップを実行する場合は、System Center Configuration Manager の Long-Term Servicing Branch または Current Branch サイトをインストールできます。
+
+基準メディアは、Microsoft System Center 2016 に付属する DVD または System Center Configuration Manager (Current Branch および Long-Term Servicing Branch 1606) リリースから使用できます。 基準メディアの詳細については、「[Baseline and update versions](/sccm/core/servers/manage/updates#baseline-and-udpate-versions)」(基準バージョンと更新プログラムのバージョン) を参照してください。
+
 
 バージョン 1606 構成基準メディアを使用するときにインストールまたはアップグレードするサイト:
 - *Current Branch サイト*。1511 構成基準メディアを利用して最初にインストールし、バージョン 1606 に更新し、さらに 1606 修正プログラム KB3186654 を適用したサイトと同等のサイト。
 -    *LTSB サイト*。バージョン 1606 に加えて 1606 修正プログラム KB3186654 を実行する Current Branch サイトと同等のサイト。 この構成基準メディアには、この修正プログラム ロールアップが既に含まれています  ただし、LTSB では、Current Branch で利用できる機能の一部をご利用いただけません。詳細は、「[Introduction to the Long-Term Servicing Branch of System Center Configuration Manager](introduction-to-the-ltsb.md)」 (System Center Configuration Manager の Long-Term Servicing Branch の概要) にあります。
 
 System Center Configuration Manager のブランチに関する詳細については、「[Which branch of Configuration Manager should I use](which-branch-should-i-use.md)」 (Configuration Manager のどのブランチを使用すればよいですか) を参照してください。
+
+
 
 
 ## <a name="changes-to-setup-with-the-1606-baseline-media"></a>1606 構成基準メディアによるセットアップの変更点
@@ -98,6 +104,7 @@ LTSB でサポートされていないサイト システムの役割をアン�
 1606 構成基準メディアを利用していずれかのブランチの新しいサイトをインストールするとき、「[System Center Configuration Manager サイトのインストール](/sccm/core/servers/deploy/install/installing-sites)」トピックにあるサイト計画、準備、インストール手順を利用します。さらに、セットアップに関して次の事項を考慮します。
 
 - セットアップ中、インストールする Configuration Manager のブランチを選択する必要があります。ソフトウェア アシュアランス契約の詳細を指定できます。
+- 同じ階層内のすべてのサイトは同じブランチを実行する必要があります。 異なるサイトに LTSB と Current Branch が混在している階層の使用はサポートされません。
 -    スクリプト化された新しいインストール。 詳細については、この記事の "スクリプト化された新しいインストール オプション" を参照してください。
 
 ## <a name="expand-a-stand-alone-primary-site"></a>スタンドアロン プライマリ サイトを拡張する

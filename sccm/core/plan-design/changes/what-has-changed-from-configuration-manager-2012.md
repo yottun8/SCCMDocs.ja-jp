@@ -2,7 +2,7 @@
 title: "Configuration Manager 2012 からの変更点 | Microsoft Docs "
 description: "System Center 2012 Configuration Manager と比較した System Center Configuration Manger の新機能と変更をご確認いただけます。"
 ms.custom: na
-ms.date: 12/30/2016
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 51
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 6b1a4584ebcd4dadd983677b714486402c93e190
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: 0a3eb93a99533a1569d8f72ca01d6dfcdc75da20
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -38,7 +39,7 @@ ms.lasthandoff: 03/27/2017
 -   Configuration Manager 2007 や System Center 2012 Configuration Manager などの過去のバージョンとは異なり、製品名に年や製品識別子を使用していません。
 
 -   製品組み込みの増分更新をサポートしているため、更新プログラム バージョンとも呼ばれます。 最初のリリースはバージョン 1511 でした。 後続のバージョンは、バージョン 1610 のように、コンソール内の更新プログラムとして年に数回リリースされます。
--   基準バージョンを使用してインストールします。 1511 は元の基準バージョンでしたが、新しい基準バージョンも、1606 のように、ときどきリリースされます。 基準バージョンを使用して、新しい System Center Configuration Manager サイトと階層をインストールしたり、サポート対象バージョンの Configuration Manager 2012 からアップグレードしたりすることができます。
+-   基準バージョンを使用してインストールします。 1511 は元の基準バージョンでしたが、新しい基準バージョンも、1702 のように、ときどきリリースされます。 基準バージョンを使用して、新しい System Center Configuration Manager サイトと階層をインストールしたり、サポート対象バージョンの Configuration Manager 2012 からアップグレードしたりすることができます。
 
 
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/27/2017
  バージョンによっては、(Configuration Manager コンソール内から) 既存のサイトに対する更新プログラムとしてのみ使用できて、新規 Configuration Manager サイトのインストールに使用できないものがあります。   
 たとえば、1610 更新プログラムは、Configuration Manager コンソール内からのみ使用可能です。 任意のバージョンの System Center Configuration Manager を既に実行しているサイトを更新する場合に使用されます。
 
-更新プログラム バージョンも、新しい基準バージョン (更新プログラム 1606 など) として定期的にリリースされます。 このような更新プログラムを使用すれば、古い基準バージョン (1511 など) から開始して最新バージョンまでアップグレードしなくても、新しい階層をインストールできます。
+更新プログラム バージョンも、新しい基準バージョン (更新プログラム 1702 など) として定期的にリリースされます。 このような更新プログラムを使用すれば、古い基準バージョン (1511 など) から開始して最新バージョンまでアップグレードしなくても、新しい階層をインストールできます。
 
 
 更新プログラムの使用の詳細については、「[System Center Configuration Manager の更新プログラム](../../../core/servers/manage/updates.md)」を参照してください。  

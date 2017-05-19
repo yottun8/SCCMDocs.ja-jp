@@ -16,10 +16,11 @@ author: lleonard-msft
 caps.handback.revision: 0
 ms.author: alleonar
 ms.manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
-ms.openlocfilehash: d4616ce1e0d8f38b74f03b9e7f089feebe2d087d
-ms.lasthandoff: 04/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7a6c89254d01f4074e5c170b20338686178ebdd3
+ms.openlocfilehash: 359fcfd9754fb5c81763bc44cac45376ea3ab0b8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 04/28/2017
 
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/21/2017
 
      次の表に、接続の種類のオプションを示します。 詳細については、VPN サーバーのマニュアルを参照してください。
 
-|オプション          | 説明| 接続の種類|  
+| &nbsp;&nbsp;オプション&nbsp;&nbsp; | 説明 | &nbsp;&nbsp;接続の&nbsp;種類&nbsp;&nbsp; |  
 |----------------|----------------------|---------------------|  
 |**領域**     |使用する認証領域です。 認証領域とは、"Pulse Secure" 接続の種類で使用される認証リソースのグループを表します。|Pulse Secure|    
 |**ロール**        |この接続に対するアクセス権を持つユーザー ロールです。 |Pulse Secure|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/21/2017
 |**企業の Wi-Fi ネットワークに接続しているときは VPN をバイパスする**  |デバイスが企業の Wi-Fi ネットワークに接続されている場合、VPN 接続は使用されません。|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - チェック ポイント モバイル VPN<br /><br /> - Microsoft SSL (SSTP)<br /><br /> - Microsoft 自動<br /><br /> - IKEv2<br /><br /> - L2TP|  
 |**家庭の Wi-Fi ネットワークに接続しているときは VPN をバイパスする**  |デバイスが家庭の Wi-Fi ネットワークに接続されている場合、VPN 接続は使用されません。|すべて|  
 |**アプリ VPN ごと (iOS 7 以降、Mac OS X 10.9 以降)** |VPN 接続を iOS アプリに関連付けて、アプリを実行すると接続が開かれるようにします。 アプリを展開するときに VPN プロファイルをアプリに関連付けることができます。|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - チェック ポイント モバイル VPN|  
-|**カスタム XML (省略可能)** |VPN 接続を構成するカスタムの XML コマンドを指定します。<br /><br /> 例:<br /><br /> **Pulse Secure**の場合:<br /><br /> **&lt;pulse-schema>&lt;isSingleSignOnCredential>true&lt;/isSingleSignOnCredential\>&lt;/pulse-schema>**<br /><br /> **チェックポイント モバイル VPN**の場合:<br /><br /> **&lt;CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3">**<br /><br /> **Dell SonicWALL Mobile Connect**の場合:<br /><br /> **&lt;MobileConnect\><br />&nbsp; &nbsp; &lt;Compression\>false&lt;/Compression\><br />&nbsp; &nbsp; &lt;debugLogging\>True&lt;/debugLogging\><br />&nbsp; &nbsp; &lt;packetCapture\>False&lt;/packetCapture\>&lt;/MobileConnect\>**<br /><br /> **F5 Edge Client**の場合:<br /><br /> **&lt;f5-vpn-conf>&lt;single-sign-on-credential>&lt;/f5-vpn-conf>**<br /><br /> カスタムの XML コマンドの記述方法については、各製造元の VPN に関するマニュアルを参照してください。|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - チェック ポイント モバイル VPN|  
+|**カスタム XML (省略可能)** |VPN 接続を構成するカスタムの XML コマンドを指定します。<br /><br /> 例:<br /><br /> **Pulse Secure**の場合:<br /><br /> **&lt;pulse-schema><br /> &nbsp; &lt;isSingleSignOnCredential>true&lt;/isSingleSignOnCredential\><br />&lt;/pulse-schema>**<br /><br /> **チェックポイント モバイル VPN**の場合:<br /><br /> **&lt;CheckPointVPN <br /> &nbsp; port="443" name="CheckPointSelfhost" <br /> &nbsp; sso="true" <br /> &nbsp; debug="3"<br />/>**<br /><br /> **Dell SonicWALL Mobile Connect**の場合:<br /><br /> **&lt;MobileConnect\><br />&nbsp; &nbsp; &lt;Compression\>false&lt;/Compression\><br />&nbsp; &nbsp; &lt;debugLogging\>True&lt;/debugLogging\><br />&nbsp; &nbsp; &lt;packetCapture\>False&lt;/packetCapture\><br />&lt;/MobileConnect\>**<br /><br /> **F5 Edge Client**の場合:<br /><br /> **&lt;f5-vpn-conf>&lt;single-sign-on-credential>&lt;/f5-vpn-conf>**<br /><br /> カスタムの XML コマンドの記述方法については、各製造元の VPN に関するマニュアルを参照してください。|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - チェック ポイント モバイル VPN|  
 
 > [!NOTE]  
 >  モバイル デバイスの VPN プロファイルの作成に特化した情報については、[VPN プロファイルの作成](../../mdm/deploy-use/create-vpn-profiles.md)に関する記事を参照してください。  

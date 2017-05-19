@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: e55883471fde63036c91b315ed6db6dceb315207
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
+ms.openlocfilehash: e040c6b3a951d1bdf5a46dd82f1bd92b45c2e71d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -52,7 +54,7 @@ System Center Configuration Manager **カスタム Windows デスクトップお
 
  Configuration Manager における検出方法には、アプリケーションがコンピューターにインストールされているかどうかを検出するために使用される規則が含まれます。 この検出は、コンプライアンスに関連する構成項目の評価の前に実行されます。 アプリケーションがインストールされているかどうかを検出するため、そのアプリケーションの Windows インストーラー ファイルの存在を検出します。または、[常にアプリケーションがインストールされていると仮定する **** ] を選択して、アプリケーションがインストールされているかどうかに関係なく、コンプライアンスに関する構成項目の評価が行われるようにします。  
 
- これらの手順を使用して、System Center 2012 Configuration Manager で検出方法を構成します。  
+ これらの手順を使用して、System Center Configuration Manager で検出方法を構成します。  
 
 ### <a name="to-detect-an-application-installation-by-using-the-windows-installer-file"></a>Windows インストーラー ファイルを使用してアプリケーションのインストールを検出するには  
 
@@ -62,7 +64,7 @@ System Center Configuration Manager **カスタム Windows デスクトップお
 
 3.  [バージョン **** ] ボックスには、選択した Windows インストーラー ファイルのバージョン番号が自動的に入力されます。 このボックスに表示された値が正しくない場合は新しいバージョン番号を入力することができます。  
 
-4.  コンピューターのユーザー プロファイルごとに検出を実行する場合は、 **[このアプリケーションは&1; 人以上のユーザー用にインストールする]** チェック ボックスをオンにします。  
+4.  コンピューターのユーザー プロファイルごとに検出を実行する場合は、 **[このアプリケーションは 1 人以上のユーザー用にインストールする]** チェック ボックスをオンにします。  
 
 ### <a name="to-detect-a-specific-application-and-deployment-type"></a>特定のアプリケーションおよび展開の種類を検出するには  
 
@@ -260,7 +262,7 @@ System Center Configuration Manager **カスタム Windows デスクトップお
 ##  <a name="configure-compliance-rules"></a>コンプライアンス規則の構成  
  構成項目のコンプライアンス規則を構成するには、次の手順に従います。  
 
- コンプライアンス規則は、構成項目のコンプライアンスを定義する条件を指定します。 設定に対してコンプライアンス評価が行われる前に、少なくとも&1; つのコンプライアンス規則を設ける必要があります。 WMI、レジストリ、およびスクリプトの設定により、コンプライアンス非対応となった値の修復ができます。 新しい規則を作成、または構成項目の既存の設定を参照して規則を選択することができます。  
+ コンプライアンス規則は、構成項目のコンプライアンスを定義する条件を指定します。 設定に対してコンプライアンス評価が行われる前に、少なくとも 1 つのコンプライアンス規則を設ける必要があります。 WMI、レジストリ、およびスクリプトの設定により、コンプライアンス非対応となった値の修復ができます。 新しい規則を作成、または構成項目の既存の設定を参照して規則を選択することができます。  
 
 ### <a name="to-create-a-compliance-rule"></a>コンプライアンス規則を作成するには  
 
@@ -296,8 +298,8 @@ System Center Configuration Manager **カスタム Windows デスクトップお
             |次の値の間|詳細情報なし|  
             |次の値以上|詳細情報なし|  
             |次の値以下|詳細情報なし|  
-            |次のいずれか|テキストボックスで&1; 行ごとに&1; つのエントリを指定します。|  
-            |次のいずれでもない|テキストボックスで&1; 行ごとに&1; つのエントリを指定します。|  
+            |次のいずれか|テキストボックスで 1 行ごとに 1 つのエントリを指定します。|  
+            |次のいずれでもない|テキストボックスで 1 行ごとに 1 つのエントリを指定します。|  
 
         -   **サポートされている場合は対応していない規則を修復する** - このオプションを選択すると、Configuration Manager がコンプライアンス非対応の規則を自動的に修復します。 Configuration Manager は次の規則の種類を自動的に修復できます。  
 
@@ -356,9 +358,4 @@ System Center Configuration Manager **カスタム Windows デスクトップお
 
 ## <a name="complete-the-wizard"></a>ウィザードを完了する  
  ウィザードの [概要] **** ページで、実行される操作を確認し、[次へ] をクリックします。 新しい構成項目は、[資産とコンプライアンス] **** ワークスペースの [構成項目] **** ノードに表示されます。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

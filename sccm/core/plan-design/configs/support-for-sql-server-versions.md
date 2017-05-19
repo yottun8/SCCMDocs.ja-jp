@@ -2,7 +2,7 @@
 title: "サポートされている SQL Server のバージョン | Microsoft ドキュメント"
 description: "System Center Configuration Manager サイト データベースをホストするための SQL Server のバージョンおよび構成要件を取得します。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 21
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: ea9edf6392c41e31276900454cd78ce4bc32be7b
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d5a6fdc9a526c4fc3a9027dcedf1dd66a6fff5a7
+ms.openlocfilehash: fa7f232fd385f742bb11c6596c954d87c2da87a8
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/01/2017
 
 
 ---
@@ -54,10 +55,15 @@ ms.lasthandoff: 03/27/2017
  SQL Server はサイト サーバー コンピューターに配置する必要があります。  
 
 ##  <a name="bkmk_SQLVersions"></a> サポートされている SQL Server のバージョン  
- 複数のサイトを含む階層では、それぞれのサイトが異なるバージョンの SQL Server を使用してサイト データベースをホストできます。ただし、使用する SQL Server のバージョンが Configuration Manager でサポートされている必要があります。  
+ 複数のサイトを含む階層では、次の条件を満たす場合、それぞれのサイトが異なるバージョンの SQL Server を使用してサイト データベースをホストできます。
+ -  Configuration Manager によってサポートされている SQL Server のバージョンを使用していること。
+ -  使用する SQL Server のバージョンが、Microsoft によって引き続きサポートされていること。
+ -  SQL Server で、SQL Server の 2 つのバージョン間のレプリケーションをサポートしていること。  たとえば、[SQL Server では SQL Server 2008 R2 と SQL Server 2016 間のレプリケーションをサポートしていません](https://docs.microsoft.com/sql/relational-databases/replication/deprecated-features-in-sql-server-replication)。
+
+
 
  特に指定のない限り、次のバージョンの SQL Server はすべてのアクティブ バージョンの System Center Configuration Manager でサポートされます。 新しい SQL Server バージョンまたは Service Pack のサポートが追加されている場合、そのサポートを追加する Configuration Manager バージョンが示されます。 同様に、サポートが推奨されていない場合は、Configuration Manager の影響を受けるバージョンの詳細を確認してください。   
- 
+
 特定の SQL Server Service Pack のサポートには、基本の Service Pack バージョンに戻せない場合を除き、その Service Pack の累積的な更新プログラムが含まれます。 Service Pack のバージョンが示されない場合、サポートは、そのバージョンの Service Pack なしの SQL Server に対するものです。 今後、そのバージョンの Service Pack がリリースされた場合、その新しい Service Pack バージョンがサポートされる前に、別のサポート ステートメントが宣言されます。
 
 

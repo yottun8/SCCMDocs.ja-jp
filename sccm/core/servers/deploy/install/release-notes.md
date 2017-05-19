@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
-ms.openlocfilehash: 44338c705e308896c5203be239c160a8220369a8
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7a6c89254d01f4074e5c170b20338686178ebdd3
+ms.openlocfilehash: 59946d1328be1606ba7c4dab647e814c1b4e638a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 04/28/2017
 
 
 ---
@@ -216,6 +217,12 @@ RAM が 4 GB 未満の Windows 10 RTM デバイスでフル ワイプを実行�
 管理者が複数のユーザー コレクションに一連の条項を展開し、ユーザーがその中の複数のコレクションのメンバーである場合、ユーザーが会社のポータルを開くと、同じ条項のコピーが複数表示されます。  たとえば、"SampleUser" という名前のユーザーが 2 つの別のユーザー コレクション ("CompanyEmployeesFTE" と "CompanyEmployeesNA") のメンバーであり、"CompanyTerms" と呼ばれる使用条件が CompanyEmployeesFTE と CompanyEmployeesNA の両方に展開されている場合、SampleUser の使用条件への同意ページには、2 つの同じ CompanyTerms が表示されます。 ユーザーが同意または拒否できるのはすべての条項に関してのみであるため、(ユーザーが同意と拒否の両方を行って) 条件に関してあいまいな状態になるという危険はありません。 使用条件への同意レポートには、ユーザーごとにそれぞれの条件セットに対して 1 行ずつしか含まれません。レポートにエラーは含まれません。 唯一の影響は、同意ページに 2 セットの条項が表示されることです。  
 
 **回避策**: 各ユーザーが、条項が展開される 1 つのコレクションにのみ含まれていることを確認します。  
+
+### <a name="android-for-work-email-profiles-that-use-certificate-authentication-are-not-applied-to-devices"></a>証明書の認証を使用する Android for Work の電子メール プロファイルは、デバイスには適用されません
+<!--  487657 -->
+Android for Work の電子メール プロファイルを作成する場合、認証には 2 つのオプションがあります。 1 つはユーザー名とパスワード、もう 1 つは証明書です。 この時点で、証明書のオプションは動作していません。 **証明書**に設定する認証方法でプロファイルを作成する場合、プロファイルはデバイスに適応されず、ユーザーは電子メール アカウントの詳細を手動で入力することを要求されます。
+
+**回避策**: ありません。 管理者は、**ユーザー名とパスワード**のオプションを使用するか、この問題が解決するまで待つ必要があります。
 
 ## <a name="reports-and-monitoring"></a>レポートおよび監視  
 

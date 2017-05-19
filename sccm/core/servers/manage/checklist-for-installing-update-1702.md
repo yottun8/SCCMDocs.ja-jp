@@ -2,7 +2,7 @@
 title: "1702 のチェックリスト | System Center Configuration Manager"
 description: "System Center Configuration Manager バージョン 1702 に更新する前に、実行するアクションについて説明します。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,10 +15,11 @@ caps.latest.revision: 7
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: dd54a5668f8df73b0724f5c15a1a6a83f8fe8496
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: c4ace452d62d4fa08f4457cb1735718ca4bd016d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/02/2017
 
 ---
 # <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム 1702 をインストールするためのチェックリスト
@@ -26,6 +27,9 @@ ms.lasthandoff: 03/27/2017
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager の Current Branch を利用するとき、バージョン 1702 のコンソール内の更新プログラムをインストールし、階層を前のバージョンから更新できます。
+
+> [!TIP]  
+バージョン 1702 は[構成基準メディア](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)としても利用でき、これを使用して新しい階層の最初のサイトをインストールできます。
 
 バージョン 1702 の更新プログラムを得るには、階層の最上位サイトでサービス接続ポイントのサイト システムの役割を利用する必要があります。 これはオンラインまたはオフライン モードで可能です。 階層で Microsoft からダウンロードした更新プログラム パッケージは、**[管理] &gt; [概要] &gt; [クラウド サービス] &gt; [更新とサービス]** にあります。
 

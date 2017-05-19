@@ -4,17 +4,18 @@ description:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/23/2017
+ms.date: 05/01/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology:
 - configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-translationtype: Human Translation
-ms.sourcegitcommit: 2bcc5d9dde1f1a2d9c33575d6c463e281ac818e8
-ms.openlocfilehash: 61b8cd8458718b9a54edb129739c619f947ac380
-ms.lasthandoff: 12/16/2016
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d5a6fdc9a526c4fc3a9027dcedf1dd66a6fff5a7
+ms.openlocfilehash: 97e1bc6585cee0ff433da0ec0b60b9604cb7348f
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/01/2017
 
 ---
 
@@ -24,13 +25,27 @@ ms.lasthandoff: 12/16/2016
 
 バージョン 1610 以降では、Configuration Manager でクラウド管理ゲートウェイを設定するプロセスに次の手順が含まれます。
 
-## <a name="step-1-create-a-custom-ssl-certificate"></a>手順 1: カスタム SSL 証明書を作成する
+## <a name="step-1-configure-required-certificates"></a>手順 1: 必要な証明書を構成する
 
-クラウド管理ゲートウェイのカスタム SSL 証明書は、クラウドベースの配布ポイントで行うのと同じ方法で作成できます。 次の操作以外は、「[クラウドベースの配布ポイント用のサービス証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012)」の指示に従います。
+## <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>オプション 1 (推奨): 一般のグローバルに信頼された証明書プロバイダー (VeriSign など) からのサーバー認証証明書を使用します。
 
--   新しい証明書テンプレートを設定する際に、Configuration Manager サーバー用に設定したセキュリティ グループに **読み取り**と**登録**のアクセス許可を与えます。
+この方式を使用する場合、クライアントは証明書を自動的に信頼することになり、管理者が自分でカスタム SSL 証明書を作成する必要はありません。
 
--  カスタムの Web サーバー証明書を要求する場合、クラウド管理ゲートウェイを Azure パブリック クラウド上で使用するときは **cloudapp.net** で終わる証明書の共通名の FQDN を入力し、Azure Government Cloud で使用するときは **usgovcloudapp.net** で終わる証明書の共通名の FQDN を入力します。
+1. 組織のパブリック ドメイン ネーム サービス (DNS) に正規名レコード (CNAME) を作成して、パブリック証明書で使用されることになる、クラウド管理ゲートウェイ サービスに対するわかりやすい名前のエイリアスを作成します。
+たとえば、Contoso 社では、同社のクラウド管理ゲートウェイ サービスに **GraniteFalls** という名前を付けています。Azure では、**GraniteFalls.CloudApp.Net** となります。 Contoso 社のパブリック DNS である contoso.com 名前空間内に DNS 管理者が、実際のホスト名 **GraniteFalls.CloudApp.net** に対する **GraniteFalls.Contoso.com** 用の新しい CNAME レコードを作成します。
+2. 次に CNAME エイリアスの共通名 (CN) を使用してパブリック プロバイダーからのサーバー認証証明書を要求します。
+たとえば、Contoso 社では、証明書の CN 用に **GraniteFalls.Contoso.com** を使用しています。
+3. この証明書を使用して、Configuration Manager コンソールでクラウド管理ゲートウェイ サービスを作成します。
+    - Create Cloud Management Gateway ウィザードの **[設定]** ページで、このクラウド サービスのサーバー証明書を追加するとき (**証明書ファイル**から)、ウィザードはサービス名として証明書の CN からホスト名を抽出し、**cloudapp.net** (Azure US Government クラウドの場合は **usgovcloudapp.net**) にサービスの FQDN としてこれを追加することで、Azure にサービスを作成します。
+たとえば、Contoso 社でクラウド管理ゲートウェイを作成するときは、ホスト名 **GraniteFalls** が証明書の CN から抽出されます。そのため Azure での実際のサービスは **GraniteFalls.CloudApp.net** として作成されます。
+
+### <a name="option-2---create-a-custom-ssl-certificate-for-cloud-management-gateway-in-the-same-way-as-for-a-cloud-based-distribution-point"></a>オプション 2: クラウドベースの配布ポイントで行うのと同じ方法でクラウド管理ゲートウェイのカスタム SSL 証明書を作成する
+
+クラウド管理ゲートウェイのカスタム SSL 証明書は、クラウドベースの配布ポイントで行うのと同じ方法で作成できます。 次の操作以外は、「[クラウドベースの配布ポイント用のサービス証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)」の指示に従います。
+
+- 新しい証明書テンプレートを設定する際に、Configuration Manager サーバー用に設定したセキュリティ グループに ** 読み取り ** と**登録**のアクセス許可を与えます。
+- カスタムの Web サーバー証明書を要求する場合、クラウド管理ゲートウェイを Azure パブリック クラウド上で使用するときは **cloudapp.net** で終わる証明書の共通名の FQDN を入力し、Azure Government Cloud で使用するときは **usgovcloudapp.net** で終わる証明書の共通名の FQDN を入力します。
+
 
 ## <a name="step-2-export-the-client-certificates-root"></a>手順 2: クライアント証明書のルートをエクスポートする
 

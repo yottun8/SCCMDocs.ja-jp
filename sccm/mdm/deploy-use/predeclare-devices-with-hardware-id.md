@@ -15,10 +15,11 @@ caps.latest.revision: 3
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 7573590763c68a4c97d388be1e64054c318da9cc
-ms.openlocfilehash: 4fe6741481c79ed4e4496846152902d6d8ca1f96
-ms.lasthandoff: 03/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: e6833951db27b227a3ca22925e9d9f4c3fc443fc
+ms.openlocfilehash: e8606b8a9268a0a0668b75070cf35894f4794123
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/04/2017
 
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>IMEI または iOS シリアル番号を持つデバイスの事前宣言
@@ -27,7 +28,7 @@ ms.lasthandoff: 03/24/2017
 
 会社が所有するデバイスの International station Mobile Equipment Identity (IMEI) 番号または iOS シリアル番号をインポートすることでデバイスを識別できるようになりました。 デバイスの IMEI 番号を含むコンマ区切り値 (.csv) ファイルをアップロードするか、デバイス情報を手動で入力することができます。  インポートされた情報によって登録するデバイスの**所有権**が、デバイスの一覧で**企業**として設定されます。 Intune ライセンスも、サービスにアクセスする各ユーザーに必要です。  
 
-会社所有の iOS デバイスのシリアル番号をアップロードする場合は、企業登録プロファイルとペアにする必要があります。 したがって、デバイスを Apple の DEP (Device Enrollment Program) または Apple Configurator を使用して登録し、会社所有であることを示す必要があります。 
+会社所有の iOS デバイスのシリアル番号をアップロードする場合は、企業登録プロファイルとペアにする必要があります。 したがって、デバイスを Apple の DEP (Device Enrollment Program) または Apple Configurator を使用して登録し、会社所有であることを示す必要があります。
 
 ## <a name="how-to-predeclare-corporate-owned-devices"></a>会社所有のデバイスを事前宣言する方法
 
@@ -61,7 +62,7 @@ ms.lasthandoff: 03/24/2017
 
 ## <a name="format-for-uploading-csv-files"></a>アップロードする .csv ファイルの形式
 
-IMEI またはシリアル番号でデバイスを識別するために使用する .csv ファイルは、ガイダンスにのみ使用される一番上の行を除き、次の形式で作成する必要があります。 各行には、IMEI 番号または iOS シリアル番号を含める必要があります。 IOS デバイスのシリアル番号のみ事前に宣言できます。他のデバイス プラットフォームでは IMEI 番号を使用します。 この表には、サンプル データが含まれます。
+IMEI またはシリアル番号でデバイスを識別するために使用する .csv ファイルは、ガイダンスにのみ使用される一番上の行を除き、次の形式で作成する必要があります。 各行には、IMEI 番号または iOS シリアル番号のどちらかの ID 番号を含める必要があります。 両方を含めることもできます。 IMEI 番号は、Android、iOS、Windows デバイスのものが使用できます。 iOS シリアル番号もサポートされています。  この表には、サンプル データが含まれます。
 
 | IMEI #  | iOS シリアル #  | OS | 説明 |
 |------------ |---------------|-----|-----|

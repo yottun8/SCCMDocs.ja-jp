@@ -2,7 +2,7 @@
 title: "CD.Latest フォルダー | Microsoft Docs"
 description: "Configuration Manager コンソール内から製品の更新を提供する新しい更新プロセスについて説明します。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 6
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
-ms.openlocfilehash: 5fbf1a2605b4915a2f592875a5ac88368160ce87
-ms.lasthandoff: 04/26/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: 5c39e09b44500fa2f356f83579bb2fb2c1d0e937
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -41,7 +42,7 @@ System Center Configuration Manager は、Configuration Manager コンソール�
 
 -   組み込み Configuration Manager バックアップ タスクを実行します。指定されたバックアップ フォルダーの場所でフォルダーが作成または更新されます。  
 
--  バージョン 1606 以降では、CD.Latest フォルダーは、(バージョン 1606 などの) ベースライン メディアを使用して新しいサイトをインストールするときに作成されます。
+-  バージョン 1606 以降、CD.Latest フォルダーは構成基準メディア (バージョン 1606 または 1702 など) を使用して新しいサイトをインストールする際に作成されます。
 
 CD.Latest フォルダーからのソース ファイルは、次に対してサポートされています。  
 
