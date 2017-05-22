@@ -15,9 +15,11 @@ caps.latest.revision: 3
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: ce50645155ecb14a82d8b982aa69c0f87dd15fbf
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>アプリごとの VPN のパッケージ ファミリ名 (PFN) の検索
@@ -77,7 +79,7 @@ OneNote について取得された情報を次に示します。
 3.  アプリへのリンクをクリックします。 アクセスする URL の末尾には一連の文字が含まれていることに注意してください。 この例では、URL は次のようになります: `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`
 4.  別のタブに、次の URL を貼り付けます: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`。ここで、`<app id>` を、https://www.microsoft.com/en-us/store/apps から取得したアプリ ID (手順 3 の URL の末尾に含まれる一連の文字) で置き換えます。 ここでの OneNote の例では、次の URL を貼り付けます: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`
 
-Edge では、必要な情報が表示されます。Internet Explorer では、**[開く]** をクリックすると情報が表示されます。 PFN 値は 1 行目に記述されています。 この例での結果を次に示します。
+Microsoft Edge では、必要な情報が表示されます。Internet Explorer では、**[開く]** をクリックすると情報が表示されます。 PFN 値は 1 行目に記述されています。 この例での結果を次に示します。
 
 
 `{`
@@ -86,9 +88,4 @@ Edge では、必要な情報が表示されます。Internet Explorer では、
 `  "windowsPhoneLegacyId": "ca05b3ab-f157-450c-8c49-a1f127f5e71d",`
 `  "publisherCertificateName": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"`
 `}`
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
