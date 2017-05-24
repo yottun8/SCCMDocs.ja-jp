@@ -2,7 +2,7 @@
 title: "ボリューム購入 iOS アプリの管理 | Microsoft Docs"
 description: "iOS アプリ ストアから購入したアプリを展開および管理し、そのライセンスを追跡します。"
 ms.custom: na
-ms.date: 05/03/2017
+ms.date: 05/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
-ms.openlocfilehash: 55f1204b088a7b636a90561f20aa41c7de72bc05
+ms.sourcegitcommit: f4cb711f369698fe8e045f8c83dd96ec6fb29d70
+ms.openlocfilehash: ce706e938f558406044f7890c80bb7156c3b262b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>Manage volume-purchased iOS apps with System Center Configuration Manager
@@ -58,6 +58,7 @@ ms.lasthandoff: 05/04/2017
       **[同期]** を選択して手動で同期するときは、常に完全同期が実行されます。  
 -   Configuration Manager データベースを回復または復元する必要がある場合は、同期されるライセンスのデータを最新のものにするために、後から手動同期を実行することをお勧めします。  
 -   また、iOS デバイスを管理 (アプリの展開を含む) できるようにするには、Apple から有効な Apple Push Notification サービス (APN) 証明書をインポートしておく必要があります。 詳細については、「[Set up iOS hybrid device management](enroll-hybrid-ios-mac.md)」 (iOS ハイブリッド デバイス管理のセットアップ) を参照してください。  
+-   Configuration Manager では最大 3000 台の VPP トークンの追加をサポートしています。
 
 System Center Configuration Manager 1702 以降では、デバイスとユーザーにライセンスされたアプリを展開できるようになりました。 デバイス ライセンスをサポートするアプリ機能に応じて、次のように、展開時に適切なライセンスが要求されます。
 

@@ -13,10 +13,11 @@ ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
-ms.openlocfilehash: 4616ebb84ae63acbe6af892918aa2dd1a0be4825
-ms.lasthandoff: 05/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f4cb711f369698fe8e045f8c83dd96ec6fb29d70
+ms.openlocfilehash: a2954b3c6f9a09b7246347e780c4cfc49ba39ca1
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1702 の新機能
@@ -172,8 +173,8 @@ Microsoft Intune で使用できるように整合させるために、iOS デ�
 ### <a name="hardware-inventory-collects-uefi-information"></a>ハードウェア インベントリでの UEFI 情報の収集
 新しいハードウェア インベントリ クラス (**SMS_Firmware**) とプロパティ (**UEFI**) は、コンピューターが UEFI モードで起動しているかどうかを判別するのに役立ちます。 コンピューターが UEFI モードで起動している場合、**UEFI** プロパティは **TRUE** に設定されています。 これはハードウェア インベントリでは既定で有効になっています。 ハードウェア インベントリの詳細については、「[ハードウェア インベントリを構成する方法](/sccm/core/clients/manage/inventory/configure-hardware-inventory)」を参照してください。
 
-### <a name="improvements-to-software-center-settings-and-notification-messages-for-high-impact-task-sequences"></a>ソフトウェア センターの設定と影響の大きいタスク シーケンスの通知メッセージの改善
-このリリースでは、影響の大きい展開タスク シーケンスのソフトウェア センター設定と通知メッセージについて、次の点などが改善されています。
+### <a name="improvements-to-software-center-warning-messages-for-high-impact-task-sequences"></a>影響の大きいタスク シーケンスに関するソフトウェア センターの警告メッセージの改善
+このリリースでは、影響の大きい展開タスク シーケンスに関するソフトウェア センターの警告メッセージについて、次の点が改善されています。
 
 - タスク シーケンスのプロパティで、危険性が高い展開として、オペレーティング システム以外のタスク シーケンスを含め、任意のタスク シーケンスを構成できます。 特定の条件を満たす任意のタスク シーケンスは、影響度大として自動的に定義されます。 詳細については、「[System Center Configuration Manager の危険度の高い展開を管理するための設定](/sccm/protect/understand/settings-to-manage-high-risk-deployments)」を参照してください。
 - タスク シーケンスのプロパティでは、影響の大きい展開について既定の通知メッセージを使用するか、独自のカスタム通知メッセージを作成することができます。
