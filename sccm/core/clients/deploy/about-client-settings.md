@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
-ms.openlocfilehash: d1d2ec7c053d13ebaeb00d0dfeb126716b5f7ae5
+ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
+ms.openlocfilehash: 3d90f16eac59b7069ff2f33170eba85d2cde65ef
 ms.contentlocale: ja-jp
 ms.lasthandoff: 05/17/2017
 
@@ -215,9 +215,9 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
      コンピューターに BitLocker PIN の入力が構成されている場合、このオプションによって、ソフトウェアのインストール後にコンピューターを再起動するときに PIN 入力の要件をバイパスできます。  
 
-    -   **常時**: Configuration Manager は、再起動が必要なソフトウェアをインストールしてコンピューターの再起動を開始した後で、コンピューターの次回起動時に PIN を入力する BitLocker 要件を一時停止します。 この設定は、Configuration Manager によって開始されるコンピューターの再起動にのみ適用され、ユーザーがコンピューターを再起動する場合は、BitLocker PIN の入力の要件は一時停止されません。 BitLocker PIN の入力要件は、Windows の起動後に再開されます。  
+    -   **常時**: Configuration Manager は再起動が必要なソフトウェアのインストールを実行してコンピューターを再起動した後に、BitLocker を一時的に停止させます。 この設定は、Configuration Manager によって開始されるコンピューターの再起動にのみ適用され、ユーザーがコンピューターを再起動する場合は、BitLocker PIN の入力の要件は一時停止されません。 BitLocker PIN の入力要件は、Windows の起動後に再開されます。
 
-    -   **なし**:Configuration Manager は、再起動が必要なソフトウェアをインストールした後で、コンピューターの次回起動時に PIN を入力する BitLocker 要件を一時停止しません。 この場合は、ユーザーが PIN を入力して標準の起動プロセスを完了し、Windows を読み込むまで、ソフトウェアのインストールを終了できません。  
+    -   **なし**: Configuration Manager は、再起動が必要なソフトウェアをインストールした後で、コンピューターの次回起動時に BitLocker を一時停止しません。 この場合は、ユーザーが PIN を入力して標準の起動プロセスを完了し、Windows を読み込むまで、ソフトウェアのインストールを終了できません。
 
 -   **追加のソフトウェアでアプリケーションとソフトウェア更新プログラムの展開を管理します**  
 

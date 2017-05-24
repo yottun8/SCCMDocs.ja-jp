@@ -14,10 +14,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 2f1bc62a4695d60dc4679e479797ee84cd4ddee4
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: 14b4172ad713a3981b8a5abe182405e271d78c26
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>セットアップ ウィザードを使用した System Center Configuration Manager サイトのインストール
@@ -125,7 +126,7 @@ ms.lasthandoff: 03/27/2017
 
     -   **スタンドアロン プライマリ サイトを中央管理サイトがある階層に拡張する:**  
 
-         **[中央管理サイトのインストール]** ページで、**[既存のスタンドアロン プライマリを 1 つの階層に展開する]**を選び、スタンドアロン プライマリ サイト サーバーの FQDN を指定して、**[次へ]** を選択して続けます。  
+         **[中央管理サイトのインストール]** ページで、**[既存のスタンドアロン プライマリを 1 つの階層に展開する]** を選び、スタンドアロン プライマリ サイト サーバーの FQDN を指定して、**[次へ]** を選択して続けます。  
 
          新しい中央管理サイトのインストールに使用するメディアが、プライマリ サイトのバージョンに一致する必要があります。  
 
@@ -195,7 +196,7 @@ ms.lasthandoff: 03/27/2017
 
      **[サービス接続ポイント]** の構成を選んだら、**[次へ]** を選択します。 (セットアップの完了後、Configuration Manager コンソール内からこの構成を変更できます。)  
 
-19. **[設定の概要]** ページで、選択した設定を確認します。 準備ができら、**[次へ]** を選択して、前提条件チェッカーを起動します。  
+19. **[設定の概要]** ページで、選択した設定を確認します。 準備ができたら、**[次へ]** を選択して、前提条件チェッカーを起動します。  
 
 20. **[インストールの前提条件チェック]** ページに、特定できた問題が一覧表示されます。  
 
@@ -310,7 +311,7 @@ ms.lasthandoff: 03/27/2017
     > [!IMPORTANT]  
     > Configuration Manager で SQL Server Express をインストールする場合は、Service Pack なしの SQL Server Express 2012 がインストールされます。  
 
-    > -   セカンダリ サイトをサポートするには、インストール後に、Service Pack 2 (以降) をインストールして、SQL Server Express 2012 をアップグレードする必要があります。
+    > -   セカンダリ サイトをサポートするには、インストール後に、SQL Server Express 2012 を[サポートされているバージョン](/sccm/core/plan-design/configs/support-for-sql-server-versions#bkmk_SQLVersions)にアップグレードする必要があります。
     > -   また、新しいセカンダリ サイトのインストールが完了に失敗したが、最初の SQL Server Express 2012 のインストールが完了した場合、Configuration Manager がセカンダリ サイトのインストールを正常にもう一度試すには、SQL Server Express のインスタンスを更新しておく必要があります。  
 
      **既存の SQL Server インスタンスを使用する場合**  

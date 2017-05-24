@@ -2,7 +2,7 @@
 title: "サポートされている SQL Server のバージョン | Microsoft ドキュメント"
 description: "System Center Configuration Manager サイト データベースをホストするための SQL Server のバージョンおよび構成要件を取得します。"
 ms.custom: na
-ms.date: 05/01/2017
+ms.date: 05/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d5a6fdc9a526c4fc3a9027dcedf1dd66a6fff5a7
-ms.openlocfilehash: fa7f232fd385f742bb11c6596c954d87c2da87a8
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: 4166560602edf6eb299511c8b59dc3903e3bfffc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -45,14 +45,19 @@ ms.lasthandoff: 05/01/2017
 -   SQL Server クラスター。 「[SQL Server クラスターを使用したサイト データベースのホスティング](../../../core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)」を参照してください。
 -   SQL Server AlwaysOn 可用性グループ。 このオプションでは、Configuration Manager 1602 以降のバージョンが必要です。 詳細については、「[System Center Configuration Manager 用の高可用性サイト データベースの SQL Server AlwaysOn](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)」を参照してください。
 
-> [!NOTE]  
->  ネットワーク負荷分散 (NLB) クラスター構成では、SQL Server クラスターがサポートされていません。 また、SQL Server のデータベース ミラーリング テクノロジやピアツーピア レプリケーションはサポートされていません。 SQL Server の標準トランザクション レプリケーションは、 [データベース レプリカ](https://technet.microsoft.com/library/mt608546.aspx)を使用するように構成されている管理ポイントにオブジェクトをレプリケートする場合にのみサポートされます。  
-
 
  **セカンダリ サイト:**  
  サイト データベースは SQL Server または SQL Server Express のフル インストールの既定のインスタンスを使用できます。  
 
  SQL Server はサイト サーバー コンピューターに配置する必要があります。  
+
+ **サポートの制限事項**   
+ 次の構成はサポートされていません。
+ -   ネットワーク負荷分散 (NLB) クラスター構成の SQL Server クラスター
+ -   クラスター共有ボリューム (CSV) 上の SQL Server クラスター
+ -   SQL Server のデータベース ミラーリング テクノロジとピア ツー ピア レプリケーション
+
+SQL Server のトランザクション レプリケーションは、[データベース レプリカ](https://technet.microsoft.com/library/mt608546.aspx)を使用するように構成されている管理ポイントにオブジェクトをレプリケートする場合にのみサポートされます。  
 
 ##  <a name="bkmk_SQLVersions"></a> サポートされている SQL Server のバージョン  
  複数のサイトを含む階層では、次の条件を満たす場合、それぞれのサイトが異なるバージョンの SQL Server を使用してサイト データベースをホストできます。
@@ -109,14 +114,14 @@ ms.lasthandoff: 05/01/2017
 -   プライマリ サイト  
 -   セカンダリ サイト  
 
+<!-- Support for this service pack version has been dropped by Microsoft    
+### SQL Server 2012 SP2: Standard, Enterprise   
+ You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
-### <a name="sql-server-2012-sp2-standard-enterprise"></a>SQL Server 2012 SP2: Standard、Enterprise   
- 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
-
--   中央管理サイト  
--   プライマリ サイト  
--   セカンダリ サイト  
-
+-   A central administration site  
+-   A primary site  
+-   A secondary site  
+-->
 
 ### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3: Standard、Enterprise、Datacenter     
   [バージョン 1702 以降](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database)では、このバージョンの SQL Server はサポートされていません。  
@@ -155,10 +160,13 @@ ms.lasthandoff: 05/01/2017
 
 -   セカンダリ サイト  
 
-### <a name="sql-server-2012-express-sp2"></a>SQL Server 2012 Express SP2   
- 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+<!-- Support for this service pack version has been dropped by Microsoft   
+### SQL Server 2012 Express SP2   
+ You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
--   セカンダリ サイト  
+-   A secondary site  
+-->
+
 
 ##  <a name="bkmk_SQLConfig"></a> SQL Server の必須構成  
  サイト データベースに使用する SQL Server (SQL Server Express を含む) のすべてのインストールでの要件は次のとおりです。 Configuration Manager が SQL Server Express をセカンダリ サイト インストールの一部としてインストールするときには、これらの構成は自動的に作成されます。  
@@ -237,7 +245,7 @@ SQL Server データベース エンジンとの通信、およびサイト間�
 -   SQL Server データベース エンジンとさまざまな Configuration Manager サイト システムの役割の間の**サイト内通信**では、既定でポート TCP 1433 が使用されます。 次のサイト システムの役割は、SQL Server データベースと直接通信します。  
 
     -   管理ポイント  
-    -   SMS プロバイダ コンピュータ  
+    -   SMS プロバイダー コンピューター  
     -   レポート サービス ポイント  
     -   サイト サーバー  
 

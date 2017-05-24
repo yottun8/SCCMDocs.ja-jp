@@ -2,7 +2,7 @@
 title: "LTSB のサポートされている構成 | Microsoft Docs"
 description: "System Center Configuration Manager の Long-Term Servicing branch で動作するオペレーティング システムと依存する製品について理解します。"
 ms.custom: na
-ms.date: 3/9/2017
+ms.date: 5/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
-ms.openlocfilehash: 78dcbf76f21a286506b9c605e2c176714736935b
-ms.lasthandoff: 03/10/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: ec33d5febcbf7b57e220f7fe27db9671080fecff
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -30,7 +31,7 @@ ms.lasthandoff: 03/10/2017
 このトピックまたは LTSB 特定のトピックで特に指定されていない限り、Current Branch バージョン 1606 に適用されるものと同じ構成および制限が、LTSB に適用されます。  競合が発生した場合、使用しているエディションに適用される情報が使用されます。 通常、LTSB は Current Branch よりも制限的です。
 
 ## <a name="general-statement-of-support"></a>サポートの概説
-次のセクションで説明する製品とテクノロジが、Configuration Manager でサポートされています。 ただし、このコンテンツにそれらが含まれていても、その製品の個別のサポート ライフサイクルを超える製品サポートの延長を表すものではありません。 既にサポート ライフサイクルが終了している製品は、Configuration Manager ではサポートされません。 詳細については、[「マイクロソフト サポート ライフサイクル」](http://go.microsoft.com/fwlink/p/?LinkId=208270) Web サイトを参照し、[「サポート ライフサイクル ポリシーに関する FAQ」](http://go.microsoft.com/fwlink/p/?LinkId=31976)をお読みください。
+この Configuration Manager のブランチでは、次の製品とテクノロジがサポートされています。 ただし、このコンテンツにそれらが含まれていても、その製品の個別のサポート ライフサイクルを超える製品やバージョンのサポートの延長を表すものではありません。 既にサポート ライフサイクルが終了している製品は、Configuration Manager ではサポートされません。 詳細については、[「マイクロソフト サポート ライフサイクル」](http://go.microsoft.com/fwlink/p/?LinkId=208270) Web サイトを参照し、[「サポート ライフサイクル ポリシーに関する FAQ」](http://go.microsoft.com/fwlink/p/?LinkId=31976)をお読みください。
 
 さらに、次のトピックに示されていない製品および製品バージョンは、[Enterprise Mobility + Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/)で告知されていない限り、サポートされていません。
 
@@ -310,13 +311,11 @@ LTSB は、サイト データベースとレポート ポイントをホスト�
 - SQL Server 2014 SP2: Standard、Enterprise
 - SQL Server 2014 SP1: Standard、Enterprise
 - SQL Server 2012 SP3: Standard、Enterprise
-- SQL Server 2012 SP2: Standard、Enterprise
 - SQL Server 2008 R2 SP3: Standard、Enterprise、Datacenter
 - SQL Server 2016 Express
 - SQL Server 2014 Express SP2
 - SQL Server 2014 Express SP1
 - SQL Server 2012 Express SP3
-- SQL Server 2012 Express SP2
 
 ## <a name="support-for-active-directory-domains"></a>Active Directory ドメインのサポート
 すべての LTSB サイト システムは、サポートされている Windows Active Directory ドメインのメンバーであることが必要です。 Active Directory ドメインのサポートは、[Active Directory ドメインのサポート](/sccm/core/plan-design/configs/support-for-active-directory-domains)に記載されるものと同じ要件と制限がありますが、次のドメイン機能レベルに制限されています。

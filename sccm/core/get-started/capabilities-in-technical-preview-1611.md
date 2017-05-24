@@ -15,9 +15,11 @@ caps.latest.revision: 2
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 5e77ebbfd3f3d573d903fe58024a22feb9884e4a
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1611-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1611 の機能
@@ -29,7 +31,7 @@ ms.openlocfilehash: 5e77ebbfd3f3d573d903fe58024a22feb9884e4a
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1611 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 このバージョンの Technical Preview をインストールする前に、説明のトピック「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。    
 
 **この Technical Preview の既知の問題:**   
-- ***前提条件の状態***: バージョン 1611 をインストールする場合、前提条件の全体的な状態は、警告付きで合格として表示されます。ただし、警告の原因となった前提条は一覧表示されません。 この状況は、次の&2; つの前提条件によって発生することがあります。
+- ***前提条件の状態***: バージョン 1611 をインストールする場合、前提条件の全体的な状態は、警告付きで合格として表示されます。ただし、警告の原因となった前提条は一覧表示されません。 この状況は、次の 2 つの前提条件によって発生することがあります。
   - SQL インデックス作成メモリのオプション
   - SQL Server のバージョンがサポートされているかどうかの確認  
 
@@ -37,7 +39,7 @@ ms.openlocfilehash: 5e77ebbfd3f3d573d903fe58024a22feb9884e4a
 
 - ***PowerShell***: Configuration Manager コンソールから Windows PowerShell に接続する場合に、次のエラーが表示される可能性があります: **Microsoft.ConfigurationManagement.PowerShell.Types.ps1xml がデジタル署名されていない**  
 
-   この問題は、特定のファイルをバージョン 1610 の署名付きバージョンのファイルに置き換えることで解決できます。 バージョン 1610 のインストールの **&lt;install directory>\AdminConsole\bin\** フォルダーから拡張子 **.psd1**、**.ps1xml**、**.psm1** を持つすべてのファイルをコピーします。これらのファイルを、Technical Preview 1611 のインストールの **&lt;install directory>\AdminConsole\bin\** フォルダーに貼り付けて、1611 バージョンのファイルを上書きします。
+   この問題は、特定のファイルをバージョン 1610 の署名付きバージョンのファイルに置き換えることで解決できます。 バージョン 1610 のインストールの *&lt;install directory>\AdminConsole\bin\** フォルダーから拡張子 **.psd1**、**.ps1xml**、**.psm1** を持つすべてのファイルをコピーします。 これらのファイルを、Technical Preview 1611 がインストールされている *&lt;install directory>\AdminConsole\bin\** フォルダーに貼り付けて、1611 バージョンのファイルを上書きします。
 
 
 **このバージョンでお試しいただける新機能を次に示します。**  
@@ -75,9 +77,4 @@ ms.openlocfilehash: 5e77ebbfd3f3d573d903fe58024a22feb9884e4a
 
 ## <a name="see-also"></a>関連項目
 [System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

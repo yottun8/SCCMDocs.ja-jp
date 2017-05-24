@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 3eb48942c1259d2aa1b3c200fad73b39b11c0b8c
-ms.openlocfilehash: 39361102d77441488bf61c9cbbfb0086774e0c09
-ms.lasthandoff: 03/30/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
+ms.openlocfilehash: e040552dab21ba9a71e06a78f6acc2ffe1b0eb61
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -92,7 +93,7 @@ Configuration Manager は、次に示すオペレーティング システム上
 詳細については、Configuration Manager チームのブログ「[ Configuration Manager Distribution Points and Windows Server 2012 Data Deduplication](http://blogs.technet.com/b/configmgrteam/archive/2014/02/18/configuration-manager-distribution-points-and-windows-server-2012-data-deduplication.aspx)」(Configuration Manager の配布ポイントと Windows Server 2012 のデータ重複除去) および Windows Server TechNet ライブラリの「[データ重複除去の概要](http://technet.microsoft.com/library/hh831602.aspx)」を参照してください。  
 
 ##  <a name="bkmk_DA"></a> DirectAccess  
-Configuration Manager では、サイト システム サーバーとクライアント間の通信用に、Windows Server 2008 R2 の DirectAccess 機能をサポートしています。  
+Configuration Manager では、クライアントとサイト サーバー システム間の通信用に、Windows Server 2008 R2 以降の DirectAccess 機能をサポートしています。  
 
 -   DirectAccess の要件がすべて満たされているときに、DirectAccess を使用することで、インターネット上の Configuration Manager クライアントは、イントラネット上にいるかのように割り当て先のサイトと通信できます。  
 

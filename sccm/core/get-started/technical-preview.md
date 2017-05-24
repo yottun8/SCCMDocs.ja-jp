@@ -15,10 +15,11 @@ caps.latest.revision: 157
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
-ms.openlocfilehash: 8ffaee12bd826e2f19653b215ee19423ea672433
-ms.lasthandoff: 04/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: 3a7370fedee417588d219dc7bff46205faf42929
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -45,23 +46,7 @@ ms.lasthandoff: 04/21/2017
 
 -   各インストールは 90 日後に使用期限が切れるまでアクティブです。  
 
--   サポートされる言語は英語のみです。  
-
--   スタンドアロンのプライマリ サイトのみがサポートされます。 中央管理サイト、複数のプライマリ サイト、またはセカンダリ サイトはサポートされません。  
-
--   次のバージョンの SQL Server のみがサポートされます。  
-
-    -   SQL Server 2016 (Service Pack なし、およびそれ以降)
-    -   SQL Server 2014 (Service Pack なし、およびそれ以降)
-    -   SQL Server 2012 (Service Pack 2、またはそれ以降)
-
-
--   サイトは最大 10 台のクライアントをサポートします。各クライアントは次のいずれかを実行している必要があります。  
-
-      -   Windows 10  
-      -   Windows 8.1  
-      -   Windows 8  
-      -   Windows 7  
+-   サポートされる言語は英語のみです。
 
 
 -   次のインストール フラグ (スイッチ) のみがサポートされます。  
@@ -79,6 +64,23 @@ ms.lasthandoff: 04/21/2017
 -   このプレビュー ビルドへのアップグレードはサポートされません。  
 
 -   このプレビュー ビルドから、製品版 (現在のブランチ) へのアップグレードはサポートされません。 ただし、プレビュー バージョンから更新プログラムが使用できる場合は、Configuration Manager コンソールの **[更新とサービス]** ノードから検索してからインストールできます。 コンソール内アップグレード プロセスに関する「 [ConfigMgr 更新プログラム パッケージをインストールする](https://www.youtube.com/embed/KBd_EGFbUT8) 」というビデオを youtube.com でご覧ください。  
+-   スタンドアロンのプライマリ サイトのみがサポートされます。 中央管理サイト、複数のプライマリ サイト、またはセカンダリ サイトはサポートされません。  
+
+この Configuration Manager のブランチでは、次の製品とテクノロジがサポートされています。 ただし、これは製品またはバージョンの各サポート ライフサイクルが過ぎてもサポートを延長するという意味ではありません。 既にサポート ライフサイクルが終了している製品は、Configuration Manager ではサポートされません。 マイクロソフト サポート ライフサイクルの詳細については、 [「マイクロソフト サポート ライフサイクル」](http://go.microsoft.com/fwlink/p/?LinkId=208270) Web サイトを参照してください。  
+
+-   次のバージョンの SQL Server のみがサポートされます。  
+
+    -   SQL Server 2016 (Service Pack なし、およびそれ以降)
+    -   SQL Server 2014 (Service Pack 1 以降)
+    -   SQL Server 2012 (Service Pack 3 以降)
+
+
+-   サイトは最大 10 台のクライアントをサポートします。各クライアントは次のいずれかを実行している必要があります。  
+
+      -   Windows 10  
+      -   Windows 8.1  
+      -   Windows 8  
+      -   Windows 7  
 
 ##  <a name="bkmk_install"></a> Technical Preview のインストールと更新  
  System Center Configuration Manager の Technical Preview は、System Center Configuration Manager の最新リリースとは異なります。  

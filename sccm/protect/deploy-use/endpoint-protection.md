@@ -15,9 +15,11 @@ caps.latest.revision: 11
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
-ms.openlocfilehash: 90e6d82e7fd1ff0ad4f1d616cc23201769fe26e2
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
+ms.openlocfilehash: 3c31271f3e3ae7aa45da03b3d75fd78242330646
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -33,21 +35,15 @@ System Center Configuration Manager の Endpoint Protection を使用して、Co
  Configuration Manager で Endpoint Protection を使用すると、次のようなメリットがあります。  
 
 -   マルウェア対策ポリシーと Windows ファイアウォールの設定を構成し、選択したコンピューターのグループに対する Windows Defender Advanced Threat Protection を管理します。  
-
 -   Configuration Manager ソフトウェア更新プログラムを使用して最新のマルウェア対策の定義ファイルをダウンロードし、クライアント コンピューターを最新の状態に保ちます。  
-
 -   クライアント コンピューターでマルウェアが検出された場合は、電子メールによる通知送信、コンソール内の監視機能の使用、およびレポートの表示を行うことで管理ユーザーに通知することができます。  
 
-Windows 10 および Windows Server 2016 以降のコンピューターでは、Endpoint Protection 管理のために追加のクライアントは不要です。 Windows 8.1 およびそれ以前のコンピューターでは、Endpoint Protection により、構成マネージャー クライアントに加え、独自のクライアントもインストールされます。 Endpoint Protection クライアントには、次の機能があります。  
+Windows 10 と Windows Server 2016 以降のコンピューターには、Windows Defender があらかじめインストールされています。 これらのオペレーティング システムの場合、Windows Defender の管理クライアントは、Configuration Manager クライアントと共にインストールされます。 Windows 8.1 以前のコンピューターでは、Endpoint Protection をインストールすると、Configuration Manager クライアントがインストールされます。 Windows Defender と Endpoint Protection クライアントは、次の機能を備えています。  
 
 -   マルウェアとスパイウェアの検出と修復  
-
 -   ルートキットの検出と修復  
-
 -   重大な脆弱性の評価、および定義とエンジンの自動更新  
-
 -   ネットワーク検査システム経由のネットワークの脆弱性の検出  
-
 -   Cloud Protection Service との統合によりマルウェアを Microsoft に報告。 このサービスに加入すると、コンピューターで不明なマルウェアが検出された場合に、Endpoint Protection クライアントまたは Windows Defender がマルウェア プロテクション センターから最新の定義をダウンロードできます。  
 
 > [!NOTE]  
@@ -119,9 +115,4 @@ Configuration Manager のバージョン 1606 (Current Branch) 以降、Endpoint
 6. 矢印アイコンをクリックしてファイルをダウンロードします。 ファイル名は **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_EptProt_Lin_Mac_MLF_X21-30777.ISO** です。
 
  Linux コンピューターと Mac コンピューター用の Endpoint Protection クライアントをインストールして管理する方法については、 **Documentation** フォルダーに配置されたこれらの製品に付属のマニュアルを参照してください。
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

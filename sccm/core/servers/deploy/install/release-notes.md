@@ -2,7 +2,7 @@
 title: "リリース ノート - Configuration Manager | Microsoft Docs"
 description: "製品でまだ修正されていないまたは Microsoft サポート技術情報の記事で説明されていない緊急の問題については以下のメモを参照してください。"
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 05/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a6c89254d01f4074e5c170b20338686178ebdd3
-ms.openlocfilehash: 59946d1328be1606ba7c4dab647e814c1b4e638a
+ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
+ms.openlocfilehash: 9da6f9678a7fb5c76f365a3522f5e5e0fdfec037
 ms.contentlocale: ja-jp
-ms.lasthandoff: 04/28/2017
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -145,9 +145,16 @@ ConfigMgrSetup.log:
 -->
 
 
-<!-- No current  Client deployment and upgrade relenotes
-## Client deployment and upgrade  
--->
+
+## <a name="client-deployment-and-upgrade"></a>クライアントの展開とアップグレード  
+
+### <a name="client-installation-fails-with-error-code-0x8007064c"></a>クライアントのインストールが失敗し、エラー コード 0x8007064c が返される
+<!--- SMS 486973 -->
+
+Windows コンピューターにクライアントを展開すると、インストールが失敗します。 ccmsetup.log ファイルには、"ファイル 'C:\WINDOWS\ccmsetup\Silverlight.exe' がエラー終了コード 1612 を返しました。 インストールに失敗しました" というエントリに続き、"0x8007064c でInstallFromManifest のエラーが発生しました" というエントリが記録されます。
+
+**回避策**: 以前にインストールしたバージョンの Silverlight の破損が原因です。 影響を受けたコンピューターで次のツールを試すと、この問題を解決できる場合があります。[https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed) 
+
 
 
 
@@ -247,5 +254,5 @@ Android for Work の電子メール プロファイルを作成する場合、�
 ### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>マルウェア対策ポリシーを Windows Server 2016 Core に適用できません
 マルウェア対策ポリシーを Windows Server 2016 Core に適用できません。  エラー コードは 0x80070002 です。  ConfigSecurityPolicy.exe に依存関係がありません。
 
-**回避策:**  なし。  管理者はグループ ポリシーを使用し、Windows Server 2016 Core の設定を管理できます。
+**回避策:** 2017 年 5 月 9 日に配信された[サポート技術情報の記事 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) でこの問題は解決されています。 
 

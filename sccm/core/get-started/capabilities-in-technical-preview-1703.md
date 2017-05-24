@@ -15,10 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 3eb48942c1259d2aa1b3c200fad73b39b11c0b8c
-ms.openlocfilehash: d497bd5a2971315eecdc0900f735ab2cd8b2e7bc
-ms.lasthandoff: 03/30/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f4cb711f369698fe8e045f8c83dd96ec6fb29d70
+ms.openlocfilehash: bb1b96a56db68dcea22270855b899ba3a90afd0d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1703 の機能
@@ -134,35 +135,31 @@ WSfB のアプリの管理に関する [Current Branch のコンテンツ](/sccm
 コンソールで、**[管理]** > **[概要]** > **[クラウド サービスの管理]** > **[Azure]** > **[Azure サービス]** に移動し、**[Azure サービスの構成]** を選択します。次に、クラウド サービスを選択し、**[プロパティ]** を選択します。
 
 ## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>インプレース アップグレード時に BIOS から UEFI に変換する
-Windows 10 Creators Update では、UEFI 対応ハードウェアのハード ディスクのパーティションを再分割するプロセスを自動化する簡単な変換ツールが導入され、変換ツールは Windows 7 から Windows 10 へのインプレース アップグレード プロセスに統合されます。 このツールをオペレーティング システムのアップグレード タスク シーケンスと、ファームウェアを BIOS から UEFI に変換する OEM ツールと組み合わせて使用する場合、Windows 10 Creators Update へのインプレース アップグレード時にコンピューターを BIOS から UEFI に変換することができます。 詳細については、「[Task sequence steps to manage BIOS to UEFI conversion](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)」(BIOS からUEFI への変換を管理するためのタスク シーケンス手順) を参照してください。
+Windows 10 Creators Update では、EFI 対応ハードウェアのハード ディスクのパーティションを再分割するプロセスを自動化する簡単な変換ツールが導入され、変換ツールは Windows 7 から Windows 10 へのインプレース アップグレード プロセスに統合されます。 このツールをオペレーティング システムのアップグレード タスク シーケンスと、ファームウェアを BIOS から UEFI に変換する OEM ツールと組み合わせて使用する場合、Windows 10 Creators Update へのインプレース アップグレード時にコンピューターを BIOS から UEFI に変換することができます。 詳細については、「[Task sequence steps to manage BIOS to UEFI conversion](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)」(BIOS からUEFI への変換を管理するためのタスク シーケンス手順) を参照してください。
 
 ## <a name="collapsible-task-sequence-groups"></a>折りたたみ可能なタスク シーケンス グループ
 このバージョンでは、タスク シーケンス グループを展開および折りたたむ機能が導入されています。 個々のグループを展開または折りたたんだり、すべてのグループを一度に展開または折りたたんだりすることができます。
 
 
 ## <a name="client-settings-to-configure-windows-analytics-for-upgrade-readiness"></a>Windows Analytics for Upgrade Readiness を構成するためのクライアント設定
-このバージョン以降では、Configuration Manager で [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) を使用する場合に、デバイス クライアントの設定を使用して Windows Analytics の構成を簡略化できます。 Windows Analytics は、Configuration Manager クライアントに関する製品利用統計情報を収集し、Operations Manager Suite (OMS) ワークスペースに報告します。 収集された利用統計情報は、管理対象デバイスの Windows のアップグレードに関する意思決定の優先順位を付ける際に役立ちます。
-
-Configuration Manager が収集する利用統計情報は、Event Tracing for Windows (ETW) ログ ファイルの形式です。 これらのログ ファイルは、クライアントがハードウェア インベントリを送信するときに、Configuration Manager サイトに送信されます。 その後、これらのファイルは OMS ワークスペースに転送されます。 ログ ファイルとそのデータは、ログが OMS に転送された後、Configuration Manager サイトから削除されます。
+これ以降のバージョンでは、デバイス クライアントの設定を使用して、Windows 利用統計情報の構成を簡略化できます。この構成は、Configuration Manager で [Upgrade Readiness](https://www.microsoft.com/en-us/WindowsForBusiness/windows-analytics) のような [Windows Analytics](/sccm/core/clients/manage/upgrade/upgrade-analytics) ソリューションを使用するために必要です。 Configuration Manager は Windows Analytics からデータを取得し、クライアント コンピューターから送信される Windows 利用統計情報データに基づいて、お使いの環境の現在の状態に関する貴重な情報を提供します。 Windows 利用統計情報データは、クライアント コンピューターによって Windows 利用統計情報サービスに報告されます。その後、組織の OMS ワークスペースのいずれかでホストされている Windows Analytics ソリューションに、関連データが転送されます。 Upgrade Readiness は Windows Analytics ソリューションの 1 つで、管理対象デバイスでの Windows アップグレードに関する決定の優先順位を付ける際に役立ちます。
 
 Windows 利用統計情報の設定については、「[組織内の Windows 利用統計情報の構成](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)」を参照してください。
 
 ### <a name="prerequisites"></a>必要条件
-- OMS の Upgrade Readiness の Log Analytics を使用するようにサイトを構成しておく必要があります。 詳細については、Current Branch のコンテンツ ライブラリにある「[Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)」を参照してください。
-- クライアントは、ハードウェア インベントリを使用して、利用統計情報を送信する必要があります。
+- Upgrade Readiness クラウド サービスを使用するにはサイトを構成しておく必要があります。 詳細については、[Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) に関するページをご覧ください。
 
 ### <a name="configure-windows-analytics-client-settings"></a>Windows Analytics クライアント設定の構成
-Windows Analytics を構成するには、Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** に移動し、**[既定のクライアント設定]** をダブルクリックして、**[Windows Analytics]** を選択します。  
+Windows Analytics を構成するには、Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** に移動し、**[Create Custom Device Client Settings] (カスタム デバイス クライアント設定の作成)** をダブルクリックして、**[Windows Analytics]** を選択します。  
 
-次の項目を構成します。
+次に、**[Windows Analytics]** 設定タブに移動した後に、以下を構成します。
 - **商用 ID**  
-商用 ID は、管理するデバイスからの情報を OMS ワークスペースにマップします。 Configuration Manager で Upgrade Readiness を使用するために商用 ID を既に構成している場合は、その ID を使用します。 まだ商用 ID がない場合は、「[商用 ID キーを生成する]( https://technet.microsoft.com /itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key)」を参照してください。
+商用 ID キーは、管理するデバイスから組織の Windows Analytics データをホストする OMS ワークスペースに情報をマップします。 使用する商用 ID キーを Upgrade Readiness で既に構成している場合は、その ID を使用します。 まだ商用 ID キーがない場合は、「[Generate your commercial ID key (商用 ID キーを生成する)]( https://technet.microsoft.com /itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key)」をご覧ください。
 
 - **Windows 10 デバイスの利用統計情報のレベル** を設定する  
-Windows 10 の利用統計情報の各レベルで収集される情報については、Windows のオンライン ドキュメントにある「[利用統計情報のレベル]( https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization#telemetry-levels)」を参照してください。
+Windows 10 の利用統計情報の各レベルで収集される情報については、「[Configure Windows telemetry in your organization (組織の利用統計情報の構成)]( https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization#telemetry-levels)」をご覧ください。
 
 - **Windows 7、8、8.1 デバイスでの商用データ収集のオプトイン** を選択する  
 オプトインしたときにこれらのオペレーティング システムから収集されるデータについては、Microsoft のサイトから [Windows 7、Windows 8、Windows 8.1 の利用統計情報のイベントとフィールドに関する pdf ファイル](https://go.microsoft.com/fwlink/?LinkID=822965)をダウンロードして参照してください。
 
-- **インターネット エクスプ ローラーのデータ収集を構成する**
-
+- **Internet Explore のデータ収集の構成** Windows 8.1 以前のバージョンが動作しているデバイスでは、Internet Explorer で収集されるデータによって、Upgrade Readiness が Web アプリの非互換性を検出できるため、Windows 10 へのスムーズなアップグレードが妨げられる可能性が排除されます。 Internet Explorer のデータ収集は、インターネット ゾーンごとに有効にできます。 インターネット ゾーンの詳細については、「[About URL Security Zones (セキュリティ ゾーンについて)](https://msdn.microsoft.com/en-us/library/ms537183(v=vs.85).aspx)」をご覧ください。

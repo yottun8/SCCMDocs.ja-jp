@@ -1,7 +1,7 @@
 ---
 title: "クラウド管理ゲートウェイの計画 | Microsoft Docs"
 description: 
-ms.date: 04/23/2017
+ms.date: 05/16/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
@@ -10,14 +10,14 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: c61769cc97c320452c9ee27a924cb01480e6f33d
+ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
+ms.openlocfilehash: b1295891a5567e64b901c79100c2971e526dc874
 ms.contentlocale: ja-jp
-ms.lasthandoff: 03/27/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 
-# <a name="plan-for-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager でクラウド管理ゲートウェイを計画する
+# <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager でクラウド管理ゲートウェイを計画する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -95,5 +95,104 @@ Configuration Manager コンソールを使って、Azure にサービスを展�
 
 ## <a name="next-steps"></a>次のステップ
 
-[Set up cloud management gateway](setup-cloud-management-gateway.md) (クラウド管理ゲートウェイの設定)
+[クラウド管理ゲートウェイの設定](setup-cloud-management-gateway.md)
+
+
+## <a name="frequently-asked-questions-about-the-cloud-management-gateway-cmg"></a>クラウド管理ゲートウェイ (CMG) についてよく寄せられる質問
+
+### <a name="why-use-the-cloud-management-gateway"></a>なぜクラウド管理ゲートウェイを使用するのですか?
+
+このロールを使用することで、インターネット ベースのクライアント管理が、Configuration Manager コンソールから 3 つの手順で簡単に行えるようになります。
+
+1. [クラウド管理ゲートウェイの作成](/sccm/core/clients/manage/setup-cloud-management-gateway)ウィザードを使用して、CMG を Azure にデプロイします。
+2. [クラウド管理ゲートウェイ接続ポイント](/sccm/core/servers/deploy/configure/install-site-system-roles)のサイト システム ロールを構成します。
+3. [クラウド管理ゲートウェイ トラフィック](/sccm/core/clients/manage/setup-cloud-management-gateway#step-7-configure-roles-for-cloud-management-gateway-traffic)のロールを構成します (管理ポイント、ソフトウェアの更新ポイントなど)。
+
+### <a name="how-does-the-cloud-management-gateway-work"></a>クラウド管理ゲートウェイはどのような仕組みになっていますか?
+
+- クラウド管理ゲートウェイ接続ポイントは、インターネットからクラウド管理ゲートウェイへの一貫性のある高パフォーマンスな接続を可能にします。
+- Configuration Manager は、接続情報やセキュリティ設定などの各種設定を CMG に発行します。
+- CMG は、Configuration Manager クライアントの要求を認証し、クラウド管理ゲートウェイ接続ポイントに転送します。 これらの要求は、URL マッピングに従って企業ネットワーク内のロールに転送されます。
+
+### <a name="how-is-the-cloud-management-gateway-deployed"></a>クラウド管理ゲートウェイのデプロイはどうやって行いますか?
+
+CMG のデプロイ タスクはすべて、サービス接続ポイントのクラウド サービス マネージャー コンポーネントによって処理されます。 また、このコンポーネントは、Azure AD のサービスの正常性とログ情報も監視し、レポートします。
+
+#### <a name="certificate-requirements"></a>証明書の要件
+
+CMG のセキュリティ保護には、次の証明書が必要になります。
+
+- **管理証明書** - 自己署名証明書を含む、任意の証明書を使用できます。 Azure AD にアップロードされた公開証明書、または Azure AD での認証用に Configuration Manager にインポートされた[秘密キー付きの PFX](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) を使用できます。 
+- **Web サービス証明書** -  クライアントによるネイティブな信頼を得るために、パブリック CA 証明書を使用することをお勧めします。 CNAME は、パブリック DNS レジスタで作成する必要があります。 ワイルド カード証明書はサポートされていません。
+- **CMG にアップロードされたルート証明書または SubCA 証明書** - クライアントの PKI 証明書に対して、CMG がチェーンの完全検証を行う必要があります。 クライアント PKI 証明書の発行に エンタープライズ CA を使用していて、証明書のルート CA や下位 CA がインターネットにない場合は、エンタープライズ CA を CMG にアップロードする必要があります。
+
+#### <a name="deployment-process"></a>デプロイのプロセス
+
+デプロイには次の 2 つのフェーズがあります。
+
+- クラウド サービスのデプロイ
+    - [Azure サービス定義スキーマ](https://msdn.microsoft.com/library/azure/ee758711.aspx) (csdef) ファイルをアップロードする
+    - [Azure サービス構成スキーマ](https://msdn.microsoft.com/library/azure/ee758710.aspx) (cscfg) ファイルをアップロードする。
+- Azure AD サーバーでの CMG コンポーネントのセットアップと、エンドポイント、HTTP ハンドラー、インターネット インフォメーション サービス (IIS) のサービスの構成
+
+CMG の構成を変更する場合は、構成のデプロイが CMG に行われます。
+
+### <a name="how-does-the-cloud-management-gateway-help-ensure-security"></a>クラウド管理ゲートウェイは、どうやってセキュリティを確実にするのですか?
+
+CMG は次の方法で、セキュリティによる保護を確実なものにします。
+
+- 内部証明書と接続 ID を使用して、相互 SSL 認証を含む CMG 接続からの接続を承諾し、管理します。
+- クライアント要求の承諾と転送
+    - クライアント PKI 証明書の 相互 SSL を使用して、接続を事前に認証します。
+    - 証明書信頼リストが、クライアント PKI 証明書のルートを確認します。 この設定は、サイトのプロパティのクライアント通信設定で指定できます。 またクライアントに対して、管理ポイントと同じ検証を実施します。
+    - 受信した URL を確認します。
+    - 受信した URL をフィルターして、接続している CMG 接続ポイントのなかで URL 要求を処理できるものがないか確認します。  
+    - 発行エンドポイントごとにコンテンツの長さのチェックを確認します。
+    - 「ラウンドロビン」を使用して、同一サイトからの CMG 接続ポイント間の負荷を分散します。
+
+- CMG 接続ポイントの保護
+    - 接続している CMG のすべての仮想インスタンスに対して、一貫性のある HTTP/TCP 接続を構築します。 1 分ごとに接続を確認し、維持します。
+    - 内部証明書を使用する CMG で、SSL 認証を相互に認証します。
+    - URL マッピングに基づいて、HTTP 要求を転送します。
+    - 接続の状態をレポートして管理サービスの正常性状態を表示します。
+    - エンドポイント別のエンドポイントのトラフィックレポートを、5 分ごとにレポートします。
+
+- 管理ポイントのようなロールと向き合っている発行エンドポイント Configuration Manager クライアントと、IIS のソフトウェアの更新ポイント ホスト エンドポイントをセキュリティで保護してクライアントの要求を処理します。 CMG に発行されたすべてのエンドポイントに、URL マッピングがあります。
+外部 URL は、CMG との通信にクライアントが使用する URL です。
+内部 URL は、内部サーバーに要求を転送するときに使用する CMG 接続ポイントです。 
+
+#### <a name="example"></a>例:
+管理ポイントの CMG トラフィックを有効にすると、ccm_system、ccm_incoming、sms_mp などの 各管理ポイント サーバーの URL マッピングのセットが、Configuration Manager 内で作成されます。
+管理ポイントの ccm_system のエンドポイントの外部 URL は、**https://<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>/CCM_System** のようになります。 この URL は、管理ポイントごとに一意となっています。 その後、Configuration Manager クライアントによって、**<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>** のような CMG が有効化された MP 名がインターネット管理ポイントのリストに追加されます。 発行された外部 URL はすべて自動で CMG にアップロードされます。その後、CMG による URL のフィルタリングが可能になります。 すべての URL マッピングは、外部 URL を要求するクライアントに応じて内部サーバーに転送できるように、CMG 接続ポイントに複製されます。
+
+### <a name="what-ports-are-used-by-the-cloud-management-gateway"></a>クラウド管理ゲートウェイが使用するポートは何ですか? 
+
+- オンプレミスのネットワークでは、受信ポートは必要ありません。 CMG をデプロイすると、CMG 上に自動的に作成されます。 
+- 443 以外の一部の送信ポートは、CMG 接続ポイントで必要です。
+
+|||||
+|-|-|-|-|
+|データ フロー|サーバー|サーバーのポート|クライアント|
+|CMG のデプロイ|Azure|443|Configuration Manager サービス接続ポイント|
+|CMG チャネルの構築|CMG|VM インスタンス: 1 個のポート: 443<br>VM インスタンス: N (N > = 2、N < = 16) 個のポート: 10124 ~ N 10140 ~ N|CMG 接続ポイント|
+|クライアントから CMG|CMG|443|クライアント|
+|CMG コネクタからサイトの役割 (現状、管理ポイントとソフトウェアの更新ポイント)|サイトの役割|サイトの役割で構成されているプロトコル/ポート|CMG 接続ポイント|
+
+### <a name="how-can-you-improve-performance-of-the-cloud-management-gateway"></a>クラウド管理ゲートウェイのパフォーマンスを強化する方法はありますか?
+
+- 可能な場合、CMG、CMG 接続ポイント、Configuration Manager のサイト サーバーは同じネットワーク リージョンで構成してください。待機時間を減らすことができます。
+- 現在、Configuration Manager クライアントと CMG 間の接続は、リージョンを意識していません。
+- 高可用性を得るために、1 サイトあたり少なくとも 2 つの CMG 仮想インスタンスと 2 つの CMG 接続ポイントをお勧めします。 
+- VM インスタンスを追加することで CMG をスケールし、より多くのクライアントをサポートできます。 これらは、Azure AD のロード バランサーによって負荷分散されています。
+- CMG 接続ポイントを増やすことで、ポイント間の負荷を分散できます。 CMG は接続している CMG 接続ポイントに対して、トラフィックを「ラウンドロビン」で処理します。
+- 1702 のリリースでサポートされているクライアントの数は、CMG VM インスタンスあたり 6,000 台です。 CMG チャネルが高負荷状態のときでも要求は処理されますが、通常よりも時間がかかる場合があります。
+
+### <a name="how-can-you-monitor-the-cloud-management-gateway"></a>クラウド管理ゲートウェイを監視する方法はありますか?
+
+デプロイのトラブルシューティングの場合は、**CloudMgr.log** と **CMGSetup.log** を使用します。
+サービス正常性のトラブルシューティングの場合は、**CMGService.log** と **SMS_CLOUD_PROXYCONNECTOR.log** を使用します。
+クライアントのトラフィックのトラブルシューティングの場合は、**CMGHttpHandler.log**、**CMGService.Log**、**SMS_CLOUD_PROXYCONNECTOR.log** を使用します。
+
+CMG 関連のすべてのログ ファイルの一覧は、[Configuration Manager のログ ファイル](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway)に関するページをご覧ください。
+
 

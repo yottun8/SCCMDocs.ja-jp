@@ -16,13 +16,13 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 065b1fcb25d7c7845b6f26e757b36e7fb97ce013
-ms.openlocfilehash: 2ec25e9b093d9451d8880ba36f4d022ec4bad001
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: ed5efcf7b305f8bee6e99e00c5285f6ae7033d82
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 05/17/2017
 
 ---
-# <a name="support-for-windows-10-for-system-center-configuration-manager"></a>System Center Configuration Manager の Windows 10 のサポート
+# <a name="support-for-windows-10-for-system-center-configuration-manager"></a>System Center Configuration Manager の Windows 10 のサポート  
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -64,7 +64,7 @@ Configuration Manager を使用してオペレーティング システムを展
 
 次の表は、さまざまなバージョンの Configuration Manager で使用できる Windows 10 ADK のバージョン一覧です。
 
-|Windows 10 のバージョン |Configuration Manager 1606 |Configuration Manager 1610  |Configuration Manager 1702 |
+|Windows 10 ADK バージョン |Configuration Manager 1606 |Configuration Manager 1610  |Configuration Manager 1702 |
 |--------------------|-----|-----|-----|
 |1507  |![サポートされていません](media/Red_X.png)         |![サポートされていません](media/Red_X.png)  |![サポートされていません](media/Red_X.png)|
 |1511  |![下位互換性あり](media/blue_compat.png)|![サポートされていません](media/Red_X.png)  |![サポートされていません](media/Red_X.png)|

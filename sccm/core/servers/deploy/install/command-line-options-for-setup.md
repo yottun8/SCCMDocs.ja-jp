@@ -15,10 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 04fe7b3e674287c4255563ab4a308e54d0b6c3aa
-ms.lasthandoff: 03/27/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>System Center Configuration Manager でのセットアップに使用されるコマンドライン オプション
@@ -58,7 +59,7 @@ ms.lasthandoff: 03/27/2017
  セットアップの前提条件ファイルの詳細については、[セットアップ ダウンローダー](setup-downloader.md)に関するページを参照してください。  
 
  **/SCRIPT <*セットアップ スクリプトのパス*>**  
- 無人インストールを実行します。**/SCRIPT** オプションを使用する場合は、セットアップ初期化ファイルが必要です。 セットアップを無人で実行する方法の詳細については、[コマンド ラインを使用するサイトのインストール](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md)に関するページを参照してください。  
+ 無人インストールを実行します。 **/SCRIPT** オプションを使用する場合、セットアップ初期化ファイルが必要です。 セットアップを無人で実行する方法の詳細については、[コマンド ラインを使用するサイトのインストール](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md)に関するページを参照してください。  
 
  **/SDKINST <*SMS プロバイダーの FQDN*>**  
  指定したコンピューターに SMS プロバイダーをインストールします。 SMS プロバイダー コンピューターの完全修飾ドメイン名 (FQDN) を指定する必要があります。 SMS プロバイダーの詳細については、「[System Center Configuration Manager の SMS プロバイダーの計画](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md)」を参照してください。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 03/27/2017
  指定したコンピューターの SMS プロバイダーをアンインストールします。 SMS プロバイダー コンピューターの FQDN を指定する必要があります。  
 
  **/MANAGELANGS <*言語スクリプトのパス*>**  
- 事前にインストールしたサイトにインストールされている言語を管理します。このオプションを使用するには、サイト サーバーの **<*Configuration Manager のインストール パス*>\BIN\X64** からセットアップを実行し、言語設定が含まれている言語スクリプト ファイルの場所を指定する必要があります。 言語セットアップ スクリプト ファイルで設定できる言語オプションの詳細については、このトピックの「[言語を管理するためのコマンド ライン オプション](#bkmk_Lang)」を参照してください。  
+ 事前にインストールしたサイトにインストールされている言語を管理します。 このオプションを使用するには、サイト サーバーの **<*Configuration Manager のインストール パス*>\BIN\X64** からセットアップを実行し、言語設定が含まれている言語スクリプト ファイルの場所を指定する必要があります。 言語セットアップ スクリプト ファイルで設定できる言語オプションの詳細については、このトピックの「[言語を管理するためのコマンド ライン オプション](#bkmk_Lang)」を参照してください。  
 
 ##  <a name="bkmk_Lang"></a> 言語を管理するためのコマンド ライン オプション  
  **Identification**  
@@ -176,7 +177,7 @@ ms.lasthandoff: 03/27/2017
 
     -   **必須:** はい  
 
-    -   **値:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *または* Eval  
+    -   **値:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*>  *または* Eval  
 
     -   **詳細:** ダッシュを含め、インストールする Configuration Manager のプロダクト キーを指定します。 Configuration Manager の評価版をインストールするには、「**Eval**」と入力します。  
 
@@ -422,7 +423,7 @@ ms.lasthandoff: 03/27/2017
 
     -   **必須:** はい  
 
-    -   **値:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *または* Eval  
+    -   **値:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*>  *または* Eval  
 
     -   **詳細:** ダッシュを含め、インストールする Configuration Manager のプロダクト キーを指定します。 Configuration Manager の評価版をインストールするには、「**Eval**」と入力します。  
 
@@ -814,7 +815,7 @@ ms.lasthandoff: 03/27/2017
 
     -   **必須:** はい  
 
-    -   **値:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *または* Eval  
+    -   **値:** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*>  *または* Eval  
 
     -   **詳細:** ダッシュを含め、インストールする Configuration Manager のプロダクト キーを指定します。 Configuration Manager の評価版をインストールするには、「**Eval**」と入力します。  
 
