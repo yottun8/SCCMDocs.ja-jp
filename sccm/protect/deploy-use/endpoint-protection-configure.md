@@ -42,7 +42,7 @@ Endpoint Protection を使用して構成マネージャー クライアント �
 |手順|説明|  
 |-----------|-------------|  
 |**手順 1:** [Endpoint Protection ポイント サイト システムの役割を作成する](endpoint-protection-site-role.md)|Endpoint Protection を使用するには、事前に Endpoint Protection ポイント サイト システムの役割をインストールしておく必要があります。 これは、1 つのサイト システム サーバーのみにインストールします。また、中央管理サイトまたはスタンドアロンのプライマリ サイトの階層の最上位にインストールしなければなりません。 |  
-|**手順 2:** [Endpoint Protection のアラートを構成する](endpoint-configure-alerts.md)|マルウェア感染などの特定のイベントが発生すると、管理者にアラートが通知されます。 アラートは、[監視 **** ] ワークスペースの [アラート **** ] ノードに表示されます。必要に応じて、指定のユーザーに電子メールで送信することもできます。 |  
+|**手順 2:** [Endpoint Protection のアラートを構成する](endpoint-configure-alerts.md)|マルウェア感染などの特定のイベントが発生すると、管理者にアラートが通知されます。 アラートは、 **[監視]** ワークスペースの **[アラート]** ノードに表示されます。必要に応じて、指定のユーザーに電子メールで送信することもできます。 |  
 |**手順 3:** [Endpoint Protection クライアントの定義ファイルの更新ソースを構成する](endpoint-definition-updates.md)|Endpoint Protection は、さまざまなソースを使用して定義ファイルの更新をダウンロードするように構成できます。 |  
 |**手順 4:** [既定のマルウェア対策ポリシーを構成してカスタムのマルウェア対策ポリシーを作成する](endpoint-antimalware-policies.md)|既定のマルウェア対策ポリシーは、Endpoint Protection クライアントがインストールされると適用されます。 展開されているカスタムのポリシーは、クライアント展開の 60 分以内に既定で適用されます。 Endpoint Protection クライアントを展開する前に、マルウェア対策ポリシーを構成していることを確認します。 |  
 |**手順 5:** [Endpoint Protection のカスタム クライアント設定を構成する](endpoint-protection-configure-client.md)|カスタム クライアント設定を使用して、階層内のコンピューターのコレクションに Endpoint Protection 設定を構成します。<br /><br /> メモ: 階層内のすべてのコンピューターに適用する場合を除き、既定の Endpoint Protection クライアント設定は構成しないでください。 |  
