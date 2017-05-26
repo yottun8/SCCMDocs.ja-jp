@@ -40,7 +40,7 @@ ms.lasthandoff: 12/16/2016
 
 -   Windows のコマンド プロンプトを使用する。  
 
--   **Microsoft System Center ** プログラム グループから、Configuration Manager コンソールを実行するコンピューターの Windows **スタート** メニューを使用する。  
+-   **Microsoft System Center** プログラム グループから、Configuration Manager コンソールを実行するコンピューターの Windows **スタート** メニューを使用する。  
 
 ### <a name="to-remotely-administer-a-client-computer-from-the-configuration-manager-console"></a>Configuration Manager コンソールからクライアント コンピューターをリモート管理するには  
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/16/2016
     > [!IMPORTANT]  
     >  場合、クライアント設定 **リモート制御のプロンプトのユーザー** にアクセス許可が設定されている **True**, 、接続では、リモート コンピューターのユーザーがリモート コントロール プロンプトに同意するまでは開始されません。 詳しくは、「[System Center Configuration Manager でのリモート コントロールの構成](../../../../core/clients/manage/remote-control/configuring-remote-control.md)」を参照してください。  
 
-4.  [Configuration Manager リモート コントロール] ウィンドウが開いたら、クライアント コンピューターをリモート管理できます。 **** 接続を構成するには、次のオプションを使用します。  
+4.  [ **Configuration Manager リモート コントロール** ] ウィンドウが開いたら、クライアント コンピューターをリモート管理できます。 接続を構成するには、次のオプションを使用します。  
 
     > [!NOTE]  
     >  接続するコンピューターに複数のモニターがある場合は、すべてのモニターの表示画面がリモート コントロール ウィンドウに表示されます。  

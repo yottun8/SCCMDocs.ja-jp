@@ -15,9 +15,10 @@ caps.latest.revision: 8
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: d26ac3de58d2f0ef447725e63fc2d8adda6ea06c
+ms.contentlocale: ja-jp
 ms.lasthandoff: 12/16/2016
 
 
@@ -50,7 +51,7 @@ System Center Configuration Manager のコンプライアンス設定に取り�
     - **[クライアントのコンプライアンス評価を有効にする]**: クライアント デバイスのコンプライアンスを評価するには、[**TRUE**] に設定します。
     - **[コンプライアンスの評価スケジュールを設定する]**: クライアント デバイスの既定のコンプライアンスの評価スケジュールを変更するには、**[スケジュール]** をクリックします。
     - **[ユーザー データとプロファイルを有効にする]**: ユーザー データとプロファイルの構成項目を Windows コンピューターに作成して展開する場合は、このオプションを有効にします。 詳細については、「[ユーザー データとプロファイル構成項目の作成](/sccm/compliance/deploy-use/create-remote-connection-profiles)」を参照してください。
-5. [OK] **** をクリックして [既定の設定] **** ダイアログ ボックスを閉じます。  
+5. [ **OK** ]をクリックして [ **既定の設定** ]ダイアログ ボックスを閉じます。  
 
 クライアント コンピューターは、次にクライアント ポリシーをダウンロードするときに、これらの設定で構成されます。  
 
