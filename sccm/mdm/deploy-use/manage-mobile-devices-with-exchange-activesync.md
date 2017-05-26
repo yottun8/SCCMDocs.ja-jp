@@ -36,7 +36,7 @@ Microsoft Exchange ActiveSync プロトコルを使って Exchange Server (社�
 > [!IMPORTANT]  
 >  Exchange Server コネクタをインストールする前に、使用する Microsoft Exchange のバージョンが Configuration Manager でサポートされているかどうかを確認してください。 詳細については、「[System Center Configuration Manager のサイトおよびクライアントのサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)」の「Exchange Server コネクタ」を参照してください。  
 
- Exchange Server コネクタを使用すると、既定の Exchange ActiveSync メール ボックス ポリシーでの代わりに、Configuration Manager で構成した設定でモバイル デバイスを管理することができます。 使用する設定は、 **[全般]**、 **[パスワード]**、 **[電子メール管理]**、 **[セキュリティ]**、 **[アプリケーション]**のグループに分けて定義します。 たとえば、[パスワード] グループでは、モバイル デバイスでパスワードを必要とするかどうか、パスワードに最低限必要な文字数と複雑さ、パスワードを回復可能にするかどうかを設定します。 ****  
+ Exchange Server コネクタを使用すると、既定の Exchange ActiveSync メール ボックス ポリシーでの代わりに、Configuration Manager で構成した設定でモバイル デバイスを管理することができます。 使用する設定は、 **[全般]**、 **[パスワード]**、 **[電子メール管理]**、 **[セキュリティ]**、 **[アプリケーション]**のグループに分けて定義します。 たとえば、[ **パスワード** ] グループでは、モバイル デバイスでパスワードを必要とするかどうか、パスワードに最低限必要な文字数と複雑さ、パスワードを回復可能にするかどうかを設定します。  
 
  グループで 1 つでも設定を行うと、Configuration Manager がグループのすべてのモバイル デバイス用設定を管理します。 グループにあるどの設定も構成しないと、モバイル デバイスの該当する設定が Exchange Server によって管理されます。 その場合でも、Exchange Server で設定され、ユーザーに割り当てられた Exchange ActiveSync メールボックス ポリシーは適用されます。  
 
@@ -54,7 +54,7 @@ Microsoft Exchange ActiveSync プロトコルを使って Exchange Server (社�
 
 -   モバイル デバイス設定を構成する: **サイト** オブジェクトの **ModifyConnectorPolicy** のアクセス許可。  
 
- [完全な権限を持つ管理者] **** のセキュリティの役割には、Exchange Server コネクタを構成するために必要な許可が含まれています。  
+ **[完全な権限を持つ管理者]** のセキュリティの役割には、Exchange Server コネクタを構成するために必要な許可が含まれています。  
 
  モバイル デバイスを管理するには、次のセキュリティのアクセス許可が必要です。  
 
@@ -64,7 +64,7 @@ Microsoft Exchange ActiveSync プロトコルを使って Exchange Server (社�
 
 -   モバイル デバイスを許可またはブロックする: **コレクション** オブジェクトの **リソースの変更**  
 
- [オペレーション管理者] **** のセキュリティの役割には、Exchange Server コネクタを使用してモバイル デバイスを管理するために必要な許可が含まれています。  
+ **[オペレーション管理者]** のセキュリティの役割には、Exchange Server コネクタを使用してモバイル デバイスを管理するために必要な許可が含まれています。  
 
  セキュリティのアクセス許可を構成する方法の詳細については、「[System Center Configuration Manager のロール ベース管理の構成](../../core/servers/deploy/configure/configure-role-based-administration.md)」を参照してください。  
 
@@ -116,9 +116,9 @@ Microsoft Exchange ActiveSync プロトコルを使って Exchange Server (社�
 
 2.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
 
-3.  [管理] **** ワークスペースで、[階層の構成] ****を展開し、[探索方法] ****をクリックします。  
+3.  **[管理]** ワークスペースで、**[階層の構成]** を展開し、**[探索方法]** をクリックします。  
 
-4.  [ホーム] **** タブの [作成] **** グループで [Exchange Server の追加] ****をクリックします。  
+4.  **[ホーム]** タブの **[作成]** グループで **[Exchange Server の追加]** をクリックします。  
 
 5.  以下の手順で、Exchange Server の追加ウィザードを完了します。  
 
