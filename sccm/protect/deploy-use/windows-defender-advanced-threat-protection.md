@@ -53,9 +53,9 @@ Windows Defender ATP は、[Windows セキュリティ センター](https://sec
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[概要]** > **[Endpoint Protection]** > **[Windows Defender ATP ポリシー]** の順に移動し、**[Windows Defender ATP ポリシーの作成]** をクリックします。 Windows Defender ATP ポリシーの作成ウィザードが開きます。  
 
-2.  Windows Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、**[オンボード]** を選択します。 [次へ] をクリックします。 ****  
+2.  Windows Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、**[オンボード]** を選択します。 [ **次へ** ] をクリックします。  
 
-3.  組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 [次へ] をクリックします。 ****  
+3.  組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 [ **次へ** ] をクリックします。  
 
 4.  管理対象のデバイスから分析用に収集され共有されるファイルのサンプルを指定します。  
 
@@ -63,7 +63,7 @@ Windows Defender ATP は、[Windows セキュリティ センター](https://sec
 
     -   **すべてのファイルの種類**  
 
-     [次へ] をクリックします。 ****  
+     [ **次へ** ] をクリックします。  
 
 5.  概要を確認して、ウィザードを完了します。  
 
