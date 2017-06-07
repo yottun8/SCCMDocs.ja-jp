@@ -42,7 +42,7 @@ ms.lasthandoff: 05/20/2017
 ## <a name="change-the-publication-type-of-updates-in-a-publication"></a>パブリケーションの更新プログラムでパブリケーションの種類を変更する
 **[パブリケーション] ワークスペース**から、パブリケーションに割り当てられている更新プログラムとバンドルの**パブリケーションの種類**を変更できます。
 
-1. 変更する更新プログラムを含むパブリケーションを選択し、1 つまたは複数の更新プログラムかバンドルを **[All &lt;publication name> member updates] (すべての <パブリケーション名> メンバー更新プログラム)** の一覧から選択します。
+1. 変更する更新プログラムを含むパブリケーションを選択し、1 つまたは複数の更新プログラムかバンドルを **[All &lt;publication name> member updates]\(すべての <パブリケーション名> メンバー更新プログラム)** の一覧から選択します。
 
 2. 次に、**[ホーム]** タブで以下のオプションのいずれかを選択します。 使用できるオプションは、選択した更新プログラムのパブリケーションの種類によって異なります。
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/20/2017
 ## <a name="publish-publications"></a>パブリケーションを管理する
 更新プログラムとバンドルを公開するとき、これらの更新プログラムとバンドルに関する情報 (メタデータ) と、場合によっては更新プログラムのバイナリ (コンテンツ全体) が、デバイスへの展開のために Updates Publisher によって更新サーバーに追加されます。
 
-公開に関するオプションを設定する前に、Updates Publisher の [[更新サーバー]](/sccm/sum/tools/updates-publisher-options#update-server) オプションを構成する必要があります。 この構成オプションを開くには、**[更新プログラム] ワークスペース** &gt; **[概要]** の順に移動し、**[Configure WSUS and Signing Certificate] (WSUS と署名証明書の構成)** を選択します。 また、Updates Publisher オプションの更新サーバー ページに移動できます。
+公開に関するオプションを設定する前に、Updates Publisher の [[更新サーバー]](/sccm/sum/tools/updates-publisher-options#update-server) オプションを構成する必要があります。 この構成オプションを開くには、**[更新プログラム] ワークスペース** &gt; **[概要]** の順に移動し、**[Configure WSUS and Signing Certificate]\(WSUS と署名証明書の構成)** を選択します。 また、Updates Publisher オプションの更新サーバー ページに移動できます。
 
 > [!NOTE]   
 > Updates Publisher では、375 メガバイト (MB) 以下のサイズの更新プログラムのみを公開できます。
