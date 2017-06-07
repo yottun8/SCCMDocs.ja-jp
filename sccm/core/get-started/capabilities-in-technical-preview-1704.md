@@ -65,7 +65,7 @@ Configuration Manager コンソールで、**[ソフトウェア ライブラリ
 
 1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[オペレーティング システム]** > **[ブート イメージ]** に移動します。
 2. ブート イメージを選択し、**[配布ポイントの更新]** をクリックします。
-3. ウィザードの**[全般]** ページで、**[Reload boot image using the current version of Windows PE from the installed Windows ADK] (インストール済みの Windows ADK にある最新バージョンの Windows PE を使用してブート イメージを再読み込みする)** を選択します。
+3. ウィザードの**[全般]** ページで、**[Reload boot image using the current version of Windows PE from the installed Windows ADK]\(インストール済みの Windows ADK にある最新バージョンの Windows PE を使用してブート イメージを再読み込みする)** を選択します。
 
 ## <a name="improvements-to-operating-system-deployment"></a>オペレーティング システムの展開に関する機能拡張
 オペレーティング システムの展開について、皆さまからのフィードバックを基に、次のような機能拡張を行いました。
