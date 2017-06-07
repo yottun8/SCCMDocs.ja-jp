@@ -42,7 +42,7 @@ System Center Configuration Manager のリソース エクスプローラーを�
     >  Configuration Manager では、**[期限切れのインベントリ履歴の削除]** サイト メンテナンス タスクで、サイトに対して指定されている日数だけ、インベントリの履歴が保持されます。  
 
 > [!NOTE]  
->  Linux および UNIX を実行しているクライアントからハードウェア インベントリを表示する方法については、「 [How to monitor clients for Linux and UNIX servers in System Center Configuration Manager](../../../../core/clients/manage/monitor-clients-for-linux-and-unix-servers.md)」を参照してください。  
+>  Linux および UNIX を実行しているクライアントからハードウェア インベントリを表示する方法については、「 [System Center Configuration Manager で Linux および UNIX サーバーのクライアントを監視する方法](../../../../core/clients/manage/monitor-clients-for-linux-and-unix-servers.md)」を参照してください。  
 
 ### <a name="how-to-run-resource-explorer-from-the-configuration-manager-console"></a>Configuration Manager コンソールからリソース エクスプローラーを実行する方法  
 
