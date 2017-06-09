@@ -248,7 +248,7 @@ System Center Configuration Manager クライアントは、Linux または UNIX
 
  **ファイアウォールの要件**:ファイアウォールがクライアントの要求ポートとして指定するポートの間で通信をブロックしないことを確認します。 Linux および UNIX 用のクライアントは、管理ポイント、配布ポイント、フォールバック ステータス ポイントと直接通信します。  
 
- クライアントの通信および要求のポートの詳細については、「  [Configure the Client for Linux and UNIX to Locate Management Points](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP)」を参照してください。  
+ クライアントの通信および要求のポートの詳細については、「  [管理ポイントを検出するために Linux および UNIX 用のクライアントを構成する](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP)」を参照してください。  
 
 ##  <a name="BKMK_PlanningforCommunicationsforLnU"></a> Linux および UNIX サーバーのフォレストの信頼間の通信の計画  
  Configuration Manager で管理する Linux および UNIX サーバーはワークグループ クライアントとして動作するため、ワークグループに含まれる Windows ベースのクライアントと同様の構成が必要です。 ワークグループ内にあるコンピューターからの通信の詳細については、「[System Center Configuration Manager でのエンドポイント間の通信](../../../../core/plan-design/hierarchy/communications-between-endpoints.md)」トピックの「[複数の Active Directory フォレスト間での通信](../../../../core/plan-design/hierarchy/communications-between-endpoints.md#Plan_Com_X-Forest)」セクションをご覧ください。  
