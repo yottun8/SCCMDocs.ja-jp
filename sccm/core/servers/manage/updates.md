@@ -115,7 +115,7 @@ Configuration Manager の次のバージョンは、基準バージョンと更�
 
 -   サービス接続ポイントがオンライン モードになっているとき、サイトは Microsoft と毎日同期され、自分のインフラストラクチャに適用される新しい更新プログラムが自動的に特定されます。  更新プログラムと更新プログラムの再頒布ファイルをダウンロードするために、サービス接続ポイントのサイト システムの役割をホストするコンピューターは、**System** コンテキストを使用して、インターネット上の go.microsoft.com と download.microsoft.com にアクセスします。 サービス接続ポイントが接続するその他の場所については、「[System Center Configuration Manager のサービス接続ポイントについて](../../../core/servers/deploy/configure/about-the-service-connection-point.md)」の「[インターネット アクセス要件](../../../core/servers/deploy/configure/about-the-service-connection-point.md#bkmk_urls)」を参照してください。  
 
--   サービス接続ポイントがオフライン モードになっている場合は、サービス接続ツールを使って Microsoft クラウドと手動で同期してください。 詳細については、「 [Use the Service Connection Tool for System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md)」を参照してください。  
+-   サービス接続ポイントがオフライン モードになっている場合は、サービス接続ツールを使って Microsoft クラウドと手動で同期してください。 詳細については、「 [System Center Configuration Manager のサービス接続ツールの使用](../../../core/servers/manage/use-the-service-connection-tool.md)」を参照してください。  
 
 -   コンソール内の更新プログラムを利用すれば、個々の更新プログラム、Service Pack、新しい機能を個別に特定してインストールする必要がなくなります。  
 
