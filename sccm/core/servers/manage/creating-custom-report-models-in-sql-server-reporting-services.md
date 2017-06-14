@@ -40,7 +40,7 @@ ms.lasthandoff: 12/16/2016
 |レポート モデルのデータ ソースを定義する|レポート モデル プロジェクトを作成したら、ビジネス データの抽出元のデータ ソースを定義する必要があります。 通常、これは Configuration Manager サイト データベースです。|詳細については、このトピックの「 [To define the data source for the report model](#BKMK_DefineReportModelDataSource) 」セクションを参照してください。|  
 |レポート モデルのデータ ソース ビューを定義する|レポート モデル プロジェクトで使用するデータ ソースを定義したら、次の手順で、プロジェクトのデータ ソース ビューを定義します。 データ ソース ビューは、1 つまたは複数のデータ ソースを基にした論理データ モデルです。 データ ソース ビューは、テーブルやビューなど、基盤となるデータ ソースに含まれる物理オブジェクトへのアクセスをカプセル化します。 SQL Server Reporting Services は、レポート モデルをデータ ソース ビューから生成します。<br /><br /> データ ソース ビューにより、指定したデータが分かりやすく表示されるため、モデルの設計プロセスが容易になります。 データ ソース ビュー内では、基盤となるデータ ソースを変更することなく、テーブルおよびフィールドの名前を変更したり、集計フィールドや派生テーブルを追加したりできます。 効率的なモデルを作成するには、使用するテーブルのみをデータ ソース ビューに追加します。|詳細については、このトピックの「 [To define the data source view for the report model](#BKMK_DefineReportModelDataSourceView) 」セクションを参照してください。|  
 |レポート モデルを作成する|レポート モデルはデータベースの最上部に位置するレイヤーであり、ビジネスのエンティティ、フィールドおよび役割を定義します。 モデルが公開されると、レポート ビルダーを使用してレポートを作成できるようになります。その際、データベース構造やクエリに関する知識は不要で、クエリを作成する必要もありません。 モデルは、フレンドリ名でグループ化されている一連の関連レポート項目で構成されており、これらのビジネス項目間の関係や計算が定義されています。 モデルは、セマンティック モデル定義言語 (SMDL) と呼ばれる XML 言語を使用して定義されます。 レポート モデルのファイル名拡張子は .smdl です。|詳細については、このトピックの「 [To create the report model](#BKMK_CreateReportModel) 」セクションを参照してください。|  
-|レポート モデルを発行する|作成したモデルを使用してレポートを構築するには、このモデルをレポート サーバーにパブリッシュする必要があります。 公開時には、データ ソースおよびデータ ソース ビューがモデルに含まれます。|詳細については、このトピックの「 [To publish the report model for use in SQL Server Reporting Services](#BKMK_PublishReportModel) 」セクションを参照してください。|  
+|レポート モデルを発行する|作成したモデルを使用してレポートを構築するには、このモデルをレポート サーバーにパブリッシュする必要があります。 公開時には、データ ソースおよびデータ ソース ビューがモデルに含まれます。|詳細については、このトピックの「 [SQL Reporting Services 用にレポート モデルを公開するには](#BKMK_PublishReportModel) 」セクションを参照してください。|  
 |レポート モデルを Configuration Manager に展開する|**レポートの作成ウィザード** で、カスタム レポート モデルを使用してモデル ベースのレポートを作成するには、先に Configuration Manager にレポート モデルを展開しておく必要があります。|詳細については、このトピックの「 [To deploy the custom report model to Configuration Manager](#BKMK_DeployReportModel) 」セクションを参照してください。|  
 
 ## <a name="steps-for-creating-a-basic-report-model-in-sql-server-reporting-services"></a>SQL Server Reporting Services で基本レポート モデルを作成する手順  
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/16/2016
     > [!NOTE]  
     >  **[ソリューション エクスプローラー]** ウィンドウが表示されない場合は、 **[表示]**、 **[ソリューション エクスプローラー]**の順にクリックします。  
 
-###  <a name="BKMK_DefineReportModelDataSource"></a> To define the data source for the report model  
+###  <a name="BKMK_DefineReportModelDataSource"></a> レポート モデル用のデータ ソースを定義するには  
 
 1.  **SQL Server Business Intelligence Development Studio** の **[ソリューション エクスプローラー]**ウィンドウで **[データ ソース]** を右クリックし、 **[新しいデータ ソースの追加]**を選択します。  
 
@@ -94,7 +94,7 @@ ms.lasthandoff: 12/16/2016
     > [!NOTE]  
     >  既存のデータ ソースのプロパティを編集するには、 **[ソリューション エクスプローラー]** ウィンドウの **[データ ソース]** フォルダーでデータ ソースをダブルクリックし、データ ソースのプロパティをデータ ソース デザイナーに表示します。  
 
-###  <a name="BKMK_DefineReportModelDataSourceView"></a> To define the data source view for the report model  
+###  <a name="BKMK_DefineReportModelDataSourceView"></a> レポート モデル用のデータ ソース ビューを定義するには  
 
 1.  **[ソリューション エクスプローラー]**で **[データ ソース ビュー]** を右クリックし、 **[新しいデータ ソース ビューの追加]**を選択します。  
 
@@ -133,7 +133,7 @@ ms.lasthandoff: 12/16/2016
 
 8.  ウィザードを終了するには、[ **完了** ] をクリックします。 レポート モデルがデザイン ウィンドウに表示されます。  
 
-###  <a name="BKMK_PublishReportModel"></a> To publish the report model for use in SQL Server Reporting Services  
+###  <a name="BKMK_PublishReportModel"></a> SQL Reporting Services 用にレポート モデルを公開するには  
 
 1.  **[ソリューション エクスプローラー]**で、レポート モデルを右クリックして、 **[展開]**を選択します。 この例では、「 **Simple_Model** 」というレポート モデルを使用します。  
 
@@ -182,7 +182,7 @@ ms.lasthandoff: 12/16/2016
     > [!IMPORTANT]  
     >  レポート モデル ファイルを Configuration Manager サイト サーバーにコピーした後は、まず Configuration Manager コンソールを終了し再起動しないと、**レポートの作成ウィザード**でレポート モデルを使用できません。  
 
-##  <a name="AdvancedReportModel"></a> Steps for Creating an Advanced Report Model in SQL Server Reporting Services  
+##  <a name="AdvancedReportModel"></a> SQL Server Reporting Services で詳細レポート モデルを作成する手順  
  以下の手順に従って、サイト内のユーザーが Configuration Manager データベースの複数のビューのデータに基づいて、特定のモデルベースのレポートを作成する際に使用できる詳細レポート モデルを作成できます。 クライアント コンピューターとそれらのコンピューターにインストールされているオペレーティング システムに関する情報をレポート作成者に示す、レポート モデルを作成します。 この情報は、Configuration Manager データベースの次のビューから取得します。  
 
 -   **V_R_System**: 検出されたコンピューターと Configuration Manager クライアントに関する情報が含まれています。  
@@ -210,7 +210,7 @@ ms.lasthandoff: 12/16/2016
     > [!NOTE]  
     >  **[ソリューション エクスプローラー]** ウィンドウが表示されない場合は、 **[表示]**、 **[ソリューション エクスプローラー]**の順にクリックします。  
 
-#### <a name="to-define-the-data-source-for-the-report-model"></a>To define the data source for the report model  
+#### <a name="to-define-the-data-source-for-the-report-model"></a>レポート モデル用のデータ ソースを定義するには  
 
 1.  **SQL Server Business Intelligence Development Studio** の **[ソリューション エクスプローラー]**ウィンドウで **[データ ソース]** を右クリックし、 **[新しいデータ ソースの追加]**を選択します。  
 
@@ -239,7 +239,7 @@ ms.lasthandoff: 12/16/2016
     > [!NOTE]  
     >  既存のデータ ソースのプロパティを編集するには、 **[ソリューション エクスプローラー]** ウィンドウの **[データ ソース]** フォルダーでデータ ソースをダブルクリックし、データ ソースのプロパティをデータ ソース デザイナーに表示します。  
 
-#### <a name="to-define-the-data-source-view-for-the-report-model"></a>To define the data source view for the report model  
+#### <a name="to-define-the-data-source-view-for-the-report-model"></a>レポート モデル用のデータ ソース ビューを定義するには  
 
 1.  **[ソリューション エクスプローラー]**で **[データ ソース ビュー]** を右クリックし、 **[新しいデータ ソース ビューの追加]**を選択します。  
 
@@ -376,7 +376,7 @@ ms.lasthandoff: 12/16/2016
 
 4.  オブジェクトの名前の変更が完了したら、 **[ファイル]**をクリックして **[すべて保存]**をクリックします。  
 
-#### <a name="to-publish-the-report-model-for-use-in-sql-server-reporting-services"></a>To publish the report model for use in SQL Server Reporting Services  
+#### <a name="to-publish-the-report-model-for-use-in-sql-server-reporting-services"></a>SQL Reporting Services 用にレポート モデルを公開するには  
 
 1.  **[ソリューション エクスプローラー]**で、 **Advanced_Model.smdl** を右クリックして、 **[展開]**を選択します。  
 
