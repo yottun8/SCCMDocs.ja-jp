@@ -135,7 +135,7 @@ Updates Publisher は Updates Publisher についての基本的な情報を  **
 
 データベース ログを有効にすると、Updates Publisher データベースに対して実行されるクエリに関する情報が含まれます。 データベース ログの使用は、Updates Publisher コンピューターのパフォーマンスの低下につながることがあります。
 
-ログ ファイルを表示するには、コンソールで ![[プロパティ]](media/properties2.png) をクリックして **[Updates Publisher Properties] (Updates Publisher のプロパティ)** を開き、**[ログ ファイルの表示]** を選択します。
+ログ ファイルを表示するには、コンソールで ![[プロパティ]](media/properties2.png) をクリックして **[Updates Publisher Properties]\(Updates Publisher のプロパティ)** を開き、**[ログ ファイルの表示]** を選択します。
 
 ## <a name="expire-unreferenced-software-updates"></a>参照されていないソフトウェア更新プログラムを期限切れにする
 **Software Update Cleanup (ソフトウェア更新プログラムのクリーンアップ) ウィザード**を実行すると、更新サーバー上にある一方で Updates Publisher リポジトリにない更新プログラムを期限切れにすることができます。 これが Configuration Manager に通知されて、将来の展開からこれらの更新プログラムが削除されます。

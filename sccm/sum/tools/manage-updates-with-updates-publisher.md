@@ -83,7 +83,7 @@ System Center Updates Publisher で、リポジトリにインポートしたソ
 ## <a name="publish-updates-and-bundles-from-the-updates-workspace"></a>[更新プログラム] ワークスペースから更新プログラムとバンドルを発行する
 更新プログラムとバンドルを発行するとき、これらの更新プログラムとバンドルに関する情報 (メタデータ) と、場合によっては更新プログラムのバイナリ (すべてのコンテンツ) が、デバイスへの展開のために Updates Publisher によって更新サーバーに追加されます。
 
-発行に関するオプションを設定する前に、Updates Publisher の [[更新サーバー]](/sccm/sum/tools/updates-publisher-options#update-server) オプションを構成する必要があります。 この構成オプションを開くには、**[更新プログラム] ワークスペース** &gt; **[概要]** に移動し、**[Configure WSUS and Signing Certificate] (WSUS と署名証明書の構成)** を選択します。 また、Updates Publisher オプションの [更新サーバー] ページに移動できます。
+発行に関するオプションを設定する前に、Updates Publisher の [[更新サーバー]](/sccm/sum/tools/updates-publisher-options#update-server) オプションを構成する必要があります。 この構成オプションを開くには、**[更新プログラム] ワークスペース** &gt; **[概要]** に移動し、**[Configure WSUS and Signing Certificate]\(WSUS と署名証明書の構成)** を選択します。 また、Updates Publisher オプションの [更新サーバー] ページに移動できます。
 
 更新プログラムとバンドルを発行する方法は 2 つあります。
 -   [更新プログラム] ワークスペースから直接 (*更新プログラムとバンドルを発行する*には、次の手順に従います)。
