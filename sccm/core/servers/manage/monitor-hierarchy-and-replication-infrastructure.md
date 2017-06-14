@@ -63,7 +63,7 @@ System Center Configuration Manager のインフラストラクチャと操作�
  Configuration Manager の一般的なタスクを監視するには、次の情報を使用します。  
 
  **アラート**  
-   「 [Monitor alerts](../../../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorAlerts) 」の「 [Use alerts and the status system for System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md)」を参照してください。  
+   「[System Center Configuration Manager のアラートとステータス システムの使用](../../../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorAlerts) 」の「 [アラートの監視](../../../core/servers/manage/use-alerts-and-the-status-system.md)」を参照してください。  
 
  **コンプライアンス設定**  
    「[System Center Configuration Manager でコンプライアンス設定を監視する方法](../../../compliance/deploy-use/monitor-compliance-settings.md)」を参照してください。  
