@@ -38,7 +38,7 @@ System Center Configuration Manager 向けに Active Directory スキーマを�
 
 -   Active Directory スキーマが Configuration Manager 2007 または System Center 2012 Configuration Manager 用に拡張されている場合は、これ以上の操作を行う必要はありません。 スキーマ拡張は変更されず、既に使用可能な状態になっています。  
 
-スキーマの拡張は、どのフォレストでも&1; 回限りの操作です。 Active Directory スキーマを拡張して使用するには、次の手順を実行します。  
+スキーマの拡張は、どのフォレストでも 1 回限りの操作です。 Active Directory スキーマを拡張して使用するには、次の手順を実行します。  
 
 ## <a name="step-1-extend-the-schema"></a>手順 1. スキーマの拡張  
 Configuration Manager のスキーマを拡張するには  
@@ -75,7 +75,7 @@ Configuration Manager のスキーマを拡張するには
 ## <a name="step-2--create-the-system-management-container-and-grant-sites-permissions-to-the-container"></a>手順 2.  System Management コンテナーの作成とコンテナーへのサイトに対するアクセス許可の付与  
  スキーマを拡張したら、Active Directory Domain Services (AD DS) で **System Management** という名前のコンテナーを作成する必要があります。  
 
--   データを Active Directory に発行するプライマリ サイトまたはセカンダリ サイトがあるドメインごとに、このコンテナーを&1; 回作成します。  
+-   データを Active Directory に発行するプライマリ サイトまたはセカンダリ サイトがあるドメインごとに、このコンテナーを 1 回作成します。  
 
 -   そのドメインにデータを発行する各プライマリ サイト サーバーおよびセカンダリ サイト サーバーのコンピューター アカウントに、各コンテナーのアクセス許可を付与します。 各アカウントには、コンテナーに対する**フルコントロール**と、**適用先**が**このオブジェクトとすべての子オブジェクト**である拡張アクセス許可が必要です。  
 

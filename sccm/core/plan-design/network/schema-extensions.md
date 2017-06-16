@@ -39,7 +39,7 @@ Configuration Manager をサポートするように Active Directory スキー�
 
 -   System Center Configuration Manager 用の Active Directory スキーマの拡張は、Configuration Manager 2007 と Configuration Manager 2012 で使用されているものから変更されていません。 どちらかのバージョンでスキーマを拡張した場合は、もう一度拡張する必要はありません。  
 
--   スキーマの拡張は、フォレスト全体で&1; 回限り行う操作で、元に戻すことはできません。  
+-   スキーマの拡張は、フォレスト全体で 1 回限り行う操作で、元に戻すことはできません。  
 
 -   スキーマを拡張できるのは、スキーマ管理グループのメンバーと、スキーマを変更するのに十分なアクセス許可を委任されたユーザーのみです。  
 
@@ -96,7 +96,7 @@ Configuration Manager をサポートするように Active Directory スキー�
 
 -   **回避策:** スキーマを拡張しない場合は、階層のメンテナンス ツール **preinst.exe**を使用して、サイト間でセキュリティ キー情報を交換します。  
 
-     たとえば、プライマリ サイトでコンテンツを作成し、別のプライマリ サイト下にあるセカンダリ サイトにそのコンテンツを展開する場合は、セカンダリ サイトでソース プライマリ サイトの公開キーを取得できるように Active Directory スキーマを拡張するか、preinst.exe を使用して&2; つのサイト間で直接キーを共有することができます。  
+     たとえば、プライマリ サイトでコンテンツを作成し、別のプライマリ サイト下にあるセカンダリ サイトにそのコンテンツを展開する場合は、セカンダリ サイトでソース プライマリ サイトの公開キーを取得できるように Active Directory スキーマを拡張するか、preinst.exe を使用して 2 つのサイト間で直接キーを共有することができます。  
 
 ## <a name="active-directory-attributes-and-classes"></a>Active Directory 属性とクラス  
 System Center Configuration Manager のスキーマを拡張すると、次のクラスと属性がスキーマに追加され、Active Directory フォレスト内のすべての Configuration Manager サイトで利用できるようになります。  

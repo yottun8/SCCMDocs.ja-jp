@@ -26,7 +26,7 @@ ms.lasthandoff: 05/17/2017
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager コンソールには、サイト システムの役割をインストールできるウィザードが&2; つあります。  
+System Center Configuration Manager コンソールには、サイト システムの役割をインストールできるウィザードが 2 つあります。  
 
 -   サイト システムの役割の追加ウィザード:****このウィザードを使用して、サイト内の既存のサイト システム サーバーにサイト システムの役割を追加します。  
 

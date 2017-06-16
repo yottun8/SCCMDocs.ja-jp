@@ -39,7 +39,7 @@ Configuration Manager では、単一のサイト システム サーバー上�
 
 -   [System Center Configuration Manager のサイト システム役割のインストール](../../../../core/servers/deploy/configure/install-site-system-roles.md)  
 
-     このトピックでは、新しいサイト システムの役割をインストールするのに利用できる&2; つのコンソール内ウィザードの使用方法についての基本的なガイダンスを提供します。  
+     このトピックでは、新しいサイト システムの役割をインストールするのに利用できる 2 つのコンソール内ウィザードの使用方法についての基本的なガイダンスを提供します。  
 
 -   [Microsoft Azure for System Center Configuration Manager のクラウド ベース配布ポイントのインストール](../../../../core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md)  
 
