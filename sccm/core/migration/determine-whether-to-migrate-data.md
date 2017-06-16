@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: d37261c03fddc3d576fcef73fabd7189e4c46d38
 ms.openlocfilehash: 9dc5f6c9f58e1fc33b2dc9dd76737ae23af81993
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -28,7 +30,7 @@ ms.openlocfilehash: 9dc5f6c9f58e1fc33b2dc9dd76737ae23af81993
 
 System Center Configuration Manager の移行では、作成したデータと構成を、サポートされているバージョンの Configuration Manager から新しい階層に転送するためのプロセスが提供されます。  これを使用して、次の操作を実行できます。  
 
--   複数の階層を&1; つに統合する。  
+-   複数の階層を 1 つに統合する。  
 
 -   データと構成をラボの展開から運用環境の展開に移動する。
 
@@ -50,7 +52,7 @@ System Center Configuration Manager の移行では、作成したデータと�
 
 -   [System Center Configuration Manager に移行できないデータ](#Cannot_migrate)  
 
-##  <a name="a-namecanmigratea-data-that-you-can-migrate-to-system-center-configuration-manager"></a><a name="Can_Migrate"></a> System Center Configuration Manager に移行可能なデータ  
+##  <a name="Can_Migrate"></a> System Center Configuration Manager に移行可能なデータ  
  移行により、サポートされる Configuration Manager 階層間で大部分のオブジェクトを移行できます。 サポートされるバージョンの Configuration Manager 2007 のオブジェクトによっては、System Center 2012 Configuration Manager のスキーマとオブジェクト形式に準拠するように、移行されるインスタンスを変更する必要があります。
 
 この変更は、ソース サイトのデータベース内のデータには影響しません。 サポートされているバージョンの System Center 2012 Configuration Manager または System Center Configuration Manager から移行されたオブジェクトは、変更する必要がありません。  
@@ -161,7 +163,7 @@ System Center Configuration Manager の移行では、作成したデータと�
 
 -   仮想アプリケーション パッケージ  
 
-##  <a name="a-namecannotmigratea-data-that-you-cannot-migrate-to-system-center-configuration-manager"></a><a name="Cannot_migrate"></a> System Center Configuration Manager に移行できないデータ  
+##  <a name="Cannot_migrate"></a> System Center Configuration Manager に移行できないデータ  
  次の種類のオブジェクトは移行できません。  
 
 -   AMT クライアントのプロビジョニング情報  
@@ -187,9 +189,4 @@ System Center Configuration Manager の移行では、作成したデータと�
     -   セキュリティ ロール  
 
     -   セキュリティ スコープ  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

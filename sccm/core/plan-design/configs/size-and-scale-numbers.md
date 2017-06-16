@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f9c43e26758d5171a6ef56e827b4b054ebc8a5e5
 ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/31/2016
 
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイズとスケールの数
@@ -35,9 +37,9 @@ System Center Configuration Manager の各展開には、サポートできる�
 -   [サイトとサイト システムの前提条件](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 
 
-次のサポート数は、Configuration Manager の推奨ハードウェアと、使用可能なすべての Configuration Manager 機能の既定の設定に基づいています。 推奨されるハードウェアを使用しない場合、またはよりアグレッシブなカスタム設定を使用する場合 (7 日に&1; 回 (既定値) よりも頻繁にハードウェアまたはソフトウェア インベントリを実行するような場合)、サイト システムのパフォーマンスが低下し、規定されたレベルのサポートを満たさない可能性があります。
+次のサポート数は、Configuration Manager の推奨ハードウェアと、使用可能なすべての Configuration Manager 機能の既定の設定に基づいています。 推奨されるハードウェアを使用しない場合、またはよりアグレッシブなカスタム設定を使用する場合 (7 日に 1 回 (既定値) よりも頻繁にハードウェアまたはソフトウェア インベントリを実行するような場合)、サイト システムのパフォーマンスが低下し、規定されたレベルのサポートを満たさない可能性があります。
 
-##  <a name="a-namebkmksitesystemscalea-site-types"></a><a name="bkmk_SiteSystemScale"></a> サイトの種類  
+##  <a name="bkmk_SiteSystemScale"></a> サイトの種類  
  **中央管理サイト:**  
 
 -   中央管理サイトでは、最大 25 の子プライマリ サイトをサポートします。  
@@ -67,7 +69,7 @@ System Center Configuration Manager の各展開には、サポートできる�
 
     -   サイト システムの役割の各インスタンスでは、階層でサポートされる最大のクライアント数をサポートします。  
 
-## <a name="a-namebkmkrolesa-site-system-roles"></a><a name="bkmk_roles"></a> サイト システムの役割    
+## <a name="bkmk_roles"></a> サイト システムの役割    
 
 **アプリケーション カタログ Web サービス ポイント:**  
 
@@ -123,13 +125,13 @@ System Center Configuration Manager の各展開には、サポートできる�
 
 -   サイト サーバーから離れた場所にあるソフトウェアの更新ポイントで、最大 150,000 台のクライアントをサポートできます。ただし、このクライアント数をサポートするには、リモート コンピューターが Windows Server Update Services (WSUS) の要件を満たしている必要があります。  
 
--   既定で、Configuration Manager はソフトウェアの更新ポイントをネットワーク負荷分散 (NLB) クラスターとして構成することはサポートされていません。 ただし、Configuration Manager SDK を使って、NLB クラスターに最大&4; つのソフトウェアの更新ポイントを構成できます。  
+-   既定で、Configuration Manager はソフトウェアの更新ポイントをネットワーク負荷分散 (NLB) クラスターとして構成することはサポートされていません。 ただし、Configuration Manager SDK を使って、NLB クラスターに最大 4 つのソフトウェアの更新ポイントを構成できます。  
 
-##  <a name="a-namebkmkclientnumbersa-client-numbers-for-sites-and-hierarchies"></a><a name="bkmk_clientnumbers"></a> サイトおよび階層のクライアント数  
+##  <a name="bkmk_clientnumbers"></a> サイトおよび階層のクライアント数  
  次の情報を使用して、サイトまたは階層内でサポートすることができるクライアントの数と種類を特定します。  
 
-###  <a name="a-namebkmkcasa-hierarchy-with-a-central-administration-site"></a><a name="bkmk_cas"></a> 中央管理サイトを使用した階層  
-中央管理サイトでは、最大で次の&3; つのグループに表示されているデバイスの数を含む、デバイスの合計数がサポートされています。  
+###  <a name="bkmk_cas"></a> 中央管理サイトを使用した階層  
+中央管理サイトでは、最大で次の 3 つのグループに表示されているデバイスの数を含む、デバイスの合計数がサポートされています。  
 
 -   700,000 個のデスクトップ (Windows、Linux および UNIX を実行するコンピューター)  
 
@@ -137,7 +139,7 @@ System Center Configuration Manager の各展開には、サポートできる�
 
 -   展開でモバイル デバイス管理 (MDM) をサポートする方法に応じた、次のいずれか:  
 
-    -   オンプレミスの MDM を使用して管理する&100;,000 個のデバイス  
+    -   オンプレミスの MDM を使用して管理する 100,000 個のデバイス  
 
     -   300,000 個のクラウドベースのデバイス  
 
@@ -147,17 +149,17 @@ System Center Configuration Manager の各展開には、サポートできる�
 >  中央管理サイトが SQL Server の Standard エディションを使用する階層では、階層は、最大 50,000 個のデスクトップとデバイスをサポートします。 スタンドアロン プライマリ サイトで使用している SQL Server のエディションでは、規定された数までのクライアントをサポートするそのサイト容量は制限されません。  
 
 
-###  <a name="a-namebkmkchipria-child-primary-site"></a><a name="bkmk_chipri"></a> 子プライマリ サイト  
+###  <a name="bkmk_chipri"></a> 子プライマリ サイト  
 中央管理サイトを持つ階層の各子プライマリ サイトは、次をサポートしています。  
 
--   特定のグループまたは種類に制限されない合計&150;,000 個のクライアントとデバイス (サポートが階層でサポートされている数を超えない場合)。  
+-   特定のグループまたは種類に制限されない合計 150,000 個のクライアントとデバイス (サポートが階層でサポートされている数を超えない場合)。  
 
 たとえば、(階層の制限があるため) Mac および Windows CE 7.0 を実行する 25,000 台のコンピューターをサポートするプライマリ サイトでは、追加で 125,000 台のデスクトップ コンピューターをサポートできます。 これによって、サポートされるデバイスの合計数の上限は、子のプライマリ サイトでサポートされる 150,000 の上限まで上がります。
 
-###  <a name="a-namebkmkpria-stand-alone-primary-site"></a><a name="bkmk_pri"></a> スタンドアロン プライマリ サイト  
+###  <a name="bkmk_pri"></a> スタンドアロン プライマリ サイト  
 スタンドアロン プライマリ サイトは、次のデバイス数をサポートしています。  
 
--   次の制限を持つ合計&175;,000 個のクライアントとデバイス:  
+-   次の制限を持つ合計 175,000 個のクライアントとデバイス:  
 
     -   150,000 個のデスクトップ (Windows、Linux および UNIX を実行するコンピューター)  
 
@@ -165,32 +167,27 @@ System Center Configuration Manager の各展開には、サポートできる�
 
     -   展開でモバイル デバイス管理をサポートする方法に応じた、次のいずれか:  
 
-        -   オンプレミスの MDM を使用して管理する&50;,000 個のデバイス  
+        -   オンプレミスの MDM を使用して管理する 50,000 個のデバイス  
 
         -   150,000 個のクラウドベースのデバイス  
 
 たとえば、150,000 個のデスクトップと 10,000 個の Mac または Windows CE 7.0 をサポートするスタンドアロン プライマリ サイトでは、追加のデバイスを 15,000 個のみサポートできます。 これらのデバイスは、クラウドベースにすることも、オンプレミスの MDM を使用して管理することもできます。  
 
-###  <a name="a-namebkmkseca-secondary-sites"></a><a name="bkmk_sec"></a> セカンダリ サイト  
+###  <a name="bkmk_sec"></a> セカンダリ サイト  
 セカンダリ サイトは、次をサポートします。  
 
 -   15,000 個のデスクトップ (Windows、Linux および UNIX を実行するコンピューター)  
 
-###  <a name="a-namebkmkmpa-management-points"></a><a name="bkmk_mp"></a> 管理ポイント  
+###  <a name="bkmk_mp"></a> 管理ポイント  
 各管理ポイントでは、次のデバイス数をサポートできます。  
 
--   次の制限を持つ合計&25;,000 個のクライアントとデバイス:  
+-   次の制限を持つ合計 25,000 個のクライアントとデバイス:  
 
     -   25,000 個のデスクトップ (Windows、Linux および UNIX を実行するコンピューター)  
 
     -   次のいずれか (両方ではありません):  
 
-        -   オンプレミスの MDM を使用して管理する&10;,000 個のデバイス  
+        -   オンプレミスの MDM を使用して管理する 10,000 個のデバイス  
 
         -   Mac および Windows CE 7.0 クライアントを実行している 10,000 個のデバイス
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

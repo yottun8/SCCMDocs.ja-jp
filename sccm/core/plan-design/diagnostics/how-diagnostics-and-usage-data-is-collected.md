@@ -15,9 +15,10 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
 ms.openlocfilehash: 9c0165212fe34f460be2ce870d0542b616f3bc4d
+ms.contentlocale: ja-jp
 ms.lasthandoff: 12/30/2016
 
 
@@ -30,7 +31,7 @@ System Center Configuration Manager の診断と使用状況データを収集�
 
 階層の最上位のサイトでは、サービス接続ポイントのサイト システムの役割が、更新プログラムをチェックするときに、この情報を送信します。 サービス接続ポイントのモードは、データの転送方法によって決まります。  
 
--   **オンライン モード:** 診断と使用状況データは、週に&1; 回、サービス接続ポイントからクラウド サービスに自動送信されます。  
+-   **オンライン モード:** 診断と使用状況データは、週に 1 回、サービス接続ポイントからクラウド サービスに自動送信されます。  
 
 -   **オフライン モード:** 診断と使用状況データはサービス接続ツールを使用して手動で転送されます。 詳細については、[System Center Configuration Manager のサービス接続ツールの使用](../../../core/servers/manage/use-the-service-connection-tool.md)を参照してください。  
 

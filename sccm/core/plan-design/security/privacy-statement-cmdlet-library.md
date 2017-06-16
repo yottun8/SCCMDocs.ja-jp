@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3d6799ad46e0fe69333aba0662f18c9153c17bda
 ms.openlocfilehash: 3936075555cc0bb370ea6e42c7e720b864d565f7
+ms.contentlocale: ja-jp
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -39,9 +41,9 @@ System Center Configuration Manager コマンドレット ライブラリを利�
 マイクロソフトは、これらの情報をマイクロソフトが提供する製品およびサービスの品質、セキュリティ、および整合性の改善のために使用します。  
 
  **選択または制御:**   
-この使用状況データ機能は既定で有効になっています。 System Center Configuration Manager コマンドレット ライブラリには、この機能を制御する&2; つのレジストリ キーがあります。  
+この使用状況データ機能は既定で有効になっています。 System Center Configuration Manager コマンドレット ライブラリには、この機能を制御する 2 つのレジストリ キーがあります。  
 
- この機能を完全に停止するには、Windows イベント トレーシング (ETW) プロバイダーごとに&1; つずつある、次の&2; つのレジストリ キーの値を設定する必要があります。  
+ この機能を完全に停止するには、Windows イベント トレーシング (ETW) プロバイダーごとに 1 つずつある、次の 2 つのレジストリ キーの値を設定する必要があります。  
 
 -   HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Provider:CeipLevel=0 (ドライブ プロバイダーの使用状況データの停止)  
 
@@ -50,9 +52,4 @@ System Center Configuration Manager コマンドレット ライブラリを利�
  使用状況データ設定を変更する際は、コンピューターに応じて固有の変更を行います。  
 
  使用状況データ (収集) の構成方法の詳細については、[System Center Configuration Manager Cmdlet Library のドキュメント](https://technet.microsoft.com/en-us/library/dn958404.aspx)をご覧ください。   
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

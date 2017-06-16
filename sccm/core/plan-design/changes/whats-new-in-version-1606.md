@@ -15,9 +15,11 @@ caps.latest.revision: 40
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 34809ddf7819eab5deb3995cd8138c7b38cd2f9a
 ms.openlocfilehash: 9fdff6049d6e5cde1032864e5d7aa8df71e53686
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/31/2016
 
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1606 の新機能
@@ -35,7 +37,7 @@ System Center Configuration Manager の更新プログラム 1606 は、以前�
 
 
 
-## <a name="a-nameupdatesandservicingaupdates-and-servicing"></a><a name="updatesandservicing"></a>更新プログラムとサービス
+## <a name="updatesandservicing"></a>更新プログラムとサービス
 
 ### <a name="changes-for-the-updates-and-servicing-node"></a>更新プログラムとサービス ノードの変更
 Configuration Manager コンソールの [更新とサービス] ノードの変更点を次に示します。
@@ -81,10 +83,10 @@ Configuration Manager コンソールの [更新とサービス] ノードの変
 
 
 
-## <a name="a-nameaccessibilitya-accessibility"></a><a name="accessibility"></a> ユーザー補助
+## <a name="accessibility"></a> ユーザー補助
 ノード名の最初の文字することで、ワークスペースのさまざまなノード間を移動できるようになりました。 キーを押すたびに、その文字で始まる次のノードにカーソルが移動します。 スクリーン リーダーを使用している場合は、リーダーがそのノードの名前を読み上げます。 ユーザー補助オプションの詳細については、「[System Center Configuration Manager のユーザー補助機能](../../../core/understand/accessibility-features.md)」をご覧ください。
 
-## <a name="a-nameadministrationaadministration"></a><a name="administration"></a>管理
+## <a name="administration"></a>管理
 Configuration Manager コンソールの [管理] の変更点を次に示します。
 ### <a name="oms-connector"></a>OMS コネクタ
 
@@ -121,7 +123,7 @@ Configuration Manager コンソールの **[クライアント設定]** で、�
 
 ソフトウェア センターのユーザー インターフェイスが簡素化されて検索が容易になりました。
 *  **[インストールのステータス]** タブと **[インストール済みソフトウェア]** タブが、1 つの **[インストールのステータス]** タブに統合されました。
-*  **[更新プログラム]**、**[オペレーティング システム]**、および **[アプリケーション]** が&3; つのタブに分割されました。
+*  **[更新プログラム]**、**[オペレーティング システム]**、および **[アプリケーション]** が 3 つのタブに分割されました。
 * 一度に複数の更新プログラムを選択してインストールすることも、**[すべてをインストール]** をクリックして一度にすべての更新プログラムをインストールすることもできます。
 
 ### <a name="content-status-links"></a>コンテンツのステータスのリンク
@@ -192,7 +194,7 @@ Configuration Manager は、iOS 7.1 以降のデバイス向けの iPhone を探
 * デバイスを消去する。
 * ディスクを再アクティブ化する。
 
-Configuration Manager を使ってアクティベーション ロックを管理するには、次の&2; つの方法があります。
+Configuration Manager を使ってアクティベーション ロックを管理するには、次の 2 つの方法があります。
 
 - 監視対象のデバイスでアクティベーション ロックを有効にする。
 - 監視対象のデバイスでアクティベーション ロックをバイパスする。
@@ -225,9 +227,4 @@ Microsoft Intune と Configuration Manager を使用している場合に、デ�
 
 ## <a name="remote-control"></a>リモート コントロール
 リモート コントロール セッションで共有クリップボードからコンテンツを転送する前に、ユーザーはファイル転送を許可するかどうかを選択できます。 ユーザーはセッションごとに一度アクセス許可を与えるだけで済みます。ビューアーはファイル転送を続行するためのアクセス許可を自身に与えることはできません。 この新しい設定は、**管理**ワークスペースにあります。 **[クライアント設定]** に移動し、**[既定の設定]** で、**[リモート ツール]** パネルを開きます。
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

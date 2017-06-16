@@ -15,9 +15,11 @@ caps.latest.revision: 6
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 68527c0e82861106b7ec28b34bffa8fd74b2dd4a
 ms.openlocfilehash: f13f38be2a19ab8a1ead246e5272515dd0570984
+ms.contentlocale: ja-jp
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -25,12 +27,12 @@ ms.openlocfilehash: f13f38be2a19ab8a1ead246e5272515dd0570984
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 展開は Active Directory ドメインにインストールする必要があります。 この展開の基礎には、サイトの階層を形成する&1; つ以上の Configuration Manager サイトが含まれます。 1 つのサイトからマルチサイト階層まで、インストールするサイトの種類と場所では、必要に応じて展開をスケールアップ (拡張) して、キー サービスを管理されているユーザーとデバイスに配信できます。
+System Center Configuration Manager 展開は Active Directory ドメインにインストールする必要があります。 この展開の基礎には、サイトの階層を形成する 1 つ以上の Configuration Manager サイトが含まれます。 1 つのサイトからマルチサイト階層まで、インストールするサイトの種類と場所では、必要に応じて展開をスケールアップ (拡張) して、キー サービスを管理されているユーザーとデバイスに配信できます。
 
 ## <a name="hierarchies-of-sites"></a>サイトの階層
 System Center Configuration Manager を初めてインストールするときに最初にインストールする Configuration Manager サイトによって、階層のスコープが決まります。 最初の Configuration Manager サイトは、社内のデバイスとユーザーを管理する基礎となります。 この最初のサイトは、中央管理サイトまたはスタンドアロンのプライマリ サイトである必要があります。  
 
- *中央管理サイト*は大規模な展開に適しており、管理の中心点となり、グローバルなネットワーク インフラストラクチャ全体に配布されるデバイスの柔軟なサポートを可能にします。 中央管理サイトのインストール後に、子サイトとして&1; つ以上のプライマリ サイトをインストールする必要があります。 プライマリ サイトの機能である、デバイスの管理は中央管理サイトでは直接サポートされないため、この構成が必要になります。 中央管理サイトでは、複数の子プライマリ サイトがサポートされます。 管理対象デバイスがさまざまな地理的な場所にある場合に、子プライマリ サイトを使用して、デバイスを直接管理したり、ネットワーク帯域幅を制御したりします。  
+ *中央管理サイト*は大規模な展開に適しており、管理の中心点となり、グローバルなネットワーク インフラストラクチャ全体に配布されるデバイスの柔軟なサポートを可能にします。 中央管理サイトのインストール後に、子サイトとして 1 つ以上のプライマリ サイトをインストールする必要があります。 プライマリ サイトの機能である、デバイスの管理は中央管理サイトでは直接サポートされないため、この構成が必要になります。 中央管理サイトでは、複数の子プライマリ サイトがサポートされます。 管理対象デバイスがさまざまな地理的な場所にある場合に、子プライマリ サイトを使用して、デバイスを直接管理したり、ネットワーク帯域幅を制御したりします。  
 
  *スタンドアロン プライマリ サイト*は小規模な展開に適しています。追加サイトをインストールせずにデバイスを管理するには、スタンドアロン プライマリ サイトを使用できます。 スタンドアロン プライマリ サイトは、展開のサイズを制限できますが、後で新しい中央管理サイトをインストールすることによって階層を拡張するシナリオもサポートします。 このサイト拡張シナリオで、スタンドアロン プライマリ サイトが子プライマリ サイトになったら、新しい中央管理サイトの下に追加の子プライマリ サイトをインストールできます。 その後、初期の展開を会社の将来の成長に合わせて拡張できます。  
 
@@ -69,12 +71,7 @@ System Center Configuration Manager を初めてインストールするとき�
 ## <a name="publishing-site-information-to-active-directory-domain-services"></a>Active Directory ドメイン サービスへのサイト情報の発行  
  Configuration Manager の管理を簡素化するために、Configuration Manager で使用される詳細情報をサポートするように Active Directory スキーマを拡張してから、サイトのキー情報が Active Directory Domain Services (AD DS) に公開されるようにすることができます。 これにより、管理対象コンピューターが AD DS の信頼されたソースからサイト関連情報を安全に取得できるようになります。 クライアントが取得できる情報は、使用可能なサイト、サイト システム サーバー、およびそれらのサイト システム サーバーが提供するサービスを識別します。  
 
- *Active Directory スキーマの拡張*は、フォレストごとに&1; 回だけ実行され、Configuration Manager のインストールの前または後に実行できます。   スキーマを拡張したら、各ドメインで System Management という名前の新しい Active Directory コンテナーを作成する必要があります。 このコンテナーには、クライアントで検索するためのデータを発行する Configuration Manager サイトが含まれます。 詳細については、「[サイト発行のために Active Directory を準備する](../../core/plan-design/network/extend-the-active-directory-schema.md)」を参照してください。  
+ *Active Directory スキーマの拡張*は、フォレストごとに 1 回だけ実行され、Configuration Manager のインストールの前または後に実行できます。   スキーマを拡張したら、各ドメインで System Management という名前の新しい Active Directory コンテナーを作成する必要があります。 このコンテナーには、クライアントで検索するためのデータを発行する Configuration Manager サイトが含まれます。 詳細については、「[サイト発行のために Active Directory を準備する](../../core/plan-design/network/extend-the-active-directory-schema.md)」を参照してください。  
 
  *サイト データの発行*は、Configuration Manager 階層のセキュリティを強化して、管理オーバーヘッドを削減しますが、基本的な Configuration Manager 機能には必要ありません。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
