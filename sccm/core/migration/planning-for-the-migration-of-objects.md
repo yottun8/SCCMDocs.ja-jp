@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 45931f60273f3130cca36320770126a36dcc3d1e
 ms.openlocfilehash: 9870ffa6ae5f80db823bfc74a7cc2e67fc8cf21d
+ms.contentlocale: ja-jp
+ms.lasthandoff: 01/13/2017
 
 
 ---
@@ -48,7 +50,7 @@ System Center Configuration Manager では、ソース サイトで見つかっ�
 
 -   [ソフトウェア使用状況測定規則のカスタマイズ設定の移行の計画](#Plan_Migrate_SWM_Rules)  
 
-##  <a name="a-nameplanmigratesoftwareupdatesa-plan-to-migrate-software-updates"></a><a name="Plan_migrate_Software_updates"></a> ソフトウェア更新プログラムの移行の計画  
+##  <a name="Plan_migrate_Software_updates"></a> ソフトウェア更新プログラムの移行の計画  
  ソフトウェア更新プログラム パッケージやソフトウェア更新プログラムの展開などのソフトウェア更新プログラム オブジェクトを移行できます。  
 
  ソフトウェア更新プログラム オブジェクトを移行するには、まず、ソース階層の環境と一致する構成を使用して、移行先階層を設定する必要があります。 そのためには、次の操作が必要です。  
@@ -79,7 +81,7 @@ Configuration Manager 2007 ソース階層から移行する場合、移行処�
 
 System Center 2012 Configuration Manager または System Center Configuration Manageソース階層からオブジェクトを移行するときは、ソフトウェア更新オブジェクトは変更されません。  
 
-##  <a name="a-nameplanmigratecontenta-plan-to-migrate-content"></a><a name="Plan_Migrate_content"></a> コンテンツの移行の計画  
+##  <a name="Plan_Migrate_content"></a> コンテンツの移行の計画  
  サポートされているソース階層から移行先階層にコンテンツを移行できます。 Configuration Manager 2007 ソース階層では、このコンテンツには、ソフトウェアの配布パッケージとプログラム、および Microsoft Application Virtualization (App-V) などの仮想アプリケーションが含まれます。 System Center 2012 Configuration Manager および System Center Configuration Manager のソース階層の場合、このコンテンツには、アプリケーションおよび APP-V 仮想アプリケーションが含まれています。 階層間でコンテンツを移行すると、圧縮ソース ファイルが移行先階層に移行されます。  
 
 ### <a name="packages-and-programs"></a>パッケージとプログラム  
@@ -98,7 +100,7 @@ System Center 2012 Configuration Manager または System Center Configuration M
 ### <a name="virtual-applications"></a>仮想アプリケーション  
 サポートされている Configuration Manager 2007 サイトから App-V パッケージを移行すると、移行処理でこのパッケージは移行先階層のアプリケーションに変換されます。 さらに、App-V パッケージの既存の開示通知を基に、移行先階層で次のように展開の種類が作成されます。  
 
--   開示通知がない場合は、展開の種類の既定設定を使用する展開の種類が&1; つ作成されます。  
+-   開示通知がない場合は、展開の種類の既定設定を使用する展開の種類が 1 つ作成されます。  
 
 -   公開通知が 1 つある場合は、Configuration Manager 2007 の公開通知と同じ設定を使用する展開の種類が 1 つ作成されます。  
 
@@ -121,12 +123,12 @@ System Center 2012 Configuration Manager または System Center Configuration M
 ### <a name="applications"></a>アプリケーション  
  サポートされている System Center 2012 Configuration Manager または System Center Configuration Manager のソース階層から移行先階層にアプリケーションを移行できます。 ソース階層から移行先階層にクライアントを再割り当てする場合は、クライアントで移行済みのアプリケーションが再実行されないように、以前にインストールされたアプリケーションの履歴がクライアントに保持されます。  
 
-##  <a name="a-namebkmkmigratecollectionsa-plan-to-migrate-collections"></a><a name="BKMK_MigrateCollections"></a> コレクションの移行の計画  
+##  <a name="BKMK_MigrateCollections"></a> コレクションの移行の計画  
  サポートされている System Center 2012 Configuration Manager または System Center Configuration Manager のソース階層からコレクションの条件を移行できます。 コレクションの条件を移行するには、オブジェクト ベースの移行ジョブを使用します。 コレクションを移行する際、コレクションの規則を移行します。コレクションのメンバーの情報や、コレクションのメンバーに関連する情報やオブジェクトは移行しません。  
 
  コレクションのオブジェクトの移行は、Configuration Manager 2007 ソース階層から移行する場合はサポートされていません。  
 
-##  <a name="a-nameplanmigrateosda-plan-to-migrate-operating-system-deployments"></a><a name="Plan_migrate_OSD"></a> オペレーティング システムの展開の移行の計画  
+##  <a name="Plan_migrate_OSD"></a> オペレーティング システムの展開の移行の計画  
 サポートされているソース階層から、次のオペレーティング システムの展開オブジェクトを移行できます。  
 
 -   オペレーティング システムのイメージとパッケージ。 ブート イメージのソース パスは、移行先サイトの Windows 自動インストール キット (Windows AIK) の既定のイメージの場所に更新されます。 以下に、オペレーティング システムのイメージとパッケージを移行する際の要件と制限事項を示します。  
@@ -144,7 +146,7 @@ System Center 2012 Configuration Manager または System Center Configuration M
 
 -   ドライバーとドライバー パッケージ。  
 
-##  <a name="a-nameplanmigratecompliancesettingsa-plan-to-migrate-desired-configuration-management"></a><a name="Plan_Migrate_Compliance_settings"></a> 必要な構成管理の移行の計画  
+##  <a name="Plan_Migrate_Compliance_settings"></a> 必要な構成管理の移行の計画  
 構成項目と構成基準を移行できます。  
 
 > [!NOTE]  
@@ -152,14 +154,14 @@ System Center 2012 Configuration Manager または System Center Configuration M
 
 Configuration Manager 2007 構成パックをインポートすることができます。 インポート処理により、自動的に構成パックが System Center Configuration Manager と互換性を持つように変換されます。  
 
-##  <a name="a-nameplanmigrateboundariesa-plan-to-migrate-boundaries"></a><a name="Plan_migrate_Boundaries"></a> 境界の移行の計画  
+##  <a name="Plan_migrate_Boundaries"></a> 境界の移行の計画  
  階層間の境界を移行できます。 Configuration Manager 2007 から境界を移行する場合、ソース サイトの各境界が同時に移行されて、移行先階層に作成される新しい境界グループに追加されます。 System Center 2012 Configuration Manager または System Center Configuration Manager 階層から境界を移行する場合、選択した各境界が移行先階層の新しい境界グループに追加されます。  
 
  自動作成される各境界グループでは、サイトの割り当てではなく、コンテンツの場所が有効になります。 これにより、ソース階層と移行先階層の間のサイトの割り当てで境界が重複するのを防止できます。 Configuration Manager 2007 ソース サイトから移行する場合、これにより、インストールする新しい Configuration Manager 2007 クライアントが移行先階層に誤って割り当てられるのを防止できます。 既定では、System Center Configuration Manager クライアントは、Configuration Manager 2007 サイトを自動的に割り当てません。  
 
  移行中に、配布ポイントを移行先階層と共有する場合は、その配布ポイントに関連付けられているすべての境界が移行先階層に自動的に移行されます。 移行先階層では、移行によって、共有配布ポイントごとに新しい読み取り専用の境界グループが作成されます。 ソース階層の配布ポイントの境界を変更すると、次回のデータ収集サイクル中に、これらの変更を反映して移行先階層の境界グループが更新されます。  
 
-##  <a name="a-nameplanmigratereportsa-plan-to-migrate-reports"></a><a name="Plan_Migrate_reports"></a> レポートの移行の計画  
+##  <a name="Plan_Migrate_reports"></a> レポートの移行の計画  
 Configuration Manager では、レポートの移行をサポートしていません。 代わりに、SQL Server Reporting Services レポート ビルダーを使用して、ソース階層からレポートをエクスポートしてから移行先階層にインポートします。  
 
 > [!NOTE]  
@@ -167,7 +169,7 @@ Configuration Manager では、レポートの移行をサポートしていま�
 
 レポートの実行の詳細については、「[System Center Configuration Manager のレポート](../../core/servers/manage/reporting.md)」を参照してください。  
 
-##  <a name="a-nameplanmigrateorgfoldersa-plan-to-migrate-organizational-and-search-folders"></a><a name="Plan_Migrate_Org_Folders"></a> 組織フォルダーと検索フォルダーの移行の計画  
+##  <a name="Plan_Migrate_Org_Folders"></a> 組織フォルダーと検索フォルダーの移行の計画  
  サポートされているソース階層から移行先階層に組織フォルダーと検索フォルダーを移行できます。 さらに、System Center 2012 Configuration Manager または System Center Configuration Manager のソース階層から保存されている検索の条件を移行先階層に移行できます。  
 
  既定では、移行時に移行処理によって、オブジェクトとコレクションの検索フォルダーと管理フォルダーの構造が維持されます。 ただし、移行ジョブの作成ウィザードの **[設定]** ページで、オブジェクトの組織構造を移行するオプションをオフにして、オブジェクトの組織構造が移行されないように移行ジョブを設定することができます。 コレクションの組織構造は常に維持されます。  
@@ -176,19 +178,14 @@ Configuration Manager では、レポートの移行をサポートしていま�
 
  System Center 2012 Configuration Manager または System Center Configuration Manager ソース階層から保存済みの検索を移行する際、検索の条件を移行し、検索結果の情報は移行しません。 保存済みの検索の移行は、Configuration Manager 2007 ソース サイトからは使用できません。  
 
-##  <a name="a-nameplanmigrateaia-plan-to-migrate-asset-intelligence-customizations"></a><a name="Plan_Migrate_AI"></a> 資産インテリジェンスのカスタマイズ設定の移行の計画  
+##  <a name="Plan_Migrate_AI"></a> 資産インテリジェンスのカスタマイズ設定の移行の計画  
  サポートされているソース階層から移行先階層に資産インテリジェンスのカスタマイズ設定を移行できます。 Configuration Manager 2007 と System Center Configuration Manager の間では、資産インテリジェンスのカスタマイズ設定の構造に大きな変更はありません。  
 
 > [!NOTE]  
 >  System Center Configuration Manager は、Asset Intelligence Service 2.0 (AIS 2.0) を使用している Configuration Manager 2007 サイトからの資産インテリジェンス オブジェクトの移行をサポートしません。  
 
-##  <a name="a-nameplanmigrateswmrulesa-plan-to-migrate-software-metering-rules-customizations"></a><a name="Plan_Migrate_SWM_Rules"></a> ソフトウェア使用状況測定規則のカスタマイズ設定の移行の計画  
+##  <a name="Plan_Migrate_SWM_Rules"></a> ソフトウェア使用状況測定規則のカスタマイズ設定の移行の計画  
  Configuration Manager 2007 と System Center Configuration Manager の間では、ソフトウェア使用状況測定に大きな変更はありません。 サポートされているソース階層から移行先階層にソフトウェア使用状況測定規則を移行できます。  
 
  既定では、移行先階層に移行するソフトウェア使用状況測定規則は、移行先階層の特定のサイトには関連付けられません。代わりに、階層内のすべてのクライアントに適用されます。 ソフトウェア使用状況測定規則を特定のサイトのクライアントに適用するには、移行後に使用状況測定規則を編集する必要があります。  
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

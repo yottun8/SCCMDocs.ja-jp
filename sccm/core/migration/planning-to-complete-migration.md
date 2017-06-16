@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 0f4a10ba7bbe397f05d724141b562b6cd8b78ea8
 ms.openlocfilehash: eb1d2e320df02b26423ed4341d5bd1568b9444ad
+ms.contentlocale: ja-jp
+ms.lasthandoff: 01/13/2017
 
 
 ---
@@ -42,12 +44,12 @@ System Center Configuration Manager では、移行先階層に移行するデ�
 
 -   [移行データのクリーンアップを計画する](#Plan_to_clean_up)  
 
-##  <a name="a-nameplantostopdatagatha-plan-to-stop-gathering-data"></a><a name="Plan_to_Stop_Data_Gath"></a> データ収集の停止を計画する  
+##  <a name="Plan_to_Stop_Data_Gath"></a> データ収集の停止を計画する  
  移行を完了して移行データをクリーンアップする前に、ソース階層内の各ソース サイトからのデータ収集を停止する必要があります。 各ソース サイトからのデータ収集を停止するには、最下位のソースサイトで [データ収集の停止] コマンドを実行してから、各親サイトごとにそのプロセスを繰り返し実行する必要があります。 **** ソース階層の最上位サイトは、データ収集を停止する最後のサイトにする必要があります。 親サイトでデータ収集の停止コマンドを実行する前に、各子サイトでデータ収集を停止する必要があります。 通常、移行処理を完了する準備ができた時点でデータ収集を停止します。  
 
  ソース サイトからのデータ収集を停止すると、移行先階層内のクライアントは、コンテンツの場所としてソース サイトの共有配布ポイントを使用できなくなります。 そのため、移行先階層のクライアントで必要な移行済みコンテンツを引き続き使用できるようにするには、次のいずれかの方法を実行してください。  
 
--   移行先階層で、少なくとも&1; つの配布ポイントにコンテンツを配布する。  
+-   移行先階層で、少なくとも 1 つの配布ポイントにコンテンツを配布する。  
 
 -   ソース サイトからのデータの収集を停止する前に、必要なコンテンツがある共有配布ポイントをアップグレードまたは再割り当てする。 共有配布ポイントのアップグレードまたは再割り当ての詳細については、「[System Center Configuration Manager のコンテンツ展開移行戦略の計画](../../core/migration/planning-a-content-deployment-migration-strategy.md)」の該当するセクションを参照してください。  
 
@@ -55,13 +57,8 @@ System Center Configuration Manager では、移行先階層に移行するデ�
 
 ソース サイトとデータ収集の詳細については、「[System Center Configuration Manager でのソース階層戦略の計画](../../core/migration/planning-a-source-hierarchy-strategy.md)」を参照してください。  
 
-##  <a name="a-nameplantocleanupa-plan-to-clean-up-migration-data"></a><a name="Plan_to_clean_up"></a> 移行データのクリーンアップを計画する  
+##  <a name="Plan_to_clean_up"></a> 移行データのクリーンアップを計画する  
  移行完了に必要な最終手順は、移行データのクリーンアップです。 ソース階層の各ソース サイトのデータ収集を停止した後で、[移行データのクリーン アップ **** ] コマンドを使用できます。 クリーンアップは任意ですが、実行すると、移行先階層のデータベースから現在のソース階層に関するデータが削除されます。  
 
  移行データをクリーンアップすると、移行に関するほとんどのデータが移行先階層のデータベースから削除されます。 ただし、移行済みオブジェクトに関する詳細は維持されます。 これらの詳細を基に、**[移行]** ワークスペースを使用して、移行したデータを含むソース階層を再構成することで、そのソース階層から移行を再開したり、以前に移行したオブジェクトとオブジェクトのサイト所有権を確認したりできます。  
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

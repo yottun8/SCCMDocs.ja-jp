@@ -15,9 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 42549b98dd7f418cc3f4543198aaeb90ea8a3efd
 ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
+ms.contentlocale: ja-jp
+ms.lasthandoff: 01/17/2017
 
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイトとサイト システムの前提条件
@@ -33,7 +35,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 > [!NOTE]  
 >  2016 年 1 月に .NET Framework 4.0、4.5、および 4.5.1 のサポートは終了しました。 詳細については、support.microsoft.com の [Microsoft .NET Framework のサポート ライフサイクル ポリシーに関する FAQ](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) を参照してください。  
 
-## <a name="a-namebkmkgeneralprerewqa-general-site-server-requirements-and-limitations"></a><a name="bkmk_generalprerewq"></a> サイト サーバーの一般的な要件と制限事項
+## <a name="bkmk_generalprerewq"></a> サイト サーバーの一般的な要件と制限事項
 **すべてのサイト システム サーバーに適用される内容:**
 
 -   各サイト システム サーバーでは、64 ビットのオペレーティング システムを使用する必要があります。 唯一の例外は、配布ポイント サイト システムの役割です。これは、一部の 32 ビット版のオペレーティング システムにインストール可能です。  
@@ -54,8 +56,8 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   Configuration Manager サービスについては、スタートアップの種類やログオン方法の設定の変更はサポートされていません。 そのようにすると、主要なサービスが正しく実行できなくなる可能性があります。  
 
-##  <a name="a-namebkmk2012prereqa-prerequisites-for-windows-server-2012-and-later-operating-systems"></a><a name="bkmk_2012Prereq"></a> Windows Server 2012 以降のオペレーティング システムの前提条件  
-###  <a name="a-namebkmk2012sspreqa-site-server-central-administration-site-and-primary-site"></a><a name="bkmk_2012sspreq"></a> サイト サーバー: 中央管理サイトおよびプライマリ サイト  
+##  <a name="bkmk_2012Prereq"></a> Windows Server 2012 以降のオペレーティング システムの前提条件  
+###  <a name="bkmk_2012sspreq"></a> サイト サーバー: 中央管理サイトおよびプライマリ サイト  
   **Windows Server の役割と機能:**  
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
@@ -78,7 +80,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   中央管理サイトとプライマリ サイトには、該当する再頒布可能ファイルの x86 および x64 バージョンの両方が必要です。  
 
-###  <a name="a-namebkmk2012secpreqa-site-server-secondary-site"></a><a name="bkmk_2012secpreq"></a> サイト サーバー: セカンダリ サイト  
+###  <a name="bkmk_2012secpreq"></a> サイト サーバー: セカンダリ サイト  
 **Windows Server の役割と機能:**  
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
@@ -99,7 +101,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   セカンダリ サイト サーバーが、それらのサイト システムの役割に対する前提条件を満たしていることを確認します。  
 
-###  <a name="a-namebkmk2012dbpreqa-database-server"></a><a name="bkmk_2012dbpreq"></a> データベース サーバー  
+###  <a name="bkmk_2012dbpreq"></a> データベース サーバー  
 **リモート レジストリ サービス:**  
 
 -   Configuration Manager サイトのインストール時には、サイト データベースをホストするコンピューターで、リモート レジストリ サービスが有効化されている必要があります。  
@@ -112,7 +114,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   セカンダリ サイトのインストールの一環として Configuration Manager によって SQL Server Express をインストールする場合は、コンピューターが SQL Server Express を実行する要件を満たしていることを確認します。  
 
-###  <a name="a-namebkmk2012smsprovpreqa-sms-provider-server"></a><a name="bkmk_2012smsprovpreq"></a> SMS プロバイダー サーバー  
+###  <a name="bkmk_2012smsprovpreq"></a> SMS プロバイダー サーバー  
 **Windows ADK:**  
 
 -   SMS プロバイダーのインスタンスをインストールするコンピューターには、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンが必要です。  
@@ -121,7 +123,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   要件の詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)」を参照してください。  
 
-###  <a name="a-namebkmk2012acwspreqa-application-catalog-website-point"></a><a name="bkmk_2012acwspreq"></a> アプリケーション カタログ Web サイト ポイント  
+###  <a name="bkmk_2012acwspreq"></a> アプリケーション カタログ Web サイト ポイント  
 **Windows Server の役割と機能:**  
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
@@ -156,7 +158,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   IIS 6 メタベース互換  
 
-###  <a name="a-namebkmk2012acwsitepreqa-application-catalog-web-service-point"></a><a name="bkmk_2012ACwsitepreq"></a> アプリケーション カタログ Web サービス ポイント  
+###  <a name="bkmk_2012ACwsitepreq"></a> アプリケーション カタログ Web サービス ポイント  
 **Windows Server の役割と機能:**  
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
@@ -193,12 +195,12 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   このサイト システムの役割が同じ要件の別のサイト システムの役割と併置される場合、このコンピューターに対するメモリの要件は増加しませんが、最低 5% の要件は維持されます。  
 
-###  <a name="a-namebkmk2012aipreqa-asset-intelligence-synchronization-point"></a><a name="bkmk_2012AIpreq"></a> 資産インテリジェンス同期ポイント  
+###  <a name="bkmk_2012AIpreq"></a> 資産インテリジェンス同期ポイント  
 **Windows Server の役割と機能:**  
 
 -   .NET Framework 4.5.2  
 
-###  <a name="a-namebkmk2012crppreqa-certificate-registration-point"></a><a name="bkmk_2012crppreq"></a> 証明書登録ポイント  
+###  <a name="bkmk_2012crppreq"></a> 証明書登録ポイント  
 **Windows Server の役割と機能:**  
 
 -   .NET Framework 4.5.2:  
@@ -219,7 +221,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   IIS 6 WMI 互換  
 
-###  <a name="a-namebkmk2012dppreqa-distribution-point"></a><a name="bkmk_2012dppreq"></a> 配布ポイント  
+###  <a name="bkmk_2012dppreq"></a> 配布ポイント  
 **Windows Server の役割と機能:**  
 
 -   Remote Differential Compression  
@@ -264,12 +266,12 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 > [!NOTE]  
 > 配布ポイント サイト システムの役割に、バックグラウンド インテリジェント転送サービス (BITS) は必要ありません。 配布ポイントのコンピューターに BITS が構成されている場合、BITS を使用するクライアントによるコンテンツのダウンロードを効率化するために、配布ポイントのコンピューターの BITS は使用されません。  
 
-###  <a name="a-namebkmk2012epppreqa-endpoint-protection-point"></a><a name="bkmk_2012EPPpreq"></a> Endpoint Protection ポイント  
+###  <a name="bkmk_2012EPPpreq"></a> Endpoint Protection ポイント  
 **Windows Server の役割と機能:**  
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
-###  <a name="a-namebkmk2012enrollpreqa-enrollment-point"></a><a name="bkmk_2012Enrollpreq"></a> 登録ポイント  
+###  <a name="bkmk_2012Enrollpreq"></a> 登録ポイント  
 **Windows Server の役割と機能:**  
 
 -   .NET framework 3.5 (またはそれ以降)  
@@ -309,7 +311,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   このサイト システムの役割が同じ要件の別のサイト システムの役割と併置される場合、このコンピューターに対するメモリの要件は増加しませんが、最低 5% の要件は維持されます。  
 
-###  <a name="a-namebkmk2012enrollproxpreqa-enrollment-proxy-point"></a><a name="bkmk_2012EnrollProxpreq"></a> 登録プロキシ ポイント  
+###  <a name="bkmk_2012EnrollProxpreq"></a> 登録プロキシ ポイント  
 **Windows Server の役割と機能:**  
 
 -   .NET framework 3.5 (またはそれ以降)  
@@ -350,14 +352,14 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   このサイト システムの役割が同じ要件の別のサイト システムの役割と併置される場合、このコンピューターに対するメモリの要件は増加しませんが、最低 5% の要件は維持されます。  
 
-###  <a name="a-namebkmk2012fsppreqa-fallback-status-point"></a><a name="bkmk_2012FSPpreq"></a> フォールバック ステータス ポイント  
+###  <a name="bkmk_2012FSPpreq"></a> フォールバック ステータス ポイント  
 既定の IIS 構成に加え、次が必要です。  
 
 -   IIS 6 管理互換性:  
 
     -   IIS 6 メタベース互換  
 
-###  <a name="a-namebkmk2012mppreqa-management-point"></a><a name="bkmk_2012MPpreq"></a> 管理ポイント  
+###  <a name="bkmk_2012MPpreq"></a> 管理ポイント  
 **Windows Server の役割と機能:**  
 
 -   .NET Framework 4.5.2  
@@ -380,20 +382,20 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   IIS 6 WMI 互換  
 
-###  <a name="a-namebkmk2012rspointa-reporting-services-point"></a><a name="bkmk_2012RSpoint"></a> レポート サービス ポイント  
+###  <a name="bkmk_2012RSpoint"></a> レポート サービス ポイント  
 **Windows Server の役割と機能:**  
 
 -   .NET Framework 4.5.2  
 
 **SQL Server Reporting Services:**  
 
--   レポート サービス ポイントをインストールする前に、SQL Server Reporting Services をサポートするために、SQL Server の&1; つ以上のインスタンスをインストールして構成する必要があります。  
+-   レポート サービス ポイントをインストールする前に、SQL Server Reporting Services をサポートするために、SQL Server の 1 つ以上のインスタンスをインストールして構成する必要があります。  
 
 -   SQL Server Reporting Services に使用するインスタンスは、サイト データベースに使用するインスタンスと同じものにすることができます。  
 
 -   さらに、そのインスタンスを別の System Center 製品と共有して使用することもできます。ただし、他の System Center 製品に SQL Server のインスタンスの共有に対する制限がない場合に限ります。  
 
-###  <a name="a-namebkmkscppreqa-service-connection-point"></a><a name="bkmk_SCPpreq"></a> サービス接続ポイント  
+###  <a name="bkmk_SCPpreq"></a> サービス接続ポイント  
 **Windows Server の役割と機能:**  
 
 -   .NET Framework 4.5.2  
@@ -406,7 +408,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   サイト システムの役割には、x64 バージョンが必要です。  
 
-###  <a name="a-namebkmk2012suppreqa-software-update-point"></a><a name="bkmk_2012SUPpreq"></a> ソフトウェアの更新ポイント  
+###  <a name="bkmk_2012SUPpreq"></a> ソフトウェアの更新ポイント  
 **Windows Server の役割と機能:**  
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
@@ -424,7 +426,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 ### <a name="state-migration-point"></a>状態移行ポイント  
 既定の IIS 構成が必要です。  
 
-##  <a name="a-namebkmk2008a-prerequisites-for-windows-server-2008-r2-and-windows-server-2008"></a><a name="bkmk_2008"></a> Windows Server 2008 R2 および Windows Server 2008 の前提条件  
+##  <a name="bkmk_2008"></a> Windows Server 2008 R2 および Windows Server 2008 の前提条件  
 [マイクロソフト サポート ライフサイクル](https://support.microsoft.com/lifecycle)で詳述するように、Windows Server 2008 および Windows Server 2008 R2 が延長サポートになり、メインストリーム サポートが終了しました。 Configuration Manager を使用したサイト システム サーバーとしてのこれらのオペレーティング システムの将来のサポートの詳細については、「[System Center Configuration Manager から削除された機能と非推奨の機能](../../../core/plan-design/changes/removed-and-deprecated-features.md)」を参照してください。  
 
 **次は、すべての .NET Framework の要件に適用されます。**  
@@ -435,7 +437,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   WCF のアクティブ化は、サイト システム サーバーの .NET Framework Windows 機能の一部として構成できます。 たとえば、Windows Server 2008 R2 では、**機能の追加ウィザード**を実行して、追加の機能をサーバーにインストールします。 **[機能の選択]** ページで、**[NET Framework 3.5.1 の機能]** を展開してから **[WCF アクティブ化]** を展開します。**[HTTP アクティブ化]** と **[非 HTTP アクティブ化]** の両方のチェック ボックスをオンにして、これらのオプションを有効にします。  
 
-###  <a name="a-namebkmk2008sspreqa-site-server-central-administration-site-and-primary-site"></a><a name="bkmk_2008sspreq"></a> サイト サーバー: 中央管理サイトおよびプライマリ サイト  
+###  <a name="bkmk_2008sspreq"></a> サイト サーバー: 中央管理サイトおよびプライマリ サイト  
 **.NET Framework:**  
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
@@ -460,7 +462,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   中央管理サイトとプライマリ サイトには、該当する再頒布可能ファイルの x86 および x64 バージョンの両方が必要です。  
 
-###  <a name="a-namebkmk2008secpreqa-site-server-secondary-site"></a><a name="bkmk_2008secpreq"></a> サイト サーバー: セカンダリ サイト  
+###  <a name="bkmk_2008secpreq"></a> サイト サーバー: セカンダリ サイト  
 **.NET Framework:**  
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
@@ -479,7 +481,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   セカンダリ サイト サーバーが、それらのサイト システムの役割に対する前提条件を満たしていることを確認します。  
 
-###  <a name="a-namebkmk2008dbpreqa-database-server"></a><a name="bkmk_2008dbpreq"></a> データベース サーバー  
+###  <a name="bkmk_2008dbpreq"></a> データベース サーバー  
 **リモート レジストリ サービス:**  
 
 -   Configuration Manager サイトのインストール時には、サイト データベースをホストするコンピューターで、リモート レジストリ サービスが有効化されている必要があります。  
@@ -492,7 +494,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   セカンダリ サイトのインストールの一環として Configuration Manager によって SQL Server Express をインストールする場合は、コンピューターが SQL Server Express を実行する要件を満たしていることを確認します。  
 
-###  <a name="a-namebkmk2008smsprovpreqa-sms-provider-server"></a><a name="bkmk_2008smsprovpreq"></a> SMS プロバイダー サーバー  
+###  <a name="bkmk_2008smsprovpreq"></a> SMS プロバイダー サーバー  
 **Windows ADK:**  
 
 -   SMS プロバイダーのインスタンスをインストールするコンピューターには、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンが必要です。  
@@ -501,7 +503,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   要件の詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)」を参照してください。  
 
-###  <a name="a-namebkmk2008acwspreqa-application-catalog-website-point"></a><a name="bkmk_2008acwspreq"></a> アプリケーション カタログ Web サイト ポイント  
+###  <a name="bkmk_2008acwspreq"></a> アプリケーション カタログ Web サイト ポイント  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -530,7 +532,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   IIS 6 メタベース互換  
 
-###  <a name="a-namebkmk2008acwsitepreqa-application-catalog-web-service-point"></a><a name="bkmk_2008ACwsitepreq"></a> アプリケーション カタログ Web サービス ポイント  
+###  <a name="bkmk_2008ACwsitepreq"></a> アプリケーション カタログ Web サービス ポイント  
 **.NET Framework:**  
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
@@ -563,12 +565,12 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   このサイト システムの役割が同じ要件の別のサイト システムの役割と併置される場合、このコンピューターに対するメモリの要件は増加しませんが、最低 5% の要件は維持されます。  
 
-###  <a name="a-namebkmk2008aipreqa-asset-intelligence-synchronization-point"></a><a name="bkmk_2008AIpreq"></a> 資産インテリジェンス同期ポイント  
+###  <a name="bkmk_2008AIpreq"></a> 資産インテリジェンス同期ポイント  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
 
-###  <a name="a-namebkmk2008crppreqa-certificate-registration-point"></a><a name="bkmk_2008crppreq"></a> 証明書登録ポイント  
+###  <a name="bkmk_2008crppreq"></a> 証明書登録ポイント  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -585,7 +587,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   IIS 6 WMI 互換  
 
-###  <a name="a-namebkmk2008dppreqa-distribution-point"></a><a name="bkmk_2008dppreq"></a> 配布ポイント  
+###  <a name="bkmk_2008dppreq"></a> 配布ポイント  
 **IIS の構成:**
 
 既定の IIS 構成を使用することも、カスタム構成を使用することもできます。 カスタムの IIS 構成を使用するには、次に示す IIS のオプションを有効にする必要があります。  
@@ -637,12 +639,12 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 > 配布ポイント サイト システムの役割に、バックグラウンド インテリジェント転送サービス (BITS) は必要ありません。 配布ポイントのコンピューターに BITS が構成されている場合、BITS を使用するクライアントによるコンテンツのダウンロードを効率化するために、配布ポイントのコンピューターの BITS は使用されません。  
 
 
-###  <a name="a-namebkmk2008epppreqa-endpoint-protection-point"></a><a name="bkmk_2008EPPpreq"></a> Endpoint Protection ポイント  
+###  <a name="bkmk_2008EPPpreq"></a> Endpoint Protection ポイント  
 **.NET Framework:**  
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
-###  <a name="a-namebkmk2008enrollpreqa-enrollment-point"></a><a name="bkmk_2008Enrollpreq"></a> 登録ポイント  
+###  <a name="bkmk_2008Enrollpreq"></a> 登録ポイント  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -671,7 +673,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   このサイト システムの役割が同じ要件の別のサイト システムの役割と併置される場合、このコンピューターに対するメモリの要件は増加しませんが、最低 5% の要件は維持されます。  
 
-###  <a name="a-namebkmk2008enrollproxpreqa-enrollment-proxy-point"></a><a name="bkmk_2008EnrollProxpreq"></a> 登録プロキシ ポイント  
+###  <a name="bkmk_2008EnrollProxpreq"></a> 登録プロキシ ポイント  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -700,7 +702,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   このサイト システムの役割が同じ要件の別のサイト システムの役割と併置される場合、このコンピューターに対するメモリの要件は増加しませんが、最低 5% の要件は維持されます。  
 
-###  <a name="a-namebkmk2008fsppreqa-fallback-status-point"></a><a name="bkmk_2008FSPpreq"></a> フォールバック ステータス ポイント  
+###  <a name="bkmk_2008FSPpreq"></a> フォールバック ステータス ポイント  
 **IIS の構成:**
 
 既定の IIS 構成に加え、次が必要です。  
@@ -709,7 +711,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   IIS 6 メタベース互換  
 
-###  <a name="a-namebkmk2008mppreqa-management-point"></a><a name="bkmk_2008MPpreq"></a> 管理ポイント  
+###  <a name="bkmk_2008MPpreq"></a> 管理ポイント  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -750,20 +752,20 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   BITS サーバー拡張 (および自動的に選択されるオプション)、またはバックグラウンド インテリジェント転送サービス (BITS) (および自動的に選択されるオプション)  
 
-###  <a name="a-namebkmk2008rspointa-reporting-services-point"></a><a name="bkmk_2008RSpoint"></a> レポート サービス ポイント  
+###  <a name="bkmk_2008RSpoint"></a> レポート サービス ポイント  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
 
 **SQL Server Reporting Services:**  
 
--   レポート サービス ポイントをインストールする前に、SQL Server Reporting Services をサポートするために、SQL Server の&1; つ以上のインスタンスをインストールして構成する必要があります。  
+-   レポート サービス ポイントをインストールする前に、SQL Server Reporting Services をサポートするために、SQL Server の 1 つ以上のインスタンスをインストールして構成する必要があります。  
 
 -   SQL Server Reporting Services に使用するインスタンスは、サイト データベースに使用するインスタンスと同じものにすることができます。  
 
 -   さらに、そのインスタンスを別の System Center 製品と共有して使用することもできます。ただし、他の System Center 製品に SQL Server のインスタンスの共有に対する制限がない場合に限ります。  
 
-###  <a name="a-namebkmk2008scppreqa-service-connection-point"></a><a name="bkmk_2008SCPpreq"></a> サービス接続ポイント  
+###  <a name="bkmk_2008SCPpreq"></a> サービス接続ポイント  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
@@ -776,7 +778,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   サイト システムの役割には、x64 バージョンが必要です。  
 
-###  <a name="a-namebkmk2008suppreqa-software-update-point"></a><a name="bkmk_2008SUPpreq"></a> ソフトウェアの更新ポイント  
+###  <a name="bkmk_2008SUPpreq"></a> ソフトウェアの更新ポイント  
 **.NET Framework:**  
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
@@ -793,13 +795,8 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   詳細については、「[System Center Configuration Manager でのソフトウェア更新プログラムの計画](../../../sum/plan-design/plan-for-software-updates.md)」をご覧ください。
 
-###  <a name="a-namebkmk2008smppreqa-state-migration-point"></a><a name="bkmk_2008SMPpreq"></a> 状態移行ポイント  
+###  <a name="bkmk_2008SMPpreq"></a> 状態移行ポイント  
 **IIS の構成:**
 
 既定の IIS 構成が必要です。  
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 
