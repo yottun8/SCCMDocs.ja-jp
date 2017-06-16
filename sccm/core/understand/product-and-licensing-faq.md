@@ -58,7 +58,7 @@ SA (ソフトウェア アシュアランス) も L&SA (ライセンスおよび
        ライセンス製品の詳細については、https://www.microsoft.com/licensing/licensing-programs および http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64 を参照してください。
 
 4.    **“同等のサブスクリプション” という用語がありますが、どのプログラムを指していますか?**   
-       同等のサブスクリプションとは、[Enterprise Mobility + Security](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) (EMS) または [Secure Productive Enterprise](https://www.microsoft.com/secure-productive-enterprise/default.aspx) (SPE) などを指しています。 他にもありますが、この&2; つが特に一般的です。 これらは、Microsoft ボリューム ライセンス製品の用語では、管理ライセンスと同等のライセンスと呼ばれています。
+       同等のサブスクリプションとは、[Enterprise Mobility + Security](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) (EMS) または [Secure Productive Enterprise](https://www.microsoft.com/secure-productive-enterprise/default.aspx) (SPE) などを指しています。 他にもありますが、この 2 つが特に一般的です。 これらは、Microsoft ボリューム ライセンス製品の用語では、管理ライセンスと同等のライセンスと呼ばれています。
 
 5.    **Enterprise Mobility + Security を持っていますが、有効期限が切れてしまいました。何をする必要がありますか?**  
        EMS は System Center Configuration Manager (Current Branch および Long-Term Servicing Branch) を使用する権限を付与します。 これらの権限の有効期限が切れると、どちらのブランチも使用する権限がなくなるため、アンインストールする必要があります。  

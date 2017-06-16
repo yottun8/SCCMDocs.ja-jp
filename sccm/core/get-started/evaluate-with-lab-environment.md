@@ -41,7 +41,7 @@ ms.lasthandoff: 05/17/2017
 -   オンプレミス サーバー アーキテクチャのスケールアップの管理を必要とする管理者  
 
 ## <a name="what-this-lab-does"></a>このラボの実行内容  
- このラボ環境を作成する主な目的は、Configuration Manager の使用を開始するための一般的な知識を提供すること、および Configuration Manager についての理解を深めることです。 次の&2; 台のサーバーを使用して、最新バージョンの Configuration Manager の簡易化した構成を使って説明します。  
+ このラボ環境を作成する主な目的は、Configuration Manager の使用を開始するための一般的な知識を提供すること、および Configuration Manager についての理解を深めることです。 次の 2 台のサーバーを使用して、最新バージョンの Configuration Manager の簡易化した構成を使って説明します。  
 
 -   Active Directory、ドメイン コントローラー、および DNS サーバーをホストするサーバー  
 
