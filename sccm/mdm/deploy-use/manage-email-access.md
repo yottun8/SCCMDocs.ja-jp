@@ -119,7 +119,7 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
  レポートの実行方法の詳細については、「[System Center Configuration Manager のレポート](../../core/servers/manage/reporting.md)」を参照してください。  
 
- レポートを実行した後、ユーザーをブロックするかどうかを判断するために、次の&4; つの列を調べます。  
+ レポートを実行した後、ユーザーをブロックするかどうかを判断するために、次の 4 つの列を調べます。  
 
 -   **[管理チャネル]** - デバイスが Intune、Exchange ActiveSync、またはその両方によって管理されているかどうかを示します。  
 
@@ -148,7 +148,7 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
 -   **Exchange On-premises ポリシーの場合** - Configuration Manager ユーザー コレクションを対象。 [ **資産とコンプライアンス** ] ワークスペースでこれらを構成できます。  
 
- 各ポリシーには、次の&2; つのグループの種類を指定できます。  
+ 各ポリシーには、次の 2 つのグループの種類を指定できます。  
 
 -   **対象グループ** - ポリシーが適用されるユーザー グループまたはコレクション  
 

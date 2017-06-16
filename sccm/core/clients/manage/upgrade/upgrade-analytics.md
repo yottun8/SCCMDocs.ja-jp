@@ -24,7 +24,7 @@ ms.lasthandoff: 05/17/2017
 # <a name="integrate-upgrade-readiness-with-system-center-configuration-manager"></a>Upgrade Readiness と System Center Configuration Manager との統合
 Upgrade Readiness (旧称 Upgrade Analytics) を使用すると、デバイスの準備と Windows 10 との互換性を評価および分析して、簡単かつスムーズなアップグレードが可能になります。 Upgrade Readiness と System Center Configuration Manager を統合することで、クライアントは Configuration Manager 管理コンソールでアップグレードの互換性データにアクセスできるようになります。 その後、デバイス リストからアップグレードまたは修復対象のデバイスを指定できます。
 
-Upgrade Readiness は、Microsoft Operations Management Suite (OMS) のソリューションの&1; つです。 Upgrade Readiness の詳細については、「[Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness)」(Upgrade Readiness の概要) を参照してください。
+Upgrade Readiness は、Microsoft Operations Management Suite (OMS) のソリューションの 1 つです。 Upgrade Readiness の詳細については、「[Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness)」(Upgrade Readiness の概要) を参照してください。
 
 ## <a name="configure-clients"></a>クライアントを構成する
 

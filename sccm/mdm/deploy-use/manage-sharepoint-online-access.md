@@ -111,7 +111,7 @@ System Center Configuration Manager の **SharePoint Online** 条件付きアク
 ### <a name="step-1-configure-active-directory-security-groups"></a>手順 1. Active Directory セキュリティ グループを構成する  
  開始する前に、条件付きアクセス ポリシーの Azure Active Directory セキュリティ グループを構成します。 これらのグループは、 **Office 365 管理センター**または **Intune アカウント ポータル**で構成できます。 これらのグループには、ポリシーの対象となるユーザーや、ポリシーから除外されるユーザーが含まれます。 ユーザーがポリシーの対象となる場合、ユーザーに使用される各デバイスがリソースにアクセスするには、ポリシーを遵守している必要があります。  
 
- SharePoint Online ポリシーには、次の&2; つのグループの種類を指定できます。  
+ SharePoint Online ポリシーには、次の 2 つのグループの種類を指定できます。  
 
 -   **対象グループ** – ポリシーを適用するユーザーのグループが含まれます。  
 

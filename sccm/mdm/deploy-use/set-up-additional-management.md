@@ -48,7 +48,7 @@ ms.lasthandoff: 05/17/2017
 - [Skype for Business へのアクセス](manage-skype-for-business-online-access.md)
 - [Dynamic CRM Online](manage-dynamics-crm-online-access.md)
 
-**多要素認証 (MFA)** を使用すると複数の検証方法が必要になり、ユーザーのサインインとトランザクションに対して重要な第&2; のセキュリティ層が追加されます。
+**多要素認証 (MFA)** を使用すると複数の検証方法が必要になり、ユーザーのサインインとトランザクションに対して重要な第 2 のセキュリティ層が追加されます。
 これまで、Intune の登録に MFA を設定するには、Intune コンソールまたは構成マネージャー コンソールを使用していました。 今後は Intune の資格情報で [Microsoft Azure Portal](https://manage.windowsazure.com) にログインし、Azure AD を使用して MFA の設定を構成するようになります。 詳細については、[Microsoft Intune への多要素認証](https://aka.ms/mfa_ad)に関する記事を参照してください。
 
 > [!div class="button"]

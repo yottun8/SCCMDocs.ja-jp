@@ -30,7 +30,7 @@ ms.lasthandoff: 05/17/2017
 Microsoft Intune (試用版サブスクリプションまたは有料サブスクリプション) を Configuration Manager に追加してから、別の Intune サブスクリプションに切り替える必要がある場合は、**Microsoft Intune サブスクリプション**と**サービス接続ポイント**の両方を Configuration Manager コンソールから削除する必要があります。これにより、新しいサブスクリプションを追加することができるようになります。
 
 > [!NOTE]
-> ハイブリッド モバイル デバイス管理では&1; 回につき&1; つだけ Intune サブスクリプションを構成できます。
+> ハイブリッド モバイル デバイス管理では 1 回につき 1 つだけ Intune サブスクリプションを構成できます。
 
 ## <a name="how-to-delete-an-intune-subscription-from-configuration-manager"></a>Configuration Manager から Intune サブスクリプションを削除する方法
 
