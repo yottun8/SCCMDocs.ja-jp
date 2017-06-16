@@ -50,7 +50,7 @@ System Center Configuration Manager のハードウェア インベントリを�
 >  Linux および UNIX を実行しているクライアントでハードウェア インベントリを使用する方法については、「[Hardware inventory for Linux and UNIX in System Center Configuration Manager](../../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)」(System Center Configuration Manager における Linux および UNIX のハードウェア インベントリ) を参照してください。  
 
 ## <a name="extending-configuration-manager-hardware-inventory"></a>Configuration Manager のハードウェア インベントリの拡張  
- Configuration Manager に組み込まれたハードウェア インベントリに加えて、次の方法のうちの&1; つを使用して、ハードウェア インベントリを拡張し、追加の情報を収集することができます。  
+ Configuration Manager に組み込まれたハードウェア インベントリに加えて、次の方法のうちの 1 つを使用して、ハードウェア インベントリを拡張し、追加の情報を収集することができます。  
 
 - Configuration Manager コンソールでは、ハードウェア インベントリのインベントリ クラスの有効化、無効化、追加、および削除を行うことができます。|  
 - NOIDMIF ファイルは、Configuration Manager ではインベントリできないクライアント デバイスに関する情報を収集するために使用します。 たとえば、デバイス上にラベルとしてのみ存在するデバイス資産番号情報を収集できます。 NOIDMIF のインベントリは、収集元のクライアント デバイスに自動的に関連付けられます。  

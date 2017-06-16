@@ -64,7 +64,7 @@ ms.lasthandoff: 05/17/2017
  これで、「[System Center Configuration Manager での構成基準の作成と展開に関する一般的なタスク](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)」トピックの情報を使用して、作成した構成をデバイスに簡単に展開できるようになります。  
 
 ## <a name="scenarios-for-windows-desktop-and-server-computers-managed-with-the-configuration-manager-client"></a>Configuration Manager クライアントを使用して管理されている Windows デスクトップおよびサーバー コンピューターを対象としたシナリオ  
- Configuration Manager クライアントを実行している Mac コンピューターでは、コンプライアンスを評価するためのオプションが&2; つあります。  
+ Configuration Manager クライアントを実行している Mac コンピューターでは、コンプライアンスを評価するためのオプションが 2 つあります。  
 
 -   Mac OS X の設定 (plist) ファイルを評価します。  
 
