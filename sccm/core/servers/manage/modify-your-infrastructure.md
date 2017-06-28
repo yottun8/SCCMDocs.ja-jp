@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
 ms.openlocfilehash: a5228c4984347be4b115bfa5563791fa2fb7319c
+ms.contentlocale: ja-jp
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -29,7 +31,7 @@ ms.openlocfilehash: a5228c4984347be4b115bfa5563791fa2fb7319c
 1 つ以上のサイトをインストールした後、構成を変更するか、展開したインフラストラクチャに影響を与えるアクションを取る必要があります。  
 
 
-##  <a name="a-namebkmkmanagesmsprovidera-manage-the-sms-provider"></a><a name="BKMK_ManageSMSprovider"></a> SMS プロバイダーを管理する  
+##  <a name="BKMK_ManageSMSprovider"></a> SMS プロバイダーを管理する  
  SMS プロバイダー (ダイナミック リンク ライブラリ ファイル: smsprov.dll) は、1 つ以上の Configuration Manager コンソールの管理のための接続ポイントとなります。 複数の SMS プロバイダーをインストールすると、サイトおよび階層を管理するための冗長な接続ポイントを提供できます。  
 
  各 Configuration Manager サイトで、セットアップを再実行できます。  
@@ -65,7 +67,7 @@ ms.openlocfilehash: a5228c4984347be4b115bfa5563791fa2fb7319c
 
  セットアップ ウィザードを終了すると、SMS プロバイダーの構成が完了します。 **[全般]** タブのサイトの **[プロパティ]** ダイアログ ボックスで、サイトの SMS プロバイダーがインストールされているコンピューターを確認できます。  
 
-##  <a name="a-namebkmkconsolea-manage-the-configuration-manager-console"></a><a name="bkmk_Console"></a> Configuration Manager コンソールを管理する  
+##  <a name="bkmk_Console"></a> Configuration Manager コンソールを管理する  
  Configuration Manager コンソールの管理で行えるタスクは、次のとおりです。  
 
 -   **Configuration Manager コンソールに表示される言語を変更する**: インストールされている言語を変更するには、このトピックの「[Configuration Manager コンソールの言語の管理](#BKMK_ManageConsoleLanguages)」を参照してください。  
@@ -76,7 +78,7 @@ ms.openlocfilehash: a5228c4984347be4b115bfa5563791fa2fb7319c
 
 -   [**コンソールで管理ユーザーに表示される内容を制限するようアクセス許可を変更する**] 管理アクセス許可を変更するには (これによって、コンソールに表示される内容とコンソールで行える操作が制限される)、「[管理ユーザーの管理スコープの変更](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_ModAdminUser)」を参照してください。     
 
-###  <a name="a-namebkmkmanageconsolelanguagesa-manage-configuration-manager-console-language"></a><a name="BKMK_ManageConsoleLanguages"></a> Configuration Manager コンソールの言語を管理する  
+###  <a name="BKMK_ManageConsoleLanguages"></a> Configuration Manager コンソールの言語を管理する  
  サイト サーバーのインストール中に、Configuration Manager コンソールのインストール ファイルおよびサイトでサポートされる言語パックが、サイト サーバーの **&lt;Configuration Manager のインストール パス\>\Tools\ConsoleSetup** サブフォルダーにコピーされます。  
 
 -   サイト サーバーのこのフォルダーから Configuration Manager コンソールのインストールを開始すると、Configuration Manager コンソールとサポートされる言語パック ファイルがコンピューターにコピーされます。  
@@ -112,7 +114,7 @@ ms.openlocfilehash: a5228c4984347be4b115bfa5563791fa2fb7319c
 
 4.  コンピューターで設定されている言語で Configuration Manager コンソールを開くには、フォルダーを元の名前に戻します。 たとえば、「 **de.disabled** 」を「 **de**」に変更します。  
 
-##  <a name="a-namebkmkconfigdcomforremoteconsolea-configure-dcom-permissions-for-remote-configuration-manager-consoles"></a><a name="BKMK_ConfigDCOMforRemoteConsole"></a> リモート Configuration Manager コンソールに対する DCOM アクセス許可を構成する  
+##  <a name="BKMK_ConfigDCOMforRemoteConsole"></a> リモート Configuration Manager コンソールに対する DCOM アクセス許可を構成する  
  Configuration Manager コンソールを実行するユーザー アカウントには、SMS プロバイダーを使用してサイト データベースにアクセスするためのアクセス許可が必要となります。 ただし、リモート Configuration Manager コンソールを使用する管理ユーザーには、次の場所での **リモート アクティブ化** DCOM アクセス許可も必要となります。  
 
 -   サイト サーバー コンピューター  
@@ -147,7 +149,7 @@ ms.openlocfilehash: a5228c4984347be4b115bfa5563791fa2fb7319c
 
  リモートの Configuration Manager コンソールをサポートする各 SMS プロバイダーのコンピューターで、この手順を繰り返します。  
 
-##  <a name="a-namebkmkdbconfiga-modify-the-site-database-configuration"></a><a name="bkmk_dbconfig"></a> サイト データベースの構成を変更する  
+##  <a name="bkmk_dbconfig"></a> サイト データベースの構成を変更する  
  サイトをインストールした後に、サイト データベースおよびサイト データベース サーバーの構成を変更するには、中央管理サイト サーバーまたはプライマリ サイト サーバーでセットアップを実行します。 サイト データベースは、同じコンピューター上の SQL Server の新しいインスタンス、またはサポートされているバージョンの SQL Server を実行する別のコンピューターに移動できます。 これらの変更および関連する変更は、セカンダリ サイトのデータベースの構成ではサポートされません。  
 
  サポートの制限について詳しくは、「 [Configuration Manager 環境での手動によるデータベース変更のサポート ポリシー](https://support.microsoft.com/kb/3106512)」をご覧ください。  
@@ -176,9 +178,9 @@ ms.openlocfilehash: a5228c4984347be4b115bfa5563791fa2fb7319c
 
 
 > [!IMPORTANT]  
->  管理ポイントの&1; つまたは複数のデータベースのレプリカを持つデータベースを移動する場合は、最初にデータベースのレプリカを削除する必要があります。 データベースの移動が完了したら、データベースのレプリカを再構成できます。 詳細については、「 [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」をご覧ください。  
+>  管理ポイントの 1 つまたは複数のデータベースのレプリカを持つデータベースを移動する場合は、最初にデータベースのレプリカを削除する必要があります。 データベースの移動が完了したら、データベースのレプリカを再構成できます。 詳細については、「 [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」をご覧ください。  
 
-##  <a name="a-namebkmkspna-manage-the-spn-for-the-site-database-server"></a><a name="bkmk_SPN"></a> サイト データベース サーバーの SPN を管理する  
+##  <a name="bkmk_SPN"></a> サイト データベース サーバーの SPN を管理する  
 サイト データベースの SQL サービスを実行するアカウントを選択することができます。  
 
 -   コンピューターのシステム アカウントでサービスが実行されると、SPN は自動的に登録されます。  
@@ -248,7 +250,7 @@ SQL Server ドキュメントは [SPN を手動で登録する](https://technet.
 
 6.  サービス アカウントの変更が完了したら、 **[OK]** をクリックします。  
 
-##  <a name="a-namebkmkreseta-run-a-site-reset"></a><a name="bkmk_reset"></a> サイト リセットを実行する  
+##  <a name="bkmk_reset"></a> サイト リセットを実行する  
  中央管理サイトまたはプライマリ サイトでサイト リセットを実行すると、サイトで次の操作が行われます。  
 
 -   既定の Configuration Manager ファイルおよびレジストリ アクセス許可を再適用する  
@@ -306,7 +308,7 @@ SQL Server ドキュメントは [SPN を手動で登録する](https://technet.
 
 サイトのリセットが完了したら、[閉じる] をクリックしてこの手順を完了します。 ****  
 
-##  <a name="a-namebkmksitelanga-manage-language-packs-at-a-site"></a><a name="bkmk_sitelang"></a> サイトの言語パックを管理する  
+##  <a name="bkmk_sitelang"></a> サイトの言語パックを管理する  
 サイトをインストールした後、使用中のサーバーおよびクライアントの言語パックを変更することができます。  
 
 **サーバー言語パック:**  
@@ -356,7 +358,7 @@ Configuration Manager によってサポートされているクライアント�
 
 8.  [閉じる **** ] をクリックしてこの手順を完了します。  
 
-##  <a name="a-namebkmkmoddbalerta-modify-the-database-server-alert-threshold"></a><a name="BKMK_ModDBAlert"></a> データベース サーバーのアラートしきい値を変更する  
+##  <a name="BKMK_ModDBAlert"></a> データベース サーバーのアラートしきい値を変更する  
  Configuration Manager の既定では、サイト データベース サーバーの空きディスク領域が少なくなると、アラートが発生するようになっています。 既定では、空きディスク領域が 10 GB 以下になると警告アラートが、5 GB 以下になると重大なアラートが発生します。 サイトごとに、このしきい値を変更したり、アラートを無効にしたりすることができます。  
 
  アラートの設定を変更するには  
@@ -368,9 +370,4 @@ Configuration Manager によってサポートされているクライアント�
 3.  サイトの **[プロパティ]** ダイアログ ボックスで **[アラート]** タブを選択し、設定を編集します。  
 
 4.  [OK] をクリックし、[プロパティ] ダイアログ ボックスを閉じます。 ****  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 
