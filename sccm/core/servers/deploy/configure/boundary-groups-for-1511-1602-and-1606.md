@@ -21,11 +21,11 @@ ms.openlocfilehash: 640cdc67f301a81a45bf27f95eb03cbc8754a9aa
 ms.contentlocale: ja-jp
 ms.lasthandoff: 05/17/2017
 
-
 ---
 # <a name="boundary-groups-for-system-center-configuration-manager-version-1511-1602-and-1606"></a>System Center Configuration Manager バージョン 1511、1602、1606 の境界グループ
 
 *適用対象: System Center Configuration Manager (Current Branch)*
+<!-- This topic drops from TOC with the release of version 1706 -->
 
 このトピックの情報は、System Center Configuration Manager のバージョン 1511、1602、1606 での境界グループの使用に関するものです。
 バージョン 1610 以降を使用する場合、再設計された境界グループの使用方法については「[境界グループを構成する](/sccm/core/servers/deploy/configure/boundary-groups)」を参照してください。  

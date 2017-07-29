@@ -2,7 +2,7 @@
 title: "1702 のチェックリスト | System Center Configuration Manager"
 description: "System Center Configuration Manager バージョン 1702 に更新する前に、実行するアクションについて説明します。"
 ms.custom: na
-ms.date: 6/6/2017
+ms.date: 06/06/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -22,8 +22,7 @@ ms.contentlocale: ja-jp
 ms.lasthandoff: 06/13/2017
 
 ---
-# System Center Configuration Manager の更新プログラム 1702 をインストールするためのチェックリスト
-<a id="checklist-for-installing-update-1702-for-system-center-configuration-manager" class="xliff"></a>
+# <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム 1702 をインストールするためのチェックリスト
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -46,8 +45,7 @@ System Center Configuration Manager の Current Branch を利用するとき、�
 
 Current Branch バージョンの詳細については、「[System Center Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)」の「[基準バージョンと更新プログラムのバージョン](/sccm/core/servers/manage/updates#bkmk_Baselines)」を参照してください。
 
-## 更新プログラム 1702 のインストールについて
-<a id="about-installing-update-1702" class="xliff"></a>
+## <a name="about-installing-update-1702"></a>更新プログラム 1702 のインストールについて
 
 **サイト:**  
 更新プログラム 1702 は、階層の最上位サイトにインストールします。 つまり、中央管理サイトがある場合はそこからインストールを開始します。そうでない場合は、スタンドアロン プライマリ サイトからインストールを開始します。 更新プログラムを最上位サイトにインストールすると、子サイトで次の更新動作が行われます。
@@ -70,8 +68,7 @@ Current Branch バージョンの詳細については、「[System Center Confi
 
 
 
-## チェックリスト
-<a id="checklist" class="xliff"></a>
+## <a name="checklist"></a>チェックリスト
 
 **すべてのサイトで、1702 への更新をサポートしているバージョンの System Center Configuration Manager が実行されていることを確認する:**   
 更新プログラム 1702 のインストールを始めるには、階層内の各サイト サーバーが、同じバージョンの System Center Configuration Manager を実行している必要があります。 1702 に更新するには、バージョン 1602、1606、または 1610 を使っている必要があります。
@@ -187,8 +184,7 @@ Do not run a test database upgrade on the production site database. Doing so upd
 
 詳細については、「[System Center Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)」を参照してください。
 
-## 更新後のチェックリスト
-<a id="post-update-checklist" class="xliff"></a>
+## <a name="post-update-checklist"></a>更新後のチェックリスト
 更新プログラムのインストールが完了した後で以下の作業が行われることを確認します。
 1.  サイト間レプリケーションがアクティブであることを確認します。 コンソールで、**[監視]** > **[サイト階層]** および**[監視]** > **[データベースのレプリケーション]** を表示し、問題が発生していないこと、またはレプリケーション リンクがアクティブであることを確認します。
 2.  各サイト サーバーおよびサイト システムの役割がバージョン 1702 に更新されていることを確認します。 コンソールでは、**[サイト]** や **[配布ポイント]** などの一部のノードの表示に、オプションの列 **[バージョン]** を追加できます。
