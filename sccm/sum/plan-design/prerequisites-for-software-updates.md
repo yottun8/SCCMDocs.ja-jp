@@ -12,9 +12,10 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
 ms.openlocfilehash: 179f076f228daa5adf612275a822cd379b0ce1e3
+ms.contentlocale: ja-jp
 ms.lasthandoff: 12/16/2016
 
 
@@ -84,7 +85,7 @@ ms.lasthandoff: 12/16/2016
 ### <a name="reporting-services-point"></a>レポート サービス ポイント  
  レポート サービス ポイントのサイト システムの役割は、ソフトウェア更新プログラムのレポートを表示できます。 この役割は任意ですが、使用することをお勧めします。 レポート サービス ポイント作成の詳細については、「[レポートの構成](../../core/servers/manage/configuring-reporting.md)」を参照してください。  
 
-##  <a name="a-namebkmkrecoverupgradesa-recover-from-synchronizing-the-upgrades-category-before-you-install-kb-3095113"></a><a name="BKMK_RecoverUpgrades"></a> KB 3095113 をインストールする前のアップグレード カテゴリの同期からの回復  
+##  <a name="BKMK_RecoverUpgrades"></a> KB 3095113 をインストールする前のアップグレード カテゴリの同期からの回復  
  **アップグレード**分類を同期する前に、ソフトウェアの更新ポイントとサイト サーバーに WSUS の[修正プログラム 3095113](https://support.microsoft.com/kb/3095113) をインストールする必要があります。 **アップグレード** 分類が有効になっているときに修正プログラムがインストールされていない場合、WSUS は関連付けられているパッケージを適切にダウンロードおよび展開できない場合でも、Windows 10 ビルド 1511 の機能アップグレードを表示します。 [修正プログラム 3095113](https://support.microsoft.com/kb/3095113)を最初にインストールせずにアップグレードを同期する場合、アップグレードを適切に展開するには、WSUS データベース (SUSDB) に、クリアする必要がある使用不可のデータを読み込みます。  この問題から回復するには、次の手順を実行します。  
 
 #### <a name="to-recover-from-synchronizing-the-upgrades-classification-before-you-install-kb-3095113"></a>KB 3095113 をインストールする前に、アップグレード分類の同期から回復するには  
