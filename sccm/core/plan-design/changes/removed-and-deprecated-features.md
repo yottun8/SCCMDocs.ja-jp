@@ -16,16 +16,14 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0ec241d07f51b80b84d65676ef1207b31a9a9983
-ms.openlocfilehash: e23acf743d8f73afd213c44c3728d1b66d7e558f
+ms.translationtype: HT
+ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
+ms.openlocfilehash: 98fa323cb94013d875e2cea41b80fff8cc75b6b2
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/28/2017
-
+ms.lasthandoff: 07/26/2017
 
 ---
-# System Center Configuration Manager から削除された機能と非推奨の機能
-<a id="removed-and-deprecated-features-for-system-center-configuration-manager" class="xliff"></a>
+# <a name="removed-and-deprecated-features-for-system-center-configuration-manager"></a>System Center Configuration Manager から削除された機能と非推奨の機能
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -33,8 +31,7 @@ ms.lasthandoff: 06/28/2017
 
 この情報は、今後のリリースで変更される可能性があります。また、非推奨の機能、製品、またはオペレーティング システムをすべて記載しているわけではありません。  
 
-## この情報の使用方法
-<a id="how-to-use-this-information" class="xliff"></a>  
+## <a name="how-to-use-this-information"></a>この情報の使用方法  
 機能またはオペレーティング システムが非推奨と最初に示されるとき、それは今後の Configuration Manager のバージョンで、それの Configuration Manager での使用がサポートされなくなることを意味します。 この情報は、その機能またはオペレーティング システムの代わりとなるものを計画できるよう、提供しています。 それがサポート対象外となる Configuration Manager の最初のバージョンがリリースされると、その特定のバージョンを示すよう、このトピックは更新されます。  
 
 機能またはオペレーティング システムがサポート対象外となった場合でも、前のバージョンのサポート対象の Configuration Manager を使用する場合、その機能またはオペレーティング システムはサポートされます。 ただし、それ以降の日付にリリースされたまたは記載されているバージョンの Configuration Manager を使用する場合、そのバージョンの Configuration Manager ではサポートされません。
@@ -51,10 +48,8 @@ ms.lasthandoff: 06/28/2017
 
 
 
-## 非推奨オペレーティング システム
-<a id="deprecated-operating-systems" class="xliff"></a>
-### サーバー オペレーティング システム
-<a id="server-operating-systems" class="xliff"></a>  
+## <a name="deprecated-operating-systems"></a>非推奨オペレーティング システム
+### <a name="server-operating-systems"></a>サーバー オペレーティング システム  
 
 |**オペレーティング システム**|**最初に非推奨と発表**|**サポートの削除** |  
 |-|-|-|  
@@ -69,8 +64,7 @@ ms.lasthandoff: 06/28/2017
 
 
 
-### クライアント オペレーティング システム
-<a id="client-operating-systems" class="xliff"></a>  
+### <a name="client-operating-systems"></a>クライアント オペレーティング システム  
 
  特に明記されていない限り、Configuration Manager クライアントとしてサポートされている各オペレーティング システムは、オペレーティングシステムの延長サポート終了日までサポートされます。 延長サポート終了日の詳細については、「[Microsoft サポート ライフ サイクル](https://support.microsoft.com/lifecycle)」を参照してください。 延長サポート終了日より前にオペレーティング システムの Configuration Manager のサポートが終了する場合は、そのオペレーティング システムの廃止日とサポート削除日がここに表示されます。  
 
@@ -87,8 +81,7 @@ ms.lasthandoff: 06/28/2017
 |Windows CE 5.0 - 6.0|2015 年 7 月 10 日|バージョン 1511|  
 
 
-## サイト データベースとしてのサポートが廃止された SQL Server バージョン
-<a id="deprecated-support-for-sql-server-versions-as-a-site-database" class="xliff"></a>  
+## <a name="deprecated-support-for-sql-server-versions-as-a-site-database"></a>サイト データベースとしてのサポートが廃止された SQL Server バージョン  
 
 |**SQL Server バージョン**|**最初に非推奨と発表**|**サポートの削除**|   
 |-|-|-|  
@@ -101,8 +94,7 @@ ms.lasthandoff: 06/28/2017
 3. [バックアップと回復](/sccm/protect/understand/backup-and-recovery)を使用します。
 
 
-## 非推奨の機能
-<a id="deprecated-features" class="xliff"></a>  
+## <a name="deprecated-features"></a>非推奨の機能  
 
 |**機能**|**最初に非推奨と発表**|**サポートの削除**|  
 |-|-|-|  

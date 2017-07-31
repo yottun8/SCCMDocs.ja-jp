@@ -15,16 +15,14 @@ caps.latest.revision: 157
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f9e6e93fce95666503907010a5c253158c5de7c
-ms.openlocfilehash: 736e5a04d3d5f2a3825ed4e801308fd5699ea86e
+ms.translationtype: HT
+ms.sourcegitcommit: 1f57c63ceeb13c7f7d760d7ecfb48df749da6770
+ms.openlocfilehash: 4644928acbb1ae3d7d72f877565589fae435a96b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/07/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
-# System Center Configuration Manager の Technical Preview
-<a id="technical-preview-for-system-center-configuration-manager" class="xliff"></a>
+# <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview
 
 *適用対象: System Center Configuration Manager (Technical Preview)*
 
@@ -117,6 +115,17 @@ ms.lasthandoff: 07/07/2017
 
  |機能 |Technical Preview バージョン |Current Branch バージョン|  
  |----------------|---------------------|--------------------|
+ |クライアント ピア キャッシュで、Windows 10 と Office 365 の高速インストール ファイルに対応|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|![追加されていません](media/Red_X.gif)|
+ |Surface デバイス ダッシュボード|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|![追加されていません](media/Red_X.gif)|
+ |Windows Defender Application Guard ポリシーの構成と展開|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#configure-and-deploy-windows-defender-application-guard-policies)|![追加されていません](media/Red_X.gif)|
+ |Configuration Manager から PowerShell スクリプトを展開するときにパラメーターを追加する|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![追加されていません](media/Red_X.gif)|
+
+
+## <a name="capabilities-delivered-in-previous-technical-previews"></a>以前の Technical Preview で提供される機能
+ Technical Preview リリースのすべての機能が Current Branch でサポートされる最小バージョンで使用可能になると、そのプレビュー バージョンの詳細は次の表から削除されます。  
+
+ |機能 |Technical Preview バージョン |Current Branch バージョン|  
+ |----------------|---------------------|--------------------|
  |新しいモバイル アプリケーション管理ポリシーの設定|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|![追加されていません](media/Red_X.gif)|
  |ソフトウェアの更新ポイントのための境界グループの改善|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|![追加されていません](media/Red_X.gif)|
  |サイト サーバーの役割の高可用性|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |![追加されていません](media/Red_X.gif)|
@@ -137,14 +146,7 @@ ms.lasthandoff: 07/07/2017
  |条件付きアクセスのコンプライアンス ポリシーに対するデバイス正常性構成証明の評価|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#device-health-attestation-assessment-for-compliance-policies-for-conditional-access)|![追加されていません](media/Red_X.gif)|
  |Entrust 証明機関のサポート|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#support-for-entrust-certification-authorities)|![追加されていません](media/Red_X.gif)|
  |macOS VPN プロファイルの Cisco (IPsec) のサポート|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#cisco-ipsec-support-for-macos-vpn-profiles)|![追加されていません](media/Red_X.gif)|
-
-## 以前の Technical Preview で提供される機能
-<a id="capabilities-delivered-in-previous-technical-previews" class="xliff"></a>
- Technical Preview リリースのすべての機能が Current Branch でサポートされる最小バージョンで使用可能になると、そのプレビュー バージョンの詳細は次の表から削除されます。  
-
- |機能 |Technical Preview バージョン |Current Branch バージョン|  
- |----------------|---------------------|--------------------|
-  |Azure AD の新機能とクラウド管理|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|![追加されていません](media/Red_X.gif)|
+ |Azure AD の新機能とクラウド管理|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|![追加されていません](media/Red_X.gif)|
  |Windows Defender Application Guard ポリシーの構成と展開|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-and-deploy-windows-defender-application-guard-policies)|![追加されていません](media/Red_X.gif)|
  |更新のリセット ツール  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#update-reset-tool)|![追加されていません](media/Red_X.gif)|
  |高 DPI コンソールのサポート  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#high-dpi-console-support)|![追加されていません](media/Red_X.gif)|
@@ -260,8 +262,7 @@ ms.lasthandoff: 07/07/2017
 
 
 
-## 関連項目
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>関連項目  
 [System Center Configuration Manager の新機能](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [System Center Configuration Manager の概要](../../core/understand/introduction.md)
 

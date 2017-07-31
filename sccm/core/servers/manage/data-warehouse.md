@@ -15,16 +15,14 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
-ms.openlocfilehash: f11a53bbc85b40077b3909568db5ae5552b0456c
+ms.translationtype: HT
+ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
+ms.openlocfilehash: c421c3495f56503d5cbda7b1a5ab5350a168912d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/01/2017
-
+ms.lasthandoff: 07/26/2017
 
 ---
-#  System Center Configuration Manager のデータ ウェアハウス サービス ポイント
-<a id="the-data-warehouse-service-point-for-system-center-configuration-manager" class="xliff"></a>
+#  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>System Center Configuration Manager のデータ ウェアハウス サービス ポイント
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 バージョン 1702 以降では、データ ウェアハウス サービス ポイントを使用して、Configuration Manager 展開の長期的な履歴データを格納およびレポートできるようになりました。
@@ -47,14 +45,13 @@ ms.lasthandoff: 06/01/2017
 
 
 
-## データ ウェアハウス サービス ポイントの前提条件
-<a id="prerequisites-for-the-data-warehouse-service-point" class="xliff"></a>
+## <a name="prerequisites-for-the-data-warehouse-service-point"></a>データ ウェアハウス サービス ポイントの前提条件
 - サイト システムのロールをインストールするコンピューターには、.NET Framework 4.5.2 以降が必要です。
 - サイト システムの役割をインストールするコンピューターのコンピューター アカウントは、データをデータ ウェアハウス データベースと同期するために使用します。 このアカウントには次の権限が必要です。  
   - データ ウェアハウス データベースをホストするコンピューターの**管理者**。
   - データ ウェアハウス データベースの **DB_owner** へのアクセス許可。
   - 最上位サイトのサイト データベースに対する **DB_reader** および **execute** アクセス許可。
--    データ ウェアハウス データベースは、SQL Server 2012 以降の既定のインスタンス、または名前付きインスタンスでサポートされます。 エディションは Enterprise または Datacenter である必要があります。
+-   データ ウェアハウス データベースは、SQL Server 2012 以降の既定のインスタンス、または名前付きインスタンスでサポートされます。 エディションは Enterprise または Datacenter である必要があります。
   - SQL Server AlwaysOn 可用性グループ: この構成はサポートされていません。
   - SQL Server クラスター: SQL Server フェールオーバー クラスターはサポートされていません。 これは、SQL Server フェールオーバー クラスターでデータ ウェアハウス データベースが完全にテストされていないためです。
   - データ ウェアハウス データベースがサイト サーバー データベースから離れた場所にある場合は、データベースをホストする SQL Server に個別のライセンスが必要です。
@@ -67,8 +64,7 @@ ms.lasthandoff: 06/01/2017
 > - CHT – 繁体字中国語 この問題は、今後のリリースで解決される予定です。
 
 
-## データ ウェアハウスのインストール
-<a id="install-the-data-warehouse" class="xliff"></a>
+## <a name="install-the-data-warehouse"></a>データ ウェアハウスのインストール
 データ ウェアハウスのサイト システムの役割は、階層の最上位層サイト (中央管理サイトまたはスタンドアロン プライマリ サイト) のみにインストールできます。
 
 各階層ではこの役割の単一インスタンスがサポートされ、最上位層サイトのどのサイト システムにも配置することができます。 ウェアハウスのデータベースをホストする SQL Server は、サイト システムの役割に対してローカルまたはリモートに配置できます。 データ ウェアハウスは同じサイトにインストールされているレポート サービス ポイントと連携しますが、この 2 つのサイト システムの役割が同じサーバーにインストールされている必要はありません。   
@@ -77,12 +73,11 @@ ms.lasthandoff: 06/01/2017
 
 ロールをインストールすると、指定した SQL Server のインスタンス上にデータ ウェアハウス データベースが Configuration Manager によって作成されます。 既存のデータベース名を指定した場合 ([データ ウェアハウス データベースを新しい SQL Server に移動する場合と同様に](#move-the-data-warehouse-database))、Configuration Manager では、新しいデータベースは作成されず、代わりに指定したデータベースが使用されます。
 
-### インストール時に使用する構成
-<a id="configurations-used-during-installation" class="xliff"></a>
+### <a name="configurations-used-during-installation"></a>インストール時に使用する構成
 **[システムのロールの選択]** ページ:  
 
 **[全般]** ページ:
--     **Configuration Manager データ ウェアハウス データベース接続設定**:
+-   **Configuration Manager データ ウェアハウス データベース接続設定**:
  - **SQL Server の完全修飾ドメイン名**:  
  データ ウェアハウス サービス ポイント データベースをホストするサーバーの完全修飾ドメイン名 (FQDN) を指定します。
  - **SQL Server インスタンス名 (該当する場合)**:   
@@ -100,28 +95,26 @@ ms.lasthandoff: 06/01/2017
     - **毎日**: 同期が毎日実行されるように指定します。
     - **毎週**: 各週の曜日を 1 つ指定して、同期が毎週繰り返されるようにします。
 
-## レポート
-<a id="reporting" class="xliff"></a>
+## <a name="reporting"></a>レポート
 データ ウェアハウス サービス ポイントをインストールすると、同じサイトにインストールされているレポート サービス ポイントでいくつかのレポートが利用できます。 レポート サービス ポイントをインストールする前にデータ ウェアハウス サービス ポイントをインストールした場合は、後でレポート サービス ポイントをインストールしたときにレポートが自動的に追加されます。
 
 データ ウェアハウス サイト システムの役割には、**データ ウェアハウス**のカテゴリを持つ次のレポートが含まれます。
  - **アプリケーションの展開 - 履歴**:   
  特定のアプリケーションとコンピューターについてアプリケーション展開の詳細を表示します。
  - **Endpoint Protection とソフトウェアの更新プログラムの対応 - 履歴**: ソフトウェアの更新プログラムが欠落しているコンピューターを表示します。  
- - **全般的なハードウェアのインベントリ - 履歴**:      
+ - **全般的なハードウェアのインベントリ - 履歴**:   
  特定のコンピューターのすべてのハードウェア インベントリを表示します。
- - **全般的なソフトウェアのインベントリ - 履歴**:      
+ - **全般的なソフトウェアのインベントリ - 履歴**:   
  特定のコンピューターのすべてのソフトウェア インベントリを表示します。
- - **インフラストラクチャの正常性の概要 - 履歴**:     
+ - **インフラストラクチャの正常性の概要 - 履歴**:  
  Configuration Manager のインフラストラクチャの正常性の概要を表示します。
- - **検出されたマルウェアの一覧 - 履歴**:     
+ - **検出されたマルウェアの一覧 - 履歴**:    
  組織内で検出されたマルウェアを表示します。
- - **ソフトウェア配布の概要 - 履歴**:     
+ - **ソフトウェア配布の概要 - 履歴**:   
  特定の提供情報を目的とし特定のコンピューターを対象としたソフトウェアの配布の概要。
 
 
-## 既存のスタンドアロン プライマリを 1 つの階層に展開する
-<a id="expand-an-existing-stand-alone-primary-into-a-hierarchy" class="xliff"></a>
+## <a name="expand-an-existing-stand-alone-primary-into-a-hierarchy"></a>既存のスタンドアロン プライマリを 1 つの階層に展開する
 中央管理サイトをインストールして既存のスタンドアロン プライマリ サイトを拡張する前に、まずデータ ウェアハウス サービス ポイントの役割をアンインストールする必要があります。 中央管理サイトをインストールした後に、中央管理サイトでサイト システムの役割をインストールすることができます。  
 
 データ ウェアハウス データベースの移動とは異なり、この変更によって以前にプライマリ サイトで同期した履歴データが失われます。 プライマリ サイトからデータベースをバックアップして、中央管理サイトで復元することはサポートされていません。
@@ -129,20 +122,18 @@ ms.lasthandoff: 06/01/2017
 
 
 
-## データ ウェアハウス データベースの移動
-<a id="move-the-data-warehouse-database" class="xliff"></a>
+## <a name="move-the-data-warehouse-database"></a>データ ウェアハウス データベースの移動
 データ ウェアハウス データベースを新しい SQL Server に移動するには、次の手順に従います。
 
-1.    SQL Server Management Studio を使用して、データ ウェアハウス データベースをバックアップします。次に、そのデータベースを、データ ウェアハウスをホストする新しいコンピューター上の SQL Server に復元します。   
+1.  SQL Server Management Studio を使用して、データ ウェアハウス データベースをバックアップします。次に、そのデータベースを、データ ウェアハウスをホストする新しいコンピューター上の SQL Server に復元します。   
 > [!NOTE]     
 > 新しいサーバーにデータベースを復元したら、新しいデータ ウェアハウス データベースに対するデータベース アクセス許可が、元のデータ ウェアハウス データベースの場合と同じであることを確認します。  
 
-2.    Configuration Manager コンソールを使用して、データ ウェアハウス サービス ポイント サイト システムの役割を現在のサーバーから削除します。
-3.    データ ウェアハウス サービス ポイントを再インストールします。さらに、新しい SQL Server の名前と復元したデータ ウェアハウス データベースをホストするインスタンスを指定します。
-4.    サイト システムのロールがインストールされたら、移動は完了です。
+2.  Configuration Manager コンソールを使用して、データ ウェアハウス サービス ポイント サイト システムの役割を現在のサーバーから削除します。
+3.  データ ウェアハウス サービス ポイントを再インストールします。さらに、新しい SQL Server の名前と復元したデータ ウェアハウス データベースをホストするインスタンスを指定します。
+4.  サイト システムのロールがインストールされたら、移動は完了です。
 
-## データ ウェアハウス問題のトラブルシューティング
-<a id="troubleshooting-data-warehouse-issues" class="xliff"></a>
+## <a name="troubleshooting-data-warehouse-issues"></a>データ ウェアハウス問題のトラブルシューティング
 **ログ ファイル**：  
 データ ウェアハウス サービス ポイントのインストールまたはデータの同期に関する問題を調査するには、次のログを使用します。
  - *DWSSMSI.log* と *DWSSSetup.log* - データ ウェアハウス サービス ポイントのインストール時に発生したエラーを調査する場合に使用するログです。
@@ -175,19 +166,18 @@ ms.lasthandoff: 06/01/2017
     1. IIS を開き、**[サーバー証明書]** をクリックして、**[自己署名証明書の作成]** を右クリックし、証明書名の "フレンドリ名" を **Data Warehouse SQL Server Identification Certificate (データ ウェアハウス SQL サーバーの識別証明書)** に指定します。 証明書ストアを **[個人]** として選択します。
     2. **[SQL Server Configuration Manager]** を開き、**[SQL Server ネットワークの構成]** で **[MSSQLSERVER のプロトコル]** を右クリックし、**[プロパティ]** を選択します。 次に、**[証明書]** タブで **[Data Warehouse SQL Server Identification Certificate]\(データ ウェアハウス SQL サーバーの識別証明書)** を証明書として選択し、変更を保存します。  
     3. **SQL Server Configuration Manager** を開き、**[SQL Server サービス]** で、**SQL Server サービス**と**レポート サービス**を再起動します。
-    4.    Microsoft 管理コンソール (MMC) を開き、**証明書**のスナップインを追加して、ローカル コンピューターの**コンピューター アカウント**の証明書の管理を選択します。 次に、MMC で、**[個人用]** フォルダー > **[証明書]** を展開し、**Data Warehouse SQL Server Identification Certificate (データ ウェアハウス SQL サーバーの識別証明書)** を **DER encoded binary X.509 (.CER)** ファイルとしてエクスポートします。    
+    4.  Microsoft 管理コンソール (MMC) を開き、**証明書**のスナップインを追加して、ローカル コンピューターの**コンピューター アカウント**の証明書の管理を選択します。 次に、MMC で、**[個人用]** フォルダー > **[証明書]** を展開し、**Data Warehouse SQL Server Identification Certificate (データ ウェアハウス SQL サーバーの識別証明書)** を **DER encoded binary X.509 (.CER)** ファイルとしてエクスポートします。    
   2.    SQL Server Reporting Services をホストするコンピューターで、MMC を開いて**証明書**のスナップインを追加し、**コンピューター アカウント**の証明書の管理を選択します。 **[信頼されたルート証明機関]** フォルダーで、**Data Warehouse SQL Server Identification Certificate (データ ウェアハウス SQL サーバーの識別証明書)** をインポートします。
 
 
-## データ ウェアハウスのデータフロー
-<a id="data-warehouse-dataflow" class="xliff"></a>   
+## <a name="data-warehouse-dataflow"></a>データ ウェアハウスのデータフロー   
 ![Datawarehouse_flow](./media/datawarehouse.png)
 
 **データの格納と同期**
 
 | 手順   | 説明  |
 |:------:|-----------|  
-| **1**  |     サイト サーバーは、サイト データベースにデータを転送して格納します。  |  
+| **1**  |  サイト サーバーは、サイト データベースにデータを転送して格納します。  |  
 | **2**  |      データ ウェアハウス サービス ポイントでは、スケジュールと構成に基づいて、サイト データベースからデータを取得します。  |  
 | **3**  |  データ ウェアハウス サービス ポイントでは、同期されたデータのコピーをデータ ウェアハウス データベースに転送して保存します。 |  
 **レポート**

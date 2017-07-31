@@ -14,15 +14,14 @@ ms.assetid: 00684289-d21a-45f8-b1e3-c5c787d73096
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
-ms.openlocfilehash: 1a38d25fbc26bd1f45c6fa2a0e931536af2d8b2f
+ms.translationtype: HT
+ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
+ms.openlocfilehash: b977a79baec73999caa21648adcb6fcfec4a4935
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 07/26/2017
 
 ---
-# System Center Configuration Manager の Technical Preview 1705 の機能
-<a id="capabilities-in-technical-preview-1705-for-system-center-configuration-manager" class="xliff"></a>
+# <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1705 の機能
 
 *適用対象: System Center Configuration Manager (Technical Preview)*
 
@@ -52,8 +51,7 @@ ms.lasthandoff: 06/28/2017
  -  Task 2              
 -->
 
-## 更新のリセット ツール
-<a id="update-reset-tool" class="xliff"></a>  
+## <a name="update-reset-tool"></a>更新のリセット ツール  
 コンソール内の更新プログラムにダウンロードやレプリケートの問題がある場合に、Configuration Manager Update Reset Tool (**CMUpdateReset.exe**) を使用して問題を解決することができます。 このツールは、Technical Preview バージョン 1705 に付属しています。 このツールは、Technical Preview のインストール後、Technical Preview サイトのサイト サーバーの ***\cd.latest\SMSSETUP\TOOLS*** フォルダー内にあります。
 
 このツールは、Technical Preview バージョン 1606 以降で使用できます。 この後方互換のサポートは、Technical Preview の更新シナリオの範囲でツールが使用できるようにするためと、次の Technical Preview が使用可能になるまで待たなくても済むように提供されています。
@@ -62,8 +60,7 @@ ms.lasthandoff: 06/28/2017
 
 ツールを実行する際には、指定した更新プログラムに対して実行します。 既定では、このツールで正常にインストールまたはダウンロードされた更新プログラムが削除されることはありません。  
 
-### 必要条件
-<a id="prerequisites" class="xliff"></a>
+### <a name="prerequisites"></a>必要条件
 ツールの実行に使用するアカウントには、次のアクセス許可が必要です。
 -   中央管理サイトと階層の各プライマリ サイトのサイト データベースへの**読み取り**と**書き込み**アクセス許可。 これらのアクセス許可を設定するため、各サイトの Configuration Manager データベースで、ユーザー アカウントを **db_datawriter** および **db_datareader** の[固定データベース ロール](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles)のメンバーとして追加できます。 このツールは、セカンダリ サイトとは対話しません。
 -   階層の最上位サイトの**ローカル管理者**。
@@ -75,8 +72,7 @@ ms.lasthandoff: 06/28/2017
 > [!TIP]  
 > GUID をコピーするには、リセットする更新プログラム パッケージの行を選択し、CTRL + C キーを使用してその行をコピーします。 コピーした選択をテキスト エディターに貼り付けると、ツールを実行する際に、GUID のみをコピーしてコマンド ライン パラメーターとして使用できます。
 
-### ツールを実行します。
-<a id="run-the-tool" class="xliff"></a>    
+### <a name="run-the-tool"></a>ツールを実行します。    
 このツールは、階層の最上位サイトで実行する必要があります。
 
 ツールを実行する際に、コマンド ライン パラメーターを使用して、階層の最上位サイトの SQL Server、サイト データベース名、およびリセットする更新プログラム パッケージの GUID を指定します。 ツールは、更新プログラムの状態に基づいてアクセスする必要がある追加のサーバーを識別します。   
@@ -101,8 +97,7 @@ ms.lasthandoff: 06/28/2017
 
  より極端なシナリオで、問題のある更新プログラム パッケージの削除を強制するとします。 SQL Server の FQDN が *server1.fabrikam.com* で、サイト データベースが *CM_XYZ*、パッケージ GUID が *61F16B3C-F1F6-4F9F-8647-2A524B0C802C* の場合、  次を実行します: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
-### Technical Preview でツールをテストする
-<a id="test-the-tool-with-the-technical-preview" class="xliff"></a>  
+### <a name="test-the-tool-with-the-technical-preview"></a>Technical Preview でツールをテストする  
 このツールは、Technical Preview バージョン 1606 以降で使用できます。 この後方互換のサポートは、Technical Preview のより多くの更新シナリオでツールが使用できるようにするためと、Technical Preview の次のバージョンが使用可能になるまで待たなくても済むように提供されています。
 
 更新プログラムの前提条件の確認を完了する前に、Technical Preview の更新プログラム パッケージでツールを実行します。 前提条件の確認が完了した状態は、**[管理]** > **[更新とサービス]** でパッケージが次のいずれかの状態で識別できます。  
@@ -111,19 +106,16 @@ ms.lasthandoff: 06/28/2017
 -   **前提条件チェックに合格しませんでした**
 
 
-## 高 DPI コンソールのサポート
-<a id="high-dpi-console-support" class="xliff"></a>
+## <a name="high-dpi-console-support"></a>高 DPI コンソールのサポート
 
 このリリースでは、高 DPI デバイス (Surface Book など) で表示したときに、Configuration Manager コンソールのスケーリング方法と、UI のさまざまな部分を表示する方法に修正すべき問題があります。
 
 
-## ピア キャッシュの改善
-<a id="peer-cache-improvements" class="xliff"></a>
+## <a name="peer-cache-improvements"></a>ピア キャッシュの改善
 この Technical Preview から、ピア キャッシュはピアからのダウンロード要求を認証するために[ネットワーク アクセス アカウントを使用しなくなりました](/sccm/core/plan-design/hierarchy/client-peer-cache)。
 
 
-## SQL Server Always On 可用性グループの機能強化
-<a id="improvements-for-sql-server-always-on-availability-groups" class="xliff"></a>  
+## <a name="improvements-for-sql-server-always-on-availability-groups"></a>SQL Server Always On 可用性グループの機能強化  
 このリリースでは、Configuration Manager で使用する SQL Server Always On 可用性グループで非同期コミット レプリカを使用できるようになりました。  これにより、オフサイトの (リモート) バックアップとして使用する追加のレプリカを可用性グループに追加して、それらをディザスター リカバリー シナリオで使用することができます。  
 
 -   Configuration Manager は、同期レプリカを復旧するために非同期コミット レプリカの使用をサポートしています。  これを実行する方法については、バックアップと回復に関するトピックで[サイト データベースの回復オプション](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)を参照してください。
@@ -134,12 +126,10 @@ ms.lasthandoff: 06/28/2017
 
 -   可用性グループでは、使用する SQL Server のバージョンでサポートされているのと同じ数と種類のレプリカを使用できます    (以前のサポートでは、同期コミット レプリカは 2 つに制限されていました)。
 
-### 非同期コミット レプリカを構成する
-<a id="configure-an-asynchronous-commit-replica" class="xliff"></a>
+### <a name="configure-an-asynchronous-commit-replica"></a>非同期コミット レプリカを構成する
 非同期レプリカを[ Configuration Manager で使用する可用性グループ](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)に追加するために、同期レプリカの構成に必要な構成スクリプトを実行する必要はありません  (これは、その非同期レプリカをサイト データベースとして使用するためのサポートがないためです)。セカンダリ レプリカを可用性グループに追加する方法については、[SQL Server のドキュメント](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot))を参照してください。
 
-### 非同期レプリカを使用してサイトを回復する
-<a id="use-the-asynchronous-replica-to-recover-your-site" class="xliff"></a>
+### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>非同期レプリカを使用してサイトを回復する
 非同期レプリカを使用してサイト データベースを回復する前に、サイト データベースへの追加の書き込みを防止するために、アクティブなプライマリ サイトを停止する必要があります。 サイトの停止後、[手動で回復したデータベース](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)の代わりに、非同期レプリカを使用することができます。
 
 サイトを停止するには、[階層のメンテナンス ツール](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe)を使用して、サイト サーバーの主要なサービスを停止します。 次のコマンド ラインを使用します: **Preinst.exe/stopsite**   
@@ -151,41 +141,34 @@ ms.lasthandoff: 06/28/2017
 
 
 
-## Office 365 更新プログラムのユーザーへの通知の改善
-<a id="improved-user-notifications-for-office-365-updates" class="xliff"></a>
+## <a name="improved-user-notifications-for-office-365-updates"></a>Office 365 更新プログラムのユーザーへの通知の改善
 クライアントが Office 365 更新プログラムをインストールする場合に、Office クイック実行ユーザー エクスペリエンスを活用するように改善されました。 これには、ポップアップとアプリ内通知、およびカウントダウン エクスペリエンスが含まれます。 以前のリリースでは、Office 365 更新プログラムがクライアントに送信されると、開いていた Office アプリケーションが警告なしで自動的に閉じられていました。 この更新により、Office アプリケーションが予期せずに閉じられることはなくなります。
 
-### 必要条件
-<a id="prerequisites" class="xliff"></a>
+### <a name="prerequisites"></a>必要条件
 この更新プログラムは、Office 365 ProPlus クライアントに適用されます。
 
-### 既知の問題
-<a id="known-issues" class="xliff"></a>
+### <a name="known-issues"></a>既知の問題
 クライアントが初めて Office 365 の更新割り当てを評価し、その更新プログラムの期限が過去にスケジュールされている場合、今すぐにスケジュールされている場合、または 30 分以内にスケジュールされている場合、Office 365 のユーザー エクスペリエンスに一貫性がなくなる場合があります。 たとえば、クライアントが更新プログラムに対して 30 分間のカウント ダウン ダイアログを受け取った場合でも、実際の適用はカウント ダウンが終わる前に開始できます。 この動作を回避するには、次を考慮してください。
 - 現在の時刻から 60 分以上先にスケジュールされた期限付きで Office 365 の更新プログラムを展開します。
 - コレクションに対して勤務時間外にメンテナンス期間を設定するか、展開に対して適用猶予期間を設定します。
 
-### 試してみましょう。
-<a id="try-it-out" class="xliff"></a>
+### <a name="try-it-out"></a>試してみましょう。
 次のタスクを試した後、どのように動作したかについて、リボンの **[ホーム]** タブから **[フィードバック]** を送信してください。
 - 現在の時刻から 60 分以上先の時間に設定した期限付きで Office 365 更新プログラムをクライアントに展開します。 クライアントで新しい動作を確認します。
 
 
-## Windows Defender Application Guard ポリシーの構成と展開
-<a id="configure-and-deploy-windows-defender-application-guard-policies" class="xliff"></a>
+## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Windows Defender Application Guard ポリシーの構成と展開
 
 [Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) は、信頼できない Web サイトをオペレーティング システムの他の部分からはアクセスできない安全な分離コンテナーで開くことでユーザーを保護する Windows の新機能です。 この Technical Preview では、設定する Configuration Manager のコンプライアンス設定を使用して、この機能を構成し、コレクションに展開するためのサポートが追加されました。
 この機能は、Windows 10 Creators Update (コードネーム: RS2) の 64 ビット バージョンのプレビューでリリースされます。 この機能を今すぐテストするには、この更新プログラムのプレビュー バージョンを使用している必要があります。
 
 
-### アップグレードを開始する前に
-<a id="before-you-start" class="xliff"></a>
+### <a name="before-you-start"></a>アップグレードを開始する前に
 
 Windows Defender Application Guard ポリシーを作成して展開するには、ネットワーク分離ポリシーを使用して、ポリシーを展開する Windows 10 デバイスを構成する必要があります。 詳細については、後述のブログ記事を参照してください。
 この機能は、最新の Windows 10 Insider Build でのみ動作します。 これをテストするには、クライアントが最新の Windows 10 Insider Build で実行されている必要があります。
 
-### 試してみましょう。
-<a id="try-it-out" class="xliff"></a>
+### <a name="try-it-out"></a>試してみましょう。
 
 ブログ記事を読み、Windows Defender Application Guard に関する基本を確実に理解してください。
 
@@ -197,8 +180,7 @@ Windows Defender Application Guard ポリシーを作成して展開するには
 4.  ブログ記事を参照として使用して、使用可能な設定を参照および構成して、機能を試すことができます。
 5.  完了したら、ウィザードを終了し、1 つ以上の Windows 10 デバイスにポリシーを展開します。
 
-### 参考資料
-<a id="further-reading" class="xliff"></a>
+### <a name="further-reading"></a>参考資料
 
 Windows Defender Application Guard の詳細については、[このブログ記事]( https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97)を参照してください。
 また、Windows Defender Application Guard のスタンドアロン モードの詳細については、[このブログ記事](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903)を参照してください。
@@ -206,23 +188,20 @@ Windows Defender Application Guard の詳細については、[このブログ�
 
 
 
-## Azure AD の新機能とクラウド管理
-<a id="new-capabilities-for-azure-ad-and-cloud-management" class="xliff"></a>
+## <a name="new-capabilities-for-azure-ad-and-cloud-management"></a>Azure AD の新機能とクラウド管理
 
 このリリースでは、次のシナリオをサポートするために、クラウド サービスで Azure AD を使用するように構成できます。
 
 - インターネットから手動で Configuration Manager クライアントをインストールして、Configuration Manager サイトに割り当てる。
 - Intune を使用して、インターネット上で Configuration Manager クライアントをデバイスに展開する。
 
-### 長所
-<a id="advantages" class="xliff"></a>
+### <a name="advantages"></a>長所
 
 クラウド サービスと Azure AD を使用することで、クライアント認証証明書を使用する必要がなくなります。
 
 コレクションおよびその他の Configuration Manager の操作で使用するサイト内で Azure AD ユーザーを検出できます。
 
-### アップグレードを開始する前に
-<a id="before-you-start" class="xliff"></a>
+### <a name="before-you-start"></a>アップグレードを開始する前に
 
 - Azure AD テナントが必要です。
 - デバイスで、Windows 10 が実行され、Azure AD が参加している必要があります。  参加している Azure AD に加え、クライアントもドメインに参加できます。
@@ -235,8 +214,7 @@ Windows Defender Application Guard の詳細については、[このブログ�
     - クラウド管理ゲートウェイを設定する必要があります。
 
 
-### クラウド管理ゲートウェイを設定する
-<a id="set-up-the-cloud-management-gateway" class="xliff"></a>
+### <a name="set-up-the-cloud-management-gateway"></a>クラウド管理ゲートウェイを設定する
 
 クライアントが証明書を使用せずにインターネットから Configuration Manager サイトにアクセスできるように、クラウド管理ゲートウェイを設定します。
 
@@ -246,8 +224,7 @@ Windows Defender Application Guard の詳細については、[このブログ�
 - [Configuration Manager のクラウド管理ゲートウェイを設定する](/sccm/core/clients/manage/setup-cloud-management-gateway)
 - [Configuration Manager でクラウド管理ゲートウェイを監視する](/sccm/core/clients/manage/monitor-clients-cloud-management-gateway)
 
-### Configuration Manager Cloud Services で Azure サービス アプリを設定する
-<a id="set-up-the-azure-services-app-in-configuration-manager-cloud-services" class="xliff"></a>
+### <a name="set-up-the-azure-services-app-in-configuration-manager-cloud-services"></a>Configuration Manager Cloud Services で Azure サービス アプリを設定する
 
 これにより、Configuration Manager サイトを Azure AD に接続します。これは、このセクションの他のすべての操作の前提条件です。 手順は次のとおりです。
 
@@ -269,8 +246,7 @@ Windows Defender Application Guard の詳細については、[このブログ�
 この時点で、Configuration Manager サイトが Azure AD に接続されています。
 
 
-### インターネットから CM クライアントをインストールする
-<a id="install-the-cm-client-from-the-internet" class="xliff"></a>
+### <a name="install-the-cm-client-from-the-internet"></a>インターネットから CM クライアントをインストールする
 
 開始する前に、クライアント インストール ソース ファイルが、クライアントをインストールするデバイスのローカルに保存されていることを確認します。
 次に、次のインストール コマンド ラインを使用して (例の値は、独自の値に置き換えてください)、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-clients-manually)」の手順に従います。
@@ -286,16 +262,14 @@ Windows Defender Application Guard の詳細については、[このブログ�
 - **AADCLIENTAPPID**: Azure AD のクライアント アプリ ID。 これを見つけるには、「[リソースにアクセスできる Azure Active Directory アプリケーションとサービス プリンシパルをポータルで作成する](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key)」を参照してください。
 - **AADResourceUri**: 搭載された Azure AD サーバー アプリの識別子 URI。
 
-## Azure サービス ウィザードを使用して、OMS への接続を構成する
-<a id="use-azure-services-wizard-to-configure-a-connection-to-oms" class="xliff"></a>
+## <a name="use-azure-services-wizard-to-configure-a-connection-to-oms"></a>Azure サービス ウィザードを使用して、OMS への接続を構成する
 Technical Preview リリース 1705 からは、**Azure サービス ウィザード**を使用して、Configuration Manager から Operations Management Suite (OMS) のクラウド サービスへの接続を構成します。 ウィザードは、前のワークフローを置き換えてこの接続を構成します。
 
 -   ウィザードは、Configuration Manager (OMS など)、ビジネス向け Windows ストア (WSfB)、および Azure Active Directory (Azure AD) 用にクラウド サービスを構成するために使用されます。  
 
 -   Configuration Manager は、[ログ分析](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)や[アップグレードの準備](/sccm/core/clients/manage/upgrade/upgrade-analytics)などの機能のために OMS に接続します。
 
-### OMS コネクタの前提条件
-<a id="prerequisites-for-the-oms-connector" class="xliff"></a>
+### <a name="prerequisites-for-the-oms-connector"></a>OMS コネクタの前提条件
 OMS への接続を構成するための前提条件は、[Current Branch バージョン 1702 のドキュメント](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#prerequisites)に記載されているものと変わりません。 ここではその情報を再掲します。  
 
 -   Configuration Manager のアクセス許可を OMS に提供します。
@@ -305,8 +279,7 @@ OMS への接続を構成するための前提条件は、[Current Branch バー
 -   サービス接続ポイントには、OMS 用の Microsoft Monitoring Agent、および OMS コネクタをインストールする必要があります。 エージェントと OMS コネクタは、同じ **OMS ワークスペース**を使用するように構成する必要があります。 エージェントをインストールする場合は、OMS ドキュメントの「[エージェントのダウンロードとインストール](/azure/log-analytics/log-analytics-sccm#download-and-install-the-agent)」を参照してください。
 -   コネクタとエージェントをインストールしたら、Configuration Manager データを使用するように OMS を構成する必要があります。 そのためには、OMS ポータルで [Configuration Manager コレクションをインポート](/azure/log-analytics/log-analytics-sccm#import-collections)します。
 
-### Azure サービス ウィザードを使用して、OMS への接続を構成する
-<a id="use-the-azure-services-wizard-to-configure-the-connection-to-oms" class="xliff"></a>
+### <a name="use-the-azure-services-wizard-to-configure-the-connection-to-oms"></a>Azure サービス ウィザードを使用して、OMS への接続を構成する
 
 1.  コンソールで、**[管理]** > **[概要]** > **[クラウド サービス]** > **[Azure サービス]** の順に移動し、リボンの **[ホーム]** タブから **[Azure サービスの構成]** を選択して、**Azure サービス ウィザード**を開始します。
 

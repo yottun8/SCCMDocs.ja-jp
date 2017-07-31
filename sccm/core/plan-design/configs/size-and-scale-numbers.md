@@ -2,7 +2,7 @@
 title: "サイズとスケール | Microsoft Docs"
 description: "System Center Configuration Manager 環境でデバイスをサポートするために必要になるサイト システムの役割とサイトの数を特定します。"
 ms.custom: na
-ms.date: 12/30/2016
+ms.date: 07/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f9c43e26758d5171a6ef56e827b4b054ebc8a5e5
-ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
+ms.translationtype: HT
+ms.sourcegitcommit: 5945abb49fe06c59355805aa94b04d0d445ecbc3
+ms.openlocfilehash: f539e2d282b56e56a9c58c773788325b27ea6b37
 ms.contentlocale: ja-jp
-ms.lasthandoff: 12/31/2016
+ms.lasthandoff: 07/24/2017
 
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイズとスケールの数
@@ -133,7 +133,7 @@ System Center Configuration Manager の各展開には、サポートできる�
 ###  <a name="bkmk_cas"></a> 中央管理サイトを使用した階層  
 中央管理サイトでは、最大で次の 3 つのグループに表示されているデバイスの数を含む、デバイスの合計数がサポートされています。  
 
--   700,000 個のデスクトップ (Windows、Linux および UNIX を実行するコンピューター)  
+-   700,000 個のデスクトップ (Windows、Linux、UNIX を実行するコンピューター)。 [組み込みデバイス](#embedded)のサポートも参照してください。
 
 -   Mac および Windows CE 7.0 を実行している 25,000 個のデバイス  
 
@@ -152,7 +152,7 @@ System Center Configuration Manager の各展開には、サポートできる�
 ###  <a name="bkmk_chipri"></a> 子プライマリ サイト  
 中央管理サイトを持つ階層の各子プライマリ サイトは、次をサポートしています。  
 
--   特定のグループまたは種類に制限されない合計 150,000 個のクライアントとデバイス (サポートが階層でサポートされている数を超えない場合)。  
+-   特定のグループまたは種類に制限されない合計 150,000 個のクライアントとデバイス (サポートが階層でサポートされている数を超えない場合)。 [組み込みデバイス](#embedded)のサポートも参照してください。
 
 たとえば、(階層の制限があるため) Mac および Windows CE 7.0 を実行する 25,000 台のコンピューターをサポートするプライマリ サイトでは、追加で 125,000 台のデスクトップ コンピューターをサポートできます。 これによって、サポートされるデバイスの合計数の上限は、子のプライマリ サイトでサポートされる 150,000 の上限まで上がります。
 
@@ -161,7 +161,7 @@ System Center Configuration Manager の各展開には、サポートできる�
 
 -   次の制限を持つ合計 175,000 個のクライアントとデバイス:  
 
-    -   150,000 個のデスクトップ (Windows、Linux および UNIX を実行するコンピューター)  
+    -   150,000 個のデスクトップ (Windows、Linux、UNIX を実行するコンピューター)。 [組み込みデバイス](#embedded)のサポートも参照してください。
 
     -   Mac および Windows CE 7.0 を実行している 25,000 個のデバイス
 
@@ -171,7 +171,11 @@ System Center Configuration Manager の各展開には、サポートできる�
 
         -   150,000 個のクラウドベースのデバイス  
 
+
 たとえば、150,000 個のデスクトップと 10,000 個の Mac または Windows CE 7.0 をサポートするスタンドアロン プライマリ サイトでは、追加のデバイスを 15,000 個のみサポートできます。 これらのデバイスは、クラウドベースにすることも、オンプレミスの MDM を使用して管理することもできます。  
+
+### <a name="embedded"></a> プライマリ サイトと Windows Embedded デバイス
+プライマリ サイトで、ファイル ベースの書き込みフィルター (FBWF) を有効にしている Windows Embedded デバイスがサポートされます。 Embedded デバイスの書き込みフィルターが有効にされていないときには、プライマリ サイトでサポート可能な Embedded デバイスの最大数が、そのサイトの許容デバイス数になります。 プライマリ サイトでサポートされるデバイスの合計台数のうち、最大 10,000 台を Windows Embedded デバイスに割り当てることができます。ただし、それらのデバイスは「[Windows Embedded デバイスへのクライアント展開の計画](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices)」の重要な注意点にある例外に対応するように構成されている必要があります。 EWF が有効化されていても、例外に対応するように構成されていない Windows Embedded デバイスは、1 つのプライマリ サイトで 3,000 台しかサポートされません。
 
 ###  <a name="bkmk_sec"></a> セカンダリ サイト  
 セカンダリ サイトは、次をサポートします。  

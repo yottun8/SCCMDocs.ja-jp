@@ -2,7 +2,7 @@
 title: "ビジネス向け Windows ストアからのアプリの管理 | Microsoft Docs"
 description: "System Center Configuration Manager を使用してビジネス向け Windows ストアからアプリを管理および展開します。"
 ms.custom: na
-ms.date: 3/29/2017
+ms.date: 7/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,16 +15,16 @@ caps.latest.revision: 11
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
-ms.openlocfilehash: f2d9da1c584f78e27e84b7f55e7ffe4dd052a27c
+ms.translationtype: HT
+ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
+ms.openlocfilehash: 93e767c9a115b30d68871baece670977165f55f4
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/26/2017
 
 ---
 
 # <a name="manage-apps-from-the-windows-store-for-business-with-system-center-configuration-manager"></a>System Center Configuration Manager によるビジネス向け Windows ストアからのアプリの管理
-[ビジネス向け Windows ストア](https://www.microsoft.com/business-store)は、組織向けの Windows アプリを検索して、個別に、または一括で購入できる場所です。 Configuration Manager にストアを接続することで、購入したアプリのリストを Configuration Manager と同期し、それらを Configuration Manager コンソールで表示し、他のアプリと同様に展開できます。
+[ビジネス向け Windows ストア](https://www.microsoft.com/business-store)は、組織向けの Windows アプリを検索して、個別に、または一括で購入できる場所です。 Configuration Manager にストアを接続することで、購入したアプリの一覧と Configuration Manager を同期できます。 同期後、Configuration Manager コンソールでアプリを表示し、他のアプリを展開する場合と同様に展開できます。
 
 
 ## <a name="online-and-offline-apps"></a>オンライン アプリとオフライン アプリ
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/17/2017
 ビジネス向け Windows ストアは、次の 2 種類のアプリをサポートしています。
 
 - **オンライン** - この種類のライセンスでは、ユーザーとデバイスはストアに接続してアプリとそのライセンスを取得する必要があります。 Windows 10 デバイスは、Azure Active Directory ドメインに参加している必要があります。
-- **オフライン** - ストアに接続したり、インターネットに接続したりせずに、組織はアプリとラインセンスをキャッシュして、そのオンプレミス ネットワークに展開できます。
+- **オフライン** - ストアに接続したり、インターネットに接続したりせずに、アプリとライセンスをキャッシュし、オンプレミス ネットワーク内で直接展開できます。
 
 ビジネス向け Windows ストアの詳細については、[こちら](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview?f=255&MSPPError=-2147217396)を参照してください。
 
@@ -66,9 +66,9 @@ Configuration Manager クライアントを含む Windows 10 PC にオンライ�
 (Configuration Manager クライアントを含む) Creators Update より前のバージョンの Windows 10 を実行している PC では、次の機能が適用されます。
 
 
-- アプリケーションをインストールするユーザー、インストール期限に達するアプリケーションまたは必須の展開のインストール後の再評価により、インストールが実行された場合:
+- アプリケーションをインストールするユーザー、インストール期限に達するアプリケーション、必須の展開のインストール後の再評価によりインストールが実行された場合:
     - アプリケーションはビジネス向け Windows ストア アプリを起動することで "実行" されます。 
-    - したがって、実際にインストールされる前に、エンド ユーザーはストアからインストールを完了する必要があります。
+    - したがって、アプリがインストールされる前に、エンド ユーザーはストアからインストールを完了する必要があります。
     - Configuration Manager コンソールではアプリケーション ステータスは失敗と報告され、"Windows Store アプリをクライアント PC で開いています。ユーザーがインストールを完了するのを待機しています" というエラーが表示されます。
 - 次のアプリケーションの評価サイクル時:
     - アプリケーションがストアからエンド ユーザーによってインストールされた場合、そのアプリケーションで報告されるステータスは **[成功]** となります。 
@@ -79,14 +79,14 @@ Configuration Manager クライアントを含む Windows 10 PC にオンライ�
 #### <a name="further-notes-for-pcs-running-earlier-versions-of-windows-10"></a>以前のバージョンの Windows 10 を実行している PC についてのその他の注記:
 
 - ビジネス向け Windows ストアから基幹業務アプリを展開することはできません。
-- ストアから有料アプリを展開する場合、エンド ユーザーはストアにログインし、アプリ自体を購入するよう求められます。
+- ストアから有料アプリを展開する場合、エンド ユーザーはストアにログインし、アプリ自体を購入する必要があります。
 - コンシューマー バージョンの Windows Store へのアクセスを無効にしてグループ ポリシーを展開した場合、ビジネス向け Windows ストアが有効な場合でも、ビジネス向け Windows ストアから展開することはできません。
 
 
 ## <a name="set-up-windows-store-for-business-synchronization"></a>ビジネス向け Windows ストアの同期の設定
 
-**Azure Active Directory で、"Web アプリケーションや Web API" 管理ツールとして Configuration Manager を登録します。後で必要なクライアント ID が表示されます。**
-1. [https://manage.windowsazure.com](https://manage.windowsazure.com) の Active Directory ノードで、Azure Active Directory を選択し、**[アプリケーション]** > **[追加]** をクリックします。
+**Azure Active Directory で、"Web アプリケーションや Web API" 管理ツールとして Configuration Manager を登録します。これで、後で必要になるクライアント ID が与えられます。**
+1. [https://manage.windowsazure.com](https://manage.windowsazure.com) の Active Directory ノードで、Azure Active Directory を選択し、[**アプリケーション**]  >  [**追加**] をクリックします。
 2.  **[組織で開発中のアプリケーションを追加]** をクリックします。
 3.  アプリケーションの名前を入力し、**[Web アプリケーション]** または **[Web API]**、あるいはその両方を選択し、**次へ進む**矢印をクリックします。
 4.  **[サインオン URL]** と **[アプリケーション ID/URI]** の両方に同じ URL を入力します。 URL はあらゆるものを使用でき、実際のアドレスに解決する必要はありません。 たとえば、*https://yourdomain/sccm*を入力できます。
@@ -94,7 +94,7 @@ Configuration Manager クライアントを含む Windows 10 PC にオンライ�
 
 **Azure Active Directory で、登録済み管理ツールのクライアント キーを作成します。**
 1.  作成したアプリケーションを強調表示し、**[構成]** をクリックします。
-2.  **[キー]** で、リストから期間を選択して、**[保存]** をクリックします。 これにより、新しいクライアント キーが作成されます。 ビジネス向け Windows ストアを Configuration Manager に正常にオンボードするまで、このページから移動しないでください。
+2.  **[キー]** で、リストから期間を選択して、**[保存]** をクリックします。 これで新しいクライアント キーが作成されます。 ビジネス向け Windows ストアを Configuration Manager に正常にオンボードするまで、このページから移動しないでください。
 
 **ビジネス向け Windows ストアで、ストア管理ツールとして Configuration Manager を構成します。**
 1.  [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/en-us/managementtools) を開き、サインインを求められたらサインインします。
@@ -116,10 +116,11 @@ Configuration Manager クライアントを含む Windows 10 PC にオンライ�
 1.  Configuration Manager コンソールの **[ソフトウェア ライブラリ]** ワークスペースで **[アプリケーション管理]** を展開し、**[ストア アプリのライセンス情報]** をクリックします。
 2.  展開するアプリを選び、**[ホーム]** タブの **[作成]** グループで、**[アプリケーションの作成]** をクリックします。
 ビジネス向け Windows ストアのアプリを含む Configuration Manager アプリケーションが作成されます。 他の Configuration Manager のアプリケーションと同様に、このアプリケーションを展開して監視できます。
+
 > [!IMPORTANT]
 > Intune に登録されたデバイスの場合、展開されたアプリは当初デバイスを登録したユーザーのみが利用できます。 それ以外のユーザーはアプリにアクセスできません。
 
-## <a name="monitor-windows-store-for-business-apps"></a>ビジネス向け Windows ストアのアプリの監視
+## <a name="next-steps"></a>次のステップ
 
 **[ソフトウェア ライブラリ]** ワークスペースで **[アプリケーション管理]** を展開し、**[ストア アプリのライセンス情報]** をクリックします。
 

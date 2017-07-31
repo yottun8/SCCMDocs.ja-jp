@@ -2,7 +2,7 @@
 title: "サイトの前提条件 | Microsoft Docs"
 description: "さまざまな種類の System Center Configuration Manager サイトをインストールするための前提条件について説明します。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: ff89d4aea6be871e64e0a788f054ba4cadb3e51d
+ms.translationtype: HT
+ms.sourcegitcommit: 5945abb49fe06c59355805aa94b04d0d445ecbc3
+ms.openlocfilehash: d46a8b66ace45d25da9d86f2e91b19ae1d6875ab
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/24/2017
 
 ---
 # <a name="prerequisites-for-installing-system-center-configuration-manager-sites"></a>System Center Configuration Manager サイトのインストールの前提条件
@@ -100,6 +100,19 @@ ms.lasthandoff: 05/17/2017
 -   **スタンドアロン プライマリ サイトと、中央管理サイトをインストールするコンピューターの間で、SQL Server Service Broker (SSB) のポートが開かれている必要がある**  
 
      Configuration Manager で、中央管理サイトとプライマリ サイト間でデータを正常にレプリケートするには、SSB で使用されるポートが 2 つのサイト間で開かれている必要があります。 中央管理サイトをインストールし、スタンドアロン プライマリ サイトを拡張するときに、前提条件のチェックでは、SSB 用に指定したポートがプライマリ サイトで開かれていることを確認しません。  
+
+**Azure サービス構成時の既知の問題:**  
+Configuration Manager で次の Azure サービスのいずれかを使用するとき、サイトを拡張する予定であれば、サイトの拡張後にサービスとの接続を削除し、再作成する必要があります。
+
+サービス:  
+-       [Operations Manager Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) (OMS)
+-       [アップグレードの準備](/sccm/core/clients/manage/upgrade/upgrade-analytics)
+-       [ビジネス向け Windows ストア](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+
+次の手順でこの問題を解決してください。
+ 1.    Configuration Manager コンソールで、Azure サービス ノードから Azure サービスを削除します。
+ 2.    Azure Portal で、Azure Active Directory テナント ノードからサービスに関連付けられているテナントを削除します。  サービスに関連付けられている Azure AD Web アプリも削除されます。  
+ 3.   Configuration Manager で使用する Azure サービスとの接続を再構成します。
 
 
 ## <a name="bkmk_secondary"></a> セカンダリ サイト

@@ -1,7 +1,7 @@
 ---
 title: "セットアップ ウィザード | Microsoft Docs"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
-ms.openlocfilehash: 14b4172ad713a3981b8a5abe182405e271d78c26
+ms.translationtype: HT
+ms.sourcegitcommit: 5945abb49fe06c59355805aa94b04d0d445ecbc3
+ms.openlocfilehash: 678f1b35fe6f7649dacb766f7c671f4ec8ea1435
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/24/2017
 
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>セットアップ ウィザードを使用した System Center Configuration Manager サイトのインストール
@@ -140,7 +140,9 @@ ms.lasthandoff: 05/17/2017
 
 12. **[データベース情報]** ページで、次の情報を指定します。  
 
-    -   **SQL Server 名 (FQDN):** 既定では、これはサイト サーバー コンピューターに設定されます。  
+    -   **SQL Server 名 (FQDN):** 既定では、これはサイト サーバー コンピューターに設定されます。
+
+     カスタム ポートを使用する場合、そのポートを SQL Server の FQDN に追加します。 そのとき、SQL Server の FQDN の後にコンマを付け、さらにポート番号を付けます。   たとえば、サーバー *SQLServer1.fabrikam.com* の場合、**SQLServer1.fabrikam.com,1551** でポート *1551* を指定します。
 
     -   **インスタンス名:** 既定では、これは空白です。 サイト サーバー コンピューター上の SQL の既定のインスタンスを使用します。  
 

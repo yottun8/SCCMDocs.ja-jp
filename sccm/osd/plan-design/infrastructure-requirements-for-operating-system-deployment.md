@@ -12,15 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 caps.latest.revision: 24
-author: Dougeby
-ms.author: dougeby
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 065b1fcb25d7c7845b6f26e757b36e7fb97ce013
-ms.openlocfilehash: ef4536578456c13de5afaa5cd1977d2e6b4b6bd1
+ms.translationtype: HT
+ms.sourcegitcommit: 1f57c63ceeb13c7f7d760d7ecfb48df749da6770
+ms.openlocfilehash: 167e639cdb9995fd743787cc9fbf364ec70f6ed9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/10/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="infrastructure-requirements-for-operating-system-deployment-in-system-center-configuration-manager"></a>System Center Configuration Manager のオペレーティング システムの展開のインフラストラクチャ要件
@@ -41,7 +40,9 @@ System Center 2012 Configuration Manager のオペレーティング システ�
 
 -   Windows 展開ツール  
 
--   Windows プレインストール環境 (Windows PE)  
+-   Windows プレインストール環境 (Windows PE)
+
+さまざまなバージョンの Configuration Manager で使用できる Windows 10 ADK のバージョン一覧については、[クライアントとしての Windows 10 のサポート](https://docs.microsoft.com/en-us/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)に関するページを参照してください。
 
  <sup>1</sup> USMT は、SMS プロバイダー サイト システム サーバーでは必要ありません。  
 
@@ -171,7 +172,7 @@ System Center 2012 Configuration Manager のオペレーティング システ�
  Windows 展開サービス (WDS) は、PXE やマルチキャストをサポートするように構成する配布ポイントと同じサーバー上にインストールする必要があります。 WDS は、サーバーのオペレーティング システムに含まれています。 PXE 展開では、PXE ブートを行うサービスは WDS です。 PXE 用に配布ポイントがインストールされ、有効化された場合、Configuration Manager は、WDS PXE ブート機能を使用する WDS にプロバイダーをインストールします。  
 
 > [!NOTE]  
->  サーバーの再起動が必要な場合、WDS のインストールに失敗する場合があります。  
+>  サーバーの再起動が必要な場合、WDS のインストールに失敗する場合があります。 
 
  考慮すべきその他の WDS の構成には、次のようなものがあります。  
 
