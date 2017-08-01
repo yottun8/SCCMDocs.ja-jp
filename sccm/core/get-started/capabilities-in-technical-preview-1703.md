@@ -150,7 +150,7 @@ Windows 利用統計情報の設定については、「[組織内の Windows �
 - Upgrade Readiness クラウド サービスを使用するにはサイトを構成しておく必要があります。 詳細については、[Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) に関するページをご覧ください。
 
 ### <a name="configure-windows-analytics-client-settings"></a>Windows Analytics クライアント設定の構成
-Windows Analytics を構成するには、Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** に移動し、**[Create Custom Device Client Settings] (カスタム デバイス クライアント設定の作成)** をダブルクリックして、**[Windows Analytics]** を選択します。  
+Windows Analytics を構成するには、Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** に移動し、**[Create Custom Device Client Settings] \(カスタム デバイス クライアント設定の作成)** をダブルクリックして、**[Windows Analytics]** を選択します。  
 
 次に、**[Windows Analytics]** 設定タブに移動した後に、以下を構成します。
 - **商用 ID**  
