@@ -20,6 +20,7 @@
 
 ## アプリケーションの展開
 ### [アプリケーションの展開](deploy-use/deploy-applications.md)
+### [アプリケーションの共有](deploy-use/share-applications.md)
 ### [アプリケーション展開のシミュレーション](deploy-use/simulate-application-deployments.md)
 ### [App-V 仮想アプリケーションの展開](get-started/deploying-app-v-virtual-applications.md)
 
@@ -37,3 +38,5 @@
 ### [アプリケーションの更新とインベントリからの削除](deploy-use/update-and-retire-applications.md)
 ### [アプリケーションを修正して置き換える方法](deploy-use/revise-and-supersede-applications.md)
 ### [アプリケーションのアンインストール](deploy-use/uninstall-applications.md)
+
+## [スクリプトの実行と管理](deploy-use/create-deploy-scripts.md)

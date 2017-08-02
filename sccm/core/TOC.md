@@ -26,10 +26,11 @@
 ###  [特徴と機能](plan-design/changes/features-and-capabilities.md)
 ###  [Configuration Manager 2012 からの変更点](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [増分バージョンの新機能](plan-design/changes/whats-new-incremental-versions.md)
+###  [バージョン 1706 の新機能](plan-design/changes/whats-new-in-version-1706.md)
 ###  [バージョン 1702 の新機能](plan-design/changes/whats-new-in-version-1702.md)
 ###  [バージョン 1610 の新機能](plan-design/changes/whats-new-in-version-1610.md)
-###  [バージョン 1606 の新機能](plan-design/changes/whats-new-in-version-1606.md)
 <!--
+###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 -->
 ###  [削除された機能と非推奨の機能](plan-design/changes/removed-and-deprecated-features.md)
@@ -75,12 +76,15 @@
 
 ##   [診断結果と使用状況データ](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [診断結果と使用状況データの使用方法](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
+###  [1706 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1706.md)
 ###  [1702 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md)
 ###  [1610 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
-###  [1606 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
+
 <!--
-###  [Diagnostic data for 1511](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
+###  [Diagnostic data for 1606](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
 ###  [Diagnostic data for 1602](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
+###  [Diagnostic data for 1511](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
+
 -->
 ###  [診断と使用状況データを収集する方法](plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)
 ###  [診断および使用状況データを使用する方法](plan-design/diagnostics/view-diagnostics-and-usage-data.md)
@@ -181,12 +185,12 @@
 ###  [サイト境界と境界グループ](servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)
 #### [境界](servers/deploy/configure/boundaries.md)
 #### [境界グループ](servers/deploy/configure/boundary-groups.md)
-#### [1610 より前のバージョンの境界グループ](servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md)
 ###  [SQL Server Always On を使用するための準備](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
 ###  [SQL Server Always On の構成](servers/deploy/configure/configure-aoag.md)
 ###  [SQL Server クラスターの使用](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [データベース ファイルのカスタムの場所](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [ロール ベース管理の構成](servers/deploy/configure/configure-role-based-administration.md)
+###  [Azure サービスの構成](servers/deploy/configure/azure-services-wizard.md)
 ##   テクニカル リファレンス
 ###  [アカウント](plan-design/hierarchy/accounts.md)
 ###  [エンドポイント間の通信](plan-design/hierarchy/communications-between-endpoints.md)
@@ -199,7 +203,9 @@
 ###  [プロキシ サーバーのサポート](plan-design/network/proxy-server-support.md)
 ###  [リリース ノート](servers/deploy/install/release-notes.md)
 ###  [Unicode および ASCII のサポート](plan-design/hierarchy/unicode-and-ascii-support.md)
-
+<!-- Deprecated from Content - still published but out of TOC:
+#### [Boundary groups for versions prior to 1610](servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md)
+-->
 
 #    管理インフラストラクチャ
 ##   [メンテナンス タスク](servers/manage/maintenance-tasks.md)
@@ -209,6 +215,7 @@
 ##   [オンプレミス インフラストラクチャのアップグレード](servers/manage/upgrade-on-premises-infrastructure.md)
 ##   [Configuration Manager の更新プログラム](servers/manage/updates.md)
 ###  [コンソール内の更新プログラムのインストール](servers/manage/install-in-console-updates.md)
+#### [更新のリセット ツール](servers/manage/update-reset-tool.md)
 #### [データベース アップグレードのテスト](servers/manage/test-database-upgrade.md)
 #### [フローチャート - 更新プログラムのダウンロード](servers/manage/download-updates-flowchart.md)
 #### [フローチャート - レプリケーションの更新](servers/manage/update-replication-flowchart.md)
@@ -217,10 +224,11 @@
 ###  [サービス接続ツールの使用](servers/manage/use-the-service-connection-tool.md)
 ###  [更新登録ツールの使用](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [修正プログラム インストーラーの使用](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+###  [1706 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1706.md)
 ###  [1702 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1702.md)
 ###  [1610 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1610.md)
-###  [1606 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1606.md)
 <!-- Deprecated from Content - still published but out of TOC:
+###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
 -->
 ###  [Current Branch バージョンのサポート](servers/manage/current-branch-versions-supported.md)  
@@ -278,6 +286,7 @@
 #### [Linux および UNIX のクライアント コマンド](clients/deploy/linux-and-unix-clients-technical-reference.md)
 ###  [Mac にクライアントを展開する準備](clients/deploy/prepare-to-deploy-mac-clients.md)
 ###  [Mac にクライアントを展開する方法](clients/deploy/deploy-clients-to-macs.md)
+###  [Azure AD を使用したインターネットからのクライアントのインストール](clients/deploy/deploy-clients-cmg-azure.md)
 ###  [クライアントをサイトに割り当てる方法](clients/deploy/assign-clients-to-a-site.md)
 ###  [クライアント ステータスを構成する方法](clients/deploy/configure-client-status.md)
 ###  [クライアントの展開ステータスを監視する方法](clients/deploy/monitor-client-deployment-status.md)
@@ -286,6 +295,7 @@
 
 ##   [クライアントの監視と管理](clients/manage/monitor-clients.md)
 ###  [クライアントを監視する方法](clients/manage/monitor-clients.md)
+###  [Windows Analytics の使用](clients/manage/monitor-windows-analytics.md)
 ###  [Linux および UNIX クライアントを監視する方法](clients/manage/monitor-clients-for-linux-and-unix-servers.md)
 ###  [クライアントを管理する方法](clients/manage/manage-clients.md)
 ###  [Linux および UNIX クライアントを管理する方法](clients/manage/manage-clients-for-linux-and-unix-servers.md)
