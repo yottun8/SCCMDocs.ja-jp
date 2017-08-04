@@ -11,11 +11,11 @@ ms.service:
 ms.technology:
 - configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d5a6fdc9a526c4fc3a9027dcedf1dd66a6fff5a7
-ms.openlocfilehash: 97e1bc6585cee0ff433da0ec0b60b9604cb7348f
+ms.translationtype: HT
+ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
+ms.openlocfilehash: df6e809aadd3d69275c137c92629ab8426bbdcb7
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/20/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/20/2017
 
 クラウド管理ゲートウェイのカスタム SSL 証明書は、クラウドベースの配布ポイントで行うのと同じ方法で作成できます。 次の操作以外は、「[クラウドベースの配布ポイント用のサービス証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)」の指示に従います。
 
-- 新しい証明書テンプレートを設定する際に、Configuration Manager サーバー用に設定したセキュリティ グループに ** 読み取り ** と**登録**のアクセス許可を与えます。
+- 新しい証明書テンプレートを設定する際に、Configuration Manager サーバー用に設定したセキュリティ グループに **読み取り**と**登録**のアクセス許可を与えます。
 - カスタムの Web サーバー証明書を要求する場合、クラウド管理ゲートウェイを Azure パブリック クラウド上で使用するときは **cloudapp.net** で終わる証明書の共通名の FQDN を入力し、Azure Government Cloud で使用するときは **usgovcloudapp.net** で終わる証明書の共通名の FQDN を入力します。
 
 

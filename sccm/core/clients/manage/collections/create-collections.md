@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9555a16d97224a1cf49a426ab225468b07403f60
-ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
+ms.translationtype: HT
+ms.sourcegitcommit: 5f1412fb132e3a074742e11f1142b2594146cbe1
+ms.openlocfilehash: 44b4707b1a40624c51decf548d23ddd2164c5833
 ms.contentlocale: ja-jp
-ms.lasthandoff: 12/30/2016
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager でコレクションを作成する方法
@@ -57,65 +56,65 @@ ms.lasthandoff: 12/30/2016
 5.  **デバイス コレクションの作成ウィザード**の **[メンバーシップの規則]** ページにある **[規則の追加]** リストで、このコレクションで使用するメンバーシップ規則の種類を選択します。 1 つのコレクションにつき複数の規則を構成することができます。  
 
         
-        ##### To configure a direct rule  
+##### <a name="to-configure-a-direct-rule"></a>ダイレクト規則を構成するには  
 
-        1.  ダイレクト メンバーシップの規則の作成ウィザード **** の [リソースの検索] ****ページで、次の情報を指定します。  
+1.  ダイレクト メンバーシップの規則の作成ウィザード **** の [リソースの検索] ****ページで、次の情報を指定します。  
 
-            -   **リソース クラス**: 検索してコレクションに追加するリソースの種類を選択します。 [システム リソース] **** から選択してクライアント コンピューターが返すインベントリ データを検索、または[不明なコンピューター] **** を選択して不明なコンピューターが返す値から選択します。  
+-   **リソース クラス**: 検索してコレクションに追加するリソースの種類を選択します。 [システム リソース] **** から選択してクライアント コンピューターが返すインベントリ データを検索、または[不明なコンピューター] **** を選択して不明なコンピューターが返す値から選択します。  
 
-            -   **属性名**: 検索対象として選択したリソース クラスに関連する属性を選択します。 たとえば、NetBIOS 名でコンピューターを選択する場合は、[リソース クラス] **** の一覧で [システム リソース] **** を、 [属性名] **** の一覧で [NetBIOS 名] **** を選択します。  
+-   **属性名**: 検索対象として選択したリソース クラスに関連する属性を選択します。 たとえば、NetBIOS 名でコンピューターを選択する場合は、[リソース クラス] **** の一覧で [システム リソース] **** を、 [属性名] **** の一覧で [NetBIOS 名] **** を選択します。  
 
-            -   **不使用とマークされているリソースを除外する**: クライアント コンピューターが不使用とマークされている場合は、検索結果にその値を含めません。  
+-   **不使用とマークされているリソースを除外する**: クライアント コンピューターが不使用とマークされている場合は、検索結果にその値を含めません。  
 
-            -   **Configuration Manager クライアントがインストールされていないリソースを除外する** - この場合、検索結果には表示されません。  
+-   **Configuration Manager クライアントがインストールされていないリソースを除外する** - この場合、検索結果には表示されません。  
 
-            -   **値** : 選択した属性名を検索するための値を入力します。 ワイルドカードとしてパーセント ( **%** ) を使用できます。 たとえば、"M" で始まる NetBIOS 名のコンピューターを検索する場合は、このフィールドに「**M%**」と入力します。  
+-   **値** : 選択した属性名を検索するための値を入力します。 ワイルドカードとしてパーセント ( **%** ) を使用できます。 たとえば、"M" で始まる NetBIOS 名のコンピューターを検索する場合は、このフィールドに「**M%**」と入力します。  
 
-        2.  **[リソースの選択]** ページで、コレクションに追加するリソースを **[リソース]** リストから選択し、**[次へ]** を選択します。  
+2.  **[リソースの選択]** ページで、コレクションに追加するリソースを **[リソース]** リストから選択し、**[次へ]** を選択します。  
 
 
-        ##### To configure a query rule  
+##### <a name="to-configure-a-query-rule"></a>クエリ規則を構成するには  
 
-        1.  [クエリ規則のプロパティ] **** ダイアログ ボックスで、次の情報を入力します。  
+1.  [クエリ規則のプロパティ] **** ダイアログ ボックスで、次の情報を入力します。  
 
-            -   **名前**: 固有の名前を指定します。  
+-   **名前**: 固有の名前を指定します。  
 
-            -   **クエリ ステートメントのインポート** - コレクションのクエリ規則として使用する [Configuration Manager クエリ](../../../../core/servers/manage/create-queries.md)を選択できる **[クエリの参照]** ダイアログ ボックスを開きます。   
+-   **クエリ ステートメントのインポート** - コレクションのクエリ規則として使用する [Configuration Manager クエリ](../../../../core/servers/manage/create-queries.md)を選択できる **[クエリの参照]** ダイアログ ボックスを開きます。   
 
-            -   **リソース クラス**: 検索してコレクションに追加するリソースの種類を選択します。 [システム リソース] **** から値を選択してクライアント コンピューターが返すインベントリ データを検索、または[不明なコンピューター] **** を選択して不明なコンピューターが返す値から選択します。  
+-   **リソース クラス**: 検索してコレクションに追加するリソースの種類を選択します。 [システム リソース] **** から値を選択してクライアント コンピューターが返すインベントリ データを検索、または[不明なコンピューター] **** を選択して不明なコンピューターが返す値から選択します。  
 
-            -   **クエリ ステートメントの編集**: コレクションのクエリ規則として使用するクエリを編集できる [**クエリ ステートメントのプロパティ**] ダイアログ ボックスを開きます。 クエリに関する詳細については、「[System Center Configuration Manager のクエリのテクニカル リファレンス](../../../../core/servers/manage/queries-technical-reference.md)」を参照してください。  
+-   **クエリ ステートメントの編集**: コレクションのクエリ規則として使用するクエリを編集できる [**クエリ ステートメントのプロパティ**] ダイアログ ボックスを開きます。 クエリに関する詳細については、「[System Center Configuration Manager のクエリのテクニカル リファレンス](../../../../core/servers/manage/queries-technical-reference.md)」を参照してください。  
 
     
-        ##### To configure an include collection rule  
+##### <a name="to-configure-an-include-collection-rule"></a>[コレクションを含める] 規則を構成するには  
 
-        In the **Select Collections** dialog box, select the collections you want to include in the new collection, then choose **OK**.  
+**[コレクションの選択]** ダイアログ ボックスで、新しいコレクションに含めるコレクションを選択し、**[OK]** を選択します。  
 
-        ##### To configure an exclude collection rule  
+##### <a name="to-configure-an-exclude-collection-rule"></a>[コレクションを除外する] 規則を構成するには  
 
-        In the **Select Collections** dialog box, select the collections you want to exclude from the new collection, then choose **OK**.  
+**[コレクションの選択]** ダイアログ ボックスで、新しいコレクションから除外コレクションを選択し、**[OK]** を選択します。  
 
-    -   **このコレクションで増分更新を使用する** - コレクションのフル評価とは別に、新しいリソースまたは前回のコレクション評価から変更されたリソースのみを定期的にスキャンおよび更新する場合は、このオプションを選択します。 増分更新は 10 分間隔で行われます。  
+-   **このコレクションで増分更新を使用する** - コレクションのフル評価とは別に、新しいリソースまたは前回のコレクション評価から変更されたリソースのみを定期的にスキャンおよび更新する場合は、このオプションを選択します。 増分更新は 10 分間隔で行われます。  
 
-        > [!IMPORTANT]  
-        >  次のクラスを使用しているクエリ規則で構成されたコレクションは、増分更新をサポートしません。  
-        >   
-        >  -   SMS_G_System_CollectedFile  
-        > -   SMS_G_System_LastSoftwareScan  
-        > -   SMS_G_System_AppClientState  
-        > -   SMS_G_System_DCMDeploymentState  
-        > -   SMS_G_System_DCMDeploymentErrorAssetDetails  
-        > -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
-        > -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
-        > -   SMS_G_User_DCMDeploymentCompliantAssetDetails (ユーザーのコレクションのみ)  
-        > -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (ユーザーのコレクションのみ)  
-        > -   SMS_G_System_SoftwareUsageData  
-        > -   SMS_G_System_CI_ComplianceState  
-        > -   SMS_G_System_EndpointProtectionStatus  
-        > -   SMS_GH_System_*  
-        > -   SMS_GEH_System_*  
+> [!IMPORTANT]  
+>  次のクラスを使用しているクエリ規則で構成されたコレクションは、増分更新をサポートしません。  
+>   
+> -   SMS_G_System_CollectedFile  
+> -   SMS_G_System_LastSoftwareScan  
+> -   SMS_G_System_AppClientState  
+> -   SMS_G_System_DCMDeploymentState  
+> -   SMS_G_System_DCMDeploymentErrorAssetDetails  
+> -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
+> -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
+> -   SMS_G_User_DCMDeploymentCompliantAssetDetails (ユーザーのコレクションのみ)  
+> -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (ユーザーのコレクションのみ)  
+> -   SMS_G_System_SoftwareUsageData  
+> -   SMS_G_System_CI_ComplianceState  
+> -   SMS_G_System_EndpointProtectionStatus  
+> -   SMS_GH_System_*  
+> -   SMS_GEH_System_*  
 
-    -   **このコレクションの完全な更新をスケジュールする** - コレクションのメンバーシップのフル評価を定期的にスケジュールします。  
+-   **このコレクションの完全な更新をスケジュールする** - コレクションのメンバーシップのフル評価を定期的にスケジュールします。  
 
 6.  新しいコレクションを作成するウィザードを完了します。 新しいコレクションは、[資産とコンプライアンス] **** ワークスペースの [デバイス コレクション] **** ノードに表示されます。  
 
@@ -134,60 +133,60 @@ ms.lasthandoff: 12/30/2016
 
     -   [規則の追加] **** 一覧で、このコレクションで使用するメンバーシップ規則の種類を選択します。 1 つのコレクションにつき複数の規則を構成することができます。  
 
-         ##### <a name="to-configure-a-direct-rule"></a>ダイレクト規則を構成するには  
+##### <a name="to-configure-a-direct-rule"></a>ダイレクト規則を構成するには  
 
-        1.  **ダイレクト メンバーシップの規則の作成ウィザード**の **[リソースの検索]** ページで、次のように指定します。  
+1.  **ダイレクト メンバーシップの規則の作成ウィザード**の **[リソースの検索]** ページで、次のように指定します。  
 
-            -   **リソース クラス**: 検索してコレクションに追加するリソースの種類を選択します。 Configuration Manager によって収集されるユーザー情報を検索する場合は [**ユーザー リソース**] から、Configuration Manager によって収集されたユーザー グループ情報を検索する場合は [**ユーザー グループ リソース**] から選択します。  
+-   **リソース クラス**: 検索してコレクションに追加するリソースの種類を選択します。 Configuration Manager によって収集されるユーザー情報を検索する場合は [**ユーザー リソース**] から、Configuration Manager によって収集されたユーザー グループ情報を検索する場合は [**ユーザー グループ リソース**] から選択します。  
 
-            -   **属性名**: 検索するリソース クラスに関連する属性を選択します。 たとえば、組織単位 (OU) 名でユーザーを選択する場合は、 **[リソース クラス]** の一覧で **[ユーザー リソース]** を、 **[属性名]** の一覧で **[ユーザー OU 名]** を選択します。  
+-   **属性名**: 検索するリソース クラスに関連する属性を選択します。 たとえば、組織単位 (OU) 名でユーザーを選択する場合は、 **[リソース クラス]** の一覧で **[ユーザー リソース]** を、 **[属性名]** の一覧で **[ユーザー OU 名]** を選択します。  
 
-            -   **値:** 検索する値を入力します。 ワイルドカードとしてパーセント ( **%** ) を使用できます。 たとえば、Contoso OU 内のユーザーを検索する場合は、このフィールドに「**Contoso**」と入力します。  
+-   **値:** 検索する値を入力します。 ワイルドカードとしてパーセント ( **%** ) を使用できます。 たとえば、Contoso OU 内のユーザーを検索する場合は、このフィールドに「**Contoso**」と入力します。  
 
-        2.  **[リソースの選択]** ページで、コレクションに追加するリソースを **[リソース]** リストから選択します。  
+2.  **[リソースの選択]** ページで、コレクションに追加するリソースを **[リソース]** リストから選択します。  
 
-        ##### <a name="to-configure-a-query-rule"></a>クエリ規則を構成するには  
+##### <a name="to-configure-a-query-rule"></a>クエリ規則を構成するには  
 
-        1.  **[クエリ規則のプロパティ]** ダイアログ ボックスで、次のように指定します。  
+1.  **[クエリ規則のプロパティ]** ダイアログ ボックスで、次のように指定します。  
 
-            -   **名前**: 一意の名前です。  
+-   **名前**: 一意の名前です。  
 
-            -   **クエリ ステートメントのインポート** - コレクションのクエリ規則として使用する [Configuration Manager クエリ](../../../../core/servers/manage/queries-technical-reference.md)を選択できる **[クエリの参照]** ダイアログ ボックスを開きます。  
+-   **クエリ ステートメントのインポート** - コレクションのクエリ規則として使用する [Configuration Manager クエリ](../../../../core/servers/manage/queries-technical-reference.md)を選択できる **[クエリの参照]** ダイアログ ボックスを開きます。  
 
-            -   **リソース クラス**: 検索してコレクションに追加するリソースの種類を選択します。 Configuration Manager によって収集されるユーザー情報を検索する場合は [**ユーザー リソース**] から、Configuration Manager によって収集されたユーザー グループ情報を検索する場合は [**ユーザー グループ リソース**] から選択します。  
+-   **リソース クラス**: 検索してコレクションに追加するリソースの種類を選択します。 Configuration Manager によって収集されるユーザー情報を検索する場合は [**ユーザー リソース**] から、Configuration Manager によって収集されたユーザー グループ情報を検索する場合は [**ユーザー グループ リソース**] から選択します。  
 
-            -   **クエリ ステートメントの編集** - コレクションの規則として使用する[クエリを作成](../../../../core/servers/manage/queries-technical-reference.md)できる **[クエリ ステートメントのプロパティ]** ダイアログ ボックスを開きます。  
+-   **クエリ ステートメントの編集** - コレクションの規則として使用する[クエリを作成](../../../../core/servers/manage/queries-technical-reference.md)できる **[クエリ ステートメントのプロパティ]** ダイアログ ボックスを開きます。  
 
-        ##### <a name="to-configure-an-include-collection-rule"></a>[コレクションを含める] 規則を構成するには  
+##### <a name="to-configure-an-include-collection-rule"></a>[コレクションを含める] 規則を構成するには  
 
-        **[コレクションの選択]** ダイアログ ボックスで、新しいコレクションに含めるコレクションを選択し、**[OK]** を選択します。  
+**[コレクションの選択]** ダイアログ ボックスで、新しいコレクションに含めるコレクションを選択し、**[OK]** を選択します。  
 
-        ##### <a name="to-configure-an-exclude-collection-rule"></a>[コレクションを除外する] 規則を構成するには  
+##### <a name="to-configure-an-exclude-collection-rule"></a>[コレクションを除外する] 規則を構成するには  
 
-        **[コレクションの選択]** ダイアログ ボックスで、新しいコレクションから除外コレクションを選択し、**[OK]** を選択します。  
+**[コレクションの選択]** ダイアログ ボックスで、新しいコレクションから除外コレクションを選択し、**[OK]** を選択します。  
 
 
-    -   **このコレクションで増分更新を使用する** - コレクションのフル評価とは別に、新しいリソースまたは前回のコレクション評価から変更されたリソースのみを定期的にスキャンおよび更新する場合は、このオプションを選択します。 増分更新は 10 分間隔で行われます。  
+-   **このコレクションで増分更新を使用する** - コレクションのフル評価とは別に、新しいリソースまたは前回のコレクション評価から変更されたリソースのみを定期的にスキャンおよび更新する場合は、このオプションを選択します。 増分更新は 10 分間隔で行われます。  
 
-        > [!IMPORTANT]  
-        >  次のクラスを使用しているクエリ規則で構成されたコレクションは、増分更新をサポートしません。  
-        >   
-        >  -   SMS_G_System_CollectedFile  
-        > -   SMS_G_System_LastSoftwareScan  
-        > -   SMS_G_System_AppClientState  
-        > -   SMS_G_System_DCMDeploymentState  
-        > -   SMS_G_System_DCMDeploymentErrorAssetDetails  
-        > -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
-        > -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
-        > -   SMS_G_User_DCMDeploymentCompliantAssetDetails (ユーザーのコレクションのみ)  
-        > -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (ユーザーのコレクションのみ)  
-        > -   SMS_G_System_SoftwareUsageData  
-        > -   SMS_G_System_CI_ComplianceState  
-        > -   SMS_G_System_EndpointProtectionStatus  
-        > -   SMS_GH_System_*  
-        > -   SMS_GEH_System_*  
+> [!IMPORTANT]  
+>  次のクラスを使用しているクエリ規則で構成されたコレクションは、増分更新をサポートしません。  
+>   
+> -   SMS_G_System_CollectedFile  
+> -   SMS_G_System_LastSoftwareScan  
+> -   SMS_G_System_AppClientState  
+> -   SMS_G_System_DCMDeploymentState  
+> -   SMS_G_System_DCMDeploymentErrorAssetDetails  
+> -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
+> -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
+> -   SMS_G_User_DCMDeploymentCompliantAssetDetails (ユーザーのコレクションのみ)  
+> -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails (ユーザーのコレクションのみ)  
+> -   SMS_G_System_SoftwareUsageData  
+> -   SMS_G_System_CI_ComplianceState  
+> -   SMS_G_System_EndpointProtectionStatus  
+> -   SMS_GH_System_*  
+> -   SMS_GEH_System_*  
 
-    -   **このコレクションの完全な更新をスケジュールする** - コレクションのメンバーシップのフル評価を定期的にスケジュールします。  
+-   **このコレクションの完全な更新をスケジュールする** - コレクションのメンバーシップのフル評価を定期的にスケジュールします。  
 
 6.  ウィザードを完了します。 新しいコレクションは、[資産とコンプライアンス] **** ワークスペースの [ユーザー コレクション] **** ノードに表示されます。  
 
