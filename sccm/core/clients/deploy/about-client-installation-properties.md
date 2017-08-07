@@ -51,7 +51,7 @@ System Center Configuration Manager CCMSetup.exe コマンドを使用して、C
 
  コマンド プロンプトで、CCMSetup.exe コマンドは次の形式を使用します。  
 
- `CCMSetup.exe [&lt;Ccmsetup properties\>] [&lt;client.msi setup properties>]`  
+ `CCMSetup.exe [<Ccmsetup properties>] [<client.msi setup properties>]`  
 
  例:  
 
