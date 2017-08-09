@@ -15,6 +15,7 @@
 ### [Long-Term Servicing Branch の管理](understand/manage-the-ltsb.md)
 ### [Long-Term Servicing Branch の Current Branch へのアップグレード](understand/convert-to-current-branch.md)
 ##  [どの Configuration Manager の分岐を使用するべきか](understand/which-branch-should-i-use.md)
+##  [拡張相互運用性クライアント](understand/interoperability-client.md)
 ##  [System Center Configuration Manager のライセンス付与](understand/learn-more-editions.md)
 ##  [クラウド サービスの使用](understand/use-cloud-services.md)
 ### [Azure での Configuration Manager](understand/configuration-manager-on-azure.md)
