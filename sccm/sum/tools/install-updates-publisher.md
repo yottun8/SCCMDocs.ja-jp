@@ -123,3 +123,4 @@ Updates Publisher をインストールするには、上記の*前提条件*を
 
  ただし、更新サーバーや管理対象デバイスに更新プログラムを展開するつもりがなく、既定のままで使用する場合は、[ソフトウェア更新カタログの管理](updates-publisher-catalogs.md)または[ソフトウェア更新プログラムの作成](create-updates-with-updates-publisher.md)に進んで、ご自身の更新カタログを作成できます。
 
+
