@@ -12,11 +12,11 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
-ms.openlocfilehash: 6add66e625c790b65edf64216c2262a5d082f820
+ms.translationtype: HT
+ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
+ms.openlocfilehash: 2da61e6e06850b36543b9fd41bd9a7d2368006fb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 12/16/2016
+ms.lasthandoff: 08/04/2017
 
 ---
 #  <a name="configure-classifications-and-products-to-synchronize"></a>同期する分類と製品の構成  
@@ -50,9 +50,13 @@ ms.lasthandoff: 12/16/2016
     > - **ツール**: 1 つまたは複数のタスクを完了するためのユーティリティまたは機能を示します。  
     > - **更新プログラムのロールアップ**: 容易に展開できるようにパッケージにまとめられた修正プログラムを累積したセットを示します。 これらの修正プログラムには、セキュリティの更新プログラム、重要な更新プログラム、更新プログラムなどが含まれています。 更新プログラムのロールアップは、通常セキュリティまたは製品コンポーネントなど特定の領域に対応します。  
     > - **更新プログラム**: 現在インストールされているアプリケーションまたはファイルの更新プログラムを示します。  
-    > - **アップグレード**: Windows 10 の機能のアップグレードを指定します。  
-    >   
-    >      ソフトウェアの更新ポイントとサイトは最低限 WSUS 4.0 と [修正プログラム 3095113](https://support.microsoft.com/kb/3095113) を実行して、**アップグレード**の分類を取得する必要があります。  
+    > - **アップグレード**: Windows 10 の機能のアップグレードを指定します。 ソフトウェアの更新ポイントとサイトは最低限 WSUS 4.0 と [修正プログラム 3095113](https://support.microsoft.com/kb/3095113) を実行して、**アップグレード**の分類を取得する必要があります。    
+    >       
+
+    > [!NOTE]    
+    > Configuration Manager バージョン 1706 以降では、**[Microsoft Surface のドライバーとファームウェアの更新プログラムを含める]** チェックボックスをオンにして Microsoft Surface ドライバーを同期することもできるようになりました。 Surface ドライバーを正常に同期するには、すべてのソフトウェアの更新ポイントで Windows Server 2016 を実行している必要があります。     
+    >    
+    > これは、プレリリース版の機能です。 プレリリース機能は、運用環境での早期テストのためにこの製品に含まれていますが、運用環境で使用することはできません。 使用するには、この機能を有効にする必要があります。 詳細については、「[更新プログラムからプレリリース機能を使用する](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)」を参照してください。
 
 5.  [ **製品** ] タブで、ソフトウェア更新プログラムを同期させる製品の更新の分類を指定し、[ **閉じる** ] をクリックします。  
 
@@ -63,7 +67,6 @@ ms.lasthandoff: 12/16/2016
 
     > [!IMPORTANT]  
     >  Configuration Manager は、ソフトウェアの更新ポイントを初めてインストールするときに選択できる製品と製品ファミリのリストを保存します。 Configuration Manager のリリース後にリリースされる製品と製品ファミリは、選択できる使用可能な製品と製品ファミリのリストを更新する、ソフトウェア更新プログラムの同期を完了するまでは選択できない可能性があります。  
-
 
 ## <a name="next-steps"></a>次のステップ
 ソフトウェア更新プログラムの同期を開始し、新しい基準でソフトウェア更新プログラムを取得します。 詳細については、「[ソフトウェア更新プログラムの同期](synchronize-software-updates.md)」を参照してください。

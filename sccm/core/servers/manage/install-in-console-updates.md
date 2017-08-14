@@ -15,23 +15,20 @@ caps.latest.revision: 36
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
-ms.openlocfilehash: 34ddb646137aaf1160d850ba7c1e0109f467225d
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 2bbc8935bee306ed0bc312cc43b8f5374a8df7ff
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/13/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
-# System Center Configuration Manager のコンソール内の更新プログラムのインストール
-<a id="install-in-console-updates-for-system-center-configuration-manager" class="xliff"></a>
+# <a name="install-in-console-updates-for-system-center-configuration-manager"></a>System Center Configuration Manager のコンソール内の更新プログラムのインストール
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager は Microsoft クラウド サービスと同期して更新プログラムを取得します。 その更新プログラムは Configuration Manager コンソール内からインストールできます。
 
-## 利用可能な更新プログラムの取得
-<a id="get-available-updates" class="xliff"></a>
+## <a name="get-available-updates"></a>利用可能な更新プログラムの取得
 お使いのインフラストラクチャとバージョンに適用される更新プログラムのみがダウンロードされて、お使いの階層で利用可能になります。 階層のサービス接続ポイントをどのように構成するかによって、この同期は自動または手動になります。
 
 -   **オンライン モード**では、サービス接続ポイントは Microsoft クラウド サービスに自動的に接続して、適用可能な更新プログラムをダウンロードします。  
@@ -64,8 +61,7 @@ System Center Configuration Manager は Microsoft クラウド サービスと�
 
 -   [フローチャート - System Center Configuration Manager のレプリケーションの更新](../../../core/servers/manage/update-replication-flowchart.md)  
 
-## 更新プログラムと機能を表示および管理するためのアクセス許可の割り当て
-<a id="assign-permissions-to-view-and-manage-updates-and-features" class="xliff"></a>
+## <a name="assign-permissions-to-view-and-manage-updates-and-features"></a>更新プログラムと機能を表示および管理するためのアクセス許可の割り当て
 コンソールで更新プログラムを表示するには、**更新プログラム パッケージ**というセキュリティ クラスを含むロールベースの管理セキュリティ ロールが必要です。 このクラスで、Configuration Manager コンソールで更新プログラムを表示および管理するアクセス権が付与されます。    
 
 **更新プログラム パッケージ クラスについて:**  
@@ -105,8 +101,7 @@ System Center Configuration Manager は Microsoft クラウド サービスと�
 
 <!-- Removed as update guidance 6/6/2017. The Test DB Upgrade details are no longer recommended nor required. They live on in a new topic for customers who still want to use them. -->
 
-###  手順 2: 更新プログラムをインストールする前の前提条件チェッカーの実行
-<a id="step-2-run-the-prerequisite-checker-before-installing-an-update" class="xliff"></a>  
+###  <a name="step-2-run-the-prerequisite-checker-before-installing-an-update"></a>手順 2: 更新プログラムをインストールする前の前提条件チェッカーの実行  
 更新プログラムをインストールする前に、その更新プログラムに対して前提条件チェックを実行することを検討します。 次の場合には、更新プログラムをインストールする前に、前提条件チェックを実行します。  
 
 -   更新ファイルは、更新プログラムのインストールの前に他のサイトにレプリケートされます。  
@@ -115,8 +110,7 @@ System Center Configuration Manager は Microsoft クラウド サービスと�
 
 その後に、更新プログラムをインストールするときには、前提条件チェックの警告を無視するように更新プログラムを構成することができます。  
 
-#### 更新プログラムをインストールする前に前提条件チェッカーを実行する方法
-<a id="to-run-the-prerequisite-checker-before-installing-an-update" class="xliff"></a>  
+#### <a name="to-run-the-prerequisite-checker-before-installing-an-update"></a>更新プログラムをインストールする前に前提条件チェッカーを実行する方法  
 
 1.  Configuration Manager コンソールで、**[管理]** > **[更新とサービス]** の順に進みます。   
 
@@ -230,8 +224,7 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 
 セカンダリ サイトが正常に更新された後、コンソールの状態が更新されないか、更新の失敗が示された場合は、**[インストールの再試行]** オプションを使用します。 このオプションでは、更新プログラムを正常にインストールしなかったセカンダリ サイトの更新プログラムは再インストールされず、コンソールに状態の更新を強制します。
 
-### インストール後のタスク
-<a id="post-installation-tasks" class="xliff"></a>
+### <a name="post-installation-tasks"></a>インストール後のタスク
 バージョン 1610 以降、インストール後のタスクに関する情報を表示することができます。
 
 サイトで更新プログラムをインストールする場合、サイト サーバーで更新プログラムのインストールが完了しないと開始できないタスクがいくつかあります。 サイトと階層の操作に重要なインストール後のタスクのリストを以下に示します。 これらは重要であるため、アクティブに監視されます。 直接監視されない追加タスクには、サイト システムの役割の再インストールが含まれます。 重要なインストール後のタスクの状態を表示するには、サイトの更新プログラムのインストールの監視時に **[インストール後]** のタスクを選択します。
@@ -295,6 +288,9 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 
 ##  <a name="bkmk_retry"></a> 失敗した更新プログラムのインストールの再試行  
 更新プログラムのインストールに失敗したら、コンソール内のフィードバックを確認して、警告およびエラーを解消する方法を特定します。 詳細について、サイト サーバーの ConfigMgrPrereq.log を表示することもできます。 更新プログラムのインストールを再試行する前に、エラーを修正して、警告を修正する必要があります。  
+
+> [!TIP]  
+> 更新プログラムのダウンロードやレプリケートで問題が発生する場合は、[更新プログラム リセット ツール](/sccm/core/servers/manage/update-reset-tool)を使用できます。 このツールは、バージョン 1706 以降を実行しているサイトから使用できます。 
 
 更新プログラムのインストールを再試行する準備ができたら、障害が発生した更新プログラムを選択し、該当するオプションを選択します。 更新プログラムのインストールを再試行したときの動作は、再試行を開始したノードと、使用する再試行オプションによって異なります。  
 
@@ -365,8 +361,7 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 プレリリース機能は、運用環境での初期テスト用の Current Branch に含まれています。 これらの機能は運用環境で使用できますが、運用の準備ができているとは見なされません。 現在の環境で機能を有効にする方法などの詳細については、[プレリリース機能](/sccm/core/servers/manage/pre-release-features)に関する記事を参照してください。             
 
 
-## 既知の問題
-<a id="known-issues" class="xliff"></a>
+## <a name="known-issues"></a>既知の問題
 
 ###  <a name="bkmk_faq"></a> 特定の更新プログラムがコンソールに表示されない理由  
  Microsoft クラウド サービスと正常に同期した後に、特定の更新プログラムがコンソールに表示されない理由としては、次のことが考えられます。  
@@ -379,8 +374,7 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 
     更新プログラムを表示するために必要なアクセス許可について、このトピックの「[更新プログラムを管理するためのアクセス許可](../../../core/servers/manage/install-in-console-updates.md#assign-permissions-to-view-and-manage-updates-and-features)」を参照し、コンソール内から機能を有効にしてください。
 
-### バージョン 1610 の更新プログラムが 2 つ表示されるのはなぜですか?
-<a id="why-do-i-see-two-updates-for-version-1610" class="xliff"></a>
+### <a name="why-do-i-see-two-updates-for-version-1610"></a>バージョン 1610 の更新プログラムが 2 つ表示されるのはなぜですか?
 コンソールから更新プログラムを表示した場合、バージョン 1610 をインストールするための更新プログラムが 2 つ表示されることがあります。 これらの更新プログラムは日付が異なります。 次のいずれかの条件に該当した場合は両方が表示されます。   
 -   バージョン 1610 がリリースされた後に、以前のバージョン (1606 など) をインストールした。
 
