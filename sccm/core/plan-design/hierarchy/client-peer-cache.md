@@ -2,7 +2,7 @@
 title: "クライアント ピア キャッシュ | System Center Configuration Manager"
 description: "System Center Configuration Manager でコンテンツを展開する場合は、クライアントのコンテンツ ソースの場所のピア キャッシュを使用します。"
 ms.custom: na
-ms.date: 7/3/2017
+ms.date: 7/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,16 +15,15 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed6b65a1a5aabc0970cd0333cb033405cf6d2aea
-ms.openlocfilehash: 94802680747a3d371716c1b345b2cba098150716
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 89fcd16887ae77299f9d18472ee6a1ba56794eca
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 
-# Configuration Manager クライアントのピア キャッシュ
-<a id="peer-cache-for-configuration-manager-clients" class="xliff"></a>
+# <a name="peer-cache-for-configuration-manager-clients"></a>Configuration Manager クライアントのピア キャッシュ
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -33,8 +32,7 @@ System Center Configuration Manager バージョン 1610 以降、**ピア キ�
 > [!TIP]  
 > バージョン 1610 で導入されたピア キャッシュとクライアント データ ソースのダッシュボードは、プレリリース機能です。 有効にするには、「[更新プログラムからのプレリリース機能の使用](/sccm/core/servers/manage/pre-release-features)」をご覧ください。
 
-## 概要
-<a id="overview" class="xliff"></a>
+## <a name="overview"></a>概要
 ピア キャッシュ クライアントは、ピア キャッシュの使用が有効にされた構成マネージャー クライアントです。 追加のクライアントと共有できるコンテンツを含むピア キャッシュ クライアントは、ピア キャッシュ ソースです。
  -  クライアント設定を使用してピア キャッシュを使用するクライアントを有効にできます。
  -  ピア キャッシュ ソースとしてコンテンツを共有するには、ピア キャッシュ クライアントは以下である必要があります。
@@ -43,8 +41,7 @@ System Center Configuration Manager バージョン 1610 以降、**ピア キ�
  - Configuration Manager クライアントのキャッシュに保持されているコンテンツのすべての種類は、ピア キャッシュを使用して他のクライアントに提供できます。
  -  ピア キャッシュは、BranchCache などのその他のソリューションの使用に取って代わるものではなく、それらのソリューションと並列動作し、配布ポイントなどの従来のコンテンツ展開ソリューションを拡張する追加のオプションを提供します。 これは、BranchCache に依存しないカスタム ソリューションであるため、Windows BranchCache を有効にしない、または使用しない場合でも機能します。
 
-### オペレーション
-<a id="operations" class="xliff"></a>
+### <a name="operations"></a>オペレーション
 
 ピア キャッシュを有効にするクライアント設定をコレクションに展開すると、そのコレクションのメンバーは同じ境界グループ内の他のクライアントのピア コンテンツ ソースとして動作できます。
  -  ピア コンテンツ ソースとして動作するクライアントは、キャッシュされている利用可能なコンテンツの一覧を管理ポイントに送信します。
@@ -70,8 +67,7 @@ System Center Configuration Manager バージョン 1610 以降、**ピア キ�
 
 
 
-### 監視
-<a id="monitoring" class="xliff"></a>   
+### <a name="monitoring"></a>監視   
 クライアントが正常にピア キャッシュの使用を把握しやすいように、クライアント データ ソース ダッシュボードを表示できます。 「[Client Data Sources dashboard](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard)」 (クライアント データ ソースのダッシュボード) を参照してください。
 
 バージョン 1702 以降では、3 つのレポートを使ってピア キャッシュの使用状況を表示できます。 コンソールで、**[監視]** > **[レポート]** > **[レポート]** に移動します。 すべてのレポートの種類は**ソフトウェア配布コンテンツ**です。
@@ -93,18 +89,18 @@ System Center Configuration Manager バージョン 1610 以降、**ピア キ�
     2. 次に、**[資産とコンプライアンス]** > **[デバイス]** に移動し、そのコンピューター名を検索します。 [リソース ID] 列の値を使います。  
 
 
-## ピア キャッシュの要件と考慮事項
-<a id="requirements-and-considerations-for-peer-cache" class="xliff"></a>
+## <a name="requirements-and-considerations-for-peer-cache"></a>ピア キャッシュの要件と考慮事項
 -   ピア キャッシュは、Configuration Manager クライアントとしてサポートされているすべての Windows OS でサポートされています。 Windows 以外のオペレーティング システムは、ピア キャッシュではサポートされていません。
 
 -   クライアントは、現在の境界グループ内にあるピア キャッシュ クライアントのコンテンツのみを転送できます。
 
--   クライアントがピア キャッシュを使用する各サイトは、[ネットワーク アクセス アカウント](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account)を使用して構成する必要があります。 アカウントは、ピア キャッシュ ソース コンピューターによって、ピアからのダウンロード要求を認証するために使用され、この目的にはドメイン ユーザーのアクセス許可のみが必要です。
+-   バージョン 1706 以前の場合、クライアントがピア キャッシュを使用する各サイトは、[ネットワーク アクセス アカウント](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account)を使用して構成する必要があります。 バージョン 1706 以降、1 つの例外を除き、そのアカウントは不要になりました。  その例外とは、クライアントがピア キャッシュを利用し、ソフトウェア センターからタスク シーケンスを取得して実行し、そのタスク シーケンスがクライアントを再起動し、WinPE を起動する場合です。  このシナリオでは、ピア キャッシュ ソースにアクセスし、コンテンツを取得するために、WinPE で起動したとき、クライアントはネットワーク アクセス アカウントを必要とします。
+
+    ピアからのダウンロード要求を認証するためにネットワーク アクセス アカウントが必要になると、ピア キャッシュ ソース コンピューターによりこのアカウントが使用されます。このアカウントは、この目的のためにドメイン ユーザーのアクセス許可のみを必要とします。
 
 -   ピア キャッシュ コンテンツ ソースの現在の境界は、そのクライアントの最後のハードウェア インベントリ送信によって決定されるため、ネットワークの場所に移動し別の境界グループ内にあるクライアントは、ピア キャッシュを目的として、その以前の境界グループのメンバーであると見なされる場合があります。 これにより、クライアントが、直接のネットワークの場所にない、ピア キャッシュ コンテンツ ソースが提供されます。 この構成の傾向のあるクライアントをピア キャッシュ ソースとして参加させないようにすることをお勧めします。
 
-## クライアント ピア キャッシュのクライアント設定を構成するには
-<a id="to-configure-client-peer-cache-client-settings" class="xliff"></a>
+## <a name="to-configure-client-peer-cache-client-settings"></a>クライアント ピア キャッシュのクライアント設定を構成するには
 1.  Configuration Manager コンソールで **[管理]** > **[クライアント設定]** に移動し、使用するデバイス クライアント設定オブジェクトを開きます。 既定のクライアント設定オブジェクトを変更することもできます。
 2.  使用可能な設定のリストから [**クライアント キャッシュ設定**] を選びます。
 3.  **[完全な OS 上の Configuration Manager クライアントでコンテンツを共有できるようにする]** を **[はい]** に設定します。

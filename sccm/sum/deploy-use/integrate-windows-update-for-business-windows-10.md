@@ -1,5 +1,4 @@
 ---
-
 title: "Windows 10 における Windows Update for Business との統合 | Microsoft Docs"
 description: "Windows Update サービスに接続しているデバイスに関して、Windows Update for Business を利用し、組織の Windows 10 デバイスを最新の状態に維持します。"
 keywords: 
@@ -13,10 +12,11 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
-ms.openlocfilehash: 8bdbacd54632475ac69a0d0a9a34b2567c3daa13
-
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 26e73a69d5e6ca69e766fcf3cedd992353c92cd6
+ms.contentlocale: ja-jp
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>Windows 10 における Windows Update for Business との統合
@@ -45,7 +45,7 @@ Windows Update for Business (WUfB) を使用すると、組織内の Windows 10 
 
 -   ソフトウェア更新プログラムのインフラストラクチャを使用する Configuration Manager の完全なクライアント展開は、WUfB に接続して更新プログラムを受信するクライアントに対しては機能しません。  
 
-## <a name="identify-clients-that-use--wufb-for-windows-10-updates"></a>WUfB を使用して Windows 10 の更新プログラムを取得するクライアントを識別する  
+## <a name="identify-clients-that-use-wufb-for-windows-10-updates"></a>WUfB を使用して Windows 10 の更新プログラムを取得するクライアントを識別する  
  次の手順を使用して、Windows 10 の更新プログラムとアップグレードの取得に WUfB を使用するクライアントを識別し、WSUS を使用して更新プログラムを取得することをやめるようそれらのクライアントを構成して、これらのクライアントのソフトウェア更新ワークフローを無効にするためのクライアント エージェント設定を展開します。  
 
  **必要条件**  
@@ -67,8 +67,40 @@ Windows Update for Business (WUfB) を使用すると、組織内の Windows 10 
 
 5.  WUfB を介して管理されているコンピューターの対応ステータスには **[不明]** と表示され、全体のコンプライアンス対応率をカウントする際に、これらのコンピューターは除外されます。  
 
+## <a name="configure-windows-update-for-business-deferral-policies"></a>Windows Update for Business 遅延ポリシーの構成
+<!-- 1290890 -->
+Configuration Manager バージョン 1706 以降、Windows Update for Business によって直接管理されている Windows 10 デバイスの Windows 10 機能更新プログラムまたは品質更新プログラムに対し、遅延ポリシーを構成できるようになりました。 遅延ポリシーの管理は、**[ソフトウェア ライブラリ]** > **[Windows 10 のサービス]** の下の新しい **[Windows Update for Business ポリシー]** ノードでできます。
 
+### <a name="prerequisites"></a>必要条件
+Windows Update for Business で管理されている Windows 10 デバイスには、インターネット接続が必要です。
 
-<!--HONumber=Dec16_HO3-->
+#### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>Windows Update for Business 遅延ポリシーを作成するには
+1. **[ソフトウェア ライブラリ]** > **[Windows 10 のサービス]** > **[Windows Update for Business ポリシー]** に移動します。
+2. **[ホーム]** タブの **[作成]** グループで、**[Windows Update for Business ポリシーを作成する]** を選択し、Windows Update for Business ポリシーの作成ウィザードを開きます。
+3. **[全般]** ページで、ポリシーの名前と説明を入力します。
+4. **[遅延ポリシー]** ページで、機能更新プログラムを遅延または一時停止するかどうかを設定します。    
+    機能更新プログラムは通常、Windows の新機能です。 **[ブランチ準備レベル]** を設定すると、機能更新プログラムが Microsoft からリリースされた場合に、受け取りを遅延させるかどうか、およびその期間を定義できます。
+    - **[ブランチ準備レベル]**: Windows Update を受け取るデバイスのブランチを設定します (Current Branch または Current Branch for Business)。
+    - **[遅延期間 (日数)]**: 機能更新プログラムを遅延させる日数を指定します。 これらの機能更新プログラムの受け取りは、リリースから 180 日間遅延させることができます。
+    - **[Pause Features Updates starting]\(機能更新プログラムの一時停止の開始\)**: デバイスでの機能更新プログラムの受け取りを一時停止するかどうかを選択します。一時停止の期間は最大 60 日間です。 最大日数が経過すると、一時停止機能は自動的に期限切れとなり、デバイスは適用可能な更新を確認するために Windows Update をスキャンします。 このスキャンが終ったら、もう一度更新を一時停止することができます。 機能更新プログラムの一時停止を解除するには、チェック ボックスをオフにします。   
+5. 品質更新プログラムを遅延または一時停止するかどうかを選択します。     
+    品質更新プログラムは通常、既存の Windows 機能の修正と機能強化で、通常は毎月第 1 火曜日に公開されますが、Microsoft が任意のタイミングでリリースすることもあります。 品質更新プログラムが利用可能になった場合に受け取りを遅延させるかどうか、およびその期間を定義できます。
+    - **[遅延期間 (日数)]**: 機能更新プログラムを遅延させる日数を指定します。 これらの機能更新プログラムの受け取りは、リリースから 180 日間遅延させることができます。
+    - **[品質更新プログラムの一時停止の開始]**: デバイスでの品質更新プログラムの受け取りを一時停止するかどうかを選択します。一時停止の期間は最大 35 日間です。 最大日数が経過すると、一時停止機能は自動的に期限切れとなり、デバイスは適用可能な更新を確認するために Windows Update をスキャンします。 このスキャンが終ったら、もう一度更新を一時停止することができます。 品質更新プログラムの一時停止を解除するには、チェック ボックスをオフにします。
+6. **[他の Microsoft 製品の更新プログラムのインストール]** を選択して、遅延の設定を Microsoft Update と Windows Update に適用可能にするグループ ポリシー設定を有効にします。
+7. **[Include drivers with Windows Update]\(ドライバーと Windows Update を含める\)** を選択して、Windows Update から自動的にドライバーを更新します。 この設定をオフにすると、Windows Update からドライバーの更新プログラムがダウンロードされません。
+8. ウィザードを完了して新しいコレクションを作成します。
 
+#### <a name="to-deploy-a-windows-update-for-business-deferral-policy"></a>Windows Update for Business 遅延ポリシーを展開するには
+1. **[ソフトウェア ライブラリ]** > **[Windows 10 のサービス]** > **[Windows Update for Business ポリシー]** に移動します。
+2. **[ホーム]** タブの **[展開]** グループで、**[Windows Update for Business ポリシーを展開する]** を選択します。
+3. 次の設定を構成します。
+    - **[展開する構成ポリシー]**: 展開する Windows Update for Business ポリシーを選択します。
+    - **[コレクション]**: **[参照]** をクリックして、ポリシーを展開するコレクションを選択します。
+    - **[サポートされている場合は対応していない規則を修復する]**: 選択すると、Windows Management Instrumentation (WMI)、レジストリ、スクリプト、および、Configuration Manager が登録したモバイル デバイスのすべての設定が対応しない規則があれば、自動的に修復します。
+    - **[メンテナンス期間以外の修復を許可する]**: ポリシーの展開先のコレクションにメンテナンス期間が設定されている場合、このオプションを有効にすると、コンプライアンス設定によって、メンテナンス期間外に値を修復できます。 メンテナンス期間について詳しくは、「[メンテナンス期間を使用する方法](/sccm/core/clients/manage/collections/use-maintenance-windows)」を参照してください。
+    - **[アラートを生成する]**: 構成基準のコンプライアンスが、指定した日付と時刻までに指定した割合に達しなかった場合に生成されるアラートを構成します。 アラートを System Center Operations Manager に送信するかどうかも指定できます。
+    - **[ランダム遅延 (時間)]**: ネットワーク デバイス登録サービスで処理量が過度にならないように、遅延期間を指定します。 既定値は 64 時間です。
+    - **[スケジュール]**: 展開されたプロファイルをクライアント コンピューターで評価するコンプライアンス評価スケジュールを指定します。 単純なスケジュールとカスタム スケジュールの 2種類あります。 プロファイルは、ユーザーがログオンしたときにクライアント コンピューターによって評価されます。
+4.  ウィザードを完了してプロファイルを展開します。
 

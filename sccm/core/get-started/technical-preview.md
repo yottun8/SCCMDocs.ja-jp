@@ -2,7 +2,7 @@
 title: "Configuration Manager の Technical Preview | Microsoft Docs"
 description: "System Center Configuration Manager の新機能を体験できるテクニカル プレビュー リリースについて説明します。"
 ms.custom: na
-ms.date: 06/23/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: HT
-ms.sourcegitcommit: 1f57c63ceeb13c7f7d760d7ecfb48df749da6770
-ms.openlocfilehash: 4644928acbb1ae3d7d72f877565589fae435a96b
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 9f814fc2902cef116f6b1e476af5d4cbdfc4e217
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview
@@ -127,47 +127,47 @@ ms.lasthandoff: 07/28/2017
  |機能 |Technical Preview バージョン |Current Branch バージョン|  
  |----------------|---------------------|--------------------|
  |新しいモバイル アプリケーション管理ポリシーの設定|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|![追加されていません](media/Red_X.gif)|
- |ソフトウェアの更新ポイントのための境界グループの改善|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|![追加されていません](media/Red_X.gif)|
+ |ソフトウェアの更新ポイントのための境界グループの改善|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|[バージョン 1706](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)|
  |サイト サーバーの役割の高可用性|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |![追加されていません](media/Red_X.gif)|
  |Device Guard ポリシーに特定のファイルとフォルダーの信頼を含める|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#include-trust-for-specific-files-and-folders-in-a-device-guard-policy)|![追加されていません](media/Red_X.gif)|
  |タスク シーケンスの進行状況の非表示|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#hide-task-sequence-progress)|![追加されていません](media/Red_X.gif)|
  |コンテンツのインストールとコンテンツのアンインストール用に別のコンテンツの場所を指定する|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#specify-a-different-content-location-for-install-content-and-uninstall-content)|![追加されていません](media/Red_X.gif)|
- |アクセシビリティの機能強化 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#accessibility-improvements)|![追加されていません](media/Red_X.gif)|
+ |アクセシビリティの機能強化 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#accessibility-improvements)|[バージョン 1706](/sccm/core/understand/accessibility-features)|
  |Azure サービス ウィザードでの Upgrade Readiness のサポート |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#changes-to-the-azure-services-wizard-to-support-upgrade-readiness)|![追加されていません](media/Red_X.gif)|
- |クラウド サービスの新しいクライアント設定|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-client-settings-for-cloud-services)|![追加されていません](media/Red_X.gif)|
- |Configuration Manager コンソールから PowerShell スクリプトを作成して実行する|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#create-and-run-powershell-scripts-from-the-configuration-manager-console)|![追加されていません](media/Red_X.gif)|
+ |クラウド サービスの新しいクライアント設定|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-client-settings-for-cloud-services)|[バージョン 1706](/sccm/core/clients/deploy/deploy-clients-cmg-azure)|
+ |Configuration Manager コンソールから PowerShell スクリプトを作成して実行する|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#create-and-run-powershell-scripts-from-the-configuration-manager-console)|[バージョン 1706](/sccm/apps/deploy-use/create-deploy-scripts)|
  |PXE ネットワーク ブートでの IPv6 のサポート |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|![追加されていません](media/Red_X.gif)|
- |Microsoft Surface ドライバーの更新プログラムの管理 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#manage-microsoft-surface-driver-updates)|![追加されていません](media/Red_X.gif)|
- |Windows Update for Business 遅延ポリシーの構成 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#configure-windows-update-for-business-deferral-policies)|![追加されていません](media/Red_X.gif)|
+ |Microsoft Surface ドライバーの更新プログラムの管理 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#manage-microsoft-surface-driver-updates)|[バージョン 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#manage-microsoft-surface-driver-updates)|
+ |Windows Update for Business 遅延ポリシーの構成 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#configure-windows-update-for-business-deferral-policies)|[バージョン 1706](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)|
  |Android および iOS の登録制限|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-and-ios-enrollment-restrictions)|![追加されていません](media/Red_X.gif)|
- |コピー/貼り付け用の Android for Work アプリケーション管理ポリシー|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-for-work-application-management-policy-for-copy-paste)|![追加されていません](media/Red_X.gif)|
- |新しい Windows 構成アイテムの設定|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-windows-configuration-item-settings)|![追加されていません](media/Red_X.gif)|
+ |コピー/貼り付け用の Android for Work アプリケーション管理ポリシー|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-for-work-application-management-policy-for-copy-paste)|[バージョン 1706](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client#android-for-work-configuration-item-settings-reference)|
+ |新しい Windows 構成アイテムの設定|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-windows-configuration-item-settings)|[バージョン 1706](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)|
  |新しいデバイス コンプライアンス ポリシー ルール|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-device-compliance-policy-rules)|![追加されていません](media/Red_X.gif)|
  |条件付きアクセスのコンプライアンス ポリシーに対するデバイス正常性構成証明の評価|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#device-health-attestation-assessment-for-compliance-policies-for-conditional-access)|![追加されていません](media/Red_X.gif)|
- |Entrust 証明機関のサポート|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#support-for-entrust-certification-authorities)|![追加されていません](media/Red_X.gif)|
- |macOS VPN プロファイルの Cisco (IPsec) のサポート|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#cisco-ipsec-support-for-macos-vpn-profiles)|![追加されていません](media/Red_X.gif)|
- |Azure AD の新機能とクラウド管理|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|![追加されていません](media/Red_X.gif)|
+ |Entrust 証明機関のサポート|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#support-for-entrust-certification-authorities)|[バージョン 1706](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)|
+ |macOS VPN プロファイルの Cisco (IPsec) のサポート|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#cisco-ipsec-support-for-macos-vpn-profiles)|[バージョン 1706](/sccm/protect/deploy-use/vpn-profiles)|
+ |Azure AD の新機能とクラウド管理|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|[バージョン 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#azure-ad-integration-with-configuration-manager)|
  |Windows Defender Application Guard ポリシーの構成と展開|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-and-deploy-windows-defender-application-guard-policies)|![追加されていません](media/Red_X.gif)|
- |更新のリセット ツール  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#update-reset-tool)|![追加されていません](media/Red_X.gif)|
- |高 DPI コンソールのサポート  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#high-dpi-console-support)|![追加されていません](media/Red_X.gif)|
- |ピア キャッシュの改善  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#peer-cache-improvements) |![追加されていません](media/Red_X.gif)|
- |SQL Server Always On 可用性グループの機能強化 |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#improvements-for-sql-server-always-on-availability-groups) |![追加されていません](media/Red_X.gif)|
- |Office 365 更新プログラムのユーザーへの通知の改善|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#improved-user-notifications-for-office-365-updates) |![追加されていません](media/Red_X.gif)|
+ |更新のリセット ツール  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#update-reset-tool)|[バージョン 1706](/sccm/core/servers/manage/update-reset-tool)|
+ |高 DPI コンソールのサポート  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#high-dpi-console-support)|[バージョン 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#high-dpi-console-support)|
+ |ピア キャッシュの改善  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#peer-cache-improvements) |[バージョン 1706](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache)|
+ |SQL Server Always On 可用性グループの機能強化 |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#improvements-for-sql-server-always-on-availability-groups) |[バージョン 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#improvements-for-sql-server-always-on-availability-groups)|
+ |Office 365 更新プログラムのユーザーへの通知の改善|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#improved-user-notifications-for-office-365-updates) |[バージョン 1706](/sccm/sum/deploy-use/manage-office-365-proplus-updates#restart-behavior-and-client-notifications-for-office-365-updates)|
  |Azure サービス ウィザードを使用して、OMS への接続を構成する|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#use-azure-services-wizard-to-configure-a-connection-to-oms) |![追加されていません](media/Red_X.gif)|
  |アプリ構成ポリシーを使用した Android アプリの構成  |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#configure-android-apps-with-app-configuration-policies)|![追加されていません](media/Red_X.gif)|
- |ハードウェア インベントリでのセキュア ブート情報の収集 |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#hardware-inventory-collects-secure-boot-information)|![追加されていません](media/Red_X.gif)|
+ |ハードウェア インベントリでのセキュア ブート情報の収集 |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#hardware-inventory-collects-secure-boot-information)|[バージョン 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#hardware-inventory-collects-secure-boot-information)|
  |子タスク シーケンスをタスク シーケンスに追加する|[Tech Preview 1704](capabilities-in-technical-preview-1704.md#add-child-task-sequences-to-a-task-sequence)|![追加されていません](media/Red_X.gif)|
- |最新バージョンの Windows PE を使用してブート イメージを再読み込みする |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#reload-boot-images-with-current-windows-pe-version)|![追加されていません](media/Red_X.gif)|
+ |最新バージョンの Windows PE を使用してブート イメージを再読み込みする |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#reload-boot-images-with-current-windows-pe-version)|[バージョン 1706](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image)|
  |オペレーティング システムの展開に関する機能拡張|[Tech Preview 1704](capabilities-in-technical-preview-1704.md#improvements-to-operating-system-deployment)|![追加されていません](media/Red_X.gif)|
  |ボリューム購入 iOS アプリをデバイス コレクションに展開する|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#deploy-volume-purchased-ios-apps-to-device-collections)|[バージョン 1702](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)|
  |ソフトウェア センターでのアプリケーションへの直接リンク|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#direct-links-to-applications-in-software-center)|![追加されていません](media/Red_X.gif)
- |Configuration Manager の Windows クライアント コンピューター用の PFX 証明書|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#pfx-certificates-for-configuration-manager-windows-client-computers)|![追加されていません](media/Red_X.gif)|
- |Azure サービスの構成ウィザード|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#configure-azure-services-wizard)|![追加されていません](media/Red_X.gif)|
+ |Configuration Manager の Windows クライアント コンピューター用の PFX 証明書|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#pfx-certificates-for-configuration-manager-windows-client-computers)|[バージョン 1706](/sccm/protect/deploy-use/create-certificate-profiles)|
+ |Azure サービスの構成ウィザード|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#configure-azure-services-wizard)|[バージョン 1706](/sccm/core/servers/deploy/configure/azure-services-wizard)|
  |オペレーティング システムのアップグレード タスク シーケンスでの BIOS から UEFI への変換| [Tech Preview 1703](capabilities-in-technical-preview-1703.md#convert-from-bios-to-uefi-during-an-in-place-upgrade) |[バージョン 1702](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)|
- |折りたたみ可能なタスク シーケンス グループ| [Tech Preview 1703](capabilities-in-technical-preview-1703.md#collapsible-task-sequence-groups) |![追加されていません](media/Red_X.gif)|
+ |折りたたみ可能なタスク シーケンス グループ| [Tech Preview 1703](capabilities-in-technical-preview-1703.md#collapsible-task-sequence-groups) |[バージョン 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#collapsible-task-sequence-groups)|
  |Windows Analytics for Upgrade Readiness を構成するためのクライアント設定 | [Tech Preview 1703](capabilities-in-technical-preview-1703.md#client-settings-to-configure-windows-analytics-for-upgrade-readiness) |![追加されていません](media/Red_X.gif)|
  |iOS デバイスの新しいコンプライアンス設定|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#new-compliance-settings-for-ios-devices)|[バージョン 1702](/sccm/mdm/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)|
- |S/MIME サポートを含む PFX 証明書を作成する|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#create-pfx-certificates-with-s-mime-support)|[バージョン 1702](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)|
+ |S/MIME サポートを含む PFX 証明書を作成する|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#create-pfx-certificates-with-s-mime-support)|[バージョン 1706](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)|
  |アプリケーションをインストールする前に実行中の実行可能ファイルを確認する|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#check-for-running-executable-files-before-installing-an-application)|[バージョン 1702](/sccm/apps/deploy-use/deploy-applications)|
  |Configuration Manager コンソールからフィードバックを送信する | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#send-feedback-from-the-configuration-manager-console)    |[バージョン 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702#send-feedback-from-the-configuration-managercconsole)  |
  |更新プログラムとサービスの変更  | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#changes-for-updates-and-servicing)  |[バージョン 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702#changes-for-updates-and-servicing) |
@@ -194,7 +194,7 @@ ms.lasthandoff: 07/28/2017
  |Configuration Manager でのビジネス向け Windows ストアのサポート|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#windows-store-for-business-support-in-configuration-manager)|![追加されていません](media/Red_X.gif)|
  |タスク シーケンスが失敗した場合に前のページに戻る|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#return-to-previous-page-when-a-task-sequence-fails)|[バージョン 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702#operating-system-deployment)|
  |Windows 10 更新プログラムに対する高速インストール ファイルのサポート|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#express-installation-files-support-for-windows-10-updates)|[バージョン 1702](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates)|
- |Azure Active Directory のオンボーディング|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#azure-active-directory-onboarding)|![追加されていません](media/Red_X.gif)|
+ |Azure Active Directory のオンボーディング|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#azure-active-directory-onboarding)|[バージョン 1706](/sccm/core/servers/deploy/configure/azure-services-wizard)|
  |デバイス登録のための多要素認証の構成の変更|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#change-to-configuring-multi-factor-authentication-for-device-enrollment)|![追加されていません](media/Red_X.gif)|
  |展開とタスク シーケンスのコンテンツの事前キャッシュ |[Tech Preview 1611](capabilities-in-technical-preview-1611.md#pre-cache-content-for-available-deployments-and-task-sequences)|[バージョン 1702](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)|
  |Windows Defender の構成設定|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#windows-defender-configuration-settings)|[バージョン 1610](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)|

@@ -1,5 +1,5 @@
 ---
-title: "PFX 証明書プロファイルの作成 | Microsoft Docs"
+title: "証明機関を使用して PFX 証明書プロファイルを作成する | Microsoft Docs"
 description: "System Center Configuration Manager で PFX ファイルを使用して暗号化されたデータ交換をサポートするユーザーに固有の証明書を生成する方法について説明します。"
 ms.custom: na
 ms.date: 04/04/2017
@@ -10,49 +10,40 @@ ms.technology:
 - configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
+ms.assetid: d240a836-c49b-49ab-a920-784c062d6748
 caps.latest.revision: 5
 caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 26feb0b166beb7e48cb800a5077d00dbc3eec51a
-ms.openlocfilehash: 27435316c6e47531ff989bc8956ca0c874131a0e
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 43d8b2217763681be69711fce93c020a65da1cd8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/02/2017
 
 ---
-# <a name="how-to-create-pfx-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager で PFX 証明書プロファイルを作成する方法
+# <a name="how-to-create-pfx-certificate-profiles-using-a-certificate-authority"></a>証明機関を使用して PFX 証明書プロファイルを作成する方法
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-証明書プロファイルは、ユーザーが会社のリソースにシームレスにアクセスできるように、Active Directory 証明書サービスとネットワーク デバイス登録サービスの役割を使用して、管理対象のデバイスの認証証明書をプロビジョニングします。 たとえば、証明書プロファイルを作成し、展開して、ユーザーが VPN 接続およびワイヤレス接続を開始するために必要な証明書を提供することができます。
+ここでは、資格情報として証明機関を使用する証明書プロファイルを作成する方法について説明します。
 
 [証明書プロファイル](../../protect/deploy-use/introduction-to-certificate-profiles.md)に関する記事には、証明書プロファイルの作成と構成に関する一般的な情報が記載されています。 このトピックでは、PFX 証明書に関連した証明書プロファイルの具体的な情報をいくつか取り上げます。
 
--  Configuration Manager では、要件、デバイスの種類、オペレーティング システムにも応じて、異なる証明書ストアに証明書を展開することがサポートされています。 Intune に登録されている次のデバイスがサポートされます。
-
- -   iOS  
-
-- その他の前提条件については、[証明書プロファイルの前提条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)に関する記事を参照してください。
-
 ## <a name="pfx-certificate-profiles"></a>PFX 証明書プロファイル
-System Center Configuration Manager では、ユーザーのデバイスに Personal Information Exchange (.pfx) ファイルをインポートしてプロビジョニングできます。 PFX ファイルを使用してユーザー固有の証明書を生成すると、データ交換の暗号化に対応できます。
+System Center Configuration Manager では、証明機関から発行された資格情報を使用して PFX 証明書プロファイルを作成できます。  バージョン 1706 の時点で、証明機関として Microsoft または Entrust を選択できます。  個人情報交換 (.pfx) ファイルをユーザー デバイスに展開すると、暗号化されたデータの交換をサポートするユーザー固有の証明書が生成されます。
 
-> [!TIP]  
->  このプロセスの手順について説明したチュートリアルは、「 [Configuration Manager で PFX 証明書プロファイルを作成および展開する方法](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx)」に記載されています。  
+既存の証明書ファイルから証明書の資格情報をインポートする方法については、「[How to create PFX certificate profiles by importing certificate details](../../mdm/deploy-use/import-pfx-certificate-profiles.md)」(証明書の詳細をインポートして PFX 証明書プロファイルを作成する方法) を参照してください。
 
 ## <a name="create-and-deploy-a-personal-information-exchange-pfx-certificate-profile"></a>Personal Information Exchange (PFX) 証明書プロファイルの作成と配置  
 
 ### <a name="get-started"></a>作業開始
 
-1.  System Center Configuration Manager コンソールで、[**資産とコンプライアンス**] をクリックします。  
+1.  System Center Configuration Manager コンソールで、**[資産とコンプライアンス]** を選択します。  
+2.  **[資産とコンプライアンス]** ワークスペースで、**[コンプライアンス設定]** &gt; **[会社のリソースへのアクセス]** &gt; **[証明書プロファイル]** をクリックします。  
 
-2.  [ **資産とコンプライアンス** ] ワークスペースで、[ **コンプライアンス設定**]、[ **会社のリソースへのアクセス**] の順に展開してから、[ **証明書プロファイル**] をクリックします。  
-
-3.  [ **ホーム** ] タブの [ **作成** ] グループで、[ **証明書プロファイルの作成**] をクリックします。
+3.  **[ホーム]** タブの **[作成]** グループで、**[証明書プロファイルの作成]** を選択します。
 
 4.  **[証明書プロファイルの作成]** ウィザードの **[全般]** ページで、次の情報を指定します。  
 
@@ -60,65 +51,136 @@ System Center Configuration Manager では、ユーザーのデバイスに Pers
 
     -   **説明**: System Center Configuration Manager コンソールで証明書プロファイルを区別しやすくなるように、簡単な説明と他の関連情報を入力します。 最大 256 文字を使用できます。  
 
-    -   **[作成する証明書プロファイルの種類を指定します]**: PFX 証明書の場合、次の項目を選びます。  
+    -   **[作成する証明書プロファイルの種類を指定します]** で **[Personal Information Exchange -- PKCS #12 (PFX) 設定 -- 作成]** を選択し、ドロップダウン リストから証明機関を選択します。  バージョン 1706 以降は、**[Microsoft]** または **[Entrust]** を選択できるようになりました。
 
-        -   **Personal Information Exchange -- PKCS #12 (PFX) 設定 -- インポート**: PFX 証明書をインポートするには、これを選びます。  
-       
+### <a name="select-supported-platforms"></a>サポートされているプラットフォームを選択する
 
-### <a name="import-a-pfx-certificate"></a>PFX 証明書をインポートする
+[サポートされているプラットフォーム] ページでは、証明書プロファイルがサポートするオペレーティング システムとデバイスが表示されます。  
 
-PFX 証明書をインポートするには、Configuration Manager SDK が必要です。 ユーザー用にインポートしたすべての証明書は、ユーザーが登録しているすべてのデバイスに展開されます。
+証明書プロファイルは複数のオペレーティング システムとデバイスをサポートできますが、一部のオペレーティング システムまたはデバイスの組み合わせでは、異なる設定が必要な場合があります。  このような場合は、異なる設定ごとに別のプロファイルを作成することをお勧めします。  
 
-1. **[証明書プロファイルの作成ウィザード]** の **[PFX 証明書]** ページで、証明書を保存する展開先デバイス上の場所を指定します。
-    -     **トラステッド プラットフォーム モジュール (TPM) にインストールする (存在する場合)**  
-    -   **トラステッド プラットフォーム モジュール (TPM) にインストールする (それ以外は失敗)** 
-    -   **Windows Hello for Business にインストールする (それ以外は失敗)** 
-    -   **ソフトウェア キー記憶域プロバイダーにインストールする** 
-2. [次へ] をクリックします。 **** 
-3. ウィザードの **[サポートされているプラットフォーム]** ページでこの証明書をインストールするデバイスのプラットフォームを選び、**[次へ]** をクリックします。
-4. ダウンロード センターから入手できる Windows 8.1 用 SDK を使用して ([http://go.microsoft.com/fwlink/?LinkId=613525](http://go.microsoft.com/fwlink/?LinkId=613525))、PFX 作成スクリプトを配置します。 Configuration Manager 2012 SP2 に追加された PFX 作成スクリプトは、SDK に SMS_ClientPfxCertificate クラスを追加します。 このクラスには、次のメソッドが含まれています。  
+バージョン 1706 の時点で、次のオプションを使用できます。
 
-    -   ImportForUser  
+- Windows 10
+    - すべての Windows 10 (64 ビット)
+    - すべての Windows 10 (32 ビット)
+    - すべての Windows 10 Holographic Enterprise 以降
+    - すべての Windows 10 Holographic 以降
+    - すべての Windows 10 Team 以降
+    - すべての Windows 10 Mobile 以降
+- iPhone
+- iPad
+- Android
+- Android for Work
 
-    -   DeleteForUser  
+> [!Note]  
+> MacOS/OSX デバイスは現在サポートされていません。  
 
-     サンプル スクリプト:  
+他のオプションが選択されていない場合、**[すべて選択]** チェックボックスをクリックすると、使用できるすべてのオプションが選択されます。  1 つまたは複数のオプションが選択されている場合、**[すべて選択]** チェックボックスをクリックすると、既存の選択はクリアされます。 
 
-```  
-    $EncryptedPfxBlob = "<blob>"  
-    $Password = "abc"  
-    $ProfileName = "PFX_Profile_Name"  
-    $UserName = "ComputerName\Administrator"  
+1.  証明書プロファイルでサポートされるプラットフォームを 1 つまたは複数選択します。
 
-    #New pfx  
-    $WMIConnection = ([WMIClass]"\\nksccm\root\SMS\Site_MDM:SMS_ClientPfxCertificate")  
-        $NewEntry = $WMIConnection.psbase.GetMethodParameters("ImportForUser")  
-        $NewEntry.EncryptedPfxBlob = $EncryptedPfxBlob  
-        $NewEntry.Password = $Password  
-        $NewEntry.ProfileName = $ProfileName  
-        $NewEntry.UserName = $UserName  
-    $Resource = $WMIConnection.psbase.InvokeMethod("ImportForUser",$NewEntry,$null)  
+1.  **[次へ]** を選択して、続行します。  
 
-```  
 
-次のスクリプト変数はスクリプトに合わせて変更する必要があります。  
+### <a name="configure-certification-authorities"></a>証明機関を構成する
 
-   -   blob\ = PFX の base64 で暗号化された blob  
-   -   $Password = PFX ファイルのパスワード  
-   -   $ProfileName = PFX プロファイル名  
-   -   ComputerName = ホスト コンピューター名   
+ここでは、PFX 証明書を処理する証明書登録ポイント (CRP) を選択します。  
 
+1.  **[プライマリ サイト]** リストから、CA の CRP ロールを含むサーバーを選択します。
+1.  **[証明機関]** リストから、左側の列のチェックマークをオンにして、関連する CA を選択します。
+1.  続行する準備ができたら **[次へ]** を選択します。
+
+詳細については、「[証明書インフラストラクチャ](../../protect/deploy-use/certificate-infrastructure.md)」を参照してください。
+
+
+### <a name="configure-certificate-settings-for-microsoft-ca"></a>Microsoft CA の証明書設定を構成する
+
+CA として Microsoft を使用する場合、証明書設定を構成するには、次の手順を実行します。
+
+1.  **[証明書テンプレート名]** ドロップダウンから証明書テンプレートを選択します。
+
+1.  S/MIME 署名または暗号化に証明書プロファイルを使用するには、**[証明書の使用法]** チェックボックスをオンにします。
+
+    CA として Microsoft を使用するときにこのチェックボックスをオンにすると、対象ユーザーに関連付けられているすべての PFX 証明書は、ユーザーが登録しているすべてのデバイスに配布されます。  このチェックボックスをオフにすると、各デバイスに一意の証明書が送信されます。  
+
+1.  **[サブジェクト名の形式]** を **[共通名]** または **[完全な識別名]** に設定します。  どちらを使用するかわからない場合は、組織内の証明機関管理者に問い合わせてください。
+
+1.  **[サブジェクトの別名]** で、必要に応じて CA の **[電子メール アドレス]** と **[ユーザー プリンシパル名 (UPN)]** を有効にします。
+
+1.  **[更新しきい値]** で、有効期間までの残り時間の割合に応じて証明書が自動的に更新されるタイミングが決まります。
+
+1.  **[証明書の有効期間]** に証明書の有効期間を設定します。  期間を示す数値 (1 から 100) と期間 (年、月、または日) を指定します。
+
+1.  **[Active Directory 公開]** は、証明書登録ポイントで Active Directory 資格情報を指定する場合に有効にします。  証明書プロファイルを Active Directory に公開するには、このオプションを有効にします。
+
+1.  サポートされるプラットフォームを指定するときに 1 つまたは複数の Windows 10 プラットフォームを選択した場合:
+
+    1.  **[Windows 証明書ストア]** を **[ユーザー]** に設定します  (**[ローカル コンピューター]** を選択しても証明書は展開されないので、選択しないことをお勧めします)。
+    1.  次のオプションのいずれかから **[キー格納プロバイダー (KSP)]** を選択します。
+
+        - **トラステッド プラットフォーム モジュール (TPM) にインストールする (存在する場合)**  
+        - **トラステッド プラットフォーム モジュール (TPM) にインストールする (それ以外は失敗)** 
+        - **Windows Hello for Business にインストールする (それ以外は失敗)** 
+        - **ソフトウェア キー記憶域プロバイダーにインストールする** 
+
+1.  完了したら、**[次へ]** または **[概要]** を選択します。
+
+### <a name="configure-certificate-settings-for-entrust-ca"></a>Entrust CA の証明書設定を構成する
+
+CA として Entrust を使用する場合、証明書設定を構成するには、次の手順を実行します。
+
+1.  **[デジタル ID 構成]** ドロップダウンから、構成プロファイルを選択します。  デジタル ID 構成オプションは、Entrust 管理者によって作成されます。
+
+1.  **[証明書の使用法]** をオンにすると、S/MIME 署名または暗号化に証明書プロファイルが使用されます。
+
+    CA として Entrust を使用する場合、対象ユーザーに関連付けられているすべての PFX 証明書は、ユーザーが登録しているすべてのデバイスに配布されます。    このオプションを*オフ*にすると、各デバイスに一意の証明書が送信されます  (動作は CA によって異なります。詳細については、対応するセクションを参照してください)。
+
+1.  **[形式]** ボタンをクリックして Entrust の **[サブジェクト名の形式]** トークンを ConfigMgr フィールドにマップします。  
+
+    **[Certificate Name Formatting]\(証明書名の形式\)** に、Entrust デジタル ID 構成変数の一覧が表示されます。  各 Entrust 変数について、関連するドロップダウン リストから適切な LDAP 変数を選択します。
+
+1.  **[形式]** ボタンをクリックして Entrust の **[サブジェクトの別名]** トークンをサポートされる LDAP 変数にマップします。  
+
+    **[Certificate Name Formatting]\(証明書名の形式\)** に、Entrust デジタル ID 構成変数の一覧が表示されます。  各 Entrust 変数について、関連するドロップダウン リストから適切な LDAP 変数を選択します。
+
+1.  **[更新しきい値]** で、有効期間までの残り時間の割合に応じて証明書が自動的に更新されるタイミングが決まります。
+
+1.  **[証明書の有効期間]** に証明書の有効期間を設定します。  期間を示す数値 (1 から 100) と期間 (年、月、または日) を指定します。
+
+1.  **[Active Directory 公開]** は、証明書登録ポイントで Active Directory 資格情報を指定する場合に有効にします。  証明書プロファイルを Active Directory に公開するには、このオプションを有効にします。
+
+1.  サポートされるプラットフォームを指定するときに 1 つまたは複数の Windows 10 プラットフォームを選択した場合:
+
+    1.  **[Windows 証明書ストア]** を **[ユーザー]** に設定します  (**[ローカル コンピューター]** を選択しても証明書は展開されないので、選択しないことをお勧めします)。
+    1.  次のオプションのいずれかから **[キー格納プロバイダー (KSP)]** を選択します。
+
+        - **トラステッド プラットフォーム モジュール (TPM) にインストールする (存在する場合)**  
+        - **トラステッド プラットフォーム モジュール (TPM) にインストールする (それ以外は失敗)** 
+        - **Windows Hello for Business にインストールする (それ以外は失敗)** 
+        - **ソフトウェア キー記憶域プロバイダーにインストールする** 
+
+1.  完了したら、**[次へ]** または **[概要]** を選択します。
 
 
 ### <a name="finish-up"></a>完了
 
-1.  **[次へ]**をクリックし、 **[概要]** ページを確認してウィザードを終了します。  
-2.  現在、PFX ファイルを含む証明書プロファイルは **[証明書プロファイル]** ワークスペースから取得できます。 
-3.  プロファイルを展開するには、**[資産とコンプライアンス]** ワークスペースで、**[コンプライアンス設定]** > **[会社のリソースへのアクセス]** > **[証明書プロファイル]** の順に開き、証明書を右クリックして、**[展開]** をクリックします。 
+1.  [概要] ページで選択内容が正しいことを確認します。
 
+1.  準備ができたら、**[次へ]** を選択してプロファイルを作成します。  
+
+1.  現在、PFX ファイルを含む証明書プロファイルは **[証明書プロファイル]** ワークスペースから取得できます。 
+
+1.  プロファイルを展開するには:
+
+    1. **[資産と準拠]** ワークスペースを開きます。
+    1. **[コンプライアンス設定]** > **[会社のリソースへのアクセス]** > **[証明書プロファイル]** を選択します。
+    1. 対象の証明書プロファイルを右クリックし、**[展開]** を選択します。 
 
 
 ## <a name="see-also"></a>関連項目
-「[新しい証明書プロファイルを作成する](../../protect/deploy-use/create-certificate-profiles.md#create-a-new-certificate-profile)」では、証明書プロファイルの作成ウィザードについて説明します。
+「[新しい証明書プロファイルを作成する](../../protect/deploy-use/create-certificate-profiles.md)」では、証明書プロファイルの作成ウィザードについて説明します。
 
-[Wi-Fi、VPN、電子メール、および証明書プロファイルの展開](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)に関する記事では、証明書プロファイルの展開について説明します。
+[証明書の詳細をインポートして PFX 証明書プロファイルを作成する方法](../../mdm/deploy-use/import-pfx-certificate-profiles.md)
+
+「[Deploy Wi-Fi, VPN, email, and certificate profiles](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)」(Wi-Fi、VPN、電子メール、および証明書プロファイルの展開) では、証明書プロファイルの展開について説明しています。

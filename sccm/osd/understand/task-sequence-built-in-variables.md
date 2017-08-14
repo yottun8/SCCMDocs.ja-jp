@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
-ms.openlocfilehash: f5feccc4f810e1a94bb7dcdd5ad507d84b9c3b4a
+ms.translationtype: HT
+ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
+ms.openlocfilehash: 32b24b3637dfafe401ea1d9f51b3769aa749f544
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>System Center Configuration Manager のタスク シーケンス組み込み変数
@@ -83,7 +82,8 @@ ms.lasthandoff: 05/17/2017
 |SMSTSDriverRequestResolveTimeOut|この変数を使用して、[ドライバーの自動適用] タスク シーケンス ステップにおける、ドライバー カタログ要求に対する HTTP 名前解決の待機時間 (秒) を指定します。 設定したタイムアウトまでの時間よりも接続に時間がかかる場合は、ドライバー カタログの要求はキャンセルされます。 既定では、タイムアウトまでの時間は 60 秒に設定されます。|
 |SMSTSDriverRequestSendTimeOut|この変数を使用して、[ドライバーの自動適用] タスク シーケンス ステップにおける、ドライバー カタログ要求の送信に要する時間 (秒) を指定します。 設定したタイムアウトまでの時間よりも要求に時間がかかる場合は、ドライバー カタログの要求はキャンセルされます。 既定では、タイムアウトまでの時間は 60 秒に設定されます。|
 |SMSTSErrorDialogTimeout|タスク シーケンスでエラーが発生すると、ダイアログが表示されます。このダイアログは、既定のタイムアウト値が経過すると自動的に閉じられます。 既定では、 **900** 秒 (15 分) 後にダイアログ ボックスが自動的に閉じます。|  
-|TSErrorOnWarning|タスク シーケンス エンジンがタスク シーケンスのステップのアプリケーションのインストール中に、検出された警告をエラーとしてと見なされるかどうかを指定するには、この変数を使用します。 1 つまたは複数のアプリケーション、または、必要な依存関係がインストールされていない場合、要件を満たしていないため、タスク シーケンスは _TSAppInstallStatus 変数を **警告** に設定します。 TSErrorOnWarning 変数を **True** に設定し、_TSAppInstallStatus 変数を [警告] に設定すると、エラーとして扱われます。 値 **False** が既定の動作です。|  
+| TSDisableProgressUI | この変数を使用して、タスク シーケンスの各セクションでタスク シーケンスの進行状況を表示または非表示にできます。 | 
+|TSErrorOnWarning|タスク シーケンス エンジンがタスク シーケンスのステップのアプリケーションのインストール中に、検出された警告をエラーとしてと見なされるかどうかを指定するには、この変数を使用します。 1 つまたは複数のアプリケーション、または、必要な依存関係がインストールされていない場合、要件を満たしていないため、タスク シーケンスは _TSAppInstallStatus 変数を **警告** に設定します。 TSErrorOnWarning 変数を **True** に設定し、_TSAppInstallStatus 変数を [警告] に設定すると、エラーとして扱われます。 値 **False** が既定の動作です。| 
 |SMSTSLanguageFolder|言語に依存しないブート イメージの表示言語を変更するときに使用します。|  
 |SMSTSLocalDataDrive|タスク シーケンスの実行中に一時ファイルを対象コンピューターに格納する場所を指定します。<br /><br /> この変数は、コレクション変数の設定によって行うなど、タスク シーケンスが開始する前に設定される必要があります。 タスク シーケンスが開始された後で、Configuration Manager は _SMSTSMDataPath 変数を定義します。|  
 |SMSTSMP|この変数を使用して、Configuration Manager の管理ポイントの URL または IP アドレスを指定します。|  

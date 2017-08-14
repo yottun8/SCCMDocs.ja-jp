@@ -2,7 +2,7 @@
 title: "Exchange ActiveSync 電子メール プロファイルを作成する | Microsoft Docs"
 description: "Microsoft Intune と連携して機能する System Center Configuration Manager で電子メール プロファイルを作成および構成する方法について説明します。"
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 07/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
-ms.openlocfilehash: bcf337d2abbcd5aad0f99098f6afd4a73ada3a0b
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 7434c98f2217cf63fdcd250b91e772de72daaea9
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/02/2017
 
 ---
 
@@ -48,7 +47,7 @@ Microsoft Intune と Exchange ActiveSync を利用すると、デバイスに電
 
  デバイスに電子メール アカウントを構成するだけでなく、アドレス帳、予定表、作業の同期を設定できます。  
 
- 電子メール プロファイルを作成するとき、さまざまなセキュリティ設定を含めることができます。 たとえば、ID の証明書、暗号化、System Center Configuration Manager プロファイルにより設定された署名などです。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](/sccm/protect/deploy-use/introduction-to-certificate-profiles)」を参照してください。    
+ 電子メール プロファイルを作成するとき、さまざまなセキュリティ設定を含めることができます。 たとえば、ID の証明書、暗号化、System Center Configuration Manager プロファイルにより設定された署名などです。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](/sccm/protect/deploy-use/introduction-to-certificate-profiles.md)」を参照してください。    
 
 ## <a name="create-an-exchange-activesync-email-profile"></a>Exchange ActiveSync 電子メール プロファイルを作成する  
 
@@ -104,19 +103,21 @@ Microsoft Intune と Exchange ActiveSync を利用すると、デバイスに電
 
     -   **ID 証明書**。 **[選択]** を選択し、ID として使用する証明書を選択します。  
 
-        > [!NOTE]  
-        > ID 証明書を選択する前に、それを Simple Certificate Enrollment Protocol (SCEP) の証明書プロファイルとして最初に構成する必要があります。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](/sccm/protect/deploy-use/introduction-to-certificate-profiles)」を参照してください。  
+         ID 証明書には SCEP 証明書を使用する必要があります。PFX 証明書は使用できません。  詳細については、「[Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles)」(System Center Configuration Manager の証明書プロファイル) を参照してください。  
 
          このオプションは、**[認証方法]** の下で **[証明書]** を選択した場合にのみ利用できます。  
 
     -   **S/MIME を使用する**。 S/MIME 暗号化を使用して送信メールを送信します。 このオプションは iOS デバイスにのみ適用されます。 次のオプションを選択します。
 
+        -   **[署名証明書]**。  **[選択]** を選択し、暗号化に使用する証明書プロファイルを選択します。  
+
+            SCEP 証明書または PFX 証明書のプロファイルを使用できます。  ただし、署名と暗号化の両方を使用する場合は、署名と暗号化の*両方*のために PFX 証明書プロファイルを選択する必要があります。
+
         -   **暗号化証明書**。 **[選択]** を選択し、暗号化に使用する証明書を選択します。 暗号化証明書として使うことができるのは、PFX 証明書だけです。
 
-        暗号化証明書と署名証明書の両方を選ぶ場合は、どちらも PFX 形式でなければなりません。
+        -   iOS デバイス上のすべての電子メール メッセージを暗号化するには、**[暗号化を必須にする]** をオンにします。    
 
-        > [!NOTE]  
-        > 証明書を選ぶ前に、それを SCEP または PFX の証明書プロファイルとして最初に構成する必要があります。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](/sccm/protect/deploy-use/introduction-to-certificate-profiles)」を参照してください。  
+         この項目を選択するには、証明書プロファイルを作成しておく必要があります。  詳細については、「[Certificate profiles in System Center Configuration Manager](/sccm/protect/deploy-use/introduction-to-certificate-profiles)」(System Center Configuration Manager の証明書プロファイル) を参照してください。  
 
 ## <a name="configure-synchronization-settings-for-the-exchange-activesync-email-profile"></a>Exchange ActiveSync 電子メール プロファイルの同期設定を構成します。  
 

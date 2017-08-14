@@ -2,7 +2,7 @@
 title: "ユーザー補助 | Microsoft Docs"
 description: "障碍のあるユーザーに System Center Configuration Manager を利用してもらうための機能について説明します。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 98599b3c188c9e9b508fea79ecf9a2b2348e9288
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: ca518796477dda149a9f4c0ebd65f0a082eab806
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="accessibility-features-in-system-center-configuration-manager"></a>System Center Configuration Manager のユーザー補助機能
@@ -31,14 +31,38 @@ System Center Configuration Manager には、障碍のあるユーザーに利�
 
 
 ## <a name="bkmk_aconsole"></a> Configuration Manager コンソールのユーザー補助機能  
--   次のショートカット キーを使用して、ワークスペースにアクセスできます。  
 
-|ワークスペース|ショートカット キー|  
-|------|--------|  
-|資産とコンプライアンス|Ctrl+1|  
-|ソフトウェア ライブラリ|Ctrl+2|  
-|監視|Ctrl+3|  
-|管理|Ctrl+4|  
+**バージョン 1706 以降のショートカットと機能強化**
+
+|ショートカット キー|  目的|
+|--------|--------|  
+|Ctrl + M|フォーカスをメイン (中央) ウィンドウに設定します。|
+|Ctrl + T|フォーカスをナビゲーション ウィンドウの最上位ノードに設定します。 フォーカスが既にそのウィンドウにある場合、フォーカスは最後にアクセスしたノードに設定されます。|
+|Ctrl + I|フォーカスをリボンの下の階層リンク バーに設定します。|
+|Ctrl + L|フォーカスを **[検索]** フィールドに設定します (使用可能な場合)。|
+|Ctrl + D|フォーカスを [詳細] フィールドに設定します (使用可能な場合)。|
+|Alt     |リボンのフォーカスのインとアウトを変更します。|
+
+
+- ノード名の文字を入力したときのナビゲーション ウィンドウでのナビゲーションが改善されました。
+- メイン ビューとリボンのキーボード ナビゲーションが循環になりました。
+- 詳細ウィンドウのキーボード ナビゲーションが循環になりました。 前のオブジェクトまたはウィンドウに戻るには、Ctrl + D キーを押してから Shift + TAB キーを押します。
+- [ワークスペース] ビューを更新すると、フォーカスがそのワークスペースのメイン ウィンドウに設定されます。
+- スクリーン リーダーを有効にしてリスト アイテムの名前を読み上げる問題を修正しました。
+- スクリーン リーダーが重要な情報を読み上げられるように、ページ上の複数のコントロールにアクセス可能な名前を追加しました。
+
+
+**以下のキーボード ショートカットはすべてのバージョンで使用できます。**
+
+- 次のショートカット キーを使用して、ワークスペースにアクセスできます。  
+
+|ショートカット キー| ワークスペース|
+|--------|--------|  
+|Ctrl + 1| 資産とコンプライアンス|
+|Ctrl + 2|  ソフトウェア ライブラリ|
+|Ctrl + 3|  監視|
+|Ctrl + 4|  管理|
+
 
 -   ワークスペース メニューを表示するには、展開/折りたたみのアイコンにフォーカスが移動するまで Tab キーを選択します。 下矢印キーを選択すると、ワークスペースのメニューが開きます。  
 

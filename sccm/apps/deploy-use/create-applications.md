@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: da86fc2f61ce8229fb0d3f58a4f8a24d1514b30e
+ms.translationtype: HT
+ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
+ms.openlocfilehash: 4d048d4f9ab01b28e6c21a38cca4d82c85030618
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="create-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager でアプリケーションを作成する
@@ -198,6 +197,14 @@ Configuration Manager コンソールの [**アプリケーション**] ノー�
 
         > [!IMPORTANT]  
         >  サイト サーバー コンピューターのシステム アカウントには、指定するコンテンツの場所のアクセス許可が必要です。  
+
+    -   **[アンインストール コンテンツ設定]** -- 次のいずれかを指定します。
+        - **[インストール コンテンツと同じ]** -- インストールおよびアンインストール コンテンツが同じ場合は、このオプションを選択します。 これは既定の動作です。
+        - **[アンインストール コンテンツなし]** -- アプリケーションにアンインストール対象のコンテンツがない場合は、このオプションを選択します。
+        - **[インストール コンテンツと異なる]** -- アンインストール コンテンツがインストール コンテンツと異なる場合は、このオプションを選択します。
+
+4. **[インストール コンテンツと異なる]** を選択した場合、アプリケーションのインストールに使用するアプリケーション コンテンツの場所を参照するか、入力します。
+5. [**OK**] をクリックして、[展開の種類プロパティ] ダイアログ ボックスを閉じます。
 
     -   **クライアント キャッシュの内容を保持する** -- 展開の実行後もコンテンツをクライアント コンピューターのキャッシュに無期限に保持するかどうかを指定する場合に、このオプションを選択します。 このオプションは、展開によっては便利な場合があります (更新プログラムを適用するときにローカルにソースのコピーを必要とする Windows インストーラー ベースのソフトウェアを展開するときなど) が、使用可能なキャッシュ領域が少なくなります。 このオプション選択した場合は、キャッシュに十分な空き領域がないと、後で大規模な展開に失敗する可能性があります。  
 

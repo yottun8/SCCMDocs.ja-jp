@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager の増分バージョン | Microsoft Docs"
 description: "System Center Configuration Manager の更新プログラムをインストールして管理する方法について説明します。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: fb968fe866920c93edaa43be457032c3e7fd1c42
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 043c9521f4a94ea2df5cebb4ca1c0b1127f0edbc
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="whats-new-in-system-center-configuration-manager-incremental-versions"></a>System Center Configuration Manager の増分バージョンの新機能
@@ -37,14 +37,11 @@ ms.lasthandoff: 05/17/2017
 
  これらの更新プログラム バージョンは、System Center Configuration Manager インストールの増分バージョンと、展開で使用できる機能を把握するための鍵となります。
 
- この System Center Configuration Manager の現在のブランチの初期リリースは、バージョン 1511 です。 この初期リリースから、追加の更新プログラムを利用できます。 次のリンクを使用して、各バージョンの新機能を確認できます。
+ この System Center Configuration Manager の現在のブランチの初期リリースは、バージョン 1511 です。 この初期リリースから、追加の更新プログラムを利用できます。 次のリンクを使用して、引き続きサポートされる各バージョンの新機能を確認できます。
+  - [バージョン 1706 の新機能](../../../core/plan-design/changes/whats-new-in-version-1706.md)  
   - [バージョン 1702 の新機能](../../../core/plan-design/changes/whats-new-in-version-1702.md)
   - [バージョン 1610 の新機能](../../../core/plan-design/changes/whats-new-in-version-1610.md)
-  - [バージョン 1606 の新機能](../../../core/plan-design/changes/whats-new-in-version-1606.md)  
 
-<!-- 
-  - [What's new in version 1602](../../../core/plan-design/changes/whats-new-in-version-1602.md)
--->
 
  更新プログラムの各バージョンは、リリース後 1 年間サポートされます。 可能な限り、更新プログラム バージョンを最新の状態に保つことをお勧めします。 詳細については、「[System Center Configuration Manager の Current Branch バージョンのサポート](../../../core/servers/manage/current-branch-versions-supported.md)」をご覧ください。  
 

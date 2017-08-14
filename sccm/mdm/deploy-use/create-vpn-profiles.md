@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager の VPN プロファイル | Microsoft Docs"
 description: "System Center Configuration Manager のモバイル デバイスの VPN プロファイルです。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 07/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
-ms.openlocfilehash: aacd11708f9f9bd5b0a2d1b1cd6db3c60a7c0c28
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: e4a53caab7d76b604a3fee7dcfc4dc48f22b0fb0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager のモバイル デバイスの VPN プロファイル
@@ -39,7 +39,8 @@ System Center Configuration Manager の VPN プロファイルを使用して、
 
  |接続の種類|iOS と macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop および Mobile|  
  |---------------------|----------------------|-------------|-----------------|----------------|--------------------|-----------------------|-----------------------------------|  
- |Cisco AnyConnect|○|○|いいえ|いいえ|いいえ|いいえ|はい (OMA-URI)|  
+ |Cisco AnyConnect|○|○|いいえ|いいえ|いいえ|いいえ|はい (OMA-URI)|
+ |Cisco (IPSec)|iOS のみ|×|いいえ|いいえ|いいえ|いいえ|×|  
  |Pulse Secure|[はい]|[はい]|○|×|[はい]|[はい]|○|  
  |F5 Edge Client|[はい]|[はい]|○|×|[はい]|[はい]|○|  
  |Dell SonicWALL Mobile Connect|[はい]|[はい]|○|×|[はい]|[はい]|[はい]|  
@@ -105,8 +106,8 @@ VPN プロファイルの作成方法に関する一般情報は、「[System Ce
             - VPN に接続するデバイスについて、接続前に条件付きアクセスのコンプライアンスのためにテストするには、**[この VPN 接続に対して条件付きアクセスを有効にする]** をオンにします。 コンプライアンス ポリシーについては、「[Device compliance policies in System Center Configuration Manager (System Center Configuration Manager でのデバイス コンプライアンス ポリシー)](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/device-compliance-policies.md)」をご覧ください。
             - デバイスのコンプライアンスのために VPN 認証証明書以外の証明書を選択するには、**[別の証明書でのシングル サインオン (SSO) を有効にする]** をオンにします。 このオプションをオンにする場合は、VPN クライアントを特定できる正しい証明書の **[EKU]** (コンマ区切りリスト) と **[発行元ハッシュ]** を指定します。
 
-         - **[Windows Information Protection]** には、企業が管理する企業 ID を指定します。通常、これは組織のプライマリ ドメインです (*contoso.com* など)。 組織が所有している複数のドメインを指定するには、"|" 文字で区切ります。 たとえば、「*contoso.com|newcontoso.com*」と指定します。   
-              Windows Information Protection については、「[Create a Windows Information Protection (WIP) policy using Microsoft Intune (Microsoft Intune を使用した Windows 情報保護 (WIP) ポリシーの作成)](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune)」をご覧ください。   
+         - **[Windows 情報保護]** には、企業が管理する企業 ID を指定します。通常、これは組織のプライマリ ドメインです (*contoso.com* など)。 組織が所有している複数のドメインを指定するには、"|" 文字で区切ります。 たとえば、「*contoso.com|newcontoso.com*」と指定します。   
+            Windows 情報保護については、「[Create a Windows Information Protection (WIP) policy using Microsoft Intune (Microsoft Intune を使用した Windows 情報保護 (WIP) ポリシーの作成)](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune)」をご覧ください。   
 
          ![VPN に条件付きアクセスを構成する](media/vpn-conditional-access.png)
 

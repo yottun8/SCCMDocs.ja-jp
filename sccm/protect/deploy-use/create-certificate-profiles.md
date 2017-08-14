@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: aa8924a013ebdbee888cab33001fddbe7ad2d67e
-ms.openlocfilehash: 80a716f5a42a81e5550eb1b5c7f14534e14a4fb7
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 1e00804d27ecef2aadd8bfa395db1919c46243ee
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/02/2017
 
 ---
 
@@ -34,10 +33,16 @@ Configuration Manager (SCCM) で証明書プロファイルを使用して、会
 
 このトピックでは、信頼されたルートおよび SCEP 証明書プロファイルを作成する方法について説明します。 PFX 証明書プロファイルを作成する場合は、「[PFX 証明書プロファイルを作成する方法](../../protect/deploy-use/create-pfx-certificate-profiles.md)」をご覧ください。
 
+証明書プロファイルを作成するには:
 
-## <a name="create-a-new-certificate-profile"></a>新しい証明書プロファイルを作成する  
+1.  証明書プロファイルの作成ウィザードを開始します。
+1.  証明書の全般的な情報を指定します。
+1.  信頼された証明機関 (CA) 証明書を構成します。  
+1.  SCEP 証明書情報を構成します (SCEP 証明書に対してのみ)。  
+1.  証明書プロファイルの対応プラットフォームを指定します。
 
-### <a name="start-the-create-certificate-profile-wizard"></a>証明書プロファイルの作成ウィザードを開始する  
+
+## <a name="start-the-create-certificate-profile-wizard"></a>証明書プロファイルの作成ウィザードを開始する  
 
 1.  System Center Configuration Manager コンソールで、[ **資産とコンプライアンス** ] をクリックします。  
 
@@ -45,7 +50,7 @@ Configuration Manager (SCCM) で証明書プロファイルを使用して、会
 
 3.  [ **ホーム** ] タブの [ **作成** ] グループで、[ **証明書プロファイルの作成** ] をクリックします。  
 
-### <a name="provide-general-information-about-the-certificate-profile"></a>証明書プロファイルの全般的な情報を指定する  
+## <a name="provide-general-information-about-the-certificate-profile"></a>証明書プロファイルの全般的な情報を指定する  
 
 証明書プロファイルの作成ウィザードの [ **全般** ] ページで、次の情報を指定します。  
 
@@ -59,11 +64,12 @@ Configuration Manager (SCCM) で証明書プロファイルを使用して、会
 
 -   **SCEP (Simple Certificate Enrollment Protocol) 設定**: Simple Certificate Enrollment Protocol とネットワーク デバイス登録サービスの役割を使用して、デバイスまたはユーザーの証明書を要求する場合は、この証明書プロファイルの種類を選択します。
 
--   **Personal Information Exchange -- PKCS #12 (PFX) 設定 -- インポート**: PFX 証明書をインポートするには、これを選びます。 PFX 証明書の作成の詳細については、「[PFX 証明書プロファイルを作成する方法](../../protect/deploy-use/create-pfx-certificate-profiles.md)」をご覧ください。
+-   **Personal Information Exchange -- PKCS #12 (PFX) 設定 -- インポート**: PFX 証明書をインポートするには、これを選びます。 PFX 証明書の作成の詳細については、「[Import PFX certificate profiles](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md)」(PFX 証明書プロファイルをインポートする) を参照してください。
+
+-   **Personal Information Exchange -- PKCS #12 (PFX) 設定 -- 作成**: 証明機関を使用して PFX 証明書を処理する場合に選択します。 PFX 証明書の作成の詳細については、「[PFX 証明書プロファイルを作成する方法](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md)」をご覧ください。
 
 
-
-### <a name="configure-a-trusted-ca-certificate"></a>信頼された証明機関証明書を構成する  
+## <a name="configure-a-trusted-ca-certificate"></a>信頼された証明機関証明書を構成する  
 
 > [!IMPORTANT]  
 >  SCEP 証明書プロファイルを作成する前に、少なくとも 1 つの信頼された証明機関証明書を構成する必要があります。    
@@ -89,7 +95,7 @@ Configuration Manager (SCCM) で証明書プロファイルを使用して、会
 2.  [ **証明書の拇印** ] 値を使用して、正しい証明書がインポートされたことを確認します。  
 
 
-### <a name="configure-scep-certificate-information-only-for-scep-certificates"></a>SCEP 証明書情報を構成する (SCEP 証明書に対してのみ)  
+## <a name="configure-scep-certificate-information-only-for-scep-certificates"></a>SCEP 証明書情報を構成する (SCEP 証明書に対してのみ)  
 
 1.  証明書プロファイルの作成ウィザードの **[SCEP サーバー]** ページで、SCEP 経由で証明書を発行する NDES サーバーの URL を指定します。 証明書登録ポイント サイト システム サーバーの構成に基づいて NDES URL を自動的に割り当てることも、手動で URL を追加することもできます。  
 
@@ -183,7 +189,7 @@ Configuration Manager (SCCM) で証明書プロファイルを使用して、会
    >  ユーザーまたはデバイスに展開されていないルート CA 証明書を指定すると、System Center Configuration Manager が、この証明書プロファイルで構成している証明書要求を開始しません。  
 
 
-###  <a name="specify-supported-platforms-for-the-certificate-profile"></a>証明書プロファイルの対応プラットフォームを指定する  
+##  <a name="specify-supported-platforms-for-the-certificate-profile"></a>証明書プロファイルの対応プラットフォームを指定する  
 
 1. 証明書プロファイルの作成ウィザードの [ **サポートされているプラットフォーム** ] ページで、証明書プロファイルをインストールするオペレーティング システムを選択します。 すべての使用可能なオペレーティング システムに証明書プロファイルをインストールするには、[ **すべて選択** ] を選択します。
 2. ウィザードの [ **概要** ] ページを確認して、[ **完了** ] を選びます。 

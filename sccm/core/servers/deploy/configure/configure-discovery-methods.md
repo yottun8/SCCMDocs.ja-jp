@@ -2,7 +2,7 @@
 title: "探索の構成 | Microsoft Docs"
 description: "ネットワーク インフラストラクチャや Active Directory から管理できるリソースを見つけるように Configuration Manager サイトで実行する探索方法を構成します。"
 ms.custom: na
-ms.date: 2/17/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 860815010068422f2d8854ed2d574c24cc386891
-ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
+ms.translationtype: HT
+ms.sourcegitcommit: 0663ba84762c44a5c303562548499f195bae9e1c
+ms.openlocfilehash: 34a539ceaea6b070f81a28d2c0a9ce388e26cfeb
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>System Center Configuration Manager の探索方法を構成する
@@ -34,6 +34,8 @@ ms.lasthandoff: 05/17/2017
 -   サーバー検出はサイト システムとして使用するコンピューターを見つける自動探索方法です。 構成も無効化も実行できません。  
 
 **構成可能な探索方法を有効にするには:**  
+ > [!NOTE]  
+ > 次の情報は、Azure Active Directory ユーザー探索には適用されません。 Azure Active Directory の場合は、このトピックで後述する「[Azure AD ユーザー探索を構成する](#azureaadisc)」を参照してください。
 
 1.  Configuration Manager コンソールで **[管理]** > **[階層の構成]** を選択し、**[探索方法]** をクリックします。  
 
@@ -211,6 +213,14 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
 7.  必要に応じて、[Active Directory の属性] タブで、探索するコンピューターの追加の Active Directory 属性を構成できます。 **** 既定のオブジェクト属性も表示されます。  
 
 8.  このサイトの Active Directory ユーザー探索の構成が完了したら、**[OK]** をクリックして構成を保存します。  
+
+## <a name="azureaadisc"></a> Azure AD ユーザー探索を構成する
+バージョン 1706 以降、Configuration Manager を [Azure サブスクリプションと Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard) に接続するときに、Azure Active Directory ユーザー探索を構成できるようになりました。
+
+Azure AD ユーザーの探索は、*クラウド管理*の一部として構成されています。 詳細な手順については、トピック「*Configure Azure services for use with Configuration Manager*」(Configuration Manager と共に使用するように Azure サービスを構成する) の「[Create the Azure web app for use with Configuration Manager](/sccm/core/servers/deploy/configure/Azure-services-wizard#webapp)」(Configuration Manager と共に使用するように Azure Web アプリを作成する) を参照してください。
+
+
+
 
 ##  <a name="BKMK_ConfigHBDisc"></a> 定期探索の構成  
  既定では、定期探索は、Configuration Manager プライマリ サイトをインストールすると有効になります。 そのため、初期設定の 7 日おきを利用しない場合のみ、管理ポイントにクライアントが定期探索データ レコードを送信する頻度を指定するスケジュールを構成する必要があります。  

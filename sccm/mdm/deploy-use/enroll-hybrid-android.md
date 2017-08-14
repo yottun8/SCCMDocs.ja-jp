@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager と Microsoft Intune を使ったハイブリッド Android デバイス管理のセットアップ | Microsoft Docs"
 description: "Configuration Manager と Intune を使用して Android モバイル デバイスを管理できるように準備します。"
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,16 +16,14 @@ caps.handback.revision: 0
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 86620254897aa9a775dc433de7010b5814c1ec3e
-ms.openlocfilehash: af6fa2dfae5549e89c46d05d0cef1e24342558f9
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: b47ecd1754a623b1b57dc5c5ecb42a6b0b64404e
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/06/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
-# System Center Configuration Manager と Microsoft Intune を使ったハイブリッド Android モバイル デバイスのセットアップ
-<a id="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune" class="xliff"></a>
+# <a name="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使ったハイブリッド Android モバイル デバイスのセットアップ
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -33,8 +31,7 @@ ms.lasthandoff: 07/06/2017
 
 Configuration Manager の管理者は、コンプライアンス設定の管理、Android デバイスのワイプまたは削除、アプリの展開、およびソフトウェアとハードウェアのインベントリの収集を実行できます。 Android 用の会社のポータル アプリを Android デバイスにインストールしなければ、インベントリとコンプライアンス設定などの管理機能を利用できませんが、Android デバイスにアプリを展開することはできます。  
 
-## Android の登録を有効にする
-<a id="enable-android-enrollment" class="xliff"></a>  
+## <a name="enable-android-enrollment"></a>Android の登録を有効にする  
 次の手順で、Configuration Manager が仕事用プロファイルを使用せずに Android デバイスを管理できるようになります (つまり "従来の Android" の登録)。
 
 1. 任意のプラットフォームの登録をセットアップする前に、「[ハイブリッド MDM をセットアップする](setup-hybrid-mdm.md)」に記載されている前提条件と手順を完了しておきます。  
@@ -42,10 +39,12 @@ Configuration Manager の管理者は、コンプライアンス設定の管理�
 3. **[ホーム]** タブの **[サブスクリプション]** グループで、**[プラットフォームの構成]**  >  **[Android]** の順に選択します。  
 4. **[Microsoft Intune サブスクリプションのプロパティ]** ダイアログ ボックスで、**[Android]** タブを選択し、**[Android の登録を有効にする]** ボックスをクリックします。  
 
+> [!NOTE]
+>  **[個人所有のデバイスをブロックする]** 機能はこの時点では使用できません。 
+
  セットアップが完了したら、デバイスを登録する方法をユーザーに知らせる必要があります。 「[デバイスの登録についてユーザーに通知する事柄](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)」に関する記事をご覧ください。 この情報は、Microsoft Intune と Configuration Manager の両方によって管理されるモバイル デバイスに適用されます。
 
-## Android for Work の登録を有効にする
-<a id="enable-android-for-work-enrollment" class="xliff"></a>
+## <a name="enable-android-for-work-enrollment"></a>Android for Work の登録を有効にする
 次の手順で、Configuration Manager が仕事用プロファイルを使って、Android デバイスを管理できるようになります。
 
 1. Android for Work の管理者アカウントとして使用する Google アカウントを https://accounts.google.com/SignUp で作成します。 または、この Intune テナントのすべての Android for Work 管理タスクに関連付けられているアカウントでサインインします。 このアカウントは、Android デバイスを管理する管理者間で共有する Google アカウントにすることができます。 これは、組織が Play for Work コンソールでアプリを管理および発行するときに使用する Google アカウントです。 このアカウントを使用して、Play for Work ストアのアプリを承認し、アカウント名とパスワードを追跡します。
@@ -69,12 +68,10 @@ Configuration Manager の管理者は、コンプライアンス設定の管理�
 
 バインドが完了すると、アカウント名と組織名が Intune ポータルに表示されます。 その時点で、両方のブラウザーを閉じることができます。
 
-### Android for Work デバイスを登録する
-<a id="enroll-an-android-for-work-device" class="xliff"></a>
+### <a name="enroll-an-android-for-work-device"></a>Android for Work デバイスを登録する
 ユーザーが Android for Work デバイスを登録する方法は、Android の登録方法と似ています。 ユーザーはモバイル デバイスで Android 用の会社のポータル アプリをダウンロードしてインストールできます。 アプリでは登録プロセスの一環で仕事用プロファイルを作成するように求められます。 仕事用プロファイルを作成したら、管理対象バージョンのポータル サイトに切り替える必要があります。 管理対象のポータル サイトには、右下に小さなオレンジ色のブリーフケースのタグが付いています。
 
-### Android for Work デバイスを登録する
-<a id="manage-android-for-work-devices" class="xliff"></a>
+### <a name="manage-android-for-work-devices"></a>Android for Work デバイスを登録する
 Android for Work の登録を有効にすると、Android for Work デバイスの次の管理タスクを実行できるようになります。
 - [アプリの承認](/sccm/mdm/deploy-use/creating-android-applications#approve-and-deploy-android-for-work-apps)
 - [構成アイテムの作成](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client)

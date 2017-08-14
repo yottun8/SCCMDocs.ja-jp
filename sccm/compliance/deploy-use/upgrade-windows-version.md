@@ -2,7 +2,7 @@
 title: "Configuration Manager を利用し、Windows デバイスを別のバージョンにアップグレードする | Microsoft Docs"
 description: "Configuration Manager を利用し、Windows 10 Desktop、Windows 10 Mobile、Windows 10 Holographic を実行するデバイスを自動的に別のエディションにアップグレードします。"
 ms.custom: na
-ms.date: 04/18/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
-ms.openlocfilehash: cfde0a43947013bbd3a1093688cee19fe309fd03
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: cd8c644d07dab0010dc211df8ce4f2dc6e1fa7ae
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
 
@@ -34,14 +33,14 @@ System Center Configuration Manager **エディションのアップグレード
 
 - Windows 10 Desktop
 - Windows 10 Mobile
-- Windows 10 Holographic
+<!-- - Windows 10 Holographic -->
 
 次のアップグレード パスがサポートされます。
 
 - Windows 10 Pro から Windows 10 Enterprise
 - Windows 10 Home から Windows 10 Education
 - Windows 10 Mobile から Windows 10 Mobile Enterprise
-- Windows 10 Holographic Pro から Windows 10 Holographic Enterprise
+<!-- - From Windows 10 Holographic Pro to Windows 10 Holographic Enterprise -->
 
 デバイスは Microsoft Intune に登録するか、Configuration Manager クライアント ソフトウェアを実行する必要があります。 現在、このポリシーは、オンプレミス MDM で管理されている PC と互換性はありません。
 
@@ -50,7 +49,7 @@ System Center Configuration Manager **エディションのアップグレード
 
 -   ポリシーで対象とするすべてのデバイスに新しいバージョンの Windows をインストールするための有効なプロダクト キー (デスクトップ オペレーティング システムの場合)  
 
--   ポリシーで対象とするすべてのデバイスに新しいバージョンの Windows をインストールするためのライセンス情報を含む、Microsoft からのライセンス ファイル (Windows 10 Mobile と Windows 10 Holographic の場合)
+-   ポリシーで対象とするすべてのデバイスに新しいバージョンの Windows をインストールするためのライセンス情報を含む、Microsoft からのライセンス ファイル (Windows 10 Mobile<!-- and Windows 10 Holographic-->の場合)。
 
 - この種類のポリシーを作成して展開するには、Configuration Manager の**完全な権限を持つ管理者**のセキュリティ ロールが割り当てられている必要があります。
 
@@ -68,7 +67,7 @@ System Center Configuration Manager **エディションのアップグレード
 
     -   **説明** (省略可能) - 必要に応じて、Intune コンソールでの識別に役立つポリシーの説明を入力します。  
 
-    -   **デバイスのアップグレード先の SKU** - 対象のデバイスのアップグレード先となる Windows 10 Desktop、Windows 10 Holographic、または Windows 10 Mobile のバージョンをドロップダウン リストから選びます。  
+    -   **デバイスのアップグレード先の SKU** - 対象のデバイスのアップグレード先となる Windows 10 Desktop、<!-- Windows 10 Holographic,-->、または Windows 10 Mobile のバージョンをドロップダウン リストから選びます。  
 
     -   **ライセンス情報** - 次のいずれかを選びます。  
 
@@ -77,7 +76,7 @@ System Center Configuration Manager **エディションのアップグレード
             > [!NOTE]  
             >  プロダクト キーを含むポリシーを作成した後でプロダクト キーを編集することはできません。 これは、セキュリティ上の理由からキーが隠されるためです。 プロダクト キーを変更するには、キー全体を再入力する必要があります。  
 
-        -   **ライセンス ファイル** - **[参照]** をクリックし、Windows 10 Holographic と Windows 10 Mobile のオペレーティング システムを実行する対象デバイスをアップグレードするために使用する XML 形式の正しいライセンス ファイルを選びます。  
+        -   **ライセンス ファイル** - **[参照]** をクリックし、<!--Windows 10 Holographic and -->Windows 10 Mobile のオペレーティング システムを実行する対象デバイスをアップグレードするために使用する XML 形式の正しいライセンス ファイルを選びます。  
 
 6.  ウィザードを完了します。  
 
@@ -91,7 +90,15 @@ System Center Configuration Manager **エディションのアップグレード
 
 4.  **[Windows 10 エディション アップグレードの展開]** ダイアログ ボックスで、ポリシーを展開するコレクションと、ポリシーを評価するスケジュールを選択し、**[OK]**をクリックします。 Configuration Manager クライアントで管理されている PC の場合は、デバイス コレクションにポリシーを展開する必要があります。 Intune で登録されている PC の場合は、ユーザーまたはデバイス コレクションにポリシーを展開できます。 
 
-**[監視]** ワークスペースの **[展開]** ノードから、作成した展開を監視できます。  
 
- ポリシーが対象の Windows PC に到達し、評価されると、アップグレードを適用するために PC が 2 時間以内に再起動します。 ポリシーを展開するすべてのユーザーに通知するか、ポリシーの実行をユーザーの業務時間外にスケジュール設定します。
+
+## <a name="next-steps"></a>次のステップ
+
+**[監視]** ワークスペースの **[展開]** ノードから、作成したばかりの展開を監視すると、展開が次のように失敗したことを示すエラーが表示されることがあります。
+- **このデバイスには該当しません**
+- **データ型を変換できませんでした**
+
+これらのエラーは、展開が失敗したことを意味しているわけではありません。 対象の PC で、アップグレードが正常に実行されたことを確認してください。
+
+ポリシーが対象の Windows PC に到達し、評価されると、アップグレードを適用するために PC が 2 時間以内に再起動します。 ポリシーを展開するすべてのユーザーに通知するか、ポリシーの実行をユーザーの業務時間外にスケジュール設定します。
 

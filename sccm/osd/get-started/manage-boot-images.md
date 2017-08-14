@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0cf2ac6440588ccf4848baa7a195f78e8675447d
-ms.openlocfilehash: c6a1eb9ccaee45eb242fb320cb6b492d1a39d349
+ms.translationtype: HT
+ms.sourcegitcommit: 0663ba84762c44a5c303562548499f195bae9e1c
+ms.openlocfilehash: cc678c1133b1944f55bcad309cf9ede9f0660b57
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>System Center Configuration Manager でのブート イメージの管理
@@ -33,15 +32,7 @@ Configuration Manager のブート イメージは、オペレーティング �
 ## <a name="BKMK_BootImageDefault"></a> 既定のブート イメージ
 Configuration Manager には 2 つの既定のブート イメージがあります。一方は x86 プラットフォームをサポートし、もう一方は x64 プラットフォームをサポートします。 これらのイメージは次の場所に格納されています: \\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64*> または <*i386*>。 既定のブート イメージは、実行する操作に応じて更新または再生成されます。
 
-**更新プログラムとサービスを使用して、Configuration Manager の最新バージョンをインストールする** Version 1702 以降のバージョンでは、Windows ADK のバージョンをアップグレードし、更新プログラムとサービスを使用して、Configuration Manager の最新バージョンをインストールするときに、Configuration Manager によって既定のブート イメージが再生成されます。 これには、更新された Windows ADK の新しい Windows PE バージョン、新しいバージョンの Configuration Manager クライアント、ドライバー、カスタマイズが含まれます。カスタム ブート イメージは変更されません。
-
-Version 1702 より前のバージョンでは、 Configuration Manager は、クライアント コンポーネント、ドライバー、カスタマイズなどを使用して既存のブート イメージ (boot.wim) を更新しますが、Windows ADK に含まれる Windows PE の最新バージョンは使用されません。 新しいバージョンの Windows ADK を使用するために、ブート イメージを手動で変更する必要があります。
-
-**Configuration Manager 2012 から Configuration Manager Current Branch (CB) にアップグレードする** セットアップ プロセスを使用して Configuration Manager 2012 を Configuration Manager CB にアップグレードするときに、Configuration Manager が既定のブート イメージを再生成します。 これには、更新された Windows ADK の新しい Windows PE バージョン、新しいバージョンの Configuration Manager クライアントが含まれ、すべてのカスタマイズは変更されません。 カスタム ブート イメージは変更されません。
-
-**ブート イメージを使用して配布ポイントを更新する** Configuration Manager コンソールで、**[ブート イメージ]** ノードから **[配布ポイントの更新]** アクションを使用する場合、Configuration Manager は、クライアント コンポーネント、ドライバー、カスタマイズなどを使用して既定のブート イメージを更新しますが Windows ADK に含まれる Windows PE の最新バージョンは使用されません。 カスタム ブート イメージは変更されません。
-
-上記の操作のいずれかを実行する場合は、次の点も考慮します。
+次のセクションで説明されているアクションに関する項目を考慮してください。
 - ソース ドライバー オブジェクトは、ドライバーのソース ファイルを含めて、有効である必要があり、そうでない場合、ドライバーはサイトのブート イメージに追加されません。
 - 同じ Windows PE バージョンを使用する場合でも、既定のブート イメージに基づいていないブート イメージは変更されません。
 - 変更したブート イメージを配布ポイントに再配布する必要があります。
@@ -50,6 +41,21 @@ Version 1702 より前のバージョンでは、 Configuration Manager は、�
 
 > [!NOTE]
 > **[ソフトウェア ライブラリ]** に追加したすべてのブート イメージに対して Configuration Manager トレース ログ ツールが追加されます。 Windows PE では、コマンド プロンプトから「**CMTrace**」と入力して、Configuration Manager トレース ログ ツールを起動できます。  
+
+### <a name="use-updates-and-servicing-to-install-the-latest-version-of-configuration-manager"></a>更新プログラムとサービスを使用して、Configuration Manager の最新バージョンをインストールする
+バージョン 1702 以降、Windows ADK のバージョンをアップグレードし、更新プログラムとサービスを使用して、Configuration Manager の最新バージョンをインストールするときに、Configuration Manager によって既定のブート イメージが再生成されます。 これには、更新された Windows ADK の新しい Windows PE バージョン、新しいバージョンの Configuration Manager クライアント、ドライバー、カスタマイズが含まれます。カスタム ブート イメージは変更されません。
+
+Version 1702 より前のバージョンでは、 Configuration Manager は、クライアント コンポーネント、ドライバー、カスタマイズなどを使用して既存のブート イメージ (boot.wim) を更新しますが、Windows ADK に含まれる Windows PE の最新バージョンは使用されません。 新しいバージョンの Windows ADK を使用するために、ブート イメージを手動で変更する必要があります。
+
+### <a name="upgrade-from-configuration-manager-2012-to-configuration-manager-current-branch-cb"></a>Configuration Manager 2012 から Configuration Manager Current Branch (CB) へのアップグレード
+セットアップ プロセスを使用して Configuration Manager 2012 を Configuration Manager CB にアップグレードするときに、Configuration Manager が既定のブート イメージを再生成します。 これには、更新された Windows ADK の新しい Windows PE バージョン、新しいバージョンの Configuration Manager クライアントが含まれ、すべてのカスタマイズは変更されません。 カスタム ブート イメージは変更されません。
+
+### <a name="update-distribution-points-with-the-boot-image"></a>ブート イメージを使用して配布ポイントを更新する
+Configuration Manager コンソールで、**[ブート イメージ]** ノードから **[配布ポイントの更新]** アクションを使用する場合、Configuration Manager は、クライアント コンポーネント、ドライバー、カスタマイズなどを使用して既定のブート イメージを更新します。    
+
+Configuration Manager バージョン 1706 以降、そのブート イメージ内の (Windows ADK インストール ディレクトリにある) 最新バージョンの Windows PE を再読み込みできます。 [配布ポイントの更新] ウィザードの **[全般]** ページには、サイト サーバーにインストールされた Windows ADK のバージョン情報、ブート イメージ内の Windows PE を使用した Windows ADK のバージョン情報、Configuration Manager クライアントのバージョン情報が表示されます。 この情報はブート イメージを再読み込みするかどうかを決めるのに役立ちます。 また、**[ブート イメージ]** ノードでブート イメージを表示すると、新しい列 (**[クライアント バージョン]**) が追加されているため、各ブート イメージがどのバージョンの Configuration Manager クライアントを使用しているかを確認できます。    
+
+カスタム ブート イメージは変更されません。
 
 ##  <a name="BKMK_BootImageCustom"></a> ブート イメージのカスタマイズ  
  サポートされているバージョンの Windows ADK の Windows PE バージョンに基づいているブート イメージであれば、Configuration Manager コンソールからカスタマイズしたり、[ブート イメージの変更](#BKMK_ModifyBootImages)を行ったりできます。 新しいバージョンでサイトがアップグレードされ、新しいバージョンの Windows ADK がインストールされている場合、カスタム ブート イメージ (既定のブート イメージの場所ではない) は新しいバージョンの Windows ADK で更新されません。 このことが発生する場合、Configuration Manager コンソールでブート イメージをカスタマイズできなくなります。 ただし、引き続き、アップグレード前に同様に動作します。  
@@ -106,7 +112,7 @@ Version 1702 より前のバージョンでは、 Configuration Manager は、�
 
 6.  ウィザードを完了します。  
 
- Configuration Manager コンソールの**[ ブート イメージ]** ノードに、ブート イメージが一覧表示されます。 ただし、ブート イメージを使用してオペレーティング システムを展開する前に、配布ポイント、配布ポイント グループ、または配布ポイント グループに関連付けられているコレクションにブート イメージを配布する必要があります。  
+ Configuration Manager コンソールの **[ ブート イメージ]** ノードに、ブート イメージが一覧表示されます。 ただし、ブート イメージを使用してオペレーティング システムを展開する前に、配布ポイント、配布ポイント グループ、または配布ポイント グループに関連付けられているコレクションにブート イメージを配布する必要があります。  
 
 > [!NOTE]  
 >  Configuration Manager コンソールで **[ブート イメージ]** ノードを選ぶと、**[サイズ (KB)]** 列に、各ブート イメージの圧縮解除後のサイズが表示されます。 ただし、Configuration Manager がネットワーク経由でブート イメージを送信する際は、イメージの圧縮コピーを送信します。このコピーは通常、**[サイズ (KB)]** 列に示されているサイズよりもはるかに小さいサイズです。  
@@ -123,7 +129,7 @@ Version 1702 より前のバージョンでは、 Configuration Manager は、�
 >   
 >  PXE を使用してオペレーティング システムを展開する方法の詳細については、「[PXE を使用したネットワーク経由での Windows の展開](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)」を参照してください。  
 
- ブート イメージを配布する手順については、「 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)」をご覧ください。  
+ ブート イメージを配布する手順については、「 [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute)」をご覧ください。  
 
 ##  <a name="BKMK_ModifyBootImages"></a> ブート イメージの変更  
  デバイス ドライバーをイメージに追加または削除したり、ブート イメージに関連付けられているプロパティを編集したりできます。 追加または削除するデバイス ドライバーには、ネットワーク アダプターまたは大容量記憶装置のデバイス ドライバーが含まれる可能性があります。 ブート イメージを変更する際には、以下の点をご考慮ください。  
@@ -132,7 +138,7 @@ Version 1702 より前のバージョンでは、 Configuration Manager は、�
 
 -   ブート イメージを変更しても、ブート イメージが参照する関連パッケージは一切変更されません。  
 
--   ブート イメージを変更したら、既にそのブート イメージを含む配布ポイント上のブート イメージを **更新** し、最新バージョンのブート イメージを利用できるようにする必要があります。 詳細については、「 [Manage content you have distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkmanagea-manage-the-content-you-have-distributed)」を参照してください。  
+-   ブート イメージを変更したら、既にそのブート イメージを含む配布ポイント上のブート イメージを **更新** し、最新バージョンのブート イメージを利用できるようにする必要があります。 詳細については、「 [Manage content you have distributed](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage)」を参照してください。  
 
  ブート イメージを変更するには、次の手順に従います。  
 
@@ -213,7 +219,7 @@ Version 1702 より前のバージョンでは、 Configuration Manager は、�
         -   [事前設定された配布ポイントの設定 **** ] を設定して、事前設定済みコンテンツが有効になっている配布ポイントにブート イメージを配布する方法を指定します。  
 
             > [!NOTE]  
-            >  事前設定済みコンテンツについて詳しくは、「 [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content)」をご覧ください。  
+            >  事前設定済みコンテンツについて詳しくは、「 [Prestage content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_prestage)」をご覧ください。  
 
     -   [コンテンツの場所 **** ] タブで、配布ポイントまたは配布ポイント グループを選択して、次の操作を実行します。  
 

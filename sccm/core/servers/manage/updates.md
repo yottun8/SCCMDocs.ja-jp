@@ -2,7 +2,7 @@
 title: "更新プログラム | Microsoft Docs"
 description: "推奨更新プログラムを簡単に特定してインストールできる、**更新とサービス**と呼ばれるコンソール内サービス方式について説明します。"
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,20 +16,18 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
-ms.openlocfilehash: 4bc076bba4672d0be0032ec785da20e60b11a6c4
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: d46aca88111d4ee0e96b75ca5a3ec57aa4274d6d
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/28/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
-# System Center Configuration Manager の更新プログラム
-<a id="updates-for-system-center-configuration-manager" class="xliff"></a>
+# <a name="updates-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager では、**更新とサービス**と呼ばれるコンソール内でのサービス提供方式が採られています。この方式により、Configuration Manager インフラストラクチャ向けの推奨される更新プログラムを簡単に検索し、インストールすることができます。 このコンソール内でのサービス提供方式は、環境固有の問題を解決する必要があるお客様向けの修正プログラムなど、アウトオブバンドの更新プログラムによって補完されます。  
+System Center Configuration Manager では、**更新とサービス**と呼ばれるコンソール内でのサービス提供方式が採られています。 このコンソール内での方式により、使用している Configuration Manager インフラストラクチャに推奨される更新プログラムを簡単に特定し、インストールすることができます。 コンソール内でのサービス提供は、環境固有の問題を解決する必要があるお客様向けの修正プログラムなど、アウトオブバンドの更新プログラムによって補完されます。  
 
 > [!TIP]  
 > System Center Configuration Manager のサイトと階層のインフラストラクチャの管理において、*アップグレード*、*更新*、および*インストール* という用語は 3 つの異なる概念を説明するものです。 各用語の使用方法については、「[サイトと階層のインフラストラクチャでのアップグレード、更新、およびインストールについて](/sccm/core/understand/upgrade-update-install)」を参照してください。
@@ -54,9 +52,9 @@ Technical Preview ブランチを使用する場合は、「[System Center Confi
 
 -   新しい階層に新しいサイトをインストールするときは、最新の基準バージョンを使用してください。  
 
--   System Center 2012 Configuration Manager からアップグレードする際には基準バージョンを使用する必要があります。  
+-   System Center 2012 Configuration Manager からアップグレードする際には基準バージョンを使用します。 System Center Configuration Manager にアップグレードしたら、最新状態を維持するために基準バージョンを使用できなくなり、代わりに[コンソール内更新](/sccm/core/servers/manage/install-in-console-updates)のみを使用して、最新バージョンに更新できます。  
 
--   新しい基準バージョンは定期的にリリースされます。 最新の基準バージョンを使用して新しい階層をインストールする場合、古いバージョンの Configuration Manager をインストールした後に、インフラストラクチャのアップグレードを実行して最新の状態にしないでください。  
+-   新しい基準バージョンは定期的にリリースされます。 最新の基準バージョンを使用して新しい階層をインストールする場合、古いバージョンの Configuration Manager をインストールした後に、インフラストラクチャの追加のアップグレードを実行して最新の状態にしないでください。  
 
 基準バージョンのインストール後、Configuration Manager の新バージョンはコンソール内の更新プログラムとして提供されます。 コンソール内の更新プログラムにより、インフラストラクチャは最新バージョンの Configuration Manager に更新されます。  
 
@@ -78,11 +76,12 @@ Configuration Manager の次のバージョンは、基準バージョンと更�
 
 |バージョン |公開日|[サポート終了日](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|コンソール内の更新プログラム|  
 |-------------|-----------|------------|--------------|------------------------|  
+|[1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000|2017 年 7 月 31 日|2018 年 7 月 31 日|×|○|
 |[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|2017 年 3 月 27 日| 2018 年 3 月 27 日|○|○|
-|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|11/18/2016| 2017 年 11 月 18 日|×|○|
+|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|2016 年 11 月 18 日| 2017 年 11 月 18 日|×|○|
 |[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|2016 年 7 月 22 日| 2017 年 7 月 22 日|×|○|
-|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) と 1606 修正プログラム ロールアップ (KB3186654) </br></br>5.00.8412.1307 *(注 1)* |2016 年 10 月 12 日| 2017 年 7 月 22 日|○|×|
-| 1602<br /><br /> 5.00.8355.1000|2016 年 3 月 11 日| 2017 年 3 月 11 日|×|○|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) と 1606 修正プログラム ロールアップ (KB3186654) </br></br>5.00.8412.1307 *(注 1)* |2016 年 10 月 12 日| 2017 年 10 月 12 日|○|×|
+| 1602<br /><br /> 5.00.8355.1000|2016 年 3 月 11 日| 2017 年 3 月 11 日|×|○| 
 | 1511 <br /><br /> 5.00.8325.1000|2015 年 12 月 8 日| 2016 年 12 月 8 日|○|いいえ|  
 
 
@@ -94,11 +93,11 @@ Configuration Manager の次のバージョンは、基準バージョンと更�
  System Center Configuration Manager の運用環境対応バージョン (Current Branch とも呼ばれます) を使用する場合、インストールする更新プログラムのほとんどは、更新プログラムとサービス チャネルを通じて入手できます。 この方式では、現在のインフラストラクチャ バージョンと構成に適用される更新プログラムが特定され、ダウンロードのうえ、利用可能になります。また、Microsoft がすべてのお客様にお勧めする更新プログラムのみが対象となります。   
  次の設定があります。  
 
--   新しいバージョン (バージョン 1610 など)  
+-   新しいバージョン (バージョン 1610、1702、1706 など)。  
 
--   現在のバージョンに対する新機能が含まれる更新プログラム  
+-   現在のバージョンに対する新機能が含まれる更新プログラム。
 
--   すべてのお客様にインストールしていただく必要のある、使用中の Configuration Manager のバージョン向けの修正プログラム  
+-   すべてのお客様にインストールしていただく必要のある、使用中の Configuration Manager のバージョン向けの修正プログラム。
 
 コンソール内の更新プログラムにより、安定性が向上し、一般的な問題が解決します。 コンソール内の更新プログラムは、以前の製品バージョンの Service Pack で利用されていた種類の更新プログラムや、累積的な更新プログラム、すべてのお客様が対象の修正プログラム、Microsoft Intune 向けの拡張機能の代わりになるものです。 こうした更新プログラムは以下のものに適用できます。  
 

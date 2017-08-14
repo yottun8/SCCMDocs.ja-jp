@@ -2,7 +2,7 @@
 title: "証明書インフラストラクチャの構成 | Microsoft Docs"
 description: "System Center Configuration Manager で証明書の登録を構成する方法を説明します。"
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,22 +13,22 @@ ms.topic: get-started-article
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 859a8da10f55e314b205b7a4a415a1d2a60a920a
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 640eb1df9d53fc83d93c39a7ecbaf2668e176805
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 
-# <a name="certificate-infrastructure"></a>証明書インフラストラクチャ
+# <a name="configure-certificate-infrastructure"></a>証明書インフラストラクチャの構成
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-ここでは、System Center Configuration Manager で証明書を構成する方法の手順、説明、詳細情報を示します。 また、作業を始める前に、「[System Center Configuration Manager での証明書プロファイルの前提条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)」にある前提条件を確認してください。  
+System Center Configuration Manager で証明書インフラストラクチャを構成する方法について説明します。 また、作業を始める前に、「[System Center Configuration Manager での証明書プロファイルの前提条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)」にある前提条件を確認してください。  
 
 次の手順を使用し、SCEP のインフラストラクチャまたは PFX 証明書を構成します。
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/17/2017
     > [!NOTE]  
     >  これらは、ほとんどの環境に適した既定のセキュリティ アクセス許可です。 ただし、別のセキュリティ構成を使用することもできます。 詳細については、「[System Center Configuration Manager の証明書プロファイルに関する証明書テンプレート アクセス許可の計画](../../protect/plan-design/planning-for-certificate-template-permissions.md)」を参照してください。  
 
-3.  このサーバーに、クライアント認証をサポートするPKI 証明書を展開します。 使用するコンピューターに、既に適切な証明書がインストールされている場合もあれば、この目的専用の証明書を展開しなければならない (または展開したい) 場合もあります。 この証明書の要件の詳細については、「[System Center Configuration Manager での PKI 証明書の要件](../../core/plan-design/network/pki-certificate-requirements.md)」トピックの「**サーバー用の PKI 証明書**」セクションに記載されているネットワーク デバイス登録サービスの役割サービスが設定された Configuration Manager ポリシー モジュールを実行するサーバーに関する詳細を参照してください。  
+3.  このサーバーに、クライアント認証をサポートする PKI 証明書を展開します。 使用するコンピューターに、既に適切な証明書がインストールされている場合もあれば、この目的専用の証明書を展開しなければならない (または展開したい) 場合もあります。 この証明書の要件の詳細については、「[System Center Configuration Manager での PKI 証明書の要件](../../core/plan-design/network/pki-certificate-requirements.md)」トピックの「**サーバー用の PKI 証明書**」セクションに記載されているネットワーク デバイス登録サービスの役割サービスが設定された Configuration Manager ポリシー モジュールを実行するサーバーに関する詳細を参照してください。  
 
     > [!TIP]  
     >  この証明書の展開について不明な点がある場合は、「[配布ポイント用のクライアント証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012)」の手順を参照してください。次の 1 つの例外を除き、証明書の要件は同じです。  
@@ -124,21 +124,37 @@ System Center Configuration Manager の階層に証明書登録ポイントを�
 
 6.  [ **システムの役割の選択** ] ページで、利用可能な役割の一覧から [ **証明書登録ポイント** ] を選択してから、[ **次へ**] をクリックします。 
 
-8. **証明書の登録モード** ページで、この証明書登録ポイントで **SCEP 証明書要求を処理する**のか、**PFX 証明書要求を処理する**のか選択します。 1 つの証明書登録ポイントで 2 種類の要求を処理することはできません。ただし、両方の種類の証明書を使用している場合、複数の証明書登録ポイントを作成できます。
+7. **証明書の登録モード** ページで、この証明書登録ポイントで **SCEP 証明書要求を処理する**のか、**PFX 証明書要求を処理する**のか選択します。 1 つの証明書登録ポイントで 2 種類の要求を処理することはできません。ただし、両方の種類の証明書を使用している場合、複数の証明書登録ポイントを作成できます。
 
-7.  **証明書登録ポイント設定**ページでは、行う設定は、証明書登録ポイントで処理される証明書の種類によって変わります。
+   PFX 証明書を処理している場合、証明機関として Microsoft または Entrust のいずれかを選択する必要があります。
+
+8.  **[証明書登録ポイント設定]** ページは証明書の種類によって異なります。
     -   **[SCEP 証明書要求を処理する]** を選択した場合、次を構成します。
         -   証明書登録ポイントの **[Web サイト名]**、**[HTTPS ポート番号]**、**[仮想アプリケーション名]**。 これらのフィールドには既定値が自動的に入力されます。 
         -   **ネットワーク デバイス登録サービスの URL とルート CA 証明書** - **[追加]** をクリックし、**[URL とルート証明機関証明書の追加]** ダイアログ ボックスで次を指定します。
             - **ネットワーク デバイス登録サービスの URL**: https://*<server_FQDN>*/certsrv/mscep/mscep.dll たとえば、ネットワーク デバイス登録サービスを実行している FQDN が「server1.contoso.com」の場合は、「 **https://server1.contoso.com/certsrv/mscep/mscep.dll**」と入力します。
             - **ルート CA 証明書**:証明書 (.cer) ファイルを参照して選択します。これは、 **手順 1: ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成する**で作成および保存したファイルです。 このルート CA 証明書を使用することで、証明書登録ポイントで、System Center Configuration Manager ポリシー モジュールが使用するクライアント認証証明書を検証できます。  
-    - **[PFX 証明書要求を処理する]** を選択した場合、次を構成します。
-        - **証明機関 (CA) と各 CA に接続するために必要なアカウント** - **[追加]** をクリックし、**[証明機関とアカウントを追加する]** ダイアログ ボックスで次を指定します。
+
+    - **[PFX 証明書要求を処理する]** を選択した場合、選択した証明書機関の接続詳細と資格情報を構成します。
+
+        - 証明書機関として Microsoft を利用するには、**[追加]** をクリックし、**[証明機関とアカウントを追加する]** ダイアログ ボックスで次を指定します。
             - **証明機関のサーバー名** - 証明機関サーバーの名前を入力します。
             - **証明機関アカウント** - **[設定]** をクリックし、証明機関のテンプレートで登録するアクセス許可が与えられているアカウントを選択するか、作成します。
-        - **証明書登録ポイント接続アカウント** - 証明書登録ポイントを Configuration Manager データベースに接続するアカウントを選択するか、作成します。 あるいは、証明書登録ポイントをホストしているコンピューターのローカル コンピューター アカウントを利用できます。
-        - **Active Directory 証明書の公開アカウント** - Active Directory のユーザー オブジェクトに証明書を公開するためのアカウントを選択するか、新規作成します。
-8.  [ **URL とルート CA 証明書の追加** ] ダイアログ ボックスで、次の項目を指定し、[ **OK** ] をクリックします。  
+            - **証明書登録ポイント接続アカウント** - 証明書登録ポイントを Configuration Manager データベースに接続するアカウントを選択するか、作成します。 あるいは、証明書登録ポイントをホストしているコンピューターのローカル コンピューター アカウントを利用できます。
+            - **Active Directory 証明書の公開アカウント** - Active Directory のユーザー オブジェクトに証明書を公開するためのアカウントを選択するか、新規作成します。
+
+            - **[URL for the Network Device Enrollment and root CA certificate]\(ネットワーク デバイス登録の URL とルート CA 証明書\)** ダイアログ ボックスで、次の項目を指定し、**[OK]** をクリックします。  
+
+        - 証明機関として Entrust を使用するには、次のように指定します。
+
+           - **MDM Web サービス URL**
+           - URL のユーザー名とパスワード資格情報
+
+           MDM API を使用し、Entrust Web サービス URL を定義するとき、次のサンプルのように、API のバージョン 9 以降を使用してください。
+
+           `https://entrust.contoso.com:19443/mdmws/services/AdminServiceV9`
+
+           それ以前のバージョンの API は Entrust に対応していません。
 
 9. **[次へ]** をクリックして、ウィザードを完了します。  
 

@@ -13,10 +13,10 @@ ms.technology:
 - configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 ms.translationtype: HT
-ms.sourcegitcommit: a986c23b18f782b713d7df0048dff2543f640b66
-ms.openlocfilehash: eb2f9ff61b68e015182a1f898afcb2a528b410ba
+ms.sourcegitcommit: 5d696e3da187d47e0d41c02864d9b5267827e701
+ms.openlocfilehash: 902d7f7216ca7bb585afae587a6706e2332da9d3
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 
@@ -73,7 +73,7 @@ Configuration Manager の以前のバージョンでは、次の手順で最初�
 - Office 365 インストーラーを実行しているコンピューターではインターネット アクセスが必要になります。  
 - Office 365 インストーラーを実行しているユーザーには、ウィザードで示されるコンテンツの場所の共有に対する**読み取り**および**書き込み**アクセス権が必要です。
 - 404 ダウンロード エラーが発生した場合は、次のファイルをユーザーの %temp% フォルダーにコピーします。
-  - [releasehistory.xml](http://officecdn.microsoft.com.edgesuite.net/wsus/releasehistory.cab)
+  - [releasehistory.xml](http://officecdn.microsoft.com/pr/wsus/releasehistory.cab)
   - [o365client_32bit.xml](http://officecdn.microsoft.com/pr/wsus/ofl.cab)  
 
 
@@ -123,6 +123,17 @@ Configuration Manager で Office 365 の更新プログラムを展開するに�
 
 > [!Important]
 > Office 365 クライアントに構成されたものと同じ言語の更新プログラムをダウンロードして展開する必要があります。 たとえば、Office 365 クライアントに en-us と de-de の言語を構成しているとします。 サイト サーバーで、適用可能な Office 365 更新プログラムに対して en-us のコンテンツのみをダウンロードして展開します。 ユーザーがソフトウェア センターからこの更新プログラムのインストールを開始すると、更新プログラムはコンテンツのダウンロード中にハングします。   
+
+## <a name="restart-behavior-and-client-notifications-for-office-365-updates"></a>Office 365 の更新プログラムの動作とクライアント通知を再起動する
+Office 365 クライアントに更新プログラムを展開する場合、再起動の動作とクライアント通知は、Configuration Manager のバージョンによって異なります。 次の表では、クライアントが Office 365 の更新プログラムを受け取るときのエンド ユーザーのエクスペリエンスに関する情報を示します。
+
+|Configuration Manager バージョン |エンド ユーザー エクスペリエンス|  
+|----------------|---------------------|
+|1610 より前|再起動フラグが設定され、コンピューターを再起動した後に、更新プログラムがインストールされます。|
+|1610|Office 365 アプリは、更新プログラムをインストールする前に警告なしにシャットダウンされます|
+|1610 <br/>更新プログラム 1702 を含む|再起動フラグが設定され、コンピューターを再起動した後に、更新プログラムがインストールされます。|
+|1706|クライアントは、ポップアップとアプリ内通知、および更新プログラムをインストールする前にカウント ダウン ダイアログを受け取ります。|
+
 
 ## <a name="add-languages-for-office-365-update-downloads"></a>Office 365 更新プログラムのダウンロード対象言語を追加する
 バージョン 1610 以降の Configuration Manager では、Office 365 でサポートされている言語であれば、Configuration Manager でサポートされているかどうかに関係なく、その言語の更新プログラムをダウンロード対象に含めることができます。    

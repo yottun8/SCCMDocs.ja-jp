@@ -16,11 +16,11 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 robots: noindex
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 216d288aa7b7f2b98df86f59355d879366dcd44d
-ms.openlocfilehash: 4baa6e0fe009f5f7dc33f5ab4adb1ec5e5c5271b
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 6630d0170df22f46f14df241ffd8d48266c69263
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 
@@ -277,6 +277,31 @@ ms.lasthandoff: 05/17/2017
       * iOS 6+
       * Android 4.0 以降
       * Samsung KNOX Standard 4.0+
+<br></br>
+* **必要なパスワードの種類**。 ユーザーが英数字のパスワードまたは数字のパスワードのどちらを使用する必要があるかを指定します。 英数字のパスワードの場合、パスワードに最低限必要な文字セットの数も指定します。 文字セットには、小文字、大文字、記号、および数字の 4 種類があります。
+
+    **以下でサポートされています。**
+    * Windows Phone 8+
+    * Windows 8.1+
+    * iOS 6+
+<br></br>
+* **デバイスでの USB デバッグをブロックする**。 USB デバッグは Android for Work デバイスでは既に無効になっているため、この設定を構成する必要はありません。
+
+    **以下でサポートされています。**
+    * Android 4.0 以降
+    * Samsung KNOX Standard 4.0+
+<br></br>
+* **提供元不明のアプリをブロックする**。 デバイスが不明なソースからのアプリのインストールを許可しないことが必要です。 Android for Work デバイスでは、不明なソースからのインストールは常に制限されるため、この設定を構成する必要はありません。
+
+    **以下でサポートされています。**
+    * Android 4.0 以降
+    * Samsung KNOX Standard 4.0+
+<br></br>
+* **アプリの脅威のスキャンが必要**。 この設定は、デバイスでアプリの確認機能が有効になっていることを指定します。 
+
+    **以下でサポートされています。**
+    * Android 4.2 から 4.4
+    * Samsung KNOX Standard 4.0+
 
 ### <a name="find-an-app-id"></a>アプリ ID を検索する
 

@@ -2,7 +2,7 @@
 title: "プレリリース機能 | Microsoft Docs"
 description: "System Center Configuration Manager のプレリリース機能"
 ms.custom: na
-ms.date: 6/13/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,16 +15,14 @@ caps.latest.revision: 36
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
-ms.openlocfilehash: 988f8da0b221f8c0b470e7a0a8ed995356193f98
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 7b594daeed81ef2d991ad06489f9184a69804117
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/13/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
-# System Center Configuration Manager のプレリリース機能
-<a id="pre-release-features-in-system-center-configuration-manager" class="xliff"></a>
+# <a name="pre-release-features-in-system-center-configuration-manager"></a>System Center Configuration Manager のプレリリース機能
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 プレリリース機能は、運用環境での初期テスト用の Current Branch に含まれている機能です。 これらの機能は完全にサポートされていますが、現在開発中のため、プレリリースのカテゴリから移動するまでは変更が行われる可能性があります。
@@ -52,9 +50,10 @@ ms.lasthandoff: 06/13/2017
 
  |機能          |プレリリース版として追加 | 完全機能として追加|  
 |------------------|---------------------|---------------------|
+| Configuration Manager コンソールから PowerShell スクリプトを作成して実行する |  [バージョン 1706](/sccm/apps/deploy-use/create-deploy-scripts)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Configuration Manager を使用した Device Guard 管理 |  [バージョン 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | アプリケーションをインストールする前に実行中の実行可能ファイルを確認する  |   [バージョン 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| データ ウェアハウス サービス ポイント  |  [バージョン 1702](/sccm/core/servers/manage/data-warehouse) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| データ ウェアハウス サービス ポイント  |  [バージョン 1702](/sccm/core/servers/manage/data-warehouse) |[バージョン 1706](/sccm/core/servers/manage/data-warehouse)|
 | クライアントへのコンテンツ配布のピア キャッシュ |  [バージョン 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | クラウド管理ゲートウェイ |  [バージョン 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | クライアント データ ソース ダッシュボード |  [バージョン 1610](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|

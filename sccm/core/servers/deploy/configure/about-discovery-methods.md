@@ -1,7 +1,7 @@
 ---
 title: "探索方法 | Microsoft Docs"
 ms.custom: na
-ms.date: 2/3/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 81d7516b814d2db74d4d857871071c8911755754
-ms.openlocfilehash: 6e53f501281e31f2b7df54b9740eac970f108257
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 442e5e1fbddd00248819a8de79adc78929474fc0
 ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>System Center Configuration Manager の探索方法について
@@ -190,6 +190,27 @@ Active Directory ユーザーの探索時に行われた処理は、サイト �
 
 この探索方法を構成する方法の詳細については、「[Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md)」 (System Center Configuration Manager の探索方法の構成) を参照してください。  
 
+## <a name="azureaddisc"></a> Azure Active Directory ユーザー探索
+バージョン 1706 以降、Azure サービスを利用するように環境を構成するとき、Azure Active Directory (Azure AD) ユーザー探索を利用できます。
+この探索方法を利用し、次の属性を見つけ、Azure AD のインスタンスに対して認証するユーザーを Azure AD で検索します。  
+-   objectId
+-   displayName
+-   メール
+-   mailNickname
+-   onPremisesSecurityIdentifier
+-   userPrincipalName
+-   AAD tenantID
+
+この方法は、Azure AD のユーザー データの完全同期と差分同期に対応しています。 この情報は、他の検索方法から回収した検索データと併用できます。
+
+Azure AD ユーザー探索のアクションは、階層の最上位層サイト サーバーの SMS_AZUREAD_DISCOVERY_AGENT.log ファイルに記録されます。
+
+Azure AD ユーザー探索を構成するには、Azure サービス ウィザードを使用します。  この探索方法を構成する方法の詳細については、「[Configure Azure AD User Discovery](/sccm/core/servers/deploy/configure/configure-discovery-methods)」 (Azure AD ユーザー探索の構成) を参照してください。
+
+
+
+
+
 ##  <a name="bkmk_aboutHeartbeat"></a> 定期探索  
 **構成可能:** ○  
 
@@ -307,7 +328,7 @@ Active Directory ユーザーの探索時に行われた処理は、サイト �
 
     -   サイト サーバーが DHCP ユーザー グループのメンバーである。  
 
--   ネットワーク探索で、DHCP サーバーが列挙されるときに、常に静的な IP アドレスが検出されるとは限りません。 DHCP サーバーで割り当てから除外するように設定されている IP アドレスの範囲に当てはまる IP アドレスや、 手動で割り当てるために予約されている IP アドレスは、ネットワーク探索で見つかりません。  
+-   ネットワーク探索で、DHCP サーバーが列挙されるときに、常に静的な IP アドレスが検出されるとは限りません。 DHCP サーバーで割り当てから除外するように設定にされている IP アドレスの範囲に当てはまる IP アドレスはネットワーク探索で見つかりません。 手動で割り当てるために予約されている IP アドレスもネットワーク探索で見つかりません。  
 
 **ドメイン:**  
 
@@ -353,7 +374,7 @@ Active Directory ユーザーの探索時に行われた処理は、サイト �
 
 ここで指定するホップの数によって、ネットワーク探索時に照会できる追加のデバイスの数とネットワーク セグメントのが決まります。  
 
-たとえば、探索のレベルをトポロジに設定し、[最大ホップ数] を **0** に設定した場合は、照会元のサーバーが存在するサブネットが探索され、 そのサブネットにあるルーターが照会されます。  
+たとえば、探索のレベルをトポロジに設定し、[最大ホップ数] を **0** に設定した場合は、照会元のサーバーが存在するサブネットが探索されます。 そのサブネットにルーターがあれば、それが含まれます。  
 
 次の図は、探索のレベルをトポロジのみに設定し、[最大ホップ数] を 0 に指定したネットワーク探索クエリをサーバー 1 で実行する例を示しています。この場合、サブネット D とルーター 1 が見つかります。  
 
@@ -393,7 +414,7 @@ Configuration Manager では、ユーザーが構成できる探索方法だけ�
 > [!NOTE]  
 >  このセクションの情報は、Active Directory フォレストの探索には当てはまりません。  
 
-この 3 つの探索方法は、構成と操作方法がよく似ており、 それぞれ Active Directory Domain Services に格納されたコンピューター、ユーザー、リソースのグループ メンバーシップに関する情報を探索します。 探索プロセスは、探索を実行するように構成された各サイトのサイト サーバーで実行されている探索エージェントによって管理されます。 どの方法でも、Active Directory の検索する 1 つまたは複数の場所をローカルまたはリモート フォレスト内の場所インスタンスとして構成することができます。  
+この 3 つの探索方法には、同様の構成と操作が使用されます。 それぞれ Active Directory Domain Services に格納されたコンピューター、ユーザー、リソースのグループ メンバーシップに関する情報を探索します。 探索プロセスは、探索を実行するように構成された各サイトのサイト サーバーで実行されている探索エージェントによって管理されます。 どの方法でも、Active Directory の検索する 1 つまたは複数の場所をローカルまたはリモート フォレスト内の場所インスタンスとして構成することができます。  
 
 信頼されていないフォレストでリソースの検索する場合は、次のことが必要です。  
 
@@ -407,9 +428,9 @@ Configuration Manager では、ユーザーが構成できる探索方法だけ�
 
 まず、指定された場所でオブジェクトが検索され、そのオブジェクトに関する情報が収集されます。 リソースに関する十分な情報が収集されると、DDR が作成されます。 必要な情報は、使用している探索方法によって異なります。  
 
-異なる Configuration Manager サイトでローカルの Active Directory サーバーを照会する同じ探索方法を構成する場合は、サイトごとに別々の探索オプションを構成することができます。 探索データは、階層にあるサイトで共有されるので、構成が重なり合うのを避け、各リソースが一度だけ検出されるようにしてください。 
+異なる Configuration Manager サイトでローカルの Active Directory サーバーを照会する同じ探索方法を構成する場合は、サイトごとに別々の探索オプションを構成することができます。 探索データは、階層にあるサイトで共有されるので、構成が重なり合うのを避け、各リソースが一度だけ検出されるようにしてください。
 
-環境の規模が小さい場合は、それぞれの探索方法を階層内の 1 つのサイトだけで実行して、管理上のオーバーヘッドを抑えると共に、同じリソースが何度も検出される危険性を下げてください。 探索を実行するサイトの数を減らすと、探索によって使用されるネットワーク帯域幅が少なくなるだけでなく、 作成される DDR の数、つまりサイト サーバーが処理しなければならない DDR の数も少なくなります。  
+環境の規模が小さい場合は、それぞれの探索方法を階層内の 1 つのサイトだけで実行して、管理上のオーバーヘッドを抑えると共に、同じリソースが何度も検出される危険性を下げてください。 探索を実行するサイトの数を最小に抑えるとき、検索で使用される全体的ネットワーク帯域幅を減らすことができます。 作成後、サイト サーバーで処理する必要がある DDR の全体的数も減らすことができます。  
 
 探索方法の構成の多くは、一目見ただけで、その意味がわかります。 次のセクションでは、探索オプションを実際に構成する前に知っておく必要のある情報を説明します。  
 

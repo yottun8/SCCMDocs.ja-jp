@@ -2,7 +2,7 @@
 title: SQL Server Always On | Microsoft Docs
 description: "SCCM での SQL Server Always On 可用性グループの使用を計画します。"
 ms.custom: na
-ms.date: 5/26/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,16 +15,14 @@ caps.latest.revision: 16
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
-ms.openlocfilehash: 188ae877368a6cb2ec9998bff74259b4e5b5e7ce
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: c746365238e1255d73387a9496521bb03a56b21b
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/01/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
-# Configuration Manager で SQL Server Always On 可用性グループを使用するための準備
-<a id="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager" class="xliff"></a>
+# <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager で SQL Server Always On 可用性グループを使用するための準備
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -38,28 +36,26 @@ Microsoft Azure で可用性グループを使用する場合は、*Azure 可用
 >  [!Important]   
 >  作業を続行する前に、SQL Server と SQL Server 可用性グループの構成に慣れておいてください。 以下の情報では、SQL Server ドキュメント ライブラリと手順を示します。
 
-## サポートされるシナリオ
-<a id="supported-scenarios" class="xliff"></a>
+## <a name="supported-scenarios"></a>サポートされるシナリオ
 Configuration Manager で可用性グループを使用する場合にサポートされるシナリオを以下に示します。 それぞれの詳細と手順については、[Configuration Manager の可用性グループの構成](/sccm/core/servers/deploy/configure/configure-aoag)に関するページを参照してください。
 
 
 -      [Configuration Manager で使用する可用性グループを作成します](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)。
 -     [可用性グループを使用するようにサイトを構成します](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)。
--     [サイト データベースをホストする可用性グループでレプリカ メンバーを追加または削除します](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-replica-members)。
+-     [サイト データベースをホストする可用性グループで同期レプリカ メンバーを追加または削除します](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)。
+-     [非同期コミット レプリカを構成](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca) します (Configuration Manager 1706 以降のバージョンが必要です)。
+-     [非同期コミット レプリカからサイトを回復](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site) します (Configuration Manager 1706 以降のバージョンが必要です)。
 -     [サイト データベースを、可用性グループから、スタンドアロン SQL Server の指定したインスタンスまたは既定のインスタンスに移動します](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)。
 
 
-## 必要条件
-<a id="prerequisites" class="xliff"></a>
+## <a name="prerequisites"></a>必要条件
 すべてのシナリオに以下の必要条件が適用されます。 追加の必要条件が特定のシナリオに適用される場合は、そのシナリオで詳しく説明します。   
 
-### Configuration Manager のアカウントとアクセス許可
-<a id="configuration-manager-accounts-and-permissions" class="xliff"></a>
+### <a name="configuration-manager-accounts-and-permissions"></a>Configuration Manager のアカウントとアクセス許可
 **サイト サーバーからレプリカ メンバーへのアクセス:**   
 サイト サーバーのコンピューター アカウントは、可用性グループのメンバーである各コンピューターの **ローカル管理者** グループのメンバーである必要があります。
 
-### SQL Server
-<a id="sql-server" class="xliff"></a>
+### <a name="sql-server"></a>SQL Server
 **バージョン:**  
 可用性グループの各レプリカは、使用しているバージョンの Configuration Manager でサポートされるバージョンの SQL Server を実行する必要があります。 SQL Server でサポートされる場合、可用性グループの別々のノードで、異なるバージョンの SQL Server を実行できます。
 
@@ -67,32 +63,35 @@ Configuration Manager で可用性グループを使用する場合にサポー�
 SQL Server の *Enterprise* エディションを使用する必要があります。
 
 **アカウント:**  
-SQL Server の各インスタンスは、ドメイン ユーザー アカウント (**サービス アカウント**) または**ローカル システム**で実行できます。 グループ内の各レプリカは別の構成を持つことができます。 [SQL Server のベスト プラクティス](/sql/sql-server/install/security-considerations-for-a-sql-server-installation#before-installing-includessnoversionincludesssnoversion-mdmd)に従って、使用可能な最小アクセス許可を持つアカウントを使用します。
+SQL Server の各インスタンスは、ドメイン ユーザー アカウント (**サービス アカウント**) またはドメイン以外のアカウントで実行できます。 グループ内の各レプリカは別の構成を持つことができます。 [SQL Server のベスト プラクティス](/sql/sql-server/install/security-considerations-for-a-sql-server-installation#before-installing-includessnoversionincludesssnoversion-mdmd)に従って、使用可能な最小アクセス許可を持つアカウントを使用します。
 
-たとえば、SQL Server 2016 用にサービス アカウントとアクセス許可を構成する場合は、MSDN の「[Configure Windows Service Accounts and Permissions](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)」 (Windows サービス アカウントとアクセス許可の構成) を参照してください。
+-   SQL Server 2016 用にサービス アカウントとアクセス許可を構成する場合は、MSDN の「[Windows サービス アカウントと権限の構成](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)」を参照してください。
+-   ドメイン以外のアカウントを使用するには、証明書を使用する必要があります。 詳細については、「[データベース ミラーリング エンドポイントでの証明書の使用 (Transact-SQL)](https://docs.microsoft.com/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql)」を参照してください。
 
-  **ローカル システム**を使用してレプリカを実行する場合は、エンドポイント認証を構成する必要があります。 これには、レプリカ サーバー エンドポイントへの接続を有効にする権限の委任が含まれます。
-  -     SQL Server の権限を委任するには、ノードの他の SQL Server にログイン情報として各 SQL Server のコンピューター アカウントを追加し、そのアカウントに SA 権限を付与します。  
-  -     各レプリカで以下のスクリプトを実行し、ローカル エンドポイントの各リモート サーバーにエンドポイント権限を委任します。    
-
-              GRANT CONNECT ON endpoint::[endpoint_name]  
-              TO [domain\servername$]
 
 詳細については、[Always On 可用性グループのデータベース ミラーリング エンドポイントの作成](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell)に関するページを参照してください。
 
-### 可用性グループの構成
-<a id="availability-group-configurations" class="xliff"></a>
+### <a name="availability-group-configurations"></a>可用性グループの構成
 **レプリカ メンバー:**  
-可用性グループには、1 つのプライマリ レプリカを含める必要があり、最大 2 つの同期セカンダリ レプリカを含めることができます。  各レプリカ メンバーには以下が必要です。
+-   可用性グループには、1 つのプライマリ レプリカを含める必要があります。
+-   1706 より前のバージョンでは、最大 2 つの同期セカンダリ レプリカを作成できます。
+-   バージョン 1706 以降、可用性グループでは、使用する SQL Server のバージョンでサポートされている同じ数と種類のレプリカを使用できます。
+
+    同期レプリカを復旧するために非同期コミット レプリカを使用できます。 これを実行する方法については、バックアップと回復に関するトピックで[サイト データベースの回復オプション]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)を参照してください。
+    > [!CAUTION]  
+    > Configuration Manager では、非同期コミット レプリカをサイト データベースとして使用するためのフェールオーバーはサポートされていません。
+Configuration Manager では、非同期コミット レプリカが最新のものかどうかを確認するために状態を検証せず、また、[このようなレプリカは意図的に非同期にできる]( https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes)ため、非同期コミット レプリカをサイト データベースとして使用すると、サイトとデータの整合性が危険にさらされる場合があります。
+
+各レプリカ メンバーには以下が必要です。
 -   **既定のインスタンス**を使用する  
     *バージョン 1702 以降では、****名前付きインスタンス***を使用できます。
 
--      **[プライマリ ロールでの接続]** が **[はい]** に設定されている
--      **[読み取り可能なセカンダリ]** が **[はい]** に設定されている  
--      **手動フェールオーバー**に設定されている       
+-     **[プライマリ ロールでの接続]** が **[はい]** に設定されている
+-     **[読み取り可能なセカンダリ]** が **[はい]** に設定されている  
+-     **手動フェールオーバー**に設定されている      
 
     >  [!TIP]
-    >  Configuration Manager では、**[自動フェールオーバー]** に設定されている場合、可用性グループ レプリカの使用がサポートされます。 ただし、次のような場合は **[手動フェールオーバー]** を設定する必要があります。
+    >  Configuration Manager では、**[自動フェールオーバー]** に設定されている場合、可用性グループ同期レプリカの使用がサポートされます。 ただし、次のような場合は **[手動フェールオーバー]** を設定する必要があります。
     >  -  セットアップを実行して、可用性グループでのサイト データベースの使用を指定する。
     >  -  Configuration Manager に (サイト データベースに適用される更新プログラムだけでなく) すべての更新プログラムをインストールする場合。  
 
@@ -101,15 +100,15 @@ SQL Server の各インスタンスは、ドメイン ユーザー アカウン�
 
 Azure で可用性グループをセットアップし、グループが内部または外部ロード バランサーの背後にある場合に、セットアップで各レプリカにアクセスできるようにするために開く必要がある既定ポートは以下のとおりです。   
 
--      RCP エンドポイント マッパー - **TCP 135**   
--      サーバー メッセージ ブロック – **TCP 445**  
+-     RCP エンドポイント マッパー - **TCP 135**   
+-     サーバー メッセージ ブロック – **TCP 445**  
     *データベースの移動が完了した後で、このポートを削除することができます。バージョン 1702 以降では、このポートは必要なくなりました。*
--      SQL Server Service Broker - **TCP 4022**
--      SQL over TCP – **TCP 1433**   
+-     SQL Server Service Broker - **TCP 4022**
+-     SQL over TCP – **TCP 1433**   
 
 セットアップの完了後に、次のポートが引き続きアクセス可能である必要があります。
--      SQL Server Service Broker - **TCP 4022**
--      SQL over TCP – **TCP 1433**
+-     SQL Server Service Broker - **TCP 4022**
+-     SQL over TCP – **TCP 1433**
 
 バージョン 1702 以降では、これらの構成でカスタム ポートを使用することができます。 エンドポイントと、可用性グループ内のすべてのレプリカで、同じポートを使用する必要があります。
 
@@ -125,32 +124,31 @@ Azure で可用性グループをセットアップし、グループが内部�
 セットアップで可用性グループのデータベース インスタンスを指定するときに、セカンダリ レプリカ サーバーにはこのファイルのパスのみが必要です。 セットアップで可用性グループのサイト データベースの構成が完了したら、セカンダリ レプリカ サーバーから未使用のパスを削除できます。
 
 たとえば、次の場合を考えてください。
--    3 つの SQL Server を使用する可用性グループを作成するとします。
+-   3 つの SQL Server を使用する可用性グループを作成するとします。
 
--    プライマリ レプリカ サーバーは、SQL Server 2014 の新規インストールです。 既定では、データベースの .MDF および .LDF ファイルが C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA に格納されます。
+-   プライマリ レプリカ サーバーは、SQL Server 2014 の新規インストールです。 既定では、データベースの .MDF および .LDF ファイルが C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA に格納されます。
 
--    両方のセカンダリ レプリカ サーバーが前のバージョンから SQL Server 2014 にアップグレードされており、データベース ファイルを格納する元のファイル パス (つまり、C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA) を保持します。
+-   両方のセカンダリ レプリカ サーバーが前のバージョンから SQL Server 2014 にアップグレードされており、データベース ファイルを格納する元のファイル パス (つまり、C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA) を保持します。
 
--    この可用性グループへのサイト データベースの移動を試行する前に、各セカンダリ レプリカ サーバー上で C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA というファイル パス (プライマリ レプリカで使用されるのと同じパス) を作成する必要があります。セカンダリ レプリカでこのファイルの場所を使用しない場合でも必要です。
+-   この可用性グループへのサイト データベースの移動を試行する前に、各セカンダリ レプリカ サーバー上で C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA というファイル パス (プライマリ レプリカで使用されるのと同じパス) を作成する必要があります。セカンダリ レプリカでこのファイルの場所を使用しない場合でも必要です。
 
--    次に、各セカンダリ レプリカ上の SQL Server サービス アカウントに、そのサーバーの新規作成されたファイルの場所に対するフル コントロール アクセス許可を付与します。
+-   次に、各セカンダリ レプリカ上の SQL Server サービス アカウントに、そのサーバーの新規作成されたファイルの場所に対するフル コントロール アクセス許可を付与します。
 
--    この時点で Configuration Manager のセットアップを正常に実行して、可用性グループ内のサイト データベースを使用するようにサイトを構成できます。
+-   この時点で Configuration Manager のセットアップを正常に実行して、可用性グループ内のサイト データベースを使用するようにサイトを構成できます。
 
 **新しいレプリカでデータベースを構成する:**   
  各レプリカのデータベースは、次のように設定する必要があります。
--     **CLR 統合**を*有効*にする必要があります。
--      **max text repl size** を *2147483647* にする必要があります。
--      データベース所有者を *SA アカウント*にする必要があります。
--      **TRUSTWORTY** を **ON** にする必要があります。
--      **Service Broker** を*有効*にする必要があります。
+-   **CLR 統合**を*有効*にする必要があります。
+-     **max text repl size** を *2147483647* にする必要があります。
+-     データベース所有者を *SA アカウント*にする必要があります。
+-     **TRUSTWORTY** を **ON** にする必要があります。
+-     **Service Broker** を*有効*にする必要があります。
 
 ライマリ レプリカでのみ、これらの構成を行うことができます。 セカンダリ レプリカを構成するには、まず、プライマリをセカンダリにフェールオーバーし、セカンダリを新しいプライマリ レプリカにする必要があります。   
 
 必要に応じて SQL Server ドキュメントを使用すれば、設定の構成に役立ちます。 SQL Server ドキュメントの [TRUSTWORTHY](/sql/relational-databases/security/trustworthy-database-property) や [CLR 統合](/sql/relational-databases/clr-integration/clr-integration-enabling)に関するページなどを参照してください。
 
-### 検証スクリプト
-<a id="verification-script" class="xliff"></a>
+### <a name="verification-script"></a>検証スクリプト
 プライマリとセカンダリの両方のレプリカのデータベース構成を検証するために次のスクリプトを実行することができます。 セカンダリ レプリカに関する問題を修正するには、そのセカンダリ レプリカをプライマリ レプリカに変える必要があります。
 
     SET NOCOUNT ON
@@ -211,8 +209,7 @@ Azure で可用性グループをセットアップし、グループが内部�
 
     Branch_Exit:
 
-## 制限事項と既知の問題
-<a id="limitations-and-known-issues" class="xliff"></a>
+## <a name="limitations-and-known-issues"></a>制限事項と既知の問題
 すべてのシナリオに以下の制限事項が適用されます。   
 
 **基本的な可用性グループはサポートされない:**  
@@ -221,7 +218,7 @@ SQL Server 2016 Standard エディションで導入された[基本的な可用
 **追加の可用性グループをホストする SQL Server:**   
 SQL Server の可用性グループで 1 つ以上の可用性グループと、Configuration Manager で使用するグループをホストしている場合、Configuration Manager バージョン 1610 の前に、Configuration Manager セットアップの実行または Configuration Manager 用の更新プログラムをインストールするときに、これらの追加の各可用性グループの各レプリカに次の構成を設定する必要があります。
 -   **手動フェールオーバー**
--     **読み取り専用接続を許可**
+-   **読み取り専用接続を許可**
 
 **サポートされていないデータベースの使用:**
 -   **Configuration Manager は可用性グループ内のサイト データベースのみをサポートする:** 以下はサポートされていません。
@@ -235,24 +232,21 @@ SQL Server の可用性グループで 1 つ以上の可用性グループと、
 
 このようなエラーは無視してもかまいません。
 
-## サイト バックアップの変更
-<a id="changes-for-site-backup" class="xliff"></a>
+## <a name="changes-for-site-backup"></a>サイト バックアップの変更
 **データベース ファイルのバックアップ:**  
 可用性グループでサイト データベースを実行する場合は、一般的な Configuration Manager 設定とファイルをバックアップするために組み込み**バックアップ サイト サーバー** メンテナンス タスクを実行する必要があります。 ただし、そのバックアップで作成された .MDF ファイルや .LDF ファイルは使用しないでください。 代わりに、SQL Server を使用して、これらのデータベース ファイルの直接バックアップを作成します。
 
 **トランザクション ログ:**  
 サイト データベースの復旧モデルは、**[完全]** に設定する必要があります (可用性グループで使用する場合の要件)。 この構成で、サイト データベース トランザクション ログのサイズを監視および維持するための計画を立てます。 完全復旧モデルでは、データベースまたはトランザクション ログの完全バックアップが作成されるまで、トランザクションは書き込まれません。 詳細については、SQL Server のドキュメントの「[SQL Server データベースのバックアップと復元](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases)」を参照してください。
 
-## サイトの回復の変更
-<a id="changes-for-site-recovery" class="xliff"></a>
+## <a name="changes-for-site-recovery"></a>サイトの回復の変更
 可用性グループの 1 つ以上のノードがまだ機能している場合は、サイトの回復オプション **[データベースの回復をスキップする (このオプションは、サイト データベースが障害の影響を受けていない場合に選択してください)]** を使用できます。
 
  サイトを回復する前に、可用性グループのすべてのノードが失われた場合は、可用性グループを再作成する必要があります。 Configuration Manager では可用性ノードの再構築や復元はできません。 グループが再作成されて、バックアップが復元および再構成されたら、サイトの回復オプション **[データベースの回復をスキップする (このオプションは、サイト データベースが障害の影響を受けていない場合に選択してください)]** を使用できます。
 
 詳細については、「[Backup and recovery for System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery)」 (System Center Configuration Manager のバックアップと回復) をご覧ください。
 
-## レポートの変更
-<a id="changes-for-reporting" class="xliff"></a>
+## <a name="changes-for-reporting"></a>レポートの変更
 **レポート サービス ポイントをインストールする:**  
 レポート サービス ポイントでは、可用性グループのリスナーの仮想名の使用や SQL Server Always On 可用性グループ内のレポート サービス データベースのホスティングはサポートされていません。
 -   既定では、レポート サービス ポイントのインストールで **[サイト データベース サーバー名]** がリスナーとして指定されている仮想名に設定されます。 これを変更し、可用性グループ内のレプリカのコンピューター名とインスタンスを指定します。
@@ -263,7 +257,6 @@ SQL Server の可用性グループで 1 つ以上の可用性グループと、
 **コンソールで使用されるレポート サービス ポイントを切り替える:**  
 レポートを実行するには、コンソールで **[監視]** > **[概要]** > **[レポートの作成]** > **[レポート]** の順に移動してから、**[レポート オプション]** を選択します。 [レポート オプション] ダイアログ ボックスで、目的のレポート サービス ポイントを選択します。
 
-## 次のステップ
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>次のステップ
 必要条件、制限事項、および可用性グループを使用する場合に必要な一般的なタスクに関する変更を理解したら、「[Configure availability groups for Configuration Manager](/sccm/core/servers/deploy/configure/configure-aoag)」 (Configuration Manager の可用性グループの構成) を参照して、可用性グループを使用するためのサイトのセットアップおよび構成手順を確認してください。
 

@@ -2,7 +2,7 @@
 title: "ビジネス向け Windows ストアからのアプリの管理 | Microsoft Docs"
 description: "System Center Configuration Manager を使用してビジネス向け Windows ストアからアプリを管理および展開します。"
 ms.custom: na
-ms.date: 7/25/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: HT
-ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
-ms.openlocfilehash: 93e767c9a115b30d68871baece670977165f55f4
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 369b6a82a20a90ca534f9484c0be71096dd35a30
 ms.contentlocale: ja-jp
-ms.lasthandoff: 07/26/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 
@@ -85,6 +85,8 @@ Configuration Manager クライアントを含む Windows 10 PC にオンライ�
 
 ## <a name="set-up-windows-store-for-business-synchronization"></a>ビジネス向け Windows ストアの同期の設定
 
+### <a name="for-configuration-manager-versions-prior-to-1706"></a>1706 より前の Configuration Manager バージョンの場合
+
 **Azure Active Directory で、"Web アプリケーションや Web API" 管理ツールとして Configuration Manager を登録します。これで、後で必要になるクライアント ID が与えられます。**
 1. [https://manage.windowsazure.com](https://manage.windowsazure.com) の Active Directory ノードで、Azure Active Directory を選択し、[**アプリケーション**]  >  [**追加**] をクリックします。
 2.  **[組織で開発中のアプリケーションを追加]** をクリックします。
@@ -110,6 +112,24 @@ Configuration Manager クライアントを含む Windows 10 PC にオンライ�
 2.  **[ホーム]** タブの**[ビジネス向け Windows ストア]** グループで、**[ビジネス向け Windows ストア アカウントの追加]** をクリックします。 
 3.  Azure Active Directory からテナント ID、クライアント ID、クライアント キーを追加し、ウィザードを完了します。
 4. 完了した時点で、Configuration Manager コンソールの **[ビジネス向け Windows ストア]** で構成されたアカウントが表示されます。
+
+### <a name="for-configuration-manager-version-1706-and-later"></a>1706 以降の Configuration Manager バージョンの場合
+
+1. コンソールで、**[管理]** > **[概要]** > **[クラウド サービスの管理]** > **[Azure]** > **[Azure サービス]** に移動し、**[Azure サービスの構成]** を選択して、**Azure サービス ウィザード**を開始します。
+2. **[Azure サービス]** ページで、構成するサービスを選択し、**[次へ]** をクリックします。
+3. **[全般]** ページで、[Azure サービス名] のフレンドリ名とオプションの説明を入力し、**[次へ]** をクリックします。
+4. **[アプリ]** ページで、Azure 環境を指定し、**[参照]** をクリックして **[サーバー アプリ]** ウィンドウを開きます。
+5. **[サーバー アプリ]** ウィンドウで、使用するサーバー アプリを選択し、**[OK]** をクリックします。 サーバー アプリとは、Azure アカウントの構成 (クライアントのテナント ID、クライアント ID、シークレット キーなど) を格納する Azure Web アプリです。 利用可能なサーバー アプリがない場合は、次のいずれかを使用します。
+    - **作成**: 新しいセッションを作成するには、**[作成]** をクリックします。 アプリとテナントのフレンドリ名を指定します。 次に、Azure にサインインすると、Configuration Manager によって、Azure で Web アプリと、Web アプリで使用するクライアント ID やシークレット キーが作成されます。 その後、Azure Portal からこれらを表示できます。
+    - **インポート**: Azure サブスクリプションに既に存在する Web アプリを使用するには、**[インポート]** をクリックします。 アプリとテナントのフレンドリ名を指定し、Configuration Manager で使用する Azure Web アプリのテナント ID、クライアント ID、シークレット キーを指定します。 情報を**確認**した後、**[OK]** をクリックして続行します。 
+6. **[情報]** ページを確認し、指示に従って、追加の手順と構成を完了します。 これらの構成は、Configuration Manager でサービスを使用するために必要です。 たとえば、ビジネス向け Windows ストアを構成するには
+    - Azure で、Configuration Manager を Web アプリケーションまたは Web API 管理ツールとして登録し、クライアント ID を記録します。 また、管理ツール (Configuration Manager) で使用するためのクライアント キーを指定します。
+    - ビジネス向け Windows ストア コンソールで、ストアの管理ツールとして Configuration Manager を構成し、オフラインのライセンスされたアプリのサポートを有効にするには、少なくとも 1 つのアプリを購入する必要があります。 
+7. 操作を続行する準備ができたら **[次へ]** をクリックします。
+8. **[アプリケーションの構成]** ページで、このサービスのアプリケーション カタログと言語の構成を完了し、**[次へ]** をクリックします。
+9. ウィザードが完了したのち、Configuration Manager コンソールに**ビジネス向け Windows ストア**を**クラウド サービスの種類**として構成したことが示されます。
+
+
 
 
 ## <a name="create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-app"></a>ビジネス向け Windows ストアのアプリから Configuration Manager アプリケーションを作成して展開します。

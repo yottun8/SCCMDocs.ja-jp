@@ -2,7 +2,7 @@
 title: "Windows クライアント コンピューターのリモート管理 | Microsoft Docs"
 description: "System Center Configuration Manager を使用してリモートの Windows クライアント コンピューターを管理します。"
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 07/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 08afca8b422474639cbdb860e555fe0da27361a4
-ms.openlocfilehash: dd794de867e1d0db47be9dc21a6d494087f76bc1
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: aecc4ccfec98932f3988f1ca1fcdc898cd417933
 ms.contentlocale: ja-jp
-ms.lasthandoff: 12/16/2016
-
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="how-to-remotely-administer-a-windows-client-computer-by-using-system-center-configuration-manager"></a>System Center Configuration Manager を使用して Windows クライアント コンピューターをリモート管理する方法
@@ -91,12 +90,11 @@ ms.lasthandoff: 12/16/2016
 
 -   Windows のコマンド プロンプトで、「*<Configuration Manager インストール フォルダー>\>***\AdminConsole\Bin\x64\CmRcViewer.exe**」と入力します。  
 
-    > [!NOTE]  
-    >  CmRcViewer.exe は次のコマンドライン オプションをサポートします。  
-    >   
-    >  -   *<アドレス\>* - NetBIOS 名、完全修飾ドメイン名 (FQDN)、または接続先クライアント コンピューターの IP アドレスを指定します。  
-    > -   *<サイト サーバー名\>* - リモート コントロール セッションに関連するステータス メッセージの送信先の System Center Configuration Manager サイト サーバー名を指定します。  
-    > -   **/?** - リモート コントロール ビューアーのコマンド ライン オプションを表示します。  
-    >   
-    >  **例: CmRcViewer.exe** *<アドレス\>* *<\\\サイト サーバー名>*  
+CmRcViewer.exe は次のコマンドライン オプションをサポートします。  
+
+- *アドレス* - 接続先クライアント コンピューターの NetBIOS 名、完全修飾ドメイン名 (FQDN)、または IP アドレスを指定します。
+- *サイト サーバー名* - リモート制御セッションに関連するステータス メッセージの送信先の System Center Configuration Manager サイト サーバーの名前を指定します。
+- **/?** - リモート コントロール ビューアーのコマンド ライン オプションを表示します。  
+     
+**例: CmRcViewer.exe** *<アドレス\>* *<\\\サイト サーバー名>*  
 

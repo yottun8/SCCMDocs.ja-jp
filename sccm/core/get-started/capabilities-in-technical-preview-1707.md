@@ -2,7 +2,7 @@
 title: Technical Preview 1707 | Microsoft Docs
 description: "System Center Configuration Manager の Technical Preview バージョン 1707 で使用できる機能について説明します。"
 ms.custom: na
-ms.date: 06/30/2017
+ms.date: 07/28/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -15,8 +15,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: HT
-ms.sourcegitcommit: 1f57c63ceeb13c7f7d760d7ecfb48df749da6770
-ms.openlocfilehash: 118f20768ffc99364eb9e8cf2074d7a23f4dc572
+ms.sourcegitcommit: 6e890862fd02786b675e2b7abaca7ede7c0e977a
+ms.openlocfilehash: 91fd850f055a7e892a54487307109a291e336696
 ms.contentlocale: ja-jp
 ms.lasthandoff: 07/28/2017
 
@@ -62,7 +62,7 @@ Surface デバイス ダッシュボードに、お使いの環境で検出さ�
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>Windows Defender Application Guard ポリシーの構成と展開
 <!-- 1351960 -->
 
-[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) は、信頼できない Web サイトをオペレーティング システムの他の部分からはアクセスできない安全な分離コンテナーで開くことでユーザーを保護する Windows の新機能です。 この Technical Preview では、設定する Configuration Manager のコンプライアンス設定を使用して、この機能を構成し、コレクションに展開するためのサポートが追加されました。 この機能は、Windows 10 Creators Update (コードネーム: RS2) の 64 ビット バージョンのプレビューでリリースされます。 この機能を今すぐテストするには、この更新プログラムのプレビュー バージョンを使用している必要があります。
+[Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) は、信頼できない Web サイトをオペレーティング システムの他の部分からはアクセスできない安全な分離コンテナーで開くことでユーザーを保護する Windows の新機能です。 この Technical Preview では、設定する Configuration Manager のコンプライアンス設定を使用して、この機能を構成し、コレクションに展開するためのサポートが追加されました。 この機能は、Windows 10 Fall Creators Update (コードネーム: RS3) の 64 ビット バージョンのプレビューでリリースされます。 この機能を今すぐテストするには、この更新プログラムのプレビュー バージョンを使用している必要があります。
 
 ### <a name="before-you-start"></a>アップグレードを開始する前に
 
@@ -87,12 +87,12 @@ Windows Defender Application Guard の詳細については、[このブログ�
 
 <!-- 1236459 --->
 
-前回の Technical Preview では、[Configuration Manager コンソールから PowerShell スクリプトを作成し、実行]( /core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console)できる新しい機能を導入しました。
+前回の Technical Preview では、[Configuration Manager コンソールから PowerShell スクリプトを作成し、実行](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console)できる新しい機能を導入しました。
 今回の Technical Preview では、この機能をさらに拡張しています。 Configuration Manager で PowerShell スクリプトを読み込み、スクリプトの作成ウィザードであらゆるパラメーターを表示するようになりました。 スクリプトの実行時に使用されるパラメーター値をウィザードで指定できます。 あるいは、パラメーターは空のまま残すことができます。 その場合、スクリプトの実行時にパラメーター値を指定する必要があります。
 
 ### <a name="try-it-out"></a>試してみましょう。
 
-1. 指示に従い、[Configuration Manager コンソールから PowerShell スクリプトを作成し、実行]( /core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console)してください。
+1. 指示に従い、[Configuration Manager コンソールから PowerShell スクリプトを作成し、実行](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console)してください。 
 2. **スクリプトの作成ウィザード**の新しい **[スクリプト パラメーター]** ページで、パラメーターを選択し、**[編集]** をクリックします。
 3. 選択したパラメーターのパラメーター値を指定し、**[OK]** をクリックします。
 4. ウィザードを完了します。

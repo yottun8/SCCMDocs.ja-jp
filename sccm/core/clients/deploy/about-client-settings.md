@@ -2,7 +2,7 @@
 title: "クライアント設定 | Microsoft Docs"
 description: "System Center Configuration Manager の管理コンソールを使って、クライアント設定を選びます。"
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 08/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,15 +16,14 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c8717925dba42451b1e241a7c2f59e43896d7d99
-ms.openlocfilehash: 4a169098f30e4a9d708e41ee25c6a400d5ff0e85
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: a8233c361e1a78b14a02f328da445814624e38d8
 ms.contentlocale: ja-jp
-ms.lasthandoff: 06/19/2017
+ms.lasthandoff: 08/02/2017
 
 ---
-# System Center Configuration Manager のクライアント設定について
-<a id="about-client-settings-in-system-center-configuration-manager" class="xliff"></a>
+# <a name="about-client-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager のクライアント設定について
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -32,8 +31,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
 クライアント設定の多くはまさにその名のとおりです。 ここでは、それ以外について説明します。  
 
-## バックグラウンド インテリジェント転送サービス
-<a id="background-intelligent-transfer-service" class="xliff"></a>  
+## <a name="background-intelligent-transfer-service"></a>バックグラウンド インテリジェント転送サービス  
 
 -   **[BITS バックグラウンド転送の最大ネットワーク帯域幅を制限する]**  
 
@@ -59,19 +57,33 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
    調整期間外の BITS 調整の許可を選択した場合に、BITS 調整期間外にクライアントが使う最大転送速度を指定します。  
 
-## クライアント キャッシュ設定
-<a id="client-cache-settings" class="xliff"></a>
+## <a name="client-cache-settings"></a>クライアント キャッシュ設定
 
 - **BranchCache の構成**
 
   バージョン 1606 以降で、クライアント コンピューターを [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache) 用に設定するには、この設定を使います。 クライアントで BranchCache のキャッシュを許可する場合は、**[BranchCache の有効化]** を **[はい]** に設定します。
 
+- **BranchCache の有効化**
+
+クライアント コンピューターで BranchCache を有効にします。
+
+- **BranchCache キャッシュの最大サイズ (ディスクに占める割合)**
+
 - **クライアント キャッシュ サイズの構成**
 
-  Windows コンピューターのクライアント キャッシュには、アプリケーションとプログラムのインストールに使用する一時ファイルが格納されます。 **[はい]** を選び、**[最大キャッシュ サイズ]** (MB またはディスク容量の割合) を指定します。 クライアントのキャッシュ サイズは、最大サイズの MB またはディスク容量の割合 **(いずれか少ない方)** まで拡張できます。 このオプションを **[いいえ]** にすると、既定サイズの 5,120 MB になります。
+  Windows コンピューターのクライアント キャッシュには、アプリケーションとプログラムのインストールに使用する一時ファイルが格納されます。 **[はい]** を選択し、次を指定します。
+    - **最大キャッシュ サイズ** (メガバイト)。 
+    - **最大キャッシュ サイズ** (ディスクの割合)
+クライアントのキャッシュ サイズは、最大サイズの MB またはディスク容量の割合 **(いずれか少ない方)** まで拡張できます。 このオプションを **[いいえ]** にすると、既定サイズの 5,120 MB になります。
 
-## クライアント ポリシー
-<a id="client-policy" class="xliff"></a>  
+- **完全な OS 上の Configuration Manager クライアントでコンテンツを共有できるようにする**
+
+Configuration Manager クライアントのピア キャッシュを有効にします。 次に、クライアントがピア コンピューターと通信するためのポート情報を指定します。 Configuration Manager はこのトラフィックを許可する Windows Firewall ルールを自動構成します。 別のファイアウォールを使用する場合、このトラフィックを許可するように手動でルールを構成する必要があります。
+
+
+
+
+## <a name="client-policy"></a>クライアント ポリシー  
 
 -   **[クライアント ポリシーのポーリング間隔 (分)]**  
 
@@ -111,15 +123,14 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
   -   インターネットベースの管理ポイントが、Windows 認証 (Kerberos または NTLM) を使用してユーザーを正しく認証している。  
 
-   このオプションを [False **** ] または [いいえ ****] のままにしている場合、またはいずれかの条件が当てはまらない場合は、インターネット上のコンピューターはコンピューター ポリシーのみ受け取ります。 この場合は、ユーザーは、インターネットベースのアプリケーション カタログからアプリケーションを表示、要求、およびインストールできます。 この設定が **[False]** または **[いいえ]** に設定されていて、**[クライアント上でのユーザー ポリシーのポーリングを有効にする]** が **[True]** に設定されているか、**[クライアントでユーザー ポリシーを有効にする]** が **[はい]**に設定されている場合は、コンピューターがイントラネットに接続されるまでユーザーはユーザー ポリシーを受け取りません。  
+   このオプションを **[False]** または **[いいえ]** のままにしている場合、またはいずれかの条件が当てはまらない場合は、インターネット上のコンピューターはコンピューター ポリシーのみ受け取ります。 この場合は、ユーザーは、インターネットベースのアプリケーション カタログからアプリケーションを表示、要求、およびインストールできます。 この設定が **[False]** または **[いいえ]** に設定されていて、**[クライアント上でのユーザー ポリシーのポーリングを有効にする]** が **[True]** に設定されているか、**[クライアントでユーザー ポリシーを有効にする]** が **[はい]**に設定されている場合は、コンピューターがイントラネットに接続されるまでユーザーはユーザー ポリシーを受け取りません。  
 
    インターネットでのクライアント管理の詳細については、「[System Center Configuration Manager でのエンドポイント間の通信](../../../core/plan-design/hierarchy/communications-between-endpoints.md)」の「[インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)」を参照してください。  
 
   > [!NOTE]  
   >  ユーザーからのアプリケーションの承認要求には、ユーザー ポリシーまたはユーザー認証は必要ありません。  
 
-##  コンプライアンス設定
-<a id="compliance-settings" class="xliff"></a>  
+##  <a name="compliance-settings"></a>コンプライアンス設定  
 
 -   **[コンプライアンスの評価スケジュールを設定する]**  
 
@@ -129,8 +140,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
      [ユーザー データとプロファイル](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md)の構成項目を階層内の Windows 8 コンピューターに展開する場合は、**[はい]** を選びます。  
 
-## コンピューター エージェント
-<a id="computer-agent" class="xliff"></a>  
+## <a name="computer-agent"></a>コンピューター エージェント  
 
 -   **既定のアプリケーション カタログ Web サイト ポイント**  
 
@@ -146,7 +156,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
      -   クライアントに最も近いサーバーを手動で構成する必要がある、または低速のネットワーク接続経由でクライアントがサーバーに接続しないようにする必要がある。  
 
-     -   各クライアントがどのサーバーに接続するのかを制御する必要がある。 これは、テスト、パフォーマンス、またはビジネス上の理由の場合があります。  
+     -   各クライアントがどのサーバーに接続するのかを制御する必要がある。 この構成は、テスト、パフォーマンス、またはビジネス上の理由から行われることがあります。  
 
      -   最長 25 時間、つまり、別のアプリケーションカタログ Web サイト ポイントでクライアントに対してネットワークの変更が構成されるまで、待つのを避けたい。  
 
@@ -234,7 +244,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
     -   Configuration Manager Software Development Kit (SDK) を使用して、クライアント エージェントの通知、アプリケーションのインストール、およびソフトウェア更新プログラムのインストールを管理している。  
 
     > [!WARNING]  
-    >  これらの条件のいずれも当てはまらない場合にこのオプションを選ぶと、ソフトウェア更新プログラムおよび必要なアプリケーションがクライアントにインストールされなくなります。 この設定によって、ユーザーがアプリケーション カタログからアプリケーションをインストールできなくなったり、パッケージ、プログラム、およびタスク シーケンスをクライアント コンピューターにインストールできなくなったりするということはありません。  
+    >  これらの条件のいずれも当てはまらない場合にこのオプションを選択すると、ソフトウェア更新プログラムと必要なアプリケーションがクライアントにインストールされません。 この設定によって、ユーザーがアプリケーション カタログからアプリケーションをインストールできなくなったり、パッケージ、プログラム、およびタスク シーケンスをクライアント コンピューターにインストールできなくなったりするということはありません。  
 
 -   **PowerShell 実行ポリシー**  
 
@@ -273,14 +283,12 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
      猶予期間は 1 ～ 120 時間の間で設定できます。 この設定は、**[ユーザー設定に従い、この展開の実施を延期する]** 展開プロパティと組み合わせて使用します。 詳細については、「[アプリケーションの展開](/sccm/apps/deploy-use/deploy-applications)」をご覧ください。
 
-##  コンピューターの再起動
-<a id="computer-restart" class="xliff"></a>  
+##  <a name="computer-restart"></a>コンピューターの再起動  
  これらのコンピューター再起動設定を指定すると、再起動の一時的な通知の間隔の値および最終カウントダウンの間隔の値を、コンピューターに適用されている最短のメンテナンス ウィンドウよりも短くできます。  
 
  メンテナンス期間の詳細については、「[System Center Configuration Manager でメンテナンス期間を使用する方法](../../../core/clients/manage/collections/use-maintenance-windows.md)」を参照してください。  
 
-##  Endpoint Protection
-<a id="endpoint-protection" class="xliff"></a>  
+##  <a name="endpoint-protection"></a>Endpoint Protection  
 
 -   **クライアント コンピューターの Endpoint Protection クライアントを管理する**  
 
@@ -318,8 +326,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
      Configuration Manager に初期定義の更新プログラムのみをクライアント コンピューターにインストールさせる場合は、**[True]** または **[はい]** を選びます。 この設定は、定義ファイルの初回更新時に、不要なネットワーク接続を避けてネットワーク帯域幅を削減するのに役立ちます。  
 
-##  ハードウェア インベントリ
-<a id="hardware-inventory" class="xliff"></a>  
+##  <a name="hardware-inventory"></a>ハードウェア インベントリ  
 
 -   **カスタム MIF ファイルの最大サイズ (KB)**  
 
@@ -349,8 +356,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
     すべてのクライアントで同時に操作が行われないように、ハードウェア情報のコレクションが最大 4 時間でランダム化されます。 最大遅延を設定して、操作が実行される時間を制限することができます。      
 
-##  従量制インターネット接続
-<a id="metered-internet-connections" class="xliff"></a>  
+##  <a name="metered-internet-connections"></a>従量制インターネット接続  
  Windows 8 クライアント コンピューターが従量制のインターネット接続を使用している場合に、Configuration Manager サイトと通信する方法を管理できます。 インターネット プロバイダーは、従量制インターネット接続を使用しているときに送受信したデータ量に基づいて課金することがあります。  
 
 > [!NOTE]  
@@ -382,8 +388,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
     -   **ブロック**: Configuration Manager クライアントは、従量制インターネット接続を使っている場合に、Configuration Manager サイトとの通信を試行しません。 これは既定値です。  
 
-##  電源管理
-<a id="power-management" class="xliff"></a>  
+##  <a name="power-management"></a>電源管理  
 
 -   **ユーザーがデバイスを電源管理対象から外せるようにする**  
 
@@ -411,8 +416,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
     > [!IMPORTANT]  
     >  この数値は、サイトの [プロパティ ****] の数値と一致する必要があります。 一方でこの数値を変更した場合、もう一方では自動的に更新されません。  
 
-##  ［リモート ツール］
-<a id="remote-tools" class="xliff"></a>  
+##  <a name="remote-tools"></a>［リモート ツール］  
 
 -   **クライアントのリモート コントロールを有効にする** 」で、エラー コード「 **ファイアウォール例外プロファイル**  
 
@@ -496,8 +500,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
      ネットワーク レベルの認証を使って、Windows Vista 以降を実行するクライアント コンピューターにリモート デスクトップ接続を確立する場合は、このより安全なオプションを選びます。 ネットワーク レベルの認証は、リモート デスクトップ接続を確立する前にユーザー認証を終了するため、最初に必要なリモート コンピューター リソースが少なくてすみます。 この方法は、悪意のあるユーザーやソフトウェアからコンピューターを保護するのに役立つため、より安全であり、サービス拒否攻撃からのリスクを軽減します。  
 
-## ソフトウェアの展開
-<a id="software-deployment" class="xliff"></a>  
+## <a name="software-deployment"></a>ソフトウェアの展開  
 
 -   **展開の再評価スケジュールを指定する**  
 
@@ -508,8 +511,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
      この操作は、Configuration Manager クライアント コンピューターから開始することもできます。それには、コントロール パネルの **[Configuration Manager]** の **[アクション]** タブで、**[アプリケーション展開の評価サイクル]** アクションを選びます。  
 
-##  ソフトウェア インベントリ
-<a id="software-inventory" class="xliff"></a>  
+##  <a name="software-inventory"></a>ソフトウェア インベントリ  
 
 -   **[インベントリ レポートの詳細]**  
 
@@ -581,8 +583,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
     -   **[インベントリされた名前]**: **[新規]** アイコンを選んでインベントリされる名前を新規で追加すると、ソフトウェア インベントリで **[表示名]** の一覧で選択された名前により置換されます。 置換する名前は複数追加することができます。  
 
-##  ソフトウェア更新プログラム
-<a id="software-updates" class="xliff"></a>  
+##  <a name="software-updates"></a>ソフトウェア更新プログラム  
 
 -   **クライアントのソフトウェア更新プログラムを有効にする**  
 
@@ -628,8 +629,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
 -   **Office 365 クライアント エージェントの管理を有効にする** この設定を利用し、Office 365 クライアント エージェントの管理を有効にします。 値を **[はい]** に設定すると、Office 365 のインストール設定を構成し、Office コンテンツ配信ネットワーク (CDN) からファイルをダウンロードし、Configuration Manager でファイルをアプリケーションとして展開できます。
 
-##  ユーザーとデバイスのアフィニティ
-<a id="user-and-device-affinity" class="xliff"></a>  
+##  <a name="user-and-device-affinity"></a>ユーザーとデバイスのアフィニティ  
 
 -   **ユーザーとデバイスのアフィニティ使用状況のしきい値 (分)**  
 
@@ -646,8 +646,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
 
      収集された使用状況情報に基づいて Configuration Manager がユーザーとデバイスのアフィニティを自動構成できるようにする場合は、**[True]** または **[はい]** を選びます。  
 
-##  モバイル デバイス
-<a id="mobile-devices" class="xliff"></a>  
+##  <a name="mobile-devices"></a>モバイル デバイス  
 
 -   **モバイル デバイス登録プロファイル**  
 
@@ -656,8 +655,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
     > [!IMPORTANT]  
     >  このオプションを構成する前に、モバイル デバイスの登録に使用する証明書テンプレートを構成していることを確認してください。  
 
-##  登録
-<a id="enrollment" class="xliff"></a>  
+##  <a name="enrollment"></a>登録  
 
 -   **モバイル デバイス登録プロファイル**  
 
@@ -666,8 +664,7 @@ System Center Configuration Manager のすべてのクライアント設定は�
     > [!IMPORTANT]  
     >  このオプションを構成する前に、モバイル デバイスの登録または Mac クライアント証明書の登録に使用する証明書テンプレートを構成しておきます。  
 
-## ユーザーとデバイスのアフィニティ
-<a id="user-and-device-affinity" class="xliff"></a>  
+## <a name="user-and-device-affinity"></a>ユーザーとデバイスのアフィニティ  
 
 -   **ユーザーがプライマリ デバイスを定義できるようにする**  
 

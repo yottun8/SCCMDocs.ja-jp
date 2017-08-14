@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
-ms.openlocfilehash: 7a5ff0e75b8cdac68e3854c4f5aba01a7d423e9b
+ms.translationtype: HT
+ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
+ms.openlocfilehash: 506df4f7c7baa5f0586a1ddf0cb02b3de9f4d076
 ms.contentlocale: ja-jp
-ms.lasthandoff: 12/30/2016
-
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="how-to-manage-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>System Center Configuration Manager で Linux および UNIX サーバーのクライアントを管理する方法
@@ -31,7 +30,7 @@ ms.lasthandoff: 12/30/2016
 System Center Configuration Manager で Linux および UNIX サーバーを管理する場合、サーバーを管理しやすいように、コレクション、メンテナンス期間、およびクライアント設定を構成できます。 また、Linux および UNIX 用の Configuration Manager クライアントにはユーザー インターフェイスがありませんが、クライアントにクライアント ポリシーの手動ポーリングを強制することもできます。
 
 ##  <a name="BKMK_CollectionsforLnU"></a> Collections of Linux and UNIX servers  
- コレクションを使用して Linux および UNIX サーバーのグループを管理する方法は、コレクションで他のクライアントの種類を管理する方法と同じです。 コレクションとして使用できるのは、ダイレクト メンバーシップのコレクションまたはクエリ ベースのコレクションで、これにより、クライアント オペレーティング システム、ハードウェア構成、またはサイト データベースに格納されているクライアントに関するその他の詳細情報が特定されます。 たとえば、Linux および UNIX サーバーを含むコレクションを使用すると、次を管理できます。  
+ コレクションを使用して Linux および UNIX サーバーのグループを管理する方法は、コレクションで他のクライアントの種類を管理する方法と同じです。 コレクションとして使用できるのは、ダイレクト メンバーシップ コレクションまたはクエリ ベースのコレクションです。 クエリ ベースのコレクションでは、クライアント オペレーティング システム、ハードウェア構成、またはサイト データベースに格納されているクライアントに関するその他の詳細情報を識別します。 たとえば、Linux および UNIX サーバーを含むコレクションを使用すると、次の設定を管理できます。  
 
 -   クライアント設定  
 
@@ -43,14 +42,14 @@ System Center Configuration Manager で Linux および UNIX サーバーを管�
 
  ハードウェア インベントリの既定のクライアント設定には、クライアント コンピューターのオペレーティング システムに関する情報が含まれます。 **オペレーティング システム** クラスの **キャプション** プロパティを使用すると、Linux または UNIX サーバーのオペレーティング システムを特定できます。  
 
- Linux および UNIX 用の Configuration Manager クライアントを実行しているコンピューターに関する詳細は、 Configuration Manager コンソールの [資産とコンプライアンス] ワークスペースの [デバイス] ノードで確認できます。 Configuration Manager コンソールの [資産とコンプライアンス] ワークスペースでは、**[オペレーティング システム]** 列に、各コンピューターのオペレーティング システムの名前が表示されます。  
+ Linux および UNIX 用の Configuration Manager クライアントを実行しているコンピューターに関する詳細は、Configuration Manager コンソールの **[資産とコンプライアンス]** ワークスペースの **[デバイス]** ノードで確認できます。 Configuration Manager コンソールの **[資産とコンプライアンス]** ワークスペースでは、**[オペレーティング システム]** 列に、各コンピューターのオペレーティング システムの名前が表示されます。  
 
- 既定では、Linux および UNIX サーバーは、 **[すべてのシステム]** コレクションのメンバーです。 Linux および UNIX サーバーのみが含まれるカスタム コレクション、またはそのコレクションのサブセットを作成することをお勧めします。 これにより、ソフトウェアを展開する、同じようなコンピューターのグループにクライアント設定を割り当てるなどの操作を管理できます。展開の成功を正確に判断できます。   
+ 既定では、Linux および UNIX サーバーは、 **[すべてのシステム]** コレクションのメンバーです。 Linux および UNIX サーバーのみが含まれるカスタム コレクション、またはそのコレクションのサブセットを作成することをお勧めします。 カスタム コレクションでは、展開の成功を正確に判断できるように、ソフトウェアを展開する、同じようなコンピューターのグループにクライアント設定を割り当てるなどの操作を管理できます。   
 
  Linux および UNIX サーバーのカスタム コレクションを作成する場合は、オペレーティング システム属性のキャプション属性が含まれるメンバーシップの規則クエリを追加します。 コレクションを作成する方法については、「[System Center Configuration Manager でコレクションを作成する方法](../../../core/clients/manage/collections/create-collections.md)」を参照してください。  
 
 ##  <a name="BKMK_MaintenanceWindowsforLnU"></a> Maintenance windows for Linux and UNIX servers  
- Linux および UNIX サーバー用の Configuration Manager クライアントでは、[メンテナンス期間](../../../core/clients/manage/collections/use-maintenance-windows.md)を使用できます。 これは、Windows ベースのクライアントから変更されていません。  
+ Linux および UNIX サーバー用の Configuration Manager クライアントでは、[メンテナンス期間](../../../core/clients/manage/collections/use-maintenance-windows.md)を使用できます。 このサポートは、Windows ベースのクライアントから変更されていません。  
 
 ##  <a name="BKMK_ClientSettingsforLnU"></a> Client settings for Linux and UNIX servers  
  Linux および UNIX サーバーに適用される[クライアント設定](../../../core/clients/deploy/configure-client-settings.md)は、他のクライアントの設定と同じ方法で構成できます。  

@@ -2,7 +2,7 @@
 title: "証明書プロファイルの概要 | Microsoft Docs"
 description: "System Center Configuration Manager の証明書プロファイルと Active Directory 証明書サービスの使用方法について説明します。"
 ms.custom: na
-ms.date: 03/30/2017
+ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,15 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 caps.latest.revision: 7
-author: arob98
-ms.author: angrobe
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: ba1d5b04cb0cb0284525e295a6086a3c0ac67e9f
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 7b1c0e449f3d1ef42e279e8707df6bf1df163b3f
 ms.contentlocale: ja-jp
-ms.lasthandoff: 03/27/2017
-
+ms.lasthandoff: 08/02/2017
 
 ---
 
@@ -51,17 +50,24 @@ ms.lasthandoff: 03/27/2017
 -   **信頼された CA 証明書** - デバイスがサーバーを認証する必要があるときに信頼できる証明書チェーンを形成するために、信頼されたルート CA または中間 CA 証明書を展開することができます。  
 
 -   **Simple Certificate Enrollment Protocol (SCEP)** - Windows Server 2012 R2 を実行するサーバーで、SCEP プロトコルおよびネットワーク デバイス登録サービスを使用して、デバイス用やユーザー用の証明書を要求することができます。
+
+    **Simple Certificate Enrollment Protocol (SCEP)** の証明書プロファイルを作成するには、最初に**信頼された証明機関証明書**の証明書プロファイルを作成します。
+
 -   **Personal information Exchange (.pfx)** - デバイスまたはユーザーの .pfx (別名、PKCS #12) 証明書を要求できます。
 
-    > [!NOTE]  
-    >  **Simple Certificate Enrollment Protocol (SCEP)** タイプの証明書プロファイルを作成する前に、**信頼された証明機関証明書**タイプの証明書プロファイルを作成する必要があります。  
+    要求を処理するために既存の証明書から[証明書をインポート](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md)するか、[証明機関を定義](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md)して、PFX の証明書プロファイルを作成できます。
+
+    リリース 1706 以降、**Personal Information Exchange (.pfx)** 証明書の証明機関として Microsoft または Entrust を使用できます。
+
 
 ## <a name="requirements-and-supported-platforms"></a>要件とサポートされるプラットフォーム  
- SCEP を使用する証明書プロファイルを展開するためには、中央管理サイトまたはプライマリ サイトで、サイト システム サーバーに証明書登録ポイントをインストールする必要があります。 また、Active Directory 証明書サービスの役割が配置され、証明書を必要とするデバイスからアクセス可能な NDES が動作している Windows Server 2012 R2 サーバーに、NDES 用のポリシー モジュール、つまり Configuration Manager ポリシー モジュールをインストールする必要があります。 Microsoft Intune によって登録されるデバイスでは、たとえば、スクリーン サブネット (境界ネットワークとも呼ばれます) などで、インターネットから NDES にアクセスできる必要があります。  
+SCEP を使用する証明書プロファイルを展開するためには、中央管理サイトまたはプライマリ サイトで、サイト システム サーバーに証明書登録ポイントをインストールする必要があります。 また、Active Directory 証明書サービスの役割が配置され、証明書を必要とするデバイスからアクセス可能な NDES が動作している Windows Server 2012 R2 サーバーに、NDES 用のポリシー モジュール、つまり Configuration Manager ポリシー モジュールをインストールする必要があります。 Microsoft Intune によって登録されるデバイスでは、たとえば、スクリーン サブネット (境界ネットワークとも呼ばれます) などで、インターネットから NDES にアクセスできる必要があります。  
 
- Configuration Manager で証明書を展開するためのネットワーク デバイス登録サービスとポリシー モジュールのしくみについては、「[ポリシー モジュールとネットワーク デバイス登録サービスの使用](http://go.microsoft.com/fwlink/p/?LinkId=328657)」を参照してください。  
+PFX 証明書には、中央管理サイトまたはプライマリ サイトのサイト システム サーバー上にある証明書登録ポイントも必要です。  また、証明書の証明機関 (CA) を指定して、関連するアクセス資格情報を指定する必要もあります。  バージョン 1706 以降、証明機関として Microsoft または Entrust のいずれかを指定できます。  
 
- Configuration Manager では、要件、デバイスの種類、オペレーティング システムにも応じて、異なる証明書ストアに証明書を展開することがサポートされています。 次のデバイスとオペレーティング システムがサポートされています。  
+Configuration Manager で証明書を展開するためのネットワーク デバイス登録サービスとポリシー モジュールのしくみについては、「[ポリシー モジュールとネットワーク デバイス登録サービスの使用](http://go.microsoft.com/fwlink/p/?LinkId=328657)」を参照してください。  
+
+Configuration Manager では、要件、デバイスの種類、オペレーティング システムにも応じて、異なる証明書ストアに証明書を展開することがサポートされています。 次のデバイスとオペレーティング システムがサポートされています。  
 
 -   Windows RT 8.1  
 
