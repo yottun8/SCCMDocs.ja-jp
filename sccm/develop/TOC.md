@@ -152,7 +152,7 @@
 ## [コレクションの変更方法](core/clients/collections/how-to-modify-a-collection.md)
 ## [コレクションの削除方法](core/clients/collections/how-to-delete-a-collection.md)
 ## [コレクションのプロパティを取得する方法](core/clients/collections/how-to-get-the-properties-of-a-collection.md)
-## [コレクションの&1; 回限りのメンバーシップの評価を開始する方法](core/clients/collections/how-to-initiate-a-one-time-membership-evaluation-for-a-collection.md)
+## [コレクションの 1 回限りのメンバーシップの評価を開始する方法](core/clients/collections/how-to-initiate-a-one-time-membership-evaluation-for-a-collection.md)
 
 # [コンプライアンス設定 (DCM)](compliance/compliance-settings-dcm.md)
 ## [コンプライアンス設定のセットアップと構成](compliance/compliance-settings-setup-and-configuration.md)
