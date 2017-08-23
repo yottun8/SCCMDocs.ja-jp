@@ -1,6 +1,6 @@
 ---
-title: "System Center Configuration Manager 랩 설정 | Microsoft 문서"
-description: "시뮬레이트된 실제 작업을 사용하여 Configuration Manager를 평가하기 위한 랩을 설정합니다."
+title: "System Center Configuration Manager ラボを設定する | Microsoft Docs"
+description: "シミュレートされた現実のアクティビティを使用して Configuration Manager を評価するためのラボを設定します。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,270 +18,270 @@ manager: angrobe
 ms.openlocfilehash: 11f5d0c3c61d675a8182e985f82e6af363b34592
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="set-up-your-system-center-configuration-manager-lab"></a>System Center Configuration Manager 랩 설정
+# <a name="set-up-your-system-center-configuration-manager-lab"></a>System Center Configuration Manager ラボのセットアップ
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-이 항목의 지침을 따라 시뮬레이트된 실제 작업을 사용하여 Configuration Manager 평가를 위해 랩을 설정할 수 있습니다.  
+このトピックのガイダンスに従うことで、シミュレートされた実際のアクティビティで Configuration Manager を評価するためのラボを設定できます。  
 
-##  <a name="BKMK_LabCore"></a> 핵심 구성 요소  
- System Center Configuration Manager에 대해 환경을 설정하려면 일부 핵심 구성 요소가 Configuration Manager 설치를 지원해야 합니다.    
+##  <a name="BKMK_LabCore"></a> コア コンポーネント  
+ System Center Configuration Manager 用に環境をセットアップするには、Configuration Manager のインストールをサポートするためにいくつかのコア コンポーネントが必要です。    
 
--   **랩 환경에서는 Windows Server 2012 R2를 사용**하며, 여기에 System Center Configuration Manager를 설치합니다.  
+-   **ラボ環境では Windows Server 2012 R2 が使用**されています。これに対して System Center Configuration Manager のインストールをサポートするコア コンポーネントがいくつか必要です。  
 
-     Windows Server 2012 R2 평가판은 [TechNet 평가 센터](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012)에서 다운로드할 수 있습니다.  
+     Windows Server 2012 R2 の評価版は、[TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012) からダウンロードできます。  
 
-     이러한 실습 과정에서 참조된 일부 다운로드에 더 쉽게 액세스하려면 Internet Explorer 보안 강화 구성을 수정하거나 사용하지 않는 것이 좋습니다. 자세한 내용은 [Internet Explorer: 보안 강화 구성](https://technet.microsoft.com/en-us/library/dd883248\(v=ws.10\).aspx)을 참조하세요.  
+     これらの演習で参照されている一部のダウンロードに簡単にアクセスできるように、Internet Explorer のセキュリティ強化の構成を変更または無効化することを検討してください。 WCF の詳細については、「 [Internet Explorer のセキュリティ強化の構成](https://technet.microsoft.com/en-us/library/dd883248\(v=ws.10\).aspx) に関するページをご覧ください。  
 
--   **랩 환경에서는 SQL Server 2012 SP2**를 사이트 데이터베이스로 사용합니다.  
+-   **ラボ環境では SQL Server 2012 SP2 が使用** されています (サイト データベース用)。  
 
-     SQL Server 2012 평가판은 [Microsoft 다운로드 센터](https://www.microsoft.com/en-us/download/details.aspx?id=29066)에서 다운로드할 수 있습니다.  
+     SQL Server 2012 の評価版は、[Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=29066)からダウンロードできます。  
 
-     SQL Server에는 System Center Configuration Manager에서 사용하기 위해 충족해야 하는 [지원되는 버전의 SQL Server](../../core/plan-design/configs/support-for-sql-server-versions.md#bkmk_SQLVersions)가 있습니다.  
+     SQL Server には、System Center Configuration Manager で使用するために満たしている必要がある[サポートされる SQL Server のバージョン](../../core/plan-design/configs/support-for-sql-server-versions.md#bkmk_SQLVersions)があります。  
 
-    -   Configuration Manager에서 사이트 데이터베이스를 호스트하려면 64비트 버전의 SQL Server가 필요합니다.  
+    -   Configuration Manager には、サイト データベースをホストするために 64 ビット版の SQL Server が必要です。  
 
-    -   **SQL_Latin1_General_CP1_CI_AS**가 **SQL Collation** 클래스로 필요합니다.  
+    -   **SQL 照合順序** クラスとしての **SQL_Latin1_General_CP1_CI_AS** 。  
 
-    -   [SQL 인증 대신](https://technet.microsoft.com/en-us/library/ms144284.aspx) **Windows 인증**이 필요합니다.  
+    -   **SQL 認証**ではなく、 [Windows 認証](https://technet.microsoft.com/en-us/library/ms144284.aspx)ではなく、 is required.  
 
-    -   전용 **SQL Server 인스턴스**가 필요합니다.  
+    -   **専用の SQL Server インスタンス**が必要です。  
 
-    -   SQL Server에 대한 **시스템 주소 지정 가능 메모리**를 제한하지 마세요.  
+    -   SQL Server に対して**システム アドレス指定可能なメモリ**を制限しないでください。  
 
-    -   **도메인 로컬 사용자** 계정을 사용하여 실행되도록 **SQL Server 서비스 계정**을 구성합니다.  
+    -   **ドメイン ローカル ユーザー** アカウントを使用して実行するように **SQL Server サービス アカウント**を構成します。  
 
-    -   **SQL Server Reporting Services**를 설치해야 합니다.  
+    -   **SQL Server Reporting Services** をインストールする必要があります。  
 
-    -   **사이트 간 통신**은 기본 포트 TCP 4022에서 SQL Server Service Broker를 사용합니다.  
+    -   **サイト間の通信** では、既定のポート TCP 4022 で SQL Server Service Broker が使用されます。  
 
-    -   SQL Server 데이터베이스 엔진 및 선택한 Configuration Manager 사이트 시스템 역할 간의 **사이트 간 통신**은 기본 포트 TCP 1433을 사용합니다.  
+    -   SQL Server データベース エンジンと Configuration Manager サイト システムの役割の間の**サイト内通信**では、既定のポート TCP 1433 が使用されます。  
 
--   **도메인 컨트롤러는 Windows Server 2008 R2**(Active Directory Domain Services가 설치되어 있음)를 사용합니다. 또한 도메인 컨트롤러는 정규화된 도메인 이름에 사용할 DHCP 및 DNS 서버에 대한 호스트 역할을 합니다.  
+-   ドメイン コントローラーは、**Active Directory Domain Services がインストールされた Windows Server 2008 R2** を使用します。 ドメイン コントローラーは、完全修飾ドメイン名で使用するための DHCP サーバーと DNS サーバーのホストとしても機能します。  
 
-     자세한 내용은 이 [Active Directory Domain Services 개요](https://technet.microsoft.com/en-us/library/hh831484)를 참조하세요.  
+     詳細については、「[overview of Active Directory Domain Services](https://technet.microsoft.com/en-us/library/hh831484)」 (Active Directory Domain Services の概要) を参照してください。  
 
--   **Hyper-V는 몇몇 가상 컴퓨터와 함께 사용**되어 이 연습에서 수행하는 관리 단계가 예상대로 작동하는지 확인합니다. Windows 7 이상이 설치된 최소 3대의 가상 컴퓨터를 사용하는 것이 좋습니다.  
+-   演習で実行する管理手順が意図したとおりに機能していることを確認するため、**Hyper-V がいくつかの仮想マシンで使用されます**。 Windows 7 (以降) がインストールされている 3 台以上の仮想マシンをお勧めします。  
 
-     자세한 내용은 이 [Hyper-V 개요](https://technet.microsoft.com/en-us/library/hh831531.aspx)를 참조하세요.  
+     詳細については、「[Hyper-V の概要](https://technet.microsoft.com/en-us/library/hh831531.aspx)」を参照してください。  
 
--   이러한 모든 구성 요소에는 **관리자 권한**이 필요합니다.  
+-   **管理者のアクセス許可** が必要になります。  
 
-    -   Configuration Manager는 Windows Server 환경 내에서 로컬 권한을 가진 관리자가 필요함  
+    -   Configuration Manager には、Windows Server 環境内でローカルのアクセス許可を持つ管理者が必要です  
 
-    -   Active Directory는 스키마를 수정할 수 있는 권한이 있는 관리자가 필요함  
+    -   Active Directory には、スキーマを変更するアクセス許可を持つ管理者が必要です  
 
-    -   가상 컴퓨터는 컴퓨터 자체에 대한 로컬 권한이 필요함  
+    -   仮想マシンには、マシン自体に対するローカルのアクセス許可が必要です  
 
-이 랩에는 필요하지 않지만 System Center Configuration Manager 구현 요구 사항에 대한 추가 정보를 위해 [System Center Configuration Manager에서 지원되는 구성](../../core/plan-design/configs/supported-configurations.md)을 검토할 수 있습니다. 여기서 참조할 수 없는 소프트웨어 버전은 설명서를 참조하세요.  
+このラボでは必要ありませんが、「[System Center Configuration Manager のサポートされている構成](../../core/plan-design/configs/supported-configurations.md)」で System Center Configuration Manager の実装に関する要件の追加情報を確認できます。 ここで言及されていないソフトウェア バージョンについては、このドキュメントを参照してください。  
 
-이러한 구성 요소를 모두 설치한 후에는 Configuration Manager에 대한 Windows 환경을 구성하기 위해 다음과 같은 추가 단계를 수행해야 합니다.  
+このすべてのコンポーネントをインストールしたら、追加の手順を実行し Configuration Manager 向けに Windows 環境を構成する必要があります。  
 
-###  <a name="BKMK_LabADPrep"></a> 랩에 대한 Active Directory 콘텐츠 준비  
- 이 랩에 대해 보안 그룹을 만든 다음 도메인 사용자를 추가합니다.  
+###  <a name="BKMK_LabADPrep"></a> ラボ向けの Active Directory コンテンツの準備  
+ このラボでは、セキュリティ グループを作成し、そのグループにドメイン ユーザーを追加します。  
 
--   보안 그룹: **Evaluation**  
+-   セキュリティ グループ: **Evaluation**  
 
-    -   그룹 범위: **Universal**  
+    -   グループのスコープ: **Universal**  
 
-    -   그룹 유형: **Security**  
+    -   グループの種類: **Security**  
 
--   도메인 사용자: **ConfigUser**  
+-   ドメイン ユーザー: **ConfigUser**  
 
-     정상적인 상황에서는 환경 내의 모든 사용자에게 공용 액세스 권한을 부여하지 않습니다. 온라인에서 랩을 가져오는 것을 간소화하기 위해 이 사용자에게 그렇게 하고 있는 것입니다.  
+     通常の状況では、環境内のすべてのユーザーに対してユニバーサル アクセスを付与することはありません。 この操作は、このユーザーについて、ラボをオンラインにする操作を効率化する目的で行います。  
 
-다음 단계는 Configuration Manager 클라이언트가 사이트 리소스를 찾기 위해 Active Directory Domain Services를 쿼리하도록 하는 데 필요하며 다음 절차에 나열됩니다.  
+次の手順では、Configuration Manager クライアントが Active Directory Domain Services に対してクエリを実行して、サイトのリソースを見つける方法について説明します。  
 
-###  <a name="BKMK_CreateSysMgmtLab"></a> 시스템 관리 컨테이너 만들기  
- Configuration Manager에서는 스키마를 확장할 때 Active Directory Domain Services에서 필요한 시스템 관리 컨테이너가 자동으로 만들어지지 않습니다. 따라서 랩을 위해 이를 만듭니다. 이 단계를 수행하려면 [ADSI 편집 설치](https://technet.microsoft.com/en-us/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)가 필요합니다.  
+###  <a name="BKMK_CreateSysMgmtLab"></a> System Management コンテナーの作成  
+ Configuration Manager では、スキーマの拡張時に、必要な System Management コンテナーが Active Directory Domain Services に自動的に作成されません。 したがって、これをラボ向けに作成します。 この手順では、 [ADSI エディターをインストール](https://technet.microsoft.com/en-us/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)する必要があります。  
 
- Active Directory Domain Services의 **시스템** 컨테이너에 대해 **모든 자식 개체 만들기** 권한이 있는 계정으로 로그온해야 합니다.  
+ Active Directory ドメイン サービス内の **System** コンテナーで **すべての子オブジェクトを作成する** アクセス許可を持つアカウントとしてログオンします。  
 
-##### <a name="to-create-the-system-management-container"></a>시스템 관리 컨테이너를 만들려면  
+##### <a name="to-create-the-system-management-container"></a>System Management コンテナーを作成するには:  
 
-1.  **ADSI 편집**을 실행하고 사이트 서버가 있는 도메인에 연결합니다.  
+1.  **ADSI エディター**を実行して、サイト サーバーが常駐しているドメインに接続します。  
 
-2.  **도메인&lt;컴퓨터의 정규화된 도메인 이름\>**, **<고유 이름\>**을 차례로 확장한 다음 **CN=System**을 마우스 오른쪽 단추로 클릭하고 **새로 만들기**, **개체**를 차례로 클릭합니다.  
+2.  **Domain&lt;コンピューターの完全修飾名\>**、**<識別名\>** の順に展開して、**[CN=System]** を右クリックし、**[新規]**、**[オブジェクト]** の順にクリックします。  
 
-3.  **개체 만들기** 대화 상자에서 **컨테이너**를 선택한 후 **다음**을 클릭합니다.  
+3.  **[オブジェクトの作成]** ダイアログ ボックスで、 **[コンテナー]**を選択し、 **[次へ]**をクリックします。  
 
-4.  **값** 상자에 **System Management**을 입력하고 **다음**을 클릭합니다.  
+4.  **[値]** ボックスに「 **System Management**」と入力し、 **[次へ]**をクリックします。  
 
-5.  **마침** 을 클릭하여 절차를 완료합니다.  
+5.  **[完了]** をクリックしてこの手順を完了します。  
 
-###  <a name="BKMK_SetSecPermLab"></a> 시스템 관리 컨테이너에 대한 보안 권한 설정  
- 사이트 정보를 컨테이너에 게시하는 데 필요한 권한을 사이트 서버의 컴퓨터 계정에 부여합니다. 이 작업에 대해서도 ADSI 편집을 사용합니다.  
-
-> [!IMPORTANT]  
->  다음 절차를 시작하기 전에 사이트 서버의 도메인에 연결되어 있는지 확인합니다.  
-
-##### <a name="to-set-security-permissions-for-the-system-management-container"></a>시스템 관리 컨테이너에 대한 보안 권한을 설정하려면  
-
-1.  콘솔 창에서 **사이트 서버의 도메인**, **DC=&lt;서버 고유 이름\>**, **CN=System**을 차례로 확장합니다. **CN=System Management**를 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
-
-2.  **CN=System Management Properties** 대화 상자에서 **보안** 탭을 클릭한 다음 **추가** 를 클릭하여 사이트 서버 컴퓨터 계정을 추가합니다. 계정에 **모든 권한** 을 부여합니다.  
-
-3.  **고급**을 클릭하고 사이트 서버의 컴퓨터 계정을 선택한 다음 **편집**을 클릭합니다.  
-
-4.  **적용 대상** 목록에서 **이 개체 및 모든 하위 개체**를 선택합니다.  
-
-5.  **확인** 을 클릭하여 **ADSI Edit** 콘솔을 닫고 절차를 완료합니다.  
-
-     이 절차에 대한 자세한 내용은 [System Center Configuration Manager에 대한 Active Directory 스키마 확장](../../core/plan-design/network/extend-the-active-directory-schema.md)을 참조하세요.  
-
-###  <a name="BKMK_ExtADSchLab"></a> extadsch.exe를 사용하여 Active Directory 스키마 확장  
- 이 랩에 대해 Active Directory 스키마를 확장하면 최소한의 관리 오버헤드로 모든 Configuration Manager 기능을 사용할 수 있습니다. Active Directory 스키마 확장은 포리스트당 한 번만 수행하는 포리스트 전체 구성입니다. 스키마를 영구적으로 확장하면 기본 Active Directory 구성에서 클래스 및 특성의 집합이 수정됩니다. 이 작업은 되돌릴 수 없습니다. 스키마를 확장하면 Configuration Manager가 랩 환경에서 가장 효과적으로 기능을 수행할 수 있게 하는 구성 요소에 액세스할 수 있습니다.  
+###  <a name="BKMK_SetSecPermLab"></a> System Management コンテナーのセキュリティ アクセス許可の設定  
+ サイト サーバーのコンピューター アカウントに、サイト情報をコンテナーに発行するのに必要なアクセス許可を付与します。 ADSI エディターもこのタスクに使用します。  
 
 > [!IMPORTANT]  
->  **스키마 관리** 보안 그룹의 멤버인 계정으로 스키마 마스터 도메인 컨트롤러에 로그온했는지 확인합니다. 대체 자격 증명을 사용하려는 시도는 실패합니다.  
+>  次の手順を開始する前に、サイト サーバーのドメインに接続していることを確認します。  
 
-##### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>extadsch.exe를 사용하여 Active Directory 스키마를 확장하려면  
+##### <a name="to-set-security-permissions-for-the-system-management-container"></a>System Management コンテナーのセキュリティ アクセス許可を設定するには:  
 
-1.  스키마 마스터 도메인 컨트롤러의 시스템 상태에 대한 백업을 만듭니다. 백업 마스터 도메인 컨트롤러에 대한 자세한 내용은 [Windows Server 백업](https://technet.microsoft.com/en-us/library/cc770757.aspx)을 검토하세요.  
+1.  コンソール ウィンドウで、**サイト サーバーのドメイン**を展開し、**[DC=&lt;サーバー識別名\>]**、**[CN=System]** の順に展開します。 **[CN=System Management]**を右クリックし、 **[プロパティ]**をクリックします。  
 
-2.  설치 미디어에서 **\SMSSETUP\BIN\X64** 으로 이동합니다.  
+2.  **[CN=System Management のプロパティ]** ダイアログ ボックスで、 **[セキュリティ]** タブをクリックし、 **[追加]** をクリックして、サイト サーバーのコンピューター アカウントを追加します。 このアカウントに **フル コントロール** アクセス許可を付与します。  
 
-3.  **extadsch.exe**를 실행합니다.  
+3.  **[詳細設定]** をクリックして、サイト サーバーのコンピューター アカウントを選択し、**[編集]** をクリックします。  
 
-4.  시스템 드라이브의 루트 폴더에 있는 **extadsch.log** 를 검토하여 스키마가 제대로 확장되었는지 확인합니다.  
+4.  **[適用先]** の一覧で **[このオブジェクトとすべての子オブジェクト]**を選択します。  
 
-     이 절차에 대한 자세한 내용은 [System Center Configuration Manager에 대한 Active Directory 스키마 확장](../../core/plan-design/network/extend-the-active-directory-schema.md)을 참조하세요.  
+5.  **[OK]** をクリックして **[ADSI エディター]** コンソールを閉じ、手順を完了します。  
 
-###  <a name="BKMK_OtherTasksLab"></a> 기타 필수 작업  
- 또한 설치하기 전에 다음 작업도 완료해야 합니다.  
+     この手順の詳細については、「[System Center Configuration Manager 向けに Active Directory スキーマを拡張する](../../core/plan-design/network/extend-the-active-directory-schema.md)」を参照してください。  
 
- **모든 다운로드를 저장할 폴더 만들기**  
+###  <a name="BKMK_ExtADSchLab"></a> extadsch.exe を使用した Active Directory スキーマの拡張  
+ このラボの Active Directory スキーマを拡張します。これにより、最小限の管理オーバーヘッドですべての Configuration Manager 機能を使用できます。 Active Directory スキーマの拡張は、フォレストごとに 1 回実行されるフォレスト全体の構成です。 スキーマを完全に拡張すると、Active Directory の基本構成の一連のクラスと属性が変更されます。 この操作は、元に戻すことはできません。 スキーマを拡張すると、Configuration Manager がラボ環境内で最も効果的に機能できるように、コンポーネントにアクセスできます。  
 
- 이 연습에서 설치 미디어의 구성 요소에 필요한 여러 다운로드가 있습니다. 모든 설치 절차를 시작하기 전에 이러한 파일의 이동을 요구하고 나서 랩의 서비스를 해제하려고 하는 위치를 결정합니다. 이러한 다운로드를 저장하기 위해 별도의 하위 폴더가 있는 단일 폴더를 사용하는 것이 좋습니다.  
+> [!IMPORTANT]  
+>  **スキーマ管理** セキュリティ グループのメンバーであるアカウントで、スキーマ マスター ドメイン コントローラーにログオンしていることを確認します。 代わりの資格情報を使用することはできません。  
 
- **.NET을 설치하고 Windows Communication Foundation을 활성화합니다.**  
+##### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>extadsch.exe を使用して Active Directory スキーマを拡張するには:  
 
- 두 .NET Framework를 설치해야 합니다. 먼저 .NET 3.5.1을 설치한 다음 .NET 4.5.2 이상을 설치합니다. WCF(Windows Communication Foundation)도 활성화해야 합니다. WCF는 분산 컴퓨팅, 광범위한 상호 운용성 및 서비스 방향에 대한 직접 지원에 관리 가능한 접근을 제공하도록 설계되었으며 서비스 지향 프로그래밍 모델을 통해 연결된 응용 프로그램의 배포를 간소화합니다. WCF에 대한 자세한 내용은 [Windows Communication Foundation 정의](https://technet.microsoft.com/en-us/subscriptions/ms731082\(v=vs.90\).aspx) 를 검토하세요.  
+1.  スキーマ マスター ドメイン コントローラーのシステム状態のバックアップを作成します。 マスター ドメイン コント ローラーのバックアップの詳細については、「 [Windows Server バックアップ](https://technet.microsoft.com/en-us/library/cc770757.aspx)」を参照してください。  
 
-##### <a name="to-install-net-and-activate-windows-communication-foundation"></a>.NET을 설치하고 Windows Communication Foundation을 활성화하려면  
+2.  インストール メディアの **\SMSSETUP\BIN\X64** に移動します。  
 
-1.  **Server Manager**를 연 다음 **관리**로 이동합니다. **역할 및 기능 추가** 를 클릭하여 **역할 및 기능 추가 Wizard.**를 엽니다.  
+3.  **extadsch.exe**を実行します。  
 
-2.  **시작하기 전에** 패널에서 제공된 정보를 검토하고 **다음**을 클릭합니다.  
+4.  システム ドライブのルート フォルダーにある **extadsch.log** を確認して、スキーマの拡張が成功したことを確かめます。  
 
-3.  **역할 기반 또는 기능 기반 설치**를 선택하고 **다음**을 클릭합니다.  
+     この手順の詳細については、「[System Center Configuration Manager 向けに Active Directory スキーマを拡張する](../../core/plan-design/network/extend-the-active-directory-schema.md)」を参照してください。  
 
-4.  **서버 풀**에서 서버를 선택하고 **다음**을 클릭합니다.  
+###  <a name="BKMK_OtherTasksLab"></a> その他の必要なタスク  
+ インストールする前に、次のタスクも完了する必要があります。  
 
-5.  **서버 역할** 패널을 검토하고 **다음**을 클릭합니다.  
+ **すべてのダウンロードを格納するフォルダーを作成する**  
 
-6.  다음 **기능** 을 목록에서 선택하여 추가합니다.  
+ この演習では、インストール メディアのコンポーネントに必要なダウンロードが複数あります。 インストール手順を開始する前に、ラボの使用を停止するまではこれらのファイルを移動せずに済む場所を決めます。 1 つのフォルダーに個別のサブフォルダーを作成して、これらのダウンロードを格納することをお勧めします。  
 
-    -   **.NET Framework 3.5 기능**  
+ **.NET をインストールし、Windows Communication Foundation をアクティブ化する**  
 
-        -   **.NET Framework 3.5(.NET 2.0 및 3.0 포함)**  
+ 2 つの .NET Framework をインストールする必要があります。最初に .NET 3.5.1 をインストールしてから、.NET 4.5.2+ をインストールします。 また、Windows Communication Foundation (WCF) をアクティブ化する必要もあります。 WCF は、分散コンピューティング、広範な相互運用性、およびサービス指向の直接サポートに対する管理しやすいアプローチを提供するように設計されており、サービス指向のプログラミング モデルで接続アプリケーションの開発を簡略化します。 WCF の詳細については、「 [Windows Communication Foundation とは](https://technet.microsoft.com/en-us/subscriptions/ms731082\(v=vs.90\).aspx) 」を参照してください。  
 
-    -   **.NET Framework 4.5 기능**  
+##### <a name="to-install-net-and-activate-windows-communication-foundation"></a>.NET をインストールし、Windows Communication Foundation をアクティブ化するには:  
+
+1.  **Server Manager**を開き、 **[管理]**に移動します。 **[役割と機能の追加]** をクリックし、 **[役割と機能の追加] Wizard.**を開きます。  
+
+2.  **[始める前に]** パネルの情報を確認し、 **[次へ]**をクリックします。  
+
+3.  **[役割ベースまたは機能ベースのインストール]**をクリックし、 **[次へ]**をクリックします。  
+
+4.  **[サーバー プール]**からサーバーを選択し、 **[次へ]**をクリックします。  
+
+5.  **[サーバーの役割]** パネルを確認し、 **[次へ]**をクリックします。  
+
+6.  次の **機能** を一覧から選択して追加します。  
+
+    -   **.NET Framework 3.5 の機能**  
+
+        -   **.NET Framework 3.5 (.NET 2.0 と 3.0 を含む)**  
+
+    -   **.NET Framework 4.5 の機能**  
 
         -   **.NET Framework 4.5**  
 
         -   **ASP.NET 4.5**  
 
-        -   **WCF 서비스**  
+        -   **WCF サービス**  
 
-            -   **HTTP 활성화**  
+            -   **HTTP アクティブ化**  
 
-            -   **TCP 포트 공유**  
+            -   **TCP ポート共有**  
 
-7.  **웹 서버 역할(IIS)** 및 **역할 서비스** 화면을 검토하고 **다음**을 클릭합니다.  
+7.  **[Web サーバーの役割 (IIS)]** と **[役割サービス]** 画面を確認して、 **[次へ]**をクリックします。  
 
-8.  **확인** 화면을 검토하고 **다음**을 클릭합니다.  
+8.  **[確認]** 画面を確認して、 **[次へ]**をクリックします。  
 
-9. **설치** 를 클릭하고 **서버 관리자** 의 **알림**창에서 설치가 제대로 완료되었는지 확인합니다.  
+9. **[インストール]** をクリックし、 **サーバー マネージャー** の **[通知]**ウィンドウで、インストールが正常に完了したことを確認します。  
 
-10. .NET의 기본 설치가 완료된 후 [Microsoft 다운로드 센터](https://www.microsoft.com/en-us/download/details.aspx?id=42643) 로 이동하여 .NET Framework 4.5.2에 대한 웹 설치 관리자를 가져옵니다. **다운로드** 단추를 클릭한 다음 설치 관리자를 **실행** 합니다. 선택한 언어로 필요한 구성 요소를 자동으로 검색하고 설치합니다.  
+10. .NET の基本インストールの完了後、 [Microsoft ダウンロード センター](https://www.microsoft.com/en-us/download/details.aspx?id=42643) に移動して、.NET Framework 4.5.2 の Web インストーラーを入手します。 **[ダウンロード]** をクリックし、インストーラーを **実行** します。 これにより、選択した言語の必要なコンポーネントが自動的に検出され、インストールされます。  
 
-자세한 내용은 이 .NET Framework가 필요한 이유에 대한 다음 문서를 검토하세요.  
+これらの .NET Framework が必要な理由の詳細については、次の記事を参照してください。  
 
--   [.NET Framework 버전 및 종속성](https://technet.microsoft.com/en-us/library/bb822049.aspx)  
+-   [.NET Framework のバージョンおよび依存関係](https://technet.microsoft.com/en-us/library/bb822049.aspx)  
 
--   [.NET Framework 4 RTM 응용 프로그램 호환성 연습](https://technet.microsoft.com/en-us/library/dd889541.aspx)  
+-   [.NET Framework 4 RTM アプリケーションの互換性に関するチュートリアル](https://technet.microsoft.com/en-us/library/dd889541.aspx)  
 
--   [방법: ASP.NET 웹 응용 프로그램을 ASP.NET 4로 업그레이드](https://technet.microsoft.com/en-us/library/dd483478\(VS.100\).aspx)  
+-   [方法: ASP.NET Web アプリケーションを ASP.NET 4 にアップグレードする](https://technet.microsoft.com/en-us/library/dd483478\(VS.100\).aspx)  
 
--   [Microsoft .NET Framework 지원 기간 정책 FAQ](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
+-   [Microsoft .NET Framework のサポート ライフサイクル ポリシーに関する FAQ](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
 
--   [CLR 자세히 보기 - In-Process Side-by-Side](https://msdn.microsoft.com/en-us/magazine/ee819091.aspx)  
+-   [CLR 徹底解剖 - インプロセス サイドバイサイド](https://msdn.microsoft.com/en-us/magazine/ee819091.aspx)  
 
-**BITS, IIS 및 RDC 사용**  
+**BITS、IIS、および RDC の有効化**  
 
-[BITS(Background Intelligent Transfer Service)](https://technet.microsoft.com/en-us/library/dn282296.aspx) 는 클라이언트와 서버 간에 파일을 비동기적으로 전송하는 데 필요한 응용 프로그램에 사용됩니다. BITS는 전경과 배경에서 전송의 흐름을 측정하여 다른 네트워크 응용 프로그램의 응답을 유지합니다. 또한 전송 세션이 중단되는 경우 파일 전송이 자동으로 다시 시작됩니다.  
+[バックグラウンド インテリジェント転送サービス (BITS)](https://technet.microsoft.com/en-us/library/dn282296.aspx) は、クライアントとサーバーの間でファイルを非同期的に転送する必要があるアプリケーションに使用します。 BITS では、フォアグラウンドとバックグラウンドの転送フローを測定することで、他のネットワーク アプリケーションの応答性を保持します。 また、転送セッションが中断した場合は、ファイル転送を自動的に再開します。  
 
-이 사이트 서버가 관리 지점으로도 사용되므로 이 랩에 대한 BITS를 설치합니다.  
+このサイト サーバーは管理ポイントとしても使用されるため、このラボでは BITS をインストールします。  
 
-IIS(인터넷 정보 서비스)는 웹에서 서비스를 호스트하는 데 사용할 수 있는 유연하고 확장성 있는 웹 서버입니다. 이는 많은 사이트 시스템 역할을 위해 Configuration Manager에서 사용됩니다. IIS에 대한 자세한 내용은 [System Center Configuration Manager의 사이트 시스템 서버용 웹 사이트](../../core/plan-design/network/websites-for-site-system-servers.md)를 참조하세요.  
+インターネット インフォメーション サービス (IIS) は、柔軟でスケーラブルな Web サーバーです。これを使用すると、Web であらゆるものをホストできます。 IIS は、さまざまなサイト システムの役割に対して Configuration Manager によって使用されます。 IIS の詳細については、「[System Center Configuration Manager のサイト システム サーバーの Web サイト](../../core/plan-design/network/websites-for-site-system-servers.md)」を参照してください。  
 
-[RDC(원격 차등 압축)](https://technet.microsoft.com/en-us/library/cc754372.aspx) 은 응용 프로그램이 파일 집합에 변경 사항이 생겼는지 확인하는 데 사용할 수 있는 API 집합입니다. RDC를 통해 응용 프로그램이 파일의 변경된 부분만 복제하므로 네트워크 트래픽을 최소로 유지할 수 있습니다.  
+[Remote Differential Compression (RDC)](https://technet.microsoft.com/en-us/library/cc754372.aspx) は、一連のファイルに変更が行われたかどうかをアプリケーションが判断するときに使用できる一連の API です。 RDC を使用すると、ファイルの変更された部分のみをレプリケートすることで、ネットワーク トラフィックを最小限に抑えることができます。  
 
-##### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>BITS, IIS 및 RDC 사이트 서버 역할을 사용하도록 설정하려면  
+##### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>BITS、IIS、および RDC サイト サーバーの役割を有効にするには:  
 
-1.  사이트 서버에서 **Server Manager**를 엽니다. **관리**로 이동합니다. **역할 및 기능 추가** 를 클릭하여 **역할 및 기능 추가 마법사**를 엽니다.  
+1.  サイト サーバーで、 **Server Manager**を開きます。 **[管理]**に移動します。 **[役割と機能の追加]** をクリックし、 **役割と機能の追加ウィザード**を開きます。  
 
-2.  **시작하기 전에** 패널에서 제공된 정보를 검토하고 **다음**을 클릭합니다.  
+2.  **[始める前に]** パネルの情報を確認し、 **[次へ]**をクリックします。  
 
-3.  **역할 기반 또는 기능 기반 설치**를 선택하고 **다음**을 클릭합니다.  
+3.  **[役割ベースまたは機能ベースのインストール]**をクリックし、 **[次へ]**をクリックします。  
 
-4.  **서버 풀**에서 서버를 선택하고 **다음**을 클릭합니다.  
+4.  **[サーバー プール]**からサーバーを選択し、 **[次へ]**をクリックします。  
 
-5.  목록에서 다음 **서버 역할** 을 선택하여 추가합니다.  
+5.  次の **サーバーの役割** を一覧から選択して追加します。  
 
-    -   **웹 서버(IIS)**  
+    -   **Web サーバー (IIS)**  
 
-        -   **일반 HTTP 기능**  
+        -   **HTTP 共通機能**  
 
-            -   **기본 문서**  
+            -   **既定のドキュメント**  
 
-            -   **디렉터리 검색**  
+            -   **ディレクトリの参照**  
 
-            -   **HTTP 오류**  
+            -   **HTTP エラー**  
 
-            -   **정적 콘텐츠**  
+            -   **静的コンテンツ**  
 
-            -   **HTTP 리디렉션**  
+            -   **HTTP リダイレクト**  
 
-        -   **상태 및 진단**  
+        -   **状態と診断**  
 
-            -   **HTTP 로깅**  
+            -   **HTTP ログ**  
 
-            -   **로깅 도구**  
+            -   **ログ ツール**  
 
-            -   **요청 모니터**  
+            -   **要求監視**  
 
-            -   **추적**  
+            -   **トレース**  
 
-    -   **성능**  
+    -   **パフォーマンス**  
 
-        -   **정적 콘텐츠 압축**  
+        -   **静的コンテンツ圧縮**  
 
-        -   **동적 콘텐츠 압축**  
+        -   **動的なコンテンツの圧縮**  
 
     -   **Security**  
 
-        -   **요청 필터링**  
+        -   **要求のフィルタリング**  
 
-        -   **기본 인증**  
+        -   **基本認証**  
 
-        -   **클라이언트 인증서 매핑 인증**  
+        -   **クライアント証明書マッピング認証**  
 
-        -   **IP 및 도메인 제한**  
+        -   **IP およびドメインの制限**  
 
-        -   **URL 권한 부여**  
+        -   **URL 認証**  
 
-        -   **Windows 권한 부여**  
+        -   **Windows 認証**  
 
-    -   **응용 프로그램 개발**  
+    -   **アプリケーションの開発**  
 
-        -   **.NET 확장성 3.5**  
+        -   **.NET 拡張機能 3.5**  
 
-        -   **.NET 확장성 4.5**  
+        -   **.NET 拡張機能 4.5**  
 
         -   **ASP**  
 
@@ -289,111 +289,111 @@ IIS(인터넷 정보 서비스)는 웹에서 서비스를 호스트하는 데 �
 
         -   **ASP.NET 4.5**  
 
-        -   **ISAPI 확장**  
+        -   **ISAPI 拡張機能**  
 
-        -   **ISAPI 필터**  
+        -   **ISAPI フィルター**  
 
-        -   **SSI(SSI(Server Side Includes))**  
+        -   **サーバー側インクルード**  
 
-    -   **FTP 서버**  
+    -   **FTP サーバー**  
 
-        -   **FTP 서비스**  
+        -   **FTP サービス**  
 
-    -   **관리 도구**  
+    -   **管理ツール**  
 
-        -   **IIS 관리 콘솔**  
+        -   **IIS 管理コンソール**  
 
-        -   **IIS 6 관리 호환성**  
+        -   **IIS 6 管理互換性**  
 
-            -   **IIS 6 메타데이터 호환성**  
+            -   **IIS 6 メタベース互換**  
 
-            -   **IIS 6 관리 콘솔**  
+            -   **IIS 6 管理コンソール**  
 
-            -   **IIS 6 스크립팅 도구**  
+            -   **IIS 6 スクリプト ツール**  
 
-            -   **IIS 6 WMI 호환성**  
+            -   **IIS 6 WMI 互換**  
 
-        -   **IIS 6 관리 스크립트 및 도구**  
+        -   **IIS 6 管理スクリプトおよびツール**  
 
         -   **Management Service**  
 
-6.  다음 **기능** 을 목록에서 선택하여 추가합니다.  
+6.  次の **機能** を一覧から選択して追加します。  
 
-    -   -   **BITS(Background Intelligent Transfer Service)**  
+    -   -   **バックグラウンド インテリジェント転送サービス (BITS)**  
 
-            -   **IIS 서버 확장**  
+            -   **IIS サーバー拡張機能**  
 
-        -   **원격 서버 관리 도구**  
+        -   **リモート サーバー管理ツール**  
 
-            -   **기능 관리 도구**  
+            -   **機能管理ツール**  
 
-                -   **BITS 서버 확장 도구**  
+                -   **BITS サーバー拡張ツール**  
 
-7.  **설치** 를 클릭하고 **서버 관리자** 의 **알림**창에서 설치가 제대로 완료되었는지 확인합니다.  
+7.  **[インストール]** をクリックし、 **サーバー マネージャー** の **[通知]**ウィンドウで、インストールが正常に完了したことを確認します。  
 
-기본적으로 IIS는 HTTP 또는 HTTPS 통신을 통한 여러 파일 확장명 및 위치 액세스를 차단합니다. 이러한 파일을 클라이언트 시스템에 배포하려면 배포 지점에서 IIS에 대한 요청 필터링을 구성해야 합니다. 자세한 내용은 [배포 지점에 대한 IIS 요청 필터링](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering)을 참조하세요.  
+IIS では、複数の種類のファイル拡張子と場所が、HTTP または HTTPS 通信によってアクセスできないように既定で設定されています。 これらのファイルをクライアント システムに配布できるようにするには、配布ポイントで IIS の要求のフィルタリングを構成する必要があります。 詳しくは、「[IIS の要求フィルター (配布ポイント用)](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering)」を参照してください。  
 
-##### <a name="to-configure-iis-filtering-on-distribution-points"></a>배포 지점에서 IIS 필터링을 구성하려면  
+##### <a name="to-configure-iis-filtering-on-distribution-points"></a>配布ポイントで IIS フィルタリングを構成するには:  
 
-1.  **IIS Manager** 를 열고 사이드바에서 서버 이름을 선택합니다. 그러면 **홈** 화면으로 이동됩니다.  
+1.  **IIS Manager** を開き、サイドバーでサーバーの名前を選択します。 これにより **ホーム** 画面が表示されます。  
 
-2.  **기능 보기** 가 **홈** 화면의 맨 아래에서 선택되었는지 확인합니다. **IIS** 로 이동하고 **요청 필터링**을 엽니다.  
+2.  **ホーム** 画面の下部で **[機能ビュー]** が選択されていることを確認します。 **IIS** に移動し、 **[要求のフィルタリング]**を開きます。  
 
-3.  **작업** 창에서 **파일 이름 확장명 허용...**을 클릭합니다.  
+3.  **[アクション]** ウィンドウで、 **[ファイル名拡張子の許可]**をクリックします。  
 
-4.  대화 상자에 **.msi** 을 입력하고 **확인**을 클릭합니다.  
+4.  ダイアログ ボックスに「 **.msi** 」と入力し、 **[OK]**をクリックします。  
 
-###  <a name="BKMK_InstallCMLab"></a> 구성 관리자 설치  
-클라이언트를 직접 관리하기 위해 [기본 사이트를 사용할 시기 결정](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary)을 만듭니다. 그러면 랩 환경에서 잠재적인 장치의 [사이트 시스템 배율](/sccm/core/plan-design/configs/size-and-scale-numbers)에 대한 관리를 지원할 수 있습니다.  
-또한 이 과정에서 계속 평가 장치를 관리하는 데 사용할 Configuration Manager 콘솔도 설치합니다.  
+###  <a name="BKMK_InstallCMLab"></a> Configuration Manager のインストール  
+クライアントを直接管理するための[プライマリ サイトを使用する場合の判別](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary)を作成します。 これにより、ラボ環境で、使用される可能性のあるデバイスの[サイト システムのスケール](/sccm/core/plan-design/configs/size-and-scale-numbers)の管理をサポートできます。  
+この処理中、Configuration Manager コンソールもインストールします。このコンソールは、今後評価版のデバイスを管理するときに使用されます。  
 
-설치를 시작하기 전에 Windows Server 2012를 사용하는 서버에서 [필수 조건 검사기](/sccm/core/servers/deploy/install/prerequisite-checker)를 시작하여 모든 설정이 올바르게 사용되었는지 확인합니다.  
+インストールを開始する前に、Windows Server 2012 を使用してサーバー上で [Prerequisite Checker](/sccm/core/servers/deploy/install/prerequisite-checker) を起動して、すべての設定が正常に有効になっていることを確認します。  
 
-##### <a name="to-download-and-install-configuration-manager"></a>구성 관리자를 다운로드하고 설치하려면  
+##### <a name="to-download-and-install-configuration-manager"></a>構成マネージャーをダウンロードしてインストールするには:  
 
-1.  [System Center 평가](https://www.microsoft.com/evalcenter/evaluate-system-center-2012-configuration-manager-and-endpoint-protection) 페이지로 이동하여 System Center Configuration Manager의 최신 평가판을 다운로드합니다.  
+1.  [System Center の評価](https://www.microsoft.com/evalcenter/evaluate-system-center-2012-configuration-manager-and-endpoint-protection) ページに移動して、最新の評価版 System Center Configuration Manager をダウンロードします。  
 
-2.  미리 정의된 위치에 다운로드 미디어의 압축을 풉니다.  
+2.  定義済みの場所でダウンロード メディアを解凍します。  
 
-3.  [System Center Configuration Manager 설치 마법사를 사용하여 사이트 설치](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites)에 나열된 설치 절차를 따릅니다. 해당 절차 내에서 다음을 입력합니다.  
+3.  「[System Center Configuration Manager のセットアップ ウィザードを使用してサイトをインストールする](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites)」のインストール手順に従います。 この手順で、次の情報を入力します。  
 
-    |사이트 설치 절차 단계|선택 항목|  
+    |サイトのインストール手順|選択内容|  
     |-----------------------------------------|---------------|  
-    |4단계: **제품 키** 페이지|**평가**를 선택합니다.|  
-    |7단계:  **필수 조건 다운로드**|**필수 파일 다운로드** 를 선택하고 미리 정의된 위치를 지정합니다.|  
-    |10단계: **사이트 및 설치 설정**|-   **사이트 코드:LAB**<br />-   **사이트 이름:Evaluation**<br />-   **설치 폴더:** 미리 정의된 위치를 지정합니다.|  
-    |11단계: **기본 사이트 설치**|**기본 사이트를 독립 사이트로 설치**를 선택하고 **다음**을 클릭합니다.|  
-    |12단계: **데이터베이스 설치**|-   **SQL Server 이름(FQDN):** 여기에 FQDN을 입력합니다.<br />-   **인스턴스 이름:** 이전에 설치한 SQL의 기본 인스턴스를 사용하므로 이 이름을 비워둡니다.<br />-   **Service Broker 포트:** 기본 포트인 4022로 그대로 둡니다.|  
-    |13단계: **데이터베이스 설치**|이 설정은 기본값으로 그대로 둡니다.|  
-    |14단계: **SMS 공급자**|이 설정은 기본값으로 그대로 둡니다.|  
-    |15단계: **클라이언트 통신 설정**|**모든 사이트 시스템 역할이 클라이언트로부터의 HTTPS 통신만 수락** 이 선택되지 않은 상태인지 확인합니다.|  
-    |16단계: **사이트 시스템 역할**|FQDN을 입력하고 **모든 사이트 시스템 역할이 클라이언트로부터의 HTTPS 통신만 수락** 이 여전히 선택 취소된 상태인지 확인합니다.|  
+    |手順 4. **[プロダクト キー]** ページ|**[評価]**を選択します。|  
+    |手順 7.  **必須ファイルのダウンロード**|**[必須ファイルをダウンロード]** を選択し、定義済みの場所を指定します。|  
+    |手順 10. **サイトとインストールの設定**|-   **サイト コード:LAB**<br />-   **サイト名:Evaluation**<br />-   **インストール フォルダー:** 定義済みの場所を指定します。|  
+    |手順 11. **プライマリ サイトのインストール**|**[プライマリ サイトをスタンドアロン サイトとしてインストール]**をクリックし、 **[次へ]**をクリックします。|  
+    |手順 12. **データベースのインストール**|-   **SQL Server 名 (FQDN):** FQDN を入力します。<br />-   **インスタンス名:** 空白にして、前にインストールした SQL の既定のインスタンスを使用します。<br />-   **Service Broker ポート:** 既定のポート 4022 のままにします。|  
+    |手順 13. **データベースのインストール**|これらの設定は既定値のままにします。|  
+    |手順 14. **SMS プロバイダー**|これらの設定は既定値のままにします。|  
+    |手順 15. **クライアント通信設定**|**[すべてのサイト システムの役割でクライアントからの HTTPS 通信のみ受け付ける]** がオンになっていないことを確認します。|  
+    |手順 16. **サイト システムの役割**|FQDN を入力し、 **[すべてのサイト システムの役割でクライアントからの HTTPS 通信のみ受け付ける]** がまだオフになっていることを確認します。|  
 
-###  <a name="BKMK_EnablePubLab"></a> Configuration Manager 사이트에 대해 게시 사용  
-각 Configuration Manager 사이트에서는 자체 사이트 관련 정보를 Active Directory 스키마의 해당 도메인 파티션 내 System Management 컨테이너에 게시합니다. 이 트래픽을 처리하려면 Active Directory와 Configuration Manager 간의 통신에 대한 양방향 채널이 열려 있어야 합니다. 또한 Active Directory 및 네트워크 인프라의 특정 구성 요소를 확인하려면 포리스트 검색도 사용하도록 설정합니다.  
+###  <a name="BKMK_EnablePubLab"></a> Configuration Manager サイトで発行を有効にする  
+各 Configuration Manager サイトは、サイト特有の情報を、Active Directory スキーマ上のドメイン パーティション内のそのサイトの System Management コンテナーに発行します。 このトラフィックは、Active Directory と Configuration Manager の間の通信用に双方向チャネルを開いて処理する必要があります。 さらに、フォレストの探索も有効にして、Active Directory とネットワーク インフラストラクチャの特定のコンポーネントを決定することもできます。  
 
-##### <a name="to-configure-active-directory-forests-for-publishing"></a>게시를 위한 Active Directory 포리스트를 구성하려면:  
+##### <a name="to-configure-active-directory-forests-for-publishing"></a>Active Directory フォレストを発行用に構成するには  
 
-1.  Configuration Manager 콘솔의 왼쪽 아래에서 **관리**를 클릭합니다.  
+1.  Configuration Manager コンソールの左下隅で、**[管理]** をクリックします。  
 
-2.  **관리** 작업 영역에서 **계층 구성**을 확장하고 **검색 방법**을 클릭합니다.  
+2.  **[管理]** ワークスペースで、 **[階層の構成]**を展開し、 **[探索方法]**をクリックします。  
 
-3.  **Active Directory 포리스트 검색** 을 선택하고 **속성**을 클릭합니다.  
+3.  **[Active Directory フォレストの探索]** をクリックし、 **[プロパティ]**をクリックします。  
 
-4.  **속성** 대화 상자에서 **Active Directory 포리스트 검색 사용**을 선택합니다. 이 옵션이 활성화되면 **Active Directory 사이트 경계가 검색되면 자동으로 만들기**를 선택합니다. **가능한 한 빨리 전체 검색을 실행하시겠습니까?** **예**를 클릭합니다.  
+4.  **[プロパティ]** ダイアログ ボックスで、 **[Active Directory フォレストの探索を有効にする]**をオンにします。 これがアクティブになったら、 **[探索時に Active Directory サイトの境界を自動的に作成する]**をオンにします。 ダイアログ ボックスが表示され、 **[今すぐ完全な探索を実行しますか?]** [はい]のインストールをサポートするコア コンポーネントがいくつか必要です。  
 
-5.  화면 맨 위의 **검색 방법** 그룹에서 **지금 포리스트 검색 실행**을 클릭한 다음 사이드바에서 **Active Directory 포리스트** 로 이동합니다. Active Directory 포리스트가 검색된 포리스트 목록에 표시되어야 합니다.  
+5.  画面上部の **[探索方法]** グループで、 **[今すぐフォレスト探索を実行する]**をクリックし、サイドバーの **[Active Directory フォレスト]** に移動します。 Active Directory フォレストは、検出されたフォレストの一覧に表示されます。  
 
-6.  화면 맨 위의 **일반** 탭으로 이동합니다.  
+6.  画面上部の **[全般]** タブに移動します。  
 
-7.  **관리** 작업 영역에서 **계층 구성**을 확장하고 **Active Directory 포리스트**를 클릭합니다.  
+7.  **[管理]** ワークスペースで、 **[階層の構成]**を展開し、 **[Active Directory フォレスト]**をクリックします。  
 
-##### <a name="to-enable-a-configuration-manager-site-to-publish-site-information-to-your-active-directory-forest"></a>Configuration Manager 사이트에서 사이트 정보를 Active Directory 포리스트에 게시할 수 있도록 하려면  
+##### <a name="to-enable-a-configuration-manager-site-to-publish-site-information-to-your-active-directory-forest"></a>Configuration Manager サイトが Active Directory フォレストにサイト情報を発行できるようにするには:  
 
-1.  Configuration Manager 콘솔에서 **관리**를 클릭합니다.  
+1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
 
-2.  아직 검색되지 않은 새 포리스트를 구성합니다.  
+2.  まだ検出されていない新しいフォレストを構成します。  
 
-3.  **관리** 작업 영역에서 **Active Directory 포리스트**를 클릭합니다.  
+3.  [ **管理** ] ワークスペースで [ **Active Directory フォレスト**] をクリックします。  
 
-4.  사이트 속성의 **게시** 탭에서 연결된 포리스트를 선택한 다음 **확인** 을 클릭하여 구성을 저장합니다.
+4.  サイトのプロパティの **[発行]** タブで、接続されているフォレストを選択し、 **[OK]** をクリックします。

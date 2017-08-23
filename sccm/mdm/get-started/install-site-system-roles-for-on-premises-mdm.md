@@ -1,6 +1,6 @@
 ---
-title: "온-프레미스 MDM에 대한 역할 설치 - Configuration Manager | Microsoft 문서"
-description: "System Center Configuration Manager에서 온-프레미스 모바일 장치 관리를 위한 사이트 시스템 역할을 설치합니다."
+title: "オンプレミス MDM の役割のインストール - Configuration Manager | Microsoft Docs"
+description: "System Center Configuration Manager でのオンプレミス モバイル デバイス管理のサイト システムの役割のインストール"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -17,56 +17,56 @@ manager: angrobe
 ms.openlocfilehash: 4913606e2f8a36e0004f711b24ecd836d0485124
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="install-site-system-roles-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 위한 사이트 시스템 역할 설치
+# <a name="install-site-system-roles-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミス モバイル デバイス管理のサイト システムの役割のインストール
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 온\-프레미스 모바일 장치 관리를 사용하려면 Configuration Manager 사이트 인프라에 다음과 같은 사이트 시스템 역할이 있어야 합니다.  
+System Center Configuration Manager のオンプレミス モバイル デバイス管理では、Configuration Manager サイト インフラストラクチャに次のサイト システムの役割を必要とします。  
 
--   등록 지점  
+-   登録ポイント  
 
--   등록 프록시 지점  
+-   登録プロキシ ポイント  
 
--   배포 지점  
+-   配布ポイント  
 
--   장치 관리 지점  
+-   デバイス管理ポイント  
 
--   서비스 연결 지점  
+-   [サービス接続ポイント]  
 
- 대부분의 PC 및 장치가 Configuration Manager 클라이언트 소프트웨어를 사용하여 관리되는 조직에 온\-프레미스 모바일 장치 관리를 추가하는 경우 대부분의 사이트 시스템 역할이 기존 인프라의 일부로 이미 설치되어 있을 수 있습니다. 설치되어 있지 않은 경우 사이트 시스템 역할을 사이트에 추가하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에 대한 사이트 시스템 역할 추가](../../core/servers/deploy/configure/add-site-system-roles.md)를 참조하세요.  
-
-> [!NOTE]  
->  장치 관리 지점 사이트 시스템 역할에서 데이터베이스 복제본을 사용하는 경우 데이터베이스 복제본이 동기화될 때까지 새로 등록된 장치는 처음에 장치 관리 지점에 연결하지 못합니다. 이러한 연결 오류는 데이터베이스 복제본에 성공적인 연결에 필요한 새로 등록된 장치에 대한 정보가 없기 때문에 발생합니다. 복제본은 5분마다 동기화되므로 등록 후에 처음 5분 동안은 장치가 연결되지 않으며(일반적으로 2번 연결 시도 실패) 그 이후에 성공적으로 연결됩니다.  
-
- 기존 사이트 시스템 역할을 사용하거나 새 역할을 추가하는 경우 최신 장치를 관리하는 데 사용되도록 구성해야 합니다. 온\-프레미스 모바일 장치 관리에 대해 올바르게 작동하도록 배포 지점 및 장치 관리 지점을 구성하려면 다음 단계를 따르세요.  
+ ほとんどの PC とデバイスを Configuration Manager クライアント ソフトウェアを使用して管理している組織にオンプレミス モバイル デバイス管理を追加する場合、ほとんどのサイト システムの役割が既存のインフラストラクチャの一部として既にインストールされている可能性があります。 インストールされていない場合、「[System Center Configuration Manager のサイト システム役割の追加](../../core/servers/deploy/configure/add-site-system-roles.md)」を参照してください。サイトに追加する方法をご確認いただけます。  
 
 > [!NOTE]  
->  Configuration Manager의 현재 분기는 장치에서 온\-프레미스 모바일 장치 관리에 대한 배포 지점 및 장치 관리 지점으로의 인트라넷 연결만 지원합니다. 그러나 Mac OS X 컴퓨터도 관리하는 경우 해당 클라이언트에 이러한 사이트 시스템 역할에 대한 인터넷 연결이 필요합니다. 이 경우 배포 지점 및 장치 관리 지점의 속성을 구성할 때 **인트라넷 및 인터넷 연결 허용** 설정을 대신 사용해야 합니다.  
+>  デバイス管理ポイント サイト システムの役割を持つデータベース レプリカを使用する場合、新しく登録されたデバイスは、データベース レプリカがデバイス管理ポイントと同期するまでの間、デバイス管理ポイントへの接続に失敗します。 この接続エラーは、正常に接続するために必要な、新しく登録されたデバイスに関する情報が、データベース レプリカにないために発生します。 レプリカは 5 分ごとに同期するため、デバイスが接続に失敗するのは、登録後の最初の 5 分間です (通常、2 回の接続試行)。その後、デバイスは正常に接続します。  
 
-### <a name="to-configure-site-system-roles-to-manage-modern-devices"></a>최신 장치를 관리하도록 사이트 시스템 역할을 구성하려면  
+ 既存のサイト システムを使用するか、新しいサイト システムを追加するかに関係なく、最新のデバイスを管理するために使用するようそれらを構成する必要があります。 以下の手順に従って、オンプレミスのモバイル デバイス管理で正しく機能するように配布ポイントとデバイス管理ポイントを構成します。  
 
-1.  Configuration Manager 콘솔에서 **관리** > **개요** > **사이트 구성** > **서버 및 사이트 시스템 역할**을 클릭합니다.  
+> [!NOTE]  
+>  Configuration Manager の現在のブランチは、デバイスからオンプレミス モバイル デバイス管理の配布ポイントとデバイス管理ポイントへのイントラネット接続のみをサポートしています。 ただし、Mac OS X コンピューターも管理している場合は、それらのクライアントにはこれらのサイト システムの役割へのインターネット接続が必要となります。 その場合、配布ポイントとデバイス管理ポイントのプロパティを構成するときに、代わりに **[イントラネットとインターネットの接続を許可する]** 設定を使用する必要があります。  
 
-2.  구성하려는 배포 지점 또는 장치 관리 지점이 있는 사이트 서버를 선택하고 **사이트 시스템**의 속성을 연 다음 FQDN이 지정되어 있는지 확인합니다. **확인**을 클릭합니다.  
+### <a name="to-configure-site-system-roles-to-manage-modern-devices"></a>最新のデバイスを管理するようサイト システムの役割を構成するには:  
 
-3.  배포 지점 사이트 시스템 역할에 대한 속성을 엽니다. 일반 탭에서 **HTTPS**가 선택되어 있는지 확인하고 **인트라넷 전용 연결 허용**을 선택합니다.  
+1.  Configuration Manager コンソールで、**[管理]**、**[概要]**、**[サイトの構成]**、**[サーバーとサイト システムの役割]** の順にクリックします。  
 
-     또한 Configuration Manager 클라이언트를 사용하여 Mac 컴퓨터를 별도로 관리하는 경우 **인트라넷 및 인터넷 연결 허용**을 대신 사용합니다.  
+2.  構成する配布ポイントまたはデバイス管理ポイントとともにサイト システムのサーバーを選択し、**[サイト システム]** のプロパティを開き、FQDN が指定されていることを確認します。 **[OK]**をクリックします。  
+
+3.  配布ポイント サイト システムの役割のプロパティを開きます。 [全般] タブで、**[HTTPS]** が選択されていることを確認し、**[イントラネットのみのクライアント接続を許可する]** を選択します。  
+
+     Configuration Manager クライアントとともに Mac コンピューターも別に管理している場合、代わりに **[イントラネットとインターネットの接続を許可する]** を使用します。  
 
     > [!NOTE]  
-    >  인트라넷 연결에 대해 구성된 배포 지점에는 사이트 경계도 구성되어야 합니다. Configuration Manager의 현재 분기는 온\-프레미스 모바일 장치 관리에 대해 IPv4 범위 경계만 지원합니다. 사이트 경계를 구성하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에 대한 사이트 경계 및 경계 그룹 정의](../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)를 참조하세요.  
+    >  イントラネット接続用に構成された配布ポイントに対しては、サイトの境界を構成する必要があります。 Configuration Manager の現在のブランチは、オンプレミス モバイル デバイス管理に関して、IPv4 境界のみをサポートしています。 サイト境界構成については、「[System Center Configuration Manager のサイト境界と境界グループの定義](../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)」を参照してください。  
 
-4.  **모바일 장치가 이 배포 지점에 연결하도록 허용** 옆의 확인란을 클릭한 다음 **확인**을 클릭합니다.  
+4.  **[モバイル デバイスがこの配布ポイントに接続するのを許可する]** の横にあるチェック ボックスをクリックし、**[OK]** をクリックします。  
 
-5.  관리 지점 사이트 시스템 역할에 대한 속성을 엽니다. 일반 탭에서 **HTTPS**가 선택되어 있는지 확인하고 **인트라넷 전용 연결 허용**을 선택합니다.  
+5.  管理ポイント サイト システムの役割のプロパティを開きます。 [全般] タブで、**[HTTPS]** が選択されていることを確認し、**[イントラネットのみのクライアント接続を許可する]** を選択します。  
 
-     또한 Configuration Manager 클라이언트를 사용하여 Mac 컴퓨터를 별도로 관리하는 경우 **인트라넷 및 인터넷 연결 허용**을 대신 사용합니다.  
+     Configuration Manager クライアントとともに Mac コンピューターも別に管理している場合、代わりに **[イントラネットとインターネットの接続を許可する]** を使用します。  
 
-6.  **모바일 장치 및 Mac 컴퓨터가 이 관리 지점을 사용할 수 있도록 허용** 옆의 확인란을 클릭합니다. **확인**을 클릭합니다.  
+6.  **[モバイル デバイスおよび Mac コンピューターでこの管理ポイントを使用できるようにする]** の横にあるチェック ボックスをクリックします。 **[OK]**をクリックします。  
 
-     이렇게 하면 관리 지점이 장치 관리 지점이 됩니다.  
+     これにより実際、管理ポイントがデバイス管理ポイントに変換されます。  
 
- 사이트 시스템 역할이 추가되고 최신 장치를 관리하도록 구성되면 해당 역할을 호스트하는 서버를 관리되는 장치에 등록하고 통신하기 위한 신뢰할 수 있는 끝점으로 구성해야 합니다. 자세한 내용은 [System Center Configuration Manager에서 온-프레미스 모바일 장치 관리를 위해 신뢰할 수 있는 통신에 대한 인증서 설정](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)을 참조하세요.  
+ 最新のデバイスを管理するためのサイト システムの役割を追加して構成したら、管理対象のデバイスを登録して通信するために、信頼されるエンドポイントとしてそれらの役割をホストするサーバーを構成する必要があります。 詳細については、「[System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために信頼された通信用の証明書をセットアップする](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)」を参照してください。  

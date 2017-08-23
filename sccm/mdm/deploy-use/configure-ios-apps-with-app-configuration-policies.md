@@ -1,6 +1,6 @@
 ---
-title: "앱 구성 정책을 사용하여 iOS 앱 구성 | Microsoft 문서"
-description: "앱을 실행하기 전에 사용자에게 앱 구성 정책을 배포하여 iOS 8 이상을 실행 중인 장치의 구성 문제를 해결합니다."
+title: "アプリ構成ポリシーを使用した iOS アプリの構成 | Microsoft Docs"
+description: "iOS 8 以降を実行しているデバイスの構成問題の解消に役立ちます。ユーザーがアプリを実行する前にアプリ構成ポリシーをユーザーに展開します。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,59 +18,59 @@ manager: angrobe
 ms.openlocfilehash: 50aea2afaf34974ca92ac58b6569bff56403a9ab
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 앱 구성 정책을 사용하여 iOS 앱에 설정 적용
+# <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager でアプリ構成ポリシーを使用し、iOS アプリに設定を適用する
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
 
-System Center Configuration Manager(Configuration Manager)에서 앱 구성 정책을 사용하여 사용자가 앱을 실행할 때 필요할 수 있는 설정을 배포할 수 있습니다. 예를 들어 앱에서 다음 세부 정보를 지정하도록 사용자에게 요구할 수 있습니다.
-- 사용자 지정 포트 번호
-- 언어 설정
-- 보안 설정
-- 회사 로고와 같은 브랜딩 설정
+System Center Configuration Manager (Configuration Manager) のアプリ構成ポリシーを使用し、ユーザーがアプリを実行するときに必要となるような設定を配布できます。 たとえば、アプリで次のような詳細の指定がユーザーに要求されます。
+- カスタム ポート番号
+- 言語の設定
+- セキュリティ設定
+- 会社のロゴなど、ブランドの設定
 
-사용자가 설정을 잘못 입력하는 경우 지원 센터에서 수정해야 하며 앱 배포 속도가 느려집니다.
-이러한 문제를 방지하기 위해 앱 구성 정책을 사용하여 앱을 실행하기 전에 필수 설정을 사용자에게 배포할 수 있습니다. 설정이 자동으로 사용자와 연결됩니다. 사용자는 아무 작업도 수행할 필요가 없습니다.
-구성 정책을 사용자와 장치에 직접 배포하는 대신 Configuration Manager에서 앱 구성 정책을 사용하려면 앱을 배포할 때 배포 유형과 정책을 연결합니다. 정책 설정은 앱에서 해당 설정을 확인할 때마다(일반적으로 앱을 처음 실행할 때) 적용됩니다.
+ユーザーが設定を間違って入力すると、それを修正する負担がヘルプ デスクにかかり、アプリの展開が遅くなります。
+そのような問題を回避するために、アプリ構成ポリシーを使用することで、ユーザーがアプリを実行する前に、必要な設定をユーザーに展開できます。 設定はユーザーに自動的に関連付けられています。 ユーザー側では、いかなる操作も必要ありません。
+構成ポリシーをユーザーやデバイスに直接展開する代わりに、Configuration Manager でアプリ構成ポリシーを使用するには、アプリを展開するとき、ポリシーを展開の種類に関連付けます。 アプリでポリシー設定が確認されるとき (通常、アプリを初めて実行するとき)、ポリシー設定が適用されます。
 
-현재 앱 구성 정책은 iOS 8 이상을 실행하는 장치에서 다음과 같은 응용 프로그램 유형에만 사용할 수 있습니다.
+現在のところ、アプリ構成ポリシーは、iOS 8 以降を実行しているデバイスのみで利用可能で、次のアプリケーションの種類をサポートします。
 
-- **iOS용 앱 패키지(*.ipa 파일)**
-- **App Store의 iOS용 앱 패키지**
+- **iOS アプリ パッケージ (*.ipa ファイル)**
+- **iOS 用アプリ パッケージ (App ストア内)**
 
-앱 설치 유형에 대한 자세한 내용은 [응용 프로그램 관리 소개](/sccm/apps/understand/introduction-to-application-management)를 참조하세요.
+アプリのインストールの種類については、「[アプリケーション管理の概要](/sccm/apps/understand/introduction-to-application-management)」を参照してください。
 
-## <a name="create-an-app-configuration-policy"></a>앱 구성 정책 만들기
+## <a name="create-an-app-configuration-policy"></a>アプリ構成ポリシーを作成する
 
-1. Configuration Manager 콘솔에서 **소프트웨어 라이브러리** > **응용 프로그램 관리** > **앱 구성 정책**을 선택합니다.
-2. **홈** 탭의 **앱 구성 정책** 그룹에서 **새 응용 프로그램 구성 정책 만들기**를 선택합니다.
-3. 앱 구성 정책 만들기 마법사의 **일반** 페이지에서 다음 정책 정보를 설정합니다.
-  - **이름**. 정책의 고유 이름을 입력합니다.
-  - **설명**. (선택 사항) 정책을 식별하기 쉽도록 설명을 추가할 수 있습니다.
-  - **검색 및 필터링 향상을 위해 할당된 범주입니다**. (선택 사항) 범주를 만들고 정책에 할당하려면 **범주**를 선택합니다. 범주를 사용하면 Configuration Manager 콘솔에서 항목을 쉽게 정렬하고 찾을 수 있습니다.
-4. **iOS 정책** 페이지에서 구성 정책 정보를 설정하는 방법을 선택합니다.
-  - **이름 및 값 쌍 지정**. 중첩을 사용하지 않는 속성 목록 파일에 이 옵션을 사용할 수 있습니다.
+1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**、**[アプリケーション管理]**、**[アプリ構成ポリシー]** の順に選択します。
+2. **[ホーム]** タブの **[アプリ構成ポリシー]** グループで、**[新しいアプリケーション構成ポリシーを作成します]** を選択します。
+3. アプリ構成ポリシーの作成ウィザードの **[全般]** ページで、ポリシーの次の情報を設定します。
+  - **名前**。 ポリシーの一意の名前を入力します。
+  - **説明**。 (オプション) ポリシーの識別を簡単にするために、説明を追加できます。
+  - **検索とフィルター処理を向上させるために割り当てたカテゴリ**。 (オプション) カテゴリを作成し、ポリシーに割り当てるには、**[カテゴリ]** を選択します。 カテゴリを利用すると、Configuration Manager コンソールの項目を並べ替えたり、検索したりするときに便利です。
+4. **[iOS ポリシー]** ページで、構成ポリシー情報の設定方法を選択します。
+  - **名前と値のペアを指定します**。 入れ子を利用しないプロパティ リスト ファイルにこのオプションを利用できます。
 
-      *이름 및 값 쌍을 지정하려면*
-        1. 새로운 쌍을 추가하려면 **새로 만들기**를 선택합니다.
-        2. **이름/값 쌍 추가** 대화 상자에서 다음을 지정합니다.
-            - **유형**. 목록에서 지정하려는 값 형식을 선택합니다.
-            - **이름**. 값을 지정하려는 속성 목록 키의 이름을 입력합니다.
-            - **값**. 입력한 키에 적용할 값을 입력합니다.
+      *名前と値のペアを指定するには*
+        1. 新しいペアを追加するには、**[新規作成]** を選択します。
+        2. **[名前と値のペアの追加]** ダイアログ ボックスで、次を指定します。
+            - **種類**。 一覧から、指定する値の種類を選択します。
+            - **名前**。 値を指定するプロパティ リスト キーの名前を入力します。
+            - **値**。 入力したキーに適用する値を入力します。
 
-  - **속성 목록 파일 찾기**. 앱 구성 XML 파일이 이미 있는 경우 또는 중첩을 사용하는 좀 더 복잡한 파일에 대해서는 이 옵션을 사용합니다.
+  - **プロパティ リスト ファイルを参照する** アプリ構成 XML ファイルを既に用意している場合、あるいは入れ子を利用するより複雑なファイルに対してこのオプションを使用します。
 
-    *속성 목록 파일을 찾으려면*
+    *プロパティ リスト ファイルを参照するには*
 
-      1.  **앱 구성 정책** 필드에 속성 목록 정보를 올바른 XML 형식으로 입력합니다.
+      1.  **[アプリ構成ポリシー]** フィールドで、正しい XML 形式でプロパティ リスト情報を入力します。
 
-      XML 속성 목록에 대한 자세한 내용은 iOS Developer Library의 [XML 속성 목록](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html)을 참조하세요.
+      XML プロパティ リストの詳細については、iOS 開発者ライブラリの [XML プロパティ リスト](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html)に関するページを参照してください。
 
-XML 속성 목록의 형식은 구성하는 앱에 따라 달라집니다. 사용할 형식에 대한 자세한 내용은 앱 공급업체에 문의하세요.
-Intune에서는 속성 목록의 다음 데이터 형식을 지원합니다.
+XML プロパティ リストの形式は、構成するアプリによって異なります。 使う形式について詳しくは、アプリの供給元にお問い合わせください。
+Intune は、プロパティ リストの次のデータ型をサポートしています。
             
             ```
             <integer>
@@ -80,8 +80,8 @@ Intune에서는 속성 목록의 다음 데이터 형식을 지원합니다.
             <dict>
             <true /> or <false />
             ```
-데이터 형식에 대한 자세한 내용은 iOS 개발자 라이브러리의 [속성 목록 정보](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html)를 참조하세요.
-Intune은 또한 속성 목록에서 다음과 같은 토큰 형식을 지원합니다.
+データ型の詳細については、iOS 開発者ライブラリの[プロパティ リスト](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html)に関するページを参照してください。
+Intune では、プロパティ リストで次の種類のトークンもサポートします。
             
             ```
             {{userprincipalname}} - (Example: John@contoso.com)
@@ -95,24 +95,24 @@ Intune은 또한 속성 목록에서 다음과 같은 토큰 형식을 지원합
             {{serialnumberlast4digits}} - (Example: G5V2) for iOS devices
             ```
 
-{{ 및 }} 문자는 토큰 유형에만 사용되고 다른 목적으로 사용하면 안 됩니다.
+{{ 文字と }} 文字を使うことができるのはトークンの種類のみであり、他の目的には使わないでください。
             
-5. 이전에 만든 XML 파일을 가져오려면 **파일 선택**을 선택합니다.
-6. **다음**을 선택합니다. XML 코드에 오류가 있는 경우 계속 진행하기 전에 이 문제를 해결해야 합니다.
-7. 마법사에 표시된 단계를 완료합니다.
+5. 先に作成した XML ファイルをインポートするには、**[ファイルの選択]** を選択します。
+6. **[次へ]** を選択します。 XML コードにエラーがある場合、続行する前に修正する必要があります。
+7. ウィザードの手順を完了します。
 
-새 앱 구성 정책이 **소프트웨어 라이브러리** 작업 영역의 **앱 구성 정책** 노드에 표시됩니다.
+新しいアプリ構成ポリシーが **[ソフトウェア ライブラリ]** ワークスペースの **[アプリ構成ポリシー]** ノードに表示されます。
 
-## <a name="associate-an-app-configuration-policy-with-a-configuration-manager-application"></a>Configuration Manager 응용 프로그램과 앱 구성 정책을 연결합니다.
+## <a name="associate-an-app-configuration-policy-with-a-configuration-manager-application"></a>アプリ構成ポリシーを Configuration Manager アプリケーションに関連付ける
 
-앱 구성 정책을 iOS 앱 배포와 연결하려면 [응용 프로그램 배포](/sccm/apps/deploy-use/deploy-applications) 항목의 절차를 사용하여 일반적인 방법으로 응용 프로그램을 배포합니다.
+アプリ構成ポリシーと iOS アプリの展開を関連付けるには、「[アプリケーションの展開](/sccm/apps/deploy-use/deploy-applications)」というトピックの手順を利用し、通常行うようにアプリを展開します。
 
-소프트웨어 배포 마법사의 **앱 구성 정책** 페이지에서 **새로 만들기**를 선택합니다. **앱 구성 정책 선택** 대화 상자에서 응용 프로그램 배포 유형과 여기에 연결할 앱 구성 정책을 선택합니다.
-배포 유형이 설치되면 앱 구성 정책 설정이 자동으로 적용됩니다.
+ソフトウェアの展開ウィザードの **[アプリ構成ポリシー]** ページで、**[新規]** を選択します。 **[アプリ構成ポリシーの選択]** ダイアログ ボックスで、アプリケーションの展開の種類とそれを関連付けるアプリ構成ポリシーを選択します。
+展開の種類がインストールされると、アプリ構成ポリシー設定が自動的に適用されます。
 
-## <a name="example-format-for-the-mobile-app-configuration-xml-file"></a>모바일 앱 구성 XML 파일의 형식 예
+## <a name="example-format-for-the-mobile-app-configuration-xml-file"></a>モバイル アプリ構成 XML ファイルの形式の例
 
-모바일 앱 구성 파일을 만들 때 이 형식을 사용하여 다음 값 중 하나 이상을 지정할 수 있습니다.
+モバイル アプリ構成ファイルを作成するとき、この形式を使用し、次の値の 1 つまたは複数指定できます。
 
 ```
 <dict>

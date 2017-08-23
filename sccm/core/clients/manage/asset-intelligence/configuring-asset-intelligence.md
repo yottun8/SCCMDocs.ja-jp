@@ -1,6 +1,6 @@
 ---
-title: "Asset Intelligence 구성 | Microsoft 문서"
-description: "System Center Configuration Manager에서 Asset Intelligence를 설정합니다."
+title: "資産インテリジェンスの構成 | Microsoft Docs"
+description: "System Center Configuration Manager で資産インテリジェンスをセットアップします。"
 ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
@@ -18,216 +18,216 @@ manager: angrobe
 ms.openlocfilehash: d2704e0f93ad9748f7eb06d714b3754463cb3bdb
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="configure-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 Asset Intelligence 구성
+# <a name="configure-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager で資産インテリジェンスを構成する
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-Asset Intelligence는 소프트웨어 라이선스 사용을 인벤토리에 포함하고 관리합니다.   
+資産インテリジェンスはインベントリを作成し、ソフトウェア ライセンスの使用状況を管理します。   
 
-## <a name="steps-to-configure-asset-intelligence"></a>Asset Intelligence 구성 단계  
+## <a name="steps-to-configure-asset-intelligence"></a>資産インテリジェンスの構成手順  
    
 
-- **1단계**: Asset Intelligence 보고서에 필요한 인벤토리 데이터를 수집하려면 [System Center Configuration Manager에서 하드웨어 인벤토리를 확장하는 방법](../../../../core/clients/manage/inventory/extend-hardware-inventory.md)에 설명된 대로 하드웨어 인벤토리 클라이언트 에이전트를 사용하도록 설정해야 합니다.
-- **2단계**: [Asset Intelligence 하드웨어 인벤토리 보고 클래스를 사용하도록 설정](#BKMK_EnableAssetIntelligence)합니다.  
-- **3단계**: [Asset Intelligence 동기화 지점을 설치](#BKMK_InstallAssetIntelligenceSynchronizationPoint)합니다.
-- **4단계**: [성공 로그온 이벤트의 감사를 사용하도록 설정](#BKMK_EnableSuccessLogonEvents)합니다.  
-- **5단계**: [소프트웨어 라이선스 정보를 가져옵니다.](#BKMK_ImportSoftwareLicenseInformation)  
-- **6단계**: [Asset Intelligence 유지 관리 작업을 구성](#BKMK_ConfigureMaintenanceTasks)합니다. 
+- **手順 1**: 資産インテリジェンス レポートに必要なインベントリ データを収集するには、「[System Center Configuration Manager でのハードウェア インベントリの拡張方法](../../../../core/clients/manage/inventory/extend-hardware-inventory.md)」の説明に従って、ハードウェア インベントリのクライアント エージェントを有効にする必要があります。
+- **手順 2**: [資産インテリジェンスのハードウェア インベントリ レポート クラスを有効化](#BKMK_EnableAssetIntelligence)  
+- **手順 3**: [資産インテリジェンス同期ポイントのインストール](#BKMK_InstallAssetIntelligenceSynchronizationPoint)
+- **手順 4**: [ログオンに成功したイベントの監査の有効化](#BKMK_EnableSuccessLogonEvents)  
+- **手順 5**: [ソフトウェア ライセンス情報のインポート](#BKMK_ImportSoftwareLicenseInformation)  
+- **手順 6**: [資産インテリジェンスのメンテナンス タスクの構成](#BKMK_ConfigureMaintenanceTasks) 
 
 
 ###  <a name="BKMK_EnableAssetIntelligence"></a> Enable Asset Intelligence hardware inventory reporting classes  
- Configuration Manager 사이트에 Asset Intelligence를 사용하도록 설정하려면 Asset Intelligence 하드웨어 인벤토리 보고 클래스를 하나 이상 사용하도록 설정해야 합니다. **Asset Intelligence** 홈페이지 또는 **관리** 작업 영역, **클라이언트 설정** 노드, 클라이언트 설정 속성에서 클래스를 사용하도록 설정할 수 있습니다. 다음 절차 중 하나를 수행하십시오.  
+ Configuration Manager サイトで資産インテリジェンスを有効にするには、1 つ以上の資産インテリジェンス ハードウェア インベントリ レポート クラスを有効にする必要があります。 [資産インテリジェンス] **** ホームページ、または [管理] **** ワークスペースの [クライアント設定] **** ノードにあるクライアント設定プロパティでクラスを有効にすることができます。 次のいずれかの手順に従います。  
 
-##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-the-asset-intelligence-home-page"></a>Asset Intelligence 홈페이지에서 Asset Intelligence 하드웨어 인벤토리 보고 클래스를 사용하도록 설정하려면  
+##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-the-asset-intelligence-home-page"></a>資産インテリジェンスのホームページから資産インテリジェンス ハードウェア インベントリ レポート クラスを有効にするには  
 
-1.  Configuration Manager 콘솔에서 **자산 및 준수** > **Asset Intelligence**를 선택합니다.  
+1.  Configuration Manager コンソールで、[**資産とコンプライアンス**] > [**資産インテリジェンス**] の順に選択します。  
 
-3.  **홈** 탭의 **Asset Intelligence** 그룹에서 **인벤토리 클래스 편집**을 선택합니다.   
+3.  [**ホーム**] タブの [**資産インテリジェンス**] グループで [**インベントリクラスの編集**] を選択します。   
 
-4.  Asset Intelligence 보고를 사용하도록 설정하려면 **모든 Asset Intelligence 보고 클래스 사용** 또는 **선택한 Asset Intelligence 보고 클래스만 사용**을 선택하고 표시된 클래스 중 하나 이상의 보고 클래스를 선택합니다.  
-
-    > [!NOTE]  
-    >  이 절차를 사용하여 사용하도록 설정한 하드웨어 인벤토리 클래스에 종속된 Asset Intelligence 보고서는 클라이언트가 데이터를 검색하여 하드웨어 인벤토리로 반환할 때까지 데이터를 표시하지 않습니다.  
-
-
-##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-client-settings-properties"></a>클라이언트 설정 속성에서 Asset Intelligence 하드웨어 인벤토리 보고 클래스를 사용하도록 설정하려면  
-
-1.  Configuration Manager 콘솔에서 **관리** >  **클라이언트 설정** > **기본 클라이언트 에이전트 설정**을 선택합니다. 사용자 지정 클라이언트 설정을 만들었다면 해당 설정을 선택할 수 있습니다.  
-
-3.  **홈** 탭의 **속성** 그룹에서 **속성**을 선택합니다.   
-
-4.  **하드웨어 인벤토리** > **클래스 설정**을 선택합니다. .  
-
-5.  **범주별 필터링** > **Asset Intelligence 보고 클래스**를 선택합니다. 클래스의 목록은 Asset Intelligence 하드웨어 인벤토리 보고 클래스로만 새로 고쳐집니다.  
-
-6.  목록에서 보고 클래스를 하나 이상 선택합니다.  
+4.  資産インテリジェンス レポートを有効にするには、[**すべての資産インテリジェンス レポート クラスを有効にする**]、または [**選択した資産インテリジェンス レポート クラスのみを有効にする**] を選択した後、表示されているレポートクラスの 1 つ以上を選択します。  
 
     > [!NOTE]  
-    >  이 절차를 사용하여 사용하도록 설정한 하드웨어 인벤토리 클래스에 종속된 Asset Intelligence 보고서는 클라이언트가 데이터를 검색하여 하드웨어 인벤토리로 반환할 때까지 데이터를 표시하지 않습니다.  
+    >  この手順を使用して有効にしたハードウェア インベントリ クラスに依存する資産インテリジェンス レポートには、クライアントがスキャンを行い、ハードウェア インベントリが返されるまで、データは表示されません。  
+
+
+##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-client-settings-properties"></a>クライアント設定プロパティから資産インテリジェンス ハードウェア インベントリ レポート クラスを有効にするには  
+
+1.  Configuration Manager コンソールで、[**管理**] >  [**クライアント設定**] > [**既定のクライアント エージェント設定**] の順に選択します。 カスタム クライアント設定を作成している場合は、それらを代わりに選択できます。  
+
+3.  [**ホーム**] タブの [**プロパティ**] グループで、[**プロパティ**] を選択します。   
+
+4.  [**ハードウェア インベントリ**] > [**クラスの設定**] の順に選択します。 。  
+
+5.  [**カテゴリ基準のフィルター処理**] > [**資産インテリジェンス レポート クラス**] の順に選択します。 クラスの一覧が資産インテリジェンス ハードウエア インベントリ レポート クラスでのみリフレッシュされます。  
+
+6.  一覧から少なくとも 1 つのレポート クラスを選択します。  
+
+    > [!NOTE]  
+    >  この手順を使用して有効にしたハードウェア インベントリ クラスに依存する資産インテリジェンス レポートには、クライアントがスキャンを行い、ハードウェア インベントリが返されるまで、データは表示されません。  
   
 
 ###  <a name="BKMK_InstallAssetIntelligenceSynchronizationPoint"></a> Install an Asset Intelligence Synchronization Point  
 
-Asset Intelligence 동기화 지점 사이트 시스템 역할은 Configuration Manager 사이트를 System Center Online에 연결하여 Asset Intelligence 카탈로그 정보를 동기화하는 데 사용됩니다. Asset Intelligence 동기화 지점은 Configuration Manager 계층 구조의 최상위 사이트에 위치한 사이트 시스템에만 설치할 수 있으며 TCP 포트 443을 사용하여 System Center Online과 동기화하는 인터넷 액세스가 필요합니다.
+資産インテリジェンス同期ポイント サイト システムの役割は、Configuration Manager サイトを System Center Online に接続して資産インテリジェンス カタログ情報を同期するために使用されます。 資産インテリジェンス同期ポイントは、Configuration Manager 階層の最上位サイトに存在しているサイト システムにのみインストール可能であり、インターネット アクセスで TCP ポート 443 を使用して System Center Online と同期する必要があります。
 
-새 Asset Intelligence 카탈로그 정보를 다운로드하는 것 외에도 Asset Intelligence 동기화 지점을 통해 사용자 지정 소프트웨어 타이틀 정보를 System Center Online에 분류를 위해 업로드할 수 있습니다. Microsoft에서는 모든 업로드된 소프트웨어 타이틀을 공개 정보로 처리합니다. 사용자 지정 소프트웨어 타이틀에 기밀 정보나 비공개 정보가 포함되지 않도록 하세요. 소프트웨어 타이틀 분류를 요청하는 방법에 대한 자세한 내용은 [범주화되지 않은 소프트웨어 타이틀에 대한 카탈로그 업데이트 요청](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md#BKMK_RequestCatalogUpdate)을 참조하세요.  
+資産インテリジェンス同期ポイントは、新しい資産インテリジェンス カタログ情報をダウンロードするだけでなく、カスタム ソフトウェア タイトル情報をカテゴリ分類用に System Center Online にアップロードできます。 Microsoft は、アップロードされたすべてのソフトウェア タイトルを公共の情報として扱います。 カスタム ソフトウェア タイトルに機密情報や企業情報が含まれていないことを確認してください。 ソフトウェア タイトルのカテゴリ化要求の詳細については、「[カテゴリ化されていないソフトウェア タイトルのカタログ更新の要求](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md#BKMK_RequestCatalogUpdate)」を参照してください。  
 
-##### <a name="to-install-an-asset-intelligence-synchronization-point-site-system-role"></a>Asset Intelligence 동기화 지점 사이트 시스템 역할을 설치하려면  
+##### <a name="to-install-an-asset-intelligence-synchronization-point-site-system-role"></a>資産インテリジェンス同期ポイント サイト システムの役割をインストールするには  
 
-1.  Configuration Manager 콘솔에서 **관리**> **사이트 구성** > **서버 및 사이트 시스템 역할**을 선택합니다.  
+1.  Configuration Manager コンソールで、**[管理]**、**[サイトの構成]**、**[サーバーとサイト システムの役割]** の順に選択します。  
 
-3.  기존 또는 새 사이트 시스템 서버에 Asset Intelligence 동기화 지점 사이트 시스템 역할을 추가합니다.  
+3.  資産インテリジェンス同期ポイント サイト システムの役割を新規または既存のサイト システム サーバーに追加します。  
 
-    -  **새 사이트 시스템 서버**: **홈** 탭의 **만들기** 그룹에서 **사이트 시스템 서버 만들기**를 선택하여 마법사를 시작합니다.   
+    -  **新しいサイト システム サーバー**の場合: [**ホーム**] タブの [**作成**] グループで [**サイト システム サーバーの作成**] を選択して、ウィザードを開始します。   
 
         > [!NOTE]  
-        >  기본적으로 Configuration Manager에서 사이트 시스템 역할을 설치할 때 사용 가능한 첫 번째 NTFS 포맷의 하드 디스크 드라이브(사용 가능한 하드 디스크 공간이 가장 큼)에 설치 파일이 설치됩니다. Configuration Manager가 특정 드라이브에 설치되지 않도록 하려면 사이트 시스템 서버를 설치하기 전에 No_sms_on_drive.sms라는 빈 파일을 만들고 드라이브의 루트 폴더에 복사합니다.  
+        >  既定では、Configuration Manager がサイト システムの役割をインストールする際、ハード ディスク空き領域が最も多く残っていて、最初に利用可能な NTFS 形式のハード ディスク ドライブにインストール ファイルがインストールされます。 Configuration Manager が特定のドライブにインストールされないようにするには、サイト システム サーバーをインストールする前に、no_sms_on_drive.sms と言う名前の空のファイルを作成して、ドライブのルート フォルダーにコピーしておきます。  
 
-    -  **기존 사이트 시스템 서버**: Asset Intelligence 동기화 지점 사이트 시스템 역할을 설치할 서버를 선택합니다. 서버를 선택하면 서버에 이미 설치되어 있는 사이트 시스템 역할의 목록이 세부 정보 창에 나타납니다.  
+    -  **既存のサイト システム サーバー**の場合: 資産インテリジェンス同期ポイントのサイト システムの役割をインストールするサーバーを選択します。 サーバーを選択すると、サーバーに既にインストールされているサイト システムの役割の一覧が、詳細ウィンドウに表示されます。  
 
-         **홈** 탭의 **서버** 그룹에서 **사이트 시스템 역할 추가**를 선택하여 마법사를 시작합니다.  
+         [**ホーム**] タブの [**サーバー**] グループで、[**サイト システムの役割の追加**] をクリックします。  
 
-4.  **일반** 페이지를 완료합니다. 기존 사이트 시스템 서버에 Asset Intelligence 동기화 지점을 추가할 때에는 이전에 구성된 값을 확인해야 합니다.  
+4.  [**全般**] ページに入力します。 資産インテリジェンス同期ポイントを既存のサイト システム サーバーに追加する場合は、以前に構成した値を確認します。  
 
-5.  **시스템 역할 선택** 페이지의 사용 가능한 역할 목록에서 **Asset Intelligence 동기화 지점**을 선택합니다.  
+5.  [**システムの役割の選択**] ページで、利用可能な役割の一覧から [**資産インテリジェンス同期ポイント**] を選択します。  
 
-6.  **Asset Intelligence 동기화 지점 연결 설정** 페이지에서 **다음**을 선택합니다.  
+6.  [**資産インテリジェンス同期ポイント接続設定**] ページで、[**次へ**] を選択します。  
 
-     기본적으로 **이 Asset Intelligence 동기화 지점 사용** 설정이 선택되어 있으며 이 페이지에서는 구성할 수 없습니다. System Center Online에서는 TCP 포트 443에 대해서만 네트워크 트래픽이 허용되므로 **SSL 포트 번호** 설정은 마법사의 이 페이지에서 구성할 수 없습니다.  
+     既定では、[この資産インテリジェンス同期ポイントを使用する] **** 設定が選択されており、このページでは構成できません。 System Center Online は TCP ポート 443 経由のネットワーク トラフィックのみを受け付けるため、ウィザードのこのページで [SSL ポート番号] **** 設定を構成することはできません。  
 
-7.  선택적으로 System Center Online 인증 인증서(.pfx) 파일 경로를 지정할 수 있습니다. 일반적으로 사이트 역할이 설치되는 동안 연결 인증서가 자동으로 프로비전되므로 인증서 경로를 지정하지 않습니다.  
+7.  オプションとして、System Center Online の認証証明書 (.pfx) ファイルへのパスを指定できます。 接続証明書はサイトの役割をインストールするときに自動的にプロビジョニングされるため、通常は証明書へのパスは指定しません。  
 
-8.  **프록시 서버 설정** 페이지에서 Asset Intelligence 동기화 지점이 System Center Online에 연결하여 카탈로그를 동기화할 때 프록시 서버를 사용할지 여부와 자격 증명을 사용하여 프록시 서버에 연결할지 여부를 지정합니다.  
+8.  [**プロキシ サーバー設定**] ページで、カタログを同期するために、System Center Online に接続する際に資産インテリジェンス同期ポイントがプロキシ サーバーを使用するかどうか、そしてプロキシ サーバーに接続する際に資格情報を使用するかどうかを指定します。  
 
     > [!WARNING]  
-    >  System Center Online에 연결하기 위해 프록시 서버가 필요한 경우 프록시 서버 인증용으로 구성된 계정에 대해 사용자 계정 암호가 만료되면 연결 인증서도 삭제될 수 있습니다.  
+    >  System Center Online への接続にプロキシ サーバーを使用する場合は、プロキシ サーバー認証用に構成したアカウントのユーザー アカウント パスワードの期限が切れると接続証明書が削除されることもあります。  
 
-9. **동기화 일정** 페이지에서 일정에 따라 Asset Intelligence 카탈로그를 동기화할지 지정합니다. 동기화 일정을 사용하도록 설정하는 경우 단순 또는 사용자 지정 동기화 일정을 지정합니다. 예약된 동기화를 진행하는 동안 Asset Intelligence 동기화 지점이 System Center Online에 연결되어 최신 Asset Intelligence 카탈로그를 검색합니다. Configuration Manager 콘솔의 Asset Intelligence 노드에서 Asset Intelligence 카탈로그를 수동으로 동기화할 수 있습니다. Asset Intelligence 카탈로그를 수동으로 동기화하는 단계는 [System Center Configuration Manager에서 Asset Intelligence에 대한 작업](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md)의 [Asset Intelligence 카탈로그를 수동으로 동기화하려면](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md#BKMK_ManuallySynchronizeCatalog) 섹션을 참조하세요.  
+9. [同期スケジュール] **** のページで、資産インテリジェンス カタログの同期をスケジュールするかどうかを指定します。 同期スケジュールを有効にしたら、シンプルまたはカスタムの同期スケジュールを指定します。 スケジュールされた同期において、資産インテリジェンス同期ポイントは、System Center Onlineに接続し、最新の資産インテリジェンス カタログを取得します。 Configuration Manager コンソールの資産インテリジェンス ノードからは、資産インテリジェンス カタログを手動で同期できます。 手動で資産インテリジェンス カタログを同期する手順については、[System Center Configuration Manager での資産インテリジェンスの操作](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md)に関するページの「[To manually synchronize the Asset Intelligence catalog](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md#BKMK_ManuallySynchronizeCatalog)」 (資産インテリジェンス カタログを手動で同期するには) セクションを参照してください。  
 
-10. 마법사 완료 
+10. ウィザードを完了する 
 
 ###  <a name="BKMK_EnableSuccessLogonEvents"></a> Enable auditing of success logon events  
- 네 가지 Asset Intelligence 보고서에 클라이언트 컴퓨터의 Windows 보안 이벤트 로그에서 수집된 정보가 표시됩니다. 다음은 성공 로그온 이벤트의 감사를 사용하도록 컴퓨터 보안 정책 로그온 설정을 구성하는 방법입니다.  
+ 4 つの資産インテリジェンス レポートには、クライアント コンピューターの Windows セキュリティ イベント ログから収集された情報が表示されます。 コンピューター セキュリティ ポリシーのログオン設定を構成してログオンに成功したイベントの監査を有効にする手順は次のとおりです。  
 
-##### <a name="to-enable-success-logon-event-logging-by-using-a-local-security-policy"></a>로컬 보안 정책을 사용하여 성공 로그온 이벤트 로깅을 사용하도록 설정하려면  
+##### <a name="to-enable-success-logon-event-logging-by-using-a-local-security-policy"></a>ローカル セキュリティ ポリシーを使用して、ログオンに成功したイベントを記録できるようにするには  
 
-1.  Configuration Manager 클라이언트 컴퓨터에서 **시작** > **관리 도구** > **로컬 보안 정책**을 선택합니다.  
+1.  Configuration Manager クライアント コンピューターで、[**スタート**] > [**管理ツール**] > [**ローカル セキュリティ ポリシー**] の順に選択します。  
 
-2.  **로컬 보안 정책** 대화 상자의 **보안 설정**에서 **로컬 정책**을 확장한 다음 **감사 정책**을 선택합니다.  
+2.  [**ローカル セキュリティ ポリシー**] ダイアログ ボックスで、[**セキュリティ設定**] の下にある [**ローカル ポリシー**] を展開し、[**ポリシーの監査**] を選択します。  
 
-3.  결과 창에서 **로그온 이벤트 감사**를 두 번 클릭하고 **성공** 확인란이 선택되었는지 확인한 다음 **확인**을 선택합니다.  
+3.  結果ウィンドウで、[**ログオン イベントの監査**] をダブルクリックし、[**成功**] チェックボックスがオンになっていることを確認して [**OK**] を選択します。  
 
-##### <a name="to-enable-success-logon-event-logging-by-using-an-active-directory-domain-security-policy"></a>Active Directory 도메인 보안 정책을 사용하여 성공 로그온 이벤트 로깅을 사용하도록 설정하려면  
+##### <a name="to-enable-success-logon-event-logging-by-using-an-active-directory-domain-security-policy"></a>Active Directory ドメインのセキュリティ ポリシーを使用して、ログオンに成功したイベントを記録できるようにするには  
 
-1.  도메인 컨트롤러 컴퓨터에서 **시작**을 선택하고 **관리 도구**를 가리킨 후 **도메인 보안 정책**을 선택합니다.  
+1.  ドメイン コントローラー コンピューターで、[**スタート**] を選び、[**管理ツール**] をポイントして [**ドメイン セキュリティ ポリシー**] を選択します。  
 
-2.  **로컬 보안 정책** 대화 상자의 **보안 설정**에서 **로컬 정책**을 확장한 다음 **감사 정책**을 선택합니다.  
+2.  [**ローカル セキュリティ ポリシー**] ダイアログ ボックスで、[**セキュリティ設定**] の下にある [**ローカル ポリシー**] を展開し、[**ポリシーの監査**] を選択します。  
 
-3.  결과 창에서 **로그온 이벤트 감사**를 두 번 클릭하고 **성공** 확인란이 선택되었는지 확인한 다음 **확인**을 선택합니다.  
+3.  結果ウィンドウで、[**ログオン イベントの監査**] をダブルクリックし、[**成功**] チェックボックスがオンになっていることを確認して [**OK**] を選択します。  
 
 ###  <a name="BKMK_ImportSoftwareLicenseInformation"></a> Import software license information  
- 다음 섹션에서는 소프트웨어 라이선스 가져오기 마법사를 사용하여 Microsoft 및 일반 소프트웨어 라이선스 정보를 Configuration Manager 사이트 데이터베이스로 가져오는 데 필요한 절차에 대해 설명합니다. 소프트웨어 라이선스 정보를 라이선스 계정 파일에서 사이트 데이터베이스로 가져올 때 사이트 서버 컴퓨터 계정은 소프트웨어 라이선스 정보를 가져오는 데 사용되는 파일 공유에 대한 NTFS 파일 시스템의 **모든 권한** 권한이 필요합니다.  
+ 次のセクションでは、ソフトウェア ライセンスのインポート ウィザードを使用して、Microsoft および一般的なソフトウェア ライセンス情報を Configuration Manager サイト データベースにインポートするのに必要な手順について説明します。 ライセンス ステートメント ファイルからサイト データベースへソフトウェア ライセンス情報をインポートするときは、サイト サーバー コンピューターのアカウントに NTFS ファイル システムのソフトウェア ライセンス情報をインポートするのに使用されるファイル共有に対して [フル コントロール] **** のアクセス許可が必要です。  
 
 > [!IMPORTANT]  
->  소프트웨어 라이선스 정보를 사이트 데이터베이스로 가져올 때 기존 소프트웨어 라이선스 정보를 덮어씁니다. 소프트웨어 라이선스 가져오기 마법사를 사용하는 소프트웨어 라이선스 정보 파일에 필요한 모든 소프트웨어 라이선스 정보의 전체 목록이 포함되어있는지 확인합니다.  
+>  ソフトウェア ライセンス情報をサイト データベースにインポートすると、既存のソフトウェア ライセンス情報が上書きされます。 ソフトウエア ライセンスのインポート ウィザードで使用されるソフトウェア ライセンス情報ファイルに、すべての必要なソフトウェア ライセンス情報の完全な一覧が含まれていることを確認してください。  
 
-##### <a name="to-import-software-license-information-into-the-asset-intelligence-catalog"></a>Asset Intelligence 카탈로그에 소프트웨어 라이선스 정보를 가져오려면  
+##### <a name="to-import-software-license-information-into-the-asset-intelligence-catalog"></a>ソフトウェアのライセンス情報を資産インテリジェンス カタログにインポートするには  
 
-1.  **자산 및 준수** 작업 영역에서 **Asset Intelligence**를 선택합니다.  
+1.  [**資産とコンプライアンス**] ワークスペースで [**資産インテリジェンス**] を選択します。  
 
-2.  **홈** 탭의 **Asset Intelligence** 그룹에서 **소프트웨어 라이선스 가져오기**를 선택합니다.   
+2.  [**ホーム**] タブの [**資産インテリジェンス**] グループで [**ソフトウェア ライセンスのインポート**] を選択します。   
 
-4.  **가져오기** 페이지에서 MVLS(Microsoft Volume Licensing) 파일(.xml 또는 .csv) 또는 일반 라이선스 계정 파일(.csv)을 가져올지 여부를 지정합니다. 일반 라이선스 계정 파일 만들기에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 [Create a general license statement information file for import](#BKMK_CreateGeneralLicenseStatement) 섹션을 참조하세요.  
+4.  **[インポート]** ページで、Microsoft Volume Licensing Services (MVLS) ファイル (.xml または .csv) と標準ライセンス ステートメント ファイル (.csv) のどちらをインポートするのかを指定します。 一般的なライセンス ステートメント ファイル作成の詳細については、このトピックの「 [Create a general license statement information file for import](#BKMK_CreateGeneralLicenseStatement) 」を参照してください。  
 
     > [!WARNING]  
-    >  Asset Intelligence 카탈로그에 가져올 수 있는 .csv 형식의 MVLS 파일을 다운로드하려면 [Microsoft 볼륨 라이선스 서비스 센터](http://go.microsoft.com/fwlink/p/?LinkId=226547)를 참조하세요. 이 정보에 액세스하려면 웹 사이트에 등록된 계정이 있어야 합니다. .xml 형식의 MVLS 파일을 가져오는 방법에 대한 자세한 내용은 Microsoft 계정 담당자에게 문의해야 합니다.  
+    >  資産インテリジェンスカタログにインポートできる .csv 形式のMVLS ファイルをダウンロードするには、「 [Microsoft Volume Licensing Service Center](http://go.microsoft.com/fwlink/p/?LinkId=226547)」を参照してください。 この情報にアクセスするには、Web サイトに登録済アカウントを持っている必要があります。 MVLS ファイルを .xml 形式にする方法の詳細については、Microsoft アカウント担当者に問い合わせる必要があります。  
 
-5.  라이선스 계정 파일에 대한 UNC 경로를 입력하거나 **찾아보기** 를 선택하여 네트워크 공유 폴더 및 파일을 선택합니다.  
+5.  ライセンス ステートメント ファイルへの UNC パスを入力、または [**参照**] を選択してネットワークで共有されているフォルダーとファイルを選択します。  
 
     > [!NOTE]  
-    >  라이선스 정보 파일에 대한 승인되지 않은 액세스를 차단하려면 공유 폴더가 올바르게 보안되어야 하며 마법사가 실행되고 있는 컴퓨터의 컴퓨터 계정에 라이선스 가져오기 파일이 들어 있는 공유에 대해 모든 권한이 있어야 합니다.  
+    >  この共有フォルダーは、ライセンス情報ファイルへの不正アクセスを防ぐため、正確にセキュリティ保護されている必要があります。また、ウィザードを実行するコンピューターのアカウントには、ライセンス インポート ファイルを含む共有場所へのフルコントロールのアクセス許可を付与する必要があります。  
 
-6. 마법사를 완료합니다.  
+6. ウィザードを完了します。  
 
 ###  <a name="BKMK_CreateGeneralLicenseStatement"></a> Create a general license statement information file for import  
- 일반 라이선스 계정은 쉼표로 구분된(.csv) 파일 형식으로 수동으로 만든 라이선스 가져오기 파일을 사용하여 Asset Intelligence 카탈로그에 가져올 수도 있습니다.  
+ 手動で作成したコンマ区切りの .csv ファイル形式のライセンス インポート ファイルを使用すると、一般的なライセンス ステートメントも資産インテリジェンス カタログにインポートできます。  
 
 > [!NOTE]  
->  **Name**, **Publisher**, **Version**및 **EffectiveQuantity** 필드만 데이터를 채우라고 요구하지만 라이선스 가져오기 파일의 첫 번째 열에 있는 모든 필드가 입력되어야 합니다. 모든 날짜 필드는 월/일/연도(예: 08/04/2008) 형식으로 표시되어야 합니다.  
+>  データの指定が必要なフィールドは [名前] ****、[発行元] ****、[バージョン] ****、[有効な数量] **** のみですが、ライセンスのインポート ファイルの最初の行はすべてのフィールドの入力が必要です。 日付フィールドはすべて、"月/日/年 (08/04/2008 など)" の形式で表示されます。  
 
-Asset Intelligence는 일반 라이선스 계정에서 지정하는 제품을 제품 이름 및 제품 버전을 사용하여 일치시키지만 게시자 이름은 사용하지 않습니다. 사이트 데이터베이스에 저장된 제품 이름과 정확하게 일치하는 일반 라이선스 계정의 제품 이름을 사용해야 합니다. Asset Intelligence는 일반 라이선스 계정에서 부여된 **EffectiveQuantity**의 숫자를 가져와서 해당 숫자를 Configuration Manager 인벤토리에서 확인한 설치된 제품 숫자와 비교합니다.  
+資産インテリジェンスは、一般的なライセンス ステートメントで指定した製品を、製品名および製品バージョンで照合します。製造元は使用しません。 一般的なライセンス ステートメントでは、サイト データベースに保存されている製品名と合致する製品名を使用する必要があります。 資産インテリジェンスは、一般的なライセンス ステートメントにある **[有効な数量]** の数と Configuration Manager インベントリで見つかったインストールされた製品の数を比較します。  
 
 > [!TIP]  
->  Configuration Manager 사이트 데이터베이스에 저장된 제품 이름의 전체 목록을 가져오려면 사이트 데이터베이스에서 SELECT ProductName0 FROM v_GS_INSTALLED_SOFTWARE 쿼리를 실행하면 됩니다.  
+>  Configuration Manager サイト データベースに保存されている製品名の完全な一覧を入手する場合は、サイト データベースで "SELECT ProductName0 FROM v_GS_INSTALLED_SOFTWARE" というクエリを実行します。  
 
- 제품에 대한 정확한 버전을 지정하거나 버전의 일부(예: 주 버전만)를 지정할 수 있습니다. 다음 예제는 특정 제품에 대한 일반 라이선스 계정 버전 항목과 일치하는 결과 버전을 제공합니다.  
+ 製品のバージョンは、完全に、または主要バージョンのみといったように一部を指定することができます。 次の例では、特定の製品に関する一般的なライセンス ステートメントのバージョン エントリに一致したバージョンの結果を示しています。  
 
-|일반 라이선스 계정 항목|사이트 데이터베이스 항목 일치|  
+|一般的なライセンス ステートメント エントリ|一致するサイト データベース エントリ|  
 |-------------------------------------|------------------------------------|  
-|이름: "MySoftware", ProductVersion0:"2"|ProductName0: "Mysoftware", ProductVersion0: "2.01.1234"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.02.5678"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.1234"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.5678"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.3579.000"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.10.1234"|  
-|이름: "Mysoftware", "2.05" 버전|ProductName0: "MySoftware", ProductVersion0: "2.05.1234"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.5678"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.3579.000"|  
-|이름: "Mysoftware", "2" 버전<br /><br /> 이름: "Mysoftware", "2.05" 버전|가져오는 동안 오류가 발생했습니다. 여러 항목이 동일한 제품 버전과 일치하는 경우 가져오기에 실패합니다.|  
+|Name: "MySoftware", ProductVersion0:"2"|ProductName0: "Mysoftware", ProductVersion0: "2.01.1234"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.02.5678"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.1234"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.5678"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.3579.000"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.10.1234"|  
+|Name: "MySoftware", Version "2.05"|ProductName0: "MySoftware", ProductVersion0: "2.05.1234"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.5678"<br /><br /> ProductName0: "MySoftware", ProductVersion0: "2.05.3579.000"|  
+|Name: "Mysoftware", Version "2"<br /><br /> Name: "Mysoftware", Version "2.05"|インポート中にエラーが発生しました。 同じ製品バージョンに対して複数のエントリが一致すると、インポートは失敗します。|  
   
 
-##### <a name="to-create-a-general-license-statement-import-file-by-using-microsoft-excel"></a>Microsoft Excel을 사용하여 일반 라이선스 계정 가져오기 파일을 만들려면  
+##### <a name="to-create-a-general-license-statement-import-file-by-using-microsoft-excel"></a>Microsoft Excel を使用して、一般的なライセンス ステートメントのインポート ファイルを作成する  
 
-1.  Microsoft Excel을 열고 새 스프레드시트를 만듭니다.  
+1.  Microsoft Office Excel を開き、新しいスプレッドシートを作成します。  
 
-2.  새 스프레드시트의 첫 번째 행에 소프트웨어 라이선스 데이터 필드 이름을 모두 입력합니다.  
+2.  新しいスプレッドシートの 1 行目に、すべてのソフトウェア ライセンスのデータフィールド名を入力します。  
 
-3.  새 스프레드시트의 두 번째 및 이후의 행에 필요에 따라 소프트웨어 라이선스 정보를 입력합니다. 가져올 각 소프트웨어 라이선스에 대해 필요한 소프트웨어 라이선스 데이터 필드의 모든 후속 행이 입력되어야 합니다. 스프레드시트에 입력한 소프트웨어 타이틀 이름은 하드웨어 인벤토리가 실행된 후 클라이언트 컴퓨터의 리소스 탐색기에 표시되는 소프트웨어 타이틀과 같아야 합니다.  
+3.  2 行目以降に、必要に応じてソフトウェア ライセンス情報を入力します。 少なくとも、必須ソフトウェア ライセンスのデータ フィールドがすべて、インポートする各ソフトウェア ライセンスの 2 行目以降も入力されていることを確認します。 スプレッドシートに入力したソフトウェア タイトル名は、ハードウェア インベントリが実行された後に、クライアント コンピューターについてリソース エクスプローラーで表示されるソフトウェア タイトルと同じである必要があります。  
 
-4.  파일을 .csv 형식으로 저장합니다.  
+4.  ファイルを .csv 形式で保存します。  
 
-5.  .csv 파일을 Asset Intelligence 카탈로그로 소프트웨어 라이선스 정보를 가져오는 데 사용했던 파일 공유에 복사합니다.  
+5.  資産インテリジェンス カタログにソフトウェア ライセンス情報をインポートするのに使用するファイル共有に、.csv ファイルをコピーします。  
 
-6.  Configuration Manager 콘솔에서 소프트웨어 라이선스 가져오기 마법사를 사용하여 새로 만든 .csv 파일을 가져옵니다.  
+6.  Configuration Manager コンソールで、ソフトウェア ライセンスのインポート ウィザードを使用して、新しく作成した .csv ファイルをインポートします。  
 
-7.  Asset Intelligence **라이선스 15A – 제3자 소프트웨어 조정 보고서**를 실행하여 라이선스 정보를 Asset Intelligence 카탈로그에 성공적으로 가져왔는지 확인합니다.  
+7.  資産インテリジェンスの **[ライセンス 15A - サード パーティ ソフトウェア調整レポート]** を実行し、ライセンス情報が正常に資産インテリジェンス カタログにインポートされたことを確認します。  
 
 > [!NOTE]  
->  테스트 목적으로 사용할 수 있는 일반 소프트웨어 라이선스 파일의 예를 보려면 [System Center Configuration Manager에서 Asset Intelligence 일반 라이선스 가져오기 파일 예제](../../../../core/clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md)를 참조하세요.  
+>  テストに使用できる一般的なソフトウェア ライセンス ファイルの例については、「[System Center Configuration Manager における資産インテリジェンスの一般的なライセンス インポート ファイルの例](../../../../core/clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md)」を参照してください。  
 
-#### <a name="sample-table-to-describe-software-licenses"></a>소프트웨어 라이선스를 설명하는 샘플 표  
- 일반 라이선스 계정 가져오기 파일을 만들 때 다음 표의 정보를 사용하여 Asset Intelligence 카탈로그에 가져올 소프트웨어 라이선스를 설명할 수 있습니다.  
+#### <a name="sample-table-to-describe-software-licenses"></a>ソフトウェア ライセンスの記述の例  
+ 一般的なライセンス ステートメントのインポート ファイルを作成するときに、資産インテリジェンス カタログにインポートするソフトウェアのライセンスを記述する場合は、次の表の情報を使用します。  
 
-|열 이름|데이터 형식|필수|예|  
+|列名|データ型|必須|例|  
 |-----------------|---------------|--------------|-------------|  
-|Name|최대 255자|예|소프트웨어 타이틀|  
-|Publisher|최대 255자|예|소프트웨어 게시자|  
-|Version|최대 255자|예|소프트웨어 타이틀 버전|  
-|언어|최대 255자|예|소프트웨어 타이틀 언어|  
-|EffectiveQuantity|정수 값|예|구매한 라이선스 수|  
-|PONumber|최대 255자|아니요|구매 주문 정보|  
-|ResellerName|최대 255자|아니요|재판매인 정보|  
-|DateOfPurchase|다음 형식의 날짜 값: MM/DD/YYYY|아니요|라이선스 구매 날짜|  
-|SupportPurchased|비트 값|아니요|0 또는 1: 예는 0, 아니요는 1 입력|  
-|SupportExpirationDate|다음 형식의 날짜 값: MM/DD/YYYY|아니요|구매한 지원의 종료 날짜|  
-|설명|최대 255자|아니요|선택적 설명|  
+|名前|255 文字まで|○|［ソフトウェア タイトル］|  
+|発行者|255 文字まで|○|ソフトウェア発行元|  
+|バージョン|255 文字まで|○|ソフトウェア タイトルのバージョン|  
+|言語|255 文字まで|○|ソフトウェア タイトルの言語|  
+|有効な数量|整数値|○|購入ライセンス数|  
+|発注番号|255 文字まで|×|注文書情報|  
+|販売店名|255 文字まで|×|販売店情報|  
+|購入日|次の形式の日付の値: MM/DD/YYYY|×|ライセンスの購入日|  
+|サポートの購入|ビット値|×|0 または 1。[はい] の場合は 0、[いいえ] の場合は 1 を入力|  
+|サポートの有効期限|次の形式の日付の値: MM/DD/YYYY|×|購入したサポートの終了日|  
+|コメント|255 文字まで|×|備考|  
 
 ###  <a name="BKMK_ConfigureMaintenanceTasks"></a> Configure Asset Intelligence maintenance tasks  
- 다음 유지 관리 작업을 Asset Intelligence에 사용할 수 있습니다.  
+ 次のメンテナンス タスクが資産インテリジェンスで使用できます。  
 
--   **인벤토리 정보를 사용하여 응용 프로그램 타이틀 확인**: 소프트웨어 인벤토리에 보고된 소프트웨어 타이틀이 Asset Intelligence 카탈로그 내 소프트웨어 타이틀과 일치하는지 확인합니다. 기본적으로 이 작업은 사용하도록 설정되어 있으며 토요일 오전 12시 이후부터 오전 5시 이전 사이에 실행되도록 예약되어 있습니다. 이 유지 관리 작업은 Configuration Manager 계층 구조의 최상위 사이트에서만 사용할 수 있습니다.  
+-   **インベントリ情報のアプリケーション タイトルの確認**: ソフトウェア インベントリで報告されたソフトウェア タイトルが、資産インテリジェンス カタログのソフトウェア タイトルと一致しているかどうかを確認します。 既定では、このタスクは有効になっており、土曜日の午前 0 時から午前 5 時の間に実行されるように スケジュールされています。 このメンテナンス タスクは、Configuration Manager 階層の最上位サイトでのみ使用できます。  
 
--   **설치된 소프트웨어 데이터 요약**: **자산 및 준수** 작업 영역의 **Asset Intelligence** 노드 아래 **인벤토리에 포함된 소프트웨어** 노드에 표시되는 정보를 제공합니다. 작업을 실행하면 Configuration Manager가 기본 사이트에서 인벤토리에 포함된 모든 소프트웨어 타이틀 수를 수집합니다. 기본적으로 이 작업은 사용하도록 설정되어 있으며 매일 오전 12시 이후부터 오전 5시 이전 사이에 실행되도록 예약되어 있습니다. 이 유지 관리 작업은 기본 사이트에서만 사용할 수 있습니다.  
+-   **インストール済みソフトウェア データの概要**: [**資産とコンプライアンス**] ワークスペースの [**資産インテリジェンス**] ノードにある [**インベントリされたソフトウェア**] ノードに表示される情報を提供します。 このタスクが実行されると、Configuration Manager はプライマリ サイトでインベントリされたすべてのソフトウェア タイトルの数を数えます。 既定では、このタスクは有効になっており、毎日午前 0 時から午前 5 時の間に実行されるように スケジュールされています。 このメンテナンス タスクは、プライマリ サイトでのみ使用できます。  
 
-##### <a name="to-configure-asset-intelligence-maintenance-tasks"></a>Asset Intelligence 유지 관리 작업을 구성하려면  
+##### <a name="to-configure-asset-intelligence-maintenance-tasks"></a>資産インテリジェンス メンテナンス タスクを構成するには  
 
-1.  Configuration Manager 콘솔에서 **관리** > **사이트 구성** > **사이트**를 선택합니다.  
+1.  Configuration Manager コンソールで、[**管理**] > [**サイトの構成**] > [**サイト**] の順に選択します。  
 
-3.  Asset Intelligence 유지 관리 작업을 구성할 수 있는 사이트를 선택합니다.  
+3.  資産インテリジェンス メンテナンス タスクを構成するサイトを選択します。  
 
-4.  **홈** 탭의 **설정** 그룹에서 **사이트 유지 관리**를 선택합니다. 작업을 선택하고 **편집**을 선택하여 설정을 수정합니다. 
+4.  [**ホーム**] タブの [**設定**] グループで、[**サイトのメンテナンス タスク**] を選択します。 タスクを選択して、[**編集**] を選択して設定を変更します。 
 
-    사이트의 사용량이 적은 시간대로 기간을 설정하는 것이 좋습니다. 기간은 작업을 실행할 수 있는 시간 간격입니다. **작업 속성** 대화 상자에서 지정한 **Start after** (다음 이후 시작) 및 **가장 늦은 시작 시간** 으로 정의됩니다.  
+    サイトのピーク時以外の時間帯に設定することをお勧めします。 時間帯とは、そのタスクを実行してもよい間隔のことです。 によって定義された、 **後に起動** と **最新の開始時刻** で指定されている、 **タスクのプロパティ**  ダイアログ ボックス。  
 
-    현재 날짜를 선택하고 **Start after** (다음 이후 시작) 시간을 현재 시간 이후 몇 분 후로 설정하여 작업을 바로 시작할 수 있습니다.  
+    現在の日付を選択し、[これ以後に開始] 時刻を現在時刻より 2 分ほど後に設定すれば、タスクを直ちに実行することができます。 ****  
 
-7.  **확인**을 선택하여 설정을 저장합니다. 이제 작업 일정에 따라 작업이 실행됩니다.  
+7.  [**OK**] を選択して設定を保存します。 これで、スケジュールに従ってタスクが実行されるようになります。  
 
     > [!NOTE]  
-    >  처음 작업을 실행할 때 실패하는 경우 Configuration Manager가 작업을 성공적으로 실행할 때까지 또는 작업이 실행할 수 있는 기간까지 작업을 다시 실행하려고 시도합니다.  
+    >  最初の試行でタスクの実行に失敗した場合、タスクが正常に実行されるか、タスクの実行可能な時間帯が過ぎるまで、Configuration Manager はタスクの再実行を試みます。  
