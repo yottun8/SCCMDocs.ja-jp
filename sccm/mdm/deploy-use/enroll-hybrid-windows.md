@@ -1,134 +1,130 @@
 ---
-title: "System Center Configuration Manager と Microsoft Intune を使ったハイブリッド Windows デバイス管理のセットアップ | Microsoft Docs"
-description: "System Center Configuration Manager と Microsoft Intune を使用して Windows デバイス管理を設定します。"
+title: "System Center Configuration Manager 및 Microsoft Intune에서 Windows 하이브리드 장치 관리 설정 | Microsoft 문서"
+description: "System Center Configuration Manager 및 Microsoft Intune에서 Windows 장치 관리 설정"
 ms.custom: na
 ms.date: 03/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: dc1f70f5-64ab-42ab-aa91-d3858803e12f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 329de5ffb6eb1403c02cd1db634c32f045e82488
 ms.openlocfilehash: 47348baeac26bfa2ad5016622fe4dbcb9f572483
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="set-up-windows-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使ったハイブリッド Windows デバイス管理のセットアップ
+# <a name="set-up-windows-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 및 Microsoft Intune에서 Windows 하이브리드 장치 관리 설정
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-このトピックでは、IT 管理者を対象に、ユーザーが Configuration Manager と Microsoft Intune を使用して、Windows PC とモバイル デバイスを管理できるようにする方法について説明します。
+이 항목에서는 IT 관리자가 사용자에게 Configuration Manager 및 Microsoft Intune을 사용하여 Windows PC 및 모바일 장치를 관리할 수 있도록 설정하는 방법을 설명합니다.
 
-## <a name="enable-windows-device-management"></a>Windows デバイスの管理を有効にする
-PC やモバイル デバイスの Windows デバイスの管理を有効にするには、次の手順を使用します。
+## <a name="enable-windows-device-management"></a>Windows 장치 관리 사용
+PC 또는 모바일 장치에 대해 Windows 장치 관리를 사용하도록 설정하려면 다음 단계를 따릅니다.
 
-1.  任意のプラットフォームの登録をセットアップする前に、「[ハイブリッド MDM をセットアップする](setup-hybrid-mdm.md)」に記載されている前提条件と手順を完了しておきます。  
-2.  Configuration Manager コンソールの **[管理]** ワークスペースで、**[概要]** > **[クラウド サービス]** > **[Microsoft Intune サブスクリプション]** に移動します。  
-3.  リボンで、**[プラットフォームの構成]** をクリックし、Windows プラットフォームを選択します。
-    - Windows PC やラップトップの場合は、**[Windows]** を選択し、次の手順を実行します。
-      1. **[全般]** タブで **[Windows の登録を有効にする]**をクリックします。
-      2. 証明書を使用して会社ポータル アプリにコード署名して展開する場合は、「**コード署名証明書**」を参照してください。 デバイスのユーザーが Windows ストアから会社ポータル アプリをインストールすることも、管理者がコード署名せずにビジネス向け Windows ストアからアプリを展開することもできます。
-      3. [Windows Hello for Business 設定](windows-hello-for-business-settings.md)を構成することもできます。
-    - Windows Phone やタブレットの場合は、**[Windows Phone]** を選択し、次の手順を実行します。
-      1. **[全般]** タブで、**[Windows Phone 8.1 と Windows 10 Mobile]** チェック ボックスをオンにします。 Windows Phone 8.0 はサポートされなくなりました。
-      2. 組織で会社アプリをサイドロードする必要がある場合は、必要なトークンやファイルをアップロードできます。 アプリのサイドローディングの詳細については、「[Windows アプリの作成](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications)」を参照してください。
-        - **アプリケーション登録トークン**
-        - **.pfx ファイル**
-        - **[なし]** Symantec 証明書を使用する場合は、**[Symantec 証明書の有効期限が切れる前にアラートを表示する]** を指定できます。
-4. [OK **** ] をクリックしてダイアログ ボックスを閉じます。  会社ポータルを使用して、登録プロセスを簡略化するには、デバイス登録用の DNS エイリアスを作成してください。 自分のデバイスを登録する方法をユーザーに通知することができます。
+1.  플랫폼에 대한 등록을 설정하려면 먼저 [하이브리드 MDM 설정](setup-hybrid-mdm.md)에서 필수 조건 및 절차를 완료합니다.  
+2.  Configuration Manager 콘솔의 **관리** 작업 영역에서 **개요** > **클라우드 서비스** > **Microsoft Intune 구독**으로 이동합니다.  
+3.  리본 메뉴에서 **플랫폼 구성**을 선택하고 Windows 플랫폼을 선택합니다.
+    - Windows PC 및 노트북의 경우 **Windows**를 선택하고 다음 단계를 수행합니다.
+      1. **일반** 탭에서 **Windows 등록 사용** 확인란을 클릭합니다.
+      2. 인증서를 사용하여 코드 서명하고 회사 포털 앱을 배포하는 경우 **코드 서명 인증서**를 찾습니다. 또한 장치 사용자가 Windows 스토어에서 회사 포털 앱을 설치할 수 있거나, 코드 서명하지 않고 비즈니스용 Windows 스토어에서 앱을 배포할 수 있습니다.
+      3. [비즈니스용 Windows Hello 설정](windows-hello-for-business-settings.md)을 구성할 수도 있습니다.
+    - Windows 휴대폰 및 태블릿의 경우 **Windows Phone**을 선택하고 다음 단계를 수행합니다.
+      1. **일반** 탭에서 **Windows Phone 8.1 및 Windows 10 Mobile** 확인란을 클릭합니다. Windows Phone 8.0은 더 이상 지원되지 않습니다.
+      2. 조직에서 회사 앱을 사이드로드해야 하는 경우 필요한 토큰 또는 파일을 업로드할 수 있습니다. 앱 사이드로드에 대한 자세한 내용은 [Windows 앱 만들기](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications)를 참조하세요.
+        - **응용 프로그램 등록 토큰**
+        - **.pfx 파일**
+        - **없음** Symantec 인증서를 사용하는 경우 **Show an alert before Symantec certificates expire**(Symantec 인증서가 만료되기 전에 경고 표시)를 지정할 수 있습니다.
+4. **확인** 을 클릭하여 대화 상자를 닫습니다.  회사 포털을 사용하여 등록 프로세스를 간소화하려면 장치 등록에 대한 DNS 별칭을 만들어야 합니다. 그런 다음 사용자에게 장치 등록 방법을 알릴 수 있습니다.
 
-## <a name="choose-how-to-enroll-windows-devices"></a>Windows デバイスの登録方法を選択する
+## <a name="choose-how-to-enroll-windows-devices"></a>Windows 장치를 등록하는 방법 선택
 
-Intune ライセンスをユーザーに割り当てたら、Windows デバイスを追加の手順なしで登録できますが、ユーザーのために登録を簡単にすることができます。
+Intune 라이선스를 사용자에게 할당하면 추가 단계 없이 Windows 장치를 등록할 수 있지만, 사용자를 위해 등록을 더 쉽게 만들 수 있습니다.
 
-Windows デバイスの登録を簡単にする方法は次の 2 つの要素で決まります。
-- **Azure Active Directory Premium を使用していますか?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) は、Enterprise Mobility + Security およびその他のライセンス プランに付属します。
-- **どのバージョンの Windows クライアントが登録されますか?** <br>Windows 10 デバイスは、職場または学校のアカウントを追加すると自動的に登録できます。 以前のバージョンでは、会社ポータル アプリを使用して登録する必要があります。
+다음 두 가지 요소를 통해 Windows 장치 등록을 간소화하는 방법을 결정합니다.
+- **Azure Active Directory Premium을 사용하나요?** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)은 Enterprise Mobility + Security 및 기타 라이선싱 계획에 포함되어 있습니다.
+- **등록할 Windows 클라이언트 버전은 무엇인가요?** <br>Windows 10 장치는 회사 또는 학교 계정을 추가하여 자동으로 등록할 수 있습니다. 이전 버전은 회사 포털 앱을 사용하여 등록해야 합니다.
 
-||**Azure AD Premium**|**その他の AD**|
+||**Azure AD Premium**|**기타 AD** |
 |----------|---------------|---------------|  
-|**Windows 10**|[自動登録](#enable-windows-10-automatic-enrollment) |[ユーザー登録](#enable-windows-enrollment-without-azure-ad-premium)|
-|**以前の Windows バージョン**|[ユーザー登録](#enable-windows-enrollment-without-azure-ad-premium)|[ユーザー登録](#enable-windows-enrollment-without-azure-ad-premium)|
+|**Windows 10**|[자동 등록](#enable-windows-10-automatic-enrollment) |[사용자 등록](#enable-windows-enrollment-without-azure-ad-premium)|
+|**이전 버전의 Windows**|[사용자 등록](#enable-windows-enrollment-without-azure-ad-premium)|[사용자 등록](#enable-windows-enrollment-without-azure-ad-premium)|
 
-## <a name="enable-windows-10-automatic-enrollment"></a>Windows 10 の自動登録を有効にする
+## <a name="enable-windows-10-automatic-enrollment"></a>Windows 10 자동 등록 사용
 
-自動登録を使用して、職場や学校のアカウントを追加し、管理されることに同意すると、会社所有のデバイスや個人の Windows 10 PC および Windows 10 Mobile デバイスを Intune に登録できます。 このように簡単です。 ユーザーのデバイスはバックグラウンドで登録され、Azure Active Directory に参加します。 登録されると、デバイスは Intune で管理されます。
+자동 등록을 통해 사용자는 회사 또는 학교 계정을 추가하고 관리에 동의하여 회사 소유 또는 개인 Windows 10 PC 및 Intune의 Windows 10 Mobile 장치를 등록할 수 있습니다. 이러기만 하면 됩니다. 백그라운드에서 사용자의 장치가 Azure Active Directory를 등록하고 연결합니다. 등록이 되고 나면 Intune으로 장치를 관리할 수 있습니다.
 
-**必要条件**
-- Azure Active Directory Premium サブスクリプション ([試用版サブスクリプション](http://go.microsoft.com/fwlink/?LinkID=816845))
-- Microsoft Intune サブスクリプション
-
-
-### <a name="configure-automatic-mdm-enrollment"></a>自動 MDM 登録の構成
-
-1. [Azure 管理ポータル](https://portal.azure.com) (https://manage.windowsazure.com) にサインインし、**[Azure Active Directory]** を選択します。
-
-  ![Azure ポータルのスクリーンショット](../media/auto-enroll-azure-main.png)
-
-2. **[モビリティ (MDM および MAM)]** を選択します。
-
-  ![Azure ポータルのスクリーンショット](../media/auto-enroll-mdm.png)
-
-3. **[Microsoft Intune]** を選択します。
-
-  ![Azure ポータルのスクリーンショット](../media/auto-enroll-intune.png)
-
-4. **[MDM ユーザー スコープ]** を構成します。 Microsoft Intune で管理するユーザーのデバイスを指定します。 これらのユーザーの Windows 10 デバイスは、Microsoft Intune の管理対象として自動的に登録されます。
-
-    - **なし**
-    - **一部**
-    - **すべて**
-
-   ![Azure ポータルのスクリーンショット](../media/auto-enroll-scope.png)
-
-5. 次の URL の既定値を使用します。
-    - **MDM 使用条件 URL**
-    - **MDM 探索 URL**
-    - **MDM 準拠 URL**
-
-6. **[保存]** を選択します。
+**전제 조건**
+- Azure Active Directory Premium 구독([평가판 구독](http://go.microsoft.com/fwlink/?LinkID=816845))
+- Microsoft Intune 구독
 
 
-既定では、サービスの 2 要素認証は有効になっていません。 ただし、デバイスを登録するときには 2 要素認証をお勧めします。 このサービスの 2 要素認証を要求する前に、Azure Active Directory で 2 要素認証プロバイダーを構成し、多要素認証用にユーザー アカウントを構成する必要があります。 「[クラウドでの Azure Multi-Factor Authentication Server の概要](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)」を参照してください。
+### <a name="configure-automatic-mdm-enrollment"></a>자동 MDM 등록 구성
 
-## <a name="enable-windows-enrollment-without-azure-ad-premium"></a>Azure AD Premium なしで Windows 登録を有効にする
-Azure AD Premium 自動登録なしでデバイスを登録することをユーザーに許可できます。 ライセンスを割り当てると、ユーザーは、自分の職場のアカウントを個人所有のデバイスに追加するか、会社所有のデバイスを Azure AD に参加させることで登録できます。 DNS エイリアス (CNAME レコード タイプ) を作成すると、ユーザーは自分のデバイスを簡単に登録できるようになります。 DNS CNAME リソース レコードを作成すると、ユーザーは Intune サーバー名を入力することなく Intune に接続して登録できます。
+1. [Azure 관리 포털](https://portal.azure.com) (https://manage.windowsazure.com) 에 로그인하여 **Azure Active Directory**를 선택합니다.
 
-### <a name="create-cnames-to-simplify-enrollment"></a>CNAME を作成して登録を簡単にする
-会社のドメインの CNAME DNS リソース レコードを作成します。 たとえば、会社の Web サイトが contoso.com の場合、EnterpriseEnrollment.contoso.com を enterpriseenrollment-s.manage.microsoft.com にリダイレクトする CNAME を DNS に作成します。
+  ![Azure 포털의 스크린샷](../media/auto-enroll-azure-main.png)
 
-CNAME DNS エントリの作成は省略可能ですが、CNAME レコードにより、ユーザーによる登録が簡単になります。 CNAME レコードの登録が見つからない場合、ユーザーは手動で MDM サーバー名 enrollment.manage.microsoft.com を入力するように求められます。
+2. **이동성(MDM 및 MAM)**을 선택합니다.
 
-|型|ホスト名|指定先|TTL|  
+  ![Azure 포털의 스크린샷](../media/auto-enroll-mdm.png)
+
+3. **Microsoft Intune**을 선택합니다.
+
+  ![Azure 포털의 스크린샷](../media/auto-enroll-intune.png)
+
+4. **MDM 사용자 범위**를 구성합니다. Microsoft Intune에서 관리해야 하는 사용자의 장치를 지정합니다. 이러한 사용자의 Windows 10 장치는 Microsoft Intune을 사용한 관리에 자동으로 등록됩니다.
+
+    - **없음**
+    - **일부**
+    - **모두**
+
+   ![Azure 포털의 스크린샷](../media/auto-enroll-scope.png)
+
+5. 다음 URL의 기본값을 사용합니다.
+    - **MDM 사용 약관 URL**
+    - **MDM 검색 URL**
+    - **MDM 규정 준수 URL**
+
+6. **저장**을 선택합니다.
+
+
+기본적으로 서비스에 대해 2단계 인증이 사용되도록 설정되지 않습니다. 그러나 장치를 등록할 때 2단계 인증이 권장됩니다. 이 서비스에 대해 2단계 인증을 요구하기 전에 Azure Active Directory에서 2단계 인증 공급자를 구성하고 다단계 인증에 대한 사용자 계정을 구성해야 합니다. [Azure Multi-Factor Authentication Server 시작](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)을 참조하세요.
+
+## <a name="enable-windows-enrollment-without-azure-ad-premium"></a>Azure AD Premium을 사용하지 않고 Windows 등록 사용
+사용자가 Azure AD Premium 자동 등록 없이도 장치를 등록하도록 할 수 있습니다. 라이선스를 할당하고 나면 작업 계정을 개인적으로 소유한 장치에 추가하거나 회사에서 소유한 장치를 Azure AD에 결합하여 등록할 수 있습니다. DNS 별칭(CNAME 레코드 유형)을 만들면 사용자가 자신의 장치를 쉽게 등록할 수 있습니다. DNS CNAME 리소스 레코드를 만들면 사용자가 Intune 서버 이름을 입력하지 않고도 Intune에서 연결 및 등록할 수 있습니다.
+
+### <a name="create-cnames-to-simplify-enrollment"></a>CNAME을 만들어 등록을 단순화
+회사의 도메인에 대한 CNAME DNS 리소스 레코드를 만듭니다. 예를 들어, 회사의 웹 사이트가 contoso.com인 경우 DNS에 EnterpriseEnrollment.contoso.com을 enterpriseenrollment-s.manage.microsoft.com으로 리디렉션하는 CNAME을 만듭니다.
+
+CNAME DNS 항목을 만드는 것은 선택 사항이지만 CNAME 레코드를 사용하면 사용자가 보다 쉽게 등록할 수 있습니다. 등록 CNAME 레코드가 없으면 사용자에게 MDM 서버 이름인 enrollment.manage.microsoft.com을 수동으로 입력하라는 메시지가 표시됩니다.
+
+|유형|호스트 이름|지시 대상|TTL|  
 |----------|---------------|---------------|---|
-|CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 時間|
+|CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1시간|
 
-複数の UPN サフィックスがある場合は、各ドメイン名について 1 つの CNAME レコードを作成し、それぞれで EnterpriseEnrollment s.manage.microsoft.com をポイントする必要があります。 たとえば、Contoso 社でユーザーが name@contoso.com を使用しており、電子メール/UPN として name@us.contoso.com と name@eu.constoso.com も使用している場合、Contoso の DNS 管理者は次の CNAME を作成する必要があります。
+UPN 접미사가 두 개 이상 있는 경우 각 도메인 이름에 대해 CNAME을 하나 만들고 EnterpriseEnrollment-s.manage.microsoft.com에 각각을 가리켜야 합니다. 예를 들어 Contoso의 사용자가 name@contoso.com을 사용하지만 메일/UPN으로 name@us.contoso.com 및 name@eu.constoso.com도 사용하는 경우 Contoso DNS 관리자는 다음 CNAME을 만들어야 합니다.
 
-|型|ホスト名|指定先|TTL|  
+|유형|호스트 이름|지시 대상|TTL|  
 |----------|---------------|---------------|---|
-|CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 時間|
-|CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 時間|
-|CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 時間|
+|CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1시간|
+|CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1시간|
+|CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1시간|
 
-`EnterpriseEnrollment-s.manage.microsoft.com` – Intune サービスへのリダイレクトと電子メールのドメイン名によるドメイン認識をサポートします。
+`EnterpriseEnrollment-s.manage.microsoft.com` – 메일의 도메인 이름에서 도메인을 인식하여 Intune 서비스로 리디렉션을 지원합니다.
 
-DNS レコードの変更が反映されるまでには、最大で 72 時間かかります。 DNS レコードの変更が反映されるまで、Intune で DNS の変更を確認することはできません。
+DNS 레코드 변경 내용이 전파되는 데는 최대 72시간이 걸릴 수 있습니다. DNS 레코드가 전파될 때까지 Intune의 DNS 변경 내용을 확인할 수 없습니다.
 
-## <a name="tell-users-how-to-enroll-devices"></a>デバイスの登録方法をユーザーに通知する  
+## <a name="tell-users-how-to-enroll-devices"></a>사용자에게 장치 등록 방법 알리기  
 
- セットアップが完了したら、デバイスを登録する方法をユーザーに知らせる必要があります。 ガイダンスとして[デバイスの登録についてユーザーに通知する項目](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)に関する記事を参照してください。 ユーザーに「[Enroll your Windows device in Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows)」 (Intune での Windows デバイスの登録) のページを案内します。 この情報は、Microsoft Intune と Configuration Manager の両方によって管理されるモバイル デバイスに適用されます。
+ 설정한 후에는 사용자에게 장치를 등록하는 방법을 알려 주어야 합니다. 지침은 [장치 등록에 대해 사용자에게 알릴 내용](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)을 참조하세요. 사용자를 [Intune에서Windows 장치 등록](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows)으로 바로 이동시킬 수 있습니다. 이 정보는 Microsoft Intune 및 Configuration Manager에서 관리되는 모바일 장치에 적용됩니다.
 
 > [!div class="button"]
-[< 前のステップ](create-service-connection-point.md)  [次のステップ >](set-up-additional-management.md)
-
+[< 이전 단계](create-service-connection-point.md)  [다음 단계 >](set-up-additional-management.md)

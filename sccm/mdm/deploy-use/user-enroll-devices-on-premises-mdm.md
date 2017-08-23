@@ -1,83 +1,79 @@
 ---
-title: "オンプレミス MDM の対象となるデバイスをユーザーが登録する方法 - Configuration Manager | Microsoft Docs"
-description: "System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスをユーザーが登録する方法について説明します。"
+title: "사용자가 온-프레미스 MDM을 사용하여 장치를 등록하는 방법 - Configuration Manager | Microsoft 문서"
+description: "System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 사용하여 장치를 등록하는 방법을 이해합니다."
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 59004b34-b64f-4d77-898c-07bf3dc75430
-caps.latest.revision: 9
-caps.handback.revision: 0
+caps.latest.revision: "9"
+caps.handback.revision: "0"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 507bad02c6e028f09a8b0c8a566ac55f7c3942a5
 ms.openlocfilehash: 8c7438c2cc0bc66654eb3e74de10553df53181d9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-users-enroll-devices-with-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスをユーザーが登録する方法
+# <a name="how-users-enroll-devices-with-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 사용하여 장치를 등록하는 방법
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager オンプレミス モバイル デバイス管理では、ユーザーがデバイスを登録できます。ただし、ユーザーに登録権限が付与され (そのためにはクライアント設定を更新します)、ユーザーのデバイスにルート証明書がインストールされ、それによりデバイスが必須のサイト システムの役割をホストしているサーバーと信頼できる通信を行えるようになっている必要があります。 登録をセットアップする方法の詳細については、「[System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のデバイス登録の設定](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)」を参照してください。  
+System Center Configuration Manager 온-프레미스 모바일 장치 관리에서, 등록 권한이 부여된 사용자가 장치를 등록할 수 있으며(업데이트된 클라이언트 설정을 통해) 장치에는 필요한 사이트 시스템 역할을 호스트하는 서버와 신뢰할 수 있는 통신을 설정하기 위해 필요한 루트 인증서가 설치됩니다. 등록을 설정하는 방법에 대한 자세한 내용은 [System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 위한 장치 등록 설정](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)을 참조하세요.  
 
 > [!NOTE]  
->  Configuration Manager の現在のブランチでは、次のオペレーティング システムを実行しているデバイスをオンプレミス モバイル デバイス管理で登録することができます。  
+>  현재 분기의 Configuration Manager는 다음 운영 체제를 실행하는 장치에 대한 온-프레미스 모바일 장치 관리에서의 등록을 지원합니다.  
 >   
 > -  Windows 10 Enterprise  
 > -   Windows 10 Pro  
-> -   Windows 10 Team\( Configuration Manager バージョン 1602 以降\)  
+> -   Windows 10 Team\(Configuration Manager 버전 1602 이상\)  
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise
 > -   Windows 10 IoT Enterprise   
 
-次のタスクでは、オンプレミスのモバイル デバイス管理の対象となるコンピューターとデバイスを登録し、その登録を検証する方法について説明します。  
+다음 작업에서는 온\-프레미스 모바일 장치 관리에 대해 컴퓨터 및 장치를 등록하고 등록을 확인하는 방법을 설명합니다.  
 
--   [Windows 10 コンピューターの登録](#bkmk_enrollDesk)  
+-   [Windows 10 컴퓨터 등록](#bkmk_enrollDesk)  
 
--   [Windows 10 Mobile デバイスの登録](#bkmk_enrollMob)  
+-   [Windows 10 모바일 장치 등록](#bkmk_enrollMob)  
 
--   [デバイス登録の確認](#bkmk_verify)  
+-   [장치 등록 확인](#bkmk_verify)  
 
-##  <a name="bkmk_enrollDesk"></a> Windows 10 コンピューターの登録  
+##  <a name="bkmk_enrollDesk"></a> Windows 10 컴퓨터 등록  
 
-1.  Windows 10 コンピューターで、 **[設定]**に移動します。  
+1.  Windows 10 컴퓨터에서 **설정**으로 이동합니다.  
 
-2.  **[アカウント]**をクリックし、 **[職場のアクセス]**をクリックします。  
+2.  **계정**을 클릭하고, **회사 액세스**를 클릭합니다.  
 
-3.  [職場のアクセス] の **[職場または学校への接続]**で、 **[接続]**をクリックし、職場の電子メール アドレスを入力し、 **[続行]**をクリックします。  
+3.  회사 액세스의 **회사 또는 학교에 연결**에서, **연결**을 클릭하고, 업무용 메일 주소를 입력하고 **계속**을 클릭합니다.  
 
-4.  登録プロキシ ポイント サイト システムの役割をホストしているサーバーの FQDN を入力し、**[続行]** をクリックします。  
+4.  등록 프록시 지점 사이트 시스템 역할을 호스트하는 서버의 FQDN을 입력하고 **계속**을 클릭합니다.  
 
-5.  [サービスに接続しています] で、職場の電子メールのパスワードを入力し、 **[サインイン]**をクリックします。  
+5.  서비스에 연결 중에서, 업무용 메일 암호를 입력하고 **로그인**을 클릭합니다.  
 
-6.  サインイン情報を記憶するために **[スキップ]** をクリックします。少し経つと、デバイスが接続されます。  
+6.  로그인 정보를 기억하기 위해 **건너뛰기** 를 클릭하면 잠시 후에 장치가 연결됩니다.  
 
-##  <a name="bkmk_enrollMob"></a> Windows 10 Mobile デバイスの登録  
+##  <a name="bkmk_enrollMob"></a> Windows 10 모바일 장치 등록  
 
-1.  Windows 10 Mobile デバイスで、 **[設定]**に移動します。  
+1.  Windows 10 모바일 장치에서 **설정**으로 이동합니다.  
 
-2.  **[アカウント]**をクリックし、 **[職場のアクセス]**をクリックします。  
+2.  **계정**을 클릭하고, **회사 액세스**를 클릭합니다.  
 
-3.  **[接続]**をクリックします。  
+3.  **연결**을 클릭합니다.  
 
-4.  職場の電子メール アドレスと、登録プロキシ ポイント サイト システムの役割をホストしているサーバーの FQDN を入力します。 **[接続]**をクリックします。  
+4.  업무용 메일 주소 및 등록 프록시 지점 사이트 시스템 역할을 호스트하는 서버의 FQDN을 입력합니다. **연결**을 클릭합니다.  
 
-5.  次の画面で、職場の電子メール アドレスとパスワードを入力し、 **[サインイン]**をクリックします。 少し経つと、デバイスが登録されます。 **[完了]**をクリックします。  
+5.  다음 화면에서 업무용 메일 주소 및 암호를 입력한 다음 **로그인**을 클릭합니다. 잠시 후 장치가 등록됩니다. **완료**를 클릭합니다.  
 
-##  <a name="bkmk_verify"></a> デバイス登録の確認  
- Configuration Manager コンソールで、デバイスが正常に登録されていることを確認できます。  
+##  <a name="bkmk_verify"></a> 장치 등록 확인  
+ Configuration Manager 콘솔에서 장치가 성공적으로 등록되었는지 확인할 수 있습니다.  
 
-1.  Configuration Manager コンソールを起動します。  
+1.  Configuration Manager 콘솔을 시작합니다.  
 
-2.  [資産とコンプライアンス][概要][デバイス]が必要とするサイト システムの役割との間で信頼された通信を行うために必要です。 登録されているデバイスが一覧に表示されます。  
-
+2.  마법사를 종료하려면 **자산 및 준수** > **개요** > **장치**에 필요한 사이트 시스템 역할 간의 신뢰할 수 있는 통신에 필요합니다. 등록된 장치가 목록에 표시됩니다.  

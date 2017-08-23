@@ -1,82 +1,78 @@
 ---
-title: "System Center Configuration Manager で VPN プロファイルを作成する方法 | Microsoft Docs"
-description: "System Center Configuration Manager で VPN プロファイルを作成する方法を説明します。"
+title: "System Center Configuration Manager에서 VPN 프로필을 만드는 방법 | Microsoft 문서"
+description: "System Center Configuration Manager에서 VPN 프로필을 만드는 방법을 알아봅니다."
 ms.custom: 
 ms.date: 4/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: lleonard-msft
-caps.handback.revision: 0
+caps.handback.revision: "0"
 ms.author: alleonar
 ms.manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7a6c89254d01f4074e5c170b20338686178ebdd3
 ms.openlocfilehash: 359fcfd9754fb5c81763bc44cac45376ea3ab0b8
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/20/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-create-vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager で VPN プロファイルを作成する方法
+# <a name="how-to-create-vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 VPN 프로필을 만드는 방법
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-さまざまなデバイス プラットフォームで使用可能な接続の種類については、「[System Center Configuration Manager の VPN プロファイル](../../protect/deploy-use/vpn-profiles.md)」を参照してください。  
+다양한 장치 플랫폼에서 사용할 수 있는 연결 형식에 대한 자세한 내용은 [System Center Configuration Manager의 VPN 프로필](../../protect/deploy-use/vpn-profiles.md)을 참조하세요.  
 
-サード パーティの VPN 接続の場合は、VPN プロファイルを展開する前に VPN アプリを配布します。 アプリを展開しないと、ユーザーが VPN に接続しようとしたときに、アプリを展開するように求められます。 アプリの展開方法については、「[System Center Configuration Manager でアプリケーションを展開する方法](../../apps/deploy-use/deploy-applications.md)」を参照してください。
+타사 VPN 연결의 경우 VPN 프로필을 배포하기 전에 VPN 앱을 배포합니다. 앱을 배포하지 않고 VPN에 연결하려고 하면 앱을 배포하라는 메시지가 표시됩니다. 앱을 배포하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 응용 프로그램 배포](../../apps/deploy-use/deploy-applications.md)를 참조하세요.
 
-### <a name="create-a-vpn-profile"></a>VPN プロファイルの作成   
+### <a name="create-a-vpn-profile"></a>VPN 프로필 만들기   
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[コンプライアンス設定]** > **[会社のリソースへのアクセス]** > **[VPN プロファイル]** の順に選択します。  
+1.  Configuration Manager 콘솔에서 **자산 및 준수** > **준수 설정** > **회사 리소스 액세스** > **VPN 프로필**을 선택합니다.  
 
-3.  **[ホーム]** タブの **[作成]** グループで、**[VPN プロファイルの作成]** を選択します。  
+3.  **홈** 탭의 **만들기** 그룹에서 **VPN 프로필 만들기**를 선택합니다.  
 
 
-1.  **[全般]** ページに入力します。 」を参照し、次のことに注意してください。  
+1.  **일반** 페이지를 완료합니다. 를 참조하되 다음에 유의하십시오.  
 
-       - VPN プロファイル名には、\\/:*?&lt;>&#124; などの文字や空白文字は使用しないでください。 Windows Server VPN プロファイルでは、これらの文字はサポートされていません。  
+    - VPN 프로필 이름에 \\/:*?&lt;>&#124; 문자나 공백 문자를 사용하지 마세요. 이러한 문자는 Windows Server VPN 프로필에서 지원되지 않습니다.  
 
-       -   **[ファイルから既存の VPN プロファイルの項目をインポートする]** を選択し、XML ファイルにエクスポートされた VPN プロファイルの情報をインポートします (Windows 8.1 および Windows RT のみ)。  
+     -   **파일에서 기존 VPN 프로필 항목 가져오기**를 선택하여 XML 파일로 내보낸 VPN 프로필 정보를 가져옵니다(Windows 8.1 및 Windows RT 운영 체제에만 해당).  
 
-1.  **[接続]** ページで、次のように指定します。  
+1.  **연결** 페이지에서 다음을 지정합니다.  
 
-    -   **接続の種類**: VPN 接続の種類を選択します。 次の表にある接続の種類から選択できます。  
+    -   **연결 형식**: VPN 연결 형식을 선택합니다. 다음 표에 있는 연결 형식 중에서 선택할 수 있습니다.  
 
-    -   **サーバーの一覧**: VPN 接続に使用する新しいサーバーを追加します。 接続の種類によっては、1 つ以上の VPN サーバーを追加して、既定のサーバーを指定することもできます。  
+    -   **서버 목록**: VPN 연결에 사용할 새 서버를 추가합니다. 연결 형식에 따라 VPN 서버를 하나 이상 선택하고 기본 서버를 지정할 수 있습니다.  
 
         > [!NOTE]  
-        >  iOS を実行するデバイスは、複数の VPN サーバーの使用をサポートしていません。 複数の VPN サーバーを構成して VPN プロファイルを iOS デバイスに展開すると、既定のサーバーだけが使用されます。  
+        >  iOS를 실행하는 장치에서는 여러 VPN 서버를 사용할 수 없습니다. 여러 VPN 서버를 구성한 후 VPN 프로필을 iOS 장치에 배포하는 경우 기본 서버만 사용됩니다.  
 
-     次の表に、接続の種類のオプションを示します。 詳細については、VPN サーバーのマニュアルを参照してください。
+     이 표에서는 연결 형식 옵션을 제공합니다. 자세한 내용은 VPN 서버 설명서를 참조하세요.
 
-| &nbsp;&nbsp;オプション&nbsp;&nbsp; | 説明 | &nbsp;&nbsp;接続の&nbsp;種類&nbsp;&nbsp; |  
+| &nbsp;&nbsp;옵션&nbsp;&nbsp; | 추가 정보 | &nbsp;&nbsp;연결&nbsp;유형&nbsp;&nbsp; |  
 |----------------|----------------------|---------------------|  
-|**領域**     |使用する認証領域です。 認証領域とは、"Pulse Secure" 接続の種類で使用される認証リソースのグループを表します。|Pulse Secure|    
-|**ロール**        |この接続に対するアクセス権を持つユーザー ロールです。 |Pulse Secure|  
-|**ログイン グループまたはドメイン** |接続するログイン グループまたはドメインの名前です。|Dell SonicWALL Mobile Connect|  
-|**指紋**  |VPN サーバーが信頼できることを確認するために使用される文字列 ("Contoso 指紋コード" など) です。<br /><br /> 指紋:<br /><br /> - 指紋をクライアントに送信することにより、クライアントは、接続するときに同じ指紋を示すすべてのサーバーを信頼できます。<br /><br /> - デバイスにまだ指紋がない場合、指紋を表示すると共に、接続先の VPN サーバーを信頼するようにユーザーを促します (ユーザーは、手動で指紋を検証し、**[信頼する]** を選択して接続する必要があります)。|チェック ポイント モバイル VPN|  
-|**VPN 接続を介してすべてのネットワーク トラフィックを送信する** |このオプションが選択されていない場合、( **Microsoft SSL (SSTP)**、 **Microsoft Automatic**、 **IKEv2**、 **PPTP** 、および **L2TP** の各接続の種類に対して) 接続の追加のルートを指定することができます。これを分割または VPN のトンネリングといいます。<br /><br /> 企業ネットワークへの接続だけが VPN トンネル経由で送信されます。 インターネット上のリソースに接続するときは、VPN トンネリングは使用されません。 |すべて|  
-|**接続専用 DNS サフィックス** |接続専用のドメイン ネーム システム (DNS) サフィックスです。|- Microsoft SSL (SSTP)<br /><br /> - Microsoft 自動<br /><br /> - IKEv2<br /><br /> - PPTP<br /><br /> - L2TP|  
-|**企業の Wi-Fi ネットワークに接続しているときは VPN をバイパスする**  |デバイスが企業の Wi-Fi ネットワークに接続されている場合、VPN 接続は使用されません。|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - チェック ポイント モバイル VPN<br /><br /> - Microsoft SSL (SSTP)<br /><br /> - Microsoft 自動<br /><br /> - IKEv2<br /><br /> - L2TP|  
-|**家庭の Wi-Fi ネットワークに接続しているときは VPN をバイパスする**  |デバイスが家庭の Wi-Fi ネットワークに接続されている場合、VPN 接続は使用されません。|すべて|  
-|**アプリ VPN ごと (iOS 7 以降、Mac OS X 10.9 以降)** |VPN 接続を iOS アプリに関連付けて、アプリを実行すると接続が開かれるようにします。 アプリを展開するときに VPN プロファイルをアプリに関連付けることができます。|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - チェック ポイント モバイル VPN|  
-|**カスタム XML (省略可能)** |VPN 接続を構成するカスタムの XML コマンドを指定します。<br /><br /> 例:<br /><br /> **Pulse Secure**の場合:<br /><br /> **&lt;pulse-schema><br /> &nbsp; &lt;isSingleSignOnCredential>true&lt;/isSingleSignOnCredential\><br />&lt;/pulse-schema>**<br /><br /> **チェックポイント モバイル VPN**の場合:<br /><br /> **&lt;CheckPointVPN <br /> &nbsp; port="443" name="CheckPointSelfhost" <br /> &nbsp; sso="true" <br /> &nbsp; debug="3"<br />/>**<br /><br /> **Dell SonicWALL Mobile Connect**の場合:<br /><br /> **&lt;MobileConnect\><br />&nbsp; &nbsp; &lt;Compression\>false&lt;/Compression\><br />&nbsp; &nbsp; &lt;debugLogging\>True&lt;/debugLogging\><br />&nbsp; &nbsp; &lt;packetCapture\>False&lt;/packetCapture\><br />&lt;/MobileConnect\>**<br /><br /> **F5 Edge Client**の場合:<br /><br /> **&lt;f5-vpn-conf>&lt;single-sign-on-credential>&lt;/f5-vpn-conf>**<br /><br /> カスタムの XML コマンドの記述方法については、各製造元の VPN に関するマニュアルを参照してください。|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - チェック ポイント モバイル VPN|  
+|**영역**     |사용하려는 인증 영역. 인증 영역은 Pulse Secure 연결 유형에서 사용되는 인증 리소스 그룹입니다.|Pulse Secure|    
+|**역할**        |이 연결에 대한 액세스 권한이 있는 사용자 역할. |Pulse Secure|  
+|**로그인 그룹 또는 도메인** |연결하려는 로그인 그룹 또는 도메인의 이름.|Dell SonicWALL Mobile Connect|  
+|**지문**  |신뢰할 수 있는 VPN 서버를 확인하는 데 사용할 문자열(예: 'Contoso 지문 코드').<br /><br /> 지문은 다음과 같은 작업에 사용할 수 있습니다.<br /><br /> - 연결 시 동일한 지문을 제시하는 서버는 신뢰할 수 있다는 것을 알 수 있도록 클라이언트에 전송됩니다.<br /><br /> - 장치에 지문이 아직 없으면 사용자에게 지문을 보여주면서 연결하려는 VPN 서버를 신뢰할 것인지 묻는 메시지가 표시됩니다. 사용자는 지문을 수동으로 확인한 후 연결 **신뢰**를 선택합니다.|검사점 모바일 VPN|  
+|**VPN 연결을 통해 모든 네트워크 트래픽 보내기** |이 옵션을 선택하지 않는 경우 연결( **Microsoft SSL(SSTP)**, **Microsoft 자동**, **IKEv2**, **PPTP** 및 **L2TP** 연결 형식의 경우)에 대해 추가 경로를 지정할 수 있습니다. 이러한 경로를 분할 또는 VPN 터널링이라고 합니다.<br /><br /> 회사 네트워크에 대한 연결만 VPN 터널을 통해 보내집니다. VPN 터널링은 인터넷에 있는 리소스에 연결할 경우에는 사용되지 않습니다. |모두|  
+|**연결별 DNS 접미사** |연결에 대해 연결별 DNS(Domain Name System) 접미사.|- Microsoft SSL(SSTP)<br /><br /> - Microsoft 자동<br /><br /> - IKEv2<br /><br /> - PPTP<br /><br /> - L2TP|  
+|**회사 Wi-Fi 네트워크에 연결된 경우 VPN 무시**  |장치가 회사 Wi-Fi 네트워크에 연결된 경우 VPN 연결이 사용되지 않습니다.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - 검사점 모바일 VPN<br /><br /> - Microsoft SSL(SSTP)<br /><br /> - Microsoft 자동<br /><br /> - IKEv2<br /><br /> - L2TP|  
+|**홈 Wi-Fi 네트워크 연결 시 VPN 건너뛰기**  |장치가 가정용 Wi-Fi 네트워크에 연결된 경우 VPN 연결이 사용되지 않습니다.|모두|  
+|**응용 프로그램 VPN(iOS 7 이상, Mac OS X 10.9 및 이후 버전)당** |앱이 실행될 때 연결이 열리도록 이 VPN 연결을 iOS 앱과 연결합니다. 앱을 배포할 때 VPN 프로필을 앱과 연결할 수 있습니다.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - 검사점 모바일 VPN|  
+|**사용자 지정 XML(선택 사항)** |VPN 연결을 구성하는 사용자 지정 XML 명령을 지정합니다.<br /><br /> 예제:<br /><br /> **Pulse Secure**의 경우:<br /><br /> **&lt;pulse-schema><br /> &nbsp; &lt;isSingleSignOnCredential>true&lt;/isSingleSignOnCredential\><br />&lt;/pulse-schema>**<br /><br /> **CheckPoint Mobile VPN**의 경우:<br /><br /> **&lt;CheckPointVPN <br /> &nbsp; port="443" name="CheckPointSelfhost" <br /> &nbsp; sso="true" <br /> &nbsp; debug="3"<br />/>**<br /><br /> **Dell SonicWALL Mobile Connect**의 경우:<br /><br /> **&lt;MobileConnect\><br />&nbsp; &nbsp; &lt;Compression\>false&lt;/Compression\><br />&nbsp; &nbsp; &lt;debugLogging\>True&lt;/debugLogging\><br />&nbsp; &nbsp; &lt;packetCapture\>False&lt;/packetCapture\><br />&lt;/MobileConnect\>**<br /><br /> **F5 Edge Client**의 경우:<br /><br /> **&lt;f5-vpn-conf>&lt;single-sign-on-credential>&lt;/f5-vpn-conf>**<br /><br /> 사용자 지정 XML 명령을 작성하는 방법에 대한 자세한 내용은 각 제조업체의 VPN 설명서를 참조하세요.|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - 검사점 모바일 VPN|  
 
 > [!NOTE]  
->  モバイル デバイスの VPN プロファイルの作成に特化した情報については、[VPN プロファイルの作成](../../mdm/deploy-use/create-vpn-profiles.md)に関する記事を参照してください。  
+>  모바일 장치에 대한 VPN 프로필 만들기에 특정한 정보는 [VPN 프로필 만들기](../../mdm/deploy-use/create-vpn-profiles.md)를 참조하세요.  
 
-ウィザードを完了します。 新しい VPN プロファイルは、[資産とコンプライアンス **** ] ワークスペースの [VPN プロファイル **** ] ノードに表示されます。
+마법사를 완료합니다. 새로운 VPN 프로필이 **자산 및 호환성** 작업 영역의 **VPN 프로필** 노드에 표시됩니다.
 
-### <a name="next-steps"></a>次のステップ
+### <a name="next-steps"></a>다음 단계
 
-- サード パーティの VPN 接続の場合は、VPN プロファイルを展開する前に VPN アプリを配布します。 アプリを展開しないと、ユーザーが VPN に接続しようとしたときに、アプリを展開するように求められます。 アプリの展開方法については、「[System Center Configuration Manager でアプリケーションを展開する方法](../../apps/deploy-use/deploy-applications.md)」を参照してください。
+- 타사 VPN 연결의 경우 VPN 프로필을 배포하기 전에 VPN 앱을 배포합니다. 앱을 배포하지 않고 VPN에 연결하려고 하면 앱을 배포하라는 메시지가 표시됩니다. 앱을 배포하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 응용 프로그램 배포](../../apps/deploy-use/deploy-applications.md)를 참조하세요.
 
-- 「[System Center Configuration Manager でのプロファイルの展開](deploy-wifi-vpn-email-cert-profiles.md)」に記載されているとおりに、VPN プロファイルを展開します。  
-
+- [System Center Configuration Manager에서 프로필을 배포하는 방법](deploy-wifi-vpn-email-cert-profiles.md)에 설명된 대로 VPN 프로필을 배포합니다.  

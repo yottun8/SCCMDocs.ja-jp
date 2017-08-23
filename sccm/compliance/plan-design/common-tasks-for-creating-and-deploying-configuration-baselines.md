@@ -1,94 +1,87 @@
 ---
-title: "構成基準に関する一般的なタスク - Configuration Manager | Microsoft Docs"
-description: "System Center Configuration Manager の構成基準を作成して展開する方法について説明します。"
+title: "구성 기준에 대한 일반 작업 - Configuration Manager | Microsoft 문서"
+description: "System Center Configuration Manager 구성 기준을 만들고 배포하는 방법을 알아봅니다."
 ms.custom: na
 ms.date: 07/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 344b55aecd72479b759b40e8252e64a06c5eaba0
 ms.openlocfilehash: 5bf4457af6bedf7bc9cd73c879f1857209c0725d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/13/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# System Center Configuration Manager での構成基準の作成と展開に関する一般的なタスク
-<a id="common-tasks-for-creating-and-deploying-configuration-baselines-with-system-center-configuration-manager" class="xliff"></a>
+# <a name="common-tasks-for-creating-and-deploying-configuration-baselines-with-system-center-configuration-manager"></a>System Center Configuration Manager에서 구성 기준을 만들고 배포하기 위한 일반 작업
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-このトピックには、System Center Configuration Manager の構成基準を作成および展開する方法を習得するのに役立つ一般的なシナリオが含まれます。  
+이 항목에는 System Center Configuration Manager 구성 기준을 만들고 배포하는 방법을 배울 수 있는 일반 시나리오가 있습니다.  
 
- 「[構成基準の作成](../../compliance/deploy-use/create-configuration-baselines.md)」と「[構成基準の展開](../../compliance/deploy-use/deploy-configuration-baselines.md)」のトピックには、コンプライアンス設定に関する知識を既にお持ちの方を対象とした、使用するすべての機能に関する詳細なドキュメントがあります。  
+ 준수 설정에 이미 익숙한 경우 사용하는 모든 기능에 대한 자세한 설명은 [구성 기준 만들기](../../compliance/deploy-use/create-configuration-baselines.md) 및 [구성 기준 배포](../../compliance/deploy-use/deploy-configuration-baselines.md) 항목을 참조하세요.  
 
- 作業を開始する前に、「[System Center Configuration Manager のコンプライアンス設定を使ってみる](../../compliance/get-started/get-started-with-compliance-settings.md)」をお読みになり、いくつかの基本的なコンプライアンス設定を確認してください。また、[コンプライアンス設定の計画と構成](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)に関するページをお読みになり、必要な前提条件の実装方法を確認してください。  
+ 시작하기 전에 [System Center Configuration Manager에서 준수 설정 시작](../../compliance/get-started/get-started-with-compliance-settings.md)을 읽어 준수 설정에 대한 일부 기본 지식을 익히고 [준수 설정 계획 및 구성](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)을 읽어 필수 전제 조건을 구현합니다.  
 
-## 構成基準の作成
-<a id="create-a-configuration-baseline" class="xliff"></a>  
- この例では、Configuration Manager クライアントを実行している Windows 10 PC のみを対象に構成項目を作成しました。  
+## <a name="create-a-configuration-baseline"></a>구성 기준 만들기  
+ 이 예제에서는 Configuration Manager 클라이언트를 실행하는 Windows 10 PC 전용 구성 항목을 만들었습니다.  
 
- この構成項目では、Windows 10 PC で 6 文字以上のパスワードが求められるように指定します。 構成項目には、" **Windows 10 パスワード適用**" という名前が付けられます。  
+ 이 구성 항목은 Windows 10 PC에서 6자 이상의 필수 암호를 적용합니다. 구성 항목의 이름은 **Windows 10 암호 적용**입니다.  
 
-次の手順では、この構成項目を構成基準に追加して、展開用に準備する方法について説明します。  
+다음 절차를 통해 이 구성 항목을 구성 기준에 추가하여 배포를 준비하는 방법을 알아봅니다.  
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[コンプライアンス設定]** > **[構成基準]** の順にクリックします。  
+1.  Configuration Manager 콘솔에서 **자산 및 준수** > **준수 설정** > **구성 기준**을 클릭합니다.  
 
-3.  **ホーム** ] タブで、 **作成** グループで、[ **構成基準の作成**です。  
+3.  **홈** 탭의 **만들기** 그룹에서 **구성 기준 만들기**를 클릭합니다.  
 
-4.  **[構成基準の作成]** ダイアログ ボックスで、次の設定を構成します。  
+4.  **구성 기준 만들기** 대화 상자에서 다음 설정을 구성합니다.  
 
-    -   **名前** - **Windows 10 パスワード** (または任意の別の名前)  
+    -   **이름** - **Windows 10 암호** (또는 원하는 다른 이름)를 입력합니다.  
 
-5.  **[追加]** > **[構成項目]** の順にクリックします。  
+5.  **추가** > **구성 항목**입니다.  
 
-6.  **[構成項目の追加]** ダイアログ ボックスで、前に作成した **[Windows 10 パスワード適用]** 構成項目を選択し、 **[追加]**をクリックします。  
+6.  **구성 항목 추가** 대화 상자에서 이전에 만든 **Windows 10 암호 적용** 구성 항목을 선택한 다음 **추가**를 클릭합니다.  
 
-7.  [OK] をクリックして **[構成項目の追加]** ダイアログ ボックスを閉じて、**[構成基準の作成]** ダイアログ ボックスに戻ります。
+7.  확인을 클릭하여 **구성 항목 추가** 대화 상자를 닫고 **구성 기준 만들기** 대화 상자로 돌아갑니다.
 
-8.  **[OK]** をクリックして、 **[構成基準の作成]** ダイアログ ボックスを閉じます。  
+8.  **확인** 을 클릭하여 **구성 기준 만들기** 대화 상자를 닫습니다.  
 
- これで、Configuration Manager コンソールの **[構成基準]** ノードに、構成基準が表示されます。  
+ 이제 Configuration Manager 콘솔의 **구성 기준** 노드에서 구성 기준을 볼 수 있습니다.  
 
-## 構成基準の展開
-<a id="deploy-the-configuration-baseline" class="xliff"></a>  
- この例では、前の手順で作成した構成基準をコンピューターのコレクションに展開します。  
+## <a name="deploy-the-configuration-baseline"></a>구성 기준 배포  
+ 이 예제에서는 이전 절차에서 만든 구성 기준을 컴퓨터의 컬렉션에 배포합니다.  
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[コンプライアンス設定]** > **[構成基準]** の順にクリックします。  
+1.  Configuration Manager 콘솔에서 **자산 및 준수** > **준수 설정** > **구성 기준**을 클릭합니다.  
 
-3.  構成基準の一覧から、 **[Windows 10 パスワード]**を選択します。  
+3.  구성 기준 목록에서 **Windows 10 암호**를 선택합니다.  
 
-4.  [ **ホーム** ] タブの [ **展開** ] グループで、[ **展開**] をクリックします。  
+4.  **홈** 탭의 **배포** 그룹에서 **배포**를 클릭합니다.  
 
-5.  **[構成基準の展開]** ダイアログ ボックスで、次の設定を構成します。  
+5.  **구성 기준 배포** 대화 상자에서 다음 설정을 구성합니다.  
 
-    -   **選択した構成基準** - **[Windows 10 パスワード]** 構成基準が、この一覧に自動的に追加されたことを確認します。  
+    -   **선택한 구성 기준** - **Windows 10 암호** 구성 기준이 이 목록에 자동으로 추가되었는지 확인합니다.  
 
-    -   **サポートされている場合は対応していない規則を修復する** - このチェック ボックスをオンにすると、対象デバイスに正しい設定が存在しない場合に、Configuration Manager によって修復されます。  
+    -   **지원되는 경우 비규격 규칙 수정** - 대상 장치에 올바른 설정이 없을 때 Configuration Manager에서 해당 설정을 수정하게 하려면 이 상자를 선택합니다.  
 
-    -   **コレクション** - **[参照]** をクリックして、構成基準の対応状況を評価および修復するコンピューターのコレクションを選択します。 この例では、構成基準は、組み込みの **[すべてのデスクトップ クライアントおよびサーバー クライアント]** コレクションに展開されました。  
+    -   **컬렉션** - 준수 여부에 대해 구성 기준을 평가하고 수정할 컴퓨터의 컬렉션을 선택하려면 **찾아보기**를 클릭합니다. 이 예제에서는 구성 기준이 기본 제공 **모든 데스크톱 및 서버 클라이언트** 컬렉션에 배포되었습니다.  
 
         > [!TIP]  
-        >  選択したコレクションに Windows 10 を実行していないコンピューターまたはデバイスが含まれていても、問題はありません。 サポートされているプラットフォームを、作成した構成項目で構成してあれば、Windows 10 PC のみの対応状況が評価されます。  
+        >  선택하는 컬렉션에 Windows 10을 실행하지 않는 컴퓨터 또는 장치가 포함되어 있어도 걱정할 필요가 없습니다. 만든 구성 항목에서 지원되는 플랫폼을 구성했다면 Windows 10 PC만 준수 여부를 검사합니다.  
 
-    -   必要な場合は、構成基準を評価するスケジュールを構成します。 それ以外の場合は、既定の **7 日間**にしておきます。  
+    -   필요한 경우 구성 기준을 평가하는 일정을 구성합니다. 그렇지 않은 경우 기본값인 **7일**을 그대로 둡니다.  
 
-7.  **[OK]** をクリックして **[構成基準の展開]** ダイアログ ボックスを閉じると、展開が作成されます。  
+7.  **확인** 을 클릭하여 **구성 기준 배포** 대화 상자를 만들고 배포를 만듭니다.  
 
- この展開のコンプライアンスに関する統計情報の概要を確認するには、 **[監視]** ワークスペースで **[展開]**をクリックします。 画面の下部に、 **[コンプライアンスに関する統計情報]** グラフが表示されます。  
+ 이 배포에 대한 준수 통계를 간단히 살펴보려면 **모니터링** 작업 영역에서 **배포**를 클릭합니다. 화면 맨 아래에 **준수 통계** 차트가 표시됩니다.  
 
-## 次のステップ
-<a id="next-steps" class="xliff"></a> 
+## <a name="next-steps"></a>다음 단계 
 
-構成基準を監視する方法の詳細については、[コンプライアンス設定の監視](../../compliance/deploy-use/monitor-compliance-settings.md)に関するページを参照してください。  
-
+구성 기준을 모니터링하는 방법에 대한 자세한 내용은 [준수 설정 모니터링](../../compliance/deploy-use/monitor-compliance-settings.md)을 참조하세요.  

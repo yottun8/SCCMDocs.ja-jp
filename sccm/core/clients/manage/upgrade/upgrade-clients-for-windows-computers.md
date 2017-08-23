@@ -1,106 +1,102 @@
 ---
-title: "クライアントのアップグレード | Microsoft Docs"
-description: "System Center Configuration Manager で Windows コンピューターのクライアントをアップグレードします。"
+title: "클라이언트 업그레이드 | Microsoft 문서"
+description: "System Center Configuration Manager에서 Windows 컴퓨터용 클라이언트 업그레이드"
 ms.custom: na
 ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
-caps.latest.revision: 11
-caps.handback.revision: 0
+caps.latest.revision: "11"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
 ms.openlocfilehash: 98b8c92e4dad3cef1ed3701b9c0f9111eb9941ea
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/18/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-upgrade-clients-for-windows-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager で Windows コンピューター用クライアントをアップグレードする方法
+# <a name="how-to-upgrade-clients-for-windows-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 Windows 컴퓨터용 클라이언트를 업그레이드하는 방법
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-クライアント インストール方法または Configuration Manager の自動クライアント アップグレード機能を使用して、Windows コンピューター上のクライアントをアップグレードできます。 次のクライアント インストール方法は、Windows コンピューター上のクライアント ソフトウェアをアップグレードする有効な方法です。  
+Configuration Manager에서 클라이언트 설치 방법 또는 자동 클라이언트 업그레이드 기능을 사용하여 Windows 컴퓨터에서 클라이언트를 업그레이드할 수 있습니다. 다음과 같은 클라이언트 설치 방법이 Windows 컴퓨터에서 클라이언트 소프트웨어를 업그레이드하는 올바른 방법입니다.  
 
--   グループ ポリシーによるインストール  
+-   그룹 정책 설치  
 
--   ログオン スクリプトによるインストール  
+-   로그온 스크립트 설치  
 
--   手動インストール  
+-   수동 설치  
 
--   アップグレード インストール  
+-   업그레이드 설치  
 
- クライアント インストール方法を使用してクライアントをアップグレードする場合は、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」で、その方法について詳細を確認してください。
+ 클라이언트 설치 방법을 사용하는 클라이언트 업그레이드에 관심이 있는 경우 [System Center Configuration Manager에서 Windows 컴퓨터에 클라이언트를 배포하는 방법](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)에서 해당 방법 사용에 대해 자세히 알아보세요.
 
- バージョン 1610 以降では、除外グループを指定して、クライアントをアップグレード対象から除外することができます。 詳細については、「[Windows コンピューター用クライアントをアップグレードする方法](exclude-clients-windows.md)」を参照してください。  
+ 버전 1610부터 제외 그룹을 지정하여 클라이언트가 업그레이드되지 않도록 제외할 수 있습니다. 자세한 내용은 [Windows 컴퓨터에서 클라이언트 업그레이드를 제외하는 방법](exclude-clients-windows.md)을 참조하세요.  
 
 
 > [!TIP]  
->  Configuration Manager の以前のバージョン \(Configuration Manager 2007 または System Center 2012 Configuration Manager など\) から、サーバー インフラストラクチャをアップグレードする場合は、Configuration Manager クライアントをアップグレードする前に、現在のすべてのブランチの更新プログラムのインストールを含む、サーバーのアップグレードを完了することをお勧めします。   現在のブランチの最新の更新プログラムには、クライアントの最新バージョンが含まれているため、使用するすべての Configuration Manager 更新プログラムをインストールした後に、クライアントのアップグレードを実行することをお勧めします。
+>  이전 버전의 Configuration Manager\(예: Configuration Manager 2007 또는 System Center 2012 Configuration Manager\)에서 서버 인프라를 업그레이드하는 경우 Configuration Manager 클라이언트를 업그레이드하기 전에 현재 분기 업데이트를 모두 설치하는 등 서버를 업그레이드하는 것이 좋습니다.   최신 현재 분기 업데이트에는 클라이언트의 최신 버전이 포함되어 있으므로 사용하려는 Configuration Manager 업데이트를 모두 설치한 후에 클라이언트 업그레이드를 수행하는 것이 좋습니다.
 
 > [!NOTE]
-> アップグレード中にクライアントのサイトを再割り当てする予定の場合は、SMSSITECODE client.msi プロパティを使用して新しいサイトを指定できます。 SITEREASSIGN で AUTO を使用する場合は、SITEREASSIGN=TRUE を指定して、アップグレード中にサイトの自動再割り当てを許可する必要があります。 詳細については、「[SMSSITECODE](../../deploy/about-client-installation-properties.md#smssitecode)」を参照してください。
+> 업그레이드 중에 클라이언트에 대한 사이트를 다시 할당하려는 경우 SMSSITECODE client.msi 속성을 사용하여 새 사이트를 지정할 수 있습니다. SMSSITECODE에 AUTO를 사용하는 경우 SITEREASSIGN=TRUE를 지정하여 업그레이드 중에 자동 사이트 다시 할당도 수행되도록 지정해야 합니다. 자세한 내용은 [SMSSITECODE](../../deploy/about-client-installation-properties.md#smssitecode)를 참조하세요.
 
-## <a name="use-automatic-client-upgrade"></a>自動クライアント アップグレードの使用  
- Configuration Manager 階層に割り当てられているクライアントが階層内で使用しているバージョンよりも前のバージョンであることが Configuration Manager で識別された場合に、クライアント ソフトウェアを最新バージョンの Configuration Manager クライアントに自動的にアップグレードするように、Configuration Manager を構成することもできます。 このシナリオには、クライアントを Configuration Manager サイトに割り当てるときの最新バージョンへのアップグレードも含まれます。  
+## <a name="use-automatic-client-upgrade"></a>자동 클라이언트 업그레이드 사용  
+ 또한 Configuration Manager에서 Configuration Manager 계층 구조에 할당된 클라이언트가 계층 구조에서 사용되는 버전보다 이전 버전임을 확인할 경우 클라이언트 소프트웨어를 최신 Configuration Manager 클라이언트 버전으로 자동 업그레이드하도록 Configuration Manager를 구성할 수 있습니다. 이 시나리오에는 클라이언트가 Configuration Manager 사이트에 할당을 시도할 때 해당 클라이언트를 최신 버전으로 업그레이드하는 작업이 포함됩니다.  
 
- クライアントは、次の場合に自動的にアップグレードされます。  
+ 다음 시나리오에서 클라이언트는 자동으로 업그레이드될 수 있습니다.  
 
--   クライアント バージョンが、階層内で使用されているバージョンよりも前のバージョンである  
+-   클라이언트 버전이 계층에서 사용 중인 버전보다 낮습니다.  
 
--   中央管理サイトのクライアントに言語パックがインストールされており、既存のクライアントにはインストールされていない  
+-   중앙 관리 사이트의 클라이언트에 언어 팩이 설치되어 있고 기존 클라이언트에는 설치되어 있지 않습니다.  
 
--   階層内のクライアントの前提条件のバージョンが、クライアントにインストールされている前提条件とは異なっている  
+-   계층의 클라이언트 필수 구성 요소가 클라이언트에 설치된 필수 구성 요소와 버전이 다릅니다.  
 
--   クライアント インストール ファイルのバージョンが異なっている  
-
-> [!NOTE]  
->  レポート フォルダー **Site - Client Information** で、 **[Configuration Manager クライアント バージョン別の数]** レポートを実行すると、階層内の異なるバージョンの Configuration Manager クライアントを識別できます。  
-
- Configuration Manager では、階層内のすべての配布ポイントに自動的に送信されるアップグレード パッケージを既定で作成します。 クライアント言語パックを追加するなど、中央管理サイトのクライアント パッケージを変更すると、Configuration Manager は、自動的にパッケージを更新して階層内のすべての配布ポイントに配布します。 自動クライアント アップグレードを有効にすると、すべてのクライアントに新しいクライアント言語パッケージが自動的にインストールされます。  
+-   하나 이상의 클라이언트 설치 파일이 다른 버전입니다.  
 
 > [!NOTE]  
->  Configuration Manager は、Configuration Manager のクラウドベースの配布ポイントには、クライアント アップグレード パッケージを自動的に送信しません。  
+>  **사이트 - 클라이언트 정보** 보고서 폴더에서 **클라이언트 버전별 Configuration Manager 클라이언트 수** 보고서를 실행하면 계층 구조에 있는 Configuration Manager 클라이언트의 각기 다른 버전을 확인할 수 있습니다.  
 
- 階層全体の自動クライアント アップグレードを有効にすることをお勧めします。 そうすれば、最小の管理オーバーヘッドで更新されたクライアントが保持されます。  
+ Configuration Manager는 기본적으로 계층 구조 내 모든 배포 지점에 자동으로 전송되는 업그레이드 패키지를 만듭니다. 중앙 관리 사이트의 클라이언트 패키지를 변경(예: 클라이언트 언어 팩 추가)할 경우 Configuration Manager는 패키지를 자동으로 업데이트하고 이 패키지를 계층 구조 내 모든 배포 지점에 배포합니다. 자동 클라이언트 업그레이드를 사용하도록 설정하면 모든 클라이언트에 새 클라이언트 언어 패키지가 자동으로 설치됩니다.  
 
- 自動クライアント アップグレードを構成するには、次の手順に従います。 自動クライアント アップグレードは、中央管理サイトで構成し、階層内のすべてのクライアントにこの構成を適用する必要があります。  
+> [!NOTE]  
+>  Configuration Manager는 Configuration Manager 클라우드 기반 배포 지점에 클라이언트 업그레이드 패키지를 자동으로 보내지 않습니다.  
 
-### <a name="to-configure-automatic-client-upgrades"></a>自動クライアント アップグレードを構成するには  
+ 계층 구조 전체에서 자동 클라이언트 업그레이드를 사용하는 것이 좋습니다. 이렇게 하면 관리 오버헤드를 최소화하여 클라이언트가 계속 업데이트됩니다.  
 
-1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
+ 자동 클라이언트 업그레이드를 구성하려면 다음 절차를 따르세요. 자동 클라이언트 업그레이드는 중앙 관리 사이트에 구성해야 하며 이 구성은 계층 내 모든 클라이언트에 적용됩니다.  
 
-2.  [ **管理** ] ワークスペースで [ **サイトの構成**] を展開して、[ **サイト**] をクリックします。  
+### <a name="to-configure-automatic-client-upgrades"></a>자동 클라이언트 업그레이드를 구성하려면  
 
-3.  **[ホーム]** タブの **[サイト]** グループで、 **[階層設定]**をクリックします。  
+1.  Configuration Manager 콘솔에서 **관리**를 클릭합니다.  
 
-4.  **[階層設定のプロパティ]** ダイアログ ボックスの **[クライアント アップグレード]** のタブで、実稼働クライアントのバージョンと日付を確認し、Windows コンピューターをアップグレードするために使用するバージョンであるかどうかを確認します。  目的のクライアント バージョンが表示されない場合は、実稼働前環境クライアントを実稼働環境に昇格させることが必要になることがあります。 詳細については、「[System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストする方法](../../../../core/clients/manage/upgrade/test-client-upgrades.md)」を参照してください。  
+2.  **관리** 작업 영역에서 **사이트 구성**을 확장하고 **사이트**를 클릭합니다.  
 
-5.  **[実稼働クライアントを使用して階層内のすべてのクライアントをアップグレードする]** をクリックし、確認ダイアログ ボックスで **[OK]** をクリックします。  
+3.  **홈** 탭의 **사이트** 그룹에서 **계층 설정**을 클릭합니다.  
 
-6.  クライアントのアップグレードをサーバーに適用しない場合は、 **[サーバーをアップグレードしない]**をクリックします。  
+4.  **계층 구조 설정 속성** 대화 상자의 **클라이언트 업그레이드** 탭에서, 프로덕션 클라이언트의 버전 및 날짜를 검토하고 이 버전이 Windows 컴퓨터를 업그레이드하는 데 사용하려는 버전인지 확인합니다.  필요한 클라이언트 버전이 아닌 경우 사전 프로덕션 클라이언트 수준을 프로덕션으로 올려야 할 수도 있습니다. 자세한 내용은 [System Center Configuration Manager의 사전 프로덕션 컬렉션에서 클라이언트 업그레이드를 테스트하는 방법](../../../../core/clients/manage/upgrade/test-client-upgrades.md)을 참조하세요.  
 
-7.  クライアント ポリシーを受信した後、コンピューターでクライアントを何日間以内にアップグレードしなければならないかを指定します。 クライアントはこの日数内のランダムな間隔でアップグレードされます。 この設定により、多数のクライアント コンピューターが同時にアップグレードされることを回避できます。
+5.  **프로덕션 클라이언트를 사용하여 계층 구조의 모든 클라이언트 업그레이드** 를 클릭하고 확인 대화 상자에서 **확인** 을 클릭합니다.  
+
+6.  서버에 클라이언트 업그레이드를 적용하지 않으려면 **서버 업그레이드 안 함**을 클릭합니다.  
+
+7.  컴퓨터가 클라이언트 정책을 수신한 후 클라이언트를 업그레이드할 때까지 허용되는 일수를 지정합니다. 클라이언트는 이 일 수가 경과되기 전에 임의의 간격으로 업그레이드됩니다. 이렇게 하면 여러 클라이언트 컴퓨터가 동시에 업그레이드되는 상황을 방지할 수 있습니다.
 
     > [!NOTE]
-    > クライアントをアップグレードするコンピューターが実行されている必要があります。 アップグレードを受信するようにスケジュールされている時刻にコンピューターが実行されていない場合、アップグレードは発生しません。 代わりに、コンピューターを再起動したときに、許可されている日数の期間内のランダムな時間に別のアップグレードがスケジュールされます。 アップグレードが可能な日数の期限が切れた後にこの状況が発生する場合は、コンピューターの再起動後 24 時間以内の任意の時点に行われるように、アップグレードがスケジュールされます。
+    > 클라이언트를 업그레이드하려면 컴퓨터가 실행되고 있어야 합니다. 업그레이드를 받도록 예약된 시간에 컴퓨터가 실행되고 있지 않으면 업그레이드가 발생하지 않습니다. 대신 컴퓨터를 다시 시작할 때 다른 업그레이드가 허용된 시간(일) 내의 임의 시간으로 예약됩니다. 이때 업그레이드할 기간(일)이 만료된 후이면 업그레이드가 컴퓨터를 다시 시작한 후 24시간 내의 임의 시간으로 예약됩니다.
     >     
-    > この動作のために、平日の終業時に決まってシャットダウンされるコンピューターは、ランダムにスケジュールされたアップグレード時間が通常の業務時間内ではない場合、アップグレードされるまでに予想以上に時間がかかることがあります。
+    > 이 동작으로 인해 업무가 끝나면 정기적으로 종료되는 컴퓨터에서는 임의로 예약된 업그레이드 시간이 정상 근무 시간 내에 없을 경우 업그레이드하는 데 예상보다 오래 걸릴 수 있습니다.
 
-7. バージョン 1610 以降では、クライアントをアップグレードから除外する場合に、**[指定したクライアントをアップグレードから除外する]** をクリックし、除外するコレクションを指定します。
+7. 버전 1610부터 클라이언트가 업그레이드되지 않도록 제외하려는 경우 **Exclude specified clients from upgrade**(지정된 클라이언트를 업그레이드에서 제외)를 클릭하고 제외할 컬렉션을 지정합니다.
 
-8.  事前設定されたコンテンツが有効になっている配布ポイントにクライアント インストール パッケージをコピーする場合は、 **[事前設定されたコンテンツ用に有効になっている配布ポイントにクライアント インストール パッケージを自動配布する]**をクリックします。  
+8.  클라이언트 설치 패키지를 사전 준비된 콘텐츠에 대해 설정된 배포 지점에 복사하려면 **클라이언트 설치 패키지를 사전 준비된 콘텐츠에 대해 설정된 배포 지점에 자동으로 배포**를 클릭합니다.  
 
-9. **[OK]** をクリックします。設定が保存され、 **[階層設定のプロパティ]** ダイアログ ボックスが閉じます。 次回クライアントでポリシーをダウンロードしたときに、これらの設定が受信されます。
+9. **확인** 을 클릭하여 설정을 저장하고 **계층 구조 설정 속성** 대화 상자를 닫습니다. 클라이언트는 다음에 정책을 다운로드할 때 이 설정을 수신합니다.
 
 >[!NOTE]
->Configuration Manager のメンテナンス期間を構成している場合、クライアントのアップグレードではそれが優先されます。
-
+>클라이언트 업그레이드는 사용자가 구성한 Configuration Manager 유지 관리 기간을 준수합니다.

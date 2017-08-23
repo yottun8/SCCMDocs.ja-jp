@@ -1,230 +1,227 @@
 ---
-title: "System Center Configuration Manager によるリモート ワイプ、ロック、パスコードのリセットを使用したデータの保護 | Microsoft Docs"
-description: "System Center Configuration Manager によるフル ワイプ、選択的ワイプ、リモート ロック、パスコードのリセットを使用してデバイスのデータを保護します。"
+title: "System Center Configuration Manager를 사용하여 원격 초기화, 잠금 또는 암호 재설정으로 데이터 보호 | Microsoft Docs"
+description: "System Center Configuration Manager를 사용하여 전체 초기화, 선택적 초기화, 원격 잠금 또는 암호 다시 설정으로 장치 데이터를 보호합니다."
 ms.custom: na
 ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dda2f4c01078fbbd174cbcb30357554c24f6abeb
 ms.openlocfilehash: 351fdc6328dd0859d60e00b128963df738e69f81
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>System Center Configuration Manager によるリモート ワイプ、ロック、パスコードのリセットを使用したデータの保護
+# <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>System Center Configuration Manager를 사용하여 원격 초기화, 잠금 또는 암호 재설정으로 데이터 보호
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager には、選択的ワイプ、フル ワイプ、リモート ロック、パスコードのリセットの機能があります。 モバイル デバイスに会社の機密情報を保存したり、モバイル デバイスから会社のリソースにアクセスしたりすることがあります。 デバイスを保護するために、次のコマンドを発行できます。  
+System Center Configuration Manager는 선택적 초기화, 전체 초기화, 원격 잠금 및 암호 재설정 기능을 제공합니다. 모바일 장치에 회사의 중요한 데이터를 저장하고, 많은 회사 리소스에 대한 액세스를 제공할 수 있습니다. 장치를 보호하기 위해 다음 명령을 실행할 수 있습니다.  
 
-- デバイスを工場出荷時の状態に戻すフル ワイプ。  
+- 출하 시 설정으로 장치를 복원하는 전체 초기화  
 
-- 会社のデータのみを削除する選択的ワイプ。  
+- 회사 데이터만 제거하는 선택적 초기화  
 
-- 紛失した可能性があるデバイスをセキュリティで保護できるリモート ロック。  
+- 분실한 장치를 보호하는 데 유용한 원격 잠금  
 
-- デバイスのパスコードのリセット。  
+- 장치 암호 재설정.  
 
-## <a name="full-wipe"></a>完全なワイプ  
-紛失したデバイスをセキュリティで保護する必要がある場合や、アクティブな使用状態のインベントリからデバイスを削除する場合、ワイプ コマンドをデバイスに発行することができます。  
+## <a name="full-wipe"></a>전체 초기화  
+분실한 장치를 보호하거나 장치의 활성 사용을 중지할 경우 장치에 초기화 명령을 실행할 수 있습니다.  
 
-デバイスを工場出荷時の既定値に戻すには、 **フル ワイプ** をデバイスに発行します。 フル ワイプの場合、すべての会社とユーザーのデータと設定が削除されます。 Windows Phone、iOS、Android、Windows 10 の各デバイスでは、フル ワイプを実行できます。  
+장치에서 출하 시 기본값으로 장치를 복원하는 **전체 초기화** 를 실행합니다. 그러면 모든 회사 및 사용자 데이터와 설정이 제거됩니다. Windows Phone, iOS, Android 및 Windows 10 장치에서 전체 초기화를 수행할 수 있습니다.  
 
 > [!NOTE]
-> ワイプする Windows 10 デバイスが 1511 より前のバージョンで、RAM が 4 GB 未満の場合、ワイプを実行するとデバイスが応答しなくなることがあります。 [詳細については、こちらを参照してください](https://technet.microsoft.com/library/mt592024.aspx#full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram)。
+> 버전 1511보다 이전 버전에서 RAM이 4GB 미만인 Windows 10 장치를 초기화하면 장치가 응답하지 않는 상태가 될 수 있습니다. [자세히 알아봅니다](https://technet.microsoft.com/library/mt592024.aspx#full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram).
 
-#### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>Configuration Manager コンソールからリモート ワイプを開始するには  
+#### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>Configuration Manager 콘솔에서 원격 초기화를 시작하려면  
 
-1. Configuration Manager コンソールで、**[資産とコンプライアンス]** を選び、**[デバイス]** を選びます。 または、**[デバイス コレクション]** を選択してコレクションを選択できます。  
+1. Configuration Manager 콘솔에서 **자산 및 준수**를 선택하고 **장치**를 선택합니다. **장치 컬렉션** 을 선택하고 컬렉션을 선택할 수도 있습니다.  
 
-2. 削除またはワイプするデバイスを選択します。  
+2. 사용 중지/초기화하려는 장치를 선택합니다.  
 
-3. **[デバイス グループ]** の **[リモート デバイスの操作]** を選択し、**[削除/ワイプ]** を選択します。  
+3. **장치 그룹**에서 **원격 장치 작업**을 선택한 다음 **사용 중지/초기화**를 선택합니다.  
 
-## <a name="selective-wipe"></a>選択的ワイプ  
-会社のデータのみを削除するには、 **選択的ワイプ** をデバイスに発行します。 次の表では、プラットフォームごとに、削除されるデータと、選択的ワイプの実行後にデバイスに残るデータへの影響について説明します。  
+## <a name="selective-wipe"></a>선택적 초기화  
+장치에서 회사 데이터만 제거하는 **선택적 초기화** 를 실행합니다. 다음 표에서는 플랫폼별로 제거되는 데이터와 선택적 초기화 후 장치에 남아 있는 데이터에 대한 영향을 설명합니다.  
 
 **iOS**  
 
-|デバイスをインベントリから削除するときに削除されるコンテンツ|iOS|  
+|장치를 사용 중지할 경우 제거되는 콘텐츠|iOS|  
 |--------------------------------------------|---------|  
-|Configuration Manager と Intune を使用してインストールされた会社のアプリと関連データ|アプリはアンインストールされます。 会社のアプリ データは削除されます。|  
-|VPN と Wi-Fi プロファイル|削除されます。|  
-|証明書|削除されて失効します。|  
-|設定|削除されます。例外: **音声通話ローミングを許可する**、**データ ローミングを許可する**、**ローミング中に自動同期を使用する**。|  
-|管理エージェント|管理プロファイルは削除されます。|  
-|電子メール プロファイル|Intune によって設定された電子メール プロファイルの場合、電子メール アカウントと電子メールが削除されます。|  
+|Configuration Manager 및 Intune을 사용하여 설치된 회사 앱 및 관련 데이터|앱이 제거됩니다. 회사 앱 데이터가 제거됩니다.|  
+|VPN 및 Wi-Fi 프로필|제거됩니다.|  
+|인증서|제거되고 해지됩니다.|  
+|설정|**음성 로밍 허용**, **데이터 로밍 허용** 및 **로밍하는 동안 자동 동기화 허용**을 제외하고 제거됩니다.|  
+|관리 에이전트|관리 프로필이 제거됩니다.|  
+|전자 메일 프로필|Intune에 의해 설정된 메일 프로필의 경우 메일 계정 및 메일이 제거됩니다.|  
 
-**Android および Android Samsung Standard KNOX**  
+**Android 및 Android Samsung KNOX Standard**  
 
-|デバイスをインベントリから削除するときに削除されるコンテンツ|Android|Samsung KNOX Standard|  
+|장치를 사용 중지할 경우 제거되는 콘텐츠|Android|Samsung KNOX Standard|  
 |--------------------------------------------|-------------|------------------|  
-|Configuration Manager と Intune を使用してインストールされた会社のアプリと関連データ|アプリとデータはインストールされたままです。|アプリはアンインストールされます。|  
-|VPN と Wi-Fi プロファイル|削除されます。|削除されます。|  
-|証明書|失効します。|失効します。|  
-|設定|要件が削除されます。|要件が削除されます。|  
-|管理エージェント|デバイス管理者特権は無効になります。|デバイス管理者特権は無効になります。|  
-|電子メール プロファイル|該当なし。|Intune によって設定された電子メール プロファイルの場合、電子メール アカウントと電子メールが削除されます。|  
+|Configuration Manager 및 Intune을 사용하여 설치된 회사 앱 및 관련 데이터|앱 및 데이터는 계속 설치되어 있습니다.|앱이 제거됩니다.|  
+|VPN 및 Wi-Fi 프로필|제거됩니다.|제거됩니다.|  
+|인증서|해지됩니다.|해지됩니다.|  
+|설정|요구 사항이 제거됩니다.|요구 사항이 제거됩니다.|  
+|관리 에이전트|장치 관리자 권한이 해지됩니다.|장치 관리자 권한이 해지됩니다.|  
+|전자 메일 프로필|해당 없음.|Intune에 의해 설정된 메일 프로필의 경우 메일 계정 및 메일이 제거됩니다.|  
 
 **Android for Work**
 
-Android for Work デバイスで選択的ワイプを行うと、そのデバイスの仕事用プロファイルが削除され、プロファイルに含まれるすべてのデータ、アプリケーション、設定が削除されます。 Configuration Manager と Intune の管理対象からそのデバイスが外れます。 Android for Work の場合、完全なワイプには対応していません。
+Android for Work 장치에서 선택적 초기화를 수행하면 해당 장치에 있는 회사 프로필의 모든 데이터, 앱 및 설정과 함께 회사 프로필이 제거됩니다. 이 경우 Configuration Manager 및 Intune을 사용한 관리에서 장치 사용이 중지됩니다. Android for Work에서는 전체 초기화가 지원되지 않습니다.
 
- **Windows 10、Windows 8.1、Windows RT 8.1、Windows RT**  
+ **Windows 10, Windows 8.1, Windows RT 8.1 및 Windows RT**  
 
-|デバイスをインベントリから削除するときに削除されるコンテンツ|Windows 10、Windows 8.1、および Windows RT 8.1|  
+|장치를 사용 중지할 경우 제거되는 콘텐츠|Windows 10, Windows 8.1 및 Windows RT 8.1|  
 |---------------------------------|-------------|
-|Configuration Manager と Intune を使用してインストールされた会社のアプリと関連データ|アプリケーションがアンインストールされて、サイドローディング キーが削除されます。 Windows 選択型ワイプを使用するアプリケーションでは、暗号化キーが失効になり、データにアクセスできなくなります。|  
-|VPN と Wi-Fi プロファイル|削除されます。|  
-|証明書|削除されて失効します。|  
-|設定|要件が削除されます。|
-|管理エージェント|該当なし。 管理エージェントは組み込まれています。|  
-|電子メール プロファイル|Windows の電子メールと添付ファイル用のメール アプリを含む EFS 対応の電子メールが削除されます。|  
+|Configuration Manager 및 Intune을 사용하여 설치된 회사 앱 및 관련 데이터|앱이 제거되고 테스트용 로드 키가 제거됩니다. Windows 선택 초기화를 사용하는 앱에서 암호화 키가 해지되고 더 이상 데이터에 액세스할 수 없게 됩니다.|  
+|VPN 및 Wi-Fi 프로필|제거됩니다.|  
+|인증서|제거되고 해지됩니다.|  
+|설정|요구 사항이 제거됩니다.|
+|관리 에이전트|해당 없음. 관리 에이전트가 기본 제공됨|  
+|전자 메일 프로필|Windows 메일 및 첨부 파일용 메일 앱을 포함하는 EFS 사용 메일을 제거합니다.|  
 
- **Windows 10 Mobile、Windows Phone 8.0、Windows Phone 8.1**
+ **Windows 10 Mobile, Windows Phone 8.0 및 Windows Phone 8.1**
 
-|デバイスをインベントリから削除するときに削除されるコンテンツ|Windows 10 Mobile、Windows Phone 8、および Windows Phone 8.1|  
+|장치를 사용 중지할 경우 제거되는 콘텐츠|Windows 10 Mobile, Windows Phone 8 및 Windows Phone 8.1|  
 |-|-|
-|Configuration Manager と Intune を使用してインストールされた会社のアプリと関連データ|アプリはアンインストールされます。 会社のアプリ データは削除されます。|  
-|VPN と Wi-Fi プロファイル|Windows 10 Mobile と Windows Phone 8.1 の場合に削除されます。|  
-|証明書|Windows Phone 8.1 の場合に削除されます。|  
-|管理エージェント|該当なし。 管理エージェントは組み込まれています。|  
-|電子メール プロファイル|削除されます (Windows Phone 8.0 を除く)。|  
+|Configuration Manager 및 Intune을 사용하여 설치된 회사 앱 및 관련 데이터|앱이 제거됩니다. 회사 앱 데이터가 제거됩니다.|  
+|VPN 및 Wi-Fi 프로필|Windows 10 Mobile 및 Windows Phone 8.1의 경우 제거됩니다.|  
+|인증서|Windows Phone 8.1의 경우 제거됩니다.|  
+|관리 에이전트|해당 없음. 관리 에이전트가 기본 제공됨|  
+|전자 메일 프로필|Windows Phone 8.0을 제외하고 제거됩니다.|  
 
-Windows 10 Mobile および Windows Phone 8.1 のデバイスからは、次の設定も削除されます。  
+Windows 10 Mobile 및 Windows Phone 8.1 장치에서는 다음 설정도 제거됩니다.  
 
-- **モバイル デバイスのロックを解除するパスワードを要求する**  
-- **単純なパスワードを許可する**  
-- **最小のパスワードの長さ**  
-- **必要なパスワードの種類**
-- **パスワードの有効期限 (日)**  
-- **パスワードの履歴を記憶する**  
-- **デバイスをワイプするまでの連続サインイン エラーの数**  
-- **パスワードが必要になるまでの非アクティブ状態の時間 (分)**  
-- **必要なパスワードの種類 - 文字セットの最小数**  
-- **カメラを許可する**
-- **モバイル デバイスの暗号化を要求する**  
-- **リムーバブル記憶域を許可する**  
-- **Web ブラウザーを許可する**  
-- **アプリケーション ストアを許可する**  
-- **画面のキャプチャを許可する**  
-- **位置情報を許可する**  
-- **Microsoft アカウントを許可する**  
-- **コピーと貼り付けを許可する**  
-- **Wi-Fi テザリングを許可する**  
-- **無料 Wi-Fi スポットへの自動接続を許可する**  
-- **Wi-Fi スポットの報告を許可する**  
-- **工場出荷時のリセットを許可する**
-- **Bluetooth を許可する**  
-- **NFC を許可する**
-- **Wi-Fi を許可する**
+- **모바일 장치의 잠금을 해제하는 데 암호 필요**  
+- **단순 암호 허용**  
+- **최소 암호 길이**  
+- **필수 암호 유형**
+- **암호 만료(일)**  
+- **암호 기록 기억**  
+- **장치를 초기화하기 전까지 허용되는 로그인 반복 오류 횟수**  
+- **암호를 요구하기 전까지 비활성 시간(분)**  
+- **필수 암호 유형 - 최소 문자 집합 수**  
+- **카메라 허용**
+- **모바일 장치 암호화 필요**  
+- **이동식 저장소 허용**  
+- **웹 브라우저 허용**  
+- **앱 스토어 허용**  
+- **화면 캡처 허용**  
+- **지리적 위치 허용**  
+- **Microsoft 계정 허용**  
+- **복사 및 붙여넣기 허용**  
+- **Wi-Fi 테더링 허용**  
+- **무료 Wi-Fi 핫스팟에 자동 연결 허용**  
+- **Wi-Fi 핫스팟 보고 허용**  
+- **공장 재설정 허용**
+- **Bluetooth 허용**  
+- **NFC 허용**
+- **Wi-Fi 허용**
 
-#### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>Configuration Manager コンソールからリモート ワイプを開始するには  
+#### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>Configuration Manager 콘솔에서 원격 초기화를 시작하려면  
 
-1. Configuration Manager コンソールで、**[資産とコンプライアンス]** を選び、**[デバイス]** を選びます。 または、**[デバイス コレクション]** を選択してコレクションを選択できます。  
+1. Configuration Manager 콘솔에서 **자산 및 준수**를 선택하고 **장치**를 선택합니다. **장치 컬렉션** 을 선택하고 컬렉션을 선택할 수도 있습니다.  
 
-2. 削除またはワイプするデバイスを選択します。  
+2. 사용 중지/초기화하려는 장치를 선택합니다.  
 
-3. **[デバイス グループ]** の **[リモート デバイスの操作]** を選択し、**[削除/ワイプ]** を選択します。  
+3. **장치 그룹**에서 **원격 장치 작업**을 선택한 다음 **사용 중지/초기화**를 선택합니다.  
 
-## <a name="wiping-efs-enabled-content"></a>EFS 対応コンテンツのワイプ  
-Windows 8.1 と Windows RT 8.1 では、暗号化ファイル システム (EFS) 暗号化コンテンツの選択的ワイプをサポートしています。 EFS 対応コンテンツの選択的ワイプには次のものが適用されます。  
+## <a name="wiping-efs-enabled-content"></a>EFS 지원 콘텐츠 초기화  
+Windows 8.1 및 Windows RT 8.1에서 파일 시스템 암호화(EFS)-암호화된 콘텐츠의 선택적 초기화를 지원합니다. 다음은 EFS 지원 콘텐츠의 선택 초기화에 적용됩니다.  
 
-- Intune アカウントと同じインターネット ドメインを使用して EFS で保護されているアプリとデータのみが、選択的にワイプされます。 詳細については、「 [Windows のデバイス データ管理の選択的ワイプ (英語)](http://technet.microsoft.com/library/dn486874.aspx)」を参照してください。  
+- Intune 계정과 동일한 인터넷 도메인을 사용하는 EFS로 보호되는 앱 및 데이터만 선택적으로 초기화됩니다. 자세한 내용은 [장치 데이터 관리를 위한 Windows 선택적 초기화](http://technet.microsoft.com/library/dn486874.aspx)를 참조하세요.  
 
-- EFS に関連付けられているドメインに何らかの変更が加えられた場合、新しいドメインを使用するアプリケーションとデータが選択的にワイプできるようになるまで最大 48 時間かかります。  
+- EFS와 연결된 도메인에 대한 변경 사항이 있는 경우 새 도메인을 사용하는 앱 및 데이터를 선택적으로 초기화하기 전에 변경 사항을 적용하는 데 최대 48시간이 걸릴 수 있습니다.  
 
-- Intune に登録されている各ドメインは、ワイプされるドメインです。  
+- Intune에 등록된 각 도메인이 초기화되는 도메인입니다.  
 
-EFS の選択的ワイプで現在サポートされているデータとアプリケーションは次のとおりです。  
+현재 EFS 선택 초기화가 지원되는 데이터 및 앱은 다음과 같습니다.  
 
-- Windows 用メール アプリケーション  
+- Windows용 메일 앱  
 
-- 作業フォルダー
+- 작업 폴더
 
-- EFS で暗号化されたファイルとフォルダー 詳細については、「 [ファイル システムを暗号化するためのベスト プラクティス](http://support.microsoft.com/kb/223316)」を参照してください。  
+- EFS로 암호화된 파일 및 폴더. 자세한 내용은 [파일 시스템 암호화에 대한 모범 사례](http://support.microsoft.com/kb/223316)항목을 참조하세요.  
 
-### <a name="best-practices-for-selective-wipe"></a>選択的ワイプのベスト プラクティス  
+### <a name="best-practices-for-selective-wipe"></a>선택 초기화에 대한 모범 사례  
 
-- 電子メールのワイプを成功させるには、iOS と Windows Phone 8.1 デバイスに電子メール プロファイルを設定します。  
+- 메일을 성공적으로 초기화하려면 메일 프로필을 iOS 및 Windows Phone 8.1 장치에 설정해야 합니다.  
 
-- アプリケーションのワイプを成功させるには、アプリケーションがモバイル デバイス アプリケーションの管理によって配布されていることを確認します。  
+- 앱을 성공적으로 초기화하려면 모바일 장치 앱 관리를 통해 앱을 배포해야 합니다.  
 
-- iOS の場合、ユーザーが iCloud を使用してコンテンツを復元できないように、**[iCloud へのバックアップを許可する]** の設定を **[許可しない]** に構成します。  
+- iOS의 경우 사용자가 iCloud를 사용하여 콘텐츠를 복원할 수 없도록 **iCloud에 백업 허용** 설정을 **허용 안함**으로 구성합니다.  
 
-- アカウントが非アクティブになっていると、1 年後にアカウントが Intune によって削除され、選択的ワイプが実行されます。  
+- 계정이 비활성화된 경우에는 1년이 지난 후 Intune에서 계정의 사용이 중지되고 선택 초기화가 수행됩니다.  
 
-##  <a name="passcode-reset"></a>パスコードのリセット  
-ユーザーがパスコードを忘れた場合、デバイスからパスコードを削除したり、デバイスに新しい一時的なパスコードを強制したりすることができます。 以下の表は、各モバイル プラットフォームでパスコードをリセットしたときの動作です。  
+##  <a name="passcode-reset"></a>암호 재설정  
+사용자가 암호를 잊은 경우 장치에서 암호를 제거하거나 장치에 대한 새로운 임시 암호를 적용하여 사용자를 도울 수 있습니다. 아래 표에는 여러 모바일 플랫폼에서 암호 재설정이 작동하는 방법이 정리되어 있습니다.  
 
-|プラットフォーム|パスコードのリセット|  
+|플랫폼|암호 재설정|  
 |--------------|--------------------|  
-|iOS|デバイスからパスコードをクリアする場合にサポートされます。 新しい一時的なパスコードは作成されません。|
-|macOS| サポートされていません。|
-|Android|サポートされます。一時的なパスコードが作成されます。|
-|Android for Work | サポートされていません。|
-|Windows 10 PC|サポートされていません。|  
-|Windows 10 Mobile|サポートされます。Azure AD に参加しているデバイスを除きます。|
-|Windows Phone 8.1|サポートしています。|  
-|Windows RT 8.1 |サポートされていません。|  
-|Windows 8.1 PC |サポートされていません。|  
+|iOS|장치에서 암호를 제거하도록 지원됩니다. 새로운 임시 암호를 만들지 않습니다.|
+|macOS| 지원 안 됨|
+|Android|지원되며 임시 암호가 생성됩니다.|
+|Android for Work | 지원 안 됨|
+|Windows 10 PC|지원 안 됨|  
+|Windows 10 Mobile|Azure AD 결합 장치를 제외하고 지원됩니다.|
+|Windows Phone 8.1|지원됨.|  
+|Windows RT 8.1 |지원 안 됨|  
+|Windows 8.1 PC |지원 안 됨|  
 
-#### <a name="to-reset-the-passcode-on-a-mobile-device-remotely-in-configuration-manager"></a>Configuration Manager を使用してリモートでモバイル デバイスのパスコードをリセットするには  
+#### <a name="to-reset-the-passcode-on-a-mobile-device-remotely-in-configuration-manager"></a>Configuration Manager에서 원격으로 모바일 장치의 암호를 재설정하려면  
 
-1. Configuration Manager コンソールで、**[資産とコンプライアンス]** を選び、**[デバイス]** を選びます。 または、**[デバイス コレクション]** を選択してコレクションを選択できます。  
+1. Configuration Manager 콘솔에서 **자산 및 준수**를 선택하고 **장치**를 선택합니다. **장치 컬렉션** 을 선택하고 컬렉션을 선택할 수도 있습니다.  
 
-2. パスコードをリセットするデバイス (複数も可) を選択します。  
+2. 암호를 재설정할 장치를 하나 이상 선택합니다.  
 
-3. **[デバイス グループ]** の **[リモート デバイスの操作]** を選択し、**[パスコードのリセット]** を選択します。  
+3. **장치 그룹**에서 **원격 장치 작업**을 선택한 다음 **암호 재설정**를 선택합니다.  
 
-#### <a name="to-show-the-state-of-the-passcode-reset"></a>パスコードのリセットの状態を表示するには  
+#### <a name="to-show-the-state-of-the-passcode-reset"></a>암호 재설정 상태를 표시하려면  
 
-1. Configuration Manager コンソールで、**[資産とコンプライアンス]** を選び、**[デバイス]** を選びます。 または、**[デバイス コレクション]** を選択してコレクションを選択できます。  
+1. Configuration Manager 콘솔에서 **자산 및 준수**를 선택하고 **장치**를 선택합니다. **장치 컬렉션** 을 선택하고 컬렉션을 선택할 수도 있습니다.  
 
-2. パスコードのリセットの状態を表示するデバイス (複数も可) を選択します。  
+2. 암호 재설정 상태를 표시할 장치를 하나 이상 선택합니다.  
 
-3. **[デバイス グループ]** の **[リモート デバイスの操作]** を選択し、**[Show Passcode State (パスコードの状態の表示)]** を選択します。  
+3. **장치 그룹**에서 **원격 장치 작업**을 선택한 다음 **암호 상태 표시**를 선택합니다.  
 
-## <a name="remote-lock"></a>リモート ロック  
-ユーザーがデバイスを紛失した場合は、リモートでデバイスをロックできます。 次の表に、各モバイル プラットフォームのリモート ロックの動作を示します。  
+## <a name="remote-lock"></a>원격 잠금  
+사용자가 장치를 잃어버린 경우 장치를 원격으로 잠글 수 있습니다. 아래 표에는 여러 모바일 플랫폼에서 원격 잠금이 작동하는 방법이 정리되어 있습니다.  
 
-|プラットフォーム|リモート ロック|  
+|플랫폼|원격 잠금|  
 |--------------|-----------------|  
-|iOS|サポートしています。|  
-|Android|サポートしています。|  
-|Windows 10|現時点ではサポートされていません。|  
-|Windows Phone 8 および Windows Phone 8.1|サポートしています。|  
-|Windows RT 8.1 |デバイスの現在のユーザーが、デバイスを登録したユーザーと同じ場合にはサポートされます。|  
-|Windows 8.1|デバイスの現在のユーザーが、デバイスを登録したユーザーと同じ場合にはサポートされます。|  
+|iOS|지원됨.|  
+|Android|지원됨.|  
+|Windows 10|현재 지원되지 않습니다.|  
+|Windows Phone 8 및 Windows Phone 8.1|지원됨.|  
+|Windows RT 8.1 |장치의 현재 사용자가 장치를 등록한 사용자인 경우 지원됨|  
+|Windows 8.1|장치의 현재 사용자가 장치를 등록한 사용자인 경우 지원됨|  
 
-#### <a name="to-lock-a-mobile-device-remotely-through-the-configuration-manager-console"></a>Configuration Manager コンソールを使用してリモートでモバイル デバイスをロックするには  
+#### <a name="to-lock-a-mobile-device-remotely-through-the-configuration-manager-console"></a>Configuration Manager 콘솔을 통해 원격으로 모바일 장치를 잠그려면  
 
-1. Configuration Manager コンソールで、**[資産とコンプライアンス]** を選び、**[デバイス]** を選びます。 または、**[デバイス コレクション]** を選択してコレクションを選択できます。  
+1. Configuration Manager 콘솔에서 **자산 및 준수**를 선택하고 **장치**를 선택합니다. **장치 컬렉션** 을 선택하고 컬렉션을 선택할 수도 있습니다.  
 
-2. ロックするデバイス (複数も可) を選択します。  
+2. 잠글 장치를 하나 이상 선택합니다.  
 
-3. **[デバイス グループ]** の **[リモート デバイスの操作]** を選択し、**[リモート ロック]** を選択します。  
+3. **장치 그룹**에서 **원격 장치 작업**을 선택한 다음 **원격 잠금**을 선택합니다.  
 
-#### <a name="to-show-the-state-of-the-remote-lock"></a>リモート ロックの状態を表示するには  
+#### <a name="to-show-the-state-of-the-remote-lock"></a>원격 잠금 상태를 표시하려면  
 
-1. Configuration Manager コンソールで、**[資産とコンプライアンス]** を選び、**[デバイス]** を選びます。 または、**[デバイス コレクション]** を選択してコレクションを選択できます。  
+1. Configuration Manager 콘솔에서 **자산 및 준수**를 선택하고 **장치**를 선택합니다. **장치 컬렉션** 을 선택하고 컬렉션을 선택할 수도 있습니다.  
 
-2. リモート ロックの状態を表示するデバイスを選択します。  
+2. 원격 잠금 상태를 표시할 장치를 선택합니다.  
 
-3. **[デバイス グループ]** の **[リモート デバイスの操作]** を選択し、**[リモート ロック状態の表示]** を選択します。  
+3. **장치 그룹**에서 **원격 장치 작업**을 선택한 다음 **원격 잠금 상태 표시**를 선택합니다.  
 
-### <a name="see-also"></a>関連項目  
-[Windows のデバイス データ管理の選択的ワイプ (英語)](http://technet.microsoft.com/library/dn486874.aspx)   
-
+### <a name="see-also"></a>참고 항목  
+[장치 데이터 관리를 위한 Windows 선택적 초기화](http://technet.microsoft.com/library/dn486874.aspx)   

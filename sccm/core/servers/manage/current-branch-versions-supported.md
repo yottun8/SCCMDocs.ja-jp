@@ -1,57 +1,54 @@
 ---
-title: "Current Branch バージョン | Microsoft Docs"
-description: "System Center Configuration Manager のバージョン履歴を確認し、提供サービスのフェーズについて説明します。"
+title: "현재 분기 버전 | Microsoft 문서"
+description: "System Center Configuration Manager의 버전 기록을 검토하고 제공하는 서비스의 단계에 대해 알아봅니다."
 ms.custom: na
 ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.translationtype: HT
-ms.sourcegitcommit: 5d696e3da187d47e0d41c02864d9b5267827e701
 ms.openlocfilehash: 1c02d2c51964fed960ffab42175762c1b04e6445
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/31/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>System Center Configuration Manager の Current Branch バージョンのサポート
+# <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>System Center Configuration Manager 현재 분기 버전에 대한 지원
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-Microsoft は、System Center Configuration Manager の Current Branch に対し、年に数回の更新プログラムのリリースを予定しています。 更新プログラムの各バージョンは、一般公開 (GA) リリース日から 12 か月間サポートされます。 この 12 か月間にわたりテクニカル サポートが提供されます。 ただし、当社のサポート体制は、最新の Current Branch バージョンの利用状況に応じて 2 種類のサービス提供フェーズのいずれかが適用されるしくみに変わりました。  
+Microsoft는 1년에 몇 차례 System Center Configuration Manager 현재 분기용 업데이트를 출시할 계획입니다. 각 업데이트 버전은 GA(일반 공급) 릴리스 날짜로부터 12개월 동안 지원됩니다. 기술 지원은 12개월 동안 계속 제공됩니다. 그러나 당사의 지원 구조는 최신 현재 분기 버전의 가용성에 따라 두 가지 별도의 서비스 단계로 발전하는 동적 구조입니다.  
 
--   セキュリティ更新プログラムと重要な更新プログラムのサービス提供フェーズ - Configuration Manager の最新の Current Branch を実行している場合は、セキュリティ更新プログラムと重要な更新プログラムの両方が提供されます。  
+-   보안 및 중요 업데이트 서비스 단계 - 최신 현재 분기 버전의 Configuration Manager를 실행하는 경우 보안 및 중요 업데이트를 모두 받게 됩니다.  
 
--   セキュリティ更新プログラム (のみ) のサービス提供フェーズ - 新しい Current Branch バージョンがリリースされると、前の Current Branch バージョンに対するサポートは、12 か月間のサポート ライフサイクルの残りの期間中、"セキュリティ更新プログラムのみ" に降格されます (図 1 を参照)。  
+-   보안 업데이트(전용) 서비스 단계 - 12개월 동안 새 현재 분기 버전이 출시되면 그 나머지 기간(그림 1 참조) 동안만 이전 분기에 대한 보안 업데이트 지원이 줄어듭니다.  
 
- ![CM&#95;Servicing&#95;support&#95;timeline](../../../core/servers/manage/media/CM_Servicing_support_timeline.png "CM_Servicing_support_timeline")  
-図 1 Current Branch のサービス提供サポートのリリース サイクルの重複部分の例
+ ![CM&#95;서비스&#95;지원&#95;일정](../../../core/servers/manage/media/CM_Servicing_support_timeline.png "CM_Servicing_support_timeline")  
+그림 1. 현재 분기 서비스 지원의 릴리스 주기가 겹치는 경우의 예
 
 > [!NOTE]  
->  Current Branch の最新バージョンは常に、セキュリティ更新プログラムと重要な更新プログラムのサービス提供フェーズとなります。 すなわち、重要な更新プログラムの発行に値するコード障害が発生した場合、修正プログラムを受け取るためには Current Branch の最新バージョンがインストールされている必要があります。 その他のサポートされている Current Branch バージョンでは、セキュリティ更新プログラムを受信できるだけとなります。 Current Branch バージョンの 12 か月間のライフ サイクルが有効期限切れになると、すべてのサポートが終了します。 その時点で、ユーザーは、サポートされている Current Branch バージョンに更新する必要があります。  
+>  최신 현재 분기 버전은 항상 보안 및 중요 업데이트 서비스 단계입니다. 즉, 중요 업데이트가 필요한 코드 오류가 발생하는 경우 이를 해결하려면 최신 현재 분기 버전을 설치해야 합니다. 지원되는 다른 모든 현재 분기 버전은 보안 업데이트만 받을 수 있습니다. 현재 분기 버전에 대한 12개월의 지원 기간이 만료되면 모든 지원은 종료됩니다. 이 시점에서 고객은 지원되는 현재 분기 버전으로 업데이트해야 합니다.  
 
- **バージョン履歴**  
+ **버전 기록**  
 
-|バージョン|公開日|サポート終了日|  
+|버전|가용일|지원 종료 날짜|  
 |-------------|-----------------------|----------------------|  
-|1706|2017 年 7 月 31 日|2018 年 7 月 31 日|
-|1702|2017 年 3 月 27 日|2018 年 3 月 27 日|
-|1610|2016 年 11 月 18 日|2017 年 11 月 18 日|
-|1606|2016 年 7 月 22 日| 2017 年 7 月 22 日|
-|1602|2016 年 3 月 11 日|2017 年 3 月 11 日|
-|1511|2015 年 12 月 8 日|2016 年 12 月 8 日|  
+|1706|2017년 7월 31일|2018년 7월 31일|
+|1702|2017년 3월 27일|2018년 3월 27일|
+|1610|2016년 11월 18일|2017년 11월 18일|
+|1606|2016년 7월 22일| 2017년 7월 22일|
+|1602|2016년 3월 11일|2017년 3월 11일|
+|1511|2015년 12월 8일|2016년 12월 8일|  
 
 
 
 
-バージョン番号と、コンソール内の更新プログラムまたはベースラインとして入手可能かどうかについては、「[Baseline and update versions](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)」(ベースラインと更新プログラムのバージョン) を参照してください。
-
+버전 번호와 콘솔 내 업데이트 또는 기준으로 사용 가능성에 대한 자세한 내용은 [기준 및 업데이트 버전](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)을 참조하세요.

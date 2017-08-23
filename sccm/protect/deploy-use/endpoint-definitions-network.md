@@ -1,62 +1,57 @@
 ---
-title: "ネットワーク共有からの Endpoint Protection のマルウェア定義 | Microsoft Docs"
-description: "Microsoft から最新の定義ファイルの更新を手動でダウンロードし、これらの定義をダウンロードするようにクライアントを構成する方法について説明します。"
+title: "네트워크 공유의 Endpoint Protection 맬웨어 정의 | Microsoft 문서"
+description: "Microsoft에서 최신 정의 업데이트를 수동으로 다운로드한 다음 이러한 정의를 다운로드하도록 클라이언트를 구성하는 방법을 알아봅니다."
 ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ddef4d2a-f481-4020-9ddd-9cca5f9795cb
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 6b1780c4ea4304d950188fbb6201d810e940c4fc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 110bd9a9d04b27ef6794145fae66dbd910308bdc
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
+# <a name="enable-endpoint-protection-malware-definitions-to-download-from-a-network-share-for-configuration-manager"></a>Configuration Manager의 네트워크 공유에서 다운로드하기 위해 Endpoint Protection 맬웨어 정의를 사용하도록 설정
 
-# <a name="enable-endpoint-protection-malware-definitions-to-download-from-a-network-share-for-configuration-manager"></a>Configuration Manager で Endpoint Protection のマルウェア定義をネットワーク共有からダウンロードできるようにする
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-*適用対象: System Center Configuration Manager (Current Branch)*
-
- Microsoft から最新の定義ファイルの更新を手動でダウンロードし、ネットワーク上の共有フォルダーからこれらの定義をダウンロードするようにクライアントを構成できます。 この更新ソースを使用する場合、ユーザーは定義ファイルの更新も開始できます。
+ Microsoft에서 최신 정의 업데이트를 수동으로 다운로드한 다음 네트워크의 공유 폴더에서 이러한 정의를 다운로드하도록 클라이언트를 구성할 수 있습니다. 이 업데이트 원본을 사용하는 경우 사용자가 정의 업데이트를 시작할 수도 있습니다.
 
 > [!NOTE]
->  クライアントは、定義ファイルの更新をダウンロードするために、共有フォルダーへの読み取りアクセス権が必要です。
+>  정의 업데이트를 다운로드하려면 클라이언트에 공유 폴더에 대한 읽기 권한이 있어야 합니다.
 
- 定義とエンジンの更新プログラムをダウンロードしてファイル共有に保存する方法の詳細については、「[Install the latest Microsoft antimalware and antispyware software](http://www.microsoft.com/security/portal/Definitions/HowToForeFront.aspx)」 (最新の Microsoft マルウェア対策およびスパイウェア対策ソフトウェアのインストール) をご覧ください。
+ 파일 공유의 저장소에 정의 및 엔진 업데이트를 다운로드하는 방법에 대한 자세한 내용은 [Install the latest Microsoft antimalware and antispyware software](http://www.microsoft.com/security/portal/Definitions/HowToForeFront.aspx)(최신 Microsoft 맬웨어 방지 및 스파이웨어 방지 소프트웨어 설치)를 참조하세요.
 
-## <a name="to-configure-definition-downloads-from-a-file-share"></a>ファイル共有からの定義ファイルのダウンロードを構成するには
+## <a name="to-configure-definition-downloads-from-a-file-share"></a>파일 공유에서 정의 다운로드를 구성하려면
 
-1.  Configuration Manager コンソールで、[ **資産とコンプライアンス**] をクリックします。
+1.  Configuration Manager 콘솔에서 **자산 및 호환성**을 클릭합니다.
 
-2.  **[資産とコンプライアンス]** ワークスペースで **[Endpoint Protection]**を展開してから、 **[マルウェア対策ポリシー]**をクリックします。
+2.  **자산 및 호환성** 작업 영역에서 **Endpoint Protection**을 확장하고 **맬웨어 방지 정책**을 클릭합니다.
 
-3.  **[既定のマルウェア対策ポリシー]** プロパティ ページを開くか、新しいマルウェア対策ポリシーを作成します。 マルウェア対策ポリシーを作成する方法の詳細については、「[System Center Configuration Manager で Endpoint Protection 用にマルウェア対策ポリシーを作成し展開する方法](endpoint-antimalware-policies.md)」をご覧ください。
+3.  **기본 맬웨어 방지 정책** 의 속성 페이지를 열거나 새 맬웨어 방지 정책을 만듭니다. 맬웨어 방지 정책을 만드는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 Endpoint Protection에 대한 맬웨어 방지 정책을 만들어 배포하는 방법](endpoint-antimalware-policies.md)을 참조하세요.
 
-4.  マルウェア対策プロパティ ダイアログ ボックスの **[定義ファイルの更新]** セクションで **[ソースの設定]**をクリックします。
+4.  맬웨어 방지 속성 대화 상자의 **정의 업데이트** 섹션에서 **원본 설정**을 클릭합니다.
 
-5.  **[定義ファイルの更新ソースの構成]** ダイアログ ボックスで、 **[UNC ファイル共有から更新する]**を選びます。
+5.  **정의 업데이트 원본 구성** 대화 상자에서 **UNC 파일 공유에서 업데이트**를 선택합니다.
 
-6.  **[OK]** をクリックして **[定義ファイルの更新ソースの構成]** ダイアログ ボックスを閉じます。
+6.  **확인** 을 클릭하여 **정의 업데이트 원본 구성** 대화 상자를 닫습니다.
 
-7.  **[パスの設定]**をクリックします。 次に、 **[定義更新プログラム用 UNC パスの構成]** ダイアログ ボックスで、ネットワーク共有上の定義ファイルの更新ファイルの場所を示す UNC パスを 1 つまたは複数追加します。
+7.  **경로 설정**을 클릭합니다. 그런 다음 **정의 업데이트 UNC 경로 구성** 대화 상자에서 네트워크 공유에 있는 정의 업데이트 파일 위치의 UNC 경로를 하나 이상 추가합니다.
 
-8.  **[OK]** をクリックして **[定義更新プログラム用 UNC パスの構成]** ダイアログ ボックスを閉じます。
+8.  **확인** 을 클릭하여 **정의 업데이트 UNC 경로 구성** 대화 상자를 닫습니다.
 
-
-> [!div class="button"]
-[次のステップ >](endpoint-antimalware-policies.md)
 
 > [!div class="button"]
-[戻る >](endpoint-configure-alerts.md)
+[다음 단계 >](endpoint-antimalware-policies.md)
 
+> [!div class="button"]
+[뒤로 >](endpoint-configure-alerts.md)

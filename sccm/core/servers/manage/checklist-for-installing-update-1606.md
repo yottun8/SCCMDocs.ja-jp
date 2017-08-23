@@ -1,114 +1,109 @@
 ---
-title: "1606 のチェックリスト | Microsoft Docs"
-description: "System Center Configuration Manager をバージョン 1511 または 1602 からバージョン 1606 に更新する前に、実行するアクションについて説明します。"
+title: "1606에 대한 검사 목록 | Microsoft 문서"
+description: "System Center Configuration Manager에서 버전 1511 또는 1602를 1606으로 업데이트하기 전에 수행할 작업에 대해 알아봅니다."
 ms.custom: na
 ms.date: 6/6/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 75652cd2-a95a-46c5-91c1-6d43fc8e787e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
 ms.openlocfilehash: a6bda116499845fedff0126e2890755931de85bb
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/13/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# System Center Configuration Manager の更新プログラム 1606 をインストールするためのチェックリスト
-<a id="checklist-for-installing-update-1606-for-system-center-configuration-manager" class="xliff"></a>
+# <a name="checklist-for-installing-update-1606-for-system-center-configuration-manager"></a>System Center Configuration Manager에 대한 업데이트 1606을 설치하기 위한 검사 목록
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager (現在のブランチ) のバージョン 1606 は、バージョン 1511 または 1602 からの更新で使用できる更新プログラムです。
+System Center Configuration Manager 버전 1606의 현재 분기는 버전 1511 또는 1602에서 업데이트하는 데 사용할 수 있는 업데이트입니다.
 
-更新プログラムとしてバージョン 1606 をインストールする前に、次の情報と、更新を開始する前に実行するアクションのチェックリストを確認します。
+버전 1606을 업데이트로 설치하기 전에, 다음 정보와 업데이트를 시작하기 전에 수행할 작업에 대한 검사 목록을 검토합니다.
 
-基準バージョンについては、「[System Center Configuration Manager の更新プログラム](../../../core/servers/manage/updates.md)」の「[基準バージョンと更新プログラムのバージョン](../../../core/servers/manage/updates.md#bkmk_Baselines)」を参照してください。
+기준 버전에 대한 자세한 내용은 [System Center Configuration Manager용 업데이트](../../../core/servers/manage/updates.md)의 [기준선 및 업데이트 버전](../../../core/servers/manage/updates.md#bkmk_Baselines)을 참조하세요.
 
- ## 更新プログラム 1606 のインストールについて
-<a id="about-installing-update-1606" class="xliff"></a>
+ ## <a name="about-installing-update-1606"></a>업데이트 1606 설치 정보
 
-*更新プログラム*として、1606 を階層の最上位サイトのみにインストールすることができます。 つまり、中央管理サイトがある場合はそこからインストールを開始します。そうでない場合は、スタンドアロン プライマリ サイトからインストールを開始します。  
+*업데이트* 1606은 계층의 최상위 사이트에만 설치할 수 있습니다. 즉, 중앙 관리 사이트(있는 경우) 또는 독립 실행형 기본 사이트에서 설치를 시작합니다.  
 
--   中央管理サイトで更新プログラムのインストールが完了したら、子プライマリ サイトで更新プログラムが自動的にインストールされます。 サービス期間を使用して、サイトが更新プログラムをインストールするタイミングを制御することができます。 バージョン 1606 より前では、サービス期間はメンテナンス期間と呼ばれました。 詳細については、「[サイト サーバーのサービス ウィンドウ](/sccm/core/servers/manage/service-windows)」を参照してください。  
+-   중앙 관리 사이트에서 업데이트 설치를 완료한 후 자식 기본 사이트가 업데이트를 자동으로 설치합니다. 서비스 창을 사용하여 사이트에서 업데이트를 설치하는 시기를 제어할 수 있습니다. 1606 이전 버전에서는 서비스 창을 유지 관리 창이라고 했습니다. 자세한 내용은 [사이트 서버에 대한 서비스 기간](/sccm/core/servers/manage/service-windows)을 참조하세요.  
 
--   プライマリ親サイトが更新プログラムのインストールを完了したら、Configuration Manager コンソール内からセカンダリ サイトを手動で更新する必要があります。 セカンダリ サイト サーバーの自動更新はサポートされていません。  
+-   기본 상위 사이트에서 업데이트 설치를 완료한 후 Configuration Manager 콘솔 내에서 보조 사이트를 수동으로 업데이트해야 합니다. 보조 사이트 서버의 자동 업데이트는 지원되지 않습니다.  
 
-サイト サーバーが更新プログラムをインストールすると、サイト サーバーにインストールされたサイト システムの役割と、リモート コンピューターにインストールされたサイト システムの役割が自動的に更新されます。 したがって、更新プログラムをインストールする前に、各サイト システム サーバーが新しい更新プログラムのバージョンの操作の新しい前提条件をすべて満たしていることを確認してください。  
+사이트 서버에서 업데이트를 설치할 때 사이트 서버에 설치된 사이트 시스템 역할과 원격 컴퓨터에 설치된 사이트 시스템 역할이 자동으로 업데이트됩니다. 따라서 업데이트를 설치하기 전에 각 사이트 시스템 서버에서 새 업데이트 버전에 대한 작업의 새로운 필수 조건을 충족하는지 확인해야 합니다.  
 
-更新プログラムのインストール後に Configuration Manager コンソールを初めて使用する場合、そのコンソールの更新を求められます。  これを行うには、コンソールをホストするコンピューターで Configuration Manager セットアップを実行し、コンソールを更新するオプションを選択する必要があります。 コンソールへの更新プログラムのインストールを遅らせないことをお勧めします。
+업데이트가 설치된 후 처음으로 Configuration Manager 콘솔을 사용할 때 해당 콘솔을 업데이트하라는 메시지가 표시됩니다.  그렇게 하려면 콘솔을 호스트하는 컴퓨터에서 Configuration Manager 설치 프로그램을 실행하고 콘솔을 업데이트하는 옵션을 선택해야 합니다. 콘솔에 업데이트 설치를 연기하지 않는 것이 좋습니다.
 
- **この更新プログラムの既知の問題**   
-  更新プログラム パッケージのインストール ステータスを表示したときに、次の問題が発生します。
-  - バージョン 1602 から 1606 に更新する場合、ダウンロードが完了していても、**[更新プログラム パッケージのペイロードの抽出]** ステップで **[未開始]** というステータスが表示されます。
-  - バージョン 1511 から 1606 に更新する際には、いくつかのステップで **[完了]** というステータスが表示されますが、**[最終更新時刻]** の値は表示されません。
+ **이 업데이트의 알려진 문제**   
+  업데이트 팩 설치 상태를 확인할 때 다음 문제가 발생합니다.
+  - 버전 1602를 1606으로 업데이트할 때 다운로드가 완료되어도 **업데이트 패키지 페이로드 추출** 단계에서 **시작되지 않음** 상태가 표시됩니다.
+  - 버전 1511을 1606으로 업데이트할 때 일부 단계에서 **완료됨** 상태가 나타나지만 **마지막 업데이트 시간**에 대한 값이 표시되지 않습니다.
 
 
-## チェックリスト
-<a id="checklist" class="xliff"></a>  
+## <a name="checklist"></a>확인 목록  
 
- **すべてのサイトがサポートされているバージョンの System Center Configuration Manager を実行することを確認する:** 更新プログラム 1606 のインストールを開始する前に、階層内の各サイト サーバーで、同じバージョンの System Center Configuration Manager (バージョン 1511 または 1602) を実行する必要があります。
+ **모든 사이트에서 System Center Configuration Manager의 지원되는 버전을 실행하는지 확인:** 업데이트 1606의 설치를 시작하려면 먼저 계층 구조의 각 사이트 서버에서 System Center Configuration Manager 버전 1511 또는 1602를 실행해야 합니다.
 
- **サイト システム サーバーにインストールされた Microsoft .NET のバージョンを確認する:** サイトで更新プログラム 1606 がインストールされると、Configuration Manager によって、次のいずれかのサイト システムの役割をホストする各コンピューターに .NET Framework 4.5.2 が自動的にインストールされます (.NET Framework 4.5 以降がまだインストールされていない場合)。  
+ **사이트 시스템 서버에 설치된 .NET 버전 검토:** 사이트에서 업데이트 1606을 설치할 때 .NET Framework 4.5 이상이 아직 설치되어 있지 않으면 Configuration Manager가 다음 사이트 시스템 역할 중 하나를 호스트하는 각 컴퓨터에 자동으로 .NET Framework 4.5.2 이상을 설치합니다.  
 
--   登録プロキシ ポイント  
+-   등록 프록시 지점  
 
--   登録ポイント  
+-   등록 지점  
 
--   管理ポイント  
+-   관리 지점  
 
--   サービス接続ポイント  
+-   서비스 연결 지점  
 
-このインストールにより、サイト システム サーバーが再起動保留中の状態になり、Configuration Manager コンポーネント ステータス ビューアーにエラーが報告される場合があります。 さらに、サーバーが再起動されるまで、サーバー上の .NET アプリケーションでランダムにエラーが発生する場合があります。  
+이 설치는 사이트 시스템 서버를 다시 부팅 보류 중 상태로 전환하고 Configuration Manager 구성 요소 상태 뷰어에 오류를 보고할 수 있습니다. 또한, 서버가 다시 부팅될 때까지 서버의 .NET 응용 프로그램에서 임의의 오류가 발생할 수 있습니다.  
 
- 詳細については、「[サイトとサイト システムの前提条件](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)」を参照してください。  
+ 자세한 내용은 [사이트 및 사이트 시스템 필수 조건](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)을 참조하세요.  
 
- **サイトと階層の状態を確認して、解決されていない問題がないことを確認する:** サイトを更新する前に、サイト サーバー、サイト データベース サーバー、リモート コンピューターにインストールされているサイト システムの役割で、運用上のすべての問題を解決します。 運用上の問題があると、サイトの更新が失敗する可能性があります。
+ **사이트 및 계층 구조 상태를 검토하고 해결되지 않은 문제가 있는지 확인:** 사이트를 업데이트하기 전에 원격 컴퓨터에 설치된 사이트 서버, 사이트 데이터베이스 서버 및 사이트 시스템 역할에 대한 모든 작동 문제를 해결합니다. 기존 작동 문제로 인해 사이트 업데이트가 실패할 수 있습니다.
 
- 詳細については、「 [System Center Configuration Manager のアラートとステータス システムの使用](../../../core/servers/manage/use-alerts-and-the-status-system.md)」を参照してください。  
+ 자세한 내용은 [System Center Configuration Manager에 대한 경고 및 상태 시스템 사용](../../../core/servers/manage/use-alerts-and-the-status-system.md)을 참조하세요.  
 
- **サイト間でファイルとデータのレプリケーションを確認する:**  サイト間のファイルとデータベースのレプリケーションが機能していて最新の状態であることを確認します。 遅延またはバックログにより、円滑で正常な更新が行われない場合があります。    
+ **사이트 간의 파일 및 데이터 복제 검토:**  사이트 간의 파일 및 데이터베이스 복제가 작동하고 최신인지 확인합니다. 어떤 경우든 지연 또는 백로그는 원활한 업데이트 또는 성공적인 업데이트를 방해할 수 있습니다.    
 
-データベース レプリケーションには、更新プログラムを開始する前に問題を解決するために、レプリケーション リンク アナライザーを使用できます。 詳細については、「[System Center Configuration Manager での階層とレプリケーション インフラストラクチャの監視](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md)」トピックの「[レプリケーション リンク アナライザーについて](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_RLA)」を参照してください。  
+데이터베이스 복제의 경우 업데이트를 시작하기 전에 Replication Link Analyzer를 사용하여 문제를 해결할 수 있습니다. 자세한 내용은 [System Center Configuration Manager에서 계층 구조 및 복제 인프라 모니터링](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md) 항목에서 [Replication Link Analyzer 정보](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_RLA)를 참조하세요.  
 
- **サイト、サイト データベース サーバー、リモートのサイト システムの役割をホストするコンピューターのオペレーティング システムに適用できる、重要な更新プログラムすべてをインストールする:** Configuration Manager に更新プログラムをインストールする前に、該当する各サイト システムの重要な更新プログラムをすべてインストールします。 更新のインストール時に再起動が必要な場合は、アップグレードを開始する前に該当するコンピューターを再起動します。  
+ **사이트, 사이트 데이터베이스 서버 및 원격 사이트 시스템 역할을 호스트하는 컴퓨터에서 해당하는 모든 중요한 운영 체제 업데이트 설치:** Configuration Manager에 대한 업데이트를 설치하기 전에 해당하는 각 사이트 시스템에 대한 모든 중요 업데이트를 설치합니다. 설치하는 업데이트에서 다시 시작하도록 요구하는 경우 업그레이드를 시작하기 전에 해당 컴퓨터를 다시 시작합니다.  
 
- **プライマリ サイトで管理ポイントのデータベース レプリカを無効にする:** Configuration Manager では、有効になっている管理ポイントのデータベースのレプリカを持つプライマリ サイトを正常に更新することはできません。 データベースのレプリケーションを無効にしてから、Configuration Manager の更新プログラムをインストールしてください。  
+ **기본 사이트의 관리 지점용 데이터베이스 복제본 사용 안 함:** Configuration Manager에서 관리 지점용 데이터베이스 복제본을 사용하도록 설정하는 기본 사이트를 성공적으로 업데이트할 수 없습니다. Configuration Manager용 업데이트를 설치하기 전에 데이터베이스 복제를 사용하지 않도록 설정합니다.  
 
-詳細については、「[System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」を参照してください。  
+자세한 내용은 [System Center Configuration Manager의 관리 지점용 데이터베이스 복제본](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)을 참조하세요.  
 
- **SQL Server AlwaysOn 可用性グループを手動フェールオーバーに設定する:**  
- バージョン 1606 などの更新プログラムをインストールする前に、可用性グループで手動フェールオーバーを必ず設定してください。 サイト更新後に、自動フェールオーバーに復元できます。 詳細については、[サイト データベースの SQL Server AlwaysOn](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md) に関するページを参照してください。
+ **SQL Server AlwaysOn 가용성 그룹을 수동 장애 조치(failover)로 설정:**  
+ 버전 1606과 같은 업데이트를 설치하기 전에 가용성 그룹이 수동 장애 조치로 설정되어 있는지 확인합니다. 사이트를 업데이트한 후에 장애 조치를 자동으로 되돌릴 수 있습니다. 자세한 내용은 [사이트 데이터베이스에 대한 SQL Server AlwaysOn](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)을 참조하세요.
 
- **NLB を使うソフトウェアの更新ポイントを再構成する:** Configuration Manager では、ネットワーク負荷分散 (NLB) クラスターを使用してソフトウェアの更新ポイントをホストしているサイトを更新できません。  
+ **NLB를 사용하는 소프트웨어 업데이트 지점 다시 구성:** Configuration Manager에서 NLB(네트워크 부하 분산) 클러스터를 사용하여 소프트웨어 업데이트 지점을 호스트는 사이트를 업데이트할 수 없습니다.  
 
-ソフトウェアの更新ポイントに NLB クラスターを使用している場合、Windows PowerShell を使用して NLB クラスターを削除してください。    
+소프트웨어 업데이트 지점에 NLB 클러스터를 사용하는 경우 Windows PowerShell을 사용하여 NLB 클러스터를 제거하세요.    
 
- 詳細については、「[System Center Configuration Manager でのソフトウェア更新プログラムの計画](../../../sum/plan-design/plan-for-software-updates.md)」をご覧ください。  
+ 자세한 내용은 [System Center Configuration Manager에서 소프트웨어 업데이트 계획](../../../sum/plan-design/plan-for-software-updates.md)을 참조하세요.  
 
- **各サイトの更新プログラムのインストールの実行中に、そのサイトのすべてのサイト メンテナンス タスクを無効にする:** 更新プログラムをインストールする前に、更新プロセスがアクティブな期間中に実行されるサイト メンテナンス タスクをすべて無効にします。 次のタスクが含まれますが、これらのタスクに限定されません。  
+ **해당 사이트의 업데이트 설치 중에 각 사이트에서 모든 사이트 유지 관리 작업을 사용하지 않도록 설정:** 업데이트를 설치하기 전에 업데이트 프로세스가 활성 상태인 동안 실행될 수 있는 모든 사이트 유지 관리 작업을 사용하지 않도록 설정합니다. 이러한 작업의 일부 예는 다음과 같습니다.  
 
--   サイト サーバーのバックアップ  
+-   백업 사이트 서버  
 
--   期限切れのクライアント操作を削除  
+-   오래된 클라이언트 작업 삭제  
 
--   期限切れの探索データの削除  
+-   오래된 검색 데이터 삭제  
 
-更新プログラムのインストール中にサイト データベースのメンテナンス タスクを実行すると、更新プログラムのインストールが失敗することができます。 タスクを無効にする前に、更新プログラムをインストールした後で構成を復元できるように、タスクのスケジュールを記録してください。  
+업데이트를 설치하는 동안 사이트 데이터베이스 유지 관리 작업이 실행되면 업데이트 설치가 실패할 수 있습니다. 작업을 사용하지 않도록 설정하기 전에 작업 일정을 기록하세요. 그래야 업데이트가 설치된 후에 해당 구성을 복원할 수 있습니다.  
 
-詳細については、「[System Center Configuration Manager のメンテナンス タスク](../../../core/servers/manage/maintenance-tasks.md)」および「[System Center Configuration Manager のメンテナンス タスクのリファレンス](../../../core/servers/manage/reference-for-maintenance-tasks.md)」を参照してください。  
+자세한 내용은 [System Center Configuration Manager에 대한 유지 관리 작업](../../../core/servers/manage/maintenance-tasks.md) 및 [System Center Configuration Manager에 대한 유지 관리 작업 참조](../../../core/servers/manage/reference-for-maintenance-tasks.md)를 참조하세요.  
 
- **中央管理サイトとプライマリ サイトでサイト データベースのバックアップを作成する:** サイトを更新する前に、サイト データベースをバックアップして、障害復旧に使用する正常なバックアップがあるようにします。   
+ **중앙 관리 사이트 및 기본 사이트에서 사이트 데이터베이스의 백업 만들기:** 사이트를 업데이트하기 전에 사이트 데이터베이스를 백업하여 재해 복구에 사용할 성공적인 백업을 생성해야 합니다.   
 
-詳細については、「[Backup and recovery for System Center Configuration Manager](../../../protect/understand/backup-and-recovery.md)」 (System Center Configuration Manager のバックアップと回復) をご覧ください。  
+자세한 내용은 [System Center Configuration Manager 백업 및 복구](../../../protect/understand/backup-and-recovery.md)를 참조하세요.  
 
 <!-- Removed from update guidance 6/6/2017
  **Test the database upgrade on a copy of the most recent site database backup:** Before you update a System Center Configuration Manager central administration site or primary site, test the site database upgrade process on a copy of the site database.  
@@ -128,25 +123,24 @@ Configuration Manager does not support the backup of secondary sites nor does it
 Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, For more information, see [Step 2: Test the database upgrade before installing an update](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) from **Before you install an in-console update**.
 -->
 
- **クライアントのパイロット運用を計画する:** クライアントを更新する更新プログラムをインストールすると、すべてのアクティブなクライアントを展開してアップグレードする前に、実稼働前環境でその新しいクライアントの更新プログラムをテストできます。   
+ **클라이언트 파일럿에 대한 계획:** 클라이언트를 업데이트하는 업데이트를 설치할 때 모든 활성 클라이언트를 배포하고 업그레이드하기 전에 사전 프로덕션 환경에서 새로운 클라이언트 업데이트를 테스트할 수 있습니다.   
 
- このオプションを活用するには、更新プログラムのインストールを開始する前に、実稼働前環境の自動アップグレードをサポートするサイトを構成する必要があります。 詳細については、次を参照してください。「[System Center Configuration Manager でのクライアントのアップグレード](../../../core/clients/manage/upgrade/upgrade-clients.md)」および   
-「[System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストする方法](../../../core/clients/manage/upgrade/test-client-upgrades.md)」。  
+ 이 옵션을 활용하려면 업데이트 설치를 시작하기 전에 사전 프로덕션에 대한 자동 업그레이드를 지원하도록 사이트를 구성해야 합니다. 자세한 내용은 [System Center Configuration Manager에서 클라이언트 업그레이드](../../../core/clients/manage/upgrade/upgrade-clients.md) 및   
+[System Center Configuration Manager의 사전 프로덕션 컬렉션에서 클라이언트 업그레이드를 테스트하는 방법](../../../core/clients/manage/upgrade/test-client-upgrades.md)  
 
- **サイト サーバーで更新プログラムがインストールされるタイミングをサービス期間によって制御することを検討する:** サービス期間を使用して、そのサイト サーバーの更新プログラムをインストールできる期間を定義することができます。
+ **서비스 기간을 사용하여 사이트 서버에서 업데이트를 설치하는 시기를 제어하도록 계획:** 서비스 기간을 사용하여 사이트 서버의 업데이트를 설치할 수 있는 기간을 정의할 수 있습니다.
 
-これは、階層内のサイトが更新プログラムをインストールするタイミングの制御に役立ちます。
-バージョン 1606 より前では、サービス期間はメンテナンス期間と呼ばれました。 詳細については、「[サイト サーバーのサービス ウィンドウ](/sccm/core/servers/manage/service-windows)」を参照してください。  
+이를 통해 계층의 사이트에서 업데이트를 설치하는 시기를 제어할 수 있습니다.
+1606 이전 버전에서는 서비스 창을 유지 관리 창이라고 했습니다. 자세한 내용은 [사이트 서버에 대한 서비스 기간](/sccm/core/servers/manage/service-windows)을 참조하세요.  
 
- **セットアップ前提条件チェッカーを実行する:**  1606 更新プログラムをインストールする前に、更新プログラムのインストールとは別に前提条件チェッカーを実行することができます。 サイトへの更新プログラムのインストール時に、前提条件チェッカーが再度実行されます。  
+ **설치 필수 조건 검사 실행:**  업데이트 1606을 설치하려면 먼저 업데이트 설치와 독립적으로 필수 조건 검사를 실행할 수 있습니다. 사이트에 업데이트를 설치할 때 필수 조건 검사가 다시 실행됩니다.  
 
-詳細については、「[System Center Configuration Manager の更新プログラム](../../../core/servers/manage/install-in-console-updates.md)」トピックの「**手順 3: 更新プログラムをインストールする前の前提条件チェッカーの実行**」を参照してください。  
+자세한 내용은 [System Center Configuration Manager용 업데이트](../../../core/servers/manage/install-in-console-updates.md) 항목의 **3단계: 업데이트를 설치하기 전에 필수 조건 검사 실행**을 참조하세요.  
 
 > [!IMPORTANT]  
->  前提条件チェッカーを更新プログラムの一部として、または単独で実行すると、サイト メンテナンス タスクに使用される一部の製品ソース ファイルが更新されます。 このため、前提条件チェッカーを実行した後で、1606 更新プログラムをインストールする前に、サイト メンテナンス タスクを実行する必要がある場合は、サイト サーバーの CD.Latest フォルダーから **Setupwpf.exe** (Configuration Manager セットアップ) を実行する必要があります。  
+>  필수 조건 검사가 독립적으로 또는 업데이트 설치의 일부로 실행되면 프로세스에서 사이트 유지 관리 작업에 사용되는 일부 제품 소스 파일을 업데이트합니다. 따라서 필수 구성 요소 검사기를 실행한 후 1606 업데이트를 설치하기 전에 사이트 유지 관리 작업을 수행해야 하는 경우 사이트 서버의 CD.Latest 폴더에서 **Setupwpf.exe**(Configuration Manager 설치 프로그램)를 실행합니다.  
 
- **サイトを更新する:** 階層の更新プログラムのインストールを開始する準備が整いました。  
-  更新プログラムをインストールするプロセス、およびサイトのコンポーネントとサイト システムの役割を再インストールするアクションが業務に及ぼす影響が少ない場合は、各サイトの通常業務時間外に更新プログラムをインストールする計画を立てることをお勧めします。
+ **사이트 업데이트:** 이제 계층 구조에 대한 업데이트 설치를 시작할 수 있습니다.  
+  각 사이트에 대한 일상적인 업무 시간 외(업데이트를 설치하는 프로세스와 사이트 구성 요소 및 사이트 시스템 역할을 다시 설치하는 작업이 비즈니스 운영에 가장 영향을 덜 주는 시기)에 업데이트를 설치하도록 계획하는 것이 좋습니다.
 
-詳細については、「[System Center Configuration Manager の更新プログラム](../../../core/servers/manage/updates.md)」を参照してください。  
-
+자세한 내용은 [System Center Configuration Manager용 업데이트](../../../core/servers/manage/updates.md)를 참조하세요.  

@@ -1,49 +1,45 @@
 ---
-title: "準備手順 | Microsoft Docs"
-description: "System Center Configuration Manager でのオンプレミス モバイル デバイス管理でデバイスの管理を準備します。"
+title: "준비 단계 | Microsoft Docs"
+description: "System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 사용하여 장치 관리를 준비합니다."
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1ef60106-8f31-46d6-95a6-25a6495f22c7
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 2ba11c8e2d8214ce9aca7c887fcb539b38da4e84
-ms.contentlocale: ja-jp
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: 85bdadaaaeed9a42cfa5165d2b9f0f3ef434dc03
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="preparation-steps-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミス モバイル デバイス管理の準備手順
+# <a name="preparation-steps-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 위한 준비 단계
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager オンプレミス モバイル デバイス管理でデバイスを管理するには、Configuration Manager インフラストラクチャをセットアップして、必要なサイト システムの役割 (登録プロキシ ポイント、登録ポイント、デバイス管理ポイント、および配布ポイント) が信頼されたチャネル経由で管理対象のモバイル デバイスと通信できるようにする必要があります。\-  
+System Center Configuration Manager 온\-프레미스 모바일 장치 관리를 사용하여 장치를 관리하려면 필수 사이트 시스템 역할(등록 프록시 지점, 등록 지점, 장치 관리 지점, 배포 지점)이 신뢰할 수 있는 채널을 통해 관리할 모바일 장치와 통신할 수 있도록 Configuration Manager 인프라를 설정해야 합니다.  
 
- オンプレミス モバイル デバイス管理用に Configuration Manager システムを準備するには、次の高度なタスクを実行する必要があります。\-  
+ 다음은 Configuration Manager 시스템을 온\-프레미스 모바일 장치 관리용으로 준비하는 데 필요한 개략적인 작업입니다.  
 
--   [System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のための Microsoft Intune サブスクリプションをセットアップする](../../mdm/get-started/set-up-intune-subscription-on-premises-mdm.md)  
+-   [System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 위해 Microsoft Intune 구독 설정](../../mdm/get-started/set-up-intune-subscription-on-premises-mdm.md)  
 
-     このタスクでは、Microsoft Intune にサインアップし、し、Configuration Manager コンソールで、サブスクリプションを Configuration Manager に追加します。 この手順はライセンス付与のためにのみ必要となっています。 Intune はデバイスの管理にも、管理情報の保存にも使用されません。 デバイスの調整と管理のすべては、オンプレミスの Configuration Manager インフラストラクチャを使用して組織の計画に沿って行われます。  
+     이 작업에서는 Microsoft Intune에 대해 등록한 다음 Configuration Manager 콘솔을 통해 Configuration Manager에 구독을 추가합니다. 이 단계는 라이선싱용으로만 필요합니다. Intune은 장치를 관리하거나 관리 정보를 저장하는 데 사용되지 않습니다. 온-프레미스 Configuration Manager 인프라를 사용하는 조직의 엔터프라이즈에서 장치에 대한 조정 및 관리 업무가 수행됩니다.  
 
--   [System Center Configuration Manager でのオンプレミス モバイル デバイス管理のサイト システムの役割のインストール](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)  
+-   [System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 위한 사이트 시스템 역할 설치](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)  
 
-     このタスクでは、オンプレミスの Configuration Manager インフラストラクチャによるデバイス管理に必要なサイト システムの役割をインストールして構成します。 オンプレミス モバイル デバイス管理には、登録プロキシ ポイント、登録ポイント、デバイス管理ポイント、および配布ポイントの各サイト システムの役割が最低限必要です。\-  
+     이 작업에서는 온-프레미스 Configuration Manager 인프라를 사용하여 장치를 관리하는 데 필요한 사이트 시스템 역할을 설치 및 구성합니다. 온\-프레미스 모바일 장치 관리에는 최소한 등록 프록시 지점, 등록 지점, 장치 관리 지점, 배포 지점 사이트 시스템 역할이 필요합니다.  
 
--   [System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために信頼された通信用の証明書をセットアップする](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)  
+-   [System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 위해 신뢰할 수 있는 통신에 대한 인증서 설정](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)  
 
-     このタスクでは、オンプレミスの Configuration Manager インフラストラクチャを構成して、管理対象のデバイスと、必要なサイト システムの役割をホストするサーバーとの間の信頼できる通信 (HTTPS) を許可します。  
+     이 작업에서는 온-프레미스 Configuration Manager 인프라를 구성하여 필수 사이트 시스템 역할을 호스트하는 서버와 관리되는 장치 간에 신뢰할 수 있는 통신(HTTPS)을 허용합니다.  
 
--   [System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のデバイス登録の設定](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
+-   [System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 위한 장치 등록 설정](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
 
-     このタスクでは、ユーザーにコンピューターとデバイスの登録の許可を与えます。またデバイス (通常は、ドメインに参加していないデバイス) に信頼されたルート証明書をインストールして、サイト システム サーバーへの HTTPS 接続を許可します。  
-
+     이 작업에서는 사용자에게 컴퓨터 및 장치를 등록할 수 있는 권한을 부여하고, 장치(일반적으로 도메인에 가입되지 않은 장치)에 신뢰할 수 있는 루트 인증서를 설치하여 사이트 시스템 서버에 대한 HTTPS 연결을 허용합니다.  

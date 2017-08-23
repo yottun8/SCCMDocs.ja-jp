@@ -1,126 +1,122 @@
 ---
-title: "Configuration Manager のサイト コンポーネント | Microsoft Docs"
-description: "サイト コンポーネントを構成して、サイト システムの役割とサイト ステータス レポートの動作を変更する方法について説明します。"
+title: "Configuration Manager에 대한 사이트 구성 요소 | Microsoft 문서"
+description: "사이트 시스템 역할 및 사이트 상태 보고의 동작을 수정하기 위해 사이트 구성 요소를 구성하는 방법을 알아봅니다."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5fccbbeb-0faa-4943-83c2-e67db62d392d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
 ms.openlocfilehash: 83550fbf0ef1f9adb0bb2c51a4f3c26a7500d352
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="site-components-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイト コンポーネント
+# <a name="site-components-for-system-center-configuration-manager"></a>System Center Configuration Manager의 사이트 구성 요소
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-各 System Center Configuration Manager サイトでサイト コンポーネントを設定すると、サイト システムの役割とサイト ステータス レポートの動作を変更できます。 サイト コンポーネントの構成はサイトと、サイトで適用可能なサイト システムの役割の各インスタンスに適用されます。  
+각 System Center Configuration Manager 사이트에서는 사이트 시스템 역할 및 사이트 상태 보고의 동작을 수정하기 위해 사이트 구성 요소를 설정할 수 있습니다. 사이트 구성 요소 구성은 사이트와 해당 사이트의 해당하는 각 사이트 시스템 역할 인스턴스에 적용됩니다.  
 
-## <a name="about-site-components"></a>サイト コンポーネントについて  
- さまざまなサイト コンポーネントのオプションのほとんどは、Configuration Manager コンソールに表示すると、ひとめでわかります。 ただし、次の詳細では、一部のより複雑な構成について説明しています。または、より複雑な構成について説明している追加のコンテンツを参照できます。  
+## <a name="about-site-components"></a>사이트 구성 요소 정보  
+ 다양한 사이트 구성 요소에 대한 대부분의 옵션은 Configuration Manager 콘솔에 표시되는 상태를 보면 해당 용도를 파악할 수 있습니다. 아래 세부 정보는 보다 복잡한 일부 구성에 대한 설명 또는 해당 설명이 포함된 추가 콘텐츠를 제공합니다.  
 
-### <a name="software-distribution"></a>ソフトウェアの配布  
+### <a name="software-distribution"></a>소프트웨어 배포  
 
--   **コンテンツ配布の設定:**  サイト サーバーから配布ポイントへのコンテンツの転送方法を変更する設定を指定できます。 同時配布設定に使用する値を増やすと、コンテンツの配布でより多くのネットワーク帯域幅を使用できます。  
+-   **콘텐츠 배포 설정:** 사이트 서버가 배포 지점에 콘텐츠를 전송하는 방법을 수정하는 설정을 지정할 수 있습니다. 동시 배포 설정에 사용하는 값을 더 크게 지정하면 콘텐츠 배포에서 네트워크 대역폭을 더 많이 사용할 수 있습니다.  
 
--   **ネットワーク アクセス アカウント:**  ネットワーク アクセス アカウントの設定と使用の詳細については、「[Network Access Account](../../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#bkmk_NAA)」(ネットワーク アクセス アカウント) を参照してください。  
+-   **네트워크 액세스 계정:** 네트워크 액세스 계정을 설정 및 사용하는 방법에 대한 자세한 내용은 [네트워크 액세스 계정](../../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#bkmk_NAA)을 참조하세요.  
 
-### <a name="software-update-point"></a>ソフトウェアの更新ポイント  
+### <a name="software-update-point"></a>소프트웨어 업데이트 지점  
 
--   ソフトウェアの更新ポイント コンポーネントの構成オプションについては、「[Install a software update point](../../../../sum/get-started/install-a-software-update-point.md)」(ソフトウェアの更新ポイントをインストールする) を参照してください。  
+-   소프트웨어 업데이트 지점 구성 요소의 구성 옵션에 대한 자세한 내용은 [소프트웨어 업데이트 지점 설치](../../../../sum/get-started/install-a-software-update-point.md)를 참조하세요.  
 
-### <a name="management-point"></a>管理ポイント  
+### <a name="management-point"></a>관리 지점  
 
--   **管理ポイント:** 管理ポイントに関する情報を Active Directory Domain Services に発行するようにサイトを設定することができます。  
+-   **관리 지점:** Active Directory Domain Services에 해당 관리 지점에 대한 정보를 게시하도록 사이트를 설정할 수 있습니다.  
 
-     Configuration Manager クライアントは、管理ポイントを使用してサービスを特定し、境界グループのメンバーシップや PKI 証明書の選択オプションなどのサイト情報を検索します。 また、クライアントは、サイト内の他の管理ポイントの検索や、ソフトウェアのダウンロード元の配布ポイントの検索にも管理ポイントを使用します。 クライアントは、管理ポイントを使用して、サイト割り当ての実行、クライアント ポリシーのダウンロード、クライアント情報のアップロードも行うことができます。  
+     Configuration Manager 클라이언트는 관리 지점을 사용하여 서비스를 찾고 경계 그룹 멤버 자격 및 PKI 인증서 선택 옵션과 같은 사이트 정보를 검색할 뿐 아니라 소프트웨어를 다운로드할 배포 지점과 사이트의 기타 관리 지점도 검색합니다. 또한 관리 지점은 클라이언트가 사이트 할당을 완료하고, 클라이언트 정책을 다운로드하고, 클라이언트 정보를 업로드하는 데 도움이 됩니다.  
 
-     クライアントが管理ポイントを見つけるには、Active Directory ドメイン サービスに発行するのが最も安全な方法であるため、通常は、機能している管理ポイントをすべて選択して Active Directory ドメイン サービスに発行します。 ただし、このサービスの場所検索方法では、次の条件を満たしている必要があります。
+     클라이언트가 관리 지점을 검색하는 가장 안전한 방법은 Active Directory Domain Services에 게시하는 것이므로 일반적으로 항상 올바르게 작동하는 모든 관리 지점을 Active Directory Domain Services에 게시하도록 선택합니다. 그러나 이 서비스 위치 방법을 사용하려면 다음 사항이 필요합니다.
 
-     - Configuration Manager のスキーマが拡張されている。
-     - **System Management** コンテナーがあり、サイト サーバーがこのコンテナーに発行するための適切なセキュリティ アクセス許可が設定されている。
-     - Configuration Manager サイトが Active Directory Domain Services に発行するように設定されている。
-     - クライアントが、サイト サーバーと同じ Active Directory フォレストに属している  
+     - Configuration Manager의 스키마를 확장합니다.
+     - 사이트 서버에 이 컨테이너에 게시할 수 있는 적절한 보안 권한이 있는 **시스템 관리** 컨테이너가 있습니다.
+     - Configuration Manager 사이트가 Active Directory Domain Services에 게시하도록 설정되었습니다.
+     - 클라이언트가 사이트 서버의 포리스트와 동일한 Active Directory에 속해 있습니다.  
 
-     イントラネット上のクライアントが管理ポイントの検索に Active Directory Domain Services を使用できない場合は、代わりに [DNS](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_dns) 発行を使用します。  
+     인트라넷의 클라이언트가 Active Directory Domain Services를 사용하여 관리 지점을 찾을 수 없는 경우 대신 [DNS](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_dns) 게시를 사용합니다.  
 
- サービスの場所の概要については、「[Understand how clients find site resources and services for System Center Configuration Manager](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)」(クライアントが System Center Configuration Manager のサイト リソースやサービスを検索する方法を理解する) を参照してください。  
+ 서비스 위치에 대한 일반적인 내용은 [클라이언트가 System Center Configuration Manager에 대한 사이트 리소스 및 서비스를 찾는 방법 이해](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)를 참조하세요.  
 
--   **選択したイントラネット管理ポイントを DNS に発行する:** イントラネット上のクライアントが Active Directory ドメイン サービスから管理ポイントを検索できない場合は、このオプションを指定します。 代わりに、DNS サービスの場所リソース レコード (SRV RR) を使用して、割り当てられたサイト内の管理ポイントを検索できます。  
+-   **DNS에 선택한 인트라넷 관리 지점 게시:** 인트라넷의 클라이언트가 Active Directory Domain Services에서는 관리 지점을 찾을 수 없지만 DNS SRV RR(서비스 위치 리소스 레코드)을 사용하여 할당된 사이트에서 관리 지점을 찾을 수 있는 경우 이 옵션을 지정합니다.  
 
-    Configuration Manager がイントラネットの管理ポイントを DNS に発行するには、次の条件が満たされていなければなりません。  
+    Configuration Manager에서 인트라넷 관리 지점을 DNS에 게시하려면 다음 모든 조건을 충족해야 합니다.  
 
-    -   DNS サーバーが、バージョン 8.1.2 以降の BIND を使用している。  
+    -   DNS 서버의 BIND 버전은 8.1.2 이상이어야 합니다.  
 
-    -   DNS サーバーが自動更新用に設定されていて、サービスの場所のリソース レコードをサポートする。  
+    -   DNS 서버에 자동 업데이트가 설정되어 있고 DNS 서버가 서비스 위치 리소스 레코드를 지원해야 합니다.  
 
-    -   Configuration Manager 内の管理ポイント用に指定された完全修飾ドメイン名 (FQDN) に DNS のホスト エントリ (A または AAA レコード) がある。  
+    -   Configuration Manager에서 관리 지점에 지정한 FQDN(정규화된 도메인 이름)에 DNS의 호스트 항목(A 또는 AAA 레코드)이 있어야 합니다.  
 
     > [!WARNING]  
-    >  クライアントが DNS で発行された管理ポイントを見つけるには、自動サイト割り当てを使用せずに、クライアントを特定のサイトに割り当てる必要があります。 管理ポイントのドメイン サフィックスを持つサイト コードを使用するには、これらのクライアントを設定します。 詳細については、「[How to assign clients to a site in System Center Configuration Manager](/sccm/core/clients/deploy/assign-clients-to-a-site)」(System Center Configuration Manager のサイトにクライアントを割り当てる方法) の「[Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points)」(管理ポイントの特定) を参照してください。  
+    >  클라이언트가 DNS에 게시된 관리 지점을 찾으려면 자동 사이트 할당을 사용하는 대신 클라이언트를 특정 사이트에 할당해야 하며, 이러한 클라이언트가 해당 관리 지점의 도메인 접미사가 있는 사이트 코드를 사용하도록 설정합니다. 자세한 내용은 [System Center Configuration Manager에서 사이트에 클라이언트를 할당하는 방법](/sccm/core/clients/deploy/assign-clients-to-a-site)에서 [관리 지점 찾기](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points)를 참조하세요.  
 
-     Configuration Manager クライアントがイントラネット上の管理ポイントの検索に Active Directory Domain Services も DNS も使用できない場合は、[WINS](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_wins) を使用します。 イントラネット上の HTTP クライアント接続を受信するように設定されている場合、サイトで最初にインストールされた管理ポイントが自動的に WINS に発行されます。  
+     Configuration Manager 클라이언트가 Active Directory Domain Services 또는 DNS를 사용하여 인트라넷에서 관리 지점을 찾을 수 없는 경우 [WINS](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_wins)를 사용합니다. 사이트에 설치된 첫 번째 관리 지점은 인트라넷에서 HTTP 클라이언트 연결을 허용하도록 설정된 경우 WINS에 자동으로 게시됩니다.  
 
-### <a name="status-reporting"></a>ステータス レポート  
+### <a name="status-reporting"></a>상태 보고  
 
--   これらの設定は、サイトとクライアントからの状態レポートに含まれている詳細のレベルを直接設定します。  
+-   이러한 설정은 사이트와 클라이언트의 상태 보고서에 포함되는 세부 정보 수준을 직접 설정합니다.  
 
-### <a name="email-notification"></a>電子メール通知  
+### <a name="email-notification"></a>메일 알림  
 
--   アカウントと電子メール サーバーの詳細を指定して、Configuration Manager を有効にし、アラートとして電子メール通知を送信します。  
+-   Configuration Manager에서 경고를 위한 메일 알림을 보내도록 설정하려면 계정 및 메일 서버 세부 정보를 지정합니다.  
 
-### <a name="collection-membership-evaluation"></a>コレクション メンバーシップの評価  
+### <a name="collection-membership-evaluation"></a>컬렉션 멤버 평가  
 
--   このタスクは、コレクションのメンバーシップの変更箇所を評価する頻度を設定する場合に使用します。 変更箇所の評価は、新しいリソースが追加された場合またはリソースが変更された場合にのみコレクションのメンバーシップを更新します。  
+-   이 작업을 사용하여 컬렉션 멤버의 추가 증가분을 평가할 빈도를 설정합니다. 증가분 평가는 컬렉션 멤버 자격에서 변경되거나 새로운 리소스만 업데이트합니다.  
 
-### <a name="edit-the-site-components-at-a-site"></a>サイトでサイト コンポーネントを編集する  
+### <a name="edit-the-site-components-at-a-site"></a>사이트에서 사이트 구성 요소 편집  
 
-サイト コンポーネントを編集するには、次の手順を使用します。
+사이트 구성 요소를 편집하려면 다음 단계를 따르세요.
 
-1.  Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** > **[サイト]** の順にクリックし、構成するサイト コンポーネントのあるサイトを選択します。  
+1.  Configuration Manager 콘솔에서 **관리** > **사이트 구성** > **사이트**를 클릭하고 구성할 사이트 구성 요소가 있는 사이트를 선택합니다.  
 
-2.  **[ホーム]** タブの **[設定]** グループで、**[サイト コンポーネントの構成]** をクリックします。 構成するサイト コンポーネントを選択します。  
+2.  **홈** 탭의 **설정** 그룹에서 **사이트 구성 요소 구성**을 클릭합니다. 그런 다음 구성할 사이트 구성 요소를 선택합니다.  
 
-##  <a name="BKMK_ServiceMgr"></a> Configuration Manager サービス マネージャーによるサイト コンポーネントの管理  
-Configuration Manager サービス マネージャーを使用して、Configuration Manager サービスを管理し、Configuration Manager サービスや実行中のスレッド (まとめて Configuration Manager コンポーネントと呼びます) のステータスを確認することができます。 Configuration Manager コンポーネントについて次のことを理解してください。  
+##  <a name="BKMK_ServiceMgr"></a> Configuration Manager Service Manager를 사용하여 사이트 구성 요소 관리  
+Configuration Manager Service Manager를 사용하여 Configuration Manager 서비스를 제어하고 Configuration Manager 서비스 또는 작업 스레드(Configuration Manager 구성 요소로 총칭)의 상태를 확인할 수 있습니다. Configuration Manager 구성 요소에 대해 다음을 이해합니다.  
 
--   コンポーネントは任意のサイト システムで実行できます。  
+-   구성 요소는 모든 사이트 시스템에서 실행될 수 있습니다.  
 
--   コンポーネントは、Windows のサービスを管理する場合と同じ方法で管理されます。 Configuration Manager コンポーネントの開始、停止、一時停止、再開、または照会を行うことができます。  
+-   구성 요소는 Windows에서 서비스를 관리하는 것과 동일한 방식으로 관리되므로 Configuration Manager 구성 요소를 시작, 중지, 일시 중지, 재시작 또는 쿼리할 수 있습니다.  
 
-Configuration Manager サービスによる処理が必要になると (通常は構成ファイルがコンポーネントの受信トレイに書き込まれたとき)、サービスが実行されます。 操作に関連するコンポーネントを識別する必要がある場合は、Configuration Manager サービス マネージャーを使用して、各種のサービスとスレッドを操作することができます。 Configuration Manager の動作で発生した変更を表示できます。 たとえば、特定の応答が排除されるまで Configuration Manager サービスを一度に 1 つずつ停止できます。 これにより、特定の動作の原因となっているサービスを判別できます。  
+Configuration Manager 서비스는 수행해야 할 작업이 있을 때, 즉 일반적으로 구성 파일이 구성 요소의 수신함에 기록될 때 실행됩니다. 작업에 관련된 구성 요소를 식별해야 하는 경우 Configuration Manager Service Manager를 사용하여 다양한 서비스 및 스레드를 조작한 다음 Configuration Manager의 동작에서 그 결과로 변경된 내용을 확인하면 됩니다. 예를 들어 특정 응답이 제거될 때까지 Configuration Manager 서비스를 한 번에 하나씩 중지할 수 있습니다. 이렇게 하면 특정 동작을 일으키는 서비스를 확인할 수 있습니다.  
 
 > [!TIP]  
->  次の手順は、Configuration Manager コンポーネントの操作を変更するために使用できます。  
+>  다음 절차에 따라 Configuration Manager 구성 요소 작업을 조작할 수 있습니다.  
 
-### <a name="use-the-configuration-manager-service-manager"></a>Configuration Manager サービス マネージャーを使用する  
+### <a name="use-the-configuration-manager-service-manager"></a>Configuration Manager Service Manager 사용  
 
-1.  Configuration Manager コンソールで **[監視]** >  **[システムのステータス]** の順にクリックし、**[コンポーネントのステータス]** をクリックします。  
+1.  Configuration Manager 콘솔에서 **모니터링** >  **시스템 상태**를 클릭한 다음 **구성 요소 상태**를 클릭합니다.  
 
-2.  **[ホーム]** タブの **[コンポーネント]** グループで、**[開始]** をクリックします。 次に **[Configuration Manager サービス マネージャー]** を選択します。  
+2.  **홈** 탭의 **구성 요소** 그룹에서 **시작**을 클릭합니다. 그런 다음 **Configuration Manager Service Manager**를 선택합니다.  
 
-3.  Configuration Manager サービス マネージャーが開いたら、管理したいサイトに接続します。  
+3.  Configuration Manager Service Manager가 열리면 관리할 사이트에 연결합니다.  
 
-     管理したいサイトが表示されない場合は、 **[サイト]**、 **[接続]**の順にクリックして、該当するサイトのサイト サーバーの名前を入力します。  
+     관리할 사이트가 보이지 않으면 **사이트**, **연결**을 차례로 클릭한 다음 올바른 사이트의 사이트 서버 이름을 입력합니다.  
 
-4.  サイトを展開して、管理したいコンポーネントのある場所に応じて、[ **コンポーネント** ] または [ **サーバー**] に移動します。  
+4.  사이트를 확장하고 관리할 구성 요소의 위치에 따라 **구성 요소** 또는 **서버**로 이동합니다.  
 
-5.  右側のウィンドウで、1 つまたは複数のコンポーネントを選択します。 次に、**[コンポーネント]** メニューの **[クエリ]** をクリックして、選択項目の状態を更新します。  
+5.  오른쪽 창에서 구성 요소를 하나 이상 선택합니다. 그런 다음 **구성 요소** 메뉴에서 **쿼리**를 클릭하여 선택 항목의 상태를 업데이트합니다.  
 
-6.  コンポーネントのステータスを更新したら、**[コンポーネント]** メニューの 4 つのアクション ベースのオプションのいずれかを使用して、コンポーネントの操作を変更します。 アクションを要求したら、コンポーネントを照会して、コンポーネントの新しいステータスを表示する必要があります。  
+6.  구성 요소의 상태가 업데이트되면 **구성 요소** 메뉴에서 4개의 동작 기반 옵션 중 하나를 사용하여 구성 요소 작업을 수정합니다. 작업을 요청한 후에는 구성 요소의 새 상태가 표시되도록 구성 요소를 쿼리해야 합니다.  
 
-7.  コンポーネントの操作の状態の変更が完了したら、Configuration Manager サービス マネージャーを閉じます。  
-
+7.  구성 요소 작업 상태의 수정을 마치면 Configuration Manager Service Manager를 닫습니다.  

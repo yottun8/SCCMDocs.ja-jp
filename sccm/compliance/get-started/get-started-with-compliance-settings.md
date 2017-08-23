@@ -1,91 +1,84 @@
 ---
-title: "コンプライアンス設定を使ってみる | Microsoft Docs"
-description: "System Center Configuration Manager でのコンプライアンス設定のしくみについて説明します。 また、知っておく必要のある主要な概念についても説明します。"
+title: "준수 설정 시작 | Microsoft 문서"
+description: "System Center Configuration Manager에서 준수 설정이 작동하는 방법을 알아봅니다. 또한 알아야 할 핵심 개념에 알아봅니다."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a2742d52-851e-4abc-b623-d12d91684c0b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: f16c87dfd0c4f80d96aedf7f5f7497f2bbd4752a
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="get-started-with-compliance-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager のコンプライアンス設定を使ってみる
+# <a name="get-started-with-compliance-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 준수 설정 시작
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager 構成項目の作成を開始する前に、このトピックを検討して、コンプライアンス設定のしくみを理解し、知っておく必要のある主要な概念を学習する必要があります。  
+System Center Configuration Manager 구성 항목을 만들기 전에 이 항목을 검토하여 준수 설정의 작동 방식을 이해하고 알아야 할 핵심 개념을 확인해야 합니다.  
 
-## <a name="how-compliance-settings-works"></a>コンプライアンス設定の動作  
- コンプライアンス設定を使用すると、組織内のサーバー、ノート PC、デスクトップ コンピューター、およびモバイル デバイスの構成とコンプライアンス対応を管理できます。  
+## <a name="how-compliance-settings-works"></a>준수 설정의 작동 방식  
+ 준수 설정을 통해 조직의 서버, 노트북, 데스크톱 컴퓨터 및 모바일 장치의 구성과 준수를 관리할 수 있습니다.  
 
- 構成項目は、次の 2 つの主なカテゴリに分類されます。  
+ 구성 항목은 다음 두 가지 주요 범주로 나뉩니다.  
 
--   **構成マネージャー クライアントで管理されるデバイスの設定** - 通常は、デバイスを管理するための構成マネージャー クライアント ソフトウェアがインストールされているデバイスです。  
+-   **Configuration Manager 클라이언트를 사용하여 관리되는 장치 설정** - 일반적으로 장치를 관리할 수 있도록 하는 Configuration Manager 클라이언트 소프트웨어가 설치된 장치입니다.  
 
--   **構成マネージャー クライアントなしで管理されるデバイスの設定** - 通常は、Microsoft Intune、または Configuration Manager オンプレミス デバイス管理で管理されるデバイスです。  
+-   **Configuration Manager 클라이언트 없이 관리되는 장치 설정** - 일반적으로 Microsoft Intune 또는 Configuration Manager 온-프레미스 장치 관리로 관리되는 장치입니다.  
 
-## <a name="what-devices-are-supported"></a>サポートされるデバイス  
+## <a name="what-devices-are-supported"></a>지원되는 장치  
 
 
-|デバイスの種類|説明|  
+|장치 유형|추가 정보|  
 |------------|----------------------|  
-|Windows PC (構成マネージャー クライアントを使用)|レジストリー キー、ファイル、Active Directory 属性などの項目を評価するためのカスタム構成項目を作成することができます。<br /><br /> Windows 10 の構成項目の種類を使用する場合は、定義済みの一覧から目的の設定を選択します。|  
-|Windows PC (Microsoft Intune で登録済み)|定義済みの一覧から設定を選択します。|  
-|iOS デバイス (Microsoft Intune で登録済み)|定義済みの一覧から設定を選択します。|  
-|Android デバイス (Microsoft Intune で登録済み)|定義済みの一覧から設定を選択します。|  
-|Windows Phone デバイス (Microsoft Intune で登録済み)|定義済みの一覧から設定を選択します。|  
-|Mac コンピューター (構成マネージャー クライアントを使用)|Mac OS X の設定 (プロパティ リスト) 値などの項目や、スクリプトによって返される結果を評価するためのカスタム構成項目を作成することができます。|  
-|Mac コンピューター (Microsoft Intune で登録済み)|定義済みの一覧から設定を選択します。|  
+|Configuration Manager 클라이언트를 사용하여 Windows PC 관리|레지스트리 키, 파일, Active Directory 특성 등의 항목을 평가할 수 있는 사용자 지정 구성 항목을 만들 수 있습니다.<br /><br /> Windows 10 구성 항목 유형을 사용하는 경우 미리 정의된 목록에서 원하는 설정을 선택합니다.|  
+|Windows PC(Microsoft Intune에 등록)|미리 정의된 목록에서 원하는 설정을 선택합니다.|  
+|iOS 장치(Microsoft Intune에 등록)|미리 정의된 목록에서 원하는 설정을 선택합니다.|  
+|Android 장치(Microsoft Intune에 등록)|미리 정의된 목록에서 원하는 설정을 선택합니다.|  
+|Windows Phone 장치(Microsoft Intune에 등록)|미리 정의된 목록에서 원하는 설정을 선택합니다.|  
+|Mac 컴퓨터(Configuration Manager 클라이언트 포함)|Mac OS X 기본 설정(속성 목록) 값, 스크립트에서 반환된 결과 등의 항목을 평가할 수 있는 사용자 지정 구성 항목을 만들 수 있습니다.|  
+|Mac 컴퓨터(Microsoft Intune에 등록)|미리 정의된 목록에서 원하는 설정을 선택합니다.|  
 
-## <a name="what-is-a-configuration-item"></a>構成項目とは  
- 構成項目は、次の情報を格納するコンテナーと見なすことができます (構成する情報は、構成項目の種類によって異なります)。  
+## <a name="what-is-a-configuration-item"></a>구성 항목 정의  
+ 구성 항목은 다음 정보를 저장하는 컨테이너로 간주할 수 있습니다. 구성하는 정보는 구성 항목 형식에 따라 달라집니다.  
 
--   **検出方法情報** (アプリケーション設定を格納する Windows 構成項目の場合のみ) - アプリケーションの Windows インストーラー ファイルを検出するか、カスタム スクリプトを使用することによって、アプリケーションがインストールされているかどうかを検出します。  
+-   **검색 방법 정보** (프로그램 설정만 포함된 Windows 구성 항목의 경우) - 응용 프로그램에 대한 Windows Installer 파일을 검색하거나 사용자 지정 스크립트를 사용하여 응용 프로그램이 설치되었는지를 검색할 수 있습니다.  
 
--   **設定** - 設定は、クライアント デバイスでコンプライアンス対応の評価に使用されるビジネス条件または技術条件を表わします。 新しい設定を構成することも、参照コンピューターの既存の設定を参照することもできます。  
+-   **설정** - 설정은 클라이언트 장치에서 준수를 평가하는 데 사용되는 비즈니스 또는 기술 조건을 나타냅니다. 참조 컴퓨터에서 기존 설정을 찾거나 새 설정을 구성할 수 있습니다.  
 
--   **コンプライアンス規則** - コンプライアンス規則は、構成項目設定のコンプライアンスを定義する条件を指定します。 設定に対してコンプライアンス評価が行われる前に、少なくとも 1 つのコンプライアンス規則を設ける必要があります。 設定の中には、コンプライアンス非対応であることが判明した値を修正できるようにするものもあります。 新しい規則を作成、または構成項目の既存の設定を参照して規則を選択することができます。  
+-   **준수 규칙** - 준수 규칙은 구성 항목 설정의 준수를 정의하는 조건을 지정합니다. 설정의 준수를 평가하려면 먼저 하나 이상의 준수 규칙이 있어야 합니다. 일부 설정에서는 비규격으로 발견된 값을 수정할 수 있습니다. 규칙을 선택할 모든 구성 항목에서 새 규칙을 만들거나 기존 설정을 검색할 수 있습니다.  
 
--   **サポートされているプラットフォーム** - これらは、コンプライアンス対応が評価される構成項目を定義するデバイス プラットフォームです。 サポートされているプラットフォームの一覧にないデバイスに構成項目を展開する場合は、コンプライアンス対応は評価されません。  
+-   **지원되는 플랫폼** - 구성 항목의 준수를 평가하도록 정의된 장치 플랫폼입니다. 지원되는 플랫폼 목록에 없는 장치에 구성 항목을 배포하면 준수가 평가되지 됩니다.  
 
-## <a name="what-is-a-configuration-baseline"></a>構成基準とは  
- コンプライアンス対応は構成基準の定義によって評価されます。構成基準には、評価する構成項目および必要なコンプライアンス レベルを説明する設定や規則が含まれます。 この構成データは、Configuration Manager で Microsoft およびその他のベンダーによって定義され、Configuration Manager にインポートされるベスト プラクティスとして、Microsoft System Center Configuration Manager 構成パックの Web サイトからインポートすることができます。 あるいは、新しい構成項目と構成基準を作成できます。  
+## <a name="what-is-a-configuration-baseline"></a>구성 기준 정의  
+ 평가할 구성 항목과 필요한 준수 수준을 설명하는 설정 및 규칙이 포함된 구성 기준을 정의하면 준수가 평가됩니다. Configuration Manager에서 웹의 Microsoft System Center Configuration Manager 구성 팩에 있는 이 구성 데이터를 Microsoft 및 기타 공급업체에서 정의한 모범 사례로 가져온 다음 Configuration Manager로 가져올 수 있습니다. 또는 새 구성 항목 및 구성 기준을 만들 수 있습니다.  
 
- 構成基準の定義後は、コレクションを使ってユーザーやデバイスに展開し、スケジュールに従ってコンプライアンス対応の設定を評価できます。 デバイスでは、複数の構成基準を展開することができます。 これにより、高いレベルの制御が実現されます。  
+ 구성 기준을 정의한 후 컬렉션을 통해 사용자 및 장치에 배포하고 일정에 따라 설정의 준수를 평가할 수 있습니다. 장치에 여러 개의 구성 기준이 배포될 수 있습니다. 이렇게 하면 높은 수준의 제어를 사용할 수 있습니다.  
 
- クライアント デバイスは、展開されたそれぞれの構成基準に照らし合わせてコンプライアンス対応を評価し、状態メッセージおよびステータス メッセージを使用して、直ちに結果をサイトに報告します。 クライアント デバイスが現在ネットワークに接続していないが、展開された構成基準で参照される構成項目をダウンロードしてある場合、構成基準のコンプライアンス対応が評価されています。 コンプライアンス情報は再接続時に送信されます。  
+ 클라이언트 장치는 배포된 각 구성 기준에 대해 준수를 평가하고 상태 메시지 및 상황 메시지를 사용하여 해당 결과를 사이트에 즉시 보고합니다. 클라이언트 장치가 현재 네트워크에 연결되어 있지 않지만 배포된 구성 기준에서 참조된 구성 항목을 다운로드한 경우 구성 기준의 준수가 평가됩니다. 다시 연결하면 준수 정보가 전송됩니다.  
 
- 構成基準評価のコンプライアンス対応の結果は、Configuration Manager コンソールの **[監視]** ワークスペースの **[展開]** ノードから監視して、非対応の一般的な原因やエラー、影響を受けるユーザーやデバイスの数を確認できます。 コンプライアンス設定レポートを実行し、どのデバイスが対応していてどのデバイスが対応していないか、構成基準のどの要素のためにコンピューターが非対応になっているかなど、詳細を調べることもできます。 また、コントロール パネルの **[Configuration Manager]** の **[構成]** タブを使用して、構成マネージャー クライアント ソフトウェアを実行する Windows コンピューターから、コンプライアンス対応評価の結果を表示することもできます。  
+ Configuration Manager 콘솔, **모니터링** 작업 영역의 **배포** 노드에서 구성 기준 평가 준수의 결과를 모니터링하여 비준수의 가장 일반적인 원인, 오류 및 영향받는 사용자와 장치 수를 확인할 수 있습니다. 준수 설정 보고서를 실행하여 준수 또는 비준수 장치, 컴퓨터를 비준수로 만드는 구성 기준의 요소 등의 추가 정보를 찾을 수도 있습니다. Configuration Manager 클라이언트 소프트웨어를 실행하는 Windows 컴퓨터에서 제어판의 **Configuration Manager**에 있는 **구성** 탭을 사용하여 준수 평가 결과를 볼 수도 있습니다.  
 
-## <a name="user-data-and-profiles-configuration-items"></a>ユーザー データとプロファイル構成項目  
- ユーザー データとプロファイル構成項目には、Windows 8 以降を実行しているコンピューターのフォルダー リダイレクト、オフライン ファイル、ローミング プロファイルを階層内のユーザーが管理する方法を制御する設定が含まれています。 これらをユーザーのコレクションに展開し、Configuration Manager コンソールの **[監視]** ノードから対応状態を監視できます。 他の構成項目とは異なり、展開する前にこれらを構成基準に追加しません。 **[ユーザー データとプロファイル構成項目の展開]** ダイアログ ボックスで直接これらを展開することができます。  
+## <a name="user-data-and-profiles-configuration-items"></a>사용자 데이터 및 프로필 구성 항목  
+ 사용자 데이터 및 프로필 구성 항목에는 계층 구조 내 사용자가 Windows 8 이상을 실행하는 컴퓨터에서 폴더 리디렉션, 오프라인 파일 및 로밍 프로필 등을 관리하는 방법을 제어하는 설정이 포함됩니다. 이러한 구성 항목을 사용자 컬렉션에 배포한 다음 Configuration Manager 콘솔의 **모니터링** 노드에서 준수를 모니터링할 수 있습니다. 다른 구성 항목과 달리, 이 구성 항목은 배포 전에 구성 기준에 추가하지 않습니다. **사용자 데이터 및 프로필 구성 항목** 대화 상자에서 직접 배포할 수 있습니다.  
 
- 詳細については、「[ユーザー データとプロファイル構成項目の作成](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items)」をご覧ください。  
+ 자세한 내용은 [사용자 데이터 및 프로필 구성 항목 만들기](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items)를 참조하세요.  
 
-## <a name="remote-connection-profiles"></a>リモート接続プロファイル  
- リモート接続プロファイルには、組織のデバイス用にリモート接続設定を作成して展開し、監視するためのツールとリソースが用意されています。 このリモート接続設定を展開することにより、エンド ユーザーが会社のネットワークにある自分のコンピューターに接続するときの手間をできるだけ省きます。  
+## <a name="remote-connection-profiles"></a>원격 연결 프로필  
+ 원격 연결 프로필은 조직에서 원격 연결 설정을 만들어 장치에 배포하고 모니터링하는 데 유용한 도구 및 리소스 집합을 제공합니다. 이러한 설정을 배포하면 최종 사용자가 회사 네트워크에서 자신의 컴퓨터에 연결하기 위해 수행해야 하는 작업이 최소화됩니다.  
 
-詳細については、「[リモート接続プロファイルの作成](/sccm/compliance/deploy-use/create-remote-connection-profiles)」をご覧ください。  
+자세한 내용은 [원격 연결 프로필 만들기](/sccm/compliance/deploy-use/create-remote-connection-profiles)를 참조하세요.  
 
-## <a name="windows-edition-upgrade"></a>Windows のエディションのアップグレード
-エディションのアップグレード ポリシーを使用すると、新しい製品キーまたはライセンス ファイルを指定して、特定のバージョンの Windows 10 を実行するデバイスを新しいエディションに自動的にアップグレードできます。
+## <a name="windows-edition-upgrade"></a>Windows 버전 업그레이드
+버전 업그레이드 정책을 사용하면 새 제품 키 또는 라이선스 파일을 제공하여 Windows 10의 특정 버전을 실행하는 장치를 자동으로 최신 버전으로 업그레이드할 수 있습니다.
 
-詳細については、「[エディションのアップグレード ポリシーで Windows デバイスをアップグレードする](/sccm/compliance/deploy-use/upgrade-windows-version)」をご覧ください。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+자세한 내용은 [버전 업그레이드 정책을 사용하여 Windows 장치 업그레이드](/sccm/compliance/deploy-use/upgrade-windows-version)를 참조하세요.

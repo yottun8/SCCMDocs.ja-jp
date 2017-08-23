@@ -1,158 +1,154 @@
 ---
-title: "1606 構成基準メディアを使用したサイトのインストール | Microsoft Docs"
-description: "System Center Configuration Manager 用 LTSB をインストールするか、アップグレードします。"
+title: "1606 기준 미디어를 사용하여 사이트 설치 | Microsoft 문서"
+description: "System Center Configuration Manager용 LTSB를 설치하거나 업그레이드합니다."
 ms.custom: na
 ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f4f9a5fd-f573-4b99-ad93-b2c76812e922
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: 39653604ba5fd8e1fe9dd4d42889221d983f9bec
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/20/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1606 構成基準メディアでインストールし、アップグレードする
+# <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>System Center Configuration Manager에 대한 버전 1606 기준 미디어를 사용하여 설치 및 업그레이드
 
-*適用対象: System Center Configuration Manager (Current Branch)、(Long-Term Servicing Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기), (장기 서비스 분기)*
 
-Configuration Manager のバージョン 1606 基準メディアからセットアップを実行する場合は、System Center Configuration Manager の Long-Term Servicing Branch または Current Branch サイトをインストールできます。
+Configuration Manager용 버전 1606 기준 미디어에서 설치 프로그램을 실행하면 System Center Configuration Manager의 장기 서비스 분기 또는 현재 분기 사이트를 설치할 수 있습니다.
 
-基準メディアは、Microsoft System Center 2016 に付属する DVD または System Center Configuration Manager (Current Branch および Long-Term Servicing Branch 1606) リリースから使用できます。 基準メディアの詳細については、「[Baseline and update versions](/sccm/core/servers/manage/updates#baseline-and-udpate-versions)」(基準バージョンと更新プログラムのバージョン) を参照してください。
-
-
-バージョン 1606 構成基準メディアを使用するときにインストールまたはアップグレードするサイト:
-- *Current Branch サイト*。1511 構成基準メディアを利用して最初にインストールし、バージョン 1606 に更新し、さらに 1606 修正プログラム KB3186654 を適用したサイトと同等のサイト。
--    *LTSB サイト*。バージョン 1606 に加えて 1606 修正プログラム KB3186654 を実行する Current Branch サイトと同等のサイト。 この構成基準メディアには、この修正プログラム ロールアップが既に含まれています  ただし、LTSB では、Current Branch で利用できる機能の一部をご利用いただけません。詳細は、「[Introduction to the Long-Term Servicing Branch of System Center Configuration Manager](introduction-to-the-ltsb.md)」 (System Center Configuration Manager の Long-Term Servicing Branch の概要) にあります。
-
-System Center Configuration Manager のブランチに関する詳細については、「[Which branch of Configuration Manager should I use](which-branch-should-i-use.md)」 (Configuration Manager のどのブランチを使用すればよいですか) を参照してください。
+기준 미디어는 Microsoft System Center 2016의 일부로 DVD에서 사용하거나 System Center Configuration Manager(현재 분기 및 장기 서비스 분기 1606) 릴리스에서 사용할 수 있습니다. 기준 미디어에 대해 알아보려면 [기준 및 업데이트 버전](/sccm/core/servers/manage/updates#baseline-and-udpate-versions)을 참조하세요.
 
 
+버전 1606 기준선 미디어를 사용하는 경우 설치 또는 업그레이드되는 사이트는 다음과 같습니다.
+- *현재 분기 사이트* - 1511 기준선 미디어를 사용하여 처음 설치된 다음 버전 1606 및 1606 핫픽스 롤업 - KB3186654로 업데이트된 사이트에 해당합니다.
+-   *LTSB 사이트* - 버전 1606 및 1606 핫픽스 롤업 - KB3186654를 실행하는 현재 분기 사이트에 해당합니다. 기준선 미디어에 핫픽스 롤업이 이미 포함되어 있습니다.  그러나 LTSB는 [System Center Configuration Manager의 장기 서비스 분기 소개](introduction-to-the-ltsb.md)에 자세히 설명된 대로 현재 분기에서 사용할 수 있는 일부 기능이나 특성을 지원하지 않습니다.
+
+System Center Configuration Manager의 다양한 분기에 대해 잘 모르겠으면 [사용해야 하는 Configuration Manager 분기](which-branch-should-i-use.md)를 참조하세요.
 
 
-## <a name="changes-to-setup-with-the-1606-baseline-media"></a>1606 構成基準メディアによるセットアップの変更点
-1606 構成基準メディアでは、Configuration Manager のセットアップで次のような変更点を導入しています。
 
-### <a name="branch-and-edition"></a>ブランチとエディション
-セットアップを実行すると、ライセンス ページが表示されます。そのページで、インストールする Configuration Manager ブランチを選択できます。 Current Branch と LTSB のいずれかを「ライセンスを取得した」インストールとして選択できます。あるいは、「ライセンスのない」インストールとして Current Branch の評価版を選択できます。
 
-詳細については、「[System Center Configuration Manager のライセンスとブランチ](learn-more-editions.md)」を参照してください。
+## <a name="changes-to-setup-with-the-1606-baseline-media"></a>1606 기준 미디어의 설치 프로그램 변경 내용
+1606 기준 미디어에서는 Configuration Manager 설치 프로그램이 다음과 같이 변경되었습니다.
 
-### <a name="software-assurance-expiration"></a>ソフトウェア アシュアランスの有効期限
-セットアップ中、「**ソフトウェア アシュアランスの有効期限**」値を入力するオプションが与えられます。 これは便利なリマインダーとして指定できる任意の値です。
+### <a name="branch-and-edition"></a>분기 및 버전
+설치 프로그램을 실행할 때 이제 설치할 Configuration Manager 분기를 선택할 수 있는 라이선스 페이지가 표시됩니다. 현재 분기 또는 LTSB를 사용이 허가된 설치로 선택하거나, 현재 분기의 평가판을 사용이 허가되지 않은 설치로 선택할 수 있습니다.
+
+자세한 내용은 [System Center Configuration Manager의 라이선스 및 분기](learn-more-editions.md)를 참조하세요.
+
+### <a name="software-assurance-expiration"></a>Software Assurance 만료
+설치하는 동안 **Software Assurance 만료 날짜** 값을 입력할 수 있습니다. 이 값은 편리한 미리 알림으로 지정할 수 있는 선택적 값입니다.
 
 > [!NOTE]
-> Microsoft では、お客様が入力した有効期限の日付を確認していません。また、ライセンスを検証する場合もこの日付を使用しません。  お客様は有効期限を通知するアラームとして、この日付を使用することができます。 Configuration Manager ではオンラインで新しいソフトウェア更新プログラムが提供されていないか定期的に確認します。このような追加の更新プログラムを取得するためにはソフトウェア アシュアランス ライセンスが最新の状態になっている必要があります。このため有効期限を通知するアラーム機能は便利です。    
+> Microsoft는 입력된 만료 날짜의 유효성을 검사하지 않으며 이 날짜를 라이선스 유효성 검사에 사용하지 않습니다.  대신, 만료 날짜 미리 알림으로 사용할 수 있습니다. 이 기능은 Configuration Manager가 온라인에서 제공되는 새 소프트웨어 업데이트를 정기적으로 확인하며 이러한 추가 업데이트를 사용할 수 있으려면 Software Assurance 라이선스 상태가 현재여야 하기 때문에 유용합니다.    
 
-- System Center Configuration Manager バージョン 1606 の基準メディアからセットアップを実行する場合は、セットアップ ウィザードの **[プロダクト キー]** ページで日付値を指定できます。
-- この日付は、Configuration Manager コンソールで **[階層設定のプロパティ]** > **[ライセンス]** の順に選択して指定することもできます。
+- System Center Configuration Manager 버전 1606 기준선 미디어에서 설치 프로그램을 실행할 때 설치 마법사의 **제품 키** 페이지에서 날짜 값을 지정할 수 있습니다.
+- Configuration Manager 콘솔에 있는 **계층 설정 속성** > **라이선스**를 선택하여 이 날짜를 지정할 수도 있습니다.
 
-詳細については、「[System Center Configuration Manager のライセンスとブランチ](learn-more-editions.md)」の "ソフトウェア アシュアランス契約" を参照してください。
-
-
-### <a name="additional-pre-upgrade-configurations"></a>追加のアップグレード前の構成
-System Center 2012 Configuration Manager を LTSB にアップグレードする前に、アップグレード前のチェックリストとして、次の追加手順を実行する必要があります。  
-LTSB でサポートされていないサイト システムの役割をアンインストールする:
-- 資産インテリジェンス同期ポイント
-- Microsoft Intune コネクタ
-- クラウドベースの配布ポイント
-
-詳細については、「[System Center Configuration Manager へのアップグレード](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)」を参照してください。
+자세한 내용은 [System Center Configuration Manager의 라이선스 및 분기](learn-more-editions.md)에서 “Software Assurance 계약”을 참조하세요.
 
 
-### <a name="new-scripted-installation-options"></a>スクリプト化された新しいインストール オプション
-バージョン 1606 構成基準メディアでは、新しい上位サイトのスクリプト化インストールのために無人のスクリプト ファイル キーに対応しています。 これは新しいスタンドアロン プライマリ サイトのインストールやサイト拡張シナリオの中央管理サイトの追加に適用されます。
+### <a name="additional-pre-upgrade-configurations"></a>추가 업그레이드 전 구성
+System Center 2012 Configuration Manager를 LTSB로 업그레이드하기 전에 업그레이드 전 검사 목록의 일부로 다음과 같은 추가 단계를 수행해야 합니다.  
+LTSB에서 지원되지 않는 사이트 시스템 역할을 제거합니다.
+- Asset Intelligence 동기화 지점
+- Microsoft Intune 커넥터
+- 클라우드 기반 배포 지점
 
-ライセンスされるブランチを無人スクリプトでインストールするときは、次のセクション、キー名、値をスクリーンショットのオプション セクションに追加する必要があります。 Current Branch の評価版インストールをスクリプト化する場合、これらの値を使用する必要はありません。  
+자세한 내용은 [System Center Configuration Manager 업그레이드](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)를 참조하세요.
+
+
+### <a name="new-scripted-installation-options"></a>스크립팅된 새 설치 옵션
+버전 1606 기준선 미디어는 새 최상위 사이트의 스크립팅된 설치를 위해 새 무인 설치 스크립트 파일 키를 지원합니다. 이 키는 새 독립 실행형 기본 사이트를 설치하거나 사이트 확장 시나리오의 일부로 중앙 관리 사이트를 추가하는 경우에 적용됩니다.
+
+무인 설치 스크립트를 사용하여 사용이 허가된 분기를 설치하는 경우 스크립트의 옵션 섹션에 다음과 같은 섹션, 키 이름 및 값을 추가해야 합니다. 현재 분기의 평가판 설치를 스크립팅할 때는 이러한 값을 사용할 필요가 없습니다.  
 
  **SABranchOptions**
--     **キー名: SAActive**
-  - 値: 0 または 1。  
-  - 詳細:  0 の場合、Current Branch の「ライセンスなし」評価版がインストールされます。1 の場合、「ライセンスを取得した」製品版がインストールされます。   
+-   **키 이름: SAActive**
+  - 값: 0 또는 1  
+  - 세부 정보: 값이 0이면 현재 분기의 사용이 허가되지 않은 평가판이 설치되고, 값이 1이면 사용이 허가된 버전이 설치됩니다.   
 
 - **CurrentBranch**
-  - 値: 0 または 1。  
-  - 詳細: 0 の場合、Long-Term Servicing Branch がインストールされます。1 の場合、Current Branch がインストールされます。  
+  - 값: 0 또는 1  
+  - 세부 정보: 값이 0이면 장기 서비스 분기가 설치되고, 값이 1이면 현재 분기가 설치됩니다.  
 
-たとえば、Current Branch のライセンス取得版をインストールするには、次の値を利用します。
+예를 들어 사용이 허가된 현재 분기 버전을 설치하려면 다음을 사용합니다.
 
-  **キー名: SABranchOptions**
+  **키 이름: SABranchOptions**
    -    **SAActive = 1**
    - **CurrentBranch = 1**
 
 
 > [!IMPORTANT]  
-> **SABranchOptions** は、構成基準メディアからのセットアップでのみ機能します。 バージョン 1606 構成基準メディアを利用して以前にインストールしたサイトの CD.Latest フォルダーからセットアップを実行するときは適用されません。
+> **SABranchOptions**는 기준 미디어의 설치 프로그램에서만 작동합니다. 이전에 버전 1606 기준 미디어를 사용하여 설치한 사이트의 CD.Latest 폴더에 있는 설치 프로그램을 실행할 때는 적용되지 않습니다.
 >
-> **SABranchOptions** は System Center 2012 Configuration Manager からのスクリプト化アップグレードには適用されず、常に Current Branch になります。
+> **SABranchOptions**는 System Center 2012 Configuration Manager에서의 스크립팅된 업그레이드에 적용되지 않으며 항상 현재 분기가 됩니다.
 
-詳細については、「[Use a command line to install System Center Configuration Manager sites](/sccm/core/servers/deploy/install/use-a-command-line-to-install-sites)」 (コマンド ラインを利用し、System Center Configuration Manager サイトをインストールする) を参照してください。
+자세한 내용은 [명령줄을 사용하여 System Center Configuration Manager 사이트 설치](/sccm/core/servers/deploy/install/use-a-command-line-to-install-sites)를 참조하세요.
 
 
-## <a name="install-a-new-site"></a>新しいサイトをインストールする
-1606 構成基準メディアを利用していずれかのブランチの新しいサイトをインストールするとき、「[System Center Configuration Manager サイトのインストール](/sccm/core/servers/deploy/install/installing-sites)」トピックにあるサイト計画、準備、インストール手順を利用します。さらに、セットアップに関して次の事項を考慮します。
+## <a name="install-a-new-site"></a>새 사이트 설치
+1606 기준 미디어를 사용하여 두 분기 중 하나의 새 사이트를 설치하는 경우 [System Center Configuration Manager 사이트 설치](/sccm/core/servers/deploy/install/installing-sites) 항목에 문서화된 사이트 계획, 준비 및 설치 절차와 설치 프로그램에 대한 다음 고려 사항을 추가로 사용합니다.
 
-- セットアップ中、インストールする Configuration Manager のブランチを選択する必要があります。ソフトウェア アシュアランス契約の詳細を指定できます。
-- 同じ階層内のすべてのサイトは同じブランチを実行する必要があります。 異なるサイトに LTSB と Current Branch が混在している階層の使用はサポートされません。
--    スクリプト化された新しいインストール。 詳細については、この記事の "スクリプト化された新しいインストール オプション" を参照してください。
+- 설치하는 동안 설치할 Configuration Manager 분기를 선택해야 하며, Software Assurance 계약에 대한 세부 정보를 지정할 수 있습니다.
+- 동일한 계층 구조의 모든 사이트가 동일한 분기를 실행해야 합니다. 여러 사이트에 LTSB와 현재 분기가 혼합되어 있는 계층 구조는 사용할 수 없습니다.
+-   스크립팅된 새 설치. 자세한 내용은 이 문서의 앞부분에서 "스크립팅된 새 설치 옵션"을 참조하세요.
 
-## <a name="expand-a-stand-alone-primary-site"></a>スタンドアロン プライマリ サイトを拡張する
-LTSB を実行するスタンドアロンのプライマリ サイトを拡張できます。  このプロセスは、Current Branch サイトに使用されるプロセスと変わりませんが、1 つ注意点があります。
+## <a name="expand-a-stand-alone-primary-site"></a>독립 실행형 기본 사이트 확장
+LTSB를 실행하는 독립 실행형 기본 사이트를 확장할 수 있습니다.  이 프로세스는 현재 분기 사이트에 사용되는 프로세스와 같지만 다음 한 가지 사항에 주의해야 합니다.
 
-- 新しい中央管理サイトをインストールするとき、LTSB サイトのインストールで使用した元のソース メディアからのセットアップを利用する必要があります。 このシナリオは CD.Latest フォルダーからセットアップすることはできません。
+- 새 중앙 관리 사이트를 설치하는 경우 LTSB 사이트를 설치하는 데 사용한 원래 원본 미디어의 설치 프로그램을 사용해야 합니다. CD.Latest 폴더에서 설치 프로그램 실행은 이 시나리오에서 지원되지 않습니다.
 
-サイトの拡張に関する詳細については、「[Install a site using the Setup Wizard](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites)」 (セットアップ ウィザードを利用してサイトをインストールする) の "スタンドアロン プライマリ サイトを拡張する" を参照してください。
+사이트를 확장하는 방법에 대한 자세한 내용은 [설치 마법사를 사용하여 사이트 설치](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites)에서 “독립 실행형 기본 사이트 확장”을 참조하세요.
 
-## <a name="upgrade-from-system-center-2012-configuration-manager"></a>System Center 2012 Configuration Manager からアップグレードする
-System Center 2012 Configuration Manager からアップグレードするとき、「[System Center Configuration Manager へのアップグレード](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)」トピックにあるサイト計画、準備、手順を利用しますが、次の変更点があります。
+## <a name="upgrade-from-system-center-2012-configuration-manager"></a>System Center 2012 Configuration Manager에서 업그레이드
+System Center 2012 Configuration Manager에서 업그레이드하는 경우 [System Center Configuration Manager 업그레이드](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager) 항목에 문서화된 대로 사이트 계획, 준비 및 절차를 사용하되 다음과 같이 변경합니다.
 
-**Current Branch にアップグレードする:**
-- セットアップ中、Current Branch を選択する必要があります。ソフトウェア アシュアランス契約の詳細を指定できます。
--     スクリプト化された新しいインストール。 詳細については、この記事の "スクリプト化された新しいインストール オプション" を参照してください。
+**현재 분기로 업그레이드:**
+- 설치하는 동안 현재 분기를 선택해야 하며, Software Assurance 계약에 대한 세부 정보를 지정할 수 있습니다.
+-   스크립팅된 새 설치. 자세한 내용은 이 문서의 앞부분에서 "스크립팅된 새 설치 옵션"을 참조하세요.
 
-**LTSB へのアップグレード:**  
-- アップグレード前チェックリストの追加手順。
-- セットアップ中、LTSB を選択する必要があります。ソフトウェア アシュアランス契約の詳細を指定できます。
-- System Center 2012 Configuration Manager Service Pack 2 または System Center 2012 R2 Configuration Manager Service Pack 1 を実行しているサイトのみをアップグレードできます。
+**LTSB로 업그레이드:**  
+- 업그레이드 전 체크리스트에서 수행할 추가 단계
+- 설치하는 동안 LTSB를 선택해야 하며, Software Assurance 계약에 대한 세부 정보를 지정할 수 있습니다.
+- System Center 2012 Configuration Manager 서비스 팩 2 또는 System Center 2012 R2 Configuration Manager 서비스 팩 1을 실행하는 사이트만 업그레이드할 수 있습니다.
 
-### <a name="in-place-upgrade-paths-for-the-1606-baseline-media"></a>1606 構成基準メディアの一括アップグレード パス
-1606 構成基準メディアを利用し、次を System Center Configuration Manager の製品版にアップグレードできます。
-- System Center 2012 Configuration Manager Service Pack 2。
-- System Center 2012 R2 Configuration Manager Service Pack 1。
+### <a name="in-place-upgrade-paths-for-the-1606-baseline-media"></a>1606 기준 미디어에 대한 전체 업그레이드 경로
+1606 기준 미디어를 사용하여 다음 버전을 System Center Configuration Manager의 사용이 허가된 버전으로 업그레이드할 수 있습니다.
+- System Center 2012 Configuration Manager 서비스 팩 2
+- System Center 2012 R2 Configuration Manager 서비스 팩 1
 
-また、このメディアを利用し、Current Branch の評価版を製品版にアップグレードできます。
+이 미디어를 사용하여 현재 분기의 사용이 허가되지 않은 평가판을 현재 분기의 정품 버전으로 업그레이드할 수도 있습니다.
 
-このメディアは、次のアップグレードに対応していません。
-- その他のバージョンの System Center 2012 Configuration Manager。
-- Configuration Manager 2007 以前。
-- System Center Configuration Manager のリリース候補版のインストール。
+이 미디어는 다음 버전의 업그레이드를 지원하지 않습니다.
+- System Center 2012 Configuration Manager의 기타 버전
+- Configuration Manager 2007 또는 이전 버전
+- System Center Configuration Manager의 릴리스 후보 설치
 
-## <a name="about-the-cdlatest-folder-and-the-ltsb"></a>CD.Latest フォルダーと LTSB について
-次は、サイト サーバーの CD.Latest フォルダーで Configuration Manager により作成されるメディアの利用に関する制限です。 これらの制限は LTSB を実行するサイトに適用されます。
+## <a name="about-the-cdlatest-folder-and-the-ltsb"></a>CD.Latest 폴더 및 LTSB 정보
+Configuration Manager가 사이트 서버의 CD.Latest 폴더에 만든 미디어를 사용하는 경우 제한 사항은 다음과 같습니다. 이러한 제한 사항은 LTSB를 실행하는 사이트에 적용됩니다.
 
-CD.Latest フォルダーのメディアのサポート対象:
-- サイトの回復。
-- サイトの保守。
-- 追加の子プライマリ サイトのインストール。
+CD.Latest 폴더에 있는 미디어는 다음 용도로 사용할 수 있습니다.
+- 사이트 복구
+- 사이트 유지 관리
+- 추가 하위 기본 사이트 설치
 
-CD.Latest フォルダーのメディアのサポート対象外:  
-- サイト拡張シナリオの一部として中央管理サイトをインストールする。
+CD.Latest 폴더의 미디어는 다음 용도로 사용할 수 없습니다.  
+- 사이트 확장 시나리오의 일부로 중앙 관리 사이트 설치.
 
-詳細については、「[CD.Latest フォルダー](/sccm/core/servers/manage/the-cd.latest-folder)」を参照してください。
+자세한 내용은 [CD.Latest 폴더](/sccm/core/servers/manage/the-cd.latest-folder)를 참조하세요.
 
-## <a name="backup-recovery-and-site-maintenance-for-the-ltsb"></a>LTSB のバックアップ、復元、サイト保守
-LTSB を実行しているサイトでバックアップ、復元、サイト保守を実行するには、「[System Center Configuration Manager のバックアップと回復](/sccm/protect/understand/backup-and-recovery)」のガイドと手順を利用してください。  
+## <a name="backup-recovery-and-site-maintenance-for-the-ltsb"></a>LTSB에 대한 백업, 복구 및 사이트 유지 관리
+LTSB를 실행하는 사이트에서 백업 또는 복구하거나 사이트 유지 관리를 실행하려면 [System Center Configuration Manager 백업 및 복구](/sccm/protect/understand/backup-and-recovery)에 있는 지침과 절차를 사용합니다.  
 
-LTSB サイトのバックアップの CD.Latest フォルダーからの Configuration Manager のセットアップを使用します。
-
+LTSB 사이트 백업의 CD.Latest 폴더에 있는 Configuration Manager 설치 프로그램을 사용합니다.

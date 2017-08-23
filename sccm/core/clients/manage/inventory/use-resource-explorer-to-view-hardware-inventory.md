@@ -1,55 +1,51 @@
 ---
-title: "ハードウェア インベントリを表示する | Microsoft Docs | リソース エクスプローラー"
-description: "System Center Configuration Manager でリソース エクスプローラーを使用してハードウェア インベントリを表示します。"
+title: "하드웨어 인벤토리 보기 | Microsoft 문서 | 리소스 탐색기"
+description: "System Center Configuration Manager에서 리소스 탐색기를 사용하여 하드웨어 인벤토리를 볼 수 있습니다."
 ms.custom: na
 ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 375912f5-436d-4315-bdbe-d77afee6c9f3
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9c5d1e48b76392beaf54b5377c69b648537e86f8
 ms.openlocfilehash: e39fa60a5d215fa1b0a98d4463058497e63a4d4f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/29/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-use-resource-explorer-to-view-hardware-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager でリソース エクスプローラーを使用してハードウェア インベントリを表示する方法
+# <a name="how-to-use-resource-explorer-to-view-hardware-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 하드웨어 인벤토리를 보기 위해 리소스 탐색기를 사용하는 방법
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager のリソース エクスプローラーを使用して、階層内のクライアントから収集されたハードウェア インベントリに関する情報を表示します。  
+System Center Configuration Manager의 리소스 탐색기를 사용하여 계층 구조의 클라이언트에서 수집된 하드웨어 인벤토리에 대한 정보를 볼 수 있습니다.  
 
 > [!NOTE]  
->  リソース エクスプローラーでは、接続するクライアントでハードウェア インベントリ サイクルが実行されるまで、インベントリ データは表示されません。  
+>  리소스 탐색기는 클라이언트에서 하드웨어 인벤토리 주기가 실행 될 때까지 데이터에 연결 하는 모든 인벤토리를 표시 하지 않습니다.  
 
- リソース エクスプローラーには、ハードウェア インベントリに関する次のセクションが含まれます。  
+ 리소스 탐색기에는 하드웨어 인벤토리와 관련된 다음 섹션이 있습니다.  
 
--   **[ハードウェア]** - 指定したクライアント デバイスから収集された、最新のハードウェア インベントリが含まれます。  **[ワークステーションのステータス]** には、デバイスがハードウェア インベントリを最後に実行した日付と時刻が表示されます。  
+-   **하드웨어** -지정된 클라이언트 장치에서 수집된 가장 최근 하드웨어 인벤토리가 포함됩니다.  **워크스테이션 상태**에는 장치가 하드웨어 인벤토리를 마지막으로 수행했을 때의 날짜와 시간이 포함됩니다.  
 
--   **[ハードウェア履歴]** – 前回ハードウェア インベントリが実行されてから変更されたインベントリ項目の履歴が含まれます。 各項目には、**[現在]** ノードと、1 つ以上の *<日付\>* ノードが含まれます。 現在のノードの情報と、履歴ノードの 1 つを比較して、変更された項目を見つけることができます。  
+-   **하드웨어 기록** – 마지막 하드웨어 인벤토리가 수행된 이후 변경된 인벤토리 포함 항목의 기록이 포함됩니다. 각 항목에는 **현재** 노드와 하나 이상의 *<date\>* 노드가 포함됩니다. 현재 노드의 정보를 기록 노드 중 하나와 비교하여 변경된 항목을 검색할 수 있습니다.  
 
     > [!NOTE]  
-    >  Configuration Manager では、**[期限切れのインベントリ履歴の削除]** サイト メンテナンス タスクで、サイトに対して指定されている日数だけ、インベントリの履歴が保持されます。  
+    >  Configuration Manager에는 **오래된 인벤토리 기록 삭제** 사이트 유지 관리 작업에서 사용자가 지정하는 일수 동안 하드웨어 인벤토리 기록을 유지합니다.  
 
 > [!NOTE]  
->  Linux および UNIX を実行しているクライアントからハードウェア インベントリを表示する方法については、「 [System Center Configuration Manager で Linux および UNIX サーバーのクライアントを監視する方法](../../../../core/clients/manage/monitor-clients-for-linux-and-unix-servers.md)」を参照してください。  
+>  Linux 및 UNIX를 실행하는 클라이언트에서 하드웨어 인벤토리를 보는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 Linux 및 UNIX 서버용 클라이언트를 모니터링하는 방법](../../../../core/clients/manage/monitor-clients-for-linux-and-unix-servers.md)을 참조하세요.  
 
-### <a name="how-to-run-resource-explorer-from-the-configuration-manager-console"></a>Configuration Manager コンソールからリソース エクスプローラーを実行する方法  
+### <a name="how-to-run-resource-explorer-from-the-configuration-manager-console"></a>Configuration Manager 콘솔에서 리소스 탐색기를 실행하는 방법  
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[デバイス]** を選択するか、デバイスを表示する任意のコレクションを開きます。  
+1.  Configuration Manager 콘솔에서 **자산 및 준수** > **장치**를 선택하거나 장치를 표시하는 컬렉션을 엽니다.  
 
-3.  表示するインベントリが含まれているコンピューターをクリックしたら、**[ホーム]** タブの **[デバイス]** グループで **[開始]** >  **[リソース エクスプローラー]** の順に選択します。   
+3.  보려는 인벤토리가 포함된 컴퓨터를 선택한 다음 **홈** 탭 > **장치** 그룹에서 **시작** >  **리소스 탐색기**를 선택합니다.   
 
-4.  **[リソース エクスプローラー]** ウィンドウの右ウィンドウの項目を右クリックし、**[プロパティ]** をクリックして、*[<項目名\>***のプロパティ]** ダイアログ ボックスを開くことができます。このダイアログ ボックスには、収集されたインベントリ情報を、より読みやすい形式で表示できます。  
-
+4.  **리소스 탐색기** 창의 오른쪽 창에 있는 항목을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하여 수집된 인벤토리 정보를 좀 더 읽기 쉬운 형식으로 볼 수 있는 *<항목 이름\>***속성** 대화 상자를 엽니다.  
 

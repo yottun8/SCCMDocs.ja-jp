@@ -1,103 +1,97 @@
 ---
-title: "コンソールのインストール | Microsoft Docs"
-description: "Configuration Manager コンソールをインストールし、中央管理サイトまたはプライマリ サイトに接続する方法についてご確認ください。"
+title: "콘솔 설치 | Microsoft 문서"
+description: "중앙 관리 사이트 또는 기본 사이트에 연결할 Configuration Manager 콘솔을 설치하는 방법을 알아봅니다."
 ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: b6b47fd1f56780a40c96b5e228046b41fe3a9a47
 ms.openlocfilehash: 88ecbc48fd03ce988f04408d0378844cbed1de2b
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="install-the-system-center-configuration-manager-console"></a>System Center Configuration Manager コンソールをインストールする
+# <a name="install-the-system-center-configuration-manager-console"></a>System Center Configuration Manager 콘솔 설치
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-管理者は System Center Configuration Manager コンソールを利用し、Configuration Manager 環境を管理します。 各 Configuration Manager コンソールで中央管理サイトまたはプライマリ サイトに接続できます。 Configuration Manager をセカンダリ サイトに接続することはできません。
+관리자는 System Center Configuration Manager 콘솔을 사용하여 Configuration Manager 환경을 관리합니다. 각 Configuration Manager 콘솔은 중앙 관리 사이트 또는 기본 사이트에 연결할 수 있습니다. Configuration Manager 콘솔을 보조 사이트에 연결할 수는 없습니다.
 
 > [!NOTE]  
->  コンソールを実行している管理者に対して表示されるオブジェクトは、そのユーザー アカウントに割り当てられているアクセス許可によって変わります。 ロール ベース管理について詳しくは、「[System Center Configuration Manager のロール ベース管理の基礎](../../../../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。  
+>  콘솔을 실행하는 관리자가 볼 수 있는 개체는 사용자 계정에 할당된 권한에 따라 달라집니다. 역할 기반 관리에 대한 자세한 내용은 [System Center Configuration Manager의 역할 기반 관리 기본 사항](../../../../core/understand/fundamentals-of-role-based-administration.md)을 참조하세요.  
 
- セットアップ ウィザードを利用し、サイト サーバーのインストール中に Configuration Manager コンソールをインストールできます。あるいは、セットアップ ウィザードを利用するスタンドアロン インストール アプリケーションを実行できます。  
+ 설치 마법사를 통해 사이트 서버를 설치할 때 Configuration Manager 콘솔을 설치하거나 설치 마법사를 사용하는 독립 실행형 응용 프로그램을 실행할 수 있습니다.  
 
- スタンドアロンのアプリケーションを使用して Configuration Manager コンソールをインストールするには、次の手順に従います。  
+ 독립 실행형 응용 프로그램을 사용하여 Configuration Manager 콘솔을 설치하려면 다음 절차를 따르세요.  
 
-## <a name="to-install-the-configuration-manager-console-by-using-the-setup-wizard"></a>セットアップ ウィザードを使用して Configuration Manager コンソールをインストールするには  
+## <a name="to-install-the-configuration-manager-console-by-using-the-setup-wizard"></a>설치 마법사를 사용하여 Configuration Manager 콘솔을 설치하려면  
 
-1.  次の要件を満たすことを確認してください。  
+1.  다음 요구 사항을 충족하는지 확인합니다.  
 
-    -  コンソールを実行するコンピューターの**ローカル管理者** 権限が与えられていること。  
+    -  콘솔을 실행할 컴퓨터에 대한**로컬 관리자** 권한이 있습니다.  
 
-    -   コンソールのインストール ファイルのある場所の **読み取り** 権限が与えられていること。  
+    -   Configuration Manager 콘솔 설치 파일의 위치에 대한 **읽기** 권한이 있습니다.  
 
-2.  次のいずれかの場所に移動します。  
+2.  다음 위치 중 하나로 이동합니다.  
 
-    -   サイト サーバーで、**<*Configuration Manager サイト サーバーのインストール パス*>\Tools\ConsoleSetup** に移動します。  
+    -   사이트 서버에서 **<*Configuration Manager 사이트 서버 설치 경로*>\Tools\ConsoleSetup**으로 이동합니다.  
 
-    -   Configuration Manager のソース メディアから、**<*Configuration Manager ソース ファイル*>\Smssetup\Bin\I386** に移動します。  
+    -   Configuration Manager 원본 미디어에서 **<*Configuration Manager 원본 파일*>\Smssetup\Bin\I386**으로 이동합니다.  
 
     > [!TIP]  
-    >  ベスト プラクティスとして、Configuration Manager コンソールのインストールは、System Center Configuration Manager のインストール メディアではなく、サイト サーバーから開始することをお勧めします。 サイト サーバーからインストールする方法では、Configuration Manager コンソールのインストール ファイル、およびサイト用にサポートされている言語パックが **Tools\ConsoleSetup** サブフォルダーにコピーされます。 インストール メディアから Configuration Manager コンソールをインストールする場合、サイト サーバーでサポートされている言語やコンピューターのオペレーティング システムの言語設定には関係なく、常に英語版がインストールされます。 **ConsoleSetup** フォルダーを別の場所にコピーして、その場所からインストールを開始することもできます。
+    >  Configuration Manager 콘솔 설치는 System Center Configuration Manager 설치 미디어보다 사이트 서버에서 시작하는 것이 좋습니다. 사이트 서버를 통한 설치 방식에서는 Configuration Manager 콘솔 설치 파일 및 사이트의 지원되는 언어 팩이 **Tools\ConsoleSetup** 하위 폴더에 복사됩니다. 설치 미디어에서 Configuration Manager 콘솔을 설치하면 사이트 서버에서 지원되는 언어 또는 컴퓨터에서 실행 중인 운영 체제의 언어 설정에 관계없이 항상 영어 버전이 설치됩니다. 필요에 따라 **ConsoleSetup** 폴더를 대체 위치에 복사하여 설치를 시작할 수 있습니다.
 
-3.  Configuration Manager コンソールのセットアップ ウィザードを開くには、**consolesetup.exe** をダブルクリックします。  
+3.  Configuration Manager 콘솔 설치 마법사를 열려면 **consolesetup.exe**를 두 번 클릭합니다.  
 
     > [!IMPORTANT]  
-    >  Configuration Manager コンソールのインストールには、常に、consolesetup.exe を使用します。 AdminConsole.msi を実行しても Configuration Manager コンソールをインストールできますが、前提条件や依存関係のチェックは行われず、正しくインストールされない可能性があります。  
+    >  Configuration Manager 콘솔은 항상 consolesetup.exe를 사용하여 설치해야 합니다. Adminconsole.msi를 실행하여 Configuration Manager 콘솔을 설치할 수도 있지만 이 방식을 사용할 경우 필수 구성 요소 검사 또는 종속성 검사가 실행되지 않으며 제대로 설치되지 않을 수 있습니다.  
 
-4.  ウィザードで、**[次へ]** を選択します。  
+4.  마법사에서 **다음**을 선택합니다.  
 
-5.  **[サイト サーバー]** ページで、Configuration Manager コンソールが接続するサイト サーバーの完全修飾ドメイン名 (FQDN) を入力します。  
+5.  **사이트 서버** 페이지에서 Configuration Manager 콘솔이 연결할 사이트 서버의 FQDN(정규화된 도메인 이름)을 입력합니다.  
 
-6.  **[インストール先フォルダー]** ページで、Configuration Manager コンソールのインストール先フォルダーを入力します。 フォルダーのパスに Unicode 文字を含めたり、末尾にスペースを付けたりすることはできません。  
+6.  **설치 폴더** 페이지에서 Configuration Manager 콘솔에 대한 설치 폴더를 입력합니다. 폴더 경로 끝에 공백을 삽입해서도 유니코드 문자를 포함해서도 안 됩니다.  
 
-7.  **[カスタマー エクスペリエンス向上プログラム]** ページで、カスタマー エクスペリエンス向上プログラム (CEIP) に参加するかどうかを選択します。  
+7.  **사용자 환경 개선 프로그램** 페이지에서 CEIP(사용자 환경 개선 프로그램)에 대한 참여 여부를 선택합니다.  
 
-8.  **[インストールの準備完了]** ページで、**[インストール]** を選択して Configuration Manager コンソールをインストールします。  
+8.  **설치 준비 완료** 페이지에서 **설치**를 선택하여 Configuration Manager 콘솔을 설치합니다.  
 
-## <a name="to-install-the-configuration-manager-console-from-a-command-prompt"></a>コマンド プロンプトから Configuration Manager コンソールをインストールするには  
+## <a name="to-install-the-configuration-manager-console-from-a-command-prompt"></a>명령 프롬프트에서 Configuration Manager 콘솔을 설치하려면  
 
-1.  Configuration Manager コンソールのインストールを開始するサーバーでコマンド プロンプト ウィンドウを開き、次のいずれかの場所に移動します。  
+1.  Configuration Manager 콘솔을 설치할 서버에서 명령 프롬프트 창을 열고 다음 위치 중 하나로 이동합니다.  
 
-    -   **<*Configuration Manager サイト サーバーのインストール パス*>\Tools\ConsoleSetup**  
+    -   **<*Configuration Manager 사이트 서버 설치 경로*>\Tools\ConsoleSetup**  
 
-    -   **<*Configuration Manager インストール メディア*>\SMSSETUP\BIN\I386**  
+    -   **<*Configuration Manager 설치 미디어*>\SMSSETUP\BIN\I386**  
 
     > [!TIP]  
-    >  コマンド プロンプトから Configuration Manager コンソールをインストールすると、コンピューターのオペレーティング システムの言語設定に関係なく、常に英語版がインストールされます。 英語以外の言語で Configuration Manager コンソールをインストールするには、[セットアップ ウィザードを利用して Configuration Manager コンソールをインストールする](#to-install-the-configuration-manager-console-by-using-the-setup-wizard)必要があります。  
+    >  명령 프롬프트에서 Configuration Manager 콘솔을 설치하는 경우 컴퓨터에서 실행 중인 운영 체제의 언어 설정에 관계없이 항상 영어 버전이 설치됩니다. Configuration Manager 콘솔을 영어 이외의 버전으로 설치하려면 [설치 마법사를 사용하여 Configuration Manager 콘솔을 설치](#to-install-the-configuration-manager-console-by-using-the-setup-wizard)해야 합니다.  
 
-2.  コマンド プロンプトで「**consolesetup.exe**」と入力します。 次のコマンド ライン オプションから選択します。  
+2.  명령 프롬프트에서 **consolesetup.exe**를 입력합니다. 다음 명령줄 옵션 중에서 선택합니다.  
 
-|  コマンド ライン オプションを使用します     | [説明]     |
+|  명령줄 옵션을 사용합니다.     | 설명     |
   | :------------- | :------------- |
-  |/q|Configuration Manager コンソールを無人インストールします。 **EnableSQM**、 **TargetDir**、 **DefaultSiteServerName** の各オプションは、このオプションを使用する場合に指定する必要があります。|  
-  |/uninstall|Configuration Manager コンソールをアンインストールします。 **/q** オプションと共に使用する場合は、このオプションを先に指定する必要があります。|  
-  |LangPackDir|言語ファイルが含まれているフォルダーのパスを指定します。 **セットアップ ダウンローダー** を使用して言語ファイルをダウンロードできます。 このオプションを指定しないと、現在のフォルダー内で言語フォルダーが検索されます。 言語フォルダーが見つからなかった場合は、英語版だけがインストールされます。 詳細については、「[セットアップ ダウンローダー](setup-downloader.md)」を参照してください。|  
-  |TargetDir|Configuration Manager コンソールをインストールするインストール先フォルダーを指定します。 このオプションは、 **/q** オプションを使用する場合に指定する必要があります。|  
-  |EnableSQM|カスタマー エクスペリエンス向上プログラム (CEIP) に参加するかどうかを指定します。 値として **1** を指定すると、CEIP に参加します。**0** を指定すると、参加しません。 このオプションは、 **/q** オプションを使用する場合に指定する必要があります。|  
-  |DefaultSiteServerName|コンソールを開いたときに接続されるサイト サーバーの FQDN を指定します。 このオプションは、 **/q** オプションを使用する場合に指定する必要があります。|  
+  |/q|Configuration Manager 콘솔을 무인 설치 모드로 설치합니다. 이 옵션을 사용할 때는 **EnableSQM**, **TargetDir**및 **DefaultSiteServerName** 옵션을 사용해야 합니다.|  
+  |/uninstall|Configuration Manager 콘솔을 제거합니다. **/q** 옵션과 함께 사용할 경우 이 옵션을 먼저 지정해야 합니다.|  
+  |LangPackDir|언어 파일이 포함된 폴더의 경로를 지정합니다. **설치 다운로더** 를 사용하면 언어 파일을 다운로드할 수 있습니다. 이 옵션을 사용하지 않으면 설치 프로그램은 현재 폴더에서 언어 폴더를 찾습니다. 언어 폴더를 찾지 못하면 계속 설치가 진행되고 영어 버전만 설치됩니다. 자세한 내용은 [설치 다운로더](setup-downloader.md)를 참조하세요.|  
+  |TargetDir|Configuration Manager 콘솔을 설치할 설치 폴더를 지정합니다. 이 옵션은 **/q** 옵션을 사용하는 경우에 필요합니다.|  
+  |EnableSQM|CEIP(사용자 환경 개선 프로그램) 참여 여부를 지정합니다. CEIP에 참여하려면 **1** 값을 사용하고 프로그램에 참여하지 않으려면 **0** 값을 사용합니다. 이 옵션은 **/q** 옵션을 사용하는 경우에 필요합니다.|  
+  |DefaultSiteServerName|콘솔이 열릴 때 연결할 사이트 서버의 FQDN을 지정합니다. 이 옵션은 **/q** 옵션을 사용하는 경우에 필요합니다.|  
 
 
-  **例:**
+  **예:**
 
   -  **consolesetup.exe /q TargetDir="D:\Program Files\ConfigMgr" EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com**  
 
   -  **consolesetup.exe /q LangPackDir=C:\Downloads\ConfigMgr TargetDir="D:\Program Files\ConfigMgr" Console EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com**  
 
   -  **consolesetup.exe /uninstall /q**  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

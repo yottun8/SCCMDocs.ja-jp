@@ -1,62 +1,58 @@
 ---
-title: "コマンド ライン インストール | Microsoft Docs"
-description: "さまざまなサイトのインストールで、コマンド プロンプトから System Center Configuration Manager セットアップを実行する方法について説明します。"
+title: "명령줄 설치 | Microsoft 문서"
+description: "명령 프롬프트에서 여러 사이트 설치에 대해 System Center Configuration Manager 설치 프로그램을 실행하는 방법을 알아봅니다."
 ms.custom: na
 ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f7cd9c71287d62c9f5d36e2f032bc2a6065572ae
 ms.openlocfilehash: 8ff48b08d1abb7481592c0ea076d4efa15c3d8ee
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/06/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# コマンド ラインを使用して System Center Configuration Manager サイトをインストールする
-<a id="use-a-command-line-to-install-system-center-configuration-manager-sites" class="xliff"></a>
+# <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>명령줄을 사용하여 System Center Configuration Manager 사이트 설치
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
- さまざまなサイトのインストールで、コマンド プロンプトから System Center Configuration Manager セットアップを実行できます。
+ 명령 프롬프트에서 System Center Configuration Manager 설치 프로그램을 실행하여 다양한 사이트 유형을 설치할 수 있습니다.
 
-## コマンド ラインでのインストールでサポートされているタスク
-<a id="supported-tasks-for-command-line-installations" class="xliff"></a>
- この方法でセットアップを実行する場合、次のサイト インストール タスクとサイト メンテナンス タスクがサポートされます。
+## <a name="supported-tasks-for-command-line-installations"></a>명령줄 설치에 대해 지원되는 작업
+ 설치 프로그램을 실행하는 이 방법은 다음과 같은 사이트 설치 및 사이트 유지 관리 작업을 지원합니다.
 
--   **コマンド プロンプトから中央管理サイトまたはプライマリ サイトをインストールする**  
-  [セットアップのコマンド ライン オプション](../../../../core/servers/deploy/install/command-line-options-for-setup.md)を表示する
+-   **명령 프롬프트에서 중앙 관리 사이트 또는 기본 사이트 설치**  
+  [설치용 명령줄 옵션](../../../../core/servers/deploy/install/command-line-options-for-setup.md) 보기
 
--  **中央管理サイトまたはプライマリ サイトで使用する言語を変更する**  
-    サイトにインストールされている言語 (モバイル デバイスの言語を含む) をコマンド プロンプトから変更するには、次の操作を実行する必要があります。  
+-  **중앙 관리 사이트 또는 기본 사이트에서 사용 중인 언어 수정**  
+    명령 프롬프트에서 사이트에 설치된 언어(모바일 장치용 언어 포함)를 수정하려면 다음을 수행해야 합니다.  
 
-     -   サイト サーバーの **&lt;ConfigMgrInstallationPath\>\Bin\X64** からセットアップを実行します
-     -   **/MANAGELANGS** コマンド ライン オプションを使用します
-     -   追加または削除する言語を指定した言語スクリプト ファイルを指定します  
+     -   사이트 서버의 **&lt;Configuration Manager 설치 경로\>\BIN\X64**에서 설치 프로그램 실행
+     -   **/MANAGELANGS** 명령줄 옵션 사용
+     -   추가 또는 제거할 언어를 지정하는 언어 스크립트 파일 지정  
 
-    たとえば、次のコマンド構文を使用します: **setupwpf.exe/MANAGELANGS &lt;言語スクリプト ファイル\>**  
+    예를 들어 **setupwpf.exe /MANAGELANGS &lt;언어 스크립트 파일\>** 명령 구문을 사용합니다.  
 
-    言語スクリプト ファイルを作成するには、「[Command line options to manage languages](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Lang)」(言語を管理するためのコマンド ライン オプション) に記載されている情報を参考にしてください。  
+    언어 스크립트 파일을 만들려면 [언어 관리용 명령줄 옵션](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Lang)의 정보를 참조하세요.  
 
--  **サイトの無人インストールまたはサイトの回復にインストール スクリプト ファイルを使用する**  
-    インストール スクリプトを使用してコマンド プロンプトからセットアップを実行し、サイトの無人インストールを実行できます。 また、この方法で、サイトを回復することもできます。    
+-  **무인 사이트 설치 또는 사이트 복구를 위해 설치 스크립트 파일 사용**  
+    설치 스크립트를 사용하여 명령 프롬프트에서 설치 프로그램을 실행할 수 있으며, 무인 사이트 설치를 실행합니다. 이 옵션을 사용하여 사이트를 복구할 수도 있습니다.    
 
-    セットアップでスクリプトを使用するには:  
+    설치 프로그램에서 스크립트를 사용하려면  
 
-    -   コマンド ライン オプション **/SCRIPT** を使用してセットアップを実行し、スクリプト ファイルを指定します。  
+    -   명령줄 옵션 **/SCRIPT**를 사용하여 설치 프로그램을 실행하고 스크립트 파일을 지정합니다.  
 
-    -   スクリプト ファイルは、必要なキーと値を使用して構成する必要があります。  
+    -   필요한 키와 값으로 스크립트 파일을 구성해야 합니다.  
 
-    中央管理サイトまたはプライマリ サイトの無人インストールの場合は、次のセクションがスクリプト ファイルに含まれている必要があります。  
+    중앙 관리 사이트 또는 기본 사이트의 무인 설치를 수행하려면 스크립트 파일에 다음 섹션이 있어야 합니다.  
 
     -   Identification    
     -   Options    
@@ -64,73 +60,67 @@ ms.lasthandoff: 06/06/2017
       -   HierarchyOptions    
     -   CloudConnectorOptions   
 
-    サイトを回復するには、スクリプト ファイルの次のセクションも含める必要があります。  
+    사이트를 복구하려면 스크립트 파일의 다음 섹션도 포함해야 합니다.  
 
     -   Identification  
-    -   復元
+    -   복구
 
-詳細については、「[Configuration Manager のサイトの無人回復](/sccm/protect/understand/unattended-recovery)」を参照してください。  
+자세한 내용은 [Configuration Manager에 대한 무인 사이트 복구](/sccm/protect/understand/unattended-recovery)를 참조하세요.  
 
-無新インストールのスクリプト ファイルで使用するキーと値の一覧を確認するには、「[Unattended Setup script file keys](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended)」(無人セットアップ スクリプト ファイルのキー) を参照してください。  
+무인 설치 스크립트 파일에서 사용할 키와 값 목록은 [무인 설치 스크립트 파일 키](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended)를 참조하세요.  
 
-## コマンド ライン スクリプト ファイルについて
-<a id="about-the-command-line-script-file" class="xliff"></a>  
- Configuration Manager の無人インストールの場合は、コマンド ライン オプション **/SCRIPT** を使用してセットアップを実行し、インストール オプションを含むスクリプト ファイルを指定できます。 この方法では、次のタスクがサポートされています。  
+## <a name="about-the-command-line-script-file"></a>명령줄 스크립트 파일 정보  
+ Configuration Manager의 무인 설치를 수행하려는 경우 명령줄 옵션 **/SCRIPT**를 사용하여 설치 프로그램을 실행하고 설치 옵션이 포함된 스크립트 파일을 지정할 수 있습니다. 이 방법을 사용하여 수행할 수 있는 작업은 다음과 같습니다.  
 
--   中央管理サイトをインストールする  
--   プライマリ サイトをインストールする  
--   Configuration Manager コンソールをインストールする  
--   サイトを回復する  
+-   중앙 관리 사이트 설치  
+-   기본 사이트 설치  
+-   Configuration Manager 콘솔 설치  
+-   사이트 복구  
 
 > [!NOTE]  
->  評価サイトを製品版の Configuration Manager にアップグレードする場合、無人スクリプト ファイルを使用することはできません。  
+>  무인 스크립트 파일을 사용하여 Configuration Manager의 평가판 사이트를 라이선스 설치로 업그레이드할 수는 없습니다.  
 
-### CDLatest キー名
-<a id="the-cdlatest-key-name" class="xliff"></a>
-CD.Latest フォルダーのメディアを使用して、次の 4 つのインストール オプションのスクリプト インストールを実行する場合は、値が **1** の **CDLatest** キーを含める必要があります。
-- 新しい中央管理サイトをインストールする
-- 新しいプライマリ サイトをインストールする
-- 中央管理サイトを回復する
-- プライマリ サイトを回復する
+### <a name="the-cdlatest-key-name"></a>CDLatest 키 이름
+CD.Latest 폴더의 미디어를 사용하여 다음 네 가지 설치 옵션의 스크립팅된 설치를 실행할 경우 스크립트에 **CDLatest** 키와 **1** 값을 포함해야 합니다.
+- 새 중앙 관리 사이트 설치
+- 새 기본 사이트 설치
+- 중앙 관리 사이트 복구
+- 기본 사이트 복구
 
-この値は、Microsoft ボリューム ライセンス サイトから取得したインストール メディアでは使用できません。
-スクリプト ファイルでこのキー名を使用する方法の詳細については、[コマンド ライン オプション](/sccm/core/servers/deploy/install/command-line-options-for-setup)を参照してください。
-
+Microsoft 볼륨 라이선스 사이트에서 얻은 설치 미디어에는 이 값을 사용할 수 없습니다.
+스크립트 파일에서 이 키 이름을 사용하는 방법에 대한 자세한 내용은 [명령줄 옵션](/sccm/core/servers/deploy/install/command-line-options-for-setup)을 참조하세요.
 
 
-### スクリプトを作成する
-<a id="create-the-script" class="xliff"></a>
-[サイトをインストールするためにユーザー インターフェイスを使用してセットアップを実行する](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)と、インストール スクリプトが自動的に作成されます。  ウィザードの **[概要]** ページで設定を確認するときに、次の処理が実行されます。  
 
--   スクリプト **%TEMP%\ConfigMgrAutoSave.ini**が作成されます。  このファイルは使用する前に名前を変更できますが、.ini ファイル拡張子は保持する必要があります。  
--   無人インストール スクリプトには、ウィザードで選択した設定が含まれています。  
--   スクリプトが作成された後、そのスクリプトを変更して、階層に別のサイトをインストールできます。  
--   このスクリプトを使用して、Configuration Manager の無人セットアップを実行できます。  
+### <a name="create-the-script"></a>스크립트 만들기
+[사용자 인터페이스를 통해 설치 프로그램을 실행하여 사이트를 설치](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)하면 설치 스크립트가 자동으로 생성됩니다.  마법사의 **요약** 페이지에서 설정을 확인하면 다음과 같은 작업이 수행됩니다.  
 
-このスクリプト ファイルで、セットアップ ウィザードで入力するのと同じ情報を指定します。ただし、既定の設定はありません。   
-使用する種類のインストールに適用されるセットアップ キーのすべての値を指定する必要があります。   
+-   설치 프로그램은 **%TEMP%\ConfigMgrAutoSave.ini**스크립트를 만듭니다.  이 파일은 사용 전에 이름을 바꿀 수 있지만 .ini 파일 확장명은 유지해야 합니다.  
+-   무인 설치 스크립트에는 마법사에서 선택한 설정이 포함됩니다.  
+-   스크립트를 만든 후에는 스크립트를 수정하여 계층의 다른 사이트를 설치할 수 있습니다.  
+-   이 스크립트를 사용하여 Configuration Manager의 무인 설치를 수행할 수 있습니다.  
 
-セットアップで作成される無人インストール用スクリプトには、セットアップ中に入力したプロダクト キーの値が指定されます。 この値は、有効なプロダクト キーか、評価版の Configuration Manager をインストールする場合は **EVAL** になります。 スクリプト内のプロダクト キーの値は、前提条件チェックを完了できるようにするために指定されます。   
+이 스크립트 파일은 기본 설정이 없다는 점만 제외하고 설치 마법사에서 요구하는 것과 같은 정보를 제공합니다.   
+사용하는 설치 유형에 적용되는 설치 키의 값을 모두 지정해야 합니다.   
 
-セットアップで実際のサイトのインストールが開始されると、自動的に作成されたスクリプトに再度書き込みが行われ、スクリプトのプロダクト キーの値は消去されます。 新しいサイトの無人インストールでスクリプトを使用する前に、スクリプトを編集して、正しいプロダクト キーを指定するか、評価版の Configuration Manager のインストールを指定できます。  
+설치 프로그램이 무인 설치 스크립트를 만들 때 설치 중 사용자가 입력한 제품 키 값이 채워집니다. 이 키는 유효한 제품 키이거나, Configuration Manager의 평가 버전을 설치하는 경우 **EVAL**입니다. 스크립트의 제품 키 값이 채워지므로 필수 조건 검사를 완료할 수 있습니다.   
 
-### セクション名、キー名、値
-<a id="section-names-key-names-and-values" class="xliff"></a>
-スクリプトは、セクション名、キー名、値で構成します。 次の情報にご注意ください。
--   セクションの必須キーは、スクリプトを記述しているインストールの種類によって異なります。
--   セクション内でのキーの順序、およびファイル内でのセクションの順序は重要ではありません。     
--   キー名の大文字と小文字は区別されません。  
--   キーの値を指定するときは、キー名の後ろに等号 (=) を入力してから、キーの値を続けます。    
+실제 사이트 설치가 시작되면 자동으로 만들어진 스크립트가 다시 기록되어서 만들어진 스크립트의 제품 키 값이 지워집니다. 새 사이트의 무인 설치를 위한 스크립트를 사용하기 전에 스크립트를 편집하여 유효한 제품 키를 입력하거나 Configuration Manager의 평가 버전을 지정할 수 있습니다.  
+
+### <a name="section-names-key-names-and-values"></a>섹션 이름, 키 이름 및 값
+스크립트에는 섹션 이름, 키 이름 및 값이 포함됩니다. 다음 정보에 유의하세요.
+-   필수 세션 키 이름은 스크립팅하는 설치 유형에 따라 달라집니다.
+-   섹션 내의 키 순서와 파일 내의 섹션 순서는 중요하지 않습니다.     
+-   키는 대/소문자를 구분하지 않습니다.  
+-   키에 값을 지정할 때에는 키 이름 뒤에 등호(=)를 추가하고 키 값을 입력해야 합니다.    
 
 > [!TIP]  
->  すべてのオプションについては、「[Command-line options for Setup and scripts](../../../../core/servers/deploy/install/command-line-options-for-setup.md)」(セットアップのコマンド ライン オプションとスクリプト) を参照してください。  
+>  전체 옵션 집합을 확인하려면 [설치 및 스크립트용 명령줄 옵션](../../../../core/servers/deploy/install/command-line-options-for-setup.md)을 참조하세요.  
 
-## /SCRIPT セットアップ コマンドライン オプションを使用する
-<a id="use-the-script-setup-command-line-option" class="xliff"></a>
+## <a name="use-the-script-setup-command-line-option"></a>/SCRIPT 설치 명령줄 옵션 사용
 
--   セットアップ スクリプト ファイルを使用し、**/SCRIPT** セットアップ コマンド ライン オプションの後にファイル名を指定する必要があります。 次の情報にご注意ください。   
-    -   ファイルの名前には、ファイル名拡張子 **.ini** が含まれている必要があります。  
-    -   コマンド プロンプトでセットアップ スクリプト ファイルを指定するときは、ファイルの完全パスを入力する必要があります。 たとえば、C:\Setup フォルダーにある Setup.ini というセットアップ初期化ファイルの場合は、コマンド プロンプトに次のように入力します。 **setup /script c:\setup\setup.ini**  
+-   설치 스크립트 파일을 사용하여 **/SCRIPT** 설치 명령줄 옵션 뒤에 파일 이름을 지정해야 합니다. 다음 정보에 유의하세요.   
+    -   이 파일 이름의 확장명은 **.ini**여야 합니다.  
+    -   명령 프롬프트에서 설치 스크립트 파일을 참조할 때는 파일의 전체 경로를 제공해야 합니다. 예를 들어 설치 초기화 파일의 이름이 Setup.ini이고 C:\Setup 폴더에 파일이 저장되어 있으면 명령 프롬프트에서 **setup /script c:\setup\setup.ini**를 입력합니다.  
 
--   セットアップを実行するアカウントには、コンピューターの**管理者**の権限が必要です。 無人インストールを使用してセットアップを実行する場合は、[**管理者として実行**] を使用してコマンド プロンプト ウィンドウを開いてください。   
-
+-   설치 프로그램을 실행하는 계정에 컴퓨터에 대한 **관리자** 권한이 있어야 합니다. 무인 스크립트로 설치 프로그램을 실행하는 경우 **관리자 권한으로 실행** 옵션을 사용하여 명령 프롬프트 창을 엽니다.   

@@ -1,75 +1,68 @@
 ---
-title: "レポートの計画 | Microsoft Docs"
-description: "インストールの詳細からセキュリティとネットワーク帯域幅まで、Configuration Manager でレポートを計画することが重要です。"
+title: "보고 계획 | Microsoft 문서"
+description: "설치 세부 정보부터 보안 및 네트워크 대역폭에 이르기까지 Configuration Manager의 보고 계획은 중요합니다."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ff920c84-d5c8-458c-b67f-bc7219b05690
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 119f501057bf44e483be31db20b88326b3d05ebb
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="planning-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager のレポートの計画
+# <a name="planning-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager의 보고 계획
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager のレポート機能には、SQL Reporting Services のレポート機能を使用するための一連のツールとリソースが搭載されています。 Configuration Manager のレポートを計画するときは、次のセクションを参考にしてください。  
+System Center Configuration Manager의 보고는 SQL Server Reporting Services의 고급 보고 기능을 사용하는 데 도움이 되는 일련의 도구와 리소스를 제공합니다. 다음 섹션을 사용하여 Configuration Manager의 보고를 계획할 수 있습니다.  
 
-##  <a name="a-namebkmkinstallreportingservicespointa-determine-where-to-install-the-reporting-services-point"></a><a name="BKMK_InstallReportingServicesPoint"></a> レポート サービス ポイントのインストール場所を決定する  
- サイトで Configuration Manager レポートを実行するとき、レポートは接続先のサイト データベース内の情報にアクセスできます。 次のセクションを参考に、レポート サービス ポイントのインストール場所と使用するデータ ソースを決定してください。  
-
-> [!NOTE]  
->  サイト システムの計画の詳細については、「[サイト システムの役割を追加する](../deploy/configure/add-site-system-roles.md)」を参照してください。  
-
-###  <a name="a-namebkmksupportedsiteserversa-supported-site-system-servers"></a><a name="BKMK_SupportedSiteServers"></a> サポートされるサイト システム サーバー  
- レポート サービス ポイントは、中央管理サイトとプライマリ サイト、および、階層内の単一サイトとその他のサイトの複数のサイト システムにインストールできます。 レポート サービス ポイントはセカンダリ サイトではサポートされません。 サイトの最初のレポート サービス ポイントが既定のレポート サーバーとして構成されます。 1 つのサイトに複数のレポート サービス ポイントをインストールすることは可能ですが、各サイトの既定のレポート サーバーが、Configuration Manager レポート用に優先して使用されます。 レポート サービス ポイントは、サイト サーバーまたはリモート サイト システムにインストールすることができます。 ただし、パフォーマンス上の最善の方法として、リモート サイト システム サーバーでは Reporting Services を使用してください。  
-
-###  <a name="a-namebkmkdatareplicationa-data-replication-considerations"></a><a name="BKMK_DataReplication"></a> データ レプリケーションに関する注意事項  
- Configuration Manager は、レプリケートするデータをグローバル データまたはサイト データとして分類します。 グローバル データは、管理ユーザーにより作成され、階層内のすべてのサイトに対してレプリケートされるオブジェクトを対象としますが、セカンダリ サイトはグローバル データのサブセットのみを受信します。 グローバル データの例としては、ソフトウェアの展開、ソフトウェア更新プログラム、コレクション、役割に基づいた管理のセキュリティ スコープがあります。 サイト データとは、Configuration Manager のプライマリ サイトと、プライマリ サイトに報告するクライアントが作成する処理情報を指します。 サイト データは、中央管理サイトにレプリケートされますが、他のプライマリ サイトにはレプリケートされません。 サイト データの例としては、ハードウェア インベントリ データ、ステータス メッセージ、アラート、クエリによって生成されるコレクションがあります。 サイト データは、中央管理サイトと、データの作成元のプライマリ サイトだけで見ることができます。  
-
- レポート サービス ポイントのインストール場所を決定するにあたり、以下の要素を考慮してください。  
-
--   中央管理サイトのデータベースをレポート データ ソースとするレポート サービス ポイントは、グローバル データと Configuration Manager 階層内のすべてのサイト データにアクセスできます。 階層内の複数サイトのサイト データを含むレポートが必要な場合は、レポート サービス ポイントを中央管理サイトのサイト システムにインストールし、中央管理サイトのデータベースをレポート データ ソースとして使用することを検討してください。  
-
--   子プライマリ サイトのデータベースをレポート データ ソースとするレポート サービス ポイントは、グローバル データと、ローカルのプライマリ サイトと子セカンダリ サイトのみのサイト データにアクセスできます。 Configuration Manager 階層内のその他のプライマリ サイトのサイト データはこのプライマリ サイトに対してレプリケートされないため、Reporting Services がアクセスすることはできません。 特定のプライマリ サイトのサイト データまたはグローバル データを含むレポートが必要であり、レポート ユーザーにその他のプライマリ サイトのサイト データへのアクセスを許可したくない場合は、特定のプライマリ サイトのサイト システムにレポート サービス ポイントをインストールし、そのプライマリ サイトのデータベースをレポート データ ソースとして使用してください。  
-
-###  <a name="a-namebkmknetworkbandwidtha-network-bandwidth-considerations"></a><a name="BKMK_NetworkBandwidth"></a> ネットワークの帯域幅に関する考慮事項  
- 同じサイト内のサイト システム サーバーは、サイトの構成方法に応じて、サーバー メッセージ ブロック (SMB)、HTTP、HTTPS のいずれかを使用して相互に通信します。 この通信は管理対象外であり、ネットワークの帯域幅の制御なしに随時生じ得るため、レポート サービス ポイントの役割をサイト システムにインストールする前に使用可能なネットワーク帯域幅を確認しておいてください。  
+##  <a name="BKMK_InstallReportingServicesPoint"></a> 보고 서비스 지점을 설치할 위치 결정  
+ 사이트에서 Configuration Manager 보고서를 실행하는 경우 보고서가 연결되는 사이트 데이터베이스에 있는 정보에 액세스할 수 있습니다. 다음 섹션에서는 보고 서비스 지점을 설치할 위치와 사용할 데이터 원본을 결정하는 방법을 설명합니다.  
 
 > [!NOTE]  
->  サイト システムの計画の詳細については、「[サイト システムの役割を追加する](../deploy/configure/add-site-system-roles.md)」を参照してください。  
+>  Configuration Manager에서 사이트 시스템을 계획하는 방법에 대한 자세한 내용은 [사이트 시스템 역할 추가](../deploy/configure/add-site-system-roles.md)를 참조하세요.  
 
-##  <a name="a-namebkmkrolebaseadministrationa-planning-for-role-based-administration-for-reports"></a><a name="BKMK_RoleBaseAdministration"></a> レポートのロール ベース管理の計画  
- レポートのセキュリティは、セキュリティ ロールとアクセス許可を管理ユーザーに割り当てることができる Configuration Manager のその他のオブジェクトと同様に機能します。 管理ユーザーは、適切なセキュリティ権限が付与されたレポートのみの実行と変更が可能です。 Configuration Manager コンソールでレポートを実行するには、**サイト** の **読み取り** 権限アクセス許可と特定のオブジェクト用に構成されたアクセス許可が必要です。  
+###  <a name="BKMK_SupportedSiteServers"></a> 지원되는 사이트 시스템 서버  
+ 중앙 관리 사이트와 기본 사이트에서 한 사이트의 여러 사이트 시스템과 계층의 다른 시스템에 보고 서비스 지점을 설치할 수 있습니다. 보조 사이트에서는 보고 서비스 지점이 지원되지 않습니다. 사이트의 첫 번째 보고 서비스 지점이 기본 보고 서버로 구성됩니다. 사이트에 보고 서비스 지점을 더 추가할 수 있지만 각 사이트의 기본 보고 서버가 Configuration Manager 보고서에 자동으로 사용됩니다. 사이트 서버 또는 원격 사이트 시스템에 보고 서비스 지점을 설치할 수 있는데, 성능 최적화를 위해서는 원격 사이트 시스템 서버에 보고 서비스를 사용하는 것이 좋습니다.  
 
- ただし、Configuration Manager のその他のオブジェクトとは異なり、Configuration Manager コンソールで管理ユーザー向けに設定するセキュリティ権限は、Reporting Services でも構成する必要があります。 Configuration Manager コンソールでセキュリティ権限を構成すると、レポート サービス ポイントは Reporting Services に接続して、レポート用に適切なアクセス許可を設定します。 たとえば、 **ソフトウェア更新マネージャー** セキュリティ ロールには、 **レポートの実行** と **レポートの変更** アクセス許可が関連付けられます。 "ソフトウェア更新マネージャー" の役割のみが割り当てられた管理ユーザーは、ソフトウェア更新プログラムのレポートの実行と変更のみを行うことができます。 **** その他のオブジェクトのレポートは Configuration Manager コンソールに表示されません。 例外として、特定の Configuration Manager の保護可能なオブジェクトが関連付けられていないレポートがあります。 これらのレポートについて、管理ユーザーには、レポートを実行する場合は **サイト** の **読み取り** 権限アクセス許可が、レポートを変更する場合は **サイト** の **変更** 権限アクセス許可が必要です。  
+###  <a name="BKMK_DataReplication"></a> 데이터 복제 시 고려 사항  
+ Configuration Manager에서는 복제하는 데이터를 글로벌 데이터와 사이트 데이터로 분류합니다. 글로벌 데이터는 관리자가 만들어서 계층의 모든 사이트에 복제한 개체를 나타냅니다. 단, 보조 사이트에서는 일부 글로벌 데이터만 받습니다. 글로벌 데이터의 예로는 소프트웨어 배포, 소프트웨어 업데이트, 컬렉션, 역할 기반 관리 보안 범위 등이 있습니다. 사이트 데이터는 Configuration Manager 기본 사이트 및 기본 사이트에 보고하는 클라이언트에서 만드는 작업 정보를 나타냅니다. 사이트 데이터는 중앙 관리 사이트에 복제되지만 다른 기본 사이트에는 복제되지 않습니다. 사이트 데이터의 예로는 하드웨어 인벤토리 데이터, 상태 메시지, 경고, 쿼리 기반 컬렉션 결과 등이 있습니다. 사이트 데이터는 중앙 관리 사이트와 데이터가 원래 있던 기본 사이트에서만 표시됩니다.  
 
- レポートはロール ベース管理に対応しています。 Configuration Manager に含まれているすべてのレポートのデータが、レポートを実行する管理ユーザーのアクセス許可に基づいてフィルター処理されます。 特定の役割を持つ管理ユーザーに対して、個々の役割に定義されている情報のみ表示できます。  
+ 보고 서비스 지점을 설치할 위치를 결정할 때에는 다음 요인을 고려하십시오.  
 
- レポートのセキュリティ権限について詳しくは、「[Configure reporting](configuring-reporting.md)」(レポートを構成する) を参照してください。  
+-   중앙 관리 사이트 데이터베이스를 보고 데이터 원본으로 사용하는 보고 서비스 지점에서는 Configuration Manager 계층의 모든 글로벌 데이터와 사이트 데이터에 액세스할 수 있습니다. 계층의 여러 사이트에 대한 사이트 데이터가 포함된 보고서가 필요한 경우 중앙 관리 사이트의 사이트 시스템에 보고 서비스 지점을 설치하고 중앙 관리 사이트의 데이터베이스를 보고 데이터 원본으로 사용합니다.  
 
- Configuration Manager の役割に基づいた管理の詳細については、「[Configure role-based administration](../deploy/configure/configure-role-based-administration.md)」(役割に基づいた管理の構成) を参考にしてください。  
+-   자식 기본 사이트 데이터베이스를 보고 데이터 원본으로 사용하는 보고 서비스 지점에서는 해당 로컬 기본 사이트와 모든 자식 보조 사이트에 대한 글로벌 데이터와 사이트 데이서에만 액세스할 수 있습니다. Configuration Manager 계층의 다른 기본 사이트에 대한 사이트 데이터는 기본 사이트에 복제되지 않으므로 Reporting Services에서 액세스할 수 없습니다. 특정 기본 사이트에 대한 사이트 데이터 또는 글로벌 데이터가 포함된 보고서가 필요하지만 보고서 사용자가 다른 기본 사이트에서 사이트 데이터에 액세스하는 것을 원하지 않을 경우, 기본 사이트의 사이트 시스템에 보고 서비스 지점을 설치하고 기본 사이트의 데이터베이스를 보고 데이터 원본으로 사용합니다.  
 
-## <a name="next-steps"></a>次のステップ  
- Configuration Manager のレポートを計画する際には、次の補足トピックを参考にしてください。  
+###  <a name="BKMK_NetworkBandwidth"></a> 네트워크 대역폭 고려 사항  
+ 한 사이트 내에 있는 사이트 시스템 서버는 사이트 구성 방식에 따라 SMB(서버 메시지 블록), HTTP 또는 HTTPS를 사용하여 서로 통신합니다. 이러한 통신은 관리되지 않으며 네트워크 대역폭 제어 없이 언제든지 이루어질 수 있으므로 사이트 시스템에 보고 서비스 지점 역할을 설치하기 전에 사용 가능한 네트워크 대역폭을 검토하십시오.  
 
--   [System Center Configuration Manager のレポートの前提条件](../../../core/servers/manage/prerequisites-for-reporting.md)  
--   [System Center Configuration Manager のレポートのベスト プラクティス](../../../core/servers/manage/best-practices-for-reporting.md)  
+> [!NOTE]  
+>  사이트 시스템 계획에 대한 자세한 내용은 [사이트 시스템 역할 추가](../deploy/configure/add-site-system-roles.md)를 참조하세요.  
 
+##  <a name="BKMK_RoleBaseAdministration"></a> 보고서에 대한 역할 기반 관리 계획  
+ 보고에 대한 보안은 Configuration Manager의 다른 개체에 대한 보안과 거의 비슷합니다. 즉, 관리자에게 보안 역할과 권한을 할당할 수 있습니다. 관리자는 해당 보안 권한이 있는 보고서만 실행 및 수정할 수 있습니다. Configuration Manager 콘솔에서 보고서를 실행하려면 **사이트** 권한과 특정 개체에 대해 구성된 권한에 대한 **읽기** 권한이 있어야 합니다.  
 
+ 그러나 Configuration Manager의 다른 개체와 달리 Configuration Manager 콘솔에서 관리자에 대해 설정하는 보안 권한을 Reporting Services에도 구성해야 합니다. Configuration Manager 콘솔에서 보안 권한을 구성하면 보고 서비스 지점이 Reporting Services에 연결하여 보고서에 대한 적절한 권한을 설정합니다. 예를 들어 **소프트웨어 업데이트 관리자** 보안 역할은 이 역할에 연결된 **보고서 실행** 및 **보고서 수정** 권한을 갖습니다. **소프트웨어 업데이트 관리자** 역할만 할당된 관리자는 소프트웨어 업데이트에 대한 보고서만 실행하고 수정할 수 있습니다. 다른 개체에 대한 보고서는 Configuration Manager 콘솔에 표시되지 않습니다. 이에 대한 예외로, 일부 보고서는 특정 Configuration Manager 보안 개체와 연결되지 않습니다. 이러한 보고서에 대해 관리자가 보고서를 실행하려면 **사이트** 권한에 대한 **수정** 권한이 필요하고, 보고서를 수정하려면 **사이트** 권한에 대한 **수정** 권한이 필요합니다.  
 
-<!--HONumber=Dec16_HO3-->
+ 모든 보고서 기능을 역할 기반 관리에 사용할 수 있습니다. Configuration Manager에 포함된 모든 보고서의 데이터는 보고서를 실행하는 관리자의 권한에 따라 필터링됩니다. 특정 역할의 관리자는 해당 역할에 대해 정의된 정보만 볼 수 있습니다.  
 
+ 보고를 위한 보안 권한에 대한 자세한 내용은 [보고 구성](configuring-reporting.md)을 참조하세요.  
 
+ Configuration Manager에서 역할 기반 관리에 대한 자세한 내용은 [역할 기반 관리 구성](../deploy/configure/configure-role-based-administration.md)을 참조하세요.  
+
+## <a name="next-steps"></a>다음 단계  
+ 다음 추가 항목에서는 Configuration Manager의 보고를 계획하는 데 도움이 되는 정보를 제공합니다.  
+
+-   [System Center Configuration Manager에서 보고에 대한 필수 조건](../../../core/servers/manage/prerequisites-for-reporting.md)  
+-   [System Center Configuration Manager에서 보고에 대한 모범 사례](../../../core/servers/manage/best-practices-for-reporting.md)  

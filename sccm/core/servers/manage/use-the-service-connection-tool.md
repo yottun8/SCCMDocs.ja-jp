@@ -1,166 +1,162 @@
 ---
-title: "サービス接続ツール | Microsoft Docs"
-description: "このツールによって、Configuration Manager クラウド サービスに接続し、使用状況の情報を手動でアップロードできます。"
+title: "서비스 연결 도구 | Microsoft 문서"
+description: "Configuration Manager 클라우드 서비스에 연결하여 사용 정보를 수동으로 업로드할 수 있는 이 도구에 대해 알아봅니다."
 ms.custom: na
 ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
 ms.openlocfilehash: 0da80521bf223a765c3731f8ad59623d85a4c9fa
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>System Center Configuration Manager のサービス接続ツールの使用
+# <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>System Center Configuration Manager의 서비스 연결 도구 사용
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-サービス接続ポイントがオフライン モードになっている場合、または Configuration Manager のサイト システム サーバーがインターネットに接続されていない場合は、**サービス接続ツール**を使用してください。 このツールは、Configuration Manager に最新の更新プログラムを適用することで、サイトを最新の状態に保つことができます。  
+서비스 연결 지점이 오프라인 모드일 때 또는 Configuration Manager 사이트 시스템 서버가 인터넷에 연결되어 있지 않을 때 **서비스 연결 도구**를 사용합니다. 이 도구를 통해 Configuration Manager에 대한 최신 업데이트를 사용하여 사이트를 최신 상태로 유지할 수 있습니다.  
 
-実行時に、ツールを手動で Configuration Manager クラウド サービスに接続し、階層の使用状況の情報をアップロードしたり、更新プログラムをダウンロードしたりすることができます。 ご使用の展開に適切な更新プログラムをクラウド サービスが提供できるようにするには、使用状況データのアップロードが必要です。  
+도구를 실행하면 Configuration Manager 클라우드 서비스에 연결하여 계층 구조에 대한 사용 정보를 수동으로 업로드하고 업데이트를 다운로드할 수 있습니다. 클라우드 서비스에서 배포에 올바른 업데이트를 제공할 수 있으려면 사용 데이터를 업로드해야 합니다.  
 
-## <a name="prerequisites-for-using-the-service-connection-tool"></a>サービス接続ツールを使用するための前提条件
-次の前提条件と既知の問題があります。
+## <a name="prerequisites-for-using-the-service-connection-tool"></a>서비스 연결 도구를 사용하기 위한 필수 조건
+필수 조건 및 알려진 문제는 다음과 같습니다.
 
-**必要条件:**
+**필수 조건:**
 
--   サービス接続ポイントがインストールされ、 **[オフライン (オンデマンド接続)]**に設定されている必要があります。  
+-   서비스 연결 지점이 설치되어 있고 **오프라인, 주문형 연결**로 설정되었습니다.  
 
--   このツールがコマンド プロンプトから実行される必要があります。  
+-   명령 프롬프트에서 도구를 실행해야 합니다.  
 
--   ツールを実行する各コンピューター (サービス接続ポイントのコンピューター、およびインターネットに接続されているコンピューター) は、x64 ビット システムである必要があります。また、以下がインストールされている必要もあります。  
+-   도구가 실행되는 각 컴퓨터(서비스 연결 지점 컴퓨터 및 인터넷에 연결된 컴퓨터)는 x64비트 시스템이고 다음 요소가 설치되어 있어야 합니다.  
 
-    -   **Visual C++ 再頒布可能パッケージ** x86 と x64 の両方のファイル。   Configuration Manager の既定では、これらのファイルを、サービス接続ポイントをホストする x64 バージョンのコンピューターにインストールします。  
+    -   **Visual C++ 재배포 가능 패키지** x86 및 x64 파일 모두.   기본적으로 Configuration Manager는 서비스 연결 지점을 호스트하는 컴퓨터에 x64 버전을 설치합니다.  
 
-         Visual C++ ファイルのコピーをダウンロードするには、Microsoft ダウンロード センターの「 [Visual Studio 2013 の Visual C++ 再頒布可能パッケージ](http://www.microsoft.com/download/details.aspx?id=40784) 」にアクセスしてください。  
+         Visual C++ 파일의 복사본을 다운로드하려면 Microsoft 다운로드 센터에서 [Visual Studio 2013용 Visual C++ 재배포 가능 패키지](http://www.microsoft.com/download/details.aspx?id=40784) 를 방문하세요.  
 
-    -   .NET Framework 4.5.2 以降。  
+    -   .NET Framework 4.5.2 이상  
 
--   ツールの実行に使用するアカウントには次が必要です。
-    -   サービス接続ポイントをホストするコンピューター (ツールが実行される) の**ローカル管理者** のアクセス許可。
-    -   サイト データベースに対する**読み取り** アクセス許可。  
-
-
-
--   ファイルと更新プログラムを格納するための十分な空き領域を持つ USB ドライブ、またはサービス接続ポイントのコンピューターとインターネットに接続しているコンピューターの間でファイルを転送する別の方法が必要になります。 (このシナリオでは、サイトと管理対象のコンピューターはインターネットに直接接続されていないことを想定しています)。  
+-   이 도구를 실행하는 데 사용할 계정에는 다음과 같은 권한이 있어야 합니다.
+    -   서비스 연결 지점을 호스트하는(도구가 실행되는) 컴퓨터에 대한**로컬 관리자** 권한
+    -   사이트 데이터베이스에 대한**읽기** 권한  
 
 
 
-## <a name="use-the-service-connection-tool"></a>サービス接続ツールの使用  
-
- サービス接続ツール (**serviceconnectiontool.exe**) は、Configuration Manager インストール メディアの **%path%\smssetup\tools\ServiceConnectionTool** フォルダーにあります。 必ず、使用している Configuration Manager のバージョンに合ったサービス接続ツールを使用してください。
+-   파일 및 업데이트를 저장할 수 있는 충분한 여유 공간이 있는 USB 드라이브나, 서비스 연결 지점 컴퓨터와 인터넷에 액세스할 수 있는 컴퓨터 간에 파일을 전송하는 다른 방법이 필요합니다. 이 시나리오에서는 사이트와 관리되는 컴퓨터가 인터넷에 직접 연결되어 있지 않다고 가정합니다.  
 
 
- この手順では、コマンド ラインの例で、次のファイル名とフォルダーの場所を使用します (これらのパスとファイル名を使用する必要はありません。ご使用の環境や設定に一致する代替のパスとファイル名を使用できます)。  
 
--   USB スティック (サーバー間で転送するためデータが格納される場所) へのパス:  **D:\USB\\**  
+## <a name="use-the-service-connection-tool"></a>서비스 연결 도구 사용  
 
--   サイトからエクスポートしたデータが格納される .cab ファイルの名前: **UsageData.cab**  
+ 서비스 연결 도구(**serviceconnectiontool.exe**)는 Configuration Manager 설치 미디어의 **%path%\smssetup\tools\ServiceConnectionTool** 폴더에 있습니다. 항상 사용하는 Configuration Manager 버전과 일치하는 서비스 연결 도구를 사용합니다.
 
--   サーバー間で転送するため Configuration Manager のダウンロードされた更新プログラムが格納される空のフォルダーの名前: **UpdatePacks**  
 
-サービス接続ポイントをホストするコンピューターで、以下を実行します。  
+ 이 절차에서 명령줄 예제는 다음 파일 이름과 폴더 위치를 사용합니다. 이러한 경로와 파일 이름 대신 사용자 환경 및 기본 설정에 맞는 대체 경로와 이름을 사용해도 됩니다.  
 
--   管理者特権でコマンド プロンプトを開き、 **serviceconnectiontool.exe**を格納する場所にディレクトリを変更します。  
+-   서버 간 전송을 위해 데이터가 저장되는 USB 스틱의 경로: **D:\USB\\**  
 
-     既定では、このツールは Configuration Manager インストール メディアの **%path%\smssetup/tools\ServiceConnectionTool** フォルダーにあります。 サービス接続ツールを動作させるために、このフォルダーにあるすべてのファイルを同一のフォルダー内に配置する必要があります。  
+-   사이트에서 내보낸 데이터가 포함된 .cab 파일의 이름: **UsageData.cab**  
 
-次のコマンドを実行すると、ツールにより、使用状況の情報を含む .cab ファイルが準備されて、指定した場所にコピーされます。 .cab ファイル内のデータは、収集のためにサイトが構成された診断の使用状況データのレベルに基づいています。 (「[System Center Configuration Manager の診断結果と使用状況データ](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)」を参照)。  .cab ファイルを作成するには、次のコマンドを実行します。  
+-   Configuration Manager에 대해 다운로드한 업데이트가 서버 간 전송을 위해 저장되는 빈 폴더의 이름: **UpdatePacks**  
+
+서비스 연결 지점을 호스트하는 컴퓨터:  
+
+-   관리자 권한으로 명령 프롬프트를 열고 디렉터리를 **serviceconnectiontool.exe**가 포함된 위치로 변경합니다.  
+
+     기본적으로 이 도구는 Configuration Manager 설치 미디어의 **%path%\smssetup\tools\ServiceConnectionTool** 폴더에 있습니다. 서비스 연결 도구가 작동하려면 이 폴더의 모든 파일이 동일한 폴더에 있어야 합니다.  
+
+다음 명령을 실행하면 이 도구에서 사용 정보를 포함하는 .cab 파일을 준비하고 지정된 위치로 복사합니다. .cab 파일의 데이터는 사이트가 수집하도록 구성된 진단 사용 현황 데이터의 수준을 기반으로 합니다. [System Center Configuration Manager의 진단 및 사용 현황 데이터](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)를 참조하세요.  다음 명령을 실행하여 .cab 파일을 만듭니다.  
 
 -   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
 
-USB ドライブに ServiceConnectionTool フォルダーとその中身をすべてコピーする必要もあります。または、手順 3 と 4 で使用するコンピューターで使用可能にする必要があります。  
+모든 내용이 포함된 ServiceConnectionTool 폴더를 USB 드라이브에 복사하거나, 3 및 4단계를 사용할 컴퓨터에서 사용할 수 있도록 해야 합니다.  
 
-### <a name="overview"></a>概要
-**サービス接続ツールを使用するための 3 つの主要なステップがあります。**  
+### <a name="overview"></a>개요
+**서비스 연결 도구를 사용하는 세 가지 기본 단계는 다음과 같습니다.**  
 
-1.  **準備**: このステップは、サービス接続ポイントをホストするコンピューターで実行されます。 ツールが実行されると、使用状況データが .cab ファイルに格納され、そのファイルが USB ドライブ (または指定した代替の転送場所) に保存されます。  
+1.  **준비**: 이 단계는 서비스 연결 지점을 호스트하는 컴퓨터에서 실행합니다. 도구를 실행하면 사용 데이터를 .cab 파일에 넣고 USB 드라이브(또는 지정한 대체 전송 위치)에 저장합니다.  
 
-2.  **接続**: このステップでは、インターネットに接続されたリモート コンピューターでツールを実行し、使用状況データのアップロードおよび更新プログラムのダウンロードを行います。  
+2.  **연결**: 이 단계에서는 사용 데이터를 업로드하고 업데이트를 다운로드할 수 있도록 인터넷에 연결하는 원격 컴퓨터에서 도구를 실행합니다.  
 
-3.  **インポート**: このステップは、サービス接続ポイントをホストするコンピューターで実行されます。 実行すると、ダウンロードした更新プログラムがツールによってインポートされ、サイトに追加されるため、Configuration Manager コンソールから更新プログラムを表示したり、インストールしたりできるようになります。  
+3.  **가져오기**: 이 단계는 서비스 연결 지점을 호스트하는 컴퓨터에서 실행합니다. 도구를 실행하면 다운로드를 가져오고 사이트에 추가하여 Configuration Manager 콘솔에서 업데이트를 보고 설치할 수 있습니다.  
 
-バージョン 1606 以降では、Microsoft に接続すると複数の .cab ファイルを (別の階層からそれぞれ) 一度にアップロードして、プロキシ サーバーとプロキシ サーバーのユーザーを指定できます。   
+버전1606부터, Microsoft에 연결할 때 한 번에 여러 .cab 파일을 업로드하고(각기 다른 계층 구조에서) 프록시 서버 및 프록시 서버의 사용자를 지정할 수 있습니다.   
 
-**複数の .cab ファイルをアップロードするには**
- -  個別の階層からエクスポートした各 .cab ファイルを同じフォルダーに配置します。 各ファイルの名前は一意である必要があります。名前は、必要に応じて手動で変更することができます。
- -  次に、データを Microsoft にアップロードするコマンドを実行する際に、.cab ファイルを含むフォルダーを指定します。 (更新プログラム 1606 より前では、一度にアップロードできるデータは 1 つの階層からだけであり、ツールでフォルダーの .cab ファイルに名前を指定する必要がありました。)
- -  その後、階層のサービス接続ポイントでインポート タスクを実行すると、ツールで自動的にその階層のデータのみがインポートされます。  
+**여러.cab 파일을 업로드하려면**
+ -  별도 계층 구조에서 내보내는 각.cab 파일을 동일한 폴더에 배치합니다. 각 파일의 이름은 고유해야 하며, 필요한 경우 수동으로 바꿀 수 있습니다.
+ -  그런 다음 Microsoft로 데이터를 업로드하는 명령을 실행할 때 .cab 파일이 포함된 폴더를 지정합니다. 업데이트 1606 전에는, 한 번에 단일 계층 구조의 데이터만 업로드할 수 있었고, 도구에서 폴더의 .cab 파일의 이름을 지정하도록 요구했습니다.
+ -  나중에 계층 구조의 서비스 연결 지점에서 가져오기 작업을 실행할 때 도구에서 해당 계층 구조의 데이터만 자동으로 가져옵니다.  
 
-**プロキシ サーバーを指定するには**  
-次のオプション パラメーターを使用して、プロキシ サーバーを指定できます (これらのパラメーターの使用に関する詳細は、このトピックのコマンド ライン パラメーターのセクションで確認できます)。
-  - **-proxyserveruri [FQDN_of_proxy_sever]**  パラメーターを使用して、この接続に使用するプロキシ サーバーを指定します。
-  -  **-proxyusername [username]**  プロキシ サーバーのユーザーを指定する必要がある場合に、このパラメーターを使用します。
+**프록시 서버를 지정하려면**  
+다음과 같은 선택적 매개 변수를 사용하여 프록시 서버를 지정할 수 있습니다. 이러한 매개 변수를 사용하는 방법에 대한 자세한 내용은 이 항목의 명령줄 매개 변수 섹션에서 사용할 수 있습니다.
+  - **-proxyserveruri [FQDN_of_proxy_sever]**  이 매개 변수를 사용하여 이 연결에 사용할 프록시 서버를 지정합니다.
+  -  **-proxyusername [username]**  프록시 서버의 사용자를 지정해야 할 때 이 매개 변수를 사용합니다.
 
 
 
-### <a name="to-use-the-service-connection-tool"></a>サービス接続ツールを使用するには  
+### <a name="to-use-the-service-connection-tool"></a>서비스 연결 도구를 사용하려면  
 
-1.  サービス接続ポイントをホストするコンピューターで、以下を実行します。  
+1.  서비스 연결 지점을 호스트하는 컴퓨터:  
 
-    -   管理者特権でコマンド プロンプトを開き、 **serviceconnectiontool.exe**を格納する場所にディレクトリを変更します。   
+    -   관리자 권한으로 명령 프롬프트를 열고 디렉터리를 **serviceconnectiontool.exe**가 포함된 위치로 변경합니다.   
 
-2.  次のコマンドを実行して、ツールで使用状況の情報を含む .cab ファイルを準備し、指定した場所にコピーします。  
+2.  다음 명령을 실행하면 이 도구에서 사용 정보를 포함하는 .cab 파일을 준비하고 지정된 위치로 복사할 수 있습니다.  
 
     -   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
 
-    1 つ以上の階層から同時に複数の .cab ファイルをアップロードする場合は、フォルダー内の各 .cab ファイルの名前は一意である必要があります。 フォルダーに追加するファイルの名前は手動で変更できます。
+    둘 이상의 계층 구조에서.cab 파일을 동시에 업로드하는 경우 폴더의 각.cab 파일에 고유한 이름이 있어야 합니다. 폴더에 추가하는 파일의 이름을 수동으로 바꿀 수 있습니다.
 
-    Configuration Manager のクラウド サービスにアップロードするために収集される使用状況情報を表示する場合は、次のコマンドを実行し、.csv ファイルとして同じデータをエクスポートすると、Excel のようなアプリケーションを使用して表示できます。  
+    Configuration Manager 클라우드 서비스에 업로드하기 위해 수집되는 사용 현황 정보를 보려는 경우 다음 명령을 실행하여 .csv 파일과 동일한 데이터를 내보낸 다음 Excel과 같은 응용 프로그램을 사용하여 볼 수 있습니다.  
 
     -   **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
 
-3.  準備ステップが完了したら、インターネットに接続しているコンピューターに USB ドライブを移動します (または別の方法でエクスポートされたデータを転送します)。  
+3.  준비 단계가 완료되면 인터넷에 연결된 컴퓨터로 USB 드라이브를 이동(또는 내보낸 데이터를 다른 방법으로 전송)합니다.  
 
-4.  インターネットにアクセスできるコンピューターで、管理者特権を使用してコマンド プロンプトを開き、ツール (  **serviceconnectiontool.exe** ) とそのフォルダーのその他のファイルのコピーを格納している場所にディレクトリを変更します。  
+4.  인터넷에 연결된 컴퓨터에서 관리자 권한으로 명령 프롬프트를 열고 디렉터리를  **serviceconnectiontool.exe** 도구의 복사본과 해당 폴더의 추가 파일이 포함된 위치로 변경합니다.  
 
-5.  次のコマンドを実行し、使用状況情報のアップロードと Configuration Manager の更新プログラムのダウンロードを開始します。  
+5.  다음 명령을 실행하여 사용 정보 업로드 및 Configuration Manager 업데이트 다운로드를 시작합니다.  
 
     -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
 
-    このコマンドラインのより多くの例については、このトピックで後述する「[コマンド ライン オプション](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd)」を参照してください。
+    이 명령줄의 추가 예제에 대해서는 이 항목의 뒷부분에 있는 [명령줄 옵션](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd) 섹션을 참조하세요.
 
     > [!NOTE]  
-    >  Configuration Manager のクラウド サービスに接続するためのコマンド ラインを実行すると、次のようなエラーが発生する可能性があります。  
+    >  Configuration Manager 클라우드 서비스에 연결하는 명령줄을 실행하면 다음과 유사한 오류가 발생할 수 있습니다.  
     >   
-    >  -   ハンドルされない例外: System.UnauthorizedAccessException:  
+    >  -   처리되지 않은 예외: System.UnauthorizedAccessException:  
     >   
-    >      パス C:\  
-    >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' へのアクセスが拒否されました。  
+    >      'C:\  
+    >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' 경로에 대한 액세스가 거부되었습니다.  
     >   
-    > このエラーは無視しても問題ありません。エラー ウィンドウを閉じて、続行することができます。  
+    > 이 오류는 무시해도 되며 오류 창을 닫고 계속할 수 있습니다.  
 
-6.  Configuration Manager の更新プログラムのダウンロードが完了したら、サービス接続ポイントをホストしているコンピューターに USB ドライブを移動します (または別の方法でエクスポートされたデータを転送します)。  
+6.  Configuration Manager 업데이트 다운로드가 완료되면 서비스 연결 지점을 호스트하는 컴퓨터로 USB 드라이브를 이동(또는 내보낸 데이터를 다른 방법으로 전송)합니다.  
 
-7.  サービス接続ポイントをホストするコンピューターで、管理者特権でコマンド プロンプトを開き、 **serviceconnectiontool.exe**が格納されている場所にディレクトリを変更して、次のコマンドを実行します。  
+7.  서비스 연결 지점을 호스트하는 컴퓨터에서 관리자 권한으로 명령 프롬프트를 열고 디렉터리를 **serviceconnectiontool.exe**가 포함된 위치로 변경한 후 다음 명령을 실행합니다.  
 
     -   **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
 
-8.  インポートが完了したら、コマンド プロンプトを閉じることができます。 (該当する階層の更新プログラムのみがインポートされます)。  
+8.  가져오기가 완료되면 명령 프롬프트를 닫아도 됩니다. 해당 계층 구조에 대한 업데이트만 가져옵니다.  
 
-9. Configuration Manager コンソールを開き、**[管理]** > **[更新とサービス]** の順に移動します。 インポートされた更新プログラムは、インストールできるようになりました  (1702 より前のバージョンでは、[更新とサービス] は、**[管理]** > **[クラウド サービス]** にありました)。
+9. Configuration Manager 콘솔을 열고 **관리** > **업데이트 및 서비스**로 이동합니다. 이제 가져온 업데이트를 설치할 수 있습니다. 버전 1702 이전에는 업데이트 및 서비스가 **관리** > **Cloud Services** 아래에 있었습니다.
 
- 更新プログラムのインストールの詳細については、「[System Center Configuration Manager のコンソール内の更新プログラムのインストール](../../../core/servers/manage/install-in-console-updates.md)」を参照してください。  
+ 업데이트를 설치하는 방법에 대한 자세한 내용은 [System Center Configuration Manager의 콘솔 내 업데이트 설치](../../../core/servers/manage/install-in-console-updates.md)를 참조하세요.  
 
-## <a name="bkmk_cmd"></a> コマンド ライン オプション  
- サービス接続ポイント ツールのヘルプ情報を表示するには、コマンド プロンプトを開き、ツールを格納するフォルダーに移動して、コマンド  **serviceconnectiontool.exe**を実行します。  
+## <a name="bkmk_cmd"></a> 명령줄 옵션  
+ 서비스 연결 지점 도구에 대한 도움말 정보를 보려면 도구가 포함된 폴더에서 명령 프롬프트를 열고  **serviceconnectiontool.exe**명령을 실행합니다.  
 
-|コマンド ライン オプション|説明|  
+|명령줄 옵션|세부 정보|  
 |---------------------------|-------------|  
-|**-prepare -usagedatadest [drive:][path][filename.cab]**|このコマンドは、現在の使用状況データを .cab ファイルに格納します。<br /><br /> サービス接続ポイントをホストするサーバーで、 **ローカル管理者** としてこのコマンドを実行します。<br /><br /> 例:   **-prepare -usagedatadest D:\USB\Usagedata.cab**|    
-|**-connect -usagedatasrc [drive:][path] -updatepackdest [drive:][path] -proxyserveruri [FQDN of proxy server] -proxyusername [username]** <br /> <br /> 1606 より前のバージョンの Configuration Manager を使用する場合は、.cab ファイルの名前を指定する必要があり、プロキシ サーバーのオプションを使用することはできません。  サポートされているコマンド パラメーターは次のとおりです。 <br /> **-connect -usagedatasrc [drive:][path][filename] -updatepackdest [drive:][path]** |このコマンドは、Configuration Manager のクラウド サービスに接続し、指定した場所から使用状況データの .cab ファイルをアップロードしたり、利用可能な更新パックとコンソールのコンテンツをダウンロードしたりします。 プロキシ サーバーのオプションは省略できます。<br /><br /> インターネットに接続できるコンピューターで、 **ローカル管理者** としてこのコマンドを実行します。<br /><br /> プロキシ サーバーを使用せずに接続する例: **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> プロキシ サーバーを使用して接続する例: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> 1606 より前のバージョンを使用する場合は、.cab ファイルのファイル名を指定する必要があります。また、プロキシ サーバーを指定することはできません。 次のコマンド ラインの例を使用します: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
-|**-import -updatepacksrc [drive:][path]**|このコマンドは、先ほど Configuration Manager コンソールにダウンロードした更新パックとコンソールのコンテンツをインポートします。<br /><br /> サービス接続ポイントをホストするサーバーで、 **ローカル管理者** としてこのコマンドを実行します。<br /><br /> 例:  **-import -updatepacksrc D:\USB\UpdatePacks**|  
-|**-export -dest [drive:][path][filename.csv]**|このコマンドは使用状況データを .csv ファイルにエクスポートします。このファイルでデータを確認できます。<br /><br /> サービス接続ポイントをホストするサーバーで、 **ローカル管理者** としてこのコマンドを実行します。<br /><br /> 例: **-export -dest D:\USB\usagedata.csv**|  
-
+|**-prepare -usagedatadest [drive:][path][filename.cab]**|이 명령은 현재 사용 데이터를 .cab 파일에 저장합니다.<br /><br /> 서비스 연결 지점을 호스트하는 서버에서 **로컬 관리자** 권한으로 이 명령을 실행합니다.<br /><br /> 예:   **-prepare -usagedatadest D:\USB\Usagedata.cab**|    
+|**-connect -usagedatasrc [드라이브:][경로] -updatepackdest [드라이브:][경로] -proxyserveruri [프록시 서버의 FQDN] -proxyusername [사용자 이름]** <br /> <br /> 1606 이전의 Configuration Manager 버전을 사용하는 경우 .cab 파일의 이름을 지정해야 하며 프록시 서버에 대한 옵션을 사용할 수 없습니다.  지원되는 명령 매개 변수는 다음과 같습니다. <br /> **-connect -usagedatasrc [드라이브:][경로][파일 이름] -updatepackdest [드라이브:][경로]** |이 명령은 Configuration Manager 클라우드 서비스에 연결하여 지정된 위치에서 사용 현황 데이터.cab 파일을 업로드하고 사용 가능한 업데이트 팩 및 콘솔 콘텐츠를 다운로드합니다. 프록시 서버에 대한 옵션은 선택 사항입니다.<br /><br /> 이 명령은 인터넷에 연결할 수 있는 컴퓨터에 대한 **로컬 관리자** 권한으로 실행합니다.<br /><br /> 프록시 서버를 사용하지 않고 연결하는 예: **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> 프록시 서버를 사용하는 경우 연결하는 예: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> 1606 이전 버전을 사용하는 경우 .cab 파일의 파일 이름을 지정해야 하며 프록시 서버를 지정할 수 없습니다. 다음과 같은 예제 명령줄을 사용하세요. **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
+|**-import -updatepacksrc [drive:][path]**|이 명령은 이전에 다운로드한 업데이트 팩과 콘솔 콘텐츠를 Configuration Manager 콘솔로 가져옵니다.<br /><br /> 서비스 연결 지점을 호스트하는 서버에서 **로컬 관리자** 권한으로 이 명령을 실행합니다.<br /><br /> 예:  **-import -updatepacksrc D:\USB\UpdatePacks**|  
+|**-export -dest [drive:][path][filename.csv]**|이 명령은 사용 데이터를 .csv 파일로 내보내며, 그런 후에 파일을 볼 수 있습니다.<br /><br /> 서비스 연결 지점을 호스트하는 서버에서 **로컬 관리자** 권한으로 이 명령을 실행합니다.<br /><br /> 예: **-export -dest D:\USB\usagedata.csv**|  

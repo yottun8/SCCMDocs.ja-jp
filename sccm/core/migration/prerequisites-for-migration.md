@@ -1,131 +1,127 @@
 ---
-title: "移行の前提条件 | Microsoft Docs"
-description: "Configuration Manager のサポートされているバージョン、サポートされているソース サイトの言語、および移行に必要な構成を理解します。"
+title: "마이그레이션 필수 조건 | Microsoft 문서"
+description: "지원되는 Configuration Manager 버전, 지원되는 원본 사이트 언어 및 마이그레이션을 위한 필수 조건을 이해합니다."
 ms.custom: na
 ms.date: 3/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ee7f69bd65152deffb2456d9807e1e8fee8802ec
 ms.openlocfilehash: cd90f5462ac4bb4c0a2021e6d5dde65161b9c5f6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="prerequisites-for-migration-in-system-center-configuration-manager"></a>System Center Configuration Manager での移行の前提条件
+# <a name="prerequisites-for-migration-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 마이그레이션을 수행하기 위한 필수 조건
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-サポートされているソース階層から移行するには、該当する各 Configuration Manager ソース サイトのアクセス権と、System Center Configuration Manager 移行先サイト内で移行操作を構成および実行するアクセス許可が必要です。  
+지원되는 원본 계층에서 마이그레이션하려면 해당하는 각 Configuration Manager 원본 사이트에 대한 액세스 권한 및 System Center Configuration Manager 대상 사이트에서 마이그레이션 작업을 구성하고 실행할 수 있는 권한이 있어야 합니다.  
 
- 移行がサポートされている Configuration Manager のバージョンと必要な構成を把握する際には、以下のセクションの情報を参考にしてください。  
+ 마이그레이션에 지원되는 Configuration Manager 버전 및 필수 구성을 이해하려면 다음 섹션의 정보를 참조하세요.  
 
--   [移行がサポートされている Configuration Manager のバージョン](#BKMK_SupportedMigrationVersions)  
+-   [마이그레이션에 지원되는 Configuration Manager 버전](#BKMK_SupportedMigrationVersions)  
 
--   [移行がサポートされているソース サイトの言語](#BKMK_SorceSiteLanguage)  
+-   [마이그레이션에 지원되는 원본 사이트 언어](#BKMK_SorceSiteLanguage)  
 
--   [移行に必要な構成](#BKMK_Required_Configurations)  
+-   [마이그레이션을 위한 필수 구성](#BKMK_Required_Configurations)  
 
-##  <a name="BKMK_SupportedMigrationVersions"></a> 移行がサポートされている Configuration Manager のバージョン  
- 次のいずれかのバージョンの Configuration Manager を実行しているソース階層からデータを移行できます。  
+##  <a name="BKMK_SupportedMigrationVersions"></a> 마이그레이션에 지원되는 Configuration Manager 버전  
+ 다음 Configuration Manager 버전을 실행하는 원본 계층에서 데이터를 마이그레이션할 수 있습니다.  
 
--   Configuration Manager 2007 SP2 (移行の目的では、ソース サイト上の Configuration Manager 2007 R2 や R3 は考慮されません。 ソース サイトで SP2 を実行していれば、R2 と R3 のどちらかのアドオンがインストールされているサイトが System Center Configuration Manager への移行でサポートされます)。  
+-   Configuration Manager 2007 SP2. 마이그레이션 시 원본 사이트의 Configuration Manager 2007 버전이 R2인지 아니면 R3인지는 고려하지 않아도 됩니다. 원본 사이트에서 SP2를 실행한다면 R2 또는 R3 추가 기능이 설치된 사이트를 System Center Configuration Manager로 마이그레이션할 수 있습니다.  
 
--   System Center 2012 Configuration Manager SP2 または System Center 2012 R2 Configuration Manager SP1。  
+-   System Center 2012 Configuration Manager SP2 또는 System Center 2012 R2 Configuration Manager SP1  
 
     > [!TIP]  
-    >  移行だけでなく、System Center 2012 Configuration Manager を実行しているサイトの System Center Configuration Manager へのインプレース アップグレードを使用できます。  
+    >  마이그레이션 외에도 System Center Configuration Manager에 대해 System Center 2012 Configuration Manager를 실행하는 사이트의 현재 위치 업그레이드를 사용할 수 있습니다.  
 
--   同じまたは低いバージョンの System Center Configuration Manager の System Center Configuration Manager 階層。  
+-   버전이 같거나 낮은 System Center Configuration Manager의 System Center Configuration Manager 계층 구조  
 
-  たとえば、移行先階層で System Center Configuration Manager 1606 を実行している場合は、移行を使用してバージョン 1606 または 1602 を実行するソース階層からデータをコピーすることができます。 ただし、1610 を実行しているソース階層からデータを移行することはできません。  
+  예를 들어 System Center Configuration Manager 1606을 실행하는 대상 계층이 있는 경우 마이그레이션을 사용하여 버전 1606 또는 1602를 실행하는 원본 계층에서 데이터를 복사할 수 있습니다. 그러나 1610을 실행하는 원본 계층에서는 데이터를 마이그레이션할 수 없습니다.  
 
 
-##  <a name="BKMK_SorceSiteLanguage"></a> 移行がサポートされているソース サイトの言語  
- Configuration Manager 階層間でデータを移行すると、データは System Center Configuration Manager の言語に依存しない形式で移行先階層に保存されます。 Configuration Manager 2007 では、データは言語に依存しない形式では保存されないため、Configuration Manager 2007 からの移行中に、移行プロセスでオブジェクトをこの形式に変換する必要があります。 このため、以下の言語でインストールされている Configuration Manager 2007 ソース サイトのみ、移行がサポートされています。  
+##  <a name="BKMK_SorceSiteLanguage"></a> 마이그레이션에 지원되는 원본 사이트 언어  
+ Configuration Manager 계층 구조 간에 데이터를 마이그레이션하면 데이터가 System Center Configuration Manager에 대해 언어 중립적인 형식의 대상 계층에 저장됩니다. Configuration Manager2007에서는 데이터를 언어 중립적인 형식으로 저장하지 않으므로 마이그레이션 프로세스가 Configuration Manager 2007에서 마이그레이션할 때 개체를 이 형식으로 변환해야 합니다. 그러므로 다음 언어로 설치된 Configuration Manager 2007 원본 사이트만 마이그레이션이 가능합니다.  
 
--   英語  
+-   영어  
 
--   フランス語  
+-   프랑스어  
 
--   ドイツ語  
+-   독일어  
 
--   日本語  
+-   일본어  
 
--   韓国語  
+-   한국어  
 
--   ロシア語  
+-   러시아어  
 
--   簡体字中国語  
+-   중국어(간체)  
 
--   繁体字中国語  
+-   중국어(번체)  
 
-System Center 2012 Configuration Manager または System Center Configuration Manager 階層からデータを移行するときは、ソース サイトの言語の制限はありません。 ソース サイトのデータベースのオブジェクトは、常に言語に依存しない形式になります。  
+System Center 2012 Configuration Manager 또는 System Center Configuration Manager 계층 구조에서 데이터를 마이그레이션할 때는 원본 사이트 언어 제한이 없습니다. 원본 사이트 데이터베이스에 있는 개체는 이미 언어 중립적인 형식입니다.  
 
-##  <a name="BKMK_Required_Configurations"></a> 移行に必要な構成  
-移行と移行操作を使用するために必要な構成は以下のとおりです。  
+##  <a name="BKMK_Required_Configurations"></a> 마이그레이션을 위한 필수 구성  
+다음에는 마이그레이션 및 마이그레이션 작업을 사용하기 위한 필수 구성이 나와 있습니다.  
 
--   **Configuration Manager コンソールでの移行の構成、実行、および監視を行うには:**  
+-   **Configuration Manager 콘솔에서 마이그레이션을 구성, 실행, 모니터링하려면:**  
 
-     移行先サイトでは、ロールベースの管理のセキュリティ ロール [ **インフラストラクチャ管理者** ] が割り当てられたアカウントを使用する必要があります。 このセキュリティ ロールにより、移行ジョブの作成、クリーンアップ、監視、および配布ポイントの共有とアップグレード操作など、すべての移行操作を管理するアクセス許可が付与されます。  
+     대상 사이트에서 계정에 **인프라 관리자**의 역할 기반 관리 보안 역할을 할당해야 합니다. 이 보안 역할은 마이그레이션 작업 만들기, 정리, 모니터링 및 배포 지점을 공유하고 업그레이드하는 작업을 포함한 모든 마이그레이션 작업을 관리할 수 있는 권한을 부여합니다.  
 
--   **データ収集:**  
+-   **데이터 수집:**  
 
-     移行先サイトでデータ収集を有効にするためには、各ソース サイトで使用する次の 2 つのソース サイト アクセス アカウントを構成する必要があります。  
+     대상 사이트에서 데이터를 수집할 수 있도록 하려면 각 원본 사이트에서 사용할 다음 두 원본 사이트 액세스 계정을 구성해야 합니다.  
 
-    -   **ソース サイトのアカウント:** このアカウントを使用して、ソース サイトの SMS プロバイダーにアクセスします。  
+    -   **원본 사이트 계정:** 이 계정은 원본 사이트의 SMS 공급자에 액세스하는 데 사용됩니다.  
 
-        -   Configuration Manager 2007 SP2 ソース サイトの場合は、このアカウントにはすべてのソース サイト オブジェクトへの**読み取り**アクセス許可が必要です。  
+        -   Configuration Manager2007 SP2 원본 사이트의 경우 이 계정에 모든 원본 사이트 개체에 대한 **읽기** 권한이 있어야 합니다.  
 
-        -   System Center 2012 Configuration Manager または System Center Configuration Manager ソース サイトの場合は、このアカウントにはすべてのソース サイト オブジェクトの **読み取り**アクセス許可が必要です。ロールベースの管理を使用して、このアクセス許可をアカウントに付与します。 ロール ベース管理の使用方法については、「 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。  
+        -   System Center 2012 Configuration Manager 또는 System Center Configuration Manager 원본 사이트의 경우에는 이 계정에 모든 원본 사이트 개체에 대한 **읽기** 권한이 있어야 합니다. 역할 기반 관리를 사용하여 계정에 이 권한을 부여합니다. 역할 기반 관리를 사용하는 방법에 대한 자세한 내용은 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)항목을 참조하세요.  
 
-    -   **ソース サイトのデータベース アカウント** : このアカウントは、ソース サイトの SQL Server データベースへのアクセスに使用され、ソース サイト データベースの **Connect**、 **Execute**、 **Select** のアクセス許可を必要とします。  
+    -   **원본 사이트 데이터베이스 계정:** 이 계정은 원본 사이트의 SQL Server 데이터베이스에 액세스하는 데 사용되며 원본 사이트 데이터베이스에 대한 **Connect**, **Execute**및 **Select** 권한이 필요합니다.  
 
-    新しいソース階層で追加のソース サイトのデータ収集を構成する際、またはソース サイトの資格情報を再構成する際に、これらのアカウントを構成できます。 これらのアカウントにドメイン ユーザー アカウントを使用できます。または、移行先階層の最上位サイトのコンピューター アカウントを指定することもできます。  
+    새 원본 계층을 구성하거나, 다른 원본 사이트의 데이터 수집을 구성하거나, 원본 사이트의 자격 증명을 다시 구성할 때 이러한 계정을 구성할 수 있습니다. 이러한 계정은 도메인 사용자 계정을 사용할 수 있습니다. 아니면 대상 계층 최상위 사이트의 컴퓨터 계정을 지정할 수 있습니다.  
 
     > [!IMPORTANT]  
-    >  いずれかのアクセス アカウントに Configuration Manager コンピューター アカウントを使用する場合、このアカウントが、ソース サイトが存在するドメインの **Distributed COM Users** セキュリティ グループのメンバーであることを確認してください。  
+    >  각 액세스 계정으로 Configuration Manager 컴퓨터 계정을 사용하는 경우 이 계정은 원본 사이트가 있는 도메인의 **Distributed COM Users** 보안 그룹에 속해야 합니다.  
 
-    データの収集時には、次のネットワーク プロトコルとポートが使用されます。  
+    데이터를 수집할 때 다음 네트워크 프로토콜 및 포트가 사용됩니다.  
 
-    -   NetBIOS/SMB - 445 (TCP)  
+    -   NetBIOS/SMB - 445(TCP)  
 
-    -   RPC (WMI) - 135 (TCP)  
+    -   RPC(WMI) - 135(TCP)  
 
-    -   SQL Server - ソースおよび移行先サイト データベースの両方で使用される TCP ポート。  
+    -   SQL Server - 원본 사이트 데이터베이스와 대상 사이트 데이터베이스 모두에서 사용 중인 TCP 포트  
 
--   **ソフトウェア更新プログラムの移行:**  
+-   **소프트웨어 업데이트 마이그레이션:**  
 
-     ソフトウェア更新プログラムを移行する前に、移行先階層のソフトウェアの更新ポイントを構成する必要があります。 詳細については、「[ソフトウェア更新プログラムの移行の計画](../../core/migration/planning-for-the-migration-of-objects.md#Plan_migrate_Software_updates)」をご覧ください。  
+     소프트웨어 업데이트를 마이그레이션하기 전에 소프트웨어 업데이트 지점이 있는 대상 계층을 구성해야 합니다. 자세한 내용은 [소프트웨어 업데이트 마이그레이션 계획](../../core/migration/planning-for-the-migration-of-objects.md#Plan_migrate_Software_updates)을 참조하세요.  
 
--   **配布ポイントの共有:**  
+-   **배포 지점 공유:**  
 
-     ソース サイトの配布ポイントを共有するためには、移行先階層の少なくとも 1 つのプライマリ サイトまたは中央管理サイトで、クライアントからの要求用にソース サイトと同じポート番号を使用している必要があります。 クライアント要求ポートの詳細については、「[System Center Configuration Manager でのクライアント通信ポートの構成方法](../../core/clients/deploy/configure-client-communication-ports.md)」を参照してください。  
+     원본 사이트에서 배포 지점을 공유하려면 대상 계층의 기본 사이트나 중앙 관리 사이트 하나 이상에서 클라이언트 요청에 대해 원본 사이트와 같은 포트 번호를 사용해야 합니다. 클라이언트 요청 포트에 대한 자세한 내용은 [System Center Configuration Manager에서 클라이언트 통신 포트를 구성하는 방법](../../core/clients/deploy/configure-client-communication-ports.md)을 참조하세요.  
 
-     各ソース サイトでは、FQDN で構成されているサイト システム サーバーにインストールされた配布ポイントのみ共有されます。  
+     각 원본 사이트에 대해 FQDN으로 구성된 사이트 시스템 서버에 설치된 배포 지점만 공유됩니다.  
 
-     また、System Center 2012 Configuration Manager または System Center Configuration Manager ソース サイトの配布ポイントを共有するには、**[ソース サイト アカウント]** (ソース サイト サーバーの SMS プロバイダーにアクセスするアカウント) に、ソース サイトの **[サイト]** オブジェクトの **[変更]** アクセス許可が必要です。 アカウントにこのアクセス許可を付与するには、ロールベースの管理を使用します。 ロール ベース管理の使用方法については、「 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。  
+     또한 System Center 2012 Configuration Manager 또는 System Center Configuration Manager 원본 사이트에서 배포 지점을 공유하려면 **원본 사이트 계정**(원본 사이트 서버의 SMS 공급자에 액세스하는 계정)에 원본 사이트의 **사이트** 개체에 대한 **수정** 권한이 있어야 합니다. 역할 기반 관리를 사용하여 계정에 이 권한을 부여합니다. 역할 기반 관리를 사용하는 방법에 대한 자세한 내용은 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)항목을 참조하세요.  
 
 
--   **配布ポイントのアップグレードまたは再割り当て:**  
+-   **배포 지점 업그레이드 또는 재할당:**  
 
-     ソース サイトの SMS プロバイダーからデータを収集するように構成された [ **ソース サイトのアクセス アカウント** ] には、次のアクセス許可が必要です。  
+     원본 사이트의 SMS 공급자에서 데이터를 수집하도록 구성된 **원본 사이트 액세스 계정** 에는 다음 권한이 필요합니다.  
 
-    -   Configuration Manager 2007 配布ポイントをアップグレードするためには、Configuration Manager 2007 ソース サイトから配布ポイントを削除するため、アカウントに Configuration Manager 2007 サイト サーバーの **[サイト]** クラスの **[読み取り]**、**[実行]**、**[削除]** アクセス許可が必要です。  
+    -   Configuration Manager2007 배포 지점을 업그레이드하려면 계정에 Configuration Manager2007 사이트 서버의 **사이트** 클래스에 대한 **읽기**, **실행**, **삭제** 권한이 있어야 Configuration Manager2007 원본 사이트에서 배포 지점을 제거할 수 있습니다.  
 
-    -   System Center 2012 Configuration Manager または System Center Configuration Manager の配布ポイントを再割り当てするには、アカウントにソース サイト上の **[サイト]** オブジェクトの **[変更]** アクセス許可が必要です。 アカウントにこのアクセス許可を付与するには、ロールベースの管理を使用します。 ロール ベース管理の使用方法については、「 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。  
+    -   System Center 2012 Configuration Manager 또는 System Center Configuration Manager 배포 지점을 재할당하려면 계정에 원본 사이트의 **사이트** 개체에 대한 **수정** 권한이 있어야 합니다. 역할 기반 관리를 사용하여 계정에 이 권한을 부여합니다. 역할 기반 관리를 사용하는 방법에 대한 자세한 내용은 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)항목을 참조하세요.  
 
-     配布ポイントを新しい階層に正常にアップグレードまたは再割り当てするには、ソース階層の配布ポイントを管理するサイトのクライアント要求用に構成されたポートが、配布ポイントを管理する移行先サイトのクライアント要求用に構成されたポートと一致している必要があります。 クライアント要求ポートの詳細については、「[System Center Configuration Manager でのクライアント通信ポートの構成方法](../../core/clients/deploy/configure-client-communication-ports.md)」を参照してください。  
-
+     배포 지점을 업그레이드하거나 새 계층에 재할당하려면 원본 계층에서 배포 지점을 관리하는 사이트에서 클라이언트 요청에 대해 구성한 포트가 배포 지점을 관리할 대상 사이트에서 클라이언트 요청에 대해 구성한 포트와 일치해야 합니다. 클라이언트 요청 포트에 대한 자세한 내용은 [System Center Configuration Manager에서 클라이언트 통신 포트를 구성하는 방법](../../core/clients/deploy/configure-client-communication-ports.md)을 참조하세요.  

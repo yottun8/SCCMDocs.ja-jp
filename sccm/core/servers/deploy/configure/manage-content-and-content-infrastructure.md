@@ -1,38 +1,34 @@
 ---
-title: "コンテンツ インフラストラクチャ | Microsoft Docs"
-description: "System Center Configuration Manager のコンテンツ管理インフラストラクチャを展開して管理する方法について説明します。"
+title: "콘텐츠 인프라 | Microsoft 문서"
+description: "System Center Configuration Manager에 대한 콘텐츠 관리 인프라를 배포한 후 관리하는 방법을 알아봅니다."
 ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ceff72f5-f19d-43a0-a8c0-72f1c09b9bf5
-caps.latest.revision: 17
-caps.handback.revision: 0
+caps.latest.revision: "17"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e30538ed925af66e8b7459eb4add9dd992c1ae19
 ms.openlocfilehash: b0f297fddca4252f106dee9d3d5d8911a347825b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-content-and-content-infrastructure-for-system-center-configuration-manager"></a>System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理
+# <a name="manage-content-and-content-infrastructure-for-system-center-configuration-manager"></a>System Center Configuration Manager용 콘텐츠 및 콘텐츠 인프라 관리
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager のコンテンツ管理インフラストラクチャを設定して管理する準備ができたら、次のトピックの情報を使用します。  
+System Center Configuration Manager용 콘텐츠 관리 인프라를 설정하고 관리할 준비가 되면 다음 항목에서 다음 정보를 참조하세요.  
 
--   [System Center Configuration Manager の配布ポイントのインストールと構成](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) コンテンツを展開する前に、配布ポイントをインストールして設定する必要があります。 その後、インフラストラクチャ全体のコンテンツ管理を簡素化するための配布ポイント グループを設定することができます。 このトピックの情報は、これらのタスクを完了するのに役立ち、個々の配布ポイントでサポートされている詳細かつ多様な設定を詳しく説明しています。  
+-   [System Center Configuration Manager의 배포 지점 설치 및 구성](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md) 콘텐츠를 배포하기 전에 배포 지점을 설치하고 설정해야 합니다. 그런 다음 인프라에 걸쳐 콘텐츠 관리를 간소화하는 배포 지점 그룹을 설정할 수 있습니다. 이 항목의 내용은 이러한 작업을 완료하는 데 유용하며, 개별 배포 지점에서 지원하는 심층적이고 다양한 설정을 자세히 설명해 줍니다.  
 
--   [System Center Configuration Manager でのコンテンツの展開および管理](../../../../core/servers/deploy/configure/deploy-and-manage-content.md)。 コンテンツの展開では、ネットワークを通じて、ファイルおよびソフトウェアを配布ポイント サーバーに転送します。 単純な転送に加えて、コンテンツを事前設定することができます。これは、ネットワーク帯域幅の過剰な使用を防ぐのに役立つ方法です。 このトピックの情報は、そのコンテンツを送信したり、事前設定されたコンテンツを効果的に使用したりする基本的なタスクに役立ちます。  
+-   [System Center Configuration Manager에 대한 콘텐츠 배포 및 관리](../../../../core/servers/deploy/configure/deploy-and-manage-content.md) 콘텐츠 배포는 네트워크를 통해 배포 지점 서버에 파일 및 소프트웨어를 전송합니다. 간단한 전송 외에도 콘텐츠를 사전 준비할 수 있으며, 이는 과도한 네트워크 대역폭 사용을 방지하는 데 도움이 되는 방법입니다. 이 항목의 내용을 참조하면 해당 콘텐츠를 보내거나 사전 준비된 콘텐츠를 효과적으로 사용하는 기본 작업을 수행하는 데 도움이 될 수 있습니다.  
 
--   [配布したコンテンツを System Center Configuration Manager で監視する](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md) コンテンツを展開したら、インフラストラクチャ全体でその状態を監視できます。 配布ポイントに届かなかったコンテンツを再配布したり、進行中の配布を取り消したりすることもできます。 このトピックの情報は、コンテンツの転送が失敗したときの問題解決方法など、コンテンツをどのように監視するのかを理解するのに役立ちます。  
-
+-   [System Center Configuration Manager를 사용하여 배포한 콘텐츠 모니터링](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md) 콘텐츠를 배포할 때 인프라 전반의 상태를 모니터링할 수 있습니다. 배포 지점에 도달하지 못한 콘텐츠를 재배포하거나 처리 중인 상태로 남아 있는 배포를 취소할 수 있습니다. 이 항목의 내용은 콘텐츠 전송이 실패하는 경우 몇 가지 문제를 해결하는 방법을 비롯하여 콘텐츠를 모니터링하는 방법을 이해하는 데 도움이 됩니다.  

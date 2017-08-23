@@ -1,60 +1,57 @@
 ---
-title: "デバイスを自動的にコレクションごとに分類する | Microsoft Docs"
-description: "System Center Configuration Manager でデバイスをコレクションに自動的に分類します。"
+title: "컬렉션으로 장치 자동 분류 | Microsoft 문서"
+description: "System Center Configuration Manager를 사용하여 컬렉션으로 장치를 자동으로 분류합니다."
 ms.custom: na
 ms.date: 04/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 98b038b4-1a13-4228-bdb8-a12194e32b0e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
-ms.openlocfilehash: b1bac05e9335dd757b8f499f97daea24e0f4acbd
-ms.contentlocale: ja-jp
-ms.lasthandoff: 01/03/2017
-
+ms.openlocfilehash: d1b79fb091a6ae4b967d63843ae7b45a0cbeb555
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="automatically-categorize-devices-into-collections-with-system-center-configuration-manager"></a>System Center Configuration Manager でデバイスをコレクションに自動的に分類する
+# <a name="automatically-categorize-devices-into-collections-with-system-center-configuration-manager"></a>System Center Configuration Manager를 사용하여 컬렉션으로 장치 자동 분류
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-Microsoft Intune と Configuration Manager を使用している場合に、デバイス コレクションにデバイスを自動的に配置するために使用できるデバイス カテゴリを作成することができます。 ユーザーは Intune にデバイスを登録するときに、デバイス カテゴリを選択する必要があります。 デバイス カテゴリは、Configuration Manager コンソールから変更できます。
+Microsoft Intune에서 Configuration Manager를 사용하는 경우 장치 컬렉션에 장치를 자동으로 배치하는 데 사용할 수 있는 장치 범주를 만들 수 있습니다. 그런 다음 사용자는 Intune에 장치를 등록할 때 장치 범주를 선택해야 합니다. Configuration Manager 콘솔에서 장치 범주를 변경할 수 있습니다.
 
 > [!IMPORTANT]  
-    >  この機能は、Microsoft Intune の **2016 年 6 月**以降のリリースで動作します。 これらの手順を実行する前に、今回のリリースに更新していることを確認してください。
+    >  이 기능은 Microsoft Intune의 **2016년 6월** 이상 릴리스에서 작동합니다. 이러한 절차를 시도하기 전에 이 릴리스로 업데이트했는지 확인합니다.
 
-## <a name="create-device-categories"></a>デバイス カテゴリを作成する
+## <a name="create-device-categories"></a>장치 범주 만들기
 
-1.  [**資産とコンプライアンス**] > [**概要**] > [**デバイス コレクション**] の順に移動します。
-2.  [**ホーム**] タブの [**デバイス コレクション**] グループで、[**デバイス カテゴリの管理**] を選択します。
-3.  カテゴリを作成、編集、または削除します。
+1.  **자산 및 준수** > **개요** > **장치 컬렉션**으로 이동합니다.
+2.  **홈** 탭의 **장치 컬렉션** 그룹에서 **장치 범주 관리**를 선택합니다.
+3.  범주를 만들거나, 편집 또는 제거합니다.
 
-## <a name="associate-a-collection-with-a-device-category"></a>コレクションをデバイス カテゴリに関連付ける
+## <a name="associate-a-collection-with-a-device-category"></a>컬렉션을 장치 범주에 연결
 
-コレクションをデバイス カテゴリと関連付けると、そのカテゴリのすべてのデバイスがそのコレクションに追加されます。 [**すべてのシステム**] などの組み込みコレクションにデバイス カテゴリの規則を追加することはできません。
+컬렉션을 장치 범주에 연결하면 해당 범주의 모든 장치가 컬렉션에 추가됩니다. **모든 시스템**과 같은 기본 제공 컬렉션에 장치 범주 규칙을 추가할 수 없습니다.
 
-1.  デバイス コレクションの [**プロパティ**] ダイアログの [**メンバーシップの規則**] で、[**規則の追加**] > [**デバイス カテゴリの規則**] の順に選びます。
-2.  [**デバイス カテゴリの選択**] ダイアログ ボックスで、コレクション内のすべてのデバイスに適用される 1 つ以上のカテゴリを選択します。
+1.  장치 컬렉션에 대한 **속성** 대화 상자의 **멤버 관리 규칙** 탭에서 **규칙 추가** > **장치 범주 규칙**을 선택합니다.
+2.  **장치 범주 선택** 대화 상자에서 컬렉션의 모든 장치에 적용될 하나 이상의 장치 범주를 선택합니다.
 
-## <a name="change-the-category-of-a-device"></a>デバイスのカテゴリを変更する
+## <a name="change-the-category-of-a-device"></a>장치의 범주 변경
 
-1.  [**資産とコンプライアンス**] > [**概要**] > [**デバイス**] で、[**デバイス**] 一覧からデバイスを選びます。
-2.  [**ホーム**] タブの [**デバイス**] グループで、[**カテゴリの変更**] を選びます。
-3.  カテゴリを選択し、[**OK**] を選びます。
+1.  **자산 및 준수** > **개요** > **장치**의 **장치** 목록에서 장치를 선택합니다.
+2.  **홈** 탭의 **장치** 그룹에서 **범주 변경**을 선택합니다.
+3.  범주를 선택하고 나서 **확인**을 선택합니다.
 
-## <a name="view-which-category-a-device-belongs-to"></a>デバイスが属するカテゴリを表示する
+## <a name="view-which-category-a-device-belongs-to"></a>장치가 속한 범주를 확인합니다.
 
-[**資産とコンプライアンス**] > [**概要**] > [**デバイス**] で、[**デバイス**] 一覧の [**デバイス カテゴリ**] 列にカテゴリが表示されます。
+**자산 및 준수** > **개요** > **장치**의 **장치** 목록에서 범주는 **장치 범주** 열에 표시됩니다.
 
-[**デバイス カテゴリ**] 列が表示されない場合、[**デバイス**] 一覧のいずれかの列の見出し ([**名前**] など) を右クリックし、[**デバイス カテゴリ**] を選択します。
+**장치 범주** 열이 표시되지 않는 경우 **장치** 목록(예: **이름**)에서 하나의 열 제목을 마우스 오른쪽 단추로 클릭한 다음 **장치 범주**를 선택합니다.
 
-デバイスをカテゴリに割り当て、その後、カテゴリを削除した場合、[**Microsoft Intune に各ユーザーが登録したデバイス一覧**] レポートには、[**デバイス カテゴリ**] 列にカテゴリ名ではなく GUID が表示されます。
-
+장치를 범주에 할당하고 이후에 범주를 삭제하는 경우 **Microsoft Intune에 사용자별로 등록된 장치 목록** 보고서에서 **장치 범주** 열에 범주 이름 대신 GUID가 표시됩니다.

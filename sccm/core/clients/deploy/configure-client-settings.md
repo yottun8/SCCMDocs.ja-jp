@@ -1,83 +1,81 @@
 ---
-title: "クライアント設定の構成 | Microsoft Docs"
-description: "System Center Configuration Manager でクライアント設定を選択します。"
+title: "클라이언트 설정 구성 | Microsoft 문서"
+description: "System Center Configuration Manager의 클라이언트 설정을 선택합니다."
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 95e9858a-bad4-4651-9e61-2e31dc5050fa
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 809c7938968b4a6efce6ef37fe7b7baf2c9dd3e7
-ms.openlocfilehash: 77e17786302c885052c8861107a49ff826accb65
-ms.contentlocale: ja-jp
-ms.lasthandoff: 12/16/2016
-
+ms.openlocfilehash: 478d562bfb7fdb3921a4278741ff096e81e6092a
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-configure-client-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアント設定を構成する方法
+# <a name="how-to-configure-client-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 클라이언트 설정을 구성하는 방법
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager のすべてのクライアント設定は、**[管理]** > **[クライアント設定]** から管理できます。 カスタム設定が適用されていない、階層内のすべてのユーザーおよびデバイスの設定を構成する場合は、既定の設定を変更します。 別の設定を一部のユーザーまたはデバイスのみに適用する場合は、カスタム設定を作成して、それらをコレクションに展開します。  
+**관리** > **클라이언트 설정**에서 System Center Configuration Manager의 모든 클라이언트 설정을 관리합니다. 계층에서 사용자 지정 설정이 적용되지 않은 모든 사용자 및 장치에 대한 설정을 구성하려면 기본 설정을 수정하세요. 일부 사용자 또는 장치에만 다른 설정을 적용하려면 사용자 지정 설정을 만들어 컬렉션에 배포하세요.  
 
-各クライアント設定の詳細については、「[System Center Configuration Manager のクライアント設定について](../../../core/clients/deploy/about-client-settings.md)」を参照してください。
+각 클라이언트 설정에 대한 자세한 내용은 [System Center Configuration Manager의 클라이언트 설정 정보](../../../core/clients/deploy/about-client-settings.md)를 참조하세요.
 
 > [!NOTE]  
->  クライアントを管理する構成項目を使用して、デバイスの構成対応の評価、追跡、および修復を行うことができます。 詳細については、「[System Center Configuration Manager でのデバイス コンプライアンスの確認](../../../compliance/understand/ensure-device-compliance.md)」を参照してください。  
+>  또한 클라이언트를 관리할 구성 항목을 사용하여 장치의 구성 호환성을 평가, 추적 및 재구성할 수 있습니다. 자세한 내용은 [System Center Configuration Manager를 사용하여 장치 준수 확인](../../../compliance/understand/ensure-device-compliance.md)을 참조하세요.  
 
-##  <a name="configure-the-default-client-settings"></a>既定のクライアント設定を構成する    
+##  <a name="configure-the-default-client-settings"></a>기본 클라이언트 설정 구성    
 
-1.  Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** > **[既定のクライアント設定]** の順に選択します。  
+1.  Configuration Manager 콘솔에서 **관리** > **클라이언트 설정** > **기본 클라이언트 설정**을 선택합니다.  
 
-3.  **[ホーム]** タブで **[プロパティ]** を選択します。  
+3.  **홈** 탭에서 **속성**을 선택합니다.  
 
-4.  ナビゲーション ウィンドウで、各設定のグループのクライアント設定を表示および構成します。  
+4.  탐색 창에서 각 설정 그룹의 클라이언트 설정을 보고 구성합니다.  
 
- クライアント コンピューターは、次にクライアント ポリシーをダウンロードするときに、これらの設定で構成されます。 単一クライアントのポリシーの取得を開始するには、「[System Center Configuration Manager でクライアントを管理する方法](../../../core/clients/manage/manage-clients.md)」の「[Configuration Manager クライアントのポリシーの取得開始](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval)」セクションを参照してください。  
+ 클라이언트 컴퓨터는 다음에 클라이언트 정책을 다운로드할 때 이 설정으로 구성됩니다. 단일 클라이언트에 대해 정책 검색을 시작하려면 [System Center Configuration Manager의 클라이언트 관리 방법](../../../core/clients/manage/manage-clients.md)에서 [Configuration Manager 클라이언트에 대한 정책 검색 시작](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval)을 참조하세요.  
 
-##  <a name="create-and-deploy-custom-client-settings"></a>カスタム クライアント設定を作成および展開する  
-これらのカスタム設定を展開すると、既定のクライアント設定が上書きされます。 この手順を始める前に、これらのカスタム クライアント設定を必要とするユーザーまたはデバイスを含むコレクションがあることを確認します。  
+##  <a name="create-and-deploy-custom-client-settings"></a>사용자 지정 클라이언트 설정 만들기 및 배포  
+이러한 사용자 지정 설정을 배포하면 기본 클라이언트 설정이 재정의됩니다. 이 절차를 시작하기 전에 이러한 사용자 지정 클라이언트 설정이 필요한 사용자 또는 장치가 포함된 컬렉션이 있는지 확인하세요.  
 
-1.  Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** の順に選択します。  
+1.  Configuration Manager 콘솔에서 **관리** > **클라이언트 설정**을 선택합니다.  
 
-3.  **[ホーム]** タブの **[作成]** グループで、**[カスタム クライアント設定の作成]** を選択してから、次のいずれかを選択します。  
+3.  **홈** 탭의 **만들기** 그룹에서 **사용자 지정 클라이언트 설정 만들기**를 선택하고 다음 중 하나를 선택합니다.  
 
-    -   **カスタム クライアント デバイス設定の作成**  
+    -   **사용자 지정 클라이언트 장치 설정 만들기**  
 
-    -   **カスタム クライアント ユーザー設定の作成**  
+    -   **사용자 지정 클라이언트 사용자 설정 만들기**  
 
-4.  一意の名前と、必要に応じて説明を指定します。  
+4.  고유한 이름 및 설명(선택 사항)을 지정합니다.  
 
-5.  設定のグループが表示されているチェック ボックスのうち 1 つまたは複数をオンにします。  
+5.  설정 그룹을 표시하는 확인란 중 하나 이상을 선택합니다.  
 
-6.  ナビゲーション ウィンドウの各設定のグループを選択し、利用可能な設定を構成して **[OK]** をクリックします。   
+6.  탐색 창에서 각 설정 그룹을 선택하고 사용 가능한 설정을 구성한 다음 **확인**을 클릭합니다.   
 
-8.  作成したカスタム クライアント設定を選択します。 **[ホーム]** タブの **[クライアント設定]** グループで、**[展開]** を選択します。  
+8.  작성한 사용자 지정 클라이언트 설정을 선택합니다. **홈** 탭의 **클라이언트 설정** 그룹에서 **배포**를 선택합니다.  
 
-9. **[コレクションの選択]** ダイアログ ボックスで適切なコレクションを選択し、**[OK]** を選択します。 選択したコレクションを確認するには、詳細ウィンドウで [ **展開** ] タブをクリックします。  
+9. **컬렉션 선택** 대화 상자에서 적합한 컬렉션을 선택한 다음 **확인**을 선택합니다. 세부 정보 창에서 **배포** 탭을 클릭하면 선택한 컬렉션을 확인할 수 있습니다.  
 
-10. 作成したカスタム クライアント設定の順序を表示します。 複数のカスタム クライアント設定がある場合は、順序番号に従って適用されます。 競合がある場合は、順序番号が一番小さい設定によってその他の設定が上書きされます。 順序番号を変更するには、**[ホーム]** タブの **[クライアント設定]** グループで、**「Move Item Up」 (項目を上に移動)** または **「Move Item Down」 (項目を下に移動)** を選択します。  
+10. 방금 만든 사용자 지정 클라이언트 설정 순서를 봅니다. 사용자 지정 클라이언트 설정이 여러 개인 경우 해당 순서 번호에 따라 적용됩니다. 충돌이 있는 경우 순서 번호가 가장 낮은 설정이 다른 설정을 재정의합니다. 순서를 변경하려면 **홈** 탭의 **클라이언트 설정** 그룹에서 **위로 항목 이동** 또는 **아래로 항목 이동**을 선택합니다.  
 
- クライアント コンピューターは、次にクライアント ポリシーをダウンロードするときに、これらの設定で構成されます。 単一クライアントのポリシーの取得を開始するには、「[System Center Configuration Manager でクライアントを管理する方法](../../../core/clients/manage/manage-clients.md)」の「[Configuration Manager クライアントのポリシーの取得開始](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval)」セクションを参照してください。  
+ 클라이언트 컴퓨터는 다음에 클라이언트 정책을 다운로드할 때 이 설정으로 구성됩니다. 단일 클라이언트에 대해 정책 검색을 시작하려면 [System Center Configuration Manager의 클라이언트 관리 방법](../../../core/clients/manage/manage-clients.md)에서 [Configuration Manager 클라이언트에 대한 정책 검색 시작](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval)을 참조하세요.  
 
-##  <a name="view-client-settings"></a>クライアント設定を表示する  
- 同じデバイス、ユーザー、または、ユーザー グループに複数のクライアント設定が展開されている場合、優先順位と設定が複雑になることがあります。 クライアント設定を表示するには  
+##  <a name="view-client-settings"></a>클라이언트 설정 보기  
+ 같은 장치, 사용자 또는 사용자 그룹에 여러 클라이언트 설정을 배포한 경우 설정의 우선 순위 및 조합이 복잡할 수 있습니다. 클라이언트 설정을 보려면 다음을 수행합니다.  
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[デバイス]** > **[ユーザー]** または **[ユーザー コレクション]** の順に選択します。  
+1.  Configuration Manager 콘솔에서 **자산 및 호환성** > **장치** > **사용자** 또는 **사용자 컬렉션**을 선택합니다.  
 
-3.  [ **クライアント設定** ] グループで、デバイス、ユーザー、または、ユーザー グループを選択して、[ **クライアントの設定の結果**] を選択します。  
+3.  장치, 사용자 또는 사용자 그룹을 선택하고 **클라이언트 설정** 그룹에서 **결과 클라이언트 설정**을 선택합니다.  
 
-4.  左ウィンドウからクライアント設定を選択すると、設定が表示されます。 この表示では、設定は読み取り専用です。 
+4.  왼쪽 창에서 클라이언트 설정을 선택하면 설정이 표시됩니다. 이 보기에서 설정은 읽기 전용입니다. 
 
     > [!NOTE]  
-    >  クライアント設定を表示するには、クライアント設定に対する読み取りアクセス権を持っている必要があります。  
+    >  클라이언트 설정을 보려면 클라이언트 설정에 대한 읽기 액세스 권한이 있어야 합니다.  
 
     

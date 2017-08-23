@@ -1,50 +1,46 @@
 ---
-title: "会社所有のデバイスを登録する - Configuration Manager | Microsoft Docs"
-description: "Configuration Manager を使用してハイブリッド展開用に会社所有のデバイスを登録するさまざまな方法について説明します。"
+title: "회사 소유 장치 등록 - Configuration Manager | Microsoft 문서"
+description: "Configuration Manager를 사용하여 하이브리드 배포를 위해 회사 소유 장치를 등록하는 다양한 방법을 알아봅니다."
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2754ce6-1460-4ddd-9050-2cc87e7964f4
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: f0b503d8c9eba2dd1b6eb4c41ec40c001b727326
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="enroll-company-owned-devices-for-hybrid-deployments-with-configuration-manager"></a>Configuration Manager を使用してハイブリッド展開用に会社所有のデバイスを登録する
+# <a name="enroll-company-owned-devices-for-hybrid-deployments-with-configuration-manager"></a>Configuration Manager를 사용하는 하이브리드 배포를 위해 회사 소유 장치 등록
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-組織または会社所有のデバイス (COD) は、デバイスおよびその購入方法に応じて、さまざまな方法で管理対象に含めることができます。  
+조직 소유 장치 또는 COD(회사 소유 장치)는 장치 및 구입 방법에 따라 여러 가지 방법으로 관리 대상이 될 수 있습니다.  
 
-## <a name="enroll-device-enrollment-program-ios-devices"></a>Device Enrollment Program による iOS デバイスの登録  
- Apple の Device Enrollment Program を通じて購入したデバイスに対し、無線による登録プロファイルの展開を行います。 ユーザーがデバイス上でセットアップ アシスタントを実行すると、そのデバイスが Intune に登録されます。  DEP を使用して登録したデバイスの場合は、ユーザーが登録を解除することはできません。 「[Configuration Manager とのハイブリッド展開に対応する iOS Device Enrollment Program (DEP) 登録](../../mdm/deploy-use/ios-device-enrollment-program-for-hybrid.md)」をご覧ください。  
+## <a name="enroll-device-enrollment-program-ios-devices"></a>장치 등록 프로그램 iOS 장치 등록  
+ Apple의 장비 등록 프로그램을 통해 구입한 장치에 "무선으로" 등록 프로필을 배포합니다. 사용자가 장치에서 설정 도우미를 실행하면 장치가 Intune에 등록됩니다.  DEP를 통해 등록된 장치는 사용자가 등록을 취소할 수 없습니다. [Configuration Manager를 사용하여 하이브리드 배포를 위해 iOS DEP(장치 등록 프로그램) 등록](../../mdm/deploy-use/ios-device-enrollment-program-for-hybrid.md)  
 
-## <a name="enroll-ios-devices-with-apple-configurator"></a>Apple Configurator による iOS デバイスの登録  
- この方法では、管理者は、Apple Configurator を実行している Mac コンピューターに iOS デバイスを USB 経由で接続し、登録を事前構成する必要があります。 その後、デバイスは、セットアップ アシスタント プロセスを実行するユーザーに届けられ、そのユーザーの所属する職場や学校の資格情報を使用して構成されて、登録プロセスを完了します。 「[Apple Configurator と Configuration Manager を使用した iOS ハイブリッド登録](../../mdm/deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)」をご覧ください。  
+## <a name="enroll-ios-devices-with-apple-configurator"></a>Apple Configurator를 사용한 iOS 장치 등록  
+ 이 방법을 사용하려면 등록을 미리 구성하도록 관리자가 Apple Configurator를 실행하는 Mac 컴퓨터에 iOS 장치를 USB로 연결해야 합니다. 그런 다음 장치는 설치 도우미 프로세스를 실행하는 사용자에게 제공되어 회사 또는 학교 자격 증명을 사용하여 장치를 구성하고 등록 프로세스를 완료합니다. [Configuration Manager와 Apple Configurator를 사용하여 iOS 하이브리드 등록](../../mdm/deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)을 참조하세요.  
 
-## <a name="device-enrollment-manager"></a>デバイス登録マネージャー  
- 組織は Intune を使用して、デバイス登録マネージャー アカウントと呼ばれる単一のユーザー アカウントで多数のモバイル デバイスを管理することができます。 デバイス登録マネージャー アカウントを作成すると、そのアカウントをマネージャーが使用して、通常のユーザーに既定で許可されている標準の 5 台を超えるデバイスを登録することができます。 デバイス登録マネージャーを使用したデバイスの登録は、特定のユーザーが使用していないデバイスに対してのみ機能します。 これらのデバイスは、たとえば販売時点管理 (POS) アプリやユーティリティ アプリには適していますが、電子メールや会社のリソースにアクセスする必要があるユーザーには適していません。 「[デバイス登録マネージャーと Configuration Manager を使用したデバイスの登録](../../mdm/deploy-use/enroll-devices-with-device-enrollment-manager.md)」をご覧ください。  
+## <a name="device-enrollment-manager"></a>장치 등록 관리자  
+ 조직에서는 Intune을 사용하여 장치 등록 관리자 계정이라는 단일 사용자 계정으로 많은 수의 모바일 장치를 관리할 수 있습니다. 장치 등록 관리자 계정을 만든 후 해당 계정은 관리자가 일반 사용자에게 기본적으로 허용하는 5개의 표준 장치보다 많은 장치를 등록하는 데 사용할 수 있습니다. 특정 사용자가 사용하지 않는 장치에만 장치 등록 관리자를 사용하여 장치를 등록할 수 있습니다. 이러한 장치는 예를 들면 POS(point-of-sale) 또는 유틸리티 앱에는 좋으나 메일 또는 회사 리소스에 액세스해야 하는 사용자에게는 좋지 않습니다. [Configuration Manager와 장치 등록 관리자를 사용하여 장치 등록](../../mdm/deploy-use/enroll-devices-with-device-enrollment-manager.md)을 참조하세요.  
 
-## <a name="user-affinity-for-managed-devices"></a>管理対象デバイスのユーザー アフィニティ  
- 管理者は会社所有のデバイスのプロファイルを構成するときに、管理対象デバイスが*ユーザー アフィニティ*をサポートするかどうかを指定できます (ユーザー アフィニティはデバイスで特定のユーザーを識別します)。 **ユーザー アフィニティ**が構成されているデバイスは、会社のポータル アプリをインストールして実行することにより、アプリをダウンロードしてデバイスを管理できるようになります。 「[Configuration Manager でのハイブリッド管理のデバイス向けユーザー アフィニティ](../../mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md)」をご覧ください。  
+## <a name="user-affinity-for-managed-devices"></a>관리 장치에 대한 사용자 선호도  
+ 회사 소유 장치의 프로필을 구성할 때 관리자는 장치로 특정 사용자를 식별하는 *사용자 선호도*를 관리 장치가 지원할지 여부를 지정할 수 있습니다. **사용자 선호도**로 구성한 장치에서 회사 포털 앱을 설치하고 실행하여 앱을 다운로드하고 장치를 관리할 수 있습니다. [Configuration Manager의 하이브리드 관리 장치에 대한 사용자 선호도](../../mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md)를 참조하세요.  
 
-## <a name="manage-devices-with-activation-lock"></a>アクティブ化ロックによるデバイスの管理  
- Microsoft Intune は、iOS 7.1 以降のデバイス向けの iPhone を探すアプリの機能である iOS のアクティベーション ロックを管理するために役立ちます。 iPhone を探すアプリをデバイスで使用すると、アクティブ化ロックが自動的に有効になります。 「[System Center Configuration Manager を使用した iOS のアクティベーション ロックの管理](../../mdm/deploy-use/manage-ios-activation-lock.md)」をご覧ください。
+## <a name="manage-devices-with-activation-lock"></a>활성화 잠금을 사용한 장치 관리  
+ Microsoft Intune에서는 iOS 7.1 이상 장치용 나의 iPhone 찾기(Find My iPhone) 앱의 기능인 iOS 활성화 잠금을 관리할 수 있습니다. 활성화 잠금은 장치에서 나의 iPhone 찾기 앱을 사용할 때 자동으로 사용하도록 설정됩니다. [System Center Configuration Manager로 iOS 활성화 잠금 관리](../../mdm/deploy-use/manage-ios-activation-lock.md)를 참조하세요.
 
- ## <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>IMEI または iOS シリアル番号によるデバイスの事前宣言
+ ## <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>IMEI 또는 iOS 일련 번호로 장치 미리 선언
 
-会社所有のデバイスの International station Mobile Equipment Identity (IMEI) 番号または iOS シリアル番号をインポートすることで、それらのデバイスを識別できます。 デバイスの IMEI 番号を含むコンマ区切り値 (.csv) ファイルをアップロードするか、デバイス情報を手動で入力することができます。  「[Predeclare devices with hardware ID numbers](../../mdm/deploy-use/predeclare-devices-with-hardware-id.md)」 (ハードウェア ID 番号によるデバイスの事前宣言) をご覧ください。
-
+해당 IMEI(International station Mobile Equipment Identity) 번호 또는 iOS 일련 번호를 가져와서 회사 소유의 장치를 식별할 수 있습니다. 장치 IMEI 번호를 포함한 쉼표로 구분된 값(.csv) 파일을 업로드하거나 장치 정보를 수동으로 입력할 수 있습니다.  [하드웨어 ID 번호로 장치 미리 선언](../../mdm/deploy-use/predeclare-devices-with-hardware-id.md)을 참조하세요.

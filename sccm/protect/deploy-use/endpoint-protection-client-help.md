@@ -1,64 +1,60 @@
 ---
-title: "Endpoint Protection クライアント ヘルプ | Microsoft Docs"
-description: "コンピューターを脅威から保護するのに役立つ Endpoint Protection の機能と拡張機能について説明します。"
+title: "Endpoint Protection 클라이언트 도움말 | Microsoft 문서"
+description: "위협으로부터 컴퓨터를 보다 효과적으로 보호할 수 있는 Endpoint Protection의 기능과 향상된 기능에 대해 알아봅니다."
 ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fdcee455-22e3-451d-bcf3-e7b62792f04a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
 ms.openlocfilehash: 212c73fcb947c3b56da6055bf47fe078301ad90d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="endpoint-protection-client-help"></a>Endpoint Protection クライアント ヘルプ
+# <a name="endpoint-protection-client-help"></a>Endpoint Protection 클라이언트 도움말
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
 
-このバージョンの Windows Defender または Endpoint Protection には、コンピューターを脅威から保護するのに役立つ、次のような機能があります。  
+이 버전의 Windows Defender 또는 Endpoint Protection에는 위협으로부터 컴퓨터를 보호하는 다음과 같은 기능이 포함됩니다.  
 
--   **Windows ファイアウォールとの統合。** Endpoint Protection セットアップで Windows ファイアウォールを有効または無効にできます。  
--   **ネットワーク検査システム:** ネットワーク トラフィックを検査して、既知のネットワークベースの脆弱性の悪用を未然に防ぐことで、リアルタイム保護機能を強化します。  
--   **保護エンジン。** リアルタイム保護では、PC にインストールされているか実行されているマルウェアを見つけて阻止します。 更新されたエンジンでは、保護機能と除去機能が拡張され、パフォーマンスが改善されています。  
+-   **Windows 방화벽 통합.** Endpoint Protection 설치 프로그램에서 Windows 방화벽을 설정하거나 해제할 수 있습니다.  
+-   **네트워크 검사 시스템:** 이 기능은 네트워크 트래픽 검사를 통해 알려진 네트워크 기반 취약성을 악용하지 못하도록 사전에 차단하여 실시간 보호를 향상시켜 줍니다.  
+-   **보호 엔진.** 실시간 보호를 통해 PC에서 설치 또는 실행되지 못하도록 맬웨어를 찾아서 중지합니다. 업데이트된 엔진은 보다 우수한 성능의 향상된 검색 및 치료 기능을 제공합니다.  
 
-Windows Defender は、Windows 10 オペレーティング システムの一部として提供されます。  以前のバージョンの Windows では、管理者は、管理ソフトウェアを使用して Windows Defender または Endpoint Protection を提供することができます。
+Windows Defender는 Windows 10 운영 체제와 함께 제공됩니다.  이전 버전의 Windows에서 관리자는 관리 소프트웨어를 사용하여 Windows Defender 또는 Endpoint Protection을 제공할 수 있습니다.
 
-「[Windows Defender と Endpoint Protection についてよく寄せられる質問](endpoint-protection-client-faq.md)」の一覧もあります。 トラブルシューティングについては、「[Windows Defender または Endpoint Protection クライアントのトラブルシューティング](troubleshoot-endpoint-client.md)」を参照してください。 新機能のリストについては、「[Windows Defender の新機能](https://support.microsoft.com/help/29276/windows-10-whats-new-in-windows-defender)」を参照してください。
+[Windows Defender 및 Endpoint Protection에 대한 질문과 대답](endpoint-protection-client-faq.md) 목록도 확인할 수 있습니다. 문제를 해결하려면 [Windows Defender 또는 Endpoint Protection 클라이언트 문제 해결](troubleshoot-endpoint-client.md)을 참조하세요. 새로운 기능 목록을 보려면 [Windows Defender 클라이언트의 새로운 기능](https://support.microsoft.com/help/29276/windows-10-whats-new-in-windows-defender)을 참조하세요.
 
-## <a name="windows-firewall-integration"></a>Windows ファイアウォールとの統合  
- Windows ファイアウォールは、攻撃者や悪意のあるソフトウェアがインターネットやネットワークを介してコンピューターにアクセスすることを防ぐうえで役立ちます。 Endpoint Protection のインストール時に、インストール ウィザードによって Windows ファイアウォールが有効であるかどうかが確認されるようになりました。 Windows ファイアウォールを意図的に無効にしていた場合は、チェック ボックスをオフにすることで有効にならないようにすることができます。 Windows ファイアウォールの設定は、コントロール パネルのシステムとセキュリティの設定からいつでも変更できます。  
+## <a name="windows-firewall-integration"></a>Windows 방화벽 통합  
+ Windows 방화벽은 공격자나 악성 소프트웨어가 인터넷 또는 네트워크를 통해 사용자의 컴퓨터에 액세스하지 못하도록 하는 데 유용합니다. 이제 Endpoint Protection을 설치할 때 설치 마법사에서 Windows 방화벽을 설정할지 확인합니다. Windows 방화벽을 의도적으로 해제하고 있던 경우에는 확인란의 선택을 취소하여 Windows 방화벽이 설정되지 않도록 할 수 있습니다. 제어판의 시스템 및 보안 설정을 통해 언제든지 Windows 방화벽 설정을 변경할 수 있습니다.  
 
-## <a name="network-inspection-system"></a>ネットワーク検査システム  
- ソフトウェア ベンダーがセキュリティ更新プログラムを開発し配布する前に、未対応の脆弱性をねらったネットワーク ベースの攻撃が実行されるケースが増えています。 脆弱性についての研究によると、最初の攻撃が報告されてから適切なセキュリティ更新プログラムが開発、テスト、およびリリースされるまで、1 か月かかることがあります。 この保護の時間差によって、相当の期間、多数のコンピューターが攻撃や脆弱性の悪用に対して無防備になります。 ネットワーク検査システムはリアルタイム保護と連携して、脆弱性の発覚から修正プログラムの開発までの期間を数週間から数時間に短縮することで、ネットワーク ベースの攻撃に対する保護を強化しています。  
+## <a name="network-inspection-system"></a>네트워크 검사 시스템  
+ 노출된 취약성에 대해 소프트웨어 공급업체에서 미처 보안 업데이트를 개발하고 배포하기도 전에 공격자에 의해 실행되는 네트워크 기반 공격이 점점 늘고 있습니다. 취약성 연구 결과에서는 처음 공격이 보고된 후 적절한 보안 업데이트가 개발 및 테스트되어 릴리스되기까지는 한 달 이상이 소요될 수 있음을 보여 주고 있습니다. 이러한 보호 공백으로 인해 많은 컴퓨터가 상당 기간 동안 공격과 악용에 취약한 상태로 있게 될 수 있습니다. 네트워크 검사 시스템에서는 실시간 보호 기능을 사용하여 취약성 노출 후 패치 배포까지 소요되는 기간을 수주에서 수시간으로 대폭 단축함으로써 네트워크 기반 공격에 대한 보호 수준을 강화합니다.  
 
-## <a name="award-winning-protection-engine"></a>受賞歴のある保護エンジン  
- Windows Defender や Endpoint Protection の中身は、定期的に更新される、受賞歴のある保護エンジンです。 このエンジンは、マイクロソフト マルウェア プロテクション センターのマルウェア対策研究者のチームによって支えられ、最新のマルウェアの脅威に 24 時間体制で対応しています。  
+## <a name="award-winning-protection-engine"></a>뛰어난 보호 엔진  
+ Windows Defender 또는 Endpoint Protection에는 정기적으로 업데이트되는 뛰어난 보호 엔진이 포함되어 있습니다. 이 엔진은 Microsoft 맬웨어 보호 센터에 있는 맬웨어 방지 연구팀의 지원을 받아 24시간 내내 최신 맬웨어에 대한 대처 방법을 제공합니다.  
 
-## <a name="windows-defender-settings"></a>Windows Defender の設定
-Windows Defender の設定で、悪意のあるソフトウェアから PC を保護できるようにします。 管理者は、ユーザーに代わって、いくつかの Windows Defender の設定を管理する場合があります。 Windows Defender の設定を使用すれば、他のユーザーを管理することができます。 PC とデータを保護するのに役立つ Windows Defender の設定を有効にすることをお勧めします。
+## <a name="windows-defender-settings"></a>Windows Defender 설정
+Windows Defender 설정을 통해 악성 소프트웨어로부터 PC를 보호할 수 있는 설정을 적용할 수 있습니다. 관리자가 사용자 대신 일부 Windows Defender 설정을 관리할 수 있습니다. Windows Defender 설정을 사용하여 다른 설정을 관리할 수 있습니다. PC와 데이터를 보호하도록 Windows Defender 설정을 사용하도록 설정하는 것이 좋습니다.
 
-Windows Defender の設定を表示するには、PC で `Windows Defender` を検索します。 **Windows Defender** を開き、**[設定]** を選択します。 Windows Defender の設定には以下のものが含まれます。
-- **リアルタイム保護** - PC にインストールされているか実行されているマルウェアを見つけて阻止します。
-- **クラウドベースの保護** - Windows Defender は、潜在的なセキュリティ脅威について Microsoft に情報を送信します。
-- **自動サンプル送信** - Windows Defender で不審なファイルのサンプルを Microsoft に送信し、マルウェア検出を強化できるようにします。
-- **除外** - Windows Defender でのスキャン対象から、特定のファイル、フォルダー、ファイル拡張子、プロセスを除外することができます。
-- **拡張通知** - PC の正常性に関する通知を有効にします。 **[オフ]** にしても、重要な通知は受け取れます。
-- **Windows Defender オフライン** - Windows Defender オフラインを実行することで、悪意のあるソフトウェアを見つけて削除することができます。 このスキャンでは PC が再起動され、完了まで約 15 分かかります。
+Windows Defender 설정을 보려면 PC에서 `Windows Defender`를 검색합니다. **Windows Defender**를 열고 **설정**을 선택합니다. Windows Defender 설정은 다음을 포함합니다.
+- **실시간 보호** - PC에서 설치 또는 실행되지 못하도록 맬웨어를 찾아서 중지합니다.
+- **클라우드 기반 보호** - Windows Defender는 잠재적 보안 위협에 대한 정보를 Microsoft에 보냅니다.
+- **자동 샘플 제출** - 맬웨어 검색을 개선하기 위해 Windows Defender가 의심스러운 파일의 샘플을 Microsoft에 보내도록 합니다.
+- **제외** - Windows Defender 검사에서 특정 파일, 폴더, 파일 확장명 또는 프로세스를 제외할 수 있습니다.
+- **향상된 알림** - PC 상태에 대한 정보를 제공하는 알림을 사용합니다. **해제**한 경우에도 중요한 알림을 받게 됩니다.
+- **Windows Defender Offline** - Windows Defender Offline을 실행하여 악성 소프트웨어를 찾아서 제거할 수 있습니다. 이 검사를 수행하면 PC가 다시 시작되고 검사에는 15분 정도가 걸립니다.
 
-### <a name="see-also"></a>関連項目  
- [Endpoint Protection クライアントのよく寄せられる質問](endpoint-protection-client-faq.md)   
- [Windows Defender または Endpoint Protection クライアントのトラブルシューティング](troubleshoot-endpoint-client.md)
-
+### <a name="see-also"></a>참고 항목  
+ [Endpoint Protection 클라이언트에 대한 질문과 대답](endpoint-protection-client-faq.md)   
+ [Windows Defender 또는 Endpoint Protection 클라이언트 문제 해결](troubleshoot-endpoint-client.md)

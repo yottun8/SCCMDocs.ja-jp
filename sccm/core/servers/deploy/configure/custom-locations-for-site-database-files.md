@@ -1,47 +1,44 @@
 ---
-title: "カスタム データベース ファイルの場所 | Microsoft Docs"
-description: "SQL Server データベース ファイルのカスタムの場所を指定する方法について説明します。"
+title: "사용자 지정 데이터베이스 파일 위치 | Microsoft 문서"
+description: "SQL Server 데이터베이스 파일에 대해 사용자 지정 위치를 지정하는 방법을 알아봅니다."
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5e5155aa8c03b7e0c200d083024c8fa386f97aa7
 ms.openlocfilehash: cfac2c03c1b71b40c68d8acd5fbd96c5e98caaa9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="custom-locations-for-system-center-configuration-manager-site-database-files"></a>System Center Configuration Manager のサイト データベース ファイルのカスタムの場所
+# <a name="custom-locations-for-system-center-configuration-manager-site-database-files"></a>System Center Configuration Manager 사이트 데이터베이스 파일에 대한 사용자 지정 위치
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
- System Center Configuration Manager は、SQL Server データベース ファイルのカスタムの場所をサポートしています。  
+ System Center Configuration Manager는 SQL Server 데이터베이스 파일에 대해 사용자 지정 위치를 지원합니다.  
 
 > [!NOTE]  
->  既定以外のファイルの場所を指定するオプションは、SQL Server クラスターを使用する場合は使用できません。  
+>  SQL Server 클러스터를 사용할 때는 기본 파일 위치가 아닌 위치를 지정하는 옵션을 사용할 수 없습니다.  
 
- 新しいプライマリ サイトまたは中央管理サイトの**セットアップ中**に、次のことができます。  
+ 새 기본 사이트 또는 중앙 관리 사이트를**설치하는 동안** 다음을 수행할 수 있습니다.  
 
--   **サイト データベースの既定以外のファイルの場所の指定**: Configuration Manager のセットアップによって、これらの場所を使用してサイト データベースが作成されます。  
+-   **사이트 데이터베이스에 대해 기본이 아닌 파일 위치 지정**: Configuration Manager 설치 프로그램은 이러한 위치를 사용하여 사이트 데이터베이스를 만듭니다.  
 
--   **カスタムのファイルの場所を使用する、事前に作成した SQL Server データベースの使用の指定**: Configuration Manager のセットアップでは、事前に作成したデータベースとその構成済みのファイルの場所を使用します。  
+-   **사용자 지정 파일 위치를 사용하는 미리 만든 SQL Server 데이터베이스 사용 지정**:  Configuration Manager 설치 프로그램은 이 미리 만든 데이터베이스와 미리 구성된 파일 위치를 사용합니다.  
 
-**セットアップ後に**、サイト データベース ファイルの場所を変更できます。 これには、次のようにサイトを停止して、SQL Server でファイルの場所を編集する必要があります。  
+**설치 후**에는 사이트 데이터베이스 파일의 위치를 변경할 수 있습니다. 이렇게 하려면 사이트를 중지하고 SQL Server에서 파일 위치를 편집해야 합니다.  
 
--   Configuration Manager サイト サーバーで、**SMS_Executive** サービスを停止します。  
+-   Configuration Manager 사이트 서버에서 **SMS_Executive** 서비스를 중지합니다.  
 
--   該当するバージョンの SQL Server のドキュメントを参照し、説明に従ってユーザー データベースを移動します。 たとえば、SQL Server 2014 を使用する場合は、TechNet の「 [ユーザー データベースの移動](https://technet.microsoft.com/library/ms345483\(v=sql.120\).aspx) 」をご覧ください。  
+-   SQL Server 버전의 설명서에서 사용자 데이터베이스를 이동하는 방법을 확인합니다. 예를 들어 SQL Server 2014를 사용하는 경우 TechNet에서 [사용자 데이터베이스 이동](https://technet.microsoft.com/library/ms345483\(v=sql.120\).aspx) 을 참조하세요.  
 
--   データベース ファイルの移動が完了したら、Configuration Manager サイト サーバーで **SMS_Executive** サービスを再起動します。  
-
+-   데이터베이스 파일 이동을 완료한 후 Configuration Manager 사이트 서버에서 **SMS_Executive** 서비스를 다시 시작합니다.  

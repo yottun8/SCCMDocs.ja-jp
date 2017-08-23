@@ -1,7 +1,6 @@
 ---
-
-title: "ソフトウェア更新プログラムのベスト プラクティス | Microsoft Docs"
-description: "System Center Configuration Manager でのソフトウェア更新プログラムのベスト プラクティスを使用します。"
+title: "소프트웨어 업데이트에 대한 모범 사례 | Microsoft 문서"
+description: "System Center Configuration Manager의 소프트웨어 업데이트에 대한 다음 모범 사례를 따르세요."
 keywords: 
 author: dougeby
 ms.author: dougeby
@@ -10,53 +9,48 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
 ms.openlocfilehash: 5df20f3703442de1be6220ca2770e182e330c036
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="best-practices-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager でのソフトウェア更新プログラムについて推奨する運用方法
+# <a name="best-practices-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager의 소프트웨어 업데이트에 대한 모범 사례
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-このトピックには、System Center Configuration Manager でのソフトウェア更新プログラムのベスト プラクティスが含まれています。 また、最初のインストール時のベスト プラクティスと、運用時のベスト プラクティスに分けて説明しています。  
+이 항목에는 System Center Configuration Manager의 소프트웨어 업데이트에 대한 모범 사례가 포함되어 있습니다. 초기 설치에 대한 모범 사례와 지속적인 작업에 대한 모범 사례로 정보가 분류되어 있습니다.  
 
-## <a name="installation-best-practices"></a>インストールについて推奨する運用方法  
- Configuration Manager にソフトウェア更新プログラムをインストールするときには、次のベスト プラクティスを使用してください。  
+## <a name="installation-best-practices"></a>설치 모범 사례  
+ Configuration Manager에서 소프트웨어 업데이트를 설치할 때 따라야 하는 모범 사례는 다음과 같습니다.  
 
-### <a name="use-a-shared-wsus-database-for-software-update-points"></a>ソフトウェアの更新ポイント用に共有 WSUS データベースを使用する  
- プライマリ サイトに複数のソフトウェアの更新ポイントをインストールする場合、同じ Active Directory フォレストの各ソフトウェアの更新ポイントで、同じ WSUS データベースを使用します。 クライアントが新しいソフトウェアの更新ポイントに切り替えるときに、クライアントとネットワークのパフォーマンスが低下する可能性がありますが、同じデータベースを共有することで、その影響を大幅に軽減できます。 クライアントが、古いソフトウェアの更新ポイントとデータベースを共有する新しいソフトウェアの更新ポイントに切り替えた場合でも、差分スキャンは発生しますが、WSUS サーバーに専用のデータベースがある場合よりも、差分スキャンのサイズは大幅に小さくなります。  
+### <a name="use-a-shared-wsus-database-for-software-update-points"></a>소프트웨어 업데이트 지점에 공유 WSUS 데이터베이스 사용  
+ 기본 사이트에서 둘 이상의 소프트웨어 업데이트 지점을 설치하는 경우 동일한 Active Directory 포리스트에 있는 각 소프트웨어 업데이트 지점에 같은 WSUS 데이터베이스를 사용합니다. 동일한 데이터베이스를 공유하면 클라이언트가 새 소프트웨어 업데이트 지점으로 전환될 때 발생할 수 있는 클라이언트 및 네트워크 성능 영향이 대폭 줄어들 수 있습니다. 클라이언트가 이전 소프트웨어 업데이트 지점과 같은 데이터베이스를 사용하는 새 소프트웨어 업데이트 지점으로 전환하는 경우에도 델타 검사는 이루어지지만 WSUS 서버가 자체 데이터베이스를 갖는 경우보다 검사 규모가 훨씬 작아집니다.  
 
 > [!IMPORTANT]  
->  また、ソフトウェアの更新ポイントに共有の WSUS データベースを使用する場合は、ローカルの WSUS コンテンツ フォルダーを共有する必要があります。  
+>  소프트웨어 업데이트 지점에 공유 WSUS 데이터베이스를 사용하는 경우 로컬 WSUS 콘텐츠 폴더를 공유해야 합니다.  
 
- ソフトウェアの更新ポイントを切り替える際の詳細については、「[Plan for software updates in System Center Configuration Manager](../../sum/plan-design/plan-for-software-updates.md)」(System Center Configuration Manager でのソフトウェア更新プログラムの計画) トピックの「[Software update point switching](../../sum/plan-design/plan-for-software-updates.md#BKMK_SUPSwitching)」(ソフトウェアの更新ポイントの切り替え) セクションを参照してください。  
+ 소프트웨어 업데이트 지점 전환에 대한 자세한 내용은 [System Center Configuration Manager에서 소프트웨어 업데이트 계획](../../sum/plan-design/plan-for-software-updates.md) 항목에서 [소프트웨어 업데이트 지점 전환](../../sum/plan-design/plan-for-software-updates.md#BKMK_SUPSwitching) 섹션을 참조하세요.  
 
-### <a name="when-configuration-manager-and-wsus-use-the-same-sql-server-configure-one-of-these-to-use-a-named-instance-and-the-other-to-use-the-default-instance-of-sql-server"></a>Configuration Manager と WSUS が同じ SQL Server を使用する場合は、一方は名前付きインスタンスを使用し、もう一方は SQL Server の規定のインスタンスを使用するように構成してください。  
- Configuration Manager と WSUS のデータベースが同じ SQL Server を使用し、SQL Server の同じインスタンスを共有する場合は、この 2 つのアプリケーション間のリソースの使用状況を容易に判別できなくなります。 Configuration Manager と WSUS に異なる SQL Server インスタンスを使用すると、それぞれのアプリケーションで発生する可能性のあるリソース使用の問題のトラブルシューティングおよび診断が容易になります。  
+### <a name="when-configuration-manager-and-wsus-use-the-same-sql-server-configure-one-of-these-to-use-a-named-instance-and-the-other-to-use-the-default-instance-of-sql-server"></a>Configuration Manager와 WSUS가 동일한 SQL Server를 사용하는 경우 하나는 명명된 인스턴스를 사용하고 다른 하나는 SQL Server의 기본 인스턴스를 사용하도록 구성  
+ Configuration Manager와 WSUS 데이터베이스가 동일한 SQL Server를 사용하고 동일한 SQL Server 인스턴스를 공유하는 경우 두 응용 프로그램 간의 리소스 사용을 손쉽게 파악할 수 없습니다. Configuration Manager와 WSUS에 서로 다른 SQL Server 인스턴스를 사용하는 경우 각 응용 프로그램에 대해 발생할 수 있는 리소스 사용 문제를 해결하고 진단하기가 더 쉽습니다.  
 
-### <a name="specify-the-store-updates-locally-setting-for-the-wsus-installation"></a>WSUS インストールで [更新プログラムをローカルに保存する] 設定をオンにする  
- WSUS をインストールするときに、**[更新プログラムをローカルに保存する]** 設定をオンにします。 この設定をオンにすると、同期プロセス時にソフトウェア更新プログラムに関連付けられたライセンス条項がダウンロードされ、WSUS サーバーのローカル ハード ドライブに保存されます。 この設定を選択しないと、クライアント コンピューターがライセンス条項が含まれる更新プログラムでのソフトウェア更新プログラム対応のスキャンに失敗することがあります。 ソフトウェアの更新のポイントをインストールすると、WSUS 同期マネージャーが、規定では 60 分ごとにこの設定が有効になっているかを確認します。  
+### <a name="specify-the-store-updates-locally-setting-for-the-wsus-installation"></a>WSUS 설치에 "로컬로 업데이트 저장" 설정 지정  
+ WSUS를 설치할 때는 **업데이트를 로컬에 저장** 설정을 선택합니다. 이 설정을 선택하면 동기화 중에 소프트웨어 업데이트에 대한 사용 조건이 다운로드되어 WSUS 서버용 로컬 하드 드라이브에 저장됩니다. 이 설정을 선택하지 않으면 클라이언트 컴퓨터가 사용 조건이 있는 소프트웨어 업데이트에 대한 소프트웨어 업데이트 호환성을 검사하지 못할 수 있습니다. 소프트웨어 업데이트 지점을 설치하면 기본적으로 WSUS Synchronization Manager에서 이 설정이 사용되는지 60분마다 확인합니다.  
 
-## <a name="operational-best-practices"></a>操作について推奨する運用方法  
- ソフトウェア更新プログラムを使用するときには、次の推奨する運用方法を使用してください。  
+## <a name="operational-best-practices"></a>작업 모범 사례  
+ 소프트웨어 업데이트를 사용할 때 따라야 하는 모범 사례는 다음과 같습니다.  
 
-### <a name="limit-software-updates-to-1000-in-a-single-software-update-deployment"></a>単一のソフトウェア更新プログラムの展開を 1000 までに制限する  
- ソフトウェア更新プログラムの展開ごとのソフトウェア更新プログラムの数を 1000 以下にする必要があります。 自動展開規則を作成したときに、指定した条件でソフトウェア更新プログラムが 1000 以内になるかご確認ください。 ソフトウェア更新プログラムを手動で展開する場合は、1000 を超える更新プログラムを展開対象として選択しないでください。  
+### <a name="limit-software-updates-to-1000-in-a-single-software-update-deployment"></a>소프트웨어 배포 시 1000개로 소프트웨어 업데이트 제한  
+ 각 소프트웨어 업데이트 배포의 소프트웨어 업데이트 수를 1000개로 제한해야 합니다. 자동 배포 규칙을 만드는 경우 소프트웨어 업데이트가 1000개가 넘지 않도록 조건을 지정해야 합니다. 소프트웨어 업데이트를 수동으로 배포할 경우 배포할 업데이트는 1000개 이하로 선택합니다.  
 
-### <a name="create-a-new-software-update-group-each-time-an-automatic-deployment-rule-runs-for-patch-tuesday-and-for-general-deployment"></a>"Patch Tuesday" (月例パッチ) および一般の展開による自動展開規則の実行ごとのソフトウェア更新プログラム グループの新規作成  
- ソフトウェアの更新展開ではソフトウェア更新プログラムに 1000 の制限があります。 自動展開規則を作成するときに、既存の更新グループを使用するか、規則が実行されるたびに更新グループを新しく作成するかを指定します。 自動展開規則で、複数のソフトウェア更新プログラムが該当する条件を指定し、その規則を定期的に実行する場合、規則を実行するたびに新しいソフトウェア更新プログラム グループを作成するように指定します。 こうすることで、1 回の展開でソフトウェア更新プログラムが 1,000 の制限を超えないようにすることができます。  
+### <a name="create-a-new-software-update-group-each-time-an-automatic-deployment-rule-runs-for-patch-tuesday-and-for-general-deployment"></a>"Patch Tuesday"와 일반 배포를 위한 자동 배포 규칙을 실행할 때마다 새 소프트웨어 업데이트 그룹을 만듭니다.  
+ 각 소프트웨어 업데이트 배포 시 소프트웨어 업데이트 수가 1000개로 제한되어 있습니다. 자동 배포 규칙을 만드는 경우 기존 업데이트 그룹을 사용할지, 규칙이 실행될 때마다 새 업데이트 그룹을 만들지 지정합니다. 여러 소프트웨어 업데이트가 이루어지는 자동 배포 규칙의 조건을 지정하고 해당 규칙이 되풀이 일정으로 실행되는 경우 규칙이 실행될 때마다 새 소프트웨어 업데이트 그룹을 만들도록 지정합니다. 이렇게 하면 각 배포 시 소프트웨어 업데이트 제한인 1000개가 넘지 않도록 방지됩니다.  
 
-### <a name="use-an-existing-software-update-group-for-automatic-deployment-rules-for-endpoint-protection-definition-updates"></a>Endpoint Protection の定義ファイルの更新用自動展開規則での既存のソフトウェア更新プログラム グループの使用  
- 頻繁に Endpoint Protection の定義ファイルの更新を展開する自動展開規則を使用する場合は、既存のソフトウェア更新プログラム グループを常に使用してください。 そうしないと、時間の経過とともに、多くのソフトウェア更新プログラム グループが作成される可能性があります。 通常、定義ファイルの更新の発行元は、定義ファイルの更新がより新しい 4 件の更新で置き換えられると期限切れになるように設定します。 そのため、自動展開規則によって作成されたソフトウェア更新プログラム グループには、発行元に対して 4 件 (1 件がアクティブ、3 件が置き換え済み) を超える定義更新が含まれることはありません。  
+### <a name="use-an-existing-software-update-group-for-automatic-deployment-rules-for-endpoint-protection-definition-updates"></a>Endpoint Protection 정의 업데이트에 대한 자동 배포 규칙에 기존 소프트웨어 업데이트 그룹 사용  
+ Endpoint Protection 정의 업데이트를 자주 배포하기 위한 자동 배포 규칙을 사용하는 경우 항상 기존 소프트웨어 업데이트 그룹을 사용합니다. 그러지 않으면 시간이 지남에 따라 수백 개의 소프트웨어 업데이트 그룹이 만들어질 수 있습니다. 일반적으로 정의 업데이트 게시자는 정의 업데이트가 4개의 최신 업데이트로 대체될 때 만료되도록 설정합니다. 따라서 게시자의 경우 자동 배포 규칙을 통해 만들어지는 소프트웨어 업데이트 그룹에 4개 이하의 정의 업데이트(활성 1개와 교체 3개)가 포함됩니다.  
 
-## <a name="see-also"></a>関連項目  
- [System Center Configuration Manager でのソフトウェア更新プログラムの計画](../../sum/plan-design/plan-for-software-updates.md)
-
+## <a name="see-also"></a>참고 항목  
+ [System Center Configuration Manager에서 소프트웨어 업데이트 계획](../../sum/plan-design/plan-for-software-updates.md)

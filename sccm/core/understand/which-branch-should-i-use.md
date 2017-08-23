@@ -1,162 +1,153 @@
 ---
-title: "適切なブランチを選択する | Microsoft Docs"
-description: "System Center Configuration Manager の使用可能な各ブランチの相違点について説明します。"
+title: "사용해야 하는 분기 | Microsoft 문서"
+description: "사용 가능한 System Center Configuration Manager 분기 간의 차이점을 알아봅니다."
 ms.custom: na
 ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 662901e850566756759fcfc61c58f3c0e56bc5aa
 ms.openlocfilehash: 26356a80bd8c78d4517253bae73e53d8d8f3a73a
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/03/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# 適切な Configuration Manager のブランチを選択する
-<a id="which-branch-of-configuration-manager-should-i-use" class="xliff"></a>
+# <a name="which-branch-of-configuration-manager-should-i-use"></a>사용해야 하는 Configuration Manager 분기
 
-*適用対象: System Center Configuration Manager (Current Branch)、(Long-Term Servicing Branch)、(Technical Preview)*
+*적용 대상: System Center Configuration Manager(현재 분기, 장기 서비스 분기 및 기술 미리 보기)*
 
 
-2016 年 10 月以降、System Center Configuration Manager の 3 つのブランチを使用できます。 このトピックは、適切なブランチを選択するのに役立ちます。
+2016년 10월부터, 세 가지 System Center Configuration Manager 분기를 사용할 수 있습니다. 이 항목은 올바른 분기를 선택하는 데 도움이 됩니다.
 
 > [!TIP]  
-> 階層内のすべてのサイトは同じブランチを実行する必要があります。 階層内でサイトがそれぞれ異なるブランチをもつことはサポートされません。
+> 계층 구조의 모든 사이트가 동일한 분기를 실행해야 합니다. 여러 사이트에 서로 다른 분기가 혼합되어 있는 계층 구조는 사용할 수 없습니다.
 
-## System Center Configuration Manager の Current Branch
-<a id="current-branch-of-system-center-configuration-manager" class="xliff"></a>
-これは、実稼働環境で使用するためにライセンスされるブランチで、最新の機能を使用することができます。 System Center Datacenter、System Center Standard、System Center Configuration Manager、またはそれらと同等のサブスクリプション権を保有している場合は、このブランチを使用します。 ソフトウェア アシュアランスとライセンス オプションについては、「[System Center Configuration Manager のライセンスとブランチ](learn-more-editions.md)」をご覧ください。
+## <a name="current-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager 현재 분기
+최신 기능 및 특성을 가져오는 옵션을 원하는 프로덕션 환경에서 사용하기 위한 사용이 허가된 분기입니다. System Center 데이터 센터, System Center 표준, System Center Configuration Manager 또는 동등한 구독 권한 중 하나가 있을 경우 사용할 분기입니다. Software Assurance 및 라이선스 옵션에 대한 자세한 내용은 [System Center Configuration Manager의 라이선스 및 분기](learn-more-editions.md)를 참조하세요.
 
 
 >  [!TIP]
-> Current Branch は、ライセンスを必要としない評価版としてインストールできます。 評価版は 180 日間使用でき、Current Branch のライセンス取得済みエディションへのアップグレードをサポートしています。
+> 현재 분기를 라이선스가 필요하지 않은 평가판으로 설치할 수 있습니다. 평가판은 180일 동안 사용할 수 있고 현재 분기의 라이선스 버전으로 업그레이드가 지원됩니다.
 
-Current Branch は年に数回更新され、新機能が追加されます。 更新プログラムの各バージョンは、リリース後 1 年間サポートされます。 その 1 年間の有効期間が切れる前に、最新バージョンの Current Branch に更新する必要があります。 新しいバージョンへの更新プログラムは、コンソール内の更新プログラムとして利用できます。
+현재 분기는 1년 여러 번 새로운 기능으로 업데이트됩니다. 각 업데이트 버전은 릴리스 후 1년 동안 지원됩니다. 해당 1년 기간이 만료되기 전에 현재 분기의 최신 버전으로 업데이트해야 합니다. 최신 버전에 대한 업데이트는 콘솔 내 업데이트로 제공됩니다.
 
-Current Branch を新しいサイトとしてインストールするか、System Center 2012 Configuration Manager (Service Pack 2 を適用済み) または System Center 2012 R2 Configuration Manager (Service Pack 1 を適用済み) からのアップグレードとしてインストールするには、System Center Configuration Manager の[基準メディア](/sccm/core/servers/manage/updates#baseline-and-update-versions)を使用します。これは、System Center 2016 の付属 DVD として提供されており、また、System Center Configuration Manager のスタンドアロン リリースの一部として利用できます。 このメディアへのアクセス方法は、System Center Configuration Manager のライセンス形態によって異なります。 1702 などの新しい基準バージョンでは、LTSB のインストールはサポートされません。
+현재 분기를 새 사이트로 설치하거나 System Center 2012 Configuration Manager 서비스 팩 2 또는 System Center 2012 R2 Configuration Manager 서비스 팩 1에서 업그레이드로 설치하려면 System Cener 2016과 함께 DVD로 제공되거나 System Center Configuration Manager 독립 실행형 릴리스의 일부로 제공되는 System Center Configuration Manager의 [기준 미디어](/sccm/core/servers/manage/updates#baseline-and-update-versions)를 사용합니다. 이 미디어에 대한 액세스는 System Center Configuration Manager 사용이 허가된 방식에 따라 달라집니다. 1702와 같은 최신 기준 버전은 LTSB 설치를 지원하지 않습니다.
 
-この基準メディアを使用して、Current Branch の評価版の新しいサイトをインストールすることもできます。 評価版のみをインストールする場合は、[TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) の Web サイトからソフトウェアを入手できます。
+기준 미디어를 사용하여 현재 분기의 평가판 버전으로 새 사이트를 설치할 수도 있습니다. 평가판만 설치하려는 경우 [TechNet 평가 센터](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) 웹 사이트에서 소프트웨어를 다운로드할 수 있습니다.
 
 >  [!NOTE]
-> 新しい Configuration Manager 階層のサイトをインストールするには、基準メディアを使用します。 バージョン 1511 などの基準バージョンをインストール済みの場合は、コンソール内の更新プログラムを使用して、サイトを新しいバージョン (1606 など) に更新します。
+> 기준 미디어를 사용하여 새 Configuration Manager 계층 구조의 사이트를 설치합니다. 버전 1511 등의 기준 버전을 이전에 설치한 경우 콘솔 내 업데이트를 사용하여 1606 등의 새 버전으로 사이트를 업데이트합니다.
 >
-> コンソール内の更新プログラムを使用して更新されたサイトは、基準メディアを使用してインストールされた新しいサイトと同一になります。
+> 콘솔 내 업데이트를 사용하여 업데이트된 사이트는 기준 미디어를 사용하여 설치된 새 사이트와 같습니다.
 >
-> 詳細については、「[System Center Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)」をご覧ください。
+> 자세한 내용은 [System Center Configuration Manager용 업데이트](/sccm/core/servers/manage/updates)를 참조하세요.
 
-**Current Branch の機能**
-- 新機能を利用できるようにする[コンソール内の更新プログラム](/sccm/core/servers/manage/install-in-console-updates)を受信します。
-- 既存の機能にセキュリティと品質に関する修正を適用するコンソール内の更新プログラムを受信します。
-- 必要に応じてアウトオブバンドの更新プログラムをサポートします。 「[更新登録ツールの使用](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)」または「[修正プログラム インストーラーの使用](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)」をご覧ください。
-- Microsoft Intune や他のクラウド ベースのサービスおよびインフラストラクチャと相互運用できます。
-- 他の Configuration Manager インストール環境との間で[データの移行](/sccm/core/migration/migrate-data-between-hierarchies)をサポートします。
-- 以前のバージョンの Configuration Manager からのアップグレードをサポートします。
-- 評価版としてのインストールをサポートしており、後でフル ライセンスのインストールにアップグレードすることができます。
+**현재 분기의 기능**
+- 새로운 기능을 사용할 수 있도록 하는 [콘솔 내 업데이트](/sccm/core/servers/manage/install-in-console-updates)를 받습니다.
+- 기존 기능에 대한 보안 및 품질 수정을 제공하는 콘솔 내 업데이트를 받습니다.
+- 필요한 경우 대역 외 업데이트를 지원합니다. [업데이트 등록 도구 사용](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes) 또는 [핫픽스 설치 관리자 사용](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)을 참조하세요.
+- Microsoft Intune 및 다른 클라우드 기반 서비스 및 인프라와 상호 운용할 수 있습니다.
+- 다른 Configuration Manager 설치와의 [데이터 마이그레이션](/sccm/core/migration/migrate-data-between-hierarchies)를 지원합니다.
+- 이전 버전의 Configuration Manager에서 업그레이드를 지원합니다.
+- 평가판으로 설치를 지원하며, 나중에 정식 라이선스 설치로 업그레이드할 수 있습니다.
 
-Current Branch の初期リリースは、バージョン 1511 でした。 以降の更新プログラムには、バージョン 1602 や 1606 などがあります。 各バージョンのサポート期間は 1 年間であるため、最新バージョンがリリースされたら、すぐにそのリリースに更新することをお勧めします。 新しいバージョンに更新するまで最大 1 年間待つことができるので、ある更新プログラムをスキップして、後から利用可能な最新バージョンをインストールすることもできます。 各バージョンは累積的な内容となっており、ある更新プログラムをスキップしてから最新バージョンをインストールしても、以前のバージョン以降に追加されたすべての機能と改善点を利用できます。
+현재 분기의 초기 릴리스는 버전 1511이었습니다. 후속 업데이트에는 버전 1602, 1606 등이 포함됩니다. 각 버전은 1년 동안 지원되며, 릴리스 후 즉시 최신 버전으로 업데이트하는 것이 좋습니다. 최신 버전으로 업데이트하기 전에 최대 1년 동안 기다릴 수 있으며, 사용 가능한 최신 버전을 설치하기 위해 업데이트를 건너뛸 수도 있습니다. 각 버전은 누적되므로 업데이트를 건너뛰고 최신 버전을 설치하는 경우에도 이전 버전의 모든 기능 및 향상된 기능에 액세스할 수 있습니다.
 
-詳細については、「[Current Branch バージョンのサポート](/sccm/core/servers/manage/current-branch-versions-supported)」をご覧ください。
+자세한 내용은 [현재 분기 버전 지원](/sccm/core/servers/manage/current-branch-versions-supported)을 참조하세요.
 
-**更新のオプション**
-- 有効なソフトウェア アシュアランスがある場合、Current Branch バージョンにコンソール内の更新プログラムをインストールできます。  
-- Current Branch を Technical Preview に変換するオプションはありません。 Technical Preview は、ライセンスを必要としない個別のインストールです。
-- Current Branch を Long-Term Servicing Branch (LTSB) に変換するオプションはありません。 Current Branch をアンインストールしてから、新規インストールとして LTSB をインストールする必要があります。
+**업데이트 옵션**
+- 활성 Software Assurance를 사용하면 현재 분기 버전에 대한 콘솔 내 업데이트를 설치할 수 있습니다.  
+- 현재 분기를 기술 미리 보기로 변환하는 옵션은 없습니다. 기술 미리 보기는 라이선스가 필요하지 않은 별도 설치입니다.
+- 현재 분기를 LTSB(장기 서비스 분기)로 변환하는 옵션은 없습니다. 현재 분기를 제거한 다음 LTSB를 새 설치로 설치해야 합니다.
 
-##  System Center Configuration Manager の Long-Term Servicing Branch
-<a id="long-term-servicing-branch-of-system-center-configuration" class="xliff"></a>
-これは、実稼働環境で使用するためにライセンスされるブランチで、Current Branch を使用しており Configuration Manager ソフトウェア アシュアランス (SA) またはそれと同等のサブスクリプション権が 2016 年 10 月 1 日以降に失効することに同意した Configuration Manager ユーザーが対象となります。 ソフトウェア アシュアランスとライセンス オプションについては、「[System Center Configuration Manager のライセンスとブランチ](learn-more-editions.md)」をご覧ください。
+##  <a name="long-term-servicing-branch-of-system-center-configuration"></a>System Center 구성의 장기 서비스 분기
+현재 분기를 사용하며 Configuration Manager SA(Software Assurance) 또는 동등한 구독 권한이 2016년 10월 1일 후에 만료되도록 허용한 Configuration Manager 고객이 프로덕션에서 사용하도록 허가된 분기입니다. Software Assurance 및 라이선스 옵션에 대한 자세한 내용은 [System Center Configuration Manager의 라이선스 및 분기](learn-more-editions.md)를 참조하세요.
 
-LTSB はバージョン 1606 に基づいています。 このブランチは、新機能の提供や既存の機能の更新を行うコンソール内の更新プログラムを受信しません。 ただし、重要なセキュリティ修正プログラムは提供されます。 LTSB をインストールするには、バージョン 1606 の [基準メディア](/sccm/core/servers/manage/updates#baseline-and-update-versions) (System Center 2016 または System Center Configuration Manager が収録された DVD として取得) を使用する必要があります。
+LTSB는 버전 1606을 기반으로 합니다. 이 분기는 새로운 기능을 제공하거나 기존 기능을 업데이트하는 콘솔 내 업데이트를 받지 않습니다. 그러나 중요한 보안 수정이 제공됩니다. LTSB를 설치하려면 System Center 2016 또는 System Center Configuration Manager와 함께 DVD로 제공되는 버전 1606 [기준선 미디어](/sccm/core/servers/manage/updates#baseline-and-update-versions)를 사용해야 합니다.
 
-LTSB を新しいサイトとしてインストールするか、またはサポートされている Configuration Manager 2012 サイトからのアップグレードとしてインストールするには、バージョン 1606 の[基準メディア](/sccm/core/servers/manage/updates#baseline-and-update-versions)を使用します。これは、System Center 2016 または System Center Configuration Manager (Current Branch および Long-Term Servicing Branch 1606) リリースの付属 DVD として提供されます。 基準メディアを使用して、Current Branch のバージョン 1606 を実行する新しいサイトをインストールするか、Long-Term Servicing Branch を実行する新しいサイトをインストールすることができます。
+LTSB를 새 사이트로 설치하거나 지원되는 Configuration Manager 2012 사이트에서 업그레이드로 설치하려면 System Center 2016 또는 System Center Configuration Manager(현재 분기 및 장기 서비스 분기 1606) 릴리스와 함께 DVD로 제공되는 버전 1606 [기준 미디어](/sccm/core/servers/manage/updates#baseline-and-update-versions)를 사용합니다. 기준 미디어를 사용하여 현재 분기의 버전 1606을 실행하는 새 사이트 또는 장기 서비스 분기를 실행하는 새 사이트를 설치할 수 있습니다.
 
 > [!TIP]  
-> System Center 2016 の詳細については、[System Center 2016 のドキュメント](https://technet.microsoft.com/system-center-docs/system-center)をご覧ください。 このドキュメントでは、System Center 2016 の入手方法についても説明しています。この製品を入手するには、Microsoft ライセンス契約または同様の権利が必要です。
+> System Center 2016에 대한 자세한 내용은 [System Center 2016 설명서](https://technet.microsoft.com/system-center-docs/system-center)를 참조하세요. 이 설명서에서는 Microsoft 사용권 계약 또는 유사한 권한이 필요한 System Center 2016을 다운로드하는 방법도 설명합니다.
 
-> ボリューム ランセンス サービス センター (VLSC) で System Center Configuration Manager バージョン 1606 を見つけるには、[VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) の **[Downloads and Keys]\(ダウンロードとキー\)** タブに移動し、"system center config" を検索し、**[System Center Config Mgr (current branch and LTSB)]\(System Center Configuration Manager (現在のブランチと LTSB)\)** を選択します。
+> VLSC(볼륨 라이선스 서비스 센터)에서 System Center Configuration Manager 버전 1606을 찾으려면 [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx)의 **다운로드 및 키** 탭으로 이동하고 "system center config"를 검색한 다음 **System Center Config Mgr(현재 분기 및 LTSB)**을 선택합니다.
 
-> System Center 2016 の評価版は、[TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview) から入手することもできます。
+> [TechNet 평가 센터](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview)에서 System Center 2016 평가판을 다운로드할 수도 있습니다.
 
-**LTSB の機能**
--    重要なセキュリティ修正プログラムを提供するコンソール内の更新プログラムを受信します。
-- Configuration Manager の SA 契約または同等の権利が期限切れになったときにインストール オプションを提供します。
-- Configuration Manager の有効な SA 契約または同等の権利を保有している場合は、Current Branch へのアップグレード (変換) をサポートします。
+**LTSB의 기능**
+-   중요한 보안 수정을 제공하는 콘솔 내 업데이트를 받습니다.
+- Configuration Manager에 대한 SA 계약 또는 이와 동등한 권한이 만료된 경우의 설치 옵션을 제공합니다.
+- Configuration Manager에 대한 현재 SA 계약 또는 이와 동등한 권한이 있는 경우 현재 분기로 업그레이드(변환)를 지원합니다.
 
-**制限事項**  
-LTSB は Current Branch のバージョン 1606 をベースにしており、次の制限があります。
-- LTSB は、一般公開 (2016 年 10 月) 後の 10 年間、重要なセキュリティ更新プログラムのサポート対象となり、その後、このブランチのサポートは失効します。 サポート ライフサイクルの詳細については、「[Microsoft ライフサイクル ポリシー](https://support.microsoft.com/en-us/lifecycle)」を参照してください。
-- サーバーおよびクライアントのオペレーティング システムと SQL Server バージョンのような関連テクノロジの限定されたセットのリストをサポートしています。 このブランチでサポートされる内容の詳細については、「[Long-Term Servicing Branch でサポートされている構成](supported-configurations-for-ltsb.md)」を参照してください。
-- 新しい機能の更新プログラムを受信しません。
-- Microsoft Intune サブスクリプションの追加はサポートされません。そのため、以下は使用できません。
-  -    ハイブリッド MDM 構成の Intune
- - オンプレミス MDM
--    Windows 10 サービス ダッシュボード、サービス プラン、Windows 10 の Current Branch (CB) および Current Branch for Business (CBB) の使用はサポートされません。
-- Windows 10 LTSB および Windows Server の今後のリリースはサポートされません。
--    資産インテリジェンスはサポートされません。
--    クラウドベースの配布ポイントはサポートされません。
--    Exchange Connector としての Exchange Online のサポートはサポートされません。
--    プレリリース機能はサポートされません。
-
-
-
-**更新のオプション**
-- LTSB インストールは、Current Branch インストールに変換できます。 Current Branch への変換は、LTSB のサポートが終了する前または後にかかわらずサポートされます。
-
-  変換には、Microsoft との有効なソフトウェア アシュアランス契約が必要です。 詳細については、次のリンクを参照してください。
-  - [Long-Term Servicing Branch の Current Branch へのアップグレード](convert-to-current-branch.md)
-  - [System Center Configuration Manager のライセンスとブランチ](learn-more-editions.md)
-  - 「[Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)」の「[基準バージョンと更新プログラムのバージョン](/sccm/core/servers/manage/updates#baseline-and-update-versions)」
-- LTSB を Technical Preview に変換するオプションはありません。 Technical Preview は、ライセンスを必要としない個別のインストールです。
--    Current Branch の評価版を LTSB インストールにアップグレードすることはできません。
+**제한 사항**  
+LTSB는 현재 분기 버전 1606을 기반으로 하며 다음과 같은 제한 사항이 있습니다.
+- LTSB는 일반 공급(2016년 10월) 후 10년 동안 중요 보안 업데이트가 지원되며, 그다음에는 이 분기에 대한 지원이 만료됩니다. 지원 수명 주기에 대한 자세한 내용은 [Microsoft 수명 주기 정책](https://support.microsoft.com/en-us/lifecycle)을 참조하세요.
+- 서버 및 클라이언트 운영 체제와 관련 기술(예: SQL Server 버전)의 제한된 집합 목록을 지원합니다. 이 분기에서 지원되는 사항에 대한 자세한 내용은 [장기 서비스 분기에 대해 지원되는 구성](supported-configurations-for-ltsb.md)을 참조하세요.
+- 새로운 기능에 대한 업데이트를 받지 않습니다.
+- Microsoft Intune 구독 추가를 지원하지 않으며, 이로 인해 다음을 사용할 수 없습니다.
+  - 하이브리드 MDM 구성에서 Intune을 사용할 수 없음
+ - 온-프레미스 MDM을 사용할 수 없음
+-   Windows 10 서비스 대시보드, 서비스 계획, Windows 10 CB(현재 분기) 또는 CBB(비즈니스용 현재 분기)의 사용을 지원하지 않습니다.
+- Windows 10 LTSB 및 Windows Server의 이후 릴리스를 지원하지 않습니다.
+-   Asset Intelligence를 지원하지 않습니다.
+-   클라우드 기반 배포 지점을 지원하지 않습니다.
+-   Exchange Online을 Exchange 커넥터로 지원하지 않습니다.
+-   모든 시험판 기능을 지원하지 않습니다.
 
 
-## System Center Configuration Manager の Technical Preview
-<a id="technical-preview-for-system-center-configuration-manager" class="xliff"></a>
-Technical Preview はラボ環境で使用するためのものです。この環境で、Configuration Manager 向けに開発されている最新の機能を確認してテストできます。 Technical Preview は実稼働環境ではサポートされないため、ソフトウェア アシュアランス ライセンス契約は必要ありません。
 
-Technical Preview を実行する新しいサイトをインストールするには、最新の [System Center Configuration Manager Technical Preview の基準メディア](/sccm/core/get-started/technical-preview#install-and-update-the-technical-preview)を使用します。 Technical Preview をインストールすると、毎月新しいバージョンがコンソール内の更新プログラムとして利用できます。
+**업데이트 옵션**
+- LTSB 설치를 현재 분기 설치로 변환할 수 있습니다. LTSB 지원이 만료되기 전이나 후에 현재 분기로 변환이 지원됩니다.
 
-**Technical Preview の機能**
--  Current Branch の最近の基準バージョンに基づいています。
--  インストールを最新の Technical Preview バージョンに更新するコンソール内の更新プログラムを受信します。
--  開発者がフィードバックを希望する、開発中の新機能が含まれています。
--  Technical Preview ブランチにのみ適用される更新プログラムを受信します。
-
-**制限事項**
--  [サポートは限定的](/sccm/core/get-started/technical-preview#requirements-and-limitatins-for-the-techincal-preview)です (単一のプライマリ サイトと最大 10 クライアントのみをサポートするなど)。  
--  Current Branch または LTSB にアップグレードすることはできません。
--  移行機能を使用して別の Configuration Manager インストールとの間でデータのインポートまたはエクスポートを行うことはサポートされていません。
--  以前のバージョンの Configuration Manager からのアップグレードはサポートされていません。
--  評価版としてのインストールはサポートされていません。
-
-Technical Preview に最初に導入された機能は、多くの場合、以降の更新プログラムで Current Branch に追加されます。 それぞれの新しい Technical Preview バージョンには、以前の Technical Preview の機能が Current Branch に追加された後も、それらの機能が引き続き含まれます。
-
-詳細については、「[System Center Configuration Manager の Technical Preview](/sccm/core/get-started/technical-preview)」をご覧ください。
-
-**更新のオプション**
--    新しい Technical Preview バージョン向けのコンソール内の更新プログラムをインストールできます。
--    Technical Preview を Current Branch または LTSB に変換するオプションはありません。
+  변환하려면 Microsoft와 활성 Software Assurance 계약이 있어야 합니다. 자세한 내용은 다음 링크를 참조하세요.
+  - [장기 서비스 분기를 현재 분기로 업그레이드](convert-to-current-branch.md)
+  - [System Center Configuration Manager의 라이선스 및 분기](learn-more-editions.md)
+  - [Configuration Manager용 업데이트](/sccm/core/servers/manage/updates)에서 [기준 및 업데이트 버전](/sccm/core/servers/manage/updates#baseline-and-update-versions)
+- LTSB를 기술 미리 보기로 변환하는 옵션은 없습니다. 기술 미리 보기는 라이선스가 필요하지 않은 별도 설치입니다.
+-   현재 분기의 평가판을 LTSB 설치로 업그레이드할 수 없습니다.
 
 
-## ブランチとバージョンを確認する
-<a id="identify-your-branch-and-version" class="xliff"></a>
-Configuration Manager サイトのバージョン情報を表示すると、ブランチも確認できます。
+## <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview
+기술 미리 보기는 Configuration Manager용으로 개발 중인 최신 기능을 알아보고 시험해보려는 랩 환경에서 사용됩니다. 기술 미리 보기는 프로덕션 환경에서 지원되지 않으며, Software Assurance 사용권 계약이 없어도 됩니다.
 
-**バージョン**   
-お使いのサイトのバージョンを確認するには、コンソールの左上にある **[System Center Configuration Manager のバージョン情報]** を選択して、**[サイトのバージョン]** を表示します。 サイトのバージョンの一覧については、[]()をご覧ください。
+기술 미리 보기를 실행하는 새 사이트를 설치하려면 최신 [System Center Configuration Manager Technical Preview 기준 미디어](/sccm/core/get-started/technical-preview#install-and-update-the-technical-preview)를 사용합니다. 기술 미리 보기를 설치한 후에는 매달 콘솔 내 업데이트로 새 버전이 제공됩니다.
 
-**ブランチ**  
-サイトのブランチ (LTSB または Current Branch) を確認するには、コンソールで **[管理]** > **[サイトの構成]** > **[サイト]** を選択し、**[階層設定]** を開きます。 Current Branch に変換するオプションがあり、選択できる状態の場合、サイトは LTSB バージョンを実行しています。 サイトが Current Branch を実行している場合、このオプションは淡色表示されます。
-さまざまなバージョンの Configuration Manager については、[Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)に関するページの「基準バージョンと更新プログラムのバージョン」をご覧ください。
+**기술 미리 보기의 기능**
+-  현재 분기의 최신 기준 버전을 기반으로 합니다.
+-  최신 기술 미리 보기 버전으로 설치를 업데이트하는 콘솔 내 업데이트를 받습니다.
+-  개발자가 피드백을 받으려 하는, 개발 중인 새로운 기능을 포함합니다.
+-  기술 미리 보기 분기에만 적용되는 업데이트를 받습니다.
 
+**제한 사항**
+-  [지원이 제한](/sccm/core/get-started/technical-preview#requirements-and-limitatins-for-the-techincal-preview)되며, 단일 기본 사이트와 최대 10개의 클라이언트만 포함합니다.  
+-  현재 분기 또는 LTSB로 업그레이드할 수 없습니다.
+-  마이그레이션을 사용하여 다른 Configuration Manager 설치로 데이터 가져오기 또는 내보내기를 지원하지 않습니다.
+-  이전 버전의 Configuration Manager에서 업그레이드를 지원하지 않습니다.
+-  평가판으로 설치를 지원하지 않습니다.
+
+기술 미리 보기에서 처음 도입된 기능이 이후 업데이트에서 현재 분기에 추가되는 경우가 많습니다. 각각의 새로운 기술 미리 보기 버전에는 이러한 기능이 현재 분기에 추가된 후에도 이전 기술 미리 보기의 기능을 포함합니다.
+
+자세한 내용은 [System Center Configuration Manager Technical Preview](/sccm/core/get-started/technical-preview)를 참조하세요.
+
+**업데이트 옵션**
+-   새 기술 미리 보기 버전의 콘솔 내 업데이트를 설치할 수 있습니다.
+-   기술 미리 보기를 현재 분기 또는 LTSB로 변환하는 옵션이 없습니다.
+
+
+## <a name="identify-your-branch-and-version"></a>분기 및 버전 식별
+Configuration Manager 사이트에 대한 버전 정보를 보면 분기도 확인됩니다.
+
+**버전**   
+사이트 버전을 확인하려면 콘솔의 왼쪽 위에 있는 **System Center Configuration Manager 정보**로 이동합니다. 여기에 **사이트 버전**이 표시됩니다. 사이트 버전 목록은 []() 항목을 참조하세요.
+
+**분기**  
+사이트 분기를 LTSB 또는 현재 분기로 확인하려면 콘솔에서 **관리** > **사이트 구성** > **사이트**으로 이동한 다음 **계층 설정**을 엽니다. 현재 분기로 변환하는 옵션이 있고 활성 상태이면 사이트에서 LTSB 버전을 실행합니다. 사이트에서 현재 분기를 실행하는 경우에는 이 옵션이 회색으로 표시됩니다.
+다양한 Configuration Manager 버전에 대한 자세한 내용은 [Configuration Manager용 업데이트](/sccm/core/servers/manage/updates)에서 "기준 및 업데이트 버전"을 참조하세요.

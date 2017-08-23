@@ -1,45 +1,41 @@
 ---
-title: "資産インテリジェンスの一般的ライセンスのインポート ファイルの例 | Microsoft Docs"
-description: "資産インテリジェンスの一般的なライセンス ファイルのサンプルを使用すると、System Center Configuration Manager でソフトウェア ライセンスをインポートするのに役立ちます。"
+title: "Asset Intelligence 일반 라이선스 가져오기 파일 예제 | Microsoft 문서"
+description: "샘플 Asset Intelligence 일반 라이선스 파일을 사용하여 System Center Configuration Manager의 소프트웨어 라이선스를 가져올 수 있도록 합니다."
 ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e6258333-a783-440b-b1af-f8023b782fbc
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 6ee39d311108253ece1c9d60c25ac06017867c1f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 400afbe8c09b80985187a34b0dd0f3f8581c7d4e
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="example-asset-intelligence-general-license-import-file-in-system-center-configuration-manager"></a>System Center Configuration Manager における資産インテリジェンスの一般的なライセンス インポート ファイルの例
+# <a name="example-asset-intelligence-general-license-import-file-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 Asset Intelligence 일반 라이선스 가져오기 파일 예제
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-このトピックでは、ソフトウェア ライセンスのインポート ウィザードを使用して、資産インテリジェンス カタログ内にソフトウェア ライセンスをインポートするときに使用できる、一般的なソフトウェア ライセンス ファイルのサンプルを作成する例を示します。 次の表をコピーし、Microsoft Excel の新規スプレッドシートに貼り付けて .csv ファイル拡張子を付けて保存すると、一般的なソフトウェア ライセンス インポート ファイルの例として、テスト目的で使用できます。 ライセンス インポート ファイルを作成するときは、すべてのヘッダー フィールドが必要ですが、スプレッドシートでは、名前、発行元、バージョン、および有効な数量のデータ値のみが必要です。 ソフトウェア ライセンスを資産インテリジェンス カタログにインポートする方法の詳細については、「[System Center Configuration Manager での資産インテリジェンスの構成](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)」をご覧ください。  
+이 항목의 예제 정보는 샘플 일반 소프트웨어 라이선스 파일을 만들어 소프트웨어 라이선스 가져오기 마법사를 사용하여 소프트웨어 라이선스를 Asset Intelligence 카탈로그로 가져오는 데 사용할 수 있습니다. 테스트 목적으로 일반 소프트웨어 라이선스 가져오기 파일 예제로 사용하기 위해 다음 표를 복사하고 새 Microsoft Excel 스프레드시트에 붙여넣은 다음 .csv 파일 이름 확장명으로 저장할 수 있습니다. 라이선스 가져오기 파일을 만들 때 모든 헤더 필드가 필요하지만 스프레드시트에서는 Name, Publisher, Version 및 EffectiveQuantity 데이터 값만 필요합니다. Asset Intelligence 카탈로그에 소프트웨어 라이선스 가져오기에 대한 자세한 내용은 [System Center Configuration Manager에서 Asset Intelligence 구성](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)을 참조하세요.  
 
-|名前|発行者|バージョン|言語|有効な数量|発注番号|販売店名|購入日|サポートの購入|サポートの有効期限|コメント|  
+|Name|게시자|버전|언어|EffectiveQuantity|PONumber|ResellerName|DateOfPurchase|SupportPurchased|SupportExpirationDate|설명|  
 |----------|---------------|-------------|--------------|-----------------------|--------------|------------------|--------------------|----------------------|---------------------------|--------------|  
-|ソフトウェア タイトル 1|ソフトウェア発行元|1.01|英語|1|購入数|販売店名|2010/10/10|0|2012/10/10|コメント|  
-|ソフトウェア タイトル 2|ソフトウェア発行元|1.02|英語|1|購入数|販売店名|2010/10/10|0|2012/10/10|コメント|  
-|ソフトウェア タイトル 3|ソフトウェア発行元|1.03|英語|1|購入数|販売店名|2010/10/10|0|2012/10/10|コメント|  
-|ソフトウェア タイトル 4|ソフトウェア発行元|1.04|英語|1|購入数|販売店名|2010/10/10|0|2012/10/10|コメント|  
-|ソフトウェア タイトル 5|ソフトウェア発行元|1.05|英語|1|購入数|販売店名|2010/10/10|0|2012/10/10|コメント|  
-|ソフトウェア タイトル 6|ソフトウェア発行元|1.06|英語|1|購入数|販売店名|2010/10/10|0|2012/10/10|コメント|  
-|ソフトウェア タイトル 7|ソフトウェア発行元|1.07|英語|1|購入数|販売店名|2010/10/10|0|2012/10/10|コメント|  
-|ソフトウェア タイトル 8|ソフトウェア発行元|1.08|英語|1|購入数|販売店名|2010/10/10|0|2012/10/10|コメント|  
-|ソフトウェア タイトル 9|ソフトウェア発行元|1.09|英語|1|購入数|販売店名|2010/10/10|0|2012/10/10|コメント|  
-|ソフトウェア タイトル 10|ソフトウェア発行元|1.10|英語|1|購入数|販売店名|2010/10/10|0|2012/10/10|コメント|  
-
+|소프트웨어 타이틀 1|소프트웨어 게시자|1.01|영어|1|구매 번호|재판매인 이름|10/10/2010|0|10/10/2012|설명|  
+|소프트웨어 타이틀 2|소프트웨어 게시자|1.02|영어|1|구매 번호|재판매인 이름|10/10/2010|0|10/10/2012|설명|  
+|소프트웨어 타이틀 3|소프트웨어 게시자|1.03|영어|1|구매 번호|재판매인 이름|10/10/2010|0|10/10/2012|설명|  
+|소프트웨어 타이틀 4|소프트웨어 게시자|1.04|영어|1|구매 번호|재판매인 이름|10/10/2010|0|10/10/2012|설명|  
+|소프트웨어 타이틀 5|소프트웨어 게시자|1.05|영어|1|구매 번호|재판매인 이름|10/10/2010|0|10/10/2012|설명|  
+|소프트웨어 타이틀 6|소프트웨어 게시자|1.06|영어|1|구매 번호|재판매인 이름|10/10/2010|0|10/10/2012|설명|  
+|소프트웨어 타이틀 7|소프트웨어 게시자|1.07|영어|1|구매 번호|재판매인 이름|10/10/2010|0|10/10/2012|설명|  
+|소프트웨어 타이틀 8|소프트웨어 게시자|1.08|영어|1|구매 번호|재판매인 이름|10/10/2010|0|10/10/2012|설명|  
+|소프트웨어 타이틀 9|소프트웨어 게시자|1.09|영어|1|구매 번호|재판매인 이름|10/10/2010|0|10/10/2012|설명|  
+|소프트웨어 타이틀 10|소프트웨어 게시자|1.10|영어|1|구매 번호|재판매인 이름|10/10/2010|0|10/10/2012|설명|  

@@ -1,48 +1,44 @@
 ---
-title: "インターナショナル サポート | Microsoft Docs"
-description: "外国の特定の要件に準拠するように System Center Configuration Manager を構成します。"
+title: "국제 지원 | Microsoft 문서"
+description: "특정 다국어 기능 요구 사항을 준수하도록 System Center Configuration Manager를 구성합니다."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 46dd9cb2-a812-4b6a-a747-b840f92fef8b
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 40e018084dd2703327ff653f962f488432b1ec98
 ms.openlocfilehash: 3bab51be96445f766e8f5bbf54eee854e5d09cee
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="international-support-in-system-center-configuration-manager"></a>System Center Configuration Manager のインターナショナル サポート
+# <a name="international-support-in-system-center-configuration-manager"></a>System Center Configuration Manager의 다국어 기능 지원
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-次のセクションでは、System Center Configuration Manager を特定の国際的要件に準拠させるための技術詳細について説明します。  
+다음 섹션에서는 특정 다국어 기능 요구 사항을 준수하도록 System Center Configuration Manager를 설정하는 방법에 대한 기술적인 정보를 제공합니다.  
 
-## <a name="gb18030-requirements"></a>GB18030 の要件  
- Configuration Manager は、GB18030 で定義された規格に対応しているため、中国で Configuration Manager を使用することができます。 GB18030 の要件を満たすには、Configuration Manager 展開に次の構成が必要です。  
+## <a name="gb18030-requirements"></a>GB18030 요건  
+ Configuration Manager는 GB18030에 정의된 표준을 준수하므로 중국에서 Configuration Manager를 사용할 수 있습니다. GB18030 요구 사항을 준수하려면 Configuration Manager 배포가 다음 구성을 갖추어야 합니다.  
 
--   Configuration Manager で使用する各サイト サーバー コンピューターと SQL Server コンピューターが中国語のオペレーティング システムを使用している必要があります。  
+-   Configuration Manager에서 사용하는 각 사이트 서버 컴퓨터와 SQL Server 컴퓨터가 중국어 운영 체제를 사용해야 합니다.  
 
--   階層内の各サイト データベースと SQL Server の各インスタンスが同じ照合順序を使用する必要があります。以下のいずれかが使用されていなければなりません。  
+-   각 사이트 데이터베이스와 계층의 각 SQL Server 인스턴스의 정렬이 동일해야 하고 다음 중 하나여야 합니다.  
 
     -   Chinese_Simplified_Pinyin_100_CI_AI  
 
     -   Chinese_Simplified_Stroke_Order_100_CI_AI  
 
     > [!NOTE]  
-    >  これらのデータベース照合順序は、「[System Center Configuration Manager の SQL Server バージョンのサポート](../../../core/plan-design/configs/support-for-sql-server-versions.md)」に記載された要件の例外となります。  
+    >  이러한 데이터베이스 정렬은 [System Center Configuration Manager에 대한 SQL Server 버전 지원](../../../core/plan-design/configs/support-for-sql-server-versions.md)에 설명된 요구 사항에 대한 예외입니다.  
 
--   **GB18030.SMS** という名前のファイルを、階層内の各サイト サーバー コンピューターのシステム ボリュームのルート フォルダーに配置する必要があります。 このファイルにはデータは保存されません。この要件を満たす名前が付けられた空のテキスト ファイルを使用できます。  
-
+-   계층에 있는 각 사이트 서버 컴퓨터 시스템 볼륨의 루트 폴더에 **GB18030.SMS** 라는 이름의 파일을 배치해야 합니다. 이 파일은 이 요구 사항을 충족하도록 이름이 지정된, 데이터가 없이 비어 있는 텍스트 파일일 수 있습니다.  

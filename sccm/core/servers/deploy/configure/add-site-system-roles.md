@@ -1,55 +1,51 @@
 ---
-title: "サイト システムの役割の追加 | Microsoft Docs"
-description: "Configuration Manager サイト システムの役割について説明すると共に、それらの役割を追加してサイトの機能と処理能力を拡張する方法について説明します。"
+title: "사이트 시스템 역할 추가 | Microsoft 문서"
+description: "Configuration Manager 사이트 시스템 역할과 사이트의 기능 및 용량을 확장하기 위해 역할을 추가하는 방법을 이해합니다."
 ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b90de2d9-494e-43ad-b269-c8ed589f37d3
-caps.latest.revision: 12
-caps.handback.revision: 0
+caps.latest.revision: "12"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7fa191ce37a68f604673fe9b9724f76c3ff10032
 ms.openlocfilehash: 1ad4abf1f06ed24bd1d505648280b5e5d80220c7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="add-site-system-roles-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイト システム役割の追加
+# <a name="add-site-system-roles-for-system-center-configuration-manager"></a>System Center Configuration Manager에 대한 사이트 시스템 역할 추가
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-サイト システムの役割は、1 つの System Center Configuration Manager サイトにつき複数利用することができます。 サイトにサービスを提供したりデバイスとユーザーを管理したりするうえで必要となるサイトの機能や処理能力は、それぞれの役割によって拡張することになります。 1 つのサイト システム サーバーのそれぞれのサイト システムの役割は、同じサイトにある必要があります。   
+각 System Center Configuration Manager 사이트에서는 여러 사이트 시스템 역할을 지원합니다. 각 역할은 사이트에 서비스를 제공하고 장치 및 사용자를 관리하도록 사이트의 기능과 용량을 확장합니다. 사이트 시스템 서버의 각 사이트 시스템 역할은 같은 사이트의 역할이어야 합니다.   
 
-Configuration Manager では、単一のサイト システム サーバー上で、複数サイトのサイト システムの役割を使用することはサポートされません。  
+Configuration Manager는 한 사이트 시스템 서버에서 여러 사이트에 대한 사이트 시스템 역할을 지원하지 않습니다.  
 
 > [!TIP]  
->  サイト システムの役割の基本や、サイト サーバー、サイト システム サーバー、サイト システムの役割の相違点についてあまり詳しくない場合は、「[System Center Configuration Manager の基本](../../../../core/understand/fundamentals.md)」をご覧ください。  
+>  사이트 시스템 역할과 관련된 기본 사항 또는 사이트 서버/사이트 시스템 서버/사이트 시스템 역할 간의 차이점에 대해 잘 모르는 경우 [System Center Configuration Manager의 기본 사항](../../../../core/understand/fundamentals.md)을 참조하세요.  
 
- 次のトピックには、サイト システムの役割をインストールするための手順と関連する詳細情報が詳述されています。  
+ 다음 항목에서는 사이트 시스템 역할에 대한 자세한 절차 및 관련 세부 정보를 제공합니다.  
 
--   [System Center Configuration Manager のサイト システム役割のインストール](../../../../core/servers/deploy/configure/install-site-system-roles.md)  
+-   [System Center Configuration Manager에 대한 사이트 시스템 역할 설치](../../../../core/servers/deploy/configure/install-site-system-roles.md)  
 
-     このトピックでは、新しいサイト システムの役割をインストールするのに利用できる 2 つのコンソール内ウィザードの使用方法についての基本的なガイダンスを提供します。  
+     이 항목에서는 새 사이트 시스템 역할을 설치하는 데 사용할 수 있는 2개의 콘솔 내 마법사를 사용하는 방법에 대한 기본 지침을 제공합니다.  
 
--   [Microsoft Azure for System Center Configuration Manager のクラウド ベース配布ポイントのインストール](../../../../core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md)  
+-   [Microsoft Azure에서 System Center Configuration Manager에 대한 클라우드 기반 배포 지점 설치](../../../../core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md)  
 
-    クライアントに展開するコンテンツをホストするのに Microsoft Azure を使用する場合には、Configuration Manager が Microsoft Azure と通信して Microsoft Azure サブスクリプションを使用できるようにするために、このトピックの情報に基づいて必要な証明書ファイルを設定できます。 クライアントがクラウドベースの配布ポイントを検索できるように名前解決を設定する必要もあります。  
+    Microsoft Azure를 사용하여 클라이언트에 배포하는 콘텐츠를 호스트하려는 경우 이 항목의 정보를 사용하여 Configuration Manager에서 Microsoft Azure 구독과 통신하고 이 구독을 사용하는 데 필요한 인증서 파일을 설정할 수 있습니다. 또한 클라이언트에서 클라우드 기반 배포 지점을 찾을 수 있도록 이름 확인을 설정해야 합니다.  
 
--   [System Center Configuration Manager でのオンプレミス モバイル デバイス管理のサイト システムの役割のインストール](../../../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)  
+-   [System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 위한 사이트 시스템 역할 설치](../../../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)  
 
-     Configuration Manager オンプレミス MDM を使用した新しいデバイスの管理をサポートするために、サイト システムの役割を正しく設定するには、このトピックが役立ちます。  
+     이 항목의 내용은 Configuration Manager 온-프레미스 MDM을 사용하여 최신 장치 관리를 지원하도록 사이트 시스템 역할을 설정하는 데 도움이 됩니다.  
 
--   [System Center Configuration Manager のサイト システム役割の構成オプション](../../../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md)  
+-   [System Center Configuration Manager에 대한 사이트 시스템 역할 구성 옵션](../../../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md)  
 
-     サイト システムの一部の役割は、ユーザー インターフェイス内で説明可能な詳細情報を必要とする構成をサポートします。 このトピックでは、それらの詳細情報を提供します。  
-
+     일부 사이트 시스템 역할은 사용자 인터페이스서 설명할 수 있는 것보다 더 자세한 정보를 필요로 하는 구성을 지원합니다. 이 항목에서 세부 정보를 제공합니다.  

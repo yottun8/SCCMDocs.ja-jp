@@ -1,61 +1,54 @@
 ---
-title: "診断データの使用 | Microsoft Docs"
-description: "System Center Configuration Manager により収集された診断と使用状況データを Microsoft が使用する方法について説明します。"
+title: "진단 데이터 사용 | Microsoft 문서"
+description: "Microsoft가 System Center Configuration Manager에서 수집하는 진단 및 사용 현황 데이터를 사용하는 방식을 알아봅니다."
 ms.custom: na
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a8021bc8-2799-41f4-83c2-e27d1242028c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
 ms.openlocfilehash: 9864f6ba7b9a2211c99b1a5d9ebd582e01ccfeb6
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-diagnostics-and-usage-data-is-used-for-system-center-configuration-manager"></a>System Center Configuration Manager での診断結果と使用状況データの使用方法
+# <a name="how-diagnostics-and-usage-data-is-used-for-system-center-configuration-manager"></a>System Center Configuration Manager의 진단 및 사용 현황 데이터 사용 방법
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager で収集される診断結果と使用状況データは、製品がどのように動作しているかに関するフィードバックを Microsoft に直ちに示し、今後の更新プログラムの調整に使用されます。 また、運用環境における構成を設計およびテストする際に役立つ構成データを確認することもできます。 たとえば、  
+System Center Configuration Manager가 수집한 진단 및 사용 현황 데이터는 제품이 작동되는 방식에 대한 피드백을 Microsoft에 거의 즉시 제공하므로 이를 사용하여 향후 업데이트가 조정됩니다. 또한 프로덕션에 있는 구성을 엔지니어링하고 테스트하는 데 도움이 되는 구성 데이터를 볼 수 있습니다. 예를 들면 다음과 같습니다.  
 
--   サイト サーバーが使用している Windows サーバーのバージョン  
+-   사이트 서버에서 사용되는 Windows Server 버전  
 
--   インストール済みの言語パック  
+-   설치된 언어 팩  
 
--   製品の既定値に対する SQL スキーマのデルタ  
+-   제품 기본값에 대한 SQL 스키마의 델타  
 
-このデータによってエンジニアリング チームは、最も一般的な構成の下で最適なエクスペリエンスを確保できるように今後のテストを計画できます。 Configuration Manager の更新プログラムは、(Windows 10、Microsoft Intune など、変化の速いテクノロジを適切にサポートするために) 頻繁にリリースされます。これに合わせて迅速に調整するには、このデータが欠かせません。  
+이 데이터는 엔지니어링 팀이 가장 일반적인 구성에 대해 최상의 환경을 보장할 수 있도록 향후 테스트를 계획하는 데 사용됩니다. Windows 10, Microsoft Intune 등 빠르게 변화하는 기술을 더욱 효과적으로 지원할 수 있도록 Configuration Manager 업데이트가 더 빠른 주기로 릴리스되고 있으므로 그에 맞추어 이 데이터를 신속하게 조정하고 적용하는 것이 중요합니다.  
 
-同じくらい重要なのが診断結果と使用状況データが使用されないケースです。 Microsoft は、次に対してこのデータを使用しません。  
+진단 및 사용 현황 데이터가 사용되지 않는 방식도 동일하게 중요합니다. Microsoft는 이 데이터를 다음과 같은 목적으로 사용하지 않습니다.  
 
--   使用許諾契約に対する顧客の使用状況の比較などのライセンスの監査  
+-   고객의 사용 방식을 사용권 계약과 비교하는 등 라이선스 감사  
 
--   サポート外の製品の監査  
+-   지원되지 않는 제품 감사  
 
--   機能の使用状況や地理的位置情報 (タイム ゾーン) などの利用可能なデータに基づいた広告  
+-   기능 사용 또는 지리적 위치(표준 시간대)와 같은 사용 가능한 데이터를 기반으로 하는 광고  
 
-##  <a name="a-namebkmkimprovea-examples-of-how-diagnostics-and-usage-data-improves-the-product"></a><a name="bkmk_improve"></a> 診断結果と使用状況データが製品を向上させる方法の例  
-Microsoft では、製品を向上させるために、使用可能なデータを使用します。 例を次にいくつか示します。  
+##  <a name="bkmk_improve"></a> 진단 및 사용 현황 데이터는 제품을 개선하는 방법의 예  
+Microsoft에서는 사용 가능한 데이터를 사용하여 제품을 개선합니다. 다음은 몇 가지 예입니다.  
 
--   **古いサーバーのオペレーティング システムの変更されるサポート:**  
+-   **이전 서버 운영 체제에 대한 수정된 지원:**  
 
-     System Center Configuration Manager の現在のブランチで提供される初期のサポートでは、Windows Server 2008 R2 のサポート タイムラインが制限されていました。 Configuration Manager の現在のブランチにアップグレードした顧客からの使用状況データを調べた後、サイト サーバーとサイト システムの役割をホストするためにこのサーバーのオペレーティング システムを引き続き使用する顧客をサポートするために、このタイムラインを変更して拡張する必要があることがわかりました。  
+     System Center Configuration Manager의 현재 분기에서 제공하는 초기 지원에서는 Windows Server 2008 R2의 지원 타임라인을 제한했습니다. Configuration Manager 현재 분기로 업그레이드한 고객의 사용 현황 데이터를 검사한 후 여전히 이 서버 운영 체제를 사용하여 사이트 서버 및 사이트 시스템 역할을 호스트하는 고객을 지원하기 위해 이 타임라인을 수정하고 개정해야 할 필요성을 확인했습니다.  
 
--   **改良された前提条件の確認:**  
+-   **개선된 필수 구성 요소 확인:**  
 
-     使用状況データに基づいて、古いルール、追加のケースのアカウント、および場合によっては、自動修復のいくつかの問題を削除する更新プログラムをインストールするための前提条件の確認を改良しました。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-
+     사용 현황 데이터에 따라 업데이트를 설치하여 기존 규칙을 제거하고, 추가 사례를 확인하고, 경우에 따라 몇 가지 문제를 자동 해결하기 위한 필수 조건 검사를 개선했습니다.  

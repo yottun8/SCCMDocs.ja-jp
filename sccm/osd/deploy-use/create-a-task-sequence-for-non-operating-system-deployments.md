@@ -1,60 +1,56 @@
 ---
-title: "オペレーティング システム以外の展開用タスク シーケンスの作成 | Microsoft Docs"
-description: "ソフトウェアの配布、ドライバーの更新、ユーザー状態の編集などのオペレーティング システムの展開に関連していないタスク シーケンスを作成します。"
+title: "비운영 체제 배포에 대한 작업 순서 만들기 | Microsoft 문서"
+description: "소프트웨어 배포, 드라이버 업데이트, 사용자 상태 편집 등 운영 체제 배포와 관련이 없는 작업 순서를 만듭니다."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92aaec8a-8751-442a-b64b-62ab05b5bf50
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
 ms.openlocfilehash: b4b04907f2cd48d81e864e46ca47c14a0b98a9f7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-a-task-sequence-for-non-operating-system-deployments-with-system-center-configuration-manager"></a>System Center Configuration Manager でオペレーティング システム以外の展開用タスク シーケンスを作成する
+# <a name="create-a-task-sequence-for-non-operating-system-deployments-with-system-center-configuration-manager"></a>System Center Configuration Manager와 비운영 체제 배포에 대한 작업 순서 만들기
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager のタスク シーケンスは、お客様の環境でさまざまなタスクを自動化するために使用します。 これらのタスクは、主にオペレーティング システムの展開のために設計され、テストされます。  Configuration Manager には、[アプリケーションのインストール](../../apps/understand/introduction-to-application-management.md)、[ソフトウェアの更新プログラムのインストール](../../sum/understand/software-updates-introduction.md)、[構成の設定](../../compliance/understand/ensure-device-compliance.md)、またはカスタム オートメーションなどのシナリオに使用する主要なテクノロジとなる、他の数多くの機能があります。 Microsoft System Center の他の自動化テクノロジとして、 [Orchestrator](https://technet.microsoft.com/library/hh237242.aspx) と [Service Management Automation](https://technet.microsoft.com/library/dn469260.aspx) などもご検討ください。  
+System Center Configuration Manager의 작업 순서는 사용자 환경 내에서 다양한 작업을 자동화하는 데 사용됩니다. 이러한 작업은 주로 운영 체제 배포를 위해 설계되고 테스트됩니다.  Configuration Manager에는 [응용 프로그램 설치](../../apps/understand/introduction-to-application-management.md), [소프트웨어 업데이트 설치](../../sum/understand/software-updates-introduction.md), [구성 설정](../../compliance/understand/ensure-device-compliance.md), 사용자 지정 자동화 등 시나리오에 사용하는 기본 기술인 기타 많은 기능이 있습니다. 또한 [Orchestrator](https://technet.microsoft.com/library/hh237242.aspx) , [서비스 관리 자동화](https://technet.microsoft.com/library/dn469260.aspx) 등 고려해야 하는 기타 Microsoft System Center 자동화 기술도 있습니다.  
 
-タスク シーケンスの機能には柔軟性があり、タスク シーケンスを使用して、クライアント設定の構成、ソフトウェアの配布、ドライバーの更新、ユーザー状態の編集など、オペレーティング システムの展開とは独立した他のタスクを実行できます。 カスタム タスク シーケンスを作成して、タスクをいくつでも追加できます。 Configuration Manager では、オペレーティング システム以外の展開用のカスタム タスク シーケンスの使用がサポートされています。 ただし、タスク シーケンスで好ましくない結果や矛盾する結果が生じる場合は、操作を簡略化する方法を考えてください。 より簡単なステップを使用するか、操作を複数のタスク シーケンスに分けるか、あるいは段階的にタスク シーケンスを作成してテストすることで、これを行うことができます。
+작업 순서의 장점은 유연성에 있으며, 이러한 작업 순서를 사용하여 운영 체제 배포와 독립적으로 클라이언트 설정 구성, 소프트웨어 배포, 드라이버 업데이트, 사용자 환경 편집 및 기타 작업을 수행할 수 있습니다. 개수와 상관없이 작업을 추가하는 사용자 지정 작업 순서를 만들 수 있습니다. Configuration Manager에서 비운영 체제 배포에 대한 사용자 지정 작업 순서 사용이 지원됩니다. 그러나 작업 순서로 인해 원치 않거나 일관성이 없는 결과가 발생하는 경우 작업을 간소화하는 방법을 살펴보세요. 여러 작업 순서로 작업을 나누어 더 간단한 단계를 사용하거나 작업 순서를 만들고 테스트하는 단계별 방법을 사용하면 됩니다.
 
- オペレーティング システム以外の展開用のカスタム タスク シーケンスの使用では、以下のステップがサポートされています。  
+ 비운영 체제 배포 사용자 지정 작업 순서에 사용할 수 있는 단계는 다음과 같습니다.  
 
--   [準備の確認](../understand/task-sequence-steps.md#BKMK_CheckReadiness)  
+-   [준비 확인](../understand/task-sequence-steps.md#BKMK_CheckReadiness)  
 
--   [ネットワーク フォルダーへの接続](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder)  
+-   [네트워크 폴더에 연결](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder)  
 
--   [パッケージ コンテンツのダウンロード](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent)  
+-   [패키지 콘텐츠 다운로드](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent)  
 
--   [アプリケーションのインストール](../understand/task-sequence-steps.md#BKMK_InstallApplication)  
+-   [응용 프로그램 설치](../understand/task-sequence-steps.md#BKMK_InstallApplication)  
 
--   [パッケージのインストール](../understand/task-sequence-steps.md#BKMK_InstallPackage)  
+-   [패키지 설치](../understand/task-sequence-steps.md#BKMK_InstallPackage)  
 
--   [ソフトウェア更新プログラムのインストール](../understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
+-   [소프트웨어 업데이트 설치](../understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
 
--   [コンピューターの再起動](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)  
+-   [컴퓨터 다시 시작](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)  
 
--   [コマンド ラインの実行](../understand/task-sequence-steps.md#BKMK_RunCommandLine)  
+-   [명령줄 실행](../understand/task-sequence-steps.md#BKMK_RunCommandLine)  
 
--   [PowerShell スクリプトの実行](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript)  
+-   [PowerShell 스크립트 실행](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript)  
 
--   [動的変数の設定](../understand/task-sequence-steps.md#BKMK_SetDynamicVariables)  
+-   [동적 변수 설정](../understand/task-sequence-steps.md#BKMK_SetDynamicVariables)  
 
--   [タスク シーケンス変数の設定](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  
+-   [작업 순서 변수 설정](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  
 
-## <a name="next-steps"></a>次のステップ
-[タスク シーケンスの展開](manage-task-sequences-to-automate-tasks.md#a-namebkmkdeploytsa-deploy-a-task-sequence)
-
+## <a name="next-steps"></a>다음 단계
+[작업 순서 배포](manage-task-sequences-to-automate-tasks.md#a-namebkmkdeploytsa-deploy-a-task-sequence)

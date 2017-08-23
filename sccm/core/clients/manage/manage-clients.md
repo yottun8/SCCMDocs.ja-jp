@@ -1,220 +1,217 @@
 ---
-title: "クライアントの管理 | Microsoft Docs"
-description: "System Center Configuration Manager でクライアントを管理する方法について説明します。"
+title: "클라이언트 관리 | Microsoft 문서"
+description: "System Center Configuration Manager에서 클라이언트를 관리하는 방법을 알아봅니다."
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 19e111e0cb174f11ad08f98d2516e52c4c183d86
-ms.openlocfilehash: a079824ba96897bbd3f9475efcaea81804858171
-ms.contentlocale: ja-jp
-ms.lasthandoff: 01/05/2017
-
-
+ms.openlocfilehash: 3a86924b2e5db3ac16eeda78b95ae6747ffd656f
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアントを管理する方法
+# <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 클라이언트를 관리하는 방법
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager クライアントがインストールされ、Configuration Manager サイトに正しく割り当てられると、**[デバイス]** ノードの **[資産とコンプライアンス]** ワークスペースと、**[デバイス コレクション]** ノードの 1 つまたは複数のコレクションにデバイスが表示されます。 デバイスまたはコレクションを選択するときに、管理操作を実行できます。 ただし、コンソールの他のワークスペースを使用するか、Configuration Manager コンソールを使用しないタスクを実行して、別の方法でクライアントを管理することもできます。  
+System Center Configuration Manager 클라이언트를 설치하여 Configuration Manager 사이트에 성공적으로 할당하면 **장치** 노드의 **자산 및 준수** 작업 영역과 **장치 컬렉션** 노드의 컬렉션 하나 이상에 장치가 표시됩니다. 장치 또는 컬렉션을 선택하면 관리 작업을 수행할 수 있습니다. 그러나 다른 방법으로 클라이언트를 관리할 수도 있습니다. 이 경우 Configuration Manager 콘솔을 사용하지 않는 작업이나 콘솔의 다른 작업 영역이 사용될 수 있습니다.  
 
 > [!NOTE]  
->  Configuration Manager クライアントがインストールされていても、Configuration Manager コンソールに表示されない場合があります。 この問題は、クライアントがサイトに正常に割り当てられていない場合や、コンソールの更新やコレクション メンバーシップの更新が必要な場合に生じる可能性があります。  
+>  Configuration Manager 클라이언트가 설치되었지만 Configuration Manager 콘솔에 표시되지 않습니다. 이는 사이트에 클라이언트를 아직 할당하지 않은 경우나 콘솔을 새로 고치거나 컬렉션 멤버 자격을 업데이트해야 하는 경우에 발생할 수 있습니다.  
 >   
->  また、Configuration Manager クライアントがインストールされていないのに、デバイスがコンソールに表示されることもあります。 この問題は、デバイスが検出されているが、Configuration Manager クライアントのインストールと割り当てが行われていない場合に生じる可能性があります。 Exchange Server コネクタを使用して管理されるモバイル デバイスと、Microsoft Intune に登録されているデバイスでは、Configuration Manager クライアントがインストールされません。  
+>  또한, Configuration Manager 클라이언트가 설치되지 않은 경우에도 콘솔에 장치가 표시될 수 있습니다. 이는 장치가 검색되지만 Configuration Manager 클라이언트가 설치되거나 할당되지 않은 경우에 발생할 수 있습니다. Exchange Server 커넥터를 사용하여 관리하는 모바일 장치 및 Microsoft Intune으로 등록한 장치에는 Configuration Manager 클라이언트가 설치되지 않습니다.  
 >   
->  Configuration Manager コンソールで **[クライアント]** 列を使用して、Configuration Manager クライアントがインストールされていて Configuration Manager コンソールから管理できるかどうかを判断できます。  
+>  Configuration Manager 콘솔의 **클라이언트** 열을 사용하여 Configuration Manager 콘솔에서 관리할 수 있도록 Configuration Manager 클라이언트 설치 여부를 결정합니다.  
 
-##  <a name="BKMK_ManagingClients_DevicesNode"></a> [デバイス] ノードを使用してクライアントを管理する  
+##  <a name="BKMK_ManagingClients_DevicesNode"></a> 장치 노드에서 클라이언트 관리  
 
-デバイスの種類によっては、一部のオプションを使用できません。  
+장치 유형에 따라 이러한 옵션 중 일부를 사용하지 못할 수도 있습니다.  
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** >  **[デバイス]** を選択します。  
+1.  Configuration Manager 콘솔에서 **자산 및 준수** >  **장치**를 선택합니다.  
 
-3.  1 つまたは複数のデバイスを選択してから、リボンからクライアント管理タスクのいずれかを選択するか、デバイスを右クリックします。  
+3.  장치를 하나 이상 선택한 다음 이러한 클라이언트 관리 작업 중 하나를 리본에서 선택하거나 장치를 마우스 오른쪽 단추로 클릭하여 선택합니다.  
 
-    -   **ユーザー デバイスのアフィニティ情報を管理する**  
+    -   **사용자 장치 선호도 정보 관리**  
 
-         ユーザーとデバイスの関連付けを構成して、ユーザーにソフトウェアを効率的に展開することができます。  
+         사용자에게 소프트웨어를 효율적으로 배포할 수 있도록 사용자와 장치 간의 연결을 구성합니다.  
 
-         「[System Center Configuration Manager でのユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)」を参照してください  
+         [System Center Configuration Manager에서 사용자 장치 선호도를 사용하여 사용자와 장치 연결](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)을 참조하세요.  
 
-    -   **新規または既存のコレクションにデバイスを追加する**  
+    -   **새 컬렉션 또는 기존 컬렉션에 장치 추가**  
 
-         ダイレクト規則でデバイスをコレクションに追加します。  
+         직접 규칙을 사용하여 컬렉션에 장치를 추가합니다.  
          
-    -   **クライアント プッシュ ウィザードを使用してクライアントのインストールと再インストールを実行する**  
+    -   **클라이언트 강제 설치 마법사를 사용하여 클라이언트 설치 및 다시 설치**  
 
-         Configuration Manager クライアントの修復、または Windows を実行するコンピューターでの再構成には、インストールまたは再インストールを実行します。 サイトの構成オプションと、クライアントのプッシュ インストール用に設定した client.msi プロパティを含めます。  
+         Configuration Manager 클라이언트를 설치 및 다시 설치하여 복구하거나 Windows를 실행하는 컴퓨터에서 다시 구성합니다. 사이트 구성 옵션 및 클라이언트 강제 설치에 대해 설정한 client.msi 속성을 포함합니다.  
 
         > [!TIP]  
-        >  Configuration Manager クライアントのインストール (および再インストール) を実行するには、さまざまな方法があります。 クライアント プッシュ ウィザードはコンソールから実行できるため、クライアントのインストールには便利な方法ですが、この方法には数多くの依存関係があり、すべての環境に適しているわけではありません。 依存関係の詳細については、「[System Center Configuration Manager で Windows コンピューターにクライアントを展開するための前提条件](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)」を参照してください。 他のクライアント インストール方法の詳細については、「[System Center Configuration Manager でのクライアントのインストール方法](../../../core/clients/deploy/plan/client-installation-methods.md)」を参照してください。  
+        >  Configuration Manager 클라이언트를 설치(및 다시 설치)하는 다른 여러 가지 방법이 있습니다. 클라이언트 강제 설치 마법사는 콘솔에서 실행할 수 있기 때문에 편리한 클라이언트 설치 방법을 제공하지만 이 방법은 여러 가지 종속성이 있어 일부 환경에서는 적합하지 않습니다. 종속성에 대한 자세한 내용은 [Windows 컴퓨터에 클라이언트를 배포하기 위한 필수 조건](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)을 참조하세요. 다른 클라이언트 설치 방법에 대한 자세한 내용은 [System Center Configuration Manager의 클라이언트 설치 방법](../../../core/clients/deploy/plan/client-installation-methods.md)을 참조하세요.  
 
-         「 [クライアント プッシュを使用した Configuration Manager クライアントのインストール方法](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush)」を参照してください。  
+         [클라이언트 강제 설치를 사용하여 Configuration Manager 클라이언트를 설치하는 방법](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush)을 참조하세요.  
 
-    -   **サイトの再割り当て**  
+    -   **사이트 재할당**  
 
-         1 つまたは複数のクライアント (管理しているモバイル デバイスを含む) を、階層内の別のプライマリ サイトに再割り当てします。 新しいサイトへのクライアントの再割り当ては、個別に行うことも、複数のクライアントを選択して一括で行うこともできます。  
+         관리되는 모바일 장치를 포함한 클라이언트를 계층의 다른 기본 사이트에 재할당합니다. 클라이언트는 개별적으로 재할당할 수도 있고 여러 개를 선택하여 새 사이트에 대량으로 재할당할 수도 있습니다.  
 
-    -   **クライアントをリモート管理する**  
+    -   **원격으로 클라이언트 관리**  
 
-         リソース エクスプローラーを実行して、ハードウェアとソフトウェアのインベントリ情報を Windows クライアントから確認したり、リモート コントロール、リモート アシスタンス、またはリモート デスクトップを使用してこれらの情報をリモートで管理できます。  
+         리소스 탐색기를 실행하면 Windows 클라이언트에서 하드웨어 및 소프트웨어 인벤토리 정보를 확인하고 원격 제어, 원격 지원 또는 원격 데스크톱을 사용하여 원격으로 관리할 수 있습니다.  
 
-         「[System Center Configuration Manager でリソース エクスプローラーを使用してハードウェア インベントリを表示する方法](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)」および「[System Center Configuration Manager でリソース エクスプローラーを使用してソフトウェア インベントリを表示する方法](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)」を参照してください。  
+         [System Center Configuration Manager에서 하드웨어 인벤토리를 보기 위해 리소스 탐색기를 사용하는 방법](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md) 및 [System Center Configuration Manager에서 소프트웨어 인벤토리를 보기 위해 리소스 탐색기를 사용하는 방법](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)을 참조하세요.  
 
-         「[System Center Configuration Manager を使用して Windows クライアント コンピューターをリモート管理する方法](../../../core/clients/manage/remote-control/remotely-administer-a-windows-client-computer.md)」を参照してください。  
+         [System Center Configuration Manager를 사용하여 Windows 클라이언트 컴퓨터를 원격으로 관리하는 방법](../../../core/clients/manage/remote-control/remotely-administer-a-windows-client-computer.md)을 참조하세요.  
 
-    -   **クライアントを承認する**  
+    -   **클라이언트 승인**  
 
-         クライアントが HTTP および自己署名証明書を使用してサイト システムと通信する場合、信頼されるコンピューターとして識別されるように、これらのクライアントを承認する必要があります。 既定では、各クライアントを手動で承認せずに済むように、サイト構成により、同じ Active Directory フォレストおよび信頼されるフォレストのクライアントは自動的に承認されます。 ただし、信頼できるワークグループ コンピューター、および信頼できるが承認されていないその他のコンピューターは手動で承認する必要があります。  
-
-        > [!WARNING]  
-        >  一部の管理機能は承認されていないクライアントでも動作する可能性がありますが、このシナリオは Configuration Manager ではサポートされていません。  
-
-         常に HTTPS を使用してサイト システムと通信するクライアントや、HTTP を使用してサイト システムと通信する際に PKI 証明書を使用するクライアントは、承認する必要はありません。 これらのクライアントは、PKI 証明書を使用して信頼を確立します。  
-
-    -   **クライアントをブロックまたはブロック解除する**  
-
-         信頼できなくなったクライアントをブロックして、このクライアントがクライアント ポリシーを受け取るのを防いだり、Configuration Manager サイト システムがこのクライアントと通信するのを防ぎます。  
+         클라이언트가 HTTP와 자체 서명된 인증서를 사용하여 사이트 시스템과 통신하는 경우 이러한 클라이언트를 승인해야 신뢰할 수 있는 컴퓨터로 식별됩니다. 기본적으로 사이트 구성은 동일한 Active Directory 포리스트 및 신뢰할 수 있는 포리스트의 클라이언트를 자동으로 승인하므로 각 클라이언트를 수동으로 승인할 필요는 없습니다. 그러나 신뢰하는 작업 그룹 컴퓨터 및 신뢰하지만 승인하지 않은 다른 컴퓨터는 수동으로 승인해야 합니다.  
 
         > [!WARNING]  
-        >  クライアントをブロックすると、クライアントから Configuration Manager サイト システムへの通信のみ防ぐことができます。クライアントから他のデバイスへの通信を防ぐことはできません。 また、HTTPS の代わりに HTTP を使用してクライアントがサイト システムに通信する場合、セキュリティ上の制限がいくつか生じます。  
+        >  승인되지 않은 클라이언트에 대해서도 일부 관리 기능이 작동할 수 있지만 이는 Configuration Manager에서 지원되지 않는 시나리오입니다.  
 
-         ブロックされていたクライアントのブロックを解除できます。 ただし、ブロックしたときに AMT 用にプロビジョニングされていた Inel AMT 搭載コンピューターのブロックを解除する場合、そのコンピューターを再度、帯域外管理するためには、追加の手順を実行する必要があります。  
+         항상 HTTPS를 사용하여 사이트 시스템과 통신하는 클라이언트나 HTTP를 사용하여 사이트 시스템과 통신할 때 PKI 인증서를 사용하는 클라이언트는 승인할 필요가 없습니다. 이러한 클라이언트는 PKI 인증서를 사용하여 신뢰 관계를 설정합니다.  
 
-         「[System Center Configuration Manager でクライアントをブロックするかどうかの判断](../../../core/clients/deploy/plan/determine-whether-to-block-clients.md)」を参照してください。  
+    -   **클라이언트 차단 또는 차단 해제**  
 
-    -   **必要な PXE 展開をクリアする**  
-
-         コンピューターに必要な PXE 展開を再展開します。  
-
-         「[System Center Configuration Manager で PXE を使用してネットワーク経由で Windows を展開する](../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md)」を参照してください。  
-
-    -   **クライアントのプロパティを管理する**  
-
-         クライアントを対象とした探索データと展開を表示します。 また、オペレーティング システムをデバイスに展開するためにタスク シーケンスで使用される変数を構成することもできます。  
-
-    -   **クライアントを削除する**  
+         더 이상 신뢰하지 않는 클라이언트를 차단하여 클라이언트 정책을 받지 않도록 하고 Configuration Manager 사이트 시스템이 해당 클라이언트와 통신하지 않도록 합니다.  
 
         > [!WARNING]  
-        >  Configuration Manager クライアントをアンインストールする場合やコレクションから削除する際、クライアントを削除しないでください。  
+        >  클라이언트를 차단하면 클라이언트에서 Configuration Manager 사이트 시스템으로 보내는 통신만 차단되고 다른 장치로 보내는 통신은 차단되지 않습니다. 또한, 클라이언트가 HTTPS 대신 HTTP를 사용하여 사이트 시스템과 통신할 경우 몇 가지 보안 관련 제한 사항이 있습니다.  
 
-         **[削除]** 操作を実行して、Configuration Manager データベースからクライアント レコードを手動で削除します。通常、この操作は、トラブルシューティング以外では使用しないでください。 クライアント レコードを削除しても、クライアントが引き続きインストールされており、Configuration Manager と通信している場合は、クライアント履歴と以前の関連付けは失われますが、定期探索によってクライアント レコードが再作成されて Configuration Manager コンソールに表示されます。  
+         차단된 클라이언트를 차단 해제할 수 있습니다. 그러나 AMT용으로 프로비전된 Intel AMT 기반 컴퓨터가 차단된 경우에 이 컴퓨터를 차단 해제하면 추가 단계를 수행해야 해당 컴퓨터를 다시 대역 외로 관리할 수 있습니다.  
+
+         [System Center Configuration Manager에서 클라이언트를 차단할지 여부 결정](../../../core/clients/deploy/plan/determine-whether-to-block-clients.md)을 참조하세요.  
+
+    -   **필수 PXE 배포 지우기**  
+
+         컴퓨터에 대해 필수 PXE 배포를 다시 배포합니다.  
+
+         [System Center Configuration Manager에서 PXE를 사용하여 네트워크를 통해 Windows 배포](../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md)를 참조하세요.  
+
+    -   **클라이언트 속성 관리**  
+
+         클라이언트를 대상으로 하는 검색 데이터 및 배포를 볼 수 있습니다. 작업 순서에서 장치에 운영 체제를 배포하는 데 사용하는 변수를 구성할 수도 있습니다.  
+
+    -   **클라이언트 삭제**  
+
+        > [!WARNING]  
+        >  Configuration Manager 클라이언트를 제거하거나 컬렉션에서 제거하려면 클라이언트를 삭제하지 마세요.  
+
+         **삭제** 작업은 Configuration Manager 데이터베이스에서 클라이언트 레코드를 수동으로 삭제하며, 일반적으로 문제 해결 시나리오 외에는 이 작업을 사용하지 않아야 합니다. 클라이언트 레코드를 삭제했으나 클라이언트가 아직 설치되어 있고 Configuration Manager와 통신하는 경우 클라이언트 기록 및 이전 연결은 모두 없어지지만 하트비트 검색에서 클라이언트 레코드를 다시 만들게 되고 Configuration Manager 콘솔에 다시 표시됩니다.  
 
         > [!NOTE]  
-        >  Configuration Manager によって登録されているモバイル デバイス クライアントを削除すると、この操作により、モバイル デバイス クライアントに発行された PKI 証明書が失効し、IIS によって CRL がチェックされない場合でも、この証明書が管理ポイントで拒否されるようになります。 モバイル デバイス レガシ クライアントを削除しても、これらのクライアントの証明書は失効しません。  
+        >  Configuration Manager에서 등록한 모바일 장치 클라이언트를 삭제하면 이 작업으로 인해 모바일 장치에 발급된 PKI 인증서도 해지되므로 IIS에서 CRL을 확인하지 않아도 이 인증서는 관리 지점에서 거부됩니다. 모바일 장치 기존 클라이언트를 삭제해도 이러한 클라이언트의 인증서는 해지되지 않습니다.  
 
-         クライアントをアンインストールするには、「 [Configuration Manager クライアントのアンインストール](#BKMK_UninstalClient)」を参照してください。  
+         클라이언트를 제거하려면 [Configuration Manager 클라이언트 제거](#BKMK_UninstalClient)섹션을 참조하세요.  
 
-         クライアントを新しいプライマリ サイトに割り当てるには、「[System Center Configuration Manager でクライアントをサイトに割り当てる方法](../../../core/clients/deploy/assign-clients-to-a-site.md)」を参照してください。  
+         새 기본 사이트에 클라이언트를 할당하려면 [System Center Configuration Manager에서 사이트에 클라이언트를 할당하는 방법](../../../core/clients/deploy/assign-clients-to-a-site.md)을 참조하세요.  
 
-         クライアントをコレクションから削除するには、コレクションのプロパティを再構成します。 「[System Center Configuration Manager でコレクションを管理する方法](../../../core/clients/manage/collections/manage-collections.md)」を参照してください。  
+         컬렉션에서 클라이언트를 제거하려면 컬렉션 속성을 다시 구성하세요. [System Center Configuration Manager에서 컬렉션을 관리하는 방법](../../../core/clients/manage/collections/manage-collections.md)을 참조하세요.  
 
-    -   **モバイル デバイスをワイプする**  
+    -   **모바일 장치 초기화**  
 
-         ワイプ コマンドをサポートするモバイル デバイスをワイプできます。  
+         초기화 명령을 지원하는 모바일 장치를 초기화할 수 있습니다.  
 
-         この操作により、個人設定や個人データを含め、モバイル デバイスのすべてのデータが削除されます。 通常、この操作で、モバイル デバイスが工場出荷時の設定にリセットされます。 モバイル デバイスは、紛失や盗難にあうなど、信頼できなくなった場合にワイプします。  
+         이 작업은 개인 설정 및 개인 데이터를 포함하여 모바일 장치의 모든 데이터를 영구적으로 제거합니다. 일반적으로 이 작업은 모바일 장치를 공장 기본값으로 다시 설정합니다. 모바일 장치를 더 이상 신뢰하지 않는 경우(예: 잃어버렸거나 도난당한 경우) 모바일 장치를 초기화합니다.  
 
         > [!TIP]  
-        >  モバイル デバイスでリモート ワイプ コマンドがどのように処理されるかについては、製造元のドキュメントを参照してください。  
+        >  모바일 장치에서 원격 초기화 명령을 처리하는 방법에 대한 자세한 내용은 제조업체의 설명서를 확인하세요.  
 
-         モバイル デバイスがワイプ コマンドを受信するまで、通常、待ち時間が発生します。  
+         대개의 경우 모바일 장치에서 초기화 명령을 받을 때까지 지연이 있습니다.  
 
-        -   モバイル デバイスが Configuration Manager または Microsoft Intune によって登録されている場合、クライアントは、クライアント ポリシーのダウンロード時にコマンドを受信します。  
+        -   Configuration Manager 또는 Microsoft Intune에서 모바일 장치를 등록한 경우 클라이언트에서 클라이언트 정책을 다운로드할 때 명령을 받습니다.  
 
-        -   モバイル デバイスが Exchange Server コネクタによって管理されている場合、Exchange との同期時にコマンドを受信します。  
+        -   Exchange Server 커넥터로 모바일 장치를 관리하는 경우 Exchange와 동기화할 때 명령을 받습니다.  
 
-         **[ワイプのステータス]** 列を使用して、デバイスがワイプ コマンドをいつ受信するのかを監視できます。 デバイスが Configuration Manager にワイプ確認を送信するまで、ワイプ コマンドをキャンセルできます。  
+         **Wipe Status**(초기화 상태) 열을 사용하면 장치에서 초기화 명령을 받는 시간을 모니터링할 수 있습니다. 장치에서 Configuration Manager로 초기화 승인을 보낼 때까지는 초기화 명령을 취소할 수 있습니다.  
 
-    -   **モバイル デバイスをインベントリから削除する**  
+    -   **모바일 장치 사용 중지**  
 
-         **[インベントリから削除]** オプションをサポートしているのは、Intune に登録されたか、\-オンプレミス モバイル デバイス管理で登録されたモバイル デバイスのみです。  
+         **사용 중지** 옵션은 Intune 또는 온\-프레미스 모바일 장치 관리에서 등록한 모바일 장치에서만 지원됩니다.  
 
-         詳細については、「 [System Center Configuration Manager によるリモート ワイプ、リモート ロック、パスコードのリセットを使用したデータの保護](../../../mdm/deploy-use/wipe-lock-reset-devices.md)」をご覧ください。  
+         자세한 내용은 [System Center Configuration Manager를 사용하여 원격 초기화, 원격 잠금 또는 암호 재설정으로 데이터 보호 지원](../../../mdm/deploy-use/wipe-lock-reset-devices.md)을 참조하세요.  
 
-    -   **デバイスの所有権を変更する**  
+    -   **장치의 소유권 변경**  
 
-         デバイスがドメインに参加しておらず、Configuration Manager クライアントがインストールされていない場合は、デバイスの所有権を **[会社]** または **[個人]** に変更できます。  
+         장치가 도메인에 가입되어 있지 않으며 Configuration Manager 클라이언트가 설치되어 있지 않으면 장치 소유권을 **회사** 또는 **개인**으로 변경할 수 있습니다.  
 
-         アプリケーションの要件にこの値を使用して、展開を制御できます。また、ユーザー デバイスから収集するインベントリの量を制御できます。  
+         응용 프로그램 요구 사항에서 이 값을 사용하여 배포를 제어하고 사용자 장치에서 수집되는 인벤토리 수를 제어할 수 있습니다.  
 
-        また、必要に応じて、列見出しを右クリックして選択し、ビューに **[デバイスの所有者]** 列を追加することもできます。
+        열 머리글을 마우스 오른쪽 단추로 클릭하고 선택하여 보려는 **Device Owner**(장치 소유자) 열을 추가해야 할 수 있습니다.
 
-         詳細については、「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)」を参照してください。  
+         자세한 내용은 [System Center Configuration Manager 및 Microsoft Intune을 지원하는 하이브리드 MDM(모바일 장치 관리)](../../../mdm/understand/hybrid-mobile-device-management.md)을 참조하세요.  
 
-##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> [デバイス コレクション] ノードを使用してクライアントを管理する  
-  **[デバイス]** ノードの 1 つのデバイスまたは複数のデバイスに対して実行できる多くのタスクは、コレクションに対しても実行できます。 コレクションに対して実行すると、コレクション内の対象となるすべてのデバイスに操作が適用されます。 この処理で多数のネットワーク パケットが生成され、サイト サーバーの CPU 使用率が増加する点に注意してください。  
+##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> 장치 컬렉션 노드에서 클라이언트 관리  
+  **장치** 노드의 단일 장치 또는 여러 장치에서 수행할 수 있는 많은 작업은 컬렉션에서 수행할 수 있습니다. 컬렉션에 있는 적격한 모든 장치에 자동으로 작업이 적용됩니다. 이로 인해 네트워크 패킷이 많이 생성되고 사이트 서버에서 CPU 사용량이 증가합니다.  
 
-  コレクション レベルのクライアント管理タスクを実行する前に、コレクションにどの程度の数のデバイスが含まれているのか、それらのデバイスが低帯域幅のネットワーク接続で接続されていないかどうか、およびすべてのデバイスでタスクを完了するのにどの程度の時間がかかるのかを検討します。 タスクの開始後にコンソールからタスクを停止することはできません。  
+  컬렉션 수준 클라이언트 관리 작업을 수행하기 전에 컬렉션에 있는 장치 수, 대역폭이 낮은 네트워크 연결로 연결되었는지 여부 및 모든 장치에 대해 작업을 완료하는 데 걸리는 시간을 고려하세요. 시작하면 콘솔에서 작업을 중지할 수 없습니다.  
 
-#### <a name="to-manage-clients-from-the-device-collections-node"></a>[デバイス コレクション] ノードを使用してクライアントを管理するには  
+#### <a name="to-manage-clients-from-the-device-collections-node"></a>장치 컬렉션 노드에서 클라이언트를 관리하려면  
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[デバイス コレクション]** の順に選択します。  
+1.  Configuration Manager 콘솔에서 **자산 및 준수** > **장치 컬렉션**을 선택합니다.  
 
-3.  コレクションを選んだ後、リボンから (またはコレクションを右クリックして) 次のいずれかのクライアント管理タスクを選びます。 これらのクライアント管理タスクは、*コレクション レベルでのみ*使用できます。  
+3.  컬렉션을 선택한 다음 클라이언트 관리 작업 중 하나를 리본에서 선택하거나 컬렉션을 마우스 오른쪽 단추로 클릭하여 선택합니다. 이러한 클라이언트 관리 작업은 컬렉션 수준에서*만* 수행될 수 있습니다.  
 
-    -   **マルウェアがないかどうかコンピューターをスキャンし、マルウェア対策の定義ファイルをダウンロードする**  
+    -   **컴퓨터에서 맬웨어를 검사하고 맬웨어 방지 정의 파일을 다운로드합니다.**  
 
-         「[System Center Configuration Manager での Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md)」を参照してください。  
+         [System Center Configuration Manager의 Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md)을 참조하세요.  
 
-    -   **ソフトウェア、構成基準、タスク シーケンスを展開する**  
+    -   **소프트웨어, 구성 기준 및 작업 순서를 배포합니다.**  
 
-         関連項目  
+         다음을 참조하세요.  
 
-        -   [System Center Configuration Manager でのソフトウェア更新プログラムの展開](../../../sum/deploy-use/deploy-software-updates.md)  
+        -   [System Center Configuration Manager에서 소프트웨어 업데이트 배포](../../../sum/deploy-use/deploy-software-updates.md)  
 
-        -   [System Center Configuration Manager におけるコンプライアンス設定の計画と構成](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  
+        -   [System Center Configuration Manager에서 준수 설정 계획 및 구성](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  
 
-    -   **電源管理設定を構成する**  
+    -   **전원 관리 설정을 구성합니다.**  
 
-         「[System Center Configuration Manager で電源プランを作成して適用する方法](../../../core/clients/manage/power/create-and-apply-power-plans.md)」を参照してください。 電源プランは Windows を実行するコンピューターにのみ使用できます。  
+         [System Center Configuration Manager에서 전원 계획을 만들고 적용하는 방법](../../../core/clients/manage/power/create-and-apply-power-plans.md)을 참조하세요. 전원 계획은 Windows를 실행하는 컴퓨터에서만 사용할 수 있습니다.  
 
-    -   **直ちにポリシーをダウンロードするようにコンピューターに通知する**  
+    -   **정책을 최대한 빨리 다운로드하도록 컴퓨터에 알립니다.**  
 
-         クライアント通知を使用して、クライアント ポリシーのポーリング間隔に関係なく、直ちにコンピューター ポリシーをダウンロードするように、選択した Windows クライアントに通知します。  
+         클라이언트 정책 폴링 간격이 아니더라도 선택한 Windows 클라이언트에 최대한 빨리 컴퓨터 정책을 다운로드하라고 알리려면 클라이언트 알림을 사용합니다.  
 
-         クライアント通知タスクは、[ **監視** ] ワークスペースの [ **クライアントの操作** ] ノードに表示されます。  
+         클라이언트 알림 작업은 **모니터링** 작업 영역의 **클라이언트 작업** 노드에 표시됩니다.  
 
-##  <a name="BKMK_ClientCache"></a> Configuration Manager クライアントにクライアントキャッシュを構成する  
-クライアントでアプリケーションとプログラムをインストールすると、一時ファイルがクライアント キャッシュに格納されます。 ソフトウェアの更新ではクライアント キャッシュも使用されますが、ソフトウェアの更新は構成されているキャッシュ サイズには制限されず、常にキャッシュへのダウンロードが試みられます。 Configuration Manager クライアントを手動でインストールする際、クライアント プッシュ インストールを使用する際、またはクライアントのインストール後に、クライアント キャッシュ設定 (サイズや場所など) を構成できます。
+##  <a name="BKMK_ClientCache"></a> Configuration Manager 클라이언트에 대한 클라이언트 캐시 구성  
+클라이언트에서 응용 프로그램 및 프로그램을 설치할 때 클라이언트 캐시에는 임시 파일이 저장됩니다. 소프트웨어 업데이트도 클라이언트 캐시를 사용하지만 소프트웨어 업데이트는 구성된 캐시 크기의 제한을 받지 않으며 항상 캐시로 다운로드하려고 시도합니다. Configuration Manager 클라이언트를 수동으로 설치할 때나 클라이언트 강제 설치를 사용할 때 또는 클라이언트를 설치한 후에 크기와 위치 같은 클라이언트 캐시 설정을 구성할 수 있습니다.
 
-Configuration Manager バージョン 1606 以降では、Configuration Manager コンソールでクライアント設定を使用してキャッシュ フォルダー サイズを指定できます。   
+Configuration Manager 버전 1606부터 Configuration Manager 콘솔에서 클라이언트 설정을 사용하여 캐시 폴더 크기를 지정할 수 있습니다.   
 
- Configuration Manager クライアント キャッシュの既定の場所は %*windir*%\ccmcache で、既定のディスク容量は 5120 MB です。  
+ Configuration Manager 클라이언트 캐시의 기본 위치는 %*windir*%\ccmcache이고 기본 디스크 공간은 5120MB입니다.  
 
 > [!IMPORTANT]  
->  クライアント キャッシュに使用するフォルダーは暗号化しないでください。 Configuration Manager は暗号化されたフォルダーにコンテンツをダウンロードすることはできません。  
+>  클라이언트 캐시에 사용되는 폴더는 암호화하지 마세요. Configuration Manager는 암호화된 폴더로 콘텐츠를 다운로드할 수 없습니다.  
 
-### <a name="about-client-cache"></a>クライアント キャッシュについて  
+### <a name="about-client-cache"></a>클라이언트 캐시 정보  
 
-Configuration Manager クライアントは、展開を受けた後まもなく要求されたソフトウェアのコンテンツをダウンロードしますが、スケジュールされた展開時刻まで、それを実行しません。 スケジュールされた時刻になると、Configuration Manager クライアントはコンテンツがキャッシュで利用可能かどうかを確認します。 キャッシュにコンテンツがあり、それが正しいバージョンの場合は、クライアントはこのキャッシュされたコンテンツを使用します。 要求されたコンテンツのバージョンが変更されたり、別のパッケージのためにコンテンツが削除されたりした場合は、コンテンツはキャッシュに再びダウンロードされます。  
+Configuration Manager 클라이언트는 배포를 받자마자 필수 소프트웨어의 콘텐츠를 다운로드하지만 예약된 배포 시간까지 실행하지 않고 기다립니다. 예약된 시간에 Configuration Manager 클라이언트가 캐시에서 콘텐츠를 사용할 수 있는지 여부를 확인합니다. 콘텐츠가 캐시에 있고 올바른 버전이면 클라이언트는 캐시된 콘텐츠를 사용합니다. 필수 버전의 콘텐츠가 변경되었거나 다른 패키지에 필요한 공간을 만들기 위해 콘텐츠가 삭제된 경우에는 해당 콘텐츠가 다시 캐시로 다운로드됩니다.  
 
-クライアントがキャッシュのサイズより大きいプログラム コンテンツまたはアプリケーション コンテンツをダウンロードしようとすると、Configuration Manager はステータス メッセージ ID 10050 を生成します。 後でキャッシュ サイズが増えると、結果は次のようになります。  
+클라이언트가 캐시 크기보다 큰 응용 프로그램이나 프로그램의 콘텐츠를 다운로드하려고 하면 캐시 크기가 부족하여 배포가 실패하며 Configuration Manager에서 상태 메시지 ID 10050을 생성합니다. 나중에 캐시 크기가 늘어날 경우 결과는 다음과 같습니다.  
 
--   要求されるプログラムの場合:クライアントは、コンテンツのダウンロードを自動的に再試行しません。 パッケージとプログラムを再度展開する必要があります。  
--   要求されるアプリケーションの場合: クライアントは、クライアント ポリシーをダウンロードするときに、自動的にコンテンツのダウンロードを再試行します。  
+-   필수 프로그램의 경우: 클라이언트에서 자동으로 콘텐츠를 다시 다운로드하려고 시도하지 않습니다. 클라이언트에 패키지와 프로그램을 다시 배포해야 합니다.  
+-   필수 응용 프로그램의 경우: 클라이언트에서 클라이언트 정책을 다운로드할 때 자동으로 콘텐츠를 다시 다운로드하려고 시도합니다.  
 
-クライアントがダウンロードしようとするパッケージのサイズがキャッシュ サイズより小さくても、キャッシュに空きがない場合、キャッシュ領域が利用可能になるまで、またはダウンロードがタイムアウトするまで、あるいはキャッシュ領域による失敗の再試行回数の上限まで、要求された展開は再試行を繰り返します。 キャッシュ サイズが後で拡大されると、Configuration Manager クライアントは、次回の再試行時に再びパッケージのダウンロードを試みます。 クライアントは 4 時間ごとに 18 回になるまでコンテンツのダウンロードを試みます。  
+클라이언트에서 캐시 크기보다 작은 패키지를 다운로드하려고 시도하지만 캐시가 꽉 차 있는 경우에는 캐시 공간을 사용할 수 있게 되거나, 다운로드 제한 시간이 초과되거나, 캐시 공간 실패에 대한 다시 시도 제한에 도달할 때까지 모든 필수 배포가 계속 다시 시도됩니다. 나중에 캐시 크기가 늘어나면 Configuration Manager 클라이언트가 다음 다시 시도 간격 때 패키지를 다시 다운로드하려고 시도합니다. 클라이언트는 4시간 간격으로 18회까지 콘텐츠를 다운로드하려고 시도합니다.  
 
-キャッシュされたコンテンツは自動的には削除されず、クライアントがコンテンツを使用した後、少なくとも 1 日の間キャッシュに保持されます。 パッケージのプロパティを、クライアント キャッシュの内容を保持するオプションで構成すると、クライアントはキャッシュからコンテンツを自動的に削除しません。 クライアント キャッシュ領域が、24 時間以内にダウンロードされたパッケージによって使用されているときに、新しいパッケージをダウンロードする必要がある場合は、キャッシュ サイズを拡張するか、削除オプションを使って、保持しているキャッシュ コンテンツを削除できます。  
+캐시된 콘텐츠는 자동으로 삭제되지 않지만 클라이언트에서 해당 콘텐츠를 사용한 후 최소 하루 동안 캐시에 남아 있습니다. 클라이언트 캐시에 콘텐츠를 유지하는 옵션으로 패키지 속성을 구성하면 클라이언트가 캐시에서 패키지 콘텐츠를 자동으로 삭제하지 않습니다. 최근 24시간 이내에 다운로드된 패키지가 클라이언트 캐시 공간을 사용하고 있는데 클라이언트가 새 패키지를 다운로드해야 하는 경우 클라이언트 캐시 크기를 늘리거나, 유지된 캐시 콘텐츠를 삭제하는 삭제 옵션을 선택할 수 있습니다.  
 
- 手動によるクライアントのインストール中またはクライアントのインストール後に、クライアント キャッシュを構成するには、次の手順を使用します。  
+ 수동으로 클라이언트를 설치하는 동안이나 클라이언트를 설치한 후에 클라이언트 캐시를 구성하려면 다음 절차를 수행하세요.  
 
-### <a name="to-configure-the-client-cache-when-you-install-clients-by-using-manual-client-installation"></a>手動によってクライアントをインストールするときにクライアント キャッシュを構成するには  
+### <a name="to-configure-the-client-cache-when-you-install-clients-by-using-manual-client-installation"></a>수동 클라이언트 설치를 사용하여 클라이언트를 설치할 때 클라이언트 캐시를 구성하려면  
 
-必要に応じて次のプロパティを指定して、インストール ソースの場所から CCMSetup.exe コマンドを実行します。プロパティはスペースで区切ります。  
+설치 원본 위치에서 CCMSetup.exe 명령을 실행하고 다음 필수 속성을 공백으로 구분하여 지정합니다.  
 
    -   DISABLECACHEOPT  
 
@@ -225,17 +222,17 @@ Configuration Manager クライアントは、展開を受けた後まもなく�
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > バージョン 1606 では、SMSCACHESIZE ではなく Configuration Manager コンソールの **[クライアント設定]** で使用可能なキャッシュ サイズ設定を使用します。 詳細については、「[クライアントのキャッシュ設定](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)」を参照してください。
+        > 버전 1606의 경우 SMSCACHESIZE 대신 Configuration Manager 콘솔의 **클라이언트 설정**에서 사용할 수 있는 캐시 크기 설정을 사용합니다. 자세한 내용은 [클라이언트 캐시 설정](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)을 참조하세요.
 
-CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用する方法の詳細については、「[System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
+CCMSetup.exe에서 이러한 명령줄 속성을 사용하는 방법에 대한 자세한 내용은 [System Center Configuration Manager의 클라이언트 설치 속성 정보](../../../core/clients/deploy/about-client-installation-properties.md)를 참조하세요.  
 
-### <a name="to-configure-the-client-cache-folder-when-you-install-clients-by-using-client-push-installation"></a>クライアント プッシュ インストールによってクライアントをインストールするときにクライアント キャッシュを構成するには  
+### <a name="to-configure-the-client-cache-folder-when-you-install-clients-by-using-client-push-installation"></a>클라이언트 강제 설치를 사용하여 클라이언트를 설치할 때 클라이언트 캐시를 구성하려면  
 
-1.  Configuration Manager コンソールで、[**管理**] > [**サイトの構成**] > [**サイト**] の順に選択します。  
+1.  Configuration Manager 콘솔에서 **관리** > **사이트 구성** > **사이트**를 선택합니다.  
 
-3.  適切なサイトを選択し、**[ホーム]** タブの **[設定]** グループで **[クライアント インストール設定]** > **[インストールのプロパティ]** タブを選択します。  
+3.  적절한 사이트를 선택하고 **홈** 탭의 **설정** 그룹에서 **클라이언트 설치 설정** > **설치 속성 탭**을 선택합니다.  
 
-5.  スペース区切りで次のプロパティを指定します。  
+5.  공백으로 구분된, 다음 속성을 지정합니다.  
 
     -   DISABLECACHEOPT  
 
@@ -246,125 +243,125 @@ CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用�
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > バージョン 1606 では、SMSCACHESIZE ではなく Configuration Manager コンソールの **[クライアント設定]** で使用可能なキャッシュ サイズ設定を使用します。 詳細については、「[クライアントのキャッシュ設定](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)」を参照してください。
+        > 버전 1606의 경우 SMSCACHESIZE 대신 Configuration Manager 콘솔의 **클라이언트 설정**에서 사용할 수 있는 캐시 크기 설정을 사용합니다. 자세한 내용은 [클라이언트 캐시 설정](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)을 참조하세요.
 
-       CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用する方法の詳細については、「[System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
+       CCMSetup.exe에서 이러한 명령줄 속성을 사용하는 방법에 대한 자세한 내용은 [System Center Configuration Manager의 클라이언트 설치 속성 정보](../../../core/clients/deploy/about-client-installation-properties.md)를 참조하세요.  
 
-### <a name="to-configure-the-client-cache-folder-on-the-client-computer"></a>クライアント コンピューターでクライアント キャッシュ フォルダーを構成するには  
+### <a name="to-configure-the-client-cache-folder-on-the-client-computer"></a>클라이언트 컴퓨터에 클라이언트 캐시 폴더를 구성하려면  
 
-1.  クライアント コンピューターで、コントロール パネルの **[Configuration Manager]** に移動し、ダブルクリックしてプロパティを開きます。  
+1.  클라이언트 컴퓨터의 제어판에서 **Configuration Manager**로 이동한 다음 속성을 두 번 클릭하여 엽니다.  
 
-2.  **[キャッシュ]** タブで領域と場所のプロパティを設定します。 既定の場所は *%windir%*\ccmcache です。  
+2.  **캐시** 탭에서 공간 및 위치 속성을 설정합니다. 기본 위치는 *%windir%*\ccmcache입니다.  
 
-5.  キャッシュ フォルダーのファイルを削除するには、**[ファイルの削除]** を選択します。  
+5.  캐시 폴더의 파일을 삭제하려면 **파일 삭제**를 선택합니다.  
 
     > [!NOTE]
     > 
-    > キャッシュ フォルダーは通常の Windows フォルダーです。そのため、スクリプト、ユーティリティ、または PowerShell コマンドレット `Remove-Item` を使用してフォルダーの内容を自動的に削除することができます。 
+    > 캐시 폴더는 일반 Windows 폴더이므로 스크립트, 유틸리티 또는 PowerShell cmdlet `Remove-Item`을 사용하여 폴더 내용 삭제를 자동화할 수 있습니다. 
 
 
-### <a name="to-configure-client-cache-size-in-client-settings"></a>[クライアント設定] でクライアント キャッシュ サイズを構成するには
+### <a name="to-configure-client-cache-size-in-client-settings"></a>클라이언트 설정에서 클라이언트 캐시 크기를 구성하려면
 
-バージョン 1606 以降、クライアントを再インストールしなくても、クライアント キャッシュ フォルダーのサイズを調整できるようになりました。 これを行うには、Configuration Manager コンソールで [クライアント設定] を使用してクライアント キャッシュ サイズを構成します。  
+버전 1606부터 클라이언트를 다시 설치하지 않고 클라이언트 캐시 폴더의 크기를 조정할 수 있습니다. 이를 위해 클라이언트 설정을 사용하여 Configuration Manager 콘솔에서 클라이언트 캐시 크기를 구성합니다.  
 
-1. Configuration Manager コンソールで、 **[管理]** > **[クライアント設定]**に移動します。
+1. Configuration Manager 콘솔에서 **관리** > **클라이언트 설정**으로 이동합니다.
 
-2. **[既定のクライアント設定]**をダブルクリックします。
-  また、キャッシュ サイズをより選択的に適用するためにカスタム クライアント設定を作成することもできます。 既定およびカスタムのクライアント設定の詳細については、「[System Center Configuration Manager でクライアント設定を構成する方法](../../../core/clients/deploy/configure-client-settings.md)」を参照してください。
+2. **기본 클라이언트 설정**을 두 번 클릭합니다.
+  또한 캐시 크기를 선택적으로 적용하여 사용자 지정 클라이언트 설정을 만들 수도 있습니다. 기본 및 사용자 지정 클라이언트 설정에 대한 자세한 내용은 [System Center Configuration Manager에서 클라이언트 설정을 구성하는 방법](../../../core/clients/deploy/configure-client-settings.md)을 참조하세요.
 
- 3. **[クライアント キャッシュの設定]** を選択し、**[クライアント キャッシュ サイズの構成]** で **[はい]** を選択して、ディスク設定の **[MB]** または **[割合]** のいずれかを使用します。 いずれか小さい方のサイズにキャッシュが調整されます。
+ 3. **클라이언트 캐시 설정**을 선택하고 **클라이언트 캐시 크기 구성**에 대해 **예**를 선택한 다음 **MB** 또는 **percentage of disk settings**(디스크의 백분율 설정)를 사용합니다. 캐시는 어떤 크기로든 작게 조정됩니다.
 
-     Configuration Manager クライアントは、次のクライアント ポリシーがダウンロードされるときにこれらの設定値を使ってキャッシュ サイズを構成します。
+     Configuration Manager 클라이언트에서는 그 다음 클라이언트 정책을 다운로드할 때 이러한 설정으로 캐시 크기를 구성할 수 있습니다.
 
-##  <a name="BKMK_UninstalClient"></a> Configuration Manager クライアントをアンインストールする  
- **/Uninstall** プロパティを付けて **CCMSetup.exe** を使用すると、Windows Configuration Manager クライアント ソフトウェアをコンピューターからアンインストールできます。 個々のコンピューター上でコマンド プロンプトから CCMSetup.exe を実行するか、パッケージとプログラムを展開して、コンピューターのコレクションからクライアントをアンインストールします。  
+##  <a name="BKMK_UninstalClient"></a> Configuration Manager 클라이언트 제거  
+ **/Uninstall** 속성을 통해 **CCMSetup.exe**를 사용하여 Windows Configuration Manager 클라이언트 소프트웨어를 제거할 수 있습니다. 명령 프롬프트에서 개별 컴퓨터에 대해 CCMSetup.exe를 실행하거나 컴퓨터의 컬렉션에 대해 클라이언트를 제거하는 패키지 및 프로그램을 배포합니다.  
 
 > [!WARNING]  
->  Configuration Manager クライアントをモバイル デバイスからアンインストールすることはできません。 Configuration Manager クライアントをモバイル デバイスから除去する必要がある場合は、デバイスをワイプする必要があります。ワイプはモバイル デバイス上のすべてのデータを削除します。  
+>  모바일 장치에서는 Configuration Manager 클라이언트를 제거할 수 없습니다. 모바일 장치에서 Configuration Manager 클라이언트를 제거해야 하는 경우 장치를 초기화해야 합니다. 그러면 모바일 장치에서 모든 데이터가 삭제됩니다.  
 
-#### <a name="to-uninstall-the-configuration-manager-client-from-the-command-prompt"></a>コマンド プロンプトから Configuration Manager クライアントをアンインストールするには  
+#### <a name="to-uninstall-the-configuration-manager-client-from-the-command-prompt"></a>명령 프롬프트에서 Configuration Manager 클라이언트를 제거하려면  
 
-1.  Windows コマンド プロンプトを開き、CCMSetup.exe のある場所へフォルダーを移動します。  
+1.  Windows 명령 프롬프트를 열고 폴더를 CCMSetup.exe가 있는 위치로 변경합니다.  
 
-2.  「 **Ccmsetup.exe /uninstall**」と入力し、 **Enter**キーを押します。  
+2.  **Ccmsetup.exe /uninstall**을 입력하고 **Enter**키를 누릅니다  
 
 > [!NOTE]  
->  アンインストールを実行しても、画面に結果は表示されません。 クライアントのアンインストールが成功したことを確認するには、クライアント コンピューター上の **%windir%\ ccmsetup** 内にあるログ ファイル *CCMSetup.log* を確認します。  
+>  제거 프로세스는 화면에 결과가 표시되지 않습니다. 클라이언트가 제대로 제거되었는지 확인하려면 클라이언트 컴퓨터의 **%windir%\ ccmsetup** 폴더에서 *CCMSetup.log*라는 로그 파일을 검토합니다.  
 
-##  <a name="BKMK_ConflictingRecords"></a> Configuration Manager クライアントの競合しているレコードを管理する  
- Configuration Manager は、ハードウェア ID を使用して重複している可能性のあるクライアントを特定し、競合するレコードについて警告を発します。 たとえば、コンピューターを再インストールする場合、ハードウェア ID が同じであっても Configuration Manager の使用する GUID が異なる可能性があります。  
+##  <a name="BKMK_ConflictingRecords"></a> Configuration Manager 클라이언트에 대한 충돌 레코드 관리  
+ Configuration Manager에서는 하드웨어 ID를 사용하여 중복되었을 수 있는 클라이언트를 식별하고 충돌 레코드에 대해 경고합니다. 예를 들어 컴퓨터를 다시 설치하면 하드웨어 ID는 동일하지만 Configuration Manager에서 사용하는 GUID는 변경될 수 있습니다.  
 
- コンピューター アカウントの Windows 認証または信頼されたソースからの PKI 証明書を使用して Configuration Manager が競合を解決できる場合、競合は自動的に解決されます。 ただし、Configuration Manager が競合を解決できない場合は階層設定が使用され、重複するハードウェア ID を検出したときにレコードを自動的にマージするか (既定の設定)、新しいクライアント レコードをマージ、ブロック、または作成するタイミングを管理者が決定できます。 重複レコードを手動で管理すると決定した場合、Configuration Manager コンソールを使用して競合するレコードを手動で解決する必要があります。  
-
-
-#### <a name="to-change-the-hierarchy-setting-for-managing-conflicting-records"></a>競合しているレコードの管理に関する階層の設定を変更するには  
-
-1.  Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** > **[サイト]** > **[階層設定]** の順に選択します。
-2.  **[クライアントの承認と競合レコードの処理]** タブで **[競合しているレコードを自動的に解決する]** または **[競合しているレコードを手動で解決する]** を選択します。  
-
-#### <a name="to-manually-resolve-conflicting-records"></a>競合しているレコードを手動で解決するには  
-
-1.  Configuration Manager コンソールで **[監視]** > **[システムのステータス]** > **[競合しているレコード]** を選択します。  
-
-3.  1 つまたは複数の競合しているレコードを選択し、**[競合しているレコード]** をクリックします。  
-
-4.  次のいずれかを選択します。  
-
-    -   **[結合]**: 新しく検出されたレコードを既存のクライアント レコードと結合します。  
-
-    -   [**新規** ]: 競合しているクライアント レコードに対して新しいレコードを作成します。  
-
-    -   [**ブロック** ]: 競合しているクライアント レコードに対して新しいレコードを作成しますが、ブロックに設定します。  
-
-## <a name="manage-duplicate-hardware-identifiers"></a>重複するハードウェア識別子を管理する
-Configuration Manager バージョン 1610 より、PXE ブートとクライアント登録で Configuration Manager が無視するハードウェア ID の一覧を指定できます。 それにより 2 つの一般的な問題に対処できます。
-
-1. Surface Pro 3 など、新しいデバイスの多くにオンボード イーサネット ポートが含まれません。 オペレーティング システムの展開で有線接続を確立するとき、一般的に USB/イーサネット アダプターが使用されます。 しかしながら、コストや汎用性に起因し、多くの場合、共有アダプターになります。 そのアダプターの MAC アドレスを利用してデバイスを識別するため、展開ごとに管理者による追加措置がないと、アダプターの再利用が問題になります。 バージョン 1610 以降、このアダプターの MAC アドレスを除外できるようになったので、このシナリオで再利用できます。
-2. SMBIOS ID は一意のハードウェア識別子ですが、専門的なハードウェア デバイスには ID が重複するものもあります。 上記の USB/イーサネット アダプターのシナリオほど一般的ではありませんが、ハードウェア ID の一覧を利用してこの問題に対処することもできます。
-
-#### <a name="to-add-hardware-identifiers-for-configuration-manager-to-ignore"></a>Configuration Manager で無視するハードウェア識別子を追加するには  
-1. Configuration Manager コンソールで、[**管理**] > [**概要**] > [**サイトの構成**] > [**サイト**] の順に移動します。
-2. **[ホーム]** タブの **[サイト]** グループで、**[階層設定]** を選択します。
-3. **[クライアントの承認と競合レコードの処理]** タブの **[重複するハードウェア ID]** セクションの **[追加]** を選択して、新しいハードウェア識別子を追加します。
-
-##  <a name="BKMK_PolicyRetrieval"></a> Configuration Manager クライアントのポリシーの取得開始  
- Windows Configuration Manager クライアントは、クライアント設定として構成されているスケジュールに従ってクライアント ポリシーをダウンロードします。 ただし、トラブルシューティングやテストなどで、クライアントから特別なポリシー取得を開始する場合があります。  
-
-次の方法でポリシーの取得を開始できます。
+ Configuration Manager에서 신뢰할 수 있는 원본의 컴퓨터 계정이나 PKI 인증서의 Windows 인증을 사용하여 충돌을 해결할 수 있는 경우에는 충돌이 자동으로 해결됩니다. 그러나 Configuration Manager에서 충돌을 해결할 수 없는 경우 중복된 하드웨어 ID(기본 설정)를 검색할 때 자동으로 레코드를 병합하는 계층 구조 설정을 사용할 수도 있고, 어떠한 경우에 새 클라이언트 레코드를 병합하거나 차단하거나 만들지를 결정할 수도 있습니다. 중복된 레코드를 수동으로 관리하려는 경우 Configuration Manager 콘솔에서 충돌 레코드를 수동으로 해결해야 합니다.  
 
 
-- [クライアント通知](#initiate-client-policy-retrieval-using-client-notification) 
-- [クライアントの **[操作]** タブ](#manually-initiate-client-policy-retrieval-on-the-actions-tab-of-the-configuration-manager-client)
-- [スクリプト](#manually-initiate-client-policy-retrieval-by-script)
+#### <a name="to-change-the-hierarchy-setting-for-managing-conflicting-records"></a>충돌 레코드 관리를 위한 계층 설정을 변경하려면  
+
+1.  Configuration Manager 콘솔에서 **관리** > **사이트 구성** > **사이트** > **계층 설정**을 선택합니다.
+2.  **클라이언트 승인 및 충돌 레코드** 탭에서 **Automatically resolve conflicting records**(충돌 레코드를 자동으로 해결) 또는 **Manually resolve conflicting records**(충돌 레코드를 수동으로 해결)를 선택합니다.  
+
+#### <a name="to-manually-resolve-conflicting-records"></a>충돌 레코드를 수동으로 해결하려면  
+
+1.  Configuration Manager 콘솔에서 선택 **모니터링** > **시스템 상태** > **충돌 레코드**를 선택합니다.  
+
+3.  충돌 레코드를 하나 이상 선택한 다음 **충돌 레코드**를 선택합니다.  
+
+4.  다음 중 하나를 선택합니다.  
+
+    -   **병합**을 클릭하여 새로 검색된 레코드와 기존 클라이언트 레코드를 결합합니다.  
+
+    -   **새로 만들기** 를 클릭하여 충돌 클라이언트 레코드에 대해 새 레코드를 만듭니다.  
+
+    -   **차단** 을 클릭하여 충돌 클라이언트 레코드에 대해 새 레코드를 만들되, 차단됨으로 표시합니다.  
+
+## <a name="manage-duplicate-hardware-identifiers"></a>중복된 하드웨어 식별자 관리
+Configuration Manager 버전 1610부터 Configuration Manager에서 PXE 부팅 및 클라이언트 등록을 위해 무시하는 하드웨어 ID 목록을 제공할 수 있습니다. 이 목록은 두 가지 일반적인 문제 해결에 도움이 됩니다.
+
+1. Surface Pro 3과 같은 다양한 새 장치에는 온보드 이더넷 포트가 포함되어 있지 않습니다. USB-이더넷 어댑터는 일반적으로 운영 체제 배포를 위해 유선 연결을 설정하는 데 사용됩니다. 그러나 비용 및 일반적인 유용성 때문에 공유 어댑터인 경우가 많습니다. 이 어댑터의 MAC 주소는 장치를 식별하는 데 사용되기 때문에 각 배포 간에 추가 관리자 작업 없이 어댑터를 다시 사용하면 문제가 발생합니다. 버전 1610부터는 이 시나리오에서 다시 사용할 수 있도록 이 어댑터의 MAC 주소를 제외할 수 있습니다.
+2. SMBIOS ID는 고유 하드웨어 식별자여야 하지만 일부 특수 하드웨어 장치는 중복된 ID로 빌드됩니다. 위의 USB-이더넷 어댑터 시나리오만큼 일반적이지는 않지만 하드웨어 ID 목록을 사용하여 이 문제도 해결할 수 있습니다.
+
+#### <a name="to-add-hardware-identifiers-for-configuration-manager-to-ignore"></a>무시할 Configuration Manager에 대한 하드웨어 식별자를 추가하려면  
+1. Configuration Manager 콘솔에서 **관리** > **개요** > **사이트 구성** > **사이트**로 이동합니다.
+2. **홈** 탭의 **사이트** 그룹에서 **계층 설정**을 선택합니다.
+3. **클라이언트 승인 및 충돌 레코드** 탭에서 **Duplicate hardware identifiers**(중복 하드웨어 식별자) 섹션의 **추가**를 선택하여 새 하드웨어 식별자를 추가합니다.
+
+##  <a name="BKMK_PolicyRetrieval"></a> Configuration Manager 클라이언트에 대한 정책 검색 시작  
+ Windows Configuration Manager 클라이언트는 클라이언트 설정으로 구성한 일정에 따라 클라이언트 정책을 다운로드합니다. 그러나 클라이언트에서 애드혹 정책 검색을 시작하려는 경우(예: 문제 해결 또는 테스트)가 있을 수 있습니다.  
+
+다음을 사용하여 정책 검색을 시작할 수 있습니다.
+
+
+- [클라이언트 알림](#initiate-client-policy-retrieval-using-client-notification) 
+- [클라이언트의 **작업** 탭](#manually-initiate-client-policy-retrieval-on-the-actions-tab-of-the-configuration-manager-client)
+- [스크립트](#manually-initiate-client-policy-retrieval-by-script)
 
 > [!NOTE]  
 >   
->  Linux および UNIX を実行するクライアントのポリシー取得については、「 [Computer policy for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_PolicyforLnU)」をご覧ください。  
+>  Linux 및 UNIX를 실행하는 클라이언트의 정책 검색에 대한 자세한 내용은 [Linux 및 UNIX 서버에 대한 컴퓨터 정책](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_PolicyforLnU)을 참조하세요.  
 
-#### <a name="initiate-client-policy-retrieval-using-client-notification"></a>クライアント通知を使用してクライアント ポリシーの取得を開始する  
+#### <a name="initiate-client-policy-retrieval-using-client-notification"></a>클라이언트 알림을 사용하여 클라이언트 정책 검색 시작  
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[デバイス コレクション]** の順に選択します。  
+1.  Configuration Manager 콘솔에서 **자산 및 준수** > **장치 컬렉션**을 선택합니다.  
 
-3.  ポリシーをダウンロードするコンピューターを含むデバイス コレクションを選択します。 **[ホーム]** タブの **[コレクション]** グループで **[クライアント通知]** > **[コンピューター ポリシーのダウンロード]** を選択します。  
+3.  정책을 다운로드할 컴퓨터가 포함된 장치 컬렉션을 선택합니다. **홈** 탭의 **컬렉션** 그룹에서 **클라이언트 알림** > **컴퓨터 정책 다운로드**를 선택합니다.  
 
     > [!NOTE]  
-    >  また、[ **デバイス** ] ノードの一時コレクション ノードに表示されるデバイスから 1 つまたは複数のデバイスを選択して、クライアント通知を使用してポリシーの取得を開始することもできます。  
+    >  클라이언트 알림을 사용하여 **장치** 노드의 임시 컬렉션 노드에 표시되는 하나 이상의 선택한 장치에 대한 정책 검색을 시작할 수도 있습니다.  
 
-#### <a name="manually-initiate-client-policy-retrieval-on-the-actions-tab-of-the-configuration-manager-client"></a>Configuration Manager クライアントの [操作] タブでクライアント ポリシーの取得を手動で開始する  
+#### <a name="manually-initiate-client-policy-retrieval-on-the-actions-tab-of-the-configuration-manager-client"></a>Configuration Manager 클라이언트의 [작업] 탭을 사용하여 수동으로 클라이언트 정책 검색 시작  
 
-1.  コンピューターのコントロール パネルで、[ **Configuration Manager** ] を選択します。  
+1.  컴퓨터의 제어판에서 **Configuration Manager** 를 선택합니다.  
 
-2.  **[操作]** タブの **[コンピューター ポリシーの取得および評価サイクル]** を選択してコンピューター ポリシーを開始し、**[直ちに実行]** をクリックします。  
+2.  **작업** 탭에서 **컴퓨터 정책 검색 및 평가 주기**를 클릭하여 컴퓨터 정책을 시작한 다음 **지금 실행**을 클릭합니다.  
 
-4.  **[OK]** を選択してプロンプトを確定します。  
+4.  **확인**을 선택하여 프롬프트를 확인합니다.  
 
-5.  ユーザー クライアント設定で必要な他の操作 (**[ユーザー ポリシーの取得および評価サイクル]** など) に関して、手順 3 と 4 を繰り返します。  
+5.  필요한 다른 작업(예: 사용자 클라이언트 설정의 **사용자 정책 검색 및 평가 주기**에 대해서도 3단계와 4단계를 반복합니다.  
 
-#### <a name="manually-initiate-client-policy-retrieval-by-script"></a>スクリプトを使用してクライアント ポリシーの取得を手動で開始する  
+#### <a name="manually-initiate-client-policy-retrieval-by-script"></a>스크립트를 사용하여 수동으로 클라이언트 정책 검색 시작  
 
-1.  メモ帳などのテキスト エディターを開きます。  
+1.  메모장과 같은 텍스트 편집기를 엽니다.  
 
-2.  次をコピーし、ファイルに挿入します。  
+2.  다음 내용을 복사하여 파일에 삽입합니다.  
 
     ```  
     on error resume next  
@@ -401,13 +398,12 @@ Configuration Manager バージョン 1610 より、PXE ブートとクライア
     set oCPAppletMgr=nothing  
     ```  
 
-3.  ファイルを .vbs 拡張子で保存します。  
+3.  .vbs 확장명으로 파일을 저장합니다.  
 
-4.  クライアント コンピューターにおいて、次のいずれかの方法でこのファイルを実行します。  
+4.  클라이언트 컴퓨터에서 다음 방법 중 하나를 사용하여 파일을 실행합니다.  
 
-    -   エクスプローラーを使用してファイルに移動し、スクリプト ファイルをダブルクリックします。  
+    -   Windows 탐색기를 사용하여 파일로 이동한 다음 스크립트 파일을 두 번 클릭합니다.  
 
-    -   コマンド プロンプトを開き、「**cscript &lt;パス\ファイル名.vbs>**」と入力します。  
+    -   명령 프롬프트를 열고 **cscript &lt;경로\파일 이름.vbs>**를 입력합니다.  
 
-5.  **[Windows スクリプト ホスト]** ダイアログ ボックスで **[OK]** をクリックします。  
-
+5.  **Windows 스크립트 호스트** 대화 상자에서 **확인**을 선택합니다.  

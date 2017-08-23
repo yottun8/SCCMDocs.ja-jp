@@ -1,117 +1,115 @@
 ---
-title: "サポートされている SQL Server のバージョン | Microsoft ドキュメント"
-description: "System Center Configuration Manager サイト データベースをホストするための SQL Server のバージョンおよび構成要件を取得します。"
+title: "지원되는 SQL Server 버전 | Microsoft 문서"
+description: "System Center Configuration Manager 사이트 데이터베이스를 호스트하기 위한 SQL Server 버전 및 구성 요구 사항을 가져옵니다."
 ms.custom: na
 ms.date: 05/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
 ms.openlocfilehash: b35e45b9514297e2f9ce405a3244462ed735f39f
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/26/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager のサポートされている SQL Server バージョン
+# <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager에 대한 지원되는 SQL Server 버전
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-それぞれの System Center Configuration Manager サイトには、サイト データベースをホストするためにサポートされている SQL Server バージョンおよび構成が必要です。  
+각 System Center Configuration Manager 사이트에는 사이트 데이터베이스를 호스트할 수 있는 SQL Server 버전 및 구성이 필요합니다.  
 
-##  <a name="bkmk_Instances"></a> SQL Server インスタンスと場所  
- **中央管理サイトとプライマリ サイト**  
-サイト データベースは SQL Server のフル インストールを使用する必要があります。  
+##  <a name="bkmk_Instances"></a> SQL Server 인스턴스 및 위치  
+ **중앙 관리 사이트 및 기본 사이트**  
+사이트 데이터베이스에서는 SQL Server의 전체 설치를 사용해야 합니다.  
 
- SQL Server は次の場所に配置できます。  
+ SQL Server의 위치는 다음과 같을 수 있습니다.  
 
--   サイト サーバー コンピューター。  
--   サイト サーバーから離れたコンピューター。  
+-   사이트 서버 컴퓨터.  
+-   사이트 서버의 원격 컴퓨터.  
 
-次のインスタンスがサポートされています。  
+다음과 같은 경우가 지원됩니다.  
 
--   SQL Server の既定のインスタンスまたは名前付きインスタンス。  
--   複数インスタンス構成。  
--   SQL Server クラスター。 「[SQL Server クラスターを使用したサイト データベースのホスティング](../../../core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)」を参照してください。
--   SQL Server AlwaysOn 可用性グループ。 このオプションでは、Configuration Manager 1602 以降のバージョンが必要です。 詳細については、「[System Center Configuration Manager 用の高可用性サイト データベースの SQL Server AlwaysOn](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)」を参照してください。
-
-
- **セカンダリ サイト:**  
- サイト データベースは SQL Server または SQL Server Express のフル インストールの既定のインスタンスを使用できます。  
-
- SQL Server はサイト サーバー コンピューターに配置する必要があります。  
-
- **サポートの制限事項**   
- 次の構成はサポートされていません。
- -   ネットワーク負荷分散 (NLB) クラスター構成の SQL Server クラスター
- -   クラスター共有ボリューム (CSV) 上の SQL Server クラスター
- -   SQL Server のデータベース ミラーリング テクノロジとピア ツー ピア レプリケーション
-
-SQL Server のトランザクション レプリケーションは、[データベース レプリカ](https://technet.microsoft.com/library/mt608546.aspx)を使用するように構成されている管理ポイントにオブジェクトをレプリケートする場合にのみサポートされます。  
-
-##  <a name="bkmk_SQLVersions"></a> サポートされている SQL Server のバージョン  
- 複数のサイトを含む階層では、次の条件を満たす場合、それぞれのサイトが異なるバージョンの SQL Server を使用してサイト データベースをホストできます。
- -  Configuration Manager によってサポートされている SQL Server のバージョンを使用していること。
- -  使用する SQL Server のバージョンが、Microsoft によって引き続きサポートされていること。
- -  SQL Server で、SQL Server の 2 つのバージョン間のレプリケーションをサポートしていること。  たとえば、[SQL Server では SQL Server 2008 R2 と SQL Server 2016 間のレプリケーションをサポートしていません](https://docs.microsoft.com/sql/relational-databases/replication/deprecated-features-in-sql-server-replication)。
+-   SQL Server의 기본/명명된 인스턴스.  
+-   여러 인스턴스 구성.  
+-   SQL Server 클러스터. [SQL Server 클러스터를 사용하여 사이트 데이터베이스 호스트](../../../core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)를 참조하세요.
+-   SQL Server AlwaysOn 가용성 그룹. 이 옵션을 사용하려면 Configuration Manager 버전 1602 이상이 필요합니다. 자세한 내용은 [System Center Configuration Manager용 항상 사용 가능한 사이트 데이터베이스를 위한 SQL Server AlwaysOn](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)을 참조하세요.
 
 
+ **보조 사이트:**  
+ 사이트 데이터베이스에서는 전체 설치된 SQL Server 또는 SQL Server Express의 기본 인스턴스를 사용할 수 있습니다.  
 
- 特に指定のない限り、次のバージョンの SQL Server はすべてのアクティブ バージョンの System Center Configuration Manager でサポートされます。 新しい SQL Server バージョンまたは Service Pack のサポートが追加されている場合、そのサポートを追加する Configuration Manager バージョンが示されます。 同様に、サポートが推奨されていない場合は、Configuration Manager の影響を受けるバージョンの詳細を確認してください。   
+ SQL Server는 사이트 서버 컴퓨터에 있어야 합니다.  
 
-特定の SQL Server Service Pack のサポートには、基本の Service Pack バージョンに戻せない場合を除き、その Service Pack の累積的な更新プログラムが含まれます。 Service Pack のバージョンが示されない場合、サポートは、そのバージョンの Service Pack なしの SQL Server に対するものです。 今後、そのバージョンの Service Pack がリリースされた場合、その新しい Service Pack バージョンがサポートされる前に、別のサポート ステートメントが宣言されます。
+ **지원 제한 사항:**   
+ 다음 구성은 지원되지 않습니다.
+ -   NLB(네트워크 부하 분산) 클러스터 구성의 SQL Server 클러스터
+ -   CSV(클러스터 공유 볼륨)의 SQL Server 클러스터
+ -   SQL Server 데이터베이스 미러링 기술과 피어 투 피어 복제
+
+SQL Server 트랜잭션 복제는 [데이터베이스 복제본](https://technet.microsoft.com/library/mt608546.aspx)을 사용하도록 구성된 관리 지점에 개체를 복제하는 데에만 사용할 수 있습니다.  
+
+##  <a name="bkmk_SQLVersions"></a> 지원되는 SQL Server 버전  
+ 여러 사이트가 있는 계층 구조에서 다음과 같은 경우 사이트마다 다른 SQL Server 버전을 사용하여 사이트 데이터베이스를 호스트할 수 있습니다.
+ -  Configuration Manager는 사용하는 SQL Server 버전을 지원합니다.
+ -  사용하는 SQL Server 버전은 Microsoft에서 계속 지원합니다.
+ -  SQL Server는 두 가지 버전의 SQL Server 간 복제를 지원합니다.  예를 들어 [SQL Server는 SQL Server 2008 R2와 SQL Server 2016 간의 복제를 지원하지 않습니다](https://docs.microsoft.com/sql/relational-databases/replication/deprecated-features-in-sql-server-replication).
+
+
+
+ 별도로 지정되지 않은 경우 다음 버전의 SQL Server는 System Center Configuration Manager의 모든 활성 버전에서 지원됩니다. 새 SQL Server 버전이나 서비스 팩에 대한 지원이 추가되면 해당 지원을 추가하는 Configuration Manager 버전이 표시됩니다. 마찬가지로 더 이상 지원이 제공되지 않는 경우에는 Configuration Manager의 영향받는 버전에 대한 세부 정보를 검색합니다.   
+
+누적 업데이트가 기본 서비스 팩 버전으로 돌아가지 않는 한 특정 SQL Server 서비스 팩 지원에는 해당 서비스 팩에 대한 누적 업데이트가 포함됩니다. 서비스 팩 버전이 표시되지 않으면 서비스 팩이 없는 SQL Server의 해당 버전이 지원됩니다. 이후 해당 버전에 대한 서비스 팩이 릴리스된 경우 새 서비스 팩 버전이 지원되기 전에 개별 지원 정보가 선언됩니다.
 
 
 > [!IMPORTANT]  
->  中央管理サイトでデータベース用に SQL Server Standard を使用する場合、階層でサポートできるクライアントの合計数が制限されます。 「[サイジングとスケールの数値](../../../core/plan-design/configs/size-and-scale-numbers.md)」をご覧ください。
+>  중앙 관리 사이트의 데이터베이스에 대해 SQL Server Standard를 사용하는 경우에는 계층 구조가 지원할 수 있는 총 클라이언트 수를 제한합니다. [크기 조정 및 규모 숫자 값](../../../core/plan-design/configs/size-and-scale-numbers.md)을 참조하세요.
 
-### <a name="sql-server-2016-sp1-standard-enterprise"></a>SQL Server 2016 SP1: Standard、Enterprise  
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+### <a name="sql-server-2016-sp1-standard-enterprise"></a>SQL Server 2016 SP1: Standard, Enterprise  
+다음에 대한 최소 누적 업데이트 없이 이 버전의 SQL Server를 사용할 수 있습니다.  
 
--   中央管理サイト  
--   プライマリ サイト  
--   セカンダリ サイト  
+-   중앙 관리 사이트  
+-   기본 사이트  
+-   보조 사이트  
 
-### <a name="sql-server-2016-standard-enterprise"></a>SQL Server 2016: Standard、Enterprise  
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+### <a name="sql-server-2016-standard-enterprise"></a>SQL Server 2016: Standard, Enterprise  
+다음에 대한 최소 누적 업데이트 없이 이 버전의 SQL Server를 사용할 수 있습니다.  
 
--   中央管理サイト  
--   プライマリ サイト  
--   セカンダリ サイト  
-
-
-### <a name="sql-server-2014-sp2-standard-enterprise"></a>SQL Server 2014 SP2: Standard、Enterprise  
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
-
--   中央管理サイト  
--   プライマリ サイト  
--   セカンダリ サイト
+-   중앙 관리 사이트  
+-   기본 사이트  
+-   보조 사이트  
 
 
+### <a name="sql-server-2014-sp2-standard-enterprise"></a>SQL Server 2014 SP2: Standard, Enterprise  
+다음에 대한 최소 누적 업데이트 없이 이 버전의 SQL Server를 사용할 수 있습니다.  
 
-### <a name="sql-server-2014-sp1-standard-enterprise"></a>SQL Server 2014 SP1: Standard、Enterprise  
- 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
-
--   中央管理サイト  
--   プライマリ サイト  
--   セカンダリ サイト
+-   중앙 관리 사이트  
+-   기본 사이트  
+-   보조 사이트
 
 
-### <a name="sql-server-2012-sp3-standard-enterprise"></a>SQL Server 2012 SP3: Standard、Enterprise  
- 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
--   中央管理サイト  
--   プライマリ サイト  
--   セカンダリ サイト  
+### <a name="sql-server-2014-sp1-standard-enterprise"></a>SQL Server 2014 SP1: Standard, Enterprise  
+ 다음에 대한 최소 누적 업데이트 없이 이 버전의 SQL Server를 사용할 수 있습니다.  
+
+-   중앙 관리 사이트  
+-   기본 사이트  
+-   보조 사이트
+
+
+### <a name="sql-server-2012-sp3-standard-enterprise"></a>SQL Server 2012 SP3: Standard, Enterprise  
+ 다음에 대한 최소 누적 업데이트 없이 이 버전의 SQL Server를 사용할 수 있습니다.  
+
+-   중앙 관리 사이트  
+-   기본 사이트  
+-   보조 사이트  
 
 <!-- Support for this service pack version has been dropped by Microsoft    
 ### SQL Server 2012 SP2: Standard, Enterprise   
@@ -122,42 +120,42 @@ SQL Server のトランザクション レプリケーションは、[データ�
 -   A secondary site  
 -->
 
-### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3: Standard、Enterprise、Datacenter     
-  [バージョン 1702 以降](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database)では、このバージョンの SQL Server はサポートされていません。  
- 1702 より前のバージョンの Configuration Manager を使用している場合、このバージョンの SQL Server は引き続きサポートされます。
+### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter     
+  [버전 1702부터](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database) 이 SQL Server 버전이 지원되지 않습니다.  
+ Configuration Manager의 1702 이전 버전을 사용할 경우 이 SQL Server 버전은 계속 지원됩니다.
 
-使用しているバージョンの Configuration Manager でサポートされている場合は、次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+사용 중인 Configuration Manager 버전에서 지원될 경우 다음에 대한 최소 누적 업데이트 버전 없이 이 버전의 SQL Server를 사용할 수 있습니다.  
 
--   中央管理サイト  
--   プライマリ サイト
--   セカンダリ サイト
+-   중앙 관리 사이트  
+-   기본 사이트
+-   보조 사이트
 
 
 
 ### <a name="sql-server-2016-express-sp1"></a>SQL Server 2016 Express SP1  
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。
--   セカンダリ サイト
+다음에 대한 최소 누적 업데이트 없이 이 버전의 SQL Server를 사용할 수 있습니다.
+-   보조 사이트
 
 ### <a name="sql-server-2016-express"></a>SQL Server 2016 Express
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。
--   セカンダリ サイト
+다음에 대한 최소 누적 업데이트 없이 이 버전의 SQL Server를 사용할 수 있습니다.
+-   보조 사이트
 
 
 ### <a name="sql-server-2014-express-sp2"></a>SQL Server 2014 Express SP2   
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+다음에 대한 최소 누적 업데이트 없이 이 버전의 SQL Server를 사용할 수 있습니다.  
 
--   セカンダリ サイト  
+-   보조 사이트  
 
 
 ### <a name="sql-server-2014-express-sp1"></a>SQL Server 2014 Express SP1   
- 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+ 다음에 대한 최소 누적 업데이트 없이 이 버전의 SQL Server를 사용할 수 있습니다.  
 
--   セカンダリ サイト  
+-   보조 사이트  
 
 ### <a name="sql-server-2012-express-sp3"></a>SQL Server 2012 Express SP3  
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+다음에 대한 최소 누적 업데이트 없이 이 버전의 SQL Server를 사용할 수 있습니다.  
 
--   セカンダリ サイト  
+-   보조 사이트  
 
 <!-- Support for this service pack version has been dropped by Microsoft   
 ### SQL Server 2012 Express SP2   
@@ -167,99 +165,98 @@ SQL Server のトランザクション レプリケーションは、[データ�
 -->
 
 
-##  <a name="bkmk_SQLConfig"></a> SQL Server の必須構成  
- サイト データベースに使用する SQL Server (SQL Server Express を含む) のすべてのインストールでの要件は次のとおりです。 Configuration Manager が SQL Server Express をセカンダリ サイト インストールの一部としてインストールするときには、これらの構成は自動的に作成されます。  
+##  <a name="bkmk_SQLConfig"></a> SQL Server에 대한 필수 구성  
+ 다음은 사이트 데이터베이스에 사용할 모든 SQL Server 설치(SQL Server Express 포함)에 필요합니다. Configuration Manager에서 보조 사이트 설치의 일부로 SQL Server Express를 설치하는 경우 이러한 구성은 자동으로 만들어집니다.  
 
- **SQL Server アーキテクチャのバージョン:**  
- Configuration Manager には、サイト データベースをホストするために 64 ビット版の SQL Server が必要です。  
+ **SQL Server 아키텍처 버전:**  
+ Configuration Manager에서 사이트 데이터베이스를 호스트하려면 64비트 버전의 SQL Server가 필요합니다.  
 
- **データベース照合順序：**  
- 各サイトでは、サイトとサイト データベースの両方に使用される SQL Server のインスタンスが、 **SQL_Latin1_General_CP1_CI_AS**の照合順序を使用する必要があります。  
+ **데이터베이스 데이터 정렬:**  
+ 각 사이트에서 사이트와 사이트 데이터베이스에 사용되는 두 SQL Server 인스턴스는 모두 **SQL_Latin1_General_CP1_CI_AS**데이터 정렬을 사용해야 합니다.  
 
- Configuration Manager は、GB18030 で定義されている中国で使用するための標準を満たすために、この照合順序に対して 2 つの例外をサポートしています。 詳細については、「[System Center Configuration Manager のインターナショナル サポート](../../../core/plan-design/hierarchy/international-support.md)」をご覧ください。  
+ Configuration Manager에서는 중국에서 사용하도록 GB18030으로 정의된 표준을 충족하기 위해 이 데이터 정렬에 대한 두 가지 예외를 지원합니다. 자세한 내용은 [System Center Configuration Manager의 다국어 기능 지원](../../../core/plan-design/hierarchy/international-support.md)을 참조하세요.  
 
- **SQL Server の機能：**  
- 各サイト サーバーに必要な機能は、 **データベース エンジン サービス** 機能のみです。  
+ **SQL Server 기능:**  
+ 각 사이트 서버에는 **데이터베이스 엔진 서비스** 기능만 있으면 됩니다.  
 
- Configuration Manager データベース レプリケーションは、**SQL Server レプリケーション**機能を必要としません。 ただし、[System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)を使用する場合は、この SQL Server の構成が必要です。  
+ Configuration Manager 데이터베이스 복제를 수행할 때는 **SQL Server 복제** 기능이 필요하지 않습니다. 그러나 이 SQL Server 구성은 [System Center Configuration Manager의 관리 지점용 데이터베이스 복제본](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)을 사용할 때 필요합니다.  
 
- **Windows 認証:**  
- Configuration Manager は、データベースへの接続を検証するために、**Windows 認証**を必要とします。  
+ **Windows 인증:**  
+ Configuration Manager에서 데이터베이스에 대한 연결의 유효성을 검사하려면 **Windows 인증**을 수행해야 합니다.  
 
- **SQL Server インスタンス:**  
- サイトごとに専用の SQL Server のインスタンスを使用する必要があります。 **名前付きインスタンス** か、 **既定のインスタンス**を使用できます。  
+ **SQL Server 인스턴스:**  
+ 각 사이트에 대해 SQL Server의 전용 인스턴스를 사용해야 합니다. 이 인스턴스는 **명명된 인스턴스** 또는 **기본 인스턴스**일 수 있습니다.  
 
- **SQL Server のメモリ：**  
- SQL Server Management Studio を使用して、 **[サーバー メモリ オプション]** で **[最小サーバー メモリ]**設定を指定して、SQL Server のメモリを予約します。 固定量のメモリを設定する方法の詳細については、「 [固定量のメモリを設定する方法 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759)」を参照してください。  
+ **SQL Server 메모리:**  
+ SQL Server의 메모리는 SQL Server Management Studio를 사용하여 **서버 메모리 옵션**의 **최소 서버 메모리** 설정을 통해 예약합니다. 고정된 양의 메모리를 설정하는 방법에 대한 자세한 내용은 [방법: 고정된 양의 메모리 설정(SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759)을 참조하세요.  
 
--   **サイト サーバーと同じコンピューターにインストールされたデータベース サーバーの場合:** SQL Server 用のメモリをアドレス可能なシステム メモリの 50% から 80% に制限します。  
+-   **사이트 서버와 동일한 컴퓨터에 설치된 데이터베이스 서버:** SQL Server의 메모리를 사용 가능한 주소 지정 가능 시스템 메모리의 50~80%로 제한합니다.  
 
--   **専用データベース サーバー (サイト サーバーからリモート) の場合:** SQL Server 用のメモリをアドレス指定可能なシステム メモリの 80% から 90% に制限します。  
+-   **전용 데이터베이스 서버(사이트 서버에서 원격):** SQL Server의 메모리를 사용 가능한 주소 지정 가능 시스템 메모리의 80~90%로 제한합니다.  
 
--   **使用中の各 SQL Server インスタンスのバッファー プール用のメモリ予約の場合:**   
+-   **사용 중인 각 SQL Server 인스턴스의 버퍼 풀에 대한 메모리 예약:**  
 
-    -   中央管理サイト: 最小で 8 ギガバイト (GB) に設定  
-    -   プライマリ サイト: 最小で 8 ギガバイト (GB) に設定  
-    -   セカンダリ サイト: 最小で 4 ギガバイト (GB) に設定  
+    -   중앙 관리 사이트: 최소 8GB를 설정합니다.  
+    -   기본 사이트: 최소 8GB를 설정합니다.  
+    -   보조 사이트: 최소 4GB를 설정합니다.  
 
-**SQL の入れ子になったトリガー**  
- [SQL の入れ子になったトリガー](http://go.microsoft.com/fwlink/?LinkId=528802) は、有効にする必要があります。  
+**SQL 중첩 트리거:**  
+ [SQL 중첩 트리거](http://go.microsoft.com/fwlink/?LinkId=528802) 를 사용하도록 설정해야 합니다.  
 
- **SQL Server の CLR 統合**  
-  サイト データベースには、SQL Server 共通言語ランタイム (CLR) を有効にする必要があります。 これは、Configuration Manager のインストール時に自動的に有効になります。 CLR の詳細については、「[SQL Server の CLR 統合の概要](https://msdn.microsoft.com/library/ms254498\(v=vs.110\).aspx)」をご覧ください。  
+ **SQL Server CLR 통합**  
+  사이트 데이터베이스를 사용하려면 SQL Server CLR(공용 언어 런타임)을 활성화해야 합니다. CLR은 Configuration Manager를 설치할 때 자동으로 사용됩니다. CLR에 대한 자세한 내용은 [SQL Server CLR 통합 소개](https://msdn.microsoft.com/library/ms254498\(v=vs.110\).aspx)를 참조하세요.  
 
-##  <a name="bkmk_optional"></a> SQL Server のオプション構成  
- 以下の構成は、SQL Server の完全インストールを使用する各データベースのオプションです。  
+##  <a name="bkmk_optional"></a> SQL Server에 대한 선택적 구성  
+ 전체 SQL Server 설치를 사용하는 각 데이터베이스에 대해 필요한 경우 다음 항목을 구성할 수 있습니다.  
 
- **SQL Server サービス:**  
- SQL Server サービスを、以下のものを使用して実行するように構成できます。  
+ **SQL Server 서비스:**  
+ 다음을 사용하여 SQL Server 서비스를 실행하도록 구성할 수 있습니다.  
 
--   **ドメイン ローカル ユーザー** アカウント:  
+-   **도메인 로컬 사용자** 계정:  
 
-    -   これはベスト プラクティスであり、アカウントのサービス プリンシパル名 (SPN) を手動で登録しなければならない場合があります。  
+    -   이 계정을 사용하는 것이 가장 좋습니다. 이때 계정의 SPN(서비스 사용자 이름)을 수동으로 등록해야 할 수 있습니다.  
 
--   SQL Server を実行しているコンピューターの**ローカル システム** アカウント:  
+-   SQL Server를 실행하는 컴퓨터의**로컬 시스템** 계정:  
 
-    -   ローカル システム アカウントを使用すると、構成プロセスが簡単になります。  
-    -   ローカル システム アカウントを使用すると、Configuration Manager によって自動的に SQL Server サービスの SPN が登録されます。  
-    -   SQL Server サービスにローカル システム アカウントを使用することは、SQL Server のベスト プラクティスではないことに注意してください。  
+    -   구성 프로세스를 간단하게 수행하려면 로컬 시스템 계정을 사용합니다.  
+    -   로컬 시스템 계정을 사용할 때 Configuration Manager에서는 SQL Server 서비스에 대해 SPN을 자동으로 등록합니다.  
+    -   그러나 SQL Server 서비스에 대해 로컬 시스템 계정을 사용하는 것이 SQL Server 모범 사례는 아닙니다.  
 
-SQL Server を実行するコンピューターが、ローカル システム アカウントを使用して SQL Server サービスを実行していない場合、SQL Server サービスを実行するアカウントの SPN を Active Directory Domain Services で構成する必要があります  (システム アカウントを使用する場合、SPN が自動的に登録されます)。
+SQL Server를 실행하는 컴퓨터에서 SQL Server 서비스를 실행하기 위해 로컬 시스템 계정을 사용하지 않는 경우에는 Active Directory Domain Services에서 SQL Server 서비스를 실행하는 계정의 SPN을 구성해야 합니다. 시스템 계정을 사용할 때는 SPN이 자동으로 등록됩니다.
 
-サイト データベースの SPN については、「[Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md#bkmk_SPN)」 (System Center Configuration Manager インフラストラクチャの変更) トピックの「[Manage the SPN for the site database server](../../../core/servers/manage/modify-your-infrastructure.md)」 (サイト データベース サーバーの SPN の管理) を参照してください。  
+사이트 데이터베이스의 SPN에 대한 자세한 내용은 [System Center Configuration Manager 인프라 수정](../../../core/servers/manage/modify-your-infrastructure.md) 항목에서 [사이트 데이터베이스 서버에 대한 SPN 관리](../../../core/servers/manage/modify-your-infrastructure.md#bkmk_SPN)를 참조하세요.  
 
-SQL Server サービスで使用されるアカウントを変更する方法については、「 [方法: SQL Server のサービス開始アカウントの変更 (SQL Server 構成マネージャー)](http://go.microsoft.com/fwlink/p/?LinkId=237661)」を参照してください。  
+SQL Server 서비스에서 사용하는 계정을 변경하는 방법에 대한 자세한 내용은 [방법: SQL Server용 서비스 시작 계정 변경(SQL Server 구성 관리자)](http://go.microsoft.com/fwlink/p/?LinkId=237661)을 참조하세요.  
 
 **SQL Server Reporting Services:**  
-レポートを実行できるようにするレポート サービス ポイントをインストールするには、SQL Server Reporting Services が必要です。  
+SQL Server Reporting Services는 보고서를 실행할 수 있는 보고 서비스 지점을 설치하는 데 필요합니다.  
 
 > [!IMPORTANT]  
-> 以前のバージョンから SQL Server をアップグレードした後、「*Report Builder Does Not Exist*」 (レポート ビルダーが存在しません) というエラーが表示されることがあります。    
-> このエラーを解決するには、レポート サービス ポイント サイト システムの役割を再インストールする必要があります。
+> 이전 버전에서 SQL Server를 업그레이드한 후 다음과 같은 오류가 표시될 수 있습니다. *보고서 작성기가 없습니다*.    
+> 이 오류를 해결하려면 보고 서비스 지점 사이트 시스템 역할을 다시 설치해야 합니다.
 
-**SQL Server のポート:**  
-SQL Server データベース エンジンとの通信、およびサイト間のレプリケーションには、SQL Server の既定ポート構成を使用することも、カスタム ポートを指定することもできます。  
+**SQL Server 포트:**  
+SQL Server 데이터베이스 엔진에 대한 통신 및 사이트 간 복제의 경우 기본 SQL Server 포트 구성을 사용하거나 다음과 같이 사용자 지정 포트를 지정할 수 있습니다.  
 
--   **サイト間の通信** には SQL Server Service Broker が使用され、既定ではポート TCP 4022 が使用されます。  
--   SQL Server データベース エンジンとさまざまな Configuration Manager サイト システムの役割の間の**サイト内通信**では、既定でポート TCP 1433 が使用されます。 次のサイト システムの役割は、SQL Server データベースと直接通信します。  
+-   **사이트 간 통신**은 SQL Server Service Broker를 사용하며 기본적으로 포트 TCP 4022를 사용합니다.  
+-   SQL Server 데이터베이스 엔진 및 다양한 Configuration Manager 사이트 시스템 역할 사이에서 **사이트 간 통신**은 기본적으로 포트 TCP 1433을 사용합니다. 다음 사이트 시스템 역할은 SQL Server 데이터베이스와 직접 통신합니다.  
 
-    -   管理ポイント  
-    -   SMS プロバイダー コンピューター  
-    -   レポート サービス ポイント  
-    -   サイト サーバー  
+    -   관리 지점  
+    -   SMS 공급자 컴퓨터  
+    -   보고 서비스 지점  
+    -   사이트 서버  
 
-SQL Server を実行しているコンピューターが複数のサイトからデータベースをホストする場合、各データベースは個別の SQL Server インスタンスを使用する必要があります。 さらに、各インスタンスは一意のポート セットを使用するように構成されている必要があります。  
+SQL Server를 실행하는 컴퓨터는 둘 이상의 사이트에 있는 데이터베이스를 호스트하는 경우 각 데이터베이스는 별도의 SQL Server 인스턴스를 사용해야 합니다. 또한 각 인스턴스는 고유 포트 집합을 사용하도록 구성해야 합니다.  
 
 > [!WARNING]  
->  Configuration Manager は、動的ポートをサポートしていません。 SQL Server 名前付きインスタンスの既定動作では、データベース エンジンへの接続に動的ポートが使用されるため、名前付きインスタンスの使用時に、サイト内通信に使用する静的ポートを手動で構成する必要があります。  
+>  Configuration Manager는 동적 포트를 지원하지 않습니다. 기본적으로 SQL Server 명명된 인스턴스는 데이터베이스 엔진에 대한 연결에 동적 포트를 사용하므로 명명된 인스턴스를 사용하는 경우 사이트 간 통신에 사용하려는 정적 포트를 수동으로 구성해야 합니다.  
 
-SQL Server を実行しているコンピューターのファイアウォールが有効に設定されている場合は、展開で使用されているポートと、SQL Server と通信するコンピューター間のネットワーク上のあらゆる場所にあるポートを許可するように構成してください。  
+SQL Server를 실행하는 컴퓨터에서 방화벽이 사용하도록 설정되어 있는 경우에는 SQL Server와 통신하는 컴퓨터 간의 네트워크에 있는 모든 위치에서 배포에서 사용 중인 포트를 허용하도록 방화벽이 구성되어 있는지 확인해야 합니다.  
 
-特定のポートを使用するように SQL Server を構成する方法の例については、SQL Server TechNet ライブラリの「 [特定の TCP ポートで受信待ちするようにサーバーを構成する方法 (SQL Server 構成マネージャー)](http://go.microsoft.com/fwlink/p/?LinkID=226349) 」を参照してください。  
+특정 포트를 사용하도록 SQL Server를 구성하는 방법의 예제는 SQL Server TechNet 라이브러리에서 [방법: 특정 TCP 포트로 수신하도록 서버 구성(SQL Server 구성 관리자)](http://go.microsoft.com/fwlink/p/?LinkID=226349) 을 참조하세요.  
 
-## <a name="upgrade-options-for-sql-server"></a>SQL Server のアップグレード オプション
-使用している SQL Server のバージョンをアップグレードする必要がある場合は、次の方法 (簡単な方法から順に示されています) を使用することをお勧めします。
-1. [SQL Server をインプレースでアップグレードします](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (推奨)。
-2. 新しいコンピューターに新しいバージョンの SQL Server をインストールしてから、Configuration Manager セットアップの[データベースの移動オプションを使用](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)して、サイト サーバーを新しい SQL Server にポイントします。
-3. [バックアップと回復](/sccm/protect/understand/backup-and-recovery)を使用します。
-
+## <a name="upgrade-options-for-sql-server"></a>SQL Server 업그레이드 옵션
+SQL Server 버전을 업그레이드해야 할 경우, 쉬운 경우부터 더 복잡한 경우까지 다음 방법을 권장합니다.
+1. [SQL Server 현재 위치 업그레이드](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server)(권장).
+2. SQL Server의 새 버전을 새 컴퓨터에 설치하고 Configuration Manager 설치 프로그램의 [데이터베이스 이동 옵션을 사용](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)하여 사이트 서버에서 새 SQL Server를 가리킵니다.
+3. [백업 및 복구](/sccm/protect/understand/backup-and-recovery)를 사용합니다.

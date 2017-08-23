@@ -1,13 +1,12 @@
 ---
-title: "ハイブリッド MDM の新機能のアーカイブ | Microsoft Docs"
-description: "System Center Configuration Manager と Intune のハイブリッド展開で使用できる過去のモバイル デバイス管理機能のアーカイブです。"
+title: "새로운 기능 하이브리드 MDM 보관 | Microsoft 문서"
+description: "System Center Configuration Manager 및 Intune을 포함하는 하이브리드 배포에 사용할 수 있는 과거 모바일 장치 관리 기능의 보관 파일입니다."
 ms.custom: na
 ms.date: 06/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4c27b161-9eb7-4cdd-b469-d8eb27e71aea
@@ -15,42 +14,37 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed6b65a1a5aabc0970cd0333cb033405cf6d2aea
 ms.openlocfilehash: 0abd1cdcf44e778c91bacb8011efd711818ce2e9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/03/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# System Center Configuration Manager と Microsoft Intune での過去のハイブリッド機能
-<a id="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune" class="xliff"></a>
+# <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 및 Microsoft Intune을 사용하는 이전 하이브리드 기능
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-この記事では、System Center Configuration Manager と Intune のハイブリッド展開で使用できる過去のモバイル デバイス管理 (MDM) 機能の詳細について説明します。  
+이 문서에서는 System Center Configuration Manager 및 Intune을 포함하는 하이브리드 배포에 사용할 수 있는 과거 MDM(모바일 장치 관리) 기능에 대한 세부 정보를 제공합니다.  
 
-##  Configuration Manager のバージョンとの互換性
-<a id="compatibility-with-configuration-manager-versions" class="xliff"></a>  
+##  <a name="compatibility-with-configuration-manager-versions"></a>Configuration Manager 버전과 호환성  
 
- この記事の各セクションでは、3 つの異なるカテゴリにあるハイブリッド機能を一覧表示します。 次のガイダンスを使用すると、各カテゴリの機能とさまざまなバージョンの Configuration Manager との互換性を判断できます。  
+ 이 문서의 각 섹션에서는 세 가지 범주로 하이브리드 기능이 나열되어 있습니다. 각 범주의 기능과 다양한 Configuration Manager 버전 간의 호환성을 확인하려면 다음 지침을 따르세요.  
 
-|機能のカテゴリ|
+|기능 범주|
 |-|  
-|**Microsoft Intune の新機能** - 通常、このカテゴリに一覧表示されたすべての機能は、System Center 2012 R2 Configuration Manager リリースを含むすべての Configuration Manager のリリースで動作します。これらの機能は Intune サービスのみを必要とし、Configuration Manager の追加機能は必要ないためです。<br /><br /> **Configuration Manager Technical Preview の新機能** - このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Technical Preview リリースでのみ動作します。 これらの機能を試すには、機能の説明で指定されたバージョンの Technical Preview をインストールする必要があります。 詳細については、「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を参照してください。<br /><br /> **Configuration Manager (現在のブランチ) の新機能** - このカテゴリに一覧表示されたすべての機能は、バージョン 1511 や 1602 など、指定されたバージョンの Configuration Manager (現在のブランチ) でのみ動作します。 ハイブリッド展開に旧バージョンの Configuration Manager を使用している場合は、機能の説明で指定されたバージョンの Configuration Manager (現在の分岐) にアップグレードする必要があります。 詳細については、「[System Center Configuration Manager へのアップグレード](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)」を参照してください。|  
+|**Microsoft Intune의 새로운 기능** - 일반적으로 이 범주 아래에 나열된 모든 기능은 Intune 서비스만 필요하고 Configuration Manager의 추가 기능이 필요하지 않으므로 System Center 2012 R2 Configuration Manager 릴리스를 비롯한 모든 Configuration Manager 릴리스에서 사용할 수 있어야 합니다.<br /><br /> **Configuration Manager Technical Preview의 새로운 기능** - 이 범주 아래에 나열된 모든 기능은 지정된 기술 미리 보기 릴리스에서만 사용할 수 있습니다. 이러한 기능을 시험해보려면 기능 설명에 지정된 기술 미리 보기 버전을 설치해야 합니다. 자세한 내용은 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)를 참조하세요.<br /><br /> **Configuration Manager(현재 분기)의 새로운 기능** - 이 범주 아래에 나열된 모든 기능은 지정된 버전의 Configuration Manager(현재 분기)(예: 버전 1511 또는 1602)에서만 사용할 수 있습니다. 하이브리드 배포에 이전 버전의 Configuration Manager를 사용하는 경우 기능 설명에 지정된 Configuration Manager(현재 분기) 버전으로 업그레이드해야 합니다. 자세한 내용은 [System Center Configuration Manager 업그레이드](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)를 참조하세요.|  
 
-## 2016 年 12 月
-<a id="december-2016" class="xliff"></a>
+## <a name="december-2016"></a>2016년 12월
 
-### Microsoft Intune の新機能
-<a id="new-in-microsoft-intune" class="xliff"></a>
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune의 새로운 기능
 
-- **登録での Multi-Factor Authentication (MFA) が Azure Portal に移動する**
+- **등록 시의 MFA(Multi-Factor Authentication) 과정이 Azure Portal로 이전됨**
 
-  これまで、Intune の登録に MFA を設定するには、Intune コンソールまたは構成マネージャー コンソールを使用していました。 この機能更新により、Intune の資格情報で Microsoft Azure Portal (https://manage.windowsazure.com) にログインし、Azure AD を使用して MFA の設定を構成するようになりました。 詳細については、「Microsoft Intune のMulti-Factor Authentication」 (https://aka.ms/mfa_ad) を参照してください。
+  이전에는 Intune 등록용으로 MFA를 설정하려면 Intune 콘솔 또는 Configuration Manager 콘솔로 이동해야 했습니다. 이제는 이 업데이트된 기능을 통해 Intune 자격 증명을 사용하여 [Microsoft Azure Portal](https://manage.windowsazure.com)에 로그인한 다음 Azure AD를 통해 MFA 설정을 구성할 수 있습니다. 자세한 내용은 [Microsoft Intune용 Multi-Factor Authentication]을 참조하세요(https://aka.ms/mfa_ad).
 
-- **Android 用ポータル サイト アプリが中国で利用可能になる**
+- **이제 중국에서 Android용 회사 포털 앱 사용 가능**
 
-  Android 用ポータル サイト アプリが中国で利用できるようになりました。 中国には Google Play ストアがないため、Android デバイスでは中国のアプリ マーケットプレースからアプリを入手する必要があります。 Android 用ポータル サイト アプリは、次のストアからダウンロードできます。
+  이제 중국에서 Android용 회사 포털 앱을 사용할 수 있습니다. 중국에는 Google Play 스토어를 사용할 수 없으므로 Android 장치 사용자는 중국 앱 마켓플레이스에서 앱을 다운로드해야 합니다. 다음 스토어에서 Android용 회사 포털 앱을 다운로드할 수 있습니다.
 
   - [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
   - [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
@@ -58,92 +52,87 @@ ms.lasthandoff: 07/03/2017
   - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
   - [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
 
-  Android 用ポータル サイト アプリは、Google Play サービスを使って Microsoft Intune サービスと通信します。 中国では Google Play サービスをまだ利用できないので、次のタスクが完了するまで最大 8 時間かかることがあります。
+  Android 용 회사 포털 앱은 Google Play 서비스를 사용하여 Microsoft Intune 서비스와 통신합니다. Google Play 서비스는 중국에서 아직 제공되지 않으므로 다음 작업을 수행하는 경우 완료하는 데 최대 8시간이 걸릴 수 있습니다.
 
-  | Configuration Manager 管理コンソール | Android 用 Intune ポータル サイト アプリ | Intune ポータル サイト Web サイト |
+  | Configuration Manager 관리 콘솔 | Android용 Intune 회사 포털 앱 | Intune 회사 포털 웹 사이트 |
   |----|----|----|      
-  | 削除/ワイプ (すべてのデータの削除)   | リモート デバイスの削除 | デバイスの削除 (ローカルおよびリモート) |
-  | 削除/ワイプ (会社データの削除)   | デバイスのリセット | デバイスのリセット|
-  | 新規アプリまたは更新アプリの展開 | 使用可能な基幹業務アプリのインストール | デバイスのパスコードのリセット|
-  | リモート ロック | | |
-  | パスコードのリセット | | |        
+  | 사용 중지/초기화(모든 데이터 제거)   | 원격 장치 제거 | 장치 제거(로컬 및 원격) |
+  | 사용 중지/초기화(회사 데이터 제거)   | 장치 재설정 | 장치 재설정|
+  | 신규 또는 업데이트된 앱 배포 | 사용 가능한 LOB(기간 업무) 앱 설치 | 장치 암호 재설정|
+  | 원격 잠금 | | |
+  | 암호 재설정 | | |        
 
 
-## 2016 年 11 月
-<a id="november-2016" class="xliff"></a>
+## <a name="november-2016"></a>2016년 11월
 
-### Microsoft Intune の新機能
-<a id="new-in-microsoft-intune" class="xliff"></a>
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune의 새로운 기능
 
-- **新しい Microsoft Intune ポータル サイトが Windows 10 デバイスで利用可能になる**
+- **Windows 10 장치에 사용할 수 있는 새로운 Microsoft Intune 회사 포털**
 
-  Microsoft は、新しい [Windows 10 デバイス用のポータル サイト アプリ](https://www.microsoft.com/store/apps/9wzdncrfj3pz)をリリースしました。 このアプリでは新しい Windows 10 ユニバーサル形式を利用し、PC やモバイルなどすべての Windows 10 デバイスで同じ更新されたユーザー エクスペリエンスが提供されますが、以前のポータル サイトアプリで提供されている同じ機能はすべて引き続き利用できます。
+  Microsoft에서 새로운 [Windows 10 장치용 회사 포털 앱](https://www.microsoft.com/store/apps/9wzdncrfj3pz)을 출시했습니다. 새로운 Windows 10 유니버설 형식을 활용하는 이 앱은 모든 Windows 10 장치(PC 및 모바일)에서 동일한 업데이트된 사용자 환경을 제공합니다. 이전 회사 포털 앱에서 제공되었던 것과 동일한 기능도 모두 계속 사용할 수 있습니다.
 
-  この新しいアプリでは、Windows 10 デバイスでのシングル サインオン (SSO) や証明書ベースの認証など、プラットフォーム機能も利用します。 アプリは、既存の Windows 8.1 ポータル サイトおよび Windows Phone 8.1 ポータル サイトのインストールのアップグレードとして Windows ストアから入手できるようになります。 詳細については、[Intune サポート チームのブログ](http://aka.ms/intunecp_universalapp)を参照してください。
+  새로운 앱은 Windows 10 장치에서 SSO(Single Sign-On) 및 인증서 기반 인증과 같은 플랫폼 기능을 활용합니다. 이 앱은 Windows 스토어에서 설치되는 기존 Windows 8.1 회사 포털 및 Windows Phone 8.1 회사 포털의 업그레이드로 제공됩니다. 추가 세부 정보를 확인하려면 [Intune 지원 팀 블로그](http://aka.ms/intunecp_universalapp)를 방문하세요.
 
-  新しいポータル サイト アプリでは、Configuration Manager コンソールで**使用可能**とマークされたビジネス アプリケーションの Windows ストアも表示されます。
+  새로운 회사 포털 앱에는 Configuration Manager 콘솔에 **사용 가능**으로 표시되는 비즈니스용 Windows 스토어 응용 프로그램도 표시됩니다.
 
 
-### Configuration Manager (現在のブランチ) の新機能
-<a id="new-in-configuration-manager-current-branch" class="xliff"></a>
+### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager(현재 분기)의 새로운 기능
 
-Configuration Manager Technical Preview リリースで以前に提供されていた次の機能は、Intune と Configuration Manager (Current Branch) バージョン 1610 のハイブリッド展開で使用できるようになりました。
+이전에 Configuration Manager Technical Preview 릴리스에서 사용할 수 있었던 다음 기능을 이제 Intune과 Configuration Manager(현재 분기) 버전 1610을 포함하는 하이브리드 배포에서 사용할 수 있습니다.
 
-* [構成項目の追加設定とエクスペリエンス向上](/sccm/core/plan-design/changes/whats-new-in-version-1610#new-compliance-settings-for-configuration-items)
-* [DEP プロファイルの追加設定](whats-new-hybrid-archive.md#new-in-configuration-manager-technical-preview-1609)
-* [ビジネス向け Windows ストアの有料アプリ](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
-* [Windows 10 VPN プロファイルのネイティブ接続の種類](whats-new-hybrid-archive.md#new-in-configuration-manager-technical-preview-1609)
-* [Intune コンプライアンス チャート](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)
-* [コンソールからのポリシー同期の要求](/sccm/mdm/deploy-use/sync-intune-device)
-* [Windows Defender の構成設定](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#windows-defender)
+* [구성 항목에 대한 추가 설정 및 향상된 환경](/sccm/core/plan-design/changes/whats-new-in-version-1610#new-compliance-settings-for-configuration-items)
+* [DEP 프로필에 대한 추가 설정](whats-new-hybrid-archive.md#new-in-configuration-manager-technical-preview-1609)
+* [비즈니스용 Windows 스토어의 유료 앱](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+* [Windows 10 VPN 프로필에 대한 네이티브 연결 형식](whats-new-hybrid-archive.md#new-in-configuration-manager-technical-preview-1609)
+* [Intune 준수 차트](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)
+* [콘솔의 동기화 정책 요청](/sccm/mdm/deploy-use/sync-intune-device)
+* [Windows Defender 구성 설정](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#windows-defender)
 
-次の追加のハイブリッド機能も、 Configuration Manager (Current Branch) のバージョン 1610 に含まれます。
+Configuration Manager(현재 분기)의 버전 1610에는 다음과 같은 추가 하이브리드 기능도 포함되어 있습니다.
 
-- **登録されるデバイス数の増加**
+- **등록된 장치 수 증가**
 
-  ユーザーが最大 15 台のデバイスを登録できるようになりました。 以前の制限はユーザーあたり 5 台のデバイスでした。
+  이제 사용자가 최대 15개의 장치를 등록하도록 설정할 수 있습니다. 이전에는 사용자당 장치가 5대로 제한되었습니다.
 
 
-- **追加のセキュリティのサポート**
+- **추가 보안 지원**
 
-  完全な権限を持つ管理者に加えて、次の組み込みのセキュリティ ロールが、事前に宣言されたデバイス、iOS 登録プロファイル、および Windows 登録プロファイルを含むすべての企業所有のデバイス ノードの項目にフル アクセスできるようになりました。
+  이제는 전체 관리자 권한 외에 다음과 같은 기본 제공 보안 역할도 회사가 소유한 모든 장치 노드의 항목(미리 선언된 장치, iOS 등록 프로필, Windows 등록 프로필 포함)에 대한 모든 권한을 소유합니다.
 
-    - 資産マネージャー
-    - 会社リソース アクセス マネージャー
+    - 자산 관리자
+    - 회사 리소스 액세스 관리자
 
-  Configuration Manager コンソールのこれらの領域への読み取り専用アクセスは、引き続き読み取り専用アナリスト ロールに与えられます。
+  읽기 전용 분석가 역할에는 이러한 Configuration Manager 콘솔 영역에 대한 읽기 전용 권한이 계속 부여됩니다.
 
-- **Windows 情報保護アプリからの VPN アクセスの自動トリガー**
+- **Windows Information Protection 앱에서 VPN 액세스 자동 트리거**
 
-  Windows 10 VPN プロファイルに Windows 情報保護プライマリ ドメインを追加して、関連付けられたすべてのアプリがデバイスで実行されるときに、それらに VPN 接続を自動的にトリガーさせることができます。 このオプションは、ネイティブ接続の種類を選択した場合のみ使用できます。
+  Windows Information Protection 주 도메인을 Windows 10 VPN 프로필에 추가할 수 있습니다. 이렇게 하면 모든 관련 앱이 장치에서 실행될 때 VPN 연결을 자동으로 트리거합니다. 이 옵션은 네이티브 연결 유형을 선택할 때만 사용 가능합니다.
 
-- **Windows 10 VPN プロファイルの条件付きアクセス**
+- **Windows 10 VPN 프로필에 대한 조건부 액세스**
 
-    Configuration Manager コンソールで作成した Windows 10 VPN プロファイル経由で VPN アクセスできるようにするためには、Azure Active Directory に登録された Windows 10 デバイスを対応させる必要があります。 これは、VPN プロファイル ウィザードの [認証方法] ページの新しい **[この VPN 接続の条件付きアクセスを有効にする]** チェックボックスおよび Windows 10 VPN プロファイルの VPN プロファイルのプロパティによって可能です。 このオプションは、ネイティブ接続の種類を選択した場合のみ使用できます。
+    이제 Azure Active Directory에 등록된 Windows 10 장치가 Configuration Manager 콘솔에서 작성된 Windows 10 VPN 프로필을 통해 VPN에 액세스하려면 규정을 준수해야 하도록 지정할 수 있습니다. 이렇게 하려면 Windows 10 VPN 프로필의 VPN 프로필 속성과 VPN 프로필 마법사의 인증 방법 페이지에서 새로운 **이 VPN 연결에 조건부 액세스 사용** 확인란을 사용합니다. 이 옵션은 네이티브 연결 유형을 선택할 때만 사용 가능합니다.
 
-    プロファイルの条件付きアクセスを有効にした場合、シングル サインオン認証用の別の証明書を指定することもできます。
+    프로필에 대한 조건부 액세스를 사용하도록 설정하는 경우 SSO(Single Sign-On) 인증용으로 별도의 인증서를 지정할 수도 있습니다.
 
-## 2016 年 10 月
-<a id="october-2016" class="xliff"></a>
+## <a name="october-2016"></a>2016년 10월
 
-### Microsoft Intune の新機能
-<a id="new-in-microsoft-intune" class="xliff"></a>
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune의 새로운 기능
 
-2016 年 10 月に導入された次の Intune 機能は、ハイブリッド展開で動作します。
+2016년 10월에 도입된 다음 Intune 기능은 하이브리드 배포에서 사용할 수 있습니다.
 
-- **モバイル アプリケーション管理の条件付きアクセス**
+- **모바일 응용 프로그램 관리에 대한 조건부 액세스**
 
-  Outlook など、Intune モバイル アプリケーション管理ポリシーをサポートするアプリからのアクセスのみを許可するように、Exchange Online へのアクセスを制限することができます。 [この新機能](/intune/deploy-use/allow-policy-managed-apps-access-to-o365)は、組み込みのメール クライアントや Intune MAM ポリシーが構成されていない他のアプリへのアクセスをブロックできるため、Intune のモバイル アプリ管理 (MAM) ポリシーと組み合わせると効果的です。 これにより、ユーザーが組織のデータにアクセスする際に、Intune MAM を使用して保護できるアプリを使用するようになります。 Intune モバイル アプリ管理は、Azure Portal から使用することができます。 [設定] ブレードの新しい [条件付きアクセス] セクションを探してください。
+  Outlook 등의 Intune 모바일 응용 프로그램 관리 정책을 지원하는 앱에서만 액세스할 수 있도록 Exchange Online에 대한 액세스를 제한할 수 있습니다. [이 새로운 기능](/intune/deploy-use/allow-policy-managed-apps-access-to-o365)은 기본 제공 메일 클라이언트 또는 Intune MAM 정책으로 구성되지 않은 다른 앱에 대한 액세스를 차단할 수 있도록 Intune MAM(모바일 앱 관리) 정책과 완벽하게 연결됩니다. 이렇게 하면 사용자가 Intune MAM으로 보호할 수 있는 앱을 사용하여 조직의 데이터에 액세스합니다. Azure Portal을 통해 Intune 모바일 앱 관리를 시작할 수 있습니다. "설정" 블레이드에서 새 조건부 액세스 섹션을 찾습니다.
 
--   **Android 用 Intune アプリ ラッピング ツール**
+-   **Android용 Intune 앱 래핑 도구**
 
-  アプリで Intune モバイル アプリケーション管理 (MAM) ポリシーを使用できるようにするには、Intune アプリ ラッピング ツールを使用します。
+  Intune 앱 래핑 도구를 통해 앱이 Intune MAM(모바일 응용 프로그램 관리) 정책을 사용할 수 있도록 설정할 수 있습니다.
 
-- **Android Samsung KNOX Standard と Intune との互換性**
+- **Intune과 Android 삼성 KNOX Standard 호환성**
 
-  Samsung Galaxy Ace 電話の特定のモデルは、Samsung KNOX Standard デバイスとして Intune で管理できません。 これらのデバイスを Intune に登録すると、標準の Android デバイスとして管理されます。
+  특정 모델의 삼성 Galaxy Ace 휴대폰은 Intune에서 삼성 KNOX Standard 장치로 관리할 수 없습니다. 이러한 장치를 Intune에 등록하면 대신 표준 Android 장치로 관리됩니다.
 
-  この影響を受けるモデル番号は次のとおりです。
+  영향을 받는 모델 번호는 다음과 같습니다.
 
   - SM-G313HU
   - SM-G313HY
@@ -151,453 +140,422 @@ Configuration Manager Technical Preview リリースで以前に提供されて�
   - SM-G313MY
   - SM-G313U
 
-  管理者とエンドユーザーは、これ以上操作を行う必要はありません。 詳細については、Samsung KNOX の Web サイトを参照してください。
+  관리자와 최종 사용자가 추가 작업을 수행할 필요는 없습니다. 자세한 내용은 삼성 KNOX 웹 사이트를 참조하세요.
 
-### Configuration Manager Technical Preview 1610 の新機能
-<a id="new-in-configuration-manager-technical-preview-1610" class="xliff"></a>
+### <a name="new-in-configuration-manager-technical-preview-1610"></a>Configuration Manager Technical Preview 1610의 새로운 기능
 
-2016 年 10 月の Configuration Manager Technical Preview 1610 では、次のハイブリッド新機能が導入されました。
+Configuration Manager Technical Preview 1610의 2016년 10월에 도입된 새로운 하이브리드 기능은 다음과 같습니다.
 
-- **管理コンソールからのポリシー同期の要求**
+- **관리 콘솔에서 정책 동기화 요청**
 
-  Configuration Manager コンソールから、登録モバイル デバイスでのポリシー同期を要求できます。デバイス自体でポータル サイト アプリでの同期を要求する必要はありません。 これは、[リモート デバイスの操作] メニューにある **[Send Sync Request]** (同期要求の送信) と呼ばれる新しい操作であり、[デバイス] ノードでモバイル デバイスを選択するとリボンに表示されます。
+  장치 자체의 회사 포털 앱에서 동기화를 요청할 필요 없이 Configuration Manager 콘솔에서 등록된 모바일 장치에 대한 정책 동기화를 요청할 수 있습니다. 이 새로운 동작은 원격 장치 작업 메뉴의 **동기화 요청 보내기**로, 장치 노드에서 모바일 장치를 선택할 때 리본에 표시됩니다.
 
-- **Windows Defender の構成設定**
+- **Windows Defender 구성 설정**
 
-  Configuration Manager コンソールの構成項目を使用して、Intune に登録されている Windows 10 コンピューターで Windows Defender クライアント設定を構成できるようになりました。 構成項目ウィザードには、**Windows Defender** と呼ばれる新しい設定グループがあります。 この機能は、Windows 10 バージョン 1511 以降でのみサポートされています。
+  이제 Configuration Manager 콘솔에서 구성 항목을 사용하여 Intune에 등록된 Windows 10 컴퓨터에 대한 Windows Defender 클라이언트 설정을 구성할 수 있습니다. 구성 항목 마법사에 **Windows Defender**라는 새로운 설정 그룹이 있습니다. 이 그룹은 Windows 10 버전 1511 이상에서만 지원됩니다.
 
 
-### Configuration Manager (現在のブランチ) の新機能
-<a id="new-in-configuration-manager-current-branch" class="xliff"></a>
+### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager(현재 분기)의 새로운 기능
 
-2016 年 8 月の Configuration Manager (現在のブランチ) では、ハイブリッド新機能は導入されていません。
+Configuration Manager(현재 분기) 2016년 8월에 도입된 새로운 하이브리드 기능은 없습니다.
 
-## 2016 年 9 月
-<a id="september-2016" class="xliff"></a>
+## <a name="september-2016"></a>2016년 9월
 
-### Microsoft Intune の新機能
-<a id="new-in-microsoft-intune" class="xliff"></a>
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune의 새로운 기능
 
-2016 年 9 月に導入された次の Intune 機能は、ハイブリッド展開で動作します。
+2016년 9월에 도입된 다음 Intune 기능은 하이브리드 배포에서 사용할 수 있습니다.
 
-- **Android 用ポータル サイトへの "通知" の追加**
+- **Android용 회사 포털에 "알림" 추가**
 
-  Android 用ポータル サイトのホームページに新しい通知アイコンが追加されました。 このアイコンをタップすると [通知] ページが開き、ポータル サイト アプリの中でエンドユーザーが注目する必要のある項目がすべて表示されます。たとえば、デバイスのコンプライアンス非対応、登録の更新、登録のアクティブ化です。 iOS 版のポータル サイト アプリには既に、この通知機能が追加されています。 この新しい [通知] ページの導入に伴い、[会社アクセスのセットアップ] ページがポータル サイトの起動または再開のたびに表示されることはなくなりました (ただし、デバイスが登録済みである場合)。 管理者が独自にエンドユーザー向けガイドを作成している場合は、必要に応じてこの変更をドキュメントに反映してください。 更新後のスクリーン ショットは[こちら](https://aka.ms/androidcpupdate)にあります。
+  홈페이지의 Android용 회사 포털에 새 알림 아이콘이 추가되었습니다. 이 아이콘을 탭하면 장치 비준수, 등록 업데이트, 등록 활성화 등 회사 포털 앱에서 주의가 필요한 모든 항목을 최종 사용자에게 보여 주는 알림 페이지에 액세스할 수 있습니다. iOS 회사 포털 앱에는 이 알림 환경이 이미 있습니다. 새 알림 페이지가 있으므로 장치가 이미 등록되어 있으면 사용자가 회사 포털을 실행하거나 다시 시작할 때마다 회사 액세스 설정 페이지가 표시되지 않습니다. 고유한 최종 사용자 지침을 만든 경우 이 변경 내용을 반영하도록 문서를 업데이트하는 것이 좋습니다. 업데이트된 스크린샷은 [여기](https://aka.ms/androidcpupdate)서 확인할 수 있습니다.
 
-- **iOS ポータル サイト アプリのサポートの変更**
+- **iOS 회사 포털 앱에 대한 지원 변경 내용**
 
-  iOS 用 Microsoft Intune ポータル サイト アプリのすべてのユーザーが、アプリの最新バージョンを使用するように要求されます。 新しいユーザーは最新バージョンのみをダウンロードでき、現在のユーザーは最新バージョンへの更新を求められます。 最新バージョンを使用するには iOS 8.0 以降が必要であり、デバイスで以前の iOS バージョンを実行している場合は、デバイスを iOS 8.0 以降に更新したうえでポータル サイト アプリを最新バージョンに更新するまで、ポータル サイトを使用できず、登録することもできません。 iOS 8.0 以前のバージョンを実行している登録済みのデバイスは、引き続き管理対象であり、Intune 管理コンソールに表示されます。
+  이제 iOS용 Microsoft Intune 회사 포털 앱의 모든 사용자가 최신 버전을 사용해야 합니다. 새 사용자는 최신 버전만 다운로드할 수 있고 현재 사용자는 최신 버전으로 업데이트해야 합니다. 최신 버전에는 iOS 8.0 이상이 필요하므로 장치를 iOS 8.0 이상으로 업데이트한 다음 회사 포털 앱을 최신 버전으로 업데이트할 때까지 이전 iOS 버전을 실행하는 장치는 회사 포털을 사용하거나 등록할 수 없습니다. iOS 8.0 이전 버전을 실행하는 등록된 장치는 Intune 관리 콘솔에서 계속 관리되고 표시됩니다.
 
-- **フィードバック ボタンを Windows Phone 8.1 ポータル サイト アプリに追加**
+- **Windows Phone 8.1 회사 포털 앱에 피드백 단추 추가됨**
 
-  Windows Phone 8.1 ポータル サイト アプリでは、エンドユーザーが新しい [フィードバックの送信] ボタンを使用してアプリに関するフィードバックを送ることができます。 フィードバックを送信するには、ポータル サイト アプリの画面の右下にある "..." メニューをタップし、**[フィードバックの送信]** をタップします。 フィードバックは匿名化して収集され、ポータル サイト アプリのユーザー エクスペリエンス向上に役立てられます。
+  Windows Phone 8.1 회사 포털 앱에서는 최종 사용자가 새 "사용자 의견 보내기" 단추를 사용하여 앱에 대한 피드백을 보낼 수 있습니다. 단추를 찾으려면 회사 포털 앱 화면의 오른쪽 아래에 있는 "3개의 점" 메뉴를 탭한 다음 **사용자 의견 보내기**를 탭합니다. 익명으로 수집된 피드백은 Microsoft에서 사용자의 회사 포털 앱 환경을 개선하는 데 도움이 됩니다.
 
-### Configuration Manager Technical Preview 1609 の新機能
-<a id="new-in-configuration-manager-technical-preview-1609" class="xliff"></a>
+### <a name="new-in-configuration-manager-technical-preview-1609"></a>Configuration Manager Technical Preview 1609의 새로운 기능
 
-2016 年 9 月の Configuration Manager Technical Preview 1609 では、次のハイブリッド新機能が導入されました。
+Configuration Manager Technical Preview 1609의 2016년 9월에 도입된 새로운 하이브리드 기능은 다음과 같습니다.
 
-- **構成項目設定の追加設定とエクスペリエンス向上**
+- **구성 항목 설정에 대한 추가 설정 및 향상된 환경**
 
-  Android、iOS、および Windows 用に新しい設定が追加されており、[サポートされているプラットフォーム] ページで選択したプラットフォームに適用される設定のみがウィザードに表示されます。 詳細については、「[New compliance settings for configuration items in TP 1609](/sccm/core/get-started/capabilities-in-technical-preview-1609#new-compliance-settings-for-configuration-items)」 (TP 1609 の構成項目の新しいコンプライアンス設定) を参照してください。
+  Android, iOS 및 Windows에 대한 새 설정이 추가되었으며, 지원되는 플랫폼 페이지에서 선택한 플랫폼에 적용되는 설정만 마법사에 표시됩니다. 자세한 내용은 [TP 1609에서 구성 항목의 새 준수 설정](/sccm/core/get-started/capabilities-in-technical-preview-1609#new-compliance-settings-for-configuration-items)을 참조하세요.
 
-- **DEP プロファイルの追加設定**
+- **DEP 프로필에 대한 추가 설정**
 
-  iOS デバイスの DEP プロファイルに、構成可能な設定として TouchID、ApplePay、および Zoom が追加されました。
+  TouchID, ApplePay 및 확대/축소가 iOS 장치용 DEP 프로필에 구성 가능한 설정으로 추가되었습니다.
 
-- **ビジネス向け Windows ストアのアプリの有料アプリ**
+- **비즈니스용 Windows 스토어의 유료 앱**
 
-  ビジネス向け Windows ストアに有料と無料の両方のアプリケーションを追加し、組織内のユーザーに展開できるようになりました。 詳細については、「[Enhancements to Windows Store for Business in TP 1609](/sccm/core/get-started/capabilities-in-technical-preview-1609#enhancements-to-windows-store-for-business-integration-with-configuration-manager)」 (TP 1609 のビジネス向け Windows ストアの機能強化) を参照してください。
+  이제 비즈니스용 Windows 스토어에 유료 및 무료 응용 프로그램을 추가하고 조직의 사용자에게 배포할 수 있습니다. 자세한 내용은 [TP 1609에서 비즈니스용 Windows 스토어의 향상된 기능](/sccm/core/get-started/capabilities-in-technical-preview-1609#enhancements-to-windows-store-for-business-integration-with-configuration-manager)을 참조하세요.
 
-- **Windows 10 VPN プロファイルのネイティブ接続の種類**
+- **Windows 10 VPN 프로필에 대한 네이티브 연결 형식**
 
-  OMA-URI を使用しなくても、Configuration Manager コンソールで Microsoft 自動、IKEv2、および PPTP 接続の種類を使用して、MDM 用の Windows 10 VPN プロファイルを作成できるようになりました。
+  이제 OMA-URI를 사용하지 않고 Configuration Manager 콘솔에서 Microsoft Automatic, IKEv2 및 PPTP 연결 형식을 사용하여 MDM용 Windows 10 VPN 프로필을 만들 수 있습니다.
 
-- **Intune コンプライアンス チャート**
+- **Intune 준수 차트**
 
-  [監視] ワークスペースの新しいチャートを使用して、全体的なデバイス コンプライアンスの簡易ビュー、および非準拠の主な理由を取得できます。 詳細については、「[Intune compliance charts in TP 1609](/sccm/core/get-started/capabilities-in-technical-preview-1609#intune-compliance-charts)」 (TP 1609 の Intune コンプライアンス チャート) を参照してください。
+  모니터링 작업 영역 아래에 있는 새 차트를 사용하여 전반적인 장치 준수 및 주요 비준수 이유에 대한 간략한 보기를 볼 수 있습니다. 자세한 내용은 [TP 1609의 Intune 준수 차트](/sccm/core/get-started/capabilities-in-technical-preview-1609#intune-compliance-charts)를 참조하세요.
 
-### Configuration Manager (現在のブランチ) の新機能
-<a id="new-in-configuration-manager-current-branch" class="xliff"></a>
+### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager(현재 분기)의 새로운 기능
 
-2016 年 9 月に導入された次の新機能は、Microsoft Intune と Configuration Manager パージョン 1606 (現在のブランチ) のハイブリッド展開で使用できます。
+2016년 9월에 도입된 다음 새로운 기능은 Microsoft Intune과 Configuration Manager 버전 1606(현재 분기)을 포함하는 하이브리드 배포에서 사용할 수 있습니다.
 
-- **iOS 10 のサポート**
+- **iOS 10 지원**
 
-  すべての iOS プラットフォームを対象にしたプロファイルまたは構成項目がある場合は、これらも iOS 10 にプッシュできます。 iOS 10 を含む個々 の iOS プラットフォームをプロファイルおよび構成項目の対象にできるように、Configuration Manager バージョン 1606 への更新プログラムもリリースしました。 更新プログラムをインストールするには、Configuration Manager 管理者コンソールで **[管理] > [概要] > [Cloud Services] > [更新とサービス]** を選択します。 更新プログラムの詳細については、[http://support.microsoft.com/kb/3192616](http://support.microsoft.com/kb/3192616) を参照してください。
+  모든 iOS 플랫폼을 대상으로 하는 프로필 또는 구성 항목이 있는 경우 해당 항목도 iOS 10에 푸시됩니다. iOS 10을 포함하는 개별 iOS 플랫폼을 프로필 및 구성 항목의 대상으로 지정할 수 있는 Configuration Manager 버전 1606에 대한 업데이트도 릴리스되었습니다. Configuration Manager 관리 콘솔의 **관리 > 개요 > 클라우드 서비스 > 업데이트 및 서비스**에서 업데이트를 설치할 수 있습니다. 업데이트에 대한 자세한 내용은 [http://support.microsoft.com/kb/3192616](http://support.microsoft.com/kb/3192616)에서 확인할 수 있습니다.
 
-## 2016 年 8 月
-<a id="august-2016" class="xliff"></a>
+## <a name="august-2016"></a>2016년 8월
 
-### Microsoft Intune の新機能
-<a id="new-in-microsoft-intune" class="xliff"></a>
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune의 새로운 기능
 
-2016 年 8 月に導入された次の Intune 機能は、ハイブリッド展開で動作します。
+2016년 8월에 도입된 다음 Intune 기능은 하이브리드 배포에서 사용할 수 있습니다.
 
-- **ポータル サイト アプリでの Android 7 サポート**
+- **회사 포털 앱의 Android 7 지원**
 
-  Android 用 Intune ポータル サイト アプリは、近日公開予定のモバイル デバイス用の Android 7.0 オペレーティング システムに対して "Day 0" サポートを提供します。
+  Android용 Intune 회사 포털 앱은 곧 출시 예정인 모바일 장치용 Android 7.0 운영 체제에 대해 "0일" 지원을 제공합니다.
 
-- **Google による Android 7.0 デバイスでのリモート パスコード リセット機能の削除**
+- **Google에서 Android 7.0 장치의 원격 암호 다시 설정 기능 제거**
 
-  Google は、IT 管理者およびエンドユーザーが Android 7.0 デバイスのパスコードをリモートでリセットする機能を削除しています。 以前、IT 管理者はユーザーのパスコードをリモートでリセットでき、エンドユーザーはポータル Web サイトから自分のパスコードをリセットできました。
+  Google은 Android 7.0 장치의 암호를 원격으로 다시 설정하는 IT 관리자와 최종 사용자의 기능을 제거합니다. 이전에는 IT 관리자가 사용자 암호를 원격으로 다시 설정할 수 있고, 최종 사용자가 회사 포털 웹 사이트에서 자신의 암호를 다시 설정할 수 있었습니다.
 
-- **Samsung KNOX Standard デバイス用のアプリの許可およびブロック ポリシー**
+- **삼성 KNOX Standard 장치에 대한 허용 및 차단된 앱 정책**
 
-  Samsung KNOX Standard デバイスに対してカスタム ポリシーを構成できるようになりました。これにより、次のいずれかを作成できます。
+  이제 다음 중 하나를 만들 수 있는 삼성 KNOX Standard 장치에 대한 사용자 지정 정책을 구성할 수 있습니다.
 
-  - デバイスで実行できないようブロックされているアプリの一覧。 ブロックされているアプリの一覧で定義されているアプリは、インストールされていても、デバイスでアクティブにできません。
-  - デバイスのユーザーが Google Play ストアからインストールできるアプリの一覧。 それ以外のアプリをストアからインストールすることはできません。
+  - 장치에서 실행이 차단된 앱 목록입니다. 차단된 목록에 정의된 앱은 설치된 경우에도 장치에서 활성화할 수 없습니다.
+  - 장치의 사용자가 Google Play 스토어에서 설치할 수 있는 앱 목록입니다. 다른 앱은 스토어에서 설치할 수 없습니다.
 
-  これらの設定は、Samsung KNOX Standard を実行するデバイスでのみ使用できます。 詳細については、「[カスタム ポリシーを使用して、Samsung KNOX Standard デバイス用のアプリを許可またはブロックする](/intune/deploy-use/custom-policy-to-allow-and-block-samsung-knox-apps)」を参照してください。
+  이러한 설정은 삼성 KNOX Standard를 실행하는 장치에서만 사용할 수 있습니다. 자세한 내용은 [사용자 지정 정책을 사용하여 삼성 KNOX Standard 장치용 앱 허용 및 차단](/intune/deploy-use/custom-policy-to-allow-and-block-samsung-knox-apps)을 참조하세요.
 
-- **ポータル サイトから Microsoft への [フィードバック] リンク**
+- **회사 포털에서 Microsoft로 연결되는 피드백 링크**
 
-   ポータル Web サイトでは、エンドユーザーが、ページの下部にある新しい [フィードバック] リンクをタップして、サイトの使用経験に関するフィードバックを Microsoft に送信できます。 フィードバックは匿名化して収集され、ポータル Web サイトのユーザー エクスペリエンス向上に役立てられます。
+   최종 사용자는 회사 포털 웹 사이트에서 페이지 맨 아래에 있는 새 "사용자 의견" 링크를 탭하여 사이트 경험에 대한 피드백을 Microsoft에 보낼 수 있습니다. 익명으로 수집된 피드백은 Microsoft에서 사용자의 회사 포털 웹 사이트 환경을 개선하는 데 도움이 됩니다.
 
-- **iOS Managed Browser の最小バージョンの 8.0 への更新**
+- **최소 iOS Managed Browser 버전이 8.0으로 업데이트됨**
 
-  iOS 用 Microsoft Intune Managed Browser アプリが、iOS 8.0 以降を実行しているデバイスをサポートするように更新されました。 iOS 7.1 デバイスは既存の Managed Browser アプリをまだ使用できますが、Managed Browser の新機能にアクセスして最大限に活用するために、iOS 8.0 以降に更新することをユーザーにお勧めしてください。
+  iOS용 Microsoft Intune Managed Browser 앱이 iOS 8.0 이상을 실행하는 장치를 지원하도록 업데이트되었습니다. iOS 7.1 장치는 기존 Managed Browser 앱을 계속 사용할 수 있지만 새 Managed Browser 기능을 액세스하고 완전히 활용하려면 iOS 8.0 이상으로 업데이트하도록 사용자에게 권장합니다.
 
-### Configuration Manager Technical Preview の新機能
-<a id="new-in-configuration-manager-technical-preview" class="xliff"></a>
+### <a name="new-in-configuration-manager-technical-preview"></a>Configuration Manager Technical Preview의 새로운 기능
 
-2016 年 8 月の Configuration Manager Technical Preview では、ハイブリッド新機能は導入されていません。
+Configuration Manager Technical Preview 2016년 8월에 도입된 새로운 하이브리드 기능은 없습니다.
 
-### Configuration Manager (現在のブランチ) の新機能
-<a id="new-in-configuration-manager-current-branch" class="xliff"></a>
+### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager(현재 분기)의 새로운 기능
 
-2016 年 8 月の Configuration Manager (現在のブランチ) では、ハイブリッド新機能は導入されていません。
+Configuration Manager(현재 분기) 2016년 8월에 도입된 새로운 하이브리드 기능은 없습니다.
 
-## 2016 年 7 月
-<a id="july-2016" class="xliff"></a>
+## <a name="july-2016"></a>2016년 7월
 
-### Microsoft Intune の新機能
-<a id="new-in-microsoft-intune" class="xliff"></a>
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune의 새로운 기능
 
-2016 年 7 月に導入された次の Intune 機能は、ハイブリッド展開で動作します。
+2016년 7월에 도입된 다음 Intune 기능은 하이브리드 배포에서 사용할 수 있습니다.
 
-- **Intune アプリ用の Xamarin SDK を使用可能**
+- **Intune 앱용 Xamarin SDK를 사용할 수 있음**
 
-  Intune アプリ SDK Xamarin コンポーネントを使用すると、Xamarin でビルドされたモバイル iOS および Android アプリで Intune モバイル アプリ管理機能を有効化できます。 このコンポーネントは、[Xamarin ストア](https://components.xamarin.com/view/Microsoft.Intune.MAM)または [Microsoft Intune Github ページ](https://github.com/msintuneappsdk)で入手できます。
+  Intune 앱 SDK Xamarin 구성 요소를 사용하면 Xamarin으로 빌드된 모바일 iOS 및 Android 앱에서 Intune 모바일 앱 관리 기능을 사용하도록 설정할 수 있습니다. 이 구성 요소는 [Xamarin 스토어](https://components.xamarin.com/view/Microsoft.Intune.MAM) 또는 [Microsoft Intune Github 페이지](https://github.com/msintuneappsdk)에서 찾을 수 있습니다.
 
-- **Windows デバイス登録時のエンドユーザー エクスペリエンスの向上**
+- **Windows 장치를 등록할 때 최종 사용자 환경 개선**
 
-  条件付きアクセスを使用している場合は、ポータル Web サイトに Windows 8.1、Windows 10 デスクトップ、および Windows 10 Mobile の登録の手順が明記されています。 ユーザーに対して**デバイスの登録**手順と**社内参加**手順が切り離されて表示され、容易にデバイスの状態を確認したり、社内参加 (WPJ) エラーが発生した場合にプロセスを完了したりできます。 また、手順を切り離すことで、IT 管理者のトラブルシューティング プロセスが簡素化されることも考えられます。 以前は、エンドユーザーが登録を試みて、WPJ を除くすべての登録手順が正常に実行された場合、登録デバイスがデバイスの一覧に表示されずにユーザーが識別できなかったので、混乱を招いていました。
+  조건부 액세스를 사용하는 경우 Windows 8.1, Windows 10 Desktop 및 Windows 10 Mobile에 대한 등록 단계가 회사 포털 웹 사이트에 설명되어 있습니다. 이제 사용자에게 별도의 **장치 등록** 및 **작업 공간 연결** 단계가 표시되므로 보다 쉽게 장치 상태를 확인하고 WPJ(작업 공간 연결) 오류가 발생할 경우 프로세스를 완료할 수 있습니다. 또한 별도 단계는 IT 관리자의 문제 해결 프로세스를 간소화합니다. 이전에는 최종 사용자가 등록하려 할 때 WPJ를 제외한 모든 등록 단계가 성공한 경우 등록된 장치가 사용자 식별 장치 목록에 표시되지 않아 사용자에게 혼동을 주었습니다.
 
- - **Windows 10 デバイスでフル ワイプが使用可能に**
+ - **이제 Windows 10 장치에 전체 초기화를 사용할 수 있음**
 
-    モバイル デバイスとして登録されている Windows 10 PC およびラップトップをワイプして、デバイスを出荷時の設定にリセットできます。 詳細については、「[How to protect your devices with remote wipe](/sccm/mdm/deploy-use/wipe-lock-reset)」 (リモート ワイプを使用して Windows デバイスを保護する方法) を参照してください。
+    모바일 장치로 등록된 Windows 10 PC 및 노트북을 초기화하여 장치를 하는 랩톱을 공장 설정으로 초기화할 수 있습니다. 자세한 내용은 [원격 초기화를 사용하여 장치를 보호하는 방법](/sccm/mdm/deploy-use/wipe-lock-reset)을 참조하세요.
 
-- **iOS ポータル サイト アプリのデバイス登録マネージャー アカウントの変更**
+- **iOS 회사 포털 앱에서 장치 등록 관리자 계정에 대한 변경 내용**
 
-  Intune では、パフォーマンスと拡張性を向上させるために、iOS ポータル サイト アプリの [デバイス] ウィンドウにデバイス登録マネージャー (DEM) の一部のデバイスが表示されなくなりました。 表示されるのは、ポータル サイト アプリを使用して登録されている、アプリを実行中のローカル デバイスに限られます。
+  성능 및 확장성을 개선하기 위해 Intune은 iOS 회사 포털 앱의 내 장치 창에 모든 DEM(장치 등록 관리자) 장치를 더 이상 표시하지 않습니다. 앱을 실행하는 로컬 장치만 표시되며, 회사 포털 앱을 통해 등록된 경우에만 표시됩니다.
 
-  DEM ユーザーはローカル デバイスで操作を実行できますが、その他の登録デバイスのリモート管理は Intune 管理コンソールからのみ実行できます。 また、Intune は Apple Device Enrollment Program または Apple Configurator ツールでの DEM アカウントの使用を廃止しようとしています。 これらの両方の登録方法では、ユーザーを介さない共有 iOS デバイスの登録が既にサポートされています。
+  DEM 사용자는 로컬 장치에서 작업을 수행할 수 있지만 다른 등록된 장치의 원격 관리는 Intune 관리 콘솔에서만 수행할 수 있습니다. 또한 Intune은 Apple 장비 등록 프로그램 또는 Apple Configurator 도구에서 DEM 계정 사용을 더 이상 지원하지 않습니다. 두 등록 방법은 모두 공유 iOS 장치에 대한 사용자가 지정되지 않은 등록을 이미 지원합니다.
 
-  DEM アカウントは、ユーザーを介さない共有デバイスの登録が使用できない場合にのみ使用してください。 詳細については、「[Microsoft Intune のデバイス登録マネージャーを使用した企業所有のデバイスの登録](../deploy-use/enroll-devices-with-device-enrollment-manager.md)」を参照してください。
+  공유 장치에 대한 사용자가 지정되지 않은 등록을 사용할 수 없는 경우만 DEM 계정을 사용합니다. 자세한 내용은 [Microsoft Intune에서 장치 등록 관리자를 사용하여 회사 소유 장치 등록](../deploy-use/enroll-devices-with-device-enrollment-manager.md)을 참조하세요.
 
-- **Android ポータル サイト アプリの変更**
+- **Android 회사 포털 앱에 대한 변경 내용**
 
-  Android エンドユーザーに対して、デバイスに必要な証明書がないことを示すエラー メッセージが表示される場合は、[この問題を解決する方法] ボタンをタップして、不足している証明書をインストールする手順を確認できます。 ユーザーが手順を完了しても、"証明書がない" ことを示すエラー メッセージがさらに表示される場合は、IT 管理者に連絡してこのリンクを提示するよう求められます。このリンクには、証明書の問題を解決するために IT 管理者が使用できる手順が含まれています。
+  Android 최종 사용자에게 장치에 필요한 인증서가 없다는 오류 메시지가 표시될 경우 "이 문제를 해결하는 방법" 단추를 탭하여 누락된 인증서를 설치하는 단계를 확인할 수 있습니다. 사용자가 단계를 완료해도 "누락된 인증서" 오류 메시지가 추가로 표시되는 경우 IT 관리자에게 문의하고 이 링크를 제공하도록 요청됩니다. 이 링크에는 IT 관리자가 인증서 문제를 해결하는 데 사용할 수 있는 단계가 포함되어 있습니다.
 
-- **登録 Android デバイスへのサイドロード アプリのインストールの制限**
+- **테스트용으로 로드된 앱 설치를 등록된 Android 장치로 제한**
 
-  Android 用 Intune ポータル サイト アプリを使用して Intune にデバイスを登録している場合を除き、Android デバイスは、ポータル Web サイトを介してアプリケーションをインストールできなくなりました。
+  장치가 Android용 Intune 회사 포털 앱을 사용하여 Intune에 등록된 경우가 아니면 Android 장치는 더 이상 회사 포털 웹 사이트를 통해 응용 프로그램을 설치할 수 없습니다.
 
 
-### Configuration Manager Technical Preview の新機能
-<a id="new-in-configuration-manager-technical-preview" class="xliff"></a>
+### <a name="new-in-configuration-manager-technical-preview"></a>Configuration Manager Technical Preview의 새로운 기능
 
-2016 年 7 月の Configuration Manager Technical Preview では、ハイブリッド新機能は導入されていません。
+Configuration Manager Technical Preview 2016년 7월에 새로 도입된 하이브리드 기능은 없습니다.
 
-### Configuration Manager (現在のブランチ) の新機能
-<a id="new-in-configuration-manager-current-branch" class="xliff"></a>
+### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager(현재 분기)의 새로운 기능
 
-Configuration Manager Technical Preview リリースで以前提供されていた次の機能は、Intune と Configuration Manager (現在のブランチ) バージョン 1606 のハイブリッド展開で使用できるようになりました。
+이전에 Configuration Manager Technical Preview 릴리스에서 사용할 수 있었던 다음 기능을 이제 Intune과 Configuration Manager(현재 분기) 버전 1606을 포함하는 하이브리드 배포에서 사용할 수 있습니다.
 
-* Configuration Manager コンソールから Windows 10 デバイスに対してビジネス向け Windows ストアのアプリを検索、管理、配布する ([1604](#new-in-1604-technical-preview))
-*   Android デバイス用の SmartLock 設定 ([1604](#new-in-1604-technical-preview))
-*   Windows 10 デバイス用のアプリトリガー VPN ([1605](#new-in-1605-technical-preview))
-*   リモート デバイスの操作の新しいエクスペリエンス ([1605](#new-in-1605-technical-preview))
-*   ビジネス向け Windows ストアのアプリ ([1605](#new-in-1605-technical-preview))
-*   ボリューム購入アプリの全般的な向上 ([1605](#new-in-1605-technical-preview))
-*   Windows 情報保護 (WIP) ([1605](#new-in-1605-technical-preview))
-*   IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言 ([1605](#new-in-1605-technical-preview))
-*   デバイスを自動的にコレクションごとに分類 ([1606](#new-in-1606-technical-preview))
+* Configuration Manager 콘솔에서 Windows 10 장치에 대한 비즈니스용 Windows 스토어 앱 찾기, 관리 및 배포([1604](#new-in-1604-technical-preview))
+*   Android 장치에 대한 SmartLock 설정([1604](#new-in-1604-technical-preview))
+*   Windows 10 장치를 위한 앱 트리거 VPN([1605](#new-in-1605-technical-preview))
+*   원격 장치 작업을 위한 새로운 환경([1605](#new-in-1605-technical-preview))
+*   비즈니스용 Windows 스토어 앱([1605](#new-in-1605-technical-preview))
+*   대량 구매 앱의 일반적인 향상 기능([1605](#new-in-1605-technical-preview))
+*   WIP(Windows Information Protection)([1605](#new-in-1605-technical-preview))
+*   IMEI 또는 iOS 일련 번호로 회사 소유 장치 미리 선언([1605](#new-in-1605-technical-preview))
+*   컬렉션으로 장치 자동 분류([1606](#new-in-1606-technical-preview))
 
-新機能については、特定の Technical Preview リリースに関するドキュメントを参照してください。
+새로운 기능에 대한 자세한 내용은 지정된 기술 미리 보기 릴리스에 대한 설명서를 참조하세요.
 
-## 2016 年 6 月
-<a id="june-2016" class="xliff"></a>
+## <a name="june-2016"></a>2016년 6월
 
-### Microsoft Intune の新機能
-<a id="new-in-microsoft-intune" class="xliff"></a>
-2016 年 6 月に導入された次の Intune 機能は、ハイブリッド展開で動作します。
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune의 새로운 기능
+2016년 6월에 도입된 다음 Intune 기능은 하이브리드 배포에서 사용할 수 있습니다.
 
-- **Intune のサービス正常性** Intune のサービス正常性情報は、他の Microsoft サービスと共に中央の場所に移動されました。 この情報は、Office 365 管理ポータルの [サービス正常性] に表示されるようになりました。 詳細については、この[ブログ記事](https://blogs.technet.microsoft.com/enterprisemobility/2016/04/28/intune-service-health-is-now-available-in-the-office-365-portal/)を参照してください。
+- **Intune 서비스 상태** Intune에 대한 서비스 상태 정보가 다른 Microsoft 서비스와 함께 중앙 위치로 이동되었습니다. 이제 Office 365 관리 포털의 서비스 상태 아래에서 이 정보를 확인할 수 있습니다. 자세한 내용은 이 [블로그 게시물](https://blogs.technet.microsoft.com/enterprisemobility/2016/04/28/intune-service-health-is-now-available-in-the-office-365-portal/)을 참조하세요.
 
-- **強化された Windows 10 エンタープライズ データ ポリシーの構成エクスペリエンス**
+- **향상된 Windows 10 Enterprise 데이터 정책 구성 환경**
 
-  Intune では、Windows 10 情報保護ポリシーを構成するためのエクスペリエンスが強化されました。 この強化では、アプリの規則を作成したり、ネットワーク境界の定義やその他の Windows 情報の保護設定を指定したりする方法が向上しています。 詳細については、「[Microsoft Intune を使用して Windows 情報保護 (WIP) ポリシーを作成する](https://technet.microsoft.com/itpro/windows/keep-secure/create-wip-policy-using-intune)」を参照してください。
+  이제 Intune에 Windows 10 Information Protection 정책을 구성하기 위한 향상된 환경이 있습니다. 향상된 기능에는 앱 규칙을 만들고, 네트워크 경계 정의 및 기타 Windows Information Protection 설정을 지정하는 더 나은 방법이 포함됩니다. 자세한 내용은 [Microsoft Intune을 사용하여 WIP(Windows Information Protection) 정책 만들기](https://technet.microsoft.com/itpro/windows/keep-secure/create-wip-policy-using-intune)를 참조하세요.
 
-- **Intune 用の Cisco ISE ネットワーク アクセス制御ポリシー**
+- **Intune에 대한 Cisco ISE 네트워크 액세스 제어 정책**
 
-  Cisco Identity Service Engine (ISE) 2.1 と Microsoft Intune の両方を使用するユーザーは、ISE でネットワーク アクセス制御ポリシーを設定できます。このポリシーを使用して、WiFi または VPN を使用してネットワークに接続する必要があるデバイスは、アクセス許可を受けるために次の条件を満たす必要があります。
+  Cisco ISE(Identity Service Engine) 2.1을 사용하고 Microsoft Intune도 사용하는 고객은 ISE에서 네트워크 액세스 제어 정책을 설정할 수 있습니다. 이 정책을 사용하는 경우 WiFi 또는 VPN을 통해 네트워크에 연결해야 하는 장치는 다음 조건을 충족해야 액세스가 허용됩니다.
 
-  - Intune で管理する必要がある
-  - 展開されているすべての Intune コンプライアンス ポリシーに準拠している必要がある
+  - Intune에서 관리해야 함
+  - 배포된 Intune 준수 정책을 준수해야 함
 
-  非準拠デバイスのエンドユーザーは、登録を行うとともに、アクセス許可を受けるためにすべてのコンプライアンス問題を修正するよう求められます。
+  비규격 장치의 최종 사용자는 액세스하기 위해 등록하고 준수 문제를 해결하라는 메시지가 표시됩니다.
 
-- **ブラウザーの条件付きアクセス**
+- **브라우저에 대한 조건부 액세스**
 
-  Exchange Online と SharePoint Online が、管理対象の準拠 iOS および Android デバイスでサポートされている Web ブラウザーからのみアクセスできるように、条件付きアクセス ポリシーを設定することができます。 iOS および Android デバイスで Outlook Web Access (OWA) および SharePoint サイトにサインインしようとするエンドユーザーは、Intune にデバイスを登録するとともに、サインインを完了するために非準拠に関するすべての問題を修正するよう求められます。 詳細については、次を参照してください:
+  관리되는 규격 iOS 및 Android 장치의 지원되는 웹 브라우저에서만 액세스할 수 있도록 Exchange Online 및 SharePoint Online에 대한 조건부 액세스 정책을 설정할 수 있습니다. iOS 및 Android 장치를 사용하여 OWA(Outlook Web Access) 및 SharePoint 사이트에 로그인하려는 최종 사용자에게는 Intune에 장치를 등록하고 비준수 문제를 해결해야 로그인을 완료할 수 있다는 메시지가 표시됩니다. 자세한 내용은
 
-  * [Intune で Exchange Online と新しい Exchange Online Dedicated への電子メール アクセスを制限する](https://docs.microsoft.com/intune/deploy-use/restrict-access-to-exchange-online-with-microsoft-intune)
-  * [Microsoft Intune で SharePoint Online へのアクセスを制限する](https://docs.microsoft.com/intune/deploy-use/restrict-access-to-sharepoint-online-with-microsoft-intune)
+  * [Intune을 사용하여 Exchange Online 및 새 Exchange Online Dedicated에 대한 메일 액세스 제한](https://docs.microsoft.com/intune/deploy-use/restrict-access-to-exchange-online-with-microsoft-intune)
+  * [Microsoft Intune을 사용하여 SharePoint Online에 대한 액세스 제한](https://docs.microsoft.com/intune/deploy-use/restrict-access-to-sharepoint-online-with-microsoft-intune)
 
-- **Dynamics CRM Online による条件付きアクセスのサポート**
+- **Dynamics CRM Online에서 조건부 액세스 지원**
 
-  Dynamics CRM Online が管理対象の準拠 iOS および Android デバイスからのみアクセスできるように、条件付きアクセス ポリシーを設定することができます。 iOS および Android で Dynamics CRM モバイル アプリにサインインしようとするエンドユーザーは、Intune に登録するとともに、サインインを完了するために非準拠に関するすべての問題を修正するよう求められます。 詳細については、「[Restrict access to Dynamics CRM Online with Microsoft Intune](https://docs.microsoft.com/intune/deploy-use/restrict-access-to-dynamics-crm-online-with-microsoft-intune)」 (Microsoft Intune での Dynamics CRM Online へのアクセスの制限) を参照してください。
+  관리되는 규격 iOS 및 Android 장치에서만 액세스할 수 있도록 Dynamics CRM Online에 대한 조건부 액세스 정책을 설정할 수 있습니다. iOS 및 Android의 Dynamics CRM 모바일 앱에 로그인하려는 최종 사용자에게는 Intune에 등록하고 비준수 문제를 해결해야 로그인을 완료할 수 있다는 메시지가 표시됩니다. 자세한 내용은 [Microsoft Intune을 사용하여 Dynamics CRM Online에 대한 액세스 제한](https://docs.microsoft.com/intune/deploy-use/restrict-access-to-dynamics-crm-online-with-microsoft-intune)을 참조하세요.
 
-- **Android ポータル サイト アプリの更新**
+- **Android 회사 포털 앱에 대한 업데이트**
 
-  Intune では、Android ポータル サイトのユーザーに影響を与える次の新しいポリシーが使用されるようになりました。   
+  이제 Intune에 Android 회사 포털 사용자에게 영향을 주는 다음과 같은 새 정책이 있습니다.   
 
-  ポリシー  |ユーザーに対する影響  
+  정책  |사용자에 미치는 영향  
   ---------|---------
-  デバイスで、不明なソース (Android 4.0 以降) からのアプリのインストールを無効にする必要がある     |  Android 4.0 以降のデバイスのエンドユーザーに対して、「不明なソースからのインストールを無効にする必要があります」というメッセージが表示されます。 ユーザーはデバイスで **[設定]、[セキュリティ]** に移動し、**[不明なソース]** をオフにする必要があります。 ユーザーはコンプライアンス メッセージ内のリンクを使用すると、このメッセージについて、およびこの設定の無効化が求められる理由について、詳細情報を得ることができます。
-  デバイスで、不明なソース (Android 4.0 以降) からのアプリのインストールを無効にする必要がある  |    Android 4.0 以降のデバイスのエンドユーザーに対して、「端末をスキャンしてセキュリティ上の脅威を確認」というメッセージが表示されます。 ユーザーはデバイスで **[設定]、[Google]、[セキュリティ]** に移動し、**[端末をスキャンしてセキュリティ上の脅威を確認]** をオンにする必要があります。 ユーザーはコンプライアンス メッセージ内のリンクを使用すると、このメッセージについて、およびこの設定の有効化が求められる理由について、詳細情報を得ることができます。     
-  USB デバッグを無効にする必要がある (Android 4.2 以降)  | Android 4.2 以降のデバイスのエンドユーザーに対して、「USB デバッグを無効にする必要があります」というメッセージが表示されます。 ユーザーはデバイスで **[設定]、[開発者オプション]** に移動し、**[USB デバッグ]** をオフにする必要があります。 ユーザーはコンプライアンス メッセージ内のリンクを使用すると、このメッセージについて、およびこの設定の無効化が求められる理由について、詳細情報を得ることができます。
-  Android のセキュリティ更新プログラムの最低限レベル (Android 6.0 以降)  | Android 6.0 以降のデバイスのエンドユーザーに対して、「このデバイスは Android の最小セキュリティ パッチ レベルを満たしていません」というメッセージが表示されます。 ユーザーは、必要なセキュリティ更新プログラムをインストールする必要があります。 コンプライアンス メッセージ内のリンクを使用すると、必要なセキュリティ更新プログラムをインストールする方法、および現在インストールされているセキュリティ更新プログラムを確認する方法について、情報を得ることができます。
+  장치가 알 수 없는 소스의 앱 설치를 방지해야 함(Android 4.0 이상)     |  Android 4.0 이상 장치를 사용하는 최종 사용자에게는 "알 수 없는 소스의 설치를 사용하지 않도록 설정해야 합니다."라는 메시지가 표시됩니다. 사용자는 해당 장치에서 **설정 > 보안**으로 이동한 다음 **알 수 없는 소스**를 꺼야 합니다. 사용자는 준수 메시지에 있는 링크를 통해 메시지에 대한 자세한 정보와 설정을 꺼야 하는 이유를 확인할 수 있습니다.
+  장치가 알 수 없는 소스의 앱 설치를 방지해야 함(Android 4.0 이상)  |    Android 4.0 이상 장치를 사용하는 최종 사용자에게는 "장치의 보안 위협 검색"이라는 메시지가 표시됩니다. 사용자가 해당 장치에서 **설정 > Google > 보안**으로 이동한 다음 **장치의 보안 위협 검색**을 켜야 합니다. 사용자는 준수 메시지에 있는 링크를 통해 메시지에 대한 자세한 정보와 설정을 켜야 하는 이유를 확인할 수 있습니다.     
+  USB 디버깅을 사용하지 않도록 설정되어야 함(Android 4.2 이상)  | Android 4.2 이상 장치를 사용하는 최종 사용자에게는 "USB 디버깅을 사용하지 않도록 설정해야 합니다."라는 메시지가 표시됩니다. 사용자는 해당 장치에서 **설정 > 개발자 옵션**으로 이동한 다음 **USB 디버깅**을 꺼야 합니다. 사용자는 준수 메시지에 있는 링크를 통해 메시지에 대한 자세한 정보와 설정을 꺼야 하는 이유를 확인할 수 있습니다.
+  최소 Android 보안 패치 수준(Android 6.0 이상)  | Android 6.0 이상 장치를 사용하는 최종 사용자에게는 "이 장치는 최소 Android 보안 패치 수준을 충족하지 않습니다."라는 메시지가 표시됩니다. 사용자가 필요한 보안 패치를 설치해야 합니다. 사용자는 준수 메시지에 있는 링크를 통해 필요한 보안 패치를 설치하는 방법에 대한 자세한 정보를 얻고 현재 설치된 보안 패치를 확인할 수 있습니다.
 
-- **iOS ポータル サイト アプリの更新**
+- **iOS 회사 포털 앱에 대한 업데이트**
 
-  * エンドユーザーが基幹業務アプリをインストールする際に、強化されたアプリ インストール エクスペリエンスが得られるようになりました。 アプリのインストールに長い時間がかかる場合、そのデバイスを手動で同期して、同期プロセスを強制的に再開できます。 エンドユーザーの手順を確認するには、「Sync your iOS device manually」 (iOS デバイスの手動同期) を参照してください。
-  * iOS 用 Microsoft Intune ポータル サイト アプリが更新され、iOS Version 8.0 以降をサポートするようになりました。 この更新は、デバイスで iOS Version 8.0 以降が実行されている場合にのみ、エンドユーザーがポータル サイト アプリをインストールし、Intune に新しいデバイスを登録できることを意味します。 サポートされていないバージョンの iOS が実行されているデバイスを登録済みの場合、ユーザーはそのデバイス上のポータル サイト アプリを引き続き使用できます。
+  * 이제 최종 사용자가 LOB(기간 업무) 앱을 설치할 때 향상된 앱 설치 환경이 표시됩니다. 앱 설치에 오랜 시간이 걸리는 경우 사용자가 장치를 수동으로 동기화하여 동기화 프로세스를 강제로 다시 시작할 수 있습니다. 최종 사용자 지침을 검토하려면 iOS 장치 수동 동기화를 참조하세요.
+  * iOS용 Microsoft Intune 회사 포털 앱은 iOS 버전 8.0 이상을 지원하도록 업데이트되었습니다. 이 업데이트를 사용하면 장치가 iOS 버전 8.0 이상을 실행하는 경우 최종 사용자가 회사 포털 앱을 설치하고 Intune에 새 장치를 등록할 수 있습니다. 지원되지 않는 iOS 버전을 실행 중이고 이미 등록된 장치가 있는 사용자는 자신의 장치에 있는 회사 포털 앱을 계속 사용할 수 있습니다.
 
 
-### 1606 Technical Preview の新機能
-<a id="new-in-1606-technical-preview" class="xliff"></a>
-2016 年 6 月に導入された次の新機能は、Intune と Configuration Manager Technical Preview 1606 のハイブリッド展開で使用できます。
+### <a name="new-in-1606-technical-preview"></a>1606 기술 미리 보기의 새로운 기능
+2016년 6월에 도입된 다음 새로운 기능은 Intune과 Configuration Manager Technical Preview 1606을 포함하는 하이브리드 배포에서 사용할 수 있습니다.
 
-- **デバイスを自動的にコレクションごとに分類**
+- **컬렉션으로 장치 자동 분류**
 
-  Intune と Configuration Manager を使用している場合に、デバイス コレクションにデバイスを自動的に配置するために使用できる、デバイス カテゴリを作成することができます。 ユーザーは Intune にデバイスを登録するときに、デバイス カテゴリの選択を求められます。 Configuration Manager コンソールから、デバイスのカテゴリをさらに変更できます。 詳細については、「[Capabilities in Technical Preview 1606 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1606)」 (System Center Configuration Manager の Technical Preview 1606 の機能) の「[Automatically categorize devices into collections](/sccm/core/get-started/capabilities-in-technical-preview-1606#dmp_category)」 (デバイスを自動的にコレクションごとに分類) を参照してください。
+  Intune에서 Configuration Manager를 사용하는 경우 장치 컬렉션에 장치를 자동으로 배치하는 데 사용할 수 있는 장치 범주를 만들 수 있습니다. 그런 다음 사용자는 Intune에 장치를 등록할 때 장치 범주를 선택해야 합니다. 또한 Configuration Manager 콘솔에서 장치의 범주를 변경할 수 있습니다. 자세한 내용은 [System Center Configuration Manager용 Technical Preview 1606의 기능](/sccm/core/get-started/capabilities-in-technical-preview-1606)에서 [컬렉션으로 장치 자동 분류](/sccm/core/get-started/capabilities-in-technical-preview-1606#dmp_category)를 참조하세요.
 
   > [!IMPORTANT]
-  > この機能は、Microsoft Intune の 2016 年 6 月のリリースで動作します。 これらの手順を実行する前に、今回のリリースに更新していることを確認してください。
+  > 이 기능은 Microsoft Intune의 2016년 6월 릴리스에 작동합니다. 이러한 절차를 시도하기 전에 이 릴리스로 업데이트했는지 확인합니다.
 
-### Configuration Manager (現在のブランチ) の新機能
-<a id="new-in-configuration-manager-current-branch" class="xliff"></a>
-2016 年 6 月の Configuration Manager (現在のブランチ) では、ハイブリッド新機能は導入されていません。
+### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager(현재 분기)의 새로운 기능
+Configuration Manager(현재 분기) 2016년 6월에 도입된 새로운 하이브리드 기능은 없습니다.
 
-##  2016 年 5 月
-<a id="may-2016" class="xliff"></a>  
+##  <a name="may-2016"></a>2016년 5월  
 
-### Microsoft Intune の新機能
-<a id="new-in-microsoft-intune" class="xliff"></a>  
- 2016 年 5 月に導入された次の Intune 機能は、ハイブリッド展開で動作します。
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune의 새로운 기능  
+ 2016년 5월에 도입된 다음 Intune 기능은 하이브리드 배포에서 사용할 수 있습니다.
 
-- **MAM SDK: PIN の長さの構成のサポート**
+- **MAM SDK: PIN 길이 구성 지원**
 
-  デバイス PIN のように MAM アプリに対して PIN の長さを指定できるようになりました。 その際には、設定した新しい制限にエンドユーザーが準拠する必要があります。 より長いアカウントの入力に対応するために、PIN 画面が若干変更されています。 詳細については、「[MAM policy settings for Android](https://docs.microsoft.com/intune/deploy-use/android-mam-policy-settings)」 (Android 用の MAM ポリシー設定) および 「[MAM policy settings for iOS](https://docs.microsoft.com/intune/deploy-use/ios-mam-policy-settings)」 (iOS 用の MAM ポリシー設定) を参照してください。  
+  이제 장치 PIN과 유사한 PIN 길이를 MAM 앱에 지정할 수 있습니다. 이 경우 최종 사용자가 설정된 새로운 제한 사항을 준수해야 합니다. PIN 화면이 더 긴 입력을 수용하기 위해 약간 수정되었습니다. 자세한 내용은 [Android에 대한 MAM 정책 설정](https://docs.microsoft.com/intune/deploy-use/android-mam-policy-settings) 및 [iOS에 대한 MAM 정책 설정](https://docs.microsoft.com/intune/deploy-use/ios-mam-policy-settings)을 참조하세요.  
 
-- **Android および iOS 用の Skype for Business**
+- **iOS 및 Android의 비즈니스용 Skype**
 
-  [登録ポリシーのない MAM](https://docs.microsoft.com/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune) で Skype for Business を対象にできるようになりました。 ユーザーがログインすると、MAM ポリシーが適用されます。  
+  이제 [등록 정책을 사용하지 않는 MAM](https://docs.microsoft.com/intune/deploy-use/get-ready-to-configure-mobile-app-management-policies-with-microsoft-intune)을 통해 비즈니스용 Skype의 대상을 지정할 수 있습니다. 사용자가 로그인하면 MAM 정책이 적용됩니다.  
 
-- **MAM ポリシーによる管理に使用できる新しいアプリ**
+- **MAM 정책을 사용한 관리를 위해 제공되는 새 앱**
 
-  Intune に登録されていないデバイスで、Android 用の Microsoft Word、Excel、および PowerPoint の各アプリを MAM ポリシーに関連付けできるようになりました。 サポートされているすべてのアプリの一覧については、[Microsoft Intune アプリケーション パートナー](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) ページの Microsoft Intune モバイル アプリケーション ギャラリーを参照してください。  
+  이제 Android용 Microsoft Word, Excel 및 PowerPoint 앱을 Intune에 등록되지 않은 장치의 MAM 정책과 연결할 수 있습니다. 지원되는 앱의 전체 목록을 보려면 [Microsoft Intune 응용 프로그램 파트너](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx) 페이지의 Microsoft Intune 모바일 응용 프로그램 갤러리로 이동합니다.  
 
-- **Android ポータル サイト アプリ: エンドユーザー トースト通知**
+- **Android 회사 포털 앱: 최종 사용자 알림 메시지**
 
-  エンドユーザーがポータル サイトで自分のデバイスを登録または削除すると、Android ポータル サイト アプリからトースト通知が表示されます。  
+  최종 사용자가 장치를 등록하거나 회사 포털에서 제거하면 Android 회사 포털 앱의 알림 메시지가 나타납니다.  
 
-- **ポータル Web サイト: デバイス識別バナーがエンドユーザーに詳細情報を提供**
+- **회사 포털 웹 사이트: 장치 식별 배너에서 최종 사용자에게 자세한 정보를 제공함**
 
-  エンドユーザーは、ポータル Web サイトを使用しているときに、選択したデバイスをより簡単に識別できるようになりました。 不正なデバイスが選択されている場合は、ホーム ページ バナーの **[Tap here]** (ここをタップ) リンクをタップして、適切なデバイスを選択できます。  
+  이제 최종 사용자가 회사 포털 웹 사이트를 사용할 때 선택한 장치를 보다 쉽게 식별할 수 있습니다. 잘못된 장치를 선택한 경우 홈페이지 배너의 **여기를 탭하세요.** 링크를 탭하여 올바른 장치를 선택할 수 있습니다.  
 
 
-### 1605 Technical Preview の新機能
-<a id="new-in-1605-technical-preview" class="xliff"></a>  
- 2016 年 5 月に導入された次の新機能は、Intune と Configuration Manager Technical Preview 1605 のハイブリッド展開で使用できます。 これらの機能は、Configuration Manager コンソールを使用して構成および管理する必要があります。  
+### <a name="new-in-1605-technical-preview"></a>1605 기술 미리 보기의 새로운 기능  
+ 2016년 5월에 도입된 다음 새로운 기능은 Intune과 Configuration Manager Technical Preview 1605를 포함하는 하이브리드 배포에서 사용할 수 있습니다. 이러한 기능은 Configuration Manager 콘솔을 사용하여 구성 및 관리해야 합니다.  
 
-- **Windows 10 デバイス用のアプリトリガー VPN**
+- **Windows 10 장치를 위한 앱 트리거 VPN**
 
-  Configuration Manager と Intune を使用して管理されている Windows 10 デバイスの場合、Configuration Manager 管理コンソールで構成した VPN 接続を自動的に開くアプリの一覧を追加できます。 詳細については、「[Capabilities in Technical Preview 1605 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605)」 (System Center Configuration Manager の Technical Preview 1605 の機能) の「[App-triggered VPN for Windows 10 devices](/sccm/core/get-started/capabilities-in-technical-preview-1605)」 (Windows 10 デバイス用のアプリトリガー VPN) を参照してください。  
+  Intune에서 Configuration Manager를 사용하여 관리되는 Windows 10 장치의 경우, Configuration Manager 관리 콘솔을 통해 구성한 VPN 연결을 자동으로 여는 앱 목록을 추가할 수 있습니다. 자세한 내용은 [System Center Configuration Manager용 Technical Preview 1605의 기능](/sccm/core/get-started/capabilities-in-technical-preview-1605)에서 [Windows 10 장치를 위한 앱 트리거 VPN](/sccm/core/get-started/capabilities-in-technical-preview-1605)을 참조하세요.  
 
-- **リモート デバイスの操作の新しいエクスペリエンス**
+- **원격 장치 작업을 위한 새로운 환경**
 
-  Configuration Manager コンソールからリモート デバイスの操作を実行するため、エクスペリエンスが改善されました。
+  Configuration Manager 콘솔에서 원격 장치 작업을 수행하기 위한 환경이 개선되었습니다.
 
-  [**削除/ワイプ**]、[**パスコードのリセット**]、[**リモート ロック**]、および [**アクティブ化ロックのバイパス**] などの一般的な操作は、[**資産とコンプライアンス**] ワークスペースからアクセスする [**リモート デバイスの操作**] メニューに移動しました。
+  이제 **자산 및 준수** 작업 영역에서 액세스되는 **원격 장치 작업** 메뉴에서 **사용 중지/초기화**, **암호 다시 설정**, **원격 잠금** 및 **활성화 잠금 무시** 등의 일반 작업을 찾을 수 있습니다.
 
-  詳細については、「[Capabilities in Technical Preview 1605 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605)」 (System Center Configuration Manager の Technical Preview 1605 の機能) の「[New experience for remote device actions](/sccm/core/get-started/capabilities-in-technical-preview-1605#new-experience-for-remote-device-actions)」 (リモート デバイスの操作の新しいエクスペリエンス) を参照してください。  
+  자세한 내용은 [System Center Configuration Manager용 Technical Preview 1605의 기능](/sccm/core/get-started/capabilities-in-technical-preview-1605)에서 [원격 장치 작업을 위한 새로운 환경](/sccm/core/get-started/capabilities-in-technical-preview-1605#new-experience-for-remote-device-actions)을 참조하세요.  
 
-- **ビジネス向け Windows ストアのアプリ**
+- **비즈니스용 Windows 스토어 앱**
 
-  [ビジネス向け Windows ストア](https://www.microsoft.com/en-us/business-store)は、組織向けのアプリを検索して、個別に、または一括で購入できる場所です。 ストアを Configuration Manager に接続すると、一括購入したアプリを Configuration Manager コンソールから管理できます。 詳細については、「[Capabilities in Technical Preview 1605 for System Center Configuration Manage](/sccm/core/get-started/capabilities-in-technical-preview-1605)」 (System Center Configuration Manager の Technical Preview 1605 の機能) の「[Windows Store for Business apps](/sccm/core/get-started/capabilities-in-technical-preview-1605.md#windows-store-for-business-apps)」 (ビジネス向け Windows ストアのアプリ) を参照してください。  
+  [비즈니스용 Windows 스토어](https://www.microsoft.com/en-us/business-store)에서 조직을 위한 앱을 찾아서 개별적으로 또는 대량으로 구매할 수 있습니다. 스토어를 Configuration Manager에 연결하여 Configuration Manager 콘솔에서 대량 구매 앱을 관리할 수 있습니다. 자세한 내용은 [System Center Configuration Manager용 Technical Preview 1605의 기능](/sccm/core/get-started/capabilities-in-technical-preview-1605)에서 [비즈니스용 Windows 스토어 앱](/sccm/core/get-started/capabilities-in-technical-preview-1605.md#windows-store-for-business-apps)을 참조하세요.  
 
-- **ボリューム購入アプリの全般的な向上**
+- **대량 구매 앱의 일반적인 향상 기능**
 
-  ビジネス向け Windows ストアおよび iOS App Store のボリューム購入アプリが同じビューの **[ストア アプリのライセンス情報]** に統合されています。 また、iOS 用ボリューム購入アプリを作成する方法が向上しています。 詳細については、「[Capabilities in Technical Preview 1605 for System Center Configuration Manage](/sccm/core/get-started/capabilities-in-technical-preview-1605)」 (System Center Configuration Manager の Technical Preview 1605 の機能) の「[General improvements for volume-purchased apps](/sccm/core/get-started/capabilities-in-technical-preview-1605.md#general-improvements-for-volume-purchased-apps)」 (ボリューム購入アプリの全般的な向上) を参照してください。  
+  비즈니스용 Windows 스토어와 iOS App Store의 대량 구매 앱이 동일한 보기, **스토어 앱에 대한 라이선스 정보**로 통합되었습니다. 또한 iOS용 대량 구매 앱을 만드는 방식으로 향상되었습니다. 자세한 내용은 [System Center Configuration Manager용 Technical Preview 1605의 기능](/sccm/core/get-started/capabilities-in-technical-preview-1605)에서 [대량 구매 앱에 대한 일반적인 향상 기능](/sccm/core/get-started/capabilities-in-technical-preview-1605.md#general-improvements-for-volume-purchased-apps)을 참조하세요.  
 
-- **IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言**
+- **IMEI 또는 iOS 일련 번호로 회사 소유 장치 미리 선언**
 
-  会社が所有するデバイスの International station Mobile Equipment Identity (IMEI) 番号をインポートすることでデバイスを識別できるようになりました。 デバイスの IMEI 番号を含むコンマ区切り値 (.csv) ファイルをアップロードするか、デバイス情報を手動で入力することができます。  iOS デバイスのシリアル番号をインポートすることもできます。  詳細については、「[Capabilities in Technical Preview 1605 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605)」 (System Center Configuration Manager の Technical Preview 1605 の機能) の「[Pre-declare corporate-owned devices with IMEI or iOS serial number](../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_IMEI)」 (IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言) を参照してください。  
+  이제 IMEI(International station Mobile Equipment Identity) 번호를 가져와서 회사 소유 장치를 식별할 수 있습니다. 장치 IMEI 번호를 포함한 쉼표로 구분된 값(.csv) 파일을 업로드하거나 장치 정보를 수동으로 입력할 수 있습니다.  또한 iOS 장치의 일련 번호를 가져올 수 있습니다.  자세한 내용은 [System Center Configuration Manager용 Technical Preview 1605의 기능](/sccm/core/get-started/capabilities-in-technical-preview-1605)에서 [IMEI 또는 iOS 일련 번호로 회사 소유 장치 미리 선언](../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_IMEI)을 참조하세요.  
 
-- **Windows 情報保護 (WIP)**
+- **WIP(Windows Information Protection)**
 
-  Windows 情報保護 (WIP) ポリシー (保護されているアプリ、WIP 保護レベル、およびネットワーク上の企業データを検索する方法を選択できるようにするなど) を展開するのに便利な構成項目を作成することができます。 WIP の詳細については、次のトピックを参照してください。  
+  보호된 앱, WIP 보호 수준 및 네트워크에서 엔터프라이즈 데이터를 찾는 방법을 선택하는 항목을 포함하여 WIP(Windows Information Protection) 정책을 배포할 수 있는 구성 항목을 만들 수 있습니다. WIP에 대한 자세한 내용은 다음 항목을 참조하세요.  
 
-  -   [Windows 情報保護 (WIP) を使用したエンタープライズ データの保護](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip)  
+  -   [WIP(Windows Information Protection)를 사용하여 엔터프라이즈 데이터 보호](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip)  
 
-  -   [System Center Configuration Manager を使用した Windows 情報保護 (WIP) ポリシーの作成と展開](https://technet.microsoft.com/itpro/windows/keep-secure/create-wip-policy-using-sccm)  
+  -   [System Center Configuration Manager를 사용하여 WIP(Windows Information Protection) 정책 만들기 및 배포](https://technet.microsoft.com/itpro/windows/keep-secure/create-wip-policy-using-sccm)  
 
-### Configuration Manager (現在のブランチ) の新機能
-<a id="new-in-configuration-manager-current-branch" class="xliff"></a>  
- 2016 年 5 月の Configuration Manager (現在のブランチ) では、ハイブリッド新機能は導入されていません。  
+### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager(현재 분기)의 새로운 기능  
+ Configuration Manager(현재 분기) 2016년 5월에 도입된 새로운 하이브리드 기능은 없습니다.  
 
-##  2016 年 4 月
-<a id="april-2016" class="xliff"></a>  
+##  <a name="april-2016"></a>2016년 4월  
 
-### Microsoft Intune の新機能
-<a id="new-in-microsoft-intune" class="xliff"></a>  
- 2016 年 4 月に導入された次の Intune 機能は、ハイブリッド展開で動作します。  
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune의 새로운 기능  
+ 2016년 4월에 도입된 다음 Intune 기능은 하이브리드 배포에서 사용할 수 있습니다.  
 
-- **MAM ユーザー コンプライアンス**
+- **MAM 사용자 준수**
 
-  Azure Active Directory (AAD) テナントのすべてのユーザーについて、アプリケーション管理ポリシーの状態を表示できるようになりました。  詳細については、Intune ライブラリの「[Microsoft Intune でのモバイル アプリ管理ポリシーの監視](/intune/deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune)」を参照してください。  
+  이제 AAD(Azure Active Directory) 테넌트의 사용자에 대한 응용 프로그램 관리 정책의 상태를 볼 수 있습니다.  자세한 내용은 Intune 라이브러리에서 [Microsoft Intune으로 모바일 앱 관리 정책 모니터링](/intune/deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune)을 참조하세요.  
 
-- **Outlook 連絡先の同期を防ぐための MAM コントロール (Android)**
+- **Outlook 연락처 동기화를 방지하는 MAM 컨트롤(Android)**
 
-  アプリケーションが Android デバイス上のネイティブのアドレス帳に連絡先を同期するのを防ぐための新しい設定を使用できます。 この新しい設定は、最初に Android デバイス上の Outlook アプリケーションでサポートされました。 詳細については、Intune ライブラリの「[Microsoft Intune でのモバイル アプリ管理ポリシーの作成および展開](/intune/deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune)」を参照してください。  
+  응용 프로그램이 Android 장치의 기본 주소록에 연락처를 동기화할 수 없도록 하는 새로운 설정을 사용할 수 있습니다. 이 새로운 설정은 처음에 Android 장치의 Outlook 응용 프로그램에서 지원됩니다. 자세한 내용은 Intune 라이브러리에서 [Microsoft Intune으로 모바일 앱 관리 정책 만들기 및 배포](/intune/deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune)를 참조하세요.  
 
-- **ポータル Web サイトの機能強化**
+- **회사 포털 웹 사이트의 향상된 기능**
 
-  Windows 10 Mobile および Windows Phone 8.1 のユーザーが基幹業務アプリをインストールする際に、次の新しい状態が表示されて、インストールの状態に関する詳細情報を確認できるようになりました。  
+  Windows 10 Mobile 및 Windows Phone 8.1 사용자가 LOB(기간 업무) 앱을 설치하는 경우 이제 설치 상태에 대한 자세한 정보를 제공하는 다음과 같은 새 상태가 표시됩니다.  
 
-  -   **デバイスが同期するのを待っています**: ユーザーが [インストール] をタップし、デバイスが Intune インフラストラクチャと同期しようとしています。 インストールを完了するには、この同期が必要です。 「デバイスが同期するのを待っています」メッセージはリンクにもなっており、同期プロセスが時間がかかるか停止した場合にユーザーがタップすると、Intune でデバイスを手動で同期する手順を確認できます。  
+  -   **장치가 동기화될 때까지 기다리는 중** – 사용자가 "설치"를 탭했으며 이제 장치에서 Intune 인프라와 동기화하려고 합니다. 먼저 동기화해야 설치를 완료할 수 있습니다. "장치가 동기화될 때까지 기다리는 중" 메시지는 동기화 프로세스가 시간이 오래 걸리거나 정지될 경우 수동으로 Intune과 장치를 동기화하는 방법에 대한 지침을 보기 위해 사용자가 탭할 수 있는 링크이기도 합니다.  
 
-  -   **ダウンロード中** – ユーザーのダウンロード要求が処理されており、デバイスがアプリをダウンロードおよびインストールしています。  
+  -   **다운로드 중** - 사용자의 다운로드 요청이 처리되고 있으며 장치에서 앱을 다운로드하여 설치 중입니다.  
 
-- **Android ポータル サイト アプリの機能強化**
+- **Android 회사 포털 앱에 대한 향상된 기능**
 
-  Intune にデバイスを登録していないユーザーと、適切な証明書がインストールされていないユーザーは、Android ポータル サイト アプリにサインインできず、メッセージ「必要な証明書がデバイスに見つからないため、サインインできません」が表示されます。 このメッセージには 「How to resolve this」 (この解決方法) リンクが含まれており、ユーザーがタップすると、証明書のインストール手順を確認できます。 エンドユーザーが問題を解決するために従う手順を確認するには、Intune ライブラリの「[デバイスに必要な証明書がない](/intune/enduser/using-your-android-device-with-intune)」を参照してください。  
+  Intune에 장치를 등록하지 않았으며 올바른 인증서가 설치되어 있지 않은 사용자는 Android 회사 포털 앱에 로그인할 수 없으며 "필요한 인증서가 장치에 없으므로 로그인할 수 없습니다."라는 메시지가 표시됩니다. 메시지에는 사용자가 인증서 설치 지침을 보기 위해 탭할 수 있는 "이 문제를 해결하는 방법" 링크가 포함되어 있습니다. 최종 사용자가 문제를 해결하기 위해 수행할 단계를 보려면 Intune 라이브러리에서 [장치에 필요한 인증서가 없는 경우](/intune/enduser/using-your-android-device-with-intune)를 참조하세요.  
 
-- **iOS ポータル サイト アプリの機能強化**
+- **iOS 회사 포털 앱에 대한 향상된 기능**
 
-  ホーム画面上のコンテンツを更新するための pull-to-refresh 操作のサポートが追加されました。これには、一覧表示されたアプリ、一覧表示されたデバイス、および IT 連絡先情報が含まれます。 pull-to-refresh 操作は、コンプライアンスまたはポリシー情報をチェックしません。このチェックを行うには、現在のデバイスのタイルを選択し、**[同期]** ボタンをタップします。  
+  앱 목록, 장치 목록 및 IT 연락처 정보를 포함하는 홈 화면의 콘텐츠를 새로 고치기 위한 끌어오기-새로 고침 작업에 대한 지원이 추가되었습니다. 끌어오기-새로 고침 작업은 현재 장치에 대한 타일을 선택하고 **동기화** 단추를 탭하여 수행할 수 있는 준수 또는 정책 정보를 확인하지 않습니다.  
 
-- **Windows 10 Mobile および Windows Phone 8.1 ポータル サイト アプリの機能強化**
+- **Windows 10 Mobile 및 Windows Phone 8.1 회사 포털 앱에 대한 향상된 기능**
 
-  エンドユーザーが基幹業務アプリをインストールする際に、強化されたアプリ インストール エクスペリエンスが得られるようになりました。 アプリのインストールに長い時間がかかる場合、そのデバイスを手動で同期して、同期プロセスを強制的に再開できます。 エンドユーザーの手順を確認するには、Intune ライブラリの「[Sync your device manually to speed up app installations](/intune/enduser/using-your-windows-device-with-intune)」 (アプリ インストールを高速化するための手動でのデバイスの同期) を参照してください。  
+  이제 최종 사용자가 LOB(기간 업무) 앱을 설치할 때 향상된 앱 설치 환경이 표시됩니다. 앱 설치에 오랜 시간이 걸리는 경우 사용자가 장치를 수동으로 동기화하여 동기화 프로세스를 강제로 다시 시작할 수 있습니다. 최종 사용자 지침을 검토하려면 Intune 라이브러리에서 [장치를 수동으로 동기화하여 앱 설치 속도 향상](/intune/enduser/using-your-windows-device-with-intune)을 참조하세요.  
 
-###  1604 Technical Preview の新機能
-<a id="new-in-1604-technical-preview" class="xliff"></a>
- 2016 年 4 月に導入された次の新機能は、Intune と Configuration Manager Technical Preview 1604 のハイブリッド展開で使用できます。 これらの機能は、Configuration Manager コンソールを使用して構成および管理する必要があります。  
+###  <a name="new-in-1604-technical-preview"></a>1604 기술 미리 보기의 새로운 기능
+ 2016년 4월에 도입된 다음 새로운 기능은 Intune과 Configuration Manager Technical Preview 1604를 포함하는 하이브리드 배포에서 사용할 수 있습니다. 이러한 기능은 Configuration Manager 콘솔을 사용하여 구성 및 관리해야 합니다.  
 
-- **Configuration Manager コンソールから Windows 10 デバイスに対してビジネス向け Windows ストアのアプリを検索、管理、配布する**
+- **Configuration Manager 콘솔에서 Windows 10 장치에 대한 비즈니스용 Windows 스토어 앱 찾기, 관리 및 배포**
 
 
-  Configuration Manager Technical Preview 1604 では、管理している Windows 10 デバイスに対してアプリを検索、管理、配布できるように、ビジネス向け Windows ストアがサポートされています。 詳細については、「[Capabilities in Technical Preview 1604 for System Center Configuration Manage](/sccm/core/get-started/capabilities-in-technical-preview-1604)」 (System Center Configuration Manager の Technical Preview 1604 の機能) の「[Manage volume-purchased apps from the Windows Store for Business](/sccm/core/get-started/capabilities-in-technical-preview-1604#manage-volume-purchased-apps-from-the-windows-store-for-business)」 (ビジネス向け Windows ストアからのボリューム購入アプリの管理) を参照してください。  
+  Configuration Manager Technical Preview 1604에서는 관리하는 Windows 10 장치에 대한 앱을 찾고 관리 및 배포할 수 있도록 도와주는 비즈니스용 Windows 스토어에 대한 지원을 사용할 수 있습니다. 자세한 내용은 [System Center Configuration Manager용 Technical Preview 1604의 기능](/sccm/core/get-started/capabilities-in-technical-preview-1604)에서 [비즈니스용 Windows 스토어에서 대량 구매 앱 관리](/sccm/core/get-started/capabilities-in-technical-preview-1604#manage-volume-purchased-apps-from-the-windows-store-for-business)를 참조하세요.  
 
-- **Android デバイスの SmartLock 設定**
+- **Android 장치에 대한 SmartLock 설정**
 
-  新しい設定が Android および Samsung KNOX Standard 構成項目に追加され、互換性のある Android デバイスで SmartLock 機能を制御することができます。  この設定を使用して、エンドユーザーが SmartLock を構成することを禁止できます。 詳細については、「[Capabilities in Technical Preview 1604 for System Center Configuration Manage](/sccm/core/get-started/capabilities-in-technical-preview-1604.md)」 (System Center Configuration Manager の Technical Preview 1604 の機能) の「[SmartLock setting for Android devices](/sccm/get-started/capabilities-in-technical-preview-1604#smartlock-setting-for-android-devices)」 (Android デバイスの SmartLock 設定) を参照してください。  
+  새 설정이 Android 및 Samsung KNOX Standard 구성 항목에 추가되었습니다. 이를 통해 호환되는 Android 장치에서 SmartLock 기능을 제어할 수 있습니다.  이 설정을 사용하면 최종 사용자가 SmartLock을 구성하지 않도록 방지할 수 있습니다. [System Center Configuration Manager용 Technical Preview 1604의 기능](/sccm/core/get-started/capabilities-in-technical-preview-1604.md)에서 [Android 장치에 대한 SmartLock 설정](/sccm/get-started/capabilities-in-technical-preview-1604#smartlock-setting-for-android-devices)을 참조하세요.  
 
-### Configuration Manager (現在のブランチ) の新機能
-<a id="new-in-configuration-manager-current-branch" class="xliff"></a>  
- 2016 年 4 月の Configuration Manager (現在のブランチ) では、ハイブリッド新機能は導入されませんでした。  
+### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager(현재 분기)의 새로운 기능  
+ Configuration Manager(현재 분기) 2016년 4월에 도입된 새로운 하이브리드 기능은 없습니다.  
 
-##  2016 年 3 月
-<a id="march-2016" class="xliff"></a>  
+##  <a name="march-2016"></a>2016년 3월  
 
-### Microsoft Intune の新機能
-<a id="new-in-microsoft-intune" class="xliff"></a>  
- 2016 年 3 月に導入された次の Intune 機能は、ハイブリッド展開で動作します。  
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune의 새로운 기능  
+ 2016년 3월에 도입된 다음 Intune 기능은 하이브리드 배포에서 사용할 수 있습니다.  
 
-- **Outlook 連絡先の同期を防ぐための MAM コントロール (iOS)**
+- **Outlook 연락처 동기화를 방지하는 MAM 컨트롤(iOS)**
 
-  アプリケーションが iOS デバイス上のネイティブのアドレス帳に連絡先を同期するのを防ぐための新しい設定を使用できます。 この新しい設定は、iOS デバイス上の Outlook アプリケーションでサポートされています。 この設定およびその他の設定の詳細については、Intune ライブラリの「[Create and deploy MAM policies](/intune/deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune)」 (MAM ポリシーの作成および展開) を参照してください。  
+  응용 프로그램이 iOS 장치의 기본 주소록에 연락처를 동기화할 수 없도록 하는 새로운 설정을 사용할 수 있습니다. 이 새로운 설정은 iOS 장치의 Outlook 응용 프로그램에서 지원됩니다. 이 설정 및 기타 설정에 대한 자세한 내용은 Intune 라이브러리에서 [MAM 정책 만들기 및 배포](/intune/deploy-use/monitor-mobile-app-management-policies-with-microsoft-intune)를 참조하세요.  
 
-- **Skype for Business Online による条件付きアクセスのサポート**
+- **비즈니스용 Skype Online에서 조건부 액세스 지원**
 
-  Skype for Business Online が管理対象の準拠 iOS および Android デバイスからのみアクセスできるように、条件付きアクセス ポリシーを設定することができます。  詳細については、Intune ライブラリの「[Skype for Business Online のアクセスの管理](/intune/deploy-use/restrict-access-to-skype-for-business-online-with-microsoft-intune)」を参照してください。  
+  관리되는 규격 iOS 및 Android 장치에서만 액세스할 수 있도록 비즈니스용 Skype Online에 대한 조건부 액세스 정책을 설정할 수 있습니다.  자세한 내용은 Intune 라이브러리에서 [비즈니스용 Skype Online에 대한 액세스 관리](/intune/deploy-use/restrict-access-to-skype-for-business-online-with-microsoft-intune)를 참조하세요.  
 
-- **iOS 9.3 サポート**
+- **iOS 9.3에 대한 지원**
 
-  3 月 21 日月曜日、Apple は iOS 9.3 が利用できるようになったことを発表しました。 iOS デバイスの管理に現在使用できるすべての既存の Intune 機能は、ユーザーがデバイスを iOS 9.3 にアップグレードしたときにシームレスに動作し続けます。  
+  3월 21일 월요일에 Apple은 iOS 9.3의 가용성을 발표했습니다. 현재 iOS 장치 관리에 사용할 수 있는 기존의 모든 Intune 기능은 사용자가 장치를 iOS 9.3으로 업그레이드할 때도 계속 원활하게 작동합니다.  
 
-- **ポータル Web サイトから直接使用可能な Windows アプリ パッケージ**
+- **회사 포털 웹 사이트에서 직접 사용할 수 있는 Windows 앱 패키지**
 
-  Windows 8、Windows 8.1 および Windows RT PC のユーザーは、ポータル Web サイトから Windows アプリ パッケージ (.appx 拡張子) を直接インストールできるようになりました。 以前は、アプリをインストールするには、管理者が展開するか、またはユーザーがデバイスにポータル サイト アプリをインストールする必要がありました。  
+  이제 Windows 8, Windows 8.1 및 Windows RT PC 사용자가 회사 포털 웹 사이트에서 직접 Windows 앱 패키지(.appx 확장명 사용)을 설치할 수 있습니다. 이전에는 관리자가 배포하거나, 사용자가 앱을 설치할 장치에 회사 포털 앱을 설치해야 했습니다.  
 
-- **ユーザーがポータル Web サイトからデバイスをリモートでロックできる**
+- **사용자가 회사 포털 웹 사이트에서 원격으로 장치를 잠글 수 있음**
 
-  ポータル Web サイトに新しいリモート ロック オプションが追加されており、ユーザーはデバイスを紛失したり盗難にあったりした場合に、ポータルからデバイスをリモートでロックできます。  
+  사용자가 장치를 분실하거나 도난당한 경우 포털에서 원격으로 장치를 잠글 수 있도록 하는 새로운 원격 잠금 옵션이 회사 포털 웹 사이트에 추가되었습니다.  
 
-- **サードパーティの MDM ソリューションに登録されているデバイスに対して iOS の "オープンイン" 管理を利用する**
+- **타사 MDM 솔루션에 등록된 장치에 대해 iOS "다음에서 열기" 관리 활용**
 
-  サードパーティのモバイル デバイス管理 (MDM) ベンダーを使用して、iOS の "オープンイン" 管理を利用できます。 構成プロファイル設定で制限を設定し、MDM ソフトウェアを使用してアプリを展開できます。 ユーザーが管理対象アプリをインストールすると、制限が適用されます。 Intune ライブラリの「[Microsoft Intune mobile app management policies and iOS Open In](/intune/deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune)」 (Microsoft Intune モバイル アプリ管理ポリシーと iOS の Open In) を参照してください。  
+  타사 MDM(모바일 장치 관리) 공급업체를 사용하여 iOS "다음에서 열기" 관리를 활용할 수 있습니다. 구성 프로필 설정에서 제한을 설정하고 MDM 소프트웨어를 사용하여 앱을 배포할 수 있습니다. 사용자가 관리되는 앱을 설치하면 제한 사항이 적용됩니다. 자세한 내용은 Intune 라이브러리에서 [Microsoft Intune 모바일 앱 관리 정책 및 iOS 다음에서 열기](/intune/deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune)를 참조하세요.  
 
-- **MAM をサポートする Microsoft アプリ**
+- **MAM을 지원하는 Microsoft 앱**
 
-  Intune モバイル アプリケーション管理ポリシーで使用できる Microsoft アプリの一覧が、最新のアプリを含めるように更新されました (Intune に登録されているデバイスに対してのみ)。  
+  Intune 모바일 응용 프로그램 관리 정책과 함께 사용할 수 있는 Microsoft 앱 목록이 최신 앱을 포함하도록 업데이트되었습니다(Intune에 등록된 장치에만 해당).  
 
-- **Microsoft Intune 用の Adobe Reader を社内の Intune 管理 iOS デバイスに展開する**
+- **엔터프라이즈의 Intune 관리 iOS 장치에 Microsoft Intune용 Adobe Reader 배포**
 
-  Intune モバイル アプリケーション管理ポリシーを使用して、登録デバイスで iOS 用 Adobe Reader アプリを管理できるようになりました。  
+  이제 Intune 모바일 응용 프로그램 관리 정책에 등록된 장치에서 iOS용 Adobe Reader 앱을 관리할 수 있습니다.  
 
-- Android での Rights Management 共有アプリのサポート
+- Android에 대해 Rights Management 공유 앱이 지원됨
 
-  IT がデバイスの管理に Intune を使用するかどうかにかかわらず、IT 管理者は、エンドユーザーがイメージ、AV、および PDF ファイルをより安全に表示できるようにモバイル アプリケーション管理ポリシーを展開できます。  
+  IT에서 Intune을 사용하여 장치를 관리하는지 여부에 관계없이 최종 사용자가 이미지, AV 및 PDF 파일을 보다 안전하게 볼 수 있도록 IT 관리자가 모바일 응용 프로그램 관리 정책을 배포할 수 있습니다.  
 
-- **Android および iOS のポータル サイト アプリの機能強化**
+- **Android 및 iOS 회사 포털 앱에 대한 향상된 기능**
 
-  -   モバイル アプリケーション管理 (MAM) によって管理されているアプリをユーザーが起動すると、アプリが会社によって管理されていることを通知するメッセージが表示されます。 ユーザーは [詳細情報] リンクをタップして、"管理対象アプリ" に関する詳細情報を確認できるようになりました。 また、[次回から表示しない] をタップすると、アプリの起動時にこのメッセージが表示されないようにできます。  
+  -   사용자가 MAM(모바일 응용 프로그램 관리)에서 관리되는 앱을 실행하는 경우 앱이 회사에서 관리된다고 알리는 메시지가 표시됩니다. 이제 사용자가 "자세한 정보" 링크를 탭하여 "관리되는 앱"의 의미에 대한 자세한 정보를 여기서 확인할 수 있습니다. 앱을 실행할 때 메시지는 더 이상 표시되지 않도록 "다시 표시 안 함"을 탭할 수도 있습니다.  
 
-  -   ユーザーに登録プロセスを順に案内し、ユーザーが登録しなければならない理由の詳細、および IT 管理者が登録デバイスで確認できる内容と確認できない内容の詳細を示すために、新しい画面が追加されました。  
+  -   사용자에게 등록 과정을 안내하고 사용자가 등록해야 이유 및 IT 관리자가 등록된 장치에서 볼 수 있는 사항과 볼 수 없는 사항에 대한 자세한 정보를 제공하는 새 화면이 추가되었습니다.  
 
-  -   登録エラー メッセージが、ポータル サイト アプリに表示されるようになりました。  
+  -   이제 등록 오류 메시지가 회사 포털 앱에 표시됩니다.  
 
-### Configuration Manager Technical Preview の新機能
-<a id="new-in-configuration-manager-technical-preview" class="xliff"></a>  
- 2016 年 3 月の Configuration Manager Technical Preview では、ハイブリッド新機能は導入されませんでした。  
+### <a name="new-in-configuration-manager-technical-preview"></a>Configuration Manager Technical Preview의 새로운 기능  
+ Configuration Manager Technical Preview의 2016년 3월에 도입된 새로운 하이브리드 기능은 없습니다.  
 
-### Configuration Manager (現在のブランチ) の新機能
-<a id="new-in-configuration-manager-current-branch" class="xliff"></a>  
- 2016 年 3 月に導入された次の新機能は、Intune と Configuration Manager (現在のブランチ) バージョン 1602 のハイブリッド展開で使用できます。 これらの機能は、Configuration Manager コンソールを使用して構成および管理する必要があります。  
+### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager(현재 분기)의 새로운 기능  
+ 2016년 3월에 도입된 다음 새로운 기능은 Intune과 Configuration Manager(현재 분기) 버전 1602를 포함하는 하이브리드 배포에서 사용할 수 있습니다. 이러한 기능은 Configuration Manager 콘솔을 사용하여 구성 및 관리해야 합니다.  
 
-- **iOS アプリ構成ポリシー**
+- **iOS 앱 구성 정책**
 
-  Configuration Manager (現在のブランチ) バージョン 1602 では、ユーザーが iOS アプリを実行するときに必要となる可能性がある設定をアプリ構成ポリシーで指定できます。 詳細については、「[Configure iOS apps with app configuration policies in System Center Configuration Manager](/sccm/apps/deploy-use/configure-ios-apps-with-app-configuration-policies)」 (System Center Configuration Manager でのアプリ構成ポリシーを使用した iOS アプリの構成) を参照してください。  
+  Configuration Manager(현재 분기) 버전 1602에서는 앱 구성 정책을 사용하여 사용자가 iOS 앱을 실행할 때 필요할 수 있는 설정을 제공할 수 있습니다. 자세한 내용은 [System Center Configuration Manager에서 앱 구성 정책을 사용하여 iOS 앱 구성](/sccm/apps/deploy-use/configure-ios-apps-with-app-configuration-policies)을 참조하세요.  
 
-- **ボリューム購入 iOS アプリの管理**
+- **대량 구매한 iOS 앱 관리**
 
-  Configuration Manager (現在のブランチ) バージョン 1602 では、Apple Volume-Purchase Program (VPP) からボリューム購入したアプリを展開して管理できます。そのために、アプリ ストアからライセンス情報をインポートして、使用したライセンスの数を追跡します。 詳細については、「[Manage volume-purchased iOS apps with System Center Configuration Manager](/sccm/apps/deploy-use/manage-volume-purchased-ios-apps)」 (System Center Configuration Manager でのボリューム購入 iOS アプリの管理) を参照してください。  
+  버전 1602의 Configuration Manager(현재 분기)를 통해 앱 스토어에서 라이선스 정보를 가져오고 사용한 라이선스 수를 추적하여 Apple VPP(Volume-Purchase Program)에서 대량 구매한 앱을 배포하고 관리할 수 있습니다. 자세한 내용은 [System Center Configuration Manager를 사용하여 대량 구매한 iOS 앱 관리](/sccm/apps/deploy-use/manage-volume-purchased-ios-apps)를 참조하세요.  
 
-- **Office モバイル アプリの自動作成**
+- **Office 모바일 앱의 자동 만들기**
 
-  Configuration Manager (現在のブランチ) バージョン 1602 以降では、バージョン 1511 からアップグレードすると、Android および iOS 用の次の Microsoft Office モバイル アプリが作成されます。  
+  Configuration Manager(현재 분기) 버전 1602부터, 버전 1511에서 업그레이드할 때 다음과 같은 Android 및 iOS용 Microsoft Office 모바일 앱이 생성됩니다.  
 
   -   Microsoft Word  
   -   Microsoft Excel  
   -   Microsoft PowerPoint  
   -   Microsoft OneDrive  
-  -   Microsoft OneNote (iOS のみ)  
+  -   Microsoft OneNote(iOS만 해당)  
   -   Microsoft Outlook  
 
-  これらのアプリは Configuration Manager コンソールの [アプリケーション] ノードに表示されます。 アプリケーションの展開の詳細については、「[System Center Configuration Manager でアプリケーションを展開する方法](../../apps/deploy-use/deploy-applications.md)」をご覧ください。  
+  이러한 앱은 Configuration Manager 콘솔의 응용 프로그램 노드에 있습니다. 응용 프로그램을 배포하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 응용 프로그램을 배포하는 방법](../../apps/deploy-use/deploy-applications.md)을 참조하세요.  
 
-- **Android Samsung KNOX Standard デバイスのキオスク モードの設定**
+- **Android Samsung KNOX Standard 장치에 대한 키오스크 모드 설정**
 
-  キオスク モードでは、特定の機能のみ実行できるようにデバイスをロックできます。  Configuration Manager (現在のブランチ) バージョン 1602 以降では、Samsung KNOX Standard デバイスのキオスク モードの設定を指定できるようになりました。 詳細については、「[System Center Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX Standard デバイスの構成項目を作成する](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)」を参照してください。  
+  키오스크 모드에서는 장치를 잠가 특정 기능만 작동하도록 허용할 수 있습니다.  Configuration Manager(현재 분기) 버전 1602부터, 이제 Samsung KNOX Standard 장치에 대한 키오스크 모드 설정을 지정할 수 있습니다. 자세한 내용은 [System Center Configuration Manager 클라이언트 없이 관리되는 Android 및 Samsung KNOX Standard 장치에 대한 구성 항목을 만드는 방법](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)을 참조하세요.  
 
-- **iOS のアクティベーション ロック**
+- **iOS 활성화 잠금**
 
-  Configuration Manager (現在のブランチ) バージョン 1602 以降では、iOS 7.1 以降用の「iPhone を探す」アプリの機能である、iOS のアクティベーション ロックを管理できます。 iPhone を探すアプリをデバイスで使用すると、アクティブ化ロックが自動的に有効になります。  詳細については、「[Manage iOS Activation Lock bypass for System Center Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock#bypass-activation-lock)」 (System Center Configuration Manager での iOS のアクティベーション ロック バイパスの管理) を参照してください。  
-
+  Configuration Manager(현재 분기) 버전 1602부터, iOS 7.1 이상 장치용 나의 iPhone 찾기(Find My iPhone) 앱의 기능인 iOS 활성화 잠금을 관리할 수 있습니다. 활성화 잠금은 장치에서 나의 iPhone 찾기 앱을 사용할 때 자동으로 사용하도록 설정됩니다.  자세한 내용은 [System Center Configuration Manager에 대한 iOS 활성화 잠금 무시 관리](/sccm/mdm/deploy-use/manage-ios-activation-lock#bypass-activation-lock)를 참조하세요.  

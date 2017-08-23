@@ -1,62 +1,58 @@
 ---
-title: "DNS 発行を使用して管理ポイントを検出するようにクライアント コンピューターを構成する | Microsoft Docs"
-description: "System Center Configuration Manager で DNS 発行を使用して、管理ポイントを検出するようにクライアント コンピューターを設定します。"
+title: "관리 지점 DNS 게시를 찾도록 클라이언트 구성 | Microsoft 문서"
+description: "System Center Configuration Manager에서 DNS 게시를 사용하여 관리 지점을 찾도록 클라이언트 컴퓨터를 설정합니다."
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 03cec407-0f9f-454f-a360-b005af738d29
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 9eadb91a575323b4c36af14962f370046ea513ce
-ms.contentlocale: ja-jp
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: d016ec3fe106b2d90b3c14b4f9296aed4d198644
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-configure-client-computers-to-find-management-points-by-using-dns-publishing-in-system-center-configuration-manager"></a>System Center Configuration Manager で DNS 発行を使用して、管理ポイントを検出するようにクライアント コンピューターを構成する方法
+# <a name="how-to-configure-client-computers-to-find-management-points-by-using-dns-publishing-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 DNS 게시를 사용하여 관리 지점을 찾도록 클라이언트 컴퓨터를 구성하는 방법
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager のクライアントは、サイトの割り当てを完了しても、実行中のプロセスとして管理対象にとどまるために、管理ポイントを特定する必要があります。 Active Directory ドメイン サービスは、イントラネット上のクライアントが管理ポイントを見つけるのに最も安全な方法を提供します。 しかし、クライアントがこのサービスの場所検索方法を利用できない場合は (たとえば Active Directory スキーマを拡張していない、クライアントがワークグループに所属するなど)、DNS 発行を代替方法として使用します。  
+System Center Configuration Manager의 클라이언트는 사이트 할당을 완료하고 계속되는 프로세스를 관리되는 상태로 유지하기 위해 관리 지점을 찾아야 합니다. 인트라넷의 클라이언트가 관리 지점을 찾는 데 Active Directory Domain Services를 사용하는 것이 가장 안전하지만, 예를 들어 Active Directory 스키마를 확장하지 않았거나 클라이언트가 작업 그룹에 없어서 클라이언트가 이 서비스 위치 방법을 사용할 수 없는 경우에는 기본 대체 서비스 위치 방법으로 DNS 게시를 사용하십시오.  
 
 > [!NOTE]  
->  Linux および UNIX 用のクライアントをインストールする場合、最初の接続ポイントとして使用する管理ポイントを使用する必要があります。 Linux と UNIX でクライアントをインストールする方法については、「[System Center Configuration Manager で UNIX および Linux サーバーにクライアントを展開する方法](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md)」を参照してください。  
+>  Linux 및 UNIX 서버에 클라이언트를 설치하는 경우 초기 연결 지점으로 사용할 관리 지점을 지정해야 합니다. Linux 및 UNIX용 클라이언트를 설치하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 UNIX 및 Linux 서버에 클라이언트를 배포하는 방법](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md)을 참조하세요.  
 
- 管理ポイント用に DNS 発行を使用する前に、イントラネット上の DNS サーバーがそのサイトの管理ポイントについて、サービスの場所のリソース レコード (SRV RR) とそれに対応するホスト (A または AAA) のリソース レコードを持っていることを確認してください。 このサービスの場所リソース レコードは、Configuration Manager で自動的に作成することもできますが、DNS でレコードを作成する DNS 管理者によって手動で作成することもできます。  
+ 관리 지점에 DNS 게시를 사용하기 전에 인트라넷의 DNS 서버에 사이트 관리 지점에 대한 SRV RR(서비스 위치 리소스 레코드)과 해당 호스트(A 또는 AAA) 리소스 레코드가 있어야 합니다. 서비스 위치 리소스 레코드는 Configuration Manager에서 자동으로 만들거나 DNS에 레코드를 만드는 DNS 관리자가 수동으로 만들 수 있습니다.  
 
- Configuration Manager クライアントに対するサービスの場所の検索方法として DNS 発行を使用する方法については、「[クライアントが System Center Configuration Manager のサイト リソースやサービスを検索する方法を理解する](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)」を参照してください。  
+ Configuration Manager 클라이언트의 서비스 위치 방법으로 DNS 게시를 사용하는 방법에 대한 자세한 내용은 [클라이언트가 System Center Configuration Manager에 대한 사이트 리소스 및 서비스를 찾는 방법 이해](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)를 참조하세요.  
 
- 既定では、クライアントは、クライアントの DNS ドメインで、管理ポイント用の DNS を検索します。 ただし、クライアントのドメインに発行されている管理ポイントが存在しない場合、手動でクライアントに管理ポイントの DNS サフィックスを構成する必要があります。 このクライアントの DNS サフィックスは、クライアントのインストール中、またはインストール後に構成できます。  
+ 기본적으로 클라이언트는 해당 DNS 도메인에서 관리 지점의 DNS를 검색합니다. 그러나 클라이언트의 도메인에 게시된 관리 지점이 없으면 관리 지점 DNS 접미사를 사용하여 수동으로 클라이언트를 구성해야 합니다. 클라이언트 설치 중이나 후에 클라이언트에서 이 DNS 접미사를 구성할 수 있습니다.  
 
--   クライアントのインストール中に、クライアントに管理ポイントのサフィックスを構成するには、CCMSetup Client.msi プロパティを構成します。  
+-   클라이언트 설치 중에 클라이언트에서 관리 지점 접미사를 구성하려면 CCMSetup Client.msi 속성을 구성합니다.  
 
--   クライアントのインストール後に、クライアントに管理ポイントのサフィックスを構成するには、コントロールパネルで、[ **Configuration Manager のプロパティ** ] を構成します。  
+-   클라이언트 설치 후에 클라이언트에서 관리 지점 접미사를 구성하려면 제어판에서 **Configuration Manager 속성**을 구성합니다.  
 
-#### <a name="to-configure-clients-for-a-management-point-suffix-during-client-installation"></a>クライアントのインストール中に、クライアントに管理ポイントのサフィックスを構成するには  
+#### <a name="to-configure-clients-for-a-management-point-suffix-during-client-installation"></a>클라이언트 설치 중에 클라이언트에서 관리 지점 접미사를 구성하려면  
 
--   次の CCMSetup client.msi プロパティを使用してクライアントをインストールします。  
+-   다음 CCMSetup Client.msi 속성을 사용하여 클라이언트를 설치합니다.  
 
-    -   **DNSSUFFIX=** *&lt;管理ポイント ドメイン\>*  
+    -   **DNSSUFFIX=** *&lt;관리 지점 도메인\>*  
 
-         サイトに複数の管理ポイントがあり、その管理ポイントが複数のドメインに存在する場合は、一つのドメインだけを指定します。 このドメインの管理ポイントにクライアントが接続すると、クライアントは、使用可能な管理ポイントの一覧をダウンロードします。この一覧には、ほかのドメインにある管理ポイントも含まれます。  
+         사이트가 관리 지점을 둘 이상 갖고 둘 이상의 도메인에 있는 경우 한 도메인만 지정합니다. 클라이언트가 이 도메인의 관리 지점에 연결하면 사용 가능한 관리 지점 목록을 다운로드하며, 여기에는 다른 도메인의 관리 지점도 포함됩니다.  
 
-     CCMSetup のコマンドライン プロパティの詳細については、「[System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」をご覧ください。  
+     CCMSetup 명령줄 속성에 대한 자세한 내용은 [System Center Configuration Manager의 클라이언트 설치 속성 정보](../../../core/clients/deploy/about-client-installation-properties.md)를 참조하세요.  
 
-#### <a name="to-configure-clients-for-a-management-point-suffix-after-client-installation"></a>クライアントのインストール後に、クライアントに管理ポイントのサフィックスを構成するには  
+#### <a name="to-configure-clients-for-a-management-point-suffix-after-client-installation"></a>클라이언트 설치 후에 클라이언트에서 관리 지점 접미사를 구성하려면  
 
-1.  クライアント コンピューターのコントロール パネルで、 **Configuration Manager**に移動し、[ **プロパティ**] をダブルクリックします。  
+1.  클라이언트 컴퓨터의 제어판에서 **Configuration Manager**로 이동하여 **속성**을 두 번 클릭합니다.  
 
-2.  [ **サイト** ] タブで管理ポイントの DNS サフィックスを指定してから、[ **OK** ] をクリックします。  
+2.  **사이트** 탭에서 관리 지점의 DNS 접미사를 지정한 후에 **확인**을 클릭합니다.  
 
-     サイトに複数の管理ポイントがあり、その管理ポイントが複数のドメインに存在する場合は、一つのドメインだけを指定します。 このドメインの管理ポイントにクライアントが接続すると、クライアントは、使用可能な管理ポイントの一覧をダウンロードします。この一覧には、ほかのドメインにある管理ポイントも含まれます。
-
+     사이트가 관리 지점을 둘 이상 갖고 둘 이상의 도메인에 있는 경우 한 도메인만 지정합니다. 클라이언트가 이 도메인의 관리 지점에 연결하면 사용 가능한 관리 지점 목록을 다운로드하며, 여기에는 다른 도메인의 관리 지점도 포함됩니다.

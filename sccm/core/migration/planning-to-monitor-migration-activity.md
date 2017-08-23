@@ -1,47 +1,40 @@
 ---
-title: "移行監視 | Microsoft Docs"
-description: "Configuration Manager コンソールを使用して、移行ジョブの進行状況と成功を監視する方法について説明します。"
+title: "마이그레이션 모니터링 | Microsoft 문서"
+description: "Configuration Manager 콘솔을 사용하여 마이그레이션 작업의 진행률과 성공을 모니터링하는 방법을 알아봅니다."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fc731d3f-edd7-4049-b17b-653d6693a564
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
 ms.openlocfilehash: 896807ec2c4be2835094a27add59d4cc09e93add
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="planning-to-monitor-migration-activity-in-system-center-configuration-manager"></a>System Center Configuration Manager での移行アクティビティの監視の計画
+# <a name="planning-to-monitor-migration-activity-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 마이그레이션 작업 모니터링 계획
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager では、移行先階層に接続している Configuration Manager コンソールで移行を監視できます。 Configuration Manager コンソールの **[管理]** ワークスペースの **[移行]** ノードから、移行ジョブの進行状況と成功状態を監視できます。 移行済みオブジェクトが示されている各移行ジョブ、移行前のオブジェクト、および移行ジョブから除外されているオブジェクトの数に関する概要情報を表示できます。 また、移行で問題が生じた場合はその詳細も表示されます。  
+System Center Configuration Manager에서는 대상 계층 구조에 연결된 Configuration Manager 콘솔에서 마이그레이션을 모니터링할 수 있습니다. Configuration Manager 콘솔의 **관리** 작업 영역에서 **마이그레이션** 노드를 사용하여 마이그레이션 작업의 진행률과 성공을 모니터링할 수 있습니다. 마이그레이션한 개체, 아직 마이그레이션하지 않은 개체 및 마이그레이션 작업에서 제외된 개체 수를 식별하는 각 마이그레이션 작업에 대한 요약 정보를 볼 수 있습니다. 마이그레이션 문제에 대한 세부 정보도 볼 수 있습니다.  
 
-## <a name="view-migration-progress"></a>移行の進行状況の表示  
- 移行ジョブの進行状況を表示するには、次の操作のいずれかを実行します。  
+## <a name="view-migration-progress"></a>마이그레이션 진행률 보기  
+ 마이그레이션 작업의 진행률을 보려면 다음 작업 중 하나를 수행하십시오.  
 
--   Configuration Manager コンソールの **[管理]** ワークスペースで、**[移行ジョブ]** ノードを展開し、移行ジョブを選択してから、**[ジョブ内のオブジェクト]** タブをクリックします。  
+-   Configuration Manager 콘솔의 **관리** 작업 영역에서 **마이그레이션 작업** 노드를 확장하고 마이그레이션 작업을 선택한 후에 **작업에 포함된 개체** 탭을 선택합니다.  
 
--   移行の進行状況を確認したり問題を特定したりするには、Configuration Manager ログ ファイルを使用します。 移行マネージャーは、移行操作を追跡管理し、サイト サーバー上の **\&lt;InstallationPath\>\\LOGS** フォルダー内の migmctrl.log ファイルにそのデータを記録する Configuration Manage プロセスです。  
+-   Configuration Manager 로그 파일을 사용하여 마이그레이션 진행률을 검토하거나 문제를 확인합니다. 마이그레이션 관리자는 마이그레이션 작업을 추적하고 사이트 서버의 **\&lt;InstallationPath\>\\LOGS** 폴더에 있는 migmctrl.log 파일에 이러한 내용을 기록하는 Configuration Manager 프로세스입니다.  
 
     > [!NOTE]  
-    >  移行ジョブに失敗した場合は、直ちに migmctrl.log ファイルで詳細を確認してください。 移行ログのエントリは、継続的にファイルに追加され、旧データを上書きします。 エントリが上書きされてしまうと、移行済みのオブジェクトで問題が発生した場合に、それが移行処理の問題に関連するかどうかを特定できなくなることがあります。 移行の構成時に Configuration Manager コンソールが接続するサイトに関係なく、移行アクティビティは階層の最上位サイトで記録されます。\-  
+    >  마이그레이션 작업이 실패하면 최대한 빨리 migmctrl.log 파일의 정보를 검토하십시오. 마이그레이션 로그 항목은 계속 파일에 추가되어 이전 정보를 덮어씁니다. 항목을 덮어쓰면 마이그레이션된 개체에 발생할 수 있는 문제가 마이그레이션 문제와 관련이 있는지 여부를 확인하지 못할 수도 있습니다. 마이그레이션 작업은 마이그레이션을 구성할 때 Configuration Manager 콘솔에서 연결한 사이트와 상관없이 계층의 최상위 사이트에서 로깅됩니다.  
 
--   Configuration Manager のレポートを使用します。 Configuration Manager では、組み込みの移行用レポートがいくつか提供されています。これらのレポートは、要件に合わせて編集できます。\- Configuration Manager でのレポートの詳細については、「[System Center Configuration Manager のレポート](../../core/servers/manage/reporting.md)」を参照してください。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+-   Configuration Manager 보고를 사용합니다. Configuration Manager에서 마이그레이션을 위해 제공하는 여러 기본 제공 보고서를 그대로 사용할 수도 있고 요구 사항에 맞게 편집할 수도 있습니다. Configuration Manager 보고서에 대한 자세한 내용은 [System Center Configuration Manager에서 보고](../../core/servers/manage/reporting.md)를 참조하세요.  

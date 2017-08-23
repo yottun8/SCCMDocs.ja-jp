@@ -1,93 +1,86 @@
 ---
-title: "電源管理の構成 | Microsoft Docs"
-description: "System Center Configuration Manager で電源管理をセットアップします。"
+title: "전원 관리 구성 | Microsoft 문서"
+description: "System Center Configuration Manager에서 전원 관리를 설정합니다."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 435c923c-ea30-4dce-8afd-48962ed85502
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
 ms.openlocfilehash: e111ac2545dd9e0b96a50c10246bb75d286a737a
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="configuring-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager での電源管理の構成
+# <a name="configuring-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 전원 관리 구성
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager で電源管理を使用するには、次の構成手順を実行する必要があります。  
+System Center Configuration Manager에서 전원 관리를 사용하려면 먼저 다음 구성 단계를 수행해야 합니다.  
 
-## <a name="enable-and-configure-power-management-client-settings"></a>電源管理のクライアント設定の有効化と構成  
- この手順に従って、電源管理に既定のクライアント設定を構成し、階層内のすべてのコンピューターに適用します。 これらの設定を一部のコンピューターのみに適用する場合は、カスタム クライアント デバイス設定を作成して、電源管理を使用するコンピューターを含むコレクションに割り当てます。 カスタムのデバイス設定の作成方法の詳細については、「[System Center Configuration Manager でクライアント設定を構成する方法](../../../../core/clients/deploy/configure-client-settings.md)」を参照してください。  
+## <a name="enable-and-configure-power-management-client-settings"></a>전원 관리 클라이언트 설정 사용 및 구성  
+ 이 절차는 전원 관리에 대한 기본 클라이언트 설정을 구성하고 계층의 모든 컴퓨터에 적용됩니다. 이러한 설정이 일부 컴퓨터에만 적용되도록 하려면 사용자 지정 장치 클라이언트 설정을 만들어서 전원 관리를 사용할 컴퓨터가 포함된 컬렉션에 할당합니다. 사용자 지정 장치 설정을 만드는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 클라이언트 설정을 구성하는 방법](../../../../core/clients/deploy/configure-client-settings.md)을 참조하세요.  
 
-#### <a name="to-enable-power-management-and-configure-client-settings"></a>電源管理を有効にしてクライアント設定を構成するには  
+#### <a name="to-enable-power-management-and-configure-client-settings"></a>전원 관리를 사용하도록 설정하고 클라이언트 설정을 구성하려면  
 
-1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
+1.  Configuration Manager 콘솔에서 **관리**를 클릭합니다.  
 
-2.  [ **管理** ] ワークスペースで [ **クライアント設定**] をクリックします。  
+2.  **관리** 작업 영역에서 **클라이언트 설정**을 클릭합니다.  
 
-3.  [既定のクライアント設定 ****] をクリックします。  
+3.  **기본 클라이언트 설정**을 클릭합니다.  
 
-4.  **[ホーム]** タブの **[プロパティ]** グループで、 **[プロパティ]**をクリックします。  
+4.  **홈** 탭의 **속성** 그룹에서 **속성**을 클릭합니다.  
 
-5.  **既定のクライアント設定** ダイアログ ボックスで、クリックして **電源管理**です。  
+5.  **기본 클라이언트 설정** 대화 상자에서 **전원 관리**를 클릭합니다.  
 
-6.  次のような電源管理のクライアント設定の値を構成します。  
+6.  전원 관리 클라이언트 설정에 대해 다음 값을 구성합니다.  
 
-    -   **[デバイスの電源管理を許可する]** – ドロップダウン リストから [TRUE] を選択して、電源管理を有効にします。 ****  
+    -   **장치의 전원 관리 허용** – 드롭다운 목록에서 **True** 를 선택하여 전원 관리를 사용하도록 설정합니다.  
 
-7.  必要なクライアント設定を構成します。 構成できる電源管理のクライアント設定の一覧については、「[About client settings in System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md)」 (System Center Configuration Manager のクライアント設定について) トピックの「[Power Management](../../../../core/clients/deploy/about-client-settings.md#power-management)」 (電源管理) セクションを参照してください。  
+7.  필요한 클라이언트 설정을 구성합니다. 구성할 수 있는 전원 관리 클라이언트 설정 목록은 [System Center Configuration Manager의 클라이언트 설정 정보](../../../../core/clients/deploy/about-client-settings.md) 항목의 [전원 관리](../../../../core/clients/deploy/about-client-settings.md#power-management) 섹션을 참조하세요.  
 
-8.  [ **OK** ] をクリックして [ **既定のクライアント設定** ] ダイアログ ボックスを閉じます。  
+8.  **확인** 을 클릭하여 **기본 클라이언트 설정** 대화 상자를 닫습니다.  
 
- クライアント コンピューターは、次にクライアント ポリシーをダウンロードするときに、これらの設定で構成されます。 1 つのクライアントのポリシーの取得を開始する場合は、「 [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md)」を参照してください。  
+ 클라이언트 컴퓨터는 다음에 클라이언트 정책을 다운로드할 때 이 설정으로 구성됩니다. 단일 클라이언트에 대한 정책 검색을 시작하려면 [System Center Configuration Manager에서 클라이언트를 관리하는 방법](../../../../core/clients/manage/manage-clients.md)을 참조하세요.  
 
-## <a name="exclude-computers-from-power-management"></a>電源管理からのコンピューターの除外  
- コンピューターに電源管理設定が適用されるのを防ぐことができます。 コンピューターが電源管理設定から除外されるコレクションのメンバーである場合、そのコンピューターが電源管理設定を適用する別のコレクションに属していても、電源管理設定は適用されません。  
+## <a name="exclude-computers-from-power-management"></a>전원 관리에서 컴퓨터를 제외합니다.  
+ 컴퓨터의 컬렉션이 전원 관리 설정을 받지 않도록 차단할 수 있습니다. 컴퓨터가 전원 관리 설정에서 제외되는 컬렉션의 멤버인 경우 해당 컴퓨터가 전원 관리 설정을 적용하는 다른 컬렉션의 멤버인 경우에도 전원 관리 설정을 적용하지 않습니다.  
 
- 次のいずれかの場合は、コンピューターを電源管理から除外できます。  
+ 다음과 같은 원인으로 인해 컴퓨터를 전원 관리에서 제외하려 할 수 있습니다.  
 
--   事業の必要性からコンピューターを常時オンにしておく必要がある場合  
+-   컴퓨터가 항상 켜져 있어야 하는 비즈니스 요구 사항이 있습니다.  
 
--   電源管理設定を適用しないコンピューターで構成される、制御コレクションを作成した場合  
+-   전원 관리 설정을 적용하기를 원하지 않는 컴퓨터의 컨트롤 컬렉션을 만들었습니다.  
 
--   一部のコンピューターに、電源管理設定を適用する機能が備わっていない場合  
+-   일부 컴퓨터가 전원 관리 설정을 적용할 수 없습니다.  
 
--   Windows Server を実行しているコンピューターを電源管理から除外する場合  
+-   Windows Server를 실행하는 컴퓨터를 전원 관리에서 제외하려고 합니다.  
 
 > [!NOTE]  
->  クライアント設定で [ユーザーがデバイスを電源管理対象から外せるようにする] オプションが構成されていると、ユーザーはソフトウェア センターを使用して、自分のコンピューターを電源管理から除外することができます。 ****  
+>  **사용자가 전원 관리에서 장치를 제외할 수 있도록 허용** 옵션을 클라이언트 설정에서 구성하면 사용자는 소프트웨어 센터를 사용하여 자신의 컴퓨터를 전원 관리에서 제외할 수 있습니다.  
 
- 電源管理から除外されたコンピューターを見つけるには、[除外されているコンピューター] レポートを実行してください。 **** このレポートの詳細については、「[How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)」 (System Center Configuration Manager で電源管理を監視して計画する方法) の「[Computers Excluded](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md#BKMK_Excluded)」 (除外されたコンピューター) を参照してください。  
+ 전원 관리에서 제외된 컴퓨터를 확인하려면 **제외된 컴퓨터**보고서를 실행합니다. 이 보고서에 대한 자세한 내용은 [System Center Configuration Manager에서 전원 관리를 모니터링하고 계획하는 방법](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)에서 [제외된 컴퓨터](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md#BKMK_Excluded)를 참조하세요.  
 
 > [!IMPORTANT]  
->  Windows XP または Windows Server 2003 を実行するコンピューターに適用された電源設定は、そのコンピューターを電源管理から除外した場合でも、元の値に戻りません。 Windows のこれより新しいバージョンでは、電源管理からコンピューターを除外すると、すべての電源設定が元の値に戻ります。 個々の電源設定をその元の値に戻すことはできません。  
+>  Windows XP 또는 Windows Server 2003을 실행하는 컴퓨터에 적용되는 전원 설정은 해당 컴퓨터를 전원 관리에서 제외하는 경우에도 원래 값으로 되돌아가지 않습니다. 이후 버전의 Windows에서는 전원 관리에서 컴퓨터를 제외하면 모든 전원 설정이 원래 값으로 되돌아갑니다. 개별 전원 설정을 원래 값으로 되돌릴 수 없습니다.  
 
-#### <a name="to-exclude-a-collection-of-computers-from-power-management"></a>コンピューターのコレクションを電源管理から除外するには  
+#### <a name="to-exclude-a-collection-of-computers-from-power-management"></a>컴퓨터의 컬렉션을 전원 관리에서 제외하려면  
 
-1.  Configuration Manager コンソールで、[ **資産とコンプライアンス**] をクリックします。  
+1.  Configuration Manager 콘솔에서 **자산 및 호환성**을 클릭합니다.  
 
-2.  [ **資産とコンプライアンス** ] ワークスペースで [ **デバイス コレクション**] をクリックします。  
+2.  **자산 및 호환성** 작업 영역에서 **장치 컬렉션**을 클릭합니다.  
 
-3.  **デバイス コレクション** ボックスの一覧で、電源管理から除外するコレクションを選択し、[、 **ホーム** ] タブで、 **プロパティ** グループで、[ **プロパティ**です。  
+3.  **장치 컬렉션** 목록 중 전원 관리에서 제외할 컬렉션을 선택하고 **홈** 탭의 **속성** 그룹에서 **속성**을 클릭합니다.  
 
-4.  *[<コレクション名\>*** のプロパティ]** ダイアログ ボックスの **[電源管理]** タブで、**[このコレクションのコンピューターに電源管理設定を適用しない]** を選択します。  
+4.  *<컬렉션 이름\>***속성** 대화 상자의 **전원 관리** 탭에서 **이 컬렉션의 컴퓨터에 전원 관리 설정 적용 안 함**을 선택합니다.  
 
-5.  **[OK]** をクリックし、*[<コレクション名\>*** のプロパティ]** ダイアログ ボックスを閉じて設定を保存します。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+5.  **확인**을 클릭하여 *<컬렉션 이름\>***속성** 대화 상자를 닫고 설정을 저장합니다.  

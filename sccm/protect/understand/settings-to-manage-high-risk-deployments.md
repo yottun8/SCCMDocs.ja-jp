@@ -1,67 +1,60 @@
 ---
-title: "危険度の高い展開の管理 | Microsoft Docs"
-description: "管理者が危険度の高い展開を作成した場合に管理者に警告するように System Center Configuration Manager のサイト設定を構成する方法について説明します。"
+title: "높은 위험 수준의 배포 관리 | Microsoft 문서"
+description: "높은 위험 수준의 배포를 만드는 경우 관리자에게 경고하도록 System Center Configuration Manager에서 사이트 설정을 구성하는 방법을 알아봅니다."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 8d37b983-a964-402c-819d-2512ed2d463b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 8b5564f39f07a67a3c9278379ed59ca415603d21
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="settings-to-manage-high-risk-deployments-for-system-center-configuration-manager"></a>System Center Configuration Manager の危険度の高い展開を管理するための設定
+# <a name="settings-to-manage-high-risk-deployments-for-system-center-configuration-manager"></a>System Center Configuration Manager에 대해 위험 수준이 높은 배포를 관리하기 위한 설정
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
 
-System Center Configuration Manager では、管理者が危険度の高いタスク シーケンスの展開を作成すると警告が表示されるように、サイトの設定を構成することができます。 危険度の高い展開とは次のようなものです。  
+System Center Configuration Manager에서는 관리자가 높은 위험 수준의 작업 순서 배포를 만드는 경우 관리자에게 경고하는 사이트 설정을 구성할 수 있습니다. 위험 수준이 높은 배포는 다음과 같습니다.  
 
--   自動的にインストールされる展開  
+-   자동으로 설치되는 배포  
 
--   望ましくない結果を引き起こす可能性がある展開  
+-   예기치 않은 결과가 발생할 가능성이 있는 배포  
 
- たとえば、オペレーティング システムを展開する**必須**の目的を持つタスク シーケンスは、高危険度と見なされます。  
+ 예를 들어 용도가 **필수** 이며 운영 체제를 배포하는 작업 순서는 위험 수준이 높은 것으로 간주됩니다.  
 
- 望ましくない危険度の高い展開のリスクを減らすためには、これらの展開検証設定でサイズ制限を構成できます。  
+ 위험 수준이 높은 불필요한 배포가 수행될 위험을 줄이려는 경우 다음과 같은 배포 확인 설정에서 크기 제한을 구성할 수 있습니다.  
 
--   **コレクション サイズの制限**: 展開の作成時に、制限より多くのクライアントが含まれているコレクションを非表示にします。  
+-   **컬렉션 크기 제한**: 배포를 만들 때 클라이언트가 제한보다 많이 포함된 컬렉션을 숨깁니다.  
 
-    -   **既定サイズ**: この設定は、既定では、展開の作成時に、制限より多くのクライアントが含まれているコレクションを非表示にします。 展開の作成時にもこれらのコレクションを表示できますが、既定で非表示になっています。 既定値は 100 です。 この設定を無視する場合は 0 の値を入力します。  
+    -   **기본 크기**: 이 설정은 배포를 만들 때 클라이언트가 제한보다 많이 포함된 컬렉션을 기본적으로 숨깁니다. 이러한 컬렉션은 배포를 만들 때 표시할 수 있지만 기본적으로는 숨겨집니다. 기본값은 100입니다. 이 설정을 무시하려면 값으로 0을 입력합니다.  
 
-    -   **最大サイズ**: この設定は、展開の作成時に、制限より多くのクライアントが含まれているコレクションを常に非表示にします。 既定値は 0 であり、この設定は無視されます。 **最大サイズ** の値は、 **既定サイズ** の値より大きい必要があります。  
+    -   **최대 크기**: 이 설정은 배포를 만들 때 클라이언트가 제한보다 많이 포함된 컬렉션을 항상 숨깁니다. 기본값은 0입니다(이 설정이 무시됨). **최대 크기** 값은 **기본 크기** 값보다 커야 합니다.  
 
-     たとえば、**既定サイズ**を 100、**最大サイズ**を 1000 に設定します。 危険度の高い展開の作成時に、**[コレクションの選択]** ウィンドウには、含まれるクライアント数が 100 未満のコレクションのみが表示されます。 **[メンバー数がサイトの最小サイズ構成を超えるコレクションを非表示にする]** の設定をオフにすると、含まれるクライアント数が 1000 未満のコレクションがウィンドウに表示されます。  
+     **기본 크기**를 100으로 설정하고 **최대 크기**를 1,000으로 설정하는 경우를 예로 들어 보겠습니다. 위험 수준이 높은 배포를 만들 때 **컬렉션 선택** 창에는 클라이언트 수가 100개 미만인 컬렉션만 표시됩니다. **사이트의 최소 크기 구성보다 많은 멤버 수가 포함된 컬렉션 숨기기** 설정의 선택을 취소하면 1,000개 미만의 클라이언트가 포함된 컬렉션이 창에 표시됩니다.  
 
--   **サイト システム サーバーを含むコレクション**: 対象のコレクションにサイト システムの役割を持つコンピューターが含まれている場合は、展開をブロックするか、展開を作成する前に検証が必要になります。 展開がブロックされている場合は、展開の検証条件を満たす別のコレクションを選択する必要があります。  
+-   **사이트 시스템 서버를 사용하는 컬렉션**: 대상 컬렉션에 사이트 시스템 역할을 사용하는 컴퓨터가 포함되어 있으면 배포를 차단하거나 배포를 만들기 전에 확인을 요청합니다. 배포가 차단되면 배포 확인 기준을 충족하는 다른 컬렉션을 선택해야 합니다.  
 
 > [!NOTE]  
->  危険度の高い展開は、常にカスタム コレクション、作成されたコレクション、および組み込みの **不明なコンピューター** コレクションに制限されています。 危険度の高い展開を作成する際、 **すべてのシステム**などの組み込みのコレクションは選択できません。  
+>  위험 수준이 높은 배포는 항상 사용자 지정 컬렉션, 직접 작성하는 컬렉션 및 기본적으로 제공되는 **알 수 없는 컴퓨터** 컬렉션으로 제한됩니다. 위험 수준이 높은 배포를 만드는 경우 **모든 시스템**같은 기본 제공 컬렉션을 선택할 수 없습니다.  
 
-### <a name="to-configure-deployment-verification-for-a-site"></a>サイトの展開の検証を構成するには  
+### <a name="to-configure-deployment-verification-for-a-site"></a>사이트에 대한 배포 확인을 구성하려면  
 
-1.  Configuration Manager コンソールで、**[管理]** >**[サイトの構成]** > **[サイト]** の順に選択して、構成するプライマリ サイトを選択します。  
+1.  Configuration Manager 콘솔에서 **관리** >**사이트 구성** > **사이트**를 선택한 다음 구성할 기본 사이트를 선택합니다.  
 
-2.  **[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** を選択して、**[展開の検証]** タブを選択します。  
+2.  **홈** 탭의 **속성** 그룹에서 **속성**을 선택한 다음 **배포 확인** 탭을 선택합니다.  
 
-3.  使用する構成を設定した後は、**[OK]** を選択して構成を保存します。  
+3.  사용하려는 구성을 설정한 후 **확인**을 선택하여 구성을 저장합니다.  
 
-### <a name="see-also"></a>関連項目  
- [System Center Configuration Manager のサイトと階層の構成](../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+### <a name="see-also"></a>참고 항목  
+ [System Center Configuration Manager에 대한 사이트 및 계층 구조 구성](../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)

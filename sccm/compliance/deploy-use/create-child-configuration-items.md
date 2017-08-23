@@ -1,51 +1,44 @@
 ---
-title: "子構成項目の作成 | Microsoft Docs"
-description: "System Center Configuration Manager で子構成項目を作成します。"
+title: "자식 구성 항목 만들기 | Microsoft 문서"
+description: "System Center Configuration Manager에서 자식 구성 항목을 만듭니다."
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 113984fa-6150-41a1-89ed-d2a83b979732
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: 33d4a2d5a09af74e1d76ac9b34a42b749f5bf7ef
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-create-child-configuration-items-in-system-center-configuration-manager"></a>System Center Configuration Manager で子構成項目を作成する方法
+# <a name="how-to-create-child-configuration-items-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 자식 구성 항목을 만드는 방법
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager の子構成項目は構成項目のコピーであり、元の構成項目への関係を保持しています。したがって、子構成項目は親構成項目から元の構成を継承しています。  
+System Center Configuration Manager의 자식 구성 항목은 부모 구성 항목에서 원본 구성을 상속한다는 점에서 원본 구성 항목에 대한 관계를 유지하는 구성 항목의 복사본입니다.  
 
-Configuration Manager コンソールで子構成項目のプロパティを表示したときに、独自の検証条件を持つ継承されたオブジェクトと設定は編集できません。 ただし、子構成項目に検証条件を追加してから、その検証条件を編集することはできます。また、新しいオブジェクトや設定を子構成項目に追加することもできます。
-通常、子構成項目を作成したり編集したりする場合は、元の構成項目をビジネス要件に合わせることが目的になります。  
+Configuration Manager 콘솔에서 자식 구성 항목의 속성을 볼 때 상속된 개체 및 설정과 해당 유효성 검사 기준은 편집할 수 없습니다. 그러나 추가 유효성 검사 조건을 자식 구성 항목에 추가하고 편집할 수 있으며 또한 자식 구성 항목에 새 개체 및 설정을 추가할 수도 있습니다.
+자식 구성 항목을 만들고 편집하는 일반적인 목적은 원본 구성 항목을 구체화하여 비즈니스 요구 사항을 충족하기 위해서입니다.  
 
 > [!NOTE]  
->  子構成項目は、種類が **Windows デスクトップおよびサーバー (カスタム)**の構成項目からのみ作成できます。  
+>  자식 구성 항목은 **Windows 데스크톱 및 서버(사용자 지정)**형식의 구성 항목에서만 만들 수 있습니다.  
 
-## <a name="to-create-a-child-configuration-item"></a>子構成項目を作成するには  
+## <a name="to-create-a-child-configuration-item"></a>자식 구성 항목을 만들려면  
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[コンプライアンス設定]** > **[構成項目]** の順にクリックします。  
+1.  Configuration Manager 콘솔에서 **자산 및 준수** > **준수 설정** > **구성 항목**을 클릭합니다.  
 
-3.  **構成項目** 一覧で、子構成項目を作成するため、次の構成項目を選択、 **ホーム** ] タブで、 **構成項目** グループで、[ **子構成項目の作成**です。  
+3.  **구성 항목** 목록에서 자식 구성 항목을 만들려는 구성 항목을 선택한 다음 **홈** 탭의 **구성 항목** 그룹에서 **자식 구성 항목 만들기**를 클릭합니다.  
 
-4.  **全般** のページ、 **子の構成項目の作成ウィザード**, 、親の特定のバージョンを使用して、子を作成する構成項目を選択できます。 このウィザードのほかの手順は、標準の構成項目を作成する場合に使用する手順と同じです。 詳細については、｢[System Center Configuration Manager クライアントを使用して管理されている Windows デスクトップおよびサーバー コンピューターのカスタム構成項目を作成する方法](../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md)｣を参照してください。  
+4.  **자식 구성 항목 만들기 마법사** 의 **일반**페이지에서 자식을 만드는 데 사용할 부모 구성 항목의 특정 수정 버전을 선택할 수 있습니다. 이 마법사의 다른 단계는 표준 구성 항목을 만드는 데 사용하는 단계와 동일합니다. 자세한 내용은 [Windows 데스크톱 및 서버 컴퓨터에 대한 사용자 지정 구성 항목을 만드는 방법](../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md)을 참조하세요.  
 
-5.  ウィザードを完了します。 新しい子構成項目は、[構成項目] 一覧に表示されます。 ****  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+5.  마법사를 완료합니다. 새 자식 구성 항목은 **구성 항목** 목록에 표시됩니다.  

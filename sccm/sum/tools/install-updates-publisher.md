@@ -1,126 +1,123 @@
 ---
-title: "Updates Publisher のインストール | Microsoft Docs"
-description: "環境に System Center Updates Publisher をインストールする"
+title: "Updates Publisher 설치 | Microsoft 문서"
+description: "환경에 System Center Updates Publisher 설치"
 ms.custom: na
 ms.date: 07/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 70772ba7d08560aa66abcce29dc6cc6334aa2032
-ms.openlocfilehash: 63ea0383497a3f06870c0907c732010259d1a809
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/03/2017
-
+ms.openlocfilehash: 5c95a8b99b91531773392a77d25377465079b070
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="install-updates-publisher"></a>Updates Publisher のインストール
+# <a name="install-updates-publisher"></a>Updates Publisher 설치
 
-*適用対象: System Center Updates Publisher*
+*적용 대상: System Center Updates Publisher*
 
-このトピックの情報を参考にすると、お使いの環境で使用する Updates Publisher を取得、インストール、セットアップできます。
-
-
-## <a name="prerequisites-and-limitations"></a>前提条件と制限事項
-次のセクションでは、Updates Publisher をインストールして使用するための要件と、使用に際しての制限事項や既知の問題について詳しく説明します。
-
-### <a name="operating-systems"></a>オペレーティング システム
-次のオペレーティング システムの 64 ビット版に、Updates Publisher をインストールして実行します。 累積的な更新プログラムや Service Pack は不要です。
-
--   Windows Server 2016 (Standard、Datacenter)
--   Windows Server 2012 R2 (Standard、Datacenter)
--   Windows 10 (Pro、Education、Pro Education、Enterprise)
--   Windows 8.1 (Professional、Enterprise)
-
-### <a name="prerequisites"></a>必要条件
-Updates Publisher を実行するコンピューターには、以下のものが必要です。
-
--   **64 ビット オペレーティング システム**: Updates Publisher をインストールするコンピューターは、64 ビット版のオペレーティング システムで動作している必要があります。
--   **WSUS 4.0 以降**:
-    -   この要件を満たすために、Windows Server に既定の管理コンソールをインストールします。
-    -   Windows 10 と Windows 8.1 の場合は、[Windows オペレーティング システム用のリモート サーバー管理ツール (RSAT)](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems) をインストールします。 これにより、Updates Publisher を使用するために必要なサポート (*API と PowerShell コマンドレット*、*ユーザー インターフェイス管理コンソール*) がインストールされます。
--   **アクセス許可**:
-    -   インストール: ローカル管理者
-    -   ほとんどの操作: ローカル ユーザー
-    -   発行または WSUS に関連する操作: WSUS サーバー上の WSUS 管理者グループのメンバー
-
-### <a name="supported-languages"></a>サポートされる言語
-Updates Publisher で使用できる言語は英語のみですが、他言語向けの更新プログラムを管理できます。 言語サポートは、更新プログラムの発行、作成、編集などのタスクによって異なります。
-
-更新プログラムをエクスポートまたは発行するとき、Updates Publisher は Updates Publisher がインストールされているコンピューターのロケール設定に基づいて、ソフトウェア更新プログラムのタイトルと説明を表示します。
-
-たとえば、英語とスペイン語のタイトルを持つソフトウェア更新プログラムを作成します。
-
--   ロケール設定が英語 (既定) になっているコンピューターで更新プログラムを作成すると、英語でタイトルと説明が表示されます。
--   次に、ロケール設定がスペイン語になっているコンピューターに対して更新プログラムをエクスポートまたは発行すると、そのコンピューター上ではタイトルと説明がスペイン語で表示されます。
-
-### <a name="publishing"></a>発行
-ソフトウェア更新プログラムを発行するときに、ソフトウェア更新プログラムのバイナリ ファイルの言語を指定できます。 バイナリが言語に依存しないように指定することもできます。 次の言語がサポートされています。
-
--   アラビア語
--   中国語 (香港: 中華人民共和国香港特別行政区)
--   繁体字中国語
--   中国語 (簡体字)
--   チェコ語
--   デンマーク語
--   オランダ語
--   英語
--   フィンランド語
--   フランス語
--   ドイツ語
--   ギリシャ語
--   ヘブライ語
--   ハンガリー語
--   イタリア語
--   日本語
--   韓国語
--   ノルウェー語
--   ポーランド語
--   ポルトガル語
--   ポルトガル語 (ブラジル)
--   ロシア語
--   スペイン語
--   スウェーデン語
--   トルコ語
-
-### <a name="software-update-titles-and-descriptions"></a>ソフトウェア更新プログラムのタイトルと説明
-ソフトウェア更新プログラムのタイトルと説明については、次の言語がサポートされています。
-
--   繁体字中国語
--   中国語 (簡体字)
--   英語
--   フランス語
--   ドイツ語
--   イタリア語
--   日本語
--   韓国語
--   ポルトガル語 (ブラジル)
--   ロシア語
--   スペイン語
+이 항목의 정보는 사용자 환경에서 사용할 수 있도록 Updates Publisher를 가져오기, 설치 및 설정할 때 참조할 수 있습니다.
 
 
+## <a name="prerequisites-and-limitations"></a>필수 구성 요소 및 제한 사항
+다음 섹션에서는 Updates Publisher를 설치하고 사용하기 위한 요구 사항과 사용 제한 사항 또는 알려진 문제점에 대해 자세히 설명합니다.
 
-## <a name="install-updates-publisher"></a>Updates Publisher のインストール
-[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=847967)から、System Center Updates Publisher をインストールするための **UpdatesPubliser.msi** を取得します。
+### <a name="operating-systems"></a>운영 체제
+다음 운영 체제의 64비트 버전에 Updates Publisher를 설치하고 실행합니다. 최소 누적 업데이트 또는 서비스 팩 요구 사항은 없습니다.
 
-Updates Publisher をインストールするには、上記の*前提条件*を満たしているコンピューター上で **UpdatesPublisher.msi** を実行します。 インストーラーは、Updates Publisher を実行するために必要なファイルを格納する次のフォルダーを作成します: *&lt;path&gt;\Program Files\Microsoft\UpdatesPublisher*。
+-   Windows Server 2016(Standard, Datacenter)
+-   Windows Server 2012 R2(Standard, Datacenter)
+-   Windows 10(Pro, Education, Pro Education, Enterprise)
+-   Windows 8.1(Professional, Enterprise)
 
-このフォルダーには Updates Publisher を使用するために必要なすべてのファイルが格納されるため、そのフォルダーとファイルを新しい場所またはコンピューターにコピーすれば、その場所から Updates Publisher を使用できます。 ただし、新しい場所またはコンピューターは、Updates Publisher を実行するための前提条件を満たしている必要があります。
+### <a name="prerequisites"></a>전제 조건
+Updates Publisher를 실행하는 컴퓨터에는 다음이 필요합니다.
 
-インストールが完了したら、*UpdatesPublisher* フォルダーにある **UpdatesPublisher.exe** を実行して、Updates Publisher を開始します。
+-   **64비트 운영 체제**: Updates Publisher를 설치하려면 컴퓨터에서 64비트 운영 체제를 실행해야 합니다.
+-   **WSUS 4.0 이상**:
+    -   Windows Server에서 이 요구 사항을 충족시키려면 기본 관리 콘솔을 설치합니다.
+    -   Windows 10 및 Windows 8.1의 경우 [Windows 운영 체제용 RSAT(원격 서버 관리 도구)](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems)를 설치합니다. 그러면 Updates Publisher를 사용하는 데 필요한 지원(*API 및 PowerShell cmdlet* 및 *사용자 인터페이스 관리 콘솔*)이 설치됩니다.
+-   **사용 권한**:
+    -   설치: 로컬 관리자
+    -   대부분의 작업: 로컬 사용자
+    -   게시 또는 WSUS와 관련된 작업: WSUS 서버의 WSUS Administrators 그룹 구성원
 
-## <a name="next-steps"></a>次のステップ
- Updates Publisher のインストールが完了したら、Updates Publisher の[オプションを構成する](updates-publisher-options.md)ことをお勧めします。 Updates Publisher の一部の機能を使用するためには、オプションを構成する必要があります。
+### <a name="supported-languages"></a>지원되는 언어
+Updates Publisher는 영어로만 제공되지만 다른 언어의 업데이트를 관리할 수 있습니다. 언어 지원은 업데이트 게시, 만들기 또는 편집과 같은 작업에 따라 달라집니다.
 
- ただし、更新サーバーや管理対象デバイスに更新プログラムを展開するつもりがなく、既定のままで使用する場合は、[ソフトウェア更新カタログの管理](updates-publisher-catalogs.md)または[ソフトウェア更新プログラムの作成](create-updates-with-updates-publisher.md)に進んで、ご自身の更新カタログを作成できます。
+업데이트를 내보내거나 게시할 때 Updates Publisher는 Updates Publisher가 설치된 컴퓨터의 로캘을 기반으로 소프트웨어 업데이트의 제목과 설명을 표시합니다.
 
+예를 들어 영어 및 스페인어 제목이 있는 소프트웨어 업데이트를 만듭니다.
+
+-   로캘이 영어인 컴퓨터에서 업데이트를 만들면 기본적으로 제목과 설명이 영어로 표시됩니다.
+-   로캘이 스페인어인 컴퓨터로 업데이트를 내보내거나 게시하면 해당 컴퓨터에서 제목과 설명이 스페인어로 표시됩니다.
+
+### <a name="publishing"></a>게시
+소프트웨어 업데이트를 게시할 때 소프트웨어 업데이트 이진 파일의 언어를 지정할 수 있습니다. 이진 파일이 언어 중립적임을 지정할 수도 있습니다. 다음 언어가 지원됩니다.
+
+-   아랍어
+-   중국어(홍콩 특별 행정구)
+-   옵션 대신,
+-   중국어(간체)
+-   체코어
+-   덴마크어
+-   네덜란드어
+-   영어
+-   핀란드어
+-   프랑스어
+-   독일어
+-   그리스어
+-   히브리어
+-   헝가리어
+-   이탈리아어
+-   일본어
+-   한국어
+-   노르웨이어
+-   폴란드어
+-   포르투갈어
+-   포르투갈어(브라질)
+-   러시아어
+-   스페인어
+-   스웨덴어
+-   터키어
+
+### <a name="software-update-titles-and-descriptions"></a>소프트웨어 업데이트 제목 및 설명
+소프트웨어 업데이트 제목 및 설명에는 다음 언어가 지원됩니다.
+
+-   옵션 대신,
+-   중국어(간체)
+-   영어
+-   프랑스어
+-   독일어
+-   이탈리아어
+-   일본어
+-   한국어
+-   포르투갈어(브라질)
+-   러시아어
+-   스페인어
+
+
+
+## <a name="install-updates-publisher"></a>Updates Publisher 설치
+[Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=847967)에서 System Center Updates Publisher를 설치하기 위한 **UpdatesPubliser.msi**를 다운로드합니다.
+
+Updates Publisher를 설치하려면 *필수 조건*을 충족하는 컴퓨터에서 **UpdatesPublisher.msi**를 실행합니다. 설치 관리자는 Updates Publisher를 실행하는 데 필요한 파일을 포함하는 *&lt;path&gt;\Program Files\Microsoft\UpdatesPublisher* 폴더를 만듭니다.
+
+이 폴더에는 Updates Publisher를 사용하는 데 필요한 모든 파일이 포함되기 때문에, 이 폴더 및 해당 콘텐츠를 새 위치 또는 컴퓨터에 복사한 다음 해당 위치에서 Updates Publisher를 사용할 수 있습니다. 그러나 Updates Publisher를 실행하려면 새로운 위치 또는 컴퓨터가 필수 조건을 충족해야 합니다.
+
+설치가 완료되면 *UpdatesPublisher* 폴더에서 **UpdatesPublisher.exe**를 실행하여 Updates Publisher를 시작합니다.
+
+## <a name="next-steps"></a>다음 단계
+ Updates Publisher를 설치한 후에는 Updates Publisher에 대한 [옵션을 구성](updates-publisher-options.md)하는 것이 좋습니다. Updates Publisher의 일부 기능을 사용하려면 일부 옵션을 구성해야 합니다.
+
+ 그러나 기본값을 사용하고 업데이트 서버 또는 관리 장치에 업데이트를 배포하지 않으려면 [소프트웨어 업데이트 카탈로그 관리](updates-publisher-catalogs.md)로 바로 이동하거나, [소프트웨어 업데이트를 만들고](create-updates-with-updates-publisher.md) 업데이트 카탈로그를 직접 만듭니다.
 

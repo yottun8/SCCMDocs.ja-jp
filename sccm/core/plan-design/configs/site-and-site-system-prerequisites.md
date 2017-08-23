@@ -1,802 +1,799 @@
 ---
-title: "サイトの前提条件 | Microsoft Docs"
-description: "Windows コンピューターを System Center Configuration Manager サイト システム サーバーとして構成する方法について説明します。"
+title: "사이트 필수 조건 | Microsoft 문서"
+description: "Windows 컴퓨터를 System Center Configuration Manager 사이트 시스템 서버로 구성하는 방법을 알아봅니다."
 ms.custom: na
 ms.date: 1/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 42549b98dd7f418cc3f4543198aaeb90ea8a3efd
 ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
-ms.contentlocale: ja-jp
-ms.lasthandoff: 01/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイトとサイト システムの前提条件
+# <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>System Center Configuration Manager의 사이트 및 사이트 시스템 필수 조건
 
-*適用対象: System Center Configuration Manager (Current Branch)*
-
-
- Windows コンピューターを System Center Configuration Manager サイト システム サーバーとして使用するには、特定の構成が必要です。  
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
 
- ソフトウェア更新ポイント用の Windows Server Update Services (WSUS) など、一部の製品では、その製品のドキュメントで、その製品を使用するための追加の前提条件と制限を確認する必要があります。 ここでは、Configuration Manager で使用するために行う必要のある構成についてのみ説明します。   
+ Windows 기반 컴퓨터에서 System Center Configuration Manager 사이트 시스템 서버로서의 사용을 지원하려면 특정한 구성이 필요합니다.  
+
+
+ WSUS(Windows Server Update Services)와 같은 일부 제품의 경우 해당 제품 설명서를 참조하여 제품 사용을 위한 추가 필수 구성 요소 및 제한 사항을 확인하세요. 여기에는 Configuration Manager에서 사용하는 경우에 직접 적용되는 구성만 포함되어 있습니다.   
 
 > [!NOTE]  
->  2016 年 1 月に .NET Framework 4.0、4.5、および 4.5.1 のサポートは終了しました。 詳細については、support.microsoft.com の [Microsoft .NET Framework のサポート ライフサイクル ポリシーに関する FAQ](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) を参照してください。  
+>  2016년 1월에 .NET Framework 4.0, 4.5 및 4.5.1에 대한 지원이 만료되었습니다. 자세한 내용은 support.microsoft.com에서 [Microsoft .NET Framework 지원 기간 정책 FAQ](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)를 참조하세요.  
 
-## <a name="bkmk_generalprerewq"></a> サイト サーバーの一般的な要件と制限事項
-**すべてのサイト システム サーバーに適用される内容:**
+## <a name="bkmk_generalprerewq"></a> 일반적인 사이트 서버 요구 사항 및 제한 사항
+**다음 사항은 모든 사이트 시스템 서버에 적용됩니다.**
 
--   各サイト システム サーバーでは、64 ビットのオペレーティング システムを使用する必要があります。 唯一の例外は、配布ポイント サイト システムの役割です。これは、一部の 32 ビット版のオペレーティング システムにインストール可能です。  
+-   각 사이트 시스템 서버는 64비트 운영 체제를 사용해야 합니다. 단, 일부 32비트 운영 체제 버전에 설치할 수 있는 배포 지점 사이트 시스템 역할의 경우는 예외입니다.  
 
--   サイト システムは、オペレーティング システムの Server Core インストールではサポートされません。 この例外は、PXE やマルチキャストのサポートなしで、配布ポイント サイト システムの役割に対して、Server Core インストールがサポートされていることです。  
+-   사이트 시스템은 모든 운영 체제의 Server Core 설치에서 지원되지 않습니다. 단, PXE 또는 멀티캐스트 지원 없이 Server Core 설치가 배포 지점 사이트 시스템 역할에 대해 지원되는 경우는 예외입니다.  
 
--   サイト システム サーバーは、インストール後、次を変更できません。  
+-   사이트 시스템 서버를 설치한 후에는 다음 항목을 변경할 수 없습니다.  
 
-    -   サイト システム コンピューターが配置されているドメインのドメイン名 (**ドメイン名の変更**とも呼ばれます)。  
+    -   사이트 시스템 컴퓨터가 있는 도메인의 도메인 이름(**도메인 이름 바꾸기**라고도 함).  
 
-    -   コンピューターのドメイン メンバーシップ。  
+    -   컴퓨터의 도메인 멤버 자격.  
 
-    -   コンピューターの名前です。  
+    -   컴퓨터의 이름.  
 
-  これらのいずれかの変更が必要な場合は、最初にコンピューターからサイト システムの役割を削除して、変更の完了後に役割を再インストールする必要があります。 これがサイト サーバー コンピューターに影響する場合は、サイトをアンインストールして、変更の完了後にサイトを再インストールする必要があります。  
+  이러한 항목 중 하나를 변경해야 하는 경우에는 먼저 컴퓨터에서 사이트 시스템 역할을 제거하고 변경을 완료한 후에 역할을 다시 설치해야 합니다. 이러한 변경이 사이트 서버 컴퓨터에 영향을 주는 경우에는 사이트를 제거하고 변경을 완료한 후에 사이트를 다시 설치해야 합니다.  
 
--   サイト システムの役割は、Windows Server クラスターのインスタンスではサポートされません。 唯一の例外は、サイト データベース サーバーです。  
+-   Windows Server 클러스터의 인스턴스에서는 사이트 시스템 역할이 지원되지 않습니다. 단, 사이트 데이터베이스 서버의 경우는 예외입니다.  
 
--   Configuration Manager サービスについては、スタートアップの種類やログオン方法の設定の変更はサポートされていません。 そのようにすると、主要なサービスが正しく実行できなくなる可能性があります。  
+-   모든 Configuration Manager 서비스의 시작 유형 또는 다음 사용자로 “로그온” 설정은 변경할 수 없습니다. 이 설정을 변경하면 주요 서비스가 정상적으로 실행되지 않을 수 있습니다.  
 
-##  <a name="bkmk_2012Prereq"></a> Windows Server 2012 以降のオペレーティング システムの前提条件  
-###  <a name="bkmk_2012sspreq"></a> サイト サーバー: 中央管理サイトおよびプライマリ サイト  
-  **Windows Server の役割と機能:**  
+##  <a name="bkmk_2012Prereq"></a> Windows Server 2012 이상 운영 체제의 필수 조건  
+###  <a name="bkmk_2012sspreq"></a> 사이트 서버: 중앙 관리 사이트 및 기본 사이트  
+  **Windows Server 역할 및 기능:**  
 
--   .NET Framework 3.5 SP1 (またはそれ以降)  
+-   .NET Framework 3.5 SP1 이상  
 
 -   .NET Framework 4.5.2  
 
--   Remote Differential Compression  
+-   원격 차등 압축  
 
 **Windows ADK:**  
 
--   中央管理サイトまたはプライマリ サイトをインストールまたはアップグレードする前に、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows アセスメント & デプロイメント キットのバージョンをインストールする必要があります。  
+-   중앙 관리 사이트 또는 기본 사이트를 설치하거나 업그레이드하기 전에 설치하거나 업그레이드할 Configuration Manager 버전에서 요구하는 Windows ADK(평가 및 배포 키트) 버전을 설치해야 합니다.  
 
-    -   Configuration Manager の 1511 バージョンでは、Windows ADK の Windows 10 RTM (10.0.10240) バージョンが必要です。  
+    -   Configuration Manager 버전 1511에는 Windows ADK의 Windows 10 RTM(10.0.10240) 버전이 필요합니다.  
 
--   要件の詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)」を参照してください。  
+-   이 요구 사항에 대한 자세한 내용은 [운영 체제 배포를 위한 인프라 요구 사항](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)을 참조하세요.  
 
-**Visual C++ 再頒布可能ファイル:**  
+**Visual C++ 재배포 가능 패키지:**  
 
--   Configuration Manager はサイト サーバーをインストールするコンピューターごとに、Microsoft Visual C++ 2013 再頒布可能パッケージをインストールします。  
+-   Configuration Manager는 사이트 서버를 설치하는 각 컴퓨터에 Microsoft Visual C++ 2013 재배포 가능 패키지를 설치합니다.  
 
--   中央管理サイトとプライマリ サイトには、該当する再頒布可能ファイルの x86 および x64 バージョンの両方が必要です。  
+-   중앙 관리 사이트와 기본 사이트에는 해당하는 재배포 가능 패키지 파일의 x86 및 x64 버전이 모두 필요합니다.  
 
-###  <a name="bkmk_2012secpreq"></a> サイト サーバー: セカンダリ サイト  
-**Windows Server の役割と機能:**  
+###  <a name="bkmk_2012secpreq"></a> 사이트 서버: 보조 사이트  
+**Windows Server 역할 및 기능:**  
 
--   .NET Framework 3.5 SP1 (またはそれ以降)  
+-   .NET Framework 3.5 SP1 이상  
 
 -   .NET Framework 4.5.2  
 
--   Remote Differential Compression  
+-   원격 차등 압축  
 
-**Visual C++ 再頒布可能ファイル:**  
+**Visual C++ 재배포 가능 패키지:**  
 
--   Configuration Manager はサイト サーバーをインストールするコンピューターごとに、Microsoft Visual C++ 2013 再頒布可能パッケージをインストールします。  
+-   Configuration Manager는 사이트 서버를 설치하는 각 컴퓨터에 Microsoft Visual C++ 2013 재배포 가능 패키지를 설치합니다.  
 
--   セカンダリ サイトには x64 バージョンのみが必要です。  
+-   보조 사이트에는 x64 버전만 필요합니다.  
 
-**既定のサイト システムの役割:**  
+**기본 사이트 시스템 역할:**  
 
--   既定では、セカンダリ サイトに**管理ポイント**と**配布ポイント**がインストールされます。  
+-   기본적으로 보조 사이트는 **관리 지점**과 **배포 지점**을 설치합니다.  
 
--   セカンダリ サイト サーバーが、それらのサイト システムの役割に対する前提条件を満たしていることを確認します。  
+-   보조 사이트 서버는 이러한 사이트 시스템 역할에 대한 필수 구성 요소를 충족해야 합니다.  
 
-###  <a name="bkmk_2012dbpreq"></a> データベース サーバー  
-**リモート レジストリ サービス:**  
+###  <a name="bkmk_2012dbpreq"></a> 데이터베이스 서버  
+**원격 레지스트리 서비스:**  
 
--   Configuration Manager サイトのインストール時には、サイト データベースをホストするコンピューターで、リモート レジストリ サービスが有効化されている必要があります。  
+-   Configuration Manager 사이트를 설치하는 동안 사이트 데이터베이스를 호스트하는 컴퓨터에서 원격 레지스트리 서비스를 사용하도록 설정해야 합니다.  
 
 **SQL Server:**  
 
--   中央管理サイトまたはプライマリ サイトをインストールする前に、サイト データベースをホストする SQL Server のサポートされているバージョンをインストールする必要があります。  
+-   중앙 관리 사이트 또는 기본 사이트를 설치하기 전에 사이트 데이터베이스를 호스트할 수 있는 버전의 SQL Server를 설치해야 합니다.  
 
--   セカンダリ サイトをインストールする前に、サポートされているバージョンの SQL Server をインストールすることができます。  
+-   보조 사이트를 설치하기 전에 이 버전의 SQL Server를 설치할 수 있습니다.  
 
--   セカンダリ サイトのインストールの一環として Configuration Manager によって SQL Server Express をインストールする場合は、コンピューターが SQL Server Express を実行する要件を満たしていることを確認します。  
+-   Configuration Manager에서 보조 사이트 설치의 일부로 SQL Server Express를 설치하도록 선택한 경우 컴퓨터가 SQL Server Express를 실행하기 위한 요구 사항을 충족하는지 확인합니다.  
 
-###  <a name="bkmk_2012smsprovpreq"></a> SMS プロバイダー サーバー  
+###  <a name="bkmk_2012smsprovpreq"></a> SMS 공급자 서버  
 **Windows ADK:**  
 
--   SMS プロバイダーのインスタンスをインストールするコンピューターには、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンが必要です。  
+-   SMS 공급자의 인스턴스를 설치하는 컴퓨터에는 설치하거나 업그레이드 중인 Configuration Manager 버전에서 요구하는 Windows ADK의 필수 버전이 있어야 합니다.  
 
-    -   Configuration Manager の 1511 バージョンでは、Windows ADK の Windows 10 RTM (10.0.10240) バージョンが必要です。  
+    -   Configuration Manager 버전 1511에는 Windows ADK의 Windows 10 RTM(10.0.10240) 버전이 필요합니다.  
 
--   要件の詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)」を参照してください。  
+-   이 요구 사항에 대한 자세한 내용은 [운영 체제 배포를 위한 인프라 요구 사항](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)을 참조하세요.  
 
-###  <a name="bkmk_2012acwspreq"></a> アプリケーション カタログ Web サイト ポイント  
-**Windows Server の役割と機能:**  
+###  <a name="bkmk_2012acwspreq"></a> 응용 프로그램 카탈로그 웹 사이트 지점  
+**Windows Server 역할 및 기능:**  
 
--   .NET Framework 3.5 SP1 (またはそれ以降)  
+-   .NET Framework 3.5 SP1 이상  
 
 -   .NET Framework 4.5.2:  
 
     -   ASP.NET 4.5  
 
-**IIS の構成:**  
+**IIS 구성:**  
 
--   共通の HTTP 機能:  
+-   일반 HTTP 기능:  
 
-    -   既定のドキュメント  
+    -   기본 문서  
 
-    -   静的コンテンツ  
+    -   정적 콘텐츠  
 
--   アプリケーションの開発:  
+-   응용 프로그램 개발:  
 
-    -   ASP.NET 3.5 (および、自動的に選択されるオプション)  
+    -   ASP.NET 3.5 및 자동으로 선택된 옵션  
 
-    -   ASP.NET 4.5 (および、自動的に選択されるオプション)  
+    -   ASP.NET 4.5 및 자동으로 선택된 옵션  
 
-    -   .NET 拡張機能 3.5  
+    -   .NET 확장성 3.5  
 
-    -   .NET 拡張機能 4.5  
+    -   .NET 확장성 4.5  
 
--   セキュリティ:  
+-   보안:  
 
-    -   Windows 認証  
+    -   Windows 인증  
 
--   IIS 6 管理互換性:  
+-   IIS 6 관리 호환성:  
 
-    -   IIS 6 メタベース互換  
+    -   IIS 6 메타데이터 호환성  
 
-###  <a name="bkmk_2012ACwsitepreq"></a> アプリケーション カタログ Web サービス ポイント  
-**Windows Server の役割と機能:**  
+###  <a name="bkmk_2012ACwsitepreq"></a> 응용 프로그램 카탈로그 웹 서비스 지점  
+**Windows Server 역할 및 기능:**  
 
--   .NET Framework 3.5 SP1 (またはそれ以降)  
+-   .NET Framework 3.5 SP1 이상  
 
 -   .NET Framework 4.5.2:  
 
     -   ASP.NET 4.5:  
 
-        -   HTTP アクティブ化 (および、自動的に選択されるオプション)  
+        -   HTTP 활성화 및 자동으로 선택된 옵션  
 
-**IIS の構成:**  
+**IIS 구성:**  
 
--   共通の HTTP 機能:  
+-   일반 HTTP 기능:  
 
-    -   既定のドキュメント  
+    -   기본 문서  
 
--   IIS 6 管理互換性:  
+-   IIS 6 관리 호환성:  
 
-    -   IIS 6 メタベース互換  
+    -   IIS 6 메타데이터 호환성  
 
--   アプリケーションの開発:  
+-   응용 프로그램 개발:  
 
-    -   ASP.NET 3.5 (および、自動的に選択されるオプション)  
+    -   ASP.NET 3.5 및 자동으로 선택된 옵션  
 
-    -   .NET 拡張機能 3.5  
+    -   .NET 확장성 3.5  
 
-    -   ASP.NET 4.5 (および、自動的に選択されるオプション)  
+    -   ASP.NET 4.5 및 자동으로 선택된 옵션  
 
-    -   .NET 拡張機能 4.5  
+    -   .NET 확장성 4.5  
 
-**コンピューターのメモリ:**  
+**컴퓨터 메모리:**  
 
--   このサイト システムの役割をホストするコンピューターには、サイト システムの役割が要求を処理するために、コンピューターの使用可能メモリの最低 5% を空けておく必要があります。  
+-   이 사이트 시스템 역할을 호스트하는 컴퓨터가 해당 컴퓨터의 사용 가능한 메모리 중 5% 이상을 사용할 수 있어야 사이트 시스템 역할이 요청을 처리할 수 있습니다.  
 
--   このサイト システムの役割が同じ要件の別のサイト システムの役割と併置される場合、このコンピューターに対するメモリの要件は増加しませんが、最低 5% の要件は維持されます。  
+-   이 요구 사항이 동일하게 적용되는 다른 사이트 시스템 역할과 함께 이 사이트 시스템 역할을 배치해도 컴퓨터에 대한 이 메모리 요구 사항이 증가하지는 않으며 최소값인 5%가 그대로 유지됩니다.  
 
-###  <a name="bkmk_2012AIpreq"></a> 資産インテリジェンス同期ポイント  
-**Windows Server の役割と機能:**  
+###  <a name="bkmk_2012AIpreq"></a> Asset Intelligence 동기화 지점  
+**Windows Server 역할 및 기능:**  
 
 -   .NET Framework 4.5.2  
 
-###  <a name="bkmk_2012crppreq"></a> 証明書登録ポイント  
-**Windows Server の役割と機能:**  
+###  <a name="bkmk_2012crppreq"></a> 인증서 등록 지점  
+**Windows Server 역할 및 기능:**  
 
 -   .NET Framework 4.5.2:  
 
-    -   HTTP アクティブ化  
+    -   HTTP 활성화  
 
-**IIS の構成:**  
+**IIS 구성:**  
 
--   アプリケーションの開発:  
+-   응용 프로그램 개발:  
 
-    -   ASP.NET 3.5 (および、自動的に選択されるオプション)  
+    -   ASP.NET 3.5 및 자동으로 선택된 옵션  
 
-    -   ASP.NET 4.5 (および、自動的に選択されるオプション)  
+    -   ASP.NET 4.5 및 자동으로 선택된 옵션  
 
--   IIS 6 管理互換性:  
+-   IIS 6 관리 호환성:  
 
-    -   IIS 6 メタベース互換  
+    -   IIS 6 메타데이터 호환성  
 
-    -   IIS 6 WMI 互換  
+    -   IIS 6 WMI 호환성  
 
-###  <a name="bkmk_2012dppreq"></a> 配布ポイント  
-**Windows Server の役割と機能:**  
+###  <a name="bkmk_2012dppreq"></a> 배포 지점  
+**Windows Server 역할 및 기능:**  
 
--   Remote Differential Compression  
+-   원격 차등 압축  
 
-**IIS の構成:**  
+**IIS 구성:**  
 
--   アプリケーションの開発:  
+-   응용 프로그램 개발:  
 
-    -   ISAPI 拡張機能  
+    -   ISAPI 확장  
 
--   セキュリティ:  
+-   보안:  
 
-    -   Windows 認証  
+    -   Windows 인증  
 
--   IIS 6 管理互換性:  
+-   IIS 6 관리 호환성:  
 
-    -   IIS 6 メタベース互換  
+    -   IIS 6 메타데이터 호환성  
 
-    -   IIS 6 WMI 互換  
+    -   IIS 6 WMI 호환성  
 
 **PowerShell:**  
 
--   Windows Server 2012 以降では、配布ポイントをインストールする前に、PowerShell 3.0 または 4.0 が必要になります。  
+-   Windows Server 2012 이상에서는, 배포 지점을 설치하려면 먼저 PowerShell 3.0 또는 4.0이 있어야 합니다.  
 
-**Visual C++ 再頒布可能ファイル:**  
+**Visual C++ 재배포 가능 패키지:**  
 
--   Configuration Manager は配布ポイントをホストするコンピューターごとに、Microsoft Visual C++ 2013 再頒布可能パッケージをインストールします。  
+-   Configuration Manager는 배포 지점을 호스트하는 각 컴퓨터에 Microsoft Visual C++ 2013 재배포 가능 패키지를 설치합니다.  
 
--   インストールされるバージョンは、コンピューターのプラットフォーム (x86 または x64) によって異なります。  
+-   설치되는 버전은 컴퓨터 플랫폼(x86 또는 x64)에 따라 달라집니다.  
 
-**Microsoft Azure**  
+**Microsoft Azure:**  
 
--   Microsoft Azure のクラウド サービスを使用して、配布ポイントをホストできます。  
+-   Microsoft Azure의 클라우드 서비스를 사용하여 배포 지점을 호스트할 수 있습니다.  
 
-**PXE またはマルチキャストをサポートするには:**  
+**PXE 또는 멀티캐스트를 지원하려면**  
 
--   Windows 展開サービス (WDS) の Windows サーバー ロールをインストールして構成します。  
+-   WDS(Windows 배포 서비스) Windows Server 역할을 설치 및 구성합니다.  
 
     > [!NOTE]  
-    >  WDS は、PXE またはマルチキャストをサポートするように配布ポイントを構成するときに、Windows Server 2012 以降を実行するサーバーに自動的にインストールされ構成されます。  
+    >  Windows Server 2012 이상을 실행하는 서버에서는 PXE 또는 멀티캐스트를 지원하도록 배포 지점을 구성할 때 WDS가 자동으로 설치되고 구성됩니다.  
 
 > [!NOTE]  
-> 配布ポイント サイト システムの役割に、バックグラウンド インテリジェント転送サービス (BITS) は必要ありません。 配布ポイントのコンピューターに BITS が構成されている場合、BITS を使用するクライアントによるコンテンツのダウンロードを効率化するために、配布ポイントのコンピューターの BITS は使用されません。  
+> 배포 지점 사이트 시스템 역할에는 BITS(Background Intelligent Transfer Service)가 필요하지 않습니다. 배포 지점 컴퓨터에 BITS가 구성되어 있어도 BITS를 사용하는 클라이언트의 콘텐츠 다운로드를 원활하게 진행하기 위해 배포 지점 컴퓨터의 BITS를 사용하지 않습니다.  
 
-###  <a name="bkmk_2012EPPpreq"></a> Endpoint Protection ポイント  
-**Windows Server の役割と機能:**  
+###  <a name="bkmk_2012EPPpreq"></a> Endpoint Protection 지점  
+**Windows Server 역할 및 기능:**  
 
--   .NET Framework 3.5 SP1 (またはそれ以降)  
+-   .NET Framework 3.5 SP1 이상  
 
-###  <a name="bkmk_2012Enrollpreq"></a> 登録ポイント  
-**Windows Server の役割と機能:**  
+###  <a name="bkmk_2012Enrollpreq"></a> 등록 지점  
+**Windows Server 역할 및 기능:**  
 
--   .NET framework 3.5 (またはそれ以降)  
+-   .NET Framework 3.5 이상  
 
 -   .NET Framework 4.5.2:  
 
-     このサイト システムの役割のインストール時に Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
+     이 사이트 시스템 역할을 설치하면 Configuration Manager에서 자동으로.NET Framework 4.5.2를 설치합니다. 이 설치로 인해 서버가 다시 부팅 보류 중 상태가 될 수 있습니다. NET Framework에 대한 다시 부팅이 보류 중인 경우 서버가 다시 부팅되어 설치를 완료할 때까지 .NET 응용 프로그램이 실패할 수 있습니다.  
 
-    -   HTTP アクティブ化 (および、自動的に選択されるオプション)  
+    -   HTTP 활성화 및 자동으로 선택된 옵션  
 
     -   ASP.NET 4.5  
 
 
-**IIS の構成:**  
+**IIS 구성:**  
 
--   共通の HTTP 機能:  
+-   일반 HTTP 기능:  
 
-    -   既定のドキュメント  
+    -   기본 문서  
 
--   アプリケーションの開発:  
+-   응용 프로그램 개발:  
 
-    -   ASP.NET 3.5 (および、自動的に選択されるオプション)  
+    -   ASP.NET 3.5 및 자동으로 선택된 옵션  
 
-    -   .NET 拡張機能 3.5  
+    -   .NET 확장성 3.5  
 
-    -   ASP.NET 4.5 (および、自動的に選択されるオプション)  
+    -   ASP.NET 4.5 및 자동으로 선택된 옵션  
 
-    -   .NET 拡張機能 4.5  
+    -   .NET 확장성 4.5  
 
--   IIS 6 管理互換性:  
+-   IIS 6 관리 호환성:  
 
-    -   IIS 6 メタベース互換  
+    -   IIS 6 메타데이터 호환성  
 
-**コンピューターのメモリ:**  
+**컴퓨터 메모리:**  
 
--   このサイト システムの役割をホストするコンピューターには、サイト システムの役割が要求を処理するために、コンピューターの使用可能メモリの最低 5% を空けておく必要があります。  
+-   이 사이트 시스템 역할을 호스트하는 컴퓨터가 해당 컴퓨터의 사용 가능한 메모리 중 5% 이상을 사용할 수 있어야 사이트 시스템 역할이 요청을 처리할 수 있습니다.  
 
--   このサイト システムの役割が同じ要件の別のサイト システムの役割と併置される場合、このコンピューターに対するメモリの要件は増加しませんが、最低 5% の要件は維持されます。  
+-   이 요구 사항이 동일하게 적용되는 다른 사이트 시스템 역할과 함께 이 사이트 시스템 역할을 배치해도 컴퓨터에 대한 이 메모리 요구 사항이 증가하지는 않으며 최소값인 5%가 그대로 유지됩니다.  
 
-###  <a name="bkmk_2012EnrollProxpreq"></a> 登録プロキシ ポイント  
-**Windows Server の役割と機能:**  
+###  <a name="bkmk_2012EnrollProxpreq"></a> 등록 프록시 지점  
+**Windows Server 역할 및 기능:**  
 
--   .NET framework 3.5 (またはそれ以降)  
-
--   .NET Framework 4.5.2  
-
-     このサイト システムの役割のインストール時に Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
-
-**IIS の構成:**  
-
--   共通の HTTP 機能:  
-
-    -   既定のドキュメント  
-
-    -   静的コンテンツ  
-
--   アプリケーションの開発:  
-
-    -   ASP.NET 3.5 (および、自動的に選択されるオプション)  
-
-    -   ASP.NET 4.5 (および、自動的に選択されるオプション)  
-
-    -   .NET 拡張機能 3.5  
-
-    -   .NET 拡張機能 4.5  
-
--   セキュリティ:  
-
-    -   Windows 認証  
-
--   IIS 6 管理互換性:  
-
-    -   IIS 6 メタベース互換  
-
-**コンピューターのメモリ:**  
-
--   このサイト システムの役割をホストするコンピューターには、サイト システムの役割が要求を処理するために、コンピューターの使用可能メモリの最低 5% を空けておく必要があります。  
-
--   このサイト システムの役割が同じ要件の別のサイト システムの役割と併置される場合、このコンピューターに対するメモリの要件は増加しませんが、最低 5% の要件は維持されます。  
-
-###  <a name="bkmk_2012FSPpreq"></a> フォールバック ステータス ポイント  
-既定の IIS 構成に加え、次が必要です。  
-
--   IIS 6 管理互換性:  
-
-    -   IIS 6 メタベース互換  
-
-###  <a name="bkmk_2012MPpreq"></a> 管理ポイント  
-**Windows Server の役割と機能:**  
+-   .NET Framework 3.5 이상  
 
 -   .NET Framework 4.5.2  
 
--   BITS サーバー拡張 (および自動的に選択されるオプション)、またはバックグラウンド インテリジェント転送サービス (BITS) (および自動的に選択されるオプション)  
+     이 사이트 시스템 역할을 설치하면 Configuration Manager에서 자동으로.NET Framework 4.5.2를 설치합니다. 이 설치로 인해 서버가 다시 부팅 보류 중 상태가 될 수 있습니다. NET Framework에 대한 다시 부팅이 보류 중인 경우 서버가 다시 부팅되어 설치를 완료할 때까지 .NET 응용 프로그램이 실패할 수 있습니다.  
 
-**IIS の構成:**  
+**IIS 구성:**  
 
--   アプリケーションの開発:  
+-   일반 HTTP 기능:  
 
-    -   ISAPI 拡張機能  
+    -   기본 문서  
 
--   セキュリティ:  
+    -   정적 콘텐츠  
 
-    -   Windows 認証  
+-   응용 프로그램 개발:  
 
--   IIS 6 管理互換性:  
+    -   ASP.NET 3.5 및 자동으로 선택된 옵션  
 
-    -   IIS 6 メタベース互換  
+    -   ASP.NET 4.5 및 자동으로 선택된 옵션  
 
-    -   IIS 6 WMI 互換  
+    -   .NET 확장성 3.5  
 
-###  <a name="bkmk_2012RSpoint"></a> レポート サービス ポイント  
-**Windows Server の役割と機能:**  
+    -   .NET 확장성 4.5  
+
+-   보안:  
+
+    -   Windows 인증  
+
+-   IIS 6 관리 호환성:  
+
+    -   IIS 6 메타데이터 호환성  
+
+**컴퓨터 메모리:**  
+
+-   이 사이트 시스템 역할을 호스트하는 컴퓨터가 해당 컴퓨터의 사용 가능한 메모리 중 5% 이상을 사용할 수 있어야 사이트 시스템 역할이 요청을 처리할 수 있습니다.  
+
+-   이 요구 사항이 동일하게 적용되는 다른 사이트 시스템 역할과 함께 이 사이트 시스템 역할을 배치해도 컴퓨터에 대한 이 메모리 요구 사항이 증가하지는 않으며 최소값인 5%가 그대로 유지됩니다.  
+
+###  <a name="bkmk_2012FSPpreq"></a> 대체 상태 지점  
+다음 항목이 추가된 기본 IIS 구성이 필요합니다.  
+
+-   IIS 6 관리 호환성:  
+
+    -   IIS 6 메타데이터 호환성  
+
+###  <a name="bkmk_2012MPpreq"></a> 관리 지점  
+**Windows Server 역할 및 기능:**  
+
+-   .NET Framework 4.5.2  
+
+-   BITS 서버 확장 및 자동으로 선택된 옵션이나 BITS(Background Intelligent Transfer Services) 및 자동으로 선택된 옵션  
+
+**IIS 구성:**  
+
+-   응용 프로그램 개발:  
+
+    -   ISAPI 확장  
+
+-   보안:  
+
+    -   Windows 인증  
+
+-   IIS 6 관리 호환성:  
+
+    -   IIS 6 메타데이터 호환성  
+
+    -   IIS 6 WMI 호환성  
+
+###  <a name="bkmk_2012RSpoint"></a> 보고 서비스 지점  
+**Windows Server 역할 및 기능:**  
 
 -   .NET Framework 4.5.2  
 
 **SQL Server Reporting Services:**  
 
--   レポート サービス ポイントをインストールする前に、SQL Server Reporting Services をサポートするために、SQL Server の 1 つ以上のインスタンスをインストールして構成する必要があります。  
+-   보고 서비스 지점을 설치하기 전에 SQL Server Reporting Services를 지원할 수 있는 SQL Server의 인스턴스를 하나 이상 설치하고 구성해야 합니다.  
 
--   SQL Server Reporting Services に使用するインスタンスは、サイト データベースに使用するインスタンスと同じものにすることができます。  
+-   SQL Server Reporting Services에 사용하는 인스턴스는 사이트 데이터베이스에 사용하는 인스턴스와 동일할 수 있습니다.  
 
--   さらに、そのインスタンスを別の System Center 製品と共有して使用することもできます。ただし、他の System Center 製品に SQL Server のインスタンスの共有に対する制限がない場合に限ります。  
+-   또한 다른 System Center 제품에 SQL Server 인스턴스 공유 관련 제한이 없는 경우 SQL Server Reporting Services에 사용하는 인스턴스를 다른 System Center 제품과 공유할 수 있습니다.  
 
-###  <a name="bkmk_SCPpreq"></a> サービス接続ポイント  
-**Windows Server の役割と機能:**  
-
--   .NET Framework 4.5.2  
-
-     このサイト システムの役割のインストール時に Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
-
-**Visual C++ 再頒布可能ファイル:**  
-
--   Configuration Manager は配布ポイントをホストするコンピューターごとに、Microsoft Visual C++ 2013 再頒布可能パッケージをインストールします。  
-
--   サイト システムの役割には、x64 バージョンが必要です。  
-
-###  <a name="bkmk_2012SUPpreq"></a> ソフトウェアの更新ポイント  
-**Windows Server の役割と機能:**  
-
--   .NET Framework 3.5 SP1 (またはそれ以降)  
+###  <a name="bkmk_SCPpreq"></a> 서비스 연결 지점  
+**Windows Server 역할 및 기능:**  
 
 -   .NET Framework 4.5.2  
 
-既定の IIS 構成が必要です。
+     이 사이트 시스템 역할을 설치하면 Configuration Manager에서 자동으로.NET Framework 4.5.2를 설치합니다. 이 설치로 인해 서버가 다시 부팅 보류 중 상태가 될 수 있습니다. NET Framework에 대한 다시 부팅이 보류 중인 경우 서버가 다시 부팅되어 설치를 완료할 때까지 .NET 응용 프로그램이 실패할 수 있습니다.  
+
+**Visual C++ 재배포 가능 패키지:**  
+
+-   Configuration Manager는 배포 지점을 호스트하는 각 컴퓨터에 Microsoft Visual C++ 2013 재배포 가능 패키지를 설치합니다.  
+
+-   사이트 시스템 역할에는 x64 버전이 필요합니다.  
+
+###  <a name="bkmk_2012SUPpreq"></a> 소프트웨어 업데이트 지점  
+**Windows Server 역할 및 기능:**  
+
+-   .NET Framework 3.5 SP1 이상  
+
+-   .NET Framework 4.5.2  
+
+기본 IIS 구성이 필요합니다.
 
 **Windows Server Update Services:**  
 
--   ソフトウェアの更新ポイントをインストールする前に、コンピューターに Windows サーバーの役割の Windows Server Update Services をインストールする必要があります。  
+-   소프트웨어 업데이트 지점을 설치하기 전에 컴퓨터에 Windows 서버 역할 Windows Server Update Services를 설치해야 합니다.  
 
--   詳細については、「[System Center Configuration Manager でのソフトウェア更新プログラムの計画](../../../sum/plan-design/plan-for-software-updates.md)」をご覧ください。  
+-   자세한 내용은 [System Center Configuration Manager에서 소프트웨어 업데이트 계획](../../../sum/plan-design/plan-for-software-updates.md)을 참조하세요.  
 
-### <a name="state-migration-point"></a>状態移行ポイント  
-既定の IIS 構成が必要です。  
+### <a name="state-migration-point"></a>상태 마이그레이션 지점  
+기본 IIS 구성이 필요합니다.  
 
-##  <a name="bkmk_2008"></a> Windows Server 2008 R2 および Windows Server 2008 の前提条件  
-[マイクロソフト サポート ライフサイクル](https://support.microsoft.com/lifecycle)で詳述するように、Windows Server 2008 および Windows Server 2008 R2 が延長サポートになり、メインストリーム サポートが終了しました。 Configuration Manager を使用したサイト システム サーバーとしてのこれらのオペレーティング システムの将来のサポートの詳細については、「[System Center Configuration Manager から削除された機能と非推奨の機能](../../../core/plan-design/changes/removed-and-deprecated-features.md)」を参照してください。  
+##  <a name="bkmk_2008"></a> Windows Server 2008 R2 및 Windows Server 2008에 대한 필수 조건  
+[Microsoft 지원 기간](https://support.microsoft.com/lifecycle)에 설명된 대로 Windows Server 2008 및 Windows Server 2008 R2는 현재 추가 지원 상태이며 더 이상 일반 지원에 속하지 않습니다. 향후에 Configuration Manager에서 이러한 운영 체제를 사이트 시스템 서버로 사용할 수 있는지에 대한 자세한 내용은 [System Center Configuration Manager에서 제거되는 기능과 사용되지 않는 기능](../../../core/plan-design/changes/removed-and-deprecated-features.md)을 참조하세요.  
 
-**次は、すべての .NET Framework の要件に適用されます。**  
+**다음은 모든 .NET Framework 요구 사항에 적용됩니다.**  
 
--   サイト システムの役割をインストールする前に、フル バージョンの .NET Framework をインストールします。 たとえば、「[Microsoft .NET Framework 4 (スタンドアロンのインストーラー)](http://go.microsoft.com/fwlink/p/?LinkId=193048)」を参照してください。 .NET Framework 4 Client Profile では、この要件は満たされません。  
+-   사이트 시스템 역할을 설치하기 전에 .NET Framework의 정식 버전을 설치합니다. 예를 들어 [Microsoft .NET Framework 4(독립 실행형 설치 관리자)](http://go.microsoft.com/fwlink/p/?LinkId=193048)를 참조하세요. .NET Framework 4 Client Profile을 설치하는 경우 이 요구 사항을 충족할 수 없습니다.  
 
-**次は、すべての Windows Communication Foundation (WCF) の有効化の要件に適用されます。**  
+**다음은 모든 WCF(Windows Communication Foundation) 활성화 요구 사항에 적용됩니다.**  
 
--   WCF のアクティブ化は、サイト システム サーバーの .NET Framework Windows 機能の一部として構成できます。 たとえば、Windows Server 2008 R2 では、**機能の追加ウィザード**を実行して、追加の機能をサーバーにインストールします。 **[機能の選択]** ページで、**[NET Framework 3.5.1 の機能]** を展開してから **[WCF アクティブ化]** を展開します。**[HTTP アクティブ化]** と **[非 HTTP アクティブ化]** の両方のチェック ボックスをオンにして、これらのオプションを有効にします。  
+-   사이트 시스템 서버에서 .NET Framework Windows 기능의 일부로 WCF 활성화를 구성할 수 있습니다. 예를 들어 Windows Server 2008 R2에서는 **기능 추가 마법사**를 실행하여 서버에 추가 기능을 설치합니다. **기능 선택** 페이지에서 **.NET Framework 3.5.1 기능**, **WCF 활성화**를 차례로 확장하고 **HTTP 활성화** 및 **비HTTP 활성화**의 확인란을 모두 선택하여 이러한 옵션을 사용하도록 설정합니다.  
 
-###  <a name="bkmk_2008sspreq"></a> サイト サーバー: 中央管理サイトおよびプライマリ サイト  
+###  <a name="bkmk_2008sspreq"></a> 사이트 서버: 중앙 관리 사이트 및 기본 사이트  
 **.NET Framework:**  
 
--   .NET Framework 3.5 SP1 (またはそれ以降)  
+-   .NET Framework 3.5 SP1 이상  
 
 -   .NET Framework 4.5.2  
 
-**Windows の機能:**  
+**Windows 기능:**  
 
--   Remote Differential Compression  
+-   원격 차등 압축  
 
 **Windows ADK:**  
 
--   中央管理サイトまたはプライマリ サイトをインストールまたはアップグレードする前に、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンをインストールする必要があります。  
+-   중앙 관리 사이트 또는 기본 사이트를 설치하거나 업그레이드하기 전에 설치하거나 업그레이드할 Configuration Manager 버전에서 요구하는 Windows ADK 버전을 설치해야 합니다.  
 
-    -   Configuration Manager の 1511 バージョンでは、Windows ADK の Windows 10 RTM (10.0.10240) バージョンが必要です。  
+    -   Configuration Manager 버전 1511에는 Windows ADK의 Windows 10 RTM(10.0.10240) 버전이 필요합니다.  
 
--   要件の詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)」を参照してください。  
+-   이 요구 사항에 대한 자세한 내용은 [운영 체제 배포를 위한 인프라 요구 사항](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)을 참조하세요.  
 
-**Visual C++ 再頒布可能ファイル:**  
+**Visual C++ 재배포 가능 패키지:**  
 
--   Configuration Manager はサイト サーバーをインストールするコンピューターごとに、Microsoft Visual C++ 2013 再頒布可能パッケージをインストールします。  
+-   Configuration Manager는 사이트 서버를 설치하는 각 컴퓨터에 Microsoft Visual C++ 2013 재배포 가능 패키지를 설치합니다.  
 
--   中央管理サイトとプライマリ サイトには、該当する再頒布可能ファイルの x86 および x64 バージョンの両方が必要です。  
+-   중앙 관리 사이트와 기본 사이트에는 해당하는 재배포 가능 패키지 파일의 x86 및 x64 버전이 모두 필요합니다.  
 
-###  <a name="bkmk_2008secpreq"></a> サイト サーバー: セカンダリ サイト  
+###  <a name="bkmk_2008secpreq"></a> 사이트 서버: 보조 사이트  
 **.NET Framework:**  
 
--   .NET Framework 3.5 SP1 (またはそれ以降)  
+-   .NET Framework 3.5 SP1 이상  
 
 -   .NET Framework 4.5.2  
 
-**Visual C++ 再頒布可能ファイル:**  
+**Visual C++ 재배포 가능 패키지:**  
 
--   Configuration Manager はサイト サーバーをインストールするコンピューターごとに、Microsoft Visual C++ 2013 再頒布可能パッケージをインストールします。  
+-   Configuration Manager는 사이트 서버를 설치하는 각 컴퓨터에 Microsoft Visual C++ 2013 재배포 가능 패키지를 설치합니다.  
 
--   セカンダリ サイトには x64 バージョンのみが必要です。  
+-   보조 사이트에는 x64 버전만 필요합니다.  
 
-**既定のサイト システムの役割:**  
+**기본 사이트 시스템 역할:**  
 
--   既定では、セカンダリ サイトに**管理ポイント**と**配布ポイント**がインストールされます。  
+-   기본적으로 보조 사이트는 **관리 지점**과 **배포 지점**을 설치합니다.  
 
--   セカンダリ サイト サーバーが、それらのサイト システムの役割に対する前提条件を満たしていることを確認します。  
+-   보조 사이트 서버는 이러한 사이트 시스템 역할에 대한 필수 구성 요소를 충족해야 합니다.  
 
-###  <a name="bkmk_2008dbpreq"></a> データベース サーバー  
-**リモート レジストリ サービス:**  
+###  <a name="bkmk_2008dbpreq"></a> 데이터베이스 서버  
+**원격 레지스트리 서비스:**  
 
--   Configuration Manager サイトのインストール時には、サイト データベースをホストするコンピューターで、リモート レジストリ サービスが有効化されている必要があります。  
+-   Configuration Manager 사이트를 설치하는 동안 사이트 데이터베이스를 호스트하는 컴퓨터에서 원격 레지스트리 서비스를 사용하도록 설정해야 합니다.  
 
 **SQL Server:**  
 
--   中央管理サイトまたはプライマリ サイトをインストールする前に、サイト データベースをホストする SQL Server のサポートされているバージョンをインストールする必要があります。  
+-   중앙 관리 사이트 또는 기본 사이트를 설치하기 전에 사이트 데이터베이스를 호스트할 수 있는 버전의 SQL Server를 설치해야 합니다.  
 
--   セカンダリ サイトをインストールする前に、サポートされているバージョンの SQL Server をインストールすることができます。  
+-   보조 사이트를 설치하기 전에 이 버전의 SQL Server를 설치할 수 있습니다.  
 
--   セカンダリ サイトのインストールの一環として Configuration Manager によって SQL Server Express をインストールする場合は、コンピューターが SQL Server Express を実行する要件を満たしていることを確認します。  
+-   Configuration Manager에서 보조 사이트 설치의 일부로 SQL Server Express를 설치하도록 선택한 경우 컴퓨터가 SQL Server Express를 실행하기 위한 요구 사항을 충족하는지 확인합니다.  
 
-###  <a name="bkmk_2008smsprovpreq"></a> SMS プロバイダー サーバー  
+###  <a name="bkmk_2008smsprovpreq"></a> SMS 공급자 서버  
 **Windows ADK:**  
 
--   SMS プロバイダーのインスタンスをインストールするコンピューターには、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンが必要です。  
+-   SMS 공급자의 인스턴스를 설치하는 컴퓨터에는 설치하거나 업그레이드 중인 Configuration Manager 버전에서 요구하는 Windows ADK의 필수 버전이 있어야 합니다.  
 
-    -   Configuration Manager の 1511 バージョンでは、Windows ADK の Windows 10 RTM (10.0.10240) バージョンが必要です。  
+    -   Configuration Manager 버전 1511에는 Windows ADK의 Windows 10 RTM(10.0.10240) 버전이 필요합니다.  
 
--   要件の詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)」を参照してください。  
+-   이 요구 사항에 대한 자세한 내용은 [운영 체제 배포를 위한 인프라 요구 사항](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)을 참조하세요.  
 
-###  <a name="bkmk_2008acwspreq"></a> アプリケーション カタログ Web サイト ポイント  
+###  <a name="bkmk_2008acwspreq"></a> 응용 프로그램 카탈로그 웹 사이트 지점  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
 
-**IIS の構成:**
+**IIS 구성:**
 
-既定の IIS 構成に加え、次が必要です。  
+다음 항목이 추가된 기본 IIS 구성이 필요합니다.  
 
--   共通の HTTP 機能:  
+-   일반 HTTP 기능:  
 
-    -   静的コンテンツ  
+    -   정적 콘텐츠  
 
-    -   既定のドキュメント  
+    -   기본 문서  
 
--   アプリケーションの開発:  
+-   응용 프로그램 개발:  
 
-    -   ASP.NET (および、自動的に選択されるオプション)  
+    -   ASP.NET 및 자동으로 선택된 옵션  
 
-         .NET Framework バージョン 4.5.2 のインストール後に、IIS がインストールまたは再構成された場合など、一部のシナリオでは明示的に ASP.NET バージョン 4.5 をインストールする必要があります。 たとえば、.NET Framework バージョン 4.0.30319 を実行している 64 ビット コンピューターで、**%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable** のコマンドを実行します。  
+         .NET Framework 버전 4.5.2를 설치한 후 IIS를 설치하거나 다시 구성하는 등의 일부 시나리오에서는 ASP.NET 버전 4.5를 명시적으로 사용하도록 설정해야 합니다. 예를 들어 .NET Framework 버전 4.0.30319를 실행하는 64비트 컴퓨터에서 다음 명령을 실행합니다. **%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable**  
 
--   セキュリティ:  
+-   보안:  
 
-    -   Windows 認証  
+    -   Windows 인증  
 
--   IIS 6 管理互換性:  
+-   IIS 6 관리 호환성:  
 
-    -   IIS 6 メタベース互換  
+    -   IIS 6 메타데이터 호환성  
 
-###  <a name="bkmk_2008ACwsitepreq"></a> アプリケーション カタログ Web サービス ポイント  
+###  <a name="bkmk_2008ACwsitepreq"></a> 응용 프로그램 카탈로그 웹 서비스 지점  
 **.NET Framework:**  
 
--   .NET Framework 3.5 SP1 (またはそれ以降)  
+-   .NET Framework 3.5 SP1 이상  
 
 -   .NET Framework 4.5.2  
 
-**Windows Communication Foundation (WCF) アクティブ化:**  
+**WCF(Windows Communication Foundation) 활성화:**  
 
--   HTTP アクティブ化  
+-   HTTP 활성화  
 
--   非 HTTP アクティブ化  
+-   비HTTP 활성화  
 
-**IIS の構成:**
+**IIS 구성:**
 
-既定の IIS 構成に加え、次が必要です。  
+다음 항목이 추가된 기본 IIS 구성이 필요합니다.  
 
--   アプリケーションの開発:  
+-   응용 프로그램 개발:  
 
-    -   ASP.NET (および、自動的に選択されるオプション)  
+    -   ASP.NET 및 자동으로 선택된 옵션  
 
-         .NET Framework バージョン 4.5.2 のインストール後に、IIS がインストールまたは再構成された場合など、一部のシナリオでは明示的に ASP.NET バージョン 4.5 をインストールする必要があります。 たとえば、.NET Framework バージョン 4.0.30319 を実行している 64 ビット コンピューターで、**%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable** のコマンドを実行します。  
+         .NET Framework 버전 4.5.2를 설치한 후 IIS를 설치하거나 다시 구성하는 등의 일부 시나리오에서는 ASP.NET 버전 4.5를 명시적으로 사용하도록 설정해야 합니다. 예를 들어 .NET Framework 버전 4.0.30319를 실행하는 64비트 컴퓨터에서 다음 명령을 실행합니다. **%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable**  
 
--   IIS 6 管理互換性:  
+-   IIS 6 관리 호환성:  
 
-    -   IIS 6 メタベース互換  
+    -   IIS 6 메타데이터 호환성  
 
-**コンピューターのメモリ:**  
+**컴퓨터 메모리:**  
 
--   このサイト システムの役割をホストするコンピューターには、サイト システムの役割が要求を処理するために、コンピューターの使用可能メモリの最低 5% を空けておく必要があります。  
+-   이 사이트 시스템 역할을 호스트하는 컴퓨터가 해당 컴퓨터의 사용 가능한 메모리 중 5% 이상을 사용할 수 있어야 사이트 시스템 역할이 요청을 처리할 수 있습니다.  
 
--   このサイト システムの役割が同じ要件の別のサイト システムの役割と併置される場合、このコンピューターに対するメモリの要件は増加しませんが、最低 5% の要件は維持されます。  
+-   이 요구 사항이 동일하게 적용되는 다른 사이트 시스템 역할과 함께 이 사이트 시스템 역할을 배치해도 컴퓨터에 대한 이 메모리 요구 사항이 증가하지는 않으며 최소값인 5%가 그대로 유지됩니다.  
 
-###  <a name="bkmk_2008AIpreq"></a> 資産インテリジェンス同期ポイント  
-**.NET Framework:**  
-
--   .NET Framework 4.5.2  
-
-###  <a name="bkmk_2008crppreq"></a> 証明書登録ポイント  
+###  <a name="bkmk_2008AIpreq"></a> Asset Intelligence 동기화 지점  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
 
--   HTTP アクティブ化  
+###  <a name="bkmk_2008crppreq"></a> 인증서 등록 지점  
+**.NET Framework:**  
 
-**IIS の構成:**
+-   .NET Framework 4.5.2  
 
-既定の IIS 構成に加え、次が必要です。  
+-   HTTP 활성화  
 
--   IIS 6 管理互換性:  
+**IIS 구성:**
 
-    -   IIS 6 メタベース互換  
+다음 항목이 추가된 기본 IIS 구성이 필요합니다.  
 
-    -   IIS 6 WMI 互換  
+-   IIS 6 관리 호환성:  
 
-###  <a name="bkmk_2008dppreq"></a> 配布ポイント  
-**IIS の構成:**
+    -   IIS 6 메타데이터 호환성  
 
-既定の IIS 構成を使用することも、カスタム構成を使用することもできます。 カスタムの IIS 構成を使用するには、次に示す IIS のオプションを有効にする必要があります。  
+    -   IIS 6 WMI 호환성  
 
--   アプリケーションの開発:  
+###  <a name="bkmk_2008dppreq"></a> 배포 지점  
+**IIS 구성:**
 
-    -   ISAPI 拡張機能  
+기본 IIS 구성 또는 사용자 지정 구성을 사용할 수 있습니다. 사용자 지정 IIS 구성을 사용하려면 IIS에 대해 다음 옵션을 사용하도록 설정해야 합니다.  
 
--   セキュリティ:  
+-   응용 프로그램 개발:  
 
-    -   Windows 認証  
+    -   ISAPI 확장  
 
--   IIS 6 管理互換性:  
+-   보안:  
 
-    -   IIS 6 メタベース互換  
+    -   Windows 인증  
 
-    -   IIS 6 WMI 互換  
+-   IIS 6 관리 호환성:  
 
-カスタムの IIS 構成を使用する場合は、次に示すような不要なオプションを削除できます。  
+    -   IIS 6 메타데이터 호환성  
 
--   共通の HTTP 機能:  
+    -   IIS 6 WMI 호환성  
 
-    -   HTTP リダイレクト  
+사용자 지정 IIS 구성을 사용하는 경우 다음과 같은 불필요한 옵션을 제거할 수 있습니다.  
 
--   IIS 管理スクリプトおよびツール  
+-   일반 HTTP 기능:  
 
-**Windows の機能:**  
+    -   HTTP 리디렉션  
 
--   Remote Differential Compression  
+-   IIS 관리 스크립트 및 도구  
 
-**Visual C++ 再頒布可能ファイル:**  
+**Windows 기능:**  
 
--   Configuration Manager は配布ポイントをホストするコンピューターごとに、Microsoft Visual C++ 2013 再頒布可能パッケージをインストールします。  
+-   원격 차등 압축  
 
--   インストールされるバージョンは、コンピューターのプラットフォーム (x86 または x64) によって異なります。  
+**Visual C++ 재배포 가능 패키지:**  
 
-**Microsoft Azure**  
+-   Configuration Manager는 배포 지점을 호스트하는 각 컴퓨터에 Microsoft Visual C++ 2013 재배포 가능 패키지를 설치합니다.  
 
--   Azure のクラウド サービスを使用して、配布ポイントをホストできます。  
+-   설치되는 버전은 컴퓨터 플랫폼(x86 또는 x64)에 따라 달라집니다.  
 
-**PXE またはマルチキャストをサポートするには:**  
+**Microsoft Azure:**  
 
--   Windows 展開サービス (WDS) の Windows サーバー ロールをインストールして構成します。  
+-   Azure의 클라우드 서비스를 사용하여 배포 지점을 호스트할 수 있습니다.  
+
+**PXE 또는 멀티캐스트를 지원하려면**  
+
+-   WDS(Windows 배포 서비스) Windows Server 역할을 설치 및 구성합니다.  
 
     > [!NOTE]  
-    >  WDS は、PXE またはマルチキャストをサポートするように配布ポイントを構成するときに、Windows Server 2012 以降を実行するサーバーに自動的にインストールされ構成されます。  
+    >  Windows Server 2012 이상을 실행하는 서버에서는 PXE 또는 멀티캐스트를 지원하도록 배포 지점을 구성할 때 WDS가 자동으로 설치되고 구성됩니다.  
 
 > [!NOTE]  
-> 配布ポイント サイト システムの役割に、バックグラウンド インテリジェント転送サービス (BITS) は必要ありません。 配布ポイントのコンピューターに BITS が構成されている場合、BITS を使用するクライアントによるコンテンツのダウンロードを効率化するために、配布ポイントのコンピューターの BITS は使用されません。  
+> 배포 지점 사이트 시스템 역할에는 BITS(Background Intelligent Transfer Service)가 필요하지 않습니다. 배포 지점 컴퓨터에 BITS가 구성되어 있어도 BITS를 사용하는 클라이언트의 콘텐츠 다운로드를 원활하게 진행하기 위해 배포 지점 컴퓨터의 BITS를 사용하지 않습니다.  
 
 
-###  <a name="bkmk_2008EPPpreq"></a> Endpoint Protection ポイント  
+###  <a name="bkmk_2008EPPpreq"></a> Endpoint Protection 지점  
 **.NET Framework:**  
 
--   .NET Framework 3.5 SP1 (またはそれ以降)  
+-   .NET Framework 3.5 SP1 이상  
 
-###  <a name="bkmk_2008Enrollpreq"></a> 登録ポイント  
-**.NET Framework:**  
-
--   .NET Framework 4.5.2  
-
-     このサイト システムの役割をインストールすると、サーバーにサポートされているバージョンの .NET Framework がまだインストールされていない場合、Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
-
-**Windows Communication Foundation (WCF) アクティブ化:**  
-
--   HTTP アクティブ化  
-
--   非 HTTP アクティブ化  
-
-**IIS の構成:**
-
-既定の IIS 構成に加え、次が必要です。  
-
--   アプリケーションの開発:  
-
-    -   ASP.NET (および、自動的に選択されるオプション)  
-
-         .NET Framework バージョン 4.5.2 のインストール後に、IIS がインストールまたは再構成された場合など、一部のシナリオでは明示的に ASP.NET バージョン 4.5 をインストールする必要があります。 たとえば、.NET Framework バージョン 4.0.30319 を実行している 64 ビット コンピューターで、**%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable** のコマンドを実行します。  
-
-**コンピューターのメモリ:**  
-
--   このサイト システムの役割をホストするコンピューターには、サイト システムの役割が要求を処理するために、コンピューターの使用可能メモリの最低 5% を空けておく必要があります。  
-
--   このサイト システムの役割が同じ要件の別のサイト システムの役割と併置される場合、このコンピューターに対するメモリの要件は増加しませんが、最低 5% の要件は維持されます。  
-
-###  <a name="bkmk_2008EnrollProxpreq"></a> 登録プロキシ ポイント  
+###  <a name="bkmk_2008Enrollpreq"></a> 등록 지점  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
 
-     このサイト システムの役割をインストールすると、サーバーにサポートされているバージョンの .NET Framework がまだインストールされていない場合、Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
+     이 사이트 시스템 역할을 설치할 때 서버에 지원되는 버전의 .NET Framework가 아직 설치되어 있지 않은 경우 Configuration Manager에서 .NET Framework 4.5.2를 자동으로 설치합니다. 이 설치로 인해 서버가 다시 부팅 보류 중 상태가 될 수 있습니다. NET Framework에 대한 다시 부팅이 보류 중인 경우 서버가 다시 부팅되어 설치를 완료할 때까지 .NET 응용 프로그램이 실패할 수 있습니다.  
 
-**Windows Communication Foundation (WCF) アクティブ化:**  
+**WCF(Windows Communication Foundation) 활성화:**  
 
--   HTTP アクティブ化  
+-   HTTP 활성화  
 
--   非 HTTP アクティブ化  
+-   비HTTP 활성화  
 
-**IIS の構成:**
+**IIS 구성:**
 
-既定の IIS 構成に加え、次が必要です。  
+다음 항목이 추가된 기본 IIS 구성이 필요합니다.  
 
--   アプリケーションの開発:  
+-   응용 프로그램 개발:  
 
-    -   ASP.NET (および、自動的に選択されるオプション)  
+    -   ASP.NET 및 자동으로 선택된 옵션  
 
-         .NET Framework バージョン 4.5.2 のインストール後に、IIS がインストールまたは再構成された場合など、一部のシナリオでは明示的に ASP.NET バージョン 4.5 をインストールする必要があります。 たとえば、.NET Framework バージョン 4.0.30319 を実行している 64 ビット コンピューターで、**%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable** のコマンドを実行します。  
+         .NET Framework 버전 4.5.2를 설치한 후 IIS를 설치하거나 다시 구성하는 등의 일부 시나리오에서는 ASP.NET 버전 4.5를 명시적으로 사용하도록 설정해야 합니다. 예를 들어 .NET Framework 버전 4.0.30319를 실행하는 64비트 컴퓨터에서 다음 명령을 실행합니다. **%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable**  
 
-**コンピューターのメモリ:**  
+**컴퓨터 메모리:**  
 
--   このサイト システムの役割をホストするコンピューターには、サイト システムの役割が要求を処理するために、コンピューターの使用可能メモリの最低 5% を空けておく必要があります。  
+-   이 사이트 시스템 역할을 호스트하는 컴퓨터가 해당 컴퓨터의 사용 가능한 메모리 중 5% 이상을 사용할 수 있어야 사이트 시스템 역할이 요청을 처리할 수 있습니다.  
 
--   このサイト システムの役割が同じ要件の別のサイト システムの役割と併置される場合、このコンピューターに対するメモリの要件は増加しませんが、最低 5% の要件は維持されます。  
+-   이 요구 사항이 동일하게 적용되는 다른 사이트 시스템 역할과 함께 이 사이트 시스템 역할을 배치해도 컴퓨터에 대한 이 메모리 요구 사항이 증가하지는 않으며 최소값인 5%가 그대로 유지됩니다.  
 
-###  <a name="bkmk_2008FSPpreq"></a> フォールバック ステータス ポイント  
-**IIS の構成:**
-
-既定の IIS 構成に加え、次が必要です。  
-
--   IIS 6 管理互換性:  
-
-    -   IIS 6 メタベース互換  
-
-###  <a name="bkmk_2008MPpreq"></a> 管理ポイント  
+###  <a name="bkmk_2008EnrollProxpreq"></a> 등록 프록시 지점  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
 
-**IIS の構成:**
+     이 사이트 시스템 역할을 설치할 때 서버에 지원되는 버전의 .NET Framework가 아직 설치되어 있지 않은 경우 Configuration Manager에서 .NET Framework 4.5.2를 자동으로 설치합니다. 이 설치로 인해 서버가 다시 부팅 보류 중 상태가 될 수 있습니다. NET Framework에 대한 다시 부팅이 보류 중인 경우 서버가 다시 부팅되어 설치를 완료할 때까지 .NET 응용 프로그램이 실패할 수 있습니다.  
 
-既定の IIS 構成を使用することも、カスタム構成を使用することもできます。 モバイル デバイスのサポートを有効にした各管理ポイントでは、ASP.NET (および自動的に選択されるオプション) に対する追加の IIS 構成が必要になります。
+**WCF(Windows Communication Foundation) 활성화:**  
 
-.NET Framework バージョン 4.5.2 のインストール後に、IIS がインストールまたは再構成された場合など、一部のシナリオでは明示的に ASP.NET バージョン 4.5 をインストールする必要があります。 たとえば、.NET Framework バージョン 4.0.30319 を実行している 64 ビット コンピューターで、**%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable** のコマンドを実行します。  
+-   HTTP 활성화  
+
+-   비HTTP 활성화  
+
+**IIS 구성:**
+
+다음 항목이 추가된 기본 IIS 구성이 필요합니다.  
+
+-   응용 프로그램 개발:  
+
+    -   ASP.NET 및 자동으로 선택된 옵션  
+
+         .NET Framework 버전 4.5.2를 설치한 후 IIS를 설치하거나 다시 구성하는 등의 일부 시나리오에서는 ASP.NET 버전 4.5를 명시적으로 사용하도록 설정해야 합니다. 예를 들어 .NET Framework 버전 4.0.30319를 실행하는 64비트 컴퓨터에서 다음 명령을 실행합니다. **%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable**  
+
+**컴퓨터 메모리:**  
+
+-   이 사이트 시스템 역할을 호스트하는 컴퓨터가 해당 컴퓨터의 사용 가능한 메모리 중 5% 이상을 사용할 수 있어야 사이트 시스템 역할이 요청을 처리할 수 있습니다.  
+
+-   이 요구 사항이 동일하게 적용되는 다른 사이트 시스템 역할과 함께 이 사이트 시스템 역할을 배치해도 컴퓨터에 대한 이 메모리 요구 사항이 증가하지는 않으며 최소값인 5%가 그대로 유지됩니다.  
+
+###  <a name="bkmk_2008FSPpreq"></a> 대체 상태 지점  
+**IIS 구성:**
+
+다음 항목이 추가된 기본 IIS 구성이 필요합니다.  
+
+-   IIS 6 관리 호환성:  
+
+    -   IIS 6 메타데이터 호환성  
+
+###  <a name="bkmk_2008MPpreq"></a> 관리 지점  
+**.NET Framework:**  
+
+-   .NET Framework 4.5.2  
+
+**IIS 구성:**
+
+기본 IIS 구성 또는 사용자 지정 구성을 사용할 수 있습니다. 모바일 장치를 지원할 수 있는 각 관리 지점에서는 ASP.NET용 추가 IIS 구성 및 자동으로 선택된 옵션을 사용해야 합니다.
+
+.NET Framework 버전 4.5.2를 설치한 후 IIS를 설치하거나 다시 구성하는 등의 일부 시나리오에서는 ASP.NET 버전 4.5를 명시적으로 사용하도록 설정해야 합니다. 예를 들어 .NET Framework 버전 4.0.30319를 실행하는 64비트 컴퓨터에서 다음 명령을 실행합니다. **%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -i -enable**  
 
 
-カスタムの IIS 構成を使用するには、次に示す IIS のオプションを有効にする必要があります。  
+사용자 지정 IIS 구성을 사용하려면 IIS에 대해 다음 옵션을 사용하도록 설정해야 합니다.  
 
--   アプリケーションの開発:  
+-   응용 프로그램 개발:  
 
-    -   ISAPI 拡張機能  
+    -   ISAPI 확장  
 
--   セキュリティ:  
+-   보안:  
 
-    -   Windows 認証  
+    -   Windows 인증  
 
--   IIS 6 管理互換性:  
+-   IIS 6 관리 호환성:  
 
-    -   IIS 6 メタベース互換  
+    -   IIS 6 메타데이터 호환성  
 
-    -   IIS 6 WMI 互換  
+    -   IIS 6 WMI 호환성  
 
 
-カスタムの IIS 構成を使用する場合は、次に示すような不要なオプションを削除できます。  
+사용자 지정 IIS 구성을 사용하는 경우 다음과 같은 불필요한 옵션을 제거할 수 있습니다.  
 
--   共通の HTTP 機能:  
+-   일반 HTTP 기능:  
 
-    -   HTTP リダイレクト  
+    -   HTTP 리디렉션  
 
--   IIS 管理スクリプトおよびツール  
+-   IIS 관리 스크립트 및 도구  
 
-**Windows の機能:**  
+**Windows 기능:**  
 
--   BITS サーバー拡張 (および自動的に選択されるオプション)、またはバックグラウンド インテリジェント転送サービス (BITS) (および自動的に選択されるオプション)  
+-   BITS 서버 확장 및 자동으로 선택된 옵션이나 BITS(Background Intelligent Transfer Services) 및 자동으로 선택된 옵션  
 
-###  <a name="bkmk_2008RSpoint"></a> レポート サービス ポイント  
+###  <a name="bkmk_2008RSpoint"></a> 보고 서비스 지점  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
 
 **SQL Server Reporting Services:**  
 
--   レポート サービス ポイントをインストールする前に、SQL Server Reporting Services をサポートするために、SQL Server の 1 つ以上のインスタンスをインストールして構成する必要があります。  
+-   보고 서비스 지점을 설치하기 전에 SQL Server Reporting Services를 지원할 수 있는 SQL Server의 인스턴스를 하나 이상 설치하고 구성해야 합니다.  
 
--   SQL Server Reporting Services に使用するインスタンスは、サイト データベースに使用するインスタンスと同じものにすることができます。  
+-   SQL Server Reporting Services에 사용하는 인스턴스는 사이트 데이터베이스에 사용하는 인스턴스와 동일할 수 있습니다.  
 
--   さらに、そのインスタンスを別の System Center 製品と共有して使用することもできます。ただし、他の System Center 製品に SQL Server のインスタンスの共有に対する制限がない場合に限ります。  
+-   또한 다른 System Center 제품에 SQL Server 인스턴스 공유 관련 제한이 없는 경우 SQL Server Reporting Services에 사용하는 인스턴스를 다른 System Center 제품과 공유할 수 있습니다.  
 
-###  <a name="bkmk_2008SCPpreq"></a> サービス接続ポイント  
+###  <a name="bkmk_2008SCPpreq"></a> 서비스 연결 지점  
 **.NET Framework:**  
 
 -   .NET Framework 4.5.2  
 
-     このサイト システムの役割をインストールすると、サーバーにサポートされているバージョンの .NET Framework がまだインストールされていない場合、Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
+     이 사이트 시스템 역할을 설치할 때 서버에 지원되는 버전의 .NET Framework가 아직 설치되어 있지 않은 경우 Configuration Manager에서 .NET Framework 4.5.2를 자동으로 설치합니다. 이 설치로 인해 서버가 다시 부팅 보류 중 상태가 될 수 있습니다. NET Framework에 대한 다시 부팅이 보류 중인 경우 서버가 다시 부팅되어 설치를 완료할 때까지 .NET 응용 프로그램이 실패할 수 있습니다.  
 
-**Visual C++ 再頒布可能ファイル:**  
+**Visual C++ 재배포 가능 패키지:**  
 
--   Configuration Manager は配布ポイントをホストするコンピューターごとに、Microsoft Visual C++ 2013 再頒布可能パッケージをインストールします。  
+-   Configuration Manager는 배포 지점을 호스트하는 각 컴퓨터에 Microsoft Visual C++ 2013 재배포 가능 패키지를 설치합니다.  
 
--   サイト システムの役割には、x64 バージョンが必要です。  
+-   사이트 시스템 역할에는 x64 버전이 필요합니다.  
 
-###  <a name="bkmk_2008SUPpreq"></a> ソフトウェアの更新ポイント  
+###  <a name="bkmk_2008SUPpreq"></a> 소프트웨어 업데이트 지점  
 **.NET Framework:**  
 
--   .NET Framework 3.5 SP1 (またはそれ以降)  
+-   .NET Framework 3.5 SP1 이상  
 
 -   .NET Framework 4.5.2  
 
-**IIS の構成:**
+**IIS 구성:**
 
-既定の IIS 構成が必要です。  
+기본 IIS 구성이 필요합니다.  
 
 **Windows Server Update Services:**  
 
--   ソフトウェアの更新ポイントをインストールする前に、コンピューターに Windows サーバーの役割の Windows Server Update Services をインストールする必要があります。  
+-   소프트웨어 업데이트 지점을 설치하기 전에 컴퓨터에 Windows 서버 역할 Windows Server Update Services를 설치해야 합니다.  
 
--   詳細については、「[System Center Configuration Manager でのソフトウェア更新プログラムの計画](../../../sum/plan-design/plan-for-software-updates.md)」をご覧ください。
+-   자세한 내용은 [System Center Configuration Manager에서 소프트웨어 업데이트 계획](../../../sum/plan-design/plan-for-software-updates.md)을 참조하세요.
 
-###  <a name="bkmk_2008SMPpreq"></a> 状態移行ポイント  
-**IIS の構成:**
+###  <a name="bkmk_2008SMPpreq"></a> 상태 마이그레이션 지점  
+**IIS 구성:**
 
-既定の IIS 構成が必要です。  
-
+기본 IIS 구성이 필요합니다.  

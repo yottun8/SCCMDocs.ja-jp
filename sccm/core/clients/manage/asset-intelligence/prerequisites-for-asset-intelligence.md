@@ -1,53 +1,49 @@
 ---
-title: "資産インテリジェンスの前提条件 | Microsoft Docs"
-description: "System Center Configuration Manager の資産インテリジェンスの前提条件を取得します。"
+title: "Asset Intelligence 필수 조건 | Microsoft 문서"
+description: "System Center Configuration Manager에서 Asset Intelligence에 대한 필수 조건을 확인합니다."
 ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 23ab4f94-7bfe-436e-8a6a-029409a2730c
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 156d6679817b81ca27fbd2b8836431396e1e6b23
-ms.contentlocale: ja-jp
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 2bcc6dd84b236187ea9cbfa0b85c25e7ec25719c
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="prerequisites-for-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager の資産インテリジェンスの前提条件
+# <a name="prerequisites-for-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager의 Asset Intelligence에 대한 필수 조건
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager の資産インテリジェンスには、外部依存関係と製品内部依存関係があります。  
+System Center Configuration Manager의 Asset Intelligence에는 외부 종속성과 제품 내 종속성이 있습니다.  
 
-## <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 外部の依存関係  
- 次の表は、Configuration Manager 外部の資産インテリジェンスの依存関係を示します。  
+## <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 외부 종속성  
+ 다음 표에서는 Configuration Manager 외부에 있는 Asset Intelligence에 대한 종속성을 제공합니다.  
 
-|依存関係|説明|  
+|종속성|추가 정보|  
 |----------------|----------------------|  
-|ログオン成功イベントの前提条件の監査|4 つの資産インテリジェンス レポートには、クライアント コンピューターの Windows セキュリティ イベント ログから収集された情報が表示されます。 セキュリティ イベント ログ設定がログオンに成功したすべてのイベントをログに記録するように設定されていないと、適切なハードウェア インベントリ レポート クラスが有効になっていても、レポートにはデータが表示されません。<br /><br /> 次の資産インテリジェンス レポートは、Windows セキュリティ イベント ログ情報を使用します。<br /><br /> -   ハードウェア 03A - プライマリ コンピューター ユーザー<br />-   ハードウェア 03B - 特定のプライマリ コンソール ユーザーのコンピューター<br />-   ハードウェア 04A - 共有 (複数ユーザー向け) コンピューター<br />-   ハードウェア 05A - 特定のコンピューターのコンソール ユーザー<br /><br /> ハードウェア インベントリ クライアント エージェントを有効にして、レポートをサポートするのに必要な情報のインベントリを作成するには、まずクライアントの Windows セキュリティ イベント ログ設定を変更して、ログオンに成功したすべてのイベントをログに記録し、 **SMS_SystemConsoleUser** ハードウェア インベントリ レポート クラスを有効にする必要があります。 すべてのログオン成功イベントをログに記録するようにセキュリティ イベント ログ設定を変更する方法の詳細については、「[Enable auditing of success logon events](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md#BKMK_EnableSuccessLogonEvents)」(ログオン成功イベントの監査を有効にする) を参照してください。|  
+|성공 로그온 이벤트 필수 조건 감사|네 가지 Asset Intelligence 보고서에 클라이언트 컴퓨터의 Windows 보안 이벤트 로그에서 수집된 정보가 표시됩니다. 보안 이벤트 로그 설정이 모든 성공 로그온 이벤트를 기록하도록 구성되지 않으면 적절한 하드웨어 인벤토리 보고 클래스를 사용하도록 설정된 경우에도 해당 보고서에 데이터가 포함되지 않습니다.<br /><br /> 다음 Asset Intelligence 보고서는 수집된 Windows 보안 이벤트 로그 정보에 따라 달라집니다.<br /><br /> -   하드웨어 03A - 기본 컴퓨터 사용자<br />-   하드웨어 03B - 특정 기본 콘솔 사용자의 컴퓨터<br />-   하드웨어 04A - 공유(다중 사용자) 컴퓨터<br />-   하드웨어 05A - 특정 컴퓨터의 콘솔 사용자<br /><br /> 이러한 보고서를 지원하는 데 필요한 정보를 인벤토리에 포함하기 위해 하드웨어 인벤토리 클라이언트 에이전트를 사용하도록 설정하려면, 먼저 모든 성공 로그온 이벤트를 기록하도록 클라이언트의 Windows 보안 이벤트 로그 설정을 수정하고 **SMS_SystemConsoleUser** 하드웨어 인벤토리 보고 클래스를 사용하도록 설정해야 합니다. 모든 성공 로그온 이벤트를 기록하도록 보안 이벤트 로그 설정을 수정하는 방법에 대한 자세한 내용은 [성공 로그온 이벤트 감사 사용](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md#BKMK_EnableSuccessLogonEvents)을 참조하세요.|  
 
 > [!NOTE]  
->  **SMS_SystemConsoleUser** ハードウェア インベントリ レポート クラスには、ログの長さに関係なく、セキュリティ イベント ログの過去 90 日間のログオン成功データのみが保持されます。 セキュリティ イベント ログのデータが 90 日未満の場合は、ログ全体が読み取られます。  
+>  **SMS_SystemConsoleUser** 하드웨어 인벤토리 보고 클래스는 로그의 길이와 관계없이 보안 이벤트 로그의 이전 90일간의 성공적인 로그온 이벤트 데이터만 보존합니다. 보안 이벤트 로그에 있는 데이터가 90일 미만인 경우 전체 로그를 읽습니다.  
 
-## <a name="dependencies-internal-to-configuration-manager"></a>Configuration Manager 内部の依存関係  
- 次の表は、Configuration Manager 内部の資産インテリジェンスの依存関係を示します。  
+## <a name="dependencies-internal-to-configuration-manager"></a>Configuration Manager 내부 종속성  
+ 다음 표에서는 Configuration Manager 내부에 있는 Asset Intelligence에 대한 종속성을 제공합니다.  
 
-|依存関係|説明|  
+|종속성|추가 정보|  
 |----------------|----------------------|  
-|クライアント エージェントに関する前提条件|資産インテリジェンス レポートの内容は、クライアントのハードウェアおよびソフトウェア インベントリ レポートから取得したクライアント情報によって異なります。 すべての資産インテリジェンス レポートに必要な情報を取得するには、次のクライアント エージェントを有効にする必要があります。<br /><br /> -   ハードウェア インベントリのクライアント エージェント<br />-   ソフトウェア使用状況測定クライアント エージェント|  
-|ハードウェア インベントリのクライアント エージェントの依存関係|一部の資産インテリジェンス レポートに必要なインベントリ データを収集するには、ハードウェア インベントリのクライアント エージェントを有効にする必要があります。 さらに、資産インテリジェンス レポートが依存するハードウェア インベントリ レポート クラスを、プライマリ サイト サーバーのコンピューターで有効にする必要があります。<br /><br /> ハードウェア インベントリのクライアント エージェントを有効にする方法については、「[Configuration Manager でハードウェア インベントリを構成する方法](../../../../core/clients/manage/inventory/extend-hardware-inventory.md)」を参照してください。|  
-|ソフトウェア メータリング クライアント エージェントの依存関係|資産インテリジェンス ソフトウェアのレポートの多くは、ソフトウェア使用状況測定クライアント エージェントのデータを使用します。 ソフトウェア使用状況測定クライアント エージェントを有効にする方法については、「[Monitor app usage with software metering in System Center Configuration Manager](../../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)」(System Center Configuration Manager のソフトウェア使用状況測定でアプリの使用を監視する) を参照してください。<br /><br /> 次の資産インテリジェンス レポートでは、ソフトウェア使用状況測定クライアント エージェントを使用してデータを取得します。<br /><br /> -   ソフトウェア 07A - 複数のコンピューターによって最近使用された実行可能ファイル<br />-   ソフトウェア 07B - 指定した実行可能ファイルを最近使用したコンピューター<br />-   ソフトウェア 07C - 特定のコンピューターで最近使用した実行可能ファイル<br />-   ソフトウェア 08A - 複数のユーザーによって最近使用された実行可能ファイル<br />-   ソフトウェア 08B - 指定した実行可能ファイルを最近使用したユーザー<br />-   ソフトウェア 08C - 指定したユーザーが最近使用した実行可能ファイル|  
-|資産インテリジェンス ハードウェア インベントリ レポート クラスの前提条件|Configuration Manager の資産インベントリ レポートは、特定のハードウェア インベントリ レポート クラスに依存します。 ハードウェア インベントリ レポート クラスが有効になり、クライアントがこれらのクラスに基づいてハードウェア インベントリをレポートするまで、関連付けられた資産インテリジェンス レポートにはデータが表示されません。 次のハードウェア インベントリ レポート クラスを有効にすると、資産インテリジェンス レポートの要件をサポートできます。<br /><br /> -   SMS_SystemConsoleUsage<sup>1</sup><br />-   SMS_SystemConsoleUser<sup>1</sup><br />-   SMS_InstalledSoftware<br />-   SMS_AutoStartSoftware<br />-   SMS_BrowserHelperObject<br />-   Win32_USBDevice<br />-   SMS_InstalledExecutable<br />-   SMS_SoftwareShortcut<br />-   SoftwareLicensingService<br />-   SoftwareLicensingProduct<br />-   SMS_SoftwareTag<br /><br /> <sup>1</sup> 既定では **SMS_SystemConsoleUsage** および **SMS_SystemConsoleUser** の資産インテリジェンス ハードウェア インベントリ レポート クラスは有効になっています。<br /><br /> **[資産とコンプライアンス]** ワークスペースで **[資産インテリジェンス]** ノードをクリックすると、Configuration Manager コンソールで資産インテリジェンス ハードウェア インベントリ レポート クラスを編集できます。 詳細については、「[Configuration Manager の資産インテリジェンスの構成](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)」トピックの「[資産インテリジェンスのハードウェア インベントリ レポート クラスの有効化](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence)」セクションを参照してください。|  
-|レポート サービス ポイント|ソフトウェア更新レポートを表示するには、事前にレポート サービス ポイント サイト システムの役割がインストールされている必要があります。 レポート サービス ポイント作成の詳細については、「 [Configuration Manager のレポートの構成](http://go.microsoft.com/fwlink/p/?LinkId=232661)」を参照してください。|  
-
+|클라이언트 에이전트 필수 조건|Asset Intelligence 보고서는 클라이언트 하드웨어 및 소프트웨어 인벤토리 보고서를 통해 얻은 클라이언트 정보에 따라 달라집니다. 모든 Asset Intelligence 보고서에 필요한 정보를 얻으려면 다음 클라이언트 에이전트를 사용하도록 설정해야 합니다.<br /><br /> -   하드웨어 인벤토리 클라이언트 에이전트<br />-   소프트웨어 계량 클라이언트 에이전트|  
+|하드웨어 인벤토리 클라이언트 에이전트 종속성|일부 Asset Intelligence 보고서에 필요한 인벤토리 데이터를 수집하려면 하드웨어 인벤토리 클라이언트 에이전트를 사용하도록 설정해야 합니다. 또한 Asset Intelligence 보고서가 종속되는 일부 하드웨어 인벤토리 보고 클래스는 기본 사이트 서버 컴퓨터에서 사용하도록 설정해야 합니다.<br /><br /> 하드웨어 인벤토리 클라이언트 에이전트를 활성화하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 하드웨어 인벤토리를 확장하는 방법](../../../../core/clients/manage/inventory/extend-hardware-inventory.md)을 참조하세요.|  
+|소프트웨어 계량 클라이언트 에이전트 종속성|다양한 Asset Intelligence 소프트웨어 보고서는 데이터에 대한 소프트웨어 계량 클라이언트 에이전트에 따라 달라집니다. 소프트웨어 계량 클라이언트 에이전트를 사용하도록 설정하는 방법에 대한 자세한 내용은 [System Center Configuration Manager의 소프트웨어 계량을 사용하여 앱 사용 모니터링](../../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)을 참조하세요.<br /><br /> 다음 Asset Intelligence 보고서는 데이터를 제공하는 소프트웨어 계량 클라이언트 에이전트에 따라 달라집니다.<br /><br /> -   소프트웨어 07A - 컴퓨터 수별 최근 사용된 실행 파일<br />-   소프트웨어 07B - 지정된 실행 파일을 최근 사용한 컴퓨터<br />-   소프트웨어 07C - 특정 컴퓨터에서 최근 사용된 실행 파일<br />-   소프트웨어 08A - 사용자 수별 최근 사용된 실행 파일<br />-   소프트웨어 08B - 지정된 실행 파일을 최근 사용한 사용자<br />-   소프트웨어 08C - 지정된 사용자가 최근 사용한 실행 파일|  
+|Asset Intelligence 하드웨어 인벤토리 보고 클래스 필수 조건|Configuration Manager의 Asset Intelligence 보고서는 특정 하드웨어 인벤토리 보고 클래스에 따라 달라집니다. 하드웨어 인벤토리 보고 클래스가 사용하도록 설정되고 클라이언트가 이러한 클래스를 기반으로 하는 하드웨어 인벤토리를 보고할 때까지 관련된 Asset Intelligence 보고서에는 데이터가 포함되지 않습니다. Asset Intelligence 보고 요구 사항을 지원하도록 다음 하드웨어 인벤토리 보고 클래스를 사용하도록 설정할 수 있습니다.<br /><br /> -   SMS_SystemConsoleUsage<sup>1</sup><br />-   SMS_SystemConsoleUser<sup>1</sup><br />-   SMS_InstalledSoftware<br />-   SMS_AutoStartSoftware<br />-   SMS_BrowserHelperObject<br />-   Win32_USBDevice<br />-   SMS_InstalledExecutable<br />-   SMS_SoftwareShortcut<br />-   SoftwareLicensingService<br />-   SoftwareLicensingProduct<br />-   SMS_SoftwareTag<br /><br /> <sup>1</sup> 기본적으로 **SMS_SystemConsoleUsage** 및 **SMS_SystemConsoleUser** Asset Intelligence 하드웨어 인벤토리 보고 클래스는 사용하도록 설정되어 있습니다.<br /><br /> **Asset Intelligence** 노드를 클릭하면 **자산 및 준수** 작업 영역의 Configuration Manager 콘솔에서 하드웨어 인벤토리 보고 클래스를 편집할 수 있습니다. 자세한 내용은 [System Center Configuration Manager에서 Asset Intelligence 구성](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md) 항목의 [Asset Intelligence 하드웨어 인벤토리 보고 클래스를 사용하도록 설정](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence) 섹션을 참조하세요.|  
+|보고 서비스 지점|소프트웨어 업데이트 보고서가 표시되려면 먼저 보고 서비스 지점 사이트 시스템 역할이 설치되어 있어야 합니다. 보고 서비스 지점을 만드는 방법에 대한 자세한 내용은 [Configuration Manager에서 보고 구성](http://go.microsoft.com/fwlink/p/?LinkId=232661)을 참조하세요.|  

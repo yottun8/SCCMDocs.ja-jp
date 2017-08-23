@@ -1,217 +1,213 @@
 ---
-title: "App-V 仮想アプリケーションの展開 | Microsoft Docs"
-description: "仮想アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。"
+title: "App-V 가상 응용 프로그램 배포 | Microsoft 문서"
+description: "가상 응용 프로그램을 만들고 배포할 때 고려해야 할 사항을 확인합니다."
 ms.custom: na
 ms.date: 02/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
-caps.latest.revision: 11
-caps.handback.revision: 0
+caps.latest.revision: "11"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c73373e6f2f28f8ddc197695e4b4e3488c9c1f5b
 ms.openlocfilehash: 0808edbb9a0433dd658d37e8d005c89a4778735c
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager での App-V 仮想アプリケーションの展開
+# <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager에서 App-V 가상 응용 프로그램 배포
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-Configuration Manager を使用して仮想アプリケーションを管理すると、次のような利点があります。  
+Configuration Manager를 사용하여 가상 응용 프로그램을 관리할 때 다음과 같은 이점이 있습니다.  
 
--   単一の管理インフラストラクチャ  
+-   단일 관리 인프라  
 
--   スケーラビリティ、展開、およびコレクションとユーザー デバイスのアフィニティなどのコンテンツ配布機能  
+-   확장성, 배포 및 콘텐츠 배포 기능(예: 컬렉션 및 사용자 장치 선호도)  
 
--   高度なアプリケーション管理機能  
+-   고급 응용 프로그램 관리 기능  
 
--   オペレーティング システムの展開、ソフトウェアとハードウェアのインベントリ、ソフトウェア使用状況測定、資産インテリジェンスを使用した仮想アプリケーションのサポート  
+-   가상 응용 프로그램 지원을 위한 운영 체제 배포, 소프트웨어 alc 하드웨어 인벤토리, 소프트웨어 계량 및 Asset Intelligence  
 
-Microsoft Application Virtualization (App-V) を使用したアプリケーションの作成方法とシーケンス方法については、TechNet ライブラリの「[Application Virtualization](https://technet.microsoft.com/library/cc843848.aspx)」を参照してください。  
+Microsoft App-V(Application Virtualization)를 사용하여 응용 프로그램을 만들고 시퀀스하는 방법에 대한 자세한 내용은 TechNet 라이브러리에서 [응용 프로그램 가상화](https://technet.microsoft.com/library/cc843848.aspx)를 참조하세요.  
 
-アプリケーションを作成するための System Center Configuration Manager の他の要件と手順に加えて、仮想アプリケーションを作成および展開するときには以下の考慮事項について検討する必要があります。
+가상 응용 프로그램을 만들어 배포할 때는 응용 프로그램을 만들기 위한 다른 System Center Configuration Manager 요구 사항 및 절차 외에 다음 사항을 고려해야 합니다.
 
--   コンピューターに仮想アプリケーションを展開するには、使用するコンピューターに構成マネージャー クライアントと App-V クライアントがインストールされている必要があります。 クライアント デバイスには、デスクトップ コンピューター、ポータブル コンピューター、仮想デスクトップ インフラストラクチャ (VDI) クライアントを利用できます。 Configuration Manager と App-V クライアント ソフトウェアは連携して動作し、仮想アプリケーション パッケージの配信、特定、起動を行います。 構成マネージャー クライアントは、App-V クライアントへの仮想アプリケーション パッケージの配信を管理します。 App-V クライアントは、クライアントの仮想アプリケーションを実行します。  
+-   컴퓨터에 가상 응용 프로그램을 배포하려면 Configuration Manager 클라이언트와 App-V 클라이언트를 컴퓨터에 설치해야 합니다. 클라이언트 장치에는 데스크톱 및 휴대용 컴퓨터와 VDI(가상 데스크톱 인프라) 클라이언트가 포함될 수 있습니다. Configuration Manager와 App-V 클라이언트 소프트웨어가 함께 작동하여 가상 응용 프로그램 패키지를 제공하고 찾아서 시작합니다. Configuration Manager 클라이언트는 App-V 클라이언트에 대한 가상 응용 프로그램 패키지 제공을 관리합니다. App-V 클라이언트는 클라이언트에서 가상 응용 프로그램을 실행합니다.  
 
--   仮想アプリケーションを展開するには、まず、App-V Application Virtualization Sequencer を使って仮想アプリケーションを作成する必要があります。 Sequencer によって、アプリケーションのインストールおよびセットアップのプロセスが監視され、アプリケーションを仮想環境で実行するのに必要な情報が記録されます。 また、Sequencer を使用して、どのファイルと構成をすべてのユーザーに適用するのかや、どの構成をユーザーがカスタマイズできるようにするのかを設定することもできます。  
+-   가상 응용 프로그램을 배포하려면 먼저 App-V Application Virtualization Sequencer를 사용하여 가상 응용 프로그램을 만들어야 합니다. Application Virtualization Sequencer는 응용 프로그램에 대한 설치 및 설정 프로세스를 모니터링하고 응용 프로그램 실행을 위해 필요한 정보를 가상 환경에 기록합니다. 또한 Application Virtualization Sequencer를 사용하면 모든 사용자에게 적용되는 파일 및 구성과 사용자가 사용자 지정할 수 있는 구성을 설정할 수 있습니다.  
 
--   アプリケーションをシーケンスするときには、Configuration Manager がアクセスできる場所にパッケージを保存する必要があります。 その後で、この仮想アプリケーションを含むアプリケーション展開を作成できます。  
+-   응용 프로그램을 시퀀스할 때 Configuration Manager에서 액세스할 수 있는 위치에 패키지를 저장해야 합니다. 그런 다음 이 가상 응용 프로그램이 포함된 응용 프로그램 배포를 만들 수 있습니다.  
 
--   Configuration Manager では、App-V の読み取り専用の共有キャッシュ機能の使用はサポートしていません。  
+-   Configuration Manager는 App-V의 공유 읽기 전용 캐시 기능 사용을 지원하지 않습니다.  
 
--   Configuration Manager では、App-V 5 の共有コンテンツ格納機能をサポートしています。  
+-   Configuration Manager는 App-V 5의 공유 콘텐츠 저장소 기능을 지원합니다.  
 
--   仮想アプリケーションの展開の種類を作成すると、アプリケーション マニフェスト ファイルのコンテンツを使って Configuration Manager によって展開の種類が作成されます。 これは、仮想アプリケーションの情報が含まれた XML ファイルです。 また、Configuration Manager によって、仮想アプリケーションでサポートされるオペレーティング システムの情報が含まれた App-V の .osd ファイルのコンテンツに基づいて、展開の種類の要件も作成されます。  
+-   가상 응용 프로그램에 대한 배포 유형을 만들 경우 Configuration Manager는 응용 프로그램 매니페스트 파일의 콘텐츠를 사용하여 배포 유형을 만듭니다. 매니페스트 파일은 가상 응용 프로그램에 대한 정보를 포함하는 XML 파일입니다. 또한 Configuration Manager는 가상 응용 프로그램에 대해 지원되는 운영 체제의 관련 정보가 포함된 App-V .osd 파일의 콘텐츠를 기반으로 배포 유형에 대한 요구 사항을 만듭니다.  
 
--   Configuration Manager で仮想アプリケーションを展開するには、クライアント コンピューターに、最低でも App-V 4.6 SP1 以降のバージョンのクライアントがインストールされている必要があります。  
+-   Configuration Manager에서 가상 응용 프로그램을 배포하려면 클라이언트 컴퓨터에 적어도 App-V 4.6 SP1 이상 버전의 클라이언트가 설치되어 있어야 합니다.  
 
--   仮想アプリケーションを正常に展開できるようにするには、サポート技術情報の記事 [2645225](https://support.microsoft.com/kb/2645225) に記載されている修正プログラムを使って App-V クライアントを更新する必要があります。  
+-   가상 응용 프로그램을 배포하려면 먼저 기술 자료 문서 [2645225](https://support.microsoft.com/kb/2645225)에 설명된 핫픽스로 App-V 클라이언트를 업데이트해야 합니다.  
 
--   App-V 5.0 の接続グループを使用して、展開した仮想アプリケーションでクライアント コンピューター上の同じファイル システムとレジストリを共有できます。 標準の仮想アプリケーションとは異なり、これらのアプリケーションで相互にデータを共有できます。 また、接続グループは、含まれるアプリケーションのユーザー設定を保存します。 Configuration Manager の App-V 仮想環境は、クライアント コンピューターで接続グループを設定するために使用されます。 アプリケーションがインストールされると、クライアント コンピューターに仮想環境が作成されます。また、インストールされたアプリケーションがクライアントで次回評価されたときに、クライアント コンピューターの仮想環境が変更されます。 複数のアプリケーションでファイル システムやレジストリ値の変更が試みられた場合は、優先順位の最も高いアプリケーションが優先されるように、これらのアプリケーションに優先順位を設定することができます。 詳細については、「[Create App-V virtual environments](../../apps/deploy-use/create-app-v-virtual-environments.md)」 (App-V 仮想環境の作成) をご覧ください。  
+-   App-V 5.0의 연결 그룹을 사용하는 경우 배포된 가상 응용 프로그램이 클라이언트 컴퓨터에서 같은 파일 시스템 및 레지스트리를 공유할 수 있습니다. 표준 가상 응용 프로그램과 달리 이러한 응용 프로그램은 서로 간에 데이터를 공유할 수 있습니다. 또한 연결 그룹은 포함하고 있는 응용 프로그램의 사용자 설정을 보존합니다. Configuration Manager의 App-V 가상 환경은 클라이언트 컴퓨터에서 연결 그룹을 설정하는 데 사용됩니다. 가상 환경은 응용 프로그램이 설치되거나 설치된 응용 프로그램을 클라이언트가 다음에 평가할 때 클라이언트 컴퓨터에서 만들어지거나 변경됩니다. 이러한 응용 프로그램의 우선 순위를 지정함으로써 여러 응용 프로그램에서 파일 시스템 또는 레지스트리 값을 변경하려고 시도할 때 우선 순위가 가장 높은 응용 프로그램이 우선권을 얻도록 할 수 있습니다. 자세한 내용은 [App-V 가상 환경 만들기](../../apps/deploy-use/create-app-v-virtual-environments.md)를 참조하세요.  
 
-##  <a name="supported-app-v-versions"></a>サポートされる App-V のバージョン  
- Configuration Manager では、次のバージョンの App-V がサポートされます。  
+##  <a name="supported-app-v-versions"></a>지원되는 App-V 버전  
+ Configuration Manager는 다음 버전의 App-V를 지원합니다.  
 
--   **App-V 4.6:** 仮想アプリケーションを Configuration Manager で使用するには、クライアント コンピューターに、App-V 4.6 SP1、App-V 4.6 SP2、または App-V 4.6 SP3 のクライアントがインストールされている必要があります。  
+-   **App-V 4.6**: Configuration Manager에서 가상 응용 프로그램을 사용하려면 클라이언트 컴퓨터에 App-V 4.6 SP1, App-V 4.6 SP2 또는 App-V 4.6 SP3 클라이언트가 설치되어 있어야 합니다.  
 
-     また、仮想アプリケーションを正常に展開できるようにするには、サポート技術情報の記事 [2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) で説明されている修正プログラムで、App-V 4.6 SP1 クライアントを更新する必要があります。  
+     또한 기술 자료 문서 [2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322)에 설명된 핫픽스를 사용하여 App-V 4.6 SP1 클라이언트를 업데이트해야 가상 응용 프로그램을 배포할 수 있습니다.  
 
--   **App-V 5、App-V 5.0 SP1、App-V 5.0 SP2、App-V 5.0 SP3、および App-V 5.1:** App-V 5.0 SP2 については、 [修正プログラム パッケージ 5](https://support.microsoft.com/en-us/kb/2963211) をインストールするか、App-V 5.0 SP3 を使用する必要があります。  
--   **APP-V 5.2**: これは、Windows 10 Enterprise に組み込まれています (Anniversary Update 以降)。
+-   **App-V 5, App-V 5.0 SP1, App-V 5.0 SP2, App-V 5.0 SP3 및 App-V 5.1**: App-V 5.0 SP2의 경우 [핫픽스 패키지 5](https://support.microsoft.com/en-us/kb/2963211)를 설치하거나 App-V 5.0 SP3을 사용해야 합니다.  
+-   **App-V 5.2**: Windows 10 Enterprise(Anniversary Update 이상 버전)에서 기본적으로 제공됩니다.
 
-Windows 10 の App-V の詳細については、次のトピックを参照してください。
+Windows 10의 App-V에 대한 자세한 내용은 다음 항목을 참조하세요.
 
-- [App-V の新着情報](https://technet.microsoft.com/itpro/windows/manage/appv-about-appv)
-- [Windows 10 向け App-V の概要](https://technet.microsoft.com/itpro/windows/manage/appv-getting-started)
-- [既存のインストールから Windows 10 向け App-V へのアップグレード](https://technet.microsoft.com/itpro/windows/manage/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
+- [App-V의 새로운 기능](https://technet.microsoft.com/itpro/windows/manage/appv-about-appv)
+- [Windows 10용 App-V 시작](https://technet.microsoft.com/itpro/windows/manage/appv-getting-started)
+- [기존 설치에서 Windows 10용 App-V로 업그레이드](https://technet.microsoft.com/itpro/windows/manage/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)
 
-##  <a name="steps-to-manage-app-v-virtual-applications"></a>App-V 仮想アプリケーションの管理の手順  
- App-V 仮想アプリケーションを管理するには、次の手順を実行します。  
+##  <a name="steps-to-manage-app-v-virtual-applications"></a>App-V 가상 응용 프로그램을 관리하는 단계  
+ App-V 가상 응용 프로그램을 관리하려면 다음 단계를 수행합니다.  
 
-1.   **シーケンス** - シーケンスは、App-V Sequencer を使用して、アプリケーションを仮想アプリケーションに変換するプロセスです。
+1.   **시퀀싱**: 시퀀싱은 App-V Sequencer를 사용하여 응용 프로그램을 가상 응용 프로그램으로 변환하는 프로세스입니다.
 
-2.   **作成** - 展開の種類の作成ウィザードを使用して、シーケンスしたアプリケーションを Configuration Manager の展開の種類にインポートします。その後、この展開の種類をアプリケーションに追加できます。 複数の仮想アプリケーションで設定を共有できる仮想環境を作成することもできます。
+2.   **만들기**: 배포 유형 만들기 마법사를 사용하여 시퀀싱된 응용 프로그램을 Configuration Manager 배포 유형으로 가져온 다음 응용 프로그램에 추가할 수 있습니다. 여러 가상 응용 프로그램이 설정을 공유할 수 있는 가상 환경을 만들 수도 있습니다.
 
-3.   **配布** - 配布は、Configuration Manager の配布ポイントで App-V アプリケーションを使用できるようにするプロセスです。
+3.   **배포**: 배포는 App-V 응용 프로그램을 Configuration Manager 배포 지점에서 사용할 수 있게 만드는 프로세스입니다.
 
-4.   **展開** - 展開は、クライアント コンピューターでアプリケーションを使用できるようにするプロセスです。 これは、APP-V の完全なインフラストラクチャでは、ストリーミングと呼ばれます。  
+4.   **배포**: 배포(Deployment)는 응용 프로그램을 클라이언트 컴퓨터에서 사용할 수 있게 만드는 프로세스입니다. App-V 전체 인프라에서는 이 프로세스를 스트리밍이라고 합니다.  
 
-##  <a name="configuration-manager-virtual-application-delivery-methods"></a>Configuration Manager の仮想アプリケーション配信方法  
-Configuration Manager では、仮想アプリケーションをクライアントに配信する方法として、ストリーミング配信とローカル配信 (ダウンロードして実行) の 2 つをサポートしています。
+##  <a name="configuration-manager-virtual-application-delivery-methods"></a>Configuration Manager의 가상 응용 프로그램 제공 방법  
+Configuration Manager에서는 스트리밍 배달과 로컬 배달(다운로드 및 실행)의 두 가지 방법으로 클라이언트에 가상 응용 프로그램을 제공할 수 있습니다.
 
-使用する配信方法を決定する場合、ストリーミング配信では必要なディスク容量が少なくなることと、ローカル配信では App-V アプリケーションの可用性が保証されることを比較してください。 ローカル配信ではクライアントで必要なディスク容量は増えますが、どのような場所からでも常にアプリケーションを使用できるため、ストリーミング配信よりも理想的です。  
+사용할 배달 방법을 결정할 때는 로컬 배달을 사용하여 App-V 응용 프로그램의 가용성을 보장하는 장점과 스트리밍 배달을 통해 필요한 디스크 공간을 줄이는 장점을 비교합니다. 사용자가 어느 위치에서든 항상 응용 프로그램을 사용할 수 있도록 로컬 배달에 필요한 클라이언트 디스크 공간을 늘리는 것이 스트리밍 배달에 유용할 수 있습니다.  
 
-###  <a name="streaming-delivery"></a>ストリーミング配信
-Configuration Manager を使用して App-V クライアントを管理すると、配布ポイントからの HTTP または HTTPS による仮想アプリケーションのストリーミングがサポートされます。 HTTP または HTTPS によるストリーミングは既定で有効で、[配布ポイントのプロパティ] ダイアログ ボックスで設定します。 仮想アプリケーションをクライアント コンピューターに展開し、ユーザーがその仮想アプリケーションを実行すると、構成マネージャー クライアントは管理ポイントと通信し、使用する配布ポイントを決定します。 その後、アプリケーションが配布ポイントからストリーミングされます。  
+###  <a name="streaming-delivery"></a>스트리밍 배달
+Configuration Manager를 사용하여 App-V 클라이언트를 관리하면 배포 지점에서 HTTP 또는 HTTPS를 통해 가상 응용 프로그램을 스트리밍할 수 있습니다. HTTP 또는 HTTPS를 통한 스트리밍은 기본적으로 사용하도록 설정되어 있으며 배포 지점 속성 대화 상자에서 설정됩니다. 클라이언트 컴퓨터에 가상 응용 프로그램을 배포하고 사용자가 이 가상 응용 프로그램을 실행하는 경우 Configuration Manager 클라이언트는 관리 지점에 연결하여 사용할 배포 지점을 결정합니다. 그런 다음 배포 지점에서 응용 프로그램이 스트리밍됩니다.  
 
-ストリーミング配信が最適な配信方法かを判断する場合、次の表の情報を参考にしてください。
+다음 표에서는 스트리밍 배달이 가장 적합한 배달 방법인지를 결정하는 데 도움이 되는 정보를 제공합니다.
 
-|長所|短所|  
+|장점|단점|  
 |----------------|-------------------|  
-|この方法では、標準のネットワーク プロトコルを使用して、配布ポイントからパッケージのコンテンツをストリーミングします。<br /><br /> 仮想アプリケーションのプログラム ショートカットをクリックすると、配布ポイントへの接続が起動されます。仮想アプリケーションの配信はオンデマンドです。<br /><br /> この方法は、配布ポイントへの接続の帯域幅が広いクライアントに向いています。<br /><br /> 企業全体に配信される、更新された仮想アプリケーションは、現在のバージョンが置き換えられたことを通知するポリシーをクライアントが受信したときに利用可能になります。クライアントは、前のバージョンからの変更点のみをダウンロードします。<br /><br /> 配布ポイントではアクセス権限が定義され、ユーザーは、承認されていないアプリケーションやパッケージにアクセスできません。|ユーザーが初めてアプリケーションを実行するまで、仮想アプリケーションはストリーミングされません。 このシナリオでは、ユーザーに仮想アプリケーションのプログラム ショートカットが送信され、仮想アプリケーションの初回実行前にネットワークから切断されることがあります。 クライアントがオフラインのときにユーザーが仮想アプリケーションを実行しようとすると、アプリケーションをストリーミングする Configuration Manager 配布ポイントを使用できないため、エラーが表示され、仮想化アプリケーションを実行できません。 アプリケーションは、ユーザーがネットワークに再接続して、アプリケーションを実行するまで使用できません。<br /><br /> これを回避するには、クライアントへの仮想アプリケーションの配信にローカル配信方法を使用するか、ストリーミング配信でインターネット ベースのクライアント管理を有効にします。|  
+|이 방법은 표준 네트워크 프로토콜을 사용하여 배포 지점에서 패키지 콘텐츠를 스트리밍합니다.<br /><br /> 가상 응용 프로그램에 대한 프로그램 바로 가기는 배포 지점에 대한 연결을 호출하여 가상 응용 프로그램 배달이 주문형으로 이루어지도록 합니다.<br /><br /> 이 방법은 배포 지점에 대한 고속 연결을 사용하는 클라이언트에 대해 효과적으로 작동합니다.<br /><br /> 기업 전체에 배포되는 업데이트된 가상 응용 프로그램은 클라이언트에서 현재 버전이 대체됨을 알리는 정책을 받고 이전 버전으로부터의 변경 사항만 다운로드할 때 사용할 수 있습니다.<br /><br /> 액세스 권한은 사용자가 무단 응용 프로그램 또는 패키지에 액세스하지 못하도록 배포 지점에서 정의됩니다.|가상 응용 프로그램은 사용자가 처음으로 응용 프로그램을 실행할 때까지 스트리밍되지 않습니다. 이 시나리오에서는 사용자가 가상 응용 프로그램에 대한 프로그램 바로 가기를 받을 수 있지만, 처음으로 가상 응용 프로그램을 실행하기 전에 네트워크에서 연결이 끊길 수 있습니다. 클라이언트가 오프라인 상태인 동안 가상 응용 프로그램을 실행하려고 하면 응용 프로그램을 스트리밍하기 위한 Configuration Manager 배포 지점을 사용할 수 없기 때문에 오류가 표시되고 사용자가 가상화된 응용 프로그램을 실행할 수 없게 됩니다. 사용자가 네트워크에 다시 연결하여 응용 프로그램을 실행할 때까지 응용 프로그램을 사용할 수 없습니다.<br /><br /> 이를 방지하려면 클라이언트에 가상 응용 프로그램을 배달하는 데 로컬 배달 방법을 사용하거나, 스트리밍 배달에 인터넷 기반 클라이언트 관리를 사용하도록 설정할 수 있습니다.|  
 
-###  <a name="local-delivery-download-and-execute"></a>ローカル配信 (ダウンロードして実行)  
-ローカル配信方法を使用すると、Configuration Manager クライアントは、最初に全体の仮想アプリケーション パッケージを Configuration Manager クライアントのキャッシュにダウンロードします。 次に、Configuration Manager は、Configuration Manager キャッシュから APP-V キャッシュにアプリケーションをストリーミングするよう APP-V クライアントに指示します。 仮想アプリケーションをクライアント コンピューターに展開するときに、そのコンテンツが App-V キャッシュにない場合、App-V クライアントは、構成マネージャー クライアント キャッシュから App-V キャッシュにアプリケーションのコンテンツをストリーミングしてから、アプリケーションを実行します。 アプリケーションが正常に実行された後、次の削除サイクルで古いバージョンのパッケージをすべて削除するか、構成マネージャー クライアント キャッシュに保持するかを、構成マネージャー クライアントで設定できます。  
+###  <a name="local-delivery-download-and-execute"></a>로컬 배달(다운로드 및 실행)  
+로컬 배달 방법을 사용하는 경우 Configuration Manager 클라이언트는 먼저 전체 가상 응용 프로그램 패키지를 Configuration Manager 클라이언트 캐시에 다운로드합니다. 그런 다음 Configuration Manager는 App-V 클라이언트에게 Configuration Manager 캐시의 응용 프로그램을 App-V 캐시로 스트리밍하도록 지시합니다. 클라이언트 컴퓨터에 가상 응용 프로그램을 배포하고 해당 콘텐츠가 App-V 캐시에 없는 경우 App-V 클라이언트는 Configuration Manager 클라이언트 캐시에서 App-V 캐시로 응용 프로그램 콘텐츠를 스트리밍한 다음 응용 프로그램을 실행합니다. 응용 프로그램이 정상 실행되고 나면 Configuration Manager 클라이언트가 오래된 버전의 패키지를 삭제하거나 다음 삭제 주기에 Configuration Manager 클라이언트 캐시에 유지하도록 설정할 수 있습니다.  
 
-ローカル配信が最適な配信方法かを判断する場合、次の表の情報を参考にしてください。   
+다음 표에서는 로컬 배달이 가장 적합한 배달 방법인지를 결정하는 데 도움이 되는 정보를 제공합니다.   
 
-|長所|短所|  
+|장점|단점|  
 |----------------|-------------------|  
-|パッケージのダウンロードには、バックグラウンド インテリジェント転送サービス (BITS) を使用した標準の配布ポイントの機能が使用されます。<br /><br /> 仮想アプリケーション パッケージのコンテンツは、クライアントにローカルに配信されます。 つまり、コンピューターがネットワークに接続されていない場合にアプリケーションを実行できます。<br /><br /> この方法は、低速または信頼されないネットワーク接続と、ネットワークに接続する頻度が低いコンピューターに適しています。<br /><br /> Configuration Manager は、Remote Differential Compression (RDC) を使用して、仮想アプリケーション パッケージのコンテンツの更新時に変更されたファイル内のデータのみを、クライアントに送信します。 構成マネージャー クライアントは、RDC を使用して、現在のバージョンのパッケージと、クライアントに送信された変更を基に、新しいバージョンの仮想アプリケーション パッケージを作成します。<br /><br /> この方法では、モバイル ユーザーやネットワークに接続されていないユーザーに対して、アプリケーションの回復力が高くなります。 管理者は、仮想アプリケーションがインストール操作で展開された場合に、配信後も Configuration Manager キャッシュにパッケージを保持することを選択できます。 構成マネージャー クライアント キャッシュに保存されたパッケージは、App-V クライアントがパッケージをキャッシュにプルする場合に、ローカルの信頼できるストリーミング ソースとして使用できます。|仮想アプリケーションを Configuration Manager キャッシュに保持する場合、クライアントには、仮想アプリケーション パッケージのサイズの最大 2 倍のディスク容量が必要です。|  
+|표준 배포 지점 기능은 BITS(Background Intelligent Transfer Service)를 사용하여 패키지를 다운로드하는 데 사용됩니다.<br /><br /> 가상 응용 프로그램 패키지 콘텐츠가 클라이언트에 로컬로 배달됩니다. 즉, 사용자는 컴퓨터가 네트워크에 연결되어 있지 않아도 콘텐츠를 실행할 수 있습니다.<br /><br /> 이 방법은 네트워크 연결이 느리거나 불안정한 경우 및 컴퓨터가 네트워크에 가끔씩만 연결되는 경우에 적합합니다.<br /><br /> Configuration Manager는 RDC(원격 차등 압축)를 사용해서 가상 응용 프로그램 패키지 콘텐츠가 업데이트될 때 변경된 파일 내 바이트만 클라이언트에 전송합니다. Configuration Manager 클라이언트에서는 RDC를 사용하여 현재 버전의 패키지와 클라이언트에 전송된 변경 사항을 기반으로 새 버전의 가상 응용 프로그램 패키지를 만듭니다.<br /><br /> 이 방법을 통해 모바일 사용자와 연결이 끊긴 사용자의 응용 프로그램이 복원될 수 있습니다. 관리자는 설치 작업을 통해 가상 응용 프로그램이 배포된 경우 배달 후에 패키지를 Configuration Manager 캐시에 유지하도록 선택할 수 있습니다. Configuration Manager 클라이언트 캐시의 패키지는 App-V 클라이언트가 캐시로 패키지를 가져오기 위한 안정적인 로컬 스트리밍 원본으로 사용됩니다.|Configuration Manager 캐시에 가상 응용 프로그램을 유지하는 경우 클라이언트에 가상 응용 프로그램 패키지 크기의 최대 두 배에 해당하는 디스크 공간이 필요합니다.|  
 
-###  <a name="deployment-from-an-image"></a>イメージからの展開
+###  <a name="deployment-from-an-image"></a>이미지에서 배포
 
-コンピューターに仮想アプリケーションを事前インストールし、その他のコンピューターへの展開用に、そのコンピューターのイメージを作成することもできます。 ただし、仮想アプリケーション パッケージを別のサイトで作成した場合、アプリケーションの更新プログラムをダウンロードするときに、バイナリ差分レプリケーションは使用されません。 このオプションは、ユーザーのログオン後にアプリケーションをダウンロードせず、すぐにアプリケーションを使用できるようにする場合に、仮想デスクトップ インフラストラクチャで有用です。    
+또한 가상 응용 프로그램을 컴퓨터에 미리 설치한 다음 해당 컴퓨터의 이미지를 만들어 다른 컴퓨터에 배포할 수도 있습니다. 그러나 다른 사이트에서 가상 응용 프로그램 패키지가 만들어진 경우 응용 프로그램에 업데이트를 다운로드하는 데 이진 델타 복제가 사용되지 않습니다. 이 옵션은 가상 데스크톱 인프라에서 사용자가 로그온한 후 응용 프로그램을 다운로드하는 대신 응용 프로그램을 즉시 사용할 수 있도록 하려는 경우에 유용할 수 있습니다.    
 
-##  <a name="migrating-from-an-app-v-infrastructure-to-a-configuration-manager-and-app-v-infrastructure"></a>App-V インフラストラクチャから Configuration Manager および App-V インフラストラクチャへの移行  
-既存の App-V インフラストラクチャから Configuration Manager による仮想アプリケーションの管理に移行する計画を立てる場合、次の表をご覧ください。  
+##  <a name="migrating-from-an-app-v-infrastructure-to-a-configuration-manager-and-app-v-infrastructure"></a>App-V 인프라에서 Configuration Manager 및 App-V 인프라로 마이그레이션  
+다음 표에서는 Configuration Manager를 사용하여 기존 App-V 인프라에서 가상 응용 프로그램 관리로의 마이그레이션을 계획하는 데 도움이 되는 정보를 제공합니다.  
 
-|手順|説明|  
+|단계|추가 정보|  
 |----------|----------------------|  
-|現在の仮想アプリケーションを検討して、Configuration Manager インフラストラクチャに移行するアプリケーションを選択します。|詳細情報はありません。|  
-|仮想アプリケーションを展開する先のユーザーとデバイスを評価する|Configuration Manager コレクションを作成して、仮想アプリケーションの展開先のユーザーとデバイスをグループ化します。 「[コレクションの概要](/sccm/core/clients/manage/collections/introduction-to-collections)」をご覧ください。|  
-|App-V 5 接続グループを Configuration Manager 仮想環境に移行する|このトピックの「[App-V 5 接続グループを Configuration Manager 仮想環境に移行する](/sccm/apps/get-started/deploying-app-v-virtual-applications#migrate-app-v-5-connection-groups-to-configuration-manager-virtual-environments)」セクションをご覧ください。|  
-|仮想アプリケーションのいずれかが、Configuration Manager インフラストラクチャにフル アプリケーションとして存在しているかどうかを調査して検出する|管理を簡単にするために、仮想アプリケーションを、新しい展開の種類として既存のフル アプリケーションに追加できます。 「[Create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md)」 (System Center Configuration Manager でアプリケーションを作成する) を参照してください。|  
-|既存の App-V パッケージの代わりとなるアプリケーションを作成する|「[アプリケーション管理の概要](/sccm/apps/understand/introduction-to-application-management)」および「[Create applications](../../apps/deploy-use/create-applications.md)」 (アプリケーションを作成する) をご覧ください。|  
-|Configuration Manager で、仮想アプリケーションの最初の展開後に、クライアントでの仮想アプリケーションの管理を開始する。 その後、Configuration Manager はコンピューター上のすべての App-V アプリケーションを管理する必要があります。|詳細情報はありません。|  
-|コンテンツを適切な配布ポイントに配布し、アプリケーションのローカル配信を有効にする|「[コンテンツとコンテンツ インフラストラクチャの管理](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。|  
-|アプリケーションを構成マネージャー クライアントに展開する<br /><br /> App-V アプリケーションが、マニフェスト XML ファイルを作成しない以前のバージョンの Sequencer で作成されている場合、新しいバージョンの Sequencer でアプリケーションを開いて保存し、マニフェスト XML ファイルを作成できます。 このファイルは、Configuration Manager で仮想アプリケーションを展開するために必要です。<br /><br /> App-V は、SoftGrid 4.1 SP1 または 4.2 バージョンの Sequencer で作成された仮想アプリケーション パッケージをサポートします。<br /><br /> アプリケーションが以前にローカルでインストールされている場合、仮想バージョンのアプリケーションを展開する前に、そのアプリケーションをアンインストールする必要があります。|「[Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md)」 (System Center Configuration Manager でアプリケーションを展開する) を参照してください。|  
-|System Center Configuration Manager では、仮想アプリケーションを含むパッケージとプログラムの使用をサポートしなくなりました。 Configuration Manager 2007 から System Center Configuration Manager に移行すると、Configuration Manager によってこれらのパッケージがアプリケーションに変換されます。<br /><br /> Configuration Manager 2007 公開通知は、次の展開の種類に変換されます。<br /><br /> - 移行する App-V パッケージに公開通知がない場合: 展開の種類の既定設定を使用する展開の種類が 1 つ作成されます。<br /><br /> - 移行する App-V パッケージの公開通知が 1 つの場合: Configuration Manager 2007 の公開通知と同じ設定を使用する <br />                展開の種類が 1 つ作成されます。<br /><br /> - 移行する App-V パッケージの公開通知が複数の場合: Configuration Manager 2007 の各公開通知に対して展開の種類が 1 つ作成されます。 <br />                それぞれの展開の種類で使用する設定は、公開通知と同じになります。|「[Configuration Manager オブジェクトの System Center Configuration Manager への移行の計画](../../core/migration/planning-for-the-migration-of-objects.md)」をご覧ください。|  
+|현재 가상 응용 프로그램을 검토하여 Configuration Manager 인프라로 마이그레이션할 응용 프로그램을 선택합니다.|추가 정보가 없습니다.|  
+|가상 응용 프로그램을 배포할 사용자와 장치를 평가합니다.|가상 응용 프로그램을 배포할 사용자와 장치를 함께 그룹화하는 Configuration Manager 컬렉션을 만듭니다. [컬렉션 소개](/sccm/core/clients/manage/collections/introduction-to-collections)를 참조하세요.|  
+|App-V 5 연결 그룹을 Configuration Manager 가상 환경으로 마이그레이션합니다.|이 항목의 [App-V 5 연결 그룹을 Configuration Manager 가상 환경으로 마이그레이션](/sccm/apps/get-started/deploying-app-v-virtual-applications#migrate-app-v-5-connection-groups-to-configuration-manager-virtual-environments) 섹션을 참조하세요.|  
+|가상 응용 프로그램이 Configuration Manager 인프라에 전체 응용 프로그램으로 존재하는지 확인합니다.|관리를 간소화하기 위해 가상 응용 프로그램을 새 배포 유형으로 기존 전체 응용 프로그램에 추가할 수 있습니다. [응용 프로그램 만들기](../../apps/deploy-use/create-applications.md)를 참조하세요.|  
+|기존 APP-V 패키지를 대체하는 응용 프로그램을 만듭니다.|[응용 프로그램 관리 소개](/sccm/apps/understand/introduction-to-application-management) 및 [응용 프로그램 만들기](../../apps/deploy-use/create-applications.md)를 참조하세요.|  
+|가상 응용 프로그램이 처음 배포된 후에 클라이언트에서 Configuration Manager를 통해 가상 응용 프로그램 관리를 시작합니다. 그리고 나면 Configuration Manager가 컴퓨터의 모든 App-V 응용 프로그램을 관리해야 합니다.|추가 정보가 없습니다.|  
+|응용 프로그램의 로컬 배달을 사용하도록 콘텐츠를 적절한 배포 지점에 배포합니다.|[콘텐츠 및 콘텐츠 인프라 관리](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)를 참조하세요.|  
+|Configuration Manager 클라이언트에 응용 프로그램을 배포합니다.<br /><br /> 매니페스트 XML 파일을 만들지 않는 이전 버전의 시퀀서로 App-V 응용 프로그램이 만들어진 경우 최신 버전의 시퀀서로 이 응용 프로그램을 열고 저장하여 매니페스트 XML 파일을 만들 수 있습니다. 이 파일은 Configuration Manager를 사용하여 가상 응용 프로그램을 배포하는 데 필요합니다.<br /><br /> App-V는 SoftGrid 4.1 SP1 또는 4.2 버전의 시퀀서로 만들어진 가상 응용 프로그램 패키지를 지원합니다.<br /><br /> 응용 프로그램이 이전에 로컬로 설치된 경우 이를 제거한 후에 응용 프로그램의 가상 버전을 배포해야 합니다.|[응용 프로그램 배포](../../apps/deploy-use/deploy-applications.md)를 참조하세요.|  
+|System Center Configuration Manager에서는 더 이상 가상 응용 프로그램이 포함된 패키지와 프로그램을 사용할 수 없습니다. Configuration Manager 2007에서 System Center Configuration Manager로 마이그레이션할 때 Configuration Manager가 이러한 패키지를 응용 프로그램으로 변환합니다.<br /><br /> Configuration Manager 2007 보급 알림은 다음 배포 유형으로 변환됩니다.<br /><br /> - 보급 알림이 없는 App-V 패키지 마이그레이션: 기본 배포 유형 설정을 사용하는 한 가지 배포 유형입니다.<br /><br /> - 보급 알림이 하나 포함된 App-V 패키지 마이그레이션: Configuration Manager 2007 보급 알림과 동일한 설정을 사용하는 <br />                한 가지 배포 유형입니다.<br /><br /> - 보급 알림이 여러 개 포함된 App-V 패키지 마이그레이션: 각각에 대한 배포 유형 <br />                Configuration Manager 2007 보급 알림은 해당 보급 알림에 대한 설정을 사용합니다.|[Configuration Manager 개체를 System Center Configuration Manager로 마이그레이션하도록 계획](../../core/migration/planning-for-the-migration-of-objects.md)을 참조하세요.|  
 
-##  <a name="migrating-app-v-5-connection-groups-to-configuration-manager-virtual-environments"></a>App-V 5 接続グループの Configuration Manager 仮想環境への移行  
-Configuration Manager の App-V 仮想環境を使用すると、展開した仮想アプリケーションで、クライアント コンピューター上の同一のファイル システムとレジストリを共有できます。 つまり、標準の仮想アプリケーションとは異なり、これらのアプリケーションは、相互にデータを共有できます。 アプリケーションがインストールされると、クライアント コンピューターに仮想環境が作成されます。また、インストールされたアプリケーションがクライアントで次回評価されたときに、クライアント コンピューターの仮想環境が変更されます。 仮想環境は、スタンドアロンの App-V 5 の接続グループと同様です。  
+##  <a name="migrating-app-v-5-connection-groups-to-configuration-manager-virtual-environments"></a>App-V 5 연결 그룹을 Configuration Manager 가상 환경으로 마이그레이션  
+Configuration Manager의 App-V 가상 환경에서는 배포된 가상 응용 프로그램이 클라이언트 컴퓨터에 있는 동일한 파일 시스템과 레지스트리를 공유할 수 있습니다. 즉, 일반 가상 응용 프로그램과 달리 이러한 응용 프로그램은 서로 데이터를 공유할 수 있습니다. 가상 환경은 응용 프로그램이 설치되거나 설치된 응용 프로그램을 클라이언트가 다음에 평가할 때 클라이언트 컴퓨터에서 만들어지거나 변경됩니다. 가상 환경은 독립 실행형 App-V 5의 연결 그룹과 유사합니다.  
 
-スタンドアロンの App-V 5 から Configuration Manager 仮想環境に接続グループを移行する場合、クライアント コンピューターに既に存在する接続グループが Configuration Manager によって適切に管理されるようにし、これらの接続グループ内のユーザーの環境が維持されるようにする必要があります。  
+연결 그룹을 독립 실행형 App-V 5에서 Configuration Manager 가상 환경으로 마이그레이션하는 경우 클라이언트 컴퓨터에 이미 있는 연결 그룹을 Configuration Manager에서 올바르게 관리하며 이러한 연결 그룹 내 사용자 환경이 유지되는지 확인해야 합니다.  
 
-App-V 5 接続グループを Configuration Manager 仮想環境に変換するには、次の手順を実行します。  
+App-V 5 연결 그룹을 Configuration Manager 가상 환경으로 변환하려면  
 
-1.  App-V に存在するすべてのアプリケーションに対して、Configuration Manager アプリケーションを作成します。  
+1.  App-V에 있던 모든 응용 프로그램에 대한 Configuration Manager 응용 프로그램을 만듭니다.  
 
-2.  展開の目的が **[必須]**のアプリケーションをユーザーまたはデバイスインスタンスに展開します。 ユーザーに対する展開は、APP-V でアプリケーションを使用したのと同じユーザーに展開する必要があります。 コンピューターに対する展開は、APP-V でアプリケーションを使用したのと同じコンピューターに展開する必要があります。  
+2.  배포 목적이 **필수**인 사용자 또는 장치에 응용 프로그램을 배포합니다. 사용자에게 배포할 응용 프로그램은 App-V에서 응용 프로그램을 사용했던 사용자에게 배포해야 합니다. 컴퓨터에 배포할 응용 프로그램은 App-V에서 해당 응용 프로그램이 포함되어 있었던 컴퓨터에 배포해야 합니다.  
 
-3.  展開が終わったら、スタンドアロン App-V で発行された接続グループと一致する仮想環境を作成します。 仮想環境には、同じ順で同じパッケージ (特に、App-V 5 の展開の種類) を含める必要があります。  
+3.  배포가 완료되면 독립 실행형 App-V에 게시된 연결 그룹과 일치하는 가상 환경을 만듭니다. 가상 환경에는 동일한 패키지(구체적으로는 App-V 5 배포 유형)가 같은 순서로 포함되어야 합니다.  
 
-App-V 仮想環境を作成する方法については、「[App-V 仮想環境を作成する方法](../../apps/deploy-use/create-app-v-virtual-environments.md)」をご覧ください。  
+App-V 가상 환경을 만드는 방법에 대한 자세한 내용은 [APP-V 가상 환경을 만드는 방법](../../apps/deploy-use/create-app-v-virtual-environments.md)을 참조하세요.  
 
-または、App-V クライアントからすべての接続グループを削除してから、Configuration Manager を使用してアプリケーションを展開することができます。 ただし、ユーザーが App-V 接続グループに保存した設定は失われます。  
+또는 Configuration Manager로 응용 프로그램 배포를 시작하기 전에 App-V 클라이언트에서 모든 연결 그룹을 삭제할 수 있습니다. 하지만 사용자가 App-V 연결 그룹에 저장했을 수 있는 설정이 손실됩니다.  
 
-##  <a name="dynamic-suite-composition-in-app-v-46"></a>App-V 4.6 の Dynamic Suite Composition  
-Dynamic Suite Composition は、1 つの仮想アプリケーション パッケージが別の仮想アプリケーション パッケージと依存関係があると定義できる機能です。 このアプリケーションを実行すると、App-V クライアントは、プライマリ パッケージとその依存パッケージをアプリケーションの同じ仮想環境でホストします。  
+##  <a name="dynamic-suite-composition-in-app-v-46"></a>APP-V 4.6의 Dynamic Suite Composition  
+Dynamic Suite Composition은 다른 가상 응용 프로그램 패키지에 대한 종속성이 있는 단일 가상 응용 프로그램 패키지를 정의할 수 있는 기능입니다. 응용 프로그램이 실행될 때 App-V 클라이언트는 동일한 가상 환경에서 응용 프로그램의 기본 패키지와 종속 패키지를 호스트합니다.  
 
-Configuration Manager でこの機能を使用するには、両方のパッケージを展開し、App-V クライアントに登録する必要があります。 依存パッケージのコンテンツをクライアント コンピューターのローカルでホストするために、ローカル配信用 (ダウンロードおよび実行) にアプリケーションの展開を設定します。  
+Configuration Manager와 함께 이 기능을 사용하려면 두 패키지 모두 App-V 클라이언트에 배포 및 등록되어야 합니다. 종속 패키지 콘텐츠가 클라이언트 컴퓨터에서 로컬로 호스트되는지 확인하려면 응용 프로그램 배포를 로컬 배달(다운로드 및 실행)로 설정합니다.  
 
-App-V Dynamic Suite Composition の詳細については、App-V のドキュメントをご覧ください。  
+App-V Dynamic Suite Composition에 대한 자세한 내용은 관련 App-V 설명서를 참조하세요.  
 
-##  <a name="converting-app-v-46-applications-to-app-v-5-applications"></a>App-V 4.6 アプリケーションから App-V 5 アプリケーションへの変換  
-App-V 5 のアプリケーション パッケージの形式は、App-V 4.6 から変わりました。 App-V 4.6 を使用してシーケンス処理されたアプリケーションは、サポートされなくなりました。 ただし、App-V 5 には、アプリケーションの変換に使用できるパッケージ変換ツールがあります。 詳細については、 [App-V 5 のドキュメント](http://technet.microsoft.com/library/jj713472.aspx)をご覧ください。  
+##  <a name="converting-app-v-46-applications-to-app-v-5-applications"></a>App-V 4.6 응용 프로그램을 App-V 5 응용 프로그램으로 변환  
+App-V 4.6과 App-V 5 간에는 응용 프로그램 패키지 형식이 변경되었습니다. App-V 4.6을 사용하여 시퀀스된 응용 프로그램은 더 이상 지원되지 않습니다. 하지만 App-V 5의 패키지 변환기 도구를 사용하여 응용 프로그램을 변환할 수 있습니다. 자세한 내용은 [APP-V 5 설명서](http://technet.microsoft.com/library/jj713472.aspx)를 참조하세요.  
 
-App-V 4.6 アプリケーションを App-V 5 アプリケーションに変換するには、次の手順を実行します。  
+App-V 4.6 응용 프로그램을 App-V 5 응용 프로그램으로 변환하려면 다음 단계를 따르세요.  
 
-1.  App-V 4.6 パッケージを App-V 5 形式に変換するか、シーケンス処理を再実行します。  
+1.  App-V 4.6 패키지를 App-V 5 형식으로 변환하거나 시퀀싱 작업을 다시 수행합니다.  
 
-2.  App-V 5 クライアントを階層内のコンピューターに展開します。  
+2.  App-V 5 클라이언트를 계층에 있는 컴퓨터에 배포합니다.  
 
-3.  App-V 5 アプリケーション用の展開の種類を含む新しいアプリケーションを作成し、置き換えの規則を作成して、App-V 4.6 アプリケーションを置き換えます。  
+3.  App-V 5 응용 프로그램용 배포 유형이 포함된 새 응용 프로그램을 만들고 App-V 4.6 응용 프로그램을 교체하는 교체 규칙을 만듭니다.  
 
-4.  必要に応じて仮想環境を作成します。  
+4.  필요한 경우 가상 환경을 만듭니다.  
 
-5.  新しい App-V 5 アプリケーションをコンピューターに展開します。  
+5.  새 5 APP-V 응용 프로그램을 컴퓨터에 배포합니다.  
 
-##  <a name="user-and-deployment-configuration-files"></a>ユーザーおよび展開構成ファイル  
-ユーザーおよび展開構成ファイルには、アプリケーションの動作を制御する設定が含まれます。 これらのファイルを使用すると、アプリケーションのシーケンス処理を再実行せずにアプリケーション設定を変更できます。  
+##  <a name="user-and-deployment-configuration-files"></a>사용자 및 배포 구성 파일  
+사용자 및 배포 구성 파일에는 응용 프로그램의 동작 방식을 제어하는 설정이 포함되어 있습니다. 이러한 파일을 사용하면 응용 프로그램을 다시 시퀀싱하지 않고 응용 프로그램 설정을 변경할 수 있습니다.  
 
-一般的な App-V 5 アプリケーションには、次のファイルが含まれます。  
+일반적인 App-V 5 응용 프로그램에는 다음 파일이 포함되어 있을 수 있습니다.  
 
--   アプリケーション パッケージ (.appv) ファイル  
+-   응용 프로그램 패키지(.appv) 파일  
 
--   ユーザー構成ファイル  
+-   사용자 구성 파일  
 
--   展開構成ファイル  
+-   배포 구성 파일  
 
-ユーザー構成ファイルには、ログオンしたユーザーにのみ適用される設定が含まれます。 たとえば、構成ファイルを編集して、ユーザーに展開されるアプリケーション ショートカットに関する情報を変更できます。 複数の展開の種類で Configuration Manager アプリケーションを作成することもできます。 また、各展開の種類に異なるユーザー構成ファイルを含め、要件の規則を使用することで、関連するユーザーに確実にインストールされるようにすることができます。  
+사용자 구성 파일에는 로그온한 사용자에게만 적용되는 설정이 포함됩니다. 예를 들어 구성 파일을 편집하여 사용자에게 배포되는 응용 프로그램의 바로 가기에 대한 정보를 변경할 수 있습니다. 또한 배포 유형이 여러 개인 Configuration Manager 응용 프로그램을 만들 수도 있습니다. 각 배포 유형은 다른 사용자 구성 파일을 포함할 수 있으며 요구 사항 규칙을 사용하여 관련 사용자에 대한 응용 프로그램을 설치할 수 있습니다.  
 
-展開構成ファイルには、コンピューターに適用される設定 (レジストリ設定など) が含まれます。 また、すべてのユーザーに適用されるユーザー設定も含まれます。  
+배포 구성 파일에는 레지스트리 설정과 같이 컴퓨터에 적용되는 설정이 포함됩니다. 또한 모든 사용자에게 적용되는 사용자 설정도 포함될 수 있습니다.  
 
-Configuration Manager を使用して App-V 5 仮想アプリケーションを展開する場合、App-V 5 の展開の種類を作成するときに、3 つのファイルすべてが同じフォルダーに配置されている必要があります。 フォルダー内に複数のファイルがある場合、Configuration Manager は最新のファイルを使用します。  
+Configuration Manager로 App-V 5 가상 응용 프로그램을 배포하려는 경우 모든 세 파일이 App-V 5 배포 유형을 만들 때 사용한 폴더와 동일한 폴더에 있어야 합니다. 폴더에 여러 파일이 있는 경우 Configuration Manager는 최신 파일을 사용합니다.  
 
-詳細については、 [App-V 5 のドキュメント](http://technet.microsoft.com/library/jj713466.aspx)をご覧ください。  
+자세한 내용은 [APP-V 5 설명서](http://technet.microsoft.com/library/jj713466.aspx)를 참조하세요.  
 
-##  <a name="app-v-local-interaction"></a>App-V ローカル通信  
-アプリケーションの展開のシナリオによっては、アプリケーションがクライアント コンピューターのローカルにインストールされ、他のアプリケーションが仮想アプリケーションとして同じクライアント コンピューターに展開されることがあります。 既定では、ローカルにインストールされたアプリケーションは、仮想化されたアプリケーションを直接表示または通信することはできません。 これは、App-V が提供しているアプリケーションの分離機能の意図的な動作です。 ローカル通信は、各アプリケーションで有効にすることができる App-V クライアントの機能です。有効にすると、クライアント コンピューターのローカルにインストールされ、実行されているアプリケーションが、仮想化されたアプリケーションを表示して通信できるようになります。 Configuration Manager および App-V はローカル通信を完全にサポートしています。  
+##  <a name="app-v-local-interaction"></a>App-V 로컬 상호 작용  
+일부 응용 프로그램 배포의 경우 클라이언트 컴퓨터에 로컬로 설치되는 응용 프로그램도 있고, 동일한 클라이언트 컴퓨터에 가상 응용 프로그램으로 배포되는 응용 프로그램도 있습니다. 기본적으로, 로컬로 설치된 응용 프로그램은 가상화된 응용 프로그램과 직접 통신하거나 서로 인식할 수 없습니다. 이러한 현상은 App-V에서 제공되는 응용 프로그램 격리의 정상적인 동작입니다. 로컬 상호 작용은 App-V 클라이언트의 기능으로, 클라이언트 컴퓨터에서 실행되는 로컬에 설치된 응용 프로그램이 가상화된 응용 프로그램을 확인하고 가상화된 응용 프로그램과 통신할 수 있도록 각 응용 프로그램에 대해 이 기능을 사용하도록 설정할 수 있습니다. Configuration Manager 및 App-V는 로컬 상호 작용을 완전히 지원합니다.  
 
-App-V のローカル通信機能の詳細については、App-V のドキュメントをご覧ください。  
+App-V 로컬 상호 작용 기능에 대한 자세한 내용은 관련 App-V 설명서를 참조하세요.  
 
-##  <a name="app-v-5-shared-content-store"></a>App-V 5 共有コンテンツ ストア  
-Configuration Manager では、App-V 5 共有コンテンツ格納機能をサポートしています。 詳細については、「 [App-v 5.0 共有コンテンツ ストア (SCS) の計画](http://technet.microsoft.com/library/jj713431.aspx)」をご覧ください。  
+##  <a name="app-v-5-shared-content-store"></a>App-V 5 공유 콘텐츠 저장소  
+Configuration Manager는 App-V 5 공유 콘텐츠 저장소 기능을 지원합니다. 자세한 내용은 [App-V 5.0 SCS(공유 콘텐츠 저장소) 계획](http://technet.microsoft.com/library/jj713431.aspx)항목을 참조하세요.  
 
-##  <a name="monitoring-virtual-applications"></a>仮想アプリケーションの監視  
+##  <a name="monitoring-virtual-applications"></a>가상 응용 프로그램 모니터링  
 
-### <a name="virtual-application-reports"></a>仮想アプリケーション レポート  
-Configuration Manager 環境で App-V を監視するには、次のレポートを使用できます。  
+### <a name="virtual-application-reports"></a>가상 응용 프로그램 보고서  
+다음 보고서를 사용하여 Configuration Manager 환경에서 App-V를 모니터링할 수 있습니다.  
 
-|レポート名|説明|  
+|보고서 이름|설명|  
 |-----------------|-----------------|  
-|App-V 仮想環境の結果|選択したコレクションに対して指定した状態にある仮想環境に関する情報を表示します (App-V 5 のみ)。|  
-|資産に関する App-V 仮想環境の結果|指定した資産の仮想環境と、選択した仮想環境の任意の展開の種類に関する情報を表示します (App-V 5 のみ)。|  
-|App-V 仮想環境のステータス|選択したコレクションの選択した仮想環境のコンプライアンス情報を表示します。 このレポートの **[保持総数]** 列には、以前に設定した仮想環境を適用できなくなった資産が表示されますが、引き続き、仮想環境で実行されるアプリケーションにユーザー設定が維持されます (App-V 5 のみ)。|  
-|特定の仮想アプリケーションが存在するコンピューター|Application Virtualization Management Sequencer で作成された指定の App-V ショートカットがあるコンピューターの概要が表示されます (App-V 4.6 のみ)。|  
-|特定の仮想アプリケーション パッケージが存在するコンピューター|指定した App-V アプリケーション パッケージがインストールされているコンピューターの一覧が表示されます (App-V 4.6 のみ)。|  
-|仮想アプリケーション パッケージのすべてのインスタンスのカウント|すべての検出された App-V アプリケーション パッケージの数が表示されます (App-V 4.6 のみ)。|  
-|仮想アプリケーションのすべてのインスタンスのカウント|すべての検出された App-V アプリケーションの数が表示されます (App-V 4.6 のみ)。|  
+|APP-V 가상 환경 결과|선택한 가상 환경에서 지정된 상태로 설정되어 있는 선택된 가상 환경 관련 정보를 표시합니다(App-V 5에만 해당).|  
+|자산에 대한 App-V 가상 환경 결과|지정된 자산용으로 선택한 가상 환경 관련 정보와, 선택한 가상 환경의 배포 유형을 표시합니다(App-V 5에만 해당).|  
+|App-V 가상 환경 상태|선택한 컬렉션용으로 선택된 가상 환경의 호환성 정보를 표시합니다. 이 보고서의 **보존** 열에는 이전에 설정된 가상 환경의 자산 중 더 이상 적용할 수 없지만 가상 환경에서 실행하는 응용 프로그램의 사용자 설정을 유지할 목적으로 보존되는 자산이 표시됩니다(App-V 5에만 해당).|  
+|특정 가상 응용 프로그램을 포함하는 컴퓨터|Application Virtualization Management Sequencer에서 작성한 지정된 App-V 바로 가기가 있는 컴퓨터의 요약 정보를 표시합니다(App-V 4.6에만 해당).|  
+|특정 가상 응용 프로그램 패키지를 포함하는 컴퓨터|지정한 App-V 응용 프로그램 패키지가 설치된 컴퓨터 목록을 표시합니다(App-V 4.6에만 해당).|  
+|모든 가상 응용 프로그램 패키지 인스턴스 수|검색된 모든 App-V 응용 프로그램 패키지 수를 표시합니다(App-V 4.6에만 해당).|  
+|모든 가상 응용 프로그램 인스턴스 수|검색된 모든 App-V 응용 프로그램 수를 표시합니다(App-V 4.6에만 해당).|  
 
-### <a name="log-files"></a>ログ ファイル  
-Configuration Manager は、仮想アプリケーションの展開に関する情報をログ ファイルに記録します。 仮想アプリケーションと Configuration Manager アプリケーション管理で使用されるログ ファイルについては、「[System Center Configuration Manager のログ ファイル](../../core/plan-design/hierarchy/log-files.md)」をご覧ください。  
+### <a name="log-files"></a>로그 파일  
+Configuration Manager는 가상 응용 프로그램 배포에 대한 정보를 로그 파일에 기록합니다. 가상 응용 프로그램 및 Configuration Manager 응용 프로그램 관리에서 사용하는 로그 파일에 대한 자세한 내용은 [System Center Configuration Manager의 로그 파일](../../core/plan-design/hierarchy/log-files.md)을 참조하세요.  
 
-Windows Vista、Windows 7、Windows 8 の場合、App-V クライアントのログは C:\ProgramData\Microsoft\Application Virtualization Client にあります。  
-
+Windows Vista, Windows 7 및 Windows 8의 경우 App-V 클라이언트의 로그는 C:\ProgramData\Microsoft\Application Virtualization Client에 있습니다.  

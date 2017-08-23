@@ -1,49 +1,43 @@
 ---
-title: "ソフトウェア センターを使用してネットワーク経由での Windows を展開する | Microsoft Docs"
-description: "オペレーティング システムをソフトウェア センターに展開して、既存のコンピューターを新しいバージョンの Windows に更新したり、Windows を最新バージョンにアップグレードしたりできます。"
+title: "소프트웨어 센터를 사용하여 네트워크를 통해 Windows 배포 | Microsoft 문서"
+description: "소프트웨어 센터에 운영 체제를 배포하여 기존 컴퓨터를 새 버전의 Windows로 새로 고치거나 Windows를 최신 버전으로 업그레이드할 수 있습니다."
 ms.custom: na
 ms.date: 6/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 919e3636-53fe-4119-ad14-2d03702b391b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
 ms.openlocfilehash: 8988409c68b7f69439ed03872c316b2139d25616
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/28/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/07/2017
 ---
-# System Center Configuration Manager でソフトウェア センターを使用してネットワーク経由で Windows を展開する
-<a id="use-software-center-to-deploy-windows-over-the-network-with-system-center-configuration-manager" class="xliff"></a>
+# <a name="use-software-center-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>System Center Configuration Manager에서 소프트웨어 센터를 사용하여 네트워크를 통해 Windows 배포
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*적용 대상: System Center Configuration Manager(현재 분기)*
 
-System Center Configuration Manager でオペレーティング システムをインストールするためのタスク シーケンスは、ソフトウェア センターで使用可能にすることができます。 次のオペレーティング システムの展開シナリオでは、オペレーティング システムをソフトウェア センターに展開することができます。
+System Center Configuration Manager에서 운영 체제를 설치하기 위한 작업 순서를 소프트웨어 센터에서 사용하도록 만들 수 있습니다. 다음 운영 체제 배포 시나리오에서 소프트웨어 센터에 운영 체제를 배포할 수 있습니다.
 
--   [新しいバージョンの Windows で既存のコンピューターを更新する](refresh-an-existing-computer-with-a-new-version-of-windows.md)
+-   [새 버전의 Windows로 기존 컴퓨터 새로 고침](refresh-an-existing-computer-with-a-new-version-of-windows.md)
 
--   [Windows を最新バージョンにアップグレードする](upgrade-windows-to-the-latest-version.md)
+-   [최신 버전으로 Windows 업그레이드](upgrade-windows-to-the-latest-version.md)
 
-いずれかのオペレーティング システムの展開シナリオの手順を実行します。 その後で、次のセクションを使用して、ソフトウェア センターで使用可能な展開を準備します。
+운영 체제 배포 시나리오 중 하나의 단계를 완료합니다. 그런 후 다음 섹션을 사용하여 소프트웨어 센터에서 사용할 수 있는 배포를 준비합니다.
 
-## 展開の設定の構成
-<a id="configure-deployment-settings" class="xliff"></a>  
-オペレーティング システムの展開をソフトウェア センターで使用できるようにするには、展開を構成します。 展開は、ソフトウェアの展開ウィザードの **[展開の設定]** ページか展開のプロパティの **[配置の設定]** タブで構成することができます。 **[利用できるようにする項目]** 設定で、 **[Configuration Manager クライアントのみ]** または **[Configuration Manager クライアント、メディア、PXE]**のいずれかを構成します。 システムでオペレーティング システムが展開された後、オペレーティング システムは、ソフトウェア センターにターゲット コレクションのメンバーとして表示されます。
+## <a name="configure-deployment-settings"></a>배포 설정 구성  
+소프트웨어 센터에서 운영 체제 배포를 사용하용할 수 있게 하려면 해당 배포를 구성합니다. 소프트웨어 배포 마법사의 **배포 설정** 페이지 또는 배포에 대한 속성의 **배포 설정** 탭에서 배포를 구성할 수 있습니다. **다음에 사용 가능하도록 설정** 설정에 대해 **Configuration Manager 클라이언트만** 또는 **Configuration Manager 클라이언트, 미디어 및 PXE**를 구성합니다. 시스템에서 운영 체제가 배포되면 대상 컬렉션의 구성원에 대해 소프트웨어 센터에 해당 운영 체제가 표시됩니다.
 
-##  <a name="BKMK_Deploy"></a> コンピューターへのタスク シーケンスの展開  
-オペレーティング システムをターゲット コレクションに展開します。 詳細については、「 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)」をご覧ください。 ソフトウェア センターでオペレーティング システムを展開するとき、展開が必須か使用可能かを設定することができます。
+##  <a name="BKMK_Deploy"></a> 컴퓨터에 작업 순서 배포  
+대상 컬렉션에 운영 체제 배포 자세한 내용은 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)항목을 참조하세요. 소프트웨어 센터에 대해 운영 체제를 배포할 경우 배포를 필수 또는 사용 가능으로 구성할 수 있습니다.
 
--   **必須の展開**: 必須の展開では、ソフトウェア センターでオペレーティング システムが利用可能になりますが、構成された割り当てスケジュールで自動的に開始されます。
+-   **필수 배포**: 필수 배포는 소프트웨어 센터에서 운영 체제를 사용할 수 있게 하지만 구성된 할당 일정에 따라 자동으로 시작됩니다.
 
--   **使用可能な展開**: オペレーティング システムはソフトウェア センターで使用可能になり、ユーザーはオンデマンドでインストールすることができます。
-
+-   **사용 가능한 배포**: 해당 운영 체제를 소프트웨어 센터에서 사용할 수 있으며 사용자가 필요할 때 설치할 수 있습니다.
