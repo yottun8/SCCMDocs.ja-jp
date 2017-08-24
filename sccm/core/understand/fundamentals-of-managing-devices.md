@@ -1,6 +1,6 @@
 ---
-title: "장치 관리의 기본 사항 | Microsoft 문서"
-description: "System Center Configuration Manager를 사용하여 장치를 관리하는 방법을 알아봅니다."
+title: "デバイスの管理の基礎 | Microsoft ドキュメント"
+description: "System Center Configuration Manager を使用してデバイスを管理する方法について説明します。"
 ms.custom: na
 ms.date: 12/04/2016
 ms.prod: configuration-manager
@@ -17,84 +17,84 @@ manager: angrobe
 ms.openlocfilehash: 45d84122a86da880268c93ecd994250df6b76c8a
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="fundamentals-of-managing-devices-with-system-center-configuration-manager"></a>System Center Configuration Manager에서 장치 관리의 기본 사항
+# <a name="fundamentals-of-managing-devices-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用したデバイス管理の基礎
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-넓은 의미에서 볼 때 System Center Configuration Manager는 다음 두 가지 범주의 장치를 관리할 수 있습니다.
+System Center Configuration Manager は、大きく分けて 2 つのカテゴリのデバイスを管理できます。
 
--   *클라이언트*는 Configuration Manager 클라이언트 소프트웨어를 설치하는 워크스테이션, 랩톱, 서버, 모바일 장치 등의 장치입니다. 하드웨어 인벤토리 등의 일부 관리 기능을 사용하려면 이 클라이언트 소프트웨어가 필요합니다.  
+-   "*クライアント*" は、Configuration Manager クライアント ソフトウェアのインストール先とするデバイスであり、ワークステーション、ノート PC、サーバー、モバイル デバイスなどがあります。 ハードウェア インベントリのような一部の管理機能には、このクライアント ソフトウェアが必要です。  
 
--   *관리되는 장치*는 *클라이언트*를 포함할 수 있지만 일반적으로 Configuration Manager 클라이언트 소프트웨어가 설치되지 않은 모바일 장치입니다. 이런 장치에서는 Intune 또는 Configuration Manager의 기본 제공 온-프레미스 모바일 장치 관리를 사용하여 관리합니다.
+-   "*管理対象デバイス*" には "*クライアント*" が含まれることもありますが、通常は Configuration Manager クライアント ソフトウェアがインストールされていないモバイル デバイスを指します。 この種のデバイスを管理するには、Intune を使用するか、または Configuration Manager に組み込まれているオンプレミスのモバイル デバイス管理を使用します。
 
-클라이언트 유형뿐 아니라 사용자를 기준으로 하여 장치를 그룹화하고 식별할 수도 있습니다.
+また、クライアントの種類だけでなくユーザーに基づいてデバイスをグループ化および識別することもできます。
 
-## <a name="managing-devices-with-the-configuration-manager-client"></a>Configuration Manager 클라이언트를 사용하여 장치 관리
+## <a name="managing-devices-with-the-configuration-manager-client"></a>Configuration Manager クライアントを使用したデバイスの管理
 
-Configuration Manager 클라이언트 소프트웨어를 사용하여 장치를 관리하는 방법에는 두 가지가 있습니다. 첫 번째 방법은 네트워크에서 장치를 검색한 다음 해당 장치에 클라이언트 소프트웨어를 배포하는 것입니다. 다른 방법은 클라이언트 소프트웨어를 새 컴퓨터에 수동으로 설치한 다음 해당 컴퓨터가 네트워크에 연결할 때 사이트에 가입시키는 것입니다. 클라이언트 소프트웨어가 설치되지 않은 장치를 검색하려면 기본 제공 검색 방법 중 하나 이상을 실행합니다. 장치를 검색한 후에는 몇 가지 방법 중 하나를 사용하여 클라이언트 소프트웨어를 설치합니다. 검색에 대한 자세한 내용은 [System Center Configuration Manager에 대한 검색 실행](../../core/servers/deploy/configure/run-discovery.md)을 참조하세요.  
+Configuration Manager クライアント ソフトウェアを使用してデバイスを管理するには、2 つの方法があります。 1 つ目の方法は、ネットワーク上でデバイスを探索し、そのデバイスにクライアント ソフトウェアを展開するというものです。 2 つ目の方法は、新しいコンピューターにクライアント ソフトウェアを手動でインストールし、そのコンピューターをネットワークに参加させるときに、サイトにも参加させるというものです。 クライアント ソフトウェアがまだインストールされていないデバイスを探索するには、組み込まれた探索方法のうちの 1 つまたは複数を実行します。 デバイスが探索されたら、いくつかの方法のいずれかで、クライアント ソフトウェアをインストールします。 探索の使用の詳細については、「[System Center Configuration Manager 用の探索の実行](../../core/servers/deploy/configure/run-discovery.md)」をご覧ください。  
 
- Configuration Manager 클라이언트 소프트웨어를 실행할 수 있는 장치를 검색한 후 여러 방법 중 하나를 사용하여 소프트웨어를 설치할 수 있습니다. 소프트웨어를 설치하여 클라이언트를 기본 사이트에 할당한 후에는 장치 관리를 시작할 수 있습니다.  일반적인 설치 방법은 다음과 같습니다.
+ Configuration Manager クライアント ソフトウェアを実行するようにサポートされているデバイスを検出したら、いくつかの方法のうちの 1 つを使用して、ソフトウェアをインストールできます。 ソフトウェアがインストールされて、クライアントがプライマリ サイトに割り当てられたら、デバイスの管理を開始できます。  一般的なインストール方法には次のものがあります。
 
- - 클라이언트 강제 설치
+ - クライアント プッシュ インストール。
 
- - 소프트웨어 업데이트 기반 설치
+ - ソフトウェアの更新に基づいたインストール。
 
- - 그룹 정책
+ - グループ ポリシー。
 
- - 컴퓨터에 수동 설치
- - 배포하는 운영 체제 이미지의 일부로 클라이언트 포함  
-
-
- 클라이언트를 설치한 후에 컬렉션을 사용하여 장치 관리의 작업을 간소화할 수 있습니다. 컬렉션은 그룹으로 관리할 수 있도록 만드는 장치나 사용자의 그룹입니다. 예를 들어 Configuration Manager가 등록하는 모든 모바일 장치에 모바일 장치 응용 프로그램을 설치할 수 있습니다. 이 경우 모든 모바일 장치 컬렉션을 사용할 수 있습니다.  
-
- 자세한 내용은 다음 항목을 참조하세요.  
-
--   [System Center Configuration Manager에 대한 장치 관리 솔루션 선택](../../core/plan-design/choose-a-device-management-solution.md)  
-
--   [System Center Configuration Manager의 클라이언트 설치 방법](../../core/clients/deploy/plan/client-installation-methods.md)  
-
--   [System Center Configuration Manager의 컬렉션 소개](../../core/clients/manage/collections/introduction-to-collections.md)  
-
-### <a name="client-settings"></a>클라이언트 설정  
- Configuration Manager를 처음 설치하면 계층의 모든 클라이언트가 기본 클라이언트 설정을 사용하여 구성됩니다. 기본 클라이언트 설정은 사용자가 변경할 수 있습니다. 이러한 클라이언트 설정에는 다음 구성 옵션이 포함됩니다.
-
- -  장치가 사이트와 통신하는 빈도
-
- -  클라이언트가 소프트웨어 업데이트 및 기타 관리 작업에 대해 설정되는지 여부
-
- -  사용자가 Configuration Manager에서 관리되도록 모바일 장치를 등록할 수 있는지 여부  
-
-사용자 지정 클라이언트 설정을 만든 다음 컬렉션에 할당할 수 있습니다.  컬렉션의 멤버는 사용자 지정 설정을 갖도록 구성되며, 지정하는 순서대로(번호 순서대로) 적용된 여러 사용자 지정 클라이언트 설정을 만들 수 있습니다.  충돌하는 설정이 있는 경우 순서 번호가 가장 낮은 설정이 다른 설정을 재정의합니다.  
-
-다음 다이어그램은 사용자 지정 클라이언트 설정을 만들고 적용하는 방법의 예를 보여 줍니다.  
-
- ![클라이언트 설정](media/ClientSettings.gif)  
-
- 클라이언트 설정에 대한 자세한 내용은 다음을 참조하세요.  
-                [System Center Configuration Manager에서 클라이언트 설정을 구성하는 방법](../../core/clients/deploy/configure-client-settings.md) 및 [System Center Configuration Manager의 클라이언트 설정 정보](../../core/clients/deploy/about-client-settings.md)
-
-## <a name="managing-devices-without-the-configuration-manager-client"></a>Configuration Manager 클라이언트 없이 장치 관리  
- Configuration Manager는 클라이언트 소프트웨어를 설치하지 않았으며 Intune을 통해 관리되지 않는 일부 장치를 관리할 수 있습니다. 자세한 내용은 [System Center Configuration Manager의 온-프레미스 인프라로 모바일 장치 관리](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md) 및 [System Center Configuration Manager와 Exchange를 사용하여 모바일 장치 관리](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)를 참조하세요.  
-
-## <a name="user-based-management"></a>사용자 기반 관리  
- Configuration Manager는 Active Directory Domain Services 사용자의 컬렉션을 지원합니다. 사용자 컬렉션을 사용하면 컬렉션의 멤버가 사용하는 모든 컴퓨터에 소프트웨어를 설치할 수 있습니다. 배포하는 소프트웨어가 사용자의 기본 장치로 지정된 장치에만 설치되도록 하려면 사용자 장치 선호도를 설정합니다. 사용자는 기본 장치를 하나 이상 사용할 수 있습니다.  
-
- 사용자가 소프트웨어 배포 환경을 제어할 수는 방법 중 하나는 **소프트웨어 센터** 클라이언트 인터페이스를 사용하는 것입니다. **소프트웨어 센터**는 클라이언트 컴퓨터에 자동으로 설치되며 **시작** 메뉴에서 실행할 수 있습니다. **소프트웨어 센터**를 사용하면 사용자가 자신의 소프트웨어를 관리하고 다음 작업을 수행할 수 있습니다.  
-
--   소프트웨어를 설치합니다.  
-
--   근무 외 시간에 자동으로 소프트웨어를 설치하도록 예약합니다.  
-
--   Configuration Manager가 장치에 소프트웨어를 설치할 수 있는 시간을 구성합니다.  
-
--   Configuration Manager에서 원격 제어가 설정된 경우 원격 제어의 액세스 설정을 구성합니다.  
-
--   관리자가 전원 관리 옵션을 설정하는 경우 이 옵션을 구성합니다.  
+ - コンピューターへの手動インストール。
+ - 展開するオペレーティング システム イメージの一部としてのクライアントの追加。  
 
 
- **소프트웨어 센터**의 링크를 사용하면 사용자가 소프트웨어를 탐색, 설치, 요청할 수 있는 **응용 프로그램 카탈로그**에 연결할 수 있습니다. **응용 프로그램 카탈로그**는 기본 설정을 구성하고, 모바일 장치를 초기화하고, 설정된 경우 사용자 장치 선호도에 대한 기본 장치를 지정하는 데에도 사용합니다.   
+ クライアントがインストールされたら、コレクションを使用して、デバイス管理タスクを簡略化できます。 コレクションは、デバイスやユーザーをグループとして管理できるように作成されたデバイスまたはユーザーのグループです。 たとえば、Configuration Manager に登録されているすべてのモバイル デバイスに、モバイル デバイス アプリケーションをインストールすることができます。 この場合は、[すべてのモバイル デバイス] コレクションを使用することができます。  
 
- 또한 사용자가 브라우저 인트라넷이나 인터넷 세션을 통해 **응용 프로그램 카탈로그**에 액세스할 수도 있습니다.  
+ 詳細については、次のトピックを参照してください。  
+
+-   [System Center Configuration Manager のデバイス管理ソリューションの選択](../../core/plan-design/choose-a-device-management-solution.md)  
+
+-   [System Center Configuration Manager でのクライアントのインストール方法](../../core/clients/deploy/plan/client-installation-methods.md)  
+
+-   [System Center Configuration Manager のコレクションの概要](../../core/clients/manage/collections/introduction-to-collections.md)  
+
+### <a name="client-settings"></a>クライアント設定  
+ Configuration Manager を最初にインストールすると、階層内のすべてのクライアントは既定のクライアント設定で構成されます (これは変更可能です)。 これらのクライアント設定には、次のような構成オプションがあります。
+
+ -  デバイスがサイトと通信する頻度。
+
+ -  クライアントがソフトウェア更新プログラムとその他の管理操作に対してセットアップされているかどうか。
+
+ -  ユーザーがモバイル デバイスを Configuration Manager による管理対象として登録できるかどうか。  
+
+カスタム クライアント設定を作成し、コレクションに割り当てることができます。  カスタム設定が適用されるようにコレクションのメンバーに構成されます。指定する (番号) 順序で適用されるように複数のカスタム クライアントを作成できます。  競合する設定がある場合は、順序番号が最も小さい設定がその他の設定に優先します。  
+
+次の図は、カスタム クライアント設定を作成および適用する方法の例を示します。  
+
+ ![クライアント設定](media/ClientSettings.gif)  
+
+ クライアント設定の詳細については、  
+                「[System Center Configuration Manager でクライアント設定を構成する方法](../../core/clients/deploy/configure-client-settings.md)」および「[System Center Configuration Manager のクライアント設定について](../../core/clients/deploy/about-client-settings.md)」をご覧ください。
+
+## <a name="managing-devices-without-the-configuration-manager-client"></a>Configuration Manager クライアントを使用しないデバイス管理  
+ Configuration Manager では、クライアント ソフトウェアがインストールされていないデバイスの管理、および Intune によって管理されないデバイスの管理をサポートします。 詳細については、[System Center Configuration Manager でのオンプレミス インフラストラクチャによるモバイル デバイスの管理](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)に関する記事、および「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)」をご覧ください。  
+
+## <a name="user-based-management"></a>ユーザー ベースの管理  
+ Configuration Manager では、Active Directory Domain Services ユーザーのコレクションをサポートします。 ユーザー コレクションを使用する場合、コレクションのメンバーによって使用されるすべてのコンピューターにソフトウェアをインストールすることができます。 展開するソフトウェアがユーザーのプライマリ デバイスとして指定されているデバイスのみにインストールされるようにするには、ユーザーとデバイスのアフィニティを設定します。 ユーザーは 1 つまたは複数のプライマリ デバイスを持つことができます。  
+
+ ユーザーがソフトウェア展開のエクスペリエンスを制御できる 1 つの方法は、クライアント インターフェイスである**ソフトウェア センター**を使用することです。 **ソフトウェア センター**は、クライアント コンピューターに自動的にインストールされ、[**スタート**] メニューから実行します。 ユーザーは**ソフトウェア センター**を使用して自分のソフトウェアを管理でき、次のタスクを実行できます。  
+
+-   ソフトウェアのインストール。  
+
+-   勤務時間外にソフトウェアが自動的にインストールされるようにスケジュールする。  
+
+-   Configuration Manager がデバイスにソフトウェアをインストールできるタイミングを構成する。  
+
+-   Configuration Manager でリモート コントロールがセットアップされている場合に、リモート コントロールのアクセス設定を構成する。  
+
+-   管理者が電源管理オプションを設定している場合、そのオプションを構成する。  
+
+
+ **ソフトウェア センター**内のリンクを使用すると、ユーザーは**アプリケーション カタログ**に接続して、ソフトウェアの参照、インストール、および要求を行えます。 また**アプリケーション カタログ**により、優先設定を構成したり、モバイル デバイスをワイプしたり、設定されている場合はユーザーとデバイスのアフィニティのプライマリ デバイスを指定したりできます。   
+
+ ユーザーはまた、ブラウザーのイントラネットまたはインターネット セッションを通して**アプリケーション カタログ**にアクセスすることができます。  

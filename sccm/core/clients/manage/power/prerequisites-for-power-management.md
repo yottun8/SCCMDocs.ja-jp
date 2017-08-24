@@ -1,6 +1,6 @@
 ---
-title: "전원 관리 필수 조건 | Microsoft 문서"
-description: "System Center Configuration Manager에서 전원 관리에 대한 필수 조건을 확인합니다."
+title: "電源管理の前提条件 | Microsoft Docs"
+description: "System Center Configuration Manager の電源管理の前提条件を確認します。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,26 +18,26 @@ manager: angrobe
 ms.openlocfilehash: 711ef491899846b86bfed0355ac7fd0f9d509c4f
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="prerequisites-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 전원 관리에 대한 필수 조건
+# <a name="prerequisites-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager の電源管理の前提条件
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager의 전원 관리에는 외부 종속성과 제품 내 종속성이 있습니다.  
+System Center Configuration Manager の電源管理には、外部依存関係と製品内部依存関係があります。  
 
-## <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 외부 종속성  
- 다음 표에는 전원 관리 사용에 대한 Configuration Manager의 외부 종속성이 나열되어 있습니다.  
+## <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 外部の依存関係  
+ 次の表は、電源管理を使用する場合の Configuration Manager 外部の依存関係の一覧です。  
 
-|종속성|추가 정보|  
+|依存関係|説明|  
 |----------------|----------------------|  
-|클라이언트 컴퓨터는 필요한 전원 상태를 지원할 수 있어야 합니다.|전원 관리의 모든 기능을 사용하려면 클라이언트 컴퓨터가 절전 모드, 최대 절전 모드, 절전 모드 해제 및 최대 절전 모드 해제 작업을 지원할 수 있어야 합니다. **전원 기능** 보고서에서 컴퓨터가 이러한 작업을 지원할 수 있는지 확인할 수 있습니다. 자세한 내용은 [System Center Configuration Manager에서 전원 관리를 모니터링하고 계획하는 방법](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md) 항목의 [전원 기능 보고서](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md#BKMK_Capabilites)를 참조하세요.|  
+|クライアント コンピューターが、必要な電源状態をサポートできる必要があります。|電源管理のすべての機能を使用するには、クライアント コンピューターがスリープ、休止、スリープ状態からの復帰、および休止状態からの復帰、をサポートしている必要があります。 コンピューターがこれらの操作をサポートしているかどうかを判断するには、[電源機能] レポートを使用できます。 **** 詳細については、「[How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)」(System Center Configuration Manager で電源管理を監視および計画する方法) の「[Power Capabilities report](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md#BKMK_Capabilites)」(電源機能レポート) を参照してください。|  
 
-## <a name="configuration-manager-dependencies"></a>Configuration Manager 종속성  
- 다음 표에는 전원 관리 사용에 대한 Configuration Manager 내의 종속성이 나열되어 있습니다.  
+## <a name="configuration-manager-dependencies"></a>Configuration Manager の依存関係  
+ 次の表は、電源管理を使用する場合の Configuration Manager 内部の依存関係の一覧です。  
 
-|종속성|추가 정보|  
+|依存関係|説明|  
 |----------------|----------------------|  
-|먼저 전원 관리를 사용하도록 설정해야 전원 계획을 만들고 모니터링할 수 있습니다.|전원 관리를 설정하고 구성하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 전원 관리 구성](../../../../core/clients/manage/power/configuring-power-management.md)을 참조하세요.|  
-|보고 서비스 지점|전원 관리 보고서를 보려면 먼저 보고 서비스 지점을 구성해야 합니다. 자세한 내용은 [System Center Configuration Manager의 보고](../../../../core/servers/manage/reporting.md)를 참조하세요.|  
+|電源プランを作成し監視するには、事前に電源管理を有効化することが必要です。|電源管理を有効化して構成する方法の詳細については、「 [Configuring power management in System Center Configuration Manager](../../../../core/clients/manage/power/configuring-power-management.md)」(System Center Configuration Manager で電源管理を構成する) を参照してください。|  
+|レポート サービス ポイント|電源管理レポートを表示するには、事前にレポート サービス ポイントを構成する必要があります。 詳細については、「[System Center Configuration Manager のレポート](../../../../core/servers/manage/reporting.md)」を参照してください。|  

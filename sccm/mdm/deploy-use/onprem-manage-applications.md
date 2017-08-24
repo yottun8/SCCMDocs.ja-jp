@@ -1,6 +1,6 @@
 ---
-title: "온-프레미스 모바일 장치 관리를 사용하여 응용 프로그램 관리 | Microsoft Docs"
-description: "온-프레미스 모바일 장치 관리를 사용하여 응용 프로그램 관리"
+title: "オンプレミス モバイル デバイス管理の対象となるアプリケーションの管理 | Microsoft Docs"
+description: "オンプレミス モバイル デバイス管理の対象となるアプリケーションを管理します。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,13 +18,13 @@ manager: angrobe
 ms.openlocfilehash: 4085b007f006a4cfaeaef802d750b03018d6a683
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-applications-for-on-premises-mobile-device-management"></a>온-프레미스 모바일 장치 관리를 사용하여 응용 프로그램 관리
+# <a name="manage-applications-for-on-premises-mobile-device-management"></a>オンプレミス モバイル デバイス管理の対象となるアプリケーションの管理
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager에서 온-프레미스 MDM(모바일 장치 관리)을 통해 장치를 관리하는 경우 추가 응용 프로그램 유형을 관리할 수 있습니다. 온-프레미스 MDM에서 응용 프로그램을 관리하는 것은 하이브리드 MDM 환경에서 앱을 관리하는 것과 같습니다.
+Configuration Manager のオンプレミス モバイル デバイス管理 (MDM) でデバイスを管理する場合、追加で管理できるアプリケーションの種類があります。 オンプレミス MDM でアプリケーションを管理することは、ハイブリッド MDM 環境でアプリケーションを管理することと同じです。
 
-[모바일 응용 프로그램 관리](management-tasks-applications.md)에서는 하이브리드 MDM 또는 온-프레미스 MDM을 사용하여 응용 프로그램을 만들고 관리하는 방법에 대한 자세한 정보를 제공합니다.
+[モバイル アプリケーションの管理](management-tasks-applications.md)に関する記事では、ハイブリッド MDM またはオンプレミス MDM を使用したアプリケーションの作成と管理の詳細について説明しています。

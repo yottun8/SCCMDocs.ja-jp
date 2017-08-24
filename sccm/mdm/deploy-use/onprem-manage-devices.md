@@ -1,6 +1,6 @@
 ---
-title: "온-프레미스 모바일 장치 관리를 사용하여 장치 관리 | Microsoft Docs"
-description: "Configuration Manager에서 온-프레미스 모바일 장치 관리를 사용하여 장치 관리"
+title: "オンプレミス モバイル デバイス管理の対象となるデバイスの管理 | Microsoft Docs"
+description: "Configuration Manager でオンプレミス モバイル デバイス管理の対象となるデバイスを管理します。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,13 +18,13 @@ manager: angrobe
 ms.openlocfilehash: 92009c96ccc5f4124b300873ff77088ea1712c19
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-devices-for-on-premises-mobile-device-management"></a>온-프레미스 모바일 장치 관리를 사용하여 장치 관리
+# <a name="manage-devices-for-on-premises-mobile-device-management"></a>オンプレミス モバイル デバイス管理の対象となるデバイスの管理
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 온-프레미스 MDM(모바일 장치 관리)을 사용하여 컴퓨터 및 장치를 관리할 수 있습니다. 이렇게 하려면 Configuration Manager에서 관리 작업을 위해 장치와 통신할 수 있도록 [장치가 등록되어 있어야](enroll-devices-on-premises-mdm.md) 합니다.
+System Center Configuration Manager のオンプレミス モバイル デバイス管理 (MDM) でコンピューターとデバイスを管理できます。 そのためには、Configuration Manager が管理タスク用デバイスと通信できるよう、[デバイスを登録する必要](enroll-devices-on-premises-mdm.md)があります。
 
-온-프레미스 MDM에서 장치를 관리하는 것은 하이브리드 MDM 환경에서 장치를 관리하는 것과 같습니다. [하이브리드 MDM에서 장치 관리](wipe-lock-reset-devices.md)에서는 장치 관리에 대한 자세한 정보를 제공합니다.
+オンプレミス MDM でのデバイスの管理は、ハイブリッド MDM 環境でのデバイスの管理と同じです。 デバイス管理の詳細については、[ハイブリッド MDM でのデバイスの管理](wipe-lock-reset-devices.md)に関する記事を参照してください。

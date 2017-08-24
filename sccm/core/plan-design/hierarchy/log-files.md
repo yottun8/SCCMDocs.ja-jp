@@ -1,6 +1,6 @@
 ---
-title: "Configuration Manager에 대한 로그 파일 | Microsoft 문서"
-description: "로그 파일을 사용하여 System Center Configuration Manager 계층 구조의 문제를 해결할 수 있습니다."
+title: "Configuration Manager のログ ファイル | Microsoft Docs"
+description: "System Center Configuration Manager 階層内での問題に対してトラブルシューティングを行うには、ログ ファイルを使用します。"
 ms.custom: na
 ms.date: 7/03/2017
 ms.prod: configuration-manager
@@ -18,802 +18,802 @@ manager: angrobe
 ms.openlocfilehash: 28597cf1cb269fff0872c7f79ef961496aea32ab
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="log-files-in-system-center-configuration-manager"></a>System Center Configuration Manager의 로그 파일
+# <a name="log-files-in-system-center-configuration-manager"></a>System Center Configuration Manager のログ ファイル
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager에서는 클라이언트 및 사이트 서버 구성 요소가 개별 로그 파일에 프로세스 정보를 기록합니다. 로그 파일의 정보를 사용하면 Configuration Manager 계층 구조에서 발생할 수 있는 문제를 해결할 수 있습니다. Configuration Manager에서는 기본적으로 클라이언트 및 서버 구성 요소 로깅을 사용하도록 설정되어 있습니다.   
+System Center Configuration Manager では、クライアント コンポーネントとサイト サーバー コンポーネントによって、処理情報が個々のログ ファイルに記録されます。 ログに記録された情報を、 Configuration Manager 階層で発生した問題を解決するときの参考にしてください。 既定では、クライアント コンポーネントとサーバー コンポーネントのログ記録は Configuration Manager で有効になっています。   
 
- 다음 섹션에는 제공되는 여러 가지 로그 파일에 대한 자세한 정보가 나와 있습니다. 이 정보를 사용하면 작업 정보에 대한 Configuration Manager 클라이언트 및 서버 로그를 보거나 모니터링하고, 문제를 해결하는 데 도움이 되는 오류 정보를 확인할 수 있습니다.  
+ 次のセクションに、各ログ ファイルの説明を示します。 Configuration Manager のクライアントとサーバーのログ ファイルでエラーの原因を調べて解決するときの参考にしてください。  
 
--   [Configuration Manager 로그 파일 정보](#BKMK_AboutLogs)  
+-   [Configuration Manager のログ ファイルについて](#BKMK_AboutLogs)  
 
-    -   [Configuration Manager Service Manager를 사용하여 로깅 옵션 구성](#BKMK_LogOptions)  
+    -   [Configuration Manager サービス マネージャーを使用したログのオプションの構成](#BKMK_LogOptions)  
 
-    -   [Configuration Manager 로그 찾기](#BKMK_LogLocation)  
+    -   [Configuration Manager のログ ファイルの場所](#BKMK_LogLocation)  
 
--   [Configuration Manager 클라이언트 로그](#BKMK_ClientLogs)  
+-   [Configuration Manager クライアントのログ ファイル](#BKMK_ClientLogs)  
 
-    -   [클라이언트 작업](#BKMK_ClientOpLogs)  
+    -   [クライアントによる処理](#BKMK_ClientOpLogs)  
 
-    -   [클라이언트 설치 로그 파일](#BKMK_ClientInstallLog)  
+    -   [クライアントのインストール ログ ファイル](#BKMK_ClientInstallLog)  
 
-    -   [Linux 및 UNIX용 클라이언트](#BKMK_LogFilesforLnU)  
+    -   [Linux および UNIX 用のクライアント](#BKMK_LogFilesforLnU)  
 
-    -   [Mac 컴퓨터용 클라이언트](#BKMK_LogfilesforMac)  
+    -   [Mac コンピューター用のクライアント](#BKMK_LogfilesforMac)  
 
--   [Configuration Manager 사이트 서버 로그 파일](#BKMK_ServerLogs)  
+-   [Configuration Manager サイト サーバーのログ ファイル](#BKMK_ServerLogs)  
 
-    -   [사이트 서버 및 사이트 시스템 서버 로그](#BKMK_SiteSiteServerLog)  
+    -   [サイト サーバーとサイト システムのログ ファイル](#BKMK_SiteSiteServerLog)  
 
-    -   [사이트 서버 설치 로그 파일](#BKMK_SiteInstallLog)  
+    -   [サイト サーバーのインストール ログ ファイル](#BKMK_SiteInstallLog)  
 
-    -   [대체 상태 지점 로그 파일](#BKMK_FSPLog)  
+    -   [フォールバック ステータス ポイントのログ ファイル](#BKMK_FSPLog)  
 
-    -   [관리 지점 로그 파일](#BKMK_MPLog)  
+    -   [管理ポイントのログ ファイル](#BKMK_MPLog)  
 
-    -   [소프트웨어 업데이트 지점 로그 파일](#BKMK_SUPLog)  
+    -   [ソフトウェアの更新ポイントのログ ファイル](#BKMK_SUPLog)  
 
--   [Configuration Manager 기능에 대한 로그 파일](#BKMK_FunctionLogs)  
+-   [Configuration Manager の機能別ログ ファイル](#BKMK_FunctionLogs)  
 
-    -   [응용 프로그램 관리](#BKMK_AppManageLog)  
+    -   [アプリケーション管理](#BKMK_AppManageLog)  
 
-    -   [Asset intelligence](#BKMK_AILog)  
+    -   [資産インテリジェンス](#BKMK_AILog)  
 
-    -   [백업 및 복구](#BKMK_BnRLog)  
+    -   [バックアップと回復](#BKMK_BnRLog)  
 
-    -   [인증서 등록](#BKMK_CertificateEnrollment)
+    -   [証明書の登録](#BKMK_CertificateEnrollment)
 
-    -   [클라이언트 알림](#BKMK_BGB)
+    -   [クライアント通知](#BKMK_BGB)
 
-    -   [클라우드 관리 게이트웨이](#cloud-management-gateway)
+    -   [クラウド管理ゲートウェイ](#cloud-management-gateway)
 
-    -   [준수 설정 및 회사 리소스 액세스](#BKMK_CompSettingsLog)  
+    -   [コンプライアンス設定と会社のリソースへのアクセス](#BKMK_CompSettingsLog)  
 
-    -   [Configuration Manager 콘솔](#BKMK_ConsoleLog)  
+    -   [Configuration Manager コンソール](#BKMK_ConsoleLog)  
 
-    -   [콘텐츠 관리](#BKMK_ContentLog)  
+    -   [コンテンツ管理](#BKMK_ContentLog)  
 
-    -   [검색](#BKMK_DiscoveryLog)  
+    -   [探索](#BKMK_DiscoveryLog)  
 
     -   [Endpoint Protection](#BKMK_EPLog)  
 
-    -   [확장](#BKMK_Extensions)  
+    -   [拡張機能](#BKMK_Extensions)  
 
-    -   [인벤토리](#BKMK_InventoryLog)  
+    -   [インベントリ](#BKMK_InventoryLog)  
 
-    -   [계량](#BKMK_MeteringLog)  
+    -   [測定](#BKMK_MeteringLog)  
 
-    -   [마이그레이션](#BKMK_MigrationLog)  
+    -   [移行](#BKMK_MigrationLog)  
 
-    -   [모바일 장치](#BKMK_MDMLog)  
+    -   [モバイル デバイス](#BKMK_MDMLog)  
 
-    -   [운영 체제 배포](#BKMK_OSDLog)  
+    -   [オペレーティング システムの展開](#BKMK_OSDLog)  
 
-    -   [전원 관리](#BKMK_PowerMgmtLog)  
+    -   [電源管理](#BKMK_PowerMgmtLog)  
 
-    -   [원격 제어](#BKMK_RCLog)  
+    -   [リモート コントロール](#BKMK_RCLog)  
 
-    -   [보고](#BKMK_ReportLog)  
+    -   [レポート](#BKMK_ReportLog)  
 
-    -   [역할 기반 관리](#BKMK_RBALog)  
+    -   [役割に基づいた管理](#BKMK_RBALog)  
 
-    -   [서비스 연결 지점](#BKMK_WITLog)  
+    -   [サービス接続ポイント](#BKMK_WITLog)  
 
-    -   [소프트웨어 업데이트](#BKMK_SU_NAPLog)  
+    -   [ソフトウェア更新プログラム](#BKMK_SU_NAPLog)  
 
     -   [Wake On LAN](#BKMK_WOLLog)  
 
-    -   [Windows 10 서비스](#BKMK_WindowsServicingLog)
+    -   [Windows 10 サービス](#BKMK_WindowsServicingLog)
 
-    -   [Windows 업데이트 에이전트](#BKMK_WULog)  
+    -   [Windows 更新エージェント](#BKMK_WULog)  
 
-    -   [WSUS 서버](#BKMK_WSUSLog)  
+    -   [WSUS サーバー](#BKMK_WSUSLog)  
 
-##  <a name="BKMK_AboutLogs"></a> Configuration Manager 로그 파일 정보  
- Configuration Manager의 프로세스 대부분은 해당 프로세스 전용 로그 파일에 작업 정보를 기록합니다. 로그 파일은 **.log** 또는 **.lo_** 파일 확장명으로 식별됩니다. Configuration Manager는 로그가 최대 크기에 도달할 때까지 .log 파일에 내용을 기록합니다. 로그가 가득 차면 .log 파일이 이름은 같지만 확장명은 .lo_인 파일에 복사되고 프로세스 또는 구성 요소는 계속 .log 파일에 기록합니다. .log 파일이 다시 최대 크기에 도달하면 .lo_ 파일을 덮어쓰게 되고 프로세스가 반복됩니다. 일부 구성 요소는 날짜 및 시간 스탬프를 로그 파일 이름에 추가하고 .log 확장명을 유지하여 로그 파일 기록을 설정합니다. Linux 및 UNIX용 클라이언트에는 .lo_ 파일의 사용 및 최대 크기가 적용되지 않습니다. Linux 및 UNIX용 클라이언트에서 로그 파일을 사용하는 방법에 대한 자세한 내용은 이 항목에서 [Linux 및 UNIX용 클라이언트의 로그 파일 관리](#BKMK_ManageLinuxLogs)를 참조하세요.  
+##  <a name="BKMK_AboutLogs"></a> Configuration Manager のログ ファイルについて  
+ Configuration Manager のプロセスの多くで、そのプロセス専用のログ ファイルに処理情報が書き込まれます。 これらのログ ファイルには、**.log** 拡張子か **.lo_** 拡張子が付いています。 Configuration Manager は、ログが最大サイズに達するまで .log ファイルに書き込みます。 このファイルがいっぱいになると、同じ名前で .lo_ 拡張子の付いたファイルに内容がコピーされ、元の .log ファイルへの書き込みが続行されます。 .log ファイルが再びいっぱいになると、.lo_ ファイルが上書きされ、元の .log ファイルに書き込まれます。この同じプロセスが繰り返されます。 コンポーネントによっては、そのログ ファイルの .log 拡張子は変わらず、ファイル名にタイムスタンプが加えられるので、履歴がわかるものがあります。 最大サイズと .lo_ ファイルの使用の例外は、Linux および UNIX 用のクライアントです。 Linux および UNIX 用のクライアントでログ ファイルを使用する方法の詳細については、このトピックの「[Linux および UNIX 用のクライアントのログ ファイルを管理する](#BKMK_ManageLinuxLogs)」を参照してください。  
 
- 로그를 보려면 Configuration Manager 로그 뷰어 도구인 CMTrace를 사용하면 됩니다. 이 도구는 Configuration Manager 원본 미디어의 \\SMSSetup\\Tools 폴더에 있습니다. CMTrace 도구는 소프트웨어 라이브러리에 추가된 모든 부팅 이미지에 추가됩니다.  
+ ログ ファイルを表示するには、CMTrace という Configuration Manager のログ ビューアー ツールを使用できます。このツールは、Configuration Manager のソース メディアの \\SMSSetup\\Tools フォルダーにあります。 また、CMTrace ツールは、[ソフトウェア ライブラリ] に格納されるすべてのブート イメージに追加されます。  
 
-###  <a name="BKMK_LogOptions"></a> Configuration Manager Service Manager를 사용하여 로깅 옵션 구성  
- Configuration Manager에서 로그 파일이 저장되는 위치 및 로그 파일 크기를 변경할 수 있습니다.  
+###  <a name="BKMK_LogOptions"></a> Configuration Manager サービス マネージャーを使用したログのオプションの構成  
+ Configuration Manager では、ログ ファイルの格納場所を変更し、ログ ファイル サイズを変更できます。  
 
- 로그 파일의 크기를 수정하거나, 로그 파일의 이름과 위치를 변경하거나, 여러 구성 요소가 하나의 로그 파일에 기록하도록 하려면 다음 단계를 따르세요.  
+ ログ ファイルのサイズを変更するには、ログ ファイルの名前と場所を変更します。また、1 つのログ ファイルに対して複数のコンポーネントを強制的に書き込むには、次の手順を実行します。  
 
-#### <a name="to-modify-logging-for-a-component"></a>구성 요소의 로깅을 수정하려면  
+#### <a name="to-modify-logging-for-a-component"></a>コンポーネントのログの記録オプションを変更するには  
 
-1.  Configuration Manager 콘솔에서 **모니터링**을 선택하고 **시스템 상태**를 선택한 다음 **사이트 상태** 또는 **구성 요소 상태**를 선택합니다.  
-2.  **홈** 탭의 **구성 요소** 그룹에서 **시작**을 선택한 다음 **Configuration Manager Service Manager**를 선택합니다.  
-3.  Configuration Manager Service Manager가 열리면 관리할 사이트에 연결합니다. 관리할 사이트가 표시되지 않으면 **사이트**를 선택하고 **연결**을 선택한 다음 올바른 사이트의 사이트 서버 이름을 입력합니다.  
-4.  해당 사이트를 확장하고 관리할 구성 요소의 위치에 따라 **구성 요소** 또는 **서버**로 이동합니다.  
-5.  오른쪽 창에서 구성 요소를 하나 이상 선택합니다.  
-6.  **구성 요소** 메뉴에서 **로깅**을 선택합니다.  
-7.  **Configuration Manager 구성 요소 로깅** 대화 상자에서 선택한 구성 요소에 사용할 수 있는 구성 옵션을 완료합니다.  
-8.  **확인**을 선택하여 구성을 저장합니다.  
+1.  Configuration Manager コンソールで **[監視]**、**[システムのステータス]** の順に選択し、**[サイトのステータス]** か **[コンポーネントのステータス]** を選択します。  
+2.  **[ホーム]** タブの **[コンポーネント]** グループで **[起動]** を選択して、**[Configuration Manager サービス マネージャー]** を選択します。  
+3.  Configuration Manager サービス マネージャーが開いたら、管理するサイトに接続します。 管理するサイトが表示されない場合は、**[サイト]**、**[接続]** の順にクリックして、該当するサイトのサイト サーバー名を入力します。  
+4.  サイトを展開して、管理したいコンポーネントのある場所に応じて、**[コンポーネント]** または **[サーバー]** に移動します。  
+5.  右側のウィンドウで、1 つまたは複数のコンポーネントを選択します。  
+6.  **[コンポーネント]** メニューで **[ログの記録]** を選択します。  
+7.  [ **Configuration Manager コンポーネントのログ** ] ダイアログ ボックスで、必要な構成オプションを設定します。  
+8.  **[OK]** を選択して構成を保存します。  
 
-###  <a name="BKMK_LogLocation"></a> Configuration Manager 로그 찾기  
-Configuration Manager 로그 파일은 로그 파일을 만드는 프로세스 및 사이트 시스템의 구성에 따라 여러 위치에 저장됩니다. 컴퓨터의 로그 위치는 달라질 수 있으므로 특정 시나리오의 문제를 해결해야 하는 경우 검색 기능을 사용하여 Configuration Manager 컴퓨터에서 관련 로그 파일을 찾습니다.  
+###  <a name="BKMK_LogLocation"></a> Configuration Manager のログ ファイルの検索  
+Configuration Manager のログ ファイルは、ログ ファイルを作成するプロセスや、サイト システムの構成に応じて、さまざまな場所に保存されるようになっています。 コンピューターによってログ ファイルの場所が異なるので、トラブルシューティングを行うときは、Configuration Manager コンピューターで、検索機能を使って、問題に関係のあるログ ファイルを見つけてください。  
 
-##  <a name="BKMK_ClientLogs"></a> Configuration Manager 클라이언트 로그  
-다음 섹션에는 클라이언트 작업 및 클라이언트 설치와 관련된 로그 파일이 나와 있습니다.  
+##  <a name="BKMK_ClientLogs"></a> Configuration Manager クライアントのログ ファイル  
+次のセクションでは、クライアントによる処理が記録されるログ ファイルと、クライアントのインストール時に記録されるログ ファイルについて説明します。  
 
-###  <a name="BKMK_ClientOpLogs"></a> 클라이언트 작업  
-다음 표에는 Configuration Manager 클라이언트에 있는 로그 파일이 나와 있습니다.  
+###  <a name="BKMK_ClientOpLogs"></a> クライアントによる処理  
+次の表に、Configuration Manager クライアントにあるログ ファイルを示します。  
 
-|로그 이름|설명|  
+|ログの名前|説明|  
 |--------------|-----------------|  
-|CAS.log|콘텐츠 액세스 서비스입니다. 클라이언트의 로컬 패키지 캐시를 유지 관리합니다.|  
-|Ccm32BitLauncher.log|"32비트로 실행"으로 표시된 클라이언트에서 응용 프로그램을 시작하는 작업을 기록합니다.|  
-|CcmEval.log|Configuration Manager 클라이언트 상태 평가 활동 및 Configuration Manager 클라이언트에 필요한 구성 요소에 관한 세부 정보를 기록합니다.|  
-|CcmEvalTask.log|평가 예약 작업에 의해 시작된 Configuration Manager 클라이언트 상태 평가 활동을 기록합니다.|  
-|CcmExec.log|클라이언트 및 SMS 에이전트 호스트 서비스의 활동을 기록합니다. 이 로그 파일에는 절전 모드 해제 프록시를 사용하거나 사용하지 않도록 설정하는 작업에 대한 정보도 포함됩니다.|  
-|CcmMessaging.log|클라이언트와 관리 지점 간의 통신과 관련된 활동을 기록합니다.|  
-|CCMNotificationAgent.log|클라이언트 알림 작업과 관련된 활동을 기록합니다.|  
-|Ccmperf.log|클라이언트 성능 카운터와 관련된 데이터의 유지 관리 및 캡처와 관련된 활동을 기록합니다.|  
-|CcmRestart.log|클라이언트 서비스 다시 시작 활동을 기록합니다.|  
-|CCMSDKProvider.log|클라이언트 SDK 인터페이스에 대한 활동을 기록합니다.|  
-|CertificateMaintenance.log|Active Directory Domain Services 및 관리 지점의 인증서를 유지 관리합니다.|  
-|CIDownloader.log|구성 항목 정의 다운로드에 대한 세부 정보를 기록합니다.|  
-|CITaskMgr.log|각 응용 프로그램 및 배포 유형(예: 콘텐츠 다운로드, 설치 또는 제거 작업)에 대해 시작된 작업을 기록합니다.|  
-|ClientAuth.log|클라이언트의 서명 및 인증 활동을 기록합니다.|  
-|ClientIDManagerStartup.log|클라이언트 GUID를 만들고 유지 관리하며 클라이언트 등록 및 할당 중에 수행된 작업을 식별합니다.|  
-|ClientLocation.log|클라이언트 사이트 할당과 관련된 작업을 기록합니다.|  
-|CMHttpsReadiness.log|Configuration Manager HTTPS 준비 평가 도구를 실행한 결과를 기록합니다. 이 도구는 Configuration Manager에 사용할 수 있는 PKI(공개 키 인프라) 클라이언트 인증 인증서가 컴퓨터에 있는지 확인합니다.|  
-|CmRcService.log|원격 제어 서비스에 대한 정보를 기록합니다.|  
-|ContentTransferManager.log|BITS(Background Intelligent Transfer Service) 또는 SMB(서버 메시지 블록)에서 패키지를 다운로드하거나 액세스할 일정을 예약합니다.|  
-|DataTransferService.log|정책 또는 패키지 액세스에 대한 모든 BITS 통신을 기록합니다.|  
-|EndpointProtectionAgent|System Center Endpoint Protection 클라이언트의 설치 및 해당 클라이언트에 대한 맬웨어 방지 정책 적용에 대한 정보를 기록합니다.|  
-|execmgr.log|클라이언트에서 실행하는 패키지 및 작업 순서에 대한 세부 정보를 기록합니다.|  
-|ExpressionSolver.log|자세한 정보 또는 디버그 로깅을 켤 때 사용되는 향상된 검색 방법에 대한 세부 정보를 기록합니다.|  
-|ExternalEventAgent.log|Endpoint Protection 맬웨어 검색 기록 및 클라이언트 상태와 관련된 이벤트를 기록합니다.|  
-|FileBITS.log|모든 SMB 패키지 액세스 작업을 기록합니다.|  
-|FileSystemFile.log|소프트웨어 인벤토리 및 파일 컬렉션에 대한 WMI(Windows Management Instrumentation) 공급자의 활동을 기록합니다.|  
-|FSPStateMessage.log|클라이언트가 대체 상태 지점에 보내는 상태 메시지에 대한 활동을 기록합니다.|  
-|InternetProxy.log|클라이언트의 네트워크 프록시 구성 및 사용 활동을 기록합니다.|  
-|InventoryAgent.log|클라이언트의 하드웨어 인벤토리, 소프트웨어 인벤토리 및 하트비트 검색 작업에 대한 활동을 기록합니다.|  
-|LocationCache.log|클라이언트의 위치 캐시 사용 및 유지 관리에 대한 활동을 기록합니다.|  
-|LocationServices.log|관리 지점, 소프트웨어 업데이트 지점 및 배포 지점을 찾는 클라이언트 활동을 기록합니다.|  
-|MaintenanceCoordinator.log|클라이언트의 일반 유지 관리 작업에 대한 활동을 기록합니다.|  
-|Mifprovider.log|MIF(관리 정보 형식) 파일에 대한 WMI 공급자의 활동을 기록합니다.|  
-|mtrmgr.log|모든 소프트웨어 계량 프로세스를 모니터링합니다.|  
-|PolicyAgent.log|데이터 전송 서비스를 사용하여 만든 정책에 대한 요청을 기록합니다.|  
-|PolicyAgentProvider.log|정책 변경 내용을 기록합니다.|  
-|PolicyEvaluator.log|소프트웨어 업데이트의 정책을 포함한 클라이언트 컴퓨터의 정책에 대한 평가와 관련된 세부 정보를 기록합니다.|  
-|PolicyPlatformClient.log|파일 공급자를 제외하고 \Program Files\Microsoft Policy Platform에 있는 모든 공급자의 재구성 및 준수 프로세스를 기록합니다.|  
-|PolicySdk.log|정책 시스템 SDK 인터페이스에 대한 활동을 기록합니다.|  
-|Pwrmgmt.log|절전 모드 해제 프록시 클라이언트 설정을 사용하거나 사용하지 않도록 설정하고 구성하는 데 대한 정보를 기록합니다.|  
-|PwrProvider.log|WMI 서비스에서 호스트되는 전원 관리 공급자(PWRInvProvider)의 활동을 기록합니다. 지원되는 모든 Windows 버전에서 공급자는 하드웨어 인벤토리 중에 컴퓨터의 현재 설정을 열거하고 전원 계획 설정을 적용합니다.|  
-|SCClient_&lt;*도메인*\>@&lt;*사용자 이름*\>_1.log|클라이언트 컴퓨터의 지정된 사용자에 대한 소프트웨어 센터의 활동을 기록합니다.|  
-|SCClient_&lt;*도메인*\>@&lt;*사용자 이름*\>_2.log|클라이언트 컴퓨터의 지정된 사용자에 대한 소프트웨어 센터의 이전 활동을 기록합니다.|  
-|Scheduler.log|모든 클라이언트 작업에 대해 예약된 작업의 활동을 기록합니다.|  
-|SCNotify_&lt;*도메인*\>@&lt;*사용자 이름*\>_1.log|지정된 사용자의 소프트웨어에 대해 사용자에게 알리는 활동을 기록합니다.|  
-|SCNotify_&lt;*도메인*\>@&lt;*사용자 이름*\>_1-&lt;*날짜_시간*>.log|지정된 사용자의 소프트웨어에 대해 사용자에게 알리는 이전 정보를 기록합니다.|  
-|setuppolicyevaluator.log|WMI의 구성 및 인벤토리 정책 작성을 기록합니다.|  
-|SleepAgent_&lt;*도메인*\>@SYSTEM_0.log|절전 모드 해제 프록시에 대한 기본 로그 파일입니다.|  
-|smscliui.log|제어판에서 Configuration Manager 클라이언트의 사용을 기록합니다.|  
-|SrcUpdateMgr.log|설치된 후 현재 배포 지점 원본 위치로 업데이트된 Windows Installer 응용 프로그램의 활동을 기록합니다.|  
-|StatusAgent.log|클라이언트 구성 요소에서 만든 상태 메시지를 기록합니다.|  
-|SWMTRReportGen.log|계량 에이전트에서 수집한 사용 데이터 보고서를 생성합니다. 이 데이터는 Mtrmgr.log에 기록됩니다.|  
-|UserAffinity.log|사용자 장치 선호도에 대한 세부 정보를 기록합니다.|  
-|VirtualApp.log|Application Virtualization(App-V) 배포 유형의 평가에 관한 정보를 기록합니다.|  
-|Wedmtrace.log|Windows Embedded 클라이언트의 쓰기 필터와 관련된 작업을 기록합니다.|  
-|wakeprxy install.log|클라이언트가 절전 모드 해제 프록시를 켜는 클라이언트 설정 옵션을 받을 경우의 설치 정보를 기록합니다.|  
-|wakeprxy-uninstall.log|이전에 절전 모드 해제 프록시를 켠 경우 클라이언트가 절전 모드 해제 프록시를 끄는 클라이언트 설정 옵션을 받을 경우 절전 모드 해제 프록시 제거에 대한 정보를 기록합니다.|  
+|CAS.log|コンテンツ アクセス サービス。 クライアントのローカル パッケージのキャッシュを管理します。|  
+|Ccm32BitLauncher.log|クライアントにある "run as 32bit" とマークされたアプリケーションの起動を記録します。|  
+|CcmEval.log|Configuration Manager クライアント ステータスを評価するときの処理と、Configuration Manager クライアントが必要とするコンポーネントの詳細を記録します。|  
+|CcmEvalTask.log|スケジュールに従って開始される Configuration Manager クライアント ステータスの評価に関する処理を記録します。|  
+|CcmExec.log|クライアントと SMS Agent Host サービスによって行われる処理を記録します。 ウェイクアップ プロキシの有効化と無効化に関する情報も記録します。|  
+|CcmMessaging.log|クライアントと管理ポイント間の通信に関連する処理を記録します。|  
+|CCMNotificationAgent.log|クライアント通知操作に関連する処理を記録します。|  
+|Ccmperf.log|メンテナンス操作、およびクライアントのパフォーマンス カウンターに関連するデータの取得操作を記録します。|  
+|CcmRestart.log|クライアント サービスの再開を記録します。|  
+|CCMSDKProvider.log|クライアントの SDK インターフェイスで行われる処理を記録します。|  
+|CertificateMaintenance.log|Active Directory ドメイン サービスと管理ポイントの証明書を管理するときに使用します。|  
+|CIDownloader.log|構成項目の定義のダウンロードの詳細を記録します。|  
+|CITaskMgr.log|各アプリケーションと展開用に開始されたタスク (コンテンツのダウンロード、インストールとアンインストールなど) を記録します。|  
+|ClientAuth.log|クライアントの署名と認証処理を記録します。|  
+|ClientIDManagerStartup.log|作成されたクライアント GUID、およびクライアントの登録と割り当て中に行われた操作を記録します。|  
+|ClientLocation.log|クライアント サイトの割り当てに関連する操作を記録します。|  
+|CMHttpsReadiness.log|Configuration Manager の HTTPS 使用準備ができているかどうかを評価するツールの実行結果を記録します。 このツールは、Configuration Manager で使用できる公開キー基盤 (PKI) クライアント認証証明書がコンピューターにあるかどうかをチェックします。|  
+|CmRcService.log|リモート コントロール サービスの情報を記録します。|  
+|ContentTransferManager.log|バックグラウンド インテリジェント転送サービス (BITS)、またはサーバー メッセージ ブロック (SMB) でパッケージをダウンロード、またはパッケージにアクセスするスケジュールの情報を含みます。|  
+|DataTransferService.log|ポリシーまたはパッケージにアクセスするために行われた、BITS による通信をすべて記録します。|  
+|EndpointProtectionAgent|System Center Endpoint Protection クライアントのインストール、およびそのクライアントへのマルウェア対策ポリシーの適用に関する情報を記録します。|  
+|execmgr.log|クライアントで実行されたパッケージとタスク シーケンスの詳細を記録します。|  
+|ExpressionSolver.log|"詳細" または "デバッグ" レベルのログ記録が有効になっているときに使用される検出方法の詳細を記録します。|  
+|ExternalEventAgent.log|Endpoint Protection のマルウェア検出とクライアント ステータスに関連するイベントの履歴を記録します。|  
+|FileBITS.log|SMB によるパッケージへのアクセスをすべて記録します。|  
+|FileSystemFile.log|Windows Management Instrumentation (WMI) プロバイダーによって行われるソフトウェア インベントリとファイルの収集処理を記録します。|  
+|FSPStateMessage.log|クライアントによってフォールバック ステータス ポイントに送信されるステータス メッセージを記録します。|  
+|InternetProxy.log|クライアントのネットワーク プロキシの構成と使用状況を記録します。|  
+|InventoryAgent.log|クライアントで行われるハードウェア インベントリ、ソフトウェア インベントリ、定期探索を記録します。|  
+|LocationCache.log|クライアントの位置情報のキャッシュの使用状況とメンテナンス情報を記録します。|  
+|LocationServices.log|クライアントで管理ポイント、ソフトウェア更新ポイント、配布ポイントを見つけるために行われた操作を記録します。|  
+|MaintenanceCoordinator.log|クライアントの一般的なメンテナンス作業を記録します。|  
+|Mifprovider.log|管理情報フォーマット (MIF) ファイルの WMI プロバイダーの活動を記録します。|  
+|mtrmgr.log|ソフトウェア使用状況測定プロセスを記録します。|  
+|PolicyAgent.log|データ転送サービスを使用して行われたポリシーの要求を記録します。|  
+|PolicyAgentProvider.log|ポリシーに加えられた変更を記録します。|  
+|PolicyEvaluator.log|ソフトウェア更新プログラムのポリシーを含む、クライアント コンピューターのポリシーの評価の詳細を記録します。|  
+|PolicyPlatformClient.log|ファイル プロバイダーを除く、Program Files\Microsoft Policy Platform にあるすべてのプロバイダーの修正プロセスとコンプライアンス対応プロセスを記録します。|  
+|PolicySdk.log|ポリシー システム SDK のインターフェイスによる操作を記録します。|  
+|Pwrmgmt.log|ウェイクアップ プロキシのクライアント設定の有効化と無効化、および構成に関する情報を記録します。|  
+|PwrProvider.log|WMI サービスでホストされている電源管理プロバイダー (PWRInvProvider) による処理を記録します。 このプロバイダーは、サポートされているすべてのバージョンの Windows で、ハードウェアのインベントリ中にコンピューターの現在の設定を列挙し、電源プランの設定を適用します。|  
+|SCClient_&lt;*domain*\>@&lt;*username*\>_1.log|クライアント コンピューターの特定のユーザーがソフトウェア センターで行った操作を記録します。|  
+|SCClient_&lt;*domain*\>@&lt;*username*\>_2.log|クライアント コンピューターの特定のユーザーがソフトウェア センターで行った操作の履歴を記録します。|  
+|Scheduler.log|クライアントのスケジュールが設定されている処理をすべて記録します。|  
+|SCNotify_&lt;*domain*\>@&lt;*username*\>_1.log|特定のユーザーに送信したソフトウェアに関する通知を記録します。|  
+|SCNotify_&lt;*domain*\>@&lt;*username*\>_1-&lt;*date_time*>.log|特定のユーザーに送信したソフトウェアに関する通知の履歴を記録します。|  
+|setuppolicyevaluator.log|WMI による構成とインベントリ ポリシーの作成を記録します。|  
+|SleepAgent_&lt;*domain*\>@SYSTEM_0.log|ウェイクアップ プロキシのメイン ログ ファイルです。|  
+|smscliui.log|コントロール パネルで Configuration Manager クライアントがどのように使用されたかを記録します。|  
+|SrcUpdateMgr.log|Windows インストーラーを使ってインストールされたアプリケーションが、現在の配布ポイントにあるソースでどのように更新されたかを記録します。|  
+|StatusAgent.log|クライアント コンポーネントによって作成されたステータス メッセージを記録します。|  
+|SWMTRReportGen.log|使用状況測定エージェントによる、使用状況レポート生成用データの収集を記録します。 このデータは、Mtrmgr.log に記録されます。|  
+|UserAffinity.log|ユーザーとデバイスのアフィニティの詳細を記録します。|  
+|VirtualApp.log|Application Virtualization (App-V) 展開の評価に特有の情報を記録します。|  
+|Wedmtrace.log|Windows Embedded クライアントの書き込みフィルターに関連する処理を記録します。|  
+|wakeprxy-install.log|ウェイクアップ プロキシを有効にするクライアント設定オプションをクライアントが受信したときに、インストール情報を記録します。|  
+|wakeprxy-uninstall.log|ウェイクアップ プロキシが以前に有効になっていた場合、ウェイクアップ プロキシを無効にするクライアント設定オプションをクライアントが受信したときに、ウェイクアップ プロキシのアンインストールに関する情報を記録します。|  
 
-###  <a name="BKMK_ClientInstallLog"></a> 클라이언트 설치 로그 파일  
- 다음 표에는 Configuration Manager 클라이언트의 설치와 관련된 정보가 포함된 로그 파일이 나열되어 있습니다.  
+###  <a name="BKMK_ClientInstallLog"></a> クライアントのインストール ログ ファイル  
+ 次の表に、Configuration Manager クライアントのインストールに関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|  
+|ログの名前|[説明]|  
 |--------------|-----------------|  
-|ccmsetup.log|클라이언트 설정, 클라이언트 업그레이드 및 클라이언트 제거에 대한 ccmsetup.exe 작업을 기록합니다. 클라이언트 설치 문제를 해결하는 데 사용할 수 있습니다.|  
-|ccmsetup ccmeval.log|클라이언트 상태 및 재구성에 대한 ccmsetup.exe 작업을 기록합니다.|  
-|CcmRepair.log|클라이언트 에이전트의 복구 활동을 기록합니다.|  
-|client.msi.log|client.msi를 통해 수행된 설치 작업을 기록합니다. 클라이언트 설치 또는 제거 문제를 해결하는 데 사용할 수 있습니다.|  
+|ccmsetup.log|クライアントのセットアップ、クライアントのアップグレード、およびクライアントの削除に関する ccmsetup.exe のタスクを記録します。 クライアントのインストールのトラブルシューティングに使用できます。|  
+|ccmsetup-ccmeval.log|クライアントのステータスと修復に関する ccmsetup.exe のタスクを記録します。|  
+|CcmRepair.log|クライアント エージェントの修復処理を記録します。|  
+|client.msi.log|client.msi で実行されるセットアップ タスクを記録します。 クライアントのインストールまたは削除に関する問題の解消に利用できます。|  
 
-###  <a name="BKMK_LogFilesforLnU"></a> Linux 및 UNIX용 클라이언트  
- Linux 및 UNIX용 Configuration Manager 클라이언트는 다음 로그 파일에 정보를 기록합니다.  
+###  <a name="BKMK_LogFilesforLnU"></a> Linux および UNIX 用のクライアント  
+ Linux および UNIX 用の Configuration Manager クライアントでは、次のログ ファイルに情報を記録します。  
 
 > [!TIP]  
->  누적 업데이트 1의 Linux 및 UNIX용 클라이언트부터는 CMTrace를 사용하여 Linux 및 UNIX용 클라이언트의 로그 파일을 볼 수 있습니다.  
+>  Linux および UNIX 用のクライアントの累積的な更新プログラム 1 以降、CMTrace を使用して、Linux および UNIX 用のクライアントのログ ファイルを表示できます。  
 
 > [!NOTE]  
->  Linux 및 UNIX용 클라이언트의 최초 릴리스를 사용하는 경우 이 섹션의 설명서를 참조할 때 각 파일 또는 프로세스에 대한 다음 참조를 대체하세요.  
+>  Linux および UNIX 用のクライアントの最初のリリースを使用し、このセクションのドキュメントを参照する場合、各ファイルまたは手順の次の参照項目を置き換えてください。  
 >   
->  -   **omiserver.bin** 를 **nwserver.bin**으로 대체  
-> -   **omi** 를 **nanowbem**으로 대체  
+>  -   **omiserver.bin** を **nwserver.bin**に置き換え  
+> -   **omi** を **nanowbem**に置き換え  
 
-|로그 이름|세부 정보|  
+|ログの名前|説明|  
 |--------------|-------------|  
-|Scxcm.log|Linux 및 UNIX용 Configuration Manager 클라이언트의 핵심 서비스(ccmexec.bin)에 대한 로그 파일입니다. 이 로그 파일에는 ccmexec.bin의 설치 및 진행 중인 작업에 대한 정보가 포함됩니다.<br /><br /> 이 로그 파일은 기본적으로 **/var/opt/microsoft/scxcm.log**에 있습니다.<br /><br /> 이 로그 파일의 위치를 변경하려면 **/opt/microsoft/configmgr/etc/scxcm.conf** 를 편집하고 **경로** 필드를 변경합니다. 변경 내용을 적용하기 위해 클라이언트 컴퓨터 또는 서비스를 다시 시작하지 않아도 됩니다.<br /><br /> 로그 수준은 다음 네 가지 설정 중 하나로 설정할 수 있습니다.|  
-|Scxcmprovider.log|Linux 및 UNIX용 Configuration Manager 클라이언트의 CIM 서비스(omiserver.bin)에 대한 로그 파일입니다. 이 로그 파일에는 nwserver.bin의 지속적인 작업에 대한 정보가 포함됩니다.<br /><br /> 이 로그는 **/var/opt/microsoft/configmgr/scxcmprovider.log**에 있습니다.<br /><br /> 이 로그 파일의 위치를 변경하려면 **/opt/microsoft/omi/etc/scxcmprovider.conf** 를 편집하고 **경로** 필드를 변경합니다. 변경 내용을 적용하기 위해 클라이언트 컴퓨터 또는 서비스를 다시 시작하지 않아도 됩니다.<br /><br /> 로그 수준은 다음 세 가지 설정 중 하나로 설정할 수 있습니다.|  
+|Scxcm.log|Linux および UNIX 用の Configuration Manager クライアントのコア サービス (ccmexec.bin) のログ ファイルです。 このログ ファイルには、ccmexec.bin のインストールと実行中の処理に関する情報が含まれます。<br /><br /> 既定でこのログ ファイルは **/var/opt/microsoft/scxcm.log** にあります<br /><br /> ログ ファイルの場所を変更するには、 **/opt/microsoft/configmgr/etc/scxcm.conf** を編集して [ **パス** ] フィールドを変更します。 変更を有効にするために、クライアント コンピューターやサービスを再起動する必要はありません。<br /><br /> ログ レベルを 4 種類の設定のいずれかに設定できます。|  
+|Scxcmprovider.log|Linux および UNIX 用の Configuration Manager クライアントの CIM サービス (omiserver.bin) のログ ファイルです。 このログ ファイルには、nwserver.bin の実行中の処理に関する情報が含まれます。<br /><br /> このログは **/var/opt/microsoft/configmgr/scxcmprovider.log** にあります<br /><br /> ログ ファイルの場所を変更するには、 **/opt/microsoft/omi/etc/scxcmprovider.conf** を編集して [ **パス** ] フィールドを変更します。 変更を有効にするために、クライアント コンピューターやサービスを再起動する必要はありません。<br /><br /> ログ レベルを 3 つの設定のいずれかに設定できます。|  
 
- 두 로그 파일은 여러 수준의 로깅을 지원합니다.  
+ 両方のログ ファイルは、いくつかのレベルのログ記録をサポートします。  
 
--   **scxcm.log**. 로그 수준을 변경하려면 **/opt/microsoft/configmgr/etc/scxcm.conf** 를 편집하고 **MODULE** 태그의 각 인스턴스를 원하는 로그 수준으로 변경합니다.  
+-   **scxcm.log**。 ログ レベルを変更するには、**/opt/microsoft/configmgr/etc/scxcm.conf** を編集し、**[モジュール]** タグの各インスタンスを必要なログ レベルに変更します。  
 
-    -   ERROR: 주의가 필요한 문제를 나타냅니다.  
+    -   エラー: 注意が必要な問題を示します。  
 
-    -   WARNING: 클라이언트 작업에 대해 발생 가능한 문제를 나타냅니다.  
+    -   警告: クライアントの処理で発生した可能性がある問題を示します。  
 
-    -   INFO: 클라이언트의 다양한 이벤트 상태를 나타내는 세부적인 로그 정보입니다.  
+    -   情報: クライアントのさまざまなイベントのステータスを示す、さらに詳細なログ記録です。  
 
-    -   TRACE: 일반적으로 문제를 진단하는 데 사용되는 자세한 정보 로깅입니다.  
+    -   トレース: 問題の診断に通常使用する、詳細なログ記録です。  
 
--   **scxcmprovider.log**. 로그 수준을 변경하려면 **/opt/microsoft/omi/etc/ scxcmprovider.conf**를 편집하여 **MODULE** 태그의 각 인스턴스를 원하는 로그 수준으로 변경합니다.  
+-   **scxcmprovider.log**。 ログ レベルを変更するには、**/opt/microsoft/omi/etc/scxcmprovider.conf** を編集し、タグ **[モジュール]** の各インスタンスを必要なログ レベルに変更します。  
 
-    -   ERROR: 주의가 필요한 문제를 나타냅니다.  
+    -   エラー: 注意が必要な問題を示します。  
 
-    -   WARNING: 클라이언트 작업에 대해 발생 가능한 문제를 나타냅니다.
+    -   警告: クライアントの処理で発生した可能性がある問題を示します。
 
-    -   INFO: 클라이언트의 다양한 이벤트 상태를 나타내는 세부적인 로그 정보입니다.  
+    -   情報: クライアントのさまざまなイベントのステータスを示す、さらに詳細なログ記録です。  
 
-정상 작동 상태에서는 ERROR 로그 수준을 사용합니다. 이 로그 수준이 가장 작은 로그 파일을 만듭니다. 로그 수준을 ERROR에서 WARNING, INFO, TRACE 등으로 올리는 경우 더 많은 데이터가 파일에 기록되므로 더 큰 로그 파일이 생성됩니다.  
+通常の動作条件では、エラーのログ レベルを使用します。 このログ レベルでは、最小限のログ ファイルが作成されます。 ログ レベルがエラーから警告、情報、トレースへと上がるにつれて、ログ ファイルにさらに多くのデータが書き込まれるため、作成されるログ ファイルが大きくなります。  
 
-####  <a name="BKMK_ManageLinuxLogs"></a> Linux 및 UNIX 클라이언트용 로그 파일 관리  
-Linux 및 UNIX 클라이언트는 클라이언트 로그 파일의 최대 크기를 제한하지 않고, 클라이언트가 자동으로 해당 .log 파일의 콘텐츠를 다른 파일(예: .lo_ 파일)로 복사하지도 않습니다. 로그 파일의 최대 크기를 제한하려면 Linux 및 UNIX Configuration Manager 클라이언트로부터 독립적인 로그 파일을 관리하는 프로세스를 구현합니다.  
+####  <a name="BKMK_ManageLinuxLogs"></a> Linux および UNIX 用のクライアントのログ ファイルを管理する  
+Linux および UNIX 用のクライアントでは、クライアント ログ ファイルの最大サイズに制限はありません。また、.log ファイルの内容を、.Lo_ ファイルなどの別のファイルに自動的にコピーしません。 ログ ファイルの最大サイズを制御する場合、Linux および UNIX 用の Configuration Manager クライアントとは独立して、ログ ファイルを管理する手順を実行します。  
 
-예를 들어 표준 Linux 및 UNIX 명령 **logrotate**를 사용하여 클라이언트 로그 파일의 크기 및 회전을 관리할 수 있습니다. Linux 및 UNIX용 Configuration Manager 클라이언트에는 **logrotate**가 로그 회전 완료 시 클라이언트에 신호를 보내 클라이언트가 로그 파일에 로깅을 다시 시작할 수 있도록 하는 인터페이스가 있습니다.  
+たとえば、標準の Linux および UNIX コマンド「**logrotate**」を使用して、クライアント ログ ファイルのサイズとローテーションを管理できます。 Linux および UNIX 用の Configuration Manager クライアントには、ログのローテーションがいつ完了するのかをクライアントに **logrotate** で知らせるインターフェイスが用意されています。これにより、クライアントはログ ファイルへのログの記録を再開できるようになります。  
 
-**logrotate**에 대한 자세한 내용은 사용 중인 Linux 및 UNIX 배포에 대한 설명서를 참조하세요.  
+**logrotate**の詳細については、ご使用の Linux および UNIX ディストリビューションのドキュメントを参照してください。  
 
-###  <a name="BKMK_LogfilesforMac"></a> Mac 컴퓨터용 클라이언트  
-Mac 컴퓨터용 Configuration Manager 클라이언트는 다음 로그 파일에 정보를 기록합니다.  
+###  <a name="BKMK_LogfilesforMac"></a> Mac コンピューター用のクライアント  
+Mac コンピューター用の Configuration Manager クライアントでは、次のログ ファイルに情報を記録します。  
 
-|로그 이름|세부 정보|  
+|ログの名前|説明|  
 |--------------|-------------|  
-|CCMClient-&lt;*날짜_시간*>.log|응용 프로그램 관리, 인벤토리, 오류 로그 등 Mac 클라이언트 작업과 관련된 활동을 기록합니다.<br /><br /> 이 로그 파일은 Mac 컴퓨터의 /Library/Application Support/Microsoft/CCM/Logs 폴더에 있습니다.|  
-|CCMAgent-&lt;*날짜_시간*>.log|사용자 로그온/로그오프 작업 및 Mac 컴퓨터 작업을 포함하여 클라이언트 작업과 관련된 정보를 기록합니다.<br /><br /> 이 로그 파일은 Mac 컴퓨터의 ~/Library/Logs 폴더에 있습니다.|  
-|CCMNotifications-&lt;*날짜_시간*>.log|Mac 컴퓨터에 표시된 Configuration Manager 알림과 관련된 작업을 기록합니다.<br /><br /> 이 로그 파일은 Mac 컴퓨터의 ~/Library/Logs 폴더에 있습니다.|  
-|CCMPrefPane-&lt;*날짜_시간*>.log|일반 상태 및 오류 로그를 포함하여 Mac 컴퓨터의 Configuration Manager 기본 설정 대화 상자와 관련된 작업을 기록합니다.<br /><br /> 이 로그 파일은 Mac 컴퓨터의 ~/Library/Logs 폴더에 있습니다.|  
+|CCMClient-&lt;*date_time*>.log|アプリケーション管理、インベントリ、エラー記録などの、Mac クライアントの操作に関連する処理が記録されます。<br /><br /> このログ ファイルは、Mac コンピューターの /Library/Application Support/Microsoft/CCM/Logs フォルダーに配置されます。|  
+|CCMAgent-&lt;*date_time*>.log|ユーザーのログオン操作とログオフ操作、Mac コンピューターの処理など、クライアントの処理に関連する情報を記録します。<br /><br /> このログ ファイルは、Mac コンピューターの ~/Library/Logs フォルダーに配置されます。|  
+|CCMNotifications-&lt;*date_time*>.log|Mac コンピューターに表示された Configuration Manager の通知に関連する処理を記録します。<br /><br /> このログ ファイルは、Mac コンピューターの ~/Library/Logs フォルダーに配置されます。|  
+|CCMPrefPane-&lt;*date_time*>.log|全般的なステータスやエラー記録などの、Mac コンピューターの Configuration Manager の設定ダイアログ ボックスに関連する処理を記録します。<br /><br /> このログ ファイルは、Mac コンピューターの ~/Library/Logs フォルダーに配置されます。|  
 
-사이트 시스템 서버의 SMS_DM.log 로그 파일은 모바일 장치와 Mac 컴퓨터에 설정된 관리 지점과 Mac 컴퓨터 간의 통신도 기록합니다.  
+サイト システム サーバーのログ ファイル SMS_DM.log には、モバイル デバイスおよび Mac コンピューター用に設定された管理ポイントと Mac コンピューター間の通信も記録されます。  
 
-##  <a name="BKMK_ServerLogs"></a> Configuration Manager 사이트 서버 로그 파일  
- 다음 섹션에는 사이트 서버에 있는 로그 파일 또는 특정 사이트 시스템 역할과 관련된 로그 파일이 나와 있습니다.  
+##  <a name="BKMK_ServerLogs"></a> Configuration Manager サイト サーバーのログ ファイル  
+ 次のセクションでは、サイト サーバーにあるログ ファイルと、各種サイト システムの役割に関係のあるログ ファイルについて説明します。  
 
-###  <a name="BKMK_SiteSiteServerLog"></a> 사이트 서버 및 사이트 시스템 서버 로그  
- 다음 표에는 Configuration Manager 사이트 서버 및 사이트 시스템 서버에 있는 로그 파일이 나와 있습니다.  
+###  <a name="BKMK_SiteSiteServerLog"></a> サイト サーバーとサイト システムのログ ファイル  
+ 次の表に、Configuration Manager のサイト サーバーとサイト システム サーバーにあるログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|adctrl.log|등록 처리 작업을 기록합니다.|사이트 서버|  
-|ADForestDisc.log|Active Directory 포리스트 검색 작업을 기록합니다.|사이트 서버|  
-|ADService.log|Active Directory의 계정 만들기 및 보안 그룹 세부 정보를 기록합니다.|사이트 서버|  
-|adsgdis.log|Active Directory 그룹 검색 작업을 기록합니다.|사이트 서버|  
-|adsysdis.log|Active Directory 시스템 검색 작업을 기록합니다.|사이트 서버|  
-|adusrdis.log|Active Directory 사용자 검색 작업을 기록합니다.|사이트 서버|  
-|ccm.log|클라이언트 강제 설치 작업을 기록합니다.|사이트 서버|  
-|CertMgr.log|사이트 간 통신을 위한 인증서 활동을 기록합니다.|사이트 시스템 서버|  
-|chmgr.log|클라이언트 상태 관리자의 작업을 기록합니다.|사이트 서버|  
-|Cidm.log|CIDM(클라이언트 설치 데이터 관리자)에 의해 변경된 클라이언트 설정을 기록합니다.|사이트 서버|  
-|colleval.log|컬렉션 평가기에서 컬렉션을 만들고 변경하고 삭제한 경우 관련 세부 정보를 기록합니다.|사이트 서버|  
-|compmon.log|사이트 서버에 대해 모니터링되는 구성 요소 스레드의 상태를 기록합니다.|사이트 시스템 서버|  
-|compsumm.log|구성 요소 상태 요약 작성기 작업을 기록합니다.|사이트 서버|  
-|ComRegSetup.log|사이트 서버의 초기 COM 등록 설치 결과를 기록합니다.|사이트 시스템 서버|  
-|dataldr.log|Configuration Manager 데이터베이스에서 MIF 파일 및 하드웨어 인벤토리 처리 작업에 대한 정보를 기록합니다.|사이트 서버|  
-|ddm.log|검색 데이터 관리자의 작업을 기록합니다.|사이트 서버|  
-|despool.log|들어오는 사이트 간 통신 전송을 기록합니다.|사이트 서버|  
-|distmgr.log|패키지 만들기, 압축, 델타 복제, 정보 업데이트 등과 관련된 세부 정보를 기록합니다.|사이트 서버|  
-|EPCtrlMgr.log|Endpoint Protection 사이트 시스템 역할 서버에서 Configuration Manager 데이터베이스로의 맬웨어 위협 정보 동기화에 대한 정보를 기록합니다.|사이트 서버|  
-|EPMgr.log|Endpoint Protection 사이트 시스템 역할의 상태를 기록합니다.|사이트 시스템 서버|  
-|EPSetup.log|Endpoint Protection 사이트 시스템 역할의 설치에 대한 정보를 제공합니다.|사이트 시스템 서버|  
-|EnrollSrv.log|등록 서비스 프로세스의 작업을 기록합니다.|사이트 시스템 서버|  
-|EnrollWeb.log|등록 웹 사이트 프로세스의 작업을 기록합니다.|사이트 시스템 서버|  
-|fspmgr.log|대체 상태 지점 사이트 시스템 역할의 작업을 기록합니다.|사이트 시스템 서버|  
-|hman.log|Active Directory Domain Services의 사이트 정보 게시 및 사이트 구성 변경에 대한 정보를 기록합니다.|사이트 서버|  
-|Inboxast.log|관리 지점에서 사이트 서버의 해당 INBOXES 폴더로 이동한 파일을 기록합니다.|사이트 서버|  
-|inboxmgr.log|수신함 폴더 간의 파일 전송 작업을 기록합니다.|사이트 서버|  
-|inboxmon.log|수신함 파일의 처리 정보 및 성능 카운터 업데이트를 기록합니다.|사이트 서버|  
-|invproc.log|보조 사이트에서 해당 부모 사이트로 전달된 MIF 파일을 기록합니다.|사이트 서버|  
-|migmctrl.log|마이그레이션 작업, 공유 배포 지점 및 배포 지점 업그레이드와 관련된 마이그레이션 작업에 대한 정보를 기록합니다.|Configuration Manager 계층 구조의 최상위 사이트 및 각 하위 기본 사이트.<br /><br /> 기본 사이트가 여러 개인 계층 구조인 경우 중앙 관리 사이트에 만들어진 로그 파일을 사용합니다.|  
-|mpcontrol.log|관리 지점의 WINS(Windows Internet Name Service) 등록을 기록합니다. 10분마다 관리 지점의 가용성을 기록합니다.|사이트 시스템 서버|  
-|mpfdm.log|클라이언트 파일을 사이트 서버의 해당 INBOXES 폴더로 이동한 관리 지점 구성 요소의 작업을 기록합니다.|사이트 시스템 서버|  
-|mpMSI.log|관리 지점 설치에 대한 세부 정보를 기록합니다.|사이트 서버|  
-|MPSetup.log|관리 지점 설치 래퍼 프로세스를 기록합니다.|사이트 서버|  
-|netdisc.log|네트워크 검색 작업을 기록합니다.|사이트 서버|  
-|ntsvrdis.log|사이트 시스템 서버의 검색 작업을 기록합니다.|사이트 서버|  
-|Objreplmgr|복제를 위해 개체 변경 알림 처리 정보를 기록합니다.|사이트 서버|  
-|offermgr.log|보급 알림 업데이트를 기록합니다.|사이트 서버|  
-|offersum.log|배포 상태 메시지의 요약 정보를 기록합니다.|사이트 서버|  
-|OfflineServicingMgr.log|운영 체제 이미지 파일에 업데이트를 적용한 작업을 기록합니다.|사이트 서버|  
-|outboxmon.log|발신함 파일의 처리 정보 및 성능 카운터 업데이트를 기록합니다.|사이트 서버|  
-|PerfSetup.log|성능 카운터의 설치 결과를 기록합니다.|사이트 시스템 서버|  
-|PkgXferMgr.log|기본 사이트에서 원격 배포 지점으로 콘텐츠를 보내는 SMS Executive 구성 요소의 작업을 기록합니다.|사이트 서버|  
-|policypv.log|클라이언트 설정 또는 배포의 변경 내용을 반영하도록 클라이언트 정책의 업데이트를 기록합니다.|기본 사이트 서버|  
-|rcmctrl.log|계층 내 사이트 간의 데이터베이스 복제 작업을 기록합니다.|사이트 서버|  
-|replmgr.log|사이트 서버 구성 요소와 스케줄러 구성 요소 간의 파일 복제를 기록합니다.|사이트 서버|  
-|ResourceExplorer.log|리소스 탐색기 실행과 관련된 오류, 경고, 정보 등을 기록합니다.|Configuration Manager 콘솔을 실행하는 컴퓨터|  
-|ruleengine.log|식별, 콘텐츠 다운로드, 소프트웨어 업데이트 그룹, 배포 만들기 등 자동 배포 규칙에 대한 세부 정보를 기록합니다.|사이트 서버|  
-|schedule.log|사이트 간 작업 및 파일 복제와 관련된 세부 정보를 기록합니다.|사이트 서버|  
-|sender.log|사이트 간 파일 기반 복제 시 전송되는 파일을 기록합니다.|사이트 서버|  
-|sinvproc.log|사이트 데이터베이스에 대한 소프트웨어 인벤토리 데이터의 처리에 대한 정보를 기록합니다.|사이트 서버|  
-|sitecomp.log|사이트의 모든 사이트 시스템 서버에 설치된 사이트 구성 요소의 유지 관리 관련 세부 정보를 기록합니다.|사이트 서버|  
-|sitectrl.log|데이터베이스의 사이트 제어 개체에 적용된 사이트 설정 변경 내용을 기록합니다.|사이트 서버|  
-|sitestat.log|모든 사이트 시스템의 가용성 및 디스크 공간 모니터링 프로세스를 기록합니다.|사이트 서버|  
-|SmsAdminUI.log|Configuration Manager 콘솔 작업을 기록합니다.|Configuration Manager 콘솔을 실행하는 컴퓨터|  
-|SMSAWEBSVCSetup.log|응용 프로그램 카탈로그 웹 서비스의 설치 작업을 기록합니다.|사이트 시스템 서버|  
-|smsbkup.log|사이트 백업 프로세스의 출력을 기록합니다.|사이트 서버|  
-|smsdbmon.log|데이터베이스 변경 내용을 기록합니다.|사이트 서버|  
-|SMSENROLLSRVSetup.log|등록 웹 서비스의 설치 작업을 기록합니다.|사이트 시스템 서버|  
-|SMSENROLLWEBSetup.log|등록 웹 사이트의 설치 작업을 기록합니다.|사이트 시스템 서버|  
-|smsexec.log|모든 사이트 서버 구성 요소 스레드의 처리 작업을 기록합니다.|사이트 서버 또는 사이트 시스템 서버|  
-|SMSFSPSetup.log|대체 상태 지점 설치 시 생성된 메시지를 기록합니다.|사이트 시스템 서버|  
-|SMSPORTALWEBSetup.log|응용 프로그램 카탈로그 웹 사이트의 설치 작업을 기록합니다.|사이트 시스템 서버|  
-|SMSProv.log|사이트 데이터베이스에 대한 WMI 공급자 액세스를 기록합니다.|SMS 공급자가 설치된 컴퓨터|  
-|srsrpMSI.log|보고 지점 설치 프로세스의 세부적인 MSI 출력 결과를 기록합니다.|사이트 시스템 서버|  
-|srsrpsetup.log|보고 지점 설치 프로세스의 결과를 기록합니다.|사이트 시스템 서버|  
-|statesys.log|상태 시스템 메시지의 처리 정보를 기록합니다.|사이트 서버|  
-|statmgr.log|데이터베이스에 기록된 모든 상태 메시지를 기록합니다.|사이트 서버|  
-|swmproc.log|계량 파일 및 설정의 처리 정보를 기록합니다.|사이트 서버|  
+|adctrl.log|登録操作を記録します。|サイト サーバー|  
+|ADForestDisc.log|Active Directory フォレストの探索操作を記録します。|サイト サーバー|  
+|ADService.log|Active Directory のアカウントの作成とセキュリティ グループの詳細を記録します。|サイト サーバー|  
+|adsgdis.log|Active Directory グループの探索の処理を記録します。|サイト サーバー|  
+|adsysdis.log|Active Directory システムの探索操作を記録します。|サイト サーバー|  
+|adusrdis.log|Active Directory ユーザーの探索操作を記録します。|サイト サーバー|  
+|ccm.log|クライアントのプッシュ インストール操作を記録します。|サイト サーバー|  
+|CertMgr.log|サイト内通信用の証明書に関する操作を記録します。|サイト システム サーバー|  
+|chmgr.log|クライアントの正常性マネージャーによる処理を記録します。|サイト サーバー|  
+|Cidm.log|クライアント インストール データ マネージャー (CIDM) によるクライアント設定の変更を記録します。|サイト サーバー|  
+|colleval.log|コレクション エバリュエーターによるコレクションの生成、変更、削除の詳細を記録します。|サイト サーバー|  
+|compmon.log|サイト サーバーの監視されているコンポーネント スレッドのステータスを記録します。|サイト システム サーバー|  
+|compsumm.log|コンポーネントのステータスの要約操作を記録します。|サイト サーバー|  
+|ComRegSetup.log|サイト サーバーの初期インストール時の COM 登録結果を記録します。|サイト システム サーバー|  
+|dataldr.log|Configuration Manager データベースの MIF ファイルとハードウェア インベントリの処理に関する情報を記録します。|サイト サーバー|  
+|ddm.log|探索データ マネージャーによる処理を記録します。|サイト サーバー|  
+|despool.log|他のサイトからの通信を受信したことを記録します。|サイト サーバー|  
+|distmgr.log|パッケージの作成、圧縮、差分レプリケーション、情報の更新を記録します。|サイト サーバー|  
+|EPCtrlMgr.log|Endpoint Protection ポイントのサイト システムの役割のサーバーにあるマルウェア情報と Configuration Manager データベースの同期に関する情報を記録します。|サイト サーバー|  
+|EPMgr.log|Endpoint Protection ポイントのサイト システムの役割のステータスを記録します。|サイト システム サーバー|  
+|EPSetup.log|Endpoint Protection ポイントのサイト システムの役割のインストールに関する情報を含みます。|サイト システム サーバー|  
+|EnrollSrv.log|登録サービス プロセスの処理を記録します。|サイト システム サーバー|  
+|EnrollWeb.log|登録 Web サイト プロセスによる処理を記録します。|サイト システム サーバー|  
+|fspmgr.log|フォールバック ステータス ポイントのサイト システムの役割による処理を記録します。|サイト システム サーバー|  
+|hman.log|サイトの構成の変更と、Active Directory Domain Services でのサイト情報の発行を記録します。|サイト サーバー|  
+|Inboxast.log|管理ポイントから、サイトサーバーの対応する受信トレイ フォルダーに移動したファイルを記録します。|サイト サーバー|  
+|inboxmgr.log|受信トレイ フォルダー間のファイルの移動を記録します。|サイト サーバー|  
+|inboxmon.log|受信トレイにあるファイルの処理とパフォーマンス カウンターの更新を記録します。|サイト サーバー|  
+|invproc.log|セカンダリ サイトから親サイトへの MIF ファイルの転送を記録します。|サイト サーバー|  
+|migmctrl.log|移行処理に関する情報 (移行ジョブ、共有配布ポイント、配布ポイントのアップグレード) を記録します。|Configuration Manager 階層の最上位サイトと、それぞれの子プライマリ サイト<br /><br /> 階層にプライマリ サイトが複数ある場合は、中央管理サイトで作成されたログ ファイルを使用してください。|  
+|mpcontrol.log|Windows インターネット ネーム サービス (WINS) に管理ポイントの登録を記録します。 管理ポイントの可用性を 10 分おきに記録します。|サイト システム サーバー|  
+|mpfdm.log|管理ポイント コンポーネントによる、クライアント ファイルの、サイト サーバーの対応する受信トレイ フォルダーへの移動処理を記録します。|サイト システム サーバー|  
+|mpMSI.log|管理ポイントのインストールの詳細を記録します。|サイト サーバー|  
+|MPSetup.log|管理ポイントのインストール ラッパー プロセスを記録します。|サイト サーバー|  
+|netdisc.log|ネットワーク探索操作を記録します。|サイト サーバー|  
+|ntsvrdis.log|サイト システム サーバーの探索操作を記録します。|サイト サーバー|  
+|Objreplmgr|レプリケーションによるオブジェクトの変更通知の処理を記録します。|サイト サーバー|  
+|offermgr.log|開示通知の更新を記録します。|サイト サーバー|  
+|offersum.log|展開のステータス メッセージの要約処理を記録します。|サイト サーバー|  
+|OfflineServicingMgr.log|オペレーティング システム イメージ ファイルへの更新プログラムの適用を記録します。|サイト サーバー|  
+|outboxmon.log|送信トレイにあるファイルの処理とパフォーマンス カウンターの更新を記録します。|サイト サーバー|  
+|PerfSetup.log|パフォーマンス カウンターのインストール結果を記録します。|サイト システム サーバー|  
+|PkgXferMgr.log|SMS_Executive コンポーネントによる、プライマリ サイトからリモート配布ポイントへのコンテンツの送信処理を記録します。|サイト サーバー|  
+|policypv.log|クライアントの設定または展開の変更を反映した、クライアント ポリシーの更新を記録します。|プライマリ サイト サーバー|  
+|rcmctrl.log|階層にあるサイト間のデータベースのレプリケーションを記録します。|サイト サーバー|  
+|replmgr.log|サイト サーバー コンポーネントとスケジューラ コンポーネント間のファイルのレプリケーションを記録します。|サイト サーバー|  
+|ResourceExplorer.log|リソース エクスプローラーの実行時に発生したエラーと警告、および実行に関する情報を記録します。|Configuration Manager コンソールを実行しているコンピューター|  
+|ruleengine.log|自動展開規則に関する情報 (確認、コンテンツのダウンロード、およびソフトウェア更新プログラム グループと展開の作成) を記録します。|サイト サーバー|  
+|schedule.log|サイト間のジョブとファイルのレプリケーションに関する情報を記録します。|サイト サーバー|  
+|sender.log|サイト間のファイルベースのレプリケーションによって転送されるファイルを記録します。|サイト サーバー|  
+|sinvproc.log|サイト データベースに格納されるソフトウェアのインベントリ データの処理に関する情報を記録します。|サイト サーバー|  
+|sitecomp.log|サイトのすべてのサイト システム サーバーにインストールされているサイト コンポーネントのメンテナンスに関する詳細を記録します。|サイト サーバー|  
+|sitectrl.log|データベースのサイト コントロール オブジェクトに加えられたサイト設定の変更を記録します。|サイト サーバー|  
+|sitestat.log|すべてのサイト システムの可用性とディスク領域の監視プロセスを記録します。|サイト サーバー|  
+|SmsAdminUI.log|Configuration Manager コンソール アクティビティを記録します。|Configuration Manager コンソールを実行しているコンピューター|  
+|SMSAWEBSVCSetup.log|アプリケーション カタログ Web サービスのインストール処理を記録します。|サイト システム サーバー|  
+|smsbkup.log|サイトのバックアップ プロセスの出力を記録します。|サイト サーバー|  
+|smsdbmon.log|データベースの変更を記録します。|サイト サーバー|  
+|SMSENROLLSRVSetup.log|登録 Web サービスのインストール操作を記録します。|サイト システム サーバー|  
+|SMSENROLLWEBSetup.log|登録 Web サイトのインストール操作を記録します。|サイト システム サーバー|  
+|smsexec.log|すべてのサイト サーバー コンポーネント スレッドの処理を記録します。|サイト サーバーまたはサイト システム サーバー|  
+|SMSFSPSetup.log|フォールバック ステータス ポイントのインストールによって生成されたメッセージを記録します。|サイト システム サーバー|  
+|SMSPORTALWEBSetup.log|アプリケーション カタログ Web サイトのインストール処理を記録します。|サイト システム サーバー|  
+|SMSProv.log|WMI プロバイダーからのサイト データベースへのアクセスを記録します。|SMS プロバイダーのあるコンピューター|  
+|srsrpMSI.log|MSI によるレポート ポイントのインストール プロセスの出力結果を含みます。|サイト システム サーバー|  
+|srsrpsetup.log|レポート ポイントのインストール プロセスの結果を記録します。|サイト システム サーバー|  
+|statesys.log|ステート システムのメッセージの処理を記録します。|サイト サーバー|  
+|statmgr.log|データベースに書き込まれたすべてのステータス メッセージを記録します。|サイト サーバー|  
+|swmproc.log|ファイルの使用状況測定と設定の処理を記録します。|サイト サーバー|  
 
-###  <a name="BKMK_SiteInstallLog"></a> 사이트 서버 설치 로그 파일  
- 다음 표에는 사이트 설치와 관련된 정보가 있는 로그 파일이 정리되어 있습니다.  
+###  <a name="BKMK_SiteInstallLog"></a> サイト サーバーのインストール ログ ファイル  
+ 次の表に、サイトのインストールに関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|ConfigMgrPrereq.log|필수 구성 요소 평가 및 설치 작업을 기록합니다.|사이트 서버|  
-|ConfigMgrSetup.log|사이트 서버 설치 프로그램에서 출력된 세부 정보를 기록합니다.|사이트 서버|  
-|ConfigMgrSetupWizard.log|설치 마법사의 작업과 관련된 정보를 기록합니다.|사이트 서버|  
-|SMS_BOOTSTRAP.log|시작한 보조 사이트 설치 프로세스의 진행률 정보를 기록합니다. 실제 설치 프로세스에 대한 세부 정보는 ConfigMgrSetup.log에 포함되어 있습니다.|사이트 서버|  
-|smstsvc.log|연결을 시작하는 서버의 컴퓨터 계정을 통해 네트워크 연결과 사이트 간 사용 권한을 테스트하는 데 사용되는 Windows 서비스의 설치, 사용 및 제거에 대한 정보를 기록합니다.|사이트 서버 및 사이트 시스템 서버|  
+|ConfigMgrPrereq.log|前提条件コンポーネントの評価とインストール操作を記録します。|サイト サーバー|  
+|ConfigMgrSetup.log|サイト サーバーのセットアップからの詳しい出力を記録します。|サイト サーバー|  
+|ConfigMgrSetupWizard.log|セットアップ ウィザードによる処理に関係のある情報を記録します。|サイト サーバー|  
+|SMS_BOOTSTRAP.log|セカンダリ サイトのインストール プロセスの進行状況を記録します。 実際のセットアップ プロセスの詳細は、ConfigMgrSetup.log に記録されます。|サイト サーバー|  
+|smstsvc.log|サーバー間のネットワーク接続とアクセス許可 (接続元のサーバーのコンピューター アカウントを使用) のテスト用 Windows サービスのインストール、使用、削除に関する情報を記録します。|サイト サーバーとサイト システム サーバー|  
 
-###  <a name="BKMK_FSPLog"></a> 대체 상태 지점 로그 파일  
- 다음 표에는 대체 상태 지점과 관련된 정보가 있는 로그 파일이 정리되어 있습니다.  
+###  <a name="BKMK_FSPLog"></a> フォールバック ステータス ポイントのログ ファイル  
+ 次の表に、フォールバック ステータス ポイントのインストールに関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|FspIsapi|대체 상태 지점과 모바일 장치 기존 클라이언트 및 클라이언트 컴퓨터 간에 수행되는 통신 관련 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|fspMSI.log|대체 상태 지점 설치 시 생성된 메시지를 기록합니다.|사이트 시스템 서버|  
-|fspmgr.log|대체 상태 지점 사이트 시스템 역할의 작업을 기록합니다.|사이트 시스템 서버|  
+|FspIsapi|モバイル デバイス レガシ クライアントとクライアント コンピューターからのフォールバック ステータス ポイントへの通信に関する詳細を記録します。|サイト システム サーバー|  
+|fspMSI.log|フォールバック ステータス ポイントのインストールによって生成されたメッセージを記録します。|サイト システム サーバー|  
+|fspmgr.log|フォールバック ステータス ポイントのサイト システムの役割による処理を記録します。|サイト システム サーバー|  
 
-###  <a name="BKMK_MPLog"></a> 관리 지점 로그 파일  
- 다음 표에는 관리 지점과 관련된 정보가 있는 로그 파일이 정리되어 있습니다.  
+###  <a name="BKMK_MPLog"></a> 管理ポイントのログ ファイル  
+ 次の表に、管理ポイントのインストールに関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|CcmIsapi.log|끝점의 클라이언트 메시징 작업을 기록합니다.|사이트 시스템 서버|  
-|MP_CliReg.log|관리 지점에서 처리한 클라이언트 등록 작업을 기록합니다.|사이트 시스템 서버|  
-|MP_Ddr.log|클라이언트에서 XML.ddr 레코드를 변환하여 사이트 서버에 복사하는 작업을 기록합니다.|사이트 시스템 서버|  
-|MP_Framework.log|핵심 관리 지점 및 클라이언트 프레임워크 구성 요소의 작업을 기록합니다.|사이트 시스템 서버|  
-|MP_GetAuth.log|클라이언트의 권한 부여 작업을 기록합니다.|사이트 시스템 서버|  
-|MP_GetPolicy.log|클라이언트 컴퓨터의 정책 요청 작업을 기록합니다.|사이트 시스템 서버|  
-|MP_Hinv.log|클라이언트의 XML 하드웨어 인벤토리 레코드를 변환하여 해당 파일을 사이트 서버에 복사하는 작업과 관련된 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|MP_Location.log|클라이언트의 위치 요청 및 응답 작업을 기록합니다.|사이트 시스템 서버|  
-|MP_OOBMgr.log|클라이언트에서 OTP를 수신하는 것과 관련된 관리 지점 활동을 기록합니다.|사이트 시스템 서버|  
-|MP_Policy.log|정책 통신을 기록합니다.|사이트 시스템 서버|  
-|MP_Relay.log|클라이언트에서 수집한 파일의 전송을 기록합니다.|사이트 시스템 서버|  
-|MP_Retry.log|하드웨어 인벤토리 재시도 프로세스를 기록합니다.|사이트 시스템 서버|  
-|MP_Sinv.log|클라이언트의 XML 소프트웨어 인벤토리 레코드를 변환하여 해당 파일을 사이트 서버에 복사하는 작업과 관련된 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|MP_SinvCollFile.log|파일 컬렉션에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|MP_Status.log|클라이언트의 XML.svf 상태 메시지 파일을 변환하여 해당 파일을 사이트 서버에 복사하는 작업과 관련된 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|mpcontrol.log|관리 지점의 WINS 등록을 기록합니다. 10분마다 관리 지점의 가용성을 기록합니다.|사이트 서버|  
-|mpfdm.log|클라이언트 파일을 사이트 서버의 해당 INBOXES 폴더로 이동한 관리 지점 구성 요소의 작업을 기록합니다.|사이트 시스템 서버|  
-|mpMSI.log|관리 지점 설치에 대한 세부 정보를 기록합니다.|사이트 서버|  
-|MPSetup.log|관리 지점 설치 래퍼 프로세스를 기록합니다.|사이트 서버|  
+|CcmIsapi.log|エンドポイントでのクライアント メッセージの送受信に関する情報を記録します。|サイト システム サーバー|  
+|MP_CliReg.log|管理ポイントによって処理されるクライアントの登録を記録します。|サイト システム サーバー|  
+|MP_Ddr.log|クライアントの XML レコードの DDR への変換と、変換されたレコードのサイト サーバーへのコピーを記録します。|サイト システム サーバー|  
+|MP_Framework.log|コア管理ポイントとクライアント フレームワーク コンポーネントの動作を記録します。|サイト システム サーバー|  
+|MP_GetAuth.log|クライアントの認証を記録します。|サイト システム サーバー|  
+|MP_GetPolicy.log|クライアント コンピューターからのポリシーの要求を記録します。|サイト システム サーバー|  
+|MP_Hinv.log|クライアントの XML 形式のハードウェア インベントリ レコードの変換と、変換されたファイルのサイト サーバーへのコピーを記録します。|サイト システム サーバー|  
+|MP_Location.log|クライアントからの場所の要求と、それに対する応答を記録します。|サイト システム サーバー|  
+|MP_OOBMgr.log|クライアントからの OTP 受信に関連する、管理ポイントの動作を記録します。|サイト システム サーバー|  
+|MP_Policy.log|ポリシーの通信を記録します。|サイト システム サーバー|  
+|MP_Relay.log|クライアントから収集されたファイルの転送を記録します。|サイト システム サーバー|  
+|MP_Retry.log|ハードウェア インベントリの再試行プロセスを記録します。|サイト システム サーバー|  
+|MP_Sinv.log|クライアントの XML 形式のソフトウェア インベントリ レコードの変換と、変換されたファイルのサイト サーバーへのコピーを記録します。|サイト システム サーバー|  
+|MP_SinvCollFile.log|ファイルの収集の詳細を記録します。|サイト システム サーバー|  
+|MP_Status.log|クライアントからの XML 形式のステータス メッセージ ファイルの変換と、変換されたファイルのサイト サーバーへのコピーを記録します。|サイト システム サーバー|  
+|mpcontrol.log|管理ポイントの WINS への登録を記録します。 管理ポイントの可用性を 10 分おきに記録します。|サイト サーバー|  
+|mpfdm.log|管理ポイント コンポーネントによる、クライアント ファイルの、サイト サーバーの対応する受信トレイ フォルダーへの移動処理を記録します。|サイト システム サーバー|  
+|mpMSI.log|管理ポイントのインストールの詳細を記録します。|サイト サーバー|  
+|MPSetup.log|管理ポイントのインストール ラッパー プロセスを記録します。|サイト サーバー|  
 
-###  <a name="BKMK_SUPLog"></a> 소프트웨어 업데이트 지점 로그 파일  
- 다음 표에는 소프트웨어 업데이트 지점과 관련된 정보가 있는 로그 파일이 정리되어 있습니다.  
+###  <a name="BKMK_SUPLog"></a> ソフトウェアの更新ポイントのログ ファイル  
+ 次の表に、ソフトウェアの更新ポイントのインストールに関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|objreplmgr.log|부모 사이트에서 자식 사이트로 소프트웨어 업데이트 알림 파일을 복제하는 작업과 관련된 세부 정보를 기록합니다.|사이트 서버|  
-|PatchDownloader.log|소프트웨어 업데이트를 업데이트 원본에서 사이트 서버의 다운로드 대상으로 다운로드하는 프로세스에 대한 세부 정보를 기록합니다.|다운로드가 시작되는 Configuration Manager 콘솔을 호스트하는 컴퓨터|  
-|ruleengine.log|식별, 콘텐츠 다운로드, 소프트웨어 업데이트 그룹, 배포 만들기 등 자동 배포 규칙에 대한 세부 정보를 기록합니다.|사이트 서버|  
-|SUPSetup.log|소프트웨어 업데이트 지점 설치에 대한 세부 정보를 기록합니다. 소프트웨어 업데이트 지점 설치가 완료되면 이 로그 파일에 **Installation was successful** 이 기록됩니다.|사이트 시스템 서버|  
-|WCM.log|소프트웨어 업데이트 지점 구성과 구독된 업데이트 범주, 분류 및 언어를 위한 WSUS 서버 연결에 대한 세부 정보를 기록합니다.|WSUS 서버에 연결하는 사이트 서버|  
-|WSUSCtrl.log|사이트에 대한 WSUS 서버의 구성, 데이터베이스 연결 및 상태에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|wsyncmgr.log|소프트웨어 업데이트 동기화 프로세스에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|WUSSyncXML.log|Microsoft 업데이트 동기화 프로세스용 인벤토리 도구에 대한 세부 정보를 기록합니다.|Microsoft 업데이트용 인벤토리 도구에 대한 동기화 호스트로 구성된 클라이언트 컴퓨터|  
+|objreplmgr.log|ソフトウェアの更新の通知ファイルの親サイトから子サイトへのレプリケーションに関する詳細を記録します。|サイト サーバー|  
+|PatchDownloader.log|更新プログラムのソースから、ソフトウェア更新プログラムをサイト サーバーにダウンロードするプロセスの詳細を記録します。|ダウンロードを開始した Configuration Manager コンソールをホストしているコンピューター|  
+|ruleengine.log|自動展開規則に関する情報 (確認、コンテンツのダウンロード、およびソフトウェア更新プログラム グループと展開の作成) を記録します。|サイト サーバー|  
+|SUPSetup.log|ソフトウェアの更新ポイントのインストールに関する詳細を記録します。 ソフトウェアの更新ポイントのインストールが完了すると、このログ ファイルに「 **Installation was successful** 」と書き込まれます。|サイト システム サーバー|  
+|WCM.log|ソフトウェアの更新ポイントの構成に関する情報、およびサブスクライブ済みの更新カテゴリ、分類、言語のための WSUS サーバーへの接続に関する情報を記録します。|WSUS サーバーに接続するサイト サーバー|  
+|WSUSCtrl.log|サイトの WSUS サーバーの構成、データベース接続、正常性に関する詳細を記録します。|サイト システム サーバー|  
+|wsyncmgr.log|ソフトウェア更新プログラムの同期プロセスの詳細を記録します。|サイト システム サーバー|  
+|WUSSyncXML.log|Microsoft 更新プログラム用インベントリ ツールの同期プロセスに関する情報を記録します。|Microsoft 更新プログラム用インベントリ ツールの同期ホストとして構成されているクライアント コンピューター|  
 
-##  <a name="BKMK_FunctionLogs"></a> Configuration Manager 기능에 대한 로그 파일  
- 다음 섹션에는 Configuration Manager 기능과 관련된 로그 파일이 나와 있습니다.  
+##  <a name="BKMK_FunctionLogs"></a> Configuration Manager の機能別ログ ファイル  
+ 次のセクションでは、Configuration Manager の機能に関連するログ ファイルについて説明します。  
 
-###  <a name="BKMK_AppManageLog"></a> 응용 프로그램 관리  
- 다음 표에는 응용 프로그램 관리와 관련된 정보가 포함된 로그 파일이 나와 있습니다.  
+###  <a name="BKMK_AppManageLog"></a> アプリケーション管理  
+ 次の表に、アプリケーション管理に関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|AppIntentEval.log|응용 프로그램의 현재 및 의도 상태, 응용 프로그램의 적용 가능성, 요구 사항 충족 여부, 배포 유형 및 종속성에 대한 세부 정보를 기록합니다.|클라이언트|  
-|AppDiscovery.log|클라이언트 컴퓨터의 응용 프로그램 검색에 대한 세부 정보를 기록합니다.|클라이언트|  
-|AppEnforce.log|클라이언트의 응용 프로그램에서 수행한 적용 작업(설치 및 제거)에 대한 세부 정보를 기록합니다.|클라이언트|  
-|awebsctl.log|응용 프로그램 카탈로그 웹 서비스 지점 사이트 시스템 역할에 대한 모니터링 활동을 기록합니다.|사이트 시스템 서버|  
-|awebsvcMSI.log|응용 프로그램 카탈로그 웹 서비스 지점 사이트 시스템 역할에 대한 자세한 설치 정보를 기록합니다.|사이트 시스템 서버|  
-|CCMSDKProvider.log|응용 프로그램 관리 SDK의 활동을 기록합니다.|클라이언트|  
-|colleval.log|컬렉션 평가기에서 컬렉션을 만들고 변경하고 삭제한 경우 관련 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|ConfigMgrSoftwareCatalog.log|Silverlight 사용을 포함한 응용 프로그램 카탈로그의 활동을 기록합니다.|클라이언트|  
-|portlctl.log|응용 프로그램 카탈로그 웹 사이트 지점 사이트 시스템 역할에 대한 모니터링 활동을 기록합니다.|사이트 시스템 서버|  
-|portlwebMSI.log|응용 프로그램 카탈로그 웹 사이트 역할에 대한 MSI 설치 활동을 기록합니다.|사이트 시스템 서버|  
-|PrestageContent.log|사전 준비된 원격 배포 지점에서 ExtractContent.exe 도구를 사용하는 방법에 대한 세부 정보를 기록합니다. 이 도구는 파일로 내보낸 콘텐츠를 추출합니다.|사이트 시스템 서버|  
-|ServicePortalWebService.log|응용 프로그램 카탈로그 웹 서비스의 활동을 기록합니다.|사이트 시스템 서버|  
-|ServicePortalWebSite.log|응용 프로그램 카탈로그 웹 사이트의 활동을 기록합니다.|사이트 시스템 서버|  
-|SMSdpmon.log|배포 지점에 구성된 배포 지점 상태 모니터링 예약 작업에 대한 세부 정보를 기록합니다.|사이트 서버|  
-|SoftwareCatalogUpdateEndpoint.log|소프트웨어 센터에 표시된 응용 프로그램 카탈로그의 URL을 관리하는 활동을 기록합니다.|클라이언트|  
-|SoftwareCenterSystemTasks.log|소프트웨어 센터 필수 구성 요소 유효성 검사와 관련된 활동을 기록합니다.|클라이언트|  
+|AppIntentEval.log|アプリケーションの現在の状態と意図していた状態、適用性、要件を満たしているかどうか、展開の種類、依存関係を記録します。|クライアント|  
+|AppDiscovery.log|クライアント コンピューターでのアプリケーションの探索または検出に関する情報を記録します。|クライアント|  
+|AppEnforce.log|クライアントでアプリケーションに対して実行された強制実行処理 (インストールとアンインストール) に関する情報を記録します。|クライアント|  
+|awebsctl.log|アプリケーション カタログ Web サービス ポイントのサイト サーバーの役割の監視操作を記録します。|サイト システム サーバー|  
+|awebsvcMSI.log|アプリケーション カタログ Web サービス ポイントのサイト サーバーの役割のインストールに関する詳細を記録します。|サイト システム サーバー|  
+|CCMSDKProvider.log|アプリケーション管理 SDK による処理を記録します。|クライアント|  
+|colleval.log|コレクション エバリュエーターによるコレクションの生成、変更、削除の詳細を記録します。|サイト システム サーバー|  
+|ConfigMgrSoftwareCatalog.log|Silverlight の使用を含む、アプリケーション カタログの動作を記録します。|クライアント|  
+|portlctl.log|アプリケーション カタログ Web サイト ポイントのサイト サーバーの役割の監視操作を記録します。|サイト システム サーバー|  
+|portlwebMSI.log|アプリケーション カタログ Web サイトの役割の MSI によるインストール操作を記録します。|サイト システム サーバー|  
+|PrestageContent.log|事前設定されたリモート配布ポイントの ExtractContent.exe の使用に関する詳細を記録します。 このツールは、ファイルにエクスポートされているコンテンツを抽出します。|サイト システム サーバー|  
+|ServicePortalWebService.log|アプリケーション カタログ Web サービスの動作を記録します。|サイト システム サーバー|  
+|ServicePortalWebSite.log|アプリケーション カタログ Web サイトの動作を記録します。|サイト システム サーバー|  
+|SMSdpmon.log|配布ポイントで構成されている、スケジュールに従った配布ポイントの正常性の監視タスクの詳細を記録します。|サイト サーバー|  
+|SoftwareCatalogUpdateEndpoint.log|ソフトウェア センターに表示されるアプリケーション カタログの URL の管理操作を記録します。|クライアント|  
+|SoftwareCenterSystemTasks.log|ソフトウェア センターの前提条件コンポーネントの検証に関連する活動を記録します。|クライアント|  
 
- 다음 표에는 패키지 및 프로그램 배포와 관련된 정보를 포함하는 로그 파일이 나와 있습니다.  
+ 次の表に、パッケージとプログラムの展開に関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|colleval.log|컬렉션 평가기에서 컬렉션을 만들고 변경하고 삭제한 경우 관련 세부 정보를 기록합니다.|사이트 서버|  
-|execmgr.log|실행하는 패키지 및 작업 순서에 대한 세부 정보를 기록합니다.|클라이언트|  
+|colleval.log|コレクション エバリュエーターによるコレクションの生成、変更、削除の詳細を記録します。|サイト サーバー|  
+|execmgr.log|実行されたパッケージとタスク シーケンスの詳細を記録します。|クライアント|  
 
-###  <a name="BKMK_AILog"></a> Asset intelligence  
- 다음 표에는 Asset Intelligence와 관련된 정보가 포함된 로그 파일이 나열되어 있습니다.  
+###  <a name="BKMK_AILog"></a> 資産インテリジェンス  
+ 次の表に、資産インテリジェンスに関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|AssetAdvisor.log|Asset Intelligence 인벤토리 작업의 활동을 기록합니다.|클라이언트|  
-|aikbmgr.log|Asset Intelligence 카탈로그 업데이트를 위해 수신함에서 XML 파일을 처리하는 데 대한 세부 정보를 기록합니다.|사이트 서버|  
-|AIUpdateSvc.log|온라인 웹 서비스인 SCO(System Center Online)와 Asset Intelligence 동기화 지점의 상호 작용을 기록합니다.|사이트 시스템 서버|  
-|AIUSMSI.log|Asset Intelligence 동기화 지점 사이트 시스템 역할의 설치에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|AIUSSetup.log|Asset Intelligence 동기화 지점 사이트 시스템 역할의 설치에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|ManagedProvider.log|연결된 소프트웨어 ID 태그로 소프트웨어를 검색하는 데 대한 세부 정보를 기록합니다. 또한 하드웨어 인벤토리와 관련된 활동을 기록합니다.|사이트 시스템 서버|  
-|MVLSImport.log|가져온 라이선스 파일의 처리에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
+|AssetAdvisor.log|資産インテリジェンスのインベントリ操作を記録します。|クライアント|  
+|aikbmgr.log|資産インテリジェンス カタログを更新するための、受信トレイの XML ファイルの処理に関する詳細を記録します。|サイト サーバー|  
+|AIUpdateSvc.log|資産インテリジェンス同期ポイントと、System Center Online (SCO) オンライン Web サービスのやり取りを記録します。|サイト システム サーバー|  
+|AIUSMSI.log|資産インテリジェンス同期ポイントのサイト システムの役割のインストールに関する詳細を記録します。|サイト システム サーバー|  
+|AIUSSetup.log|資産インテリジェンス同期ポイントのサイト システムの役割のインストールに関する詳細を記録します。|サイト システム サーバー|  
+|ManagedProvider.log|ソフトウェアの探索に関する情報を、関連付けられたソフトウェア識別タグと共に記録します。 ハードウェア インベントリに関連する処理も記録します。|サイト システム サーバー|  
+|MVLSImport.log|インポートされたライセンス ファイルの処理の詳細を記録します。|サイト システム サーバー|  
 
-###  <a name="BKMK_BnRLog"></a> 백업 및 복구  
- 다음 표에는 사이트 다시 설정 및 SMS 공급자의 변경을 포함한 백업 및 복구 작업과 관련된 정보가 포함된 로그 파일이 나와 있습니다.  
+###  <a name="BKMK_BnRLog"></a> バックアップと回復  
+ 次の表に、バックアップと回復操作 (サイトのリセットと SMS プロバイダーの変更を含む) に関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|ConfigMgrSetup.log|Configuration Manager가 백업에서 사이트를 복구하는 경우 설치 및 복구 작업에 대한 정보를 기록합니다.|사이트 서버|  
-|Smsbkup.log|사이트 백업 활동에 대한 세부 정보를 기록합니다.|사이트 서버|  
-|smssqlbkup.log|사이트 서버가 아닌 서버에 SQL Server를 설치할 때 사이트 데이터베이스 백업 프로세스의 결과를 기록합니다.|사이트 데이터베이스 서버|  
-|Smswriter.log|백업 프로세스에서 사용하는 Configuration Manager VSS 작성기의 상태에 대한 정보를 기록합니다.|사이트 서버|  
+|ConfigMgrSetup.log|Configuration Manager のサイトをバックアップから回復するときのセットアップと回復操作に関する情報を記録します。|サイト サーバー|  
+|smsbkup.log|サイトのバックアップ操作の詳細を記録します。|サイト サーバー|  
+|smssqlbkup.log|SQL Server がサイト サーバーとは別のサーバーにインストールされている場合に、サイト データベースのバックアップ プロセスの出力を記録します。|サイト データベース サーバー|  
+|Smswriter.log|バックアップ プロセスで使用される Configuration Manager VSS ライターの状態に関する情報を記録します。|サイト サーバー|  
 
-###  <a name="BKMK_CertificateEnrollment"></a> 인증서 등록  
- 다음 표에는 인증서 등록과 관련된 정보가 포함된 Configuration Manager 로그 파일이 나와 있습니다. 인증서 등록은 네트워크 장치 등록 서비스를 실행하는 서버의 인증서 등록 지점 및 Configuration Manager 정책 모듈을 사용합니다.  
+###  <a name="BKMK_CertificateEnrollment"></a> 証明書の登録  
+ 次の表は、証明書の登録に関係のある情報を含む Configuration Manager ログ ファイルの一覧です。 証明書の登録では、ネットワーク デバイス登録サービスを実行するサーバー上の証明書登録ポイントと Configuration Manager ポリシー モジュールを使用します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|Crp.log|등록 작업을 기록합니다.|인증서 등록 지점|  
-|Crpctrl.log|인증서 등록 지점의 작업 상태를 기록합니다.|인증서 등록 지점|  
-|Crpsetup.log|인증서 등록 지점의 설치 및 구성에 대한 세부 정보를 기록합니다.|인증서 등록 지점|  
-|Crpmsi.log|인증서 등록 지점의 설치 및 구성에 대한 세부 정보를 기록합니다.|인증서 등록 지점|  
-|NDESPlugin.log|문제 확인 및 인증서 등록 작업을 기록합니다.|Configuration Manager 정책 모듈 및 네트워크 장치 등록 서비스|  
+|Crp.log|登録活動を記録します。|証明書登録ポイント|  
+|Crpctrl.log|証明書登録ポイントの動作の正常性を記録します。|証明書登録ポイント|  
+|Crpsetup.log|証明書登録ポイントのインストールと構成に関する詳細を記録します。|証明書登録ポイント|  
+|Crpmsi.log|証明書登録ポイントのインストールと構成に関する詳細を記録します。|証明書登録ポイント|  
+|NDESPlugin.log|チャレンジの検証と証明書登録の活動を記録します。|Configuration Manager ポリシー モジュールとネットワーク デバイス登録サービス|  
 
- Configuration Manager 로그 파일뿐 아니라 네트워크 장치 등록 서비스를 실행하는 서버와 인증서 등록 지점을 호스트하는 서버의 이벤트 뷰어에서 Windows 응용 프로그램 로그를 검토합니다. 예를 들어 **NetworkDeviceEnrollmentService** 원본에서 메시지를 찾아 봅니다. 다음 로그 파일도 사용할 수 있습니다.  
+ Configuration Manager のログ ファイルに加えて、ネットワーク デバイス登録サービスを実行するサーバーと、証明書登録ポイントをホストするサーバーで、イベント ビューアーの Windows アプリケーションのログを確認します。 たとえば、 **NetworkDeviceEnrollmentService** ソースからのメッセージを探します。 次のログ ファイルも使用できます。  
 
--   네트워크 장치 등록 서비스에 대한 IIS 로그 파일: **&lt;경로\>\inetpub\logs\LogFiles\W3SVC1**  
+-   ネットワーク デバイス登録サービスの IIS ログ ファイル: **&lt;path\>\inetpub\logs\LogFiles\W3SVC1**  
 
--   인증서 등록 지점에 대한 IIS 로그 파일: **&lt;경로\>\inetpub\logs\LogFiles\W3SVC1**  
+-   証明書登録ポイントの IIS ログ ファイル: **&lt;path\>\inetpub\logs\LogFiles\W3SVC1**  
 
--   네트워크 장치 등록 정책 로그 파일: **mscep.log**  
+-   ネットワーク デバイス登録ポリシーのログ ファイル: **mscep.log**  
 
     > [!NOTE]  
-    >  이 파일은 네트워크 장치 등록 서비스 계정 프로필의 폴더(예: C:\Users\SCEPSvc)에 있습니다. 네트워크 장치 등록 서비스에 대한 로깅을 사용하도록 설정하는 방법에 대한 자세한 내용은 TechNet wiki의 AD CS(Active Directory 인증서 서비스) 문서에서 NDES(네트워크 장치 등록 서비스)의 [로깅 사용](http://go.microsoft.com/fwlink/?LinkId=320576) 섹션을 참조하세요.  
+    >  このファイルは、ネットワーク デバイス登録サービスのアカウント プロファイル用のフォルダーにあります (例: C:\Users\SCEPSvc)。 ネットワーク デバイス登録サービスのログを有効にする方法の詳細については、TechNet wiki の「Network Device Enrollment Service (NDES) in Active Directory Certificate Services (AD CS) (Active Directory 証明書サービス (AD CS) でのネットワーク デバイス登録サービス (NDES))」記事の「 [Enable Logging (ログを有効にする)](http://go.microsoft.com/fwlink/?LinkId=320576) 」セクションを参照してください。  
 
-###  <a name="BKMK_BGB"></a> 클라이언트 알림  
- 다음 표에는 클라이언트 알림과 관련된 정보가 포함된 로그 파일이 나열되어 있습니다.  
+###  <a name="BKMK_BGB"></a> クライアント通知  
+ 次の表に、クライアント通知に関連する情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|bgbmgr.log|클라이언트 알림 작업과 온라인 처리 및 작업 상태 파일과 관련된 사이트 서버 활동에 대한 세부 정보를 기록합니다.|사이트 서버|  
-|BGBServer.log|클라이언트 및 서버 간 통신과 클라이언트로 작업 푸시와 같은 알림 서버의 활동을 기록합니다. 또한 사이트 서버로 전송할 온라인 및 작업 상태 파일 생성에 대한 정보도 기록합니다.|관리 지점|  
-|BgbSetup.log|설치 및 제거 중 알림 서버 설치 래퍼 프로세스의 활동을 기록합니다.|관리 지점|  
-|bgbisapiMSI.log|알림 서버 설치 및 제거에 대한 세부 정보를 기록합니다.|관리 지점|  
-|BgbHttpProxy.log|HTTP를 사용하는 클라이언트가 알림 서버와 주고 받는 메시지를 릴레이할 때의 알림 HTTP 프록시의 활동을 기록합니다.|클라이언트|  
-|CCMNotificationAgent.log|클라이언트와 서버의 통신과 같은 알림 에이전트의 활동과 수신한 작업 및 다른 클라이언트 에이전트로 발송한 작업에 대한 정보를 기록합니다.|클라이언트|  
+|bgbmgr.log|クライアント通知タスクに関連するサイト サーバーの処理に関する情報と、オンライン ステータス ファイルとタスク ステータス ファイルを処理するサイト サーバーの処理に関する情報を記録します。|サイト サーバー|  
+|BGBServer.log|クライアントとサーバー間の通信やクライアントへのタスクのプッシュなどの、通知サーバーの処理を記録します。 また、サイト サーバーに送信されるオンライン ステータス ファイルとタスク ステータス ファイルの生成情報も記録します。|管理ポイント|  
+|BgbSetup.log|インストール時とアンインストール時の通知サーバーのインストール ラッパー プロセスの処理を記録します。|管理ポイント|  
+|bgbisapiMSI.log|通知サーバーのインストールとアンインストールに関する情報を記録します。|管理ポイント|  
+|BgbHttpProxy.log|HTTP を使用して通知サーバーとの間でクライアントのメッセージをリレーしたときに、通知 HTTP プロキシの処理を記録します。|クライアント|  
+|CCMNotificationAgent.log|クライアントとサーバー間の通信などの通知エージェントの処理、および受信して他のクライアント エージェントにディスパッチされたタスクに関する情報を記録します。|クライアント|  
 
-### <a name="cloud-management-gateway"></a>클라우드 관리 게이트웨이
+### <a name="cloud-management-gateway"></a>クラウド管理ゲートウェイ
 
-다음 표에는 클라우드 관리 게이트웨이와 관련된 정보가 포함된 로그 파일이 나와 있습니다.
+次の表に、クラウド管理ゲートウェイに関係のある情報を含むログ ファイルを示します。
 
 ||||
 |-|-|-|
-|로그 이름|설명|로그 파일이 있는 컴퓨터|
-|CloudMgr.log|클라우드 관리 게이트웨이 서비스 배포, 지속적인 서비스 상태 및 서비스와 연결된 사용 데이터에 대한 세부 정보를 기록합니다.<br>레지스트리 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level**을 편집하여 로깅 수준을 구성할 수 있습니다.|기본 사이트 서버 또는 CA의 *installdir* 폴더|
-|CMGSetup.log 또는 CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|클라우드 관리 게이트웨이 배포(Azure의 로컬 배포)의 2단계에 대한 세부 정보를 기록합니다.<br>**Azure 포털\Cloud Services 구성** 탭에서 설정 **추적 수준**(**정보**(기본값), **자세한 정보**, **오류**)을 사용하여 로깅 수준을 구성할 수 있습니다.|Azure 서버의 **%approot%\logs** 또는 사이트 시스템 서버의 SMS/Logs 폴더|
-|CMGHttpHandler.log 또는 CMG-*RoleInstanceID*- CMGHttpHandler.log<sup>1</sup>|Azure에서 인터넷 정보 서비스와 바인딩하는 클라우드 관리 게이트웨이 HTTP 처리기에 대한 세부 정보를 기록합니다.<br>**Azure 포털\클라우드 서비스 구성** 탭에서 설정 **추적 수준**(**정보**(기본값), **자세한 정보**, **오류**)을 사용하여 로깅 수준을 구성할 수 있습니다.|Azure 서버의 **%approot%\logs** 또는 사이트 시스템 서버의 SMS/Logs 폴더|
-|CMGService.log 또는 CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|Azure의 클라우드 관리 게이트웨이 핵심 구성 요소에 대한 세부 정보를 기록합니다.<br>**Azure 포털\클라우드 서비스 구성** 탭에서 설정 **추적 수준**(**정보**(기본값), **자세한 정보**, **오류**)을 사용하여 로깅 수준을 구성할 수 있습니다.|Azure 서버의 **%approot%\logs** 또는 사이트 시스템 서버의 SMS/Logs 폴더|
-|SMS_Cloud_ProxyConnector.log|클라우드 관리 게이트웨이 서비스와 클라우드 관리 게이트웨이 연결 지점 간에 연결을 설정하는 방법에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|
+|ログの名前|説明|ログ ファイルのあるコンピューター|
+|CloudMgr.log|クラウド管理ゲートウェイ サービスの展開、進行中のサービスの状態、およびサービスに関連する使用状況データについての情報を記録します。<br>レジストリ **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level** を編集することで、ログ レベルを構成することができます|プライマリ サイト サーバーまたは CAS の *installdir* フォルダー。|
+|CMGSetup.log または CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|クラウド管理ゲートウェイ展開 (Azure のローカル展開) の 2 番目のフェーズに関する詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** (**[情報]** (既定)、**[詳細]**、**[エラー]**) の設定を使用してログ レベルを構成できます。|Azure サーバーの **[%approot%\logs]**、またはサイト システム サーバーの [SMS/ログ] フォルダー|
+|CMGHttpHandler.log または CMG-*RoleInstanceID*- CMGHttpHandler.log<sup>1</sup>|Azure でのインターネット インフォメーション サービスに含まれるクラウド管理ゲートウェイの http ハンドラーに関する詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** (**[情報]** (既定)、**[詳細]**、**[エラー]**) の設定を使用してログ レベルを構成できます。|Azure サーバーの **[%approot%\logs]**、またはサイト システム サーバーの [SMS/ログ] フォルダー|
+|CMGService.log または CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|Azure のクラウド管理ゲートウェイ サービスのコア コンポーネントの詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** (**[情報]** (既定)、**[詳細]**、**[エラー]**) の設定を使用してログ レベルを構成できます。|Azure サーバーの **[%approot%\logs]**、またはサイト システム サーバーの [SMS/ログ] フォルダー|
+|SMS_Cloud_ProxyConnector.log|クラウド管理ゲートウェイ サービスとクラウド管理ゲートウェイ接続ポイントの間の接続の設定に関する詳細を記録します。|サイト システム サーバー|
 
-<sup>1</sup> 클라우드 서비스 관리자가 5분마다 Azure 저장소에서 동기화하는 로컬 Configuration Manager 로그 파일입니다. 클라우드 관리 게이트웨이는 5분마다 로그를 Azure 저장소로 푸시합니다. 따라서 최대 지연은 10분입니다. 자세한 정보 스위치는 로컬 및 원격 로그에 둘 다 영향을 미칩니다.
+<sup>1</sup> これはクラウド サービス管理マネージャーと Azure Storage との間で 5 分おきに同期されるローカル構成マネージャーのログ ファイルです。 クラウド管理ゲートウェイは、Azure Storage に 5 分おきにログをプッシュします。 したがって遅延の最大値は 10 分になります。 [詳細] に切り替えると、ローカルとリモートの両方のログに影響します。
 
-- 배포 문제 해결에는 **CloudMgr.log** 및 **CMGSetup.log**를 사용합니다.
-- 서비스 상태 문제 해결에는 **CMGService.log** 및 **SMS_Cloud_ProxyConnector.log**를 사용합니다.
-- 클라이언트 트래픽 문제 해결에는 **CMGHttpHandler.log**, **CMGService.log** 및 **SMS_Cloud_ProxyConnector.log**를 사용합니다.
+- 展開のトラブルシューティングの場合は、**CloudMgr.log** および **CMGSetup.log** を使用します。
+- サービス正常性のトラブルシューティングの場合は、**CMGService.log** および **SMS_Cloud_ProxyConnector.log** を使用します。
+- クライアントのトラフィックのトラブルシューティングの場合は、**CMGHttpHandler.log**、**CMGService.log**、および **SMS_Cloud_ProxyConnector.log** を使用します。
 
-###  <a name="BKMK_CompSettingsLog"></a> 준수 설정 및 회사 리소스 액세스  
- 다음 표에는 호환성 설정 및 회사 리소스 액세스와 관련된 정보가 포함된 로그 파일이 정리되어 있습니다.  
+###  <a name="BKMK_CompSettingsLog"></a> コンプライアンス設定と会社のリソースへのアクセス  
+ 次の表に、コンプライアンス設定と会社のリソースへのアクセスに関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|CIAgent.log|호환성 설정, 소프트웨어 업데이트, 응용 프로그램 관리에 대한 재구성 및 호환성 프로세스에 대한 세부 정보를 기록합니다.|클라이언트|  
-|CITaskManager.log|구성 항목 작업 일정에 대한 정보를 기록합니다.|클라이언트|  
-|DCMAgent.log|구성 항목과 응용 프로그램의 평가, 충돌 보고 및 재구성에 대한 높은 수준의 정보를 기록합니다.|클라이언트|  
-|DCMReporting.log|구성 항목에 대한 상태 메시지에 정책 플랫폼 결과를 보고하는 작업에 대한 정보를 기록합니다.|클라이언트|  
-|DcmWmiProvider.log|WMI에서 구성 항목 synclet를 읽는 작업에 대한 정보를 기록합니다.|클라이언트|  
+|CIAgent.log|コンプライアンス設定、ソフトウェア更新プログラム、およびアプリケーション管理による修復とコンプライアンス対応プロセスの詳細を記録します。|クライアント|  
+|CITaskManager.log|構成項目のタスクのスケジュール設定に関する情報を記録します。|クライアント|  
+|DCMAgent.log|構成項目とアプリケーションの評価、競合の報告、修復の全般的な情報を記録します。|クライアント|  
+|DCMReporting.log|ポリシー プラットフォームによるポリシー施行結果を構成項目の状態メッセージとしてレポートする処理に関する情報を記録します。|クライアント|  
+|DcmWmiProvider.log|WMI からの構成項目の同期プログラムの読み取りに関する情報を記録します。|クライアント|  
 
-###  <a name="BKMK_ConsoleLog"></a> Configuration Manager 콘솔  
- 다음 표에는 Configuration Manager 콘솔과 관련된 정보가 포함된 로그 파일이 나열되어 있습니다.  
+###  <a name="BKMK_ConsoleLog"></a> Configuration Manager コンソール  
+ 次の表に、Configuration Manager コンソールに関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|ConfigMgrAdminUISetup.log|Configuration Manager 콘솔 설치를 기록합니다.|Configuration Manager 콘솔을 실행하는 컴퓨터|  
-|SmsAdminUI.log|Configuration Manager 콘솔의 작업에 대한 정보를 기록합니다.|Configuration Manager 콘솔을 실행하는 컴퓨터|  
-|Smsprov.log|SMS 공급자가 수행한 작업을 기록합니다. Configuration Manager 콘솔 작업은 SMS 공급자를 사용합니다.|사이트 서버 또는 사이트 시스템 서버|  
+|ConfigMgrAdminUISetup.log|Configuration Manager コンソールのインストールを記録します。|Configuration Manager コンソールを実行しているコンピューター|  
+|SmsAdminUI.log|Configuration Manager コンソールの操作に関する情報を記録します。|Configuration Manager コンソールを実行しているコンピューター|  
+|SMSProv.log|SMS プロバイダーによる処理を記録します。 Configuration Manager コンソールの操作では、SMS プロバイダーが使用されます。|サイト サーバーまたはサイト システム サーバー|  
 
-###  <a name="BKMK_ContentLog"></a> 콘텐츠 관리  
- 다음 표에는 콘텐츠 관리와 관련된 정보가 포함된 로그 파일이 나열되어 있습니다.  
+###  <a name="BKMK_ContentLog"></a> コンテンツ管理  
+ 次の表に、コンテンツの管理に関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|CloudDP-&lt;guid\>.log|저장소 및 콘텐츠 액세스에 대한 정보를 포함하여 특정 클라우드 기반 배포 지점에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|CloudMgr.log|콘텐츠 프로비전, 저장소 및 대역폭 통계 수집, 클라우드 기반 배포 지점을 실행하는 클라우드 서비스를 중지하거나 시작하기 위해 관리자가 시작한 작업에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|DataTransferService.log|정책 또는 패키지 액세스에 대한 모든 BITS 통신을 기록합니다. 이 로그는 풀(pull) 배포 지점의 콘텐츠 관리에도 사용됩니다.|풀(pull) 배포 지점으로 구성된 컴퓨터|  
-|PullDP.log|풀(pull) 배포 지점이 원본 배포 지점에서 전송하는 콘텐츠에 대한 세부 정보를 기록합니다.|풀(pull) 배포 지점으로 구성된 컴퓨터|  
-|PrestageContent.log|사전 준비된 원격 배포 지점에서 ExtractContent.exe 도구를 사용하는 방법에 대한 세부 정보를 기록합니다. 이 도구는 파일로 내보낸 콘텐츠를 추출합니다.|사이트 시스템 역할|  
-|SMSdpmon.log|배포 지점에 구성된 배포 지점 상태 모니터링 예약 작업에 대한 세부 정보를 기록합니다.|사이트 시스템 역할|  
-|smsdpprov.log|기본 사이트에서 받은 압축 파일의 압축 풀기에 대한 세부 정보를 기록합니다. 이 로그는 원격 배포 지점의 WMI 공급자가 생성합니다.|사이트 서버와 함께 있지 않은 배포 지점 컴퓨터|  
+|CloudDP-&lt;guid\>.log|特定のクラウド ベースの配布ポイントの詳細 (記憶域とコンテンツのアクセスに関する情報など) を記録します。|サイト システム サーバー|  
+|CloudMgr.log|コンテンツのプロビジョニング、記憶域と帯域幅の統計の収集、クラウド ベースの配布ポイントを実行するクラウド サービスを停止または開始した管理者による操作に関する情報を記録します。|サイト システム サーバー|  
+|DataTransferService.log|ポリシーまたはパッケージにアクセスするために行われた、BITS による通信をすべて記録します。 このログは、プル配布ポイントでのコンテンツ管理にも使用されます。|プル配布ポイントとして構成されているコンピューター|  
+|PullDP.log|プル配布ポイントがソース配布ポイントから転送した、コンテンツに関する情報を記録します。|プル配布ポイントとして構成されているコンピューター|  
+|PrestageContent.log|事前設定されたリモート配布ポイントの ExtractContent.exe の使用に関する詳細を記録します。 このツールは、ファイルにエクスポートされているコンテンツを抽出します。|サイト システムの役割|  
+|SMSdpmon.log|配布ポイントで構成されている、スケジュールに従った配布ポイントの正常性の監視タスクの詳細を記録します。|サイト システムの役割|  
+|smsdpprov.log|プライマリ サイトから受け取った圧縮ファイルの抽出に関する詳細を記録します。 このログは、リモート配布ポイントの WMI プロバイダーによって生成されます。|サイト サーバーに併置されていない配布ポイント コンピューター|  
 
 
-###  <a name="BKMK_DiscoveryLog"></a> 검색  
-다음 표에는 검색과 관련된 정보가 포함된 로그 파일이 나열되어 있습니다.  
+###  <a name="BKMK_DiscoveryLog"></a> 探索  
+次の表に、探索に関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|adsgdis.log|Active Directory 보안 그룹 검색 작업을 기록합니다.|사이트 서버|  
-|adsysdis.log|Active Directory 시스템 검색 작업을 기록합니다.|사이트 서버|  
-|adusrdis.log|Active Directory 사용자 검색 작업을 기록합니다.|사이트 서버|  
-|ADForestDisc.log|Active Directory 포리스트 검색 작업을 기록합니다.|사이트 서버|  
-|ddm.log|검색 데이터 관리자의 작업을 기록합니다.|사이트 서버|  
-|InventoryAgent.log|클라이언트의 하드웨어 인벤토리, 소프트웨어 인벤토리 및 하트비트 검색 작업에 대한 활동을 기록합니다.|클라이언트|  
-|netdisc.log|네트워크 검색 작업을 기록합니다.|사이트 서버|  
+|adsgdis.log|Active Directory セキュリティ グループの探索操作を記録します。|サイト サーバー|  
+|adsysdis.log|Active Directory システムの探索操作を記録します。|サイト サーバー|  
+|adusrdis.log|Active Directory ユーザーの探索操作を記録します。|サイト サーバー|  
+|ADForestDisc.log|Active Directory フォレストの探索操作を記録します。|サイト サーバー|  
+|ddm.log|探索データ マネージャーによる処理を記録します。|サイト サーバー|  
+|InventoryAgent.log|クライアントで行われるハードウェア インベントリ、ソフトウェア インベントリ、定期探索を記録します。|クライアント|  
+|netdisc.log|ネットワーク探索操作を記録します。|サイト サーバー|  
 
 ###  <a name="BKMK_EPLog"></a> Endpoint Protection  
- 다음 표에는 Endpoint Protection과 관련된 정보가 포함된 로그 파일이 나열되어 있습니다.  
+ 次の表に、Endpoint Protection に関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|EndpointProtectionAgent.log|Endpoint Protection 클라이언트의 설치 및 해당 클라이언트에 대한 맬웨어 방지 정책 적용에 대한 세부 정보를 기록합니다.|클라이언트|  
-|EPCtrlMgr.log|Endpoint Protection 역할 서버에서 Configuration Manager 데이터베이스로의 맬웨어 위협 정보 동기화에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|EPMgr.log|Endpoint Protection 사이트 시스템 역할의 상태를 모니터링합니다.|사이트 시스템 서버|  
-|EPSetup.log|Endpoint Protection 사이트 시스템 역할의 설치에 대한 정보를 제공합니다.|사이트 시스템 서버|  
+|EndpointProtectionAgent.log|Endpoint Protection クライアントのインストール、およびそのクライアントへのマルウェア対策ポリシーの適用に関する詳細を記録します。|クライアント|  
+|EPCtrlMgr.log|Endpoint Protection ポイントのサイト システムの役割のサーバーにあるマルウェア情報と Configuration Manager データベースの同期に関する詳細を記録します。|サイト システム サーバー|  
+|EPMgr.log|Endpoint Protection ポイントのサイト システムの役割のステータスを記録します。|サイト システム サーバー|  
+|EPSetup.log|Endpoint Protection ポイントのサイト システムの役割のインストールに関する情報を含みます。|サイト システム サーバー|  
 
-###  <a name="BKMK_Extensions"></a> 확장  
- 다음 표에는 확장과 관련된 정보가 포함된 로그 파일이 나와 있습니다.  
+###  <a name="BKMK_Extensions"></a> 拡張機能  
+ 次の表に、拡張機能に関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|AdminUI.ExtensionInstaller.log|Microsoft 확장 다운로드와 모든 확장의 설치 및 제거에 대한 정보를 기록합니다.|Configuration Manager 콘솔을 실행하는 컴퓨터|  
-|FeatureExtensionInstaller.log|개별 확장이 Configuration Manager 콘솔에서 사용하도록 설정되거나 사용하지 않도록 설정된 경우 해당 확장의 설치 및 제거에 대한 정보를 기록합니다.|Configuration Manager 콘솔을 실행하는 컴퓨터|  
-|SmsAdminUI.log|Configuration Manager 콘솔 작업을 기록합니다.|Configuration Manager 콘솔을 실행하는 컴퓨터|  
+|AdminUI.ExtensionInstaller.log|Microsoft からの拡張機能のダウンロードとすべての拡張機能のインストールとアンインストールに関する情報を記録します。|Configuration Manager コンソールを実行しているコンピューター|  
+|FeatureExtensionInstaller.log|Configuration Manager コンソールで有効または無効にしたときの個々の拡張機能のインストールと削除に関する情報を記録します。|Configuration Manager コンソールを実行しているコンピューター|  
+|SmsAdminUI.log|Configuration Manager コンソール アクティビティを記録します。|Configuration Manager コンソールを実行しているコンピューター|  
 
-###  <a name="BKMK_InventoryLog"></a> 인벤토리  
- 다음 표에는 인벤토리 데이터 처리와 관련된 정보가 포함된 로그 파일이 나열되어 있습니다.  
+###  <a name="BKMK_InventoryLog"></a> インベントリ  
+ 次の表に、インベントリ データの処理に関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|dataldr.log|Configuration Manager 데이터베이스에서 MIF 파일 및 하드웨어 인벤토리 처리 작업에 대한 정보를 기록합니다.|사이트 서버|  
-|invproc.log|보조 사이트에서 해당 부모 사이트로 전달된 MIF 파일을 기록합니다.|보조 사이트 서버|  
-|sinvproc.log|사이트 데이터베이스에 대한 소프트웨어 인벤토리 데이터의 처리에 대한 정보를 기록합니다.|사이트 서버|  
+|dataldr.log|Configuration Manager データベースの MIF ファイルとハードウェア インベントリの処理に関する情報を記録します。|サイト サーバー|  
+|invproc.log|セカンダリ サイトから親サイトへの MIF ファイルの転送を記録します。|セカンダリ サイト サーバー|  
+|sinvproc.log|サイト データベースに格納されるソフトウェアのインベントリ データの処理に関する情報を記録します。|サイト サーバー|  
 
-###  <a name="BKMK_MeteringLog"></a> 계량  
- 다음 표에는 계량과 관련된 정보가 포함된 로그 파일이 나열되어 있습니다.  
+###  <a name="BKMK_MeteringLog"></a> 測定  
+ 次の表に、使用状況測定に関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|mtrmgr.log|모든 소프트웨어 계량 프로세스를 모니터링합니다.|사이트 서버|  
+|mtrmgr.log|ソフトウェア使用状況測定プロセスを記録します。|サイト サーバー|  
 
-###  <a name="BKMK_MigrationLog"></a> 마이그레이션  
- 다음 표에는 마이그레이션과 관련된 정보가 포함된 로그 파일이 나열되어 있습니다.  
+###  <a name="BKMK_MigrationLog"></a> 移行  
+ 次の表に、移行に関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|migmctrl.log|마이그레이션 작업, 공유 배포 지점 및 배포 지점 업그레이드와 관련된 마이그레이션 작업에 대한 정보를 기록합니다.|Configuration Manager 계층 구조의 최상위 사이트 및 각 하위 기본 사이트.<br /><br /> 기본 사이트가 여러 개인 계층인 경우 중앙 관리 사이트에 만들어진 로그 파일을 사용하세요.|  
+|migmctrl.log|移行処理に関する情報 (移行ジョブ、共有配布ポイント、配布ポイントのアップグレード) を記録します。|Configuration Manager 階層の最上位サイトと、それぞれの子プライマリ サイト<br /><br /> 階層にプライマリ サイトが複数ある場合は、中央管理サイトで作成されたログ ファイルを使用してください。|  
 
-###  <a name="BKMK_MDMLog"></a> 모바일 장치  
- 다음 섹션에는 모바일 장치 관리와 관련된 정보가 포함된 로그 파일이 나열되어 있습니다.  
+###  <a name="BKMK_MDMLog"></a> モバイル デバイス  
+ このセクションでは、モバイル デバイスの管理に関係のあるログ ファイルについて説明します。  
 
-####  <a name="BKMK_EnrollmentLog"></a> 등록  
- 다음 표에는 모바일 장치 등록과 관련된 정보가 포함된 로그가 나열되어 있습니다.  
+####  <a name="BKMK_EnrollmentLog"></a> 登録  
+ 次の表に、モバイル デバイスの登録に関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|DMPRP.log|모바일 장치에 대해 사용하도록 설정된 관리 지점과 관리 지점 끝점 간의 통신을 기록합니다.|사이트 시스템 서버|  
-|dmpmsi.log|모바일 장치에 대해 사용하도록 설정된 관리 지점의 구성에 대한 Windows Installer 데이터를 기록합니다.|사이트 시스템 서버|  
-|DMPSetup.log|모바일 장치에 대해 관리 지점을 사용하도록 설정한 경우 해당 관리 지점의 구성을 기록합니다.|사이트 시스템 서버|  
-|enrollsrvMSI.log|등록 지점의 구성에 대한 Windows Installer 데이터를 기록합니다.|사이트 시스템 서버|  
-|enrollmentweb.log|모바일 장치와 등록 프록시 지점 간의 통신을 기록합니다.|사이트 시스템 서버|  
-|enrollwebMSI.log|등록 프록시 지점의 구성에 대한 Windows Installer 데이터를 기록합니다.|사이트 시스템 서버|  
-|enrollmentservice.log|등록 프록시 지점과 등록 지점 간의 통신을 기록합니다.|사이트 시스템 서버|  
-|SMS_DM.log|모바일 장치, Mac 컴퓨터, 그리고 모바일 장치와 Mac 컴퓨터에 대해 사용하도록 설정된 관리 지점 간의 통신을 기록합니다.|사이트 시스템 서버|  
+|DMPRP.log|モバイル デバイス管理が有効になっている管理ポイントとそのエンドポイント間の通信を記録します。|サイト システム サーバー|  
+|dmpmsi.log|Windows インストーラーで管理ポイントのモバイル デバイス管理を有効にするときの構成データを記録します。|サイト システム サーバー|  
+|DMPSetup.log|管理ポイントのモバイル デバイス管理を有効にするときの構成を記録します。|サイト システム サーバー|  
+|enrollsrvMSI.log|Windows インストーラーで登録ポイントを構成するときのデータを記録します。|サイト システム サーバー|  
+|enrollmentweb.log|モバイル デバイスと登録プロキシ ポイント間の通信を記録します。|サイト システム サーバー|  
+|enrollwebMSI.log|Windows インストーラーで登録プロキシ ポイントを構成するときのデータを記録します。|サイト システム サーバー|  
+|enrollmentservice.log|登録プロキシ ポイントと登録ポイント間の通信を記録します。|サイト システム サーバー|  
+|SMS_DM.log|モバイル デバイス、Mac コンピューター、およびモバイル デバイスと Mac コンピューターに有効になっている管理ポイント間の通信を記録します。|サイト システム サーバー|  
 
-####  <a name="BKMK_ExchSrvLog"></a> Exchange Server 커넥터  
- 다음 로그에는 Exchange Server 커넥터와 관련된 정보가 포함되어 있습니다.  
+####  <a name="BKMK_ExchSrvLog"></a> Exchange Server コネクタ  
+ 次のログには、Exchange Server コネクタに関係のある情報が含まれます。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|easdisc.log|Exchange Server 커넥터의 활동과 상태를 기록합니다.|사이트 서버|  
+|easdisc.log|Exchange Server コネクタの動作とステータスを記録します。|サイト サーバー|  
 
-####  <a name="BKMK_MDLegLog"></a> 모바일 장치 기존  
- 다음 표에는 모바일 장치 기존 클라이언트와 관련된 정보가 포함된 로그가 나열되어 있습니다.  
+####  <a name="BKMK_MDLegLog"></a> モバイル デバイス レガシ  
+ 次の表に、モバイル デバイス レガシ クライアントに関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|DmCertEnroll.log|모바일 장치 기존 클라이언트의 인증서 등록 데이터에 대한 세부 정보를 기록합니다.|클라이언트|  
-|DMCertResp.htm|모바일 장치 기존 클라이언트 등록자 프로그램에서 PKI 인증서를 요청할 경우 인증서 서버의 HTML 응답을 기록합니다.|클라이언트|  
-|DmClientHealth.log|모바일 장치에 사용되는 관리 지점과 통신하는 모든 모바일 장치 기존 클라이언트의 GUID를 기록합니다.|사이트 시스템 서버|  
-|DmClientRegistration.log|모바일 장치 기존 클라이언트와 주고 받는 등록 요청 및 응답을 기록합니다.|사이트 시스템 서버|  
-|DmClientSetup.log|모바일 장치 기존 클라이언트에 대한 클라이언트 설치 데이터를 기록합니다.|클라이언트|  
-|DmClientXfer.log|모바일 장치 기존 클라이언트 및 ActiveSync 배포에 대한 클라이언트 설치 데이터를 기록합니다.|클라이언트|  
-|DmCommonInstaller.log|모바일 장치 기존 클라이언트 전송 파일 구성을 위한 클라이언트 전송 파일 설치를 기록합니다.|클라이언트|  
-|DmInstaller.log|DMInstaller가 DmClientSetup을 제대로 호출하는지 여부 및 DmClientSetup이 모바일 장치 기존 클라이언트 종료 시 성공 또는 실패 여부를 기록합니다.|클라이언트|  
-|DmpDatastore.log|모바일 장치에 대해 사용하도록 설정된 관리 지점에서 만든 모든 사이트 데이터베이스 연결과 쿼리를 기록합니다.|사이트 시스템 서버|  
-|DmpDiscovery.log|모바일 장치에 대해 사용하도록 설정된 관리 지점에 있는 모바일 장치 기존 클라이언트의 모든 검색 데이터를 기록합니다.|사이트 시스템 서버|  
-|DmpHardware.log|모바일 장치에 대해 사용하도록 설정된 관리 지점에 있는 모바일 장치 기존 클라이언트의 하드웨어 인벤토리 데이터를 기록합니다.|사이트 시스템 서버|  
-|DmpIsapi.log|모바일 장치에 대해 사용하도록 설정된 관리 지점과 모바일 장치 기존 클라이언트의 통신을 기록합니다.|사이트 시스템 서버|  
-|dmpmsi.log|모바일 장치에 대해 사용하도록 설정된 관리 지점의 구성에 대한 Windows Installer 데이터를 기록합니다.|사이트 시스템 서버|  
-|DMPSetup.log|모바일 장치에 대해 관리 지점을 사용하도록 설정한 경우 해당 관리 지점의 구성을 기록합니다.|사이트 시스템 서버|  
-|DmpSoftware.log|모바일 장치에 대해 사용하도록 설정된 관리 지점에 있는 모바일 장치 기존 클라이언트의 소프트웨어 배포 데이터를 기록합니다.|사이트 시스템 서버|  
-|DmpStatus.log|모바일 장치에 대해 사용하도록 설정된 관리 지점에 있는 모바일 장치 클라이언트의 상태 메시지 데이터를 기록합니다.|사이트 시스템 서버|  
-|DmSvc.log|모바일 장치에 대해 사용하도록 설정된 관리 지점을 대상으로 하는 모바일 장치 기존 클라이언트로부터의 클라이언트 통신을 기록합니다.|클라이언트|  
-|FspIsapi.log|대체 상태 지점과 모바일 장치 기존 클라이언트 및 클라이언트 컴퓨터 간에 수행되는 통신 관련 세부 정보를 기록합니다.|사이트 시스템 서버|  
+|DmCertEnroll.log|モバイル デバイス レガシ クライアントの証明書登録データの詳細を記録します。|クライアント|  
+|DMCertResp.htm|モバイル デバイス レガシ クライアントの登録プログラムが証明書サーバーに PKI 証明書を要求したときのサーバーからの HTML 応答を記録します。|クライアント|  
+|DmClientHealth.log|モバイル デバイス管理が有効になっている管理ポイントと通信するすべてのモバイル デバイス レガシ クライアントの GUID を記録します。|サイト システム サーバー|  
+|DmClientRegistration.log|モバイル デバイス レガシ クライアントからの登録要求とその応答を記録します。|サイト システム サーバー|  
+|DmClientSetup.log|モバイル デバイス レガシ クライアントのクライアント セットアップ データを記録します。|クライアント|  
+|DmClientXfer.log|モバイル デバイス レガシ クライアントと ActiveSync によるクライアント データの転送を記録します。|クライアント|  
+|DmCommonInstaller.log|モバイル デバイス レガシ クライアントの転送ファイルのインストールを記録します。|クライアント|  
+|DmInstaller.log|モバイル デバイス レガシ クライアントの DMInstaller が正しく DmClientSetup を呼び出したかどうかと、DmClientSetup が正常に終了したかどうかを記録します。|クライアント|  
+|DmpDatastore.log|モバイル デバイス管理が有効になっている管理ポイントからのサイト データベースへの接続とクエリをすべて記録します。|サイト システム サーバー|  
+|DmpDiscovery.log|モバイル デバイス管理が有効になっている管理ポイントのモバイル デバイス レガシ クライアントの探索データをすべて記録します。|サイト システム サーバー|  
+|DmpHardware.log|モバイル デバイス管理が有効になっている管理ポイントのモバイル デバイス レガシ クライアントのハードウェア インベントリ データをすべて記録します。|サイト システム サーバー|  
+|DmpIsapi.log|モバイル デバイス レガシ クライアントの、モバイル デバイス管理が有効になっている管理ポイントとの通信を記録します。|サイト システム サーバー|  
+|dmpmsi.log|Windows インストーラーで管理ポイントのモバイル デバイス管理を有効にするときの構成データを記録します。|サイト システム サーバー|  
+|DMPSetup.log|管理ポイントのモバイル デバイス管理を有効にするときの構成を記録します。|サイト システム サーバー|  
+|DmpSoftware.log|モバイル デバイス管理が有効になっている管理ポイントのモバイル デバイス レガシ クライアントのソフトウェア配布データをすべて記録します。|サイト システム サーバー|  
+|DmpStatus.log|モバイル デバイス管理が有効になっている管理ポイントのモバイル デバイス レガシ クライアントのステータス メッセージ データをすべて記録します。|サイト システム サーバー|  
+|DmSvc.log|モバイル デバイス レガシ クライアントからの、モバイル デバイス管理が有効になっている管理ポイントへのクライアント接続を記録します。|クライアント|  
+|FspIsapi.log|モバイル デバイス レガシ クライアントとクライアント コンピューターからのフォールバック ステータス ポイントへの通信に関する詳細を記録します。|サイト システム サーバー|  
 
-###  <a name="BKMK_OSDLog"></a> 운영 체제 배포  
- 다음 표에는 운영 체제 배포와 관련된 정보가 포함된 로그 파일이 나열되어 있습니다.  
+###  <a name="BKMK_OSDLog"></a> オペレーティング システムの展開  
+ 次の表に、オペレーティング システムの展開に関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|CAS.log|참조된 콘텐츠의 배포 지점이 발견된 경우 세부 정보를 기록합니다.|클라이언트|  
-|ccmsetup.log|클라이언트 설정, 클라이언트 업그레이드 및 클라이언트 제거에 대한 ccmsetup 작업을 기록합니다. 클라이언트 설치 문제를 해결하는 데 사용할 수 있습니다.|클라이언트|  
-|CreateTSMedia.log|작업 순서 미디어 작성에 대한 세부 정보를 기록합니다.|Configuration Manager 콘솔을 실행하는 컴퓨터|  
-|DeployToVhd.log|VHD(가상 하드 디스크) 만들기 및 수정 프로세스에 대한 세부 정보를 기록합니다.|Configuration Manager 콘솔을 실행하는 컴퓨터|  
-|Dism.log|오프라인 서비스를 위한 드라이버 설치 작업 또는 응용 프로그램 업데이트 작업을 기록합니다.|사이트 시스템 서버|  
-|distmgr.log|PXE(Preboot Execution Environment)에 대해 배포 지점을 사용하도록 설정하는 구성에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|DriverCatalog.log|드라이버 카탈로그로 가져온 장치 드라이버에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|mcsisapi.log|멀티캐스트 패키지 전송 및 클라이언트 요청 응답에 대한 정보를 기록합니다.|사이트 시스템 서버|  
-|mcsexec.log|상태 검사, 네임스페이스, 세션 작성 및 인증서 확인 작업을 기록합니다.|사이트 시스템 서버|  
-|mcsmgr.log|구성, 보안 모드 및 가용성의 변경 내용을 기록합니다.|사이트 시스템 서버|  
-|mcsprv.log|WDS(Windows 배포 서비스)와의 멀티캐스트 공급자 상호 작용을 기록합니다.|사이트 시스템 서버|  
-|MCSSetup.log|멀티캐스트 서버 역할 설치에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|MCSMSI.log|멀티캐스트 서버 역할 설치에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|Mcsperf.log|멀티캐스트 성능 카운터 업데이트에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|MP_ClientIDManager.log|PXE 또는 부팅 미디어에서 시작된 클라이언트 ID 요청 작업 순서에 대한 관리 지점 응답을 기록합니다.|사이트 시스템 서버|  
-|MP_DriverManager.log|드라이버 자동 적용 작업 순서 작업 요청에 대한 관리 지점 응답을 기록합니다.|사이트 시스템 서버|  
-|OfflineServicingMgr.log|운영 체제 WIM(Windows Imaging Format) 파일에 대한 오프라인 지원 예약 및 업데이트 적용 작업의 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|Setupact.log|Windows Sysprep 및 설치 로그에 대한 세부 정보를 기록합니다.|클라이언트|  
-|Setupapi.log|Windows Sysprep 및 설치 로그에 대한 세부 정보를 기록합니다.|클라이언트|  
-|Setuperr.log|Windows Sysprep 및 설치 로그에 대한 세부 정보를 기록합니다.|클라이언트|  
-|smpisapi.log|클라이언트 상태 캡처 및 복원 작업, 그리고 임계값 정보에 대한 세부 정보를 기록합니다.|클라이언트|  
-|Smpmgr.log|상태 마이그레이션 지점 상태 검사 및 구성 변경 사항에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|smpmsi.log|상태 마이그레이션 지점에 대한 설치 및 구성 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|smpperf.log|상태 마이그레이션 지점 성능 카운터 업데이트를 기록합니다.|사이트 시스템 서버|  
-|smspxe.log|PXE 부팅을 사용하는 클라이언트에 보낸 응답에 대한 세부 정보 및 부팅 이미지 및 부팅 파일의 확장에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|smssmpsetup.log|상태 마이그레이션 지점에 대한 설치 및 구성 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|Smsts.log|작업 순서 활동을 기록합니다.|클라이언트|  
-|TSAgent.log|작업 순서를 시작하기 전에 작업 순서 종속성의 결과를 기록합니다.|클라이언트|  
-|TaskSequenceProvider.log|작업 순서를 가져오거나 내보내거나 편집할 때 작업 순서에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|loadstate.log|USMT(사용자 환경 마이그레이션 도구) 및 사용자 상태 데이터 복원에 대한 세부 정보를 기록합니다.|클라이언트|  
-|scanstate.log|USMT(사용자 환경 마이그레이션 도구) 및 사용자 상태 데이터 캡처에 대한 세부 정보를 기록합니다.|클라이언트|  
+|CAS.log|配布ポイントで参照コンテンツが検出されたときに詳細情報を記録します。|クライアント|  
+|ccmsetup.log|クライアントのセットアップ、クライアントのアップグレード、およびクライアントの削除に関する ccmsetup のタスクを記録します。 クライアントのインストールのトラブルシューティングに使用できます。|クライアント|  
+|CreateTSMedia.log|タスク シーケンス メディアの作成の詳細を記録します。|Configuration Manager コンソールを実行しているコンピューター|  
+|DeployToVhd.log|仮想ハード ディスク (VHD) の作成と変更プロセスの詳細を記録します。|Configuration Manager コンソールを実行しているコンピューター|  
+|Dism.log|オフライン サービス用のドライバーのインストールまたは更新プログラムの適用操作を記録します。|サイト システム サーバー|  
+|distmgr.log|配布ポイントをブート前実行環境 (PXE) 用に有効にする構成の詳細を記録します。|サイト システム サーバー|  
+|DriverCatalog.log|ドライバー カタログにインポートされているデバイス ドライバーの詳細を記録します。|サイト システム サーバー|  
+|mcsisapi.log|マルチキャスト パッケージの転送とクライアント要求への応答に関する情報を記録します。|サイト システム サーバー|  
+|mcsexec.log|正常性チェック、名前空間、セッションの作成、証明書の確認操作を記録します。|サイト システム サーバー|  
+|mcsmgr.log|構成、セキュリティ モード、可用性の変化を記録します。|サイト システム サーバー|  
+|mcsprv.log|マルチキャスト プロバイダーと Windows 展開サービス (WDS) のやり取りを記録します。|サイト システム サーバー|  
+|MCSSetup.log|マルチキャスト サーバーの役割のインストールの詳細を記録します。|サイト システム サーバー|  
+|MCSMSI.log|マルチキャスト サーバーの役割のインストールの詳細を記録します。|サイト システム サーバー|  
+|Mcsperf.log|マルチキャスト パフォーマンス カウンターの更新の詳細を記録します。|サイト システム サーバー|  
+|MP_ClientIDManager.log|PXE またはブート メディアによって開始された、クライアント ID を要求するタスク シーケンスへの管理ポイントの応答を記録します。|サイト システム サーバー|  
+|MP_DriverManager.log|ドライバーの自動適用を要求するタスク シーケンス アクションへの管理ポイントの応答を記録します。|サイト システム サーバー|  
+|OfflineServicingMgr.log|オフライン サービスのスケジュールと、オペレーティング システムの Windows Imaging Format (WIM) ファイルへの更新プログラムの適用操作を記録します。|サイト システム サーバー|  
+|Setupact.log|Windows Sysprep とセットアップのログの詳細を記録します。|クライアント|  
+|Setupapi.log|Windows Sysprep とセットアップのログの詳細を記録します。|クライアント|  
+|Setuperr.log|Windows Sysprep とセットアップのログの詳細を記録します。|クライアント|  
+|smpisapi.log|クライアントの状態のキャプチャと復元操作、およびしきい値の詳細を記録します。|クライアント|  
+|Smpmgr.log|状態移行ポイントの正常性チェックの結果と構成の変更の詳細を記録します。|サイト システム サーバー|  
+|smpmsi.log|状態移行ポイントのインストールと構成の詳細を記録します。|サイト システム サーバー|  
+|smpperf.log|状態移行ポイントのパフォーマンス カウンターの更新を記録します。|サイト システム サーバー|  
+|smspxe.log|PXE ブートを使用するクライアントへの応答と、ブート イメージとブート ファイルの展開の詳細を記録します。|サイト システム サーバー|  
+|smssmpsetup.log|状態移行ポイントのインストールと構成の詳細を記録します。|サイト システム サーバー|  
+|Smsts.log|タスク シーケンスによる操作を記録します。|クライアント|  
+|TSAgent.log|タスク シーケンス開始前の依存関係の解決結果を記録します。|クライアント|  
+|TaskSequenceProvider.log|タスク シーケンスのインポート、エクスポート、編集の詳細を記録します。|サイト システム サーバー|  
+|loadstate.log|ユーザー状態移行ツール (USMT)、およびユーザー状態データの回復の詳細を記録します。|クライアント|  
+|scanstate.log|ユーザー状態移行ツール (USMT)、およびユーザー状態データのキャプチャの詳細を記録します。|クライアント|  
 
-###  <a name="BKMK_PowerMgmtLog"></a> 전원 관리  
- 다음 표에는 전원 관리와 관련된 정보가 포함된 로그 파일이 나열되어 있습니다.  
+###  <a name="BKMK_PowerMgmtLog"></a> 電源管理  
+ 次の表に、電源管理に関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|Pwrmgmt.log|전원 관리 클라이언트 에이전트에 의한 모니터링 및 설정 적용을 포함한 클라이언트 컴퓨터의 전원 관리 활동에 대한 세부 정보를 기록합니다.|클라이언트|  
+|Pwrmgmt.log|クライアント コンピューターの電源管理操作の詳細を記録します。これには、電源管理クライアント エージェントによる電源管理設定の監視と適用が含まれます。|クライアント|  
 
-###  <a name="BKMK_RCLog"></a> 원격 제어  
- 다음 표에는 원격 제어와 관련된 정보가 포함된 로그 파일이 나열되어 있습니다.  
+###  <a name="BKMK_RCLog"></a> リモート コントロール  
+ 次の表に、リモート コントロールに関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|CMRcViewer.log|원격 제어 뷰어의 활동에 대한 세부 정보를 기록합니다.|원격 제어 뷰어를 실행하는 컴퓨터의 %temp% 폴더에 있습니다.|  
+|CMRcViewer.log|リモート コントロール ビューアーの処理に関する情報を記録します。|リモート コントロール ビューアーを実行するコンピューターの %temp% フォルダー|  
 
-###  <a name="BKMK_ReportLog"></a> 보고  
- 다음 표에는 보고와 관련된 정보가 포함된 Configuration Manager 로그 파일이 나열되어 있습니다.  
+###  <a name="BKMK_ReportLog"></a> レポート  
+ 次の表に、レポートに関係のある情報を含む Configuration Manager ログ ファイルを一覧します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|srsrp.log|보고 서비스 지점의 활동 및 상태에 대한 정보를 기록합니다.|사이트 시스템 서버|  
-|srsrpMSI.log|MSI 출력에서 제공하는 보고 서비스 지점 설치 프로세스의 자세한 결과를 기록합니다.|사이트 시스템 서버|  
-|srsrpsetup.log|보고 서비스 지점 설치 프로세스의 결과를 기록합니다.|사이트 시스템 서버|  
+|srsrp.log|レポート サービス ポイントの動作とステータスに関する情報を記録します。|サイト システム サーバー|  
+|srsrpMSI.log|MSI によるレポート サービス ポイントのインストール プロセスの出力結果を含みます。|サイト システム サーバー|  
+|srsrpsetup.log|レポート サービス ポイントのインストール プロセスの結果を記録します。|サイト システム サーバー|  
 
-###  <a name="BKMK_RBALog"></a> 역할 기반 관리  
- 다음 표에는 관리 역할 기반 관리와 관련된 정보가 포함된 로그 파일이 나열되어 있습니다.  
+###  <a name="BKMK_RBALog"></a> 役割に基づいた管理  
+ 次の表に、役割に基づいた管理に関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|hman.log|사이트 구성 변경 내용 및 Active Directory Domain Services에 사이트 정보를 게시하는 작업에 대한 정보를 기록합니다.|사이트 서버|  
-|SMSProv.log|사이트 데이터베이스에 대한 WMI 공급자 액세스를 기록합니다.|SMS 공급자가 설치된 컴퓨터|  
+|hman.log|サイトの構成の変更と、Active Directory Domain Services でのサイト情報の発行を記録します。|サイト サーバー|  
+|SMSProv.log|WMI プロバイダーからのサイト データベースへのアクセスを記録します。|SMS プロバイダーのあるコンピューター|  
 
-###  <a name="BKMK_WITLog"></a> 서비스 연결 지점  
- 다음 표에는 서비스 연결 지점과 관련된 정보가 포함된 로그 파일이 나와 있습니다.  
+###  <a name="BKMK_WITLog"></a> サービス接続ポイント  
+ 次の表に、サービス接続ポイントに関連する情報を含むログ ファイルを一覧表示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|CertMgr.log|인증서 및 프록시 계정 정보를 기록합니다.|사이트 서버|  
-|CollEval.log|컬렉션 평가기에서 컬렉션을 만들고 변경하고 삭제한 경우 관련 세부 정보를 기록합니다.|기본 사이트 및 중앙 관리 사이트|  
-|Cloudusersync.log|사용자의 라이선스 사용을 기록합니다.|서비스 연결 지점이 있는 컴퓨터|  
-|Dataldr.log|MIF 파일 처리와 관련된 정보를 기록합니다.|사이트 서버|  
-|ddm.log|검색 데이터 관리자의 작업을 기록합니다.|사이트 서버|  
-|distmgr.log|콘텐츠 배포 요청에 대한 세부 정보를 기록합니다.|최상위 사이트 서버|  
-|Dmpdownloader.log|Microsoft Intune의 다운로드에 대한 세부 정보를 기록합니다.|서비스 연결 지점이 있는 컴퓨터|  
-|Dmpuploader.log|데이터베이스 변경 내용을 Microsoft Intune에 업로드하는 작업과 관련된 세부 정보를 기록합니다.|서비스 연결 지점이 있는 컴퓨터|  
-|hman.log|메시지 전달에 대한 정보를 기록합니다.|사이트 서버|  
-|objreplmgr.log|정책 및 할당 처리 작업을 기록합니다.|기본 사이트 서버|  
-|policypv.log|모든 정책의 정책 생성을 기록합니다.|사이트 서버|  
-|outgoingcontentmanager.log|Microsoft Intune에 업로드된 콘텐츠를 기록합니다.|서비스 연결 지점이 있는 컴퓨터|  
-|Sitecomp.log|서비스 연결 지점 설치 세부 정보를 기록합니다.|사이트 서버|  
-|SmsAdminUI.log|Configuration Manager 콘솔 작업을 기록합니다.|Configuration Manager 콘솔을 실행하는 컴퓨터|  
-|Smsprov.log|SMS 공급자가 수행한 작업을 기록합니다. Configuration Manager 콘솔 작업은 SMS 공급자를 사용합니다.|SMS 공급자가 설치된 컴퓨터|  
-|SrvBoot.log|서비스 연결 지점 설치 관리자 서비스 세부 정보를 기록합니다.|서비스 연결 지점이 있는 컴퓨터|  
-|statesys.log|모바일 장치 관리 메시지의 처리를 기록합니다.|기본 사이트 및 중앙 관리 사이트|  
+|CertMgr.log|証明書とプロキシ アカウントの情報を記録します。|サイト サーバー|  
+|colleval.log|コレクション エバリュエーターによるコレクションの生成、変更、削除の詳細を記録します。|プライマリ サイトと中央管理サイト|  
+|Cloudusersync.log|ユーザーのライセンス有効化を記録します。|サービス接続ポイントのあるコンピューター|  
+|dataldr.log|MIF ファイルの処理に関する情報を記録します。|サイト サーバー|  
+|ddm.log|探索データ マネージャーによる処理を記録します。|サイト サーバー|  
+|distmgr.log|コンテンツ配布要求に関する情報を記録します。|最上位のサイト サーバー|  
+|Dmpdownloader.log|Microsoft Intune からのダウンロードに関する情報を記録します。|サービス接続ポイントのあるコンピューター|  
+|Dmpuploader.log|Microsoft Intune へのデータベースの変更のアップロードに関する情報を記録します。|サービス接続ポイントのあるコンピューター|  
+|hman.log|メッセージの転送に関する情報を記録します。|サイト サーバー|  
+|objreplmgr.log|ポリシーと割り当ての処理を記録します。|プライマリ サイト サーバー|  
+|policypv.log|すべてのポリシーのポリシー生成を記録します。|サイト サーバー|  
+|outgoingcontentmanager.log|Microsoft Intune にアップロードされたコンテンツを記録します。|サービス接続ポイントのあるコンピューター|  
+|sitecomp.log|サービス接続ポイントのインストールの詳細を記録します。|サイト サーバー|  
+|SmsAdminUI.log|Configuration Manager コンソール アクティビティを記録します。|Configuration Manager コンソールを実行しているコンピューター|  
+|SMSProv.log|SMS プロバイダーによる処理を記録します。 Configuration Manager コンソールの操作では、SMS プロバイダーが使用されます。|SMS プロバイダーのあるコンピューター|  
+|SrvBoot.log|サービス接続ポイントのインストーラー サービスに関する詳細を記録します。|サービス接続ポイントのあるコンピューター|  
+|Statesys.log|モバイル デバイス管理メッセージの処理を記録します。|プライマリ サイトと中央管理サイト|  
 
-###  <a name="BKMK_SU_NAPLog"></a> 소프트웨어 업데이트  
- 다음 표에는 소프트웨어 업데이트와 관련된 정보가 포함된 로그 파일이 나와 있습니다.  
+###  <a name="BKMK_SU_NAPLog"></a> ソフトウェア更新プログラム  
+ 次の表に、ソフトウェアの更新プログラムに関連する情報を含むログ ファイルを一覧表示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|ccmperf.log|클라이언트 성능 카운터와 관련된 데이터의 유지 관리 및 캡처와 관련된 활동을 기록합니다.|클라이언트|  
-|PatchDownloader.log|소프트웨어 업데이트를 업데이트 원본에서 사이트 서버의 다운로드 대상으로 다운로드하는 프로세스에 대한 세부 정보를 기록합니다.|다운로드가 시작되는 Configuration Manager 콘솔을 호스트하는 컴퓨터|  
-|PolicyEvaluator.log|소프트웨어 업데이트의 정책을 포함한 클라이언트 컴퓨터의 정책에 대한 평가와 관련된 세부 정보를 기록합니다.|클라이언트|  
-|RebootCoordinator.log|소프트웨어 업데이트 설치 후 클라이언트 컴퓨터의 시스템 다시 시작 조정에 대한 세부 정보를 기록합니다.|클라이언트|  
-|ScanAgent.log|소프트웨어 업데이트, WSUS 위치 및 관련 작업에 대한 검사 요청과 관련된 세부 정보를 기록합니다.|클라이언트|  
-|SdmAgent.log|재구성 및 준수 추적에 대한 세부 정보를 기록합니다. 그러나 소프트웨어 업데이트 로그 파일인 Updateshandler.log는 준수에 필요한 소프트웨어 업데이트를 설치하는 작업에 대한 자세한 세부 정보를 제공합니다.<br /><br /> 이 로그 파일은 호환성 설정과 공유됩니다.|클라이언트|  
-|ServiceWindowManager.log|유지 관리 기간의 평가에 대한 세부 정보를 기록합니다.|클라이언트|  
-|SmsWusHandler.log|Microsoft 업데이트용 인벤토리 도구의 검사 프로세스에 대한 세부 정보를 기록합니다.|클라이언트|  
-|StateMessage.log|생성된 후 관리 지점으로 전송되는 소프트웨어 업데이트 상태 메시지에 대한 세부 정보를 기록합니다.|클라이언트|  
-|SUPSetup.log|소프트웨어 업데이트 지점 설치에 대한 세부 정보를 기록합니다. 소프트웨어 업데이트 지점 설치가 완료되면 이 로그 파일에 **Installation was successful** 이 기록됩니다.|사이트 시스템 서버|  
-|UpdatesDeployment.log|소프트웨어 업데이트 활성화, 평가, 적용을 포함하여 클라이언트에 배포하는 작업에 대한 세부 정보를 기록합니다. 자세한 정보 로깅에는 클라이언트 사용자 인터페이스와의 상호 작용에 대한 추가 정보가 표시됩니다.|클라이언트|  
-|UpdatesHandler.log|소프트웨어 업데이트 호환성 검사에 대한 세부 정보 및 클라이언트에 소프트웨어 업데이트를 다운로드하고 설치하는 작업에 대한 세부 정보를 기록합니다.|클라이언트|  
-|UpdatesStore.log|호환성 검사 주기 동안 평가된 소프트웨어 업데이트의 호환성 상태에 대한 세부 정보를 기록합니다.|클라이언트|  
-|WCM.log|소프트웨어 업데이트 지점 구성과 구독된 업데이트 범주, 분류 및 언어를 위한 WSUS 서버 연결에 대한 세부 정보를 기록합니다.|사이트 서버|  
-|WSUSCtrl.log|사이트에 대한 WSUS 서버의 구성, 데이터베이스 연결 및 상태에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|wsyncmgr.log|소프트웨어 업데이트 동기화 프로세스에 대한 세부 정보를 기록합니다.|사이트 서버|  
-|WUAHandler.log|소프트웨어 업데이트가 검색되는 경우 클라이언트의 Windows Update 에이전트 관련 세부 정보를 기록합니다.|클라이언트|  
+|Ccmperf.log|メンテナンス操作、およびクライアントのパフォーマンス カウンターに関連するデータの取得操作を記録します。|クライアント|  
+|PatchDownloader.log|更新プログラムのソースから、ソフトウェア更新プログラムをサイト サーバーにダウンロードするプロセスの詳細を記録します。|ダウンロードを開始した Configuration Manager コンソールをホストしているコンピューター|  
+|PolicyEvaluator.log|ソフトウェア更新プログラムのポリシーを含む、クライアント コンピューターのポリシーの評価の詳細を記録します。|クライアント|  
+|RebootCoordinator.log|ソフトウェア更新プログラムがインストールされた後のシステムの再起動の調整に関する詳細を記録します。|クライアント|  
+|ScanAgent.log|ソフトウェア更新プログラムのスキャン要求、WSUS の場所、および関連する操作の詳細を記録します。|クライアント|  
+|SdmAgent.log|コンプライアンス対応状態と修復の追跡情報を記録します。 ただし、ソフトウェア更新プログラムのログ ファイル (Updateshandler.log) に、コンプライアンス対応に必要なソフトウェア更新プログラムのインストールのより詳しい情報が記録されます。<br /><br /> このログ ファイルは、コンプライアンス設定で共有されます。|クライアント|  
+|ServiceWindowManager.log|メンテナンス期間の評価の詳細を記録します。|クライアント|  
+|SmsWusHandler.log|Microsoft 更新プログラム用インベントリ ツールのスキャン プロセスの詳細を記録します。|クライアント|  
+|StateMessage.log|作成されて管理ポイントに送信されたソフトウェア更新プログラムの状態メッセージの詳細を記録します。|クライアント|  
+|SUPSetup.log|ソフトウェアの更新ポイントのインストールに関する詳細を記録します。 ソフトウェアの更新ポイントのインストールが完了すると、このログ ファイルに「 **Installation was successful** 」と書き込まれます。|サイト システム サーバー|  
+|UpdatesDeployment.log|ソフトウェア更新プログラムのクライアントへの展開の詳細 (アクティブ化と評価、強制実行など) を記録します。 ログ記録のレベルを "詳細" にしている場合は、クライアント ユーザー インターフェイスとの相互動作に関する情報も含まれます。|クライアント|  
+|UpdatesHandler.log|ソフトウェア更新プログラムのコンプライアンス スキャン、およびソフトウェア更新プログラムのダウンロードとクライアントへのインストールの詳細を記録します。|クライアント|  
+|UpdatesStore.log|コンプライアンス スキャンで評価された更新プログラムとのコンプライアンス対応状態の詳細を記録します。|クライアント|  
+|WCM.log|ソフトウェアの更新ポイントの構成に関する情報、およびサブスクライブ済みの更新カテゴリ、分類、言語のための WSUS サーバーへの接続に関する情報を記録します。|サイト サーバー|  
+|WSUSCtrl.log|サイトの WSUS サーバーの構成、データベース接続、正常性に関する詳細を記録します。|サイト システム サーバー|  
+|wsyncmgr.log|ソフトウェア更新プログラムの同期プロセスの詳細を記録します。|サイト サーバー|  
+|WUAHandler.log|クライアントの Windows 更新エージェントによるソフトウェア更新プログラムの検索に関する詳細を記録します。|クライアント|  
 
 ###  <a name="BKMK_WOLLog"></a> Wake On LAN  
- 다음 표에는 Wake On LAN 사용과 관련된 정보가 있는 로그 파일이 나와 있습니다.  
+ 次の表に、Wake On LAN の使用に関係のある情報を含むログ ファイルを示します。  
 
 > [!NOTE]  
->  절전 모드 해제 프록시를 사용하여 Wake On LAN을 보완하는 경우 이 작업의 로그는 클라이언트에 기록됩니다. 예를 들어 이 항목의 [클라이언트 작업](#BKMK_ClientOpLogs) 섹션에서 CcmExec.log 및 SleepAgent_<*도메인*\>@SYSTEM_0.log를 참조하세요.  
+>  ウェイクアップ プロキシを使用して Wake On LAN を補うと、この処理がクライアントに記録されます。 たとえば、このトピックの「[クライアントによる処理](#BKMK_ClientOpLogs)」セクションの CcmExec.log と SleepAgent_<*domain*\>@SYSTEM_0.log を参照してください。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|wolcmgr.log|절전 모드 해제 패킷을 보내야 하는 클라이언트, 전송한 절전 모드 해제 패킷 수, 사용이 중단된 절전 모드 해제 패킷의 수 등에 대한 세부 정보를 기록합니다.|사이트 서버|  
-|wolmgr.log|Wake On LAN에 구성된 배포의 절전 모드를 해제하는 경우와 같이 절전 모드 해제 절차에 대한 세부 정보를 기록합니다.|사이트 서버|  
+|wolcmgr.log|ウェイクアップ パケットの送信先クライアント、送信したウェイクアップ パケットの数、ウェイクアップ パケット送信の再試行回数を記録します。|サイト サーバー|  
+|wolmgr.log|ウェイクアップ手順 (Wake On LAN 用に構成されている展開の開始日時など) の詳細を記録します。|サイト サーバー|  
 
-###  <a name="BKMK_WindowsServicingLog"></a> Windows 10 서비스  
- 다음 표에는 Windows 10 서비스와 관련된 정보가 포함된 로그 파일이 나와 있습니다.  
+###  <a name="BKMK_WindowsServicingLog"></a>Windows 10 サービス  
+ 次の表に、Windows 10 サービスに関係のある情報を含むログ ファイルの一覧を示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|ccmperf.log|클라이언트 성능 카운터와 관련된 데이터의 유지 관리 및 캡처와 관련된 활동을 기록합니다.|클라이언트|  
-|CcmRepair.log|클라이언트 에이전트의 복구 활동을 기록합니다.|클라이언트|
-|PatchDownloader.log|소프트웨어 업데이트를 업데이트 원본에서 사이트 서버의 다운로드 대상으로 다운로드하는 프로세스에 대한 세부 정보를 기록합니다.|다운로드가 시작되는 Configuration Manager 콘솔을 호스트하는 컴퓨터|  
-|PolicyEvaluator.log|소프트웨어 업데이트의 정책을 포함한 클라이언트 컴퓨터의 정책에 대한 평가와 관련된 세부 정보를 기록합니다.|클라이언트|  
-|RebootCoordinator.log|소프트웨어 업데이트 설치 후 클라이언트 컴퓨터의 시스템 다시 시작 조정에 대한 세부 정보를 기록합니다.|클라이언트|  
-|ScanAgent.log|소프트웨어 업데이트, WSUS 위치 및 관련 작업에 대한 검사 요청과 관련된 세부 정보를 기록합니다.|클라이언트|  
-|SdmAgent.log|재구성 및 준수 추적에 대한 세부 정보를 기록합니다. 그러나 소프트웨어 업데이트 로그 파일인 UpdatesHandler.log는 준수에 필요한 소프트웨어 업데이트를 설치하는 작업에 대한 자세한 세부 정보를 제공합니다.<br /><br /> 이 로그 파일은 호환성 설정과 공유됩니다.|클라이언트|  
-|ServiceWindowManager.log|유지 관리 기간의 평가에 대한 세부 정보를 기록합니다.|클라이언트|  
-|setupact.log|Windows 설치 과정에서 발생하는 대부분의 오류에 대한 기본 로그 파일입니다. 로그 파일은 %windir%\$Windows.~BT\sources\panther 폴더에 있습니다.|클라이언트|
-|SmsWusHandler.log|Microsoft 업데이트용 인벤토리 도구의 검사 프로세스에 대한 세부 정보를 기록합니다.|클라이언트|  
-|StateMessage.log|생성된 후 관리 지점으로 전송되는 소프트웨어 업데이트 상태 메시지에 대한 세부 정보를 기록합니다.|클라이언트|  
-|SUPSetup.log|소프트웨어 업데이트 지점 설치에 대한 세부 정보를 기록합니다. 소프트웨어 업데이트 지점 설치가 완료되면 이 로그 파일에 **Installation was successful** 이 기록됩니다.|사이트 시스템 서버|  
-|UpdatesDeployment.log|소프트웨어 업데이트 활성화, 평가, 적용을 포함하여 클라이언트에 배포하는 작업에 대한 세부 정보를 기록합니다. 자세한 정보 로깅에는 클라이언트 사용자 인터페이스와의 상호 작용에 대한 추가 정보가 표시됩니다.|클라이언트|  
-|Updateshandler.log|소프트웨어 업데이트 호환성 검사에 대한 세부 정보 및 클라이언트에 소프트웨어 업데이트를 다운로드하고 설치하는 작업에 대한 세부 정보를 기록합니다.|클라이언트|  
-|UpdatesStore.log|호환성 검사 주기 동안 평가된 소프트웨어 업데이트의 호환성 상태에 대한 세부 정보를 기록합니다.|클라이언트|  
-|WCM.log|소프트웨어 업데이트 지점 구성과 구독된 업데이트 범주, 분류 및 언어를 위한 WSUS 서버 연결에 대한 세부 정보를 기록합니다.|사이트 서버|  
-|WSUSCtrl.log|사이트에 대한 WSUS 서버의 구성, 데이터베이스 연결 및 상태에 대한 세부 정보를 기록합니다.|사이트 시스템 서버|  
-|wsyncmgr.log|소프트웨어 업데이트 동기화 프로세스에 대한 세부 정보를 기록합니다.|사이트 서버|  
-|WUAHandler.log|소프트웨어 업데이트가 검색되는 경우 클라이언트의 Windows Update 에이전트 관련 세부 정보를 기록합니다.|클라이언트|  
+|Ccmperf.log|メンテナンス操作、およびクライアントのパフォーマンス カウンターに関連するデータの取得操作を記録します。|クライアント|  
+|CcmRepair.log|クライアント エージェントの修復処理を記録します。|クライアント|
+|PatchDownloader.log|更新プログラムのソースから、ソフトウェア更新プログラムをサイト サーバーにダウンロードするプロセスの詳細を記録します。|ダウンロードを開始した Configuration Manager コンソールをホストしているコンピューター|  
+|PolicyEvaluator.log|ソフトウェア更新プログラムのポリシーを含む、クライアント コンピューターのポリシーの評価の詳細を記録します。|クライアント|  
+|RebootCoordinator.log|ソフトウェア更新プログラムがインストールされた後のシステムの再起動の調整に関する詳細を記録します。|クライアント|  
+|ScanAgent.log|ソフトウェア更新プログラムのスキャン要求、WSUS の場所、および関連する操作の詳細を記録します。|クライアント|  
+|SdmAgent.log|コンプライアンス対応状態と修復の追跡情報を記録します。 ただし、ソフトウェア更新プログラムのログ ファイル (Updateshandler.log) に、コンプライアンス対応に必要なソフトウェア更新プログラムのインストールのより詳しい情報が記録されます。<br /><br /> このログ ファイルは、コンプライアンス設定で共有されます。|クライアント|  
+|ServiceWindowManager.log|メンテナンス期間の評価の詳細を記録します。|クライアント|  
+|setupact.log|Windows インストール プロセス中に発生するほとんどのエラーのプライマリ ログ ファイルです。 このログ ファイルは、%windir%\$Windows.~BT\sources\panther フォルダーにあります。|クライアント|
+|SmsWusHandler.log|Microsoft 更新プログラム用インベントリ ツールのスキャン プロセスの詳細を記録します。|クライアント|  
+|StateMessage.log|作成されて管理ポイントに送信されたソフトウェア更新プログラムの状態メッセージの詳細を記録します。|クライアント|  
+|SUPSetup.log|ソフトウェアの更新ポイントのインストールに関する詳細を記録します。 ソフトウェアの更新ポイントのインストールが完了すると、このログ ファイルに「 **Installation was successful** 」と書き込まれます。|サイト システム サーバー|  
+|UpdatesDeployment.log|ソフトウェア更新プログラムのクライアントへの展開の詳細 (アクティブ化と評価、強制実行など) を記録します。 ログ記録のレベルを "詳細" にしている場合は、クライアント ユーザー インターフェイスとの相互動作に関する情報も含まれます。|クライアント|  
+|Updateshandler.log|ソフトウェア更新プログラムのコンプライアンス スキャン、およびソフトウェア更新プログラムのダウンロードとクライアントへのインストールの詳細を記録します。|クライアント|  
+|UpdatesStore.log|コンプライアンス スキャンで評価された更新プログラムとのコンプライアンス対応状態の詳細を記録します。|クライアント|  
+|WCM.log|ソフトウェアの更新ポイントの構成に関する情報、およびサブスクライブ済みの更新カテゴリ、分類、言語のための WSUS サーバーへの接続に関する情報を記録します。|サイト サーバー|  
+|WSUSCtrl.log|サイトの WSUS サーバーの構成、データベース接続、正常性に関する詳細を記録します。|サイト システム サーバー|  
+|wsyncmgr.log|ソフトウェア更新プログラムの同期プロセスの詳細を記録します。|サイト サーバー|  
+|WUAHandler.log|クライアントの Windows 更新エージェントによるソフトウェア更新プログラムの検索に関する詳細を記録します。|クライアント|  
 
-###  <a name="BKMK_WULog"></a> Windows 업데이트 에이전트  
- 다음 표에는 Windows Update 에이전트와 관련된 정보가 있는 로그 파일이 정리되어 있습니다.  
+###  <a name="BKMK_WULog"></a> Windows 更新エージェント  
+ 次の表に、Windows 更新エージェントのインストールに関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|WindowsUpdate.log|Windows 업데이트 에이전트가 WSUS 서버에 연결하여 준수 평가를 위해 소프트웨어 업데이트를 검색하는 경우에 대한 세부 정보와 에이전트 구성 요소에 대한 업데이트가 있는지 여부에 대한 세부 정보를 기록합니다.|클라이언트|  
+|WindowsUpdate.log|Windows 更新エージェントが、いつ WSUS サーバーに接続してコンプライアンス評価用のソフトウェア更新プログラムを取得したかと、エージェント コンポーネントの更新プログラムがあるかどうかを記録します。|クライアント|  
 
-###  <a name="BKMK_WSUSLog"></a> WSUS 서버  
- 다음 표에는 WSUS 서버와 관련된 정보가 있는 로그 파일이 정리되어 있습니다.  
+###  <a name="BKMK_WSUSLog"></a> WSUS サーバー  
+ 次の表に、WSUS サーバーに関係のある情報を含むログ ファイルを示します。  
 
-|로그 이름|설명|로그 파일이 있는 컴퓨터|  
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  
-|Change.log|변경된 WSUS 서버 데이터베이스 정보에 대한 세부 정보를 기록합니다.|WSUS 서버|  
-|SoftwareDistribution.log|구성된 업데이트 원본에서 WSUS 서버 데이터베이스로 동기화된 소프트웨어 업데이트에 대한 세부 정보를 기록합니다.|WSUS 서버|  
+|Change.log|WSUS サーバーのデータベース情報の変更を記録します。|WSUS サーバー|  
+|SoftwareDistribution.log|構成済みの更新プログラムのソースから、WSUS サーバーのデータベースと同期された更新プログラムの詳細を記録します。|WSUS サーバー|  

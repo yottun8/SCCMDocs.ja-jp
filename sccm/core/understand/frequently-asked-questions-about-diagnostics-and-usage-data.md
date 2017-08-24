@@ -1,6 +1,6 @@
 ---
-title: "진단 데이터 FAQ | Microsoft 문서"
-description: "System Center Configuration Manager에 대한 진단 및 사용 현황 데이터에 대한 질문과 대답을 찾습니다."
+title: "診断データに関してよく寄せられる質問 |Microsoft Docs"
+description: "System Center Configuration Manager の診断および使用状況データに関してよく寄せられる質問を説明します。"
 ms.custom: na
 ms.date: 2/8/2017
 ms.prod: configuration-manager
@@ -17,42 +17,42 @@ manager: angrobe
 ms.openlocfilehash: 177a30a30f6b8579fa1956d28581d4f9d3a11838
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="frequently-asked-questions-about-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>System Center Configuration Manager에 대한 진단 및 사용 현황 데이터에 대한 질문과 대답
+# <a name="frequently-asked-questions-about-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>System Center Configuration Manager の診断および使用状況データに関してよく寄せられる質問
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-다음은 System Center Configuration Manager에 대한 진단 및 사용 현황 데이터에 대한 질문과 대답입니다.  
+System Center Configuration Manager の診断および使用状況データに関してよく寄せられる質問は次のとおりです。  
 
-###  <a name="bkmk_off"></a> 원격 분석을 해제하려면 어떻게 할까요?  
-원격 분석은 해제할 수 없습니다. 그러나 수집되는 원격 분석 데이터의 수준을 선택할 수는 있습니다. 서비스 연결 지점을 오프라인 모드로 사용하여 원격 분석 데이터의 제출 시기를 관리할 수도 있습니다.
+###  <a name="bkmk_off"></a> テレメトリを無効にするには、どうすればよいですか。  
+テレメトリを無効にすることはできません。 ただし、収集されるテレメトリ データのレベルを選択することはできます。 サービス接続ポイントをオフライン モードで使用することによって、テレメトリ データが送信されるタイミングを管理することもできます。
 
-현재 분기의 Configuration Manager는 새 버전의 Windows 10 및 Microsoft Intune을 지원하도록 정기적으로 업데이트해야 합니다. Microsoft에서 제품을 최신 상태로 유지하고 업데이트 환경을 개선하고 제품의 품질 및 보안을 개선하려면 최소한 기본 수준의 진단 및 사용 현황 데이터가 필요합니다.
+Configuration Manager の現在のブランチは、Windows 10 と Microsoft Intune の新しいバージョンをサポートするために、定期的に更新する必要があります。 製品を最新の状態に保ち、更新プログラムのエクスペリエンスおよび製品の品質とセキュリティを向上させるために、Microsoft は少なくとも基本レベルの診断および使用状況データを必要としています。
 
-###  <a name="bkmk_retention"></a> 데이터 보존 기간이란 무엇인가요?  
- 진단 및 사용 현황 데이터는 1년 동안 보존됩니다.  
+###  <a name="bkmk_retention"></a> データの保存期間を教えてください。  
+ 診断結果と使用状況データは 1 年間は保持されます。  
 
-###  <a name="bkmk_update"></a> 제품을 설치하거나 업데이트할 때 진단 및 사용 현황 데이터가 전송되나요?  
- 아니요. 진단 및 사용 현황 데이터는 사이트가 설치되고 작동하는 후에만 전송됩니다.  
+###  <a name="bkmk_update"></a> 製品をインストールまたは更新するときに、診断と使用状況のデータは送信されますか。  
+ いいえ。 診断および使用状況データは、サイトがインストールされて使用できる状態になったら送信されます。  
 
-###  <a name="bkmk_frequency"></a> 데이터는 얼마나 자주 전송되나요?  
- SQL 저장 프로시저는 7일마다 실행됩니다(사이트가 설치된 날짜로부터). 온라인 모드에서 서비스 연결 지점은 쿼리가 실행된 후 데이터를 업로드하도록 구성됩니다. 오프라인 모드에서 관리자는 서비스 연결 도구를 사용하여 데이터를 업로드합니다. 사이트를 설치한 후 7일이 될 때까지는 데이터를 오프라인에서 사용할 수 없습니다.  
+###  <a name="bkmk_frequency"></a> データはどのくらいの頻度で送信されますか。  
+ SQL ストアド プロシージャは (サイトがインストールされた日) から 7 日おきに実行されます。 オンライン モードでは、サービス接続ポイントはクエリの実行後にデータをアップロードするように構成されています。 オフライン モードでは、管理者はサービス接続ツールを使用してデータをアップロードします。 (注: サイトがインストールされてから 7 日間経過したときに初めてデータをオフラインで使用できるようになります。)  
 
-###  <a name="bkmk_network"></a> 네트워크 맵을 만드는 데 데이터를 사용할 수 있나요?  
- System Center Configuration Manager에 대한 진단 사용 현황 데이터 수집의 수준의 설명과 같이 사이트 세부 정보에는 각 사이트의 표준 시간대 정보가 포함됩니다. 이 정보로 특정 계층의 사이트에 대한 광범위한 지리적 위치 및 계층의 글로벌 분산에 대한 통찰력을 제공할 수 있습니다. 그러나 IP 주소나 자세한 지리적 정보와 같은 네트워크 세부 정보는 수집되지 않습니다.
- - [1511에 대한 진단 데이터](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
- - [1602에 대한 진단 데이터](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
- - [1606에 대한 진단 데이터](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)
- - [1610에 대한 진단 데이터](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610)
+###  <a name="bkmk_network"></a> データを使用してネットワーク マップを作成できますか。  
+ 「System Center Configuration Manager の診断の使用状況データ収集のレベル」の説明のとおり、サイトの詳細には各サイトからのタイムゾーン情報が含まれます。 この情報により、階層の複数のサイトの広範な位置情報とグローバル分散を理解できます。 ただし、IP アドレスや詳細な地理情報など、ネットワークの詳細情報は収集されません。
+ - [1511 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
+ - [1602 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
+ - [1606 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)
+ - [1610 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610)
 
 
-###  <a name="bkmk_tables"></a> 사용자 지정 테이블의 데이터를 볼 수 있나요?  
- 아니요. SQL 저장 프로시저를 통해 데이터베이스의 기본 제품 테이블에 대한 진단 및 사용 현황 데이터가 수집됩니다(접두사가 **TEL_**인 모든 항목). SQL 스키마 검색 쿼리의 일부로, 알려진 기본값과 비교할 수 있도록 모든 테이블 이름이 해시됩니다. 따라서 사용자 지정 테이블이 데이터베이스에 존재하지만(데이터베이스 스키마가 기본에서 확장되었음) 해당 테이블 내에 데이터를 포함하지 않는지를 확인할 수 있습니다.  
+###  <a name="bkmk_tables"></a> カスタム テーブルのデータを確認できますか。  
+ いいえ。 データベース内の既定の製品テーブルに対する診断および使用状況データは、SQL ストアド プロシージャによって収集されます (これらのすべてには接頭辞 **TEL_** が付いています)。 SQL スキーマ検出クエリの一部として、すべてのテーブル名は既知の既定値と比較するためにハッシュされます。 これにより、カスタム テーブルがデータベースに存在する (つまり、データベース スキーマが既定値から拡張された) けれども、それらのテーブル内にはデータが含まれていないことが分かります。  
 
-###  <a name="bkmk_databases"></a> 다른 데이터베이스의 이름 또는 다른 데이터베이스의 데이터를 볼 수 있나요?  
- 아니요. 데이터를 수집하는 저장 프로시저는 사이트 데이터베이스로 제한됩니다.  
+###  <a name="bkmk_databases"></a> 他のデータベースの名前や、他のデータベース内のデータを確認できますか。  
+ いいえ。 データを収集するストアド プロシージャは、サイト データベースに限定されます。  
 
-## <a name="see-also"></a>참고 항목  
- [System Center Configuration Manager의 진단 및 사용 현황 데이터](../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)
+## <a name="see-also"></a>関連項目  
+ [System Center Configuration Manager の診断結果と使用状況データ](../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)

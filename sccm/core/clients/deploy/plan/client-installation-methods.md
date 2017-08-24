@@ -1,6 +1,6 @@
 ---
-title: "클라이언트 설치 방법 | Microsoft 문서"
-description: "System Center Configuration Manager의 클라이언트 설치 방법을 알아봅니다."
+title: "クライアントのインストール方法 | Microsoft Docs"
+description: "System Center Configuration Manager でのクライアントのインストール方法について説明します。"
 ms.custom: na
 ms.date: 04/25/2017
 ms.prod: configuration-manager
@@ -18,129 +18,129 @@ manager: angrobe
 ms.openlocfilehash: edca31249cc2bb3e0c67265962815c82e3f4711e
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="client-installation-methods-in-system-center-configuration-manager"></a>System Center Configuration Manager의 클라이언트 설치 방법
+# <a name="client-installation-methods-in-system-center-configuration-manager"></a>System Center Configuration Manager でのクライアントのインストール方法
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-다양한 방법으로 Configuration Manager 클라이언트 소프트웨어를 설치할 수 있습니다. 한 가지 방법이나 여러 방법의 조합을 사용할 수 있습니다. 이 항목에서 각 방법을 살펴보고 조직에 가장 적합한 방법을 확인할 수 있습니다.  
+Configuration Manager クライアント ソフトウェアはさまざまな方法でインストールできます。 1 つの方法を利用することも、複数の方法を組み合わせることもできます。 このトピックでは、それぞれの方法について説明します。組織にとって最適な方法を理解できます。  
 
-## <a name="client-push-installation"></a>클라이언트 강제 설치  
+## <a name="client-push-installation"></a>クライアント プッシュ インストール  
 
- **지원되는 클라이언트 플랫폼:** Windows  
+ **サポートされるクライアント プラットフォーム:** Windows  
 
- **장점**  
+ **長所**  
 
--   클라이언트를 단일 컴퓨터나 컴퓨터 컬렉션에 설치하거나 쿼리 결과에 따라 설치할 수 있습니다.  
+-   単一コンピューター、コンピューターのコレクション、またはクエリの結果に対してクライアントをインストールするのに使用できます。  
 
--   검색된 모든 컴퓨터에 클라이언트를 자동으로 설치할 수 있습니다.  
+-   検出されたすべてのコンピューターにクライアントを自動インストールするときに使用できます。  
 
--   **클라이언트 강제 설치 속성** 대화 상자의 **클라이언트** 탭에 정의된 클라이언트 설치 속성을 자동으로 사용합니다.  
+-   **[クライアント プッシュ インストールのプロパティ]** ダイアログ ボックスの **[クライアント]** タブで定義したクライアント インストールのプロパティが自動的に使用されます。  
 
- **단점**  
+ **短所**  
 
--   많은 컬렉션에 강제 설치하는 경우 네트워크 트래픽이 높아질 수 있습니다.  
+-   大きなコレクションにプッシュするとき、ネットワーク トラフィックの量が増加する可能性があります。  
 
--   Configuration Manager에서 검색한 컴퓨터에만 사용할 수 있습니다.  
+-   Configuration Manager で検出されたコンピューターでしか使用できません。  
 
--   작업 그룹에는 클라이언트를 설치할 수 없습니다.  
+-   ワークグループにクライアントをインストールするときに使用することはできません。  
 
--   해당 클라이언트 컴퓨터에 대한 관리자 권한이 있는 클라이언트 강제 설치 계정을 지정해야 합니다.  
+-   クライアント プッシュ インストールのアカウントでは、どのアカウントに目的のクライアント コンピューターに対する管理者権限を付与するかを指定する必要があります。  
 
--   클라이언트 컴퓨터에서 클라이언트 강제 설치를 수행할 수 있도록 Windows 방화벽에 예외를 구성해야 합니다.  
+-   クライアント プッシュ インストールを完了するには、クライアント コンピューターで Windows ファイアウォールに例外を構成する必要があります。  
 
--   클라이언트 강제 설치는 취소할 수 없습니다. 사이트에 이 클라이언트 설치 방법을 사용하는 경우 Configuration Manager가 검색된 모든 리소스에 클라이언트를 설치하려고 하며 실패할 경우 최대 7일 동안 다시 시도합니다.  
+-   クライアント プッシュ インストールはキャンセルできません。 このクライアントのインストール方法をサイトで使用すると、Configuration Manager はクライアントを検出されたすべてのリソースにインストールしようとし、失敗した場合は最大 7 日間にわたって再試行します。  
 
- 이 설치 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 Windows 컴퓨터에 클라이언트를 배포하는 방법](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)을 참조하세요.  
+ このインストール方法の詳細については、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」を参照してください。  
 
-## <a name="software-update-point-based-installation"></a>소프트웨어 업데이트 지점 기반 설치  
- **지원되는 클라이언트 플랫폼:** Windows  
+## <a name="software-update-point-based-installation"></a>ソフトウェアの更新ポイント経由のインストール  
+ **サポートされるクライアント プラットフォーム:** Windows  
 
- **장점:**  
+ **利点:**  
 
--   기존 소프트웨어 업데이트 인프라를 사용하여 클라이언트 소프트웨어를 관리할 수 있습니다.  
+-   既存のソフトウェアの更新のインフラストラクチャを使用して、クライアント ソフトウェアを管理できます。  
 
--   Active Directory Domain Services에서 WSUS(Windows Server Update Services) 및 그룹 정책 설정이 올바르게 구성된 경우 새 컴퓨터에 클라이언트 소프트웨어를 자동으로 설치할 수 있습니다.  
+-   Windows Server Update Services (WSUS) および Active Directory ドメイン サービスのグループ ポリシー設定が正しく構成されている場合は、新しいコンピューターにクライアント ソフトウェアを自動的にインストールできます。  
 
--   컴퓨터가 검색되지 않아도 클라이언트가 설치될 수 있습니다.  
+-   クライアントをインストールする前に、コンピューターが検出されている必要はありません。  
 
--   컴퓨터에서 Active Directory Domain Services에 게시된 클라이언트 설치 속성을 읽을 수 있습니다.  
+-   コンピューターは、Active Directory ドメイン サービスに公表されたクライアント インストール プロパティを読み取ることができます。  
 
--   클라이언트 소프트웨어가 제거될 경우 다시 설치됩니다.  
+-   クライアント ソフトウェアが削除された場合、再インストールします。  
 
--   해당 컴퓨터에 대한 설치 계정을 구성하고 관리하지 않아도 됩니다.  
+-   目的のクライアント コンピューターのインストール アカウントを構成してメンテナンスを行う必要はありません。  
 
- **단점:**  
+ **欠点:**  
 
--   올바르게 작동하는 소프트웨어 업데이트 인프라가 필수 구성 요소로 필요합니다.  
+-   ソフトウェアの更新のインフラストラクチャが機能していることが前提条件です。  
 
--   클라이언트 설치와 소프트웨어 업데이트에 동일한 서버를 사용해야 하며, 이 서버가 기본 사이트에 있어야 합니다.  
+-   クライアントのインストールとソフトウェアの更新に同じサーバーを使用する必要があります。また、このサーバーはプライマリ サイトに存在している必要があります。  
 
--   새 클라이언트를 설치하려면 Active Directory Domain Services에서 클라이언트의 활성 소프트웨어 업데이트 지점과 포트를 사용하여 GPO(그룹 정책 개체)를 구성해야 합니다.  
+-   新しいクライアントをインストールするには、クライアントのアクティブなソフトウェアの更新ポイントおよびポートを使用して、Active Directory Domain Services 内のグループ ポリシー オブジェクト (GPO) を構成する必要があります。  
 
--   Active Directory 스키마가 Configuration Manager를 지원하도록 확장되지 않은 경우 그룹 정책 설정을 사용하여 클라이언트 설치 속성으로 컴퓨터를 프로비전해야 합니다.  
+-   Active Directory スキーマが Configuration Manager 向けに拡張されていない場合、グループ ポリシー設定を使用してクライアント インストールのプロパティをコンピューターにプロビジョニングする必要があります。  
 
- 이 설치 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 Windows 컴퓨터에 클라이언트를 배포하는 방법](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)을 참조하세요.  
+ このインストール方法の詳細については、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」を参照してください。  
 
-## <a name="group-policy-installation"></a>그룹 정책 설치  
- **지원되는 클라이언트 플랫폼:** Windows  
+## <a name="group-policy-installation"></a>グループ ポリシーによるインストール  
+ **サポートされるクライアント プラットフォーム:** Windows  
 
- **장점:**  
+ **利点:**  
 
--   컴퓨터가 검색되지 않아도 클라이언트가 설치될 수 있습니다.  
+-   クライアントをインストールする前に、コンピューターが検出されている必要はありません。  
 
--   새 클라이언트 설치나 업그레이드에 모두 사용할 수 있습니다.  
+-   新しいクライアントのインストールまたは更新で使用できます。  
 
--   컴퓨터에서 Active Directory Domain Services에 게시된 클라이언트 설치 속성을 읽을 수 있습니다.  
+-   コンピューターは、Active Directory ドメイン サービスに公表されたクライアント インストール プロパティを読み取ることができます。  
 
--   해당 컴퓨터에 대한 설치 계정을 구성하고 관리하지 않아도 됩니다.  
+-   目的のクライアント コンピューターのインストール アカウントを構成してメンテナンスを行う必要はありません。  
 
- **단점:**  
+ **欠点:**  
 
--   다수의 클라이언트를 설치하는 경우 네트워크 트래픽이 높아질 수 있습니다.  
+-   多数のクライアントがインストールされた場合、ネットワーク トラフィックの量が増加する可能性があります。  
 
--   Active Directory 스키마가 Configuration Manager를 지원하도록 확장되지 않은 경우 그룹 정책 설정을 사용하여 클라이언트 설치 속성을 사이트의 컴퓨터에 추가해야 합니다.  
+-   Active Directory スキーマが Configuration Manager 向けに拡張されていない場合、グループ ポリシー設定を使用してサイト内のコンピューターにクライアント インストール プロパティを追加する必要があります。  
 
- 이 설치 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 Windows 컴퓨터에 클라이언트를 배포하는 방법](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)을 참조하세요.  
+ このインストール方法の詳細については、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」を参照してください。  
 
-## <a name="logon-script-installation"></a>로그온 스크립트 설치  
- **지원되는 클라이언트 플랫폼:** Windows  
+## <a name="logon-script-installation"></a>ログオン スクリプトによるインストール  
+ **サポートされるクライアント プラットフォーム:** Windows  
 
- **장점:**  
+ **利点:**  
 
--   컴퓨터가 검색되지 않아도 클라이언트가 설치될 수 있습니다.  
+-   クライアントをインストールする前に、コンピューターが検出されている必要はありません。  
 
--   CCMSetup에 명령줄 속성을 사용할 수 있습니다.  
+-   CCMSetup のコマンド ライン プロパティを使用してサポートします。  
 
- **단점:**  
+ **欠点:**  
 
--   짧은 기간 동안 다수의 클라이언트를 설치하는 경우 네트워크 트래픽이 높아질 수 있습니다.  
+-   多数のクライアントが短時間にインストールされた場合、ネットワーク トラフィックの量が増加する可能性があります。  
 
--   사용자가 네트워크에 자주 로그온하지 않는 경우 모든 클라이언트 컴퓨터에 설치하는 데 오랜 시간이 걸릴 수 있습니다.  
+-   ユーザーがネットワークに頻繁にログオンしない場合は、すべてのクライアント コンピューターにインストールするのに長時間かかる場合があります。  
 
- 이 설치 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 Windows 컴퓨터에 클라이언트를 배포하는 방법](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)을 참조하세요.  
+ このインストール方法の詳細については、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」を参照してください。  
 
-## <a name="manual-installation"></a>수동 설치  
- **지원되는 클라이언트 플랫폼:** Windows, UNIX/Linux, Mac OS X  
+## <a name="manual-installation"></a>手動インストール  
+ **サポートされるクライアント プラットフォーム:** Windows、UNIX/Linux、Mac OS X  
 
- **장점:**  
+ **利点:**  
 
--   컴퓨터가 검색되지 않아도 클라이언트가 설치될 수 있습니다.  
+-   クライアントをインストールする前に、コンピューターが検出されている必要はありません。  
 
--   테스트를 위해 유용할 수 있습니다.  
+-   テストの目的で役立ちます。  
 
--   CCMSetup에 명령줄 속성을 사용할 수 있습니다.  
+-   CCMSetup のコマンド ライン プロパティを使用してサポートします。  
 
- **단점:**  
+ **欠点:**  
 
--   자동화되지 않아 시간이 많이 소모됩니다.  
+-   自動化されていないため、時間を削減できます。  
 
- 각 플랫폼에서 클라이언트를 수동으로 설치하는 방법에 대한 자세한 내용은 다음을 참조하세요.  
+ 各プラットフォームのクライアントを手動でインストールする方法の詳細については、次をご覧ください。  
 
--   [System Center Configuration Manager에서 Windows 컴퓨터에 클라이언트를 배포하는 방법](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)  
+-   [System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)  
 
--   [System Center Configuration Manager에서 UNIX 및 Linux 서버에 클라이언트를 배포하는 방법](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md)  
+-   [System Center Configuration Manager で UNIX および Linux サーバーにクライアントを展開する方法](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md)  
 
--   [System Center Configuration Manager에서 Mac에 클라이언트를 배포하는 방법](../../../../core/clients/deploy/deploy-clients-to-macs.md)  
+-   [System Center Configuration Manager で Mac にクライアントを展開する方法](../../../../core/clients/deploy/deploy-clients-to-macs.md)  

@@ -1,6 +1,6 @@
 ---
-title: "Linux 및 UNIX 컴퓨터에 클라이언트 배포 계획 | Microsoft 문서"
-description: "System Center Configuration Manager에서 Linux 및 UNIX 컴퓨터에 클라이언트 배포를 계획합니다."
+title: "Linux および UNIX コンピューターへのクライアント展開の計画 | Microsoft Docs"
+description: "System Center Configuration Manager での Linux コンピューターおよび UNIX コンピューターへのクライアント展開の計画"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -18,293 +18,293 @@ manager: angrobe
 ms.openlocfilehash: 367ffb919a1adb9a0530f7357a0fcf1e6636af08
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 Linux 및 UNIX 컴퓨터에 클라이언트 배포 계획
+# <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager での Linux コンピューターおよび UNIX コンピューターへのクライアント展開の計画
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-Linux 또는 UNIX를 실행하는 컴퓨터에 System Center Configuration Manager 클라이언트를 설치할 수 있습니다. 이 클라이언트는 작업 그룹 컴퓨터로 작동하는 서버를 위해 설계되었으며 로그온한 사용자와의 상호 작용은 지원하지 않습니다. 클라이언트 소프트웨어를 설치하고 클라이언트가 Configuration Manager 사이트와의 통신을 설정한 후 Configuration Manager 콘솔 및 보고서를 사용하여 클라이언트를 관리합니다.  
+System Center Configuration Manager クライアントは、Linux または UNIX を実行しているコンピューターにインストールできます。 このクライアントは、ワークグループ コンピューターとして動作するサーバー用に設計され、クライアントは、ログオンしたユーザーとの対話をサポートしていません。 クライアント ソフトウェアをインストールし、クライアントが Configuration Manager サイトとの通信を確立した後で、Configuration Manager コンソールとレポートを使用して、クライアントを管理します。  
 
 > [!NOTE]  
->  Linux 및 UNIX 컴퓨터용 System Center Configuration Manager 클라이언트는 다음 관리 기능을 지원하지 않습니다.  
+>  Linux および UNIX コンピューター向けの Configuration Manager クライアントでは、次の管理機能はサポートされていません。  
 >   
->  -   클라이언트 강제 설치  
-> -   운영 체제 배포  
-> -   응용 프로그램 배포(대신, 패키지 및 프로그램을 사용한 소프트웨어 배포)  
-> -   소프트웨어 인벤토리  
-> -   소프트웨어 업데이트  
-> -   호환성 설정  
-> -   원격 제어  
-> -   전원 관리  
-> -   클라이언트 상태 클라이언트 검사 및 재구성  
-> -   인터넷 기반 클라이언트 관리  
+>  -   クライアント プッシュ インストール  
+> -   オペレーティング システムの展開  
+> -   アプリケーションの展開 (代わりに、パッケージとプログラムを使ってソフトウェアを展開)  
+> -   ソフトウェア インベントリ  
+> -   ソフトウェア更新プログラム  
+> -   コンプライアンス設定  
+> -   リモート コントロール  
+> -   電源管理  
+> -   クライアント ステータスのクライアント チェックと修復  
+> -   インターネット ベースのクライアント管理  
 
- 지원되는 Linux 및 UNIX 배포와, Linux 및 UNIX의 클라이언트를 지원하는 데 필요한 하드웨어에 대한 자세한 내용은 [System Center Configuration Manager에 권장되는 하드웨어](../../../../core/plan-design/configs/recommended-hardware.md)를 참조하세요.  
+ サポートされる Linux ディストリビューションと UNIX ディストリビューション、および Linux と UNIX 用のクライアントをサポートするために必要となるハードウェアの詳細については、「[System Center Configuration Manager の推奨ハードウェア](../../../../core/plan-design/configs/recommended-hardware.md)」をご覧ください。  
 
- 이 문서의 정보를 통해 Linux 및 UNIX용 Configuration Manager 클라이언트 배포를 계획할 수 있습니다.  
+ この記事の情報を使用して、Linux および UNIX 用のConfiguration Manager クライアントの展開の計画に役立てます。  
 
-##  <a name="BKMK_ClientDeployPrereqforLnU"></a> Linux 및 UNIX 서버에 클라이언트 배포에 대한 필수 조건  
- Linux 및 UNIX 용 클라이언트를 설치 하는 필수 구성 요소가 있어야 하는 위치에 성공적으로 확인 하려면 다음 정보를 사용 합니다.  
+##  <a name="BKMK_ClientDeployPrereqforLnU"></a> Linux および UNIX サーバーへのクライアントの展開の前提条件  
+ 前提条件が正常に適切な場所にいる必要がありますが Linux および UNIX 用クライアントをインストールするのにには、次の情報を使用します。  
 
-###  <a name="BKMK_ClientDeployExternalforLnU"></a> Configuration Manager 외부 종속성:  
- 다음 표에서는 필수 UNIX 및 Linux 운영 체제 및 패키지 종속 파일을 설명합니다.  
+###  <a name="BKMK_ClientDeployExternalforLnU"></a> Configuration Manager 外部の依存関係:  
+ 次の表は、必要な UNIX および Linux オペレーティング システムおよびパッケージ依存関係を示しています。  
 
- **Red Hat Enterprise Linux ES 릴리스 4**  
+ **Red Hat Enterprise Linux ES リリース 4**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|glibc|C 표준 라이브러리|2.3.4-2|  
-|Openssl|OpenSSL Libraries, 보안 네트워크 통신 프로토콜|0.9.7a-43.1|  
-|PAM|플러그 가능 인증 모듈|0.77-65.1|  
+|glibc|C 標準ライブラリ|2.3.4-2|  
+|Openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|0.9.7a-43.1|  
+|PAM|プラグ可能な認証モジュール|0.77-65.1|  
 
- **Red Hat Enterprise Linux Server 릴리스 5.1(Tikanga)**  
+ **Red Hat Enterprise Linux Server リリース 5.1 (Tikanga)**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|glibc|C 표준 라이브러리|2.5-12|  
-|Openssl|OpenSSL Libraries, 보안 네트워크 통신 프로토콜|0.9.8b-8.3.el5|  
-|PAM|플러그 가능 인증 모듈|0.99.6.2-3.14.el5|  
+|glibc|C 標準ライブラリ|2.5-12|  
+|Openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|0.9.8b-8.3.el5|  
+|PAM|プラグ可能な認証モジュール|0.99.6.2-3.14.el5|  
 
- **Red Hat Enterprise Linux Server 릴리스 6**  
+ **Red Hat Enterprise Linux Server リリース 6**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|glibc|C 표준 라이브러리|2.12-1.7|  
-|Openssl|OpenSSL Libraries, 보안 네트워크 통신 프로토콜|1.0.0-4|  
-|PAM|플러그 가능 인증 모듈|1.1.1-4|  
+|glibc|C 標準ライブラリ|2.12-1.7|  
+|Openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|1.0.0-4|  
+|PAM|プラグ可能な認証モジュール|1.1.1-4|  
 
  **Solaris 9 SPARC**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|필수 운영 체제 패치|PAM 메모리 손실|112960-48|  
-|SUNWlibC|Sun Workshop Compilers Bundled libC(sparc)|5.9,REV=2002.03.18|  
-|SUNWlibms|Forte 개발자 번들로 공유 libm (sparc)|5.9,REV=2001.12.10|  
-|Openssl|SMCosslg (sparc)<br /><br /> Sun에서는 Solaris 9 SPARC용 OpenSSL 버전을 제공하지 않습니다. Sunfreeware에서 다운로드할 수 있는 버전이 있습니다.|0.9.7g|  
-|PAM|플러그 가능 인증 모듈<br /><br /> SUNWcsl, Core Solaris (공유 Libs) (sparc)|11.9.0,REV=2002.04.06.15.27|  
+|必要なオペレーティング システムの修正プログラム|PAM メモリ リーク|112960-48|  
+|SUNWlibC|Sun Workshop Compilers Bundled libC (sparc)|5.9,REV=2002.03.18|  
+|SUNWlibms|Forte Developer バンドル共有 libm (sparc)|5.9,REV=2001.12.10|  
+|Openssl|SMCosslg (sparc)<br /><br /> Sun は Solaris 9 SPARC 用の OpenSSL のバージョンを提供しません。 Sunfreeware から利用できるバージョンが 1 つあります。|0.9.7g|  
+|PAM|プラグ可能な認証モジュール<br /><br /> SUNWcsl、Core Solaris、(共有 Libs) (sparc)|11.9.0,REV=2002.04.06.15.27|  
 
  **Solaris 10 SPARC**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|필수 운영 체제 패치|PAM 메모리 손실|117463-05|  
-|SUNWlibC|Sun Workshop Compilers Bundled libC(sparc)|5.10, REV=2004.12.22|  
-|SUNWlibms|Math & Microtasking Libraries(Usr)(sparc)|5.10, REV=2004.11.23|  
-|SUNWlibmsr|Math & Microtasking Libraries(Root)(sparc)|5.10, REV=2004.11.23|  
-|SUNWcslr|Core Solaris Libraries(Root)(sparc)|11.10.0, REV=2005.01.21.15.53|  
-|SUNWcsl|Core Solaris Libraries(Root)(sparc)|11.10.0, REV=2005.01.21.15.53|  
-|Openssl|SUNopenssl-librararies(Usr)<br /><br /> Sun은 Solaris 10 SPARC용 OpenSSL 라이브러리를 제공합니다. 이러한 라이브러리는 운영 체제와 함께 제공됩니다.|11.10.0,REV=2005.01.21.15.53|  
-|PAM|플러그 가능 인증 모듈<br /><br /> SUNWcsr, Core Solaris, (Root)(sparc)|11.10.0, REV=2005.01.21.15.53|  
+|必要なオペレーティング システムの修正プログラム|PAM メモリ リーク|117463-05|  
+|SUNWlibC|Sun Workshop Compilers Bundled libC (sparc)|5.10, REV=2004.12.22|  
+|SUNWlibms|Math & Microtasking Libraries (Usr) (sparc)|5.10, REV=2004.11.23|  
+|SUNWlibmsr|Math & Microtasking Libraries (Root) (sparc)|5.10, REV=2004.11.23|  
+|SUNWcslr|Core Solaris Libraries (Root) (sparc)|11.10.0, REV=2005.01.21.15.53|  
+|SUNWcsl|Core Solaris Libraries (Root) (sparc)|11.10.0, REV=2005.01.21.15.53|  
+|Openssl|SUNopenssl-librararies (Usr)<br /><br /> Sun は Solaris 10 SPARC の OpenSSL ライブラリを提供しています。 これらは、オペレーティング システムにバンドルされています。|11.10.0,REV=2005.01.21.15.53|  
+|PAM|プラグ可能な認証モジュール<br /><br /> SUNWcsr、Core Solaris、(Root) (sparc)|11.10.0, REV=2005.01.21.15.53|  
 
  **Solaris 10 x86**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|필수 운영 체제 패치|PAM 메모리 손실|117464-04|  
-|SUNWlibC|Sun 워크샵 컴파일러 번들로 libC (i386)|5.10,REV=2004.12.20|  
-|SUNWlibmsr|Math & Microtasking 라이브러리(루트)(i386)|5.10, REV=2004.12.18|  
-|SUNWcsl|Core Solaris (공유 Libs) (i386)|11.10.0,REV=2005.01.21.16.34|  
-|SUNWcslr|Core Solaris 라이브러리 (루트) (i386)|11.10.0, REV=2005.01.21.16.34|  
-|Openssl|SUNWopenssl 라이브러리입니다. OpenSSL 라이브러리 (사용자) (i386)|11.10.0, REV=2005.01.21.16.34|  
-|PAM|플러그 가능 인증 모듈<br /><br /> SUNWcsr Core Solaris (Root)(i386)|11.10.0,REV=2005.01.21.16.34|  
+|必要なオペレーティング システムの修正プログラム|PAM メモリ リーク|117464-04|  
+|SUNWlibC|Sun Workshop コンパイラー バンドル libC (i386)|5.10,REV=2004.12.20|  
+|SUNWlibmsr|Math & Microtasking Libraries (Root) (i386)|5.10, REV=2004.12.18|  
+|SUNWcsl|Core Solaris、(共有 Libs) (i386)|11.10.0,REV=2005.01.21.16.34|  
+|SUNWcslr|Core Solaris ライブラリ (ルート) (i386)|11.10.0, REV=2005.01.21.16.34|  
+|Openssl|SUNWopenssl ライブラリです。OpenSSL ライブラリ (Usr) (i386)|11.10.0, REV=2005.01.21.16.34|  
+|PAM|プラグ可能な認証モジュール<br /><br /> SUNWcsr Core Solaris、(Root)(i386)|11.10.0,REV=2005.01.21.16.34|  
 
  **Solaris 11 SPARC**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|SUNWlibC|Sun Workshop Compilers Bundled libC|5.11, REV=2011.04.11|  
-|SUNWlibmsr|Math & Microtasking 라이브러리(루트)|5.11, REV=2011.04.11|  
-|SUNWcslr|코어 Solaris 라이브러리(루트)|11.11, REV=2009.11.11|  
-|SUNWcsl|Core Solaris(공유 라이브러리)|11.11, REV=2009.11.11|  
-|SUNWcsr|코어 Solaris(루트)|11.11, REV=2009.11.11|  
-|SUNWopenssl-libraries|OpenSSL 라이브러리(사용자)|11.11.0,REV=2010.05.25.01.00|  
+|SUNWlibC|Sun Workshop コンパイラー バンドル libC|5.11, REV=2011.04.11|  
+|SUNWlibmsr|Math & Microtasking ライブラリ (Root)|5.11, REV=2011.04.11|  
+|SUNWcslr|Core Solaris ライブラリ (ルート)|11.11, REV=2009.11.11|  
+|SUNWcsl|Core Solaris、(共有 Libs)|11.11, REV=2009.11.11|  
+|SUNWcsr|Core Solaris (ルート)|11.11, REV=2009.11.11|  
+|SUNWopenssl-ライブラリ|SUNopenssl ライブラリ (Usr)|11.11.0,REV=2010.05.25.01.00|  
 
  **Solaris 11 x86**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------|-----------|---------------|  
-|SUNWlibC|Sun Workshop Compilers Bundled libC|5.11, REV=2011.04.11|  
-|SUNWlibmsr|Math & Microtasking 라이브러리(루트)|5.11, REV=2011.04.11|  
-|SUNWcslr|코어 Solaris 라이브러리(루트)|11.11, REV=2009.11.11|  
-|SUNWcsl|Core Solaris(공유 라이브러리)|11.11, REV=2009.11.11|  
-|SUNWcsr|코어 Solaris(루트)|11.11, REV=2009.11.11|  
-|SUNWopenssl-libraries|OpenSSL 라이브러리(사용자)|11.11.0,REV=2010.05.25.01.00|  
+|SUNWlibC|Sun Workshop コンパイラー バンドル libC|5.11, REV=2011.04.11|  
+|SUNWlibmsr|Math & Microtasking ライブラリ (Root)|5.11, REV=2011.04.11|  
+|SUNWcslr|Core Solaris ライブラリ (ルート)|11.11, REV=2009.11.11|  
+|SUNWcsl|Core Solaris、(共有 Libs)|11.11, REV=2009.11.11|  
+|SUNWcsr|Core Solaris (ルート)|11.11, REV=2009.11.11|  
+|SUNWopenssl-ライブラリ|SUNopenssl ライブラリ (Usr)|11.11.0,REV=2010.05.25.01.00|  
 
- **SUSE Linux Enterprise Server 9(i586)**  
+ **SUSE Linux Enterprise Server 9 (i586)**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
 |Service Pack 4|SUSE Linux Enterprise Server 9||  
-|OS Patch lib gcc-41.rpm|표준 공유 라이브러리|41-4.1.2_20070115-0.6|  
-|OS Patch lib stdc++-41.rpm|표준 공유 라이브러리|41-4.1.2_20070115-0.6|  
-|Openssl|OpenSSL Libraries, 보안 네트워크 통신 프로토콜|0.9.7d-15.35|  
-|PAM|플러그 가능 인증 모듈|0.77-221-11|  
+|OS 修正プログラム lib gcc-41.rpm|標準共有ライブラリ|41-4.1.2_20070115-0.6|  
+|OS 修正プログラム lib stdc++-41.rpm|標準共有ライブラリ|41-4.1.2_20070115-0.6|  
+|Openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|0.9.7d-15.35|  
+|PAM|プラグ可能な認証モジュール|0.77-221-11|  
 
- **SUSE Linux Enterprise Server 10 SP1(i586)**  
+ **SUSE Linux Enterprise Server 10 SP1 (i586)**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|glibc-2.4-31.30|C 표준 공유 라이브러리|2.4-31.30|  
-|Openssl|OpenSSL Libraries, 보안 네트워크 통신 프로토콜|0.9.8a-18.15|  
-|PAM|플러그 가능 인증 모듈|0.99.6.3-28.8|  
+|glibc-2.4-31.30|C 標準共有ライブラリ|2.4-31.30|  
+|Openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|0.9.8a-18.15|  
+|PAM|プラグ可能な認証モジュール|0.99.6.3-28.8|  
 
- **SUSE Linux Enterprise Server 11(i586)**  
+ **SUSE Linux Enterprise Server 11 (i586)**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|glibc-2.9-13.2|C 표준 공유 라이브러리|2.9-13.2|  
-|PAM|플러그 가능 인증 모듈|pam-1.0.2-20.1|  
+|glibc-2.9-13.2|C 標準共有ライブラリ|2.9-13.2|  
+|PAM|プラグ可能な認証モジュール|pam-1.0.2-20.1|  
 
- **범용 Linux(Debian 패키지) Debian, Ubuntu Server**  
+ **Universal Linux (Debian パッケージ) Debian、Ubuntu サーバー**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|libc6|C 표준 공유 라이브러리|2.3.6|  
-|Openssl|OpenSSL Libraries, 보안 네트워크 통신 프로토콜|0.9.8 또는 1.0|  
-|PAM|플러그 가능 인증 모듈|0.79-3|  
+|libc6|C 標準共有ライブラリ|2.3.6|  
+|Openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|0.9.8 または 1.0|  
+|PAM|プラグ可能な認証モジュール|0.79-3|  
 
- **범용 Linux(RPM 패키지) CentOS, Oracle Linux**  
+ **Universal Linux (RPM パッケージ) CentOS、Oracle Linux**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|glibc|C 표준 공유 라이브러리|2.5-12|  
-|Openssl|OpenSSL Libraries, 보안 네트워크 통신 프로토콜|0.9.8 또는 1.0|  
-|PAM|플러그 가능 인증 모듈|0.99.6.2-3.14|  
+|glibc|C 標準共有ライブラリ|2.5-12|  
+|Openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|0.9.8 または 1.0|  
+|PAM|プラグ可能な認証モジュール|0.99.6.2-3.14|  
 
  **IBM AIX 5L 5.3**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|OS 버전|운영 체제 버전|AIX 5.3, Technology Level 6, Service Pack 5|  
-|xlC.rte|XL C/C++ 런타임|9.0.0.2|  
-|openssl.base|OpenSSL Libraries, 보안 네트워크 통신 프로토콜|0.9.8.4|  
+|OS バージョン|オペレーティング システムのバージョン|AIX 5.3、テクノロジー レベル 6、サービス パック 5|  
+|xlC.rte|XL C/C++ Runtime|9.0.0.2|  
+|openssl.base|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|0.9.8.4|  
 
  **IBM AIX 6.1**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|OS 버전|운영 체제 버전|AIX 6.1, 모든 Technology Level 및 서비스 팩|  
-|xlC.rte|XL C/C++ 런타임|9.0.0.5|  
-|OpenSSL/openssl.base|OpenSSL Libraries, 보안 네트워크 통신 프로토콜|0.9.8.4|  
+|OS バージョン|オペレーティング システムのバージョン|AIX 6.1、任意のテクノロジー レベルとサービス パック|  
+|xlC.rte|XL C/C++ Runtime|9.0.0.5|  
+|OpenSSL/openssl.base|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|0.9.8.4|  
 
- **IBM AIX 7.1(Power)**  
+ **IBM AIX 7.1 (Power)**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|OS 버전|운영 체제 버전|AIX 7.1, 모든 Technology Level 및 서비스 팩|  
-|xlC.rte|XL C/C++ 런타임||  
-|OpenSSL/openssl.base|OpenSSL Libraries, 보안 네트워크 통신 프로토콜||  
+|OS バージョン|オペレーティング システムのバージョン|AIX 7.1、任意のテクノロジ レベルとサービス パック|  
+|xlC.rte|XL C/C++ Runtime||  
+|OpenSSL/openssl.base|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル||  
 
  **HP-UX 11i v2 IA 64**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|HPUXBaseOS|기본 OS|B.11.23|  
-|HPUXBaseAux|HP-UX 기본 OS 보조|B.11.23.0706|  
-|HPUXBaseAux.openssl|OpenSSL Libraries, 보안 네트워크 통신 프로토콜|A.00.09.07l.003|  
-|PAM|플러그 가능 인증 모듈|HP-UX에서 PAM은 핵심 운영 체제 구성 요소의 일부입니다. 다른 종속 파일은 없습니다.|  
+|HPUXBaseOS|ベース OS|B.11.23|  
+|HPUXBaseAux|HP-UX ベース OS 補助|B.11.23.0706|  
+|HPUXBaseAux.openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|A.00.09.07l.003|  
+|PAM|プラグ可能な認証モジュール|HP-UX では、PAM はコア オペレーティング システム コンポーネントの一部です。 これ以外には依存関係はありません。|  
 
  **HP-UX 11i v2 PA-RISC**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|HPUX11i-OE|HP-UX 기본 운영 환경|B.11.23.0706|  
-|OS-Core.MinimumRuntime.CORE-SHLIBS|호환 개발 도구 라이브러리|B.11.23|  
-|HPUXBaseAux|HP-UX 기본 OS 보조|B.11.23.0706|  
-|HPUXBaseAux.openssl|OpenSSL Libraries, 보안 네트워크 통신 프로토콜|A.00.09.071.003|  
-|PAM|플러그 가능 인증 모듈|HP-UX에서 PAM은 핵심 운영 체제 구성 요소의 일부입니다. 다른 종속 파일은 없습니다.|  
+|HPUX11i-OE|HP-UX 基本操作環境|B.11.23.0706|  
+|OS-Core.MinimumRuntime.CORE-SHLIBS|互換性のある開発ツールのライブラリ|B.11.23|  
+|HPUXBaseAux|HP-UX ベース OS 補助|B.11.23.0706|  
+|HPUXBaseAux.openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|A.00.09.071.003|  
+|PAM|プラグ可能な認証モジュール|HP-UX では、PAM はコア オペレーティング システム コンポーネントの一部です。 これ以外には依存関係はありません。|  
 
  **HP-UX 11i v3 PA-RISC**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|HPUX11i-OE|HP-UX 기본 운영 환경|B.11.31.0709|  
-|OS-Core.MinimumRuntime.CORE2-SHLIBS|특정 IA 에뮬레이터 라이브러리|B.11.31|  
-|openssl/Openssl.openssl|OpenSSL Libraries, 보안 네트워크 통신 프로토콜|A.00.09.08d.002|  
-|PAM|플러그 가능 인증 모듈|HP-UX에서 PAM은 핵심 운영 체제 구성 요소의 일부입니다. 다른 종속 파일은 없습니다.|  
+|HPUX11i-OE|HP-UX 基本操作環境|B.11.31.0709|  
+|OS-Core.MinimumRuntime.CORE2-SHLIBS|特定 IA エミュレーターのライブラリ|B.11.31|  
+|openssl/Openssl.openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|A.00.09.08d.002|  
+|PAM|プラグ可能な認証モジュール|HP-UX では、PAM はコア オペレーティング システム コンポーネントの一部です。 これ以外には依存関係はありません。|  
 
  **HP-UX 11i v3 IA64**  
 
-|필수 패키지|설명|최소 버전|  
+|必須パッケージ|説明|最小バージョン|  
 |----------------------|-----------------|---------------------|  
-|HPUX11i-OE|HP-UX 기본 운영 환경|B.11.31.0709|  
-|OS-Core.MinimumRuntime.CORE-SHLIBS|특정 IA 개발 라이브러리|B.11.31|  
-|SysMgmtMin|최소 소프트웨어 개발 도구|B.11.31.0709|  
-|SysMgmtMin.openssl|OpenSSL Libraries, 보안 네트워크 통신 프로토콜|A.00.09.08d.002|  
-|PAM|플러그 가능 인증 모듈|HP-UX에서 PAM은 핵심 운영 체제 구성 요소의 일부입니다. 다른 종속 파일은 없습니다.|  
+|HPUX11i-OE|HP-UX 基本操作環境|B.11.31.0709|  
+|OS-Core.MinimumRuntime.CORE-SHLIBS|特定 IA 開発のライブラリ|B.11.31|  
+|SysMgmtMin|最小ソフトウェア展開ツール|B.11.31.0709|  
+|SysMgmtMin.openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|A.00.09.08d.002|  
+|PAM|プラグ可能な認証モジュール|HP-UX では、PAM はコア オペレーティング システム コンポーネントの一部です。 これ以外には依存関係はありません。|  
 
- **Configuration Manager 종속성:** 다음 표에는 Linux 및 UNIX 클라이언트를 지원하는 사이트 시스템 역할이 나열되어 있습니다. 이러한 사이트 시스템 역할에 대한 자세한 내용은 [System Center Configuration Manager 클라이언트에 대한 사이트 시스템 역할 결정](../../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md)을 참조하세요.  
+ **Configuration Manager の依存関係:** 次の表に、Linux および UNIX クライアントをサポートするサイト システムの役割を示します。 これらのサイト システムの役割の詳細については、「[System Center Configuration Manager クライアントのサイト システムの役割の決定](../../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md)」をご覧ください。  
 
-|Configuration Manager 사이트 시스템|추가 정보|  
+|Configuration Manager サイト システム|説明|  
 |---------------------------------------|----------------------|  
-|관리 지점|Linux 및 UNIX용 Configuration Manager 클라이언트를 설치하는 데 관리 지점이 필요하지는 않지만 클라이언트 컴퓨터와 Configuration Manager 서버 간에 정보를 전송하려면 관리 지점이 있어야 합니다. 관리 지점이 없으면 클라이언트 컴퓨터를 관리할 수 없습니다.|  
-|배포 지점|배포 지점은 Linux 및 UNIX용 Configuration Manager 클라이언트 설치에 필요하지 않습니다. 그러나 사이트 시스템 역할은 Linux 및 UNIX 서버에 소프트웨어를 배포 하는 경우 필요 합니다.<br /><br /> Linux 및 UNIX용 Configuration Manager 클라이언트는 SMB를 사용하는 통신을 지원하지 않으므로 클라이언트와 함께 사용하는 배포 지점에서 HTTP 또는 HTTPS 통신을 지원해야 합니다.|  
-|대체 상태 지점|Linux 및 UNIX용 Configuration Manager 클라이언트를 설치하기 위해 대체 상태 지점은 필요하지 않습니다. 그러나 대체 상태 지점을 사용하면 Configuration Manager 사이트의 컴퓨터에서 관리 지점과 통신할 수 없는 경우에 대체 상태 지점을 통해 상태 메시지를 보낼 수 있습니다. 또한 클라이언트는 대체 상태 지점에 해당 설치 상태를 보낼 수 있습니다.|  
+|管理ポイント|Linux および UNIX 用の Configuration Manager クライアントをインストールするのに管理ポイントは必要ありませんが、クライアント コンピューターと Configuration Manager サーバーの間で情報を転送するには管理ポイントが必要です。 管理ポイントがないと、クライアント コンピューターを管理できません。|  
+|配布ポイント|Linux および UNIX 用の Configuration Manager クライアントをインストールするのに配布ポイントは必要ありません。 ただし、Linux および UNIX サーバーにソフトウェアを展開する場合は、サイト システムの役割が必要です。<br /><br /> Linux および UNIX 用の Configuration Manager クライアントは SMB を使用する通信をサポートしないため、クライアントで使用する配布ポイントは HTTP または HTTPS 通信をサポートしている必要があります。|  
+|フォールバック ステータス ポイント|Linux および UNIX 用の Configuration Manager クライアントをインストールするのにフォールバック ステータス ポイントは必要ありません。 ただし、Configuration Manager サイトのコンピューターは、管理ポイントとやり取りできないときに、フォールバック ステータス ポイントを使用して状態メッセージを送信できます。 クライアントでは、フォールバック ステータス ポイントにもインストール ステータスを送信できます。|  
 
- **방화벽 요구 사항**: 방화벽에서 클라이언트 요청 포트를 지정 하는 포트 통신을 차단 하지 않습니다 확인 합니다. Linux 및 UNIX용 클라이언트는 관리 지점, 배포 지점 및 대체 상태 지점과 직접 통신합니다.  
+ **ファイアウォールの要件**:ファイアウォールがクライアントの要求ポートとして指定するポートの間で通信をブロックしないことを確認します。 Linux および UNIX 用のクライアントは、管理ポイント、配布ポイント、フォールバック ステータス ポイントと直接通信します。  
 
- 클라이언트 통신 및 요청 포트에 대한 자세한 내용은 [관리 지점을 찾도록 Linux 및 UNIX용 클라이언트 구성](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP)을 참조하세요.  
+ クライアントの通信および要求のポートの詳細については、「  [管理ポイントを検出するために Linux および UNIX 用のクライアントを構成する](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP)」を参照してください。  
 
-##  <a name="BKMK_PlanningforCommunicationsforLnU"></a> Linux 및 UNIX 서버에 대한 포리스트 트러스트 간 통신 계획  
- Configuration Manager를 사용하여 관리하는 Linux 및 UNIX 서버는 작업 그룹 클라이언트로 작동하며 작업 그룹에 속한 Windows 기반 클라이언트와 유사한 구성이 필요합니다. 작업 그룹에 있는 컴퓨터의 통신에 대한 자세한 내용은 [System Center Configuration Manager에서 끝점 간의 통신](../../../../core/plan-design/hierarchy/communications-between-endpoints.md) 항목의[Active Directory 포리스트 간 통신](../../../../core/plan-design/hierarchy/communications-between-endpoints.md#Plan_Com_X-Forest)을 참조하세요.  
+##  <a name="BKMK_PlanningforCommunicationsforLnU"></a> Linux および UNIX サーバーのフォレストの信頼間の通信の計画  
+ Configuration Manager で管理する Linux および UNIX サーバーはワークグループ クライアントとして動作するため、ワークグループに含まれる Windows ベースのクライアントと同様の構成が必要です。 ワークグループ内にあるコンピューターからの通信の詳細については、「[System Center Configuration Manager でのエンドポイント間の通信](../../../../core/plan-design/hierarchy/communications-between-endpoints.md)」トピックの「[複数の Active Directory フォレスト間での通信](../../../../core/plan-design/hierarchy/communications-between-endpoints.md#Plan_Com_X-Forest)」セクションをご覧ください。  
 
-###  <a name="BKMK_ServiceLocationforLnU"></a> Linux 및 UNIX용 클라이언트에서 서비스 위치  
- 클라이언트에 서비스를 제공 하는 사이트 시스템 서버를 찾는 작업은 서비스 위치 라고 합니다. Windows 기반 클라이언트와 달리 Linux 및 UNIX 용 클라이언트 서비스 위치에 대 한 Active Directory 사용 하지 않습니다. 또한 Linux 및 UNIX용 Configuration Manager 클라이언트는 관리 지점의 도메인 접미사를 지정하는 클라이언트 속성을 지원하지 않습니다. 대신, 클라이언트는 클라이언트 소프트웨어를 설치할 때 할당 된 알려진된 관리 지점에서 클라이언트에 서비스를 제공 하는 추가 사이트 시스템 서버에 대 한 알아냅니다.  
+###  <a name="BKMK_ServiceLocationforLnU"></a> Linux および UNIX 用のクライアントによるサービスの場所  
+ クライアントにサービスを提供するサイト システム サーバーを特定のタスクは、サービスの場所と呼ばれます。 Windows ベースのクライアントと異なり Linux および UNIX 用クライアントは、サービスの場所の Active Directory を使用しません。 さらに、Linux および UNIX 用の Configuration Manager クライアントは、管理ポイントのドメイン サフィックスを指定するクライアント プロパティをサポートしていません。 代わりに、クライアントは、クライアント ソフトウェアをインストールするときに割り当てる、既知の管理ポイントからクライアントにサービスを提供する追加のサイト システム サーバーについて学習します。  
 
- 서비스 위치에 대한 자세한 내용은 [클라이언트가 System Center Configuration Manager에 대한 사이트 리소스 및 서비스를 찾는 방법 이해](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) 항목의 [서비스 위치 및 클라이언트에서 자신의 할당된 관리 지점을 확인하는 방법](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location) 섹션을 참조하세요.  
+ サービスの場所の詳細については、「[クライアントが System Center Configuration Manager のサイト リソースやサービスを検索する方法を理解する](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)」トピックの「[サービスの場所とクライアントが割り当て済み管理ポイントを特定する方法](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location)」セクションをご覧ください。  
 
-##  <a name="BKMK_SecurityforLnU"></a> Linux 및 UNIX 서버에 대한 보안 및 인증서 계획  
- Configuration Manager 사이트와의 안전하고 인증된 통신을 위해 Linux 및 UNIX용 Configuration Manager 클라이언트는 Windows용 Configuration Manager 클라이언트와 동일한 통신 모델을 사용합니다.  
+##  <a name="BKMK_SecurityforLnU"></a> Linux および UNIX サーバーのセキュリティと証明書の計画  
+ Configuration Manager サイトとセキュリティで保護された認証済みの通信を行うために、Linux および UNIX 用の Configuration Manager クライアントは、Windows 用の Configuration Manager クライアントと同じ通信モデルを使用します。  
 
- Linux 및 UNIX 클라이언트를 설치할 때 HTTPS를 사용하여 Configuration Manager 사이트와 통신할 수 있게 하는 PKI 인증서를 클라이언트에 할당할 수 있습니다. PKI 인증서를 할당 하지 않은 경우 클라이언트 자체 서명 된 인증서를 만들고 HTTP를 통해서만 통신 합니다.  
+ Linux および UNIX クライアントのインストール時に、Configuration Manager サイトとの HTTPS を使用した通信を可能にする PKI 証明書をクライアントに割り当てることができます。 PKI 証明書を割り当てない場合、クライアントは自己署名証明書を作成し、HTTP でのみ通信します。  
 
- PKI 인증서를 설치할 때 제공 하는 클라이언트 관리 지점과 통신을 HTTPS를 사용 합니다. 클라이언트를 지 원하는 HTTPS 관리 지점을 찾을 수 없을 때 제공 된 PKI 인증서와 함께 HTTP를 사용 하 여 다시 대체 됩니다.  
+ インストールするときに、PKI 証明書を用意されているクライアントは、管理ポイントと通信するために、HTTPS を使用します。 クライアントは、HTTPS をサポートするための管理ポイントを見つけることが場合、は、指定された PKI 証明書で HTTP を使用するフォールバックはします。  
 
- Linux 또는 UNIX 클라이언트 PKI 인증서를 사용 하는 경우에 승인할 필요가 없습니다. 클라이언트가 자체 서명된 인증서를 사용하는 경우 Configuration Manager 콘솔에서 클라이언트 승인에 대한 계층 구조 설정을 검토합니다. 클라이언트 승인 메서드가 없으면 **(권장 하지 않음) 하는 모든 컴퓨터를 자동으로 승인**, 클라이언트를 수동으로 승인 해야 합니다.  
+ Linux または UNIX クライアント PKI 証明書を使用するときに、それらを承認する必要はありません。 クライアントが自己署名証明書を使用する場合は、Configuration Manager コンソールで階層設定を確認してクライアントを承認する必要があります。 クライアントの認証方法がない場合 **(推奨されません) のすべてのコンピューターを自動的に承認**, 、クライアントを手動で承認する必要があります。  
 
- 클라이언트를 수동으로 승인하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 클라이언트를 관리하는 방법](../../../../core/clients/manage/manage-clients.md) 항목의 [장치 노드에서 클라이언트 관리](../../../../core/clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode) 섹션을 참조하세요.  
+ クライアントを手動で承認する方法の詳細については、「[System Center Configuration Manager でクライアントを管理する方法](../../../../core/clients/manage/manage-clients.md)」トピックの「[[デバイス] ノードを使用してクライアントを管理する](../../../../core/clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode)」セクションをご覧ください。  
 
- Configuration Manager에서 인증서를 사용하는 방법에 대한 자세한 내용은 [System Center Configuration Manager를 위한 PKI 인증서 요구 사항](../../../../core/plan-design/network/pki-certificate-requirements.md)을 참조하세요.  
+ Configuration Manager での証明書の使用方法については、「[System Center Configuration Manager での PKI 証明書の要件](../../../../core/plan-design/network/pki-certificate-requirements.md)」を参照してください。  
 
-###  <a name="BKMK_AboutCertsforLnU"></a> Linux 및 UNIX 서버에서 사용할 인증서 정보  
- Linux 및 UNIX용 Configuration Manager 클라이언트는 Windows 기반 클라이언트와 마찬가지로 자체 서명된 인증서 또는 X.509 PKI 인증서를 사용합니다. Linux 및 UNIX 클라이언트를 관리하는 경우에도 Configuration Manager 사이트 시스템에 대한 PKI 요구 사항은 변경되지 않습니다.  
+###  <a name="BKMK_AboutCertsforLnU"></a> Linux および UNIX サーバーで使用するための証明書について  
+ Linux および UNIX 用の Configuration Manager クライアントは、Windows ベースのクライアントと同じように自己署名証明書または X.509 PKI 証明書を使用します。 Linux および UNIX クライアントを管理する際の Configuration Manager サイト システムの PKI 要件に変更はありません。  
 
- Configuration Manager 사이트 시스템과 통신하는 Linux 및 UNIX 클라이언트에 사용할 인증서는 PKCS(Public Key Certificate Standard) #12 형식이어야 하며 PKI 인증서를 지정할 때 클라이언트에 지정할 수 있도록 암호를 알고 있어야 합니다.  
+ Configuration Manager サイト システムと通信する Linux および UNIX クライアントに使用する証明書は、公開キー証明書標準 (PKCS #12) 形式でなければなりません。また、パスワードは、PKI 証明書を指定するときにクライアントに指定できるように既知である必要があります。  
 
- Linux 및 UNIX용 Configuration Manager 클라이언트는 단일 PKI 인증서를 지원하며 여러 인증서를 지원하지 않습니다. 따라서 Configuration Manager 사이트에 대해 구성하는 인증서 선택 조건은 적용되지 않습니다.  
+ Linux および UNIX 用の Configuration Manager クライアントは単一の PKI 証明書をサポートし、複数の証明書はサポートしていません。 したがって、Configuration Manager サイトに構成する証明書の選択基準は適用されません。  
 
-###  <a name="BKMK_ConfigCertsforLnU"></a> Linux 및 UNIX 서버에 대한 인증서 구성  
- HTTPS 통신을 사용하도록 Linux 및 UNIX 서버용 Configuration Manager 클라이언트를 구성하려면 클라이언트를 설치할 때 PKI 인증서를 사용하도록 클라이언트를 구성해야 합니다. 클라이언트 소프트웨어를 설치 하기 전에 인증서를 프로 비전 할 수 없습니다.  
+###  <a name="BKMK_ConfigCertsforLnU"></a> Linux および UNIX サーバーの証明書の構成  
+ HTTPS 通信を使用するように Linux および UNIX サーバー対応の Configuration Manager クライアントを構成するには、クライアントのインストール時に、PKI 証明書を使用するようにクライアントを構成する必要があります。 クライアント ソフトウェアのインストール前に証明書をプロビジョニングすることはできません。  
 
- 명령줄 매개 변수를 사용 하는 PKI 인증서를 사용 하는 클라이언트를 설치 하면 **-UsePKICert** PKI 인증서가 포함 된 PKCS #12 파일의 이름과 위치를 지정할 수 있습니다. 또한 명령줄 매개 변수를 사용 해야 **-certpw** 인증서에 대 한 암호를 지정 합니다.  
+ コマンド ライン パラメーターを使用する、PKI 証明書を使用するクライアントをインストールするときに **- UsePKICert** PKI 証明書を含む PKCS #12 ファイルの名前と場所を指定します。 さらに、コマンド ライン パラメーターを使用する必要があります **- certpw** 証明書のパスワードを指定します。  
 
- 지정 하지 않으면 **-UsePKICert**, 클라이언트는 자체 서명 된 인증서를 생성 하 고만 HTTP를 사용 하 여 사이트 시스템 서버와 통신 하려고 시도 합니다.  
+ 指定しない場合 **- UsePKICert**, 、クライアントは、自己署名証明書を生成し、HTTP をのみを使用してサイト システム サーバーと通信しようとしています。  
 
-##  <a name="BKMK_NoSHA-256"></a> SHA-256을 지원하지 않는 Linux 및 UNIX 운영 체제 정보  
- Configuration Manager용 클라이언트로 지원되는 다음 Linux 및 UNIX 운영 체제는 SHA-256을 지원하지 않는 OpenSSL 버전과 함께 릴리스되었습니다.  
+##  <a name="BKMK_NoSHA-256"></a> SHA-256 をサポートしていない Linux および UNIX オペレーティング システムについて  
+ Configuration Manager のクライアントとしてサポートされている以下の Linux および UNIX オペレーティング システムは、SHA-256 をサポートしないバージョンの OpenSSL でリリースされました。  
 
--   Red Hat Enterprise Linux 버전 4 (x86/x64)  
+-   Red Hat Enterprise Linux バージョン 4 (x86 と x64)  
 
--   Solaris 9 (SPARC) 버전과 버전 Solaris 10 (SPARC/x 86)  
+-   Solaris バージョン 9 (SPARC)、Solaris バージョン 10 (SPARC/x86)  
 
--   (X86) SUSE Linux Enterprise Server 버전 9  
+-   SUSE Linux Enterprise サーバーのバージョン 9 (x86)  
 
--   HP-UX 버전 11iv2 (PA-RISH/IA64)  
+-   HP-UX バージョン 11iv2 (PA-RISH/IA64)  
 
- Configuration Manager를 사용하여 이러한 운영 체제를 관리하려면 클라이언트에 SHA-256의 유효성 검사를 건너뛰도록 지시하는 명령줄 스위치로 Linux 및 UNIX용 Configuration Manager 클라이언트를 설치해야 합니다. 이러한 운영 체제 버전에서 실행되는 Configuration Manager 클라이언트는 SHA-256을 지원하는 클라이언트보다 덜 안전한 모드로 작동합니다. 다음 동작을 포함 하는 작업의 보안성이 모드:  
+ これらのオペレーティング システムを Configuration Manager で管理するには、クライアントに SHA-256 の検証をスキップするよう指示するコマンド ライン スイッチを使用して、Linux および UNIX 用の Configuration Manager クライアントをインストールする必要があります。 これらのオペレーティング システム バージョンで実行される Configuration Manager クライアントは、SHA-256 をサポートしているクライアントに比べ、安全性の低いモードで動作します。 このような安全性の低い操作モードには、次のような動作があります。  
 
--   클라이언트는 관리 지점에서 요청할 정책과 연결 된 사이트 서버 서명 유효성을 검사 하지 않습니다.  
+-   クライアントでは、管理ポイントから要求するポリシーに関連付けられているサイト サーバー署名は検証されません。  
 
--   클라이언트는 배포 지점에서 다운로드 하는 패키지에 대 한 해시를 확인 하지 않습니다.  
+-   クライアントでは、配布ポイントからダウンロードしたパッケージのハッシュは検証されません。  
 
 > [!IMPORTANT]  
->  **ignoreSHA256validation** 옵션을 사용 하면 덜 안전 모드에서 Linux 및 UNIX 컴퓨터에 대 한 클라이언트를 실행할 수 있습니다. 이 s h A 256에 대 한 지원을 포함 하지 않는 오래 된 플랫폼에서 사용이 됩니다. 이 보안 재정의 및 Microsoft에서 권장 되지 않습니다 이지만 안전 하 고 신뢰할 수 있는 데이터 센터 환경에서 사용 하기 위해 지원 됩니다.  
+>  **IgnoreSHA256validation** オプションでは、安全性の低いモードでの Linux および UNIX のコンピューター用のクライアントを実行できます。 これは sha-256 のサポートが含まれていません古いプラットフォームで使用するためのものです。 この、セキュリティ設定を優先とは、Microsoft で勧めしませんが、サポートされて、セキュリティで保護された信頼できるデータ センター環境で使用するためです。  
 
- Linux 및 UNIX용 Configuration Manager 클라이언트를 설치할 때 설치 스크립트는 운영 체제 버전을 확인합니다. 기본적으로 운영 체제 버전이 SHA-256을 지원하는 OpenSSL 버전 없이 릴리스된 것으로 식별되면 Configuration Manager 클라이언트 설치에 실패합니다.  
+ Linux および UNIX 用の Configuration Manager クライアントをインストールする際に、インストール スクリプトがオペレーティング システムのバージョンを確認します。 既定では、オペレーティング システムのバージョンが SHA-256 をサポートしているバージョンの OpenSSL でリリースされていないことが識別されると、Configuration Manager クライアントのインストールが失敗します。  
 
- SHA-256을 지원하는 OpenSSL 버전과 함께 릴리스되지 않은 Linux 및 UNIX 운영 체제에 Configuration Manager 클라이언트를 설치하려면 설치 명령줄 스위치 **ignoreSHA256validation**을 사용해야 합니다. 적용 가능한 Linux 또는 UNIX 운영 체제에서 이 명령줄 옵션을 사용하면 Configuration Manager 클라이언트는 SHA-256 유효성 검사를 건너뛰며, 설치 후에 클라이언트에서 SHA-256을 사용하여 HTTP를 통해 사이트 시스템으로 전송하는 데이터에 서명하지 않습니다. 인증서를 사용하도록 Linux 및 UNIX 클라이언트를 구성하는 방법에 대한 자세한 내용은 이 항목에서 [Planning for Security and Certificates for Linux and UNIX Servers](#BKMK_SecurityforLnU) 을 참조하세요. SHA-256을 요구하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 보안 구성](../../../../core/plan-design/security/configure-security.md) 항목의 [서명 및 암호화 구성](../../../../core/plan-design/security/configure-security.md#BKMK_ConfigureSigningEncryption) 섹션을 참조하세요.  
+ SHA-256 をサポートするバージョンの OpenSSL でリリースされていない Linux および UNIX オペレーティング システムに Configuration Manager クライアントをインストールするには、インストール コマンド ライン スイッチ **ignoreSHA256validation** を使用する必要があります。 このコマンド ライン オプションを該当する Linux または UNIX オペレーティング システムで使用すると、Configuration Manager クライアントは SHA-256 の検証をスキップします。この場合、インストール後のクライアントは、HTTP を使用してサイト システムに送信するデータに SHA-256 を使用して署名しません。 証明書を使用するように Linux および UNIX クライアントを構成する方法については、このトピックの「 [Planning for Security and Certificates for Linux and UNIX Servers](#BKMK_SecurityforLnU) 」を参照してください。 SHA-256 を必要とする方法の詳細については、「[System Center Configuration Manager でのセキュリティの構成](../../../../core/plan-design/security/configure-security.md)」トピックの「[署名と暗号化の構成](../../../../core/plan-design/security/configure-security.md#BKMK_ConfigureSigningEncryption)」セクションをご覧ください。  
 
 > [!NOTE]  
->  명령줄 옵션 **ignoreSHA256validation** s h A-256을 지원 하는 버전의 OpenSSL와 Linux 및 UNIX 릴리스된 버전을 실행 하는 컴퓨터에서 무시 됩니다.  
+>  コマンド ライン オプション **ignoreSHA256validation** sha-256 をサポートする OpenSSL のバージョンでの Linux および UNIX のリリース バージョンを実行するコンピューターでは無視されます。  

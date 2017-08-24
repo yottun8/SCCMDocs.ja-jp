@@ -1,6 +1,6 @@
 ---
-title: "옵션 구성 | Microsoft 문서"
-description: "System Center Updates Publisher 사용 옵션 구성"
+title: "オプションの構成 | Microsoft Docs"
+description: "System Center Updates Publisher を使用するためのオプションを構成する"
 ms.custom: na
 ms.date: 4/29/2017
 ms.prod: configuration-manager
@@ -18,135 +18,135 @@ robots: NOINDEX, NOFOLLOW
 ms.openlocfilehash: b66ed0a5e1c87d8c82853da86e3d55b0e2c043bb
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="configure-options-for-updates-publisher"></a>Updates Publisher의 옵션 구성
+# <a name="configure-options-for-updates-publisher"></a>Updates Publisher のオプションを構成する
 
-*적용 대상: System Center Updates Publisher*
+*適用対象: System Center Updates Publisher*
 
-Updates Publisher의 작동에 영향을 주는 옵션 및 관련 설정을 검토하고 구성합니다.
+Updates Publisher の操作に影響するオプションおよび関連する設定を確認し、構成します。
 
-Updates Publisher 옵션에 액세스하려면 콘솔의 왼쪽 상단 모서리에 있는 **Updates Publisher** **속성** 탭을 선택한 다음 **옵션**을 선택합니다.
+Updates Publisher のオプションにアクセスするには、コンソールの左上隅で、**[Updates Publisher]** **[プロパティ]** タブを開き、**[オプション]** を選択します。
 
 ![Options](media/properties1.png)   
 
 
-옵션은 다음으로 구분됩니다.
+オプションは、次のように分けられています。
 
--   업데이트 서버
--   ConfigMgr 서버
--   프록시 설정
--   신뢰할 수 있는 게시자
--   고급
--   업데이트
--   로깅
+-   更新サーバー
+-   ConfigMgr サーバー
+-   プロキシの設定
+-   信頼された発行元
+-   詳細設定
+-   更新プログラム
+-   ログの記録
 
-## <a name="update-server"></a>업데이트 서버
-WSUS(Windows Server Update Services)와 같은 업데이트 서버에서 작동하도록 Updates Publisher를 구성해야 [업데이트 게시](/sccm/sum/tools/manage-updates-with-updates-publisher#publish-updates-and-bundles)가 가능합니다. 이러한 구성에는 서버를 지정하고 콘솔의 원격 서버인 해당 서버에 연결하는 방법을 지정하고 게시하는 디지털 서명 업데이트에 사용할 인증서를 지정하는 작업이 포함됩니다.
+## <a name="update-server"></a>更新サーバー
+[更新プログラムを公開](/sccm/sum/tools/manage-updates-with-updates-publisher#publish-updates-and-bundles)するには、その前に、Windows Server Update Services (WSUS) などの更新サーバーと連携するように Updates Publisher を構成する必要があります。 これには、サーバーの指定、コンソールからリモートである場合にこのサーバーに接続する方法、および発行する更新プログラムのデジタル署名に使用する証明書が含まれています。
 
--   **업데이트 서버를 구성**합니다. 업데이트 서버를 구성할 때 모든 자식 사이트가 게시하는 업데이트에 대한 액세스 권한을 갖도록 Configuration Manager 계층 구조에서 최상위 WSUS 서버(업데이트 서버)를 선택합니다.
+-   **更新サーバーを構成します**。 更新サーバーを構成するときに、Configuration Manager 階層の最上位の WSUS サーバー (更新サーバー) を選択して、発行する更新プログラムにすべての子サイトがアクセスできるようにします。
 
-  업데이트 서버가 Updates Publisher 서버의 원격 서버이고 SSL로 연결된 경우 서버의 FQDN(정규화된 도메인 이름)을 지정합니다. SSL로 연결할 경우 기본 포트가 8530에서 8531로 변경됩니다. 설정한 포트가 업데이트 서버에서 사용 중인 포트와 일치하는지 확인합니다.
+  更新サーバーが Updates Publisher サーバーからリモートの場合は、サーバーの完全修飾ドメイン名 (FQDN) を指定します。 SSL で接続する場合、既定のポートが 8530 から 8531 に変わります。 設定したポートが更新サーバーで使用されているポートと一致していることを確認してください。
 
     > [!TIP]  
-    > 업데이트 서버를 구성하지 않은 경우 Updates Publisher를 계속 사용하여 소프트웨어 업데이트를 작성할 수 있습니다.
+    > 更新サーバーを構成しない場合でも、ソフトウェア更新プログラムの作成に Updates Publisher を使用できます。
 
--   **서명 인증서를 구성**합니다. 먼저 업데이트 서버를 구성하여 성공적으로 연결해야 서명 인증서를 구성할 수 있습니다.
+-   **署名証明書を構成します**。 署名証明書を構成するには、更新サーバーを構成して正常に接続できている必要があります。
 
-    Updates Publisher는 서명 인증서를 사용하여 업데이트 서버에 게시된 소프트웨어 업데이트에 서명합니다. Updates Publisher를 실행하는 업데이트 서버 또는 컴퓨터의 인증서 저장소에서 디지털 인증서를 사용할 수 없는 경우 게시가 실패합니다.
+    Updates Publisher では、署名証明書を使用して、更新サーバーに発行されるソフトウェア更新プログラムに署名します。 更新サーバーまたは Updates Publisher を実行しているコンピューターの証明書ストアでデジタル証明書が使用できない場合、発行は失敗します。
 
-    인증서 저장소에 인증서를 추가하는 방법에 대한 자세한 내용은 [Updates Publisher의 인증서 및 보안](/sccm/sum/tools/updates-publisher-security)을 참조하세요.
+    証明書ストアに証明書を追加する方法の詳細については、「[Updates Publisher の証明書とセキュリティ](/sccm/sum/tools/updates-publisher-security)」を参照してください。
 
-    업데이트 서버에 대한 디지털 인증서가 자동으로 검색되지 않으면 다음 중 하나를 선택합니다.
+    更新サーバーに対するデジタル証明書が自動的に検出されない場合は、次のいずれかを選択します。
 
-    -   **찾아보기**: 찾아보기는 콘솔을 실행하는 서버에 업데이트 서버가 설치된 경우에만 사용할 수 있습니다. 인증서를 선택한 후 **만들기**를 선택하여 해당 인증서를 업데이트 서버의 WSUS 인증서 저장소에 추가해야 합니다. 이러한 방법으로 선택한 인증서의 **.pfx** 파일 암호를 입력해야 합니다.
+    -   **[参照]**: [参照] は、更新サーバーがコンソールを実行するサーバーにインストールされている場合にのみ使用できます。 証明書を選択した後、**[作成]** を選択して、更新サーバーの WSUS 証明書ストアにその証明書を追加する必要があります。 この方式によって選択する証明書の **.pfx** ファイルのパスワードを入力する必要があります。
 
-    -   **만들기:** 이 옵션을 사용하여 새 인증서를 만듭니다. 또한 이 옵션으로 업데이트 서버의 WSUS 인증서 저장소에 인증서를 추가합니다.
+    -   **[作成]**: このオプションを使用して、新しい証明書を作成します。 これにより、更新サーバーの WSUS 証明書ストアにも証明書が追加されます。
 
-    **자체 서명 인증서를 만드는 경우** 다음을 구성합니다.
+    **独自の署名証明書を作成する場合は**、次を構成します。
 
-    -   **개인 키를 내보낼 수 있음** 옵션을 사용하도록 설정합니다.
+    -   **[秘密キーのエクスポートを許可する]** オプションを有効にします。
 
-    -   **키 사용**을 디지털 서명으로 설정합니다.
+    -   **[キー使用法]** にデジタル署名を設定します。
 
-    -   **최소 키 크기**를 2048비트보다 크거나 같은 값으로 설정합니다.
+    -   **[キーの最小サイズ]** に 2048 ビット以上の値を設定します。
 
-    **제거** 옵션을 사용하여 WSUS 인증서 저장소에서 인증서를 제거합니다. 이 옵션은 업데이트 서버가 사용하는 Updates Publisher 콘솔의 로컬 서버이거나 **SSL**을 사용하여 원격 업데이트 서버에 연결한 경우에 사용할 수 있습니다.
+    WSUS 証明書ストアから証明書を削除するには、**[削除]** オプションを使用します。 このオプションは、更新サーバーが使用する Updates Publisher コンソールに対してローカルである場合、または **SSL** を使用してリモート更新サーバーに接続しているときに利用可能です。
 
-## <a name="configmgr-server"></a>ConfigMgr 서버
-Updates Publisher에서 Configuration Manager를 사용할 경우 이러한 옵션을 사용합니다.
+## <a name="configmgr-server"></a>ConfigMgr サーバー
+Updates Publisher と Configuration Manager を合わせて使用する場合は、これらのオプションを使用します。
 
--   **Configuration Manager 서버 지정:** Configuration Manager에 대한 지원을 사용하도록 설정한 후 Configuration Manager 계층 구조에서 최상위 계층 사이트 서버의 위치를 지정합니다. 해당 서버가 Updates Publisher 설치의 원격 서버인 경우 사이트 서버의 FQDN을 지정합니다. **연결 테스트**를 선택하여 사이트 서버에 연결할 수 있는지 확인합니다.
+-   **Configuration Manager サーバーを指定する:** Configuration Manager のサポートを有効にした後で、Configuration Manager 階層から最上位階層サイト サーバーの場所を指定します。 Updates Publisher のインストールからリモートのサーバーの場合は、サイト サーバーの FQDN を指定します。 **[接続のテスト]** を選択してサイト サーバーに接続できることを確認します。
 
--   **임계값 구성:** 임계값은 자동 게시물 유형으로 업데이트를 게시할 때 사용됩니다. 임계값은 메타데이터만이 아닌, 업데이트에 대한 전체 콘텐츠가 게시되는 시기를 결정하는 데 도움이 됩니다. 게시물 유형에 대한 자세한 내용은 [게시물에 업데이트 할당](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)을 참조하세요.
+-   **しきい値を構成する:** しきい値は、パブリケーションの種類を [自動] にして更新プログラムを発行する場合に使用されます。 しきい値の値は、メタデータのみではなく、更新プログラムの完全なコンテンツを発行するかを判別するために役立ちます。 パブリケーションの種類について詳しくは、「[更新プログラムをパブリケーションに割り当てる](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)」を参照してください。
 
-    다음 임계값 중 하나 또는 둘 다 사용할 수 있습니다.
+    以下のしきい値のうち一方または両方を使用できます。
 
-    -   **요청된 클라이언트 수 임계값:** Updates Publisher에서 해당 업데이트의 전체 콘텐츠 집합을 자동으로 게시하기 전에 업데이트를 요청해야 할 클라이언트 수를 정의합니다. 지정된 수의 클라이언트가 업데이트를 요청할 때까지 업데이트 메타데이터만 게시됩니다.
+    -   **[Requested client count threshold]\(要求したクライアント数のしきい値):** Updates Publisher でこの更新プログラムの完全なセットを自動的に発行する前に、この更新プログラムを要求する必要のあるクライアントの数を定義します。 指定した数のクライアントがこの更新プログラムを要求するまでは、更新プログラムのメタデータのみが発行されます。
 
-    -   **패키지 원본 크기 임계값(MB):** 지정한 크기를 초과하는 업데이트가 자동 게시되지 않도록 합니다. 업데이트 크기가 이 값을 초과하는 경우 메타데이터만 게시됩니다. 지정된 크기보다 작은 업데이트의 경우 전체 콘텐츠를 게시할 수 있습니다.
+    -   **[Package source size threshold (MB)][パッケージ ソースのサイズのしきい値 (MB)]:** これにより、指定したサイズを超える更新プログラムを自動発行できないようにします。 更新プログラムのサイズがこの値を超えている場合は、メタデータのみが発行されます。 指定したサイズよりも小さい更新プログラムは、完全なコンテンツを発行できます。
 
-## <a name="proxy-settings"></a>프록시 설정
-Updates Publisher는 인터넷에서 소프트웨어 카탈로그를 가져오거나 인터넷에 업데이트를 게시할 때 프록시 설정을 사용합니다.
+## <a name="proxy-settings"></a>プロキシの設定
+Updates Publisher は、インターネットからソフトウェア カタログをインポートするときや、更新プログラムをインターネットに公開するときに、プロキシ設定を使用します。
 
--   프록시 서버의 FQDN 또는 IP 주소를 지정합니다. IPv4 및 IPv6이 지원됩니다.
+-   プロキシ サーバーの FQDN または IP アドレスを指定します。 IPv4 と IPv6 がサポートされます。
 
--   프록시 서버에서 인터넷 액세스에 대해 사용자를 인증하는 경우 Windows 이름을 지정해야 합니다. UPN(범용 계정 이름)은 지원되지 않습니다.
+-   プロキシ サーバーでインターネット アクセス用にユーザーを認証する場合は、Windows 名を指定する必要があります。 ユニバーサル プリンシパル名 (UPN) はサポートされていません。
 
-## <a name="trusted-publishers"></a>신뢰할 수 있는 게시자
-업데이트 카탈로그를 가져올 때 해당 인증서 기반의 해당 카탈로그 원본은 신뢰할 수 있는 게시자로 추가됩니다. 마찬가지로 업데이트를 게시할 때 업데이트 인증서 원본은 신뢰할 수 있는 게시자로 추가됩니다.
+## <a name="trusted-publishers"></a>信頼された発行元
+更新プログラム カタログをインポートするときは、そのカタログのソース (その証明書に基づく) が、信頼された発行元として追加されます。 同様に、更新プログラムを発行するときは、更新プログラムの証明書のソースが信頼された発行元として追加されます。
 
-각 게시자에 대한 인증서 세부 정보를 보고 신뢰할 수 있는 게시자 목록에서 게시자를 제거할 수 있습니다.
+各発行者の証明書の詳細を表示でき、信頼された発行元の一覧から発行元を削除できます。
 
-신뢰할 수 없는 게시자의 콘텐츠는 클라이언트가 업데이트를 검색할 때 클라이언트 컴퓨터를 잠재적으로 손상시킬 수 있습니다. 신뢰할 수 있는 게시자의 콘텐츠만 수락해야 합니다.
+信頼されていない発行元からのコンテンツは、クライアントが更新プログラムをスキャンするときに、クライアント コンピューターで問題を起こす可能性があります。 信頼された発行元からのみコンテンツのみを受け入れる必要があります。
 
-## <a name="advanced"></a>고급
-고급 옵션에는 다음이 포함됩니다.
+## <a name="advanced"></a>詳細設定
+[詳細設定] オプションは、次のとおりです。
 
--   **리포지토리 위치:** **scupdb.sdf** 데이터베이스 파일의 위치를 보고 수정합니다. 이 파일은 Updates Publisher의 리포지토리입니다.
+-   **[データベースの場所]:** データベース ファイル **scupdb.sdf** の場所を表示および変更します。 このファイルは、Updates Publisher のリポジトリです。
 
--   **타임스탬프:** 사용하도록 설정하면 서명하는 업데이트에 타임스탬프가 추가되어 서명 시기를 식별할 수 있습니다. 인증서가 유효한 동안 서명된 업데이트는 서명 인증서가 만료된 이후에도 사용할 수 있습니다. 기본적으로 소프트웨어 업데이트는 서명 인증서가 만료된 후에는 배포할 수 없습니다.
+-   **[タイムスタンプ]:** 有効な場合、署名日時を示すタイムスタンプが署名する更新プログラムに追加されます。 証明書が有効なときに署名された更新プログラムは、その署名証明書の期限が切れた後も使用できます。 既定では、署名証明書の期限が切れた後は、ソフトウェア更新プログラムをデプロイできません。
 
--   **구독 카탈로그에 대한 업데이트 확인:** Updates Publisher가 시작될 때마다 구독하는 카탈로그에 대한 업데이트를 자동으로 확인할 수 있습니다. 카탈로그 업데이트를 찾으면 세부 정보가 **업데이트 작업 영역**의 **개요** 창에 **최근 경고**로 제공됩니다.
+-   **[Check for updates to subscribed catalogs]\(サブスクライズ済みのカタログを調べて更新プログラムを確認する):** Updates Publisher では、起動されるたびに、サブスクライブされているカタログで更新プログラムを確認できます。 カタログの更新が検出されると、**[更新プログラム ワークスペース]**の **[概要]** ウィンドウに **[最近のアラート]** として詳細が表示されます。
 
--   **인증서 해지:** 인증서 해지 확인을 사용하도록 설정하려면 이 옵션을 선택합니다.
+-   **[証明書失効]:** 証明書失効のチェックを有効にするには、このオプションを選択します。
 
--   **로컬 원본 게시:** Updates Publisher는 인터넷에서 해당 업데이트를 다운로드하기 전에 게시 중인 업데이트의 로컬 복사본을 사용할 수 있습니다. 위치는 Updates Publisher를 실행하는 컴퓨터에 있는 폴더여야 합니다. 기본적으로 이 위치는 **My Documents\LocalSourcePublishing**입니다. 이전에 하나 이상의 업데이트를 다운로드했거나 배포하려는 업데이트를 수정한 경우 이 옵션을 사용합니다.
+-   **[Local source publishing]\(ローカル ソースの発行):** Updates Publisher は、インターネットからその更新プログラムをダウンロードする前に、発行中の更新プログラムのローカル コピーを使用できます。 この場所は、Updates Publisher を実行しているコンピューター上のフォルダーである必要があります。 この場所は、既定では、**マイ ドキュメント\LocalSourcePublishing** です。 既に 1 つまたは複数の更新プログラムをダウンロードしてあるか、デプロイする更新プログラムに変更を加えたときに、これを使用します。
 
--   **Software Updates Cleanup Wizard**(소프트웨어 업데이트 정리 마법사): 업데이트 정리 마법사를 시작합니다. 마법사는 업데이트 서버에 있지만 Updates Publisher 리포지토리에 없는 업데이트를 만료시킵니다. 자세한 내용은 [참조되지 않은 업데이트 만료](#expire-unreferenced-software-updates)를 참조하세요.
+-   **[Software Updates Cleanup Wizard]\(ソフトウェア更新プログラムのクリーンアップ ウィザード):** 更新プログラムのクリーンアップ ウィザードを起動します。 このウィザードでは、更新サーバーにある一方で Updates Publisher リポジトリにない更新プログラムを期限切れにします。 詳細については、「[参照されていない更新プログラムを期限切れにする](#expire-unreferenced-software-updates)」を参照してください
 
-## <a name="updates"></a>업데이트
- Updates Publisher가 열릴 때마다 자동으로 새 업데이트를 확인할 수 있습니다. Updates Publisher의 미리 보기 빌드 수신을 선택할 수도 있습니다.
+## <a name="updates"></a>更新プログラム
+ Updates Publisher は、開くたびに新しい更新プログラムを自動的に確認できます。 Updates Publisher のプレビュー ビルドを受け取ることも選択できます。
 
-수동으로 업데이트를 확인하려면 Updates Publisher 콘솔에서 ![속성](media/properties2.png)을 클릭하여  
-**Updates Publisher 속성**을 연 다음 **업데이트 확인**을 선택합니다.
+手動で更新プログラムをチェックするには、Updates Publisher コンソールで、![[プロパティ]](media/properties2.png)  
+をクリックして、**[Updates Publisher Properties]\(Updates Publisher のプロパティ)** を開き、**[Check for update]\(更新プログラムのチェック)** を選択します。
 
-Updates Publisher가 새 업데이트를 찾은 후 **업데이트 사용 가능** 창이 표시되면 업데이트를 설치하도록 선택할 수 있습니다. 업데이트를 설치하지 않도록 선택하는 경우 다음 콘솔을 열 때 제공됩니다.
+Updates Publisher で新しい更新プログラムを検出すると、**[更新プログラムを利用可能]** ウィンドウが表示され、選択してインストールできます。 更新プログラムをインストールしない場合は、次回コンソールを開くときに提供されます。
 
-## <a name="logging"></a>로깅
-Updates Publisher는 **&lt;*path*&gt;\Windows\Temp\UpdatesPublisher.log**에 Updates Publisher에 대한 기본 정보를 기록합니다.
+## <a name="logging"></a>ログの記録
+Updates Publisher は Updates Publisher についての基本的な情報を   **&lt;*パス*&gt;\Windows\Temp\UpdatesPublisher.log** ログに記録します。
 
-로그를 보려면 메모장 또는 **CMTrace**를 사용합니다. CMTrace는 Configuration Manager 로그 파일 도구이며 Configuration Manager 원본 미디어의 **\SMSSetup\Tools** 폴더에 있습니다.
+メモ帳または **CMTrace** を使用してログを表示します。 CMTrace は Configuration Manager のログ ファイル ツールで、Configuration Manager のソース メディアの **\SMSSetup\Tools** フォルダーにあります。
 
-로그의 크기 및 해당 수준의 세부 정보를 변경할 수 있습니다.
+ログのサイズとその詳細レベルを変更できます。
 
-데이터베이스 로깅을 사용하도록 설정하면 Updates Publisher 데이터베이스에 대해 실행되는 쿼리 정보가 포함됩니다. 데이터베이스 로깅을 사용하면 Updates Publisher 컴퓨터의 성능이 저하될 수 있습니다.
+データベース ログを有効にすると、Updates Publisher データベースに対して実行されるクエリに関する情報が含まれます。 データベース ログの使用は、Updates Publisher コンピューターのパフォーマンスの低下につながることがあります。
 
-로그 파일을 보려면 콘솔에서 ![속성](media/properties2.png)을 클릭하여 **Updates Publisher 속성**을 연 다음 **로그 파일 보기**를 선택합니다.
+ログ ファイルを表示するには、コンソールで ![[プロパティ]](media/properties2.png) をクリックして **[Updates Publisher Properties]\(Updates Publisher のプロパティ)** を開き、**[ログ ファイルの表示]** を選択します。
 
-## <a name="expire-unreferenced-software-updates"></a>참조되지 않은 소프트웨어 업데이트 만료
-**Software Update Cleanup Wizard**(소프트웨어 업데이트 정리 마법사)를 실행하여 업데이트 서버에 있지만 Updates Publisher 리포지토리에는 없는 업데이트를 만료시킵니다. 그러면 Configuration Manager에 통보하여 이후의 모든 배포에서 해당 업데이트를 제거합니다.
+## <a name="expire-unreferenced-software-updates"></a>参照されていないソフトウェア更新プログラムを期限切れにする
+**Software Update Cleanup (ソフトウェア更新プログラムのクリーンアップ) ウィザード**を実行すると、更新サーバー上にある一方で Updates Publisher リポジトリにない更新プログラムを期限切れにすることができます。 これが Configuration Manager に通知されて、将来の展開からこれらの更新プログラムが削除されます。
 
-업데이트를 만료시키는 작업은 되돌릴 수 없습니다. 선택한 소프트웨어 업데이트가 더 이상 조직에 필요하지 않은 경우에만 이 작업을 수행합니다.
+更新プログラムを期限切れにする操作を元に戻すことはできません。 このタスクは、選択したソフトウェア更新プログラムが、組織で不要になったことを確認してからのみ実行してください。
 
-### <a name="to-remove-expired-software-updates"></a>만료된 소프트웨어 업데이트를 제거하려면
-1.  Updates Publisher 콘솔에서 ![속성](media/properties2.png)을 클릭하여 **Updates Publisher 속성**을 연 다음 **옵션**을 선택합니다.
+### <a name="to-remove-expired-software-updates"></a>期限切れのソフトウェア更新プログラムを削除するには
+1.  Updates Publisher コンソールで ![[プロパティ]](media/properties2.png) をクリックして **[Updates Publisher Properties]\(Updates Publisher のプロパティ)** を開き、**[オプション]** を選択します。
 
-2.  **고급**을 선택한 다음 **Software Update Clean Wizard**(소프트웨어 업데이트 정리 마법사)에서 **시작**을 선택합니다.
+2.  **[詳細設定]** を選択し、**[Software Update Clean Wizard]\(ソフトウェア更新プログラムのクリーンアップ ウィザード)** で、**[開始]** を選択します。
 
-3.  만료시킬 소프트웨어 업데이트를 선택한 후 **다음**을 선택합니다.
+3.  期限切れにするソフトウェア更新プログラムを選択してから **[次へ]** を選択します。
 
-4.  선택 항목을 검토한 후 **다음**을 선택하여 선택 항목을 수락하고 해당 업데이트를 만료시킵니다.
+4.  選択内容を確認してから、**[次へ]** を選択して、選択内容を受け入れ、これらの更新プログラムを期限切れにします。
 
-5.  마법사가 완료되면 **닫기**를 선택하여 마법사를 마칩니다.
+5.  ウィザードが完了してから **[閉じる]** を選択してウィザードを完了します。

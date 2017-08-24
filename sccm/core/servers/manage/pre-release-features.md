@@ -1,6 +1,6 @@
 ---
-title: "시험판 기능 | Microsoft Docs"
-description: "System Center Configuration Manager의 시험판 기능"
+title: "プレリリース機能 | Microsoft Docs"
+description: "System Center Configuration Manager のプレリリース機能"
 ms.custom: na
 ms.date: 7/31/2017
 ms.prod: configuration-manager
@@ -17,44 +17,44 @@ manager: angrobe
 ms.openlocfilehash: 7b594daeed81ef2d991ad06489f9184a69804117
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="pre-release-features-in-system-center-configuration-manager"></a>System Center Configuration Manager의 시험판 기능
-*적용 대상: System Center Configuration Manager(현재 분기)*
+# <a name="pre-release-features-in-system-center-configuration-manager"></a>System Center Configuration Manager のプレリリース機能
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-시험판 기능은 프로덕션 환경에서의 초기 테스트를 위해 현재 분기에 포함된 기능입니다. 이러한 기능은 완전하게 지원되지만 아직 개발 중인 상태이므로 시험판 범주에서 벗어날 때까지는 변경될 수 있습니다.
+プレリリース機能は、運用環境での初期テスト用の Current Branch に含まれている機能です。 これらの機能は完全にサポートされていますが、現在開発中のため、プレリリースのカテゴリから移動するまでは変更が行われる可能性があります。
 
- 시험판 기능을 사용하려면 먼저 Configuration Manager 콘솔에서 시험판 기능을 사용한다는 데 동의해야 합니다. 그래야 해당 기능을 선택하고 사용하도록 설정할 수 있습니다.  
+ プレリリース機能を使用できるようになる前に、Configuration Manager コンソールのプレリリース機能を使用することに同意してはじめて、その機能を選択して使用を有効にすることができます。  
 
-동의는 실행 취소할 수 없는 계층당 일회성 작업입니다. 동의할 때까지 업데이트에 포함된 새 시험판 기능을 사용하도록 설정할 수 없습니다. 시험판 기능을 설정한 후에는 해제할 수 없습니다.
+同意する操作は階層ごとに 1 回限りの操作であり、元に戻すことはできません 同意するまでは、更新プログラムに含まれている新しいプレリリース機能を有効にすることはできません。 プレリリース機能を有効にした後で無効にすることはできません。
 
-동의하려면 콘솔에서 **관리** > **사이트 구성** > **사이트**로 이동한 다음 **계층 설정**을 선택합니다. **일반** 탭에서 **시험판 기능 사용 동의**를 선택합니다.
+同意するには、コンソールで、**[管理]** > **[サイトの構成]** > **[サイト]** に移動してから、**[階層設定]** を選択します。 **[全般]** タブで、**[プレリリース機能を使用することに同意する]** を選択します。
 
  > [!NOTE]
- > 이후 업데이트 버전을 설치하기 전에 업데이트 1602에서 시험판 기능을 사용하도록 설정한 경우 시험판 기능을 사용한다는 데 동의하지 않더라도 이러한 기능은 사용되는 상태로 남아 있습니다.
+ > 1602 より後の更新バージョンをインストールする前に更新プログラム 1602 のプレリリース機能を有効にした場合は、プレリリース機能を使用することに同意しなくても、それらの機能は有効です。
 
-시험판 기능이 포함된 업데이트를 설치하는 경우 이러한 기능은 업데이트에 포함된 일반 기능과 함께 업데이트 및 서비스 마법사에 표시됩니다.
-  - **동의하는 경우:** 업데이트를 설치하면 업데이트 및 서비스 마법사에서 시험판 기능을 사용할 수 있습니다. 이렇게 하려면 다른 모든 기능에서와 마찬가지로 시험판 기능을 선택합니다.     
+プレリリース機能を含む更新プログラムをインストールすると、これらの機能は、更新プログラムに含まれる標準の機能と一緒に、[更新とサービス] ウィザードに表示されます。
+  - **既に同意した場合:** 更新プログラムのインストール時に、[更新とサービス] ウィザード内でプレリリース機能を有効にすることができます。 これを行うには、その他の機能の場合と同様に、プレリリース機能を選択します。     
 
-    필요한 경우 나중에 콘솔의 **관리** > **업데이트 및 서비스** > **기능** 노드에서 시험판 기능을 사용하도록 설정할 수 있습니다. **기능** 노드에서 기능을 선택한 다음 **켜기**를 선택합니다. 이 옵션은 사용자가 동의할 때까지 회색으로 표시됩니다. 버전 1702 이전에는 업데이트 및 서비스가 **관리** > **Cloud Services** 아래에 있었습니다.
-  -   **동의하지 않은 경우:** 업데이트를 설치할 때 시험판 기능이 업데이트 및 서비스 마법사에 나타나지만, 회색으로 표시되며 사용하도록 설정할 수 없습니다. 업데이트를 설치한 후에 **기능** 노드에서 이러한 기능을 볼 수 있습니다. 그러나 **계층 설정**에서 동의를 해야만 사용하도록 설정할 수 있습니다.
+    必要に応じて、後でコンソールの **[管理]** > **[更新とサービス]** > **[機能]** ノードからプレリリース機能を有効にすることもできます。 **[機能]** ノードで、機能を選択し、**[有効にする]** を選択します。 このオプションは同意するまで灰色表示のままです  (1702 より前のバージョンでは、[更新とサービス] は、**[管理]** > **[クラウド サービス]** にありました)。
+  -   **まだ同意していない場合:** 更新プログラムのインストール時に、プレリリース機能は [更新とサービス] ウィザードに表示されますが、灰色表示になっていて、有効にすることはできません。 更新プログラムをインストールしたら、**[機能]** ノードでこれらの機能を表示できます。 ただし、**[階級設定]** で同意するまではこれらの機能を有効にすることはできません。
 
-독립 실행형 기본 사이트에서 동의를 제공한 다음 새 중앙 관리 사이트를 설치하여 계층 구조를 확장하는 경우 중앙 관리 사이트에서 다시 동의를 제공해야 합니다.
+スタンドアロン プライマリ サイトで同意し、新しい中央管理サイトをインストールして階層を拡張する場合、中央管理サイトでもう一度同意する必要があります。
 
- 시험판 기능을 사용하도록 설정하면 Configuration Manager HMAN(계층 구조 관리자)은 해당 기능을 사용할 수 있게 되기 전에 변경 내용을 처리해야 합니다. 변경 내용 처리는 대개 즉시 이루어지지만, HMAN 처리 주기에 따라 완료하는 데 최대 30분까지 걸릴 수 있습니다. 변경 내용이 처리된 후 콘솔을 다시 시작해야만 해당 기능과 관련된 새 UI를 볼 수 있습니다.
+ プレリリース機能を有効にすると、Configuration Manager の階層マネージャー (HMAN) は機能が利用可能になる前に変更を処理する必要があります。 多くの場合、変更の処理はすぐに行われますが、HMAN の処理サイクルによっては完了までに最大で 30 分かかることがあります。 変更が処理された後、その機能に関連する新しい UI が表示されるようにするには、コンソールを再起動する必要があります。
 
-**다음과 같은 시험판 기능을 사용할 수 있습니다.**
+**利用できるプレリリース機能:**
 
- |기능          |시험판으로 추가됨 | 전체 기능으로 추가됨|  
+ |機能          |プレリリース版として追加 | 完全機能として追加|  
 |------------------|---------------------|---------------------|
-| Configuration Manager 콘솔에서 PowerShell 스크립트 만들기 및 실행 |  [버전 1706](/sccm/apps/deploy-use/create-deploy-scripts)|![아직 추가되지 않음](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Configuration Manager로 Device Guard 관리 |  [버전 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![아직 추가되지 않음](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| 응용 프로그램을 설치하기 전에 실행 중인 실행 파일 확인  |   [버전 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |![아직 추가되지 않음](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| 데이터 웨어하우스 서비스 지점  |  [버전 1702](/sccm/core/servers/manage/data-warehouse) |[버전 1706](/sccm/core/servers/manage/data-warehouse)|
-| 클라이언트에 콘텐츠 배포를 위한 피어 캐시 |  [버전 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) |![아직 추가되지 않음](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| 클라우드 관리 게이트웨이 |  [버전 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![아직 추가되지 않음](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| 클라이언트 데이터 원본 대시보드 |  [버전 1610](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) |![아직 추가되지 않음](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Microsoft Operations Management Suite 커넥터  | [버전 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![아직 추가되지 않음](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| 클러스터 인식 컬렉션 서비스 제공(서버 그룹 제공)| [버전 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![아직 추가되지 않음](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-|System Center Configuration Manager에서 관리하는 PC에 대한 조건부 액세스 지원 | [버전 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     | [버전 1702](/sccm/mdm/deploy-use/manage-access-to-services)                     |
+| Configuration Manager コンソールから PowerShell スクリプトを作成して実行する |  [バージョン 1706](/sccm/apps/deploy-use/create-deploy-scripts)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| Configuration Manager を使用した Device Guard 管理 |  [バージョン 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| アプリケーションをインストールする前に実行中の実行可能ファイルを確認する  |   [バージョン 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| データ ウェアハウス サービス ポイント  |  [バージョン 1702](/sccm/core/servers/manage/data-warehouse) |[バージョン 1706](/sccm/core/servers/manage/data-warehouse)|
+| クライアントへのコンテンツ配布のピア キャッシュ |  [バージョン 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| クラウド管理ゲートウェイ |  [バージョン 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| クライアント データ ソース ダッシュボード |  [バージョン 1610](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| Microsoft Operations Management Suite コネクタ  | [バージョン 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| クラスター対応のコレクションのサービス (サーバー グループの提供)| [バージョン 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+|System Center Configuration Manager が管理する PC の条件付きアクセス | [バージョン 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     | [バージョン 1702](/sccm/mdm/deploy-use/manage-access-to-services)                     |

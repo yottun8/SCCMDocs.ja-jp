@@ -1,6 +1,6 @@
 ---
-title: "사용자를 대상 컴퓨터에 연결 | Microsoft 문서"
-description: "운영 체제를 배포할 때 System Center Configuration Manager를 구성하여 사용자와 대상 컴퓨터를 연결합니다."
+title: "展開先のコンピューターにユーザーを関連付ける | Microsoft Docs"
+description: "オペレーティング システムを展開するときに、ユーザーをセットアップ先のコンピューターと関連付けるように、System Center Configuration Manager を構成します。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,28 +18,28 @@ manager: angrobe
 ms.openlocfilehash: c0331567b94a99b29cc73c16de17a9f3bc6b9e43
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="associate-users-with-a-destination-computer-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 대상 컴퓨터에 사용자 연결
+# <a name="associate-users-with-a-destination-computer-in-system-center-configuration-manager"></a>System Center Configuration Manager でユーザーをセットアップ先のコンピューターに関連付ける
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager를 사용하여 운영 체제를 배포할 때 운영 체제가 배포된 대상 컴퓨터에 사용자를 연결할 수 있습니다. 이 구성에는 다음 설정이 포함됩니다.  
+System Center Configuration Manager を使ってオペレーティング システムを展開するときに、ユーザーを、オペレーティング システムの展開先のコンピューターに関連付けることができます。 この構成には、次の事柄が含まれます。  
 
--   단일 사용자를 대상 컴퓨터의 기본 사용자로 지정합니다.  
+-   単一ユーザーが展開先コンピューターのプライマリ ユーザーであること  
 
--   여러 사용자를 대상 컴퓨터의 기본 사용자로 지정합니다.  
+-   複数ユーザーが展開先コンピューターのプライマリ ユーザーであること  
 
- 사용자 장치 선호도는 응용 프로그램을 배포할 때 사용자 중심 관리를 지원합니다. 운영 체제를 설치할 대상 컴퓨터에 사용자를 연결하면 나중에 응용 프로그램을 해당 사용자에게 배포할 수 있으며 응용 프로그램이 대상 컴퓨터에 자동으로 설치됩니다. 그러나 운영 체제를 배포할 때 사용자 장치 선호도에 대한 지원을 구성할 수는 있지만 사용자 장치 선호도를 사용하여 운영 체제를 배포할 수는 없습니다.  
+ ユーザーとデバイスのアフィニティは、アプリケーションを展開するときにユーザー中心の管理をサポートします。 オペレーティング システムをインストールするセットアップ先のコンピューターにユーザーを関連付けると、後でそのユーザーにアプリケーションを展開することにより、セットアップ先のコンピューターにアプリケーションが自動的にインストールされるようになります。 ただし、オペレーティング システムを展開するときにユーザーとデバイスのアフィニティのサポートを構成することはできますが、ユーザーとデバイスのアフィニティを使ってオペレーティング システムを展開することはできません。  
 
- 사용자 장치 선호도에 대한 자세한 내용은 [사용자 장치 선호도를 사용하여 사용자와 장치 연결](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)을 참조하세요.  
+ ユーザーとデバイスのアフィニティの詳細については、「[ユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)」をご覧ください。  
 
-## <a name="how-to-specify-a-user-when-you-deploy-operating-systems"></a>운영 체제를 배포할 때 사용자를 지정하는 방법  
- 다음 표에는 운영 체제 배포에 사용자 장치 선호도를 통합하기 위해 수행할 수 있는 작업이 나와 있습니다. 사용자 장치 선호도를 PXE 배포, 부팅 가능한 미디어 배포 및 사전 준비된 미디어 배포에 통합할 수 있습니다.  
+## <a name="how-to-specify-a-user-when-you-deploy-operating-systems"></a>オペレーティング システムを展開するときにユーザーを指定する方法  
+ 次の表に、ユーザーとデバイスのアフィニティをオペレーティング システムの展開に統合するときに実行できる操作を示します。 ユーザーとデバイスのアフィニティは、PXE 展開、起動可能なメディアの展開、事前設定されたメディアの展開に統合することができます。  
 
-|작업|추가 정보|  
+|操作|説明|  
 |------------|----------------------|  
-|**SMSTSAssignUsersMode** 변수를 포함하는 작업 순서 만들기|[작업 순서 변수 설정](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) 작업 순서 단계를 사용하여 작업 순서의 시작 부분에 **SMSTSAssignUsersMode** 변수를 추가합니다. 이 변수는 작업 순서에서 사용자 정보를 처리하는 방법을 지정합니다.<br /><br /> 변수를 다음 값 중 하나로 설정합니다.<br /><br /> <br /><br /> **자동**: 작업 순서에서 자동으로 사용자와 대상 컴퓨터 간의 관계를 만들고 운영 체제를 배포합니다.<br /><br /> **보류 중**: 작업 순서에서 사용자와 대상 컴퓨터 간의 관계를 만들지만 운영 체제를 배포하기 전에 관리자의 승인을 기다립니다.<br /><br /> **사용 안 함**: 작업 순서에서 자동으로 사용자와 대상 컴퓨터를 연결하지 않고 운영 체제 배포를 계속합니다.<br /><br /> <br /><br /> 이 변수는 컴퓨터 또는 컬렉션에 대해서도 설정할 수 있습니다. 기본 제공 변수에 대한 자세한 내용은 [작업 순서 기본 제공 변수](../../osd/understand/task-sequence-built-in-variables.md)를 참조하세요.|  
-|사용자 정보를 수집하는 시작 전 명령 만들기|시작 전 명령은 입력란이 있는 VB(Visual Basic) 스크립트일 수도 있고 입력된 사용자 데이터의 유효성을 검사하는 HTA(HTML Application)일 수도 있습니다.<br /><br /> 시작 전 명령은 작업 순서를 실행할 때 사용되는 **SMSTSUdaUsers** 변수를 설정해야 합니다. 이 변수는 컴퓨터, 컬렉션 또는 작업 순서 변수에 대해 설정할 수 있습니다. 여러 사용자를 추가할 때는 *도메인\사용자1, 도메인\사용자2, 도메인\사용자3*형식을 사용합니다.|  
-|배포 지점 및 미디어에서 사용자와 대상 컴퓨터를 연결하는 방법 구성|[PXE 부팅 요청을 수락하도록 배포 지점을 구성](https://technet.microsoft.com/library/mt627944\(TechNet.10\).aspx#BKMK_PXEDistributionPoint) 하는 경우 및 작업 순서 미디어 만들기 마법사를 사용하여 [부팅 가능한 미디어](http://technet.microsoft.com/library/mt627921\(TechNet.10\).aspx) 또는 [사전 준비된 미디어](https://technet.microsoft.com/library/mt627922\(TechNet.10\).aspx) 를 만드는 경우, 배포 지점이나 미디어에서 운영 체제가 배포되는 대상 컴퓨터에 사용자를 연결하도록 지원하는 방법을 지정할 수 있습니다.<br /><br /> 사용자 장치 선호도 지원을 구성할 때 사용자 ID의 유효성을 검사하는 기본 제공 방법이 없습니다. 이는 컴퓨터를 프로비전하는 기술 전문가가 사용자 대신 정보를 입력할 때 중요할 수 있습니다. 작업 순서에서 사용자 정보를 처리하는 방법을 설정하고 배포 지점 및 미디어에 대한 이러한 옵션을 구성하면 PXE 부팅이나 특정 미디어 유형에서 시작되는 배포를 제한할 수 있습니다.|  
+|**SMSTSAssignUsersMode** 変数を含むタスク シーケンスを作成する|**Set Task Sequence Variable** のタスク シーケンスの手順に沿って、タスク シーケンスの最初に  [SMSTSAssignUsersMode](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) 変数を追加します。 この変数は、タスク シーケンスでのユーザー情報の処理方法を指定します。<br /><br /> 変数に次のいずれかの値を設定します。<br /><br /> <br /><br /> **自動**:タスク シーケンスが自動的にユーザーと展開先コンピューターの関係を作成し、オペレーティング システムを展開します。<br /><br /> **保留中**:タスク シーケンスは、ユーザーと展開先コンピューターの関係を作成しますが、オペレーティング システムを展開する前に管理ユーザーの承認を待ちます。<br /><br /> **無効**:タスク シーケンスは、ユーザーを展開先コンピューターに関連付けずに、オペレーティング システムの展開を続行します。<br /><br /> <br /><br /> この変数は、コンピューターまたはコレクションにも設定することができます。 組み込み変数の詳細については、「[タスク シーケンス組み込み変数](../../osd/understand/task-sequence-built-in-variables.md)」をご覧ください。|  
+|ユーザー情報を収集する起動前コマンドを作成する|起動前コマンドは、入力ボックスのある Visual Basic (VB) スクリプト、または、入力されたユーザー データを検証する HTML アプリケーション (HTA) です。<br /><br /> 起動前コマンドには、タスク シーケンスの実行時に使用される **SMSTSUdaUsers** 変数を設定する必要があります。 この変数は、コンピューター、コレクション、あるいはタスク シーケンスの変数にも設定することができます。 複数のユーザー ( *domain\user1、domain\user2、domain\user3*) を追加するときには、次の形式を使用します。|  
+|配布ポイントとメディアによるユーザーと展開先コンピューターの関連付けを構成する|[配布ポイントが PXE ブート要求を受け入れるように構成し](https://technet.microsoft.com/library/mt627944\(TechNet.10\).aspx#BKMK_PXEDistributionPoint) 、 [起動可能なメディア](http://technet.microsoft.com/library/mt627921\(TechNet.10\).aspx) や [事前設定されたメディア](https://technet.microsoft.com/library/mt627922\(TechNet.10\).aspx) をタスク シーケンス メディアの作成ウィザードを使って作成する場合、配布ポイントやメディアが、ユーザーとオペレーティング システムのセットアップ先のコンピューターとの関連付けをどのようにサポートするかを指定できます。<br /><br /> ユーザーとデバイスのアフィニティのサポートの構成には、ユーザー ID を検証する方法は組み込まれていません。 このことは、技術者がコンピューターをプロビジョニングするときに、ユーザーに代わって情報を入力するときに重要になります。 タスク シーケンスによるユーザー情報の処理方法の設定に加えて、配布ポイントとメディアにこれらのオプションを構成することで、PXE ブートや特定の種類のメディアからの展開開始を制限することができます。|  

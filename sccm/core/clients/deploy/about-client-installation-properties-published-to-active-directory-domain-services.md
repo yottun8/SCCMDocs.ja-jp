@@ -1,6 +1,6 @@
 ---
-title: "Active Directory Domain Services의 클라이언트 설치 속성 | Microsoft 문서"
-description: "System Center Configuration Manager에서 Active Directory Domain Services에 게시된 클라이언트 설치 속성을 사용합니다."
+title: "Active Directory Domain Services のクライアント インストール プロパティ | Microsoft Docs"
+description: "System Center Configuration Manager で Active Directory Domain Services に発行されたクライアント インストール プロパティを使用します。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,110 +18,110 @@ manager: angrobe
 ms.openlocfilehash: 744bc3792a02f13d3cf940cd1a4f2fd8749ee2f4
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>Active Directory Domain Services에 게시된 클라이언트 설치 속성 정보
+# <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>Active Directory Domain Services に発行されたクライアント インストールのプロパティについて
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager용으로 Active Directory 스키마를 확장하고 Active Directory Domain Services에 사이트를 게시하면 많은 클라이언트 설치 속성이 Active Directory Domain Services에 게시됩니다. 컴퓨터에서 이러한 클라이언트 설치 속성을 찾을 수 있는 경우 Configuration Manager 클라이언트 배포 시 이러한 속성을 사용할 수 있습니다.  
+Active Directory スキーマを System Center Configuration Manager 用に拡張して、サイトを Active Directory Domain Services に公開すると、多くのクライアント インストール プロパティが Active Directory Domain Services に発行されます。 コンピューターでこれらのクライアント インストール プロパティを見つけることができる場合は、Configuration Manager クライアントの展開時にそれらを使用できます。  
 
- Active Directory Domain Services를 사용하여 클라이언트 설치 속성을 게시하는 것의 이점은 다음과 같습니다.  
+ クライアント インストール プロパティの発行に Active Directory ドメイン サービスを使用すると、次の利点があります。  
 
--   소프트웨어 업데이트 지점 기반의 클라이언트 설치와 그룹 정책 클라이언트 설치 시 각 컴퓨터에서 설정 매개 변수를 설정할 필요가 없습니다.  
+-   ソフトウェアの更新ポイントベースのクライアント インストールとグループ ポリシーのクライアント インストールで、セットアップ パラメーターを各コンピューターで設定する必要がありません。  
 
--   이 정보는 자동으로 생성되므로 수동으로 설치 속성을 입력하는 데 따른 사람의 실수 위험이 없습니다.  
-
-> [!NOTE]  
->  Configuration Manager용으로 Active Directory 스키마를 확장하는 방법과 사이트를 게시하는 방법에 대한 자세한 내용은 [System Center Configuration Manager용으로 스키마 확장](../../plan-design/network/schema-extensions.md)을 참조하세요.  
-
-## <a name="client-installation-properties-published-to-active-directory-domain-services"></a>Active Directory Domain Services에 게시된 클라이언트 설치 속성  
-아래 목록에는 클라이언트 설치 속성이 나와 있습니다. 아래 나열된 각 항목에 대한 자세한 내용은 [System Center Configuration Manager의 클라이언트 설치 속성 정보](../../../core/clients/deploy/about-client-installation-properties.md)를 참조하세요.  
-
--   Configuration Manager 사이트 코드  
-
--   사이트 서버 서명 인증서  
-
--   신뢰할 수 있는 루트 키  
-
--   HTTP 및 HTTPS용 클라이언트 통신 포트  
-
--   대체 상태 지점. 사이트에 대체 상태 지점이 여러 개 있는 경우 설치된 첫 번째 상태 지점만 Active Directory Domain Services에 게시됩니다.  
-
--   클라이언트가 HTTPS만 사용하여 통신해야 함을 나타내는 설정  
-
--   PKI 인증서에 관련된 설정:  
-
-   -   클라이언트 PKI 인증서를 사용할 것인지 여부  
-
-   -   인증서 선택을 위한 선택 조건. 클라이언트에 Configuration Manager용으로 사용할 수 있는 유효한 PKI 인증서가 여러 개 있으면 이 조건이 필요할 수 있습니다.  
-
-   -   인증서 선택 프로세스 후에도 클라이언트에 유효한 인증서가 여러 개 있는 경우 사용할 인증서를 결정하기 위한 설정  
-
-   -   신뢰할 수 있는 루트 CA 인증서 목록이 포함된 인증서 발급자 목록  
-
--   **클라이언트 강제 설치 속성** 대화 상자의 **클라이언트** 탭에서 지정되는 client.msi 설치 속성
-
-다음 방법 중 하나를 사용하여 다른 속성이 지정되지 않은 경우에만 클라이언트 설치(CCMSetup)에서 Active Directory Domain Services에 게시되는 속성을 사용합니다.  
-
--   이 문서의 뒷부분에서 설명하는 수동 설치 방법
-
--   이 문서의 뒷부분에서 설명하는 그룹 정책 설치 방법
+-   この情報は自動的に生成されるため、インストール プロパティを手動で入力するために発生する人的ミスのリスクが排除されます。  
 
 > [!NOTE]  
->  클라이언트 설치 속성은 클라이언트를 설치하는 데 사용됩니다. 클라이언트가 설치되고 Configuration Manager 사이트에 할당되고 나면 할당된 사이트의 새 설정이 클라이언트 설치 속성을 덮어쓸 수도 있습니다.  
+>  Configuration Manager 用に Active Directory スキーマを拡張する方法、およびサイトの公開方法の詳細については、「[System Center Configuration Manager のスキーマ拡張](../../plan-design/network/schema-extensions.md)」を参照してください。  
 
- Active Directory Domain Service를 사용하여 클라이언트 설치 속성을 가져오는 Configuration Manager 클라이언트 설치 방법을 결정하려면 다음 섹션의 세부 정보를 참조하세요.  
+## <a name="client-installation-properties-published-to-active-directory-domain-services"></a>Active Directory Domain Services に発行されたクライアント インストール プロパティ  
+クライアント インストール プロパティの一覧を次に示します。 下記一覧の各項目の詳細については、「[System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
 
-## <a name="client-push-installation"></a>클라이언트 강제 설치  
- 클라이언트 강제 설치는 Active Directory Domain Services를 사용하여 설치 속성을 가져오지 않습니다.  
+-   Configuration Manager サイト コード。  
 
- 대신 **클라이언트 강제 설치 속성** 대화 상자의 **클라이언트** 탭에서 클라이언트 설치 속성을 지정할 수 있습니다. 이러한 옵션과 클라이언트 관련 설정은 클라이언트 설치 시 클라이언트가 읽는 파일에 저장되어 있습니다.  
+-   サイト サーバー署名証明書。  
+
+-   信頼されたルート キー。  
+
+-   HTTP おようび HTTPS 用のクライアント通信ポート。  
+
+-   フォールバック ステータス ポイント。 サイトに複数のフォールバック ステータス ポイントがある場合は、最初にインストールしたフォールバック ステータス ポイントのみが Active Directory Domain Services に発行されます。  
+
+-   クライアントが HTTPS のみを使用して通信する必要があることを示す設定。  
+
+-   PKI 証明書に関する設定:  
+
+   -   クライアントの PKI 証明書を使用するかどうか。  
+
+   -   証明書の選択条件。 これは、Configuration Manager に使用できる有効な PKI 証明書がクライアントに複数ある場合に必要になります。  
+
+   -   どの証明書を使用するかを判断する設定（証明書選択プロセスの後に有効な証明書がクライアントに複数ある場合）。  
+
+   -   信頼されたルート（CA）証明書の一覧を含む証明書発行者の一覧  
+
+-   ｃlient.msi インストール プロパティは、[ **クライアント プッシュ インストールのプロパティ** ]ダイアログ ボックスの [ **クライアント** ]タブで指定します。
+
+クライアント インストール (CCMSetup) では、次のいずれかを使用して指定されたプロパティが他にない場合にのみ、Active Directory Domain Services に発行されたプロパティを使用します。  
+
+-   手動のインストール方法 (この記事で後述)
+
+-   グループ ポリシーによるインストール方法 (この記事で後述)
 
 > [!NOTE]  
->  **클라이언트** 탭에서 클라이언트 강제 설치를 위한 CCMSetup 속성이나 대체 상태 지점 또는 신뢰할 수 있는 루트 키를 지정할 필요가 없습니다. 이러한 설정은 클라이언트 강제 설치를 사용하여 클라이언트가 설치될 때 클라이언트에 자동으로 제공됩니다.  
+>  クライアント インストールにはクライアント インストール プロパティを使用します。 これらのプロパティは、クライアントがインストールされて Configuration Manager サイトに割り当てられると、割り当てられたサイトの新しい設定で上書きされる場合があります。  
 
- 사이트가 Active Directory Domain Services에 게시되는 경우 **클라이언트** 탭에서 지정하는 모든 속성이 Active Directory Domain Services에 게시됩니다. 이러한 설정은 설치 속성 없이 CCMSetup이 실행되는 클라이언트 설치에서 읽혀집니다.  
+ どの Configuration Manager クライアント インストール方法で Active Directory Domain Services を使用してクライアント インストール プロパティを取得するかを判断するには、以下のセクションの詳細を使用します。  
 
-## <a name="software-update-point-based-installation"></a>소프트웨어 업데이트 지점 기반 설치  
- 소프트웨어 업데이트 지점 기반의 설치 방법에서는 CCMSetup 명령줄에 설치 속성을 추가할 수 없습니다.  
+## <a name="client-push-installation"></a>クライアント プッシュ インストール  
+ クライアント プッシュ インストールでは、インストール　プロパティの取得に Active Directory ドメイン サービスは使用されません。  
 
- 클라이언트 컴퓨터에서 그룹 정책을 사용하여 명령줄 속성이 프로비전되지 않은 경우 CCMSetup은 Active Directory Domain Services에서 설치 속성을 검색합니다.  
+ その代わりに、**[クライアント プッシュ インストールのプロパティ]** ダイアログ ボックスの **[クライアント]** タブで、クライアント インストール プロパティを指定することができます。 これらのオプションとクライアント関連のサイト設定は、クライアントがクライアント インストールの際に読み込むファイルに保存されています。  
 
-## <a name="group-policy-installation"></a>그룹 정책 설치  
- 그룹 정책 설치 방법에서는 CCMSetup 명령줄에 설치 속성을 추가할 수 없습니다.  
+> [!NOTE]  
+>  クライアント プッシュ インストール、フォールバック ステータス ポイント、または信頼されたルート キーでは、[ **クライアント** ]タブで CCMSetup プロパティを設定する必要はありません。 これらの設定はクライアント プッシュ インストールを使用してインストールをしたときに、自動で行われます。  
 
- 클라이언트 컴퓨터에서 명령줄 속성이 프로비전되지 않은 경우 CCMSetup은 Active Directory Domain Services에서 설치 속성을 검색합니다.  
+ **[クライアント]** タブで指定したプロパティは、サイトが Active Directory Domain Services に公開されると、Active Directory Domain Services に発行されます。 これらの設定は CCMSetup がインストール プロパティなしで実行されるクライアント インストールで読み込まれます。  
 
-## <a name="manual-installation"></a>수동 설치  
- CCMSetup은 다음과 같은 경우 Active Directory Domain Services에서 설치 속성을 검색합니다.  
+## <a name="software-update-point-based-installation"></a>ソフトウェアの更新ポイント経由のインストール  
+ ソフトウェアの更新ポイント ベースのインストール方法では、CCMSetup コマンド ラインへのインストール プロパティの追加はサポートされていません。  
 
--   CCMSetup.exe 명령 뒤에 명령줄 속성이 지정되지 않은 경우  
+ グループ ポリシーを使用してクライアント コンピューターでコマンド ライン プロパティが提供されなかった場合は、CCMSetup は Active Directory ドメイン サービス でインストール プロパティを検索します。  
 
--   그룹 정책을 사용하여 컴퓨터에 설치 속성을 프로비전하지 않은 경우  
+## <a name="group-policy-installation"></a>グループ ポリシーによるインストール  
+ グループ ポリシーのインストール方法では、CCMSetup コマンド ラインへのインストール プロパティの追加はサポートされていません。  
 
-## <a name="logon-script-installation"></a>로그온 스크립트 설치  
- CCMSetup은 다음과 같은 경우 Active Directory Domain Services에서 설치 속성을 검색합니다.  
+ クライアント コンピューターでコマンド ライン プロパティが提供されなかった場合は、CCMSetup は Active Directory ドメイン サービス でインストール プロパティを検索します。  
 
--   CCMSetup.exe 명령 뒤에 명령줄 속성이 지정되지 않은 경우  
+## <a name="manual-installation"></a>手動インストール  
+ CCMSetup は、次の状況で Active Directory ドメイン サービスのインストール プロパティを検索します。  
 
--   그룹 정책을 사용하여 컴퓨터에 설치 속성을 프로비전하지 않은 경우  
+-   CCMSetup.exe コマンドの後にコマンド ライン プロパティが指定されていない。  
 
-## <a name="software-distribution-installation"></a>소프트웨어 배포 설치  
- CCMSetup은 다음과 같은 경우 Active Directory Domain Services에서 설치 속성을 검색합니다.  
+-   コンピューターにグループ ポリシーを使用してインストール プロパティが提供されていない。  
 
--   CCMSetup.exe 명령 뒤에 명령줄 속성이 지정되지 않은 경우  
+## <a name="logon-script-installation"></a>ログオン スクリプトによるインストール  
+ CCMSetup は、次の状況で Active Directory ドメイン サービスのインストール プロパティを検索します。  
 
--   그룹 정책을 사용하여 컴퓨터에 설치 속성을 프로비전하지 않은 경우  
+-   CCMSetup.exe コマンドの後にコマンド ライン プロパティが指定されていない。  
 
-## <a name="installations-for-clients-that-cannot-access-active-directory-domain-services"></a>Active Directory Domain Services에 액세스할 수 없는 클라이언트의 설치  
-이러한 클라이언트 컴퓨터는 Active Directory Domain Services에서 게시된 설치 속성을 읽거나 해당 속성에 액세스할 수 없습니다.
+-   コンピューターにグループ ポリシーを使用してインストール プロパティが提供されていない。  
 
- 이러한 클라이언트는 다음과 같습니다.  
+## <a name="software-distribution-installation"></a>ソフトウェアの配布によるインストール  
+ CCMSetup は、次の状況で Active Directory ドメイン サービスのインストール プロパティを検索します。  
 
--   작업 그룹 컴퓨터  
+-   CCMSetup.exe コマンドの後にコマンド ライン プロパティが指定されていない。  
 
--   Active Directory Domain Services에 게시되지 않은 Configuration Manager 사이트에 할당된 클라이언트  
+-   コンピューターにグループ ポリシーを使用してインストール プロパティが提供されていない。  
 
--   인터넷상에 있을 때 설치된 클라이언트  
+## <a name="installations-for-clients-that-cannot-access-active-directory-domain-services"></a>Active Directory Domain Services にアクセスできないクライアントのインストール  
+こうしたクライアント コンピューターは、Active Directory Domain Services から発行されたインストール プロパティを読み込むことも、プロパティにアクセスすることもできません。
+
+ これらのクライアントには次のものがあります。  
+
+-   ワークグループ コンピューター。  
+
+-   Active Directory Domain Services に公開されていない Configuration Manager サイトに割り当てられたクライアント。  
+
+-   インターネット上にあるときにインストールされたクライアント。  

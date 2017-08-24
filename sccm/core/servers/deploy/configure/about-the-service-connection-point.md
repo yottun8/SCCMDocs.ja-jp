@@ -1,6 +1,6 @@
 ---
-title: "서비스 연결점 | Microsoft 문서"
-description: "이 Configuration Manager 사이트 시스템 역할에 대해 알아보고 사용 범위를 이해하고 계획합니다."
+title: "サービス接続ポイント | Microsoft Docs"
+description: "この Configuration Manager サイト システムの役割について学習し、その使用範囲を理解し計画します。"
 ms.custom: na
 ms.date: 6/28/2017
 ms.prod: configuration-manager
@@ -18,74 +18,74 @@ manager: angrobe
 ms.openlocfilehash: e3d41dc1bb732e887d722f39ee86deaf0aae3240
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="about-the-service-connection-point-in-system-center-configuration-manager"></a>System Center Configuration Manager의 서비스 연결 지점 정보
+# <a name="about-the-service-connection-point-in-system-center-configuration-manager"></a>System Center Configuration Manager のサービス接続ポイントについて
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 서비스 연결 지점은 계층 구조에 대한 여러 중요한 기능을 제공하는 사이트 시스템 역할입니다. 서비스 연결 지점을 설정하기 전에 이 사이트 시스템 역할을 설정하는 방법에 영향을 줄 수 있는 사용 범위를 이해하고 계획합니다.  
+System Center Configuration Manager サービス接続ポイントは、階層のいくつかの重要な機能を提供するサイト システムの役割です。 サービス接続ポイントを設定する前に、このサイト システムの役割の設定方法に影響を与える可能性がある使用範囲を理解し、計画を立ててください。  
 
--   **Microsoft Intune을 사용하여 모바일 장치 관리** - 이 역할은 이전 버전의 Configuration Manager에서 사용된 Windows Intune 커넥터를 대체하며 Intune 구독 세부 정보로 구성할 수 있습니다. [System Center Configuration Manager 및 Microsoft Intune을 지원하는 하이브리드 MDM(모바일 장치 관리)](../../../../mdm/understand/hybrid-mobile-device-management.md)을 참조하세요.  
+-   **Microsoft Intune を使用してモバイル デバイスを管理する** – この役割は、Configuration Manager の前のバージョンによって使用される Windows Intune コネクタを置き換え、Intune のサブスクリプションの詳細で構成することができます。 「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../../../mdm/understand/hybrid-mobile-device-management.md)」をご覧ください。  
 
--   **온-프레미스 MDM을 사용하여 모바일 장치 관리** - 이 역할은 인터넷에 연결하지 않는, 관리되는 온-프레미스 장치를 지원합니다. [System Center Configuration Manager의 온-프레미스 인프라로 모바일 장치 관리](../../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)를 참조하세요.  
+-   **オンプレミス MDM を使用してモバイル デバイスを管理する** – この役割は、インターネットに接続しない管理対象オンプレミス デバイスのサポートを提供します。 「[System Center Configuration Manager でオンプレミス インフラストラクチャを使用したモバイル デバイスの管理](../../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)」をご覧ください。  
 
--   **Configuration Manager 인프라에서 사용 현황 데이터 업로드** - 업로드하는 세부 정보 수준이나 정보량을 제어할 수 있습니다. 업로드된 데이터를 활용하여 다음 작업을 수행할 수 있습니다.  
+-   **Configuration Manager インフラストラクチャからの使用データのアップロード** – アップロードする詳細のレベルと量を制御することができます。 アップロードされるデータは、次の点で役立ちます。  
 
-    -   사전에 문제 식별 및 해결  
+    -   問題の早期識別とトラブルシューティング  
 
-    -   제품 및 서비스 개선  
+    -   Microsoft の製品やサービスの向上  
 
-    -   사용하는 버전의 Configuration Manager에 적용되는 Configuration Manager 업데이트 식별  
+    -   使用する Configuration Manager のバージョンに適用する Configuration Manager の更新プログラムの識別  
 
-  각 수준에서 수집되는 데이터 및 역할이 설치된 후 수집 수준을 변경하는 방법에 대한 자세한 내용을 보려면 [진단 및 사용 현황 데이터](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data)를 확인한 다음 사용하는 Configuration Manager 버전에 대한 링크를 클릭하세요.  
+  各レベルで収集されたデータについて、また、ロールがインストールされた後でコレクションのレベルを変更する方法については、「[System Center Configuration Manager の診断結果と使用状況データ](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data)」を参照して、使用する Configuration Manager のバージョンへのリンクをたどります。  
 
-  자세한 내용은 [사용 데이터 수준 및 설정](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage)을 참조하세요.  
+  詳細については、「[使用状況データのレベルと設定](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage)」をご覧ください。  
 
--   **Configuration Manager 인프라에 적용되는 업데이트 다운로드** - 업로드하는 사용 현황 데이터를 기준으로 인프라와 관련된 업데이트만 사용할 수 있습니다.  
+-   **Configuration Manager インフラストラクチャに適用される更新プログラムのダウンロード** – アップロードする使用データに基づいて、インフラストラクチャに関連する更新プログラムのみを入手することができます。  
 
-- **각 계층 구조는 이 역할의 단일 인스턴스를 지원합니다.**  
+- **各階層は、この役割の単一インスタンスをサポートします。**  
 
- -   사이트 시스템 역할은 계층 구조의 최상위 계층 사이트(중앙 관리 사이트 또는 독립 실행형 기본 사이트)에만 설치할 수 있습니다.  
+ -   このサイト システムの役割は、階層の最上位層サイト (中央管理サイトまたはスタンドアロン プライマリ サイト) のみにインストールできます。  
 
-  -   독립 실행형 기본 사이트를 더 큰 계층 구조로 확장하는 경우 기본 사이트에서 이 역할을 제거한 다음 중앙 관리 사이트에서 설치해야 합니다.  
+  -   スタンドアロン プライマリ サイトをより大きな階層に拡張する場合、この役割をアンインストールする必要があり、その後、中央管理サイトにインストールすることができます。  
 
 
-##  <a name="bkmk_modes"></a> 작동 모드  
- 서비스 연결 지점은 다음 두 가지 작동 모드를 지원합니다.  
+##  <a name="bkmk_modes"></a> 操作モード  
+ サービス接続ポイントは、操作の 2 つのモードをサポートしています。  
 
--   **온라인 모드**에서는 서비스 연결 지점이 24시간마다 업데이트를 자동으로 확인한 다음 현재 인프라 및 제품 버전에 사용 가능한 새 업데이트를 자동으로 다운로드하여 Configuration Manager 콘솔에서 사용할 수 있게 합니다.  
+-   **オンライン モード**。このモードでは、サービス接続ポイントは、更新プログラムの 24 時間ごとの確認と、現在のインフラストラクチャおよび製品バージョンで使用可能な新しい更新プログラムのダウンロードを自動的に行い、Configuration Manager コンソールで使用できるようにします。  
 
--   **오프라인 모드**에서는 서비스 연결 지점이 Microsoft 클라우드 서비스에 연결하지 않으며, 수동으로 [System Center Configuration Manager의 서비스 연결 도구를 사용](../../../../core/servers/manage/use-the-service-connection-tool.md)하여 사용 가능한 업데이트를 가져와야 합니다.  
+-   **オフライン モード**では、サービス接続ポイントは、Microsoft クラウド サービスに接続しません。そのため、[System Center Configuration Manager のサービス接続ツールを使用して](../../../../core/servers/manage/use-the-service-connection-tool.md)、手動で、使用可能な更新プログラムをインポートする必要があります。  
 
-서비스 연결 지점을 설치한 후 온라인 또는 오프라인 모드 사이를 변경할 때 이 변경 내용을 적용하려면 먼저 Configuration Manager SMS_Executive 서비스의 SMS_DMP_DOWNLOADER 스레드를 다시 시작해야 합니다. 이를 수행하려면 Configuration Manager Service Manager를 사용하여 SMS_Execctuive 서비스의 SMS_DMP_DOWNLOADER 스레드만 다시 시작합니다. Configuration Manager에 대한 SMS_Executive 서비스를 다시 시작하여 대부분의 사이트 구성 요소를 다시 시작하거나, 사이트 백업과 같은 예약 작업을 기다려 SMS_Executive를 중지했다가 나중에 자동으로 다시 시작할 수 있습니다.  
+サービス接続ポイントをインストールした後にオンラインまたはオフラインのモードを変更したら、Configuration Manager SMS_Executive サービスの SMS_DMP_DOWNLOADER スレッドを再起動する必要があります。これにより、この変更が有効になります。 これを行うには、Configuration Manager サービス マネージャーを使用して、SMS_Executive サービスの SMS_DMP_DOWNLOADER スレッドのみを再起動します。 Configuration Manager の SMS_Executive サービスを再起動することもできます (これにより、ほとんどのサイト コンポーネントが再起動されます)。あるいは、サイト バックアップのようにスケジュール タスクを待って、自動的に SMS_Executive サービスを停止後、再起動することもできます。  
 
-Configuration Manager 서비스 관리자를 사용하려면 콘솔에서 **모니터링** > **시스템 상태** > **구성 요소 상태**로 이동하고, **시작**을 선택한 후 **Configuration Manager Service Manager**를 선택합니다. Service manager에서 다음을 수행합니다.  
+Configuration Manager サービス マネージャーを使用するには、コンソールで **[監視]** > **[システムのステータス]** > **[コンポーネントのステータス]** に移動して **[開始]** を選択してから、**[Configuration Manager サービス マネージャー]** を選択します。 サービス マネージャー:  
 
--   탐색 창에서 사이트를 확장하고 **구성 요소**를 확장한 다음 다시 시작할 구성 요소를 선택합니다.  
+-   ナビゲーション ウィンドウで、サイトを展開してから **[コンポーネント]** を展開し、再起動するコンポーネントを選択します。  
 
--   세부 정보 창에서 구성 요소를 마우스 오른쪽 단추로 클릭한 다음 **쿼리**를 선택합니다.  
+-   詳細ウィンドウで、コンポーネントを右クリックして、**[クエリ]** を選択します。  
 
--   구성 요소의 상태를 확인한 후 구성 요소를 마우스 오른쪽 단추로 다시 클릭하고 **중지**를 선택합니다.  
+-   コンポーネントのステータスを確認したら、コンポーネントを再び右クリックして、**[停止]** を選択します。  
 
--   구성 요소를 다시 **쿼리**하여 중지되었는지 확인한 후 구성 요소를 다시 마우스 오른쪽 단추로 클릭하고 **시작**을 선택합니다.  
+-   コンポーネントに再び**クエリ**を実行して、コンポーネントが停止していることを確認します。もう一度コンポーネントを右クリックして、**[開始]** を選択します。  
 
 > [!IMPORTANT]  
->  서비스 연결 지점에 Microsoft Intune 구독을 추가하는 프로세스를 통해 사이트 시스템 역할이 자동으로 온라인 상태로 설정됩니다. Intune 구독을 사용하여 설정된 경우 서비스 연결 지점에서 오프라인 모드를 지원하지 않습니다.  
+>  サービス接続ポイントに Microsoft Intune サブスクリプションを追加するプロセスで、サイト システムの役割が自動的にオンラインに設定されます。 サービス接続ポイントは Intune サブスクリプションで設定されている場合にオフライン モードをサポートしません。  
 
-**사이트 서버에서 원격 컴퓨터에 역할을 설치하는 경우:**  
+**サイト サーバーからリモートにあるコンピューターに役割をインストールする場合:**  
 
--   사이트 서버의 컴퓨터 계정은 원격 서비스 연결을 호스팅하는 컴퓨터의 로컬 관리자여야 합니다.
+-   サイト サーバーのコンピューター アカウントは、リモート サービス接続をホストするコンピューターのローカル管理者である必要があります。
 
--   사이트 시스템 설치 계정을 사용하여 역할을 호스트하는 사이트 시스템 서버를 설정해야 합니다.  
+-   役割をホストするサイト システム サーバーをサイト システムのインストール アカウントで設定する必要があります。  
 
--   사이트 서버의 배포 관리자는 사이트 시스템 설치 계정을 사용하여 서비스 연결 지점에서 업데이트를 전송합니다.
+-   サイト サーバー上の配布マネージャーは、サイト システムのインストール アカウントを使って、サービス接続ポイントから更新プログラムを転送します。
 
-##  <a name="bkmk_urls"></a> 인터넷 액세스 요구 사항  
-작업을 사용하려면 서비스 연결 지점 및 해당 컴퓨터와 인터넷 간의 모든 방화벽을 호스트하는 컴퓨터에서 **포트 TCP 443** 및 **포트 TCP 443**을 통해 다음 인터넷 위치로 통신을 전달해야 합니다. 서비스 연결 지점에서도 웹 프록시(인증을 사용하거나 사용하지 않고)를 사용하여 이러한 위치에 액세스할 수 있습니다.  웹 프록시 계정을 구성해야 하는 경우 [System Center Configuration Manager의 프록시 서버 지원](/sccm/core/plan-design/network/proxy-server-support)을 참조하세요.
+##  <a name="bkmk_urls"></a> インターネット アクセス要件  
+操作を有効にするには、サービス接続ポイントをホストするコンピューター、ならびにそのコンピューターとインターネットの間のファイアウォールにより、通信が**ポート TCP 443** および**ポート TCP 443** を介して次のインターネット上の場所に届くようにする必要があります。 サービス接続ポイントから、これらの場所を利用する際は、Web プロキシ (認証あり、または認証なし) を使用することもできます。  Web プロキシ アカウントを構成する必要がある場合は、「[System Center Configuration Manager でのプロキシ サーバーのサポート](/sccm/core/plan-design/network/proxy-server-support)」を参照してください。
 
-**업데이트 및 서비스**  
+**更新プログラムとサービス**  
 
 -   *.akamaiedge.net  
 
@@ -103,27 +103,27 @@ Configuration Manager 서비스 관리자를 사용하려면 콘솔에서 **모�
 
 -   sccmconnected-a01.cloudapp.net  
 
-**Microsoft Intune**  
+**Microsoft Intune**  
 
--   *.manage.microsoft.com  
+-   *manage.microsoft.com  
 -   https://bspmts.mp.microsoft.com/V
 -   https://login.microsoftonline.com/{TenantID}
 
 
-**Windows 10 서비스**  
+**Windows 10 サービス**  
 
 -   download.microsoft.com  
 
 -   https://go.microsoft.com/fwlink/?LinkID=619849  
 
-## <a name="install-the-service-connection-point"></a>서비스 연결점 설치
-**설치 프로그램**을 실행하여 계층의 최상위 사이트를 설치할 때는 서비스 연결점을 설치할 수 있습니다.
+## <a name="install-the-service-connection-point"></a>サービス接続ポイントをインストールする
+**[セットアップ]** を実行して階層の最上位サイトをインストールする場合、サービス接続ポイントをインストールするオプションがあります。
 
-설치 프로그램을 실행한 후나 사이트 시스템 역할을 다시 설치하는 경우에는 **사이트 시스템 역할 추가** 마법사 또는 **사이트 시스템 서버 만들기** 마법사를 사용하여 계층의 최상위 사이트(중앙 관리 사이트 또는 독립 실행형 기본 사이트)에 있는 서버에 사이트 시스템을 설치합니다. 이 두 마법사는 모두 콘솔 **홈** 탭의 **관리** > **사이트 구성** > **서버 및 사이트 시스템 역할**에 있습니다.
+[セットアップ] を実行した後、またはサイト システムの役割を再インストールする場合は、**サイト システムの役割の追加**ウィザード、または**サイト システム サーバーの作成**ウィザードを使用して、サーバー上のサイト システムを階層の最上位サイト (中央管理サイトまたはスタンドアロン プライマリ サイト) にインストールします。 どちらのウィザードも、コンソールの **[ホーム]** タブの、**[管理]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** にあります。
 
-## <a name="log-files-used-by-the-service-connection-point"></a>서비스 연결 지점에서 사용되는 로그 파일
-Microsoft에 대한 업로드 정보를 보려면 서비스 연결 지점을 실행하는 컴퓨터에서 **Dmpuploader.log**를 봅니다.  업데이트 다운로드 진행 상황을 포함하여 다운로드를 확인하려면 **Dmpdownloader.log**를 봅니다. 서비스 연결 지점에 관련된 전체 로그 목록을 보려면 Configuration Manager 로그 파일 항목에서 [서비스 연결 지점](/sccm/core/plan-design/hierarchy/log-files#BKMK_WITLog)을 참조하세요.
+## <a name="log-files-used-by-the-service-connection-point"></a>サービス接続ポイントにより使用されるログ ファイル
+Microsoft へのアップロードに関する情報については、サービス接続ポイントを実行するコンピューターの **Dmpuploader.log** をご覧ください。  更新プログラムのダウンロード進捗状況など、ダウンロードについては、**Dmpdownloader.log** をご覧ください。 サービス接続ポイント関連のログの完全な一覧については、Configuration Manager ログ ファイル トピックの「[サービス接続ポイント](/sccm/core/plan-design/hierarchy/log-files#BKMK_WITLog)」を参照してください。
 
-다음 순서도를 통해 업데이트 다운로드 및 다른 사이트에 대한 업데이트 복제에 관련된 프로세스 흐름 및 주요 로그 항목을 이해할 수도 있습니다.
- - [순서도 – 업데이트 다운로드](/sccm/core/servers/manage/download-updates-flowchart)
- - [순서도 – 업데이트 복제](/sccm/core/servers/manage/update-replication-flowchart)
+更新プログラムをダウンロードするプロセスと更新プログラムを他のサイトに複製するプロセスの流れや重要なログ エントリについては、次のフローチャートを使用して理解に役立てることもできます。
+ - [フローチャート - 更新プログラムのダウンロード](/sccm/core/servers/manage/download-updates-flowchart)
+ - [フローチャート - レプリケーションの更新](/sccm/core/servers/manage/update-replication-flowchart)

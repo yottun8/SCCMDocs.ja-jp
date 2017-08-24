@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager | Microsoft 문서"
+title: System Center Configuration Manager | Microsoft Docs
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
@@ -18,13 +18,13 @@ robots: noindex,nofollow
 ms.openlocfilehash: 10fb029b4e3f9d3386df616a1a238674443d2c76
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
 # <a name="system-center-configuration-manager"></a>System Center Configuration Manager
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (現在のブランチ)*
 
-Microsoft System Center Configuration Manager 시작 Configuration Manager를 사용하면 안전하고 확장 가능한 소프트웨어 배포, 준수 설정 관리, 서버, 데스크톱 및 모바일 장치의 전체 자산 관리를 지원하여 IT 서비스를 더욱 효율적으로 제공할 수 있습니다.  
+Microsoft System Center Configuration Manager へようこそ。 Configuration Manager を使用すると、ソフトウェアの展開、コンプライアンス設定の管理、およびサーバー、デスクトップ、モバイル デバイスの総合資産管理における安全性と拡張性が強化され、IT サービスの効率性が向上します。  
 
- 다음의 위치에서 이 버전의 Configuration Manager 온라인에 대한 최신 콘텐츠를 찾을 수 있습니다.: [ystem Center Configuration Manager에 대한 온라인 설명서](https://go.microsoft.com/fwlink/?LinkID=533344)
+ このバージョンの Configuration Manager の最新コンテンツについては、次のリンクからオンラインでご覧ください: [System Center Configuration Manager のオンライン ドキュメント](https://go.microsoft.com/fwlink/?LinkID=533344)

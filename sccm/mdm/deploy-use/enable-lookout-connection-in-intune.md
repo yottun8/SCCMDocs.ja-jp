@@ -1,6 +1,6 @@
 ---
-title: "Intune에서 Lookout MTP 사용 | Microsoft 문서"
-description: "Intune 관리 콘솔에서 Lookout 모바일 위협 방지를 사용하도록 설정합니다."
+title: "Intune で Lookout MTP を有効にする | Microsoft Docs"
+description: "Intune 管理コンソールで、Lookout Mobile Threat Protection を有効にします。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -17,23 +17,23 @@ manager: angrobe
 ms.openlocfilehash: f9ddbcc981fa1274a41ae16a6a939c0cdf739c3e
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="enable-lookout-mtp-connection-in-the-intune-admin-console"></a>Intune 관리 콘솔에서 Lookout MTP 연결 사용
+# <a name="enable-lookout-mtp-connection-in-the-intune-admin-console"></a>Intune 管理コンソールで、Lookout MTP 接続を有効にする
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-이 항목에서는 Intune에서 Lookout MTP 연결을 사용하도록 설정하는 방법을 보여 줍니다. 이 단계를 수행하기 전에 Lookout 콘솔에서 Intune 커넥터를 이미 구성한 상태여야 합니다.  아직 수행하지 않은 경우 [Lookout 모바일 위협 방지를 사용하여 구독 설정](set-up-your-subscription-with-lookout.md)에 설명된 단계를 수행합니다.
+このトピックでは、Intune で Lookout MTP 接続を有効にする方法を説明します。 この手順を実行する前に、Lookout コンソールで Intune コネクタを構成しておきます。  まだ構成していない場合は、「[Set up your subscription with Lookout mobile threat protection](set-up-your-subscription-with-lookout.md)」(Lookout Mobile Threat Protection 用にサブスクリプションを設定する) で説明されている手順を実行します。
 
-intune에서 Lookout MTP 연결을 사용하도록 설정하려면 [Microsoft Intune 관리자 콘솔](https://manage.microsoft.com)의 **관리** 페이지에서 **타사 서비스 통합**을 선택합니다. **Lookout 상태**를 선택하고 토글 단추를 사용하여 **MTP와 동기화**를 사용하도록 설정합니다.
+Intune で Lookout MTP 接続を有効にするには、[Microsoft Intune 管理者コンソール](https://manage.microsoft.com)の「**管理**」ページで、**[Third Party Service Integration]** (サード パーティ サービスの統合) を選択します。 **[Lookout の状態]** を選択し、**[MTP との同期]** をトグル ボタンを使用して有効にします。
 
-![사용 토글 단추가 강조 표시된 Lookout 동기화 페이지 스크린샷](media/lookout-intune-synchronization.png)
+![有効になったトグル ボタンが強調表示された、Lookout の同期ページのスクリーン ショット](media/lookout-intune-synchronization.png)
 
-Intune 관리자 콘솔에서 Lookout 및 Intune 통합 설정이 완료되었습니다.  이 솔루션을 구현하는 다음 몇 단계에는 [Lookout for Work 앱](configure-and-deploy-lookout-for-work-apps.md) 배포 및 [준수](enable-device-threat-protection-rule-compliance-policy.md) 정책 설정이 포함됩니다.
+これで、Intune 管理者コンソールでの Lookout と Intune の統合の設定は完了です。  このソリューションを実装するための次の手順には、[Lookout for Work アプリ](configure-and-deploy-lookout-for-work-apps.md)の展開や、[コンプライアンス](enable-device-threat-protection-rule-compliance-policy.md) ポリシーの設定などが含まれます。
 
 >[!IMPORTANT]
-> 준수 정책 규칙을 만들고 조건부 액세스를 구성하기 전에 Lookout for Work 앱을 **구성해야 합니다**. 이렇게 하면 앱이 준비되고 최종 사용자가 앱을 설치하여 메일 또는 기타 회사 리소스에 액세스할 수 있습니다.
+> コンプライアンス ポリシー ルールを作成し、条件付きアクセスを構成するには、事前に Lookout for Work アプリを構成する**必要があります**。 これにより、エンド ユーザーがアプリをインストールして、電子メールやその他の会社のリソースにアクセスする場合に使用できるようになります。
 
-## <a name="next-steps"></a>다음 단계
-[Lookout for Work 앱 구성](configure-and-deploy-lookout-for-work-apps.md)
+## <a name="next-steps"></a>次のステップ
+[Lookout for Work アプリを構成する](configure-and-deploy-lookout-for-work-apps.md)

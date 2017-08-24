@@ -1,6 +1,6 @@
 ---
-title: "비즈니스용 Skype Online 액세스 관리 | Microsoft 문서"
-description: "조건부 액세스 정책을 사용하여 비즈니스용 Skype Online에 대한 액세스를 관리하는 방법을 알아봅니다."
+title: "Skype for Business Online のアクセスの管理 | Microsoft Docs"
+description: "条件付きアクセス ポリシーを使用して、Skype for Business Online へのアクセスを管理する方法について説明します。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -17,96 +17,96 @@ manager: angrobe
 ms.openlocfilehash: cacb22a85e74a7d9cae75ad907d0206487cd4dc7
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-skype-for-business-online-access"></a>비즈니스용 Skype Online 액세스 관리
+# <a name="manage-skype-for-business-online-access"></a>Skype for Business Online のアクセスの管理
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
-
-
-**비즈니스용 Skype Online** 에 대한 조건부 액세스 정책을 사용하여 지정된 조건에 따라 비즈니스용 Skype Online에 대한 액세스를 관리할 수 있습니다.  
+*適用対象: System Center Configuration Manager (Current Branch)*
 
 
- 대상 사용자가 장치에서 비즈니스용 Skype Online을 사용하는 경우 다음과 같은 평가 작업이 수행됩니다.![ConditionalAccess&#95;SFBFlow](media/ConditionalAccess_SFBFlow.png)  
+**Skype for Business Online** の条件付きアクセス ポリシーを使用して、Skype for Business Online へのアクセスを指定条件に基づいて管理します。  
 
-## <a name="prerequisites"></a>전제 조건  
 
--   비즈니스용 Skype Online에 대한 최신 인증을 사용하도록 설정합니다. 최신 인증 프로그램에 등록하려면 [Connect 양식](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715) 을 작성하세요.  
+ 対象ユーザーが各自のデバイスで Skype for Business Online を使用しようとすると、次の評価が行われます。![ConditionalAccess&#95;SFBFlow](media/ConditionalAccess_SFBFlow.png)  
 
--   모든 최종 사용자는 비즈니스용 Skype Online을 사용해야 합니다. 비즈니스용 Skype Online과 온-프레미스 비즈니스용 Skype를 모두 배포한 경우 조건부 액세스 정책이 최종 사용자에게 적용되지 않습니다.  
+## <a name="prerequisites"></a>必要条件  
 
--   비즈니스용 Skype Online에 액세스해야 하는 장치는 다음과 같은 조건을 충족해야 합니다.  
+-   Skype for Business Online の先進認証を有効にします。 この [接続フォーム](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715) に必要事項を記入して、最新の認証プログラムに登録します。  
 
-    -   Android 또는 iOS 장치여야 합니다.  
+-   すべてのエンドユーザーが Skype for Business Online を使用している必要があります。 Skype for Business Online と Skype for Business オンプレミスの両方が含まれている展開の場合は、条件付きアクセス ポリシーはエンドユーザーに適用されません。  
 
-    -   Intune에 등록되어 있어야 합니다.  
+-   Skype for Business Online へのアクセスを必要とするデバイスは次の条件を満たしている必要があります。  
 
-    -   배포된 Intune 규정 준수 정책을 준수해야 합니다.  
+    -   Android または iOS デバイスである。  
 
- 장치 상태는 지정된 조건에 따라 액세스를 부여하거나 차단하는 Azure Active Directory에 저장됩니다.  
-조건이 충족되지 않으면 사용자가 로그인할 때 다음 메시지 중 하나가 표시됩니다.  
+    -   Intune に登録されている。  
 
--   장치를 Intune에 등록하지 않았거나 Azure Active Directory에 등록하지 않은 경우, 회사 포털 앱을 설치하고 등록하는 방법에 관한 지침이 포함된 메시지가 표시됩니다.  
+    -   展開されているすべての Intune コンプライアンス ポリシーに準拠している。  
 
--   장치가 규정을 준수하지 않으면 사용자가 문제에 관한 정보를 찾을 수 있는 Intune 웹 포털 또는 회사 포털 앱과 문제의 해결 방법을 알려 주는 메시지가 표시됩니다.  
+ デバイスの状態は、Azure Active Directory に格納され、指定した条件に基づいてアクセスが許可されたりブロックされたりします。  
+条件が満たされない場合、ユーザーにはログイン時に以下のうちのいずれかのメッセージが表示されます。  
 
-## <a name="configure-conditional-access-for-skype-for-business-online"></a>비즈니스용 Skype Online에 대한 조건부 액세스 구성  
+-   デバイスが Intune または Azure Active Directory に登録されていない場合は、会社ポータルのアプリをインストールおよび登録する手順を含むメッセージが表示されます。  
 
-### <a name="step-1-configure-active-directory-security-groups"></a>1단계: Active Directory 보안 그룹 구성  
- 시작하기 전에 조건부 액세스 정책에 대한 Azure Active Directory 보안 그룹을 구성합니다. Office 365 관리 센터에서 이러한 그룹을 구성할 수 있습니다. 이러한 그룹에는 정책의 대상이 되거나 정책에서 제외되는 사용자가 포함됩니다. 사용자가 정책의 대상인 경우 해당 사용자가 사용하는 각 장치가 규정을 준수해야 리소스에 액세스할 수 있습니다.  
+-   デバイスが準拠していない場合は、Intune の会社ポータル Web サイトまたは会社ポータルのアプリにユーザーを誘導するメッセージが表示されます。このポータルで、ユーザーは問題とその解決方法に関する情報を確認できます。  
 
- 비즈니스용 Skype 정책에 사용할 두 개의 그룹 유형을 지정할 수 있습니다.  
+## <a name="configure-conditional-access-for-skype-for-business-online"></a>Skype for Business Online の条件付きアクセスの構成  
 
--   대상 그룹 - 정책이 적용되는 사용자 그룹을 포함합니다.  
+### <a name="step-1-configure-active-directory-security-groups"></a>手順 1. Active Directory セキュリティ グループを構成する  
+ 開始する前に、条件付きアクセス ポリシーの Azure Active Directory セキュリティ グループを構成します。 Office 365 管理センターでこれらのグループを構成できます。 これらのグループには、ポリシーの対象となるユーザーや、ポリシーから除外されるユーザーが含まれます。 ユーザーがポリシーの対象となる場合、ユーザーに使用される各デバイスがリソースにアクセスするには、ポリシーを遵守している必要があります。  
 
--   제외된 그룹 - 정책에서 제외되는 사용자 그룹을 포함합니다(선택 사항).  
-    사용자가 두 그룹에 모두 속한 경우에는 정책에서 제외됩니다.  
+ Skype for Business ポリシーに適用する 2 つのグループの種類を指定できます。  
 
-### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>2단계: 규정 준수 정책 구성 및 배포  
- 규정 준수 정책을 만들고 비즈니스용 Skype Online 정책의 대상이 될 모든 장치에 배포해야 합니다.  
+-   対象グループ – ポリシーを適用するユーザーのグループが含まれます。  
 
- 준수 정책을 구성하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 장치 규정 준수 정책 관리](../../protect/deploy-use/device-compliance-policies.md)를 참조하세요.  
+-   例外グループ – ポリシーから除外されるユーザーのグループが含まれます (省略可能)。  
+    ユーザーが両方のグループに含まれている場合は、ポリシーから除外されます。  
+
+### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>手順 2:コンプライアンス ポリシーを構成し展開する  
+ コンプライアンス ポリシーを作成して、Skype for Business Online ポリシーの対象となるすべてのデバイスに展開します。  
+
+ コンプライアンス ポリシーを構成する方法の詳細については、「[System Center Configuration Manager でのデバイス コンプライアンス ポリシーの管理](../../protect/deploy-use/device-compliance-policies.md)」を参照してください。  
 
 > [!NOTE]  
->  준수 정책을 배포하지 않은 상태에서 비즈니스용 Skype Online 정책을 사용하도록 설정하면 Intune에 등록되어 있으며 대상으로 지정된 모든 장치에 대한 액세스가 허용됩니다.  
+>  コンプライアンス ポリシーを展開していない場合に Skype for Business Online ポリシーを有効にすると、Intune に登録されているすべての対象デバイスにアクセスが許可されます。  
 
- 준비가 되었으면 3단계를 계속합니다.  
+ 準備ができたら、手順 3 に進みます。  
 
-### <a name="step-3-configure-the-skype-for-business-online-policy"></a>3 단계: 비즈니스용 Skype Online 정책 구성  
- 이제, 규정을 준수하는 관리 장치만 비즈니스용 Skype Online에 액세스할 수 있도록 요구하는 정책을 구성합니다. 이 정책은 Azure Active Directory에 저장됩니다.  
+### <a name="step-3-configure-the-skype-for-business-online-policy"></a>手順 3: Skype for Business Online ポリシーを構成する  
+ 次に、管理対象の準拠デバイスのみが Skype for Business Online にアクセスできるようにポリシーを構成します。 このポリシーは、Azure Active Directory に格納されます。  
 
-1.  [Microsoft Intune 관리 콘솔](https://manage.microsoft.com)에서 **정책** > **조건부 액세스** > **Skype for Business Online 정책**를 참조하세요.  
+1.  [Microsoft Intune 管理コンソール](https://manage.microsoft.com)で、 **[ポリシー]** > **[条件付きアクセス]** > **Skype for Business Online [ポリシー]**」を参照してください。  
 
      ![ConditionalAccess&#95;SFBPolicy](media/ConditionalAccess_SFBPolicy.png)  
 
-2.  **조건부 액세스 정책 사용**을 선택합니다.  
+2.  **[条件付きアクセス ポリシーを有効にする]** を選択します。  
 
-3.  **응용 프로그램 액세스**에서 다음 플랫폼에 조건부 액세스 정책을 적용하도록 선택할 수 있습니다.  
+3.  **[アプリケーション アクセス]**で、条件付きアクセス ポリシーの適用対象を次の中から選択できます。  
 
     -   iOS  
 
     -   Android  
 
-4.  **대상 그룹**에서 **수정** 을 클릭하여 정책을 적용할 Azure Active Directory 보안 그룹을 선택합니다. 모든 사용자 또는 선택한 사용자 그룹을 대상으로 지정할 수 있습니다.  
+4.  **[対象グループ]**で、 **[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。 すべてのユーザーを対象にすることも、選んだユーザー グループのみを対象にすることもできます。  
 
-5.  **제외된 그룹**에서 필요에 따라 **수정** 을 클릭하여 이 정책에서 제외된 Azure Active Directory 보안 그룹을 선택합니다.  
+5.  **[例外グループ]**で、必要に応じて **[変更]** をクリックして、このポリシーから除外する Azure Active Directory セキュリティ グループを選択します。  
 
-6.  작업이 끝나면 **저장**을 클릭합니다.  
+6.  終了したら、 **[保存]**をクリックします。  
 
- 이제 비즈니스용 Skype Online에 대한 조건부 액세스를 구성했습니다. 조건부 액세스 정책을 배포할 필요는 없으며, 즉시 적용됩니다.  
+ これで Skype for Business Online の条件付きアクセスの構成が完了します。 条件付きアクセス ポリシーを展開する必要はありません。直ちに有効になります。  
 
-## <a name="monitor-the-compliance-and-conditional-access-policies"></a>준수 및 조건부 액세스 정책 모니터링  
- 그룹 작업 영역에서 장치의 조건부 액세스 상태를 확인할 수 있습니다.  
+## <a name="monitor-the-compliance-and-conditional-access-policies"></a>コンプライアンスと条件付きアクセス ポリシーを監視する  
+ [グループ] ワークスペースで、デバイスの条件付きアクセスの状態を表示できます。  
 
- 모바일 장치 그룹을 선택하고 **장치** 탭에서 다음 **필터**중 하나를 선택합니다.  
+ モバイル デバイス グループを選択し、 **[デバイス]** タブで、次の **[フィルター]**のいずれかを選択します。  
 
--   **AAD에 등록되지 않은 장치** - 이러한 장치는 비즈니스용 Skype Online에서 차단됩니다.  
+-   **AAD に登録されていないデバイス** – これらのデバイスは Skype for Business Online からブロックされます。  
 
--   **정책을 준수하지 않는 장치** - 이러한 장치는 비즈니스용 Skype Online에서 차단됩니다.  
+-   **準拠していないデバイス** – これらのデバイスは Skype for Business Online からブロックされます。  
 
--   **AAD에 등록되어 있고 정책을 준수하는 장치** - 이러한 장치는 비즈니스용 Skype Online에 액세스할 수 있습니다.  
+-   **AAD に登録され、準拠しているデバイス** – これらのデバイスは、Skype for Business Online にアクセスできます。  
 
-### <a name="see-also"></a>참고 항목  
+### <a name="see-also"></a>関連項目  
 
- [System Center Configuration Manager에서 장치 준수 정책 관리](../../protect/deploy-use/device-compliance-policies.md)
+ [System Center Configuration Manager でのデバイス コンプライアンス ポリシーの管理](../../protect/deploy-use/device-compliance-policies.md)

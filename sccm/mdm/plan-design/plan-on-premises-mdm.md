@@ -1,6 +1,6 @@
 ---
-title: "온-프레미스 MDM 계획 | Microsoft 문서"
-description: "System Center Configuration Manager에서 모바일 장치를 관리하기 위해 온-프레미스 모바일 장치 관리를 계획합니다."
+title: "オンプレミス MDM の計画 | Microsoft Docs"
+description: "System Center Configuration Manager でモバイル デバイスを管理するために、オンプレミス モバイル デバイス管理を計画します。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,104 +18,104 @@ manager: angrobe
 ms.openlocfilehash: 544c3bea0c7df96887ee1717f061c39c64b82d01
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="plan-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager의 온-프레미스 모바일 장치 관리에 대한 계획
+# <a name="plan-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミス モバイル デバイス管理の計画
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-온\-프레미스 모바일 장치 관리를 처리하기 위해 Configuration Manager 인프라를 준비하기 전에 다음과 같은 요구 사항을 고려하세요.
+Configuration Manager のインフラストラクチャでオンプレミス モバイル デバイス管理を処理する場合、次の要件を考慮します。
 
-##  <a name="bkmk_devices"></a> 지원되는 장치  
- 온-프레미스 모바일 장치 관리에서 장치 운영 체제에 기본 제공된 관리 기능을 사용하여 모바일 장치를 관리할 수 있습니다.  관리 기능은 OMA(Open Mobile Alliance) DM(장치 관리) 표준을 기준으로 하며 많은 장치 플랫폼은 이 표준을 사용하여 장치를 관리할 수 있도록 합니다.  Configuration Manager 클라이언트에서 관리하도록 요구하는 다른 장치와 구분하기 위해 이러한 장치를 **최신 장치**(설명서 및 Configuration Manager 콘솔 사용자 인터페이스에서)로 지칭합니다.  
+##  <a name="bkmk_devices"></a> サポートされるデバイス  
+ オンプレミス モバイル デバイス管理を使用すると、デバイスのオペレーティング システムに組み込まれている管理機能を使用してモバイル デバイスを管理できます。  管理機能は、Open Mobile Alliance (OMA) Device Management (DM) 標準に基づいており、多くのデバイス プラットフォームでは、この標準を使用して、デバイスを管理できます。  これらを (ドキュメントおよび Configuration Manager コンソールのユーザー インターフェイスの) **最新のデバイス**と呼び、管理するために Configuration Manager クライアントを必要とするその他のデバイスと区別します。  
 
  > [!NOTE]  
->  현재 분기의 Configuration Manager는 다음 운영 체제를 실행하는 장치에 대한 온-프레미스 모바일 장치 관리에서의 등록을 지원합니다.  
+>  Configuration Manager の現在のブランチでは、次のオペレーティング システムを実行しているデバイスをオンプレミス モバイル デバイス管理で登録することができます。  
 >   
 > -  Windows 10 Enterprise  
 > -   Windows 10 Pro  
-> -   Windows 10 Team\(Configuration Manager 버전 1602 이상\)  
+> -   Windows 10 Team\( Configuration Manager バージョン 1602 以降\)  
 > -   Windows 10 Mobile  
 > -   Windows 10 Mobile Enterprise
 > -   Windows 10 IoT Enterprise   
 
-##  <a name="bkmk_intune"></a> Microsoft Intune 구독의 용도  
- 온\-프레미스 모바일 장치 관리를 사용하기 시작하려면 Microsoft Intune을 구독해야 합니다. 구독은 장치 라이선스를 추적하는 데만 필요하며 장치에 대한 관리 정보를 관리하거나 저장하는 데는 사용되지 않습니다. 모든 관리는 온-프레미스 Configuration Manager 인프라를 사용하여 조직의 엔터프라이즈에서 처리됩니다.  
+##  <a name="bkmk_intune"></a> Microsoft Intune サブスクリプションの使用  
+ オンプレミス モバイル デバイス管理の使用を開始するには、Microsoft Intune のサブスクリプションが必要です。 このサブスクリプションは、デバイスのライセンスの追跡にのみ必要のみがあり、デバイスの管理情報の管理や格納には使用されません。 すべての管理は、オンプレミスの Configuration Manager インフラストラクチャを使用して組織のエンタープライズで処理されます。  
 
  > [!NOTE]  
- > 버전 1610부터 Configuration Manager는 Microsoft Intune과 온-프레미스 Configuration Manager 인프라를 둘 다 사용하여 동시에 모바일 장치를 관리할 수 있도록 지원합니다.   
+ > バージョン 1610 以降の Configuration Manager では、Microsoft Intune とオンプレミスの Configuration Manager インフラストラクチャの両方を同時に使用してモバイル デバイスを管理できます。   
 
- 인터넷에 연결된 장치가 사이트에 있는 경우 Intune 서비스를 사용하여 정책 업데이트에 대한 장치 관리 지점을 확인하도록 장치에 알릴 수 있습니다. 이 Intune의 용도는 인터넷 연결 장치에 대한 알림으로 엄격히 국한됩니다. 인터넷에 연결되지 않은(그리고 Intune에서 연결할 수 없는) 장치는 구성된 폴링 간격에 의존하여 관리 기능에 대한 사이트 시스템 역할을 확인합니다.  
+ サイトにインターネット接続があるデバイスがある場合、Intune サービスを使用して、ポリシーの更新のデバイス管理ポイントを確認するようデバイスに通知することができます。 Intune のこの使用は、インターネットに接続されたデバイスの通知のみに限定されます。 インターネット接続のないデバイス (Intune が接続できない) は、管理機能のサイト システムの役割を使用してチェックインする場合に、構成されたポーリング間隔に依存します。  
 
 > [!TIP]  
->  필수 사이트 시스템 역할을 설정하기 전에 Intune을 설정하여 사이트 시스템 역할이 작동하는 데 필요한 시간을 최소화하는 것이 좋습니다.  
+>  サイト システムの役割をセットアップする前に、Intune をセットアップすることをお勧めします。これにより、サイト システムの役割が機能するまでにかかる時間を最小化できます。  
 
- Intune 구독 설정 방법에 대한 내용은 [System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 위해 Microsoft Intune 구독 설정](../../mdm/get-started/set-up-intune-subscription-on-premises-mdm.md)을 참조하세요.  
+ Intune サブスクリプションのセットアップ方法については、「[System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために Microsoft Intune サブスクリプションをセットアップする](../../mdm/get-started/set-up-intune-subscription-on-premises-mdm.md)」を参照してください。  
 
-##  <a name="bkmk_roles"></a> 필수 사이트 시스템 역할  
- 온\-프레미스 모바일 장치 관리에는 다음 각 사이트 시스템 역할 중 하나 이상이 필요합니다.  
+##  <a name="bkmk_roles"></a> 必要なサイト システムの役割  
+ オンプレミス モバイル デバイス管理には、次のサイト システムの役割がそれぞれ 1 つ以上必要です。  
 
--   **등록 프록시 지점** : 등록 요청 지원  
+-   **登録プロキシ ポイント** 。登録要求をサポートします。  
 
--   **등록 지점** : 장치 등록 지원  
+-   **登録ポイント** 。デバイスの登録をサポートします。  
 
--   **장치 관리 지점** : 정책 배달 이 사이트 시스템 역할은 모바일 장치 관리를 허용하도록 구성된 관리 지점 역할이 변형된 것입니다.  
+-   **デバイス管理ポイント** 。ポリシー配信用です。 このサイト システムの役割は、モバイル デバイス管理を許可するように構成されている管理ポイントの役割のバリエーションの 1 つです。  
 
--   **배포 지점** : 콘텐츠 배달용  
+-   **配布ポイント** 。コンテンツ配信用です。  
 
--   **서비스 연결 지점** : 방화벽 외부에 장치를 알리기 위해 Intune에 연결  
+-   **サービス接続ポイント**。Intune に接続して、ファイアウォールの外側のデバイスに通知します。  
 
- 조직의 필요에 따라 이러한 사이트 시스템 역할을 단일 사이트 시스템 서버에 설치하거나 서로 다른 서버에 개별적으로 실행할 수 있습니다. 온\-프레미스 모바일 장치 관리에 사용되는 각 사이트 시스템 서버는 신뢰할 수 있는 장치와 통신하기 위한 HTTPS 끝점으로 구성되어야 합니다. 자세한 내용은 [신뢰할 수 있는 필수 통신](#bkmk_trustedComs)항목을 참조하세요.  
+ これらのサイト システムの役割は、1 つのサイト システム サーバーにインストールできます。または、組織のニーズに応じて、異なるサーバー上で別々に実行することができます。 オンプレミス モバイル デバイス管理で使用される各サイト システム サーバーは信頼されているデバイスと通信するための HTTPS エンドポイントとして構成する必要があります。 詳細については、「 [必要な信頼された通信](#bkmk_trustedComs)」をご覧ください。  
 
- 사이트 시스템 역할 계획에 대한 자세한 내용은 [System Center Configuration Manager에 대한 사이트 시스템 서버 및 사이트 시스템 역할에 대한 계획](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)을 참조하세요.  
+ サイト システムの役割の計画の詳細については、「[System Center Configuration Manager のサイト システム サーバーとサイト システムの役割の計画](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)」を参照してください。  
 
- 필요한 사이트 시스템 역할을 추가하는 방법에 대한 자세한 내용은 [System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 위한 사이트 시스템 역할 설치](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)를 참조하세요.  
+ 必要なサイト システムの役割の追加方法の詳細については、「[System Center Configuration Manager でのオンプレミス モバイル デバイス管理のサイト システムの役割のインストール](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)」を参照してください。  
 
-##  <a name="bkmk_trustedComs"></a> 신뢰할 수 있는 필수 통신  
- 온\-프레미스 모바일 장치 관리에서는 HTTPS 통신을 위해 사이트 시스템 역할이 사용되도록 설정되어야 합니다. 사용자의 필요에 따라 엔터프라이즈 CA(인증 기관)를 사용하여 서버와 장치 간에 신뢰할 수 있는 연결을 설정하거나, 공개적으로 사용 가능한 CA를 사용하여 신뢰할 수 있는 기관이 될 수 있습니다.  어떤 방법을 사용하든 필요한 사이트 시스템 역할을 호스트하는 사이트 시스템 서버에서 IIS를 사용해서 웹 서버 인증서를 구성해야 하며, 해당 서버에 연결해야 하는 장치에 설치된 CA의 루트 인증서가 필요합니다.  
+##  <a name="bkmk_trustedComs"></a> 必要な信頼された通信  
+ オンプレミス モバイル デバイス管理では、HTTPS 接続用にサイト システムの役割を有効にする必要があります。 必要に応じて、エンタープライズ証明機関 (CA) を使用して、サーバーとデバイスの間で信頼された接続を確立するか、または信頼された機関として一般的に利用できる CA を使用することができます。  いずれの場合も、必要なサイト システムの役割をホストしているサイト システム サーバー上で、IIS を使用して Web サーバー証明書を構成する必要があります。また、それらのサーバーに接続する必要があるデバイスにインストールされる、その CA のルート証明書が必要です。  
 
- 엔터프라이즈 CA를 사용하여 신뢰할 수 있는 통신을 설정하는 경우 다음 작업을 수행해야 합니다.  
+ 信頼された通信を確立するためにエンタープライズ CA を使用する場合は、次のタスクを実行する必要があります。  
 
--   CA에서 웹 서버 인증서 템플릿 만들기 및 발급  
+-   CA で Web サーバー証明書テンプレートを作成および発行します。  
 
--   필요한 사이트 시스템 역할을 호스트하는 각 사이트 시스템 서버에 대한 웹 서버 인증서를 요청합니다.  
+-   必要なサイト システムの役割をホストする各サイト システム サーバー用の Web サーバー証明書を要求します。  
 
--   요청된 웹 서버 인증서를 사용하도록 사이트 시스템 서버의 IIS를 구성합니다.  
+-   要求された Web サーバー証明書を使用するサイト システム サーバーで IIS を構成します。  
 
- 회사 Active Directory 도메인에 가입된 장치의 경우 엔터프라이즈 CA의 루트 인증서가 이미 장치의 신뢰할 수 있는 연결에 사용될 수 있습니다. 즉, 도메인에 가입된 장치(예: 데스크톱 컴퓨터)는 사이트 시스템 서버와의 HTTPS 연결을 위해 자동으로 신뢰됩니다. 그러나 도메인에 가입되지 않은 장치(일반적으로 모바일)에는 필수 루트 인증서가 설치되어 있지 않습니다. 온\-프레미스 모바일 장치 관리를 지원하는 사이트 시스템 서버와 통신하려면 해당 장치에서 루트 인증서를 수동으로 설치해야 합니다.  
+ 企業の Active Directory ドメインに参加しているデバイスの場合、信頼された接続用のデバイスでは、エンタープライズ CA のルート証明書が既に使用可能です。 これは、ドメインに参加しているデバイス (デスクトップ コンピューターなど) がサイト システム サーバーとの HTTPS 接続で自動的に信頼されることを示します。 ただし、ドメインに参加していないデバイス (通常、モバイル) には、必要なルート証明書がインストールされていません。 これらのデバイスには、オンプレミス モバイル デバイス管理をサポートするサイト システム サーバーと正常に通信するためにルート証明書を手動でインストールする必要があります。  
 
- 개별 장치에서 사용하기 위해 발급 CA의 루트 인증서를 내보내야 합니다. 루트 인증서 파일을 가져오려는 경우 CA를 사용하여 내보낼 수 있으며, 비슷한 방법으로, CA에서 발급한 웹 서버 인증서를 사용하여 루트를 추출하고 루트 인증서 파일을 만들 수도 있습니다.   그런 다음 장치로 루트 인증서가 배달되어야 합니다.  몇 가지 예제 배달 방법은 다음과 같습니다.  
+ 個々 のデバイスで使用する発行元 CA のルート証明書をエクスポートする必要があります。 ルート証明書ファイルを取得するには、CA を使用してエクスポートするか、または簡単な方法として、CA によって発行された Web サーバー証明書を使用して、ルートを抽出し、ルート証明書ファイルを作成します。   その後、ルート証明書をデバイスに配信する必要があります。  次に配信方法の例をいくつか示します。  
 
--   파일 시스템  
+-   ファイル システム  
 
--   메일 첨부 파일  
+-   電子メールの添付ファイル  
 
--   메모리 카드  
+-   メモリ カード  
 
--   테더링된 장치  
+-   テザリングされたデバイス  
 
--   클라우드 저장소(예: OneDrive)  
+-   クラウドの記憶域 (OneDrive など)  
 
--   NFC(근거리 통신) 연결  
+-   近距離無線通信 (NFC) 接続  
 
--   바코드 스캐너  
+-   バーコード スキャナ  
 
--   OOBE(첫 실행 경험) 프로비저닝 패키지  
+-   Out of Box Experience (OOBE) プロビジョニング パッケージ  
 
- 자세한 내용은 [System Center Configuration Manager에서 온-프레미스 모바일 장치 관리를 위해 신뢰할 수 있는 통신에 대한 인증서 설정](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)을 참조하세요.  
+ 詳細については、「 [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)」をご覧ください。  
 
-##  <a name="bkmk_enrollment"></a> 등록 시 고려 사항  
- 온\-프레미스 모바일 장치 관리에 대한 장치 등록을 사용하도록 설정하려면 사용자는 등록할 수 있는 권한이 있어야 하고 해당 장치는 필요한 사이트 시스템 역할을 호스트하는 사이트 시스템 서버와 신뢰할 수 있는 통신을 수행할 수 있어야 합니다.  
+##  <a name="bkmk_enrollment"></a> 登録の注意事項  
+ オンプレミス モバイル デバイス管理のデバイスの登録を有効にするには、登録する権限がユーザーに付与され、かつ、ユーザーのデバイスが、必要なサイト システムの役割をホストするサイト システム サーバーとの信頼された通信を行うことができる必要があります。  
 
- 사용자에게 등록 권한을 부여하는 작업은 Configuration Manager 클라이언트 설정에서 등록 프로필을 설정하여 수행할 수 있습니다. 기본 클라이언트 설정을 사용하여 검색된 모든 사용자에게 등록 프로필을 푸시하거나 사용자 지정 클라이언트 설정에서 등록 프로필을 설정하고 해당 설정을 하나 이상의 사용자 컬렉션에 푸시할 수 있습니다.  
+ ユーザーへの登録権限の付与は、Configuration Manager クライアントの設定で登録プロファイルを設定することによって行います。 既定のクライアント設定を使用して、検出されたすべてのユーザーに、登録プロファイルをプッシュするか、またはカスタム クライアント設定で、登録プロファイルを設定して、設定を 1 つまたは複数のユーザー コレクションにプッシュできます。  
 
- 사용자 등록 권한이 부여되면 자신의 장치를 등록할 수 있습니다. 등록하려면 사용자 장치에 필요한 사이트 시스템 역할을 호스트하는 사이트 시스템 서버에서 사용되는 웹 서버 인증서를 발급한 CA(인증 기관)의 루트 인증서가 있어야 합니다.  
+ ユーザー登録権限が付与されたユーザーは、自分のデバイスを登録できます。 登録するには、ユーザーのデバイスに、Web サーバー証明書 (必要なサイト システムの役割をホストするサイト システム サーバーで使用されるもの) を発行した証明機関 (CA) のルート証明書がある必要があります。  
 
- 사용자가 시작하는 등록 방식 대신, 사용자 개입 없이 장치가 등록되도록 하는 대량 등록 패키지를 설정할 수 있습니다. 이 패키지는 초기에 사용하기 위해 프로비전하거나 장치에서 OOBE 프로세스가 진행된 후에 장치로 전달될 수 있습니다.  
+ ユーザーによる登録の代わりに、ユーザーの介入なしにデバイスを登録できる一括登録パッケージを設定することができます。 このパッケージは、デバイスが使用するために最初にプロビジョニングされる前、またはデバイスで OOBE プロセスを実行した後に、デバイスに配布することができます。  
 
- 장치를 설정 및 등록하는 방법에 대한 자세한 내용은 다음을 참조하세요.  
+ デバイスを設定および登録する方法の詳細については、次を参照してください。  
 
--   [System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 위한 장치 등록 설정](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
+-   [System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のデバイス登録の設定](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
 
--   [System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 위한 장치 등록](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)  
+-   [System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスの登録](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)  

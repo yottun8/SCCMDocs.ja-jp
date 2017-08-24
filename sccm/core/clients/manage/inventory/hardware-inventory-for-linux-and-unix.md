@@ -1,6 +1,6 @@
 ---
-title: "하드웨어 인벤토리 | Microsoft 문서 | Linux UNIX "
-description: "System Center Configuration Manager에서 Linux 및 UNIX에 대한 하드웨어 인벤토리를 사용하는 방법을 알아봅니다."
+title: "ハードウェア インベントリ | Microsoft Docs | Linux UNIX "
+description: "System Center Configuration Manager で Linux および UNIX のハードウェア インベントリを使用する方法について説明します。"
 ms.custom: na
 ms.date: 02/22/2017
 ms.prod: configuration-manager
@@ -17,36 +17,36 @@ manager: angrobe
 ms.openlocfilehash: b6776fbe0cfca23244d767cffd554a2ef4567a2d
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="hardware-inventory-for-linux-and-unix-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 Linux 및 UNIX에 대한 하드웨어 인벤토리
+# <a name="hardware-inventory-for-linux-and-unix-in-system-center-configuration-manager"></a>System Center Configuration Manager における Linux および UNIX のハードウェア インベントリ
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-Linux 및 UNIX용 System Center Configuration Manager 클라이언트는 하드웨어 인벤토리를 지원합니다. 하드웨어 인벤토리를 수집하면 리소스 탐색기 또는 Configuration Manager 보고서에서 인벤토리 보기를 실행하고, 이러한 정보를 사용하여 다음과 같은 작업을 사용하도록 설정하는 컬렉션 및 쿼리를 만들 수 있습니다.  
+Linux および UNIX 用の System Center Configuration Manager クライアントは、ハードウェア インベントリをサポートします。 ハードウェア インベントリを収集すると、リソース エクスプローラーまたは Configuration Manager レポートでインベントリの表示を実行したり、この情報を使用して以下の操作が可能になるクエリやコレクションを作成したりできます。  
 
--   소프트웨어 배포  
+-   ソフトウェアの展開  
 
--   유지 관리 기간 적용  
+-   メンテナンス期間の適用  
 
--   사용자 지정 클라이언트 설정 배포  
+-   カスタム クライアント設定の展開  
 
- Linux 및 UNIX 서버에 대한 하드웨어 인벤토리에서는 표준 기반 CIM(Common Information Model) 서버를 사용합니다. CIM 서버는 소프트웨어 서비스(또는 데몬)로 실행되며, DMTF(Distributed Management Task Force) 표준을 기반으로 하는 관리 인프라를 제공합니다. CIM 서버는 Windows 기반 컴퓨터에서 사용할 수 있는 관리 인프라 WMI(Windows Management Infrastructure) CIM 기능과 유사한 기능을 제공합니다.  
+ Linux および UNIX サーバーのハードウェア インベントリでは、標準ベースの Common Information Model (CIM) サーバーを使用します。 CIM サーバーはソフトウェア サービス (またはデーモン) として実行され、分散管理タスク フォース (DMTF) 標準に基づく管理インフラストラクチャを提供します。 CIM サーバーには、Windows ベースのコンピューターで使用可能な Windows Management Infrastructure (WMI) CIM 機能に類似した機能が備わっています。  
 
- 누적 업데이트 1부터는 Linux 및 UNIX용 클라이언트에 **Open Group** 의 오픈 소스 **omiserver**버전 1.0.6이 사용됩니다. (누적 업데이트 1 이전 버전의 클라이언트에서는 **nanowbem** 이 CIM 서버로 사용되었습니다.)  
+ Linux および UNIX 用クライアントでは、累積的な更新プログラム 1 以降は **Open Group** のオープン ソース **omiserver**バージョン 1.0.6 を使用します。 (累積的な更新プログラム 1 より前の場合、クライアントは **nanowbem** を CIM サーバーとして使用していました。)  
 
- CIM 서버는 Linux 및 UNIX용 클라이언트의 일부로 설치됩니다. Linux 및 UNIX용 클라이언트는 CIM 서버와 직접 통신하고 CIM 서버의 WS-MAN 인터페이스를 사용하지 않습니다. 클라이언트를 설치하면 CIM 서버의 WS-MAN 포트를 사용할 수 없습니다. Microsoft는 현재 OMI(개방형 관리 인프라) 프로젝트를 통해 오픈 소스로 제공되는 CIM 서버를 개발했습니다. OMI 프로젝트에 대한 자세한 내용은 [Open Group](http://go.microsoft.com/fwlink/p/?LinkId=262317) 웹 사이트를 참조하세요.  
+ CIM サーバーは、Linux および UNIX 用クライアントの一部としてインストールされます。 Linux および UNIX 用クライアントは、CIM サーバーと直接通信し、CIM サーバーの WS-MAN インターフェイスは使用しません。 CIM サーバー上の WS-MAN ポートは、クライアントのインストール時には無効です。 Microsoft は、Open Management Infrastructure (OMI) プロジェクトを介してオープン ソースとして利用できる CIM サーバーを開発しました。 Open Management Infrastructure プロジェクトについて詳しくは、「 [Open Group](http://go.microsoft.com/fwlink/p/?LinkId=262317) 」Web サイトをご覧ください。  
 
- Linux 및 UNIX 서버의 하드웨어 인벤토리는 기존의 Win32 WMI 클래스 및 속성을 Linux 및 UNIX 서버의 해당 클래스 및 속성으로 매핑하여 작동합니다. 이러한 클래스 및 속성의 일대일 매핑을 통해 Linux 및 UNIX 하드웨어 인벤토리를 Configuration Manager와 통합할 수 있습니다. Linux 및 UNIX 서버의 인벤토리 데이터는 Configuration Manager 콘솔 및 보고서에 Windows 기반 컴퓨터의 인벤토리와 함께 표시됩니다. 이러한 방법으로 유형이 다른 관리 환경을 일관적으로 제공합니다.  
+ Linux および UNIX サーバー上のハードウェア インベントリは、既存の Win32 と WMI のクラスとプロパティを、Linux と UNIX サーバーの同等のクラスとプロパティにマッピングすることによって動作します。 このクラスとプロパティの 1 対 1 のマッピングによって、Linux と UNIX のハードウェア インベントリを Configuration Manager と統合できるようになります。 Linux および UNIX サーバーからのインベントリ データは、Windows ベースのコンピューターからのインベントリと一緒に、Configuration Manager コンソールとレポートに表示されます。 これにより、一貫性のある異種管理エクスペリエンスが提供されます。  
 
 > [!TIP]  
->  **운영 체제** 클래스에 **캡션** 값을 사용하여 쿼리 및 컬렉션에서 다양한 Linux 및 UNIX 운영 체제를 식별할 수 있습니다.  
+>  **[オペレーティング システム]** クラスの **[キャプション]** 値を使用して、クエリとコレクション内の各種 Linux および UNIX オペレーティング システムを識別できます。  
 
-##  <a name="BKMK_ConfigHardwareforLnU"></a> Linux 및 UNIX 서버에 대한 하드웨어 인벤토리 구성  
- 기본 클라이언트 설정을 사용하거나 사용자 지정 클라이언트 장치 설정을 만들어 하드웨어 인벤토리를 구성할 수 있습니다. 사용자 지정 클라이언트 장치 설정을 사용하면 Linux 및 UNIX 서버에서만 수집하려는 클래스 및 속성을 구성할 수 있습니다. Linux 및 UNIX 서버에서 전체 및 델타 인벤토리를 수집할 시기에 대한 사용자 지정 일정을 지정할 수도 있습니다.  
+##  <a name="BKMK_ConfigHardwareforLnU"></a> Linux および UNIX サーバーのハードウェア インベントリを構成する  
+ ハードウェア インベントリを構成するには、既定のクライアント設定を使用することもできますし、カスタム クライアント デバイス設定を作成することも可能です。 カスタム クライアント デバイス設定を使用する場合は、ご使用の Linux および UNIX サーバーからのみ収集するクラスとプロパティを構成できます。 また、使用している Linux および UNIX サーバーから、完全なインベントリと差分のインベントリを収集するカスタムのスケジュールを指定できます。  
 
- Linux 및 UNIX용 클라이언트에서는 다음과 같이 Linux 및 UNIX 서버에서 사용할 수 있는 하드웨어 인벤토리 클래스를 지원합니다.  
+ Linux および UNIX 用のクライアントでは、Linux および UNIX サーバーで使用できる次のハードウェア インベントリ クラスがサポートされています。  
 
 -   Win32_BIOS  
 
@@ -72,54 +72,54 @@ Linux 및 UNIX용 System Center Configuration Manager 클라이언트는 하드�
 
 -   SMS_Processor  
 
- 이러한 인벤토리 클래스의 일부 속성은 Configuration Manager에서 Linux 및 UNIX 컴퓨터에 사용할 수 없습니다.  
+ これらのインベントリ クラスのすべてのプロパティが、Configuration Manager の Linux および UNIX コンピューターで有効になるわけではありません。  
 
-##  <a name="BKMK_OperationsforHardwareforLnU"></a> 하드웨어 인벤토리에 대한 작업  
- Linux 및 UNIX 서버에서 하드웨어 인벤토리를 수집한 후에는 다른 컴퓨터에서 수집한 인벤토리를 보는 것과 같은 방식으로 해당 정보를 보고 사용할 수 있습니다.  
+##  <a name="BKMK_OperationsforHardwareforLnU"></a> ハードウェア インベントリの操作  
+ ご使用の Linux および UNIX サーバーからハードウェア インベントリを収集すると、他のコンピューターから収集したインベントリを表示する場合と同じように、その情報を次のように表示および使用できます。  
 
--   리소스 탐색기를 사용하면 Linux 및 UNIX 서버의 하드웨어 인벤토리에 대한 세부 정보를 볼 수 있습니다.  
+-   リソース エクスプローラーを使用して、Linux および UNIX サーバーからのハードウェア インベントリに関する詳細情報を表示します。  
 
--   특정 하드웨어 구성에 따라 쿼리 만들기  
+-   特定のハードウェア構成に基づいたクエリを作成します。  
 
--   특정 하드웨어 구성을 기반으로 하는 쿼리 기반 컬렉션을 만듭니다.  
+-   特定のハードウェア構成に基づいたクエリ ベースのコレクションを作成します。  
 
--   하드웨어 구성에 대한 특정 세부 정보를 표시하는 보고서를 실행합니다.  
+-   ハードウェア構成に関する特定の詳細情報を表示するレポートを実行します。  
 
- Linux 또는 UNIX 서버의 하드웨어 인벤토리는 클라이언트 설정에 구성하는 일정에 따라 실행됩니다. 기본적으로 7일마다 실행됩니다. Linux 및 UNIX용 클라이언트는 전체 인벤토리 주기 및 델타 인벤토리 주기를 모두 지원합니다.  
+ Linux または UNIX サーバー上のハードウェア インベントリは、クライアント設定で構成したスケジュールに従って実行されます。 既定では、7 日ごとに実行されます。 Linux および UNIX 用クライアントは、完全なインベントリ サイクルと差分インベントリ サイクルの両方をサポートします。  
 
- 또한 Linux 또는 UNIX 서버의 클라이언트를 하드웨어 인벤토리를 즉시 실행하도록 강제할 수 있습니다. 하드웨어 인벤토리를 실행하려면 하드웨어 인벤토리 주기를 시작하도록 클라이언트에서 **루트** 자격 증명을 사용하여 **/opt/microsoft/configmgr/bin/ccmexec-rs hinv**명령을 실행합니다.  
+ また Linux または UNIX サーバー上のクライアントにハードウェア インベントリを直ちに実行するように強制することもできます。 ハードウェア インベントリを実行するには、クライアント上で **[ルート]** 資格情報を使用して、ハードウェア インベントリ サイクルを開始する次のコマンドを実行します: **/opt/microsoft/configmgr/bin/ccmexec - rs hinv**  
 
- 하드웨어 인벤토리에 대한 작업은 클라이언트 로그 파일인 **scxcm.log**에 입력됩니다.  
+ ハードウェア インベントリの操作は、クライアント ログ ファイル **scxcm.log**に記録されます。  
 
-##  <a name="BKMK_CustomHINVforLinux"></a> 개방형 관리 인프라를 사용하여 사용자 지정 하드웨어 인벤토리를 만드는 방법  
- Linux 및 UNIX용 클라이언트는 OMI(개방형 관리 인프라)를 사용하여 만들 수 있는 사용자 지정 하드웨어 인벤토리를 지원합니다. 이렇게 하려면 다음 단계를 사용합니다.  
+##  <a name="BKMK_CustomHINVforLinux"></a> Open Management Infrastructure を使用してカスタムのハードウェア インベントリを作成する方法  
+ Linux および UNIX 用クライアントは、Open Management Infrastructure (OMI) を使用して作成できるカスタムのハードウェア インベントリをサポートします。 作成するには、次の手順に従います。  
 
-1.  OMI 원본을 사용하여 사용자 지정 인벤토리 공급자 만들기  
+1.  OMI ソースを使用してカスタム インベントリ プロバイダーを作成します  
 
-2.  새로운 공급자를 사용하여 인벤토리를 보고하도록 컴퓨터 구성  
+2.  新しいプロバイダーを使用してインベントリをレポートするようにコンピューターを構成します  
 
-3.  새 공급자를 지원하기 위해 Configuration Manager를 사용하도록 설정  
+3.  Configuration Manager で新しいプロバイダーのサポートを有効にする  
 
-###  <a name="BKMK_LinuxProvider"></a> Linux 및 UNIX 컴퓨터에 대한 사용자 지정 하드웨어 인벤토리 공급자 만들기  
- Linux 및 UNIX용 Configuration Manager 클라이언트에 대한 사용자 지정 하드웨어 인벤토리 공급자를 만들려면 **OMI Source - v.1.0.6**을 사용하고 OMI 시작 가이드에 있는 다음 지침을 따릅니다. 이 프로세스에는 새 공급자의 스키마를 정의하는 MOF(Managed Object Format) 파일 만들기가 포함됩니다. 나중에 MOF 파일을 Configuration Manager로 가져와서 새 사용자 지정 인벤토리 클래스를 지원할 수 있습니다.  
+###  <a name="BKMK_LinuxProvider"></a> Linux および UNIX コンピューターのカスタム ハードウェア インベントリを作成する:  
+ Linux および UNIX 用の構成マネージャー クライアントのカスタム ハードウェア インベントリ プロバイダーを作成するには、**OMI ソース - v.1.0.6** を使用し、OMI 入門ガイドの指示に従います。 このプロセスには、新しいプロバイダーのスキーマを定義する管理オブジェクト フォーマット (MOF) ファイルの作成が含まれます。 後ほど、この MOF ファイルを Configuration Manager にインポートし、新しいカスタム インベントリ クラスのサポートを有効にします。  
 
- OMI Source v.1.0.6, 및 OMI 시작 가이드 모두 [Open Group](http://go.microsoft.com/fwlink/p/?LinkId=262317) 웹 사이트에서 다운로드할 수 있습니다. 이 다운로드는 OpenGroup.org 웹 사이트의 **OMI(개방형 관리 인프라)** 웹 페이지에 있는 [문서](http://go.microsoft.com/fwlink/p/?LinkId=286805)탭에 있습니다.  
+ OMI ソース- v.1.0.6 およびソース OMI 入門ガイドはどちらも「 [Open Group](http://go.microsoft.com/fwlink/p/?LinkId=262317) 」Web サイトからダウンロードできます。 ダウンロードの場所は、OpenGroup.org の Web サイトの **Open Management Infrastructure (OMI)** Web ページの [[Documents]](http://go.microsoft.com/fwlink/p/?LinkId=286805)タブにあります。  
 
-###  <a name="BKMK_AddProvidertoLinux"></a> 사용자 지정 하드웨어 인벤토리 공급자를 사용하여 Linux 또는 UNIX를 실행하는 각 컴퓨터 구성  
- 사용자 지정 인벤토리 공급자를 만든 후에는 수집할 인벤토리가 있는 각 컴퓨터에 공급자 라이브러리 파일을 복사하고 등록해야 합니다.  
+###  <a name="BKMK_AddProvidertoLinux"></a> カスタム ハードウェア インベントリ プロバイダーを使用して Linux または UNIX を実行する各コンピューターを次のように構成します。  
+ カスタム インベントリ プロバイダーを作成した後、収集対象のインベントリが含まれる各コンピューターで、プロバイダー ライブラリ ファイルをコピーして登録する必要があります。  
 
-1.  공급자 라이브러리를 인벤토리를 수집하려는 각 Linux 및 UNIX 컴퓨터에 복사합니다. 공급자 라이브러리의 이름은 **XYZ_MyProvider.so**와 유사합니다.  
+1.  インベントリを収集する各 Linux および UNIX コンピューターに対してプロバイダー ライブラリをコピーします。 プロバイダー ライブラリの名前は、 **XYZ_MyProvider.so**のようになります。  
 
-2.  그런 다음 각 Linux 및 UNIX 컴퓨터에서 공급자 라이브러리를 OMI 서버에 등록합니다. OMI 서버는 Linux 및 UNIX용 Configuration Manager 클라이언트를 설치할 때 설치되지만 사용자 지정 공급자는 수동으로 등록해야 합니다. 공급자를 등록하려면 **/opt/microsoft/omi/bin/omireg XYZ_MyProvider.so**명령줄을 사용합니다.  
+2.  次に、各 Linux および UNIX コンピューター上で、プロバイダー ライブラリを OMI サーバーに登録します。 OMI サーバーは、Linux および UNIX 用の構成マネージャー クライアントをインストールするときにコンピューターにインストールされますが、カスタム プロバイダーは手動で登録する必要があります。 次のコマンドを使用してプロバイダーを登録します: **/opt/microsoft/omi/bin/omireg XYZ_MyProvider.so**  
 
-3.  새 공급자를 등록한 후에는 **omicli** 도구를 사용하여 공급자를 테스트합니다. Linux 및 UNIX용 **omicli** 도구는 Linux 및 UNIX용 Configuration Manager 클라이언트를 설치할 때 각 Linux 및 UNIX 컴퓨터에 설치됩니다. 예를 들면 여기서 **XYZ_MyProvider** 는 만든 공급자 이름이며, 컴퓨터에 **/opt/microsoft/omi/bin/omicli ei root/cimv2 XYZ_MyProvider**명령을 실행합니다.  
+3.  新しいプロバイダーを登録した後に、 **omicli** ツールを使用してプロバイダーをテストします。 **omicli** ツールは、Linux および UNIX 用の構成マネージャー クライアントをインストールするときに各 Linux および UNIX コンピューターにインストールされます。 たとえば、作成したプロバイダーの名前が **XYZ_MyProvider** の場合、コンピューターで次のコマンドを実行します: **/opt/microsoft/omi/bin/omicli ei root/cimv2 XYZ_MyProvider**  
 
-     **omicli** 및 사용자 지정 공급자 테스트에 대한 자세한 내용은 OMI 시작 가이드를 참조하세요.  
+     **omicli** およびカスタム プロバイダーのテストについては、OMI 入門ガイドをご覧ください。  
 
 > [!TIP]  
->  소프트웨어 배포를 사용하여 사용자 지정 공급자를 배포하고 각 Linux 및 UNIX 클라이언트 컴퓨터에 사용자 지정 공급자를 등록합니다.  
+>  ソフトウェアの配布を使用して、それぞれの Linux および UNIX クライアント コンピューターにおけるカスタム プロバイダーの展開と、カスタム プロバイダーの登録を行います。  
 
-###  <a name="BKMK_AddLinuxProvidertoCM"></a> Configuration Manager에서 새 인벤토리 클래스 사용  
- Linux 및 UNIX 컴퓨터에서 새 공급자가 보고하는 인벤토리에 대해 Configuration Manager로 보고하려면 먼저 사용자 지정 공급자의 스키마를 정의하는 MOF(Managed Object Format) 파일을 가져와야 합니다.  
+###  <a name="BKMK_AddLinuxProvidertoCM"></a> Configuration Manager で、新しいインベントリ クラスを次のように有効にします。  
+ Configuration Manager で、Linux および UNIX コンピューターの新しいプロバイダーがレポートするインベントリについてレポートを作成するには、その前に、カスタム プロバイダーのスキーマを定義する管理オブジェクト フォーマット (MOF) ファイルをインポートする必要があります。  
 
- 사용자 지정 MOF 파일을 Configuration Manager로 가져오려면 [System Center Configuration Manager에서 하드웨어 인벤토리를 구성하는 방법](../../../../core/clients/manage/inventory/configure-hardware-inventory.md)을 참조하세요.  
+ カスタム MOF ファイルを Configuration Manager にインポートするには、「[System Center Configuration Manager でハードウェア インベントリを構成する方法](../../../../core/clients/manage/inventory/configure-hardware-inventory.md)」をご覧ください。  

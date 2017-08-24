@@ -1,6 +1,6 @@
 ---
-title: "엔터프라이즈 운영 체제를 배포하는 시나리오 | Microsoft 문서"
-description: "System Center Configuration Manager를 사용하여 엔터프라이즈 운영 체제를 배포하는 여러 시나리오에 대해 알아봅니다."
+title: "エンタープライズ オペレーティング システムを展開するシナリオ | Microsoft Docs"
+description: "System Center Configuration Manager を使用してエンタープライズ オペレーティング システムを展開するいくつかのシナリオについて説明します。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,49 +17,49 @@ manager: angrobe
 ms.openlocfilehash: b1bea8b1b890f7c96a432835d28ad840a9b6873d
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="scenarios-to-deploy-enterprise-operating-systems-with-system-center-configuration-manager"></a>System Center Configuration Manager를 사용하여 엔터프라이즈 운영 체제를 배포하는 시나리오
+# <a name="scenarios-to-deploy-enterprise-operating-systems-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用してエンタープライズ オペレーティング システムを展開するシナリオ
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-다음 운영 체제 배포 시나리오는 System Center Configuration Manager에서 사용할 수 있습니다.  
+System Center Configuration Manager では、次のオペレーティング システムの展開シナリオを使用できます。  
 
--   [최신 버전으로 Windows 업그레이드](upgrade-windows-to-the-latest-version.md): 이 시나리오는 현재 Windows 7, Windows 8, Windows 8.1 또는 Windows 10을 실행하는 컴퓨터의 운영 체제를 업그레이드합니다. 이 업그레이드 프로세스에서 컴퓨터의 응용 프로그램, 설정 및 사용자 데이터는 그대로 유지됩니다. Windows ADK 및 이 프로세스는 기존 운영 체제 배포보다 더욱 빠르고 복원력이 뛰어나므로 외부 종속성이 없습니다.  
+-   [Windows を最新バージョンにアップグレードする](upgrade-windows-to-the-latest-version.md): このシナリオでは、現在 Windows 7、Windows 8、Windows 8.1、または Windows 10 を実行しているコンピューター上のオペレーティング システムをアップグレードします。 アップグレード プロセスでは、コンピューター上のアプリケーション、設定、およびユーザー データが保持されます。 Windows ADK などの外部の依存関係はなく、このプロセスは、従来のオペレーティング システムの展開よりも高速で、回復性に優れています。  
 
--   [새 버전의 Windows로 기존 컴퓨터 새로 고침](refresh-an-existing-computer-with-a-new-version-of-windows.md): 이 시나리오에서는 기존 컴퓨터를 파티션으로 나누고 포맷(초기화)한 다음 컴퓨터에 새 운영 체제를 설치합니다. 운영 체제가 설치된 후 설정 및 사용자 데이터를 마이그레이션할 수 있습니다.  
+-   [既存のコンピューターを Windows の新しいバージョンに更新する](refresh-an-existing-computer-with-a-new-version-of-windows.md): このシナリオでは、既存のコンピューターにパーティションを作成してフォーマットし (ワイプ)、コンピューターに新しいオペレーティング システムをインストールします。 オペレーティング システムをインストールした後、設定とユーザー データを移行できます。  
 
--   [새 컴퓨터에 새 버전의 Windows 설치(완전 복구)](install-new-windows-version-new-computer-bare-metal.md): 이 시나리오는 새 컴퓨터에 운영 체제를 설치합니다. 이것은 운영 체제를 새로 설치하는 방법이며 설정 또는 사용자 데이터 마이그레이션은 포함되지 않습니다.  
+-   [新しいバージョンの Windows を新しいコンピューターにインストールする (ベア メタル) ](install-new-windows-version-new-computer-bare-metal.md): このシナリオでは、新しいコンピューターにオペレーティング システムをインストールします。 これは、オペレーティング システムの新規インストールであり、設定やユーザー データの移行は含まれません。  
 
--   [기존 컴퓨터 바꾸기 및 설정 전송](replace-an-existing-computer-and-transfer-settings.md): 이 시나리오는 새 컴퓨터에 운영 체제를 설치합니다. 필요에 따라 이전 컴퓨터의 설정 및 사용자 데이터를 새 컴퓨터로 마이그레이션할 수 있습니다.  
+-   [既存のコンピューターの置き換えと設定の転送](replace-an-existing-computer-and-transfer-settings.md): このシナリオでは、新しいコンピューターにオペレーティング システムをインストールします。 必要に応じて、古いコンピューターから新しいコンピューターに設定およびユーザー データを移行できます。  
 
-## <a name="things-to-consider-before-you-deploy-operating-system-images"></a>운영 체제 이미지를 배포하기 전에 고려해야 할 사항  
- 운영 체제를 배포하기 전에 고려해야 할 사항이 있습니다.  
+## <a name="things-to-consider-before-you-deploy-operating-system-images"></a>オペレーティング システム イメージを配置する前に考慮すべきこと  
+ オペレーティング システムを展開する前に考慮すべきいくつかの点があります。  
 
-### <a name="operating-system-image-size"></a>운영 체제 이미지 크기  
- 운영 체제 이미지 크기는 매우 클 수 있습니다. 예를 들어 Windows 7의 이미지 크기는 3GB 이상입니다. 운영 체제를 동시에 배포하는 컴퓨터 수와 이미지 크기는 네트워크 성능 및 사용 가능한 대역폭에 영향을 줍니다. 이미지 배포가 줄 수 있는 영향 및 배포를 완료하는 데 걸리는 시간을 더욱 효율적으로 측정할 수 있도록 네트워크 성능을 테스트해야 합니다. 네트워크 성능에 영향을 주는 Configuration Manager 작업에는 배포 지점에 이미지 배포, 특정 사이트의 이미지를 다른 사이트에 배포, Configuration Manager 클라이언트에 이미지 다운로드 등이 있습니다.  
+### <a name="operating-system-image-size"></a>オペレーティング システム イメージ のサイズ  
+ オペレーティング システム イメージのサイズは非常に大きくなることがあります。 たとえば、Windows 7 のイメージ サイズは 3 ギガバイト (GB) 以上です。 イメージのサイズや、オペレーティング システムを同時に展開するコンピューターの数は、ネットワーク パフォーマンスや利用可能な帯域幅に影響をおよぼします。 イメージの展開がおよぼす可能性がある影響や展開が完了するまでにかかる時間をより正確に捉えるためにも、ネットワーク パフォーマンスをテストします。 ネットワーク パフォーマンスに影響を与える Configuration Manager の操作には、配布ポイントへのイメージの配布、サイトからサイトへのイメージの配布、Configuration Manager クライアントへのイメージのダウンロードなどが含まれます。  
 
- 또한, 운영 체제 이미지를 호스팅하는 배포 지점에 충분한 디스크 저장 공간을 계획해야 합니다.  
+ また、オペレーティング システム イメージをホストする配布ポイントに十分なディスク容量を必ず設けます。  
 
-### <a name="client-cache-size"></a>클라이언트 캐시 크기  
- BITS(Background Intelligent Transfer Service)를 사용할 수 있는 경우 Configuration Manager 클라이언트에서 콘텐츠를 다운로드할 때 자동으로 BITS를 사용합니다. 운영 체제를 설치하는 작업 순서를 배포할 때 Configuration Manager 클라이언트에서 작업 순서를 실행하기 전에 전체 이미지를 로컬 캐시에 다운로드하도록 배포에 대한 옵션을 설정할 수 있습니다.  
+### <a name="client-cache-size"></a>クライアントのキャッシュ サイズ  
+ Configuration Manager クライアントがコンテンツをダウンロードする際は、バックグラウンド インテリジェント転送サービス (BITS) が使用可能であれば、このサービスを自動的に使用します。 オペレーティング システムをインストールするタスク シーケンスを展開する際は、Configuration Manager クライアントがタスク シーケンスが実行される前に、ローカル キャッシュのフル イメージをダウンロードできるように、展開に関するオプションを設定することができます。  
 
- 일반적으로 Configuration Manager 클라이언트에서 운영 체제 이미지(또는 다른 패키지)를 다운로드해야 하지만 캐시에 충분한 공간이 없을 경우 클라이언트가 캐시의 다른 패키지를 확인하고 가장 오래된 패키지의 일부 또는 전부를 삭제하여 이미지를 수용할 디스크 공간을 확보할지 여부를 결정합니다. 패키지를 삭제해도 디스크 공간이 충분히 확보되지 않으면 클라이언트에서 이미지를 다운로드하지 않으며 배포에 실패합니다. 이 시나리오는 캐시에 보관하도록 구성된 대용량 패키지가 캐시에 있는 경우에 발생할 수 있습니다. 패키지를 삭제할 경우 캐시의 디스크 공간이 충분히 확보되면 클라이언트에서 패키지를 삭제한 다음 이미지를 캐시에 다운로드합니다.  
+ 通常、Configuration Manager クライアントがオペレーティング システム イメージ (あるいはその他のいずれかのパッケージ) をダウンロードする必要があるけれども、キャッシュに十分な容量がない場合、クライアントはキャッシュの他のパッケージを確認して、古いパッケージのいくつか、またはすべてを削除することで、イメージを使用できるかを判断します。 パッケージを削除しても十分なディスク容量を確保できない場合は、クライアントはイメージをダウンロードせず、展開は失敗します。 これは、キャッシュに大きなパッケージが保存されており、それを保持するように設定した場合に起こる可能性があります。 パッケージを削除するとキャッシュに十分なディスク容量を確保できる場合は、クライアントはそれらを削除し、イメージをダウンロードしてキャッシュに保存します。  
 
- Configuration Manager 클라이언트의 기본 캐시 크기는 대부분의 운영 체제 이미지 배포에 충분하지 않을 수 있습니다. 클라이언트 캐시에 전체 이미지를 다운로드하려면 배포할 이미지 크기를 포함할 수 있도록 대상 컴퓨터의 Configuration Manager 클라이언트 캐시 크기를 조정해야 합니다.  
+ Configuration Manager クライアントの既定のキャッシュ サイズでは、ほとんどの場合、オペレーティング システム イメージの展開に十分な容量を確保できません。 クライアントのキャッシュにイメージをすべてダウンロードしてからそのイメージを実行する場合は、展開するイメージのサイズに合わせて、ダウンロード先のコンピューターにおける Configuration Manager クライアントのキャッシュ サイズを調整する必要があります。  
 
- 자세한 내용은 [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache)항목을 참조하세요.  
+ 詳細については、「 [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache)」を参照してください。  
 
-## <a name="task-sequence-deployments"></a>작업 순서 배포  
- 만들어진 작업 순서는 다음 중 한 가지 방법으로 Configuration Manager 클라이언트 컴퓨터에 운영 체제 이미지를 배포할 수 있습니다.  
+## <a name="task-sequence-deployments"></a>タスク シーケンスの展開  
+ 作成したタスク シーケンスは、次のいずれかの方法で、Configuration Manager クライアント コンピューターにオペレーティング システム イメージを展開できます。  
 
--   먼저 배포 지점에서 Configuration Manager 클라이언트 캐시로 이미지와 해당 콘텐츠를 다운로드한 다음 설치합니다.  
+-   まず配布ポイントからイメージとコンテンツを Configuration Manager クライアント キャッシュにダウンロードして、インストールする。  
 
--   배포 지점에서 바로 이미지와 해당 콘텐츠를 설치합니다.  
+-   配布ポイントのイメージとコンテンツを即座にインストールする。  
 
--   배포 지점에서 필요에 따라 이미지와 해당 콘텐츠를 설치합니다.  
+-   配布ポイントが定めたようにイメージとコンテンツをインストールする。  
 
- 기본적으로 작업 순서에 대한 배포를 만들면 먼저 이미지가 Configuration Manager 클라이언트 캐시로 다운로드된 다음 설치됩니다. 이미지를 실행하기 전에 Configuration Manager 클라이언트 캐시로 이미지를 다운로드하도록 선택한 경우 작업 순서에 하드 드라이브를 다시 분할하는 단계가 포함되어 있으면 하드 드라이브 다시 분할 과정에서 Configuration Manager 클라이언트 캐시의 콘텐츠가 지워지므로 다시 분할 단계가 실패합니다. 작업 순서가 하드 드라이브를 다시 분할해야 하는 경우 작업 순서를 배포할 때 **배포 지점에서 프로그램 실행**  옵션을 사용하여 배포 지점에서 이미지 설치를 실행해야 합니다.  
+ タスク シーケンスの展開を作成すると、既定では、イメージは Configuration Manager クライアントのキャッシュにダウンロードされてからインストールされます。 イメージを Configuration Manager クライアントのキャッシュにダウンロードしてから実行する場合、タスク シーケンスにハード ドライブのパーティション再作成ステップが設定されていると、パーティション再作成ステップでエラーが発生します。これは、ハード ドライブのパーティションが作成されるときに Configuration Manager クライアントのキャッシュの内容が消去されるためです。 タスク シーケンスでハード ドライブのパーティションを再作成する必要がある場合は、タスク シーケンスをデプロイするときに **[配布ポイントからプログラムを実行する]**  オプションを使用して、配布ポイントからイメージのインストールを実行する必要があります。  
 
- 자세한 내용은 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)항목을 참조하세요.  
+ 詳細については、「 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)」をご覧ください。  

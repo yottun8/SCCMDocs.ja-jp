@@ -1,6 +1,6 @@
 ---
-title: "Microsoft Intune에서 등록한 모바일 장치를 위한 소프트웨어 인벤토리 | Microsoft Docs"
-description: "Microsoft Intune에서 등록한 모바일 장치를 위한 소프트웨어 인벤토리"
+title: "Microsoft Intune に登録されているモバイル デバイスのソフトウェア インベントリ | Microsoft Docs"
+description: "Microsoft Intune に登録されているモバイル デバイスのソフトウェア インベントリ。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,27 +18,27 @@ manager: angrobe
 ms.openlocfilehash: 2ed79d02535768de136947e4a5b63ad186d9a3cd
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="software-inventory-for-mobile-devices-enrolled-with-microsoft-intune"></a>Microsoft Intune에서 등록한 모바일 장치를 위한 소프트웨어 인벤토리
+# <a name="software-inventory-for-mobile-devices-enrolled-with-microsoft-intune"></a>Microsoft Intune に登録されているモバイル デバイスのソフトウェア インベントリ
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
- 모바일 장치에 설치되는 앱에 대한 인벤토리를 수집할 수 있습니다. 인벤토리에 추가되는 앱은 장치가 회사 소유인지 또는 개인 소유인지에 따라 달라집니다. 개인 장치의 경우 Microsoft Intune에서 관리되는 앱만 인벤토리에 추가됩니다.  
+ モバイル デバイスにインストールされているアプリのインベントリを収集できます。 インベントリに収集されるアプリは、デバイスが会社所有か個人所有かによって異なります。 個人用デバイスの場合、インベントリに収集されるアプリは、Microsoft Intune で管理されているアプリのみです。  
 
 > [!NOTE]  
->  모바일 장치에 설치된 앱의 인벤토리는 [하드웨어 인벤토리](mobile-device-hardware-inventory-hybrid.md) 프로세스의 일부로 수집됩니다.  
+>  モバイル デバイスにインストールされているアプリのインベントリが[ハードウェア インベントリ](mobile-device-hardware-inventory-hybrid.md) プロセスの一部として収集されます。  
 
- 다음은 개인 소유 또는 회사 소유의 장치에 대해 인벤토리에 포함되는 앱입니다.  
+ 個人所有のデバイスまたは会社所有のデバイスのインベントリに次のアプリが収集されます。  
 
-|플랫폼|개인 소유 장치|회사 소유 장치|  
+|プラットフォーム|個人所有のデバイス|会社所有のデバイス|  
 |--------------|---------------------------------|--------------------------------|  
-|Windows 10(Configuration Manager 클라이언트 없음)|관리되는 앱만|관리되는 앱만|
-|Windows 8.1(Configuration Manager 클라이언트 없음)|관리되는 앱만|관리되는 앱만|  
-|Windows Phone 8|관리되는 앱만|관리되는 앱만|  
-|Windows RT|관리되는 앱만|관리되는 앱만|  
-|iOS|관리되는 앱만|장치에 설치되는 모든 앱|  
-|Android|관리되는 앱만|장치에 설치되는 모든 앱|  
+|Windows 10 (Configuration Manager クライアントを使用しない)|管理対象アプリのみ|管理対象アプリのみ|
+|Windows 8.1 (Configuration Manager クライアントを使用しない)|管理対象アプリのみ|管理対象アプリのみ|  
+|Windows Phone 8|管理対象アプリのみ|管理対象アプリのみ|  
+|Windows RT|管理対象アプリのみ|管理対象アプリのみ|  
+|iOS|管理対象アプリのみ|デバイスにインストールされているすべてのアプリ|  
+|Android|管理対象アプリのみ|デバイスにインストールされているすべてのアプリ|  
 
-소프트웨어 인벤토리를 사용 클라이언트 장치에서 파일 정보를 수집하는 방법에 대한 자세한 내용은 [소프트웨어 인벤토리 소개](../../core/clients/manage/inventory/introduction-to-software-inventory.md) 및 [소프트웨어 인벤토리를 구성하는 방법](../../core/clients/manage/inventory/configure-software-inventory.md)을 참조하세요.
+ソフトウェア インベントリを使用したクライアント デバイスでのファイル情報の収集の詳細については、[ソフトウェア インベントリの概要](../../core/clients/manage/inventory/introduction-to-software-inventory.md)と[ソフトウェア インベントリの構成方法](../../core/clients/manage/inventory/configure-software-inventory.md)に関する記事を参照してください。

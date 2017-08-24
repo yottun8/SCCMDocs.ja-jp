@@ -1,6 +1,6 @@
 ---
-title: "Mobile Threat Defense 준수 모니터링 | System Center Configuration Manager"
-description: "Configuration Manager 관리자 콘솔에서 Mobile Threat Defense 파트너 준수 상태를 모니터링합니다."
+title: "Mobile Threat Defense コンプライアンスの監視| System Center Configuration Manager"
+description: "Configuration Manager マネージャー コンソールからの Mobile Threat Defense パートナー コンプライアンス ステータスの監視"
 ms.custom: na
 ms.date: 03/21/2017
 ms.prod: configuration-manager
@@ -17,58 +17,58 @@ manager: angrobe
 ms.openlocfilehash: 8edf83a0f761dfc16274ce49c3aa2b878c7fe6cd
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="monitor-mobile-threat-defense-compliance"></a>**Mobile Threat Defense 준수 모니터링**
+# <a name="monitor-mobile-threat-defense-compliance"></a>**Mobile Threat Defense コンプライアンスの監視**
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-## <a name="to-monitor-the-overall-compliance-status"></a>전체 준수 상태를 모니터링하려면
+## <a name="to-monitor-the-overall-compliance-status"></a>全体的なコンプライアンス ステータスを監視するには
 
-Mobile Threat Defense 상태를 모니터링하려면:
+Mobile Threat Defense のステータスを監視するには、次のようにします。
 
-1.  Configuration Manager 콘솔에서 **모니터링** 작업 영역을 클릭합니다.
+1.  Configuration Manager コンソールで、**[監視]** ワークスペースをクリックします。
 
-2.  **모니터링** 작업 영역에서 **보안** 노드를 클릭합니다.
+2.  **[監視]** ワークスペースで、**[セキュリティ]** ノードをクリックします。
 
-시각적 차트 형식으로 표시되는 여러 위협 수준이 포함된 준수 상태 요약을 볼 수 있습니다. 차트의 개별 섹션을 클릭하면 다음과 같은 자세한 정보를 볼 수 있습니다. 
+ビジュアル グラフ形式で表示されるコンプライアンス ステータスの概要を、さまざまなレベルで確認することができます。 グラフの個々のセクションをクリックして、次のような詳細情報を表示することができます。 
 
-- 플랫폼에서 비규격으로 보고되는 장치 수
-- 장치 준수 상태에 관련된 모든 오류
+- プラットフォームごとの、非準拠として報告されたデバイスの数
+- デバイスのコンプライアンス ステータスに関連するエラー
 
 ![](http://i.imgur.com/bmPsiWk.png)
 
-## <a name="to-monitor-the-individual-compliance-status"></a>개별 준수 상태를 모니터링하려면
+## <a name="to-monitor-the-individual-compliance-status"></a>個々のコンプライアンス ステータスを監視するには
 
-개별 장치 상태를 확인할 수도 있습니다.
+次のようにして、個々のデバイス ステータスを確認することもできます。
 
-1.  Configuration Manager 콘솔에서 **자산 및 준수** 작업 영역을 클릭합니다.
+1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** ワークスペースをクリックします。
 
-2.  **장치**를 클릭합니다.
+2.  **[デバイス]** をクリックします。
 
 > [!TIP] 
-> **장치 위협 준수** 및 **장치 위협 수준** 열을 추가하면 상태를 확인할 수 있습니다. 이러한 열은 기본적으로 표시되지 않습니다.
+> **[Device threat compliance]** (デバイス脅威コンプライアンス) 列と **[デバイス脅威レベル]** 列を追加して、状態を確認できます。 既定では、これらの列は表示されません。
 
-## <a name="device-threat-protection-tab"></a>장치 위협 방지 탭
+## <a name="device-threat-protection-tab"></a>[デバイス脅威保護] タブ
 
-또한 **장치** 화면에서 특정 장치를 선택하고 나서 장치 준수 상태에 대한 자세한 정보를 제공하는 **장치 위협 방지** 탭을 클릭할 수 있습니다. 아래에서 장치 준수 상태를 분석하는 데 유용한 열 설명과 예상 값을 찾을 수 있습니다.
+さらに、**[デバイス]** 画面で、特定のデバイスを選択し、**[デバイス脅威保護]** タブをクリックして、デバイス コンプライアンス ステータスの詳細を表示することができます。 以下の列の説明と予期される値は、デバイスのコンプライアンス ステータスを分析するのに役立ちます。
 
 > [!IMPORTANT] 
-> [장치 위협 방지] 탭은 선택한 장치가 모바일 장치인 경우에만 표시됩니다.
+> 選択したデバイスがモバイル デバイスである場合は、[デバイスの脅威保護] タブのみが表示されます。
 
-|열 이름|기본적으로 표시|설명| 
+|列名|既定で表示|説明| 
 |-|-|-|
-|**설명**| 예 | Mobile Threat Defense 파트너가 제공하는 위협에 대한 세부 정보입니다. |
-|**마지막 업데이트 시간**| 예 | Threat Defense 파트너가 위협에 대한 업데이트된 세부 정보를 Intune에 보낸 마지막 시간입니다. |
-|**위협 심각도**| 예 | 위협 심각도는 Mobile Threat Defense 파트너 콘솔의 관리 구성에 따른 개별 위협에 대한 정의입니다. 세 가지 값 **낮음**, **보통** 또는 **높음** 중 하나를 사용합니다. |
-|**위협 상태**| 예 | 장치에 대한 위협의 현재 상태입니다. 가능한 상태: **활성**, **해결됨** 또는 **무시됨:** 사용자가 장치에 대한 위협을 무시했지만 위협이 계속 존재함을 나타냅니다. |
-|**위협 유형**| 예 | 위협의 Mobile Threat Defense 파트너 유형입니다. 가능한 값: **앱**, **파일** 또는 **OS** |
-|**AAD 계정 ID**| 아니요 | Azure Active Directory 고유 식별자입니다. |
-|**분류**| 예 | Mobile Threat Defense 파트너가 제공한 위협 분류입니다. 가능한 값: **루트 인에이블러, 리스크웨어, 애드웨어, 체인지웨어, 데이터 누수, 트로이 목마, 웜, 바이러스, 익스플로잇, 백도어, 봇, 앱 드로퍼, 클릭 사기, 스팸, 스파이웨어, 감시 웨어, 취약성, 알 수 없음, 루트 탈옥, 연결성, 전화 사기, 사이드로드된 앱** |
-|**장치 ID**| 아니요 | 위협 정보가 포함된 Workplace 조인 장치를 나타내는 Azure Active Directory 개체 ID입니다. |
-|**위협 ID**| 아니요 | 위협에 대한 Mobile Threat Defense 파트너에서 생성된 고유 식별자입니다. 위협 ID는 해결 방법 추적에 사용됩니다. |
-|**위협 URL**| 아니요 | 제공될 경우 위협 URL은 다시 이 특정 위협에 대한 Mobile Threat Defense 파트너의 관리 콘솔 보기로 연결됩니다. |
+|**説明**| ○ | Mobile Threat Defense パートナーによって提供される脅威に関する詳細。 |
+|**最終更新時刻**| ○ | Mobile Threat Defense パートナーが Intune に脅威に関する更新済みの詳細情報を最後に送信した時刻。 |
+|**脅威の重要度**| ○ | 脅威の重要度は、Mobile Threat Defense パートナー コンソールでの管理者の構成に基づく個々の脅威の定義です。 3 つの値 (**低**、**中**、**高**) のいずれかになります。 |
+|**脅威の状態**| ○ | デバイスの脅威の現在の状態。 使用可能な値は、**Active** (アクティブ)、**Resolved** (解決済み)、**Ignored** (無視) です。無視の場合、ユーザーはデバイスの脅威を無視したが、脅威はまだ存在していることを意味します。 |
+|**脅威の種類**| ○ | Mobile Threat Defense パートナーの脅威の種類。 使用可能な値: **App** (アプリ)、**File** (ファイル)、**OS** |
+|**AAD アカウント ID**| × | Azure Active Directory の一意の識別子です。 |
+|**分類**| ○ | Mobile Threat Defense パートナーにより提供される脅威の分類。 使用可能な値: **Root Enabler, Riskware, Adware, Chargeware, DataLeak, Trojan, Worm, Virus, Exploit, Backdoor, Bot, AppDropper, ClickFraud, Spam, Spyware, SurveillanceWare, Vulnerability, Unknown, Root Jailbrake, Connectivity, TollFraud, SideloadedApp (ルート イネーブラー、リスクウェア、アドウェア、チャージウェア、データのリーク、トロイの木馬、ワーム、ウイルス、エクスプロイト、バックドア、ボット、アプリ ドロッパー、クリック詐欺、スパム、スパイウェア、監視ウェア、脆弱性、不明、root 化/脱獄、接続、料金詐欺、サイドロードされたアプリ)** |
+|**デバイス ID**| × | 脅威にさらされている社内参加済みデバイスに関する情報を示す Azure Active Directory のオブジェクト ID。 |
+|**脅威 ID**| × | Mobile Threat Defense パートナーで生成される脅威の一意の識別子。 脅威 ID は解決方法を追跡するために使用されます。 |
+|**脅威 URL**| × | 脅威 URL がある場合は、特定の脅威の Mobile Threat Defense パートナーの管理コンソール ビューに戻るリンクが示されます。 |
 
 > [!TIP] 
-> 장치의 Mobile Threat Defense 준수 상태에 대한 자세한 정보를 확인하려면 **기본적으로 표시**되지 않는 열을 사용하도록 설정해야 합니다.
+> **既定で表示**されない列を有効にして、デバイスの Mobile Threat Defense コンプライアンス ステータスの詳細を確認できるようにしてください。

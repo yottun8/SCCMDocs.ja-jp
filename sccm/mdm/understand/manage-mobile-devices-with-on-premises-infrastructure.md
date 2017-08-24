@@ -1,6 +1,6 @@
 ---
-title: "온-프레미스 MDM(모바일 장치 관리) | Microsoft 문서"
-description: "System Center Configuration Manager의 장치 관리 솔루션인 온-프레미스 모바일 장치 관리에 대해 알아봅니다."
+title: "オンプレミス モバイル デバイス管理 (MDM) | Microsoft Docs"
+description: "System Center Configuration Manager のデバイス管理ソリューション、オンプレミス モバイル デバイス管理について説明します。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -17,35 +17,35 @@ manager: angrobe
 ms.openlocfilehash: 7b96c4d4d87aa150eacc5d7d20710f5d2199e48a
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="on-premises-mobile-device-management-mdm-in-system-center-configuration-manager"></a>System Center Configuration Manager의 온-프레미스 MDM(모바일 장치 관리)
+# <a name="on-premises-mobile-device-management-mdm-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミス モバイル デバイス管理 (MDM)
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 온\-프레미스 모바일 장치 관리는 엔터프라이즈의 Configuration Manager 인프라를 사용하여 장치를 관리하고 유지 관리하는 동안 장치 운영 체제(Open Mobile Alliance Device Management 또는 OMA DM 표준을 기반으로 함)의 기본 제공 관리 기능을 사용하는 장치 관리 솔루션입니다. 온\-프레미스 모바일 장치 관리를 사용하려면 Microsoft Intune에서 관리 기능을 설정해야 하지만 구독에 대해서만(및 때때로 정책 변경 내용을 확인하도록 장치에 알리기 위해) 필요하고 장치를 관리하거나 장치에 대한 데이터를 저장하는 데 사용되지 않습니다.  
+System Center Configuration Manager のオンプレミス モバイル デバイス管理 は、デバイスのオペレーティング システムの組み込み管理機能 (Open Mobile Alliance Device Management や OMA DM 標準に基づく機能) を利用するデバイス管理ソリューションです。デバイス自体は、会社の Configuration Manager インフラストラクチャを使用して管理および維持します。 オンプレミス モバイル デバイス管理では、Microsoft Intune で管理機能を設定する必要がありますが、これはサブスクリプションのため (およびポリシー変更のためにチェックインするようにデバイスに通知するとき) にのみ必要であり、デバイスの管理や、デバイスに関するデータの格納に使用されることはありません。  
 
- ![온\-프레미스 개념](media/On-premises-conceptual.png)  
+ ![オンプレミスの概念](media/On-premises-conceptual.png)  
 
- 온\-프레미스 모바일 장치 관리는 기본 제공 OMA DM 기능도 사용하지만 모든 관리 기능이 클라우드 서비스를 통해 제공되는 Microsoft Intune과 다릅니다.  또한 온\-프레미스 모바일 장치 관리는 유사한 엔터프라이즈 인프라를 사용하지만 관리 컴퓨터 및 관리되는 장치에 설치되어 있는 클라이언트 소프트웨어를 개별적으로 사용하지 않는다는 점에서 Configuration Manager에서 제공하는 기존 클라이언트 기반 관리 솔루션과도 다릅니다.  
+ オンプレミス モバイル デバイス管理これは、同じく組み込みの OMA DM 機能を利用する Microsoft Intune とは異なりますが、すべての管理機能はクラウド サービス経由で提供されます。  オンプレミス モバイル デバイス管理 は、これまで Configuration Manager によって提供されてきたクライアント ベースの管理ソリューションとも異なります。具体的には、同じような企業インフラストラクチャを利用しますが、管理対象コンピューターとデバイスに個別にインストールされたクライアント ソフトウェアを使用しません。  
 
- 아래 표에는 기존 클라이언트 기반 관리와 비교했을 때 온\-프레미스 모바일 장치 관리의 장점 및 단점이 나와 있습니다.  
+ 次の表は、オンプレミス モバイル デバイス管理と従来のクライアント ベースの管理の長所と短所を比較した一覧です。  
 
-|장점|단점|  
+|長所|短所|  
 |----------------|-------------------|  
-|**간소화된 인프라** - 적은 수의 사이트 시스템 역할이 필요합니다.<br /><br /> **더 쉬워진 유지 관리** - 관리 기능이 장치 운영 체제에 기본 제공되므로 새로운 관리 기능이 Configuration Manager 시스템에 도입되면 새 버전의 클라이언트 소프트웨어가 필요하지 않습니다.<br /><br /> **온-프레미스** - 모든 관리 및 데이터가 온-프레미스로 유지됩니다.|**줄어든 클라이언트 관리 기능** - 오케스트레이션, 소프트웨어 계량, 타사 통합, 작업 순서 또는 소프트웨어 센터 지원이 없습니다.<br /><br /> **장치 지원 제한** - 현재 온\-프레미스 모바일 장치 관리에서는 Windows 10 및 Windows 10 Mobile을 실행하는 장치만 지원합니다.|  
+|**簡素化されたインフラストラクチャ** - 必要になるサイト システムの役割が少なくなります。<br /><br /> **管理が容易** - 管理機能がデバイスのオペレーティング システムに組み込まれているため、新しい管理機能を Configuration Manager システムに導入するときに、新しいバージョンのクライアント ソフトウェアが必要ありません。<br /><br /> **オンプレミス** - すべての管理とデータをオンプレミスに保持します。|**クライアント管理機能が少ない** - オーケストレーション、ソフトウェア使用状況測定、サード パーティ統合、タスク シーケンス、およびソフトウェア センター サポートがありません。<br /><br /> **デバイス サポートの制限** - 現時点で、オンプレミス モバイル デバイス管理は Windows 10 および Windows 10 Mobile を実行しているデバイスのみをサポートしています。|  
 
- 다음 항목에서는 온\-프레미스 모바일 장치 관리를 위해 장치를 계획, 준비 및 등록하는 데 사용할 수 있는 정보를 제공합니다.  
+ 次のトピックでは、オンプレミス モバイル デバイス管理用にデバイスを計画、準備、および登録する際に使用できる情報を提供します。  
 
--   [System Center Configuration Manager의 온-프레미스 모바일 장치 관리에 대한 계획](../plan-design/plan-on-premises-mdm.md)  
+-   [System Center Configuration Manager でのオンプレミス モバイル デバイス管理の計画](../plan-design/plan-on-premises-mdm.md)  
 
-     온\-프레미스 모바일 장치 관리에서 Configuration Manager 인프라를 설정하고 장치 등록을 계획할 때 고려해야 할 사항을 알아봅니다.  
+     Configuration Manager インフラストラクチャを設定し、オンプレミス モバイル デバイス管理でのデバイス登録を計画するときに考慮すべき事項について確認します。  
 
--   [System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 위한 준비 단계](../get-started/preparation-steps-for-on-premises-mdm.md)  
+-   [System Center Configuration Manager でのオンプレミス モバイル デバイス管理の準備手順](../get-started/preparation-steps-for-on-premises-mdm.md)  
 
-     Microsoft Intune 구독을 설정하고, 인증서를 설정하고, 사이트 시스템 역할을 설치하고, 장치 등록을 설정하여 온\-프레미스 모바일 장치 관리를 위해 Configuration Manager 시스템을 준비하는 방법을 알아봅니다.  
+     Microsoft Intune サブスクリプションの設定、証明書の設定、サイト システムの役割のインストール、およびデバイス登録の設定を行うことで、Configuration Manager システムをオンプレミス モバイル デバイス管理用に準備する方法について確認します。  
 
--   [System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 위한 장치 등록](../deploy-use/enroll-devices-on-premises-mdm.md)  
+-   [System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスの登録](../deploy-use/enroll-devices-on-premises-mdm.md)  
 
-     등록을 수행하는 방법, 사용자가 자신의 장치를 등록하는 방법 그리고 등록 패키지로 장치를 대량으로 등록하는 방법에 대해 알아봅니다.  
+     登録を行う方法、ユーザーが自分のデバイスを登録する方法、および登録パッケージを使用してデバイスを一括登録する方法について確認します。  

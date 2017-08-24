@@ -1,6 +1,6 @@
 ---
-title: "System Center Configuration Manager의 VPN 프로필 | Microsoft 문서"
-description: "System Center Configuration Manager의 VPN 프로필을 사용하여 VPN 설정을 조직의 사용자에게 배포하는 방법을 알아봅니다."
+title: "System Center Configuration Manager の VPN プロファイル | Microsoft Docs"
+description: "System Center Configuration Manager の VPN プロファイルを使用して、VPN 設定を組織内のユーザーに展開する方法について説明します。"
 ms.custom: na
 ms.date: 11/27/2016
 ms.prod: configuration-manager
@@ -18,43 +18,43 @@ manager: angrobe
 ms.openlocfilehash: e07a80c1a59043b74cda7219f78c5fef66989ba8
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager의 VPN 프로필
+# <a name="vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager の VPN プロファイル
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
 
-System Center Configuration Manager(ConfigMgr 또는 SCCM이라고도 함)의 VPN 프로필을 사용하여 VPN 설정을 조직의 사용자에게 배포할 수 있습니다. 이러한 설정을 배포하여 최종 사용자가 회사 네트워크에 있는 리소스에 연결하는 데 필요한 노력을 최소화할 수 있습니다.  
+System Center Configuration Manager (ConfigMgr または SCCM とも呼ばれます) の VPN プロファイルを使用して、VPN 設定を組織内のユーザーに展開します。 これらの設定を展開して、企業ネットワーク上のリソースに接続するために必要なエンド ユーザーの作業を最小化します。  
 
- 예를 들어, 기업 네트워크의 파일 공유에 연결하는 데 필요한 설정을 사용하여 Windows RT 운영 체제를 실행하는 모든 장치를 프로비전하려고 합니다. 기업 네트워크에 연결하는 데 필요한 설정이 포함된 VPN 프로필을 만든 다음 이 프로필을 조직 계층에서 Windows RT를 실행하는 장치를 가진 모든 사용자에게 배포할 수 있습니다. Windows RT 장치 사용자는 사용 가능한 네트워크의 목록에서 VPN 연결을 확인하고 최소의 노력으로 이 네트워크에 연결할 수 있습니다.  
+ たとえば、Windows RT オペレーティング システムを実行するすべてのデバイスに対して、企業ネットワーク上のファイル共有に接続するために必要な設定をプロビジョニングするとします。 企業ネットワークに接続するために必要な設定が含まれている VPN プロファイルを作成した後、階層内で Windows RT を実行するデバイスを持つすべてのユーザーにこのプロファイルを展開することができます。 Windows RT デバイスのユーザーには利用可能なネットワークの一覧で VPN 接続が表示されるため、最小限の作業でこのネットワークに接続できます。  
 
- VPN 프로필을 만들 때 System Center Configuration Manager 인증서 프로필을 사용하여 프로비전한 서버 유효성 검사 및 클라이언트 인증용 인증서를 포함한 다양한 보안 설정을 포함할 수 있습니다. 인증서 프로필에 대한 자세한 내용은 [System Center Configuration Manager의 인증서 프로필](introduction-to-certificate-profiles.md)을 참조하세요.  
+ VPN プロファイルを作成するときに、System Center Configuration Manager 証明書プロファイルを使用してプロビジョニングされた、サーバー検証用の証明書、クライアント認証用の証明書などの幅広いセキュリティ設定を含めることができます。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](introduction-to-certificate-profiles.md)」を参照してください。  
 
- 아래 섹션에서는 Configuration Manager를 사용하는 경우 VPN 프로필에서 구성할 수 있는 장치를 설명합니다.
+ 以下のセクションでは、Configuration Manager を使用している場合に、VPN プロファイルを使用して構成できるデバイスについて説明します。
 
- Microsoft Intune과 함께 Configuration Manager를 사용하는 경우 구성할 수 있는 장치를 검토하려면 [모바일 장치의 VPN 프로필](/sccm/mdm/deploy-use/create-vpn-profiles)을 참조하세요.  
+ [モバイル デバイスの VPN プロファイル](/sccm/mdm/deploy-use/create-vpn-profiles)に関する記事を参照して、Microsoft Intune で Configuration Manager を使用する場合に構成できるデバイスを確認してください。  
 
-## <a name="vpn-profiles-when-using-configuration-manager"></a>Configuration Manager를 사용하는 경우의 VPN 프로필  
- 다음 표에서는 다양한 장치 플랫폼에 대해 구성할 수 있는 VPN 프로필을 설명합니다.  
+## <a name="vpn-profiles-when-using-configuration-manager"></a>Configuration Manager を使用する場合の VPN プロファイル  
+ 次の表では、さまざまなデバイス プラットフォームに対して構成できる VPN プロファイルについて説明します。  
 
-|연결 유형|Windows 8.1|Windows RT|Windows RT 8.1|Windows 10|  
+|接続の種類|Windows 8.1|Windows RT|Windows RT 8.1|Windows 10|  
 |---------------------|-----------------|----------------|--------------------|----------------|  
-|**Cisco AnyConnect**|아니요|아니요|아니요|아니요|  
-|**Pulse Secure**|예|아니요|예|예|  
-|**F5 Edge Client**|예|아니요|예|예|  
-|**Dell SonicWALL Mobile Connect**|예|아니요|예|예|  
-|**Check Point Mobile VPN**|예|아니요|예|예|  
-|**Microsoft SSL(SSTP)**|예|예|예|아니요|  
-|**Microsoft Automatic**|예|예|예|아니요|  
-|**IKEv2**|예|예|예|아니요|  
-|**PPTP**|예|예|예|아니요|  
-|**L2TP**|예|예|예|아니요|  
+|**Cisco AnyConnect**|いいえ|いいえ|いいえ|×|  
+|**Pulse Secure**|○|×|[はい]|○|  
+|**F5 Edge Client**|○|×|[はい]|○|  
+|**Dell SonicWALL Mobile Connect**|○|×|[はい]|○|  
+|**チェック ポイント モバイル VPN**|○|×|[はい]|○|  
+|**Microsoft SSL (SSTP)**|○|[はい]|○|×|  
+|**Microsoft 自動**|○|[はい]|○|×|  
+|**IKEv2**|○|[はい]|○|いいえ|  
+|**PPTP**|○|[はい]|○|いいえ|  
+|**L2TP**|○|[はい]|○|いいえ|  
 
-### <a name="next-steps"></a>다음 단계  
- 다음 항목에서는 Configuration Manager의 VPN 프로필을 계획, 구성, 운영 및 유지 관리하는 방법을 설명합니다.  
+### <a name="next-steps"></a>次のステップ  
+ Configuration Managerで VPN プロファイルの計画、構成、操作、およびメンテナンスを行うときに、次のトピックを参考にしてください。  
 
--   [System Center Configuration Manager에서 VPN 프로필에 대한 필수 조건](../plan-design/prerequisites-for-wifi-vpn-profiles.md)  
+-   [System Center Configuration Manager の VPN プロファイルの前提条件](../plan-design/prerequisites-for-wifi-vpn-profiles.md)  
 
--   [System Center Configuration Manager에서 VPN 프로필에 대한 보안 및 개인 정보](../plan-design/security-and-privacy-for-wifi-vpn-profiles.md)
+-   [System Center Configuration Manager の VPN プロファイルのセキュリティとプライバシー](../plan-design/security-and-privacy-for-wifi-vpn-profiles.md)

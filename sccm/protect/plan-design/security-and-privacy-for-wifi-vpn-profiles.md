@@ -1,6 +1,6 @@
 ---
-title: "Wi-Fi 및 VPN 프로필 보안 및 개인 정보 | Microsoft 문서"
-description: "System Center Configuration Manager에서 장치의 Wi-Fi 및 VPN 프로필 관리에 대한 보안 모범 사례를 알아봅니다."
+title: "Wi-Fi および VPN プロファイルのセキュリティとプライバシー | Microsoft Docs"
+description: "System Center Configuration Manager でデバイスの Wi-Fi および VPN プロファイルを管理する場合のセキュリティのベスト プラクティスについて説明します。"
 ms.custom: na
 ms.date: 12/28/2016
 ms.prod: configuration-manager
@@ -18,23 +18,23 @@ manager: angrobe
 ms.openlocfilehash: 6d1d0a393a2ce614ae5f819475bd47b05e699b45
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="security-and-privacy-for-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 Wi-Fi 및 VPN 프로필에 대한 보안 및 개인 정보
+# <a name="security-and-privacy-for-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager の Wi-Fi および VPN プロファイルのセキュリティとプライバシー
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-##  <a name="security-best-practices-for-wi-fi--and-vpn-profiles"></a>Wi-Fi 및 VPN 프로필에 대한 보안 모범 사례  
- 장치의 Wi-Fi 및 VPN 프로필을 관리하는 경우 다음 보안 모범 사례를 따르세요.  
+##  <a name="security-best-practices-for-wi-fi--and-vpn-profiles"></a>Wi-Fi および VPN プロファイルのセキュリティのベスト プラクティス  
+ デバイスの Wi-Fi および VPN プロファイルを管理するときは、次のようなセキュリティのベスト プラクティスに従ってください。  
 
-|보안 모범 사례|추가 정보|  
+|セキュリティのベスト プラクティス|説明|  
 |----------------------------|----------------------|  
-|가능하면 Wi-Fi 및 VPN 인프라 및 클라이언트 운영 체제에서 지원할 수 있는 가장 강력한 보안 옵션을 선택합니다.|Wi-Fi 및 VPN 프로필을 사용하면 장치에서 이미 지원하는 Wi-Fi 및 VPN 설정을 중앙에서 편리하게 배포하고 관리할 수 있습니다. Configuration Manager는 Wi-Fi 및 VPN 기능을 추가하지 않습니다.<br /><br /> 장치와 인프라에 권장되는 모든 보안 모범 사례를 식별하여 구현하고 따르십시오.|  
+|可能な場合、使用する Wi-Fi および VPN インフラストラクチャとクライアントのオペレーティング システムでサポートできる最も安全なオプションを選択します。|Wi-Fi および VPN プロファイルは、デバイスで既にサポートしている Wi-Fi および VPN 設定を中央から配付して管理するのに便利です。 Configuration Manager では、Wi-Fi および VPN 機能は追加されません。<br /><br /> デバイスとインフラストラクチャに推奨されるセキュリティ ベスト プラクティスを特定し、実装し、従います。|  
 
-## <a name="privacy-information-for-wi-fi-profiles"></a>Wi-Fi 프로필에 대한 개인 정보  
- Wi-Fi 및 VPN 프로필을 사용하여 클라이언트 장치를 Wi-Fi 및 VPN 서버에 연결하도록 구성하고 프로필을 적용한 후에 해당 장치가 호환되는지 여부를 평가할 수 있습니다. 관리 지점에서 호환성 정보를 사이트 서버로 보내며, 해당 정보는 사이트 데이터베이스에 저장됩니다. 장치에서 관리 지점으로 정보를 보낼 때 정보가 암호화되지만 사이트 데이터베이스에는 암호화된 형식으로 저장되지 않습니다. 이 데이터베이스는 사이트 유지 관리 작업인 **오래된 구성 관리 데이터 삭제** 에서 정보를 삭제할 때까지 해당 정보를 보존합니다. 기본 삭제 간격은 90일이지만 변경할 수 있습니다. 호환성 정보는 Microsoft로 전송되지 않습니다.  
+## <a name="privacy-information-for-wi-fi-profiles"></a>Wi-Fi プロファイルのプライバシー情報  
+ Wi-Fi および VPN プロファイルを使って、クライアント デバイスと Wi-Fi および VPN サーバーとの接続を構成し、プロファイルの適用後に、それらのデバイスがコンプライアンスに対応しているかどうかを評価できます。 コンプライアンス対応情報は、管理ポイントからサイト サーバーに送信され、サイト データベースに保存されます。 情報はデバイスが管理ポイントに送信するときは暗号化されますが、サイト データベースに保存するときは暗号化されません。 データベースに保存された情報は、"期限切れの構成管理データの削除" というメンテナンス タスクで削除されるまで維持されます。 **** 情報が削除される既定の期限は 90 日ですが、変更することができます。 対応情報がマイクロソフトに送信されることはありません。  
 
- 기본적으로 장치는 Wi-Fi 및 VPN 프로필을 평가하지 않습니다. 또한 프로필을 구성한 다음 사용자에게 배포해야 합니다.  
+ 既定では、デバイスでは Wi-Fi および VPN プロファイルを評価しません。 また、プロファイルを構成してから、プロファイルをユーザーに展開する必要があります。  
 
- Wi-Fi 및 VPN 프로필을 구성하려면 먼저 개인 정보 요구 사항을 고려합니다.  
+ Wi-Fi または VPN プロファイルを構成する前に、プライバシー要件について検討してください。  

@@ -1,6 +1,6 @@
 ---
-title: "Mac 클라이언트 배포 | Microsoft 문서"
-description: "System Center Configuration Manager에서 Mac 컴퓨터에 클라이언트를 배포하는 방법을 알아봅니다."
+title: "Mac クライアントの展開 | Microsoft Docs"
+description: "System Center Configuration Manager でクライアントを Mac コンピューターに展開する方法を説明します。"
 ms.custom: na
 ms.date: 05/04/2017
 ms.prod: configuration-manager
@@ -17,312 +17,312 @@ manager: angrobe
 ms.openlocfilehash: 6ce212c6745b70a47553891e5dbc124b4c4e50fa
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-deploy-clients-to-macs"></a>How to deploy clients to Macs
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-이 항목에서는 Mac 컴퓨터에 Configuration Manager 클라이언트를 배포 및 유지 관리하는 방법을 설명합니다. 클라이언트를 Mac 컴퓨터에 배포하기 전에 구성해야 하는 내용을 알아보려면 [Mac에 클라이언트 소프트웨어 배포 준비](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients)를 참조하세요.
+このトピックでは、Mac コンピューターに Configuration Manager クライアントを展開して管理する方法について説明します。 Mac コンピューターにクライアントを展開する前に構成する必要がある内容の詳細については、「[Mac コンピューターにクライアント ソフトウェアを展開するための準備](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients)」を参照してください。
 
-Mac 컴퓨터용 새 클라이언트를 설치할 때 Configuration Manager 콘솔에서 새 클라이언트 정보를 반영하려면 Configuration Manager 업데이트도 설치해야 할 수 있습니다.
+Mac コンピューター用の新しいクライアントをインストールする場合は、Configuration Manager の更新プログラムをインストールして、Configuration Manager コンソールで新しいクライアント情報を反映する必要もあります。
 
-이러한 절차에는 클라이언트 인증서를 설치할 수 있는 두 가지 옵션이 있습니다. [Mac에 클라이언트 소프트웨어 배포 준비](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#certificate-requirements)에서 Mac용 클라이언트 인증서에 대해 자세히 읽어보세요.  
+これらの手順には、クライアント証明書をインストールするための 2 つのオプションがあります。 Mac コンピューターのクライアント証明書の詳細については、「[Mac コンピューターにクライアント ソフトウェアを展開するための準備](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#certificate-requirements)」を参照してください。  
 
--   [CMEnroll 도구](#install-the-client-and-then-enroll-the-client-certificate-on-the-mac)를 사용하여 Configuration Manager 등록을 사용합니다. 등록 프로세스는 자동 인증서 갱신을 지원하지 않으므로 설치된 인증서가 만료되기 전에 Mac 컴퓨터를 다시 등록해야 합니다.    
+-   [CMEnroll ツール](#install-the-client-and-then-enroll-the-client-certificate-on-the-mac) を使用して Configuration Manager 登録を使用する。 登録プロセスでは自動証明書更新がサポートされていないため、インストールされている証明書が期限切れになる前に、Mac コンピューターを再登録する必要があります。    
 
--   [Configuration Manager와 별개의 인증서 요청 및 설치 방법을 사용합니다](#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager). 
+-   [Configuration Manager とは独立した証明書の要求とインストールの方法を使用する](#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager)。 
 
 >[!IMPORTANT]
->  macOS Sierra를 실행하는 장치에 클라이언트를 배포하려면 관리 지점 인증서의 주체 이름을 관리 지점 서버의 FQDN 등을 사용하여 올바로 구성해야 합니다.
+>  Mac OS Sierra を実行しているデバイスにクライアントを展開するには、管理ポイント証明書のサブジェクト名を正しく構成する必要があります。たとえば、管理ポイント サーバーの FQDN を指定します。
 
 
-## <a name="configure-client-settings-for-enrollment"></a>등록을 위한 클라이언트 설정 구성  
- Mac 컴퓨터에 대해 등록을 구성하려면 [기본 클라이언트 설정](../../../core/clients/deploy/about-client-settings.md)을 사용해야 합니다. 사용자 지정 클라이언트 설정은 사용할 수 없습니다.  
+## <a name="configure-client-settings-for-enrollment"></a>登録のためのクライアント設定を構成する  
+ Mac コンピューターの登録を構成するには、[既定のクライアント設定](../../../core/clients/deploy/about-client-settings.md)を使用する必要があります。カスタムのクライアント設定は使用できません。  
 
- Mac에서 인증서를 요청하고 설치하려면 Configuration Manager에서 이 작업을 수행해야 합니다.  
+ この手順は、Configuration Manager が Mac で証明書を要求してインストールするために必要です。  
 
-### <a name="to-configure-the-default-client-settings-for-configuration-manager-to-enroll-certificates-for-macs"></a>Configuration Manager의 기본 클라이언트 설정에서 Mac용 인증서를 등록하도록 구성하려면  
+### <a name="to-configure-the-default-client-settings-for-configuration-manager-to-enroll-certificates-for-macs"></a>Mac に証明書を登録する Configuration Manager の既定のクライアント設定を構成するには  
 
-1.  Configuration Manager 콘솔에서 **관리** >  **클라이언트 설정** > **기본 클라이언트 설정**을 선택합니다.  
+1.  Configuration Manager コンソールで、**[管理]** >  **[クライアント設定]** > **[既定のクライアント設定]** の順に選択します。  
 
-4.  **홈** 탭의 **속성** 그룹에서 **속성**을 선택합니다.  
+4.  **[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** を選択します。  
 
-5.  **등록** 섹션을 선택하고 다음 설정을 구성합니다.  
+5.  **[登録]** セクションを選択し、次の設定を構成します。  
 
-    1.  **사용자가 모바일 장치 및 Mac 컴퓨터를 등록할 수 있도록 허용: 예**  
+    1.  **ユーザーがモバイル デバイスと Mac コンピューターを登録できるようにする: はい**  
 
-    2.  **등록 프로필:** **프로필 설정**을 선택합니다.  
+    2.  **[登録プロファイル]:** **[プロファイルの設定]** を選択します。  
 
-6.  **모바일 장치 등록 프로필** 대화 상자에서 **만들기**를 선택합니다.  
+6.  **[モバイル デバイス登録プロファイル]** ダイアログ ボックスで、**[作成]** をクリックします。  
 
-7.  **등록 프로필 만들기** 대화 상자에서 이 등록 프로필의 이름을 입력한 다음 **관리 사이트 코드**를 구성합니다. Mac 컴퓨터를 관리할 관리 지점이 포함된 Configuration Manager 기본 사이트를 선택합니다.  
+7.  [ **登録プロファイルの作成** ] ダイアログ ボックスで、この登録プロファイルの名前を入力し、[ **管理サイト コード**] を構成します。 Mac コンピューターを管理する管理ポイントを含む Configuration Manager プライマリ サイトを選択します。  
 
     > [!NOTE]  
-    >  이 사이트를 선택할 수 없는 경우 사이트에서 모바일 장치를 지원할 관리 지점을 하나 이상 구성했는지 확인합니다.  
+    >  サイトを選択できない場合は、そのサイト内で少なくとも 1 つの管理ポイントがモバイル デバイスをサポートするように構成されていることを確認してください。  
 
-8.  **추가**를 선택합니다.  
+8.  **[追加]** を選びます。  
 
-9. **모바일 장치에 대한 인증 기관 추가** 대화 상자에서 Mac 컴퓨터에 대한 인증서를 발급할 CA(인증 기관) 서버를 선택합니다.  
+9. **[モバイル デバイスの証明機関の追加]** ダイアログ ボックスで、Mac コンピューターに証明書を発行する認証機関 (CA) サーバーを選択します。  
 
-10. **등록 프로필 만들기** 대화 상자에서 3단계에서 만든 Mac 컴퓨터 인증서 템플릿을 선택합니다.  
+10. **[登録プロファイルの作成]** ダイアログ ボックスで、手順 3 で作成した Mac コンピューター証明書テンプレートを選択します。  
 
-11. **확인**을 클릭하여 **등록 프로필** 대화 상자, **기본 클라이언트 설정** 대화 상자를 차례로 닫습니다.  
+11. **[OK]** をクリックして **[登録プロファイル]** ダイアログ ボックスを閉じ、**[既定のクライアント設定]** ダイアログ ボックスを閉じます。  
 
     > [!TIP]  
-    >  클라이언트 정책 간격을 변경하려면 **클라이언트 정책** 클라이언트 설정 그룹에서 **클라이언트 정책 폴링 간격**을 사용합니다.  
+    >  クライアント ポリシーの間隔を変更する場合、**[クライアント ポリシー]** クライアント設定グループの **[クライアント ポリシーのポーリング間隔]** を使用します。  
 
- 모든 사용자는 다음에 클라이언트 정책을 다운로드할 때 이러한 설정으로 구성됩니다. 단일 클라이언트에 대한 정책 검색을 시작하려면 [Configuration Manager 클라이언트에 대한 정책 검색 시작](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval)을 참조하세요.  
+ すべてのユーザーは、次にクライアント ポリシーをダウンロードするときに、これらの設定で構成されます。 1 つのクライアントのポリシーの取得を開始するには、「[構成マネージャー クライアントのポリシーの取得開始](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval)」をご覧ください。  
 
- 등록 클라이언트 설정 외에도 다음 클라이언트 장치 설정을 구성했는지 확인합니다.  
+ 登録クライアント設定の他に、次のクライアント デバイス設定が構成されていることを確認します。  
 
--   **하드웨어 인벤토리**: Mac 및 Windows 클라이언트 컴퓨터에서 하드웨어 인벤토리를 수집하려면 이 설정을 사용하도록 설정하고 구성합니다. 자세한 내용은 [System Center Configuration Manager에서 하드웨어 인벤토리를 확장하는 방법](../../../core/clients/manage/inventory/extend-hardware-inventory.md)을 참조하세요.  
+-   **[ハードウェア インベントリ]**: Mac および Windows クライアント コンピューターからハードウェア インベントリを収集する場合、この設定を有効にして構成します。 詳細については、「[System Center Configuration Manager でのハードウェア インベントリの拡張方法](../../../core/clients/manage/inventory/extend-hardware-inventory.md)」をご覧ください。  
 
--   **준수 설정**: Mac 및 Windows 클라이언트 컴퓨터에 대한 설정을 평가하고 수정하려면 이 설정을 사용하도록 설정하고 구성합니다. 자세한 내용은 [준수 설정 계획 및 구성](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)을 참조하세요.  
+-   **[コンプライアンス設定]**: Mac および Windows クライアント コンピューターの設定を評価して修復する場合、この設定を有効にして構成します。 詳細については、「[コンプライアンス設定の計画と構成](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)」をご覧ください。  
 
 > [!NOTE]  
->  Configuration Manager 클라이언트 설정에 대한 자세한 내용은 [System Center Configuration Manager에서 클라이언트 설정을 구성하는 방법](../../../core/clients/deploy/configure-client-settings.md)을 참조하세요.  
+>  構成マネージャー クライアント設定の詳細については、「[System Center Configuration Manager でクライアント設定を構成する方法](../../../core/clients/deploy/configure-client-settings.md)」をご覧ください。  
 
-## <a name="download-the-client-source-files-for-macs"></a>Mac용 클라이언트 원본 파일 다운로드  
+## <a name="download-the-client-source-files-for-macs"></a>Mac 用のクライアント ソース ファイルをダウンロードする  
 
-1.  Mac OS X 클라이언트 파일 패키지 **ConfigmgrMacClient.msi**를 다운로드하여 Windows를 실행하는 컴퓨터에 저장합니다.  
+1.  Mac OS X クライアント ファイル パッケージ ( **ConfigmgrMacClient.msi**) をダウンロードして、Windows を実行しているコンピューターに保存します。  
 
-     이 파일은 Configuration Manager 설치 미디어에서 제공되지 않습니다. [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=525184)에서 다운로드할 수 있습니다.  
+     このファイルは Configuration Manager インストール メディアに含まれていません。 このファイルは、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=525184)からダウンロードできます。  
 
-2.  Windows 컴퓨터에서 **ConfigmgrMacClient.msi**를 실행하여 Mac 클라이언트 패키지 Macclient.dmg를 로컬 디스크의 폴더(기본적으로 **C:\Program Files (x86)\Microsoft\System Center 2012 Configuration Manager Mac Client\\**)에 추출합니다.  
+2.  Windows コンピューターで、**ConfigmgrMacClient.msi** を実行し、Mac クライアント パッケージ (Macclient.dmg) をローカル ディスクのフォルダー (既定では、**C:\Program Files (x86)\Microsoft\System Center 2012 Configuration Manager Mac Client\\**) に抽出します。  
 
-3.  Macclient.dmg 파일을 Mac 컴퓨터의 폴더에 복사합니다.  
+3.  Macclient.dmg ファイルを Mac コンピューターのフォルダーにコピーします。  
 
-4.  Mac 컴퓨터에서 Macclient.dmg 파일을 실행하여 로컬 디스크의 폴더에 추출합니다.  
+4.  Mac コンピューターで、Macclient.dmg ファイルを実行して、ローカル ディスクのフォルダーにファイルを抽出します。  
 
-5.  이 폴더에서 Ccmsetup and CMClient.pkg 파일이 추출되어 있고 CMDiagnostics, CMUninstall, CMAppUtil, CMEnroll 도구가 포함된 Tools 폴더가 만들어졌는지 확인합니다.
+5.  フォルダーに Ccmsetup と CMClient.pkg ファイルが抽出されていることと、Tools という名前のフォルダーが作成され、CMDiagnostics、CMUninstall、CMAppUtil and CMEnroll ツールが含まれていることを確認します。
 
-    -  **Ccmsetup**: Mac 컴퓨터에 Configuration Manager 클라이언트를 설치합니다.  
+    -  **Ccmsetup**: Mac コンピューターに Configuration Manager クライアントをインストールします。  
 
-    -   **CMDiagnostics**: Mac 컴퓨터에 설치된 Configuration Manager 클라이언트와 관련된 진단 정보를 수집합니다.  
+    -   **CMDiagnostics**: Mac コンピューターの Configuration Manager クライアントに関連する診断情報を収集します。  
 
-    -   **CMUninstall**: Mac 컴퓨터에서 클라이언트를 제거합니다.  
+    -   **CMUninstall**: Mac コンピューターからクライアントをアンインストールします。  
 
-    -   **CMAppUtil**: Apple 응용 프로그램 패키지를 Configuration Manager 응용 프로그램으로 배포할 수 있는 형식으로 변환합니다.  
+    -   **CMAppUtil**: Apple アプリケーション パッケージを Configuration Manager アプリケーションとして展開できる形式に変換します。  
 
-    -   **CMEnroll**: Configuration Manager 클라이언트를 설치할 수 있도록 Mac 컴퓨터에 대한 클라이언트 인증서를 요청하고 설치합니다.   
+    -   **CMEnroll**: Mac コンピューター用のクライアント証明書を要求してインストールし、Configuration Manager クライアントをインストールできるようにします。   
 
-## <a name="install-the-client-and-then-enroll-the-client-certificate-on-the-mac"></a>Mac에 클라이언트를 설치한 다음 클라이언트 인증서 등록  
+## <a name="install-the-client-and-then-enroll-the-client-certificate-on-the-mac"></a>Mac にクライアントをインストールし、クライアント証明書を登録する  
 
-[Mac 컴퓨터 등록 마법사](#enroll-the-client-with-the-mac-computer-enrollment-wizard)를 사용하여 개별 클라이언트를 등록할 수 있습니다.
+[Mac コンピューターの登録ウィザード](#enroll-the-client-with-the-mac-computer-enrollment-wizard)で個々のクライアントを登録することができます。
 
-여러 클라이언트를 등록할 수 있도록 자동화하려면 [CMEnroll 도구](#client-and-certificate-automation-with-cmenroll)를 사용합니다.   
+多数のクライアントを登録できる自動化の場合、[CMEnroll ツール](#client-and-certificate-automation-with-cmenroll)を使用します。   
 
 
-###  <a name="enroll-the-client-with-the-mac-computer-enrollment-wizard"></a>Mac 컴퓨터 등록 마법사를 사용하여 클라이언트 등록  
+###  <a name="enroll-the-client-with-the-mac-computer-enrollment-wizard"></a>Mac コンピューターの登録ウィザードでクライアントを登録する  
 
-1.  클라이언트 설치를 마치면 컴퓨터 등록 마법사가 열립니다. 마법사가 열리지 않거나 마법사를 실수로 닫은 경우 **Configuration Manager** 기본 설정 페이지에서 **등록**을 클릭하여 마법사를 엽니다.  
+1.  クライアントのインストールを完了したら、コンピューターの登録ウィザードが開きます。 ウィザードが開かない場合や、間違ってウィザードを閉じてしまった場合は、**Configuration Manager** の環境設定ページで **[登録]** をクリックして、ウィザードを開いてください。  
 
-2.  마법사의 두 번째 페이지에서 다음을 입력합니다.  
+2.  ウィザードの 2 番目のページで、次のように指定します。  
 
-    -   **사용자 이름** - 사용자 이름은 다음 형식이 될 수 있습니다.  
+    -   **ユーザー名** : 次の形式で入力できます。  
 
-        -   '도메인\이름'. 예를 들면 'contoso\mnorth'와 같습니다.  
+        -   'ドメイン\名前' (たとえば、'contoso\mnorth')  
 
-        -   'user@domain'. 예: 'mnorth@contoso.com'  
+        -   'user@domain'. 例: 'mnorth@contoso.com'  
 
             > [!IMPORTANT]  
-            >  메일 주소를 사용하여 **사용자 이름** 필드를 채운 경우 Configuration Manager는 메일 주소의 도메인 이름과 등록 프록시 지점 서버의 기본 이름을 자동으로 사용하여 **서버 이름** 필드를 채웁니다. 이 도메인 이름과 서버 이름이 등록 프록시 지점 서버의 이름과 일치하지 않는 경우 Mac 컴퓨터를 등록할 때 사용할 올바른 이름을 사용자에게 알립니다.  
+            >  電子メール アドレスを使用して **[ユーザー名]** フィールドを指定すると、Configuration Manager により、電子メール アドレスのドメイン名と登録プロキシ ポイント サーバーの既定の名前を使用して **[サーバー名]** フィールドが自動的に指定されます。 このドメイン名とサーバー名が登録プロキシ ポイント サーバーの名前と一致しない場合は、Mac コンピューターを登録するときに使用する正しい名前をユーザーに知らせます。  
 
-         사용자 이름과 해당 암호는 Mac 클라이언트 인증서 템플릿에 대한 읽기 및 등록 권한이 부여된 Active Directory 사용자 계정과 일치해야 합니다.  
+         ユーザー名と、対応するパスワードは、Mac クライアント証明書テンプレートに対する読み取り権限と登録権限が付与された Active Directory ユーザー アカウントと一致している必要があります。  
 
-    -   **암호** – 지정한 사용자 이름에 해당하는 암호를 입력합니다.  
+    -   **パスワード**: 指定したユーザー名に対応するパスワードを入力します。  
 
-    -   **서버 이름** – 등록 프록시 지점 서버의 이름을 입력합니다.  
+    -   **サーバー名**: 登録プロキシ ポイント サーバーの名前を入力します。  
 
 
-### <a name="client-and-certificate-automation-with-cmenroll"></a>CMEnroll을 사용하여 클라이언트 및 인증서 자동화  
+### <a name="client-and-certificate-automation-with-cmenroll"></a>CMEnroll によるクライアントと証明書の自動化  
 
-CMEnroll 도구를 사용하여 클라이언트 설치를 자동화하고 클라이언트 인증서를 요청 및 등록하려면 다음 절차를 따릅니다. 도구를 실행하려면 Active Directory 사용자 계정이 있어야 합니다.
+CMEnroll ツールでクライアントのインストール、クライアント証明書の要求と登録を自動化する場合に、この手順を使用します。 ツールを実行するには、Active Directory ユーザー アカウントが必要です。
 
-1.  Mac 컴퓨터에서 Macclient.dmg 파일의 콘텐츠를 추출한 폴더로 이동합니다.  
+1.  Mac コンピューターで、Macclient.dmg ファイルのコンテンツを抽出したフォルダーに移動します。  
 
-2.  다음 명령줄을 입력합니다. **sudo ./ccmsetup**  
+2.  次のコマンドラインを入力します。 **sudo ./ccmsetup**  
 
-3.  **설치 완료** 메시지가 나타날 때까지 기다립니다. 설치 관리자에서 지금 다시 시작해야 한다는 메시지가 표시되더라도 다시 시작하지 않고 다음 단계를 계속합니다.  
+3.  「 **Completed installation (インストール完了)** 」メッセージが表示されるまで待ちます。 インストーラーでは、再起動が必要というメッセージが表示されますが、ここでは再起動せず、次の手順に進みます。  
 
-4.  Mac 컴퓨터의 Tools 폴더에서 다음 명령을 입력합니다. **sudo ./CMEnroll -s &lt;enrollment_proxy_server_name> -ignorecertchainvalidation -u &lt;사용자 이름'>**  
+4.  Mac コンピューターの Tools フォルダーで、次のコマンドを入力します: **sudo ./CMEnroll -s &lt;enrollment_proxy_server_name> -ignorecertchainvalidation -u &lt;user name'>**  
 
-    클라이언트를 설치한 후 Mac 컴퓨터 등록을 안내하는 Mac 컴퓨터 등록 마법사가 열립니다. 이 방법으로 클라이언트를 등록하려면 이 항목에서 [To enroll the client by using the Mac Computer Enrollment Wizard](#BKMK_EnrollR2) 섹션을 참조하세요.  
+    クライアントのインストール後に、Mac コンピューターの登録ウィザードを使用して Mac コンピューターを登録できます。 この方法でクライアントを登録する場合は、このトピックの「 [To enroll the client by using the Mac Computer Enrollment Wizard](#BKMK_EnrollR2) 」を参照してください。  
 
-5. Active Directory 사용자 계정의 암호를 입력합니다.  이 명령을 입력하면 두 가지 암호를 묻는 메시지가 나타납니다. 첫 번째는 명령을 실행하기 위한 슈퍼 사용자 계정의 암호를 묻고, 두 번째는 Active Directory 사용자 계정의 암호를 묻습니다. 메시지가 동일하게 나타날 수 있으므로 올바른 순서로 암호를 지정해야 합니다.  
+5. Active Directory ユーザー アカウントのパスワードを入力します。  このコマンドを入力すると、2 つのパスワードの入力が求められます。最初のプロンプトは、コマンドを実行するスーパー ユーザー アカウント用です。 2 つ目のプロンプトは、Active Directory ユーザー アカウント用です。 プロンプトは似ているため、正しい順番で指定するように気を付けてください。  
 
-    사용자 이름은 다음 형식이 될 수 있습니다.  
+    ユーザー名は、次の形式で入力できます。  
 
-    -   '도메인\이름'. 예를 들면 'contoso\mnorth'와 같습니다.  
+    -   'ドメイン\名前' (たとえば、'contoso\mnorth')  
 
-    -   'user@domain'. 예: 'mnorth@contoso.com'  
+    -   'user@domain'. 例: 'mnorth@contoso.com'  
 
-     사용자 이름과 해당 암호는 Mac 클라이언트 인증서 템플릿에 대한 읽기 및 등록 권한이 부여된 Active Directory 사용자 계정과 일치해야 합니다.  
+     ユーザー名と、対応するパスワードは、Mac クライアント証明書テンプレートに対する読み取り権限と登録権限が付与された Active Directory ユーザー アカウントと一致している必要があります。  
 
-     예: 등록 프록시 지점 서버 이름이 **server02.contoso.com**이고 사용자 이름이 **contoso\mnorth**인 사용자에게 Mac 클라이언트 인증서 템플릿에 대한 권한이 부여된 경우 다음을 입력합니다. **sudo ./CMEnroll -s server02.contoso.com -ignorecertchainvalidation -u 'contoso\mnorth'**  
+     例: 登録プロキシ ポイント サーバーの名前が **server02.contoso.com** で、ユーザー名が **contoso\mnorth**のユーザーに Mac クライアント証明書テンプレートに対するアクセス許可が付与されている場合、次のように入力します: **sudo ./CMEnroll -s server02.contoso.com -ignorecertchainvalidation -u 'contoso\mnorth'**  
 
     > [!NOTE]  
-    >  사용자 이름에 **&lt;>"+=,** 중 하나가 포함된 경우 등록에 실패합니다. 이러한 문자가 포함되지 않은 사용자 이름으로 대역 외 인증서를 가져옵니다.  
+    >  ユーザー名に **&lt;>"+=** のいずれかの文字が含まれている場合、登録は失敗します。 これらの文字が含まれていないユーザー名で帯域外証明書を取得します。  
     >  
-    >  보다 원활한 사용자 경험을 위해 설치 단계와 명령을 스크립팅하여 사용자가 사용자 이름과 암호만 입력하면 되도록 할 수 있습니다.  
+    >  ユーザー エクスペリエンスを単純化するには、インストール手順とコマンドをスクリプト化し、ユーザーがユーザー名とパスワードを指定するだけで済むようにします。  
 
-5.  **등록 성공** 메시지가 나타날 때까지 기다립니다.  
+5.  「 **Successfully enrolled (正常に登録されました)** 」メッセージが表示されるまで待ちます。  
 
-6.  등록된 인증서를 Configuration Manager로 제한하려면 Mac 컴퓨터에서 터미널 창을 열고 다음과 같이 변경합니다.  
+6.  Mac コンピューターで、登録する証明書を Configuration Manager に制限するには、ターミナル ウィンドウを開き、次のように変更します。  
 
-    a.  **sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access**명령을 입력합니다.  
+    a.  コマンド **sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access**を入力します。  
 
-    b.  **키 집합 접근** 대화 상자의 **키 집합** 섹션에서 **시스템**을 선택한 다음 **카테고리** 섹션에서 **키**를 선택합니다.  
+    b.  **[キーチェーン アクセス]** ダイアログ ボックスの **[キーチェーン]** セクションで、**[システム]** を選択し、**[カテゴリ]** セクションの **[キー]** を選択します。  
 
-    c.  클라이언트 인증서를 보려면 해당 키를 확장합니다. 방금 설치한 인증서를 개인 키로 식별한 경우 키를 두 번 클릭합니다.  
+    c.  キーを展開してクライアント証明書を表示します。 インストールした秘密キーの証明書を特定したら、そのキーをダブルクリックします。  
 
-    d.  **Access Control**(액세스 제어) 탭에서 **접근 허용 전 확인**을 선택합니다.  
+    d.  **[アクセス制御]** タブで、**[アクセスを許可する前に確認する]** を選択します。  
 
-    e.  **/Library/Application Support/Microsoft/CCM**으로 이동하고 **CCMClient**를 선택한 후 **추가**를 선택합니다.  
+    e.  **/Library/Application Support/Microsoft/CCM** を参照し、**[CCMClient]** を選択して **[追加]** を選択します。  
 
-    f.  **변경사항 저장**을 선택하고 **키 집합 접근** 대화 상자를 닫습니다.  
+    f.  **[変更を保存]** をクリックし、**[キーチェーン アクセス]** ダイアログ ボックスを閉じます。  
 
-7.  Mac 컴퓨터를 다시 시작합니다.  
+7.  Mac コンピューターを再起動します。  
 
- Mac 컴퓨터에서, **시스템 환경설정** 에서 **Configuration Manager**를 열어 설치가 성공했는지 확인합니다. 또한 **모든 시스템** 컬렉션을 업데이트하고 확인하여 이제 Mac 컴퓨터가 이 컬렉션에 관리되는 클라이언트로 나타나는지 확인합니다.  
+ Mac コンピューターの [ **システム環境設定** ] で [ **Configuration Manager** ] 項目を開いて、クライアントのインストールが正常に完了したことを確認します。 また、[ **すべてのシステム** ] コレクションを更新して表示し、Mac コンピューターが管理されたクライアントとして、このコレクションに表示されていることを確認できます。  
 
 > [!TIP]  
->  Mac 클라이언트에 대한 문제를 해결하려는 경우 Mac OS X 클라이언트 패키지에 포함된 CMDiagnostics 프로그램을 사용하여 다음 진단 정보를 수집할 수 있습니다.  
+>  Mac クライアントに関するトラブルシューティングを行うために、Mac OS X クライアント パッケージに含まれている CMDiagnostics プログラムを使用して、次の診断情報を収集できます。  
 >   
->  -   실행 중인 프로세스 목록  
-> -   Mac OS X 운영 체제 버전  
-> -   **CCM\*.crash** 및 **System Preference.crash**를 비롯한 Configuration Manager 클라이언트와 관련된 Mac OS X 충돌 보고서  
-> -   Configuration Manager 클라이언트 설치를 통해 생성된 BOM(제품 구성 정보) 파일 및 속성 목록(.plist) 파일  
-> -   라이브러리/응용 프로그램 지원/Microsoft/CCM/Logs 폴더의 내용  
+>  -   実行中のプロセスの一覧  
+> -   Mac OS X オペレーティング システムのバージョン  
+> -   構成マネージャー クライアントに関連する Mac OS X のクラッシュ レポート (**CCM\*.crash** と **System Preference.crash** を含む)  
+> -   構成マネージャー クライアントのインストールで作成される Bill of Materials (BOM) ファイルとプロパティ一覧 (.plist) ファイル  
+> -   /Library/Application Support/Microsoft/CCM/Logs フォルダーの内容  
 >   
->  CmDiagnostics를 통해 수집되는 정보는 이름이 cmdiag-*<호스트 이름\>***-***&gt;날짜 및 시간\>*.zip인 압축 파일에 추가되어 컴퓨터 바탕 화면에 저장됩니다.***
+>  CmDiagnostics で収集された情報は、コンピューターのデスクトップに保存される zip ファイルに追加され、cmdiag-*<ホスト名\>***-***&gt;日付と時刻\>*.zip という名前が付けられます。***
 
 
-##  <a name="use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager"></a>Configuration Manager와 별개의 인증서 요청 및 설치 방법 사용  
+##  <a name="use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager"></a>Configuration Manager とは独立した証明書要求およびインストール方法を使用する  
 
-먼저 [Mac에 클라이언트 소프트웨어 배포 준비](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients)에서 다음과 같은 특정 작업을 수행합니다.
+まず、「[Mac コンピューターにクライアント ソフトウェアを展開するための準備](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients)」の以下の特定のタスクを実行します。
 
-1. [사이트 시스템 서버에 웹 서버 인증서 배포](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#deploy-a-web-server-certificate-to-site-system-servers)
+1. [Web サーバー証明書をサイト システム サーバーに展開する](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#deploy-a-web-server-certificate-to-site-system-servers)
 
-2. [사이트 시스템 서버에 클라이언트 인증 인증서 배포](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#deploy-a-client-authentication-certificate-to-site-system-servers)
+2. [クライアント認証証明書をサイト システム サーバーに展開する](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#deploy-a-client-authentication-certificate-to-site-system-servers)
 
-3. [관리 지점 및 배포 지점 구성](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#configure-the-management-point-and-distribution-point)
+3. [管理ポイントおよび配布ポイントを構成する](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#configure-the-management-point-and-distribution-point)
 
-4. [선택 사항: 보고 서비스 지점 설치](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#install-the-reporting-services-point)
+4. [オプション: レポート サービス ポイントをインストールする](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#install-the-reporting-services-point)
 
-그러고 나서 다음 작업을 수행합니다.
+次に、以下のタスクを実行します。
 
-5. [Mac용 클라이언트 원본 파일 다운로드](#download-the-client-source-files-for-macs)  
-6. 선택한 인증서 배포 방법에 따른 지침을 사용하여 Mac 컴퓨터에서 클라이언트 인증서를 요청하고 설치합니다.  
-7.  Microsoft 다운로드 센터에서 다운로드한 macclient.dmg 파일의 콘텐츠를 추출한 폴더를 찾습니다.  
+5. [Mac 用のクライアント ソース ファイルをダウンロードする](#download-the-client-source-files-for-macs) .  
+6. 選択した証明書の展開方法で指定されている指示に従い、クライアント証明書を要求して、Mac コンピューターにインストールします。  
+7.  Microsoft ダウンロード センターからダウンロードした macclient.dmg ファイルのコンテンツを抽出したフォルダーに移動します。  
 
-3.  **sudo ./ccmsetup -MP <관리 지점 인터넷 FQDN\> -SubjectName <인증서 주체 값\>** 명령줄을 입력합니다.  인증서 주체 값은 대소문자를 구분하므로 인증서 세부 정보에 나타난 대로 정확히 입력합니다.  
+3.  次のコマンドラインを入力します: **sudo ./ccmsetup -MP <管理ポイントのインターネット FQDN\> -SubjectName <証明書のサブジェクト値\>**。  証明書のサブジェクト値は大文字と小文字が区別されるので、証明書の詳細に表示されるとおりに入力してください。  
 
-     예: 사이트 시스템 속성의 인터넷 FQDN이 **server03.contoso.com**이고 Mac 클라이언트 인증서가 **mac12.contoso.com**의 FQDN을 인증서 주체의 일반 이름으로 사용하는 경우 다음을 입력합니다. **sudo ./ccmsetup -MP server03.contoso.com -SubjectName mac12.contoso.com**  
+     例: サイト システムのプロパティのインターネット FQDN が **server03.contoso.com** であり、Mac クライアント証明書が証明書のサブジェクトで共通名として **mac12.contoso.com** という FQDN を持っている場合、次のように入力します: **sudo ./ccmsetup -MP server03.contoso.com -SubjectName mac12.contoso.com**  
 
-4.  **설치 완료** 메시지가 나타날 때까지 기다렸다가 Mac 컴퓨터를 다시 시작합니다.  
+4.  **"Completed installation** " というメッセージが表示されるまで待ってから、Mac コンピューターを再起動します。  
 
-5.  이 인증서를 Configuration Manager에서 액세스할 수 있도록 하려면 Mac 컴퓨터에서 터미널 창을 열고 다음과 같이 변경합니다.  
+5.  Mac コンピューターで、この証明書から Configuration Manager にアクセスできるようにするには、ターミナル ウィンドウを開き、次のように変更します。  
 
-    a.  **sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access**명령을 입력합니다.  
+    a.  コマンド **sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access**を入力します。  
 
-    b.  **키 집합 접근** 대화 상자의 **키 집합** 섹션에서 **시스템**을 선택한 다음 **카테고리** 섹션에서 **키**를 선택합니다.  
+    b.  **[キーチェーン アクセス]** ダイアログ ボックスの **[キーチェーン]** セクションで、**[システム]** を選択し、**[カテゴリ]** セクションの **[キー]** を選択します。  
 
-    c.  클라이언트 인증서를 보려면 해당 키를 확장합니다. 방금 설치한 인증서를 개인 키로 식별한 경우 키를 두 번 클릭합니다.  
+    c.  キーを展開してクライアント証明書を表示します。 インストールした秘密キーの証明書を特定したら、そのキーをダブルクリックします。  
 
-    d.  **Access Control**(액세스 제어) 탭에서 **접근 허용 전 확인**을 선택합니다.  
+    d.  **[アクセス制御]** タブで、**[アクセスを許可する前に確認する]** を選択します。  
 
-    e.  **/Library/Application Support/Microsoft/CCM**으로 이동하고 **CCMClient**를 선택한 후 **추가**를 선택합니다.  
+    e.  **/Library/Application Support/Microsoft/CCM** を参照し、**[CCMClient]** を選択して **[追加]** を選択します。  
 
-    f.  **변경사항 저장**을 선택하고 **키 집합 접근** 대화 상자를 닫습니다.  
+    f.  **[変更を保存]** をクリックし、**[キーチェーン アクセス]** ダイアログ ボックスを閉じます。  
 
-6.  동일한 주체 값을 포함하는 인증서가 둘 이상 있는 경우 Configuration Manager 클라이언트에 사용하려는 인증서를 식별할 수 있도록 인증서 일련 번호를 지정해야 합니다. 이 작업을 수행하려면 다음 명령을 사용합니다. **sudo defaults write com.microsoft.ccmclient SerialNumber -data "<일련 번호\>"**.  
+6.  同じサブジェクト値を含む証明書が複数ある場合、構成マネージャー クライアントに使用する証明書を特定するには、証明書のシリアル番号を指定する必要があります。 このためには、次のコマンドを使用します: **sudo defaults write com.microsoft.ccmclient SerialNumber -data "<シリアル番号\>"**  
 
-     예를 들면 다음과 같습니다. **sudo defaults write com.microsoft.ccmclient SerialNumber -data "17D4391A00000003DB"**  
+     たとえば、次のように入力します。 **sudo defaults write com.microsoft.ccmclient SerialNumber -data "17D4391A00000003DB"**  
 
- Mac의 **시스템 환경설정**에서 **Configuration Manager**를 열어 클라이언트가 설치되었는지 확인합니다. 또한 **모든 시스템** 컬렉션을 업데이트하고 표시하여 Mac이 이 컬렉션에 관리되는 클라이언트로 나타나는지 확인합니다.  
+ Mac の **[システム環境設定]** で **[Configuration Manager]** 項目を開いて、クライアントのインストールが正常に完了したことを確認します。 また、**[すべてのシステム]** コレクションを更新して表示し、Mac が管理されたクライアントとして、このコレクションに表示されていることを確認できます。  
 
-## <a name="renewing-the-mac-client-certificate"></a>Mac 클라이언트 인증서 갱신  
- Mac 컴퓨터에서 컴퓨터 인증서를 갱신하기 전에 다음 단계를 따르세요.  
+## <a name="renewing-the-mac-client-certificate"></a>Mac クライアント証明書の更新  
+ Mac コンピューターのコンピューター証明書を更新する前に、次の手順を実行します。  
 
- 이 절차는 클라이언트에서 Mac 컴퓨터에 대한 새 인증서 또는 갱신된 인증서를 사용하는 데 필요한 SMSID를 제거합니다.  
+ この手順で SMSID を削除します。SMSID は、クライアントが Mac コンピューターで新規または更新された証明書を使用するときに必要です。  
 
 > [!IMPORTANT]  
->  SMSID를 제거하고 대체할 경우 Configuration Manager 콘솔에서 클라이언트를 삭제한 후에 인벤토리와 같은 저장된 클라이언트 기록이 삭제됩니다.  
+>  クライアント SMSID を削除して置き換えると、Configuration Manager コンソールからクライアントが削除された後に、インベントリなどの保存されているクライアント履歴も削除されます。  
 
-### <a name="to-renew-the-mac-client-certificate"></a>Mac 클라이언트 인증서를 갱신하려면  
+### <a name="to-renew-the-mac-client-certificate"></a>Mac クライアント証明書を更新するには  
 
-1.  컴퓨터 인증서를 갱신해야 하는 Mac 컴퓨터에 대한 장치 컬렉션을 만들고 채웁니다.  
+1.  ユーザー証明書を更新する必要がある Mac コンピューターのデバイス コレクションを作成します。  
 
-2.  **자산 및 호환성** 작업 영역에서 **구성 항목 만들기 마법사**를 시작합니다.  
+2.  [ **資産とコンプライアンス** ] ワークスペースで、 **構成項目の作成ウィザード** を開始します。  
 
-3.  마법사의 **일반** 페이지에서 다음 정보를 지정합니다.  
+3.  ウィザードの [ **全般** ] ページで、次の情報を指定します。  
 
-    -   **이름:Mac용 SMSID 제거**  
+    -   **[名前]:Mac の SMSID の削除**  
 
-    -   **유형:Mac OS X**  
+    -   **[種類]:Mac OS X**  
 
-4.  마법사의 **지원되는 플랫폼** 페이지에서 모든 Mac OS X 버전이 선택되어 있는지 확인합니다.  
+4.  ウィザードの [ **サポートされているプラットフォーム** ] ページで、すべての Mac OS X バージョンが選択されていることを確認します。  
 
-5.  마법사의 **설정** 페이지에서 **새로 만들기** 를 클릭하고 **설정 만들기** 대화 상자에서 다음 정보를 지정합니다.  
+5.  ウィザードの [ **設定** ] ページで [ **新規作成** ] をクリックし、[ **設定の作成** ] ダイアログ ボックスで次の情報を指定します。  
 
-    -   **이름:Mac용 SMSID 제거**  
+    -   **[名前]:Mac の SMSID の削除**  
 
-    -   **설정 유형:스크립트**  
+    -   **[設定の種類]:スクリプト**  
 
-    -   **데이터 형식:문자열**  
+    -   **[データ型]:文字列**  
 
-6.  **설정 만들기** 대화 상자의 **검색 스크립트**에 대해 **스크립트 추가** 를 클릭하여 SMSID가 구성된 Mac 컴퓨터를 검색하는 스크립트를 지정합니다.  
+6.  **[設定の作成]** ダイアログ ボックスの **[検索スクリプト]**で **[スクリプトの追加]** をクリックし、SMSID が構成されている Mac コンピューターを検出するスクリプトを指定します。  
 
-7.  **검색 스크립트 편집** 대화 상자에서 다음 셸 스크립트를 입력합니다.  
+7.  [ **探索スクリプトの編集** ] ダイアログ ボックスで、次のシェル スクリプトを入力します。  
 
     ```  
     defaults read com.microsoft.ccmclient SMSID  
     ```  
 
-8.  **확인**을 선택하여 **검색 스크립트 편집** 대화 상자를 닫습니다.  
+8.  **[OK]** を選択して、**[探索スクリプトの編集]** ダイアログ ボックスを閉じます。  
 
-9. **설정 만들기** 대화 상자의 **재구성 스크립트(옵션)**에 대해 **스크립트 추가**를 선택하여 Mac 컴퓨터에서 발견된 SMSID를 제거하는 스크립트를 지정합니다.  
+9. **[設定の作成]** ダイアログ ボックスの **[修復スクリプト (オプション)]** で、**[スクリプトの追加]** を選択して、Mac コンピューターで見つかった SMSID を削除するスクリプトを指定します。  
 
-10. **재구성 스크립트 만들기** 대화 상자에서 다음 셸 스크립트를 입력합니다.  
+10. [ **修復スクリプトの作成** ] ダイアログ ボックスで、次のシェル スクリプトを入力します。  
 
     ```  
     defaults delete com.microsoft.ccmclient SMSID  
     ```  
 
-11. **확인**을 선택하여 **재구성 스크립트 만들기** 대화 상자를 닫습니다.  
+11. **[OK]** を選択して **[修復スクリプトの作成]** ダイアログ ボックスを閉じます。  
 
-12. 마법사의 **호환성 규칙** 페이지에서 **새로 만들기**를 선택하고 **규칙 만들기** 대화 상자에서 다음 정보를 지정합니다.  
+12. ウィザードの **[コンプライアンス規則]** ページで **[新規作成]** を選択し、**[規則の作成]** ダイアログ ボックスで次の情報を指定します。  
 
-    -   **이름:Mac용 SMSID 제거**  
+    -   **[名前]:Mac の SMSID の削除**  
 
-    -   **선택한 설정:** **찾아보기**를 선택하고 이전에 지정한 검색 스크립트를 선택합니다.  
+    -   **[選択した設定]:** **[参照]** を選択し、前に指定した探索スクリプトを選びます。  
 
-    -   **다음 값** 필드에 **(com.microsoft.ccmclient, SMSID)의 도메인/기본값 쌍이 존재하지 않음**를 입력합니다.  
+    -   **[次の値]** フィールドに「**存在しないドメインと既定のペア (com.microsoft.ccmclient, SMSID)**」と入力します。  
 
-    -   **이 설정이 규칙과 호환되지 않는 경우 지정한 재구성 스크립트 실행**옵션을 사용하도록 설정합니다.  
+    -   オプション [ **この設定が対応していない場合に指定した修復スクリプトを実行する** ] を有効にします。  
 
-13. 구성 항목 만들기 마법사를 완료합니다.  
+13. 構成項目の作成ウィザードを完了します。  
 
-14. 방금 만든 구성 항목을 포함하는 구성 기준을 만들고 이를 1단계에서 만든 장치 컬렉션에 배포합니다.  
+14. 作成した構成項目を含む構成基準を作成し、それを手順 1 で作成したデバイス コレクションに展開します。  
 
-     구성 기준을 만들고 배포하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 구성 기준을 만드는 방법](../../../compliance/deploy-use/create-configuration-baselines.md)을 참조하세요.  
+     構成基準の作成方法と展開方法の詳細については、「[System Center Configuration Manager で構成基準を作成する方法](../../../compliance/deploy-use/create-configuration-baselines.md)」をご覧ください。  
 
-15. SMSID가 제거된 Mac 컴퓨터에 새 인증서를 설치한 후 다음 명령을 실행하여 새 인증서를 사용하도록 클라이언트를 구성합니다.  
+15. SMSID を削除した Mac コンピューターに新しい証明書をインストールしたら、次のコマンドを実行して、新しい証明書を使用するクライアントを構成します。  
 
     ```  
     sudo defaults write com.microsoft.ccmclient SubjectName -string <Subject_Name_of_New_Certificate>  
     ```  
 
-16. 동일한 주체 값을 포함하는 인증서가 둘 이상 있는 경우에는 Configuration Manager 클라이언트에 사용하려는 인증서를 식별할 수 있도록 인증서 일련 번호를 지정해야 합니다. 이 작업을 수행하려면 다음 명령을 사용합니다. **sudo defaults write com.microsoft.ccmclient SerialNumber -data "<일련 번호\>"**.  
+16. 同じサブジェクト値を含む証明書が複数ある場合、構成マネージャー クライアントに使用する証明書を特定するには、証明書のシリアル番号を指定する必要があります。 このためには、次のコマンドを使用します: **sudo defaults write com.microsoft.ccmclient SerialNumber -data "<シリアル番号\>"**  
 
-     예를 들면 다음과 같습니다. **sudo defaults write com.microsoft.ccmclient SerialNumber -data "17D4391A00000003DB"**  
+     たとえば、次のように入力します。 **sudo defaults write com.microsoft.ccmclient SerialNumber -data "17D4391A00000003DB"**  
 
-17. 다시 시작.  
+17. 再起動します。  
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>関連項目
 
-[Mac 클라이언트 유지 관리](/sccm/core/clients/manage/maintain-mac-clients)
+[Mac クライアントを維持する](/sccm/core/clients/manage/maintain-mac-clients)

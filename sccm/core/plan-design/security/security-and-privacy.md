@@ -1,6 +1,6 @@
 ---
-title: "System Center Configuration Manager의 보안 및 개인 정보 | Microsoft 문서"
-description: "System Center Configuration Manager의 보안 및 개인 정보에 대한 리소스를 찾습니다."
+title: "System Center Configuration Manager のセキュリティとプライバシー | Microsoft Docs"
+description: "System Center Configuration Manager のセキュリティとプライバシーに関するリソースを参照してください。"
 ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
@@ -17,58 +17,58 @@ manager: angrobe
 ms.openlocfilehash: de9df79c7adc24b415fd1be6e45a42aec7e16f9a
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="security-and-privacy-for-system-center-configuration-manager"></a>System Center Configuration Manager의 보안 및 개인 정보
+# <a name="security-and-privacy-for-system-center-configuration-manager"></a>System Center Configuration Manager のセキュリティとプライバシー
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-이 문서에는 System Center Configuration Manager의 보안 및 개인 정보에 대한 리소스가 포함되어 있습니다.  
+この記事には、System Center Configuration Manager のセキュリティとプライバシーに関するリソースが含まれています。  
 
- 계속하기 전에 [System Center Configuration Manager의 기본 사항](../../../core/understand/fundamentals.md)을 이해해야 합니다. System Center Configuration Manager를 이미 설치한 경우 해당 구현에 대한 설계 결정을 파악합니다. Configuration Manager 계획 및 배포 콘텐츠가 유용할 수 있습니다.  
+ 先に進む前に、[System Center Configuration Manager の基本](../../../core/understand/fundamentals.md)を学習しておく必要があります。 System Center Configuration Manager を既にインストールしている場合は、実装に関する設計上の決定事項を特定してください。 Configuration Manager の計画および展開についての内容が記載されており、理解を深めることができます。  
 
- 제품의 보안 관련 기능은 다음 문서를 참조하세요.  
+ 製品のセキュリティ関連の機能については、次の記事をご覧ください。  
 
--   [System Center Configuration Manager에서 운영 체제 배포의 보안 및 개인 정보](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  
+-   [System Center Configuration Manager のオペレーティング システムの展開でのセキュリティとプライバシー](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  
 
--   [System Center Configuration Manager에서 응용 프로그램 관리에 대한 보안 및 개인 정보](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
+-   [System Center Configuration Manager のアプリケーション管理のセキュリティとプライバシー](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
 
--   [System Center Configuration Manager에서 소프트웨어 업데이트에 대한 보안 및 개인 정보](../../../sum/plan-design/security-and-privacy-for-software-updates.md)  
+-   [System Center Configuration Manager のソフトウェア更新プログラムのセキュリティとプライバシー](../../../sum/plan-design/security-and-privacy-for-software-updates.md)  
 
--   [System Center Configuration Manager에서 준수 설정에 대한 보안 및 개인 정보](../../../compliance/plan-design/security-and-privacy-for-compliance-settings.md)  
+-   [System Center Configuration Manager のコンプライアンス設定のセキュリティとプライバシー](../../../compliance/plan-design/security-and-privacy-for-compliance-settings.md)  
 
--   [System Center Configuration Manager의 Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md)  
+-   [System Center Configuration Manager での Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md)  
 
--   [System Center Configuration Manager에서 컬렉션에 대한 보안 및 개인 정보](../../../core/clients/manage/collections/security-and-privacy-for-collections.md)  
+-   [System Center Configuration Manager のコレクションのセキュリティとプライバシー](../../../core/clients/manage/collections/security-and-privacy-for-collections.md)  
 
--   [System Center Configuration Manager에서 쿼리에 대한 보안 및 개인 정보](../../../core/servers/manage/security-and-privacy-for-queries.md)  
+-   [System Center Configuration Manager のクエリのセキュリティとプライバシー](../../../core/servers/manage/security-and-privacy-for-queries.md)  
 
--   [System Center Configuration Manager에서 전원 관리에 대한 보안 및 개인 정보](../../../core/clients/manage/power/security-and-privacy-for-power-management.md)  
+-   [System Center Configuration Manager の電源管理のセキュリティとプライバシー](../../../core/clients/manage/power/security-and-privacy-for-power-management.md)  
 
--   [System Center Configuration Manager에서 원격 제어에 대한 보안 및 개인 정보](../../../core/clients/manage/remote-control/security-and-privacy-for-remote-control.md)  
+-   [System Center Configuration Manager のリモート コントロールのセキュリティとプライバシー](../../../core/clients/manage/remote-control/security-and-privacy-for-remote-control.md)  
 
--   [System Center Configuration Manager에서 하드웨어 인벤토리에 대한 보안 및 개인 정보](../../../core/clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)  
+-   [System Center Configuration Manager におけるハードウェア インベントリのセキュリティとプライバシー](../../../core/clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)  
 
--   [System Center Configuration Manager에서 소프트웨어 인벤토리에 대한 보안 및 개인 정보](../../../core/clients/manage/inventory/security-and-privacy-for-software-inventory.md)  
+-   [System Center Configuration Manager のソフトウェア インベントリのセキュリティとプライバシー](../../../core/clients/manage/inventory/security-and-privacy-for-software-inventory.md)  
 
--   [System Center Configuration Manager에서 Asset Intelligence 대한 보안 및 개인 정보](../../../core/clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md)  
+-   [System Center Configuration Manager の資産インテリジェンスのセキュリティとプライバシー](../../../core/clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md)  
 
--   [System Center Configuration Manager에서 보고에 대한 보안 및 개인 정보](../../../core/servers/manage/security-and-privacy-for-reporting.md)  
-
-
-
- **보안 및 개인 정보 문서:**  
-
--   [System Center Configuration Manager에서 보안 계획](../../../core/plan-design/security/plan-for-security.md)  
-
--   [System Center Configuration Manager에서 보안 구성](../../../core/plan-design/security/configure-security.md)  
+-   [System Center Configuration Manager のレポートのセキュリティとプライバシー](../../../core/servers/manage/security-and-privacy-for-reporting.md)  
 
 
--   [Configuration Manager의 보안 모범 사례 및 개인 정보](../../../core/plan-design/security/security-best-practices-and-privacy-information.md)  
 
--   [System Center Configuration Manager에 대한 암호화 제어 기술 참조](../../../protect/deploy-use/cryptographic-controls-technical-reference.md)  
+ **セキュリティとプライバシーの記事**  
 
--   [System Center Configuration Manager에서 사용되는 포트](../../../core/plan-design/hierarchy/ports.md)  
+-   [System Center Configuration Manager でのセキュリティの計画](../../../core/plan-design/security/plan-for-security.md)  
 
--   [System Center Configuration Manager에 사용되는 계정](../../../core/plan-design/hierarchy/accounts.md)  
+-   [System Center Configuration Manager でのセキュリティの構成](../../../core/plan-design/security/configure-security.md)  
+
+
+-   [System Center Configuration Manager のセキュリティのベスト プラクティスとプライバシー情報](../../../core/plan-design/security/security-best-practices-and-privacy-information.md)  
+
+-   [System Center Configuration Manager の暗号化コントロールのテクニカル リファレンス](../../../protect/deploy-use/cryptographic-controls-technical-reference.md)  
+
+-   [System Center Configuration Manager で使用されるポート](../../../core/plan-design/hierarchy/ports.md)  
+
+-   [System Center Configuration Manager で使用されるアカウント](../../../core/plan-design/hierarchy/accounts.md)  

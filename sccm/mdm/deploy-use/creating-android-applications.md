@@ -1,6 +1,6 @@
 ---
-title: "Android 응용 프로그램 만들기 | Microsoft 문서"
-description: "Android 장치용 응용 프로그램을 만들고 배포할 때 고려해야 할 사항을 확인합니다."
+title: "Android アプリケーションの作成 | Microsoft Docs"
+description: "Android デバイス用アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。"
 ms.custom: na
 ms.date: 07/31/2017
 ms.prod: configuration-manager
@@ -17,50 +17,50 @@ manager: angrobe
 ms.openlocfilehash: 3a89abc81cd70f4e499bf4e3087fd53915377c44
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-android-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager에서 Android 응용 프로그램 만들기
+# <a name="create-android-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager で Android アプリケーションを作成する
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 응용 프로그램에는 하나 이상의 배포 유형이 있습니다. 배포 유형은 장치에 소프트웨어를 배포하는 데 필요한 설치 파일 및 정보로 구성됩니다. 또한 배포 유형에는 소프트웨어 배포 시점 및 방법을 지정하는 규칙이 포함됩니다.  
+System Center Configuration Manager アプリケーションには、1 つ以上の展開の種類があります。 展開の種類は、インストール ファイルとデバイスにソフトウェアを展開するために必要な情報で構成されています。 また、展開の種類には、ソフトウェアを展開するタイミングと方法を指定する規則があります。  
 
- 다음 방법을 사용하여 응용 프로그램을 만들 수 있습니다.  
+ アプリケーションを作成するには、次の 2 通りの方法があります。  
 
--   응용 프로그램 설치 파일을 읽어 자동으로 응용 프로그램 및 배포 유형을 만듭니다.  
--   수동으로 응용 프로그램을 만든 다음 나중에 배포 유형을 추가합니다.  
--   파일에서 응용 프로그램을 가져옵니다.  
+-   アプリケーション インストール ファイルを読み取って、アプリケーションおよび展開の種類を自動的に作成する。  
+-   アプリケーションを手動で作成してから、後で展開の種類を追加する。  
+-   アプリケーションをファイルからインポートする。  
 
-Configuration Manager 응용 프로그램 및 배포 유형을 만드는 데 필요한 단계는 [응용 프로그램 만들기 마법사 시작](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard)을 참조하세요. 또한 Android 장치용 응용 프로그램을 만들고 배포할 때는 다음 사항을 고려하세요.  
+Configuration Manager アプリケーションと展開の種類の作成に必要な手順については、「[アプリケーションの作成ウィザードを開始する](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard)」を参照してください。 また、Android デバイス用アプリケーションを作成して展開するときに、以下の考慮事項について留意してください。  
 
-## <a name="general-considerations-for-android-apps"></a>Android 앱에 대한 일반적인 고려 사항
+## <a name="general-considerations-for-android-apps"></a>Android アプリに関する一般的な考慮事項
 
-Configuration Manager는 다음과 같은 Android용 앱 유형의 배포를 지원합니다.
+Configuration Manager では、Android 用の次のアプリの種類の展開がサポートされています。
 
-|장치 유형|지원되는 파일|
+|デバイスの種類|サポートされているファイル|
 |-|-|
 |Android|.apk|
 
-다음 배포 작업이 지원됩니다.
+次の展開操作がサポートされています。
 
-|장치 유형|지원되는 작업|
+|デバイスの種類|サポートされている操作|
 |-|-|
-|Android|**사용 가능**, **필수** 사용자가 설치 및 제거에 모두 동의해야 합니다.|
-|Android for Work | **필수** |
+|Android|**利用可能**、**必須** インストールとアンインストールの両方に、ユーザーが同意する必要があります。|
+|Android for Work | **必須** |
 
-## <a name="approve-and-deploy-android-for-work-apps"></a>Android for Work 앱 승인 및 배포
-Configuration Manager 관리자는 [Play for Work 웹 사이트](https://play.google.com/work)에서 앱을 승인하고 해당 앱을 관리되는 Android for Work 장치에 배포할 수도 있습니다.
+## <a name="approve-and-deploy-android-for-work-apps"></a>Android for Work アプリの承認と展開
+Configuration Manager の管理者は、[Play for Work Web サイト](https://play.google.com/work)でアプリを承認したり、管理対象の Android for Work デバイスにそれらのアプリを展開したりすることもできます。
 
-Play for Work 스토어에서 앱을 승인하고, Configuration Manager 콘솔과 동기화하고, 관리되는 Android for Work 장치에 배포하려면 다음 단계를 따르세요. 사용자의 작업 프로필에 앱을 배포하려면 Play for Work에서 앱을 승인한 다음 Configuration Manager 콘솔과 동기화해야 합니다.
+Play for Work ストアのアプリを承認し、Configuration Manager コンソールと同期し、管理対象の Android for Work デバイスに展開するには、次の手順を実行します。 アプリをユーザーの仕事用プロファイルに展開するには、Play for Work でアプリを承認し、アプリを Configuration Manager コンソールと同期する必要があります。
 
-1. 브라우저를 열고 https://play.google.com/work로 이동합니다.
-2. Intune 테넌트에 제한된 Google 관리자 계정을 사용하여 로그인합니다.
-3. 환경에 배포하려는 앱을 찾은 다음 각 앱에 대해 **승인**을 선택하여 Android for Work에서 앱을 사용 가능하도록 설정합니다.
-4. Configuration Manager 콘솔에서 **관리자** > **개요** > **Cloud Services** > **Android for Work**로 이동한 다음 **동기화**를 선택합니다.
-5. 앱이 동기화될 때까지 최대 10분 정도 기다린 다음 **소프트웨어 라이브러리** > **개요** > **응용 프로그램 관리** > **스토어 앱에 대한 라이선스 정보**로 이동합니다.
-6. Play for Work에서 동기화된 앱을 선택한 다음 **응용 프로그램 만들기**를 선택합니다.
-7. 마법사를 완료하고 **닫기**를 선택합니다.
-8. **소프트웨어 라이브러리** > **개요** > **응용 프로그램 관리** > **응용 프로그램**으로 이동한 다음 Android for Work 앱을 선택하여 평소대로 배포합니다.
+1. ブラウザーを開き、https://play.google.com/work にアクセスします。
+2. Intune テナントにバインドした Google 管理者アカウントを使用してサインインします。
+3. 環境に展開するアプリを参照し、各アプリについて **[承認]** を選択して、Android for Work でアプリを使用できるようにします。
+4. Configuration Manager コンソールで **[管理者]** > **[概要]** > **[クラウド サービス]** > **[Android for Work]** の順にクリックし、**[同期]** を選択します。
+5. アプリが同期されるまで 10 分間待ってから **[ソフトウェア ライブラリ]** > **[概要]** > **[アプリケーション管理]** > **[ストア アプリのライセンス情報]** の順に選択します。
+6. Play for Work から同期したアプリを選択してから **[アプリケーションの作成]** をクリックします。
+7. ウィザードを終了して、**[閉じる]** を選択します。
+8. **[ソフトウェア ライブラリ]** > **[概要]** > **[アプリケーション管理]** > **[アプリケーション]** の順に選択し、Android for Work アプリを選択して、通常どおりに展開します。
 
-Play for Work 앱을 Configuration Manager와 동기화하려면 먼저 Play for Work 웹 사이트에서 앱을 하나 이상 승인해야 합니다.
+Play for Work アプリを Configuration Manager と同期するには、最初に少なくとも 1 つのアプリを Play for Work Web サイトで承認する必要があります。

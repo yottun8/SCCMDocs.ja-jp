@@ -1,6 +1,6 @@
 ---
-title: "하이브리드 MDM에 대한 장치 등록 방법 | Microsoft Docs"
-description: "하이브리드 MDM에 대한 장치 등록 방법"
+title: "ハイブリッド MDM のデバイス登録方法 | Microsoft Docs"
+description: "ハイブリッド MDM のデバイス登録方法です。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,67 +18,67 @@ manager: angrobe
 ms.openlocfilehash: e09e639e939b846cdc162681f9d7bd4c39cd6fbf
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="overview-of-device-enrollment-methods"></a>장치 등록 방법 개요
+# <a name="overview-of-device-enrollment-methods"></a>デバイス登録方法の概要
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-Intune으로 Configuration Manager를 확장하면 관리자가 회사 소유 장치를 등록 및 관리하거나 사용자에게 개인 장치를 등록할 수 있는 권한을 부여할 수 있습니다. Intune에서 Configuration Manager를 사용하여 회사 소유 장치를 관리할 수도 있습니다.
+Configuration Manager を Intune を利用して拡張すると、会社所有のデバイスを登録して管理したり、ユーザーに個人デバイスの登録許可を与えたりできます。 Intune を使用する会社所有のデバイスを、Configuration Manager を使用して管理することもできます。
 
-다음 표에서는 등록 방법 및 지원되는 기능을 보여 줍니다. 해당 기능은 다음과 같습니다.
-- **초기화** - 장치를 초기화하고 모든 데이터를 제거합니다. [장치 사용 중지](../deploy-use/wipe-lock-reset-devices.md)
-- **선호도** - 장치를 사용자에 연결합니다. MAM(모바일 응용 프로그램 관리) 및 회사 데이터에 대한 조건부 액세스에 필요합니다. [사용자 선호도](../deploy-use/user-affinity-for-hybrid-managed-devices.md)
-- **잠금** 사용자가 관리에서 장치를 제거할 수 없도록 차단합니다. iOS 장치에서 잠금을 사용하려면 감독 모드여야 합니다. [원격 잠금](../deploy-use/wipe-lock-reset-devices.md#remote-lock)
+次の表は、登録方法とサポートされている機能をまとめたものです。 含まれる機能:
+- **ワイプ** - デバイスを出荷時の設定に戻します。すべてのデータが削除されます。 [デバイスをインベントリから削除する](../deploy-use/wipe-lock-reset-devices.md)
+- **アフィニティ** - ユーザーとデバイスを関連付けます。 モバイル アプリケーション管理 (MAM) と会社データへの制限付きアクセスのために必要です。 [ユーザー アフィニティ](../deploy-use/user-affinity-for-hybrid-managed-devices.md)
+- **ロック** ユーザーが管理からデバイスを削除できないようにします。 iOS デバイスの場合、ロックには監視モードが必要になります。 [リモート ロック](../deploy-use/wipe-lock-reset-devices.md#remote-lock)
 
-**iOS 등록 방법**
+**iOS 登録方法**
 
-| **방법** |  **초기화** |  **선호도**    |   **잠금** | **세부 정보** |
+| **方法** |  **ワイプ** |  **アフィニティ**    |   **ロック** | **詳細** |
 |:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | 아니요|    예 |   아니요 | [자세히](../deploy-use/enable-platform-enrollment.md)|
-|**[DEM](#dem)**|   아니요 |아니요 |아니요  | [자세히](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
-|**[DEP](#dep)**|   예 |   선택 사항 |  선택 사항|[자세히](../deploy-use/ios-device-enrollment-program-for-hybrid.md)|
-|**[USB-SA](#usb-sa)**| 예 |   선택 사항 |  아니요| [자세히](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)|
+|**[BYOD](#byod)** | いいえ|    [はい] |   × | [詳細](../deploy-use/enable-platform-enrollment.md)|
+|**[DEM](#dem)**|   いいえ |いいえ |×  | [詳細](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
+|**[DEP](#dep)**|   ○ |   オプション |  オプション|[詳細](../deploy-use/ios-device-enrollment-program-for-hybrid.md)|
+|**[USB-SA](#usb-sa)**| ○ |   オプション |  いいえ| [詳細](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)|
 
-**Windows 및 Android 등록 방법**
+**Windows と Android の登録方法**
 
-| **방법** |  **초기화** |  **선호도**    |   **잠금** | **세부 정보**|
+| **方法** |  **ワイプ** |  **アフィニティ**    |   **ロック** | **詳細**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | 아니요|    예 |   아니요 | [자세히](../deploy-use/enroll-hybrid-windows.md)|
-|**[DEM](#dem)**|   아니요 |아니요 |아니요  |[자세히](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
+|**[BYOD](#byod)** | いいえ|    [はい] |   × | [詳細](../deploy-use/enroll-hybrid-windows.md)|
+|**[DEM](#dem)**|   いいえ |いいえ |×  |[詳細](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
 
-올바른 방법을 찾는 데 도움이 되는 일련의 질문을 보려면 [장치 등록 방법 선택](/intune/get-started/choose-how-to-enroll-devices1)을 참조하세요.
+適切な方法を見つけるのに役立つ質問集が「[Choose how to enroll devices](/intune/get-started/choose-how-to-enroll-devices1)」 (デバイスの登録方法を選択する) にあります。
 
 ## <a name="byod"></a>BYOD
-"BYOD(Bring Your Own Device)" 사용자는 회사 포털 앱을 설치하고 자신의 장치를 등록합니다. 이렇게 하면 사용자가 회사 네트워크에 연결하고 도메인 또는 Azure Active Directory에 가입할 수 있습니다. 대부분의 플랫폼에 대한 여러 COD 시나리오에서 BYOD 등록 사용은 필수 조건입니다. [하이브리드 MDM 설치](../deploy-use/setup-hybrid-mdm.md)를 참조하세요. ([표로 돌아가기](#overview-of-device-enrollment-methods))
+"Bring your own device" (BYOD) ユーザーは会社のポータル アプリをインストールし、自分のデバイスを登録します。 ドメインまたは Azure Active Directory に参加し、会社のネットワークに接続できます。 BYOD 登録を有効にすることは、ほとんどのプラットフォームで、さまざまな COD シナリオの前提条件になります。 「[Setup hybrid MDM](../deploy-use/setup-hybrid-mdm.md)」 (ハイブリッド MDM のセットアップ) を参照してください。 ([テーブルに戻る](#overview-of-device-enrollment-methods))
 
-## <a name="corporate-owned-devices"></a>회사 소유 장치
-Configuration Manager 콘솔을 사용하여 COD(회사 소유 장치)를 관리할 수 있습니다. iOS 장치는 Apple에서 제공하는 도구를 통해 직접 등록할 수 있습니다. 관리자(admin) 또는 관리자(manager)는 장치 등록 관리자를 사용하여 모든 장치 유형을 등록할 수 있습니다. COD 시나리오를 사용할 수 있도록 IMEI 번호가 있는 장치도 식별하고 회사 소유로 태그를 지정할 수 있습니다.
+## <a name="corporate-owned-devices"></a>企業所有のデバイス
+企業所有のデバイス (COD) は、Configuration Manager コンソールで管理できます。 iOS デバイスは、Apple から提供されるツールを使用して直接登録できます。 デバイス登録マネージャーを利用することで、監理者とマネージャーはあらゆる種類のデバイスを登録できます。 IMEI 番号の付いたデバイスも識別し、会社所有のタグを付け、COD シナリオを実行できます。
 
-[회사 소유 장치 등록](../deploy-use/enroll-company-owned-devices.md)
+[企業所有のデバイスの登録](../deploy-use/enroll-company-owned-devices.md)
 
 ### <a name="dem"></a>DEM
-장치 등록 관리자는 여러 회사 소유 장치를 등록 및 관리하는 데 사용되는 특수 사용자 계정입니다. 관리자는 회사 포털을 설치하고 사용자가 없는 많은 장치를 등록할 수 있습니다. [DEM](../deploy-use/enroll-devices-with-device-enrollment-manager.md)에 대해 자세히 알아보세요. ([표로 돌아가기](#overview-of-device-enrollment-methods))
+デバイス登録マネージャーは、複数の会社所有デバイスの登録と管理に使用される特別なユーザー アカウントです。 マネージャーは会社ポータルをインストールし、さまざまユーザーなしデバイスを登録できます。 [DEM の詳細はこちらをご覧ください](../deploy-use/enroll-devices-with-device-enrollment-manager.md)。 ([テーブルに戻る](#overview-of-device-enrollment-methods))
 
 ### <a name="dep"></a>DEP
-Apple DEP(장치 등록 프로그램) 관리를 사용하면 정책을 만들고 DEP로 구입하여 관리하는 iOS 장치에 "무선으로" 배포할 수 있습니다. 장치는 사용자가 처음으로 장치를 켜고 iOS 설정 도우미를 실행할 때 등록됩니다. 이 방법은 **iOS 감독** 모드를 지원하고, 다시 이 모드에서 다음 기능이 사용됩니다.
-  - 잠긴 등록
-  - 조건부 액세스
-  - 탈옥 검색
-  - 모바일 응용 프로그램 관리
+Apple デバイス登録プログラム (DEP) 管理では、ポリシーを作成したら、DEP で購入し、管理する iOS デバイスに “無線で” 展開できます。 ユーザーがデバイスを初めてオンにし、iOS セットアップ アシスタントを実行すると、デバイスが登録されます。 この方法では **iOS 監視**モードがサポートされていますが、このモードでは次の操作が可能です。
+  - ロック登録
+  - 条件付きアクセス
+  - 脱獄検出
+  - モバイル アプリケーション管理
 
-[DEP](../deploy-use/ios-device-enrollment-program-for-hybrid.md)에 대해 자세히 알아보세요. ([표로 돌아가기](#overview-of-device-enrollment-methods))
+[DEP の詳細はこちらをご覧ください](../deploy-use/ios-device-enrollment-program-for-hybrid.md)。 ([テーブルに戻る](#overview-of-device-enrollment-methods))
 
 ### <a name="usb-sa"></a>USB-SA
-USB로 연결된 설정 도우미 등록입니다. 관리자가 정책을 만들어 Apple Configurator로 내보냅니다. USB로 연결된 회사 소유 장치는 정책을 사용하여 준비됩니다. 관리자가 각 장치를 직접 등록해야 합니다. 사용자가 자신의 장치를 받고 설정 도우미를 실행하여 장치를 등록합니다. 이 방법은 **iOS 감독** 모드를 지원하고, 다시 이 모드에서 다음 기능이 사용됩니다.
-  - 조건부 액세스
-  - 탈옥 검색
-  - 모바일 응용 프로그램 관리
+USB 接続、セットアップ アシスタント登録。 管理者はポリシーを作成し、それを Apple Configurator にエクスポートします。 ポリシーにより USB 接続の会社所有デバイスが準備されます。 管理者は、手動で各デバイスを登録する必要があります。 ユーザーはデバイスを受け取り、セットアップ アシスタントを実行し、デバイスを登録します。 この方法では **iOS 監視**モードがサポートされていますが、このモードでは次の操作が可能です。
+  - 条件付きアクセス
+  - 脱獄検出
+  - モバイル アプリケーション管理
 
-자세한 내용은 [Apple Configurator를 사용한 설정 도우미 등록](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)을 참조하세요. ([표로 돌아가기](#overview-of-device-enrollment-methods))
+詳細は、「[Setup Assistant enrollment with Apple Configurator](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)」 (Apple Configurator によるセットアップ アシスタント登録) にあります。 ([テーブルに戻る](#overview-of-device-enrollment-methods))
 
-## <a name="mobile-device-management-with-exchange-activesync-and-configuration-manager"></a>Exchange ActiveSync 및 Configuration Manager를 사용한 모바일 장치 관리
-등록되어 있지 않지만 EAS(Exchange ActiveSync)에 연결하는 모바일 장치는 Intune에서 EAS MDM 정책을 사용하여 관리할 수 있습니다. Intune은 Exchange 커넥터를 사용하여 온-프레미스 및 클라우드에 호스트된 EAS와 통신합니다.
+## <a name="mobile-device-management-with-exchange-activesync-and-configuration-manager"></a>Exchange ActiveSync と Configuration Manager を使用したモバイル デバイス管理
+登録されていないが、Exchange ActiveSync (EAS) に接続するモバイル デバイスは EAS MDM ポリシーを利用することで Intune で管理できます。 Intune は Exchange Connector を利用し、オンプレミスまたはクラウド ホストの EAS と通信します。
 
-[Exchange ActiveSync와 Intune을 사용한 모바일 장치 관리](../deploy-use/manage-mobile-devices-with-exchange-activesync.md)
+[Exchange ActiveSync および Intune を使用したモバイル デバイス管理](../deploy-use/manage-mobile-devices-with-exchange-activesync.md)

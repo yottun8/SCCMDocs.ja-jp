@@ -1,6 +1,6 @@
 ---
-title: "Endpoint Protection 클라이언트 구성 | Microsoft 문서"
-description: "계층 구조의 컴퓨터 컬렉션에 배포할 수 있는 Endpoint Protection용 사용자 지정 클라이언트 설정을 구성하는 방법을 알아봅니다."
+title: "Endpoint Protection クライアントの構成 | Microsoft Docs"
+description: "階層内のコンピューターのコレクションに展開できる Endpoint Protection のカスタム クライアント設定を構成する方法について説明します。"
 ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
@@ -17,144 +17,144 @@ manager: angrobe
 ms.openlocfilehash: 1488aaa465fb9810bc1b641d41dad95189d37418
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="configure-custom-client-settings-for-endpoint-protection"></a>Endpoint Protection에 대한 사용자 지정 클라이언트 설정 구성
+# <a name="configure-custom-client-settings-for-endpoint-protection"></a>Endpoint Protection のカスタム クライアント設定を構成する
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-이 절차에서는 계층 구조의 컴퓨터 컬렉션에 배포할 수 있는 Endpoint Protection에 대한 사용자 지정 클라이언트 설정을 구성합니다.
+この手順では、階層内のコンピューターのコレクションに展開できる Endpoint Protection のカスタム クライアント設定を構成します。
 
 > [!IMPORTANT]
->  확실히 계층 구조의 모든 컴퓨터에 적용하려면 기본 Endpoint Protection 클라이언트 설정만 구성합니다.
+>  階層内のすべてのコンピューターに適用する場合にのみ、既定の Endpoint Protection クライアント設定を構成します。
 
-## <a name="to-enable-endpoint-protection-and-configure-custom-client-settings"></a>Endpoint Protection을 사용하도록 설정하고 사용자 지정 클라이언트 설정을 구성하려면
+## <a name="to-enable-endpoint-protection-and-configure-custom-client-settings"></a>Endpoint Protection を有効にしてカスタム クライアント設定を構成するには
 
-1.  Configuration Manager 콘솔에서 **관리**를 클릭합니다.
+1.  Configuration Manager コンソールで、[ **管理**] をクリックします。
 
-2.  **관리** 작업 영역에서 **클라이언트 설정**을 클릭합니다.
+2.  [ **管理** ] ワークスペースで [ **クライアント設定**] をクリックします。
 
-3.  **홈** 탭의 **만들기** 그룹에서 **사용자 지정 클라이언트 장치 설정 만들기**를 클릭합니다.
+3.  [ホーム **** ] タブの [作成 **** ] グループで、[カスタム クライアント デバイス設定の作成 ****] をクリックします。
 
-4.  **사용자 지정 클라이언트 장치 설정 만들기** 대화 상자에서 설정 그룹의 이름과 설명을 지정하고 **Endpoint Protection**을 선택합니다.
+4.  [カスタム クライアント デバイス設定の作成 **** ] ダイアログ ボックスで、設定のグループの名前と説明を指定し、[Endpoint Protection ****] を選択します。
 
-5.  필요한 Endpoint Protection 클라이언트 설정을 구성합니다. 구성할 수 있는 전원 관리 클라이언트 설정의 전체 목록은 [System Center Configuration Manager의 클라이언트 설정 정보](../../core/clients/deploy/about-client-settings.md)의 Endpoint Protection 섹션을 참조하세요.
+5.  必要な Endpoint Protection クライアント設定を構成します。 構成できる Endpoint Protection クライアント設定の完全な一覧については、「[System Center Configuration Manager のクライアント設定について](../../core/clients/deploy/about-client-settings.md)」の「Endpoint Protection」セクションをご覧ください。
 
    > [!IMPORTANT]
-   >  Endpoint Protection용 클라이언트 설정을 구성하려면 먼저 Endpoint Protection 사이트 시스템 역할을 설치해야 합니다.
+   >  Endpoint Protection のクライアント設定を構成するには、事前に Endpoint Protection サイト システムの役割をインストールしておく必要があります。
 
-6.  **확인** 을 클릭하여 **사용자 지정 클라이언트 장치 설정 만들기** 대화 상자를 닫습니다. 새 클라이언트 설정이 **관리** 작업 영역의 **클라이언트 설정** 노드에 표시됩니다.
+6.  [OK **** ] をクリックして [カスタム クライアント デバイス設定の作成 **** ] ダイアログ ボックスを閉じます。 新しいクライアント設定は、[管理 **** ] ワークスペースの [クライアント設定 **** ] ノードに表示されます。
 
-7.  사용자 지정 클라이언트 설정을 사용하려면 먼저 컬렉션에 배포해야 합니다. 배포하려는 사용자 지정 클라이언트 설정을 선택하고 **홈** 탭의 **클라이언트 설정** 그룹에서 **배포**를 클릭합니다.
+7.  カスタム クライアント設定を使用する前に、この設定をコレクションに展開する必要があります。 展開するカスタム クライアント設定を選択し、[ホーム **** ] タブの [クライアント設定 **** ] グループで [展開 ****] をクリックします。
 
-8.  **컬렉션 선택** 대화 상자에서 클라이언트 설정을 배포할 컬렉션을 선택하고 **확인**을 클릭합니다. 새 배포가 세부 정보 창의 **배포** 탭에 표시됩니다.
+8.  [コレクションの選択 **** ] ダイアログ ボックスで、クライアント設定を展開するコレクションを選択し、[OK ****] をクリックします。 新しい展開は、詳細ウィンドウの [展開 **** ] タブに表示されます。
 
-클라이언트 컴퓨터는 다음에 클라이언트 정책을 다운로드할 때 이 설정으로 구성됩니다. 단일 클라이언트에 대해 정책 검색을 시작하려면 [System Center Configuration Manager에서 클라이언트를 관리하는 방법](../../core/clients/manage/manage-clients.md)에서 Configuration Manager 클라이언트에 대한 정책 검색 시작 섹션을 참조하세요.
+クライアント コンピューターは、次にクライアント ポリシーをダウンロードするときに、これらの設定で構成されます。 単一クライアントのポリシーの取得を開始する場合は、「[How to manage clients in System Center Configuration Manager](../../core/clients/manage/manage-clients.md)」 (System Center Configuration Manager でのクライアントの管理方法) の「Initiate Policy Retrieval for a Configuration Manager Client」 (構成マネージャー クライアントのポリシーの取得開始) セクションをご覧ください。
 
-## <a name="how-to-provision-the-endpoint-protection-client-in-a-disk-image-in-configuration-manager"></a>Configuration Manager에서 디스크 이미지의 Endpoint Protection 클라이언트 프로비전 방법
-Configuration Manager 운영 체제 배포의 디스크 이미지 원본으로 사용하려는 컴퓨터에 Endpoint Protection 클라이언트를 설치할 수 있습니다. 이 컴퓨터는 일반적으로 참조 컴퓨터라고 합니다. 운영 체제 이미지를 만든 다음 Configuration Manager 운영 체제 배포를 사용하여 Endpoint Protection과 같은 소프트웨어 패키지를 포함할 수 있는 이미지를 클라이언트 컴퓨터에 배포할 수 있습니다.
+## <a name="how-to-provision-the-endpoint-protection-client-in-a-disk-image-in-configuration-manager"></a>Configuration Manager で Endpoint Protection クライアントをディスク イメージにプロビジョニングする方法
+Configuration Manager のオペレーティング システムの展開でディスク イメージ ソースとして使用するコンピューターに、Endpoint Protection クライアントをインストールできます。 このコンピューターは通常、参照コンピューターと呼ばれます。 オペレーティング システムのイメージを作成したら、次に、Configuration Manager のオペレーティング システムの展開を使用して、Endpoint Protection などのソフトウェア パッケージを含めることができるイメージをクライアント コンピューターに展開できます。
 
-이 항목의 절차는 참조 컴퓨터에서 Endpoint Protection 클라이언트를 설치하고 구성하는 방법을 설명합니다.
+参照コンピューターに Endpoint Protection クライアントをインストールして構成するには、このトピックの手順に従います。
 
-### <a name="prerequisites-for-installing-the-endpoint-protection-client-on-the-reference-computer"></a>참조 컴퓨터에 Endpoint Protection 클라이언트를 설치하는 데 필요한 필수 구성 요소
-다음 목록에는 참조 컴퓨터에 Endpoint Protection 클라이언트 소프트웨어를 설치하는 데 필요한 필수 구성 요소가 포함되어 있습니다.
+### <a name="prerequisites-for-installing-the-endpoint-protection-client-on-the-reference-computer"></a>参照コンピューターに Endpoint Protection クライアントをインストールするための前提条件
+以下に、参照コンピューターに Endpoint Protection クライアント ソフトウェアをインストールするために必要な前提条件を示します。
 
--   Endpoint Protection 클라이언트 설치 패키지(**scepinstall.exe**)에 대한 액세스 권한이 있어야 합니다. 이 패키지는 사이트 서버에서 Microsoft System Center Configuration Manager 설치 폴더의 **Client** 폴더에서 찾을 수 있습니다.
+-   Endpoint Protection クライアント インストール パッケージ **scepinstall.exe** にアクセスできる必要があります。 このパッケージは、サイト サーバー上の Microsoft System Center Configuration Manager インストール フォルダーの **Client** フォルダーにあります。
 
--   조직에 필요한 구성으로 Endpoint Protection 클라이언트를 배포하려면 맬웨어 방지 정책을 만든 다음 해당 정책을 내보냅니다. 그런 다음 수동으로 Endpoint Protection 클라이언트를 설치할 때 맬웨어 방지 정책을 사용하도록 지정할 수 있습니다. 자세한 내용은 [System Center Configuration Manager에서 Endpoint Protection에 대한 맬웨어 방지 정책을 만들어 배포하는 방법](endpoint-antimalware-policies.md)을 참조하세요.
+-   Endpoint Protection クライアントを組織で必要な構成で展開できるように、マルウェア対策ポリシーを作成してから、そのポリシーをエクスポートします。 その後、Endpoint Protection クライアントを手動でインストールするときに、使用するマルウェア対策ポリシーを指定できます。 詳細については、「[System Center Configuration Manager で Endpoint Protection 用にマルウェア対策ポリシーを作成し展開する方法](endpoint-antimalware-policies.md)」をご覧ください。
 
    > [!NOTE]
-   >  **기본 클라이언트 맬웨어 방지 정책** 은 내보낼 수 없습니다.
+   >  [既定のクライアント マルウェア対策ポリシー **** ] をエクスポートすることはできません。
 
--   최신 정의를 사용하여 Endpoint Protection 클라이언트를 설치하려면 [Microsoft 맬웨어 보호 센터](http://go.microsoft.com/fwlink/?LinkID=200965)에서 최신 정의를 다운로드해야 합니다.
+-   Endpoint Protection クライアントを最新の定義とともにインストールする場合、[Microsoft マルウェア プロテクション センター](http://go.microsoft.com/fwlink/?LinkID=200965)からダウンロードする必要があります。
 
-### <a name="how-to-install-the-endpoint-protection-client-software-on-the-reference-computer"></a>참조 컴퓨터에 Endpoint Protection 클라이언트 소프트웨어를 설치하는 방법
-명령 프롬프트에서 참조 컴퓨터에 로컬로 Endpoint Protection 클라이언트를 설치할 수 있습니다. 그렇게 하려면 먼저 설치 파일( **scepinstall.exe**)을 구해야 합니다. 미리 구성한 맬웨어 방지 정책이나 이전에 내보낸 맬웨어 방지 정책을 사용하여 클라이언트를 설치할 수도 있습니다.
+### <a name="how-to-install-the-endpoint-protection-client-software-on-the-reference-computer"></a>参照コンピューターに Endpoint Protection クライアント ソフトウェアをインストールする方法
+コマンド プロンプトから、Endpoint Protection クライアントを参照コンピューターのローカルにインストールできます。 このためには、まず、インストール ファイル **scepinstall.exe**を取得する必要があります。 事前に構成したマルウェア対策ポリシーまたは先にエクスポートしたマルウェア対策ポリシーとともに、クライアントをインストールすることもできます。
 
-## <a name="to-install-the-endpoint-protection-client-from-a-command-prompt"></a>명령 프롬프트에서 Endpoint Protection 클라이언트를 설치하려면
+## <a name="to-install-the-endpoint-protection-client-from-a-command-prompt"></a>コマンド プロンプトで Endpoint Protection クライアントをインストールするには
 
-1.  System Center Configuration Manager 설치 미디어의 **Client** 폴더에서 Endpoint Protection 클라이언트 소프트웨어를 설치하려는 컴퓨터로 **scepinstall.exe**를 복사합니다.
+1.  System Center Configuration Manager インストール メディアの **Client** フォルダーから、Endpoint Protection クライアント ソフトウェアをインストールするコンピューターに **scepinstall.exe** をコピーします。
 
-2.  관리자 권한으로 명령 프롬프트를 열고 **scepinstall.exe** 가 있는 폴더로 이동한 후 필요한 추가 명령줄 속성을 추가하여 다음 명령을 실행합니다.
+2.  管理者特権でコマンド プロンプトを開き、 **scepinstall.exe** が配置されているフォルダーに移動してから、必要なコマンド ライン プロパティを追加して次のコマンドを実行します。
 
    ```
    scepinstall.exe
    ```
 
-    다음 명령줄 속성 중 하나를 지정할 수 있습니다.
+    次のいずれかのコマンド ライン プロパティを指定できます。
 
-   |속성|설명|
+   |プロパティ|説明|
    |--------------|-----------------|
-   |/s|자동 설치를 수행하도록 지정합니다.|
-   |/q|설치 파일 자동 추출을 수행하도록 지정합니다.|
-   |/i|일반 설치를 수행하도록 지정합니다.|
-   |/noreplace|설치 중에 타사 맬웨어 방지 소프트웨어를 설치하지 않도록 지정합니다.|
-   |/policy|설치 중에 클라이언트를 구성하는 데 사용할 맬웨어 방지 정책을 지정합니다.|
-   |/sqmoptin|이 클라이언트 소프트웨어를 Microsoft 사용자 환경 개선 프로그램에 가입하도록 지정합니다.|
+   |/s|サイレント インストールを実行することを指定します。|
+   |/q|セットアップ ファイルの自動抽出を実行することを指定します。|
+   |/i|標準インストールを実行することを指定します。|
+   |/noreplace|セットアップ時にサードパーティのマルウェア対策ソフトウェアをアンインストールしないことを指定します。|
+   |/policy|インストール時にマルウェア対策ポリシー ファイルを使用してクライアントを構成することを指定します。|
+   |/sqmoptin|このクライアント ソフトウェアのインストールで、マイクロソフトのカスタマー エクスペリエンス向上プログラムに参加することを指定します。|
 
-3.  클라이언트 설치를 완료하려면 화면의 지시를 따릅니다.
+3.  画面の手順に従ってクライアントのインストールを完了します。
 
-4.  최신 업데이트 정의 패키지를 다운로드한 경우 이 패키지를 클라이언트 컴퓨터로 복사한 다음 정의 패키지를 두 번 클릭하여 설치합니다.
+4.  最新の更新定義パッケージをダウンロードしている場合、パッケージをクライアント コンピューターにコピーしてから、定義パッケージをダブルクリックしてインストールします。
 
    > [!NOTE]
-   >  Endpoint Protection 클라이언트 설치를 완료하면 클라이언트에서 자동으로 정의 업데이트 확인을 수행합니다. 이 업데이트 확인에 성공하면 최신 정의 업데이트 패키지를 수동으로 설치하지 않아도 됩니다.
+   >  Endpoint Protection クライアントのインストールが完了すると、クライアントで定義の更新チェックが自動的に実行されます。 この更新チェックが成功した場合は、最新の定義更新パッケージを手動でインストールする必要はありません。
 
-## <a name="to-install-the-client-software-with-an-antimalware-policy-from-the-command-prompt"></a>명령 프롬프트에서 맬웨어 방지 정책이 있는 클라이언트 소프트웨어를 설치하려면
+## <a name="to-install-the-client-software-with-an-antimalware-policy-from-the-command-prompt"></a>コマンド プロンプトでクライアント ソフトウェアをマルウェア対策ポリシーとともにインストールするには
 
-1.  Endpoint Protection 클라이언트 소프트웨어를 설치할 컴퓨터로 **scepinstall.exe** 및 내보냈거나 미리 구성한 맬웨어 방지 정책을 복사합니다.
+1.  **scepinstall.exe** およびエクスポートしたマルウェア対策ポリシーまたは事前に構成したマルウェア対策ポリシーを、Endpoint Protection クライアント ソフトウェアをインストールするコンピューターにコピーします。
 
-2.  관리자 권한으로 명령 프롬프트를 열고 **scepinstall.exe** 와 맬웨어 방지 정책이 있는 폴더로 이동한 후 다음 명령을 실행합니다.
+2.  管理者特権でコマンド プロンプトを開き、 **scepinstall.exe** とマルウェア対策ポリシーが配置されているフォルダーに移動してから、次のコマンドを実行します。
 
    ```
    scepinstall.exe /policy <full path>\<policy file>
    ```
 
-3.  클라이언트 설치를 완료하려면 화면의 지시를 따릅니다.
+3.  画面の手順に従ってクライアントのインストールを完了します。
 
-4.  최신 정의 패키지를 다운로드한 경우 이 패키지를 클라이언트 컴퓨터로 복사한 다음 정의 패키지를 두 번 클릭하여 설치합니다.
+4.  最新の定義パッケージをダウンロードしている場合、パッケージをクライアント コンピューターにコピーしてから、定義パッケージをダブルクリックしてインストールします。
 
    > [!NOTE]
-   >  Endpoint Protection 클라이언트 설치를 완료하면 클라이언트에서 자동으로 정의 업데이트 확인을 수행합니다. 이 업데이트 확인에 성공하면 최신 정의 업데이트 패키지를 수동으로 설치하지 않아도 됩니다.
+   >  Endpoint Protection クライアントのインストールが完了すると、クライアントで定義の更新チェックが自動的に実行されます。 この更新チェックが成功した場合は、最新の定義更新パッケージを手動でインストールする必要はありません。
 
-## <a name="verify-that-the-endpoint-protection-client-is-installed-correctly"></a>Endpoint Protection 클라이언트가 올바르게 설치되었는지 확인
-참조 컴퓨터에 Endpoint Protection 클라이언트를 설치한 후 클라이언트가 제대로 작동하는지 확인합니다.
+## <a name="verify-that-the-endpoint-protection-client-is-installed-correctly"></a>Endpoint Protection クライアントが正しくインストールされているかどうかの確認
+参照コンピューターに Endpoint Protection クライアントをインストールしたら、クライアントが正しく機能していることを確認します。
 
-### <a name="to-verify-that-the-endpoint-protection-client-is-installed-correctly"></a>Endpoint Protection 클라이언트가 올바르게 설치되었는지 확인하려면
+### <a name="to-verify-that-the-endpoint-protection-client-is-installed-correctly"></a>Endpoint Protection クライアントが正しくインストールされていることを確認するには
 
-1.  참조 컴퓨터의 Windows 알림에서 **System Center Endpoint Protection**을 엽니다.
+1.  参照コンピューターで、Windows 通知領域から **[System Center Endpoint Protection]** を開きます。
 
-2.  **System Center Endpoint Protection** 대화 상자의 **홈** 탭에서 **실시간 보호**가 **설정**으로 설정되었는지 확인합니다.
+2.  **[System Center Endpoint Protection]** ダイアログ ボックスの **[ホーム]** タブで、**[リアルタイム保護]** が **[オン]** に設定されていることを確認します。
 
-3.  **바이러스 및 스파이웨어 정의** 에 대해 **최신 상태**가 표시되는지 확인합니다.
+3.  **[ウイルス定義およびスパイウェアの定義]** で **[最新]**が表示されていることを確認します。
 
-4.  참조 컴퓨터가 이미징을 위해 준비되었는지 확인하려면 **검사 옵션**아래에서 **전체**를 선택한 다음 **지금 검사**를 클릭합니다.
+4.  参照コンピューターのイメージングの準備ができていることを確認するには、[スキャン オプション ****] で [フル ****] を選択してから、[今すぐスキャン ****] をクリックします。
 
-### <a name="how-to-prepare-the-endpoint-protection-client-for-imaging"></a>Endpoint Protection 클라이언트에서 이미징을 준비하는 방법
-참조 컴퓨터에 Endpoint Protection 클라이언트가 올바르게 설치되었는지 확인한 후 참조 컴퓨터에서 이미징을 준비할 수 있습니다. 다음 단계를 수행하여 이미징에 대한 Endpoint Protection 클라이언트를 준비합니다.
+### <a name="how-to-prepare-the-endpoint-protection-client-for-imaging"></a>Endpoint Protection クライアントのイメージングを準備する方法
+参照コンピューターに Endpoint Protection クライアントが正しくインストールされていることを確認したら、コンピューターのイメージングを準備できます。 Endpoint Protection クライアントのイメージングを準備するには、次の手順を実行します。
 
 
-Configuration Manager에서 운영 체제 배포에 대한 자세한 내용은 [System Center Configuration Manager에서 운영 체제 이미지 관리](/sccm/osd/get-started/manage-operating-system-images)를 참조하세요.
+Configuration Manager でのオペレーティング システムの展開の詳細については、「[System Center Configuration Manager でのオペレーティング システム イメージの管理](/sccm/osd/get-started/manage-operating-system-images)」をご覧ください。
 
-### <a name="to-prepare-the-endpoint-protection-client-for-imaging"></a>Endpoint Protection 클라이언트에서 이미징을 준비하려면
+### <a name="to-prepare-the-endpoint-protection-client-for-imaging"></a>Endpoint Protection クライアントのイメージングを準備するには
 
-1.  참조 컴퓨터에서 관리 권한이 있는 사용자로 로그온합니다.
+1.  参照コンピューターで、管理者特権を持つユーザーとしてログオンします。
 
-2.  **PsTools** 를 TechNet의 [Windows SysInternals 사이트](http://go.microsoft.com/fwlink/?LinkId=215263) 에서 다운로드하여 설치합니다.
+2.  TechNet の **Windows SysInternals サイト** から、 [PsTools](http://go.microsoft.com/fwlink/?LinkId=215263) をダウンロードしてインストールします。
 
-3.  관리자 권한 명령 프롬프트를 열고 PsTools를 설치한 폴더로 이동한 후 다음 명령을 입력합니다.
+3.  管理者特権でコマンド プロンプトを開き、PsTools をインストールしたフォルダーに移動してから、次のコマンドを入力します。
 
    ```
    Psexec.exe -s -i regedit.exe
    ```
 
    > [!IMPORTANT]
-   >  이 방법으로 레지스트리 편집기를 실행하는 동안 경고를 참조하세요. PsExec.exe의 –s 옵션은 LocalSystem 권한으로 레지스트리 편집기를 실행합니다.
+   >  レジストリ エディターをこのように実行するときは、慎重に行ってください。PsExec.exe の -s オプションでは、LocalSystem 特権でレジストリ エディターが実行されます。
 
-4.  레지스트리 편집기에서 다음 각 레지스트리 키로 이동하여 해당 키를 삭제합니다.
+4.  レジストリ エディターで、次の各レジストリ キーに移動して、これらのキーを削除します。
 
    > [!IMPORTANT]
-   >  참조 컴퓨터를 이미징하기 전의 마지막 단계로 레지스트리 키를 삭제해야 합니다. 레지스트리 키는 Endpoint Protection 클라이언트가 시작될 때 다시 만들어집니다. 참조 컴퓨터를 다시 시작하는 경우 레지스트리 키를 다시 삭제해야 합니다.
+   >  レジストリ キーの削除は、参照コンピューターをイメージングする前の最後の手順として行う必要があります。 レジストリ キーは、Endpoint Protection クライアントが開始されると再作成されます。 参照コンピューターを再起動する場合は、レジストリ キーを再度削除する必要があります。
 
    -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Antimalware\InstallTime**
 
@@ -168,6 +168,6 @@ Configuration Manager에서 운영 체제 배포에 대한 자세한 내용은 [
 
    -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\RemovalTools\MRT\GUID**
 
-앞의 단계를 완료한 후 참조 컴퓨터에서 이미징을 준비할 수 있습니다. Configuration Manager에서 운영 체제 배포에 대한 자세한 내용은 [System Center Configuration Manager에서 운영 체제 이미지 관리](/sccm/osd/get-started/manage-operating-system-images)를 참조하세요.
+上記の手順を完了したら、参照コンピューターのイメージングを準備できます。 Configuration Manager でのオペレーティング システムの展開の詳細については、「[System Center Configuration Manager でのオペレーティング システム イメージの管理](/sccm/osd/get-started/manage-operating-system-images)」をご覧ください。
 
-Endpoint Protection 클라이언트 소프트웨어를 포함하는 이미지가 배포될 때 Endpoint Protection 클라이언트가 컴퓨터가 할당되어 있는 Configuration Manager 사이트에 자동으로 정보를 보고하고 클라이언트 컴퓨터에 적용 가능한 정책이 다운로드되어 적용됩니다.
+Endpoint Protection クライアント ソフトウェアが含まれたイメージが展開されると、コンピューターが割り当てられている Configuration Manager サイトに Endpoint Protection クライアントから情報が自動的にレポートされて、このクライアント コンピューターに適用可能なポリシーがダウンロードされて適用されます。

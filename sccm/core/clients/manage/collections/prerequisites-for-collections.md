@@ -1,6 +1,6 @@
 ---
-title: "컬렉션 필수 조건 | Microsoft 문서"
-description: "System Center Configuration Manager에서 컬렉션 사용에 대한 필수 조건을 확인합니다."
+title: "コレクションの前提条件 | Microsoft Docs"
+description: "System Center Configuration Manager でコレクションを使用するための前提条件について説明します。"
 ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
@@ -18,18 +18,18 @@ manager: angrobe
 ms.openlocfilehash: 41fc3eb20a7441939eb0dc80bc121c8f3ea322b2
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="prerequisites-for-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 컬렉션에 대한 필수 조건
+# <a name="prerequisites-for-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager のコレクションの前提条件
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager의 컬렉션에는 제품 내 종속성만 포함됩니다.  
+System Center Configuration Manager のコレクションには、製品内依存関係のみが含まれます。  
 
-## <a name="configuration-manager-dependencies"></a>Configuration Manager 종속성  
+## <a name="configuration-manager-dependencies"></a>Configuration Manager の依存関係  
 
-|종속성|추가 정보|  
+|依存関係|説明|  
 |----------------|----------------------|  
-|보고 서비스 지점|컬렉션에 대한 보고서 기능을 실행하려면 보고 서비스 지점의 사이트 시스템 역할이 설치되어 있어야 합니다. 자세한 내용은 [System Center Configuration Manager의 보고](../../../../core/servers/manage/reporting.md)를 참조하세요.|  
-|컬렉션을 관리하려면 특정 보안 권한을 부여해야 합니다.|준수 설정을 관리하려면 다음 보안 권한이 있어야 합니다.<br /><br /> - 컬렉션을 만들고 관리하려면: **컬렉션** 개체에 대한 **만들기**, **삭제**, **수정**, **폴더 수정**, **개체 이동**, **읽기** 및 **리소스 읽기** 권한이 필요합니다.<br /><br /> - 컬렉션 설정을 관리하려면: **컬렉션** 개체에 대한 **컬렉션 설정 수정** 권한이 필요합니다.<br /><br /> 루트 폴더를 포함하여 모든 컬렉션 폴더에 **폴더 수정** 권한이 필요합니다.|  
+|レポート サービス ポイント|コレクションに対してレポートを実行するには、事前に レポート サービス ポイント サイト システムの役割がインストールされている必要があります。 詳細については、「[System Center Configuration Manager のレポート](../../../../core/servers/manage/reporting.md)」を参照してください。|  
+|コレクションを管理するには、特定のセキュリティ アクセス許可が付与されている必要があります|コンプライアンス設定を管理するには、次のセキュリティのアクセス許可が必要です。<br /><br /> - コレクションを作成し、管理する場合: **コレクション** オブジェクトに対する**作成**、**削除**、**変更**、**フォルダーの変更**、**オブジェクトの移動**、**読み取り**、および**リソースの読み取り**のアクセス許可。<br /><br /> - コレクションの設定を管理する場合: **コレクション** オブジェクトに対する**コレクション設定の変更**のアクセス許可。<br /><br /> **フォルダーの変更** のアクセス許可は、ルート フォルダーを含む、すべてのコレクション フォルダーに必要です。|  

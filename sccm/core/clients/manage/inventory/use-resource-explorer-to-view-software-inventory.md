@@ -1,6 +1,6 @@
 ---
-title: "소프트웨어 인벤토리 보기 | Microsoft 문서 | 리소스 탐색기"
-description: "System Center Configuration Manager에서 리소스 탐색기를 사용하여 소프트웨어 인벤토리를 볼 수 있습니다."
+title: "ソフトウェア インベントリを表示する | Microsoft Docs | リソース エクスプローラー"
+description: "System Center Configuration Manager でリソース エクスプローラーを使用してソフトウェア インベントリを表示します。"
 ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
@@ -18,37 +18,37 @@ manager: angrobe
 ms.openlocfilehash: b76bcf65c61b0a2690a468d375ac95b1334d5298
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-use-resource-explorer-to-view-software-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 소프트웨어 인벤토리를 보기 위해 리소스 탐색기를 사용하는 방법
+# <a name="how-to-use-resource-explorer-to-view-software-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager でリソース エクスプローラーを使用してソフトウェア インベントリを表示する方法
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager의 리소스 탐색기를 사용하여 계층 구조의 컴퓨터에서 수집된 소프트웨어 인벤토리에 대한 정보를 볼 수 있습니다.  
+System Center Configuration Manager のリソース エクスプローラーを使用して、階層内のコンピューターから収集されたソフトウェア インベントリに関する情報を表示します。  
 
 > [!NOTE]  
->  리소스 탐색기는 소프트웨어 인벤토리 주기가 클라이언트에서 실행될 때까지 인벤토리 데이터를 표시하지 않습니다.  
+>  クライアントでソフトウェア インベントリ サイクルが実行されるまで、リソース エクスプローラーにインベントリ データは表示されません。  
 
- 리소스 탐색기에서는 다음 소프트웨어 인벤토리 정보를 제공합니다.  
+ リソース エクスプローラーは、次のソフトウェアのインベントリ情報を提供します。  
 
--   **소프트웨어**:  
+-   **ソフトウェア**:  
 
-    -   **수집된 파일**: 소프트웨어 인벤토리 중 수집된 파일.  
+    -   **[収集するファイル]** – ソフトウェア インベントリ中に収集されたファイル。  
 
-    -   **파일 세부 정보**: 소프트웨어 인벤토리 중 인벤토리에 포함된 파일 중에서 특정 제품 또는 제조업체와 관련이 없는 파일.  
+    -   **[ファイルの詳細]** – ソフトウェア インベントリ中にインベントリされた、特定の製品または製造元に関連付けられていないファイル。  
 
-    -   **마지막 소프트웨어 검색**: 클라이언트 컴퓨터에 대한 마지막 소프트웨어 인벤토리 및 파일 컬렉션의 날짜 및 시간.  
+    -   **[最後のソフトウェア スキャン]** – クライアント コンピューターの最後のソフトウェア インベントリとファイル コレクションの日付と時刻。  
 
-    -   **제품 세부 정보**: 제조업체별로 그룹화되고 소프트웨어 인벤토리를 통해 인벤토리에 포함된 소프트웨어 제품.  
+    -   **[製品の詳細]** – ソフトウェア インベントリでインベントリされ、製造元別にグループ化されたソフトウェア製品の情報。  
 
-## <a name="to-run-resource-explorer-from-the-configuration-manager-console"></a>Configuration Manager 콘솔에서 리소스 탐색기를 실행하려면  
+## <a name="to-run-resource-explorer-from-the-configuration-manager-console"></a>Configuration Manager コンソールからリソース エクスプローラーを実行するには  
 
-1.  Configuration Manager 콘솔에서 **자산 및 준수**를 선택합니다.
+1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** を選択します。
 
-2.  **자산 및 준수** 작업 영역에서 **장치** 를 선택하거나 장치를 표시하는 모든 컬렉션을 엽니다.  
+2.  **[資産とコンプライアンス]** ワークスペースで **[デバイス]** を選択するか、デバイスを表示するコレクションを開きます。  
 
-3.  보려는 인벤토리가 포함된 컴퓨터를 선택한 다음 **홈** 탭 > **장치** 그룹에서 **시작** > **리소스 탐색기**를 선택합니다.
+3.  表示するインベントリが含まれているコンピューターをクリックしたら、**[ホーム]** タブの **[デバイス]** グループで **[開始]** > **[リソース エクスプローラー ]** の順に選択します。
 
-4.  리소스 탐색기 창의 오른쪽 창에 있는 항목을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하여 수집된 인벤토리 정보를 좀 더 읽기 쉬운 형식으로 볼 수 있습니다.  
+4.  [リソース エクスプローラー] の右ペインで、項目のどれかを右クリックしてから、**[プロパティ]** を選択すると、より読みやすい形式で、収集されたインベントリ情報が表示されます。  
  

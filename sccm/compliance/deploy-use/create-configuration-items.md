@@ -1,6 +1,6 @@
 ---
-title: "구성 항목을 만드는 방법 | Microsoft 문서"
-description: "System Center Configuration Manager에서 관리하고 Microsoft Intune에 등록된 장치에 구성을 만들고 배포합니다."
+title: "構成項目の作成方法 | Microsoft Docs"
+description: "構成を作成して、System Center Configuration Manager によって管理され、Microsoft Intune に登録されているデバイスに展開します。"
 ms.custom: na
 ms.date: 03/28/2017
 ms.prod: configuration-manager
@@ -18,17 +18,17 @@ manager: angrobe
 ms.openlocfilehash: cddf549f017792add1b17b722bf51769060520b7
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-create-configuration-items-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 구성 항목을 만드는 방법
+# <a name="how-to-create-configuration-items-in-system-center-configuration-manager"></a>System Center Configuration Manager で構成項目を作成する方法
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager의 준수 설정을 사용하면 Configuration Manager로 관리되는 장치와 Microsoft Intune에 등록된 장치에 구성을 만들고 배포할 수 있습니다.  
+System Center Configuration Manager のコンプライアンス設定により、構成を作成し、Configuration Manager で管理されているデバイスと Microsoft Intune に登録されているデバイスの両方に展開できます。  
 
-## <a name="in-this-section"></a>이 섹션의 내용  
+## <a name="in-this-section"></a>このセクションの内容  
 
--   [System Center Configuration Manager 클라이언트로 관리되는 장치의 구성 항목](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)  
+-   [System Center Configuration Manager クライアントを使用して管理されているデバイスの構成項目](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)  
 
--   [Intune으로 관리되는 장치에 대한 구성 항목](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)  
+-   [Intune で管理されているデバイスの構成項目](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)  

@@ -1,6 +1,6 @@
 ---
-title: "쿼리에 대한 운영 및 유지 관리 | Microsoft 문서"
-description: "System Center Configuration Manager의 쿼리에 대한 항목 목록을 참조하세요. 운영 및 유지 관리에 중점을 둡니다."
+title: "クエリの操作とメンテナンス | Microsoft Docs"
+description: "System Center Configuration Manager でのクエリに関するトピックの一覧です。 操作とメンテナンスが中心です。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,20 +18,20 @@ manager: angrobe
 ms.openlocfilehash: 82648626882ddd23db0e40cfb18621a5953a1786
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="operations-and-maintenance-for-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager의 쿼리 작업 및 유지 관리
+# <a name="operations-and-maintenance-for-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager でのクエリの操作とメンテナンス
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-이 섹션의 다음 항목을 사용하여 System Center Configuration Manager의 쿼리에 대한 운영 및 유지 관리 정보를 봅니다.  
+System Center Configuration Manager でのクエリの操作とメンテナンス情報については、このセクションの次のトピックを参照してください。  
 
-## <a name="in-this-section"></a>이 섹션의 내용  
+## <a name="in-this-section"></a>このセクションの内容  
 
--   [System Center Configuration Manager에서 쿼리를 만드는 방법](../../../core/servers/manage/create-queries.md)  
+-   [System Center Configuration Manager でクエリを作成する方法](../../../core/servers/manage/create-queries.md)  
 
--   [System Center Configuration Manager에서 쿼리를 관리하는 방법](../../../core/servers/manage/manage-queries.md)  
+-   [System Center Configuration Manager でクエリを管理する方法](../../../core/servers/manage/manage-queries.md)  
 
-## <a name="see-also"></a>참고 항목  
- [System Center Configuration Manager에 대한 쿼리 기술 참조](../../../core/servers/manage/queries-technical-reference.md)
+## <a name="see-also"></a>関連項目  
+ [System Center Configuration Manager のクエリのテクニカル リファレンス](../../../core/servers/manage/queries-technical-reference.md)

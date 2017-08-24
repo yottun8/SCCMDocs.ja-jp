@@ -1,6 +1,6 @@
 ---
-title: "컬렉션 관리 | Microsoft 문서"
-description: "System Center Configuration Manager에서 일반적인 컬렉션 관리 작업을 수행합니다."
+title: "コレクションの管理 | Microsoft Docs"
+description: "System Center Configuration Manager で一般的なコレクション管理タスクを実行します。"
 ms.custom: na
 ms.date: 4/25/2017
 ms.prod: configuration-manager
@@ -18,69 +18,69 @@ manager: angrobe
 ms.openlocfilehash: 4d44f98eb0755619cdd2101203a13725186b835b
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-manage-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 컬렉션을 관리하는 방법
+# <a name="how-to-manage-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager でコレクションを管理する方法
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-이 항목의 개요 정보를 참조하여 System Center Configuration Manager에서 컬렉션에 대한 관리 작업을 수행할 수 있습니다.  
+System Center Configuration Manager でコレクションの管理タスクを行う際は、このトピックの概要情報を参考にしてください。  
 
 > [!NOTE]  
->  Configuration Manager 컬렉션을 만드는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 컬렉션을 만드는 방법](../../../../core/clients/manage/collections/create-collections.md)을 참조하세요.  
+>  Configuration Manager コレクションを作成する方法については、「[System Center Configuration Manager でコレクションを作成する方法](../../../../core/clients/manage/collections/create-collections.md)」を参照してください。  
 
-## <a name="how-to-manage-device-collections"></a>장치 컬렉션을 관리하는 방법  
- **자산 및 준수** 작업 영역에서 **장치 컬렉션**을 선택하고 관리할 컬렉션을 선택한 다음 관리 작업을 선택합니다.  
+## <a name="how-to-manage-device-collections"></a>デバイス コレクションを管理する方法  
+ [資産とコンプライアンス] **** ワークスペースで [デバイス コレクション] ****を選択し、管理するコレクションと管理タスクを選択します。  
 
- 다음 표에서는 선택 전에 약간의 정보가 필요할 수 있는 관리 작업에 대한 자세한 정보를 제공합니다.  
+ 次の表で、管理タスクに関する詳細と、各タスクを選択する前に必要となる追加情報について説明します。  
 
-|관리 작업|세부 정보|추가 정보|  
+|管理タスク|説明|説明|  
 |---------------------|-------------|----------------------|  
-|**멤버 표시**|**장치** 노드의 임시 노드에 선택한 컬렉션의 멤버인 모든 리소스를 표시합니다.|추가 정보가 없습니다.|  
-|**선택한 항목 추가**|다음 작업 중 하나를 수행하기 위해 다음 옵션을 제공합니다.<br /><br /> - <br />                    **선택한 항목을 기존 장치 컬렉션에 추가** - 선택한 컬렉션의 멤버를 추가하려는 컬렉션을 선택할 수 있는 **컬렉션 선택** 대화 상자를 엽니다. 선택한 컬렉션이 **컬렉션 포함** 멤버 관리 규칙을 사용하여 이 컬렉션에 포함됩니다.<br /><br /> - **선택한 항목을 새 장치 컬렉션에 추가** - 새 컬렉션을 만들 수 있는 **장치 컬렉션 만들기 마법사**를 엽니다. 선택한 컬렉션이 **컬렉션 포함** 멤버 관리 규칙을 사용하여 이 컬렉션에 포함됩니다.|[System Center Configuration Manager에서 컬렉션을 만드는 방법](../../../../core/clients/manage/collections/create-collections.md)|  
-|**클라이언트 설치**|선택한 컬렉션의 모든 컴퓨터에서 Configuration Manager 클라이언트를 설치하기 위해 클라이언트 강제 설치를 사용하는 **클라이언트 설치 마법사**를 엽니다.|[Windows 컴퓨터에 클라이언트를 배포하는 방법](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)|  
-|**선호도 요청 관리**|보류 중인 요청을 승인하거나 거부하여 선택한 컬렉션의 장치에 대해 사용자 장치 선호도를 설정할 수 있는 **사용자 장치 선호도 요청 관리** 대화 상자를 엽니다.|[System Center Configuration Manager에서 사용자 장치 선호도를 사용하여 사용자와 장치 연결](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)|  
-|**필수 PXE 배포 지우기**|선택한 컬렉션의 모든 멤버에서 필수 PXE 부팅 배포를 지웁니다.|[운영 체제 배포 소개](../../../../osd/understand/introduction-to-operating-system-deployment.md)|  
-|**멤버 자격 업데이트**|선택한 컬렉션에 대한 멤버 자격을 평가합니다. 멤버가 많은 컬렉션의 경우 이 업데이트를 완료하려면 다소 시간이 걸릴 수 있습니다. 업데이트가 완료된 후 **새로 고침** 작업을 사용하여 새 컬렉션 멤버로 화면 표시를 업데이트합니다.|추가 정보가 없습니다.|  
-|**리소스 추가**|선택한 컬렉션에 추가할 새 리소스를 검색할 수 있는 **컬렉션에 리소스 추가** 대화 상자를 엽니다.<br /><br /> 업데이트가 진행되는 동안 선택한 컬렉션에 대한 아이콘이 모래 시계 기호를 표시합니다.|추가 정보가 없습니다.|  
-|**클라이언트 알림**|선택한 장치 컬렉션의 모든 클라이언트에게 컴퓨터 또는 사용자 정책을 다운로드하라고 지시합니다.|추가 정보가 없습니다.|  
-|**Endpoint Protection**|선택한 컬렉션의 컴퓨터에 대해 전체 또는 빠른 맬웨어 방지 검색을 수행하거나 최신 맬웨어 방지 정의를 다운로드합니다.|[System Center Configuration Manager의 Endpoint Protection](../../../../protect/deploy-use/endpoint-protection.md)|  
-|**내보내기**|다른 Configuration Manager 사이트에서 보관하거나 사용할 수 있는 MOF(Managed Object Format) 파일에 이 컬렉션을 내보낼 수 있는 **컬렉션 내보내기 마법사**를 엽니다.<br /><br /> 컬렉션을 내보낼 때 **포함** 또는 **제외** 규칙을 사용하여 선택한 컬렉션에서 참조한 컬렉션은 내보낼 수 없습니다.|추가 정보가 없습니다.|  
-|**복사**|선택한 컬렉션의 복사본을 만듭니다. 새 컬렉션은 선택한 컬렉션을 제한 컬렉션으로 사용합니다.|추가 정보가 없습니다.|  
-|**삭제**|선택한 컬렉션을 삭제합니다. 사이트 데이터베이스에서 컬렉션의 모든 리소스를 삭제할 수도 있습니다.<br /><br /> Configuration Manager에 기본 제공된 컬렉션을 삭제할 수 없습니다.|기본 제공 컬렉션 목록을 보려면 [System Center Configuration Manager의 컬렉션 소개](../../../../core/clients/manage/collections/introduction-to-collections.md)를 참조하세요.|  
-|**배포 시뮬레이트**|**응용 프로그램 배포 시뮬레이트 마법사** 를 엽니다. 이 마법사를 통해 응용 프로그램을 설치하거나 제거하지 않고도 응용 프로그램 배포 결과를 테스트할 수 있습니다.|[System Center Configuration Manager에서 응용 프로그램 배포를 시뮬레이트하는 방법](../../../../apps/deploy-use/simulate-application-deployments.md)|  
-|**배포:**|다음 옵션이 표시됩니다.<br /><br /> - <br />                    **응용 프로그램** - 선택한 컬렉션에 대한 응용 프로그램 배포를 선택하고 구성할 수 있는 **소프트웨어 배포 마법사**를 엽니다.<br /><br /> - <br />                    **프로그램** – 선택한 컬렉션에 대한 패키지 및 프로그램 배포를 선택하고 구성할 수 있는 **소프트웨어 배포 마법사** 를 엽니다.<br /><br /> - **구성 기준** - 선택한 컬렉션에 하나 이상의 구성 기준 배포를 구성할 수 있는 **구성 기준 배포** 대화 상자를 엽니다.<br /><br /> - <br />                    **작업 순서** – 선택한 컬렉션에 대한 작업 시퀀스 배포를 선택하고 구성할 수 있는 **소프트웨어 배포 마법사** 를 엽니다.<br /><br /> - <br />                    **소프트웨어 업데이트** - 선택한 컬렉션의 리소스에 대해 소프트웨어 업데이트 배포를 구성할 수 있는 **소프트웨어 업데이트 배포 마법사**를 엽니다.|[System Center Configuration Manager에서 응용 프로그램을 배포하는 방법](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager의 패키지 및 프로그램](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [System Center Configuration Manager에서 구성 기준을 배포하는 방법](../../../../compliance/deploy-use/deploy-configuration-baselines.md)<br /><br /> [System Center Configuration Manager에서 작업을 자동화하는 작업 순서 관리](../../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)<br /><br /> [System Center Configuration Manager에서 소프트웨어 업데이트 관리](/sccm/sum/understand/software-updates-introduction)|  
+|**メンバーの表示**|[デバイス] **** ノードの一時ノードで選択されたコレクションのメンバーであるすべてのリソースを表示します。|詳細情報はありません。|  
+|**選択された項目の追加**|次のアクションのいずれかを行うために次のオプションを提供します。<br /><br /> - <br />                    **選択した項目を既存のデバイス コレクションに追加する** - 選択したコレクションのメンバーを追加するコレクションを選択できる **[コレクションの選択]** ダイアログ ボックスを開きます。 [コレクションを含める] **** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。<br /><br /> - **選択した項目を新しいデバイス コレクションに追加する** - 新しいコレクションを作成できる**デバイス コレクションの作成ウィザード**を開きます。 [コレクションを含める] **** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。|[System Center Configuration Manager でコレクションを作成する方法](../../../../core/clients/manage/collections/create-collections.md)|  
+|**クライアントのインストール**|クライアント プッシュのインストールを使用して、Configuration Manager クライアントを選択したコレクションのすべてのコンピューターにインストールする**クライアントのインストール ウィザード**を開きます。|[Windows コンピューターにクライアントを展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)|  
+|**アフィニティ要求の管理**|保留中の要求を承認または拒否して選択されたコレクションのデバイスにおけるユーザーとデバイスのアフィニティを確立できる [ユーザーとデバイスのアフィニティ要求の管理] **** ダイアログボックスを開きます。|[System Center Configuration Manager でのユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)|  
+|**必須の PXE 展開の消去**|選択されたコレクションのすべてのメンバーから必要な PXE ブート展開を消去します。|[オペレーティング システムの展開の概要](../../../../osd/understand/introduction-to-operating-system-deployment.md)|  
+|**メンバーシップの更新**|選択されたコレクションのメンバーシップを評価します。 多くのメンバーからなるコレクションでは、更新の完了には時間がかかることがあります。 更新が完了したら、[リフレッシュ] **** アクションを使用して、新しいコレクションのメンバーで画面を更新します。|詳細情報はありません。|  
+|**リソースの追加**|新しいリソースを検索して選択されたコレクションに追加できる [コレクションへのリソースの追加] **** ダイアログ ボックスを開きます。<br /><br /> 更新中は選択されたコレクションで砂時計のアイコンが表示されます。|詳細情報はありません。|  
+|**クライアント通知**|選択したデバイス コレクションのすべてのクライアントがコンピューターまたはユーザー ポリシーをダウンロードするように指定します。|詳細情報はありません。|  
+|**Endpoint Protection**|選択されたコレクションで、フルまたはクイックのアンチマルウェア スキャンの実行、または最新のアンチマルウェアの定義をコンピューターにダウンロードをします。|[System Center Configuration Manager での Endpoint Protection](../../../../protect/deploy-use/endpoint-protection.md)|  
+|**エクスポート**|別の Configuration Manager サイトでアーカイブまたは使用できる Managed Object Format (MOF) と呼ばれる形式のファイルにコレクションをエクスポートする**コレクションのエクスポート ウィザード** を開きます。<br /><br /> コレクションをエクスポートするとき、コレクションは [含む] **** の規則の使用を通じて選択されたコレクションを参照し、または [除外する] **** の規則についてはエクスポートしません。|詳細情報はありません。|  
+|**コピー**|選択したコレクションのコピーを作成します。 新しいコレクションは選択したコレクションを限定コレクションとして使用します。|詳細情報はありません。|  
+|**削除**|選択したコレクションを削除します。 コレクションのすべてのリソースをサイト データベースから削除することもできます。<br /><br /> Configuration Manager に構築されたコレクションは削除することができません。|組み込みコレクションの一覧については、「[Configuration Manager でのコレクションの概要](../../../../core/clients/manage/collections/introduction-to-collections.md)」を参照してください。|  
+|**展開のシミュレート**|アプリケーションをインストールしたりアンインストールしたりせずにアプリケーションの展開結果をテストできる、アプリケーションのシミュレート ウィザード **** を開きます。|[System Center Configuration Manager でアプリケーションの展開をシミュレーションする方法](../../../../apps/deploy-use/simulate-application-deployments.md)|  
+|**デプロイ**|次のオプションを表示します。<br /><br /> - <br />                    **アプリケーション** - 選択したコレクションへのアプリケーションの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - <br />                    **プログラム** – 選択したコレクションへのパッケージやプログラムの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - **構成基準** - 選択されたコレクションへの 1 つ以上の構成基準の展開を構成できる **[構成基準の展開]** ダイアログ ボックスを開きます。<br /><br /> - <br />                    **タスク シーケンス** – 選択したコレクションへのタスク シーケンスの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - <br />                    **ソフトウェア更新プログラム** - 選択したコレクションのリソースへのソフトウェア更新プログラムの展開を構成できる、**ソフトウェア更新の展開ウィザード**を開きます。|[System Center Configuration Manager でアプリケーションを展開する方法](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager のパッケージとプログラム](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [System Center Configuration Manager で構成基準を展開する方法](../../../../compliance/deploy-use/deploy-configuration-baselines.md)<br /><br /> [System Center Configuration Manager でのタスクを自動化するためのタスク シーケンスの管理](../../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)<br /><br /> [System Center Configuration Manager でのソフトウェア更新プログラムの管理](/sccm/sum/understand/software-updates-introduction)|  
 
-## <a name="how-to-manage-user-collections"></a>사용자 컬렉션을 관리하는 방법  
- **자산 및 준수** 작업 영역에서 **사용자 컬렉션**을 선택하고 관리할 컬렉션을 선택한 다음 관리 작업을 선택합니다.  
+## <a name="how-to-manage-user-collections"></a>ユーザー コレクションを管理する方法  
+ [資産とコンプライアンス] **** ワークスペースで [ユーザー コレクション] ****を選択し、管理するコレクションと管理タスクを選択します。  
 
- 다음 표에서는 선택 전에 약간의 정보가 필요할 수 있는 관리 작업에 대한 자세한 정보를 제공합니다.  
+ 次の表で、管理タスクに関する詳細と、各タスクを選択する前に必要となる追加情報について説明します。  
 
-|관리 작업|세부 정보|추가 정보|  
+|管理タスク|説明|説明|  
 |---------------------|-------------|----------------------|  
-|**멤버 표시**|**사용자** 노드의 임시 노드에 선택한 컬렉션의 멤버인 모든 리소스를 표시합니다.|추가 정보가 없습니다.|  
-|**선택한 항목 추가**|이 옵션으로 다음 작업 중 하나를 수행할 수 있습니다.<br /><br /> - <br />                    **선택한 항목을 기존 사용자 컬렉션에 추가** - 선택한 컬렉션의 멤버를 추가하려는 컬렉션을 선택할 수 있는 **컬렉션 선택** 대화 상자를 엽니다. 선택한 컬렉션이 **컬렉션 포함** 멤버 관리 규칙을 사용하여 이 컬렉션에 포함됩니다.<br /><br /> - **선택한 항목을 새 사용자 컬렉션에 추가** - 새 컬렉션을 만들 수 있는 **사용자 컬렉션 만들기 마법사**를 엽니다. 선택한 컬렉션이 **컬렉션 포함** 멤버 관리 규칙을 사용하여 이 컬렉션에 포함됩니다.|[System Center Configuration Manager에서 컬렉션을 만드는 방법](../../../../core/clients/manage/collections/create-collections.md)|  
-|**선호도 요청 관리**|보류 중인 요청을 승인하거나 거부하여 선택한 컬렉션의 사용자에 대해 사용자 장치 선호도를 설정할 수 있는 **사용자 장치 선호도 요청 관리** 대화 상자를 엽니다.|[System Center Configuration Manager에서 사용자 장치 선호도를 사용하여 사용자와 장치 연결](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)|  
-|**멤버 자격 업데이트**|선택한 컬렉션에 대한 멤버 자격을 평가합니다. 멤버가 많은 컬렉션의 경우 이 업데이트를 완료하려면 다소 시간이 걸릴 수 있습니다. 업데이트가 완료된 후 **새로 고침** 작업을 사용하여 새 컬렉션 멤버로 화면 표시를 업데이트합니다.<br /><br /> 업데이트가 진행되는 동안 선택한 컬렉션에 대한 아이콘이 모래 시계 기호를 표시합니다.|추가 정보가 없습니다.|  
-|**리소스 추가**|선택한 컬렉션에 추가할 새 리소스를 검색할 수 있는 **컬렉션에 리소스 추가** 대화 상자를 엽니다.|추가 정보가 없습니다.|  
-|**내보내기**|다른 Configuration Manager 사이트에서 보관하거나 사용할 수 있는 MOF(Managed Object Format) 파일에 이 컬렉션을 내보낼 수 있는 **컬렉션 내보내기 마법사**를 엽니다.<br /><br /> 컬렉션을 내보낼 때 **포함** 또는 **제외** 규칙을 사용하여 선택한 컬렉션에서 참조한 컬렉션은 내보낼 수 없습니다.|추가 정보가 없습니다.|  
-|**복사**|선택한 컬렉션의 복사본을 만듭니다. 새 컬렉션은 선택한 컬렉션을 제한 컬렉션으로 사용합니다.|추가 정보가 없습니다.|  
-|**삭제**|선택한 컬렉션을 삭제합니다. 사이트 데이터베이스에서 컬렉션의 모든 리소스를 삭제할 수도 있습니다.<br /><br /> Configuration Manager에 기본 제공된 컬렉션을 삭제할 수 없습니다.|기본 제공 컬렉션 목록을 보려면 [System Center Configuration Manager의 컬렉션 소개](../../../../core/clients/manage/collections/introduction-to-collections.md)를 참조하세요.|  
-|**배포 시뮬레이트**|**응용 프로그램 배포 시뮬레이트 마법사** 를 엽니다. 이 마법사를 통해 응용 프로그램을 설치하거나 제거하지 않고도 응용 프로그램 배포 결과를 테스트할 수 있습니다.|[System Center Configuration Manager에서 응용 프로그램 배포를 시뮬레이트하는 방법](../../../../apps/deploy-use/simulate-application-deployments.md)|  
-|**배포:**|다음 옵션이 표시됩니다.<br /><br /> - **응용 프로그램** - 선택한 컬렉션에 대한 응용 프로그램 배포를 선택하고 구성할 수 있는 **소프트웨어 배포 마법사**를 엽니다.<br /><br /> - <br />                    **프로그램** – 선택한 컬렉션에 대한 패키지 및 프로그램 배포를 선택하고 구성할 수 있는 **소프트웨어 배포 마법사** 를 엽니다.<br /><br /> - **구성 기준** - 선택한 컬렉션에 하나 이상의 구성 기준 배포를 구성할 수 있는 **구성 기준 배포** 대화 상자를 엽니다.|[System Center Configuration Manager에서 응용 프로그램을 배포하는 방법](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager의 패키지 및 프로그램](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [System Center Configuration Manager에서 구성 기준을 배포하는 방법](../../../../compliance/deploy-use/deploy-configuration-baselines.md)|  
+|**メンバーの表示**|[ユーザー] **** ノードの一時ノードで選択されたコレクションのメンバーであるすべてのリソースを表示します。|詳細情報はありません。|  
+|**選択された項目の追加**|このオプションでは次のアクションのいずれかが実行できます。<br /><br /> - <br />                    **選択した項目を既存のユーザー コレクションに追加する** - 選択したコレクションのメンバーを追加するコレクションを選択できる **[コレクションの選択]** ダイアログ ボックスを開きます。 [コレクションを含める] **** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。<br /><br /> - **選択した項目を新しいユーザー コレクションに追加する** - 新しいコレクションを作成できる、**ユーザー コレクションの作成ウィザード**を開きます。 [コレクションを含める] **** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。|[System Center Configuration Manager でコレクションを作成する方法](../../../../core/clients/manage/collections/create-collections.md)|  
+|**アフィニティ要求の管理**|保留中の要求を承認または拒否して選択されたコレクションのユーザーにおけるユーザーとデバイスのアフィニティを確立できる [ユーザーとデバイスのアフィニティ要求の管理] **** ダイアログ ボックスを開きます。|[System Center Configuration Manager でのユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)|  
+|**メンバーシップの更新**|選択されたコレクションのメンバーシップを評価します。 多くのメンバーからなるコレクションでは、更新の完了には時間がかかることがあります。 更新が完了したら、[リフレッシュ] **** アクションを使用して、新しいコレクションのメンバーで画面を更新します。<br /><br /> 更新中は選択されたコレクションで砂時計のアイコンが表示されます。|詳細情報はありません。|  
+|**リソースの追加**|新しいリソースを検索して選択されたコレクションに追加できる [コレクションへのリソースの追加] **** ダイアログ ボックスを開きます。|詳細情報はありません。|  
+|**エクスポート**|別の Configuration Manager サイトでアーカイブまたは使用できる Managed Object Format (MOF) と呼ばれる形式のファイルにコレクションをエクスポートする**コレクションのエクスポート ウィザード** を開きます。<br /><br /> コレクションをエクスポートするとき、コレクションは [含む] **** の規則の使用を通じて選択されたコレクションを参照し、または [除外する] **** の規則についてはエクスポートしません。|詳細情報はありません。|  
+|**コピー**|選択したコレクションのコピーを作成します。 新しいコレクションは選択したコレクションを限定コレクションとして使用します。|詳細情報はありません。|  
+|**削除**|選択したコレクションを削除します。 コレクションのすべてのリソースをサイト データベースから削除することもできます。<br /><br /> Configuration Manager に構築されたコレクションは削除することができません。|組み込みコレクションの一覧については、「[Configuration Manager でのコレクションの概要](../../../../core/clients/manage/collections/introduction-to-collections.md)」を参照してください。|  
+|**展開のシミュレート**|アプリケーションをインストールしたりアンインストールしたりせずにアプリケーションの展開結果をテストできる、アプリケーションのシミュレート ウィザード **** を開きます。|[System Center Configuration Manager でアプリケーションの展開をシミュレーションする方法](../../../../apps/deploy-use/simulate-application-deployments.md)|  
+|**デプロイ**|次のオプションを表示します。<br /><br /> - **アプリケーション** - 選択したコレクションへのアプリケーションの展開を選択して構成できる、**ソフトウェアの展開ウィザード**を開きます。<br /><br /> - <br />                    **プログラム** – 選択したコレクションへのパッケージやプログラムの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - **構成基準** - 選択されたコレクションへの 1 つ以上の構成基準の展開を構成できる **[構成基準の展開]** ダイアログ ボックスを開きます。|[System Center Configuration Manager でアプリケーションを展開する方法](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager のパッケージとプログラム](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [System Center Configuration Manager で構成基準を展開する方法](../../../../compliance/deploy-use/deploy-configuration-baselines.md)|  
 
-##  <a name="BKMK_CollProp"></a> 컬렉션 속성  
- 컬렉션의 **속성** 대화 상자를 열면 컬렉션에 대한 다음 속성을 보고 구성할 수 있습니다.  
+##  <a name="BKMK_CollProp"></a> コレクションのプロパティ  
+ コレクションの [プロパティ] **** ダイアログ ボックスを開くと、コレクションの次のプロパティを表示し構成することができます。  
 
-|탭 이름|추가 정보|  
+|タブ名|説明|  
 |--------------|----------------------|  
-|**일반**|컬렉션 이름 및 제한 컬렉션을 비롯한 선택한 컬렉션에 대한 일반 정보를 보고 구성할 수 있습니다.|  
-|**멤버 관리 규칙**|이 컬렉션의 멤버 자격을 정의하는 멤버 관리 규칙을 구성할 수 있습니다. 자세한 내용은 [System Center Configuration Manager에서 컬렉션을 만드는 방법](../../../../core/clients/manage/collections/create-collections.md)을 참조하세요.|  
-|**전원 관리**|선택한 컬렉션의 컴퓨터에 할당되는 전원 관리 계획을 구성할 수 있습니다. 자세한 내용은 [전원 관리 소개](../../../../core/clients/manage/power/introduction-to-power-management.md)를 참조하세요.|  
-|**배포**|선택한 컬렉션의 멤버에게 배포된 모든 소프트웨어를 표시합니다.|  
-|**유지 관리 기간**|선택한 컬렉션의 멤버에 적용되는 유지 관리 기간을 보고 구성할 수 있습니다. 자세한 내용은 [System Center Configuration Manager에서 유지 관리 기간을 사용하는 방법](../../../../core/clients/manage/collections/use-maintenance-windows.md)을 참조하세요.|  
-|**컬렉션 변수**|이 컬렉션에 적용하고 작업 순서에서 사용할 수 있는 변수를 구성할 수 있습니다. 자세한 내용은 [작업 순서 기본 제공 변수](../../../../osd/understand/task-sequence-built-in-variables.md)를 참조하세요.|  
-|**배포 지점 그룹**|선택한 컬렉션의 멤버에 하나 이상의 배포 지점 그룹을 연결할 수 있습니다. 자세한 내용은 [System Center Configuration Manager용 콘텐츠 및 콘텐츠 인프라 관리](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)를 참조하세요.|  
-|**보안**|연결된 역할 및 보안 범위에서 선택한 컬렉션에 대한 권한이 있는 관리자를 표시합니다.|  
-|**모니터**|클라이언트 상태와 Endpoint Protection에 대해 경고가 생성되는 때를 구성할 수 있습니다. 자세한 내용은 [System Center Configuration Manager에서 클라이언트 상태를 구성하는 방법](../../../../core/clients/deploy/configure-client-status.md) 및 [System Center Configuration Manager에서 Endpoint Protection을 모니터링하는 방법](../../../../protect/deploy-use/monitor-endpoint-protection.md)을 참조하세요.|  
+|**全般**|コレクション名や限定コレクションを含め選択されたコレクションに関する概要を表示し構成することができます。|  
+|**メンバーシップの規則**|このコレクションのメンバーシップを定義するメンバーシップ規則を構成することができます。 詳細については、「[Configuration Manager でのコレクションの作成方法](../../../../core/clients/manage/collections/create-collections.md)」を参照してください。|  
+|**電源管理**|選択したコレクションのコンピューターに割り当てられた電源管理の計画を構成することができます。 詳細については、「[電源管理の概要](../../../../core/clients/manage/power/introduction-to-power-management.md)」を参照してください。|  
+|**展開**|選択されたコレクションのメンバーに展開されたソフトウェアを表示します。|  
+|**メンテナンス期間**|選択されたコレクションのメンバーに適用されたメンテナンス期間を表示し構成することができます。 詳細については、「[System Center Configuration Manager のメンテナンス期間の使用方法](../../../../core/clients/manage/collections/use-maintenance-windows.md)」を参照してください。|  
+|**コレクション変数**|コレクションに適用され、タスク シーケンスで使用することができる変数を構成します。 組み込みのタスク シーケンス変数の詳細については、「[タスク シーケンス組み込み変数](../../../../osd/understand/task-sequence-built-in-variables.md)」を参照してください。|  
+|**配布ポイント グループ**|1 つ以上の配布ポイント グループを選択されたコレクションのメンバーに関連付けることができます。 詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。|  
+|**セキュリティ**|関連付けられた役割やセキュリティの範囲で選択されたコレクションへの権限を持つ管理者ユーザーを表示します。|  
+|**モニター**|クライアント ステータスや Endpoint Protection に関するアラートが生成されたときの設定ができます。 詳細については、「[How to configure client status in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-status.md)」 (System Center Configuration Manager でクライアント ステータスを構成する方法) および「[System Center Configuration Manager で Endpoint Protection を監視する方法](../../../../protect/deploy-use/monitor-endpoint-protection.md)」を参照してください。|  

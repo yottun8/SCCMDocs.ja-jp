@@ -1,6 +1,6 @@
 ---
-title: "작업 순서 동작 변수 | Microsoft 문서"
-description: "네트워크 설정 변수 등의 순서 동작 변수를 사용하여 Configuration Manager 작업 순서의 단일 단계에 대한 구성 설정을 지정할 수 있습니다."
+title: "タスク シーケンス アクション変数 | Microsoft Docs"
+description: "ネットワーク設定変数などのシーケンス アクション変数を使用して、Configuration Manager のタスク シーケンスでシングル ステップの構成設定を指定します。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,330 +18,330 @@ manager: angrobe
 ms.openlocfilehash: 6049ec2369e0a97b21ce6523ba8448335385ab9a
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>System Center Configuration Manager의 작업 순서 동작 변수
+# <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>System Center Configuration Manager でのタスク シーケンス アクション変数
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-작업 순서 동작 변수는 System Center Configuration Manager 작업 순서의 단일 단계에서 사용되는 구성 설정을 지정합니다. 기본적으로 작업 순서 단계에서 사용되는 설정은 단계가 실행되기 전에 초기화되고 연결된 작업 순서 단계가 실행되는 동안에만 사용할 수 있습니다. 즉, 작업 순서 변수 설정은 작업 순서 단계가 실행되기 전에 작업 순서 환경에 추가되고, 작업 순서 단계가 실행된 다음 작업 순서 환경에서 값이 제거됩니다.  
+タスク シーケンス アクション変数では、System Center Configuration Manager タスク シーケンスの単一ステップで使用される構成設定を指定します。 既定では、タスク シーケンスのステップで使用される設定は、ステップの実行前に初期化され、関連付けられているタスク シーケンスのステップの実行時にのみ利用できます。 つまり、タスク シーケンス変数の設定は、タスク シーケンスのステップの実行前にタスク シーケンス環境に追加され、タスク シーケンスのステップの実行後にタスク シーケンス環境から値が削除されます。  
 
-## <a name="action-variable-example"></a>작업 변수 예제  
- 예를 들어 **명령줄 실행** 작업 순서 단계를 사용하여 명령줄 작업에 대한 시작 디렉터리를 지정할 수 있습니다. 이 단계는 기본값이 **WorkingDirectory** 변수로 작업 순서 환경에 저장된 **시작 위치** 속성을 포함합니다. **WorkingDirectory** 환경 변수는 **명령줄 실행** 작업 순서 동작이 실행되기 전에 초기화됩니다. **명령줄 실행** 단계에서 **시작** 속성을 통해 **WorkingDirectory** 값에 액세스할 수 있습니다. 그런 다음 작업 순서 단계가 완료되면 **WorkingDirectory** 변수의 값이 작업 순서 환경에서 제거됩니다. 순서에 다른 **명령줄 실행** 작업 순서 단계가 포함된 경우 새 **WorkingDirectory** 변수가 초기화되고 해당 작업 순서 단계에 대한 시작 값으로 설정됩니다.  
+## <a name="action-variable-example"></a>アクション変数の例  
+ たとえば、[コマンド ラインの実行 **** ] タスク シーケンスのステップを使用して、コマンド ライン操作の開始ディレクトリを指定できます。 このステップには、既定値がタスク シーケンス環境に **WorkingDirectory** 変数として格納される [開始 **** ] プロパティが含まれます。 **WorkingDirectory** 環境変数は、[コマンド ラインの実行] タスク シーケンス アクションの実行前に初期化されます。 **** [コマンド ラインの実行 **** ] ステップの実行中に、[開始 **** ] プロパティを使用して **WorkingDirectory** の値にアクセスできます。 タスク シーケンスのステップが完了すると、 **WorkingDirectory** 変数の値はタスク シーケンス環境から削除されます。 シーケンスに別の [コマンド ラインの実行 **** ] タスク シーケンスのステップが含まれている場合、新しい **WorkingDirectory** 変数は初期化され、そのタスク シーケンスのステップの初期値に設定されます。  
 
- 작업 순서 단계가 실행되는 동안 작업 순서 동작 설정에 대한 기본값이 있지만 설정하는 새 값을 순서의 여러 단계에서 사용할 수 있습니다. 작업 순서 변수 만들기 방법 중 하나를 사용하여 기본 제공 변수 값을 재정의하는 경우 새 값이 환경에서 유지되고 작업 순서의 다른 단계에 대한 기본값을 재정의합니다. 이전 예제에서 **작업 순서 변수 설정** 단계가 작업 순서의 첫 번째 단계로 추가되고 **WorkingDirectory** 환경 변수를 **C:\\** 값으로 설정하는 경우 작업 순서의 두 **명령줄 실행** 단계에서 모두 새 시작 디렉터리 값을 사용합니다.  
+ タスク シーケンス アクション設定の既定値はタスク シーケンスのステップの実行中に存在しますが、設定した任意の新しい値は、シーケンス内の複数のステップにより使用できます。 タスク シーケンス変数の作成方法のいずれかを使用して、組み込み変数値を上書きすると、新しい値が環境に残り、タスク シーケンスの他のステップの既定値が上書きされます。 前の例で言えば、[**タスク シーケンス変数の設定**] ステップをタスク シーケンスの最初のステップとして追加し、[**WorkingDirectory**] 環境変数の値を **C:\ \\**に設定した場合は、タスク シーケンス内の両方の [**コマンド ラインの実行**] ステップで、新しい開始ディレクトリ値が使用されます。  
 
-## <a name="action-variables-for-task-sequence-actions"></a>작업 순서 동작에 대한 작업 변수  
- Configuration Manager 작업 순서 변수는 해당 변수에 연결된 작업 순서 동작별로 그룹화됩니다. 다음 링크를 사용하여 특정 작업과 연결된 작업 변수에 대한 정보를 수집합니다. 작업 순서 변수가 작업 순서 동작의 작동 방법을 제어합니다. 작업 순서 동작은 사용자가 입력 변수로 표시한 변수를 읽고 사용합니다. 또는 사용자가 작업 순서 변수 설정 동작이나 TSEnvironment COM 개체를 사용하여 런타임에 변수를 설정할 수 있습니다. 작업 순서 동작만 변수를 출력 변수로 표시하며, 이러한 변수는 작업 순서의 나중에 발생하는 동작에서 읽힙니다.  
+## <a name="action-variables-for-task-sequence-actions"></a>タスク シーケンス アクションのアクション変数  
+ Configuration Manager タスク シーケンス変数は、関連付けられたタスク シーケンス アクションごとに分類されます。 特定のアクションに関連付けられているアクション変数の詳細については、次のリンク先を参照してください。 タスク シーケンス変数は、タスク シーケンスで何が行われるかを制御します。 タスク シーケンスの入力変数に指定した変数が、読み取られて使用されます。 または、[タスク シーケンス変数の設定] か TSEnvironment COM オブジェクトを使用して、実行時に変数を設定することもできます。 タスク シーケンス内の現在位置より後で読み取られる変数だけが出力変数と見なされます。  
 
 > [!NOTE]  
->  일부 작업 순서 동작은 작업 순서 변수 집합에 연결되어 있지 않습니다. 예를 들어 BitLocker 사용 작업과 연결된 변수가 있지만 BitLocker 사용 안 함 작업과 연결된 변수는 없습니다.  
+>  すべてのタスク シーケンス アクションが、一連のタスク シーケンス変数に関連付けられているわけではありません。 たとえば、BitLocker の有効化アクションに関連付けれている変数はありますが、BitLocker の無効化アクションに関連付けられている変数はありません。  
 
-###  <a name="BKMK_ApplyDataImage"></a> 데이터 이미지 적용 작업 순서 동작 변수  
- 이 동작에 대한 변수는 대상 컴퓨터에 적용되는 WIM 파일의 이미지 및 대상 파티션에서 파일을 삭제할지 여부를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [데이터 이미지 적용 작업 순서 단계](task-sequence-steps.md#BKMK_ApplyDataImage)를 참조하세요.  
+###  <a name="BKMK_ApplyDataImage"></a> データ イメージの適用タスク シーケンス アクション変数  
+ このアクションの変数では、WIM ファイルのどのイメージを対象のコンピューターに適用するのか、および対象のパーティションのファイルを削除するかどうかを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Apply Data Image Task Sequence Step](task-sequence-steps.md#BKMK_ApplyDataImage)」 (データ イメージの適用タスク シーケンス ステップ) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDDataImageIndex<br /><br /> (입력)|대상 컴퓨터에 적용되는 이미지의 인덱스 값을 지정합니다.|  
-|OSDWipeDestinationPartition<br /><br /> (입력)|대상 파티션에 있는 파일을 삭제할지 여부를 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"true"** (기본값)<br /><br /> **"false"**|  
+|OSDDataImageIndex<br /><br /> (入力)|対象のコンピューターに適用されるイメージのインデックス値を指定します。|  
+|OSDWipeDestinationPartition<br /><br /> (入力)|対象のパーティションにあるファイルを削除するかどうかを指定します。<br /><br /> 有効な値:<br /><br /> **"TRUE"** (既定)<br /><br /> **"FALSE"**|  
 
-###  <a name="BKMK_ApplyDriverPackage"></a> 드라이버 패키지 적용 작업 순서 동작 변수  
- 이 동작에 대한 변수는 대용량 저장소 드라이버의 설치에 대한 정보 및 서명되지 않은 드라이버를 설치할지 여부를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [드라이버 패키지 적용](task-sequence-steps.md#BKMK_ApplyDriverPackage)을 참조하세요.  
+###  <a name="BKMK_ApplyDriverPackage"></a> ドライバー パッケージの適用タスク シーケンス アクション変数  
+ このアクションの変数では、大容量記憶装置ドライバーのインストールに関する情報、および署名されていないドライバーをインストールするかどうかを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Apply Driver Package](task-sequence-steps.md#BKMK_ApplyDriverPackage)」 (ドライバー パッケージの適用) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDApplyDriverBootCriticalContentUniqueID<br /><br /> (입력)|드라이버 패키지에서 설치할 대용량 저장 장치 드라이버의 콘텐츠 ID를 지정합니다. 지정하지 않으면 대용량 저장소 드라이버가 설치되지 않습니다.|  
-|OSDApplyDriverBootCriticalINFFile<br /><br /> (입력)|설치할 대용량 저장소 드라이버의 INF 파일을 지정합니다.<br /><br /> <br /><br /> OSDApplyDriverBootCriticalContentUniqueID가 설정된 경우 이 작업 순서 변수가 필요합니다.|  
-|OSDApplyDriverBootCriticalHardwareComponent<br /><br /> (입력)|대용량 저장 장치 드라이버가 설치되었는지 여부를 지정하며 **scsi**여야 합니다.<br /><br /> <br /><br /> OSDApplyDriverBootCriticalContentUniqueID가 설정된 경우 이 작업 순서 변수가 필요합니다.|  
-|OSDApplyDriverBootCriticalID<br /><br /> (입력)|설치할 대용량 저장 장치 드라이버의 부팅 필요 ID를 지정합니다. 이 ID는 장치 드라이버의 txtsetup.oem 파일의 "**scsi**" 섹션에 나열되어 있습니다.<br /><br /> <br /><br /> OSDApplyDriverBootCriticalContentUniqueID가 설정된 경우 이 작업 순서 변수가 필요합니다.|  
-|OSDAllowUnsignedDriver<br /><br /> (입력)|Windows가 서명되지 않은 장치 드라이버를 설치할 수 있도록 구성할지 여부를 지정합니다. Windows Vista 이상 운영 체제를 배포하는 경우에는 이 작업 순서 변수가 사용되지 않습니다.<br /><br /> 유효한 값은<br /><br /> **"true"**<br /><br /> **"false"** (기본값)|  
+|OSDApplyDriverBootCriticalContentUniqueID<br /><br /> (入力)|ドライバー パッケージからインストールする大容量記憶装置デバイス ドライバーのコンテンツ ID を指定します。 この値を指定しない場合、大容量記憶装置ドライバーはインストールされません。|  
+|OSDApplyDriverBootCriticalINFFile<br /><br /> (入力)|インストールする大容量記憶装置ドライバーの INF ファイルを指定します。<br /><br /> <br /><br /> このタスク シーケンス変数は、OSDApplyDriverBootCriticalContentUniqueID が設定されている場合に必要です。|  
+|OSDApplyDriverBootCriticalHardwareComponent<br /><br /> (入力)|大容量記憶装置デバイス ドライバーをインストールするかどうかを指定します。値は **scsi** にする必要があります。<br /><br /> <br /><br /> このタスク シーケンス変数は、OSDApplyDriverBootCriticalContentUniqueID が設定されている場合に必要です。|  
+|OSDApplyDriverBootCriticalID<br /><br /> (入力)|インストールする大容量記憶装置デバイス ドライバーの起動に必要な ID を指定します。 この ID は、デバイス ドライバーの txtsetup.oem ファイルの "**scsi**" セクションに一覧表示されます。<br /><br /> <br /><br /> このタスク シーケンス変数は、OSDApplyDriverBootCriticalContentUniqueID が設定されている場合に必要です。|  
+|OSDAllowUnsignedDriver<br /><br /> (入力)|署名されていないデバイス ドライバーのインストールを許可するように Windows を構成するかどうかを指定します。 このタスク シーケンス変数は、Windows Vista 以降のオペレーティング システムの展開時には使用されません。<br /><br /> 有効な値:<br /><br /> **"TRUE"**<br /><br /> **"FALSE"** (既定)|  
 
-###  <a name="BKMK_ApplyNetworkSettings"></a> 네트워크 설정 적용 작업 순서 동작 변수  
- 이 동작에 대한 변수는 컴퓨터의 네트워크 어댑터에 대한 설정, 도메인 설정 및 작업 그룹 설정과 같은 대상 컴퓨터에 대한 네트워크 설정을 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [네트워크 설정 적용 단계](task-sequence-steps.md#BKMK_ApplyNetworkSettings)를 참조하세요.  
+###  <a name="BKMK_ApplyNetworkSettings"></a> ネットワーク設定の適用タスク シーケンス アクション変数  
+ このアクションの変数では、コンピューターのネットワーク アダプターの設定、ドメイン設定、ワークグループ設定などの、対象コンピューターのネットワーク設定を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Apply Network Settings Step](task-sequence-steps.md#BKMK_ApplyNetworkSettings)」 (ネットワーク設定の適用ステップ) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDAdapter<br /><br /> (입력)|이 작업 순서 변수는 배열 변수입니다. 배열의 각 요소는 컴퓨터에서 단일 네트워크 어댑터에 대한 설정을 나타냅니다. 각 어댑터에 대해 정의된 설정은 배열 변수 이름과 0부터 시작하는 네트워크 어댑터 인덱스 및 속성 이름을 결합하여 액세스할 수 있습니다.<br /><br /> <br /><br /> 여러 네트워크 어댑터가 이 작업 순서 동작으로 구성될 경우 두 번째 네트워크에 대한 속성이 변수 이름의 해당 인덱스를 사용하여 정의됩니다. 예를 들어 OSDAdapter1EnableDHCP, OSDAdapter1IPAddressList, OSDAdapter1DNSDomain, OSDAdapter1WINSServerList, OSDAdapter1EnableWINS 등입니다.<br /><br /> <br /><br /> 예를 들어 다음 변수 이름을 사용하여 이 작업 순서 동작에 의해 구성될 첫 번째 네트워크 어댑터의 속성을 정의할 수 있습니다.<br /><br /> <ul><li>**OSDAdapter0EnableDHCP** – 어댑터에 대해 DHCP(Dynamic Host Configuration Protocol)를 사용하려면 true로 설정합니다.<br />    이 설정은 필수입니다. 사용 가능한 값은 True 또는 False입니다.</li><li>**OSDAdapter0IPAddressList** – 쉼표로 구분된 어댑터에 대한 IP 주소 목록입니다. **EnableDHCP** 가 **false**로 설정되지 않으면 이 속성은 무시됩니다.<br />    이 설정은 필수입니다.</li><li>**OSDAdapter0SubnetMask** – 쉼표로 구분된 서브넷 마스크 목록입니다. **EnableDHCP** 가 **false**로 설정되지 않으면 이 속성은 무시됩니다.<br />    이 설정은 필수입니다.</li><li>**OSDAdapter0Gateways** – 쉼표로 구분된 IP 게이트웨이 주소 목록입니다. **EnableDHCP** 가 **false**로 설정되지 않으면 이 속성은 무시됩니다.<br />    이 설정은 필수입니다.</li><li>**OSDAdapter0DNSDomain** - 어댑터에 대한 DNS(Domain Name System) 도메인입니다.</li><li>**OSDAdapter0DNSServerList** – 쉼표로 구분된 어댑터에 대한 DNS 서버 목록입니다.<br />    이 설정은 필수입니다.</li><li>**OSDAdapter0EnableDNSRegistration** - DNS에 어댑터에 대한 IP 주소를 등록하려면 **true**로 설정합니다.</li><li>**OSDAdapter0EnableFullDNSRegistration** - DNS에 컴퓨터의 전체 DNS 이름 아래 어댑터에 대한 IP 주소를 등록하려면 **true**로 설정합니다.</li><li>**OSDAdapter0EnableIPProtocolFiltering** - 어댑터에서 IP 프로토콜 필터링을 사용하려면 **true**로 설정합니다.</li><li>**OSDAdapter0IPProtocolFilterList** – IP를 통해 실행할 수 있는 쉼표로 구분된 프로토콜 목록입니다. **EnableIPProtocolFiltering** 이 **false**로 설정된 경우 이 속성은 무시됩니다.</li><li>**OSDAdapter0EnableTCPFiltering** - 어댑터에 대해 TCP 포트 필터링을 사용하려면 **true**로 설정합니다.</li><li>**OSDAdapter0TCPFilterPortList** – TCP에 대해 액세스 권한을 부여할 쉼표로 구분된 포트 목록입니다. **EnableTCPFiltering** 이 **false**로 설정된 경우 이 속성은 무시됩니다.</li><li>**OSDAdapter0TcpipNetbiosOptions** – NetBIOS over TCP/IP에 대한 옵션입니다. 가능한 값은 다음과 같습니다.<br /><br /> <ul><li>0은 DHCP 서버에서 NetBIOS 설정을 사용합니다.</li><li>1은 NetBIOS over TCP/IP를 사용하도록 설정합니다.</li><li>2는 NetBIOS over TCP/IP를 사용하지 않도록 설정합니다.</li></ul></li><li>**OSDAdapter0EnableWINS** - 이름 확인에 WINS를 사용하려면 **true**로 설정합니다.</li><li>**OSDAdapter0WINSServerList** – 쉼표로 구분된 WINS 서버 IP 주소 목록입니다. **EnableWINS** 가 **true**로 설정되지 않으면 이 속성은 무시됩니다.</li><li>**OSDAdapter0MacAddress** – 설정을 실제 네트워크 어댑터에 연결하기 위해 사용되는 MAC(미디어 액세스 컨트롤러) 주소입니다.</li><li>**OSDAdapter0Name** – 네트워크 연결 제어판 프로그램에 표시되는 네트워크 연결의 이름입니다. 이름은 0에서 255자 사이입니다.</li><li>**OSDAdapter0Index** - 설정의 배열에서 네트워크 어댑터 설정의 인덱스입니다.<br /><br />     OSDAdapterCount=1<br />    OSDAdapter0EnableDHCP=FALSE<br />    OSDAdapter0IPAddressList=192.168.0.40<br />    OSDAdapter0SubnetMask=255.255.255.0<br />    OSDAdapter0Gateways=192.168.0.1<br />    OSDAdapter0DNSSuffix=contoso.com</li></ul>|  
-|OSDAdapterCount<br /><br /> (입력)|대상 컴퓨터에 설치된 네트워크 어댑터의 수를 지정합니다. **OSDAdapterCount** 값이 설정된 경우 각 어댑터의 모든 구성 옵션이 설정되어야 합니다. 예를 들어 특정 어댑터에 대해 **OSDAdapterTCPIPNetbiosOptions** 값을 설정하면 해당 어댑터에 대한 모든 값도 구성되어야 합니다.<br /><br /> <br /><br /> 이 값을 지정하지 않으면 모든 **OSDAdapter** 값이 무시됩니다.|  
-|OSDDNSDomain<br /><br /> (입력)|대상 컴퓨터에서 사용하는 기본 DNS 서버를 지정합니다.|  
-|OSDDomainName<br /><br /> (입력)|대상 컴퓨터가 가입하는 Windows 도메인의 이름을 지정합니다. 지정된 값은 유효한 Active Directory Domain Services 도메인 이름이어야 합니다.|  
-|OSDDomainOUName<br /><br /> (입력)|대상 컴퓨터가 가입하는 OU(조직 구성 단위)의 RFC 1779 형식 이름을 지정합니다. 지정하는 경우 값에 전체 경로가 포함되어야 합니다.<br /><br /> 예:<br /><br /> **LDAP://OU=MyOu,DC=MyDom,DC=MyCompany,DC=com**|  
-|OSDEnableTCPIPFiltering<br /><br /> (입력)|TCP/IP 필터링이 사용되는지 여부를 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"true"**<br /><br /> **"false"** (기본값)|  
-|OSDJoinAccount<br /><br /> (입력)|Windows 도메인에 대상 컴퓨터를 추가하는 데 사용되는 네트워크 계정을 지정합니다.|  
-|OSDJoinPassword<br /><br /> (입력)|Windows 도메인에 대상 컴퓨터를 추가하는 데 사용되는 네트워크 암호를 지정합니다.|  
-|OSDNetworkJoinType<br /><br /> (입력)|대상 컴퓨터가 Windows 도메인 또는 작업 그룹에 가입하는지 여부를 지정합니다.<br /><br /> **"0"** 은 대상 컴퓨터가 Windows 도메인에 가입한다는 것을 나타냅니다. **"1"** 은 컴퓨터가 작업 그룹에 가입한다는 것을 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"0"**<br /><br /> **"1"**|  
-|OSDDNSSuffixSearchOrder<br /><br /> (입력)|대상 컴퓨터에 대한 DNS 검색 순서를 지정합니다.|  
-|OSDWorkgroupName<br /><br /> (입력)|대상 컴퓨터가 가입하는 작업 그룹의 이름을 지정합니다.<br /><br /> 이 값 또는 **OSDDomainName** 값 중 하나를 지정해야 합니다. 작업 그룹 이름은 최대 32자까지 가능합니다.<br /><br /> 예:<br /><br /> **"Accounting"**|  
+|OSDAdapter<br /><br /> (入力)|このタスク シーケンス変数は、配列変数です。 配列内の各要素は、コンピューター上の単一ネットワーク アダプターの設定を表します。 各アダプターに定義された設定にアクセスするには、配列変数名にゼロから始まるネットワーク アダプター インデックスとプロパティ名を組み合わせます。<br /><br /> <br /><br /> このタスク シーケンス アクションを使用して複数のネットワーク アダプターを構成する場合、2 つ目のネットワーク アダプターのプロパティを定義するときに、OSDAdapter1EnableDHCP、OSDAdapter1IPAddressList、OSDAdapter1DNSDomain、OSDAdapter1WINSServerList、OSDAdapter1EnableWINS など、変数名のインデックスを使用できます。<br /><br /> <br /><br /> たとえば、次の変数名を使用して、このタスク シーケンス アクションで構成する 1 つ目のネットワーク アダプターにプロパティを定義できます。<br /><br /> <ul><li>**OSDAdapter0EnableDHCP** – true になっていると、アダプターの動的ホスト構成プロトコル (DHCP) が有効になります。<br />    この設定は必須です。 使用できる値は True または False です。</li><li>**OSDAdapter0IPAddressList** – アダプターの IP アドレスを記載したコンマ区切りの一覧です。 このプロパティは **EnableDHCP** が **FALSE**に設定されている場合を除き、無視されます。<br />    この設定は必須です。</li><li>**OSDAdapter0SubnetMask** – サブネット マスクを記載したコンマ区切りの一覧です。 このプロパティは **EnableDHCP** が **FALSE**に設定されている場合を除き、無視されます。<br />    この設定は必須です。</li><li>**OSDAdapter0Gateways** – IP ゲートウェイ アドレスを記載したコンマ区切りの一覧です。 このプロパティは **EnableDHCP** が **FALSE**に設定されている場合を除き、無視されます。<br />    この設定は必須です。</li><li>**OSDAdapter0DNSDomain** - アダプターの ドメイン ネーム システム (DNS) です。</li><li>**OSDAdapter0DNSServerList** – アダプターの DNS サーバーを記載したコンマ区切りの一覧です。<br />    この設定は必須です。</li><li>**OSDAdapter0EnableDNSRegistration** - **true** になっているとアダプターの IP アドレスが DNS に登録されます。</li><li>**OSDAdapter0EnableFullDNSRegistration** - **true** になっているとアダプターの IP アドレスが コンピューターのフル DNS 名で DNS に登録されます。</li><li>**OSDAdapter0EnableIPProtocolFiltering** - **true** になっているとアダプターで IP プロトコル フィルターが有効になります。</li><li>**OSDAdapter0IPProtocolFilterList** – IP での実行を許可されたプロトコルを記載したコンマ区切りの一覧です。 このプロパティは **EnableIPProtocolFiltering** が **FALSE**に設定されている場合、無視されます。</li><li>**OSDAdapter0EnableTCPFiltering** - **true** になっているとアダプターで TCP ポート フィルターが有効になります。</li><li>**OSDAdapter0TCPFilterPortList** – TCP へのアクセス許可を付与するポートを記載したコンマ区切りの一覧です。 このプロパティは **EnableTCPFiltering** が **FALSE**に設定されている場合、無視されます。</li><li>**OSDAdapter0TcpipNetbiosOptions** – NetBIOS over TCP/IP 用のオプションです。 使用できる値は次のとおりです。<br /><br /> <ul><li>0: DHCP サーバーから NetBIOS 設定を使用する。</li><li>1: NetBIOS over TCP/IP を有効にする。</li><li>2: NetBIOS over TCP/IP を無効にする。</li></ul></li><li>**OSDAdapter0EnableWINS** - **true** になっていると名前解決に WINS が使用されます。</li><li>**OSDAdapter0WINSServerList** – WINS サーバー IP アドレスを記載したコンマ区切りの一覧です。 このプロパティは **EnableWINS** が **TRUE**に設定されている場合を除き、無視されます。</li><li>**OSDAdapter0MacAddress** – 設定を物理ネットワーク アダプターに合わせるために使用するメディア アクセス コントローラー (MAC) アドレスです。</li><li>**OSDAdapter0Name** – ネットワーク接続のコントロール パネル プログラムに表示されるネットワーク接続名です。 名前は 0 ～ 255 文字の長さにしてください。</li><li>**OSDAdapter0Index** – 設定の配列内にあるネットワーク アダプター設定のインデックスです。<br /><br />     OSDAdapterCount=1<br />    OSDAdapter0EnableDHCP=FALSE<br />    OSDAdapter0IPAddressList=192.168.0.40<br />    OSDAdapter0SubnetMask=255.255.255.0<br />    OSDAdapter0Gateways=192.168.0.1<br />    OSDAdapter0DNSSuffix=contoso.com</li></ul>|  
+|OSDAdapterCount<br /><br /> (入力)|対象のコンピューターにインストールされているネットワーク アダプターの数を指定します。 **OSDAdapterCount** 値が設定されている場合、各アダプターのすべての構成オプションを設定する必要があります。 たとえば、特定のアダプターの **OSDAdapterTCPIPNetbiosOptions** 値を設定したら、そのアダプターのすべての値を構成する必要があります。<br /><br /> <br /><br /> この値が指定されていない場合、すべての **OSDAdapter** 値が無視されます。|  
+|OSDDNSDomain<br /><br /> (入力)|対象のコンピューターによって使用されるプライマリ DNS サーバーを指定します。|  
+|OSDDomainName<br /><br /> (入力)|対象のコンピューターを参加させる Windows ドメインの名前を指定します。 指定する値は Active Directory ドメイン サービスの有効なドメイン名でなければなりません。|  
+|OSDDomainOUName<br /><br /> (入力)|対象コンピューターを参加させる組織単位 (OU) の RFC 1779 形式の名前を指定します。 指定する場合の値は、完全なパスを含む必要があります。<br /><br /> 例:<br /><br /> **LDAP://OU=MyOu,DC=MyDom,DC=MyCompany,DC=com**|  
+|OSDEnableTCPIPFiltering<br /><br /> (入力)|TCP/IP フィルタリングを有効にするかどうかを指定します。<br /><br /> 有効な値:<br /><br /> **"TRUE"**<br /><br /> **"FALSE"** (既定)|  
+|OSDJoinAccount<br /><br /> (入力)|対象のコンピューターを Windows ドメインに追加するために使用するネットワーク アカウントを指定します。|  
+|OSDJoinPassword<br /><br /> (入力)|対象のコンピューターを Windows ドメインに追加するために使用するネットワーク パスワードを指定します。|  
+|OSDNetworkJoinType<br /><br /> (入力)|対象コンピューターを Windows ドメインに参加させるか、ワークグループに参加させるかを指定します。<br /><br /> "**0** " を指定すると、対象のコンピューターは Windows ドメインに参加します。 "**1** " を指定すると、コンピューターはワークグループに参加します。<br /><br /> 有効な値:<br /><br /> **0**<br /><br /> **1**|  
+|OSDDNSSuffixSearchOrder<br /><br /> (入力)|対象のコンピューターの DNS 検索順序を指定します。|  
+|OSDWorkgroupName<br /><br /> (入力)|対象のコンピューターを参加させるワークグループの名前を指定します。<br /><br /> この変数と **OSDDomainName** のどちらかの値を指定する必要があります。 ワークグループの名前は 32 文字までの長さにできます。<br /><br /> 例:<br /><br /> **"会計"**|  
 
-###  <a name="BKMK_ApplyOperatingSystem"></a> 운영 체제 이미지 적용 작업 순서 동작 변수  
- 이 동작에 대한 변수는 대상 컴퓨터에 설치할 운영 체제에 대한 설정을 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [운영 체제 이미지 적용](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)을 참조하세요.  
+###  <a name="BKMK_ApplyOperatingSystem"></a> オペレーティング システム イメージの適用タスク シーケンス アクション変数  
+ このアクションの変数では、対象のコンピューターにインストールするオペレーティング システムの設定を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Apply Operating System Image](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)」 (オペレーティング システム イメージの適用) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDConfigFileName<br /><br /> (입력)|운영 체제 배포 패키지와 관련된 운영 체제 배포 응답 파일의 파일 이름을 지정합니다.|  
-|OSDImageIndex<br /><br /> (입력)|대상 컴퓨터에 적용된 WIM 파일의 이미지 인덱스 값을 지정합니다.|  
-|OSDInstallEditionIndex<br /><br /> (입력)|설치되는 Windows Vista 또는 운영 체제의 버전을 지정합니다. 버전이 지정되지 않으면 Windows 설치 프로그램에서 참조된 제품 키를 사용하여 설치할 버전을 결정합니다.<br /><br /> 다음 조건에 해당하는 경우 영(0) 값만 사용합니다.<br /><br /> - Windows Vista 이전 운영 체제를 설치하고 있습니다.<br />- Windows Vista 이상의 볼륨 라이선스 버전을 설치하고 있고 제품 키를 지정하지 않았습니다.<br /><br /> 유효한 값은<br /><br /> **"0"** (기본값)|  
-|OSDTargetSystemDrive(출력)|운영 체제 파일이 포함된 파티션의 드라이브 문자를 지정합니다.|  
+|OSDConfigFileName<br /><br /> (入力)|オペレーティング システムの展開パッケージに関連付けられているオペレーティング システムの展開の応答ファイルの名前を指定します。|  
+|OSDImageIndex<br /><br /> (入力)|対象のコンピューターに適用される WIM イメージのイメージ インデックス値を指定します。|  
+|OSDInstallEditionIndex<br /><br /> (入力)|インストールする Windows Vista 以降のオペレーティング システムのバージョンを指定します。 バージョンを指定しない場合、Windows セットアップでは参照されたプロダクト キーを使用してインストールするバージョンが判断されます。<br /><br /> 次の条件を満たす場合は、0 (ゼロ) のみを使用してください。<br /><br /> -   Windows Vista より前のオペレーティング システムをインストールしている<br />-   Windows Vista 以降のボリューム ライセンス版をインストールしており、プロダクト キーを指定していない<br /><br /> 有効な値:<br /><br /> **"0"** (既定)|  
+|OSDTargetSystemDrive (出力)|オペレーティング システム ファイルが含まれているパーティションのドライブ文字を設定します。|  
 
-###  <a name="BKMK_ApplyWindowsSettings"></a> Windows 설정 적용 작업 순서 동작 변수  
- 이 동작에 대한 변수는 컴퓨터 이름, Windows 제품 키, 등록된 사용자 및 조직, 로컬 관리자 암호와 같은 대상 컴퓨터에 대한 Windows 설정을 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [Windows 설정 적용](task-sequence-steps.md#BKMK_ApplyWindowsSettings)을 참조하세요.  
+###  <a name="BKMK_ApplyWindowsSettings"></a> Windows 設定の適用タスク シーケンス アクション変数  
+ このアクションの変数では、コンピューター名、Windows プロダクト キー、登録ユーザーと組織、ローカルの管理者パスワードなどの、対象のコンピューターの Windows 設定を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「 [Apply Windows Settings](task-sequence-steps.md#BKMK_ApplyWindowsSettings)」 (Windows 設定の適用) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDComputerName<br /><br /> (입력)|대상 컴퓨터의 이름을 지정합니다.<br /><br /> 예:<br /><br /> **"%_SMSTSMachineName%"** (기본값)|  
-|OSDProductKey<br /><br /> (입력)|Windows 제품 키를 지정합니다. 지정된 값은 1-255자 사이여야 합니다.|  
-|OSDRegisteredUserName<br /><br /> (입력)|새 운영 체제에서 등록된 기본 사용자 이름을 지정합니다. 지정된 값은 1-255자 사이여야 합니다.|  
-|OSDRegisteredOrgName<br /><br /> (입력)|새 운영 체제에서 등록된 기본 조직 이름을 지정합니다. 지정된 값은 1-255자 사이여야 합니다.|  
-|OSDTimeZone<br /><br /> (입력)|새 운영 체제에서 사용되는 기본 표준 시간대 설정을 지정합니다.|  
-|OSDServerLicenseMode<br /><br /> (입력)|사용되는 Windows Server 라이선스 모드를 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"PerSeat"**<br /><br /> **"PerServer"**|  
-|OSDServerLicenseConnectionLimit<br /><br /> (입력)|허용되는 최대 연결 수를 지정합니다. 지정된 숫자는 5에서 9999개 연결 사이의 범위에 있어야 합니다.|  
-|OSDRandomAdminPassword<br /><br /> (입력)|새 운영 체제에서 관리자 계정에 대해 임의로 생성된 암호를 지정합니다. **true**로 설정되면 대상 컴퓨터에서 로컬 관리자 계정이 사용되지 않도록 설정됩니다. **false**로 설정되면 대상 컴퓨터에서 로컬 관리자 계정이 사용되도록 설정되고 로컬 관리자 계정 암호에 **OSDLocalAdminPassword** 변수의 값이 할당됩니다.<br /><br /> 유효한 값은<br /><br /> **"true"** (기본값)<br /><br /> **"false"**|  
-|OSDLocalAdminPassword<br /><br /> (입력)|로컬 관리자 암호를 지정합니다. **로컬 관리자 암호를 임의로 생성하고 지원되는 모든 플랫폼에서 계정 사용 안 함** 옵션이 사용되도록 설정된 경우 이 값은 무시됩니다. 지정된 값은 1-255자 사이여야 합니다.|  
+|OSDComputerName<br /><br /> (入力)|対象のコンピューターの名前を指定します。<br /><br /> 例:<br /><br /> **"%_SMSTSMachineName%"** (既定)|  
+|OSDProductKey<br /><br /> (入力)|Windows のプロダクト キーを指定します。 値は 1 ～ 255 文字の範囲で指定する必要があります。|  
+|OSDRegisteredUserName<br /><br /> (入力)|新しいオペレーティング システムに既定で登録するユーザー名を指定します。 値は 1 ～ 255 文字の範囲で指定する必要があります。|  
+|OSDRegisteredOrgName<br /><br /> (入力)|新しいオペレーティング システムに既定で登録する組織名を指定します。 値は 1 ～ 255 文字の範囲で指定する必要があります。|  
+|OSDTimeZone<br /><br /> (入力)|新しいオペレーティング システムで使用する既定のタイム ゾーン設定を指定します。|  
+|OSDServerLicenseMode<br /><br /> (入力)|使用する Windows Server ライセンス モードを指定します。<br /><br /> 有効な値:<br /><br /> **"PerSeat"**<br /><br /> **"PerServer"**|  
+|OSDServerLicenseConnectionLimit<br /><br /> (入力)|最大接続許可数を指定します。 接続数は 5 ～ 9999 の範囲で指定する必要があります。|  
+|OSDRandomAdminPassword<br /><br /> (入力)|新しいオペレーティング システムの管理者アカウントにランダム生成パスワードを使用するかどうかを指定します。 **true** に設定した場合、対象のコンピューターのローカル管理者アカウントは無効になります。 **false** に設定した場合、対象のコンピューターのローカル管理者アカウントが有効になり、ローカル管理者アカウントのパスワードには、変数 **OSDLocalAdminPassword** の値が割り当てられます。<br /><br /> 有効な値:<br /><br /> **"TRUE"** (既定)<br /><br /> **"FALSE"**|  
+|OSDLocalAdminPassword<br /><br /> (入力)|ローカルの管理者パスワードを指定します。 この値は、[ローカルの管理者パスワードをランダムに生成し、サポートされているすべてのプラットフォームのアカウントを無効にする] オプションをオンにした場合は無視されます。 **** 値は 1 ～ 255 文字の範囲で指定する必要があります。|  
 
-###  <a name="BKMK_AutoApplyDrivers"></a> 드라이버 자동 적용 작업 순서 동작 변수  
- 이 동작에 대한 변수는 대상 컴퓨터에 설치되는 Windows 드라이버 및 서명되지 않은 드라이버가 설치되는지 여부를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [드라이버 자동 적용](task-sequence-steps.md#BKMK_AutoApplyDrivers)을 참조하세요.  
+###  <a name="BKMK_AutoApplyDrivers"></a> ドライバーの自動適用タスク シーケンス アクション変数  
+ このアクションの変数では、対象のコンピューターにどの Windows ドライバーをインストールするのか、および署名されていないドライバーをインストールするかどうかを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Auto Apply Drivers](task-sequence-steps.md#BKMK_AutoApplyDrivers)」 (ドライバーの自動適用) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDAutoApplyDriverCategoryList<br /><br /> (입력)|쉼표로 구분된 드라이버 카탈로그 범주의 고유한 ID 목록입니다. 지정된 경우 **드라이버 자동 적용** 작업 순서 동작에서 드라이버를 설치할 때 이러한 범주 중 적어도 하나에 속한 드라이버만 고려합니다. 이 값은 선택 사항이므로 기본적으로 설정되어 있지 않습니다. 사용 가능한 범주 ID는 사이트에서 **SMS_CategoryInstance** 개체 목록을 열거하여 가져올 수 있습니다.|  
-|OSDAllowUnsignedDriver<br /><br /> (입력)|서명되지 않은 장치 드라이버를 설치할 수 있도록 Windows를 구성할지 여부를 지정합니다. Windows Vista 이상 운영 체제를 배포하는 경우에는 이 작업 순서 변수가 사용되지 않습니다.<br /><br /> 유효한 값은<br /><br /> **"true"**<br /><br /> **"false"** (기본값)|  
-|OSDAutoApplyDriverBestMatch<br /><br /> (입력)|하드웨어 장치와 호환되는 드라이버 카탈로그의 여러 장치 드라이버가 있는 경우 작업 순서 동작이 수행하는 작업을 지정합니다. **"true"**로 설정된 경우 가장 적합한 장치 드라이버만 설치됩니다.  **false**인 경우 호환되는 모든 장치 드라이버가 설치되고 운영 체제가 가장 사용하기 적합한 드라이버를 선택합니다.<br /><br /> 유효한 값은<br /><br /> **"true"** (기본값)<br /><br /> **"false"**|  
+|OSDAutoApplyDriverCategoryList<br /><br /> (入力)|ドライバー カタログ カテゴリの一意の ID を記載するカンマ区切りの一覧です。 指定した場合、[ドライバーの自動適用] タスク シーケンス アクションでは、ドライバーのインストール時に、これらのカテゴリに含まれているドライバーのみが考慮されます。 **** この値は省略可能であり、既定では設定されていません。 利用可能なカテゴリ ID は、サイトの **SMS_CategoryInstance** オブジェクトの一覧を列挙することで取得できます。|  
+|OSDAllowUnsignedDriver<br /><br /> (入力)|署名されていないデバイス ドライバーのインストールを許可するように Windows を構成するかどうかを指定します。 このタスク シーケンス変数は、Windows Vista 以降のオペレーティング システムの展開時には使用されません。<br /><br /> 有効な値:<br /><br /> **"TRUE"**<br /><br /> **"FALSE"** (既定)|  
+|OSDAutoApplyDriverBestMatch<br /><br /> (入力)|ハードウェア デバイスと互換性のある複数のデバイス ドライバーがドライバー カタログに含まれている場合にタスク シーケンス アクションで実行する処理を指定します。 **"true"** に設定すると最適なデバイス ドライバーのみがインストールされます。  **false** を指定すると、互換性のあるすべてのデバイス ドライバーがインストールされ、使用する最適なドライバーは、オペレーティング システムによって選択されます。<br /><br /> 有効な値:<br /><br /> **"TRUE"** (既定)<br /><br /> **"FALSE"**|  
 
-###  <a name="BKMK_CaptureNetworkSettings"></a> 네트워크 설정 캡처 작업 순서 동작 변수  
- 이 동작에 대한 변수는 네트워크 어댑터 설정(TCP/IP, DNS 및 WINS) 구성 정보가 캡처되는지 여부 및 작업 그룹 또는 도메인 멤버 자격 정보가 운영 체제 배포 중에 마이그레이션되는지 여부를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [네트워크 설정 캡처](task-sequence-steps.md#BKMK_CaptureNetworkSettings)를 참조하세요.  
+###  <a name="BKMK_CaptureNetworkSettings"></a> ネットワーク設定のキャプチャ タスク シーケンス アクション変数  
+ このアクションの変数では、ネットワーク アダプター設定 (TCP/IP、DNS、WINS) の構成情報をキャプチャするかどうか、およびワークグループまたはドメインのメンバーシップ情報をオペレーティング システム展開の一部として移行するかどうかを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Capture Network Settings](task-sequence-steps.md#BKMK_CaptureNetworkSettings)」 (ネットワーク設定のキャプチャ) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDMigrateAdapterSettings<br /><br /> (입력)|네트워크 어댑터 설정(TCP/IP, DNS 및 WINS) 구성 정보가 캡처되는지 여부를 지정합니다.<br /><br /> 예:<br /><br /> **"true"** (기본값)<br /><br /> **"false"**|  
-|OSDMigrateNetworkMembership<br /><br /> (입력)|작업 그룹 또는 도메인 멤버 자격 정보가 운영 체제 배포 중에 마이그레이션되는지 여부를 지정합니다.<br /><br /> 예:<br /><br /> **"true"** (기본값)<br /><br /> **"false"**|  
+|OSDMigrateAdapterSettings<br /><br /> (入力)|ネットワーク アダプター設定 (TCP/IP、DNS、WINS) の構成情報をキャプチャするかどうかを指定します。<br /><br /> 例:<br /><br /> **"TRUE"** (既定)<br /><br /> **"FALSE"**|  
+|OSDMigrateNetworkMembership<br /><br /> (入力)|ワークグループまたはドメインのメンバーシップ情報をオペレーティング システムの展開の一部として移行するかどうかを指定します。<br /><br /> 例:<br /><br /> **"TRUE"** (既定)<br /><br /> **"FALSE"**|  
 
-###  <a name="BKMK_CaptureOperatingSystemImage"></a> 운영 체제 이미지 캡처 작업 순서 동작 변수  
- 이 동작에 대한 변수는 이미지가 저장되는 위치, 이미지를 만든 사람 및 이미지에 대한 설명과 같이 캡처되는 운영 체제 이미지에 대한 정보를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [운영 체제 이미지 캡처](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)를 참조하세요.  
+###  <a name="BKMK_CaptureOperatingSystemImage"></a> オペレーティング システム イメージのキャプチャ タスク シーケンス アクション変数  
+ このアクションの変数では、イメージの格納場所、イメージの作成者、イメージの説明などの、キャプチャするオペレーティング システム イメージに関する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Capture Operating System Image](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)」 (オペレーティング システム イメージのキャプチャ) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDCaptureAccount<br /><br /> (입력)|네트워크 공유에서 캡처된 이미지를 저장할 권한이 있는 Windows 계정 이름을 지정합니다.|  
-|OSDCaptureAccountPassword<br /><br /> (입력)|네트워크 공유에서 캡처된 이미지를 저장하는 데 사용되는 Windows 계정에 대한 암호를 지정합니다.|  
-|OSDCaptureDestination<br /><br /> (입력)|캡처된 운영 체제 이미지가 저장되는 위치를 지정합니다. 디렉터리 이름은 최대 255자까지 가능합니다.|  
-|OSDImageCreator<br /><br /> (입력)|이미지를 만든 사용자의 선택적 이름입니다. 이 이름은 WIM 파일에 저장됩니다. 사용자 이름은 최대 255자까지 가능합니다.|  
-|OSDImageDescription<br /><br /> (입력)|캡처된 운영 체제 이미지에 대한 선택적 사용자 정의 설명입니다. 이 설명은 WIM 파일에 저장됩니다. 설명은 최대 255자까지 가능합니다.|  
-|OSDImageVersion<br /><br /> (입력)|캡처된 운영 체제 이미지에 할당할 선택적 사용자 정의 버전 번호입니다. 이 버전 번호는 WIM 파일에 저장됩니다. 이 값은 최대 32자의 문자 조합일 수 있습니다.|  
-|OSDTargetSystemRoot<br /><br /> (입력)|참조 컴퓨터에 설치된 운영 체제의 Windows 디렉터리 경로를 지정합니다. 이 운영 체제는 Configuration Manager에서 캡처를 위해 지원되는 운영 체제로 확인됩니다.|  
+|OSDCaptureAccount<br /><br /> (入力)|キャプチャしたイメージをネットワーク共有に格納するためのアクセス許可を持つ Windows アカウント名を指定します。|  
+|OSDCaptureAccountPassword<br /><br /> (入力)|キャプチャしたイメージをネットワーク共有に格納するのに使用される Windows アカウントのパスワードを指定します。|  
+|OSDCaptureDestination<br /><br /> (入力)|キャプチャしたオペレーティング システム イメージを保存する場所を指定します。 ディレクトリ名の最大長は 255 文字です。|  
+|OSDImageCreator<br /><br /> (入力)|イメージを作成したユーザーのオプションの名前。 この名前は WIM ファイルに保存されます。 ユーザー名の最大長は 255 文字です。|  
+|OSDImageDescription<br /><br /> (入力)|キャプチャするオペレーティング システム イメージに関する、オプションのユーザー定義の説明。 この説明は WIM ファイルに保存されます。 この説明の最大長は 255 文字です。|  
+|OSDImageVersion<br /><br /> (入力)|キャプチャしたオペレーティング システム イメージに割り当てる、ユーザーが任意に定義したバージョン番号。 このバージョン番号は WIM ファイルに保存されます。 この値は、文字の任意の組み合わせにすることができ、最大長は 32 文字です。|  
+|OSDTargetSystemRoot<br /><br /> (入力)|参照コンピューター上にインストールされたオペレーティング システムの Windows ディレクトリへのパスを指定します。 このオペレーティング システムは Configuration Manager によるキャプチャをサポートするオペレーティング システムとして検証済みです。|  
 
-###  <a name="BKMK_CaptureUserState"></a> 사용자 상태 캡처 작업 순서 동작 변수  
- 이 동작에 대한 변수는 사용자 상태가 저장되는 폴더, USMT에 대한 명령줄 옵션, 사용자 프로필의 캡처를 제어하는 데 사용되는 구성 파일과 같이 USMT(사용자 환경 마이그레이션 도구)에서 사용되는 정보를 지정합니다.  이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [사용자 상태 캡처](task-sequence-steps.md#BKMK_CaptureUserState)를 참조하세요.  
+###  <a name="BKMK_CaptureUserState"></a> ユーザー状態のキャプチャ タスク シーケンス アクション変数  
+ このアクションの変数では、ユーザー状態を保存するフォルダー、USMT のコマンド ライン オプション、ユーザー プロファイルの制御とキャプチャに使用する構成ファイルなどの、ユーザー状態移行ツール (USMT) で使用される情報を指定します。  これらの変数に関連するタスク シーケンス ステップの詳細については、「[Capture User State](task-sequence-steps.md#BKMK_CaptureUserState)」 (ユーザー状態のキャプチャ) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDStateStorePath<br /><br /> (입력)|사용자 상태가 저장되는 폴더의 로컬 경로 이름 또는 UNC입니다. 기본값이 없습니다.|  
-|OSDMigrateAdditionalCaptureOptions<br /><br /> (입력)|사용자 상태를 캡처할 때 사용되지만 Configuration Manager 사용자 인터페이스에는 노출되지 않는 USMT(사용자 환경 마이그레이션 도구) 명령줄 옵션을 지정합니다. 추가 옵션은 자동으로 생성된 USMT 명령줄에 추가된 문자열 형식으로 지정됩니다.<br /><br /> <br /><br /> 작업 순서를 실행하기 전에 이 작업 순서 변수를 사용하여 지정된 USMT 옵션이 정확성에 대한 유효성이 검사되지 않았습니다.|  
-|OSDMigrateMode<br /><br /> (입력)|USMT에서 캡처되는 파일을 사용자 지정할 수 있습니다. 이 변수가 "Simple"로 설정된 경우 표준 USMT 구성 파일만 사용됩니다. 이 변수가 "Advanced"로 설정된 경우 작업 순서 변수 OSDMigrateConfigFiles에서 USMT가 사용하는 구성 파일을 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"Simple"**<br /><br /> **"Advanced"**|  
-|OSDMigrateConfigFiles<br /><br /> (입력)|사용자 프로필의 캡처를 제어하기 위해 사용되는 구성 파일을 지정합니다. 이 변수는 OSDMigrateMode가 "Advanced"로 설정된 경우에만 사용됩니다. 이 쉼표로 구분된 목록 값은 사용자 지정된 사용자 프로필 마이그레이션을 수행하기 위해 설정됩니다.<br /><br /> 예: miguser.xml,migsys.xml,migapps.xml|  
-|OSDMigrateContinueOnLockedFiles<br /><br /> (입력)|일부 파일을 캡처할 수 없는 경우 계속하려면 사용자 상태 캡처를 허용합니다.<br /><br /> 유효한 값은<br /><br /> **"true"** (기본값)<br /><br /> **"false"**|  
-|OSDMigrateEnableVerboseLogging<br /><br /> (입력)|USMT에 대해 자세한 정보 로깅을 사용합니다.<br /><br /> 유효한 값은<br /><br /> **"true"**<br /><br /> **"false"** (기본값)|  
-|OSDMigrateSkipEncryptedFiles<br /><br /> (입력)|암호화된 파일이 캡처되는지 여부를 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"true"**<br /><br /> **"false"** (기본값)|  
-|_OSDMigrateUsmtPackageID<br /><br /> (입력)|USMT 파일을 포함할 Configuration Manager 패키지의 패키지 ID를 지정합니다. 이 변수가 필요합니다.|  
+|OSDStateStorePath<br /><br /> (入力)|ユーザー状態を保存するフォルダーの UNC またはローカル パス名。 既定の設定はありません。|  
+|OSDMigrateAdditionalCaptureOptions<br /><br /> (入力)|ユーザー状態のキャプチャ時に使用する、Configuration Manager ユーザー インターフェイスに表示されない、ユーザー状態移行ツール (USMT) のコマンド ライン オプションを指定します。 追加のオプションは、自動生成された USMT コマンド ラインに付加される文字列の形式で指定されます。<br /><br /> <br /><br /> タスク シーケンスを実行するまで、このタスク シーケンス変数で指定される USMT オプションの正確性は検証されません。|  
+|OSDMigrateMode<br /><br /> (入力)|USMT によってキャプチャされたファイルをカスタマイズできます。 この変数を "Simple" に設定した場合、標準の USMT 構成ファイルのみ使用されます。 この変数を "Advanced" に設定した場合、タスク シーケンス変数 OSDMigrateConfigFiles により、USMT が使用する構成ファイルが指定されます。<br /><br /> 有効な値:<br /><br /> **"Simple"**<br /><br /> **"Advanced"**|  
+|OSDMigrateConfigFiles<br /><br /> (入力)|ユーザー プロファイルのキャプチャの制御に使用される構成ファイルを指定します。 この変数は、OSDMigrateMode が "Advanced" に設定されている場合のみ使用されます。 カスタマイズされたユーザー プロファイル移行を実行するためには、このカンマ区切りの一覧の値を設定します。<br /><br /> 例: miguser.xml,migsys.xml,migapps.xml|  
+|OSDMigrateContinueOnLockedFiles<br /><br /> (入力)|一部のファイルをキャプチャできない場合も、ユーザー状態のキャプチャを続行できます。<br /><br /> 有効な値:<br /><br /> **"TRUE"** (既定)<br /><br /> **"FALSE"**|  
+|OSDMigrateEnableVerboseLogging<br /><br /> (入力)|USMT の詳細ログ記録を有効にします。<br /><br /> 有効な値:<br /><br /> **"TRUE"**<br /><br /> **"FALSE"** (既定)|  
+|OSDMigrateSkipEncryptedFiles<br /><br /> (入力)|暗号化ファイルをキャプチャするかどうかを指定します。<br /><br /> 有効な値:<br /><br /> **"TRUE"**<br /><br /> **"FALSE"** (既定)|  
+|_OSDMigrateUsmtPackageID<br /><br /> (入力)|USMT ファイルを含む Configuration Manager パッケージのパッケージ ID を指定します。 この変数は必須です。|  
 
-###  <a name="BKMK_CaptureWindowsSettings"></a> Windows 설정 캡처 작업 순서 동작 변수  
- 이 동작에 대한 변수는 컴퓨터의 이름, 등록 조직 이름 및 표준 시간대 정보와 같이 특정 Windows 설정이 대상 컴퓨터로 마이그레이션되는지 여부를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [Windows 설정 캡처](task-sequence-steps.md#BKMK_CaptureWindowsSettings)를 참조하세요.  
+###  <a name="BKMK_CaptureWindowsSettings"></a> Windows 設定のキャプチャ タスク シーケンス アクション変数  
+ このアクションの変数では、コンピューター名、登録組織名、タイム ゾーン情報などの特定の Windows 設定を対象のコンピューターに移行するかどうかを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Capture Windows Settings](task-sequence-steps.md#BKMK_CaptureWindowsSettings)」 (Windows 設定のキャプチャ) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDMigrateComputerName<br /><br /> (입력)|컴퓨터 이름이 마이그레이션되는지 여부를 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"true"** (기본값)<br /><br /> **"false"**<br /><br /> 값이 "true"이면 OSDComputerName 변수가 컴퓨터의 NetBIOS 이름으로 설정됩니다.|  
-|OSDComputerName<br /><br /> (출력)|컴퓨터의 NetBIOS 이름으로 설정합니다. OSDMigrateComputerName 변수가 "true"로 설정된 경우에만 이 값이 설정됩니다.|  
-|OSDMigrateRegistrationInfo<br /><br /> (입력)|컴퓨터 사용자 및 조직 정보가 마이그레이션되는지 여부를 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"true"** (기본값)<br /><br /> **"false"**<br /><br /> 값이 "true"이면 OSDRegisteredOrgName 변수가 컴퓨터의 등록된 조직 이름으로 설정됩니다.|  
-|OSDRegisteredOrgName<br /><br /> (출력)|컴퓨터의 등록된 조직 이름으로 설정됩니다. OSDMigrateRegistrationInfo 변수가 "true"로 설정된 경우에만 이 값이 설정됩니다.|  
-|OSDMigrateTimeZone<br /><br /> (입력)|컴퓨터의 표준 시간대가 마이그레이션되는지 여부를 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"true"** (기본값)<br /><br /> **"false"**<br /><br /> 값이 "true"이면 변수 OSDTimeZone이 컴퓨터의 표준 시간대로 설정됩니다.|  
-|OSDTimeZone<br /><br /> (출력)|컴퓨터의 표준 시간대로 설정됩니다. OSDMigrateTimeZone 변수가 "true"로 설정된 경우에만 이 값이 설정됩니다.|  
+|OSDMigrateComputerName<br /><br /> (入力)|コンピューター名を移行するかどうかを指定します。<br /><br /> 有効な値:<br /><br /> **"TRUE"** (既定)<br /><br /> **"FALSE"**<br /><br /> この値が "true" の場合、変数 OSDComputerName がコンピューターの NetBIOS 名に設定されます。|  
+|OSDComputerName<br /><br /> (出力)|コンピューターの NetBIOS 名に設定します。 この値は、変数 OSDMigrateComputerName が "true" の場合のみ設定されます。|  
+|OSDMigrateRegistrationInfo<br /><br /> (入力)|コンピューターのユーザー情報と組織情報を移行するかどうかを指定します。<br /><br /> 有効な値:<br /><br /> **"TRUE"** (既定)<br /><br /> **"FALSE"**<br /><br /> この値が "true," の場合、変数 OSDRegisteredOrgName がコンピューターの登録組織名に設定されます。|  
+|OSDRegisteredOrgName<br /><br /> (出力)|コンピューターの登録組織名に設定します。 この値は、変数 OSDMigrateRegistrationInfo が "true" の場合のみ設定されます。|  
+|OSDMigrateTimeZone<br /><br /> (入力)|コンピューターのタイム ゾーンを移行するかどうかを指定します。<br /><br /> 有効な値:<br /><br /> **"TRUE"** (既定)<br /><br /> **"FALSE"**<br /><br /> この値が "true" の場合、変数 OSDTimeZone がコンピューターのタイム ゾーンに設定されます。|  
+|OSDTimeZone<br /><br /> (出力)|コンピューターのタイム ゾーンに設定します。 この値は、変数 OSDMigrateTimeZone が "true" の場合のみ設定されます。|  
 
-###  <a name="BKMK_ConnecttoNetworkFolder"></a> 네트워크 폴더에 연결 작업 순서 동작 변수  
- 이 동작에 대한 변수는 사용되는 계정 및 네트워크 폴더에 연결할 암호, 폴더의 드라이브 문자 및 폴더에 대한 경로와 같이 네트워크의 폴더에 대한 정보를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [네트워크 폴더에 연결](task-sequence-steps.md#BKMK_ConnectToNetworkFolder)을 참조하세요.  
+###  <a name="BKMK_ConnecttoNetworkFolder"></a> ネットワーク フォルダーへの接続タスク シーケンス アクション変数  
+ このアクションの変数では、ネットワーク フォルダーへの接続に使用するアカウントとパスワード、フォルダーのドライブ文字、フォルダーへのパスなどの、ネットワーク上のフォルダーに関する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Connect To Network Folder](task-sequence-steps.md#BKMK_ConnectToNetworkFolder)」 (ネットワーク フォルダーに接続) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|SMSConnectNetworkFolderAccount<br /><br /> (입력)|네트워크 공유에 연결하는 데 사용되는 관리자 계정을 지정합니다.|  
-|SMSConnectNetworkFolderDriveLetter<br /><br /> (입력)|연결할 네트워크 드라이브 문자를 지정합니다. 이 값은 선택 사항입니다. 지정하지 않으면 네트워크 연결이 드라이브 문자에 매핑되지 않습니다. 이 값을 지정하는 경우 D:에서 Z: 범위에 있는 값이어야 합니다.  또한 X:는 Windows PE 단계 중 Windows PE에서 사용하는 드라이브 문자이므로 사용하지 마세요.<br /><br /> 예:<br /><br /> **"D:"**<br /><br /> **"E:"**|  
-|SMSConnectNetworkFolderPassword<br /><br /> (입력)|네트워크 공유에 연결하는 데 사용되는 네트워크 암호를 지정합니다.|  
-|SMSConnectNetworkFolderPath<br /><br /> (입력)|연결에 대한 네트워크 경로를 지정합니다.<br /><br /> 예제:<br /><br /> **"\\\servername\sharename"**|  
+|SMSConnectNetworkFolderAccount<br /><br /> (入力)|ネットワーク共有に接続するために使用する管理者アカウントを指定します。|  
+|SMSConnectNetworkFolderDriveLetter<br /><br /> (入力)|接続先のネットワーク ドライブ文字を指定します。 この値は省略可能です。指定しない場合、ネットワーク接続はドライブ文字にマップされません。 値を指定する場合は、D: から Z: の範囲で指定する必要があります。  また、X: は使用しないでください。X: は、Windows PE 段階で Windows PE によって使用されるドライブ文字です。<br /><br /> 例:<br /><br /> **"D:"**<br /><br /> **"E:"**|  
+|SMSConnectNetworkFolderPassword<br /><br /> (入力)|ネットワーク共有に接続するために使用するネットワーク パスワードを指定します。|  
+|SMSConnectNetworkFolderPath<br /><br /> (入力)|接続に使用するネットワーク パスを指定します。<br /><br /> 例:<br /><br /> **"\\\サーバー名\共有名"**|  
 
-###  <a name="BKMK_ConvertDisk"></a> 동적 디스크로 변환 작업 순서 동작 변수  
- 이 동작에 대한 변수는 기본에서 동적 디스크로 변환할 실제 디스크의 수를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [동적 디스크로 변환](task-sequence-steps.md#BKMK_ConvertDisktoDynamic)을 참조하세요.  
+###  <a name="BKMK_ConvertDisk"></a> ディスクをダイナミックに変換タスク シーケンス アクション変数  
+ このアクションの変数では、ベーシック ディスクからダイナミック ディスクに変換する物理ディスクの番号を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Convert Disk to Dynamic](task-sequence-steps.md#BKMK_ConvertDisktoDynamic)」 (ダイナミック ディスクに変換) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDConvertDiskIndex<br /><br /> (입력)|변환되는 실제 디스크 번호를 지정합니다.|  
+|OSDConvertDiskIndex<br /><br /> (入力)|変換する物理ディスクの番号を指定します。|  
 
-###  <a name="BKMK_EnableBitLocker"></a> BitLocker 사용 작업 순서 동작 변수  
- 이 동작에 대한 변수는 대상 컴퓨터에서 BitLocker를 사용하도록 설정하기 위해 사용되는 복구 암호 및 시작 키 옵션을 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [BitLocker 사용](task-sequence-steps.md#BKMK_EnableBitLocker)을 참조하세요.  
+###  <a name="BKMK_EnableBitLocker"></a> BitLocker の有効化タスク シーケンス アクション変数  
+ このアクションの変数では、対象のコンピューターで BitLocker を有効にするために使用する、回復パスワード オプションとスタートアップ キー オプションを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Enable BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker)」 (BitLocker の有効化) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDBitLockerRecoveryPassword<br /><br /> (입력)|임의 복구 암호를 생성하는 대신 **BitLocker 사용** 작업 순서 동작은 지정된 값을 복구 암호로 사용합니다. 값은 유효한 숫자 BitLocker 복구 암호여야 합니다.|  
-|OSDBitLockerStartupKey<br /><br /> (입력)|키 관리 옵션인 **USB의 시작 키만**에 대해 임의 시작 키를 생성하는 대신 **BitLocker 사용** 작업 순서 동작은 TPM(신뢰할 수 있는 플랫폼 모듈)을 시작 키로 사용합니다. 값은 유효한 256비트 Base64로 인코딩된 BitLocker 시작 키여야 합니다.|  
+|OSDBitLockerRecoveryPassword<br /><br /> (入力)|[BitLocker の有効化 **** ] タスク シーケンス アクションは、ランダムな回復パスワードを生成する代わりに、指定された値を回復パスワードとして使用します。 有効な数値の BitLocker 回復パスワードを指定する必要があります。|  
+|OSDBitLockerStartupKey<br /><br /> (入力)|[**BitLocker の有効化**] タスク シーケンス アクションは、キー管理オプション [**USB 上のスタートアップ キーのみ** ] のランダムなスタートアップ キーを生成する代わりに、信頼されたプラットフォーム モジュール (TPM) をスタートアップ キーとして使用します。 有効な 256 ビット の Base64 エンコードされた BitLocker スタートアップ キーを指定する必要があります。|  
 
-###  <a name="BKMK_FormatPartitionDisk"></a> 디스크 포맷 및 분할 작업 순서 동작 변수  
- 이 동작에 대한 변수는 디스크 번호 및 파티션 설정의 배열과 같이 실제 디스크의 포맷 및 분할에 대한 정보를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [디스크 포맷 및 파티션 만들기](task-sequence-steps.md#BKMK_FormatandPartitionDisk)를 참조하세요.  
+###  <a name="BKMK_FormatPartitionDisk"></a> ディスクのフォーマットとパーティション作成タスク シーケンス アクション変数  
+ このアクションの変数では、ディスク番号やパーティション設定の配列などの、物理ディスクをフォーマットおよびパーティション作成するための情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Format and Partition Disk](task-sequence-steps.md#BKMK_FormatandPartitionDisk)」 (ディスクのフォーマットとパーティション作成) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDDiskIndex<br /><br /> (입력)|분할할 실제 디스크 번호를 지정합니다.|  
-|OSDDiskpartBiosCompatibilityMode<br /><br /> (입력)|특정 유형의 BIOS와의 호환성을 위해 하드 디스크를 분할할 때 캐시 정렬 최적화를 사용하지 않을지 여부를 지정합니다. 이 설정은 Windows XP 또는 Windows Server 2003 운영 체제를 배포할 때 필요할 수 있습니다. 자세한 내용은 Microsoft 기술 자료의 [문서 931760](http://go.microsoft.com/fwlink/?LinkId=134081) 및 [문서 931761](http://go.microsoft.com/fwlink/?LinkId=134082) 을 참조하세요.<br /><br /> 유효한 값은<br /><br /> **"true"**<br /><br /> **"false"** (기본값)|  
-|OSDGPTBootDisk<br /><br /> (입력)|EFI 기반 컴퓨터의 시작 디스크로 사용할 수 있도록 GPT 하드 디스크에서 EFI 파티션을 만들지 여부를 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"true"**<br /><br /> **"false"** (기본값)|  
-|OSDPartitions<br /><br /> (입력)|파티션 설정의 배열을 지정합니다. 작업 순서 환경에서 배열 변수에 액세스하려면 SDK 항목을 참조하세요.<br /><br /> 이 작업 순서 변수는 배열 변수입니다. 배열의 각 요소는 하드 디스크에서 단일 파티션에 대한 설정을 나타냅니다. 각 파티션에 대해 정의된 설정은 배열 변수 이름과 0부터 시작하는 디스크 파티션 번호 및 속성 이름을 결합하여 액세스할 수 있습니다.<br /><br /> 예를 들어 다음 변수 이름을 사용하여 이 작업 순서 동작으로 하드 디스크에 만들어질 첫 번째 파티션에 대한 속성을 정의할 수 있습니다.<br /><br /> - **OSDPartitions0Type** - 파티션 유형을 지정합니다. 필수 속성입니다. 유효한 값은 "**Primary**", "**Extended**", "**Logical**" 및 "**Hidden**"입니다.<br />-   **OSDPartitions0FileSystem** - 파티션을 포맷할 때 사용할 파일 시스템의 유형을 지정합니다. 선택적 속성입니다. 파일 시스템이 지정되지 않으면 파티션이 포맷되지 않습니다. 유효한 값은 "**FAT32**" 및 "**NTFS**"입니다.<br />-   **OSDPartitions0Bootable** - 파티션이 부팅 가능한지 여부를 지정합니다. 필수 속성입니다. 이 값이 MBR 디스크에 대해 "**TRUE**"로 설정되면 활성 파티션이 됩니다.<br />-   **OSDPartitions0QuickFormat** - 사용되는 포맷 유형을 지정합니다. 필수 속성입니다. 이 값이 "**TRUE**"로 설정되면 빠른 포맷이 수행되고 그렇지 않으면 전체 포맷이 수행됩니다.<br />-   **OSDPartitions0VolumeName** - 포맷될 때 볼륨에 할당되는 이름을 지정합니다. 이는 선택적 속성입니다.<br />-   **OSDPartitions0Size** - 파티션의 크기를 지정합니다. 단위는 **OSDPartitions0SizeUnits** 변수로 지정됩니다. 이는 선택적 속성입니다. 이 속성이 지정되지 않은 경우 남아 있는 모든 사용 가능한 공간을 사용하여 파티션이 만들어집니다.<br />-   **OSDPartitions0SizeUnits** - **OSDPartitions0Size** 작업 순서 변수를 해석할 때 사용될 단위를 지정합니다. 이는 선택적 속성입니다. 유효한 값은 "**MB**"(기본값), "**GB**" 및 "**Percent**"입니다.<br />-   **OSDPartitions0VolumeLetterVariable** - 파티션이 만들어질 때 Windows PE에서 항상 사용 가능한 다음 드라이브 문자를 사용합니다. 이 선택적 속성을 사용하여 나중에 참조하기 위해 새 드라이브 문자를 저장하는 데 사용할 다른 작업 순서 변수의 이름을 지정합니다.<br /><br /> <br /><br /> 이 작업 순서 동작으로 여러 파티션이 정의될 경우 두 번째 파티션에 대한 속성은 변수 이름의 해당 인덱스를 사용하여 정의할 수 있습니다. 예를 들어 **OSDPartitions1Type**, **OSDPartitions1FileSystem**, **OSDPartitions1Bootable**, **OSDPartitions1QuickFormat**, **OSDPartitions1VolumeName** 등입니다.|  
-|OSDPartitionStyle<br /><br /> (입력)|디스크를 분할하는 경우 사용할 파티션 스타일을 지정합니다. "**MBR**"은 마스터 부팅 레코드 파티션 스타일을 나타내고 "**GPT**"는 GUID 파티션 테이블 스타일을 나타냅니다.<br /><br /> 유효한 값은<br /><br /> **"GPT"**<br /><br /> **"MBR"**|  
+|OSDDiskIndex<br /><br /> (入力)|パーティションを作成する物理ディスク番号を指定します。|  
+|OSDDiskpartBiosCompatibilityMode<br /><br /> (入力)|特定の種類の BIOS との互換性を保つため、ハード ディスクのパーティションを作成するときに、キャッシュ整合の最適化を無効にするかどうかを指定します。 これは、Windows XP または Windows Server 2003 オペレーティング システムの展開時に必要になることがあります。 詳細については、Microsoft サポート技術情報の [記事 931760](http://go.microsoft.com/fwlink/?LinkId=134081) および [記事 931761](http://go.microsoft.com/fwlink/?LinkId=134082) を参照してください。<br /><br /> 有効な値:<br /><br /> **"TRUE"**<br /><br /> **"FALSE"** (既定)|  
+|OSDGPTBootDisk<br /><br /> (入力)|EFI ベース コンピューターで EFI パーティションをスタートアップ ディスクとして使用できるように、GPT ハード ディスクに EFI パーティションを作成するかどうかを指定します。<br /><br /> 有効な値:<br /><br /> **"TRUE"**<br /><br /> **"FALSE"** (既定)|  
+|OSDPartitions<br /><br /> (入力)|パーティション設定の配列を指定します。タスク シーケンス環境で配列変数にアクセスする方法については、SDK のトピックを参照してください。<br /><br /> このタスク シーケンス変数は、配列変数です。 配列内の各要素は、ハード ディスクの単一パーティションの設定を表します。 各パーティションに定義された設定にアクセスするには、配列変数名にゼロから始まるディスク パーティション番号とプロパティ名を結合します。<br /><br /> たとえば次の変数名は、このタスク シーケンス アクションによってハード ディスクに作成される最初のパーティションに対して、プロパティを定義するときに使用できます。<br /><br /> - **OSDPartitions0Type** - パーティションの種類を指定します。 このプロパティは必須です。 有効な値は、"**Primary**"、"**Extended**"、"**Logical**"、および "**Hidden**" です。<br />-   **OSDPartitions0FileSystem** - パーティションをフォーマットするときに使用するファイル システムの種類を指定します。 このプロパティは省略可能です。ファイル システムを指定しない場合、パーティションはフォーマットされません。 有効な値は、"**FAT32**" および "**NTFS**" です。<br />-   **OSDPartitions0Bootable** - パーティションが起動可能かどうかを指定します。 このプロパティは必須です。 MBR ディスクでこの値が "**TRUE**" に設定されると、アクティブなパーティションが作成されます。<br />-   **OSDPartitions0QuickFormat** - 使用されるフォーマットの種類を指定します。 このプロパティは必須です。 この値が "**TRUE**" に設定されると、クイック フォーマットが実行され、それ以外の場合は完全フォーマットが実行されます。<br />-   **OSDPartitions0VolumeName** - フォーマット時にボリュームに割り当てられる名前を指定します。 このプロパティは省略可能です。<br />-   **OSDPartitions0Size** - パーティションのサイズを指定します。 単位は **OSDPartitions0SizeUnits** 変数で指定します。 このプロパティは省略可能です。 このプロパティを指定しない場合、残りの空き領域すべてを使用してパーティションが作成されます。<br />-   **OSDPartitions0SizeUnits** - **OSDPartitions0Size** タスク シーケンス 変数の解釈時に使用される単位を指定します。 このプロパティは省略可能です。 有効な値は、"**MB**" (既定)、"**GB**"、および "**Percent**" です。<br />-   **OSDPartitions0VolumeLetterVariable** - パーティションのドライブ文字は、パーティションの作成時に Windows PE で次に利用可能なドライブ文字が常に使用されます。 この省略可能なプロパティを使用すると、別のタスク シーケンス変数の名前を指定し、そのシーケンス変数を新しいドライブ文字の将来使う場合に備え保存するときに使うことができます。<br /><br /> <br /><br /> このタスク シーケンス アクションで複数のパーティションが定義される場合、2 番目のパーティションのプロパティを定義するには、そのインデックスを変数名で使用します。たとえば、 **OSDPartitions1Type**、 **OSDPartitions1FileSystem**、 **OSDPartitions1Bootable**、 **OSDPartitions1QuickFormat**、 **OSDPartitions1VolumeName** などのようになります。|  
+|OSDPartitionStyle<br /><br /> (入力)|ディスクをパーティション分割するときに使用するパーティション スタイルを指定します。 "**MBR**" はマスター ブート レコードのパーティションの形式を、"**GPT**" は GUID パーティション テーブル形式を示します。<br /><br /> 有効な値:<br /><br /> **"GPT"**<br /><br /> **"MBR"**|  
 
-###  <a name="BKMK_InstallSoftwareUpdates"></a> 소프트웨어 업데이트 설치 작업 순서 동작 변수  
- 이 동작에 대한 변수는 모든 업데이트를 설치할지 아니면 필수 업데이트만 설치할지 여부를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [소프트웨어 업데이트 설치](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)를 참조하세요.  
+###  <a name="BKMK_InstallSoftwareUpdates"></a> ソフトウェアの更新のインストール タスク シーケンス アクション変数  
+ このアクションの変数では、すべての更新プログラムをインストールするのか、必須の更新プログラムのみインストールするのかを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Install Software Updates](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)」 (ソフトウェアの更新プログラムのインストール) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름<br /><br /> (입력)|설명|  
+|アクション変数名<br /><br /> (入力)|説明|  
 |----------------------------------------|-----------------|  
-|SMSInstallUpdateTarget<br /><br /> (입력)|모든 업데이트를 설치할지 아니면 필수 업데이트만 설치할지 여부를 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"모두"**<br /><br /> **"필수"**|  
+|SMSInstallUpdateTarget<br /><br /> (入力)|すべての更新プログラムをインストールするのか、必須の更新プログラムのみインストールするのかを指定します。<br /><br /> 有効な値:<br /><br /> **"All"**<br /><br /> **"Mandatory"**|  
 
-###  <a name="BKMK_JoinDomainWorkgroup"></a> 도메인 또는 작업 그룹 가입 작업 순서 동작 변수  
- 이 동작에 대한 변수는 대상 컴퓨터를 Windows 도메인 또는 작업 그룹에 가입하기 위해 필요한 정보를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [도메인 또는 작업 그룹 가입](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)을 참조하세요.  
+###  <a name="BKMK_JoinDomainWorkgroup"></a> ドメインまたはワークグループへの参加タスク シーケンス アクション変数  
+ このアクションの変数では、対象のコンピューターを Windows ドメインまたはワークグループに参加させるために必要な情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Join Domain or Workgroup](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)」 (ドメインまたはワークグループに参加) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDJoinAccount<br /><br /> (입력)|Windows 도메인에 가입하기 위해 대상 컴퓨터에서 사용되는 계정을 지정합니다. 도메인에 가입하는 경우 이 변수가 필요합니다.|  
-|OSDJoinDomainName<br /><br /> (입력)|대상 컴퓨터가 가입하는 Windows 도메인의 이름을 지정합니다. Windows 도메인 이름의 길이는 1-255자 사이여야 합니다.|  
-|OSDJoinDomainOUName<br /><br /> (입력)|대상 컴퓨터가 가입하는 OU(조직 구성 단위)의 RFC 1779 형식 이름을 지정합니다. 지정하는 경우 값에 전체 경로가 포함되어야 합니다. Windows 도메인 OU 이름의 길이는 0에서 32,767자 사이여야 합니다. **OSDJoinType** 변수가 "1"(작업 그룹에 가입)로 설정되면 이 값이 설정되지 않습니다.<br /><br /> 예:<br /><br /> **LDAP://OU=MyOu,DC=MyDom,DC=MyCompany,DC=com**|  
-|OSDJoinPassword<br /><br /> (입력)|Windows 도메인에 가입하기 위해 대상 컴퓨터에서 사용되는 네트워크 암호를 지정합니다. 변수를 지정하지 않으면 빈 암호가 시도됩니다. **OSDJoinType** 변수가 "**0**"(도메인에 가입)으로 설정된 경우 이 값이 필요합니다.|  
-|OSDJoinSkipReboot<br /><br /> (입력)|대상 컴퓨터가 도메인 또는 작업 그룹에 가입한 후 다시 시작하기를 건너뛸지 여부를 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"true"**<br /><br /> **"false"**|  
-|OSDJoinType<br /><br /> (입력)|대상 컴퓨터가 Windows 도메인 또는 작업 그룹에 가입하는지 여부를 지정합니다. 대상 컴퓨터를 Windows 도메인에 가입하려면 "**0**"을 지정합니다. 대상 컴퓨터를 작업 그룹에 가입하려면 "**1**"을 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"0"**<br /><br /> **"1"**|  
-|OSDJoinWorkgroupName<br /><br /> (입력)|대상 컴퓨터가 가입하는 작업 그룹의 이름을 지정합니다. 작업 그룹 이름은 1-32자 사이여야 합니다.<br /><br /> 예:<br /><br /> **"Accounting"**|  
+|OSDJoinAccount<br /><br /> (入力)|対象コンピューターを Windows ドメインに参加させるために使用するアカウントを指定します。 この変数はドメインに参加するときに必要になります。|  
+|OSDJoinDomainName<br /><br /> (入力)|対象コンピューターを参加させる Windows ドメインの名前を指定します。 Windows ドメイン名の長さは 1 ～ 255 文字の範囲であることが必要です。|  
+|OSDJoinDomainOUName<br /><br /> (入力)|対象コンピューターを参加させる組織単位 (OU) の RFC 1779 形式の名前を指定します。 指定する場合の値は、完全なパスを含む必要があります。 Windows ドメインの OU 名の長さは 0 ～ 32,767 文字の範囲であることが必要です。 OSDJoinType 変数が "1" (ワークグループに参加) に設定されている場合は、この値を設定しないでください。 ****<br /><br /> 例:<br /><br /> **LDAP://OU=MyOu,DC=MyDom,DC=MyCompany,DC=com**|  
+|OSDJoinPassword<br /><br /> (入力)|対象コンピューターを Windows ドメインに参加させるために使用するネットワーク パスワードを指定します。 変数が指定されていない場合は、空白のパスワードが試行されます。 **OSDJoinType** 変数が "**0**" (ドメインに参加) に設定されている場合は、この値が必要になります。|  
+|OSDJoinSkipReboot<br /><br /> (入力)|対象コンピューターがドメインまたはワークグループに参加した後、再起動をするかどうかを指定します。<br /><br /> 有効な値:<br /><br /> **"TRUE"**<br /><br /> **"FALSE"**|  
+|OSDJoinType<br /><br /> (入力)|対象コンピューターを Windows ドメインに参加させるか、ワークグループに参加させるかを指定します。 対象コンピューターを Windows ドメインに参加させる場合は、"0" を指定します。**** 対象コンピューターをワークグループに参加させる場合は、"1" を指定します。****<br /><br /> 有効な値:<br /><br /> **0**<br /><br /> **1**|  
+|OSDJoinWorkgroupName<br /><br /> (入力)|対象コンピューターを参加させるワークグループの名前を指定します。 ワークグループ名の長さは 1 ～ 32 文字の範囲であることが必要です。<br /><br /> 例:<br /><br /> **"会計"**|  
 
-###  <a name="BKMK_PrepareWindowsCapture"></a> Windows 캡처 준비 작업 순서 동작 변수  
- 이 동작에 대한 변수는 대상 컴퓨터에서 Windows 운영 체제를 캡처하는 데 사용되는 정보를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [ConfigMgr 클라이언트 캡처 준비](task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture)를 참조하세요.  
+###  <a name="BKMK_PrepareWindowsCapture"></a> Windows のキャプチャの準備タスク シーケンス アクション変数  
+ このアクションの変数は、対象コンピューターから Windows オペレーティング システムをキャプチャするのに使用する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Prepare ConfigMgr Client for Capture](task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture)」 (ConfigMgr クライアントのキャプチャの準備) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDBuildStorageDriverList<br /><br /> (입력)|Sysprep이 대용량 저장 장치 드라이버 목록을 작성하는지 여부를 지정합니다. 이 설정은 Windows XP 및 Windows Server 2003에만 적용됩니다. sysprep.inf의 [SysprepMassStorage] 섹션을 캡처할 이미지에서 지원하는 모든 대용량 저장소 드라이버의 정보로 채웁니다.<br /><br /> 유효한 값은<br /><br /> **"true"**<br /><br /> **"false"** (기본값)|  
-|OSDKeepActivation<br /><br /> (입력)|Sysprep이 제품 활성화 플래그를 다시 설정하는지 여부를 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"true"**<br /><br /> **"false"** (기본값)|  
-|OSDTargetSystemRoot<br /><br /> (출력)|참조 컴퓨터에 설치된 운영 체제의 Windows 디렉터리 경로를 지정합니다. 이 운영 체제는 Configuration Manager에서 캡처를 위해 지원되는 운영 체제로 확인됩니다.|  
+|OSDBuildStorageDriverList<br /><br /> (入力)|sysprep が大容量記憶装置のドライバー一覧を構築するかどうかを指定します。 この設定は、Windows XP および Windows Server 2003 にのみ適用されます。 これにより、sysprep.inf の [SysprepMassStorage] セクションに、キャプチャするイメージがサポートすべき大容量記憶装置のドライバーすべてに関する情報が入力されます。<br /><br /> 有効な値:<br /><br /> **"TRUE"**<br /><br /> **"FALSE"** (既定)|  
+|OSDKeepActivation<br /><br /> (入力)|sysprep がプロダクト アクティベーション フラグをリセットするかどうかを指定します。<br /><br /> 有効な値:<br /><br /> **"TRUE"**<br /><br /> **"FALSE"** (既定)|  
+|OSDTargetSystemRoot<br /><br /> (出力)|参照コンピューター上にインストールされたオペレーティング システムの Windows ディレクトリへのパスを指定します。 このオペレーティング システムは Configuration Manager によるキャプチャをサポートするオペレーティング システムとして検証済みです。|  
 
-###  <a name="BKMK_ReleaseStateStore"></a> 상태 저장소 해제 순서 동작 변수  
- 이 동작에 대한 변수는 저장된 사용자 상태를 해제하는 데 사용되는 정보를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [상태 저장소 해제](task-sequence-steps.md#BKMK_ReleaseStateStore)를 참조하세요.  
+###  <a name="BKMK_ReleaseStateStore"></a> 状態ストアのリリース シーケンス アクション変数  
+ このアクションの変数は、格納されたユーザー状態をリリースするのに使用する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Release State Store](task-sequence-steps.md#BKMK_ReleaseStateStore)」 (状態ストアのリリース) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDStateStorePath<br /><br /> (입력)|사용자 상태가 복원되는 위치의 로컬 경로 이름 또는 UNC입니다. 이 값은 **사용자 상태 캡처** 작업 순서 동작 및 **사용자 상태 복원** 작업 순서 동작 둘 다에서 사용됩니다.|  
+|OSDStateStorePath<br /><br /> (入力)|ユーザー状態の復元元となる場所への UNC またはローカル パス名。 この値は、**ユーザー状態のキャプチャ** タスク シーケンス アクションと**ユーザー状態の復元**タスク シーケンス アクションの両方で使用されます。|  
 
-###  <a name="BKMK_RequestState"></a> 상태 저장소 요청 작업 순서 동작 변수  
- 이 동작에 대한 변수는 사용자 데이터가 저장되는 상태 마이그레이션 지점에 있는 폴더와 같이 저장된 사용자 상태를 요청하는 데 사용되는 정보를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [상태 저장소 해제](../../osd/understand/task-sequence-steps.md#BKMK_ReleaseStateStore)를 참조하세요.  
+###  <a name="BKMK_RequestState"></a> 状態ストアの要求タスク シーケンス アクション変数  
+ このアクションの変数は、ユーザー データが格納されている状態移行ポイント上のフォルダーのように、格納されたユーザー状態を要求するのに使用する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Release State Store](../../osd/understand/task-sequence-steps.md#BKMK_ReleaseStateStore)」 (状態ストアのリリース) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDStateFallbackToNAA<br /><br /> (입력)|컴퓨터 계정이 상태 마이그레이션 지점에 연결되지 못하는 경우 네트워크 액세스 계정이 대체 계정으로 사용되는지 여부를 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"true"**<br /><br /> **"false"** (기본값)|  
-|OSDStateSMPRetryCount<br /><br /> (입력)|이 단계가 실패하기 전에 작업 순서 단계가 상태 마이그레이션 지점을 찾으려고 시도하는 횟수를 지정합니다. 지정된 횟수는 0에서 600 사이여야 합니다.|  
-|OSDStateSMPRetryTime<br /><br /> (입력)|작업 순서 단계가 다시 시도하기 전에 대기할 시간(초)을 지정합니다. 시간(초)은 최대 30자까지 가능합니다.|  
-|OSDStateStorePath<br /><br /> (출력)|사용자 상태가 저장되는 상태 마이그레이션 지점의 폴더에 대한 UNC 경로입니다.|  
+|OSDStateFallbackToNAA<br /><br /> (入力)|コンピューター アカウントが状態移行ポイントへの接続に失敗したときに、その代替としてネットワーク アクセス アカウントを使用するかどうかを指定します。<br /><br /> 有効な値:<br /><br /> **"TRUE"**<br /><br /> **"FALSE"** (既定)|  
+|OSDStateSMPRetryCount<br /><br /> (入力)|タスク シーケンス ステップが状態移行ポイントの検索を試行する回数を指定します。この回数を超えるとこの手順は失敗します。 回数は 0 ～ 600 の範囲で指定する必要があります。|  
+|OSDStateSMPRetryTime<br /><br /> (入力)|タスク シーケンス ステップが再試行間に待機する秒数を指定します。 最大秒数は 30 文字です。|  
+|OSDStateStorePath<br /><br /> (出力)|ユーザー状態が格納される状態移行ポイント上にあるフォルダーへの UNC パス。|  
 
-###  <a name="BKMK_RestartComputer"></a> 컴퓨터 다시 시작 작업 순서 동작 변수  
- 이 동작에 대한 변수는 대상 컴퓨터를 다시 시작하는 데 사용되는 정보를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [컴퓨터 다시 시작](task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)을 참조하세요.  
+###  <a name="BKMK_RestartComputer"></a> コンピューターの再起動タスク シーケンス アクション変数  
+ このアクションの変数は、対象コンピューターを再起動するのに使用する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Restart Computer](task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)」 (コンピューターの再起動) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|SMSRebootMessage<br /><br /> (입력)|대상 컴퓨터를 다시 시작하기 전에 사용자에게 표시할 메시지를 지정합니다. 이 변수가 설정되지 않은 경우 기본 메시지 텍스트가 표시됩니다. 지정된 메시지는 512자를 초과할 수 없습니다.<br /><br /> 예제:<br /><br /> - "이 컴퓨터가 다시 시작됩니다. 작업을 저장하세요."|  
-|SMSRebootTimeout<br /><br /> (입력)|컴퓨터가 다시 시작하기 전에 경고가 사용자에게 표시되는 시간(초)을 지정합니다. 다시 부팅 메시지를 표시하지 않으려면 0초를 지정합니다.<br /><br /> 예:<br /><br /> **"0"** (기본값)<br /><br /> **"5"**<br /><br /> **"10"**|  
+|SMSRebootMessage<br /><br /> (入力)|対象コンピューターの再起動前にユーザーに表示されるメッセージを指定します。 この変数を設定しなかった場合、既定のメッセージ テキストが表示されます。 メッセージは、512 文字以内で指定する必要があります。<br /><br /> 例:<br /><br /> "このコンピューターは再起動されます。作業中のファイルを保存してください。"|  
+|SMSRebootTimeout<br /><br /> (入力)|コンピューターが再起動される前にユーザーに警告を表示する秒数を指定します。 0 秒を指定すると、再起動されるというメッセージは表示されません。<br /><br /> 例:<br /><br /> **"0"** (既定)<br /><br /> **"5"**<br /><br /> **"10"**|  
 
-###  <a name="BKMK_RestoreUserState"></a> 사용자 상태 복원 작업 순서 동작 변수  
- 이 동작에 대한 변수는 사용자 상태가 복원되는 폴더의 경로 이름 및 로컬 컴퓨터 계정이 복원되는지 여부와 같은 대상 컴퓨터의 사용자 상태를 복원하는 데 사용되는 정보를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [사용자 상태 복원](task-sequence-steps.md#BKMK_RestoreUserState)을 참조하세요.  
+###  <a name="BKMK_RestoreUserState"></a> ユーザー状態の復元 タスク シーケンス アクション変数  
+ このアクションの変数は、ユーザー状態が復元されるフォルダーのパス名など、対象コンピューターのユーザー状態を復元するのに使用される情報を指定します。また、ローカル コンピューター アカウントを復元するかどうかも指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Restore User State](task-sequence-steps.md#BKMK_RestoreUserState)」 (ユーザー状態の復元) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDStateStorePath<br /><br /> (입력)|사용자 상태가 복원되는 폴더의 로컬 경로 이름 또는 UNC입니다.|  
-|OSDMigrateContinueOnRestore<br /><br /> (입력)|일부 파일을 복원할 수 없는 경우에도 사용자 상태 복원이 계속되도록 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"true"** (기본값)<br /><br /> **"false"**|  
-|OSDMigrateEnableVerboseLogging<br /><br /> (입력)|USMT 도구에 대해 자세한 정보 로깅을 사용합니다. 이 값은 동작에서 필요하며 "true" 또는 "false"로 설정되어야 합니다.<br /><br /> 유효한 값은<br /><br /> **"true"**<br /><br /> **"false"** (기본값)|  
-|OSDMigrateLocalAccounts<br /><br /> (입력)|로컬 컴퓨터 계정이 복원되는지 여부를 지정합니다.<br /><br /> 유효한 값은<br /><br /> **"true"**<br /><br /> **"false"** (기본값)|  
-|OSDMigrateLocalAccountPassword<br /><br /> (입력)|**OSDMigrateLocalAccounts** 변수가 "true"인 경우 이 변수는 마이그레이션되는 모든 로컬 계정에 할당되는 암호를 포함해야 합니다. 동일한 암호가 마이그레이션된 모든 로컬 계정에 할당되었기 때문에 Configuration Manager 운영 체제 배포가 아닌 일부 방법으로 나중에 변경되는 임시 암호로 간주됩니다.|  
-|OSDMigrateAdditionalRestoreOptions<br /><br /> (입력)|사용자 상태를 복원할 때 사용되는 추가 USMT(사용자 환경 마이그레이션 도구) 명령줄 옵션을 지정합니다. 추가 옵션은 자동으로 생성된 USMT 명령줄에 추가된 문자열 형식으로 지정됩니다. 작업 순서를 실행하기 전에 이 작업 순서 변수를 사용하여 지정된 USMT 옵션이 정확성에 대한 유효성이 검사되지 않았습니다.|  
-|_OSDMigrateUsmtRestorePackageID<br /><br /> (입력)|USMT 파일을 포함할 Configuration Manager 패키지의 패키지 ID를 지정합니다. 이 변수가 필요합니다.|  
+|OSDStateStorePath<br /><br /> (入力)|ユーザー状態の復元元となるフォルダーの UNC またはローカル パス名。|  
+|OSDMigrateContinueOnRestore<br /><br /> (入力)|一部のファイルを復元できなくても、ユーザー状態の復元を続行するかどうかを指定します。<br /><br /> 有効な値:<br /><br /> **"TRUE"** (既定)<br /><br /> **"FALSE"**|  
+|OSDMigrateEnableVerboseLogging<br /><br /> (入力)|USMT ツールの詳細ログ記録を有効にします。 この値は、アクションに必要で、"TRUE" または "FALSE" に設定されている必要があります。<br /><br /> 有効な値:<br /><br /> **"TRUE"**<br /><br /> **"FALSE"** (既定)|  
+|OSDMigrateLocalAccounts<br /><br /> (入力)|ローカル コンピューター アカウントを復元するかどうかを指定します。<br /><br /> 有効な値:<br /><br /> **"TRUE"**<br /><br /> **"FALSE"** (既定)|  
+|OSDMigrateLocalAccountPassword<br /><br /> (入力)|**OSDMigrateLocalAccounts** 変数が TRUE の場合、この変数には移行されたすべてのローカル アカウントに割り当てるパスワードが含まれる必要があります。 移行されたすべてのローカル アカウントに同じパスワードが割り当てられるため、このパスワードは一時的なパスワードと考え、後で Configuration Manager オペレーティング システムの展開以外の方法で変更することをお勧めします。|  
+|OSDMigrateAdditionalRestoreOptions<br /><br /> (入力)|ユーザー状態の復元時に使用する、追加のユーザー状態移行ツール (USMT) コマンド ライン オプションを指定します。 追加のオプションは、自動生成された USMT コマンド ラインに付加される文字列の形式で指定されます。 タスク シーケンスを実行するまで、このタスク シーケンス変数で指定される USMT オプションの正確性は検証されません。|  
+|_OSDMigrateUsmtRestorePackageID<br /><br /> (入力)|USMT ファイルを含む Configuration Manager パッケージのパッケージ ID を指定します。 この変数は必須です。|  
 
-###  <a name="BKMK_RunCommand"></a> 명령줄 실행 작업 순서 동작 변수  
- 이 동작에 대한 변수는 명령이 실행되는 작업 디렉터리와 같이 명령줄에서 명령을 실행하는 데 사용되는 정보를 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [명령줄 실행](task-sequence-steps.md#BKMK_RunCommandLine)을 참조하세요.  
+###  <a name="BKMK_RunCommand"></a> コマンド ラインの実行タスク シーケンス アクション変数  
+ このアクションの変数は、コマンドが実行される作業ディレクトリなど、コマンド ラインからコマンドを実行するのに使用する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine)」 (コマンド ラインの実行) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름|설명|  
+|アクション変数名|説明|  
 |--------------------------|-----------------|  
-|SMSTSDisableWow64Redirection<br /><br /> (입력)|기본적으로 64비트 운영 체제에서 실행하는 경우 운영 체제 프로그램과 DLL의 32비트 버전을 찾을 수 있도록 WOW64 파일 시스템 리디렉터를 사용하여 명령줄의 프로그램을 찾아서 실행합니다. 이 변수를 "true"로 설정하면 WOW64 파일 시스템 리디렉터가 사용하지 않도록 설정되므로 운영 체제 프로그램과 DLL의 네이티브 64비트 버전을 찾을 수 있습니다. 이 변수는 32비트 운영 체제에서 실행할 때는 아무런 영향이 없습니다.|  
-|시작 위치<br /><br /> (입력)|명령줄 동작에 대한 시작 디렉터리를 지정합니다. 지정된 디렉터리 이름은 255자를 초과할 수 없습니다.<br /><br /> 예제:<br /><br /> -   **"C:\\"**<br />-   **"%SystemRoot%"**|  
-|SMSTSRunCommandLineUserName<br /><br /> (입력)|명령줄을 실행할 계정을 지정합니다. 값은 양식 사용자 이름 또는 도메인\사용자 이름의 문자열입니다.|  
-|SMSTSRunCommandLinePassword<br /><br /> (입력)|SMSTSRunCommandLineUserName 변수에서 지정한 계정의 암호를 지정합니다.|  
+|SMSTSDisableWow64Redirection<br /><br /> (入力)|既定では、64 ビット オペレーティング システム上で実行するときは、コマンド ラインのプログラムは検索され、WOW64 ファイル システム リダイレクターを使用して実行されます。これは32 ビット バージョンのオペレーティング システムのプログラムや DLL が検出できるようにするためです。 この変数を "true" に設定すると、WOW64 ファイル システム リダイレクターの使用が無効になり、64 ビット バージョンのオペレーティング システムのプログラムや DLL が検出できます。 32 ビット オペレーティング システム上で実行している場合は、この変数は影響を及ぼしません。|  
+|WorkingDirectory<br /><br /> (入力)|コマンド ラインのアクションの開始ディレクトリを指定します。 ディレクトリ名は、255 文字以内で指定する必要があります。<br /><br /> 次に例を示します。<br /><br /> -   **"C:\\"**<br />-   **"%SystemRoot%"**|  
+|SMSTSRunCommandLineUserName<br /><br /> (入力)|コマンド ラインを実行するアカウントを指定します。 この値は、ユーザー名 または ドメイン\ユーザー名 という形式の文字列になります。|  
+|SMSTSRunCommandLinePassword<br /><br /> (入力)|SMSTSRunCommandLineUserName 変数で指定されたアカウントのパスワードを指定します。|  
 
-### <a name="set-dynamic-variables"></a>동적 변수 설정  
- 이 작업에 대한 변수는 동적 변수 설정 작업 순서 단계를 추가하면 자동으로 설정됩니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [동적 변수 설정](task-sequence-steps.md#BKMK_SetDynamicVariables)을 참조하세요.  
+### <a name="set-dynamic-variables"></a>動的変数の設定  
+ [動的変数の設定] タスク シーケンス ステップを追加すると、このアクションの変数が自動的に設定されます。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Set Dynamic Variables](task-sequence-steps.md#BKMK_SetDynamicVariables)」 (動的変数の設定) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름<br /><br /> (입력)|설명|  
+|アクション変数名<br /><br /> (入力)|説明|  
 |----------------------------------------|-----------------|  
-|_SMSTSMake|컴퓨터의 제조업체를 지정합니다.|  
-|_SMSTSModel|컴퓨터의 모델을 지정합니다.|  
-|_SMSTSMacAddresses|컴퓨터에 사용되는 MAC 주소를 지정합니다.|  
-|_SMSTSIPAddresses|컴퓨터에 사용되는 IP 주소를 지정합니다.|  
-|_SMSTSSerialNumber|컴퓨터의 일련 번호를 지정합니다.|  
-|_SMSTSAssetTag|컴퓨터에 대한 자산 태그를 지정합니다.|  
-|_SMSTSUUID|컴퓨터의 UUID를 지정합니다.|  
-|_SMSTSDefaultGateways|컴퓨터에 사용되는 기본 게이트웨이를 지정합니다.|  
+|_SMSTSMake|コンピューターのメーカーを指定します。|  
+|_SMSTSModel|コンピューターのモデルを指定します。|  
+|_SMSTSMacAddresses|コンピューターで使用される MAC アドレスを指定します。|  
+|_SMSTSIPAddresses|コンピューターで使用される IP アドレスを指定します。|  
+|_SMSTSSerialNumber|コンピューターのシリアル番号を指定します。|  
+|_SMSTSAssetTag|コンピューターの資産タグを指定します。|  
+|_SMSTSUUID|コンピューターの UUID を指定します。|  
+|_SMSTSDefaultGateways|コンピューターで使用される既定のゲートウェイを指定します。|  
 
-###  <a name="BKMK_SetupWindows"></a> Windows 및 ConfigMgr 설정 작업 순서 동작 변수  
- 이 동작에 대한 변수는 Configuration Manager 클라이언트를 설치할 때 사용되는 클라이언트 설치 속성을 지정합니다. 이러한 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [Windows 및 ConfigMgr 설정](task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr)을 참조하세요.  
+###  <a name="BKMK_SetupWindows"></a> Windows と ConfigMgr のセットアップ タスク シーケンス アクション変数  
+ このアクションの変数は、Configuration Manager クライアントをインストールするときに使用されるクライアント インストール プロパティを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Setup Windows and ConfigMgr](task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr)」 (Windows と ConfigMgr のセットアップ) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름<br /><br /> (입력)|설명|  
+|アクション変数名<br /><br /> (入力)|説明|  
 |----------------------------------------|-----------------|  
-|SMSClientInstallProperties<br /><br /> (입력)|Configuration Manager 클라이언트를 설치할 때 사용되는 클라이언트 설치 속성을 지정합니다.|  
+|SMSClientInstallProperties<br /><br /> (入力)|Configuration Manager クライアントをインストールするときに使用するクライアント インストール プロパティを指定します。|  
 
-### <a name="upgrade-operating-system"></a>운영 체제 업그레이드  
- 이 동작에 대한 변수는 Windows 10 업그레이드를 위한 설치 프로그램에 추가된 Configuration Manager 콘솔에서 사용할 수 없는 추가 명령줄 옵션을 지정합니다. 이 변수와 관련된 작업 순서 단계에 대한 자세한 내용은 [운영 체제 업그레이드](task-sequence-steps.md#BKMK_UpgradeOS)를 참조하세요.  
+### <a name="upgrade-operating-system"></a>オペレーティング システムのアップグレード  
+ このアクションの変数では、Windows 10 へのアップグレードの際にセットアップに追加されるコマンド ライン オプションを指定します。これらのオプションは Configuration Manager コンソールでは使用できません。 この変数に関連するタスク シーケンス ステップの詳細については、「[Upgrade Operating System](task-sequence-steps.md#BKMK_UpgradeOS)」 (オペレーティング システムのアップグレード) を参照してください。  
 
-#### <a name="details"></a>세부 정보  
+#### <a name="details"></a>説明  
 
-|작업 변수 이름<br /><br /> (입력)|설명|  
+|アクション変数名<br /><br /> (入力)|説明|  
 |----------------------------------------|-----------------|  
-|OSDSetupAdditionalUpgradeOptions<br /><br /> (입력)|Windows 10 업그레이드 중 설치 프로그램에 추가된 추가 명령줄 옵션을 지정합니다. 명령줄 옵션은 확인되지 않습니다. 따라서 입력하는 옵션이 정확한지 확인합니다.<br /><br /> 자세한 내용은 [Windows 설치 프로그램 명령줄 옵션](https://msdn.microsoft.com/library/windows/hardware/dn938368\(v=vs.85\).aspx)을 참조하세요.|  
+|OSDSetupAdditionalUpgradeOptions<br /><br /> (入力)|Windows 10 へのアップグレードの際にセットアップに追加されるコマンド ライン オプションを指定します。 これらのコマンド ライン オプションは検証されません。 したがって、入力したオプションが正しいことを確認してください。<br /><br /> 詳細については、「 [Windows セットアップ コマンド ライン オプション](https://msdn.microsoft.com/library/windows/hardware/dn938368\(v=vs.85\).aspx)」を参照してください。|  

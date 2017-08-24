@@ -1,6 +1,6 @@
 ---
-title: "Windows Embedded 장치에 클라이언트 배포 계획 | Microsoft 문서"
-description: "System Center Configuration Manager에서 Windows Embedded 장치에 클라이언트 배포를 계획합니다."
+title: "Windows Embedded デバイスへのクライアント展開の計画 | Microsoft Docs"
+description: "System Center Configuration Manager での Windows Embedded デバイスへのクライアント展開の計画"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -18,58 +18,58 @@ manager: angrobe
 ms.openlocfilehash: f7ef476a2ebcf0161ebb70d8a3d95f77806aa05e
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 Windows Embedded 장치에 클라이언트 배포 계획
+# <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager での Windows Embedded デバイスへのクライアント展開の計画
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-<a name="BKMK_DeployClientEmbedded"></a> Windows Embedded 장치에 System Center Configuration Manager 클라이언트가 포함되지 않은 경우 장치가 필요한 종속성을 충족하는 한 모든 클라이언트 설치 방법을 사용할 수 있습니다. Windows Embedded 장치가 쓰기 필터를 지원하는 경우 클라이언트를 설치하기 전에 이러한 필터를 사용하지 않도록 설정하고 클라이언트가 설치되어 사이트에 할당된 후에 다시 사용하도록 설정해야 합니다.  
+<a name="BKMK_DeployClientEmbedded"></a> Windows Embedded デバイスに System Center Configuration Manager クライアントが含まれていない場合、デバイスが必要な依存関係を満たしていれば、任意のクライアント インストール方法を使用できます。 Embedded デバイスで書き込みフィルターがサポートされている場合、クライアントをインストールする前にこれらのフィルターを無効にし、クライアントがインストールされ、サイトに割り当てられた後で、フィルターを再度有効にする必要があります。  
 
- 필터를 사용하지 않도록 설정할 때 필터 드라이버는 사용하지 않도록 설정하면 안 됩니다. 이러한 드라이버는 일반적으로 컴퓨터를 시작할 때 자동으로 시작됩니다. 드라이버를 사용하지 않도록 설정하면 클라이언트 설치가 차단되거나 쓰기 필터 오케스트레이션을 간섭하게 되어 클라이언트 작업이 실패합니다. 각 쓰기 필터 유형과 연결된 계속 실행되어야 하는 서비스는 다음과 같습니다.  
+ フィルターを無効にした場合は、フィルター ドライバーを無効にしないことに注意してください。 通常、これらのドライバーは、コンピューターが起動すると、自動的に開始されます。 ドライバーを無効にすると、クライアントのインストールができなくなるか、フィルターのオーケストレーションの書き込みが中断して、クライアント操作の失敗につながります。 実行し続ける必要がある各書き込みフィルターの種類に関連付けられたサービスを次に示します。  
 
-|쓰기 필터 유형|드라이버|유형|설명|  
+|書き込みフィルターの種類|ドライバー|型|説明|  
 |-----------------------|------------|----------|-----------------|  
-|EWF|EWF|커널|보호된 볼륨에서 섹터 수준 I/O 리디렉션을 구현합니다.|  
-|FBWF|FBWF|파일 시스템|보호된 볼륨에서 파일 수준 I/O 리디렉션을 구현합니다.|  
-|UWF|uwfreg|커널|UWF 레지스트리 리디렉터|  
-|UWF|uwfs|파일 시스템|UWF 파일 리디렉터|  
-|UWF|uwfvol|커널|UWF 볼륨 관리자|  
+|EWF|EWF|カーネル|保護されたボリュームに、セクターレベルの I/O リダイレクトを実装します。|  
+|FBWF|FBWF|ファイル システム|保護されたボリュームに、ファイルレベルの I/O リダイレクトを実装します。|  
+|UWF|uwfreg|カーネル|UWF レジストリ リダイレクター|  
+|UWF|uwfs|ファイル システム|UWF ファイル リダイレクター|  
+|UWF|uwfvol|カーネル|UWF ボリューム マネージャー|  
 
- 쓰기 필터는 소프트웨어를 설치하는 경우와 같은 변경을 수행할 때 Windows Embedded 장치의 운영 체제가 업데이트되는 방식을 제어합니다. 쓰기 필터가 사용하도록 설정되면 운영 체제에 대한 직접적인 변경 없이 이러한 변경 사항이 임시 오버레이로 리디렉션됩니다. 변경 사항이 오버레이에만 기록될 경우 Windows Embedded 장치가 종료될 때 손실됩니다. 그러나 쓰기 필터를 일시적으로 사용하지 않도록 설정하면 변경 사항이 영구적으로 적용되므로 Windows Embedded 장치를 다시 시작할 때마다 변경을 다시 수행하거나 소프트웨어를 다시 설치할 필요가 없습니다. 그러나 쓰기 필터를 일시적으로 사용하지 않도록 설정했다가 다시 사용하도록 설정하려면 한 번 이상 다시 시작이 필요하므로 일반적으로 업무 외 시간에 다시 시작이 이루어지도록 유지 관리 기간을 구성하여 다시 시작이 일어나는 시기를 제어하는 것이 좋습니다.  
+ 書き込みフィルターは、ソフトウェアのインストールなど、変更を行う場合に、Embedded デバイスのオペレーティング システムを更新する方法を制御します。 書き込みフィルターが有効な場合、オペレーティング システムは直接変更されず、これらの変更は一時オーバーレイにリダイレクトされます。 変更がオーバーレイに書き込まれただけの場合、Embedded デバイスのシャットダウン時に変更は失われます。 ただし、書き込みフィルターを一時的に無効にすると、Embedded デバイスが再起動するたびに再度変更を行う (またはソフトウェアを再インストールする) 必要がないように、変更を恒久的にすることができます。 書き込みフィルターを一時的に無効にして、再度有効にするには、1 回または複数回の再起動が必要になります。そのため、通常は、再起動が業務時間外になるようにメンテナンス期間を構成して、この操作の実行のタイミングを制御する必要があります。  
 
- 응용 프로그램, 작업 순서, 소프트웨어 업데이트, Endpoint Protection 클라이언트 등과 같은 소프트웨어를 배포할 때 쓰기 필터를 자동으로 비활성화한 후 다시 활성화하는 옵션을 구성할 수 있습니다. 자동 재구성이 사용되는 구성 항목을 포함하는 구성 기준은 예외가 됩니다. 이 시나리오에서 재구성은 항상 오버레이에서 수행되므로 장치가 다시 시작될 때까지만 사용 가능합니다. 재구성은 다음 평가 주기에서 다시 적용되지만 오버레이에만 적용되며 이는 다시 시작 시 삭제됩니다. Configuration Manager에서 수정 변경 내용을 커밋하도록 강제하려면 구성 기준을 배포한 다음 변경 내용을 가능한 한 빨리 커밋하도록 지원하는 다른 소프트웨어 배포를 배포하면 됩니다.  
+ アプリケーション、タスク シーケンス、ソフトウェア更新プログラム、Endpoint Protection クライアントなどのソフトウェアを展開するときに、書き込みフィルターを自動的に無効化して再度有効にするオプションを構成できます。 例外は、自動修復を使用する構成項目が含まれる構成基準です。 このシナリオでは、修復は常にオーバーレイで実行され、デバイスが再起動されるまでの間のみ使用できます。 修復は次回の評価サイクルで再度適用されますが、オーバーレイにのみ適用されるため、再起動時に消去されます。 Configuration Manager で修復の変更を強制的にコミットするには、構成基準を展開してから、変更の即時コミットをサポートする別のソフトウェア展開を展開します。  
 
- 쓰기 필터가 사용하지 않도록 설정된 경우 소프트웨어 센터를 사용하여 Windows Embedded 장치에 소프트웨어를 설치할 수 있습니다. 그러나 쓰기 필터가 사용하도록 설정된 경우 설치는 실패하고 Configuration Manager에서 응용 프로그램 설치 권한이 부족하다는 오류 메시지를 표시합니다.  
+ 書き込みフィルターが無効な場合、ソフトウェア センターを使用して Windows Embedded デバイスにソフトウェアをインストールできます。 書き込みフィルターが有効な場合、インストールは失敗し、アプリケーションをインストールするための権限が不足していることを示すエラー メッセージが Configuration Manager に表示されます。  
 
 > [!WARNING]  
->  변경 내용을 커밋하는 Configuration Manager 옵션을 선택하지 않더라도 변경 내용을 커밋하는 다른 소프트웨어 설치 또는 변경 내용이 만들어질 경우 변경 내용이 커밋될 수 있습니다. 이 시나리오에서 새 변경 내용 외에도 원래 변경 내용이 커밋됩니다.  
+>  Configuration Manager で変更をコミットするオプションを選択していない場合でも、変更をコミットする別のソフトウェアのインストール、または、変更が行われた場合に、変更がコミットされることがあります。 このシナリオでは、新しい変更に加えて、元の変更がコミットされます。  
 
- Configuration Manager에서 변경 내용을 영구적으로 적용하기 위해 쓰기 필터를 사용하지 않도록 설정하면 로컬 관리자 권한이 있는 사용자만 로그온하고 임베디드 장치를 사용할 수 있습니다. 이 기간 동안 낮은 수준의 권한을 갖는 사용자는 잠깁니다. 또한 해당 컴퓨터는 서비스되고 있으므로 사용할 수 없다는 메시지가 표시됩니다. 이 경우 변경 내용이 영구적으로 적용될 수 있는 상태에 있는 장치를 보호할 수 있습니다. 이러한 서비스 모드 잠금 동작만 고려하더라도 유지 관리 기간은 사용자가 장치에 로그온하지 않는 시간 동안으로 구성해야 합니다.  
+ Configuration Manager で、変更を恒久的にするために書き込みフィルターが無効にされた場合、Embedded デバイスにログオンして使用できるのは、ローカル管理権限を持つユーザーだけです。 この間、権限の低いユーザーはロックアウトされ、保守作業中のためコンピューターを使用できないことを示すメッセージが表示されます。 これにより、変更を恒久的に適用できる状態にある間、デバイスを保護します。この保守モードのロックアウト動作も、ユーザーがデバイスにログオンしない時間にメンテナンス期間を構成する理由の 1 つです。  
 
- Configuration Manager에서는 다음 유형의 쓰기 필터를 관리할 수 있습니다.  
+ Configuration Manager では、次の種類の書き込みフィルターの管理がサポートされています。  
 
--   FBWF(파일 기반 쓰기 필터) - 자세한 내용은 [파일 기반 쓰기 필터](http://go.microsoft.com/fwlink/?LinkID=204717)를 참조하세요.  
+-   ファイル ベースの書き込みフィルター (FBWF) - 詳細については、「[ファイル ベースの書き込みフィルター](http://go.microsoft.com/fwlink/?LinkID=204717)」を参照してください。  
 
--   EWF(강화된 쓰기 필터) RAM - 자세한 내용은 [강화된 쓰기 필터](http://go.microsoft.com/fwlink/?LinkId=204718)를 참조하세요.  
+-   拡張書き込みフィルター (EWF) - 詳細については、「[拡張書き込みフィルター](http://go.microsoft.com/fwlink/?LinkId=204718)」を参照してください。  
 
--   UWF(통합 쓰기 필터) - 자세한 내용은 [통합 쓰기 필터](http://go.microsoft.com/fwlink/?LinkId=309236)를 참조하세요.  
+-   統合書き込みフィルター (UWF) - 詳細については、「[統合書き込みフィルター](http://go.microsoft.com/fwlink/?LinkId=309236)」を参照してください。  
 
- Configuration Manager에서는 Windows Embedded 장치가 EWF RAM Reg 모드일 때 쓰기 필터 작업을 지원하지 않습니다.  
+ Configuration Manager では、Windows Embedded デバイスが EWF RAM Reg モードの場合の書き込みフィルター操作をサポートしていません。  
 
 > [!IMPORTANT]  
->  선택할 수 있는 경우 효율성과 확장성을 높이기 위해 Configuration Manager에서 FBWF(파일 기반 쓰기 필터)를 사용하는 것이 좋습니다.
+>  使用できる場合は、効率を高め、スケーラビリティを向上させるため、Configuration Manager でファイル ベースの書き込みフィルター (FBWF) を使用してください。
 >
-> **FBWF만 사용하는 장치의 경우:** 장치 다시 시작 시 클라이언트 상태 및 인벤토리 데이터를 보존하려면 다음 예외를 구성합니다.  
+> **FBWF のみを使用するデバイスの場合:** デバイスを再起動した後でクライアントの状態とインベントリ データを保持するには、次の例外を構成します。  
 >   
 >  -   CCMINSTALLDIR\\*.sdf  
 > -   CCMINSTALLDIR\ServiceData  
 > -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 >   
->  Windows Embedded 8.0 이상을 실행하는 장치는 와일드카드 문자를 포함하는 제외를 지원하지 않습니다. 이러한 장치에서는 다음 제외를 개별적으로 구성해야 합니다.  
+>  Windows Embedded 8.0 以降を実行するデバイスでは、ワイルドカード文字を含む除外はサポートされていません。 これらのデバイスでは、次の除外を個別に構成する必要があります。  
 >   
->  -   확장명이 .sdf인 CCMINSTALLDIR의 모든 파일. 일반적으로 다음과 같은 파일이 포함됩니다.  
+>  -   CCMINSTALLDIR 内のすべてのファイルには、拡張子 .sdf が付きます。通常は次のようになります。  
 >   
 >     -   UserAffinityStore.sdf  
 >     -   InventoryStore.sdf  
@@ -79,31 +79,31 @@ ms.lasthandoff: 08/07/2017
 > -   CCMINSTALLDIR\ServiceData  
 > -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 >   
-> **FBWF 및 UWF만 사용하는 장치의 경우:** 작업 그룹에서 클라이언트가 관리 지점에 대한 인증을 위해 인증서를 사용하는 경우 클라이언트가 계속 관리 지점과 통신할 수 있도록 개인 키도 제외해야 합니다. 이러한 장치에서는 다음과 같은 예외를 구성합니다.  
+> **FBWF と UWF のみを使用するデバイスの場合:** ワークグループ内のクライアントが管理ポイントへの認証に証明書を使用する場合は、クライアントが管理ポイントと引き続き通信できるように、秘密キーも除外する必要があります。 これらのデバイスでは、次の例外を構成します。  
 >   
 >  -   c:\Windows\System32\Microsoft\Protect  
 > -   c:\ProgramData\Microsoft\Crypto  
 > -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
 
- Configuration Manager에서 쓰기 필터를 사용하는 Windows Embedded 장치를 배포하고 관리하는 예제 시나리오를 보려면 [Windows Embedded 장치의 System Center Configuration Manager 클라이언트 배포 및 관리에 대한 예제 시나리오](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md)를 참조하세요.  
+ Configuration Manager で書き込みフィルターが有効になった Windows Embedded デバイスを展開および管理するシナリオの例については、「[Windows Embedded デバイスで System Center Configuration Manager クライアントを展開および管理するシナリオ例](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md)」を参照してください。  
 
- Windows Embedded 장치에 대한 이미지를 작성하고 쓰기 필터를 구성하는 방법에 대한 자세한 내용은 관련 Windows Embedded 설명서를 참조하거나 OEM에 문의하세요.  
+ Windows Embedded デバイスのイメージを作成し、書き込みフィルターを構成する方法の詳細については、Windows Embedded のドキュメントを参照するか、OEM にお問い合せください。  
 
 > [!NOTE]  
->  소프트웨어 배포 및 구성 항목에 대해 해당되는 플랫폼을 선택하면 특정 버전이 아니라 Windows Embedded 제품군이 표시됩니다. 특정 Windows Embedded 버전을 목록 상자 내 옵션에 매핑하려면 다음 목록을 참조하세요.  
+>  ソフトウェア展開と構成項目の適用可能なプラットフォームを選択すると、特定のバージョンではなく、Windows Embedded ファミリーが表示されます。 特定バージョンの Windows Embedded と、リスト ボックスのオプションの対応については、次の一覧をご覧ください。  
 >   
->  -   **Windows XP(32비트) 기반 임베디드 운영 체제** 는 다음과 같습니다.  
+>  -   **Windows XP (32-bit) ベースの Embedded オペレーティング システム** には、次のものがあります。  
 >   
 >      -   Windows XP Embedded  
 >     -   Windows Embedded for Point of Service  
 >     -   Windows Embedded Standard 2009  
 >     -   Windows Embedded POSReady 2009  
-> -   **Windows 7(32비트) 기반 임베디드 운영 체제** 는 다음과 같습니다.  
+> -   **Windows 7 (32-bit) ベースの Embedded オペレーティング システム** には、次のものがあります。  
 >   
->      -   Windows Embedded Standard 7(32비트)  
->     -   Windows Embedded POSReady 7(32비트)  
->     -   Windows ThinPC  
-> -   **Windows 7(64비트) 기반 임베디드 운영 체제** 는 다음과 같습니다.  
+>      -   Windows Embedded Standard 7 (32-bit)  
+>     -   Windows Embedded POSReady 7 (32-bit)  
+>     -   Windows の ThinPC  
+> -   **Windows 7 (64 ビット) ベースの Embedded オペレーティング システム** には、次のものがあります。  
 >   
->      -   Windows Embedded Standard 7(64비트)  
->     -   Windows Embedded POSReady 7(64비트)
+>      -   Windows Embedded Standard 7 (64 ビット)  
+>     -   Windows Embedded POSReady 7 (64 ビット)

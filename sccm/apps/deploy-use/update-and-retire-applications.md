@@ -1,6 +1,6 @@
 ---
-title: "응용 프로그램 업데이트 및 사용 중지 | Microsoft 문서"
-description: "System Center Configuration Manager를 사용하여 배포된 응용 프로그램을 수정, 대체 또는 제거합니다."
+title: "アプリケーションの更新とインベントリからの削除 | Microsoft Docs"
+description: "System Center Configuration Manager を使用して、展開済みのアプリケーションを、改訂、置き換え、またはアンインストールします。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,24 +17,24 @@ manager: angrobe
 ms.openlocfilehash: 805e04c447747b4d12350b692880dbc005bd7168
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="update-and-retire-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager에서 응용 프로그램 업데이트 및 사용 중지
+# <a name="update-and-retire-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager でのアプリケーションの更新とインベントリからの削除
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
 
-나중에 응용 프로그램을 변경하거나, 응용 프로그램을 제거하거나, 이미 배포된 응용 프로그램을 새 응용 프로그램으로 대체할 가능성이 큽니다. System Center Configuration Manager는 응용 프로그램 업데이트 및 사용 중지에 도움이 되는 다음 기능을 제공합니다.  
+いずれはアプリケーションに変更を加えたり、アンインストールしたり、既に展開されているアプリケーションを新しいアプリケーションに置き換えたりすることが必要になる可能性があります。 System Center Configuration Manager では、アプリケーションの更新とインベントリからの削除に役立つ、以下の機能が提供されます。  
 
--   **응용 프로그램 수정**. 응용 프로그램 또는 배포 유형을 변경하면 Configuration Manager에서 이러한 변경 내용의 기록을 유지 관리합니다. 언제든지 응용 프로그램을 이전 수정 버전으로 되돌릴 수 있습니다. 또한 각 수정 버전의 속성을 확인하고 이전의 응용 프로그램 수정 버전을 복원하거나, 이전 수정 버전을 삭제할 수 있습니다.  
+-   **アプリケーションの改訂**。 アプリケーションや展開の種類を変更するときに、Configuration Manager は変更の履歴を保持します。 いつでも以前のリビジョンにアプリケーションを戻すことができます。 プロパティの表示、旧リビジョンのアプリケーションの復元、または旧リビジョンの削除を行うこともできます。  
 
-  자세한 내용은 [응용 프로그램 수정 버전](revise-and-supersede-applications.md#application-revisions)을 참조하세요.  
+  詳細については、「[アプリケーションのリビジョン](revise-and-supersede-applications.md#application-revisions)」を参照してください。  
 
--   **응용 프로그램 대체**. 교체 관계를 사용하여 기존 응용 프로그램을 업그레이드하거나 대체할 수 있습니다. 응용 프로그램을 교체할 때는 교체되는 응용 프로그램의 배포 유형을 대체할 새 배포 유형을 지정할 수 있습니다. 또한 대체 응용 프로그램을 설치하기 전에 대체 대상 응용 프로그램을 업그레이드할지 아니면 제거할지를 설정할 수 있습니다.  
+-   **アプリケーションの置き換え**。 置き換えの関係を使用して、既存のアプリケーションをアップグレードするか置き換えることができます。 アプリケーションを置き換える場合は、置換対象のアプリケーションの展開の種類を置き換える新しい展開の種類を指定できます。 また、既存のものを置き換えるアプリケーションがインストールされる前に、新しいもので置き換えられるアプリケーションをアップグレードするかアンインストールするかを設定することもできます。  
 
-  자세한 내용은 [응용 프로그램 대체](revise-and-supersede-applications.md#application-supersedence)를 참조하세요.  
+  詳細については、「[アプリケーションの置き換え](revise-and-supersede-applications.md#application-supersedence)」を参照してください。  
 
--   **응용 프로그램 제거**. Configuration Manager를 사용하면 쉽게 응용 프로그램을 제거할 수 있습니다. 이 작업은 응용 프로그램 또는 장치 사용자의 개입 없이 자동으로 수행됩니다.  
+-   **アプリケーションのアンインストール**。 Configuration Manager では簡単にアプリケーションをアンインストールできます。 これは、アプリケーションまたはデバイスのユーザーが操作を一切行うことなく、自動実行できます。  
 
-  자세한 내용은 [응용 프로그램 제거](uninstall-applications.md)를 참조하세요.  
+  詳細については、「[アプリケーションのアンインストール](uninstall-applications.md)」を参照してください。  

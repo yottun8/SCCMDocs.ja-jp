@@ -1,5 +1,5 @@
 ---
-title: "보고 | Microsoft 문서"
+title: "レポート | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,24 +17,24 @@ manager: angrobe
 ms.openlocfilehash: cebc48180144ae0d711ff09d16be7c37ec237cfa
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 보고
+# <a name="reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager のレポート
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager의 보고는 Configuration Manager 콘솔에서 Microsoft SQL Server Reporting Services의 고급 보고 기능을 사용하는 데 도움이 되는 일련의 도구와 리소스를 제공합니다.  
+System Center Configuration Manager のレポート機能には、Configuration Manager コンソールで Microsoft SQL Server Reporting Services のレポート機能を使用するための一連のツールとリソースが搭載されています。  
 
-## <a name="reporting-topics"></a>보고 항목  
- 다음 항목은 Configuration Manager에서 보고를 관리하는 데 도움이 됩니다.  
+## <a name="reporting-topics"></a>レポートに関するトピック  
+ 次のトピックは、Configuration Manager のレポートの管理において役立ちます。  
 
--   [보고 소개](introduction-to-reporting.md)  
+-   [レポートの概要](introduction-to-reporting.md)  
 
--   [보고 계획](planning-for-reporting.md)  
+-   [レポートの計画](planning-for-reporting.md)  
 
--   [보고 구성](configuring-reporting.md)  
+-   [レポートの構成](configuring-reporting.md)  
 
--   [보고 작업 및 유지 관리](operations-and-maintenance-for-reporting.md)  
+-   [レポートの操作とメンテナンス](operations-and-maintenance-for-reporting.md)  
 
--   [보고에 대한 보안 및 개인 정보](security-and-privacy-for-reporting.md)  
+-   [レポートのセキュリティとプライバシー](security-and-privacy-for-reporting.md)  

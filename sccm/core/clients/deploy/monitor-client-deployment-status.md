@@ -1,6 +1,6 @@
 ---
-title: "클라이언트 배포 상태 모니터링 | Microsoft 문서"
-description: "System Center Configuration Manager에서 클라이언트 배포 상태를 모니터링합니다."
+title: "クライアントの展開ステータスを監視する | Microsoft Docs"
+description: "System Center Configuration Manager でクライアントの展開ステータスを監視します。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -18,47 +18,47 @@ manager: angrobe
 ms.openlocfilehash: 3d9d02d8c56aea17e563112f92173c2b56781da6
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-monitor-client-deployment-status-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 클라이언트 배포 상태를 모니터링하는 방법
+# <a name="how-to-monitor-client-deployment-status-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアントの展開ステータスを監視する方法
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-사이트 전체에 클라이언트를 배포하는 작업은 시간이 걸리며 일부 설치는 처음에 성공하지 못합니다. System Center Configuration Manager 콘솔은 실시간으로 클라이언트 배포 상태를 보고하여 컬렉션 내에서 클라이언트 배포를 파악할 수 있는 방법을 제공합니다.  
+サイト全体にクライアントを展開するには時間がかかります。初回インストールが失敗することがあります。 System Center Configuration Manager コンソールには、クライアント展開ステータスをリアルタイムで報告することによって、コレクション内のクライアントの展開を監視する方法が用意されています。  
 
 > [!NOTE]  
->  클라이언트 배포를 모니터링하는 가장 신뢰할 수 있는 최상의 방법은 Configuration Manager 콘솔을 사용하는 것입니다(이 문서에 설명되어 있음). 콘솔에 있는 **모니터링** 작업 영역의 클라이언트 상태 섹션에서 **클라이언트 배포** 상태를 정확하게 그리고 실시간으로 제공합니다. Windows Server 또는 System Center Operations Manager에서 서버 관리자와 같은 다른 도구로 클라이언트 배포를 모니터링할 수 있지만 일반적인 클라이언트 설치 작업에서 경보를 표시할 수 있습니다. 클라이언트 설치 프로그램(CCMSetup.exe)이 다양한 환경에서 실행되는 방식 때문에 이와 같은 다른 도구에서 클라이언트 배포의 상태를 정확하게 반영하지 않는 거짓 경보 및 경고를 생성할 수 있습니다.  
+>  クライアントの展開を監視するのに最も確実で最善の方法は、Configuration Manager コンソールを (この記事に説明されているとおりに) 使用することです。 コンソールの **[監視]** ワークスペースの **[クライアント ステータス]** セクションに、クライアントの展開ステータスが正確にリアルタイムで表示されます。 Windows Server のサーバー マネージャーや System Center Operations Manager といった他のツールを使用してクライアントの展開を監視することはできますが、通常のクライアント インストールのアクティビティからアラームを受信する可能性があります。 クライアントのインストール プログラム (CCMSetup.exe) がさまざまな環境でどのように実行されるかによって、クライアントの展開の状態を正確に反映していない誤ったアラームと警告がこれらの他のツールによって生成されることがあります。  
 
- 콘솔의 **모니터링** 작업 영역에서, 지정된 컬렉션 내에서 수행되는 클라이언트 배포에 대해 다음과 같은 상태를 모니터링할 수 있습니다.  
+ 指定したコレクション内で実行されているクライアントの展開について、コンソールの **[監視]** ワークスペースで次のステータスを監視することができます。  
 
--   규정  
+-   [準拠]  
 
--   진행 중  
+-   進行中  
 
--   호환되지 않음  
+-   非対応  
 
--   실패  
+-   失敗  
 
--   알 수 없음  
+-   不明  
 
- Configuration Manager에서는 프로덕션 클라이언트 또는 사전 프로덕션 클라이언트에 대한 배포를 보고합니다. 또한 Configuration Manager 콘솔에서는 지정된 기간 동안 실패한 클라이언트 배포의 차트를 제공하므로 배포 문제를 해결하기 위해 수행하는 작업이 시간이 지남에 따라 배포 성공을 개선하는지 여부를 알 수 있습니다.  
+ Configuration Manager は、実稼働クライアントや実稼働前クライアント展開について報告します。 Configuration Manager コンソールには、ユーザーが展開の問題を解決するために実行するアクションによって展開の成功率が徐々に改善しているかどうかを確認できるように、指定期間に失敗したクライアントの展開のグラフも表示されます。  
 
-## <a name="to-monitor-client-deployments"></a>클라이언트 배포를 모니터링하려면  
+## <a name="to-monitor-client-deployments"></a>クライアントの展開を監視するには  
 
--   Configuration Manager 콘솔에서 **모니터링** > **클라이언트 상태**를 클릭합니다.  
+-   Configuration Manager コンソールで、**[監視]** > **[クライアントのステータス]** の順にクリックします。  
 
--   모니터링하려는 클라이언트의 버전에 따라 **프로덕션 클라이언트 배포** 또는 **사전 프로덕션 클라이언트 배포**를 클릭합니다.  
+-   監視するクライアントのバージョンに応じて、**[実稼働クライアント展開]** または **[実稼働前クライアント展開]** をクリックします。  
 
--   클라이언트 배포 상태 및 클라이언트 배포 실패에 대한 차트를 검토합니다.  
+-   クライアント展開ステータスとクライアント展開エラーのグラフを確認します。  
 
--   보고서의 범위를 변경하려면 **찾아보기...**를 클릭하고 다른 컬렉션을 선택합니다.  
+-   レポートのスコープを変更する場合は、**[参照...]** をクリックして、別のコレクションを選択します。  
 
- 사전 프로덕션 클라이언트 배포에 대한 자세한 내용은 [System Center Configuration Manager의 사전 프로덕션 컬렉션에서 클라이언트 업그레이드를 테스트하는 방법](../../../core/clients/manage/upgrade/test-client-upgrades.md)을 참조하세요.
+ 実稼働前クライアント展開の詳細については、「[System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストする方法](../../../core/clients/manage/upgrade/test-client-upgrades.md)」を参照してください。
 
  > [!NOTE]
- > 사전 프로덕션 컬렉션의 사이트 시스템 역할을 호스팅하는 컴퓨터의 배포 상태는 클라이언트가 배포된 경우에도 **호환되지 않음**으로 보고될 수 있습니다. 클라이언트 수준을 프로덕션에 올리면 배포 상태가 올바르게 나타납니다.   
+ > 実稼働前コレクションでサイト システムの役割をホストしているコンピューターの展開ステータスは、クライアントが正常に展開された場合でも、**非対応**と報告されることがあります。 クライアントを実稼働環境に昇格すると、展開のステータスが正しく報告されます。   
 
- 배포된 클라이언트 상태를 모니터링하려면 [System Center Configuration Manager에서 클라이언트를 모니터링하는 방법](../../../core/clients/manage/monitor-clients.md)을 참조하세요.  
+ 展開されたクライアントのステータスを監視するには、「[System Center Configuration Manager でクライアントを監視する方法](../../../core/clients/manage/monitor-clients.md)」を参照してください。  
 
- Configuration Manager 보고서를 사용하면 사이트 내 클라이언트의 상태에 대해 더 많은 정보를 확인할 수 있습니다. 보고서 실행 방법에 대한 자세한 내용은 [System Center Configuration Manager의 보고 기능](../../../core/servers/manage/reporting.md)을 참조하세요.  
+ Configuration Manager レポートで、サイトのクライアント ステータスについての追加情報を確認できます。 レポートの実行方法の詳細については、「[System Center Configuration Manager のレポート](../../../core/servers/manage/reporting.md)」を参照してください。  

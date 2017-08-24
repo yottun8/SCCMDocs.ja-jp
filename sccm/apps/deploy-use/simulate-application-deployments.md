@@ -1,6 +1,6 @@
 ---
-title: "응용 프로그램 배포 시뮬레이트 | Microsoft 문서"
-description: "응용 프로그램을 설치하지 않고 배포 유형에 대한 검색 방법, 요구 사항 및 종속성을 평가합니다."
+title: "アプリケーション展開のシミュレーション | Microsoft Docs"
+description: "アプリケーションをインストールすることなく、展開の種類に関する検出方法、要件、および依存関係を評価します。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,39 +18,39 @@ manager: angrobe
 ms.openlocfilehash: b06539ded21eac71dda7da89dae96fda7a801260
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="simulate-application-deployments-with-system-center-configuration-manager"></a>System Center Configuration Manager에서 응용 프로그램 배포 시뮬레이트
+# <a name="simulate-application-deployments-with-system-center-configuration-manager"></a>System Center Configuration Manager でアプリケーションの展開をシミュレートする
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-시뮬레이트된 배포를 사용하면 응용 프로그램을 설치하거나 제거하지 않고 응용 프로그램 배포를 테스트할 수 있습니다. 시뮬레이트된 배포는 배포 유형의 검색 방법, 요구 사항 및 종속성을 평가합니다. 결과는 **모니터링** 작업 영역의 **배포** 노드에 보고됩니다. System Center Configuration Manager(Configuration Manager)에서 응용 프로그램 배포를 시뮬레이트하려면 이 항목의 절차를 따르세요.  
+アプリケーションをインストールまたはアンインストールしないでアプリケーションの展開をテストするには、シミュレートされた展開を使用できます。 シミュレートされた展開は、展開の種類に関する検出方法、要件、および依存関係を評価します。 結果は、**[監視]** ワークスペースの **[展開]** ノードでレポートされます。 System Center Configuration Manager (Configuration Manager) でアプリケーションの展開をシミュレーションするときは、このトピックの手順を使用します。  
 
 > [!NOTE]  
-> 시뮬레이트된 배포는 모바일 장치 컬렉션에 대해 사용할 수 없습니다.  
+> モバイル デバイスのコレクションには、展開シミュレーションを使用できません。  
 >   
-> 배포 용도가 **제거** 인 응용 프로그램은 동일한 응용 프로그램의 시뮬레이트된 배포가 활성화된 경우 배포할 수 없습니다.  
+> アプリケーションの展開シミュレーションがアクティブな場合は、展開目的が [アンインストール] のアプリケーション展開を行うことはできません。 ****  
 
-## <a name="configure-a-simulated-application-deployment"></a>시뮬레이트된 응용 프로그램 배포 구성
+## <a name="configure-a-simulated-application-deployment"></a>シミュレートされたアプリケーションの展開を構成する
 
-1.  Configuration Manager 콘솔에서 다음 중 하나를 선택합니다.  
-    -   사용자 컬렉션  
-    -   장치 컬렉션  
-    -   Configuration Manager 응용 프로그램.  
+1.  Configuration Manager コンソールで、次のいずれかを選択します。  
+    -   ユーザーのコレクション  
+    -   デバイスのコレクション  
+    -   Configuration Manager アプリケーション  
 
-2.  **홈** 탭의 **배포** 그룹에서 **배포 시뮬레이트**를 선택합니다.  
+2.  **[ホーム]** タブの **[展開]** グループで、**[展開のシミュレーション]** を選択します。  
 
-3.  응용 프로그램 배포 시뮬레이트 마법사에서 시뮬레이트된 배포에 대한 다음 세부 정보를 설정합니다.  
+3.  アプリケーション展開のシミュレーション ウィザードで、シミュレートされた展開に次の詳細を設定します。  
 
-    -   **응용 프로그램**. **찾아보기**를 선택한 다음 시뮬레이트된 배포를 만들려는 응용 프로그램을 선택합니다.  
+    -   **[アプリケーション]**。 **[参照]** を選択し、展開のシミュレーションを作成するアプリケーションを選択します。  
 
-    -   **컬렉션**. **찾아보기**를 선택한 다음 시뮬레이트된 배포에 사용하려는 컬렉션을 선택합니다.  
+    -   **[コレクション]**。 **[参照]** を選択し、シミュレーションされた展開に使うコレクションを選択します。  
 
-    -   **작업**. 드롭다운 목록에서, 선택한 응용 프로그램의 설치 또는 제거 중 무엇을 시뮬레이트할지 선택합니다.  
+    -   **[操作]**。 ドロップダウン リストから、選択したアプリケーションのインストールをシミュレーションするか、アンインストールをシミュレーションするかを選択します。  
 
-    -   **사용자 로그인 여부에 상관없이 자동으로 배포**. 이 옵션을 선택한 경우 클라이언트에서 로그인 여부에 상관없이 시뮬레이트된 배포를 평가합니다.  
+    -   **[ユーザーのログインに関係なく自動的に展開する]**。 このオプションをオンにすると、クライアントがログインしているかどうかにかかわらず、クライアントはシミュレーションされた展開を評価します。  
 
-4.  **다음**을 클릭하여 **요약** 페이지에서 정보를 검토한 다음 마법사를 완료하여 시뮬레이트된 응용 프로그램 배포를 만듭니다.  
+4.  **[次へ]** をクリックし、**[概要]** ページで情報を確認して、ウィザードを終了し、シミュレーションされたアプリケーション展開を作成します。  
 
-5.  시뮬레이트된 응용 프로그램은 **모니터링** 작업 영역의 **배포** 노드에 **시뮬레이트** 용도로 나타납니다. 응용 프로그램 배포를 모니터링하는 방법에 대한 자세한 내용은 [System Center Configuration Manager 콘솔에서 응용 프로그램 모니터링](../../apps/deploy-use/monitor-applications-from-the-console.md)을 참조하세요.  
+5.  シミュレーションされるアプリケーションは、**[監視]** ワークスペースの **[展開]** ノードに、**[シミュレート]** の目的で表示されます。 アプリケーション展開の監視方法の詳細については、「[Configuration Manager でのアプリケーションの監視方法](../../apps/deploy-use/monitor-applications-from-the-console.md)」を参照してください。  

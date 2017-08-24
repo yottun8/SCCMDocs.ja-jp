@@ -1,6 +1,6 @@
 ---
-title: "macOS 클라이언트 업그레이드 - Configuration Manager | Microsoft 문서"
-description: "System Center Configuration Manager에서 Mac 컴퓨터용 클라이언트를 업그레이드합니다."
+title: "macOS クライアントのアップグレード - Configuration Manager | Microsoft Docs"
+description: "System Center Configuration Manager で Mac コンピューター上のクライアントをアップグレードします。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -17,60 +17,60 @@ manager: angrobe
 ms.openlocfilehash: 502116b66fc14914ca0606ae416e82202824de7a
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 Mac 컴퓨터의 클라이언트를 업그레이드하는 방법
+# <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager で Mac コンピューター上のクライアントをアップグレードする方法
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 응용 프로그램을 사용하여 Mac 컴퓨터용 클라이언트를 업그레이드하려면 아래에 설명된 개략적인 단계를 따르세요. 또는, Mac 클라이언트 설치 파일을 다운로드하고 공유 네트워크 위치나 Mac 컴퓨터의 로컬 폴더에 복사한 후 사용자에게 수동으로 설치하도록 지시할 수 있습니다.  
+System Center Configuration Manager アプリケーションを使用して Mac コンピューター用のクライアントをアップグレードするには、次に説明する基本的な手順に従います。 または、Mac クライアントのインストール ファイルをダウンロードし、共有のネットワーク フォルダーまたは Mac コンピューターのローカル フォルダーにコピーして、手動でインストールするようにユーザーに指示することもできます。  
 
 > [!NOTE]  
->  이러한 단계를 수행하기 전에 Mac 컴퓨터가 필수 조건을 충족해야 합니다. [Mac 컴퓨터에 대해 지원되는 운영 체제](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers)를 참조하세요.  
+>  これらの手順を実行する前に、Mac コンピューターが前提条件を満たしていることをご確認ください。 「[Mac コンピューターでサポートされるオペレーティング システム](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers)」を参照してください。  
 
-## <a name="step-1-download-the-latest-mac-client-installation-file-from-the-microsoft-download-center"></a>1단계: Microsoft 다운로드 센터에서 최신 Mac 클라이언트 설치 파일 다운로드  
- Configuration Manager용 Mac 클라이언트는 Configuration Manager 설치 미디어에 제공되지 않으므로 Microsoft 다운로드 센터에서 다운로드해야 합니다. Mac 클라이언트 설치 파일은 ConfigmgrMacClient.msi라는 Windows Installer 파일에 포함되어 있습니다.  
+## <a name="step-1-download-the-latest-mac-client-installation-file-from-the-microsoft-download-center"></a>手順 1: Microsoft ダウンロード センターから最新の Mac クライアント インストール ファイルをダウンロードする  
+ Configuration Manager 用の Mac クライアントは、Configuration Manager インストール メディアに含まれていません。Microsoft ダウンロード センターからダウンロードする必要があります。 Mac クライアントのインストール ファイルは、ConfigmgrMacClient.msi という Windows インストーラー ファイルに含まれています。  
 
- [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/p/?LinkId=525184)에서 다운로드할 수 있습니다.  
+ このファイルは、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/p/?LinkId=525184)からダウンロードできます。  
 
-## <a name="step-2-run-the-downloaded-installation-file-to-create-the-mac-client-installation-file"></a>2단계: 다운로드한 설치 파일을 실행하여 Mac 클라이언트 설치 파일 만들기  
- Windows를 실행하는 컴퓨터에서, 다운로드한 **ConfigmgrMacClient.msi** 를 실행하여 **Macclient.dmg**라는 Mac 클라이언트 설치 파일의 압축을 풉니다. 기본적으로 이 파일의 압축을 풀면 Windows 컴퓨터의 **C:\Program Files (x86)\Microsoft\System Center 2012 Configuration Manager Mac Client** 폴더에 위치합니다.  
+## <a name="step-2-run-the-downloaded-installation-file-to-create-the-mac-client-installation-file"></a>手順 2: ダウンロードしたインストール ファイルを実行して Mac クライアント インストール ファイルを作成する  
+ Windows を実行するコンピューターで、ダウンロードした **ConfigmgrMacClient.msi** を実行して、 **Macclient.dmg**という Mac クライアント インストール ファイルをアンパックします。 このファイルは、Windows コンピューターの既定で **C:\Program Files (x86)\Microsoft\System Center 2012 Configuration Manager Mac Client** フォルダーにアンパックされます。  
 
-## <a name="step-3-extract-the-client-installation-files"></a>3단계: 클라이언트 설치 파일 추출  
- Macclient.dmg 파일을 네트워크 공유 위치나 Mac 컴퓨터의 로컬 폴더에 복사합니다. 그런 다음 Mac 컴퓨터에서 Macclient.dmg 파일을 탑재하고 연 후 파일을 Mac 컴퓨터의 폴더에 복사합니다.  
+## <a name="step-3-extract-the-client-installation-files"></a>手順 3: クライアント インストール ファイルを抽出する  
+ Macclient.dmg ファイルをネットワーク共有または Mac コンピューターのローカル フォルダーにコピーします。 次に、Mac コンピューターから、Macclient.dmg ファイルをマウントして開き、Mac コンピューターのフォルダーにコピーします。  
 
-## <a name="step-4-create-a-cmmac-file-that-can-be-used-to-create-an-application"></a>4단계: 응용 프로그램을 만드는 데 사용할 수 있는 .cmmac 파일 만들기  
+## <a name="step-4-create-a-cmmac-file-that-can-be-used-to-create-an-application"></a>手順 4: アプリケーションの作成に使用できる .cmmac ファイルを作成する  
 
-1.  Mac 클라이언트 설치 파일의 **Tools** 폴더에 있는 **CMAppUtil** 도구를 사용하여 클라이언트 설치 패키지로부터 .cmmac 파일을 만듭니다. 이 파일은 Configuration Manager 응용 프로그램을 만드는 데 사용됩니다.  
+1.  **CMAppUtil** ツール (Mac クライアント インストール ファイルの **Tools** フォルダーにあります) を使用して、クライアント インストール パッケージから .cmmac ファイルを作成します。 このファイルは Configuration Manager アプリケーションの作成に使用されます。  
 
-2.  Configuration Manager 콘솔을 실행하는 컴퓨터에서 사용할 수 있는 위치로 새 **CMClient.pkg.cmmac** 파일을 복사합니다.  
+2.  新しいファイル **CMClient.pkg.cmmac** を、Configuration Manager コンソールを実行しているコンピューターから使用できる場所にコピーします。  
 
- 자세한 내용은 [Mac 컴퓨터용 응용 프로그램을 만들어 배포하기 위한 보충 절차](/sccm/apps/get-started/creating-mac-computer-applications#supplemental-procedures-to-create-and-deploy-applications-for-mac-computers)를 참조하세요.  
+ 詳細については、「[Mac コンピューターのアプリケーションを作成および展開するための補足手順](/sccm/apps/get-started/creating-mac-computer-applications#supplemental-procedures-to-create-and-deploy-applications-for-mac-computers)」を参照してください。  
 
-## <a name="step-5-create-and-deploy-an-application-containing-the-mac-client-files"></a>**5단계:** Mac 클라이언트 파일을 포함하는 응용 프로그램을 만들어 배포  
+## <a name="step-5-create-and-deploy-an-application-containing-the-mac-client-files"></a>**手順 5:** Mac クライアント ファイルを含むアプリケーションを作成および展開する  
 
-1.  Configuration Manager 콘솔에서 클라이언트 설치 파일이 포함된 **CMClient.pkg.cmmac** 파일에서 응용 프로그램을 만듭니다.  
+1.  Configuration Manager コンソールで、クライアント インストール ファイルを含む **CMClient.pkg.cmmac** ファイルからアプリケーションを作成します。  
 
-2.  이 응용 프로그램을 계층 내의 Mac 컴퓨터에 배포합니다.  
+2.  このアプリケーションを階層内の Mac コンピューターに展開します。  
 
- 자세한 내용은 [System Center Configuration Manager에서 Mac 컴퓨터 응용 프로그램 만들기](../../../../apps/get-started/creating-mac-computer-applications.md)를 참조하세요.  
+ 詳細については、「[System Center Configuration Manager での Mac コンピューター アプリケーションの作成](../../../../apps/get-started/creating-mac-computer-applications.md)」を参照してください。  
 
-## <a name="step-6-users-install-the-latest-client"></a>6단계: 사용자가 최신 클라이언트 설치  
- Mac 클라이언트 사용자에게 Configuration Manager 클라이언트의 업데이트를 사용할 수 있으며 설치해야 한다는 메시지가 표시됩니다. 클라이언트를 설치한 사용자는 Mac 컴퓨터를 다시 시작해야 합니다.  
+## <a name="step-6-users-install-the-latest-client"></a>手順 6: ユーザーが最新のクライアントをインストールする  
+ Mac クライアントのユーザーに、Configuration Manager クライアントの更新プログラムを使用可能であり、インストールする必要がある、というメッセージが表示されます。 ユーザーは、クライアントをインストールした後に Mac コンピューターを再起動する必要があります。  
 
- 컴퓨터를 다시 시작한 후 컴퓨터 등록 마법사가 자동으로 실행되어 새 사용자 인증서를 요청합니다.  
+ コンピューターを再起動すると、コンピューターの登録ウィザードが自動的に実行され、新しいユーザー証明書が要求されます。  
 
- Configuration Manager 등록을 사용하지 않고 Configuration Manager와 독립적으로 클라이언트 인증서를 설치하는 경우에는 [업그레이드된 클라이언트가 기존 인증서를 사용하도록 구성](#BKMK_UpgradingClient_MachineEnrollment)을 참조하세요.  
+ Configuration Manager の登録を使用せず、Configuration Manager とは独立したクライアント証明書をインストールする場合は、「[アップグレードしたクライアントが既存の証明書を使用するように構成する](#BKMK_UpgradingClient_MachineEnrollment)」を参照してください。  
 
 ##  <a name="BKMK_UpgradingClient_MachineEnrollment"></a> Configure the upgraded client to use an existing certificate  
- 다음 절차를 실행하여 컴퓨터 등록 마법사가 실행되는 것을 방지하고 업그레이드된 클라이언트가 기존 클라이언트 인증서를 사용하도록 구성합니다.  
+ 次の手順に従って、コンピューターの登録ウィザードの実行を回避し、アップグレードしたクライアントが既存のクライアント証明書を使用するように構成します。  
 
--   Configuration Manager 콘솔에서 **Mac OS X** 형식의 구성 항목을 만듭니다.  
+-   Configuration Manager コンソールで、種類が **[Mac OS X]** の構成項目を作成します。  
 
--   설정 유형이 **스크립트**인 설정을 이 구성 항목에 추가합니다.  
+-   [ **スクリプト** ] という設定の種類を使用して、この構成項目に設定を追加します。  
 
--   설정에 다음 스크립트를 추가합니다.  
+-   次のスクリプトを設定に追加します。  
 
     ```  
     #!/bin/sh  
@@ -98,6 +98,6 @@ System Center Configuration Manager 응용 프로그램을 사용하여 Mac 컴�
 
     ```  
 
--   구성 기준에 구성 항목을 추가한 후 Configuration Manager와 별도로 인증서를 설치할 모든 Mac 컴퓨터에 해당 구성 기준을 배포합니다.  
+-   構成項目を構成基準に追加し、Configuration Manager とは独立して証明書をインストールする構成基準をすべての Mac コンピューターに展開します。  
 
- Mac 컴퓨터에 대한 구성 항목을 만들고 배포하는 방법에 대한 자세한 내용은 [System Center Configuration Manager 클라이언트로 관리되는 Mac OS X 장치에 대한 구성 항목을 만드는 방법](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md) 및 [System Center Configuration Manager에서 구성 기준을 배포하는 방법](../../../../compliance/deploy-use/deploy-configuration-baselines.md)을 참조하세요.  
+ Mac コンピューター用の構成項目を作成し、展開する方法の詳細については、「[System Center Configuration Manager クライアントを使用して管理されている Mac OS X デバイスの構成項目を作成する方法](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)」と「[System Center Configuration Manager で構成基準を展開する方法](../../../../compliance/deploy-use/deploy-configuration-baselines.md)」を参照してください。  

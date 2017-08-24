@@ -1,6 +1,6 @@
 ---
-title: "운영 체제 배포 상호 운용성 계획 | Microsoft 문서"
-description: "단일 계층 구조의 다른 System Center Configuration Manager 사이트가 서로 다른 버전을 사용하는 경우 상호 운용성 문제를 고려해야 합니다."
+title: "オペレーティング システムの展開の相互運用性に関する計画 | Microsoft Docs"
+description: "単一の階層内の異なる System Center Configuration Manager サイトで異なるバージョンを使用する場合の相互運用性の問題について理解します。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,56 +17,56 @@ manager: angrobe
 ms.openlocfilehash: 50a4b75b8c8c1cb6f7a8e696abad285f99080fcd
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="planning-for-operating-system-deployment-interoperability-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 운영 체제 배포 상호 운용성 계획
+# <a name="planning-for-operating-system-deployment-interoperability-in-system-center-configuration-manager"></a>System Center Configuration Manager のオペレーティング システムの展開の相互運用性の計画
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-단일 계층 구조의 여러 System Center Configuration Manager 사이트가 서로 다른 버전을 사용하는 경우 일부 Configuration Manager 기능을 사용할 수 없습니다. 일반적으로 최신 버전의 Configuration Manager 기능은 더 낮은 버전을 실행하는 사이트 또는 클라이언트에서 액세스할 수 없습니다. 자세한 내용은 [서로 다른 버전의 System Center Configuration Manager 간 상호 운용성](../../core/plan-design/hierarchy/interoperability-between-different-versions.md)을 참조하세요.  
+単一の階層内の異なる System Center Configuration Manager サイトで異なるバージョンを使用する場合、一部の Configuration Managerの機能が使用できなくなります。 通常、Configuration Manager の新しいバージョンの機能は、古いバージョンを実行しているサイトでアクセスしたり、古いバージョンを実行しているクライアントで使用したりすることはできません。 詳細については、「 [Interoperability between different versions of System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md)」をご覧ください。  
 
- 계층의 최상위 사이트와 계층에서 이전 버전이 설치된 Configuration Manager를 실행하는 다른 사이트를 업그레이드할 경우 다음 사항을 고려하세요.  
+ 階層内の最上位サイトをアップグレードし、階層内の他のサイトは古いバージョンの Configuration Manager を実行する場合、次の点を考慮してください。  
 
--   클라이언트 설치 패키지  
+-   クライアント インストール パッケージ  
 
-    -   기본 클라이언트 설치 패키지의 원본이 자동으로 업그레이드되고 계층의 모든 배포 지점(계층에서 이전 버전이 설치된 사이트의 배포 지점도 포함)이 새 클라이언트 설치 패키지로 업데이트됩니다.  
+    -   既定のクライアント インストール パッケージのソースは自動的にアップグレードされ、階層内のすべての配布ポイントは、古いバージョンの階層内のサイトにある配布ポイントの場合でも、新しいクライアント インストール パッケージで更新されます。  
 
-    -   새 버전을 실행하는 클라이언트는 새 버전으로 아직 업그레이드되지 않은 사이트에 할당할 수 없습니다. 관리 지점에서 할당이 차단됩니다.  
+    -   新しいバージョンを実行するクライアントを、まだ新しいバージョンにアップグレードされていないサイトに割り当てることはできません。 割り当ては管理ポイントでブロックされます。  
 
--   부팅 이미지  
+-   ブート イメージ  
 
-    -   최상위 사이트를 최신 버전의 Configuration Manager로 업그레이드하면 기본 부팅 이미지(x86 및 x64)가 Windows PE 10을 사용하는 Windows 10용 Windows ADK 기반 부팅 이미지로 자동 업데이트됩니다. 기본 부팅 이미지와 연결된 파일은 최신 Configuration Manager 버전 파일로 업데이트됩니다. 사용자 지정 부팅 이미지는 자동으로 업데이트되지 않습니다. 이전 Windows PE 버전이 포함된 사용자 지정 부팅 이미지를 수동으로 업데이트해야 합니다.  
+    -   最上位サイトを Configuration Manager の最新バージョンにアップグレードすると、既定のブート イメージ (x86 および x64) は、Windows PE 10 を使用する Windows ADK for Windows 10 ベースのブート イメージに自動更新されます。 既定のブート イメージと関連付けられているファイルは、Configuration Manager の最新バージョンのファイルで更新されます。 カスタム ブート イメージは自動的に更新されません。 カスタム ブート イメージは、古いバージョンの Windows PE を含め、手動で更新する必要があります。  
 
-    -   사이트 계층에 여러 가지 버전의 Configuration Manager가 있으면 동적 미디어를 사용하지 마세요. 대신 모든 사이트가 같은 버전의 Configuration Manager가 있는 사이트가 포함되어 있으면 동적 미디어를 사용하지 마세요.  
+    -   サイト階層内に複数バージョンの Configuration Manager が含まれる場合、動的メディアは使用しないでください。 この場合、すべてのサイトが同じバージョンの Configuration Manager のサイトが含まれる場合、動的メディアは使用しないでください。  
 
-    -   최신 Configuration Manager 부팅 이미지에 원하는 사용자 지정이 포함되어 있는지 확인한 다음 최신 버전의 Configuration Manager 사이트의 모든 배포 지점을 새 부팅 이미지로 업데이트합니다.  
+    -   Configuration Manager の最新のブート イメージに必要なカスタマイズが含まれることを確認してから、Configuration Manager の最新バージョンを使用して、サイトのすべての配布ポイントを新しいブート イメージに更新します。  
 
--   USMT(사용자 상태 마이그레이션 도구)  
+-   ユーザー状態移行ツール (USMT)  
 
-    -   최상위 사이트를 최신 버전의 Configuration Manager로 업그레이드하면 기본 USMT 패키지는 최신 버전으로 자동으로 업데이트됩니다. 사용자 지정 USMT 패키지는 자동으로 업데이트되지 않습니다. 이러한 패키지는 수동으로 업데이트해야 합니다.  
+    -   最上位サイトを Configuration Manager の最新バージョンにアップグレードすると、既定の USMT パッケージが最新のバージョンに自動的に更新されます。 カスタム USMT パッケージは自動的に更新されません。 これらのパッケージは手動で更新する必要があります。  
 
--   새 작업 순서 단계  
+-   新しいタスク シーケンス ステップ  
 
-    -   새 작업 순서 단계가 정기적으로 새 버전의 Configuration Manager가 있는 사이트가 포함되어 있으면 동적 미디어를 사용하지 마세요. 새 단계가 있는 작업 순서를 이전 버전의 클라이언트로 배포하면 해당 작업 순서 단계가 실패합니다. 새 단계를 포함하는 작업 순서를 배포하기 전에 대상 컬렉션의 클라이언트가 새 버전으로 업데이트되었는지 확인합니다.  
+    -   定期的に、新しいバージョンの Configuration Manager のサイトが含まれる場合、動的メディアは使用しないでください。 新しいステップのあるタスク シーケンスを古いクライアントに展開すると、タスク シーケンスのステップは失敗します。 新しいステップのあるタスク シーケンスを展開する前に、ターゲット コレクション内のクライアントが新しいバージョンに更新されていることをご確認ください。  
 
--   운영 체제 배포 미디어  
+-   オペレーティング システムの展開メディア  
 
-    -   사이트가 새 버전으로 업데이트될 때 모든 미디어(부팅 가능, 캡처, 사전 준비 및 독립 실행형)를 새 Configuration Manager 클라이언트 패키지로 업데이트해야 합니다.  
+    -   サイトが新しいバージョンに更新されたとき、すべてのメディア (起動可能、キャプチャ、事前設定、スタンドアロン) を新しい Configuration Manager クライアント パッケージで更新する必要があります。  
 
--   운영 체제 배포에 대한 타사 확장  
+-   オペレーティング システムの展開に対するサード パーティ製の拡張機能  
 
-    -   운영 체제 배포에 대한 타사 확장이 있고 다양한 버전의 Configuration Manager 사이트 또는 Configuration Manager 클라이언트가 있는 혼합 계층 구조를 사용하는 경우 확장에 문제가 있을 수 있습니다.  
+    -   オペレーティング システムの展開に対するサード パーティ製の拡張機能があり、Configuration Manager サイトまたは Configuration Manager クライアントにさまざまなバージョンがある、混在階層となっている場合、拡張に関する問題がある可能性があります。  
 
- 계층의 사이트를 업그레이드하는 동안 운영 체제 배포에 도움이 필요하면 다음 섹션을 참조하세요.  
+ 階層内のサイトを積極的にアップグレードする場合、次のセクションを参照してオペレーティング システムを展開してください。  
 
-## <a name="latest-version-of-configuration-manager-sites-in-a-mixed-hierarchy"></a>혼합 계층에 있는 최신 버전의 Configuration Manager 사이트  
- 사이트를 최신 버전의 Configuration Manager로 업그레이드할 때 기본 클라이언트 설치 패키지를 참조하는 작업 순서가 자동으로 시작되어 최신 Configuration Manager 클라이언트 버전을 배포합니다. 사용자 지정 클라이언트 설치 패키지를 참조하는 작업 순서는 해당 사용자 지정 패키지에 포함된 클라이언트 버전을 계속 배포하므로(이전 Configuration Manager 클라이언트 버전과 마찬가지) 작업 순서 배포에 실패하지 않으려면 업데이트해야 합니다. 사용자 지정 클라이언트 설치 패키지를 사용하도록 구성된 작업 순서가 있으면 최신 Configuration Manager 버전의 클라이언트 설치 패키지를 사용하도록 작업 순서 단계를 업데이트하거나 최신 Configuration Manager 클라이언트 설치 원본을 사용하도록 사용자 지정 패키지를 업데이트해야 합니다.  
+## <a name="latest-version-of-configuration-manager-sites-in-a-mixed-hierarchy"></a>混在階層における最新バージョンの Configuration Manager  サイト  
+ 1 つのサイトを最新バージョンの Configuration Manager にアップグレードすると、既定のクライアント インスタンス パッケージを参照するタスク シーケンスによって、最新バージョンの Configuration Manager クライアントの展開が自動的に開始されます。 次に、カスタム クライアント インストール パッケージを参照するタスク シーケンスによって、そのカスタム パッケージに含まれるバージョンのクライアント (多くの場合、前のバージョンの Configuration Manager クライアント) が展開されます。このクライアントは、タスク シーケンスの展開エラーを防ぐために更新する必要があります。 カスタム クライアント インストール パッケージを使用するように構成されたタスク シーケンスがある場合、最新バージョンの Configuration Manager クライアント インストール パッケージを使用するようにタスク シーケンス ステップを更新するか、最新の Configuration Manager クライアント インストール ソースを使用するようにカスタム パッケージを更新する必要があります。  
 
 > [!IMPORTANT]  
->  최신 Configuration Manager 클라이언트 설치 패키지를 참조하는 작업 순서를 이전 Configuration Manager 사이트의 클라이언트에 배포하지 마세요. 이전 Configuration Manager 사이트에 할당된 클라이언트가 최신 Configuration Manager 클라이언트 버전으로 업그레이드되면 Configuration Manager는 이전 Configuration Manager 사이트에 대한 할당을 차단합니다. 그러므로 수동으로 클라이언트를 최신 Configuration Manager 사이트에 할당하거나 컴퓨터에서 이전 Configuration Manager 버전의 클라이언트를 다시 설치할 때까지 클라이언트가 더 이상 어느 사이트에도 할당되지 않으며 관리되지 않습니다.  
+>  最新の Configuration Manager クライアント インストール パッケージを参照するタスク シーケンスは、前の Configuration Manager サイトのクライアントに展開しないでください。 古い Configuration Manager サイトに割り当てられているクライアントが最新の Configuration Manager クライアント バージョンにアップグレードされた場合、Configuration Manager は、古い Configuration Manager サイトへの割り当てをブロックします。 そのため、手動でクライアントを最新の Configuration Manager サイトに割り当てるか、前のバージョンの Configuration Manager クライアントをコンピューターに再インストールするまで、そのクライアントにサイトは割り当てられず、管理対象ではなくなります。  
 
-## <a name="older-versions-of-configuration-manager-in-a-mixed-hierarchy"></a>혼합 계층에 있는 이전 버전의 Configuration Manager  
- 중앙 관리 사이트를 최신 버전의 Configuration Manager로 업그레이드한 경우 다음 단계를 수행하여 이전 Configuration Manager 사이트(최신 버전의 Configuration Manager로 업그레이드하지 않은)에 할당된 클라이언트에 배포한 운영 체제 배포 작업 순서가 해당 클라이언트를 관리되지 않는 상태로 남겨 두지 않았는지 확인해야 합니다.  
+## <a name="older-versions-of-configuration-manager-in-a-mixed-hierarchy"></a>混在階層における古いバージョンの Configuration Manager  サイト  
+ 中央管理サイトを最新バージョンの Configuration Manager にアップグレードする際、前の (最新バージョンの Configuration Manager にアップグレードされていない) Configuration Manager サイトに割り当てられたクライアントに対して、オペレーティング システム展開タスク シーケンスを実行する場合、管理されていない状態のクライアントが残らないことを次の手順で確認します。  
 
--   Configuration Manager 사이트의 클라이언트에만 배포하는 데 사용할 작업 순서를 만듭니다. 마찬가지로, 최신 버전의 Configuration Manager 사이트에 있는 클라이언트에 배포하는 데 사용할 작업 순서의 사본을 만든 다음, 작업 순서를 수정하면 이전 Configuration Manager 사이트의 클라이언트에 배포하지 마세요. 그런 다음, 이전 Configuration Manager 클라이언트 설치 원본을 사용하도록 사용자 지정 패키지를 업데이트해야 합니다. 이전 Configuration Manager 클라이언트 설치 원본을 참조하는 사용자 지정 클라이언트 설치 패키지가 아직 없는 경우 수동으로 만들어야 합니다.  
+-   Configuration Manager サイト内のクライアントにのみ展開するタスク シーケンスを作成します。 同様に、最新バージョンの Configuration Manager サイトのクライアントに展開するために使用するタスク シーケンスのコピーを作成し、前の Configuration Manager サイトのクライアントに展開しないでください。 次に、前の Configuration Manager クライアント インストール ソースを使用するようにカスタム パッケージを更新する必要があります。 前の Configuration Manager クライアント インストール ソースを参照するカスタム クライアント インストール パッケージがまだない場合、手動で作成する必要があります。  

@@ -1,6 +1,6 @@
 ---
-title: "사용자 지정 작업 순서 만들기 | Microsoft 문서"
-description: "System Center Configuration Manager에서 사용자 지정 작업 순서를 편집하여 작업 순서에 단계를 추가합니다."
+title: "カスタム タスク シーケンスの作成 | Microsoft Docs"
+description: "System Center Configuration Manager でカスタム タスク シーケンスを編集して、タスク シーケンスにステップを追加します。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,37 +18,37 @@ manager: angrobe
 ms.openlocfilehash: 03c844084c72fc52806123d9f4c11a410a3ec775
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-a-custom-task-sequence-with-system-center-configuration-manager"></a>System Center Configuration Manager에서 사용자 지정 작업 순서 만들기
+# <a name="create-a-custom-task-sequence-with-system-center-configuration-manager"></a>System Center Configuration Manager のカスタム タスク シーケンスの作成
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager에서 사용자 지정 작업 순서를 만들 때는 작업 순서 단계가 포함되지 않습니다. 작업 순서를 만든 후에 편집하고 필요한 작업 순서 단계를 추가해야 합니다.  
+System Center Configuration Manager で作成したばかりのカスタム タスク シーケンスにはタスク シーケンス ステップが含まれていません。 作成後にタスク シーケンスを編集し、必要なタスク シーケンス ステップを追加しなければなりません。  
 
-##  <a name="BKMK_CustomTS"></a> 사용자 지정 작업 순서 만들기  
- 사용자 지정 작업 순서를 만들려면 다음 절차를 사용합니다.  
+##  <a name="BKMK_CustomTS"></a> カスタム タスク シーケンスの作成  
+ カスタム タスク シーケンスを作成するには、次の手順に従います。  
 
-#### <a name="to-create-a-custom-task-sequence"></a>사용자 지정 작업 순서를 만들려면  
+#### <a name="to-create-a-custom-task-sequence"></a>カスタム タスク シーケンスを作成するには  
 
-1.  Configuration Manager 콘솔에서 **소프트웨어 라이브러리**를 클릭합니다.  
+1.  Configuration Manager コンソールで、[ソフトウェア ライブラリ] ****をクリックします。  
 
-2.  **소프트웨어 라이브러리** 작업 영역에서 **운영 체제**를 확장하고 **작업 순서**를 클릭합니다.  
+2.  [ **ソフトウェア ライブラリ** ] ワークスペースで [ **オペレーティング システム**] を展開して、[ **タスク シーケンス** ] をクリックします。  
 
-3.  **홈** 탭의 **만들기** 그룹에서 **작업 순서 만들기** 를 클릭하여 작업 순서 만들기 마법사를 시작합니다.  
+3.  [ホーム **** ] タブの [作成 **** ] グループで [タスク シーケンスの作成 **** ] をクリックして、タスク シーケンスの作成ウィザードを起動します。  
 
-4.  **새 작업 순서 만들기** 페이지에서 **새 사용자 지정 작업 순서 만들기**를 선택합니다.  
+4.  [新しいタスク シーケンスの作成 **** ] ページで [新しいカスタム タスク シーケンスを作成する ****] を選択します。  
 
-5.  **작업 순서 정보** 페이지에서 작업 순서의 이름, 작업 순서에 대한 설명, 사용할 작업 순서의 부팅 이미지(선택 사항)를 지정한 다음 마법사를 완료합니다.  
+5.  [タスク シーケンス情報 **** ] ページで、タスク シーケンスの名前、タスク シーケンスの説明、および使用するタスク シーケンスのオプションのブート イメージを指定して、ウィザードを完了します。  
 
- 작업 순서 만들기 마법사를 완료하면 Configuration Manager에서 사용자 지정 작업 순서를 **작업 순서** 노드에 추가합니다. 이제 이 작업 순서를 편집하여 작업 순서 단계를 추가할 수 있습니다.  
+ タスク シーケンスの作成ウィザードを完了すると、Configuration Manager によってカスタム タスク シーケンスが [**タスク シーケンス**] ノードに追加されます。 これで、タスク シーケンスを編集してタスク シーケンス ステップを追加できるようになります。  
 
- 사용 가능한 작업 순서 단계 목록을 보려면 [작업 순서 단계](../understand/task-sequence-steps.md)를 참조하세요.  
+ 使用可能なタスク シーケンス ステップの一覧については、「[タスク シーケンスのステップ](../understand/task-sequence-steps.md)」をご覧ください。  
 
- 작업 순서를 편집하는 방법에 대한 자세한 내용은 [작업 순서 편집](manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence)을 참조하세요.  
+ タスク シーケンスの編集方法について詳しくは、「[タスク シーケンスの編集](manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence)」をご覧ください。  
 
- 작업 순서를 사용하여 운영 체제 배포에 대한 작업을 자동화하는 경우가 대부분이지만 사용자 지정 작업 순서를 만들어 다양한 작업을 자동화할 수 있습니다. 자세한 내용은 [비운영 체제 배포에 대한 작업 순서 만들기](create-a-task-sequence-for-non-operating-system-deployments.md)를 참조하세요.  
+ タスク シーケンスを使用することが最も多いのはオペレーティング システムの展開のタスクを自動化する場合ですが、カスタム タスク シーケンスはさまざまなタスクを自動化するために作成できます。 詳細については、「[オペレーティング システム以外の展開用タスク シーケンスの作成](create-a-task-sequence-for-non-operating-system-deployments.md)」をご覧ください。  
 
- ## <a name="next-steps"></a>다음 단계
- [작업 순서 배포](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
+ ## <a name="next-steps"></a>次のステップ
+ [タスク シーケンスの展開](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)

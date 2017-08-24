@@ -1,6 +1,6 @@
 ---
-title: "지원되는 LTSB 구성 | Microsoft 문서"
-description: "System Center Configuration Manager의 장기 서비스 분기에서 작동하는 운영 체제 및 종속 제품을 이해합니다."
+title: "LTSB のサポートされている構成 | Microsoft Docs"
+description: "System Center Configuration Manager の Long-Term Servicing branch で動作するオペレーティング システムと依存する製品について理解します。"
 ms.custom: na
 ms.date: 5/10/2017
 ms.prod: configuration-manager
@@ -17,318 +17,318 @@ manager: angrobe
 ms.openlocfilehash: 31bddee83b2365cfa903077ffaa1d7116b194378
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager의 장기 서비스 분기에 대해 지원되는 구성
+# <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager の Long-Term Servicing Branch のサポートされている構成
 
-*적용 대상: System Center Configuration Manager(장기 서비스 분기)*
+*適用対象: System Center Configuration Manager (Long-Term Servicing Branch)*
 
-이 항목의 정보를 사용하여 Configuration Manager의 LTSB(장기 서비스 분기)에서 지원하는 운영 체제 및 제품 종속을 이해할 수 있습니다.
-이 항목이나 LTSB 관련 항목에서 달리 명시되지 않은 경우 현재 분기 버전 1606에 적용되는 것과 동일한 구성 및 제한 사항이 LTSB에 적용됩니다.  충돌이 발생하는 경우 사용 중인 버전에 적용되는 정보를 사용합니다. 일반적으로 LTSB가 현재 분기보다 좀 더 제한적입니다.
+このトピックの情報を参照して、Configuration Manager の Long-Term Servicing Branch (LTSB) でサポートされるオペレーティング システムと製品の依存関係を理解します。
+このトピックまたは LTSB 特定のトピックで特に指定されていない限り、Current Branch バージョン 1606 に適用されるものと同じ構成および制限が、LTSB に適用されます。  競合が発生した場合、使用しているエディションに適用される情報が使用されます。 通常、LTSB は Current Branch よりも制限的です。
 
-## <a name="general-statement-of-support"></a>일반적인 지원 정보
-다음 제품 및 기술은 이 Configuration Manager 분기에서 지원됩니다. 그러나 이 내용에 포함되었다고 해서 개별 지원 주기가 끝난 제품 또는 버전의 지원이 명시적으로 확장되지는 않습니다. 즉, 지원 주기가 끝난 제품은 Configuration Manager에서 사용할 수 없습니다. 자세한 내용은 [Microsoft 지원 주기](http://go.microsoft.com/fwlink/p/?LinkId=208270) 웹 사이트 및 [Microsoft 지원 주기 정책 FAQ](http://go.microsoft.com/fwlink/p/?LinkId=31976)를 참조하세요.
+## <a name="general-statement-of-support"></a>サポートの概説
+この Configuration Manager のブランチでは、次の製品とテクノロジがサポートされています。 ただし、このコンテンツにそれらが含まれていても、その製品の個別のサポート ライフサイクルを超える製品やバージョンのサポートの延長を表すものではありません。 既にサポート ライフサイクルが終了している製品は、Configuration Manager ではサポートされません。 詳細については、[「マイクロソフト サポート ライフサイクル」](http://go.microsoft.com/fwlink/p/?LinkId=208270) Web サイトを参照し、[「サポート ライフサイクル ポリシーに関する FAQ」](http://go.microsoft.com/fwlink/p/?LinkId=31976)をお読みください。
 
-또한 다음 항목에 나열되지 않은 제품 및 제품 버전은 [Enterprise Mobility + Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/)(Enterprise Mobility + 보안 블로그)에서 공지되지 않은 경우 지원되지 않습니다.
+さらに、次のトピックに示されていない製品および製品バージョンは、[Enterprise Mobility + Security ブログ](https://blogs.technet.microsoft.com/enterprisemobility/)で告知されていない限り、サポートされていません。
 
-**이후 지원에 대한 제한 사항:** LTSB는 이후 서버 및 클라이언트 운영 체제와 제품 종속성에 대한 지원이 제한적입니다. LTSB에 대한 플랫폼 목록은 릴리스 수명 동안 다음과 같이 고정됩니다.
+**今後のサポートに関する制限事項:** LTSB の今後のサーバーとクライアントのオペレーティング システムおよび製品の依存関係は、制限付きでサポートされます。 LTSB のプラットフォーム一覧は、そのリリースの有効期間にわたって固定されます。
 
 **Windows:**
-- Windows에 대한 품질 및 보안 업데이트만 지원됩니다.
-- Windows 10의 CB(현재 분기), CBB(비즈니스용 현재 분기) 또는 LTSB에 대한 지원은 추가되지 않습니다.
--   Windows Server의 새로운 주 버전은 지원되지 않습니다.
+- Windows の品質更新プログラムおよびセキュリティ更新プログラムのみがサポートされます。
+- Current Branches (CB)、Current Branch for Business (CBB)、または Windows 10 の LTSB に対してのサポートは追加されません。
+-   Windows Server の新しいメジャー バージョンはサポートされていません。
 
 **SQL Server:**
-- SQL Server에 대한 품질 및 보안 업데이트나 서비스 팩 등의 부 업그레이드만 지원됩니다.
-- SQL Server의 새로운 주 버전은 지원되지 않습니다.  
+- SQL Server では、品質更新プログラムおよびセキュリティ更新プログラム、または Service Pack のようなマイナー アップグレードのみがサポートされる予定です。
+- SQL Server の新しいメジャー バージョンはサポートされません。  
 
-## <a name="site-systems-and-servers"></a>사이트 시스템 및 서버
-LTSB에서는 다음 Windows 컴퓨터 운영 체제를 사이트 시스템으로 사용할 수 있습니다.  각 운영 체제는 [사이트 시스템 서버에 대해 지원되는 운영 체제](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)의 해당 항목과 동일한 요구 사항 및 제한 사항을 갖습니다.  예를 들어 Windows 2012 R2의 Server Core 설치는 x64 버전이어야 하며, 배포 지점을 호스트하기 위해서만 지원되며, PXE 또는 멀티캐스트를 지원하지 않습니다.
+## <a name="site-systems-and-servers"></a>サイト システムおよびサーバー
+LTSB では、サイト システムとして次の Windows コンピューターのオペレーティング システムの使用をサポートします。  各オペレーティング システムには、[サイト システム サーバーでサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)の同じエンティティと同じ要件と制限事項があります。  たとえば、Windows 2012 R2 の Server Core のインストール (x64 バージョンである必要があります) では、配布ポイントのホストのみがサポートされ、PXE やマルチキャストはサポートされません。
 
-**지원되는 운영 체제:**
+**サポートされるオペレーティング システム:**
 - Windows Server 2016
-- Windows Server 2012 R2(x64): Standard, Datacenter
-- Windows Server 2012(x64): Standard, Datacenter
-- Windows Server 2008 R2 SP1(x64): Standard, Enterprise, Datacenter
-- Windows Server 2008 SP2(x86, x64): Standard, Enterprise, Datacenter*(참고 1 참조)*
-- Windows 10 Enterprise 2015 LTSB(x86, x64)
-- Windows 10 Enterprise 2016 LTSB(x86, x64)
-- Windows 8.1(x86, x64): Professional, Enterprise
-- Windows 7 SP1(x86, x64): Professional, Enterprise, Ultimate
-- Windows Server 2012의 Server Core 설치
-- Windows Server 2012 R2의 Server Core 설치    
+- Windows Server 2012 R2 (x64): Standard、Datacenter
+- Windows Server 2012 (x64): Standard、Datacenter
+- Windows Server 2008 R2 SP1 (x64): Standard、Enterprise、Datacenter
+- Windows Server 2008 SP2 (x86、x64): Standard、Enterprise、Datacenter *(注 1 を参照)*
+- Windows 10 Enterprise 2015 LTSB (x86、x64)
+- Windows 10 Enterprise 2016 LTSB (x86、x64)
+- Windows 8.1 (x86、x64): Professional、Enterprise
+- Windows 7 SP1 (x86、x64): Professional、Enterprise、Ultimate
+- Windows Server 2012 の Server Core のインストール
+- Windows Server 2012 R2 の Server Core のインストール    
 
-*참고 1*: 배포 지점 및 풀(pull) 배포 지점을 제외하고, 이 운영 체제는 사이트 서버 또는 사이트 시스템 역할에 대해 지원되지 않습니다. 이 지원의 중단이 발표되거나 이 운영 체제의 추가 지원 기간이 만료될 때까지 이 운영 체제를 배포 지점으로 계속 사용할 수 있습니다. 자세한 내용은 [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)(Windows Server 2008에서 System Center Configuration Manager CB 및 LTSB 설치 실패)을 참조하세요.
+*注 1*: このオペレーティング システムは、サイト サーバーとして、または配布ポイントとプル配布ポイントを除くサイト システムの役割としてはサポートされていません。 このサポートの廃止が発表されるまで、またはこのオペレーティング システムの拡張サポート期間が終了するまでは、このオペレーティング システムを配布ポイントとして使用し続けることができます。 詳細については、「[Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)」 (Windows Server 2008 で System Center Configuration Manager CB および LTSB のインストールに失敗する) を参照してください。
 
-## <a name="client-management"></a>클라이언트 관리
-다음 섹션에서는 LTSB를 사용하여 관리할 수 있는 클라이언트 운영 체제를 식별합니다. LTSB에서는 새 운영 체제를 지원되는 클라이언트로 추가할 수 없습니다.
+## <a name="client-management"></a>クライアント管理
+次のセクションでは、LTSB を使用して管理できるクライアントのオペレーティング システムを確認します。 LTSB では、サポートされるクライアントとして、新しいオペレーティング システムの追加をサポートしません。
 
-### <a name="windows-computers"></a>Windows 컴퓨터
-LTSB를 사용하여 Configuration Manager에 포함된 Configuration Manager 클라이언트 소프트웨어를 통해 다음 Windows 컴퓨터 운영 체제를 관리할 수 있습니다. 자세한 내용은 [System Center Configuration Manager에서 Windows 컴퓨터에 클라이언트를 배포하는 방법](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)을 참조하세요.
+### <a name="windows-computers"></a>Windows コンピューター
+LTSB を使用して、以下の Windows コンピューター オペレーティング システムと、Configuration Manager に含まれている Configuration Manager クライアント ソフトウェアを管理できます。 詳細については、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)」を参照してください。
 
-**지원되는 운영 체제:**
+**サポートされるオペレーティング システム:**
 - Windows Server 2016
-- Windows Server 2012 R2(x64): Standard, Datacenter(참고 1)
-- Windows Server 2012(x64): Standard, Datacenter(참고 1)
-- Windows Storage Server 2012 R2(x64)
-- Windows Storage Server 2012(x64)
-- Windows Server 2008 R2 SP1(x64): Standard, Enterprise, Datacenter(참고 1)
-- Windows Storage Server 2008 R2(x86, x64): Workgroup, Standard, Enterprise
-- Windows Server 2008 SP2(x86, x64): Standard, Enterprise, Datacenter(참고 1)
-- Windows 10 Enterprise 2015 LTSB(x86, x64)
-- Windows 10 Enterprise 2016 LTSB(x86, x64)
-- Windows 8.1(x86, x64): Professional, Enterprise
-- Windows 7 SP1(x86, x64): Professional, Enterprise, Ultimate
-- Windows Server 2012 R2의 Server Core 설치(x64)(참고 2)
-- Windows Server 2012의 Server Core 설치(x64)(참고 2)
-- Windows Server 2008 R2 SP1의 Server Core 설치(x64)
-- Windows Server 2008 SP2의 Server Core 설치(x86, x64)
+- Windows Server 2012 R2 (x64): Standard、Datacenter (注 1)
+- Windows Server 2012 (x64): Standard、Datacenter (注 1)
+- Windows Storage Server 2012 R2 (x64)
+- Windows Storage Server 2012 (x64)
+- Windows Server 2008 R2 SP1 (x64): Standard、Enterprise、Datacenter (注 1)
+- Windows Storage Server 2008 R2 (x86、x64): Workgroup、Standard、Enterprise
+- Windows Server 2008 SP2 (x86、x64): Standard、Enterprise、Datacenter (注 1)
+- Windows 10 Enterprise 2015 LTSB (x86、x64)
+- Windows 10 Enterprise 2016 LTSB (x86、x64)
+- Windows 8.1 (x86、x64): Professional、Enterprise
+- Windows 7 SP1 (x86、x64): Professional、Enterprise、Ultimate
+- Windows Server 2012 R2 の Server Core のインストール (x64) (注 2)
+- Windows Server 2012 の Server Core のインストール (x64) (注 2)
+- Windows Server 2008 R2 SP1 の Server Core のインストール (x64)
+- Windows Server 2008 SP2 の Server Core のインストール (x86、x64)
 
-**(참고 1)** Datacenter 릴리스는 Configuration Manager용으로 지원되지만 인증되지는 않았습니다.  
-**(참고 2)** 클라이언트 강제 설치를 지원하려면 이 운영 체제 버전을 실행하는 컴퓨터에서 파일 및 저장소 서비스 서버 역할용으로 파일 서버 역할 서비스를 실행해야 합니다. Server Core 컴퓨터에 Windows 기능을 설치하는 방법에 대한 자세한 내용은 Windows Server 2012 TechNet 라이브러리에서 [Server Core 서버에 서버 역할 및 기능 설치](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)를 참조하세요.
+**(注 1)**Datacenter リリースは、Configuration Manager でサポートされますが動作は保障されません。  
+**(注 2)** クライアント プッシュ インストールをサポートするには、このオペレーティング システムのバージョンを実行するコンピューターで、ファイルおよびストレージ サービスのサーバーの役割のための、ファイル サーバーの役割サービスを実行する必要があります。 Server Core コンピューターに Windows の機能をインストールする詳細については、Windows Server 2012 TechNet ライブラリの「[Server Core サーバーへのサーバーの役割と機能のインストール](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)」を参照してください。
 
 ### <a name="windows-embedded"></a>Windows Embedded
-장치에 클라이언트 소프트웨어를 설치하면 LTSB를 사용하여 다음 Windows Embedded 장치를 관리할 수 있습니다.  자세한 내용은 [System Center Configuration Manager에서 Windows Embedded 장치에 클라이언트 배포 계획](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices)을 참조하세요.
+デバイス上にクライアント ソフトウェアをインストールすることによって、LTSB を使用して以下の Windows Embedded デバイスを管理できます。  詳細については、「[System Center Configuration Manager での Windows Embedded デバイスへのクライアント展開の計画](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices)」をご覧ください。
 
-**요구 사항 및 제한 사항:**  
+**要件と制限事項**  
 
--   쓰기 필터를 사용하도록 설정하지 않은, 지원되는 Windows Embedded 시스템에서는 모든 클라이언트 기능이 지원됩니다.  
+-   すべてのクライアント機能は、書き込みフィルターが有効化されていないサポート対象の Windows Embedded システムでサポートされます。  
 
--   다음 중 하나를 사용하는 클라이언트는 전원 관리를 제외한 모든 기능에 대해 지원됩니다.  
+-   次のいずれかを使用するクライアントは、電源管理以外のすべての機能がサポートされます。  
 
-    -   강화된 쓰기 필터(EWF)    
+    -   Enhanced Write Filter (EWF)    
 
-    -   RAM FBWF(파일 기반 쓰기 필터)    
+    -   RAM ファイル ベースの書き込みフィルター (FBWF)    
 
-    -   통합 쓰기 필터(UWF)  
+    -   Unified Write Filter (UWF)  
 
--   Windows Embedded 장치에는 응용 프로그램 카탈로그가 지원되지 않습니다.  
+-   アプリケーション カタログは、どのような Windows Embedded デバイスについてもサポートされません。  
 
--   Windows XP를 기반으로 하는 Windows Embedded 장치에서는 검색된 맬웨어를 모니터링할 수 있으므로 임베디드 장치에 Microsoft Windows WMI 스크립팅 패키지를 설치해야 합니다. 이 패키지를 설치하려면 Windows Embedded Target Designer를 사용합니다. 이 경우 *WBEMDISP.DLL* 및 *WBEMDISP.TLB* 파일이 있고 포함된 장치의 %windir%\System32\WBEM 폴더에 등록되어 있어야 검색된 맬웨어가 보고됩니다.  
+-   Windows XP ベースの Windows Embedded デバイスで検出したマルウェアを監視するには、Embedded デバイスに Microsoft Windows WMI スクリプト パッケージを先にインストールしておく必要があります。 このパッケージは、Windows Embedded Target Designer を使用してインストールします。 検出したマルウェアが確実に報告されるようにするには、Embedded デバイスにファイル *WBEMDISP.DLL* および *WBEMDISP.TLB* が存在している必要があり、フォルダー %windir%\System32\WBEM に登録されている必要があります。  
 
-**지원되는 운영 체제:**  
--   Windows 10 Enterprise 2016 LTSB(x86, x64)  
--   Windows 10 Enterprise 2015 LTSB(x86, x64)  
--   Windows Embedded 8.1 Industry(x86, x64)    
--   Windows Thin PC(x86, x64)    
--   Windows Embedded POSReady 7(x86, x64)    
--   Windows Embedded Standard 7 SP1(x86, x64)    
--   Windows Embedded POSReady 2009(x86)   
--   Windows Embedded Standard 2009(x86)  
+**サポートされるオペレーティング システム:**  
+-   Windows 10 Enterprise 2016 LTSB (x86、x64)  
+-   Windows 10 Enterprise 2015 LTSB (x86、x64)  
+-   Windows Embedded 8.1 Industry (x86、x64)    
+-   Windows Thin PC (x86、x64)    
+-   Windows Embedded POSReady 7 (x86、x64)    
+-   Windows Embedded Standard 7 SP1 (x86、x64)    
+-   Windows Embedded POSReady 2009 (x86)   
+-   Windows Embedded Standard 2009 (x86)  
 
 ### <a name="windows-ce"></a>Windows CE  
- Configuration Manager와 함께 제공되는 Configuration Manager 모바일 장치 레거시 클라이언트에서 Windows CE 장치를 관리할 수 있습니다.  
+ Configuration Manager に付属の Configuration Manager モバイル デバイス レガシ クライアントを持つ Windows CE デバイスを管理することができます。  
 
-**요구 사항 및 제한 사항:**  
+**要件と制限事項**  
 
--   모바일 장치 클라이언트를 설치하려면 0.78MB의 저장소 공간이 필요합니다. 모바일 장치에서 로그인하려면 최대 256KB의 추가 저장소 공간이 필요할 수 있습니다.    
+-   モバイル デバイス クライアントには、クライアントをインストールする記憶領域が 0.78 MB 必要です。 モバイル デバイスがサインインするには、さらに最大で 256 KB の追加の記憶領域が必要な場合があります。    
 
--   이러한 모바일 장치의 기능은 플랫폼 및 클라이언트 유형별로 달라집니다. Configuration Manager에서 모바일 장치 레거시 클라이언트에 대해 지원하는 관리 기능 종류에 대한 자세한 내용은 [System Center Configuration Manager용 장치 관리 솔루션 선택](/sccm/core/plan-design/choose-a-device-management-solution)을 참조하세요.  
+-   これらのモバイル デバイスの機能は、プラットフォームとクライアントの種類によって異なります。 モバイル デバイス レガシ クライアントで Configuration Manager がサポートする管理機能の種類の詳細については、「[System Center Configuration Manager のデバイス管理ソリューションの選択](/sccm/core/plan-design/choose-a-device-management-solution)」を参照してください。  
 
-**지원되는 운영 체제:**  
+**サポートされるオペレーティング システム:**  
 
--   Windows CE 7.0(ARM 및 x86 프로세서)  
+-   Windows CE 7.0 (ARM および x86 プロセッサ)  
 
-**지원되는 언어:**  
--   중국어(간체 및 번체)    
--   영어(미국)    
--   프랑스어(프랑스)    
--   독일어    
--   이탈리아어    
--   일본어  
--   한국어  
--   포르투갈어(브라질)  
--   러시아어  
--   스페인어(스페인)  
+**サポートされる言語:**  
+-   中国語 (簡体字、繁体字)    
+-   英語 (米国)    
+-   フランス語 (フランス)    
+-   ドイツ語    
+-   イタリア語    
+-   日本語  
+-   韓国語  
+-   ポルトガル語 (ブラジル)  
+-   ロシア語  
+-   スペイン語 (スペイン)  
 
-### <a name="mac-computers"></a>Mac 컴퓨터  
- LTSB를 사용하여 Mac용 Configuration Manager 클라이언트에서 Mac OS X 컴퓨터를 관리할 수 있습니다.
+### <a name="mac-computers"></a>Mac コンピューター  
+ LTSB を使用して、Mac OS X コンピューターを Mac 向けの Configuration Manager クライアントとともに管理できます。
 
-Mac 클라이언트 설치 패키지는 Configuration Manager 미디어와 함께 제공되지 않습니다. [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=525184)에서 "추가 운영 체제용 클라이언트" 다운로드의 일부로 다운로드할 수 있습니다.  
+Configuration Manager メディアでは、Mac クライアント インストール パッケージは提供されません。 これは、[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=525184)から、"追加のオペレーティング システム用のクライアント" のダウンロードの一環としてダウンロードできます。  
 
-Mac 운영 체제에 대한 지원은 이 섹션에 나열된 운영 체제로 제한됩니다. 현재 분기에 대한 Mac 클라이언트 설치 패키지의 이후 업데이트에서 지원될 수 있는 추가 운영 체제는 지원에 포함되지 않습니다.
+サポートされている Mac オペレーティング システムは、このセクションに記載されているものに限定されています。 Current Branch の Mac クライアント インストール パッケージへの今後の更新プログラムによってサポートされる可能性のあるその他のオペレーティング システムは、サポート対象には含まれていません。
 
-자세한 내용은 [System Center Configuration Manager에서 Mac에 클라이언트를 배포하는 방법](/sccm/core/clients/deploy/deploy-clients-to-macs)을 참조하세요.
+詳細については、「[How to deploy clients to Macs in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-macs)」 (System Center Configuration Manager でクライアントを Mac に展開する方法) を参照してください。
 
-**지원되는 버전:**  
--   Mac OS X 10.9(Mavericks)  
--   Mac OS X 10.10(Yosemite)  
--   Mac OS X 10.11(El Capitan)  
+**サポートされるバージョン:**  
+-   Mac OS X 10.9 (Mavericks)  
+-   Mac OS X 10.10 (Yosemite)  
+-   Mac OS X 10.11 (El Capitan)  
 
-## <a name="linux-and-unix-servers"></a>Linux 및 UNIX 서버
-LTSB를 사용하여 Linux 및 UNIX용 Configuration Manager 클라이언트에서 Linux 및 UNIX 서버를 관리할 수 있습니다.
+## <a name="linux-and-unix-servers"></a>Linux および UNIX サーバー
+LTSB を使用して、Linux および UNIX サーバーを Linux および UNIX 用の Configuration Manager クライアントとともに管理できます。
 
-Linux 및 UNIX 클라이언트 설치 패키지는 Configuration Manager 미디어와 함께 제공되지 않습니다. [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=525184)에서 "추가 운영 체제용 클라이언트" 다운로드의 일부로 다운로드할 수 있습니다. 클라이언트 설치 패키지 외에도 클라이언트 다운로드에는 각 컴퓨터의 클라이언트 설치를 관리하는 install 스크립트가 들어 있습니다.
+Configuration Manager メディアでは、Linux および UNIX クライアント インストール パッケージは提供されません。 これらは、[Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=525184)から、追加のオペレーティング システム用のクライアントのダウンロードの一環としてダウンロードできます。 クライアント インストール パッケージに加え、クライアント ダウンロードには、各コンピューター上でクライアントのインストールを管理する install スクリプトも含まれています。
 
-Linux 및 UNIX 운영 체제에 대한 지원은 이 섹션에 나열된 운영 체제로 제한됩니다. 현재 분기에 대한 Linux 및 UNIX 클라이언트 패키지의 이후 업데이트에서 지원될 수 있는 추가 운영 체제는 지원에 포함되지 않습니다.
+サポートされている Linux および UNIX オペレーティング システムは、このセクションに記載されているものに限定されています。 Current Branch の Linux および UNIX クライアント インストール パッケージへの今後の更新プログラムによってサポートされる可能性のあるその他のオペレーティング システムは、サポート対象には含まれていません。
 
-**요구 사항 및 제한 사항:**  
+**要件と制限事項**  
 
--   Linux 및 UNIX용 클라이언트에 대한 운영 체제 파일 종속성을 검토하려면 [Linux 및 UNIX 서버에 클라이언트 배포를 위한 필수 조건](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers#bkmk_clientdeployprereqforlnu)을 참조하세요.  
--   Linux 또는 UNIX를 실행하는 컴퓨터에 대해 지원되는 관리 기능의 개요는 [System Center Configuration Manager에서 UNIX 및 Linux 서버에 클라이언트를 배포하는 방법](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers)을 참조하세요.  
--   Linux 및 UNIX에 대해 지원되는 버전의 경우 나열된 버전에는 모든 후속 부 버전이 포함됩니다. 예를 들어 CentOS 버전 6이 지원되는 것으로 나와 있는 경우 여기에는 CentOS 6.3과 같은 CentOS 6의 후속 부 버전도 포함됩니다. 마찬가지로 SUSE Linux Enterprise Server 11 SP1과 같이 서비스 팩을 사용하는 운영 체제가 지원되는 것으로 나와 있는 경우에는 해당 운영 체제 버전의 후속 서비스 팩도 지원 대상에 포함됩니다.
--   클라이언트 설치 패키지 및 유니버설 에이전트에 대한 자세한 내용은 [System Center Configuration Manager에서 UNIX 및 Linux 서버에 클라이언트를 배포하는 방법](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers)을 참조하세요.
+-   Linux および UNIX 向けクライアントのオペレーティング システム ファイルの依存関係を確認するには、[Prerequisites for Client Deployment to Linux and UNIX Servers](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers#bkmk_clientdeployprereqforlnu) (Linux および UNIX サーバーへのクライアントの展開の前提条件) を参照してください。  
+-   Linux または UNIX を実行するコンピューターでサポートされている管理機能の概要については、「[How to deploy clients to UNIX and Linux servers in System Center Configuration Manager](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers)」 (System Center Configuration Manager で UNIX および Linux サーバーにクライアントを展開する方法) を参照してください。  
+-   Linux および UNIX のサポートされるバージョンの場合、一覧に示したバージョンには後続のマイナー バージョンがすべて含まれます。 たとえば、CentOS バージョン 6 のサポートが示されている場合は、CentOS 6 の後続のマイナー バージョン (CentOS 6.3 など) もすべて含まれます。 同様に、サービス パックを使用するオペレーティング システム (SUSE Linux Enterprise Server 11 SP1 など) のサポートが示されている場合は、そのオペレーティング システムのバージョンの後続のサービス パックもサポートに含まれます。
+-   Linux と UNIX でクライアントをインストールする方法については、「[System Center Configuration Manager で UNIX および Linux サーバーにクライアントを展開する方法](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers)」を参照してください。
 
 
-**지원되는 버전:**   
-다음 버전은 표시된 .tar 파일을 사용하여 지원됩니다.  
+**サポートされるバージョン:**   
+次のバージョンは、指定された .tar ファイルを使用してサポートされます。  
 ### <a name="aix"></a>AIX  
 
-|버전|파일|  
+|バージョン|ファイル|  
 |-|-|  
-|버전 5.3(Power)|ccm-Aix53ppc.&lt;빌드\>.tar|  
-|버전 6.1(Power)|ccm-Aix61ppc.&lt;빌드\>.tar|  
-|버전 7.1(Power)|ccm-Aix71ppc.&lt;빌드\>.tar|  
+|バージョン 5.3 (Power)|ccm-Aix53ppc.&lt;ビルド\>.tar|  
+|バージョン 6.1 (Power)|ccm-Aix61ppc.&lt;ビルド\>.tar|  
+|バージョン 7.1 (Power)|ccm-Aix71ppc.&lt;ビルド\>.tar|  
 
 ### <a name="centos"></a>CentOS  
 
-|버전|파일|  
+|バージョン|ファイル|  
 |-|-|  
-|버전 5 x86|ccm-Universalx86.&lt;빌드\>.tar|  
-|버전 5 x64|ccm-Universalx64.&lt;빌드\>.tar|  
-|버전 6 x86|ccm-Universalx86.&lt;빌드\>.tar|  
-|버전 6 x64|ccm-Universalx64.&lt;빌드\>.tar|  
-|버전 7 x64|ccm-Universalx64.&lt;빌드\>.tar|  
+|バージョン 5 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 5 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
+|バージョン 6 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 6 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
+|バージョン 7 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
 
 ### <a name="debian"></a>Debian  
 
-|버전|파일|    
+|バージョン|ファイル|    
 |-|-|  
-|버전 5 x86|ccm-Universalx86.&lt;빌드\>.tar|  
-|버전 5 x64|ccm-Universalx64.&lt;빌드\>.tar|  
-|버전 6 x 86|ccm-Universalx86.&lt;빌드\>.tar|  
-|버전 6 x64|ccm-Universalx64.&lt;빌드\>.tar|  
-|버전 7 x86|ccm-Universalx86.&lt;빌드\>.tar|  
-|버전 7 x64|ccm-Universalx64.&lt;빌드\>.tar|  
-|버전 8 x86|ccm-Universalx86.&lt;빌드\>.tar|  
-|버전 8 x64|ccm-Universalx64.&lt;빌드\>.tar|  
+|バージョン 5 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 5 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
+|バージョン 6 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 6 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
+|バージョン 7 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 7 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
+|バージョン 8 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 8 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
 
 ### <a name="hp-ux"></a>HP-UX  
 
-|버전|파일|  
+|バージョン|ファイル|  
 |-|-|  
-|버전 11iv2 IA64|ccm-HpuxB.11.23i64.&lt;빌드\>.tar|  
-|버전 11iv2 PA-RISC|ccm-HpuxB.11.23PA.&lt;빌드\>.tar|  
-|버전 11iv3 IA64|ccm-HpuxB.11.31i64.&lt;빌드\>.tar|  
-|버전 11iv3 PA-RISC|ccm-HpuxB.11.31PA.&lt;빌드\>.tar|  
+|バージョン 11iv2 IA64|ccm-HpuxB.11.23i64.&lt;ビルド\>.tar|  
+|バージョン 11iv2 PA-RISC|ccm-HpuxB.11.23PA.&lt;ビルド\>.tar|  
+|バージョン 11iv3 IA64|ccm-HpuxB.11.31i64.&lt;ビルド\>.tar|  
+|バージョン 11iv3 PA-RISC|ccm-HpuxB.11.31PA.&lt;ビルド\>.tar|  
 
 ### <a name="oracle-linux"></a>Oracle Linux  
 
-|버전|파일|    
+|バージョン|ファイル|    
 |-|-|  
-|버전 5 x86|ccm-Universalx86.&lt;빌드\>.tar|  
-|버전 5 x64|ccm-Universalx64.&lt;빌드\>.tar|  
-|버전 6 x86|ccm-Universalx86.&lt;빌드\>.tar|  
-|버전 6 x64|ccm-Universalx64.&lt;빌드\>.tar|  
-|버전 7 x64|ccm-Universalx64.&lt;빌드\>.tar|  
+|バージョン 5 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 5 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
+|バージョン 6 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 6 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
+|バージョン 7 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
 
 ### <a name="red-hat-enterprise-linux-rhel"></a>Red Hat Enterprise Linux (RHEL)  
 
-|버전|파일|  
+|バージョン|ファイル|  
 |-|-|  
-|버전 4 x86|ccm-RHEL4x86.&lt;빌드\>.tar|  
-|버전 4 x64|ccm-RHEL4x64.&lt;빌드\>.tar|  
-|버전 5 x86|ccm-Universalx86.&lt;빌드\>.tar|  
-|버전 5 x64|ccm-Universalx64.&lt;빌드\>.tar|  
-|버전 6 x86|ccm-Universalx86.&lt;빌드\>.tar|  
-|버전 6 x64|ccm-Universalx64.&lt;빌드\>.tar|  
-|버전 7 x64|ccm-Universalx64.&lt;빌드\>.tar|  
+|バージョン 4 x86|ccm-RHEL4x86.&lt;ビルド\>.tar|  
+|バージョン 4 x64|ccm-RHEL4x64.&lt;ビルド\>.tar|  
+|バージョン 5 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 5 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
+|バージョン 6 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 6 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
+|バージョン 7 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
 
 ### <a name="solaris"></a>Solaris  
 
-|버전|파일|   
+|バージョン|ファイル|   
 |-|-|  
-|버전 9 SPARC|ccm-Sol9sparc.&lt;빌드\>.tar|  
-|버전 10 x86|ccm-Sol10x86.&lt;빌드\>.tar|  
-|버전 10 SPARC|ccm-Sol10sparc.&lt;빌드\>.tar|  
-|버전 11 x86|ccm-Sol11x86.&lt;빌드\>.tar|  
-|버전 11 SPARC|ccm-Sol11sparc.&lt;빌드\>.tar|  
+|バージョン 9 SPARC|ccm-Sol9sparc.&lt;ビルド\>.tar|  
+|バージョン 10 x86|ccm-Sol10x86.&lt;ビルド\>.tar|  
+|バージョン 10 SPARC|ccm-Sol10sparc.&lt;ビルド\>.tar|  
+|バージョン 11 x86|ccm-Sol11x86.&lt;ビルド\>.tar|  
+|バージョン 11 SPARC|ccm-Sol11sparc.&lt;ビルド\>.tar|  
 
 ### <a name="suse-linux-enterprise-server-sles"></a>SUSE Linux Enterprise Server (SLES)  
 
-|버전|파일|  
+|バージョン|ファイル|  
 |-|-|  
-|버전 9 x86|ccm-SLES9x86.&lt;빌드\>.tar|  
-|버전 10 SP1 x86|ccm-Universalx86.&lt;빌드\>.tar|  
-|버전 10 SP1 x64|ccm-Universalx64.&lt;빌드\>.tar|  
-|버전 11 SP1 x86|ccm-Universalx86.&lt;빌드\>.tar|  
-|버전 11 SP1 x64|ccm-Universalx64.&lt;빌드\>.tar|  
-|버전 12 x64|ccm-Universalx64.&lt;빌드\>.tar|  
+|バージョン 9 x86|ccm-SLES9x86.&lt;ビルド\>.tar|  
+|バージョン 10 SP1 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 10 SP1 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
+|バージョン 11 SP1 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 11 SP1 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
+|バージョン 12 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
 
 ### <a name="ubuntu"></a>Ubuntu  
 
-|버전|파일|    
+|バージョン|ファイル|    
 |-|-|  
-|버전 10.04 LTS x86|ccm-Universalx86.&lt;빌드\>.tar|  
-|버전 10.04 LTS x64|ccm-Universalx64.&lt;빌드\>.tar|  
-|버전 12.04 LTS x86|ccm-Universalx86.&lt;빌드\>.tar|  
-|버전 12.04 LTS x64|ccm-Universalx64.&lt;빌드\>.tar|  
-|버전 14.04 LTS x86|ccm-Universalx86.&lt;빌드\>.tar|  
-|버전 14.04 LTS x64|ccm-Universalx64.&lt;빌드\>.tar|  
+|バージョン 10.04 LTS x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 10.04 LTS x64|ccm-Universalx64.&lt;ビルド\>.tar|  
+|バージョン 12.04 LTS x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 12.04 LTS x64|ccm-Universalx64.&lt;ビルド\>.tar|  
+|バージョン 14.04 LTS x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 14.04 LTS x64|ccm-Universalx64.&lt;ビルド\>.tar|  
 
-### <a name="exchange-server-connector"></a>Exchange Server 커넥터
- LTSB에서는 클라이언트 소프트웨어를 설치하지 않고 Exchange Sever 인스턴스에 연결하는 장치에 대해 제한적인 관리를 지원합니다. 자세한 내용은 [System Center Configuration Manager와 Exchange를 사용하여 모바일 장치 관리](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync)를 참조하세요.
+### <a name="exchange-server-connector"></a>Exchange Server コネクタ
+ LTSB は、クライアント ソフトウェアをインストールすることがない、Exchange サーバー インスタンスに接続するデバイスの限定された管理をサポートしています。 詳細については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync)」を参照してください。
 
- **요구 사항 및 제한 사항:**  
+ **要件と制限事項**  
 
--   Configuration Manager는 모바일 장치에 대해 제한적인 관리 기능을 제공합니다. Exchange Server 또는 Exchange Online을 실행하는 서버에 연결하는 EAS(Exchange Active Sync) 사용 가능 장치에 대해 Exchange Server 커넥터를 사용하는 경우 제한적인 관리 기능을 사용할 수 있습니다.  
+-   Configuration Manager では、モバイル デバイスを限定的に管理できます。 Exchange Server または Exchange Online を実行しているサーバーに接続する Exchange Active Sync (EAS) 対応デバイス向けに Exchange Server コネクタを使用する場合に、モバイル デバイスは限定的に管理できます。  
 
--   Exchange Server 커넥터가 관리하는 모바일 장치에 대해 Configuration Manager가 지원하는 관리 기능에 대한 자세한 내용은 [System Center Configuration Manager에 대한 장치 관리 솔루션 선택](/sccm/core/plan-design/choose-a-device-management-solution)을 참조하세요.  
+-   Exchange Server コネクタが管理するモバイル デバイスで Configuration Manager がサポートする管理機能の詳細については、「[System Center Configuration Manager のデバイス管理ソリューションの選択](/sccm/core/plan-design/choose-a-device-management-solution)」を参照してください。  
 
-**Exchange Server의 지원되는 버전:**  
+**サポートされている Exchange Server のバージョン:**  
 -   Exchange Server 2010 SP1  
 -   Exchange Server 2010 SP2  
 -   Exchange Server 2013  
 
 > [!NOTE]
-> LTSB는 Exchange Online(Office 365)과 같은 온라인 서비스를 통해 연결하는 장치 관리를 지원하지 않습니다.
+> LTSB では、Exchange Online (Office 365) などのオンライン サービスを通じて接続するデバイスは管理できません。
 
 
-## <a name="configuration-manager-console"></a>Configuration Manager 콘솔
-LTSB는 다음 운영 체제에서 Configuration Manager 콘솔을 실행하도록 지원합니다. 콘솔을 호스트하는 각 컴퓨터에 최소 .NET Framework 버전 4.5.2가 있어야 합니다(.NET Framework 4.6이 필요한 Windows 10 제외).
+## <a name="configuration-manager-console"></a>Configuration Manager コンソール
+LTSB は、Configuration Manager コンソールを実行するために、次のオペレーティング システムをサポートしています。 .NET Framework 4.6 以上を必要とする Windows 10 を除き、コンソールをホストする各コンピューターは、.NET Framework 4.5.2 以上のバージョンが必要です。
 
-**지원되는 운영 체제:**
+**サポートされるオペレーティング システム:**
 - Windows Server 2016
-- Windows Server 2012 R2(x64): Standard, Datacenter
-- Windows Server 2012(x64): Standard, Datacenter
-- Windows Server 2008 R2 SP1(x64): Standard, Enterprise, Datacenter
-- Windows Server 2008 SP2(x86, x64): Standard, Enterprise, Datacenter
-- Windows 10 Enterprise 2016 LTSB(x86, x64)
-- Windows 10 Enterprise 2015 LTSB(x86, x64)
-- Windows 8.1(x86, x64): Professional, Enterprise
-- Windows 7 SP1(x86, x64): Professional, Enterprise, Ultimate
+- Windows Server 2012 R2 (x64): Standard、Datacenter
+- Windows Server 2012 (x64): Standard、Datacenter
+- Windows Server 2008 R2 SP1 (x64): Standard、Enterprise、Datacenter
+- Windows Server 2008 SP2 (x86、x64): Standard、Enterprise、Datacenter
+- Windows 10 Enterprise 2016 LTSB (x86、x64)
+- Windows 10 Enterprise 2015 LTSB (x86、x64)
+- Windows 8.1 (x86、x64): Professional、Enterprise
+- Windows 7 SP1 (x86、x64): Professional、Enterprise、Ultimate
 
 
-## <a name="sql-server-versions-supported-for-the-site-database-and-reporting-point"></a>사이트 데이터베이스 및 보고 지점에 대해 지원되는 SQL Server 버전
-LTSB는 다음 SQL Server 버전에서 사이트 데이터베이스 및 보고 지점을 호스트하도록 지원합니다. 지원되는 각 버전에서 현재 분기에 대한 [SQL Server 버전 지원](/sccm/core/plan-design/configs/support-for-sql-server-versions)에 표시되는 것과 동일한 구성 요구 사항 및 제한 사항이 LTSB에 적용됩니다.  여기에는 SQL Server 클러스터 또는 SQL Server AlwaysOn 가용성 그룹의 사용이 포함됩니다.  
+## <a name="sql-server-versions-supported-for-the-site-database-and-reporting-point"></a>サイト データベースとレポート ポイントでサポートされている SQL Server バージョン
+LTSB は、サイト データベースとレポート ポイントをホストする SQL Server の次のバージョンをサポートしています。 サポートされている各バージョンで、Current Branch の「[SQL Server バージョンのサポート](/sccm/core/plan-design/configs/support-for-sql-server-versions)」に記載されている同じ構成要件および制限事項が、LTSB に適用されます。  これには、SQL Server クラスター、または SQL Server AlwaysOn 可用性グループの使用が含まれます。  
 
-**지원되는 버전:**
+**サポートされるバージョン:**
 
-- SQL Server 2016: Standard, Enterprise
-- SQL Server 2014 SP2: Standard, Enterprise
-- SQL Server 2014 SP1: Standard, Enterprise
-- SQL Server 2012 SP3: Standard, Enterprise
-- SQL Server 2008 R2 SP3: Standard, Enterprise, Datacenter
+- SQL Server 2016: Standard、Enterprise
+- SQL Server 2014 SP2: Standard、Enterprise
+- SQL Server 2014 SP1: Standard、Enterprise
+- SQL Server 2012 SP3: Standard、Enterprise
+- SQL Server 2008 R2 SP3: Standard、Enterprise、Datacenter
 - SQL Server 2016 Express
 - SQL Server 2014 Express SP2
 - SQL Server 2014 Express SP1
 - SQL Server 2012 Express SP3
 
-## <a name="support-for-active-directory-domains"></a>Active Directory 도메인 지원
-모든 LTSB 사이트 시스템은 지원되는 Windows Active Directory 도메인의 구성원이어야 합니다. Active Directory 도메인 지원은 [Active Directory 도메인 지원](/sccm/core/plan-design/configs/support-for-active-directory-domains)에 표시되는 것과 동일한 요구 사항 및 제한 사항을 갖지만 다음 도메인 기능 수준으로 제한됩니다.
+## <a name="support-for-active-directory-domains"></a>Active Directory ドメインのサポート
+すべての LTSB サイト システムは、サポートされている Windows Active Directory ドメインのメンバーであることが必要です。 Active Directory ドメインのサポートは、[Active Directory ドメインのサポート](/sccm/core/plan-design/configs/support-for-active-directory-domains)に記載されるものと同じ要件と制限がありますが、次のドメイン機能レベルに制限されています。
 
-**지원되는 수준:**
+**サポートされているレベル:**
 - Windows Server 2008
 - Windows Server 2008 R2
 - Windows Server 2012
 - Windows Server 2012 R2
 
-## <a name="additional-support-topics-that-apply-to-the-long-term-servicing-branch"></a>장기 서비스 지점에 적용되는 추가 지원 항목
-다음 현재 분기 항목의 정보는 LTSB에 적용됩니다.
-- [크기 조정 및 규모 숫자 값](/sccm/core/plan-design/configs/size-and-scale-numbers)
-- [사이트 및 사이트 시스템 필수 조건](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)
-- [고가용성 옵션](/sccm/protect/understand/high-availability-options)
-- [권장 하드웨어](/sccm/core/plan-design/configs/recommended-hardware)
-- [Windows 기능 및 네트워크 지원](/sccm/core/plan-design/configs/support-for-windows-features-and-networks)
-- [가상화 환경 지원](/sccm/core/plan-design/configs/support-for-virtualization-environments)
+## <a name="additional-support-topics-that-apply-to-the-long-term-servicing-branch"></a>Long Term Servicing Branch に適用されるその他のサポートに関するトピック
+次の Current Branch トピックの情報は、LTSB に適用されます。
+- [サイジングとスケールの数値](/sccm/core/plan-design/configs/size-and-scale-numbers)
+- [サイトとサイト システムの前提条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)
+- [高可用性オプション](/sccm/protect/understand/high-availability-options)
+- [推奨ハードウェア](/sccm/core/plan-design/configs/recommended-hardware)
+- [Windows の機能とネットワークのサポート](/sccm/core/plan-design/configs/support-for-windows-features-and-networks)
+- [仮想環境のサポート](/sccm/core/plan-design/configs/support-for-virtualization-environments)

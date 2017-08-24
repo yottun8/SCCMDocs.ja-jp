@@ -1,6 +1,6 @@
 ---
-title: "소프트웨어 업데이트에 대한 보안 및 개인 정보 | Microsoft 문서"
-description: "소프트웨어 업데이트에 대한 이러한 보안 모범 사례를 따르고 Configuration Manager에서 개인 정보를 처리하는 방식을 알아봅니다."
+title: "ソフトウェア更新プログラムのセキュリティとプライバシー | Microsoft Docs"
+description: "ソフトウェア更新プログラムのセキュリティのベスト プラクティスおよび Configuration Manager でのプライバシー情報の処理方法について説明します。"
 keywords: 
 author: dougeby
 ms.author: dougeby
@@ -14,58 +14,58 @@ ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
 ms.openlocfilehash: 4b4f045138abc14b6e93b3b990c5f3a8b4f2f952
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="security-and-privacy-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 소프트웨어 업데이트에 대한 보안 및 개인 정보
+# <a name="security-and-privacy-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager のソフトウェア更新プログラムのセキュリティとプライバシー
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-이 항목에는 System Center Configuration Manager에서 소프트웨어 업데이트에 대한 보안 및 개인 정보가 포함되어 있습니다.  
+このトピックには、System Center Configuration Manager におけるソフトウェア更新プログラムのセキュリティとプライバシーの情報が含まれています。  
 
-##  <a name="BKMK_Security_HardwareInventory"></a> 소프트웨어 업데이트에 대한 보안 모범 사례  
- 클라이언트에 소프트웨어 업데이트를 배포할 경우 다음 보안 모범 사례를 따르십시오.  
+##  <a name="BKMK_Security_HardwareInventory"></a> ソフトウェア更新プログラムに関するセキュリティ上のベスト プラクティス  
+ クライアントにソフトウェア更新プログラムを展開するときは、次のようなセキュリティのベスト プラクティスに従ってください。  
 
--   소프트웨어 업데이트 패키지에 대한 기본 권한은 변경하지 마십시오.  
+-   ソフトウェアの更新パッケージに対する既定のアクセス許可を変更しない。  
 
-     기본적으로 소프트웨어 업데이트 패키지는 관리자에게 **모든 권한** 과 사용자에게 **읽기** 액세스 권한을 허용하도록 설정되어 있습니다. 이 권한을 변경하면 공격자가 소프트웨어 업데이트를 추가, 제거 또는 삭제할 수도 있습니다.  
+     既定では、ソフトウェアの更新パッケージは、管理者に **フル コントロール** を許可し、ユーザーに **読み取り** アクセスを付与するように設定されます。 これらのアクセス許可を変更すると、攻撃者によるソフトウェア更新プログラムの追加または削除が可能になる危険性があります。  
 
--   소프트웨어 업데이트의 다운로드 위치에 대한 액세스를 제어합니다.  
+-   ソフトウェア更新プログラムのダウンロード先へのアクセスを制御する。  
 
-     SMS 공급자 및 사이트 서버용 컴퓨터 계정과 소프트웨어 업데이트를 다운로드 위치에 실제로 다운로드하는 관리자는 다운로드 위치에 대해 **쓰기** 액세스 권한을 보유해야 합니다. 공격자가 다운로드 위치 내 소프트웨어 업데이트 원본 파일을 무단 변경할 위험을 최소화하기 위해 다운로드 위치에 대한 액세스를 제한해야 합니다.  
+     ソフトウェア更新プログラムを実際にダウンロード先にダウンロードする管理者と SMS プロバイダー、サイトサーバーのコンピューター アカウントは、ダウンロード先への [書き込み] アクセス許可が必要です。 **** ダウンロード先へのアクセスを制限して、そこにあるソフトウェアの更新のソース ファイルを攻撃者が改ざんするリスクを低減します。  
 
-     또한 다운로드 위치에 UNC 공유를 사용하는 경우 소프트웨어 업데이트 원본 파일이 네트워크를 통해 전송될 때 무단 변경될 위험을 방지하기 위해 IPsec 또는 SMB 서명을 사용하여 네트워크 채널을 보호합니다.  
+     さらに、ダウンロード先で UNC 共有を使用する場合は、ネットワークを通じて転送するときにソフトウェア更新のソース ファイルが改ざんされることを防ぐため、IPsec または SMB 署名 を使用して、ネットワーク チャネルをセキュリティ保護してください。  
 
--   배포 시간을 평가하는 데 UTC를 사용합니다.  
+-   展開時刻の評価に UTC を使用する。  
 
-     UTC 대신 현지 시간을 사용하는 경우 사용자가 자신의 컴퓨터에서 표준 시간대를 변경하여 소프트웨어 업데이트의 설치를 지연시킬 수도 있습니다.  
+     UTC ではなくローカル時刻を使用する場合は、ユーザーがコンピューターのタイム ゾーンを変更していると、ソフトウェア更新プログラムのインストールが遅れる可能性があります。  
 
--   WSUS(Windows Server Update Services)에서 SSL을 사용하도록 설정하고 WSUS를 보호하기 위한 모범 사례를 준수합니다.  
+-   Windows Server Update Services (WSUS). の SSL を有効にし、WSUS をセキュリティ保護するためのベスト プラクティスに従います。  
 
-     Configuration Manager에서 사용하는 WSUS 버전에 대한 보안 모범 사례를 확인 및 준수합니다.  
+     Configuration Manager で使用する WSUS のバージョン用のセキュリティのベストプラクティスを確認し、これに従います。  
 
     > [!IMPORTANT]  
-    >  소프트웨어 업데이트 지점에서 WSUS 서버에 대해 SSL 통신을 사용하도록 설정할 경우 WSUS 서버에 SSL에 대한 가상 루트를 구성해야 합니다.  
+    >  WSUS サーバーで SSL コミュニケーションを有効にするようにソフトウェア更新ポイントを構成する場合は、WSUS サーバーの SSL の仮想ルートを構成する必要があります。  
 
--   CRL 확인을 사용하도록 설정합니다.  
+-   CRL チェックを有効にする  
 
-     기본적으로 Configuration Manager에서는 소프트웨어 업데이트가 컴퓨터에 배포되기 전에 서명을 검사하기 위해 CRL(인증서 해지 목록)을 확인하지 않습니다. 인증서가 사용될 때마다 CRL을 확인하면 해지된 인증서를 사용할 경우보다는 보안성이 향상되지만, 연결 지연이 발생할 수 있고 CRL 확인을 수행하는 컴퓨터에서 처리 부하가 증가합니다.  
+     既定では、Configuration Manager は、ソフトウェア更新プログラムがコンピューターに展開される前に、更新の署名を検証するための証明書失効リスト (CRL) を確認しません。 証明書が使用されるたびに CRL をチェックすることで、失効済み証明書の使用に対するセキュリティを向上できますが、接続に遅れが発生し、CRL チェックを実行するコンピューターの処理の増加を招くことになります。  
 
-     소프트웨어 업데이트에 대해 CRL 확인을 사용하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 소프트웨어 업데이트에 CRL 확인을 사용하는 방법](../get-started/manage-settings-for-software-updates.md#crl-checking-for-software-updates)을 참조하세요.  
+     ソフトウェア更新の CRL チェックを有効化する方法の詳細については、「[System Center Configuration Manager でのソフトウェアの更新の CRL チェックを有効にする方法](../get-started/manage-settings-for-software-updates.md#crl-checking-for-software-updates)」を参照してください。  
 
--   사용자 지정 웹 사이트를 사용하도록 WSUS를 구성합니다.  
+-   WSUS がカスタム Web サイトを使用するように構成する。  
 
-     소프트웨어 업데이트 지점에 WSUS를 설치할 경우 기존 IIS 기본 웹 사이트를 사용하거나 사용자 지정 WSUS 웹 사이트를 만들 수 있습니다. IIS가 다른 Configuration Manager 사이트 시스템 또는 다른 응용 프로그램에서 사용하는 웹 사이트를 공유하지 않고 전용 가상 웹 사이트에 있는 WSUS 서비스를 호스트하도록 하려면 WSUS에 사용자 지정 웹 사이트를 만듭니다.  
+     ソフトウェアの更新ポイントに WSUS をインストールする場合、既存の IIS 既定 Web サイトを使用するか、またはカスタム WSUS Web サイトを作成するかを選択できます。 他の Configuration Manager サイト システムまたは他のアプリケーションで使用されているのと同じ Web サイトを共有せずに、WSUS サービスが IIS によって専用の仮想 Web サイトでホストされるようにするには、WSUS のカスタム Web サイトを作成してください。  
 
-     자세한 내용은 [사용자 지정 웹 사이트를 사용하도록 WSUS 구성](plan-for-software-updates.md#BKMK_CustomWebSite)을 참조하세요.  
+     詳細については、「[WSUS がカスタム Web サイトを使用するように構成する](plan-for-software-updates.md#BKMK_CustomWebSite)」を参照してください。  
 
-##  <a name="BKMK_Privacy_HardwareInventory"></a> 소프트웨어 업데이트에 대한 개인 정보  
- 소프트웨어 업데이트 작업에서는 클라이언트 컴퓨터를 검색하여 필요한 소프트웨어 업데이트를 확인한 다음 이 정보를 다시 사이트 데이터베이스에 보냅니다. 소프트웨어 업데이트 프로세스 중 Configuration Manager는 컴퓨터 및 로그온 계정을 식별하는 정보를 클라이언트와 서버 간에 전송합니다.  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> ソフトウェア更新プログラムに関するプライバシー情報  
+ ソフトウェアの更新は、クライアント コンピューターをスキャンして、必要なソフトウェアの更新を判断し、情報をサイト データベースに返送します。 ソフトウェアの更新プロセスの間、Configuration Manager では、コンピューターとログオン アカウントを識別する情報がクライアントとサーバー間で送信されることがあります。  
 
- Configuration Manager에는 소프트웨어 배포 프로세스에 대한 상태 정보가 유지됩니다. 상태 정보는 전송 또는 저장 중에 암호화되지 않습니다. 또한 상태 정보는 Configuration Manager 데이터베이스에 저장되며 데이터베이스 유지 관리 작업에 의해 삭제됩니다. Microsoft로 전송되는 상태 정보는 없습니다.  
+ Configuration Manager は、ソフトウェアの展開プロセスに関するステータス情報を維持します。 状態情報は、送信時や保管時に暗号化されません。 状態情報は、Configuration Manager データベースに保管され、データベース メンテナンス タスクによって削除されます。 状態情報が Microsoft に送信されることはありません。  
 
- 클라이언트 컴퓨터에 소프트웨어 업데이트를 설치할 때 Configuration Manager 소프트웨어 업데이트는 해당 업데이트에 대한 소프트웨어 사용 조건에 따라 사용해야 합니다. 이 소프트웨어 사용 조건은 System Center Configuration Manager에 대한 소프트웨어 사용 조건과 별개입니다. Configuration Manager를 사용하여 소프트웨어 업데이트를 설치하기 전에는 항상 소프트웨어 사용 조건을 살펴보고 이에 동의해야 합니다.  
+ Configuration Manager のソフトウェアの更新を使用してクライアント コンピューターにソフトウェアの更新をインストールする場合は、その更新に関するソフトウェア ライセンス条項の対象となることがあります。これは、Configuration Manager のソフトウェア ライセンス条項とは別個のものです。 Configuration Manager を使用してソフトウェア更新プログラムをインストールする前に、必ずソフトウェア ライセンス条項を確認して同意する必要があります。  
 
- Configuration Manager는 소프트웨어 업데이트를 기본적으로 구현하지 않으며 몇 개의 구성 단계를 거쳐야 정보를 수집할 수 있습니다.  
+ Configuration Manager では、既定でソフトウェアの更新が実装されることはありません。また、複数の構成手順を実行しなければ、情報が収集されることはありません。  
 
- 소프트웨어 업데이트를 구성하려면 먼저 개인 정보 취급 방침 요구 사항을 검토하십시오.  
+ ソフトウェア更新プログラムを構成する前に、プライバシー要件について検討してください。  

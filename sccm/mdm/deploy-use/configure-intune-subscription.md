@@ -1,6 +1,6 @@
 ---
-title: "System Center Configuration Manager를 사용하여 Intune 구독 구성 | Microsoft Docs"
-description: "System Center Configuration Manager를 사용하여 Intune 구독 구성"
+title: "System Center Configuration Manager を使用した Intune サブスクリプションの構成 | Microsoft Docs"
+description: "System Center Configuration Manager を使用して Intune サブスクリプションを構成します。"
 ms.custom: na
 ms.date: 06/02/2017
 ms.prod: configuration-manager
@@ -18,66 +18,66 @@ manager: angrobe
 ms.openlocfilehash: 22d890c972d3166f9c7b583d8d3fa917c1897880
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="configure-your-intune-subscription-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 및 Microsoft Intune을 사용하여 Intune 구독 구성
+# <a name="configure-your-intune-subscription-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用した Intune サブスクリプションの構成
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-Intune 구독을 사용하면 인터넷을 통해 장치를 관리할 수 있습니다. 여기에는 장치를 등록할 수 있는 사용자 컬렉션 지정 및 사용자에게 표시되는 정보 정의가 포함됩니다. Intune 구독을 만드는 동안 회사 로고 및 사용자 지정 색 구성표를 사용하여 Intune 회사 포털에 회사 브랜딩을 추가할 수도 있습니다.
+Intune サブスクリプションを使用すると、インターネット上でデバイスを管理できます。 たとえば、デバイスを登録できるユーザー コレクションを指定したり、ユーザーに表示される情報を定義したりすることができます。 Intune サブスクリプションを作成するときに、Intune の会社のポータルに会社のロゴや独自のカラー スキームを含めて、会社のブランドを追加できます。
 
-Intune 구독은 다음을 수행합니다.
+Intune サブスクリプションは、次のことを実行します。
 
--   서비스 연결 지점이 Intue 서비스에 연결하는 데 필요한 인증서 검색
--   사용자가 모바일 장치를 등록할 수 있는 사용자 컬렉션 정의
--   지원할 모바일 플랫폼 정의 및 구성
+-   Intune サービスに接続するためにサービス接続ポイントによって必要とされる証明書を取得します
+-   ユーザーがモバイル デバイスを登録できるようにするユーザー コレクションを定義します
+-   サポートするモバイル プラットフォームを定義して構成します
 
 > [!IMPORTANT]
->  Configuration Manager에서 Microsoft Intune에 대한 구독을 만들면 사이트의 서비스 연결 지점이 "온라인 모드"가 됩니다. [System Center Configuration Manager의 서비스 연결 지점 정보](../../core/servers/deploy/configure/about-the-service-connection-point.md)를 참조하세요.
+>  Configuration Manager で Microsoft Intune のサブスクリプションを作成すると、サイトのサービス接続ポイントが「オンライン モード」になります。 「[System Center Configuration Manager のサービス接続ポイントについて](../../core/servers/deploy/configure/about-the-service-connection-point.md)」を参照してください。
 
-## <a name="to-create-the-microsoft-intune-subscription"></a>Microsoft Intune 구독을 만들려면
+## <a name="to-create-the-microsoft-intune-subscription"></a>Microsoft Intune サブスクリプションを作成するには
 
-1.  아직 그렇게 하지 않은 경우 [Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=258216)에서 Microsoft Intune 계정을 등록합니다.  Intune 계정을 만든 후에는 Intune 계정에 사용자를 추가하거나 추가 설정 구성을 수행할 필요가 없습니다.
+1.  まだであれば、[Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=258216) で Microsoft Intune アカウントにサインアップします。  Intune アカウントを作成した後は、ユーザーを Intune アカウントに追加したり、追加の設定を構成したりする必要はありません。
 
-2.  Configuration Manager 콘솔에서 **관리**를 클릭합니다.
+2.  Configuration Manager コンソールで、[ **管理**] をクリックします。
 
-3.  **관리** 작업 영역에서 **클라우드 서비스**를 확장하고 **Microsoft Intune 구독**을 클릭합니다. **홈** 탭에서 **Microsoft Intune 구독 추가**를 클릭합니다.
+3.  **[管理]** ワークスペースで、 **[クラウド サービス]**を展開して **[Microsoft Intune サブスクリプション]**をクリックします。 **[ホーム]** タブで、 **[Microsoft Intune サブスクリプションの追加]**をクリックします。
 
-![Intune 구독 만들기](../media/mdm-set-intune.png)
+![Intune サブスクリプションを作成する](../media/mdm-set-intune.png)
 
-4.  Microsoft Intune 구독 만들기 마법사의 **소개** 페이지에서 텍스트를 검토하고 **다음**을 클릭합니다.
+4.  [Microsoft Intune サブスクリプションの作成] ウィザードの [ **概要** ] ページで、内容を確認して、[ **次へ**] をクリックします。
 
-5.  **구독** 페이지에서 **로그인** 을 클릭하고 회사 또는 학교 계정을 사용하여 로그인합니다. **모바일 장치 관리 기관 설정** 대화 상자에서 Configuration Manager 콘솔을 통해 Configuration Manager를 사용하는 방법으로만 모바일 장치를 관리하려면 확인란을 선택합니다. 구독을 계속하려면 이 옵션을 선택해야 합니다.
+5.  [ **サブスクリプション** ] ページで、[ **サインイン** ] をクリックし、職場または学校のアカウントを使用してサインインします。 **[モバイル デバイス管理機関の設定]** ダイアログで、チェック ボックスをオンにして、Configuration Manager コンソールから Configuration Manager を使用してのみモバイル デバイスを管理するようにします。 サブスクリプションを続行するには、このオプションを選択する必要があります。
 
     > [!IMPORTANT]
-    >  Configuration Manager를 관리 기관으로 선택하는 경우 Microsoft 지원 서비스에 연락하지 않고, 기존의 관리 장치를 등록 취소했다가 다시 등록하지 않고도, Configuration Manager 버전 1610 이상 및 Microsoft Intune 버전 1705에서 관리 기관을 Microsoft Intune으로 변경할 수 있습니다. 자세한 내용은 [MDM 기관 변경](/sccm/mdm/deploy-use/change-mdm-authority)을 참조하세요.
+    >  管理機関として Configuration Manager を選択すると、Configuration Manager バージョン 1610 以降の Microsoft Intune および Microsoft Intune バージョン 1705 でのみ、Microsoft サポートに問い合わせることや、既存の管理対象の登録解除と再登録を行うことなく、管理機関を変更できます。 詳細については、「[Change your MDM authority](/sccm/mdm/deploy-use/change-mdm-authority)」(MDM 機関を変更する) を参照してください。
 
-6.  개인 정보 취급 방침 링크를 클릭하여 검토하고 **다음**을 클릭합니다.
+6.  プライバシー リンクを確認するには、リンクをクリックして、[次へ ****] をクリックします。
 
-7.  **일반** 페이지에서 다음 옵션을 지정한 후 **다음**을 클릭합니다.
+7.  [ **全般** ] ページで、以下のオプションを指定して [ **次へ**] をクリックします。
 
-  -   **컬렉션**: 모바일 장치를 등록할 사용자가 포함된 사용자 컬렉션을 지정합니다.
+  -   **コレクション**:モバイル デバイスを登録するユーザーが含まれるユーザー コレクションを指定します。
 
       > [!NOTE]
-      >  사용자가 컬렉션에서 제거될 경우 사용자 데이터베이스에서 사용자 레코드가 제거되면 최대 24시간 동안 사용자 장치가 계속 관리됩니다.
+      >  コレクションからユーザーを削除すると、そのユーザーのデバイスは、ユーザー レコードがユーザー データベースから削除されるまで最長 24 時間管理されます。
 
-  -   **회사 이름**: 회사 이름을 지정합니다.
+  -   **会社名**: 会社の名前を指定します。
 
-  -   **회사 개인 정보 취급 방침 문서의 URL**: 인터넷에서 액세스할 수 있는 링크에 회사 개인 정보 취급 방침을 게시하는 경우 사용자가 회사 포털에서 이 방침에 액세스할 수 있는 링크를 제공합니다(예: http://www.contoso.com/CP_privacy.html). 개인 정보 취급 방침 정보에는 사용자가 회사와 공유할 수 있는 정보가 명시될 수 있습니다.
+  -   **会社のプライバシー ドキュメントの URL**: 会社のプライバシー保護情報を、インターネットからアクセス可能な場所で公開する場合は、ユーザーが会社ポータルからアクセスできるように、そのリンクを指定します (たとえば http://www.contoso.com/CP_privacy.html)。 プライバシー情報を使用すると、ユーザーが企業と共有する情報を明確にすることができます。
 
-  -   **회사 포털의 색 구성표**: 선택적으로 회사 포털의 기본 색상인 파란색을 변경합니다.
+  -   **会社ポータルの配色**:オプションで、既定の色 (青) を会社ポータル向けに変更できます。
 
-  -   **Configuration Manager 사이트 코드**: 모바일 장치를 관리할 기본 사이트의 사이트 코드를 지정합니다.
+  -   **Configuration Manager サイト コード**:モバイル デバイスを管理するための、プライマリ サイトのサイト コードを指定します。
 
     > [!NOTE]
-    >  사이트 코드를 변경하면 새 등록만 영향을 받으며 기존에 등록된 장치는 영향을 받지 않습니다.
+    >  サイト コードの変更は、新しいデバイスの登録だけに影響します。既に登録済みのデバイスのサイト コードは変わりません。
 
-8.  **회사 연락처 정보** 페이지에서 회사 포털 앱의 **IT 문의** 아래에 표시되는 회사 연락처 정보를 지정합니다. 회사에 대한 연락처 정보를 제공하고 **다음**을 클릭합니다.
+8.  **[会社の連絡先情報]** ページで、ポータル サイト アプリの **[IT に連絡]** でユーザーに表示する会社の連絡先情報を指定します。 会社の連絡先情報を指定し、**[次へ]** をクリックします。
 
-9. **회사 로고** 페이지에서 회사 포털에 로고를 표시할지 여부를 선택하고 **다음**을 클릭할 수 있습니다.
+9. **[会社のロゴ]** ページでは、ポータル サイトにロゴを表示するかどうかを選択し、**[次へ]**をクリックします。
 
-10. 마법사를 완료합니다.
+10. ウィザードを完了します。
 
 > [!div class="button"]
-[< 이전 단계](confirm-dns.md)  [다음 단계 >](terms-and-conditions.md)
+[< 前のステップ](confirm-dns.md)  [次のステップ >](terms-and-conditions.md)

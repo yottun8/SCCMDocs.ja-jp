@@ -1,6 +1,6 @@
 ---
-title: "Endpoint Protection 구성 | Microsoft 문서"
-description: "클라이언트 컴퓨터에서 맬웨어 방지 정의를 최신 상태로 유지하도록 System Center Configuration Manager에서 Endpoint protection의 방법을 선택하고 구성하는 방법을 알아봅니다."
+title: "Endpoint Protection の構成 | Microsoft Docs"
+description: "System Center Configuration Manager で Endpoint Protection を使用する方法を選択および構成し、クライアント コンピューターでマルウェア対策定義を最新の状態に保つ方法について説明します。"
 ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
@@ -17,55 +17,55 @@ manager: angrobe
 ms.openlocfilehash: b5da7900a4f8e2f330c4dcb2cac00b45099bd909
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-#  <a name="configure-definition-updates-for-endpoint-protection"></a>Endpoint Protection에 대한 정의 업데이트 구성  
+#  <a name="configure-definition-updates-for-endpoint-protection"></a>Endpoint Protection の定義ファイルの更新を構成する  
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
- System Center Configuration Manager의 Endpoint Protection에서는 사용 가능한 여러 가지 방법 중 하나를 사용하여 계층 구조에 있는 클라이언트 컴퓨터의 맬웨어 방지 정의를 최신 상태로 유지할 수 있습니다. 이 항목의 정보는 이러한 방법을 선택하고 구성하는 데 유용할 수 있습니다.
+ System Center Configuration Manager で Endpoint Protection を使用すると、利用できるいくつかの方法のいずれかを使用して、階層内のクライアント コンピューターでマルウェア対策定義を最新の状態に保つことができます。 このトピックの情報は、これらの方法を選んで構成するのに役立ちます。
 
- 맬웨어 방지 정의를 업데이트하려면 다음 방법 중 하나 이상을 사용합니다.
+ マルウェア対策定義を更新するには、次の方法から 1 つ以上を使用できます。
 
--   [Configuration Manager에서 배포되는 업데이트](endpoint-definitions-configmgr.md) - 이 방법은 Configuration Manager 소프트웨어 업데이트를 사용하여 정의 및 엔진 업데이트를 계층 구조의 컴퓨터에 제공합니다.
+-   [[Configuration Manager から配布される更新プログラム]](endpoint-definitions-configmgr.md) - この方法では、Configuration Manager ソフトウェア更新プログラムを使用して、階層内のコンピューターに定義とエンジンの更新プログラムを配布します。
 
--   [WSUS(Windows Server Update Services)에서 배포되는 업데이트](endpoint-definitions-wsus.md) - 이 방법은 WSUS 인프라를 사용하여 컴퓨터에 정의 및 엔진 업데이트를 제공합니다.
+-   [[Windows Server Update Services (WSUS) から配信される更新プログラム]](endpoint-definitions-wsus.md) - この方法では、WSUS インフラストラクチャを使用して定義とエンジンの更新プログラムをコンピューターに配布します。
 
--   [Microsoft 업데이트에서 배포되는 업데이트](endpoint-definitions-microsoft-updates.md) - 이 방법을 사용하면 컴퓨터가 정의 및 엔진 업데이트를 다운로드하기 위해 Microsoft 업데이트에 직접 연결합니다. 이 방법은 회사 네트워크에 자주 연결하지 않는 컴퓨터에 유용할 수 있습니다.
+-   [[Microsoft Update から配信される更新プログラム]](endpoint-definitions-microsoft-updates.md) - この方法では、コンピューターを Microsoft Update に直接接続し、定義とエンジンの更新プログラムをダウンロードできます。 この方法は、ビジネス ネットワークにあまり接続していないコンピューターに役立ちます。
 
--   [Microsoft 맬웨어 보호 센터에서 배포되는 업데이트](endpoint-definitions-protection-center.md) - 이 방법은 Microsoft 맬웨어 보호 센터에서 정의 업데이트를 다운로드합니다.
+-   [[Microsoft Malware Protection Center から配信された更新プログラム]](endpoint-definitions-protection-center.md) - この方法では、Microsoft Malware Protection Center から定義ファイルの更新をダウンロードします。
 
--   [UNC 파일 공유의 업데이트](endpoint-definitions-network.md) - 이 방법을 사용하면 최신 정의 및 엔진 업데이트를 네트워크 공유에 저장할 수 있습니다. 그런 후에 클라이언트에서 네트워크에 액세스하여 업데이트를 설치할 수 있습니다.
+-   [[UNC ファイル共有から更新する]](endpoint-definitions-network.md) - この方法では、最新の定義とエンジンの更新プログラムをネットワーク上の共有に保存できます。 各クライアントは、ネットワークにアクセスして更新プログラムをインストールできます。
 
- 여러 정의 업데이트 원본을 구성하고 평가하고 적용하는 순서를 제어할 수 있습니다. 이 작업은 맬웨어 방지 정책을 만들 때 **정의 업데이트 원본 구성** 대화 상자에서 수행합니다.
+ 定義ファイルの更新ソースを複数構成し、それを評価および適用する順序を制御できます。 これは、マルウェア対策ポリシーを作成するときに、 **[定義ファイルの更新ソースの構成]** ダイアログ ボックスで行います。
 
 > [!IMPORTANT]
->  Windows 10 PC의 경우 Windows Defender에 대한 맬웨어 정의를 업데이트하도록 Endpoint Protection을 구성해야 합니다.
+>  Windows 10 が動作する PC の場合は、Endpoint Protection を構成して Windows Defender のマルウェア定義を更新する必要があります。
 
-## <a name="how-to-configure-definition-update-sources"></a>정의 업데이트 원본을 구성하는 방법
- 각 맬웨어 방지 정책에 사용할 정의 업데이트 원본을 구성하려면 다음 절차를 따르세요.
+## <a name="how-to-configure-definition-update-sources"></a>定義ファイルの更新ソースを構成する方法
+ 次の手順を使用すると、各マルウェア対策ポリシーに使用する定義ファイルの更新ソースを構成できます。
 
-1.  Configuration Manager 콘솔에서 **자산 및 호환성**을 클릭합니다.
+1.  Configuration Manager コンソールで、[ **資産とコンプライアンス**] をクリックします。
 
-2.  **자산 및 호환성** 작업 영역에서 **Endpoint Protection**을 확장하고 **맬웨어 방지 정책**을 클릭합니다.
+2.  **[資産とコンプライアンス]** ワークスペースで **[Endpoint Protection]**を展開してから、 **[マルウェア対策ポリシー]**をクリックします。
 
-3.  **기본 맬웨어 방지 정책** 의 속성 페이지를 열거나 새 맬웨어 방지 정책을 만듭니다. 맬웨어 방지 정책을 만드는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 Endpoint Protection에 대한 맬웨어 방지 정책을 만들어 배포하는 방법](endpoint-antimalware-policies.md)을 참조하세요.
+3.  **[既定のマルウェア対策ポリシー]** プロパティ ページを開くか、新しいマルウェア対策ポリシーを作成します。 マルウェア対策ポリシーを作成する方法の詳細については、「[System Center Configuration Manager で Endpoint Protection 用にマルウェア対策ポリシーを作成し展開する方法](endpoint-antimalware-policies.md)」をご覧ください。
 
-4.  맬웨어 방지 속성 대화 상자의 **정의 업데이트** 섹션에서 **원본 설정**을 클릭합니다.
+4.  マルウェア対策プロパティ ダイアログ ボックスの **[定義ファイルの更新]** セクションで **[ソースの設定]**をクリックします。
 
-5.  **정의 업데이트 원본 구성** 대화 상자에서 정의 업데이트에 사용할 원본을 선택합니다. **위로** 또는 **아래로** 를 클릭하여 이러한 원본의 사용 순서를 수정할 수 있습니다.
+5.  **[定義ファイルの更新ソースの構成]** ダイアログ ボックスで、定義ファイルの更新に使用するソースを選びます。 **[上]** または **[下]** をクリックしてそれらのソースを使用する順序を変更します。
 
-6.  **확인** 을 클릭하여 **정의 업데이트 원본 구성** 대화 상자를 닫습니다.
+6.  **[OK]** をクリックして **[定義ファイルの更新ソースの構成]** ダイアログ ボックスを閉じます。
 
-## <a name="configure-endpoint-protection-definitions"></a>Endpoint Protection 정의 구성
+## <a name="configure-endpoint-protection-definitions"></a>Endpoint Protection 定義の構成
 
--   [Configuration Manager에서 배포되는 업데이트](endpoint-definitions-configmgr.md) - 이 방법은 Configuration Manager 소프트웨어 업데이트를 사용하여 정의 및 엔진 업데이트를 계층 구조의 컴퓨터에 제공합니다.
+-   [[Configuration Manager から配布される更新プログラム]](endpoint-definitions-configmgr.md) - この方法では、Configuration Manager ソフトウェア更新プログラムを使用して、階層内のコンピューターに定義とエンジンの更新プログラムを配布します。
 
--   [WSUS(Windows Server Update Services)에서 배포되는 업데이트](endpoint-definitions-wsus.md) - 이 방법은 WSUS 인프라를 사용하여 컴퓨터에 정의 및 엔진 업데이트를 제공합니다.
+-   [[Windows Server Update Services (WSUS) から配信される更新プログラム]](endpoint-definitions-wsus.md) - この方法では、WSUS インフラストラクチャを使用して定義とエンジンの更新プログラムをコンピューターに配布します。
 
--   [Microsoft 업데이트에서 배포되는 업데이트](endpoint-definitions-microsoft-updates.md) - 이 방법을 사용하면 컴퓨터가 정의 및 엔진 업데이트를 다운로드하기 위해 Microsoft 업데이트에 직접 연결합니다. 이 방법은 회사 네트워크에 자주 연결하지 않는 컴퓨터에 유용할 수 있습니다.
+-   [[Microsoft Update から配信される更新プログラム]](endpoint-definitions-microsoft-updates.md) - この方法では、コンピューターを Microsoft Update に直接接続し、定義とエンジンの更新プログラムをダウンロードできます。 この方法は、ビジネス ネットワークにあまり接続していないコンピューターに役立ちます。
 
--   Microsoft 맬웨어 보호 센터에서 배포되는 업데이트 - 이 방법은 Microsoft 맬웨어 보호 센터에서 정의 업데이트를 다운로드합니다.
+-   [Microsoft Malware Protection Center から配信された更新プログラム] - この方法では、Microsoft Malware Protection Center から定義ファイルの更新をダウンロードします。
 
--   [UNC 파일 공유의 업데이트](endpoint-definitions-network.md) - 이 방법을 사용하면 최신 정의 및 엔진 업데이트를 네트워크 공유에 저장할 수 있습니다. 그런 후에 클라이언트에서 네트워크에 액세스하여 업데이트를 설치할 수 있습니다.
+-   [[UNC ファイル共有から更新する]](endpoint-definitions-network.md) - この方法では、最新の定義とエンジンの更新プログラムをネットワーク上の共有に保存できます。 各クライアントは、ネットワークにアクセスして更新プログラムをインストールできます。

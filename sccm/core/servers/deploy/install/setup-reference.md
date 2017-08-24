@@ -1,6 +1,6 @@
 ---
-title: "설치 참조 | Microsoft 문서"
-description: "Configuration Manager 사이트 또는 계층 구조의 설치를 준비하려면 이 참조를 검토합니다."
+title: "セットアップのリファレンス | Microsoft Docs"
+description: "Configuration Manager サイトまたは階層をインストールするための準備をするには、このリファレンスを参照してください。"
 ms.custom: na
 ms.date: 4/18/2017
 ms.prod: configuration-manager
@@ -17,61 +17,61 @@ manager: angrobe
 ms.openlocfilehash: 739461a6cca0fd67431093524c1e8158afd80d0f
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="reference-for-system-center-configuration-manager-setup"></a>System Center Configuration Manager 설치에 대한 참조
+# <a name="reference-for-system-center-configuration-manager-setup"></a>System Center Configuration Manager のセットアップのリファレンス
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 설치 프로그램은 다음 섹션에 자세히 설명된 여러 항목에 대한 링크를 제공합니다. 여기에 있는 정보는 Configuration Manager 사이트 또는 계층 구조의 설치를 준비하고 설치 중에 결정해야 하는 몇 가지 사항을 준비하는 데 도움이 되는 다음 섹션에 대한 링크를 제공합니다.  
+「System Center Configuration Manager のセットアップ」には、他のトピックへのリンクが掲載されています。詳細については、以下のセクションを参照してください。 ここに記載されている情報は、Configuration Manager サイトまたは階層のインストールの準備、およびインストール中に決定する必要があるいくつかの事項についての準備に役立ちます。  
 
 
-##  <a name="bkmk_start"></a> 시작하기 전에  
-Configuration Manager 사이트를 새로 설치하기 전에 성공적인 배포 디자인을 준비하는 데 유용한 다음 정보를 검토해야 합니다.  
+##  <a name="bkmk_start"></a> 始める前に  
+新しい Configuration Manager サイトをインストールする前に、展開を正常に設計するためのステージの設定に役立つ次の情報を必ずご確認ください。  
 
--   [System Center Configuration Manager의 기본 사항](../../../../core/understand/fundamentals.md)  
--   [System Center Configuration Manager 인프라 계획](../../../plan-design/network/configure-firewalls-ports-domains.md)  
--   [System Center Configuration Manager 사이트 설치 준비](prepare-to-install-sites.md)  
+-   [System Center Configuration Manager の基本](../../../../core/understand/fundamentals.md)  
+-   [System Center Configuration Manager インフラストラクチャの計画](../../../plan-design/network/configure-firewalls-ports-domains.md)  
+-   [System Center Configuration Manager サイトのインストールを準備する](prepare-to-install-sites.md)  
 
-##  <a name="bkmk_assess"></a> 서버 준비 상태 평가  
-새 사이트의 설치를 시작하기 전에 사이트 서버와 그 사이트에서 사용할 사이트 시스템 서버(예: 사이트 데이터베이스를 호스트하는 서버)가 모든 필수 조건 구성을 충족하는지 확인합니다. 문서 라이브러리의 다음 항목을 활용할 수 있습니다.  
+##  <a name="bkmk_assess"></a> サーバーの準備状態の評価  
+新しいサイトのインストールを開始する前に、サイトに使用しようとしているサイト サーバーとリモート サイト システム サーバー (サイト データベースをホストするサーバーなど) がすべての前提条件の構成を満たしていることを確認します。 ドキュメント ライブラリの以下のトピックが参考になります。  
 
--   [System Center Configuration Manager에서 지원되는 구성](../../../../core/plan-design/configs/supported-configurations.md)  
--   [필수 구성 요소 검사기](prerequisite-checker.md)  
+-   [System Center Configuration Manager のサポートされている構成](../../../../core/plan-design/configs/supported-configurations.md)  
+-   [前提条件チェッカー](prerequisite-checker.md)  
 
-##  <a name="bkmk_Addclients"></a> 추가 운영 체제에 대한 클라이언트  
-Microsoft 다운로드 센터에서 다음 운영 체제에 대한 Configuration Manager용 클라이언트 소프트웨어를 다운로드할 수 있습니다.  
+##  <a name="bkmk_Addclients"></a> 追加のオペレーティング システム用のクライアント  
+Microsoft ダウンロード センターから、次のオペレーティング システム向けの Configuration Manager のクライアント ソフトウェアをダウンロードできます。  
 
--   Mac(Apple)  
+-   Mac (Apple)  
 -   UNIX  
 -   Linux  
 
-사용하는 Configuration Manager 버전용 클라이언트를 다운로드하려면 다음 링크를 사용합니다.  
+次のリンクを使用して、使用する Configuration Manager のバージョンのクライアントをダウンロードします。  
 
--   [Microsoft System Center Configuration Manager - 추가 운영 체제용 클라이언트](http://www.microsoft.com/download/details.aspx?id=47719)를 참조하세요.  
+-   「[Microsoft System Center Configuration Manager - 追加のオペレーティング システム用のクライアント](http://www.microsoft.com/download/details.aspx?id=47719)」を参照してください。  
 
-##  <a name="bkmk_usage"></a> 사용 데이터 수준 및 설정  
-System Center Configuration Manager 사이트를 처음 설치하는 경우 Configuration Manager가 자동으로 설치되고 사이트 서버에 새 사이트 시스템 역할 **서비스 연결 지점**이 구성됩니다. 서비스 연결 지점의 기본 설정은 다음과 같습니다.  
+##  <a name="bkmk_usage"></a> 使用状況データのレベルと設定  
+最初の System Center Configuration Manager サイトをインストールすると、Configuration Manager によってサイト サーバーに新しいサイト システムの役割 (**サービス接続ポイント**) が自動的にインストールされて構成されます。 既定では、サービス接続ポイントが次のように設定されています。  
 
--   **온라인** 모드(오프라인 모드도 사용 가능)  
--   **확장** 데이터 수집 수준(다른 두 데이터 수집 수준인 기본과 전체도 사용 가능)  
+-   **オンライン** モード (オフライン モードも利用可能)  
+-   **拡張**のデータ収集レベル (その他 "基本" と "完全" の 2 つのデータ収集レベルが利用可能)  
 
-서비스 연결 지점 사이트 시스템 역할이 온라인 상태일 때 Microsoft에서 인터넷을 통해 자동으로 진단 및 사용 정보를 수집할 수 있습니다. 수집된 정보는 다음 작업에 도움이 됩니다.  
+サービス接続ポイントがサイト システムの役割としてオンラインになると、Microsoft が自動的に診断情報と使用状況情報をインターネット経由で収集できるようになります。 収集された情報は次のことに役立ちます。  
 
--   문제 식별 및 해결  
--   제품 및 서비스 개선  
--   사용하는 버전의 Configuration Manager에 적용되는 Configuration Manager 업데이트 식별  
+-   問題の識別とトラブルシューティング  
+-   Microsoft の製品やサービスの向上  
+-   使用する Configuration Manager のバージョンに適用する Configuration Manager の更新プログラムの識別  
 
-### <a name="levels-of-data-collection"></a>데이터 컬렉션 수준  
-데이터 수집에는 다음과 같은 세 수준이 포함됩니다.
+### <a name="levels-of-data-collection"></a>データ コレクションのレベル  
+データ収集には、次の 3 つのレベルがあります。
 
--   **기본** - 사이트 수, 사용하도록 설정된 Configuration Manager 기능 등의 설치 및 업그레이드 관련 데이터가 포함됩니다. 개인 식별이 가능한 정보는 전송되지 않습니다.  
+-   **基本**には、サイトの数や有効になる Configuration Manager 機能など、セットアップとアップグレードに関するデータが含まれます。 個人を特定できる情報は送信されません。  
 
--   **확장** - 기본 수준 설정의 데이터와 함께 계층, 각 기능을 사용하는 방법(빈도/기간) 및 확장된 진단 정보(예: 시스템 또는 앱 작동 중단 발생 시의 서버 메모리 상태)에 대한 데이터를 전송합니다. 개인 식별이 가능한 데이터는 전송되지 않습니다.  
+-   **拡張**には、基本レベル設定内のデータが含まれるだけでなく、階層に関するデータ、各機能の使用方法 (頻度と期間)、システムまたはアプリのクラッシュが発生した場合のサーバーのメモリ状態などの詳細な診断情報が送信されます。 個人を特定できるデータは送信されません。  
 
--   **전체** - 기본 및 확장 수준 설정의 데이터와 함께 시스템 파일, 시스템 스냅숏 등의 고급 진단 정보도 전송됩니다. 이 옵션을 선택하는 경우 개인 식별이 가능한 정보가 포함될 수도 있지만 Microsoft는 해당 정보를 토대로 사용자를 식별하거나 사용자에게 연락을 하지 않으며 사용자를 대상으로 하는 광고를 전송하지도 않습니다.  
+-   **完全**には、基本レベル設定と拡張レベル設定内のデータが含まれるだけでなく、システム ファイルやメモリ スナップショットなどの高度な診断情報も送信されます。 このオプションには個人を特定できる情報が含まれる場合がありますが、その情報を使用して個人を特定して連絡したり、広告のターゲットにしたりすることはありません。  
 
-각 수준별로 수집되는 정보의 공개를 비롯한 자세한 내용은 [System Center Configuration Manager의 진단 및 사용 현황 데이터](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)를 참조하세요.  
+各レベルで収集した詳細情報の開示を含む詳細については、「[System Center Configuration Manager の診断結果と使用状況データ](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)」を参照してください。  
 
-온라인으로 System Center Configuration Manager 개인정보 취급방침을 보려면 [http://go.microsoft.com/fwlink/?LinkID=626527](http://go.microsoft.com/fwlink/?LinkID=626527)로 이동하세요.
+System Center Configuration Manager のプライバシーに関する声明をオンラインで参照するには、[http://go.microsoft.com/fwlink/?LinkID=626527](http://go.microsoft.com/fwlink/?LinkID=626527) にアクセスしてください。

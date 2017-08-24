@@ -1,6 +1,6 @@
 ---
-title: "1702에 대한 검사 목록 | System Center Configuration Manager"
-description: "System Center Configuration Manager 버전 1702로 업데이트하기 전에 수행할 작업에 대해 알아봅니다."
+title: "1702 のチェックリスト | System Center Configuration Manager"
+description: "System Center Configuration Manager バージョン 1702 に更新する前に、実行するアクションについて説明します。"
 ms.custom: na
 ms.date: 06/06/2017
 ms.reviewer: na
@@ -17,122 +17,122 @@ manager: angrobe
 ms.openlocfilehash: 0c2e685961ceed920611bb9b8e611ba8512b2e6f
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager에 대한 업데이트 1702를 설치하기 위한 검사 목록
+# <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム 1702 をインストールするためのチェックリスト
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 현재 분기를 사용하는 경우 버전 1702에 대한 콘솔 내 업데이트를 설치하여 계층 구조를 이전 버전에서 업데이트할 수 있습니다.
+System Center Configuration Manager の Current Branch を利用するとき、バージョン 1702 のコンソール内の更新プログラムをインストールし、階層を前のバージョンから更新できます。
 
 > [!TIP]  
-버전 1702는 새로운 계층 구조의 첫 번째 사이트를 설치하는 데 사용할 수 있는 [기준 미디어](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)로도 사용할 수 있습니다.
+バージョン 1702 は[構成基準メディア](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)としても利用でき、これを使用して新しい階層の最初のサイトをインストールできます。
 
-버전 1702에 대한 업데이트를 가져오려면 계층 구조의 최상위 사이트에서 서비스 연결 지점 사이트 시스템 역할을 사용해야 합니다. 온라인 또는 오프라인 모드에 있을 수 있습니다. 계층 구조에서 Microsoft에서 업데이트 패키지를 다운로드하면 콘솔의 **관리 &gt; 개요 &gt; 클라우드 서비스 &gt; 업데이트 및 서비스**에 표시됩니다.
+バージョン 1702 の更新プログラムを得るには、階層の最上位サイトでサービス接続ポイントのサイト システムの役割を利用する必要があります。 これはオンラインまたはオフライン モードで可能です。 階層で Microsoft からダウンロードした更新プログラム パッケージは、**[管理] &gt; [概要] &gt; [クラウド サービス] &gt; [更新とサービス]** にあります。
 
--   업데이트가 **사용 가능**으로 나열되면 업데이트를 설치할 준비가 된 것입니다. 버전 1702를 설치하기 전에 [업데이트 1702 설치 정보](#about-installing-update-1702) 및 업데이트를 시작하기 전에 수행할 구성에 대한 [검사 목록](#checklist)의 정보를 검토합니다.
+-   更新プログラムが**利用可能**として掲載されているとき、インストールできます。 バージョン 1702 のインストール前に、[更新プログラム 1702 のインストールに関する](#about-installing-update-1702)次の情報と更新プログラムを開始する前に実行するアクションの[チェックリスト](#checklist)を確認します。
 
--   업데이트가 **다운로드 중**으로 표시되고 변경되지 않는 경우 **hman.log** 및 **dmpdownloader.log**에서 오류가 있는지 검토합니다.
+-   更新プログラムに**ダウンロード中**と表示され、変化がない場合、**hman.log** と **dmpdownloader.log** でエラーを確認してください。
 
-    -   dmpdownloader.log에서 dmpdownloader 프로세스가 절전 모드이고 업데이트를 확인하기 전에 일정 시간 대기 중임을 나타내는 경우 사이트 서버에서 **SMS_Executive** 서비스를 다시 시작하여 업데이트 재배포 파일의 다운로드를 다시 시작할 수도 있습니다.
+    -   dmpdownloader プロセスがスリープ状態であり、次に更新プログラムをチェックするまでの待機期間中であることが、dmpdownloader.log で示されている場合は、サイト サーバーで **SMS_Executive** サービスを開始しなおして、更新プログラムの再配布ファイルのダウンロードを再開できます。
 
-    -   또 다른 일반적인 다운로드 문제는 프록시 서버 설정에서 <http://silverlight.dlservice.microsoft.com> 및 <http://download.microsoft.com>에서 다운로드를 차단하는 경우에 발생합니다.
+    -   別の一般的なダウンロード問題は、<http://silverlight.dlservice.microsoft.com> と <http://download.microsoft.com> からのダウンロードがプロキシ サーバーの設定で禁止されているときに発生するものです。
 
-업데이트 설치에 대한 자세한 내용은 [콘솔 내 업데이트 및 서비스](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing)를 참조하세요.
+更新プログラムのインストールの詳細については、「[コンソール内の更新プログラムとサービス](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing)」を参照してください。
 
-현재 분기 버전에 대한 자세한 내용은 [System Center Configuration Manager용 업데이트](/sccm/core/servers/manage/updates)에서 [기준선 및 업데이트 버전](/sccm/core/servers/manage/updates#bkmk_Baselines)을 참조하세요.
+Current Branch バージョンの詳細については、「[System Center Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)」の「[基準バージョンと更新プログラムのバージョン](/sccm/core/servers/manage/updates#bkmk_Baselines)」を参照してください。
 
-## <a name="about-installing-update-1702"></a>업데이트 1702 설치 정보
+## <a name="about-installing-update-1702"></a>更新プログラム 1702 のインストールについて
 
-**사이트:**  
-업데이트 1702를 계층 구조의 최상위 사이트에 설치합니다. 즉, 중앙 관리 사이트(있는 경우) 또는 독립 실행형 기본 사이트에서 설치를 시작합니다. 최상위 계층 사이트에 업데이트가 설치되면 자식 사이트에서 다음과 같은 업데이트 동작이 나타납니다.
+**サイト:**  
+更新プログラム 1702 は、階層の最上位サイトにインストールします。 つまり、中央管理サイトがある場合はそこからインストールを開始します。そうでない場合は、スタンドアロン プライマリ サイトからインストールを開始します。 更新プログラムを最上位サイトにインストールすると、子サイトで次の更新動作が行われます。
 
--   중앙 관리 사이트에서 업데이트 설치를 완료한 후 자식 기본 사이트가 업데이트를 자동으로 설치합니다. 서비스 창을 사용하여 사이트에서 업데이트를 설치하는 시기를 제어할 수 있습니다. 자세한 내용은 [사이트 서버에 대한 서비스 기간](/sccm/core/servers/manage/service-windows)을 참조하세요.
+-   中央管理サイトが更新プログラムのインストールを完了した後、子プライマリ サイトは更新プログラムを自動的にインストールします。 サービス期間を使って、サイトが更新プログラムをインストールするタイミングを制御できます。 詳細については、「[サイト サーバーのサービス ウィンドウ](/sccm/core/servers/manage/service-windows)」を参照してください。
 
--   기본 상위 사이트에서 업데이트 설치를 완료한 후 Configuration Manager 콘솔 내에서 각 보조 사이트를 수동으로 업데이트해야 합니다. 보조 사이트 서버의 자동 업데이트는 지원되지 않습니다.
+-   プライマリ親サイトが更新プログラムのインストールを完了した後、Configuration Manager コンソール内から各セカンダリ サイトを手動で更新する必要があります。 セカンダリ サイト サーバーの自動更新はサポートされていません。
 
-**사이트 시스템 역할:**  
-사이트 서버에서 업데이트를 설치할 때 사이트 서버 컴퓨터에 설치된 사이트 시스템 역할과 원격 컴퓨터에 설치된 사이트 시스템 역할이 자동으로 업데이트됩니다. 업데이트를 설치하기 전에 각 사이트 시스템 서버에서 새 업데이트 버전에 대한 작업의 필수 구성 요소를 충족하는지 확인해야 합니다.
+**サイト システムの役割:**  
+サイト サーバーが更新プログラムをインストールすると、サイト サーバー コンピューターにインストールされているサイト システムの役割と、リモート コンピューターにインストールされているサイト システムの役割が、自動的に更新されます。 更新プログラムをインストールする前に、各サイト システム サーバーが新しい更新プログラムのバージョンの操作の前提条件を満たしていることを確認してください。
 
-**Configuration Manager 콘솔:**   
-업데이트가 완료된 후 처음으로 Configuration Manager 콘솔을 사용할 때 해당 콘솔을 업데이트하라는 메시지가 표시됩니다. 그렇게 하려면 콘솔을 호스트하는 컴퓨터에서 Configuration Manager 설치 프로그램을 실행하고 콘솔을 업데이트하는 옵션을 선택해야 합니다. 콘솔에 업데이트 설치를 연기하지 않는 것이 좋습니다.
+**Configuration Manager コンソール:**   
+更新の完了後に Configuration Manager コンソールを初めて使用する場合、そのコンソールの更新を求められます。 これを行うには、コンソールをホストするコンピューターで Configuration Manager セットアップを実行し、コンソールを更新するオプションを選択する必要があります。 コンソールへの更新プログラムのインストールを遅らせないことをお勧めします。
 
 > [!IMPORTANT]  
-> 중앙 관리 사이트에서 업데이트를 설치할 경우 다음 제한 사항과 모든 자식 기본 사이트가 업데이트 설치를 완료할 때까지 존재하는 지연에 유의하세요.    
-> - **클라이언트 업그레이드**가 시작되지 않습니다. 여기에는 클라이언트 및 프로덕션 전 클라이언트의 자동 업데이트가 포함됩니다. 또한 마지막 사이트에서 업데이트 설치가 완료될 때까지 프로덕션 전 클라이언트를 프로덕션으로 수준을 올릴 수 없습니다. 마지막 사이트에서 업데이트 설치가 완료되면 구성 옵션에 따라 클라이언트 업그레이드가 시작됩니다.   
-> - 업데이트를 통해 제공되는 **새로운 기능**을 사용할 수 없습니다. 이는 해당 기능에 관련된 데이터 복제가 해당 기능에 대한 지원이 아직 설치되지 않은 사이트로 전송되지 못하도록 차단하는 것입니다. 모든 기본 사이트에서 업데이트를 설치한 후 기능을 사용할 수 있습니다.   
-> - 중앙 관리 사이트와 자식 기본 사이트 간의 **복제 링크**가 업그레이드되지 않음으로 표시됩니다. 이는 업데이트 팩 설치 상태에 완료 상태로 표시되고 복제 초기화 모니터링에 대한 경고가 나타납니다. 콘솔의 모니터링 노드에서 이는 *링크 구성 중*으로 표시됩니다.
+> 中央管理サイトで更新プログラムをインストールするときは、次の制限事項と、すべての子プライマリ サイトでも更新プログラムのインストールが完了するまで存在する遅延に注意してください。    
+> - **クライアントのアップグレード**は開始しません。 これには、クライアントと実稼働前クライアントの自動更新が含まれます。 さらに、最後のサイトで更新プログラムのインストールが完了するまで、実稼働前クライアントを実稼働環境に昇格させることはできません。 最後のサイトで更新プログラムのインストールが完了すると、選択した構成に基づいてクライアントのアップグレードが開始されます。   
+> - 更新プログラムで有効になる**新機能**は使うことができません。 これは、その機能のサポートがまだインストールされていないサイトに、その機能に関連するデータのレプリケーションが送信されるのを防ぐためです。 すべてのプライマリ サイトに更新プログラムがインストールされた後、機能は使用できるようになります。   
+> - 中央管理サイトと子プライマリ サイトの間の**レプリケーション リンク**は、アップグレードされていないものとして表示されます。 これは、更新プログラム パックのインストール状態では、監視レプリケーション初期化に関する警告のある完了済みの状態として表示されます。 コンソールの監視ノードでは、これは "*リンク構成中*" として表示されます。
 
 
 
-## <a name="checklist"></a>확인 목록
+## <a name="checklist"></a>チェックリスト
 
-**모든 사이트가 1702에 대한 업데이트를 지원하는 System Center Configuration Manager의 버전을 실행하는지 확인합니다.**   
-업데이트 1702의 설치를 시작하기 전에 계층 구조의 각 사이트 서버는 동일한 System Center Configuration Manager 버전을 실행해야 합니다. 1702로 업데이트하려면 버전 1602, 1606 또는 1610을 사용해야 합니다.
+**すべてのサイトで、1702 への更新をサポートしているバージョンの System Center Configuration Manager が実行されていることを確認する:**   
+更新プログラム 1702 のインストールを始めるには、階層内の各サイト サーバーが、同じバージョンの System Center Configuration Manager を実行している必要があります。 1702 に更新するには、バージョン 1602、1606、または 1610 を使っている必要があります。
 
-**Software Assurance 또는 동등한 구독 권한의 상태 검토:**   
-업데이트 1702를 설치하려면 활성 SA(Software Assurance) 계약이 있어야 합니다. 이 업데이트를 설치할 경우 **라이선싱** 탭에서는 **Software Assurance 만료 날짜**를 확인하는 옵션을 제공합니다.
+**ソフトウェア アシュアランスまたは同等のサブスクリプション権利の状態を確認する:**   
+更新プログラム 1702 をインストールするには、ソフトウェア アシュアランス (SA) 契約が必要です。 この更新プログラムをインストールすると、**ソフトウェア アシュアランスの有効期限**を確認するためのオプションが **[ライセンス]** タブに表示されます。
 
-이 값은 라이선스 만료 날짜의 편리한 미리 알림으로 지정할 수 있는 선택적 값입니다. 이 날짜는 미래 업데이트를 설치할 때 표시됩니다. 설치하거나 업데이트를 설치하는 동안 또는 Configuration Manager 콘솔 내에서 **계층 구조 설정**의 **라이선싱** 탭을 사용하여 이전에 이 값을 지정했을 수 있습니다.
+これは、ライセンスの有効期限の便利なリマインダーとして指定できる任意の値です。 この日付は、今後の更新プログラムをインストールするときに表示されます。 この値は、Configuration Manager コンソールから、更新プログラムをセットアップまたはインストールするときに、または **[階層設定]** の **[ライセンス]** タブを使って、以前に指定されている可能性があります。
 
-자세한 내용은 [System Center Configuration Manager의 라이선스 및 분기](/sccm/core/understand/learn-more-editions)를 참조하세요.
+詳細については、「[System Center Configuration Manager のライセンスとブランチ](/sccm/core/understand/learn-more-editions)」を参照してください。
 
-**사이트 시스템 서버에 설치된 Microsoft .NET 버전 검토:** 특정 사이트에서 이 업데이트를 설치할 때 .NET Framework 4.5.2 이상이 아직 설치되어 있지 않으면 Configuration Manager가 다음 사이트 시스템 역할 중 하나를 호스트하는 각 컴퓨터에 자동으로 .NET Framework 4.5 이상을 설치합니다.
+**サイト システム サーバーにインストールされた Microsoft .NET のバージョンを確認する:** サイトでこの更新プログラムがインストールされると、Configuration Manager によって、次のいずれかのサイト システムの役割をホストする各コンピューターに .NET Framework 4.5.2 が自動的にインストールされます (.NET Framework 4.5 以降がまだインストールされていない場合)。
 
--   등록 프록시 지점
--   등록 지점
--   관리 지점
--   서비스 연결 지점
+-   登録プロキシ ポイント
+-   登録ポイント
+-   管理ポイント
+-   サービス接続ポイント
 
-이 설치는 사이트 시스템 서버를 다시 부팅 보류 중 상태로 전환하고 Configuration Manager 구성 요소 상태 뷰어에 오류를 보고할 수 있습니다. 또한, 서버가 다시 부팅될 때까지 서버의 .NET 응용 프로그램에서 임의의 오류가 발생할 수 있습니다.
+このインストールにより、サイト システム サーバーが再起動保留中の状態になり、Configuration Manager コンポーネント ステータス ビューアーにエラーが報告される場合があります。 さらに、サーバーが再起動されるまで、サーバー上の .NET アプリケーションでランダムにエラーが発生する場合があります。
 
-자세한 내용은 [사이트 및 사이트 시스템 필수 조건](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)을 참조하세요.
+詳細については、「[サイトとサイト システムの前提条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)」をご覧ください。
 
-**Windows 10용 Windows ADK(Assessment and Deployment Kit) 버전 검토** Windows 10 ADK는 1607 이상 버전이어야 합니다. ADK를 업데이트해야 할 경우에는 Configuration Manager의 업데이트를 시작하기 전에 업데이트하세요. 이렇게 하면 기본 부팅 이미지가 자동으로 최신 버전의 Windows PE로 업데이트됩니다. 사용자 지정 부팅 이미지는 수동으로 업데이트해야 합니다.
+**Windows 10 の Windows アセスメント & デプロイメント キット (ADK) のバージョンを確認する:** Windows 10 ADK は、バージョン 1607 以降である必要があります。 ADK を更新する必要がある場合は、Configuration Manager の更新を開始する前に行います。 これにより、既定のブート イメージが Windows PE の最新バージョンに自動的に更新されることが保証されます (カスタム ブート イメージは手動で更新する必要があります)。
 
-ADK를 업데이트하기 전에 사이트를 업데이트할 경우 부팅 이미지를 다시 생성하는 데 사용될 수 있는 스크립트를 확인하려면 [Configuration Manager and the Windows ADK for Windows 10, version 1607](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/)(Windows 10용 Configuration Manager 및 Windows ADK, 버전 1607)을 참조하세요.
+ADK を更新する前にサイトを更新する場合は、ブート イメージの再生成に使うことができるスクリプトについて、ブログ「[Configuration Manager and the Windows ADK for Windows 10, version 1607](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/)」(Windows 10 バージョン 1607 の Configuration Manager と Windows ADK) をご覧ください。
 
-**사이트 및 계층 구조 상태를 검토하고 해결되지 않은 문제가 있는지 확인:** 사이트를 업데이트하기 전에 원격 컴퓨터에 설치된 사이트 서버, 사이트 데이터베이스 서버 및 사이트 시스템 역할에 대한 모든 작동 문제를 해결합니다. 기존 작동 문제로 인해 사이트 업데이트가 실패할 수 있습니다.
+**サイトと階層の状態を確認して、解決されていない問題がないことを確認する:** サイトを更新する前に、サイト サーバー、サイト データベース サーバー、リモート コンピューターにインストールされているサイト システムの役割で、運用上のすべての問題を解決します。 運用上の問題があると、サイトの更新が失敗する可能性があります。
 
-자세한 내용은 [System Center Configuration Manager에 대한 경고 및 상태 시스템 사용](/sccm/core/servers/manage/use-alerts-and-the-status-system)을 참조하세요.
+詳細については、「 [Use alerts and the status system for System Center Configuration Manager](/sccm/core/servers/manage/use-alerts-and-the-status-system)」を参照してください。
 
-**사이트 간의 파일 및 데이터 복제 검토:**   
-사이트 간의 파일 및 데이터베이스 복제가 작동하고 최신 상태인지 확인합니다. 어떤 경우든 지연 또는 백로그는 원활한 업데이트 또는 성공적인 업데이트를 방해할 수 있습니다.
-데이터베이스 복제의 경우 업데이트를 시작하기 전에 Replication Link Analyzer를 사용하여 문제를 해결할 수 있습니다.
+**サイト間でファイルとデータのレプリケーションを確認する:**   
+サイト間のファイルとデータベースのレプリケーションが機能していて最新の状態であることを確認します。 遅延またはバックログにより、円滑で正常な更新が行われない場合があります。
+データベース レプリケーションには、更新プログラムを開始する前に問題を解決するために、レプリケーション リンク アナライザーを使用できます。
 
-자세한 내용은 [System Center Configuration Manager에서 계층 구조 및 복제 인프라 모니터링](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure) 항목에서 [Replication Link Analyzer 정보](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)를 참조하세요.
+詳細については、「[System Center Configuration Manager での階層とレプリケーション インフラストラクチャの監視](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)」トピックの「[レプリケーション リンク アナライザーについて](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)」を参照してください。
 
-**사이트, 사이트 데이터베이스 서버 및 원격 사이트 시스템 역할을 호스트하는 컴퓨터에서 해당하는 모든 중요한 운영 체제 업데이트 설치:** Configuration Manager에 대한 업데이트를 설치하기 전에 해당하는 각 사이트 시스템에 대한 모든 중요 업데이트를 설치합니다. 설치하는 업데이트에서 다시 시작하도록 요구하는 경우 업그레이드를 시작하기 전에 해당 컴퓨터를 다시 시작합니다.
+**サイト、サイト データベース サーバー、リモートのサイト システムの役割をホストするコンピューターのオペレーティング システムに適用できる、重要な更新プログラムすべてをインストールする:** Configuration Manager に更新プログラムをインストールする前に、該当する各サイト システムの重要な更新プログラムをすべてインストールします。 更新のインストール時に再起動が必要な場合は、アップグレードを開始する前に該当するコンピューターを再起動します。
 
-**기본 사이트의 관리 지점에 데이터베이스 복제본을 사용하지 않도록 설정:**   
-Configuration Manager에서 관리 지점에 대한 데이터베이스 복제본이 사용하도록 설정된 기본 사이트를 성공적으로 업데이트할 수 없습니다. Configuration Manager용 업데이트를 설치하기 전에 데이터베이스 복제를 사용하지 않도록 설정합니다.
+**プライマリ サイトの管理ポイントのデータベース レプリカを無効にする:**   
+Configuration Manager では、管理ポイントのデータベース レプリカが有効になっているプライマリ サイトを正常に更新することはできません。 データベースのレプリケーションを無効にしてから、Configuration Manager の更新プログラムをインストールしてください。
 
-자세한 내용은 [System Center Configuration Manager의 관리 지점용 데이터베이스 복제본](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)을 참조하세요.
+詳細については、「[Database replicas for management points for System Center Configuration Manager (System Center Configuration Manager の管理ポイント用データベース レプリカ)](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)」を参照してください。
 
-**SQL Server AlwaysOn 가용성 그룹을 수동 장애 조치(failover)로 설정:**   
-가용성 그룹을 사용할 경우 업데이트 설치를 시작하기 전에 가용성 그룹이 수동 장애 조치(failover)로 설정되어 있는지 확인합니다. 사이트를 업데이트한 후에 장애 조치(failover)를 자동으로 되돌릴 수 있습니다. 자세한 내용은 [사이트 데이터베이스에 대한 SQL Server AlwaysOn](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)을 참조하세요.
+**SQL Server AlwaysOn 可用性グループを手動フェールオーバーに設定する:**   
+可用性グループを使っている場合は、更新プログラムのインストールを始める前に、可用性グループが手動フェールオーバーに設定されていることを確認します。 サイトが更新された後で、自動フェールオーバーに戻すことができます。 詳細については、[サイト データベースの SQL Server AlwaysOn](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database) に関するページを参照してください。
 
-**NLB를 사용하는 소프트웨어 업데이트 지점 다시 구성:**   
-Configuration Manager에서는 NLB(네트워크 부하 분산) 클러스터를 사용하는 사이트를 소프트웨어 업데이트 지점을 호스트하도록 업데이트할 수 없습니다.
+**NLB を使用するソフトウェアの更新ポイントを再構成する:**   
+Configuration Manager では、ネットワーク負荷分散 (NLB) クラスターを使用してソフトウェアの更新ポイントをホストしているサイトは、更新できません。
 
-소프트웨어 업데이트 지점에 NLB 클러스터를 사용하는 경우 Windows PowerShell을 사용하여 NLB 클러스터를 제거하세요.
-자세한 내용은 [System Center Configuration Manager에서 소프트웨어 업데이트 계획](/sccm/sum/plan-design/plan-for-software-updates)을 참조하세요.
+ソフトウェアの更新ポイントに NLB クラスターを使用している場合、Windows PowerShell を使用して NLB クラスターを削除してください。
+詳細については、「[System Center Configuration Manager でのソフトウェア更新プログラムの計画](/sccm/sum/plan-design/plan-for-software-updates)」をご覧ください。
 
-**해당 사이트에 업데이트를 설치하는 동안 각 사이트에서 모든 사이트 유지 관리 작업을 사용하지 않도록 설정**   
-업데이트를 설치하기 전에 업데이트 프로세스가 활성 상태인 동안 실행될 수 있는 모든 사이트 유지 관리 작업을 사용하지 않도록 설정합니다. 이러한 작업의 일부 예는 다음과 같습니다.
+**サイトの更新インストール時に各サイトですべてのサイト メンテナンス タスクを無効にする:**   
+更新プログラムをインストールする前に、更新プロセスがアクティブになっている間にそのサイトで実行される可能性があるサイトのメンテナンス タスクをすべて無効にします。 次のタスクが含まれますが、これらのタスクに限定されません。
 
--   백업 사이트 서버
--   오래된 클라이언트 작업 삭제
--   오래된 검색 데이터 삭제
+-   サイト サーバーのバックアップ
+-   期限切れのクライアント操作を削除
+-   期限切れの探索データの削除
 
-업데이트를 설치하는 동안 사이트 데이터베이스 유지 관리 작업이 실행되면 업데이트 설치가 실패할 수 있습니다. 작업을 사용하지 않도록 설정하기 전에 작업 일정을 기록하세요. 그래야 업데이트가 설치된 후에 해당 구성을 복원할 수 있습니다.
+更新プログラムのインストール中にサイト データベースのメンテナンス タスクを実行すると、更新プログラムのインストールが失敗することができます。 タスクを無効にする前に、更新プログラムをインストールした後で構成を復元できるように、タスクのスケジュールを記録してください。
 
-자세한 내용은 [System Center Configuration Manager에 대한 유지 관리 작업](/sccm/core/servers/manage/maintenance-tasks) 및 [System Center Configuration Manager에 대한 유지 관리 작업 참조](/sccm/core/servers/manage/reference-for-maintenance-tasks)를 참조하세요.
+詳細については、「[System Center Configuration Manager のメンテナンス タスク](/sccm/core/servers/manage/maintenance-tasks)」および「[System Center Configuration Manager のメンテナンス タスクのリファレンス](/sccm/core/servers/manage/reference-for-maintenance-tasks)」を参照してください。
 
-**중앙 관리 사이트 및 기본 사이트에서 사이트 데이터베이스의 백업 만들기:** 사이트를 업데이트하기 전에 사이트 데이터베이스를 백업하여 재해 복구에 사용할 성공적인 백업을 생성해야 합니다.
+**中央管理サイトとプライマリ サイトでサイト データベースのバックアップを作成する:** サイトを更新する前に、サイト データベースをバックアップして、障害復旧に使用する正常なバックアップがあるようにします。
 
-자세한 내용은 [System Center Configuration Manager 백업 및 복구](/sccm/protect/understand/backup-and-recovery)를 참조하세요.
+詳細については、「[Backup and recovery for System Center Configuration Manager](/sccm/protect/understand/backup-and-recovery)」 (System Center Configuration Manager のバックアップと回復) をご覧ください。
 
 <!-- Removed from update guidance 6/6/2017
 **Test the database upgrade on a copy of the most recent site database backup:** 
@@ -153,41 +153,41 @@ Configuration Manager does not support the backup of secondary sites nor does it
 Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see [Step 2: Test the database upgrade before installing an update](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) from **Before you install an in-console update**.
 -->
 
-**클라이언트 파일럿에 대한 계획:**   
-클라이언트를 업데이트하는 업데이트를 설치할 때 모든 활성 클라이언트를 배포하고 업그레이드하기 전에 사전 프로덕션 환경에서 새로운 클라이언트 업데이트를 테스트할 수 있습니다.
+**クライアントのパイロット運用を計画する:**   
+クライアントを更新する更新プログラムをインストールすると、すべてのアクティブなクライアントを展開してアップグレードする前に、実稼働前環境でその新しいクライアントの更新プログラムをテストできます。
 
-이 옵션을 활용하려면 업데이트의 설치를 시작하기 전에 사전 프로덕션에 대한 자동 업그레이드를 지원하도록 사이트를 구성해야 합니다.
+このオプションを活用するには、更新プログラムのインストールを開始する前に、実稼働前環境の自動アップグレードをサポートするサイトを構成する必要があります。
 
-자세한 내용은 [System Center Configuration Manager에서 클라이언트 업그레이드](/sccm/core/clients/manage/upgrade/upgrade-clients) 및 [System Center Configuration Manager의 사전 프로덕션 컬렉션에서 클라이언트 업그레이드를 테스트하는 방법](/sccm/core/clients/manage/upgrade/test-client-upgrades)을 참조하세요.
+詳細については、「[System Center Configuration Manager でのクライアントのアップグレード](/sccm/core/clients/manage/upgrade/upgrade-clients)」と「[System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストする方法](/sccm/core/clients/manage/upgrade/test-client-upgrades)」を参照してください。
 
-**서비스 기간을 사용하여 사이트 서버에서 업데이트를 설치하는 시기를 제어하도록 계획:**   
-서비스 기간을 사용하여 사이트 서버에 업데이트를 설치할 수 있는 기간을 정의합니다.
+**サービス期間を使用する計画を立て、サイトが更新プログラムをインストールするタイミングを制御する:**   
+サイト サーバーに対する更新プログラムをインストールできる期間は、サービス期間を使って定義します。
 
-이를 통해 계층의 사이트에서 업데이트를 설치하는 시기를 제어할 수 있습니다. 자세한 내용은 [사이트 서버에 대한 서비스 기간](/sccm/core/servers/manage/service-windows)을 참조하세요.
+これは、階層内のサイトが更新プログラムをインストールするタイミングの制御に役立ちます。 詳細については、「[サイト サーバーのサービス ウィンドウ](/sccm/core/servers/manage/service-windows)」を参照してください。
 
-**설치 필수 구성 요소 검사기 실행:**   
-업데이트가 콘솔에 **사용 가능**으로 표시되는 경우 업데이트를 설치하기 전에 독립적으로 필수 구성 요소 검사기를 실행할 수 있습니다. 사이트에 업데이트를 설치할 때 필수 조건 검사가 다시 실행됩니다.
+**セットアップ前提条件チェッカーを実行する:**   
+更新プログラムが**利用可能**としてコンソールに表示されているとき、更新プログラムのインストール前に、前提条件チェッカーを別個に実行できます。 (サイトへの更新プログラムのインストール時に、前提条件チェッカーが再度実行されます。)
 
-콘솔에서 필수 구성 요소 검사를 실행 하려면 **관리 > 개요 > 클라우드 서비스 > 업데이트 및 서비스**로 이동합니다. 다음으로 **Configuration Manager 1702 업데이트 패키지**를 마우스 오른쪽 단추로 클릭한 후 **필수 구성 요소 검사 실행**을 선택합니다.
+前提条件の確認をコンソールから実行するには、**[管理]、[概要]、[クラウド サービス]、[更新とサービス]** の順に選択します。 次に、**[Configuration Manager 1702 update package (Configuration Manager 1702 更新プログラム パッケージ)]** を右クリックし、**[前提条件チェックを実行]** を選びます。
 
-필수 구성 요소 검사를 시작 및 모니터링하는 방법에 대한 자세한 내용은 [System Center Configuration Manager용 콘솔 내 업데이트 설치](/sccm/core/servers/manage/install-in-console-updates) 항목에서 **3단계: 업데이트를 설치하기 전에 필수 구성 요소 검사기 실행**을 참조하세요.
+前提条件チェックの開始と監視に関する詳細については、「[System Center Configuration Manager のコンソール内の更新プログラムのインストール](/sccm/core/servers/manage/install-in-console-updates)」トピックの「**手順 3: 更新プログラムをインストールする前の前提条件チェッカーの実行**」を参照してください。
 
 > [!IMPORTANT]  
-> 필수 조건 검사가 독립적으로 또는 업데이트 설치의 일부로 실행되면 프로세스에서 사이트 유지 관리 작업에 사용되는 일부 제품 소스 파일을 업데이트합니다. 따라서 필수 구성 요소 검사기를 실행한 후 업데이트를 설치하기 전에 사이트 유지 관리 작업을 수행해야 하는 경우 사이트 서버의 CD.Latest 폴더에서 **Setupwpf.exe**(Configuration Manager 설치 프로그램)를 실행합니다.
+> 前提条件チェッカーを更新プログラムの一部として、または単独で実行すると、サイト メンテナンス タスクに使用される一部の製品ソース ファイルが更新されます。 このため、前提条件チェッカーを実行した後で、更新プログラムをインストールする前に、サイト メンテナンス タスクを実行する必要がある場合は、サイト サーバーの CD.Latest フォルダーから **Setupwpf.exe** (Configuration Manager セットアップ) を実行する必要があります。
 
-**사이트 업데이트:**   
-이제 계층 구조에 대한 업데이트 설치를 시작할 수 있습니다. 업데이트 설치에 대한 자세한 내용은 [콘솔 내 업데이트 설치](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates)를 참조하세요.
+**サイトを更新する:**   
+階層の更新プログラムのインストールを開始する準備が整いました。 更新プログラムのインストールに関する情報については、「[コンソール内の更新プログラムのインストール](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates)」を参照してください。
 
-각 사이트에 대한 일상적인 업무 시간 외(업데이트를 설치하는 프로세스와 사이트 구성 요소 및 사이트 시스템 역할을 다시 설치하는 작업이 비즈니스 운영에 가장 영향을 덜 주는 시기)에 업데이트를 설치하도록 계획하는 것이 좋습니다.
+更新プログラムをインストールするプロセス、およびサイトのコンポーネントとサイト システムの役割を再インストールするアクションが業務に及ぼす影響が少ない場合は、各サイトの通常業務時間外に更新プログラムをインストールする計画を立てることをお勧めします。
 
-자세한 내용은 [System Center Configuration Manager용 업데이트](/sccm/core/servers/manage/updates)를 참조하세요.
+詳細については、「[System Center Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)」を参照してください。
 
-## <a name="post-update-checklist"></a>업데이트 후 검사 목록
-업데이트 설치가 완료된 후 수행할 다음 작업을 검토합니다.
-1.  사이트 간 복제가 활성화되었는지 확인합니다. 콘솔에서 **모니터링** > **사이트 계층 구조** 및 **모니터링** > **데이터베이스 복제**를 표시하여 문제가 있거나 복제 링크가 활성화되었는지 확인합니다.
-2.  각 사이트 서버 및 사이트 시스템 역할이 버전 1702로 업데이트되었는지 확인합니다. 콘솔에서 선택적 열 **버전**을 **사이트** 및 **배포 지점**과 같은 일부 노드 표시에 추가할 수 있습니다.
+## <a name="post-update-checklist"></a>更新後のチェックリスト
+更新プログラムのインストールが完了した後で以下の作業が行われることを確認します。
+1.  サイト間レプリケーションがアクティブであることを確認します。 コンソールで、**[監視]** > **[サイト階層]** および**[監視]** > **[データベースのレプリケーション]** を表示し、問題が発生していないこと、またはレプリケーション リンクがアクティブであることを確認します。
+2.  各サイト サーバーおよびサイト システムの役割がバージョン 1702 に更新されていることを確認します。 コンソールでは、**[サイト]** や **[配布ポイント]** などの一部のノードの表示に、オプションの列 **[バージョン]** を追加できます。
 
- 필요한 경우 사이트 시스템 역할이 새 버전에 대한 업데이트를 자동으로 다시 설치합니다. 제대로 업데이트되지 않은 원격 사이트 시스템을 다시 시작하는 것이 좋습니다.
-3.  업데이트를 시작하기 전에 사용하지 않도록 설정한 기본 사이트에서 관리 지점의 데이터베이스 복제본을 다시 구성합니다.
-4.  업데이트를 시작하기 전에 사용하지 않도록 설정한 데이터베이스 유지 관리 작업을 다시 구성합니다.
-5.  업데이트를 설치하기 전에 클라이언트 파일럿을 구성한 경우 직접 만든 계획에 따라 클라이언트를 업그레이드합니다.
+ 必要な場合は、サイト システムの役割が自動的に再インストールされて、新しいバージョンに更新されます。 正常に更新されないリモート サイト システムは再起動してみます。
+3.  更新を始める前に無効にした、プライマリ サイトでの管理ポイントのデータベース レプリカを、再構成します。
+4.  更新を始める前に無効にしたデータベース メンテナンス タスクを、再構成します。
+5.  更新プログラムをインストールする前にクライアントのパイロット運用を構成した場合は、作成した計画に従ってクライアントをアップグレードします。

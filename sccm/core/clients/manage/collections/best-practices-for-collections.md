@@ -1,6 +1,6 @@
 ---
-title: "컬렉션 모범 사례 | Microsoft 문서"
-description: "System Center Configuration Manager에서 컬렉션에 대한 모범 사례를 확인합니다."
+title: "コレクションのベスト プラクティス | Microsoft Docs"
+description: "System Center Configuration Manager のコレクションのベスト プラクティスを示します。"
 ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
@@ -18,25 +18,25 @@ manager: angrobe
 ms.openlocfilehash: fd62af3910c0745e0f1105417701b894e10cbbac
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="best-practices-for-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 컬렉션에 대한 모범 사례
+# <a name="best-practices-for-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager のコレクションのベスト プラクティス
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager에서 컬렉션에 대한 다음 모범 사례를 사용합니다.  
+System Center Configuration Manager のコレクションに関する以下のベスト プラクティスを使用してください。  
 
-## <a name="do-not-use-incremental-updates-for-a-large-number-of-collections"></a>많은 컬렉션에 대해 증분 업데이트를 사용하지 마세요.  
- **이 컬렉션에 대해 증분 업데이트 사용** 옵션을 사용하도록 설정하는 경우 많은 컬렉션에 대해 이 구성을 사용하도록 설정하면 평가가 지연될 수 있습니다. 계층에서 약 200개의 컬렉션이 임계값입니다. 정확한 수는 다음 요인에 따라 달라집니다.  
+## <a name="do-not-use-incremental-updates-for-a-large-number-of-collections"></a>多数のコレクションに対して、増分更新を使用しないでください。  
+ [このコレクションで増分更新を使用する] オプションを多数のコレクションに対して有効にすると、この構成が評価の遅延を引き起こす可能性があります。 **** しきい値は、階層内では約 200 コレクションです。 正確な数は、次の要因によります。  
 
--   컬렉션의 총 수  
+-   コレクションの総数  
 
--   계층에서 추가되고 변경되는 새 리소스의 빈도  
+-   階層内で、リソースが新しく追加または変更される頻度  
 
--   계층의 클라이언트 수  
+-   階層内のクライアント数  
 
--   계층의 컬렉션 멤버 관리 규칙의 복잡성  
+-   階層内のコレクション メンバーシップ規則の複雑さ  
 
-## <a name="make-sure-that-maintenance-windows-are-large-enough-to-deploy-critical-software-updates"></a>유지 관리 기간을 중요 소프트웨어 업데이트를 충분히 배포할 수 있을 만큼 설정합니다.  
- Configuration Manager가 장치에 소프트웨어를 설치할 수 있는 횟수를 제한하도록 장치 컬렉션에 대한 유지 관리 기간을 구성할 수 있습니다. 유지 관리 기간을 너무 짧게 구성하면 클라이언트는 중요 소프트웨어 업데이트를 설치하지 못할 수도 있으며, 이 경우 클라이언트는 해당 소프트웨어 업데이트로 방지할 수 있었던 공격에 취약해집니다.  
+## <a name="make-sure-that-maintenance-windows-are-large-enough-to-deploy-critical-software-updates"></a>重要なソフトウェア更新プログラムを展開するのに十分なメンテナンス期間を確保する  
+ デバイス コレクションのメンテナンス期間を構成して、Configuration Manager がソフトウェアをそれらのデバイスにインストールできる時間を制限することができます。 メンテナンス期間の構成で十分な時間が確保されていない場合、クライアントは重要なソフトウェア更新プログラムをインストールできない可能性があり、その結果、ソフトウェア更新プログラムによって緩和される攻撃に対して脆弱なままになります。  

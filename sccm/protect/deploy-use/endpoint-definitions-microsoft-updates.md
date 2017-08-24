@@ -1,6 +1,6 @@
 ---
-title: "네트워크 공유의 Endpoint Protection 맬웨어 정의 | Microsoft 문서"
-description: "Configuration Manager의 Microsoft 업데이트에서 Endpoint Protection 맬웨어 정의 다운로드를 사용하도록 설정하는 방법을 알아봅니다."
+title: "ネットワーク共有からの Endpoint Protection のマルウェア定義 | Microsoft Docs"
+description: "Configuration Manager で Endpoint Protection のマルウェア定義を Microsoft Update からダウンロードできるようにする方法について説明します。"
 ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
@@ -17,30 +17,30 @@ manager: angrobe
 ms.openlocfilehash: 58c468fc3d4427cc1f2a8f197ab784a767151203
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="enable-endpoint-protection-malware-definitions-to-download-from-microsoft-updates-for-configuration-manager"></a>Configuration Manager의 Microsoft 업데이트에서 다운로드하기 위해 Endpoint Protection 맬웨어 정의를 사용하도록 설정
+# <a name="enable-endpoint-protection-malware-definitions-to-download-from-microsoft-updates-for-configuration-manager"></a>Configuration Manager で Endpoint Protection のマルウェア定義を Microsoft Update からダウンロードできるようにする
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
 
- Microsoft 업데이트에서 정의 업데이트를 다운로드하도록 선택하면 클라이언트는 맬웨어 방지 정책 대화 상자의 **정의 업데이트** 섹션에서 정의된 간격마다 Microsoft 업데이트 사이트를 확인합니다.
+ Microsoft Update から定義ファイルの更新を選び、ダウンロードする場合、クライアントは [マルウェア対策ポリシー] ダイアログ ボックスの **[定義ファイルの更新]** セクションで定義した間隔で Microsoft Update サイトをチェックします。
 
- 이 방법은 클라이언트에서 Configuration Manager 사이트에 연결할 수 없는 경우 또는 사용자가 정의 업데이트를 시작할 수 있도록 하려는 경우에 유용할 수 있습니다.
-
-> [!IMPORTANT]
->  이 방법을 사용하여 정의 업데이트를 다운로드하려면 클라이언트가 인터넷을 통해 Microsoft 업데이트에 액세스할 수 있어야 합니다.
-
-## <a name="using-the-microsoft-malware-protection-center-to-download-definitions"></a>Microsoft 맬웨어 보호 센터를 사용하여 정의 다운로드
- Microsoft 맬웨어 보호 센터에서 정의 업데이트를 다운로드하도록 클라이언트를 구성할 수 있습니다. 이 옵션은 Endpoint Protection 클라이언트가 다른 원본에서 업데이트를 다운로드할 수 없는 경우 정의 업데이트를 다운로드하는 데 사용됩니다. 이 업데이트 방법은 Configuration Manager 인프라에 문제가 있어 업데이트를 제공할 수 없는 경우에 유용할 수 있습니다.
+ この方法は、クライアントが Configuration Manager サイトに接続されていない場合、またはユーザーから定義ファイルの更新を開始できるようにする場合に役立ちます。
 
 > [!IMPORTANT]
->  이 방법을 사용하여 정의 업데이트를 다운로드하려면 클라이언트가 인터넷을 통해 Microsoft 업데이트에 액세스할 수 있어야 합니다.
+>  この方法を使用して定義ファイルの更新をダウンロードするには、クライアントがインターネット経由で Microsoft Update にアクセスできなければなりません。
+
+## <a name="using-the-microsoft-malware-protection-center-to-download-definitions"></a>Microsoft マルウェア プロテクション センターを使用して定義ファイルをダウンロードするには
+ Microsoft マルウェア プロテクション センターから、定義ファイルの更新をダウンロードできるようにクライアントを構成することができます。 Endpoint Protection クライアントは、別のソースから更新をダウンロードできない場合に、このオプションを使用して定義ファイルの更新をダウンロードします。 この更新方法は、Configuration Manager インフラストラクチャに更新ファイルの配布を妨げる問題がある場合に役立ちます。
+
+> [!IMPORTANT]
+>  この方法を使用して定義ファイルの更新をダウンロードするには、クライアントがインターネット経由で Microsoft Update にアクセスできなければなりません。
 
 
 > [!div class="button"]
-[다음 단계 >](endpoint-antimalware-policies.md)
+[次のステップ >](endpoint-antimalware-policies.md)
 
 > [!div class="button"]
-[뒤로 >](endpoint-configure-alerts.md)
+[戻る >](endpoint-configure-alerts.md)

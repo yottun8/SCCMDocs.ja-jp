@@ -1,6 +1,6 @@
 ---
-title: "전원 관리에 대한 모범 사례 | Microsoft 문서"
-description: "System Center Configuration Manager에서 전원 관리에 대한 모범 사례를 확인합니다."
+title: "電源管理のベスト プラクティス | Microsoft Docs"
+description: "System Center Configuration Manager の電源管理のベスト プラクティスを示します。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,66 +18,66 @@ manager: angrobe
 ms.openlocfilehash: d3cc24c7923141f039dcda26ac27489cb0143e89
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="best-practices-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 전원 관리에 대한 모범 사례
+# <a name="best-practices-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager の電源管理のベスト プラクティス
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager에서 전원 관리에 대한 다음 모범 사례를 사용합니다.  
+System Center Configuration Manager の電源管理に関する以下のベスト プラクティスを使用してください。  
 
-## <a name="perform-the-monitoring-phase-at-a-representative-time"></a>대표적인 시간에 모니터링 단계 수행  
- 전원 관리의 모니터링 단계에서 조직의 컴퓨터의 전력 소비, 활동, 전원 관리 기능 및 환경 영향에 대한 정보가 제공됩니다. 모니터링 단계를 수행하려면 대표적인 시간을 선택해야 합니다. 예를 들어 공휴일에 모니터링 단계를 수행하게 되면 컴퓨터 전원 사용에 대한 현실적인 보고서가 제공되지 않습니다.  
+## <a name="perform-the-monitoring-phase-at-a-representative-time"></a>監視段階は代表的な時間帯に実施する  
+ 電源管理の監視段階により、組織内のコンピューターの電力消費、電源動作、電源管理機能、および環境影響量に関する情報を得ることができます。 監視段階は、代表的な時間に実施してください。 たとえば、監視段階を休日に実施した場合、コンピューターの電力使用状況についての現実的なレポートを入手することはできません。  
 
-## <a name="create-a-control-collection-of-computers-with-no-power-plans-applied"></a>전원 계획을 적용하지 않고 컴퓨터의 컨트롤 컬렉션을 만듭니다.  
- 컴퓨터에 전원 계획을 적용하는 효과를 모니터링하기 위해 두 개의 컴퓨터 컬렉션을 만듭니다. 첫 번째 컬렉션에 전원 설정을 적용하려는 대부분의 컴퓨터를 포함해야 하고 다른 컬렉션(컨트롤 컬렉션)에는 나머지 컴퓨터를 포함해야 합니다. 대부분의 컴퓨터가 포함된 컬렉션에 필요한 전원 관리 계획을 적용합니다. 그런 다음 보고서를 실행하면 전원 설정을 적용한 컴퓨터의 전원 비용, 전원 사용 및 환경 영향을 전원 설정을 적용하지 않은 컨트롤 컬렉션과 비교할 수 있습니다.  
+## <a name="create-a-control-collection-of-computers-with-no-power-plans-applied"></a>電源プランが適用されていないコンピューターのリストを作成する  
+ 2 つのコンピューター コレクションを作成して、電源プランをコンピューターに適用した場合の影響を監視します。 一方のコレクションには、サブ コレクションに電源設定を適用する大半のコンピューターを含め、もう一方のコレクション (コントロール コレクション) には残りのコンピューターを含めます。 大半のコンピューターが含まれる方のコレクションに、必要な電源管理プランを適用します。 その後、レポートを実行すると、電源設定が適用されているコンピューターの電力コスト、電力使用状況、および環境への影響を、電源設定が適用されていないコントロール コレクションの情報と比較できます。  
 
-## <a name="run-the-power-settings-report-before-you-apply-a-power-management-plan"></a>전원 관리 계획을 적용하기 전에 전원 설정 보고서를 실행합니다.  
- 컴퓨터의 컬렉션에 전원 관리 계획을 적용하기 전에 컬렉션의 컴퓨터에 이미 구성된 전원 관리 설정을 파악할 수 있도록 **전원 설정** 보고서를 실행합니다. 기존 설정을 먼저 검사하지 않고 컴퓨터에 새로운 전원 관리 설정을 적용하면 전력 소비가 늘어날 수 있습니다.  
+## <a name="run-the-power-settings-report-before-you-apply-a-power-management-plan"></a>電源管理プランを適用する前に、[電源設定] レポートを実行する。  
+ コンピューターのコレクションに電源管理プランを適用する前に、[電源設定] レポートを実行すると、そのコレクション内のコンピューターで既に構成されている電源管理設定についての理解を深めることができます。 **** 既存の設定について調査を行わずに新しい電源管理設定を適用すると、電力消費量が増える結果になる可能性があります。  
 
-## <a name="exclude-servers-from-power-management"></a>전원 관리에서 서버 제외  
- 전원 사용 현황 데이터가 수집되기는 하지만 Windows Server를 실행하는 컴퓨터에 대한 전원 관리는 지원되지 않습니다. 컬렉션에 서버를 추가하고 전원 관리에서 제외해야 합니다.  
+## <a name="exclude-servers-from-power-management"></a>電源管理からサーバーを除外する  
+ Windows Server を実行しているコンピューターの電源管理はサポートされていません (ただし、電力使用状況データは収集されます)。 サーバーをコレクションに追加し、そのコレクションを電源管理から除外します。  
 
-## <a name="exclude-computers-that-you-do-not-want-to-manage"></a>관리하지 않으려는 컴퓨터를 제외합니다.  
- 전원 관리로 관리하지 않으려는 컴퓨터가 있는 경우 이를 컬렉션에 추가하고 해당 컬렉션이 전원 관리에서 제외되었는지 확인합니다.  
+## <a name="exclude-computers-that-you-do-not-want-to-manage"></a>管理に適さないコンピューターを除外する  
+ 電源管理で管理したくないコンピューターがある場合、これらのコンピューターを特定のコレクションに追加して、そのコレクションを電源管理の対象から除外します。  
 
- 전원 관리에서 제외하려는 컴퓨터의 예는 다음과 같습니다.  
+ 次のようなコンピューターは、電源管理に適していません。  
 
--   켜진 상태를 유지해야 하는 컴퓨터  
+-   電源を常にオンにしておく必要のあるコンピューター  
 
--   사용자가 원격 데스크톱 연결을 사용하여 연결해야 하는 컴퓨터  
+-   ユーザーがリモート デスクトップ接続を使って接続する必要のあるコンピューター  
 
--   전원 관리를 사용할 수 없는 컴퓨터  
+-   電源管理機能を使用できないコンピューター  
 
--   배포 지점 사이트 시스템 역할을 하는 컴퓨터  
+-   配布ポイント サイト システムの役割を持つコンピューター  
 
--   컴퓨터 및 모니터가 항상 켜져 있어야 하는 키오스크 컴퓨터와 같은 공용 컴퓨터, 정보 디스플레이 또는 모니터링 콘솔  
+-   キオスク コンピューター、情報表示用コンピューター、監視用コンソールなど、コンピューターおよびモニターを常にオンにしておく必要のある、公共のコンピューター  
 
- 자세한 내용은 [System Center Configuration Manager에서 전원 관리 구성](../../../../core/clients/manage/power/configuring-power-management.md)을 참조하세요.  
+ 詳細については、「[System Center Configuration Manager での電源管理の構成](../../../../core/clients/manage/power/configuring-power-management.md)」を参照してください。  
 
-## <a name="first-apply-power-plans-to-a-test-collection-of-computers"></a>먼저 전원 계획을 컴퓨터의 테스트 컬렉션에 적용합니다.  
- 전원 계획을 더 큰 컴퓨터 컬렉션에 적용하기 전에 항상 먼저 컴퓨터의 테스트 컬렉션에서 전원 관리 계획을 적용한 효과를 테스트합니다.  
+## <a name="first-apply-power-plans-to-a-test-collection-of-computers"></a>電源プランは、まずテスト用のコンピューター コレクションに適用する  
+ 電源管理プランを多数のコンピューターが含まれるコレクションに適用する前に、テスト用のコレクションに適用して、電源プランの効果をテストします。  
 
- Windows XP 또는 Windows Server 2003을 실행하는 컴퓨터에 적용된 전원 설정은 해당 컴퓨터를 전원 관리에서 제외하더라도 원래 값으로 되돌려지지 않습니다. 이후 버전의 Windows에서는 전원 관리에서 컴퓨터를 제외하면 모든 전원 설정이 원래 값으로 되돌아갑니다. 개별 전원 설정을 원래 값으로 되돌릴 수 없습니다.  
+ Windows XP または Windows Server 2003 を実行するコンピューターに適用された電源設定は、そのコンピューターを電源管理から除外した場合でも、元の値に戻りません。 Windows のこれより新しいバージョンでは、電源管理からコンピューターを除外すると、すべての電源設定が元の値に戻ります。 個々の電源設定をその元の値に戻すことはできません。  
 
-## <a name="apply-power-plan-settings-individually"></a>전원 계획 설정을 개별적으로 적용합니다.  
- 각 설정이 필요한 효과를 갖고 있는지 확인하려면 다음 설정을 적용하기 전에 각 전원 설정을 적용한 효과를 모니터링합니다. 전원 계획 설정에 대한 자세한 내용은 [System Center Configuration Manager에서 전원 계획을 만들고 적용하는 방법](../../../../core/clients/manage/power/create-and-apply-power-plans.md) 항목의 [사용 가능한 전원 관리 계획 설정](../../../../core/clients/manage/power/create-and-apply-power-plans.md#BKMK_Plans)을 참조하세요.  
+## <a name="apply-power-plan-settings-individually"></a>電源プラン設定はそれぞれ個別に適用する  
+ それぞれの設定により目的の効果が得られることを確認するため、電源設定は一度に 1 つずつ適用してその効果を監視します。 電源プランの設定の詳細については、「[System Center Configuration Manager で電源プランを作成して適用する方法](../../../../core/clients/manage/power/create-and-apply-power-plans.md)」トピックの「[使用できる電源管理プランの設定](../../../../core/clients/manage/power/create-and-apply-power-plans.md#BKMK_Plans)」を参照してください。  
 
-## <a name="regularly-monitor-computers-to-see-if-they-have-multiple-power-plans-applied"></a>정기적으로 컴퓨터를 모니터링하여 여러 개의 전원 계획이 적용되었는지 확인합니다.  
- 전원 관리에는 둘 이상의 전원 계획을 적용한 컴퓨터를 표시하는 보고서가 포함됩니다.  
+## <a name="regularly-monitor-computers-to-see-if-they-have-multiple-power-plans-applied"></a>コンピューターを定期的に監視して、複数の電源プランが適用されていないか確認する  
+ 電源管理では、複数の電源プランが適用されているコンピューターを表示するレポートを作成できます。  
 
- 컴퓨터가 각각 다른 전원 계획을 적용하는 여러 컬렉션의 멤버인 경우 다음 작업이 수행됩니다.  
+ コンピューターが、それぞれ異なる電源プランが適用されている複数のコレクションのメンバーである場合、次の処理が行われます。  
 
--   전원 계획: 전원 설정에 대해 여러 값이 컴퓨터에 적용된 경우 최소한의 제한적인 값이 사용됩니다.  
+-   電源プラン: 1 台のコンピューターに複数の電源設定値が適用されている場合、最も制限の緩い値が使用されます。  
 
--   절전 모드 해제 시간: 여러 절전 모드 해제 시간이 데스크톱 컴퓨터에 적용된 경우 자정에 가장 가까운 시간이 사용됩니다.  
+-   ウェイクアップ時間: 1 台のデスクトップ コンピューターに複数のウェイクアップ時間が適用されている場合、深夜に最も近い時間が使用されます。  
 
-     자세한 내용은 [System Center Configuration Manager에서 전원 관리를 모니터링하고 계획하는 방법](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md) 항목의 [전원 계획이 여러 개인 컴퓨터](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md#BKMK_Multiple)를 참조하세요. 전원 관리에서 충돌을 해결하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 전원 계획을 만들고 적용하는 방법](../../../../core/clients/manage/power/create-and-apply-power-plans.md)을 참조하세요.  
+     詳細については、「[System Center Configuration Manager で電源管理を監視して計画する方法](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)」トピックの「[電源プランが複数あるコンピューター](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md#BKMK_Multiple)」を参照してください。 電源管理が競合を解決する方法の詳細については、「[System Center Configuration Manager で電源プランを作成して適用する方法](../../../../core/clients/manage/power/create-and-apply-power-plans.md)」を参照してください。  
 
-## <a name="save-or-export-power-management-information-during-the-monitoring-and-planning-phase-of-power-management"></a>전원 관리 단계를 모니터링하고 계획하는 동안 전원 관리 정보를 저장하거나 내보냅니다.  
- 일일 보고서에 사용된 전원 관리 정보는 31일간 Configuration Manager 사이트 데이터베이스에 보존됩니다.  
+## <a name="save-or-export-power-management-information-during-the-monitoring-and-planning-phase-of-power-management"></a>電源管理の監視段階と計画段階で、電源管理情報を保存またはエクスポートする  
+ 日次レポートで使用される電源管理情報は、Configuration Manager サイト データベースに 31 日間保持されます。  
 
- 월별 보고서에 사용된 전원 관리 정보는 13개월간 Configuration Manager 사이트 데이터베이스에 보존됩니다.  
+ 月次レポートで使用される電源管理情報は、Configuration Manager サイト データベースに 13 か月間保持されます。  
 
- 전원 관리의 모니터링, 계획 및 준수 단계 중 보고서를 실행할 때 나중에 해당 결과가 Configuration Manager에서 제거된 경우 비교할 수 있도록 데이터를 보존하려는 보고서에서 결과를 저장하거나 내보냅니다.  
+ 電源管理の監視、計画、コンプライアンス対応評価の段階でレポートを実行する場合、後日 Configuration Manager によってこれらのレポートが削除された場合にもデータを比較できるよう、すべてのレポートの結果を保存またはエクスポートしておくことをお勧めします。  

@@ -1,6 +1,6 @@
 ---
-title: "장치 관리 솔루션 선택 - Configuration Manager | Microsoft 문서"
-description: "System Center Configuration Manager에서 PC, 서버 및 장치 관리를 위해 제공하는 솔루션에 대해 알아봅니다."
+title: "デバイス管理ソリューションの選択 - Configuration Manager | Microsoft Docs"
+description: "PC、サーバー、およびデバイスを管理するために System Center Configuration Manager で提供されるソリューションについて説明します。"
 ms.custom: na
 ms.date: 12/08/2016
 ms.prod: configuration-manager
@@ -18,77 +18,77 @@ manager: angrobe
 ms.openlocfilehash: 9989ea1bf4cb74a6286ebae9de7614ed622de5b6
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="choose-a-device-management-solution-for-system-center-configuration-manager"></a>System Center Configuration Manager에 대한 장치 관리 솔루션 선택
+# <a name="choose-a-device-management-solution-for-system-center-configuration-manager"></a>System Center Configuration Manager のデバイス管理ソリューションの選択
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager(ConfgMgr, SCCM이라고도 함)에서는 PC, 서버 및 장치를 관리하기 위한 다양한 솔루션을 제공합니다. 관리해야 하는 장치 플랫폼 및 필요한 관리 기능에 따라 적합한 솔루션을 선택할 수 있습니다.  
-
-
-##  <a name="overview-of-device-management-solutions"></a>장치 관리 솔루션의 개요  
- 이 문서에서는 Configuration Manager 클라이언트 응용 프로그램, 온-프레미스 Configuration Manager 인프라, Microsoft Intune 및 Exchange의 네 가지 장치 관리 솔루션을 다룹니다. 이 문서의 마지막에는 각각 [지원되는 모바일 장치 플랫폼](#compare-device-management-solutions-based-on-supported-mobile-device-platforms)과 [관리 기능](#compare-mobile-device-management-solutions-based-on-management-functionality)을 기준으로 하여 관리 솔루션을 비교하는 2개 표가 나와 있습니다.
+System Center Configuration Manager (ConfgMgr または SCCM とも呼ばれます) には、PC、サーバー、およびデバイスを管理するためのさまざまなソリューションが備わっています。 管理する必要のあるデバイス プラットフォームや、必要な管理機能に基づいて、適切なソリューションを選択できます。  
 
 
-###  <a name="manage-devices-with-the-configuration-manager-client"></a>Configuration Manager 클라이언트를 사용하여 장치 관리  
+##  <a name="overview-of-device-management-solutions"></a>デバイス管理ソリューションの概要  
+ この記事では、次の 4 つのデバイス管理ソリューションについて説明します: Configuration Manager クライアント アプリケーション、オンプレミス Configuration Manager インフラストラクチャ、Microsoft Intune、Exchange。 この記事では、各管理ソリューションを[サポートされているモバイル デバイス プラットフォーム別](#compare-device-management-solutions-based-on-supported-mobile-device-platforms)と[管理機能別](#compare-mobile-device-management-solutions-based-on-management-functionality)に比較した 2 つの表を示しています。
 
-장치에 Configuration Manager 클라이언트 응용 프로그램을 설치해야 하는 이 옵션은 PC, 서버 및 사용자 환경의 기타 장치를 관리하기 위한 기능을 가장 많이 제공합니다. 자세한 내용은 [System Center Configuration Manager의 클라이언트 설치 방법](/sccm/core/clients/deploy/plan/client-installation-methods)을 참조하세요.  
 
-###  <a name="manage-devices-with-on-premises-configuration-manager-infrastructure"></a>온-프레미스 Configuration Manager 인프라를 사용하여 장치 관리  
+###  <a name="manage-devices-with-the-configuration-manager-client"></a>Configuration Manager クライアントを使用してデバイスを管理する  
 
-이 옵션은 일부 장치 플랫폼의 운영 체제에 기본 제공되는 장치 관리 기능을 사용합니다. 클라이언트 기반 관리만큼 전체 기능을 갖추고 있지는 않지만 온-프레미스 모바일 장치 관리는 온-프레미스 Configuration Manager 리소스를 사용하여 장치에 연결하고 관리하는 보다 가벼운 관리 방식을 제공합니다. 이 옵션은 현재 Windows 10 PC 및 Windows 10 Mobile 장치에 대해서만 지원됩니다.  
+このオプションでは、デバイスに Configuration Manager クライアント アプリケーションをインストールする必要はありますが、環境内の PC やサーバーなどのデバイスを管理するためのほとんどの機能が提供されます。 詳細については、「[System Center Configuration Manager でのクライアントのインストール方法](/sccm/core/clients/deploy/plan/client-installation-methods)」を参照してください。  
 
-자세한 내용은 [System Center Configuration Manager의 온-프레미스 인프라로 모바일 장치 관리](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)를 참조하세요.  
+###  <a name="manage-devices-with-on-premises-configuration-manager-infrastructure"></a>オンプレミス Configuration Manager インフラストラクチャを使用してデバイスを管理する  
 
-###  <a name="manage-devices-with-microsoft-intune-hybrid"></a>Microsoft Intune을 사용하여 장치 관리(하이브리드)  
+このオプションでは、一部のデバイス プラットフォームのオペレーティング システムに組み込まれているデバイス管理機能を使用します。 オンプレミス モバイル デバイス管理では、クライアント ベースの管理とは異なりフル機能は提供されませんが、管理するための簡略化された方法が提供されます。この方法では、オンプレミス Configuration Manager リソースを使用して、デバイスのアクセスと管理を行います。 このオプションは、現在 Windows 10 PC と Windows 10 Mobile デバイスのみでサポートされています。  
 
-이 옵션에서는 Configuration Manager 온-프레미스 리소스를 사용하는 대신 Microsoft Intune을 사용하여 장치를 등록하고 관리합니다. Intune에서 장치를 관리하지만 Configuration Manager 콘솔에서 관리 태스크에 액세스합니다. 이 옵션은 Windows 10 Mobile, Windows Phone, iOS, Mac OS X, Android 등 모든 주요 모바일 장치 운영 체제를 지원합니다. 또한 조직의 Windows 8.1 및 Windows 10 컴퓨터를 관리하는 기능을 제공합니다.  
+詳細については、「[Manage mobile devices with on-premises infrastructure in System Center Configuration Manager](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)」 (System Center Configuration Manager のオンプレミス インフラストラクチャとともにモバイル デバイスを管理する) を参照してください。  
 
-자세한 내용은 [System Center Configuration Manager 및 Microsoft Intune을 지원하는 하이브리드 MDM(모바일 장치 관리)](../../mdm/understand/hybrid-mobile-device-management.md)을 참조하세요.  
+###  <a name="manage-devices-with-microsoft-intune-hybrid"></a>Microsoft Intune を使用してデバイスを管理する (ハイブリッド)  
 
-###  <a name="manage-devices-with-microsoft-exchange"></a>Microsoft Exchange를 사용하여 장치 관리  
+このオプションでは、Configuration Manager のオンプレミス リソースを使用する代わりに、Microsoft Intune を使用してデバイスを登録し、管理します。 Intune でデバイスが管理されている場合でも、Configuration Manager コンソールで管理タスクにアクセスできます。 このオプションは、Windows 10 Mobile、Windows Phone、iOS、Mac OS X、Android を含む主要なモバイル デバイス オペレーティング システムをすべてサポートします。 また、組織内の Windows 8.1 と Windows 10 のコンピューターの管理も提供します。  
 
-이 옵션에서는 Exchange Server 커넥터를 사용하여 여러 Exchange 서버를 Configuration Manager에 연결합니다. 이를 통해 Exchange ActiveSync에 연결할 수 있는 장치를 중앙 집중식으로 관리합니다. Configuration Manager 콘솔에서 여러 Exchange 서버에 대한 설정 제어 및 원격 장치 초기화와 같은 Exchange 모바일 장치 관리 기능을 구성할 수 있습니다.  
+詳細については、「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../mdm/understand/hybrid-mobile-device-management.md)」を参照してください。  
 
-자세한 내용은 [System Center Configuration Manager와 Exchange를 사용하여 모바일 장치 관리](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)를 참조하세요.  
+###  <a name="manage-devices-with-microsoft-exchange"></a>Microsoft Exchange を使用してデバイスを管理する  
 
-이러한 장치 관리 솔루션을 단독으로 사용하거나 서로 결합해서 사용할 수 있습니다. 예를 들어 클라이언트 기반 관리 방식을 사용하여 조직의 컴퓨터 및 서버를 관리하는 동시에 Intune을 사용하여 모바일 장치를 관리할 수 있습니다. 이처럼 여러 관리 방식을 결합하여 사용하면 Configuration Manager 콘솔에서 모든 장치 관리 요구를 처리할 수 있습니다.  
+このオプションでは、Exchange Server コネクタを使用して、Configuration Manager に複数の Exchange サーバーを接続します。 これにより、Exchange ActiveSync に接続できるデバイスが一元的に管理されます。 Configuration Manager コンソールから、複数の Exchange サーバー向けにリモート デバイス ワイプおよび設定コントロールといった、Exchange モバイル デバイス管理機能を構成できます。  
 
-## <a name="compare-device-management-solutions-based-on-supported-mobile-device-platforms"></a>지원되는 모바일 장치 플랫폼을 기준으로 장치 관리 솔루션 비교  
+詳細については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)」を参照してください。  
 
-|플랫폼|Configuration Manager 클라이언트 사용|Configuration Manager 통합 Microsoft Intune(하이브리드)|온\-프레미스 모바일 장치 관리|Configuration Manager와 Exchange|  
+これらのデバイス管理ソリューションは、単独で使用することも、相互に組み合わせて使用することもできます。 たとえば、クライアントベースの管理方法を使用して組織内のコンピューターとサーバーの管理を行いつつ、Intune を使用してモバイル デバイスを管理することができます。 このようにアプローチを組み合わせることによって、Configuration Manager コンソールでデバイス管理のすべてのニーズに対応することができます。  
+
+## <a name="compare-device-management-solutions-based-on-supported-mobile-device-platforms"></a>サポートされているモバイル デバイス プラットフォームに基いたデバイス管理ソリューションの比較  
+
+|プラットフォーム|Configuration Manager クライアントを使用|Configuration Manager と Microsoft Intune の併用 (ハイブリッド)|オンプレミス モバイル デバイス管理\-|Configuration Manager と Exchange の併用|  
 |--------------|-------------------------------------------|-------------------------------------------------------------------|-------------------------------|-----------------------------------------|  
-|Android||예||예|  
-|iOS||예||예|  
-|Mac OS X|예|||예|  
-|UNIX/Linux|예|||예|  
-|Windows 10|예|예|예|예|  
-|Windows 10 Mobile||예|예|예|  
-|Windows(이전 버전)|예|예||예|  
-|Windows CE|예(모바일 장치 레거시 클라이언트 사용)|||예|  
-|Windows Embedded|예||||  
-|Windows Phone||예||예|  
-|Windows Server|예|||예|  
+|Android||○||○|  
+|iOS||○||○|  
+|Mac OS X|○|||○|  
+|UNIX/Linux|○|||○|  
+|Windows 10|○|[はい]|[はい]|○|  
+|Windows 10 Mobile||○|[はい]|○|  
+|Windows (以前のバージョン)|○|[はい]||○|  
+|Windows CE|○ (モバイル デバイス レガシ クライアントを使用)|||○|  
+|Windows Embedded|○||||  
+|Windows Phone||○||○|  
+|Windows Server|○|||○|  
 
- 지원되는 플랫폼의 전체 목록은 [Supported operating systems for clients and devices for System Center Configuration Manager](configs\supported-operating-systems-for-clients-and-devices.md)(System Center Configuration Manager용 클라이언트 및 장치에 대해 지원되는 운영 체제)를 참조하세요.
+ サポート対象プラットフォームの一覧については、「[Supported operating systems for clients and devices for System Center Configuration Manager](configs\supported-operating-systems-for-clients-and-devices.md)」 (System Center Configuration Manager のクライアントとデバイスでサポートされるオペレーティング システム) を参照してください。
 
-##  <a name="bkmk_comp2"></a> 관리 기능을 기준으로 모바일 장치 관리 솔루션 비교  
+##  <a name="bkmk_comp2"></a> 管理機能に基づいたモバイル デバイス管理ソリューションの比較  
 
-|관리 기능|Configuration Manager 클라이언트 사용|Configuration Manager 통합 Microsoft Intune(하이브리드)|온\-프레미스 모바일 장치 관리|Configuration Manager와 Exchange|  
+|管理機能|Configuration Manager クライアントを使用|Configuration Manager と Microsoft Intune の併用 (ハイブリッド)|オンプレミス モバイル デバイス管理\-|Configuration Manager と Exchange の併用|  
 |------------------------------|-------------------------------------------|-------------------------------------------------------------------|-------------------------------|-----------------------------------------|  
-|모바일 장치와 Configuration Manager 간의 PKI(공개 키 인프라)(상호 인증과 SSL을 통한 데이터 전송 암호화)|예|예|예||  
-|클라이언트 설치|예||||  
-|인터넷을 통한 지원|예||||  
-|검색|예|||예|  
-|하드웨어 인벤토리|예|예|예|예|  
-|소프트웨어 인벤토리|예|||예|  
-|설정|예|예|예|예|  
-|소프트웨어 배포|예|예|예||  
-|대체 상태 지점을 사용한 모니터링|예||||  
-|관리 지점에 대한 연결|예||예||  
-|배포 지점에 대한 연결|예||예||  
-|Configuration Manager의 블록|예|예|예||  
-|Exchange Server(및 Configuration Manager)에서 격리 및 차단||||예|  
-|원격 지우기| |예|예|예|  
+|モバイル デバイスと Configuration Manager 間の公開キー基盤 (PKI) セキュリティ (相互認証と SSL によるデータ転送暗号化を使用)|○|[はい]|○||  
+|クライアントのインストール|○||||  
+|インターネット経由のサポート|○||||  
+|探索|○|||○|  
+|ハードウェア インベントリ|○|[はい]|[はい]|○|  
+|ソフトウェア インベントリ|○|||○|  
+|設定|○|[はい]|[はい]|○|  
+|ソフトウェアの展開|○|[はい]|○||  
+|フォールバック ステータス ポイントによる監視|○||||  
+|管理ポイントへの接続|○||○||  
+|配布ポイントへの接続|○||○||  
+|Configuration Manager からのブロック|○|[はい]|○||  
+|Exchange Server (および Configuration Manager) からの検疫とブロック||||○|  
+|リモート ワイプ| |○|[はい]|○|  

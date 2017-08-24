@@ -1,6 +1,6 @@
 ---
-title: "Technical Preview 1701 Configuration Manager의 기능"
-description: "System Center Configuration Manager용 Technical Preview 버전 1701에서 사용 가능한 기능에 대해 알아봅니다."
+title: "Configuration Manager の Technical Preview 1701 の機能"
+description: "System Center Configuration Manager の Technical Preview バージョン 1701 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
@@ -17,140 +17,140 @@ manager: angrobe
 ms.openlocfilehash: b330c97a0853d1673f1cf7e0691891b72407fa51
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>System Center Configuration Manager용 Technical Preview 1701의 기능
+# <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1701 の機能
 
-*적용 대상: System Center Configuration Manager(Technical Preview)*
-
-
-
-이 문서에서는 System Center Configuration Manager용 Technical Preview 버전 1701에서 사용 가능한 기능을 소개합니다. 이 버전을 설치하여 Configuration Manager Technical Preview 사이트를 업데이트하고 새로운 기능을 추가할 수 있습니다. 이 버전의 Technical Preview를 설치하기 전에 소개 항목인 [System Center Configuration Manager용 Technical Preview](../../core/get-started/technical-preview.md)를 검토하여 Technical Preview 사용을 위한 일반 요구 사항 및 제한 사항, 버전 업데이트 방법 및 Technical Preview의 기능에 대해 피드백 제공 방법 등에 익숙해져야 합니다.    
+*適用対象: System Center Configuration Manager (Technical Preview)*
 
 
-**다음은 이 버전에서 사용할 수 있는 새로운 기능입니다.**  
 
-## <a name="boundary-groups-improvements-for-software-update-points"></a>소프트웨어 업데이트 지점에 대한 향상된 경계 그룹
-이 미리 보기부터 이제 경계 그룹을 사용하여 클라이언트를 소프트웨어 업데이트 지점에 연결합니다. 이는 추가 사이트 시스템 역할을 관리하기 위해 경계 그룹에 대한 변경을 확장하는 지속적인 작업의 일부입니다.  경계 그룹에 대한 변경은 Technical Preview 1609 및 버전 1610의 현재 분기에서 처음 도입되었습니다.  
-
-이 미리 보기에서는 클라이언트에서 사용할 수 있는 배포 지점을 관리하는 방법과 마찬가지로, 새 경계 그룹 동작을 통해 클라이언트에서 사용할 수 있는 소프트웨어 업데이트 지점을 관리합니다.  
-
-- 경계 그룹을 구성하여 소프트웨어 업데이트 지점을 호스트하는 서버를 하나 이상 연결합니다.
-- 새 소프트웨어 업데이트 지점을 원하는 클라이언트는 현재 경계 그룹과 연결된 소프트웨어 업데이트 지점을 사용하려고 합니다.
-- 클라이언트는 현재 소프트웨어 업데이트 지점에 연결하지 못하고 현재 경계 그룹에서 소프트웨어 업데이트 지점을 찾을 수 없는 경우 대체 동작을 사용하여 사용할 수 있는 소프트웨어 업데이트 지점 풀을 확장합니다.    
-
-경계 그룹에 대한 자세한 내용은 현재 분기에 대한 콘텐츠에서 [경계 그룹](/sccm/core/servers/deploy/configure/boundary-groups)을 참조하세요.
-
-그러나 이 미리 보기에서는 소프트웨어 업데이트 지점에 대한 경계 그룹이 부분적으로만 구현되었습니다. 소프트웨어 업데이트 지점을 추가하고 소프트웨어 업데이트 지점을 포함하는 인접한 경계 그룹을 구성할 수 있지만 소프트웨어 업데이트 지점에 대한 대체 시간은 아직 지원되지 않으며, 클라이언트가 2시간 동안 기다려야 대체가 시작됩니다.
-
-다음은 이 Technical Preview의 소프트웨어 업데이트 지점 동작에 대한 설명입니다.  
-
--   **새 클라이언트는 경계 그룹을 사용하여 소프트웨어 업데이트 지점을 선택합니다.** 버전 1701을 설치한 후 설치하는 클라이언트는 클라이언트의 경계 그룹과 연결된 소프트웨어 업데이트 지점에서 하나를 선택합니다.
-
-  이 동작은 클라이언트가 클라이언트 포리스트를 공유하는 소프트웨어 업데이트 지점 목록에서 임의로 하나를 선택하는 이전 동작을 대체합니다.   
-
--   **이전에 설치한 클라이언트는 새 소프트웨어 업데이트 지점을 찾도록 대체될 때까지 현재 소프트웨어 업데이트 지점을 계속 사용합니다.**
-이전에 설치했으며 이미 소프트웨어 업데이트 지점이 있는 클라이언트는 대체될 때까지 해당 소프트웨어 업데이트 지점을 계속 사용합니다. 여기에는 클라이언트의 현재 경계 그룹과 연결되지 않은 소프트웨어 업데이트 지점도 포함됩니다. 즉시 현재 경계 그룹에서 소프트웨어 업데이트 지점을 찾아서 사용하려고 하지 않습니다.
-
-  이미 소프트웨어 업데이트 지점이 있는 클라이언트는 현재 소프트웨어 업데이트 지점에 연결하지 못하여 대체를 시작한 후에만 이 새로운 경계 그룹 동작을 사용하기 시작합니다.
-새 동작으로 전환 시 발생하는 이 지연은 의도적인 것입니다. 이는 소프트웨어 업데이트 지점 변경 시 클라이언트가 새 소프트웨어 업데이트 지점과 데이터를 동기화하면서 네트워크 대역폭이 많이 사용될 수 있기 때문입니다. 전환 시의 지연은 모든 클라이언트가 새 소프트웨어 업데이트 지점으로 동시에 전환할 경우 발생하는 네트워크 혼잡을 방지하는 데 도움이 됩니다.
-
--   **대체 시간 구성:** 클라이언트가 새 소프트웨어 업데이트 지점을 검색하도록 대체를 시작하는 시기에 대한 구성은 이 Technical Preview에서 지원되지 않습니다. 여기에는 다양한 경계 그룹 관계에 대해 구성할 수 있는 **대체 시간(분)** 및 **대체 안 함** 구성이 포함됩니다.
-
-  대신, 클라이언트가 사용할 수 있는 새 소프트웨어 업데이트 지점을 찾도록 대체를 시작하기 전에 2시간 동안 현재 소프트웨어 업데이트 지점에 연결을 시도하는 현재 클라이언트 동작은 유지됩니다.
-
-  클라이언트는 대체를 사용할 때 대체에 대한 경계 그룹 구성을 사용하여 사용 가능한 소프트웨어 업데이트 지점 풀을 만듭니다. 이 풀에는 클라이언트 *현재 경계 그룹*, *인접한 경계 그룹* 및 클라이언트 *사이트 기본 경계 그룹*의 모든 소프트웨어 업데이트 지점이 포함됩니다.
-
-- **기본 사이트 경계 그룹 구성:**  
- *기본 사이트 경계 그룹&lt;사이트 코드>*에 소프트웨어 업데이트 지점을 추가하는 것이 좋습니다. 이렇게 하면 다른 경계 그룹의 구성원이 아닌 클라이언트가 소프트웨어 업데이트 지점을 찾도록 대체될 수 있습니다.
+この記事では、System Center Configuration Manager の Technical Preview バージョン 1701 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 このバージョンの Technical Preview をインストールする前に、説明のトピック「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。    
 
 
-경계 그룹에 대한 소프트웨어 업데이트 지점을 관리하려면 [현재 분기 설명서의 절차](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#procedures-for-boundary-groups)를 사용합니다. 단, 구성하는 대체 시간은 소프트웨어 업데이트 지점에 아직 사용되지 않습니다.
+**このバージョンでお試しいただける新機能を次に示します。**  
+
+## <a name="boundary-groups-improvements-for-software-update-points"></a>ソフトウェア更新ポイントの境界グループの改善
+このプレビュー以降、境界グループを使用して、クライアントをソフトウェアの更新ポイントに関連付けられるようになりました。 これは、追加のサイト システムの役割を管理するために境界グループの変更を展開する継続的な作業の一部です。  境界グループの変更は、Technical Preview 1609 および Current Branch (バージョン 1610) で初めて導入されました。  
+
+このプレビューでは、新しい境界グループの動作を使用して、クライアントが使用できるソフトウェアの更新ポイントを管理することができます。これは、クライアントが使用できる配布ポイントの管理方法と似ています。  
+
+- ソフトウェアの更新ポイントをホストする 1 つ以上のサーバーを関連付けるように境界グループを構成します。
+- 新しいソフトウェアの更新ポイントをシークしているクライアントは、現在の境界グループに関連付けられているものの使用を試みます。
+- クライアントが、現在のソフトウェアの更新ポイントに到達できず、現在の境界グループからの更新ポイントも見つけられない場合、フォールバック動作を使用して、使用可能なソフトウェアの更新ポイントのプールを拡張します。    
+
+境界グループの詳細については、Current Branch のコンテンツの[境界グループ](/sccm/core/servers/deploy/configure/boundary-groups)に関する記述を参照してください。
+
+ただし、このプレビューでは、ソフトウェアの更新ポイントの境界グループの一部のみが実装されています。 ソフトウェアの更新ポイントを追加して、ソフトウェアの更新ポイントを含む近隣の境界グループを構成することはできますが、ソフトウェアの更新ポイントのフォールバック時間がまだサポートされていないため、クライアントはフォールバックが開始されるまで 2 時間待機することになります。
+
+以下に、このテクニカル プレビューでのソフトウェアの更新ポイントの動作について説明します。  
+
+-   **新しいクライアントでは境界グループを使用して、ソフトウェアの更新ポイントを選択します。**バージョン 1701 をインストールした後にインストールしたクライアントは、ソフトウェアの更新ポイントを、クライアントの境界グループに関連付けられているものの中から選択します。
+
+  これは、クライアントが、クライアント フォレストを共有するソフトウェアの更新ポイントのリストからランダムに選択する以前の動作に置き換わるものです。   
+
+-   **以前にインストールされたクライアントは、フォールバックして新しいソフトウェアの更新ポイントを見つけるまで、引き続き、現在のものを使用します。**
+以前にインストールされ、既にソフトウェアの更新ポイントがあるクライアントは、フォールバックするまで引き続き、そのソフトウェアの更新ポイントを使用します。 これには、クライアントの現在の境界グループに関連付けられていないソフトウェアの更新ポイントが含まれます。 その場合、現在の境界グループからソフトウェアの更新ポイントをすぐに見つけて使用を試みることはありません。
+
+  ソフトウェアの更新ポイントが既にあるクライアントがこの新しい境界グループの動作の使用を開始するのは、現在のソフトウェアの更新ポイントに到達できず、フォールバックを開始した場合のみです。
+この遅延は、新しい動作への切り替えの際に生じるもので意図的なものです。 これは、ソフトウェアの更新ポイントが変更されると、クライアントがデータと新しいソフトウェアの更新ポイントを同期する場合に、ネットワーク帯域幅が多く使用される可能性があるためです。 遷移の遅延は、すべてのクライアントが新しいソフトウェアの更新ポイントに同時に切り替える場合に、ネットワークの飽和を回避するのに役立ちます。
+
+-   **フォールバック時間の構成:** このテクニカル プレビューでは、新しいソフトウェアの更新ポイントを検索するためにクライアントがフォールバックを開始する時間の構成はサポートされていません。 これには、さまざまな境界グループの関係に対して構成する場合がある、**[フォールバック時間 (分)]** と **[フォールバックしない]** の構成が含まれます。
+
+  したがって、クライアントは、使用可能な新しいソフトウェアの更新ポイントを検索するために、フォールバックを開始するまで 2 時間、現在のソフトウェアの更新ポイントへの接続を試みる現在の動作を保持します。
+
+  クライアントは、フォールバックを使用する場合、使用可能なソフトウェアの更新ポイントのプールを作成するためにフォールバックの境界グループ構成を使用します。 このプールには、クライアントの*現在の境界グループ*、*近隣の境界グループ*、およびクライアント *サイトの既定の境界グループ*からのソフトウェアの更新ポイントがすべて含まれます。
+
+- **既定のサイトの境界グループを構成する:**  
+ ソフトウェアの更新ポイントを *Default-Site-Boundary-Group&lt;sitecode>* に追加することを検討します。 これにより、別の境界グループのメンバーではないクライアントは確実に、フォールバックしてソフトウェアの更新ポイントを見つけられるようになります。
 
 
-## <a name="hardware-inventory-collects-uefi-information"></a>하드웨어 인벤토리를 통해 UEFI 정보 수집
-새 하드웨어 인벤토리 클래스(**SMS_Firmware**) 및 속성(**UEFI**)을 사용하여 컴퓨터를 UEFI 모드로 시작할지 여부를 결정할 수 있습니다. 컴퓨터를 UEFI 모드로 시작하는 경우 **UEFI** 속성을 **TRUE**로 설정합니다. 하드웨어 인벤토리에서 기본적으로 사용됩니다. 하드웨어 인벤토리에 대한 자세한 내용은 [하드웨어 인벤토리를 구성하는 방법](/sccm/core/clients/manage/inventory/configure-hardware-inventory)을 참조하세요.
+境界グループのソフトウェアの更新ポイントを管理する場合、[Current Branch ドキュメントの手順](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#procedures-for-boundary-groups)を使用できますが、構成する可能性のあるフォールバック時間はソフトウェアの更新ポイントではまだ使用されていないことを忘れないでください。
 
-## <a name="improvements-to-operating-system-deployment"></a>운영 체제 배포 향상
-운영 체제 배포가 다음과 같이 향상되었으며, 이러한 향상된 기능은 대부분 사용자 의견 피드백의 결과입니다.
-- [**응용 프로그램 설치 작업 순서 단계와 관련해서 더 많은 응용 프로그램 지원**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17062207-task-sequence-allow-more-than-9-applications-in-t): **응용 프로그램 설치** 작업 순서 단계에서 설치할 수 있는 최대 응용 프로그램 수가 99개로 증가되었습니다. 이전의 최대 개수는 응용 프로그램 9개였습니다.
-- [**앱 설치 작업 순서 단계에서 여러 앱 선택**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15459978-when-adding-items-to-an-install-application-step): 작업 순서 편집기에서 응용 프로그램 설치 작업 순서 단계에 응용 프로그램을 추가하는 경우 이제 **설치할 응용 프로그램 선택** 창에서 여러 응용 프로그램을 선택할 수 있습니다.
-- [**독립 실행형 미디어 만료**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/14448564-provide-a-method-for-expiring-standalone-media): 독립 실행형 미디어를 만드는 경우 미디어에 선택적 시작 및 만료 날짜를 설정하는 새 옵션이 있습니다. 이러한 설정은 기본적으로 사용되지 않습니다. 독립 실행형 미디어를 실행하기 전에 날짜가 컴퓨터의 시스템 시간과 비교됩니다. 시스템 시간이 시작 시간보다 이전이거나 만료 시간보다 이후이면 독립 실행형 미디어가 시작되지 않습니다. New-CMStandaloneMedia PowerShell cmdlet을 사용하여 이러한 옵션을 사용할 수도 있습니다.
-- [**독립 실행형 미디어의 추가 콘텐츠 지원**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8341257-support-installation-of-packages-apps-via-dynamic): 이제 독립 실행형 미디어에서 추가 콘텐츠가 지원됩니다. 작업 순서에서 참조된 다른 콘텐츠와 함께 미디어에 스테이징할 추가 패키지, 드라이버 패키지 및 응용 프로그램을 선택할 수 있습니다. 이전에는 작업 순서에서 참조된 콘텐츠만 독립 실행형 미디어에 스테이징되었습니다.
-- [**드라이버 자동 적용 작업 순서 단계에 대한 구성 가능한 시간 제한**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17153660-auto-apply-driver-timeout): 이제 새 작업 순서 변수를 사용하여 HTTP 카탈로그 요청 시 드라이버 자동 적용 작업 순서 단계에 대한 시간 제한 값을 구성할 수 있습니다. 다음 변수와 기본값(초)을 사용할 수 있습니다.
-   - SMSTSDriverRequestResolveTimeOut 기본값: 60
-   - SMSTSDriverRequestConnectTimeOut 기본값: 60
-   - SMSTSDriverRequestSendTimeOut 기본값: 60
-   - SMSTSDriverRequestReceiveTimeOut 기본값: 480
-- [**이제 작업 순서 단계에 패키지 ID가 표시됨**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16167430-display-packageid-when-viewing-a-task-sequence-ste): 이제 패키지, 드라이버 패키지, 운영 체제 이미지, 부팅 이미지 또는 운영 체제 업그레이드 패키지를 참조하는 모든 작업 순서 단계에 참조된 개체의 패키지 ID가 표시됩니다. 응용 프로그램을 참조하는 작업 순서 단계에 개체 ID가 표시됩니다.
-- **Windows 10 ADK가 빌드 버전별로 추적됨**: 이제 Windows 10 ADK가 빌드 버전별로 추적되므로 Windows 10 부팅 이미지를 사용자 지정할 때 환경에서 더 많은 지원이 제공됩니다. 예를 들어 사이트에서 Windows 10 버전 1607용 Windows ADK를 사용하는 경우 버전 10.0.14393인 부팅 이미지만 콘솔에서 사용자 지정할 수 있습니다. WinPE 버전을 사용자 지정하는 방법에 대한 자세한 내용은 [부팅 이미지 사용자 지정](/sccm/osd/get-started/customize-boot-images)을 참조하세요.
-- **기본 부팅 이미지 원본 경로를 더 이상 변경할 수 없음**: 기본 부팅 이미지가 Configuration Manager에서 관리되며, 더 이상 Configuration Manager 콘솔이나 Configuration Manager SDK를 사용하여 기본 부팅 이미지 원본 경로를 변경할 수 없습니다. 사용자 지정 부팅 이미지에 대한 사용자 지정 원본 경로는 계속 구성할 수 있습니다.
 
-## <a name="host-software-updates-on-cloud-based-distribution-points"></a>클라우드 기반 배포 지점에서 소프트웨어 업데이트 호스트
-이 미리 보기 버전부터 클라우드 기반 배포 지점을 사용하여 소프트웨어 업데이트 패키지를 호스트할 수 있습니다. 그러나 Microsoft 업데이트에서 직접 소프트웨어 업데이트를 다운로드하도록 클라이언트를 구성할 수 있으므로 클라우드 기반 배포 지점에 소프트웨어 업데이트 패키지를 배포할 경우 발생할 수 있는 추가 비용을 고려해야 합니다.
+## <a name="hardware-inventory-collects-uefi-information"></a>ハードウェア インベントリでの UEFI 情報の収集
+新しいハードウェア インベントリ クラス (**SMS_Firmware**) とプロパティ (**UEFI**) は、コンピューターが UEFI モードで起動しているかどうかを判別するのに役立ちます。 コンピューターが UEFI モードで起動している場合、**UEFI** プロパティは **TRUE** に設定されています。 これはハードウェア インベントリでは既定で有効になっています。 ハードウェア インベントリの詳細については、「[ハードウェア インベントリを構成する方法](/sccm/core/clients/manage/inventory/configure-hardware-inventory)」を参照してください。
 
-클라우드 기반 배포 지점을 사용하는 방법에 대한 자세한 내용은 Configuration Manager 현재 분기에 대한 콘텐츠에서 [클라우드 기반 배포 지점 사용](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)을 참조하세요.
+## <a name="improvements-to-operating-system-deployment"></a>オペレーティング システムの展開に関する機能拡張
+オペレーティング システムの展開について、次のように機能が拡張されました。その多くは、皆さまからのフィードバックに基づくものです。
+- [**アプリケーションのインストール タスク シーケンス ステップでより多くのアプリケーションをサポート**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17062207-task-sequence-allow-more-than-9-applications-in-t): **アプリケーションのインストール** タスク シーケンス ステップでインストールできるアプリケーションの最大数が 99 に増えました。 以前のアプリケーションの最大数は 9 でした。
+- [**アプリケーションのインストール タスク シーケンス ステップで複数のアプリを選択**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15459978-when-adding-items-to-an-install-application-step): タスク シーケンス エディターでアプリケーションのインストール タスク シーケンス ステップにアプリケーションを追加する際に、**[インストールするアプリケーションの選択]** ウィンドウから複数のアプリケーションを選択できるようになりました。
+- [**スタンドアロン メディアの有効期限の設定**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/14448564-provide-a-method-for-expiring-standalone-media): スタンドアロン メディアを作成する際に、メディアに対して、必要に応じて開始日と有効期限を設定するための新しいオプションが追加されました。 これらの設定は既定では無効になっています。 スタンドアロン メディアが実行される前に、この日付はコンピューター上のシステム時刻と比較されます。 システム時刻が開始時刻より前か、有効期限より後の場合、スタンドアロン メディアは開始されません。 これらのオプションは、New-CMStandaloneMedia PowerShell コマンドレットを使用して利用することもできます。
+- [**スタンドアロン メディアでの追加コンテンツのサポート**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8341257-support-installation-of-packages-apps-via-dynamic): スタンドアロン メディアで追加のコンテンツがサポートされるようになりました。 追加のパッケージ、ドライバー パッケージ、およびアプリケーションを選択し、タスク シーケンスで参照される他のコンテンツと共にメディアにステージングすることができます。 以前は、タスク シーケンスで参照されるコンテンツのみがスタンドアロン メディアにステージングされていました。
+- [**[ドライバーの自動適用] タスク シーケンス ステップの構成可能なタイムアウト**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17153660-auto-apply-driver-timeout): HTTP カタログの要求時に [ドライバーの自動適用] タスク シーケンス ステップでタイムアウト値を構成する際に、新しいタスク シーケンス変数を使用できるようになりました。 次の変数と既定値 (秒) を使用できます。
+   - SMSTSDriverRequestResolveTimeOut - 既定値: 60
+   - SMSTSDriverRequestConnectTimeOut - 既定値: 60
+   - SMSTSDriverRequestSendTimeOut - 既定値: 60
+   - SMSTSDriverRequestReceiveTimeOut - 既定値: 480
+- [**タスク シーケンス ステップでパッケージ ID が表示されるようになりました**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16167430-display-packageid-when-viewing-a-task-sequence-ste): パッケージ、ドライバー パッケージ、オペレーティング システム イメージ、ブート イメージ、またはオペレーティング システム アップグレード パッケージを参照するすべてのタスク シーケンス ステップで、参照されるオブジェクトのパッケージ ID が表示されるようになりました。 タスク シーケンス ステップでは、アプリケーションの参照時にオブジェクト ID が表示されます。
+- **ビルド バージョンによる Windows 10 ADK の追跡**: ビルド バージョンで Windows 10 ADK を追跡できるようになりました。これで、Windows 10 ブート イメージのカスタマイズ時により多くの操作がサポートされるようになります。 たとえば、サイトで Windows ADK for Windows 10 バージョン 1607 を使用する場合、コンソールでカスタマイズできるのはバージョン 10.0.14393 のブート イメージのみになります。 WinPE バージョンのカスタマイズの詳細については、「[ブート イメージのカスタマイズ](/sccm/osd/get-started/customize-boot-images)」を参照してください。
+- **既定のブート イメージのソース パスを変更できなくなりました**: 既定のブート イメージは Configuration Manager で管理され、既定のブート イメージのソース パスは Configuration Manager コンソールや Configuration Manager SDK を使用して変更できなくなりました。 カスタム ブート イメージのカスタム ソース パスは引き続き構成可能です。
 
-## <a name="validate-device-health-attestation-data-via-management-points"></a>관리 지점을 통해 장치 상태 증명 데이터의 유효성 검사
+## <a name="host-software-updates-on-cloud-based-distribution-points"></a>クラウドベースの配布ポイントでソフトウェアの更新をホストする
+このプレビュー バージョン以降、クラウドベースの配布ポイントを使用して、ソフトウェアの更新パッケージをホストできるようになります。 ただし、Microsoft Update から直接ソフトウェアの更新をダウンロードするようにクライアントを構成できるため、ソフトウェアの更新パッケージをクラウドベースの配布ポイントに展開する際に発生する可能性のある追加コストを考慮してください。
 
-이 미리 보기 버전부터 클라우드 또는 온-프레미스 상태 증명 서비스에 대한 상태 증명 보고 데이터의 유효성을 검사하도록 관리 지점을 구성할 수 있습니다. **관리 지점 구성 요소 속성** 대화 상자의 새 **고급 옵션** 탭에서 **온-프레미스 장치 상태 증명 서비스 URL**을 **추가**, **편집** 또는 **제거**할 수 있습니다. **온-프레미스 상태 증명 서비스를 사용**하도록 클라이언트 에이전트에 대한 **사용자 지정 장치 설정**을 지정할 수도 있습니다.  이 설정에 대해 **예**를 설정하면 클라우드 기반 서비스 대신 온-프레미스 관리 지점에 보고할 수 있습니다.
+クラウドベースの配布ポイントの使用については、Configuration Manager の Current Branch のコンテンツにある[クラウドベースの配布ポイントの使用](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)に関する記述を参照してください。
 
-### <a name="try-it-out"></a>기능 직접 사용해 보기
+## <a name="validate-device-health-attestation-data-via-management-points"></a>管理ポイント経由でデバイス正常性構成証明データを検証する
 
-- **관리 지점에서 온-프레미스 장치 상태 증명 사용**<br>  Configuration Manager 콘솔에서 관리 지점으로 이동하고 **관리 지점 구성 요소 속성**을 연 다음 **고급 옵션** 탭을 클릭합니다. **추가**를 클릭하고 **온-프레미스 장치 상태 증명 서비스 URL**에 대해 온-프레미스 URL (예: https://10.10.10.10) 을 지정합니다.
-- **클라이언트 에이전트에 대해 온-프레미스 관리 지점 상태 증명 보고 사용**<br>Configuration Manager 콘솔에서 **관리** > **클라이언트 설정**을 선택하고 두 번 클릭하거나 새 **사용자 지정 장치 설정**을 만듭니다. **컴퓨터 에이전트**를 선택하고 **온-프레미스 상태 증명 서비스 사용**을 **예**로 설정합니다. **장치 상태 증명 서비스와 통신 사용**이 **예**로 설정되고 **온-프레미스 상태 증명 사용**이 **아니요**로 설정된 경우 관리 지점에서 클라우드 기반 장치 상태 증명 서비스를 사용합니다.
+このプレビュー バージョン以降、クラウドまたはオンプレミスの正常性構成証明サービスの正常性構成証明レポート データを検証するように管理ポイントを構成できるようになります。 **[管理ポイント コンポーネントのプロパティ]** ダイアログ ボックスの **[詳細オプション]** タブで、**オンプレミスのデバイス正常性構成証明サービスの URL** を**追加**、**編集**、または**削除**することができます。 クライアント エージェントの **[カスタム デバイス設定]** を **[オンプレミスの正常性構成証明サービスを使用]** に指定することもできます。  この設定値を **[はい]** にすると、クラウドベース サービスではなく、オンプレミス管理ポイントへのレポートが有効になります。
 
-## <a name="use-the-oms-connector-for-microsoft-azure-government-cloud"></a>Microsoft Azure Government 클라우드용 OMS 커넥터 사용
-이 Technical Preview에서는 Microsoft OMS(Operations Management Suite) 커넥터를 사용하여 Microsoft Azure Government 클라우드에 있는 OMS 작업 영역에 연결할 수 있습니다.  
+### <a name="try-it-out"></a>試してみましょう
 
-이렇게 하려면 Government 클라우드를 가리키도록 구성 파일을 수정한 후 OMS 커넥터를 설치합니다.
+- **管理ポイントでオンプレミスデバイス正常性構成証明を有効にする**<br>  Configuration Manager コンソールで、管理ポイントに移動し、**[管理ポイント コンポーネントのプロパティ]** を開き、**[詳細オプション]** タブをクリックします。 **[追加]** をクリックし、**オンプレミス デバイス正常性構成証明サービスの URL** として、オンプレミス URL (https://10.10.10.10 など) を指定します。
+- **クライアント エージェントのオンプレミス管理ポイント正常性構成証明レポートを有効にする**<br>Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** の順に選択してダブルクリックするか、新しい**カスタム デバイス設定**を作成します。 **[コンピューター エージェント]** を選択し、**[オンプレミスの正常性構成証明サービスを使用する]** を **[はい]** に設定します。 **[Enable communication with Device Health Attestation Service]** (デバイス正常性構成証明サービスとの通信を有効にする) が **[はい]** に設定されており、**[Use on-premises Health Attestation]** (オンプレミスの正常性構成証明を使用する) が **[いいえ]** に設定されている場合、管理ポイントではクラウドベースのデバイス正常性構成証明サービスが使用されます。
 
-### <a name="set-up-an-oms-connector-to-microsoft-azure-government-cloud"></a>Microsoft Azure Government 클라우드에 대한 OMS 커넥터 설정
-1.  Configuration Manager 콘솔이 설치되어 있는 컴퓨터에서 Government 클라우드를 가리키도록 다음 구성 파일을 편집합니다. ***&lt;CM 설치 경로>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
+## <a name="use-the-oms-connector-for-microsoft-azure-government-cloud"></a>Microsoft Azure Government クラウドで OMS コネクタを使用する
+このテクニカル プレビューでは、Microsoft Operations Management Suite (OMS) コネクタを使用して、Microsoft Azure Government クラウド上にある OMS ワークスペースに接続できるようになりました。  
 
-  **편집:**
+これを行うには、Government クラウドをポイントするように構成ファイルを変更し、OMS コネクタをインストールします。
 
-    설정 이름 *FairFaxArmResourceID*의 값을 "https://management.usgovcloudapi.net/"으로 변경합니다.
+### <a name="set-up-an-oms-connector-to-microsoft-azure-government-cloud"></a>Microsoft Azure Government クラウドに OMS コネクタをセットアップする
+1.  Configuration Manager コンソールがインストールされている任意のコンピューターで、Government クラウドをポイントするように、***&lt;CM install path>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config*** 構成ファイルを編集します。
 
-   - **원래 값:** &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
+  **編集内容:**
+
+    設定名 *FairFaxArmResourceID* の値が、"https://management.usgovcloudapi.net/" と同一になるように変更します。
+
+   - **元の値:** &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
       &lt;value>&lt;/value>   
       &lt;/setting>
 
-   - **편집된 값:**     
+   - **編集後の値:**     
       &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value>https://management.usgovcloudapi.net/&lt;/value>  
       &lt;/setting>
 
-  설정 이름 *FairFaxAuthorityResource*의 값을 "https://login.microsoftonline.com/"으로 변경합니다.
+  設定名 *FairFaxAuthorityResource* の値が、"https://login.microsoftonline.com/" と同一になるように変更します。
 
-  - **원래 값:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+  - **元の値:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>&lt;/value>
 
-    - **편집된 값:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+    - **編集後の値:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>https://login.microsoftonline.com/&lt;/value>
 
-2.  두 가지 사항을 변경하고 파일을 저장한 후 동일한 컴퓨터에서 Configuration Manager 콘솔을 다시 시작하고 해당 콘솔을 사용하여 OMS 커넥터를 설치합니다. 커넥터를 설치하려면 [Configuration Manager의 데이터를 Microsoft Operations Management Suite에 동기화](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)에 제공된 정보를 사용하고 Microsoft Azure Government 클라우드에 있는 **Operations Management Suite 작업 영역**을 선택합니다.
+2.  2 つの変更を含むファイルを保存したら、同じコンピューター上で Configuration Manager コンソールを再起動し、そのコンソールを使用して OMS コネクタをインストールします。 コネクタをインストールするには、「[Microsoft Operations Management Suite に Configuration Manager からのデータを同期](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)」の情報を使用し、Microsoft Azure Government クラウド上にある **Operations Management Suite のワークスペース**を選択します。
 
-3.  OMS 커넥터가 설치되면 사이트에 연결하는 모든 콘솔에서 Government 클라우드에 대한 연결을 사용할 수 있습니다.
+3.  OMS コネクタをインストールしたら、サイトに接続されているコンソールを使用する際に Government クラウドへの接続を使用できます。
 
-## <a name="android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm"></a>Android 및 iOS 버전은 하이브리드 MDM 만들기 마법사에서 대상 지정이 가능하지 않음
+## <a name="android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm"></a>ハイブリッド MDM の作成ウィザードで Android と iOS のバージョン指定が不要に
 
-하이브리드 MDM(모바일 장치 관리)에 대한 이 Technical Preview부터 Intune 관리 장치에 대한 새 정책 및 프로필을 만들 때 특정 버전의 Android 및 iOS를 대상으로 지정할 필요가 없습니다. 대신 다음 장치 유형 중 하나를 선택합니다.
+ハイブリッド モバイル デバイス管理 (MDM) のこのテクニカル プレビューから、Intune で管理されるデバイスの新しいポリシーとプロファイルを作成する場合に Android および iOS の特定のバージョンを指定する必要がなくなりました。 代わりに、次のデバイス タイプのいずれかを選択します。
 
 - Android
-- Samsung KNOX Standard 4.0 이상
+- Samsung KNOX Standard 4.0 以降
 - iPhone
 - iPad
 
-이 변경 내용은 다음 항목을 만들기 위한 마법사에 영향을 줍니다.
+この変更は、次の項目を作成するウィザードに影響します。
 
-- 구성 항목
-- 규정 준수 정책
-- 인증서 프로필
-- 전자 메일 프로필
-- VPN 프로필
-- Wi-Fi 프로필
+- 構成項目
+- コンプライアンス ポリシー
+- 証明書プロファイル
+- 電子メール プロファイル
+- VPN プロファイル
+- Wi-Fi プロファイル
 
-이러한 변경으로 인해 하이브리드 배포에서 새 Configuration Manager 릴리스나 확장 없이 새 Android 및 iOS 버전을 더 빠르게 지원할 수 있습니다. Intune 독립 실행형에서 새 버전이 지원되게 되면 사용자는 모바일 장치를 해당 버전으로 업그레이드할 수 있습니다.
+この変更により、新しい Configuration Manager のリリースまたは拡張機能を必要とせずに、ハイブリッド展開で新しい Android および iOS のバージョンによりすばやくサポートを提供できます。 Intune スタンドアロンで新しいバージョンがサポートされると、ユーザーはモバイル デバイスをそのバージョンにアップグレードできるようになります。
 
-이전 버전의 Configuration Manager에서 업그레이드할 때 문제를 방지하려면 이러한 항목의 속성 페이지에서 모바일 운영 체제 버전을 계속 사용할 수 있습니다. 특정 버전을 대상으로 지정해야 하는 경우 새 항목을 만든 다음 새로 만든 항목의 속성 페이지에서 대상 버전을 지정할 수 있습니다.
+以前のバージョンの Configuration Manager からアップグレードする場合の問題を防ぐため、モバイルのオペレーティング システムのバージョンが各項目の [プロパティ] ページに表示されています。 特定のバージョンを対象にする必要がある場合は、新しい項目を作成し、新しく作成された項目の [プロパティ] ページで、対象のバージョンを指定します。

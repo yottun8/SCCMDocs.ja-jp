@@ -1,6 +1,6 @@
 ---
-title: "Technical Preview 1607 Configuration Manager의 기능"
-description: "System Center Configuration Manager용 Technical Preview 버전 1607에서 사용 가능한 기능에 대해 알아봅니다."
+title: "Configuration Manager の Technical Preview 1607 の機能"
+description: "System Center Configuration Manager の Technical Preview バージョン 1607 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
@@ -17,62 +17,62 @@ manager: angrobe
 ms.openlocfilehash: 4717e0f8eef01501fb5b5790e855c476c1ca4590
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>System Center Configuration Manager용 Technical Preview 1607의 기능
+# <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1607 の機能
 
-*적용 대상: System Center Configuration Manager(Technical Preview)*
+*適用対象: System Center Configuration Manager (Technical Preview)*
 
-이 문서에서는 System Center Configuration Manager용 Technical Preview 버전 1607에서 사용 가능한 기능을 소개합니다. 이 버전을 설치하여 Configuration Manager Technical Preview 사이트를 업데이트하고 새로운 기능을 추가할 수 있습니다.      이 버전의 Technical Preview를 설치하기 전에 소개 항목인 [System Center Configuration Manager용 Technical Preview](../../core/get-started/technical-preview.md)를 검토하여 Technical Preview 사용을 위한 일반 요구 사항 및 제한 사항, 버전 업데이트 방법 및 Technical Preview의 기능에 대해 피드백 제공 방법 등에 익숙해져야 합니다.    
+この記事では、System Center Configuration Manager の Technical Preview バージョン 1607 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。      このバージョンの Technical Preview をインストールする前に、説明のトピック「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。    
 
 
-**다음은 이 버전에서 사용할 수 있는 새로운 기능입니다.**  
+**このバージョンでお試しいただける新機能を次に示します。**  
 
-## <a name="dmp_edition"></a>Windows 10 버전 업그레이드 정책의 향상 기능
+## <a name="dmp_edition"></a>Windows 10 のエディションのアップグレード ポリシーの改善
 
-이번 릴리스에서 이 정책이 다음과 같이 향상되었습니다.
+このリリースでは、次の機能強化がこのポリシーに加えられています。
 
-* 이제 Microsoft Intune에 등록된 Windows 10 PC 외에도 Configuration Manager를 실행하는 Windows 10 PC에서 버전 업그레이드 정책을 사용할 수 있습니다.
-* Windows 10 Professional에서 마법사에 있는 하드웨어와 호환되는 아무 플랫폼으로나 업그레이드할 수 있습니다.
+* Microsoft Intune に登録された Windows 10 PC に加え、Configuration Manager クライアントを実行している Windows 10 PC で、エディションのアップグレード ポリシーを使用できるようになりました。
+* Windows 10 Professional から、ハードウェアと互換性がある、ウィザードのプラットフォームのいずれかにアップグレードすることができます。
 
-[Windows 10 버전 업그레이드 정책에 대한 자세한 내용 읽기](/sccm/compliance/deploy-use/upgrade-windows-version)
+[Windows 10 のエディションのアップグレード ポリシーについての詳細](/sccm/compliance/deploy-use/upgrade-windows-version)
 
-### <a name="try-it-out"></a>기능 직접 사용해 보기
+### <a name="try-it-out"></a>試してみましょう。
 
-1. [기존 버전 업그레이드 정책 항목](/sccm/compliance/deploy-use/upgrade-windows-version)의 정보를 사용하여 버전 업그레이드 정책을 만듭니다.
-2. Configuration Manager 클라이언트를 실행하는 Windows 10 PC에 이 정책을 배포합니다.
-정책이 대상 Windows PC에 도달하면 2시간 내에 PC가 다시 시작되어 업그레이드를 적용합니다. 현재 이러한 다시 시작을 무시할 수 없습니다. 정책을 배포할 모든 사용자에게 알리거나 사용자의 근무 시간 외에 정책이 실행되도록 예약해야 합니다.
+1. [既存エディションのアップグレード ポリシーのトピック](/sccm/compliance/deploy-use/upgrade-windows-version)にある情報を使用して、エディションのアップグレード ポリシーを作成します。
+2. このポリシーを Configuration Manager クライアントを実行している Windows 10 PC に展開します。
+対象の Windows PC にポリシーが到達すると、アップグレードを適用するために PC は 2 時間以内に再起動します。 現在、この再起動を抑制することはできません。 ポリシーを展開するすべてのユーザーに通知するか、ポリシーの実行をユーザーの業務時間外にスケジュール設定します。
 
-### <a name="known-issue-with-this-release"></a>이 릴리스의 알려진 문제
-Configuration Manager 클라이언트 설정에서 **버전 업그레이드**에 대한 설정을 볼 수 있습니다. 이 릴리스에서는 이러한 설정이 작동하지 않습니다. 위에 나와 있는 지침을 사용하여 Windows 10을 최신 버전으로 업그레이드합니다.
+### <a name="known-issue-with-this-release"></a>このリリースでの既知の問題
+Configuration Manager クライアントの設定で、**エディションのアップグレード**の設定が表示される場合があります。 このリリースでは、これらの設定は機能しません。 上記の手順に従って、Windows 10 を新しいバージョンにアップグレードします。
 
-## <a name="customizable-branding-for-software-center-dialogs"></a>소프트웨어 센터 대화 상자에 대한 사용자 지정 가능한 브랜딩
+## <a name="customizable-branding-for-software-center-dialogs"></a>ソフトウェア センター ダイアログにおけるカスタマイズ可能なブランド
 
-소프트웨어 센터에 대한 사용자 지정 브랜딩은 Configuration Manager 버전 1602에서 도입되었습니다. Technical Preview 버전 1607에서는 해당 브랜딩이 이제 모든 관련 대화 상자 및 작업 표시줄 알림으로 확장되어 소프트웨어 센터 사용자에게 보다 일관된 환경을 제공합니다.
+ソフトウェア センターのカスタム ブランド設定は、Configuration Manager バージョン 1602 で導入されました。 Technical Preview version 1607 では、ソフトウェア センターのユーザーにより一貫性のあるエクスペリエンスを提供するため、このブランド設定が関連するすべてのダイアログ ボックスとタスク バーの通知に拡張されています。
 
-### <a name="try-it-out"></a>기능 직접 사용해 보기
+### <a name="try-it-out"></a>試してみましょう。
 
-소프트웨어 센터에 대한 사용자 지정 브랜딩은 다음 규칙에 따라 적용됩니다.
+ソフトウェア センターのカスタム ブランド設定は、次の規則に従って適用されます。
 
-1. 응용 프로그램 카탈로그 웹 사이트 지점 사이트 서버 역할이 설치되지 않은 경우 소프트웨어 센터에서 **컴퓨터 에이전트** 클라이언트 설정 **소프트웨어 센터에 표시되는 조직 이름**에 지정된 조직 이름을 표시합니다. 자세한 내용은 [클라이언트 설정을 구성하는 방법](../../core/clients/deploy/configure-client-settings.md)을 참조하세요.
+1. アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされていない場合は、[**コンピューター エージェント**] クライアント設定 [**ソフトウェア センターに表示される組織名**] に指定された組織名がソフトウェア センターに表示されます。 手順については、「[クライアント設定を構成する方法](../../core/clients/deploy/configure-client-settings.md)」をご覧ください。
 
-2. 응용 프로그램 카탈로그 웹 사이트 지점 사이트 서버 역할이 설치되어 있는 경우 소프트웨어 센터에서 응용 프로그램 카탈로그 웹 사이트 지점 사이트 서버 역할 속성에 지정된 조직 이름 및 색을 표시합니다. 자세한 내용은 [응용 프로그램 카탈로그 웹 사이트 지점에 대한 옵션 구성](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website)을 참조하세요.
+2. アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされている場合は、アプリケーション カタログ Web サイトのポイント サイト サーバーの役割プロパティに指定されている組織名と色がソフトウェア センターに表示されます。 詳細については、「[Configuration options for Application Catalog website point](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website)」(アプリケーション カタログ Web サイト ポイントの構成オプション) をご覧ください。
 
-3. Microsoft Intune 구독을 구성하고 Configuration Manager 환경에 연결한 경우 소프트웨어 센터에서 Intune 구독 속성에 지정된 조직 이름, 색 및 회사 로고를 표시합니다. 자세한 내용은 [Microsoft Intune 구독 구성](/mdm/deploy-use/configure-intune-subscription)을 참조하세요.
+3. Microsoft Intune サブスクリプションが構成されていて Configuration Manager 環境に接続されている場合は、Intune サブスクリプションのプロパティに指定されている組織名、色、および会社のロゴがソフトウェア センターに表示されます。 詳細については、「[Configure the Microsoft Intune subscription](/mdm/deploy-use/configure-intune-subscription)」 (Microsoft Intune サブスクリプションを構成する) をご覧ください。
 
-## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>여러 PXE 시작 배포에 같은 네트워크 어댑터 사용
-Technical Preview 버전 1607에서는 이미지 다중 장치(예: 여러 장치에서 사용하는 USB 이더넷 어댑터)에 이더넷 어댑터를 사용하면 이더넷 어댑터에 대한 하드웨어 식별자를 입력할 수 있는 새 설정을 사용할 수 있습니다. Configuration Manager는 PXE 설치 수행 시 목록의 하드웨어 식별자와 클라이언트 등록을 위한 하드웨어 식별자를 무시합니다.
+## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>複数の PXE による展開に同一のネットワーク アダプターを使用する
+Technical Preview バージョン 1607 では、(複数のデバイスで使用する、USB イーサネット アダプターなど) イーサネット アダプターを使用して複数のデバイスのイメージを作成する際に、イーサネット アダプターにハードウェア識別子を入力できるようにする新しい設定を有効にすることができます。 Configuration Manager は、PXE インストールを実行する際やクライアントの登録で一覧のハードウェア識別子を無視します。
 
-이 문제에 대한 자세한 내용은 [Configuration Manager OSD 지원 팀 블로그](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/)를 참조하세요.  
+この問題の詳細については、[Configuration Manager OSD サポート チームのブログ](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/)をご覧ください。  
 
-### <a name="enable-the-feature-to-manage-duplicate-hardware-identifiers"></a>중복 하드웨어 식별자 관리 기능 사용  
-1. Configuration Manager 콘솔에서 **관리** > **개요** > **클라우드 서비스** > **업데이트 및 서비스** > **기능**으로 이동합니다.
-2. 디스플레이 창에서 **중복 하드웨어 식별자 관리**를 선택합니다.
-3. **홈** 탭의 **기능** 그룹에서 **켜기**를 클릭합니다.
+### <a name="enable-the-feature-to-manage-duplicate-hardware-identifiers"></a>重複するハードウェア識別子を管理する機能を有効にする  
+1. Configuration Manager コンソールで、[**管理**] > [**概要**] > [**Cloud Services**] > [**更新とサービス**] > [**機能**] の順に移動します。
+2. 表示ウィンドウで [**重複しているハードウェア識別子の管理**] を選択します。
+3. [**ホーム**] タブの [**機能**] グループで、[**有効にする**] をクリックします。
 
-### <a name="add-hardware-identifiers-for-configuration-manager-to-ignore"></a>무시할 Configuration Manager에 대한 하드웨어 식별자 추가  
-1. Configuration Manager 콘솔에서 **관리** > **개요** > **사이트 구성** > **사이트**로 이동합니다.
-2. **홈** 탭의 **사이트** 그룹에서 **계층 설정**을 클릭합니다.
-3. **클라이언트 승인 및 충돌 레코드** 탭으로 이동합니다.
-4. **중복 하드웨어 식별자** 섹션에서 **추가**를 클릭하여 새 하드웨어 식별자를 추가합니다.
+### <a name="add-hardware-identifiers-for-configuration-manager-to-ignore"></a>無視する Configuration Manager のハードウェア識別子を追加する  
+1. Configuration Manager コンソールで、[**管理**] > [**概要**] > [**サイトの構成**] > [**サイト**] の順に移動します。
+2. **[ホーム]** タブの **[サイト]** グループで、 **[階層設定]**をクリックします。
+3. [**クライアントの承認と競合レコードの処理**] タブに移動します。
+4. [**重複するハードウェア ID**] セクションで [**追加**] をクリックして 新しいハードウェア識別子を追加します。

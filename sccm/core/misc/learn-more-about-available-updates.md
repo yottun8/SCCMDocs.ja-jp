@@ -1,5 +1,5 @@
 ---
-title: "업데이트에 대한 자세한 정보 | Microsoft 문서"
+title: "更新プログラムの詳細 | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
@@ -18,13 +18,13 @@ robots: noindex,nofollow
 ms.openlocfilehash: c94b0a9ba5694948ff6f14c568e776de20207b01
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="learn-more-about-available-updates-for-system-center-configuration-manager"></a>System Center Configuration Manager의 사용 가능한 업데이트에 대한 자세한 내용을 알아봅니다.
+# <a name="learn-more-about-available-updates-for-system-center-configuration-manager"></a>System Center Configuration Manager の利用可能な更新プログラムの詳細
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (現在のブランチ)*
 
-System Center Configuration Manager의 릴리스 버전을 사용하는 경우 [System Center Configuration Manager의 새로운 기능](http://technet.microsoft.com/library/mt622084.aspx)을 참조하세요.  
+System Center Configuration Manager のリリース バージョンを使用する場合は、「 [System Center Configuration Manager の新機能](http://technet.microsoft.com/library/mt622084.aspx)」をご覧ください。  
 
- System Center Configuration Manager의 Technical Preview 버전을 사용하는 경우 [System Center Configuration Manager Technical Preview](http://technet.microsoft.com/library/mt595861.aspx)를 참조하세요.
+ System Center Configuration Manager の Technical Preview バージョンを使用する場合は、「 [System Center Configuration Manager の Technical Preview](http://technet.microsoft.com/library/mt595861.aspx)」をご覧ください。

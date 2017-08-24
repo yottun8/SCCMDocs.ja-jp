@@ -1,6 +1,6 @@
 ---
-title: "메일 프로필 보안 및 개인 정보 | Microsoft 문서"
-description: "System Center Configuration Manager에서 장치의 메일 프로필 관리에 대한 보안 모범 사례를 알아봅니다."
+title: "電子メール プロファイルのセキュリティとプライバシー | Microsoft Docs"
+description: "System Center Configuration Manager でデバイスの電子メール プロファイルを管理する場合のセキュリティのベスト プラクティスについて説明します。"
 ms.custom: na
 ms.date: 12/28/2016
 ms.prod: configuration-manager
@@ -18,21 +18,21 @@ manager: angrobe
 ms.openlocfilehash: 17707f931a4fa58b225ce14f04c2a19648585bc4
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="security-and-privacy-for-email-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 메일 프로필에 대한 보안 및 개인 정보
+# <a name="security-and-privacy-for-email-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager の電子メール プロファイルのセキュリティとプライバシー
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-## <a name="security-best-practices-for-email-profiles"></a>전자 메일 프로필에 대한 보안 모범 사례  
- 장치의 전자 메일 프로필을 관리할 경우 다음 보안 모범 사례를 따르세요.  
+## <a name="security-best-practices-for-email-profiles"></a>電子メール プロファイルのセキュリティ上のベスト プラクティス  
+ デバイスの電子メール プロファイルを管理するときには、次のセキュリティのベスト プラクティスに従ってください。  
 
-|보안 모범 사례|추가 정보|  
+|セキュリティのベスト プラクティス|説明|  
 |----------------------------|----------------------|  
-|가능하면 전자 메일 인프라 및 클라이언트 운영 체제에서 지원할 수 있는 가장 강력한 보안 옵션을 선택하세요.|전자 메일 프로필을 사용하면 장치에서 이미 지원하는 전자 메일 설정을 중앙에서 편리하게 배포하고 관리할 수 있습니다. Configuration Manager는 메일 기능을 추가하지 않습니다.<br /><br /> 사용 중인 장치와 전자 메일 인프라에 권장된 보안 모범 사례를 확인하여 구현하고 따르세요.|  
+|可能な限り、使用する電子メール インフラストラクチャとクライアント オペレーティング システムでサポートできる、最も安全なオプションを選択します。|電子メール プロファイルは、デバイスで既にサポートしている電子メール設定を中央から配付して管理するのに便利です。 Configuration Manager では、電子メール機能は追加されません。<br /><br /> 使用するデバイスと電子メール インフラストラクチャに推奨されているセキュリティ上のベスト プラクティスを特定および実装し、それに従います。|  
 
-## <a name="privacy-information-for-email-profiles"></a>전자 메일 프로필에 대한 개인 정보  
- 기본적으로 장치는 전자 메일 프로필을 평가하지 않습니다. 그리고 전자 메일 프로필을 구성한 다음 사용자에게 배포해야 합니다.  
+## <a name="privacy-information-for-email-profiles"></a>電子メール プロファイルのプライバシー情報  
+ 既定では、デバイスは電子メール プロファイルを評価しません。 また、電子メール プロファイルを構成してから、電子メール プロファイルをユーザーに展開する必要があります。  
 
- 전자 메일 프로필을 구성하려면 먼저 개인 정보 취급 방침 요구 사항을 검토하세요.  
+ 電子メール プロファイルを構成する前に、プライバシー要件について検討してください。  

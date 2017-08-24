@@ -1,6 +1,6 @@
 ---
-title: "온-프레미스 인프라 업그레이드 | Microsoft 문서"
-description: "SQL Server, 사이트 시스템의 사이트 운영 체제 등의 인프라를 업그레이드하는 방법을 알아봅니다."
+title: "オンプレミス インフラストラクチャのアップグレード | Microsoft Docs"
+description: "SQL Server やサイト システムのサイト オペレーティング システムなどのインフラストラクチャをアップグレードする方法について説明します。"
 ms.custom: na
 ms.date: 06/05/2017
 ms.prod: configuration-manager
@@ -18,194 +18,194 @@ manager: angrobe
 ms.openlocfilehash: 188b7f2537dd0e569a5c00995620124512cf311b
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="upgrade-on-premises-infrastructure-that-supports-system-center-configuration-manager"></a>System Center Configuration Manager를 지원하는 온-프레미스 인프라 업그레이드
+# <a name="upgrade-on-premises-infrastructure-that-supports-system-center-configuration-manager"></a>System Center Configuration Manager をサポートするオンプレミス インフラストラクチャのアップグレード
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-이 항목의 정보를 사용하여 System Center Configuration Manager를 실행하는 서버 인프라를 업그레이드할 수 있습니다.  
+System Center Configuration Manager を実行するサーバー インフラストラクチャをアップグレードする場合は、このトピックの情報を参考にしてください。  
 
- - Configuration Manager의 이전 버전에서 System Center Configuration Manager로 업그레이드하려면 [System Center Configuration Manager로 업그레이드](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)를 참조하세요.
+ - 以前バージョンの Configuration Manager から System Center Configuration Manager にアップグレードする場合は、「[Upgrade to System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)」(System Center Configuration Manager へのアップグレード) を参照してください。
 
-- System Center Configuration Manager 인프라를 새 버전으로 업데이트하려면 [System Center Configuration Manager용 업데이트](/sccm/core/servers/manage/updates)를 참조하세요.
+- System Center Configuration Manager インフラストラクチャを新しいバージョンにアップグレードする場合は、「[System Center Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)」を参照してください。
 
-##  <a name="BKMK_SupConfigUpgradeSiteSrv"></a> 사이트 시스템의 운영 체제 업그레이드  
- Configuration Manager는 다음과 같은 상황에서 사이트 서버를 호스트하는 서버의 운영 체제 및 사이트 시스템 역할을 호스트하는 원격 서버의 현재 위치 업그레이드를 지원합니다.  
+##  <a name="BKMK_SupConfigUpgradeSiteSrv"></a> サイト システムのサイト オペレーティング システムのアップグレード  
+ Configuration Manager には、次の状況で、サイト サーバーをホストするサーバーとサイト システムの役割をホストするリモート サーバーのオペレーティング システムの一括アップグレードをサポートしています。  
 
--   업그레이드 후 Windows의 서비스 팩 수준이 Configuration Manager에서 계속 지원되는 경우 상위 Windows Server 서비스 팩으로의 현재 위치 업그레이드  
--   현재 위치 업그레이드:
-    - Windows Server 2012 R2에서 Windows Server 2016으로 업그레이드([추가 정보 참조](#bkmk_2016))
-    - Windows Server 2012에서 Windows Server 2016으로 업그레이드([추가 정보 참조](#bkmk_2016))
-    - Windows Server 2012에서 Windows Server 2012 R2로 업그레이드([추가 정보 참조](#bkmk_2012r2))
-    - Configuration Manager 버전 1602 이상을 사용하는 경우 Windows Server 2008 R2를 Windows Server 2012 R2로 업그레이드할 수도 있습니다([추가 정보 참조](#bkmk_from2008r2)).
+-   アップグレード後の Service Pack レベルが Configuration Manager によってサポートされている場合の、Windows Server の上位 Service Pack への一括アップグレード。  
+-   以下の一括アップグレード。
+    - Windows Server 2012 R2 から Windows Server 2016 ([詳細を参照](#bkmk_2016))。
+    - Windows Server 2012 から Windows Server 2016 ([詳細を参照](#bkmk_2016))。
+    - Windows Server 2012 から Windows Server 2012 R2 ([詳細を参照](#bkmk_2012r2))。
+    - Configuration Manager バージョン 1602 以降を使用する場合は、Windows Server 2008 R2 から Windows Server 2012 R2 へのアップグレードもサポート ([詳細を参照](#bkmk_from2008r2))。
 
     > [!WARNING]  
-    >  Windows Server 2012 R2로 업그레이드하기 전에 서버에서 *WSUS 3.2를 제거* 해야 합니다.  
+    >  Windows Server 2012 R2 にアップグレードする前に、サーバーから *WSUS 3.2 をアンインストールする必要があります* 。  
     >   
-    >  이 중요 단계에 대한 자세한 내용은 Windows Server 문서에서 [Windows Server Update Services 개요](https://technet.microsoft.com/library/hh852345.aspx)의 “새로운 기능 및 변경된 기능” 섹션을 참조하세요.  
+    >  この重要な手順の詳細については、Windows Server ドキュメントの「[Windows Server Update Services の概要](https://technet.microsoft.com/library/hh852345.aspx)」の「新機能と変更された機能」セクションを参照してください。  
 
-서버를 업그레이드하려면 업그레이드할 운영 체제에서 제공하는 업그레이드 절차를 따르세요.  다음을 참조하세요.
-  -  Windows Server 문서에서 [Windows Server 2012 R2에 대한 업그레이드 옵션](https://technet.microsoft.com/library/dn303416.aspx)  
-  - Windows Server 문서에서 [Windows Server 2016에 대한 업그레이드 및 변환 옵션](https://technet.microsoft.com/windows-server-docs/get-started/supported-upgrade-paths)
+サーバーをアップグレードするには、アップグレード先のオペレーティング システムによって提供されるアップグレード手順を使用します。  以下を参照してください。
+  -  Windows Server のドキュメントの「[Windows Server 2012 R2 のアップグレード オプション](https://technet.microsoft.com/library/dn303416.aspx)」。  
+  - Windows Server のドキュメントの「[Windows Server 2016 のアップグレード オプションと変換オプション](https://technet.microsoft.com/windows-server-docs/get-started/supported-upgrade-paths)」。
 
-### <a name="bkmk_2016"></a>  Windows Server 2012 또는 Windows Server 2012 R2에서 2016으로 업그레이드
-Windows Server 2012 또는 Windows Server 2012 R2를 Windows Server 2016으로 업그레이드할 때 다음이 적용됩니다.
+### <a name="bkmk_2016"></a> Windows Server 2012 または Windows Server 2012 R2 から Windows Server 2016 へのアップグレード
+Windows Server 2012 または Windows Server 2012 R2 から Windows Server 2016 にアップグレードする場合は、以下が適用されます。
 
 
-**업그레이드 전:**  
--   SCEP(System Center Endpoint Protection) 클라이언트를 제거합니다. Windows Server 2016에는 SCEP 클라이언트를 대체하는 Windows Defender가 기본 제공됩니다. SCEP 클라이언트가 있으면 Windows Server 2016으로 업그레이드할 수 없습니다.
+**アップグレード前:**  
+-   System Center Endpoint Protection (SCEP) クライアントを削除します。 Windows Server 2016 では、SCEP クライアントの代わりとして、Windows Defender が組み込まれています。 SCEP クライアントが存在している場合、Windows Server 2016 へのアップグレードが妨げられる可能性があります。
 
-**업그레이드 후:**
--   Windows Defender가 사용되고 자동 시작되도록 설정되었으며 실행되고 있는지 확인합니다.
--   다음 Configuration Manager 서비스가 실행되고 있는지 확인합니다.
+**アップグレード後:**
+-   Windows Defender が有効であり、自動開始が設定され、実行されていることを確認します。
+-   次の Configuration Manager のサービスが実行されていることを確認します。
   -     SMS_EXECUTIVE
   -     SMS_SITE_COMPONENT_MANAGER
 
 
--   **Windows 프로세스 활성화** 및 **WWW/W3svc** 서비스가 다음 사이트 시스템 역할에 대해 사용되고 자동 시작되도록 설정되었으며 실행되고 있는지 확인합니다(업그레이드 중에는 해당 서비스를 사용할 수 없음).
-  -     사이트 서버
-  -     관리 지점
-  -     응용 프로그램 카탈로그 웹 서비스 지점
-  -     응용 프로그램 카탈로그 웹 사이트 지점
+-   **Windows プロセス アクティブ化**サービスと **WWW/W3svc** サービスが有効であり、自動開始が設定され、次のサイト システムの役割で実行されていることを確認します (これらのサービスはアップグレード時に無効になります)。
+  -     サイト サーバー
+  -     管理ポイント
+  -     アプリケーション カタログ Web サービス ポイント
+  -     アプリケーション カタログ Web サイト ポイント
 
--   사이트 시스템 역할을 호스트하는 각 서버가 해당 서버에서 실행되는 [사이트 시스템 역할에 대한 필수 조건](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)을 계속해서 모두 충족하는지 확인합니다. 예를 들어 BITS 또는 WSUS를 다시 설치하거나 IIS에 대한 특정 설정을 구성해야 할 수 있습니다.
+-   サイト システムの役割をホストする各サーバーが、そのサーバーで実行される[サイト システムの役割の前提条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)のすべてを引き続き満たしていることを確認します。 たとえば、BITS、WSUS を再インストールしたり、IIS の特定の設定を構成したりすることが必要になる場合があります。
 
--   누락된 필수 조건을 복원한 후 서버를 한 번 더 다시 시작하여 서비스가 시작되고 작동하도록 합니다.
+-   不足している前提条件を復元した後で、もう一度サーバーを再起動して、サービスが開始され、動作していることを確認します。
 
-**원격 Configuration Manager 콘솔에 대해 알려진 문제:**  
-사이트 서버 또는 SMS_Provider 인스턴스를 호스트하는 서버를 Windows Server 2016으로 업그레이드한 후 관리자가 Configuration Manager 콘솔을 사이트에 연결하지 못할 수 있습니다. 이 문제를 해결하려면 WMI에서 SMS Admins 그룹의 사용 권한을 수동으로 복원해야 합니다. 사이트 서버 및 SMS_Provider 인스턴스를 호스트하는 각 원격 서버에서 사용 권한을 설정해야 합니다.
+**リモートの Configuration Manager コンソールに関する既知の問題:**  
+サイト サーバーまたは SMS_Provider のインスタンスをホストするサーバーを Windows Server 2016 にアップグレードした後、管理ユーザーが Configuration Manager コンソールをサイトに接続できない場合があります。 この問題を回避するには、WMI の SMS Admins グループのアクセス許可を手動で復元する必要があります。 サイト サーバーと、SMS_Provider のインスタンスをホストする各リモート サーバーで、アクセス許可を設定する必要があります。
 
-1. 해당 서버에서 MMC(Microsoft Management Console)를 열고 **WMI 컨트롤**용 스냅인을 추가한 다음 **로컬 컴퓨터**를 선택합니다.
-2. MMC에서 **WMI 컨트롤(로컬)**의 **속성**을 열고 **보안** 탭을 선택합니다.
-3. 루트 아래의 트리를 확장하고 **SMS** 노드를 선택한 다음 **보안**을 선택합니다.  **SMS Admins** 그룹에 다음 사용 권한이 있는지 확인합니다.
-  -     계정 사용
-  -     원격 사용
-4. **보안 탭**의 **SMS** 노드 아래에서 **사이트_&lt;사이트 코드**> 노드를 선택한 후 **보안**을 선택합니다. **SMS Admins** 그룹에 다음 사용 권한이 있는지 확인합니다.
-  -   메서드 실행
-  -   공급자 쓰기
-  -   계정 사용
-  -   원격 사용
-5. 사용 권한을 저장하여 Configuration Manager 콘솔에 대한 액세스를 복원합니다.
+1. 該当するサーバー上で Microsoft 管理コンソール (MMC) を開き、**WMI コントロール**のスナップインを追加し、**[ローカル コンピューター]** を選択します。
+2. MMC で、**[WMI コントロール (ローカル)]** の **[プロパティ]** を開き、**[セキュリティ]** タブを選択します。
+3. ルートの下のツリーを展開し、**[SMS]** ノードを選択して、**[セキュリティ]** を選択します。  **SMS Admins** グループに次のアクセス許可が付与されていることを確認します。
+  -     アカウントの有効化
+  -     リモートの有効化
+4. **[セキュリティ] タブ**で、**[SMS]** ノードの下にある **[site_&lt;sitecode**>] ノードを選択し、次に **[セキュリティ]** を選択します。 **SMS Admins** グループに次のアクセス許可が付与されていることを確認します。
+  -   メソッドの実行
+  -   プロバイダーによる書き込み
+  -   アカウントの有効化
+  -   リモートの有効化
+5. アクセス許可を保存して、Configuration Manager コンソールへのアクセスを復元します。
 
-### <a name="bkmk_2012r2"></a> Windows Server 2012에서 Windows Server 2012 R2로 업그레이드
+### <a name="bkmk_2012r2"></a>Windows Server 2012 から Windows Server 2012 R2
 
-**업그레이드 전:**
--  다른 지원되는 시나리오와 달리 이 시나리오에서는 업그레이드 전에 추가 고려 사항이 필요하지 않습니다.
+**アップグレード前:**
+-  他のサポートされるシナリオとは異なり、このシナリオではアップグレードの前に特別な考慮事項は必要ありません。
 
-**업그레이드 후:**
-  - 다음 사이트 시스템 역할에 대해 Windows 배포 서비스가 시작되어 실행되고 있는지 확인합니다(업그레이드 중에는 이 서비스가 중지됨).
-    - 사이트 서버
-    - 관리 지점
-    - 응용 프로그램 카탈로그 웹 서비스 지점
-    - 응용 프로그램 카탈로그 웹 사이트 지점
+**アップグレード後:**
+  - Windows 展開サービスが開始され、次のサイト システムの役割を実行していることを確認します (このサービスはアップグレード時に停止されます)。
+    - サイト サーバー
+    - 管理ポイント
+    - アプリケーション カタログ Web サービス ポイント
+    - アプリケーション カタログ Web サイト ポイント
 
-  -     **Windows 프로세스 활성화** 및 **WWW/W3svc** 서비스가 다음 사이트 시스템 역할에 대해 사용되고 자동 시작되도록 설정되었으며 실행되고 있는지 확인합니다(업그레이드 중에는 해당 서비스를 사용할 수 없음).
-    -   사이트 서버
-    -   관리 지점
-    -   응용 프로그램 카탈로그 웹 서비스 지점
-    -   응용 프로그램 카탈로그 웹 사이트 지점
-
-
-  -     사이트 시스템 역할을 호스트하는 각 서버가 해당 서버에서 실행되는 [사이트 시스템 역할에 대한 필수 조건](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)을 계속해서 모두 충족하는지 확인합니다. 예를 들어 BITS 또는 WSUS를 다시 설치하거나 IIS에 대한 특정 설정을 구성해야 할 수 있습니다.
-
-  누락된 필수 조건을 복원한 후 서버를 한 번 더 다시 시작하여 서비스가 시작되고 작동하도록 합니다.
-
-### <a name="bkmk_from2008r2"></a>  Windows Server 2008 R2에서 Windows Server 2012 R2로 업그레이드
-이 운영 체제 업그레이드 시나리오에는 다음과 같은 조건이 있습니다.  
-
-**업그레이드 전:**
--   WSUS 3.2를 제거합니다.  
-    서버 운영 체제를 Windows Server 2012 R2로 업그레이드하기 전에 서버에서 WSUS 3.2를 제거해야 합니다. 이 중요 단계에 대한 자세한 내용은 Windows Server 문서에서 Windows Server Update Services 개요의 새로운 기능 및 변경된 기능 섹션을 참조하세요.
-
-**업그레이드 후:**
-  - 다음 사이트 시스템 역할에 대해 Windows 배포 서비스가 시작되어 실행되고 있는지 확인합니다(업그레이드 중에는 이 서비스가 중지됨).
-    - 사이트 서버
-    - 관리 지점
-    - 응용 프로그램 카탈로그 웹 서비스 지점
-    - 응용 프로그램 카탈로그 웹 사이트 지점
+  -     **Windows プロセス アクティブ化**サービスと **WWW/W3svc** サービスが有効であり、自動開始が設定され、次のサイト システムの役割で実行されていることを確認します (これらのサービスはアップグレード時に無効になります)。
+    -   サイト サーバー
+    -   管理ポイント
+    -   アプリケーション カタログ Web サービス ポイント
+    -   アプリケーション カタログ Web サイト ポイント
 
 
-  -     **Windows 프로세스 활성화** 및 **WWW/W3svc** 서비스가 다음 사이트 시스템 역할에 대해 사용되고 자동 시작되도록 설정되었으며 실행되고 있는지 확인합니다(업그레이드 중에는 해당 서비스를 사용할 수 없음).
-    -   사이트 서버
-    -   관리 지점
-    -   응용 프로그램 카탈로그 웹 서비스 지점
-    -   응용 프로그램 카탈로그 웹 사이트 지점
+  -     サイト システムの役割をホストする各サーバーが、そのサーバーで実行される[サイト システムの役割の前提条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)のすべてを引き続き満たしていることを確認します。 たとえば、BITS、WSUS を再インストールしたり、IIS の特定の設定を構成したりすることが必要になる場合があります。
+
+  不足している前提条件を復元した後で、もう一度サーバーを再起動して、サービスが開始され、動作していることを確認します。
+
+### <a name="bkmk_from2008r2"></a>Windows Server 2008 R2 から Windows Server 2012 R2 へのアップグレード
+このオペレーティング システムのアップグレード シナリオには、次のような条件があります。  
+
+**アップグレード前:**
+-   WSUS 3.2 をアンインストールします。  
+    サーバー オペレーティングシステムを Windows Server 2012 R2 にアップグレードする前に、サーバーから WSUS 3.2 をアンインストールする必要があります。 この重要な手順の詳細については、Windows Server ドキュメントの「Windows Server Update Services の概要」の「新機能と変更された機能」セクションを参照してください。
+
+**アップグレード後:**
+  - Windows 展開サービスが開始され、次のサイト システムの役割を実行していることを確認します (このサービスはアップグレード時に停止されます)。
+    - サイト サーバー
+    - 管理ポイント
+    - アプリケーション カタログ Web サービス ポイント
+    - アプリケーション カタログ Web サイト ポイント
 
 
-  -     사이트 시스템 역할을 호스트하는 각 서버가 해당 서버에서 실행되는 [사이트 시스템 역할에 대한 필수 조건](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)을 계속해서 모두 충족하는지 확인합니다. 예를 들어 BITS 또는 WSUS를 다시 설치하거나 IIS에 대한 특정 설정을 구성해야 할 수 있습니다.
-
-  누락된 필수 조건을 복원한 후 서버를 한 번 더 다시 시작하여 서비스가 시작되고 작동하도록 합니다.
-
-
-### <a name="unsupported-upgrade-scenarios"></a>지원되지 않는 업그레이드 시나리오
-다음 Windows Server 업그레이드 시나리오는 자주 질문을 받지만 Configuration Manager에서 지원되지 않습니다.  
-
--   Windows Server 2008에서 Windows Server 2012 이상으로 업그레이드  
--   Windows Server 2008 R2에서 Windows Server 2012로 업그레이드
+  -     **Windows プロセス アクティブ化**サービスと **WWW/W3svc** サービスが有効であり、自動開始が設定され、次のサイト システムの役割で実行されていることを確認します (これらのサービスはアップグレード時に無効になります)。
+    -   サイト サーバー
+    -   管理ポイント
+    -   アプリケーション カタログ Web サービス ポイント
+    -   アプリケーション カタログ Web サイト ポイント
 
 
+  -     サイト システムの役割をホストする各サーバーが、そのサーバーで実行される[サイト システムの役割の前提条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)のすべてを引き続き満たしていることを確認します。 たとえば、BITS、WSUS を再インストールしたり、IIS の特定の設定を構成したりすることが必要になる場合があります。
 
-##  <a name="BKMK_SupConfigUpgradeClient"></a> Configuration Manager 클라이언트의 운영 체제 업그레이드  
- Configuration Manager는 다음과 같은 상황에서 Configuration Manager 클라이언트의 운영 체제 현재 위치 업그레이드를 지원합니다.  
+  不足している前提条件を復元した後で、もう一度サーバーを再起動して、サービスが開始され、動作していることを確認します。
 
--   업그레이드 후의 서비스 팩 수준이 Configuration Manager에서 계속 지원되는 경우 상위 Windows 서비스 팩으로의 현재 위치 업그레이드  
 
--   지원되는 버전에서 Windows 10로의 Windows 현재 위치 업그레이드. 자세한 내용은 [System Center Configuration Manager를 사용하여 Windows를 최신 버전으로 업그레이드](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md)를 참조하세요.  
+### <a name="unsupported-upgrade-scenarios"></a>サポートされていないアップグレードのシナリオ
+次の Windows Server のアップグレード シナリオは、よく問い合わせが寄せられますが、Configuration Manager ではサポートされていません。  
 
--   Windows 10의 빌드 간 서비스 업그레이드.  자세한 내용은 [System Center Configuration Manager를 사용하여 Windows as a Service 관리](../../../osd/deploy-use/manage-windows-as-a-service.md)를 참조하세요.  
+-   Windows Server 2008 から Windows Server 2012 以降  
+-   Windows Server 2008 R2 から Windows Server 2012
 
-##  <a name="BKMK_SupConfigUpgradeDBSrv"></a> 사이트 데이터베이스 서버에서 SQL Server 업그레이드  
-  Configuration Manager는 사이트 데이터베이스 서버에서 지원되는 SQL 버전의 SQL Server 현재 위치 업그레이드를 지원합니다. 이 섹션의 SQL Server 업그레이드 시나리오는 Configuration Manager에서 지원되며 각 시나리오에 대한 요구 사항이 포함되어 있습니다.
 
- Configuration Manager에서 지원하는 SQL Server 버전에 대한 자세한 내용은 [System Center Configuration Manager에 대한 SQL Server 버전 지원](../../../core/plan-design/configs/support-for-sql-server-versions.md)을 참조하세요.  
 
- **SQL Server의 서비스 팩 버전 업그레이드:**    
- Configuration Manager는 업그레이드 후의 SQL Server 서비스 팩 수준이 Configuration Manager에서 계속 지원되는 경우 상위 서비스 팩으로의 SQL Server 현재 위치 업그레이드를 지원합니다.
+##  <a name="BKMK_SupConfigUpgradeClient"></a> Configuration Manager クライアントのオペレーティング システムのアップグレード  
+ 次の状況で、Configuration Manager は Configuration Manager クライアントのオペレーティング システムの一括アップグレードをサポートします。  
 
- 계층 구조에 Configuration Manager 사이트가 여러 개 있으면 각 사이트는 서로 다른 SQL Server 서비스 팩 버전을 실행할 수 있으며, 사이트가 사이트 데이터베이스에 사용되는 SQL Server 서비스 팩 버전을 업그레이드하는 순서에는 제한이 없습니다.
+-   アップグレード後の Service Pack レベルが Configuration Manager によってサポートされている場合の、Windows の上位 Service Pack への一括アップグレード。  
 
- **새 버전의 SQL Server로 업그레이드:**   
- Configuration Manager는 다음 버전으로의 SQL Server 현재 위치 업그레이드를 지원합니다.
+-   Windows のサポートされているバージョンから Windows 10 への一括アップグレード。 詳細については、「[System Center Configuration Manager を使用して、Windows を最新のバージョンにアップグレードする](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md)」をご覧ください。  
+
+-   Windows 10 のビルドからビルドへのサービス アップグレード。  詳細については、「[System Center Configuration Manager を使用して、サービスとしての Windows を管理する](../../../osd/deploy-use/manage-windows-as-a-service.md)」をご覧ください。  
+
+##  <a name="BKMK_SupConfigUpgradeDBSrv"></a> サイト データベース サーバーでの SQL Server のアップグレード  
+  Configuration Manager では、サイト データベース サーバー上の SQL のサポートされたバージョンからの、SQL Server の一括アップグレードをサポートしています。 このセクションの SQL Server のアップグレード シナリオは Configuration Manager でサポートされており、各シナリオの要件を含んでいます。
+
+ Configuration Manager によってサポートされている SQL Server のバージョンの詳細については、「[System Center Configuration Manager の SQL Server バージョンのサポート](../../../core/plan-design/configs/support-for-sql-server-versions.md)」を参照してください。  
+
+ **SQL Server のサービス パック バージョンのアップグレード:**    
+ Configuration Manager は、アップグレード後の SQL Server の Service Pack レベルが Configuration Manager によってサポートされている場合、SQL Server の上位 Service Pack への一括アップグレードをサポートします。
+
+ 1 つの階層に複数の Configuration Manager サイトがある場合は、各サイトで SQL Server の異なるサービス パックのバージョンを実行できます。また、サイトがサイト データベースに使用する SQL Server のサービス パックのバージョンをアップグレードする順序に制限はありません。
+
+ **SQL Server の新しいバージョンへのアップグレード:**   
+ Configuration Manager は次のバージョンへの SQL Server の一括アップグレードをサポートしています。
 
  - SQL Server 2012  
  - SQL Server 2014  
  - SQL Server 2016  
 
-사이트 데이터베이스를 호스트하는 SQL Server 버전을 업그레이드하는 경우 사이트에서 사용되는 SQL Server 버전을 다음과 같은 순서로 업그레이드해야 합니다.
+各サイトでサイト データベースをホストする SQL Server のバージョンをアップグレードする場合は、サイトで使用される SQL Server のバージョンを、次の順序でアップグレードする必要があります。
 
- 1. 먼저 중앙 관리 사이트에서 SQL Server를 업그레이드합니다.
- 2. 보조 사이트의 상위 기본 사이트를 업그레이드하기 전에 보조 사이트를 업그레이드합니다.
- 3. 마지막으로 부모 기본 사이트를 업그레이드합니다. 여기에는 중앙 관리 사이트에 보고를 하는 자식 기본 사이트와 계층의 최상위 사이트인 독립 실행형 기본 사이트가 모두 포함됩니다.
+ 1. 最初に中央管理サイトで SQL Server をアップグレードします。
+ 2. セカンダリ サイトの親プライマリ サイトをアップグレードする前に、セカンダリ サイトをアップグレードします。
+ 3. 最後に親プライマリ サイトをアップグレードします。 これには、中央管理サイトに報告する子プライマリ サイトと、階層の最上位サイトであるスタンドアロンのプライマリ サイトの両方が含まれます。
 
-**SQL Server 카디널리티 추정 수준 및 사이트 데이터베이스:**   
-사이트 데이터베이스가 이전 버전의 SQL Server에서 업그레이드된 경우 데이터베이스는 해당 SQL Server 인스턴스에 허용되는 최소값일 경우 기존 SQL CE(카디널리티 추정) 수준이 유지됩니다. 허용되는 수준보다 낮은 호환성 수준의 데이터베이스를 사용하여 SQL Server를 업그레이드하면 데이터베이스가 자동으로 SQL Server에서 허용되는 가장 낮은 호환성 수준으로 설정됩니다.
+**SQL Server の基数推定レベルおよびサイト データベース:**   
+サイト データベースを以前のバージョンの SQL Server からアップグレードすると、既存の SQL 基数推定 (CE) レベルが SQL Server のそのインスタンスで許可されている最小レベルである場合に、データベースではそのレベルが保持されます。 許可レベルより低い互換性レベルのデータベースを持つ SQL Server をアップグレードすると、データベースは SQL で許可されている最も低い互換性レベルに設定されます。
 
-다음 표에서는 Configuration Manager 사이트 데이터베이스에 권장되는 호환성 수준을 식별합니다.
+次の表に、Configuration Manager サイト データベースで推奨される互換性レベルを示します。
 
-|SQL Server 버전 | 지원되는 호환성 수준 |권장 수준|
+|SQL Server バージョン | サポートされる互換性レベル |推奨レベル|
 |----------------|--------------------|--------|
-| SQL Server 2016| 130, 120, 110, 100 | 130|
-| SQL Server 2014| 120, 110, 100      | 110|
+| SQL Server 2016| 130、120、110、100 | 130|
+| SQL Server 2014| 120、110、100      | 110|
 
-사이트 데이터베이스에 사용 중인 SQL Server CE 호환성 수준을 식별하려면 사이트 데이터베이스 서버에서 다음 SQL 쿼리를 실행합니다. **SELECT name, compatibility_level FROM sys.databases**
+サイト データベースで使用されている SQL Server の CE 互換性レベルを識別するには、サイト データベース サーバーで **SELECT name, compatibility_level FROM sys.databases** という SQL クエリを実行します。
 
- SQL CE 호환성 수준 및 설정 방법에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준(Transact-SQL)](https://msdn.microsoft.com/library/bb510680.aspx)을 참조하세요.
-
-
-SQL Server에 대한 자세한 내용은 TechNet에서 SQL Server 설명서를 참조하세요.
--   [SQL Server 2012로 업그레이드](http://technet.microsoft.com/library/ms143393\(v=sql.110))
--   [SQL Server 2014로 업그레이드](http://technet.microsoft.com/library/ms143393\(v=sql.120))  
--   [SQL Server 2016으로 업그레이드](https://technet.microsoft.com/library/bb677622(v=sql.130))
+ SQL CE の互換性レベルとその設定方法の詳細については、「[ALTER DATABASE 互換性レベル (Transact-SQL)](https://msdn.microsoft.com/library/bb510680.aspx)」を参照してください。
 
 
+SQL Server の詳細については、TechNet にある SQL Server のドキュメントを参照してください。
+-   [SQL Server 2012 へのアップグレード](http://technet.microsoft.com/library/ms143393\(v=sql.110))
+-   [SQL Server 2014 へのアップグレード](http://technet.microsoft.com/library/ms143393\(v=sql.120))  
+-   [SQL Server 2016 へのアップグレード](https://technet.microsoft.com/library/bb677622(v=sql.130))
 
-### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>사이트 데이터베이스 서버에서 SQL Server를 업그레이드하려면  
 
-1.  사이트에서 모든 Configuration Manager 서비스를 중지합니다.  
-2.  SQL Server를 지원되는 버전으로 업그레이드합니다.  
-3.  Configuration Manager 서비스를 다시 시작합니다.  
+
+### <a name="to-upgrade-sql-server-on-the-site-database-server"></a>サイト データベース サーバー上の SQL Server をアップグレードするには  
+
+1.  サイトのすべての Configuration Manager サービスを停止します。  
+2.  SQL Server をサポートされるバージョンにアップグレードします。  
+3.  Configuration Manager サービスを再起動します。  
 
 > [!NOTE]  
->  중앙 관리 사이트에서 사용 중인 SQL Server 버전을 Standard Edition에서 Datacenter 또는 Enterprise Edition으로 변경할 때 계층의 클라이언트 수를 제한하는 데이터베이스 파티션은 변경되지 않습니다.
+>  中央管理サイトで使用している SQL Server のエディションを Standard エディションから Datacenter エディションまたは Enterprise エディションに変更する際には、階層がサポートするクライアントの数を制限するデータベースのパーティションは変更しません。

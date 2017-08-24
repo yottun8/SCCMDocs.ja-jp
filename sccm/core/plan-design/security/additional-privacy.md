@@ -1,6 +1,6 @@
 ---
-title: "System Center Configuration Manager 개인 정보 취급 방침 - 추가 정보 | Microsoft 문서"
-description: "Microsoft가 System Center Configuration Manager 배포에서 데이터를 수집하고 사용하는 방법에 대해 알아봅니다."
+title: "System Center Configuration Manager のプライバシーに関する声明 - 詳細情報 | Microsoft Docs"
+description: "System Center Configuration Manager 展開からデータを Microsoft が収集して使用する方法について説明します。"
 ms.custom: na
 ms.date: 12/30/2016
 ms.prod: configuration-manager
@@ -37,78 +37,78 @@ translation.priority.ht:
 ms.openlocfilehash: ef7b3656f9b4a31e07227aa4e864448d0dd1fcdc
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="additional-information-about-privacy-for-system-center-configuration-manager"></a>System Center Configuration Manager의 개인 정보 보호에 대한 추가 정보
+# <a name="additional-information-about-privacy-for-system-center-configuration-manager"></a>System Center Configuration Manager のプライバシーに関する詳細
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
-
-
-## <a name="updates-and-servicing"></a>업데이트 및 서비스
-Configuration Manager 배포를 최신 업데이트 및 기능이 있는 최신 상태로 유지할 수 있도록 System Center Configuration Manager에 새 업데이트 모델이 도입되었습니다. 설치되는 경우, 이 기능은 관리자가 선택하는 사이트 서버에서 서비스 연결 지점이라고 하는 새로운 사이트 시스템 역할을 추가합니다. 수집되는 정보와 해당 정보의 사용 방법에 대한 자세한 내용은 이 문서의 사용 현황 데이터 섹션을 참조하세요.
+*適用対象: System Center Configuration Manager (Current Branch)*
 
 
-## <a name="usage-data"></a>사용 현황 데이터
-System Center Configuration Manager에서는 진단 및 사용 현황 데이터를 수집하며, 이러한 데이터는 Microsoft에서 향후 버전의 설치 환경, 품질 및 보안을 개선하기 위해 사용됩니다.
-진단 및 사용 현황 데이터는 각 System Center Configuration Manager 계층 구조에 대해 사용할 수 있습니다. 각 기본 사이트 및 중앙 관리 사이트에서 매주 실행되는 SQL Server 쿼리로 구성됩니다. 계층에서 중앙 관리 사이트를 사용하면 기본 사이트의 데이터가 해당 사이트에 복제됩니다. 계층의 최상위 사이트에서, 서비스 연결 지점은 업데이트를 확인할 때 이 정보를 제출합니다. 서비스 연결점이 오프라인 모드인 경우 서비스 연결 도구를 사용하여 정보가 전송됩니다.
-
-Configuration Manager는 사이트 SQL Server 데이터베이스에서만 데이터를 수집하고 클라이언트 또는 사이트 서버에서 직접 데이터를 수집하지 않습니다.
-
-관리자는 Configuration Manager 콘솔의 **사용 현황 데이터** 섹션으로 이동하여 수집된 데이터의 수준을 변경할 수 있습니다.
-
-자세한 내용은 [System Center Configuration Manager의 진단 및 사용 현황 데이터](http://go.microsoft.com/fwlink/?LinkID=626566)에서 사용 현황 데이터 수준 및 설정에 대한 “자세히” 문서를 참조하세요.
+## <a name="updates-and-servicing"></a>更新プログラムとサービス
+System Center Configuration Manager には、最新の更新プログラムと機能を適用して、Configuration Manager の展開を最新の状態に保つのに役立つ新しい更新モデルが導入されています。 この機能がインストールされると、監理者が選択するサイト サーバーにサービス接続ポイントと呼ばれる新しいサイト システムの役割が追加されます。 収集される情報とその用途の詳細については、この記事の「使用状況データ」セクションを参照してください。
 
 
-## <a name="customer-experience-improvement-program"></a>사용자 환경 개선 프로그램
-"CEIP"(사용자 환경 개선 프로그램)는 사용 패턴과 경향을 파악하기 위해 Configuration Manager 콘솔에서 사용자의 하드웨어 구성과 소프트웨어 및 서비스 사용 방식에 대한 기본 정보를 수집하는 기능입니다. 또한 CEIP는 발생한 오류 유형과 개수, 소프트웨어 및 하드웨어 성능, 서비스의 속도를 수집합니다. 그러나 사용자 이름, 주소 또는 기타 연락처 정보는 수집하지 않습니다. 또한 클라이언트 컴퓨터에서는 어떤 CEIP 데이터도 수집하지 않습니다.
+## <a name="usage-data"></a>使用状況データ
+System Center Configuration Manager では、自身の診断および使用状況データが収集されます。このデータは、今後のリリースでインストールのエクスペリエンス、品質、セキュリティを向上させるために Microsoft によって使用されます。
+診断および使用状況データは、それぞれの System Center Configuration Manager 階層で有効になります。 これは、各プライマリ サイトと中央管理サイトで毎週実行される SQL Server クエリで構成されます。 階層が中央管理サイトを使用している場合、プライマリ サイトからのデータはそのサイトに複製されます。 階層の最上位のサイトでは、サービス接続ポイントが、更新プログラムをチェックするときに、この情報を送信します。 サービス接続ポイントがオフライン モードの場合、情報は、サービス接続ツールを使用して転送されます。
 
-수집된 정보는 Microsoft 소프트웨어 및 서비스의 품질, 안정성 및 성능을 개선하는 데 사용됩니다.
+Configuration Manager は、サイトの SQL Server データベースからのみデータを収集します。クライアントやサイト サーバーから直接データを収集することはありません。
 
-CEIP를 통해 수집, 처리 또는 전송되는 정보에 대한 자세한 내용은 [CEIP 개인정보취급방침](http://go.microsoft.com/fwlink/?LinkID=525211)을 참조하세요.
+管理者は、Configuration Manager コンソールの**利用状況データ** セクションで、収集されるデータのレベルを変更できます。
 
-## <a name="operations-management-suite-connector"></a>Operations Management Suite 커넥터
-Microsoft Operations Management Suite 커넥터는 System Center Configuration Manager의 컬렉션과 같은 데이터를 Microsoft Operations Management Suite에 동기화합니다. Microsoft Azure 구독 ID와 비밀 키는 관리자가 기능을 구성하는 경우 Configuration Manager 데이터베이스에 저장됩니다. Azure Active Directory 클라이언트 암호 및 Microsoft Operations Management Suite 작업 영역 공유 키는 모두 온-프레미스 System Center Configuration Manager 데이터베이스에 저장됩니다. System Center Configuration Manager와 Microsoft Operations Management Suite 간의 모든 통신은 HTTPS를 사용합니다. 컬렉션에 대한 추가 정보는 임의 원격 분석 데이터 외부에서 Microsoft에 제공되지 않습니다. Microsoft Operations Management Suite가 수집하는 정보에 대한 자세한 내용은 [로그 분석 보안](http://go.microsoft.com/fwlink/?LinkId=823545)을 참조하세요.
+詳細については、「[System Center Configuration Manager の診断結果と使用状況データ](http://go.microsoft.com/fwlink/?LinkID=626566)」記事の「関連項目」で、使用状況データのレベルと設定に関する記事をご覧ください。
 
-## <a name="asset-intelligence"></a>Asset Intelligence
-Asset Intelligence를 통해 IT 관리자는 구성 표준에 대한 준수를 정의 및 추적하고, 사전 예방적으로 관리할 수 있습니다. 배포에 대한 계량 및 보고와 실제 및 가상 응용 프로그램 사용을 통해 조직은 소프트웨어 라이선스에 대한 비즈니스 결정을 더욱 원활하게 내릴 수 있고 라이선싱 계약을 준수할 수 있습니다. Configuration Manager 클라이언트의 사용량 데이터를 수집한 후 관리자는 여러 기능을 사용하여 컬렉션, 쿼리, 보고 등의 데이터를 볼 수 있습니다.
 
-동기화할 때마다 확인된 소프트웨어의 카탈로그가 Microsoft에서 다운로드됩니다. IT 관리자가 조직에서 검색된 분류되지 않은 소프트웨어 타이틀에 대한 정보를 Microsoft에 전송하도록 선택할 수 있습니다. 그렇게 하면 소프트웨어 타이틀이 조사되어 카탈로그에 추가됩니다. 이 정보를 업로드하기 전에 대화 상자에서 업로드할 데이터를 표시합니다. 업로드된 데이터는 취소할 수 없습니다. Asset Intelligence는 사용자 또는 컴퓨터에 대한 정보나 라이선스 사용량을 Microsoft에 전송하지 않습니다.
+## <a name="customer-experience-improvement-program"></a>カスタマー エクスペリエンス向上プログラム
+カスタマー エクスペリエンス向上プログラム (CEIP) は、お使いのコンピューターのハードウェア構成とマイクロソフトのソフトウェアおよびサービスの使用方法について情報を Configuration Manager コンソールから収集し、傾向や使用パターンを分析するためのプログラムです。 また、CEIP は発生したエラーの種類と回数、ソフトウェアとハードウェアのパフォーマンス、およびサービスの速度の情報も収集します。 お客様の氏名、住所、またはその他の連絡先情報は収集しません。 お客様のコンピューターから CEIP データは収集されません。
 
-소프트웨어 타이틀이 업로드되면 Microsoft 연구원은 해당 정보를 파악하고 분류한 후 이 기능을 사용하는 다른 모든 고객과 카탈로그의 다른 고객이 사용할 수 있도록 설정합니다. 업로드한 모든 소프트웨어 타이틀이 공개됩니다. 응용 프로그램 및 분류에 대한 정보가 카탈로그의 일부가 되므로, 다른 카탈로그 고객이 다운로드할 수 있습니다. Asset Intelligence 데이터 컬렉션을 구성하고 Microsoft에 정보를 제출할지 여부를 결정하려면 먼저 조직의 개인정보취급방침 요구 사항을 고려하세요.
+収集した情報は、Microsoft 製品やサービスの品質、信頼性、およびパフォーマンスの向上のために役立たせていただきます。
 
-Asset Intelligence는 기본적으로 System Center Configuration Manager에서 사용되지 않습니다. 분류되지 않은 타이틀 업로드는 자동으로 발생하지 않으며 시스템에서 이 작업을 자동화하도록 설정할 수 없습니다. 각 소프트웨어 타이틀의 업로드는 수동으로 선택하고 승인해야 합니다.
+CEIP によって収集、処理、または送信される情報については、「[CEIP のプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkID=525211)」を参照してください。
+
+## <a name="operations-management-suite-connector"></a>Operations Management Suite Connector
+Microsoft Operations Management Suite Connector では、System Center Configuration Manager から Microsoft Operations Management Suite にコレクションなどのデータが同期されます。 Microsoft Azure サブスクリプション ID と秘密鍵は、管理者が機能を構成するときに Configuration Manager データベースに保管されます。 Azure Active Directory クライアント シークレットと Microsoft Operations Management Suite ワークスペース共有キーは、オンプレミス System Center Configuration Manager データベースに保存されます。 System Center Configuration Manager と Microsoft Operations Management Suite 間のすべての通信で HTTPS が使用されます。 無作為に選択された製品利用統計情報データを除き、コレクションに関する追加情報は Microsoft に提供されません。 Microsoft Operations Management Suite で収集される情報の詳細については、「[Log Analytics データのセキュリティ](http://go.microsoft.com/fwlink/?LinkId=823545)」をご覧ください。
+
+## <a name="asset-intelligence"></a>資産インテリジェンス
+資産インテリジェンスによって、IT 管理者が構成標準への適合性を定義し、追跡して積極的に管理することができます。 物理アプリケーションおよび仮想アプリケーションの展開と使用に関するメータリング機能やレポート機能を使用して、組織は情報を十分に把握したうえでソフトウェア ライセンスに関する決定を下し、ライセンス上のコンプライアンス要件を遵守できます。 Configuration Manager クライアントから使用状況データを収集した後で、管理者は各種の機能を使用してコレクション、クエリ、レポートなどのデータを表示できます。
+
+毎回の同期時に、既知のソフトウェアのカタログが Microsoft からダウンロードされます。 IT 管理者は、組織で検出され、調査してカタログに追加する予定の分類されていないソフトウェア タイトルに関する情報を Microsoft に送信することもできます。 この情報をアップロードする前に、アップロードされるデータがダイアログ ボックスに表示されます。 アップロードされたデータを取り消すことはできません。 資産インテリジェンスからは、Microsoft にユーザーおよびコンピューターに関する情報やライセンスの使用状況は送信されません。
+
+ソフトウェア タイトルがアップロードされると、Microsoft の調査担当者が特定および分類し、この機能を使用するすべてのお客様とカタログのその他のお客様がソフトウェアの情報を利用できるようにします。 アップロードされたソフトウェア タイトルは公開されます。 アプリケーションとその分類は、カタログの一部となり、カタログの他の利用者がダウンロードできるようになります。 資産インテリジェンス データの収集を構成し、Microsoft に送信する情報を決める前に、組織のプライバシーに関する要件を考慮してください。
+
+Asset Intelligence は既定では、System Center Configuration Manager で有効になっていません。 分類されていないタイトルは自動的にアップロードされません。また、システムはこのタスクを自動化するように設計されていません。 各ソフトウェア タイトルのアップロードを手動で選択および承認する必要があります。
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
-Microsoft 클라우드 보호 서비스는 이전에는 MAPS(Microsoft 활성 보호 서비스)라고 했습니다.
-해당하는 제품은 System Center Endpoint Protection 및 System Center Configuration Manager의 Endpoint Protection 기능(System Center Endpoint Protection 및 Windows 10용 Windows Defender 관리)입니다. Linux용 System Center Endpoint Protection 또는 Mac용 System Center Endpoint Protection에는 이 기능이 구현되지 않습니다.
+Microsoft Cloud Protection Service は、以前は Microsoft Active Protection Service (MAPS) という名称でした。
+該当製品は、System Center Endpoint Protection と System Center Configuration Manager の Endpoint Protection 機能 (System Center Endpoint Protection と Windows Defender for Windows 10 を管理するため) です。 System Center Endpoint Protection for Linux または System Center Endpoint Protection for Mac の場合、この機能は実装されていません。
 
-Microsoft 클라우드 보호 서비스의 맬웨어 방지 커뮤니티는 System Center Endpoint Protection 사용자를 포함하는 자발적인 전 세계 온라인 커뮤니티입니다. Microsoft 클라우드 보호 서비스에 가입하면 System Center Endpoint Protection에서는 자동으로 정보를 Microsoft에 보냅니다. Microsoft에서는 이 정보를 사용하여 잠재적인 위협을 조사할 소프트웨어를 결정하고 System Center Endpoint Protection의 효율성을 개선하도록 지원합니다. 이 커뮤니티는 새로운 악성 소프트웨어 감염의 확산을 막기 위해 지원합니다. Microsoft 클라우드 보호 서비스 보고서에 맬웨어 또는 Endpoint Protection 클라이언트가 제거할 수도 있는 사용자 동의 없이 설치된 소프트웨어가 포함되어 있는 경우 Microsoft 클라우드 보호 서비스에서 최신 서명을 다운로드하여 문제를 해결합니다. 또한 Microsoft 클라우드 보호 서비스는 "긍정 오류", 즉 처음에는 악성 소프트웨어로 식별되었다가 악성이 아닌 것으로 판별된 프로그램을 찾아서 수정할 수 있습니다.
+Microsoft Cloud Protection Service のマルウェア対策コミュニティは、System Center Endpoint Protection のユーザーが世界各地から参加している自発的なオンライン コミュニティです。 Microsoft Cloud Protection Service に参加すると、System Center Endpoint Protection によって情報が Microsoft に自動的に送信されます。 Microsoft ではこの情報を使用して、潜在的な脅威を調査し、System Center Endpoint Protection の有効性の向上に役立つソフトウェアを決定します。 このコミュニティは、悪意のある新しいソフトウェアへの大量感染の阻止に役立ちます。 Microsoft Cloud Protection Service のレポートに、Endpoint Protection クライアントが削除できる可能性があるマルウェアまたは望ましくない可能性があるソフトウェアの詳細が含まれている場合、Microsoft Cloud Protection Service がこれに対処するために最新の署名をダウンロードします。 また、Microsoft Cloud Protection Service が "誤検知" (最初はマルウェアと判断された対象がマルウェアではないと判明する場合) を検出して修正することもあります。
 
-Microsoft 클라우드 보호 서비스 보고서에는 파일 이름, 암호화 해시, 공급업체, 크기 및 날짜 스탬프 등 잠재적인 맬웨어 파일에 대한 정보가 포함되어 있습니다. 또한 Microsoft 클라우드 보호 서비스는 파일의 원본을 가리키는 전체 URL을 수집할 수도 있습니다. 이러한 URL에는 경우에 따라 양식에 입력한 검색 단어 또는 데이터와 같은 개인 정보가 포함될 수 있습니다. 또한 Endpoint Protection에서 사용자 동의 없이 설치된 소프트웨어에 대한 알림을 받았을 때 수행한 작업이 보고서에 포함될 수 있습니다. Microsoft 클라우드 보호 서비스 보고서에 포함된 이 정보를 통해 Microsoft에서 Endpoint Protection이 얼마나 효과적으로 맬웨어 및 사용자 동의 없이 설치된 소프트웨어를 검색하고 제거하는지 측정할 수 있으며 새로운 맬웨어를 식별할 수 있습니다.
+Microsoft Cloud Protection Service レポートには、ファイル名、暗号化ハッシュ、ベンダー、サイズ、日付スタンプなど、マルウェアの可能性があるファイルに関する情報が含まれています。 また、Microsoft Cloud Protection Service はファイルの出所を示す完全 URL を収集することがあります。 そのような URL には、検索用語やフォームに入力されたデータなど、個人情報が含まれることがあります。 望ましくないソフトウェアに関する通知が Endpoint Protection から届いたときに行った措置がレポートに含まれることもあります。 Microsoft Cloud Protection Service レポートに含まれるその情報は、マルウェアと望ましくない可能性があるソフトウェアがどの程度効率的に Endpoint Protection で検出され、駆除されるかを Microsoft が計測したり、新しいマルウェアを特定したりするときに役立ちます。
 
-기본 또는 고급 멤버 자격이 있는 경우 Microsoft 클라우드 보호 서비스에 가입할 수 있습니다. 일반 멤버 보고서에는 이전에 설명한 정보가 포함됩니다. 고급 멤버 보고서는 보다 종합적이며, Endpoint Protection이 검색한 소프트웨어에 대한 추가적인 세부 정보(예: 해당 소프트웨어 위치, 파일 이름, 소프트웨어 작동 방법, 컴퓨터에 영향을 주는 방법)를 포함할 수 있습니다. Microsoft 연구원들이 이러한 보고서와 함께 Microsoft 클라우드 보호 서비스에 참여하는 다른 Endpoint Protection 사용자의 보고서를 사용하여 새로운 위험을 신속하게 검색합니다. 그런 다음 분석 조건을 충족하는 프로그램에 대한 맬웨어 정의를 만들고 Microsoft 업데이트를 통해 모든 사용자가 업데이트된 정의를 사용할 수 있도록 합니다.
+基本メンバーシップまたは上級メンバーシップをお持ちであれば、Microsoft Cloud Protection Service に参加できます。 基本メンバーのレポートには上記の情報が含まれています。 上級メンバーのレポートにはさらに、ソフトウェアの場所、ファイル名、ソフトウェアの動作、およびコンピューターに与える影響など、Endpoint Protection で検出されたソフトウェアに関する詳細情報が記載されます。 マイクロソフトの調査担当者は、これらのレポートを Microsoft Cloud Protection Service に参加する他の Endpoint Protection ユーザーからのレポートと併せて、新たな脅威を迅速に検知するために役立てています。 その後、分析条件を満たすプログラムについてマルウェア定義を作成し、更新した定義ファイルを Microsoft Update 経由ですべてのユーザーに提供します。
 
-특정 종류의 맬웨어 감염을 쉽게 검색하고 수정하기 위해 제품은 사용자 PC의 보안 상태에 대한 정보를 Microsoft 클라우드 보호 서비스에 보냅니다. 이 정보에는 PC를 시작하는 동안 로드되는 드라이버 및 기타 소프트웨어를 기술하는 PC의 보안 설정 및 로그 파일에 대한 정보가 포함됩니다.
-PC를 고유하게 식별하는 번호도 전송됩니다. 또한 Microsoft 클라우드 보호 서비스가 잠재적인 맬웨어 파일에서 연결하는 IP 주소를 수집할 수 있습니다.
+特定の種類のマルウェア感染を検知して修正するため、製品からお客様の PC のセキュリティ状態に関する情報が定期的に Microsoft Cloud Protection Service に送信されます。 この情報には、お客様の PC のセキュリティ設定や、PC の起動時に読み込まれるドライバーと他のソフトウェアを記録しているログ ファイルが含まれます。
+PC を一意に識別する番号も送信されます。 また、Microsoft Cloud Protection Service が潜在的なマルウェア ファイルが接続する IP アドレスを収集することがあります。
 
-Microsoft 클라우드 보호 서비스 보고서는 Microsoft 소프트웨어 및 서비스를 개선하는 데 사용됩니다. 또한 통계, 기타 테스트 또는 분석용으로 사용되거나 정의를 생성하는 데 사용될 수도 있습니다. 업무상 보고서를 사용해야 하는 Microsoft 직원, 수급인, 파트너 및 공급업체만이 이러한 보고서에 액세스할 수 있습니다.
+Microsoft Cloud Protection Service レポートは、マイクロソフトのソフトウェアおよびサービスを向上させるために使用されます。 さらに、統計またはその他のテストや分析、および定義を生成するために使用される場合もあります。 レポートにアクセスできるのは、業務上その使用が不可欠な Microsoft の従業員、契約社員、パートナー、および製造元に限られています。
 
-Microsoft 클라우드 보호 서비스는 개인 정보를 의도적으로 수집하지 않습니다. Microsoft 클라우드 보호 서비스에서 개인 정보를 수집하는 경우 Microsoft는 사용자를 식별하거나 사용자에게 연락하는 데 이러한 정보를 사용하지 않습니다.
+Microsoft Cloud Protection Service が意図的に個人情報を収集することはありません。 Microsoft Cloud Protection Service によって個人情報が収集された場合でも、Microsoft がその情報を使用してお客様の身元を特定したりお客様に連絡したりすることはありません。
 
-수집된 데이터에 대한 추가적인 세부 정보는 [System Center Configuration Manager의 Endpoint Protection](http://go.microsoft.com/fwlink/?LinkId=823547)에 있는 제품 문서에서 찾을 수 있습니다.
+収集されたデータに関する詳しい情報は、「[System Center Configuration Manager での Endpoint Protection](http://go.microsoft.com/fwlink/?LinkId=823547)」の製品ドキュメントをご覧ください。
 
-## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>사이트 계층 - Bing 지도를 사용하는 지리적 보기
-사이트 계층 구조 – 지리적 보기를 통해 Microsoft Bing 지도에서 제공하는 지도를 사용하여 Configuration Manager 실제 서버 토폴로지를 볼 수 있도록 합니다. 이 기능을 사용할 수 있도록 사용자 서버에서 Bing 지도 웹 서비스로 사용자가 제공한 위치 정보가 전송됩니다.
+## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>サイト階層 – Bing Maps を使用した地図
+サイト階層の地図機能では、Microsoft Bing Maps の提供する地図を使って Configuration Manager 物理サーバー トポロジを表示できます。 この機能を実現するために、お客様の入力した場所情報が、サーバーから Bing Maps の Web サービスに送信されます。
 
-Microsoft는 정보를 사용하여 Microsoft Bing 지도와 기타 Microsoft 사이트 및 서비스를 작동하고 개선합니다. 자세한 내용은 [Microsoft 개인정보취급방침](http://go.microsoft.com/fwlink/?LinkId=823548)을 참조하세요.
-사이트 계층에 대한 지리적 보기를 사용하지 않도록 선택할 수 있습니다. 계층 구조 다이어그램 보기에서 계층 구조를 볼 수 있으며, 이 보기에서는 Bing 지도 서비스가 사용되지 않습니다.
+マイクロソフトではこの情報を、Microsoft Bing Maps およびその他の Microsoft のサイトとサービスを提供および向上するために役立てています。 詳細については、「[Microsoft のプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=823548)」を参照してください。
+サイト階層で地図を使用しないように選択できます。 階層図では、Bing Maps サービスを使用せずに階層を表示することができます。
 
-## <a name="microsoft-intune-subscription"></a>Microsoft Intune 구독
-Microsoft Intune의 구독을 구매한 고객은 Configuration Manager를 사용하여 Microsoft Intune을 통해 연결된 모바일 장치를 관리할 수 있습니다. [Microsoft Online Services 개인정보취급방침](http://go.microsoft.com/fwlink/?LinkId=262214)은 Microsoft Intune을 비롯한 Microsoft Online Services에 적용됩니다. 고객이 Microsoft Intune도 구독하고 있는 경우에도 [Microsoft Online Services 개인정보취급방침](http://go.microsoft.com/fwlink/?LinkId=262214)은 이 개인정보취급방침과 함께 확인해야 합니다.
+## <a name="microsoft-intune-subscription"></a>Microsoft Intune サブスクリプション
+Microsoft Intune のサブスクリプションを購入したお客様は、Microsoft Intune を介して接続しているモバイル デバイスを Configuration Manager を使用して管理できます。 [Microsoft オンライン サービスのプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=262214)は、Microsoft Intune など、Microsoft オンライン サービスに適用されます。 お客様が Microsoft Intune サブスクリプションもお持ちの場合、このプライバシーに関する声明と共に [Microsoft Online Services のプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=262214)もお読みください。
 
-Microsoft Intune과의 모든 통신은 HTTPS를 사용합니다. Microsoft Intune 구독을 구성하고 iOS 지원 구성에 필요한 CSR(인증서 서명 요청)를 다운로드하려면 관리자가 조직의 계정 및 암호를 사용하여 Microsoft Intune에 로그인해야 합니다. 이러한 자격 증명은 Configuration Manager에 저장되지 않습니다. Microsoft Intune과의 모든 다른 통신은 Microsoft Intune에서 자동으로 생성되는 PKI 인증서를 사용하여 인증됩니다.
+Microsoft Intune とのすべての通信で HTTPS が使用されます。 管理者が Microsoft Intune サブスクリプションを構成し、iOS サポートの構成に必要な Certificate Signing Request (CSR) をダウンロードするには、組織のアカウントとパスワードを使用して Microsoft Intune にサインインする必要があります。 これらの資格情報は Configuration Manager に保管されません。 Microsoft Intune とのその他の通信はすべて、Microsoft Intune によって自動生成される PKI 証明書を使用して認証されます。
 
-Microsoft Intune에 연결된 장치를 관리하기 위해 일부 정보는 Microsoft Intune에 전송하고 일부 정보는 Microsoft Intune에서 수신합니다. 이 정보에는 서비스에 할당된 모든 사용자의 UPN(사용자 계정 이름)과 Microsoft Intune을 통해 관리되는 장치에 대한 장치 인벤토리 정보가 포함됩니다. Manage.Microsoft.com 배포 지점에 할당된 콘텐츠의 메타데이터(예: 응용 프로그램 이름, 게시자, 버전 등)가 Microsoft Intune으로 전송됩니다. Manage.Microsoft.com 배포 지점에 할당되는 실제 이진 콘텐츠는 Microsoft Intune에 업로드되기 전에 암호화됩니다.
+Microsoft Intune に接続されるデバイスを管理するために、一部の情報が Microsoft Intune との間で送受信されます。 この情報には、サービスに割り当てられているすべてのユーザーのユーザー プリンシパル名 (UPN) と、Microsoft Intune で管理されるデバイスのデバイス インベントリ情報が含まれます。 Manage.Microsoft.com 配布ポイントに割り当てられるコンテンツのアプリケーション名、発行元、バージョンなどのメタデータは、Microsoft Intune に送信されます。 Manage.Microsoft.com 配布ポイントに割り当てられる実際のバイナリ コンテンツは、暗号化されてから、Microsoft Intune にアップロードされます。
 
-이 기능은 기본적으로 구성되어 있지 않습니다. 관리자가 Manage.Microsoft.com 배포 지점으로 전송되는 콘텐츠와 서비스에 할당되는 사용자를 제어합니다. 이 기능은 언제든 제거할 수 있습니다.
+既定では、この機能は構成されていません。 管理者は、Manage.Microsoft.com 配布ポイントに転送される内容と、サービスに割り当てるユーザーを制御します。 また、この機能はいつでも削除できます。

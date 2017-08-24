@@ -1,6 +1,6 @@
 ---
-title: "게시물 관리 | Microsoft 문서"
-description: "System Center Updates Publisher를 사용하여 게시물로 소프트웨어 업데이트 그룹을 관리합니다."
+title: "パブリケーションの管理 | Microsoft Docs"
+description: "System Center Updates Publisher を使用して、ソフトウェア更新プログラムのグループをパブリケーションとして管理します"
 ms.custom: na
 ms.date: 4/29/2017
 ms.prod: configuration-manager
@@ -18,88 +18,88 @@ robots: NOINDEX, NOFOLLOW
 ms.openlocfilehash: ddea7af935d5be880b96e383401061f8aa11e6da
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-publications-in-updates-publisher"></a>Updates Publisher의 게시물 관리
+# <a name="manage-publications-in-updates-publisher"></a>Updates Publisher でパブリケーションを管理する
 
-*적용 대상: System Center Updates Publisher*
+*適用対象: System Center Updates Publisher*
 
-게시물을 사용하여 업데이트 및 번들 그룹을 단일 개체로 관리할 수 있습니다. 여기에는 업데이트를 관리 서버에 게시하고 게시물을 Updates Publisher의 다른 설치에 사용할 그룹으로 내보내는 작업이 포함됩니다.
+パブリケーションを使用することで、更新プログラムとバンドルのグループを単一オブジェクトとして管理できます。 これには、管理サーバーに更新プログラムを公開して、Updates Publisher の他のインストールと共に使用するグループとしてパブリケーションをエクスポートすることも含まれます。
 
-## <a name="create-publications"></a>게시물 만들기
-게시는 두 가지 방법으로 만들어집니다.
+## <a name="create-publications"></a>パブリケーションを作成する
+次の 2 つの方法でパブリケーションを作成します。
 
--   **업데이트 작업 영역**에서 업데이트 및 번들을 관리하는 경우 이때 만들어지는 새 게시물에 업데이트 및 번들을 [할당](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)할 수 있습니다.
+-   **[更新プログラム] ワークスペース**で更新プログラムとバンドルを管理するときに、その時点で作成される新しいパブリケーションにそれらを[割り当てる](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)ことができます。
 
--   **게시물 작업 영역**(게시 작업 영역)에서 리본의 **게시** 탭에 있는 **만들기** 단추를 사용할 수 있습니다. 이 방법을 사용하면 나중에 사용할 수 있도록 게시물을 만들 수 있습니다. 나중에 업데이트를 할당하면 이 게시물을 사용할 수 있습니다.
+-   **[パブリケーション] ワークスペース**で、リボンの **[パブリケーション]** タブにある **[作成]** ボタンを使用できます。 このメソッドでは、将来使用するパブリケーションを作成できます。 その後、更新プログラムを割り当てるときに、このパブリケーションを使用できます。
 
-## <a name="rename-a-publication"></a>게시물 이름 바꾸기
-게시물의 이름을 바꾸려면 **게시물 작업 영역** 내에서 게시물을 선택한 다음 리본의 **게시물** 탭에서 **편집**을 선택합니다.
+## <a name="rename-a-publication"></a>パブリケーションの名前を変更する
+パブリケーションの名前を変更するには、**[パブリケーション] ワークスペース**からパブリケーションを選択し、リボンの **[パブリケーション]** タブで **[編集]** を選択します。
 
-## <a name="change-the-publication-type-of-updates-in-a-publication"></a>게시물에서 업데이트의 게시물 유형을 변경합니다.
-**게시물 작업 영역**에서 게시물에 할당된 업데이트 및 번들의 **게시물 유형**을 수정할 수 있습니다.
+## <a name="change-the-publication-type-of-updates-in-a-publication"></a>パブリケーションの更新プログラムでパブリケーションの種類を変更する
+**[パブリケーション] ワークスペース**から、パブリケーションに割り当てられている更新プログラムとバンドルの**パブリケーションの種類**を変更できます。
 
-1. 수정하려는 업데이트를 포함하는 게시물을 선택한 다음  **&lt;게시물 이름> 구성원 업데이트** 목록에서 하나 이상의 업데이트 또는 번들을 선택합니다.
+1. 変更する更新プログラムを含むパブリケーションを選択し、1 つまたは複数の更新プログラムかバンドルを **[All &lt;publication name> member updates]\(すべての <パブリケーション名> メンバー更新プログラム)** の一覧から選択します。
 
-2. 다음으로 **홈** 탭에서 다음 옵션 중 하나를 선택합니다. 사용할 수 있는 옵션은 선택한 업데이트의 게시물 유형에 따라 달라집니다.
+2. 次に、**[ホーム]** タブで以下のオプションのいずれかを選択します。 使用できるオプションは、選択した更新プログラムのパブリケーションの種類によって異なります。
 
-  -   **자동**
-  -   **전체 콘텐츠**
-  -   **메타데이터만**
+  -   **自動**
+  -   **コンテンツ全体**
+  -   **メタデータのみ**
 
-변경한 후 새 값을 보려면 게시물 뷰를 새로 고쳐야 할 수 있습니다.
+変更後は、新しい値を確認するためにパブリケーションの表示を更新する必要がある場合があります。
 
-다른 게시물 유형에 대한 자세한 내용은 [게시물에 업데이트 및 번들 할당](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)을 참조하세요.
+別のパブリケーションの種類については、「[Assign updates and bundles to a publication (パブリケーションに更新プログラムとバンドルを割り当てる)](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)」をご覧ください。
 
 > [!TIP]    
-> 번들의 게시물 유형을 설정할 때 해당 번들의 모든 소프트웨어 업데이트는 해당 번들의 게시물 유형으로 게시됩니다.
+> バンドルのパブリケーションの種類を設定すると、バンドル内のすべてのソフトウェア更新プログラムは、バンドルのパブリケーションの種類と共に公開されます。
 
-## <a name="remove-updates-from-a-publication"></a>게시물에서 업데이트 제거
-게시물에서 업데이트 또는 번들을 제거하려면 **게시물 작업 영역**에서 수정할 게시물을 선택한 다음 제거할 업데이트 및 번들을 선택합니다. 다음으로 리본의 **홈** 탭에서 **제거**를 선택합니다.
+## <a name="remove-updates-from-a-publication"></a>パブリケーションから更新プログラムを削除する
+パブリケーションから更新プログラムまたはバンドルを削除するには、**[パブリケーション] ワークスペース**で変更するパブリケーションを選択し、次に削除する更新プログラムまたはバンドルを選択します。 次に、リボンの **[ホーム]** タブで **[削除]** を選択します。
 
-게시물에서 업데이트가 제거된 후에도 Updates Publisher 리포지토리에서 계속 사용할 수 있습니다.
+パブリケーションから更新プログラムを削除した後、これらのプログラムは Updates Publisher のリポジトリで引き続き使用できます。
 
-## <a name="publish-publications"></a>게시물 게시
-업데이트 및 번들을 게시하면 Updates Publisher가 해당 업데이트 및 번들에 대한 정보(메타데이터)와 업데이트용 이진 파일(전체 콘텐츠)을 장치 배포용 업데이트 서버에 추가합니다.
+## <a name="publish-publications"></a>パブリケーションを管理する
+更新プログラムとバンドルを公開するとき、これらの更新プログラムとバンドルに関する情報 (メタデータ) と、場合によっては更新プログラムのバイナリ (コンテンツ全体) が、デバイスへの展開のために Updates Publisher によって更新サーバーに追加されます。
 
-게시 옵션을 사용하려면 Updates Publisher의 [업데이트 서버](/sccm/sum/tools/updates-publisher-options#update-server) 옵션을 구성해야 합니다. 이 구성 옵션을 열려면 **업데이트 작업 영역** &gt; **개요**로 이동하여 **Configure WSUS and Signing Certificate**(WSUS 및 서명 인증서 구성)를 선택합니다. Updates Publisher 옵션의 [업데이트 서버] 페이지로 이동할 수도 있습니다.
+発行に関するオプションを設定する前に、Updates Publisher の [[更新サーバー]](/sccm/sum/tools/updates-publisher-options#update-server) オプションを構成する必要があります。 この構成オプションを開くには、**[更新プログラム] ワークスペース** &gt; **[概要]** に移動し、**[Configure WSUS and Signing Certificate]\(WSUS と署名証明書の構成)** を選択します。 また、Updates Publisher オプションの更新サーバー ページに移動できます。
 
 > [!NOTE]   
-> Updates Publisher는 크기가 375MB 이하인 업데이트만 게시할 수 있습니다.
+> Updates Publisher では、375 メガバイト (MB) 以下のサイズの更新プログラムのみを公開できます。
 
-### <a name="to-publish-a-publication"></a>게시물을 게시하려면
+### <a name="to-publish-a-publication"></a>パプリケーションを公開するには
 
-1.  **게시물 작업 영역**으로 이동한 다음 게시하거나 내보내려는 업데이트 및 번들 그룹이 포함된 게시물을 선택합니다. 그런 다음 리본의 **홈** 탭에서 **게시**를 선택합니다.
+1.  **[パブリケーション] ワークスペース**に移動し、公開またはエクスポートする更新プログラムとバンドルのグループを含むパブリケーションを選択します。 次に、リボンの **[ホーム]** タブから **[公開]** を選択します。
 
-2.  **게시** 마법사의 **선택** 페이지에서 새 게시 인증서를 사용하여 모든 업데이트에 서명하도록 선택할 수 있지만 게시물 유형은 변경할 수 없습니다.
+2.  **[公開]** ウィザードの **[選択]** ページで、新しく証明書を発行してすべての更新プログラムを署名することを選択できますが、パブリケーションの種類は変更できません。
 
-3.  마법사를 완료합니다.
+3.  ウィザードを完了します。
 
-  게시에 실패하면 자세한 정보를 제공할 수 있는 UpdatesPublisher.log 파일에 대한 링크가 제공됩니다.
+  公開に失敗した場合は UpdatesPublisher.log ファイルへのリンクが表示され、詳しい情報を確認できます。
 
-## <a name="export-a-publication"></a>게시물 내보내기
-Updates Publisher 리포지토리에서 게시물을 내보낼 수 있습니다. 이렇게 하면 해당 게시물에 할당된 업데이트 및 번들을 내보내고 업데이트 카탈로그를 만듭니다. 그러면 카탈로그를 [추가](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs)하고 해당 카탈로그를 Updates Publisher의 다른 인스턴스로 [가져올](/sccm/sum/tools/updates-publisher-catalogs#mport-updates) 수 있습니다. 게시물의 일부가 아닌 [업데이트를 내보낼](/sccm/sum/tools/manage-updates-with-updates-publisher#export-updates) 수도 있습니다.
+## <a name="export-a-publication"></a>パブリケーションをエクスポートする
+Updates Publisher のリポジトリからパブリケーションをエクスポートできます。 これにより、そのパブリケーションに割り当てられている更新プログラムとバンドルがエクスポートされ、更新プログラム カタログが作成されます。 作成後、このカタログを Updates Publisher の別のインスタンスに[追加](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs)および[インポート](/sccm/sum/tools/updates-publisher-catalogs#mport-updates)できます。 また、パブリケーションの一部ではない[更新プログラムのエクスポート](/sccm/sum/tools/manage-updates-with-updates-publisher#export-updates)もできます。
 
-게시물을 내보내려면 **게시물 작업 영역**으로 이동하고 내보낼 업데이트를 포함하는 게시물을 선택합니다. 한 번에 하나의 게시물만 선택할 수 있습니다.
+パブリケーションをエクスポートするには、**[パブリケーション] ワークスペース**に移動し、エクスポートする更新プログラムを含むパブリケーションを選択します。 一度に 1 つのパブリケーションを選択できます。
 
-게시물을 선택하고 리본의 **홈** 탭에서 **내보내기**를 선택한 다음 카탈로그 내보내기에 대한 경로와 파일 이름을 제공합니다.
+パブリケーションを選択したら、リボンの **[ホーム]** タブから **[エクスポート]** を選択し、次にカタログのエクスポートのパスとファイル名を入力します。
 
-종속 소프트웨어 업데이트를 내보내기의 일부로 내보낼(포함할) 수도 있습니다.
+エクスポートの一部として依存するソフトウェア更新プログラムをエクスポート (インクルード) するオプションもあります。
 
-## <a name="rename-a-publication"></a>게시물 이름 바꾸기
-게시물의 이름을 바꾸려면 **게시물 작업 영역**에서 게시물을 선택한 다음 리본의 **게시물** 탭에서 **편집**을 선택합니다.
+## <a name="rename-a-publication"></a>パブリケーションの名前を変更する
+パブリケーションの名前を変更するには、**[パブリケーション] ワークスペース**からパブリケーションを選択し、リボンの **[パブリケーション]** タブから **[編集]** を選択します。
 
-## <a name="delete-a-publication"></a>게시물 삭제
-게시물을 삭제하려면 **게시물 작업 영역**에서 게시물을 선택한 다음 리본의 **게시물** 탭에서 **삭제**를 선택합니다.
+## <a name="delete-a-publication"></a>パブリケーションを削除する
+パブリケーションを削除するには、**[パブリケーション] ワークスペース**からパブリケーションを選択し、リボンの **[パブリケーション]** タブから **[削除]** を選択します。
 
-Updates Publisher에서 게시물을 제거한 후에도 게시물에 있던 업데이트는 Updates Publisher 리포지토리에서 계속 사용할 수 있습니다.
+Updates Publisher からパブリケーションを削除した後、そのパブリケーションに含まれていた更新プログラムは Updates Publisher のリポジトリで引き続き使用できます。
 
-## <a name="expire-or-reactivate-updates-and-bundles"></a>업데이트 및 번들 만료 또는 다시 활성화
-**업데이트 작업 영역**에서 업데이트 및 번들을 선택하여 만료시키거나 다시 활성화할 수 있습니다. 선택한 횟수만큼 업데이트 및 번들을 만료 및 다시 활성화할 수 있습니다.
+## <a name="expire-or-reactivate-updates-and-bundles"></a>更新プログラムとバンドルの期限切れ設定または再アクティブ化
+**[更新プログラム] ワークスペース**を使用して更新プログラムとバンドルを選択し、期限切れにするか再アクティブ化することができます。 更新プログラムとバンドルを必要に応じて選択し、期限切れにするか再アクティブ化することができます。
 
--   **업데이트 또는 번들을 만료시키려면** 업데이트 작업 영역에서 만료되지 않은 하나 이상의 업데이트 또는 번들을 선택한 다음 **홈** 탭에서 **만료**를 선택합니다. Configuration Manager에 업데이트 또는 번들을 만료됨으로 게시할 때까지 다시 활성화할 수 있습니다.
+-   **更新プログラムまたはバンドルを期限切れにするには**、[更新プログラム] ワークスペースで 1 つまたは複数の更新プログラムかバンドルを選択し、次に **[ホーム]** タブから **[期限切れ]** を選択します。 更新プログラムまたはバンドルを Configuration Manager に期限切れとして公開するまでは、再アクティブ化できます。
 
-    사용자 지정 업데이트 또는 번들을 만료시킨 다음 만료됨 상태를 Configuration Manager에 게시한 후에야 Configuration Manager에서 사용자 지정 업데이트 또는 번들을 제거(삭제)할 수 있습니다. Configuration Manager에서 업데이트 또는 번들이 만료된 후에는 업데이트 또는 번들을 더 이상 배포하거나 다시 활성화할 수 없습니다.
+    Configuration Manager からカスタム更新プログラムまたはバンドルを取り除く (削除する) 前に期限切れの設定を行い、次に Configuration Manager に対してこの期限切れの状態を公開する必要があります。 Configuration Manager の更新プログラムやバンドルが期限切れになった後は、更新プログラムやバンドルを展開または再アクティブ化することはできません。
 
--   **업데이트 또는 번들을 다시 활성화하려면** 업데이트 작업 영역에서 만료된 하나 이상의 업데이트를 선택한 다음 리본의 **홈** 탭에서 **다시 활성화**를 선택합니다. 만료된 업데이트가 이전에 Configuration Manager에 만료됨으로 게시된 경우에는 이를 다시 활성화할 수 없습니다.
+-   **更新プログラムまたはバンドルを再アクティブ化するには**、[更新プログラム] ワークスペースで期限切れにする更新プログラムを 1 つまたは複数選択し、次にリボンの **[ホーム]** タブから **[再アクティブ化]** を選択します。 期限切れの更新プログラムが Configuration Manager に期限切れとしてすでに公開済みの場合は、再アクティブ化できません。

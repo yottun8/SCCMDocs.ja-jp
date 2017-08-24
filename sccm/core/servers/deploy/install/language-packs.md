@@ -1,6 +1,6 @@
 ---
-title: "언어 팩 | Microsoft 문서"
-description: "System Center Configuration Manager에서 제공되는 언어 지원에 대해 알아봅니다."
+title: "言語パック | Microsoft Docs"
+description: "System Center Configuration Manager で使用できる言語サポートについて説明します。"
 ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
@@ -17,80 +17,80 @@ manager: angrobe
 ms.openlocfilehash: 47da3c531289ddf13d357bde8bbda85d79ed2803
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="language-packs-in-system-center-configuration-manager"></a>System Center Configuration Manager의 언어 팩
+# <a name="language-packs-in-system-center-configuration-manager"></a>System Center Configuration Manager の言語パック
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-이 항목에서는 System Center Configuration Manager의 언어 지원에 대한 기술적인 세부 정보를 제공합니다.  
+このトピックでは、System Center Configuration Manager の言語サポートの技術的な詳細情報について説明します。  
 
-## <a name="BKMK_SupLanguagePacks"></a> 지원되는 운영 체제 언어  
- 중앙 관리 사이트와 기본 사이트에 **서버 언어 팩** 또는 **클라이언트 언어 팩**을 설치하여 다음 표의 표시 언어에 대한 지원을 설치할 수 있습니다. 사이트를 설치하는 동안 사이트에서 지원할 서버 및 클라이언트 언어를 사용 가능한 언어 팩 파일에서 선택합니다.
+## <a name="BKMK_SupLanguagePacks"></a> サポートされるオペレーティング システム言語  
+ 中央管理サイトおよびプライマリ サイトに **サーバー言語パック** または **クライアント言語パック** をインストールすることで、次の表の表示言語のサポートをインストールできます。 サイトのインストール中、そのサイトでサポートするサーバーとクライアントの言語を利用可能な言語パック ファイルから選びます。
 
- 필수 구성 요소 및 재배포 가능 파일 다운로드의 일부로 설치 프로그램을 실행하면 언어 팩 파일이 다운로드됩니다. [설치 다운로더](setup-downloader.md)를 사용하여 설치 프로그램을 실행하기 전에 이러한 파일을 다운로드할 수도 있습니다.   
+ 前提条件かつ再配布可能なファイル ダウンロードの一部としてセットアップを実行するときに、言語パック ファイルがダウンロードされます。 [セットアップ ダウンローダー](setup-downloader.md)を使用して、セットアップを実行する前にこれらのファイルをダウンロードできます。   
 
- 서버 또는 클라이언트 컴퓨터에서 지원하기 원하는 언어에 대한 로캘 ID를 파악하려면 다음 표를 참조하세요. 로캘 ID에 대한 자세한 내용은 [Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=252609)를 참조하세요.  
+ 次の表を参照して、サーバーまたはクライアント クライアントでサポートする言語にロケール ID をマッピングしてください。 ロケール ID の詳細については、「[Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=252609)」 (Microsoft による割り当て済みロケール ID) を参照してください。  
 
-### <a name="server-languages"></a>서버 언어  
+### <a name="server-languages"></a>サーバーの言語  
 
-|서버 언어|로캘 ID(LCID)|세 자리 코드|  
+|サーバーの言語|ロケール ID (LCID)|3 文字コード|  
 |---------------------|------------------------|-----------------------|  
-|영어(기본값)|0409|ENU|  
-|중국어(번체, 홍콩 특별 행정구)|0c04|ZHH|  
-|중국어(간체)|0804|CHS|  
-|중국어(번체, 대만)|0404|CHT|  
-|체코어|0405|CSY|  
-|네덜란드어 - 네덜란드|0413|NLD|  
-|프랑스어|040c|FRA|  
-|독일어|0407|DEU|  
-|헝가리어|040e|HUN|  
-|이탈리아어 - 이탈리아|0410|ITA|  
-|일본어|0411|JPN|  
-|한국어|0412|KOR|  
-|폴란드어|0415|PLK|  
-|포르투갈어 - 브라질|0416|PTB|  
-|포르투갈어 - 포르투갈|0816|PTG|  
-|러시아어|0419|RUS|  
-|스페인어 - 스페인|0c0a|ESN|  
-|스웨덴어|041d|SVE|  
-|터키어|041f|TRK|  
+|英語 (既定)|0409|ENU|  
+|中国語 (繁体字、香港特別行政区)|0c04|ZHH|  
+|中国語 (簡体字)|0804|CHS|  
+|中国語 (繁体字、台湾)|0404|CHT|  
+|チェコ語|0405|CSY|  
+|オランダ語 - オランダ|0413|NLD|  
+|フランス語|040c|FRA|  
+|ドイツ語|0407|DEU|  
+|ハンガリー語|040e|HUN|  
+|イタリア語 - イタリア|0410|ITA|  
+|日本語|0411|JPN|  
+|韓国語|0412|KOR|  
+|ポーランド語|0415|PLK|  
+|ポルトガル語 - ブラジル|0416|PTB|  
+|ポルトガル語 - ポルトガル|0816|PTG|  
+|ロシア語|0419|RUS|  
+|スペイン語 - スペイン|0c0a|ESN|  
+|スウェーデン語|041d|SVE|  
+|トルコ語|041f|TRK|  
 
-### <a name="client-languages"></a>클라이언트 언어  
+### <a name="client-languages"></a>クライアントの言語  
 
-|클라이언트 언어|로캘 ID(LCID)|세 자리 코드|  
+|クライアントの言語|ロケール ID (LCID)|3 文字コード|  
 |---------------------|------------------------|-----------------------|  
-|영어(기본값)|0409|ENG|  
-|중국어(번체, 홍콩 특별 행정구)|0c04|ZHH|  
-|중국어 - 간체|0804|CHS|  
-|중국어(번체, 대만)|0404|CHT|  
-|체코어|0405|CSY|  
-|덴마크어|0406|DAN|  
-|네덜란드어 - 네덜란드|0413|NLD|  
-|핀란드어|040b|FIN|  
-|프랑스어|040c|FRA|  
-|독일어|0407|DEU|  
-|그리스어|0408|ELL|  
-|헝가리어|040e|HUN|  
-|이탈리아어 - 이탈리아|0410|ITA|  
-|일본어|0411|JPN|  
-|한국어|0412|KOR|  
-|노르웨이어|0414|NOR|  
-|폴란드어|0415|PLK|  
-|포르투갈어(브라질)|0416|PTB|  
-|포르투갈어(포르투갈)|0816|PTG|  
-|러시아어|0419|RUS|  
-|스페인어 - 스페인|0c0a|ESN|  
-|스웨덴어|041d|SVE|  
-|터키어|041f|TRK|  
+|英語 (既定)|0409|ENG|  
+|中国語 (繁体字、香港特別行政区)|0c04|ZHH|  
+|中国語 - 簡体字|0804|CHS|  
+|中国語 (繁体字、台湾)|0404|CHT|  
+|チェコ語|0405|CSY|  
+|デンマーク語|0406|DAN|  
+|オランダ語 - オランダ|0413|NLD|  
+|フィンランド語|040b|FIN|  
+|フランス語|040c|FRA|  
+|ドイツ語|0407|DEU|  
+|ギリシャ語|0408|ELL|  
+|ハンガリー語|040e|HUN|  
+|イタリア語 - イタリア|0410|ITA|  
+|日本語|0411|JPN|  
+|韓国語|0412|KOR|  
+|ノルウェー語|0414|NOR|  
+|ポーランド語|0415|PLK|  
+|ポルトガル語 (ブラジル)|0416|PTB|  
+|ポルトガル語 (ポルトガル)|0816|PTG|  
+|ロシア語|0419|RUS|  
+|スペイン語 - スペイン|0c0a|ESN|  
+|スウェーデン語|041d|SVE|  
+|トルコ語|041f|TRK|  
 
-### <a name="mobile-device-client-languages"></a>모바일 장치 클라이언트 언어  
- 모바일 장치 언어에 대한 지원을 추가하면 모든 지원되는 모바일 장치 클라이언트 언어가 포함됩니다. 모바일 장치 지원을 위한 개별 언어 팩을 선택할 수 없습니다.  
+### <a name="mobile-device-client-languages"></a>モバイル デバイス クライアントの言語  
+ モバイル デバイスの言語のサポートを追加する場合、サポートされるすべてのモバイル デバイス クライアントの言語が含まれます。 モバイル デバイスをサポートするために個々の言語パックを選択することはできません。  
 
-### <a name="identify-installed-language-packs"></a>설치된 언어 팩 확인  
-Configuration Manager 클라이언트를 실행하는 컴퓨터에 설치된 언어 팩을 확인하려면 해당 컴퓨터의 레지스트리에서 설치된 언어 팩의 LCID(로캘 ID)를 찾습니다. 이 정보는 다음 위치에서 확인할 수 있습니다.
+### <a name="identify-installed-language-packs"></a>インストール済みの言語パックを特定する  
+Configuration Manager クライアントを実行するコンピューターにインストールされている言語パックを特定するには、コンピューターのレジストリで、インストール済み言語パックのロケール ID (LCID) を確認します。 この情報は次の場所にあります。
 
  **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs**  
 
-하드웨어 인벤토리를 사용하여 이 정보를 수집한 후에 사용자 지정 보고서를 작성하여 언어 세부 정보를 확인할 수 있습니다. 사용자 지정 하드웨어 인벤토리를 수집하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 하드웨어 인벤토리를 구성하는 방법](../../../../core/clients/manage/inventory/configure-hardware-inventory.md)을 참조하세요. 보고서를 만드는 방법에 대한 자세한 내용은 [System Center Configuration Manager의 보고 작업 및 유지 관리](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md) 항목에서 [Configuration Manager 보고서 관리](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md#BKMK_ManageReports) 섹션을 참조하세요.  
+ハードウェア インベントリを使用してこの情報を収集し、カスタム レポートを作成して言語の詳細情報を確認することができます。 カスタム ハードウェア インベントリを収集する方法については、「[How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md)」(System Center Configuration Manager でハードウェア インベントリを構成する方法) を参照してください。 レポートの作成の詳細については、「[Operations and maintenance for reporting in System Center Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md)」(System Center Configuration Manager のレポートの操作とメンテナンス) トピックの「[Manage Configuration Manager reports](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md#BKMK_ManageReports)」(Configuration Manager レポートの管理) セクションを参照してください。  

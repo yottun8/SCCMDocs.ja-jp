@@ -1,6 +1,6 @@
 ---
-title: "Configuration Manager에서 사용되는 포트 | Microsoft 문서"
-description: "System Center Configuration Manager가 연결에 사용되는 필수 포트 및 사용자 지정 포트에 대해 알아봅니다."
+title: "Configuration Manager で使用されるポート | Microsoft Docs"
+description: "System Center Configuration Manager が接続に使用する必要なポートとカスタマイズ可能なポートについて説明します。"
 ms.custom: na
 ms.date: 3/20/2017
 ms.prod: configuration-manager
@@ -18,702 +18,702 @@ manager: angrobe
 ms.openlocfilehash: 78caa69e10f5d386daab1e61e484d4d134469708
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="ports-used-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 사용되는 포트
+# <a name="ports-used-in-system-center-configuration-manager"></a>System Center Configuration Manager で使用されるポート
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager는 분산된 클라이언트/서버 시스템입니다. Configuration Manager의 배포 특성으로 인해 사이트 서버, 사이트 시스템 및 클라이언트 간이 연결될 수 있습니다. 일부 연결에는 구성할 수 없는 포트가 사용되고, 일부 연결에는 지정한 사용자 지정 포트가 지원될 수 있습니다. 방화벽, 라우터, 프록시 서버 또는 IPsec 같은 포트 필터링 기술을 사용하는 경우 필요한 포트를 사용할 수 있는 상태인지 확인해야 합니다.  
+System Center Configuration Manager は、分散クライアント/サーバー システムです。 Configuration Manager が分散であるということは、サイト サーバー、サイト システム、およびクライアントの間で接続を確立できることを意味します。 接続によっては、構成不可能なポートを使用する場合も、ユーザーが指定するカスタム ポートをサポートする場合もあります。 ファイアウォール、ルーター、プロキシ サーバー、IPsec など、何らかのポート フィルタリング テクノロジを使用する場合は、必要なポートが利用可能であることを確認する必要があります。  
 
 > [!NOTE]  
->  SSL 브리징을 사용하여 인터넷 기반 클라이언트를 지원하는 경우 포트 요구 사항을 충족하면서도 방화벽을 트래버스할 수 있도록 일부 HTTP 동사 및 헤더를 허용해야 할 수 있습니다.   
+>  SSL ブリッジを使用してインターネットベースのクライアントをサポートする場合は、特定の HTTP 動詞とヘッダーでファイアウォールの通過を許可することが必要になることもあります。   
 
- 다음은 Configuration Manager에 사용되는 포트 목록이며, 여기에는 Active Directory Domain Services 또는 Kerberos 인증 관련 그룹 정책 설정과 같이 표준 Windows 서비스에 대한 정보가 포함되지 않습니다. Windows Server 서비스 및 포트에 대한 자세한 내용은 [Windows 서버 시스템의 서비스 개요 및 네트워크 포트 요구 사항](http://go.microsoft.com/fwlink/p/?LinkID=123652)을 참조하세요.  
+ 次に示すポートの一覧は、Configuration Manager で使用されるもので、Active Directory Domain Services のグループ ポリシー設定や Kerberos 認証など、標準の Windows サービスの情報は含まれていません。 Windows サーバーのサービスとポートの詳細については、「 [Windows サーバー システムのサービス概要およびネットワーク ポート要件](http://go.microsoft.com/fwlink/p/?LinkID=123652)」を参照してください。  
 
-##  <a name="BKMK_ConfigurablePorts"></a> 구성할 수 있는 포트  
- Configuration Manager를 사용하여 다음 유형의 통신에 대한 포트를 구성할 수 있습니다.  
+##  <a name="BKMK_ConfigurablePorts"></a> 構成できるポート  
+ Configuration Manager では、次の種類の通信でポートを構成できます。  
 
--   응용 프로그램 카탈로그 웹 사이트 지점과 응용 프로그램 카탈로그 웹 서비스 지점 간의 통신  
+-   アプリケーション カタログ Web サイト ポイントからアプリケーション カタログ Web サービス ポイントへの通信  
 
--   등록 프록시 지점과 등록 지점 간의 통신  
+-   登録プロキシ ポイントから登録ポイントへの通信  
 
--   클라이언트와 IIS를 실행하는 사이트 시스템 간의 통신  
+-   クライアントから IIS を実行するサイト システムへの通信  
 
--   클라이언트와 인터넷 간의 통신(프록시 서버 설정 사용)  
+-   クライアントからインターネットへの通信 (プロキシ サーバー設定として)  
 
--   소프트웨어 업데이트 지점과 인터넷 간의 통신(프록시 서버 설정 사용)  
+-   ソフトウェアの更新ポイントからインターネットへの通信 (プロキシ サーバー設定として)  
 
--   소프트웨어 업데이트 지점과 WSUS 서버 간의 통신  
+-   ソフトウェアの更新ポイントから WSUS サーバーへの通信  
 
--   사이트 서버와 사이트 데이터베이스 서버 간의 통신  
+-   サイト サーバーからサイト データベース サーバーへの通信  
 
--   보고 서비스 지점  
+-   レポート サービス ポイント  
 
     > [!NOTE]  
-    >  보고 서비스 지점의 사이트 시스템 역할에 사용되는 포트는 SQL Server Reporting Services에 구성됩니다. 그런 다음 이러한 포트는 보고 서비스 지점과 통신하는 동안 Configuration Manager에 사용됩니다. IPsec 정책 또는 방화벽 구성의 IP 필터 정보를 정의하는 이러한 포트를 검토해야 합니다.  
+    >  レポート サービス ポイントのサイト システムの役割に使用されるポートは、SQL Server Reporting Services で構成されます。 レポート サービス ポイントとの通信中に、Configuration Manager によりこれらのポートが使用されます。 IPsec ポリシーまたはファイアウォールの構成用に IP フィルターの情報を定義する各ポートを確認しておいてください。  
 
-기본적으로 클라이언트와 사이트 시스템 간의 통신에 사용되는 HTTP 포트는 80이고 기본 HTTPS 포트는 443입니다. HTTP 또는 HTTPS를 통한 클라이언트 및 사이트 시스템 간 통신용 포트는 설치 중에 변경할 수도 있고 Configuration Manager 사이트의 사이트 속성에서 변경할 수도 있습니다.  
+既定では、クライアントからサイト システムへの通信に使用する HTTP ポートは 80、既定の HTTPS ポートは 443 です。 クライアントとサイト システム間の HTTP または HTTPS 通信に使用するポートは、セットアップ中に変更することも、Configuration Manager サイトのサイト プロパティで変更することもできます。  
 
-보고 서비스 지점의 사이트 시스템 역할에 사용되는 포트는 SQL Server Reporting Services에 구성됩니다. 그런 다음 이러한 포트는 보고 서비스 지점과 통신하는 동안 Configuration Manager에 사용됩니다. IPsec 정책 또는 방화벽 구성의 IP 필터 정보를 정의하는 경우 이러한 포트를 검토해야 합니다.  
+レポート サービス ポイントのサイト システムの役割に使用されるポートは、SQL Server Reporting Services で構成されます。 レポート サービス ポイントとの通信中に、Configuration Manager によりこれらのポートが使用されます。 IPsec ポリシーまたはファイアウォールの構成用に IP フィルターの情報を定義する場合に、各ポートを確認しておいてください。  
 
-##  <a name="BKMK_NonConfigurablePorts"></a> 구성할 수 없는 포트  
-Configuration Manager를 사용하여 다음 유형의 통신에 대한 포트를 구성할 수 없습니다.  
+##  <a name="BKMK_NonConfigurablePorts"></a> 構成不可能なポート  
+Configuration Manager では、次の種類の通信用にポートを構成することはできません。  
 
--   사이트 간 통신  
+-   サイト間の通信  
 
--   사이트 서버와 사이트 시스템 간 통신  
+-   サイト サーバーからサイト システムへの通信  
 
--   Configuration Manager 콘솔과 SMS 공급자 간 통신  
+-   Configuration Manager コンソールから SMS プロバイダーへの通信  
 
--   Configuration Manager 콘솔 및 인터넷 간 통신  
+-   Configuration Manager コンソールからインターネットへの通信  
 
--   Microsoft Intune 및 클라우드 기반 배포 지점 등 클라우드 서비스와의 연결  
+-   クラウド サービスへの接続 (Microsoft Intune やクラウドベースの配布ポイントなど)  
 
-##  <a name="BKMK_CommunicationPorts"></a> Configuration Manager 클라이언트 및 사이트 시스템에 사용되는 포트  
-다음 섹션에서는 Configuration Manager의 통신에 사용되는 포트에 대해 자세히 설명합니다. 섹션 제목의 화살표는 통신 방향을 나타냅니다.  
+##  <a name="BKMK_CommunicationPorts"></a> Configuration Manager クライアントとサイト システムで使用されるポート  
+次のセクションでは、Configuration Manager で通信に使用されるポートについて詳しく説明します。 セクションのタイトルの矢印は、通信の方向を表します。  
 
--   -- &gt; 한 컴퓨터에서 통신을 시작하고 다른 쪽 컴퓨터는 항상 응답함을 나타냅니다.  
+-   -- > は、一方のコンピューターが通信を開始し、他方のコンピューターが常に応答する状態を示します  
 
--   &lt; -- &gt; 어느 쪽 컴퓨터든 통신을 시작할 수 있음을 나타냅니다.  
+-   &lt; -- > は、どちらのコンピューターからも通信を開始できる状態を示します  
 
-###  <a name="BKMK_PortsAI"></a> Asset Intelligence 동기화 지점 -- &gt; Microsoft  
+###  <a name="BKMK_PortsAI"></a> 資産インテリジェンス同期ポイント -- > Microsoft  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|  
 
-###  <a name="BKMK_PortsAI-to-SQL"></a> Asset Intelligence 동기화 지점 -- &gt; SQL Server  
+###  <a name="BKMK_PortsAI-to-SQL"></a> 資産インテリジェンス同期ポイント -- > SQL Server  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433(참고 2, **대체 포트 사용 가능** 참조)|  
+|SQL over TCP|--|1433 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsAppCatalogService-SQL"></a> 응용 프로그램 카탈로그 웹 서비스 지점 -- &gt; SQL Server  
+###  <a name="BKMK_PortsAppCatalogService-SQL"></a> アプリケーション カタログ Web サービス ポイント -- > SQL Server  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433(참고 2, **대체 포트 사용 가능** 참조)|  
+|SQL over TCP|--|1433 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsAppCatalogWebSitePoint_AppCatalogWebServicePoint"></a> 응용 프로그램 카탈로그 웹 사이트 지점 -- &gt; 응용 프로그램 카탈로그 웹 서비스 지점  
+###  <a name="BKMK_PortsAppCatalogWebSitePoint_AppCatalogWebServicePoint"></a> アプリケーション カタログ Web サイト ポイント -- > アプリケーション カタログ Web サービス ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTP(Hypertext Transfer Protocol)|--|80(참고 2, **대체 포트 사용 가능** 참조)|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443(참고 2, **대체 포트 사용 가능** 참조)|  
+|ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 2「**代替ポートを利用可能**」を参照)|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsClient-AppCatalogWebsitePoint"></a> 클라이언트 -- &gt; 응용 프로그램 카탈로그 웹 사이트 지점  
+###  <a name="BKMK_PortsClient-AppCatalogWebsitePoint"></a> クライアント -- > アプリケーション カタログ Web サイト ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTP(Hypertext Transfer Protocol)|--|80(참고 2, **대체 포트 사용 가능** 참조)|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443(참고 2, **대체 포트 사용 가능** 참조)|  
+|ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 2「**代替ポートを利用可能**」を参照)|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsClient-ClientWakeUp"></a> 클라이언트 -- &gt; 클라이언트  
- 다음 표에 나열된 포트와 더불어, 클라이언트에 절전 모드 해제 프록시가 구성된 경우 절전 모드 해제 프록시가 한 클라이언트에서 다른 클라이언트로의 ICMP(Internet Control Message Protocol) 에코 요청 메시지를 사용합니다.
+###  <a name="BKMK_PortsClient-ClientWakeUp"></a> クライアント -- &gt; クライアント  
+ ウェイクアップ プロキシ用にクライアントを構成するときに、ウェイクアップ プロキシは、次の表に示すポートに加え、1 つのクライアントから別のクライアントに対して Internet Control Message Protocol (ICMP) のエコー要求メッセージも使用します。
 
-이 통신은 네트워크의 다른 클라이언트 컴퓨터가 절전 모드에서 해제되었는지 여부를 확인하는 데 사용됩니다. ICMP는 TCP/IP Ping 명령이라고도 합니다. ICMP에는 UDP 또는 TCP 프로토콜 번호가 없으므로 다음 표에는 나와 있지 않습니다. 하지만 이러한 클라이언트 컴퓨터의 호스트 기반 방화벽이나 서브넷 내에 장애가 있는 네트워크 장치에서 ICMP 트래픽을 허용해야 절전 모드 해제 프록시 통신이 성공합니다.  
+この通信は、他のクライアント コンピューターがネットワークで起動しているかどうかを確認するために使用します。 ICMP は TCP/IP Ping コマンドとも呼ばれます。 ICMP には UDP または TCP プロトコル番号がないため、次の表には記載されていません。 ただし、サブネット内のこのようなクライアント コンピューターまたは介在するネットワーク デバイスに、ホストベースのファイアウォールがある場合、ウェイクアップ プロキシ通信が正常に実行されるように、そのファイアウォールで ICMP トラフィックを許可する必要があります。  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|Wake On LAN|9(참고 2, **대체 포트 사용 가능** 참조)|--|  
-|절전 모드 해제 프록시|25536(참고 2, **대체 포트 사용 가능** 참조)|--|  
+|Wake On LAN|9 (注 2「**代替ポートを利用可能**」を参照)|--|  
+|ウェイクアップ プロキシ|25536 (注 2「**代替ポートを利用可能**」を参照)|--|  
 
-###  <a name="BKMK_PortsClient-PolicyModule"></a> 클라이언트 -- &gt; Configuration Manager 정책 모듈(네트워크 장치 등록 서비스)  
+###  <a name="BKMK_PortsClient-PolicyModule"></a> クライアント -- &gt; Configuration Manager ポリシー モジュール (ネットワーク デバイス登録サービス)  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTP(Hypertext Transfer Protocol)||80|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443|  
+|ハイパーテキスト転送プロトコル (HTTP)||80|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|  
 
-###  <a name="BKMK_PortsClient-CloudDP"></a> 클라우드 -- &gt; 클라우드 기반 배포 지점  
+###  <a name="BKMK_PortsClient-CloudDP"></a>クライアント -- > クラウドベースの配布ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|  
 
-###  <a name="BKMK_PortsClient-DP"></a> 클라이언트 -- &gt; 배포 지점  
+###  <a name="BKMK_PortsClient-DP"></a>クライアント -- > 配布ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTP(Hypertext Transfer Protocol)|--|80(참고 2, **대체 포트 사용 가능** 참조)|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443(참고 2, **대체 포트 사용 가능** 참조)|  
+|ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 2「**代替ポートを利用可能**」を参照)|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsClient-DP2"></a> 클라이언트 -- &gt; 멀티캐스트에 구성된 배포 지점  
+###  <a name="BKMK_PortsClient-DP2"></a>クライアント -- > マルチキャスト向けに構成された配布ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
-|멀티캐스트 프로토콜|63000-64000|--|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
+|マルチキャスト プロトコル|63000-64000|--|  
 
-###  <a name="BKMK_PortsClient-DP3"></a> 클라이언트 -- &gt; PXE에 구성된 배포 지점  
+###  <a name="BKMK_PortsClient-DP3"></a> クライアント -- > PXE 向けに構成された配布ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|DHCP(Dynamic Host Configuration Protocol)|67 및 68|--|  
-|TFTP(Trivial File Transfer Protocol)|69(참고 4, **TFTP(Trivial FTP) 디먼** 참조)|--|  
-|BINL(Boot Information Negotiation Layer)|4011|--|  
+|動的ホスト構成プロトコル (DHCP)|67 および 68|--|  
+|簡易ファイル転送プロトコル (TFTP)|69 (注 4「**簡易 FTP (TFTP) デーモン**」を参照)|--|  
+|Boot Information Negotiation Layer (BINL)|4011|--|  
 
-###  <a name="BKMK_PortsClient-FSP"></a> 클라이언트 -- &gt; 대체 상태 지점  
+###  <a name="BKMK_PortsClient-FSP"></a> クライアント -- > フォールバック ステータス ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTP(Hypertext Transfer Protocol)|--|80(참고 2, **대체 포트 사용 가능** 참조)|  
+|ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsClient-GCDC"></a> 클라이언트 -- &gt; 글로벌 카탈로그 도메인 컨트롤러  
- Configuration Manager 클라이언트는 글로벌 카탈로그 서버가 작업 그룹 컴퓨터인 경우나 인터넷 전용 통신으로만 구성된 경우 글로벌 카탈로그 서버를 연결하지 않습니다.  
+###  <a name="BKMK_PortsClient-GCDC"></a> クライアント -- > グローバル カタログ ドメイン コントローラー  
+ Configuration Manager クライアントは、ワークグループ コンピューターである場合やインターネットのみの通信用に構成されている場合、グローバル カタログ サーバーに接続しません。  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|글로벌 카탈로그 LDAP|--|3268|  
-|글로벌 카탈로그 LDAP SSL|--|3269|  
+|グローバル カタログ LDAP|--|3268|  
+|グローバル カタログ LDAP SSL|--|3269|  
 
-###  <a name="BKMK_PortsClient-MP"></a> 클라이언트 -- &gt; 관리 지점  
+###  <a name="BKMK_PortsClient-MP"></a> クライアント -- > 管理ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|클라이언트 알림(HTTP 또는 HTTPS로 대체되기 이전의 기본 통신)|--|10123(참고 2, **대체 포트 사용 가능** 참조)|  
-|HTTP(Hypertext Transfer Protocol)|--|80(참고 2, **대체 포트 사용 가능** 참조)|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443(참고 2, **대체 포트 사용 가능** 참조)|  
+|クライアント通知 (代替で HTTP または HTTPS が使用される前の既定の通信)|--|10123 (注 2「**代替ポートを利用可能**」を参照)|  
+|ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 2「**代替ポートを利用可能**」を参照)|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsClient-SUP"></a> 클라이언트 -- &gt; 소프트웨어 업데이트 지점  
+###  <a name="BKMK_PortsClient-SUP"></a> クライアント -- > ソフトウェアの更新ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTP(Hypertext Transfer Protocol)|--|80 또는 8530 (참고 3 참조, **Windows Server Update Services**)|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443 또는 8531(참고 3 참조, **Windows Server Update Services**)|  
+|ハイパーテキスト転送プロトコル (HTTP)|--|80 または 8530 (注 3「 **Windows Server Update Services**」を参照)|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 または 8531 (注 3「 **Windows Server Update Services**」を参照)|  
 
-###  <a name="BKMK_PortsClient-SMP"></a> 클라이언트 -- &gt; 상태 마이그레이션 지점  
+###  <a name="BKMK_PortsClient-SMP"></a> クライアント -- > 状態移行ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTP(Hypertext Transfer Protocol)|--|80(참고 2, **대체 포트 사용 가능** 참조)|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443(참고 2, **대체 포트 사용 가능** 참조)|  
-|SMB(서버 메시지 블록)|--|445|  
+|ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 2「**代替ポートを利用可能**」を参照)|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「**代替ポートを利用可能**」を参照)|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
 
-###  <a name="BKMK_PortsConsole-Client"></a> Configuration Manager 콘솔 -- &gt; 클라이언트  
+###  <a name="BKMK_PortsConsole-Client"></a> Configuration Manager コンソール -- > クライアント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|원격 제어(제어)|--|2701|  
-|원격 지원(RDP 및 RTC)|--|3389|  
+|リモート コントロール (コントロール)|--|2701|  
+|リモート アシスタンス (RDP および RTC)|--|3389|  
 
-###  <a name="BKMK_PortsConsole-Internet"></a> Configuration Manager 콘솔 -- &gt; 인터넷  
+###  <a name="BKMK_PortsConsole-Internet"></a> Configuration Manager コンソール -- > インターネット  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTP(Hypertext Transfer Protocol)|--|80|  
+|ハイパーテキスト転送プロトコル (HTTP)|--|80|  
 
-###  <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager 콘솔 -- &gt; 보고 서비스 지점  
+###  <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager コンソール -- > レポート サービス ポイント  
 
 
-|설명|UDP|TCP|
+|説明|UDP|TCP|
 |-----------------|---------|---------|   
-|HTTP(Hypertext Transfer Protocol)|--|80(참고 2, **대체 포트 사용 가능** 참조)|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443(참고 2, **대체 포트 사용 가능** 참조)|  
+|ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 2「**代替ポートを利用可能**」を参照)|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsConsole-Site"></a> Configuration Manager 콘솔 -- &gt; 사이트 서버  
+###  <a name="BKMK_PortsConsole-Site"></a> Configuration Manager コンソール -- > サイト サーバー  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|RPC(공급자 시스템을 찾기 위해 초기에 WMI에 연결)|--|135|  
+|RPC (プロバイダー システムを特定するための WMI への初期接続)|--|135|  
 
-###  <a name="BKMK_PortsConsole-Provider"></a> Configuration Manager 콘솔 -- &gt; SMS 공급자  
+###  <a name="BKMK_PortsConsole-Provider"></a> Configuration Manager コンソール -- > SMS プロバイダー  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|RPC 끝점 매퍼|135|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_PortsCertificateRegistationPoint_PolicyModule"></a> Configuration Manager 정책 모듈(네트워크 장치 등록 서비스) -- &gt; 인증서 등록 지점  
+###  <a name="BKMK_PortsCertificateRegistationPoint_PolicyModule"></a> Configuration Manager ポリシー モジュール (ネットワーク デバイス登録サービス) -- > 証明書登録ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443(참고 2, **대체 포트 사용 가능** 참조)|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsDist_MP"></a> 배포 지점 -- &gt; 관리 지점  
- 배포 지점은 다음과 같은 시나리오에서 관리 지점과 통신합니다.  
+###  <a name="BKMK_PortsDist_MP"></a> 配布ポイント --> 管理ポイント  
+ 配布ポイントは次のシナリオで管理ポイントと通信します。  
 
--   사전 준비된 콘텐츠의 상태를 보고하려면  
+-   事前設定されたコンテンツのステータスをレポートする  
 
--   사용 요약 데이터 보고  
+-   使用状況の概要データをレポートする  
 
--   콘텐츠 유효성 검사 보고  
+-   コンテンツの検証をレポートする  
 
--   패키지 다운로드(풀(pull) 배포 지점)의 상태를 보고하려면
+-   パッケージのダウンロード (プル配布ポイント) のステータスをレポートする
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTP(Hypertext Transfer Protocol)|--|80(참고 2, **대체 포트 사용 가능** 참조)|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443(참고 2, **대체 포트 사용 가능** 참조)|  
+|ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 2「**代替ポートを利用可能**」を参照)|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsEndpointProtection_Internet"></a> Endpoint Protection 지점 -- &gt; 인터넷  
+###  <a name="BKMK_PortsEndpointProtection_Internet"></a> Endpoint Protection ポイント -- > インターネット  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTP(Hypertext Transfer Protocol)|--|80|  
+|ハイパーテキスト転送プロトコル (HTTP)|--|80|  
 
-###  <a name="BKMK_PortsEP-to-SQL"></a> Endpoint Protection 지점 -- &gt; SQL Server  
+###  <a name="BKMK_PortsEP-to-SQL"></a> Endpoint Protection ポイント -- > SQL Server  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433(참고 2, **대체 포트 사용 가능** 참조)|  
+|SQL over TCP|--|1433 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsEnrollmentProxyEnrollmentPoint"></a> 등록 프록시 지점 -- &gt; 등록 지점  
+###  <a name="BKMK_PortsEnrollmentProxyEnrollmentPoint"></a> 登録プロキシ ポイント -- > 登録ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443(참고 2, **대체 포트 사용 가능** 참조)|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsEnrollmentEnrollmentSQL"></a> 등록 지점 -- &gt; SQL Server  
+###  <a name="BKMK_PortsEnrollmentEnrollmentSQL"></a> 登録ポイント -- > SQL Server  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433(참고 2, **대체 포트 사용 가능** 참조)|  
+|SQL over TCP|--|1433 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsExchangeConnectorHosted"></a> Exchange Server 커넥터 -- &gt; Exchange Online  
+###  <a name="BKMK_PortsExchangeConnectorHosted"></a> Exchange Server コネクタ -- &gt; Exchange Online  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTPS를 통한 Windows 원격 관리|--|5986|  
+|HTTPS 経由の Windows リモート管理|--|5986|  
 
-###  <a name="BKMK_PortsExchangeConnectorOnPrem"></a> Exchange Server 커넥터 -- &gt; 온-프레미스 Exchange Server  
+###  <a name="BKMK_PortsExchangeConnectorOnPrem"></a> Exchange Server コネクタ -- > 社内の Exchange Server  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTP를 통한 Windows 원격 관리|--|5985|  
+|HTTP 経由の Windows リモート管理|--|5985|  
 
-###  <a name="BKMK_PortsMacEnrollmentProxyPoint"></a> Mac 컴퓨터 -- &gt; 등록 프록시 지점  
+###  <a name="BKMK_PortsMacEnrollmentProxyPoint"></a> Mac コンピューター -- > 登録プロキシ ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|  
 
-###  <a name="BKMK_PortsMP-DC"></a> 관리 지점 -- &gt; 도메인 컨트롤러  
+###  <a name="BKMK_PortsMP-DC"></a> 管理ポイント -- > ドメイン コントローラー  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|LDAP(Lightweight Directory Access Protocol)|--|389|  
-|LDAP(SSL[Secure Sockets Layer] 연결)|636|636|  
-|글로벌 카탈로그 LDAP|--|3268|  
-|글로벌 카탈로그 LDAP SSL|--|3269|  
-|RPC 끝점 매퍼|135|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
+|ライトウェイト ディレクトリ アクセス プロトコル (LDAP)|--|389|  
+|LDAP (Secure Sockets Layer [SSL] 接続)|636|636|  
+|グローバル カタログ LDAP|--|3268|  
+|グローバル カタログ LDAP SSL|--|3269|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_PortsMP-Site"></a> 관리 지점 &lt; -- &gt; 사이트 서버  
- (참고 5 참조, **사이트 서버 및 사이트 시스템 간 통신**)  
+###  <a name="BKMK_PortsMP-Site"></a> 管理ポイント &lt; -- > サイト サーバー  
+ (注 5「 **サイト サーバーとサイト システムの間の通信**」を参照)  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|RPC 끝점 매퍼|--|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
-|SMB(서버 메시지 블록)|--|445|  
+|RPC エンドポイント マッパー|--|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
 
-###  <a name="BKMK_PortsMP-SQL"></a> 관리 지점 -- &gt; SQL Server  
+###  <a name="BKMK_PortsMP-SQL"></a> 管理ポイント -- > SQL Server  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433(참고 2, **대체 포트 사용 가능** 참조)|  
+|SQL over TCP|--|1433 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsMobileDeviceClient-EnrollmentProxyPoint"></a> 모바일 장치 -- &gt; 등록 프록시 지점  
+###  <a name="BKMK_PortsMobileDeviceClient-EnrollmentProxyPoint"></a> モバイル デバイス -- > 登録プロキシ ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|  
 
-###  <a name="BKMK_PortsMobileDeviceClient-WindowsIntune"></a> 모바일 장치 -- &gt; Microsoft Intune  
+###  <a name="BKMK_PortsMobileDeviceClient-WindowsIntune"></a> モバイル デバイス -- > Microsoft Intune  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|  
 
-###  <a name="BKMK_PortsRSP-SQL"></a> 보고 서비스 지점 -- &gt; SQL Server  
+###  <a name="BKMK_PortsRSP-SQL"></a> レポート サービス ポイント -- > SQL Server  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433(참고 2, **대체 포트 사용 가능** 참조)|  
+|SQL over TCP|--|1433 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsIntuneConnector-WindowsIntune"></a> 서비스 연결 지점 -- &gt; Microsoft Intune  
+###  <a name="BKMK_PortsIntuneConnector-WindowsIntune"></a> サービス接続ポイント -- > Microsoft Intune  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443|
-서비스 연결 지점에 대한 자세한 내용은 [인터넷 액세스 요구 사항](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls)을 참조하세요.
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|
+詳細については、サービス接続ポイントの[インターネット アクセス要件](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls)を参照してください。
 
-###  <a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> 사이트 서버 &lt; -- &gt; 응용 프로그램 카탈로그 웹 서비스 지점  
+###  <a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> サイト サーバー &lt; -- > アプリケーション カタログ Web サービス ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
-|RPC 끝점 매퍼|135|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_PortsAppCatalogWebSitePoint_SiteServer"></a> 사이트 서버 &lt; -- &gt; 응용 프로그램 카탈로그 웹 사이트 지점  
+###  <a name="BKMK_PortsAppCatalogWebSitePoint_SiteServer"></a> サイト サーバー &lt; -- > アプリケーション カタログ Web サイト ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
-|RPC 끝점 매퍼|135|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_PortsSite-AISP"></a> 사이트 서버 &lt; -- &gt; Asset Intelligence 동기화 지점  
+###  <a name="BKMK_PortsSite-AISP"></a> サイト サーバー &lt; -- > 資産インテリジェンス同期ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
-|RPC 끝점 매퍼|135|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_PortsSite-Client"></a> 사이트 서버 -- &gt; 클라이언트  
+###  <a name="BKMK_PortsSite-Client"></a> サイト サーバー -- > クライアント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|Wake On LAN|9(참고 2, **대체 포트 사용 가능** 참조)|--|  
+|Wake On LAN|9 (注 2「**代替ポートを利用可能**」を参照)|--|  
 
-###  <a name="BKMK_PortsSiteServer-CloudDP"></a> 사이트 서버 -- &gt; 클라우드 기반 배포 지점  
+###  <a name="BKMK_PortsSiteServer-CloudDP"></a> サイト サーバー -- > クラウドベースの配布ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|  
 
-###  <a name="BKMK_PortsSite-DP"></a> 사이트 서버 -- &gt; 배포 지점  
- (참고 5 참조, **사이트 서버 및 사이트 시스템 간 통신**)  
+###  <a name="BKMK_PortsSite-DP"></a> サイト サーバー -- > 配布ポイント  
+ (注 5「 **サイト サーバーとサイト システムの間の通信**」を参照)  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
-|RPC 끝점 매퍼|135|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_PortsSite-DC"></a> 사이트 서버 -- &gt; 도메인 컨트롤러  
+###  <a name="BKMK_PortsSite-DC"></a> サイト サーバー -- > ドメイン コントローラー  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|LDAP(Lightweight Directory Access Protocol)|--|389|  
-|LDAP(SSL[Secure Sockets Layer] 연결)|636|636|  
-|글로벌 카탈로그 LDAP|--|3268|  
-|글로벌 카탈로그 LDAP SSL|--|3269|  
-|RPC 끝점 매퍼|135|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
+|ライトウェイト ディレクトリ アクセス プロトコル (LDAP)|--|389|  
+|LDAP (Secure Sockets Layer [SSL] 接続)|636|636|  
+|グローバル カタログ LDAP|--|3268|  
+|グローバル カタログ LDAP SSL|--|3269|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_PortsCertificateRegistrationPoint_SiteServer"></a> 사이트 서버 &lt; -- &gt; 인증서 등록 지점  
+###  <a name="BKMK_PortsCertificateRegistrationPoint_SiteServer"></a> サイト サーバー &lt; -- > 証明書登録ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
-|RPC 끝점 매퍼|135|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_PortsEndpointProtection_SiteServer"></a> 사이트 서버 &lt; -- &gt; Endpoint Protection 지점  
+###  <a name="BKMK_PortsEndpointProtection_SiteServer"></a> サイト サーバー &lt; -- > Endpoint Protection ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
-|RPC 끝점 매퍼|135|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_EnrollmentPoint_SiteServer"></a> 사이트 서버 &lt; -- &gt; 등록 지점  
+###  <a name="BKMK_EnrollmentPoint_SiteServer"></a> サイト サーバー &lt; -- > 登録ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
-|RPC 끝점 매퍼|135|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_EnrollmentProxyPoint_SiteServer"></a> 사이트 서버 &lt; -- &gt; 등록 프록시 지점  
+###  <a name="BKMK_EnrollmentProxyPoint_SiteServer"></a> サイト サーバー &lt; -- > 登録プロキシ ポイント  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
-|RPC 끝점 매퍼|135|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_PortsSite-FSP"></a> 사이트 서버 &lt; -- &gt; 대체 상태 지점  
- (참고 5 참조, **사이트 서버 및 사이트 시스템 간 통신**)  
+###  <a name="BKMK_PortsSite-FSP"></a> サイト サーバー &lt; -- > フォールバック ステータス ポイント  
+ (注 5「 **サイト サーバーとサイト システムの間の通信**」を参照)  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
-|RPC 끝점 매퍼|135|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_PortSite-Internet"></a> 사이트 서버 -- &gt; 인터넷  
+###  <a name="BKMK_PortSite-Internet"></a> サイト サーバー -- > インターネット  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTP(Hypertext Transfer Protocol)|--|80(참고 1, **프록시 서버 포트** 참조)|  
+|ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 1「**プロキシ サーバーのポート**」を参照)|  
 
-###  <a name="BKMK_PortsIssuingCA_SiteServer"></a> 사이트 서버 &lt; -- &gt; 발급 CA(인증 기관)  
- 이 통신은 인증서 등록 지점을 사용하여 인증서 프로필을 배포할 때 사용됩니다. 이 통신은 계층 구조의 모든 사이트 서버에 사용되지 않고 계층 구조의 최상위에 있는 사이트 서버에만 사용됩니다.  
+###  <a name="BKMK_PortsIssuingCA_SiteServer"></a> サイト サーバー &lt; -- > 発行元の証明機関 (CA)  
+ この通信は、証明書登録ポイントを使用して、証明書プロファイルを展開するときに使用します。 通信は階層内のすべてのサイト サーバーで使用されるわけではありません。 代わりに、階層の最上位のサイト サーバーでのみ使用されます。  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|RPC 끝점 매퍼|135|135|  
-|RPC(DCOM)|--|동적(참고 6 참조, **동적 포트**)|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC (DCOM)|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_PortsSite-RSP"></a> 사이트 서버 &lt; -- &gt; 보고 서비스 지점  
- (참고 5 참조, **사이트 서버 및 사이트 시스템 간 통신**)  
+###  <a name="BKMK_PortsSite-RSP"></a> サイト サーバー &lt; -- > レポート サービス ポイント  
+ (注 5「 **サイト サーバーとサイト システムの間の通信**」を参照)  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
-|RPC 끝점 매퍼|135|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_PortsSite-Site"></a> 사이트 서버 &lt; -- &gt; 사이트 서버  
+###  <a name="BKMK_PortsSite-Site"></a> サイト サーバー &lt; -- > サイト サーバー  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
 
-###  <a name="BKMK_PortsSite-SQL"></a> 사이트 서버 -- &gt; SQL Server  
+###  <a name="BKMK_PortsSite-SQL"></a> サイト サーバー -- > SQL Server  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433(참고 2, **대체 포트 사용 가능** 참조)|  
+|SQL over TCP|--|1433 (注 2「**代替ポートを利用可能**」を参照)|  
 
- 원격 SQL Server를 사용하여 사이트 데이터베이스를 호스트하는 사이트 설치 중 사이트 서버와 SQL Server 간에 다음과 같은 포트를 열어야 합니다.  
+ サイト データベースをリモート SQL Server でホストするサイトをインストールするときに、サイト サーバーと SQL Server 間の次のポートを開く必要があります。  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
-|RPC 끝점 매퍼|135|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_PortsSite-Provider"></a> 사이트 서버 -- &gt; SMS 공급자  
+###  <a name="BKMK_PortsSite-Provider"></a> サイト サーバー -- > SMS プロバイダー  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
-|RPC 끝점 매퍼|135|135|  
-|RPC|--|동적(참고 6 참조, **동적 포트**)|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
+|RPC エンドポイント マッパー|135|135|  
+|RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
-###  <a name="BKMK_PortsSite-SUP"></a> 사이트 서버 &lt; -- &gt; 소프트웨어 업데이트 지점  
- (참고 5 참조, **사이트 서버 및 사이트 시스템 간 통신**)  
+###  <a name="BKMK_PortsSite-SUP"></a> サイト サーバー &lt; -- > ソフトウェアの更新ポイント  
+ (注 5「 **サイト サーバーとサイト システムの間の通信**」を参照)  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
-|HTTP(Hypertext Transfer Protocol)|--|80 또는 8530 (참고 3 참조, **Windows Server Update Services**)|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443 또는 8531(참고 3 참조, **Windows Server Update Services**)|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
+|ハイパーテキスト転送プロトコル (HTTP)|--|80 または 8530 (注 3「 **Windows Server Update Services**」を参照)|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 または 8531 (注 3「 **Windows Server Update Services**」を参照)|  
 
-###  <a name="BKMK_PortsSite-SMP"></a> 사이트 서버 &lt; -- &gt; 상태 마이그레이션 지점  
- (참고 5 참조, **사이트 서버 및 사이트 시스템 간 통신**)  
+###  <a name="BKMK_PortsSite-SMP"></a> サイト サーバー &lt; -- > 状態移行ポイント  
+ (注 5「 **サイト サーバーとサイト システムの間の通信**」を参照)  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
-|RPC 끝점 매퍼|135|135|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
+|RPC エンドポイント マッパー|135|135|  
 
-###  <a name="BKMK_PortsProvider-SQL"></a> SMS 공급자 -- &gt; SQL Server  
+###  <a name="BKMK_PortsProvider-SQL"></a> SMS プロバイダー -- &gt; SQL Server  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433(참고 2, **대체 포트 사용 가능** 참조)|  
+|SQL over TCP|--|1433 (注 2「**代替ポートを利用可能**」を参照)|  
 
-###  <a name="BKMK_PortsSUP-Internet"></a> 소프트웨어 업데이트 지점 -- &gt; 인터넷  
+###  <a name="BKMK_PortsSUP-Internet"></a> ソフトウェアの更新ポイント -- > インターネット  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTP(Hypertext Transfer Protocol)|--|80(참고 1, **프록시 서버 포트** 참조)|  
+|ハイパーテキスト転送プロトコル (HTTP)|--|80 (注 1「**プロキシ サーバーのポート**」を参照)|  
 
-###  <a name="BKMK_PortsSUP-WSUS"></a> 소프트웨어 업데이트 지점 -- &gt; 업스트림 WSUS 서버  
+###  <a name="BKMK_PortsSUP-WSUS"></a> ソフトウェアの更新ポイント -- > 上流の WSUS サーバー  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|HTTP(Hypertext Transfer Protocol)|--|80 또는 8530 (참고 3 참조, **Windows Server Update Services**)|  
-|HTTPS(Secure Hypertext Transfer Protocol)|--|443 또는 8531(참고 3 참조, **Windows Server Update Services**)|  
+|ハイパーテキスト転送プロトコル (HTTP)|--|80 または 8530 (注 3「 **Windows Server Update Services**」を参照)|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443 または 8531 (注 3「 **Windows Server Update Services**」を参照)|  
 
-###  <a name="BKMK_PortsSQL-SQL"></a> SQL Server-- &gt; SQL Server  
- 사이트 간 데이터베이스 복제를 사용하려면 해당 부모 또는 자식 사이트의 SQL Server와 직접 통신하는 한 사이트에 SQL Server를 설치해야 합니다.  
+###  <a name="BKMK_PortsSQL-SQL"></a> SQL Server --&gt; SQL Server  
+ サイト間のデータベース レプリケーションでは、1 つのサイトの SQL Server がその親または子のサイトの SQL Server と直接通信する必要があります。  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL Server 서비스|--|1433(참고 2, **대체 포트 사용 가능** 참조)|  
-|SQL Server Service Broker|--|4022(참고 2, **대체 포트 사용 가능** 참조)|  
+|SQL Server サービス|--|1433 (注 2「**代替ポートを利用可能**」を参照)|  
+|SQL Server Service Broker|--|4022 (注 2「**代替ポートを利用可能**」を参照)|  
 
 > [!TIP]  
->  Configuration Manager에는 UDP 1434 포트를 사용하는 SQL Server Browser가 필요하지 않습니다.  
+>  Configuration Manager では、SQL Server Browser は必要ありません。SQL Server Browser は、UDP ポート 1434 を使用します。  
 
-###  <a name="BKMK_PortsStateMigrationPoint-to-SQL"></a> 상태 마이그레이션 지점 --&gt; SQL Server  
+###  <a name="BKMK_PortsStateMigrationPoint-to-SQL"></a> 状態移行ポイント --> SQL Server  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SQL over TCP|--|1433(참고 2, **대체 포트 사용 가능** 참조)|  
+|SQL over TCP|--|1433 (注 2「**代替ポートを利用可能**」を参照)|  
 
 
 
-###  <a name="BKMY_PortNotes"></a> Configuration Manager 클라이언트 및 사이트 시스템에 사용되는 포트에 대한 참고 사항  
+###  <a name="BKMY_PortNotes"></a> Configuration Manager クライアントとサイト システムで使用されるポートのメモ  
 
-1.  **프록시 서버 포트**: 이 포트는 구성할 수 없지만 구성된 프록시 서버를 통해 라우팅될 수 있습니다.  
+1.  **プロキシ サーバーのポート**: このポートは構成できませんが、構成されたプロキシ サーバーを経由してルーティングすることができます。  
 
-2.  **대체 포트 사용 가능**: 이 값에 대해 Configuration Manager 내에서 대체 포트를 정의할 수 있습니다. 사용자 지정 포트가 정의된 경우 IPsec 정책 또는 방화벽 구성의 IP 필터 정보를 정의할 때 해당 사용자 지정 포트를 대체해야 합니다.  
+2.  **代替ポートを利用可能**: この値に対して代替ポートを Configuration Manager 内で定義できます。 カスタム ポートを定義済みの場合、IPsec ポリシーまたはファイアウォールの構成用の IP フィルター情報を定義するときは、そのカスタム ポートを代わりに使用してください。  
 
-3.  **WSUS(Windows Server Update Services)**: 클라이언트 통신용으로 포트 80/443 또는 포트 8530/8531에 WSUS를 설치할 수 있습니다. Windows Server 2012 또는 Windows Server 2016에서 실행하는 WSUS는 기본적으로 HTTP에는 포트 8530을 사용하고 HTTPS에는 포트 8531을 사용하도록 구성됩니다.  
+3.  **Windows Server Update Services (WSUS)**: WSUS をインストールする際、クライアント接続用にポート 80/443 を使用するかポート 8530/8531 を使用するかを選択できます。 Windows Server 2012 または Windows Server 2016 で WSUS を実行する場合、WSUS は既定で HTTP にはポート 8530 を、HTTPS にはポート 8531 を使うように構成されています。  
 
-     설치한 후에 포트를 변경할 수 있습니다. 사이트 계층 전체에 같은 포트 번호를 사용할 필요가 없습니다.  
+     インストール後にポートを変更できます。 サイト階層全体で同じポート番号を使用する必要はありません。  
 
-    -   HTTP 포트가 80이면 HTTPS 포트는 443이어야 합니다.  
+    -   HTTP ポートが 80 の場合、HTTPS ポートは 443 の必要があります。  
 
-    -   HTTP 포트가 80이 아니면 HTTPS 포트는 HTTP 포트보다 1 이상 커야 합니다. 예를 들어 HTTP 포트는 8530이고 HTTPS 포트는 8531일 수 있습니다.   
+    -   HTTP ポートがその他の場合、HTTPS ポートは 1 大きくする必要があります (8530 と 8531 など)。   
 
     > [!NOTE]  
-    >  HTTPS를 사용하도록 소프트웨어 업데이트 지점을 구성할 경우 HTTP 포트도 열려 있어야 합니다. 특정 업데이트에 대한 EULA와 같은 암호화되지 않은 데이터는 HTTP 포트를 사용합니다.  
+    >  HTTPS を使用するようソフトウェアの更新ポイントを構成するときには、HTTP ポートも開いている必要があります。 特定の更新プログラムの使用許諾契約書などの暗号化されていないデータは、HTTP ポートを使用します。  
 
-4.  **TFTP(Trivial FTP) 디먼**: TFTP(Trivial FTP) 디먼 시스템 서비스에는 사용자 이름 또는 암호가 필요하지 않으며, 해당 디먼 시스템 서비스는 WDS(Windows 배포 서비스)의 필수적인 부분입니다. Trivial FTP 디먼 서비스는 다음 RFC로 정의된 TFTP 프로토콜을 지원합니다.  
+4.  **簡易 FTP (TFTP) デーモン**: 簡易 FTP (TFTP) デーモン システム サービスは、Windows 展開サービス (WDS) で不可欠な要素で、ユーザー名やパスワードを必要としません。 簡易 FTP デーモン サービスでは、次の RFC で定義されている TFTP プロトコルのサポートを実装しています。  
 
     -   RFC 350: TFTP  
 
-    -   RFC 2347: 옵션 확장  
+    -   RFC 2347: オプションの拡張  
 
-    -   RFC 2348: 블록 크기 옵션  
+    -   RFC 2348: ブロック サイズのオプション  
 
-    -   RFC 2349: 시간 제한 간격 및 전송 크기 옵션  
+    -   RFC 2349: タイムアウト間隔、および転送サイズのオプション  
 
-     Trivial FTP(File Transfer Protocol)는 디스크 없이 부팅하는 환경을 지원하기 위해 설계합니다. TFTP 디먼은 UDP 포트 69를 수신하지만 동적으로 할당된 높은 포트에서 응답합니다. 그러므로 이 포트를 사용하면 TFTP 서비스는 들어오는 TFTP 요청을 수신할 수 있지만 선택한 서버는 해당 요청에 응답할 수 없습니다. 포트 69에서 응답하도록 TFTP 서버를 구성하지 않으면 선택한 서버가 인바운드 TFTP 요청에 응답하도록 설정할 수 없습니다.  
+     TFTP は、ディスクレス ブート環境をサポートするように設計されています。 TFTP デーモンは、UDP ポート 69 でリッスンしますが、動的に割り当てられた高次のポートから応答します。 そのため、このポートを有効にすると、TFTP サービスは着信 TFTP 要求を受信できるようになりますが、選択したサーバーがそれらの要求に応答することはできません。 TFTP サーバーがポート 69 から応答するように構成しなければ、選択したサーバーが着信 TFTP 要求に応答するようにできません。  
 
-5.  **사이트 서버 및 사이트 시스템 간 통신**: 기본적으로 사이트 서버와 사이트 시스템 간 통신은 양방향 통신입니다. 사이트 서버는 통신을 시작하여 사이트 시스템을 구성합니다. 그런 다음 대부분의 사이트 시스템은 사이트 서버로 다시 연결하여 상태 정보를 보냅니다. 보고 서비스 지점 및 배포 지점은 상태 정보를 보내지 않습니다. 사이트 시스템을 설치한 후 사이트 시스템 속성에 대해 **이 사이트 시스템의 연결을 시작하려면 사이트 서버 필요**를 선택하면 사이트 시스템이 사이트 서버와의 통신을 시작하지 않습니다. 대신, 사이트 서버는 통신을 시작하고 사이트 시스템 서버에 대한 인증에 사이트 시스템 설치 계정을 사용합니다.  
+5.  **サイト サーバーとサイト システムの間の通信**: 既定では、サイト サーバーとサイト システムの間の通信は双方向です。 サイト サーバーが通信を開始してサイト システムを構成し、次にほとんどのサイト システムはサイト サーバーに接続してステータス情報を送り返します。 レポート サービス ポイントおよび配布ポイントは、ステータス情報を送信しません。 サイト システムのプロパティで [**サイト サーバーがこのサイト システムへの接続を開始する必要がある**] を選択した場合、サイト システムのインストール後、サイト システムがサイト サーバーとの通信を開始しません。 代わりに、サイト サーバーが通信を開始し、サイト システム サーバーに対する認証用にサイト システムのインストール アカウントを使用します。  
 
-6.  **동적 포트**: 동적 포트(사용 후 삭제 포트라고도 함)는 운영 체제 버전에 정의된 포트 번호 범위를 사용합니다. 기본 포트 범위에 대한 자세한 내용은 [Windows 서버 시스템의 서비스 개요 및 네트워크 포트 요구 사항](http://go.microsoft.com/fwlink/p/?LinkId=317965)을 참조하세요.  
+6.  **動的ポート**: 動的ポート (または一時ポート) は、ポート番号の範囲を使用します。この範囲は、オペレーティング システムのバージョンによって定義されています。 既定のポート範囲の詳細については、「 [Windows のサービス概要およびネットワーク ポート要件](http://go.microsoft.com/fwlink/p/?LinkId=317965)」を参照してください。  
 
-##  <a name="BKMK_AdditionalPorts"></a> 추가 포트 목록  
- 다음 섹션에서는 Configuration Manager에 사용되는 포트에 대해 추가 정보를 제공합니다.  
+##  <a name="BKMK_AdditionalPorts"></a> その他のポートの一覧  
+ 次のセクションには、Configuration Manager により使用されるポートに関する追加情報が記載されています。  
 
-###  <a name="BKMK_ClientShares"></a> 클라이언트-서버 공유  
- 클라이언트는 UNC 공유에 연결할 때마다 SMB(Server Message Block)를 사용합니다. 예를 들면 다음과 같습니다.  
+###  <a name="BKMK_ClientShares"></a> クライアントからサーバーへの共有  
+ クライアントは、UNC 共有に接続するたびにサーバー メッセージ ブロック (SMB) を使用します。 たとえば、  
 
--   CCMSetup.exe **/source:** 명령줄 속성을 지정하는 수동 클라이언트 설치  
+-   CCMSetup.exe **/source:** コマンド ライン プロパティを指定する手動クライアント インストール  
 
--   UNC 경로에서 정의 파일을 다운로드하는 Endpoint Protection 클라이언트
+-   UNC パスから定義ファイルをダウンロードする Endpoint Protection クライアント
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|SMB(서버 메시지 블록)|--|445|  
+|サーバー メッセージ ブロック (SMB)|--|445|  
 
-###  <a name="BKMK_SQLPorts"></a> Microsoft SQL Server에 연결  
- SQL Server 데이터베이스 엔진에 대한 통신 및 사이트 간 복제의 경우 기본 SQL Server 포트를 사용하거나 다음과 같이 사용자 지정 포트를 지정할 수 있습니다.  
+###  <a name="BKMK_SQLPorts"></a> Microsoft SQL Server への接続  
+ SQL Server データベース エンジンとの通信、およびサイト間のレプリケーションには、SQL Server の既定ポートを使用することも、カスタム ポートを指定することもできます。  
 
--   사이트 간 통신에서는 다음을 사용합니다.  
+-   サイト間通信では、次のポートが使用されます。  
 
-    -   포트 TCP 4022를 기본값으로 사용하는 SQL Server Service Broker  
+    -   SQL Server Service Broker では、既定のポート TCP 4022 が使用されます。  
 
-    -   포트 TCP 1433을 기본값으로 사용하는 SQL Server 서비스  
+    -   SQL Server サービスでは、既定のポート TCP 1433 が使用されます。  
 
--   SQL Server 데이터베이스 엔진 및 다양한 Configuration Manager 사이트 시스템 역할 사이에서 사이트 간 통신은 포트 TCP 1433을 기본값으로 사용합니다.  
+-   SQL Server データベース エンジンとさまざまな Configuration Manager サイト システムの役割の間のサイト内通信では、既定でポート TCP 1433 が使用されます。  
 
-- Configuration Manager는 사이트 데이터베이스를 호스트하는 각 SQL 가용성 그룹 복제본과 통신할 때 각 복제본이 독립 실행형 SQL Server 인스턴스인 것처럼 동일한 포트와 프로토콜을 사용합니다.
+- Configuration Manager は、サイト データベースをホストする各 SQL 可用性グループ レプリカがスタンドアロン SQL Server インスタンスであるかのように、同じポートとプロトコルを利用して各レプリカと通信します。
 
-Azure를 사용하고 사이트 데이터베이스가 내부 또는 외부 부하 분산 장치 뒤에 있는 경우에는 각 복제본에서 다음 방화벽 예외를 구성하고 다음 포트에 대한 부하 분산 규칙을 추가합니다.
+Azure を利用するとき、サイト データベースが内部または外部の負荷分散装置の後ろにある場合は、各レプリカで次のファイアウォール例外を設定し、次のポートに負荷分散ルールを追加します。
  - SQL over TCP: TCP 1433
  - SQL Server Service Broker: TCP 4022
- - SMB(서버 메시지 블록): TCP 445
- - RPC 끝점 매퍼: TCP 135
+ - サーバー メッセージ ブロック (SMB): TCP 445
+ - RPC エンドポイント マッパー: TCP 135
 
 > [!WARNING]  
->  Configuration Manager는 동적 포트를 지원하지 않습니다. 기본적으로 SQL Server 명명된 인스턴스는 데이터베이스 엔진에 대한 연결에 동적 포트를 사용하므로 명명된 인스턴스를 사용하는 경우 사이트 간 통신에 사용하려는 정적 포트를 수동으로 구성해야 합니다.  
+>  Configuration Manager は、動的ポートをサポートしていません。 SQL Server 名前付きインスタンスの既定動作では、データベース エンジンへの接続に動的ポートが使用されるため、名前付きインスタンスの使用時に、サイト内通信に使用する静的ポートを手動で構成する必要があります。  
 
- 다음 사이트 시스템 역할은 SQL Server 데이터베이스와 직접 통신합니다.  
+ 次のサイト システムの役割は、SQL Server データベースと直接通信します。  
 
--   응용 프로그램 카탈로그 웹 서비스 지점  
+-   アプリケーション カタログ Web サービス ポイント  
 
--   인증서 등록 지점 역할  
+-   証明書登録ポイントの役割  
 
--   등록 지점 역할  
+-   登録ポイントの役割  
 
--   관리 지점  
+-   管理ポイント  
 
--   사이트 서버  
+-   サイト サーバー  
 
--   보고 서비스 지점  
+-   レポート サービス ポイント  
 
--   사이트 데이터베이스  
+-   SMS プロバイダー  
 
--   SQL Server-- > SQL Server  
+-   SQL Server --> SQL Server  
 
-SQL Server는 둘 이상의 사이트에 있는 데이터베이스를 호스팅하는 경우 각 데이터베이스는 별도의 SQL Server 인스턴스를 사용해야 하며 각 인스턴스는 고유 포트로 구성해야 합니다.  
+SQL Server が複数のサイトからデータベースをホストする場合、各データベースは個別の SQL Server インスタンスを使用する必要があり、各インスタンスは一意のポート セットで構成されなければなりません。  
 
-SQL Server 컴퓨터에서 방화벽이 사용되는 경우 배포에서 사용 중인 포트를 허용하도록 방화벽을 구성해야 합니다. 또한 SQL Server와 통신하는 컴퓨터 간 네트워크의 다른 위치에 있는 방화벽도 동일한 포트를 허용하도록 구성합니다.  
+SQL Server コンピューターでファイアウォールを有効にしている場合は、展開で使用するポートを許可するように構成されていることを確認します。 また、SQL Server と通信するコンピューター間のネットワーク上の他の場所にあるファイアウォールもこれらの同じポートを許可するように構成します。  
 
-특정 포트를 사용하도록 SQL Server를 구성하는 방법의 예제는 SQL Server TechNet 라이브러리에서 [방법: 특정 TCP 포트로 수신하도록 서버 구성(SQL Server 구성 관리자)](http://go.microsoft.com/fwlink/p/?LinkID=226349) 을 참조하세요.  
-
-
-### <a name="bkmk_discovery"> </a> 검색 및 게시
-다음은 사이트 정보의 검색 및 게시에 사용되는 포트입니다.
- - LDAP(Lightweight Directory Access Protocol): 389
- - LDAP(SSL[Secure Sockets Layer] 연결): 636
+特定のポートを使用するように SQL Server を構成する方法の例については、SQL Server TechNet ライブラリの「 [特定の TCP ポートで受信待ちするようにサーバーを構成する方法 (SQL Server 構成マネージャー)](http://go.microsoft.com/fwlink/p/?LinkID=226349) 」を参照してください。  
 
 
- - 글로벌 카탈로그 LDAP: 3268
- - 글로벌 카탈로그 LDAP SSL: 3269
+### <a name="bkmk_discovery"> </a> 検出と公開
+次のポートは、サイト情報の検出と公開に使用されます。
+ - ライトウェイト ディレクトリ アクセス プロトコル (LDAP) : 389
+ - LDAP (Secure Sockets Layer [SSL] 接続) : 636
 
 
- - RPC 끝점 매퍼: 135
- - RPC: 동적으로 할당된 높은 TCP 포트
+ - グローバル カタログ LDAP : 3268
+ - グローバル カタログ LDAP SSL : 3269
+
+
+ - RPC エンドポイント マッパー: 135
+ - RPC : 動的に割り当てられた高 TCP ポート
 
 
  - TCP: 1024: 5000
  - TCP: 49152: 65535
 
 
-###  <a name="BKMK_External"></a> Configuration Manager에서 수행하는 외부 연결  
- Configuration Manager 클라이언트 또는 사이트 시스템은 다음 외부 연결을 설정할 수 있습니다.  
+###  <a name="BKMK_External"></a> Configuration Manager により確立される外部接続  
+ Configuration Manager クライアントまたはサイト システムは、次の外部接続を実行できます。  
 
--   [Asset Intelligence 동기화 지점 -- &gt; Microsoft](#BKMK_PortsAI)  
+-   [資産インテリジェンス同期ポイント -- &gt; Microsoft](#BKMK_PortsAI)  
 
--   [Endpoint Protection 지점 -- &gt; 인터넷](#BKMK_PortsEndpointProtection_Internet)  
+-   [Endpoint Protection ポイント -- &gt; インターネット](#BKMK_PortsEndpointProtection_Internet)  
 
--   [클라이언트 -- &gt; 글로벌 카탈로그 도메인 컨트롤러](#BKMK_PortsClient-GCDC)  
+-   [クライアント -- &gt; グローバル カタログ ドメイン コントローラー](#BKMK_PortsClient-GCDC)  
 
--   [Configuration Manager 콘솔 -- &gt; 인터넷](#BKMK_PortsConsole-Internet)  
+-   [Configuration Manager コンソール -- &gt; インターネット](#BKMK_PortsConsole-Internet)  
 
--   [관리 지점 -- &gt; 도메인 컨트롤러](#BKMK_PortsMP-DC)  
+-   [管理ポイント -- &gt; ドメイン コントローラー](#BKMK_PortsMP-DC)  
 
--   [사이트 서버 -- &gt; 도메인 컨트롤러](#BKMK_PortsSite-DC)  
+-   [サイト サーバー -- &gt; ドメイン コントローラー](#BKMK_PortsSite-DC)  
 
--   [사이트 서버 &lt; -- &gt; 발급 CA(인증 기관)](#BKMK_PortsIssuingCA_SiteServer)  
+-   [サイト サーバー &lt; -- &gt; 発行元の証明機関 (CA)](#BKMK_PortsIssuingCA_SiteServer)  
 
--   [소프트웨어 업데이트 지점 -- &gt; 인터넷](#BKMK_PortsSUP-Internet)  
+-   [ソフトウェアの更新ポイント -- &gt; インターネット](#BKMK_PortsSUP-Internet)  
 
--   [소프트웨어 업데이트 지점 -- &gt; 업스트림 WSUS 서버](#BKMK_PortsSUP-WSUS)  
+-   [ソフトウェアの更新ポイント -- &gt; 上流の WSUS サーバー](#BKMK_PortsSUP-WSUS)  
 
--   [서비스 연결 지점 -- &gt; Microsoft Intune](#BKMK_PortsIntuneConnector-WindowsIntune)  
+-   [サービス接続ポイント -- &gt; Microsoft Intune](#BKMK_PortsIntuneConnector-WindowsIntune)  
 
-###  <a name="BKMK_IBCMports"></a> 인터넷 기반 클라이언트를 지원하는 사이트 시스템의 설치 요구 사항  
- 인터넷 기반 클라이언트를 지원하는 관리 지점 및 배포 지점, 소프트웨어 업데이트 지점 및 대체 상태 지점은 설치 및 복구에 다음 포트를 사용합니다.  
+###  <a name="BKMK_IBCMports"></a> インターネット ベースのクライアントをサポートするサイト システムのインストール要件  
+ インターネットベースのクライアントをサポートする管理ポイントと配布ポイント、ソフトウェアの更新ポイント、およびフォールバック ステータス ポイントは、インストールと修復に次のポートを使用します。  
 
--   사이트 서버 --&gt; 사이트 시스템: UDP 및 TCP 포트 135를 사용하는 RPC 끝점 매퍼  
+-   サイト サーバー --> サイト システム: UDP および TCP ポート 135 を使用する RPC エンドポイント マッパー。  
 
--   사이트 서버--&gt; 사이트 시스템: RPC 동적 TCP 포트  
+-   サイト サーバー --> サイト システム: RPC 動的 TCP ポート  
 
--   사이트 서버 &lt; --&gt; 사이트 시스템: TCP 포트 445를 사용하는 SMB(Server Message Block)
+-   サイト サーバー &lt; --> サイト システム: TCP ポート 445 を使用するサーバー メッセージ ブロック (SMB)
 
-배포 지점에 응용 프로그램 및 패키지를 설치하려면 다음 RPC 포트가 필요합니다.  
+配布ポイントでのアプリケーションとパッケージのインストールには、次の RPC ポートが必要です。  
 
--   사이트 서버 --&gt; 배포 지점: UDP 및 TCP 포트 135를 사용하는 RPC 끝점 매퍼
+-   サイト サーバー --> 配布ポイント: UDP および TCP ポート 135 を使用する RPC エンドポイント マッパー
 
--   사이트 서버 --&gt; 배포 지점: RPC 동적 TCP 포트  
+-   サイト サーバー --> 配布ポイント: RPC 動的 TCP ポート  
 
-IPsec을 사용하여 사이트 서버 및 사이트 시스템 간 트래픽을 보호할 수 있습니다. RPC에 사용된 동적 포트를 제한해야 하는 경우 Microsoft RPC 구성 도구(rpccfg.exe)를 사용하여 이러한 RPC 패킷에 제한된 포트 범위를 구성할 수 있습니다. RPC 구성 도구에 대한 자세한 내용은 [RPC에서 특정 포트를 사용하도록 구성하는 방법과 IPsec을 사용하여 이러한 포트를 보호하는 방법](http://go.microsoft.com/fwlink/p/?LinkId=124096)을 참조하세요.  
+サイト サーバーとサイト システム間のトラフィックをセキュリティで保護するために IPsec を使用します。 RPC で使用される動的ポートを制限する必要がある場合、Microsoft RPC 構成ツール (rpccfg.exe) を使用し、これらの RPC パケットに対しポートの限定範囲を構成することができます。 RPC 構成ツールの詳細については、「 [RPC で特定のポートが使用されるように構成する方法、および IPSec を使用してそれらのポートをセキュリティで保護する方法](http://go.microsoft.com/fwlink/p/?LinkId=124096)」を参照してください。  
 
 > [!IMPORTANT]  
->  이러한 사이트 시스템을 설치하기 전에 원격 레지스트리 서비스를 사이트 시스템 서버에서 실행해야 하며 트러스트 관계가 없는 다른 Active Directory 포리스트에 사이트 시스템이 있는 경우 사이트 시스템 설치 계정을 지정했어야 합니다.  
+>  これらのサイト システムをインストールする前に、リモート レジストリ サービスがサイト システム サーバーで実行されていること、サイト システムが信頼関係のない別の Active Directory フォレストにある場合は、サイト システムのインストール アカウントを指定していることを確認します。  
 
-###  <a name="BKMK_PortsClientInstall"></a> Configuration Manager 클라이언트 설치에 사용되는 포트  
-클라이언트를 설치하는 동안 사용하는 포트는 클라이언트 배포 방법에 따라 달라집니다. 각 클라이언트 배포 방식별 포트 목록에 대한 자세한 내용은 [System Center Configuration Manager에서 클라이언트용 Windows 방화벽 및 포트 설정](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md) 항목의 **Configuration Manager 클라이언트 배포에 사용되는 포트**를 참조하세요. 클라이언트에서 클라이언트 설치 및 사후 설치 통신에 대해 Windows 방화벽을 구성하는 방법은 [System Center Configuration Manager에서 클라이언트용 Windows 방화벽 및 포트 설정](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md)을 참조하세요.  
+###  <a name="BKMK_PortsClientInstall"></a> Configuration Manager クライアント インストールで使用されるポート  
+クライアントのインストール中に使用されるポートは、クライアントの展開方法に応じて異なります。 クライアントの展開方法別のポートの一覧については、「[System Center Configuration Manager におけるクライアントの Windows ファイアウォールとポートの設定](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md)」の「**Configuration Manager クライアントの展開で使用されるポート**」を参照してください。 クライアントのインストールとインストール後の通信用にクライアントの Windows ファイアウォールを構成する方法については、「[System Center Configuration Manager におけるクライアントの Windows ファイアウォールとポートの設定](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md)」を参照してください。  
 
-###  <a name="BKMK_MigrationPorts"></a> 마이그레이션에서 사용되는 포트  
-마이그레이션을 실행하는 사이트 서버에서는 여러 포트를 통해 원본 계층 구조의 적용 가능한 사이트에 연결하여 원본 사이트 SQL Server 데이터베이스에서 데이터를 수집하고 배포 지점을 공유합니다.  
+###  <a name="BKMK_MigrationPorts"></a> 移行で使用されるポート  
+移行を実行しているサイト サーバーは、ソース階層内の該当するサイトに接続するいくつかのポートを使用して、ソース サイトの SQL Server データベースからデータを収集し、配布ポイントを共有します。  
 
- 이러한 포트에 대한 자세한 내용은 [System Center Configuration Manager에서 마이그레이션을 수행하기 위한 필수 조건](../../../core/migration/prerequisites-for-migration.md) 항목의 [마이그레이션을 위한 필수 구성](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations) 섹션을 참조하세요.  
+ これらのポートの詳細については、「[System Center Configuration Manager での移行の前提条件](../../../core/migration/prerequisites-for-migration.md)」の「[移行に必要な構成](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations)」セクションを参照してください。  
 
-###  <a name="BKMK_ServerPorts"></a> Windows Server에 사용되는 포트  
- 다음 표에는 Windows Server에서 사용하는 일부 핵심 포트와 해당 기능이 나와 있습니다. Windows Server 서비스 및 네트워크 포트 요구 사항의 완벽한 목록은 [Windows 서버 시스템의 서비스 개요 및 네트워크 포트 요구 사항](http://go.microsoft.com/fwlink/p/?LinkID=123652)을 참조하세요.  
+###  <a name="BKMK_ServerPorts"></a> Windows サーバーで使用されるポート  
+ 次の表に、Windows サーバーで使用される主なポートとそれらの機能について示します。 Windows サーバーのサービスとネットワーク ポートの要件の詳細の一覧については、「 [Windows サーバー システムのサービス概要およびネットワーク ポート要件](http://go.microsoft.com/fwlink/p/?LinkID=123652)」を参照してください。  
 
-|설명|UDP|TCP|  
+|説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|DNS(Domain Name System)|53|53|  
-|DHCP(Dynamic Host Configuration Protocol)|67 및 68|--|  
-|NetBIOS 이름 확인|137|--|  
-|NetBIOS 데이터그램 서비스|138|--|  
-|NetBIOS 세션 서비스|--|139|  
+|ドメイン ネーム システム (DNS)|53|53|  
+|動的ホスト構成プロトコル (DHCP)|67 および 68|--|  
+|NetBIOS 名前解決|137|--|  
+|NeTBIOS データグラム サービス|138|--|  
+|NeTBIOS セッション サービス|--|139|  

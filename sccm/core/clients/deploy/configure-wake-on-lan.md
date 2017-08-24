@@ -1,6 +1,6 @@
 ---
-title: "Wake on LAN 구성 | Microsoft 문서"
-description: "System Center Configuration Manager의 Wake on LAN 설정을 선택합니다."
+title: "Wake On LAN の構成 | Microsoft Docs"
+description: "System Center Configuration Manager で Wake On LAN 設定を選択します。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -17,43 +17,43 @@ manager: angrobe
 ms.openlocfilehash: 9c920651ba1dc6e0a28df458d28956126ddbaff0
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-configure-wake-on-lan-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 Wake on LAN을 구성하는 방법
+# <a name="how-to-configure-wake-on-lan-in-system-center-configuration-manager"></a>System Center Configuration Manager で Wake on LAN を構成する方法
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-소프트웨어 업데이트, 응용 프로그램, 작업 순서, 프로그램과 같은 필수 소프트웨어를 설치하기 위한 컴퓨터의 절전 모드를 해제하려는 경우 System Center Configuration Manager에 대한 Wake on LAN 설정을 지정합니다.
+コンピューターをスリープ状態から復帰させて、必要なソフトウェア (ソフトウェア更新プログラム、アプリケーション、タスク シーケンス、プログラムなど) をインストールする場合は、System Center Configuration Manager の Wake On LAN 設定を指定します。
 
-절전 모드 해제 프록시 클라이언트 설정을 사용하여 Wake on LAN을 보완할 수 있습니다. 그러나 절전 모드 해제 프록시를 사용하려면 먼저 사이트에 Wake on LAN을 사용하도록 설정하고 **절전 모드 해제 패킷만 사용** 을 지정하고 Wake on LAN 전송 방법에 **유니캐스트** 옵션을 지정합니다. 이 절전 모드 해제 방법은 원격 데스크톱 연결과 같은 임시 연결도 지원합니다.
+ウェイクアップ プロキシ クライアント設定を使用して、Wake on LAN を補うことができます。 ただし、ウェイクアップ プロキシを使用する場合は、まずそのサイト用に Wake on LAN を有効にし、Wake on LAN 送信方法で [ **ウェイクアップ パケットのみを使用する** ] および [ **ユニキャスト** ] オプションを指定する必要があります。 このウェイクアップ ソリューションは、リモート デスクトップ接続などのアドホック接続もサポートします。
 
-기본 사이트에 Wake on LAN을 구성하려면 아래 첫 번째 절차를 따릅니다. 그런 다음 두 번째 절차에 따라 절전 모드 해제 프록시 클라이언트 설정을 구성합니다. 이 두 번째 절차는 계층의 모든 컴퓨터에 적용할 절전 모드 해제 프록시 설정에 대한 기본 클라이언트 설정을 구성합니다. 이러한 설정이 선택한 컴퓨터에만 적용되도록 하려면 사용자 지정 장치 설정을 만들어서 절전 모드 해제 프록시를 구성할 컴퓨터가 포함된 컬렉션에 할당합니다. 사용자 지정 클라이언트 설정을 만드는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 클라이언트 설정을 구성하는 방법](../../../core/clients/deploy/configure-client-settings.md)섹션을 참조하십시오.
+最初の手順を Wake on LAN 用にプライマリ サイトを構成します。 次に、2 番目の手順を使用してウェイクアップ プロキシ クライアント設定を構成します。 この 2 番目の手順では、ウェイクアップ プロキシ設定用に既定のクライアント設定を構成し、階層内のすべてのコンピューターに適用します。 一部のコンピューターにのみこれらの設定を適用するには、カスタムのデバイス設定を作成し、ウェイクアップ プロキシ用に構成するコンピューターが含まれるコレクションに割り当てます。 カスタム クライアント設定の作成方法については、[System Center Configuration Manager でクライアント設定を構成する方法](../../../core/clients/deploy/configure-client-settings.md)を参照してください。
 
-절전 모드 해제 프록시 클라이언트 설정을 수신하는 컴퓨터는 네트워크 연결이 1-3초 동안 일시 중지됩니다. 이는 절전 모드 해제 프록시 드라이버를 사용하기 위해 클라이언트가 네트워크 인터페이스 카드를 재설정해야 하기 때문입니다.
+ウェイクアップ プロキシ クライアント設定を受け取ったコンピューターでは、多くの場合、そのネットワーク接続が 1 ～ 3 秒間一時停止されます。 これは、クライアントのウェイクアップ プロキシ ドライバーを有効にするために、クライアントでネットワーク インターフェイスをリセットする必要があるために発生します。
 
 > [!WARNING]
-> 네트워크 서비스의 예상치 못한 중단을 방지하려면 먼저 격리된 전형적인 네트워크 인프라에서 절전 모드 해제 프록시를 평가합니다. 그런 다음 사용자 지정 클라이언트 설정을 사용하여 여러 서브넷의 선택한 컴퓨터 그룹으로 테스트를 확장합니다. 절전 모드 해제 프록시 작동 방식에 대한 자세한 내용은 [System Center Configuration Manager에서 클라이언트의 절전 모드 해제 계획](../../../core/clients/deploy/plan/plan-wake-up-clients.md)을 참조하세요.
+> ネットワーク サービスの予期しない中断を防ぐために、まず分離した代表的なネットワーク インフラストラクチャを使用してウェイクアップ プロキシを評価します。 次に、カスタム クライアント設定を使用して、いくつかのサブネット上にある一部のコンピューター グループにテスト範囲を広げます。 ウェイクアップ プロキシの詳細については、「[System Center Configuration Manager でクライアントをウェイク アップする方法を計画する](../../../core/clients/deploy/plan/plan-wake-up-clients.md)」を参照してください。
 
-## <a name="to-configure-wake-on-lan-for-a-site"></a>사이트에 대한 Wake on LAN을 구성하려면
+## <a name="to-configure-wake-on-lan-for-a-site"></a>サイトに Wake On LAN を構成するには
 
-1. Configuration Manager 콘솔에서 **관리 > 사이트 구성 > 사이트**로 이동합니다.
-2. 구성할 기본 사이트를 클릭한 다음 **속성**을 클릭합니다.
-3. **Wake on LAN** 탭을 클릭하고 이 사이트에 필요한 옵션을 구성합니다. 절전 모드 해제 프록시를 지원하려면 **절전 모드 해제 패킷만 사용** 및 **유니캐스트**를 선택해야 합니다. 자세한 내용은 [System Center Configuration Manager에서 클라이언트의 절전 모드 해제 계획](../../../core/clients/deploy/plan/plan-wake-up-clients.md)을 참조하세요.
-4. **확인**을 클릭하여 계층의 모든 기본 사이트에 대해 이 절차를 반복합니다.
+1. Configuration Manager コンソールで、**[管理]、[サイトの構成]、[サイト]** の順に移動します。
+2. 構成するプライマリ サイトをクリックし、**[プロパティ]** をクリックします。
+3. **[Wake on LAN]** タブをクリックし、このサイトに必要なオプションを構成します。 ウェイクアップ プロキシをサポートするには、**[ウェイクアップ パケットのみを使用する]** と **[ユニキャスト]** を選択する必要があります。 詳細については、「[System Center Configuration Manager でクライアントをウェイク アップする方法を計画します](../../../core/clients/deploy/plan/plan-wake-up-clients.md)」をご覧ください。
+4. **[OK]** をクリックし、階層内のすべてのプライマリ サイトでこの手順を繰り返します。
 
-## <a name="to-configure-wake-up-proxy-client-settings"></a>절전 모드 해제 프록시 클라이언트 설정을 구성하려면
+## <a name="to-configure-wake-up-proxy-client-settings"></a>ウェイク アップ プロキシ クライアント設定を構成するには
 
-1. Configuration Manager 콘솔에서 **관리 > 클라이언트 설정**으로 이동합니다.
-2. **기본 클라이언트 설정**을 클릭한 다음 **속성**을 클릭합니다.
-3. **전원 관리**를 선택한 다음 **절전 모드 해제 프록시 사용**에 대해 **예**를 선택합니다.
-4. 검토하고 필요한 경우 다른 절전 모드 해제 프록시 설정을 구성합니다. 이러한 설정에 대한 자세한 내용은 [전원 관리 설정](../../../core/clients/deploy/about-client-settings.md#power-management)을 참조하세요.
-5. **확인**을 클릭하여 대화 상자를 닫고 **확인**을 클릭하여 기본 클라이언트 설정 대화 상자를 닫습니다.
+1. Configuration Manager コンソールで、**[管理]、[クライアント設定]** に移動します。
+2. **[既定のクライアント設定]** をクリックし、**[プロパティ]** をクリックします。
+3. **[電力管理]** を選択し、**[ウェイクアップ プロキシを有効にする]** に対して **[はい]** を選択します。
+4. 設定を確認し、必要に応じてウェイクアップ プロキシ設定を変更します。 これらの設定の詳細については、「[電力管理設定](../../../core/clients/deploy/about-client-settings.md#power-management)」を参照してください。
+5. **[OK]** をクリックしてダイアログ ボックスを閉じ、**[OK]** をクリックして [既定のクライアント設定] ダイアログ ボックスを閉じます。
 
-다음 Wake On LAN 보고서를 사용하여 절전 모드 해제 프록시의 설치와 구성을 모니터링할 수 있습니다.
+次の Wake on LAN レポートを使用して、ウェイクアップ プロキシのインストールと構成を監視します。
 
-- 절전 모드 해제 프록시 배포 상태 요약
-- 절전 모드 해제 프록시 배포 상태 정보
+- ウェイクアップ プロキシの展開状態の概要
+- ウェイクアップ プロキシの展開状態の詳細
 
 > [!TIP]
-> 절전 모드 해제 프록시가 작동하는지 테스트하려면 절전 모드의 컴퓨터에 테스트 연결합니다. 예를 들어 해당 컴퓨터의 공유 폴더에 연결하거나 원격 데스크톱을 사용하여 컴퓨터에 연결해 봅니다. DirectAccess를 사용하는 경우 현재 인터넷상에 있는 절전 모드의 컴퓨터에 대해 동일한 테스트를 수행하여 IPv6 접두사가 작동하는지 확인합니다.
+> ウェイクアップ プロキシが機能しているかどうかをテストするには、休止中のコンピューターに対する接続をテストします。 たとえば、休止中のコンピューターにある共有フォルダーに接続したり、リモート デスクトップを使用して休止中のコンピューターへの接続を試行したりします。 Direct Access を使用している場合、現在インターネット上にある休止中のコンピューターに対して同じテストを実行して、IPv6 プレフィックスが機能することを確認します。

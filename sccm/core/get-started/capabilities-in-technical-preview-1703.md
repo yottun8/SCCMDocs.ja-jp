@@ -1,6 +1,6 @@
 ---
-title: "Technical Preview 1703 Configuration Manager의 기능"
-description: "System Center Configuration Manager용 Technical Preview 버전 1703에서 사용 가능한 기능에 대해 알아봅니다."
+title: "Configuration Manager の Technical Preview 1703 の機能"
+description: "System Center Configuration Manager の Technical Preview バージョン 1703 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 03/24/2017
 ms.prod: configuration-manager
@@ -17,147 +17,147 @@ manager: angrobe
 ms.openlocfilehash: bb1b96a56db68dcea22270855b899ba3a90afd0d
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>System Center Configuration Manager용 Technical Preview 1703의 기능
+# <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1703 の機能
 
-*적용 대상: System Center Configuration Manager(Technical Preview)*
+*適用対象: System Center Configuration Manager (Technical Preview)*
 
-이 문서에서는 System Center Configuration Manager용 Technical Preview 버전 1703에서 사용 가능한 기능을 소개합니다. 이 버전을 설치하여 Configuration Manager Technical Preview 사이트를 업데이트하고 새로운 기능을 추가할 수 있습니다. 이 버전의 Technical Preview를 설치하기 전에 소개 항목인 [System Center Configuration Manager용 Technical Preview](../../core/get-started/technical-preview.md)를 검토하여 Technical Preview 사용을 위한 일반 요구 사항 및 제한 사항, 버전 업데이트 방법 및 Technical Preview의 기능에 대해 피드백 제공 방법 등에 익숙해져야 합니다.    
+この記事では、System Center Configuration Manager の Technical Preview バージョン 1703 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 このバージョンの Technical Preview をインストールする前に、説明のトピック「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。    
 
 
-**다음은 이 버전에서 사용할 수 있는 새로운 기능입니다.**  
+**このバージョンでお試しいただける新機能を次に示します。**  
 
-## <a name="deploy-volume-purchased-ios-apps-to-device-collections"></a>장치 컬렉션에 대량 구매한 iOS 앱 배포
+## <a name="deploy-volume-purchased-ios-apps-to-device-collections"></a>ボリューム購入 iOS アプリをデバイス コレクションに展開する
 
-이제 사용이 허가된 앱을 사용자 및 장치에 배포할 수 있습니다. 장치 라이선싱을 지원하는 앱 기능에 따라 앱 배포 시 다음과 같이 적절한 라이선스가 청구됩니다.
+ライセンスされたアプリをユーザーだけでなくデバイスにも展開できるようになりました。 デバイス ライセンスをサポートするアプリ機能に応じて、次のように、展開時に適切なライセンスが要求されます。
 
 |||||
 |-|-|-|-|
-|Configuration Manager 버전|앱이 장치 라이선싱을 지원하나요?|배포 컬렉션 유형|청구된 라이선스|
-|1702 이전|예|사용자|사용자 라이선스|
-|1702 이전|아니요|사용자|사용자 라이선스|
-|1702 이전|예|장치|사용자 라이선스|
-|1702 이전|아니요|장치|사용자 라이선스|
-|1702 이상|예|사용자|사용자 라이선스|
-|1702 이상|아니요|사용자|사용자 라이선스|
-|1702 이상|예|장치|장치 라이선스|
-|1702 이상|아니요|장치|사용자 라이선스|
+|Configuration Manager バージョン|アプリでのデバイス ライセンスのサポート|展開コレクションの種類|要求されるライセンス|
+|1702 より前|○|ユーザー|ユーザー ライセンス|
+|1702 より前|×|ユーザー|ユーザー ライセンス|
+|1702 より前|○|デバイス|ユーザー ライセンス|
+|1702 より前|×|デバイス|ユーザー ライセンス|
+|1702 以降|○|ユーザー|ユーザー ライセンス|
+|1702 以降|×|ユーザー|ユーザー ライセンス|
+|1702 以降|○|デバイス|デバイス ライセンス|
+|1702 以降|×|デバイス|ユーザー ライセンス|
 
-대량 구매한 iOS 앱에 대한 자세한 내용은 [대량 구매한 iOS 앱 관리](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)를 참조하세요.
+ボリューム購入した iOS アプリの詳細については、「[ボリューム購入 iOS アプリの管理](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)」を参照してください。
 
-## <a name="direct-links-to-applications-in-software-center"></a>소프트웨어 센터의 응용 프로그램에 대한 직접 링크
+## <a name="direct-links-to-applications-in-software-center"></a>ソフトウェア センターでのアプリケーションへの直接リンク
 
-이제 최종 사용자에게 소프트웨어 센터의 응용 프로그램에 대한 직접 링크를 제공할 수 있습니다. 즉, 더 이상 응용 프로그램을 설치하기 위해 소프트웨어 센터를 열고 응용 프로그램을 검색할 필요가 없습니다. 단, 이러한 직접 링크는 Configuration Manager 응용 프로그램에 사용할 수 있으며 패키지 및 프로그램 또는 작업 순서에는 사용할 수 없습니다.
+ソフトウェア センターでアプリケーションへの直接リンクをエンド ユーザーに提供できるようになりました。 つまり、エンド ユーザーは、アプリケーションをインストールするために、ソフトウェア センターを開いてアプリケーションを検索する必要がなくなりました。 この機能は、Configuration Manager アプリケーションについてのみ使用でき、パッケージやプログラム、タスク シーケンスについては使用できません。
 
-### <a name="try-it-out"></a>기능 직접 사용해 보기                 
+### <a name="try-it-out"></a>試してみましょう                 
 
-다음 URL 형식을 사용하여 특정 응용 프로그램에 대한 소프트웨어 센터를 엽니다.
+ソフトウェア センターを開いて特定のアプリケーションに移動するには、次の URL 形式を使用します。
 
-**Softwarecenter:SoftwareId=*응용 프로그램 식별자***
+**Softwarecenter:SoftwareId=*アプリケーション識別子***
 
-### <a name="how-to-get-the-application-identifier-of-an-application"></a>응용 프로그램의 응용 프로그램 식별자를 가져오는 방법
+### <a name="how-to-get-the-application-identifier-of-an-application"></a>アプリケーションのアプリケーションの識別子を取得する方法
 
-1.  Configuration Manager 콘솔에서 **소프트웨어 라이브러리**를 클릭합니다.
-2.  소프트웨어 라이브러리 작업 영역에서 **응용 프로그램 관리**를 확장한 다음 **응용 프로그램**을 클릭합니다.
-3.  **응용 프로그램** 보기에서 열 머리글 중 하나를 마우스 오른쪽 단추로 클릭한 다음 목록에서 **CI 고유 ID**를 선택합니다. 이제 목록에 각 응용 프로그램의 고유 ID가 표시됩니다.
-4.  링크를 제공할 응용 프로그램의 **CI 고유 ID**를 확인합니다(예: **ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**).
-5.  그런 다음 응용 프로그램 GUID 뒤에 있는 모든 텍스트를 제거합니다(이 경우 **/2**). 그러면 응용 프로그램 식별자가 남습니다.
-6.  마지막으로 링크 구성을 마치려면 링크 앞에 **Softwarecenter:SoftwareID=**을 붙입니다. 위 예제를 사용할 경우 최종 링크는 **Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**가 됩니다.
+1.  Configuration Manager コンソールで、[ソフトウェア ライブラリ] ****をクリックします。
+2.  [ソフトウェア ライブラリ] ワークスペースで **[アプリケーション管理]** を展開し、**[アプリケーション]** をクリックします。
+3.  **[アプリケーション]** ビューで、列ヘッダーのいずれかを右クリックし、一覧から **[CI の固有 ID]** を選択します。 各アプリケーションの一意の ID が一覧に表示されます。
+4.  リンク先のアプリケーションの **[CI の固有 ID]** (**ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2** など) をメモしておきます。
+5.  次に、アプリケーション GUID の後に続くテキスト (この例では **/2**) をすべて削除します。 これにより、アプリケーション識別子が得られます。
+6.  最後に、リンクの作成を完了するために、アプリケーション識別子の前に **Softwarecenter:SoftwareID=** を付けます。 上記の例では、最終的なリンクは **Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f** のようになります。
 
-이 링크를 사용하여 최종 사용자는 지정된 응용 프로그램에 대한 소프트웨어 센터를 직접 열 수 있습니다.
-
-
-## <a name="pfx-certificates-for-configuration-manager-windows-client-computers"></a>Configuration Manager Windows 클라이언트 컴퓨터에 대한 PFX 인증서
-
-이제 Windows 10을 실행하는 Configuration Manager 클라이언트 컴퓨터로 가져온 PFX 인증서 프로필을 배포할 수 있습니다.
-
-### <a name="try-it-out"></a>기능 직접 사용해 보기
-
-[PFX 인증서 프로필을 만드는 방법](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)의 지침을 사용하여 PFX 프로필을 가져오고 프로필을 배포한 다음 대상 사용자에 대해 인증서가 설치되었는지 확인합니다.
+このリンクを使用することにより、エンド ユーザーは、ソフトウェア センターで指定したアプリケーションを直接開くことができます。
 
 
+## <a name="pfx-certificates-for-configuration-manager-windows-client-computers"></a>Configuration Manager の Windows クライアント コンピューター用の PFX 証明書
 
-## <a name="configure-azure-services-wizard"></a>Azure 서비스 구성 마법사
-Technical Preview 1703에는 **Azure 서비스 구성** 마법사가 도입되었습니다. 이 마법사는 Configuration Manager에서 사용하는 클라우드 서비스를 설정하기 위한 개별 워크플로를 대체하는 공통 구성 환경을 제공합니다. 이 작업은 **Azure 웹앱**을 사용하여 구독 및 구성 세부 정보를 제공함으로써 수행합니다. Azure 웹앱을 사용하지 않을 경우, Azure에서 새 Configuration Manager 구성 요소 또는 서비스를 설정할 때마다 이러한 세부 정보를 입력해야 합니다.
+Windows 10 を実行する Configuration Manager クライアント コンピューターにインポートした PFX 証明書プロファイルを展開できるようになりました。
 
-Technical Preview 1703에서는 WSfB(비즈니스용 Windows 스토어)만 이 마법사를 사용하여 구성됩니다.  다른 클라우드 서비스는 별도의 워크플로를 사용하여 구성됩니다.
+### <a name="try-it-out"></a>試してみましょう
 
--   이 Preview 항목의 정보를 사용하여 현재 분기 항목 [System Center Configuration Manager를 사용하여 비즈니스용 Windows 스토어에서 앱 관리](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)의 [비즈니스용 Windows 스토어 동기화 설정](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#set-up-windows-store-for-business-synchronization) 섹션에 있는 구성 단계를 바꿉니다.
-
--   웹앱에 대한 자세한 내용은 [Azure App Service의 인증 및 권한 부여](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview) 및 [Web Apps 개요](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)를 참조하세요.
-
-### <a name="prerequisites-and-planning"></a>필수 조건 및 계획
-Configuration Manager와 비즈니스용 Windows 스토어 간의 연결을 설정하는 경우 스토어에서 동기화된 앱 콘텐츠를 보관할 폴더를 제공해야 합니다. 이 폴더가 안전하고 해당 콘텐츠를 장치에 배포할 수 있도록 다음 사용 권한을 지정해야 합니다.
--   서비스 연결 지점 사이트 시스템 역할(계층 구조의 최상위 사이트)를 설치하는 컴퓨터에는 **Computer$** 계정을 사용할 때 지정한 폴더에 대한 읽기 및 쓰기 권한이 있어야 합니다.  
-
--   앱 작성자에게 지정한 폴더에 대한 읽기 권한이 있어야 합니다.  
-
--   SMS 공급자 인스턴스를 호스트하는 각 컴퓨터의 **Computer$** 계정이 지정한 폴더를 사용할 수 있어야 합니다.
-
-Azure Active Directory에서 Configuration Manager를 웹 응용 프로그램 또는 Web API 관리 도구로 등록합니다. 그러면 나중에 필요한 클라이언트 ID가 만들어집니다.
-
-### <a name="use-the-wizard-to-configure-the-wsfb-cloud-service"></a>마법사를 사용하여 WSfB 클라우드 서비스 구성
-
-1. 콘솔에서 **관리** > **개요** > **클라우드 서비스 관리** > **Azure** > **Azure 서비스**로 이동한 다음 **Azure 서비스 구성**을 선택하여 **Azure 서비스 마법사**를 시작합니다.
-
-2. **Azure 서비스** 페이지에서 구성할 서비스를 선택하고 **다음**을 클릭합니다. 이 Preview에서는 WSfB만 구성할 수 있습니다.
-
-3. **일반** 페이지에서 **Azure 서비스 이름**에 이름을 입력하고 원하는 경우 선택적 설명을 입력한 후 **다음**을 클릭합니다.
-
-4. **앱** 페이지에서 Azure 환경을 지정한 다음 **찾아보기**를 클릭하여 서버 앱 창을 엽니다.
-
-5. **서버 앱** 창에서 사용할 서버 앱을 선택한 다음 **확인**을 클릭합니다.
-서버 앱은 테넌트 ID, 클라이언트 ID 및 클라이언트의 비밀 키를 비롯한 Azure 계정에 대한 구성을 포함하는 Azure 웹앱입니다. 사용 가능한 서버 앱이 없는 경우 다음 중 하나를 사용합니다.
-  - **만들기**: 새 서버 앱을 만들려면 **만들기**를 클릭합니다. 앱 및 테넌트의 이름을 입력합니다. 그런 다음 Azure에 로그인하면 Configuration Manager가 Azure에서 사용자를 위해 웹앱을 만듭니다(웹앱에 사용할 클라이언트 ID 및 비밀 키 포함). 나중에 Azure Portal에서 이러한 내용을 확인할 수 있습니다.
-  - **가져오기**: Azure 구독에 이미 있는 웹앱을 사용하려면 **가져오기**를 클릭합니다. 앱 및 테넌트의 이름을 입력한 다음 테넌트 ID, 클라이언트 ID 및 Configuration Manager에서 사용하도록 할 Azure 웹앱의 비밀 키를 지정합니다. 정보를 **확인**한 후 **확인**을 클릭하여 계속합니다.  </br></br>
-
-6. **정보** 페이지를 검토하고 지시에 따라 추가 단계 및 구성을 완료합니다. 이러한 구성은 Configuration Manager를 통해 서비스를 사용하는 데 필요합니다.
-예를 들어 WSfB를 구성하려면:
-
-  1. Azure에서 Configuration Manager를 웹 응용 프로그램 또는 Web API로 등록하고 클라이언트 ID를 기록합니다. 관리 도구(Configuration Manager)에서 사용하도록 할 클라이언트 키도 지정합니다.
-
-  2.    WSfB 콘솔에서 Configuration Manager를 저장소 관리 도구로 구성하고 오프라인 사용이 허가된 앱에 대한 지원을 사용하도록 설정한 다음 하나 이상의 앱을 구매해야 합니다.   </br>
-
-  계속 진행할 준비가 되면 **다음**을 클릭합니다.
-
-7. **앱 구성** 페이지에서 이 서비스에 대한 앱 카탈로그 및 언어 구성을 완료하고 **다음**을 클릭합니다.
-8. 마법사가 완료된 후 Configuration Manager 콘솔에는 **비즈니스용 Windows 스토어**를 **클라우드 서비스 유형**으로 구성했음이 표시됩니다.
-
-이제 [현재 분기 콘텐츠](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)의 나머지 부분을 사용하여 WSfB에서 동기화할 앱을 관리하고, 비즈니스용 Windows 스토어 앱을 만들고 배포하고 모니터링할 수 있습니다.
-
-### <a name="modify-a-cloud-service-configuration"></a>클라우드 서비스 구성 수정
-클라우드 서비스의 속성을 보고 편집하여 구성을 수정할 수 있습니다.
-
-콘솔에서 **관리** > **개요** > **클라우드 서비스 관리** > **Azure** > **Azure 서비스**로 이동한 다음 **Azure 서비스 구성**을 선택하고 클라우드 서비스를 선택한 다음 **속성**을 선택합니다.
-
-## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>현재 위치 업그레이드 중에 BIOS에서 UEFI로 변환
-Windows 10 크리에이터 업데이트에서는 UEFI 사용 하드웨어에 맞게 하드 디스크를 다시 분할하는 프로세스를 자동화하는 간단한 변환 도구를 소개하고 Windows 7에서 Windows 10으로의 현재 위치 업그레이드 프로세스에 변환 도구를 통합합니다. 펌웨어를 BIOS에서 UEFI로 변환하는 OEM 도구 및 운영 체제 업그레이드 작업 순서와 이 도구를 결합하면 Windows 10 크리에이터 업데이트로의 현재 위치 업그레이드 중에 BIOS에서 UEFI로 컴퓨터를 변환할 수 있습니다. 자세한 내용은 [BIOS-UEFI 변환을 관리하는 작업 순서 단계](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)를 참조하세요.
-
-## <a name="collapsible-task-sequence-groups"></a>축소 가능한 작업 순서 그룹
-이 버전에는 작업 순서 그룹을 확장하고 축소하는 기능이 도입되었습니다. 개별 그룹을 확장 또는 축소하거나, 모든 그룹을 한 번에 확장 또는 축소할 수 있습니다.
+「[PFX 証明書プロファイルを作成する方法](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)」の指示に従って PFX プロファイルをインポートし、プロファイルを展開した後、対象のユーザーの証明書がインストールされたかどうかを確認します。
 
 
-## <a name="client-settings-to-configure-windows-analytics-for-upgrade-readiness"></a>업그레이드 준비를 위해 Windows Analytics를 구성하기 위한 클라이언트 설정
-이 버전부터 장치 클라이언트 설정을 사용하여 Configuration Manager에서 [업그레이드 준비](/sccm/core/clients/manage/upgrade/upgrade-analytics)와 같은 [Windows Analytics](https://www.microsoft.com/en-us/WindowsForBusiness/windows-analytics) 솔루션을 사용하는 데 필요한 Windows 원격 분석의 구성을 간소화할 수 있습니다. Configuration Manager는 클라이언트 컴퓨터에서 보고한 Windows 원격 분석 데이터를 기준으로 사용자 환경의 현재 상태에 대한 귀중한 정보를 제공할 수 있는 데이터를 Windows Analytics에서 검색할 수 있습니다. 클라이언트 컴퓨터에서 Windows 원격 분석 서비스에 Windows 원격 분석 데이터를 보고하면 관련 데이터가 조직의 OMS 작업 영역 중 하나에서 호스트되는 Windows Analytics 솔루션으로 전송됩니다. 업그레이드 준비는 관리되는 장치의 Windows 업그레이드에 대한 결정 우선 순위를 지정하는 데 도움이 될 수 있는 Windows Analytics 솔루션입니다.
 
-Windows 원격 분석 설정에 대한 자세한 내용은 [조직에서 Windows 원격 분석 구성](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)을 참조하세요.
+## <a name="configure-azure-services-wizard"></a>Azure サービスの構成ウィザード
+Technical Preview 1703 では、**Azure サービスの構成**ウィザードが導入されました。 このウィザードは、Configuration Manager で使用するクラウド サービスを設定するための個々のワークフローに代わる、共通の構成エクスペリエンスを提供します。 このエクスペリエンスは、これまで、新しい Configuration Manager のコンポーネントや Azure のサービスを設定するたびに入力していたサブスクリプションや構成の詳細を提供する **Azure Web アプリ**によって実現されます。
 
-### <a name="prerequisites"></a>전제 조건
-- 업그레이드 준비 클라우드 서비스를 사용하도록 사이트를 구성해야 합니다. 자세한 내용은 [업그레이드 준비](/sccm/core/clients/manage/upgrade/upgrade-analytics)를 참조하세요.
+Technical Preview 1703 では、ビジネス向け Windows ストア (WSfB) のみがこのウィザードを使用して構成されます。  他のクラウド サービスは、個別のワークフローを使用して構成されます。
 
-### <a name="configure-windows-analytics-client-settings"></a>Windows Analytics 클라이언트 설정 구성
-Windows Analytics를 구성하려면 Configuration Manager 콘솔에서 **관리** > **클라이언트 설정**으로 이동하고 **사용자 지정 장치 클라이언트 설정 만들기**를 두 번 클릭한 다음 **Windows Analytics**를 클릭합니다.  
+-   このプレビュー トピックの情報を使用して、Current Branch のトピック「[System Center Configuration Manager によるビジネス向け Windows ストアからのアプリの管理](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)」の「[ビジネス向け Windows ストアの同期の設定](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#set-up-windows-store-for-business-synchronization)」セクションに記載されている構成手順を置き換えます。
 
-**Windows Analytics** 설정 탭으로 이동한 후 다음을 구성합니다.
-- **상업용 ID**  
-상업용 ID 키는 관리하는 장치의 정보를 조직의 Windows Analytics 데이터를 호스트하는 OMS 작업 영역으로 매핑합니다. 업그레이드 준비에 사용하기 위한 상업용 ID 키를 이미 구성한 경우 해당 ID를 사용합니다. 아직 상업용 ID 키가 없는 경우 [상업용 ID 키 생성]( https://technet.microsoft.com /itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key)을 참조하세요.
+-   Web アプリの詳細については、「[Azure App Service での認証および承認](https://docs.microsoft.com/azure/app-service/app-service-authentication-overview)」と「[Web Apps の概要](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)」を参照してください。
 
-- **Windows 10 장치에 대한 원격 분석 수준**  설정  
-각 Windows 10 원격 분석 수준에서 수집되는 항목에 대한 자세한 내용은 Windows 온라인 설명서의 [조직에서 Windows 원격 분석 구성]( https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization#telemetry-levels)을 참조하세요.
+### <a name="prerequisites-and-planning"></a>前提条件と計画
+Configuration Manager とビジネス向け Windows ストアの間の接続を設定するとき、ストアから同期されたアプリ コンテンツが保存するフォルダーを指定する必要があります。 このフォルダーが安全であり、そのコンテンツをデバイスに展開できるようにするには、次のアクセス許可を配置します。
+-   サービス接続ポイント サイト システム ロール (階層の最上位サイト) をインストールするコンピューターで、**Computer$** アカウントを利用して指定したフォルダーの読み書き権限を用意する必要があります。  
 
-- **Windows 7, 8 및 8.1 장치에서 상용 데이터 수집에 옵트인**  선택  
-옵트인할 경우 이러한 운영 체제에서 수집되는 데이터에 대한 자세한 내용을 보려면 Microsoft에서 [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](https://go.microsoft.com/fwlink/?LinkID=822965)(Windows 7, Windows 8 및 Windows 8.1 appraiser 원격 분석 이벤트 및 필드) pdf 파일을 다운로드하세요.
+-   アプリの作成者に、指定したフォルダーの読み取り権限を与える必要があります。  
 
-- **Internet Explorer 데이터 수집 구성** Windows 8.1 또는 이전 버전을 실행하는 장치에서 Internet Explorer 데이터 수집을 수행하면 업그레이드 준비 기능을 통해 Windows 10으로의 원활한 업그레이드에 방해가 될 수 있는 웹앱 비호환성 문제를 감지할 수 있습니다. Internet Explorer 데이터 수집은 인터넷 영역별로 사용 가능하게 설정할 수 있습니다. 인터넷 영역에 대한 자세한 내용은 [URL 보안 영역 정보](https://msdn.microsoft.com/en-us/library/ms537183(v=vs.85).aspx)를 참조하세요.
+-   SMS プロバイダーのインスタンスをホストする各コンピューターの **Computer$** アカウントで、指定したフォルダーを使用できる必要があります。
+
+Azure Active Directory で、Configuration Manager を Web アプリケーションまたは Web API の管理ツールとして登録します。 これにより、後で必要なクライアント ID が作成されます。
+
+### <a name="use-the-wizard-to-configure-the-wsfb-cloud-service"></a>ウィザードを使用した WSfB クラウド サービスの構成
+
+1. コンソールで、**[管理]** > **[概要]** > **[クラウド サービスの管理]** > **[Azure]** > **[Azure サービス]** に移動し、**[Azure サービスの構成]** を選択して、**Azure サービス ウィザード**を開始します。
+
+2. **[Azure サービス]** ページで、構成するサービスを選択し、**[次へ]** をクリックします。 このプレビューでは、WSfB のみを構成できます。
+
+3. **[全般]** ページで、**[Azure サービス名]** のフレンドリ名とオプションの説明を入力し、**[次へ]** をクリックします。
+
+4. **[アプリ]** ページで、Azure 環境を指定し、**[参照]** をクリックして[サーバー アプリ] ウィンドウを開きます。
+
+5. **[サーバー アプリ]** ウィンドウで、使用するサーバー アプリを選択し、**[OK]** をクリックします。
+サーバー アプリとは、Azure アカウントの構成 (クライアントのテナント ID、クライアント ID、シークレット キーなど) を格納する Azure Web アプリです。 利用可能なサーバー アプリがない場合は、次のいずれかを使用します。
+  - **作成**: 新しいセッションを作成するには、**[作成]** をクリックします。 アプリとテナントのフレンドリ名を指定します。 次に、Azure にサインインすると、Configuration Manager によって、Azure で Web アプリと、Web アプリで使用するクライアント ID やシークレット キーが作成されます。 その後、Azure Portal からこれらを表示できます。
+  - **インポート**: Azure サブスクリプションに既に存在する Web アプリを使用するには、**[インポート]** をクリックします。 アプリとテナントのフレンドリ名を指定し、Configuration Manager で使用する Azure Web アプリのテナント ID、クライアント ID、シークレット キーを指定します。 情報を**確認**した後、**[OK]** をクリックして続行します。  </br></br>
+
+6. **[情報]** ページを確認し、指示に従って、追加の手順と構成を完了します。 これらの構成は、Configuration Manager でサービスを使用するために必要です。
+たとえば、WSfB を構成するには次を実行します。
+
+  1. Azure で、Configuration Manager を Web アプリケーションまたは Web API 管理ツールとして登録し、クライアント ID を記録します。 また、管理ツール (Configuration Manager) で使用するためのクライアント キーを指定します。
+
+  2.    WSfB コンソールで、ストアの管理ツールとして Configuration Manager を構成し、オフラインのライセンスされたアプリのサポートを有効にするには、少なくとも 1 つのアプリを購入する必要があります。   </br>
+
+  操作を続行する準備ができたら **[次へ]** をクリックします。
+
+7. **[アプリケーションの構成]** ページで、このサービスのアプリケーション カタログと言語の構成を完了し、**[次へ]** をクリックします。
+8. ウィザードが完了したのち、Configuration Manager コンソールに**ビジネス向け Windows ストア**を**クラウド サービスの種類**として構成したことが示されます。
+
+WSfB のアプリの管理に関する [Current Branch のコンテンツ](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)に従って、ビジネス向け Windows ストアのアプリの同期、作成と展開、監視を行うことができるようになりました。
+
+### <a name="modify-a-cloud-service-configuration"></a>クラウド サービスの構成の変更
+クラウド サービスのプロパティを表示して編集し、構成を変更できます。
+
+コンソールで、**[管理]** > **[概要]** > **[クラウド サービスの管理]** > **[Azure]** > **[Azure サービス]** に移動し、**[Azure サービスの構成]** を選択します。次に、クラウド サービスを選択し、**[プロパティ]** を選択します。
+
+## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>インプレース アップグレード時に BIOS から UEFI に変換する
+Windows 10 Creators Update では、EFI 対応ハードウェアのハード ディスクのパーティションを再分割するプロセスを自動化する簡単な変換ツールが導入され、変換ツールは Windows 7 から Windows 10 へのインプレース アップグレード プロセスに統合されます。 このツールをオペレーティング システムのアップグレード タスク シーケンスと、ファームウェアを BIOS から UEFI に変換する OEM ツールと組み合わせて使用する場合、Windows 10 Creators Update へのインプレース アップグレード時にコンピューターを BIOS から UEFI に変換することができます。 詳細については、「[Task sequence steps to manage BIOS to UEFI conversion](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)」(BIOS からUEFI への変換を管理するためのタスク シーケンス手順) を参照してください。
+
+## <a name="collapsible-task-sequence-groups"></a>折りたたみ可能なタスク シーケンス グループ
+このバージョンでは、タスク シーケンス グループを展開および折りたたむ機能が導入されています。 個々のグループを展開または折りたたんだり、すべてのグループを一度に展開または折りたたんだりすることができます。
+
+
+## <a name="client-settings-to-configure-windows-analytics-for-upgrade-readiness"></a>Windows Analytics for Upgrade Readiness を構成するためのクライアント設定
+これ以降のバージョンでは、デバイス クライアントの設定を使用して、Windows 利用統計情報の構成を簡略化できます。この構成は、Configuration Manager で [Upgrade Readiness](https://www.microsoft.com/en-us/WindowsForBusiness/windows-analytics) のような [Windows Analytics](/sccm/core/clients/manage/upgrade/upgrade-analytics) ソリューションを使用するために必要です。 Configuration Manager は Windows Analytics からデータを取得し、クライアント コンピューターから送信される Windows 利用統計情報データに基づいて、お使いの環境の現在の状態に関する貴重な情報を提供します。 Windows 利用統計情報データは、クライアント コンピューターによって Windows 利用統計情報サービスに報告されます。その後、組織の OMS ワークスペースのいずれかでホストされている Windows Analytics ソリューションに、関連データが転送されます。 Upgrade Readiness は Windows Analytics ソリューションの 1 つで、管理対象デバイスでの Windows アップグレードに関する決定の優先順位を付ける際に役立ちます。
+
+Windows 利用統計情報の設定については、「[組織内の Windows 利用統計情報の構成](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)」を参照してください。
+
+### <a name="prerequisites"></a>必要条件
+- Upgrade Readiness クラウド サービスを使用するにはサイトを構成しておく必要があります。 詳細については、[Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) に関するページをご覧ください。
+
+### <a name="configure-windows-analytics-client-settings"></a>Windows Analytics クライアント設定の構成
+Windows Analytics を構成するには、Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** に移動し、**[Create Custom Device Client Settings] \(カスタム デバイス クライアント設定の作成)** をダブルクリックして、**[Windows Analytics]** を選択します。  
+
+次に、**[Windows Analytics]** 設定タブに移動した後に、以下を構成します。
+- **商用 ID**  
+商用 ID キーは、管理するデバイスから組織の Windows Analytics データをホストする OMS ワークスペースに情報をマップします。 使用する商用 ID キーを Upgrade Readiness で既に構成している場合は、その ID を使用します。 まだ商用 ID キーがない場合は、「[Generate your commercial ID key (商用 ID キーを生成する)]( https://technet.microsoft.com /itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key)」をご覧ください。
+
+- **Windows 10 デバイスの利用統計情報のレベル** を設定する  
+Windows 10 の利用統計情報の各レベルで収集される情報については、「[Configure Windows telemetry in your organization (組織の利用統計情報の構成)]( https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization#telemetry-levels)」をご覧ください。
+
+- **Windows 7、8、8.1 デバイスでの商用データ収集のオプトイン** を選択する  
+オプトインしたときにこれらのオペレーティング システムから収集されるデータについては、Microsoft のサイトから [Windows 7、Windows 8、Windows 8.1 の利用統計情報のイベントとフィールドに関する pdf ファイル](https://go.microsoft.com/fwlink/?LinkID=822965)をダウンロードして参照してください。
+
+- **Internet Explore のデータ収集の構成** Windows 8.1 以前のバージョンが動作しているデバイスでは、Internet Explorer で収集されるデータによって、Upgrade Readiness が Web アプリの非互換性を検出できるため、Windows 10 へのスムーズなアップグレードが妨げられる可能性が排除されます。 Internet Explorer のデータ収集は、インターネット ゾーンごとに有効にできます。 インターネット ゾーンの詳細については、「[About URL Security Zones (セキュリティ ゾーンについて)](https://msdn.microsoft.com/en-us/library/ms537183(v=vs.85).aspx)」をご覧ください。

@@ -1,6 +1,6 @@
 ---
-title: "System Center Configuration Manager와 연결된 Intune 구독 관리 | Microsoft Docs"
-description: "System Center Configuration Manager와 연결된 Intune 구독 관리"
+title: "System Center Configuration Manager に関連付けられた Intune サブスクリプションの管理 | Microsoft Docs"
+description: "System Center Configuration Manager に関連付けられた Intune サブスクリプションを管理します。"
 ms.custom: na
 ms.date: 06/02/2017
 ms.prod: configuration-manager
@@ -18,39 +18,39 @@ manager: angrobe
 ms.openlocfilehash: 2cb4d724c8b78657458a30c0bb020f67c6b62795
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-an-intune-subscription-associated-with-system-center-configuration-manager"></a>System Center Configuration Manager와 연결된 Intune 구독 관리
+# <a name="manage-an-intune-subscription-associated-with-system-center-configuration-manager"></a>System Center Configuration Manager に関連付けられた Intune サブスクリプションの管理
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-Microsoft Intune(평가판 구독 또는 유료 구독)을 Configuration Manager에 추가하고 다른 Intune 구독으로 전환해야 하는 경우 새 구독을 추가하려면 먼저 Configuration Manager 콘솔에서 **Microsoft Intune 구독** 및 **서비스 연결 지점**을 모두 삭제해야 합니다.
+Microsoft Intune (試用版サブスクリプションまたは有料サブスクリプション) を Configuration Manager に追加してから、別の Intune サブスクリプションに切り替える必要がある場合は、**Microsoft Intune サブスクリプション**と**サービス接続ポイント**の両方を Configuration Manager コンソールから削除する必要があります。これにより、新しいサブスクリプションを追加することができるようになります。
 
 > [!NOTE]
-> 하이브리드 모바일 장치 관리에서는 한 번에 하나의 Intune 구독만 구성할 수 있습니다.
+> ハイブリッド モバイル デバイス管理では 1 回につき 1 つだけ Intune サブスクリプションを構成できます。
 
-## <a name="how-to-delete-an-intune-subscription-from-configuration-manager"></a>Configuration Manager에서 Intune 구독을 삭제하는 방법
+## <a name="how-to-delete-an-intune-subscription-from-configuration-manager"></a>Configuration Manager から Intune サブスクリプションを削除する方法
 
 > [!IMPORTANT]
->  구독을 삭제하면 Intune 구독을 통해 관리되는 장치에 구성된 사용자 등록, 정책 및 앱 배포를 포함한 모든 콘텐츠가 제거됩니다.
+>  サブスクリプションを削除すると、Intune サブスクリプションによって管理されるデバイスに構成された、ユーザー登録、ポリシー、アプリの展開などのすべてのコンテンツが削除されます。
 
-1.  Configuration Manager 콘솔에서 **관리** > **개요** > **클라우드 서비스** > **Microsoft Intune 구독**으로 이동합니다.
+1.  Configuration Manager コンソールで、**[管理]** > **[概要]** > **[Cloud Services]** > **[Microsoft Intune サブスクリプション]** の順に移動します。
 
-2.  나열된 **Microsoft Intune 구독**을 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다.
+2.  表示された **[Microsoft Intune サブスクリプション]** を右クリックしてから、**[削除]** をクリックします。
 
-3.   마법사에서 **Configuration Manager에서 Microsoft Intune 구독 제거**, **다음**, **다음**을 차례로 클릭하여 구독을 제거합니다.
+3.   ウィザードで、**[Configuration Manager から Microsoft Intune サブスクリプションを削除]**、**[次へ]**、**[次へ]** の順にクリックして、サブスクリプションを削除します。
 
 
-## <a name="how-to-remove-the-service-connection-point-role"></a>서비스 연결 지점 역할을 제거하는 방법
+## <a name="how-to-remove-the-service-connection-point-role"></a>サービス接続ポイントの役割を削除する方法
 
-1.  **관리** > **개요** > **사이트 구성** > **서버 및 사이트 시스템 역할**로 이동합니다.
+1.  **[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動します。
 
-2.  **서비스 연결 지점** 역할을 호스트하는 서버를 선택합니다.
+2.  **[サービス接続ポイント]** の役割をホストするサーバーを選びます。
 
-3.  **사이트 시스템 역할** 목록에서 **서비스 연결 지점**을 선택한 후 리본 메뉴에서 **역할 제거**를 클릭합니다. 역할을 제거할 것을 확인합니다. 서비스 연결 지점이 삭제됩니다.
+3.  **[サイト システムの役割]** 一覧で、**[サービス接続ポイント]** を選んでから、リボンに表示されている **[役割の削除]** をクリックします。 ロールを削除することを確認します。 サービス接続ポイントが削除されます。
 
-이제 새 서비스 연결 지점을 만들고, 새 Intune 구독을 Configuration Manager에 추가하고, Configuration Manager를 MDM 기관으로 설정할 수 있습니다.
+これで、新しいサービス接続ポイントを作成したり、Configuration Manager に新規 Intune サブスクリプションを追加したり、Configuration Manager を MDM 機関として設定したりできるようになります。
 
-## <a name="how-to-change-mdm-authority-to-intune"></a>MDM 기관을 Intune으로 변경하는 방법
-Configuration Manager 버전 1610 및 Microsoft Intune 버전 1705부터, Microsoft 지원에 문의하지 않고 기존의 관리 장치를 등록 취소했다가 다시 등록하지 않고도, MDM 기관을 변경할 수 있습니다. 자세한 내용은 [MDM 기관 변경](/sccm/mdm/deploy-use/change-mdm-authority)을 참조하세요.
+## <a name="how-to-change-mdm-authority-to-intune"></a>MDM 機関を Intune に変更する方法
+Configuration Manager バージョン 1610 および Microsoft Intune バージョン 1705 以降では、Microsoft サポートに連絡しなくても、また、既存の管理対象デバイスの登録を解除してから再登録しなくても、MDM 機関を変更することができます。 詳細については、「[MDM 機関を変更する](/sccm/mdm/deploy-use/change-mdm-authority)」を参照してください。

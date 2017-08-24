@@ -1,6 +1,6 @@
 ---
-title: "System Center Configuration Manager를 사용하여 플랫폼 등록 설정 | Microsoft Docs"
-description: "System Center Configuration Manager 및 Microsoft Intune을 사용하여 플랫폼 등록 설정"
+title: "System Center Configuration Manager を使用してプラットフォームの登録を有効にする | Microsoft Docs"
+description: "System Center Configuration Manager と Microsoft Intune を使用してプラットフォームの登録を有効にします。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,18 +18,18 @@ manager: angrobe
 ms.openlocfilehash: 4b047aa752b638aeeb7dd363a66564800d00a8df
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="enable-platform-enrollment-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 및 Microsoft Intune을 사용하여 플랫폼 등록 설정
+# <a name="enable-platform-enrollment-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用してプラットフォームの登録を有効にする
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-장치 등록을 사용하려면 각 장치 플랫폼마다 추가 구성이 필요합니다.
-  - [iOS 및 Mac 등록 설정](enroll-hybrid-ios-mac.md): Apple MDM 푸시 인증서를 가져옵니다.
+デバイスの登録を有効にするには、デバイス プラットフォームごとに必要な追加の構成があります。
+  - [iOS と Mac の登録セットアップ](enroll-hybrid-ios-mac.md): Apple MDM プッシュ証明書を取得します
 
-  - [Windows 등록 설정](enroll-hybrid-windows.md): DNS를 구성하고 Windows PC, Windows 10 Mobile 및 Windows Phone 장치에 대해 등록을 사용하도록 설정합니다.
+  - [Windows の登録セットアップ](enroll-hybrid-windows.md): DNS を構成し、Windows PC、Windows 10 Mobile デバイス、Windows Phone デバイスのすべてで登録を有効にします
 
-  - [Android](enroll-hybrid-android.md): Android 장치는 등록을 사용하도록 설정하기 위한 추가 단계가 필요하지 않습니다.
+  - [Android](enroll-hybrid-android.md): Android デバイスの場合、登録を有効にするために必要な追加の手順はありません
 
-MDM 관리를 사용하면 각 사용자가 등록할 수 있는 장치 수를 사용자당 최대 15개 장치까지 지정할 수 있습니다.
+MDM 管理を有効にした後は、各ユーザーが登録できるデバイスの数を指定できます (ユーザーごとに最大 15 デバイス)。

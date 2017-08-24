@@ -1,6 +1,6 @@
 ---
-title: "Wi-Fi 및 VPN 프로필 필수 조건 | Microsoft 문서"
-description: "System Center Configuration Manager의 인증서 프로필, Wi-Fi 프로필 및 VPN 프로필을 관리하는 데 필요한 보안 권한에 대해 알아봅니다."
+title: "Wi-Fi および VPN プロファイルの前提条件 | Microsoft Docs"
+description: "System Center Configuration Manager で証明書プロファイル、Wi-Fiプロファイル、および VPN プロファイルを管理するために必要なセキュリティ アクセス許可について説明します。"
 ms.custom: na
 ms.date: 11/23/2016
 ms.prod: configuration-manager
@@ -18,35 +18,35 @@ manager: angrobe
 ms.openlocfilehash: 309b0363f9b3ec4a31b8323b9e64c9f73060c281
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="prerequisites-for-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 Wi-Fi 및 VPN 프로필에 대한 필수 조건
+# <a name="prerequisites-for-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager の Wi-Fi プロファイルおよび VPN プロファイルの前提条件
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager의 Wi-Fi 및 VPN 프로필에는 제품 내 종속성만 있습니다.  
+System Center Configuration Manager の Wi-Fi プロファイルおよび VPN プロファイルには、製品内の依存関係のみがあります。  
 
- 회사 리소스 액세스 설정(예: 인증서 프로필, Wi-Fi 프로필 및 VPN 프로필)을 관리하려면 다음과 같은 보안 권한이 있어야 합니다.  
+ 証明書プロファイルや Wi-Fi プロファイル、VPN プロファイルなどの会社のリソースのアクセス設定を管理するには、次のセキュリティのアクセス許可が必要です。  
 
--   Wi-Fi 프로필에 대한 경고 및 보고서를 보고 관리하려면: **경고** 개체에 대한 **만들기**, **삭제**, **수정**, **보고서 수정**, **읽기** 및 **보고서 실행** 권한이 필요합니다.  
+-   Wi-Fi プロファイルのアラートとレポートを表示して管理する場合: **アラート**オブジェクトの**作成**、**削除**、**変更**、**レポートの変更**、**読み取り**、**レポートの実行**。  
 
--   인증서 프로필을 만들고 관리하려면: **인증서 프로필**개체에 대한 **작성자 정책**, **보고서 수정**, **읽기** 및 **보고서 실행** 권한이 필요합니다.  
+-   証明書プロファイルを作成して管理する場合: **証明書プロファイル**オブジェクトの **作成者ポリシー**、 **レポートの変更**、 **読み取り** 、 **レポートの実行** 。  
 
--   Wi-Fi, 인증서 및 VPN 프로필 배포를 관리하려면: **컬렉션**개체에 대한 **구성 정책 배포**, **클라이언트 상태 알림 수정**, **읽기** 및 **리소스 읽기** 권한이 필요합니다.  
+-   Wi-Fi プロファイル、証明書プロファイル、および VPN プロファイルの展開を管理する場合: **コレクション**オブジェクトの **構成ポリシーの展開**、 **クライアント ステータス アラートの変更**、 **読み取り** 、 **リソースの読み取り** 。  
 
--   모든 구성 정책을 관리하려면: **구성 정책**개체에 대한 **만들기**, **삭제**, **수정**, **읽기** 및 **보안 범위 설정** 권한이 필요합니다.  
+-   すべての構成ポリシーを管理する場合: **構成のポリシー**オブジェクトの **作成**、 **削除**、 **変更**、 **読み取り** 、 **セキュリティ スコープの設定** 。  
 
--   Wi-Fi 및 VPN 프로필과 관련된 쿼리를 실행하려면: **쿼리** 개체에 대한 **읽기** 권한이 필요합니다.  
+-   Wi-Fi プロファイルおよび VPN プロファイルに関連するクエリを実行する場合: **クエリ** オブジェクトの**読み取り**アクセス許可。  
 
--   System Center Configuration Manager 콘솔에서 Wi-Fi 및 VPN 프로필 정보를 보려면: **사이트** 개체에 대한 **읽기** 권한이 필요합니다.  
+-   System Center Configuration Manager コンソールで Wi-Fiプロファイルおよび VPN プロファイル情報を表示する場合: **サイト** オブジェクトの**読み取り**アクセス許可。  
 
--   Wi-Fi 및 VPN 프로필에 대한 상태 메시지를 보려면: **상태 메시지** 개체에 대한 **읽기** 권한이 필요합니다.  
+-   Wi-Fi プロファイルおよび VPN プロファイルのステータス メッセージを表示する場合: **ステータス メッセージ** オブジェクトの **読み取り** アクセス許可。  
 
--   신뢰할 수 있는 CA 인증서 프로필을 만들고 수정하려면: **신뢰할 수 있는 CA 인증서 프로필**개체에 대한 **작성자 정책**, **보고서 수정**, **읽기** 및 **보고서 실행** 권한이 필요합니다.  
+-   信頼された証明機関証明書プロファイルを作成および変更する場合: **信頼された証明機関証明書プロファイル**オブジェクトの **作成者ポリシー**、 **レポートの変更**、 **読み取り** 、 **レポートの実行** 。  
 
--   VPN 프로필을 만들고 관리하려면: **VPN 프로필**개체에 대한 **작성자 정책**, **보고서 수정**, **읽기** 및 **보고서 실행** 권한이 필요합니다.  
+-   VPN プロファイルを作成して管理する場合: **VPN プロファイル**オブジェクトの **作成者ポリシー**、 **レポートの変更**、 **読み取り** 、 **レポートの実行** 。  
 
--   Wi-Fi 프로필을 만들고 관리하려면: **Wi-Fi 프로필**개체에 대한 **작성자 정책**, **보고서 수정**, **읽기** 및 **보고서 실행** 권한이 필요합니다.  
+-   Wi-Fi プロファイルを作成して管理する場合: **Wi-Fi プロファイル**オブジェクトの **作成者ポリシー**、 **レポートの変更**、 **読み取り** 、 **レポートの実行** 。  
 
- **회사 리소스 액세스 관리자** 보안 역할에는 System Center Configuration Manager에서 Wi-Fi 프로필을 관리하는 데 필요한 이와 같은 권한이 포함됩니다. 자세한 내용은 [Configure security in System Center Configuration Manager](../../core/plan-design/security/configure-security.md)항목을 참조하세요.
+ **[会社リソース アクセス マネージャー]** セキュリティ ロールには、System Center Configuration Manager で Wi-Fi プロファイルを管理するのに必要な上記のアクセス許可が付与されています。 詳細については、「[System Center Configuration Manager でのセキュリティの構成](../../core/plan-design/security/configure-security.md)」を参照してください。

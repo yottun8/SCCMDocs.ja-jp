@@ -1,6 +1,6 @@
 ---
-title: "장치 준수 확인 | Microsoft 문서"
-description: "System Center Configuration Manager를 사용하여 조직에서 장치의 구성 및 준수를 관리합니다."
+title: "デバイス コンプライアンスの確認 | Microsoft Docs"
+description: "System Center Configuration Manager を使用して、組織内のデバイスの構成とコンプライアンスを管理します。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,56 +17,56 @@ manager: angrobe
 ms.openlocfilehash: f7ecfe550d2e28579ea873442b2a68dc1c7c5483
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>System Center Configuration Manager를 사용하여 장치 준수 확인
+# <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>System Center Configuration Manager でのデバイス コンプライアンスの確認
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager의 준수 설정은 조직에서 장치의 구성과 준수를 관리하는 데 필요한 도구와 리소스를 제공합니다. 다음과 같은 비즈니스 요구 사항을 지원하는 데 도움이 됩니다.  
+System Center Configuration Manager でのコンプライアンス設定は、組織内のデバイスの構成とコンプライアンスを管理するために必要なツールおよびリソースとなります。 これを利用することで、次の業務要件をサポートできます。  
 
--   관리하는 Windows PC, Mac 컴퓨터, 서버 및 모바일 장치의 구성과 직접 만들었거나 다른 공급업체에서 얻은 모범 사례 구성 비교  
+-   管理対象の Windows PC、Mac コンピューター、サーバー、およびモバイル デバイスを、独自に作成したベスト プラクティス構成または他のベンダーから取得したベスト プラクティス構成と比較対照する  
 
--   권한이 없는 장치 구성 식별  
+-   承認されていないデバイス構成を特定する  
 
--   규정 정책 및 사내 보안 정책 준수 보고  
+-   規制に基づくポリシーおよび社内のセキュリティ ポリシーの対応状態を報告する  
 
--   보안 취약점 식별  
+-   セキュリティの脆弱性を識別する  
 
--   기술 지원팀에서 비준수 구성을 식별하여 보고된 인시던트 및 문제의 가능한 원인을 검색하기 위한 정보 제공  
+-   非準拠の構成を識別することで、報告されたインシデントや問題の考えられる原因を検出するための情報をヘルプ デスクに提供する  
 
--   자동으로 모바일 장치의 일부 비준수 설정 수정  
+-   モバイル デバイスの非準拠の設定を自動的に修復する  
 
--   비준수를 보고하는 장치가 자동으로 포함되는 컬렉션에 응용 프로그램, 패키지 및 프로그램 또는 스크립트를 배포하여 비준수 수정  
+-   非準拠であることが報告されたデバイスが自動的に加えられるコレクションに対して、アプリケーション、パッケージとプログラム、またはスクリプトを展開して、非準拠を修復する  
 
 
-## <a name="get-started"></a>시작  
- 준수 설정과 준수 설정에 대해 수행할 수 있는 작업에 대한 기본 사항을 알아봅니다.  
+## <a name="get-started"></a>作業開始  
+ コンプライアンス設定の基本事項およびそれらで実行できるタスクについて説明します。  
 
- [준수 설정 시작](../../compliance/get-started/get-started-with-compliance-settings.md)  
+ [コンプライアンス設定を使ってみる](../../compliance/get-started/get-started-with-compliance-settings.md)  
 
-## <a name="plan-and-design"></a>계획 및 디자인  
- 준수 설정을 사용하여 작업을 시작하기 전에 이 항목에 나와 있는 필수 조건을 구현해야 합니다.  
+## <a name="plan-and-design"></a>計画と設計  
+ コンプライアンス設定での作業を開始する前に、このトピックで必要な前提条件を実施しておきます。  
 
- [준수 설정 계획 및 구성](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  
+ [コンプライアンス設定の計画と構成](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  
 
-## <a name="common-tasks"></a>일반 작업  
- 이 섹션에는 Configuration Manager의 준수 설정을 사용하는 방법을 알아보는 데 유용한 몇 가지 일반적인 시나리오가 있습니다.  
+## <a name="common-tasks"></a>一般的なタスク  
+ このセクションでは、Configuration Manager でのコンプライアンス設定の使用方法に関するいくつかの一般的なシナリオを紹介します。  
 
- [준수 관리를 위한 일반 작업](../../compliance/plan-design/common-tasks-for-managing-compliance.md)  
+ [コンプライアンスを管理するための一般的なタスク](../../compliance/plan-design/common-tasks-for-managing-compliance.md)  
 
-## <a name="remote-connection-profiles"></a>원격 연결 프로필  
- 이 구성 항목 유형을 통해 사용자가 도메인에 연결되어 있지 않거나 사용자의 개인용 컴퓨터가 인터넷을 통해 연결된 경우 사용자의 PC가 원격으로 연결하여 컴퓨터 작업을 하도록 구성할 수 있습니다.  
+## <a name="remote-connection-profiles"></a>リモート接続プロファイル  
+ この構成項目の種類を使用すると、ユーザーがドメインに接続されていない場合やユーザーの PC がインターネット経由で接続されている場合に、会社用のコンピューターにリモート接続するようにユーザーの PC を構成できます。  
 
- [원격 연결 프로필 만들기](/sccm/compliance/deploy-use/create-remote-connection-profiles)  
+ [リモート接続プロファイルの作成](/sccm/compliance/deploy-use/create-remote-connection-profiles)  
 
-## <a name="user-data-and-profiles"></a>사용자 데이터 및 프로필  
- 구성 항목에는 Windows 8을 실행하는 컴퓨터에서 계층 구조 내 사용자에 대해 폴더 리디렉션, 오프라인 파일 및 로밍 프로필을 관리할 수 있는 설정이 포함됩니다.  
+## <a name="user-data-and-profiles"></a>ユーザー データとプロファイル  
+ この構成項目の種類には、階層内のユーザーの Windows 8 以降のコンピューターのフォルダー リダイレクト、オフライン ファイル、およびローミング プロファイルを管理できる設定が含まれています。  
 
- [사용자 데이터 및 프로필 구성 항목 만들기](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items)  
+ [ユーザー データとプロファイルの構成項目の作成](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items)  
 
-## <a name="windows-edition-upgrade-policy"></a>Windows 버전 업그레이드 정책  
- 버전 업그레이드 정책을 통해 Windows 10 장치를 최신 버전으로 자동으로 업그레이드할 수 있습니다. Windows 10 데스크톱 버전을 업그레이드할 제품 키 또는 Windows 10 Mobile 및 Windows 10 Holographic을 실행하는 장치를 업그레이드하는 데 사용할 수 있는 라이선스 파일을 지정할 수 있습니다.  
+## <a name="windows-edition-upgrade-policy"></a>Windows エディションのアップグレード ポリシー  
+ エディションのアップグレード ポリシーでは、新しいバージョンに Windows 10 デバイスを自動的にアップグレードできます。 Windows 10 デスクトップ バージョンをアップグレードするためのプロダクト キーを指定したり、Windows 10 Mobile と Windows 10 Holographic を実行しているデバイスをアップグレードするために使用できるライセンス ファイルを指定したりできます。  
 
- [버전 업그레이드 정책을 사용하여 Windows 장치 업그레이드](/sccm/compliance/deploy-use/upgrade-windows-version)  
+ [エディションのアップグレード ポリシーで Windows デバイスをアップグレードする](/sccm/compliance/deploy-use/upgrade-windows-version)  

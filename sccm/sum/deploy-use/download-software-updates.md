@@ -1,6 +1,6 @@
 ---
-title: "소프트웨어 업데이트 다운로드 - Configuration Manager | Microsoft 문서"
-description: "소프트웨어 업데이트 다운로드 마법사를 사용하여 소프트웨어 업데이트를 다운로드하고 배포 지점에 배포하여 클라이언트에 배포할 준비를 합니다."
+title: "ソフトウェア更新プログラムのダウンロード - Configuration Manager | Microsoft Docs"
+description: "ソフトウェア更新プログラムのダウンロード ウィザードを使用して、ソフトウェア更新プログラムをダウンロードし、クライアントに展開できるように配布ポイントに配布します。"
 keywords: 
 author: dougeby
 ms.author: dougeby
@@ -14,21 +14,21 @@ ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 ms.openlocfilehash: f38f72f9f547b82c92789f02975cbd0193b79b2d
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="download-software-updates"></a>소프트웨어 업데이트 다운로드  
+# <a name="download-software-updates"></a>ソフトウェア更新プログラムのダウンロード  
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager에서 소프트웨어 업데이트를 다운로드하는 데는 여러 가지 방법을 사용할 수 있습니다. ADR(자동 배포 규칙)을 만들거나 수동으로 소프트웨어 업데이트를 배포할 때 소프트웨어 업데이트는 사이트 서버의 콘텐츠 라이브러리에 다운로드됩니다. 그런 다음 소프트웨어 업데이트는 구성된 배포 패키지와 연결된 배포 지점에서 콘텐츠 라이브러리로 복사됩니다. 소프트웨어 업데이트를 다운로드한 후에 배포하는 경우 업데이트 다운로드 마법사를 사용할 수 있습니다. 이 마법사를 사용하면 클라이언트 컴퓨터에 소프트웨어 업데이트를 배포하기 전에 배포 지점에서 소프트웨어 업데이트를 사용할 수 있는지 확인할 수 있습니다.  
+Configuration Manager でソフトウェア更新プログラムをダウンロードする方法はいくつかあります。 自動展開ルール (ADR) を作成するか、またはソフトウェア更新プログラムを手動で展開すると、ソフトウェア更新プログラムがサイト サーバーのコンテンツ ライブラリにダウンロードされます。 次に、ソフトウェア更新プログラムは、構成済みの展開パッケージに関連付けられている配布ポイントのコンテンツ ライブラリにコピーされます。 ソフトウェア更新プログラムをダウンロードしてから展開する場合は、更新のダウンロード ウィザードを使用できます。 こうすると、ソフトウェア更新プログラムをクライアント コンピューターに展開する前に、そのソフトウェア更新プログラムが配布ポイントで使用可能になっていることを確認できます。  
 
 > [!NOTE]  
->  콘텐츠 상태 모니터링에 대한 자세한 내용은 [Content status monitoring](../deploy-use/monitor-software-updates.md#BKMK_ContentStatus)을 참조하세요.  
+>  コンテンツのステータス監視の詳細については、「 [Content status monitoring](../deploy-use/monitor-software-updates.md#BKMK_ContentStatus)」を参照してください。  
 
-소프트웨어 업데이트 다운로드 마법사를 사용하여 소프트웨어 업데이트를 다운로드하려면 다음 절차를 따르세요.  
+ソフトウェア更新プログラムのダウンロード ウィザードを使用してソフトウェア更新プログラムをダウンロードするには、次の手順に従います。  
 
-#### <a name="to-download-software-updates"></a>소프트웨어 업데이트를 다운로드하려면  
+#### <a name="to-download-software-updates"></a>ソフトウェア更新プログラムをダウンロードするには  
 [!INCLUDE[downloadupdates](..\includes\downloadupdates.md)]
 <!---
 1.  In the Configuration Manager console, navigate to **Software Library** > **Software Updates**.  

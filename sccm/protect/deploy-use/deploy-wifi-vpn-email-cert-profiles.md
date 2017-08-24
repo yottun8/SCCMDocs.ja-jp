@@ -1,6 +1,6 @@
 ---
-title: "Wi-Fi, VPN, 메일 및 인증서 프로필 배포 | Microsoft 문서"
-description: "System Center Configuration Manager에서 Wi-Fi, VPN, 메일 및 인증서 프로필을 배포하는 방법을 알아봅니다."
+title: "Wi-Fi、VPN、電子メール、および証明書プロファイルの展開 | Microsoft Docs"
+description: "System Center Configuration Manager で Wi-Fi、VPN、電子メール、および証明書のプロファイルを展開する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,58 +17,58 @@ manager: angrobe
 ms.openlocfilehash: 70372d5df13034b48f3e43b766776442f1be5823
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="deploy-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager의 프로필 배포
+# <a name="deploy-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager でのプロファイルの展開
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-프로필을 사용하려면 먼저 하나 이상의 컬렉션에 배포해야 합니다.  
+プロファイルを使用するには、1 つまたは複数のコレクションに展開する必要があります。  
 
- **Wi-Fi 프로필 배포**, **VPN 프로필 배포**, **Exchange ActiveSync 프로필 배포** 또는 **인증서 프로필 배포** 대화 상자를 사용하여 이러한 프로필의 배포를 구성합니다. 구성 과정에서, 프로필을 배포할 컬렉션을 정의하고 준수와 관련하여 프로필을 평가할 빈도를 지정합니다.  
+ **[Wi-Fi プロファイルの展開]**、**[VPN プロファイルの展開]**、**[Exchange ActiveSync プロファイルの展開]**、または **[Deploy Certificate Profile]** (証明書プロファイルの展開) ダイアログ ボックスを使用して、これらのプロファイルの展開を構成します。 この構成には、プロファイルの展開先のコレクションの定義と、プロファイルのコンプライアンスを評価する頻度の指定が含まれます。  
 
 > [!NOTE]  
->  동일한 사용자에게 여러 회사 리소스 액세스 프로필을 배포하는 경우 다음 동작이 수행됩니다.  
+>  同じユーザーに複数の会社リソース アクセス プロファイルを展開する場合は、次の動作が発生します。  
 >   
->  -   충돌하는 설정에 선택적 값이 포함된 경우 이 값은 장치에 전송되지 않습니다.  
-> -   충돌하는 설정에 필수 값이 포함된 경우 기본값이 장치에 전송됩니다. 기본값이 없으면 전체 회사 리소스 액세스 프로필이 실패합니다. 예를 들어 **Exchange ActiveSync 호스트** 또는 **전자 메일 주소** 에 대해 지정된 값이 다른 전자 메일 프로필 두 개를 동일한 사용자에게 배포할 경우 이는 필수 설정이므로 두 전자 메일 프로필이 모두 실패합니다.  
+>  -   競合している設定にオプションの値が含まれている場合、その値はデバイスに送信されません。  
+> -   競合する設定に必須の値が含まれている場合、既定値がデバイスに送信されます。 既定値がない場合は、全体の会社リソース アクセス プロファイルは失敗します。 たとえば、同じユーザーに 2 つの電子メール プロファイルを展開し、[ **Exchange ActiveSync ホスト** ] または [ **電子メール アドレス** ] に指定した値が異なる場合、その両方の設定は必須のため、電子メール プロファイルは失敗します。  
 
-> -   인증서 프로필을 배포하려면 먼저 인프라를 구성하고 인증서 프로필을 만들어야 합니다. 자세한 내용은 다음 항목을 참조하세요.  
+> -   証明書プロファイルを展開する前に、まず、インフラストラクチャを構成して証明書プロファイルを作成する必要があります。 詳細については、以下のトピックを参照してください。  
 >   
->  -   [System Center Configuration Manager에서 인증서 인프라 구성](certificate-infrastructure.md)  
-> -   [System Center Configuration Manager에서 인증서 프로필을 만드는 방법](create-certificate-profiles.md)    
+>  -   [System Center Configuration Manager での証明書インフラストラクチャの構成](certificate-infrastructure.md)  
+> -   [System Center Configuration Manager で証明書プロファイルを作成する方法](create-certificate-profiles.md)    
 
 > [!IMPORTANT]  
->  VPN 프로필 배포를 제거할 경우 클라이언트 장치에서는 VPN 프로필이 제거되지 않습니다. 장치에서 프로필을 제거하려면 수동으로 제거해야 합니다.
+>  VPN プロファイルの展開を削除するときに、VPN プロファイルはクライアント デバイスから削除されません。 デバイスからプロファイルを削除する場合、手動で削除する必要があります。
 >   
 
-## <a name="deploying--profiles"></a>프로필 배포  
+## <a name="deploying--profiles"></a>プロファイルの展開  
 
 
-1.  System Center Configuration Manager 콘솔에서 **자산 및 준수**를 선택합니다.  
+1.  System Center Configuration Manager コンソールで、**[資産とコンプライアンス]** を選択します。  
 
-2.  **자산 및 준수** 작업 영역에서 **준수 설정**을 확장하고 **회사 리소스 액세스**를 확장한 다음 **Wi-Fi 프로필**과 같은 적절한 프로필 유형을 선택합니다.  
+2.  **[資産とコンプライアンス]** ワークスペースで、**[コンプライアンス設定]**、**[会社リソースのアクセス]** の順に展開してから、**[Wi-Fi プロファイル]** などの適切なプロファイル タイプを選択します。  
 
-3.  프로필 목록에서 배포하려는 프로필을 선택하고 **홈** 탭의 **배포** 그룹에서 **배포**를 클릭합니다.  
+3.  プロファイルの一覧で、展開するプロファイルを選択してから、**[ホーム]** タブの **[展開]** グループで、**[展開]** をクリックします。  
 
-4.  프로필 배포 대화 상자에서 다음 정보를 지정합니다.  
+4.  プロファイルの展開ダイアログ ボックスで、次の情報を指定します。  
 
-    -   **컬렉션** – **찾아보기**를 클릭하여 프로필을 배포할 컬렉션을 선택합니다.  
+    -   **コレクション**: **[参照]** をクリックして、プロファイルを展開するコレクションを選択します。  
 
-    -   **경고 생성** - 지정된 날짜 및 시간을 기준으로 프로필 준수가 지정된 비율에 못 미치는 경우에 생성되는 경고를 구성하려면 이 옵션을 사용합니다. 경고를 System Center Operations Manager로 전송할지 여부도 지정할 수 있습니다.  
+    -   **アラートを生成する**: このオプションを有効にすると、プロファイルのコンプライアンスが、指定した日付と時刻までに指定した割合に達しなかった場合に生成されるアラートを構成できます。 アラートを System Center Operations Manager に送信するかどうかも指定できます。  
 
-    -   -   **임의 지연(시간)**: (단순 인증서 등록 프로토콜 설정이 포함된 인증서 프로필에 대한 경우에만) 네트워크 장치 등록 서비스의 과도한 처리를 방지하려면 지연 기간을 지정합니다. 기본값은 **64** 시간입니다.  
+    -   -   **ランダム遅延 (時間)**: (Simple Certificate Enrollment Protocol 設定を含む証明書プロファイルのみ) ネットワーク デバイス登録サービスの処理量が多くなりすぎないように、処理を延期できる期間を指定します。 既定値は **64** 時間です。  
 
-    -   **이 <type> 프로필에 대한 준수 평가 일정 지정** - 클라이언트 컴퓨터에서 배포된 프로필을 평가할 일정을 지정합니다. 단순 일정 또는 사용자 지정 일정 중에서 지정할 수 있습니다.  
+    -   **この <type> プロファイルのコンプライアンス評価スケジュールを指定してください**: 展開されたプロファイルをクライアント コンピューターで評価するスケジュールを指定します。 単純なスケジュールとカスタム スケジュールの 2種類あります。  
 
         > [!NOTE]  
-        >  사용자가 로그온해 있을 때 클라이언트 컴퓨터에서 프로필을 평가합니다.  
+        >  プロファイルは、ユーザーがログオンしたときにクライアント コンピューターによって評価されます。  
 
-5.  **확인**을 클릭하여 대화 상자를 닫고 배포를 만듭니다.
+5.  **[OK]** をクリックしてダイアログ ボックスを閉じると、展開が作成されます。
 
-### <a name="see-also"></a>참고 항목  
+### <a name="see-also"></a>関連項目  
 
-[System Center Configuration Manager에서 Wi-Fi, VPN 및 메일 프로필을 모니터링하는 방법](monitor-wifi-email-vpn-profiles.md)
+[System Center Configuration Manager で Wi-Fi、VPN、および電子メールのプロファイルを監視する方法](monitor-wifi-email-vpn-profiles.md)
 
-[System Center Configuration Manager에서 인증서 프로필을 모니터링하는 방법](monitor-certificate-profiles.md)
+[System Center Configuration Manager で証明書プロファイルを監視する方法](monitor-certificate-profiles.md)

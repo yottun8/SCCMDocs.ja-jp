@@ -1,6 +1,6 @@
 ---
-title: "관리되는 PC용 O365 서비스에 대한 액세스 관리 | Microsoft 문서"
-description: "System Center Configuration Manager에서 관리되는 PC에 대한 조건부 액세스를 구성하는 방법을 알아봅니다."
+title: "管理対象 PC の O365 サービスへのアクセスを管理する | Microsoft Docs"
+description: "System Center Configuration Manager で管理されている PC の条件付きアクセスを構成する方法について説明します。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -17,35 +17,35 @@ manager: angrobe
 ms.openlocfilehash: aede531a0406c3d30c9cca957896e002ed22ae51
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>System Center Configuration Manager에서 관리되는 PC용 O365 서비스에 대한 액세스 관리
+# <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>System Center Configuration Manager で管理されている PC の O365 サービスへのアクセスを管理する
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager 버전 1602부터 System Center Configuration Manager에서 관리되는 PC에 대한 조건부 액세스를 구성할 수 있습니다.  
+Configuration Manager のバージョン 1602 より、System Center Configuration Manager によって管理されている PC の条件付きアクセスを構成することができます。  
 
 > [!IMPORTANT]  
-> 이 기능은 업데이트 1602, 업데이트 1606 및 업데이트 1610에서 사용할 수 있는 시험판 기능입니다. 시험판 기능은 프로덕션 환경의 초기 테스트를 위한 제품에 포함되었지만 이러한 기능은 프로덕션 준비가 된 것으로 간주되지 않아야 합니다. 자세한 내용은 [업데이트에서 시험판 기능 사용](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease)을 참조하세요.
-> - 업데이트 1602를 설치하면 기능 유형이 시험판 버전임에도 출시됨으로 표시됩니다.
-> - 그런 다음 1602에서 1606으로 업데이트하면 기능 유형이 여전히 시험판인 경우에도 출시됨으로 표시됩니다.
-> - 버전 1511에서 1606으로 바로 업데이트하면 기능 유형이 시험판으로 표시됩니다.
+> これは、更新プログラム 1602、更新プログラム 1606、更新プログラム 1610 で使用できるプレリリース機能です。 プレリリース機能は、運用環境での早期テストのためにこの製品に含まれていますが、運用環境で使用することはできません。 詳細については、「[更新プログラムからプレリリース機能を使用する](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease)」を参照してください。
+> - 更新プログラム 1602 をインストールすると、プレリリース機能であっても機能の種類はリリース済みとして表示されます。
+> - その後 1602 から 1606 に更新した場合、プレリリース機能のままですが、機能の種類はリリース済みとして表示されます。
+> - バージョン 1511 から 1606 に直接更新した場合、機能の種類はプレリリースとして表示されます。
 
-Intune을 통해 등록하여 관리하는 장치 또는 도메인에 가입되었으며 준수 여부가 평가되지 않은 PC에 대한 조건부 액세스를 구성하는 방법에 관한 자세한 내용을 원하는 경우 [System Center Configuration Manager에서 서비스에 대한 액세스 관리](../../protect/deploy-use/manage-access-to-services.md)를 참조하세요.
+Intune によって登録および管理されているデバイスへの条件付きアクセスや、ドメインに参加していてコンプライアンス評価対象ではない PC への条件付きアクセスを構成する方法については、「[System Center Configuration Manager でサービスへのアクセスを管理する](../../protect/deploy-use/manage-access-to-services.md)」を参照してください。
 
-## <a name="supported-services"></a>지원되는 서비스  
+## <a name="supported-services"></a>サポートされているサービス  
 
 -   Exchange Online
 -   SharePoint Online
 
-## <a name="supported-pcs"></a>지원되는 PC  
+## <a name="supported-pcs"></a>サポートされている PC  
 
 -   Windows 7
 -   Windows 8.1
 -   Windows 10
 
-## <a name="supported-windows-servers"></a>지원되는 Windows 서버
+## <a name="supported-windows-servers"></a>サポートされている Windows サーバー
 
 -   2008 R2
 -   2012
@@ -53,89 +53,89 @@ Intune을 통해 등록하여 관리하는 장치 또는 도메인에 가입되�
 -   2016
 
     > [!IMPORTANT]
-    > 여러 사용자가 동시에 로그인할 수 있는 Windows 서버의 경우 동일한 조건부 액세스 정책이 로그인하는 모든 사용자에게 배포되어야 합니다.
+    > 複数のユーザーが同時にサインインしている可能性のある Windows サーバーについては、サインインしているすべてのユーザーに同じ条件付きアクセス ポリシーを展開する必要があります。
 
-## <a name="configure-conditional-access"></a>조건부 액세스 구성  
- 조건부 액세스를 설정하려면 먼저 규정 준수 정책을 만들고 조건부 액세스 정책을 구성해야 합니다. PC에 대한 조건부 액세스 정책을 설정할 때 Exchange Online 및 SharePoint Online 서비스에 액세스하기 위해 PC가 준수 정책을 준수하도록 요구할 수 있습니다.  
+## <a name="configure-conditional-access"></a>条件付きアクセスの構成  
+ 条件付きアクセスをセットアップするには、最初にコンプライアンス ポリシーを作成して、条件付きアクセス ポリシーを構成する必要があります。 コンプライアンス ポリシーに対応している PC のみが Exchange Online サービスと SharePoint Online サービスにアクセスできるように、PC の条件付きアクセス ポリシーを構成できます。  
 
-### <a name="prerequisites"></a>전제 조건  
+### <a name="prerequisites"></a>必要条件  
 
--   ADFS 동기화 및 O365 구독. O365 구독은 Exchange Online 및 SharePoint Online을 설정하는 데 사용됩니다.  
+-   ADFS の同期と O365 サブスクリプション。 O365 サブスクリプションは、Exchange Online と SharePoint Online のセットアップのためのものです。  
 
--   Microsoft Intune 구독 Microsoft Intune 구독은 Configuration Manager 콘솔에서 구성해야 합니다. Intune 구독은 장치 준수 상태를 Azure Active Directory에 릴레이하고 사용자 사용을 허가하는 데 사용됩니다.  
+-   Microsoft Intune サブスクリプション。 Microsoft Intune サブスクリプションは、Configuration Manager コンソールで構成される必要があります。 Azure Active Directory にデバイスのコンプライアンス対応状態を中継するために、また、ユーザー ライセンスのために、Intune サブスクリプションが使用されます。  
 
- PC는 다음과 같은 요구 사항을 충족해야 합니다.  
+ PC は、次の要件を満たす必要があります。  
 
--   Azure Active Directory에 자동 장치 등록의[필수 조건](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)   
+-   Azure Active Directory への自動デバイス登録の[前提条件](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)   
 
-     규정 준수 정책을 통해 Azure AD에 PC를 등록할 수 있습니다.  
+     コンプライアンス ポリシーに基づいて Azure AD に PC を登録できます。  
 
-    -   Windows 8.1 및 Windows 10 PC의 경우 Active Directory 그룹 정책을 사용하여 Azure AD에 자동으로 등록되도록 장치를 구성할 수 있습니다.  
+    -   Windows 8.1 と Windows 10 の PC では、Active Directory グループ ポリシーを使用して、Azure AD に自動的に登録するデバイスを構成することができます。  
 
-    -   o   Windows 7 PC의 경우 System Center Configuration Manager를 통해 Windows 7 PC에 장치 등록 소프트웨어 패키지를 배포해야 합니다. [Windows 도메인에 가입된 장치의 Azure Active Directory 자동 장치 등록](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1) 항목에서 자세한 내용을 제공합니다.  
+    -   Windows 7 の PC の場合には、System Center Configuration Manager を利用して Windows 7 PC にデバイス登録ソフトウェア パッケージを展開する必要があります。 詳細については、「[Azure Active Directory への Windows ドメイン参加済みデバイスの自動デバイス登録](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)」トピックを参照してください。  
 
--   최신 인증을 [사용](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)하는 상태에서 Office 2013 또는 Office 2016을 사용해야 합니다.  
+-   先進認証が [有効になっている](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)Office 2013 または Office 2016 を使用する必要があります。  
 
- 아래에 설명된 단계는 Exchange Online 및 SharePoint Online에 적용됩니다.  
+ 下記の手順は、Exchange Online と SharePoint Online の両方に適用されます。  
 
-### <a name="step-1-configure-compliance-policy"></a>1단계. 준수 정책 구성  
- Configuration Manager 콘솔에서 다음 규칙으로 준수 정책을 만듭니다.  
+### <a name="step-1-configure-compliance-policy"></a>手順 1. コンプライアンス ポリシーの構成  
+ Configuration Manager コンソールで、次の規則を含むコンプライアンス ポリシーを作成します。  
 
--   Azure Active Directory에서 등록 필요: 이 규칙은 사용자 장치가 Azure AD에 연결된 작업 공간인지 확인합니다. 연결되지 않은 경우 장치가 Azure AD에 자동으로 등록됩니다. 자동 등록은 Windows 8.1에서만 지원됩니다. Windows 7 PC의 경우 자동 등록을 수행하기 위해 MSI를 배포합니다. 자세한 내용은 [Azure Active Directory에 자동 장치 등록](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)을 참조하세요.  
+-   Azure Active Directory への登録が必要: この規則は、ユーザーのデバイスが Azure AD に社内参加しているかどうかをチェックし、参加していない場合には Azure AD に自動的に登録します。 自動登録がサポートされているのは Windows 8.1 のみです。 Windows 7 PC の場合には、MSI を展開して自動登録を実行します。 詳細については、 [Azure Active Directory への自動デバイス登録](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)に関する記事を参照してください。  
 
--   **마감일이 다음 기간보다 오래된 필수 업데이트가 모두 설치됨:** 이 규칙은 마감일 및 사용자가 지정한 유예 기간 내에 사용자 장치에 모든 필수 업데이트(필수 자동 업데이트 규칙에 지정)가 설치되는지 확인하고 보류 중인 모든 필수 업데이트를 자동으로 설치합니다.  
+-   **必要な更新が特定の日数の期限を過ぎている場合、そのすべてをインストール:** このルールは、ユーザーが指定した期限および猶予期間内の必須のすべての更新 (「Required automatic updates」 (必須の自動更新) ルールで指定) がユーザーのデバイスに含まれているかどうかを確認し、保留されている必須の更新すべてを自動的にインストールします。  
 
--   **BitLocker 드라이브 암호화 필요:** 장치의 기본 드라이브(예: C:\\)가 BitLocker로 암호화되어 있는지 확인합니다. 기본 장치에서 Bitlocker 암호화가 사용되도록 설정되지 않으면 메일 및 SharePoint 서비스에 대한 액세스가 차단됩니다.  
+-   **BitLocker ドライブ暗号化が必要:** これは、デバイスのプライマリ ドライブ (C:\\ など) が BitLocker で暗号化されたかどうかをチェックします。 Bitlocker 暗号化がプライマリ デバイスで有効でない場合、電子メール サービスおよび SharePoint サービスへのアクセスがブロックされます。  
 
--   **맬웨어 방지 필요:** 맬웨어 방지 프로그램(System Center Endpoint Protection 또는 Windows Defender만)이 사용되도록 설정되고 실행 중인지 확인합니다. 사용되도록 설정되지 않았으면 메일 및 SharePoint 서비스에 대한 액세스가 차단됩니다.  
+-   **マルウェア対策が必要:** これは、マルウェア対策ソフトウェア (System Center Endpoint Protection または Windows Defender 限定) が有効で実行されているかどうかをチェックします。 無効な場合、電子メール サービスおよび SharePoint サービスへのアクセスがブロックされます。  
 
-### <a name="step-2-evaluate-the-effect-of-conditional-access"></a>2단계. 조건부 액세스의 영향 평가  
- 조건부 액세스 규정 준수 보고서를 실행합니다. 이 보고서는 모니터링 섹션에서 보고서 > 호환 및 설정 관리에서 찾을 수 있습니다. 이 보고서를 실행하면 모든 장치에 대한 준수 상태가 표시됩니다.  규격이 아닌 것으로 보고되는 장치는 Exchange Online 및 SharePoint Online에 액세스하지 못하도록 차단됩니다.  
+### <a name="step-2-evaluate-the-effect-of-conditional-access"></a>手順 2. 条件付きアクセスの効果の評価  
+ 条件付きアクセス コンプライアンス レポートを実行します。 このレポートは [レポート] > [コンプライアンスと設定の管理] の [監視] セクションにあります。 これには、すべてのデバイスのコンプライアンス対応状態が表示されます。  非対応としてレポートされたデバイスから Exchange Online および SharePoint Online へのアクセスはブロックされます。  
 
- ![CA&#95;준수&#95;보고서](media/CA_compliance_report.png)  
+ ![CA&#95;compliance&#95;report](media/CA_compliance_report.png)  
 
-### <a name="configure-active-directory-security-groups"></a>Active Directory 보안 그룹 구성  
- 정책 유형에 따라 사용자 그룹을 대상으로 조건부 액세스 정책을 구성합니다. 이러한 그룹에는 정책의 대상이 되거나 정책에서 제외되는 사용자가 포함됩니다. 사용자가 정책의 대상인 경우 해당 사용자가 사용하는 각 장치가 규정을 준수해야 서비스에 액세스할 수 있습니다.  
+### <a name="configure-active-directory-security-groups"></a>Active Directory セキュリティ グループの構成  
+ 条件付きアクセス ポリシーは、ポリシーの種類に応じてユーザーのグループを対象とします。 これらのグループには、ポリシーの対象となるユーザーや、ポリシーから除外されるユーザーが含まれます。 サービスにアクセスするには、ポリシーの対象であるユーザーが使用する各デバイスがポリシーに対応している必要があります。  
 
- Active Directory 보안 사용자 그룹입니다. 이러한 사용자 그룹은 Azure Active Directory와 동기화되어야 합니다. Office 365 관리 센터 또는 Intune 계정 포털에서 이러한 그룹을 구성할 수도 있습니다.  
+ Active Directory セキュリティ ユーザー グループ。 これらのユーザー グループは、Azure Active Directory に同期される必要があります。 これらのグループを Office 365 管理センターまたは Intune アカウント ポータルで構成することもできます。  
 
- 각 정책에 두 그룹 유형을 지정할 수 있습니다. :  
+ 各ポリシーには、次の 2 つのグループの種類を指定できます。 :  
 
--   **대상 그룹** - 정책이 적용되는 사용자 그룹 준수 및 조건부 액세스 정책 둘 다에 동일한 그룹을 사용해야 합니다.  
+-   **対象グループ** – ポリシーが適用されるユーザー グループ。 コンプライアンスと条件付きアクセス ポリシーの両方に同じグループを使用してください。  
 
--   **제외된 그룹** - 정책에서 제외되는 사용자 그룹(선택 사항)  
-    사용자가 두 그룹에 모두 속한 경우에는 정책에서 제외됩니다.  
+-   **例外グループ** – ポリシーから除外されるユーザー グループ (省略可能)  
+    ユーザーが両方に含まれている場合は、ポリシーから除外されます。  
 
-     조건부 액세스 정책의 대상인 그룹만이 평가됩니다.  
+     条件付きアクセス ポリシーの対象となるグループだけが評価されます。  
 
-### <a name="step-3--create-a-conditional-access-policy-for-exchange-online-and-sharepoint-online"></a>3단계:  Exchange Online 및 SharePoint Online에 대한 조건부 액세스 정책 만들기  
+### <a name="step-3--create-a-conditional-access-policy-for-exchange-online-and-sharepoint-online"></a>手順 3.  Exchange Online および SharePoint Online の条件付きアクセス ポリシーを作成します。  
 
-1.  Configuration Manager 콘솔에서 **자산 및 준수**을 클릭합니다.  
+1.  Configuration Manager コンソールで、 **[資産とコンプライアンス]**をクリックします。  
 
-2.  Exchange Online에 대한 정책을 만들려면 **Exchange Online에 대한 조건적 액세스 정책 사용**을 선택합니다.  
+2.  Exchange Online のポリシーを作成するには、 **[Exchange Online の条件付きアクセス ポリシーを有効にする]**を選びます。  
 
-     SharePoint Online에 대한 정책을 만들려면 **Exchange Online에 대한 조건적 액세스 정책 사용**을 선택합니다.  
+     SharePoint Online のポリシーを作成するには、 **[Exchange Online の条件付きアクセス ポリシーを有効にする]**を選びます。  
 
-3.  **홈** 탭의 **링크** 그룹에서 **Intune 콘솔에서 조건부 액세스 정책 구성**을 클릭합니다. Configuration Manager와 Intune을 연결하는 데 사용되는 계정의 사용자 이름과 암호를 입력해야 할 수 있습니다.  
+3.  [ **ホーム** ] タブの [ **リンク** ] グループで、[ **Intune コンソールでの条件付きアクセス ポリシーの構成**] をクリックします。 Configuration Manager を Intune に接続するために使用されるアカウントのユーザー名とパスワードを指定する必要がある場合があります。  
 
-     Intune 관리 콘솔이 열립니다.  
+     Intune 管理コンソールが開きます。  
 
-4.  Exchange Online의 경우 Microsoft Intune 관리 콘솔에서 **정책 > 조건부 액세스 > Exchange Online 정책**을 클릭합니다.  
+4.  Exchange Online の場合は、Microsoft Intune の管理コンソールで **[ポリシー] > [条件付きアクセス] > [Exchange Online ポリシー]** をクリックします。  
 
-     SharePoint Online의 경우 Microsoft Intune 관리 콘솔에서 **정책 > 조건부 액세스 > SharePoint Online 정책**을 클릭합니다.  
+     SharePoint Online の場合は、Microsoft Intune の管理コンソールで **[ポリシー] > [条件付きアクセス] > [SharePoint Online ポリシー]** をクリックします。  
 
-5.  Windows PC 요구 사항을**장치가 호환되어야 함 옵션**으로 설정합니다.  
+5.  Windows PC の要件を**[デバイスは準拠デバイスである必要があります]**オプションに設定します。  
 
-6.  **대상 그룹**에서 **수정** 을 클릭하여 정책을 적용할 Azure Active Directory 보안 그룹을 선택합니다.  
+6.  **[対象グループ]**で、 **[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。  
 
     > [!NOTE]  
-    >  준수 정책 및 조건부 액세스 정책의 대상 그룹을 배포하는 데 동일한 보안 사용자 그룹을 사용해야 합니다.  
+    >  コンプライアンス ポリシーの展開と条件付きアクセス ポリシーの対象グループに同じセキュリティ ユーザー グループを使用してください。  
 
-     **제외된 그룹**에서 필요에 따라 **수정** 을 클릭하여 이 정책에서 제외된 Azure Active Directory 보안 그룹을 선택합니다.  
+     **[例外グループ]**で、必要に応じて **[変更]** をクリックして、このポリシーから除外する Azure Active Directory セキュリティ グループを選択します。  
 
-7.  **저장** 을 클릭하여 정책을 만들고 저장합니다.  
+7.  **[保存]** をクリックしてポリシーを作成および保存します  
 
- 비준수로 인해 차단된 최종 사용자는 System Center Configuration Manager 소프트웨어 센터에서 호환성 정보를 확인하고 호환성 문제가 해결되면 새로운 정책 평가를 시작합니다.  
+ 非対応であるためにブロックされているエンドユーザーに対しては、System Center Configuration Manager ソフトウェア センターにコンプライアンス情報が表示されます。コンプライアンスに関する問題が解決されたら、そのようなエンドユーザーが新しいポリシー評価を開始します。  
 
 <!---
 ##  <a name="bkmk_KnownIssues"></a> Known issues  
@@ -147,7 +147,7 @@ Intune을 통해 등록하여 관리하는 장치 또는 도메인에 가입되�
 
 -   Windows 10 users may see multiple access failures when trying to reach O365 and/or SharePoint online resources. Note that conditional access is not fully supported for Windows 10.  
 --->
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>関連項目
 
-- [System Center Configuration Manager를 사용하여 데이터 및 사이트 인프라 보호](../../protect/understand/protect-data-and-site-infrastructure.md)
-- [Configuration Manager에 대한 조건부 액세스 문제 해결 순서도](https://gallery.technet.microsoft.com/Conditional-access-fd747c1a?redir=0)
+- [System Center Configuration Manager でのデータとサイト インフラストラクチャの保護](../../protect/understand/protect-data-and-site-infrastructure.md)
+- [Configuration Manager の条件付きアクセスによるトラブルシューティング フローチャート](https://gallery.technet.microsoft.com/Conditional-access-fd747c1a?redir=0)

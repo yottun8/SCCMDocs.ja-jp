@@ -1,6 +1,6 @@
 ---
-title: "멀티캐스트를 사용하여 네트워크를 통해 Windows 배포 | Microsoft 문서"
-description: "여러 컴퓨터에서 운영 체제 이미지를 동시에 다운로드할 수 있도록 System Center Configuration Manager 환경에서 멀티캐스트를 사용합니다."
+title: "マルチキャストを使用してネットワーク経由で Windows を展開する | Microsoft Docs"
+description: "System Center Configuration Manager 環境内でマルチキャストを使用すると、複数のコンピューターがオペレーティング システム イメージを同時にダウンロードできるようになります。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,28 +17,28 @@ manager: angrobe
 ms.openlocfilehash: 55266696aa7340fddda3a57ff90e20222ff665a5
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="use-multicast-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>System Center Configuration Manager에서 멀티캐스트를 사용하여 네트워크를 통해 Windows 배포
+# <a name="use-multicast-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>System Center Configuration Manager でマルチキャストを使用してネットワーク経由で Windows を展開する
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-멀티캐스트는 여러 클라이언트가 동시에 같은 운영 체제 이미지를 다운로드할 수도 있는 System Center Configuration Manager 환경에서 사용할 수 있는 네트워크 최적화 방법입니다. 멀티캐스트를 사용할 경우 여러 컴퓨터는 배포 지점에서 멀티캐스트되는 운영 체제 이미지를 동시에 다운로드하며 배포 지점은 개별 연결을 통해 데이터 복사본을 각 클라이언트에 전송하지 않습니다.  
+マルチキャストは、複数のクライアントが同じオペレーティング システム イメージをダウンロードすることが多い System Center Configuration Manage 環境で使用できるネットワーク最適化の方法です。 マルチキャストを使用すると、配布ポイントがデータのコピーを各々のクライアントに別々の接続で送信する代わりに、マルチキャストしますので、複数のコンピューターが同時にオペレーティング システム イメージをダウンロードすることになります。  
 
- 다음 운영 체제 배포 시나리오에서 멀티캐스트를 사용하여 네트워크를 통해 운영 체제를 배포할 수 있습니다.  
+ 次に挙げるオペレーティング システムの展開シナリオでは、マルチキャストを使用してネットワーク経由でオペレーティング システムを展開できます。  
 
--   [새 버전의 Windows로 기존 컴퓨터 새로 고침](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+-   [新しいバージョンの Windows で既存のコンピューターを更新する](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
--   [새 컴퓨터에 새 버전의 Windows 설치(완전 복구)](install-new-windows-version-new-computer-bare-metal.md)  
+-   [新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする](install-new-windows-version-new-computer-bare-metal.md)  
 
- 운영 체제 배포 시나리오 중 하나의 단계를 완료한 후 다음 섹션을 참조하여 멀티미디어를 지원합니다.  
+ いずれかのオペレーティング システムの展開シナリオのステップを完了させてから、次のセクションを参照して、マルチキャストをサポートします。  
 
-##  <a name="BKMK_Configure"></a> 멀티캐스트를 지원하기 위한 배포 지점 구성  
- 운영 체제를 배포할 때 멀티캐스트를 사용하려면 멀티캐스트를 지원하도록 배포 지점을 구성해야 합니다. 자세한 내용은 [멀티캐스트를 지원하도록 배포 지점 구성](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast)을 참조하세요.  
+##  <a name="BKMK_Configure"></a> マルチキャストをサポートする配布ポイントの構成  
+ オペレーティング システムを展開するときにマルチキャストを使用するには、マルチキャストをサポートするように配布ポイントを構成する必要があります。 詳細については、「[マルチキャストをサポートする配布ポイントの構成](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast)」を参照してください。  
 
-## <a name="prepare-an-operating-system-image-for-multicast-deployments"></a>멀티캐스트 배포를 위한 운영 체제 이미지 준비  
- 멀티캐스트를 지원하도록 운영 체제 이미지 패키지를 구성하려면 [멀티캐스트 배포를 위한 운영 체제 이미지 준비](../get-started/manage-operating-system-images.md#BKMK_OSImageMulticast)를 참조하세요.  
+## <a name="prepare-an-operating-system-image-for-multicast-deployments"></a>マルチキャスト展開用のオペレーティング システム イメージの準備  
+ マルチキャストをサポートするようにオペレーティング システム イメージ パッケージを構成するには、「[マルチキャスト展開用のオペレーティング システム イメージを準備する](../get-started/manage-operating-system-images.md#BKMK_OSImageMulticast)」を参照してください。  
 
-##  <a name="BKMK_Deploy"></a> 작업 순서 배포  
- 대상 컬렉션에 운영 체제 배포 자세한 내용은 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)항목을 참조하세요.  
+##  <a name="BKMK_Deploy"></a> タスク シーケンスの展開  
+ オペレーティング システムをターゲット コレクションに展開します。 詳細については、「 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)」をご覧ください。  

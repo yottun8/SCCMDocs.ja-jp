@@ -1,6 +1,6 @@
 ---
-title: "SQL Server 클러스터 | Microsoft 문서"
-description: "SQL Server 클러스터를 사용하여 System Center Configuration Manager 사이트 데이터베이스를 호스트할 수 있습니다. 지원되는 옵션에 대한 정보를 포함합니다."
+title: "SQL Server クラスター | Microsoft Docs"
+description: "SQL Server クラスターを使用して System Center Configuration Manager サイト データベースをホストします。 サポートされているオプションに関する情報が含まれます。"
 ms.custom: na
 ms.date: 2/28/2017
 ms.prod: configuration-manager
@@ -18,85 +18,85 @@ manager: angrobe
 ms.openlocfilehash: 53f119bbb1f8827a9c23c8b747840350bbb92790
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="use-a-sql-server-cluster-for-the-system-center-configuration-manager-site-database"></a>System Center Configuration Manager 사이트 데이터베이스에 SQL Server 클러스터 사용
+# <a name="use-a-sql-server-cluster-for-the-system-center-configuration-manager-site-database"></a>SQL Server クラスターを使用した System Center Configuration Manager サイト データベースのホスト
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
 
- SQL Server 클러스터를 사용하여 System Center Configuration Manager 사이트 데이터베이스를 호스트할 수 있습니다. 서버 클러스터에서 지원되는 사이트 시스템 역할은 사이트 데이터베이스뿐입니다.  
+ SQL Server クラスターを使用して System Center Configuration Manager サイト データベースをホストします。 サイト データベースは、サーバー クラスターでサポートされているサイト システムの役割として唯一のものです。  
 
 > [!IMPORTANT]  
->  SQL Server 클러스터를 올바르게 설정하려면 SQL Server 설명서 라이브러리에서 제공되는 설명서와 절차를 참조합니다.  
+>  SQL Server クラスターの正常なセットアップは、SQL Server ドキュメント ライブラリで提供されるドキュメントと手順に依存します。  
 
- 클러스터는 장애 조치(Failover) 지원을 제공하고 사이트 데이터베이스의 안정성을 개선할 수 있습니다. 그러나 추가적인 처리 또는 부하 분산 이점은 제공하지 않습니다. 실제로 사이트 서버가 사이트 데이터베이스에 연결하기 전에 SQL Server 클러스터의 활성 노드를 찾아야 하므로 성능이 저하될 수도 있습니다.  
+ クラスターは、フェールオーバーをサポートできるため、サイト データベースの信頼性を高めることができます。 ただし、処理や負荷分散に関するメリットが増えることはありません。 さらに、サイト サーバーが、サイト データベースに接続する前に SQL Server クラスターのアクティブ ノードを検索する必要があるため、パフォーマンスの低下が発生する可能性があります。  
 
- Configuration Manager를 설치하기 전에 Configuration Manager를 지원하도록 SQL Server 클러스터를 준비해야 합니다. 이 섹션의 뒷부분에 있는 필수 조건을 참조하세요.  
+ Configuration Manager をインストールする前に、Configuration Manager をサポートするために SQL Server クラスターを準備する必要があります。 (このセクションで後ほど説明する前提条件をご覧ください)。  
 
- Configuration Manager 설치 중에 Windows 볼륨 섀도 복사본 서비스 작성기가 Microsoft Windows Server 클러스터의 각 물리적 컴퓨터 노드에 설치됩니다. 이 경우 **백업 사이트 서버** 유지 관리 작업이 지원됩니다.  
+ Configuration Manager のセットアップ中に、Microsoft Windows Server クラスターの各物理コンピューター ノードに Windows ボリューム シャドウ コピー サービス ライターがインストールされます。 これは、**バックアップ サイト サーバー**のメンテナンス タスクをサポートしています。  
 
- 사이트가 설치된 후 Configuration Manager는 1시간마다 클러스터 노드 변경 내용을 확인하고, 확인된 변경 내용 중 Configuration Manager 구성 요소 설치에 영향을 주는 변경 내용(예: 노드 장애 조치(Failover) 또는 SQL Server 클러스터에 새 노드 추가)을 자동으로 관리합니다.  
+ サイトのインストール後に Configuration Manager は、1 時間ごとにクラスター ノードが変更されたかどうかを確認します。 Configuration Manager は、Configuration Manager コンポーネントのインストールに影響する、検出したすべての変更 (ノードのフェールオーバーや SQL Server クラスターへの新しいノードの追加など) を自動的に管理します。  
 
-## <a name="supported-options-for-using-a-sql-server-failover-cluster"></a>SQL Server 장애 조치(Failover) 클러스터 사용을 위해 지원되는 옵션은 다음과 같습니다.
+## <a name="supported-options-for-using-a-sql-server-failover-cluster"></a>SQL Server フェールオーバー クラスターの使用でサポートされるオプション
 
-다음 옵션은 사이트 데이터베이스로 사용되는 SQL Server 장애 조치(Failover) 클러스터에 대해 지원됩니다.
+サイト データベースとして使用される SQL Server フェールオーバー クラスターでは、次のオプションがサポートされます。
 
--   단일 인스턴스 클러스터  
+-   単一インスタンス クラスター  
 
--   여러 인스턴스 구성  
+-   複数インスタンス構成  
 
--   여러 활성 노드  
+-   複数のアクティブ ノード  
 
--   명명된 인스턴스 또는 기본 인스턴스 둘 다  
+-   名前付きインスタンスと既定のインスタンスの両方  
 
-다음 필수 조건에 유의하세요.  
+次の前提条件に注意してください。  
 
--   사이트 서버의 원격 사이트 데이터베이스를 사용해야 합니다. 클러스터는 사이트 시스템 서버를 포함할 수 없습니다.  
+-   サイト データベースは、サイト サーバーからリモートである必要があります (クラスターは、サイト システム サーバーを含めることはできません)。  
 
--   클러스터에 포함된 각 서버의 로컬 관리자 그룹에 사이트 서버의 컴퓨터 계정을 추가해야 합니다.  
+-   サイト サーバーのコンピューター アカウントを、クラスター内の各サーバーのローカルの Administrators グループに追加しなければなりません。  
 
--   Kerberos 인증을 지원하려면 각 SQL Server 클러스터 노드의 네트워크 연결에 대해 **TCP/IP** 네트워크 통신 프로토콜을 사용하도록 설정해야 합니다. **명명된 파이프** 는 반드시 사용해야 하는 것은 아니지만 Kerberos 인증 문제를 해결하는 데 사용할 수 있습니다. **SQL Server 구성 관리자** 의 **SQL Server 네트워크 구성** 아래에서 네트워크 프로토콜 설정을 구성합니다.  
+-   Kerberos 認証をサポートするには、**TCP/IP** ネットワーク通信プロトコルを各 SQL Server クラスター ノードのネットワーク接続に対して有効にする必要があります。 **名前付きパイプ** は不要ですが、Kerberos 認証に問題が発生したときのトラブルシューティングに使用できます。 ネットワーク プロトコルの設定は、**[SQL Server ネットワークの構成]** にある **[SQL Server 構成マネージャー]**で構成します。  
 
--   PKI를 사용하는 경우 사이트 데이터베이스에 대해 SQL Server 클러스터를 사용할 때의 특정 인증서 요구 사항은 Configuration Manager에 대한 PKI 인증서 요구 사항을 참조하세요.  
+-   PKI を使用する場合は、「Configuration Manager での PKI 証明書の要件」を参照し、サイト データベースに SQL Server クラスターを使用する場合に必要となる特定の証明書の要件を確認します。  
 
-다음 제한 사항을 고려하세요.  
+次の制限が適用されます。  
 
--   **설치 및 구성:**  
+-   **インストールおよび構成:**  
 
-    -   보조 사이트는 SQL Server 클러스터를 사용할 수 없습니다.  
+    -   セカンダリ サイトには、SQL Server クラスターを使用できません。  
 
-    -   SQL Server 클러스터를 지정할 때는 사이트 데이터베이스에 대해 기본 파일 위치가 아닌 위치를 지정하는 옵션을 사용할 수 없습니다.  
+    -   サイト データベースに対して既定以外のファイルの場所を指定するオプションは、SQL Server クラスターを指定する場合は使用できません。  
 
--   **SMS 공급자:**  
+-   **SMS プロバイダー:**  
 
-    -   SQL Server 클러스터 또는 클러스터된 SQL Server 노드로 실행되는 컴퓨터에 SMS 공급자 인스턴스를 설치할 수는 없습니다.  
+    -   SQL Server クラスター、またはクラスター化された SQL Server ノードとして実行されるコンピューターに SMS プロバイダーのインスタンスをインストールすることはサポートされていません。  
 
--   **데이터 복제 옵션:**  
+-   **データ レプリケーションのオプション:**  
 
-    -   **분산 보기**를 사용하려는 경우에는 SQL Server 클러스터를 사용하여 사이트 데이터베이스를 호스트할 수 없습니다.  
+    -   **分散ビュー**を使用する場合は、サイト データベースをホストするために SQL Server クラスターを使用することはできません。  
 
--   **백업 및 복구:**  
+-   **バックアップと回復:**  
 
-    -   Configuration Manager는 명명된 인스턴스를 사용하는 SQL Server 클러스터에 대한 DPM(Data Protection Manager) 백업은 지원하지 않지만 SQL Server의 기본 인스턴스를 사용하는 SQL Server 클러스터에 대한 DPM 백업을 지원합니다.  
+    -   Configuration Manager では、名前付きインスタンスを使用する SQL Server クラスターの Data Protection Manager (DPM) のバックアップはサポートしません。 ただし、SQL Server の既定のインスタンスを使用する SQL Server クラスター上の DPM バックアップはサポートします。  
 
-## <a name="prepare-a-clustered-sql-server-instance-for-the-site-database"></a>사이트 데이터베이스용으로 클러스터된 SQL Server 인스턴스 준비  
+## <a name="prepare-a-clustered-sql-server-instance-for-the-site-database"></a>サイト データベースに対してクラスター化された SQL Server インスタンスを準備する  
 
-사이트 데이터베이스를 준비하기 위해 완료할 주요 작업은 다음과 같습니다.
+サイト データベースを準備するために完了する主なタスクを次に示します。
 
--   기존 Windows Server 클러스터 환경에서 사이트 데이터베이스를 호스트할 가상 SQL Server 클러스터를 만듭니다. SQL Server 클러스터를 설치하고 설정하기 위한 구체적인 단계는 해당 SQL Server 버전 관련 설명서를 참조하세요. 예를 들어 SQL Server 2008 R2를 사용하는 경우 [SQL Server 2008 R2 장애 조치 클러스터 설치](http://go.microsoft.com/fwlink/p/?LinkId=240231)를 참조하십시오.  
+-   サイト データベースをホストする仮想 SQL Server クラスターを既存の Windows Server クラスター環境で作成します。 SQL Server クラスターをインストールおよび設定するための特定の手順については、使用している SQL Server のバージョンのドキュメントをご覧ください。 たとえば、SQL Server 2008 R2 を使用している場合は、「 [SQL Server 2008 R2 フェールオーバー クラスターのインストール](http://go.microsoft.com/fwlink/p/?LinkId=240231)」を参照してください。  
 
--   SQL Server 클러스터의 각 컴퓨터에서 Configuration Manager로 사이트 구성 요소를 설치하지 않을 각 드라이브의 루트 폴더에 파일을 저장할 수 있습니다. 파일 이름을 **NO_SMS_ON_DRIVE.SMS**로 지정해야 합니다. 기본적으로 Configuration Manager에서는 백업과 같은 작업을 지원하기 위해 각 실제 노드에 일부 구성 요소를 설치합니다.  
+-   SQL Server クラスター内の各コンピューターで、ドライブのルート フォルダーにファイルを配置すると、Configuration Manager はサイト コンポーネントをそのドライブにインストールしません。 ファイル名は **NO_SMS_ON_DRIVE.SMS** にする必要があります。 既定では、Configuration Manager は各物理ノードにいくつかのコンポーネントをインストールして、バックアップなどの操作をサポートします。  
 
--   각 Windows Server 클러스터 노드 컴퓨터의 **로컬 관리자** 그룹에 사이트 서버의 컴퓨터 계정을 추가합니다.  
+-   サイト サーバーのコンピューター アカウントを、各 Windows Server クラスター ノード コンピューターのローカルの [ **Administrators** ] グループに追加します。  
 
--   가상 SQL Server 인스턴스에서 Configuration Manager 설치 프로그램을 실행하는 사용자 계정에 **sysadmin** SQL Server 역할을 할당합니다.  
+-   仮想 SQL Server インスタンスで、Configuration Manager セットアップを実行するユーザー アカウントに、**sysadmin** という SQL Server の役割を割り当てます。  
 
-### <a name="to-install-a-new-site-using-a-clustered-sql-server"></a>클러스터된 SQL Server를 사용하여 새 사이트를 설치하려면  
- 클러스터된 사이트 데이터베이스를 사용하는 사이트를 설치하려면 사이트 설치를 위한 일반 프로세스 후에 정보를 다음과 같이 변경하여 Configuration Manager 설치 프로그램을 실행합니다.  
+### <a name="to-install-a-new-site-using-a-clustered-sql-server"></a>クラスター化された SQL Server を使用して新しいサイトをインストールするには  
+ クラスター化されたサイト データベースを使用するサイトをインストールするには、次の部分を変更したうえで通常のサイトのインストール プロセスに従って、Configuration Manager のセットアップを実行します。  
 
--   **데이터베이스 정보** 페이지에서 사이트 데이터베이스를 호스트할 가상 SQL Server 클러스터 인스턴스의 이름을 지정합니다. 가상 인스턴스는 SQL Server를 실행하는 컴퓨터의 이름을 바꿉니다.  
+-   **[データベース情報]** ページで、サイト データベースをホストする仮想 SQL Server クラスター インスタンスの名前を指定します。 仮想インスタンスは、SQL Server を実行するコンピューターの名前を置き換えます。  
 
     > [!IMPORTANT]  
-    >  가상 SQL Server 클러스터 인스턴스의 이름을 입력할 때 Windows Server 클러스터에서 만들어진 가상 Windows Server 이름을 입력해서는 안 됩니다. 가상 Windows Server 이름을 사용하는 경우에는 활성 Windows Server 클러스터 노드의 로컬 하드 드라이브에 사이트 데이터베이스가 설치됩니다. 따라서 해당 노드에서 오류가 발생하는 경우 정상적인 장애 조치(Failover)가 수행되지 않습니다.  
+    >  仮想 SQL Server クラスター インスタンスの名前を入力するとき、Windows Server クラスターによって作成される仮想 Windows Server 名を入力しないでください。 仮想 Windows Server 名を使用すると、サイト データベースが、アクティブな Windows Server クラスター ノードのローカル ハード ディスクにインストールされます。 これにより、そのノードに障害が発生しても、正常にフェールオーバーできません。  

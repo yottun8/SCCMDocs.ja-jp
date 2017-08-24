@@ -1,6 +1,6 @@
 ---
-title: "모바일 장치 관리 | Microsoft 문서"
-description: "System Center Configuration Manager에서 Exchange Server 커넥터를 사용하여 모바일 장치를 관리합니다."
+title: "モバイル デバイスの管理 | Microsoft Docs"
+description: "System Center Configuration Manager で Exchange Server コネクタを使用してモバイル デバイスを管理します。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -17,63 +17,63 @@ manager: angrobe
 ms.openlocfilehash: 44958bc35586f5e57ab3fb59681bfb018d2bd5da
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-mobile-devices-with-system-center-configuration-manager-and-exchange"></a>System Center Configuration Manager와 Exchange를 사용하여 모바일 장치 관리
+# <a name="manage-mobile-devices-with-system-center-configuration-manager-and-exchange"></a>System Center Configuration Manager と Exchange によるモバイル デバイスの管理
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-Microsoft Exchange ActiveSync 프로토콜을 사용하여 Exchange Server(온-프레미스 또는 온라인)에 연결하는 모바일 장치를 관리하려고 하며 Configuration Manager를 사용하여 해당 장치를 등록할 수 없는 경우 System Center Configuration Manager에서 Exchange Server 커넥터를 사용합니다. Configuration Manager 콘솔에서 여러 Exchange 서버에 대한 설정 제어 및 원격 장치 초기화와 같은 Exchange 모바일 장치 관리 기능을 구성할 수 있습니다.  
+Microsoft Exchange ActiveSync プロトコルを使って Exchange Server (社内またはオンライン) に接続するモバイル デバイスを管理したいけれども、Configuration Manager でそのデバイスを登録できない場合は、System Center Configuration Manager の Exchange Server コネクタを使います。 Configuration Manager コンソールから、複数の Exchange サーバー向けにリモート デバイス ワイプおよび設定コントロールといった、Exchange モバイル デバイス管理機能を構成できます。  
 
  ![configmgr&#45;with&#45;exchange](../../mdm/deploy-use/media/configmgr-with-exchange.png "configmgr-with-exchange")  
 
- Exchange Server 커넥터를 사용하여 모바일 장치를 관리하는 경우 모바일 장치에 Configuration Manager 클라이언트가 설치되지 않습니다. 따라서 일부 관리 기능이 제한됩니다. 예를 들어 소프트웨어를 해당 장치에 설치할 수 없거나 구성 항목을 사용하여 해당 장치를 구성할 수 없습니다. Configuration Manager와 함께 모바일 장치에 사용할 수 있는 다양한 관리 기능에 대한 자세한 내용은 [System Center Configuration Manager용 장치 관리 솔루션 선택](../../core/plan-design/choose-a-device-management-solution.md)을 참조하세요.  
+ Exchange Server コネクタを使ってモバイル デバイスを管理するときは、モバイル デバイスに Configuration Manager クライアントをインストールしません。 そのため、使用できる管理機能が限られています。 たとえば、管理対象のモバイル デバイスにソフトウェアをインストールしたり、構成項目を使用したりすることはできません。 Configuration Manager でモバイル デバイス用に使用できるさまざまな管理機能の詳細については、「[Choose a device management solution for System Center Configuration Manager](../../core/plan-design/choose-a-device-management-solution.md)」 (System Center Configuration Manager のデバイス管理ソリューションの選択) を参照してください。  
 
 > [!IMPORTANT]  
->  Exchange Server 커넥터를 설치하기 전에 사용 중인 Microsoft Exchange 버전이 Configuration Manager에서 지원되는지 확인합니다. 자세한 내용은 [System Center Configuration Manager의 사이트 및 클라이언트에 대해 지원되는 운영 체제](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)에서 "Exchange Server 커넥터"를 참조하세요.  
+>  Exchange Server コネクタをインストールする前に、使用する Microsoft Exchange のバージョンが Configuration Manager でサポートされているかどうかを確認してください。 詳細については、「[System Center Configuration Manager のサイトおよびクライアントのサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)」の「Exchange Server コネクタ」を参照してください。  
 
- Exchange Server 커넥터를 사용하는 경우 모바일 장치를 기본 Exchange ActiveSync 사서함 정책으로 관리하는 대신 Configuration Manager에서 구성한 설정으로 관리할 수 있습니다. 사용할 설정을 **일반**, **암호**, **전자 메일 관리**, **보안**및 **응용 프로그램**그룹 설정에서 정의합니다. 예를 들어 **암호** 그룹 설정에서, 모바일 장치에서 암호를 요구할 것인지 여부, 최소 암호 길이, 암호 복잡도, 암호 복구 허용 여부를 구성할 수 있습니다.  
+ Exchange Server コネクタを使用すると、既定の Exchange ActiveSync メール ボックス ポリシーでの代わりに、Configuration Manager で構成した設定でモバイル デバイスを管理することができます。 使用する設定は、 **[全般]**、 **[パスワード]**、 **[電子メール管理]**、 **[セキュリティ]**、 **[アプリケーション]**のグループに分けて定義します。 たとえば、[ **パスワード** ] グループでは、モバイル デバイスでパスワードを必要とするかどうか、パスワードに最低限必要な文字数と複雑さ、パスワードを回復可能にするかどうかを設定します。  
 
- 그룹에 하나 이상의 설정을 구성하면 Configuration Manager가 모바일 장치에 대한 그룹의 모든 설정을 관리합니다. 특정 그룹에서 어떤 설정도 구성하지 않으면 Exchange가 모바일 장치의 이러한 설정을 계속 관리합니다. Exchange Server에 구성되어 사용자에게 할당된 모든 Exchange ActiveSync 사서함 정책은 여전히 적용됩니다.  
+ グループで 1 つでも設定を行うと、Configuration Manager がグループのすべてのモバイル デバイス用設定を管理します。 グループにあるどの設定も構成しないと、モバイル デバイスの該当する設定が Exchange Server によって管理されます。 その場合でも、Exchange Server で設定され、ユーザーに割り当てられた Exchange ActiveSync メールボックス ポリシーは適用されます。  
 
- 또한 Exchange 액세스 규칙을 관리하고 모바일 장치를 허용 또는 차단하거나 격리하도록 Exchange Server 커넥터를 구성할 수도 있습니다. 관리자는 Configuration Manager 콘솔을 사용하여 모바일 장치를 원격으로 초기화할 수 있으며, 사용자는 응용 프로그램 카탈로그를 사용하여 모바일 장치를 원격으로 초기화할 수 있습니다.  
+ また、Exchange Server コネクタで、モバイル デバイスから Exchange へのアクセスを許可、ブロック、検疫するための規則を設定することもできます。 モバイル デバイスをリモートでワイプするには Configuration Manager コンソールを使います。一方、ユーザーが自分のモバイル デバイスをリモートでワイプするには、アプリケーション カタログを使います。  
 
- 사용자의 모바일 장치가 Exchange Server 커넥터를 통해 관리되고 Exchange Server가 온-프레미스 버전인 경우 사용자의 모바일 장치가 응용 프로그램 카탈로그에 자동으로 표시됩니다. Microsoft Exchange Online에 대해 Exchange Server 커넥터를 구성하는 경우 사용자의 모바일 장치가 응용 프로그램 카탈로그에 표시되도록 사용자 장치 선호도를 수동으로 구성해야 합니다. 사용자 장치 선호도를 수동으로 구성하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 사용자 장치 선호도를 사용하여 사용자와 장치 연결](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)을 참조하세요.  
+ Exchange Server が社内にある場合は、ユーザーのモバイル デバイスが Exchange Server コネクタによって管理されているときに、アプリケーション カタログに自動的に表示されます。 一方、Microsoft Exchange Online 用の Exchange Server コネクタでは、ユーザーのモバイル デバイスがアプリケーション カタログに表示されるようにするには、ユーザーとデバイスのアフィニティを手動で構成する必要があります。 ユーザーとデバイスのアフィニティを手動で構成する方法については、「[System Center Configuration Manager でのユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)」を参照してください。  
 
 > [!TIP]  
->  Exchange Server 커넥터를 사용하여 모바일 장치를 관리하고 모바일 장치가 다른 사용자에게 양도되는 경우 모바일 장치의 새 소유자가 양도된 모바일 장치에 자신의 Exchange 계정을 구성하기 전에 Configuration Manager 콘솔에서 모바일 장치를 삭제합니다.  
+>  モバイル デバイスを Exchange Server コネクタで管理しているときに、そのモバイル デバイスの所有者が変わった場合は、新しい所有者がモバイル デバイスで自分の Exchange アカウントを構成する前に、Configuration Manager コンソールからモバイル デバイスを削除してください。  
 
-## <a name="required-security-permissions"></a>필요한 보안 권한  
- Exchange Server 커넥터를 구성하려면 다음 보안 권한이 있어야 합니다.  
+## <a name="required-security-permissions"></a>必要なセキュリティのアクセス許可  
+ Exchange Server コネクタを構成するには、次のセキュリティのアクセス許可を持っている必要があります。  
 
--   Exchange Server 커넥터를 추가, 수정 및 삭제: **사이트** 개체에 대한 **수정** 권한이 필요합니다.  
+-   Exchange Server コネクタを追加、変更、削除する: **サイト** オブジェクトの **変更** のアクセス許可。  
 
--   모바일 장치 설정 구성: **사이트** 개체에 대한 **ModifyConnectorPolicy** 권한이 필요합니다.  
+-   モバイル デバイス設定を構成する: **サイト** オブジェクトの **ModifyConnectorPolicy** のアクセス許可。  
 
- **전체 관리자** 보안 역할에는 Exchange Server 커넥터를 구성하기 위해 필요한 권한이 포함됩니다.  
+ **[完全な権限を持つ管理者]** のセキュリティの役割には、Exchange Server コネクタを構成するために必要な許可が含まれています。  
 
- 모바일 장치를 관리하려면 다음 보안 권한이 있어야 합니다.  
+ モバイル デバイスを管理するには、次のセキュリティのアクセス許可が必要です。  
 
--   모바일 장치 초기화: **컬렉션** 개체에 대한 **리소스 삭제** 권한이 필요합니다.  
+-   モバイル デバイスをワイプする: **コレクション** オブジェクトの **リソースの削除** 。  
 
--   초기화 명령 취소: **컬렉션** 개체에 대한 **리소스 수정** 권한이 필요합니다.  
+-   ワイプ コマンドを取り消す: **コレクション** オブジェクトの **リソースの変更** 。  
 
--   모바일 장치 허용 및 차단: **컬렉션** 개체에 대한 **리소스 수정** .  
+-   モバイル デバイスを許可またはブロックする: **コレクション** オブジェクトの **リソースの変更**  
 
- **운영 관리자** 보안 역할에는 Exchange Server 커넥터를 사용하여 모바일 장치를 관리하기 위해 필요한 권한이 포함됩니다.  
+ **[オペレーション管理者]** のセキュリティの役割には、Exchange Server コネクタを使用してモバイル デバイスを管理するために必要な許可が含まれています。  
 
- 보안 권한을 구성하는 방법에 대한 자세한 내용은 [System Center Configuration Manager에 대한 역할 기반 관리 구성](../../core/servers/deploy/configure/configure-role-based-administration.md)을 참조하세요.  
+ セキュリティのアクセス許可を構成する方法の詳細については、「[System Center Configuration Manager のロール ベース管理の構成](../../core/servers/deploy/configure/configure-role-based-administration.md)」を参照してください。  
 
-## <a name="installing-and-configuring-an-exchange-server-connector"></a>Exchange Server 커넥터 설치 및 구성  
- 다음 절차에 따라 Exchange Server 커넥터를 설치하고 모바일 장치를 관리하도록 구성합니다. Configuration Manager는 Exchange 조직의 커넥터를 하나만 지원합니다. 이러한 단계를 완료한 후에는 모바일 장치가 표시된 컬렉션을 확인하고 모바일 장치에 대한 보고서를 사용하여 커넥터로 검색 및 관리되는 모바일 장치를 모니터링할 수 있습니다.  
+## <a name="installing-and-configuring-an-exchange-server-connector"></a>Exchange Server コネクタのインストールと構成  
+ モバイル デバイスを管理するように Exchange Server コネクタをインストールし構成するには次の手順に従います。 Configuration Manager では、1 つの Exchange 組織に設定できるコネクタは 1 つのみです。 これらの手順を完了すると、モバイル デバイスを表示するコレクションを表示するとき、およびモバイル デバイスのレポートを使用するとき、コネクタによって検索され管理されるモバイル デバイスを監視できます。  
 
 > [!NOTE]  
->  Configuration Manager는 *사용자 이름*_*장치 유형* 형식을 사용하여 검색되는 모바일 장치에 대한 이름을 생성합니다. 사용자에게 동일한 장치 유형의 모바일 장치가 둘 이상 있는 경우 Configuration Manager가 콘솔과 보고서에 이러한 모바일 장치를 동일한 이름으로 표시합니다.  
+>  Configuration Manager は、*ユーザー名*_*デバイスの種類*という形式を使用して見つかったモバイル デバイスに名前を付けます。 あるユーザーが同じ種類のモバイル デバイスを複数持っているときは、それらのモバイル デバイスについて、Configuration Manager はコンソールおよびレポートに同じ名前を表示します。  
 
-#### <a name="to-install-and-configure-an-exchange-server-connector"></a>Exchange Server 커넥터를 설치하고 구성하려면  
+#### <a name="to-install-and-configure-an-exchange-server-connector"></a>Exchange Server コネクタをインストールし構成するには  
 
-1.  모바일 장치를 관리하도록 Exchange Client Access 서버에 연결할 계정을 결정합니다. 계정은 사이트 서버의 컴퓨터 계정이거나 Windows 사용자 계정일 수 있습니다. 그러고 나서 다음 Exchange Server cmdlet을 실행하도록 이 계정을 구성합니다.  
+1.  どのアカウントを Exchange クライアント アクセス サーバーに接続しモバイル デバイスを管理するかを判断します。 アカウントは、サイト サーバーのコンピューター アカウントでも、Windows ユーザー アカウントでも構いません。 そのアカウントで、次の Exchange Server コマンドレットを実行するように構成します。  
 
     -   **Clear-ActiveSyncDevice**  
 
@@ -106,31 +106,31 @@ Microsoft Exchange ActiveSync 프로토콜을 사용하여 Exchange Server(온-�
     -   **Remove-ActiveSyncDevice**  
 
     > [!NOTE]  
-    >  이러한 cmdlet이 포함되는 Exchange Server 관리 역할은 받는 사람 관리, 보기 전용 조직 관리, 서버 관리입니다. Microsoft Exchange Server2010의 관리 역할 그룹에 대한 자세한 내용은 [관리 역할 그룹 이해](http://go.microsoft.com/fwlink/p/?LinkId=212914)를 참조하십시오.  
+    >  次の Exchange Server の管理の役割には、受信者管理、表示限定の組織管理、サーバー管理のコマンドレットが含まれます。 Microsoft Exchange Server 2010 の管理役割グループの詳細については、「 [管理役割グループについて](http://go.microsoft.com/fwlink/p/?LinkId=212914)」を参照してください。  
 
     > [!TIP]  
-    >  필수 cmdlet 없이 Exchange Server 커넥터를 설치하거나 사용하려고 하면 사이트 서버 컴퓨터의 EasDisc.log 로그 파일에 `Invoking cmdlet <cmdlet> failed` 메시지와 함께 로깅된 오류가 표시됩니다.  
+    >  必要なコマンドレットなしで Exchange Server コネクタをインストールしたり、使おうとしたりすると、サイト サーバー コンピューターの EasDisc.log ログ ファイルに、「 `Invoking cmdlet <cmdlet> failed` 」というメッセージが記録されます。  
 
-2.  Configuration Manager 콘솔에서 **관리**를 클릭합니다.  
+2.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
 
-3.  **관리** 작업 영역에서 **계층 구성**을 확장하고 **Exchange Server 커넥터**를 클릭합니다.  
+3.  **[管理]** ワークスペースで、**[階層の構成]** を展開し、**[探索方法]** をクリックします。  
 
-4.  **홈** 탭의 **만들기** 그룹에서 **Exchange Server 추가**를 클릭합니다.  
+4.  **[ホーム]** タブの **[作成]** グループで **[Exchange Server の追加]** をクリックします。  
 
-5.  Exchange Server 추가 마법사를 완료합니다.  
+5.  以下の手順で、Exchange Server の追加ウィザードを完了します。  
 
-    -   Exchange Server의 온-프레미스 인스턴스를 사용하고 클라이언트 액세스 서버를 지정하는 경우 각 Active Directory 사이트에 대해 단일 서버 또는 클라이언트 액세스 서버 배열을 지정할 수 있습니다. 서버 또는 배열이 오프라인인 경우 Configuration Manager에서 사용할 클라이언트 액세스 서버를 검색합니다. 검색하지 못하는 경우 Configuration Manager가 사서함 서버 사용으로 대체되어 클라이언트 액세스 서버에 연결합니다. 다시 시도하면 사이트 서버 컴퓨터의 EasDisc.log 파일에 경고로 로깅됩니다. 예를 들어 `Failed to open runspace for site <site_name>`을 검색합니다.  
+    -   社内にある Exchange Server インスタンスを使用する場合は、クライアント アクセス サーバーを指定するときに、各 Active Directory サイト用に 1 台のサーバーまたはクライアント アクセス サーバー アレイを指定することができます。 サーバーまたはアレイがオフラインの場合は、Configuration Manager が使用するクライアント アクセス サーバーを検出しようとします。 失敗した場合、Configuration Manager はメール ボックス サーバーの使用にフォールバックして、クライアント アクセス サーバーに接続します。 この動作は、サイト サーバー コンピューターの EasDisc.log ファイルに警告として記録されます。 たとえば、「 `Failed to open runspace for site <site_name>`」というメッセージを探してみてください。  
 
-    -   Exchange Server 커넥터 계정에 1단계에서 구성한 계정을 지정합니다.  
+    -   Exchange Server のコネクタ アカウントでは、手順 1 で構成したアカウントを指定します。  
 
-    -   또한 Configuration Manager를 사용하여 모바일 장치를 등록하는 경우 해당 모바일 장치가 Configuration Manager에서 등록된 후에도 Exchange의 메일을 계속 받도록 **외부 모바일 장치 관리** 옵션을 사용하도록 설정합니다.  
+    -   Configuration Manager を使用してモバイル デバイスを登録している場合、**[外部のモバイル デバイス管理]** オプションを有効にして、これらのモバイル デバイスが、Configuration Manager がデバイスを登録した後も引き続き Exchange から電子メールを受信し続けるようにします。  
 
-    -   마법사의 **계정** 페이지에서 Configuration Manager 조건부 액세스에 의해 차단되는 클라이언트로 메일 알림을 보내는 데 사용되는 계정을 구성할 수 있습니다. 이 경우 Exchange 서버에 유효한 사서함이 있는 계정을 지정해야 합니다.  
+    -   ウィザードの **[アカウント]** ページで、Configuration Manager 条件付きアクセスによってブロックされているクライアントにメール通知を送信するために使用するアカウントを構成できます。 指定するアカウントには、Exchange サーバー上の有効なメールボックスが必要です。  
 
-         자세한 내용은 [System Center Configuration Manager에서 서비스에 대한 액세스 관리](../../protect/deploy-use/manage-access-to-services.md)를 참조하세요.  
+         詳細については、「[System Center Configuration Manager でサービスへのアクセスを管理する](../../protect/deploy-use/manage-access-to-services.md)」を参照してください。  
 
-6.  상태 메시지를 사용하고 로그 파일을 검토하여 Exchange Server 커넥터가 설치되었는지 확인할 수 있습니다.  
+6.  ステータス メッセージとログ ファイルで、Exchange Server コネクタがインストールされていることを確認できます。  
 
-    -   사이트 구성 요소 관리자에서 Exchange Server 커넥터를 설치했는지 확인하려면 **SMS_EXCHANGE_CONNECTOR** 구성 요소의 상태 ID **1015** 를 찾아보십시오. Configuration Manager에서 커넥터를 설치할 수 없는 경우, 예를 들어 지정한 클라이언트 액세스 서버 컴퓨터가 오프라인 상태라서 설치할 수 없는 경우 Configuration Manager에서 설치에 성공하거나 사용자가 Exchange Server 커넥터를 제거할 때까지 60분마다 다시 설치하려고 시도합니다.  
+    -   サイト コンポーネント マネージャーが Exchange Server コネクタに正常にインストールされたことを確認するには、 **SMS_EXCHANGE_CONNECTOR** コンポーネントのステータス ID **1015** を探します。 Configuration Manager がコネクタを正常にインストールできない場合 (たとえば、指定したクライアント アクセス サーバーのコンピューターがオフラインであるため)、インストールが成功するか Exchange Server コネクタを削除するまで、Configuration Manager は 60 分ごとにインストールを再試行します。  
 
-    -   사이트 서버 컴퓨터에서 SiteComp.log 파일을 검색한 후 이 로그 파일에서 `Component SMS_EXCHANGE_CONNECTOR flagged for installation`을 검색합니다. 설치가 완료되면 `STATMSG: ID=1015`텍스트가 기록됩니다.  
+    -   サイト サーバー コンピューターにある SiteComp.log ファイルを見つけ、そのファイル内で「 `Component SMS_EXCHANGE_CONNECTOR flagged for installation`」というメッセージを探します。 インストールが正常に完了していると、「 `STATMSG: ID=1015`」という値が付いているはずです。  

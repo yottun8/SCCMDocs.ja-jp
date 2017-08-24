@@ -1,6 +1,6 @@
 ---
-title: "클라이언트 관리 장치에 대한 구성 항목 - Configuration Manager | Microsoft 문서"
-description: "System Center Configuration Manager 클라이언트에서 관리되는 Windows 및 Mac 장치를 구성하는 방법을 알아봅니다."
+title: "クライアントで管理されているデバイスの構成項目 - Configuration Manager | Microsoft Docs"
+description: "System Center Configuration Manager クライアントを使用して管理されている Windows および Mac デバイスの構成方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,17 +18,17 @@ manager: angrobe
 ms.openlocfilehash: 093d24951e8d741bfcf2cedb7618ecf75300e035
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="configuration-items-for-devices-managed-with-the-system-center-configuration-manager-client"></a>System Center Configuration Manager 클라이언트로 관리되는 장치의 구성 항목
+# <a name="configuration-items-for-devices-managed-with-the-system-center-configuration-manager-client"></a>System Center Configuration Manager クライアントを使用して管理されているデバイスの構成項目
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-이 항목에서는 Configuration Manager 클라이언트로 관리되는 장치(예: Windows PC 및 Mac 컴퓨터)에 사용할 수 있는 System Center Configuration Manager 구성 항목 형식을 나열합니다.  
+このトピックでは、Configuration Manager クライアントで管理されているデバイス (Windows PC や Mac コンピューターなど) で使用できる System Center Configuration Manager 構成項目の種類がリストされています。  
 
--   [System Center Configuration Manager 클라이언트에서 관리되는 Windows 10 장치에 대한 구성 항목을 만드는 방법](../../compliance/deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md)  
+-   [System Center Configuration Manager クライアントを使用して管理されている Windows 10 デバイスの構成項目を作成する方法](../../compliance/deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md)  
 
--   [System Center Configuration Manager 클라이언트를 사용하여 관리하는 Mac OS X 장치용 구성 항목을 만드는 방법](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)  
+-   [System Center Configuration Manager クライアントを使用して管理されている Mac OS X デバイスの構成項目を作成する方法](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)  
 
--   [System Center Configuration Manager 클라이언트에서 관리되는 Windows 데스크톱 및 서버 컴퓨터에 대한 사용자 지정 구성 항목을 만드는 방법](../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md)  
+-   [System Center Configuration Manager クライアントを使用して管理されている Windows デスクトップおよびサーバー コンピューターのカスタム構成項目を作成する方法](../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md)  

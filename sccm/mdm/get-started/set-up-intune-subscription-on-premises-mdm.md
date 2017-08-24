@@ -1,6 +1,6 @@
 ---
-title: "Intune 구독 설정 | Microsoft Docs"
-description: "System Center Configuration Manager에서 온-프레미스 모바일 장치 관리에 대한 라이선스를 추적하도록 Microsoft Intune 구독을 설정합니다."
+title: "Intune サブスクリプションのセットアップ | Microsoft Docs"
+description: "System Center Configuration Manager でのオンプレミス モバイル デバイス管理のためのライセンスを追跡するように、Intune サブスクリプションをセットアップします。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,51 +18,51 @@ manager: angrobe
 ms.openlocfilehash: 5a81ec06e16992ae1c41b0fc98ebcd07386c5381
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="set-up-a-microsoft-intune-subscription-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager의 온-프레미스 모바일 장치 관리를 위해 Microsoft Intune 구독 설정
+# <a name="set-up-a-microsoft-intune-subscription-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のための Microsoft Intune サブスクリプションをセットアップする
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 온\-프레미스 모바일 장치 관리를 사용하려면 Microsoft Intune 구독을 통해 라이선스를 추적해야 합니다. Intune 서비스는 장치를 관리하거나 관리 정보를 저장하는 데 사용되지 않습니다. 온\-프레미스 모바일 장치 관리의 경우 모든 장치 관리가 Configuration Manager 인프라에서 처리됩니다.  
+System Center Configuration Manager のオンプレミス モバイル デバイス管理では、ライセンスを追跡するために Microsoft Intune サブスクリプションが必要です。 Intune サービスは、デバイスの管理または管理情報の保存には使用されません。 オンプレミス モバイル デバイス管理の場合、すべてのデバイス管理は、Configuration Manager インフラストラクチャによって処理されます。  
 
 > [!NOTE]  
-> 버전 1610부터 Configuration Manager는 Microsoft Intune과 온-프레미스 Configuration Manager 인프라를 둘 다 사용하여 동시에 모바일 장치를 관리할 수 있도록 지원합니다.   
+> バージョン 1610 以降の Configuration Manager では、Microsoft Intune とオンプレミスの Configuration Manager インフラストラクチャの両方で同時にモバイル デバイスを管理できます。   
 
 > [!TIP]  
->  온\-프레미스 모바일 장치 관리에 대한 Intune 구독을 먼저 설정한 다음 필수 사이트 시스템 역할을 설치하여 새로 설치된 사이트 시스템 역할이 작동하는 데 필요한 시간을 최소화하는 것이 좋습니다.  
+>  サイト システムの役割をインストールする前に、オンプレミス モバイル デバイス管理用の Intune サブスクリプションをセットアップすることによって、新しくインストールされたサイト システムの役割が機能するまでにかかる時間を最小限に抑えることをお勧めします。  
 
-##  <a name="sign-up-for-microsoft-intune"></a>Microsoft Intune에 등록  
- 온\-프레미스 모바일 장치 관리가 작동하려면 Intune이 필요합니다. 평가판 또는 유료 구독을 [등록](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/)하고 다음 단계로 이동하여 Configuration Manager에 구독을 추가하면 됩니다.  
+##  <a name="sign-up-for-microsoft-intune"></a>Microsoft Intune のセットアップ  
+ オンプレミス モバイル デバイス管理が機能するには、Intune が必要です。 試用版または有料のサブスクリプションに[サインアップ](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/)し、次の手順に進んでサブスクリプションを Configuration Manager に追加します。  
 
-##  <a name="add-the-intune-subscription-to-configuration-manager"></a>Configuration Manager에 Intune 구독 추가  
- Configuration Manager에 구독을 추가하려면 Intune을 사용하여 모바일 장치 관리에 대한 구독을 추가할 때와 동일한 기본 단계를 따릅니다. 특정 차이점에 대한 아래의 참고를 읽은 다음 [Intune 구독 구성](../deploy-use/configure-intune-subscription.md)의 지침을 사용합니다.  
+##  <a name="add-the-intune-subscription-to-configuration-manager"></a>Configuration Manager に Intune サブスクリプションを追加する  
+ サブスクリプションを Configuration Manager に追加するには、Intune でモバイル デバイス管理のサブスクリプションを追加する場合と同じ基本的な手順に従います。 具体的な違いに関する以下のメモを参照して、[Intune サブスクリプションの構成](../deploy-use/configure-intune-subscription.md)に関するページに記載されている手順を使用します。  
 
 > [!NOTE]  
->  Intune 구독을 추가할 때는 다음 사항에 유의하세요.  
+>  Intune サブスクリプションを追加する場合は、次の点に注意してください。  
 >   
->  -   Microsoft Intune 구독 추가 마법사에서 지정한 컬렉션은 온\-프레미스 모바일 장치 관리 사용자 권한 위임에 사용되지 않습니다. Intune을 사용한 모바일 장치 관리에만 사용됩니다. 그러나 마법사를 진행하려면 컬렉션을 지정해야 합니다.  
-> -   마법사에서 지정한 사이트 코드 설정은 온\-프레미스 모바일 장치 관리에 대해 무시됩니다. 사용되는 사이트 코드는 사용자에게 장치를 등록할 수 있는 권한을 부여하는 등록 프로필에 지정하는 코드입니다.  
-> -   다단계 인증을 사용하지 마세요. 온\-프레미스 모바일 장치 관리에서 지원되지 않습니다.  
+>  -   Microsoft Intune サブスクリプションの追加ウィザードで指定したコレクションは、オンプレミス モバイル デバイス管理のユーザー権限の委任には使用されません。 これは、Intune でのモバイル デバイス管理にのみ使用されます。 ただし、ウィザードを先に進めるためには、コレクションを指定する必要があります。  
+> -   ウィザードで指定したサイト コードの設定は、オンプレミス モバイル デバイス管理では無視されます。 使用されるのは、ユーザーに対してデバイスの登録の許可を与える登録プロファイルで指定されているサイト コードです。  
+> -   多要素認証を有効にしないでください。 オンプレミス モバイル デバイス管理ではサポートされていません。  
 
-##  <a name="configure-the-intune-subscription-for-on-premises-mobile-device-management"></a>온-프레미스 모바일 장치 관리를 위한 Intune 구독 구성  
+##  <a name="configure-the-intune-subscription-for-on-premises-mobile-device-management"></a>オンプレミス モバイル デバイス管理用の Intune サブスクリプションを構成する  
 
-1.  Configuration Manager 콘솔에서 **Microsoft Intune 구독**을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+1.  Configuration Manager コンソールで、**[Microsoft Intune サブスクリプション]** を右クリックし、**[プロパティ]** をクリックします。  
 
-2.  온-프레미스 모바일 장치 관리 상자에서 다음 중 하나를 선택합니다.
+2.  [オンプレミス モバイル デバイス管理] ボックスで、次のいずれかを選択します。
 
-  - 온-프레미스에서만 장치를 관리하려는 경우 **온-프레미스에서만 장치 관리** 옆에 있는 확인란을 클릭하고 **확인**을 클릭합니다.  
+  - オンプレミスのみでデバイスを管理する場合は、**[オンプレミスのデバイスのみを管理する]** の横にあるチェック ボックスをオンにして、**[OK]** をクリックします。  
 
       > [!NOTE]  
-      >  이 확인란을 클릭하면 모든 온-프레미스 관리 정보가 유지되고 데이터가 클라우드로 복제되지 않도록 Intune 구독을 구성할 수 있습니다.  
+      >  このチェック ボックスをオンにすると、すべての管理情報をオンプレミスで保持し、データをクラウドにレプリケートしないように Intune サブスクリプションが構成されます。  
 
-    - Intune 및 Configuration Manager 온-프레미스 둘 다에서 장치를 관리하려는 경우 확인란을 선택 취소된 상태로 둡니다.
+    - Intune とオンプレミス Configuration Manager の両方でデバイスを管理する場合は、ボックスをオフのままにします。
 
-3.  Windows 10 모바일 장치를 관리하려면 **Microsoft Intune 구독**을 마우스 오른쪽 단추로 클릭하고, **플랫폼 구성**및  **Windows Phone**을 차례로 클릭합니다.  
+3.  Windows 10 Mobile デバイスを管理する場合は、 **[Microsoft Intune サブスクリプション]**を右クリックし、 **[プラットフォームの構成]**、  **[Windows Phone]**の順にクリックします。  
 
-4.  **Windows Phone 8.1 및 Windows 10 Mobile**옆의 확인란을 클릭한 다음 **확인**을 클릭합니다.  
+4.  **[Windows Phone 8.1 および Windows 10 Mobile]**の横にあるチェック ボックスをオンにして、 **[OK]**をクリックします。  
 
-5.  Windows 10 데스크톱 컴퓨터를 관리하려면 **Microsoft Intune 구독**을 마우스 오른쪽 단추로 클릭하고, **플랫폼 구성**및 **Windows 등록 사용**을 차례로 클릭합니다.  
+5.  Windows 10 のデスクトップ コンピューターを管理する場合は、 **[Microsoft Intune サブスクリプション]**を右クリックし、 **[プラットフォームの構成]**、 **[Windows の登録を有効にする]**の順にクリックします。  
 
-6.  **Windows 등록 사용**옆의 확인란을 클릭한 다음 **확인**을 클릭합니다.  
+6.  **[Windows の登録を有効にする]**の横にあるチェック ボックスをオンにして、 **[OK]**をクリックします。  

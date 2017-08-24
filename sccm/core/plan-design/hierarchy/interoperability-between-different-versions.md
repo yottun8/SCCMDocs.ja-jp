@@ -1,6 +1,6 @@
 ---
-title: "Configuration Manager 버전 간의 상호 운용성 | Microsoft 문서"
-description: "동일한 네트워크에 있는 여러 System Center Configuration Manager 계층 구조 간의 충돌을 방지하는 방법을 알아봅니다."
+title: "Configuration Manager のバージョン間の相互運用性 | Microsoft Docs"
+description: "同じネットワーク上に複数の System Center Configuration Manager 階層がある場合に競合を回避する方法について説明します。"
 ms.custom: na
 ms.date: 1/30/2017
 ms.prod: configuration-manager
@@ -17,69 +17,69 @@ manager: angrobe
 ms.openlocfilehash: 28593d271603ff9775425327996d844d7ed358cd
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="interoperability-between-different-versions-of-system-center-configuration-manager"></a>서로 다른 버전의 System Center Configuration Manager 간 상호 운용성
+# <a name="interoperability-between-different-versions-of-system-center-configuration-manager"></a>異なるバージョンの Configuration Manager 間の相互運用性
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager의 여러 독립적인 계층 구조를 동일한 네트워크에 설치하고 운영할 수 있습니다. 그러나 마이그레이션 프로세스 이외에는 Configuration Manager의 각 계층 구조가 상호 운용되지 않으므로 각 계층 구조 간에 충돌을 방지하도록 구성해야 합니다. 또한 관리하는 리소스가 올바른 계층 구조의 사이트 시스템과 상호 작용하도록 특정 구성을 만들 수 있습니다.  
+System Center Configuration Manager の複数の独立した階層を同じネットワークにインストールして動作させることができます。 ただし、移行プロセス以外では Configuration Manager の異なる階層は相互運用されないため、各階層に階層間の競合を防ぐ構成が必要です。 また、管理対象のリソースが正しい階層のサイト システムと対話できるように、特定の構成を作成することができます。  
 
- 다음 섹션에서는 동일한 네트워크에서 다양한 버전의 Configuration Manager를 사용하는 방법에 대한 정보를 제공합니다.  
+ 以下のセクションでは、同じネットワークで複数のバージョンの Configuration Manager を使用するときの相互運用性について説明します。  
 
--   [System Center Configuration Manager와 이전 제품 버전 간 상호 운용성](#BKMK_SupConfigInterop)  
+-   [System Center Configuration Manager と以前のバージョンの製品間の相互運用性](#BKMK_SupConfigInterop)  
 
--   [Configuration Manager 콘솔에 대한 상호 운용성](#BKMK_ConsoleInterop)  
+-   [Configuration Manager コンソールの相互運用性](#BKMK_ConsoleInterop)  
 
--   [혼합 버전 계층 구조의 Configuration Manager 제한 사항](#bkmk_mixed)  
+-   [バージョンが混在している階層内の Configuration Manager の制限](#bkmk_mixed)  
 
-##  <a name="BKMK_SupConfigInterop"></a> System Center Configuration Manager와 이전 제품 버전 간 상호 운용성  
- System Center 2012 Configuration Manager에서 System Center Configuration Manager로 업그레이드하거나 특정 System Center Configuration Manager 버전에서 최신 비전으로 업그레이드(콘솔 내 업데이트 사용)하는 경우를 제외하고 서로 다른 버전의 사이트가 동일한 계층 구조에 존재할 수 없습니다.   
+##  <a name="BKMK_SupConfigInterop"></a> System Center Configuration Manager と以前のバージョンの製品間の相互運用性  
+ System Center 2012 Configuration Manager から System Center Configuration Manager へ、または (コンソール内更新プログラムを使用した) ある System Center Configuration Manager バージョンから新しいバージョンへのアップグレード プロセス中を除き、異なるバージョンのサイトが同じ階層に共存することはできません。   
 
- 기존 System Center 2012 Configuration Manager 사이트 또는 계층 구조와 System Center Configuration Manager 사이트 및 계층 구조를 병렬로 배포할 수 있으므로 각 버전의 클라이언트가 다른 버전의 사이트에 연결하지 않도록 계획하는 것이 좋습니다.
+ System Center Configuration Manager のサイトまたは階層は既存の System Center 2012 Configuration Manager のサイトまたは階層と並列展開できるため、一方のバージョンのサイトにもう一方のバージョンのクライアントが参加することがないように計画することをお勧めします。
 
-예를 들어 둘 이상의 Configuration Manager 계층 구조에 동일한 네트워크 위치를 포함하는 겹치는 경계([겹치는 경계](/sccm/core/servers/deploy/configure/boundary-groups#overlapping-boundaries) 참조)가 있는 경우 자동 사이트 할당을 사용하지 않고 새 클라이언트를 각각 특정 사이트에 할당하는 것이 좋습니다. System Center 2012 Configuration Manager의 자동 사이트 할당에 대한 자세한 내용은 [System Center Configuration Manager에서 사이트에 클라이언트를 할당하는 방법](../../../core/clients/deploy/assign-clients-to-a-site.md)을 참조하세요.  
+たとえば、複数の Configuration Manager 階層に、同じネットワークの場所が含まれる、重複する境界がある場合には、(「[重複する境界について](/sccm/core/servers/deploy/configure/boundary-groups#overlapping-boundaries)」を参照)、サイトの自動割り当てを使用する代わりに、新しい各クライアントを特定のサイトに割り当てるのが最善です。 System Center 2012 Configuration Manager のサイトの自動割り当ての詳細については、「[System Center Configuration Manager でクライアントをサイトに割り当てる方法](../../../core/clients/deploy/assign-clients-to-a-site.md)」を参照してください。  
 
- 또한 System Center Configuration Manager의 사이트 시스템 역할을 호스트하는 컴퓨터에 System Center 2012 Configuration Manager의 클라이언트를 설치하거나, System Center 2012 Configuration Manager의 사이트 시스템 역할을 호스트하는 컴퓨터에 System Center Configuration Manager 클라이언트를 설치할 수 없습니다.  
+ また、System Center Configuration Manager のサイト システムの役割をホストしているコンピューターに System Center 2012 Configuration Manager のクライアントをインストールすることや、System Center 2012 Configuration Manager のサイト システムの役割をホストしているコンピューターに System Center Configuration Manager クライアントをインストールすることはできません。  
 
- 마찬가지로, 다음 클라이언트와 다음 VPN(가상 사설망) 연결은 지원되지 않습니다.  
+ 同様に、次のクライアントと仮想プライベート ネットワーク (VPN) 接続は、サポートされていません。  
 
--   System Center 2012 Configuration Manager 또는 이전 버전의 컴퓨터 클라이언트  
+-   System Center 2012 Configuration Manager 以前のコンピューター クライアント バージョン  
 
--   System Center 2012 Configuration Manager 또는 이전 버전의 장치 관리 클라이언트  
+-   System Center 2012 Configuration Manager 以前のデバイス管理クライアント  
 
--   Windows CE Platform Builder 장치 관리 클라이언트(모든 버전)  
+-   Windows CE Platform Builder デバイス管理クライアント (すべてのバージョン)  
 
--   System Center Mobile Device Manager VPN 연결  
+-   System Center Mobile Device Manager VPN 接続  
 
-###  <a name="BKMK_SupConfigSiteAssignment"></a> 클라이언트 사이트 할당 고려 사항  
- System Center Configuration Manager 클라이언트는 단일 기본 사이트에만 할당될 수 있습니다. 클라이언트 설치 시 자동 사이트 할당을 사용하여 클라이언트를 사이트에 할당하고 둘 이상의 경계 그룹에 동일한 경계가 포함되어 있으며 경계 그룹에 할당된 사이트가 서로 다른 경우, 클라이언트의 실제 사이트 할당을 예측할 수 없습니다.  
+###  <a name="BKMK_SupConfigSiteAssignment"></a> クライアントのサイト割り当てに関する考慮事項  
+ System Center Configuration Manager クライアントは、1 つのプライマリ サイトにのみ割り当てることができます。 クライアントのインストール時にサイトの自動割り当てによってサイトにクライアントが割り当てられ、複数の境界グループに同じ境界が含まれており、それらの境界グループに異なるサイトが割り当てられている場合は、クライアントの実際のサイト割り当てを予測することはできません。  
 
- 여러 Configuration Manager 사이트 및 계층 구조에서 경계가 겹치는 경우 클라이언트가 필요한 사이트에 할당되지 않거나 어떤 사이트에도 할당되지 않을 수 있습니다.  
+ Configuration Manager の複数のサイトと階層で境界が重複している場合、予期したとおりのサイトにクライアントが割り当てられなかったり、サイトにまったく割り当てられない可能性があります。  
 
- System Center Configuration Manager 클라이언트는 사이트 할당을 완료하기 전에 Configuration Manager 사이트의 버전을 확인하며 경계가 겹치는 경우 이전 버전의 사이트에 할당될 수 없습니다. 그러나 System Center 2012 Configuration Manager 클라이언트가 System Center Configuration Manager 사이트에 잘못 할당될 수도 있습니다.  
+ System Center Configuration Manager クライアントは、サイト割り当てを完了する前に Configuration Manager サイトのバージョンを確認するため、境界が重複している場合は、以前のバージョンのサイトには割り当てられません。 ただし、System Center 2012 Configuration Manager クライアントが System Center Configuration Manager サイトに間違って割り当てられる場合があります。  
 
- 두 계층 구조에서 경계가 겹치는 경우 클라이언트가 의도치 않게 잘못된 사이트에 할당되지 않도록 하려면 클라이언트를 특정 사이트에 할당하도록 Configuration Manager 클라이언트 설치 매개 변수를 구성하는 것이 좋습니다.  
+ 2 つの階層に重複する境界がある場合に、クライアントが正しくないサイトに割り当てられるのを防ぐため、クライアントを特定のサイトに割り当てるように Configuration Manager クライアント インストール パラメーターを構成することをお勧めします。  
 
-##  <a name="bkmk_mixed"></a> 혼합 버전 계층 구조의 Configuration Manager 제한 사항  
- System Center Configuration Manager 사이트를 업그레이드하는 경우 각 사이트가 서로 다른 버전인 시기가 있습니다. 예를 들어 중앙 관리 사이트를 새 버전으로 업그레이드하는 경우 사이트 유지 관리 기간으로 인해 하나 이상의 기본 사이트가 이후 시간 및 날짜까지 업그레이드되지 않을 수 있습니다.  
+##  <a name="bkmk_mixed"></a> バージョンが混在している階層内の Configuration Manager の制限  
+ System Center Configuration Manager サイトのアップグレードの過程において、サイトごとにバージョンが異なることがあります。 たとえば、中央管理サイトを新しいバージョンにアップグレードするものの、サイトのメンテナンス期間のために 1 つ以上のプライマリ サイトが後日までアップグレードできないことがあります。  
 
- 단일 계층 구조에 있는 여러 사이트가 서로 다른 버전을 실행하는 경우 일부 기능을 사용할 수 없습니다. 이는 Configuration Manager 콘솔에서 Configuration Manager 개체를 관리하는 방법 및 클라이언트에서 사용할 수 있는 기능에 영향을 줄 수 있습니다. 일반적으로 최신 버전의 Configuration Manager는 더 낮은 서비스 팩 버전을 실행하는 사이트 또는 클라이언트에서 액세스할 수 없습니다.  
+ 特定の階層内にある各種サイトのバージョンが異なる場合、一部の機能は利用できません。 これが、Configuration Manager コンソールで Configuration Manager オブジェクトを管理する方法と、クライアントで使用できる機能に影響する可能性があります。 通常、Configuration Manager の新しいバージョンの機能を、古いサービス バック バージョンを実行しているサイトまたはクライアントで使用することはできません。  
 
-### <a name="limitations-when-upgrading--configuration-manager"></a>Configuration Manager를 업그레이드할 때의 제한 사항  
+### <a name="limitations-when-upgrading--configuration-manager"></a>Configuration Manager のアップグレード時の制限事項  
 
-|개체|세부 정보|  
+|オブジェクト|説明|  
 |------------|-------------|  
-|네트워크 액세스 계정|**System Center 2012 Configuration Manager에서 System Center Configuration Manager로 업그레이드하는 경우:** 중앙 관리 사이트에 연결되어 있으며 System Center Configuration Manager로 업데이트된 Configuration Manager 콘솔에서 네트워크 액세스 계정 정보를 보는 경우 System Center 2012 Configuration Manager를 실행하는 기본 사이트에 구성된 계정 정보는 콘솔에 표시되지 않습니다. 기본 사이트를 중앙 관리 사이트와 동일한 버전으로 업그레이드하면 계정 정보가 콘솔에 표시됩니다.<br /><br /> **System Center Configuration Manager 버전 간에 업그레이드하는 경우:** 중앙 관리 사이트에 연결되어 있으며 새 버전의 System Center Configuration Manager로 업데이트된 Configuration Manager 콘솔에서 네트워크 액세스 계정 정보를 보는 경우 이전 버전을 실행하는 기본 사이트에서 구성된 계정 정보는 콘솔에 표시되지 않습니다. 기본 사이트를 중앙 관리 사이트와 동일한 버전으로 업그레이드하면 계정 정보가 콘솔에 표시됩니다.|  
-|운영 체제 배포를 위한 부팅 이미지|**System Center 2012 Configuration Manager에서 System Center Configuration Manager로 업그레이드하는 경우:** 계층 구조의 최상위 사이트를 System Center Configuration Manager로 업그레이드하는 경우 기본 부팅 이미지가 자동으로 Windows ADK(Windows Assessment and Deployment Kit) 10 기반 부팅 이미지로 업데이트됩니다. 이러한 부팅 이미지는 System Center Configuration Manager 사이트에 있는 클라이언트에 배포하는 경우에만 사용합니다. 자세한 내용은 [System Center Configuration Manager에서 운영 체제 배포 상호 운용성 계획](../../../osd/plan-design/planning-for-operating-system-deployment-interoperability.md)을 참조하세요.<br /><br /> **System Center Configuration Manager 버전 간에 업그레이드하는 경우:** 새 버전의 cm6long에서 사용 중인 Windows ADK 버전을 업데이트하지 않는 한, 부팅 이미지에는 영향을 주지 않습니다.|  
-|새 작업 순서 단계|특정 버전의 Configuration Manager에서 도입되었으며 이전 버전에서 사용할 수 없었던 단계를 포함하는 작업 순서를 만드는 경우 다음과 같은 문제가 발생할 수 있습니다.<br /><br /> -- 이전 버전의 Configuration Manager를 실행하는 사이트에서 작업 순서를 편집하려고 하면 오류가 발생합니다.<br /><br /> -- 이전 버전의 Configuration Manager 클라이언트를 실행하는 컴퓨터에서 작업 순서가 실행되지 않습니다.|  
-|클라이언트에서 하위 버전 관리 지점으로의 통신|클라이언트보다 낮은 버전을 실행하는 사이트의 관리 지점과 통신하는 Configuration Manager 클라이언트는 하위 버전의 Configuration Manager가 지원하는 기능만 사용할 수 있습니다. 예를 들어 최근에 업그레이드된 System Center Configuration Manager 사이트의 콘텐츠를 아직 해당 버전으로 업그레이드되지 않은 관리 지점과 통신하는 클라이언트에 배포하는 경우 이 클라이언트에서 최신 버전의 새로운 기능을 사용할 수 없습니다.|  
+|ネットワーク アクセス アカウント|**System Center 2012 Configuration Manager から System Center Configuration Manager にアップグレードする場合:** System Center Configuration Manager に更新された中央管理サイトに接続されている Configuration Manager コンソールからネットワーク アクセス アカウントの詳細を表示する場合、コンソールには System Center 2012 Configuration Manager を実行するプライマリ サイトで構成されたアカウントの詳細が表示されません。 プライマリ サイトを中央管理サイトと同じバージョンにアップグレードすると、コンソールにアカウントの詳細が表示されます。<br /><br /> **System Center Configuration Manager バージョン間でアップグレードする場合:** System Center Configuration Manager の新しいバージョンに更新された中央管理サイトに接続されている Configuration Manager コンソールからネットワーク アクセス アカウントの詳細を表示する場合、コンソールには、以前のバージョンを実行するプライマリ サイトで構成されたアカウントの詳細が表示されません。 プライマリ サイトを中央管理サイトと同じバージョンにアップグレードすると、コンソールにアカウントの詳細が表示されます。|  
+|オペレーティング システム展開用のブート イメージ|**System Center 2012 Configuration Manager から System Center Configuration Manager にアップグレードする場合:** 階層の最上位サイトが System Center Configuration Manager にアップグレードされると、既定のブート イメージは、Windows アセスメント & デプロイメント キット 10 (Windows ADK) に基づいてブート イメージに自動的に更新されます。 これらのブート イメージは、System Center Configuration Manager サイトのクライアントへの展開にのみ使用してください。 詳細については、「[System Center Configuration Manager のオペレーティング システムの展開の相互運用性に関する計画](../../../osd/plan-design/planning-for-operating-system-deployment-interoperability.md)」を参照してください。<br /><br /> **System Center Configuration Manager バージョン間のアップグレードの場合:** 新しいバージョンの cm6long が使用中のバージョンの Windows ADK を更新しない限り、ブート イメージには影響ありません。|  
+|新しいタスク シーケンス ステップ|以前のバージョンでは利用できないあるバージョンの Configuration Manager で導入された手順を使用してタスク シーケンスを作成すると、次の問題が生じる可能性があります。<br /><br /> -- 以前のバージョンの Configuration Manager を実行しているサイトからタスク シーケンスを編集しようとするとエラーが発生する。<br /><br /> -- 以前のバージョンの Configuration Manager クライアントを実行するコンピューターでタスク シーケンスが実行されない。|  
+|ダウン レベルの管理ポイント通信のクライアント|クライアントよりも古いバージョンを実行しているサイトの管理ポイントと通信する Configuration Manager クライアントでは、ダウン レベルのバージョンの Configuration Manager がサポートしている機能のみ使用できます。 たとえば、最近アップグレードされた System Center Configuration Manager サイトのコンテンツをクライアントに展開する場合、そのバージョンにまだアップグレードされていない管理ポイントと通信していると、クライアントは最新バージョンの新しい機能を使用できません。|  
 
-##  <a name="BKMK_ConsoleInterop"></a> Configuration Manager 콘솔에 대한 상호 운용성  
- 다음 표에는 여러 버전의 Configuration Manager가 설치된 환경에서의 Configuration Manager 콘솔 사용에 대한 정보가 포함되어 있습니다.  
+##  <a name="BKMK_ConsoleInterop"></a> Configuration Manager コンソールの相互運用性  
+ 次の表に、複数のバージョンの Configuration Manager が存在する環境での Configuration Manager の使用についてまとめます。  
 
-|상호 운용성 환경|추가 정보|  
+|相互運用環境|説明|  
 |----------------------------------|----------------------|  
-|System Center 2012 Configuration Manager 및 System Center Configuration Manager가 둘 다 포함된 환경|Configuration Manager 사이트를 관리하려면 콘솔 및 콘솔이 연결하는 사이트에서 동일한 버전의 Configuration Manager를 실행해야 합니다. 예를 들어 System Center 2012 Configuration Manager 콘솔을 사용하여 System Center Configuration Manager 사이트를 관리할 수 없으며, 그 반대의 경우도 마찬가지입니다.<br /><br /> System Center 2012 Configuration Manager 콘솔과 System Center Configuration Manager 콘솔을 동일한 컴퓨터에 설치할 수 없습니다.|  
-|여러 버전의 System Center Configuration Manager가 설치된 환경|System Center Configuration Manager는 한 컴퓨터에서 둘 이상의 Configuration Manager 콘솔 설치를 지원하지 않습니다. 각기 다른 버전의 System Center Configuration Manager와 관련된 여러 콘솔을 사용하려면 각 콘솔을 별도의 컴퓨터에 설치해야 합니다.<br /><br /> 한 계층 구조의 사이트를 새 버전으로 업데이트하는 동안 최신 버전을 실행하는 사이트에 콘솔을 연결하고 해당 계층 구조의 다른 사이트에 대한 정보를 볼 수 있습니다. 그러나 콘솔 버전과 Configuration Manager 사이트 버전 간의 차이로 인해 데이터 문제가 발생할 수 있고 최신 제품 버전에서 사용 가능한 일부 기능을 콘솔에서 사용할 수 없기 때문에 이 구성은 사용하지 않는 것이 좋습니다. <br /></br /> 사이트 버전이 일치하지 않는 버전으로 콘솔을 사용하는 경우 사이트 관리가 지원되지 않습니다. 이렇게 하면 데이터의 손실이 발생할 수 있으며 사이트를 위험하게 할 수 있습니다. 예를 들어, 1606 버전을 실행하는 사이트를 관리하는 데 1610 버전의 콘솔 사용이 지원되지 않습니다. |
+|System Center 2012 Configuration Manager と System Center Configuration Manager の両方がある環境|Configuration Manager サイトを管理するには、コンソール、およびそのコンソールが接続するサイトの両方が、同じバージョンの Configuration Manager でなければなりません。 たとえば、System Center 2012 Configuration Manager コンソールを使って、System Center Configuration Manager サイトを管理することはできません。また、その逆も同様です。<br /><br /> 同じコンピューターに、System Center 2012 Configuration Manager コンソールと System Center Configuration Manager コンソールの両方をインストールすることはできません。|  
+|System Center Configuration Manager の複数のバージョンがある環境|System Center Configuration Manager では、1 台のコンピューターに複数の Configuration Manager コンソールをインストールすることはできません。 System Center Configuration Manager の複数のバージョンのコンソールを使用したい場合は、それぞれ別のコンピューターにインストールする必要があります。<br /><br /> 階層内のサイトを更新しているときに、コンソールを、新しいバージョンを実行しているサイトに接続して、その階層にある他のサイトの情報を見ることができます。 ただし、この構成は推奨されていません。コンソールのバージョン間と Configuration Manager サイトのバージョンが異なるとデータに問題が生じる可能性があり、最新の製品バージョンで利用できる一部の機能がコンソールで利用できなくなります。 <br /></br /> サイトのバージョンと一致しないバージョンのコンソールを使用している場合は、サイトの管理がサポートされません。 これによりデータが失われ、サイトが危険にさらされる可能性があります。 たとえば、バージョン 1610 のコンソールを使用して、バージョン 1606 を実行しているサイトを管理することはサポートされません。 |

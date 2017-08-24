@@ -1,6 +1,6 @@
 ---
-title: "사이트 설치 리소스 | Microsoft 문서"
-description: "System Center Configuration Manager를 설치하거나 계층 구조에 사이트를 추가하는 데 도움이 되는 항목 목록을 검토합니다."
+title: "サイト インストール リソース | Microsoft Docs"
+description: "System Center Configuration Manager インストールしたり、階層にサイトを追加したりするときに役立つトピックの一覧を確認します。"
 ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
@@ -18,35 +18,35 @@ manager: angrobe
 ms.openlocfilehash: 75511c744d7d2bae960273c845ce68f06a82b697
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="resources-for-installing-system-center-configuration-manager-sites"></a>System Center Configuration Manager 사이트 설치용 리소스
+# <a name="resources-for-installing-system-center-configuration-manager-sites"></a>System Center Configuration Manager サイトのインストールのリソース
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-다음 항목은 System Center Configuration Manager를 설치하거나 기존 Configuration Manager 계층 구조에 사이트를 추가하는 데 도움이 될 수 있습니다.
+System Center Configuration Manager をインストールするか、既存の Configuration Manager 階層にサイトを追加するとき、次のトピックが役に立ちます。
 
-- [사이트를 설치할 준비](prepare-to-install-sites.md)
+- [サイトのインストールの準備](prepare-to-install-sites.md)
 
-  이 항목에서는 새 계층 구조 또는 기존 계층 구조에 사이트를 설치하는 데 도움이 되는 필수 정보를 제공합니다. 이 정보에는 기본값 외 원본 파일을 선택하는 경우, 모든 사이트에 적용되는 제한 사항 및 둘 이상의 사이트를 설치할 때 작업을 간소화하기 위해 수행할 수 있는 선택적 작업이 포함됩니다.
+  このトピックでは、新しい階層または既存の階層にサイトをインストールするのに役立つ情報を提供します。 既定以外のソース ファイルをいつ使用すべきか、すべてのサイトに当てはまる制限事項、複数のサイトをインストールする場合に作業を単純化するためのオプション操作などの情報があります。
 
-- [사이트 설치를 위한 필수 조건](prerequisites-for-installing-sites.md)
+- [サイトをインストールするための前提条件](prerequisites-for-installing-sites.md)
 
-  사이트를 설치하기 위해 계정이 보유해야 하는 사용자 권한과 사용 권한 및 설치할 수 있는 각 사이트 유형의 관련 필수 구성 요소를 알아봅니다.
+  サイトをインストールするためにアカウントに必要な権限、インストール可能なサイトの種類ごとの関連前提条件について説明します。
 
-- [설치 마법사를 사용하여 사이트 설치](use-the-setup-wizard-to-install-sites.md)
+- [セットアップ ウィザードを使用してサイトをインストールする](use-the-setup-wizard-to-install-sites.md)
 
-  이 항목에서는 사이트 설치 마법사를 안내합니다. 마법사 사용자 인터페이스에서 지울 수 없는 옵션에 대한 세부 정보도 제공합니다.  
+  このトピックでは、サイト インストール ウィザードの手順を段階的に説明します。 ウィザードのユーザー インターフェイスではわかりにくいオプションについて説明します。  
 
-- [명령줄 및 스크립트를 사용하여 사이트 설치](use-a-command-line-to-install-sites.md)
+- [コマンド ラインとスクリプトを使用してサイトをインストールする](use-a-command-line-to-install-sites.md)
 
-  사이트 설치 스크립트를 가져오는 방법과 이 스크립트를 사이트 무인 설치에 사용하는 방법을 알아봅니다.
+  サイトのインストール スクリプトを入手する方法と、それを使用してサイトの無人インストールを実行する方法について説明します。
 
-- [Configuration Manager 콘솔 설치](install-consoles.md)
+- [Configuration Manager コンソールをインストールする](install-consoles.md)
 
-  이 항목에서는 사이트를 설치하지 않을 컴퓨터에 Configuration Manager 콘솔을 설치하는 방법에 대한 지침을 제공합니다.
+  このトピックでは、サイトをインストールしないコンピューター上に Configuration Manager コンソールをインストールする方法について解説します。
 
-- [평가판 설치를 전체 설치로 업그레이드](upgrade-an-evaluation-install-to-a-full-install.md)
+- [評価版インストールから完全インストールにアップグレードする](upgrade-an-evaluation-install-to-a-full-install.md)
 
-  평가 사이트를 정식 라이선스의 Configuration Manager 사이트로 업그레이드할 준비가 된 경우 이 항목을 읽습니다.
+  評価版サイトから完全なライセンス付きの Configuration Manager サイトにアップグレードするには、このトピックを参照してください。

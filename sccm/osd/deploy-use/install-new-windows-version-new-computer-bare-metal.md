@@ -1,6 +1,6 @@
 ---
-title: "새 컴퓨터에 Windows 설치 - Configuration Manager | Microsoft 문서"
-description: "Configuration Manager에서 PXE, OEM 또는 독립 실행형 미디어를 사용하여 새 컴퓨터에 운영 체제를 설치(완전 복구)할 수 있습니다."
+title: "新しいコンピューターへの Windows のインストール - Configuration Manager | Microsoft Docs"
+description: "Configuration Manager で PXE、OEM、またはスタンドアロン メディアを使用して、新しいコンピューター (ベア メタル) にオペレーティング システムをインストールします。"
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
@@ -17,63 +17,63 @@ manager: angrobe
 ms.openlocfilehash: 584dad7d8b05a2da9f7a66b73028ae99ff1a594f
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="install-a-new-version-of-windows-on-a-new-computer-bare-metal-with-system-center-configuration-manager"></a>System Center Configuration Manager를 사용하여 새 컴퓨터에 새 버전의 Windows 설치(완전 복구)
+# <a name="install-a-new-version-of-windows-on-a-new-computer-bare-metal-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用して、新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-이 항목에서는 새 컴퓨터에 운영 체제를 설치하기 위한 System Center Configuration Manager의 일반 단계를 제공합니다. 이 시나리오에서는 PXE, OEM 또는 독립 실행형 미디어와 같은 다양한 여러 배포 방법 중에서 선택할 수 있습니다. 올바른 운영 체제 배포 시나리오인지 확실하지 않으면 [엔터프라이즈 운영 체제를 배포하는 시나리오](scenarios-to-deploy-enterprise-operating-systems.md)를 참조하세요.  
+このトピックでは、System Center Configuration Manager で新しいコンピューターにオペレーティング システムをインストールする一般的な手順を示します。 このシナリオでは、PXE、OEM、スタンドアロン メディアなど、展開のさまざまな方法の中から選択することができます。 適切なオペレーティング システムの展開シナリオがわからない場合は、「[エンタープライズ オペレーティング システムを展開するシナリオ](scenarios-to-deploy-enterprise-operating-systems.md)」を参照してください。  
 
-다음 섹션을 사용하여 새 버전의 Windows로 기존 컴퓨터를 새로 고치세요.  
+Windows の新しいバージョンで既存のコンピューターを更新する場合は、次のセクションを参考にします。  
 
-##  <a name="BKMK_Plan"></a> 계획  
+##  <a name="BKMK_Plan"></a> プラン  
 
--   **인프라 요구 사항 계획 및 구현**  
+-   **インフラストラクチャの要件の計画と実装**  
 
-     Windows ADK, WDS(Windows 배포 서비스), 지원되는 하드 디스크 구성 등 운영 체제를 배포하기 전에 준비해야 하는 몇 가지 인프라 요구 사항이 있습니다. 자세한 내용은 [운영 체제 배포를 위한 인프라 요구 사항](../plan-design/infrastructure-requirements-for-operating-system-deployment.md)을 참조하세요.
+     オペレーティング システムを展開する前に解決しなければならないインフラストラクチャの要件として、Windows ADK、Windows 展開サービス (WDS)、Windows 展開サービス (WDS)、サポートされているハード ディスクの構成などがあります。詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](../plan-design/infrastructure-requirements-for-operating-system-deployment.md)」を参照してください。
 
-##  <a name="BKMK_Configure"></a> 구성  
+##  <a name="BKMK_Configure"></a> 構成  
 
-1.  **부팅 이미지 준비**  
+1.  **ブート イメージの準備**  
 
-     부팅 이미지는 Windows PE 환경(제한된 구성 요소 및 서비스를 포함하는 최소 운영 체제)에서 컴퓨터를 시작합니다. 그런 후에 전체 Windows 운영 체제를 컴퓨터에 설치할 수 있습니다.   운영 체제를 배포할 때 사용할 부팅 이미지를 선택하고 이미지를 배포 지점에 배포해야 합니다. 다음에 따라 부팅 이미지를 준비합니다.  
+     ブート イメージは、Windows PE 環境 (コンポーネントやサービスが制限された最小オペレーティング システム) でコンピューターを起動して、完全な Windows オペレーティング システムをコンピューターにインストールできるようにします。   オペレーティング システムを展開する場合は、使用するブート イメージを選択し、配布ポイントにそのイメージを配布する必要があります。 ブート イメージを準備するには、次のものを使用します。  
 
-    -   부팅 이미지에 대한 자세한 내용은 [부팅 이미지 관리](../get-started/manage-boot-images.md)를 참조하세요.  
+    -   イメージの詳細については、「[ブート イメージの管理](../get-started/manage-boot-images.md)」を参照してください。  
 
-    -   부팅 이미지를 사용자 지정하는 방법에 대한 자세한 내용은 [부팅 이미지 사용자 지정](../get-started/customize-boot-images.md)을 참조하세요.  
+    -   ブート イメージをカスタマイズする方法の詳細については、「[ブート イメージのカスタマイズ](../get-started/customize-boot-images.md)」を参照してください。  
 
-    -   배포 지점에 부팅 이미지를 배포합니다. 자세한 내용은 [콘텐츠 배포](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)를 참조하세요.  
+    -   配布ポイントへブート イメージを配布します。 詳細については、「[コンテンツの配布](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)」を参照してください。  
 
-2.  **운영 체제 이미지 준비**  
+2.  **オペレーティング システム イメージの準備**  
 
-     운영 체제 이미지에는 대상 컴퓨터에 운영 체제를 설치하는 데 필요한 파일이 포함되어 있습니다. 다음에 따라 운영 체제 이미지를 준비합니다.  
+     オペレーティング システム イメージには、セットアップ先のコンピューターにオペレーティング システムをインストールするために必要なファイルが含まれています。 オペレーティング システム イメージを準備するには、次のものを使用します。  
 
-    -   운영 체제 이미지를 만드는 방법에 대한 자세한 내용은 [운영 체제 이미지 관리](../get-started/manage-operating-system-images.md)를 참조하세요.
+    -   オペレーティング システム イメージを作成する方法の詳細については、「[オペレーティング システム イメージを管理する](../get-started/manage-operating-system-images.md)」を参照してください。
 
-    -   배포 지점에 운영 체제 이미지 배포 자세한 내용은 [콘텐츠 배포](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)를 참조하세요.
+    -   オペレーティング システム イメージを配布ポイントに配布します。 詳細については、「[コンテンツの配布](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)」を参照してください。
 
-3.  **네트워크를 통해 운영 체제를 배포하는 작업 순서 만들기**  
+3.  **オペレーティング システムをネットワーク経由で展開するためのタスク シーケンスの作成**  
 
-     작업 순서를 사용하여 네트워크를 통한 운영 체제 설치를 자동화할 수 있습니다. [운영 체제를 설치하는 작업 순서 만들기](create-a-task-sequence-to-install-an-operating-system.md)의 단계를 수행하여 운영 체제를 배포하는 작업 순서를 만듭니다. 선택한 배포 방법에 따라 작업 순서에 대한 추가적으로 고려해야 할 사항이 있을 수 있습니다.  
+     ネットワーク経由でのオペレーティング システムのインストールを自動化するタスク シーケンスを使用します。 「[オペレーティング システムをインストールするタスク シーケンスの作成](create-a-task-sequence-to-install-an-operating-system.md)」の手順でオペレーティング システムを展開するためのタスク シーケンスを作成します。 選択した展開方法に応じて、タスク シーケンスに追加の考慮事項があります。  
 
-##  <a name="BKMK_Deploy"></a> 배포  
+##  <a name="BKMK_Deploy"></a> デプロイ  
 
--   다음 배포 방법 중 하나를 사용하여 운영 체제를 배포합니다.  
+-   オペレーティング システムを展開するには、次の展開方法のいずれかを使用します。  
 
-    -   [PXE를 사용하여 네트워크를 통해 Windows 배포](use-pxe-to-deploy-windows-over-the-network.md)  
+    -   [PXE を使用したネットワーク経由での Windows の展開](use-pxe-to-deploy-windows-over-the-network.md)  
 
-    -   [멀티캐스트를 사용하여 네트워크를 통해 Windows 배포](use-multicast-to-deploy-windows-over-the-network.md)  
+    -   [マルチキャストを使用した、ネットワーク経由での Windows の展開](use-multicast-to-deploy-windows-over-the-network.md)  
 
-    -   [팩터리 또는 로컬 저장소에 OEM에 대한 이미지 만들기](create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
+    -   [工場出荷時の OEM 用、または現地保管場所用のイメージの作成](create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
 
-    -   [독립 실행형 미디어를 사용하여 네트워크를 사용하지 않고 Windows 배포](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
+    -   [ネットワークではなくスタンドアロン メディアを使用した Windows の展開](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
 
-    -   [부팅 가능한 미디어를 사용하여 네트워크를 통해 Windows 배포](use-bootable-media-to-deploy-windows-over-the-network.md)  
+    -   [起動可能なメディアを使用したネットワーク経由での Windows の展開](use-bootable-media-to-deploy-windows-over-the-network.md)  
 
-## <a name="monitor"></a>모니터  
+## <a name="monitor"></a>モニター  
 
--   **작업 순서 배포 모니터링**  
+-   **タスク シーケンスの展開の監視**  
 
-     운영 체제를 설치하는 작업 순서 배포를 모니터링하려면 [운영 체제 배포 모니터링](monitor-operating-system-deployments.md)을 참조하세요.  
+     オペレーティング システムをインストールするために、タスク シーケンスの展開を監視するには、「[オペレーティング システムの展開の監視](monitor-operating-system-deployments.md)」を参照してください。  

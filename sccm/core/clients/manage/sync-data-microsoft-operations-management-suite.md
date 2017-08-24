@@ -1,6 +1,6 @@
 ---
-title: "데이터 동기화 | Microsoft 문서 | Microsoft Operations Management Suite "
-description: "System Center Configuration Manager의 데이터를 Microsoft Operations Management Suite에 동기화합니다."
+title: "データの同期 | Microsoft Docs | Microsoft Operations Management Suite "
+description: "Microsoft Operations Management Suite に System Center Configuration Manager からのデータを同期します。"
 ms.custom: na
 ms.date: 7/31/2017
 ms.prod: configuration-manager
@@ -17,130 +17,130 @@ manager: angrobe
 ms.openlocfilehash: 608a9893011c6500d5d4cd2f756a124db66b1858
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-#  <a name="sync-data-from-configuration-manager-to-the-microsoft-operations-management-suite"></a>Configuration Manager의 데이터를 Microsoft Operations Management Suite에 동기화합니다.
+#  <a name="sync-data-from-configuration-manager-to-the-microsoft-operations-management-suite"></a>Microsoft Operations Management Suite に Configuration Manager からのデータを同期
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-**Azure 서비스 마법사**를 사용하여 Configuration Manager에서 OMS(Operations Management Suite) 클라우드 서비스에 대한 연결을 구성할 수 있습니다. 버전 1706부터 마법사는 이 연결을 구성하기 위한 이전 워크플로를 대신합니다. 이전 버전에 대해서는 [Configuration Manager의 데이터를 Microsoft Operations Management Suite에 동기화(1702 및 이전 버전)](#Sync-data-from-Configuration-Manager-to-the-Microsoft-Operations-Management-Suite-(1702-and-earlier))를 참조하세요.
+**Azure サービス ウィザード**を使用して、Configuration Manager から Operations Management Suite (OMS) のクラウド サービスへの接続を構成できます。 バージョン 1706 以降、ウィザードは、前のワークフローを置き換えてこの接続を構成します。 以前のバージョンについては、「[Microsoft Operations Management Suite に Configuration Manager からのデータを同期 (1702 以前)](#Sync-data-from-Configuration-Manager-to-the-Microsoft-Operations-Management-Suite-(1702-and-earlier))」を参照してください。
 
--   이 마법사는 OMS, WSfB(비즈니스용 Windows 스토어), Azure AD(Azure Active Directory)와 같은 Configuration Manager용 클라우드 서비스를 구성하는 데 사용됩니다.  
+-   ウィザードは、Configuration Manager (OMS など)、ビジネス向け Windows ストア (WSfB)、および Azure Active Directory (Azure AD) 用にクラウド サービスを構成するために使用されます。  
 
--   Configuration Manager는 [Log Analytics](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) 또는 [업그레이드 준비](/sccm/core/clients/manage/upgrade/upgrade-analytics)와 같은 기능을 위해 OMS에 연결합니다.
+-   Configuration Manager は、[ログ分析](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)や[アップグレードの準備](/sccm/core/clients/manage/upgrade/upgrade-analytics)などの機能のために OMS に接続します。
 
-## <a name="prerequisites-for-the-oms-connector"></a>OMS 커넥터에 대한 필수 구성 요소
-OMS에 대한 연결을 구성하기 위한 필수 구성 요소는 [혀냊 분기 버전 1702에 대해 문서화](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#prerequisites)된 내용에서 달라졌습니다. 이 정보는 여기에도 설명되어 있습니다.  
+## <a name="prerequisites-for-the-oms-connector"></a>OMS コネクタの前提条件
+OMS への接続を構成するための前提条件は、[Current Branch バージョン 1702 のドキュメント](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#prerequisites)に記載されているものと変わりません。 ここではその情報を再掲します。  
 
--   Configuration Manager에서 OMS 커넥터를 설치하기 전에 OMS에 대한 권한을 Configuration Manager에 제공해야 합니다. 특히 OMS Log Analytics 작업 영역을 포함하는 Azure *리소스 그룹*에 *참여자 액세스 권한*을 부여해야 합니다. 이 작업을 수행하는 절차는 Log Analytics 콘텐츠에 설명되어 있습니다. OMS 문서에서 [구성 관리자에 OMS에 대한 사용 권한 제공](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)을 참조하세요.
+-   Configuration Manager で OMS コネクタをインストールする前に、Configuration Manager に OMS へのアクセス許可を付与する必要があります。 具体的には、OMS Log Analytics ワークスペースを含む Azure *リソース グループ*への*共同作成者アクセス許可*を付与する必要があります。 この手順は Log Analytics コンテンツに記載されています。 OMS ドキュメントの「[Configuration Manager に OMS へのアクセス許可を付与する](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)」を参照してください。
 
--   OMS 커넥터는 [서비스 연결 지점](/sccm/core/servers/deploy/configure/about-the-service-connection-point)을 [온라인 모드](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation)에서 호스트하는 컴퓨터에 설치해야 합니다.
+-   OMS コネクタは、[オンライン モード](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation)の[サービス接続ポイント](/sccm/core/servers/deploy/configure/about-the-service-connection-point)をホストするコンピューターにインストールする必要があります。
 
--   OMS 커넥터와 함께 서비스 연결 지점에 설치된 OMS에 대해 Microsoft Monitoring Agent를 설치해야 합니다. Agent 및 OMS 커넥터는 동일한 **OMS 작업 영역**을 사용하도록 구성해야 합니다. 에이전트를 설치하려면 OMS 문서에서 [에이전트 다운로드 및 설치](/azure/log-analytics/log-analytics-sccm#download-and-install-the-agent)를 참조하세요.
--   커넥터와 에이전트를 설치한 후 Configuration Manager 데이터를 사용하도록 OMS를 구성해야 합니다. 이렇게 하려면 OMS 포털에서 [Configuration Manager 컬렉션을 가져옵니다](/azure/log-analytics/log-analytics-sccm#import-collections).
+-   サービス接続ポイントには、OMS 用の Microsoft Monitoring Agent、および OMS コネクタをインストールする必要があります。 エージェントと OMS コネクタは、同じ **OMS ワークスペース**を使用するように構成する必要があります。 エージェントをインストールする場合は、OMS ドキュメントの「[エージェントのダウンロードとインストール](/azure/log-analytics/log-analytics-sccm#download-and-install-the-agent)」を参照してください。
+-   コネクタとエージェントをインストールしたら、Configuration Manager データを使用するように OMS を構成する必要があります。 そのためには、OMS ポータルで [Configuration Manager コレクションをインポート](/azure/log-analytics/log-analytics-sccm#import-collections)します。
 
-## <a name="use-the-azure-services-wizard-to-configure-the-connection-to-oms"></a>Azure 서비스 마법사를 사용하여 OMS에 대한 연결 구성
+## <a name="use-the-azure-services-wizard-to-configure-the-connection-to-oms"></a>Azure サービス ウィザードを使用して、OMS への接続を構成する
 
-1.  콘솔에서 **관리** > **개요** > **클라우드 서비스** > **Azure 서비스**로 이동한 후 리본 메뉴의 **홈** 탭에서 **Azure 서비스 구성**을 선택하여 **Azure 서비스 마법사**를 시작합니다.
+1.  コンソールで、**[管理]** > **[概要]** > **[クラウド サービス]** > **[Azure サービス]** の順に移動し、リボンの **[ホーム]** タブから **[Azure サービスの構成]** を選択して、**Azure サービス ウィザード**を開始します。
 
-2.  **Azure 서비스** 페이지에서 Operation Management Suite 클라우드 서비스를 선택합니다. **Azure 서비스 이름**에 이름을 입력하고 원하는 경우 선택적 설명을 입력한 후 **다음**을 클릭합니다.
+2.  **[Azure サービス]** ページで、Operation Management Suite クラウド サービスを選択します。 **[Azure サービス名]** にフレンドリ名を入力し、任意で説明を入力して、**[次へ]** をクリックします。
 
-3.  **앱** 페이지에서 Azure 환경(기술 미리 보기는 공용 클라우드만 지원함)을 지정합니다. 그런 후 **찾아보기**를 클릭하여 서버 앱 창을 엽니다.
+3.  **[アプリ]** ページで、ご使用の Azure 環境を指定します (Technical Preview では、パブリック クラウドのみがサポートされます)。 次に、**[参照]** をクリックして [サーバー アプリ] ウィンドウを開きます。
 
-4.  웹앱을 선택합니다.
+4.  Web アプリを選択します。
 
-    -   **가져오기**: Azure 구독에 이미 있는 웹앱을 사용하려면 **가져오기**를 클릭합니다. 앱 및 테넌트의 이름을 입력한 다음 테넌트 ID, 클라이언트 ID 및 Configuration Manager에서 사용하도록 할 Azure 웹앱의 비밀 키를 지정합니다. 정보를 **확인**한 후 **확인**을 클릭하여 계속합니다.   
+    -   **インポート**: Azure サブスクリプションに既に存在する Web アプリを使用するには、**[インポート]** をクリックします。 アプリとテナントのフレンドリ名を指定し、Configuration Manager で使用する Azure Web アプリのテナント ID、クライアント ID、シークレット キーを指定します。 情報を**確認**した後、**[OK]** をクリックして続行します。   
 
     > [!NOTE]   
-    > 이 미리 보기에서 OMS를 구성하는 경우 OMS는 웹앱에 대해서만 *import* 함수를 지원합니다. 새 웹앱을 만드는 것은 지원되지 않습니다. 마찬가지로 OMS에 대해 기존 앱을 재사용할 수 없습니다.
+    > このプレビューで OMS を構成すると、OMS は Web アプリの*インポート*機能のみをサポートします。 新しい Web アプリの作成はサポートされません。 同様に、OMS に既存のアプリを再利用することはできません。
 
-5.  다른 모든 절차를 성공적으로 완료한 경우 **OMS 연결 구성** 화면의 정보가 이 페이지에 자동으로 나타납니다. 연결 설정에 대한 정보가 **Azure 구독**, **Azure 리소스 그룹** 및 **Operations Management Suite 작업 영역**에 대해 나타납니다.
+5.  その他の手順をすべて正常に完了すると、**[OMS Connection Configuration]\(OMS 接続構成\)** 画面の情報が、自動的にこのページに表示されます。 接続設定の情報は、**[Azure サブスクリプション]**、**[Azure リソース グループ]**、および **[Operations Management Suite ワークスペース]** に表示されます。
 
-6.  마법사는 사용자가 입력한 정보를 사용하여 OMS 서비스에 연결합니다. OMS와 동기화하려는 장치 컬렉션을 선택하고 **추가**를 클릭합니다.
+6.  ウィザードは、入力した情報を使用して、OMS サービスに接続します。 OMS と同期するデバイス コレクションを選択し、**[追加]** をクリックします。
 
-7.  **요약** 화면에서 연결 설정을 확인하고 **다음**을 선택합니다. **진행률** 화면에 연결 상태가 표시되며 **완료**여야 합니다.
+7.  **[概要]** 画面で、**[次へ]** の接続設定を確認します。 **[進行状況]** 画面に接続状態が表示され、**[完了]** をクリックします。
 
-8.  마법사가 완료된 후 Configuration Manager 콘솔에는 **Operation Management Suite**가 **클라우드 서비스 유형**으로 표시됩니다.
+8.  ウィザードが完了すると、Configuration Manager コンソールに**クラウド サービスの種類**として **Operation Management Suite** を構成したことが示されます。
 
-## <a name="sync-data-from-configuration-manager-to-the-microsoft-operations-management-suite-1702-and-earlier"></a>Configuration Manager의 데이터를 Microsoft Operations Management Suite에 동기화합니다(1702 및 이전 버전).
+## <a name="sync-data-from-configuration-manager-to-the-microsoft-operations-management-suite-1702-and-earlier"></a>Microsoft Operations Management Suite に Configuration Manager からのデータを同期 (1702 以前)
 
 
-*적용 대상: System Center Configuration Manager(1702 및 이전 버전)*
+*適用対象: System Center Configuration Manager (1702 以前のバージョン)*
 
-Microsoft OMS(Operations Management Suite) 커넥터를 사용하여 System Center Configuration Manager의 데이터(예: 사용자 컬렉션)를 Microsoft Azure의 OMS Log Analytics에 동기화할 수 있습니다. 이렇게 하면 Configuration Manager 배포의 데이터가 OMS에 표시됩니다.
+Microsoft Operations Management Suite (OMS) Connector を使用して、System Center Configuration Manager のコレクションなどのデータを Microsoft Azure の OMS Log Analytics に同期することができます。 これにより、Configuration Manager 展開のデータが OMS で表示できるようになります。
 > [!TIP]
-> OMS 커넥터는 시험판 기능입니다. 자세한 내용은 [업데이트에서 시험판 기능 사용](/sccm/core/servers/manage/pre-release-features)을 참조하세요.
+> OMS コネクタは、プレリリースの機能です。 詳細については、「[更新プログラムからのプレリリース機能の使用](/sccm/core/servers/manage/pre-release-features)」を参照してください。
 
-버전 1702부터 OMS 커넥터를 사용하여 Microsoft Azure Government 클라우드에 있는 OMS 작업 영역에 연결할 수 있습니다. 이렇게 하려면 OMS 커넥터를 설치하기 전에 구성 파일을 수정해야 합니다. 이 항목에서 [Azure Government 클라우드에서 OMS 커넥터 사용](#fairfaxconfig)을 참조하세요.
+バージョン 1702 以降では、OMS コネクタを使用して、Microsoft Azure Government Cloud にある OMS ワークスペースに接続することができます。 その場合、OMS コネクタをインストールする前に構成ファイルを変更する必要があります。 このトピックの「[Azure Government Cloud で OMS コネクタを使用する](#fairfaxconfig)」を参照してください。
 
-### <a name="prerequisites"></a>전제 조건
-- Configuration Manager에서 OMS 커넥터를 설치하기 전에 OMS에 대한 권한을 Configuration Manager에 제공해야 합니다. 특히 OMS Log Analytics 작업 영역을 포함하는 Azure *리소스 그룹*에 *참여자 액세스 권한*을 부여해야 합니다. 이 작업을 수행하는 절차는 Log Analytics 콘텐츠에 설명되어 있습니다. OMS 문서에서 [구성 관리자에 OMS에 대한 사용 권한 제공](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)을 참조하세요.
+### <a name="prerequisites"></a>必要条件
+- Configuration Manager で OMS コネクタをインストールする前に、Configuration Manager に OMS へのアクセス許可を付与する必要があります。 具体的には、OMS Log Analytics ワークスペースを含む Azure *リソース グループ*への*共同作成者アクセス許可*を付与する必要があります。 この手順は Log Analytics コンテンツに記載されています。 OMS ドキュメントの「[Configuration Manager に OMS へのアクセス許可を付与する](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)」を参照してください。
 
-- OMS 커넥터는 [서비스 연결 지점](/sccm/core/servers/deploy/configure/about-the-service-connection-point)을 [온라인 모드](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation)에서 호스트하는 컴퓨터에 설치해야 합니다.
+- OMS コネクタは、[オンライン モード](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation)の[サービス接続ポイント](/sccm/core/servers/deploy/configure/about-the-service-connection-point)をホストするコンピューターにインストールする必要があります。
 
-  OMS를 독립 실행형 기본 사이트에 연결했고 중앙 관리 사이트를 환경에 추가할 계획이라면 현재 연결을 삭제하고 새 중앙 관리 사이트에서 커넥터를 다시 구성해야 합니다.
+  OMS をスタンドアロン プライマリ サイトに接続した状態で、使用環境に中央管理サイトを追加する予定の場合は、現在の接続を削除してから、新しい中央管理サイトで接続を再構成する必要があります。
 
-- OMS 커넥터와 함께 서비스 연결 지점에 설치된 OMS에 대해 Microsoft Monitoring Agent를 설치해야 합니다.  Agent 및 OMS 커넥터는 동일한 **OMS 작업 영역**을 사용하도록 구성해야 합니다. 에이전트를 설치하려면 OMS 문서에서 [에이전트 다운로드 및 설치](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#download-and-install-the-agent)를 참조하세요.
+- サービス接続ポイントには、OMS 用の Microsoft Monitoring Agent、および OMS コネクタをインストールする必要があります。  エージェントと OMS コネクタは、同じ **OMS ワークスペース**を使用するように構成する必要があります。 エージェントをインストールする場合は、OMS ドキュメントの「[エージェントのダウンロードとインストール](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#download-and-install-the-agent)」を参照してください。
 
-- 커넥터와 에이전트를 설치한 후 Configuration Manager 데이터를 사용하도록 OMS를 구성해야 합니다.  이렇게 하려면 OMS 포털에서 [Configuration Manager 컬렉션을 가져옵니다](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#import-collections).
-
-
-
-### <a name="install-the-oms-connector"></a>OMS 커넥터 설치  
-1. Configuration Manager 콘솔에서 [시험판 기능을 사용하도록 계층 구조](/sccm/core/servers/manage/pre-release-features)를 구성하고 OMS 커넥터를 사용하도록 설정합니다.  
-
-2. 그 다음에 **관리** > **Cloud Services** > **OMS 커넥터**로 이동합니다. 리본에서 "Operations Management Suite에 대한 연결 만들기"를 클릭합니다. 그러면 **Operation Management Suite 연결 마법사**가 열립니다. **다음**을 선택합니다.  
+- コネクタとエージェントをインストールしたら、Configuration Manager データを使用するように OMS を構成する必要があります。  そのためには、OMS ポータルで [Configuration Manager コレクションをインポート](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#import-collections)します。
 
 
-3.  **일반** 페이지에서 다음 정보가 있는지 확인하고 **다음**을 선택합니다.  
-  - Configuration Manager를 "웹 응용 프로그램 및/또는 웹 API" 관리 도구로 등록했으며 [이 등록의 클라이언트 ID](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)가 있습니다.  
-  - Azure Active Directory에서 등록된 관리 도구에 대한 클라이언트 키를 만듭니다.  
 
-  - Azure 관리 포털에서 [Configuration Manager에 OMS에 대한 사용 권한 제공](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)에 설명된 대로 OMS에 액세스할 수 있는 권한을 등록된 웹앱에 제공했습니다.  
+### <a name="install-the-oms-connector"></a>OMS コネクタをインストールする  
+1. Configuration Manager コンソールで、[プレリリース機能を使用するように階層](/sccm/core/servers/manage/pre-release-features)を構成してから、OMS コネクタの使用を有効にします。  
 
-4.  **Azure Active Directory** 페이지에서 해당 **테넌트**, **클라이언트 ID** 및 **클라이언트 비밀 키**를 제공하여 OMS에 대한 연결 설정을 구성하고 **다음**을 선택합니다.  
+2. 次に、**[管理]** > **[クラウド サービス]** > **[OMS コネクタ]** の順に移動します。 リボンで、[Operations Management Suite への接続の作成] をクリックします。 これにより、**Operation Management Suite への接続ウィザード**が開きます。 **[次へ]** を選択します。  
 
-5.  **OMS 연결 구성** 페이지에서 **Azure 구독**, **Azure 리소스 그룹** 및 **Operations Management Suite 작업 영역**에 정보를 입력하여 연결 설정을 제공합니다.  작업 영역은 서비스 연결 지점에 설치된 Microsoft Management Agent에 대해 구성된 작업 영역과 일치해야 합니다.  
 
-6.  **요약** 페이지에서 연결 설정을 확인하고 **다음**을 선택합니다. **진행률** 페이지에 연결 상태가 표시되며 **완료**여야 합니다.
+3.  **[全般]** ページで、次の情報を設定していることを確認し、**[次へ]** を選択します。  
+  - [Web アプリケーションや Web API] 管理ツールとして Configuration Manager を登録し、[この登録のクライアント ID](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) を設定していること。  
+  - Azure Active Directory で、登録済み管理ツールのクライアント キーを作成していること。  
 
-Configuration Manager를 OMS에 연결한 후 컬렉션을 추가하거나 제거하고 OMS 연결의 속성을 볼 수 있습니다.
+  - 「[Configuration Manager に OMS へのアクセス許可を付与する](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)」で説明するように、Azure の管理ポータルで、登録済みの Web アプリ、OMS にアクセスする権限を指定していること。  
 
-### <a name="verify-the-oms-connector-properties"></a>OMS 커넥터 속성 확인
-1.  Configuration Manager 콘솔에서 **관리** > **Cloud Services**로 이동하고 **OMS 커넥터**를 선택하여 **OMS 연결 ** 페이지**를 선택합니다.
-2.  이 페이지에는 다음 두 개의 탭이 있습니다.
+4.  **[Azure Active Directory]** ページで、OMS に対して接続設定を構成します。その場合、**[テナント]**、**[クライアント ID]**、および **[クライアントの秘密鍵]** を指定してから、**[次へ]** を選択します。  
+
+5.  **[OMS Connection Configuration]** (OMS 接続構成) ページで、接続設定を入力します。その場合、**[Azure サブスクリプション]**、**[Azure リソース グループ]**、および **[Operations Management Suite ワークスペース]** に入力します。  ワークスペースは、サービス接続ポイントにインストールされている Microsoft Management Agent に構成されているワークスペースと一致する必要があります。  
+
+6.  **[概要]** ページで接続設定を確認してから、**[次へ]** を選択します。 **[進行状況]** ページに接続状態を表示し、**[完了]** をクリックします。
+
+Configuration Manager を OMS にリンクした後は、コレクションを追加または削除したり、OMS 接続のプロパティを表示できます。
+
+### <a name="verify-the-oms-connector-properties"></a>OMS コネクタのプロパティを確認する
+1.  Configuration Manager コンソールで、**[管理]** > **[クラウド サービス]** の順に移動し、**[OMS コネクタ]** を選択して **[OMS 接続]** ページを開きます。
+2.  このページには、2 つのタブがあります。
   - **Azure Active Directory:**   
-    이 탭에는 **테넌트**, **클라이언트 ID**, **클라이언트 비밀 키 만료**가 표시되며, 만료된 경우 클라이언트 비밀 키를 확인할 수 있습니다.
+    このタブには、**[テナント]**、**[クライアント ID]**、**[クライアントのシークレット キーの有効期限]** が表示され、クライアントのシークレット キーが期限切れになったことを確認できます。
 
-  - **OMS 연결 속성:**  
-    이 탭에는 **Azure 구독**, **Azure 리소스 그룹**, **Operations Management Suite 작업 영역**과 **Operations Management Suite에서 데이터를 가져올 수 있는 장치 컬렉션 목록**이 표시됩니다. **추가** 및 **제거** 단추를 사용하여 허용되는 컬렉션을 수정합니다.
+  - **OMS 接続のプロパティ:**  
+    このタブには、**[Azure サブスクリプション]**、**[Azure リソース グループ]**、**[Operations Management Suite ワークスペース]**、および **[Device collections that Operations Management Suite can get data for]** (Operations Management Suite がデータを取得するデバイス コレクション) のリストが表示されます。 **[追加]** と **[削除]** ボタンを使用して使用できるコレクションを変更します。
 
-### <a name="fairfaxconfig"> </a> Azure Government 클라우드에서 OMS 커넥터 사용
+### <a name="fairfaxconfig"> </a> Azure Government Cloud で OMS コネクタを使用する
 
 
-1.  Configuration Manager 콘솔이 설치되어 있는 컴퓨터에서 Government 클라우드를 가리키도록 다음 구성 파일을 편집합니다. ***&lt;CM 설치 경로>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
+1.  Configuration Manager コンソールがインストールされている任意のコンピューターで、Government クラウドをポイントするように、***&lt;CM install path>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config*** 構成ファイルを編集します。
 
-  **편집:**
+  **編集内容:**
 
-    설정 이름 *FairFaxArmResourceID*의 값을 "https://management.usgovcloudapi.net/"으로 변경합니다.
+    設定名 *FairFaxArmResourceID* の値が、"https://management.usgovcloudapi.net/" と同一になるように変更します。
 
-   - **원래 값:** &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
+   - **元の値:** &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
       &lt;value>&lt;/value>   
       &lt;/setting>
 
-   - **편집된 값:**     
+   - **編集後の値:**     
       &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value>https://management.usgovcloudapi.net/&lt;/value>  
       &lt;/setting>
 
-  설정 이름 *FairFaxAuthorityResource*의 값을 "https://login.microsoftonline.com/"으로 변경합니다.
+  設定名 *FairFaxAuthorityResource* の値が、"https://login.microsoftonline.com/" と同一になるように変更します。
 
-  - **원래 값:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+  - **元の値:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>&lt;/value>
 
-    - **편집된 값:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+    - **編集後の値:** &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>https://login.microsoftonline.com/&lt;/value>
 
-2.  두 가지 사항을 변경하고 파일을 저장한 후 동일한 컴퓨터에서 Configuration Manager 콘솔을 다시 시작하고 해당 콘솔을 사용하여 OMS 커넥터를 설치합니다. 커넥터를 설치하려면 [Configuration Manager의 데이터를 Microsoft Operations Management Suite에 동기화](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)에 제공된 정보를 사용하고 Microsoft Azure Government 클라우드에 있는 **Operations Management Suite 작업 영역**을 선택합니다.
+2.  2 つの変更を含むファイルを保存したら、同じコンピューター上で Configuration Manager コンソールを再起動し、そのコンソールを使用して OMS コネクタをインストールします。 コネクタをインストールするには、「[Microsoft Operations Management Suite に Configuration Manager からのデータを同期](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)」の情報を使用し、Microsoft Azure Government クラウド上にある **Operations Management Suite のワークスペース**を選択します。
 
-3.  OMS 커넥터가 설치되면 사이트에 연결하는 모든 콘솔에서 Government 클라우드에 대한 연결을 사용할 수 있습니다.
+3.  OMS コネクタをインストールしたら、サイトに接続されているコンソールを使用する際に Government クラウドへの接続を使用できます。

@@ -1,6 +1,6 @@
 ---
-title: "Endpoint Protection 구성 | Microsoft 문서"
-description: "Windows Defender에 대한 맬웨어 정의를 업데이트하고 배포하도록 Configuration Manager를 설정하는 방법을 알아봅니다."
+title: "Endpoint Protection の構成 | Microsoft Docs"
+description: "Configuration Manager を設定して Windows Defender のマルウェア定義を更新および配布する方法について説明します。"
 ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
@@ -17,28 +17,28 @@ manager: angrobe
 ms.openlocfilehash: 6917644d6719a1ca636713aa5aebf277927123c8
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="configure-endpoint-protection"></a>Endpoint Protection 구성
+# <a name="configure-endpoint-protection"></a>Endpoint Protection の構成
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-Endpoint Protection을 사용하여 Configuration Manager 클라이언트 컴퓨터의 보안 및 맬웨어를 관리하려면 먼저 이 항목에 자세히 설명된 구성 단계를 수행해야 합니다.  
+Endpoint Protection を使用して構成マネージャー クライアント コンピューターのセキュリティとマルウェアを管理するには、事前にこのトピックの構成手順を実行する必要があります。  
 
-## <a name="how-to-configure-endpoint-protection-in-configuration-manager"></a>Configuration Manager에서 Endpoint Protection을 구성하는 방법  
- Configuration Manager의 Endpoint Protection은 제어에는 외부 종속성과 제품 내 종속성이 있습니다.  
+## <a name="how-to-configure-endpoint-protection-in-configuration-manager"></a>Configuration Manager の Endpoint Protection の構成方法  
+ Configuration Manager の Endpoint Protection には、外部依存関係と製品内部の依存関係があります。  
 
-### <a name="steps-to-configure-endpoint-protection-in-configuration-manager"></a>Configuration Manager에서 Endpoint Protection을 구성하는 단계  
- Endpoint Protection을 구성하는 단계, 정보 및 방법에 대한 추가 정보는 다음 표를 참조하세요.  
+### <a name="steps-to-configure-endpoint-protection-in-configuration-manager"></a>Configuration Manager で Endpoint Protection を構成する手順  
+ 次の表に、Endpoint Protection の構成に関する手順、説明、および参照情報を示します。  
 
 > [!IMPORTANT]  
->  Windows 10 컴퓨터의 Endpoint Protection을 관리하는 경우 Windows Defender에 대한 맬웨어 정의를 업데이트 및 배포하도록 Configuration Manager를 구성해야 합니다. Windows Defender는 Windows 10에 포함되어 있지만 SCEPInstall은 여전히 설치해야 하고 Endpoint Protection(아래 **5단계**)에 대한 사용자 지정 클라이언트 설정도 여전히 필요합니다.  
+>  Windows 10 コンピューターの Endpoint Protection を管理する場合、Windows Defender のマルウェア定義ファイルを更新し、配布するように Configuration Manager を構成する必要があります。 Windows Defender は Windows 10 に含まれていますが、SCEPInstall をインストールする必要があります。また、Endpoint Protection のカスタム クライアント設定が必要です (以下の**手順 5**)。  
 
-|단계|세부 정보|  
+|手順|説明|  
 |-----------|-------------|  
-|**1단계:** [Endpoint Protection 지점 사이트 시스템 역할 만들기](endpoint-protection-site-role.md)|Endpoint Protection을 사용하려면 먼저 Endpoint Protection 지점 사이트 시스템 역할을 설치해야 합니다. 하나의 사이트 시스템 서버에만 설치해야 하며, 중앙 관리 사이트 또는 독립 실행형 기본 사이트의 계층 구조 맨 위에 설치해야 합니다. |  
-|**2단계:** [Endpoint Protection에 대한 경고 구성](endpoint-configure-alerts.md)|경고는 맬웨어 감염과 같은 특정 이벤트가 발생할 때 관리자에게 알립니다. **모니터링** 작업 영역의 **경고** 노드에 경고가 표시되거나, 필요에 따라 지정된 사용자에게 메일로 보낼 수 있습니다. |  
-|**3단계:** [Endpoint Protection 클라이언트에 대한 정의 업데이트 원본 구성](endpoint-definition-updates.md)|다양한 원본을 사용하여 정의 업데이트를 다운로드하도록 Endpoint Protection을 구성할 수 있습니다. |  
-|**4단계:** [기본 맬웨어 방지 정책 구성 및 사용자 지정 맬웨어 방지 정책 만들기](endpoint-antimalware-policies.md)|Endpoint Protection 클라이언트가 설치될 때 기본 맬웨어 방지 정책이 적용됩니다. 배포한 사용자 지정 정책은 기본적으로 클라이언트를 배포한 후 60분 내에 적용됩니다. Endpoint Protection 클라이언트를 배포하기 전에 맬웨어 방지 정책을 구성했는지 확인합니다. |  
-|**5단계:** [Endpoint Protection에 대한 사용자 지정 클라이언트 설정 구성](endpoint-protection-configure-client.md)|사용자 지정 클라이언트 설정을 사용하여 계층 구조의 컴퓨터 컬렉션에 대한 Endpoint Protection 설정을 구성할 수 있습니다.<br /><br /> 참고: 계층 구조의 모든 컴퓨터에 적용하려는 경우가 아니면 기본 Endpoint Protection 클라이언트 설정을 구성하지 마세요. |  
+|**手順 1:** [Endpoint Protection ポイント サイト システムの役割を作成する](endpoint-protection-site-role.md)|Endpoint Protection を使用するには、事前に Endpoint Protection ポイント サイト システムの役割をインストールしておく必要があります。 これは、1 つのサイト システム サーバーのみにインストールします。また、中央管理サイトまたはスタンドアロンのプライマリ サイトの階層の最上位にインストールしなければなりません。 |  
+|**手順 2:** [Endpoint Protection のアラートを構成する](endpoint-configure-alerts.md)|マルウェア感染などの特定のイベントが発生すると、管理者にアラートが通知されます。 アラートは、 **[監視]** ワークスペースの **[アラート]** ノードに表示されます。必要に応じて、指定のユーザーに電子メールで送信することもできます。 |  
+|**手順 3:** [Endpoint Protection クライアントの定義ファイルの更新ソースを構成する](endpoint-definition-updates.md)|Endpoint Protection は、さまざまなソースを使用して定義ファイルの更新をダウンロードするように構成できます。 |  
+|**手順 4:** [既定のマルウェア対策ポリシーを構成してカスタムのマルウェア対策ポリシーを作成する](endpoint-antimalware-policies.md)|既定のマルウェア対策ポリシーは、Endpoint Protection クライアントがインストールされると適用されます。 展開されているカスタムのポリシーは、クライアント展開の 60 分以内に既定で適用されます。 Endpoint Protection クライアントを展開する前に、マルウェア対策ポリシーを構成していることを確認します。 |  
+|**手順 5:** [Endpoint Protection のカスタム クライアント設定を構成する](endpoint-protection-configure-client.md)|カスタム クライアント設定を使用して、階層内のコンピューターのコレクションに Endpoint Protection 設定を構成します。<br /><br /> メモ: 階層内のすべてのコンピューターに適用する場合を除き、既定の Endpoint Protection クライアント設定は構成しないでください。 |  

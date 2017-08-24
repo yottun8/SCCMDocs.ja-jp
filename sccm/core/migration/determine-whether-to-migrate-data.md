@@ -1,6 +1,6 @@
 ---
-title: "마이그레이션할 항목 선택 | Microsoft 문서"
-description: "System Center Configuration Manager에 마이그레이션할 수 있는 데이터와 마이그레이션할 수 없는 데이터를 알아봅니다."
+title: "移行するデータの選択 | Microsoft Docs"
+description: "System Center Configuration Manager に移行できるデータと移行できないデータについて説明します。"
 ms.custom: na
 ms.date: 12/29/2016
 ms.prod: configuration-manager
@@ -18,171 +18,171 @@ manager: angrobe
 ms.openlocfilehash: 9dc5f6c9f58e1fc33b2dc9dd76737ae23af81993
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="determine-whether-to-migrate-data-to-system-center-configuration-manager"></a>System Center Configuration Manager로 데이터를 마이그레이션할지 여부 결정
+# <a name="determine-whether-to-migrate-data-to-system-center-configuration-manager"></a>データを System Center Configuration Manager に移行するかどうかの判断
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager에서 마이그레이션은 지원되는 버전의 Configuration Manager에서 만든 데이터 및 구성을 새 계층 구조로 전송할 수 있는 프로세스를 제공합니다.  이 프로세스를 통해 다음을 수행할 수 있습니다.  
+System Center Configuration Manager の移行では、作成したデータと構成を、サポートされているバージョンの Configuration Manager から新しい階層に転送するためのプロセスが提供されます。  これを使用して、次の操作を実行できます。  
 
--   여러 계층 구조를 하나로 결합합니다.  
+-   複数の階層を 1 つに統合する。  
 
--   랩 배포에서 프로덕션 배포로 데이터 및 구성을 이동합니다.
+-   データと構成をラボの展開から運用環境の展開に移動する。
 
--   System Center Configuration Manager의 업그레이드 경로가 없는 Configuration Manager 2007과 같은 이전 버전의 Configuration Manager 또는 System Center Configuration Manager의 업그레이드 경로를 지원하는 System Center 2012 Configuration Manager에서 데이터 및 구성을 이동합니다.  
+-   System Center Configuration Manager へのアップグレード パスのない Configuration Manager 2007 などの以前のバージョンの Configuration Manager、または System Center 2012 Configuration Manager (System Center Configuration Manager へのアップグレード パスがサポートされている) からデータと構成を移動します。  
 
-배포 지점 사이트 역할 및 배포 지점을 호스팅하는 컴퓨터를 제외하고 인프라(사이트, 사이트 시스템 역할 또는 사이트 시스템 역할을 호스팅하는 컴퓨터 포함)를 마이그레이션하거나 전송하거나 계층 간에 공유할 수 없습니다.  
+配布ポイント サイト システムの役割と、配布ポイントをホストするコンピューターを除き、階層間で移行、転送、または共有できるインフラストラクチャ (サイト、サイト システムの役割、またはサイト システムの役割をホストするコンピューターを含む) はありません。  
 
- 서버 인프라는 마이그레이션할 수 없지만 Configuration Manager 클라이언트는 계층 간에 마이그레이션할 수 있습니다. 클라이언트 마이그레이션 시에는 클라이언트에서 사용하는 데이터를 원본 계층에서 대상 계층으로 마이그레이션한 다음, 클라이언트 소프트웨어를 설치하거나 재할당하므로 클라이언트에서 새 계층에 보고할 수 있습니다.
+ サーバー インフラストラクチャは移行できませんが、階層間で構成マネージャー クライアントを移行することはできます。 クライアントの移行には、ソース階層でクライアントが使用するデータを対象の階層に移行する処理と、クライアントが新しい階層にレポートするようにクライアント ソフトウェアのインストールまたは再割り当てを行う処理が必要です。
 
-새 계층 구조에 클라이언트를 설치하고 클라이언트가 해당 데이터를 제출하면 고유한 Configuration Manager ID를 통해 Configuration Manager에서 이전에 마이그레이션한 데이터를 각 클라이언트 컴퓨터에 연결할 수 있습니다.  
+クライアントを新しい階層にインストールし、クライアントがそのデータを送信した後は、Configuration Manager で一意の Configuration Manager ID を使用して、以前に移行したデータを各クライアント コンピューターに関連付けることができます。  
 
- 마이그레이션을 통해 제공되는 기능을 사용하면 구성 및 배포에 대한 기존의 투자를 유지하면서도 System Center 2012 Configuration Manager에서 처음 도입되어 System Center Configuration Manager에서 계속 제공되는 첫 번째 제품의 핵심 변경 내용을 모두 활용할 수 있습니다. 이러한 변경 내용으로는 더 적은 사이트와 리소스를 사용하는 간단해진 Configuration Manager 계층 구조와, 64비트 하드웨어에서 실행되는 네이티브 64비트 코드를 사용하여 향상된 처리 기능이 있습니다.  
+ 移行によって提供される機能は、構成と展開にこれまで投資してきた資産を維持しながら、(System Center 2012 Configuration Manager で最初に導入され、System Center Configuration Manager に引き継がれている) 主要な変更点を最大限に活用するのに役立ちます。 これらの変更点には、より少ないサイトとリソースを使用するように簡素化された Configuration Manager 階層、64 ビット ハードウェア上で実行されるネイティブ 64 ビット コードの使用により強化されたプロセッシング機能などが含まれます。  
 
- 마이그레이션에서 지원하는 Configuration Manager 버전에 대한 자세한 내용은 [System Center Configuration Manager에서 수행하는 마이그레이션을 위한 필수 조건](../../core/migration/prerequisites-for-migration.md)을 참조하세요.  
+ 移行がサポートされている Configuration Manager のバージョンの詳細については、「[System Center Configuration Manager での移行の前提条件](../../core/migration/prerequisites-for-migration.md)」をご覧ください。  
 
- 다음 섹션의 내용을 참조하여 마이그레이션할 수 있는/없는 데이터를 계획할 수 있습니다.  
+ 次のセクションは、移行できるデータと移行できないデータについて計画する際に役立ちます。  
 
--   [System Center Configuration Manager로 마이그레이션할 수 있는 데이터](#Can_Migrate)  
+-   [System Center Configuration Manager に移行可能なデータ](#Can_Migrate)  
 
--   [System Center Configuration Manager로 마이그레이션할 수 없는 데이터](#Cannot_migrate)  
+-   [System Center Configuration Manager に移行できないデータ](#Cannot_migrate)  
 
-##  <a name="Can_Migrate"></a> System Center Configuration Manager로 마이그레이션할 수 있는 데이터  
- 지원되는 Configuration Manager 계층 구조 간에는 대부분의 개체를 마이그레이션할 수 있습니다. 지원되는 버전의 Configuration Manager 2007에서 마이그레이션된 일부 개체의 인스턴스는 System Center 2012 Configuration Manager 스키마 및 개체 형식에 맞게 수정해야 합니다.
+##  <a name="Can_Migrate"></a> System Center Configuration Manager に移行可能なデータ  
+ 移行により、サポートされる Configuration Manager 階層間で大部分のオブジェクトを移行できます。 サポートされるバージョンの Configuration Manager 2007 のオブジェクトによっては、System Center 2012 Configuration Manager のスキーマとオブジェクト形式に準拠するように、移行されるインスタンスを変更する必要があります。
 
-이렇게 수정한 내용은 원본 사이트 데이터베이스의 데이터에 영향을 주지 않습니다. 지원되는 버전의 System Center 2012 Configuration Manager 또는 System Center Configuration Manager에서 마이그레이션된 개체는 수정할 필요가 없습니다.  
+この変更は、ソース サイトのデータベース内のデータには影響しません。 サポートされているバージョンの System Center 2012 Configuration Manager または System Center Configuration Manager から移行されたオブジェクトは、変更する必要がありません。  
 
- 다음에는 원본 계층의 Configuration Manager 버전에 따라 마이그레이션할 수 있는 개체가 나와 있습니다. 쿼리와 같은 일부 개체는 마이그레이션되지 않습니다. 마이그레이션되지 않는 개체를 계속 사용하려면 새 계층에서 다시 만들어야 합니다. 다른 개체(일부 클라이언트 데이터 포함)는 새 계층 구조에서 클라이언트를 관리할 때 해당 계층 구조에서 자동으로 다시 만들어집니다.  
+ ソース階層の Configuration Manager のバージョンに基づいて移行できるオブジェクトを次に示します。 クエリと同様に、一部のオブジェクトは移行されません。 このような移行されないオブジェクトを引き続き使用するには、新しい階層で再作成する必要があります。 一部のクライアント データを含む、他のオブジェクトは、新しい階層でクライアントを管理するときに自動的に再作成されます。  
 
-### <a name="objects-that-you-can-migrate-from-system-center-2012-configuration-manager-or-system-center-configuration-manager-current-branch"></a>System Center 2012 Configuration Manager 또는 System Center Configuration Manager 현재 분기에서 마이그레이션할 수 있는 개체
+### <a name="objects-that-you-can-migrate-from-system-center-2012-configuration-manager-or-system-center-configuration-manager-current-branch"></a>System Center 2012 Configuration Manager または System Center Configuration Manager の現在のブランチから移行できるオブジェクト
 
--   보급 알림  
+-   開示通知 (旧称「提供情報」)  
 
--   System Center 2012 Configuration Manager 이상 버전용 응용 프로그램  
+-   System Center 2012 Configuration Manager およびそれ以降のバージョン用のアプリケーション  
 
--   System Center 2012 Configuration Manager 이상 버전의 App-V 가상 환경  
+-   System Center 2012 Configuration Manager およびそれ以降のバージョンの App-V 仮想環境  
 
--   Asset Intelligence 사용자 지정  
+-   資産インテリジェンスのカスタマイズ設定  
 
--   경계  
+-   境界  
 
--   컬렉션: 지원되는 버전의 System Center 2012 Configuration Manager 또는 System Center Configuration Manager에서 컬렉션을 마이그레이션하려면 개체 마이그레이션 작업을 사용합니다.  
+-   コレクション: サポートされているバージョンの System Center 2012 Configuration Manager または System Center Configuration Manager からコレクションを移行するには、オブジェクトの移行ジョブを使用します。  
 
--   준수 설정:  
+-   コンプライアンス設定:  
 
-    -   구성 기준  
+    -   構成基準  
 
-    -   구성 항목  
+    -   構成項目  
 
--   운영 체제 배포:  
+-   オペレーティング システムの展開:  
 
-    -   부팅 이미지  
+    -   ブート イメージ  
 
-    -   드라이버 패키지  
+    -   ドライバー パッケージ  
 
-    -   드라이버  
+    -   ドライバー  
 
-    -   이미지  
+    -   イメージ  
 
-    -   패키지  
+    -   パッケージ  
 
-    -   작업 순서  
+    -   タスク シーケンス  
 
--   검색 결과: 저장된 검색 조건  
+-   検索結果: 保存された検索条件  
 
--   소프트웨어 업데이트:  
+-   ソフトウェア更新プログラム:  
 
-    -   배포  
+    -   展開  
 
-    -   배포 패키지  
+    -   展開パッケージ  
 
-    -   템플릿  
+    -   テンプレート  
 
-    -   소프트웨어 업데이트 목록  
+    -   ソフトウェア更新プログラム一覧  
 
--   소프트웨어 배포 패키지  
+-   ソフトウェアの配布パッケージ  
 
--   소프트웨어 계량 규칙  
+-   ソフトウェア使用状況測定規則 (旧称「ソフトウェア メータリング規則」)  
 
--   가상 응용 프로그램 패키지  
+-   仮想アプリケーション パッケージ  
 
-### <a name="objects-that-you-can-migrate-from-configuration-manager-2007-sp2"></a>Configuration Manager 2007 SP2에서 마이그레이션할 수 있는 개체
+### <a name="objects-that-you-can-migrate-from-configuration-manager-2007-sp2"></a>Configuration Manager 2007 SP2 から移行できるオブジェクト
 
--   보급 알림  
+-   開示通知 (旧称「提供情報」)  
 
--   System Center 2012 Configuration Manager 이상 버전용 응용 프로그램  
+-   System Center 2012 Configuration Manager およびそれ以降のバージョン用のアプリケーション  
 
--   System Center 2012 Configuration Manager 이상 버전의 App-V 가상 환경  
+-   System Center 2012 Configuration Manager およびそれ以降のバージョンの App-V 仮想環境  
 
--   Asset Intelligence 사용자 지정  
+-   資産インテリジェンスのカスタマイズ設定  
 
--   경계  
+-   境界  
 
--   컬렉션: 컬렉션 마이그레이션 작업을 사용하여 지원되는 Configuration Manager 2007 버전에서 컬렉션을 마이그레이션합니다.  
+-   コレクション: コレクションの移行ジョブを使用して、サポートされるバージョンの Configuration Manager 2007 からコレクションを移行します。  
 
--   호환성 설정(Configuration Manager 2007에서는 Desired Configuration Management이라고 함)  
+-   コンプライアンス設定 (Configuration Manager 2007 では必要な構成管理とも呼ばれます):  
 
-    -   구성 기준  
+    -   構成基準  
 
-    -   구성 항목  
+    -   構成項目  
 
--   운영 체제 배포:  
+-   オペレーティング システムの展開:  
 
-    -   부팅 이미지  
+    -   ブート イメージ  
 
-    -   드라이버 패키지  
+    -   ドライバー パッケージ  
 
-    -   드라이버  
+    -   ドライバー  
 
-    -   이미지  
+    -   イメージ  
 
-    -   패키지  
+    -   パッケージ  
 
-    -   작업 순서  
+    -   タスク シーケンス  
 
--   검색 결과: 검색 폴더  
+-   検索結果: 検索フォルダー  
 
--   소프트웨어 업데이트:  
+-   ソフトウェア更新プログラム:  
 
-    -   배포  
+    -   展開  
 
-    -   배포 패키지  
+    -   展開パッケージ  
 
-    -   템플릿  
+    -   テンプレート  
 
-    -   소프트웨어 업데이트 목록  
+    -   ソフトウェア更新プログラム一覧  
 
--   소프트웨어 배포 패키지  
+-   ソフトウェアの配布パッケージ  
 
--   소프트웨어 계량 규칙  
+-   ソフトウェア使用状況測定規則 (旧称「ソフトウェア メータリング規則」)  
 
--   가상 응용 프로그램 패키지  
+-   仮想アプリケーション パッケージ  
 
-##  <a name="Cannot_migrate"></a> System Center Configuration Manager로 마이그레이션할 수 없는 데이터  
- 다음과 같은 유형의 개체는 마이그레이션할 수 없습니다.  
+##  <a name="Cannot_migrate"></a> System Center Configuration Manager に移行できないデータ  
+ 次の種類のオブジェクトは移行できません。  
 
--   AMT 클라이언트 프로비전 정보  
+-   AMT クライアントのプロビジョニング情報  
 
--   클라이언트의 다음 파일:  
+-   次のような、クライアント上のファイル:  
 
-    -   클라이언트 인벤토리 및 기록 데이터  
+    -   クライアント インベントリおよび履歴データ  
 
-    -   클라이언트 캐시의 파일  
+    -   クライアントのキャッシュ内のファイル  
 
--   쿼리  
+-   クエリ  
 
--   사이트 및 개체에 대한 Configuration Manager 2007 보안 권한 및 인스턴스  
+-   サイトとオブジェクトの Configuration Manager 2007 セキュリティ権限とインスタンス  
 
--   SQL Server Reporting Services의 Configuration Manager 2007 보고서  
+-   SQL Server Reporting Services の Configuration Manager 2007 レポート  
 
--   Configuration Manager 2007 웹 보고서  
+-   Configuration Manager 2007 の Web レポート  
 
--   System Center 2012 Configuration Manager 및 System Center Configuration Manager 보고서  
+-   System Center 2012 Configuration Manager および System Center Configuration Manager のレポート  
 
--   System Center 2012 Configuration Manager 및 System Center Configuration Manager 역할 기반 관리:  
+-   System Center 2012 Configuration Manager および System Center Configuration Manager のロール ベース管理:  
 
-    -   보안 역할  
+    -   セキュリティ ロール  
 
-    -   보안 범위  
+    -   セキュリティ スコープ  

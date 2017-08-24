@@ -1,6 +1,6 @@
 ---
-title: "System Center Configuration Manager를 사용하여 서비스 연결 지점 만들기 | Microsoft Docs"
-description: "System Center Configuration Manager를 사용하여 서비스 연결 지점 만들기"
+title: "System Center Configuration Manager を使用したサービス接続ポイントの作成 | Microsoft Docs"
+description: "System Center Configuration Manager を使用してサービス接続ポイントを作成します。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,44 +18,44 @@ manager: angrobe
 ms.openlocfilehash: 9a21d02cb2a50162e5de50481f0f27f2dd7a616c
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-a-service-connection-point-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 및 Microsoft Intune을 사용하여 서비스 연결 지점 만들기
+# <a name="create-a-service-connection-point-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用したサービス接続ポイントの作成
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-구독을 만든 후에는 Intue 서비스에 연결하는 데 사용할 수 있는 서비스 연결 지점 사이트 시스템 역할을 설치할 수 있습니다. 이 사이트 시스템 역할은 Intue 서비스에 설정 및 응용 프로그램을 푸시합니다.
+サブスクリプションを作成したら、サービス接続ポイントのサイト システムの役割をインストールして、Intune サービスに接続できるようにします。 このサイト システムの役割は、設定とアプリケーションを Intune サービスにプッシュします。
 
- 서비스 연결 지점은 설정과 소프트웨어 배포 정보를 Configuration Manager에 전송하고 모바일 장치에서 상태 및 인벤토리 메시지를 검색합니다. Configuration Manager 서비스는 게이트웨이 역할을 하며 모바일 장치와 통신하고 설정을 저장합니다.
+ サービス接続ポイントは、設定とソフトウェアの展開情報を Configuration Manager に送信し、モバイル デバイスからステータス メッセージとインベントリ メッセージを取得します。 Configuration Manager サービスは、モバイル デバイスと通信し、設定を保存するゲートウェイとして機能します。
 
 > [!NOTE]
->  서비스 연결 지점 사이트 시스템 역할은 중앙 관리 사이트 또는 독립 실행형 기본 사이트에만 설치할 수 있습니다. 서비스 연결 지점에는 인터넷 액세스가 있어야 합니다.
+>  サービス接続ポイントのサイト システムの役割は、中央管理サイトかスタンドアロン プライマリ サイトだけにインストールできます。 サービス接続ポイントにはインターネット アクセスが必要です。
 
 
-## <a name="configure-the-service-connection-point-role"></a>서비스 연결 지점 역할 구성
+## <a name="configure-the-service-connection-point-role"></a>サービス接続ポイントの役割を構成する
 
-1.  Configuration Manager 콘솔에서 **관리**를 클릭합니다.
+1.  Configuration Manager コンソールで、[ **管理**] をクリックします。
 
-2.  **관리** 작업 영역에서 **사이트**를 확장하고 **서버 및 사이트 시스템 역할**을 클릭합니다.
+2.  **[管理]** ワークスペースで **[サイト]** を展開して、**[サーバーとサイト システムの役割]** をクリックします。
 
-3.  다음 중 해당 단계를 사용하여 새 또는 기존 사이트 시스템 서버에 **서비스 연결 지점** 역할을 추가합니다.
+3.  対応する手順を使用して、 **サービス接続ポイント** の役割を新規または既存のサイト システム サーバーに追加します。
 
-    -   새 사이트 시스템 서버: **홈** 탭의 **만들기** 그룹에서 **사이트 시스템 서버 만들기** 를 클릭하여 사이트 시스템 서버 만들기 마법사를 시작합니다.
+    -   新しいサイト システム サーバー: **[ホーム]** タブの **[作成]** グループにある **[サイト システム サーバーの作成]** をクリックして、サイト システム サーバーの作成ウィザードを開始します。
 
-    -   기존 사이트 시스템 서버: 서비스 연결 지점 역할을 설치할 서버를 클릭합니다. 그런 다음 **홈** 탭의 **서버** 그룹에서 **사이트 시스템 역할 추가** 를 클릭하여 사이트 시스템 역할 추가 마법사를 시작합니다.
+    -   既存のサイト システム サーバー: サービス接続ポイントの役割をインストールするサーバーをクリックします。 [ホーム **** ] タブの [サーバー **** ] グループにある [サイト システムの役割の追加 **** ] をクリックして、サイト システムの役割の追加ウィザードを開始します。
 
-4.  **시스템 역할 선택** 페이지에서 **서비스 연결 지점**을 선택하고 **다음**을 클릭합니다.
-![서비스 연결 지점 만들기](../media/mdm-service-connection-point.png)
+4.  **[システムの役割の選択]** ページで、 **[サービス接続ポイント]**を選んで、 **[次へ]**をクリックします。
+![サービス接続ポイントを作成する](../media/mdm-service-connection-point.png)
 
-* 마법사를 완료합니다.
+* ウィザードを完了します。
 
-## <a name="how-does-the-service-connection-point-authenticate-with-the-microsoft-intune-service"></a>서비스 연결 지점이 Microsoft Intune 서비스를 인증하는 방법
- 서비스 연결 지점은 인터넷을 통해 모바일 장치를 관리하는 클라우드 기반 Intune 서비스에 대한 연결을 설정하여 Configuration Manager를 확장합니다. 서비스 연결 지점은 Intune 서비스를 다음과 같이 인증합니다.
+## <a name="how-does-the-service-connection-point-authenticate-with-the-microsoft-intune-service"></a>サービス接続ポイントが Microsoft Intune サービスで認証を行う方法
+ サービス接続ポイントは、インターネット経由でモバイル デバイスを管理するクラウド ベースの Intune サービスへの接続を確立することによって、Configuration Manager を拡張します。 サービス接続ポイントは、次のように Intune サービスで認証を行います。
 
-1.  Configuration Manager 콘솔에서 Intune 구독을 만들 때 Configuration Manager 관리자가 Azure Active Directory에 연결하여 인증을 받습니다. 그러면 개별 ADFS 서버로 리디렉션되어 사용자 이름과 암호를 입력하라는 메시지가 표시됩니다. 해당 정보를 입력하면 Intune에서 테넌트에 인증서를 발급합니다.
+1.  Configuration Manager コンソールで Intune サブスクリプションを作成する場合、Configuration Manager 管理者は、Azure Active Directory に接続して認証されます。Azure Active Directory は、各 ADFS サーバーにリダイレクトして、ユーザーに対してユーザー名とパスワードの入力を求めるダイアログを表示します。 次に、Intune はテナントに証明書を発行します。
 
-2.  1단계에서 발급된 인증서가 서비스 연결 지점 사이트 역할에 설치되며 Microsoft Intune 서비스와의 이후 모든 통신을 인증하고 권한을 부여하는 데 사용됩니다.
+2.  手順 1 の証明書は、サービス接続ポイントのサイトの役割にインストールされ、Microsoft Intune サービスとのそれ以降のすべての通信を認証および承認するために使用されます。
 
 > [!div class="button"]
-[< 이전 단계](terms-and-conditions.md)  [다음 단계 >](enable-platform-enrollment.md)
+[< 前のステップ](terms-and-conditions.md)  [次のステップ >](enable-platform-enrollment.md)

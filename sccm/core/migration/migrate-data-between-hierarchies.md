@@ -1,6 +1,6 @@
 ---
-title: "데이터 마이그레이션 | Microsoft 문서"
-description: "원본 계층 구조에서 System Center Configuration Manager 대상 계층 구조로 데이터를 전송하는 방법을 알아봅니다."
+title: "データの移行 | Microsoft Docs"
+description: "ソース階層から System Center Configuration Manager の移行先階層にデータを転送する方法について説明します。"
 ms.custom: na
 ms.date: 12/29/2016
 ms.prod: configuration-manager
@@ -18,94 +18,94 @@ manager: angrobe
 ms.openlocfilehash: dface33392c2a2a662522656eabf0936b52b28fc
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="migrate-data-between-hierarchies-in-system-center-configuration-manager"></a>System Center Configuration Manager의 계층 구조 간에 데이터 마이그레이션
+# <a name="migrate-data-between-hierarchies-in-system-center-configuration-manager"></a>System Center Configuration Manager の階層間でのデータの移行
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-마이그레이션을 사용하여 지원되는 원본 계층 구조에서 System Center Configuration Manager 대상 계층 구조로 데이터를 전송할 수 있습니다.  원본 계층 구조에서 데이터를 마이그레이션하는 경우  
+サポートされるソース階層から System Center Configuration Manager の移行先階層にデータを転送するには、移行を使用します。  ソース階層からデータを移行すると、次のようになります。  
 
--   원본 인프라에서 식별한 사이트 데이터베이스의 데이터에 액세스한 다음 현재 환경으로 해당 데이터를 전송합니다.  
+-   ソース インフラストラクチャで識別したサイト データベースからデータにアクセスし、そのデータを現在の環境に転送します。  
 
--   마이그레이션을 수행할 때 원본 계층의 데이터는 변경되지 않으며 대신 데이터가 검색된 후 이 데이터의 복사본이 대상 계층의 데이터베이스에 저장됩니다.  
+-   移行処理ではソース階層内のデータは変更されません。代わりに、そのデータを検出して、移行先階層のデータベースにコピーを保存します。  
 
-마이그레이션 전략을 계획할 때는 다음 사항을 고려하세요.  
+移行戦略を計画する場合は、次の点を考慮してください。  
 
--   기존 Configuration Manager 2007 SP2 인프라를 System Center Configuration Manager로 마이그레이션할 수 있습니다.  
+-   既存の Configuration Manager 2007 SP2 インフラストラクチャを、System Center Configuration Manager に移行できます。  
 
--   지원되는 데이터 중 일부 또는 모두를 원본 사이트에서 마이그레이션할 수 있습니다.  
+-   サポートされるデータの一部またはすべてをソース サイトから移行することができます。  
 
--   단일 원본 사이트에서 대상 계층 구조 내의 여러 사이트로 데이터를 마이그레이션할 수 있습니다.  
+-   1 つのソース サイトから移行先階層の複数のサイトにデータを移行することができます。  
 
--   여러 원본 사이트에서 대상 계층 구조 내의 단일 사이트로 데이터를 이동할 수 있습니다.  
+-   複数のソース サイトから移行先階層内の 1 つのサイトにデータを移動することができます。  
 
-##  <a name="BKMK_MigrationConcepts"></a> 마이그레이션 관련 개념  
- 마이그레이션을 사용할 때 다음과 같은 개념과 용어가 나올 수 있습니다.  
+##  <a name="BKMK_MigrationConcepts"></a> 移行に関する概念  
+ 移行を使用するとき、次の概念や用語が出てくることがあります。  
 
-|개념 또는 용어|추가 정보|  
+|概念または用語|説明|  
 |---------------------|----------------------|  
-|원본 계층|마이그레이션할 데이터를 포함하며 지원되는 Configuration Manager 버전을 실행하는 계층 구조입니다. 마이그레이션을 설정할 때 원본 계층의 최상위 사이트 지정 시 원본 계층을 확인합니다. 원본 계층을 지정하면 대상 계층의 최상위 사이트는 지정된 원본 사이트의 데이터베이스에서 데이터를 수집하여 마이그레이션할 수 있는 데이터를 확인합니다.<br /><br /> 자세한 내용은 [System Center Configuration Manager에서 원본 계층 전략 계획](../../core/migration/planning-a-source-hierarchy-strategy.md)에서 [원본 계층](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Source_Hierarchies)을 참조하세요.|  
-|원본 사이트|대상 계층으로 마이그레이션할 수 있는 데이터가 있는 원본 계층의 사이트입니다.<br /><br /> 자세한 내용은 [System Center Configuration Manager에서 원본 계층 전략 계획](../../core/migration/planning-a-source-hierarchy-strategy.md)에서 [원본 사이트](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Source_Sites)를 참조하세요.|  
-|대상 계층|원본 계층 구조에서 데이터를 가져오기 위해 마이그레이션을 실행하는 System Center Configuration Manager 계층 구조입니다.|  
-|데이터 수집|원본 계층에서 대상 계층으로 마이그레이션할 수 있는 정보를 확인하는 지속적인 프로세스입니다. Configuration Manager에서는 이전에 마이그레이션했고 대상 계층 구조에서 업데이트하려는 원본 계층 구조 내 정보가 변경되었는지 확인하기 위해 일정에 따라 원본 계층 구조를 검사합니다.<br /><br /> 자세한 내용은 [System Center Configuration Manager에서 원본 계층 전략 계획](../../core/migration/planning-a-source-hierarchy-strategy.md)에서 [데이터 수집](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering)을 참조하세요.|  
-|마이그레이션 작업|마이그레이션할 특정 개체를 구성한 다음 해당 개체를 대상 계층으로 마이그레이션하는 작업을 관리하는 프로세스입니다.<br /><br /> 자세한 내용은 [System Center Configuration Manager에서 마이그레이션 작업 전략 계획](../../core/migration/planning-a-migration-job-strategy.md)을 참조하세요.|  
-|클라이언트 마이그레이션|클라이언트가 원본 사이트의 데이터베이스에서 사용하는 정보를 대상 계층의 데이터베이스로 전송하는 프로세스입니다. 이 데이터 마이그레이션 후에는 장치의 클라이언트 소프트웨어를 대상 계층의 클라이언트 소프트웨어로 업그레이드합니다.<br /><br /> 자세한 내용은 [System Center Configuration Manager에서 마이그레이션 작업 전략 계획](../../core/migration/planning-a-client-migration-strategy.md)항목을 참조하세요.|  
-|공유 배포 지점|마이그레이션 기간 중 대상 계층과 공유되는 원본 계층의 배포 지점입니다.<br /><br /> 대상 계층의 사이트에 할당된 클라이언트는 마이그레이션 기간 중에 공유 배포 지점에서 콘텐츠를 가져올 수 있습니다.<br /><br /> 자세한 내용은 [System Center Configuration Manager에서 콘텐츠 배포 마이그레이션 전략 계획](../../core/migration/planning-a-content-deployment-migration-strategy.md)에서 [원본 계층과 대상 계층 간에 배포 지점 공유](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration)를 참조하세요.|  
-|마이그레이션 모니터링|마이그레이션 작업을 모니터링하는 프로세스입니다. 마이그레이션 진행률 및 성공 여부는 **관리** 작업 영역의 **마이그레이션** 노드에서 모니터링할 수 있습니다.<br /><br /> 자세한 내용은 [System Center Configuration Manager에서 마이그레이션 작업 모니터링 계획](../../core/migration/planning-to-monitor-migration-activity.md)을 참조하세요.|  
-|데이터 수집 중지|원본 사이트에서 데이터 수집을 중지하는 프로세스입니다. 더 이상 원본 계층에 마이그레이션할 데이터가 없거나 마이그레이션 관련 작업을 일시 중지하려는 경우 원본 계층에서 데이터 수집을 중지하도록 대상 계층을 구성할 수 있습니다.<br /><br /> 자세한 내용은 [System Center Configuration Manager에서 원본 계층 전략 계획](../../core/migration/planning-a-source-hierarchy-strategy.md)에서 [데이터 수집](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering)을 참조하세요.|  
-|마이그레이션 데이터 정리|대상 계층 데이터베이스에서 마이그레이션에 대한 정보를 제거함으로써 원본 계층으로부터의 마이그레이션을 종료하는 프로세스입니다.<br /><br /> 자세한 내용은 [System Center Configuration Manager에서 마이그레이션 완료 계획](../../core/migration/planning-to-complete-migration.md)항목을 참조하세요.|  
+|ソース階層|Configuration Manager のサポートされているバージョンを実行していて、移行するデータを含む階層。 移行を構成する場合、ソース階層の最上位サイトを指定するときにソース階層を識別します。 ソース階層の指定後、移行先階層の最上位サイトは、指定されたソース サイトのデータベースからデータを収集して、移行可能なデータを特定します。<br /><br /> 詳しくは、「[System Center Configuration Manager でのソース階層戦略の計画](../../core/migration/planning-a-source-hierarchy-strategy.md)」の「[ソース階層](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Source_Hierarchies)」を参照してください。|  
+|ソース サイト|移行先階層に移行できるデータを含むソース階層のサイト。<br /><br /> 詳しくは、「[System Center Configuration Manager でのソース階層戦略の計画](../../core/migration/planning-a-source-hierarchy-strategy.md)」の「[ソース サイト](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Source_Sites)」を参照してください。|  
+|移行先階層|ソース階層からのデータのインポートが実行される System Center Configuration Manager 階層。|  
+|データ収集|移行先階層に移行可能なソース階層内の情報を特定する継続的な処理。 Configuration Manager は、スケジュールに従ってソース階層を確認し、移行済みのソース階層内の情報に対する変更や、移行先階層で更新する可能性があるデータを識別します。<br /><br /> 詳しくは、「[System Center Configuration Manager でのソース階層戦略の計画](../../core/migration/planning-a-source-hierarchy-strategy.md)」の「[データ収集](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering)」を参照してください。|  
+|移行ジョブ|移行する特定のオブジェクトを構成してから、そのオブジェクトの移行先階層への移行を管理する処理。<br /><br /> 詳しくは、「[System Center Configuration Manager での移行ジョブ戦略の計画](../../core/migration/planning-a-migration-job-strategy.md)」を参照してください。|  
+|クライアントの移行|クライアントが使用する情報をソース サイトのデータベースから移行先階層のデータベースに転送する処理。 データの移行後、デバイス上のクライアント ソフトウェアを、移行先階層のクライアント ソフトウェアにアップグレードします。<br /><br /> 詳細については、[System Center Configuration Manager での移行ジョブ戦略の計画](../../core/migration/planning-a-client-migration-strategy.md)をご覧ください。|  
+|共有配布ポイント|移行期間中に移行先階層と共有されるソース階層の配布ポイント。<br /><br /> 移行期間中に、移行先階層内のサイトに割り当てられたクライアントは、共有配布ポイントからコンテンツを取得できます。<br /><br /> 詳しくは、「[System Center Configuration Manager のコンテンツ展開移行戦略の計画](../../core/migration/planning-a-content-deployment-migration-strategy.md)」の「[ソース階層と移行先階層で配布ポイントを共有する](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration)」を参照してください。|  
+|移行の監視|移行処理を監視する処理。 [**管理**] ワークスペースの [**移行**] ノードから、移行の進行状況と成功状態を監視します。<br /><br /> 詳しくは、「[System Center Configuration Manager での移行アクティビティの監視の計画](../../core/migration/planning-to-monitor-migration-activity.md)」を参照してください。|  
+|データ収集の停止|ソース サイトからのデータ収集を停止する処理。 ソース階層から移行するデータがなくなった場合や、移行関連のアクティビティを一時停止する場合、ソース階層からのデータ収集を停止するように移行先階層を構成できます。<br /><br /> 詳しくは、「[System Center Configuration Manager でのソース階層戦略の計画](../../core/migration/planning-a-source-hierarchy-strategy.md)」の「[データ収集](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering)」を参照してください。|  
+|移行データのクリーンアップ|移行先階層のデータベースから移行関連情報を削除することで、ソース階層からの移行を終了する処理。<br /><br /> 詳細については、[System Center Configuration Manager での移行完了の計画](../../core/migration/planning-to-complete-migration.md)をご覧ください。|  
 
-## <a name="typical-workflow-for-migration"></a>일반적인 마이그레이션 워크플로  
-마이그레이션 워크플로를 설정하려면:
+## <a name="typical-workflow-for-migration"></a>移行の一般的なワークフロー  
+移行のワークフローを設定するには:
 
-1.  지원되는 원본 계층을 지정합니다.  
+1.  サポートされるソース階層を指定します。  
 
-2.  데이터 수집을 설정합니다. Configuration Manager에서 데이터 수집을 통해 원본 계층 구조에서 마이그레이션할 수 있는 데이터에 대한 정보를 수집할 수 있습니다.  
+2.  データ収集を設定します。 データ収集によって、Configuration Manager は、ソース階層から移行できるデータに関する情報を収集できます。  
 
-     Configuration Manager의 데이터 수집 프로세스는 사용자가 중지하기 전까지 단순 일정에 따라 자동으로 반복됩니다. 기본적으로 데이터 수집 프로세스는 4시간마다 반복되므로 마이그레이션할 원본 계층 구조 내 데이터의 변경 내용을 Configuration Manager에서 확인할 수 있습니다. 데이터 수집은 원본 계층에서 대상 계층으로 배포 지점을 공유하기 위해서도 필요합니다.  
+     データ収集プロセスを停止するまで、Configuration Manager は、簡単なスケジュールに基づいてデータを収集するプロセスを自動的に繰り返します。 既定では、データ収集プロセスは 4 時間間隔で繰り返されるため、Configuration Manager は、移行対象であるソース階層内のデータの変更を特定できます。 データ収集は、ソース階層から移行先階層への配布ポイントを共有するためにも必要です。  
 
-3.  원본 계층 및 대상 계층 사이에서 데이터를 마이그레이션하려면 마이그레이션 작업을 만드십시오.  
+3.  ソース階層と移行先階層間でデータを移行する移行ジョブを作成します。  
 
-4.  데이터 수집 프로세스는 언제든지 **데이터 수집 중지** 명령을 사용하여 중지할 수 있습니다. 데이터 수집을 중지하면 Configuration Manager는 더 이상 원본 계층의 데이터 변경 내용을 확인하지 않으며 원본 계층과 대상 계층 간에 배포 지점을 공유할 수 없습니다. 일반적으로 이 작업은 원본 계층에서 더 이상 데이터를 마이그레이션하거나 배포 지점을 공유하지 않을 경우에 사용합니다.  
+4.  データ収集プロセスは、[ **データ収集の停止** ] コマンドを使用していつでも停止できます。 データ収集を停止すると、Configuration Manager はソース階層内のデータに対する変更内容を特定する処理も停止されるため、ソース階層と移行先階層間の配布ポイントは共有できなくなります。 通常、この操作は、ソース階層からのデータ移行や配布ポイントの共有を行う予定がなくなった場合に使用します。  
 
-5.  원본 계층에 대한 모든 사이트에서 데이터 수집이 중지될 경우 필요하면 **마이그레이션 데이터 정리** 명령을 사용하여 마이그레이션 데이터를 정리할 수 있습니다. 이 명령을 실행하면 대상 계층의 데이터베이스에서 원본 계층 마이그레이션에 대한 기록 데이터가 삭제됩니다.  
+5.  必要に応じて、ソース階層のすべてのサイトでデータ収集を停止した後に、[ **移行データのクリーン アップ** ] コマンドを使用して移行データをクリーン アップすることができます。 このコマンドで、ソース階層の移行に関する階層データが移行先階層のデータベースから削除されます。  
 
-현재 환경을 관리하는 데 더 이상 사용하지 않을 Configuration Manager 원본 계층에서 데이터를 마이그레이션한 후 이 원본 계층 및 인프라를 해제할 수 있습니다.  
+Configuration Manager ソース階層からデータを移行した後に、ソース階層を環境の管理に使用しない場合は、そのソース階層とインフラストラクチャの使用を停止できます。  
 
-##  <a name="BKMK_MigrationScenarios"></a> 마이그레이션 시나리오  
- Configuration Manager에서 지원하는 마이그레이션 시나리오는 다음과 같습니다.  
+##  <a name="BKMK_MigrationScenarios"></a> 移行シナリオ  
+ Configuration Manager は次の移行シナリオをサポートします。  
 
 > [!NOTE]  
->  독립 사이트가 있는 계층 구조의 중앙 관리 사이트가 있는 계층 구조로의 확장은 마이그레이션으로 분류되지 않습니다. 계층 구조 확장에 대한 자세한 내용은 [설치 마법사를 사용하여 사이트 설치](../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)에서 [독립 실행형 기본 사이트 확장](../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand)을 참조하세요.  
+>  スタンドアロン サイトを含む階層を、中央管理サイトを含む階層に拡張することは、移行に分類されません。 階層の拡張の詳細については、「[Use the Setup Wizard to install sites](../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)」(セットアップ ウィザードを使用してサイトをインストールする) の「[Expand a stand-alone primary site](../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand)」(スタンドアロン プライマリ サイトを拡張する) を参照してください。  
 
-### <a name="migration-from-configuration-manager-2007-hierarchies"></a>Configuration Manager 2007 계층 구조에서 마이그레이션  
- 마이그레이션을 사용하여 Configuration Manager 2007에서 데이터를 마이그레이션하는 경우 기존 사이트 인프라에 대한 투자를 그대로 보존하고 다음과 같은 이점을 얻을 수 있습니다.  
+### <a name="migration-from-configuration-manager-2007-hierarchies"></a>Configuration Manager 2007 階層からの移行  
+ Configuration Manager 2007 からデータを移行する場合、既存のサイト インフラストラクチャの投資を保護できるだけでなく、次の利点があります。  
 
-|이점|추가 정보|  
+|特長|説明|  
 |-------------|----------------------|  
-|사이트 데이터베이스 향상|System Center Configuration Manager 데이터베이스는 전체 유니코드를 지원합니다.|  
-|사이트 간 데이터베이스 복제|System Center Configuration Manager의 복제는 Microsoft SQL Server를 기반으로 합니다. 따라서 사이트 간 데이터 전송의 성능이 향상됩니다.|  
-|사용자 중심 관리|사용자는 System Center Configuration Manager에서 관리 작업의 핵심입니다. 예를 들어 사용자의 장치 이름을 알지 못하더라도 해당 사용자에게 소프트웨어를 배포할 수 있습니다. 또한 System Center Configuration Manager에서 사용자는 장치에 설치되는 소프트웨어 및 이 소프트웨어가 설치되는 시점을 더 효과적으로 제어할 수 있습니다.|  
-|계층 구조 단순화|System Center Configuration Manager에서는 중앙 관리 사이트 유형이 사용되며 기본 사이트와 보조 사이트의 동작이 변경되어 네트워크 대역폭을 더 적게 사용하고 필요한 서버 수도 더 적은 보다 단순한 사이트 계층 구조를 구축할 수 있습니다.|  
-|역할 기반 관리|System Center Configuration Manager의 이러한 중앙 보안 모델은 관리 및 비즈니스 요구 사항을 충족하는 계층 구조 전체의 보안과 관리 기능을 제공합니다.|  
+|サイト データベースの向上点|System Center Configuration Manager データベースは、Unicode を完全にサポートします。|  
+|サイト間のデータベース レプリケーション|System Center Configuration Manager のレプリケーションは、Microsoft SQL Server に基づいています。 そのため、サイト間のデータ転送のパフォーマンスが改善されます。|  
+|ユーザー中心の管理|System Center Configuration Manager での管理タスクの中心はユーザーです。 たとえば、ユーザーのデバイス名が不明な場合にも、ユーザーにソフトウェアを配布することができます。 また、System Center Configuration Manager では、ユーザーのデバイスにインストールできるソフトウェアやインストールのタイミングの管理だけでなく、さまざまな管理機能を利用できます。|  
+|階層の簡略化|System Center Configuration Manager では、サイトの種類に中央管理サイトが追加されたほか、プライマリ サイトとセカンダリ サイトの動作が変更され、使用するネットワーク帯域幅とサーバーの数が少なくて済む、より簡素なサイト階層を構築できるようになりました。|  
+|役割に基づいた管理|System Center Configuration Manager の中央管理型のセキュリティ モデルにより、それぞれの管理要件と業務要件に合わせた階層全体のセキュリティと管理機能が提供されます。|  
 
 > [!NOTE]  
->  System Center 2012 Configuration Manager에서 처음 도입된 디자인 변경 때문에 Configuration Manager 2007 인프라를 System Center Configuration Manager로 업그레이드할 수 없습니다. System Center 2012 Configuration Manager에서 System Center Configuration Manager로의 현재 위치 업그레이드는 지원됩니다.  
+>  System Center 2012 Configuration Manager で初めて導入された設計の変更のため、Configuration Manager 2007 のインフラストラクチャを System Center Configuration Manager にアップグレードすることはできません。 System Center 2012 Configuration Manager から System Center Configuration Manager へのインプレース アップグレードはサポートされています。  
 
-### <a name="migration-from-configuration-manager-2012-or-another-system-center-configuration-manager-hierarchy"></a>Configuration Manager 2012 또는 다른 System Center Configuration Manager 계층 구조에서 마이그레이션  
- System Center 2012 Configuration Manager 또는 System Center Configuration Manager 계층 구조에서 데이터를 마이그레이션하는 과정은 동일합니다. 여기에는 회사가 Configuration Manager에서 이미 관리되고 있는 추가 리소스를 가져오는 경우처럼 여러 원본 계층에서 단일 대상 계층으로 데이터를 마이그레이션하는 작업이 포함됩니다. 또한 테스트 환경에서 Configuration Manager 프로덕션 환경으로 데이터를 마이그레이션할 수 있습니다. 이렇게 하면 Configuration Manager 테스트 환경에 대한 기존 투자를 보존할 수 있습니다.  
+### <a name="migration-from-configuration-manager-2012-or-another-system-center-configuration-manager-hierarchy"></a>Configuration Manager 2012 または他の System Center Configuration Manager 階層からの移行  
+ System Center 2012 Configuration Manager 階層または System Center Configuration Manager 階層からデータを移行するプロセスは同じです。 たとえば、会社が Configuration Manager によって既に管理されている追加のリソースを獲得する場合などに、複数のソース階層のデータを 1 つの移行先階層に移行することができます。 さらに、テスト環境のデータを Configuration Manager 運用環境に移行することもできます。 そのため、Configuration Manager テスト環境への投資を維持できます。  
 
-## <a name="additional-topics-for-migration"></a>마이그레이션 관련 추가 항목:  
+## <a name="additional-topics-for-migration"></a>移行に関連するトピック:  
 
--   [System Center Configuration Manager로 마이그레이션 계획](../../core/migration/planning-for-migration.md)  
+-   [System Center Configuration Manager への移行の計画](../../core/migration/planning-for-migration.md)  
 
--   [System Center Configuration Manager로 마이그레이션할 원본 계층 구조 및 원본 사이트 구성](../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md)  
+-   [System Center Configuration Manager に移行するためのソース階層とソース サイトの構成](../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md)  
 
--   [System Center Configuration Manager로 마이그레이션을 위한 작업](../../core/migration/operations-for-migration.md)  
+-   [System Center Configuration Manager に移行するための操作](../../core/migration/operations-for-migration.md)  
 
--   [System Center Configuration Manager로의 마이그레이션에 대한 보안 및 개인 정보](../../core/migration/security-and-privacy-for-migration.md)  
+-   [System Center Configuration Manager への移行のセキュリティとプライバシー](../../core/migration/security-and-privacy-for-migration.md)  
 
-## <a name="see-also"></a>참고 항목  
- [System Center Configuration Manager 사용 시작](../../core/servers/deploy/start-using.md)
+## <a name="see-also"></a>関連項目  
+ [System Center Configuration Manager の使用の開始](../../core/servers/deploy/start-using.md)

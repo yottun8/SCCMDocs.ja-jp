@@ -1,6 +1,6 @@
 ---
-title: "Asset Intelligence 보안 및 개인 정보 | Microsoft 문서"
-description: "System Center Configuration Manager에서 Asset Intelligence 대한 보안 및 개인 정보를 확인합니다."
+title: "資産インテリジェンスのセキュリティとプライバシー | Microsoft Docs"
+description: "System Center Configuration Manager の資産インテリジェンスのセキュリティとプライバシーの情報を確認します。"
 ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
@@ -18,42 +18,42 @@ manager: angrobe
 ms.openlocfilehash: b12054cce52e2b83715a083d78a62e06b5127a2f
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="security-and-privacy-for-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 Asset Intelligence 대한 보안 및 개인 정보
+# <a name="security-and-privacy-for-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager の資産インテリジェンスのセキュリティとプライバシー
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-이 항목에는 System Center Configuration Manager의 Asset Intelligence에 대한 보안 및 개인 정보가 포함되어 있습니다.  
+このトピックには、System Center Configuration Manager の資産インテリジェンスのセキュリティとプライバシーの情報が含まれています。  
 
-##  <a name="BKMK_Security_AI"></a> Asset Intelligence에 대한 보안 모범 사례  
- Asset Intelligence를 사용하는 경우 다음 보안 모범 사례를 따르세요.  
+##  <a name="BKMK_Security_AI"></a> 資産インテリジェンスに関するセキュリティのベスト プラクティス  
+ 資産インテリジェンスを使用する場合は、次のセキュリティ上のベスト プラクティスに従ってください。  
 
-|보안 모범 사례|추가 정보|  
+|セキュリティのベスト プラクティス|説明|  
 |----------------------------|----------------------|  
-|라이선스 파일(Microsoft Volume Licensing 파일 또는 일반 라이선스 계정 파일)을 가져올 때 파일 및 통신 채널을 보호합니다.|NTFS 파일 시스템 권한을 사용하여 인증된 사용자만 라이선스 파일에 액세스할 수 있는지 확인하고 SMB(서버 메시지 블록) 서명을 사용하여 가져오기 프로세스 중 데이터가 사이트 서버에 전송될 때 데이터의 무결성을 보장합니다.|  
-|최소 권한 원칙을 사용하여 라이선스 파일을 가져올 수 있습니다.|역할 기반 관리를 사용하여 라이선스 파일을 가져오는 관리자에게 Asset Intelligence 관리 권한을 부여합니다. 자산 관리자의 기본 제공 역할에는 이 권한이 포함되어 있습니다.|  
+|ライセンス ファイル (マイクロソフト ボリューム ライセンス ファイル、または一般的なライセンス ステートメント ファイル) をインポートするときは、ファイルと通信チャネルをセキュリティ保護してください。|NTFS ファイルシステムの権限を使って、許可されたユーザーだけがライセンス ファイルにアクセスできるようにします。また、サーバー メッセージ ブロック (SMB) の署名によって、インポートの過程でサイト サーバーに転送されるとき、データの整合性を保つようにします。|  
+|ライセンスのインポートでは最小限の特権という原則を使用してください。|役割に基づいた管理を行って、資産インテリジェンスの管理権限を、ライセンス ファイルをインポートする管理者に付与します。 資産管理者の組み込みロールには次の権限が含まれます。|  
 
-##  <a name="BKMK_Privacy_HardwareInventory"></a> Asset Intelligence에 대한 개인 정보 보호  
- Asset Intelligence는 Configuration Manager의 인벤토리 기능을 확장하여 엔터프라이즈에서 더 높은 수준의 자산 가시성을 제공합니다. Asset Intelligence 정보 수집은 사용하도록 자동 설정되지 않습니다. 하드웨어 인벤토리 보고 클래스를 사용하도록 설정하여 수집된 정보 유형을 수정할 수 있습니다. 자세한 내용은 [System Center Configuration Manager의 Asset Intelligence 구성](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)을 참조하세요.  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> 資産インテリジェンスに関するプライバシー情報  
+ 資産インテリジェンスは、企業の資産をより高いレベルから表示するように Configuration Manager のインベントリ機能を拡張します。 資産インテリジェンス情報コレクションは自動で有効化されません。 収集される情報の種類は、ハードウェア インベントリ レポート クラスを有効にすると変更できます。 詳細については、「[System Center Configuration Manager での資産インテリジェンスの構成](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)」を参照してください。  
 
- Asset Intelligence 정보가 인벤토리 정보와 동일한 방식으로 Configuration Manager 데이터베이스에 저장됩니다. 클라이언트가 HTTPS를 사용하여 관리 지점에 연결하는 경우 데이터가 관리 지점으로 전송되는 동안 상시 암호화됩니다. 클라이언트가 HTTP를 사용하여 연결하는 경우 인벤토리 데이터 전송이 서명되고 암호화되도록 구성할 수 있습니다. 인벤토리 데이터는 데이터베이스에서 암호화된 형식으로 저장되지 않습니다. 사이트 유지 관리 작업 **오래된 인벤토리 기록 삭제** 가 90일 간격으로 해당 정보를 삭제할 때까지 정보가 데이터베이스에서 유지됩니다. 삭제 간격은 필요에 따라 구성할 수 있습니다.  
+ 資産インテリジェンス情報は、インベントリ情報と同じ方法で Configuration Manager データベースに保存されます。 HTTPS を使用してクライアントが管理ポイントに接続するときは、データは管理ポイントへの転送中必ず暗号化されます。 HTTP を使用してクライアントが接続するときは、インベントリ データの転送に署名して暗号化するよう構成することができます。 インベントリ データは、暗号化された形式でデータベースに格納されるわけではありません。 情報は、90 日ごとに実行されるサイトのメンテナンス タスク [期限切れのインベントリ履歴の削除] によって削除されるまでデータベースに保持されます。 **** 削除間隔は構成できます。  
 
- Asset Intelligence는 사용자 또는 컴퓨터에 대한 정보나 라이선스 사용량을 Microsoft에 전송하지 않습니다. 분류하기 위해 시스템 센터 온라인 요청을 보내기로 선택할 수 있습니다. 이는 범주화되지 않은 하나 이상의 소프트웨어 타이틀에 태그를 지정하고 이들을 연구 및 분류를 위해 시스템 센터 온라인에 보낸다는 의미입니다. 소프트웨어 타이틀이 업로드되면 Microsoft 연구원은 해당 정보를 파악하고 분류한 후 온라인 서비스를 사용하는 모든 고객이 사용할 수 있도록 만듭니다. System Center Online에 정보를 제출하는 다음 개인 정보 보호가 미치는 영향을 알고 있어야 합니다.  
+ 資産インテリジェンスからは、Microsoft にユーザーおよびコンピューターに関する情報やライセンスの使用状況は送信されません。 System Center Online にカテゴリ化要求を送信することを選択できます。これは、カテゴリ化されていない 1 つまたは複数のソフトウェア タイトルにタグを付け、調査およびカテゴリ化用に System Center Online に送信できることを意味します。 ソフトウェア タイトルがアップロードされたら、マイクロソフトの調査担当者は、ソフトウェアを特定し、カテゴリ化して、オンライン サービスを利用されるすべてのお客様がその知識を利用できるようにします。 System Center Online に送信する情報の次のようなプライバシー問題に注意が必要です。  
 
--   업로드는 System Center Online에 보내기로 선택하는 일반 소프트웨어 타이틀 정보(이름, 게시자 등)에만 적용됩니다. 인벤토리 정보는 업로드로 전송되지 않습니다.  
+-   アップロードは、System Center Online に送信することを選択した一般的なソフトウェア タイトル情報 (名前、発行元など) にのみ適用されます。 アップロードと共にインベントリ情報が送信されるわけではありません。  
 
--   업로드는 자동으로 발생하지 않으며 시스템에서 이 작업을 자동화하도록 설정할 수 없습니다. 각 소프트웨어 타이틀의 업로드는 수동으로 선택하고 승인해야 합니다.  
+-   アップロードは決して自動的には行われず、システムはこのタスクが自動化できるように設計されていません。 各ソフトウェア タイトルのアップロードを手動で選択および承認する必要があります。  
 
--   업로드 프로세스는 시작하기 전에 대화 상자에 업로드할 데이터를 정확히 표시합니다.  
+-   実際のアップロード処理が開始される前に、ダイアログ ボックスにアップロードされるデータの内容が表示されます。  
 
--   라이선스 정보는 Microsoft로 전송되지 않습니다. 라이선스 정보는 Configuration Manager 데이터베이스의 별도 영역에 저장되고 Microsoft에 보낼 수 없습니다.  
+-   ライセンス情報はマイクロソフトに送信されません。 ライセンス情報は Configuration Manager データベースの独立した領域に保存されるため、マイクロソフトに送信することはできません。  
 
--   업로드된 소프트웨어 타이틀이 공개된 후에는 지정된 응용 프로그램 및 분류에 대한 정보가 System Center Online Asset Intelligence 카탈로그의 일부가 되므로 다른 카탈로그 고객에게 다운로드됩니다.  
+-   アップロードされたソフトウェア タイトルは、(特定のアプリケーションおよびアプリケーションのカテゴリ化の情報が System Center Online 資産インテリジェンス カタログを構成するものになるという意味で) 公開され、カタログの他の利用者にダウンロードされます。  
 
--   소프트웨어 타이틀 원본은 Asset Intelligence 카탈로그에 기록되지 않으므로 다른 고객이 사용할 수 없습니다. 그러나 개인 정보를 포함하는 응용 프로그램 타이틀을 로드하지 않는지 여전히 확인해야 합니다.  
+-   ソフトウェア タイトルのソースは資産インテリジェンス カタログには記録されず、他のお客様に入手可能にはなりません。 ただし、プライベートな情報が含まれているアプリケーション タイトルを読み込まないように確認する必要はあります。  
 
--   업로드된 데이터는 취소할 수 없습니다.  
+-   アップロードされたデータを取り消すことはできません。  
 
- Asset Intelligence 데이터 컬렉션을 구성하고 System Center Online에 정보를 제출할지 여부를 결정하려면 먼저 조직의 개인정보취급방침 요구 사항을 고려하세요.  
+ 資産インテリジェンス データ コレクションを構成して情報を System Center Online に送信するかどうかを判断する前に、所属組織のプライバシー要件を考慮してください。  

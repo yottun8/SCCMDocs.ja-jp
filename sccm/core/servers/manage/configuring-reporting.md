@@ -1,6 +1,6 @@
 ---
-title: "보고 구성 | Microsoft 문서"
-description: "SQL Server Reporting Services에 대한 정보를 포함하여 Configuration Manager 계층 구조에서 보고를 설정하는 방법에 대해 알아봅니다."
+title: "レポートの構成 | Microsoft Docs"
+description: "SQL Server Reporting Services に関する情報を含め、Configuration Manager 階層でのレポートのセットアップ方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,283 +17,283 @@ manager: angrobe
 ms.openlocfilehash: 7ae6bac23e585d6f61aff0f3155d050f1b537620
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="configuring-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager에서 보고 구성
+# <a name="configuring-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager におけるレポートの構成
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 콘솔에서 보고서를 만들고 수정하고 실행하려면 먼저 여러 가지 구성 작업을 수행해야 합니다. 이 항목의 다음 섹션에서는 Configuration Manager 계층 구조에서 보고를 구성하는 방법을 설명합니다.  
+System Center Configuration Manager コンソールでレポートを作成、変更、および実行するには、事前にいくつかの構成タスクを実行する必要があります。 このトピックの以下のセクションは、Configuration Manager 階層でレポートを構成する場合に役立ちます。  
 
- 계층에서 Reporting Services를 설치하고 구성하기 전에 먼저 다음 Configuration Manager 보고 항목을 검토하세요.  
+ 階層での Reporting Services のインストールおよび構成に進む前に、次の Configuration Manager のレポートに関するトピックを参照してください。  
 
--   [System Center Configuration Manager의 보고 소개](../../../core/servers/manage/introduction-to-reporting.md)  
+-   [System Center Configuration Manager のレポートの概要](../../../core/servers/manage/introduction-to-reporting.md)  
 
--   [System Center Configuration Manager의 보고 계획](../../../core/servers/manage/planning-for-reporting.md)  
+-   [System Center Configuration Manager のレポートの計画](../../../core/servers/manage/planning-for-reporting.md)  
 
 ##  <a name="BKMK_SQLReportingServices"></a> SQL Server Reporting Services  
- SQL Server Reporting Services는 서버 기반의 보고 플랫폼으로서 다양한 데이터 원본에 대한 포괄적인 보고 기능을 제공합니다. Configuration Manager의 보고 서비스 지점은 SQL Server Reporting Services와 통신하여 Configuration Manager 보고서를 지정된 보고서 폴더에 복사하고 Reporting Services 설정을 구성하며 Reporting Services 보안 설정을 구성합니다. Reporting Services는 Configuration Manager 사이트 데이터베이스에 연결하여 보고서를 실행할 때 반환되는 데이터를 검색합니다.  
+ SQL Server Reporting Services は、サーバー ベースのレポート プラットフォームであり、各種のデータ リソースに包括的なレポート機能を提供します。 Configuration Manager のレポート サービス ポイントは、SQL Server Reporting Services と通信し、指定されたレポート フォルダーへの Configuration Manager レポートのコピー、Reporting Services 設定の構成、および Reporting Services のセキュリティ設定の構成を行います。 Reporting Services は、Configuration Manager のサイト データベースに接続し、レポートを実行したときに返されるデータを取得します。  
 
- Configuration Manager 사이트에 보고 서비스 지점을 설치하려면 먼저 보고 서비스 지점 사이트 시스템 역할을 호스트하는 사이트 시스템에서 SQL Server Reporting Services를 설치하고 구성해야 합니다. 보고 서비스 설치에 대한 자세한 내용은 [SQL Server TechNet Library](http://go.microsoft.com/fwlink/p/?LinkId=266389)를 참조하십시오.  
+ Configuration Manager のサイトにレポート サービス ポイントをインストールする前に、レポート サービス ポイント サイト システムの役割をホストするサイト システムに、SQL Server Reporting Services をインストールして構成する必要があります。 Reporting Services のインストールの詳細については、 [SQL Server の TechNet ライブラリ](http://go.microsoft.com/fwlink/p/?LinkId=266389)を参照してください。  
 
- SQL Server Reporting Services가 설치되어 제대로 실행되는지 확인하려면 다음 절차를 따르십시오.  
+ SQL Server Reporting Services がインストールされていて、正常に実行されているかどうかを確認するには、次の手順に従います。  
 
-#### <a name="to-verify-that-sql-server-reporting-services-is-installed-and-running"></a>SQL Server Reporting Services가 설치되어 실행되고 있는지 확인하려면  
+#### <a name="to-verify-that-sql-server-reporting-services-is-installed-and-running"></a>SQL Server Reporting Services がインストールおよび実行されていることを確認するには  
 
-1.  바탕 화면에서 **시작**, **모든 프로그램**, **Microsoft SQL Server 2008 R2**, **구성 도구**, **Reporting Services Configuration Manager**를 차례로 클릭합니다.  
+1.  デスクトップで、[スタート ****]、[すべてのプログラム ****]、[Microsoft SQL Server 2008 R2 ****]、[構成ツール ****]、[Reporting Services 構成マネージャー ****] の順にクリックします。  
 
-2.  **Reporting Services 구성 연결** 대화 상자에서 SQL Server Reporting Services를 호스팅하는 서버의 이름을 지정하고, 메뉴에서 SQL Reporting Services가 설치된 SQL Server 인스턴스를 선택한 후에 **연결**을 클릭합니다. Reporting Services Configuration Manager가 열립니다.  
+2.  [ **Reporting Services の構成の接続** ] ダイアログ ボックスで SQL Server Reporting Services をホストしているサーバーの名前を指定し、メニューで、SQL Reporting Services がインストールされている SQL Server のインスタンスを選択して、[ **接続**] をクリックします。 Reporting Services 構成マネージャーが開きます。  
 
-3.  **보고서 서버 상태** 페이지에서 **보고서 서비스 상태** 가 **시작됨**으로 설정되어 있는지 확인합니다. 설정되어 있지 않은 경우 **시작**을 클릭합니다.  
+3.  [ **レポート サーバーの状態** ] ページで、[ **レポート サービスの状態** ] が [ **開始**] に設定されていることを確認します。 設定されていない場合は、[開始] をクリックします。 ****  
 
-4.  **웹 서비스 URL** 페이지에서 **보고서 서비스 웹 서비스 URL** 의 URL을 클릭하여 보고서 폴더에 대한 연결을 테스트합니다. **Windows 보안** 대화 상자가 열리고 보안 자격 증명을 입력하라는 메시지가 표시될 수 있습니다. 기본적으로 사용자 계정이 표시됩니다. 암호를 입력한 후에 **확인**을 클릭합니다. 웹 페이지가 성공적으로 열리는지 확인합니다. 브라우저 창을 닫습니다.  
+4.  [ **Web サービス URL** ] ページで、[ **レポート サービスの Web サービスの URL** ] をクリックして、レポート フォルダーへの接続をテストします。 [Windows セキュリティ] ダイアログ ボックスが開いて、セキュリティ資格情報の入力を求められることがあります。 **** 既定では、使用しているユーザー アカウントが表示されます。 パスワードを入力して、[OK] をクリックします。 **** Web ページが正常に開くことを確認します。 ブラウザー ウィンドウを閉じます。  
 
-5.  **데이터베이스** 페이지에서 **보고서 서버 모드** 설정이 **네이티브**를 사용하여 구성되어 있는지 확인합니다.  
+5.  [ **データベース** ] ページで、[ **レポート サーバー モード** ] 設定が [ **ネイティブ**] を使用して構成されていることを確認します。  
 
-6.  **보고서 관리자 URL** 페이지에서 **보고서 관리자 사이트 확인** 의 URL을 클릭하여 보고서 관리자의 가상 디렉터리에 대한 연결을 테스트합니다. **Windows 보안** 대화 상자가 열리고 보안 자격 증명을 입력하라는 메시지가 표시될 수 있습니다. 기본적으로 사용자 계정이 표시됩니다. 암호를 입력한 후에 **확인**을 클릭합니다. 웹 페이지가 성공적으로 열리는지 확인합니다. 브라우저 창을 닫습니다.  
+6.  [ **レポート マネージャーの URL** ] ページで、[ **レポート マネージャー サイトの識別情報** ] にある URL をクリックして、レポート マネージャーの仮想ディレクトリへの接続をテストします。 [Windows セキュリティ] ダイアログ ボックスが開いて、セキュリティ資格情報の入力を求められることがあります。 **** 既定では、使用しているユーザー アカウントが表示されます。 パスワードを入力して、[OK] をクリックします。 **** Web ページが正常に開くことを確認します。 ブラウザー ウィンドウを閉じます。  
 
     > [!NOTE]  
-    >  Configuration Manager에서는 보고에 Reporting Services 보고서 관리자가 필요 없지만 인터넷 브라우저에 대한 보고서를 실행하거나 보고서 관리자를 사용하여 보고서를 관리하려는 경우 필요합니다.  
+    >  Reporting Services のレポート マネージャーは、Configuration Manager のレポートには必要ありませんが、インターネット ブラウザーでレポートを実行する場合、またはレポート マネージャーを使用してレポートを管理する場合に必要となります。  
 
-7.  **끝내기**를 클릭하여 Reporting Services Configuration Manager를 닫습니다.  
+7.  **[終了]** をクリックし、Reporting Services Configuration Manager を閉じます。  
 
-##  <a name="BKMK_ReportBuilder3"></a> 보고서 작성기 3.0을 사용하도록 보고 구성  
+##  <a name="BKMK_ReportBuilder3"></a> レポートの操作にレポート ビルダー 3.0 を使用するように構成する  
 
-#### <a name="to-change-the-report-builder-manifest-name-to-report-builder-30"></a>보고서 작성기 이름을 보고서 작성기 3.0으로 변경하려면  
+#### <a name="to-change-the-report-builder-manifest-name-to-report-builder-30"></a>レポート ビルダーのマニフェスト名をレポート ビルダー 3.0 に変更するには  
 
-1.  Configuration Manager 콘솔을 실행하는 컴퓨터에서 Windows 레지스트리 편집기를 엽니다.  
+1.  Configuration Manager コンソールを実行しているコンピューターで、Windows レジストリ エディターを開きます。  
 
-2.  **HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node/Microsoft/ConfigMgr10/AdminUI/Reporting**으로 이동합니다.  
+2.  **HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node/Microsoft/ConfigMgr10/AdminUI/Reporting**を参照します。  
 
-3.  값 데이터를 편집하도록 **ReportBuilderApplicationManifestName** 키를 두 번 클릭합니다.  
+3.  **ReportBuilderApplicationManifestName** キーをダブルクリックして、値データを編集します。  
 
-4.  **ReportBuilder_2_0_0_0.application** 을 **ReportBuilder_3_0_0_0.application**으로 변경하고 **확인**을 클릭합니다.  
+4.  [ReportBuilder_2_0_0_0.application **** ] を [ReportBuilder_3_0_0_0.application ****] に変更して、[OK ****] をクリックします。  
 
-5.  Windows 레지스트리 편집기를 닫습니다.  
+5.  Windows レジストリ エディターを閉じます。  
 
-##  <a name="BKMK_InstallReportingServicesPoint"></a> 보고 서비스 지점 설치  
- 사이트에서 보고서를 관리하려면 보고 서비스 지점을 사이트에 설치해야 합니다. 보고 서비스 지점에서는 보고서 폴더와 보고서를 SQL Server Reporting Services에 복사하고 보고서와 폴더에 대한 보안 정책을 적용하며 보고 서비스에서 구성 설정을 지정합니다. 먼저 보고 서비스 지점을 구성해야 Configuration Manager 콘솔에 보고서가 표시되고 Configuration Manager에서 보고서를 관리할 수 있습니다. 보고 서비스 지점은 Microsoft SQL Server Reporting Services가 설치되어 실행되는 서버에 구성해야 하는 사이트 시스템 역할입니다. 필수 조건에 대한 자세한 내용은 [보고에 대한 필수 조건](prerequisites-for-reporting.md)을 참조하세요.  
+##  <a name="BKMK_InstallReportingServicesPoint"></a> レポート サービス ポイントのインストール  
+ サイトでレポートを管理するには、レポート サービス ポイントをサイトにインストールする必要があります。 レポート サービス ポイントは、SQL Server Reporting Services へのレポート フォルダーとレポートのコピー、レポートとフォルダーへのセキュリティ ポリシーの適用、および Reporting Services の構成設定を行います。 Configuration Manager コンソールでのレポートの表示、および Configuration Manager でのレポートの管理を行う前に、レポート サービス ポイントを構成する必要があります。 レポート サービス ポイントは、サイト システムの役割の 1 つであり、Microsoft SQL Server Reporting Services をインストールして実行しているサーバー上に構成する必要があります。 前提条件の詳細については、「[レポートの前提条件](prerequisites-for-reporting.md)」を参照してください。  
 
 > [!IMPORTANT]  
->  보고 서비스 지점을 설치할 사이트를 선택할 때 보고서에 액세스할 사용자가 보고 서비스 지점이 설치되는 사이트와 동일한 보안 범위에 있어야 한다는 점에 유의하십시오.  
+>  レポート サービス ポイントをインストールするサイトを選択するときは、レポートにアクセスすることになるユーザーが、レポート サービス ポイントのインストール先サイトと同じセキュリティ スコープにいなければならないことに注意してください。  
 
 > [!NOTE]  
->  사이트 시스템에 보고 서비스 지점을 설치한 후에는 보고 서버의 URL을 변경하지 마십시오. 예를 들어 보고 서비스 지점을 만든 후에 Reporting Services Configuration Manager에서 보고서 서버의 URL을 수정할 경우 Configuration Manager 콘솔이 이전 URL을 계속 사용하므로 콘솔에서 보고서를 실행하거나 편집하거나 만들 수 없습니다. URL 보고서 서버를 변경해야 하는 경우 보고 서비스 지점을 제거하고 URL을 변경한 후에 보고 서비스 지점을 다시 설치하십시오.  
+>  サイト システムにレポート サービス ポイントをインストールした後に、レポート サーバーの URL を変更しないでください。 たとえば、レポート サービス ポイントを作成した後に、Reporting Services Configuration Manager でレポート サーバーの URL を変更すると、Configuration Manager コンソールは引き続き古い URL を使用するため、コンソールからレポートを実行、編集、または作成できません。 URL レポート サーバーを変更する必要がある場合は、レポート サービス ポイントを削除して、URL を変更し、レポート サービス ポイントを再インストールします。  
 
 > [!IMPORTANT]    
-> 보고 서비스 지점을 설치할 때 Reporting Services 지점 계정을 지정해야 합니다. 나중에 다른 도메인의 사용자가 보고서를 실행하려고 할 경우 도메인 간에 양방향 트러스트가 설정되지 않았으면 보고서를 실행할 수 없습니다.
+> レポート サービス ポイントをインストールする場合、レポート サービス ポイント アカウントを指定する必要があります。 後で別のドメインのユーザーがレポートを実行しようとすると、ドメイン間に双方向の信頼が確立していない場合、レポートの実行は失敗します。
 
- 보고 서비스 지점을 설치하려면 다음 절차를 따르십시오.  
+ レポート サービス ポイントをインストールするには、次の手順に従います。  
 
-#### <a name="to-install-the-reporting-services-point-on-a-site-system"></a>사이트 시스템에 보고 서비스 지점을 설치하려면  
+#### <a name="to-install-the-reporting-services-point-on-a-site-system"></a>サイト システムにレポート サービス ポイントをインストールするには  
 
-1.  Configuration Manager 콘솔에서 **관리**를 클릭합니다.  
+1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
 
-2.  **관리** 작업 영역에서 **사이트 구성**을 확장하고 **서버 및 사이트 시스템 역할**을 클릭합니다.  
+2.  [ **管理** ] ワークスペースで [ **サイトの構成**] を展開して、[ **サーバーとサイト システムの役割**] をクリックします。  
 
     > [!TIP]  
-    >  보고 서비스 지점 사이트 역할을 호스팅하는 사이트 시스템만 나열하려면 **서버 및 사이트 시스템 역할** 을 마우스 오른쪽 단추로 클릭하고 **보고 서비스 지점**을 선택합니다.  
+    >  レポート サービス ポイント サイトの役割をホストするサイト システムのみを一覧表示するには、[ **サーバーとサイト システムの役割** ] を右クリックして、[ **レポート サービス ポイント**] を選択します。  
 
-3.  다음 중 해당 단계를 사용하여 기존 또는 새 사이트 시스템 서버에 보고 서비스 지점 사이트 시스템 역할을 추가합니다.  
-
-    > [!NOTE]  
-    >  사이트 시스템 구성에 대한 자세한 내용은 [System Center Configuration Manager에 대한 사이트 시스템 역할 추가](../deploy/configure/add-site-system-roles.md)를 참조하세요.  
-
-    -   **새 사이트 시스템**: **홈** 탭의 **만들기** 그룹에서 **사이트 시스템 서버 만들기**를 클릭합니다. **사이트 시스템 서버 만들기 마법사** 가 열립니다.  
-
-    -   **기존 사이트 시스템**: 보고 서비스 지점 사이트 시스템 역할을 설치할 서버를 클릭합니다. 서버를 클릭하면 해당 서버에 이미 설치된 사이트 시스템 역할의 목록이 결과 창에 표시됩니다.  
-
-         **홈** 탭의 **서버** 그룹에서 **사이트 시스템 역할 추가**를 클릭합니다. **사이트 시스템 역할 추가 마법사** 가 열립니다.  
-
-4.  **일반** 페이지에서 사이트 시스템 서버에 대한 일반 설정을 지정합니다. 기존 사이트 시스템 서버에 보고 서비스 지점을 추가할 때에는 이전에 구성된 값을 확인해야 합니다.  
-
-5.  **시스템 역할 선택** 페이지의 사용 가능한 역할 목록에서 **보고 서비스 지점** 을 선택하고 **다음**을 클릭합니다.  
-
-6.  **보고 서비스 지점** 페이지에서 다음 설정을 구성합니다.  
-
-    -   **사이트 데이터베이스 서버 이름**: Configuration Manager 사이트 데이터베이스를 호스트하는 서버의 이름을 지정합니다. 일반적으로 마법사에서 서버의 FQDN(정규화된 도메인 이름)을 자동으로 검색합니다. 데이터베이스 인스턴스를 지정하려면 &lt;*서버 이름*>\&lt;*인스턴스 이름*> 형식을 사용합니다.  
-
-    -   **데이터베이스 이름**: Configuration Manager 사이트 데이터베이스 이름을 지정하고 **확인**을 클릭하여 마법사에서 해당 사이트 데이터베이스에 액세스할 수 있는지 확인합니다.  
-
-        > [!IMPORTANT]  
-        >  보고 서비스 지점을 만드는 사용자 계정에 사이트 데이터베이스에 대한 **읽기** 권한이 있어야 합니다. 연결 테스트에 실패하면 빨간색 경고 아이콘이 표시됩니다. 이 아이콘 위로 커서를 이동하여 오류에 대한 세부 정보를 읽어 봅니다. 오류를 수정한 후 다시 **테스트** 를 클릭합니다.  
-
-    -   **폴더 이름**: Reporting Services에서 Configuration Manager 보고서를 호스트하도록 만들어 사용하는 폴더 이름을 지정합니다.  
-
-    -   **Reporting Services 서버 인스턴스**: 목록에서 SQL Server for Reporting Services 인스턴스를 선택합니다. 인스턴스가 하나만 있는 경우 기본적으로 해당 인스턴스가 나열되고 선택됩니다. 인스턴스가 하나도 없는 경우 SQL Server Reporting Services가 설치 및 구성되어 있고 사이트 시스템에서 SQL Server Reporting Services 서비스가 시작되었는지 확인합니다.  
-
-        > [!IMPORTANT]  
-        >  Configuration Manager는 선택된 사이트 시스템에서 현재 사용자의 컨텍스트에서 WMI(Windows Management Instrumentation)에 연결하여 SQL Server for Reporting Services 인스턴스를 검색합니다. 현재 사용자에게 사이트 시스템에서 WMI에 대한 **읽기** 권한이 있어야 하며, 그렇지 않으면 Reporting Services 인스턴스가 검색되지 않습니다.  
-
-    -   **보고 서비스 지점 계정**: **설정**을 클릭한 후에 보고 서비스 지점의 SQL Server Reporting Services가 보고서에 표시되는 데이터를 검색하기 위해 Configuration Manager 사이트 데이터베이스에 연결할 때 사용할 계정을 선택합니다. **기존 계정**을 선택하여 이전에 Configuration Manager 계정으로 구성된 Windows 사용자 계정을 지정하거나 **새 계정**을 선택하여 현재 Configuration Manager 계정으로 구성되어 있지 않은 Windows 사용자 계정을 지정합니다. Configuration Manager에서는 사이트 데이터베이스에 대해 지정된 사용자 액세스 권한을 자동으로 부여합니다. 이 사용자는 **관리** 작업 영역에 있는 **보안** 노드의 **계정** 하위 폴더에 **ConfigMgr 보고 서비스 지점** 계정 이름으로 표시됩니다.  
-
-         Reporting Services를 실행하는 계정은 도메인 로컬 보안 그룹인 **Windows Authorization Access Group**에 속해 있어야 하며, **tokenGroupsGlobalAndUniversal 읽기** 권한이 **허용**으로 설정되어야 합니다. 보고서를 성공적으로 실행하려면 Reporting Services 지점 계정과는 다른 도메인에서 사용자에 대해 양방향 트러스트 관계가 설정되어 있어야 합니다.
-
-         지정된 Windows 사용자 계정과 암호는 암호화되어 보고 서비스 데이터베이스에 저장됩니다. 보고 서비스는 이 계정과 암호를 사용하여 사이트 데이터베이스에서 보고서에 대한 데이터를 검색합니다.  
-
-        > [!IMPORTANT]  
-        >  지정하는 계정은 보고 서비스 데이터베이스를 호스팅하는 컴퓨터에서 **로컬로 로그온** 권한을 가져야 합니다.  
-
-7.  **보고 서비스 지점** 페이지에서 **다음**을 클릭합니다.  
-
-8.  **요약** 페이지에서 설정을 확인한 후에 **다음** 을 클릭하여 보고 서비스 지점을 설치합니다.  
-
-     마법사가 완료되면 보고서 폴더가 만들어지고 Configuration Manager 보고서가 지정된 보고서 폴더로 복사됩니다.  
+3.  対応する手順を使用して、レポート サービス ポイント サイト システムの役割を新規または既存のサイト システム サーバーに追加します。  
 
     > [!NOTE]  
-    >  보고서 폴더가 만들어지고 보고서가 보고서 서버에 복사될 때 Configuration Manager에서는 개체의 해당 언어를 파악합니다. 해당 언어 팩이 사이트에 설치된 경우 Configuration Manager가 사이트에서 보고서 서버를 실행하는 운영 체제와 동일한 언어로 개체를 만듭니다. 해당 언어를 사용할 수 없는 경우 보고서가 영어로 만들어져서 표시됩니다. 언어 팩 없이 사이트에 보고 서비스 지점을 설치할 경우 보고서가 영어로 설치됩니다. 보고 서비스 지점을 설치한 후에 언어 팩을 설치하는 경우 보고 서비스 지점을 제거한 후에 다시 설치해야만 해당 언어 팩 언어로 보고서를 사용할 수 있습니다. 언어 팩에 대한 자세한 내용은 [System Center Configuration Manager의 언어 팩](../deploy/install/language-packs.md)을 참조하세요.  
+    >  サイト システムの構成の詳細については、「[System Center Configuration Manager のサイト システム役割の追加](../deploy/configure/add-site-system-roles.md)」を参照してください。  
 
-###  <a name="BKMK_FileInstallationAndSecurity"></a> 파일 설치 및 보고서 폴더 보안 권한  
- Configuration Manager에서는 보고 서비스 지점을 설치하고 Reporting Services를 구성하기 위해 다음과 같은 작업을 수행합니다.  
+    -   **新しいサイト システム**: **[ホーム]** タブの **[作成]** グループで、 **[サイト システム サーバーの作成]**をクリックします。 サイト システム サーバーの作成ウィザードが開きます。 ****  
+
+    -   **既存のサイト システム**: レポート サービス ポイントのサイト システムの役割をインストールするサーバーをクリックします。 サーバーをクリックすると、サーバーに既にインストールされているサイト システムの役割の一覧が、結果ウィンドウに表示されます。  
+
+         [ **ホーム** ] タブの [ **サーバー** ] グループで、[ **サイト システムの役割の追加**] をクリックします。 サイト システムの役割の追加ウィザードが開きます。 ****  
+
+4.  [ **全般** ] ページで、サイト システム サーバーの全般設定を指定します。 レポート サービス ポイントを既存のサイト システム サーバーに追加する場合は、以前に構成した値を確認します。  
+
+5.  [ **システムの役割の選択** ] ページの利用可能な役割の一覧で [ **レポート サービス ポイント** ] を選択し、[ **次へ**] をクリックします。  
+
+6.  [レポート サービス ポイント **** ] ページで、次の設定を構成します。  
+
+    -   **サイト データベース サーバー名**: Configuration Manager サイト データベースをホストするサーバーの名前を指定します。 通常、ウィザードはサーバーの完全修飾ドメイン名 (FQDN) を自動的に取得します。 データベース インスタンスを指定するには、&lt;*サーバー名*>\&lt;*インスタンス名*> という形式を使用します。  
+
+    -   **データベース名**: Configuration Manager サイト データベース名を指定して、**[確認]** をクリックし、ウィザードがサイト データベースにアクセスできることを確認します。  
+
+        > [!IMPORTANT]  
+        >  レポート サービス ポイントを作成しているユーザー アカウントには、サイト データベースに対する **読み取り** アクセス許可がある必要があります。 接続テストに失敗した場合、赤色の警告アイコンが表示されます。 失敗の詳細を確認するには、このアイコンの上にカーソルを移動します。 エラーを修正し、[ **テスト** ] をもう一度クリックします。  
+
+    -   **フォルダー名**: Reporting Services で Configuration Manager レポートをホストするために作成および使用されるフォルダー名を指定します。  
+
+    -   **Reporting Services サーバー インスタンス**: Reporting Services の SQL Server のインスタンスの一覧から選択します。 見つかったインスタンスが 1 つのみの場合は、既定では、それが表示および選択されます。 インスタンスが見つからない場合は、SQL Server Reporting Services がインストールおよび構成されているかどうか、および SQL Server Reporting Services がサイト システム上で開始されているかどうかを確認します。  
+
+        > [!IMPORTANT]  
+        >  Configuration Manager は、現在のユーザー コンテキストで、選択したサイト システム上の Windows Management Instrumentation (WMI) に接続して、Reporting Services の SQL Server のインスタンスを取得します。 現在のユーザーには、サイト システム上の WMI に対する [読み取り **** ] アクセス許可がある必要があります。アクセス許可がない場合は、Reporting Services インスタンスを取得できません。  
+
+    -   **レポート サービス ポイントのアカウント**: **[設定]** をクリックして、レポートに表示されるデータを取得するために、レポート サービス ポイント上の SQL Server Reporting Services が Configuration Manager サイト データベースに接続する際に使用するアカウントを選択します。 **[既存のアカウント]** を選択して、以前に Configuration Manager アカウントとして構成されている Windows ユーザー アカウントを指定するか、**[新しいアカウント]** を選択して、現在 Configuration Manager アカウントとして構成されていない Windows ユーザー アカウントを指定します。 Configuration Manager は指定したユーザーにサイト データベースへのアクセスを自動的に付与します。 [ **管理** ] ワークスペースの [ **セキュリティ** ] ノードの [ **アカウント** ] サブフォルダーに、[ **ConfigMgr レポート サービス ポイント** ] のアカウント名でユーザーが表示されます。  
+
+         レポート サービスを実行するアカウントはドメイン ローカル セキュリティ グループ **Windows Authorization Access Group**に属し、[ **tokenGroupsGlobalAndUniversal の読み取り** ] アクセス許可が [ **許可**] に設定されている必要があります。 レポートを正常に実行するには、レポート サービス ポイント アカウントとは異なるドメインのユーザーに対して双方向の信頼が確立されている必要があります。
+
+         指定された Windows ユーザー アカウントとパスワードは、暗号化されて Reporting Services データベースに格納されます。 Reporting Services は、このアカウントとパスワードを使用して、サイト データベースからレポートのデータを取得します。  
+
+        > [!IMPORTANT]  
+        >  指定するアカウントは、Reporting Services データベースをホストするコンピューターに [ローカル ログオン **** ] アクセス許可がある必要があります。  
+
+7.  [ **レポート サービス ポイント** ] ページで、[ **次へ**] をクリックします。  
+
+8.  [ **概要** ] ページで設定を確認し、[ **次へ** ] をクリックしてレポート サービス ポイントをインストールします。  
+
+     ウィザードが完了すると、レポート フォルダーが作成され、Configuration Manager レポートが指定されたレポート フォルダーにコピーされます。  
+
+    > [!NOTE]  
+    >  レポート フォルダーが作成され、レポートがレポート サーバーにコピーされると、Configuration Manager はそのオブジェクトに適した言語を決定します。 関連する言語パックがサイトにインストールされている場合、Configuration Manager は、サイトのレポート サーバーで実行されているオペレーティング システムと同じ言語でオブジェクトを作成します。 その言語を使用できない場合、レポートは英語で作成および表示されます。 言語パックがないサイトにレポート サービス ポイントをインストールすると、レポートは英語でインストールされます。 レポート サービス ポイントをインストールした後に言語パックをインストールする場合、レポートのレポート サービス ポイントを適切な言語パックの言語で使用できるようにするには、そのポイントをアンインストールしてから再インストールする必要があります。 言語パックの詳細については、「[System Center Configuration Manager の言語パック](../deploy/install/language-packs.md)」を参照してください。  
+
+###  <a name="BKMK_FileInstallationAndSecurity"></a> ファイルのインストールおよびレポート フォルダーのセキュリティ権限  
+ Configuration Manager は次のアクションを実行して、レポート サービス ポイントをインストールし、Reporting Services を構成します。  
 
 > [!IMPORTANT]  
->  SMS_Executive 서비스를 위해 구성된 계정의 자격 증명을 사용하여 다음 목록의 작업이 수행됩니다. 이 계정은 대개 사이트 서버 로컬 시스템 계정입니다.  
+>  次の一覧のアクションは、SMS_Executive サービス用に構成したアカウント (通常は、サイト サーバーのローカルのシステム アカウント) の資格情報を使用して実行します。  
 
--   보고 서비스 지점 사이트 역할을 설치합니다.  
+-   レポート サービス ポイントのサイトの役割をインストールします。  
 
--   마법사에서 지정한 저장된 자격 증명을 사용하여 보고 서비스의 데이터 원본을 만듭니다. 이는 보고서를 실행할 때 보고 서비스가 사이트 데이터베이스에 연결하는 데 사용하는 Windows 사용자 계정과 암호입니다.  
+-   ウィザードで指定した格納されている資格情報を使用して、Reporting Services にデータ ソースを作成します。 これは、レポートを実行したときに、Reporting Services がサイト データベースに接続するために使用する Windows ユーザー アカウントとパスワードです。  
 
--   Reporting Services에서 Configuration Manager 루트 폴더를 만듭니다.  
+-   Reporting Services に Configuration Manager のルート フォルダーを作成します。  
 
--   보고 서비스에서 **ConfigMgr 보고서 사용자** 및 **ConfigMgr 보고서 관리자** 보안 역할을 추가합니다.  
+-   Reporting Services に [ **ConfigMgr レポート ユーザー** ] と [ **ConfigMgr レポート管理者** ] セキュリティ ロールを追加します。  
 
--   하위 폴더를 만들어 %ProgramFiles%\SMS_SRSRP의 Configuration Manager 보고서를 Reporting Services에 배포합니다.  
+-   サブフォルダーを作成し、%ProgramFiles%\SMS_SRSRP から Reporting Services に Configuration Manager レポートを展開します。  
 
--   **사이트 읽기** 권한이 있는 Configuration Manager의 모든 사용자 계정의 루트 폴더에 Reporting Services의 **ConfigMgr 보고서 사용자** 역할을 추가합니다.  
+-   **サイトの読み取り**権限を持つ Configuration Manager 内のすべてのユーザー アカウントに、ルート フォルダーに対する Reporting Services の **[ConfigMgr レポート ユーザー]** ロールを追加します。  
 
--   **사이트 수정** 권한이 있는 Configuration Manager의 모든 사용자 계정의 루트 폴더에 Reporting Services의 **ConfigMgr 보고서 관리자** 역할을 추가합니다.  
+-   **サイトの変更**権限を持つ Configuration Manager 内のすべてのユーザー アカウントに、ルート フォルダーに対する Reporting Services の **[ConfigMgr レポート管理者]** ロールを追加します。  
 
--   보고서 폴더와 Configuration Manager 보안 개체 유형(Configuration Manager 사이트 데이터베이스에서 유지 관리됨) 간의 매핑을 검색합니다.  
+-   レポート フォルダーと Configuration Manager の保護されているオブジェクトの種類 (Configuration Manager サイト データベースで保持されているオブジェクト) の間のマッピングを取得します。  
 
--   Reporting Services의 특정 보고서 폴더에 대한 Configuration Manager 관리자의 다음 권한을 구성합니다.  
+-   Configuration Manager の管理ユーザーに、Reporting Services の特定のレポート フォルダーに対する次の権限を構成します。  
 
-    -   사용자를 추가하고 Configuration Manager 개체에 대한 **보고서 실행** 권한이 있는 관리자에 대해 연결된 보고서 폴더에 **ConfigMgr 보고서 사용자** 역할을 할당합니다.  
+    -   ユーザーを追加し、Configuration Manager オブジェクトの**レポートの実行**アクセス許可を持つ管理ユーザーに、関連付けられているレポート フォルダーに対する **[ConfigMgr レポート ユーザー]** ロールを割り当てます。  
 
-    -   사용자를 추가하고 Configuration Manager 개체에 대한 **보고서 수정** 권한이 있는 관리자에 대해 연결된 보고서 폴더에 **ConfigMgr 보고서 관리자** 역할을 할당합니다.  
+    -   ユーザーを追加し、Configuration Manager オブジェクトの**レポートの変更**アクセス許可を持つ管理ユーザーに、関連付けられているレポート フォルダーに対する **[ConfigMgr レポート管理者]** ロールを割り当てます。  
 
-     Configuration Manager에서 Reporting Services에 연결하고 Configuration Manager 및 Reporting Services 루트 폴더와 특정 보고서 폴더의 사용자에 대한 권한을 설정합니다. 보고 서비스 지점을 처음 설치하면 Configuration Manager에서 10분 간격으로 Reporting Services에 연결하여 보고서 폴더에 구성된 사용자 권한이 Configuration Manager 사용자에 대해 설정된 연결된 권한인지 확인합니다. Reporting Services 보고서 관리자를 사용하여 보고서 폴더에서 사용자를 추가하거나 사용자 권한을 수정하면 Configuration Manager에서 사이트 데이터베이스에 저장된 역할 기반 할당을 사용하여 해당 변경 내용을 덮어씁니다. 또한 Configuration Manager는 Configuration Manager에서 보고 권한이 없는 사용자를 제거합니다.  
+     Configuration Manager は Reporting Services に接続し、Configuration Manager と Reporting Services のルート フォルダーおよび特定のレポート フォルダーに対するアクセス許可をユーザーに設定します。 レポート サービス ポイントが最初にインストールされてから、Configuration Manager は Reporting Services に 10 分間隔で接続し、レポート フォルダーに構成されているユーザー権限が Configuration Manager ユーザーに設定された関連付けられている権限であることを確認します。 Reporting Services のレポート マネージャーを使用して、レポート フォルダーへのユーザーの追加、またはユーザー権限の変更を行うと、Configuration Manager は、サイト データベースに格納されている役割に基づいた割り当てを使用して、それらの変更を上書きします。 また、Configuration Manager は、Configuration Manager でのレポート権限を持っていないユーザーを削除します。  
 
-##  <a name="BKMK_SecurityRoles"></a> Configuration Manager의 보고 서비스 보안 역할  
- Configuration Manager에서 보고 서비스 지점을 설치하면 Reporting Services에 다음 보안 역할이 추가됩니다.  
+##  <a name="BKMK_SecurityRoles"></a> Configuration Manager の Reporting Services のセキュリティ ロール  
+ Configuration Manager がレポート サービス ポイントをインストールするときに、Reporting Services に次のセキュリティ ロールを追加します。  
 
--   **ConfigMgr 보고서 사용자**: 이 보안 역할이 할당된 사용자만 Configuration Manager 보고서를 실행할 수 있습니다.  
+-   **ConfigMgr レポート ユーザー**: このセキュリティ ロールが割り当てられたユーザーは、Configuration Manager レポートのみを実行できます。  
 
--   **ConfigMgr 보고서 관리자**: 이 보안 역할이 할당된 사용자는 Configuration Manager에서 보고와 관련된 모든 작업을 수행할 수 있습니다.  
+-   **ConfigMgr レポート管理者**: このセキュリティ ロールが割り当てられたユーザーは、Configuration Manager のレポートに関連するすべてのタスクを実行できます。  
 
-##  <a name="BKMK_VerifyReportingServicesPointInstallation"></a> 보고 서비스 지점 설치 확인  
- 보고 서비스 지점 사이트 역할을 추가하면 특정 상태 메시지와 로그 파일 항목을 보고 설치를 확인할 수 있습니다. 보고 서비스 지점 설치가 제대로 수행되었는지 확인하려면 다음 절차를 수행하십시오.  
+##  <a name="BKMK_VerifyReportingServicesPointInstallation"></a> レポート サービス ポイントのインストールの検証  
+ レポート サービス ポイントのサイトの役割を追加した後に、インストールを検証するには、特定のステータス メッセージおよびログ ファイルのエントリを確認します。 レポート サービス ポイントのインストールが成功したことを確認するには、次の手順に従います。  
 
 > [!WARNING]  
->  Configuration Manager 콘솔의 **모니터링** 작업 영역에 있는 **보고** 노드 **보고서** 하위 폴더에 보고서가 표시되면 이 절차를 건너뛰어도 됩니다.  
+>  レポートが Configuration Manager コンソールの **[監視]** ワークスペースにある **[レポート]** ノードの **[レポート]** サブフォルダーに表示される場合は、この手順をスキップすることができます。  
 
-#### <a name="to-verify-the-reporting-services-point-installation"></a>보고 서비스 지점 설치를 확인하려면  
+#### <a name="to-verify-the-reporting-services-point-installation"></a>レポート サービス ポイントのインストールを検証するには  
 
-1.  Configuration Manager 콘솔에서 **모니터링**을 클릭합니다.  
+1.  Configuration Manager コンソールで、[監視] をクリックします。 ****  
 
-2.  **모니터링** 작업 영역에서 **시스템 상태**를 확장한 후 **구성 요소 상태**를 클릭합니다.  
+2.  [ **監視** ] ワークスペースで、[ **システムのステータス**] を展開してから、[ **コンポーネントのステータス**] をクリックします。  
 
-3.  구성 요소 목록에서 **SMS_SRS_REPORTING_POINT** 를 클릭합니다.  
+3.  コンポーネントの一覧で [SMS_SRS_REPORTING_POINT] をクリックします。 ****  
 
-4.  **홈** 탭의 **구성 요소** 그룹에서 **메시지 표시**를 클릭한 다음 **모두**를 클릭합니다.  
+4.  [ **ホーム** ] タブの [ **コンポーネント** ] グループで、[ **メッセージを表示する**] をクリックして、[ **すべて**] をクリックします。  
 
-5.  보고 서비스 지점을 설치하기 전의 기간에 대한 날짜와 시간을 지정하고 **확인**을 클릭합니다.  
+5.  レポート サービス ポイントをインストールする前の日付と時刻を指定して、[OK] をクリックします。 ****  
 
-6.  보고 서비스 지점이 제대로 설치되었음을 나타내는 상태 메시지 ID 1015가 표시되는지 확인합니다. 또는 &lt;*ConfigMgr 설치 경로*>\Logs에 있는 Srsrp.log 파일을 열고 **설치를 완료했습니다.**를 찾아도 됩니다.  
+6.  ステータス メッセージ ID 1015 が表示されていることを確認します。これは、レポート サービス ポイントが正常にインストールされたことを示します。 または、&lt;*ConfigMgr のインストール パス*>\Logs にある Srsrp.log ファイルを開いて、"**インストールは成功しました**" というメッセージを探します。  
 
-     Windows 탐색기에서 &lt;*ConfigMgr 설치 경로*>Logs로 이동합니다.  
+     Windows エクスプローラーで、&lt;*ConfigMgr のインストール パス*>\Logs に移動します。  
 
-7.  Srsrp.log를 열고 보고 서비스 지점이 설치된 시점부터 로그 파일의 내용을 차례차례 검토합니다. 보고서 폴더가 만들어졌는지, 보고서가 배포되었는지, 각 폴더의 보안 정책이 확인되었는지 확인합니다. 보안 정책 확인 내용의 마지막 줄 다음에 **SRS 웹 서비스가 서버에서 상태가 성공적으로 체크** 를 찾아 봅니다.  
+7.  Srsrp.log を開いて、ログ ファイルのレポート サービス ポイントが正常にインストールされた時刻からログを確認します。 レポート フォルダーが作成されたこと、レポートが展開されたこと、および各フォルダーのセキュリティ ポリシーが確認されたことを検証します。 セキュリティ ポリシーの確認の最後の行の後ろに "SRS Web サービスがサーバー上で正常であることを確認しました" というメッセージがあることを確認します。 ****  
 
-##  <a name="BKMK_Certificate"></a> Configuration Manager 콘솔 컴퓨터용 자체 서명된 인증서 구성  
- SQL Server Reporting Services 보고서를 제작하는 데 필요한 여러 옵션이 있습니다. Configuration Manager 콘솔에서 보고서를 만들거나 편집할 때 Configuration Manager에서 보고서 작성기가 열려 제작 환경으로 사용됩니다. Configuration Manager 보고서를 작성하는 방법에 관계없이 사이트 데이터베이스 서버에 대한 서버 인증용으로 자체 서명된 인증서가 필요합니다. Configuration Manager에서는 SMS 공급자가 설치된 컴퓨터와 사이트 서버에 인증서를 자동으로 설치합니다. 그러므로 이러한 컴퓨터 중 하나에서 실행할 때 Configuration Manager 콘솔에서 보고서를 만들거나 편집할 수 있습니다. 그러나 다른 컴퓨터에 설치된 Configuration Manager 콘솔에서 보고서를 만들거나 수정할 때는 사이트 서버에서 인증서를 내보낸 다음 Configuration Manager 콘솔을 실행하는 컴퓨터의 **신뢰된 사용자** 인증서 저장소에 추가해야 합니다.  
+##  <a name="BKMK_Certificate"></a> Configuration Manager コンソール コンピューターの自己署名入り証明書の構成  
+ SQL Server Reporting Services レポートを作成する場合、多くのオプションがあります。 Configuration Manager コンソールでレポートを作成または編集する場合、Configuration Manager はレポート ビルダーを開いて、作成環境として使用します。 Configuration Manager レポートをどのように作成するかにかかわらず、サイト データベース サーバーでのサーバー認証のために自己署名入り証明書が必要となります。 Configuration Manager は、SMS プロバイダーがインストールされているサイト サーバーとコンピューターに証明書を自動的にインストールします。 このため、これらのコンピューターのいずれかから Configuration Manager コンソールを実行する場合は、そこでレポートを作成または編集できます。 ただし、別のコンピューターにインストールされている Configuration Manager コンソールからレポートの作成または変更を行う場合、サイト サーバーから証明書をエクスポートし、Configuration Manager コンソールを実行するコンピューターの**信頼されたユーザー**証明書ストアに追加する必要があります。  
 
 > [!NOTE]  
->  SQL Server Reporting Services의 다른 보고서 제작 환경에 대한 자세한 내용은 SQL Server 2008 온라인 설명서의 [보고서 제작 환경 비교](http://go.microsoft.com/fwlink/p/?LinkId=242805) 를 참조하십시오.  
+>  SQL Server Reporting Services のその他のレポート作成環境の詳細については、SQL Server 2008 Books Online の「 [レポート作成環境の比較](http://go.microsoft.com/fwlink/p/?LinkId=242805) 」を参照してください。  
 
- 사이트 서버와 Configuration Manager 콘솔을 실행하는 다른 컴퓨터가 모두 Windows Server 2008 R2를 실행하는 경우 사이트 서버에서 다른 컴퓨터로 자체 서명된 인증서의 사본을 전송하는 방법의 예로 다음 절차를 사용합니다. 운영 체제 버전이 달라서 이 절차를 따를 수 없는 경우 사용 중인 운영 체제 설명서에서 해당 절차를 참조하십시오.  
+ 両方のコンピューターが Windows Server 2008 R2 を実行している場合に、自己署名入り証明書のコピーをサイト サーバーから Configuration Manager コンソールを実行する別のコンピューターに転送するには、次のような手順を使用します。 別のオペレーティング システムのバージョンを使用しているために、この手順に従うことができない場合は、使用しているオペレーティング システムのドキュメントの対応する手順を参照してください。  
 
-#### <a name="to-transfer-a-copy-of-self-signed-certificate-from-the-site-server-to-another-computer"></a>사이트 서버에서 다른 컴퓨터로 자체 서명된 인증서의 사본을 전송하려면  
+#### <a name="to-transfer-a-copy-of-self-signed-certificate-from-the-site-server-to-another-computer"></a>自己署名入り証明書のコピーをサイト サーバーから別のコンピューターに転送するには  
 
-1.  자체 서명된 인증서를 내보낼 사이트 서버에서 다음 단계를 수행하십시오.  
+1.  サイト サーバーで次の手順を実行して、自己署名入り証明書をエクスポートします。  
 
-    1.  **시작**, **실행**을 차례로 클릭한 다음 **mmc.exe**를 입력합니다. 비어 있는 콘솔에서 **파일**을 클릭한 후 **스냅인 추가/제거**를 클릭합니다.  
+    1.  **[スタート]**、 **[実行]**の順にクリックし、「 **mmc.exe**」と入力します。 空のコンソールで、[ **ファイル**] をクリックし、次に [ **スナップインの追加と削除**] をクリックします。  
 
-    2.  **스냅인 추가/제거** 대화 상자의 **사용 가능한 스냅인** 목록에서 **인증서**를 선택하고 **추가**를 클릭합니다.  
+    2.  [ **スナップインの追加と削除** ] ダイアログ ボックスで、[ **利用できるスナップイン** ] リストから [ **証明書**] を選択し、[ **追加**] をクリックします。  
 
-    3.  **인증서 스냅인** 대화 상자에서 **컴퓨터 계정**을 선택한 후에 **다음**을 클릭합니다.  
+    3.  [ **証明書スナップイン** ] ダイアログボックスで [ **コンピューター アカウント**] を選択し、[ **次へ**] をクリックします。  
 
-    4.  **컴퓨터 선택** 대화 상자에서 **로컬 컴퓨터: (이 콘솔이 실행되고 있는 컴퓨터)** 가 선택되어 있는지 확인한 다음 **마침**을 클릭합니다.  
+    4.  [ **コンピューターの選択** ] ダイアログ ボックスで、[ **ローカル コンピューター: (このコンソールを実行しているコンピューター)** ] が選択されていることを確認して、[ **完了**] をクリックします。  
 
-    5.  **스냅인 추가/제거** 대화 상자에서 **확인**을 클릭합니다.  
+    5.  [ **スナップインの追加と削除** ] ダイアログ ボックスで、[ **OK**] をクリックします。  
 
-    6.  콘솔에서 **인증서(로컬 컴퓨터)**를 확장하고 **신뢰할 수 있는 사용자**를 확장한 후 **인증서**를 선택합니다.  
+    6.  コンソールで、[ **証明書 (ローカル コンピューター)**]、[ **信頼されたユーザー**] の順に展開して、[ **証明書**] をクリックします。  
 
-    7.  식별 이름이 &lt;*사이트 서버의 FQDN*>인 인증서를 마우스 오른쪽 단추로 클릭하고 **모든 작업**을 클릭한 후 **내보내기**를 선택합니다.  
+    7.  &lt;*サイト サーバーの FQDN*> というフレンドリ名が付いている証明書を右クリックし、**[すべてのタスク]** をクリックして **[エクスポート]** を選択します。  
 
-    8.  기본 옵션을 사용하여 **인증서 내보내기 마법사** 를 완료하고 **.cer** 파일 이름 확장명으로 인증서를 저장합니다.  
+    8.  既定のオプションを使用して、 **証明書のエクスポート ウィザード** を完了し、 **.cer** ファイル名拡張子を使用して証明書を保存します。  
 
-2.  Configuration Manager 콘솔을 실행하는 컴퓨터에서 다음 단계를 수행하여 자체 서명된 인증서를 신뢰할 수 있는 사용자 인증서 저장소에 추가합니다.  
+2.  Configuration Manager コンソールを実行するコンピューターで次の手順を実行し、自己署名入り証明書を信頼されたユーザー証明書ストアに追加します。  
 
-    1.  앞의 1.a - 1.e 단계를 반복하여 관리 지점 컴퓨터의 MMC에서 **인증서** 스냅인을 구성합니다.  
+    1.  上記の手順 1.a から 1.e を繰り返し、 管理ポイントのコンピューターに [**証明書**] スナップイン MMC を構成します。  
 
-    2.  콘솔에서 **인증서(로컬 컴퓨터)**와 **신뢰할 수 있는 사용자**를 차례로 확장하고 **인증서**를 마우스 오른쪽 단추로 클릭한 다음 **모든 작업**을 선택하고 **가져오기** 를 선택하여 **인증서 가져오기 마법사**를 시작합니다.  
+    2.  コンソールで、[ **証明書 (ローカル コンピューター)**]、[ **信頼されたユーザー**] の順に展開し、[ **証明書**] を右クリックして、[ **すべてのタスク**]、[ **インポート** ] の順に選択して、 **証明書のインポート ウィザード**を開始します。  
 
-    3.  **가져올 파일** 페이지에서 1.h단계에서 저장한 인증서를 선택한 후 **다음**을 클릭합니다.  
+    3.  [ **インポートするファイル** ] ページで、手順 1.h で保存した証明書を選択し、[ **次へ**] をクリックします。  
 
-    4.  **인증서 저장소** 페이지에서 **모든 인증서를 다음 저장소에 저장**을 선택하고 **인증서 저장소** 를 **신뢰할 수 있는 사용자**로 설정한 후 **다음**을 클릭합니다.  
+    4.  [ **証明書ストア** ] ページで [ **証明書をすべて次のストアに配置する**] を選択し、[ **証明書ストア** ] を [ **信頼されたユーザー**] に設定して、[ **次へ**] をクリックします。  
 
-    5.  **마침** 을 클릭하여 마법사를 닫고 컴퓨터의 인증서 구성을 완료합니다.  
+    5.  [完了] をクリックし、ウィザードを閉じて、コンピューターへの証明書の構成を完了します。 ****  
 
-##  <a name="BKMK_ModifyReportingServicesPoint"></a> 보고 서비스 지점 설정 수정  
- 보고 서비스 지점을 설치하면 보고 서비스 지점 속성에서 사이트 데이터베이스 연결 및 인증 설정을 수정할 수 있습니다. 보고 서비스 지점 설정을 수정하려면 다음 절차를 수행하십시오.  
+##  <a name="BKMK_ModifyReportingServicesPoint"></a> レポート サービス ポイントの設定の変更  
+ レポート サービス ポイントをインストールしたら、サイト データベースの接続および認証の設定をレポート サービス ポイントのプロパティで変更できます。 レポート サービス ポイントの設定を変更するには、次の手順に従います。  
 
-#### <a name="to-modify-reporting-services-point-settings"></a>보고 서비스 지점 설정을 수정하려면  
+#### <a name="to-modify-reporting-services-point-settings"></a>レポート サービス ポイントの設定を変更するには  
 
-1.  Configuration Manager 콘솔에서 **관리**를 클릭합니다.  
+1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
 
-2.  **관리** 작업 영역에서 **사이트 구성**을 확장하고 **서버 및 사이트 시스템 역할** 을 클릭하여 사이트 시스템을 나열합니다.  
+2.  [ **管理** ] ワークスペースで [ **サイトの構成**] を展開し、[ **サーバーとサイト システムの役割** ] をクリックして、サイト システムの一覧を表示します。  
 
     > [!TIP]  
-    >  보고 서비스 지점 사이트 역할을 호스팅하는 사이트 시스템만 나열하려면 **서버 및 사이트 시스템 역할** 을 마우스 오른쪽 단추로 클릭하고 **보고 서비스 지점**을 선택합니다.  
+    >  レポート サービス ポイント サイトの役割をホストするサイト システムのみを一覧表示するには、[ **サーバーとサイト システムの役割** ] を右クリックして、[ **レポート サービス ポイント**] を選択します。  
 
-3.  설정을 수정할 보고 서비스 지점을 호스팅하는 사이트 시스템을 선택하고 **사이트 시스템 역할** 에서 **보고 서비스 지점**을 선택합니다.  
+3.  設定を変更するレポート サービス ポイントをホストするサイト システムを選択し、[ **サイト システムの役割** ] の [ **レポート サービス ポイント**] を選択します。  
 
-4.  **사이트 역할** 탭의 **속성** 그룹에서 **속성**을 클릭합니다.  
+4.  [ **サイトの役割** ] タブの [ **プロパティ** ] グループで、[ **プロパティ**] をクリックします。  
 
-5.  **보고 서비스 지점 속성** 대화 상자에서 다음 설정을 수정할 수 있습니다.  
+5.  [レポート サービス ポイントのプロパティ] ダイアログ ボックスで、次の設定を変更できます。 ****  
 
-    -   **사이트 데이터베이스 서버 이름**: Configuration Manager 사이트 데이터베이스를 호스트하는 서버의 이름을 지정합니다. 일반적으로 마법사에서 서버의 FQDN(정규화된 도메인 이름)을 자동으로 검색합니다. 데이터베이스 인스턴스를 지정하려면 &lt;*서버 이름*>\&lt;*인스턴스 이름*> 형식을 사용합니다.  
+    -   **サイト データベース サーバー名**: Configuration Manager サイト データベースをホストするサーバーの名前を指定します。 通常、ウィザードはサーバーの完全修飾ドメイン名 (FQDN) を自動的に取得します。 データベース インスタンスを指定するには、&lt;*サーバー名*>\&lt;*インスタンス名*> という形式を使用します。  
 
-    -   **데이터베이스 이름**: System Center 2012 Configuration Manager 사이트 데이터베이스 이름을 지정하고 **확인**을 클릭하여 마법사에서 해당 사이트 데이터베이스에 액세스할 수 있는지 확인합니다.  
-
-        > [!IMPORTANT]  
-        >  보고 서비스 지점을 만드는 사용자 계정에 사이트 데이터베이스에 대한 읽기 권한이 있어야 합니다. 연결 테스트에 실패하면 빨간색 경고 아이콘이 표시됩니다. 이 아이콘 위로 커서를 이동하여 오류에 대한 세부 정보를 읽어 봅니다. 오류를 수정한 후 다시 **테스트** 를 클릭합니다.  
-
-    -   **사용자 계정**: **설정**을 클릭한 다음, 보고 서비스 지점의 SQL Server Reporting Services가 Configuration Manager 사이트 데이터베이스에 연결하여 보고서에 표시된 데이터를 검색할 때 사용되는 계정을 선택합니다. **기존 계정**을 선택하여 기존 Configuration Manager 권한이 있는 Windows 사용자 계정을 지정하거나 **새 계정**을 선택하여 현재 Configuration Manager에서 권한이 없는 Windows 사용자 계정을 지정합니다. Configuration Manager에서는 사이트 데이터베이스에 대해 지정된 사용자 계정 액세스 권한을 자동으로 부여합니다. 이 계정은 **관리** 작업 영역에 있는 **보안** 노드의 **계정** 하위 폴더에 **ConfigMgr SRS 보고 지점** 계정으로 표시됩니다.  
-
-         지정된 Windows 사용자 계정과 암호는 암호화되어 보고 서비스 데이터베이스에 저장됩니다. 보고 서비스는 이 계정과 암호를 사용하여 사이트 데이터베이스에서 보고서에 대한 데이터를 검색합니다.  
+    -   **データベース名**: System Center 2012 Configuration Manager サイト データベース名を指定して、**[確認]** をクリックし、ウィザードがサイト データベースにアクセスできることを確認します。  
 
         > [!IMPORTANT]  
-        >  사이트 데이터베이스가 원격 사이트 시스템에 있는 경우 지정한 계정에 컴퓨터에 대한 **로컬로 로그온** 권한이 있어야 합니다.  
+        >  レポート サービス ポイントを作成しているユーザー アカウントには、サイト データベースに対する読み取りアクセス許可がある必要があります。 接続テストに失敗した場合、赤色の警告アイコンが表示されます。 失敗の詳細を確認するには、このアイコンの上にカーソルを移動します。 エラーを修正し、[ **テスト** ] をもう一度クリックします。  
 
-6.  **확인** 을 클릭하여 변경 내용을 저장하고 대화 상자를 닫습니다.  
+    -   **ユーザー アカウント**: **[設定]**をクリックして、レポートに表示されるデータを取得するために、レポート サービス ポイント上の SQL Server Reporting Services が Configuration Manager サイト データベースに接続する際に使用するアカウントを選択します。 **[既存のアカウント]** を選択して、既存の Configuration Manager 権限を持つ Windows ユーザー アカウントを指定するか、**[新しいアカウント]** を選択して、現在 Configuration Manager で権限を持っていない Windows ユーザー アカウントを指定します。 Configuration Manager は指定したユーザー アカウントにサイト データベースへのアクセスを自動的に付与します。 アカウントは、[ **管理** ] ワークスペースの [ **セキュリティ** ] ノードの [ **アカウント** ] サブフォルダーに、[ **ConfigMgr SRS レポート ポイント** ] のアカウントとして表示されます。  
 
-## <a name="upgrading-sql-server"></a>SQL Server 업그레이드  
- SQL Server와 보고 서비스 지점의 데이터 원본으로 사용되는 SQL Server Reporting Services를 업그레이드하면 Configuration Manager 콘솔에서 보고서를 실행하거나 편집할 때 오류가 나타날 수 있습니다. Configuration Manager 콘솔에서 보고가 제대로 작동하려면 사이트의 보고 서비스 지점 사이트 시스템 역할을 제거하고 다시 설치해야 합니다. 그러나 업그레이드한 후에도 계속 인터넷 브라우저에서 보고서를 실행하고 편집할 수 있습니다.  
+         指定された Windows ユーザー アカウントとパスワードは、暗号化されて Reporting Services データベースに格納されます。 Reporting Services は、このアカウントとパスワードを使用して、サイト データベースからレポートのデータを取得します。  
 
-##  <a name="BKMK_ConfigureReportOptions"></a> 보고서 옵션 구성  
- Configuration Manager 사이트의 보고서 옵션을 사용하여 보고서를 관리하는 데 사용되는 기본 보고 서비스 지점을 선택합니다. 사이트에 보고 서비스 지점이 둘 이상 있을 수 있지만 보고서 옵션에서 선택한 기본 보고서 서버만 보고서를 관리하는 데 사용됩니다. 사이트에 대한 보고서 옵션을 구성하려면 다음 절차를 수행하십시오.  
+        > [!IMPORTANT]  
+        >  サイト データベースがリモート サイト システムにある場合は、そのコンピューターに対する [ローカル ログオン] アクセス許可が指定したアカウントにある必要があります。 ****  
 
-#### <a name="to-configure-report-options"></a>보고서 옵션을 구성하려면  
+6.  [ **OK** ] をクリックして、変更を保存し、ダイアログ ボックスを閉じます。  
 
-1.  Configuration Manager 콘솔에서 **모니터링**을 클릭합니다.  
+## <a name="upgrading-sql-server"></a>SQL Server のアップグレード  
+ SQL Server と、レポート サービス ポイントのデータ ソースとして使用される SQL Server Reporting Services をアップグレードした後に、Configuration Manager コンソールからレポートを実行または編集するときにエラーが発生する可能性があります。 Configuration Manager コンソールからレポートが適切に機能するには、そのサイトのレポート サービス ポイント サイト システムの役割を削除してから、再インストールする必要があります。 ただし、アップグレード後は、インターネット ブラウザーから引き続き正常にレポートの実行と編集を行うことができます。  
 
-2.  **모니터링** 작업 영역에서 **보고**를 확장한 후 **보고서**를 클릭합니다.  
+##  <a name="BKMK_ConfigureReportOptions"></a> レポート オプションの構成  
+ レポートを管理するために使用する既定のレポート サービス ポイントを選択するには、Configuration Manager サイトのレポート オプションを使用します。 サイトでは複数のレポート サービス ポイントを持つことができますが、レポートの管理に使用されるのは、レポート オプションで選択した既定のレポート サーバーのみです。 サイトのレポート オプションを構成するには、次の手順に従います。  
 
-3.  **홈** 탭의 **설정** 그룹에서 **보고서 옵션**을 클릭합니다.  
+#### <a name="to-configure-report-options"></a>レポート オプションを構成するには  
 
-4.  목록에서 기본 보고서 서버를 선택한 다음 **확인**을 클릭합니다. 목록에 보고 서비스 지점이 표시되지 않으면 사이트에서 보고 서비스 지점을 제대로 설치하고 구성했는지 확인하십시오.  
+1.  Configuration Manager コンソールで、[監視] をクリックします。 ****  
 
-## <a name="next-steps"></a>다음 단계
-[보고 작업 및 유지 관리](operations-and-maintenance-for-reporting.md)
+2.  [ **監視** ] ワークスペースで、[ **レポート**] を展開し、[ **レポート**] をクリックします。  
+
+3.  [ **ホーム** ] タブの [ **設定** ] グループで、[ **レポート オプション**] をクリックします。  
+
+4.  一覧から既定のレポート サーバーを選択して、[OK] をクリックします。 **** 一覧にレポート サービス ポイントが表示されない場合は、レポート サービス ポイントがサイトに正常にインストールおよび構成されていることを確認します。  
+
+## <a name="next-steps"></a>次のステップ
+[レポートの操作とメンテナンス](operations-and-maintenance-for-reporting.md)

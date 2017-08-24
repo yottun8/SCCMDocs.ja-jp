@@ -1,6 +1,6 @@
 ---
-title: "팩터리 또는 로컬 저장소에 OEM에 대한 이미지 만들기 | Microsoft 문서"
-description: "사전 준비된 미디어 배포를 사용하면 완전히 프로비전되지 않은 컴퓨터에 운영 체제를 배포하는 동안 네트워크 트래픽을 줄일 수 있습니다."
+title: "工場出荷時の OEM 用、または現地保管場所用のイメージの作成 | Microsoft Docs"
+description: "事前設定されたメディアによる展開を使用して、完全にはプロビジョニングされていないコンピューターにオペレーティング システムを展開する際のネットワーク トラフィックを軽減します。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,40 +17,40 @@ manager: angrobe
 ms.openlocfilehash: 07aba04fb1b845e389a5f75b115d536136c1569c
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-an-image-for-an-oem-in-factory-or-a-local-depot-with-system-center-configuration-manager"></a>System Center Configuration Manager를 사용하여 팩터리 또는 로컬 저장소에 OEM에 대한 이미지 만들기
+# <a name="create-an-image-for-an-oem-in-factory-or-a-local-depot-with-system-center-configuration-manager"></a>System Center Configuration Manager による工場出荷時の OEM 用、または現地保管場所用のイメージの作成
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager에서 사전 준비된 미디어 배포를 사용하면 완전히 프로비전되지 않은 컴퓨터에 운영 체제를 배포할 수 있습니다. 사전 준비된 미디어는 제조업체(OEM)가 운영 체제 미설치 컴퓨터에 설치하거나, Configuration Manager 환경에 연결되지 않은 엔터프라이즈 준비 센터에 설치할 수 있는 WIM(Windows Imaging Format) 파일입니다. Configuration Manager 환경에서 이후에 미디어에서 제공된 부팅 이미지를 사용하여 컴퓨터가 시작되고, 사전 준비된 미디어가 올바른지 해시 확인이 실행된 다음, 컴퓨터가 사이트 관리 지점에 연결되어 사용 가능한 작업 순서를 통해 다운로드 프로세스를 완료하게 됩니다.
+System Center Configuration Manager における事前設定されたメディアによる展開では、完全にはプロビジョニングされていないコンピューターにオペレーティング システムを展開できます。 事前設定されたファイルは、Windows Imaging Format (WIM) と呼ばれる形式のファイルであり、製造元によるベア メタル コンピューター (OEM)、または Configuration Manager 環境に接続していない企業の準備センターにインストールすることができます。 その後、Configuration Manager 環境でコンピューターはメディアが提供するブート イメージを使用して起動し、事前設定されたメディア上でハッシュ チェックを実行し、正しいかどうかを確認します。さらに、コンピューターはサイト管理ポイントに接続して利用可能なタスク シーケンスを取得し、ダウンロード プロセスを完了します。
 
 
-이 배포 방법에서는 부팅 이미지와 운영 체제 이미지가 이미 대상 컴퓨터에 있으므로 네트워크 트래픽을 줄일 수 있습니다. 사전 준비된 미디어에 포함할 응용 프로그램, 패키지 및 드라이버 패키지를 지정할 수 있습니다. 운영 체제가 컴퓨터에 설치된 후 응용 프로그램, 패키지 및 드라이버 패키지에 대한 로컬 작업 순서 캐시를 먼저 확인하고 콘텐츠를 찾을 수 없거나 콘텐츠가 수정된 경우 사전 준비된 미디어에 구성된 배포 지점에서 콘텐츠를 다운로드한 다음 설치합니다.  
+ブート イメージとオペレーティング システム イメージが展開先のコンピューターに存在するので、この展開の方法はネットワーク トラフィックを軽減します。 事前設定メディアに含めるアプリケーション、パッケージ、ドライバー パッケージを指定できます。 コンピューターにオペレーティング システムがインストールされた後、まずローカルのタスク シーケンス キャッシュにアプリケーション、パッケージ、またはドライバー パッケージがないか検査されます。コンテンツが見つからない場合、または変更されている場合は、事前設定メディアで構成されている配布ポイントからコンテンツがダウンロードされて、インストールされます。  
 
- 다음 운영 체제 배포 시나리오에 대해 사전 준비된 미디어를 사용할 수 있습니다.  
+ 事前設定されたメディアは、次のオペレーティング システムの展開シナリオに使用できます。  
 
--   [새 컴퓨터에 새 버전의 Windows 설치(완전 복구)](install-new-windows-version-new-computer-bare-metal.md)  
+-   [新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [기존 컴퓨터 바꾸기 및 설정 전송](replace-an-existing-computer-and-transfer-settings.md)  
+-   [既存のコンピューターの置き換えと設定の転送](replace-an-existing-computer-and-transfer-settings.md)  
 
- 운영 체제 배포 시나리오 중 하나의 단계를 완료한 후 다음 섹션을 사용하여 사전 준비된 미디어를 준비하고 만듭니다.  
+ オペレーティング システムのいずれかの展開シナリオの手順を実行してから、次のセクションに従って事前設定メディアを準備し、作成します。  
 
-## <a name="configure-deployment-settings"></a>배포 설정 구성  
- 사전 준비된 미디어를 사용하여 운영 체제 배포 프로세스를 시작할 경우 해당 운영 체제를 미디어에서 사용할 수 있도록 배포를 구성해야 합니다. 소프트웨어 배포 마법사의 **배포 설정** 페이지 또는 배포에 대한 속성의 **배포 설정** 탭에서 이를 구성할 수 있습니다.  **다음에 사용 가능하도록 설정** 설정에 대해 다음 중 하나를 구성합니다.  
+## <a name="configure-deployment-settings"></a>展開の設定の構成  
+ 事前設定されたメディアを使用してオペレーティング システムの展開プロセスを開始する場合、オペレーティング システムをメディアから使用できるように展開を構成する必要があります。 これはソフトウェアの展開ウィザードの **[展開の設定]** ページか展開のプロパティの **[配置の設定]** タブで構成することができます。  **[利用できるようにする項目]** の設定では、次のいずれかを設定します。  
 
--   **Configuration Manager 클라이언트, 미디어 및 PXE**  
+-   **Configuration Manager クライアント、メディア、PXE**  
 
--   **미디어 및 PXE만**  
+-   **メディアと PXE のみ**  
 
--   **미디어 및 PXE만(숨김)**  
+-   **メディアと PXE のみ (非表示)**  
 
-## <a name="create-the-prestaged-media"></a>사전 준비된 미디어 만들기  
- OEM 또는 로컬 저장소로 보낼 사전 준비된 미디어 파일을 만듭니다. 자세한 내용은 [System Center Configuration Manager에서 사전 준비된 미디어 만들기](create-prestaged-media.md)를 참조하세요.  
+## <a name="create-the-prestaged-media"></a>事前設定メディアの作成  
+ OEM または現地保管場所に送信する事前設定メディア ファイルを作成します。 詳細については、「 [Create prestaged media with System Center Configuration Manager](create-prestaged-media.md)」をご覧ください。  
 
-## <a name="send-the-prestaged-media-file-to-the-oem-or-local-depot"></a>사전 준비된 미디어 파일을 OEM 또는 로컬 저장소로 보냅니다.  
- OEM 또는 로컬 저장소로 미디어를 보내 컴퓨터를 사전 준비합니다. 사전 준비된 미디어 파일은 컴퓨터의 포맷된 하드 디스크에 적용됩니다.  
+## <a name="send-the-prestaged-media-file-to-the-oem-or-local-depot"></a>OEM または現地保管場所への事前設定されたメディア ファイルの送信  
+ OEM または現地保管場所へメディアを送信し、コンピューターを事前設定します。 事前設定されたメディア ファイルは、コンピューターのフォーマット済みのハード ディスクに適用されます。  
 
-## <a name="start-the-computer-to-install-the-operating-system"></a>컴퓨터를 시작하여 운영 체제 설치  
- 사전 준비된 미디어 파일은 컴퓨터에 적용됩니다. 컴퓨터를 처음 시작하면 운영 체제 설치 프로세스가 시작됩니다.  
+## <a name="start-the-computer-to-install-the-operating-system"></a>オペレーティング システムをインストールするコンピューターの起動  
+ 事前設定されたメディア ファイルは、コンピューターに適用されます。 コンピューターを初めて起動すると、オペレーティング システムのインストール プロセスが開始します。  

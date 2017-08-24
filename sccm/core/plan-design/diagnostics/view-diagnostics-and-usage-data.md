@@ -1,6 +1,6 @@
 ---
-title: "진단 데이터 보기 | Microsoft 문서"
-description: "진단 및 사용 현황 데이터를 보고 System Center Configuration Manager 계층 구조에 중요한 정보가 포함되어 있지 않은지 확인합니다."
+title: "診断データの表示 | Microsoft Docs"
+description: "診断および使用状況データを表示して、System Center Configuration Manager 階層に機密情報が含まれていないことを確認します。"
 ms.custom: na
 ms.date: 3/27/2017
 ms.prod: configuration-manager
@@ -17,34 +17,34 @@ manager: angrobe
 ms.openlocfilehash: 0932e2b2a4f3e13c35d6b7b0446083f1c233ce03
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-view-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>System Center Configuration Manager의 진단 및 사용 현황 데이터를 보는 방법
+# <a name="how-to-view-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>System Center Configuration Manager の診断および使用状況データを表示する方法
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 계층 구조에서 진단 및 사용 현황 데이터를 보면 중요하거나 식별할 수 있는 정보가 포함되지 않았는지 확인할 수 있습니다. 원격 분석 데이터가 요약되어 사이트 데이터베이스의 **TEL_TelemetryResults** 테이블에 저장되며 프로그래밍 방식으로 사용 가능하고 효율적이 되도록 형식이 지정됩니다. 다음 옵션을 사용하여 Microsoft로 전송되는 정확한 데이터를 볼 수 있지만 이러한 옵션은 데이터 분석 등의 다른 목적에 사용하기 위한 것은 아닙니다.  
+診断および使用状況データを System Center Configuration Manager 階層から表示して、機密情報や個人情報が含まれていないことを確認できます。 利用統計情報のデータは要約され、サイト データベースの **TEL_TelemetryResults** テーブルに保存されます。このデータは、プログラムで使用できる効率的な形式に設定されます。 次のオプションでは Microsoft に送信されたデータが正確に表示されますが、このデータは、データ分析など、別の目的で使用することを意図したものではありません。  
 
-다음 SQL 명령을 사용하면 이 테이블의 내용을 볼 수 있으며 전송되는 정확한 데이터를 보여 줍니다. 이 데이터를 텍스트 파일로 내보낼 수도 있습니다.  
+このテーブルの内容を表示し、送信される正確なデータを表示するには、次の SQL コマンドを使用します  (このデータをテキスト ファイルにエクスポートすることもできます)。  
 
 -   **SELECT \* FROM TEL_TelemetryResults**  
 
 > [!NOTE]  
->  버전 1602를 설치하기 전에 원격 분석 데이터를 저장하는 테이블은 **TelemetryResults**입니다.  
+>  バージョン 1602 のインストール前に製品利用統計情報データを格納するテーブルは **TelemetryResults**です。  
 
-서비스 연결점이 오프라인 모드인 경우 서비스 연결 도구를 사용하여 현재 진단 및 사용 현황 데이터를 쉼표로 구분된 값(CSV) 파일로 내보낼 수 있습니다. **-Export** 매개 변수가 있는 서비스 연결 지점에서 서비스 연결 도구를 실행합니다.  
+サービス接続ポイントがオフライン モードの場合は、サービス接続ツールを使用して、現在の診断および使用状況データをコンマ区切り値 (CSV) ファイルにエクスポートできます。 サービス接続ポイントで **-Export** パラメーターを使用してサービス接続ツールを実行します。  
 
-##  <a name="bkmk_hashes"></a> 단방향 해시  
-일부 데이터는 임의의 영숫자 문자열로 구성됩니다. Configuration Manager에서는 단방향 해시를 사용하는 SHA-256 알고리즘을 사용하여 잠재적으로 중요한 수집하지 않는지 확인합니다. 이 알고리즘은 데이터를 상관관계 및 비교 목적으로 사용할 수 있는 상태로 유지합니다. 예를 들어 사이트 데이터베이스에서 테이블 이름을 수집하는 대신 각 테이블 이름에 대해 단방향 해시가 캡처됩니다. 이렇게 하면 사용자가 만든 사용자 지정 테이블 이름이나 타사의 제품 추가 기능이 표시되지 않습니다. 사용자는 제품에서 기본적으로 제공되는 SQL 테이블 이름의 동일한 단방향 해시를 사용하고 두 쿼리의 결과를 비교하여 제품 기본값에서 데이터베이스 스키마의 편차를 확인할 수 있습니다. 이 데이터는 SQL 스키마 변경이 필요한 업데이트 개선에 사용됩니다.  
+##  <a name="bkmk_hashes"></a> 一方向のハッシュ  
+一部のデータは、任意の英数字の文字列で構成されています。 Configuration Manager は、一方向のハッシュを使用する SHA-256 アルゴリズムを使用して、機密データを収集していないことを確認します。 このアルゴリズムでは、収集と比較を目的として引き続きデータを使用できる状態にデータが維持されます。 たとえば、サイト データベースのテーブルの名前を収集するのではなく、テーブル名ごとに一方向のハッシュがキャプチャされます。 これにより、ユーザーが作成したカスタム テーブル名や、他社の製品のアドオンが非表示になります。 その後、製品に既定で付属している SQL テーブルの名前に対して同じ一方向のハッシュを行い、2 つのクエリの結果を比較して、ユーザーのデータベース スキーマと製品の既定値の差異を確認します。 これは、SQL スキーマへの変更が必要な更新プログラムの向上に役立てられます。  
 
-원시 데이터를 볼 때 데이터의 각 행에는 해시된 공통 값이 표시됩니다. 이는 계층 ID입니다. 이 해시된 값은 고객 또는 원본을 식별하지 않고 동일한 계층 구조와 데이터의 상관 관계를 지정하는 데 사용됩니다.  
+生データを表示するときには、共通のハッシュ値がデータの各行に表示されます。 これは階層 ID です。 このハッシュ値は、顧客またはソースを特定せずに、同じ階層内のデータを関連付けるのに使用されます。  
 
-#### <a name="to-see-how-the-one-way-hash-works"></a>단방향 해시가 작동하는 방식을 보려면  
+#### <a name="to-see-how-the-one-way-hash-works"></a>一方向のハッシュの動作を確認するには  
 
-1.  Configuration Manager 데이터베이스에 대해 SQL Management Studio에서 SQL 문 **select [dbo].[fnGetHierarchyID]\(\)**를 실행하여 계층 구조 ID를 가져옵니다.  
+1.  SQL Management Studio で、Configuration Manager データベースに対して、SQL ステートメント **select [dbo].[fnGetHierarchyID]\(\)** を実行して、階層 ID を取得します。  
 
-2.  다음 Windows PowerShell 스크립트를 사용하여 데이터베이스에서 가져온 GUID의 단방향 해시를 수행합니다. 이를 원시 데이터의 계층 ID와 비교하여 이 데이터를 가리는 방법을 알아볼 수 있습니다.  
+2.  以下の Windows PowerShell スクリプトを使用して、データベースから取得した GUID の一方向のハッシュを実行します。 これをデータ階層 ID と比較して、このデータを分かり難くする方法を確認できます。  
 
     ```  
     Param( [Parameter(Mandatory=$True)] [string]$value )  

@@ -1,6 +1,6 @@
 ---
-title: "컬렉션 소개 | Microsoft 문서"
-description: "System Center Configuration Manager에서 컬렉션을 사용하는 방법을 소개합니다."
+title: "コレクションの概要 | Microsoft ドキュメント"
+description: "System Center Configuration Manager のコレクションの使用方法について概要を説明します。"
 ms.custom: na
 ms.date: 01/03/2017
 ms.prod: configuration-manager
@@ -17,49 +17,49 @@ manager: angrobe
 ms.openlocfilehash: 547d231d48ccbc8241e9f1f8f71e3750b266b73e
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: ko-KR
+ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="introduction-to-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager의 컬렉션 소개
+# <a name="introduction-to-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager のコレクションの概要
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-컬렉션을 사용하면 리소스를 관리 가능한 단위로 구성할 수 있습니다. 클라이언트 관리 요구에 맞게 컬렉션을 만들고 여러 리소스에 대한 작업을 한 번에 수행할 수 있습니다. 
+コレクションを使用すると、リソースを管理しやすい単位に整理できます。 コレクションを作成すると、クライアント管理のニーズを満たし、複数のリソースで操作を同時に実行することができます。 
 
-대부분의 관리 작업에서는 하나 이상의 컬렉션을 사용하거나 사용해야 합니다. 기본 제공 컬렉션인 모든 시스템을 사용할 수도 있지만 관리 작업에는 이 컬렉션을 사용하지 않는 것이 좋습니다. 작업의 사용자나 장치를 보다 구체적으로 식별하려면 사용자 지정 컬렉션을 만드세요.  
+管理タスクのほとんどは、1 つ以上のコレクションに依存、または使用する必要があります。 組み込みのコレクションである [すべてのシステム] を使用することもできますが、管理タスクでこのコレクションを使用することはお勧めしません。 タスクに対するデバイスまたはユーザーをより具体的に識別できるようにカスタム コレクションを作成します。  
 
- 기본 제공 및 사용자 지정 컬렉션은 Configuration Manager 콘솔의 **자산 및 준수** 작업 영역에 있는 **사용자 컬렉션** 및 **장치 컬렉션** 노드에 표시됩니다.  
+ 組み込みコレクションおよびカスタム コレクションは、Configuration Manager コンソールの **[資産とコンプライアンス]** ワークスペースの **[ユーザー コレクション]** ノードと **[デバイス コレクション]** ノードに表示されます。  
 
- 최근에 본 컬렉션은 **자산 및 준수** 작업 영역에 있는 **사용자** 노드 및 **장치** 노드에 표시됩니다.  
+ 最近確認したコレクションは、**[資産とコンプライアンス]** ワークスペースの **[ユーザー]** ノードと **[デバイス]** ノードに表示されます。  
 
-아래에는 컬렉션 사용 방식의 몇 가지 예가 나와 있습니다.  
+コレクションの使用例を次に示します。  
 
-|작업|예|  
+|操作|例|  
 |---------|-------|  
-|리소스 그룹화|조직의 계층을 기반으로 하여 리소스를 그룹화하는 컬렉션을 만들 수 있습니다.<br /><br /> 예를 들어 "런던 본사" Active Directory OU(조직 구성 단위)에 있는 모든 컴퓨터의 컬렉션을 만들 수 있습니다. 이러한 유형의 컬렉션을 만드는 방법에 대한 자세한 내용은 [System Center Configuration Manager에서 컬렉션을 만드는 방법](../../../../core/clients/manage/collections/create-collections.md)을 참조하세요.<br /><br /> 이 컬렉션을 사용하여 Endpoint Protection 설정 구성, 장치 전원 관리 설정 구성 또는 Configuration Manager 클라이언트 설치와 같은 작업을 수행할 수 있습니다.|  
-|[응용 프로그램 배포]|Microsoft Office 2013이 설치되지 않은 모든 컴퓨터의 컬렉션을 만든 다음 해당 컬렉션의 모든 컴퓨터에 Microsoft Office 2013을 배포할 수 있습니다.<br /><br /> 또한 응용 프로그램 요구 사항을 사용하여 이 작업을 수행할 수 있습니다. 자세한 내용은 [System Center Configuration Manager에서 응용 프로그램을 만드는 방법](../../../../apps/deploy-use/create-applications.md)을 참조하세요.|  
-|[클라이언트 설정 관리](../../../../core/clients/deploy/about-client-settings.md)|Configuration Manager의 기본 클라이언트 설정은 모든 장치 및 모든 사용자에게 적용되지만, 특정 장치 컬렉션 또는 사용자 컬렉션에 적용되는 사용자 지정 클라이언트 설정을 만들 수 있습니다.<br /><br /> 예를 들어 소수의 장치만을 제외한 모든 장치에서 원격 제어를 사용할 수 있도록 하려면 원격 제어를 허용하도록 기본 클라이언트 설정을 구성한 다음 원격 제어를 허용하지 않는 사용자 지정 클라이언트 설정을 구성하여 예외 클라이언트 컬렉션에 해당 설정을 배포합니다. |  
-|[전원 관리](../power/introduction-to-power-management.md)|컬렉션별로 특정 전원 설정을 구성할 수 있습니다.|  
-|[역할 기반 관리](../../../../core/servers/deploy/configure/configure-role-based-administration.md)|컬렉션을 사용하여 Configuration Manager 콘솔의 다양한 기능에 액세스할 수 있는 사용자 그룹을 제어할 수 있습니다.|  
-|[유지 관리 기간](../../../../core/clients/manage/collections/use-maintenance-windows.md)|유지 관리 기간을 사용하면 장치 컬렉션 멤버에 대해 다양한 Configuration Manager 작업을 수행할 수 있는 기간을 정의할 수 있습니다. |  
+|リソースのグループ化|組織の階層に基づいてリソースをグループ化したコレクションを作成できます。<br /><br /> たとえば、"ロンドン本社" Active Directory 組織単位 (OU) にあるすべてのコンピューターのコレクションを作成することができます。 この種類のコレクションを作成する方法の詳細については、「[Configuration Manager でのコレクションの作成方法](../../../../core/clients/manage/collections/create-collections.md)」を参照してください。<br /><br /> このコレクションは、たとえば、Endpoint Protection の設定を構成したり、デバイス電源管理設定を構成したり、Configuration Manager クライアントをインストールしたりする場合に使用できます。|  
+|[アプリケーションの展開]|Microsoft Office 2013 がインストールされていないすべてのコンピューターのコレクションを作成し、このソフトウェアをそのコレクションのすべてのコンピューターにインストールすることができます。<br /><br /> アプリケーションの要件を使用してこのタスクを実行することもできます。 詳細については、「[System Center Configuration Manager でアプリケーションを作成する方法](../../../../apps/deploy-use/create-applications.md)」を参照してください。|  
+|[クライアント設定の管理](../../../../core/clients/deploy/about-client-settings.md)|Configuration Manager の既定のクライアント設定はすべてのデバイスとすべてのユーザーに適用されますが、デバイスのコレクションまたはユーザーのコレクションに適用されるカスタム クライアント設定を作成することもできます。<br /><br /> たとえば、リモート コントロールを一部のデバイスを除くすべてのデバイスで使用可能にする場合、リモート コントロールを許可するよう既定のクライアント設定を構成し、その後、リモート コントロールを許可しないカスタム クライアント設定を構成し、それらを例外的なクライアントのコレクションに展開することができます。 |  
+|[電源管理](../power/introduction-to-power-management.md)|コレクションごとに特定の電源設定を構成することができます。|  
+|[役割に基づいた管理](../../../../core/servers/deploy/configure/configure-role-based-administration.md)|コレクションを使用して Configuration Manager コンソールの各種機能にアクセスできるユーザーのグループを制御します。|  
+|[メンテナンス期間](../../../../core/clients/manage/collections/use-maintenance-windows.md)|メンテナンス期間を使用すると、デバイス コレクションのメンバーに対して Configuration Manager の各種の操作が実行できる期間を定義できます。 |  
 
 
-## <a name="collection-types-in-configuration-manager"></a>Configuration Manager의 컬렉션 유형  
- Configuration Manager에는 일반 작업을 위한 기본 제공 컬렉션이 포함되어 있으며, 사용자 지정 컬렉션을 만들 수도 있습니다.   
+## <a name="collection-types-in-configuration-manager"></a>Configuration Manager のコレクションの種類について  
+ Configuration Manager には、一般的な操作のコレクションが組み込まれています。カスタム コレクションを作成することもできます。   
 
-### <a name="built-in-collections"></a>기본 제공 컬렉션  
- 기본적으로 Configuration Manager에는 다음과 같은 컬렉션이 포함되며, 이러한 컬렉션은 수정할 수 없습니다.  
+### <a name="built-in-collections"></a>組み込みコレクション  
+ 既定では、Configuration Manager は、次の変更できないコレクションを含みます。  
 
-|**컬렉션 이름**|설명|  
+|**コレクション名**|説明|  
 |-------------------------|-----------------|  
-|**모든 사용자 그룹**|Active Directory 보안 그룹 검색을 사용하여 검색된 사용자 그룹을 포함합니다.|  
-|**모든 사용자**|Active Directory 사용자 검색을 사용하여 검색된 사용자를 포함합니다.|  
-|**모든 사용자 및 사용자 그룹**|모든 사용자 및 모든 사용자 그룹 컬렉션을 포함합니다. 이 컬렉션은 가장 큰 범위의 사용자 및 사용자 그룹 리소스를 포함합니다.|  
-|**모든 데스크톱 및 서버 클라이언트**|Configuration Manager 클라이언트가 설치된 서버 및 데스크톱 장치를 포함합니다. 멤버 자격이 하트비트 검색을 통해 유지 관리됩니다.|  
-|**모든 모바일 장치**|Configuration Manager에서 관리하는 모바일 장치를 포함합니다. 멤버 자격은 성공적으로 사이트에 할당되거나 Exchange Server 커넥터에서 검색된 모바일 장치로 제한됩니다.|  
-|**모든 시스템**|모든 데스크톱 및 서버 클라이언트, 모든 모바일 장치 및 모든 알 수 없는 컴퓨터 컬렉션 및 Microsoft Intune에서 등록된 모든 모바일 장치를 포함합니다. 이 컬렉션은 가장 큰 범위의 장치 리소스를 포함합니다.|  
-|**알 수 없는 모든 컴퓨터**|여러 컴퓨터 플랫폼에 대한 일반 컴퓨터 레코드를 포함합니다. 이 컬렉션을 사용하면 작업 순서 및 PXE 부팅, 부팅 가능한 미디어 또는 사전 준비된 미디어를 사용하여 운영 체제를 배포할 수 있습니다.|  
+|**すべてのユーザー グループ**|Active Directory セキュリティ グループの探索を使用して検出されたユーザー グループを含みます。|  
+|**すべてのユーザー**|Active Directory ユーザー探索を使用して検出されたユーザーを含みます。|  
+|**すべてのユーザーおよびユーザー グループ**|すべてのユーザーとすべてのユーザー グループのコレクションを含みます。 このコレクションには、ユーザーおよびユーザー グループのリソースの最大スコープが含まれています。|  
+|**すべてのデスクトップ クライアントおよびサーバー クライアント**|Configuration Manager クライアントをインストールした、サーバー デバイスとデスクトップ デバイスを含みます。 メンバーシップは、定期探索で保守されます。|  
+|**すべてのモバイル デバイス**|Configuration Manager が管理するモバイル デバイスが含まれます。 メンバーシップは、正常にサイトに割り当てられている、あるいは Exchange Server コネクタによって検出されたモバイル デバイスに制限されます。|  
+|**すべてのシステム**|すべてのデスクトップ クライアントおよびサーバー クライアントのコレクション、すべてのモバイル デバイスのコレクション、すべての不明なコンピューターのコレクション、および Microsoft Intune によって登録されているすべてのモバイル デバイスを含みます。 このコレクションには、デバイス リソースの最大限のスコープが含まれます。|  
+|**すべての不明なコンピューター**|複数のコンピューター プラットフォームの一般的コンピューター レコードを含みます。 このコレクションを使用すると、タスク シーケンスと、PXE ブート、起動可能メディア、または事前設定されたメディアを使用して、オペレーティング システムを展開することができます。|  
 
-### <a name="custom-collections"></a>사용자 지정 컬렉션  
- Configuration Manager에서 사용자 지정 컬렉션을 만드는 경우 해당 컬렉션의 멤버 자격은 [System Center Configuration Manager에서 컬렉션을 만드는 방법](../../../../core/clients/manage/collections/create-collections.md)에서 설명하는 것처럼 하나 이상의 컬렉션 규칙에 의해 결정됩니다. 
+### <a name="custom-collections"></a>カスタム コレクション  
+ 「[System Center Configuration Manager でコレクションを作成する方法](../../../../core/clients/manage/collections/create-collections.md)」に説明されているように Configuration Manager にカスタム コレクションを作成すると、そのコレクションのメンバーシップは 1 つ以上のコレクション ルールによって決定されます。 
 
