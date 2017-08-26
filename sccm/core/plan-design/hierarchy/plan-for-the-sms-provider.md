@@ -1,201 +1,205 @@
 ---
-title: "SMS 공급자 계획 | Microsoft 문서"
-description: "SMS 공급자를 사용하여 System Center Configuration Manager를 관리하는 방법에 대해 알아봅니다."
+title: "SMS プロバイダーの計画 | Microsoft Docs"
+description: "System Center Configuration Manager の管理に SMS プロバイダーを使用する方法について説明します。"
 ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 11ac851696ce52642412ca29e4873679d50cf398
 ms.openlocfilehash: 547dc39d5659c7c2e6f1ca670caddc127dbf22c4
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2017
+ms.contentlocale: ja-jp
+ms.lasthandoff: 05/17/2017
+
+
 ---
-# <a name="plan-for-the-sms-provider-for-system-center-configuration-manager"></a>System Center Configuration Manager용 SMS 공급자에 대한 계획
+# <a name="plan-for-the-sms-provider-for-system-center-configuration-manager"></a>System Center Configuration Manager の SMS プロバイダーの計画
 
-*적용 대상: System Center Configuration Manager(현재 분기)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager를 관리하려면 **SMS 공급자**의 인스턴스에 연결하는 Configuration Manager 콘솔을 사용합니다. 기본적으로 SMS 공급자는 중앙 관리 사이트나 기본 사이트를 설치할 때 사이트 서버에 설치됩니다. 
-
-
-##  <a name="BKMK_PlanSMSProv"></a> SMS 공급자 정보  
- SMS 공급자는 사이트의 Configuration Manager 데이터베이스에 **읽기** 및 **쓰기** 권한을 할당하는 WMI(Windows Management Instrumentation) 공급자입니다.  
-
--   각 중앙 관리 사이트 및 기본 사이트에는 SMS 공급자가 하나 이상 있어야 합니다. 필요에 따라 추가 공급자를 설치할 수 있습니다.  
--   **SMS Admins** 보안 그룹은 SMS 공급자에 대한 액세스를 제공합니다. Configuration Manager는 사이트 서버와 SMS 공급자 인스턴스를 설치하는 각 컴퓨터에 자동으로 이 그룹을 만듭니다.  
-
--   보조 사이트에서는 SMS 공급자를 지원하지 않습니다.  
+System Center Configuration Manager の管理には、**SMS プロバイダー**のインスタンスに接続する Configuration Manager コンソールを使用する必要があります。 既定では、中央管理サイトまたはプライマリ サイトのインストール時に、SMS プロバイダーがサイト サーバーにインストールされます。 
 
 
-Configuration Manager 관리자는 SMS 공급자를 사용하여 데이터베이스에 저장된 정보에 액세스합니다. 관리자는 이 작업을 위해 Configuration Manager 콘솔, 리소스 탐색기, 도구 및 사용자 지정 스크립트를 사용할 수 있습니다. SMS 공급자는 Configuration Manager 클라이언트와 상호 작용하지 않습니다. Configuration Manager 콘솔에서 사이트에 연결할 때 Configuration Manager 콘솔은 사이트 서버에서 WMI를 쿼리하여 사용할 SMS 공급자의 인스턴스를 찾습니다.  
+##  <a name="BKMK_PlanSMSProv"></a> SMS プロバイダーについて  
+ SMS プロバイダーは、サイトで Configuration Manager データベースの**読み取り**と**書き込み**アクセス権を割り当てる、Windows Management Instrumentation (WMI) プロバイダーの 1 つです。  
 
- SMS 공급자는 Configuration Manager 보안을 적용하는 데 도움이 됩니다. SMS 공급자는 Configuration Manager 콘솔을 실행하는 관리자가 보기 권한이 있다는 정보만 반환합니다.  
+-   それぞれの中央管理サイトとプライマリ サイトには、SMS プロバイダーが少なくとも 1 つなければなりません。 必要に応じて、さらにプロバイダーをインストールできます。  
+-   **SMS Admins** セキュリティ グループには、SMS プロバイダーへのアクセス権が与えられています。 SMS プロバイダーのインスタンスがインストールされている各コンピューターとサイト サーバーには、このグループが Configuration Manager によって自動的に作成されます。  
+
+-   セカンダリ サイトでは SMS プロバイダーはサポートされていません。  
+
+
+Configuration Manager の管理ユーザーは、SMS プロバイダーを使用して、データベースに格納されている情報にアクセスします。 そのための手段として、管理者は Configuration Manager コンソールやリソース エクスプローラー、ツール、カスタム スクリプトを利用できます。 SMS プロバイダーは、Configuration Manager クライアントとは動作しません。 Configuration Manager コンソールをサイトに接続すると、Configuration Manager コンソールはサイト サーバーで WMI のクエリを実行し、使用する SMS プロバイダーのインスタンスを見つけます。  
+
+ SMS プロバイダーは、Configuration Manager にセキュリティを強制するのを助けます。 Configuration Manager コンソールを実行している管理ユーザーが見ることのできる情報だけが、データベースから返されます。  
 
 > [!IMPORTANT]  
->  사이트에 대한 SMS 공급자를 보유하는 각 컴퓨터가 오프라인 상태인 경우 Configuration Manager 콘솔은 해당 사이트의 데이터베이스에 연결할 수 없습니다.  
+>  サイトの SMS プロバイダーがインストールされているコンピューターがオフラインのときは、Configuration Manager コンソールから、そのサイトのデータベースに接続することはできません。  
 
- SMS 공급자를 관리하는 방법에 대한 자세한 내용은 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md)(System Center Configuration Manager 인프라 수정)의 [Manage the SMS Provider](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider)(SMS 공급자 관리)를 참조하세요.  
+ SMS プロバイダーを管理する方法については、「 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider) 」の「 [Manage the SMS Provider](../../../core/servers/manage/modify-your-infrastructure.md)」をご覧ください。  
 
-## <a name="prerequisites-to-install-the-sms-provider"></a>SMS 공급자를 설치하기 위한 필수 구성 요소  
+## <a name="prerequisites-to-install-the-sms-provider"></a>SMS プロバイダーをインストールする前提条件  
 
- SMS 공급자를 지원하려면  
+ SMS プロバイダーをサポートするには  
 
--   컴퓨터는 사이트 서버 및 사이트 데이터베이스 사이트 시스템과 양방향 트러스트 관계가 있는 도메인에 있어야 합니다.  
+-   サイト サーバーおよびサイト データベース サイト システムと双方向の信頼関係があるドメインにある。  
 
--   컴퓨터는 다른 사이트의 사이트 시스템 역할을 보유해서는 안됩니다.  
+-   別のサイトのサイト システムの役割がインストールされていない。  
 
--   컴퓨터는 어떤 사이트의 SMS 공급자도 보유해서는 안됩니다.  
+-   どのサイトの SMS プロバイダーの役割もインストールされていない。  
 
--   컴퓨터에서 사이트 서버에 대해 지원되는 운영 체제를 실행해야 합니다.  
+-   サイト サーバーによってサポートされているオペレーティング システムを実行している。  
 
--   컴퓨터에는 SMS 공급자와 함께 설치되는 Windows ADK(Windows 자동 배포 키트) 구성 요소를 지원할 수 있도록 사용 가능한 디스크 공간이 650MB 이상 있어야 합니다. Windows ADK 및 SMS 공급자에 대한 자세한 내용은 이 항목에서 [SMS 공급자에 대한 운영 체제 배포 요구 사항](#BKMK_WAIKforSMSProv) 섹션을 참조하세요.  
+-   SMS プロバイダーと共にインストールされる Windows 自動展開キット (Windows ADK) コンポーネントをサポートするために、650 MB 以上の空きディスク領域が必要です。 Windows ADK と SMS プロバイダーの詳細については、このトピックの「 [SMS プロバイダーのオペレーティング システム展開要件](#BKMK_WAIKforSMSProv) 」を参照してください。  
 
-##  <a name="bkmk_location"></a> SMS 공급자 위치  
- 사이트를 설치할 때, 사이트의 첫 번째 SMS 공급자를 자동으로 설치합니다. SMS 공급자에 대해 다음과 같은 지원되는 위치를 지정할 수 있습니다.  
+##  <a name="bkmk_location"></a> SMS プロバイダの場所  
+ サイトをインストールするときに、そのサイトの 1 つ目の SMS プロバイダーが自動的にインストールされます。 SMS プロバイダーのインストール先として、次のいずれかを指定できます。  
 
--   사이트 서버 컴퓨터  
+-   サイト サーバー コンピューター  
 
--   사이트 데이터베이스 컴퓨터  
+-   サイト データベース コンピューター  
 
--   SMS 공급자가 없는 서버급 컴퓨터 또는 다른 사이트의 사이트 시스템 역할  
-
-
-사이트에 설치된 각 SMS 공급자의 위치를 보려면 사이트 **속성** 대화 상자의 **일반** 탭을 선택합니다.  
-
- 각 SMS 공급자에서 여러 요청의 동시 연결을 지원합니다. 이 연결에 대한 제한 사항은 SMS 공급자 컴퓨터에서 사용할 수 있는 서버 연결 수와 SMS 공급자 컴퓨터에서 연결 요청을 처리하기 위한 가용 리소스입니다.  
-
- 사이트가 설치된 후 사이트 서버에서 다시 설치 프로그램을 실행하여 기존 SMS 공급자의 위치를 변경하거나 해당 사이트에 추가 SMS 공급자를 설치할 수 있습니다. 한 컴퓨터에는 SMS 공급자를 하나만 설치할 수 있고 한 컴퓨터는 둘 이상의 사이트에서 SMS 공급자를 설치할 수 없습니다.  
-
- 다음 내용을 참고하면 지원되는 각 위치마다 SMS 공급자를 설치하는 방식의 장점과 단점을 확인할 수 있습니다.  
-
- **Configuration Manager 사이트 서버**  
-
--   **장점:**  
-
-    -   SMS 공급자는 사이트 데이터베이스 컴퓨터의 시스템 리소스를 사용하지 않습니다.  
-
-    -   이 위치를 통해 사이트 서버 또는 사이트 데이터베이스 컴퓨터가 아닌 컴퓨터에 배치된 SMS 공급자보다 더 나은 성능을 낼 수 있습니다.  
-
--   **단점:**  
-
-    -   SMS 공급자는 사이트 서버 작업에 전용으로 사용될 수 있는 시스템 및 네트워크 리소스를 사용합니다.  
+-   SMS プロバイダーや別のサイトのサイト システムの役割がインストールされていない、サーバー向けコンピューター  
 
 
-**사이트 데이터베이스를 호스팅하는 SQL Server**  
+サイトにインストールされている各 SMS プロバイダーの場所を確認するには、サイトの **[プロパティ]** ダイアログ ボックスの **[全般]** タブを選択します。  
 
--   **장점:**  
+ 1 つの SMS プロバイダーが同時に複数の要求を受信できます。 この同時接続は、SMS プロバイダーのコンピューターで使用できるサーバー接続の数と、接続要求を取り扱えるリソースによって制限されます。  
 
-    -   SMS 공급자는 사이트 서버의 사이트 시스템 리소스를 사용하지 않습니다.  
+ サイトをインストールした後で、サイト サーバーでセットアップをもう一度実行して、既存の SMS プロバイダーの場所を変えたり、同じサイトに追加の SMS プロバイダーをインストールしたりできます。 1 台のコンピューターに、1 つだけのサイトの SMS プロバイダーを 1 つだけインストールできます。  
 
-    -   충분한 서버 리소스를 사용할 수 있는 경우 이 위치는 세 위치 중 최상의 성능을 낼 수 있습니다.  
+ 次の情報に基づいて、サポートされているそれぞれの場所に SMS プロバイダーをインストールすることの長所と欠点を特定します。  
 
--   **단점:**  
+ **Configuration Manager サイト サーバー**  
 
-    -   SMS 공급자는 사이트 데이터베이스 작업에 전용으로 사용될 수 있는 시스템 및 네트워크 리소스를 사용합니다.  
+-   **利点:**  
 
-    -   사이트 데이터베이스가 SQL Server의 클러스터된 인스턴스에서 호스트되는 경우에는 이 위치를 사용할 수 없습니다.  
+    -   SMS プロバイダーは、サイト データベース コンピューターのシステム リソースを使用しません。  
 
+    -   サイト サーバーまたはサイト データベース以外のコンピューターに SMS プロバイダーをインストールした場合より、パフォーマンスが高くなります。  
 
-**사이트 서버 또는 사이트 데이터베이스 컴퓨터가 아닌 컴퓨터**  
+-   **欠点:**  
 
--   **장점:**  
-
-    -   SMS 공급자는 사이트 서버 또는 사이트 데이터베이스 컴퓨터 리소스를 사용하지 않습니다.  
-
-    -   이러한 유형의 위치를 사용하면 추가 SMS 공급자를 배포하여 고가용성 연결을 구현할 수 있습니다.  
-
--   **단점:**  
-
-    -   SMS 공급자 성능은 사이트 서버 및 사이트 데이터베이스 컴퓨터와 조정하기 위해 필요한 추가 네트워크 활동으로 인해 감소할 수도 있습니다.  
-
-    -   이 서버는 사이트 데이터베이스 컴퓨터와 Configuration Manager 콘솔이 설치된 모든 컴퓨터에서 항상 액세스할 수 있어야 합니다.  
-
-    -   이 위치에서는 원래 다른 서비스에 전용으로 사용될 시스템 리소스를 사용할 수 있습니다.  
-
-##  <a name="BKMK_SMSProvLanguages"></a> SMS 공급자 언어 정보  
- SMS 공급자는 설치된 컴퓨터의 표시 언어와 독립적으로 작동합니다.  
-
- 관리자 또는 Configuration Manager 프로세스에서 SMS 공급자를 사용하여 데이터를 요청하는 경우 SMS 공급자는 요청하는 컴퓨터의 운영 체제 언어와 일치하는 형식으로 해당 데이터의 반환을 시도합니다.
-
-언어를 일치시키는 방법은 다소 간접적입니다. SMS 공급자는 정보를 한 언어에서 다른 언어로 변역하지 않습니다. 대신 데이터가 Configuration Manager 콘솔에 표시되기 위해 반환될 때 데이터의 표시 언어는 개체 및 저장소 유형의 원본에 따라 달라집니다.  
-
- 개체에 대한 데이터가 데이터베이스에 저장되면 사용 가능한 언어는 다음 사항에 따라 달라집니다.  
-
--   Configuration Manager에서 만드는 개체는 다중 언어 지원을 통해 데이터베이스에 저장됩니다. 이 개체는 설치 프로그램을 실행할 때 개체가 만들어진 사이트에 구성된 언어를 사용하여 저장됩니다. 이러한 개체는 해당 개체에 대해 해당 언어가 사용 가능한 경우 요청 컴퓨터의 표시 언어로 Configuration Manager 콘솔에 표시됩니다. 개체를 요청하는 컴퓨터의 표시 언어로 표시할 수 없는 경우 이 개체는 기본 언어인 영어로 표시됩니다.  
-
--   관리자가 만드는 개체는 해당 개체를 만드는 데 사용된 언어로 데이터베이스에 저장됩니다. 이 개체는 Configuration Manager 콘솔에 동일한 언어로 표시됩니다. 이 개체는 SMS 공급자에 의해 번역되지 않으며 다중 언어 옵션을 제공하지 않습니다.  
-
-##  <a name="BKMK_MultiSMSProv"></a> 다중 SMS 공급자 사용  
- 사이트 설치가 완료되면 사이트에 대한 추가 SMS 공급자를 설치할 수 있습니다. 추가 SMS 공급자를 설치하려면 사이트 서버에서 Configuration Manager 설치 프로그램을 실행합니다. 다음 조건 중 하나라도 충족할 경우 추가 SMS 공급자를 설치하는 것이 좋습니다.  
-
--   동시에 Configuration Manager 콘솔을 실행하고 사이트에 연결하는 다수의 관리자가 있습니다.  
-
--   Configuration Manager SDK 또는 기타 제품을 사용하므로 SMS 공급자를 자주 호출할 가능성이 있습니다.  
-
--   SMS 공급자의 고가용성을 보장하려 합니다.  
+    -   SMS プロバイダーが、サイト サーバーで占有できるはずのシステム リソースとネットワーク リソースを使用します。  
 
 
-사이트에 여러 SMS 공급자가 설치되고 연결 요청이 발생할 때 사이트에서 각 새 연결 요청이 설치된 SMS 공급자를 사용하도록 무작위로 할당됩니다. 특정 연결 세션과 함께 사용할 SMS 공급자 위치는 지정할 수 없습니다.  
+**サイト データベースをホストする SQL Server**  
 
-> [!NOTE]  
->  각 SMS 공급자 위치의 장단점을 고려하세요. SMS 공급자를 각 새 연결에 사용할 때마다 이러한 고려 사항과 제어할 수 없는 정보의 균형을 맞추세요.  
+-   **利点:**  
 
-예를 들어 Configuration Manager 콘솔을 사이트에 처음 연결할 때 연결 과정에서 사이트 서버의 WMI를 쿼리하여 콘솔이 사용할 SMS 공급자의 인스턴스를 확인합니다. 이러한 특정 SMS 공급자 인스턴스는 해당 Configuration Manager 콘솔 세션이 종료될 때까지 Configuration Manager 콘솔에 의해 사용 중인 상태로 유지됩니다. 네트워크에서 SMS 공급자 컴퓨터를 사용할 수 없게 되어 세션이 종료될 경우, Configuration Manager 콘솔을 다시 연결하면 사이트에서는 단순히 연결할 SMS 공급자 인스턴스 식별 작업을 반복합니다. 이때, 사용할 수 없는 같은 SMS 공급자 컴퓨터가 할당될 수도 있습니다. 이 경우 사용 가능한 SMS 공급자 컴퓨터가 할당될 때까지 Configuration Manager 콘솔을 다시 연결할 수 있습니다.  
+    -   SMS プロバイダーは、サイト サーバーのサイト システム リソースを使用しません。  
 
-##  <a name="BKMK_AboutSMSAdmins"></a> SMS Admins 그룹 정보  
- SMS Admins 그룹으로 SMS 공급자에 대한 관리자 권한을 제공할 수 있습니다. 이 그룹은 사이트가 설치될 때 사이트 서버에, 그리고 SMS 공급자를 설치하는 각 컴퓨터에 자동으로 만들어집니다. SMS Admins 그룹에 대한 추가 정보:  
+    -   サーバーのリソースが十分ある場合は、3 つのインストール先のうち、一番高いパフォーマンスが得られます。  
 
--   컴퓨터가 구성원 서버인 경우 SMS Admins 그룹은 로컬 그룹으로 만들어집니다.  
+-   **欠点:**  
 
--   컴퓨터가 도메인 컨트롤러인 경우 SMS Admins 그룹은 도메인 로컬 그룹으로 만들어집니다.  
+    -   SMS プロバイダーが、サイト データベースで占有できるはずのシステム リソースとネットワーク リソースを使用します。  
 
--   SMS 공급자가 컴퓨터에서 제거되어도 SMS Admins 그룹은 컴퓨터에서 제거되지 않습니다.  
+    -   サイト データベースが SQL Server のクラスター化されたインスタンスでホストされている場合、この場所を使用することはできません。  
 
 
-사용자가 SMS 공급자에 성공적으로 연결하려면 해당 사용자 계정은 SMS Admins 그룹의 구성원이어야 합니다. Configuration Manager 콘솔에 구성하는 각 관리자는 각 사이트 서버의 SMS Admins 그룹과 계층 내 각 SMS 공급자 컴퓨터에 자동으로 추가됩니다. Configuration Manager 콘솔에서 관리자를 삭제하면 이 관리자는 각 사이트 서버의 SMS Admins 그룹과 계층 내 각 SMS 공급자 컴퓨터의 SMS Admins 그룹에서 제거됩니다.  
+**サイト サーバーまたはサイト サーバー データベース以外のコンピューター**  
 
-사용자가 SMS 공급자에 성공적으로 연결하면 해당 사용자가 액세스하거나 관리할 수 있는 Configuration Manager 리소스가 역할 기반 관리를 통해 결정됩니다.  
+-   **利点:**  
 
-WMI 컨트롤 MMC 스냅인을 사용하면 SMS Admins 그룹 권한을 보고 구성할 수 있습니다. 기본적으로는 **모든 사용자** 에게 **메서드 실행**, **공급자 쓰기**및 **계정 사용** 권한이 있습니다. SMS 공급자에 연결하는 사용자는 Configuration Manager 콘솔에 정의된 역할 기반 관리 보안 권한에 따라 사이트 데이터베이스의 데이터에 대한 액세스할 수 있는 권한을 부여받습니다. SMS Admins 그룹에는 **Root\SMS** 네임스페이스에 대한 **계정 사용** 및 **원격으로부터 사용 가능** 권한이 명시적으로 부여됩니다.  
+    -   SMS プロバイダーは、サイト サーバーやサイト データベースのコンピューターのリソースを使用しません。  
+
+    -   追加の SMS プロバイダーをインストールして、接続の可用性を上げるのに便利です。  
+
+-   **欠点:**  
+
+    -   SMS プロバイダーがサイト サーバーおよびサイト データベース コンピューターと連携する必要があります。そのため、ネットワーク アクティビティが発生し、SMS プロバイダーのパフォーマンスが低下する可能性があります。  
+
+    -   サイト データベース コンピューター、および Configuration Manager コンソールがインストールされているすべてのコンピューターから、常に、この場所にアクセスできなければなりません。  
+
+    -   SMS プロバイダーが、他のサービスで占有できるはずのシステム リソースを使用します。  
+
+##  <a name="BKMK_SMSProvLanguages"></a> SMS プロバイダーの言語について  
+ SMS プロバイダーは、そのインストール先のコンピューターの表示言語とは独立して動作します。  
+
+ 管理者ユーザーまたは Configuration Manager プロセスが、SMS プロバイダーでデータを要求すると、SMS プロバイダーは、要求元のコンピューターのオペレーティング システムの言語に合う形式でデータを返そうとします。
+
+このとき、対応する言語の選び方には、やや回りくどい方法が用いられています。 SMS プロバイダーが情報を別の言語に翻訳することはありません。 その代わり、Configuration Manager コンソールで表示するデータを返すときは、そのデータの表示言語が、オブジェクトとソースと記憶域の種類によって決まります。  
+
+ オブジェクトのデータがどのようにデータベースに保存されたかによって、使用可能な言語が異なります。  
+
+-   Configuration Manager で作成したオブジェクトをデータベースに保存するときは、複数の言語がサポートされています。 オブジェクトは、セットアップを実行するときにオブジェクトが作成されたサイトで構成されている言語で保存されます。 これらのオブジェクトは、要求元のコンピューターの表示言語がオブジェクトで使用できる場合は、その言語で Configuration Manager コンソールに表示されます。 要求元のコンピューターの表示言語でオブジェクトを表示できない場合は、既定の言語、つまり英語で表示されます。  
+
+-   管理ユーザーが作成したオブジェクトは、作成時に使われた言語でデータベースに保存されます。 これらのオブジェクトが Configuration Manager コンソールに表示されるときにも、同じ言語が使われます。 SMS プロバイダーで変換することはできず、多言語のオプションもありません。  
+
+##  <a name="BKMK_MultiSMSProv"></a> 複数の SMS プロバイダーの使用  
+ サイトのインストールが完了したら、そのサイト用に追加の SMS プロバイダーをインストールすることができます。 追加の SMS プロバイダーをインストールするには、サイト サーバーで Configuration Manager のセットアップを実行します。 次の場合に、SMS プロバイダーの追加インストールを検討してください。  
+
+-   Configuration Manager コンソールを実行する管理ユーザーが多数存在し、サイトに同時に接続することになる。  
+
+-   SMS プロバイダーを頻繁に呼び出す可能性のある Configuration Manager SDK、または同様の製品を導入する予定である。  
+
+-   SMS プロバイダーの可用性を高くしたい。  
+
+
+サイトに複数の SMS プロバイダーをインストールした場合は、新しい接続要求が発生するたびに、インストール済みの SMS プロバイダーのいずれかに無作為に割り当てられます。 特定の接続セッションで、特定の場所にある SMS プロバイダーを使用するように指定することはできません。  
 
 > [!NOTE]  
->  원격 Configuration Manager 콘솔을 사용하는 각 관리자에게는 사이트 서버 컴퓨터 및 SMS 공급자 컴퓨터에 대한 원격 활성화 DCOM 권한이 필요합니다. 이 권한은 모든 사용자나 그룹에게 부여할 수 있지만 간편한 관리를 위해 SMS Admins 그룹에게만 부여하는 것이 좋습니다. 자세한 내용은 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md)(System Center Configuration Manager 인프라 수정) 항목의 [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole)(원격 Configuration Manager 콘솔에 대한 DCOM 권한 구성) 섹션을 참조하세요.  
+>  SMS プロバイダーの各インストール先の長所と欠点、および新しい接続で使用する SMS プロバイダーを制御できないということを考え合わせて、 複数の SMS プロバイダーの使用を計画してください。  
+
+たとえば、Configuration Manager コンソールをサイトに初めて接続すると、サイト サーバーで WMI のクエリが実行されて、コンソールで使用する SMS プロバイダーのインスタンスが特定されます。 SMS プロバイダーのこの特定のインスタンスは、Configuration Manager コンソールのセッションが終了するまで Configuration Manager コンソールで使用されたままになります。 SMS プロバイダーのコンピューターがネットワークで使用できなくなったためにセッションが終了した場合には、Configuration Manager コンソールを再接続したときに、接続先の SMS プロバイダーのインスタンスを特定するタスクが単純に繰り返されます。 したがって、前と同じ SMS プロバイダーのコンピューター、つまり使用できない SMS プロバイダーが、割り当てられることもあり得ます。 このような場合は、使用可能な SMS プロバイダーのコンピューターが割り当てられるまで、Configuration Manager コンソールの接続を繰り返すことになります。  
+
+##  <a name="BKMK_AboutSMSAdmins"></a> SMS Admins グループについて  
+ SMS 管理者グループは、SMS プロバイダーの管理アクセス権を持っています。 このグループは、サイトをインストールするときに、サイト サーバーおよび SMS プロバイダーの各インストール先コンピューターに自動的に作成されます。 SMS 管理者グループの特長は、次のとおりです。  
+
+-   コンピューターがメンバー サーバーの場合は、SMS 管理者グループがローカル グループとして作成されます。  
+
+-   コンピューターがドメイン コントローラーの場合は、SMS 管理者グループがドメイン ローカル グループとして作成されます。  
+
+-   コンピューターから SMS プロバイダーをアンインストールしても、SMS 管理者グループは、そのコンピューターから削除されません。  
 
 
-##  <a name="BKMK_SMSProvNamespace"></a> SMS 공급자 네임스페이스 정보  
-SMS 공급자의 구조는 WMI 스키마에 의해 정의됩니다. 스키마 네임스페이스는 SMS 공급자 스키마 내 Configuration Manager 데이터의 위치를 설명합니다. 다음 표에서는 SMS 공급자에서 사용되는 공통 네임스페이스 일부를 보여 줍니다.  
+ユーザーが SMS プロバイダーに正しく接続するには、そのユーザー アカウントが SMS 管理者グループのメンバーでなければなりません。 Configuration Manager コンソールで管理ユーザーを構成すると、その管理ユーザーが、階層にある各サイト サーバーと SMS プロバイダーのコンピューターの SMS 管理者グループに自動的に追加されます。 一方、Configuration Manager コンソールで管理ユーザーを削除した場合は、その管理ユーザーが、階層にある各サイト サーバーと SMS プロバイダーのコンピューターの SMS 管理者グループから削除されます。  
 
-|네임스페이스|설명|  
+ユーザーが SMS プロバイダーに正常に接続すると、そのユーザーの役割に基づいて、Configuration Manager のどのリソースにアクセスして管理できるかが決められます。  
+
+SMS 管理者グループの権限とアクセス許可を表示して構成するには、WMI コントロールという MMC スナップインを使います。 既定では、 **Everyone** に [ **メソッドの実行**]、[ **プロバイダーによる書き込み**]、および　[ **アカウントの有効化** ] アクセス許可が割り当てられます。 ユーザーが SMS プロバイダーに接続すると、そのユーザーに Configuration Manager コンソールで定義されている、ユーザーの役割に基づいたセキュリティ権限に従って、サイト データベースのデータへのアクセス権が付与されます。 SMS Admins グループには、**Root\SMS** 名前空間に対するアクセス許可 "**アカウントの有効化**" と "**リモートの有効化**" が明示的に付与されます。  
+
+> [!NOTE]  
+>  リモートの Configuration Manager コンソールを使用する管理ユーザーには、サイト サーバー コンピューターと SMS プロバイダーのコンピューターの DCOM をリモートから有効にするアクセス許可が必要です。 これらの権限はどのグループにも付与することができますが、権限の管理が簡単になるように、SMS 管理者グループに付与することをお勧めします。 詳細については、「 [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 」トピックの「 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) 」セクションを参照してください。  
+
+
+##  <a name="BKMK_SMSProvNamespace"></a> SMS プロバイダーの名前空間について  
+SMS プロバイダーの構造は、WMI スキーマによって決まります。 SMS プロバイダーのスキーマ内の Configuration Manager データの場所は、スキーマの名前空間で記述します。 次の表に、SMS プロバイダーで使用する一般的な名前空間をいくつか示します。  
+
+|Namespace|説明|  
 |---------------|-----------------|  
-|Root\SMS\site_*&lt;사이트 코드\>*|Configuration Manager 콘솔, 리소스 탐색기, Configuration Manager 도구 및 스크립트에 광범위하게 사용되는 SMS 공급자입니다.|  
-|Root\SMS\SMS_ProviderLocation|사이트의 SMS 공급자 컴퓨터 위치입니다.|  
-|Root\CIMv2|하드웨어 및 소프트웨어 인벤토리 도중 WMI 네임스페이스 정보가 인벤토리에 저장되는 위치입니다.|  
-|Root\CCM|Configuration Manager 클라이언트 구성 정책 및 클라이언트 데이터입니다.|  
-|root\CIMv2\SMS|인벤토리 클라이언트 에이전트에서 수집하는 인벤토리 보고 클래스의 위치입니다. 이러한 설정은 컴퓨터 정책 평가 도중 클라이언트에 의해 컴파일되며, 컴퓨터의 클라이언트 설정 구성을 기반으로 합니다.|  
+|Root \sms\site_*&lt;サイト コード\>*|Configuration Manager コンソール、リソース エクスプローラー、Configuration Manager のツール、スクリプトによって使用される SMS プロバイダー。|  
+|Root\SMS\SMS_ProviderLocation|サイトの SMS プロバイダーのコンピューターの場所。|  
+|Root\CIMv2|ハードウェアとソフトウェアのインベントリ中に、WMI 名前空間情報がインベントリされる場所。|  
+|Root\CCM|Configuration Manager クライアントの構成ポリシーとクライアント データ。|  
+|root\CIMv2\SMS|インベントリのクライアント エージェントによって収集されるインベントリ レポート クラスの場所。 これらの設定は、コンピューターのポリシーの評価中にクライアントによってコンパイルされ、コンピューターのクライアント設定の構成に基づいています。|  
 
-##  <a name="BKMK_WAIKforSMSProv"></a> SMS 공급자에 대한 운영 체제 배포 요구 사항  
-SMS 공급자의 인스턴스를 설치하는 컴퓨터에는 사용할 Configuration Manager 버전에서 요구하는 Windows ADK의 필수 버전이 있어야 합니다.  
+##  <a name="BKMK_WAIKforSMSProv"></a> SMS プロバイダーのオペレーティング システム展開要件  
+SMS プロバイダーのインスタンスをインストールするコンピューターには、使用する Configuration Manager のバージョンで必要な Windows ADK のバージョンが必要です。  
 
- -   Configuration Manager 버전 1511에는 Windows ADK의 Windows 10 RTM(10.0.10240) 버전이 필요합니다.  
+ -   たとえば Configuration Manager のバージョン 1511 では、Windows ADK の Windows 10 RTM (10.0.10240) バージョンが必要です。  
 
- -   이 요구 사항에 대한 자세한 내용은 [운영 체제 배포를 위한 인프라 요구 사항](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)을 참조하세요.  
+ -   要件の詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)」を参照してください。  
 
-운영 체제 배포를 관리하는 경우 Windows ADK는 다음과 같은 다양한 작업을 SMS 공급자에서 완료할 수 있도록 허용합니다.  
+Windows ADK をインストールすることで、オペレーティング システムの展開を管理するときに、SMS プロバイダーでさまざまな操作を行えるようになります。その例を次に示します。  
 
--   WIM 파일 정보 보기  
+-   WIM ファイルの詳細を表示する。  
 
--   기존 부팅 이미지에 드라이버 파일 추가  
+-   既存のブート イメージにドライバー ファイルを追加する。  
 
--   부팅 .ISO 파일 만들기  
+-   ブート用 ISO ファイルを作成する。  
 
 
-Windows ADK를 설치하려면 SMS 공급자를 설치하는 각 컴퓨터에 최대 650MB의 사용 가능한 디스크 공간이 필요합니다. 이 많은 디스크 공간은 Configuration Manager가 Windows PE 부팅 이미지를 설치하는 데 필요합니다.  
+Windows ADK をインストールするには、SMS プロバイダーのインストール先コンピューターに 650 MB 以上の空きディスク領域が必要です。 このような大きな空きディスク領域が必要なのは、Configuration Manager によって Windows PE ブート イメージがインストールされるためです。  
+
