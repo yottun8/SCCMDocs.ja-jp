@@ -6,25 +6,21 @@ ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
-caps.latest.revision: 13
-caps.handback.revision: 0
+caps.latest.revision: "13"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
+ms.openlocfilehash: 3921748d3c99c2a35b670f3ca121dc7ab92d43bc
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
-ms.openlocfilehash: 4bb1f4a068563a5fe6f384708e10269dcd3229da
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/07/2017
 ---
-
-
 # <a name="device-guard-management-with-configuration-manager"></a>Configuration Manager を使用した Device Guard 管理
 
 *適用対象: System Center Configuration Manager (Current Branch)*
@@ -97,6 +93,9 @@ Device Guard ポリシー内で特定のファイルまたはフォルダーに�
     - オペレーティング システムの展開イメージに含まれているアプリを信頼する 
 7.  **[次へ]** をクリックし、ウィザードを完了します。
 
+>[!IMPORTANT]
+>信頼するファイルやフォルダーの追加は、1706 以降のバージョンの Configuration Manager クライアントを実行するクライアント PC でのみサポートされます。 いずれかの追加ルールが Device Guard ポリシーに含まれており、そのポリシーを、以前のバージョンの Configuration Manager クライアントを実行するクライアント PC に展開した場合、ポリシーは適用されません。 この問題は、これらの古いクライアントをアップグレードすると解決します。 追加ルールを含まないポリシーは、古いバージョンの Configuration Manager クライアントにも適用できます。
+
 ## <a name="how-to-deploy-a-device-guard-policy"></a>Device Guard ポリシーの展開方法
 1.  Configuration Manager コンソールで、 **[資産とコンプライアンス]**をクリックします。
 2.  **[資産とコンプライアンス]** ワークスペースで **[Endpoint Protection]** を展開してから、**[Device Guard ポリシー]** をクリックします。
@@ -130,7 +129,6 @@ Device Guard ポリシーの処理を監視するには、クライアント PC 
 - Configuration Manager を利用し、Device Guard ポリシーでクライアント PC の CCI を有効にするとき、ローカル管理者権限を持つユーザーが Device Guard ポリシーを回避したり、その他の方法で信頼されていないソフトウェアを実行したりすることをポリシーは防げません。 
 - ローカル管理者権限を持つユーザーが CCI を無効にすることを防ぐ唯一の方法は、署名付きのバイナリ ポリシーを展開することです。 これはグループ ポリシーで可能ですが、現在のところ、Configuration Manager ではサポートされていません。
 - クライアント PC に管理インストーラーとして Configuration Manager を設定するとき、AppLocker ポリシーが使用されます。 AppLocker は管理インストーラーの識別にのみ利用されます。すべての強制は CCI で行われます。 
-
 
 
 
