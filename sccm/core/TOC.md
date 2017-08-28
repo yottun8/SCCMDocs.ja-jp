@@ -99,11 +99,11 @@
 ###  [セキュリティの構成](plan-design/security/configure-security.md)
 
 #    作業開始
-
 ##   [ラボでの Configuration Manager の評価](get-started/evaluate-with-lab-environment.md)
 ###  [ラボのセットアップ](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [1708 の機能](get-started/capabilities-in-technical-preview-1708.md)
 ###  [1707 の機能](get-started/capabilities-in-technical-preview-1707.md)
 ###  [1706 の機能](get-started/capabilities-in-technical-preview-1706.md)
 ###  [1705 の機能](get-started/capabilities-in-technical-preview-1705.md)
