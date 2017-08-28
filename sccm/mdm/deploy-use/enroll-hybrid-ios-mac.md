@@ -2,26 +2,24 @@
 title: "System Center Configuration Manager と Microsoft Intune を使った iOS および Mac のハイブリッド デバイス管理のセットアップ | Microsoft Docs"
 description: "System Center Configuration Manager と Microsoft Intune を使用して iOS デバイス管理を設定します。"
 ms.custom: na
-ms.date: 07/31/2017
+ms.date: 08/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
+ms.openlocfilehash: d84d6f3dba65f1d8114ef2eef9f19a2bb5389027
+ms.sourcegitcommit: 9a6f8e028fb5eb2e752da70f42a5b548339bd8f4
 ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
-ms.openlocfilehash: 1a93a542f55d02df20865fa4ae8d7590dd9be753
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="set-up-ios-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune で iOS ハイブリッド デバイス管理の設定します
 
@@ -67,9 +65,20 @@ iOS の登録を有効にして APNs 証明書をアップロードします。
 3.  **[Microsoft Intune サブスクリプションのプロパティ]** ダイアログ ボックスで、 **[iOS]** タブを選択し、 **[iOS の登録を有効にする]** チェック ボックスをオンにします。  
 4.  **[参照]**をクリックし、Apple からダウンロードした APNs 証明書 (.cer) ファイルに移動します。 Configuration Manager に APNs 証明書情報が表示されます。 **[OK]** をクリックして、APNs 証明書を Intune に保存します。  
 
-> [!NOTE]
-> **登録制限**機能はこの時点では使用できません。 
+セットアップが完了したら、デバイスを登録する方法をユーザーに知らせる必要があります。 「[デバイスの登録についてユーザーに通知する事柄](https://docs.microsoft.com/intune/end-user-educate)」に関する記事をご覧ください。 この情報は、Microsoft Intune と Configuration Manager の両方によって管理されるモバイル デバイスに適用されます。
+
+## <a name="configure-enrollment-restrictions"></a>登録制限を構成する
+
+個人所有のデバイスをブロックすることで、登録できるデバイスを制限できます。 これにより、ユーザーが会社のポータルを使用して、個人のデバイスを登録するのを防ぐことができます。 個人所有のデバイスをブロックすると、登録できるデバイスは次に示すものに限定されます。
+- [事前に宣言されたデバイス](predeclare-devices-with-hardware-id.md)
+- [Apple Configurator の管理対象デバイス](ios-hybrid-enrollment-using-apple-configurator.md)
+- [Device Enrollment Program (DEP) の管理対象デバイス](ios-device-enrollment-program-for-hybrid.md)
+- [デバイス登録マネージャー アカウント](enroll-devices-with-device-enrollment-manager.md)で登録されているデバイス
+
+### <a name="to-enable-enrollment-restrictions"></a>登録制限を有効にするには
+1.  Configuration Manager コンソールの **[管理]** ワークスペースで、**[クラウド サービス]**  >  **[Microsoft Intune サブスクリプション]** に移動します。
+2.  **[ホーム]** タブの **[サブスクリプション]** グループで、**[プラットフォームの構成]**  >  **[iOS]** の順にクリックします。
+3.  **[個人所有のデバイスをブロックする]** を選択して、登録を会社所有のデバイスに制限します。
 
 > [!div class="button"]
 [< 前のステップ](create-service-connection-point.md)  [次のステップ >](set-up-additional-management.md)
-

@@ -6,21 +6,19 @@ ms.date: 2/6/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7df9d0f-fbde-47eb-97e7-3d29536424fa
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e592a732259147ee71d404a68982c28e5138e243
 ms.openlocfilehash: 0e982d08d54af39b13f553fc531a200f921e94a6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>System Center Configuration Manager でコンテンツへのアクセスを管理する
 
@@ -28,13 +26,13 @@ ms.lasthandoff: 05/17/2017
 
 System Center Configuration Manager でコンテンツを展開する前に、配布ポイントのコンテンツにクライアントからどのようにアクセスすることになるかを考えてください。 この記事では、その際に使用されるアカウントについて説明します。
 
--   **ネットワーク アクセス アカウント**: クライアントが配布ポイントに接続してコンテンツにアクセスするために使用します。 既定では、最初にクライアントのコンピューター アカウントが試されます。
+-   **ネットワーク アクセス アカウント**。 クライアントが配布ポイントに接続してコンテンツにアクセスするために使用します。 既定では、クライアントは最初にコンピューター アカウントを使用します。
 
      このアカウントは、リモート フォレスト内のソース配布ポイントからコンテンツを取得するためにプル配布ポイントによっても使用されます  
 
--   **パッケージ アクセス アカウント**: 既定では、Configuration Manager は、**Users** および **Administrators** という名前の組み込みアカウントに対して配布ポイント上のコンテンツへのアクセスを許可します。 追加のアクセス許可を設定してアクセスを制限することができます。  
+-   **パッケージ アクセス アカウント**。 既定では、Configuration Manager は、**ユーザー**および **管理者**という名前の組み込みアカウントに対して配布ポイント上のコンテンツへのアクセスを許可します。 追加のアクセス許可を設定してアクセスを制限することができます。  
 
--   **マルチキャスト接続アカウント**: オペレーティング システムの展開に使用します。  
+-   **マルチキャスト接続アカウント**。 オペレーティング システムの展開に使用します。  
 
 ##  <a name="bkmk_NAA"></a> ネットワーク アクセス アカウント  
  ネットワーク アクセス アカウントは、クライアント コンピューターが、そのローカルのコンピューター アカウントで配布ポイントのコンテンツにアクセスできない場合に使用します。 たとえば、このアカウントは、ワークグループ クライアントや信頼されていないドメインのコンピューターに適用されます。 このアカウントは、オペレーティング システムの展開中に、オペレーティング システムをインストールするコンピューターにドメインのコンピューター アカウントがない場合にも使用されます。  
@@ -121,4 +119,3 @@ System Center Configuration Manager でコンテンツを展開する前に、�
 
 > [!IMPORTANT]  
 >  このアカウントに対話型サインイン権限を付与しないでください。  
-

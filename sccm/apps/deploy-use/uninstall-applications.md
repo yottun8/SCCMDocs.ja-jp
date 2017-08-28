@@ -6,21 +6,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0ea3edaa-27c6-4391-9896-cd97d9c5d06d
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 2d0c0bc2e4e080e6061d8d3fe6cafd264d95c42a
 ms.openlocfilehash: f42fee5974567f667c015a6b0bf34d9a9a7d2dab
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="uninstall-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager でのアプリケーションのアンインストール
 
@@ -64,15 +63,9 @@ ms.openlocfilehash: f42fee5974567f667c015a6b0bf34d9a9a7d2dab
         > [!NOTE]  
         >  展開の種類の作成ウィザードの **[全般]** ページで **[展開の種類の情報を手動で指定する]** オプションを選択した場合にのみ、**[コンテンツ]** ページが表示されます。  
 
-    -   *[*<*展開の種類名*> プロパティ]** ダイアログ ボックスの **[プログラム]** タブで、コマンド ラインを指定して **[プログラムをアンインストールする]** フィールドのアプリケーションをアンインストールします。  
+    -   *[*<*展開の種類名*> プロパティ**] **ダイアログ ボックスの **[プログラム]** タブで、コマンド ラインを指定して** [プログラムをアンインストールする] フィールドのアプリケーションをアンインストールします。  
 
 2.  アプリケーションを展開し、ソフトウェアの展開ウィザードの **[展開設定]** ページで展開の操作の **[アンインストール]** を選択します。  
 
     > [!NOTE]  
     >  **[アンインストール]**の展開の操作を選択した場合には、展開の目的は自動的に **[必須]**に構成されます。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

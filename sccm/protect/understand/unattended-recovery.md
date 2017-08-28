@@ -6,8 +6,7 @@ ms.date: 6/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 828c31d1-3d70-4412-b1a8-c92e7e504d39
@@ -15,19 +14,15 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f7cd9c71287d62c9f5d36e2f032bc2a6065572ae
 ms.openlocfilehash: b5a1a1d165a6888bc26e809666d2331ff3c24d68
-ms.contentlocale: ja-jp
-ms.lasthandoff: 06/06/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/07/2017
 ---
+# <a name="unattended-site-recovery-for-configuration-manager"></a>Configuration Manager のサイトの無人回復   
 
-# Configuration Manager のサイトの無人回復
-<a id="unattended-site-recovery-for-configuration-manager" class="xliff"></a>   
-
-*適用対象: System Center Configuration Manager (Current Branch)*
- Configuration Manager の中央管理サイトまたはプライマリ サイトの[無人回復](/sccm/protect/understand/recover-sites#site-recovery-procedures)を実行するには、無人インストール スクリプトを作成し、**/script** コマンド オプションを指定してセットアップを実行します。 このスクリプトで、セットアップ ウィザードで入力するのと同じ種類の情報を指定します。ただし、既定の設定はありません。 使用する回復方法に該当するセットアップ キーの値をすべて指定する必要があります。
+*適用対象: System Center Configuration Manager (Current Branch)* Configuration Manager の中央管理サイトまたはプライマリ サイトの[無人回復](/sccm/protect/understand/recover-sites#site-recovery-procedures)を実行するには、無人インストール スクリプトを作成し、**/script** コマンド オプションを指定してセットアップを実行します。 このスクリプトで、セットアップ ウィザードで入力するのと同じ種類の情報を指定します。ただし、既定の設定はありません。 使用する回復方法に該当するセットアップ キーの値をすべて指定する必要があります。
 
  /script Setup コマンド ライン オプションを使用するには、初期化ファイルを作成して、/script Setup コマンド ライン オプションの後ろに、その初期化ファイル名を入力する必要があります。 **.ini** というファイル名拡張子が付いている限り、ファイルの名前は重要ではありません。 コマンド ラインでセットアップ初期化ファイルを指定するときは、そのファイルの完全パスを入力する必要があります。 たとえば、セットアップ初期化ファイルが *setup.ini* という名前で、*C:\setup フォルダー*にある場合、コマンド ラインは 
 
@@ -40,8 +35,7 @@ ms.lasthandoff: 06/06/2017
 
  次のセクションにある表を、サイトの無人回復用スクリプトを記述するときの参考にしてください。 この表には、スクリプトで指定できるキーとその値、必須かどうかの別、該当するインストールの方法、およびキーの説明が示されています。
 
-## 中央管理サイトの無人回復
-<a id="recover-a-central-administration-site-unattended" class="xliff"></a>
+## <a name="recover-a-central-administration-site-unattended"></a>中央管理サイトの無人回復
  中央管理サイトを回復するための無人セットアップ用スクリプト ファイルを構成するには、次の情報を使用します。
 
  **Identification**
@@ -208,8 +202,7 @@ ms.lasthandoff: 06/06/2017
     -   **値:** &lt;*SSBPortNumber*>
     -   **詳細:** SQL Server で使用する SQL Server Service Broker (SSB) のポート番号を指定します。 通常、TCP ポート 4022 に構成しますが、別のポートもサポートされています。 障害が発生する前に使用していた SSB ポート番号と同じ番号を指定する必要があります。
 
-## プライマリ サイトの無人回復
-<a id="recover-a-primary-site-unattended" class="xliff"></a>
+## <a name="recover-a-primary-site-unattended"></a>プライマリ サイトの無人回復
  中央管理サイトを回復するための無人セットアップ用スクリプト ファイルを構成するには、次の情報を使用します。
 
  **Identification**
@@ -389,4 +382,3 @@ ms.lasthandoff: 06/06/2017
     -   **必須:** いいえ
     -   **値:** &lt;*タイムアウト*>
     -   **詳細:** プライマリ サイトから中央管理サイトに接続するときのタイムアウトの最大値 (分) を指定します。 たとえば、プライマリ サイトから中央管理サイトに接続できなかった場合は、プライマリ サイトは、WaitForCASTimeout キーで指定された時間が経過するまで、CASRetryInterval キーの値に従って、中央管理サイトとの接続を再試行します。 0 ～ 100 に指定できます。
-

@@ -2,10 +2,9 @@
 title: Technical Preview 1707 | Microsoft Docs
 description: "System Center Configuration Manager の Technical Preview バージョン 1707 で使用できる機能について説明します。"
 ms.custom: na
-ms.date: 07/28/2017
+ms.date: 08/14/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -14,12 +13,11 @@ ms.assetid: cb405ba0-8792-4ab7-988b-2f835f3a9550
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+ms.openlocfilehash: 7ee2fd78c6c502394016ba077d42714041ad01c6
+ms.sourcegitcommit: 10f17229c5a359f040cb7f8f5e7bd868a34ac086
 ms.translationtype: HT
-ms.sourcegitcommit: 6e890862fd02786b675e2b7abaca7ede7c0e977a
-ms.openlocfilehash: 91fd850f055a7e892a54487307109a291e336696
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/15/2017
 ---
 # <a name="capabilities-in-technical-preview-1707-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1707 の機能
 
@@ -33,6 +31,17 @@ ms.lasthandoff: 07/28/2017
 -   **Issue Name**. Details
     Workaround details.
 -->
+
+**この Technical Preview の既知の問題:**
+-   **サイト サーバーがパッシブ モードの場合、プレビュー バージョン 1707 への更新に失敗します**。 プレビュー バージョン 1706 を実行し、[プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)の場合、プレビュー サイトをバージョン 1707 に正常に更新するには、パッシブ モードのサイト サーバーをアンインストールする必要があります。 パッシブ モードのサイト サーバーは、サイトでバージョン 1707 が実行された後に再インストールできます。
+
+  パッシブ モードのサイト サーバーをアンインストールするには、次の手順を実行します。
+  1. コンソールで**[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
+  2. **[サイト システムの役割]** ウィンドウで、**[サイト サーバー]**の役割を右クリックし、**[役割の削除]** を選択します。
+  3. パッシブ モードのサイト サーバーを右クリックし、**[削除]** を選択します。
+  4. サイト サーバーのアンインストール後に、アクティブなプライマリ サイト サーバーで **CONFIGURATION_MANAGER_UPDATE** のサービスを再起動します。
+
+
 
 **このバージョンでお試しいただける新機能を次に示します。**  
 
@@ -89,13 +98,13 @@ Windows Defender Application Guard の詳細については、[このブログ�
 
 前回の Technical Preview では、[Configuration Manager コンソールから PowerShell スクリプトを作成し、実行](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console)できる新しい機能を導入しました。
 今回の Technical Preview では、この機能をさらに拡張しています。 Configuration Manager で PowerShell スクリプトを読み込み、スクリプトの作成ウィザードであらゆるパラメーターを表示するようになりました。 スクリプトの実行時に使用されるパラメーター値をウィザードで指定できます。 あるいは、パラメーターは空のまま残すことができます。 その場合、スクリプトの実行時にパラメーター値を指定する必要があります。
+今回の Technical Preview では、スクリプトで必要なパラメーターを指定する必要があります。 今後のリリースでは、スクリプト パラメーターの指定は省略可能になる予定です。
 
 ### <a name="try-it-out"></a>試してみましょう。
 
-1. 指示に従い、[Configuration Manager コンソールから PowerShell スクリプトを作成し、実行](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console)してください。 
+1. 指示に従い、[Configuration Manager コンソールから PowerShell スクリプトを作成し、実行](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console)してください。
 2. **スクリプトの作成ウィザード**の新しい **[スクリプト パラメーター]** ページで、パラメーターを選択し、**[編集]** をクリックします。
 3. 選択したパラメーターのパラメーター値を指定し、**[OK]** をクリックします。
 4. ウィザードを完了します。
 
 スクリプトを実行すると、設定したパラメーター値があればそれが使用されます。
-

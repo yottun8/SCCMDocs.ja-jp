@@ -2,32 +2,29 @@
 title: "デバイス登録マネージャーを使用したデバイスの登録 - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager を使用して、会社所有のデバイスをデバイス登録マネージャー アカウントで登録します。"
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 08/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7573590763c68a4c97d388be1e64054c318da9cc
-ms.openlocfilehash: 8c491636925670732e6af67d8c1c741e4793ef96
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.openlocfilehash: c90ecca1ee46523d16fc1cf11495e40707631e03
+ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>デバイス登録マネージャーと Configuration Manager を使用したデバイスの登録
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-組織は Intune を使用して、単一のユーザー アカウントで多数のモバイル デバイスを管理することができます。 *デバイス登録マネージャー (DEM)* アカウントは、最大で 1,000 台のデバイスを登録できる特別なユーザー アカウントです。 既存のユーザーを DEM アカウントに追加し、特別な DEM 機能を与えます。 登録される各デバイスは 1 つのライセンスを使用します。 このアカウントで登録したデバイスは、個人用デバイスではなく、ユーザー アフィニティのない共有デバイスとして使用することをお勧めします。  
+組織は Intune を使用して、単一のユーザー アカウントで多数のモバイル デバイスを管理することができます。 *デバイス登録マネージャー* (DEM) アカウントは、デバイスの登録に使用される特別なユーザー アカウントです。 既存のユーザーを DEM アカウントに追加し、特別な DEM 機能を与えます。 登録される各デバイスは 1 つのライセンスを使用します。 このアカウントで登録したデバイスは、個人用デバイスではなく、ユーザー アフィニティのない共有デバイスとして使用することをお勧めします。  
 
 ## <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager"></a>デバイス登録マネージャーを使った企業所有のデバイスの登録  
  ストア マネージャーやスーパーバイザーにデバイス登録マネージャーのユーザー アカウントを割り当てると、以下を実行できるようにすることができます。  
@@ -67,24 +64,14 @@ ms.lasthandoff: 05/17/2017
 7.  デバイス登録マネージャーでは、Bring Your Own Device (BYOD) シナリオの場合にエンド ユーザーが会社ポータルで実行する際と同じ手順で、モバイル デバイスを登録できるようになります。  
 
 #### <a name="delete-a-device-enrollment-manager-from-intune"></a>Intune からのデバイス登録マネージャーの削除  
+デバイス登録マネージャーを削除していも、登録済みのデバイスに影響はありません。 デバイス登録マネージャーを削除した場合:  
+- 登録済みデバイスの登録が解除されることはありません  
+- 登録済みデバイスは引き続き完全に管理されます  
+- 削除されたデバイス登録マネージャー アカウントの資格情報は依然正しいので、会社ポータルにログオンしてアプリにアクセスできます  
+- 削除されたデバイス登録マネージャー アカウントの資格情報では、デバイスのワイプとインベントリからの削除を実行できません  
+- 削除されたデバイス登録マネージャー アカウントと登録済みデバイスの関係は残りますが、追加のデバイスは登録できません
 
 1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
-
 2.  **[管理]** ワークスペースで、 **[クラウド サービス]**を展開して **[Microsoft Intune サブスクリプション]**をクリックします。 デバイス登録マネージャーを追加する Microsoft Intune サブスクリプションを選び、**[プロパティ]** をクリックします。  
-
 3.  [Microsoft Intune サブスクリプションのプロパティ] ダイアログ ボックスで、**[デバイス登録マネージャー]** タブをクリックします。  
-
 4.  削除するデバイス登録マネージャーを**検索**し、**[削除]** をクリックして、**[OK]** をクリックします。  
-
- デバイス登録マネージャーを削除していも、登録済みのデバイスに影響はありません。 デバイス登録マネージャーを削除した場合:  
-
--   登録済みデバイスに影響はありません  
-
--   登録済みデバイスは引き続き完全に管理されます  
-
--   削除されたデバイス登録マネージャー アカウントの資格情報は依然正しいので、会社ポータルにログオンしてアプリにアクセスできます  
-
--   削除されたデバイス登録マネージャー アカウントの資格情報では、デバイスのワイプとインベントリからの削除を実行できません  
-
--   削除されたデバイス登録マネージャー アカウントと登録済みデバイスの関係は残りますが、追加のデバイスは登録できません
-

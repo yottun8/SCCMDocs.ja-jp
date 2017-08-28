@@ -8,17 +8,14 @@ ms.date: 05/01/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
+ms.openlocfilehash: 84b617b3e83636ab4578174ef40e786dcf1178cd
+ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
 ms.translationtype: HT
-ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
-ms.openlocfilehash: df6e809aadd3d69275c137c92629ab8426bbdcb7
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/21/2017
 ---
-
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager のクラウド管理ゲートウェイを設定する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
@@ -26,6 +23,9 @@ ms.lasthandoff: 08/04/2017
 バージョン 1610 以降では、Configuration Manager でクラウド管理ゲートウェイを設定するプロセスに次の手順が含まれます。
 
 ## <a name="step-1-configure-required-certificates"></a>手順 1: 必要な証明書を構成する
+
+> [!TIP]  
+> 証明書を要求する前に、希望する Azure ドメイン名 (例: GraniteFalls.CloudApp.Net) が一意であることを確認します。 これを行うには、[Microsoft Azure Portal](https://manage.windowsazure.com) にログオンして、**[新規]** をクリックし、**[クラウド サービス]**、**[カスタム作成]** の順に選択します。 **[URL]** フィールドに希望するドメイン名を入力します (サービスを作成するチェックマークはクリックしないでください)。 ドメイン名が使用できるか、またはすでに別のサービスで使用されているかがポータルに表示されます。
 
 ## <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>オプション 1 (推奨): 一般のグローバルに信頼された証明書プロバイダー (VeriSign など) からのサーバー認証証明書を使用します。
 
@@ -43,7 +43,6 @@ ms.lasthandoff: 08/04/2017
 
 クラウド管理ゲートウェイのカスタム SSL 証明書は、クラウドベースの配布ポイントで行うのと同じ方法で作成できます。 次の操作以外は、「[クラウドベースの配布ポイント用のサービス証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)」の指示に従います。
 
-- 新しい証明書テンプレートを設定する際に、Configuration Manager サーバー用に設定したセキュリティ グループに **読み取り**と**登録**のアクセス許可を与えます。
 - カスタムの Web サーバー証明書を要求する場合、クラウド管理ゲートウェイを Azure パブリック クラウド上で使用するときは **cloudapp.net** で終わる証明書の共通名の FQDN を入力し、Azure Government Cloud で使用するときは **usgovcloudapp.net** で終わる証明書の共通名の FQDN を入力します。
 
 
@@ -69,6 +68,9 @@ ms.lasthandoff: 08/04/2017
 
 7.  既定の証明書形式を使用して証明書のエクスポート ウィザードを完了します。 作成したルート証明書の名前と場所をメモします。 この情報は、[後の手順](#step-4-set-up-cloud-management-gateway)でクラウド管理ゲートウェイを構成する際に必要になります。
 
+>[!NOTE]
+>クライアント証明書が下位証明機関によって発行されている場合は、チェーン内の各証明書でこの手順を繰り返す必要があります。
+
 ## <a name="step-3-upload-the-management-certificate-to-azure"></a>手順 3: 管理証明書を Azure にアップロードする
 
 Azure 管理証明書は、Configuration Manager が Azure API にアクセスして、クラウド管理ゲートウェイを構成するために必要です。 管理証明書をアップロードする方法の詳細と手順については、Azure のドキュメントの次の記事を参照してください。
@@ -80,74 +82,6 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 >[!IMPORTANT]
 >管理証明書に関連付けられているサブスクリプション ID を必ずコピーしてください。 これは、[次の手順](#step-4-set-up-cloud-management-gateway)で、Configuration Manager コンソールでクラウド管理ゲートウェイを構成する際に必要になります。
 
-### <a name="subordinate-ca-certificates-and-azure"></a>下位 CA 証明書と Azure
-
-証明書が下位 CA (subCA) によって発行されており、エンタープライズ PKI インフラストラクチャがインターネット上にない場合は、次の手順を使用して証明書を Azure にアップロードします。 
-
-1. Azure Portal で、クラウド管理ゲートウェイを設定した後に、クラウド管理ゲートウェイ サービスを見つけて **[証明書]** タブに移動します。 このタブで下位 CA 証明書をアップロードします。 下位 CA 証明書が複数ある場合は、すべてアップロードする必要があります。 
-2. 証明書をアップロードしたら、その拇印を記録します。 
-3. 次のスクリプトを使用して、サイト データベースに拇印を追加します。
-    
-```
-
-    DIM serviceCName
-    DIM subCAThumbprints
-
-    ' Verify arguments
-    IF WScript.Arguments.Count <> 2 THEN
-    WScript.StdOut.WriteLine "Usage: CScript UpdateSubCAThumbprints.vbs <ServiceCName> <SubCA cert thumbprints, separated by ;>"
-    WScript.Quit 1
-    END IF
-
-    'Get arguments
-    serviceCName = WScript.Arguments.Item(0)
-    subCAThumbprints = WScript.Arguments.Item(1)
-
-    'Find SMS Provider
-    WScript.StdOut.WriteLine "Searching for SMS Provider for local site..."
-    SET objSMSNamespace = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\sms")
-    SET results = objSMSNamespace.ExecQuery("SELECT * From SMS_ProviderLocation WHERE ProviderForLocalSite = true")
-
-    'Process the results
-    FOR EACH var in results
-    siteCode = var.SiteCode
-    NEXT
-
-    IF siteCode = "" THEN
-    WScript.StdOut.WriteLine "Failed to locate SMS provider."
-    WScript.Quit 1
-    END IF
-
-    WScript.StdOut.WriteLine "SiteCode = " & siteCode 
-
-    ' Connect to the SMS namespace
-    SET objWMIService = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\sms\site_" & siteCode)
-
-    'Get instance of SMS_AzureService
-    DIM query
-    query = "SELECT * From SMS_AzureService WHERE ServiceType = 'CloudProxyService' AND ServiceCName = '" & serviceCName & "'"
-    WScript.StdOut.WriteLine "Run WQL query: " &  query
-    SET objInstances = objWMIService.ExecQuery(query)
-
-    IF IsNull(objInstances) OR (objInstances.Count = 0) THEN
-    WScript.StdOut.WriteLine "Failed to get Azure_Service instance."
-    WScript.Quit 1
-    END IF
-
-    FOR EACH var IN objInstances
-    SET azService = var
-    NEXT
-
-    WScript.StdOut.WriteLine "Update [SubCACertThumbprint] to " & subCAThumbprints
-
-    'Update SubCA cert thumbprints
-    azService.Properties_.item("SubCACertThumbprint") = subCAThumbprints
-
-    'Save data back to provider
-    azService.Put_
-
-    WScript.StdOut.WriteLine "[SubCACertThumbprint] is updated successfully."
-```
 
 
 ## <a name="step-4-set-up-cloud-management-gateway"></a>手順 4: クラウド管理ゲートウェイを設定する
@@ -173,7 +107,7 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 
     - カスタム SSL 証明書からエクスポートした秘密キー (.pfx ファイル) を指定します。
 
-    - クライアント証明書からエクスポートしたルート証明書を指定します。
+    - クライアント証明書からエクスポートしたルート証明書 (および下位証明書) を指定します。 ウィザードには、最大で 2 つのルート証明書と 4 つの下位証明書を指定できます。
 
     -   新しい証明書テンプレートを作成するときに使用したのと同じサービス名の FQDN を指定します。 使用している Azure クラウドに基づいて、FQDN サービス名の次のサフィックスのいずれかを指定する必要があります。
 
@@ -207,7 +141,7 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 
 ## <a name="step-7-configure-roles-for-cloud-management-gateway-traffic"></a>手順 7: クラウド管理ゲートウェイ トラフィック向けに役割を構成する
 
-クラウド管理ゲートウェイを設定する最後のステップは、クラウド管理ゲートウェイ トラフィックを受け入れるサイト システムの役割を構成することです。 Tech Preview 1606 の場合、クラウド管理ゲートウェイでは管理ポイント、配布ポイント、およびソフトウェアの更新ポイントの役割のみがサポートされています。 各役割を個別に構成する必要があります。
+クラウド管理ゲートウェイを設定する最後のステップは、クラウド管理ゲートウェイ トラフィックを受け入れるサイト システムの役割を構成することです。 クラウド管理ゲートウェイでは、管理ポイントとソフトウェアの更新ポイントの役割のみがサポートされています。 各役割を個別に構成する必要があります。
 
 1. Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動します。
 
@@ -215,7 +149,7 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 
 3. 役割を選択し、**[プロパティ]** を選択します。
 
-4. 役割のプロパティ シートの [クライアント接続] で　**[HTTPS]** を選択し、**[Configuration Manager のクラウド管理ゲートウェイ トラフィックを許可する]** の横のチェック ボックスをオンにして **[OK]** を選択します。 残りの役割にこれらの手順を繰り返します。
+4. 役割のプロパティ シートの [クライアント接続] で、**[Configuration Manager のクラウド管理ゲートウェイ トラフィックを許可する]** の横のチェック ボックスをオンにして **[OK]** を選択します。 残りの役割にこれらの手順を繰り返します。 セキュリティのベスト プラクティスとして、**HTTPS** オプションを有効にすることもお勧めしますが、必須ではありません。
 
 ## <a name="step-8-configure-clients-for-cloud-management-gateway"></a>手順 8: クラウド管理ゲートウェイ向けにクライアントを構成する
 
@@ -237,4 +171,3 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 ## <a name="next-steps"></a>次のステップ
 
 [クラウド管理ゲートウェイのクライアントの監視](monitor-clients-cloud-management-gateway.md)
-

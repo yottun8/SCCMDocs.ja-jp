@@ -6,22 +6,19 @@ ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 11ac851696ce52642412ca29e4873679d50cf398
 ms.openlocfilehash: 547dc39d5659c7c2e6f1ca670caddc127dbf22c4
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-for-the-sms-provider-for-system-center-configuration-manager"></a>System Center Configuration Manager の SMS プロバイダーの計画
 
@@ -62,7 +59,7 @@ Configuration Manager の管理ユーザーは、SMS プロバイダーを使用
 
 -   SMS プロバイダーと共にインストールされる Windows 自動展開キット (Windows ADK) コンポーネントをサポートするために、650 MB 以上の空きディスク領域が必要です。 Windows ADK と SMS プロバイダーの詳細については、このトピックの「 [SMS プロバイダーのオペレーティング システム展開要件](#BKMK_WAIKforSMSProv) 」を参照してください。  
 
-##  <a name="bkmk_location"></a> SMS プロバイダの場所  
+##  <a name="bkmk_location"></a> SMS プロバイダーの場所  
  サイトをインストールするときに、そのサイトの 1 つ目の SMS プロバイダーが自動的にインストールされます。 SMS プロバイダーのインストール先として、次のいずれかを指定できます。  
 
 -   サイト サーバー コンピューター  
@@ -150,7 +147,7 @@ Configuration Manager の管理ユーザーは、SMS プロバイダーを使用
 サイトに複数の SMS プロバイダーをインストールした場合は、新しい接続要求が発生するたびに、インストール済みの SMS プロバイダーのいずれかに無作為に割り当てられます。 特定の接続セッションで、特定の場所にある SMS プロバイダーを使用するように指定することはできません。  
 
 > [!NOTE]  
->  SMS プロバイダーの各インストール先の長所と欠点、および新しい接続で使用する SMS プロバイダーを制御できないということを考え合わせて、 複数の SMS プロバイダーの使用を計画してください。  
+>  SMS プロバイダーの各場所の長所と欠点を考慮してください。 また、新しい接続に使用する SMS プロバイダーは制御できないということと考え合わせて、これらの使用を計画してください。  
 
 たとえば、Configuration Manager コンソールをサイトに初めて接続すると、サイト サーバーで WMI のクエリが実行されて、コンソールで使用する SMS プロバイダーのインスタンスが特定されます。 SMS プロバイダーのこの特定のインスタンスは、Configuration Manager コンソールのセッションが終了するまで Configuration Manager コンソールで使用されたままになります。 SMS プロバイダーのコンピューターがネットワークで使用できなくなったためにセッションが終了した場合には、Configuration Manager コンソールを再接続したときに、接続先の SMS プロバイダーのインスタンスを特定するタスクが単純に繰り返されます。 したがって、前と同じ SMS プロバイダーのコンピューター、つまり使用できない SMS プロバイダーが、割り当てられることもあり得ます。 このような場合は、使用可能な SMS プロバイダーのコンピューターが割り当てられるまで、Configuration Manager コンソールの接続を繰り返すことになります。  
 
@@ -202,4 +199,3 @@ Windows ADK をインストールすることで、オペレーティング シ�
 
 
 Windows ADK をインストールするには、SMS プロバイダーのインストール先コンピューターに 650 MB 以上の空きディスク領域が必要です。 このような大きな空きディスク領域が必要なのは、Configuration Manager によって Windows PE ブート イメージがインストールされるためです。  
-

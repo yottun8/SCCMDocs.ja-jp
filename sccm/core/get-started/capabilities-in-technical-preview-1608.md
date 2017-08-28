@@ -4,23 +4,21 @@ description: "System Center Configuration Manager の Technical Preview バー�
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 63e1df5e-637c-4b07-b7ec-95340f43a805
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: c22e29da8036d69db917205f28a19a69281a64db
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1608-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1608 の機能
 
@@ -51,7 +49,7 @@ ConfigMgr クライアントの準備手順で、キー情報だけではなく�
 
 ### <a name="filter-the-software-display"></a>ソフトウェアの表示をフィルター処理する
 親子のリレーションシップを定義すると、ビューをフィルターして、親ソフトウェアまたは定義済みのリレーションシップがないソフトウェアのみを表示することができます。 これにより、別のインベントリされたソフトウェアの子として設定されているすべてのソフトウェアが非表示になります。 これを実行するには、次のようにします。
-   1.    検索バーの場合は、[**条件の追加**] を選びます。
+   1.   検索バーの場合は、[**条件の追加**] を選びます。
    2. [**親ソフトウェア**] を選び、条件値を [**が空**] に変更してから [**検索**] をクリックします。
 
 表示には、親ソフトウェア アイテム、または定義済みのリレーションシップがないソフトウェアのみが表示されます。 別のタイトルの子のみのソフトウェアは表示されません。
@@ -63,5 +61,4 @@ ConfigMgr クライアントの準備手順で、キー情報だけではなく�
 
 > [!NOTE]
 >
-> ~!#@$%, などの特殊なキーは、正しく変換されません。
-
+> ~!#@$% などの特殊なキーは、正しく変換されません。

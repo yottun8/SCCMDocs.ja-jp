@@ -6,37 +6,30 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 29350919-6a25-446b-a0da-05e8914fbb26
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
-ms.openlocfilehash: 47bfeec5bd5d9b843e9064560d0cd0b14bd7d6a1
-ms.contentlocale: ja-jp
-ms.lasthandoff: 12/30/2016
-
-
+ms.openlocfilehash: fe517e110036e09907fb070afe973b246ce4147c
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="introduction-to-remote-control-in-system-center-configuration-manager"></a>System Center Configuration Manager のリモート コントロールの概要
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-リモート コントロールを使用して、リモートでの管理、支援の提供、階層内の任意のコンピューターの表示ができます。 リモート コントロールを使用することで、クライアント コンピューターのハードウェアやソフトウェアの構成に関する問題のトラブルシューティングを行ったり、サポートを提供したりできます。 Configuration Manager は、ワークグループ コンピューターとドメインに参加しているコンピューターのリモート コントロールをサポートしています。  
+リモート コントロールを使用して、リモートでの管理、支援の提供、階層内の任意のコンピューターの表示ができます。 リモート コントロールを使用することで、クライアント コンピューターのハードウェアやソフトウェアの構成に関する問題のトラブルシューティングを行ったり、サポートを提供したりできます。 Configuration Manager では、Configuration Manager クライアントでサポートされるオペレーティング システムを実行する、すべてのワークグループ コンピューターとドメインに参加しているコンピューターのリモート コントロールをサポートします。 詳細については、「[System Center Configuration Manager のクライアントとデバイスのサポートされるオペレーティング システム](../../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)」をご覧ください。
 
 また、Configuration Manager によって、Configuration Manager コンソールから Windows リモート デスクトップとリモート アシスタンスを実行して、クライアント設定を構成することができます。  
 
 > [!NOTE]  
->  次のシナリオでは、Configuration Manager コンソールからクライアント コンピューターに、リモート アシスタンス セッションを確立できません。  
->   
->  -   クライアント コンピューターがワークグループにある。  
-> -   Configuration Manager コンソールを実行するコンピューターは Windows XP Service Pack 3 を実行しているが、ホスト コンピューターは Windows XP Service Pack 3 を実行していない。 詳細については、Windows リモート アシスタンスのドキュメントを参照してください。  
+>  Configuration Manager コンソールからワークグループに属するクライアント コンピューターにリモート アシスタンス セッションを確立することはできません。 
 
- Configuration Manager コンソールの任意のデバイス コレクション、Windows コマンド プロンプト ウィンドウ、または Windows の **[スタート]** メニューから、リモート コントロール セッションを開始できます。  
-
+ Configuration Manager コンソールでのリモート コントロール セッションは、**[資産とコンプライアンス]** > **[デバイス]**、任意のデバイス コレクション、Windows コマンド プロンプト ウィンドウ、または Windows の **[スタート]** メニューから開始できます。  

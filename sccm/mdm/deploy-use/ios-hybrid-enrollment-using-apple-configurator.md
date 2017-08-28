@@ -2,26 +2,23 @@
 title: "Apple Configurator による iOS デバイスの登録 - Configuration Manager | Microsoft Docs"
 descriptions: Pre-enroll iOS devices by using Apple Configurator with Configuration Manager.
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 08/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: 6c6e9edbc7b2fca3d1be4feabb238efab80465fa
-ms.contentlocale: ja-jp
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 403f3b730e24c0f76314b04bcdd1d2f817bcd908
+ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="ios-hybrid-enrollment-using-apple-configurator-with-configuration-manager"></a>Apple Configurator と Configuration Manager を使用した iOS ハイブリッド登録
 
@@ -41,7 +38,7 @@ ms.lasthandoff: 01/24/2017
 
 -   Mac コンピューターにデバイスを接続するための USB ケーブル  
 
-## <a name="step-1-add-a-corporate-owned-device-enrollment-profile"></a>ステップ 1: 企業所有デバイスの登録プロファイルを追加する
+## <a name="add-a-corporate-owned-device-enrollment-profile"></a>企業所有デバイスの登録プロファイルを追加する
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[概要]** > **[会社が所有しているすべてのデバイス]** > **[iOS]** > **[登録プロファイル]** の順に移動します。 **[プロファイルの作成]** をクリックして、プロファイルの作成ウィザードを開きます。 次の各ページで、設定を構成します。  
 
@@ -63,13 +60,13 @@ ms.lasthandoff: 01/24/2017
 
 4.  概要を確認し、**[次へ]** をクリックして登録プロファイルを作成します。 **[閉じる]** をクリックして、ウィザードを終了します。 登録するデバイスの IMEI 番号またはシリアル番号を追加する準備ができました。  
 
-## <a name="step-2-predeclare-devices-to-enroll-with-setup-assistant"></a>ステップ 2: セットアップ アシスタントで登録するデバイスを事前宣言する
+## <a name="predeclare-devices-to-enroll-with-setup-assistant"></a>セットアップ アシスタントで登録するデバイスを事前宣言する
 
 このステップでは、ハードウェア ID (IMEI またはシリアル番号) のリストを提供することにより、企業所有としてデバイスを事前宣言します。
 
 詳しくは、「[IMEI または iOS シリアル番号を持つデバイスの事前宣言](predeclare-devices-with-hardware-id.md)」をご覧ください。 事前宣言が済んだ後、このページに戻って次のステップに進みます。
 
-## <a name="step-3-export-the-profile-to-deploy-to-ios-devices"></a>ステップ 3: iOS デバイスに展開するプロファイルをエクスポートする
+## <a name="export-the-profile-to-deploy-to-ios-devices"></a>iOS デバイスに展開するプロファイルをエクスポートする
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[概要]** > **[会社が所有しているすべてのデバイス]** > **[iOS]** > **[登録プロファイル]** の順に移動します。
 
@@ -96,7 +93,7 @@ ms.lasthandoff: 01/24/2017
 > [!NOTE]
 > 登録プロファイルの URL はエクスポートされてから 2 週間有効です。 2 週間が経過したら、iOS デバイスを登録するために新しい URL をエクスポートする必要があります。
 
-## <a name="step-4-prepare-the-device-with-apple-configurator"></a>ステップ 4: Apple Configurator を使用してデバイスを準備する
+## <a name="prepare-the-device-with-apple-configurator"></a>Apple Configurator を使用してデバイスを準備する
 
 登録できるように iOS デバイスを準備するには、Mac コンピューターに各デバイスを接続し、登録プロファイルをデバイスにアップロードします。  
 
@@ -135,7 +132,6 @@ ms.lasthandoff: 01/24/2017
 
 登録を準備するすべてのデバイスについて、この手順を繰り返します。
 
-## <a name="step-5-distribute-devices"></a>ステップ 5: デバイスを配布する
+## <a name="distribute-devices"></a>デバイスを配布する
 
 これで、デバイスを企業登録できるようになりました。 デバイスの電源を切り、ユーザーにデバイスを配布します。 デバイスの電源をオンにすると、セットアップ アシスタントが起動して、登録を開始する会社や学校のアカウントをユーザーに確認するプロンプトが表示されます。
-

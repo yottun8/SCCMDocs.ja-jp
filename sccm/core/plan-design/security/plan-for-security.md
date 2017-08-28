@@ -6,23 +6,20 @@ ms.date: 01/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: af06fb10d905e3fe447c6cd6ed35dac10488161f
-ms.openlocfilehash: 1bf519ad4593f6a08d7dc393f9fab91c70b51b25
-ms.contentlocale: ja-jp
-ms.lasthandoff: 01/05/2017
-
-
+ms.openlocfilehash: 6145cb69c69dba1eb1b9842079ee1a33686bb18a
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-for-security-in-system-center-configuration-manager"></a>System Center Configuration Manager でのセキュリティの計画
 
@@ -292,9 +289,9 @@ Client.msi プロパティ **RESETKEYINFORMATION = TRUE** と CCMSetup.exe を�
 
 7.  **[TrustedRootKey のオブジェクト エディター]** ダイアログ ボックスで、**[インスタンス]** を選びます。  
 
-8.  新しい **[クエリ結果]** ウィンドウに、**[TrustedRootKey]** のインスタンスが表示されるので、[**TrustedRootKey=@**] をダブルクリックします。  
+8.  新しい **[クエリ結果]** ウィンドウに **[TrustedRootKey]** のインスタンスが表示されるので、**[TrustedRootKey=@]** をダブルクリックします。  
 
-9. [**TrustedRootKey=@ のオブジェクト エディター**] ダイアログ ボックスの [**プロパティ**] セクションで、[**TrustedRootKey CIM_STRING**] までスクロールダウンします。 右側の列の文字列が信頼されたルート キーです。 この文字列が、*&lt;Configuration Manager ディレクトリ\>***\bin\mobileclient.tcf** ファイルの **SMSPublicRootKey** の値と一致することを確認します。  
+9. [ **TrustedRootKey=@ のオブジェクト エディタ** ] ダイアログ ボックスの [ **プロパティ** ] セクションで、[ **TrustedRootKey CIM_STRING**] までスクロールダウンします。 右側の列の文字列が信頼されたルート キーです。 この文字列が、*&lt;Configuration Manager ディレクトリ\>***\bin\mobileclient.tcf** ファイルの **SMSPublicRootKey** の値と一致することを確認します。  
 
 ##  <a name="BKMK_PlanningForSigningEncryption"></a> 署名と暗号化の計画  
  すべてのクライアント通信に PKI 証明書を使用する場合は、クライアント データの通信をセキュリティで保護するために、署名と暗号化を計画する必要はありません。 ただし、HTTP クライアント接続を許可するように IIS を実行しているサイト システムを設定する場合は、サイトのクライアント接続をどのようにセキュリティで保護するのかを決める必要があります。  
@@ -310,4 +307,3 @@ Client.msi プロパティ **RESETKEYINFORMATION = TRUE** と CCMSetup.exe を�
 
 ### <a name="see-also"></a>関連項目
 [System Center Configuration Manager の暗号化コントロールのテクニカル リファレンス](../../../protect/deploy-use/cryptographic-controls-technical-reference.md)  
-

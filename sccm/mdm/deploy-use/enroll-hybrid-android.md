@@ -2,32 +2,30 @@
 title: "System Center Configuration Manager と Microsoft Intune を使ったハイブリッド Android デバイス管理のセットアップ | Microsoft Docs"
 description: "Configuration Manager と Intune を使用して Android モバイル デバイスを管理できるように準備します。"
 ms.custom: na
-ms.date: 07/31/2017
+ms.date: 08/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c517fe34-0130-465b-a020-bdb555878778
-caps.latest.revision: 9
-caps.handback.revision: 0
+caps.latest.revision: "9"
+caps.handback.revision: "0"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
+ms.openlocfilehash: 53ecc86ecc000e0ab9e81f683e8e8171e9a66f35
+ms.sourcegitcommit: 9a6f8e028fb5eb2e752da70f42a5b548339bd8f4
 ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
-ms.openlocfilehash: b47ecd1754a623b1b57dc5c5ecb42a6b0b64404e
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使ったハイブリッド Android モバイル デバイスのセットアップ
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-このトピックは、IT 管理者が Android および Android for Work デバイスのハイブリッド登録を有効にする場合に役立ちます。 IT 管理者は、System Center Configuration Manger を使用して、構成された Microsoft Intune サブスクリプションからデバイスを管理できるようになります。 ユーザーは、Google Play から Android 用の会社のポータル アプリをダウンロードすることで、Android (Samsung KNOX Standard を含む) および Android for Work デバイスを登録することができます。
+このトピックは、管理者が Android および Android for Work デバイスのハイブリッド登録を有効にする場合に役立ちます。 IT 管理者は、System Center Configuration Manger を使用して、構成された Microsoft Intune サブスクリプションからデバイスを管理できるようになります。 ユーザーは、Google Play から Android 用の会社のポータル アプリをダウンロードすることで、Android (Samsung KNOX Standard を含む) および Android for Work デバイスを登録することができます。
 
 Configuration Manager の管理者は、コンプライアンス設定の管理、Android デバイスのワイプまたは削除、アプリの展開、およびソフトウェアとハードウェアのインベントリの収集を実行できます。 Android 用の会社のポータル アプリを Android デバイスにインストールしなければ、インベントリとコンプライアンス設定などの管理機能を利用できませんが、Android デバイスにアプリを展開することはできます。  
 
@@ -37,12 +35,9 @@ Configuration Manager の管理者は、コンプライアンス設定の管理�
 1. 任意のプラットフォームの登録をセットアップする前に、「[ハイブリッド MDM をセットアップする](setup-hybrid-mdm.md)」に記載されている前提条件と手順を完了しておきます。  
 2. Configuration Manager コンソールの **[管理]** ワークスペースで、**[概要]** > **[クラウド サービス]** > **[Microsoft Intune サブスクリプション]** に移動し、Intune サブスクリプションを選択します。  
 3. **[ホーム]** タブの **[サブスクリプション]** グループで、**[プラットフォームの構成]**  >  **[Android]** の順に選択します。  
-4. **[Microsoft Intune サブスクリプションのプロパティ]** ダイアログ ボックスで、**[Android]** タブを選択し、**[Android の登録を有効にする]** ボックスをクリックします。  
+4. **[Microsoft Intune サブスクリプションのプロパティ]** ダイアログ ボックスで、**[Android]** タブを選択し、**[Android の登録を有効にする]** ボックスをクリックします。 **[個人所有のデバイスをブロックする]** を選択して、登録を[事前に宣言されたデバイス](predeclare-devices-with-hardware-id.md)に制限できます。
 
-> [!NOTE]
->  **[個人所有のデバイスをブロックする]** 機能はこの時点では使用できません。 
-
- セットアップが完了したら、デバイスを登録する方法をユーザーに知らせる必要があります。 「[デバイスの登録についてユーザーに通知する事柄](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)」に関する記事をご覧ください。 この情報は、Microsoft Intune と Configuration Manager の両方によって管理されるモバイル デバイスに適用されます。
+ セットアップが完了したら、デバイスを登録する方法をユーザーに知らせる必要があります。 「[デバイスの登録についてユーザーに通知する事柄](https://docs.microsoft.com/intune/end-user-educate)」に関する記事をご覧ください。 この情報は、Microsoft Intune と Configuration Manager の両方によって管理されるモバイル デバイスに適用されます。
 
 ## <a name="enable-android-for-work-enrollment"></a>Android for Work の登録を有効にする
 次の手順で、Configuration Manager が仕事用プロファイルを使って、Android デバイスを管理できるようになります。
@@ -81,4 +76,3 @@ Android for Work の登録を有効にすると、Android for Work デバイス�
 
 > [!div class="button"]
 [< 前のステップ](create-service-connection-point.md)  [次のステップ >](set-up-additional-management.md)
-

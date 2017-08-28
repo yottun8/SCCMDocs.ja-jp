@@ -2,27 +2,24 @@
 title: "Windows クライアントの展開 | Microsoft Docs"
 description: "System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法を説明します。"
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 08/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
-caps.latest.revision: 13
-caps.handback.revision: 0
+caps.latest.revision: "13"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9555a16d97224a1cf49a426ab225468b07403f60
-ms.openlocfilehash: 0e5e624fdfc2b5ee5b497d1063bd4e2d15df578b
-ms.contentlocale: ja-jp
-ms.lasthandoff: 12/30/2016
-
-
+ms.openlocfilehash: 9ac54136b93ee366c16cafe89036a79e808980dc
+ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法
 
@@ -58,13 +55,10 @@ Configuration Manager クライアントをインストールする前に、す�
 6.  ドメイン コント ローラーにクライアントをインストールするかどうかを選択します。  
 
 7.  **[アカウント]** タブで、クライアント ソフトウェアをインストールするためにコンピューターに接続するときに Configuration Manager が使用するアカウントを 1 つまたは複数指定します。 [**作成**] アイコンをクリックし、[**ユーザー名**] と 「**パスワード**」 (38 文字以内) を入力して、パスワードを確認入力してから、[**OK**] をクリックします。 少なくとも 1 つのクライアント プッシュ インストール アカウントを指定する必要があります。このアカウントは、クライアントをインストールするすべてのコンピューターのローカル管理者権限を持っている必要があります。 クライアント プッシュ インストール アカウントを指定しないと、Configuration Manager はサイト システムのコンピューター アカウントを使おうとします。これにより、ドメイン間のクライアント プッシュが失敗します。  
-
-    
     > [!NOTE]  
     >  クライアント プッシュ インストール方法をセカンダリ サイトから使用する場合、クライアント プッシュを開始するセカンダリ サイトでアカウントを指定する必要があります。  
     >   
     >  クライアント プッシュ インストール アカウントの詳細については、次の手順「クライアント プッシュ インストール ウィザードを使用するには」をご覧ください。  
-
 8.  [**インストールのプロパティ**] タブを完了します。
 
      スキーマが Configuration Manager 向けに拡張されており、インストール プロパティを指定せずに CCMSetup を実行するクライアント インストールで読み取られる場合は、このタブで指定した[クライアント インストール プロパティ](../../../core/clients/deploy/about-client-installation-properties.md)は、Active Directory Domain Services に発行されます。  
@@ -296,8 +290,8 @@ Microsoft Intune に登録されているコンピューターにクライアン
     > [!IMPORTANT]  
     >  CCMSetup.exe コマンド ライン プロパティでクライアントに Configuration Manager サイト コードを指定しないでください。  
 
-2.  コマンド プロンプトで「**net stop ccmexec**」と入力して、 **SMS Agent Host** サービス (Ccmexec.exe) がマスター イメージ コンピューターで実行されていないことを確認します。  
-
+2.  コマンド プロンプトで「**net stop ccmexec**」と入力して、 **SMS Agent Host** サービス (Ccmexec.exe) がマスター イメージ コンピューターで実行されていないことを確認します。
+3.  参照コンピューターの **Windows** フォルダーから、ファイル **SMSCFG.INI** を削除します。  
 3.  マスター イメージ コンピューターのローカル コンピューター ストアに保存されている証明書を削除します。  たとえば、公開キー基盤 (PKI) 証明書を使用する場合、コンピューターをイメージ化する前に、[**コンピューター**] と [**ユーザー**] の [**個人用**] ストアの証明書を削除する必要があります。
 
 4.  クライアントをマスター イメージ コンピューターとは別の Configuration Manager 階層にインストールする場合は、信頼されたルート キーをマスター イメージ コンピューターから削除します。  
@@ -470,7 +464,7 @@ Microsoft Intune に登録されているコンピューターにクライアン
 
 5.  構成マネージャー クライアントのインストール プロパティを準備するコンピューターにグループ ポリシー オブジェクトを割り当てます。  
 
- Windows グループ ポリシーの詳細については、Windows Server のマニュアルを参照してください。  
+Windows グループ ポリシーの詳細については、Windows Server のマニュアルを参照してください。  
 
-### <a name="see-also"></a>関連項目
-[System Center Configuration Manager でのクライアントのインストール方法](../../../core/clients/deploy/plan/client-installation-methods.md)
+## <a name="next-steps"></a>次のステップ
+構成マネージャー クライアントのインストール方法の詳細については、「[System Center Configuration Manager でのクライアントのインストール方法](../../../core/clients/deploy/plan/client-installation-methods.md)」をご覧ください。

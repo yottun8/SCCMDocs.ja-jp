@@ -2,23 +2,21 @@
 title: "新しいバージョン 1706 |Microsoft Docs"
 description: "System Center Configuration Manager のバージョン 1706 の変更点および導入された新機能について詳しく説明します。"
 ms.custom: na
-ms.date: 07/31/2017
+ms.date: 08/11/2017
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+ms.openlocfilehash: 30bd5f1244534511e5cde8ee0e1a8c74819b1634
+ms.sourcegitcommit: 9a6f8e028fb5eb2e752da70f42a5b548339bd8f4
 ms.translationtype: HT
-ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
-ms.openlocfilehash: c686b1674f4ead702fa2b4329df6356a558726f6
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1706 の新機能
 
@@ -207,7 +205,7 @@ Configuration Manager では、パッケージとプログラムを使用して�
 このバージョンでは、タスク シーケンス グループを展開および折りたたむ機能が導入されています。 個々のグループを展開または折りたたんだり、すべてのグループを一度に展開または折りたたんだりすることができます。
 
 ### <a name="reload-boot-images-with-current-windows-pe-version"></a>最新バージョンの Windows PE を使用してブート イメージを再読み込みする
-選択したブート イメージ上で **[配布ポイントの更新]** を実行した場合、そのブート イメージ内の (Windows ADK インストール ディレクトリにある) 最新バージョンの Windows PE を再読み込みできます。 詳細については、「[Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image)」(ブートイメージによる配布ポイントの更新) を参照してください。
+選択したブート イメージ上で **[配布ポイントの更新]** を実行した場合、そのブート イメージ内の (Windows ADK インストール ディレクトリにある) 最新バージョンの Windows PE を再読み込みできます。 詳細については、「[Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image)」(ブートイメージによる配布ポイントの更新) を参照してください。
 
 ## <a name="software-updates"></a>ソフトウェア更新プログラム
 
@@ -226,7 +224,7 @@ Configuration Manager を使用して、Microsoft Surface ドライバーの更�
 #### <a name="to-manage-surface-driver-updates"></a>Surface ドライバーの更新プログラムを管理するには
 
 1. Microsoft Surface ドライバーの同期を有効にします。 [分類と製品の構成](/sccm/sum/get-started/configure-classifications-and-products)の手順を使用して、**[分類]** タブで **[Microsoft Surface のドライバーとファームウェアの更新プログラムを含める]** チェックボックスをオンにして、Surface ドライバーを有効にします。
-2. [Microsoft Surface ドライバーを同期します](/sccm/sum/get-started/synchronize-software-updates.md)。
+2. [Microsoft Surface ドライバーを同期します](/sccm/sum/get-started/synchronize-software-updates)。
 3. [同期した Microsoft Surface ドライバーを展開します](/sccm/sum/deploy-use/deploy-software-updates)。
 
 ### <a name="configure-windows-update-for-business-deferral-policies"></a>Windows Update for Business 遅延ポリシーの構成
@@ -257,6 +255,12 @@ Windows Analytics は、Operations Management Suite 上で実行するソリュ�
 
 詳細については、「[Intune で管理されている Android for Work デバイスの構成項目を作成する方法](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client)」を参照してください。
 
+### <a name="android-and-ios-enrollment-restrictions"></a>Android および iOS の登録制限
+<!-- 1290826 -->
+このリリースでは、管理者は、ユーザーが個人の Android または iOS デバイスを登録できないことを指定できるようになりました。 新しいデバイス制限の設定を使用して、Android デバイスの登録を、事前に宣言されたデバイスに制限できます。 iOS デバイスの場合は、Apple の Device Enrollment Program、Apple Configurator、または Intune のデバイス登録マネージャー アカウントを使用して登録されているデバイスを除くすべてのデバイスの登録をブロックできます。
+- Android の登録制限について詳しくは、[Android デバイス管理の設定](/sccm/mdm/deploy-use/enroll-hybrid-android)に関するページをご覧ください。
+- iOS の登録制限について詳しくは、[iOS の登録制限の構成](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac#configure-enrollment-restrictions)に関するセクションをご覧ください。
+
 ## <a name="protect-devices"></a>デバイスを保護する
 
 ### <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>Device Guard ポリシーに特定のファイルとフォルダーの信頼を含める
@@ -270,4 +274,3 @@ Windows Analytics は、Operations Management Suite 上で実行するソリュ�
 - オペレーティング システムの展開イメージに含まれているアプリを信頼する
 
 詳細については、「[Configuration Manager を使用した Device Guard 管理](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)」を参照してください。
-

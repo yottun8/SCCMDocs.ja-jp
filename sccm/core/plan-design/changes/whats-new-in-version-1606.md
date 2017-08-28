@@ -6,21 +6,19 @@ ms.date: 12/30/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 34809ddf7819eab5deb3995cd8138c7b38cd2f9a
 ms.openlocfilehash: 9fdff6049d6e5cde1032864e5d7aa8df71e53686
-ms.contentlocale: ja-jp
-ms.lasthandoff: 12/31/2016
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1606 の新機能
 
@@ -227,4 +225,3 @@ Microsoft Intune と Configuration Manager を使用している場合に、デ�
 
 ## <a name="remote-control"></a>リモート コントロール
 リモート コントロール セッションで共有クリップボードからコンテンツを転送する前に、ユーザーはファイル転送を許可するかどうかを選択できます。 ユーザーはセッションごとに一度アクセス許可を与えるだけで済みます。ビューアーはファイル転送を続行するためのアクセス許可を自身に与えることはできません。 この新しい設定は、**管理**ワークスペースにあります。 **[クライアント設定]** に移動し、**[既定の設定]** で、**[リモート ツール]** パネルを開きます。
-

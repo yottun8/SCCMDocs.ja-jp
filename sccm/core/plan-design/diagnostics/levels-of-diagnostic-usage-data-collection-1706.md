@@ -6,8 +6,7 @@ ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 14ee4fb0-7790-45a6-906e-6e55627d4079
@@ -33,12 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
+ms.openlocfilehash: 12f1e810c1eb194ec322a916e4e0c1a4c19be414
+ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
 ms.translationtype: HT
-ms.sourcegitcommit: 0663ba84762c44a5c303562548499f195bae9e1c
-ms.openlocfilehash: df28bfbb49c78cafe11b87c04ac4c6c9cf370a08
-ms.contentlocale: ja-jp
-ms.lasthandoff: 08/01/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager バージョン 1706 により収集される診断結果および使用状況データのレベル
 
@@ -191,6 +189,10 @@ System Center Configuration Manager バージョン 1706 の場合、このレ�
    - Active Management Technology (AMT) クライアント バージョン
 
    - BIOS の動作時間 (年単位)
+   
+   - ***[新規]*** セキュア ブートが有効になっているデバイスの数
+   
+   - ***[新規]*** TPM の状態ごとのデバイスの数
 
    - クライアントの自動アップグレード: クライアントのパイロット運用、除外使用状況を含む展開の構成 (拡張相互運用性クライアント)
 
@@ -503,4 +505,3 @@ System Center Configuration Manager バージョン 1706 の場合、このレ�
 - Intune で管理されるデバイス向けの EAS 条件付きアクセス ポリシーの種類 (ブロックまたは検疫)
 
 - ビジネス向け Windows ストアの詳細 (AppID、オンラインまたはオフラインの状態、合計購入ライセンス数を含む、同期したアプリケーションの非集計リスト)
-

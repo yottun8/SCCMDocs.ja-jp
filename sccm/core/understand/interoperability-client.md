@@ -1,60 +1,66 @@
 ---
-title: "拡張相互運用性クライアントを Current Branch で使用する | Microsoft Docs"
+title: "Configuration Manager の拡張相互運用性クライアントを Current Branch で使用する | Microsoft Docs"
 description: "Configuration Manager サイトで、Configuration Manager の Long-Term Servicing Branch のクライアントを使用する方法について説明します。"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 08/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: robstackmsft
 ms.author: robstack
-Robots: NOINDEX,NOFOLLOW
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 30d0177dc7fcc7f39d00c48067130d587435bf2d
-ms.contentlocale: ja-jp
-ms.lasthandoff: 12/16/2016
-
+ms.openlocfilehash: 6487a7c0eb958c74ca4c6a7233747966110eceb9
+ms.sourcegitcommit: b41d3e5c7f0c87f9af29e02de3e6cc9301eeafc4
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/11/2017
 ---
-# <a name="use-the-client-software-from-the-version-1606-baseline-media-for-extended-interoperability-with-future-versions-of-a-current-branch-site"></a>将来的なバージョンの Current Branch サイトとの拡張相互運用性のためにバージョン 1606 基準メディアのクライアント ソフトウェアを使用する
+# <a name="use-the-configuration-manager-client-software-for-extended-interoperability-with-future-versions-of-a-current-branch-site"></a>将来のバージョンの Current Branch サイトとの拡張相互運用性のために構成マネージャー クライアント ソフトウェアを使用する
 
 *適用対象: System Center Configuration Manager (Current Branch)、(Long-Term Servicing Branch)*  
 
-System Center 2016 に付属するバージョン 1606 基準メディアの DVD、または System Center Configuration Manager (Current Branch および Long-Term Servicing Branch 1606) に含まれる Windows コンピューター用 Configuration Manager クライアント ソフトウェア (client.msi) を使用して、Current Branch サイトに属するデバイスを管理できます。 このクライアントは、拡張相互運用性クライアントと呼ばれます。
+場合によっては、会社のポリシーで、構成マネージャー クライアントを一部の PC で定期的に更新することが許可されていないことがあります。 たとえば、変更管理ポリシーに準拠する必要がある場合や、デバイスがミッション クリティカルな場合が挙げられます。
 
-## <a name="how-this-scenario-works"></a>このシナリオのしくみは次のとおりです。
+大半のクライアントについては、可能な場合、クライアントの自動更新を引き続き使用する必要がありますが、Configuration Manager の更新プログラム 1610 以降は、長期的な使用を目的とした新しいクライアントである拡張相互運用性クライアント (EIC) をインストールすることで、このようなニーズに対応できます。
+
+EIC は、バージョン 1610 以降を実行する Configuration Manager サイトと互換性があります。 EIC は、キオスク デバイスや販売時点管理デバイスのように、頻繁に更新できない特定の PC にのみ使用します。 それ以外の PC にはすべて、最新の構成マネージャー クライアントを使用します。
+
+## <a name="how-this-scenario-works"></a>このシナリオのしくみ
+
 通常、Current Branch の新しいコンソール内更新プログラムをインストールすると、その新機能を使用できるように、クライアント ソフトウェアが自動的に更新されます。
 
 このシナリオでは、Current Branch を使用し、新しい機能と更新プログラムを受信します。 ほとんどのクライアントは、Current Branch のクライアント ソフトウェアを実行しており、インストールする各バージョンの更新プログラムでそのクライアント ソフトウェアを更新できます。 ただし、クライアント ソフトウェアの更新プログラムを受信させたくない重要なシステムのサブセットには、拡張相互運用性クライアントをインストールします。 拡張相互運用性クライアントの場合、新しいバージョンのクライアント ソフトウェアを明示的に展開するまで、新しいクライアント ソフトウェアはインストールされません。
 
-新しいバージョンの Configuration Manager をインストールするときに Current Branch クライアントが自動的に更新されないようにする方法の詳細については、Current Branch 1610 で利用できるようになる予定です。
+>[!IMPORTANT]
+>Current Branch サイトはバージョン 1610 以降を実行する必要があります。
 
-Current Branch サイトはバージョン 1606 以降を実行する必要があります。
+## <a name="how-to-use-the-eic"></a>EIC の使用方法
+
+1. Configuration Manager の更新プログラム 1606 のインストール メディアに含まれる \SMSSETUP\Client フォルダーから、EIC (クライアント バージョン 5.00.8412) を取得します。 フォルダーの内容をすべてコピーするようにします。
+2. デバイスに EIC を手動でインストールします。 [詳細については、クライアントを手動でインストールする方法に関するページをご覧ください](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual)。
+3. クライアントのアップグレードからこのコレクションを除外します。
+
+>[!TIP]
+>ボリューム ランセンス サービス センター (VLSC) で System Center Configuration Manager バージョン 1606 を見つけるには、[VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) の **[Downloads and Keys]\(ダウンロードとキー\)** タブに移動し、"system center config" を検索し、**[System Center Config Mgr (current branch and LTSB)]\(System Center Configuration Manager (現在のブランチと LTSB)\)** を選択します。
 
 ## <a name="the-extended-interoperability-client-software"></a>拡張相互運用性クライアント ソフトウェア
-Current Branch サイトで System Center 2016 または System Center Configuration Manager (Current Branch および Long-Term Servicing Branch 1606) リリースの拡張相互運用性クライアントを使用する場合、2016 年 10 月 12 日リリースの一般公開から 2 年間サポートされます。
+
+少なくとも 2018 年 11 月 18 日までは、Configuration Manager (Current Branch) の更新バージョンで現在の EIC が継続的にサポートされる予定です。 それ以降は、新しい EIC の詳細、または既存の EIC のサポート延長について、こちらのページをご確認ください。
+
+>[!TIP]
+>EIC は、リリース日から少なくとも 2 年間にわたりサポートされます (「[System Center Configuration Manager の Current Branch バージョンのサポート](/sccm/core/servers/manage/current-branch-versions-supported)」をご覧ください)。 たとえば現在の EIC は、1610 のリリースから 2 年間、つまり 2018 年 11 月 18 日までサポートされます。
 
 クライアントのサポートが期限切れになる前に、Current Branch で管理するデバイスの拡張相互運用性クライアントを更新するように計画を立ててください。 更新するには、新しいバージョンのクライアントを Microsoft からダウンロードし、現在の拡張相互運用性クライアントを使用しているデバイスにその新しいクライアント ソフトウェアを展開します。
 
-**拡張相互運用性クライアントの制限:**
--     拡張相互運用性クライアント ソフトウェアの更新プログラムは、コンソール内更新プログラムを使用して入手できません。 新しいクライアント ソフトウェアを展開する方法の詳細については、新しいクライアントのリリース時に提供される予定です。
+## <a name="limitations-of-the-extended-interoperability-client"></a>拡張相互運用性クライアントの制限
 
-## <a name="identify-the-client-version-you-use"></a>使用しているクライアント バージョンを確認する
-Current Branch と LTSB の両方のクライアントについて、メジャー バージョンを次に示します。
+- 拡張相互運用性クライアント ソフトウェアの更新プログラムは、コンソール内更新プログラムを使用して入手できません。 新しいクライアント ソフトウェアを展開する方法の詳細については、新しいクライアントのリリース時に提供されます。
+- EIC では、ソフトウェアの更新、インベントリ、およびパッケージとプログラムのみがサポートされます。
 
-|クライアント バージョン|Branch およびバージョン |  
-|----------------|---------------------|
-|5.00.8325.xxxx |    - Current Branch 1511|
-|5.00.8355.xxxx    |- Current Branch 1602|
-|5.00.8412.1307    |- Current Branch 1606 </br> - 1606 修正プログラム ロールアップ (KB3186654) が適用された Current Branch 1606</br>- バージョン 1606 基準メディアの拡張相互運用性クライアント|  
+## <a name="next-steps"></a>次のステップ
 
-クライアントのバージョンは、Configuration Manager コントロール パネル アプレットの **[全般]** タブで確認できます。
-
-アプレットの **[コンポーネント]** タブで、一部のコンポーネントには異なる値が表示されます。 たとえば、クライアント バージョン 8412.1307 の場合、一部のコンポーネントは 5.00.8412.**1000** または 5.00.8412.**1006** のように表示されることがあります。  一部のコンポーネントに見られる末尾 4 桁の違いは正常であり、コンポーネントが最新のクライアント バージョンに更新できないエラーを示すものではありません。
-
+[クライアントを監視する方法](/sccm/core/clients/manage/monitor-clients)に関するページの情報を使用して、クライアントがデバイスに適切にインストールされていることを確認します。

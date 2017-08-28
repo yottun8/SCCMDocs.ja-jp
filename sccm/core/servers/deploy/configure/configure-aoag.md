@@ -6,21 +6,19 @@ ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+ms.openlocfilehash: e0b887169f0c8ae6901d1c6fd6a498df9596c2b4
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
-ms.openlocfilehash: 0d6527abba24b685151ae63feaae29b30d1e2cc9
-ms.contentlocale: ja-jp
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>Configuration Manager の SQL Server Always On 可用性グループを構成する
 
@@ -106,7 +104,7 @@ SQL Server のドキュメントの「 [データベースの復旧モデルの�
 
 
 
-## <a name="add-and-remove-synchronous-replica-members"></a>同期レプリカ メンバーの追加と削除  
+## <a name="add-or-remove-synchronous-replica-members"></a>同期レプリカ メンバーの追加または削除  
 可用性グループでサイト データベースがホストされている場合、次の手順で同期レプリカ メンバーの追加と削除を行います。 サポートされるレプリカの種類と数については、可用性グループ トピックを利用するための準備の「[必要条件](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#prerequisites)」で「**可用性グループの構成**」を参照してください。
 
 以下の手順を完了するには、次のアカウントを使用する必要があります。
@@ -114,25 +112,13 @@ SQL Server のドキュメントの「 [データベースの復旧モデルの�
 -   サイト データベースをホストしている、またはホストする予定の各 SQL Server の **sysadmin**。
 
 
-### <a name="to-add-a-new-synchronous-replica-member"></a>新しい同期レプリカ メンバーを追加するには
-1.  セカンダリ レプリカとして新しいサーバーを可用性グループに追加します。 SQL Server ドキュメント ライブラリの「[Add a Secondary Replica to an Availability Group (SQL Server)](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server)」(可用性グループへのセカンダリ レプリカの追加 (SQL Server)) を参照してください。
-
-2.  **Preinst.exe /stopsite** を実行して Configuration Manager サイトを停止します。 「[System Center Configuration Manager の階層のメンテナンス ツール (Preinst.exe)](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe)」を参照してください。
-
-3.  プライマリ レプリカからサイト データベースのバックアップを作成してから、新しいセカンダリ レプリカ サーバーにそのバックアップを復元します。 SQL Server ドキュメントの「[データベースの完全バックアップの作成](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)」と「[SSMS を使用したデータベース バックアップの復元](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)」を参照してください。
-
-4.  各セカンダリ レプリカを構成します。 次のことを実行して、可用性グループの各セカンダリ レプリカを構成します。
-
-    1.  サイト サーバーのコンピューター アカウントが、可用性グループのメンバーである各コンピューターの**ローカル管理者**グループのメンバーであることを確認します。
-
-    2.  前提条件の[検証スクリプト](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#prerequisites)を実行して、各レプリカのサイト データベースが正しく構成されていることを確認します。
-
-    3.  新しいレプリカを構成する必要がある場合は、新しいセカンダリ レプリカにプライマリ レプリカを手動でフェールオーバーして、必要な設定を行います。 SQL Server のドキュメントの「 [可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)](/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server) 」を参照してください。
-
-5.  サイト コンポーネント マネージャー (**sitecomp**) および **SMS_Executive** サービスを起動して、サイトを再開します。
+### <a name="to-add-a-new-synchronous-replica-member"></a>新しい同期レプリカ メンバーを追加するには  
+Configuration Manager で使用する可用性グループにセカンダリ レプリカを追加するプロセスは、複雑かつ動的で、必要とする手段や手順は、個々の環境に応じて異なります。 Microsoft では、このプロセスの簡略化に向けて、Configuration Manager の機能強化に取り組んでいます。 当面は、セカンダリ レプリカを追加する必要がある場合は、TechNet の以下のブログでガイダンスをご覧ください。
+-   [ConfigMgr 1702: 既存の SQL AO AG に新しいノード (セカンダリ レプリカ) を追加する](https://blogs.technet.microsoft.com/umairkhan/2017/07/17/configmgr-1702-adding-a-new-node-secondary-replica-to-an-existing-sql-ao-ag/)
 
 ### <a name="to-remove-a-replica-member"></a>レプリカ メンバーを削除するには
-この手順については、SQL Server のドキュメントの「[Remove a Secondary Replica from an Availability Group](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server)」(可用性グループからのセカンダリ レプリカの削除) の情報を使用します。
+この手順については、SQL Server のドキュメントの「[Remove a Secondary Replica from an Availability Group](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server)」(可用性グループからのセカンダリ レプリカの削除) の情報を使用します。  
+
 
 ## <a name="configure-an-asynchronous-commit-replica"></a>非同期コミット レプリカを構成する
 Configuration Manager バージョン 1706 以降、Configuration Manager で使用する可用性グループに非同期レプリカを追加できます。 その場合、同期レプリカの構成に必要な構成スクリプトを実行する必要はありません。 (これは、その非同期レプリカをサイト データベースとして使用するためのサポートがないためです)。セカンダリ レプリカを可用性グループに追加する方法については、[SQL Server のドキュメント](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot))を参照してください。
@@ -186,4 +172,3 @@ Configuration Manager バージョン 1706 以降、非同期レプリカを使�
 9.  新しいデータベースの場所の情報を入力したら、通常のプロセスと構成でセットアップを完了します。 セットアップが完了したら、サイトが再起動して新しいデータベースの場所の使用を開始します。    
 
 10. 可用性グループのメンバーであったサーバーをクリーンアップするには、SQL Server のドキュメントの「 [可用性グループの削除](/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server) 」の説明に従います。
-

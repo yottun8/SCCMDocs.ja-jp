@@ -6,22 +6,19 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
 ms.openlocfilehash: b88bc5f734b85527b81e5848deb0617db4c8dfbc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection クライアントのよく寄せられる質問
 
@@ -136,7 +133,7 @@ Windows Defender によって検出された望ましくない項目または有
 ##  <a name="whats-the-difference-between-viruses-spyware-and-other-potentially-harmful-software"></a>ウイルス、スパイウェア、およびその他の有害なソフトウェアの違いは何ですか。  
  ウイルスとスパイウェアはどちらも知らない間にコンピューターにインストールされますが、侵害的で破壊的な影響を与える可能性があります。 また、どちらの場合もコンピューター上の情報を収集し、その情報に損害を与えたり、削除したりできます。 コンピューターのパフォーマンスにどちらも悪影響を与える可能性があります。  
 
- ウイルスとスパイウェアの主な違いは、コンピューターにおける動作方法です。 生物の場合と同様、ウイルスはコンピューターに感染し、複製し、可能な限り多くの他のコンピューターに拡散ようとします。 一方、スパイウェアの場合は、もぐらのようにコンピューターの内部に "移り住み"、可能な限り長期にわたってとどまろうとします。そこから、コンピューターに関する重要な情報を外部ソースに送信し続けます。  
+ ウイルスとスパイウェアの主な違いは、コンピューターにおける動作方法です。 生物の場合と同様、ウイルスはコンピューターに感染し、複製し、可能な限り多くの他のコンピューターに拡散しようとします。 一方、スパイウェアの場合は、もぐらのようにコンピューターの内部に "移り住み"、可能な限り長期にわたってとどまろうとします。そこから、コンピューターに関する重要な情報を外部ソースに送信し続けます。  
 
 ##  <a name="where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from"></a>ウイルス、スパイウェア、およびその他の望ましくない可能性があるソフトウェアはどこからくるのでしょうか。  
  ウイルスなどの望ましくないソフトウェアは、Web サイト、ダウンロードしたプログラム、CD、DVD、外部ハードディスク、デバイスを使用してインストールしたプログラムによってインストールされる可能性があります。 スパイウェアは、ファイル共有、スクリーン セーバー、検索ツールバーなどのフリー ソフトウェアを介してインストールされるのが最も一般的です。  
@@ -158,7 +155,7 @@ Windows Defender によって検出された望ましくない項目または有
 
 -   コンピューターのソフトウェアを最新に保ち、すべての修正プログラムを忘れずにインストールします。 定期的に、オペレーティング システムを更新します。  
 
--   ご使用のウイルス対策とスパイウェア対策のソフトウェア、Windows Defender が潜在的な脅威に対する最新の更新を使用していることを確認します (「ウイルス定義とスパイウェア定義を最新の状態に保つ方法」を参照)。 また、最新バージョンの Windows Defender を常を使用していることも確認します。  
+-   ご使用のウイルス対策とスパイウェア対策のソフトウェア、Windows Defender が潜在的な脅威に対する最新の更新を使用していることを確認します (「ウイルス定義とスパイウェア定義を最新の状態に保つ方法」を参照)。 また、常に最新バージョンの Windows Defender を使用していることも確認します。  
 
 -   信頼できる発信元からのみ更新プログラムをダウンロードします。 Windows オペレーティング システムの場合、必ず [Microsoft Update](http://go.microsoft.com/fwlink/?LinkID=96304) (http://go.microsoft.com/fwlink/?LinkID=96304) にアクセスします。その他のソフトウェアの場合には、作成元の会社または個人の正式な Web サイトを常に使用します。  
 
@@ -205,7 +202,7 @@ Windows Defender によって検出された望ましくない項目または有
 
 ##  <a name="what-is-real-time-protection"></a>リアルタイム保護とは何ですか。  
 
- リアルタイム保護を使用すると、Windows Defender はコンピューターを常時監視し、ウイルスやスパイウェアなどの潜在的な脅威がコンピューター上でインストールまたは実行を試みるとアラートを通知することができます。 この機能は、Windows Defender よるコンピューターの保護における重要な要素であるため、リアルタイム保護は常に有効にしてください。 リアルタイム保護がオフにされると、Windows Defender はユーザーに通知を行い、コンピューターの状態を [危険] に変更します。  
+ リアルタイム保護を使用すると、Windows Defender はコンピューターを常時監視し、ウイルスやスパイウェアなどの潜在的な脅威がコンピューター上でインストールまたは実行を試みるとアラートを通知することができます。 この機能は、Windows Defender によるコンピューターの保護における重要な要素であるため、リアルタイム保護は常に有効にしてください。 リアルタイム保護がオフにされると、Windows Defender はユーザーに通知を行い、コンピューターの状態を [危険] に変更します。  
 
  リアルタイム保護によって脅威や潜在的な脅威が検出されると、Windows Defender によって必ず通知が表示されます。 次のオプションから選択できます。  
 
@@ -265,4 +262,3 @@ Windows Defender によって検出された望ましくない項目または有
  [Windows Defender または Endpoint Protection クライアントのトラブルシューティング](troubleshoot-endpoint-client.md)   
 
  [Endpoint Protection クライアント ヘルプ](endpoint-protection-client-help.md)
-

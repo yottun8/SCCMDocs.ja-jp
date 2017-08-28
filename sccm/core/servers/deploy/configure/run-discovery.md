@@ -6,23 +6,20 @@ ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 30844519-ce14-456f-bfb8-4318b578e9f6
-caps.latest.revision: 20
-caps.handback.revision: 0
+caps.latest.revision: "20"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7b6674f331c82cc7899b8661cf38b9d3022cf21b
 ms.openlocfilehash: 647826e9d340d3ef97abab0dba51041a3727dedc
-ms.contentlocale: ja-jp
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="run-discovery-for-system-center-configuration-manager"></a>System Center Configuration Manager 用の探索の実行
 
@@ -56,7 +53,7 @@ ms.lasthandoff: 05/17/2017
 
  探索方法によっては、大量のネットワーク トラフィックが発生して、生成された DDR の処理に大量の CPU リソースが消費されることがあります。 したがって、目的のために必要な探索方法のみを使用することを計画してください。 始めは 1 つまたは 2 つの探索方法だけを使用するようにして、後で追加的な方法を慎重に有効にして、環境での探索レベルを拡張してください。  
 
- サイト データベースに追加された探索情報は、探索または処理された場所に関係なく、階層内の各サイトにレプリケートされます。 したがって、さまざまなサイトでの探索方法に対してさまざまなスケジュールと設定を行うことはできますが、特定の探索方法を 1 つのサイトだけで実行するようにしてください。 重複する探索処理によるネットワーク帯域幅の使用を減らしたり、複数のサイトで重複している探索データの処理を減らしたりすることができます。  
+ サイト データベースに追加された探索情報は、探索または処理された場所に関係なく、階層内の各サイトにレプリケートされます。 そのため、複数のサイトでさまざまなスケジュールや探索方法の設定を設定することができますが、特定の探索方法を 1 つのサイトだけで実行したほうがよいでしょう。 これによって、重複する探索処理によるネットワーク帯域幅の使用を減らすと同時に、複数サイトでの冗長な探索データの処理を減らすことができます。  
 
  探索データを使用すると、次のような管理タスクのために、リソースを論理的にグループ化するカスタム コレクションやクエリを作成できます。 たとえば、  
 
@@ -89,4 +86,3 @@ DDR ファイルには、.ddr という拡張子が付き、サイズは通常 1
 -   [System Center Configuration Manager に使用する探索方法の選択](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md)  
 
 その後、使用しようとしている方法が理解できたら、「[System Center Configuration Manager の探索方法を構成する](../../../../core/servers/deploy/configure/configure-discovery-methods.md)」でそれぞれの方法の構成の手引きを探します。  
-
