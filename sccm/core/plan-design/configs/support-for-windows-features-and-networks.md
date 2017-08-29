@@ -2,7 +2,7 @@
 title: "Windows の機能のサポート | Microsoft Docs"
 description: "System Center Configuration Manager でサポートされる Windows とネットワークの機能について説明します。"
 ms.custom: na
-ms.date: 3/30/2017
+ms.date: 8/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: e040552dab21ba9a71e06a78f6acc2ffe1b0eb61
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: be9b7e84fecfa7a07c411c3d46168e5485e0dfab
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="support-for-windows-features-and-networks-in-system-center-configuration-manager"></a>System Center Configuration Manager での Windows 機能とネットワークのサポート
 
@@ -49,7 +49,7 @@ BranchCache の要件を満たしている場合、リモートの場所にあ�
 -   **クライアントの構成:**    
     -   BranchCache に対応したクライアントが、BranchCache 分散キャッシュ モード用に構成されている必要があります。  
     -   BITS クライアントの設定に関するオペレーティング システムの設定で、BranchCache のサポートを有効にする必要があります。   <br /> <br />
-        
+
     BranchCache をサポートするようにクライアントを構成する方法については、「[Windows 10 更新プログラム向けの BranchCache の構成](https://technet.microsoft.com/itpro/windows/manage/waas-branchcache)」の「[BranchCache クライアントの構成](https://technet.microsoft.com/itpro/windows/manage/waas-branchcache#configure-clients-for-branchcache)」セクションを参照してください。
 
 
@@ -80,9 +80,11 @@ Configuration Manager では、ワークグループ内のクライアントが�
 ##  <a name="bkmmk_datadedup"></a> データ重複除去  
 Configuration Manager は、次に示すオペレーティング システム上の配布ポイントで、データ重複除去の使用をサポートしています。  
 
+-   Windows Server 2016
+-   Windows Server 2012 R2  
 -   Windows Server 2012  
 
--   Windows Server 2012 R2  
+
 
 > [!IMPORTANT]  
 >  パッケージ ソース ファイルをホストするボリュームは、データ重複除去の対象としてマークできません。 これは、データ重複除去には再解析ポイントを使いますが、Configuration Manager では、再解析ポイントで保存したファイルが含まれるコンテンツ ソースの場所の使用はサポートされないためです。  
