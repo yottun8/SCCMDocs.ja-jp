@@ -2,7 +2,7 @@
 title: "サイトの前提条件 | Microsoft Docs"
 description: "Windows コンピューターを System Center Configuration Manager サイト システム サーバーとして構成する方法について説明します。"
 ms.custom: na
-ms.date: 1/17/2017
+ms.date: 8/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 09749a3045ca6eebf1363b6e53cd8607b5f32578
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイトとサイト システムの前提条件
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/07/2017
 
  Windows コンピューターを System Center Configuration Manager サイト システム サーバーとして使用するには、特定の構成が必要です。  
 
-
+ 
  ソフトウェア更新ポイント用の Windows Server Update Services (WSUS) など、一部の製品では、その製品のドキュメントで、その製品を使用するための追加の前提条件と制限を確認する必要があります。 ここでは、Configuration Manager で使用するために行う必要のある構成についてのみ説明します。   
 
 > [!NOTE]  
@@ -66,9 +66,7 @@ ms.lasthandoff: 08/07/2017
 
 **Windows ADK:**  
 
--   中央管理サイトまたはプライマリ サイトをインストールまたはアップグレードする前に、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows アセスメント & デプロイメント キットのバージョンをインストールする必要があります。  
-
-    -   Configuration Manager の 1511 バージョンでは、Windows ADK の Windows 10 RTM (10.0.10240) バージョンが必要です。  
+-   中央管理サイトまたはプライマリ サイトをインストールまたはアップグレードする前に、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows アセスメント & デプロイメント キットのバージョンをインストールする必要があります。 クライアントとしての Windows 10 に関するサポート内の [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) のトピックをご覧ください。  
 
 -   要件の詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)」を参照してください。  
 
@@ -115,9 +113,7 @@ ms.lasthandoff: 08/07/2017
 ###  <a name="bkmk_2012smsprovpreq"></a> SMS プロバイダー サーバー  
 **Windows ADK:**  
 
--   SMS プロバイダーのインスタンスをインストールするコンピューターには、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンが必要です。  
-
-    -   Configuration Manager の 1511 バージョンでは、Windows ADK の Windows 10 RTM (10.0.10240) バージョンが必要です。  
+-   SMS プロバイダーのインスタンスをインストールするコンピューターには、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンが必要です。 クライアントとしての Windows 10 に関するサポート内の [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) のトピックをご覧ください。
 
 -   要件の詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)」を参照してください。  
 
@@ -448,9 +444,7 @@ ms.lasthandoff: 08/07/2017
 
 **Windows ADK:**  
 
--   中央管理サイトまたはプライマリ サイトをインストールまたはアップグレードする前に、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンをインストールする必要があります。  
-
-    -   Configuration Manager の 1511 バージョンでは、Windows ADK の Windows 10 RTM (10.0.10240) バージョンが必要です。  
+-   中央管理サイトまたはプライマリ サイトをインストールまたはアップグレードする前に、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンをインストールする必要があります。  クライアントとしての Windows 10 に関するサポート内の [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) のトピックをご覧ください。  
 
 -   要件の詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)」を参照してください。  
 
@@ -495,9 +489,7 @@ ms.lasthandoff: 08/07/2017
 ###  <a name="bkmk_2008smsprovpreq"></a> SMS プロバイダー サーバー  
 **Windows ADK:**  
 
--   SMS プロバイダーのインスタンスをインストールするコンピューターには、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンが必要です。  
-
-    -   Configuration Manager の 1511 バージョンでは、Windows ADK の Windows 10 RTM (10.0.10240) バージョンが必要です。  
+-   SMS プロバイダーのインスタンスをインストールするコンピューターには、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンが必要です。 クライアントとしての Windows 10 に関するサポート内の [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) のトピックをご覧ください。  
 
 -   要件の詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)」を参照してください。  
 

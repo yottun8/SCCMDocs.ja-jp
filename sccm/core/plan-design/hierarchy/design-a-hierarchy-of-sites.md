@@ -2,7 +2,7 @@
 title: "サイト階層を設計する - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager で使用できるトポロジと管理オプションを理解することで、サイト階層を計画することができます。"
 ms.custom: na
-ms.date: 6/16/2017
+ms.date: 8/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 4710b1b89eb50cb7bcf4c4ee50c12a96b6561bc9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 2c587c0ad894dc567a6f1804626db611ff9a1013
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="design-a-hierarchy-of-sites-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイト階層の設計
 
@@ -27,6 +27,13 @@ ms.lasthandoff: 08/07/2017
 
 新しい System Center Configuration Manager 階層の最初のサイトをインストールする前に、Configuration Manager で使用可能なトポロジ、利用可能なサイトの種類と相互の関係、各種のサイトで提供される管理のスコープを理解しておくことをお勧めします。
 次に、インストールする必要のあるサイトの数を減らすためのコンテンツ管理オプションを検討し、それから現在のビジネス ニーズに対して効率的に機能し、将来の成長の管理のために拡張できるトポロジを計画します。  
+
+計画時には、追加のサイトを階層またはスタンドアロン サイトに追加する際の制限に注意してください。
+-   中央管理サイトの下にインストールできる新しいプライマリ サイトは、階層で[サポートされるプライマリ サイトの数](/sccm/core/plan-design/configs/size-and-scale-numbers)が上限になります。
+-   [スタンドアロン プライマリ サイトを拡張して新しい中央管理サイトをインストール](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand)できます。そうすることで、追加のプライマリ サイトをインストールできるようになります。
+-   プライマリ サイトの下にインストールできる新しいセカンダリ サイトの数は、[プライマリ サイトでサポートされている上限](/sccm/core/plan-design/configs/size-and-scale-numbers)、および階層全体でサポートされている上限までになります。
+-   以前にインストールされたサイトを既存の階層に追加して 2 つのスタンドアロン サイトをマージすることはできません。 既存の階層には、新しいサイトのインストールのみがサポートされます。
+
 
 > [!NOTE]
 > Configuration Manager の新規インストールを計画するときは、[リリース ノート]( /sccm/core/servers/deploy/install/release-notes)でアクティブなバージョンでの現在の問題の詳細を確認してください。 リリース ノートは、Configuration Manager のすべてのブランチに適用されます。  ただし、[Technical Preview ブランチ]( /sccm/core/get-started/technical-preview)を使用する場合は、Technical Preview の各バージョンのドキュメントで、そのブランチにのみ固有の問題を確認してください。  
@@ -63,7 +70,7 @@ ms.lasthandoff: 08/07/2017
 
 -   中央管理サイトは、階層の最上位のサイトです。  
 
--   複数のプライマリ サイトが含まれる階層を構成する場合は、中央管理サイトをインストールする必要があります。 複数のプライマリ サイトがすぐに必要な場合は、まず中央管理サイトをインストールします。 既にプライマリ サイトがある状態で中央管理サイトをインストールする場合は、中央管理サイトをインストールするために、[スタンドアロン プライマリ サイトを展開する](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand)必要があります。 
+-   複数のプライマリ サイトが含まれる階層を構成する場合は、中央管理サイトをインストールする必要があります。 複数のプライマリ サイトがすぐに必要な場合は、まず中央管理サイトをインストールします。 既にプライマリ サイトがある状態で中央管理サイトをインストールする場合は、中央管理サイトをインストールするために、[スタンドアロン プライマリ サイトを展開する](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand)必要があります。
 
 -   中央管理サイトは、プライマリ サイトのみ子サイトとしてサポートします。  
 

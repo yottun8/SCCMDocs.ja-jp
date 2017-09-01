@@ -14,11 +14,11 @@ caps.latest.revision: "11"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 3c31271f3e3ae7aa45da03b3d75fd78242330646
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 76319b935695df204b4b83a645504079c60db12b
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -91,9 +91,9 @@ Configuration Manager のバージョン 1606 (Current Branch) 以降、Endpoint
 ## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>Mac コンピューターと Linux サーバー用の Endpoint Protection クライアント  
  System Center Endpoint Protection には、Linux コンピューターと Mac コンピューター用の Endpoint Protection クライアントが付属しています。 Configuration Manager にはこれらのクライアントが付属していないため、[Microsoft ボリューム ライセンス サービス センター](https://www.microsoft.com/licensing/servicecenter/default.aspx)から次の製品をダウンロードする必要があります。  
 
--   System Center 2012 Endpoint Protection for the Mac  
+-   System Center Endpoint Protection for the Mac  
 
--   System Center 2012 Endpoint Protection for Linux  
+-   System Center Endpoint Protection for Linux  
 
 
 > [!IMPORTANT]  
@@ -108,7 +108,13 @@ Configuration Manager のバージョン 1606 (Current Branch) 以降、Endpoint
 2. Web サイトの上部にある **[Downloads and Keys]**(ダウンロードとキー) タブを選択します。
 3. 製品 **System Center Endpoint Protection (Current Branch)** でフィルター処理します。
 4. **[ダウンロード]** リンクをクリックします。
-5. [ **続行**] をクリックします。 **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage 32/64 bit 1507 MB ISO** など、複数のファイルが表示されます。
-6. 矢印アイコンをクリックしてファイルをダウンロードします。 ファイル名は **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_EptProt_Lin_Mac_MLF_X21-30777.ISO** です。
+5. [ **続行**] をクリックします。 **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage 32/64 bit 1579 MB ISO** など、複数のファイルが表示されます。
+6. 矢印アイコンをクリックしてファイルをダウンロードします。 ファイル名は **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-2_EptProt_Lin_Mac_MLF_X21-44498.ISO** です。
+
+2017 年 7 月の更新 (X21 44498) には、次のものが含まれます。
+
+- System Center Endpoint Protection for Mac 4.5.28.1 (インストール証明書の更新)
+- System Center Endpoint Protection for Linux 4.5.18.0 (新しい言語パック)
+- System Center Endpoint Protection for Linux のドキュメント (リアルタイム保護の改訂版ガイダンス)
 
  Linux コンピューターと Mac コンピューター用の Endpoint Protection クライアントをインストールして管理する方法については、 **Documentation** フォルダーに配置されたこれらの製品に付属のマニュアルを参照してください。

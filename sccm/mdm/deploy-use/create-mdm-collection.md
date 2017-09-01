@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.openlocfilehash: fabbcfd2d5656d4fa8cb87feffe87e17998df145
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 43316e4915b27aaeca563eaf52b51f053a839222
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="create-an-mdm-collection-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用した MDM コレクションの作成
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/07/2017
 > [!NOTE]
 > Intune にデバイスを登録する場合、Office 365 ポータルまたは Azure Active Directory ポータルでユーザーにライセンスを割り当てる必要はありません。 Intune サブスクリプションに関連付けられたコレクションにユーザーを含める ([後の手順](configure-intune-subscription.md)を参照) だけで済みます。
 
-テスト目的で**ダイレクト規則**をセットアップし、デバイスを登録できる特定のユーザーを追加することができます。 Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[ユーザー コレクション]** を選択し、**[ホーム]** タブ > **[作成]** グループをクリックし、**[ユーザー コレクションの作成]** をクリックします。 配布を広範にするには、**クエリ規則**を使用してユーザーを定義するようにします。 コレクションの詳細については、「[System Center Configuration Manager でコレクションを作成する方法](https://technet.microsoft.com/library/mt629371.aspx)」を参照してください。
+テスト目的で**ダイレクト規則**をセットアップし、デバイスを登録できる特定のユーザーを追加することができます。 Configuration Manager コンソールで、**[資産とコンプライアンス]**  >  **[ユーザー コレクション]** の順に選択し、**[ホーム]** タブ > **[作成]** グループの順にクリックしてから、**[ユーザー コレクションの作成]** をクリックします。 配布を広範にするには、**クエリ規則**を使用してユーザーを定義するようにします。 コレクションの詳細については、「[System Center Configuration Manager でコレクションを作成する方法](https://technet.microsoft.com/library/mt629371.aspx)」を参照してください。
 
 ![MDM のユーザー コレクションを作成する](../media/mdm-create-user-collection.png)
 

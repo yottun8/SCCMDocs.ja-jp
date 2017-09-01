@@ -2,7 +2,7 @@
 title: "データ ウェアハウス | Microsoft Docs"
 description: "System Center Configuration Manager のデータ ウェアハウス サービス ポイントとデータベース"
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 8/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: eedbf12d3bf628666efc90c85a8dfab37e4dc9ab
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 744614d7e1ec97a4d4b4646c45cb41d734c6be34
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>System Center Configuration Manager のデータ ウェアハウス サービス ポイント
 *適用対象: System Center Configuration Manager (Current Branch)*
@@ -49,8 +49,8 @@ ms.lasthandoff: 08/07/2017
 - サイト システムのロールをインストールするコンピューターには、.NET Framework 4.5.2 以降が必要です。
 - サイト システムの役割をインストールするコンピューターのコンピューター アカウントは、データをデータ ウェアハウス データベースと同期するために使用します。 このアカウントには次の権限が必要です。  
   - データ ウェアハウス データベースをホストするコンピューターの**管理者**。
-  - データ ウェアハウス データベースの **DB_owner** へのアクセス許可。
-  - 最上位サイトのサイト データベースに対する **DB_reader** および **execute** アクセス許可。
+  - データ ウェアハウス データベースの **DB_Creator** 権限。
+  - 最上位サイトのサイト データベースに対する **execute** が可能な **DB_owner** または **DB_reader** 権限。
 - データ ウェアハウス データベースでは、SQL Server 2012 以降を使用する必要があります。 Standard、Enterprise、または Datacenter Edition が利用できます。
 - サイト データベースをホストするため、次の SQL Server 構成がサポートされています。  
   - 既定のインスタンス
