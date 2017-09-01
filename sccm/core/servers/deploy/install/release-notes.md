@@ -2,7 +2,7 @@
 title: "リリース ノート - Configuration Manager | Microsoft Docs"
 description: "製品でまだ修正されていないまたは Microsoft サポート技術情報の記事で説明されていない緊急の問題については以下のメモを参照してください。"
 ms.custom: na
-ms.date: 08/21/2017
+ms.date: 08/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 24f30bddb345e3a08d4b655d89693c226005cb0e
-ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
+ms.openlocfilehash: e54c2cd1c3e83609bff6a8cb64fb3c23b26a4eaa
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>System Center Configuration Manager リリース ノート
 
@@ -27,15 +27,23 @@ ms.lasthandoff: 08/21/2017
 
 System Center Configuration Manager の製品リリース ノートは、この製品でまだ修正されていない緊急の問題 (コンソール内更新から入手可能)、または Microsoft サポート技術情報の記事で詳しく説明している緊急の問題のみに限定されています。  
 
- 主要なシナリオに影響を与える既知の問題については、System Center Configuration Manager ドキュメント ライブラリのオンライン製品ドキュメントを参照してください。  
+主要なシナリオに影響を与える既知の問題については、System Center Configuration Manager ドキュメント ライブラリのオンライン製品ドキュメントをご覧ください。  
 
 > [!TIP]  
 >  このトピックには、System Center Configuration Manager の現在のブランチのリリース ノートが含まれています。 System Center Configuration Manager の Technical Preview の場合は、「[System Center Configuration Manager の Technical Preview](../../../../core/get-started/technical-preview.md)」を参照してください。  
+
+異なるバージョンで導入された新しい機能については、次をご覧ください。
+- [バージョン 1706 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
+- [バージョン 1702 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1702)
+- [バージョン 1610 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1610)
+   
+
 
 ## <a name="setup-and-upgrade"></a>セットアップとアップグレード  
 
 ### <a name="after-you-update-a-configuration-manager-console-using-consolesetupexe-from-the-site-server-folder-recent-language-pack-changes-are-not-available"></a>サイト サーバー フォルダーの ConsoleSetup.exe を使用して Configuration Manager コンソールを更新すると、最近の言語パックの変更内容が利用できなくなります。
 <!--  SMS 486420  Applicability should be 1610 and 1702.  -->
+*次のものは、バージョン 1610 と 1702に適用されます。*   
 サイト サーバーのインストール フォルダーの ConsoleSetup.exe を使用して、コンソールに対してインプレース更新を実行すると、最近インストールした更新パックが使用できなくなる場合があります。 この問題は次のような場合に発生します。
 - サイトでバージョン 1610 または 1702 を実行している。
 - コンソールが、サイト サーバーのインストール フォルダーの ConsoleSetup.exe を使用して更新されている。
@@ -47,7 +55,8 @@ System Center Configuration Manager の製品リリース ノートは、この�
 
 ### <a name="with-version-1702-the-default-site-boundary-group-is-configured-for-use-for-site-assignment"></a>バージョン 1702 では、既定サイトの境界グループはサイトの割り当て用に構成されます。
 <!--  SMS 486380   Applicability should only be to 1702. -->
-バージョン 1702 では、既定サイトの境界グループの [参照] タブの **[サイト割り当てにこの境界グループを使用する]** がオンになっており、**[割り当て済みサイト]** としてサイトがリストされ、構成を編集したり、削除したりできないように灰色表示されます。
+*次のものは、バージョン 1702 に適用されます。*  
+既定サイトの境界グループの [参照] タブの **[サイト割り当てにこの境界グループを使用する]** がオンになっており、**[割り当て済みサイト]** としてサイトがリストされ、構成を編集したり、削除したりできないように灰色表示されます。
 
 **対応策 :** なし。 この設定は無視してかまいません。 グループはサイト割り当てに対して有効になっていますが、既定サイトの境界グループはサイト割り当てでは使用されません。 1702 では、この構成により、既定サイトの境界グループが確実に正しいサイトに関連付けられます。
 
@@ -104,7 +113,8 @@ ConfigMgrSetup.log:
 
 ### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>SQL Server がリモートの場合、または共有メモリが無効な場合、サービス接続ツールから例外がスローされる
 <!-- 479223   Fixed in 1702 and later   -->
-バージョン 1606 以降、次のいずれかの条件に該当する場合、サービス接続ツールから例外が生成されます。  
+*次のものは、バージョン 1610 以前のバージョンに適用されます。*  
+次のいずれかの条件に該当する場合、サービス接続ツールから例外が生成されます。  
  -  サービス接続ポイントをホストし、標準以外のポート (1433 以外のポート) を使用しているコンピューターとは別のコンピューターにサイト データベースがある
  -  サイト データベースがサービス接続ポイントと同じサーバー上にあるが、SQL プロトコルの**共有メモリ**が無効
 
@@ -131,8 +141,9 @@ ConfigMgrSetup.log:
 ## <a name="client-deployment-and-upgrade"></a>クライアントの展開とアップグレード  
 
 ### <a name="client-installation-fails-with-error-code-0x8007064c"></a>クライアントのインストールが失敗し、エラー コード 0x8007064c が返される
-<!--- SMS 486973 -->
-Windows コンピューターにクライアントを展開すると、インストールが失敗します。 ccmsetup.log ファイルには、"ファイル 'C:\WINDOWS\ccmsetup\Silverlight.exe' がエラー終了コード 1612 を返しました。 インストールに失敗しました" というエントリに続き、"0x8007064c で InstallFromManifest のエラーが発生しました" というエントリが含まれます。
+<!--- SMS 486973  applies 1606 to 1706. Not yet fixed. -->
+*次のものは、アクティブなすべてのバージョンの Configuration Manager に適用されます。*   
+アクティブなすべてのバージョンで、Windows コンピューターにクライアントを展開すると、インストールが失敗します。 ccmsetup.log ファイルには、"ファイル 'C:\WINDOWS\ccmsetup\Silverlight.exe' がエラー終了コード 1612 を返しました。 インストールに失敗しました" というエントリに続き、"0x8007064c で InstallFromManifest のエラーが発生しました" というエントリが含まれます。
 
 **回避策**: 以前にインストールしたバージョンの Silverlight の破損が原因です。 影響を受けたコンピューターで次のツールを試すと、この問題を解決できる場合があります。[https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed)
 
@@ -158,6 +169,7 @@ Windows コンピューターにクライアントを展開すると、インス
 
 ### <a name="when-a-high-risk-deployment-dialog-is-visible-to-a-user-subsequent-high-risk-dialogs-with-a-sooner-deadline-are-not-displayed"></a>危険度の高い展開のダイアログ ボックスがユーザーに表示されると、有効期限が迫っている後続の危険度の高いダイアログ ボックスが表示されない
 <!-- Fixed in 1702 and later -->
+*次のものは、バージョン 1610 以前のバージョンに適用されます。*   
 危険度の高いタスクの展開を作成しユーザーに展開すると、危険度の高い展開のダイアログ ボックスがユーザーに表示されます。 ユーザーがこのダイアログ ボックスを終了しないでいると、最初の危険度の高い展開より有効期限が近い別の危険度の高い展開を作成しても、最初のダイアログ ボックスを終了するまで、ダイアログ ボックスの更新は行われません。 それでも展開は、構成された期限で実行されます。
 
 **回避策**:  
@@ -169,6 +181,7 @@ Windows コンピューターにクライアントを展開すると、インス
 
 ### <a name="importing-an-office-365-client-settings-from-a-configuration-file-fails-when-it-contains-unsupported-languages"></a>サポートされていない言語が含まれている場合、構成ファイルからの Office 365 クライアント設定のインポートが失敗する
 <!-- 489258  Fixed in 1706  -->
+*次のものは、バージョン 1702 以前のバージョンに適用されます。*   
 既存の XML 構成ファイルから Office 365 クライアント設定をインポートするときに、ファイルに Office 365 ProPlus クライアントでサポートされていない言語が含まれている場合は、エラーが発生します。 詳細については、[Office 365 クライアント管理ダッシュボードからのクライアントへの Office 365 アプリの展開](/sccm/sum/deploy-use/manage-office-365-proplus-updates#to-deploy-office-365-apps-to-clients-from-the-office-365-client-management-dashboard)に関するページを参照してください。
 
 **回避策**:    
@@ -207,6 +220,7 @@ Android for Work の電子メール プロファイルを作成する場合、�
 
 ### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>マルウェア対策ポリシーを Windows Server 2016 Core に適用できません
 <!--  Product Studio bug 485370 added 04 19 2017   Fixed in 1702 -->
+*次のものは、バージョン 1610 以前のバージョンに適用されます。*  
 マルウェア対策ポリシーを Windows Server 2016 Core に適用できません。  エラー コードは 0x80070002 です。  ConfigSecurityPolicy.exe に依存関係がありません。
 
 **回避策:** 2017 年 5 月 9 日に配信された[サポート技術情報の記事 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) でこの問題は解決されています。
