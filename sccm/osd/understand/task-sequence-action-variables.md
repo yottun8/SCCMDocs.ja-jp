@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 6049ec2369e0a97b21ce6523ba8448335385ab9a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 675ebf053de98c6ad93a53ae218696012aef96f7
+ms.sourcegitcommit: 5b4fd2d36f06be5bcc7f8ebbfb92c48b7240085d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>System Center Configuration Manager でのタスク シーケンス アクション変数
 
@@ -187,15 +187,6 @@ ms.lasthandoff: 08/07/2017
 |SMSConnectNetworkFolderPassword<br /><br /> (入力)|ネットワーク共有に接続するために使用するネットワーク パスワードを指定します。|  
 |SMSConnectNetworkFolderPath<br /><br /> (入力)|接続に使用するネットワーク パスを指定します。<br /><br /> 例:<br /><br /> **"\\\サーバー名\共有名"**|  
 
-###  <a name="BKMK_ConvertDisk"></a> ディスクをダイナミックに変換タスク シーケンス アクション変数  
- このアクションの変数では、ベーシック ディスクからダイナミック ディスクに変換する物理ディスクの番号を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Convert Disk to Dynamic](task-sequence-steps.md#BKMK_ConvertDisktoDynamic)」 (ダイナミック ディスクに変換) を参照してください。  
-
-#### <a name="details"></a>説明  
-
-|アクション変数名|説明|  
-|--------------------------|-----------------|  
-|OSDConvertDiskIndex<br /><br /> (入力)|変換する物理ディスクの番号を指定します。|  
-
 ###  <a name="BKMK_EnableBitLocker"></a> BitLocker の有効化タスク シーケンス アクション変数  
  このアクションの変数では、対象のコンピューターで BitLocker を有効にするために使用する、回復パスワード オプションとスタートアップ キー オプションを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Enable BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker)」 (BitLocker の有効化) を参照してください。  
 
@@ -276,7 +267,7 @@ ms.lasthandoff: 08/07/2017
 |OSDStateStorePath<br /><br /> (出力)|ユーザー状態が格納される状態移行ポイント上にあるフォルダーへの UNC パス。|  
 
 ###  <a name="BKMK_RestartComputer"></a> コンピューターの再起動タスク シーケンス アクション変数  
- このアクションの変数は、対象コンピューターを再起動するのに使用する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Restart Computer](task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)」 (コンピューターの再起動) を参照してください。  
+ このアクションの変数は、対象コンピューターを再起動するのに使用する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Restart Computer](task-sequence-steps.md#BKMK_RestartComputer)」 (コンピューターの再起動) を参照してください。  
 
 #### <a name="details"></a>説明  
 
