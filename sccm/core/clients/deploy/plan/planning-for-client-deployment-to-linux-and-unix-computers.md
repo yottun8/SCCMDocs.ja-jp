@@ -2,7 +2,7 @@
 title: "Linux および UNIX コンピューターへのクライアント展開の計画 | Microsoft Docs"
 description: "System Center Configuration Manager での Linux コンピューターおよび UNIX コンピューターへのクライアント展開の計画"
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 08/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.openlocfilehash: 367ffb919a1adb9a0530f7357a0fcf1e6636af08
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c5385ec5d7e41812df5c2a33d528614547819157
+ms.sourcegitcommit: 5b4fd2d36f06be5bcc7f8ebbfb92c48b7240085d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager での Linux コンピューターおよび UNIX コンピューターへのクライアント展開の計画
 
@@ -51,14 +51,6 @@ System Center Configuration Manager クライアントは、Linux または UNIX
 ###  <a name="BKMK_ClientDeployExternalforLnU"></a> Configuration Manager 外部の依存関係:  
  次の表は、必要な UNIX および Linux オペレーティング システムおよびパッケージ依存関係を示しています。  
 
- **Red Hat Enterprise Linux ES リリース 4**  
-
-|必須パッケージ|説明|最小バージョン|  
-|----------------------|-----------------|---------------------|  
-|glibc|C 標準ライブラリ|2.3.4-2|  
-|Openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|0.9.7a-43.1|  
-|PAM|プラグ可能な認証モジュール|0.77-65.1|  
-
  **Red Hat Enterprise Linux Server リリース 5.1 (Tikanga)**  
 
 |必須パッケージ|説明|最小バージョン|  
@@ -75,15 +67,6 @@ System Center Configuration Manager クライアントは、Linux または UNIX
 |Openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|1.0.0-4|  
 |PAM|プラグ可能な認証モジュール|1.1.1-4|  
 
- **Solaris 9 SPARC**  
-
-|必須パッケージ|説明|最小バージョン|  
-|----------------------|-----------------|---------------------|  
-|必要なオペレーティング システムの修正プログラム|PAM メモリ リーク|112960-48|  
-|SUNWlibC|Sun Workshop Compilers Bundled libC (sparc)|5.9,REV=2002.03.18|  
-|SUNWlibms|Forte Developer バンドル共有 libm (sparc)|5.9,REV=2001.12.10|  
-|Openssl|SMCosslg (sparc)<br /><br /> Sun は Solaris 9 SPARC 用の OpenSSL のバージョンを提供しません。 Sunfreeware から利用できるバージョンが 1 つあります。|0.9.7g|  
-|PAM|プラグ可能な認証モジュール<br /><br /> SUNWcsl、Core Solaris、(共有 Libs) (sparc)|11.9.0,REV=2002.04.06.15.27|  
 
  **Solaris 10 SPARC**  
 
@@ -132,15 +115,6 @@ System Center Configuration Manager クライアントは、Linux または UNIX
 |SUNWcsr|Core Solaris (ルート)|11.11, REV=2009.11.11|  
 |SUNWopenssl-ライブラリ|SUNopenssl ライブラリ (Usr)|11.11.0,REV=2010.05.25.01.00|  
 
- **SUSE Linux Enterprise Server 9 (i586)**  
-
-|必須パッケージ|説明|最小バージョン|  
-|----------------------|-----------------|---------------------|  
-|Service Pack 4|SUSE Linux Enterprise Server 9||  
-|OS 修正プログラム lib gcc-41.rpm|標準共有ライブラリ|41-4.1.2_20070115-0.6|  
-|OS 修正プログラム lib stdc++-41.rpm|標準共有ライブラリ|41-4.1.2_20070115-0.6|  
-|Openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|0.9.7d-15.35|  
-|PAM|プラグ可能な認証モジュール|0.77-221-11|  
 
  **SUSE Linux Enterprise Server 10 SP1 (i586)**  
 
@@ -173,13 +147,6 @@ System Center Configuration Manager クライアントは、Linux または UNIX
 |Openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|0.9.8 または 1.0|  
 |PAM|プラグ可能な認証モジュール|0.99.6.2-3.14|  
 
- **IBM AIX 5L 5.3**  
-
-|必須パッケージ|説明|最小バージョン|  
-|----------------------|-----------------|---------------------|  
-|OS バージョン|オペレーティング システムのバージョン|AIX 5.3、テクノロジー レベル 6、サービス パック 5|  
-|xlC.rte|XL C/C++ Runtime|9.0.0.2|  
-|openssl.base|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|0.9.8.4|  
 
  **IBM AIX 6.1**  
 
@@ -197,33 +164,6 @@ System Center Configuration Manager クライアントは、Linux または UNIX
 |xlC.rte|XL C/C++ Runtime||  
 |OpenSSL/openssl.base|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル||  
 
- **HP-UX 11i v2 IA 64**  
-
-|必須パッケージ|説明|最小バージョン|  
-|----------------------|-----------------|---------------------|  
-|HPUXBaseOS|ベース OS|B.11.23|  
-|HPUXBaseAux|HP-UX ベース OS 補助|B.11.23.0706|  
-|HPUXBaseAux.openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|A.00.09.07l.003|  
-|PAM|プラグ可能な認証モジュール|HP-UX では、PAM はコア オペレーティング システム コンポーネントの一部です。 これ以外には依存関係はありません。|  
-
- **HP-UX 11i v2 PA-RISC**  
-
-|必須パッケージ|説明|最小バージョン|  
-|----------------------|-----------------|---------------------|  
-|HPUX11i-OE|HP-UX 基本操作環境|B.11.23.0706|  
-|OS-Core.MinimumRuntime.CORE-SHLIBS|互換性のある開発ツールのライブラリ|B.11.23|  
-|HPUXBaseAux|HP-UX ベース OS 補助|B.11.23.0706|  
-|HPUXBaseAux.openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|A.00.09.071.003|  
-|PAM|プラグ可能な認証モジュール|HP-UX では、PAM はコア オペレーティング システム コンポーネントの一部です。 これ以外には依存関係はありません。|  
-
- **HP-UX 11i v3 PA-RISC**  
-
-|必須パッケージ|説明|最小バージョン|  
-|----------------------|-----------------|---------------------|  
-|HPUX11i-OE|HP-UX 基本操作環境|B.11.31.0709|  
-|OS-Core.MinimumRuntime.CORE2-SHLIBS|特定 IA エミュレーターのライブラリ|B.11.31|  
-|openssl/Openssl.openssl|OpenSSL ライブラリ、セキュア ネットワーク通信プロトコル|A.00.09.08d.002|  
-|PAM|プラグ可能な認証モジュール|HP-UX では、PAM はコア オペレーティング システム コンポーネントの一部です。 これ以外には依存関係はありません。|  
 
  **HP-UX 11i v3 IA64**  
 
@@ -285,13 +225,8 @@ System Center Configuration Manager クライアントは、Linux または UNIX
 ##  <a name="BKMK_NoSHA-256"></a> SHA-256 をサポートしていない Linux および UNIX オペレーティング システムについて  
  Configuration Manager のクライアントとしてサポートされている以下の Linux および UNIX オペレーティング システムは、SHA-256 をサポートしないバージョンの OpenSSL でリリースされました。  
 
--   Red Hat Enterprise Linux バージョン 4 (x86 と x64)  
+-   Solaris バージョン 10 (SPARC/x86)  
 
--   Solaris バージョン 9 (SPARC)、Solaris バージョン 10 (SPARC/x86)  
-
--   SUSE Linux Enterprise サーバーのバージョン 9 (x86)  
-
--   HP-UX バージョン 11iv2 (PA-RISH/IA64)  
 
  これらのオペレーティング システムを Configuration Manager で管理するには、クライアントに SHA-256 の検証をスキップするよう指示するコマンド ライン スイッチを使用して、Linux および UNIX 用の Configuration Manager クライアントをインストールする必要があります。 これらのオペレーティング システム バージョンで実行される Configuration Manager クライアントは、SHA-256 をサポートしているクライアントに比べ、安全性の低いモードで動作します。 このような安全性の低い操作モードには、次のような動作があります。  
 

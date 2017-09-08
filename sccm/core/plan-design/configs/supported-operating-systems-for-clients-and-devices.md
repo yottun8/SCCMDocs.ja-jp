@@ -2,7 +2,7 @@
 title: "サポートされるクライアントとデバイス | Microsoft Docs"
 description: "System Center Configuration Manager がクライアントとデバイスをサポートするオペレーティング システムについて説明します。"
 ms.custom: na
-ms.date: 8/16/2017
+ms.date: 8/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,14 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 caps.latest.revision: "5"
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
-ms.openlocfilehash: f9dd3b3e8f7a2878cd549bf289e1ee5536ee73fc
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: 4c7e0aaed816e45c8770d1cb9fb21d6dcd63f3a3
+ms.sourcegitcommit: 5b4fd2d36f06be5bcc7f8ebbfb92c48b7240085d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>System Center Configuration Manager のクライアントとデバイスのサポートされるオペレーティング システム
 
@@ -213,7 +213,6 @@ ms.lasthandoff: 08/28/2017
 
 |||  
 |-|-|  
-|バージョン 5.3 (Power)|ccm-Aix53ppc.&lt;ビルド\>.tar|  
 |バージョン 6.1 (Power)|ccm-Aix61ppc.&lt;ビルド\>.tar|  
 |バージョン 7.1 (Power)|ccm-Aix71ppc.&lt;ビルド\>.tar|  
 
@@ -244,10 +243,7 @@ ms.lasthandoff: 08/28/2017
 
 |||  
 |-|-|  
-|バージョン 11iv2 IA64|ccm-HpuxB.11.23i64.&lt;ビルド\>.tar|  
-|バージョン 11iv2 PA-RISC|ccm-HpuxB.11.23PA.&lt;ビルド\>.tar|  
 |バージョン 11iv3 IA64|ccm-HpuxB.11.31i64.&lt;ビルド\>.tar|  
-|バージョン 11iv3 PA-RISC|ccm-HpuxB.11.31PA.&lt;ビルド\>.tar|  
 
 ### <a name="oracle-linux"></a>Oracle Linux  
 
@@ -263,8 +259,6 @@ ms.lasthandoff: 08/28/2017
 
 |||  
 |-|-|  
-|バージョン 4 x86|ccm-RHEL4x86.&lt;ビルド\>.tar|  
-|バージョン 4 x64|ccm-RHEL4x64.&lt;ビルド\>.tar|  
 |バージョン 5 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
 |バージョン 5 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
 |バージョン 6 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
@@ -275,7 +269,6 @@ ms.lasthandoff: 08/28/2017
 
 |||  
 |-|-|  
-|バージョン 9 SPARC|ccm-Sol9sparc.&lt;ビルド\>.tar|  
 |バージョン 10 x86|ccm-Sol10x86.&lt;ビルド\>.tar|  
 |バージョン 10 SPARC|ccm-Sol10sparc.&lt;ビルド\>.tar|  
 |バージョン 11 x86|ccm-Sol11x86.&lt;ビルド\>.tar|  
@@ -285,7 +278,6 @@ ms.lasthandoff: 08/28/2017
 
 |||  
 |-|-|  
-|バージョン 9 x86|ccm-SLES9x86.&lt;ビルド\>.tar|  
 |バージョン 10 SP1 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
 |バージョン 10 SP1 x64|ccm-Universalx64.&lt;ビルド\>.tar|  
 |バージョン 11 SP1 x86|ccm-Universalx86.&lt;ビルド\>.tar|  
@@ -302,6 +294,9 @@ ms.lasthandoff: 08/28/2017
 |バージョン 12.04 LTS x64|ccm-Universalx64.&lt;ビルド\>.tar|  
 |バージョン 14.04 LTS x86|ccm-Universalx86.&lt;ビルド\>.tar|  
 |バージョン 14.04 LTS x64|ccm-Universalx64.&lt;ビルド\>.tar|  
+|バージョン 16.04 LTS x86|ccm-Universalx86.&lt;ビルド\>.tar|  
+|バージョン 16.04 LTS x64|ccm-Universalx64.&lt;ビルド\>.tar|  
+
 
 ##  <a name="mobile-devices-enrolled-by-microsoft-intune"></a>Microsoft Intune で登録されるモバイル デバイス  
  Microsoft Intune を Configuration Manager と統合する場合に管理できるコンピューターとデバイスの詳細については、Microsoft Intune ドキュメント ライブラリの次の 2 つのトピックを参照してください。  
