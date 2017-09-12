@@ -14,11 +14,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 22203b358830903cf2e531c0532ae3111b8265fc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3046003f000c8abde28a5b6e3bcb88b159be5357
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configuration Manager と共に使用するように Azure サービスを構成する
 
@@ -30,7 +30,7 @@ Current Branch バージョン 1706 以降、**Azure サービス ウィザー�
 
 次の Azure サービスは Azure サービスの構成ウィザードで構成されます。
 -   **クラウド管理**   
-    [Azure Active Directory (Azure AD) を利用し、クライアントの認証を有効にする]() [Azure AD ユーザー探索を構成](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)することもできます。
+    [Azure Active Directory (Azure AD) を利用し、クライアントの認証を有効にする](/sccm/core/clients/deploy/deploy-clients-cmg-azure) [Azure AD ユーザー探索を構成](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)することもできます。
 -   **OMS コネクタ**
     [Operations Manager Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) (OMS) に接続し、OMS Log Analytics にコレクションなどのデータを同期します。
 -   **Upgrade Readiness**
@@ -85,7 +85,7 @@ Azure サービス Web アプリは Configuration Manager サイトを Azure AD 
 
 6.  ウィザードの **[検出]** ページで、**[Azure Active Directory ユーザーの探索を有効にする]** をクリックし、**[設定]** をクリックします。
 **[Azure AD ユーザー探索設定]** ダイアログ ボックスで、検出を実行するスケジュールを設定します。 Azure AD の新規または変更されたアカウントのみをチェックする差分探索を有効にすることもできます。 Azure AD ユーザー探索の詳細については[こちら](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)をご覧ください。
- 
+
  7. ウィザードを完了します。
 
 この時点で、Configuration Manager サイトが Azure AD に接続されています。

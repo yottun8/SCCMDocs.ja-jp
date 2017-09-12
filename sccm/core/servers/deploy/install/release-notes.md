@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: e54c2cd1c3e83609bff6a8cb64fb3c23b26a4eaa
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: 4e818ffd943208eab323b1558f825bd87f3ddc4c
+ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/11/2017
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>System Center Configuration Manager リリース ノート
 
@@ -148,17 +148,6 @@ ConfigMgrSetup.log:
 **回避策**: 以前にインストールしたバージョンの Silverlight の破損が原因です。 影響を受けたコンピューターで次のツールを試すと、この問題を解決できる場合があります。[https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed)
 
 ## <a name="operating-system-deployment"></a>オペレーティング システムの展開  
-
-### <a name="if-the-boot-image-contains-drivers-the-image-fails-to-reload-the-current-windows-pe-version-from-the-windows-assessment-and-deployment-kit-adk"></a>ブート イメージにドライバーが含まれている場合、Windows アセスメント & デプロイメント キット (ADK) から現在のバージョンの Windows PE の再読み込みに失敗する
-<!-- 495087 -->
-配布ポイントの更新ウィザードを使用して、Windows アセスメント & デプロイメント キット (ADK) のインストール ディレクトリから、格納されているブート イメージを含む配布ポイントを、最新バージョンの Windows PE で更新できます。 更新するには、配布ポイントの更新ウィザードを開き、**[このブート イメージを Windows ADK の現在の Windows PE バージョンを使用して再度読み込む]** をオンにします。
-
-ただし、ブート イメージにドライバーが含まれている場合は、更新に失敗します。 代わりに、ウィザードによって ADK からイメージが再度読み込まれ、例外のダイアログ ボックス (無視可能) が表示された後に、成功画面が表示されます。 ただし、最新の構成マネージャー クライアントのコンポーネントは、ブート イメージに追加されません。 配布ポイント上のブート イメージは更新されません。
-
-**回避策**: 配布ポイントの更新ウィザードを 2 回実行します。
-
-1. **[このブート イメージを Windows ADK の現在の Windows PE バージョンを使用して再度読み込む]** をオンにして、ウィザードを実行します。 これにより、最新バージョンの Windows PE が取得されます。
-2. 次に、**[このブート イメージを Windows ADK の現在の Windows PE バージョンを使用して再度読み込む]** をオフにして、ウィザードを再度実行します。 これにより、最新のクライアントのバイナリが取得され、配布ポイント上のブート イメージが更新されます。
 
 ### <a name="servicing-plans-create-a-lot-of-duplicate-software-update-groups-and-deployments-by-default"></a>既定で、サービス プランが多くの重複したソフトウェア更新プログラム グループと展開を作成する  
 現在の既定では、サービス プランの作成ウィザードが、すべてのソフトウェア更新プログラムの同期後に実行されます。 ウィザードを実行するたびに新しいソフトウェア更新プログラム グループと展開が作成されます。 1 日に複数回実行するソフトウェア更新プログラムの同期スケジュールがある場合、たとえば、サービス プランの作成ウィザードが複数の同一であるソフトウェア更新プログラム グループと展開を毎日作成します。  
