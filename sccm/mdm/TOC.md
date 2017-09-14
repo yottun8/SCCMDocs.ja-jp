@@ -49,6 +49,7 @@
 ### [iOS 大量購入アプリ](deploy-use/manage-volume-purchased-ios-apps.md)
 ### [Windows Phone アプリケーションの作成](deploy-use/creating-windows-phone-applications.md)
 ### [Android アプリケーションの作成](deploy-use/creating-android-applications.md)
+### [Android アプリ構成ポリシー](deploy-use/configure-android-apps-with-app-configuration-policies.md)
 ### [モバイル アプリケーション管理ポリシー](deploy-use/protect-apps-using-mam-policies.md)
 ### [管理対象ブラウザーのポリシー](deploy-use/manage-internet-access-using-managed-browser-policies.md)
 ### [ビジネス向け Windows ストアのアプリ](deploy-use/windows-store-for-business.md)
