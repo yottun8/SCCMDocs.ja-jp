@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.openlocfilehash: 3921748d3c99c2a35b670f3ca121dc7ab92d43bc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 2d305df5e67c3f46360e1735cb6fe263afbaed41
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="device-guard-management-with-configuration-manager"></a>Configuration Manager を使用した Device Guard 管理
 
@@ -104,7 +104,7 @@ Device Guard ポリシー内で特定のファイルまたはフォルダーに�
 5.  完了したら、**[OK]** をクリックしてポリシーを展開します。 
 
 クライアント PC でポリシーが処理されたら、**[コンピューターの再起動]** の **[クライアント設定]** に基づき、そのクライアントで再起動がスケジュールされます。
-クライアント PC を再起動するまで、ポリシーは適用されません。**
+クライアント PC を再起動するまで、ポリシーは適用されません。
 
 ## <a name="how-to-monitor-a-device-guard-policy"></a>Device Guard ポリシーの監視方法
 

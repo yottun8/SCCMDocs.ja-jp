@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 7434c98f2217cf63fdcd250b91e772de72daaea9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 0af556b5b63b465a99650c8889eae3adbf7307f6
+ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/11/2017
 ---
 # <a name="exchange-activesync-email-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager で Exchange ActiveSync 電子メール プロファイルを作成する
 
@@ -31,9 +31,8 @@ Microsoft Intune と Exchange ActiveSync を利用すると、デバイスに電
 
 - Windows 10
 - Windows Phone 8.1
-- Windows Phone 8.0
-- iPhone (iOS 5、iOS 6、iOS 7、iOS 8)  
-- iPad (iOS 5、iOS 6、iOS 7、iOS 8)  
+- iOS 8 を実行している iPhone  
+- iOS 8 を実行している iPad  
 - Samsung KNOX Standard (4 以降)
 - Android for Work
 
@@ -134,7 +133,7 @@ Exchange ActiveSync 電子メール プロファイルの作成ウィザード�
 
     -   **手動**。 手動で同期を開始する必要があります。  
 
--   **同期する電子メールの日数**。 ドロップダウン リストから、同期する電子メールの日数を選択します。 次のいずれかの値を選択します。  
+-   **同期する電子メールの日数**。 ドロップダウン リストから、同期する電子メールの日数を選択します。次のいずれかの値を選択します。  
 
     -   **未構成**。 設定は強制されません。 そのため、デバイスにダウンロードする電子メールの量を構成できます。  
 

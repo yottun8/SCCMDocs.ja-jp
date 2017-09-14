@@ -2,7 +2,7 @@
 title: "サービス接続ツール | Microsoft Docs"
 description: "このツールによって、Configuration Manager クラウド サービスに接続し、使用状況の情報を手動でアップロードできます。"
 ms.custom: na
-ms.date: 4/7/2017
+ms.date: 09/06/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "11"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0da80521bf223a765c3731f8ad59623d85a4c9fa
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8039ee0c704bbe570ec3e45ba648f779923087c6
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>System Center Configuration Manager のサービス接続ツールの使用
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 08/07/2017
 USB ドライブに ServiceConnectionTool フォルダーとその中身をすべてコピーする必要もあります。または、手順 3 と 4 で使用するコンピューターで使用可能にする必要があります。  
 
 ### <a name="overview"></a>概要
-**サービス接続ツールを使用するための 3 つの主要なステップがあります。**  
+#### <a name="there-are-three-primary-steps-to-using-the-service-connection-tool"></a>サービス接続ツールを使用するための 3 つの主要なステップがあります  
 
 1.  **準備**: このステップは、サービス接続ポイントをホストするコンピューターで実行されます。 ツールが実行されると、使用状況データが .cab ファイルに格納され、そのファイルが USB ドライブ (または指定した代替の転送場所) に保存されます。  
 
@@ -91,15 +91,28 @@ USB ドライブに ServiceConnectionTool フォルダーとその中身をす�
 
 バージョン 1606 以降では、Microsoft に接続すると複数の .cab ファイルを (別の階層からそれぞれ) 一度にアップロードして、プロキシ サーバーとプロキシ サーバーのユーザーを指定できます。   
 
-**複数の .cab ファイルをアップロードするには**
+#### <a name="to-upload-multiple-cab-files"></a>複数の .cab ファイルをアップロードするには
  -  個別の階層からエクスポートした各 .cab ファイルを同じフォルダーに配置します。 各ファイルの名前は一意である必要があります。名前は、必要に応じて手動で変更することができます。
  -  次に、データを Microsoft にアップロードするコマンドを実行する際に、.cab ファイルを含むフォルダーを指定します。 (更新プログラム 1606 より前では、一度にアップロードできるデータは 1 つの階層からだけであり、ツールでフォルダーの .cab ファイルに名前を指定する必要がありました。)
  -  その後、階層のサービス接続ポイントでインポート タスクを実行すると、ツールで自動的にその階層のデータのみがインポートされます。  
 
-**プロキシ サーバーを指定するには**  
+#### <a name="to-specify-a-proxy-server"></a>プロキシ サーバーを指定するには
 次のオプション パラメーターを使用して、プロキシ サーバーを指定できます (これらのパラメーターの使用に関する詳細は、このトピックのコマンド ライン パラメーターのセクションで確認できます)。
   - **-proxyserveruri [FQDN_of_proxy_sever]**  パラメーターを使用して、この接続に使用するプロキシ サーバーを指定します。
   -  **-proxyusername [username]**  プロキシ サーバーのユーザーを指定する必要がある場合に、このパラメーターを使用します。
+
+#### <a name="specify-the-type-of-updates-to-download"></a>ダウンロードする更新プログラムの種類を指定する
+バージョン 1706 より、ツールの既定のダウンロード動作が変更され、ダウンロードするファイルの種類を制御するオプションがツールでサポートされるようになりました。
+-   既定では、サイトのバージョンに適用される最新の更新プログラムのみがダウンロードされます。 修正プログラムはダウンロードされません。
+
+この動作を変更するには、次のパラメーターのいずれか 1 つを使用してダウンロードするファイルの種類を変更します。 サイトのバージョンは、ツールの実行時にアップロードされる .cab ファイル内のデータから決定されます。
+-   **-downloadall**  このオプションではサイトのバージョンに関係なく、更新プログラムと修正プログラムを含めたすべてがダウンロードされます。
+-   **-downloadhotfix**  このオプションではサイトのバージョンに関係なくすべての修正プログラムがダウンロードされます。
+-   **-downloadsiteversion**  このオプションでは、サイトのバージョン以降のバージョンの更新プログラムと修正プログラムがダウンロードされます。
+
+*-downloadsiteversion* を使用するコマンド ラインの例:
+- **serviceconnectiontool.exe -connect  *-downloadsiteversion* -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
+
 
 
 

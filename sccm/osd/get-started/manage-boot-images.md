@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: cc678c1133b1944f55bcad309cf9ede9f0660b57
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5668ba3ead3b7415508f9ecf02f2e119c3cd9cc6
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>System Center Configuration Manager でのブート イメージの管理
 
@@ -49,11 +49,10 @@ Version 1702 より前のバージョンでは、 Configuration Manager は、�
 セットアップ プロセスを使用して Configuration Manager 2012 を Configuration Manager CB にアップグレードするときに、Configuration Manager が既定のブート イメージを再生成します。 これには、更新された Windows ADK の新しい Windows PE バージョン、新しいバージョンの Configuration Manager クライアントが含まれ、すべてのカスタマイズは変更されません。 カスタム ブート イメージは変更されません。
 
 ### <a name="update-distribution-points-with-the-boot-image"></a>ブート イメージを使用して配布ポイントを更新する
-Configuration Manager コンソールで、**[ブート イメージ]** ノードから **[配布ポイントの更新]** アクションを使用する場合、Configuration Manager は、クライアント コンポーネント、ドライバー、カスタマイズなどを使用して既定のブート イメージを更新します。    
+Configuration Manager コンソールで、**[ブート イメージ]** ノードから **[配布ポイントの更新]** アクションを使用する場合、Configuration Manager は、クライアント コンポーネント、ドライバー、カスタマイズなどを使用して対象のブート イメージを更新します。    
 
 Configuration Manager バージョン 1706 以降、そのブート イメージ内の (Windows ADK インストール ディレクトリにある) 最新バージョンの Windows PE を再読み込みできます。 [配布ポイントの更新] ウィザードの **[全般]** ページには、サイト サーバーにインストールされた Windows ADK のバージョン情報、ブート イメージ内の Windows PE を使用した Windows ADK のバージョン情報、Configuration Manager クライアントのバージョン情報が表示されます。 この情報はブート イメージを再読み込みするかどうかを決めるのに役立ちます。 また、**[ブート イメージ]** ノードでブート イメージを表示すると、新しい列 (**[クライアント バージョン]**) が追加されているため、各ブート イメージがどのバージョンの Configuration Manager クライアントを使用しているかを確認できます。    
 
-カスタム ブート イメージは変更されません。
 
 ##  <a name="BKMK_BootImageCustom"></a> ブート イメージのカスタマイズ  
  サポートされているバージョンの Windows ADK の Windows PE バージョンに基づいているブート イメージであれば、Configuration Manager コンソールからカスタマイズしたり、[ブート イメージの変更](#BKMK_ModifyBootImages)を行ったりできます。 新しいバージョンでサイトがアップグレードされ、新しいバージョンの Windows ADK がインストールされている場合、カスタム ブート イメージ (既定のブート イメージの場所ではない) は新しいバージョンの Windows ADK で更新されません。 このことが発生する場合、Configuration Manager コンソールでブート イメージをカスタマイズできなくなります。 ただし、引き続き、アップグレード前に同様に動作します。  

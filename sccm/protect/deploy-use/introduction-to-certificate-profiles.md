@@ -2,7 +2,7 @@
 title: "証明書プロファイルの概要 | Microsoft Docs"
 description: "System Center Configuration Manager の証明書プロファイルと Active Directory 証明書サービスの使用方法について説明します。"
 ms.custom: na
-ms.date: 07/25/2017
+ms.date: 09/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,18 +14,18 @@ caps.latest.revision: "7"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 7b1c0e449f3d1ef42e279e8707df6bf1df163b3f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e269b5836648d0d227e91a017512c16217e42646
+ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/11/2017
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager における証明書プロファイルの概要
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 
-証明書プロファイルは、ユーザーが会社のリソースにシームレスにアクセスできるように、Active Directory 証明書サービスとネットワーク デバイス登録サービスの役割を使用して、管理対象のデバイスの認証証明書をプロビジョニングします。 たとえば、証明書プロファイルを作成し、展開して、ユーザーが VPN 接続およびワイヤレス接続を開始するために必要な証明書を提供することができます。 
+証明書プロファイルは、ユーザーが会社のリソースにシームレスにアクセスできるように、Active Directory 証明書サービスとネットワーク デバイス登録サービスの役割を使用して、管理対象のデバイスの認証証明書をプロビジョニングします。 たとえば、証明書プロファイルを作成し、展開して、ユーザーが VPN 接続およびワイヤレス接続を開始するために必要な証明書を提供することができます。
 
 証明書プロファイルでは、Wi-Fi ネットワークや VPN サーバーなどの会社のリソースにアクセスできるように、ユーザー デバイスを自動的に構成でき、証明書を手動でインストールしたり帯域外プロセスを使用する必要がありません。 エンタープライズ公開キー基盤 (PKI) でサポートされているさらに安全な設定を使用できるため、証明書プロファイルは会社のリソースをセキュリティで保護した状態で維持するためにも役立ちます。 たとえば、管理対象のデバイスに必要な証明書がプロビジョニングされるため、すべての Wi-Fi 接続と VPN 接続にサーバー認証を要求できます。   
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/07/2017
 
 -   **Personal information Exchange (.pfx)** - デバイスまたはユーザーの .pfx (別名、PKCS #12) 証明書を要求できます。
 
-    要求を処理するために既存の証明書から[証明書をインポート](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md)するか、[証明機関を定義](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md)して、PFX の証明書プロファイルを作成できます。
+    要求を処理するために既存の証明書から[証明書をインポート](/sccm/mdm/deploy-use/import-pfx-certificate-profiles)するか、[証明機関を定義](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)して、PFX の証明書プロファイルを作成できます。
 
     リリース 1706 以降、**Personal Information Exchange (.pfx)** 証明書の証明機関として Microsoft または Entrust を使用できます。
 

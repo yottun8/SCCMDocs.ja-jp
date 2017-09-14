@@ -2,7 +2,7 @@
 title: "デバイス登録マネージャーを使用したデバイスの登録 - Configuration Manager | Microsoft Docs"
 description: "System Center Configuration Manager を使用して、会社所有のデバイスをデバイス登録マネージャー アカウントで登録します。"
 ms.custom: na
-ms.date: 08/15/2017
+ms.date: 09/08/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "8"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: c90ecca1ee46523d16fc1cf11495e40707631e03
-ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.openlocfilehash: dcc35fb6ebe385d07a3b60e8968e06dec8ad60af
+ms.sourcegitcommit: 40f2a4e3cc546e6bfd10f195a8e87af2b0780928
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>デバイス登録マネージャーと Configuration Manager を使用したデバイスの登録
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 08/16/2017
 -  デバイス登録マネージャーで管理されているデバイスに会社のアプリを展開するには、会社のポータル アプリを **[必須のインストール]** としてデバイス登録マネージャーのユーザー アカウントに展開します。 その後、デバイス登録マネージャーは、会社のポータル アプリを起動して、その他のアプリをインストールできます。
 - パフォーマンス向上のため、会社のポータル アプリにはローカル デバイスのみが表示されます。 その他の DEM デバイスのリモート管理は、Configuration Manager コンソールで管理者のみが実行できます。
 - 会社のポータル Web サイトは、デバイス登録マネージャー アカウントでは使用できません。 会社のポータル アプリを使用してください。
-- (iOS のみ) DEM を利用して iOS デバイスを登録する場合、Apple Configurator またはデバイス登録プログラム (DEP) を利用してデバイスを登録することはできません。
+- DEM を利用して iOS デバイスを登録する場合、Apple Configurator または Apple Device Enrollment Program (DEP) を利用してデバイスを登録することはできません。 (iOS のみ) 
 
  **デバイス登録マネージャーのシナリオの例:**   
 あるレストランで、接客担当スタッフが販売時点管理に使い、調理担当スタッフがオーダー管理に使うタブレットが必要になりました。 従業員には、会社のデータへのアクセスやユーザーとしてのログオンは必要ありません。 Intune 管理者は、デバイス登録マネージャー アカウントを作成し、そのアカウントを使って会社が所有するデバイスを登録しました。 また、レストランのマネージャーがデバイスの登録と管理を行うことができるように、管理者はデバイス登録マネージャーの資格情報を付与することができます。  

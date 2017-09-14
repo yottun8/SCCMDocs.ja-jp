@@ -2,7 +2,7 @@
 title: "IMEI または iOS シリアル番号によるデバイスの事前宣言 | Microsoft Docs"
 description: "IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言"
 ms.custom: na
-ms.date: 08/15/2017
+ms.date: 09/01/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -14,11 +14,11 @@ caps.latest.revision: "3"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 7d139a2c74c0f29604f2f3d9b8e2739364633f17
-ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.openlocfilehash: 424f04b2b3ad4c7ef91f884bbf5bae3580ea6b85
+ms.sourcegitcommit: cd1f9c58e55f1c9a19acd743ec6a8824c39fd3a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/05/2017
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>IMEI または iOS シリアル番号を持つデバイスの事前宣言
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/16/2017
 会社所有の iOS デバイスのシリアル番号をアップロードする場合は、企業登録プロファイルとペアにする必要があります。 したがって、デバイスを Apple の DEP (Device Enrollment Program) または Apple Configurator を使用して登録し、会社所有であることを示す必要があります。
 
 >[!NOTE]
->Android デバイス (Samsung Knox Standard デバイスを除く) の場合、IMEI 番号を持つ会社所有のデバイスとして事前宣言および登録するには、SIM カードが必要です。
+>Android デバイス (Samsung Knox Standard デバイスを除く) の場合、IMEI 番号を持つ会社所有のデバイスとして事前宣言および登録するには、電話番号を割り当てておく必要があります。
 
 ## <a name="how-to-predeclare-corporate-owned-devices"></a>会社所有のデバイスを事前宣言する方法
 

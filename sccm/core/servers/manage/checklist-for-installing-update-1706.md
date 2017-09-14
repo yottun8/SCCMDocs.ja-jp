@@ -14,11 +14,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: dab99748902df0fad32a1e2adad0c05e0dd8bdc9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c8110d9f5fec9027d34570623c32a7474e01b9af
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム 1706 をインストールするためのチェックリスト
 
@@ -62,7 +62,6 @@ Current Branch バージョンの詳細については、「[System Center Confi
 > - 中央管理サイトと子プライマリ サイトの間の**レプリケーション リンク**は、アップグレードされていないものとして表示されます。 これは、更新プログラム パックのインストール状態では、監視レプリケーション初期化に関する警告のある完了済みの状態として表示されます。 コンソールの監視ノードでは、これは "*リンク構成中*" として表示されます。
 
 
-
 ## <a name="checklist"></a>チェックリスト
 
 **すべてのサイトで、1706 への更新をサポートしているバージョンの System Center Configuration Manager が実行されていることを確認する:**   
@@ -86,9 +85,9 @@ Current Branch バージョンの詳細については、「[System Center Confi
 
 詳細については、「[サイトとサイト システムの前提条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)」をご覧ください。
 
-**Windows 10 の Windows アセスメント & デプロイメント キット (ADK) のバージョンを確認する:** Windows 10 ADK は、バージョン 1607 以降である必要があります。 ADK を更新する必要がある場合は、Configuration Manager の更新を開始する前に行います。 これにより、既定のブート イメージが Windows PE の最新バージョンに自動的に更新されることが保証されます (カスタム ブート イメージは手動で更新する必要があります)。
+**Windows 10 の Windows アセスメント & デプロイメント キット (ADK) のバージョンを確認する:** Windows 10 ADK は、バージョン 1703 以降である必要があります。 (サポートされている Windows ADK バージョンの詳細については、「[Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)」を参照してください。)Windows ADK を更新する必要がある場合は、Configuration Manager の更新を開始する前に行います。 これにより、既定のブート イメージが Windows PE の最新バージョンに自動的に更新されることが保証されます (カスタム ブート イメージは手動で更新する必要があります)。
 
-ADK を更新する前にサイトを更新する場合は、ブート イメージの再生成に使うことができるスクリプトについて、ブログ「[Configuration Manager and the Windows ADK for Windows 10, version 1607](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/)」(Windows 10 バージョン 1607 の Configuration Manager と Windows ADK) をご覧ください。
+Windows ADK を更新する前にサイトを更新する場合は、「[ブート イメージを使用して配布ポイントを更新する](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image)」で Configuration Manager バージョン 1706 のこのプロセスの改善点を確認してください。
 
 **サイトと階層の状態を確認して、解決されていない問題がないことを確認する:** サイトを更新する前に、サイト サーバー、サイト データベース サーバー、リモート コンピューターにインストールされているサイト システムの役割で、運用上のすべての問題を解決します。 運用上の問題があると、サイトの更新が失敗する可能性があります。
 

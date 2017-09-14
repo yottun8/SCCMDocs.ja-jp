@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 32b24b3637dfafe401ea1d9f51b3769aa749f544
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 09e1105521f5e72830c2816d04e16690064f4f64
+ms.sourcegitcommit: 40f2a4e3cc546e6bfd10f195a8e87af2b0780928
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>System Center Configuration Manager のタスク シーケンス組み込み変数
 
@@ -97,6 +97,6 @@ ms.lasthandoff: 08/07/2017
 |SMSTSRebootMessage|再起動が要求されたときにスケジュール ダイアログ ボックスに表示するメッセージを指定します。 この変数を設定しなかった場合、既定のメッセージが表示されます。<br /><br /> 例:<br /><br /> このコンピューターはタスク シーケンス マネージャーによって再起動されます。****|  
 |SMSTSRebootRequested|現在のタスク シーケンスのステップを完了した後で再起動が必要であることを示します。 再起動が必要な場合は、この変数を **TRUE**に設定すると、このタスク シーケンス ステップの後で、タスク シーケンス マネージャーが自動的にコンピューターを再起動します。 タスク シーケンス ステップの完了に再起動が必要な場合は、タスク シーケンス ステップでこのタスク シーケンス変数を設定する必要があります。 コンピューターの再起動後、タスク シーケンスは次のタスク シーケンス ステップから続行されます。|  
 |SMSTSRetryRequested|現在のタスク シーケンスのステップを完了した後で再試行を要求します。 このタスク シーケンス変数を設定した場合、 **SMSTSRebootRequested** も **TRUE**に設定する必要があります。 コンピューターの再起動後、タスク シーケンス マネージャーは同じタスク シーケンスのステップを再実行します。|  
-|SMSTSSoftwareUpdateScanTimeout| [ソフトウェア更新プログラムのインストール](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) タスク シーケンスのステップ中に、ソフトウェア更新プログラムのスキャンのタイムアウトを制御することができます。 たとえば、多数のソフトウェア更新プログラムをインストールする必要がある場合は、既定値を上げる場合があります。 既定値は 30 分です。 |
+|SMSTSSoftwareUpdateScanTimeout| [ソフトウェア更新プログラムのインストール](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) タスク シーケンスのステップ中に、ソフトウェア更新プログラムのスキャンのタイムアウトを制御することができます。 たとえば、多数のソフトウェア更新プログラムをインストールする必要がある場合は、既定値を上げる場合があります。 既定値は 1,800 秒 (30 分) です。 変数の値の設定は秒単位であることに注意してください。 |
 |SMSTSUDAUsers|対象のコンピューターのプライマリ ユーザーを指定します。 次の形式を使ってユーザーを指定します。 複数のユーザーは、コンマ (,) で区切ります。<br /><br /> 例:<br /><br /> **domain\user1, domain\user2, domain\user3**<br /><br /> ユーザーを対象コンピューターに関連付ける方法の詳細については、「[Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md)」 (ユーザーをセットアップ先のコンピューターに関連付ける) を参照してください。|  
 |SMSTSWaitForSecondReboot|Configuration Manager バージョン 1602 以降、ソフトウェア更新プログラムのインストールで 2 回再起動が必要な場合に、クライアントの動作を制御するのに役立つ、この省略可能なタスク シーケンス変数を使用できます。 この変数は、ソフトウェア更新プログラムのインストールからの 2 つ目の再起動によってタスク シーケンスが失敗するのを防ぐために、[ソフトウェア更新プログラムのインストール](task-sequence-steps.md#BKMK_InstallSoftwareUpdates) ステップの前に設定する必要があります。<br /><br /> SMSTSWaitForSecondReboot 値を秒単位で設定し、コンピューターを再起動する場合のソフトウェア更新プログラムのインストール ステップ中のタスク シーケンスの一時停止の長さを指定し、2 つ目の再起動がある場合に十分な時間を取るようにします。 <br />たとえば、SMSTSWaitForSecondReboot を 600 に設定した場合、再起動してから追加のタスク シーケンス ステップが実行されるまで、タスク シーケンスが 10 分間一時停止します。 これは、何百ものソフトウェア更新プログラムが 1 つのソフトウェア更新プログラムのインストール タスク シーケンス ステップでインストールされる場合に便利です。|  
