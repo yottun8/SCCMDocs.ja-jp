@@ -55,8 +55,12 @@
 ### [ビジネス向け Windows ストアのアプリ](deploy-use/windows-store-for-business.md)
 
 ## [Intune サブスクリプションを管理する](deploy-use/manage-intune-subscriptions.md)
-
 ## [MDM 機関を変更する](deploy-use/change-mdm-authority.md)
+## [ハイブリッド MDM から Intune スタンドアロンへの移行を開始する](deploy-use/migrate-hybridmdm-to-intunesa.md) 
+### [Configuration Manager のデータの Microsoft Intune へのインポート](deploy-use/migrate-import-data.md)
+### [Intune でのユーザーの移行を準備する](deploy-use/migrate-prepare-intune.md)
+### [特定のユーザー (混在 MDM 機関) のMDM 機関を変更する](deploy-use/migrate-mixed-authority.md)
+### [MDM 機関を変更する](deploy-use/migrate-change-mdm-authority.md)
 
 ## リソースへのアクセスを管理する
 ### [Wi-Fi プロファイルの作成](deploy-use/create-wifi-profiles.md)
@@ -75,7 +79,7 @@
 ### [Dynamics CRM Online アクセスの管理](deploy-use/manage-dynamics-crm-online-access.md)
 ### [O365 サービスへの PC アクセスの管理](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
 
-## [デバイスのリスクに基づいたアクセスを管理します。](deploy-use/mobile-threat-defense.md)
+## [デバイスのリスクに基づいたアクセスの管理](deploy-use/mobile-threat-defense.md)
 ### [Configuration Manager の Lookout](deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md)
 #### [Lookout Mobile Threat Defense のセットアップ](deploy-use/set-up-your-subscription-with-lookout.md)
 #### [Intune で Lookout を有効にする](deploy-use/enable-lookout-connection-in-intune.md)
