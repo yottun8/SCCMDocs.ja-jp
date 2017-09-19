@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 caps.latest.revision: "7"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 28bea9210c9c58dabbb00a995e78cfedd1738291
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c0a43ac7b529444b33edf8afbf52911127226f88
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="revise-and-supersede-applications-in-system-center-configuration-manager"></a>System Center Configuration Manager でアプリケーションを修正して置き換える
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/07/2017
 
 ### <a name="to-restore-an-application-revision"></a>アプリケーションのリビジョンを復元するには  
 
-1.  **[アプリケーションのリビジョン履歴]** ダイアログ ボックスで、アプリケーションのリビジョンを選択し、**[復元]** を選択します。  
+1.  **[アプリケーションのリビジョン履歴]** ダイアログ ボックスで、アプリケーションのリビジョンを選択し、**[復元] **を選択します。  
 
 2.  **[リビジョン復元の確認]** ダイアログ ボックスで **[はい]** を選択すると、選択したアプリケーションのリビジョンが復元されます。  
 

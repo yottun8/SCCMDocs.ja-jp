@@ -12,14 +12,14 @@ ms.topic: get-started-article
 ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 060d63ab8bce9c3bb39d2db404580b9f59416d33
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: fc898bf2433ab99eb0da9c60bd0e890bba97a415
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="how-to-configure-client-status-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアント ステータスを構成する方法
 
@@ -110,4 +110,4 @@ monitor System Center Configuration Manager クライアント ステータス�
 
 4.  レジストリ エディターを閉じます。  
 
- CCMSetup の  **NotifyOnly**  インストール プロパティを使用してクライアントをインストールしても、自動修復から除外することができます。 クライアント インストールのプロパティの詳細については、「[System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
+ CCMSetup の ** NotifyOnly ** インストール プロパティを使用してクライアントをインストールしても、自動修復から除外することができます。 クライアント インストールのプロパティの詳細については、「[System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  

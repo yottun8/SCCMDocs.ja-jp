@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 613a48ac-c55d-4c4a-94ea-d3747a1b10cb
 caps.latest.revision: "15"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 6e2cb628217598480973d4f728a9e0a7cd5873e7
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 039173c9411a530348bf550e4be7b771756d57dc
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>Intune で管理されている iOS および Mac OS X デバイスの構成項目を作成する方法
 System Center Configuration Manager の **iOS および Mac OS X** 構成項目を使用して、Microsoft Intune に登録されているか、Configuration Manager によってオンプレミスで管理されている iOS デバイスと Mac OS X デバイスの設定を管理します。  

@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: de81da31b524cebe8e820766a64ecc5fdb7e4771
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 480bb382098af039ac714061ae84dc5257fdaddb
+ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="how-to-create-and-apply-power-plans-in-system-center-configuration-manager"></a>System Center Configuration Manager で電源プランを作成して適用する方法
 
@@ -51,7 +51,7 @@ System Center Configuration Manager の電源管理では、Configuration Manage
 
 3.  **デバイス コレクション** ボックスの一覧で、電源管理設定を適用して、コレクションをクリックして、 **ホーム** ] タブで、 **プロパティ** グループで、[ **プロパティ**です。  
 
-4.  [*<コレクション名\>* **のプロパティ**] ダイアログ ボックスの [**電源管理**] タブで、[**このコレクションの電源管理設定を指定する**] を選択します。  
+4.  [*<コレクション名\>*** のプロパティ**] ダイアログ ボックスの [**電源管理**] タブで、[**このコレクションの電源管理設定を指定する**] を選択します。  
 
     > [!NOTE]  
     >  [参照] をクリックして、選択したコレクションから選択したコレクションへ、電源管理設定をコピーできます。 ****  
@@ -73,7 +73,7 @@ System Center Configuration Manager の電源管理では、Configuration Manage
     > [!NOTE]  
     >  組み込みの電源プランは変更できません。  
 
-8.  [*<電源プラン名\>* **のプロパティ**] ダイアログ ボックスで、次の設定を構成します。  
+8.  [*<電源プラン名\>*** のプロパティ**] ダイアログ ボックスで、次の設定を構成します。  
 
     -   **名前:** この電源プランの名前を指定するか、既定値を使用します。  
 
@@ -84,9 +84,9 @@ System Center Configuration Manager の電源管理では、Configuration Manage
         > [!IMPORTANT]  
         >  有効にした設定は、電源プランの適用時にコンピューターに適用されます。 電源設定のチェック ボックスをオフにした場合、この電源プランが適用されたときにクライアント コンピューターの値が変更されません。 チェック ボックスをオフにしても、電源設定の値が電源プランが適用される前の値に戻ることはありません。  
 
-9. [**OK**] をクリックして、[*<電源プラン名\>* **のプロパティ**] ダイアログ ボックスを閉じます。  
+9. [**OK**] をクリックして、[*<電源プラン名\>*** のプロパティ**] ダイアログ ボックスを閉じます。  
 
-10. [**OK**] をクリックして [*<コレクション名\>* **の設定**] ダイアログ ボックスを閉じ、電源プランを適用します。  
+10. [**OK**] をクリックして [*<コレクション名\>*** の設定**] ダイアログ ボックスを閉じ、電源プランを適用します。  
 
 ##  <a name="BKMK_Plans"></a> Available power management plan settings  
  次の表に、Configuration Manager で使用できる電源管理設定を示します。 コンピューターが電源に接続されているときの設定と、バッテリで動作しているときの設定を別々に構成できます。 使用している Windows のバージョンによっては、一部の設定が構成できない場合もあります。  

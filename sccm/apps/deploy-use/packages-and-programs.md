@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 caps.latest.revision: "8"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 6146bcf4e5aa9df6fe0b8cf71898e488ecf217cc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 05dd67bab32c4ac5adfb03b6dd149886955a32e1
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="packages-and-programs-in-system-center-configuration-manager"></a>System Center Configuration Manager のパッケージとプログラム
 
@@ -288,7 +288,7 @@ System Center Configuration Manager は、Configuration Manager 2007 で使用�
 |**配布ポイントの更新**|配布ポイントを選択されたパッケージやプログラムの最新のコンテンツで更新します。|  
 
 ##  <a name="about-the-package-definition-file-format"></a>パッケージ定義ファイルの形式について  
- パッケージ定義ファイルは、Configuration Manager でパッケージとプログラム作成を自動化するために使用できるスクリプトです。 このファイルでは、パッケージ ソース ファイルの場所を除き、Configuration Manager がパッケージとプログラムを作成するために必要なすべての情報を提供します。 各パッケージ定義ファイルは、ASCII または UTF-8 テキスト ファイルとなります .ini ファイル形式を利用し、次のセクションが含まれます。  
+ パッケージ定義ファイルは、Configuration Manager でパッケージとプログラム作成を自動化するために使用できるスクリプトです。 このファイルでは、パッケージ ソース ファイルの場所を除き、Configuration Manager がパッケージとプログラムを作成するために必要なすべての情報を提供します。 各パッケージ定義ファイルは、ASCII または UTF-8 テキスト ファイルとなります。.ini ファイル形式を利用し、次のセクションが含まれます。  
 
 ###  <a name="pdf"></a>[PDF]  
  このセクションでは、パッケージ定義ファイルとしてファイルを指定します。 これには、次の情報が含まれています。  

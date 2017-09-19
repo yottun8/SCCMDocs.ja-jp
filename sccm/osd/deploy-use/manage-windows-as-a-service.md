@@ -14,11 +14,11 @@ caps.latest.revision: "26"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 2c2c0f81736c1b00ea487ae1261803a8105bb5e4
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: fe02981433482ebf6880feec3e1822e6e8f4550f
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>System Center Configuration Manager を使用して、サービスとしての Windows を管理する
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 08/07/2017
 
 -   コンピューターを Windows 10 Anniversary Update、および以降のバージョンにアップグレードするために、ソフトウェア更新ポイントとサイト サーバーに WSUS 4.0 を [修正プログラム 3159706](https://support.microsoft.com/kb/3159706) と共にインストールする必要があります。 この修正プログラムをインストールするには、サポート記事で紹介されている手順を手動で実行する必要があります。 詳細については、[エンタープライズ モビリティおよびセキュリティ ブログ](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/05/update-your-configmgr-1606-sup-servers-to-deploy-the-windows-10-anniversary-update/)を参照してください。
 
--   定期探索を有効にします。 Windows 10 サービス ダッシュボードに表示されるデータは、探索を使用して検出されます。 詳細については、「 [Configure Heartbeat Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#a-namebkmkconfighbdisca-configure-heartbeat-discovery)」をご覧ください。  
+-   定期探索を有効にします。 Windows 10 サービス ダッシュボードに表示されるデータは、探索を使用して検出されます。 詳細については、「 [Configure Heartbeat Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc)」をご覧ください。  
 
      次の Windows 10 のブランチとビルドの情報が検出されて、次の属性に格納されます。  
 
