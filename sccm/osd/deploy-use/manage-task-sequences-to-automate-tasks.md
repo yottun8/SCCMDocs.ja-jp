@@ -14,11 +14,11 @@ caps.latest.revision: "10"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 2f3d66362c49d28a52d7f9c535eb0b3b4cc4eaf7
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c9d94ffb61ed7a7fa40a01eedc763a16a8df30cb
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>System Center Configuration Manager でのタスクを自動化するためのタスク シーケンスの管理
 
@@ -196,7 +196,7 @@ Configuration Manager バージョン 1702 以降では、タスク シーケン
 
 8.  ウィザードを完了します。  
 
- タスク シーケンスで参照されるコンテンツを事前設定できます。 Configuration Manager により、ファイル、関連する依存関係、選択したコンテンツに関連するメタデータを含む、圧縮された事前設定コンテンツ ファイルが作成されます。 次に、サイト サーバー、セカンダリ サイト、または配付ポイントにコンテンツを手動でインポートします。 コンテンツ ファイルを事前設定する方法について詳しくは「 [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content)」 (コンテンツの事前設定) を参照してください。  
+ タスク シーケンスで参照されるコンテンツを事前設定できます。 Configuration Manager により、ファイル、関連する依存関係、選択したコンテンツに関連するメタデータを含む、圧縮された事前設定コンテンツ ファイルが作成されます。 次に、サイト サーバー、セカンダリ サイト、または配付ポイントにコンテンツを手動でインポートします。 コンテンツ ファイルを事前設定する方法について詳しくは「 [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage)」 (コンテンツの事前設定) を参照してください。  
 
 ##  <a name="BKMK_DeployTS"></a> タスク シーケンスの展開  
  タスク シーケンスをコレクション内のコンピューターに展開するには、次の手順に従います。  
@@ -464,7 +464,7 @@ Configuration Manager バージョン 1702 以降では、タスク シーケン
 |**コピー**|選択されたタスク シーケンスのコピーを作成します。 このアクションは、既存のタスク シーケンスを基にして新しいタスク シーケンスを作成する場合に便利です。<br /><br /> タスク シーケンスのコピーをフォルダーに作成すると、そのコピーは、タスク シーケンス ノードが最新の情報に更新されるまで表示されます。  更新後、コピーはルート フォルダーに表示されます。|  
 |**無効化**|タスク シーケンスを無効にしてコンピューターで実行できないようにします。 無効になっているタスク シーケンスは、コンピューターに展開することはできますが、有効になるまでコンピューターでは実行されません。|  
 |**有効化**|タスク シーケンスを有効にして実行できるようにします。 展開済みのタスク シーケンスは、有効にした後に再展開する必要はありません。|  
-|**事前設定コンテンツ ファイルの作成**|タスク シーケンスのコンテンツを事前設定するために、事前設定コンテンツ ファイルの作成ウィザードを起動します。 事前定義済みコンテンツ ファイルの作成方法については、「[Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content)」 (コンテンツの事前設定) を参照してください。|  
+|**事前設定コンテンツ ファイルの作成**|タスク シーケンスのコンテンツを事前設定するために、事前設定コンテンツ ファイルの作成ウィザードを起動します。 事前定義済みコンテンツ ファイルの作成方法については、「[Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage)」 (コンテンツの事前設定) を参照してください。|  
 |**移動**|選択されたタスク シーケンスを別のフォルダーに移動します。|  
 
 ## <a name="next-steps"></a>次のステップ

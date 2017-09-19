@@ -14,11 +14,11 @@ caps.latest.revision: "6"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: b4b04907f2cd48d81e864e46ca47c14a0b98a9f7
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a50354070c03ad8acbd21432a192f949c0a196fa
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="create-a-task-sequence-for-non-operating-system-deployments-with-system-center-configuration-manager"></a>System Center Configuration Manager でオペレーティング システム以外の展開用タスク シーケンスを作成する
 
@@ -42,7 +42,7 @@ System Center Configuration Manager のタスク シーケンスは、お客様�
 
 -   [ソフトウェア更新プログラムのインストール](../understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
 
--   [コンピューターの再起動](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)  
+-   [コンピューターの再起動](../understand/task-sequence-steps.md#BKMK_RestartComputer)   
 
 -   [コマンド ラインの実行](../understand/task-sequence-steps.md#BKMK_RunCommandLine)  
 
@@ -52,5 +52,5 @@ System Center Configuration Manager のタスク シーケンスは、お客様�
 
 -   [タスク シーケンス変数の設定](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  
 
-## <a name="next-steps"></a>次のステップ
-[タスク シーケンスの展開](manage-task-sequences-to-automate-tasks.md#a-namebkmkdeploytsa-deploy-a-task-sequence)
+## <a name="next-steps"></a>次のステップ 
+[タスク シーケンスの展開](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)

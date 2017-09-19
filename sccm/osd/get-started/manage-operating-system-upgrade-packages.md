@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 5fef04f26b12bced073332fd1f7b4e7c7bd7d398
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 35f527f83799125aa298b99e2cc56867435272ec
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="manage-operating-system-upgrade-packages-with-system-center-configuration-manager"></a>System Center Configuration Manager でのオペレーティング システムのアップグレード パッケージの管理
 
@@ -59,7 +59,7 @@ System Center Configuration Manager のアップグレード パッケージに�
  これで、展開タスク シーケンスからアクセスされる配布ポイントに、オペレーティング システムのインストーラーを配布できるようになりました。  
 
 ##  <a name="BKMK_DistributeBootImages"></a> 配布ポイントへのオペレーティング システム イメージの配布  
- オペレーティング システム イメージは、他のコンテンツを配布するのと同じ方法で配布ポイントに配布されます。 ほとんどの場合、オペレーティング システムを展開する前に、少なくとも 1 つの配布ポイントにオペレーティング システム イメージを配布する必要があります。 オペレーティング システム イメージを配布する手順については、「 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)」を参照してください。  
+ オペレーティング システム イメージは、他のコンテンツを配布するのと同じ方法で配布ポイントに配布されます。 ほとんどの場合、オペレーティング システムを展開する前に、少なくとも 1 つの配布ポイントにオペレーティング システム イメージを配布する必要があります。 オペレーティング システム イメージを配布する手順については、「 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)」を参照してください。  
 
 ##  <a name="BKMK_OSUpgradePkgApplyUpdates"></a> オペレーティング システム アップグレード パッケージへのソフトウェア更新プログラムの適用  
  Configuration Manager バージョン 1602 以降では、新しいソフトウェア更新プログラムをオペレーティング システム アップグレード パッケージのオペレーティング システム イメージに適用できます。 アップグレード パッケージにソフトウェア更新プログラムを適用するには、あらかじめソフトウェアの更新のインフラストラクチャを配置し、ソフトウェア更新プログラムを正常に同期し、ソフトウェア更新プログラムをサイト サーバー上のコンテンツ ライブラリにダウンロードしておく必要があります。 詳細については、「[ソフトウェアの更新の展開方法](../../sum/deploy-use/deploy-software-updates.md)」を参照してください。  

@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: b88ab3799027c78a8c605e934b247097b31e1d21
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 57292b1c6f6e8b6be91eace06dbf12d788522e0b
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>System Center Configuration Manager で PXE を使用してネットワーク経由で Windows を展開する
 
@@ -46,7 +46,7 @@ PXE を使用してオペレーティング システムを展開するには、
 
 -   ブート イメージで PXE を有効にするには、**[データ ソース]** タブのブート イメージ プロパティで、**[このブート イメージを PXE 対応の配布ポイントから展開する]** を選択します。
 
--   ブート イメージのプロパティを変更する場合は、再配布ポイントにブート イメージを再配布します。 詳細については、「[コンテンツの配布](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)」をご覧ください。
+-   ブート イメージのプロパティを変更する場合は、再配布ポイントにブート イメージを再配布します。 詳細については、「[コンテンツの配布](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)」をご覧ください。
 
 ##  <a name="BKMK_PXEExclusionList"></a> PXE 展開の除外リストの作成
 PXE を使用してオペレーティング システムを展開する場合、配布ポイントで除外リストを作成できます。 除外リストには、配布ポイントが無視すべきコンピューターの MAC アドレスを追加します。 リストに追加されたコンピューターは、Configuration Manager が PXE 展開で使用する展開タスク シーケンスを受け取りません。

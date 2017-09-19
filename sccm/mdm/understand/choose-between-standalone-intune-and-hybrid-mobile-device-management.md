@@ -14,18 +14,18 @@ caps.latest.revision: "10"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 26c36df77c21254c7ad2b8a45906bd3706f9ec65
-ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
+ms.openlocfilehash: 5c9e80fc5bc3f0629e1c27a4928b8a51cfe1ee7e
+ms.sourcegitcommit: 948644072bd158b156f782a4376bcd50fac7c73a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="choose-between-microsoft-intune-standalone-and-hybrid-mobile-device-management-with-system-center-configuration-manager"></a>Microsoft Intune スタンドアロンか System Center Configuration Manager を使用するハイブリッド モバイル デバイス管理を選択する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 Microsoft Intune によるモバイル デバイス管理 (MDM) について最もよく寄せられる質問の 1 つは、"Intune と Configuration Manager を統合するべきか (ハイブリッド MDM)、クラウドのみの構成で Intune スタンドアロンを実行すべきか" というものです。 この質問に答えるには、2 つのオプションを注意深く比較する必要があります。
-
+ 
 ## <a name="intune-standalone"></a>Intune スタンドアロン
 Intune スタンドアロンは、Microsoft が推奨する展開トポロジです。 Intune スタンドアロンはクラウドのみの MDM ソリューションで、世界中のどこからでもアクセスできる Web コンソールで管理されます。 Intune データセンターは、北米、ヨーロッパ、アジアでホストされています。 Intune はクラウド サービスであるため、比較的短期間でデバイスに Intune 管理を展開できます。
 

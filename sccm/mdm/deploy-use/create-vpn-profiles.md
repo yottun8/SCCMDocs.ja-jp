@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 23ff28189c8010c21ed8b23c35598746a4f09fe7
-ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
+ms.openlocfilehash: 5b5385cebe7952e519d59a239983733dd93e661e
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager のモバイル デバイスの VPN プロファイル
 
@@ -52,7 +52,7 @@ System Center Configuration Manager の VPN プロファイルを使用して、
 ## <a name="create-vpn-profiles"></a>VPN プロファイルの作成
 VPN プロファイルの作成方法に関する一般情報は、「[System Center Configuration Manager で VPN プロファイルを作成する方法](../../protect/deploy-use/create-vpn-profiles.md)」をご覧ください。
 
-###   <a name="windows-10-vpn-features-available-when-using-configuration-manager-with-intune"></a>Intune と Configuration Manager を使用するときに使用できる Windows 10 の VPN 機能  
+## <a name="windows-10-vpn-features-available-when-using-configuration-manager-with-intune"></a>Intune と Configuration Manager を使用するときに使用できる Windows 10 の VPN 機能  
 
 
 > [!NOTE]  
@@ -157,7 +157,7 @@ VPN プロファイルの作成方法に関する一般情報は、「[System Ce
 
 **展開**: VPN プロファイルの展開については、[Wi-Fi、VPN、電子メール、証明書プロファイルの展開](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)に関する記事をご覧ください。
 
-### <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次のステップ  
  Configuration Manager で VPN プロファイルの計画、構成、操作、メンテナンスを行うときに、次のトピックを参考にしてください。  
 
 -   [System Center Configuration Manager の VPN プロファイルの前提条件](../../protect/plan-design/prerequisites-for-wifi-vpn-profiles.md)  

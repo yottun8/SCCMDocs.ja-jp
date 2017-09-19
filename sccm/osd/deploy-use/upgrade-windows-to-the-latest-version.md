@@ -14,11 +14,11 @@ caps.latest.revision: "13"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 026d61113a918e43ac4395ef092b1931f33f16d3
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 412c2c644cc7f17f307c02b84471f3ee494045ec
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用して、Windows を最新のバージョンにアップグレードする
 
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/07/2017
     > スタンドアロン メディアを使用するときは、タスク シーケンス メディア ウィザードから使用できるように、ブート イメージをタスク シーケンスに追加する必要があります。
 
     > [!NOTE]  
-    > オペレーティング システムを Windows 10 にアップグレードするタスク シーケンスを作成するには、通常、「[オペレーティング システムをアップグレードするタスク シーケンスの作成](create-a-task-sequence-to-upgrade-an-operating-system.md)」のステップを使用します。 タスク シーケンスには、オペレーティング システムのアップグレードの手順に加えて、エンド ツー エンドのアップグレード プロセスを処理するためのお勧めの追加ステップとグループが含まれます。 しかし、カスタム タスク シーケンスを作成し、[オペレーティング システムのアップグレード](../understand/task-sequence-steps.md#BKMK_UpgradeOS)のタスク シーケンス手順を追加して、オペレーティング システムをアップグレードすることができます。 これは、オペレーティング システムを Windows 10 にアップグレードする場合に必要な唯一の手順です。 この方法を選んだ場合は、オペレーティング システムのアップグレードの手順の後に、[コンピューターの再起動](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)の手順も追加してアップグレードを完了します。 必ず **[現在インストールされている既定のオペレーティング システム]** 設定を使用して、Windows PE ではなく、インストール対象のオペレーティング システムでコンピューターを再起動するようにします。  
+    > オペレーティング システムを Windows 10 にアップグレードするタスク シーケンスを作成するには、通常、「[オペレーティング システムをアップグレードするタスク シーケンスの作成](create-a-task-sequence-to-upgrade-an-operating-system.md)」のステップを使用します。 タスク シーケンスには、オペレーティング システムのアップグレードの手順に加えて、エンド ツー エンドのアップグレード プロセスを処理するためのお勧めの追加ステップとグループが含まれます。 しかし、カスタム タスク シーケンスを作成し、[オペレーティング システムのアップグレード](../understand/task-sequence-steps.md#BKMK_UpgradeOS)のタスク シーケンス手順を追加して、オペレーティング システムをアップグレードすることができます。 これは、オペレーティング システムを Windows 10 にアップグレードする場合に必要な唯一の手順です。 この方法を選んだ場合は、オペレーティング システムのアップグレードの手順の後に、[コンピューターの再起動](../understand/task-sequence-steps.md#BKMK_RestartComputer)の手順も追加してアップグレードを完了します。 必ず **[現在インストールされている既定のオペレーティング システム]** 設定を使用して、Windows PE ではなく、インストール対象のオペレーティング システムでコンピューターを再起動するようにします。  
 
 ##  <a name="BKMK_Deploy"></a> デプロイ  
 

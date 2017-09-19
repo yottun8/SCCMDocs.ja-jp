@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 4b3668094d576b1b8710f08b384aa2f7c5eb0cca
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3a8e2759812dae2a328cd09efdc13f8534d14379
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-system-center-configuration-manager"></a>System Center Configuration Manager でユーザー状態をキャプチャおよび復元するためのタスク シーケンスを作成する
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/07/2017
 
     -   [再試行の待ち時間 (秒)] ボックスで、タスク シーケンスがデータのキャプチャを再試行するまで待機する秒数を指定します。 ****  
 
-    -   状態ストアへの接続に Configuration Manager [ネットワーク アクセス アカウント](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#a-namebkmknaaa-network-access-account)を使用するかどうかを指定するには、[**コンピューター アカウントで状態ストアに接続できない場合、ネットワーク アクセス アカウントを使用する**] チェック ボックスをオンにします。  
+    -   状態ストアへの接続に Configuration Manager [ネットワーク アクセス アカウント](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#bkmk_NAA)を使用するかどうかを指定するには、[**コンピューター アカウントで状態ストアに接続できない場合、ネットワーク アクセス アカウントを使用する**] チェック ボックスをオンにします。  
 
      [オプション **** ] タブで、次のオプションを指定します。  
 
@@ -141,7 +141,7 @@ ms.lasthandoff: 08/07/2017
 
     -   ファイルを復元できない状態で [ユーザー状態の復元 **** ] 手順を続行する場合は、[復元できないファイルがあっても続行する **** ] を選択します。  
 
-         ローカル リンクを使用してユーザー状態を保存しており、正常に復元できなかった場合、管理者ユーザーは作成されたハードリンクを手動で削除してデータを復元できます。あるいは、タスク シーケンスで USMTUtils ツールを実行することもできます。 USMTUtils を使用してハードリンクを削除する場合は、USMTUtils を実行してから [[コンピューターの再起動](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)] ステップを追加します。  
+         ローカル リンクを使用してユーザー状態を保存しており、正常に復元できなかった場合、管理者ユーザーは作成されたハードリンクを手動で削除してデータを復元できます。あるいは、タスク シーケンスで USMTUtils ツールを実行することもできます。 USMTUtils を使用してハードリンクを削除する場合は、USMTUtils を実行してから [[コンピューターの再起動](../understand/task-sequence-steps.md#BKMK_RestartComputer)] ステップを追加します。  
 
     -   [詳細ログ記録を有効にする **** ] を選択し、エラーが発生した場合にどのくらいの情報をログに書き込むかを指定します。  
 
