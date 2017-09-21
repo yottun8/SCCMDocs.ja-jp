@@ -2,7 +2,7 @@
 title: "Configuration Manager でのスクリプトの作成と実行 | Microsoft Docs"
 description: "Configuration Manager を使用して、クライアント デバイスでスクリプトを作成し、実行します。"
 ms.custom: na
-ms.date: 08/09/2017
+ms.date: 09/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 caps.latest.revision: "14"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: ed84f7900eee5c04728d0e4d1b46027c36327bec
-ms.sourcegitcommit: b41d3e5c7f0c87f9af29e02de3e6cc9301eeafc4
+ms.openlocfilehash: e6b29cd85504742e8638a55db2f6c4ecc8ab3e55
+ms.sourcegitcommit: 5ca89204716750eaaceb01bba40b35b85c7122ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Configuration Manager コンソールから PowerShell スクリプトを作成して実行する
 
@@ -44,8 +44,8 @@ Configuration Manager クライアントがスクリプトを実行するには�
 
 スクリプトを使用するには、適切な Configuration Manager のセキュリティ ロールのメンバーである必要があります。
 
-- スクリプトをインポートおよび作成するには: **コンプライアンス設定マネージャー**のセキュリティ ロールで、**SMS スクリプト**への**作成**アクセス許可がアカウントに付与されている必要があります。
-- スクリプトを承認または拒否するには: **コンプライアンス設定マネージャー**のセキュリティ ロールで、**SMS スクリプト**への**承認**アクセス許可がアカウントに付与されている必要があります。
+- スクリプトをインポートおよび作成するには: **完全な権限を持つ管理者**のセキュリティ ロールで、**SMS スクリプト**への**作成**アクセス許可がアカウントに付与されている必要があります。
+- スクリプトを承認または拒否するには: **完全な権限を持つ管理者**のセキュリティ ロールで、**SMS スクリプト**への**承認**アクセス許可がアカウントに付与されている必要があります。
 - スクリプトを実行するには: **コンプライアンス設定マネージャー**のセキュリティ ロールで、**コレクション**への**スクリプトの実行**アクセス許可がアカウントに付与されている必要があります。
 
 Configuration Manager のセキュリティ ロールの詳細については、「[ロール ベース管理の基礎](/sccm/core/understand/fundamentals-of-role-based-administration)」を参照してください。
@@ -78,9 +78,9 @@ Configuration Manager のセキュリティ ロールの詳細については、
 
 #### <a name="create-a-folder"></a>フォルダーを作成します
 
-*New-Item "c:\scripts" -type folder name* 
- 
- 
+*New-Item "c:\scripts" -type folder name*
+
+
 #### <a name="create-a-file"></a>ファイルを作成する
 
 *New-Item c:\scripts\new_file.txt -type file name*

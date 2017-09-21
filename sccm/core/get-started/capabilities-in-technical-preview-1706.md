@@ -2,7 +2,7 @@
 title: Technical Preview 1706 | Microsoft Docs
 description: "System Center Configuration Manager の Technical Preview バージョン 1706 で使用できる機能について説明します。"
 ms.custom: na
-ms.date: 06/30/2017
+ms.date: 09/15/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.reviewer: na
@@ -13,11 +13,11 @@ ms.assetid: ca3b4714-2a16-495e-8a17-1d87991d5556
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: d45f504dfe0a4c7852b0e2c8ff60d54005346c02
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5633047669f9730446159781c4ac0b1248178bf4
+ms.sourcegitcommit: 5ca89204716750eaaceb01bba40b35b85c7122ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1706 の機能
 
@@ -306,8 +306,8 @@ ms.lasthandoff: 08/07/2017
 ### <a name="try-it-out"></a>試してみましょう。
 
 1. 「[クライアント設定を構成する方法](/sccm/core/clients/deploy/configure-client-settings)」の情報を使用して、次のクライアント設定セクション ([クラウド サービス] にあります) を構成します。
-    -   **[新しい Windows 10 ドメインに参加しているデバイスを自動的に Azure Active Directory に登録する]**: **[はい]** (既定) または **[いいえ]** に設定します。
-    -   **[クライアントでクラウド管理ゲートウェイを使用できるようにする]**: **[はい]** (既定) または **[いいえ]** に設定します。
+    -   **[新しい Windows 10 ドメインに参加しているデバイスを自動的に Azure Active Directory に登録する]**: **[はい]** (既定) または **[いいえ] **に設定します。
+    -   **[クライアントでクラウド管理ゲートウェイを使用できるようにする]**: **[はい]** (既定) または **[いいえ] **に設定します。
 2.  クライアント設定を必要なデバイスのコレクションに展開します。
 
 デバイスが Azure AD に参加していることを確認するには、コマンド プロンプト ウィンドウでコマンド **dsregcmd.exe/status** を実行します。 デバイスが Azure AD に参加している場合は、結果の **[AzureAdjoined]** フィールドに **[YES]** が表示されます。
@@ -328,8 +328,8 @@ Configuration Manager では、パッケージとプログラムを使用して�
 
 スクリプトを使用するには、適切な Configuration Manager のセキュリティ ロールのメンバーである必要があります。
 
-- **インポート、およびスクリプトを作成するには**: **コンプライアンス設定マネージャー**のセキュリティ ロールで、アカウントに **SMS スクリプト** への**作成**アクセス許可がある必要があります。
-- **スクリプトを承認または拒否するには**: **コンプライアンス設定マネージャー**のセキュリティ ロールで、アカウントに **SMS スクリプト** への**承認**アクセス許可がある必要があります。
+- **スクリプトをインポートおよび作成するには**: **完全な権限を持つ管理者**のセキュリティ ロールで、**SMS スクリプト**への**作成**アクセス許可がアカウントに付与されている必要があります。
+- **スクリプトを承認または拒否するには**: **完全な権限を持つ管理者**のセキュリティ ロールで、**SMS スクリプト**への**承認**アクセス許可がアカウントに付与されている必要があります。
 - **スクリプトを実行するには**: **コンプライアンス設定マネージャー**のセキュリティ ロールで、アカウントに **コレクション** への**スクリプトの実行**アクセス許可がある必要があります。
 
 Configuration Manager のセキュリティ ロールの詳細については、「[ロール ベース管理の基礎](/sccm/core/understand/fundamentals-of-role-based-administration)」を参照してください。

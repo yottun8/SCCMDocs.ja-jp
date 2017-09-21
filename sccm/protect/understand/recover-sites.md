@@ -14,11 +14,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 49eea15ea2888f8f93c33eb771c09147ba21529e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: f5aff56e9948536944140fbadb0539c7a4e20f26
+ms.sourcegitcommit: 5ca89204716750eaaceb01bba40b35b85c7122ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/18/2017
 ---
 #  <a name="recover-a-configuration-manager-site"></a>Configuration Manager サイトの回復
 
@@ -29,7 +29,7 @@ Configuration Manager サイトで障害が発生した場合や、サイト デ
 このトピックのセクションは、Configuration Manager サイトを回復する場合に役立ちます。 バックアップを作成する場合は、[Configuration Manager のバックアップ](/sccm/protect/understand/backup-and-recovery)に関するページを参照してください。
 
 ## <a name="considerations-before-recovering-a-site"></a>サイトを回復する前の注意事項
-**同じバージョンおよびエディションの SQL Server を使用する必要があります:** たとえば、SQL Server 2014 で実行していたデータベースを SQL Server 2016 に復元することはできません。 同様に、SQL Server 2016 の Standard エディションで実行していたサイト データベースを SQL Server 2016 の Enterprise エディションに復元することはできません。
+**同じバージョンおよびエディションの SQL Server を使用する必要があります。**たとえば、SQL Server 2014 で実行していたデータベースを SQL Server 2016 に復元することはできません。 同様に、SQL Server 2016 の Standard エディションで実行していたサイト データベースを SQL Server 2016 の Enterprise エディションに復元することはできません。
 -   SQL Server を **シングル ユーザー モード**に設定しないでください。
 -   MDF ファイルと LDF ファイルが有効であることを確認します。 サイトを回復するときに、復元するファイルの状態は確認されません。
 
