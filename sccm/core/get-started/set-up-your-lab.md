@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager ラボを設定する | Microsoft Docs"
 description: "シミュレートされた現実のアクティビティを使用して Configuration Manager を評価するためのラボを設定します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 09/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 11f5d0c3c61d675a8182e985f82e6af363b34592
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a8bacdbde00973cfd45963b355c8f810ab06a83d
+ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>System Center Configuration Manager ラボのセットアップ
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/07/2017
 
     -   SQL Server に対して**システム アドレス指定可能なメモリ**を制限しないでください。  
 
-    -   **ドメイン ローカル ユーザー** アカウントを使用して実行するように **SQL Server サービス アカウント**を構成します。  
+    -   権限の低いドメイン ユーザー アカウントを使用して実行するように **SQL Server サービス アカウント**を構成します。  
 
     -   **SQL Server Reporting Services** をインストールする必要があります。  
 
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/07/2017
 
 このすべてのコンポーネントをインストールしたら、追加の手順を実行し Configuration Manager 向けに Windows 環境を構成する必要があります。  
 
-###  <a name="BKMK_LabADPrep"></a> ラボ向けの Active Directory コンテンツの準備  
+##  <a name="BKMK_LabADPrep"></a> ラボ向けの Active Directory コンテンツの準備  
  このラボでは、セキュリティ グループを作成し、そのグループにドメイン ユーザーを追加します。  
 
 -   セキュリティ グループ: **Evaluation**  
@@ -95,12 +95,12 @@ ms.lasthandoff: 08/07/2017
 
 次の手順では、Configuration Manager クライアントが Active Directory Domain Services に対してクエリを実行して、サイトのリソースを見つける方法について説明します。  
 
-###  <a name="BKMK_CreateSysMgmtLab"></a> System Management コンテナーの作成  
+##  <a name="BKMK_CreateSysMgmtLab"></a> System Management コンテナーの作成  
  Configuration Manager では、スキーマの拡張時に、必要な System Management コンテナーが Active Directory Domain Services に自動的に作成されません。 したがって、これをラボ向けに作成します。 この手順では、 [ADSI エディターをインストール](https://technet.microsoft.com/en-us/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)する必要があります。  
 
  Active Directory ドメイン サービス内の **System** コンテナーで **すべての子オブジェクトを作成する** アクセス許可を持つアカウントとしてログオンします。  
 
-##### <a name="to-create-the-system-management-container"></a>System Management コンテナーを作成するには:  
+#### <a name="to-create-the-system-management-container"></a>System Management コンテナーを作成するには:  
 
 1.  **ADSI エディター**を実行して、サイト サーバーが常駐しているドメインに接続します。  
 
@@ -112,13 +112,13 @@ ms.lasthandoff: 08/07/2017
 
 5.  **[完了]** をクリックしてこの手順を完了します。  
 
-###  <a name="BKMK_SetSecPermLab"></a> System Management コンテナーのセキュリティ アクセス許可の設定  
+##  <a name="BKMK_SetSecPermLab"></a> System Management コンテナーのセキュリティ アクセス許可の設定  
  サイト サーバーのコンピューター アカウントに、サイト情報をコンテナーに発行するのに必要なアクセス許可を付与します。 ADSI エディターもこのタスクに使用します。  
 
 > [!IMPORTANT]  
 >  次の手順を開始する前に、サイト サーバーのドメインに接続していることを確認します。  
 
-##### <a name="to-set-security-permissions-for-the-system-management-container"></a>System Management コンテナーのセキュリティ アクセス許可を設定するには:  
+#### <a name="to-set-security-permissions-for-the-system-management-container"></a>System Management コンテナーのセキュリティ アクセス許可を設定するには:  
 
 1.  コンソール ウィンドウで、**サイト サーバーのドメイン**を展開し、**[DC=&lt;サーバー識別名\>]**、**[CN=System]** の順に展開します。 **[CN=System Management]**を右クリックし、 **[プロパティ]**をクリックします。  
 
@@ -132,13 +132,13 @@ ms.lasthandoff: 08/07/2017
 
      この手順の詳細については、「[System Center Configuration Manager 向けに Active Directory スキーマを拡張する](../../core/plan-design/network/extend-the-active-directory-schema.md)」を参照してください。  
 
-###  <a name="BKMK_ExtADSchLab"></a> extadsch.exe を使用した Active Directory スキーマの拡張  
+##  <a name="BKMK_ExtADSchLab"></a> extadsch.exe を使用した Active Directory スキーマの拡張  
  このラボの Active Directory スキーマを拡張します。これにより、最小限の管理オーバーヘッドですべての Configuration Manager 機能を使用できます。 Active Directory スキーマの拡張は、フォレストごとに 1 回実行されるフォレスト全体の構成です。 スキーマを完全に拡張すると、Active Directory の基本構成の一連のクラスと属性が変更されます。 この操作は、元に戻すことはできません。 スキーマを拡張すると、Configuration Manager がラボ環境内で最も効果的に機能できるように、コンポーネントにアクセスできます。  
 
 > [!IMPORTANT]  
 >  **スキーマ管理** セキュリティ グループのメンバーであるアカウントで、スキーマ マスター ドメイン コントローラーにログオンしていることを確認します。 代わりの資格情報を使用することはできません。  
 
-##### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>extadsch.exe を使用して Active Directory スキーマを拡張するには:  
+#### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>extadsch.exe を使用して Active Directory スキーマを拡張するには:  
 
 1.  スキーマ マスター ドメイン コントローラーのシステム状態のバックアップを作成します。 マスター ドメイン コント ローラーのバックアップの詳細については、「 [Windows Server バックアップ](https://technet.microsoft.com/en-us/library/cc770757.aspx)」を参照してください。  
 
@@ -150,7 +150,7 @@ ms.lasthandoff: 08/07/2017
 
      この手順の詳細については、「[System Center Configuration Manager 向けに Active Directory スキーマを拡張する](../../core/plan-design/network/extend-the-active-directory-schema.md)」を参照してください。  
 
-###  <a name="BKMK_OtherTasksLab"></a> その他の必要なタスク  
+##  <a name="BKMK_OtherTasksLab"></a> その他の必要なタスク  
  インストールする前に、次のタスクも完了する必要があります。  
 
  **すべてのダウンロードを格納するフォルダーを作成する**  
@@ -161,7 +161,7 @@ ms.lasthandoff: 08/07/2017
 
  2 つの .NET Framework をインストールする必要があります。最初に .NET 3.5.1 をインストールしてから、.NET 4.5.2+ をインストールします。 また、Windows Communication Foundation (WCF) をアクティブ化する必要もあります。 WCF は、分散コンピューティング、広範な相互運用性、およびサービス指向の直接サポートに対する管理しやすいアプローチを提供するように設計されており、サービス指向のプログラミング モデルで接続アプリケーションの開発を簡略化します。 WCF の詳細については、「 [Windows Communication Foundation とは](https://technet.microsoft.com/en-us/subscriptions/ms731082\(v=vs.90\).aspx) 」を参照してください。  
 
-##### <a name="to-install-net-and-activate-windows-communication-foundation"></a>.NET をインストールし、Windows Communication Foundation をアクティブ化するには:  
+#### <a name="to-install-net-and-activate-windows-communication-foundation"></a>.NET をインストールし、Windows Communication Foundation をアクティブ化するには:  
 
 1.  **Server Manager**を開き、 **[管理]**に移動します。 **[役割と機能の追加]** をクリックし、 **[役割と機能の追加] Wizard.**を開きます。  
 
@@ -221,7 +221,7 @@ ms.lasthandoff: 08/07/2017
 
 [Remote Differential Compression (RDC)](https://technet.microsoft.com/en-us/library/cc754372.aspx) は、一連のファイルに変更が行われたかどうかをアプリケーションが判断するときに使用できる一連の API です。 RDC を使用すると、ファイルの変更された部分のみをレプリケートすることで、ネットワーク トラフィックを最小限に抑えることができます。  
 
-##### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>BITS、IIS、および RDC サイト サーバーの役割を有効にするには:  
+#### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>BITS、IIS、および RDC サイト サーバーの役割を有効にするには:  
 
 1.  サイト サーバーで、 **Server Manager**を開きます。 **[管理]**に移動します。 **[役割と機能の追加]** をクリックし、 **役割と機能の追加ウィザード**を開きます。  
 
@@ -319,21 +319,21 @@ ms.lasthandoff: 08/07/2017
 
 6.  次の **機能** を一覧から選択して追加します。  
 
-    -   -   **バックグラウンド インテリジェント転送サービス (BITS)**  
+    -   **バックグラウンド インテリジェント転送サービス (BITS)**  
 
-            -   **IIS サーバー拡張機能**  
+          -   **IIS サーバー拡張機能**  
 
-        -   **リモート サーバー管理ツール**  
+    -   **リモート サーバー管理ツール**  
 
-            -   **機能管理ツール**  
+          -   **機能管理ツール**  
 
-                -   **BITS サーバー拡張ツール**  
+          -   **BITS サーバー拡張ツール**  
 
 7.  **[インストール]** をクリックし、 **サーバー マネージャー** の **[通知]**ウィンドウで、インストールが正常に完了したことを確認します。  
 
 IIS では、複数の種類のファイル拡張子と場所が、HTTP または HTTPS 通信によってアクセスできないように既定で設定されています。 これらのファイルをクライアント システムに配布できるようにするには、配布ポイントで IIS の要求のフィルタリングを構成する必要があります。 詳しくは、「[IIS の要求フィルター (配布ポイント用)](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering)」を参照してください。  
 
-##### <a name="to-configure-iis-filtering-on-distribution-points"></a>配布ポイントで IIS フィルタリングを構成するには:  
+#### <a name="to-configure-iis-filtering-on-distribution-points"></a>配布ポイントで IIS フィルタリングを構成するには:  
 
 1.  **IIS Manager** を開き、サイドバーでサーバーの名前を選択します。 これにより **ホーム** 画面が表示されます。  
 
@@ -343,13 +343,13 @@ IIS では、複数の種類のファイル拡張子と場所が、HTTP また�
 
 4.  ダイアログ ボックスに「 **.msi** 」と入力し、 **[OK]**をクリックします。  
 
-###  <a name="BKMK_InstallCMLab"></a> Configuration Manager のインストール  
+##  <a name="BKMK_InstallCMLab"></a> Configuration Manager のインストール  
 クライアントを直接管理するための[プライマリ サイトを使用する場合の判別](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary)を作成します。 これにより、ラボ環境で、使用される可能性のあるデバイスの[サイト システムのスケール](/sccm/core/plan-design/configs/size-and-scale-numbers)の管理をサポートできます。  
 この処理中、Configuration Manager コンソールもインストールします。このコンソールは、今後評価版のデバイスを管理するときに使用されます。  
 
 インストールを開始する前に、Windows Server 2012 を使用してサーバー上で [Prerequisite Checker](/sccm/core/servers/deploy/install/prerequisite-checker) を起動して、すべての設定が正常に有効になっていることを確認します。  
 
-##### <a name="to-download-and-install-configuration-manager"></a>構成マネージャーをダウンロードしてインストールするには:  
+#### <a name="to-download-and-install-configuration-manager"></a>構成マネージャーをダウンロードしてインストールするには:  
 
 1.  [System Center の評価](https://www.microsoft.com/evalcenter/evaluate-system-center-2012-configuration-manager-and-endpoint-protection) ページに移動して、最新の評価版 System Center Configuration Manager をダウンロードします。  
 
@@ -369,10 +369,10 @@ IIS では、複数の種類のファイル拡張子と場所が、HTTP また�
     |手順 15. **クライアント通信設定**|**[すべてのサイト システムの役割でクライアントからの HTTPS 通信のみ受け付ける]** がオンになっていないことを確認します。|  
     |手順 16. **サイト システムの役割**|FQDN を入力し、 **[すべてのサイト システムの役割でクライアントからの HTTPS 通信のみ受け付ける]** がまだオフになっていることを確認します。|  
 
-###  <a name="BKMK_EnablePubLab"></a> Configuration Manager サイトで発行を有効にする  
+##  <a name="BKMK_EnablePubLab"></a> Configuration Manager サイトで発行を有効にする  
 各 Configuration Manager サイトは、サイト特有の情報を、Active Directory スキーマ上のドメイン パーティション内のそのサイトの System Management コンテナーに発行します。 このトラフィックは、Active Directory と Configuration Manager の間の通信用に双方向チャネルを開いて処理する必要があります。 さらに、フォレストの探索も有効にして、Active Directory とネットワーク インフラストラクチャの特定のコンポーネントを決定することもできます。  
 
-##### <a name="to-configure-active-directory-forests-for-publishing"></a>Active Directory フォレストを発行用に構成するには  
+#### <a name="to-configure-active-directory-forests-for-publishing"></a>Active Directory フォレストを発行用に構成するには  
 
 1.  Configuration Manager コンソールの左下隅で、**[管理]** をクリックします。  
 
@@ -388,7 +388,7 @@ IIS では、複数の種類のファイル拡張子と場所が、HTTP また�
 
 7.  **[管理]** ワークスペースで、 **[階層の構成]**を展開し、 **[Active Directory フォレスト]**をクリックします。  
 
-##### <a name="to-enable-a-configuration-manager-site-to-publish-site-information-to-your-active-directory-forest"></a>Configuration Manager サイトが Active Directory フォレストにサイト情報を発行できるようにするには:  
+#### <a name="to-enable-a-configuration-manager-site-to-publish-site-information-to-your-active-directory-forest"></a>Configuration Manager サイトが Active Directory フォレストにサイト情報を発行できるようにするには:  
 
 1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
 

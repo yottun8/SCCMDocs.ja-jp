@@ -2,7 +2,7 @@
 title: "配布ポイントの管理 | Microsoft Docs"
 description: "配布ポイントを利用し、デバイスやユーザーに展開するコンテンツ (ファイルとソフトウェア) をホストします。 インストール方法と構成方法は次のようになります。"
 ms.custom: na
-ms.date: 2/14/2017
+ms.date: 09/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,16 +14,16 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 4c94e4de5bbfe621492e8682c9424a48eb38196d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 0213b48c24461cbab5a9acab720064e0e26fa568
+ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>System Center Configuration Manager の配布ポイントのインストールと構成
 
 *適用対象: System Center Configuration Manager (Current Branch)*
- 
+
 System Center Configuration Manager 配布ポイントをインストールし、デバイスやユーザーに展開するコンテンツ (ファイルとソフトウェア) をホストします。 配布ポイント グループを作成することもできます。配布ポイントの管理と配布ポイントへのコンテンツの配布が簡単になります。  
 
  "*新しい配布ポイントをインストールする*" とき (インストール ウィザードを利用して)、あるいは "*既存の配布ポイントのプロパティを管理する*" とき (配布ポイントのプロパティを編集して)、ほとんどの配布ポイントの設定を構成できます。 インストールまたは編集のいずれか一方を行うときに使用可能な設定はいくつか用意されていますが、両方を行う設定はありません。  
@@ -45,7 +45,8 @@ System Center Configuration Manager 配布ポイントをインストールし�
     -   **配布ポイントへのデータ転送のスケジュールを構成する**  
 
 ##  <a name="bkmk_install"></a> 配布ポイントをインストールする  
- クライアント コンピューターでコンテンツを使用できるようにする前に、サイト システム サーバーを配布ポイントとして指定する必要があります。 配布ポイント サイトの役割を新しいサイト システム サーバーに追加するか、サイトの役割を既存のサイト システム サーバーに追加できます。  
+クライアント コンピューターでコンテンツを使用できるようにする前に、サイト システム サーバーを配布ポイントとして指定する必要があります。 オンプレミスのクライアント コンピューターがコンテンツ ソースの場所として配布ポイントを使用する前に、少なくとも 1 つの[境界グループ](/sccm/core/servers/deploy/configure/boundary-groups#distribution-points)に配布ポイントを割り当てる必要があります。 配布ポイント サイトの役割を新しいサイト システム サーバーに追加するか、サイトの役割を既存のサイト システム サーバーに追加できます。
+
 
  新しい配布ポイントをインストールするとき、インストール ウィザードを利用します。利用可能な設定を段階的に実行できます。 開始する前に、次の点を考慮してください。  
 
@@ -339,7 +340,7 @@ System Center Configuration Manager 配布ポイントをインストールし�
 >  コンテンツの検証スケジュールはコンピューターのローカル時刻を使用して指定しますが、Configuration Manager コンソールに表示されるスケジュールでは UTC が使用されます。  
 
 ### <a name="boundary-group"></a>境界グループ  
-この配布ポイントを割り当てる境界グループを管理します。 境界グループを配布ポイントに関連付けることができます。 コンテンツを展開するときに、クライアントがコンテンツのソースの場所として配布ポイントを使用するには、クライアントは、その配布ポイントに関連付けられた境界グループ内になければなりません。
+この配布ポイントを割り当てる境界グループを管理します。 配布ポイントを少なくとも 1 つの境界グループに追加するように計画します。 コンテンツを展開するときに、クライアントがコンテンツのソースの場所として配布ポイントを使用するには、クライアントは、その配布ポイントに関連付けられた境界グループ内になければなりません。
 
 補足:
 

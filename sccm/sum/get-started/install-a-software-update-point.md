@@ -69,7 +69,7 @@ ms.lasthandoff: 08/07/2017
 ### <a name="configure-ssl-communications-to-wsus"></a>WSUS への SSL 通信の構成  
  SSL 通信の構成は、ウィザードの [ **全般** ] ページまたはソフトウェアの更新ポイントのプロパティの [ **全般** ] タブで行うことができます。  
 
- SSL の使用方法の詳細については、「 [Decide whether to configure WSUS to use SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL)」を参照してください。  
+ SSL の使用方法の詳細については、「 [SSL を使うように WSUS を構成するかどうかを決定する](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL)」を参照してください。  
 
 ### <a name="wsus-server-connection-account"></a>WSUS サーバー接続アカウント  
  ソフトウェアの更新ポイントで実行されている WSUS にサイト サーバーが接続するときにサイト サーバーで使用するアカウントを構成できます。 このアカウントを構成しない場合は、Configuration Manager によって、サイト サーバーが WSUS に接続するときにコンピューター アカウントが使用されます。 WSUS サーバー接続アカウントの構成は、ウィザードの **[プロキシとアカウントの設定]** ページまたはソフトウェアの更新ポイントのプロパティの **[プロキシとアカウントの設定]** タブで行います。  使用する Configuration Manager のバージョンに応じて、ウィザードのさまざまな場所でこのアカウントを構成できます。  

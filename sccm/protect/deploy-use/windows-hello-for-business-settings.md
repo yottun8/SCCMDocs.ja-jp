@@ -2,7 +2,7 @@
 title: "Windows Hello for Business の設定 | Microsoft Docs"
 description: "System Center Configuration Manager に Windows Hello for Business を統合する方法について説明します。"
 ms.custom: na
-ms.date: 08/10/2017
+ms.date: 09/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "17"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 1985428df0f82ef2e0a92fdec86189d5ffa03aee
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 43586e55f2c0c5cf117b94c61250f26ba4233f53
+ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="windows-hello-for-business-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager における Windows Hello for Business の設定
 
@@ -65,8 +65,11 @@ Configuration Manager コンソールの **[会社のリソースへのアクセ
 |||||
 |-|-|-|-|
 |Windows クライアント バージョン|Configuration Manager 1602 または 1606|Configuration Manager 1610|Configuration Manager 1702 以降|
-|Windows 10 Anniversary Update|必要な修正プログラムはありません<br><br>必要なアクセス許可はありません<br><br>Windows スキーマの更新は必要ありません|必要な修正プログラムはありません<br><br>必要なアクセス許可はありません<br><br>Windows スキーマの更新は必要ありません|何もする必要はありません。|
+|Windows 10 Anniversary Update|必要な修正プログラムはありません<br><br>必要なアクセス許可はありません<br><br>Windows スキーマの更新は必要ありません|必要な修正プログラムはありません (「**警告**」をご覧ください)<br><br>必要なアクセス許可はありません<br><br>Windows スキーマの更新は必要ありません|アクセス許可を構成します<br><br>Active Directory に Windows Server 2016 のスキーマを適用します|
 |Windows 10 Creators Update 以降|サポートされていません|[この修正プログラム](https://support.microsoft.com/help/4010155/update-rollup-for-system-center-configuration-manager-current-branch-v)をインストールします<br><br>アクセス許可を構成します<br><br>Active Directory に Windows Server 2016 のスキーマを適用します|アクセス許可を構成します<br><br>Active Directory に Windows Server 2016 のスキーマを適用します|
+
+> [!WARNING]
+> [修正プログラム](https://support.microsoft.com/help/4010155/update-rollup-for-system-center-configuration-manager-current-branch-v)は Configuration Manager 1610 および Windows 10 Anniversary Update では不要ですが、インストールは可能です。  修正プログラムをインストールした場合は、アクセス許可を構成して Active Directory に Windows Server 2016 のスキーマを適用する必要があります。
 
 ## <a name="to-configure-permissions"></a>アクセス許可を構成するには
 

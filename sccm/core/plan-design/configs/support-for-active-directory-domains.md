@@ -2,7 +2,7 @@
 title: "サポートされる Active Directory ドメイン |Microsoft ドキュメント"
 description: "Active Directory ドメインで System Center Configuration Manager サイト システムのメンバーシップの要件を取得します。"
 ms.custom: na
-ms.date: 3/23/2017
+ms.date: 9/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 2654ab4eaaaf6a4bf3bd7dca9908e7033647dc2c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 813c2f55a5815ae3739149abc3f650a750d52cd8
+ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="supported-active-directory-domains-for-system-center-configuration-manager"></a>System Center Configuration Manager のサポートされる Active Directory ドメイン
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/07/2017
 
 -   サイト システムの役割をホストするコンピューターでは、次の変更はサポートされていません。  
 
-    -   ドメインのメンバーシップ  
+    -   ドメイン メンバーシップ *(ドメインのサイト システムを削除して、同じドメインに再度参加することを含みます。)*
 
     -   ドメイン名  
 
@@ -82,6 +82,6 @@ Configuration Manager は、名前空間に不整合があるドメイン内で�
 
 -   Active Directory Domain Services の単一ラベルのドメインは、有効な最上位ドメインを持つ不整合がある DNS 名前空間で構成する必要があります。  
 
-     **例:** 単一ラベルのドメインである Contoso は、DNS の不整合のある名前空間 contoso.com を持つように構成されています。 そのため、Configuration Manager で Contoso ドメイン内のコンピューターに DNS サフィックスを指定するときには、"Contoso" ではなく "Contoso.com" を指定します。  
+     **例:** 単一ラベルのドメインである Contoso は、DNS の不整合のある名前空間 contoso.com を持つように構成されています。そのため、Configuration Manager で Contoso ドメイン内のコンピューターに DNS サフィックスを指定するときには、"Contoso" ではなく "Contoso.com" を指定します。  
 
 -   システム コンテキストでのサイト サーバー間の分散コンポーネント オブジェクト モデル (DCOM) 接続は、Kerberos 認証を使用して正常に実行できる必要があります。  

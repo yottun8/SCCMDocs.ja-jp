@@ -14,11 +14,11 @@ caps.latest.revision: "36"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 10ddbcc19da8c5fc6451f62500f17790a0349389
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 5302b5712e33c753d0193a32498bc02a2241428c
+ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>System Center Configuration Manager のコンソール内の更新プログラムのインストール
 
@@ -106,8 +106,8 @@ System Center Configuration Manager は Microsoft クラウド サービスと�
 
 -   更新プログラムのインストールを選択すると、前提条件チェックが再び自動的に実行されます。  
 
-> [!NOTE]
-> 前提条件の確認を開始し、状態を表示すると、**インストール** フェーズがアクティブであると表示されますが、更新プログラムは実際にはインストールされていません。 インストール フェーズが一覧に表示されるのは、チェックの実行に必要なバイナリの抽出などの一部のタスクが、インストール フェーズの一部でもあるためです。  
+> [!NOTE]   
+> 前提条件の確認を開始し、状態を表示すると、**インストール** フェーズがアクティブであると表示されますが、更新プログラムは実際にはインストールされていません。 前提条件の確認を実行するため、更新プロセスは、コンテンツ ライブラリからパッケージを抽出し、現在の前提条件の確認にアクセスできるステージング フォルダーに配置します。  更新プログラムをインストールするときに、これと同じプロセスが実行されます。 このため、インストールは ‘進行中’ と表示されます。 インストールのカテゴリには、*更新プログラムのパッケージの展開*の手順のみが表示されます。  
 
 その後に、更新プログラムをインストールするときには、前提条件チェックの警告を無視するように更新プログラムを構成することができます。  
 

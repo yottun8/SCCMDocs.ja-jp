@@ -2,7 +2,7 @@
 title: "ソフトウェア使用状況測定でアプリの使用状況を監視する | Microsoft Docs"
 description: 
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 09/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "8"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: d7bc0bebeb0355156553376a3535ed76d5e44835
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 87bafd8ce28d58993666057b6c5bfd8bdc0c4ed9
+ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 09/20/2017
 ---
 # <a name="software-metering-in-system-center-configuration-manager"></a>System Center Configuration Manager のソフトウェア使用状況測定
 
@@ -86,7 +86,7 @@ ms.lasthandoff: 09/15/2017
         >
         >  [ファイル名] に値を指定している場合、このボックスは任意指定です。 ****
 
-    -   バージョン -使用状況を測定する実行可能ファイルのバージョン。****  ワイルドカード文字 (*) を任意の文字列の代わりに使用できます。または、ワイルドカード文字 (?) を任意の 1 文字の代わりに使用できます。 すべてのバージョンの実行可能ファイルの使用状況を測定するには、既定値 (\*) を使用します。
+    -   バージョン -使用状況を測定する実行可能ファイルのバージョン。****  ワイルドカード文字 ( &#42; ) を任意の文字列の代わりに使用できます。または、ワイルドカード文字 (? ) を任意の 1 文字の代わりに使用できます。 すべてのバージョンの実行可能ファイルの使用状況を測定するには、既定値 ( &#42; ) を使用します。
 
     -   言語 - 使用状況を測定する実行可能ファイルの言語。****  既定値は使用しているオペレーティング システムの現在の設定言語です。 使用状況を測定する実行可能ファイルを [参照] ボタンをクリックして選択する場合、そのファイルのヘッダーに言語情報が存在すれば、このボックスは自動的に入力されます。 **** ファイルのすべての言語バージョンの使用状況を測定するには、ドロップダウン リストで [任意] を選択します。 ****
 

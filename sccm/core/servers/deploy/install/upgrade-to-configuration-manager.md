@@ -14,11 +14,11 @@ caps.latest.revision: "21"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 1166b739e1e8d667172d97883f484fdbc3a142c1
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e65c22240555563cdb011849562069baf5d5887f
+ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>System Center Configuration Manager へのアップグレード
 
@@ -47,7 +47,7 @@ System Center 2012 Configuration Manager を実行しているサイトおよび
 -   System Center Configuration Manager のリリース候補版のインストール  
 -   System Center 2012 Configuration Manager Service Pack 1  
 -   System Center 2012 Configuration Manager Service Pack 2  
--   System Center 2012 R2 Configuration Manager  
+-   System Center 2012 R2 Configuration Manager サービス パックなし
 -   System Center 2012 R2 Configuration Manager Service Pack 1  
 
 2016 年 12 月 15 日より前にダウンロードしたバージョン 1606 基準メディアを使用する場合は、System Center Configuration Manager バージョン 1606 の正規ライセンス版にアップグレードできるのは次のバージョンのみです。

@@ -2,7 +2,7 @@
 title: "Configuration Manager で使用されるポート | Microsoft Docs"
 description: "System Center Configuration Manager が接続に使用する必要なポートとカスタマイズ可能なポートについて説明します。"
 ms.custom: na
-ms.date: 3/20/2017
+ms.date: 09/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,18 +15,18 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 78caa69e10f5d386daab1e61e484d4d134469708
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: ac443971a725a7eeecaeea877b8e9636ebb4990b
+ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/20/2017
 ---
 # <a name="ports-used-in-system-center-configuration-manager"></a>System Center Configuration Manager で使用されるポート
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager は、分散クライアント/サーバー システムです。 Configuration Manager が分散であるということは、サイト サーバー、サイト システム、およびクライアントの間で接続を確立できることを意味します。 接続によっては、構成不可能なポートを使用する場合も、ユーザーが指定するカスタム ポートをサポートする場合もあります。 ファイアウォール、ルーター、プロキシ サーバー、IPsec など、何らかのポート フィルタリング テクノロジを使用する場合は、必要なポートが利用可能であることを確認する必要があります。  
-
+    
 > [!NOTE]  
 >  SSL ブリッジを使用してインターネットベースのクライアントをサポートする場合は、特定の HTTP 動詞とヘッダーでファイアウォールの通過を許可することが必要になることもあります。   
 
@@ -167,7 +167,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |グローバル カタログ LDAP|--|3268|  
-|グローバル カタログ LDAP SSL|--|3269|  
+
 
 ###  <a name="BKMK_PortsClient-MP"></a> クライアント -- > 管理ポイント  
 
@@ -295,9 +295,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |ライトウェイト ディレクトリ アクセス プロトコル (LDAP)|--|389|  
-|LDAP (Secure Sockets Layer [SSL] 接続)|636|636|  
 |グローバル カタログ LDAP|--|3268|  
-|グローバル カタログ LDAP SSL|--|3269|  
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
@@ -391,9 +389,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |ライトウェイト ディレクトリ アクセス プロトコル (LDAP)|--|389|  
-|LDAP (Secure Sockets Layer [SSL] 接続)|636|636|  
 |グローバル カタログ LDAP|--|3268|  
-|グローバル カタログ LDAP SSL|--|3269|  
 |RPC エンドポイント マッパー|135|135|  
 |RPC|--|DYNAMIC (注 6「 **動的ポート**」を参照)|  
 
@@ -641,17 +637,9 @@ SQL Server コンピューターでファイアウォールを有効にしてい
 ### <a name="bkmk_discovery"> </a> 検出と公開
 次のポートは、サイト情報の検出と公開に使用されます。
  - ライトウェイト ディレクトリ アクセス プロトコル (LDAP) : 389
- - LDAP (Secure Sockets Layer [SSL] 接続) : 636
-
-
  - グローバル カタログ LDAP : 3268
- - グローバル カタログ LDAP SSL : 3269
-
-
  - RPC エンドポイント マッパー: 135
  - RPC : 動的に割り当てられた高 TCP ポート
-
-
  - TCP: 1024: 5000
  - TCP: 49152: 65535
 
