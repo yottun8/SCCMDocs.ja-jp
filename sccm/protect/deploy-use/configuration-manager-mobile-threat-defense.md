@@ -14,17 +14,17 @@ caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 298d879638a2d20d421b19752cb5f20f6725df14
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 25d68e7b16afe8e24939897f01f173d3daa7fa09
+ms.sourcegitcommit: 621b9f8fedf7f1d53ea7abd804af4b63c85dbeb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/02/2017
 ---
 # <a name="intune-mobile-threat-defense-connectors-in-configuration-manager"></a>Configuration Manager の Intune Mobile Threat Defense コネクター
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-[ハイブリッド MDM 展開 (SCCM と Intune)](https://docs.microsoft.com/en-us/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) および Intune と Mobile Threat Defense パートナー間の統合により、デバイス リスク評価に基づき、会社のリソースおよびデータへのアクセスを制御できます。
+[ハイブリッド MDM 展開 (SCCM と Intune)](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) および Intune と Mobile Threat Defense パートナー間の統合により、デバイス リスク評価に基づき、会社のリソースおよびデータへのアクセスを制御できます。
 
 Intune Mobile Threat Defense コネクターを使用すると、選択した Mobile Threat Defense ベンダーをコンプライアンス ポリシーと条件付きアクセス規則の情報ソースとして活用できます。 これにより、IT 管理者が、特に危険にさらされたモバイル デバイスから、Exchange、Sharepoint などの企業リソースに保護レイヤーを追加することができます。
 

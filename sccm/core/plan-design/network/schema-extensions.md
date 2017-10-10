@@ -16,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex
-ms.openlocfilehash: 5b5540c35c02df6e3d06e4aa9269b8da3238233e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5ec1e9368e836382b143d7b2bf9d1a6a7bc2fa22
+ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="schema-extensions-for-system-center-configuration-manager"></a>System Center Configuration Manager のスキーマ拡張
 
@@ -30,7 +30,7 @@ Configuration Manager をサポートするように Active Directory スキー�
 
 -   Active Directory スキーマは拡張することをお勧めしますが、必須ではありません。  
 
-[Active Directory スキーマを拡張する](https://msdnstage.redmond.corp.microsoft.com/en-US/library/mt345589\(TechNet.10\).aspx)前に、Active Directory ドメイン サービスに精通し、 [Active Directory スキーマの変更](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx)に慣れておく必要があります。  
+[Active Directory スキーマを拡張する](https://docs.microsoft.com/en-us/sccm/core/plan-design/network/extend-the-active-directory-schema)前に、Active Directory ドメイン サービスに精通し、 [Active Directory スキーマの変更](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx)に慣れておく必要があります。  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Configuration Manager 向けの Active Directory スキーマの拡張に関する考慮事項  
 
