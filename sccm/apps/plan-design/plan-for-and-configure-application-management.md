@@ -14,11 +14,11 @@ caps.latest.revision: "13"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: c8034497299a9b5646674031a40fdee49d55ff7c
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 1519ec79eb6b1da6b9666b2ce12a46553116b364
+ms.sourcegitcommit: c145e515843a0f37c2e5ca5dbd22072a219d06b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/03/2017
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>System Center Configuration Manager のアプリケーション管理の計画と構成
 
@@ -181,9 +181,9 @@ ms.lasthandoff: 09/15/2017
 
 ソフトウェア センターのカスタム ブランド設定は、次の規則に従って適用されます。
 
-1. アプリケーション カタログ Web サイト ポイントのサイト サーバーの役割がインストールされていない場合は、**[コンピューター エージェント]** クライアント設定の **[ソフトウェア センターに表示される組織名]** に指定された組織名がソフトウェア センターに表示されます。 手順については、「[クライアント設定を構成する方法](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/configure-client-settings)」をご覧ください。
-2. アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされている場合は、アプリケーション カタログ Web サイトのポイント サイト サーバーの役割プロパティに指定されている組織名と色がソフトウェア センターに表示されます。 詳細については、「[Configuration options for Application Catalog website point](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website)」(アプリケーション カタログ Web サイト ポイントの構成オプション) をご覧ください。
-3. Microsoft Intune サブスクリプションが構成されていて Configuration Manager に接続されている場合は、Intune サブスクリプションのプロパティに指定されている組織名、色、および会社のロゴがソフトウェア センターに表示されます。 詳細については、「 [Configuring the Microsoft Intune subscription](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription)」をご覧ください。
+1. アプリケーション カタログ Web サイト ポイントのサイト サーバーの役割がインストールされていない場合は、**[コンピューター エージェント]** クライアント設定の **[ソフトウェア センターに表示される組織名]** に指定された組織名がソフトウェア センターに表示されます。 手順については、「[クライアント設定を構成する方法](https://docs.microsoft.com/sccm/core/clients/deploy/configure-client-settings)」をご覧ください。
+2. アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされている場合は、アプリケーション カタログ Web サイトのポイント サイト サーバーの役割プロパティに指定されている組織名と色がソフトウェア センターに表示されます。 詳細については、「[Configuration options for Application Catalog website point](https://docs.microsoft.com/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website)」(アプリケーション カタログ Web サイト ポイントの構成オプション) をご覧ください。
+3. Microsoft Intune サブスクリプションが構成されていて Configuration Manager に接続されている場合は、Intune サブスクリプションのプロパティに指定されている組織名、色、および会社のロゴがソフトウェア センターに表示されます。 詳細については、「 [Configuring the Microsoft Intune subscription](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription)」をご覧ください。
 
 > [!IMPORTANT]  
 >  ソフトウェア センターのブランド設定は、14 日ごとに Intune と同期されるので、Intune で行った変更が Configuration Manager に表示されるまで遅れがある場合があります。
