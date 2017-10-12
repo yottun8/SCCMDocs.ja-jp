@@ -2,7 +2,7 @@
 title: "正常性構成証明書 | Microsoft Docs"
 description: "Configuration Manager コンソールに表示できるデバイス正常性構成証明書の機能について説明します。"
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 10/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "17"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 54b3433a002b8ef29059bab04458138348f95d66
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 11d58237ea1e88785f6991450b3e898562b23918
+ms.sourcegitcommit: a17f5dece340a70cedbec03d19938dab90ae60b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/06/2017
 ---
 # <a name="health-attestation-for-system-center-configuration-manager"></a>System Center Configuration Manager の正常性構成証明書
 
@@ -37,9 +37,9 @@ ms.lasthandoff: 08/07/2017
 
  **要件:**  
 
--   [デバイス正常性構成証明書が有効になっている](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation)、Windows 10 バージョン 1607 または Windows Server 2016 バージョン 1607 を実行しているクライアント デバイス
--    TPM 1.2 または TPM 2 が有効になっているデバイス
--   Configuration Manager クライアント エージェントと has.spserv.microsoft.com (ポート 443) 正常性構成証明書サービス (クラウド管理)、またはデバイスの正常性構成証明書が有効な管理ポイント (オンプレミス) との間の通信
+-   [デバイス正常性構成証明書が有効になっている](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation)、Windows 10 バージョン 1607 または Windows Server 2016 バージョン 1607 を実行しているクライアント デバイス。
+-   TPM 1.2 または TPM 2 が有効になっているデバイス。
+-   クラウド管理を使用する場合は、Configuration Manager クライアント エージェントと、*has.spserv.microsoft.com* (ポート 443) 正常性構成証明書サービス (クラウド管理) の管理ポイントとの間の通信。 オンプレミスのときは、クライアントはデバイス正常性構成証明書が有効になっている管理ポイントと通信できる必要があります。
 
 ### <a name="how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers"></a>Configuration Manager クライアント コンピューターの正常性構成証明書サービスの通信を有効にする方法
 

@@ -1,6 +1,6 @@
 ---
 title: "MDM 機関を変更する | Microsoft Docs"
-description: "MDM 機関を Configuration Manager (ハイブリッド) から Intune スタンドアロンへ、またはその逆に変更する方法について説明します。"
+description: "MDM 機関を Configuration Manager (ハイブリッド) から Intune スタンドアロンに変更する方法について説明します"
 keywords: 
 author: dougeby
 manager: angrobe
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
-ms.openlocfilehash: d24e6e736397a4612db7b47e997d8cb1f97c4de9
-ms.sourcegitcommit: 948644072bd158b156f782a4376bcd50fac7c73a
+ms.openlocfilehash: 489c01f92d42ed12ac5464307a16713ca898d251
+ms.sourcegitcommit: 8ac9c2c9ba1fdcbb7cc8d5be898586865fcf67c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="change-your-mdm-authority"></a>MDM 機関を変更する
 Configuration Manager バージョン 1610 以降では、Microsoft サポートに連絡しなくても、また、既存の管理対象デバイスの登録を解除してから再登録しなくても、MDM 機関を変更できます。 このトピックでは、Configuration Manager コンソール (ハイブリッド) から構成された既存の Microsoft Intune テナントを Intune スタンドアロンに変更する手順を説明します。
+
+> [!Note]    
+> MDM 機関が Intune に設定された既存の Microsoft Intune テナントを Configuration Manager (ハイブリッド) に変更する場合は、「[MDM 機関を変更する](https://docs.microsoft.com/intune-classic/deploy-use/change-mdm-authority)」をご覧ください。
 
 > [!Important]    
 > このトピックでは、ユーザーをまだ移行していない場合に、MDM 機関を変更します。 [ユーザーのサブセットを移行](migrate-hybridmdm-to-intunesa.md)した後に ご使用の MDM 機関を変更するには、[MDM 機関の変更](migrate-change-mdm-authority.md)に関するページをご覧ください。

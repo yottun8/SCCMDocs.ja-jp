@@ -14,11 +14,11 @@ caps.latest.revision: "15"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 5148fe852e4d63e1cfd2d5b9c62369155dbecb89
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: ef515da67a7293de60a7678dee69e9785d339352
+ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>System Center Configuration Manager のクライアント インストール プロパティについて
 
@@ -179,7 +179,7 @@ CCMSetup がインストール ファイルのダウンロードの試行を開�
 
  指定しない場合、クライアントは HTTPS 接続を確立する前に CRL を確認します。  
 
- クライアントの CRL チェックの詳細については、「 [Plan for Security 」 の「 System Center Configuration Manager](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs) 」 の「[Plan for security 」 の「 System Center Configuration Manager](../../plan-design/security/plan-for-security.md)」を参照してください。  
+ クライアントの CRL の確認について詳しくは、「[System Center Configuration Manager でのセキュリティの計画](../../plan-design/security/plan-for-security.md)」の「[PKI 証明書失効の計画](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs)」をご覧ください。  
 
  例: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
 
@@ -332,7 +332,7 @@ CCMSetup がインストール ファイルのダウンロードの試行を開�
 
  SMSSITECODE=AUTO のインストール プロパティでこのオプションを指定しないでください。 インターネットベースのクライアントはインターネットベースのサイトに直接割り当てる必要があります。  
 
- 例: `CCMSetup.exe  /UsePKICert/ CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
+ 例: `CCMSetup.exe  /UsePKICert CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
 
 ### <a name="ccmhttpport"></a>CCMHTTPPORT
 
@@ -402,7 +402,7 @@ Configuration Manager ログ ファイルのサイズが 250000 バイト (ま�
 
 Configuration Manager クライアント コンピューターによって送信される状態メッセージを受信して処理するフォールバック ステータス ポイントを指定します。  
 
-フォールバック ステータス ポイントの詳細については、「[Determine if you need a fallback status point](/sccm/core/clients/deploy/plan#determine-if-you-need-a-fallback-status-point)」 (フォールバック ステータス ポイントが必要かどうかを確認する) をご覧ください。  
+フォールバック ステータス ポイントの詳細については、「[Determine if you need a fallback status point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point)」 (フォールバック ステータス ポイントが必要かどうかを確認する) をご覧ください。  
 
 例: `CCMSetup.exe FSP=SMSFP01`  
 

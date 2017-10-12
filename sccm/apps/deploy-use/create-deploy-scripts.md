@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: e6b29cd85504742e8638a55db2f6c4ecc8ab3e55
-ms.sourcegitcommit: 5ca89204716750eaaceb01bba40b35b85c7122ba
+ms.openlocfilehash: 4c90617890ba3751a7215e9ac54042d64cc1a227
+ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Configuration Manager コンソールから PowerShell スクリプトを作成して実行する
 
@@ -55,13 +55,16 @@ Configuration Manager のセキュリティ ロールの詳細については、
 ## <a name="allow-users-to-approve-their-own-scripts"></a>ユーザーが自身のスクリプトを承認できるようにする
 
 1. Configuration Manager コンソールで、[ **管理**] をクリックします。
-2. [ **管理** ] ワークスペースで [ **サイトの構成**] を展開して、[ **サイト**] をクリックします。
+2. **管理**  ワークスペースで  **サイトの構成** を展開して、 **サイト**をクリックします。
 3. サイトの一覧で、自分のサイトを選択し、**[ホーム]** タブの **[サイト]** グループで **[階層設定]** をクリックします。
 4. **[階層設定のプロパティ]** ダイアログ ボックスの **[全般]** タブで、**[Do not allow script authors to approve their own scripts]\(スクリプト作成者に自身のスクリプトの承認を許可しない\)** チェック ボックスをオフにします。
 
+>[!IMPORTANT]
+>ベスト プラクティスとして、スクリプト作成者に自分のスクリプトの承認を許可しないようにする必要があります。 これは、ラボ環境でのみ許可する必要があります。 運用環境でこの設定を変更する場合の影響を慎重に検討してください。
+
 ## <a name="import-and-edit-a-script"></a>スクリプトをインポートして編集する
 
-1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。
+1. Configuration Manager コンソールで、[ソフトウェア ライブラリ] ****をクリックします。
 2. **[ソフトウェア ライブラリ]** ワークスペースで **[スクリプト]** をクリックします。
 3. **[ホーム]** タブの **[作成]** グループで、**[スクリプトの作成]** をクリックします。
 4. **スクリプトの作成**ウィザードの **[スクリプト]** ページで、次の設定を構成します。
@@ -108,6 +111,9 @@ Configuration Manager のセキュリティ ロールの詳細については、
 
 >[!IMPORTANT]
 >スクリプトには、1 時間の実行期間が与えられます。 この期間内にスクリプトが実行されない場合 (PC の電源が切れている場合など)、この手順をもう一度実行する必要があります。
+
+>[!IMPORTANT]
+>スクリプトは、対象となるクライアントのシステム アカウントまたはコンピューター アカウントとして実行されます。 このアカウントのネットワーク アクセスは非常に制限されています。 スクリプトによるリモート システムおよびリモートの場所へのアクセスは、これを念頭に置いて準備する必要があります。
 
 ## <a name="next-steps"></a>次のステップ
 

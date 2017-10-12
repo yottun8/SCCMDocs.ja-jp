@@ -1,18 +1,18 @@
 ---
 title: "クラウド管理ゲートウェイの計画 | Microsoft Docs"
 description: 
-ms.date: 06/07/2017
+ms.date: 10/06/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d3e658714c30a1eba64f94e248d5e11095ca1dcb
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: c3d036eb91d16ed95c26bbf2bcce1e37851f90a2
+ms.sourcegitcommit: 8ac9c2c9ba1fdcbb7cc8d5be898586865fcf67c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager でクラウド管理ゲートウェイを計画する
 
@@ -46,9 +46,9 @@ Configuration Manager コンソールを使って、Azure にサービスを展�
 
     -   クライアント展開
     -   サイトの自動割り当て
-    -   ユーザー ポリシー
     -   アプリケーション カタログ (ソフトウェア承認要求を含む)
     -   完全なオペレーティング システム展開 (OSD)
+    -   タスク シーケンス (すべて)
     -   Configuration Manager コンソール
     -   ［リモート ツール］
     -   Web サイトのレポート
@@ -78,7 +78,7 @@ Configuration Manager コンソールを使って、Azure にサービスを展�
 
 -   送信データの転送
 
-    -   サービスから送信されるデータに対して料金が発生します。 予想されるコストについては、「[Azure 帯域幅の料金詳細](https://azure.microsoft.com/en-us/pricing/details/bandwidth/)」を参照してください。
+    -   サービスから送信されるデータに対して料金が発生します。 予想されるコストについては、「[Azure 帯域幅の料金詳細](https://azure.microsoft.com/pricing/details/bandwidth/)」を参照してください。
 
     -   インターネット ベースのクライアントが 1 時間ごとにポリシーを更新する場合、クライアントあたり毎月約 100 MB が予想されます (この数値は見積もり目的でのみ提供されます)。
 
@@ -111,14 +111,14 @@ Configuration Manager コンソールを使って、Azure にサービスを展�
 
 ### <a name="how-is-the-cloud-management-gateway-deployed"></a>クラウド管理ゲートウェイのデプロイはどうやって行いますか?
 
-CMG のデプロイ タスクはすべて、サービス接続ポイントのクラウド サービス マネージャー コンポーネントによって処理されます。 また、このコンポーネントは、Azure AD のサービスの正常性とログ情報も監視し、レポートします。
+CMG のデプロイ タスクはすべて、サービス接続ポイントのクラウド サービス マネージャー コンポーネントによって処理されます。 また、このコンポーネントは、Azure AD のサービスの正常性とログ情報も監視し、レポートします。 サービス接続ポイントが[オンライン モード](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes)であることを確認します。
 
 #### <a name="certificate-requirements"></a>証明書の要件
 
-CMG のセキュリティ保護には、次の証明書が必要になります。
+CMG のセキュリティ保護には、次の証明書が必要です。
 
 - **管理証明書** - 自己署名証明書を含む、任意の証明書を使用できます。 Azure AD にアップロードされた公開証明書、または Azure AD での認証用に Configuration Manager にインポートされた[秘密キー付きの PFX](/sccm/mdm/deploy-use/create-pfx-certificate-profiles) を使用できます。
-- **Web サービス証明書** -  クライアントによるネイティブな信頼を得るために、パブリック CA 証明書を使用することをお勧めします。 CNAME は、パブリック DNS レジスタで作成する必要があります。 ワイルド カード証明書はサポートされていません。
+- **Web サービス証明書** -  クライアントによるネイティブな信頼を得るために、パブリック CA 証明書を使用することをお勧めします。 パブリック DNS レジストラーで CName を作成します。 ワイルド カード証明書はサポートされていません。
 - **CMG にアップロードされたルート証明書または SubCA 証明書** - クライアントの PKI 証明書に対して、CMG がチェーンの完全検証を行う必要があります。 クライアント PKI 証明書の発行に エンタープライズ CA を使用していて、証明書のルート CA や下位 CA がインターネットにない場合は、エンタープライズ CA を CMG にアップロードする必要があります。
 
 #### <a name="deployment-process"></a>デプロイのプロセス
@@ -131,6 +131,9 @@ CMG のセキュリティ保護には、次の証明書が必要になります�
 - Azure AD サーバーでの CMG コンポーネントのセットアップと、エンドポイント、HTTP ハンドラー、インターネット インフォメーション サービス (IIS) のサービスの構成
 
 CMG の構成を変更する場合は、構成のデプロイが CMG に行われます。
+
+### <a name="where-do-i-set-up-the-cloud-management-gateway"></a>クラウド管理ゲートウェイはどこで設定するのですか?
+クラウド管理ゲートウェイは、階層の最上位サイトで作成できます。 それが中央管理サイトである場合は、子プライマリ サイトで CMG 接続ポイントを作成できます。
 
 ### <a name="how-does-the-cloud-management-gateway-help-ensure-security"></a>クラウド管理ゲートウェイは、どうやってセキュリティを確実にするのですか?
 
@@ -164,7 +167,7 @@ CMG は次の方法で、セキュリティによる保護を確実なものに�
 
 ### <a name="what-ports-are-used-by-the-cloud-management-gateway"></a>クラウド管理ゲートウェイが使用するポートは何ですか?
 
-- オンプレミスのネットワークでは、受信ポートは必要ありません。 CMG をデプロイすると、CMG 上に自動的に作成されます。
+- オンプレミスのネットワークに受信ポートは必要ありません。 CMG をデプロイすると、CMG 上に自動的に作成されます。
 - 443 以外の一部の送信ポートは、CMG 接続ポイントで必要です。
 
 |||||

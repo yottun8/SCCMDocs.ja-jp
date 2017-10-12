@@ -2,7 +2,7 @@
 title: SQL Server Always On | Microsoft Docs
 description: "SCCM での SQL Server Always On 可用性グループの使用を計画します。"
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 09/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "16"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: c746365238e1255d73387a9496521bb03a56b21b
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3e275f6203a9e0b9210bfbadbf9addf64f6533d8
+ms.sourcegitcommit: 8faf42135a8dc9c384407e64f3f8ba204fb15847
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager で SQL Server Always On 可用性グループを使用するための準備
 
@@ -210,8 +210,11 @@ Azure で可用性グループをセットアップし、グループが内部�
 ## <a name="limitations-and-known-issues"></a>制限事項と既知の問題
 すべてのシナリオに以下の制限事項が適用されます。   
 
-**基本的な可用性グループはサポートされない:**  
-SQL Server 2016 Standard エディションで導入された[基本的な可用性グループ](https://msdn.microsoft.com/library/mt614935.aspx)では、Configuration Manager で使用するための要件であるセカンダリ レプリカに対する読み取りアクセスはサポートされていません。
+**サポートされていない SQL Server のオプションと構成:**
+- **基本的な可用性グループ**  
+  SQL Server 2016 Standard エディションで導入された[基本的な可用性グループ](https://msdn.microsoft.com/library/mt614935.aspx)では、Configuration Manager で使用するための要件であるセカンダリ レプリカに対する読み取りアクセスはサポートされていません。
+- **フェールオーバー クラスター インスタンス**  
+  [フェールオーバー クラスター インスタンス](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)は、Configuration Manager で使用するレプリカではサポートされていません。
 
 **追加の可用性グループをホストする SQL Server:**   
 SQL Server の可用性グループで 1 つ以上の可用性グループと、Configuration Manager で使用するグループをホストしている場合、Configuration Manager バージョン 1610 の前に、Configuration Manager セットアップの実行または Configuration Manager 用の更新プログラムをインストールするときに、これらの追加の各可用性グループの各レプリカに次の構成を設定する必要があります。

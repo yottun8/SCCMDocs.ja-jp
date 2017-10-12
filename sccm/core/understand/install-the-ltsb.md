@@ -14,11 +14,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 06565bc52e2c409b905bbc448262cf9da25eabb0
-ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
+ms.openlocfilehash: 247fbe5313c17be906802acfaa6952ab3358122e
+ms.sourcegitcommit: a17f5dece340a70cedbec03d19938dab90ae60b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/06/2017
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1606 構成基準メディアでインストールし、アップグレードする
 
@@ -121,14 +121,14 @@ System Center 2012 Configuration Manager からアップグレードするとき
 **LTSB へのアップグレード:**  
 - アップグレード前チェックリストの追加手順。
 - セットアップ中、LTSB を選択する必要があります。ソフトウェア アシュアランス契約の詳細を指定できます。
-- System Center 2012 Configuration Manager Service Pack 2 または System Center 2012 R2 Configuration Manager Service Pack 1 を実行しているサイトのみをアップグレードできます。
+- System Center 2012 Configuration Manager Service Pack 1、System Center 2012 Configuration Manager Service Pack 2、System Center 2012 R2 Configuration Manager Service Pack 1、または System Center 2012 R2 Configuration Manager (Service Pack なし) を実行しているサイトだけをアップグレードできます。
 
 ### <a name="in-place-upgrade-paths-for-the-1606-baseline-media"></a>1606 構成基準メディアの一括アップグレード パス
 1606 構成基準メディアを利用し、次を System Center Configuration Manager の製品版にアップグレードできます。
 - System Center 2012 R2 Configuration Manager Service Pack 1
 - Service Pack なしの System Center 2012 R2 Configuration Manager (2016 年 12 月 15 日に再リリースされたバージョン 1606 の構成基準メディアの使用が必要です。)
 - System Center 2012 Configuration Manager Service Pack 2
-- System Center 2012 Configuration Manager Service Pack 1
+- System Center 2012 Configuration Manager Service Pack 1 (2016 年 12 月 15 日に再リリースされたバージョン 1606 の構成基準メディアの使用が必要です)。
 
 
 また、このメディアを利用し、Current Branch の評価版を製品版にアップグレードできます。

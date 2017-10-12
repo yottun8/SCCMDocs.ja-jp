@@ -14,11 +14,11 @@ caps.latest.revision:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.openlocfilehash: 4fd2d3b8aae6a2f42e7c6a87723d16368be30984
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d353f47671a0c1e67c34bb9641fa9dd007b9f8be
+ms.sourcegitcommit: c145e515843a0f37c2e5ca5dbd22072a219d06b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/03/2017
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>Intune による Lookout 統合のトラブルシューティング
 
@@ -34,7 +34,7 @@ Lookout サポートには次の方法で連絡することができます。
 
 * 電子メール: enterprisesupport@lookout.com
 * [MTP コンソール](http://aad.lookout.com)にログインし、**[サポート]** モジュールに移動します。
-* https://enterprise.support.lookout.com/hc/en-us/requests に移動して、サポートを要求します。
+* https://enterprise.support.lookout.com/hc/requests に移動して、サポートを要求します。
 
 ### <a name="unable-to-sign-in"></a>サインインできない
 Azure AD グローバル管理者ユーザーが初期の Lookout セットアップを受け入れていない場合、次のエラーが表示される可能性があります。
@@ -73,7 +73,7 @@ Lookout MTP コンソールの **[システム]** モジュールから **[Intun
 Lookout MTP コンソールの **[デバイス]** モジュールから、管理者はデバイスを選択して削除することができます。   次回、デバイスの所有者が Lookout for Work アプリを開き、**[アクティブ化]** をタップしたときに、デバイスは完全な再同期状態となります。
 
 ### <a name="the-owner-of-the-device-is-no-longer-using-this-device"></a>デバイスの所有者がこのデバイスを使用しなくなった
-デバイスをワイプし、[このトピック](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/wipe-lock-reset-devices#full-wipe)の説明に従って新しいユーザーに登録を要求する必要があります。
+デバイスをワイプし、[このトピック](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#full-wipe)の説明に従って新しいユーザーに登録を要求する必要があります。
 
 
 Lookout MTP コンソールの **[デバイス]** モジュールに移動して、**[削除]** を選択することもできます。
