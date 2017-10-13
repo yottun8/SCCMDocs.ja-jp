@@ -2,7 +2,7 @@
 title: "Device Enrollment Program (DEP) を使用したデバイスの登録 - Configuration Manager | Microsoft Docs"
 description: "Configuration Manager と Intune のハイブリッド展開に対応するために、iOS Device Enrollment Program (DEP) 登録を有効にします。"
 ms.custom: na
-ms.date: 08/15/2017
+ms.date: 09/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,17 +14,17 @@ caps.latest.revision: "9"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.openlocfilehash: e76e46ce0d6ee0582d5161709ff114b936ac5660
-ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.openlocfilehash: f34f7527c14e1be6229212bfb2d8fd022ee6defe
+ms.sourcegitcommit: 8faf42135a8dc9c384407e64f3f8ba204fb15847
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Configuration Manager とのハイブリッド展開に対応する iOS Device Enrollment Program (DEP) 登録
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-企業は、Apple のデバイス登録プログラムで iOS デバイスを購入してから、Microsoft Intune を使用してそのデバイスを管理することができます。 Apple Device Enrollment Program (DEP) を使用して企業所有の iOS デバイスを管理するには、企業は Apple の手順を実行してプログラムに参加し、そのプログラムを使用してデバイスを取得する必要があります。 そのプロセスの詳細については、  [https://deploy.apple.com](https://deploy.apple.com)で管理することができます。 このプログラムの利点として、各デバイスをコンピューターに USB 接続することなく、デバイスを楽に設定できる点があります。  
+企業は、Apple のデバイス登録プログラムで iOS デバイスを購入してから、Microsoft Intune を使用してそのデバイスを管理することができます。 Apple Device Enrollment Program (DEP) を使用して企業所有の iOS デバイスを管理するには、企業は Apple の手順を実行してプログラムに参加し、そのプログラムを使用してデバイスを取得する必要があります。 そのプロセスの詳細については、  [https://deploy.apple.com](https://deploy.apple.com)で管理することができます。このプログラムの利点として、各デバイスをコンピューターに USB 接続することなく、デバイスを楽に設定できる点があります。  
 
  DEP を使用して企業所有の iOS デバイスを登録するには、Apple の DEP トークンが必要です。 このトークンにより、Intune は企業所有の DEP 参加デバイスに関する情報を同期できるようになります。 また、Intune は Apple に登録プロファイルをアップロードし、デバイスをそれらのプロファイルに割り当てられるようになります。  
 
@@ -40,6 +40,7 @@ ms.lasthandoff: 08/16/2017
 3.  **Device Enrollment Program トークンを取得する**   
     [Device Enrollment Program ポータル](https://deploy.apple.com) (https://deploy.apple.com) に移動し、会社の Apple ID でサインインします。 この Apple ID は、将来 DEP トークンを更新するために使用する必要があります。  
     1.  [Device Enrollment Program ポータル](https://deploy.apple.com)で **[Device Enrollment Program]** > **「Manage Servers」 (サーバーの管理)** に移動して、**[Add MDM Server]** (MDM サーバーの追加) をクリックします。  
+    ![Device Enrollment Program ポータルへの MDM サーバーの追加のスクリーンショット](../media/enrollment-program-token-add-server.png)
     2.  **MDM サーバー名**を入力し、 **[Next]**をクリックします。 サーバー名は、自分が MDM サーバーを識別できるようにするための名前です。 Intune または Configuration Manager サーバーの名前または URL ではありません。  
     3.  **[Add <サーバー名\>]** (<サーバー名> の追加) ダイアログ ボックスが開きます。 **[ファイルの選択…] をクリックして、** 前の手順で作成した .pem ファイルをアップロードしてから、**[Next]** (次へ) をクリックします。  
     4.  **[Add <サーバー名\>]** (<サーバー名> の追加) ダイアログ ボックスに、**[Your Server Token]** (サーバー トークン) リンクが表示されます。 サーバー トークン (で管理することができます。p7m) ファイルをコンピューターにダウンロードしたら、 **[完了]**で管理することができます。  
@@ -97,9 +98,10 @@ ms.lasthandoff: 08/16/2017
 
 1. [Device Enrollment Program ポータル](https://deploy.apple.com) (https://deploy.apple.com) に移動し、会社の Apple ID でサインインします。
 2. **[Deployment Program]** > **[Device Enrollment Program]** > **[デバイスの管理]**で管理することができます。 **デバイスの選択**方法を指定し、デバイス情報を入力して、デバイスの **シリアル番号**、 **注文番号**、または **CSV ファイルのアップロード**で詳細を指定します。 次に、**[Assign to Server]** (サーバーに割り当て) を選択し、手順 3 で指定した <*サーバー名*> を選択して、**[OK]** をクリックします。  
+![Apple Device Enrollment Program ポータルへのデバイスの追加のスクリーンショット](../media/enrollment-program-token-specify-serial.png)
 
 3.  **DEP で管理されたデバイスの同期**   
-    **[資産とコンプライアンス]** ワークスペースで、**[会社が所有しているすべてのデバイス]**、**[事前に宣言されたデバイス]** の順に進みます。 **[ホーム]** タブの **[DEP の同期]**をクリックします。 同期要求が Apple に送信されます。 同期が完了すると、DEP で管理されたデバイスが表示されます。
+    **[資産とコンプライアンス]** ワークスペースで、**[会社が所有しているすべてのデバイス]**、**[事前に宣言されたデバイス]** の順に進みます。 **[ホーム]** タブの **[DEP の同期]**をクリックします。同期要求が Apple に送信されます。 同期が完了すると、DEP で管理されたデバイスが表示されます。
 
     > [!NOTE]
     > ハイブリッド構成では、Configuration Manager コンソールで **[DEP 同期]** をクリックすると、DEP の同期操作が手動でトリガーされます。
