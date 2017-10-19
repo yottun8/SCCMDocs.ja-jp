@@ -48,7 +48,7 @@ ms.lasthandoff: 08/07/2017
 5.  [登録プロファイルの作成] で登録プロファイルの名前を入力し、登録プロファイルを持つユーザーが使用する管理サイト コードを選びます。 **[OK]** を何回かクリックして、[既定の設定] ページを終了します。  
 
 > [!NOTE]  
->  検出されたユーザーのサブセットに登録プロファイルを展開する場合は、ユーザーのコレクションを使用し、そのコレクションに展開するためのカスタム クライアント設定を作成できます。 カスタム クライアント設定を作成する方法については、「 [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md)」をご覧ください。  
+>  検出されたユーザーのサブセットに登録プロファイルを展開する場合は、ユーザーのコレクションを使用し、そのコレクションに展開するためのカスタム クライアント設定を作成できます。 カスタム クライアント設定を作成する方法については、「 [System Center Configuration Manager でクライアント設定を構成する方法r](../../core/clients/deploy/configure-client-settings.md)」をご覧ください。  
 
 ##  <a name="bkmk_addClient"></a> 登録されているデバイスの追加のクライアント設定のセットアップ  
  最新のデバイスの登録プロファイルをセットアップするだけでなく、登録時に、デバイスを構成する他のクライアント設定をセットアップすることができます。  クライアント設定をセットアップする方法については、「[System Center Configuration Manager でクライアント設定を構成する方法](../../core/clients/deploy/configure-client-settings.md)」を参照してください。  
