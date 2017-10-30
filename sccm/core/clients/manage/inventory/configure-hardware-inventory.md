@@ -21,7 +21,7 @@ ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-configure-hardware-inventory-in-system-center-configuration-manager"></a>How to configure hardware inventory in System Center Configuration Manager
+# <a name="how-to-configure-hardware-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager でハードウェア インベントリを構成する方法
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/07/2017
 
 5.  [**既定の設定**] ダイアログ ボックスで、[**ハードウェア インベントリ**] を選択します。  
 
-6.  [デバイスの設定] **** 一覧で、次を構成します。  
+6.  **[デバイスの設定]** 一覧で、次を構成します。  
 
     -   **クライアントのハードウェア インベントリを有効にする** - [**True**] を選択します。  
 
