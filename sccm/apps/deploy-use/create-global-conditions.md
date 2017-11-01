@@ -60,7 +60,7 @@ System Center Configuration Manager のグローバル条件は、クライア�
 
     -   **Active Directory クエリ**  
 
-        -   **** [LDAP プレフィックス] - クライアント コンピューターでコンプライアンス対応を評価するための Active Directory ドメイン サービス クエリの有効な LDAP プレフィックスを指定します。 **LDAP://** または **GC://**を使用できます。  
+        -   **[LDAP プレフィックス]** - クライアント コンピューターでコンプライアンス対応を評価するための Active Directory Domain Services クエリの有効な LDAP プレフィックスを指定します。 **LDAP://** または **GC://**を使用できます。  
 
         -   **識別名 (DN)** - クライアント コンピューターのコンプライアンスを評価する Active Directory Domain Services オブジェクトの識別名を指定します。  
 

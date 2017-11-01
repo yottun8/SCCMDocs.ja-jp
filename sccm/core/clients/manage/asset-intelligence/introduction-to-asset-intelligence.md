@@ -192,8 +192,8 @@ System Center Configuration Manager の資産インテリジェンスでは、�
 
 |**状態**|**定義**|**管理者の操作**|**コメント**|  
 |---------------|--------------------|------------------------------|-----------------|  
-|****|カタログ項目が System Center Online の調査担当者によって定義済みです。|ありません。|最善の状態です。|  
-|****|カタログ項目が System Center Online の調査担当者によって定義されていません。|ローカルのカタログ情報をカスタマイズした。|この状態は、資産インテリジェンス レポートに表示されます。|  
+|**検証済み**|カタログ項目が System Center Online の調査担当者によって定義済みです。|ありません。|最善の状態です。|  
+|**検証済み**|カタログ項目が System Center Online の調査担当者によって定義されていません。|ローカルのカタログ情報をカスタマイズした。|この状態は、資産インテリジェンス レポートに表示されます。|  
 |**保留**|カタログ項目が System Center Online の調査担当者によって定義されていませんが、カテゴリ化のために System Center Online に送信済みです。|System Center Online によるカテゴリ化を要求した。|カタログ項目は、System Center Online の調査担当者によってカテゴリ化され、資産インテリジェンス カタログが同期化されるまで、この状態に留まります。|  
 |**[更新可能]**|ユーザー定義のカタログ項目が、その後のカタログ同期時に System Center Online により、異なるようにカテゴリ化されました。|項目をユーザー定義としてカテゴリ化するよう、ローカルの資産インテリジェンス カタログをカスタマイズした。|[競合の解決] の操作を使用し、新しいカテゴリ化情報または以前のユーザー定義値を使用するかどうかを決定できます。 ソフトウェア ラベルを管理する方法の詳細については、「[Operations for Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md)」(System Center Configuration Manager の資産インテリジェンスの操作) を参照してください。|  
 |**カテゴリ化されていない**|カタログ項目が System Center Online の調査担当者によって定義されていないか、カテゴリ化のために System Center Online に送信されていないか、または管理者がユーザー定義のカテゴリ化の値を割り当てていません。|ありません。|カテゴリ化を要求するか、ローカルのカタログ情報をカスタマイズします。<br /><br /> カテゴリ化を要求する方法の詳細については、「[Operations for Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md)」(System Center Configuration Manager の資産インテリジェンスの操作) を参照してください。<br /><br /> ソフトウェア タイトルのカテゴリを変更する方法の詳細については、「[Operations for Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md)」(System Center Configuration Manager の資産インテリジェンスの操作) を参照してください。|  
