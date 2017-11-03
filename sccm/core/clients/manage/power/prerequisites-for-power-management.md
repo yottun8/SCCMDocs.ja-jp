@@ -32,7 +32,7 @@ System Center Configuration Manager の電源管理には、外部依存関係�
 
 |依存関係|説明|  
 |----------------|----------------------|  
-|クライアント コンピューターが、必要な電源状態をサポートできる必要があります。|電源管理のすべての機能を使用するには、クライアント コンピューターがスリープ、休止、スリープ状態からの復帰、および休止状態からの復帰、をサポートしている必要があります。 コンピューターがこれらの操作をサポートしているかどうかを判断するには、[電源機能] レポートを使用できます。 **** 詳細については、「[How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)」(System Center Configuration Manager で電源管理を監視および計画する方法) の「[Power Capabilities report](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md#BKMK_Capabilites)」(電源機能レポート) を参照してください。|  
+|クライアント コンピューターが、必要な電源状態をサポートできる必要があります。|電源管理のすべての機能を使用するには、クライアント コンピューターがスリープ、休止、スリープ状態からの復帰、および休止状態からの復帰、をサポートしている必要があります。 コンピューターがこれらの操作をサポートしているかどうかを判断するには、**[電源機能]** レポートを使用できます。 詳細については、「[How to monitor and plan for power management in System Center Configuration Manager](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)」(System Center Configuration Manager で電源管理を監視および計画する方法) の「[Power Capabilities report](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md#BKMK_Capabilites)」(電源機能レポート) を参照してください。|  
 
 ## <a name="configuration-manager-dependencies"></a>Configuration Manager の依存関係  
  次の表は、電源管理を使用する場合の Configuration Manager 内部の依存関係の一覧です。  

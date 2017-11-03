@@ -41,4 +41,4 @@ Configuration Manager コンソールで子構成項目のプロパティを表�
 
 4.  **全般** のページ、 **子の構成項目の作成ウィザード**, 、親の特定のバージョンを使用して、子を作成する構成項目を選択できます。 このウィザードのほかの手順は、標準の構成項目を作成する場合に使用する手順と同じです。 詳細については、｢[System Center Configuration Manager クライアントを使用して管理されている Windows デスクトップおよびサーバー コンピューターのカスタム構成項目を作成する方法](../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md)｣を参照してください。  
 
-5.  ウィザードを完了します。 新しい子構成項目は、[構成項目] 一覧に表示されます。 ****  
+5.  ウィザードを完了します。 新しい子構成項目は、**[構成項目]** 一覧に表示されます。  
