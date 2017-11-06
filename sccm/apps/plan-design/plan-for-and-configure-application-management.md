@@ -124,7 +124,7 @@ ms.lasthandoff: 10/03/2017
 
 7. ステータス メッセージおよびログ ファイルで、サイト システムの役割がインストールされたことを確認します。  
 
-    ステータス メッセージ:コンポーネント SMS_PORTALWEB_CONTROL_MANAGER **** および SMS_AWEBSVC_CONTROL_MANAGER ****を使用します。  
+    ステータス メッセージ:コンポーネント **SMS_PORTALWEB_CONTROL_MANAGER** および **SMS_AWEBSVC_CONTROL_MANAGER**を使用します。  
 
     たとえば、**SMS_PORTALWEB_CONTROL_MANAGER** のステータス ID **1015** は、サイト コンポーネント マネージャーがアプリケーション カタログ Web サイト ポイントのインストールに成功したことを示します。  
 
