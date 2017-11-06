@@ -45,7 +45,7 @@ System Center Configuration Manager で必要になる場合がある公開キ�
 >  エンタープライズ証明機関と証明書テンプレートを使用する場合、バージョン 3 のテンプレートを使用しないでください。 これらの証明書テンプレートで作成される証明書は、System Center Configuration Manager と互換性がありません。 代わりに、次の手順に従って、バージョン 2 のテンプレートを使用してください。  
 >   
 >  -   Windows Server 2012 の CA の場合: 証明書テンプレートのプロパティの **[互換性]** タブで、 **[証明機関]** オプションに **[Windows Server 2003]** を指定し、 **[証明書の受信者]** オプションに **[Windows XP / Server 2003]** を指定します。  
-> -   Windows Server 2008 の CA の場合: 証明書テンプレートを複製するときに、**[テンプレートの複製]** ダイアログ ボックスで選択を求められたら、**[Windows Server 2003 Enterprise]** を既定の選択のままにします。 [Windows Server 2008 Enterprise Edition ****] を選択しないでください。  
+> -   Windows Server 2008 の CA の場合: 証明書テンプレートを複製するときに、**[テンプレートの複製]** ダイアログ ボックスで選択を求められたら、**[Windows Server 2003 Enterprise]** を既定の選択のままにします。 **[Windows Server 2008 Enterprise Edition]** を選択しないでください。  
 
  次のセクションで証明書の要件を確認してください。  
 

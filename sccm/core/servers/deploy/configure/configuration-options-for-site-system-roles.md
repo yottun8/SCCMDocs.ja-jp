@@ -50,7 +50,7 @@ System Center Configuration Manager のサイト システム役割のほとん�
 
  **HTTPS**  
 
- アプリケーション カタログ Web サイト ポイントをこのアプリケーション カタログ Web サービス ポイントに対して認証するには、[HTTPS] を選択します。 ****  このオプションでは、サーバーを認証し、SSL を介してデータを暗号化するために、アプリケーション カタログ Web サイト ポイントを実行するサーバー上に PKI 証明書があることが必要とされます。 証明書の要件の詳細については、「[System Center Configuration Manager での PKI 証明書の要件](../../../../core/plan-design/network/pki-certificate-requirements.md)」をご覧ください。  
+ アプリケーション カタログ Web サイト ポイントをこのアプリケーション カタログ Web サービス ポイントに対して認証するには、**[HTTPS]** を選択します。  このオプションでは、サーバーを認証し、SSL を介してデータを暗号化するために、アプリケーション カタログ Web サイト ポイントを実行するサーバー上に PKI 証明書があることが必要とされます。 証明書の要件の詳細については、「[System Center Configuration Manager での PKI 証明書の要件](../../../../core/plan-design/network/pki-certificate-requirements.md)」をご覧ください。  
 
  サーバー証明書の展開例と、それを IIS で構成する方法については、「[System Center Configuration Manager PKI 証明書の展開手順の例: Windows Server 2008 証明機関](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)」の「*IIS を実行するサイト システム用の Web サーバー証明書の展開*」セクションを参照してください。  
 

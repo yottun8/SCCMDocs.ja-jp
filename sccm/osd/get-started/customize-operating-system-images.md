@@ -97,7 +97,7 @@ Configuration Manager のオペレーティング システム イメージは W
      「 [Windows のキャプチャの準備](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) 」タスク シーケンスのステップまたはキャプチャ メディアを使用して、Sysprep を自動化することができます。  
 
     > [!IMPORTANT]  
-    >  「 [Windows のキャプチャの準備](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) 」タスク シーケンス ステップは、Sysprep を実行する前に、参照コンピューターのローカル管理者のパスワードをリセットしようとします。 ローカルのセキュリティ ポリシー [パスワードは、複雑さの要件を満たす必要がある] **** が有効な場合、タスク シーケンス ステップは、管理者パスワードのリセットに失敗します。 この場合は、タスク シーケンスを実行する前にこのポリシーを無効にします。  
+    >  「 [Windows のキャプチャの準備](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture) 」タスク シーケンス ステップは、Sysprep を実行する前に、参照コンピューターのローカル管理者のパスワードをリセットしようとします。 ローカルのセキュリティ ポリシー **[パスワードは、複雑さの要件を満たす必要がある]** が有効な場合、タスク シーケンス ステップは、管理者パスワードのリセットに失敗します。 この場合は、タスク シーケンスを実行する前にこのポリシーを無効にします。  
 
      Sysprep について詳しくは、「 [システムの準備 (Sysprep) テクニカル リファレンス](http://go.microsoft.com/fwlink/?LinkId=280286)」をご覧ください。  
 
