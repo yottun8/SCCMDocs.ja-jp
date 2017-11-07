@@ -1,5 +1,6 @@
 ---
-title: "デバイスの管理の基礎 | Microsoft ドキュメント"
+title: "デバイスの管理の基礎"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager を使用してデバイスを管理する方法について説明します。"
 ms.custom: na
 ms.date: 12/04/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 45d84122a86da880268c93ecd994250df6b76c8a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b8859537bd213928df3b4388ccbedb871e43c336
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="fundamentals-of-managing-devices-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用したデバイス管理の基礎
 
@@ -82,7 +83,7 @@ Configuration Manager クライアント ソフトウェアを使用してデバ
 ## <a name="user-based-management"></a>ユーザー ベースの管理  
  Configuration Manager では、Active Directory Domain Services ユーザーのコレクションをサポートします。 ユーザー コレクションを使用する場合、コレクションのメンバーによって使用されるすべてのコンピューターにソフトウェアをインストールすることができます。 展開するソフトウェアがユーザーのプライマリ デバイスとして指定されているデバイスのみにインストールされるようにするには、ユーザーとデバイスのアフィニティを設定します。 ユーザーは 1 つまたは複数のプライマリ デバイスを持つことができます。  
 
- ユーザーがソフトウェア展開のエクスペリエンスを制御できる 1 つの方法は、クライアント インターフェイスである**ソフトウェア センター**を使用することです。 **ソフトウェア センター**は、クライアント コンピューターに自動的にインストールされ、[**スタート**] メニューから実行します。 ユーザーは**ソフトウェア センター**を使用して自分のソフトウェアを管理でき、次のタスクを実行できます。  
+ ユーザーがソフトウェア展開のエクスペリエンスを制御できる 1 つの方法は、クライアント インターフェイスである**ソフトウェア センター**を使用することです。 **ソフトウェア センター**は、クライアント コンピューターに自動的にインストールされ、**[スタート]** メニューから実行します。 ユーザーは**ソフトウェア センター**を使用して自分のソフトウェアを管理でき、次のタスクを実行できます。  
 
 -   ソフトウェアのインストール。  
 

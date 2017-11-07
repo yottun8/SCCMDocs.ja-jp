@@ -1,5 +1,6 @@
 ---
-title: "構成項目の作成方法 | Microsoft Docs"
+title: "構成項目を作成する方法"
+titleSuffix: Configuration Manager
 description: "構成を作成して、System Center Configuration Manager によって管理され、Microsoft Intune に登録されているデバイスに展開します。"
 ms.custom: na
 ms.date: 03/28/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 6a7839e11a30b069718a97a7ee3c02a3cf4d6964
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 5cccd8308b35d54914200c8665eb15a55f153127
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-configuration-items-in-system-center-configuration-manager"></a>System Center Configuration Manager で構成項目を作成する方法
 

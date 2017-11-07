@@ -1,5 +1,6 @@
 ---
-title: "Configuration Manager のサイト コンポーネント | Microsoft Docs"
+title: "サイト コンポーネント"
+titleSuffix: Configuration Manager
 description: "サイト コンポーネントを構成して、サイト システムの役割とサイト ステータス レポートの動作を変更する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "9"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 83550fbf0ef1f9adb0bb2c51a4f3c26a7500d352
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5998d853723f50302d0572a54b073292035ed382
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="site-components-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイト コンポーネント
 
@@ -113,7 +114,7 @@ Configuration Manager サービスによる処理が必要になると (通常�
 
      管理したいサイトが表示されない場合は、 **[サイト]**、 **[接続]**の順にクリックして、該当するサイトのサイト サーバーの名前を入力します。  
 
-4.  サイトを展開して、管理したいコンポーネントのある場所に応じて、[ **コンポーネント** ] または [ **サーバー**] に移動します。  
+4.  サイトを展開して、管理したいコンポーネントのある場所に応じて、**[ コンポーネント ]** または **[ サーバー]** に移動します。  
 
 5.  右側のウィンドウで、1 つまたは複数のコンポーネントを選択します。 次に、**[コンポーネント]** メニューの **[クエリ]** をクリックして、選択項目の状態を更新します。  
 

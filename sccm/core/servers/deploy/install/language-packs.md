@@ -1,5 +1,6 @@
 ---
-title: "言語パック | Microsoft Docs"
+title: "言語パック"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で使用できる言語サポートについて説明します。"
 ms.custom: na
 ms.date: 1/3/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 47da3c531289ddf13d357bde8bbda85d79ed2803
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 22175cfe703b2a0fcdf8dba923c5277b67bf315c
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="language-packs-in-system-center-configuration-manager"></a>System Center Configuration Manager の言語パック
 

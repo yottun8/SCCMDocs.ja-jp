@@ -1,5 +1,6 @@
 ---
-title: "ソフトウェア使用状況測定でアプリの使用状況を監視する | Microsoft Docs"
+title: "ソフトウェア使用状況測定でアプリの使用状況を監視する"
+titleSuffix: Configuration Manager
 description: 
 ms.custom: na
 ms.date: 09/20/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 87bafd8ce28d58993666057b6c5bfd8bdc0c4ed9
-ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
+ms.openlocfilehash: c44d606efbbcd099bdcd6d5f83aad156525d9279
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="software-metering-in-system-center-configuration-manager"></a>System Center Configuration Manager のソフトウェア使用状況測定
 
@@ -94,7 +95,7 @@ ms.lasthandoff: 09/20/2017
 
     -   **このソフトウェアの使用状況測定規則を次のクライアントに適用** – 使用状況測定規則で指定されたサイトに割り当てられているクライアントを階層内のすべてのクライアントにソフトウェアを適用するかどうかを **サイト**  ボックスの一覧です。
 
-5.  続行するには、[ **次へ**] をクリックします。
+5.  続行するには、**[ 次へ]** をクリックします。
 
 6.  設定を確認して確定し、ウィザードを完了してソフトウェア使用状況測定規則を作成します。 新しいソフトウェア メータリングの規則が表示される、 **ソフトウェア使用状況測定** 内のノード、 **資産とコンプライアンス** ワークスペース。
 
@@ -110,7 +111,7 @@ ms.lasthandoff: 09/20/2017
 
     -   **[データの保管日数]** - ソフトウェア使用状況測定規則で生成されたデータがサイト データベースに保持される期間を指定します。 既定値は **90** 日です。
 
-    -   [ **最新の使用状況インベントリ データから、無効にした使用状況測定規則を自動的に作成する**] を有効にします。
+    -   **[ 最新の使用状況インベントリ データから、無効にした使用状況測定規則を自動的に作成する]** を有効にします。
 
     -   **[階層内でプログラムを使用する必要のあるコンピューターの割合 (%) が次の値に達すると、ソフトウェア使用状況測定規則が自動的に作成されるようにする]** - 既定値は **[10]** パーセントです。
 

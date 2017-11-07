@@ -1,5 +1,6 @@
 ---
-title: "前提条件チェッカー | Microsoft Docs"
+title: "前提条件チェッカー"
+titleSuffix: Configuration Manager
 description: "前提条件チェッカーを使用して、サイトやサイト システムの役割のインストールを妨げる可能性のある問題を特定し、修正する方法について説明します。"
 ms.custom: na
 ms.date: 3/1/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: f0d44f82a0b6068f8cecc5808774677eccb0f8d9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 7481da26a2dcbbc215750ed8363a9481bae1138a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prerequisite-checker-for-system-center-configuration-manager"></a>System Center Configuration Manager の前提条件チェッカー
 
@@ -67,7 +68,7 @@ ms.lasthandoff: 08/07/2017
     -   **&lt;*Configuration Manager インストール パス*\>\BIN\X64**  
 
 2.  **prereqchk.exe** を実行して前提条件チェッカーを起動します。   
-    既存のサイトが検索され、見つかった場合は、アップグレードの準備ができているかどうかがチェックされます。 サイトが見つからなかった場合は、すべてのチェックが実行されます。 [ **サイトの種類** ] 列に、規則が関連付けられているサイト サーバーまたはサイト システムの情報が表示されます。  
+    既存のサイトが検索され、見つかった場合は、アップグレードの準備ができているかどうかがチェックされます。 サイトが見つからなかった場合は、すべてのチェックが実行されます。 **[ サイトの種類 ]** 列に、規則が関連付けられているサイト サーバーまたはサイト システムの情報が表示されます。  
 
 ##  <a name="run-prerequisite-checker-from-a-command-prompt-for-all-default-checks"></a>コマンド プロンプトから前提条件チェッカーを起動して既定のすべてのチェックを実行する  
 
@@ -194,5 +195,5 @@ ms.lasthandoff: 08/07/2017
 3.  前提条件チェッカーのユーザー インターフェイスの **[前提条件の確認結果]** セクションに、検出された問題が一覧表示されます。  
 
     -   一覧にある問題をクリックすると、その解決方法が表示されます。  
-    -   サイト サーバー、サイト システム、または Configuration Manager コンソールをインストールする前に、ステータスが [**エラー**] になっている問題をすべて解決する必要があります。  
+    -   サイト サーバー、サイト システム、または Configuration Manager コンソールをインストールする前に、ステータスが **[エラー]** になっている問題をすべて解決する必要があります。  
     -   システム ドライブのルートにある **ConfigMgrPrereq.log** ファイルを開いて、前提条件チェッカーの結果を確認することもできます。 ログ ファイルには、前提条件チェッカーのユーザー インターフェイスに表示されていない情報が含まれていることがあります。  

@@ -1,5 +1,6 @@
 ---
-title: "デバイス コンプライアンスの確認 | Microsoft Docs"
+title: "デバイス コンプライアンスの保証"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager を使用して、組織内のデバイスの構成とコンプライアンスを管理します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 0396718ee6290c58ca1761922e51e336b997f52c
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 27738aa8587d8930781bc5f70248c8c994227851
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>System Center Configuration Manager でのデバイス コンプライアンスの確認
 

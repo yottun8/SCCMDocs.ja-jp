@@ -1,5 +1,6 @@
 ---
-title: "インターネットベースのクライアント管理 | Microsoft Docs"
+title: "インターネット ベースのクライアント管理"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でインターネット ベースのクライアントを管理する計画を作成します。"
 ms.custom: na
 ms.date: 05/16/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: be250e9056d1fad0e01a4ef4c8072d4c0faee692
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: bbbff5d3dc027ee437945e68011d94b14f23d486
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でインターネット ベースのクライアント管理を計画する
 
@@ -125,7 +126,7 @@ ms.lasthandoff: 09/14/2017
      インターネット ベースのサイト システムとサイト サーバーの Active Directory フォレストに信頼関係は必要ありません。 ただし、インターネット ベースの管理ポイントが Windows 認証を使用してユーザーを認証できる場合は、ユーザー ポリシーを使用することができます。 Windows 認証できない場合は、コンピューター ポリシーだけを使用できます。  
 
     > [!NOTE]  
-    >  ユーザー ポリシーを使用するには、クライアント設定の [ **クライアント ポリシー** ] で次の 2 つを [ **TRUE** ] に設定する必要があります。  
+    >  ユーザー ポリシーを使用するには、クライアント設定の **[ クライアント ポリシー ]** で次の 2 つを **[ TRUE ]** に設定する必要があります。  
     >   
     >  -   **クライアント上でのユーザー ポリシーのポーリングを有効にする**  
     > -   **インターネット クライアントからのユーザー ポリシー要求を有効にする**  

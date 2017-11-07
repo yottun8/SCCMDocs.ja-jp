@@ -1,5 +1,6 @@
 ---
-title: "Windows Defender または Endpoint Protection クライアントのトラブルシューティング | Microsoft Docs"
+title: "Windows Defender または Endpoint Protection クライアントのトラブルシューティング"
+titleSuffix: Configuration Manager
 description: "Windows Defender および Endpoint Protection の問題をトラブルシューティングする方法について説明します。"
 ms.custom: na
 ms.date: 01/03/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 1b096e71f5131214fb4e235e84d0b7f63e566831
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b667db471a16faef057f49a0a26759849e03f237
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>Windows Defender または Endpoint Protection クライアントのトラブルシューティング
 
@@ -156,7 +157,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 -   64 ビット Windows オペレーティング システムを実行している場合は、次の URL から手動で最新の更新プログラムをダウンロードします: [http://go.microsoft.com/fwlink/?LinkID=87341](http://go.microsoft.com/fwlink/?LinkID=87341) (http://go.microsoft.com/fwlink/?LinkID=87341)。  
 
--   [ **実行**] をクリックします。 最新の更新プログラムが、お使いのコンピューターに手動でインストールされます。  
+-   **[ 実行]** をクリックします。 最新の更新プログラムが、お使いのコンピューターに手動でインストールされます。  
 
 
 ### <a name="step-7-contact-support"></a>手順 7: サポートに問い合わせる  
@@ -178,11 +179,11 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 1.  **[スタート]** をクリックし、 **services.msc**を検索して、 **Enter**キーを押します。  
 
-2.  [ **Microsoft Antimalware Service**] を探します。 それを右クリックして [ **プロパティ** ] を選択するか、それをダブルクリックしてサービスを開きます。  
+2.  **[ Microsoft Antimalware Service]** を探します。 それを右クリックして **[ プロパティ ]** を選択するか、それをダブルクリックしてサービスを開きます。  
 
-3.  [**スタートアップの種類**] が [**自動**] に設定されていることを確認します。  
+3.  **[スタートアップの種類]** が **[自動]** に設定されていることを確認します。  
 
-4.  [ **開始** ] ボタンをクリックして、サービスを開始します。 [ **開始** ] ボタンが使用できない場合は、[ **停止** ] ボタンをクリックしてから [ **開始** ] ボタンをクリックして、サービスを再開させます。  
+4.  **[ 開始 ]** ボタンをクリックして、サービスを開始します。 **[ 開始 ]** ボタンが使用できない場合は、**[ 停止 ]** ボタンをクリックしてから **[ 開始 ]** ボタンをクリックして、サービスを再開させます。  
 
 5.  このプロセスの間に表示されるエラーは必ずメモしておき、オンラインで問い合わせるときに、そのエラー情報を含めるようにします。  
 
@@ -285,11 +286,11 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 1.  **[スタート]** をクリックし、 **services.msc**を検索して、 **Enter**キーを押します。  
 
-2.  [ **Windows Installer**] を右クリックし、[ **開始**] をクリックします。 [ **開始** ] ボタンが使用できず、[ **停止** ] および [ **再開** ] ボタンが使用可能である場合は、このサービスが既に開始されていることを意味しています。  
+2.  **[ Windows Installer]** を右クリックし、**[ 開始]** をクリックします。 **[ 開始 ]** ボタンが使用できず、**[ 停止 ]** および **[ 再開 ]** ボタンが使用可能である場合は、このサービスが既に開始されていることを意味しています。  
 
-3.  [ **サービス** ] ページで [ **ファイル** ] メニューの [ **終了**] をクリックします。  
+3.  **[ サービス ]** ページで **[ ファイル ]** メニューの **[ 終了]** をクリックします。  
 
-4.  [**スタート**] ボタンをクリックして [**コマンド プロンプト**] を検索します。 [ **Command Prompt**] を右クリックし、[ **管理者として実行**] をクリックします。  
+4.  **[スタート]** ボタンをクリックして **[コマンド プロンプト]** を検索します。 **[ Command Prompt]** を右クリックし、**[ 管理者として実行]** をクリックします。  
 
 5.  「 **MSIEXEC /REGSERVER**」と入力し、 **Enter**キーを押します。  
 
@@ -302,11 +303,11 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 1.  **[スタート]** をクリックし、 **msconfig**を検索して、 **Enter**キーを押します。  
 
-2.  [ **全般** ] タブで [ **スタートアップのオプションを選択**] をクリックし、[ **スタートアップの項目を読み込む** ] チェック ボックスをオフにします。  
+2.  **[ 全般 ]** タブで **[ スタートアップのオプションを選択]** をクリックし、**[ スタートアップの項目を読み込む ]** チェック ボックスをオフにします。  
 
-3.  [ **サービス** ] タブで [ **Microsoft のサービスをすべて隠す** ] チェック ボックスをオンにし、一覧に残っているサービスのすべてのチェック ボックスをオフにします。  
+3.  **[ サービス ]** タブで **[ Microsoft のサービスをすべて隠す ]** チェック ボックスをオンにし、一覧に残っているサービスのすべてのチェック ボックスをオフにします。  
 
-4.  [ **OK**] をクリックし、[ **再起動** ] をクリックして、コンピューターを再起動します。  
+4.  **[ OK]** をクリックし、**[ 再起動 ]** をクリックして、コンピューターを再起動します。  
 
 5.  もう一度 Endpoint Protection をインストールしてみます。  
 

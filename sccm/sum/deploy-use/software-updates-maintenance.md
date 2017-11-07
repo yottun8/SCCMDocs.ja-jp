@@ -1,5 +1,6 @@
 ---
-title: "ソフトウェア更新プログラムのメンテナンス | Microsoft Docs"
+title: "ソフトウェア更新プログラムのメンテナンス"
+titleSuffix: Configuration Manager
 description: "Configuration Manager の更新プログラムをメンテナンスするには、WSUS クリーンアップ タスクをスケジュールするか、手動で実行します。"
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
-ms.openlocfilehash: 1590c623f7bc2f42a8617f110de5321212732a03
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 51e103b09ced9916fc76f9c87654379b538248b4
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="software-updates-maintenance"></a>ソフトウェア更新プログラムのメンテナンス
 

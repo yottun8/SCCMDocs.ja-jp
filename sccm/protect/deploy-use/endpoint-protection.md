@@ -1,5 +1,6 @@
 ---
-title: Endpoint Protection | Microsoft Docs
+title: Endpoint Protection
+titleSuffix: Configuration Manager
 description: "Configuration Manager 階層内のクライアント コンピューターのマルウェア対策ポリシーと Windows ファイアウォールのセキュリティを管理する方法について説明します。"
 ms.custom: na
 ms.date: 02/6/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "11"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 76319b935695df204b4b83a645504079c60db12b
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: 308c69f4631a1bcc28f7d8460a4aa3abb02f0650
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -108,7 +109,7 @@ Configuration Manager のバージョン 1606 (Current Branch) 以降、Endpoint
 2. Web サイトの上部にある **[Downloads and Keys]**(ダウンロードとキー) タブを選択します。
 3. 製品 **System Center Endpoint Protection (Current Branch)** でフィルター処理します。
 4. **[ダウンロード]** リンクをクリックします。
-5. [ **続行**] をクリックします。 **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage 32/64 bit 1579 MB ISO** など、複数のファイルが表示されます。
+5. **[ 続行]** をクリックします。 **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage 32/64 bit 1579 MB ISO** など、複数のファイルが表示されます。
 6. 矢印アイコンをクリックしてファイルをダウンロードします。 ファイル名は **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-2_EptProt_Lin_Mac_MLF_X21-44498.ISO** です。
 
 2017 年 7 月の更新 (X21 44498) には、次のものが含まれます。

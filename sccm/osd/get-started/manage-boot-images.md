@@ -1,5 +1,6 @@
 ---
-title: "ブート イメージの管理 - Configuration Manager | Microsoft Docs"
+title: "ブート イメージの管理 "
+titleSuffix: Configuration Manager
 description: "Configuration Manager で、オペレーティング システムの展開中に使用する Windows PE ブート イメージを管理する方法について説明します。"
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 5668ba3ead3b7415508f9ecf02f2e119c3cd9cc6
-ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
+ms.openlocfilehash: 1f169dbf645096777f3fd244d24ca5be92efa180
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>System Center Configuration Manager でのブート イメージの管理
 
@@ -97,15 +98,15 @@ Configuration Manager バージョン 1706 以降、そのブート イメージ
 
          このパスは、UNC 形式の有効なネットワーク パスでなければなりません。 例: \\\\<*servername*\\<*sharename*>\\<*bootimagename*>.wim  
 
-    -   [ **ブート イメージ** ] ドロップダウン リストで、インポートするブート イメージを選択します。 WIM ファイルに複数のブート イメージが含まれている場合、該当するイメージを選びます。  
+    -   **[ ブート イメージ ]** ドロップダウン リストで、インポートするブート イメージを選択します。 WIM ファイルに複数のブート イメージが含まれている場合、該当するイメージを選びます。  
 
-5.  [ **全般**  ] ページで、以下のオプションを指定して [ **次へ**] をクリックします。  
+5.  **[ 全般  ]** ページで、以下のオプションを指定して **[ 次へ]** をクリックします。  
 
-    -   [ **名前** ] ボックスで、ブート イメージの一意の名前を指定します。  
+    -   **[ 名前 ]** ボックスで、ブート イメージの一意の名前を指定します。  
 
-    -   [ **バージョン** ] ボックスで、ブート イメージのバージョン番号を指定します。  
+    -   **[ バージョン ]** ボックスで、ブート イメージのバージョン番号を指定します。  
 
-    -   [ **コメント** ] ボックスで、ブート イメージの使用方法について簡単な説明を指定します。  
+    -   **[ コメント ]** ボックスで、ブート イメージの使用方法について簡単な説明を指定します。  
 
 6.  ウィザードを完了します。  
 

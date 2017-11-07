@@ -1,5 +1,6 @@
 ---
-title: "デバイス登録のセットアップ | Microsoft Docs"
+title: "デバイス登録をセットアップする "
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスを登録できるアクセス許可をユーザーに付与します。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9ffaea91-1379-4b86-9953-b25e152f56a9
 caps.latest.revision: "10"
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 16d4106d486d821b7ce92a1de65ebb04469d18de
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 50aef3a2e523353d488a53eed0b346ddfef42478
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="set-up-device-enrollment-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のデバイス登録の設定
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 08/07/2017
 5.  [登録プロファイルの作成] で登録プロファイルの名前を入力し、登録プロファイルを持つユーザーが使用する管理サイト コードを選びます。 **[OK]** を何回かクリックして、[既定の設定] ページを終了します。  
 
 > [!NOTE]  
->  検出されたユーザーのサブセットに登録プロファイルを展開する場合は、ユーザーのコレクションを使用し、そのコレクションに展開するためのカスタム クライアント設定を作成できます。 カスタム クライアント設定を作成する方法については、「 [System Center Configuration Manager でクライアント設定を構成する方法r](../../core/clients/deploy/configure-client-settings.md)」をご覧ください。  
+>  検出されたユーザーのサブセットに登録プロファイルを展開する場合は、ユーザーのコレクションを使用し、そのコレクションに展開するためのカスタム クライアント設定を作成できます。 カスタム クライアント設定を作成する方法については、「 [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md)」をご覧ください。  
 
 ##  <a name="bkmk_addClient"></a> 登録されているデバイスの追加のクライアント設定のセットアップ  
  最新のデバイスの登録プロファイルをセットアップするだけでなく、登録時に、デバイスを構成する他のクライアント設定をセットアップすることができます。  クライアント設定をセットアップする方法については、「[System Center Configuration Manager でクライアント設定を構成する方法](../../core/clients/deploy/configure-client-settings.md)」を参照してください。  

@@ -1,5 +1,6 @@
 ---
-title: "デバイス コンプライアンス ポリシーを作成して展開する | Microsoft Docs"
+title: "デバイス コンプライアンス ポリシーを作成して展開する"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でのデバイス コンプライアンス ポリシーの作成および展開方法を説明します。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -15,11 +16,11 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 robots: noindex
-ms.openlocfilehash: 6630d0170df22f46f14df241ffd8d48266c69263
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: bf0099cdf4df1b7421a257e910c8682e63f8ee1e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-and-deploy-a-device-compliance-policy"></a>デバイス コンプライアンス ポリシーを作成して展開する
 
@@ -238,7 +239,7 @@ ms.lasthandoff: 08/07/2017
   * Android 4.0 以降
   * Samsung KNOX Standard 4.0+
 
-* **[Maximum OS version allowed (許可される最大 OS バージョン)]**。 ルールに指定した OS バージョンより新しいバージョンの OS がデバイスで使用されている場合、会社のリソースへのアクセスがブロックされ、IT 管理者に問い合わせることをユーザーに促すメッセージが表示されます。 対象の OS バージョンを許可するようにルールを変更するまでは、このデバイスを使用して会社のリソースへアクセスすることはできません。
+* **[Maximum OS version allowed (許可される最大 OS バージョン)]**。 ルールに指定した OS バージョンより新しいバージョンの OS がデバイスで使用されている場合、会社のリソースへのアクセスがブロックされ、IT 管理者に問い合わせることをユーザーに促すメッセージが表示されます。対象の OS バージョンを許可するようにルールを変更するまでは、このデバイスを使用して会社のリソースへアクセスすることはできません。
 
   **以下でサポートされています。**
   * Windows Phone 8+
@@ -268,7 +269,7 @@ ms.lasthandoff: 08/07/2017
   **以下でサポートされています。**
   * Windows 10 および Windows 10 Mobile
 
-- **[Apps that cannot be installed on the device (デバイスにインストールできないアプリ)]**。 ユーザーが管理非準拠のアプリ リストからアプリをインストールした場合、ユーザーは、会社の電子メールや、条件付きアクセスをサポートする他の会社のリソースにアクセスを試みても、ブロックされます。 この規則では、管理者によって定義された非準拠リストにアプリを追加する場合、アプリ名とアプリ ID が必要です。 アプリの発行元を追加することもできますが、必須ではありません。
+- **[Apps that cannot be installed on the device (デバイスにインストールできないアプリ)]**。 ユーザーが管理非準拠のアプリ リストからアプリをインストールした場合、ユーザーは、会社の電子メールや、条件付きアクセスをサポートする他の会社のリソースにアクセスを試みても、ブロックされます。 この規則では、管理者によって定義された非準拠リストにアプリを追加する場合、アプリ名とアプリ ID が必要です。アプリの発行元を追加することもできますが、必須ではありません。
 
     **以下でサポートされています。**
       * iOS 6+

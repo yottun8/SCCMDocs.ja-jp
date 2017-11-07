@@ -1,5 +1,6 @@
 ---
-title: "Intune を使用して管理されている Windows Phone デバイスの構成項目を作成する方法 | Microsoft Docs"
+title: "Intune を使用して管理されている Windows Phone デバイスの構成項目を作成する方法"
+titleSuffix: Configuration Manager
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -14,11 +15,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 092bb15e6c1d5cdfb5b8670ad46028a6daa49b8b
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: f0a032bfa1d8d6383caf3065678d9b0a4dd3dde0
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-configuration-items-for-windows-phone-devices-managed-without-the-system-center-configuration-manager-client"></a>System Center Configuration Manager クライアントを使用せずに管理されている Windows Phone デバイスの構成項目を作成する方法
 System Center Configuration Manager の **Windows Phone** 構成項目を使用して、Microsoft Intune に登録されているか、Configuration Manager によってオンプレミスで管理されている Windows Phone デバイスの設定を管理します。  
@@ -27,15 +28,15 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
   
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
   
-2.  **資産とコンプライアンス**  ワークスペースで  **コンプライアンス設定**  を展開して、 **構成項目** をクリックします。  
+2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ コンプライアンス設定 ]** を展開して、**[ 構成項目 ]** をクリックします。  
   
-3.  [ **ホーム** ] タブの [ **作成** ] グループで、[ **構成項目の作成** ] をクリックします。  
+3.  **[ ホーム ]** タブの **[ 作成 ]** グループで、**[ 構成項目の作成 ]** をクリックします。  
   
 4.  **構成項目の作成ウィザード** の **[全般]**ページで、構成項目の名前と、必要に応じて説明を入力します。  
   
 5.  **[作成する構成項目の種類の指定]**で、 **[Windows Phone]**を選択します。  
   
-6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、[**カテゴリ**] をクリックします。  
+6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、**[カテゴリ]** をクリックします。  
   
 7.  ウィザードの **[サポートされているプラットフォーム]** ページで、構成項目を評価する特定の Windows Phone プラットフォームを選択します。  
   

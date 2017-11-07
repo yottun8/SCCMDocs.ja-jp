@@ -1,5 +1,6 @@
 ---
-title: "非推奨の機能 |Microsoft Docs"
+title: "非推奨の機能"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でサポートされなくなった機能、製品、およびオペレーティング システムについて説明します。"
 ms.custom: na
 ms.date: 08/16/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 8ac7009014a4652a36acf69ebfe9ccab3ba8ecbd
-ms.sourcegitcommit: 3ce56c7350411d8cc3d3cb9b4054f9ada9b0ed54
+ms.openlocfilehash: 7a87e03cdade6339bc0ea0055edf8791e197e6f1
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="removed-and-deprecated-features-for-system-center-configuration-manager"></a>System Center Configuration Manager から削除された機能と非推奨の機能
 
@@ -98,7 +99,7 @@ ms.lasthandoff: 08/17/2017
 |-|-|-|  
 |ネットワーク アクセス保護 (NAP) - System Center 2012 Configuration Manager の機能|2015 年 7 月 10 日|バージョン 1511|  
 |帯域外管理 - System Center 2012 Configuration Manager の機能|2015 年 10 月 16 日|バージョン 1511|
-|タスク シーケンス: <br /> - OSDPreserveDriveLetter  <br /><br /> 既定で、オペレーティング システムの展開中に、Windows セットアップが使用する最適なドライブ文字を決定するようになりました (通常は C:)。 別のドライブを使用するように指定する場合は、オペレーティング システムの適用タスク シーケンスのステップで場所を変更できます。 [**このオペレーティング システムの適用先を選択してください。**] 設定に移動し、[**特定の論理ドライブ文字**] を選択し、使用するドライブを選択します。 |2016 年 6 月 20 日 |バージョン 1606 |
+|タスク シーケンス: <br /> - OSDPreserveDriveLetter  <br /><br /> 既定で、オペレーティング システムの展開中に、Windows セットアップが使用する最適なドライブ文字を決定するようになりました (通常は C:)。 別のドライブを使用するように指定する場合は、オペレーティング システムの適用タスク シーケンスのステップで場所を変更できます。 **[このオペレーティング システムの適用先を選択してください。]** 設定に移動し、**[特定の論理ドライブ文字]** を選択し、使用するドライブを選択します。 |2016 年 6 月 20 日 |バージョン 1606 |
 |タスク シーケンス: <br /> - ディスクをダイナミックに変換 <br /> - 展開ツールのインストール |2016 年 11 月 18 日|2017 年 6 月 1 日以降にリリースされる最初の更新プログラムでこれらのタスク シーケンスのサポートは終了します。|
 |ソフトウェア センターは新しい現代的な外観へと一新されます。 以前のバージョンのソフトウェア センターは、今後数か月の間に使用できなくなります。<br><br>新しいソフトウェア センターを使用するようにクライアントをセットアップするには、クライアント設定 **[コンピューター エージェント]** > **[新しいソフトウェア センターの使用]** を有効化します。<br><br>ソフトウェア センターの詳細については、「[System Center Configuration Manager のアプリケーション管理の計画と構成](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management)」を参照してください。|2016 年 12 月 13 日|ソフトウェア センターの以前のバージョンは、2018 年 1 月 1 日以降にリリースされる最初の更新プログラムによってサポートが終了します。|
 |バージョン 1511 では新しいソフトウェア センターのエクスペリエンスが提供され、これまでアプリケーション カタログにしか表示されなかったアプリ (ユーザーが利用できるアプリ) がソフトウェア センターに表示されるようになりました。 </br></br>アプリケーション カタログの主な機能がソフトウェア センターに含まれるようになったため、Web ベースのアプリケーション カタログのエクスペリエンスは、今後数か月の間に使用できなくなります。|2017 年 8 月 11 日| アプリケーション カタログの Web サイトでのユーザー エクスペリエンスは、2018 年 6 月 1 日以降にリリースされる最初の更新プログラムでサポートが終了します。|

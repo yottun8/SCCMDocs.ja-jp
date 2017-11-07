@@ -1,5 +1,6 @@
 ---
-title: "オペレーティング システムの展開の概要 | Microsoft Docs"
+title: "オペレーティング システムの展開の概要"
+titleSuffix: Configuration Manager
 description: "Configuration Manager 環境にオペレーティング システムを展開する前に理解する必要がある概念について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "12"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 2baa6b7dbd66ab41bc9b67e8f43c313be233153c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5835bde38cb940d2e38df4a38146753a6842f1d7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="introduction-to-operating-system-deployment-in-system-center-configuration-manager"></a>System Center Configuration Manager のオペレーティング システムの展開の概要
 
@@ -90,7 +91,7 @@ Configuration Manager を使用してオペレーティング システムを展
  オペレーティング システムの展開に使用するために作成するメディアには数種類があります。 これには、オペレーティング システム イメージをキャプチャするために使用するキャプチャ メディア、オペレーティング システムを展開するために使用するスタンドアロン メディア、事前設定されたメディア、および起動可能なメディアが含まれます。 メディアを使用することによって、展開の対象となるコンピューターがネットワークに未接続、または Configuration Manager サイトへ低帯域幅で接続していても、オペレーティング システムを展開できます。 タスク シーケンス メディアの使用方法の詳細については、「[Create task sequence media](../deploy-use/create-task-sequence-media.md)」(タスク シーケンス メディアの作成) を参照してください。  
 
 ##  <a name="BKMK_DeviceDrivers"></a> デバイス ドライバー  
- 展開するオペレーティング システム イメージにデバイス ドライバーを含まなくても、対象となるコンピューターにインストールできます。 Configuration Manager は、Configuration Manager にインポートするすべてのデバイス ドライバーへの参照を含むドライバー カタログを提供します。 ドライバー カタログは [ **ソフトウェア ライブラリ** ] ワークスペースに保存されており、2 つのノードで構成されます。 **ドライバー** と **ドライバー パッケージ**。 [ **ドライバー** ] ノードにはドライバー カタログにインポートしたすべてのドライバーが一覧になっています。 このノードを使用して、インポートした各ドライバーの詳細を参照したり、ドライバーが属するドライバー パッケージやブート イメージを変更したり、ドライバーを有効または無効にしたりできます。 詳細については、「[Manage drivers](../get-started/manage-drivers.md)」(ドライバーの管理) を参照してください。  
+ 展開するオペレーティング システム イメージにデバイス ドライバーを含まなくても、対象となるコンピューターにインストールできます。 Configuration Manager は、Configuration Manager にインポートするすべてのデバイス ドライバーへの参照を含むドライバー カタログを提供します。 ドライバー カタログは **[ ソフトウェア ライブラリ ]** ワークスペースに保存されており、2 つのノードで構成されます。 **ドライバー** と **ドライバー パッケージ**。 **[ ドライバー ]** ノードにはドライバー カタログにインポートしたすべてのドライバーが一覧になっています。 このノードを使用して、インポートした各ドライバーの詳細を参照したり、ドライバーが属するドライバー パッケージやブート イメージを変更したり、ドライバーを有効または無効にしたりできます。 詳細については、「[Manage drivers](../get-started/manage-drivers.md)」(ドライバーの管理) を参照してください。  
 
 ##  <a name="BKMK_OSDUserState"></a> ユーザー状態の保存と復元  
  オペレーティング システムを展開する際は、対象となるコンピューターのユーザー状態を保存し、オペレーティング システムを展開して、オペレーティング システムを展開し終わったらユーザー状態を復元することができます。 このプロセスは、通常、Configuration Manager クライアント コンピューターにオペレーティング システムをインストールするときに使用します。  

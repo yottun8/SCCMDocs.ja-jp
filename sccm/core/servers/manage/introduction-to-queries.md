@@ -1,5 +1,6 @@
 ---
-title: "クエリの概要 | Microsoft Docs"
+title: "クエリの概要"
+titleSuffix: Configuration Manager
 description: "クエリを作成して実行すると、System Center Configuration Manager 階層内で、クエリ条件に一致するオブジェクトを見つけることができます。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: a1bb67b786aa452452585f2f7a2aa7c9ca4e12bf
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: f2a97ad3047c4e26a6c1823efca52d39e45c3b6e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="introduction-to-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager のクエリの概要
 

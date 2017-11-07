@@ -1,5 +1,6 @@
 ---
-title: "SQL Server クラスター | Microsoft Docs"
+title: "SQL Server クラスター"
+titleSuffix: Configuration Manager
 description: "SQL Server クラスターを使用して System Center Configuration Manager サイト データベースをホストします。 サポートされているオプションに関する情報が含まれます。"
 ms.custom: na
 ms.date: 2/28/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 53f119bbb1f8827a9c23c8b747840350bbb92790
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5ffc99b0b5c2ab21e65368ae42d3edbb48411476
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-a-sql-server-cluster-for-the-system-center-configuration-manager-site-database"></a>SQL Server クラスターを使用した System Center Configuration Manager サイト データベースのホスト
 
@@ -89,7 +90,7 @@ ms.lasthandoff: 08/07/2017
 
 -   SQL Server クラスター内の各コンピューターで、ドライブのルート フォルダーにファイルを配置すると、Configuration Manager はサイト コンポーネントをそのドライブにインストールしません。 ファイル名は **NO_SMS_ON_DRIVE.SMS** にする必要があります。 既定では、Configuration Manager は各物理ノードにいくつかのコンポーネントをインストールして、バックアップなどの操作をサポートします。  
 
--   サイト サーバーのコンピューター アカウントを、各 Windows Server クラスター ノード コンピューターのローカルの [ **Administrators** ] グループに追加します。  
+-   サイト サーバーのコンピューター アカウントを、各 Windows Server クラスター ノード コンピューターのローカルの **[ Administrators ]** グループに追加します。  
 
 -   仮想 SQL Server インスタンスで、Configuration Manager セットアップを実行するユーザー アカウントに、**sysadmin** という SQL Server の役割を割り当てます。  
 

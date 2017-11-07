@@ -1,5 +1,6 @@
 ---
-title: "Endpoint Protection の構成 | Microsoft Docs"
+title: "Endpoint Protection の構成"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で Endpoint Protection を使用する方法を選択および構成し、クライアント コンピューターでマルウェア対策定義を最新の状態に保つ方法について説明します。"
 ms.custom: na
 ms.date: 02/14/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: b5da7900a4f8e2f330c4dcb2cac00b45099bd909
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b0b178fad73b6490c4bfeb8ec4aaa7348e7cb2a2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 #  <a name="configure-definition-updates-for-endpoint-protection"></a>Endpoint Protection の定義ファイルの更新を構成する  
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 08/07/2017
 ## <a name="how-to-configure-definition-update-sources"></a>定義ファイルの更新ソースを構成する方法
  次の手順を使用すると、各マルウェア対策ポリシーに使用する定義ファイルの更新ソースを構成できます。
 
-1.  Configuration Manager コンソールで、[ **資産とコンプライアンス**] をクリックします。
+1.  Configuration Manager コンソールで、**[ 資産とコンプライアンス]** をクリックします。
 
 2.  **[資産とコンプライアンス]** ワークスペースで **[Endpoint Protection]**を展開してから、 **[マルウェア対策ポリシー]**をクリックします。
 

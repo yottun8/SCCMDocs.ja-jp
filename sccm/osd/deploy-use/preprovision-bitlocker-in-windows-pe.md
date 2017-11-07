@@ -1,5 +1,6 @@
 ---
-title: "Windows PE での BitLocker の事前準備 | Microsoft Docs"
+title: "Windows PE での BitLocker の事前準備"
+titleSuffix: Configuration Manager
 description: "Configuration Manager の BitLocker の事前準備タスクでは、オペレーティング システムを展開する前に Windows プレインストール環境で BitLocker を有効にします。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: baca498dbc5b8e168852aa3c18ee23a9c483e69c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 936dead7461162779d85796808a8a94e9b8bc44a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="preprovision-bitlocker-in-windows-pe-with-system-center-configuration-manager"></a>System Center Configuration Manager による Windows PE での BitLocker の事前準備
 

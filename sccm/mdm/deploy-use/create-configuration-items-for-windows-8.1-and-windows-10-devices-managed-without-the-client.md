@@ -1,5 +1,6 @@
 ---
-title: "Intune を使用して管理されている Windows 8.1 および Windows 10 デバイスの構成項目を作成する | Microsoft Docs"
+title: "Intune を使用して管理されている Windows 8.1 および Windows 10 デバイスの構成項目を作成する"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の Windows 10 構成項目使用して、Windows 10 コンピューターの設定を管理します。"
 ms.custom: na
 ms.date: 07/31/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: f691ef725e969f55044bafef3fdd66ead2366a6c
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 7f5a50ae6ea05af7e864cf94df3063d70bd737b4
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-configuration-items-for-windows-81-and-windows-10-devices-managed-without-the-system-center-configuration-manager-client"></a>System Center Configuration Manager クライアントを使用せずに管理されている Windows 8.1 デバイスと Windows 10 デバイスの構成項目を作成する方法
 
@@ -30,15 +31,15 @@ ms.lasthandoff: 09/14/2017
   
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
   
-2.  **資産とコンプライアンス**  ワークスペースで  **コンプライアンス設定**  を展開して、 **構成項目** をクリックします。  
+2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ コンプライアンス設定 ]** を展開して、**[ 構成項目 ]** をクリックします。  
   
-3.  [ **ホーム** ] タブの [ **作成** ] グループで、[ **構成項目の作成** ] をクリックします。  
+3.  **[ ホーム ]** タブの **[ 作成 ]** グループで、**[ 構成項目の作成 ]** をクリックします。  
   
 4.  **構成項目の作成ウィザード** の **[全般]**ページで、構成項目の名前と、必要に応じて説明を入力します。  
   
 5.  **[作成する構成項目の種類の指定]**で、 **[Windows 8.1 および Windows 10]**を選択します。  
   
-6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、[**カテゴリ**] をクリックします。  
+6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、**[カテゴリ]** をクリックします。  
   
 7.  ウィザードの **[サポートされているプラットフォーム]** ページで、構成項目を評価する特定の Windows プラットフォームを選択します。  
   

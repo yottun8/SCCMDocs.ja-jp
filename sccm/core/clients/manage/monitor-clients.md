@@ -1,5 +1,6 @@
 ---
-title: "クライアントを監視する - Configuration Manager | Microsoft Docs"
+title: "クライアントの監視 "
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でクライアントを監視する詳細な方法を説明します。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "23"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: ec912dc60492ad3879a576970f93ff2fa016099d
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 1abd791817af5b59e850cec4d529f57d9e541674
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-monitor-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアントを監視する方法
 
@@ -106,8 +107,8 @@ ms.lasthandoff: 09/15/2017
 |Configuration Manager リモート コントロール サービスのスタートアップの種類が自動であるか手動であるかの確認|サービスのスタートアップの種類の自動へのリセット|詳細情報なし|  
 |Configuration Manager リモート コントロール サービスが実行されているかどうかの確認|リモート コントロール サービスの起動|詳細情報なし|  
 |クライアント WMI プロバイダーが正常であるかどうかの確認|Windows Management Instrumentation サービスの再起動|このクライアント チェックの修復は、Windows Server 2003 以前のバージョンまたは Windows XP (64 ビット) 以前のバージョンを実行するコンピューターでのみ実行されます。|  
-|ウェイクアップ プロキシ サービス (ConfigMgr Wake-up Proxy) が実行されているかどうかの確認|ConfigMgr Wakeup Proxy サービスの起動|[ **電源管理**] が次の場合にのみ、このクライアント チェックが行われます。[ **ウェイクアップ プロキシを有効にする** ] のクライアント設定は、サポートされるクライアント オペレーティング システム上で [ **はい** ] に設定されています。|  
-|ウェイクアップ プロキシ サービス (ConfigMgr Wake-up Proxy) のスタートアップの種類が自動であるかどうかの確認|ConfigMgr Wakeup Proxy サービスのスタートアップの種類の自動へのリセット|[ **電源管理**] が次の場合にのみ、このクライアント チェックが行われます。[ **ウェイクアップ プロキシを有効にする** ] のクライアント設定は、サポートされるクライアント オペレーティング システム上で [ **はい** ] に設定されています。|  
+|ウェイクアップ プロキシ サービス (ConfigMgr Wake-up Proxy) が実行されているかどうかの確認|ConfigMgr Wakeup Proxy サービスの起動|**[ 電源管理]** が次の場合にのみ、このクライアント チェックが行われます。**[ ウェイクアップ プロキシを有効にする ]** のクライアント設定は、サポートされるクライアント オペレーティング システム上で **[ はい ]** に設定されています。|  
+|ウェイクアップ プロキシ サービス (ConfigMgr Wake-up Proxy) のスタートアップの種類が自動であるかどうかの確認|ConfigMgr Wakeup Proxy サービスのスタートアップの種類の自動へのリセット|**[ 電源管理]** が次の場合にのみ、このクライアント チェックが行われます。**[ ウェイクアップ プロキシを有効にする ]** のクライアント設定は、サポートされるクライアント オペレーティング システム上で **[ はい ]** に設定されています。|  
 
 ## <a name="client-deployment-log-files"></a>クライアント展開のログ ファイル
 クライアント展開と管理操作で使用するログ ファイルの詳細については、「[System Center Configuration Manager のログ ファイル](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs)を参照してください。

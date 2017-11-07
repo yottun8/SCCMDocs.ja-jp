@@ -1,5 +1,6 @@
 ---
-title: "起動可能なメディアを使用したネットワーク経由での Windows の展開 | Microsoft Docs"
+title: "起動可能なメディアを使用したネットワーク経由での Windows の展開"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager での起動可能なメディアによる展開を使用して、セットアップ先のコンピューターの起動と同時にオペレーティング システムを展開できます。"
 ms.custom: na
 ms.date: 6/16/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: mattbriggs
 ms.author: mattbriggs
 manager: angrobe
-ms.openlocfilehash: 9b20e5e2a66d92038033e816e6fc701581c48a7f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: ca5cabc18659ed52cd4e0b9130f0179faf2c9d28
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-bootable-media-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>System Center Configuration Manager で起動可能なメディアを使用してネットワーク経由で Windows を展開する
 

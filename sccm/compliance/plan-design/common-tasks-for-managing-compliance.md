@@ -1,5 +1,6 @@
 ---
-title: "コンプライアンスを管理するための一般的なタスク | Microsoft Docs"
+title: "コンプライアンスを管理するための一般的なタスク"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でコンプライアンス設定を使用する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 2bd917ad4d18d815a53d9bfba97da41c6385877d
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 605495038c540467c4313b3f41a7f6ccd525ab37
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="common-tasks-for-managing-compliance-with-system-center-configuration-manager"></a>System Center Configuration Manager でのコンプライアンスを管理するための一般的なタスク
 

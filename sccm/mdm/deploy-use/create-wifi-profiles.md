@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager で Wi-Fi プロファイルを作成する | Microsoft Docs"
+title: "Wi-Fi プロファイルの作成"
+titleSuffix: Configuration Manager
 description: "Configuration Manager の Wi-Fi プロファイルを使用して、ワイヤレス ネットワーク設定を組織内のモバイル デバイス ユーザーに展開する方法について説明します。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 101ffde99b3fc88fe352120c3fd8fb3ef7a4efc0
-ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
+ms.openlocfilehash: 3f4f25d39fd7f4106ec6f7a1d6ebe4716be067ad
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-wi-fi-profiles-for-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager でモバイル デバイスの Wi-Fi プロファイルを作成する方法
 

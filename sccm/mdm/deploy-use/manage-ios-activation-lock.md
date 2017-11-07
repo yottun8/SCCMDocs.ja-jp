@@ -1,5 +1,6 @@
 ---
-title: "iOS のアクティベーション ロックの管理 | Microsoft Docs"
+title: "iOS のアクティベーション ロックの管理"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager を使用して iOS のアクティベーション ロックを管理します。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "9"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: c2a771253df7d208391b749eb43d23433e4530a9
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 3b372d9f766fa48b4b57fcd0658f66573ed02d12
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-ios-activation-lock-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用した iOS のアクティベーション ロックの管理
 
@@ -85,16 +86,16 @@ Configuration Manager のコンプライアンス設定を使用して、 **iOS 
 
 ## <a name="view-the-activation-lock-bypass-code"></a>アクティベーション ロックのバイパス コードを表示する
 
-1. Configuration Manager コンソールで、[ **資産とコンプライアンス**] をクリックします。
-2. [ **資産とコンプライアンス** ] ワークスペースで [ **デバイス**] をクリックします。
+1. Configuration Manager コンソールで、**[ 資産とコンプライアンス]** をクリックします。
+2. **[ 資産とコンプライアンス ]** ワークスペースで **[ デバイス]** をクリックします。
 3. アクティベーション ロックが有効になっている、監視モードの登録済みのデバイスを選びます。
 4. **[ホーム]** タブの **[デバイス]** グループで、 **[リモート デバイスの操作]** > **[アクティブ化ロックのバイパス コードの表示]**をクリックします。
 5. 選んだデバイスのバイパス コードが **[アクティベーション ロックのバイパス コード (Activation Lock Bypass Code)]** ダイアログ ボックスに表示されます。
 
 ## <a name="bypass-activation-lock"></a>アクティベーション ロックをバイパスする
 
-1. Configuration Manager コンソールで、[ **資産とコンプライアンス**] をクリックします。
-2. [ **資産とコンプライアンス** ] ワークスペースで [ **デバイス**] をクリックします。
+1. Configuration Manager コンソールで、**[ 資産とコンプライアンス]** をクリックします。
+2. **[ 資産とコンプライアンス ]** ワークスペースで **[ デバイス]** をクリックします。
 3. アクティベーション ロックが有効になっている、監視モードの登録済みのデバイスを選びます。
 3. **[ホーム]** タブの **[デバイス]** グループで、 **[リモート デバイスの操作]** > **[アクティブ化ロックのバイパス]**をクリックします。
 5. 警告ダイアログ ボックスのメッセージを読み、続ける準備ができたら **[はい]** をクリックします。

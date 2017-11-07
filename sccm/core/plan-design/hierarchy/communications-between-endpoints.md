@@ -1,5 +1,6 @@
 ---
-title: "エンドポイント間の通信 | Microsoft Docs"
+title: "エンドポイント間の通信"
+titleSuffix: Configuration Manager
 description: "ネットワーク経由で System Center Configuration Manager サイト システムとコンポーネントがどのように通信するかを説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: cd94f9ccc7e196b30e5dc7ae9368d073b7cff5d2
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 712274456f4a48032e2ff8c1b4fc8b4b072d4536
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="communications-between-endpoints-in-system-center-configuration-manager"></a>System Center Configuration Manager でのエンドポイント間の通信
 
@@ -196,7 +197,7 @@ Configuration Manager のサイト間通信には、データベースのレプ�
 
 -   サイト システムの役割のインストールに使用される **サイト システムのインストール アカウント**を指定する必要があります  (このアカウントには、接続するためのローカルの管理資格情報が必要です)。指定したコンピューターにサイト システムの役割をインストールします。  
 
--   サイト システムのオプションの [ **サイト サーバーがこのサイト システムへの接続を開始する必要がある**] を選択する必要があります。 この場合、サイト サーバーがサイト システム サーバーへの接続を確立してデータを転送する必要があります。 これで、信頼されていない場所にあるコンピューターが、信頼されたネットワーク内にあるサイト サーバーへの接続を開始するのを防げます。 これらの接続では **サイト システムのインストール アカウント**を使用します。  
+-   サイト システムのオプションの **[ サイト サーバーがこのサイト システムへの接続を開始する必要がある]** を選択する必要があります。 この場合、サイト サーバーがサイト システム サーバーへの接続を確立してデータを転送する必要があります。 これで、信頼されていない場所にあるコンピューターが、信頼されたネットワーク内にあるサイト サーバーへの接続を開始するのを防げます。 これらの接続では **サイト システムのインストール アカウント**を使用します。  
 
 **信頼されていないフォレストにインストールされたサイト システムの役割を使用するには** 、サイト サーバーがデータの転送を開始する場合でも、ファイアウォールがネットワーク トラフィックを許可する必要があります。  
 

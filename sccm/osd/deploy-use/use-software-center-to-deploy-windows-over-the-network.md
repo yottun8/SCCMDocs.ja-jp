@@ -1,5 +1,6 @@
 ---
-title: "ソフトウェア センターを使用してネットワーク経由での Windows を展開する | Microsoft Docs"
+title: "ソフトウェア センターを使用したネットワーク経由での Windows の展開"
+titleSuffix: Configuration Manager
 description: "オペレーティング システムをソフトウェア センターに展開して、既存のコンピューターを新しいバージョンの Windows に更新したり、Windows を最新バージョンにアップグレードしたりできます。"
 ms.custom: na
 ms.date: 6/16/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 8988409c68b7f69439ed03872c316b2139d25616
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b9fe1248c59b8093b5e69780ff6f08e798408714
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-software-center-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>System Center Configuration Manager でソフトウェア センターを使用してネットワーク経由で Windows を展開する
 

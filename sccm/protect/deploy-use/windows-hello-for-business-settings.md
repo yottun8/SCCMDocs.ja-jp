@@ -1,5 +1,6 @@
 ---
-title: "Windows Hello for Business の設定 | Microsoft Docs"
+title: "Windows Hello for Business の設定"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager に Windows Hello for Business を統合する方法について説明します。"
 ms.custom: na
 ms.date: 09/21/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "17"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 43586e55f2c0c5cf117b94c61250f26ba4233f53
-ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
+ms.openlocfilehash: 195a5f8e595b6a8597e8c8c8d9046c5864f46526
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="windows-hello-for-business-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager における Windows Hello for Business の設定
 
@@ -77,7 +78,7 @@ Configuration Manager コンソールの **[会社のリソースへのアクセ
 2.  **[Active Directory Users and Computers]** を開きます。
 3.  ナビゲーション ウィンドウで、ドメイン名を右クリックし、**[プロパティ]** をクリックします。
 4.  **[*<domain name>* のプロパティ]** ダイアログ ボックスの **[セキュリティ]** タブで、**[詳細設定]** をクリックします。 **[セキュリティ]** タブが表示されない場合、**[Active Directory Users and Computers]** の **[表示]** メニューの **[高度な機能]** をオンにします。
-5.  [ **追加**] をクリックします。
+5.  **[ 追加]** をクリックします。
 6.  **[*<domain name>* のアクセス許可エントリ]** ダイアログ ボックスで **[プリンシパルの選択]** をクリックします。
 7.  **[ユーザー、コンピューター、サービス アカウント、またはグループの選択]** ダイアログ ボックスの **[選択するオブジェクト名を入力します]** テキスト ボックスに「**Key Admins**」と入力します。  **[OK]**をクリックします。
 8.  **[適用先]** リストから **[Descendant User objects (子孫ユーザー オブジェクト)]** を選択します。

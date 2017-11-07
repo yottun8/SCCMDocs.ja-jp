@@ -1,5 +1,6 @@
 ---
-title: "証明書プロファイルの概要 | Microsoft Docs"
+title: "証明書プロファイルの概要"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の証明書プロファイルと Active Directory 証明書サービスの使用方法について説明します。"
 ms.custom: na
 ms.date: 09/11/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "7"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: e269b5836648d0d227e91a017512c16217e42646
-ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
+ms.openlocfilehash: dc70aec1746f6e555011ba87c84811c1f8ea0620
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager における証明書プロファイルの概要
 
@@ -85,7 +86,7 @@ System Center Configuration Manager の典型的なシナリオとして、接�
 
 デバイスが SCEP 証明書プロファイルを使用して証明書を要求するためには、そのデバイスにエンタープライズ ルート CA 証明書がインストールされていなければなりません。  
 
-さまざまな環境や接続要件に合わせてカスタマイズされた証明書を要求するように、SCEP 証明書プロファイルにさまざまな設定を指定できます。 **証明書プロファイルの作成ウィザード** には、登録パラメーター用のページが 2 つあります。 1 つ目の [ **SCEP 登録** ] には、登録要求の設定と証明書のインストール先の設定が含まれています。 もう 1 つの [ **証明書のプロパティ** ] は、要求する証明書自体を説明するページです。  
+さまざまな環境や接続要件に合わせてカスタマイズされた証明書を要求するように、SCEP 証明書プロファイルにさまざまな設定を指定できます。 **証明書プロファイルの作成ウィザード** には、登録パラメーター用のページが 2 つあります。 1 つ目の **[ SCEP 登録 ]** には、登録要求の設定と証明書のインストール先の設定が含まれています。 もう 1 つの **[ 証明書のプロパティ ]** は、要求する証明書自体を説明するページです。  
 
 ## <a name="deploying-certificate-profiles"></a>証明書プロファイルの展開  
  証明書プロファイルを展開すると、プロファイル内の証明書ファイルがクライアント デバイスにインストールされます。 SCEP パラメーターも展開されて、SCEP 要求がクライアント デバイス上で処理されます。 証明書プロファイルをユーザー コレクションまたはデバイス コレクションに展開して、各証明書の保存先のストアを指定できます。 適用規則によって、証明書をデバイスにインストールできるかどうかが決まります。 証明書プロファイルをユーザー コレクションに展開する場合は、ユーザーとデバイスのアフィニティによって、ユーザーのどのデバイスに証明書をインストールするのかが決まります。 ユーザー証明書が含まれた証明書プロファイルをデバイス コレクションに展開すると、既定では、証明書はユーザーの各プライマリ デバイスにインストールされます。 この動作を変更して、**証明書プロファイルの作成ウィザード** の **[SCEP 登録]** のページにあるユーザーの任意のデバイス上に証明書をインストールできます。 また、デバイスがワークグループ コンピューターの場合、デバイスにユーザー証明書は展開されません。  

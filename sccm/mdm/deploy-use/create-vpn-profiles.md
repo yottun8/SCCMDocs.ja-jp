@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager の VPN プロファイル | Microsoft Docs"
+title: "VPN プロファイル"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager のモバイル デバイスの VPN プロファイルです。"
 ms.custom: na
 ms.date: 07/26/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 5b5385cebe7952e519d59a239983733dd93e661e
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: 40446ce656bd446f890b9b1349ab0b95742cadb8
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager のモバイル デバイスの VPN プロファイル
 

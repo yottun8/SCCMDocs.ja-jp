@@ -1,5 +1,6 @@
 ---
-title: "WAN トラフィックを削減するための Windows PE ピア キャッシュの準備 | Microsoft Docs"
+title: "WAN トラフィックを削減するための Windows PE ピア キャッシュの準備"
+titleSuffix: Configuration Manager
 description: "Windows PE ピア キャッシュは、Windows PE で機能し、ローカルの配布ポイントがない場合にローカルのピアからコンテンツを取得して WAN のトラフィックを最小限に抑えます。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "11"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 814c6133a30b1116d05aaeafddb0dfb7fe2a390e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: bb0ed6809d1350c4ce28e20d1a83082a51c2e687
+ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>System Center Configuration Manager における WAN トラフィックを減らすための Windows PE ピア キャッシュの準備
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 08/07/2017
 
 新しいオペレーティング システムを System Center Configuration Manager に展開すると、タスク シーケンスを実行しているコンピューターで、配布ポイントからコンテンツをダウンロードするのではなく、Windows PE ピア キャッシュを使用してローカル ピア (ピア キャッシュ ソース) からコンテンツを取得することができます。 これにより、ローカル配布ポイントが存在しないブランチ オフィス シナリオでワイド エリア ネットワーク (WAN) トラフィックが最小限に抑えられます。  
 
- Windows PE ピア キャッシュは [Windows BranchCache](http://technet.microsoft.com/library/mt617255\(TechNet.10\).aspx#bkmk_branchcache)に似ていますが、Windows プレインストール環境 (Windows PE) で機能します。 クライアントのソフトウェア センターなどのオペレーティング システム コンテキストからタスク シーケンスを開始する場合は、Windows PE ピア キャッシュが使用されません。 Windows PE ピア キャッシュを使用するクライアントの記述に、以下の用語が使用されています。  
+ Windows PE ピア キャッシュは [Windows BranchCache](http://technet.microsoft.com/library/mt617255\(TechNet.10\).aspx#bkmk_branchcache)に似ていますが、Windows プレインストール環境 (Windows PE) で機能します。 Windows PE ピア キャッシュを使用するクライアントの記述に、以下の用語が使用されています。  
 
 -   **ピア キャッシュ クライアント** は、Windows PE ピア キャッシュを使用するように構成されたコンピューターです。  
 
@@ -101,7 +102,7 @@ ms.lasthandoff: 08/07/2017
     >   
     >  この設定を **[既定のクライアント設定]**の一部として構成した場合は、その構成が環境内のすべてのクライアントに適用されることも覚えておいてください。  
 
-2.  [ **Windows PE ピア キャッシュ**] で、[ **完全な OS 上の Configuration Manager クライアントにコンテンツの共有を許可する** ] を [ **はい**] に設定します。  
+2.  **[ Windows PE ピア キャッシュ]** で、**[ 完全な OS 上の Configuration Manager クライアントにコンテンツの共有を許可する ]** を **[ はい]** に設定します。  
 
     -   既定では、HTTP のみが有効になります。 クライアントに HTTPS 経由のコンテンツのダウンロードを許可する場合は、 **[クライアント ピア通信に対して HTTPS を有効にする]** を **[はい]**に設定します。  
 

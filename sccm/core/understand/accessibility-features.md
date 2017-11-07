@@ -1,5 +1,6 @@
 ---
-title: "ユーザー補助 | Microsoft Docs"
+title: "ユーザー補助"
+titleSuffix: Configuration Manager
 description: "障碍のあるユーザーに System Center Configuration Manager を利用してもらうための機能について説明します。"
 ms.custom: na
 ms.date: 7/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: ca518796477dda149a9f4c0ebd65f0a082eab806
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 303b58ddea7bc26a38dde2075eb78d1053069c25
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="accessibility-features-in-system-center-configuration-manager"></a>System Center Configuration Manager のユーザー補助機能
 
@@ -83,18 +84,18 @@ System Center Configuration Manager には、障碍のあるユーザーに利�
 |操作内容|使用するショートカット キー|  
 |----------------|--------------------------------|  
 |ヘルプ ウィンドウを表示する|F1|  
-|ヘルプのトピック ウィンドウとナビゲーション ウィンドウ ([ **目次** ] タブ、[ **検索** ] タブ、および [ **キーワード** ] タブ) の間でカーソルを切り替える|F6|  
+|ヘルプのトピック ウィンドウとナビゲーション ウィンドウ (**[ 目次 ]** タブ、**[ 検索 ]** タブ、および **[ キーワード ]** タブ) の間でカーソルを切り替える|F6|  
 |ナビゲーション ウィンドウでタブ (**[目次]**、**[検索]**、**[キーワード]** タブなど) を切り替える|Alt + タブの下線付き文字|  
 |次の非表示テキストまたはハイパーリンクを選択する|タブ|  
 |前の非表示テキストまたはハイパーリンクを選択する|Shift + Tab|  
 |選択した [すべて表示]、[すべて非表示]、非表示テキスト、またはハイパーリンクに対してアクションを実行する|Enter キー|  
-|任意のヘルプ ツール バー コマンドにアクセスするための [ **オプション** ] メニューを表示する|Alt + O|  
+|任意のヘルプ ツール バー コマンドにアクセスするための **[ オプション ]** メニューを表示する|Alt + O|  
 |**[目次]**、**[検索]**、**[キーワード]** タブを含むウィンドウの表示/非表示を切り替える|Alt + O、続けて T キーを選択|  
 |前に表示したトピックを表示する|Alt + O、続けて B キーを選択|  
 |前に表示した一連のトピックの次のトピックを表示する|Alt + O、続けて F キーを選択|  
 |指定されているホーム ページに戻る|Alt + O、続けて H キーを選択|  
 |ヘルプ ウィンドウでヘルプ トピックが開かないようにする (Web ページのダウンロードを止める場合など)|Alt + O、続けて S キーを選択|  
-|ユーザー補助機能の設定を変更できる、Microsoft Internet Explorer の[ **インターネット オプション** ] ダイアログ ボックスを開く|Alt + O、続けて I キーを選択|  
+|ユーザー補助機能の設定を変更できる、Microsoft Internet Explorer の**[ インターネット オプション ]** ダイアログ ボックスを開く|Alt + O、続けて I キーを選択|  
 |リンクされている Web ページなど、トピックを更新する|Alt + O、続けて R キーを選択|  
 |ヘルプの全トピックまたは選択したトピックのみを印刷する|Alt + O、続けて P キーを選択|  
 |ヘルプ ウィンドウを閉じる|Alt + F4|  

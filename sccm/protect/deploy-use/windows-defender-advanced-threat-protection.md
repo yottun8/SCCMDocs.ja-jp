@@ -1,5 +1,6 @@
 ---
-title: "Windows Defender Advanced Threat Protection | Microsoft ドキュメント"
+title: Windows Defender Advanced Threat Protection
+titleSuffix: Configuration Manager
 description: "企業が高度な攻撃に対応するための新しいサービスである Windows Defender Advanced Threat Protection を管理および監視する方法について説明します。"
 ms.custom: na
 ms.date: 03/07/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 6c3b67278fa587c137a29e174e277fb0f15872c8
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 561a03c7046accaa8e6d36407c75cbd4248188ce
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender Advanced Threat Protection
 
@@ -51,9 +52,9 @@ Windows Defender ATP は、[Windows セキュリティ センター](https://sec
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[概要]** > **[Endpoint Protection]** > **[Windows Defender ATP ポリシー]** の順に移動し、**[Windows Defender ATP ポリシーの作成]** をクリックします。 Windows Defender ATP ポリシーの作成ウィザードが開きます。  
 
-2.  Windows Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、**[オンボード]** を選択します。 [ **次へ** ] をクリックします。  
+2.  Windows Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、**[オンボード]** を選択します。 **[ 次へ ]** をクリックします。  
 
-3.  組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 [ **次へ** ] をクリックします。  
+3.  組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 **[ 次へ ]** をクリックします。  
 
 4.  管理対象のデバイスから分析用に収集され共有されるファイルのサンプルを指定します。  
 
@@ -61,7 +62,7 @@ Windows Defender ATP は、[Windows セキュリティ センター](https://sec
 
     -   **すべてのファイルの種類**  
 
-     [ **次へ** ] をクリックします。  
+     **[ 次へ ]** をクリックします。  
 
 5.  概要を確認して、ウィザードを完了します。  
 

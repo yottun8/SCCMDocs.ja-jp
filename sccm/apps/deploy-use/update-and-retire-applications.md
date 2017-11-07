@@ -1,5 +1,6 @@
 ---
-title: "アプリケーションの更新とインベントリからの削除 | Microsoft Docs"
+title: "アプリケーションの更新とインベントリからの削除"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager を使用して、展開済みのアプリケーションを、改訂、置き換え、またはアンインストールします。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "9"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 4bbbb73985855cd88bf9675cc3cf0a1e81551a80
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: bb17e3aebefcc3ea56e57fea963695eee9adf92d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="update-and-retire-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager でのアプリケーションの更新とインベントリからの削除
 

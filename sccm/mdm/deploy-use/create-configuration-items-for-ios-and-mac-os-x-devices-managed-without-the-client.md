@@ -1,5 +1,6 @@
 ---
-title: "Intune で管理されている iOS および Mac OS X デバイスの構成項目を作成する | Microsoft Docs"
+title: "Intune で管理されている iOS および Mac OS X デバイスの構成項目を作成する"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の iOS および Mac OS X 構成項目使用して、iOS デバイスと Mac OS X デバイスの設定を管理します。"
 ms.custom: na
 ms.date: 03/28/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 039173c9411a530348bf550e4be7b771756d57dc
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: d101ffc649928c1136386bc7979d4a37ad404af1
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>Intune で管理されている iOS および Mac OS X デバイスの構成項目を作成する方法
 System Center Configuration Manager の **iOS および Mac OS X** 構成項目を使用して、Microsoft Intune に登録されているか、Configuration Manager によってオンプレミスで管理されている iOS デバイスと Mac OS X デバイスの設定を管理します。  
@@ -28,15 +29,15 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
   
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
   
-2.  **資産とコンプライアンス**  ワークスペースで  **コンプライアンス設定**  を展開して、 **構成項目** をクリックします。  
+2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ コンプライアンス設定 ]** を展開して、**[ 構成項目 ]** をクリックします。  
   
-3.  [ **ホーム** ] タブの [ **作成** ] グループで、[ **構成項目の作成** ] をクリックします。  
+3.  **[ ホーム ]** タブの **[ 作成 ]** グループで、**[ 構成項目の作成 ]** をクリックします。  
   
 4.  **構成項目の作成ウィザード** の **[全般]**ページで、構成項目の名前と、必要に応じて説明を入力します。  
   
 5.  **[作成する構成項目の種類の指定]**で、 **[iOS および Mac OS X]**を選択します。  
   
-6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、[**カテゴリ**] をクリックします。  
+6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、**[カテゴリ]** をクリックします。  
   
 7.  ウィザードの **[サポートされているプラットフォーム]** ページで、構成項目を評価する特定の iOS または Mac OS X プラットフォームを選択します。  
   
