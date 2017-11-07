@@ -1,5 +1,6 @@
 ---
-title: "構成データの管理 | Microsoft Docs"
+title: "構成データを管理する"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で構成項目と基準を作成した後は、他のコマンドを使ってさまざまなアクションを実行できます。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 07d4148559c36745e51be46957b1af3c4a94ce44
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 23a6bcf2e9fcb417dabde7700e09c953d436deb7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-configuration-data-in-system-center-configuration-manager"></a>System Center Configuration Manager で構成データを管理する
 
@@ -33,7 +34,7 @@ System Center Configuration Managerで構成項目と構成基準を作成した
 
 |管理タスク|説明|  
 |---------------------|-------------|  
-|**子構成項目の作成**|**子構成項目の作成ウィザード**が開き、選択した構成項目から、子構成項目を作成できます。<br /><br /> モバイル デバイスの構成項目から子構成項目を作成することはできません。<br /><br /> 詳しくは、「[Create child configuration items](../../compliance/deploy-use/create-child-configuration-items.md)」 (子構成項目を作成する) を参照してください。|  
+|**子構成項目の作成**|**子構成項目の作成ウィザード** が開き、選択した構成項目から、子構成項目を作成できます。<br /><br /> モバイル デバイスの構成項目から子構成項目を作成することはできません。<br /><br /> 詳しくは、「[Create child configuration items](../../compliance/deploy-use/create-child-configuration-items.md)」 (子構成項目を作成する) を参照してください。|  
 |**リビジョン履歴**|**[構成項目のリビジョン履歴]** ダイアログ ボックスが開き、選択した構成項目の以前のリビジョンを表示し管理できます。|  
 |**XML 定義の表示**|新しいウィンドウに選択した構成項目の XML 定義ファイルが表示されます。 この情報は、構成データを手動で作成するときに役立ちます。|  
 |**エクスポート**|構成項目がサイト内で作成された場合は、その構成項目をキャビネット (.cab) ファイル形式でエクスポートします。 その後、Configuration Manager の同じサイトや別のサイトにインポートできます。 構成データは DCM ダイジェストに変換されます。|  

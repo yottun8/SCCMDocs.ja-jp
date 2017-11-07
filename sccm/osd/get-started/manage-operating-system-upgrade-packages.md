@@ -1,5 +1,6 @@
 ---
-title: "オペレーティング システムのアップグレード パッケージの管理 | Microsoft ドキュメント"
+title: "オペレーティング システムのアップグレード パッケージの管理"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でオペレーティング システムのアップグレード パッケージを管理する方法について説明します。"
 ms.custom: na
 ms.date: 12/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 35f527f83799125aa298b99e2cc56867435272ec
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: e0996f57d7d9fbcb9926c16f718b65073c78b3bc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-operating-system-upgrade-packages-with-system-center-configuration-manager"></a>System Center Configuration Manager でのオペレーティング システムのアップグレード パッケージの管理
 
@@ -32,7 +33,7 @@ System Center Configuration Manager のアップグレード パッケージに�
 
 #### <a name="to-add-an-operating-system-upgrade-package"></a>オペレーティング システムのアップグレード パッケージを追加するには  
 
-1.  Configuration Manager コンソールで、[ソフトウェア ライブラリ] ****をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで、 **[オペレーティング システム]**を展開してから、 **[オペレーティング システムのアップグレード パッケージ]**をクリックします。  
 
@@ -48,7 +49,7 @@ System Center Configuration Manager のアップグレード パッケージに�
 
 5.  **[全般]** ページで、次の情報を指定してから、 **[次へ]**をクリックします。 この情報は、複数のオペレーティング システムのインストーラーがあるときに区別するために役立ちます。  
 
-    -   [名前]:****オペレーティング システムのインストーラー名を指定します。  
+    -   **[名前]**: オペレーティング システムのインストーラー名を指定します。  
 
     -   **バージョン**:オペレーティング システムのインストーラーのバージョンを指定します。  
 
@@ -70,7 +71,7 @@ System Center Configuration Manager のアップグレード パッケージに�
 
 #### <a name="to-apply-software-updates-to-an-operating-system-upgrade-package"></a>オペレーティング システム アップグレード パッケージにソフトウェア更新プログラムを適用するには  
 
-1.  Configuration Manager コンソールで、[ソフトウェア ライブラリ] ****をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで、 **[オペレーティング システム]**を展開してから、 **[オペレーティング システムのアップグレード パッケージ]**をクリックします。  
 
@@ -78,9 +79,9 @@ System Center Configuration Manager のアップグレード パッケージに�
 
 4.  **[ホーム]** タブの **[オペレーティング システム アップグレード パッケージ]** グループで、 **[更新のスケジュール]** をクリックしてウィザードを開始します。  
 
-5.  [ **更新プログラムの選択** ] ページで、オペレーティング システム イメージに適用するソフトウェア更新プログラムを選択してから、[ **次へ**] をクリックします。  
+5.  **[ 更新プログラムの選択 ]** ページで、オペレーティング システム イメージに適用するソフトウェア更新プログラムを選択してから、**[ 次へ]** をクリックします。  
 
-6.  [ **スケジュールの設定** ] ページで、次の設定を指定してから、[ **次へ**] をクリックします。  
+6.  **[ スケジュールの設定 ]** ページで、次の設定を指定してから、**[ 次へ]** をクリックします。  
 
     1.  **スケジュール**: オペレーティング システム イメージにソフトウェア更新プログラムを適用するスケジュールを指定します。  
 
@@ -88,6 +89,6 @@ System Center Configuration Manager のアップグレード パッケージに�
 
     3.  **イメージを使用して配布ポイントを更新する**: このオプションを選択すると、ソフトウェア更新プログラムが適用された後で、配布ポイントのオペレーティング システム イメージが更新されます。  
 
-7.  [ **概要** ] ページで、情報を確認して [ **次へ**] をクリックします。  
+7.  **[ 概要 ]** ページで、情報を確認して **[ 次へ]** をクリックします。  
 
-8.  [完了] ページで、オペレーティング システム イメージにソフトウェア更新プログラムが正常に適用されたことを確認します。 ****  
+8.  **[完了]** ページで、オペレーティング システム イメージにソフトウェア更新プログラムが正常に適用されたことを確認します。  
