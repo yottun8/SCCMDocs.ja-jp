@@ -1,5 +1,6 @@
 ---
-title: "レポートの操作とメンテナンス | Microsoft Docs"
+title: "レポートの操作とメンテナンス "
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でのレポートおよびレポートのサブスクリプションの管理の詳細について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: df572cd0c64c82e25164430a53e1b893b3ba3cf5
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 05a81cdfd46ba2bf0bea17b06bd72f79296b3930
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="operations-and-maintenance-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager でのレポートの操作とメンテナンス
 
@@ -89,7 +90,7 @@ System Center Configuration Manager にレポートのためのインフラス�
 
 3.  プロパティを変更するレポートのレポート カテゴリをクリックして、レポートのリンクをクリックします。 レポート マネージャーでレポートが開きます。  
 
-4.  **[プロパティ]** タブをクリックします。 レポート名および説明を変更できます。  
+4.  **[プロパティ]** タブをクリックします。レポート名および説明を変更できます。  
 
 5.  終了したら、**[適用]** をクリックします。 レポートのプロパティがレポート サーバーに保存され、Configuration Manager コンソールはレポートの更新されたレポートのプロパティを取得します。  
 
@@ -155,7 +156,7 @@ System Center Configuration Manager にレポートのためのインフラス�
 
 8.  Microsoft レポート ビルダーで、レポートのレイアウトの作成、利用可能な SQL Server のビューでのデータの選択、レポートへのパラメーターの追加などを行います。 レポート ビルダーを使用した新しいレポートの作成の詳細については、レポート ビルダーのヘルプを参照してください。  
 
-9. **[実行]** をクリックして、レポートを実行します。 想定した情報がレポートに表示されていることを確認します。 必要な場合は、**[デザイン]** をクリックして設計ビューに戻り、レポートを変更します。  
+9. **[実行]** をクリックして、レポートを実行します。 想定した情報がレポートに表示されていることを確認します。 必要な場合は、**[デザイン]** をクリックしデザインビューに戻り、レポートを変更します。  
 
 10. **[保存]** をクリックして、レポートをレポート サーバーに保存します。 実行してで新しいレポートを変更、 **レポート** 内のノード、 **監視** ワークスペース。  
 
@@ -198,7 +199,7 @@ System Center Configuration Manager にレポートのためのインフラス�
 
 7.  Microsoft レポート ビルダーで、レポートの SQL ステートメントの指定、SQL Server のビューで利用可能な列を使用した SQL ステートメントの作成、レポートへのパラメーターの追加などを行います。  
 
-8.  **[実行]** をクリックして、レポートを実行します。 想定した情報がレポートに表示されていることを確認します。 必要な場合は、**[デザイン]** をクリックして設計ビューに戻り、レポートを変更します。  
+8.  **[実行]** をクリックして、レポートを実行します。 想定した情報がレポートに表示されていることを確認します。 必要な場合は、**[デザイン]** をクリックしデザインビューに戻り、レポートを変更します。  
 
 9. **[保存]** をクリックして、レポートをレポート サーバーに保存します。 **[ 監視 ]** ワークスペースの **[ レポート ]** ノードで、新しいレポートを実行できます。  
 
