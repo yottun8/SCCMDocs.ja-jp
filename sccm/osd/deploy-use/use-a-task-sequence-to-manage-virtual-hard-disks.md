@@ -1,5 +1,6 @@
 ---
-title: "バーチャル ハード ディスクを管理するためのタスク シーケンスの使用 | Microsoft Docs"
+title: "バーチャル ハード ディスクを管理するためのタスク シーケンスの使用"
+titleSuffix: Configuration Manager
 description: "Configuration Manager から VHD を作成および変更し、アプリケーションとソフトウェア更新プログラムを追加して、VHD を System Center Virtual Machine Manager (VMM) に発行します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: f77af4b8fcb193ed44511c0e5eea7290f55dbbf8
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 586eec745bdf86a42a9d33fb9e1163f03efa1c59
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>タスク シーケンスによる System Center Configuration Manager でのバーチャル ハード ディスクの管理
 
@@ -74,7 +75,7 @@ System Center Configuration Manager では、Configuration Manager コンソー�
 
 1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
 
-2.  **[ ソフトウェア ライブラリ ]** ワークスペースで **[ オペレーティング システム]** を展開して、**[ タスク シーケンス ]** をクリックします。  
+2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 
 3.  **[ホーム]** タブの **[作成]** グループで **[タスク シーケンスの作成]** をクリックして、タスク シーケンスの作成ウィザードを起動します。  
 

@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager を使用した Windows to Go の展開 | Microsoft Docs"
+title: "Windows to Go の展開"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で Windows To Go をプロビジョニングして、外部ドライブから起動する Windows To Go ワークスペースを作成する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: a8b1a42c43438553cfbb62328bed933378bb344c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 91e3fa4aba93dc3012fe1e702f50c4f9438a69e8
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用した Windows to Go の展開
 
@@ -222,7 +223,7 @@ ms.lasthandoff: 08/07/2017
     > [!NOTE]  
     >  サイト サーバーのコンピューター アカウントには、ソース フォルダーへの **読み取り** アクセス権が必要です。  
 
-2.  「 [事前設定されたメディアの作成](#BKMK_CreatePrestagedMedia) 」セクションで作成した、事前設定されたメディア ファイルを、パッケージ ソース フォルダーにコピーします。  
+2.  「 [Create prestaged media](#BKMK_CreatePrestagedMedia) 」セクションで作成した、事前設定されたメディア ファイルを、パッケージ ソース フォルダーにコピーします。  
 
 3.  Windows To Go Creator (WTGCreator.exe) ツールを、パッケージ ソース フォルダーにコピーします。 Creator ツールは、任意のプライマリ サイト サーバーの <*ConfigMgrInstallationFolder*>\OSD\Tools\WTG\Creator にあります。  
 
@@ -281,7 +282,7 @@ ms.lasthandoff: 08/07/2017
  Windows To Go では、TPM を使用せずに、外部ブート可能デバイスで BitLocker を有効にします。 このため、Windows To Go ドライブで BitLocker を構成するには、個別のツールを使用する必要があります。 BitLocker を有効にするには、タスク シーケンスの「 **Windows と ConfigMgr のセットアップ** 」手順の後に、アクションを追加する必要があります。  
 
 > [!NOTE]  
->  Windows To Go の BitLocker では、パスフレーズが必要です。 「 [事前設定されたメディアの作成](#BKMK_CreatePrestagedMedia) 」手順で、OSDBitLockerPIN 変数を使用して、事前設定コマンドの一部としてパスフレーズを設定します。  
+>  Windows To Go の BitLocker では、パスフレーズが必要です。 「 [Create prestaged media](#BKMK_CreatePrestagedMedia) 」手順で、OSDBitLockerPIN 変数を使用して、事前設定コマンドの一部としてパスフレーズを設定します。  
 
  Windows 8 タスク シーケンスを更新して、Windows To Go で BitLocker を有効にするには、次の手順に従います。  
 
@@ -421,7 +422,7 @@ ms.lasthandoff: 08/07/2017
     -   **[利用できるようにする項目]**: タスク シーケンスを構成マネージャー クライアント、メディア、または PXE で使用可能にするかどうかを指定します。  
 
         > [!IMPORTANT]  
-        >  自動タスク シーケンスの展開に **[メディアと PXE のみ (非表示)]** 設定を使用します。 Windows To Go デバイスが検出された場合は、ユーザー操作なしに、コンピューターが自動的に起動して Windows To Go を展開するようにするには、**[オペレーティング システムの無人展開を許可する]** を選択して、事前設定メディアの一部として SMSTSPreferredAdvertID 変数を設定します。 これらの事前設定メディアの詳細については、「 [事前設定されたメディアの作成](#BKMK_CreatePrestagedMedia) 」セクションを参照してください。  
+        >  自動タスク シーケンスの展開に **[メディアと PXE のみ (非表示)]** 設定を使用します。 Windows To Go デバイスが検出された場合は、ユーザー操作なしに、コンピューターが自動的に起動して Windows To Go を展開するようにするには、**[オペレーティング システムの無人展開を許可する]** を選択して、事前設定メディアの一部として SMSTSPreferredAdvertID 変数を設定します。 これらの事前設定メディアの詳細については、「 [Create prestaged media](#BKMK_CreatePrestagedMedia) 」セクションを参照してください。  
 
 7.  **[ スケジュール ]** ページで、次の設定を構成してから、**[ 次へ]** をクリックします。  
 
@@ -459,7 +460,7 @@ ms.lasthandoff: 08/07/2017
  Windows To Go パッケージと Windows 8 タスク シーケンスを展開したら、ユーザーが Windows To Go Creator を使用できるようになります。 ユーザーは、ソフトウェア カタログにアクセスするか、Windows To Go Creator がデバイスに展開されている場合はソフトウェア センターにアクセスして、Windows To Go Creator プログラムを実行できます。 Creator パッケージがダウンロードされると、タスク バーに点滅するアイコンが表示されます。 ユーザーがアイコンをクリックすると、ダイアログ ボックスが表示されて、プロビジョニングする Windows To Go ドライブをユーザーが選択できるようになります (/drive コマンド ライン オプションを使用しない場合)。 ドライブが Windows To Go の要件を満たしていない場合や、ドライブにイメージをインストールするのに十分な空きディスク容量がない場合は、エラー メッセージが表示されます。 ユーザーは、確認ページで、適用されるドライブとイメージを確認できます。 Windows To Go ドライブにコンテンツが構成されて事前設定されている間、ダイアログ ボックスに進行状況が表示されます。 事前設定が完了すると、Windows To Go ドライブで起動するために、コンピューターの再起動を求めるメッセージが表示されます。  
 
 > [!NOTE]  
->  「 [Windows To Go Creator パッケージの作成](#BKMK_CreatePackage) 」セクションで、ブートのリダイレクトを Creator プログラムのコマンド ラインの一部として有効にしなかった場合は、システムを再起動するたびに、ユーザーが手動で Windows To Go ドライブで起動することが必要になる可能性があります。  
+>  「 [Create a Windows To Go Creator package](#BKMK_CreatePackage) 」セクションで、ブートのリダイレクトを Creator プログラムのコマンド ラインの一部として有効にしなかった場合は、システムを再起動するたびに、ユーザーが手動で Windows To Go ドライブで起動することが必要になる可能性があります。  
 
 ###  <a name="BKMK_ConfigureStageDrive"></a> Configuration Manager による Windows To Go ドライブの構成とステージング  
  コンピューターを Windows To Go ドライブで再起動すると、ドライブは Windows PE で起動し、管理ポイントに接続してポリシーを取得し、オペレーティング システムの展開を完了します。 Configuration Manager でドライブが構成され、ステージングされます。 Configuration Manager によってドライブがステージングされた後で、ユーザーは、コンピューターを再起動してプロビジョニング処理 (ドメインへの参加やアプリケーションのインストールなど) を終了できます。 この処理は、事前設定メディアの場合と同じです。  
