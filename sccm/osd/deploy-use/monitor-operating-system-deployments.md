@@ -1,5 +1,6 @@
 ---
-title: "オペレーティング システムの展開の監視 | Microsoft Docs"
+title: "オペレーティング システムの展開の監視"
+titleSuffix: Configuration Manager
 description: "オペレーティング システムの展開オブジェクトを監視するため、Configuration Manager コンソールにはアラート、レポート、およびさまざまなステータス インジケーターが用意されています。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 154c0a286e6b9ccedc7545eb010967ac00d35407
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 2e738b0ae9bd16829857edfaae0fb7e398979627
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="monitor-operating-system-deployments-in-system-center-configuration-manager"></a>System Center Configuration Manager のオペレーティング システムの展開の監視
 
@@ -76,7 +77,7 @@ Configuration Manager コンソールの次の機能を使用して、オペレ�
 
 1.  Configuration Manager コンソールで、**[監視]** をクリックします。  
 
-2.  [監視] ワークスペースで、**[配布ステータス]** を展開して、 **[配布ポイント グループのステータス]** をクリックします。 すると、配布ポイント グループが表示されます。  
+2.  [監視] ワークスペースで、**[配布ステータス]** を展開して、**[配布ポイント グループのステータス]** をクリックします。 すると、配布ポイント グループが表示されます。  
 
 3.  詳細なステータス情報を確認する配布ポイント グループを選択します。  
 
@@ -93,4 +94,4 @@ Configuration Manager コンソールの次の機能を使用して、オペレ�
 
 3.  配布ポイント ステータス情報を確認する配布ポイントを選択します。  
 
-4.  [結果] ウィンドウで、**[詳細]** タブをクリックします。 すると、配布ポイントのステータス情報が表示されます。  
+4.  [結果] ウィンドウで、**[詳細]** タブをクリックします。すると、配布ポイントのステータス情報が表示されます。  

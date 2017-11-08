@@ -1,5 +1,6 @@
 ---
-title: "Intune で管理されているデバイスでコンプライアンスを管理する | Microsoft Docs"
+title: "Intune で管理されているデバイスでコンプライアンスを管理する"
+titleSuffix: Configuration Manager
 description: "いくつかの一般的なシナリオを使用して、System Center Configuration Manager のコンプライアンス設定について説明します。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 72446887d5f9d3baf083ad528a8e5e1e508dccb2
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 97f0ed47447dc5603a65563b0e87ec90bcc1fe42
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="managing-compliance-on-devices-managed-with-intune"></a>Intune で管理されているデバイスでコンプライアンスを管理する
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 09/15/2017
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[コンプライアンス設定]** > **[構成項目]** の順にクリックします。  
 
-3.  [ホーム **** ] タブの [作成 **** ] グループで、[構成項目の作成 ****] をクリックします。  
+3.  **[ホーム]** タブの **[作成]** グループで、**[構成項目の作成]** をクリックします。  
 
 4.  次のように構成項目の作成ウィザードの **[全般]** タブで、構成項目の名前と説明を指定し、このトピックの各シナリオに適した構成項目の種類を選択します。  
 

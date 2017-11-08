@@ -1,5 +1,6 @@
 ---
-title: "探索の構成 | Microsoft Docs"
+title: "探索の構成"
+titleSuffix: Configuration Manager
 description: "ネットワーク インフラストラクチャや Active Directory から管理できるリソースを見つけるように Configuration Manager サイトで実行する探索方法を構成します。"
 ms.custom: na
 ms.date: 7/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 34a539ceaea6b070f81a28d2c0a9ce388e26cfeb
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 108721f0ad5107a3b61cfeb82120a275f2f96fdf
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>System Center Configuration Manager の探索方法を構成する
 
@@ -391,7 +392,7 @@ Azure AD ユーザーの探索は、*クラウド管理*の一部として構成
 
 8.  SNMP 検索で使用するルーター ホップの最大数を構成するには、**[SNMP]** タブを選択し、**[最大ホップ数]** ドロップダウン リストからホップの数を選択します。  
 
-9. SNMP デバイスを構成するのには **[SNMP デバイス]** タブを選択します。 デバイスが表示されていない場合、**[新規]** アイコン ![[新規] アイコン](media/Disc_new_Icon.gif) をクリックします。 **[新しい SNMP デバイス]** ダイアログ ボックスで、SNMP デバイスの IP アドレスまたはデバイス名を指定し、**[OK]** をクリックします。  
+9. SNMP デバイスを構成するのには **[SNMP デバイス]** タブを選択します。デバイスが表示されていない場合、**[新規]** アイコン ![[新規] アイコン](media/Disc_new_Icon.gif) をクリックします。 **[新しい SNMP デバイス]** ダイアログ ボックスで、SNMP デバイスの IP アドレスまたはデバイス名を指定し、**[OK]** をクリックします。  
 
     > [!NOTE]  
     >  デバイス名を指定する場合、Configuration Manager が NetBIOS 名を IP アドレスに解決できる必要があります。  

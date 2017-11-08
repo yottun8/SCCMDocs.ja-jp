@@ -1,5 +1,6 @@
 ---
-title: "アプリ構成ポリシーを使用した iOS アプリの構成 | Microsoft Docs"
+title: Configure iOS apps with app configuration policies
+titleSuffix: Configuration Manager
 description: "iOS 8 以降を実行しているデバイスの構成問題の解消に役立ちます。ユーザーがアプリを実行する前にアプリ構成ポリシーをユーザーに展開します。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -12,14 +13,14 @@ ms.topic: article
 ms.assetid: f0a78038-ea22-4826-9c07-1771b7dd2e8d
 caps.latest.revision: "18"
 caps.handback.revision: "0"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 50aea2afaf34974ca92ac58b6569bff56403a9ab
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 905b0925f88395942c954561aa0828c15d3ba758
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager でアプリ構成ポリシーを使用し、iOS アプリに設定を適用する
 
@@ -45,7 +46,7 @@ System Center Configuration Manager (Configuration Manager) のアプリ構成�
 
 ## <a name="create-an-app-configuration-policy"></a>アプリ構成ポリシーを作成する
 
-1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**、**[アプリケーション管理]**、**[アプリ構成ポリシー]** の順に選択します。
+1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリ構成ポリシー]** の順に選択します。
 2. **[ホーム]** タブの **[アプリ構成ポリシー]** グループで、**[新しいアプリケーション構成ポリシーを作成します]** を選択します。
 3. アプリ構成ポリシーの作成ウィザードの **[全般]** ページで、ポリシーの次の情報を設定します。
   - **名前**。 ポリシーの一意の名前を入力します。

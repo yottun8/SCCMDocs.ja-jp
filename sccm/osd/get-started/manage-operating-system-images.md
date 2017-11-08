@@ -1,5 +1,6 @@
 ---
-title: "オペレーティング システム イメージを管理する | Microsoft ドキュメント"
+title: "オペレーティング システム イメージを管理する"
+titleSuffix: Configuration Manager
 description: "Configuration Manager で、Windows Imaging (WIM) ファイルに格納されているオペレーティング システム イメージを管理するために使用できる方法について説明します。"
 ms.custom: na
 ms.date: 12/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 9edefdbe77085d157b524904a514a2b5c472b1be
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: 4408865626009b35162e4d7408248d9ab2bdd7d2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>System Center Configuration Manager でのオペレーティング システム イメージの管理
 

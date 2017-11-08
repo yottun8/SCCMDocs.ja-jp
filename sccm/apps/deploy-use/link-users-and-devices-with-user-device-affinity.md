@@ -1,5 +1,6 @@
 ---
-title: "ユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け | Microsoft Docs"
+title: "ユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け"
+titleSuffix: Configuration Manager
 description: "ユーザーとデバイスのアフィニティにユーザーとデバイスを関連付けて、ユーザーに関連付けられたすべてのデバイスにアプリを自動的に展開します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 141b4e7df4fb3fa4aed3a5a90c6197bf7636a3a0
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 1066028d0cd20521d78780ae2fdfbce91a0860b2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-system-center-configuration-manager"></a>System Center Configuration Manager でのユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け
 
@@ -132,7 +133,7 @@ System Center Configuration Manager (Configuration Manager) のユーザーと�
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** を選択します。  
 
-2.  [資産とコンプライアンス] ワークスペースで、アフィニティ要求を管理するユーザーまたはデバイスを選択します。 ****  
+2.  **[資産とコンプライアンス]** ワークスペースで、アフィニティ要求を管理するユーザーまたはデバイスを選択します。  
 
 3.  **[ホーム]** タブの **[コレクション]** グループで、**[アフィニティ要求の管理]** を選びます。  
 

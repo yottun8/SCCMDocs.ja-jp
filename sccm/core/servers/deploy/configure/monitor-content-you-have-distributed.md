@@ -1,5 +1,6 @@
 ---
-title: "コンテンツを監視する | Microsoft Docs"
+title: "コンテンツの監視"
+titleSuffix: Configuration Manager
 description: "Configuration Manager コンソールを使用して配布コンテンツを監視する方法を説明します。"
 ms.custom: na
 ms.date: 4/17/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 7659d5789b8ce4e9e0b585a331c8f68869c9492d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b260cf989fbda471b514d06d927e9b2c55d35c1b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>配布したコンテンツを System Center Configuration Manager で監視する
 
@@ -55,7 +56,7 @@ System Center Configuration Manager コンソールを使用して、配布コ�
 また、配布ポイントへの処理が進行中の配布や、コンテンツを正常に配布ポイントに配布できなかった配布を管理することもできます。  
 
 -   具体的には、コンテンツをキャンセルするか再配布することができます。**[資産の詳細]** ウィンドウで、配布ポイントへの配布ジョブの展開ステータス メッセージを表示すると、このオプションが表示されます。 このウィンドウは、**[コンテンツのステータス]** ノードの **[進行中]** タブまたは **[エラー]** タブにあります。  
--   **[進行中]** タブでジョブの詳細を表示した場合は、ジョブの完了率 (%) が表示されます。 **[エラー]** タブからジョブの詳細を表示した場合は、ジョブの残り再試行回数のほか、次の再試行までの時間も表示されます。  
+-   **[進行中]** タブでジョブの詳細を表示した場合は、ジョブの完了率 (%) が表示されます。**[エラー]** タブからジョブの詳細を表示した場合は、ジョブの残り再試行回数のほか、次の再試行までの時間も表示されます。  
 
 まだ完了していない展開をキャンセルすると、そのコンテンツを転送する配布ジョブは停止します。  
 
@@ -148,7 +149,7 @@ System Center Configuration Manager コンソールを使用して、配布コ�
 
 3.  配布ポイント ステータス情報を確認する配布ポイントを選択します。  
 
-4.  [結果] ウィンドウで、**[詳細]** タブをクリックします。 すると、配布ポイントのステータス情報が表示されます。  
+4.  [結果] ウィンドウで、**[詳細]** タブをクリックします。すると、配布ポイントのステータス情報が表示されます。  
 
 ## <a name="client-data-sources-dashboard"></a>クライアント データ ソース ダッシュボード
 バージョン 1610 以降、**クライアント データ ソース** ダッシュボードを使用して、環境内の[ピア キャッシュ](/sccm/core/plan-design/hierarchy/client-peer-cache)の使用状況を把握できるようになりました。 ダッシュボードは、クライアントがコンテンツをダウンロードし、情報がサイトに戻されたことを報告した後にデータの表示を開始します。 これには、最大 24 時間かかることがあります。

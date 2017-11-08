@@ -1,5 +1,6 @@
 ---
-title: "ユーザー状態の管理 - Configuration Manager | Microsoft Docs"
+title: "ユーザー状態の管理 "
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager では、ユーザー状態移行ツールを使用してオペレーティング システムの展開シナリオでのユーザー状態データをキャプチャして復元します。"
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: eae8f16a43dd8b1c6f6c695fbefafbb26084ff36
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-user-state-in-system-center-configuration-manager"></a>System Center Configuration Manager でのユーザー状態の管理
 
@@ -85,9 +86,9 @@ ms.lasthandoff: 08/07/2017
 ##  <a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
  状態移行ポイントには、あるコンピューターでキャプチャされて別のコンピューターで復元されるユーザー状態データが保存されます。 ただし、セットアップ先のコンピューターでオペレーティング システムを更新する展開など、同じコンピューター上のオペレーティング システム展開のユーザー設定をキャプチャする場合、データは、ハードリンクを使用して同じコンピューターに保存したり、状態移行ポイントに保存したりすることができます。 一部のコンピューター展開では、状態ストアを作成すると、Configuration Manager によって状態ストアと対象コンピューターの関連付けが自動的に作成されます。 次の方法を使用して、ユーザー移行ポイントがユーザー状態データを保存するように構成できます。  
 
--   **サイト システム サーバーの作成ウィザード** を使用して、状態移行ポイント用の新しいサイト システム サーバーを作成します。  
+-   **サイト システム サーバーの作成ウィザード**を使用して、状態移行ポイント用の新しいサイト システム サーバーを作成します。  
 
--   **サイト システムの役割の追加ウィザード** を使用して、状態移行ポイントを既存のサーバーに追加します。  
+-   **サイト システムの役割の追加ウィザード**を使用して、状態移行ポイントを既存のサーバーに追加します。  
 
  これらのウィザードを使用すると、次の状態移行ポイント情報の入力を求められます。  
 

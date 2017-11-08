@@ -1,5 +1,6 @@
 ---
-title: "ボリューム購入 iOS アプリの管理 | Microsoft Docs"
+title: Manage volume-purchased iOS apps
+titleSuffix: Configuration Manager
 description: "iOS アプリ ストアから購入したアプリを展開および管理し、そのライセンスを追跡します。"
 ms.custom: na
 ms.date: 05/12/2017
@@ -12,14 +13,14 @@ ms.topic: article
 ms.assetid: 7c3b9316-247b-490b-a363-8f8553821579
 caps.latest.revision: "18"
 caps.handback.revision: "0"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: ce706e938f558406044f7890c80bb7156c3b262b
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c5ce168afe8668c67d7a66aaf79fce91d082afd5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>Manage volume-purchased iOS apps with System Center Configuration Manager
 
@@ -74,7 +75,7 @@ System Center Configuration Manager 1702 以降では、デバイスとユーザ
 
 ## <a name="step-1---to-get-and-upload-an-apple-vpp-token"></a>手順 1 - Apple VPP トークンを取得およびアップロードするには  
 
-1.  Configuration Manager コンソールで、**[管理]**、**[クラウド サービス]**、**[Apple Volume Purchase Program のトークン]** の順に選択します。   
+1.  Configuration Manager コンソールで、**[管理]** > **[クラウド サービス]** > **[Apple Volume Purchase Program のトークン]** の順に選択します。   
 
 3.  **[ホーム]** タブの **[Apple Volume Purchase Program のトークン]** グループで、**[Apple Volume Purchase Program トークンを追加する]** を選択します。  
 
@@ -100,7 +101,7 @@ System Center Configuration Manager 1702 以降では、デバイスとユーザ
 
 ## <a name="step-2---deploy-a-volume-purchased-app"></a>手順 2 - ボリューム購入アプリのデプロイ  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**、**[アプリケーション管理]**、**[ストア アプリのライセンス情報]** の順に選択します。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[ストア アプリのライセンス情報]** の順に選択します。  
 
 3.  展開するアプリを選択し、**[ホーム]** タブの **[作成]** グループで、**[アプリケーションの作成]** を選択します。
 作成された Configuration Manager アプリケーションには、ビジネス向け Windows ストアのアプリが含まれます。 他の Configuration Manager のアプリケーションと同様に、このアプリケーションを展開して監視できます。

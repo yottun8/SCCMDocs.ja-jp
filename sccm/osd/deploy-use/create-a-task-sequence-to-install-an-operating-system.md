@@ -1,5 +1,6 @@
 ---
-title: "オペレーティング システムをインストールするタスク シーケンスの作成 | Microsoft Docs"
+title: "オペレーティング システムをインストールするタスク シーケンスの作成"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でタスク シーケンスを使用して、オペレーティング システム イメージとその他のコンテンツをインストール先のコンピューターに自動的にインストールします。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "13"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 41aa6cf69a746f0ab67d804f1ee0c70db05d65ee
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 47210939c66bb31d173c7e406a66c764d5008879
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-a-task-sequence-to-install-an-operating-system-in-system-center-configuration-manager"></a>System Center Configuration Manager のオペレーティング システムをインストールするタスク シーケンスを作成する
 
@@ -45,7 +46,7 @@ System Center Configuration Manager でタスク シーケンスを使用して�
 
 1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
 
-2.  **[ ソフトウェア ライブラリ ]** ワークスペースで **[ オペレーティング システム]** を展開して、**[ タスク シーケンス ]** をクリックします。  
+2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 
 3.  **[ホーム]** タブの **[作成]** グループで **[タスク シーケンスの作成]** をクリックして、タスク シーケンスの作成ウィザードを起動します。  
 

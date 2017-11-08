@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager でのセキュリティの構成 | Microsoft Docs"
+title: "セキュリティの構成"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager のセキュリティ関連オプションを構成します。"
 ms.custom: na
 ms.date: 12/30/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0034381a7a388ddc3eda5e774f3c63d741336301
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 94699e41291b7e1c7072962595aa71384b03f27b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-security-in-system-center-configuration-manager"></a>System Center Configuration Manager でのセキュリティの構成
 
