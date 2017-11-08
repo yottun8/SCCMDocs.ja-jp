@@ -1,5 +1,6 @@
 ---
-title: "構成データのインポート | Microsoft Docs"
+title: "構成データのインポート"
+titleSuffix: Configuration Manager
 description: "構成データは、キャビネット ファイル形式であり、サポートされている Service Modeling Language スキーマに準拠している場合にインポートできます。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: d770a2f305856560de70014cc39a95207f0efab5
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: c7273ff47edb4a6d39d8c85b2d349ee7315edb17
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="import-configuration-data-with-system-center-configuration-manager"></a>System Center Configuration Manager で構成データをインポートする
 
@@ -51,7 +52,7 @@ System Center Configuration Manager コンソールで構成基準と構成項�
 
 ### <a name="import-configuration-data"></a>構成データのインポート  
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]**、**[構成アイテム]** または **[構成基準]** の順にクリックします。
+1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[構成アイテム]** または **[構成基準]** の順にクリックします。
 2.  **[ホーム]** タブの **[作成]** グループで、**[構成データのインポート]** をクリックします。  
 3.  **ファイルの選択** のページ、 **構成データのインポート ウィザード**, 、 をクリックして **追加**, 、し、次に、 **開く**  ダイアログ ボックスで、インポートする .cab ファイルを選択します。  
 4.  Configuration Manager コンソールでインポートした構成データを編集可能にする場合は、**[インポートする構成項目と構成基準を含む新しいファイルを作成する]** チェックボックスをオンにします。  

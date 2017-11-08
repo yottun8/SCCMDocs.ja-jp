@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager アプリケーションの管理タスク | Microsoft Docs"
+title: "アプリケーションの管理タスク"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager アプリケーションおよび展開の種類を管理します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 679f1034db1b5fdef4b582446405440b0c47867e
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 8d4cc2cd8de9626b6911dc50dbdec2ccdaada94c
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="management-tasks-for-system-center-configuration-manager-applications"></a>System Center Configuration Manager アプリケーションの管理タスク
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 09/15/2017
 |タスク|説明|  
 |----------|-------------|  
 |**アクセス アカウントの管理**|**[アクセス アカウントの管理]** ダイアログ ボックスを開くと、選択したアプリケーションに関連付けられたコンテンツへのアクセス許可のレベルを指定できます。|  
-|**事前設定コンテンツ ファイルの作成**|**事前設定コンテンツ ファイルの作成ウィザード** を開始します。このウィザードは、コンテンツのリモート配布ポイントへの配布を管理するのに役立ちます。 スケジュールおよび調整によってリモート配布ポイントの問題が有効に解決できない場合は、配布ポイントにコンテンツを事前設定することができます。<br /><br /> 「[コンテンツとコンテンツ インフラストラクチャの管理](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。|  
+|**事前設定コンテンツ ファイルの作成**|**事前設定コンテンツ ファイルの作成ウィザード**を開始します。このウィザードは、コンテンツのリモート配布ポイントへの配布を管理するのに役立ちます。 スケジュールおよび調整によってリモート配布ポイントの問題が有効に解決できない場合は、配布ポイントにコンテンツを事前設定することができます。<br /><br /> 「[コンテンツとコンテンツ インフラストラクチャの管理](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。|  
 |**リビジョン履歴**|**[アプリケーションのリビジョン履歴]** ダイアログ ボックスが開きます。このダイアログ ボックスでは、このアプリケーションに加えられたリビジョンのプロパティを確認したり、古いアプリケーション リビジョンを削除したり、このアプリケーションの旧バージョンを復元したりすることができます。<br /><br /> 「[アプリケーションを修正して置き換える方法](../../apps/deploy-use/revise-and-supersede-applications.md)」を参照してください。|  
 |**展開の種類の作成**|**展開の種類の作成ウィザード**が開き、選択したアプリケーションに新しい展開の種類を追加できます。<br /><br /> 「[Create applications with System Center Configuration Manager](../../apps/deploy-use/create-applications.md)」 (System Center Configuration Manager でアプリケーションを作成する) を参照してください。|  
 |**統計情報の更新**|**[監視]** ワークスペースの、**[展開]** ノードに表示されるこのアプリケーションの展開に関する情報を更新します。<br /><br /> 「[System Center Configuration Manager コンソールからのアプリケーションの監視](../../apps/deploy-use/monitor-applications-from-the-console.md)」を参照してください。|  
@@ -45,9 +46,9 @@ ms.lasthandoff: 09/15/2017
 |**削除**|アプリケーションをインベントリから削除すると、展開に使用することはできなくなりますが、このアプリケーション自体やその展開は削除されません。 クライアント コンピューターにインストールされたアプリケーションの既存のコピーが削除されることはありません。 アプリケーションのすべてのリビジョンは 60 日後に Configuration Manager から削除されます。 ただし、インストール済みのアプリケーションのコピーは削除されません。<br /><br /> アプリケーションを削除するには、まずインベントリから削除し、次にその展開をすべて削除し、さらに他の展開によるアプリケーションの参照を削除してから、アプリケーションのすべてのリビジョンを削除します。<br /><br /> 「[アプリケーションを修正して置き換える方法](../../apps/deploy-use/revise-and-supersede-applications.md)」を参照してください。|  
 |**エクスポート**|**アプリケーションのエクスポート ウィザード**が開きます。このウィザードは選択したアプリケーションを .zip ファイルにエクスポートするので、これをアーカイブしたり、別のサイトにインストールしたりできます。 アプリケーションのコンテンツをエクスポートすると、そのコンテンツを含むフォルダーが作成されます。<br /><br /> さらに、アプリケーションの依存関係や、置き換え関係、そのアプリケーションと依存関係の条件やコンテンツもエクスポートできます。<br /><br /> Windows PowerShell コマンドレットの **Export-CMApplication** は、同じ機能を実行します。 詳細については、Microsoft System Center 2012 Configuration Manager SP1 コマンドレット リファレンス ドキュメントの「[Export-CMApplication](http://go.microsoft.com/fwlink/p/?LinkID=258880)」を参照してください。|  
 |**削除**|現在選択しているアプリケーションを削除します。<br /><br /> ほかのアプリケーションが依存している場合、アクティブな展開がある場合、または依存タスク シーケンスがある場合は、そのアプリケーションを削除できません。|  
-|**展開のシミュレート**|**アプリケーション展開のシミュレーション ウィザード** を開きます。このウィザードを使うと、アプリケーションをインストールしたり、アンインストールせずに、コンピューターへのアプリケーションの展開結果をテストできます。<br /><br /> 「[Simulate application deployments with System Center Configuration Manager](../../apps/deploy-use/simulate-application-deployments.md)」 (System Center Configuration Manager でアプリケーションの展開をシミュレーションする) を参照してください。|  
-|**デプロイ**|**ソフトウェアの展開ウィザード** を開きます。このウィザードを使うと、階層内のコンピューターのグループに対して選択したアプリケーションを展開できます。<br /><br /> 「[Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md)」 (System Center Configuration Manager でアプリケーションを展開する) を参照してください。|  
-|**コンテンツの配布**|**コンテンツの配布ウィザード** を開きます。このウィザードを使うと、階層内の配布ポイントに選択したアプリケーションのコンテンツをコピーできます。<br /><br /> 「[コンテンツとコンテンツ インフラストラクチャの管理](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。|  
+|**展開のシミュレート**|**アプリケーション展開のシミュレーション ウィザード**を開きます。このウィザードを使うと、アプリケーションをインストールしたり、アンインストールせずに、コンピューターへのアプリケーションの展開結果をテストできます。<br /><br /> 「[Simulate application deployments with System Center Configuration Manager](../../apps/deploy-use/simulate-application-deployments.md)」 (System Center Configuration Manager でアプリケーションの展開をシミュレーションする) を参照してください。|  
+|**デプロイ**|**ソフトウェアの展開ウィザード**を開きます。このウィザードを使うと、階層内のコンピューターのグループに対して選択したアプリケーションを展開できます。<br /><br /> 「[Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md)」 (System Center Configuration Manager でアプリケーションを展開する) を参照してください。|  
+|**コンテンツの配布**|**コンテンツの配布ウィザード**を開きます。このウィザードを使うと、階層内の配布ポイントに選択したアプリケーションのコンテンツをコピーできます。<br /><br /> 「[コンテンツとコンテンツ インフラストラクチャの管理](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。|  
 |**関係の表示**|選択したアプリケーションと他のアプリケーションの関係図が表示されます。 次のいずれかを選択します。<br><br><ul><li>**依存関係** – 選択したアプリケーションに依存しているアプリケーションや、選択したアプリケーションが依存しているアプリケーションが表示されます。</li><li>**置き換え** – 選択したアプリケーションによって置き換えられるアプリケーションと、選択したアプリケーションを置き換えるアプリケーションが表示されます。</li><li>**グローバル条件** – このアプリケーションが参照するグローバル条件が表示されます。</li></ol><br /> 「[How to revise and supersede applications in System Center Configuration Manager](../../apps/deploy-use/revise-and-supersede-applications.md)」 (System Center Configuration Manager でアプリケーションを修正して置き換える方法) および「[How to create global conditions in System Center Configuration Manager](../../apps/deploy-use/create-global-conditions.md)」 (System Center Configuration Manager でグローバル条件を作成する方法) を参照してください。|  
 
 ##  <a name="manage-deployment-types"></a>展開の種類を管理する  
