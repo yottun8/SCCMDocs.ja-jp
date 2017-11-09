@@ -1,5 +1,6 @@
 ---
-title: "アラートとステータス システム | Microsoft Docs"
+title: "アラートとステータス システム"
+titleSuffix: Configuration Manager
 description: "アラートを構成し、組み込みステータス システムを使用して、Configuration Manager 展開の状態について常に通知される状態にします。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: ed692bdea055775890535d2666f09ba5f5c7c4e1
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 690709c0067099a022f4a29de4e7d935952e4260
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>System Center Configuration Manager のアラートとステータス システムの使用
 
