@@ -1,5 +1,6 @@
 ---
-title: SQL Server Always On | Microsoft Docs
+title: SQL Server AlwaysOn
+titleSuffix: Configuration Manager
 description: "SCCM での SQL Server Always On 可用性グループの使用を計画します。"
 ms.custom: na
 ms.date: 09/22/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "16"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 3e275f6203a9e0b9210bfbadbf9addf64f6533d8
-ms.sourcegitcommit: 8faf42135a8dc9c384407e64f3f8ba204fb15847
+ms.openlocfilehash: 24eaa33f1f9b333894817f089149e2cbed35df75
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager で SQL Server Always On 可用性グループを使用するための準備
 
@@ -75,7 +76,7 @@ SQL Server の各インスタンスは、ドメイン ユーザー アカウン�
 -   1706 より前のバージョンでは、最大 2 つの同期セカンダリ レプリカを作成できます。
 -   バージョン 1706 以降、可用性グループでは、使用する SQL Server のバージョンでサポートされている同じ数と種類のレプリカを使用できます。
 
-    同期レプリカを復旧するために非同期コミット レプリカを使用できます。 これを実行する方法については、バックアップと回復に関するトピックで[サイト データベースの回復オプション]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)を参照してください。
+-   バージョン 1706 より、非同期コミット レプリカを使用して同期レプリカを復旧できます。 これを実行する方法については、バックアップと回復に関するトピックで[サイト データベースの回復オプション]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)を参照してください。
     > [!CAUTION]  
     > Configuration Manager では、非同期コミット レプリカをサイト データベースとして使用するためのフェールオーバーはサポートされていません。
 Configuration Manager では、非同期コミット レプリカが最新のものかどうかを確認するために状態を検証せず、また、[このようなレプリカは意図的に非同期にできる]( https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes)ため、非同期コミット レプリカをサイト データベースとして使用すると、サイトとデータの整合性が危険にさらされる場合があります。

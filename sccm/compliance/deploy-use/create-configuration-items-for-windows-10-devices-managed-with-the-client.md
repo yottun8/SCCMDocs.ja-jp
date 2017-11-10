@@ -1,5 +1,6 @@
 ---
-title: "クライアントで管理されている Windows 10 の構成項目を作成する - Configuration Manager | Microsoft Docs"
+title: "Windows 10 のクライアント管理の構成アイテムの作成 "
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の Windows 10 構成項目を使用して、Configuration Manager クライアントで管理されている Windows 10 コンピューターの設定を管理します。"
 ms.custom: na
 ms.date: 03/28/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: be1a88341b08c454537279b27a27ce4fb90998de
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 4f22ab22ec666c55962231bf92a42b25c4a7c127
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-configuration-items-for-windows-10-devices-managed-with-the-system-center-configuration-manager-client"></a>System Center Configuration Manager クライアントを使用して管理されている Windows 10 デバイスの構成項目を作成する方法
 System Center Configuration Manager の **Windows 10** 構成項目を使用して、Configuration Manager クライアントで管理されている Windows 10 コンピューターの設定を管理します。  
@@ -31,17 +32,17 @@ System Center Configuration Manager の **Windows 10** 構成項目を使用し�
   
 ### <a name="to-create-a-windows-10-configuration-item"></a>Windows 10 構成項目を作成するには  
   
-1.  Configuration Manager コンソールで、[ **資産とコンプライアンス** ] をクリックします。  
+1.  Configuration Manager コンソールで、**[ 資産とコンプライアンス ]** をクリックします。  
   
-2.  [ **資産とコンプライアンス** ] ワークスペースで [ **コンプライアンス設定** ] を展開して、[ **構成項目** ] をクリックします。  
+2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ コンプライアンス設定 ]** を展開して、**[ 構成項目 ]** をクリックします。  
   
-3.  [ **ホーム** ] タブの [ **作成** ] グループで、[ **構成項目の作成** ] をクリックします。  
+3.  **[ ホーム ]** タブの **[ 作成 ]** グループで、**[ 構成項目の作成 ]** をクリックします。  
   
 4.  **構成項目の作成ウィザード** の **[全般]**ページで、構成項目の名前と、必要に応じて説明を入力します。  
   
 5.  **[作成する構成項目の種類の指定]**で、 **[Windows 10]**を選択します。  
   
-6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、[ **カテゴリ** ] をクリックします。  
+6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、**[ カテゴリ ]** をクリックします。  
   
 7.  ウィザードの **[サポートされているプラットフォーム]** ページで、構成項目を評価する特定の Windows 10 プラットフォームを選択します。  
   

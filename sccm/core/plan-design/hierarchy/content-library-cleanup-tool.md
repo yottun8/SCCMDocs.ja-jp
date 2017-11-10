@@ -1,5 +1,6 @@
 ---
-title: "コンテンツ ライブラリ クリーンアップ ツール | Microsoft Docs"
+title: "コンテンツ ライブラリ クリーンアップ ツール"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の展開と関連付けられなくなった孤立コンテンツを削除するには、コンテンツ ライブラリ クリーンアップ ツールを使います。"
 ms.custom: na
 ms.date: 4/7/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 76e6772bdd5cbd32d525e728f6ebc988b045da78
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c5bb9c055378c769613de45ffd776bbbdc1d0080
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>System Center Configuration Manager のコンテンツ ライブラリ クリーンアップ ツール
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 08/07/2017
     **/delete** スイッチを使ってツールを実行すると、ツールは削除モードで実行されます。
 
      - このモードでツールを実行すると、指定した配布ポイントで検出された孤立コンテンツを、配布ポイントのコンテンツ ライブラリから削除することができます。
-     -  各ファイルを削除する前に、ユーザーはファイルを削除することを確認する必要があります。  削除する場合は [**Y**] を選択し、削除しない場合は [**N**] を選択します。あるいは、[**すべて削除**] を選択すると、以降のメッセージは省略され、孤立したすべてのコンテンツが削除されます。  
+     -  各ファイルを削除する前に、ユーザーはファイルを削除することを確認する必要があります。  削除する場合は **[Y]** を選択し、削除しない場合は **[N]** を選択します。あるいは、**[すべて削除]** を選択すると、以降のメッセージは省略され、孤立したすべてのコンテンツが削除されます。  
      </br>
 
 ツールをどちらのモードで実行しても、自動的にログが作成されます。このログには、ツールの実行モード、配布ポイントの名前、日付、および操作時刻を含んだ名前が付けられます。 ツールが終了すると、ログ ファイルが自動的に開きます。

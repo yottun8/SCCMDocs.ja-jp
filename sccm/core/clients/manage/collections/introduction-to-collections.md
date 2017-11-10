@@ -1,5 +1,6 @@
 ---
-title: "コレクションの概要 | Microsoft ドキュメント"
+title: "コレクションの概要"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager のコレクションの使用方法について概要を説明します。"
 ms.custom: na
 ms.date: 01/03/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 547d231d48ccbc8241e9f1f8f71e3750b266b73e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 835fbbeaf64a16b46e5a600ccf89a2a885bbf21a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="introduction-to-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager のコレクションの概要
 

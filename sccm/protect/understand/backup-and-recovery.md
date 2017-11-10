@@ -1,5 +1,6 @@
 ---
-title: "サイトのバックアップ | Microsoft Docs"
+title: "バックアップ サイト"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で、障害やデータの損失が発生する前にサイトをバックアップする方法について説明します。"
 ms.custom: na
 ms.date: 6/5/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "22"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 7deb00d4b67eabf3238907b337a9d0367c3d99cc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 7dae5ada647146713b884b09d0eda1c7ec6531ef
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Configuration Manager サイトのバックアップ
 
@@ -38,7 +39,7 @@ ms.lasthandoff: 08/07/2017
 ####  <a name="using-data-protection-manager-to-back-up-your-site-database"></a>Data Protection Manager を使用したサイト データベースのバックアップ
 System Center 2012 Data Protection Manager (DPM) を使用してサイト データベースをバックアップできます。
 
-DPM でサイト データベース コンピューターの新しい保護グループを作成する必要があります。 新しい保護グループの作成ウィザードの [ **グループ メンバーの選択** ] ページで、データ ソース一覧から SMS ライター サービスを選択してから、該当するメンバーとしてサイト データベースを選択します。 DPM を使用したサイト データベースのバックアップの詳細については、TechNet の「 [Data Protection Manager](http://go.microsoft.com/fwlink/?LinkId=272772) 」ドキュメント ライブラリを参照してください。  
+DPM でサイト データベース コンピューターの新しい保護グループを作成する必要があります。 新しい保護グループの作成ウィザードの **[ グループ メンバーの選択 ]** ページで、データ ソース一覧から SMS ライター サービスを選択してから、該当するメンバーとしてサイト データベースを選択します。 DPM を使用したサイト データベースのバックアップの詳細については、TechNet の「 [Data Protection Manager](http://go.microsoft.com/fwlink/?LinkId=272772) 」ドキュメント ライブラリを参照してください。  
 
 > [!IMPORTANT]  
 >  Configuration Manager では、名前付きインスタンスを使用する SQL Server クラスターの DPM バックアップはサポートしていませんが、SQL Server の既定インスタンスを使用する SQL Server クラスターの DPM バックアップはサポートしています。  
@@ -103,9 +104,9 @@ Configuration Manager のバックアップ サービスは、バックアップ
 
 -   タスクで作成したバックアップ先フォルダーにあるファイルのタイムスタンプを確認します。 タイムスタンプが、タスクのスケジュールされた前回の実行日時と同じ日時で更新されていることを確認します。  
 
--   [ **監視** ] ワークスペースの [ **コンポーネントのステータス** ] ノードで、SMS_SITE_BACKUP のステータス メッセージを確認します。 サイトのバックアップが問題なく完了している場合は、ID 5035 のメッセージが表示されているはずです。  
+-   **[ 監視 ]** ワークスペースの **[ コンポーネントのステータス ]** ノードで、SMS_SITE_BACKUP のステータス メッセージを確認します。 サイトのバックアップが問題なく完了している場合は、ID 5035 のメッセージが表示されているはずです。  
 
--   バックアップが失敗したら警告を生成するようにサイト サーバーのバックアップ メンテナンス タスクが構成されている場合は、[ **監視** ] ワークスペースの [ **アラート** ] ノードでバックアップ エラーを確認できます。  
+-   バックアップが失敗したら警告を生成するようにサイト サーバーのバックアップ メンテナンス タスクが構成されている場合は、**[ 監視 ]** ワークスペースの **[ アラート ]** ノードでバックアップ エラーを確認できます。  
 
 -   &lt;*ConfigMgrInstallationFolder*>\Logs にある Smsbkup.log で警告やエラーを確認します。 サイトのバックアップが問題なく完了している場合は、メッセージ ID " `Backup completed` " の " `STATMSG: ID=5035`" というメッセージとタイムスタンプが表示されているはずです。  
 
@@ -128,7 +129,7 @@ Configuration Manager のバックアップ サービスは、バックアップ
 
 AfterBackup.bat を使って、バックアップが完了するたびにバックアップ スナップショットがアーカイブされるようにしたり、サイト サーバーのバックアップ メンテナンス タスクに含まれていない後処理が自動的に行われるようにすることができます。 前者の場合は、AfterBackup.bat でアーカイブ処理とバックアップ処理を統合することにより、常に新しいバックアップ スナップショットがアーカイブされるようにします。
 
-AfterBackup.bat ファイルが存在しない場合は、バックアップ タスクでその実行がスキップされます。バックアップ処理自体には、何も影響ありません。 サイト バックアップ タスクによって AfterBackup.bat ファイルが正常に実行されたことを確認するには、[ **監視** ] ワークスペースの [ **コンポーネントのステータス** ] ノードを参照して、SMS_SITE_BACKUP のステータス メッセージを確認します。 AfterBackup.bat コマンド ファイルの実行が正常に開始された場合は、ID 5040 の付いたメッセージが表示されているはずです。  
+AfterBackup.bat ファイルが存在しない場合は、バックアップ タスクでその実行がスキップされます。バックアップ処理自体には、何も影響ありません。 サイト バックアップ タスクによって AfterBackup.bat ファイルが正常に実行されたことを確認するには、**[ 監視 ]** ワークスペースの **[ コンポーネントのステータス ]** ノードを参照して、SMS_SITE_BACKUP のステータス メッセージを確認します。 AfterBackup.bat コマンド ファイルの実行が正常に開始された場合は、ID 5040 の付いたメッセージが表示されているはずです。  
 
 > [!TIP]  
 >  サイト サーバーのバックアップ ファイルをアーカイブする AfterBackup.bat ファイルを作成するには、バッチ ファイルで、[Robocopy](http://go.microsoft.com/fwlink/p/?LinkId=228408) などのコピー コマンド ツールを使用する必要があります。 たとえば、AfterBackup.bat ファイルを作成して、1 行目に次のように記述します: `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
@@ -174,7 +175,7 @@ Configuration Manager のコンテンツ ライブラリは、ソフトウェア
 
 ### <a name="to-determine-the-folders-used-to-store-user-state-migration-data"></a>ユーザー状態の移行データを格納しているフォルダーを確認するには  
 
-1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
+1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
 
 2.  **[管理]** ワークスペースで、**[サイトの構成]** を展開して **[サーバーとサイト システムの役割]** を選択します。  
 
@@ -182,7 +183,7 @@ Configuration Manager のコンテンツ ライブラリは、ソフトウェア
 
 
 4.  **[サイトの役割** ] タブの **[プロパティ]** グループで、 **[プロパティ]**をクリックします。  
-5.  ユーザー状態移行データが保存されているフォルダーが [ **全般** ] タブの [ **フォルダーの詳細** ] セクションに一覧表示されます。  
+5.  ユーザー状態移行データが保存されているフォルダーが **[ 全般 ]** タブの **[ フォルダーの詳細 ]** セクションに一覧表示されます。  
 
 
 

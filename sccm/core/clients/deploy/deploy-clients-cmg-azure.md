@@ -1,5 +1,6 @@
 ---
-title: "インターネットからクライアントをインストールして割り当てる | Microsoft Docs"
+title: "インターネットからクライアントをインストールして割り当てる"
+titleSuffix: Configuration Manager
 description: "インターネットから System Center Configuration Manager クライアントをインストールして割り当てます。"
 ms.custom: na
 ms.date: 8/07/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d783cc2f12400084ad1cd62a338a31c9747c05fb
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 2ef7580f94864094e9420eb0f5a5c5b4dc9d6d24
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>認証のため Azure AD を使用して、Configuration Manager の Windows 10 クライアントをインストールして割り当てる
 
@@ -68,8 +69,8 @@ Azure AD ユーザーの探索は、*クラウド管理*の一部として構成
 
 1.  [クライアント設定を構成する方法](/sccm/core/clients/deploy/configure-client-settings)に関するページの情報を使用して、次のクライアント設定セクション (**[クラウド サービス]** にあります) を構成します。
     - **クラウド配布ポイントへのアクセスを許可する** - この設定を有効にすると、インターネットベースのデバイスが、構成マネージャー クライアントのインストールに必要なコンテンツを取得できるようになります。 クラウド配布ポイントでコンテンツを入手できない場合、デバイスはクラウド管理ゲートウェイに接続された管理ポイントからコンテンツを取得できます。
-    - **[新しい Windows 10 ドメインに参加しているデバイスを自動的に Azure Active Directory に登録する]**: **[はい]** (既定) または **[いいえ] **に設定します。
-    - **[クライアントでクラウド管理ゲートウェイを使用できるようにする]**: **[はい]** (既定) または **[いいえ] **に設定します。
+    - **[新しい Windows 10 ドメインに参加しているデバイスを自動的に Azure Active Directory に登録する]**: **[はい]** (既定) または **[いいえ]** に設定します。
+    - **[クライアントでクラウド管理ゲートウェイを使用できるようにする]**: **[はい]** (既定) または **[いいえ]** に設定します。
 2.  クライアント設定を必要なデバイスのコレクションに展開します。 ユーザー コレクションには、これらの設定を展開しないでください。
 
 デバイスが Azure AD に参加していることを確認するには、コマンド プロンプト ウィンドウでコマンド **dsregcmd.exe/status** を実行します。 デバイスが Azure AD に参加している場合は、結果の **[AzureAdjoined]** フィールドに **[YES]** が表示されます。

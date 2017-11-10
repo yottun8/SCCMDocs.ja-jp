@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager バージョン 1602 の新機能 | Microsoft Docs"
+title: "バージョン 1602 の新機能"
+titleSuffix: Configuraton Manager
 description: "System Center Configuration Manager のバージョン 1602 の変更点および導入された新機能について詳しく説明します。"
 ms.custom: na
 ms.date: 12/30/2016
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 9a548f43625a907173e7b967d26356bd80f1c5d9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 0e151b01d3399dafc6ed3962560e8e9975a37a8e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1602 の新機能
 
@@ -154,7 +155,7 @@ System Center Configuration Manager の更新プログラム 1602 は、以前�
 ### <a name="software-center-branding-changes"></a>ソフトウェア センターのブランド変更  
  ソフトウェア センターに表示される色、組織名、およびアイコンを変更できます。 これらの設定は、次の規則に従って適用されます。  
 
-- アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされていない場合は、[**ソフトウェア センターに表示される組織名**] という [**コンピューター エージェント**] クライアント設定で指定された組織名がソフトウェア センターに表示されます。  
+- アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされていない場合は、**[ソフトウェア センターに表示される組織名]** という **[コンピューター エージェント]** クライアント設定で指定された組織名がソフトウェア センターに表示されます。  
 
 - アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされている場合は、アプリケーション カタログ Web サイトのポイント サイト サーバーの役割プロパティに指定されている組織名と色がソフトウェア センターに表示されます。  
 

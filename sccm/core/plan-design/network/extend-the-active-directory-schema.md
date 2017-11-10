@@ -1,5 +1,6 @@
 ---
-title: "発行と Active Directory スキーマ | Microsoft Docs"
+title: "発行と Active Directory スキーマ"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の Active Directory スキーマを拡張して、クライアントの展開と構成のプロセスを簡略化します。"
 ms.custom: na
 ms.date: 2/6/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 58beef440db8e019a06ce7c4c8eaabc8e85ce954
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 747d194d8244d42d557bc442f09035808f6eb2f0
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prepare-active-directory-for-site-publishing"></a>サイト発行のために Active Directory を準備する
 

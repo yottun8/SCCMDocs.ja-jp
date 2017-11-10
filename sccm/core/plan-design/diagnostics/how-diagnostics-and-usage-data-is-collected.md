@@ -1,5 +1,6 @@
 ---
-title: "診断データの収集 | Microsoft Docs"
+title: "診断データを収集する"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager がそれ自体に関する診断と使用状況データを収集する方法について説明します。"
 ms.custom: na
 ms.date: 12/29/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 9c0165212fe34f460be2ce870d0542b616f3bc4d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e83588ebff1238b308ab9cf99fb3593df7a27efa
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-diagnostics-and-usage-data-is-collected-by-system-center-configuration-manager"></a>System Center Configuration Manager が診断と使用状況データを収集する方法
 

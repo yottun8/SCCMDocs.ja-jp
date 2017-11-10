@@ -1,5 +1,6 @@
 ---
-title: "証明書の詳細をインポートして PFX 証明書プロファイルを作成する | Microsoft Docs"
+title: "証明書の詳細をインポートして PFX 証明書プロファイルを作成する"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で PFX ファイルを使用して暗号化されたデータ交換をサポートするユーザーに固有の証明書を生成する方法について説明します。"
 ms.custom: na
 ms.date: 04/04/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: c8346d04c7cd9761291824f5d30f09fab9acbcf9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 25c6927698e409ff3b0c3f846e2cc567a6f458ab
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-pfx-certificate-profiles-by-importing-certificate-details"></a>証明書の詳細をインポートして PFX 証明書プロファイルを作成する方法
 
@@ -48,10 +49,10 @@ System Center Configuration Manager では、証明書資格情報をインポ�
 
 ### <a name="get-started"></a>作業開始
 
-1.  System Center Configuration Manager コンソールで、[**資産とコンプライアンス**] をクリックします。  
-2.  **資産とコンプライアンス**  ワークスペースで、 **コンプライアンス設定** 、 **会社のリソースへのアクセス**  の順に展開してから、 **証明書プロファイル** をクリックします。  
+1.  System Center Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
+2.  **[ 資産とコンプライアンス ]** ワークスペースで、**[ コンプライアンス設定 ]**、**[ 会社のリソースへのアクセス ]** の順に展開してから、**[ 証明書プロファイル ]** をクリックします。  
 
-3.  [ **ホーム** ] タブの [ **作成** ] グループで、[ **証明書プロファイルの作成**] をクリックします。
+3.  **[ ホーム ]** タブの **[ 作成 ]** グループで、**[ 証明書プロファイルの作成]** をクリックします。
 
 4.  **[証明書プロファイルの作成]** ウィザードの **[全般]** ページで、次の情報を指定します。  
 

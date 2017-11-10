@@ -1,5 +1,6 @@
 ---
-title: "インストール シナリオ | Microsoft Docs"
+title: "インストール シナリオ"
+titleSuffix: Configuration Manager
 description: "サイトを更新またはアップグレードするときに新しい Configuration Manager 階層をインストールする手法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 938b2970e4d8534fdd5f3daf0c9a5ddb1f576e60
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 9e7cdd08ba7850f4cb3558c7474c0583e4411b98
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="scenarios-to-streamline-your-installation-of-system-center-configuration-manager"></a>System Center Configuration Manager のインストールを合理化するシナリオ
 
@@ -34,7 +35,7 @@ System Center Configuration Manager の Current Branch の更新プログラム�
 -   このシナリオでは、基本レベルへの追加サイトのインストールのプロセスをスキップし、使用する更新プログラムのバージョンへそれらを更新します。  
 -   このシナリオでは、構成基準バージョンへのクライアントのインストールのプロセスをスキップし、新しいバージョンに更新するときにそれらを再インストールします。  
 
- **Microsoft System Center 2012 Configuration Manager** インフラストラクチャを System Center Configuration Manager の更新プログラムのバージョンにアップグレードします。  
+**Microsoft System Center 2012 Configuration Manager** インフラストラクチャを System Center Configuration Manager の更新プログラムのバージョンにアップグレードします。  
 
 -   中央管理サイトと各プライマリ サイトを構成基準のバージョン (バージョン 1606 など) に手動でアップグレードしてから、更新プログラムのバージョン (バージョン 1610 など) をインストールします。  
 -   使用する更新プログラムのバージョンがプライマリ サイトで実行されるようになるまで、セカンダリ サイトを System Center 2012 Configuration Manager からアップグレードしないでください。  

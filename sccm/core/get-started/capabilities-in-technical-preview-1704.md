@@ -1,5 +1,6 @@
 ---
-title: "Configuration Manager の Technical Preview 1704 の機能"
+title: "Technical Preview 1704 の機能"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の Technical Preview バージョン 1704 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 4/21/2017
@@ -13,11 +14,11 @@ ms.assetid: e318e705-20f2-417d-8cde-7dfe661b2fa7
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: d7caee47ca74064630e09c1bdb94187af256d4b4
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 179fd3c8cb3f44db270dab344c88c63cc88a2e71
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="capabilities-in-technical-preview-1704-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1704 の機能
 
@@ -33,7 +34,7 @@ System Center Configuration Manager (Configuration Manager) のアプリ構成�
 
 ### <a name="try-it-out"></a>試してみましょう                 
 
-Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリ構成ポリシー]** の順に選択し、**[アプリ構成ポリシーの作成]** を選択します。 ウィザードの **[全般]** ページで、**[構成ポリシーの種類の選択]** ができます。 アプリの構成ポリシー [**Android for Work アプリの構成ポリシー**] の対象となるプラットフォームを指定します。 次に、**[名前と値のペアを指定します]** または **[プロパティ一覧 JSON ファイルを参照します]** を選択します。 新しいアプリ構成ポリシーが **[ソフトウェア ライブラリ]** ワークスペースの **[アプリ構成ポリシー]** ノードに表示されます。 アプリ構成ポリシーと Android for Work アプリの展開を関連付けるには、「[アプリケーションの展開](/sccm/apps/deploy-use/deploy-applications)」トピックの手順に従い、通常どおりにアプリを展開します。
+Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリ構成ポリシー]** の順に選択し、**[アプリ構成ポリシーの作成]** を選択します。 ウィザードの **[全般]** ページで、**[構成ポリシーの種類の選択]** ができます。 アプリの構成ポリシー **[Android for Work アプリの構成ポリシー]** の対象となるプラットフォームを指定します。 次に、**[名前と値のペアを指定します]** または **[プロパティ一覧 JSON ファイルを参照します]** を選択します。 新しいアプリ構成ポリシーが **[ソフトウェア ライブラリ]** ワークスペースの **[アプリ構成ポリシー]** ノードに表示されます。 アプリ構成ポリシーと Android for Work アプリの展開を関連付けるには、「[アプリケーションの展開](/sccm/apps/deploy-use/deploy-applications)」トピックの手順に従い、通常どおりにアプリを展開します。
 
 ## <a name="hardware-inventory-collects-secure-boot-information"></a>ハードウェア インベントリでのセキュア ブート情報の収集
 ハードウェア インベントリは、クライアントでセキュア ブートが有効になっているかどうかの情報を収集します。 この情報は、**SMS_Firmware** クラス (バージョン 1702 で導入) に格納されており、ハードウェア インベントリでは既定で有効になっています。 ハードウェア インベントリの詳細については、[ハードウェア インベントリを構成する方法](/sccm/core/clients/manage/inventory/configure-hardware-inventory)に関する記事を参照してください。

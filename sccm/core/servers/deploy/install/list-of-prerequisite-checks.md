@@ -1,5 +1,6 @@
 ---
-title: "前提条件の確認 | Microsoft Docs"
+title: "前提条件の確認"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の利用可能な前提条件の確認について説明します。 セキュリティ権限の前提条件の確認も対象となります。"
 ms.custom: na
 ms.date: 4/17/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "12"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 14834f62ffaa8fcba5ddb7536a0b76e18b557e53
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b26ec9626924da2a621999b37ee5c1979021bdec
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="list-of-prerequisite-checks-for-system-center-configuration-manager"></a>System Center Configuration Manager の前提条件の確認の一覧
 
@@ -99,7 +100,7 @@ ms.lasthandoff: 08/07/2017
 |**ユーザー状態移行ツール (USMT) のインストール**|Windows 8.1 用 Windows アセスメント & デプロイメント キット (ADK) のユーザー状態移行ツール (USMT) コンポーネントがインストールされているかどうかを確認します。|エラー|中央管理サイト、 <br>プライマリ サイト (スタンドアロンのみ)|  
 |**SQL Server コンピューターの FQDN の検証**|SQL Server コンピューターに対して指定された FQDN が有効かどうかをチェックします。|エラー|SQL Server|
 |**中央管理サイトのバージョンの確認**|中央管理サイトの Configuration Manager のバージョンが同じであることを確認します。|エラー|プライマリ サイト|
-|**Active Directory に発行するためのサイト サーバーのアクセス許可の確認**|サイト サーバーのコンピューター アカウントに、Active Directory ドメイン内の **System Management** コンテナーに対する [ **フル コントロール** ] アクセス許可が割り当てられていることを確認します。 必要なアクセス許可の構成オプションの詳細については、「[サイト発行のために Active Directory を準備する](../../../../core/plan-design/network/extend-the-active-directory-schema.md)」を参照してください。<br><br>**注**: これらのアクセス許可を手動で確認済みの場合は、この警告を無視できます。|警告|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト|
+|**Active Directory に発行するためのサイト サーバーのアクセス許可の確認**|サイト サーバーのコンピューター アカウントに、Active Directory ドメイン内の **System Management** コンテナーに対する **[ フル コントロール ]** アクセス許可が割り当てられていることを確認します。 必要なアクセス許可の構成オプションの詳細については、「[サイト発行のために Active Directory を準備する](../../../../core/plan-design/network/extend-the-active-directory-schema.md)」を参照してください。<br><br>**注**: これらのアクセス許可を手動で確認済みの場合は、この警告を無視できます。|警告|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト|
 |**Windows 展開ツールのインストール**|Windows 10 用 Windows ADK の Windows 展開ツール コンポーネントがインストールされているかどうかを確認します。|エラー|SMS プロバイダー|
 |**Windows フェールオーバー クラスター**|管理ポイントまたは配布ポイントを備えたコンピューターが Windows クラスターに含まれていないことを確認します。|エラー|管理ポイント<br>配布ポイント|
 |**Windows プレインストール環境のインストール**|Windows 10 用 Windows ADK の Windows プレインストール環境コンポーネントがインストールされているかどうかを確認します。|エラー|SMS プロバイダー|

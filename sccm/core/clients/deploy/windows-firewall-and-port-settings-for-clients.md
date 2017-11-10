@@ -1,5 +1,6 @@
 ---
-title: "Windows クライアントのファイアウォールとポートの設定 | Microsoft Docs"
+title: "Windows クライアントのファイアウォールとポートの設定"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager におけるクライアントの Windows ファイアウォールとポートの設定を選択します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d04fa417b311dc9f20e0691f6edffcf287cf43b8
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: fe9f98ad6567b4f691dcfe6f70868fc63d61a63d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="windows-firewall-and-port-settings-for-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager におけるクライアントの Windows ファイアウォールとポートの設定
 
@@ -36,7 +37,7 @@ Windows ファイアウォールを実行する System Center Configuration Mana
 
 1.  Windows ファイアウォールを実行しているコンピューターで、コントロール パネルを開きます。  
 
-2.  **Windows ファイアウォール** を右クリックし、 **開く**をクリックします。  
+2.  **[ Windows ファイアウォール]** を右クリックし、**[ 開く]** をクリックします。  
 
 3.  必要な例外と、必要なカスタム プログラムやポートを構成します。  
 
@@ -44,7 +45,7 @@ Windows ファイアウォールを実行する System Center Configuration Mana
  次の Configuration Manager 機能では、Windows ファイアウォールで例外を設定する必要があります。  
 
 ### <a name="queries"></a>クエリ  
- Windows ファイアウォールを実行するコンピューターで Configuration Manager コンソールを実行する場合、初回実行時のクエリは失敗し、statview.exe のブロックを解除するかどうかを尋ねるダイアログ ボックスが表示されます。 statview.exe のブロックを解除すると、その後のクエリはエラーなしで実行されます。 また、クエリを実行する前に、Windows ファイアウォールの [ **例外** ] タブで、プログラムおよびサービスの一覧に statview.exe を手動で追加することもできます。  
+ Windows ファイアウォールを実行するコンピューターで Configuration Manager コンソールを実行する場合、初回実行時のクエリは失敗し、statview.exe のブロックを解除するかどうかを尋ねるダイアログ ボックスが表示されます。 statview.exe のブロックを解除すると、その後のクエリはエラーなしで実行されます。 また、クエリを実行する前に、Windows ファイアウォールの **[ 例外 ]** タブで、プログラムおよびサービスの一覧に statview.exe を手動で追加することもできます。  
 
 ### <a name="client-push-installation"></a>クライアント プッシュ インストール  
  クライアント プッシュを使用して構成マネージャー クライアントをインストールするには、Windows ファイアウォールに次の例外を追加する必要があります。  

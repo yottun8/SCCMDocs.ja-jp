@@ -1,5 +1,6 @@
 ---
-title: "Windows クライアント コンピューターのリモート管理 | Microsoft Docs"
+title: "Windows クライアント コンピューターのリモート管理"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager を使用してリモートの Windows クライアント コンピューターを管理します。"
 ms.custom: na
 ms.date: 07/27/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 9ce5adccb9944daa4fb2b0ab132fc7cf52bd7b1b
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 7cce5f2deab7ec6f5c16628dc53e4d1cb5507f37
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-remotely-administer-a-windows-client-computer-by-using-system-center-configuration-manager"></a>System Center Configuration Manager を使用して Windows クライアント コンピューターをリモート管理する方法
 
@@ -48,16 +49,16 @@ ms.lasthandoff: 09/14/2017
     > [!IMPORTANT]  
     >  場合、クライアント設定 **リモート制御のプロンプトのユーザー** にアクセス許可が設定されている **True**, 、接続では、リモート コンピューターのユーザーがリモート コントロール プロンプトに同意するまでは開始されません。 詳しくは、「[System Center Configuration Manager でのリモート コントロールの構成](../../../../core/clients/manage/remote-control/configuring-remote-control.md)」を参照してください。  
 
-4.  [ **Configuration Manager リモート コントロール** ] ウィンドウが開いたら、クライアント コンピューターをリモート管理できます。 接続を構成するには、次のオプションを使用します。  
+4.  **[ Configuration Manager リモート コントロール ]** ウィンドウが開いたら、クライアント コンピューターをリモート管理できます。 接続を構成するには、次のオプションを使用します。  
 
     > [!NOTE]  
     >  接続するコンピューターに複数のモニターがある場合は、すべてのモニターの表示画面がリモート コントロール ウィンドウに表示されます。  
 
     -   **ファイル - 接続** – ほかのコンピューターに接続します。 このオプションはリモート コントロール セッションがアクティブな間は使用できません。  
 
-    -   **ファイル - 切断** – アクティブなリモート コントロール セッションを切断しますが、[**Configuration Manager リモート コントロール**] ウィンドウは閉じません。  
+    -   **ファイル - 切断** – アクティブなリモート コントロール セッションを切断しますが、**[Configuration Manager リモート コントロール]** ウィンドウは閉じません。  
 
-    -   **ファイル - 終了** – アクティブなリモート コントロール セッションを切断し、[**Configuration Manager リモート コントロール**] ウィンドウを閉じます。  
+    -   **ファイル - 終了** – アクティブなリモート コントロール セッションを切断し、**[Configuration Manager リモート コントロール]** ウィンドウを閉じます。  
 
         > [!NOTE]  
         >  リモート コントロール セッションを切断すると、見ているコンピューターの Windows クリップボードのコンテンツは削除されます。  
@@ -67,9 +68,9 @@ ms.lasthandoff: 09/14/2017
         > [!NOTE]  
         >  全画面表示モードを終了するには、Ctrl+Alt+Break を押します。  
 
-    -   **表示 - 画面に合わせて拡大縮小** – リモート コンピューターの画面を、[**Configuration Manager リモート コントロール**] ウィンドウのサイズに合わせて拡大縮小します。  
+    -   **表示 - 画面に合わせて拡大縮小** – リモート コンピューターの画面を、**[Configuration Manager リモート コントロール]** ウィンドウのサイズに合わせて拡大縮小します。  
 
-    -   **表示 - ステータス バー** – [**Configuration Manager リモート コントロール**] ウィンドウ ステータス バーの表示を切り替えます。  
+    -   **表示 - ステータス バー** – **[Configuration Manager リモート コントロール]** ウィンドウ ステータス バーの表示を切り替えます。  
 
     -   **操作 - Ctrl+Alt+Del キーの送信** – Ctrl+Alt+Del キーの組み合わせをリモート コンピューターに送信します。  
 

@@ -1,5 +1,6 @@
 ---
-title: "macOS クライアントのアップグレード - Configuration Manager | Microsoft Docs"
+title: "macOS クライアントのアップグレード "
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で Mac コンピューター上のクライアントをアップグレードします。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 08dff3f2280fef5f15e3c9d584884e4a52ed186d
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 7ce260a4d93e58e31ec14219c317c793d4b9bb32
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager で Mac コンピューター上のクライアントをアップグレードする方法
 
@@ -68,7 +69,7 @@ System Center Configuration Manager アプリケーションを使用して Mac 
 
 -   Configuration Manager コンソールで、種類が **[Mac OS X]** の構成項目を作成します。  
 
--   [ **スクリプト** ] という設定の種類を使用して、この構成項目に設定を追加します。  
+-   **[ スクリプト ]** という設定の種類を使用して、この構成項目に設定を追加します。  
 
 -   次のスクリプトを設定に追加します。  
 

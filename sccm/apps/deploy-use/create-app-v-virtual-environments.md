@@ -1,5 +1,6 @@
 ---
-title: "App-V 仮想環境を作成する | Microsoft Docs"
+title: "App-V 仮想環境を作成する"
+titleSuffix: Configuration Manager
 description: "Microsoft Application Virtualization を使用して仮想環境を作成し、アプリが互いにデータを共有できるようにします。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: f672bb5bdea0878bfc38575840f0c8f8c7f065b6
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 2b831f4302657e8338dddea32bca26677472bd42
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-app-v-virtual-environments-in-system-center-configuration-manager"></a>System Center Configuration Manager で App-V 仮想環境を作成する
 
@@ -54,7 +55,7 @@ System Center Configuration Manager (Configuration Manager) の Microsoft Applic
 
 9. **[仮想環境の作成]** ダイアログ ボックスに戻る場合は、**[OK]** を選択します。  
 
-10. グループの追加を完了したら、**[OK]** を選択して仮想環境を作成します。 新しい仮想環境が Configuration Manager コンソールの [**APP-V 仮想環境**] ノードに表示されます。 [App-V 仮想環境のステータス] レポートを使用して、仮想環境の状態を監視できます。  
+10. グループの追加を完了したら、**[OK]** を選択して仮想環境を作成します。 新しい仮想環境が Configuration Manager コンソールの **[APP-V 仮想環境]** ノードに表示されます。 [App-V 仮想環境のステータス] レポートを使用して、仮想環境の状態を監視できます。  
 
     > [!NOTE]  
     >  アプリケーションがインストールされたとき、またはインストールされたアプリケーションをクライアントが次回評価するときに、クライアント PC で仮想環境が追加または変更されます。  

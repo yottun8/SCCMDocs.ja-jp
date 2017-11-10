@@ -1,5 +1,6 @@
 ---
-title: "Configuration Manager の Technical Preview 1701 の機能"
+title: "Technical Preview 1701 の機能"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の Technical Preview バージョン 1701 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 01/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: b330c97a0853d1673f1cf7e0691891b72407fa51
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 56c2ceea56eec984715d61f8d195c1b47fd3c571
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1701 の機能
 
@@ -98,7 +99,7 @@ ms.lasthandoff: 08/07/2017
 
 ### <a name="try-it-out"></a>試してみましょう
 
-- **管理ポイントでオンプレミスデバイス正常性構成証明を有効にする**<br>  Configuration Manager コンソールで、管理ポイントに移動し、**[管理ポイント コンポーネントのプロパティ]** を開き、**[詳細オプション]** タブをクリックします。 **[追加]** をクリックし、**オンプレミス デバイス正常性構成証明サービスの URL** として、オンプレミス URL (https://10.10.10.10 など) を指定します。
+- **管理ポイントでオンプレミスデバイス正常性構成証明を有効にする**<br>  Configuration Manager コンソールで、管理ポイントに移動し、**[管理ポイント コンポーネントのプロパティ]** を開き、**[詳細オプション]** タブをクリックします。**[追加]** をクリックし、**オンプレミス デバイス正常性構成証明サービスの URL** として、オンプレミス URL (https://10.10.10.10 など) を指定します。
 - **クライアント エージェントのオンプレミス管理ポイント正常性構成証明レポートを有効にする**<br>Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** の順に選択してダブルクリックするか、新しい**カスタム デバイス設定**を作成します。 **[コンピューター エージェント]** を選択し、**[オンプレミスの正常性構成証明サービスを使用する]** を **[はい]** に設定します。 **[Enable communication with Device Health Attestation Service]** (デバイス正常性構成証明サービスとの通信を有効にする) が **[はい]** に設定されており、**[Use on-premises Health Attestation]** (オンプレミスの正常性構成証明を使用する) が **[いいえ]** に設定されている場合、管理ポイントではクラウドベースのデバイス正常性構成証明サービスが使用されます。
 
 ## <a name="use-the-oms-connector-for-microsoft-azure-government-cloud"></a>Microsoft Azure Government クラウドで OMS コネクタを使用する

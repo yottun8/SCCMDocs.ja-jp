@@ -1,5 +1,6 @@
 ---
-title: "Configuration Manager の Technical Preview 1607 の機能"
+title: "Technical Preview 1607 の機能"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の Technical Preview バージョン 1607 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 01/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "11"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 4717e0f8eef01501fb5b5790e855c476c1ca4590
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3967df286332a3fde7f9c0eb22167ae2889dfcd8
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1607 の機能
 
@@ -55,7 +56,7 @@ Configuration Manager クライアントの設定で、**エディションの�
 
 ソフトウェア センターのカスタム ブランド設定は、次の規則に従って適用されます。
 
-1. アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされていない場合は、[**コンピューター エージェント**] クライアント設定 [**ソフトウェア センターに表示される組織名**] に指定された組織名がソフトウェア センターに表示されます。 手順については、「[クライアント設定を構成する方法](../../core/clients/deploy/configure-client-settings.md)」をご覧ください。
+1. アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされていない場合は、**[コンピューター エージェント]** クライアント設定 **[ソフトウェア センターに表示される組織名]** に指定された組織名がソフトウェア センターに表示されます。 手順については、「[クライアント設定を構成する方法](../../core/clients/deploy/configure-client-settings.md)」をご覧ください。
 
 2. アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされている場合は、アプリケーション カタログ Web サイトのポイント サイト サーバーの役割プロパティに指定されている組織名と色がソフトウェア センターに表示されます。 詳細については、「[Configuration options for Application Catalog website point](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website)」(アプリケーション カタログ Web サイト ポイントの構成オプション) をご覧ください。
 
@@ -67,12 +68,12 @@ Technical Preview バージョン 1607 では、(複数のデバイスで使用�
 この問題の詳細については、[Configuration Manager OSD サポート チームのブログ](https://blogs.technet.microsoft.com/system_center_configuration_manager_operating_system_deployment_support_blog/2015/08/27/reusing-the-same-nic-for-multiple-pxe-initiated-deployments-in-system-center-configuration-manger-osd/)をご覧ください。  
 
 ### <a name="enable-the-feature-to-manage-duplicate-hardware-identifiers"></a>重複するハードウェア識別子を管理する機能を有効にする  
-1. Configuration Manager コンソールで、[**管理**] > [**概要**] > [**Cloud Services**] > [**更新とサービス**] > [**機能**] の順に移動します。
-2. 表示ウィンドウで [**重複しているハードウェア識別子の管理**] を選択します。
-3. [**ホーム**] タブの [**機能**] グループで、[**有効にする**] をクリックします。
+1. Configuration Manager コンソールで、**[管理]** > **[概要]** > **[Cloud Services]** > **[更新とサービス]** > **[機能]** の順に移動します。
+2. 表示ウィンドウで **[重複しているハードウェア識別子の管理]** を選択します。
+3. **[ホーム]** タブの **[機能]** グループで、**[有効にする]** をクリックします。
 
 ### <a name="add-hardware-identifiers-for-configuration-manager-to-ignore"></a>無視する Configuration Manager のハードウェア識別子を追加する  
-1. Configuration Manager コンソールで、[**管理**] > [**概要**] > [**サイトの構成**] > [**サイト**] の順に移動します。
+1. Configuration Manager コンソールで、**[管理]** > **[概要]** > **[サイトの構成]** > **[サイト]** の順に移動します。
 2. **[ホーム]** タブの **[サイト]** グループで、 **[階層設定]**をクリックします。
-3. [**クライアントの承認と競合レコードの処理**] タブに移動します。
-4. [**重複するハードウェア ID**] セクションで [**追加**] をクリックして 新しいハードウェア識別子を追加します。
+3. **[クライアントの承認と競合レコードの処理]** タブに移動します。
+4. **[重複するハードウェア ID]** セクションで **[追加]** をクリックして 新しいハードウェア識別子を追加します。

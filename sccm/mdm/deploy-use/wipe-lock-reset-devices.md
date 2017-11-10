@@ -1,8 +1,9 @@
 ---
-title: "System Center Configuration Manager によるリモート ワイプ、ロック、パスコードのリセットを使用したデータの保護 | Microsoft Docs"
+title: "ワイプ、ロック、またはパスコードのリセットを使用したデータの保護"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager によるフル ワイプ、選択的ワイプ、リモート ロック、パスコードのリセットを使用してデバイスのデータを保護します。"
 ms.custom: na
-ms.date: 09/28/2017
+ms.date: 10/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: ea92d7b4656a04f312f04c19cac6b17df931c9c5
-ms.sourcegitcommit: db079cd7322e7d4926b2df0ccb37e752c570d902
+ms.openlocfilehash: 55d49c388b4ea60627f72ffe61796c70de6f9416
+ms.sourcegitcommit: a5f8b5cfdabf0298e4302e24210e725a06a9de82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/30/2017
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>System Center Configuration Manager によるリモート ワイプ、ロック、パスコードのリセットを使用したデータの保護
 
@@ -39,6 +40,9 @@ System Center Configuration Manager には、選択的ワイプ、フル ワイ�
 紛失したデバイスをセキュリティで保護する必要がある場合や、アクティブな使用状態のインベントリからデバイスを削除する場合、ワイプ コマンドをデバイスに発行することができます。  
 
 デバイスを工場出荷時の既定値に戻すには、 **フル ワイプ** をデバイスに発行します。 フル ワイプの場合、すべての会社とユーザーのデータと設定が削除されます。 Windows Phone、iOS、Android、Windows 10 の各デバイスでは、フル ワイプを実行できます。  
+
+> [!NOTE]
+> フル ワイプは、会社所有のデバイスでのみ実行できます。
 
 > [!NOTE]
 > ワイプする Windows 10 デバイスが 1511 より前のバージョンで、RAM が 4 GB 未満の場合、ワイプを実行するとデバイスが応答しなくなることがあります。 [詳細については、こちらを参照してください](https://technet.microsoft.com/library/mt592024.aspx#full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram)。

@@ -1,5 +1,6 @@
 ---
-title: "Configuration Manager の Technical Preview 1512 の機能"
+title: "Technical Preview 1512 の機能"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の Technical Preview バージョン 1512 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 5cf8d54fbaa98a75ac2a875a23a43b1d3e5be0dd
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 7fc8729509bebdfa85efc3e181d3878f2ede620f
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1512 の機能
 
@@ -42,20 +43,20 @@ ms.lasthandoff: 08/07/2017
 
 コンソールには、最も不足している正常性構成証明書の設定もデバイスの数と共に表示されます。  
 
-デバイス正常性構成証明書のプレビューを表示するには、Configuration Manager コンソールで [**監視**] ワークスペースに移動し、[**セキュリティ**] ノードをクリックしてから [**正常性構成証明書**] をクリックします。  
+デバイス正常性構成証明書のプレビューを表示するには、Configuration Manager コンソールで **[監視]** ワークスペースに移動し、**[セキュリティ]** ノードをクリックしてから **[正常性構成証明書]** をクリックします。  
 
 ##  <a name="bkmk_viewterms"></a> 使用条件のコンソール内での監視  
 Technical Preview 1512 以降、Configuration Manager を Microsoft Intune と統合すると、Configuration Manager コンソールを使用して、IT 部門が構成した使用条件に同意したユーザーと同意していないユーザーを表示できます。  
 
 **概要情報を表示するには:**  
 
--   Configuration Manager コンソールで [**監視**] > [**概要**] > [**展開**] の順に移動して、表示する使用条件の展開を選びます。  
+-   Configuration Manager コンソールで **[監視]** > **[概要]** > **[展開]** の順に移動して、表示する使用条件の展開を選びます。  
 
 **詳細情報を表示するには:**  
 
-1.  Configuration Manager コンソールで、[**資産とコンプライアンス**] > [**概要**] > [**コンプライアンス設定**] > [**使用条件**] の順に移動して、表示する使用条件を選びます。  
+1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[概要]** > **[コンプライアンス設定]** > **[使用条件]** の順に移動して、表示する使用条件を選びます。  
 
-2.  コンソールの下部にある [**展開**] タブを選び、展開を選んだら、[**状態の表示**] をクリックします。  
+2.  コンソールの下部にある **[展開]** タブを選び、展開を選んだら、**[状態の表示]** をクリックします。  
 
 ##  <a name="bkmk_EPpolicy"></a> Endpoint Protection のポリシー設定の機能強化  
 1512 Technical Preview では、Endpoint Protection マルウェア対策ポリシーに次の新しい設定が追加されました。  
@@ -70,7 +71,7 @@ Technical Preview 1512 以降、Configuration Manager を Microsoft Intune と�
 
     -   この設定により、管理者はより詳細な操作ができるようになり、スケジュールされたフル スキャン中にマップされたネットワーク ドライブが必ずスキャンされるリスクなしに、ネットワーク ファイルのオンデマンド スキャンができるようになります。  
 
-    -   この設定を構成できるようにするには、設定 [**ネットワーク ファイルをスキャンする**] を最初に有効 ([はい]) にする必要があります。  
+    -   この設定を構成できるようにするには、設定 **ネットワーク ファイルをスキャンする** を最初に有効 (はい) にする必要があります。  
 
     -   既定で、この設定は [いいえ] になっており、マップされたネットワーク ドライブはフル スキャンでアクセスされません。  
 

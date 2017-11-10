@@ -1,5 +1,6 @@
 ---
-title: "クライアント移行計画 | Microsoft Docs"
+title: "クライアントの移行の計画"
+titleSuffix: Configuration Manager
 description: "ソース階層からクライアントを System Center Configuration Manager の移行先階層に移行するタスクについて説明します。"
 ms.custom: na
 ms.date: 12/30/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: b52ca4059dfeed08cabf1f75319da40d6499622f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8e41135266565890c793f7920482a4455f05fbde
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-a-client-migration-strategy-in-system-center-configuration-manager"></a>System Center Configuration Manager でのクライアント移行戦略の計画
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 08/07/2017
 
 -   **Configuration Manager 2007 のソース階層:** サポートされているバージョンの Configuration Manager を実行しているソース階層のクライアントを移行すると、クライアント ソフトウェアは移行先階層のクライアント バージョンにアップグレードされます。  
 
--    **System Center 2012 Configuration Manager 以降のソース階層:** 同じ製品バージョンの階層間でクライアントを移行する場合、クライアント ソフトウェアは変更またはアップグレードされません。 代わりに、クライアントがソース階層から移行先階層内のサイトに再割り当てされます。  
+-   **System Center 2012 Configuration Manager 以降のソース階層:** 同じ製品バージョンの階層間でクライアントを移行する場合、クライアント ソフトウェアは変更またはアップグレードされません。 代わりに、クライアントがソース階層から移行先階層内のサイトに再割り当てされます。  
 
     > [!NOTE]  
     >  階層の製品バージョンが、移行先階層への移行でサポートされていない場合、ソース階層のすべてのサイトとクライアントを互換性のある製品バージョンにアップグレードします。 ソース階層をサポートされる製品バージョンにアップグレードした後で、階層間の移行を実行できます。 詳細については、「[System Center Configuration Manager での移行の前提条件](../../core/migration/prerequisites-for-migration.md)」の「[移行がサポートされている Configuration Manager のバージョン](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions)」をご覧ください。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 08/07/2017
 
 -   Configuration Manager では、App-V クライアント バージョン4.6 SP1 以降のバージョンの App-V クライアントがインストールされた Configuration Manager 2007 クライアントは移行できません。  
 
-クライアントの移行プロセスは、Configuration Manager コンソールの [**管理**] ワークスペースにある [**移行**] ノードで監視できます。  
+クライアントの移行プロセスは、Configuration Manager コンソールの **[管理]** ワークスペースにある **[移行]** ノードで監視できます。  
 
 クライアントを移行先階層に移行した後は、ソース階層を使用してそのデバイスを管理できなくなるため、ソース階層からクライアントを削除することを検討する必要があります。 これは階層の移行時に必須ではありませんが、移行済みクライアントがソース階層レポートに表示されたり、移行中に 2 つの階層のリソースが不正確にカウントされたりするのを防止できます。 たとえば、移行済みクライアントがソース サイトのデータベースに残っている場合、ソフトウェア更新プログラム レポートを実行すると、そのコンピューターが現在は移行先階層で管理されているにもかかわらず、誤って管理対象外リソースとして表示されることがあります。  
 

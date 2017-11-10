@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager のプライバシーに関する声明 - 詳細情報 | Microsoft Docs"
+title: "System Center Configuration Manager のプライバシーに関する声明 - 詳細情報"
 description: "System Center Configuration Manager 展開からデータを Microsoft が収集して使用する方法について説明します。"
 ms.custom: na
-ms.date: 12/30/2016
+ms.date: 10/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: ef7b3656f9b4a31e07227aa4e864448d0dd1fcdc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 28caf163507692ad7d7b3cfa85536a88d94584ec
+ms.sourcegitcommit: 18ac58374d2d513fe2a197c80f7c8c6890a7d612
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/16/2017
 ---
 # <a name="additional-information-about-privacy-for-system-center-configuration-manager"></a>System Center Configuration Manager のプライバシーに関する詳細
 
@@ -107,7 +107,7 @@ Microsoft Cloud Protection Service が意図的に個人情報を収集するこ
 ## <a name="microsoft-intune-subscription"></a>Microsoft Intune サブスクリプション
 Microsoft Intune のサブスクリプションを購入したお客様は、Microsoft Intune を介して接続しているモバイル デバイスを Configuration Manager を使用して管理できます。 [Microsoft オンライン サービスのプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=262214)は、Microsoft Intune など、Microsoft オンライン サービスに適用されます。 お客様が Microsoft Intune サブスクリプションもお持ちの場合、このプライバシーに関する声明と共に [Microsoft Online Services のプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=262214)もお読みください。
 
-Microsoft Intune とのすべての通信で HTTPS が使用されます。 管理者が Microsoft Intune サブスクリプションを構成し、iOS サポートの構成に必要な Certificate Signing Request (CSR) をダウンロードするには、組織のアカウントとパスワードを使用して Microsoft Intune にサインインする必要があります。 これらの資格情報は Configuration Manager に保管されません。 Microsoft Intune とのその他の通信はすべて、Microsoft Intune によって自動生成される PKI 証明書を使用して認証されます。
+Microsoft Intune とのすべての通信で HTTPS が使用されます。 管理者が Microsoft Intune サブスクリプションを構成し、iOS サポートの構成に必要な Certificate Signing Request (CSR) をダウンロードするには、職場アカウントとパスワードを使用して Microsoft Intune にサインインする必要があります。 これらの資格情報は Configuration Manager に保管されません。 Microsoft Intune とのその他の通信はすべて、Microsoft Intune によって自動生成される PKI 証明書を使用して認証されます。
 
 Microsoft Intune に接続されるデバイスを管理するために、一部の情報が Microsoft Intune との間で送受信されます。 この情報には、サービスに割り当てられているすべてのユーザーのユーザー プリンシパル名 (UPN) と、Microsoft Intune で管理されるデバイスのデバイス インベントリ情報が含まれます。 Manage.Microsoft.com 配布ポイントに割り当てられるコンテンツのアプリケーション名、発行元、バージョンなどのメタデータは、Microsoft Intune に送信されます。 Manage.Microsoft.com 配布ポイントに割り当てられる実際のバイナリ コンテンツは、暗号化されてから、Microsoft Intune にアップロードされます。
 

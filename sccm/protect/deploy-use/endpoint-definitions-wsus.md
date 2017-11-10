@@ -1,5 +1,6 @@
 ---
-title: "WSUS からの Endpoint Protection のマルウェア定義 | Microsoft Docs"
+title: "WSUS からの Endpoint Protection のマルウェア定義"
+titleSuffix: Configuration Manager
 definition: Learn how to configure Windows Server Updates Services to auto-approve definition updates.
 ms.custom: na
 ms.date: 02/14/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 0e606b25065fa25c782d1b5f3fbf164e60733353
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: fcc0e1909705fb1954c58c438438792a4866d3bf
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>Configuration Manager で Endpoint Protection のマルウェア定義を Windows Server Update Services (WSUS) からダウンロードできるようにする
 
@@ -28,9 +29,9 @@ ms.lasthandoff: 08/07/2017
 
 ## <a name="to-synchronize-endpoint-protection-definition-updates-in-configuration-manager-software-updates"></a>Configuration Manager ソフトウェア更新プログラムで Endpoint Protection の定義ファイルの更新を同期するには
 
-1.  Configuration Manager コンソールで、[ **管理**] をクリックします。
+1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。
 
-2.  [ **管理** ] ワークスペースで [ **サイトの構成**] を展開して、[ **サイト**] をクリックします。
+2.  **[ 管理 ]** ワークスペースで **[ サイトの構成]** を展開して、**[ サイト]** をクリックします。
 
 3.  ソフトウェアの更新ポイントが含まれているサイトを選びます。 **[設定]** グループで **[サイト コンポーネントの構成]**をクリックし、 **[ソフトウェアの更新ポイント]**をクリックします。
 
@@ -42,7 +43,7 @@ ms.lasthandoff: 08/07/2017
 
     -   Windows 10 以降では、 **[ソフトウェアの更新ポイント コンポーネントのプロパティ]** ダイアログ ボックスの **[製品]** タブで、 **[Windows Defender]** と **[Windows Technical Preview 2]** チェック ボックスをオンにします。
 
-6.  [ **OK** ] をクリックして、[ **[分類]** ] ダイアログ ボックスを閉じます。
+6.  **OK ]**をクリックして、[ ]**[  [分類 ]** ダイアログ ボックスを閉じます。
 
  次の手順を使用して、WSUS サーバーが Configuration Manager 環境に統合されていない場合の Endpoint Protection 更新ファイルを構成します。
 

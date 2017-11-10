@@ -1,5 +1,6 @@
 ---
-title: "Configuration Manager のバージョン間の相互運用性 | Microsoft Docs"
+title: "バージョン間の相互運用性"
+titleSuffix: Configuration Manager
 description: "同じネットワーク上に複数の System Center Configuration Manager 階層がある場合に競合を回避する方法について説明します。"
 ms.custom: na
 ms.date: 1/30/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 28593d271603ff9775425327996d844d7ed358cd
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8485011e51d4a9b18d3b89b023e3651e56964f35
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="interoperability-between-different-versions-of-system-center-configuration-manager"></a>異なるバージョンの Configuration Manager 間の相互運用性
 

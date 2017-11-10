@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager と Microsoft Intune を使った iOS および Mac のハイブリッド デバイス管理のセットアップ | Microsoft Docs"
+title: "Microsoft Intune を使用した iOS および Mac ハイブリッド デバイス管理の設定"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager と Microsoft Intune を使用して iOS デバイス管理を設定します。"
 ms.custom: na
 ms.date: 08/11/2017
@@ -12,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
 caps.latest.revision: "10"
 caps.handback.revision: "0"
-author: nathbarn
-ms.author: nathbarn
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d84d6f3dba65f1d8114ef2eef9f19a2bb5389027
-ms.sourcegitcommit: 9a6f8e028fb5eb2e752da70f42a5b548339bd8f4
+ms.openlocfilehash: f15b82a0e04979f49fb8e2ab6bec6535783ac6e0
+ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="set-up-ios-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune で iOS ハイブリッド デバイス管理の設定します
 

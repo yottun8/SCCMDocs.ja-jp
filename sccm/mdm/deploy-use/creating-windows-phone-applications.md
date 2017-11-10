@@ -1,5 +1,6 @@
 ---
-title: "Windows Phone アプリケーションの作成 | Microsoft Docs"
+title: "Windows Phone アプリケーションを作成する"
+titleSuffix: Configuration Manager
 description: "Windows Phone デバイス用アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 1a4cfd8bc942ecefc1b2acdbf96326746cfced6f
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 154cc1f6e8f16f2bfbb717cfd44fe596b9e31ac5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-windows-phone-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager で Windows Phone アプリケーションを作成する
 
@@ -61,5 +62,5 @@ Configuration Manager アプリケーションと展開の種類の作成に必�
 |**ステップ 3:** 最新バージョンの会社ポータルアプリケーションを含む新しいアプリケーションを作成して置き換え関係を指定する。|詳細については、「[アプリケーションの作成](../../apps/deploy-use/create-applications.md)」と「[アプリケーションを修正して置き換える方法](../../apps/deploy-use/revise-and-supersede-applications.md)」を参照してください。|  
 |**ステップ 4:** Microsoft Intune サブスクリプションの作成ウィザードでアプリケーションを追加する。|詳細については、「[System Center Configuration Manager と Microsoft Intune による Windows Phone および Windows 10 Mobile のハイブリッドのデバイス管理のセットアップ](../../mdm/deploy-use/enroll-hybrid-windows.md)」を参照してください。|  
 |**ステップ 5:** Microsoft Intune サブスクリプションの作成ウィザードで会社ポータル アプリケーションを追加したときに自動的に作成された展開を削除する。|Microsoft Intune のサブスクリプションによって、このアプリケーションの展開が自動的に作成されますが、この展開には置き換えを設定できないので削除します。|  
-|**手順 6:**アプリケーションの新しい展開を作成する。 **ソフトウェアの展開ウィザード**の [**展開設定**] ページで [**このアプリケーションの置き換えられるバージョンを自動的にアップグレードする**] チェック ボックスをオンにします。|置き換え関係を設定して作成したアプリケーションの新しい展開を作成します。|  
-|**ステップ 7 (オプション):** 既定では、置き換えるアプリケーションがデバイスに 7 日後にインストールされる。 登録済みデバイスに、これより早く会社ポータル アプリケーションを展開したい場合は、[**展開の再評価スケジュールを指定する**] を小さな値に設定します。<br /><br /> この値を既定値より小さくすると、ネットワークとクライアント コンピューターのパフォーマンスが低下する可能性があります。|詳細情報はありません。|  
+|**手順 6:**アプリケーションの新しい展開を作成する。 **ソフトウェアの展開ウィザード**の **[展開設定]** ページで **[このアプリケーションの置き換えられるバージョンを自動的にアップグレードする]** チェック ボックスをオンにします。|置き換え関係を設定して作成したアプリケーションの新しい展開を作成します。|  
+|**ステップ 7 (オプション):** 既定では、置き換えるアプリケーションがデバイスに 7 日後にインストールされる。 登録済みデバイスに、これより早く会社ポータル アプリケーションを展開したい場合は、**[展開の再評価スケジュールを指定する]** を小さな値に設定します。<br /><br /> この値を既定値より小さくすると、ネットワークとクライアント コンピューターのパフォーマンスが低下する可能性があります。|詳細情報はありません。|  

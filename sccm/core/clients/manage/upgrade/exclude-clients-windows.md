@@ -1,5 +1,6 @@
 ---
-title: "クライアント アップグレードの除外 | Windows | System Center Configuration Manager"
+title: "Windows をクライアント アップグレードから除外する"
+titleSuffix: Configuration Manager
 description: "Windows クライアントを System Center Configuration Manager のアップグレードから除外する方法について説明します。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -13,11 +14,11 @@ ms.assetid: 4cd6031f-8844-4d0b-8166-b24d6528a94e
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 364b1a87e4cf52f09164de6347105f0bb876f1a3
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 6069812d8d120f65ad79344efc3eeaa219066859
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-exclude-upgrading-clients-for-windows-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager で Windows コンピューター用クライアントをアップグレードから除外する方法
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 09/15/2017
 
 3. **[指定したクライアントをアップグレードから除外する]** チェック ボックスをクリックして、[除外コレクション] で除外するコレクションを選択します。 除外するコレクションを 1 つだけ選択できます。
 
-4.  [**OK**] をクリックしてコンソールを閉じ、構成を保存します。 クライアントがポリシーを更新すると、除外されるコレクション内のクライアントに、クライアント ソフトウェアの更新プログラムが自動的にインストールされなくなります。 詳細については、「[Windows コンピューター用クライアントをアップグレードする方法](upgrade-clients-for-windows-computers.md)」を参照してください。
+4.  **[OK]** をクリックしてコンソールを閉じ、構成を保存します。 クライアントがポリシーを更新すると、除外されるコレクション内のクライアントに、クライアント ソフトウェアの更新プログラムが自動的にインストールされなくなります。 詳細については、「[Windows コンピューター用クライアントをアップグレードする方法](upgrade-clients-for-windows-computers.md)」を参照してください。
 
 ![自動アップグレード除外の設定](media/automatic_upgrade_exclusion.png)
 

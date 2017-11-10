@@ -1,5 +1,6 @@
 ---
-title: "Endpoint Protection アラートの構成 | Microsoft Docs"
+title: "Endpoint Protection 用のアラートの構成"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で Endpoint Protection のアラートを構成する方法について説明します。"
 ms.custom: na
 ms.date: 03/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 7f4329b289b606dee5bf31aad8207de52667229f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 91df245565cfe99f79a18618d62c00f0cea579d2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configuration Manager での Endpoint Protection 用のアラートの構成
 
@@ -33,9 +34,9 @@ ms.lasthandoff: 08/07/2017
 
 ## <a name="steps-to-configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configuration Manager で Endpoint Protection 用のアラートを構成する手順
 
-1.  Configuration Manager コンソールで、[ **資産とコンプライアンス** ] をクリックします。
+1.  Configuration Manager コンソールで、**[ 資産とコンプライアンス ]** をクリックします。
 
-2.  [ **資産とコンプライアンス** ] ワークスペースで [ **デバイス コレクション** ] をクリックします。
+2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ デバイス コレクション ]** をクリックします。
 
 3.  **[デバイス コレクション]** 一覧で、アラートを構成するコレクションを選んでから、 **[ホーム]** タブの **[プロパティ]** グループで、 **[プロパティ]** をクリックします。
 
@@ -90,7 +91,7 @@ ms.lasthandoff: 08/07/2017
 
 ## <a name="alert-for-outdated-malware-client"></a>期限切れのマルウェア クライアントのアラート
 
-Configuration Manager のバージョン 1702 から、Endpoint Protection クライアントが古くならないようにするためのアラートを構成することができます。 **[資産とコンプライアンス]** > **[概要]** > **[デバイス]** > **[All Desktops and Serve Clients (すべてのデスクトップとサービス クライアント)]** の順に選択して、**[マルウェア対策クライアント バージョン]** と **[Endpoint Protection Deployment Status (Endpoint Protection の展開ステータス)]** を確認できます。 アラートを確認するには、**[監視]** ワークスペースの **[アラート]** を表示します。 20% を超える管理対象クライアントが期限切れバージョンのマルウェア対策ソフトウェアを実行している場合、"マルウェア対策クライアント バージョンが期限切れです" のアラートが表示されます。 このアラートは、**[監視]** > **[概要]** タブには表示されません。 期限切れのマルウェア対策クライアントを更新するには、マルウェア対策クライアントのソフトウェア更新プログラムを有効にします。
+Configuration Manager のバージョン 1702 から、Endpoint Protection クライアントが古くならないようにするためのアラートを構成することができます。 **[資産とコンプライアンス]** > **[概要]** > **[デバイス]** > **[All Desktops and Serve Clients (すべてのデスクトップとサービス クライアント)]** の順に選択して、**[マルウェア対策クライアント バージョン]** と **[Endpoint Protection Deployment Status (Endpoint Protection の展開ステータス)]** を確認できます。 アラートを確認するには、**[監視]** ワークスペースの **[アラート]** を表示します。 20% を超える管理対象クライアントが期限切れバージョンのマルウェア対策ソフトウェアを実行している場合、"マルウェア対策クライアント バージョンが期限切れです" のアラートが表示されます。 このアラートは、**[監視]** > **[概要]** タブには表示されません。期限切れのマルウェア対策クライアントを更新するには、マルウェア対策クライアントのソフトウェア更新プログラムを有効にします。
 
 アラートを生成するパーセント値を構成するには、**[監視]** > **[アラート]** > **[すべてのアラート]** を展開し、**[期限切れのマルウェア対策クライアント]** をダブルクリックし、**[管理されたクライアントのうち、期限切れのバージョンのマルウェア対策クライアントを使用しているものが次の割合を超えたら、アラートを生成する]** オプションを変更します。
 

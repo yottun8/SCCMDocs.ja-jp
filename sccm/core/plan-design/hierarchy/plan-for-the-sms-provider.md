@@ -1,5 +1,6 @@
 ---
-title: "SMS プロバイダーの計画 | Microsoft Docs"
+title: "SMS プロバイダーの計画"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の管理に SMS プロバイダーを使用する方法について説明します。"
 ms.custom: na
 ms.date: 2/7/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 547dc39d5659c7c2e6f1ca670caddc127dbf22c4
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5ee2ebea24fed329a4e5974c67d95c6d854484e2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-for-the-sms-provider-for-system-center-configuration-manager"></a>System Center Configuration Manager の SMS プロバイダーの計画
 
@@ -59,7 +60,7 @@ Configuration Manager の管理ユーザーは、SMS プロバイダーを使用
 
 -   SMS プロバイダーと共にインストールされる Windows 自動展開キット (Windows ADK) コンポーネントをサポートするために、650 MB 以上の空きディスク領域が必要です。 Windows ADK と SMS プロバイダーの詳細については、このトピックの「 [SMS プロバイダーのオペレーティング システム展開要件](#BKMK_WAIKforSMSProv) 」を参照してください。  
 
-##  <a name="bkmk_location"></a> SMS プロバイダーの場所  
+##  <a name="bkmk_location"></a> SMS プロバイダの場所  
  サイトをインストールするときに、そのサイトの 1 つ目の SMS プロバイダーが自動的にインストールされます。 SMS プロバイダーのインストール先として、次のいずれかを指定できます。  
 
 -   サイト サーバー コンピューター  
@@ -165,7 +166,7 @@ Configuration Manager の管理ユーザーは、SMS プロバイダーを使用
 
 ユーザーが SMS プロバイダーに正常に接続すると、そのユーザーの役割に基づいて、Configuration Manager のどのリソースにアクセスして管理できるかが決められます。  
 
-SMS 管理者グループの権限とアクセス許可を表示して構成するには、WMI コントロールという MMC スナップインを使います。 既定では、 **Everyone** に [ **メソッドの実行**]、[ **プロバイダーによる書き込み**]、および　[ **アカウントの有効化** ] アクセス許可が割り当てられます。 ユーザーが SMS プロバイダーに接続すると、そのユーザーに Configuration Manager コンソールで定義されている、ユーザーの役割に基づいたセキュリティ権限に従って、サイト データベースのデータへのアクセス権が付与されます。 SMS Admins グループには、**Root\SMS** 名前空間に対するアクセス許可 "**アカウントの有効化**" と "**リモートの有効化**" が明示的に付与されます。  
+SMS 管理者グループの権限とアクセス許可を表示して構成するには、WMI コントロールという MMC スナップインを使います。 既定では、 **Everyone** に **[ メソッドの実行]**、**[ プロバイダーによる書き込み]**、および　**[ アカウントの有効化 ]** アクセス許可が割り当てられます。 ユーザーが SMS プロバイダーに接続すると、そのユーザーに Configuration Manager コンソールで定義されている、ユーザーの役割に基づいたセキュリティ権限に従って、サイト データベースのデータへのアクセス権が付与されます。 SMS Admins グループには、**Root\SMS** 名前空間に対するアクセス許可 "**アカウントの有効化**" と "**リモートの有効化**" が明示的に付与されます。  
 
 > [!NOTE]  
 >  リモートの Configuration Manager コンソールを使用する管理ユーザーには、サイト サーバー コンピューターと SMS プロバイダーのコンピューターの DCOM をリモートから有効にするアクセス許可が必要です。 これらの権限はどのグループにも付与することができますが、権限の管理が簡単になるように、SMS 管理者グループに付与することをお勧めします。 詳細については、「 [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 」トピックの「 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) 」セクションを参照してください。  

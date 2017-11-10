@@ -1,5 +1,6 @@
 ---
-title: "Configuration Manager の評価 | Microsoft Docs"
+title: "ラボ環境での評価"
+titleSuffix: Configuration Manager
 description: "組織で使用するために System Center Configuration Manager を評価するラボ環境を作成します。"
 ms.custom: na
 ms.date: 2/28/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: d7ea785ab1beee09b9adda735a87f89bc9481620
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8649f6686adad908b7806d22983aaf20171609ba
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="evaluate-system-center-configuration-manager-by-building-your-own-lab-environment"></a>独自のラボ環境を構築して System Center Configuration Manager を評価する
 

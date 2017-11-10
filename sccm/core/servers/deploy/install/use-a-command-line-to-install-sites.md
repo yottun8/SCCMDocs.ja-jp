@@ -1,5 +1,6 @@
 ---
-title: "コマンド ライン インストール | Microsoft Docs"
+title: "コマンドライン インストール"
+titleSuffix: Configuration Manager
 description: "さまざまなサイトのインストールで、コマンド プロンプトから System Center Configuration Manager セットアップを実行する方法について説明します。"
 ms.custom: na
 ms.date: 3/27/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 8ff48b08d1abb7481592c0ea076d4efa15c3d8ee
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: dfef96a5512ca79252360da4b5eee39c04d90046
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>コマンド ラインを使用して System Center Configuration Manager サイトをインストールする
 
@@ -123,4 +124,4 @@ CD.Latest フォルダーのメディアを使用して、次の 4 つのイン�
     -   ファイルの名前には、ファイル名拡張子 **.ini** が含まれている必要があります。  
     -   コマンド プロンプトでセットアップ スクリプト ファイルを指定するときは、ファイルの完全パスを入力する必要があります。 たとえば、C:\Setup フォルダーにある Setup.ini というセットアップ初期化ファイルの場合は、コマンド プロンプトに次のように入力します。 **setup /script c:\setup\setup.ini**  
 
--   セットアップを実行するアカウントには、コンピューターの**管理者**の権限が必要です。 無人インストールを使用してセットアップを実行する場合は、[**管理者として実行**] を使用してコマンド プロンプト ウィンドウを開いてください。   
+-   セットアップを実行するアカウントには、コンピューターの**管理者**の権限が必要です。 無人インストールを使用してセットアップを実行する場合は、**[管理者として実行]** を使用してコマンド プロンプト ウィンドウを開いてください。   

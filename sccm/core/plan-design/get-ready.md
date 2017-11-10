@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager の準備 | Microsoft Docs"
+title: "展開の準備"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の展開を計画する際に役立つトピックを示します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: b2d9cf11b944b6ee648b8fc7bc836ed5a82925a5
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 7ed80c49057d5376e7f67d54777cf70402c6cbea
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="get-ready-for-system-center-configuration-manager"></a>System Center Configuration Manager の準備
 

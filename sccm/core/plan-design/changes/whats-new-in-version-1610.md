@@ -1,5 +1,6 @@
 ---
-title: "新しいバージョン 1610 |Microsoft Docs"
+title: "新バージョン 1610"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager のバージョン 1610 の変更点および導入された新機能について詳しく説明します。"
 ms.custom: na
 ms.date: 11/23/2016
@@ -14,11 +15,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 8b80f4d14eafa4cbbfb083178a118bc0e71f4019
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d2150105f93a616e18a72fa42f91f74b70db7cea
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1610 の新機能
 
@@ -133,7 +134,7 @@ Configuration Manager コンソールの構成項目を使用して、Intune に
 場合によっては、必要なアプリケーション展開またはソフトウェア更新プログラムをインストールできるように、設定期限よりも長い時間をユーザーに与える必要があります。 これは、たとえばコンピューターが長期間オフになっていて、多数のアプリケーションや更新プログラムの展開をインストールする必要がある場合に必要になります。 たとえば、エンド ユーザーが休暇から戻って来たばかりの場合、期限切れのアプリケーションの展開がインストールされるまで、長時間待たなければならない場合があります。 この問題を解決するため、Configuration Manager クライアント設定をコレクションに展開することで、適用猶予期間を定義できるようになりました。 
 
 猶予期間を設定するには、次の操作を実行します。
-1.      クライアント設定の [**コンピューター エージェント**] ページで、新しいプロパティ [**展開期限後の実施の猶予期間 (時間)**] の値を **1** ～ **120** 時間で設定します。
+1.      クライアント設定の **[コンピューター エージェント]** ページで、新しいプロパティ **[展開期限後の実施の猶予期間 (時間)]** の値を **1** ～ **120** 時間で設定します。
 2.      新しい必須アプリケーションの展開または既存の展開のプロパティの **[スケジュール]** ページで、**[Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings (ユーザー設定に従い、クライアント設定で定義された猶予期間が終了するまでこの展開の実施を延期する)]** チェック ボックスをオンにします。 このチェック ボックスがオンになっていて、クライアント設定も展開するデバイスを対象としているすべての展開が、適用猶予期間を使用します。
 
 適用猶予期間を構成し、チェック ボックスをオンにすると、アプリケーションのインストール期限になると、ユーザーがその猶予期間までに設定した最初の非ビジネス ウィンドウで、アプリケーションがインストールされます。 ただし、ユーザーはソフトウェア センターを開いて、いつでもアプリケーションをインストールすることもできます。 猶予期間が切れると、適用は期限切れの展開に対する通常の動作に戻ります。 ソフトウェア更新プログラムの展開ウィザード、自動展開規則の作成ウィザード、およびプロパティ ページに、同様のオプションが追加されています。
@@ -141,7 +142,7 @@ Configuration Manager コンソールの構成項目を使用して、Intune に
 
 
 ## <a name="improved-functionality-in-dialog-boxes-about-required-software"></a>必要なソフトウェアに関するダイアログ ボックスで改善された機能
-ユーザーが必要なソフトウェアを受け取ったときに、[**次の時間が経過したら再通知する**] 設定で、次のドロップダウン リストから値を選択できます。 
+ユーザーが必要なソフトウェアを受け取ったときに、**[次の時間が経過したら再通知する]** 設定で、次のドロップダウン リストから値を選択できます。 
 - **[後で]**:  クライアント エージェント設定で構成されている通知の設定に基づいて通知をスケジュールすることを指定します。
 - **[定時]**:  選択した時間後にもう一度通知を表示するように指定します (30 分後など)。
 

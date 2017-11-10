@@ -1,5 +1,6 @@
 ---
-title: "Exchange ActiveSync 電子メール プロファイルを作成する | Microsoft Docs"
+title: "Exchange ActiveSync 電子メール プロファイルを作成する"
+titleSuffix: Configuration Manager
 description: "Microsoft Intune と連携して機能する System Center Configuration Manager で電子メール プロファイルを作成および構成する方法について説明します。"
 ms.custom: na
 ms.date: 07/28/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 0af556b5b63b465a99650c8889eae3adbf7307f6
-ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
+ms.openlocfilehash: 0211acbd546ac207e640a43d012c1f82399ace53
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="exchange-activesync-email-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager で Exchange ActiveSync 電子メール プロファイルを作成する
 
@@ -117,7 +118,7 @@ Microsoft Intune と Exchange ActiveSync を利用すると、デバイスに電
 
 ## <a name="configure-synchronization-settings-for-the-exchange-activesync-email-profile"></a>Exchange ActiveSync 電子メール プロファイルの同期設定を構成します。  
 
-Exchange ActiveSync 電子メール プロファイルの作成ウィザードの [ **同期設定の構成** ] ページで、次の情報を指定します。  
+Exchange ActiveSync 電子メール プロファイルの作成ウィザードの **[ 同期設定の構成 ]** ページで、次の情報を指定します。  
 
 -   **スケジュール**。 デバイスが Exchange サーバーからデータを同期するスケジュールを選択します。 このオプションは Windows Phone デバイスにのみ適用できます。 次の中から選択します。  
 

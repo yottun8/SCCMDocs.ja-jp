@@ -1,5 +1,6 @@
 ---
-title: "Endpoint Protection のマルウェア定義 | Microsoft Docs"
+title: "Endpoint Protection のマルウェア定義"
+titleSuffix: Configuration Manager
 description: "クライアント コンピューターに定義ファイルの更新を配布するように Configuration Manager ソフトウェア更新プログラムを構成する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: d2c29ea4c2b49142c6e63e2b5e829271098eac70
-ms.sourcegitcommit: 8ac9c2c9ba1fdcbb7cc8d5be898586865fcf67c0
+ms.openlocfilehash: cf488babe28267c2438e03fa94c514c872f960c7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>Configuration Manager のソフトウェアの更新プログラムを使用して、プログラムを配信するには
 

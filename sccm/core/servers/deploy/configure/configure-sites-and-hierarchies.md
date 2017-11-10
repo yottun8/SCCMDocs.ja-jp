@@ -1,5 +1,6 @@
 ---
-title: "サイトの構成 | Microsoft Docs"
+title: "サイトの構成"
+titleSuffix: Configuration Manager
 description: "このチェックリストを利用し、サイトと階層の両方に影響を与える最も一般的な構成を考慮してください。"
 ms.custom: na
 ms.date: 2/7/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "15"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 862f420c063cb44c419d4904fbb4696efb739758
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e71a2153571fdaa069c8e75827661eb7c939d57a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-sites-and-hierarchies-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイトと階層の構成
 

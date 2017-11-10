@@ -1,5 +1,5 @@
 ---
-title: "Configuration Manager 2012 からの変更点 | Microsoft Docs "
+title: "Configuration Manager 2012 からの変更点 "
 description: "System Center 2012 Configuration Manager と比較した System Center Configuration Manger の新機能と変更をご確認いただけます。"
 ms.custom: na
 ms.date: 05/02/2017
@@ -14,11 +14,11 @@ caps.latest.revision: "51"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0a3eb93a99533a1569d8f72ca01d6dfcdc75da20
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 97882e89076b994c60760621dbab3fa8e75126fc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>System Center 2012 Configuration Manager からの System Center Configuration Manager の変更点
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/07/2017
 
 -   対象の展開に適用する更新プログラムを Configuration Manager 内から利用できるようにします。  
 
-このサイト システムの役割は、オンラインとオフラインの両方の操作モードをサポートしています。 詳細については、「 [System Center Configuration Manager のサービス接続ポイントについて](../../../core/servers/deploy/configure/about-the-service-connection-point.md)」をご覧ください。  
+このサイト システムの役割は、オンラインとオフラインの両方の操作モードをサポートしています。 詳細については、「 [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md)」をご覧ください。  
 
 ##  <a name="bkmk_usage"></a> 使用状況データの収集  
  System Center Configuration Manager は、サイトとインフラストラクチャに関する使用状況データを収集します。 この情報がコンパイルされ、サービス接続ポイントによって Microsoft クラウド サービスに送信されます。 使用している Configuration Manager のバージョンに適用される更新プログラムをダウンロードするには、Configuration Manager を有効にする必要があります。 サービス接続ポイントを設定するときには、収集するデータのレベルと、そのデータを自動的に送信するか (オンライン モード)、手動で送信するか (オフライン モード) の両方を設定できます。  
@@ -106,7 +106,7 @@ System Center 2012 Configuration Manager での帯域外管理は、この変更
 
 -   System Center Configuration Manager では、Windows 10 以降を実行しているデバイス用のユニバーサル Windows プラットフォーム (UWP) アプリを展開できます。 「[System Center Configuration Manager での Windows アプリケーションの作成](../../../apps/get-started/creating-windows-applications.md)」を参照してください。  
 
--   ソフトウェア センターは新しい現代的な外観へと一新されます。 これまではアプリケーション カタログにしか表示されなかったアプリ (ユーザーが利用できるアプリ) がソフトウェア センターの [アプリケーション] タブに表示されるようになりました。 これで、これらの展開を見つけやすくなり、ユーザーがアプリケーション カタログを参照する必要がなくなります。 さらに、Silverlight 対応のブラウザーが必要なくなります。 「[System Center Configuration Manager のアプリケーション管理の計画と構成](../../../apps/plan-design/plan-for-and-configure-application-management.md)」を参照してください。  
+-   ソフトウェア センターは新しい現代的な外観へと一新されます。 これまではアプリケーション カタログにしか表示されなかったアプリ (ユーザーが利用できるアプリ) がソフトウェア センターの [アプリケーション] タブに表示されるようになりました。これで、これらの展開を見つけやすくなり、ユーザーがアプリケーション カタログを参照する必要がなくなります。 さらに、Silverlight 対応のブラウザーが必要なくなります。 「[System Center Configuration Manager のアプリケーション管理の計画と構成](../../../apps/plan-design/plan-for-and-configure-application-management.md)」を参照してください。  
 
 -   MDM アプリケーションを介した新しい Windows インストーラーの種類では、Windows インストーラー ベースのアプリを作成して、Windows 10 を実行する登録済み PC に展開できます。 「[System Center Configuration Manager での Windows アプリケーションの作成](../../../apps/get-started/creating-windows-applications.md)」を参照してください。  
 

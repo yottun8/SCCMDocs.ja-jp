@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager のプライバシーに関する声明 - Configuration Manager コマンドレット ライブラリ | Microsoft Docs"
+title: "Configuration Manager cmdletlLibrary のプライバシーに関する声明"
 description: "System Center Configuration Manager コマンドレット ライブラリに関連するデータを Microsoft が収集して使用する方法について説明します。"
 ms.custom: na
 ms.date: 1/3/2017
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 3936075555cc0bb370ea6e42c7e720b864d565f7
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e42193a810ec1206d083c1fd6e4c112be1c61a8d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="system-center-configuration-manager-privacy-statement---configuration-manager-cmdlet-library"></a>System Center Configuration Manager のプライバシーに関する声明 - Configuration Manager コマンドレット ライブラリ
 

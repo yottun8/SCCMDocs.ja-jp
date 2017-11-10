@@ -1,8 +1,9 @@
 ---
-title: "Configuration Manager の Technical Preview | Microsoft Docs"
+title: "Technical Preview リリース"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の新機能を体験できるテクニカル プレビュー リリースについて説明します。"
 ms.custom: na
-ms.date: 09/28/2017
+ms.date: 10/30/2017
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -14,11 +15,11 @@ caps.latest.revision: "157"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 429e20185bd23519f78c37ded39f2638d0c80ced
-ms.sourcegitcommit: 8ac9c2c9ba1fdcbb7cc8d5be898586865fcf67c0
+ms.openlocfilehash: 0f6fb329dae1dda18bbb1869dc77872a2a6a1b98
+ms.sourcegitcommit: 5437b2823bada8f8c9e67940f584953b9d190628
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2017
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview
 
@@ -93,10 +94,6 @@ ms.lasthandoff: 10/07/2017
 リリース後、最長 1 年間、ベースライン バージョンをインストールできます。 ただし、新しい Technical Preview サイトをインストールする場合は、利用可能な最新のベースライン バージョンを使用することをお勧めします。
 -  **Technical Preview 1703** - Configuration Manager Technical Preview 1703 は、Configuration Manager Technical Preview のコンソール内更新と、[TechNet Evaluation Center Web サイトから入手できる](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)新しいベースライン バージョンの両方として使用できます。
 
-<!-- out of support. Use baseline 1703
--  **Technical Preview 1610** - The Configuration Manager Technical Preview 1610 was available as both an in-console update for the Configuration Manager Technical Preview, and as a baseline version. If you have media for installing 1610, we recommend you download version 1703 and install that version instead.
--->
-
 
 
 ##  <a name="BKMK_TPFeedback"></a> フィードバックについて  
@@ -110,19 +107,26 @@ ms.lasthandoff: 10/07/2017
 
 
 ##  <a name="bkmk_tpCaps"></a> 最新の Technical Preview で提供される機能  
- 以下は、それぞれの Configuration Manager Technical Preview リリースで提供される機能です。  Technical Preview のバージョンで利用できるようになった機能は、以降のバージョンでも利用できます。 同様に、System Center Configuration Manager リリース (Current Branch) に追加された機能は、後続の Technical Preview でも引き続き利用できます。  特定の機能の詳細については、各プレビュー バージョンのコンテンツをクリックします。  
+以下は、それぞれの Configuration Manager Technical Preview リリースで提供される機能です。  Technical Preview のバージョンで利用できるようになった機能は、以降のバージョンでも利用できます。 同様に、System Center Configuration Manager リリース (Current Branch) に追加された機能は、後続の Technical Preview でも引き続き利用できます。  特定の機能の詳細については、各プレビュー バージョンのコンテンツをクリックします。  
 
  |機能 |Technical Preview バージョン |Current Branch バージョン|  
  |----------------|---------------------|--------------------|
- |Configuration Manager コンソールの向上した VPN プロファイル エクスペリエンス <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![追加されていません](media/Red_X.gif)    |
- |Windows 10 デバイスの共同管理|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|![追加されていません](media/Red_X.gif)    |
-
-
+ |Windows Analytics デバイスの正常性に関する Windows 10 のテレメトリ<!--1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |![追加されていません](media/Red_X.gif)    |
+ |ソフトウェア センター アイコンの機能強化<!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |![追加されていません](media/Red_X.gif)    |
+ |ソフトウェア センターから共同管理対象デバイスのコンプライアンスを確認する<!-- 1356374 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|![追加されていません](media/Red_X.gif)    |
+ |CNG 証明書の制限付きサポート<!-- 1356191 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limited-support-for-cng-certificates)|![追加されていません](media/Red_X.gif)    |
+ |Exploit Guard のサポート<!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |![追加されていません](media/Red_X.gif)    |
+ |再起動を待機しているコンピューターに関する説明を改善<!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![追加されていません](media/Red_X.gif)    |
+ |Device Guard ポリシーの変更<!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![追加されていません](media/Red_X.gif)    |
+ |Windows Defender Application Guard ポリシーの構成と展開<!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![追加されていません](media/Red_X.gif)    |
+ 
 ## <a name="capabilities-delivered-in-previous-technical-previews"></a>以前の Technical Preview で提供される機能
  Technical Preview リリースのすべての機能が Current Branch でサポートされる最小バージョンで使用可能になると、そのプレビュー バージョンの詳細は次の表から削除されます。  
 
  |機能 |Technical Preview バージョン |Current Branch バージョン|  
  |----------------|---------------------|--------------------|
+ |Configuration Manager コンソールの向上した VPN プロファイル エクスペリエンス <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![追加されていません](media/Red_X.gif)    |
+ |Windows 10 デバイスの共同管理|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|![追加されていません](media/Red_X.gif)    |
  |Configuration Manager から PowerShell スクリプトを展開するときのスクリプト パラメーターの指定を改善 <!-- 1236459 -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![追加されていません](media/Red_X.gif)|
  |管理分析情報 <!-- 1353967 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#management-insights)|![追加されていません](media/Red_X.gif)|
  |Configuration Manager コンソールからコンピューターを再起動 <!-- 1356283 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#restart-computers-from-the-configuration-manager-console)|![追加されていません](media/Red_X.gif)|
@@ -272,3 +276,4 @@ ms.lasthandoff: 10/07/2017
 ## <a name="see-also"></a>関連項目  
 [System Center Configuration Manager の新機能](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [System Center Configuration Manager の概要](../../core/understand/introduction.md)
+

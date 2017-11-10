@@ -1,5 +1,6 @@
 ---
-title: "ロール ベース管理の基礎 | Microsoft Docs"
+title: "ロール ベース管理の基礎"
+titleSuffix: Configuration Manager
 description: "ロール ベース管理を使用して、Configuration Manager および管理対象オブジェクトへの管理アクセスを制御します。"
 ms.custom: na
 ms.date: 1/3/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: ddf2ad1cae51c1e36df5a6d86822e2b9abe604e2
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 39b717ede29749c1c7922240f1f45387dab9595f
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="fundamentals-of-role-based-administration-for-system-center-configuration-manager"></a>System Center Configuration Manager のロール ベース管理の基礎
 

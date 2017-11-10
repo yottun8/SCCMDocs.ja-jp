@@ -1,5 +1,6 @@
 ---
-title: "パブリケーションの管理 | Microsoft Docs"
+title: "パブリケーションを管理する"
+titleSuffix: Configuration Manager
 description: "System Center Updates Publisher を使用して、ソフトウェア更新プログラムのグループをパブリケーションとして管理します"
 ms.custom: na
 ms.date: 4/29/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: ddea7af935d5be880b96e383401061f8aa11e6da
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 07e0acadae6cab050f7f0c0b0165e2baa5ff4d68
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-publications-in-updates-publisher"></a>Updates Publisher でパブリケーションを管理する
 
@@ -98,7 +99,7 @@ Updates Publisher からパブリケーションを削除した後、そのパ�
 ## <a name="expire-or-reactivate-updates-and-bundles"></a>更新プログラムとバンドルの期限切れ設定または再アクティブ化
 **[更新プログラム] ワークスペース**を使用して更新プログラムとバンドルを選択し、期限切れにするか再アクティブ化することができます。 更新プログラムとバンドルを必要に応じて選択し、期限切れにするか再アクティブ化することができます。
 
--   **更新プログラムまたはバンドルを期限切れにするには**、[更新プログラム] ワークスペースで 1 つまたは複数の更新プログラムかバンドルを選択し、次に **[ホーム]** タブから **[期限切れ]** を選択します。 更新プログラムまたはバンドルを Configuration Manager に期限切れとして公開するまでは、再アクティブ化できます。
+-   **更新プログラムまたはバンドルを期限切れにするには**、[更新プログラム] ワークスペースで 1 つまたは複数の更新プログラムかバンドルを選択し、次に **[ホーム]** タブから **[期限切れ]** を選択します。更新プログラムまたはバンドルを Configuration Manager に期限切れとして公開するまでは、再アクティブ化できます。
 
     Configuration Manager からカスタム更新プログラムまたはバンドルを取り除く (削除する) 前に期限切れの設定を行い、次に Configuration Manager に対してこの期限切れの状態を公開する必要があります。 Configuration Manager の更新プログラムやバンドルが期限切れになった後は、更新プログラムやバンドルを展開または再アクティブ化することはできません。
 

@@ -1,5 +1,6 @@
 ---
-title: "リモート コントロール使用状況の監査 | Microsoft Docs"
+title: "リモート コントロール使用状況の監査"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でリモート コントロール使用状況を監査します。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 5c584a90e9bd2ead4440a0581438c5a336ed2612
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 46d465464c1059c5ce81a89cdabe330cf06eb8e6
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-audit-remote-control-usage-in-system-center-configuration-manager"></a>System Center Configuration Manager でリモート コントロール使用状況を監査する方法
 
@@ -29,7 +30,7 @@ System Center Configuration Manager のレポートを使用して、リモー�
 
  Configuration Manager でのレポートの構成方法に関して詳しくは、「[System Center Configuration Manager のレポート](../../../../core/servers/manage/reporting.md)」をご覧ください。  
 
- [ **ステータス メッセージ - 監査** ] のカテゴリでは次の 2 つのレポートが使用できます。  
+ **[ ステータス メッセージ - 監査 ]** のカテゴリでは次の 2 つのレポートが使用できます。  
 
 -   **リモート コントロール - 特定のユーザーによりリモートで制御されるコンピューターすべて** – 特定のユーザーが開始したリモート コントロール操作の概要が表示されます。  
 
@@ -37,9 +38,9 @@ System Center Configuration Manager のレポートを使用して、リモー�
 
 ### <a name="to-run-the-report-remote-control---all-computers-remote-controlled-by-a-specific-user"></a>[リモート コントロール - 特定のユーザーによりリモートで制御されるコンピューターすべて] レポートを実行するには  
 
-1.  Configuration Manager コンソールで、[ **監視** ] をクリックします。  
+1.  Configuration Manager コンソールで、**[ 監視 ]** をクリックします。  
 
-2.  [ **監視** ] ワークスペースで、[ **レポート**] を展開し、[ **レポート**] をクリックします。  
+2.  **[ 監視 ]** ワークスペースで、**[ レポート]** を展開し、**[ レポート]** をクリックします。  
 
 3.  **レポート** ノードをクリックして、 **カテゴリ** レポートを並べ替え、カテゴリのレポートをより簡単に見つけられるように列 **ステータス メッセージ - 監査**です。  
 
@@ -51,9 +52,9 @@ System Center Configuration Manager のレポートを使用して、リモー�
 
 ### <a name="to-run-the-report-remote-control---all-remote-control-information"></a>[リモート コントロール - リモート コントロール情報すべて] レポートを実行するには  
 
-1.  Configuration Manager コンソールで、[ **監視** ] をクリックします。  
+1.  Configuration Manager コンソールで、**[ 監視 ]** をクリックします。  
 
-2.  [ **監視** ] ワークスペースで、[ **レポート**] を展開し、[ **レポート**] をクリックします。  
+2.  **[ 監視 ]** ワークスペースで、**[ レポート]** を展開し、**[ レポート]** をクリックします。  
 
 3.  **[レポート]** ノードで、 **[カテゴリ]** 列をクリックしてレポートを並べ替え、 **[ステータス メッセージ - 監査]**カテゴリのレポートを簡単に見つけられるようにします。  
 

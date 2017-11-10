@@ -1,5 +1,6 @@
 ---
-title: "DNS 発行を使用して管理ポイントを検出するようにクライアント コンピューターを構成する | Microsoft Docs"
+title: "DNS 発行を使用して管理ポイントを検出するようにクライアントを構成する"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で DNS 発行を使用して、管理ポイントを検出するようにクライアント コンピューターを設定します。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 0526dccc21be8419bf772374a67bc7cd262e6375
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: d2462c282b5b979177fda735847279a12208ba6d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-configure-client-computers-to-find-management-points-by-using-dns-publishing-in-system-center-configuration-manager"></a>System Center Configuration Manager で DNS 発行を使用して、管理ポイントを検出するようにクライアント コンピューターを構成する方法
 
@@ -37,7 +38,7 @@ System Center Configuration Manager のクライアントは、サイトの割�
 
 -   クライアントのインストール中に、クライアントに管理ポイントのサフィックスを構成するには、CCMSetup Client.msi プロパティを構成します。  
 
--   クライアントのインストール後に、クライアントに管理ポイントのサフィックスを構成するには、コントロールパネルで、[ **Configuration Manager のプロパティ** ] を構成します。  
+-   クライアントのインストール後に、クライアントに管理ポイントのサフィックスを構成するには、コントロールパネルで、**[ Configuration Manager のプロパティ ]** を構成します。  
 
 #### <a name="to-configure-clients-for-a-management-point-suffix-during-client-installation"></a>クライアントのインストール中に、クライアントに管理ポイントのサフィックスを構成するには  
 
@@ -51,8 +52,8 @@ System Center Configuration Manager のクライアントは、サイトの割�
 
 #### <a name="to-configure-clients-for-a-management-point-suffix-after-client-installation"></a>クライアントのインストール後に、クライアントに管理ポイントのサフィックスを構成するには  
 
-1.  クライアント コンピューターのコントロール パネルで、 **Configuration Manager**に移動し、[ **プロパティ**] をダブルクリックします。  
+1.  クライアント コンピューターのコントロール パネルで、 **Configuration Manager**に移動し、**[ プロパティ]** をダブルクリックします。  
 
-2.  **サイト**  タブで管理ポイントの DNS サフィックスを指定してから、 **OK** をクリックします。  
+2.  **[ サイト ]** タブで管理ポイントの DNS サフィックスを指定してから、**[ OK ]** をクリックします。  
 
      サイトに複数の管理ポイントがあり、その管理ポイントが複数のドメインに存在する場合は、一つのドメインだけを指定します。 このドメインの管理ポイントにクライアントが接続すると、クライアントは、使用可能な管理ポイントの一覧をダウンロードします。この一覧には、ほかのドメインにある管理ポイントも含まれます。

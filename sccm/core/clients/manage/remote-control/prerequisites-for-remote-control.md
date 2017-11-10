@@ -1,5 +1,6 @@
 ---
-title: "リモート コントロールの前提条件 | Microsoft Docs"
+title: "リモート コントロールの前提条件"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager のリモート コントロールの前提条件を確認します。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: a99a18bcb5c981a56e5b38eb631cfabbad8c44d7
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: e7287ae7df68ebbcb8f251b8d001233a647596ee
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prerequisites-for-remote-control-in-system-center-configuration-manager"></a>System Center Configuration Manager のリモート コントロールの前提条件
 
@@ -49,4 +50,4 @@ System Center Configuration Manager のリモート コントロールには、�
 |----------------|----------------------|  
 |クライアントでリモート コントロールが有効になっている必要があります。|既定では、Configuration Manager をインストールする場合にリモート コントロールは有効化されていません。 電源管理を有効化して構成する方法の詳細については、「[Configuring remote control in System Center Configuration Manager](../../../../core/clients/manage/remote-control/configuring-remote-control.md)」(System Center Configuration Manager でリモート コントロールを構成する) を参照してください。|  
 |レポート サービス ポイント|リモート コントロールに対してレポートを実行するには、事前に Reporting Services ポイント サイト システムの役割がインストールされている必要があります。 詳細については、「[System Center Configuration Manager のレポート](../../../../core/servers/manage/reporting.md)」を参照してください。|  
-|リモート コントロールを管理するためのセキュリティのアクセス許可|Configuration Manager コンソールからコレクション リソースにアクセスしてリモート コントロール セッションを開始する場合: **コレクション** オブジェクトに対する **読み取り**、**リソースの読み取り**、**リモート コントロール**のアクセス許可。<br /><br /> [**リモート ツール オペレーター**] セキュリティ ロールには、Configuration Manager でリモート コントロールを管理するのに必要な、これらのアクセス許可が含まれます。<br /><br /> 詳細については、「[Configure role-based administration for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-role-based-administration.md)」(System Center Configuration Manager の役割ベースの管理の構成) を参照してください。<br /><br /> さらに、許可されたビューアーには、リモート コントロールを使用するアクセス許可を付与する必要があります。この操作を行うには、[**リモート ツール**] クライアント設定の [**リモート コントロールとリモート アシスタンス セッションを表示できるユーザー**] の一覧に該当ユーザーを追加します。
+|リモート コントロールを管理するためのセキュリティのアクセス許可|Configuration Manager コンソールからコレクション リソースにアクセスしてリモート コントロール セッションを開始する場合: **コレクション** オブジェクトに対する **読み取り**、**リソースの読み取り**、**リモート コントロール**のアクセス許可。<br /><br /> **[リモート ツール オペレーター]** セキュリティ ロールには、Configuration Manager でリモート コントロールを管理するのに必要な、これらのアクセス許可が含まれます。<br /><br /> 詳細については、「[Configure role-based administration for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-role-based-administration.md)」(System Center Configuration Manager の役割ベースの管理の構成) を参照してください。<br /><br /> さらに、許可されたビューアーには、リモート コントロールを使用するアクセス許可を付与する必要があります。この操作を行うには、**[リモート ツール]** クライアント設定の **[リモート コントロールとリモート アシスタンス セッションを表示できるユーザー]** の一覧に該当ユーザーを追加します。

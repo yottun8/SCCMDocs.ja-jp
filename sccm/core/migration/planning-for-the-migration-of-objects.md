@@ -1,5 +1,6 @@
 ---
-title: "オブジェクトの移行 | Microsoft Docs"
+title: "オブジェクトの移行"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager 環境での階層間でオブジェクトの移行を計画する方法について説明します。"
 ms.custom: na
 ms.date: 1/12/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 17f3955aa7c63a13bab03b46002f7de0b0ec38fe
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 74fe97e13ba876763159480d0a28445b30d834d2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-system-center-configuration-manager"></a>Configuration Manager オブジェクトの System Center Configuration Manager への移行の計画
 
@@ -74,7 +75,7 @@ Configuration Manager 2007 ソース階層から移行する場合、移行処�
 |ソフトウェア更新プログラム一覧|ソフトウェア更新プログラムのリストがソフトウェア更新プログラム グループに変換されます。|  
 |ソフトウェア更新プログラムの展開|ソフトウェア更新プログラムの展開が、展開と更新プログラムのグループに変換されます。<br /><br /> Configuration Manager 2007 からソフトウェア更新プログラムの展開を移行した後、このソフトウェア更新プログラムを展開するには、まず移行先サイトで有効にする必要があります。|  
 |ソフトウェア更新プログラム パッケージ|ソフトウェア更新プログラム パッケージは、ソフトウェア更新プログラム パッケージのまま維持されます。|  
-|ソフトウェア更新プログラム テンプレート|ソフトウェア更新プログラム テンプレートは、ソフトウェア更新プログラム テンプレートのまま維持されます。<br /><br /> Configuration Manager 2007 の展開テンプレートの [**期間**] 値は移行されません。|  
+|ソフトウェア更新プログラム テンプレート|ソフトウェア更新プログラム テンプレートは、ソフトウェア更新プログラム テンプレートのまま維持されます。<br /><br /> Configuration Manager 2007 の展開テンプレートの **[期間]** 値は移行されません。|  
 
 System Center 2012 Configuration Manager または System Center Configuration Manageソース階層からオブジェクトを移行するときは、ソフトウェア更新オブジェクトは変更されません。  
 

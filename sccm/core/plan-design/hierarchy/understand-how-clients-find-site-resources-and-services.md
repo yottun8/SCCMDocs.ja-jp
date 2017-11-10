@@ -1,5 +1,6 @@
 ---
-title: "サイト リソースを検索する |Microsoft Docs"
+title: "サイト リソースを検索する"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager クライアントがサービスの場所を使用してサイト リソースを検索する方法とタイミングについて説明します。"
 ms.custom: na
 ms.date: 2/7/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 1c9e7ada6a8aa228b30e58865baae0f6e529e6af
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e64b2c4242903143b677189e3bd4c8f32ebace20
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>クライアントが System Center Configuration Manager のサイト リソースやサービスを検索する方法を理解する
 
@@ -204,7 +205,7 @@ Windows Server DNS を使用する場合、次の手順に従って、イント�
 
 ##### <a name="to-configure-automatic-publishing"></a>自動発行を構成するには  
 
-1.  Configuration Manager コンソールで、[**管理**] > [**サイトの構成**] > [**サイト**] の順に展開します。  
+1.  Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** > **[サイト]** の順に展開します。  
 
 2.  サイトを選択してから、**[サイト コンポーネントの構成]** をクリックします。  
 

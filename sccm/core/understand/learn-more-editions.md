@@ -1,5 +1,6 @@
 ---
-title: "ライセンスとブランチの詳細 | Microsoft Docs"
+title: "ライセンスとブランチの詳細"
+titleSuffix: Configuration Manager
 description: "このトピックでは、2016 年 10 月リリースの System Center Configuration Manager で利用できるインストール オプションのライセンス要件について説明します。Current Branch バージョン 1606、Long-Term Servicing Branch (LTSB)、Current Branch の評価版インストールが対象となります。"
 ms.custom: na
 ms.date: 10/12/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 90e16b316872cb370c9c2e645f46ac12afab7107
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 88cc85a98b9281ec07ead766c415bebe46c5a82c
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>System Center Configuration Manager のライセンスとブランチ
 
@@ -88,9 +89,9 @@ System Center Configuration Manager については、2016 年 10 月リリー�
 >  Microsoft では、お客様が指定した有効期限の日付を確認していません。また、ライセンスを検証する場合もこの日付を使用しません。  お客様は有効期限を通知するアラームとして、この日付を使用することができます。 Configuration Manager ではオンラインで新しいソフトウェア更新プログラムが提供されていないか定期的に確認します。このような追加の更新プログラムを取得するためにはソフトウェア アシュアランス ライセンスが最新の状態になっている必要があります。このため有効期限を通知するアラーム機能は便利です。    
 
 **日付を指定するには:**
-- System Center Configuration Manager バージョン 1606 の基準メディアからセットアップを実行する場合は、セットアップ ウィザードの [**プロダクト キー**] ページで値を指定できます。
+- System Center Configuration Manager バージョン 1606 の基準メディアからセットアップを実行する場合は、セットアップ ウィザードの **[プロダクト キー]** ページで値を指定できます。
 
-- Configuration Manager コンソールの [**階層設定のプロパティ**] の [**ライセンス**] タブで値を指定することができます。
+- Configuration Manager コンソールの **[階層設定のプロパティ]** の **[ライセンス]** タブで値を指定することができます。
 
 ソフトウェア アシュアランス ライセンスおよび System Center Configuration Manager の Current Branch の詳細については、「[Licensing and branches for System Center Configuration Manager](/sccm/core/understand/learn-more-editions)」 (System Center Configuration Manager のライセンスとブランチ) を参照してください。
 
@@ -104,7 +105,7 @@ System Center Configuration Manager については、2016 年 10 月リリー�
 - Microsoft ボリューム ライセンスでの製品の使用条件: [http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052)
 
 - ボリューム ライセンスをお持ちのお客様は、ライセンスの概要を次のリンクを使用して確認できます: [https://www.microsoft.com/Licensing/servicecenter/default.aspx](https://www.microsoft.com/Licensing/servicecenter/default.aspx)  
-  [**ライセンス**] メニューに移動して、[**ライセンスの概要**] をクリックすると、ライセンスの概要が表示されます。
+  **[ライセンス]** メニューに移動して、**[ライセンスの概要]** をクリックすると、ライセンスの概要が表示されます。
 
 **VLSC ビデオ:**
 - VLSC の動作方法を示すビデオ: m[https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2)

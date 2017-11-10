@@ -1,5 +1,6 @@
 ---
-title: "Wi-Fi、VPN、電子メール、および証明書プロファイルの展開 | Microsoft Docs"
+title: "Wi-Fi、VPN、電子メール、および証明書プロファイルの展開"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で Wi-Fi、VPN、電子メール、および証明書のプロファイルを展開する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-ms.openlocfilehash: 70372d5df13034b48f3e43b766776442f1be5823
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 7e6b0038b5164a43a3198274a863d53750828776
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager でのプロファイルの展開
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 08/07/2017
 >  同じユーザーに複数の会社リソース アクセス プロファイルを展開する場合は、次の動作が発生します。  
 >   
 >  -   競合している設定にオプションの値が含まれている場合、その値はデバイスに送信されません。  
-> -   競合する設定に必須の値が含まれている場合、既定値がデバイスに送信されます。 既定値がない場合は、全体の会社リソース アクセス プロファイルは失敗します。 たとえば、同じユーザーに 2 つの電子メール プロファイルを展開し、[ **Exchange ActiveSync ホスト** ] または [ **電子メール アドレス** ] に指定した値が異なる場合、その両方の設定は必須のため、電子メール プロファイルは失敗します。  
+> -   競合する設定に必須の値が含まれている場合、既定値がデバイスに送信されます。 既定値がない場合は、全体の会社リソース アクセス プロファイルは失敗します。 たとえば、同じユーザーに 2 つの電子メール プロファイルを展開し、**[ Exchange ActiveSync ホスト ]** または **[ 電子メール アドレス ]** に指定した値が異なる場合、その両方の設定は必須のため、電子メール プロファイルは失敗します。  
 
 > -   証明書プロファイルを展開する前に、まず、インフラストラクチャを構成して証明書プロファイルを作成する必要があります。 詳細については、以下のトピックを参照してください。  
 >   

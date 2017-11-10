@@ -1,5 +1,6 @@
 ---
-title: "Configuration Manager でのスクリプトの作成と実行 | Microsoft Docs"
+title: "スクリプトを作成して実行する"
+titleSuffix: Configuration Manager
 description: "Configuration Manager を使用して、クライアント デバイスでスクリプトを作成し、実行します。"
 ms.custom: na
 ms.date: 09/15/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 4c90617890ba3751a7215e9ac54042d64cc1a227
-ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
+ms.openlocfilehash: d1cbb760c6e40c21b97d0227ff93613066189d4b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Configuration Manager コンソールから PowerShell スクリプトを作成して実行する
 
@@ -54,8 +55,8 @@ Configuration Manager のセキュリティ ロールの詳細については、
 
 ## <a name="allow-users-to-approve-their-own-scripts"></a>ユーザーが自身のスクリプトを承認できるようにする
 
-1. Configuration Manager コンソールで、[ **管理**] をクリックします。
-2. [ **管理** ] ワークスペースで [ **サイトの構成**] を展開して、[ **サイト**] をクリックします。
+1. Configuration Manager コンソールで、**[ 管理]** をクリックします。
+2. **[ 管理 ]** ワークスペースで **[ サイトの構成]** を展開して、**[ サイト]** をクリックします。
 3. サイトの一覧で、自分のサイトを選択し、**[ホーム]** タブの **[サイト]** グループで **[階層設定]** をクリックします。
 4. **[階層設定のプロパティ]** ダイアログ ボックスの **[全般]** タブで、**[Do not allow script authors to approve their own scripts]\(スクリプト作成者に自身のスクリプトの承認を許可しない\)** チェック ボックスをオフにします。
 
@@ -119,6 +120,6 @@ Configuration Manager のセキュリティ ロールの詳細については、
 
 クライアント デバイスにスクリプトを実行したら、次の手順を使用して操作の成功を監視します。
 
-1. Configuration Manager コンソールで、[ **監視**] をクリックします。
+1. Configuration Manager コンソールで、**[ 監視]** をクリックします。
 2. **[監視]** ワークスペースで、**[スクリプトのステータス]** をクリックします。
 3. **[スクリプトのステータス]** リストには、クライアント デバイスで実行した各スクリプトの結果が表示されます。 スクリプトの終了コード **0** は、通常、スクリプトが正常に実行されたことを示します。

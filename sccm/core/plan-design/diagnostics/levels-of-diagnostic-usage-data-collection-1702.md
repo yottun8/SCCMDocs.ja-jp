@@ -1,5 +1,6 @@
 ---
-title: "1702 の診断データ | System Center Configuration Manager"
+title: "1702 の診断データ"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager バージョン 1702 で収集される診断結果および使用状況データの各種レベルについて説明します。"
 ms.custom: na
 ms.date: 3/27/2017
@@ -32,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 0e1d93712150fb3d6fabc3f057711eba1194c3ad
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a8a3f143acd34f370ebf6187cdb7dcaefcefe5eb
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager バージョン 1702 で収集される診断結果および使用状況データのレベル
 

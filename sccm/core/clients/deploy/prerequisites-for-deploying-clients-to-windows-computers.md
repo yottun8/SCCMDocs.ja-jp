@@ -1,5 +1,6 @@
 ---
-title: "Windows クライアント展開の前提条件 | Microsoft Docs"
+title: "Windows クライアント展開の前提条件"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で Windows コンピューターにクライアントを展開するための前提条件について説明します。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 98e86323aa9f6dad1c76b98947338d97dd12f3db
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 44847d8a4bde2212c84a4f405b18730ec8f51b0a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager で Windows コンピューターにクライアントを展開するための前提条件
 
@@ -104,7 +105,7 @@ Configuration Manager クライアントを環境で展開するには、次の�
 
     -   コンピューターに ADMIN$ 共有が必要です。  
 
-    -   検出されたリソースに Configuration Manager クライアントを自動的にプッシュする場合は、[**クライアント プッシュ インストールのプロパティ**] ダイアログ ボックスで [**割り当てられたリソースへのクライアント プッシュ インストールを有効にする**] を選択する必要があります。  
+    -   検出されたリソースに Configuration Manager クライアントを自動的にプッシュする場合は、**[クライアント プッシュ インストールのプロパティ]** ダイアログ ボックスで **[割り当てられたリソースへのクライアント プッシュ インストールを有効にする]** を選択する必要があります。  
 
     -   クライアント コンピューターは、配布ポイントまたは管理ポイントにアクセスし、サポート ファイルをダウンロードできる必要があります。  
 

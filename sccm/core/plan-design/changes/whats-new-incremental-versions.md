@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager の増分バージョン | Microsoft Docs"
+title: "増分バージョン"
+titleSuffix: Configuraton Manager
 description: "System Center Configuration Manager の更新プログラムをインストールして管理する方法について説明します。"
 ms.custom: na
 ms.date: 7/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 043c9521f4a94ea2df5cebb4ca1c0b1127f0edbc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5ebbf4e1dd0e67a879250c559bdae5c7be3dfc91
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="whats-new-in-system-center-configuration-manager-incremental-versions"></a>System Center Configuration Manager の増分バージョンの新機能
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 08/07/2017
 
 
 
- System Center Configuration Manager では、コンソール内の [[更新とサービス]](/sccm/core/servers/manage/updates) プロセスを使用して、Configuration Manager の更新プログラムを簡単に検出してインストールできます。 つまり、サービス パックや累積的な更新プログラム バージョンを追跡する作業がなくなります。 今後、最新のリリースや更新プログラムのダウンロードを検索する必要はありません。
+ System Center Configuration Manager では、コンソール内の [[更新とサービス]](/sccm/core/servers/manage/updates) プロセスを使用して、Configuration Manager の更新プログラムを簡単に検出してインストールできます。 つまり、サービス パックや累積的な更新プログラム バージョンを追跡する作業がなくなります。今後、最新のリリースや更新プログラムのダウンロードを検索する必要はありません。
 
  代わりに、製品を現在のブランチの新しいバージョンに更新するには、Configuration Manager コンソールを使用し、[コンソール内の更新プログラムを検索してインストール](../../../core/servers/manage/install-in-console-updates.md)します。 毎年数回、製品の更新プログラムが含まれた新しいバージョンがリリースされます。 各バージョンでは、新機能も導入されます。  
 

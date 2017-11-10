@@ -1,5 +1,6 @@
 ---
-title: "資産インテリジェンスの前提条件 | Microsoft Docs"
+title: "資産インテリジェンスの前提条件"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の資産インテリジェンスの前提条件を取得します。"
 ms.custom: na
 ms.date: 2/22/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 2bcc6dd84b236187ea9cbfa0b85c25e7ec25719c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 88358017bd8807caca3c544ecdf07c1b751efd3f
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prerequisites-for-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager の資産インテリジェンスの前提条件
 

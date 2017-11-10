@@ -1,5 +1,6 @@
 ---
-title: "可用性グループを構成する | Microsoft Docs"
+title: "可用性グループを構成する"
+titleSuffix: Configuration Manager
 description: "SCCM で SQL Server AlwaysOn 可用性グループをセットアップして管理します。"
 ms.custom: na
 ms.date: 7/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: e0b887169f0c8ae6901d1c6fd6a498df9596c2b4
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 12ba7c1cbfdb0c3ab9885e839b05a48862ea0e5d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>Configuration Manager の SQL Server Always On 可用性グループを構成する
 
@@ -61,7 +62,7 @@ SQL Server のドキュメントの「 [データベースの復旧モデルの�
       -    **[レプリカの指定]** ページで次のように構成します。
           -    **レプリカ:** セカンダリ レプリカをホストするサーバーを指定します。
 
-          -    **リスナー**: 完全な DNS 名として **[リスナー DNS 名]** を指定します (例: **&lt;Listener_Server>.fabrikam.com**)。 可用性グループのサイト データベースを使用するよう Configuration Manager を構成するときに、これが使用されます。
+          -    **リスナー**: 完全な DNS 名として **[リスナー DNS 名]** を指定します (例: **&lt;Listener_Server>.fabrikam.com**)。可用性グループのサイト データベースを使用するよう Configuration Manager を構成するときに、これが使用されます。
 
       -    **[最初のデータの同期を選択]** ページで、 **[完全]**を選びます。 ウィザードでは、可用性グループが作成された後に、プライマリ データベースとトランザクション ログがバックアップされます。 それから、セカンダリ レプリカをホストする各サーバーで復元されます。 (この手順を使用しない場合は、セカンダリ レプリカをホストする各サーバーにサイト データベースのコピーを復元して、グループにそのデータベースを手動で結合する必要があります)。   
 

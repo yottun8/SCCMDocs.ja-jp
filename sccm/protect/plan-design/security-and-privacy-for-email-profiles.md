@@ -1,5 +1,6 @@
 ---
-title: "電子メール プロファイルのセキュリティとプライバシー | Microsoft Docs"
+title: "電子メール プロファイルのセキュリティとプライバシー"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でデバイスの電子メール プロファイルを管理する場合のセキュリティのベスト プラクティスについて説明します。"
 ms.custom: na
 ms.date: 12/28/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-ms.openlocfilehash: 17707f931a4fa58b225ce14f04c2a19648585bc4
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 0faa84a53fba59b81156ef21d73fbed24cc9961a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="security-and-privacy-for-email-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager の電子メール プロファイルのセキュリティとプライバシー
 

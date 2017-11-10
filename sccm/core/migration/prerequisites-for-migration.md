@@ -1,5 +1,6 @@
 ---
-title: "移行の前提条件 | Microsoft Docs"
+title: "移行の前提条件"
+titleSuffix: Configuration Manager
 description: "Configuration Manager のサポートされているバージョン、サポートされているソース サイトの言語、および移行に必要な構成を理解します。"
 ms.custom: na
 ms.date: 3/7/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: cd90f5462ac4bb4c0a2021e6d5dde65161b9c5f6
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b1f4942562bf9e1f460ba9e4dae488e57a345e35
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prerequisites-for-migration-in-system-center-configuration-manager"></a>System Center Configuration Manager での移行の前提条件
 
@@ -76,7 +77,7 @@ System Center 2012 Configuration Manager または System Center Configuration M
 
 -   **Configuration Manager コンソールでの移行の構成、実行、および監視を行うには:**  
 
-     移行先サイトでは、ロールベースの管理のセキュリティ ロール [ **インフラストラクチャ管理者** ] が割り当てられたアカウントを使用する必要があります。 このセキュリティ ロールにより、移行ジョブの作成、クリーンアップ、監視、および配布ポイントの共有とアップグレード操作など、すべての移行操作を管理するアクセス許可が付与されます。  
+     移行先サイトでは、ロールベースの管理のセキュリティ ロール **[ インフラストラクチャ管理者 ]** が割り当てられたアカウントを使用する必要があります。 このセキュリティ ロールにより、移行ジョブの作成、クリーンアップ、監視、および配布ポイントの共有とアップグレード操作など、すべての移行操作を管理するアクセス許可が付与されます。  
 
 -   **データ収集:**  
 
@@ -118,7 +119,7 @@ System Center 2012 Configuration Manager または System Center Configuration M
 
 -   **配布ポイントのアップグレードまたは再割り当て:**  
 
-     ソース サイトの SMS プロバイダーからデータを収集するように構成された [ **ソース サイトのアクセス アカウント** ] には、次のアクセス許可が必要です。  
+     ソース サイトの SMS プロバイダーからデータを収集するように構成された **[ ソース サイトのアクセス アカウント ]** には、次のアクセス許可が必要です。  
 
     -   Configuration Manager 2007 配布ポイントをアップグレードするためには、Configuration Manager 2007 ソース サイトから配布ポイントを削除するため、アカウントに Configuration Manager 2007 サイト サーバーの **[サイト]** クラスの **[読み取り]**、**[実行]**、**[削除]** アクセス許可が必要です。  
 

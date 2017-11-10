@@ -1,5 +1,6 @@
 ---
-title: "Configuration Manager の Technical Preview 1604 の機能"
+title: "Technical Preview 1604 の機能"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の Technical Preview バージョン 1604 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 26b0d8ea7b3e841c48945df55f8860394a98a29f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e632a3f4819cb2cbdaa4517b8dd0ae34fe868b3c
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1604 の機能
 
@@ -44,21 +45,21 @@ ms.lasthandoff: 08/07/2017
 
 1.  Azure Active Directory で、"Web アプリケーションや Web API" 管理ツールとして Configuration Manager を登録します。 後で必要なクライアント ID が表示されます。  
 
-    1.  [https://manage.windowsazure.com](https://manage.windowsazure.com) の **Active Directory** ノードで、Azure Active Directory を選択し、[**アプリケーション**] > [**追加**] をクリックします。  
+    1.  [https://manage.windowsazure.com](https://manage.windowsazure.com) の **Active Directory** ノードで、Azure Active Directory を選択し、**[アプリケーション]** > **[追加]** をクリックします。  
 
-    2.  [**組織で開発中のアプリケーションを追加**] をクリックします。  
+    2.  **[組織で開発中のアプリケーションを追加]** をクリックします。  
 
-    3.  アプリケーションの名前を入力し、[**Web アプリケーション**] または [**Web API**]、あるいはその両方を選択し、次へ進む矢印をクリックします。  
+    3.  アプリケーションの名前を入力し、**[Web アプリケーション]** または **[Web API]**、あるいはその両方を選択し、次へ進む矢印をクリックします。  
 
-    4.  [**サインオン URL**] と [**アプリケーション ID/URI**] の両方に同じ URL を入力します。  URL はあらゆるものを使用でき、実際のアドレスに解決する必要はありません。 たとえば、**https://&lt;yourdomain\>/sccm** を入力できます。  
+    4.  **[サインオン URL]** と **[アプリケーション ID/URI]** の両方に同じ URL を入力します。  URL はあらゆるものを使用でき、実際のアドレスに解決する必要はありません。 たとえば、**https://&lt;yourdomain\>/sccm** を入力できます。  
 
     5.  ウィザードを完了します。  
 
 2.  Azure Active Directory で、登録済み管理ツールのクライアント キーを作成します。  
 
-    1.  作成したアプリケーションを強調表示し、[**構成**] をクリックします。  
+    1.  作成したアプリケーションを強調表示し、**[構成]** をクリックします。  
 
-    2.  [**キー**] で、リストから期間を選択して、[**保存**] をクリックします。  これにより、新しいクライアント キーが作成されます。  ビジネス向け Windows ストアを Configuration Manager に正常にオンボードするまで、このページから移動しないでください。  
+    2.  **[キー]** で、リストから期間を選択して、**[保存]** をクリックします。  これにより、新しいクライアント キーが作成されます。  ビジネス向け Windows ストアを Configuration Manager に正常にオンボードするまで、このページから移動しないでください。  
 
 3.  ビジネス向け Windows ストアで、ストア管理ツールとして Configuration Manager を構成します。  
 
@@ -66,29 +67,29 @@ ms.lasthandoff: 08/07/2017
 
     2.  要求された場合は、使用条件に同意します。  
 
-    3.  [**管理ツール**] で、[**Add a management tool**]\(管理ツールを追加) をクリックします。  
+    3.  **[管理ツール]** で、**[Add a management tool]**\(管理ツールを追加) をクリックします。  
 
     4.  **[Search for the tool by name]** (名前でツールを検索) で、先ほど AAD で作成したアプリケーションの名前を入力して、**[追加]** クリックします。  
 
-    5.  インポートしたアプリケーションの横にある [**アクティブ化**] をクリックします。  
+    5.  インポートしたアプリケーションの横にある **[アクティブ化]** をクリックします。  
 
-    6.  オフラインでライセンスされるアプリケーションを購入する場合、**オフラインでライセンスされたアプリの表示**ウィザードで、[**はい**] をクリックします。  
+    6.  オフラインでライセンスされるアプリケーションを購入する場合、**オフラインでライセンスされたアプリの表示**ウィザードで、**[はい]** をクリックします。  
 
 4.  ビジネス向け Windows ストアから少なくとも 1 つのアプリを購入します。  
 
-5.  Configuration Manager コンソールの**管理**ワークスペースで、[**Cloud Services**] を展開して、[**ビジネス向け Windows ストア**] をクリックします。  
+5.  Configuration Manager コンソールの**管理**ワークスペースで、**[Cloud Services]** を展開して、**[ビジネス向け Windows ストア]** をクリックします。  
 
-6.  [**ホーム**] タブの [**作成**] グループで、[**ビジネス向け Windows ストア アカウントの追加**] をクリックします。  
+6.  **[ホーム]** タブの **[作成]** グループで、**[ビジネス向け Windows ストア アカウントの追加]** をクリックします。  
 
 7.  Azure Active Directory からテナント ID、クライアント ID、クライアント キーを追加し、ウィザードを完了します。  
 
-8.  完了した時点で、Configuration Manager コンソールの [**ビジネス向け Windows ストア**] で構成されたアカウントが表示されます。  
+8.  完了した時点で、Configuration Manager コンソールの **[ビジネス向け Windows ストア]** で構成されたアカウントが表示されます。  
 
 ##### <a name="scenario-2-create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-offline-licensed-app"></a>シナリオ 2: ビジネス向け Windows ストアのオフライン ライセンス付きアプリから Configuration Manager アプリケーションを作成して展開する  
 
-1.  Configuration Manager コンソールの [**ソフトウェア ライブラリ**] ワークスペースで [**アプリケーション管理**] を展開し、[**ストア アプリのライセンス情報**] をクリックします。  
+1.  Configuration Manager コンソールの **[ソフトウェア ライブラリ]** ワークスペースで **[アプリケーション管理]** を展開し、**[ストア アプリのライセンス情報]** をクリックします。  
 
-2.  [**購入されたビジネス向け Windows ストア**] のリストにストアから同期されたアプリが一覧表示されます。 展開するアプリを選び、[**ホーム**] タブの [**作成**] グループで、[**アプリケーションの作成**]をクリックします。  
+2.  **[購入されたビジネス向け Windows ストア]** のリストにストアから同期されたアプリが一覧表示されます。 展開するアプリを選び、**[ホーム]** タブの **[作成]** グループで、**[アプリケーションの作成]**をクリックします。  
 
 3.  ビジネス向け Windows ストアのアプリを含む Configuration Manager アプリケーションが作成されます。 他の Configuration Manager のアプリケーションと同様に、このアプリケーションを展開して監視できます。  
 
@@ -129,11 +130,11 @@ ms.lasthandoff: 08/07/2017
 
 1.  どちらの設定もクライアント設定の同じページで構成されます。 Configuration Manager コンソールで **[管理] > [クライアント設定]** に移動し、使用するデバイス クライアント設定オブジェクトを開きます。 既定のクライアント設定オブジェクトを変更することもできます。  
 
-2.  使用可能な設定のリストから [**クライアント キャッシュ設定**] を選びます。  
+2.  使用可能な設定のリストから **[クライアント キャッシュ設定]** を選びます。  
 
-3.  キャッシュのサイズを管理するには、[**クライアント キャッシュ サイズを構成する**] を [**はい**] に設定します。 最大キャッシュ サイズをメガバイトとクライアント ドライブ領域の割合として構成することができます。  
+3.  キャッシュのサイズを管理するには、**[クライアント キャッシュ サイズを構成する]** を **[はい]** に設定します。 最大キャッシュ サイズをメガバイトとクライアント ドライブ領域の割合として構成することができます。  
 
-4.  クライアントがクライアント ピア キャッシュに参加できるようにするには、[**完全な OS 上の Configuration Manager クライアントにコンテンツの共有を許可する**] を [**はい**] に設定します。 これでクライアントが使用するポート (HTTP または HTTPS でも) を構成することができます。  
+4.  クライアントがクライアント ピア キャッシュに参加できるようにするには、**[完全な OS 上の Configuration Manager クライアントにコンテンツの共有を許可する]** を **[はい]** に設定します。 これでクライアントが使用するポート (HTTP または HTTPS でも) を構成することができます。  
 
 ### <a name="try-it-out"></a>試してみましょう。  
  次のタスクを実行してから、このトピックの先頭付近にあるフィードバック情報を使用してその動作を報告してください。  
@@ -169,4 +170,4 @@ Passport を使用すると、パスワードの代わりにユーザー ジェ�
 これを試すには、クライアント エージェント設定を使用して、オンプレミスの正常性構成証明書サービスを構成します。  
 
 ##  <a name="BKMK_Smart"></a> Android デバイスの SmartLock 設定  
- 新しい設定の [**Allow SmartLock and other trust agents**]\(SmartLock およびその他の信頼エージェントを許可) が [**Android and Samsung KNOX**]\(Android および Samsung KNOX) 構成項目に追加され、互換性のある Android デバイスで SmartLock 機能を制御することができます。 信頼エージェントとも呼ばれるこの電話機能では、デバイスが特定の Bluetooth デバイスに接続したときや、NFC タグの近くにある場合など、信頼できる場所にある場合、デバイスのロック画面のパスワードを無効化またはバイパスすることができます。 この設定を使用して、エンドユーザーが SmartLock を構成することを禁止できます。  
+ 新しい設定の **[Allow SmartLock and other trust agents]**\(SmartLock およびその他の信頼エージェントを許可) が **[Android and Samsung KNOX]**\(Android および Samsung KNOX) 構成項目に追加され、互換性のある Android デバイスで SmartLock 機能を制御することができます。 信頼エージェントとも呼ばれるこの電話機能では、デバイスが特定の Bluetooth デバイスに接続したときや、NFC タグの近くにある場合など、信頼できる場所にある場合、デバイスのロック画面のパスワードを無効化またはバイパスすることができます。 この設定を使用して、エンドユーザーが SmartLock を構成することを禁止できます。  

@@ -1,5 +1,6 @@
 ---
-title: "ソース階層の戦略 | Microsoft Docs"
+title: "ソース階層の戦略"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の移行ジョブを構成する前に、ソース階層を構成し、ソース サイトからデータを収集します。"
 ms.custom: na
 ms.date: 1/3/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0619de32f859f512ee1c9f5a9c83ef8d04a256ca
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: deebf706c885dfb1f0838c64df0d201274eee3d8
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-a-source-hierarchy-strategy-in-system-center-configuration-manager"></a>System Center Configuration Manager でのソース階層戦略の計画
 
@@ -96,7 +97,7 @@ System Center Configuration Manager 環境で移行ジョブを設定する前�
 >  スタンドアロンのプライマリ サイトを中央管理サイトがある階層に拡張するには、あらかじめすべてのデータ収集を停止する必要があります。 サイトの拡張が完了したら、データ収集を再構成できます。  
 
 ### <a name="gather-data-now"></a>コンソールで   
- サイトの初期データの収集プロセスの実行後、このプロセスが繰り返し実行され、前回のデータ収集時以降に更新されたオブジェクトを識別します。 Configuration Manager コンソールで [**今すぐデータ収集** ] アクションを使用して、プロセスをすぐに開始し、次のサイクルの開始時刻をリセットすることもできます。  
+ サイトの初期データの収集プロセスの実行後、このプロセスが繰り返し実行され、前回のデータ収集時以降に更新されたオブジェクトを識別します。 Configuration Manager コンソールで **[今すぐデータ収集 ]** アクションを使用して、プロセスをすぐに開始し、次のサイクルの開始時刻をリセットすることもできます。  
 
  ソース サイトのデータ収集プロセスが正常に完了したら、そのソース サイトの配布ポイントを共有して、サイトのデータを移行する移行ジョブを構成できます。 データ収集は繰り返して実行される移行プロセスで、ソース階層を変更するか、**[データ収集の停止]** を使用してサイトのデータ収集プロセスを終了するまで継続されます。  
 

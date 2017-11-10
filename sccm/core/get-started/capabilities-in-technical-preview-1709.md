@@ -1,5 +1,6 @@
 ---
-title: Technical Preview 1709 | Microsoft Docs
+title: Technical Preview 1709
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の Technical Preview バージョン 1709 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 09/28/2017
@@ -13,11 +14,11 @@ ms.assetid: a3ef6bdc-a204-4c4c-a02f-2bd03f35183e
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 3348bc91e6810c873d50cb4efd3efb9fbd024bd3
-ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
+ms.openlocfilehash: 90e31c26204323e33560270044ebac7dfe135684
+ms.sourcegitcommit: 1573a1bd0bd58fefb1ea651b3ea8d6fd53eff546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1709 の機能
 
@@ -43,8 +44,8 @@ ms.lasthandoff: 10/09/2017
 
 **このバージョンでお試しいただける新機能を次に示します。**  
 
-## <a name="improved-vpn-profile-experience-in-configuration-manager-console----1313282---"></a>Configuration Manager コンソールの向上した VPN プロファイル エクスペリエンス <!-- 1313282 -->
-
+## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Configuration Manager コンソールの VPN プロファイル エクスペリエンスの向上
+<!-- 1313282 -->
 このリリースでは、選択したプラットフォームに適した設定が表示されるように、VPN プロファイル ウィザードとプロパティ ページが更新されました。 具体的には次のとおりです。
 
 - 各プラットフォームには独自のワークフローがあります。つまり、新しい VPN プロファイルには、プラットフォームによってサポートされる設定のみが含まれます。
@@ -80,8 +81,7 @@ ms.lasthandoff: 10/09/2017
 
 ## <a name="co-management-for-windows-10-devices"></a>Windows 10 デバイスの共同管理    
 <!-- 1350871 -->
-多くのユーザーは、モバイル デバイスを管理する場合と同じ低コストで簡単なクラウド ベースのソリューションを使って、Windows 10 デバイスを管理することを望んでいます。 ただし、従来の管理から最新の管理への移行は困難な場合があります。 共同管理ソリューションを使うと、Windows 10 デバイスを Configuration Manager と Intune で同時に管理すると共に、Active Directory (AD) と Azure Active Directory (Azure AD) に同時に参加させることができ、徐々に最新の環境に移行することができます。 これは、従来の管理から最新の管理への橋渡しとなるソリューションであり、段階的なアプローチを使って移行する方向を提示します。  
-
+多くのユーザーは、モバイル デバイスを管理する場合と同じ低コストで簡単なクラウド ベースのソリューションを使って、Windows 10 デバイスを管理することを望んでいます。 ただし、従来の管理から最新の管理への移行は困難な場合があります。 Windows 10 バージョン 1607 (Anniversary Update とも呼ばれます) より、Windows 10 デバイスをオンプレミスの Active Directory (AD) とクラウドベースの Azure AD (ハイブリッド Azure AD) に同時に結合できるようになりました。 共同管理ではこの機能強化を活用し、Configuration Manager と Intune の両方を使用して複数の Windows 10 デバイスを同時に管理できます。 これは、従来の管理から最新の管理への橋渡しとなるソリューションであり、段階的なアプローチを使って移行する方向を提示します。 
 
 ### <a name="prerequisites"></a>必要条件
 共同管理を有効にする前に、次の前提条件が満たされている必要があります。 一般的な前提条件のほか、既存の Configuration Manager クライアントとクライアント以外のデバイスで異なる前提条件があります。
@@ -200,7 +200,7 @@ Intune に登録されていないか、Configuration Manager クライアント
 Intune に既に登録されている Windows 10 デバイスの場合は、Intune でアプリを作成して Configuration Manager クライアントを展開します。 [Azure AD を使ってインターネットからクライアントをインストールする](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure)手順の間に、[コマンド ラインを使って Configuration Manager クライアントをインストール](#command-line-to-install-configuration-manager-client)します。  
 
 ### <a name="switch-configuration-manager-workloads-to-intune"></a>Configuration Manager のワークロードを Intune に切り替える
-前のセクションでは、共同管理のために Windows 10 デバイスを準備しました。 これらのデバイスは、AD と Azure AD に参加し、Intune に登録され、Configuration Manager クライアントがインストールされています。 Windows 10 デバイスが AD に参加し、Configuration Manager クライアントがインストールされていても、まだ Azure AD に参加していないか、Intune に登録されていない場合があります。 次の手順では、共同管理を有効にし、残りの Windows 10 デバイス (Intune に登録されていない Configuration Manager クライアント) を共同管理用に準備して、特定の Configuration Manager ワークロードの Intune への切り替えを開始できるようにします。
+前のセクションでは、共同管理のために Windows 10 デバイスを準備しました。 これらのデバイスは AD と Azure AD に結合されると同時に Intune に登録され、Configuration Manager クライアントがインストールされています。 Windows 10 デバイスが AD に参加し、Configuration Manager クライアントがインストールされていても、まだ Azure AD に参加していないか、Intune に登録されていない場合があります。 次の手順では、共同管理を有効にし、残りの Windows 10 デバイス (Intune に登録されていない Configuration Manager クライアント) を共同管理用に準備して、特定の Configuration Manager ワークロードの Intune への切り替えを開始できるようにします。
 
 1. Configuration Manager コンソールで、**[管理]** > **[概要]** > **[クラウド サービス]** > **[Co-management]\(共同管理\)** の順に移動します。    
 2. [ホーム] タブの [管理] グループで、 **[Configure co-management]\(共同管理の構成\)** を選んで共同管理オンボード ウィザードを開きます。    
@@ -210,7 +210,6 @@ Intune に既に登録されている Windows 10 デバイスの場合は、Intu
     - **[Production]\(運用\)**: この設定を選ぶと、サポートされているすべての Windows 10 デバイスで共同管理が有効になります。 1 つまたは複数のコレクションで **[Exclusion group]\(除外グループ\)** を構成します。 このグループのいずれかのコレクションのメンバーであるデバイスは、共同管理から除外されます。 
 5. [Enablement]\(有効化\) ページで、**[パイロット]** または **[すべて]** ([ステージング] ページで構成した設定に応じて) を選んで Intune での自動登録を有効にし、**[次へ]** をクリックします。 **[パイロット]** を選ぶと、パイロット グループのメンバーである Configuration manager クライアントのみが Intune に自動的に登録されます。 これにより、クライアントのサブセットで共同管理を有効にして初期テストを行ってから、段階的アプローチでロールアウトできます。 
 6. [Workloads]\(ワークロード\) ページで、Configuration Manager のワークロードを Intune による管理に切り替えるかどうかを選び、**[次へ]** をクリックします。 スライダーを使って、ワークロードを ([ステージング] ページで構成した設定に応じて) パイロット グループまたはすべての Windows 10 クライアントに切り替えるかどうかを選びます。 
-
 7. 共同管理を有効にするには、ウィザードを終了します。  
 
 <!--### Modify your co-management settings

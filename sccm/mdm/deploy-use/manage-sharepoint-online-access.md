@@ -1,5 +1,6 @@
 ---
-title: "SharePoint Online アクセスの管理 | Microsoft Docs"
+title: "SharePoint Online アクセスの管理"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の SharePoint Online 条件付きアクセスを使用して OneDrive へのアクセスを管理する方法について説明します。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: c564c1fc25c5156a2d9ddfa1b4123024c658bf61
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 2c1d7cd3462a54a064ec47d0b375ee4cdb25a4b4
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-sharepoint-online-access-in-system-center-configuration-manager"></a>System Center Configuration Manager での SharePoint Online アクセスの管理
 
@@ -137,7 +138,7 @@ System Center Configuration Manager の **SharePoint Online** 条件付きアク
  >[!NOTE]
  >Azure AD 管理コンソールで条件付きアクセス ポリシーを作成することもできます。 Azure AD の管理コンソールでは、Intune デバイス条件付きアクセス ポリシー (Azure AD のデバイスベースの条件付きアクセス ポリシーと呼ぶ) に加えて、多要素認証のような他の条件付きアクセス ポリシーを作成することができます。 また、Salesforce や Box など、Azure AD がサポートするサード パーティ製エンタープライズ アプリ用の条件付きアクセス ポリシーを設定することもできます。 詳細については、「[Azure Active Directory に接続されたアプリケーションのアクセスを制御する Azure Active Directory デバイス ベースの条件付きアクセス ポリシーを設定する方法](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/)」を参照してください。  
 
-1.  Configuration Manager コンソールで、[ **資産とコンプライアンス**] をクリックします。  
+1.  Configuration Manager コンソールで、**[ 資産とコンプライアンス]** をクリックします。  
 
 2.  **[SharePoint Online の条件付きアクセス ポリシーを有効にする]**を選択します。  
 
@@ -179,13 +180,13 @@ System Center Configuration Manager の **SharePoint Online** 条件付きアク
 
       ![Android デバイスでの証明書プロンプトのスクリーンショット](media/mdm-browser-ca-android-cert-prompt.png)
 
-4.  [ **ホーム** ] タブの [ **リンク** ] グループで、[ **Intune コンソールでの条件付きアクセス ポリシーの構成**] をクリックします。 Configuration Manager を Intune に接続するために使用されるアカウントのユーザー名とパスワードを指定する必要がある場合があります。  
+4.  **[ ホーム ]** タブの **[ リンク ]** グループで、**[ Intune コンソールでの条件付きアクセス ポリシーの構成]** をクリックします。 Configuration Manager を Intune に接続するために使用されるアカウントのユーザー名とパスワードを指定する必要がある場合があります。  
 
      Intune 管理コンソールが開きます。  
 
 5.  [Microsoft Intune 管理コンソール](https://manage.microsoft.com)で、**[ポリシー]** > **[条件付きアクセス]** > **[SharePoint Online ポリシー]** の順にクリックします。  
 
-6.  [ **デバイスが準拠していない場合は、アプリの SharePoint Online へのアクセスをブロックする**] を選択します。  
+6.  **[ デバイスが準拠していない場合は、アプリの SharePoint Online へのアクセスをブロックする]** を選択します。  
 
 7.  **[対象グループ]**で、 **[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。  
 

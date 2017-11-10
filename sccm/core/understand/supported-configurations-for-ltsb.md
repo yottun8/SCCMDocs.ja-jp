@@ -1,5 +1,6 @@
 ---
-title: "LTSB のサポートされている構成 | Microsoft Docs"
+title: "LTSB でサポートされている構成 "
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の Long-Term Servicing branch で動作するオペレーティング システムと依存する製品について理解します。"
 ms.custom: na
 ms.date: 5/10/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 31bddee83b2365cfa903077ffaa1d7116b194378
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: dad9ad1aba5390c24adc851349aa272aa54c0611
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager の Long-Term Servicing Branch のサポートされている構成
 

@@ -1,5 +1,6 @@
 ---
-title: "Lookout for Work アプリの展開 | Microsoft Docs"
+title: "Lookout for Work アプリを展開する"
+titleSuffix: Configuration Manager
 description: "Lookout for Work アプリを構成し、展開します。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3f62b763-4347-453d-b0a7-1f4a0d1d4105
 caps.latest.revision: 
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 59f43c922d1d3bc64625733014b0def1e42c4d2d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 02da89a5df37f328c387aa453f532e82b5153f87
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-and-deploy-lookout-for-work-apps"></a>Lookout for Work アプリを構成し、展開する
 

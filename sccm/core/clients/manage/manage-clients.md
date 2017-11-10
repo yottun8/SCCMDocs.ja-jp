@@ -1,5 +1,6 @@
 ---
-title: "クライアントの管理 | Microsoft Docs"
+title: "クライアントを管理する"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でクライアントを管理する方法について説明します。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "17"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 7ead06778170d57080906658248d6f9bfe323204
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: d62138f573745a16634e06aeb9301a248f707cae
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアントを管理する方法
 
@@ -182,7 +183,7 @@ System Center Configuration Manager クライアントがインストールさ�
 
          クライアント通知を使用して、クライアント ポリシーのポーリング間隔に関係なく、直ちにコンピューター ポリシーをダウンロードするように、選択した Windows クライアントに通知します。  
 
-         クライアント通知タスクは、[ **監視** ] ワークスペースの [ **クライアントの操作** ] ノードに表示されます。  
+         クライアント通知タスクは、**[ 監視 ]** ワークスペースの **[ クライアントの操作 ]** ノードに表示されます。  
 
 ##  <a name="BKMK_ClientCache"></a> Configuration Manager クライアントにクライアントキャッシュを構成する  
 クライアントでアプリケーションとプログラムをインストールすると、一時ファイルがクライアント キャッシュに格納されます。 ソフトウェアの更新ではクライアント キャッシュも使用されますが、ソフトウェアの更新は構成されているキャッシュ サイズには制限されず、常にキャッシュへのダウンロードが試みられます。 Configuration Manager クライアントを手動でインストールする際、クライアント プッシュ インストールを使用する際、またはクライアントのインストール後に、クライアント キャッシュ設定 (サイズや場所など) を構成できます。
@@ -228,7 +229,7 @@ CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用�
 
 ### <a name="to-configure-the-client-cache-folder-when-you-install-clients-by-using-client-push-installation"></a>クライアント プッシュ インストールによってクライアントをインストールするときにクライアント キャッシュを構成するには  
 
-1.  Configuration Manager コンソールで、[**管理**] > [**サイトの構成**] > [**サイト**] の順に選択します。  
+1.  Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** > **[サイト]** の順に選択します。  
 
 3.  適切なサイトを選択し、**[ホーム]** タブの **[設定]** グループで **[クライアント インストール設定]** > **[インストールのプロパティ]** タブを選択します。  
 
@@ -309,9 +310,9 @@ CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用�
 
     -   **[結合]**: 新しく検出されたレコードを既存のクライアント レコードと結合します。  
 
-    -   [**新規** ]: 競合しているクライアント レコードに対して新しいレコードを作成します。  
+    -   **[新規 ]**: 競合しているクライアント レコードに対して新しいレコードを作成します。  
 
-    -   [**ブロック** ]: 競合しているクライアント レコードに対して新しいレコードを作成しますが、ブロックに設定します。  
+    -   **[ブロック ]**: 競合しているクライアント レコードに対して新しいレコードを作成しますが、ブロックに設定します。  
 
 ## <a name="manage-duplicate-hardware-identifiers"></a>重複するハードウェア識別子を管理する
 Configuration Manager バージョン 1610 より、PXE ブートとクライアント登録で Configuration Manager が無視するハードウェア ID の一覧を指定できます。 それにより 2 つの一般的な問題に対処できます。
@@ -320,7 +321,7 @@ Configuration Manager バージョン 1610 より、PXE ブートとクライア
 2. SMBIOS ID は一意のハードウェア識別子ですが、専門的なハードウェア デバイスには ID が重複するものもあります。 上記の USB/イーサネット アダプターのシナリオほど一般的ではありませんが、ハードウェア ID の一覧を利用してこの問題に対処することもできます。
 
 #### <a name="to-add-hardware-identifiers-for-configuration-manager-to-ignore"></a>Configuration Manager で無視するハードウェア識別子を追加するには  
-1. Configuration Manager コンソールで、[**管理**] > [**概要**] > [**サイトの構成**] > [**サイト**] の順に移動します。
+1. Configuration Manager コンソールで、**[管理]** > **[概要]** > **[サイトの構成]** > **[サイト]** の順に移動します。
 2. **[ホーム]** タブの **[サイト]** グループで、**[階層設定]** を選択します。
 3. **[クライアントの承認と競合レコードの処理]** タブの **[重複するハードウェア ID]** セクションの **[追加]** を選択して、新しいハードウェア識別子を追加します。
 
@@ -345,11 +346,11 @@ Configuration Manager バージョン 1610 より、PXE ブートとクライア
 3.  ポリシーをダウンロードするコンピューターを含むデバイス コレクションを選択します。 **[ホーム]** タブの **[コレクション]** グループで **[クライアント通知]** > **[コンピューター ポリシーのダウンロード]** を選択します。  
 
     > [!NOTE]  
-    >  また、[ **デバイス** ] ノードの一時コレクション ノードに表示されるデバイスから 1 つまたは複数のデバイスを選択して、クライアント通知を使用してポリシーの取得を開始することもできます。  
+    >  また、**[ デバイス ]** ノードの一時コレクション ノードに表示されるデバイスから 1 つまたは複数のデバイスを選択して、クライアント通知を使用してポリシーの取得を開始することもできます。  
 
 #### <a name="manually-initiate-client-policy-retrieval-on-the-actions-tab-of-the-configuration-manager-client"></a>Configuration Manager クライアントの [操作] タブでクライアント ポリシーの取得を手動で開始する  
 
-1.  コンピューターのコントロール パネルで、[ **Configuration Manager** ] を選択します。  
+1.  コンピューターのコントロール パネルで、**[ Configuration Manager ]** を選択します。  
 
 2.  **[操作]** タブの **[コンピューター ポリシーの取得および評価サイクル]** を選択してコンピューター ポリシーを開始し、**[直ちに実行]** をクリックします。  
 

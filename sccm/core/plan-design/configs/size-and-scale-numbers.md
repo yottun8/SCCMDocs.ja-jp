@@ -1,5 +1,6 @@
 ---
-title: "サイズとスケール | Microsoft Docs"
+title: "サイズとスケール"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager 環境でデバイスをサポートするために必要になるサイト システムの役割とサイトの数を特定します。"
 ms.custom: na
 ms.date: 07/24/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 9c50f6633a5ca04b62f4c3b06119fb1fbcab2643
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: c0277fed7db5803aa2b2246ca879640136dce02a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイズとスケールの数
 
@@ -54,7 +55,6 @@ System Center Configuration Manager の各展開には、サポートできる�
 
 -   セカンダリ サイトでは、子サイトはサポートされません。  
 
--   中央管理サイトでは、最大 25 の子プライマリ サイトをサポートします。  
 
 
 ## <a name="bkmk_roles"></a> サイト システムの役割    

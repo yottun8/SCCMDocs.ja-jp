@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager の使用に関するヘルプの検索 | Microsoft Docs"
+title: "ヘルプの検索"
+titleSuffix: Configuration Manager
 description: "リソースを検索して System Center Configuration Manager の詳細情報を参照します。"
 ms.custom: na
 ms.date: 2/8/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 72fe220cb9a40d6a20164ace1db8542a91221f55
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 723812928dab63d6a0d86ac6e5fa5de6b079b35a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="find-help-for-using-system-center-configuration-manager"></a>System Center Configuration Manager の使用に関するヘルプの検索
 
@@ -61,7 +62,7 @@ System Center Configuration Manager の詳しい情報は、次のリソース�
 
 -   可能な限り、ダウンロードしたドキュメントではなく、TechNet オンライン ライブラリを使用してください。 TechNet には最新の情報が掲載されています。ダウンロードしたドキュメントには探している情報が含まれていなかったり、オンラインに訂正や追加情報が掲載されている可能性があります。  
 
--   ローカルに保存した方がドキュメントを簡単に早く検索できる場合は、TechNet で複数のトピックを選択してローカルに保存することができます。 最初に、TechNet にサインインします。 次に、ローカル保存するページの上部で、**[エクスポート]** (**[印刷]** の横) を選択します。 [ **ページの複数のセットをエクスポート** ] バナーが表示されます。ここで保存するページを追加し、削除できます。 次に **[ページの管理]** をクリックしてそれらをエクスポートします。 詳細については、バナーの **[ヘルプ]** を選択してください。  
+-   ローカルに保存した方がドキュメントを簡単に早く検索できる場合は、TechNet で複数のトピックを選択してローカルに保存することができます。 最初に、TechNet にサインインします。 次に、ローカル保存するページの上部で、**[エクスポート]** (**[印刷]** の横) を選択します。 **[ ページの複数のセットをエクスポート ]** バナーが表示されます。ここで保存するページを追加し、削除できます。 次に **[ページの管理]** をクリックしてそれらをエクスポートします。 詳細については、バナーの **[ヘルプ]** を選択してください。  
 
 ###  <a name="BKMK_ProductGroupBlog"></a> System Center Configuration Manager チームのブログ  
  Configuration Manager のエンジニアリング チームとパートナー チームは、「[System Center Configuration Manager Team Blog](http://go.microsoft.com/fwlink/?LinkId=191941)」 (System Center Configuration Manager チームのブログ) を使用して、Configuration Manager と関連技術に関する技術情報やその他のニュースを提供しています。 ブログの記事は、製品ドキュメントとサポート情報を補足するものです。  

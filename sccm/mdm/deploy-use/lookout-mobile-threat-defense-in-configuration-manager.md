@@ -1,5 +1,6 @@
 ---
-title: "リスクに基づいたアクセスの制限 | Microsoft Docs"
+title: "リスクに基づいてアクセスを制限する"
+titleSuffix: Configuration Manager
 description: "デバイス、ネットワーク、アプリケーションのリスクに基づいてアクセスを制限します。"
 ms.custom: na
 ms.date: 04/25/2017
@@ -14,11 +15,11 @@ caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 21841d97387f07f53993d957641f9ad892d723c2
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 41ac07550bdabe35533e00d1071db4cb967766a3
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-access-to-company-resource-based-on-device-network-and-application-risk"></a>デバイス、ネットワーク、アプリケーションのリスクに基づき、会社のリソースへのアクセスを管理する
 

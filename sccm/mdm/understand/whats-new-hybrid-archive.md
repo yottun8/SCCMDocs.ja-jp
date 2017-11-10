@@ -1,5 +1,6 @@
 ---
-title: "ハイブリッド MDM の新機能のアーカイブ | Microsoft Docs"
+title: "ハイブリッド MDM の新機能のアーカイブ"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager と Intune のハイブリッド展開で使用できる過去のモバイル デバイス管理機能のアーカイブです。"
 ms.custom: na
 ms.date: 06/30/2017
@@ -10,15 +11,15 @@ ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4c27b161-9eb7-4cdd-b469-d8eb27e71aea
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 0abd1cdcf44e778c91bacb8011efd711818ce2e9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 23b43e85a0ad698a377f51ce4b0d70fe197e9344
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune での過去のハイブリッド機能
 
@@ -401,7 +402,7 @@ Configuration Manager Technical Preview リリースで以前提供されてい�
 
   Configuration Manager コンソールからリモート デバイスの操作を実行するため、エクスペリエンスが改善されました。
 
-  [**削除/ワイプ**]、[**パスコードのリセット**]、[**リモート ロック**]、および [**アクティブ化ロックのバイパス**] などの一般的な操作は、[**資産とコンプライアンス**] ワークスペースからアクセスする [**リモート デバイスの操作**] メニューに移動しました。
+  **[削除/ワイプ]**、**[パスコードのリセット]**、**[リモート ロック]**、および **[アクティブ化ロックのバイパス]** などの一般的な操作は、**[資産とコンプライアンス]** ワークスペースからアクセスする **[リモート デバイスの操作]** メニューに移動しました。
 
   詳細については、「[Capabilities in Technical Preview 1605 for System Center Configuration Manager](/sccm/core/get-started/capabilities-in-technical-preview-1605)」 (System Center Configuration Manager の Technical Preview 1605 の機能) の「[New experience for remote device actions](/sccm/core/get-started/capabilities-in-technical-preview-1605#new-experience-for-remote-device-actions)」 (リモート デバイスの操作の新しいエクスペリエンス) を参照してください。  
 

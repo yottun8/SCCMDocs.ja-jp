@@ -1,5 +1,6 @@
 ---
-title: "インターネット上のクライアントの管理 - Configuration Manager | Microsoft Docs"
+title: "インターネット上のクライアントを管理する "
+titleSuffix: Configuration Manager
 description: "Configuration Manager でクラウド管理ゲートウェイとインターネット ベースのクライアント管理を使用するクライアント管理について説明します。"
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -8,11 +9,11 @@ ms.assetid: c667d6af-80c4-485f-910c-896c0171fd00
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d9dbe4e7242e2506d25b47a31982c815209c68a1
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: c2650a2cdf7b1e6362688f48643d5ff37954d49b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-clients-on-the-internet-with-configuration-manager"></a>インターネット上のクライアントを Configuration Manager で管理する
 

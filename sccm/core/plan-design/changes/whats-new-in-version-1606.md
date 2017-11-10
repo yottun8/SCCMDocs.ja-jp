@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager の更新プログラム 1606 の新機能 | Microsoft Docs"
+title: "バージョン 1606 の新機能"
+titleSuffix: Configuraton Manager
 description: "System Center Configuration Manager のバージョン 1606 の変更点および導入された新機能について詳しく説明します。"
 ms.custom: na
 ms.date: 12/30/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "40"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 9fdff6049d6e5cde1032864e5d7aa8df71e53686
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 346a1c7199a2d9dbb2cb174502adbb8d03a39f86
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1606 の新機能
 
@@ -58,7 +59,7 @@ Configuration Manager コンソールの [更新とサービス] ノードの変
 
     **[管理]** ワークスペースと **[監視]** ワークスペースの両方で、**[更新とサービス]** ノードのリボンに **[前提条件チェックの警告を無視する]** という名前の新しいボタンが含まれています。
 
-    [前提条件チェックの警告を無視する] オプションを使用せずに更新プログラムを (更新ウィザードから) インストールし、その更新プログラムのインストールが警告状態になって停止した場合は、後でリボンから [**前提条件チェックの警告を無視する**] を選択できます。 これにより、更新プログラムのインストールの自動継続がトリガーされます。  
+    前提条件チェックの警告を無視する オプションを使用せずに更新プログラムを (更新ウィザードから) インストールし、その更新プログラムのインストールが警告状態になって停止した場合は、後でリボンから **前提条件チェックの警告を無視する** を選択できます。 これにより、更新プログラムのインストールの自動継続がトリガーされます。  
 
 
 

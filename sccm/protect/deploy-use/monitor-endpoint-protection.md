@@ -1,5 +1,6 @@
 ---
-title: "Endpoint Protection 状態の監視 | Microsoft Docs"
+title: "Endpoint Protection の状態を監視する"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager 階層内の Endpoint Protection を監視する方法を説明します。"
 ms.custom: na
 ms.date: 03/13/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: b5771f4faebc06076bdbf84727848c881fc1dfb4
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 9e6356f8b3814ac49c26bfa4d319c3c9926a4382
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-monitor-endpoint-protection-status"></a>Endpoint Protection 状態を監視する方法
 
@@ -28,11 +29,11 @@ ms.lasthandoff: 08/07/2017
 
 ##  <a name="BKMK_1"></a> [Endpoint Protection のステータス] ノードを使用して Endpoint Protection を監視する方法  
 
-1.  Configuration Manager コンソールで、[ **監視**] をクリックします。  
+1.  Configuration Manager コンソールで、**[ 監視]** をクリックします。  
 
 2.  **[監視]** ワークスペースで **[セキュリティ]** を展開し、**[Endpoint Protection のステータス]** をクリックします。  
 
-3.  [ **コレクション** ] 一覧で、ステータス情報を確認するコレクションを選択します。  
+3.  **[ コレクション ]** 一覧で、ステータス情報を確認するコレクションを選択します。  
 
     > [!IMPORTANT]  
     >  コレクションは、次のような場合に選択できます。  
@@ -50,11 +51,11 @@ ms.lasthandoff: 08/07/2017
 
 1.  Configuration Manager コンソールで、 **[資産とコンプライアンス]**をクリックします。  
 
-2.  [ **資産とコンプライアンス** ] ワークスペースで、次のいずれかの操作を実行します。  
+2.  **[ 資産とコンプライアンス ]** ワークスペースで、次のいずれかの操作を実行します。  
 
-    -   [ **デバイス** ] をクリックします。 **デバイス** ボックスの一覧、コンピューターを選択し、クリックして、 **マルウェアの詳細** タブです。  
+    -   **[ デバイス ]** をクリックします。 **デバイス** ボックスの一覧、コンピューターを選択し、クリックして、 **マルウェアの詳細** タブです。  
 
-    -   [ **デバイス コレクション** ] をクリックします。 [デバイス コレクション] 一覧で、監視するコンピューターを含むコレクションを選んで、 [ホーム] タブの [コレクション] グループで、 [メンバーの表示]をクリックします。  
+    -   **[ デバイス コレクション ]** をクリックします。 [デバイス コレクション] 一覧で、監視するコンピューターを含むコレクションを選んで、 [ホーム] タブの [コレクション] グループで、 [メンバーの表示]をクリックします。  
 
 3.  [<*コレクション名*\>] の一覧で、コンピューターを選択し、**[マルウェアの詳細]** タブをクリックします。  
 

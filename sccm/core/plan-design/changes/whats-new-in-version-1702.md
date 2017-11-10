@@ -1,5 +1,6 @@
 ---
-title: "新しいバージョン 1702 | Microsoft Docs"
+title: "新バージョン 1702"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager のバージョン 1702 で導入された変更点および新機能について詳しく説明します。"
 ms.custom: na
 ms.date: 05/02/2017
@@ -12,11 +13,11 @@ ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: ff7f6c3b9f183502c95a2c551b1131c5abf1dd90
-ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
+ms.openlocfilehash: f8f1b3c84d219c780e400f58ea0b489654cff233
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1702 の新機能
 
@@ -188,7 +189,7 @@ Microsoft Intune で使用できるように整合させるために、iOS デ�
 - タスク シーケンスを実行しても、依存するコンテンツ パッケージが配布ポイントでまだ使用できない場合、タスク シーケンスは失敗します。 存在しないコンテンツを配布するか (そのコンテンツがまだ配布されていない場合)、またはコンテンツが配布ポイントで使用できるようになるまで待機してから、**[前へ]** をクリックしてコンテンツでタスク シーケンスを検索します。
 
 ### <a name="pre-cache-content-for-available-deployments-and-task-sequences"></a>利用可能な展開とタスク シーケンスのコンテンツを事前キャッシュする
-バージョン 1702 以降、利用可能な展開とタスク シーケンスのコンテンツを事前キャッシュする機能を使用できるようになりました。 コンテンツの事前キャッシュ機能には、クライアントが展開を受信してすぐに適用可能なコンテンツのみをダウンロードできるようにするオプションが用意されています。 したがって、ユーザーがソフトウェア センターで [**インストール**] をクリックすると、コンテンツはローカルのハード ドライブ上にあるため、コンテンツは準備完了の状態にあり、インストールが迅速に開始されます。 詳細については、[「Configure pre-cache content」](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) (コンテンツの事前キャッシュを構成する) を参照してください。
+バージョン 1702 以降、利用可能な展開とタスク シーケンスのコンテンツを事前キャッシュする機能を使用できるようになりました。 コンテンツの事前キャッシュ機能には、クライアントが展開を受信してすぐに適用可能なコンテンツのみをダウンロードできるようにするオプションが用意されています。 したがって、ユーザーがソフトウェア センターで **[インストール]** をクリックすると、コンテンツはローカルのハード ドライブ上にあるため、コンテンツは準備完了の状態にあり、インストールが迅速に開始されます。 詳細については、[「Configure pre-cache content」](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) (コンテンツの事前キャッシュを構成する) を参照してください。
 
 ### <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>インプレース アップグレード時に BIOS から UEFI に変換する
 Windows 10 Creators Update では、EFI 対応ハードウェアのハード ディスクのパーティションを再分割するプロセスを自動化する簡単な変換ツールが導入され、変換ツールは Windows 7 から Windows 10 へのインプレース アップグレード プロセスに統合されます。 このツールをオペレーティング システムのアップグレード タスク シーケンスと、ファームウェアを BIOS から UEFI に変換する OEM ツールと組み合わせて使用する場合、Windows 10 Creators Update へのインプレース アップグレード時にコンピューターを BIOS から UEFI に変換することができます。 詳細については、「[Task sequence steps to manage BIOS to UEFI conversion](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)」(BIOS からUEFI への変換を管理するためのタスク シーケンス手順) を参照してください。
@@ -309,7 +310,7 @@ iOS Volume Purchase Program for Education から購入したアプリを展開�
 
 ### <a name="conditional-access-device-compliance-policy-improvements"></a>条件付きアクセス デバイス コンプライアンス ポリシーの改善
 
-ユーザーがアプリのコンプライアンス非対応リストに含まれているアプリを使用している場合、新しいデバイスのコンプライアンス ポリシー ルールを使用して、条件付きアクセスをサポートする会社のリソースへのアクセスをブロックできます。 アプリのコンプライアンス非対応リストは、管理者が新しい準拠ルール [**インストールできないアプリ**] の追加時に定義できます。 このルールを使用するには、管理者がコンプライアンス非対応リストにアプリを追加するときに、**アプリ名**、**アプリ ID**、**アプリの発行元** (省略可能) を入力する必要があります。 この設定は、iOS および Android デバイスにのみ適用されます。
+ユーザーがアプリのコンプライアンス非対応リストに含まれているアプリを使用している場合、新しいデバイスのコンプライアンス ポリシー ルールを使用して、条件付きアクセスをサポートする会社のリソースへのアクセスをブロックできます。 アプリのコンプライアンス非対応リストは、管理者が新しい準拠ルール **[インストールできないアプリ]** の追加時に定義できます。 このルールを使用するには、管理者がコンプライアンス非対応リストにアプリを追加するときに、**アプリ名**、**アプリ ID**、**アプリの発行元** (省略可能) を入力する必要があります。 この設定は、iOS および Android デバイスにのみ適用されます。
 
 また、組織はこの設定を使用して、セキュリティで保護されていないアプリを介したデータ漏えいを軽減し、特定のアプリ経由の過度なデータ使用を防ぐことができます。
 

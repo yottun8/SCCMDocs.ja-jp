@@ -1,5 +1,6 @@
 ---
-title: "メンテナンス タスクのリファレンス | Microsoft Docs"
+title: "メンテナンス タスクのリファレンス"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager サイトの各メンテナンス タスクの詳細およびそれらのタスクが既定で有効になるかどうかについて説明します。"
 ms.custom: na
 ms.date: 3/8/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: a2d4420c2274a9b1ceb47ffd267849fdb5a55a61
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 6cff26b689b3fb1139d235295530faa9d30f9bf6
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager のメンテナンス タスクのリファレンス
 
@@ -297,7 +298,7 @@ ms.lasthandoff: 08/07/2017
 
 **アプリケーション対応ターゲット設定の更新**: このタスクは、Configuration Manager がコレクション内のリソースへのポリシーとアプリケーションの展開のマッピングを再計算する場合に使用します。 コレクションにポリシーまたはアプリケーションを展開するときに、Configuration Manager により、展開するオブジェクトとコレクション メンバーの間の初期マッピングが作成されます。
 
-これらのマッピングは、クイック リファレンス用のテーブルに格納されます。 コレクション メンバーシップが変更されたときに、これらの変更を反映するように、これらの格納されたマッピングが更新されます。 ただし、これらのマッピングの同期が取れない可能性があります。 たとえば、サイトが通知ファイルを適切に処理できない場合、マッピングに対する変更で、その変更が反映されない可能性があります。 このタスクにより、現在のコレクション メンバーシップに基づいてそのマッピングが更新されます。  
+これらのマッピングは、クイック リファレンス用のテーブルに格納されます。 コレクション メンバーシップが変更されたときに、これらの変更を反映するように、これらの格納されたマッピングが更新されます。 ただし、これらのマッピングの同期が取れない可能性があります。たとえば、サイトが通知ファイルを適切に処理できない場合、マッピングに対する変更で、その変更が反映されない可能性があります。 このタスクにより、現在のコレクション メンバーシップに基づいてそのマッピングが更新されます。  
 
 -   中央管理サイト: 利用不可    
 -   **プライマリ サイト**: 有効    

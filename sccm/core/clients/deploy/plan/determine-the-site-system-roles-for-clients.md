@@ -1,5 +1,6 @@
 ---
-title: "クライアントのサイト システムの役割 | Microsoft Docs"
+title: "クライアントのサイト システムの役割"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でクライアントのサイト システムの役割を決定します。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 65c165ababafab3dd0d9ce8f1ce775be0d72a573
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: f6c2b15f58fbd6e26ca1cb8a4fccbde36279571d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="determine-the-site-system-roles-for-system-center-configuration-manager-clients"></a>System Center Configuration Manager クライアントのサイト システムの役割の決定
 
@@ -79,7 +80,7 @@ ms.lasthandoff: 09/15/2017
 
 -   アプリケーション カタログでアプリケーションを見つけてインストールする。  
 
--   展開の目的が [ **利用可能** ] のアプリケーションをユーザーまたはデバイスに展開します。  
+-   展開の目的が **[ 利用可能 ]** のアプリケーションをユーザーまたはデバイスに展開します。  
 
 ##  <a name="determine-whether-you-require-a-cloud-management-gateway-connector-point"></a>クラウド管理ゲートウェイ コネクタ ポイントが必要かどうかを判断する 
 

@@ -1,5 +1,6 @@
 ---
-title: "ネットワーク共有からの Endpoint Protection のマルウェア定義 | Microsoft Docs"
+title: "ネットワーク共有からの Endpoint Protection のマルウェア定義"
+titleSuffix: Configuration Manager
 description: "Microsoft から最新の定義ファイルの更新を手動でダウンロードし、これらの定義をダウンロードするようにクライアントを構成する方法について説明します。"
 ms.custom: na
 ms.date: 02/14/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 110bd9a9d04b27ef6794145fae66dbd910308bdc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3487238d7fdcd6e152bd5f578b20fb3fb5690978
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-a-network-share-for-configuration-manager"></a>Configuration Manager で Endpoint Protection のマルウェア定義をネットワーク共有からダウンロードできるようにする
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 08/07/2017
 
 ## <a name="to-configure-definition-downloads-from-a-file-share"></a>ファイル共有からの定義ファイルのダウンロードを構成するには
 
-1.  Configuration Manager コンソールで、[ **資産とコンプライアンス**] をクリックします。
+1.  Configuration Manager コンソールで、**[ 資産とコンプライアンス]** をクリックします。
 
 2.  **[資産とコンプライアンス]** ワークスペースで **[Endpoint Protection]**を展開してから、 **[マルウェア対策ポリシー]**をクリックします。
 

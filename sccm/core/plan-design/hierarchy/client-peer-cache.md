@@ -1,5 +1,6 @@
 ---
-title: "クライアント ピア キャッシュ | System Center Configuration Manager"
+title: "クライアントのピア キャッシュ"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でコンテンツを展開する場合は、クライアントのコンテンツ ソースの場所のピア キャッシュを使用します。"
 ms.custom: na
 ms.date: 7/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 89fcd16887ae77299f9d18472ee6a1ba56794eca
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 20438f51a67fb29da21c879620870caf3328121d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Configuration Manager クライアントのピア キャッシュ
 
@@ -99,7 +100,7 @@ System Center Configuration Manager バージョン 1610 以降、**ピア キ�
 
 ## <a name="to-configure-client-peer-cache-client-settings"></a>クライアント ピア キャッシュのクライアント設定を構成するには
 1.  Configuration Manager コンソールで **[管理]** > **[クライアント設定]** に移動し、使用するデバイス クライアント設定オブジェクトを開きます。 既定のクライアント設定オブジェクトを変更することもできます。
-2.  使用可能な設定のリストから [**クライアント キャッシュ設定**] を選びます。
+2.  使用可能な設定のリストから **[クライアント キャッシュ設定]** を選びます。
 3.  **[完全な OS 上の Configuration Manager クライアントでコンテンツを共有できるようにする]** を **[はい]** に設定します。
 4.  ピア キャッシュに使用するポートを定義するには、次の設定を構成します。  
   -  **初期ネットワーク ブロードキャスト用ポート**

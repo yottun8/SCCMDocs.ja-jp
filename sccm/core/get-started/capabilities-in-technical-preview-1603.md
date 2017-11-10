@@ -1,5 +1,6 @@
 ---
-title: "Configuration Manager の Technical Preview 1603 の機能"
+title: "Technical Preview 1603 の機能"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の Technical Preview バージョン 1603 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: dee2b4ce042bb4a434bb019e17a6b16e2807945c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 1dc2dc74a27806741af99a235222b8f088f371a5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="capabilities-in-technical-preview-1603-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1603 の機能
 
@@ -38,10 +39,10 @@ ms.lasthandoff: 08/07/2017
 ##  <a name="BKMK_SC1603"></a> ソフトウェア センターの機能強化  
 
 ### <a name="new-tiled-view-for-apps"></a>アプリの新しいタイル化されたビュー  
- エンドユーザーは、ソフトウェア センターの [**アプリケーション**] タブでアプリのリストまたはアプリのタイル化されたビューを選択できるようになりました。  
+ エンドユーザーは、ソフトウェア センターの **[アプリケーション]** タブでアプリのリストまたはアプリのタイル化されたビューを選択できるようになりました。  
 
 ### <a name="select-multiple-updates-in-software-center"></a>ソフトウェア センターでの複数の更新プログラムの選択  
- ソフトウェア センターの [**更新**] タブで、複数の更新プログラムを選択したり、[**すべて更新**] を選択したりして、同時に複数の更新プログラムのインストールを開始できるようになりました。  
+ ソフトウェア センターの **[更新]** タブで、複数の更新プログラムを選択したり、**[すべて更新]** を選択したりして、同時に複数の更新プログラムのインストールを開始できるようになりました。  
 
 ##  <a name="BKMK_RC1603"></a> リモート制御の機能強化  
 

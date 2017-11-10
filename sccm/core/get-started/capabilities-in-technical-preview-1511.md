@@ -1,5 +1,6 @@
 ---
-title: "Configuration Manager の Technical Preview 1511 の機能"
+title: "Technical Preview 1511 の機能"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の Technical Preview バージョン 1511 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: d0bde2c085cc9b330bc772e68081d629ca9e2f11
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e5b841bd1b84fc20263b6a47bf7c056bf63f956a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1511 の機能
 
@@ -170,11 +171,11 @@ SQL Server 可用性グループを使用するサイトをインストールす
 
 1.  クラスター内のサーバーを含む[デバイス コレクションを作成します](https://technet.microsoft.com/library/gg712295.aspx)。  
 
-2.  [**資産とコンプライアンス**] ワークスペースで [**デバイス コレクション**] をクリックし、クラスター内のサーバーを含むコレクションを右クリックして、[**プロパティ**] をクリックします。  
+2.  **[資産とコンプライアンス]** ワークスペースで **[デバイス コレクション]** をクリックし、クラスター内のサーバーを含むコレクションを右クリックして、**[プロパティ]** をクリックします。  
 
-3.  [**全般**] タブで [**すべてのデバイスが同じサーバー クラスターに含まれる**] を選択し、[**設定**] をクリックします。  
+3.  **[全般]** タブで **[すべてのデバイスが同じサーバー クラスターに含まれる]** を選択し、**[設定]** をクリックします。  
 
-4.  [**クラスター設定**] ページで、ソフトウェア更新プログラムをインストールするために、同時にオフラインにできるサーバーの割合を選択します。 指定した割合に関係なく、クラスター サーバーは一度に 1 台ずつオフラインになります。 Configuration Manager では、一度にサービスを提供できるサーバー数の端数は切り捨てられます。 たとえば、51% を選択し、クラスターに 4 台のサーバーがある場合、2 台のサーバーが同時にオフラインになります。  
+4.  **[クラスター設定]** ページで、ソフトウェア更新プログラムをインストールするために、同時にオフラインにできるサーバーの割合を選択します。 指定した割合に関係なく、クラスター サーバーは一度に 1 台ずつオフラインになります。 Configuration Manager では、一度にサービスを提供できるサーバー数の端数は切り捨てられます。 たとえば、51% を選択し、クラスターに 4 台のサーバーがある場合、2 台のサーバーが同時にオフラインになります。  
 
 5.  展開前 (ノードのドレイン) スクリプトまたは展開後 (ノードの再開) スクリプトを使用するかどうかを指定します。  
 

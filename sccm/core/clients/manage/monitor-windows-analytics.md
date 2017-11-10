@@ -1,5 +1,6 @@
 ---
-title: "クライアントの監視 - Configuration Manager で Windows Analytics を使用する | Microsoft Docs"
+title: "Windows Analytics でクライアントを監視する"
+titleSuffix: Configuration Manager
 description: "Windows Analytics は、Operations Management Suite 上で実行するソリューションのセットで、環境内のデバイスによってレポートされる Windows 利用統計情報を利用して、環境の現在の状態に有益な洞察を導くことができます。"
 ms.custom: na
 ms.date: 07/31/2017
@@ -14,32 +15,32 @@ caps.latest.revision: "23"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: adabe8f475eb12dd44005ec07344e8565be20582
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 4d8c0eef8c85645ceb6f12aaf776ce1b1f82cbdd
+ms.sourcegitcommit: d025a2cbd1ed82f42f67255c97b913f2163b3baf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="use-windows-analytics-with-configuration-manager"></a>Configuration Manager で Windows Analytics を使用する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-[Windows Analytics](https://www.microsoft.com/en-us/WindowsForBusiness/windows-analytics) は、[Operations Management Suite](/azure/operations-management-suite/operations-management-suite-overview) 上で実行するソリューションのセットです。 このソリューションでは、環境の現在の状態に洞察を形成することができます。 環境内のデバイスでは、Windows の利用統計情報がレポートされます。 このデータは、[Operations Management Suite の Web ポータル](https://mms.microsoft.com)のソリューションによって、アクセスおよび分析することができます。 [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) の場合、データは Upgrade Readiness と Configuration Manager を接続することによって、Configuration Manager の監視ノードで直接利用することもできます。
+[Windows Analytics](https://www.microsoft.com/WindowsForBusiness/windows-analytics) は、[Operations Management Suite](/azure/operations-management-suite/operations-management-suite-overview) 上で実行するソリューションのセットです。 これらのソリューションにより、環境の現在の状態に関する分析情報を得ることができます。 環境内のデバイスから Windows のテレメトリ データがレポートされます。[Operations Management Suite の Web ポータル](https://mms.microsoft.com)のソリューションを通して、このデータにアクセスし、分析できます。 [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) の場合、データは Upgrade Readiness と Configuration Manager を接続することによって、Configuration Manager コンソールの監視ノードで直接操作することもできます。
 
-Windows Analytics によって使用される Windows 利用統計情報は、Configuration Manager サイト サーバーに直接転送されることはありません。 クライアント コンピューターは、Windows 利用統計情報を利用統計情報のサービスに送信します。 その後、関連するデータは、組織の OMS ワークスペースのいずれかでホストされている Windows Analytics ソリューションに転送されます。 Configuration Manager では、コンテキスト内リンクを持つ Web ポータルの関連するデータにユーザーを誘導したり、Configuration Manager に接続しているソリューションの一部であるデータを直接表示したりすることができます。 また、Operation Management Suite の Web ポータルからデータを直接クエリすることもできます。
+Windows Analytics によって使用される Windows 利用統計情報は、Configuration Manager サイト サーバーに直接転送されることはありません。 クライアント コンピューターから Windows テレメトリ データがテレメトリ サービスに送信され、その後組織の OMS ワークスペースのいずれかでホストされている Windows Analytics ソリューションに関連データが転送されます。 Configuration Manager では、コンテキスト内リンクを持つ Web ポータルの関連するデータにユーザーを誘導したり、Configuration Manager に接続しているソリューションの一部であるデータを直接表示したりできます。 また、Operation Management Suite の Web ポータルからデータを直接クエリすることもできます。
 
 >[!Important]
 >Configuration Manager サイト サーバーから Microsoft にレポートされる、[Configuration Manager の診断と利用状況データ](../../plan-design/diagnostics/diagnostics-and-usage-data.md)は、Windows Analytics と Windows 利用統計情報とは完全に区別されています。
 
 ## <a name="configure-clients-to-report-data-to-windows-analytics"></a>Windows Analytics にデータをレポートするようにクライアントを構成する
 
-クライアント デバイスで Windows Analytics にデータをレポートするために、デバイスは組織の Windows Analytics データをホストする、Operations Management Suite ワークスペースに関連付けられている業務用 ID で構成される必要があります。 また、デバイスは、使用する特定のソリューションに適切な利用統計情報のレベルで、利用統計情報をレポートするように構成される必要もあります。 
+クライアント デバイスで Windows Analytics にデータをレポートするには、デバイスが組織の Windows Analytics データをホストする Operations Management Suite ワークスペースに関連付けられた商用 ID キーで構成されている必要があります。 また、デバイスは、使用する特定のソリューションに適切な利用統計情報のレベルで、利用統計情報をレポートするように構成される必要もあります。 
 
 ### <a name="configure-windows-analytics-client-settings"></a>Windows Analytics クライアント設定の構成
 Windows Analytics を構成するには、Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** を選択し、**[Create Custom Device Client Settings]\(カスタム デバイス クライアント設定の作成\)** をダブルクリックして、**[Windows Analytics]** を選択します。  
 
 **[Windows Analytics]** 設定タブに移動した後に、以下を構成します。
-  -  **商用 ID**  
+  -  **商用 ID キー**  
 商用 ID キーは、管理するデバイスから組織の Windows Analytics データをホストする OMS ワークスペースに情報をマップします。 使用する商用 ID キーを Upgrade Readiness で既に構成している場合は、その ID を使用します。 まだ商用 ID キーがない場合は、「[Generate your commercial ID key (商用 ID キーを生成する)]( https://technet.microsoft.com/itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key)」をご覧ください。
 
   -  **Windows 10 デバイスの利用統計情報のレベル**   

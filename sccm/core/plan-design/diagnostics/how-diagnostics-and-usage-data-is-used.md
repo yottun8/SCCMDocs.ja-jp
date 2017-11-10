@@ -1,5 +1,6 @@
 ---
-title: "診断データの使用 | Microsoft Docs"
+title: "診断データの使用"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager により収集された診断と使用状況データを Microsoft が使用する方法について説明します。"
 ms.custom: na
 ms.date: 12/29/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 9864f6ba7b9a2211c99b1a5d9ebd582e01ccfeb6
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e6395421e88baf822bc0a8971119b6fe360e6680
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-diagnostics-and-usage-data-is-used-for-system-center-configuration-manager"></a>System Center Configuration Manager での診断結果と使用状況データの使用方法
 

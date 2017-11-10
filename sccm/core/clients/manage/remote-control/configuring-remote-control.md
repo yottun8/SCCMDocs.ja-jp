@@ -1,5 +1,6 @@
 ---
-title: "リモート コントロールの構成 |Microsoft Docs"
+title: "リモート コントロールの構成"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でリモート コントロールをセットアップします。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 633336049feca35f76e3a57e14cc42088a303f8d
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: b5183f64a4793d2d24fec71a29ceaf0148446a36
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configuring-remote-control-in-system-center-configuration-manager"></a>System Center Configuration Manager でのリモート コントロールの構成
 
@@ -61,7 +62,7 @@ ms.lasthandoff: 09/14/2017
 |Alt + PageUp|実行しているプログラムの間を左から右へ切り替えます。|  
 |Alt + PageDown|実行しているプログラムの間を右から左へ切り替えます。|  
 |Alt + Insert|実行しているプログラムを開いた順に繰り返し表示します。|  
-|Alt + Home|[ **開始** ] メニューを表示します。|  
+|Alt + Home|**[ 開始 ]** メニューを表示します。|  
 |Ctrl + Alt + End|Windows セキュリティ ダイアログ ボックス (Ctrl+Alt+Del) を表示します。|  
 |Alt + Delete キー|Windows メニューを表示します。|  
 |Ctrl + Alt + (テンキーの) マイナス記号|ローカル コンピューターのアクティブ ウィンドウをリモート コンピューターのクリップボードにコピーします。|  

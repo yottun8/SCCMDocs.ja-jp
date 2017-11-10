@@ -1,5 +1,6 @@
 ---
-title: "データの移行 | Microsoft Docs"
+title: "データの移行"
+titleSuffix: Configuration Manager
 description: "ソース階層から System Center Configuration Manager の移行先階層にデータを転送する方法について説明します。"
 ms.custom: na
 ms.date: 12/29/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: dface33392c2a2a662522656eabf0936b52b28fc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d832e820421784ce33df880463632050741eedd7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migrate-data-between-hierarchies-in-system-center-configuration-manager"></a>System Center Configuration Manager の階層間でのデータの移行
 
@@ -53,7 +54,7 @@ ms.lasthandoff: 08/07/2017
 |移行ジョブ|移行する特定のオブジェクトを構成してから、そのオブジェクトの移行先階層への移行を管理する処理。<br /><br /> 詳しくは、「[System Center Configuration Manager での移行ジョブ戦略の計画](../../core/migration/planning-a-migration-job-strategy.md)」を参照してください。|  
 |クライアントの移行|クライアントが使用する情報をソース サイトのデータベースから移行先階層のデータベースに転送する処理。 データの移行後、デバイス上のクライアント ソフトウェアを、移行先階層のクライアント ソフトウェアにアップグレードします。<br /><br /> 詳細については、[System Center Configuration Manager での移行ジョブ戦略の計画](../../core/migration/planning-a-client-migration-strategy.md)をご覧ください。|  
 |共有配布ポイント|移行期間中に移行先階層と共有されるソース階層の配布ポイント。<br /><br /> 移行期間中に、移行先階層内のサイトに割り当てられたクライアントは、共有配布ポイントからコンテンツを取得できます。<br /><br /> 詳しくは、「[System Center Configuration Manager のコンテンツ展開移行戦略の計画](../../core/migration/planning-a-content-deployment-migration-strategy.md)」の「[ソース階層と移行先階層で配布ポイントを共有する](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration)」を参照してください。|  
-|移行の監視|移行処理を監視する処理。 [**管理**] ワークスペースの [**移行**] ノードから、移行の進行状況と成功状態を監視します。<br /><br /> 詳しくは、「[System Center Configuration Manager での移行アクティビティの監視の計画](../../core/migration/planning-to-monitor-migration-activity.md)」を参照してください。|  
+|移行の監視|移行処理を監視する処理。 **[管理]** ワークスペースの **[移行]** ノードから、移行の進行状況と成功状態を監視します。<br /><br /> 詳しくは、「[System Center Configuration Manager での移行アクティビティの監視の計画](../../core/migration/planning-to-monitor-migration-activity.md)」を参照してください。|  
 |データ収集の停止|ソース サイトからのデータ収集を停止する処理。 ソース階層から移行するデータがなくなった場合や、移行関連のアクティビティを一時停止する場合、ソース階層からのデータ収集を停止するように移行先階層を構成できます。<br /><br /> 詳しくは、「[System Center Configuration Manager でのソース階層戦略の計画](../../core/migration/planning-a-source-hierarchy-strategy.md)」の「[データ収集](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering)」を参照してください。|  
 |移行データのクリーンアップ|移行先階層のデータベースから移行関連情報を削除することで、ソース階層からの移行を終了する処理。<br /><br /> 詳細については、[System Center Configuration Manager での移行完了の計画](../../core/migration/planning-to-complete-migration.md)をご覧ください。|  
 
@@ -68,9 +69,9 @@ ms.lasthandoff: 08/07/2017
 
 3.  ソース階層と移行先階層間でデータを移行する移行ジョブを作成します。  
 
-4.  データ収集プロセスは、[ **データ収集の停止** ] コマンドを使用していつでも停止できます。 データ収集を停止すると、Configuration Manager はソース階層内のデータに対する変更内容を特定する処理も停止されるため、ソース階層と移行先階層間の配布ポイントは共有できなくなります。 通常、この操作は、ソース階層からのデータ移行や配布ポイントの共有を行う予定がなくなった場合に使用します。  
+4.  データ収集プロセスは、**[ データ収集の停止 ]** コマンドを使用していつでも停止できます。 データ収集を停止すると、Configuration Manager はソース階層内のデータに対する変更内容を特定する処理も停止されるため、ソース階層と移行先階層間の配布ポイントは共有できなくなります。 通常、この操作は、ソース階層からのデータ移行や配布ポイントの共有を行う予定がなくなった場合に使用します。  
 
-5.  必要に応じて、ソース階層のすべてのサイトでデータ収集を停止した後に、[ **移行データのクリーン アップ** ] コマンドを使用して移行データをクリーン アップすることができます。 このコマンドで、ソース階層の移行に関する階層データが移行先階層のデータベースから削除されます。  
+5.  必要に応じて、ソース階層のすべてのサイトでデータ収集を停止した後に、**[ 移行データのクリーン アップ ]** コマンドを使用して移行データをクリーン アップすることができます。 このコマンドで、ソース階層の移行に関する階層データが移行先階層のデータベースから削除されます。  
 
 Configuration Manager ソース階層からデータを移行した後に、ソース階層を環境の管理に使用しない場合は、そのソース階層とインフラストラクチャの使用を停止できます。  
 
