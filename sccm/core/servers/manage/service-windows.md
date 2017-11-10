@@ -1,5 +1,6 @@
 ---
-title: "サービス ウィンドウ | Microsoft Docs"
+title: "Windows のサービス"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager サイトで更新プログラムをインストールする場合は、サービス ウィンドウを使用して制御できます。"
 ms.custom: na
 ms.date: 1/11/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: d06a2a955ff59fa84bb844033fe31874fc735087
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d8b4cb7492b488a1f7056617b165b4aa656ee26e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 #  <a name="service-windows-for-site-servers"></a>サイト サーバーのサービス ウィンドウ
 
@@ -39,6 +40,6 @@ ms.lasthandoff: 08/07/2017
 
 ## <a name="to-configure-a-service-window"></a>サービス ウィンドウを構成するには
 
-1.  Configuration Manager コンソールで、**[管理]**、**[サイトの構成]**、**[サイト]** を開き、サービス ウィンドウを構成するサイト サーバーを選びます。  
+1.  Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** > **[サイト]** を開き、サービス ウィンドウを構成するサイト サーバーを選びます。  
 
 2.  次に、サイト サーバーの **[プロパティ]** を編集し、 **[サービス ウィンドウ]** タブを選びます。そのタブで、サイト サーバーのサービス ウィンドウを 1 つ以上設定できます。  

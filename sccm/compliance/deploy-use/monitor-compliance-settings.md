@@ -1,5 +1,6 @@
 ---
-title: "コンプライアンス設定を監視する | Microsoft Docs"
+title: "コンプライアンス設定を監視する"
+titleSuffix: Configuration Manager
 description: "構成基準のコンプライアンスのステータスを表示するには、このトピックの 1 つ以上の手順を使用します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 12a75e8bdda681a2ef1520e834f764722788f0a4
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 1da8bf6ab83be7c72cc95ec5e07cb9b1a17526d5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="monitor-compliance-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager でコンプライアンス設定を監視する
 
@@ -57,7 +58,7 @@ ms.lasthandoff: 09/15/2017
 5.  **[展開のステータス]** ページで、展開された構成基準のコンプライアンスについての詳細を確認できます。 **[展開]** ノードの下に一時ノードが作成されるため、後から再度この情報をすばやく確認できます。  
 
 ##  <a name="view-compliance-results-by-using-reports"></a>レポートを使用してコンプライアンス結果を表示する  
- Configuration Manager のコンプライアンス設定には、無数の組み込みレポートが含まれており、構成アイテム、構成基準、および展開についての情報監視に便利です。 これらのレポートには、**[コンプライアンスおよび設定管理]** のカテゴリがあります。  
+ Configuration Manager のコンプライアンス設定には、無数の組み込みレポートが含まれており、構成アイテム、構成基準、および展開についての情報監視に便利です。 これらのレポートには、**[コンプライアンスおよび設定管理]**のカテゴリがあります。  
 
 > [!IMPORTANT]  
 >  コンプライアンス設定でレポートの**%**[デバイス フィルター] **と [ユーザー フィルター] パラメーターを指定するときは必ず、ワイルドカード (** ) 文字を使ってください。  

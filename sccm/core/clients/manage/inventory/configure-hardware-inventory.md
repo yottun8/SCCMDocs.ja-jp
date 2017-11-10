@@ -1,5 +1,6 @@
 ---
-title: "ハードウェア インベントリの構成 | Microsoft Docs"
+title: "ハードウェア インベントリを構成する"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager ですべてのクライアントまたは 1 つのコレクションに対してハードウェア インベントリを設定します。"
 ms.custom: na
 ms.date: 02/22/2017
@@ -15,13 +16,13 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 0baadb95ec8dbb945f1a611ebb95a03cec3199bd
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 91f17e4ab9f828576ac1b11076a008289ff588a0
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
-# <a name="how-to-configure-hardware-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager でハードウェア インベントリを構成する方法
+# <a name="how-to-configure-hardware-inventory-in-system-center-configuration-manager"></a>How to configure hardware inventory in System Center Configuration Manager
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -36,13 +37,13 @@ ms.lasthandoff: 08/07/2017
 
 4.  **[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** を選択します。  
 
-5.  [**既定の設定**] ダイアログ ボックスで、[**ハードウェア インベントリ**] を選択します。  
+5.  **[既定の設定]** ダイアログ ボックスで、**[ハードウェア インベントリ]** を選択します。  
 
 6.  **[デバイスの設定]** 一覧で、次を構成します。  
 
-    -   **クライアントのハードウェア インベントリを有効にする** - [**True**] を選択します。  
+    -   **クライアントのハードウェア インベントリを有効にする** - **[True]** を選択します。  
 
-    -   **ハードウェア インベントリのスケジュール** - [**スケジュール**] をクリックしてクライアントがハードウェア インベントリを収集する間隔を指定します。  
+    -   **ハードウェア インベントリのスケジュール** - **[スケジュール]** をクリックしてクライアントがハードウェア インベントリを収集する間隔を指定します。  
 
 7.  必要なその他の[ハードウェア インベントリのクライアント設定](../../../../core/clients/deploy/about-client-settings.md#hardware-inventory)を構成します。  
 

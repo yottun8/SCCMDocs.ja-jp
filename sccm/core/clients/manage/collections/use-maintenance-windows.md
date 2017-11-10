@@ -1,5 +1,6 @@
 ---
-title: "メンテナンス期間の使用 | Microsoft Docs"
+title: "メンテナンス期間を使用する"
+titleSuffix: Configuration Manager
 description: "コレクションおよびメンテナンス ウィンドウを使用して、System Center Configuration Manager でクライアントを効果的に管理します。"
 ms.custom: na
 ms.date: 02/22/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: fa67cf597c73bab47209c9b98539f97e174ae70b
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 960955af87cdae9c43b5b520c348e32e1f48ef32
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-use-maintenance-windows-in-system-center-configuration-manager"></a>System Center Configuration Manager でメンテナンス期間を使用する方法
 

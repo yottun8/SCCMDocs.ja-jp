@@ -1,5 +1,6 @@
 ---
-title: "クエリの管理 | Microsoft Docs"
+title: "クエリを管理する"
+titleSuffix: Configuration Manager
 description: "クエリを管理する方法について説明します。 詳しい参照情報を記載した表が含まれています。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 97db49ca3097a3588f3fc3c341a0c492ec07ff3e
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 8535927281e1d84a09c7d053b5313fe7e4fcd97f
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-manage-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager でクエリを管理する方法
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 09/15/2017
  クエリの作成方法については、「[System Center Configuration Manager でクエリを管理する方法](../../../core/servers/manage/create-queries.md)」を参照してください。  
 
 ## <a name="how-to-manage-queries"></a>クエリを管理する方法  
- **[監視]** ワークスペースで **[クエリ]** を選択し、管理するクエリと管理タスクを選択します。  
+ **[監視]** ワークスペースで **[クエリ]**を選択し、管理するクエリと管理タスクを選択します。  
 
  次の表で、管理タスクに関する詳細と、各タスクを選択する前に必要となる追加情報について説明します。  
 
