@@ -1,5 +1,6 @@
 ---
-title: "シナリオ例 - Windows Embedded クライアントの展開 | Microsoft Docs"
+title: "シナリオの例 - Windows Embedded クライアントの展開"
+titleSuffix: Configuration Manager
 description: "Windows Embedded デバイスで System Center Configuration Manager クライアントを展開および管理するシナリオ例について説明します。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 2b5731e80393468b5d434b97fca8c18b7eae7be9
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: fc55aacfc1eae7a427ca4a0ae1bb3197b74fd2be
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="example-scenario-for-deploying-and-managing-system-center-configuration-manager-clients-on-windows-embedded-devices"></a>Windows Embedded デバイスで System Center Configuration Manager クライアントを展開および管理するシナリオ例
 
@@ -124,7 +125,7 @@ ms.lasthandoff: 09/14/2017
 
     3.  **[ 概要 ]** ページで、**[ 次へ ]** を選択し、ウィザードを完了します。  
 
-     加藤さんは、このカスタム タスク シーケンスを Windows Embedded デバイス コレクションに展開し、毎月実行するスケジュールを構成します。 展開設定の一部として、再起動後に変更を保持するために、**[ メンテナンスの期限または期間中の変更を確定する (再起動が必要) ]** チェック ボックスを選択します。 この展開を構成するために、作成したカスタム タスク シーケンスを選択し、**[ホーム]** タブの **[展開 ]** グループで、**[展開]** をクリックして、ソフトウェアの展開ウィザードを開始します。  
+     加藤さんは、このカスタム タスク シーケンスを Windows Embedded デバイス コレクションに展開し、毎月実行するスケジュールを構成します。 展開設定の一部として、再起動後に変更を保持するために、**[ メンテナンスの期限または期間中の変更を確定する (再起動が必要) ]** チェック ボックスを選択します。 この展開を構成するために、作成したカスタム タスク シーケンスを選択し、**ホーム ]**[  タブの  ]**[展開** グループで、**[ 展開 ]** をクリックして、ソフトウェアの展開ウィザードを開始します。  
 
     1.  **[ 全般 ]** ページで、Windows Embedded デバイス コレクションを選択して、**[ 次へ ]** をクリックします。  
 

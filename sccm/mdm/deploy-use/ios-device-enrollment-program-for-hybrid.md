@@ -1,5 +1,6 @@
 ---
-title: "Device Enrollment Program (DEP) を使用したデバイスの登録 - Configuration Manager | Microsoft Docs"
+title: "Device Enrollment Program (DEP) を使用して iOS デバイスを登録する "
+titleSuffix: Configuration Manager
 description: "Configuration Manager と Intune のハイブリッド展開に対応するために、iOS Device Enrollment Program (DEP) 登録を有効にします。"
 ms.custom: na
 ms.date: 09/22/2017
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
 caps.latest.revision: "9"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: f34f7527c14e1be6229212bfb2d8fd022ee6defe
-ms.sourcegitcommit: 8faf42135a8dc9c384407e64f3f8ba204fb15847
+ms.openlocfilehash: 1d8a1765b599daa98014feeb3d88efe9a07cb907
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Configuration Manager とのハイブリッド展開に対応する iOS Device Enrollment Program (DEP) 登録
 
@@ -101,7 +102,7 @@ ms.lasthandoff: 09/28/2017
 ![Apple Device Enrollment Program ポータルへのデバイスの追加のスクリーンショット](../media/enrollment-program-token-specify-serial.png)
 
 3.  **DEP で管理されたデバイスの同期**   
-    **[資産とコンプライアンス]** ワークスペースで、**[会社が所有しているすべてのデバイス]**、**[事前に宣言されたデバイス]** の順に進みます。 **[ホーム]** タブの **[DEP の同期]**をクリックします。同期要求が Apple に送信されます。 同期が完了すると、DEP で管理されたデバイスが表示されます。
+    **[資産とコンプライアンス]** ワークスペースで、**[会社が所有しているすべてのデバイス]** > **[事前に宣言されたデバイス]** の順に進みます。 **[ホーム]** タブの **[DEP の同期]**をクリックします。同期要求が Apple に送信されます。 同期が完了すると、DEP で管理されたデバイスが表示されます。
 
     > [!NOTE]
     > ハイブリッド構成では、Configuration Manager コンソールで **[DEP 同期]** をクリックすると、DEP の同期操作が手動でトリガーされます。

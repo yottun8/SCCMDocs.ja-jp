@@ -1,5 +1,6 @@
 ---
-title: "管理ポイントのデータベース レプリカ | Microsoft Docs"
+title: "管理ポイントのデータベース レプリカ"
+titleSuffix: Configuration Manager
 description: "管理ポイントがサイト データベース サーバーに加えられた CPU 負荷を軽減するように、データベース レプリカを使用します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "9"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 130c053c9f2a1817dd85b1f3c01285aab19d59cb
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c33bed2244e259edc0c5a7bb547be8bf69213920
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>System Center Configuration Manager の管理ポイントのデータベース レプリカ
 
@@ -455,7 +456,7 @@ Windows Server 2008 R2 コンピューターにデータベース レプリカ �
 ###  <a name="bkmk_supscript"></a> 単一の SQL Server 上の追加データベース レプリカ用の補足スクリプト  
  手順 4 のスクリプトを使用して、引き続き使用するデータベース レプリカが既に存在する SQL Server 上のデータベース レプリカ サーバーの自己署名入り証明書を構成する場合、元のスクリプトの変更済みバージョンを使用する必要があります。 次の変更を行うと、スクリプトはサーバー上の既存の証明書を削除することなく、一意のフレンドリ名を持つ後続の証明書を作成します。  次のように、元のスクリプトを編集します。  
 
--   スクリプト エントリ **# Delete existing cert if one exists** と **# Create the new cert**の間の各行をコメントに (実行されないように) します。 コメントにするには、該当する各行の先頭に文字  **#**  を追加します。  
+-   スクリプト エントリ **# Delete existing cert if one exists** と **# Create the new cert**の間の各行をコメントに (実行されないように) します。コメントにするには、該当する各行の先頭に文字  **#**  を追加します。  
 
 -   この証明書を使用して構成する後続のデータベース レプリカごとに、証明書のフレンドリ名を更新します。  これを行うには、 **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** の行を編集し、 **ConfigMgr SQL Server Identification Certificate** を新しい名前 (  **ConfigMgr SQL Server Identification Certificate1**など) に置き換えます。  
 

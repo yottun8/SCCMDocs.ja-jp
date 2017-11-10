@@ -1,5 +1,6 @@
 ---
-title: "クライアントで管理されているデバイスのコンプライアンスを管理するための一般的なタスク - Configuration Manager | Microsoft Docs"
+title: "クライアントで管理されているデバイスの一般的なコンプライアンス管理タスク "
+titleSuffix: Configuration Manager
 description: "いくつかの一般的なシナリオを使用して、System Center Configuration Manager のコンプライアンス設定について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 84b030284602853aab6c99268a74444a693edec7
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 0e70e565f7e1000aa452487cdd71ae165dd0c67b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="common-tasks-for-managing-compliance-on-devices-with-the-system-center-configuration-manager-client"></a>System Center Configuration Manager クライアントでデバイスのコンプライアンスを管理するための一般的なタスク
 

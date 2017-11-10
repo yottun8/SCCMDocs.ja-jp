@@ -1,5 +1,6 @@
 ---
-title: "インフラストラクチャの変更 | Microsoft Docs"
+title: "インフラストラクチャの変更"
+titleSuffix: Configuration Manager
 description: "展開した Configuration Manager のインフラストラクチャに影響する変更を加えたりアクションを実行したりする方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: a5228c4984347be4b115bfa5563791fa2fb7319c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5bf39d5d20d94b4dda666741c5887edfbc82ca0f
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>System Center Configuration Manager インフラストラクチャの変更
 

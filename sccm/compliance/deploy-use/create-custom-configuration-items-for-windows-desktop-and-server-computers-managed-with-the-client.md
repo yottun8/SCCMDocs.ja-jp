@@ -1,5 +1,6 @@
 ---
-title: "クライアントで管理されている Windows コンピューターの構成項目を作成する - Configuration Manager | Microsoft Docs"
+title: "クライアント管理の Windows コンピューターの構成項目を作成する "
+titleSuffix: Configuration Manager
 description: "カスタム Windows デスクトップおよびサーバーの構成項目を使用して Windows コンピューターとサーバーの設定を管理します。"
 ms.custom: na
 ms.date: 11/18/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 9fe28782744a419acad9c1acec49ff8db6c0eaa6
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: ed3aa1ce9e21c7c486cc40deb804a8687a1cd4f2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-system-center-configuration-manager-client"></a>System Center Configuration Manager クライアントを使用して管理されている Windows デスクトップおよびサーバー コンピューターのカスタム構成項目を作成する方法
 
@@ -102,7 +103,7 @@ System Center Configuration Manager **カスタム Windows デスクトップお
 
              **[LDAP プレフィックス]** - クライアント コンピューターでコンプライアンス対応を評価するための Active Directory ドメイン サービス クエリの有効なプレフィックスを指定します。 いずれかを使用する **LDAP://** のまたは **GC://** をグローバル カタログの検索を実行する.  
 
-             **[識別名 (DN)]** - クライアント コンピューターでコンプライアンス対応を評価する Active Directory Domain Services オブジェクトの識別名を指定します。  
+             **[識別名 (DN)]** - クライアント コンピューターでコンプライアンス対応を評価する Active Directory ドメイン サービス オブジェクトの識別名を指定します。  
 
              たとえば、corp.contoso.com ドメインの John Smith という名前のユーザーに関連する値を評価する場合は、次のように入力します。  
 
@@ -136,7 +137,7 @@ System Center Configuration Manager **カスタム Windows デスクトップお
 
         -   **ファイル システム**  
 
-            -   **[種類]** - 一覧で、**[ファイル]** と **[フォルダー]** のどちらを検索するか選択します。  
+            -   **[種類]** - 一覧で、**[ファイル ]** と **[フォルダー]** のどちらを検索するか選択します。  
 
             -   **[パス]** - 指定したファルまたはフォルダーのクライアント コンピューター上のパスを指定します。 パスには、システム環境変数と *%USERPROFILE%* 環境変数を指定できます。  
 
@@ -263,7 +264,7 @@ System Center Configuration Manager **カスタム Windows デスクトップお
 
 ### <a name="to-create-a-compliance-rule"></a>コンプライアンス規則を作成するには  
 
-1.  **構成項目の作成ウィザード** の **[コンプライアンスの規則]**ページで、**[次へ]**をクリックします。  
+1.  **構成項目の作成ウィザード** の **[コンプライアンスの規則]** ページで、**[次へ]**をクリックします。  
 
 2.  **[規則の作成]** ダイアログ ボックスで、次の情報を入力します。  
 

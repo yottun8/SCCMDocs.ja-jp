@@ -1,5 +1,6 @@
 ---
-title: "ソフトウェアの更新ポイントの削除 | Microsoft Docs"
+title: "ソフトウェアの更新ポイントを削除する"
+titleSuffix: Configuration Manager
 description: "次の手順に従って、ソフトウェアの更新ポイント サイト システムの役割を Configuration Manager コンソールから削除できます。"
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 2486375c-d4a2-4cf2-9124-9bee02bbf173
-ms.openlocfilehash: 22de02c51be3a0cd66b1be0f04b2fbdeb897858c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b5493f2572ecca50aba87b8944eeab706c3942fd
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 #  <a name="BKMK_RemoveSUP"></a> ソフトウェアの更新ポイント サイト システムの役割を削除する  
 

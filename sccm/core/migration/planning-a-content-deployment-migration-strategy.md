@@ -1,5 +1,6 @@
 ---
-title: "コンテンツの移行 | Microsoft Docs"
+title: "コンテンツの移行"
+titleSuffix: Configuration Manager
 description: "配布ポイントを使用すると、System Center Configuration Manager の移行先階層にデータを移行している間にコンテンツを管理できます。"
 ms.custom: na
 ms.date: 12/30/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 25619d91522193178e0415f649ca4b34c94ecc89
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 09e4fd0237d16cdaa25ba3c26a8661bd14fd6692
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-a-content-deployment-migration-strategy-in-system-center-configuration-manager"></a>System Center Configuration Manager のコンテンツ展開移行戦略の計画
 
@@ -113,7 +114,7 @@ Configuration Manager によってコンテンツが単一インスタンス ス
 > [!WARNING]  
 >  ブランチ配布ポイントをアップグレードする前に、Configuration Manager 2007 クライアント ソフトウェアをアンインストールしてください。 Configuration Manager 2007 クライアント ソフトウェアがインストールされているブランチ配布ポイントをアップグレードすると、コンピューターに以前に展開されたコンテンツがそのコンピューターから削除されて、配布ポイントのアップグレードは失敗します。  
 
-Configuration Manager コンソールの **[ソース階層]** ノードでアップグレード対象の配布ポイントを識別するには、ソース サイトを選択してから、**[共有配布ポイント]** タブを選択します。 適合する配布ポイントは、**[アップグレードの条件に適合]** 列に **[はい]** が表示されます。  
+Configuration Manager コンソールの **[ソース階層]** ノードでアップグレード対象の配布ポイントを識別するには、ソース サイトを選択してから、**共有配布ポイント]**[ タブを選択します。適合する配布ポイントは、]**アップグレードの条件に適合**[ 列に ]**[はい** が表示されます。  
 
 Configuration Manager 2007 のセカンダリ サイト サーバーにインストールされている配布ポイントをアップグレードすると、そのセカンダリ サイトはソース階層からアンインストールされます。 このシナリオはセカンダリ サイトのアップグレードと呼ばれますが、これは配布ポイントのサイト システムの役割にのみ適用されます。 結果として、セカンダリ サイトはアップグレードされず、代わりにアンインストールされます。 アンインストール後は、セカンダリ サイト サーバーだったコンピューターに移行先階層の配布ポイントが残ります。 セカンダリ サイトの配布ポイントをアップグレードする場合は、「[Configuration Manager 2007 セカンダリ サイトへのアップグレードの計画](#BKMK_UpgradeSS)」をご覧ください。  
 
@@ -180,7 +181,7 @@ Configuration Manager コンソールで配布ポイントのアップグレー�
 
 -   共有配布ポイントが追加のサイト システムの役割と併置されていない。  
 
-Configuration Manager コンソールの **[ソース階層]** ノードで再割り当て対象の配布ポイントを識別するには、ソース サイトを選択してから、**[共有配布ポイント]** タブを選択します。 適合する配布ポイントの **[再割り当ての条件に適合]** 列には、**[はい]** が表示されます (System Center 2012 R2 Configuration Manager より前のバージョンでは、この列の名前は **[アップグレードの条件に適合]** となっています)。  
+Configuration Manager コンソールの **[ソース階層]** ノードで再割り当て対象の配布ポイントを識別するには、ソース サイトを選択してから、**共有配布ポイント]**[ タブを選択します。適合する配布ポイントの ]**再割り当ての条件に適合**[ 列には、]**はい**[ が表示されます (System Center 2012 R2 Configuration Manager より前のバージョンでは、この列の名前は ]**[アップグレードの条件に適合** となっています)。  
 
 ###  <a name="BKMK_ReassignProcess"></a> 配布ポイントの再割り当てプロセス  
  Configuration Manager コンソールを使用して、アクティブなソース階層から共有した配布ポイントを再割り当てすることができます。 共有配布ポイントを再割り当てすると、その配布ポイントがソース サイトからアンインストールされ、移行先階層で指定したプライマリ サイトまたはセカンダリ サイトにアタッチされた配布ポイントとしてインストールされます。  

@@ -1,5 +1,6 @@
 ---
-title: "資産インテリジェンスの構成 | Microsoft Docs"
+title: "資産インテリジェンスを構成する"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で資産インテリジェンスをセットアップします。"
 ms.custom: na
 ms.date: 2/22/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: d2704e0f93ad9748f7eb06d714b3754463cb3bdb
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d6137426c4960d0e9a9117fc78d3f26803b4f001
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager で資産インテリジェンスを構成する
 
@@ -140,7 +141,7 @@ ms.lasthandoff: 08/07/2017
 
 2.  **[ホーム]** タブの **[資産インテリジェンス]** グループで **[ソフトウェア ライセンスのインポート]** を選択します。   
 
-4.  **[インポート]** ページで、Microsoft Volume Licensing Services (MVLS) ファイル (.xml または .csv) と標準ライセンス ステートメント ファイル (.csv) のどちらをインポートするのかを指定します。 一般的なライセンス ステートメント ファイル作成の詳細については、このトピックの「 [インポート用の標準ライセンス ステートメント情報ファイルの作成](#BKMK_CreateGeneralLicenseStatement) 」を参照してください。  
+4.  **[インポート]** ページで、Microsoft Volume Licensing Services (MVLS) ファイル (.xml または .csv) と標準ライセンス ステートメント ファイル (.csv) のどちらをインポートするのかを指定します。 一般的なライセンス ステートメント ファイル作成の詳細については、このトピックの「 [Create a general license statement information file for import](#BKMK_CreateGeneralLicenseStatement) 」を参照してください。  
 
     > [!WARNING]  
     >  資産インテリジェンスカタログにインポートできる .csv 形式のMVLS ファイルをダウンロードするには、「 [Microsoft Volume Licensing Service Center](http://go.microsoft.com/fwlink/p/?LinkId=226547)」を参照してください。 この情報にアクセスするには、Web サイトに登録済アカウントを持っている必要があります。 MVLS ファイルを .xml 形式にする方法の詳細については、Microsoft アカウント担当者に問い合わせる必要があります。  
@@ -152,7 +153,7 @@ ms.lasthandoff: 08/07/2017
 
 6. ウィザードを完了します。  
 
-###  <a name="BKMK_CreateGeneralLicenseStatement"></a> インポート用の標準ライセンス ステートメント情報ファイルの作成  
+###  <a name="BKMK_CreateGeneralLicenseStatement"></a> Create a general license statement information file for import  
  手動で作成したコンマ区切りの .csv ファイル形式のライセンス インポート ファイルを使用すると、一般的なライセンス ステートメントも資産インテリジェンス カタログにインポートできます。  
 
 > [!NOTE]  

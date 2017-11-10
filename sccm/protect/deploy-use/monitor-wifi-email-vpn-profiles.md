@@ -1,5 +1,6 @@
 ---
-title: "電子メール、Wi-Fi、VPN のプロファイルの監視 | Microsoft Docs"
+title: "電子メール、Wi-Fi、VPN のプロファイルの監視"
+titleSuffix: Configuration Manager
 description: "電子メール、Wi-Fi、VPN のプロファイルのコンプライアンス ステータスを System Center Configuration Manager で監視する方法を説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "4"
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-ms.openlocfilehash: 73d941633d270cf9628f8be14e1e56f3c78624b6
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 0f49a1b30c6bd90164f2e40665c254b127b8a525
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="monitor-email-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager での電子メール、Wi-Fi、VPN のプロファイルの監視
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 08/07/2017
 
 1.  System Center Configuration Manager コンソールで、**[監視]** をクリックします。  
 
-2.  **[監視]** ワークスペースで、**[展開]** をクリックします。  
+2.  **[監視]** ワークスペースで、**[展開]**をクリックします。  
 
 3.  **[展開]** の一覧で、コンプライアンス情報を確認するプロファイルの展開を選択します。  
 

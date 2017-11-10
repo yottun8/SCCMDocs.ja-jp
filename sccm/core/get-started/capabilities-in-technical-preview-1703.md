@@ -1,5 +1,6 @@
 ---
-title: "Configuration Manager の Technical Preview 1703 の機能"
+title: "Technical Preview 1703 の機能"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の Technical Preview バージョン 1703 で使用できる機能について説明します。"
 ms.custom: na
 ms.date: 03/24/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: bb1b96a56db68dcea22270855b899ba3a90afd0d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 4b21264447a7aa9b54c698c56e3f7c496f8fc616
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1703 の機能
 
@@ -59,7 +60,7 @@ ms.lasthandoff: 08/07/2017
 
 ### <a name="how-to-get-the-application-identifier-of-an-application"></a>アプリケーションのアプリケーションの識別子を取得する方法
 
-1.  Configuration Manager コンソールで、[ソフトウェア ライブラリ] ****をクリックします。
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。
 2.  [ソフトウェア ライブラリ] ワークスペースで **[アプリケーション管理]** を展開し、**[アプリケーション]** をクリックします。
 3.  **[アプリケーション]** ビューで、列ヘッダーのいずれかを右クリックし、一覧から **[CI の固有 ID]** を選択します。 各アプリケーションの一意の ID が一覧に表示されます。
 4.  リンク先のアプリケーションの **[CI の固有 ID]** (**ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2** など) をメモしておきます。

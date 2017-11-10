@@ -1,5 +1,6 @@
 ---
-title: "アプリ構成ポリシーを使用した Android for Work アプリの構成 | Microsoft Docs"
+title: "アプリ構成ポリシーを使用した Android for Work アプリの構成"
+titleSuffix: Configuration Manager
 description: "ユーザーがアプリを実行する前にアプリ構成ポリシーをユーザーに展開すると、Android for Work を実行しているデバイスの構成の問題を解消するのに役立ちます。"
 ms.custom: na
 ms.date: 09/12/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: NathBarn
 ms.author: NathBarn
 manager: angrobe
-ms.openlocfilehash: bd8388689a49873860fa9951b7d522f9d96fc11f
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: 79d1b3fed3baa74c8ad195925ccda35713cb8865
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="apply-settings-to-android-for-work-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager でアプリ構成ポリシーを使用し、Android for Work アプリに設定を適用する
 
@@ -40,12 +41,12 @@ Android アプリ構成ポリシーは、Android for Work を実行している�
 
 ## <a name="create-an-app-configuration-policy"></a>アプリ構成ポリシーを作成する
 
-1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**、**[アプリケーション管理]**、**[アプリ構成ポリシー]** の順に選択します。
+1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリ構成ポリシー]** の順に選択します。
 2. **[ホーム]** タブの **[アプリ構成ポリシー]** グループで、**[アプリケーション構成ポリシーを作成します]** を選択します。
 3. アプリ構成ポリシーの作成ウィザードの **[全般]** ページで、ポリシーの次の情報を設定します。
   - **名前**。 ポリシーの一意の名前を入力します。
   - **説明**。 (オプション) ポリシーの識別を簡単にするために、説明を追加できます。
-  -  **構成ポリシーの種類を選択します**。 アプリの構成ポリシー [**Android for Work アプリの構成ポリシー**] の対象となるプラットフォームを指定します。
+  -  **構成ポリシーの種類を選択します**。 アプリの構成ポリシー **[Android for Work アプリの構成ポリシー]** の対象となるプラットフォームを指定します。
   -  **検索とフィルター処理を向上させるために割り当てたカテゴリ**。 (オプション) カテゴリを作成し、ポリシーに割り当てるには、**[カテゴリ]** を選択します。 カテゴリを利用すると、Configuration Manager コンソールの項目を並べ替えたり、検索したりするときに便利です。
 4. **[Android for Work ポリシー]** ページで、構成ポリシー情報の設定方法を選択します。
   - **名前と値のペアを指定します**。 入れ子を利用しないプロパティ リスト ファイルにこのオプションを利用できます。 名前と値のペアを指定するには
