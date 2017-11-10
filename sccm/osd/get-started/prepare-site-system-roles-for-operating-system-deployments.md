@@ -1,5 +1,6 @@
 ---
-title: "オペレーティング システムの展開用のサイト システムの役割を準備する | Microsoft Docs"
+title: "オペレーティング システムの展開用のサイト システムの役割を準備する"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でオペレーティング システムを展開する前に、サイト システムの役割を構成します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 11c0f169afebdb071fefb5ce300fd1ae3481a94f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c07172bec1032b021c2d7b7ccaabe33c96b930d2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prepare-site-system-roles-for-operating-system-deployments-with-system-center-configuration-manager"></a>System Center Configuration Manager でのオペレーティング システム展開のサイト システムの役割の準備
 
@@ -67,7 +68,7 @@ System Center Configuration Manager でオペレーティング システムを�
 
 2.  構成する配布ポイントを選択してから、 **[ホーム]** タブの **[プロパティ]** グループで、 **[プロパティ]**をクリックします。  
 
-3.  配布ポイントの [プロパティ] ページで、**[PXE]** タブをクリックします。 **[クライアントの PXE サポートを有効にする]** を選択して、この配布ポイントの PXE を有効にします。  
+3.  配布ポイントのプロパティ ページで、**[PXE]** タブをクリックして **[クライアントの PXE サポートを有効にする]** を選択し、この配布ポイントの PXE を有効にします。  
 
 4.  [スケジュールされたマルチキャストを有効にする] をクリックし、次のオプションを選択します。 **[PXE の必須ポートの確認]** ダイアログ ボックスで **[はい]** をクリックし、PXE を有効にすることを確認します。 Configuration Manager は、Windows ファイアウォールに自動的に既定のポートを構成します。 別のファイアウォールを使用する場合は、手動でポートを構成する必要があります。  
 
@@ -158,7 +159,7 @@ Configuration Manager バージョン 1606 では、PXE 対応配布ポイント
         > [!IMPORTANT]  
         >  IP アドレスは、オペレーティング システムのイメージを要求する対象コンピューターがアクセスできることが必要です。 このため、対象コンピューターとサイト サーバー間のルーターやファイアウォールは、マルチキャスト トラフィックを許可するように構成する必要があります。  
 
-    -   **UDP ポートの範囲**: 対象コンピューターにデータを送信する UDP ポートの範囲を指定します。  
+    -   **UDP ポートの範囲**:対象コンピューターにデータを送信する UDP ポートの範囲を指定します。  
 
         > [!IMPORTANT]  
         >  これらのポートは、オペレーティング システムのイメージを要求する対象コンピューターからアクセスできることが必要です。 このため、対象コンピューターとサイト サーバー間のルーターやファイアウォールは、マルチキャスト トラフィックを許可するように構成する必要があります。  
@@ -169,7 +170,7 @@ Configuration Manager バージョン 1606 では、PXE 対応配布ポイント
 
          **[最小セッション サイズ]** ボックスで、Configuration Manager がオペレーティング システムの展開を開始する前に受信しなければならない要求数を指定します。  
 
-    -   **転送速度**: ダウンロード先コンピューターにデータをダウンロードする際の転送速度を選択します。  
+    -   **転送速度**:ダウンロード先コンピューターにデータをダウンロードする際の転送速度を選択します。  
 
     -   **最大クライアント数**: この配布ポイントからオペレーティング システムをダウンロードできる展開先のコンピューターの最大数を指定します。  
 

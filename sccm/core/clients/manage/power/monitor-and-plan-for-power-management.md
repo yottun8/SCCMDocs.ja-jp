@@ -1,5 +1,6 @@
 ---
-title: "電源管理の監視と計画 | Microsoft Docs"
+title: "電源管理の監視と計画"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で電源管理を監視して計画する方法を説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 409b16bc184796a2508fcc6b7049a79ed4cfe2e4
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: ce89941550d02ef80bf9f7e9bab83850dda9e981
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-monitor-and-plan-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager で電源管理を監視して計画する方法
 
@@ -533,7 +534,7 @@ System Center Configuration Manager での電源管理の監視および計画�
 
 |レポート名|説明|  
 |-----------------|-------------|  
-|**電源管理不可のコンピューターの詳細**|**[影響を受けたコンピューター]** 列の数値をクリックすると、選択した原因のためにスリープ状態または休止状態にならなかったコンピューターのリストが表示されます。<br /><br /> 詳細については、このトピックの「 [Insomnia Computer Details Report](#BKMK_Insomnia_Computer_Details) 」をご覧ください。|  
+|****|**[影響を受けたコンピューター]** 列の数値をクリックすると、選択した原因のためにスリープ状態または休止状態にならなかったコンピューターのリストが表示されます。<br /><br /> 詳細については、このトピックの「 [Insomnia Computer Details Report](#BKMK_Insomnia_Computer_Details) 」をご覧ください。|  
 
 ###  <a name="BKMK_Capabilites"></a> 電源機能レポート  
  **[電源機能]** レポートには、指定のコレクションに含まれるコンピューターのハードウェアの電源管理機能が表示されます。 通常このレポートは、組織内のコンピューターが持つ電源管理機能を確認するために、電源管理の監視段階で使用されます。 また、このレポートに表示される情報を使用して、電源プランを適用するコンピューターのコレクションや、電源管理から除外するコンピューターのコレクションを作成できます。 このレポートに表示される電源管理機能は次のとおりです。  

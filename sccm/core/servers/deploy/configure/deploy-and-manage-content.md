@@ -1,5 +1,6 @@
 ---
-title: "コンテンツの展開 | Microsoft Docs"
+title: "コンテンツを展開する"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の配布ポイントをインストールした後に、その配布ポイントにコンテンツを展開する方法について説明します。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 36b08285ef78d0acb9ba9c44abe2d57e311d44b3
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b409e8b050a3f1871819bd857c225a8cf6333712
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="deploy-and-manage-content-for-system-center-configuration-manager"></a>System Center Configuration Manager でのコンテンツの展開および管理
 
@@ -51,7 +52,7 @@ System Center Configuration Manager の配布ポイントをインストール�
 
 #### <a name="to-distribute-content-on-distribution-points"></a>コンテンツを配布ポイントに配布するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで、配布するコンテンツの種類に応じて、次のいずれかの手順を選択します。  
 
@@ -88,14 +89,14 @@ System Center Configuration Manager の配布ポイントをインストール�
 
 6.  **[コンテンツの配布先]** ページで **[追加]** をクリックし、次のいずれかを選択して、該当の手順に従います。  
 
-    -   **コレクション**:**[ユーザー コレクション]** または **[デバイス コレクション]** を選択し、1 つまたは複数の配布ポイント グループに関連付けられているコレクションをクリックして、**[OK]** をクリックします。  
+    -   **コレクション**:[ユーザー コレクション **** ] または [デバイス コレクション ****] を選択し、1 つまたは複数の配布ポイント グループに関連付けられているコレクションをクリックして、[OK ****] をクリックします。  
 
         > [!NOTE]  
         >  配布ポイント グループに関連付けられているコレクションのみが表示されます。 コレクションと配布ポイント グループの関連付けの詳細については、「[System Center Configuration Manager の配布ポイントのインストールと構成](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md)」トピックの「[配布ポイント グループの管理](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage)」をご覧ください。  
 
-    -   **配付ポイント**:既存の配布ポイントを選択して、**[OK]** をクリックします。 コンテンツを既に受信した配布ポインは表示されません。  
+    -   **配付ポイント**:既存の配布ポイントを選択して、[OK ****] をクリックします。 コンテンツを既に受信した配布ポインは表示されません。  
 
-    -   **配布ポイント グループ**:既存の配布ポイント グループを選択して、**[OK]** をクリックします。 コンテンツを既に受信した配布ポイント グループは表示されません。  
+    -   **配布ポイント グループ**:既存の配布ポイント グループを選択して、[OK ****] をクリックします。 コンテンツを既に受信した配布ポイント グループは表示されません。  
 
     コンテンツの配布先の追加が完了したら、**[次へ]** をクリックします。  
 
@@ -221,14 +222,14 @@ System Center Configuration Manager の配布ポイントをインストール�
 
 6.  **[コンテンツの配布先]** ページで **[追加]** をクリックし、事前設定対象の配布ポイントを含む次のいずれかを選択して、該当の手順に従います。  
 
-    -   **コレクション**:**[ユーザー コレクション]** または **[デバイス コレクション]** を選択し、1 つまたは複数の配布ポイント グループに関連付けられているコレクションをクリックして、**[OK]** をクリックします。  
+    -   **コレクション**:[ユーザー コレクション **** ] または [デバイス コレクション ****] を選択し、1 つまたは複数の配布ポイント グループに関連付けられているコレクションをクリックして、[OK ****] をクリックします。  
 
         > [!NOTE]  
         >  配布ポイント グループに関連付けられているコレクションのみが表示されます。  詳細については、「[System Center Configuration Manager の配布ポイントのインストールと構成](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md)」トピックの「[配布ポイント グループの管理](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage)」をご覧ください。  
 
-    -   **配付ポイント**:既存の配布ポイントを選択して、**[OK]** をクリックします。 コンテンツを既に受信した配布ポインは表示されません。  
+    -   **配付ポイント**:既存の配布ポイントを選択して、[OK ****] をクリックします。 コンテンツを既に受信した配布ポインは表示されません。  
 
-    -   **配布ポイント グループ**:既存の配布ポイント グループを選択して、**[OK]** をクリックします。 コンテンツを既に受信した配布ポイント グループは表示されません。  
+    -   **配布ポイント グループ**:既存の配布ポイント グループを選択して、[OK ****] をクリックします。 コンテンツを既に受信した配布ポイント グループは表示されません。  
 
     コンテンツの配布先の追加が完了したら、**[次へ]** をクリックします。  
 
