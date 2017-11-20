@@ -15,11 +15,11 @@ caps.latest.revision: "24"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 8ab177067d0308b863274a7ae05574374b0af4ba
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: a83c2030de8a146dad7bf2258e8a983c8ab6c45e
+ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="manage-email-access-in-system-center-configuration-manager"></a>System Center Configuration Manager でのメール アクセスの管理
 
@@ -39,7 +39,7 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
 -   Android 4.0 以降、Samsung KNOX Standard 4.0 以降  
 
--   iOS 7.1 以降  
+-   iOS 9.0 以降  
 
 -   Windows Phone 8.1 以降  
 
@@ -93,13 +93,13 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
 -   Android 4.0 以降、Samsung KNOX Standard 4.0 以降  
 
--   iOS 7.1 以降  
+-   iOS 9.0 以降  
 
 -   Windows Phone 8.1 以降  
 
 -   Windows 8.1 以降での **メール** アプリケーション  
 
- iOS と Android 用の Outlook アプリ、および Outlook デスクトップ 2013 以上がサポートされるのは、Exchange Online に限られます。  
+ iOS と Android 用の Outlook アプリ、Outlook デスクトップ 2013 以上がサポートされるのは、Exchange Online のみです。  
 
  条件付きアクセスが機能するには、Configuration Manager と Exchange 間に **On-Premises Exchange Connector** が必要です。  
 
