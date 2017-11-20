@@ -103,6 +103,7 @@
 ###  [ラボのセットアップ](get-started/set-up-your-lab.md)
 
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [1711 の機能](get-started/capabilities-in-technical-preview-1711.md)
 ###  [1710 の機能](get-started/capabilities-in-technical-preview-1710.md)
 ###  [1709 の機能](get-started/capabilities-in-technical-preview-1709.md)
 ###  [1708 の機能](get-started/capabilities-in-technical-preview-1708.md)
