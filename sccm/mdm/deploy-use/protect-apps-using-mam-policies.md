@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 12633eced1850b718bf7cad019cd943305a7d9fb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 4eedd96fd399cf9577da8069bd0c8d5702f50d7b
+ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager のモバイル アプリケーション管理ポリシーを使ったアプリの保護
 
@@ -30,7 +30,7 @@ System Center Configuration Manager アプリケーション管理ポリシー�
 
 -   Android 4 以降が実行されているデバイス  
 
--   iOS 7 以降を実行するデバイス  
+-   iOS 9 以降を実行するデバイス  
 
 モバイル アプリ管理ポリシーを使って、Intune で管理されていないデバイス上のアプリも保護することができます。 この新機能を使用して、Office 365 サービスに接続するアプリに対してモバイル アプリ管理ポリシーを適用できます。 これは、オンプレミス Exchange や SharePoint に接続するアプリではサポートされていません。  
 

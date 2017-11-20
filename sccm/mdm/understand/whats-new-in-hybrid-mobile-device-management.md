@@ -3,7 +3,7 @@ title: "ハイブリッド MDM の新機能"
 titleSuffix: Configuration Manager
 description: "Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。"
 ms.custom: na
-ms.date: 10/04/2017
+ms.date: 11/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 515aa4ae71a4e8b8bdfa3bbe693386c5ddf44223
-ms.sourcegitcommit: e858bacecf0f964ed619b3c2f83663c4dab92998
+ms.openlocfilehash: 29dd4bff6d35712c23d66751db16a00aa761b8b4
+ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -40,6 +40,15 @@ ms.lasthandoff: 11/03/2017
 |**Microsoft Intune の新機能** | 通常、このカテゴリに一覧表示されたすべての機能は、Configuration Manager のすべてのリリースで動作します。 これには System Center 2012 R2 Configuration Manager リリースが含まれています。これらの機能では Intune サービスのみが必要であり、Configuration Manager の追加機能は不要なためです。|
 |**Configuration Manager Technical Preview の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Technical Preview リリースでのみ動作します。 これらの機能を試すには、機能の説明で指定されたバージョンの Technical Preview をインストールする必要があります。 詳細については、「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」をご覧ください。|
 |**Configuration Manager (現在のブランチ) の新機能**| このカテゴリに一覧表示されたすべての機能は、バージョン 1511 や 1602 など、指定されたバージョンの Configuration Manager (現在のブランチ) でのみ動作します。 ハイブリッド展開に旧バージョンの Configuration Manager を使用している場合は、機能の説明で指定されたバージョンの Configuration Manager (現在の分岐) にアップグレードする必要があります。 詳細については、「[System Center Configuration Manager へのアップグレード](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)」を参照してください。|
+
+
+## <a name="november-2017"></a>2017 年 11 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+- **iOS の管理対象アプリ ログへのアクセス** <!-- 1469920 --> Managed Browser をインストールしているエンド ユーザーは、Microsoft が公開しているすべてのアプリの管理状態を表示し、管理対象 iOS アプリの問題を解決するためにログを送信できるようになりました。
+  
+  iOS デバイスの Managed Browser でトラブルシューティング モードを有効にする方法については、「[iOS で Managed Browser を使用し、管理対象アプリ ログにアクセスする方法](https://docs.microsoft.com/intune/app-configuration-managed-browser#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios)」を参照してください。
 
 
 ## <a name="october-2017"></a>2017 年 10 月
@@ -101,6 +110,8 @@ ms.lasthandoff: 11/03/2017
 
 - **Windows 情報保護許可ポリシーに Windows 10 のポータル サイト アプリを追加** <!-- 677129 -->    
     Windows 情報保護 (WIP) をサポートするために、Windows 10 のポータル サイト アプリが更新されました。 WIP 許可ポリシーにアプリを追加できます。 この変更により、アプリを **[適用除外]** 一覧に追加する必要がなくなります。 
+
+     1 つの WIP 構成アイテムのみをデバイスに配信できます。  2 つの WIP 構成アイテムの対象が同じデバイスになっている場合、いずれの WIP ポリシーも適用されません。
 
 - **iOS 8.0 のサポート終了の通知を追加**    
     iOS 8.0 のサポート終了の通知が追加されました。 詳細については、「[通知](#notices)」をご覧ください。

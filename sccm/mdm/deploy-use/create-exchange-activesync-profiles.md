@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 0211acbd546ac207e640a43d012c1f82399ace53
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 5fc0d5e68e27b3bde9ed3aa45a439c8b333da1d6
+ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="exchange-activesync-email-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager で Exchange ActiveSync 電子メール プロファイルを作成する
 
@@ -32,8 +32,8 @@ Microsoft Intune と Exchange ActiveSync を利用すると、デバイスに電
 
 - Windows 10
 - Windows Phone 8.1
-- iOS 8 を実行している iPhone  
-- iOS 8 を実行している iPad  
+- iOS 9 以降を実行している iPhone 
+- iOS 9 以降を実行している iPad 
 - Samsung KNOX Standard (4 以降)
 - Android for Work
 
