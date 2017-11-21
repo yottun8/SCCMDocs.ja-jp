@@ -1,5 +1,6 @@
 ---
-title: "ソフトウェアの更新ポイントのインストールと構成 | Microsoft Docs"
+title: "ソフトウェアの更新ポイントのインストールと構成"
+titleSuffix: Configuration Manager
 description: "プライマリ サイトでは、ソフトウェア更新プログラムのコンプライアンス対応状態を評価するためとソフトウェア更新プログラムをクライアントに展開するために、中央管理サイト上にソフトウェアの更新ポイントが必要になります。"
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 7d369384d133c90a15e01df50ac53992d61f3873
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c17dd40175bac5ecc4361e905f009f1ed5c2f5a4
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-and-configure-a-software-update-point"></a>ソフトウェアの更新ポイントのインストールと構成  
 
@@ -69,7 +70,7 @@ ms.lasthandoff: 08/07/2017
 ### <a name="configure-ssl-communications-to-wsus"></a>WSUS への SSL 通信の構成  
  SSL 通信の構成は、ウィザードの **[ 全般 ]** ページまたはソフトウェアの更新ポイントのプロパティの **[ 全般 ]** タブで行うことができます。  
 
- SSL の使用方法の詳細については、「 [SSL を使うように WSUS を構成するかどうかを決定する](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL)」を参照してください。  
+ SSL の使用方法の詳細については、「 [Decide whether to configure WSUS to use SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL)」を参照してください。  
 
 ### <a name="wsus-server-connection-account"></a>WSUS サーバー接続アカウント  
  ソフトウェアの更新ポイントで実行されている WSUS にサイト サーバーが接続するときにサイト サーバーで使用するアカウントを構成できます。 このアカウントを構成しない場合は、Configuration Manager によって、サイト サーバーが WSUS に接続するときにコンピューター アカウントが使用されます。 WSUS サーバー接続アカウントの構成は、ウィザードの **[プロキシとアカウントの設定]** ページまたはソフトウェアの更新ポイントのプロパティの **[プロキシとアカウントの設定]** タブで行います。  使用する Configuration Manager のバージョンに応じて、ウィザードのさまざまな場所でこのアカウントを構成できます。  
@@ -103,7 +104,7 @@ ms.lasthandoff: 08/07/2017
  ウィザードの **[ 同期ソース ]** ページまたはソフトウェアの更新ポイント コンポーネントのプロパティの **[ 同期設定 ]** タブで、WSUS レポート イベントを作成するかどうかを構成することもできます。 Configuration Manager はこれらのイベントを使用しません。したがって、通常は既定の設定、**[WSUS レポート イベントを作成しない]** を選択します。  
 
 ## <a name="synchronization-schedule"></a>同期スケジュール  
- 同期スケジュールは、ウィザードの **[同期スケジュール]** ページまたは [ソフトウェアの更新ポイント コンポーネントのプロパティ] で構成します。 この設定は、最上位サイトのソフトウェアの更新ポイントにのみ構成します。  
+ 同期スケジュールは、ウィザードの [同期スケジュール] ページまたは **[ソフトウェアの更新ポイント コンポーネントのプロパティ]** で構成します。 この設定は、最上位サイトのソフトウェアの更新ポイントにのみ構成します。  
 
  スケジュールを有効にすると、定期的な簡易スケジュールまたはカスタムの同期スケジュールを構成することができます。 簡易スケジュールを構成する場合、開始時刻は、Configuration Manager コンソールを実行するコンピューターのスケジュール作成時におけるローカル時刻に基づいて設定されます。 カスタム スケジュールの開始時刻を構成する場合、時刻は、Configuration Manager コンソールを実行するコンピューターのローカル時刻に基づいて設定されます。  
 
