@@ -1,5 +1,6 @@
 ---
-title: "ソフトウェア更新プログラムの前提条件 | Microsoft Docs"
+title: "ソフトウェア更新プログラムの前提条件"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でのソフトウェア更新プログラムの前提条件について説明します。"
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: 179f076f228daa5adf612275a822cd379b0ce1e3
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 905ecc023dd181a8d4801860898b05aff5e4e07f
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager でのソフトウェア更新プログラムの前提条件
 
@@ -74,7 +75,7 @@ ms.lasthandoff: 08/07/2017
 
  詳細については、次をご覧ください。  
 
--   [ソフトウェア更新プログラムのクライアントの設定](../get-started/manage-settings-for-software-updates.md#a-namebkmkclientsettingsa-client-settings-for-software-updates)  
+-   [ソフトウェア更新プログラムのクライアントの設定](../get-started/manage-settings-for-software-updates.md#BKMK_ClientSettings)   
 
 -   [ソフトウェア更新プログラムのクライアントの設定](../../core/clients/deploy/about-client-settings.md#software-updates)トピック  
 
@@ -101,11 +102,11 @@ ms.lasthandoff: 08/07/2017
 
      アップグレード分類のソフトウェア更新プログラムを一括で削除するために、txt ファイルから複数の GUID を読み取るように PowerShell スクリプトを変更できます。  
 
-2.  ソフトウェア更新プログラムの [**アップグレード**] 分類チェック ボックスをオフにし (詳細については、「[分類と製品の構成](../get-started/configure-classifications-and-products.md)」を参照してください)、ソフトウェア更新プログラムの同期を開始します (詳細については、「[ソフトウェア更新プログラムの同期](../get-started/synchronize-software-updates.md)」を参照してください)。  
+2.  ソフトウェア更新プログラムの **[アップグレード]** 分類チェック ボックスをオフにし (詳細については、「[分類と製品の構成](../get-started/configure-classifications-and-products.md)」を参照してください)、ソフトウェア更新プログラムの同期を開始します (詳細については、「[ソフトウェア更新プログラムの同期](../get-started/synchronize-software-updates.md)」を参照してください)。  
 
 3.  ソフトウェアの更新ポイントとサイト サーバーに、WSUS の [修正プログラム 3095113](https://support.microsoft.com/kb/3095113) をインストールする必要があります。  
 
-4.  ソフトウェア更新プログラムの [**アップグレード**] 分類チェック ボックスをオンにし (詳細については、「[分類と製品の構成](../get-started/configure-classifications-and-products.md)」を参照してください)、ソフトウェア更新プログラムの同期を開始します (詳細については、「[ソフトウェア更新プログラムの同期](../get-started/synchronize-software-updates.md)」を参照してください)。  
+4.  ソフトウェア更新プログラムの **[アップグレード]** 分類チェック ボックスをオンにし (詳細については、「[分類と製品の構成](../get-started/configure-classifications-and-products.md)」を参照してください)、ソフトウェア更新プログラムの同期を開始します (詳細については、「[ソフトウェア更新プログラムの同期](../get-started/synchronize-software-updates.md)」を参照してください)。  
 
 ## <a name="next-steps"></a>次のステップ
 [ソフトウェア更新管理の準備](../get-started/prepare-for-software-updates-management.md)

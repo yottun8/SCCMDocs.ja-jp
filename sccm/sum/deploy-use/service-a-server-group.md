@@ -1,5 +1,6 @@
 ---
-title: "サーバー グループの提供 |Microsoft Docs"
+title: "サーバー グループの提供"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager コンソールには、更新プログラムとコンプライアンスを監視するためのアラートとステータスがあります。"
 keywords: 
 author: dougeby
@@ -11,19 +12,18 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-ms.openlocfilehash: ae09a02dd5d67113b9a7e2ce146c844efa4caf55
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 12382015f2b673103c3c0d8fc9c0cbf29511a434
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
->[!IMPORTANT]
->これは Configuration Manager バージョン 1606 およびバージョン 1610 で使用できるプレリリース機能です。 プレリリース機能は、運用環境での早期テストのためにこの製品に含まれていますが、運用環境で使用することはできません。 使用するには、この機能を有効にする必要があります。 詳細については、「[更新プログラムからプレリリース機能を使用する](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)」を参照してください。
-
-
 # <a name="service-a-server-group"></a>サーバー グループの提供
 
 *適用対象: System Center Configuration Manager (Current Branch)*
+
+>[!IMPORTANT]
+>プレリリース機能は、運用環境での初期テスト用の Current Branch に含まれている機能です。 これらの機能は完全にサポートされていますが、現在開発中のため、プレリリースのカテゴリから移動するまでは変更が行われる可能性があります。 使用するには、この機能を有効にする必要があります。 詳細については、「[更新プログラムからプレリリース機能を使用する](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)」を参照してください。
 
 System Center Configuration Manager バージョン 1606 以降では、コレクションにサーバー グループの設定を構成して、ソフトウェア更新プログラムをインストールするコレクション内のコンピューターの数、割合、または順序を定義できます。 また、カスタム アクションを実行する展開前および展開後の PowerShell スクリプトも構成できます。
 

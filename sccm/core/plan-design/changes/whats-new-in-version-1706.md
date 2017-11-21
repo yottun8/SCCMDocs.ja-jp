@@ -13,11 +13,11 @@ ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 9b3248f30470ee8250efcbf171642ea476627d68
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 2889de0709096aa481ca6203c5ab2bac1f064d5e
+ms.sourcegitcommit: c4a1bafcd004638d264a93d307c70d8b6f7fe023
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1706 の新機能
 
@@ -189,10 +189,6 @@ Configuration Manager では、パッケージとプログラムを使用して�
 このリリースから、3 つの新しいモバイル アプリケーション管理 (MAM) ポリシー設定が使用できます。
 
 - **画面キャプチャの禁止 (Android デバイスのみ):** このアプリを使用するときに、デバイスの画面キャプチャ機能をブロックするように指定します。
-
-- **連絡先の同期を無効にする:** アプリでデバイス上のネイティブ連絡先アプリにデータを保存できなくなります。
-
-- **印刷を無効にする:** アプリで職場または学校のデータを印刷できなくなります。
 
 「[Configuration Manager のモバイル アプリケーション管理ポリシーを使ったアプリの保護](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies)」を参照し、新しいアプリの保護のポリシー設定を試してください。
 
