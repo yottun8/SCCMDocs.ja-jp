@@ -27,10 +27,11 @@
 ###  [特徴と機能](plan-design/changes/features-and-capabilities.md)
 ###  [Configuration Manager 2012 からの変更点](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [増分バージョンの新機能](plan-design/changes/whats-new-incremental-versions.md)
+###  [バージョン 1710 の新機能](plan-design/changes/whats-new-in-version-1710.md)
 ###  [バージョン 1706 の新機能](plan-design/changes/whats-new-in-version-1706.md)
 ###  [バージョン 1702 の新機能](plan-design/changes/whats-new-in-version-1702.md)
-###  [バージョン 1610 の新機能](plan-design/changes/whats-new-in-version-1610.md)
 <!--
+###  [What's new in version 1610](plan-design/changes/whats-new-in-version-1610.md)
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 -->
@@ -74,14 +75,15 @@
 ###  [サイト システムをサポートするための Windows Server の準備](plan-design/network/prepare-windows-servers.md)
 ###  [サイト システム サーバーの Web サイト](plan-design/network/websites-for-site-system-servers.md)
 ###  [PKI 証明書の要件](plan-design/network/pki-certificate-requirements.md)
+###  [CNG 証明書の概要](plan-design/network/cng-certificates-overview.md)
 
 ##   [診断結果と使用状況データ](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [診断結果と使用状況データの使用方法](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
+###  [1710 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md)
 ###  [1706 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1706.md)
 ###  [1702 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md)
-###  [1610 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
-
 <!--
+###  [Diagnostic data for 1610](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
 ###  [Diagnostic data for 1606](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
 ###  [Diagnostic data for 1602](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
 ###  [Diagnostic data for 1511](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
@@ -228,10 +230,11 @@
 ###  [サービス接続ツールの使用](servers/manage/use-the-service-connection-tool.md)
 ###  [更新登録ツールの使用](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [修正プログラム インストーラーの使用](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+###  [1710 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1710.md)
 ###  [1706 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1706.md)
 ###  [1702 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1702.md)
-###  [1610 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1610.md)
 <!-- Deprecated from Content - still published but out of TOC:
+###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
 ###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
 -->
@@ -305,6 +308,10 @@
 ###  [Linux および UNIX クライアントを管理する方法](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [OMS へのデータの同期](clients/manage/sync-data-microsoft-operations-management-suite.md)
 ###  [Mac クライアントを維持する](clients/manage/maintain-mac-clients.md)
+
+##   [Windows 10 デバイスの共同管理](clients/manage/co-management-overview.md)
+###  [共同管理用に Windows 10 デバイスを準備する](clients/manage/co-management-prepare.md)
+###  [Configuration Manager のワークロードを Intune に切り替える](clients/manage/co-management-switch-workloads.md)
 
 ##   [インターネット上のクライアントの管理](clients/manage/manage-clients-internet.md)
 ###  [クラウド管理ゲートウェイの計画](clients/manage/plan-cloud-management-gateway.md)

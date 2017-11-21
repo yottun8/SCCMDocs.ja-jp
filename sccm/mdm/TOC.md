@@ -72,6 +72,7 @@
 
 ## [条件付きアクセスを管理する](deploy-use/manage-access-to-services.md)
 ### [デバイス コンプライアンス ポリシー](deploy-use/device-compliance-policies.md)
+#### [コンプライアンス非対応に対するアクション](deploy-use/actions-for-noncompliance.md)
 ### [デバイス コンプライアンス ポリシーを作成する](deploy-use/create-compliance-policy.md)
 ### [電子メールへのアクセスの管理](deploy-use/manage-email-access.md)
 ### [SharePoint Online アクセスの管理](deploy-use/manage-sharepoint-online-access.md)
@@ -79,7 +80,7 @@
 ### [Dynamics CRM Online アクセスの管理](deploy-use/manage-dynamics-crm-online-access.md)
 ### [O365 サービスへの PC アクセスの管理](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
 
-## [デバイスのリスクに基づいたアクセスの管理](deploy-use/mobile-threat-defense.md)
+## [デバイスのリスクに基づいたアクセスを管理します。](deploy-use/mobile-threat-defense.md)
 ### [Configuration Manager の Lookout](deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md)
 #### [Lookout Mobile Threat Defense のセットアップ](deploy-use/set-up-your-subscription-with-lookout.md)
 #### [Intune で Lookout を有効にする](deploy-use/enable-lookout-connection-in-intune.md)

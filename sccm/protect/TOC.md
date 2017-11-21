@@ -52,6 +52,8 @@
 
 ### [Windows ファイアウォール ポリシー](deploy-use/create-windows-firewall-policies.md)
 ### [Windows Defender Advanced Threat Protection](deploy-use/windows-defender-advanced-threat-protection.md)
+### [Exploit Guard ポリシーを作成し、展開する](deploy-use/create-deploy-exploit-guard-policy.md)
+### [Application Guard ポリシーを作成し、展開する](deploy-use/create-deploy-application-guard-policy.md)
 ### [マルウェア対策とファイアウォールのタスク](deploy-use/endpoint-antimalware-firewall.md)
 ### [Endpoint Protection のシナリオ](deploy-use/scenarios-endpoint-protection.md)
 ### [Endpoint Protection クライアント ヘルプ](deploy-use/endpoint-protection-client-help.md)
