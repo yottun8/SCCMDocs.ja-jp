@@ -3,7 +3,7 @@ title: "PKI 証明書の要件"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で必要な PKI 証明書の要件について説明します。"
 ms.custom: na
-ms.date: 04/24/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,21 +15,26 @@ caps.latest.revision: "17"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: f5afa9fd9823cfbaa305b4d4e88f89be7004bd60
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: c9d95f6282820a41db762c143b3aa2f6d4fadf3e
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pki-certificate-requirements-for-system-center-configuration-manager"></a>System Center Configuration Manager での PKI 証明書の要件
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager で必要になる場合がある公開キー基盤 (PKI) 証明書の一覧を次に示します。 この情報は、PKI 証明書の基本的な知識があることを前提にしています。 展開の詳細な手順については、「[System Center Configuration Manager PKI 証明書の展開手順の例: Windows Server 2008 証明機関](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)」を参照してください。 Active Directory 証明書サービスの詳細については、次のドキュメントを参照してください。  
+System Center Configuration Manager で必要になる場合がある公開キー基盤 (PKI) 証明書の一覧を次に示します。 この情報は、PKI 証明書の基本的な知識があることを前提にしています。 展開の詳細な手順については、「[System Center Configuration Manager PKI 証明書の展開手順の例: Windows Server 2008 証明機関](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)」を参照してください。 
+
+Active Directory 証明書サービスの詳細については、次のドキュメントを参照してください。  
 
 -   Windows Server 2012: [Active Directory 証明書サービスの概要](http://go.microsoft.com/fwlink/p/?LinkId=286744)  
 
--   Windows Server 2008: [Windows Server 2008 の Active Directory 証明書サービス](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
+-   Windows Server 2008: [Windows Server 2008 の Active Directory 証明書サービス](http://go.microsoft.com/fwlink/p/?LinkId=115018)
+
+Cryptography API: Next Generation (CNG) 証明書と Configuration Manager の使用については、「[CNG certificates overview](cng-certificates-overview.md)」(CNG 証明書の概要) を参照してください。
+
 
 > [!IMPORTANT]  
 > System Center Configuration Manager はセキュア ハッシュ アルゴリズム 2 (SHA-2) 証明書をサポートしています。 SHA-2 証明書は、セキュリティ上の重要な長所をもたらします。 そのため、以下のことを推奨します。

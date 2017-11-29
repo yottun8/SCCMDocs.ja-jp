@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 98f9f44373b854b61714c21105a28b3240b4a7f7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 48530c177a03b66dbc126025ca61e0078bc89d9f
+ms.sourcegitcommit: 5ec9f8c312688bf7f4de4d6007b121d743b80c4d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>System Center Configuration Manager でオペレーティング システムをキャプチャするタスク シーケンスを作成する
 
@@ -53,7 +53,7 @@ System Center Configuration Manager でタスク シーケンスを使用して�
 
 #### <a name="to-create-a-task-sequence-that-builds-and-captures-an-operating-system-image"></a>オペレーティング システム イメージを構築およびキャプチャするタスク シーケンスを作成するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 
@@ -152,7 +152,7 @@ System Center Configuration Manager でタスク シーケンスを使用して�
 
 #### <a name="to-capture-an-operating-system-from-an-existing-reference-computer"></a>オペレーティング システムを既存の参照コンピューターからキャプチャするには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 
@@ -172,6 +172,9 @@ System Center Configuration Manager でタスク シーケンスを使用して�
 
      **[追加]**、**[イメージ]** の順にクリックしてから、[[ConfigMgr クライアントのキャプチャの準備](../understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture)] をクリックします。 このタスク シーケンス ステップは、参照コンピューター上の Configuration Manager クライアントを選択し、イメージ作成プロセスの一部としてキャプチャするためにクライアントを準備します。  
 
+    > [!Note]  
+    >  タスク シーケンスでは、Configuration Manager クライアントのアンインストールをサポートしていません。
+
 10. **[追加]**、**[イメージ]** の順にクリックしてから、[[Windows のキャプチャの準備](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture)] をクリックします。 このタスク シーケンスのアクションは Sysprep を実行してから、タスク シーケンスで指定した Windows PE ブート イメージにコンピューターを再起動します。 このアクションを正常に完了するには、参照コンピューターをドメインに参加させないでください。  
 
 11. **[追加]**、**[イメージ]** の順にクリックしてから、[[オペレーティング システム イメージのキャプチャ](../understand/task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)] をクリックします。  このタスク シーケンス ステップは、参照コンピューターのハード ドライブをキャプチャするためにのみ Windows PE から実行されます。 タスク シーケンス ステップの次の設定を構成する  
@@ -182,7 +185,7 @@ System Center Configuration Manager でタスク シーケンスを使用して�
 
     -   **[説明]**、 **[バージョン]**、 **[作成者]**: 必要に応じて、キャプチャするイメージの詳細を入力します。  
 
-    -   **オペレーティング システム イメージのキャプチャ アカウント**: 指定したネットワーク共有へのアクセス許可を持つ Windows アカウントを指定します。 その Windows アカウントの名前を指定するには、**[ 設定 ]** をクリックします。  
+    -   **オペレーティング システム イメージのキャプチャ アカウント**: 指定したネットワーク共有へのアクセス許可を持つ Windows アカウントを指定します。 その Windows アカウントの名前を指定するには、**[設定]** をクリックします。  
 
      **[OK]** をクリックして、タスク シーケンス エディターを閉じます。  
 

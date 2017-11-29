@@ -3,7 +3,7 @@ title: "Current Branch バージョン"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager のバージョン履歴を確認し、提供サービスのフェーズについて説明します。"
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 11/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 628c01d3f746155076e5bab68a38c0a50c73697d
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 8909c4de81ef0ca914120a67be1634380dc50c53
+ms.sourcegitcommit: 29196ffba45b16b2b6a2dc71de981dead850c41c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>System Center Configuration Manager の Current Branch バージョンのサポート
 
@@ -44,9 +44,9 @@ Microsoft は、System Center Configuration Manager の Current Branch に対し
 
  **バージョン履歴**  
 
-|バージョン|公開日|サポート終了日|  
+|バージョン |公開日 |サポート終了日|  
 |-------------|-----------------------|----------------------|  
-|1710|2017 年 11 月 20 日|2018 年 11 月 20 日|
+|1710|2017 年 11 月 20 日|2019 年 5 月 20日 |
 |1706|2017 年 7 月 31 日|2018 年 7 月 31 日|
 |1702|2017 年 3 月 27 日|2018 年 3 月 27 日|
 |1610|2016 年 11 月 18 日|2017 年 11 月 18 日|

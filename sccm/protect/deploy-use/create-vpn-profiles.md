@@ -3,7 +3,7 @@ title: "VPN プロファイルの作成方法 "
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で VPN プロファイルを作成する方法を説明します。"
 ms.custom: 
-ms.date: 4/19/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ author: lleonard-msft
 caps.handback.revision: "0"
 ms.author: alleonar
 ms.manager: angrobe
-ms.openlocfilehash: 4e8a082bff8b0f734da620669ddf403c0fe3eca6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 21fc286cdcc05244e1895ded5623d346e6cb8ebe
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager で VPN プロファイルを作成する方法
 
@@ -34,16 +34,19 @@ ms.lasthandoff: 10/12/2017
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[コンプライアンス設定]** > **[会社のリソースへのアクセス]** > **[VPN プロファイル]** の順に選択します。  
 
-3.  **[ホーム]** タブの **[作成]** グループで、**[VPN プロファイルの作成]** を選択します。  
+2.  **[ホーム]** タブの **[作成]** グループで、**[VPN プロファイルの作成]** を選択します。  
 
 
-1.  **[全般]** ページに入力します。 」を参照し、次のことに注意してください。  
+3.  **[全般]** ページに入力します。 」を参照し、次のことに注意してください。  
+
+    - 適切な**プラットフォーム**を選択します。
+
+       - Windows 8.1 プラットフォームを選択した場合、**[ファイルから既存の VPN プロファイルの項目をインポートする]** を選択し、XML ファイルにエクスポートされた VPN プロファイルの情報をインポートすることができます。
 
     - VPN プロファイル名には、\\/:*?&lt;>&#124; などの文字や空白文字は使用しないでください。 Windows Server VPN プロファイルでは、これらの文字はサポートされていません。  
 
-     -   **[ファイルから既存の VPN プロファイルの項目をインポートする]** を選択し、XML ファイルにエクスポートされた VPN プロファイルの情報をインポートします (Windows 8.1 および Windows RT のみ)。  
 
-1.  **[接続]** ページで、次のように指定します。  
+4.  **[接続]** ページで、次のように指定します。  
 
     -   **接続の種類**: VPN 接続の種類を選択します。 次の表にある接続の種類から選択できます。  
 

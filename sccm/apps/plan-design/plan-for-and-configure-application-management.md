@@ -3,7 +3,7 @@ title: "アプリケーション管理の計画と構成"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でアプリケーションを展開するために必要な依存関係を実装および構成します。"
 ms.custom: na
-ms.date: 02/09/2017
+ms.date: 11/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "13"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 66317bea84adbddf2d2e94c30a4a72e19229439b
-ms.sourcegitcommit: 18ac58374d2d513fe2a197c80f7c8c6890a7d612
+ms.openlocfilehash: cd06d3ee2ea14c9ff1b9cf09980c2b25a5263db9
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>System Center Configuration Manager のアプリケーション管理の計画と構成
 
@@ -95,7 +95,7 @@ ms.lasthandoff: 10/16/2017
 
 ####  <a name="to-install-and-configure-the-application-catalog-site-systems-new-site-system-server"></a>アプリケーション カタログのサイト システムをインストールし、構成するには:(新しいサイト システム サーバーの場合)  
 
-1.  Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に選択します。  
+1.  Configuration Manager コンソールで、**[管理]**、 > **[サイトの構成]**、 > **[サーバーとサイト システムの役割]** の順に選択します。  
 
 3.  **[ホーム]** タブの **[作成]** グループで、**[サイト システム サーバーの作成]** を選択します。  
 
@@ -110,7 +110,7 @@ ms.lasthandoff: 10/16/2017
 
 ####  <a name="to-install-and-configure-the-application-catalog-site-systems-existing-site-system-server"></a>アプリケーション カタログのサイト システムをインストールし、構成するには:既存のサイト システム サーバー  
 
-1.  Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に選択し、アプリケーション カタログに使用するサーバーを選択します。  
+1.  Configuration Manager コンソールで、**[管理]**、 > **[サイトの構成]**、 > **[サーバーとサイト システムの役割]** の順に選択し、アプリケーション カタログに使用するサーバーを選択します。  
 
 3.  **[ホーム]** タブの **[サーバー]** グループで、**[サイト システムの役割の追加]** を選択します。  
 
@@ -185,6 +185,26 @@ ms.lasthandoff: 10/16/2017
 1. アプリケーション カタログ Web サイト ポイントのサイト サーバーの役割がインストールされていない場合は、**[コンピューター エージェント]** クライアント設定の **[ソフトウェア センターに表示される組織名]** に指定された組織名がソフトウェア センターに表示されます。 手順については、「[クライアント設定を構成する方法](https://docs.microsoft.com/sccm/core/clients/deploy/configure-client-settings)」をご覧ください。
 2. アプリケーション カタログ Web サイトのポイント サイト サーバーの役割がインストールされている場合は、アプリケーション カタログ Web サイトのポイント サイト サーバーの役割プロパティに指定されている組織名と色がソフトウェア センターに表示されます。 詳細については、「[Configuration options for Application Catalog website point](https://docs.microsoft.com/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website)」(アプリケーション カタログ Web サイト ポイントの構成オプション) をご覧ください。
 3. Microsoft Intune サブスクリプションが構成されていて Configuration Manager に接続されている場合は、Intune サブスクリプションのプロパティに指定されている組織名、色、会社のロゴがソフトウェア センターに表示されます。 詳細については、「 [Configuring the Microsoft Intune subscription](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription)」をご覧ください。
+
+#### <a name="to-manually-set-software-center-branding"></a>ソフトウェア センターのブランドを手動で設定するには
+<!-- 1351224 -->
+1710 リリースでは、エンタープライズ ブランド要素を手動で追加して、ソフトウェア センターのタブの表示を指定できます。 ソフトウェア センターに特定の会社名を追加したり、ソフトウェア センターの構成の基調となる色を設定したり、会社のロゴを設定したり、またはクライアント デバイスに表示されるタブを設定したりできます。
+
+1. **Configuration Manager** コンソールで、**[管理]**  >  **[クライアント設定]** の順に選択します。 対象のクライアント設定のインスタンスをクリックします。
+2. **[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** を選択します。
+3. **[既定の設定]** ダイアログ ボックスで、**[ソフトウェア センター]** を選択します。
+4. **[Select new settings to specify company information]\(新しい設定を選択して会社情報を指定する\)** に対して **[はい]** を選択し、ソフトウェア センターのカスタマイズ設定を有効にします。
+5. **[会社名]** を入力します。
+6. **[Color Scheme for Software Center]\(ソフトウェア センターのカラー スキーマ\)** を選択します。
+7. **[参照]** をクリックしてソフトウェア センターのロゴに移動します。 ロゴは 400 x 100 ピクセルの JPEG または PNG とし、サイズは 750 KB までとする必要があります。
+8. **[はい]** を選択して、クライアント デバイスにソフトウェア センターのタブが表示されるようにします。 少なくとも 1 つのタブが表示されている必要があります。
+
+    -  [アプリケーション] タブを有効にする
+    -  [アップデート] タブを有効にする
+    -  [オペレーティング システム] タブを有効にする
+    -  [インストールのステータス] タブを有効にする
+    -  [デバイスのポリシー準拠] タブを有効にする
+    -  [オプション] タブを有効にする
 
 > [!IMPORTANT]  
 >  ソフトウェア センターのブランド設定は、14 日ごとに Intune サービスと同期されます。 そのため、Intune での変更が Configuration Manager に反映されて表示されるまでに時間がかかる場合があります。
