@@ -3,7 +3,7 @@ title: "証明機関を使用して PFX 証明書プロファイルを作成す�
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で PFX ファイルを使用して暗号化されたデータ交換をサポートするユーザーに固有の証明書を生成する方法について説明します。"
 ms.custom: na
-ms.date: 04/04/2017
+ms.date: 11/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 26bbe68fb593404d59389de223212511e6b44ed5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ee51d395026b03d251e65f510b1df3ba5b03325d
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-pfx-certificate-profiles-using-a-certificate-authority"></a>証明機関を使用して PFX 証明書プロファイルを作成する方法
 
@@ -58,11 +58,12 @@ System Center Configuration Manager では、証明機関から発行された�
 
 証明書プロファイルは複数のオペレーティング システムとデバイスをサポートできますが、一部のオペレーティング システムまたはデバイスの組み合わせでは、異なる設定が必要な場合があります。  このような場合は、異なる設定ごとに別のプロファイルを作成することをお勧めします。  
 
-バージョン 1706 の時点で、次のオプションを使用できます。
+バージョン 1710 の時点で、次のオプションを使用できます。
 
 - Windows 10
     - すべての Windows 10 (64 ビット)
     - すべての Windows 10 (32 ビット)
+    - すべての Windows 10 (ARM64)
     - すべての Windows 10 Holographic Enterprise 以降
     - すべての Windows 10 Holographic 以降
     - すべての Windows 10 Team 以降

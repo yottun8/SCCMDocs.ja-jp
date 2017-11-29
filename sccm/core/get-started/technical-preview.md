@@ -3,7 +3,7 @@ title: "Technical Preview リリース"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の新機能を体験できるテクニカル プレビュー リリースについて説明します。"
 ms.custom: na
-ms.date: 10/30/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "157"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0f6fb329dae1dda18bbb1869dc77872a2a6a1b98
-ms.sourcegitcommit: 5437b2823bada8f8c9e67940f584953b9d190628
+ms.openlocfilehash: c03581ba5d582d6b86f17c7ec34c3e6e0e8d627e
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 10/31/2017
 
  これはテクニカル プレビューであるため、詳細や機能は変更されることがあります。  
 
- このトピックでは、Technical Preview のすべてのバージョンに適用される情報を説明し、さらに、新しい機能 (またはフィーチャー) とそれが初めて導入された Technical Preview のバージョン (たとえば、2017 年 1 月であればバージョン 1701) を一覧に示します。 これらの機能の詳細は、各プレビュー バージョンに特化した個別のトピックで説明されています。  
+ このトピックでは、Technical Preview のすべてのバージョンに適用される情報を説明し、さらに、新しい機能 (またはフィーチャー) とそれが初めて導入された Technical Preview のバージョン (たとえば、2017 年 10 月であればバージョン 1710) を一覧に示します。 これらの機能の詳細は、各プレビュー バージョンに特化した個別のトピックで説明されています。  
 
  Configuration Manager の現在のブランチの新機能については、「[What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012)」 (System Center Configuration Manager の新機能) を参照してください。
 
@@ -83,7 +83,7 @@ ms.lasthandoff: 10/31/2017
 ##  <a name="bkmk_install"></a> Technical Preview のインストールと更新  
  System Center Configuration Manager の Technical Preview は、System Center Configuration Manager の最新リリースとは異なります。  
 
- テクニカル プレビューを使用するには、テクニカル プレビュー ビルドの **ベースライン バージョン** を最初にインストールする必要があります。 ベースライン バージョンをインストールしたら、 **コンソール内更新** を使用して、最新のプレビュー バージョンでインストール環境を最新のものにできます。     通常、Technical Preview の新バージョンは毎月使用可能です。
+ テクニカル プレビューを使用するには、テクニカル プレビュー ビルドの **ベースライン バージョン** を最初にインストールする必要があります。 ベースライン バージョンをインストールしたら、 **コンソール内更新** を使用して、最新のプレビュー バージョンでインストール環境を最新のものにできます。 通常、Technical Preview の新バージョンは毎月使用可能です。
 
 各プレビュー リリースは、3 つの連続したリリースが使用可能になるまでサポートされます。 つまり、バージョン 1708 がリリースされると、バージョン 1704 はサポートされなくなりますが、バージョン 1705、1706、1707 は引き続きサポートされます。 ベースラインが (バージョン 1703 のように) サポート対象でなくなっても、そのインストールをサポートされるバージョンに更新すれば、(新しいベースライン バージョンが使用できるようになるまでは) 新しい Technical Preview サイトのインストールがサポートされます。 更新時に利用可能な最新バージョンがコンソールに表示されない場合、提供されている最新のバージョンに更新した後、最新バージョンのテクニカル プレビューをインストールできるようになるまでそのプロセスを繰り返します。
 
@@ -92,8 +92,8 @@ ms.lasthandoff: 10/31/2017
 
 **Technical Preview のアクティブ ベースライン バージョン:**  
 リリース後、最長 1 年間、ベースライン バージョンをインストールできます。 ただし、新しい Technical Preview サイトをインストールする場合は、利用可能な最新のベースライン バージョンを使用することをお勧めします。
--  **Technical Preview 1703** - Configuration Manager Technical Preview 1703 は、Configuration Manager Technical Preview のコンソール内更新と、[TechNet Evaluation Center Web サイトから入手できる](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)新しいベースライン バージョンの両方として使用できます。
-
+-  **Technical Preview 1711** - Configuration Manager Technical Preview 1711 は、Configuration Manager Technical Preview のコンソール内更新と、[TechNet Evaluation Center Web サイトから入手できる](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)新しいベースライン バージョンの両方として使用できます。
+-  **Technical Preview 1703** - Configuration Manager Technical Preview 1703 は、Configuration Manager Technical Preview のコンソール内更新と、ベースライン バージョンの両方として使用できました。 新しいベースラインをインストールする場合は、バージョン 1711 を使用することをお勧めします。
 
 
 ##  <a name="BKMK_TPFeedback"></a> フィードバックについて  
@@ -111,31 +111,42 @@ ms.lasthandoff: 10/31/2017
 
  |機能 |Technical Preview バージョン |Current Branch バージョン|  
  |----------------|---------------------|--------------------|
+ |タスク シーケンスをステップ実行するための機能強化 <!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![追加されていません](media/Red_X.gif)    |
+ |アプリケーションをインストールするときに、ユーザー操作を許可する <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![追加されていません](media/Red_X.gif)    |
+ |Windows 10 用の新しいコンプライアンス ポリシー <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md#new-compliance-policy-options-for-windows-10) |![追加されていません](media/Red_X.gif)    |
+
+
+## <a name="capabilities-delivered-in-previous-technical-previews"></a>以前の Technical Preview で提供される機能
+ Technical Preview リリースのすべての機能が Current Branch でサポートされる最小バージョンで使用可能になると、そのプレビュー バージョンの詳細は次の表から削除されます。  
+
+ |機能 |Technical Preview バージョン |Current Branch バージョン|  
+ |----------------|---------------------|--------------------|
  |Windows Analytics デバイスの正常性に関する Windows 10 のテレメトリ<!--1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |![追加されていません](media/Red_X.gif)    |
  |ソフトウェア センター アイコンの機能強化<!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |![追加されていません](media/Red_X.gif)    |
- |ソフトウェア センターから共同管理対象デバイスのコンプライアンスを確認する<!-- 1356374 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|![追加されていません](media/Red_X.gif)    |
+ |ソフトウェア センターから共同管理対象デバイスのコンプライアンスを確認する<!-- 1356374 -->|[Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|![追加されていません](media/Red_X.gif)    |
  |CNG 証明書の制限付きサポート<!-- 1356191 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limited-support-for-cng-certificates)|![追加されていません](media/Red_X.gif)    |
- |Exploit Guard のサポート<!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |![追加されていません](media/Red_X.gif)    |
- |再起動を待機しているコンピューターに関する説明を改善<!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![追加されていません](media/Red_X.gif)    |
- |Device Guard ポリシーの変更<!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![追加されていません](media/Red_X.gif)    |
- |Windows Defender Application Guard ポリシーの構成と展開<!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![追加されていません](media/Red_X.gif)    |
- 
+ |Exploit Guard のサポート<!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |[バージョン 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)    |
+ |再起動を待機しているコンピューターに関する説明を改善<!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[バージョン 1710](/sccm/core/clients/manage/manage-clients)    |
+ |Device Guard ポリシーの変更<!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[バージョン 1710](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)    |
+ |Windows Defender Application Guard ポリシーの構成と展開<!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[バージョン 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)    |
+ |Configuration Manager から PowerShell スクリプトを展開するための機能強化 <!-- 1236459 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#improvements-for-deploying-powershell-scripts-from-configuration-manager) | [バージョン 1710](/sccm/apps/deploy-use/create-deploy-scripts)
+
 ## <a name="capabilities-delivered-in-previous-technical-previews"></a>以前の Technical Preview で提供される機能
  Technical Preview リリースのすべての機能が Current Branch でサポートされる最小バージョンで使用可能になると、そのプレビュー バージョンの詳細は次の表から削除されます。  
 
  |機能 |Technical Preview バージョン |Current Branch バージョン|  
  |----------------|---------------------|--------------------|
  |Configuration Manager コンソールの向上した VPN プロファイル エクスペリエンス <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![追加されていません](media/Red_X.gif)    |
- |Windows 10 デバイスの共同管理|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|![追加されていません](media/Red_X.gif)    |
- |Configuration Manager から PowerShell スクリプトを展開するときのスクリプト パラメーターの指定を改善 <!-- 1236459 -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![追加されていません](media/Red_X.gif)|
+ |Windows 10 デバイスの共同管理|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|[バージョン 1710](/sccm/core/clients/manage/co-management-overview.md)|
+ |Configuration Manager から PowerShell スクリプトを展開するときのスクリプト パラメーターの指定を改善 <!-- 1236459 -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|[バージョン 1710](/sccm/apps/deploy-use/create-deploy-scripts)|
  |管理分析情報 <!-- 1353967 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#management-insights)|![追加されていません](media/Red_X.gif)|
- |Configuration Manager コンソールからコンピューターを再起動 <!-- 1356283 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#restart-computers-from-the-configuration-manager-console)|![追加されていません](media/Red_X.gif)|
+ |Configuration Manager コンソールからコンピューターを再起動 <!-- 1356283 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#restart-computers-from-the-configuration-manager-console)|[バージョン 1710](/sccm/core/clients/manage/manage-clients) |
  |ソフトウェア センターのカスタマイズ <!-- 1351224 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#software-center-customization)|![追加されていません](media/Red_X.gif)|
-|クライアント ピア キャッシュで、Windows 10 と Office 365 の高速インストール ファイルに対応|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|![追加されていません](media/Red_X.gif)|
+|クライアント ピア キャッシュで、Windows 10 と Office 365 の高速インストール ファイルに対応|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|[バージョン 1706](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache)|
  |Surface デバイス ダッシュボード|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|![追加されていません](media/Red_X.gif)|
- |Windows Defender Application Guard ポリシーの構成と展開|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#configure-and-deploy-windows-defender-application-guard-policies)|![追加されていません](media/Red_X.gif)|
- |Configuration Manager から PowerShell スクリプトを展開するときにパラメーターを追加する|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![追加されていません](media/Red_X.gif)|
- |新しいモバイル アプリケーション管理ポリシーの設定|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|![追加されていません](media/Red_X.gif)|
+ |Windows Defender Application Guard ポリシーの構成と展開|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#configure-and-deploy-windows-defender-application-guard-policies)|[バージョン 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)|
+ |Configuration Manager から PowerShell スクリプトを展開するときにパラメーターを追加する|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|[バージョン 1710](/sccm/apps/deploy-use/create-deploy-scripts)|
+ |新しいモバイル アプリケーション管理ポリシーの設定|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|[バージョン 1710](/sccm/mdm/deploy-use/protect-apps-using-mam-policies#step-3-create-an-application-management-policy)|
  |ソフトウェアの更新ポイントのための境界グループの改善|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|[バージョン 1706](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)|
  |サイト サーバーの役割の高可用性|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |![追加されていません](media/Red_X.gif)|
  |Device Guard ポリシーに特定のファイルとフォルダーの信頼を含める|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#include-trust-for-specific-files-and-folders-in-a-device-guard-policy)|[バージョン 1706](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|
@@ -144,7 +155,7 @@ ms.lasthandoff: 10/31/2017
  |ユーザー補助の機能強化 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#accessibility-improvements)|[バージョン 1706](/sccm/core/understand/accessibility-features)|
  |Azure サービス ウィザードでの Upgrade Readiness のサポート |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#changes-to-the-azure-services-wizard-to-support-upgrade-readiness)|[バージョン 1706](/sccm/core/servers/deploy/configure/azure-services-wizard)|
  |クラウド サービスの新しいクライアント設定|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-client-settings-for-cloud-services)|[バージョン 1706](/sccm/core/clients/deploy/deploy-clients-cmg-azure)|
- |Configuration Manager コンソールから PowerShell スクリプトを作成して実行する|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#create-and-run-powershell-scripts-from-the-configuration-manager-console)|[バージョン 1706](/sccm/apps/deploy-use/create-deploy-scripts)|
+ |Configuration Manager コンソールから PowerShell スクリプトを作成して実行する|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#create-and-run-powershell-scripts-from-the-configuration-manager-console)|[バージョン 1710](/sccm/apps/deploy-use/create-deploy-scripts)|
  |PXE ネットワーク ブートでの IPv6 のサポート |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|![追加されていません](media/Red_X.gif)|
  |Microsoft Surface ドライバーの更新プログラムの管理 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#manage-microsoft-surface-driver-updates)|[バージョン 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#manage-microsoft-surface-driver-updates)|
  |Windows Update for Business 遅延ポリシーの構成 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#configure-windows-update-for-business-deferral-policies)|[バージョン 1706](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)|
@@ -157,7 +168,7 @@ ms.lasthandoff: 10/31/2017
  |Entrust 証明機関のサポート|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#support-for-entrust-certification-authorities)|[バージョン 1706](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)|
  |macOS VPN プロファイルの Cisco (IPsec) のサポート|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#cisco-ipsec-support-for-macos-vpn-profiles)|[バージョン 1706](/sccm/protect/deploy-use/vpn-profiles)|
  |Azure AD の新機能とクラウド管理|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|[バージョン 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#azure-ad-integration-with-configuration-manager)|
- |Windows Defender Application Guard ポリシーの構成と展開|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-and-deploy-windows-defender-application-guard-policies)|![追加されていません](media/Red_X.gif)|
+ |Windows Defender Application Guard ポリシーの構成と展開|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-and-deploy-windows-defender-application-guard-policies)|[バージョン 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)|
  |更新のリセット ツール  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#update-reset-tool)|[バージョン 1706](/sccm/core/servers/manage/update-reset-tool)|
  |高 DPI コンソールのサポート  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#high-dpi-console-support)|[バージョン 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#high-dpi-console-support)|
  |ピア キャッシュの改善  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#peer-cache-improvements) |[バージョン 1706](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache)|
@@ -276,4 +287,3 @@ ms.lasthandoff: 10/31/2017
 ## <a name="see-also"></a>関連項目  
 [System Center Configuration Manager の新機能](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [System Center Configuration Manager の概要](../../core/understand/introduction.md)
-

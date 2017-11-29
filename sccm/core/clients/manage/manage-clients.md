@@ -3,7 +3,7 @@ title: "クライアントを管理する"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でクライアントを管理する方法について説明します。"
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "17"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d62138f573745a16634e06aeb9301a248f707cae
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ae1bc53cf15b2a1746656667f7bf546742432c11
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアントを管理する方法
 
@@ -51,7 +51,7 @@ System Center Configuration Manager クライアントがインストールさ�
     -   **新規または既存のコレクションにデバイスを追加する**  
 
          ダイレクト規則でデバイスをコレクションに追加します。  
-         
+
     -   **クライアント プッシュ ウィザードを使用してクライアントのインストールと再インストールを実行する**  
 
          Configuration Manager クライアントの修復、または Windows を実行するコンピューターでの再構成には、インストールまたは再インストールを実行します。 サイトの構成オプションと、クライアントのプッシュ インストール用に設定した client.msi プロパティを含めます。  
@@ -183,7 +183,22 @@ System Center Configuration Manager クライアントがインストールさ�
 
          クライアント通知を使用して、クライアント ポリシーのポーリング間隔に関係なく、直ちにコンピューター ポリシーをダウンロードするように、選択した Windows クライアントに通知します。  
 
-         クライアント通知タスクは、**[ 監視 ]** ワークスペースの **[ クライアントの操作 ]** ノードに表示されます。  
+         クライアント通知タスクは、**[監視]** ワークスペースの **[クライアントの操作]** ノードに表示されます。  
+
+
+## <a name="restart-clients"></a>クライアントの再起動
+バージョン 1710 以降では、Configuration Manager コンソールを使用して再起動を必要とするクライアント デバイスを識別し、再起動するようにクライアント通知を行うアクションを使用できます。
+
+再起動を保留しているデバイスを識別するには、**[資産とコンプライアンス]**  >  **[デバイス]** の順に移動し、再起動が必要な可能性のあるデバイスが含まれるコレクションを選択します。 コレクションを選択すると、詳細ウィンドウの **[再起動を保留中]** という名前の新しい列で、各デバイスの状態を表示することができます。 各デバイスには、**[はい]** または **[いいえ]** の値があります。
+
+**クライアント通知を作成してデバイスを再起動するには、次のようにします。**
+1.  コンソールの [デバイス] ノードで再起動するデバイスを見つけます。
+2.  デバイスを右クリックして、**[クライアント通知]** を選択してから **[再起動]** を選択します。 これにより、再起動に関する情報ウィンドウが開きます。 **[OK]** をクリックして再起動要求を確定します。
+
+クライアントが通知を受信すると、**[ソフトウェア センター]** 通知ウィンドウが開き、ユーザーに再起動について通知されます。 既定では、再起動は 90 分後に行われます。 [[クライアント設定]](/sccm/core/clients/deploy/configure-client-settings) を構成すると、再起動の時間を変更できます。 再起動の動作に関する設定は、既定の設定の [[コンピューターの再起動]](/sccm/core/clients/deploy/about-client-settings#computer-restart) タブにあります。
+
+
+
 
 ##  <a name="BKMK_ClientCache"></a> Configuration Manager クライアントにクライアントキャッシュを構成する  
 クライアントでアプリケーションとプログラムをインストールすると、一時ファイルがクライアント キャッシュに格納されます。 ソフトウェアの更新ではクライアント キャッシュも使用されますが、ソフトウェアの更新は構成されているキャッシュ サイズには制限されず、常にキャッシュへのダウンロードが試みられます。 Configuration Manager クライアントを手動でインストールする際、クライアント プッシュ インストールを使用する際、またはクライアントのインストール後に、クライアント キャッシュ設定 (サイズや場所など) を構成できます。
@@ -257,8 +272,8 @@ CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用�
 5.  キャッシュ フォルダーのファイルを削除するには、**[ファイルの削除]** を選択します。  
 
     > [!NOTE]
-    > 
-    > キャッシュ フォルダーは通常の Windows フォルダーです。そのため、スクリプト、ユーティリティ、または PowerShell コマンドレット `Remove-Item` を使用してフォルダーの内容を自動的に削除することができます。 
+    >
+    > キャッシュ フォルダーは通常の Windows フォルダーです。そのため、スクリプト、ユーティリティ、または PowerShell コマンドレット `Remove-Item` を使用してフォルダーの内容を自動的に削除することができます。
 
 
 ### <a name="to-configure-client-cache-size-in-client-settings"></a>[クライアント設定] でクライアント キャッシュ サイズを構成するには
@@ -273,6 +288,8 @@ CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用�
  3. **[クライアント キャッシュの設定]** を選択し、**[クライアント キャッシュ サイズの構成]** で **[はい]** を選択して、ディスク設定の **[MB]** または **[割合]** のいずれかを使用します。 いずれか小さい方のサイズにキャッシュが調整されます。
 
      Configuration Manager クライアントは、次のクライアント ポリシーがダウンロードされるときにこれらの設定値を使ってキャッシュ サイズを構成します。
+
+
 
 ##  <a name="BKMK_UninstalClient"></a> Configuration Manager クライアントをアンインストールする  
  **/Uninstall** プロパティを付けて **CCMSetup.exe** を使用すると、Windows Configuration Manager クライアント ソフトウェアをコンピューターからアンインストールできます。 個々のコンピューター上でコマンド プロンプトから CCMSetup.exe を実行するか、パッケージとプログラムを展開して、コンピューターのコレクションからクライアントをアンインストールします。  
@@ -310,9 +327,9 @@ CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用�
 
     -   **[結合]**: 新しく検出されたレコードを既存のクライアント レコードと結合します。  
 
-    -   **[新規 ]**: 競合しているクライアント レコードに対して新しいレコードを作成します。  
+    -   **[新規]**: 競合しているクライアント レコードに対して新しいレコードを作成します。  
 
-    -   **[ブロック ]**: 競合しているクライアント レコードに対して新しいレコードを作成しますが、ブロックに設定します。  
+    -   **[ブロック]**: 競合しているクライアント レコードに対して新しいレコードを作成しますが、ブロックに設定します。  
 
 ## <a name="manage-duplicate-hardware-identifiers"></a>重複するハードウェア識別子を管理する
 Configuration Manager バージョン 1610 より、PXE ブートとクライアント登録で Configuration Manager が無視するハードウェア ID の一覧を指定できます。 それにより 2 つの一般的な問題に対処できます。
@@ -331,7 +348,7 @@ Configuration Manager バージョン 1610 より、PXE ブートとクライア
 次の方法でポリシーの取得を開始できます。
 
 
-- [クライアント通知](#initiate-client-policy-retrieval-using-client-notification) 
+- [クライアント通知](#initiate-client-policy-retrieval-using-client-notification)
 - [クライアントの **[操作]** タブ](#manually-initiate-client-policy-retrieval-on-the-actions-tab-of-the-configuration-manager-client)
 - [スクリプト](#manually-initiate-client-policy-retrieval-by-script)
 
@@ -346,11 +363,11 @@ Configuration Manager バージョン 1610 より、PXE ブートとクライア
 3.  ポリシーをダウンロードするコンピューターを含むデバイス コレクションを選択します。 **[ホーム]** タブの **[コレクション]** グループで **[クライアント通知]** > **[コンピューター ポリシーのダウンロード]** を選択します。  
 
     > [!NOTE]  
-    >  また、**[ デバイス ]** ノードの一時コレクション ノードに表示されるデバイスから 1 つまたは複数のデバイスを選択して、クライアント通知を使用してポリシーの取得を開始することもできます。  
+    >  また、**[デバイス]** ノードの一時コレクション ノードに表示されるデバイスから 1 つまたは複数のデバイスを選択して、クライアント通知を使用してポリシーの取得を開始することもできます。  
 
 #### <a name="manually-initiate-client-policy-retrieval-on-the-actions-tab-of-the-configuration-manager-client"></a>Configuration Manager クライアントの [操作] タブでクライアント ポリシーの取得を手動で開始する  
 
-1.  コンピューターのコントロール パネルで、**[ Configuration Manager ]** を選択します。  
+1.  コンピューターのコントロール パネルで、**[Configuration Manager]** を選択します。  
 
 2.  **[操作]** タブの **[コンピューター ポリシーの取得および評価サイクル]** を選択してコンピューター ポリシーを開始し、**[直ちに実行]** をクリックします。  
 

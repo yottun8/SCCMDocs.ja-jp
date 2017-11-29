@@ -3,7 +3,7 @@ title: Technical Preview 1710 | Microsoft Docs
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の Technical Preview バージョン 1710 で使用できる機能について説明します。"
 ms.custom: na
-ms.date: 10/30/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.reviewer: na
@@ -14,11 +14,11 @@ ms.assetid: f4706a58-1f11-4eab-b1eb-3d1a0da02d0f
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 813fdc40c4a0eb7c2dd3c1831bac1ba1667fe247
-ms.sourcegitcommit: 5437b2823bada8f8c9e67940f584953b9d190628
+ms.openlocfilehash: 309d677c0b8c692548d649346bb35bfa9d2a81f3
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="capabilities-in-technical-preview-1710-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1710 の機能
 
@@ -52,6 +52,19 @@ ms.lasthandoff: 10/31/2017
  -  Task 1
  -  Task 2              
 -->
+
+## <a name="improvements-for-deploying-powershell-scripts-from-configuration-manager"></a>Configuration Manager から PowerShell スクリプトを展開するための機能強化
+このリリースでは、展開する PowerShell スクリプトで次の機能強化の使用がサポートされるようになりました。 
+- **セキュリティ スコープ**。  スクリプトのオーサリングと実行を制御するため、スクリプトでセキュリティ スコープを使用するようになりました。 これは、ユーザー グループを表すタグを割り当てることで行います。 セキュリティ スコープの使用の詳細については、「[System Center Configuration Manager のロール ベース管理の構成](../../core/servers/deploy/configure/configure-role-based-administration.md)」をご覧ください。
+- **リアルタイム監視**。 スクリプトの実行を監視するときに、スクリプトの実行時にリアルタイムで行われるようになりました。
+- **パラメーターの検証**。 スクリプト内の各パラメーターには、そのパラメーターに検証を追加するための **[Script Parameter Properties]\(スクリプト パラメーター プロパティ\)** ダイアログがあります。 検証を追加した後に、その検証を満たしていないパラメーターの値を入力すると、エラーが発生します。
+
+PowerShell スクリプトの展開は、Technical Preview [Tech Preview 1706](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console) で初めて導入されました。 [Tech Preview 1707](/sccm/core/get-started/capabilities-in-technical-preview-1707#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager) および [Tech Preview 1708](/sccm/core/get-started/capabilities-in-technical-preview-1708#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager) で機能強化がさらに追加されました。
+
+
+### <a name="try-it-out"></a>試してみましょう。
+
+スクリプトの実行機能を使用して試すには、[スクリプトの作成と実行](../../apps/deploy-use/create-deploy-scripts.md)に関するページを参照してください。
 
 
 
@@ -116,7 +129,7 @@ Exploit Guard と特定のコンポーネントおよび規則の詳細につい
 Exploit Guard ポリシーを作成したら、Deploy Exploit Guard Policy ウィザードを使用してポリシーを展開します。 そのためには、Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[Endpoint Protection]** の順に移動し、**[Deploy Exploit Guard Policy]\(Exploit Guard ポリシーの展開\)** をクリックします。
 
 ## <a name="limited-support-for-cng-certificates"></a>CNG 証明書の制限付きサポート
-<!-- 1356191 --> 
+<!-- 1356191 -->
 今回のリリース以降、次のシナリオ向けに [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) 証明書テンプレートを使用できます。
 
 - HTTPS 管理ポイントを使用したクライアントの登録と通信。   
@@ -184,13 +197,13 @@ Windows Defender SmartScreen を実行しているデバイスで、信頼され
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies----1351960---"></a>Windows Defender Application Guard ポリシーの構成と展開 <!-- 1351960 -->
 
 [Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) は、信頼できない Web サイトをオペレーティング システムの他の部分からはアクセスできない安全な分離コンテナーで開くことでユーザーを保護する Windows の新機能です。 この Technical Preview では、設定する Configuration Manager のコンプライアンス設定を使用して、この機能を構成し、コレクションに展開するためのサポートが追加されました。 この機能は、Windows 10 Creators Update (コードネーム: RS2) の 64 ビット バージョンのプレビューでリリースされます。 この機能を今すぐテストするには、この更新プログラムのプレビュー バージョンを使用している必要があります。
- 
+
 ### <a name="before-you-start"></a>アップグレードを開始する前に
 Windows Defender Application Guard ポリシーを作成して展開するには、ネットワーク分離ポリシーを使用して、ポリシーを展開する Windows 10 デバイスを構成する必要があります。 詳細については、後述のブログ記事をご覧ください。 この機能は、最新の Windows 10 Insider Build でのみ動作します。 これをテストするには、クライアントが最新の Windows 10 Insider Build で実行されている必要があります。
 
 ### <a name="try-it-out"></a>試してみましょう。
 
-Windows Defender Application Guard の基本を理解するには、[こちらのブログ記事]((https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97))をご覧ください。
+Windows Defender Application Guard の基本を理解するには、[こちらのブログ記事](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)をご覧ください。
 
 ポリシーを作成し、使用可能な設定を参照するには、次の手順を実行します。
 1. **Configuration Manager** コンソールで、**[資産とコンプライアンス]** を選択します。
@@ -202,7 +215,7 @@ Windows Defender Application Guard の基本を理解するには、[こちら�
     > [!NOTE]
     > Windows 10 PC の場合、クライアントでネットワーク分離リストが 1 つだけ保存されます。 今回のリリースでは、2 種類のネットワーク分離リスト (Windows 情報保護のリストと Windows Defender Application Guard のリスト) を作成し、クライアントに展開できます。 両方のポリシーを展開する場合、ネットワーク分離リストが一致している必要があります。 一致しないリストを同じクライアントに展開すると失敗します。
 
-    ネットワーク定義の指定方法については、[Windows 情報保護のドキュメント](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm)を参照してください。 
+    ネットワーク定義の指定方法については、[Windows 情報保護のドキュメント](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm)を参照してください。
 
 6. 完了したら、ウィザードを終了し、1 つ以上の Windows 10 デバイスにポリシーを展開します。
 

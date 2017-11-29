@@ -1,5 +1,6 @@
 ---
-title: Upgrade Readiness | System Center Configuration Manager
+title: Upgrade Readiness
+titleSuffix: Configuration Manager
 description: "Upgrade Readiness と Configuration Manager を統合します。 管理コンソールでアップグレードの互換性データにアクセスします。 アップグレードまたは修復対象のデバイスを指定します。"
 keywords: 
 author: mattbriggs
@@ -11,115 +12,63 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
-ms.openlocfilehash: b1f4cd4a6f19a02d2b2dc3f9a841aeeb2a1403dd
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: df2950551e527788aeb01d57cdbf01ad19817ccd
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="integrate-upgrade-readiness-with-system-center-configuration-manager"></a>Upgrade Readiness と System Center Configuration Manager との統合
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Upgrade Readiness (旧称 Upgrade Analytics) を使用すると、Windows 10 でのデバイスの準備を評価して分析できます。 Upgrade Readiness と System Center Configuration Manager を統合することで、クライアントは Configuration Manager 管理コンソールでアップグレードの互換性データにアクセスできるようになります。 デバイス リストからアップグレードまたは修復対象のデバイスを指定できます。
+Upgrade Readiness (旧 Upgrade Analytics) は、[Windows Analytics](https://www.microsoft.com/WindowsForBusiness/windows-analytics) の一部で、Windows 10 にアップグレードするため、ご使用の環境内のデバイスの対応性を評価および分析することができます。 特定のバージョンを構成することができます。 Upgrade Readiness と System Center Configuration Manager を統合することで、クライアントは Configuration Manager 管理コンソールでアップグレードの互換性データにアクセスできるようになります。 このデータに基づいて作成された動的なコレクションを使用して、アップグレードまたは修復対象のデバイスを指定できます。
 
-Upgrade Readiness は、Microsoft Operations Management Suite (OMS) のソリューションの 1 つです。 Upgrade Readiness の詳細については、「[Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness)」(Upgrade Readiness の概要) を参照してください。
+Upgrade Readiness は、[Microsoft Operations Management Suite (OMS)](/azure/operations-management-suite/operations-management-suite-overview) で実行するソリューションです。 Upgrade Readiness の詳細については、「[Manage Windows upgrades with Upgrade Readiness](/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness)」(Upgrade Readiness を使用した Windows アップグレードの管理) を参照してください。
 
 ## <a name="configure-clients"></a>クライアントを構成する
 
-クライアントが Upgrade Readiness にデータを確実に提供できるようにするために実行する必要があるいくつかの構成手順を以下に示します。
+Upgrade Readiness は、すべての Windows Analytics ソリューションと同様に、Windows の利用統計情報に依存します。 Upgrade Readiness が十分な利用統計情報を受信するためには、次の前提条件を満たす必要があります。
 
--  「[組織内の Windows 利用統計情報の構成](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)」の説明に従って、クライアントの製品利用統計情報設定を構成します。
--  「[Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness)」 (Upgrade Readiness の概要) の「Deploy the compatibility update and related KBs」 (互換性更新プログラムおよび関連 KB の展開) の説明に従って、KB をインストールします。
+- すべてのクライアントは**商用 ID キー**を使用して構成する必要があります。 
+- 少なくとも基本レベルのテレメトリをレポートするには、Windows 10 クライアントにテレメトリが構成されている必要があります。
+-  Windows の以前のバージョンを実行しているクライアントには、「[Get started with Upgrade Readiness](/windows/deployment/upgrade/upgrade-readiness-get-started#deploy-the-compatibility-update-and-related-kbs)」(Upgrade Readiness の概要) の説明に従って、特定の KB がインストールされている必要があります。 また、**[クライアント設定]** でテレメトリが有効になっている必要がありますす。
 
-    > [!NOTE]
-    > クライアントのセットアップ タスクの多くを自動化するスクリプトをダウンロードすることができます。 スクリプトについては、「[Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness)」 (Upgrade Readiness の概要) の「*Run the Upgrade Readiness deployment script*」 (Upgrade Readiness 展開スクリプトの実行) を参照してください。
+商用 ID キーと Windows テレメトリは、**[クライアント設定]** で構成できます。 詳細については、「[Configuration Manager で Windows Analytics を使用する](../monitor-windows-analytics.md)」を参照してください。
 
-## <a name="connect-to-upgrade-readiness"></a>Upgrade Readiness への接続
+>[!NOTE]
+>Upgrade Readiness が環境内のデバイスから利用統計情報を想定通りに受信しない問題が発生する場合、一部の問題は [Upgrade Readiness 展開スクリプト](/windows/deployment/upgrade/upgrade-readiness-deployment-script)を使用して対処できる場合があります。 しかし、正しい KB を展開しているほとんどの環境では、**[クライアント設定]** で商用 ID キーとテレメトリを構成すれば十分です。
 
-### <a name="prerequisites"></a>必要条件
+## <a name="connect-configuration-manager-to-upgrade-readiness"></a>Configuration Manager と Upgrade Readiness の接続
 
-Current Branch バージョン 1706 以降、Azure サービス ウィザードを使用して、Configuration Manager で使用する Azure サービスの構成のプロセスを簡単にできます。 ウィザードを使用するためには、Azure Web アプリを構成する必要があります。 詳細については、「[Azure サービス ウィザード](/sccm/core/servers/deploy/configureazure-services-wizard)」を参照してください。
+Current Branch バージョン 1706 以降、[Azure サービス ウィザード](../../../servers/deploy/configure/azure-services-wizard.md)を使用して、Configuration Manager で使用する Azure サービスの構成のプロセスを簡単にできます。 Configuration Manager と Upgrade Readiness を接続するには、[Azure Portal](https://portal.azure.com) で *[Web アプリ/API]* タイプの Azure AD アプリ登録を作成する必要があります。 アプリ登録の作成方法の詳細については、「[Azure Active Directory テナントにアプリケーションを登録する](/azure/active-directory/active-directory-app-registration)」をご覧ください。 **Azure Portal** で、Upgrade Readiness データをホストする OMS ワークスペースを含むリソース グループに対して、新しい登録済みの Web アプリの*共同作成者*アクセス許可を付与する必要もあります。 **Azure サービス ウィザード**は、このアプリ登録を使用して、Configuration Manager が Azure AD と安全に通信し、インフラストラクチャを Upgrade Readiness データに接続できるようにします。
+
+>[!IMPORTANT]
+>*共同作成者*アクセス許可は、Azure AD ユーザー ID ではなく、アプリ自体に付与する必要があります。 これは、Configuration Manager インフラストラクチャの代わりにデータにアクセスするのは登録済みアプリで、Azure AD ユーザーではないからです。 これを行うには、アクセス許可を割り当てるときに **[ユーザーの追加]** ブレードでアプリ登録名を検索する必要があります。 [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm) に接続するために [Configuration Manager に OMS へのアクセス許可を付与する](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)場合も、これと同じ手順に従う必要があります。 これらの手順は、*Azure サービス ウィザード*を使用してアプリ登録が Configuration Manager にインポートされる前に完了する必要があります。
 
 ### <a name="use-the-azure-wizard-to-create-the-connection"></a>Azure ウィザードを使用して、接続を作成する
 
-1.  Configuration Manager コンソールの **[管理]** ワークスペースで、**[クラウド サービス]** を展開して、**[Azure サービス]** をクリックします。
-2.  **[ホーム]** タブの **[Azure サービス]** グループで、**[Azure サービスの構成]** をクリックします。
-3.  [Azure サービス] ページに、わかりやすい名前を入力します。 説明を入力することもできます。 **[Upgrade Readiness コネクタ]** を選択し、**[次へ]** をクリックします。
-4.  アプリ ページで、Azure 環境を指定します。 **[参照]** をクリックして、サーバー アプリを設定します。
-5.  **[インポート]** をクリックして、Azure で Web アプリに接続します。
-    -  **Azure AD テナント名**を入力します。
-    -  **Azure AD テナント ID** を入力します。
-    -  **アプリケーション名**を入力します。
-    -  **クライアント ID** を入力します。
-    -  **秘密鍵**を入力します。
-    -  **秘密鍵の有効期限**日の日付を選択します。
-    -  **アプリケーション ID URI** の URI を入力します。
-    -  **[検証]** をクリックして、**[OK]** をクリックします。
+「[Configuration Manager と共に使用するように Azure サービスを構成する](../../../servers/deploy/configure/azure-services-wizard.md)」の指示に従い、上記で作成した Web アプリ登録をインポートすることで、Upgrade Readiness への接続を作成します。 
 
-6.  [構成] ページで、Upgrade Readiness への接続を指定します。 次の値を選択します。  
-    -  Azure サブスクリプション
-    -  Azure リソース グループ
-    -  Windows Analytics ワークスペース
-8.  **[次へ]**をクリックします。 [概要] ページで、接続を確認することができます。 
+Web アプリのインポートが成功すると、*[構成]* ページに次の値があらかじめ設定され、**Azure Portal** で適切なアクセス許可が割り当てられます。 
+-  Azure サブスクリプション
+-  Azure リソース グループ
+-  Windows Analytics ワークスペース
 
-## <a name="complete-upgrade-readiness-tasks"></a>Upgrade Readiness のタスクの実行  
+複数のリソース グループまたはワークスペースが使用できるのは、登録済みの Azure AD Web アプリに複数のリソース グループに対する*共同作成者*アクセス許可があるか、選択したリソース グループに複数の OMS ワークスペースが含まれている場合だけです。
+ 
+## <a name="view-and-use-upgrade-readiness-information-in-configuration-manager"></a>Configuration Manager で Upgrade Readiness の情報を表示および使用する
 
-接続を作成したら、「[Get started with Upgrade Readiness](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness)」 (Upgrade Readiness の概要) の説明に従って、以下のタスクを実行します。  
-
-1. OMS ワークスペースに Upgrade Readiness サービスを追加します。  
-2. 商用 ID を生成します。  
-3. Upgrade Readiness をサブスクライブします。   
-
-## <a name="use-the-upgrade-readiness-deployment-script"></a>Upgrade Readiness 展開スクリプトを使用する  
-
-Upgrade Readiness タスクの多くを自動化し、Microsoft **Upgrade Readiness 展開スクリプト**を使用してデータ共有に関する問題のトラブルシューティングを行うことができます。  
-Upgrade Readiness 展開スクリプトは以下のことを行います。  
-
-- 商用 ID キー、CommercialDataOptIn キー、RequestAllAppraiserVersions キーを設定します。  
-- ユーザーのコンピューターが Microsoft にデータを送信できることを確認します。  
-- コンピューターの再起動が保留されているかどうかを確認します。   
-- 最新バージョンの KB パッケージ 10.0.x (10.0.14913 以降のリリースが必要) がインストールされていることを検証します。  
-- 有効な場合は、トラブルシューティングの詳細モードをオンにします。  
-- Microsoft が組織でのアップグレードの準備を評価するのに必要な製品利用統計情報データの収集を開始します。  
-- 有効な場合、コマンド ウィンドウでスクリプトの進行状況を表示します。 これにより、問題を表示 (ステップごとの成功または失敗) したり、ログ ファイルに書き込んだりできます。  
-
-## <a name="to-run-the-upgrade-readiness-deployment-script"></a>Upgrade Readiness 展開スクリプトを実行するには、次のようにします。  
-
-1. [Upgrade Readiness 展開スクリプト](https://go.microsoft.com/fwlink/?LinkID=822966&clcid=0x409)をダウンロードし、Upgrade Readiness.zip を抽出します。 トラブルシューティング モードでスクリプトを実行する予定の場合にのみ、**診断**フォルダー内のファイルが必要になります。  
-2. RunConfig.bat で以下のパラメーターを編集します。  
-- ログ情報の格納場所 ( 例: %SystemDrive%\URDiagnostics ログ情報は、リモート ファイル共有またはローカル ディレクトリに格納できます。 スクリプトで指定されたパスのログ ファイルを作成できない場合は、Windows ディレクトリのドライブにログ ファイルが作成されます。  
-- 商用 ID キー。  
-- 既定では、スクリプトはコンソールとログ ファイルの両方にログ情報を送信します。 既定の動作を変更するには、次のオプションのいずれかを使用します。  
-    - logMode = 0: コンソールにのみログを記録  
-    - logMode = 1: ファイルとコンソールにログを記録  
-    - logMode = 2: ファイルにのみログを記録  
-    - トラブルシューティングを行う場合は、**isVerboseLogging** を **$true** に設定し、問題の診断に役立つログ情報を生成します。 既定では、**isVerboseLogging** は **$false** に設定されます。 診断フォルダーが、このモードを使用するためのスクリプトと同じディレクトリにインストールされていることを確認してください。  
-    - コンピューターを再起動する必要がある場合はユーザーに通知します。 既定では、オフに設定されます。  
-
-3. RunConfig.bat でのパラメーターの編集が終了したら、管理者としてスクリプトを実行します。  
-
-
-## <a name="view-microsoft-upgrade-readiness-properties-in-configuration-manager"></a>Configuration Manager で Microsoft Upgrade Readiness プロパティを表示する  
-
-1.  Configuration Manager コンソールで、**[クラウド サービス]** に移動し、**[OMS コネクタ]** を選択して **[OMS 接続のプロパティ]** ページを開きます。  
-
-2.  このページには、2 つのタブがあります。
-  * **[Azure Active Directory]** タブには **[テナント]**、**[クライアント ID]**、**[Client secret key expiration]** (クライアント秘密鍵の期限切れ) が表示され、期限切れになった場合に、**[クライアント秘密鍵]** を **[確認]** できます。
-  * **[Upgrade Readiness]** タブには、**[Azure サブスクリプション]**、**[Azure リソース グループ]**、および **[Operations Management Suite ワークスペース]** が表示されます。
-
-## <a name="view-and-use-the-upgrade-information"></a>アップグレード情報を表示して使用する
-
-Upgrade Readiness と Configuration Manager を統合したら、クライアントでのアップグレード準備の分析を表示して操作を実行できます。
+Upgrade Readiness と Configuration Manager を統合したら、クライアントでのアップグレード準備の分析を表示できます。
 
 1. Configuration Manager コンソールで、**[監視]** > **[概要]** > **[Upgrade Readiness]** の順に選択します。
 2. アップグレードの準備状態、製品利用統計情報をレポートしている Windows デバイスの割合を含むデータを確認します。
 3. 特定のコレクションでデバイス用のデータを表示するためにダッシュボードをフィルター処理することができます。
-4. 特定の準備状態にあるデバイスを表示し、そのデバイスの動的コレクションを作成して、準備ができている場合はデバイスをアップグレードできるようにします。また、準備状態になるように操作を実行することもできます。
+4. 特定の準備状態にあるデバイスを表示し、そのデバイスの動的コレクションを作成して、準備ができている場合はデバイスをアップグレードできるようにします。また、アップグレードが妨げられているデバイスを修復するための操作を実行することもできます。
 
-## <a name="create-a-connection-to-upgrade-readiness-1702-and-earlier"></a>Upgrade Readiness への接続を作成する (1702 以前)
+## <a name="using-the-upgrade-readiness-connector-version-1702-and-earlier"></a>Upgrade Readiness コネクタ (バージョン 1702 以前) の使用
 
-Configuration Manager の 1706 ブランチ以前では、Upgrade Readiness への接続の作成に、次のステップが必要でした。
+Configuration Manager バージョン 1702 以前では、Upgrade Readiness への接続を作成するには、異なる一連の手順と要件が必要です。
 
 ### <a name="prerequisites"></a>必要条件
 

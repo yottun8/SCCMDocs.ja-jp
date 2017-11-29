@@ -3,7 +3,7 @@ title: "Current Branch バージョン"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager のバージョン履歴を確認し、提供サービスのフェーズについて説明します。"
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,32 +16,37 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 3907a8f764ddd4dcea992875d0181b93d4760b42
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 628c01d3f746155076e5bab68a38c0a50c73697d
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>System Center Configuration Manager の Current Branch バージョンのサポート
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Microsoft は、System Center Configuration Manager の Current Branch に対し、年に数回の更新プログラムのリリースを予定しています。 更新プログラムの各バージョンは、一般公開 (GA) リリース日から 12 か月間サポートされます。 この 12 か月間にわたりテクニカル サポートが提供されます。 ただし、当社のサポート体制は、最新の Current Branch バージョンの利用状況に応じて 2 種類のサービス提供フェーズのいずれかが適用されるしくみに変わりました。  
+Microsoft は、System Center Configuration Manager の Current Branch に対し、年に数回の更新プログラムのリリースを予定しています。 Configuration Manager 1710 より前にリリースされたバージョンについては、サポートは 12 か月間です。 1710 リリース以降では、更新プログラムの各バージョンは、一般公開 (GA) リリース日から 18 か月間サポートされます。 この期間中、テクニカル サポートが提供されます。 ただし、弊社のサポート体制は、最新の Current Branch バージョンの利用状況に応じて 2 種類のサービス提供フェーズのいずれかが適用されるしくみに変わっています。  
 
 -   セキュリティ更新プログラムと重要な更新プログラムのサービス提供フェーズ - Configuration Manager の最新の Current Branch を実行している場合は、セキュリティ更新プログラムと重要な更新プログラムの両方が提供されます。  
 
--   セキュリティ更新プログラム (のみ) のサービス提供フェーズ - 新しい Current Branch バージョンがリリースされると、前の Current Branch バージョンに対するサポートは、12 か月間のサポート ライフサイクルの残りの期間中、"セキュリティ更新プログラムのみ" に降格されます (図 1 を参照)。  
+-   セキュリティ更新プログラム (のみ) のサービス提供フェーズ - 新しい Current Branch バージョンがリリースされると、前の Current Branch バージョンに対するサポートは、そのバージョンのサポート ライフサイクルの残りの期間中、"セキュリティ更新プログラムのみ" に降格されます (図 1 を参照)。  
 
- ![CM&#95;Servicing&#95;support&#95;timeline](../../../core/servers/manage/media/CM_Servicing_support_timeline.png "CM_Servicing_support_timeline")  
-図 1 Current Branch のサービス提供サポートのリリース サイクルの重複部分の例
+ ![CM&#95;Servicing&#95;support&#95;timeline](media/CM_Servicing_support_timeline1.png "CM_Servicing_support_timeline")  
+図 1 Current Branch のサービス提供サポートのリリース サイクルの重複部分の例 この例は、サイクルを説明するためのもので、実際のまたは予定されているリリース日を表しているわけではありません。
 
 > [!NOTE]  
->  Current Branch の最新バージョンは常に、セキュリティ更新プログラムと重要な更新プログラムのサービス提供フェーズとなります。 すなわち、重要な更新プログラムの発行に値するコード障害が発生した場合、修正プログラムを受け取るためには Current Branch の最新バージョンがインストールされている必要があります。 その他のサポートされている Current Branch バージョンでは、セキュリティ更新プログラムを受信できるだけとなります。 Current Branch バージョンの 12 か月間のライフ サイクルが有効期限切れになると、すべてのサポートが終了します。 その時点で、ユーザーは、サポートされている Current Branch バージョンに更新する必要があります。  
+>  Current Branch の最新バージョンは常に、セキュリティ更新プログラムと重要な更新プログラムのサービス提供フェーズとなります。 このサポートに関する説明は、重要な更新プログラムの発行に値するコード障害が発生した場合、修正プログラムを受け取るためには Current Branch の最新バージョンがインストールされている必要があることを意味しています。 その他のサポートされている Current Branch バージョンでは、セキュリティ更新プログラムを受信できるだけとなります。
+> - バージョン 1710 以降では、Current Branch バージョンの 18 か月間のライフ サイクルが有効期限切れになると、すべてのサポートが終了します。
+> - 1710 より前のバージョンでは、12 か月間のライフ サイクルが有効期限切れになると、サポートが終了します。
+
+> 現在のバージョンのサポート有効期限が切れる前に、Configuration Manager の展開を最新バージョンに更新することをお勧めします。
 
  **バージョン履歴**  
 
 |バージョン|公開日|サポート終了日|  
 |-------------|-----------------------|----------------------|  
+|1710|2017 年 11 月 20 日|2018 年 11 月 20 日|
 |1706|2017 年 7 月 31 日|2018 年 7 月 31 日|
 |1702|2017 年 3 月 27 日|2018 年 3 月 27 日|
 |1610|2016 年 11 月 18 日|2017 年 11 月 18 日|

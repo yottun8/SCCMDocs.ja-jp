@@ -3,7 +3,7 @@ title: SQL Server AlwaysOn
 titleSuffix: Configuration Manager
 description: "SCCM での SQL Server Always On 可用性グループの使用を計画します。"
 ms.custom: na
-ms.date: 09/22/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "16"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 24eaa33f1f9b333894817f089149e2cbed35df75
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 93aec5773f56ad28950ae75db54739d04124794f
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager で SQL Server Always On 可用性グループを使用するための準備
 
@@ -216,6 +216,11 @@ Azure で可用性グループをセットアップし、グループが内部�
   SQL Server 2016 Standard エディションで導入された[基本的な可用性グループ](https://msdn.microsoft.com/library/mt614935.aspx)では、Configuration Manager で使用するための要件であるセカンダリ レプリカに対する読み取りアクセスはサポートされていません。
 - **フェールオーバー クラスター インスタンス**  
   [フェールオーバー クラスター インスタンス](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)は、Configuration Manager で使用するレプリカではサポートされていません。
+
+- **MultiSubnetFailover**    
+    マルチサブネット構成または [MutliSubnetFailover](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) キーワード接続文字列での可用性グループの使用はサポートされていません。
+
+
 
 **追加の可用性グループをホストする SQL Server:**   
 SQL Server の可用性グループで 1 つ以上の可用性グループと、Configuration Manager で使用するグループをホストしている場合、Configuration Manager バージョン 1610 の前に、Configuration Manager セットアップの実行または Configuration Manager 用の更新プログラムをインストールするときに、これらの追加の各可用性グループの各レプリカに次の構成を設定する必要があります。

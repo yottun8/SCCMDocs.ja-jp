@@ -3,7 +3,7 @@ title: "サイト復元"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でのサイトの回復について説明します。"
 ms.custom: na
-ms.date: 6/5/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 96785ea5abcb4ae67952ad8243c36bf6b238daca
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 497860c9b5698271d7ca6e4683e99350100f596f
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 #  <a name="recover-a-configuration-manager-site"></a>Configuration Manager サイトの回復
 
@@ -30,6 +30,12 @@ Configuration Manager サイトで障害が発生した場合や、サイト デ
 このトピックのセクションは、Configuration Manager サイトを回復する場合に役立ちます。 バックアップを作成する場合は、[Configuration Manager のバックアップ](/sccm/protect/understand/backup-and-recovery)に関するページを参照してください。
 
 ## <a name="considerations-before-recovering-a-site"></a>サイトを回復する前の注意事項
+> [!Important]  
+> この情報は、サイトの回復シナリオにのみ適用されます。  オンプレミス インフラストラクチャをアップグレードし、障害が発生したサイトを積極的に回復しない場合、次のトピックの情報を確認してください。
+> - [オンプレミス インフラストラクチャのアップグレード](/sccm/core/servers/manage/upgrade-on-premises-infrastructure)
+> - [インフラストラクチャの変更](/sccm/core/servers/manage/modify-your-infrastructure)
+
+
 **同じバージョンおよびエディションの SQL Server を使用する必要があります。**たとえば、SQL Server 2014 で実行していたデータベースを SQL Server 2016 に復元することはできません。 同様に、SQL Server 2016 の Standard エディションで実行していたサイト データベースを SQL Server 2016 の Enterprise エディションに復元することはできません。
 -   SQL Server を **シングル ユーザー モード**に設定しないでください。
 -   MDF ファイルと LDF ファイルが有効であることを確認します。 サイトを回復するときに、復元するファイルの状態は確認されません。
@@ -124,10 +130,10 @@ SQL Server の変更追跡の内部構造については、SQL Server チーム�
 次のいずれかの手順に従って、サイト サーバーとサイト データベースを回復します。
 
 ### <a name="to-start-a-site-recovery-in-the-setup-wizard"></a>セットアップ ウィザードを使ってサイトの回復を開始するには
-1.  Configuration Manager インストール フォルダー外の場所に [CD.Latest フォルダー](/sccm/core/servers/manage/the-cd.latest-folde)をコピーします。
+1.  Configuration Manager インストール フォルダー外の場所に [CD.Latest フォルダー](/sccm/core/servers/manage/the-cd.latest-folder)をコピーします。
 CD.Latest フォルダーのコピーから、Configuration Manager セットアップ ウィザードを実行します。
 
-2.  **[ はじめに ]** ページで、**[ サイトを回復する]** を選択してから、**[ 次へ]** をクリックします。
+2.  **[はじめに]** ページで、**[サイトを回復する]** を選択してから、**[次へ]** をクリックします。
 
 3.  表示される指示に従って、順次適切なオプションを選択し、ウィザードを完了します。
 
@@ -160,24 +166,24 @@ CD.Latest フォルダーのコピーから、Configuration Manager セットア
 
 1.  Configuration Manager コンソールを開き、回復したサイトに接続します。
 
-2.  Configuration Manager コンソールで、**[ 管理]** をクリックします。
+2.  Configuration Manager コンソールで、**[管理]** をクリックします。
 
-3.  **[ 管理 ]** ワークスペースで、**[ セキュリティ]** を展開してから、**[ アカウント]** をクリックします。
+3.  **[管理]** ワークスペースで、**[セキュリティ]** を展開してから、**[アカウント]** をクリックします。
 
 4.  パスワードを再入力するアカウントごとに、次の操作を行います。
 
     1.  サイトの回復が終わったときに保存されたアカウントの一覧で、アカウントを選択します。 この一覧は、回復したサイト サーバーの C:\ConfigMgrPostRecoveryActions.html にあります。
 
-    2.  **[ ホーム ]** タブの **[ プロパティ ]** グループで、**[ プロパティ ]** をクリックしてアカウントのプロパティを開きます。
+    2.  **[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** をクリックしてアカウントのプロパティを開きます。
 
-    3.  **[ 全般 ]** タブで、**[ 設定]** をクリックしてから、アカウントのパスワードを再入力します。
+    3.  **[全般]** タブで、**[設定]** をクリックしてから、アカウントのパスワードを再入力します。
 
-    4.  **[ 確認]** をクリックし、選択したユーザー アカウントの適切なデータ ソースを選択します。**[ 接続のテスト ]** をクリックして、そのユーザー アカウントでデータ ソースに接続できるかどうかを確認します。
+    4.  **[確認]** をクリックし、選択したユーザー アカウントの適切なデータ ソースを選択します。**[接続のテスト]** をクリックして、そのユーザー アカウントでデータ ソースに接続できるかどうかを確認します。
 
-    5.  **[ OK ]** をクリックしてパスワードの変更を保存してから、**[ OK]** をクリックします。
+    5.  **[OK]** をクリックしてパスワードの変更を保存してから、**[OK]** をクリックします。
 
 ### <a name="re-enter-sideloading-keys"></a>サイドローディング キーの再入力
-サイト サーバーの回復が終わったら、そのサイトに指定していた Windows サイドローディング キーを再入力する必要があります。これは、サイトの回復中にサイドローディング キーがリセットされるためです。 サイドローディング キーを再入力すると、Configuration Manager コンソールで Windows サイドローディング キーの **[使用済みライセンス認証数]** 列内のカウントがリセットされます。 たとえば、サイト エラーが発生する前に、**[合計ライセンス認証数]** カウントが **100** に設定され、**[使用済みライセンス認証数]** がデバイスで使用されていたキーの数に相当する **90** になっていたとします。 サイトの回復後、**[ 合計ライセンス認証数 ]** 列には **100**と表示されますが、**[ 使用済みライセンス認証数 ]** 列には誤って **0**と表示されます。 しかし、新しく 10 台のデバイスがサイドローディング キーを使用すると、ライセンスの残りがなくなってしまうので、11 台目以降、キーを取得できなくなります。
+サイト サーバーの回復が終わったら、そのサイトに指定していた Windows サイドローディング キーを再入力する必要があります。これは、サイトの回復中にサイドローディング キーがリセットされるためです。 サイドローディング キーを再入力すると、Configuration Manager コンソールで Windows サイドローディング キーの **[使用済みライセンス認証数]** 列内のカウントがリセットされます。 たとえば、サイト エラーが発生する前に、**[合計ライセンス認証数]** カウントが **100** に設定され、**[使用済みライセンス認証数]** がデバイスで使用されていたキーの数に相当する **90** になっていたとします。 サイトの回復後、**[合計ライセンス認証数]** 列には **100**と表示されますが、**[使用済みライセンス認証数]** 列には誤って **0**と表示されます。 しかし、新しく 10 台のデバイスがサイドローディング キーを使用すると、ライセンスの残りがなくなってしまうので、11 台目以降、キーを取得できなくなります。
 
 ### <a name="recreate-the-microsoft-intune-subscription"></a>Microsoft Intune サブスクリプションの再作成
  サイト サーバー コンピューターが再イメージ化された後に Configuration Manager サイト サーバーを回復する場合、Microsoft Intune のサブスクリプションは復元されません。 サイトを回復した後、サブスクリプションを再接続する必要があります。  新しい APN 要求は作成しないでください。代わりに、最後に iOS 管理を構成または更新した現在の有効な .pem-file をアップロードしてください。 詳細については、「 [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription)」をご覧ください。

@@ -1,33 +1,32 @@
 ---
-title: "クラウド管理ゲートウェイの設定 | Microsoft Docs"
+title: "クラウド管理ゲートウェイの設定"
+titleSuffix: Configuration Manager
 description: 
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.date: 05/01/2017
+ms.date: 09/26/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 84b617b3e83636ab4578174ef40e786dcf1178cd
-ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
+ms.openlocfilehash: 7463cd7199098b21843fd5b99ed284a12ff91e00
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager のクラウド管理ゲートウェイを設定する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
-
-バージョン 1610 以降では、Configuration Manager でクラウド管理ゲートウェイを設定するプロセスに次の手順が含まれます。
+*適用対象: System Center Configuration Manager (Current Branch)* Configuration Manager でクラウド管理ゲートウェイを設定するプロセスには、次の手順が含まれます。
 
 ## <a name="step-1-configure-required-certificates"></a>手順 1: 必要な証明書を構成する
 
 > [!TIP]  
 > 証明書を要求する前に、希望する Azure ドメイン名 (例: GraniteFalls.CloudApp.Net) が一意であることを確認します。 これを行うには、[Microsoft Azure Portal](https://manage.windowsazure.com) にログオンして、**[新規]** をクリックし、**[クラウド サービス]**、**[カスタム作成]** の順に選択します。 **[URL]** フィールドに希望するドメイン名を入力します (サービスを作成するチェックマークはクリックしないでください)。 ドメイン名が使用できるか、またはすでに別のサービスで使用されているかがポータルに表示されます。
 
-## <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>オプション 1 (推奨): 一般のグローバルに信頼された証明書プロバイダー (VeriSign など) からのサーバー認証証明書を使用します。
+### <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>オプション 1 (推奨): 一般のグローバルに信頼された証明書プロバイダー (VeriSign など) からのサーバー認証証明書を使用します。
 
 この方式を使用する場合、クライアントは証明書を自動的に信頼することになり、管理者が自分でカスタム SSL 証明書を作成する必要はありません。
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/21/2017
 2. 次に CNAME エイリアスの共通名 (CN) を使用してパブリック プロバイダーからのサーバー認証証明書を要求します。
 たとえば、Contoso 社では、証明書の CN 用に **GraniteFalls.Contoso.com** を使用しています。
 3. この証明書を使用して、Configuration Manager コンソールでクラウド管理ゲートウェイ サービスを作成します。
-    - Create Cloud Management Gateway ウィザードの **[設定]** ページで、このクラウド サービスのサーバー証明書を追加するとき (**証明書ファイル**から)、ウィザードはサービス名として証明書の CN からホスト名を抽出し、**cloudapp.net** (Azure US Government クラウドの場合は **usgovcloudapp.net**) にサービスの FQDN としてこれを追加することで、Azure にサービスを作成します。
+    - クラウド管理ゲートウェイの作成ウィザードの **[設定]** ページで、このクラウド サービスのサーバー証明書を追加するとき (**証明書ファイル**から)、ウィザードはサービス名として証明書の CN からホスト名を抽出し、**cloudapp.net** (Azure US Government クラウドの場合は **usgovcloudapp.net**) にサービスの FQDN としてこれを追加することで、Azure にサービスを作成します。
 たとえば、Contoso 社でクラウド管理ゲートウェイを作成するときは、ホスト名 **GraniteFalls** が証明書の CN から抽出されます。そのため Azure での実際のサービスは **GraniteFalls.CloudApp.net** として作成されます。
 
 ### <a name="option-2---create-a-custom-ssl-certificate-for-cloud-management-gateway-in-the-same-way-as-for-a-cloud-based-distribution-point"></a>オプション 2: クラウドベースの配布ポイントで行うのと同じ方法でクラウド管理ゲートウェイのカスタム SSL 証明書を作成する
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/21/2017
 
 ネットワークで使用されているクライアント証明書のルートをエクスポートする最も簡単な方法は、クライアント証明書を含むドメインに参加しているいずれかのコンピューター上でクライアント証明書を開いてコピーすることです。
 
-> [!NOTE] 
+> [!NOTE]
 >
 > クライアント証明書は、クラウド管理ゲートウェイで管理するコンピューター上およびクラウド管理ゲートウェイ コネクタ ポイントをホストしているサイト システム サーバー上で必要です。 これらの任意のコンピューターにクライアント証明書を追加する必要がある場合は、「[Windows コンピューター用のクライアント証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012)」をご覧ください。
 
@@ -58,7 +57,7 @@ ms.lasthandoff: 08/21/2017
 
 2.  [ファイル] メニューで **[スナップインの追加と削除]** を選択します。
 
-3.  [スナップインの追加と削除] ダイアログ ボックスで、**[証明書]** > **[追加&gt;]** > **[コンピューター アカウント]** > **[次へ]** > **[ローカル コンピューター]** > **[完了]** の順に選択します。 
+3.  [スナップインの追加と削除] ダイアログ ボックスで、**[証明書]** > **[追加&gt;]** > **[コンピューター アカウント]** > **[次へ]** > **[ローカル コンピューター]** > **[完了]** の順に選択します。
 
 4.  **[証明書]** &gt; **[個人用]** &gt; **[証明書]** に移動します。
 
@@ -116,13 +115,13 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
     パブリック (商用) クラウド | .cloudapp.net    
     政府のクラウド | .usgovcloudapp.net
 
-  - [**クライアント証明書の失効状態を検証する**] の横のボックスをオフにします (CRL 情報をパブリックに発行している場合を除く)。
+  - **[クライアント証明書の失効状態を検証する]** の横のボックスをオフにします (CRL 情報をパブリックに発行している場合を除く)。
 
   - 完了したら、**[次へ]** を選択します。
 
 5. クラウド管理ゲートウェイ トラフィックを 14 日間のしきい値で監視する場合は、チェック ボックスをオンにしてしきい値のアラートを有効にします。 次に、しきい値と、別のアラート レベルを上げる割合を指定します。 完了したら、**[次へ]** を選択します。
 
-6. 設定を確認して、**[次へ]** を選択します。 Configuration Manager がサービスの設定を開始します。 ウィザードを閉じた後に、Azure でサービスが完全にプロビジョニングされるまで 5 分から 15 分かかります。 新しく設定したクラウド管理ゲートウェイの **[状態]** 列を確認して、サービスの準備が完了するタイミングを判断します。
+6. 設定を確認して、**[次へ]** を選択します。 Configuration Manager がサービスの設定を開始します。 ウィザードを閉じた後に、Azure でサービスが完全にプロビジョニングされるまで 5 分から 15 分かかります。 新しいクラウド管理ゲートウェイの **[状態]** 列を確認して、サービスの準備が完了するタイミングを判断します。
 
 ## <a name="step-5-configure-primary-site-for-client-certification-authentication"></a>手順 5: クライアント証明書の認証用にプライマリ サイトを構成する
 
@@ -141,7 +140,7 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 
 ## <a name="step-7-configure-roles-for-cloud-management-gateway-traffic"></a>手順 7: クラウド管理ゲートウェイ トラフィック向けに役割を構成する
 
-クラウド管理ゲートウェイを設定する最後のステップは、クラウド管理ゲートウェイ トラフィックを受け入れるサイト システムの役割を構成することです。 クラウド管理ゲートウェイでは、管理ポイントとソフトウェアの更新ポイントの役割のみがサポートされています。 各役割を個別に構成する必要があります。
+クラウド管理ゲートウェイを設定する最後のステップは、クラウド管理ゲートウェイ トラフィックを受け入れるサイト システムの役割を構成することです。 クラウド管理ゲートウェイでは、管理ポイントとソフトウェアの更新ポイントの役割のみがサポートされています。 各役割を個別に構成します。
 
 1. Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動します。
 
@@ -155,7 +154,7 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 
 クラウド管理ゲートウェイおよびサイト システムの役割が構成され実行されると、次回の場所の要求で、クライアントがクラウド管理ゲートウェイ サービスの場所を自動的に取得します。 クラウド管理ゲートウェイ サービスの場所を受信するには、クライアントは企業ネットワーク上にある必要があります。 場所の要求のポーリング サイクルは 24 時間ごとです。 通常にスケジュール設定された場所の要求を待機したくない場合は、コンピューターで SMS Agent Host サービス (ccmexec.exe) を再起動することによって、要求を強制できます。
 
-クライアントは、クライアントで構成されたクラウド管理ゲートウェイ サービスの場所から、イントラネットまたはインターネット上のいずれにあるかを自動的に判別できます。 クライアントがドメイン コントローラーまたはオンプレミスの管理ポイントに接続できる場合は、Configuration Manager との通信にこれらを使用します。それ以外の場合は、インターネット上にあると見なして、クラウド管理ゲートウェイ サービスの場所を通信に使用します。
+クライアントは、クライアントで構成されたクラウド管理ゲートウェイ サービスの場所から、イントラネットまたはインターネット上のいずれにあるかを自動的に判別できます。 クライアントがドメイン コントローラーまたはオンプレミスの管理ポイントに接続できる場合は、Configuration Manager との通信にこれらを使用します。 それ以外の場合は、インターネット上にあると見なして、クラウド管理ゲートウェイ サービスの場所を通信に使用します。
 
 >[!NOTE]
 > クライアントがイントラネットまたはインターネット上のどちらにあるかにかかわらず、クラウド管理ゲートウェイを常に使用するように強制することができます。 このためには、クライアント コンピューターで次のレジストリ キーを設定します。
