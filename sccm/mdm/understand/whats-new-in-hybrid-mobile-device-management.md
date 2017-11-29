@@ -14,11 +14,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 29dd4bff6d35712c23d66751db16a00aa761b8b4
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: 4877d05004bd883a3ae0ad353a78643cf559275e
+ms.sourcegitcommit: 536f7295e9ea361f1f9ead6c25f3685deb041ad8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -46,9 +46,42 @@ ms.lasthandoff: 11/13/2017
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
+- **macOS 用のポータル サイト アプリが使用可能** <!--1541700--> macOS の Intune ポータル サイトでエクスペリエンスが更新され、登録したすべてのデバイスに関する、ユーザーが必要なすべての情報およびコンプライアンスの通知が見やすく表示されるように最適化されました。 Intune ポータル サイトがデバイスに展開されると、macOS 用の Microsoft AutoUpdate によって更新プログラムが提供されます。 macOS デバイスから Intune ポータル サイトにログインすることで、新しい macOS 用 Intune ポータル サイトをダウンロードできます。
+
+- **Microsoft Planner が承認済みアプリのモバイル アプリ管理 (MAM) リストの一部に** <!-- 1248473 --> iOS および Android 用の Microsoft Planner アプリが、承認済みアプリのモバイル アプリ管理 (MAM) の一部となりました。 このアプリは、Azure Portal の Intune App Protection ブレードからすべてのテナントに対して構成できます。 詳細については、[承認済みアプリの MAM リスト](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)に関するページをご覧ください。
+
 - **iOS の管理対象アプリ ログへのアクセス** <!-- 1469920 --> Managed Browser をインストールしているエンド ユーザーは、Microsoft が公開しているすべてのアプリの管理状態を表示し、管理対象 iOS アプリの問題を解決するためにログを送信できるようになりました。
   
   iOS デバイスの Managed Browser でトラブルシューティング モードを有効にする方法については、「[iOS で Managed Browser を使用し、管理対象アプリ ログにアクセスする方法](https://docs.microsoft.com/intune/app-configuration-managed-browser#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios)」を参照してください。
+
+- **iOS 用ポータル サイト バージョン 2.9.0 でのデバイスのセットアップ ワークフローの機能強化** iOS 用ポータル サイト アプリでのデバイス セットアップ ワークフローを改善しました。 言葉がよりわかりやすくなり、可能な範囲で画面をまとめました。 また、セットアップのテキスト全体でお客様の会社名を使用することで、表現がより会社に合ったものになっています。 この更新されたワークフローについては、「[アプリの UI の新機能](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-november-13-2017)」ページで確認できます。
+
+- **Android 用ポータル サイト アプリに関するフィードバック プロンプト** <!--1165249--> Android 用ポータル サイト アプリからエンド ユーザー フィードバックをリクエストされるようになりました。 このフィードバックは Microsoft に直接送信され、エンドユーザーは一般の Google Play ストアでアプリをレビューできます。 フィードバックは必須ではなく、ユーザーは簡単にこれを拒否して、アプリの使用を続行できます。 
+
+- **確認可能な Windows 10 デバイス情報のエンドユーザーへの通知** <!--1337920--> Windows 10 用ポータル サイト アプリの [デバイスの詳細] 画面に **[Ownership Type]\(所有権の種類\)** が追加されました。 これにより、ユーザーはこのページから直接、Intune のエンド ユーザー ドキュメントにあるプライバシーの詳細を参照できます。この情報は、**[バージョン情報]** 画面でも確認できます。
+
+- **Android デバイスで利用できる新しい '解決' アクション** <!--1583480--> Android のポータル サイト アプリの _[デバイス設定の更新]_ ページに '解決' アクションが導入されます。 このオプションを選択すると、デバイスの非準拠の原因になっている設定に、エンド ユーザーが直接誘導されます。 Android 向けのポータル サイト アプリでは現在のところ、[デバイス パスコード](https://docs.microsoft.com/intune-user-help/set-your-pin-or-password-android)、[デバイスの暗号化](https://docs.microsoft.com/intune-user-help/encrypt-your-device-android)、[USB デバッグ](https://docs.microsoft.com/intune-user-help/you-need-to-turn-off-usb-debugging-android)、[不明なソース](https://docs.microsoft.com/intune-user-help/you-need-to-turn-off-unknown-sources-android)設定に対してこのアクションがサポートされています。 
+
+
+### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (現在のブランチ) の新機能
+
+- **新しいモバイル アプリケーション管理ポリシーの設定** <!-- 1324760 --> 次の設定がモバイル アプリケーション管理ポリシーの設定に追加されました。
+  - **連絡先の同期を無効にする:** アプリでデバイス上のネイティブ連絡先アプリにデータを保存できなくなります。
+  - **印刷を無効にする:** アプリで職場または学校のデータを印刷できなくなります。
+
+  「[Configuration Manager のモバイル アプリケーション管理ポリシーを使ったアプリの保護](/sccm/mdm/deploy-use/protect-apps-using-mam-policies)」を参照し、新しいアプリの保護のポリシー設定を試してください。
+
+- **Windows 10 ARM64 デバイスのサポート** <!-- 1355000 --> Windows 10 を実行する ARM64 デバイスを使用できるようになると、それらのデバイスでハイブリッド モバイル デバイス管理 (MDM) シナリオがサポートされます。 詳細については、「[Windows 10 ARM64 デバイスのサポート](/sccm/core/plan-design/changes/whats-new-in-version-1710#windows-10-arm64-device-support)」をご覧ください。
+
+- **Configuration Manager コンソールの向上した VPN プロファイル エクスペリエンス** <!-- 1318232 --> このリリースでは、選択したプラットフォームに適した設定が表示されるように、VPN プロファイル ウィザードとプロパティ ページが更新されました。 この機能は Configuration Manager Technical Preview 1709 で以前提供されており、Intune と Configuration Manager (Current Branch) バージョン 1710 のハイブリッド展開で使用できるようになりました。
+  - [Configuration Manager コンソールの向上した VPN プロファイル エクスペリエンス](/sccm/core/plan-design/changes/whats-new-in-version-1710#improved-vpn-profile-experience-in-configuration-manager-console)。
+
+
+Configuration Manager コンソールの向上した VPN プロファイル エクスペリエンス
+
+### <a name="new-in-configuration-manger-technical-preview-1711"></a>Configuration Manager Technical Preview 1711 の新機能
+
+- **Windows 10 用の新しいコンプライアンス ポリシー オプション** Windows 10 デバイスのコンプライアンス ポリシーに対して新しいオプションを構成できるようになりました。 新しい設定には、ファイアウォール、ユーザー アカウント制御、Windows Defender Anitivirus、OS ビルド バージョン管理に関するポリシーがあります。 詳細については、「[Windows 10 用の新しいコンプライアンス ポリシー オプション](/sccm/core/get-started/capabilities-in-technical-preview-1711#new-compliance-policy-options-for-windows-10)」をご覧ください。
 
 
 ## <a name="october-2017"></a>2017 年 10 月
