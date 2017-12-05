@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 caps.latest.revision: "10"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: fda54ad44a037a7b7952f6339c33625759a79e17
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 224e91ebb3ff6ccfa94c3e2022066ad6d27c3afb
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="define-network-locations-as-boundaries-for-system-center-configuration-manager"></a>System Center Configuration Manager の境界としてネットワークの場所を定義する
 
@@ -46,7 +46,7 @@ Configuration Manager 管理者によって認識されない IP アドレスを
 
 3.  [境界の作成] ダイアログ ボックスの **[全般]** タブで、 **[説明]** を指定して、フレンドリ名または参照によって境界を識別します。  
 
-4.  この境界の **[種類]** を選択します。  
+4.  この境界の **[種類]** を選択します。   
 
     -   **[IP サブネット]**を選択した場合、この境界の **サブネット ID** を指定する必要があります。  
         > [!TIP]  
@@ -61,7 +61,7 @@ Configuration Manager 管理者によって認識されない IP アドレスを
 
     -   **[IP アドレスの範囲]**を選択した場合、IP サブネットの一部または複数の IP サブネットを含む **[開始 IP アドレス]** と **[終了 IP アドレス]** を指定する必要があります。    
 
-5.  **[OK]** をクリックして新しい境界を保存します。  
+5.  **[OK]** をクリックして新しい境界を保存します。   
 
 ## <a name="to-configure-a-boundary"></a>境界を構成するには  
 

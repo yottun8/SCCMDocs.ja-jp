@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2e27b0b7-7bd3-45cd-bc99-9c991606c637
 caps.latest.revision: "6"
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 8e41135266565890c793f7920482a4455f05fbde
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: a7e04e1bee4798e407f08084809a50076abbad56
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="plan-a-client-migration-strategy-in-system-center-configuration-manager"></a>System Center Configuration Manager でのクライアント移行戦略の計画
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 10/12/2017
 
 -   **Configuration Manager 2007 のソース階層:** サポートされているバージョンの Configuration Manager を実行しているソース階層のクライアントを移行すると、クライアント ソフトウェアは移行先階層のクライアント バージョンにアップグレードされます。  
 
--   **System Center 2012 Configuration Manager 以降のソース階層:** 同じ製品バージョンの階層間でクライアントを移行する場合、クライアント ソフトウェアは変更またはアップグレードされません。 代わりに、クライアントがソース階層から移行先階層内のサイトに再割り当てされます。  
+-    **System Center 2012 Configuration Manager 以降のソース階層:** 同じ製品バージョンの階層間でクライアントを移行する場合、クライアント ソフトウェアは変更またはアップグレードされません。 代わりに、クライアントがソース階層から移行先階層内のサイトに再割り当てされます。  
 
     > [!NOTE]  
     >  階層の製品バージョンが、移行先階層への移行でサポートされていない場合、ソース階層のすべてのサイトとクライアントを互換性のある製品バージョンにアップグレードします。 ソース階層をサポートされる製品バージョンにアップグレードした後で、階層間の移行を実行できます。 詳細については、「[System Center Configuration Manager での移行の前提条件](../../core/migration/prerequisites-for-migration.md)」の「[移行がサポートされている Configuration Manager のバージョン](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions)」をご覧ください。  

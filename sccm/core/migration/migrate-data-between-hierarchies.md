@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: cf014eb0-f8c2-4d37-b8d7-368d63a10b89
 caps.latest.revision: "11"
 caps.handback.revision: "0"
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: d832e820421784ce33df880463632050741eedd7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 258bdb1950100c087039d9790dcdd8c879288efa
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="migrate-data-between-hierarchies-in-system-center-configuration-manager"></a>System Center Configuration Manager の階層間でのデータの移行
 
@@ -69,9 +69,9 @@ ms.lasthandoff: 10/12/2017
 
 3.  ソース階層と移行先階層間でデータを移行する移行ジョブを作成します。  
 
-4.  データ収集プロセスは、**[ データ収集の停止 ]** コマンドを使用していつでも停止できます。 データ収集を停止すると、Configuration Manager はソース階層内のデータに対する変更内容を特定する処理も停止されるため、ソース階層と移行先階層間の配布ポイントは共有できなくなります。 通常、この操作は、ソース階層からのデータ移行や配布ポイントの共有を行う予定がなくなった場合に使用します。  
+4.  データ収集プロセスは、**[データ収集の停止]** コマンドを使用していつでも停止できます。 データ収集を停止すると、Configuration Manager はソース階層内のデータに対する変更内容を特定する処理も停止されるため、ソース階層と移行先階層間の配布ポイントは共有できなくなります。 通常、この操作は、ソース階層からのデータ移行や配布ポイントの共有を行う予定がなくなった場合に使用します。  
 
-5.  必要に応じて、ソース階層のすべてのサイトでデータ収集を停止した後に、**[ 移行データのクリーン アップ ]** コマンドを使用して移行データをクリーン アップすることができます。 このコマンドで、ソース階層の移行に関する階層データが移行先階層のデータベースから削除されます。  
+5.  必要に応じて、ソース階層のすべてのサイトでデータ収集を停止した後に、**[移行データのクリーン アップ]** コマンドを使用して移行データをクリーン アップすることができます。 このコマンドで、ソース階層の移行に関する階層データが移行先階層のデータベースから削除されます。  
 
 Configuration Manager ソース階層からデータを移行した後に、ソース階層を環境の管理に使用しない場合は、そのソース階層とインフラストラクチャの使用を停止できます。  
 

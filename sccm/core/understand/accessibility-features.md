@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 caps.latest.revision: "6"
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 303b58ddea7bc26a38dde2075eb78d1053069c25
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 15f0bc6be628afa2da2858a0ecdf4f40b3004d41
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="accessibility-features-in-system-center-configuration-manager"></a>System Center Configuration Manager のユーザー補助機能
 
@@ -84,18 +84,18 @@ System Center Configuration Manager には、障碍のあるユーザーに利�
 |操作内容|使用するショートカット キー|  
 |----------------|--------------------------------|  
 |ヘルプ ウィンドウを表示する|F1|  
-|ヘルプのトピック ウィンドウとナビゲーション ウィンドウ (**[ 目次 ]** タブ、**[ 検索 ]** タブ、および **[ キーワード ]** タブ) の間でカーソルを切り替える|F6|  
+|ヘルプのトピック ウィンドウとナビゲーション ウィンドウ (**[目次]** タブ、**[検索]** タブ、および **[キーワード]** タブ) の間でカーソルを切り替える|F6|  
 |ナビゲーション ウィンドウでタブ (**[目次]**、**[検索]**、**[キーワード]** タブなど) を切り替える|Alt + タブの下線付き文字|  
 |次の非表示テキストまたはハイパーリンクを選択する|タブ|  
 |前の非表示テキストまたはハイパーリンクを選択する|Shift + Tab|  
 |選択した [すべて表示]、[すべて非表示]、非表示テキスト、またはハイパーリンクに対してアクションを実行する|Enter キー|  
-|任意のヘルプ ツール バー コマンドにアクセスするための **[ オプション ]** メニューを表示する|Alt + O|  
+|任意のヘルプ ツール バー コマンドにアクセスするための **[オプション]** メニューを表示する|Alt + O|  
 |**[目次]**、**[検索]**、**[キーワード]** タブを含むウィンドウの表示/非表示を切り替える|Alt + O、続けて T キーを選択|  
 |前に表示したトピックを表示する|Alt + O、続けて B キーを選択|  
 |前に表示した一連のトピックの次のトピックを表示する|Alt + O、続けて F キーを選択|  
 |指定されているホーム ページに戻る|Alt + O、続けて H キーを選択|  
 |ヘルプ ウィンドウでヘルプ トピックが開かないようにする (Web ページのダウンロードを止める場合など)|Alt + O、続けて S キーを選択|  
-|ユーザー補助機能の設定を変更できる、Microsoft Internet Explorer の**[ インターネット オプション ]** ダイアログ ボックスを開く|Alt + O、続けて I キーを選択|  
+|ユーザー補助機能の設定を変更できる、Microsoft Internet Explorer の**[インターネット オプション]** ダイアログ ボックスを開く|Alt + O、続けて I キーを選択|  
 |リンクされている Web ページなど、トピックを更新する|Alt + O、続けて R キーを選択|  
 |ヘルプの全トピックまたは選択したトピックのみを印刷する|Alt + O、続けて P キーを選択|  
 |ヘルプ ウィンドウを閉じる|Alt + F4|  

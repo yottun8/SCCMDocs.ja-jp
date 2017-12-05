@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 4800a800-66c8-4c35-aebe-e413a23790c1
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: deebf706c885dfb1f0838c64df0d201274eee3d8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: f56d21095e4a781c0a490ff0a6f3a4e05007755f
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="plan-a-source-hierarchy-strategy-in-system-center-configuration-manager"></a>System Center Configuration Manager でのソース階層戦略の計画
 
@@ -97,7 +97,7 @@ System Center Configuration Manager 環境で移行ジョブを設定する前�
 >  スタンドアロンのプライマリ サイトを中央管理サイトがある階層に拡張するには、あらかじめすべてのデータ収集を停止する必要があります。 サイトの拡張が完了したら、データ収集を再構成できます。  
 
 ### <a name="gather-data-now"></a>コンソールで   
- サイトの初期データの収集プロセスの実行後、このプロセスが繰り返し実行され、前回のデータ収集時以降に更新されたオブジェクトを識別します。 Configuration Manager コンソールで **[今すぐデータ収集 ]** アクションを使用して、プロセスをすぐに開始し、次のサイクルの開始時刻をリセットすることもできます。  
+ サイトの初期データの収集プロセスの実行後、このプロセスが繰り返し実行され、前回のデータ収集時以降に更新されたオブジェクトを識別します。 Configuration Manager コンソールで **[今すぐデータ収集]** アクションを使用して、プロセスをすぐに開始し、次のサイクルの開始時刻をリセットすることもできます。  
 
  ソース サイトのデータ収集プロセスが正常に完了したら、そのソース サイトの配布ポイントを共有して、サイトのデータを移行する移行ジョブを構成できます。 データ収集は繰り返して実行される移行プロセスで、ソース階層を変更するか、**[データ収集の停止]** を使用してサイトのデータ収集プロセスを終了するまで継続されます。  
 

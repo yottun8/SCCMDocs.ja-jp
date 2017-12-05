@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
 caps.latest.revision: "9"
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 94cc9b39b1eebcf1f194dc86aab8ccc162724d64
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ea8eead4706472a02f216b432ea9f2e6bdf23f66
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="use-a-pull-distribution-point-with-system-center-configuration-manager"></a>System Center Configuration Manager でのプル配布ポイントの使用
 
@@ -64,9 +64,9 @@ System Center Configuration Manager のプル配布ポイントは、サイト �
 -   プル配布ポイントは、コンテンツを転送するときに、**転送率の制限の構成を使用しません** 。 事前にインストールされた配布ポイントをプル配布ポイントに構成する場合、転送率の制限の構成は保存されますが、使用されません。 後でプル配布ポイント構成を削除した場合は、前と同じ転送率の制限が使われるようになります。  
 
     > [!NOTE]  
-    >  配布ポイントをプル配布ポイントとして構成すると、配布ポイントのプロパティの **[ 転送率の制限 ]** タブは表示されません。  
+    >  配布ポイントをプル配布ポイントとして構成すると、配布ポイントのプロパティの **[転送率の制限]** タブは表示されません。  
 
--   プル配布ポイントは、コンテンツを配布するときに **[再試行の設定]** を使用しません。 各サイトで、**[ソフトウェアの配布コンポーネントのプロパティ ]** の一部として **[ 再試行の設定 ]** を構成できます。 これらのプロパティを表示または構成するには、Configuration Manager コンソールの **[管理]** ワークスペースで、**[サイトの構成]** を展開し、**[サイト]** を選択します。 次に、結果ウィンドウでサイトを選択し、**[ホーム]** タブで **[サイト コンポーネントの構成]** を選択します。 最後に、**[ソフトウェアの配布]** を選択します。  
+-   プル配布ポイントは、コンテンツを配布するときに **[再試行の設定]** を使用しません。 各サイトで、**[ソフトウェアの配布コンポーネントのプロパティ]** の一部として **[再試行の設定]** を構成できます。 これらのプロパティを表示または構成するには、Configuration Manager コンソールの **[管理]** ワークスペースで、**[サイトの構成]** を展開し、**[サイト]** を選択します。 次に、結果ウィンドウでサイトを選択し、**[ホーム]** タブで **[サイト コンポーネントの構成]** を選択します。 最後に、**[ソフトウェアの配布]** を選択します。  
 
 -   リモート フォレストにあるソース配布ポイントからコンテンツを転送するには、プル配布ポイントのあるコンピューターに Configuration Manager クライアントがインストールされていなければなりません。 ソース配付ポイントにアクセスに使用するネットワーク アクセス アカウントを構成する必要があります。  
 

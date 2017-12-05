@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 caps.latest.revision: "7"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 3ce4e78fd49ab328e6d9037e429885e9770c9738
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 6471ac81718666403127c0ebcfaa19c41d3af47b
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="install-cloud-based-distribution-points-in-microsoft-azure-for-system-center-configuration-manager"></a>Microsoft Azure for System Center Configuration Manager のクラウド ベース配布ポイントのインストール
 
@@ -50,7 +50,7 @@ Microsoft Azure では、System Center Configuration Manager のクラウドベ�
 
 2.  **[ホステッド サービス、ストレージ アカウント、CDN]** をクリックしてから、**[管理証明書]** を選択します。  
 
-3.  サブスクリプションを右クリックしてから、**[ 証明書の追加 ]** を選択します。  
+3.  サブスクリプションを右クリックしてから、**[証明書の追加]** を選択します。  
 
 4.  **[証明書ファイル]** で、このクラウド サービスに使用する、エクスポートした Azure 管理証明書が含まれている .cer ファイルを指定してから、**[OK]** をクリックします。  
 
@@ -69,18 +69,18 @@ Microsoft Azure では、System Center Configuration Manager のクラウドベ�
         > [!TIP]  
         >  自分の Azure サブスクリプション ID は、Azure ポータルで確認できます。  
 
-    -   **[ 管理証明書 ]** を指定します。 **[参照]** をクリックして、エクスポートされた Azure 管理証明書が含まれている .pfx ファイルを指定してから、証明書のパスワードを入力します。 必要に応じて、Azure SDK 1.7 のバージョン 1 の .publishsettings ファイルを指定できます。  
+    -   **[管理証明書]** を指定します。 **[参照]** をクリックして、エクスポートされた Azure 管理証明書が含まれている .pfx ファイルを指定してから、証明書のパスワードを入力します。 必要に応じて、Azure SDK 1.7 のバージョン 1 の .publishsettings ファイルを指定できます。  
 
-4.  **[ 次へ ]** をクリックします。 Configuration Manager が Azure に接続して管理証明書を検証します。  
+4.  **[次へ]** をクリックします。 Configuration Manager が Azure に接続して管理証明書を検証します。  
 
-5.  **[ 設定 ]** ページで、以下を完了してから **[ 次へ ]** をクリックします。  
+5.  **[設定]** ページで、以下を完了してから **[次へ]** をクリックします。  
 
     -   **[地域]** で、この配布ポイントをホストするクラウド サービスを作成する、Azure の地域を選択します。  
 
     -   **[証明書ファイル]** に、Configuration Manager クラウドベースの配布ポイント サービスにエクスポートされた証明書を含む .pfx ファイルを指定します。 パスワードを入力します。  
 
         > [!NOTE]  
-        >  **[サービスの FQDN]** ボックスには、証明書のサブジェクト名から自動的に入力されます。 ほとんどの場合、編集する必要はありません。 テスト環境でワイルドカード証明書を使用している場合は例外です。 たとえば、この場合、ホスト名を指定せずに、同じ DNS サフィックスを持つ複数のコンピューターが証明書を使用できるようすることができます。 このシナリオでは、証明書のサブジェクトには **CN=\*.contoso.com** のような値が含まれており、Configuration Manager によって、正しい FQDN を指定する必要があることを示すメッセージが表示されます。 **[ OK ]** をクリックしてメッセージを閉じてから、DNS サフィックスの前に特定の名前を入力して、完全な FQDN を指定します。 たとえば、 **clouddp1** を追加して、 **clouddp1.contoso.com**のサービスの完全な FQDN を指定します。サービスの FQDN は、ドメインの中で固有である必要があり、ドメインに参加している他のデバイスと同じ FQDN は使用できません。  
+        >  **[サービスの FQDN]** ボックスには、証明書のサブジェクト名から自動的に入力されます。 ほとんどの場合、編集する必要はありません。 テスト環境でワイルドカード証明書を使用している場合は例外です。 たとえば、この場合、ホスト名を指定せずに、同じ DNS サフィックスを持つ複数のコンピューターが証明書を使用できるようすることができます。 このシナリオでは、証明書のサブジェクトには **CN=\*.contoso.com** のような値が含まれており、Configuration Manager によって、正しい FQDN を指定する必要があることを示すメッセージが表示されます。 **[OK]** をクリックしてメッセージを閉じてから、DNS サフィックスの前に特定の名前を入力して、完全な FQDN を指定します。 たとえば、 **clouddp1** を追加して、 **clouddp1.contoso.com**のサービスの完全な FQDN を指定します。サービスの FQDN は、ドメインの中で固有である必要があり、ドメインに参加している他のデバイスと同じ FQDN は使用できません。  
         >   
         >  ワイルドカード証明書は、テスト環境でのみサポートされています。  
 
@@ -122,11 +122,11 @@ Configuration Manager のクラウドベースの配布ポイントのサービ�
 
 #### <a name="to-set-up-proxy-settings-for-the-primary-site-server"></a>プライマリ サイト サーバーのプロキシ設定を設定するには  
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
 2.  **[管理]** ワークスペースで、 **[サイトの構成]**を展開して **[サーバーとサイト システムの役割]**をクリックします。 次に、クラウドベースの配布ポイントを管理するプライマリ サイト サーバーを選択します。  
 
-3.  詳細ウィンドウで、**[ サイト システム]** を右クリックし、**[ プロパティ]** をクリックします。  
+3.  詳細ウィンドウで、**[サイト システム]** を右クリックし、**[プロパティ]** をクリックします。  
 
 4.  **[サイト システムのプロパティ]** で **[プロキシ]** タブを選択し、そのプライマリ サイト サーバーのプロキシ設定を構成します。  
 

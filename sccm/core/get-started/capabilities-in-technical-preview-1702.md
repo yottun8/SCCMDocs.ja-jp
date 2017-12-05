@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
 caps.latest.revision: "5"
-author: Brenduns
-ms.author: brenduns
+author: erikje
+ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: 42712d25d7ee21b320192b0d46c5d13585932371
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ed2a858c55cbf389a0e974f4699b5a9c548953ef
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1702 の機能
 
@@ -148,7 +148,7 @@ Windows Update for Business 更新プログラムのコンプライアンス評�
 
 ### <a name="deploy-a-compliance-policy"></a>コンプライアンス ポリシーの展開
 1. Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[コンプライアンス設定]** の順にクリックし、**[コンプライアンス ポリシー]** をクリックします。
-2. **[ ホーム ]** タブの **[ 展開 ]** グループで、**[ 展開]** をクリックします。
+2. **[ホーム]** タブの **[展開]** グループで、**[展開]** をクリックします。
 3. **[コンプライアンス ポリシーの展開]** ダイアログ ボックスで、 **[参照]** をクリックして、ポリシーを展開するユーザー コレクションを選択します。
    さらに、ポリシーが準拠していない場合にアラートを生成するオプションや、ポリシーのコンプライアンスを評価するスケジュールを構成するオプションを選択できます。
 4. 終了したら、 **[OK]**をクリックします。

@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5fccbbeb-0faa-4943-83c2-e67db62d392d
 caps.latest.revision: "9"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 5998d853723f50302d0572a54b073292035ed382
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 4c5e6d4587f79eb52e9295d2641f985520738ebe
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="site-components-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイト コンポーネント
 
@@ -114,7 +114,7 @@ Configuration Manager サービスによる処理が必要になると (通常�
 
      管理したいサイトが表示されない場合は、 **[サイト]**、 **[接続]**の順にクリックして、該当するサイトのサイト サーバーの名前を入力します。  
 
-4.  サイトを展開して、管理したいコンポーネントのある場所に応じて、**[ コンポーネント ]** または **[ サーバー]** に移動します。  
+4.  サイトを展開して、管理したいコンポーネントのある場所に応じて、**[コンポーネント]** または **[サーバー]** に移動します。  
 
 5.  右側のウィンドウで、1 つまたは複数のコンポーネントを選択します。 次に、**[コンポーネント]** メニューの **[クエリ]** をクリックして、選択項目の状態を更新します。  
 

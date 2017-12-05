@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bafd028-1923-4463-9e3e-ee41bc0c437b
 caps.latest.revision: "36"
-author: Brenduns
-ms.author: brenduns
+author: erikje
+ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: 8286b8d0f35717d1b1453fa76208c1539f3ffda4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 795b7658f5da8f863f208f01896ae2d7823ff2a6
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1605 の機能
 
@@ -375,7 +375,7 @@ ms.lasthandoff: 10/12/2017
 
 2.  Windows Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、**[オンボード]** を選択します。 [次へ] をクリックします。  
 
-3.  組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 **[ 次へ ]** をクリックします。  
+3.  組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 **[次へ]** をクリックします。  
 
 4.  管理対象のデバイスから分析用に収集され共有されるファイルのサンプルを指定します。  
 
@@ -383,7 +383,7 @@ ms.lasthandoff: 10/12/2017
 
     -   **移植可能な実行可能ファイル**: プログラム ファイル (.exe)、ダイナミック ライブラリ リンク (.dll) ファイル、およびサイバー攻撃にさらされる可能性がある同様のファイルなどが分析用に収集され共有されます。  
 
-     **[ 次へ ]** をクリックします。  
+     **[次へ]** をクリックします。  
 
 5.  概要を確認して、ウィザードを完了します。  
 
@@ -466,6 +466,6 @@ ms.lasthandoff: 10/12/2017
 
     -   列 4: 詳細: Configuration Manager コンソールに表示される追加のデバイス情報  
 
-     **[ 次へ ]** をクリックします。  
+     **[次へ]** をクリックします。  
 
 4.  ファイル インポートの結果を確認します。 以前にインポートした IMEI またはシリアル番号には、新しい詳細で更新された詳細があります。  **[次へ]** をクリックして続行するか、**[戻る]** をクリックして最新の詳細を保持して、ウィザードを完了します。  

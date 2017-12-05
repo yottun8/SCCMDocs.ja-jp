@@ -3,7 +3,7 @@ title: "サポートされている SQL Server のバージョン"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager サイト データベースをホストするための SQL Server のバージョンおよび構成要件を取得します。"
 ms.custom: na
-ms.date: 10/10/2017
+ms.date: 11/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 caps.latest.revision: "21"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 740a37478b4159fb9dcbfd9eaceeeaa307edd745
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 7006d6cd03da53daf0f6cb59cc4ef83e7e800a1e
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager のサポートされている SQL Server バージョン
 
@@ -95,8 +95,6 @@ SQL Server のトランザクション レプリケーションは、[データ�
 -   プライマリ サイト  
 -   セカンダリ サイト
 
-
-
 ### <a name="sql-server-2014-sp1-standard-enterprise"></a>SQL Server 2014 SP1: Standard、Enterprise  
  次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
@@ -136,8 +134,6 @@ SQL Server のトランザクション レプリケーションは、[データ�
 -   中央管理サイト  
 -   プライマリ サイト
 -   セカンダリ サイト
-
-
 
 ### <a name="sql-server-2016-express-sp1"></a>SQL Server 2016 Express SP1  
 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。

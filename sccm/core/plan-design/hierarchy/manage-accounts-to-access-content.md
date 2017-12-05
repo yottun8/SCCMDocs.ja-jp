@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7df9d0f-fbde-47eb-97e7-3d29536424fa
 caps.latest.revision: "4"
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 3767fe81db62d8604de02d7a5867ce03a09ba2e4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: e67a3f36f3b4eb424fa1b87293907d9a9cac86e2
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>System Center Configuration Manager でコンテンツへのアクセスを管理する
 
@@ -47,7 +47,7 @@ System Center Configuration Manager でコンテンツを展開する前に、�
 ### <a name="permissions"></a>アクセス許可
 このアカウントには、クライアントで必要となるコンテンツのために、ソフトウェアにアクセスする最低限の適切なアクセス許可を付与します。  
 
--   このアカウントは、配布ポイントで **[ネットワーク経由でコンピューターへアクセス]** の権限を持っている必要があります。  
+-   このアカウントは、配布ポイントで **[ネットワーク経由でコンピューターへアクセス]** の権限を持っている必要があります。   
 
 -   このアカウントは、リソースへの必要なアクセスを可能にする任意のドメインに作成します。 ネットワーク アクセス アカウントには、常にドメイン名が含まれている必要があります。 このアカウントでは、パススルー セキュリティはサポートされません。 複数のドメインに配布ポイントがある場合は、信頼される側のドメインにアカウントを作成します。  
 

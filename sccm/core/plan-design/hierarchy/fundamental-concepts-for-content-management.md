@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 caps.latest.revision: "28"
 caps.handback.revision: "0"
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: d550d18de93f5e11c7538de24473d36c788145e6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 708543d7711dc1fe0c5c38f5b608eec0eec8df76
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="fundamental-concepts-for-content-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのコンテンツ管理の基本的な概念
 
@@ -67,7 +67,7 @@ System Center Configuration Manager は、アプリケーション、パッケ�
 
 BDR は、同じ階層内の親サイトと子サイト間でサポートされます。 また、BDR は、同じサイト内のサイト サーバーとその定期的な配布ポイント間でサポートされます。 ただし、プル配布ポイントとクラウドベースの配布ポイントは、バイナリ差分レプリケーションによるコンテンツの転送をサポートしません。 プル配布ポイントは、ファイル レベルのデルタをサポートしており、新しいファイルは転送されますが、ファイル内のブロックは転送されません。
 
-アプリケーションは、常にバイナリ差分レプリケーションを使用します。 パッケージの場合、バイナリ差分レプリケーションはオプションであり、既定では無効です。 パッケージにバイナリ差分レプリケーションを使用するには、各パッケージでこの機能を有効にする必要があります。 有効にするには、新しいパッケージを作成するとき、またはパッケージ プロパティの **[ データ ソース ]** タブを編集するときに、オプション **[ バイナリ差分レプリケーションを有効にする ]** をオンにします。  
+アプリケーションは、常にバイナリ差分レプリケーションを使用します。 パッケージの場合、バイナリ差分レプリケーションはオプションであり、既定では無効です。 パッケージにバイナリ差分レプリケーションを使用するには、各パッケージでこの機能を有効にする必要があります。 有効にするには、新しいパッケージを作成するとき、またはパッケージ プロパティの **[データ ソース]** タブを編集するときに、オプション **[バイナリ差分レプリケーションを有効にする]** をオンにします。  
 
 ## <a name="branchcache"></a>BranchCache  
  BranchCache をサポートし、BranchCache 用に構成されている展開のダウンロードが済んでいるクライアントが、他の BranchCache が有効なクライアントに対するコンテンツ ソースとして機能することを可能にする Windows テクノロジ。  

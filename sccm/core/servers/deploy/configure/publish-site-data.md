@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 17cf034f-eaff-43ce-bc8e-917213c1db74
 caps.latest.revision: "8"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 8969a7a97e11fe0c01999e828578f3748cffa74b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 7cb32ff237ac6dfb4f656d7c6bfd06af9e7fd0e2
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="publish-site-data-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイト データの発行
 
@@ -42,19 +42,19 @@ System Center Configuration Manager の Active Directory スキーマを拡張�
 
 ### <a name="to-enable-a-configuration-manager-site-to-publish-site-information-to-active-directory-forest"></a>Configuration Manager サイトが Active Directory フォレストにサイト情報を発行できるようにするには
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
 2.  **管理**  ワークスペースで、展開 **サイトの構成**, 、 をクリック **サイト**です。 サイト データの発行対象となるサイトを選択します。 **[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** をクリックします。  
 
 3.  サイト プロパティの **[発行]** タブで、このサイトのサイト データの発行先のフォレストを選択します。  
 
-4.  **[ OK ]** をクリックして構成を保存します。  
+4.  **[OK]** をクリックして構成を保存します。  
 
 ### <a name="to-set-up-active-directory-forests-for-publishing"></a>Active Directory フォレストを発行用に設定するには  
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
-2.  **[ 管理 ]** ワークスペースで **[ Active Directory フォレスト]** をクリックします。 Active Directory フォレストの検索を前に実行している場合は、検出されたフォレストが結果ウィンドウに表示されます。 Active Directory フォレストの探索を実行すると、ローカル フォレストと信頼済みフォレストがすべて探索されます。 信頼されていないフォレストだけを手動で追加します。  
+2.  **[管理]** ワークスペースで **[Active Directory フォレスト]** をクリックします。 Active Directory フォレストの検索を前に実行している場合は、検出されたフォレストが結果ウィンドウに表示されます。 Active Directory フォレストの探索を実行すると、ローカル フォレストと信頼済みフォレストがすべて探索されます。 信頼されていないフォレストだけを手動で追加します。  
 
     -   既に検出済みのフォレストをセットアップするには、結果ウィンドウでそのフォレストを選択します。 次に、**[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** をクリックしてフォレストのプロパティを開きます。 手順 3 に進みます。  
 
@@ -65,9 +65,9 @@ System Center Configuration Manager の Active Directory スキーマを拡張�
     > [!NOTE]  
     >  Active Directory フォレストの探索で、信頼されていないフォレストを検出して、そのフォレストに発行するにはグローバル アカウントが必要です。 サイト サーバーのコンピューター アカウントを使用しない場合は、グローバル アカウントのみ選択できます。  
 
-4.  サイト データをこのフォレストに発行できるようにする場合は、**[発行]** タブで、必要な構成を行います。  
+4.  サイト データをこのフォレストに発行できるようにする場合は、**[発行]** タブで、必要な構成を行います。   
 
     > [!NOTE]  
     >  サイトをフォレストに発行できるようにする場合は、Configuration Manager 用にそのフォレストの Active Directory スキーマを拡張する必要があります。 Active Directory フォレスト アカウントには、そのフォレストの System コンテナーに対するフル コントロールのアクセス許可が必要です。  
 
-5.  このフォレストを Active Directory フォレストの探索で使用するための構成が完了したら、**[ OK ]** をクリックして構成を保存します。  
+5.  このフォレストを Active Directory フォレストの探索で使用するための構成が完了したら、**[OK]** をクリックして構成を保存します。  

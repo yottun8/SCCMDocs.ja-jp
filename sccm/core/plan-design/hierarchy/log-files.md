@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 caps.latest.revision: "9"
 caps.handback.revision: "0"
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: b9c0425b00e707e8ccdacd9315a82b0293593aea
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 1463aa5a64de50b31ad0fc94709e2b41fd1c3bb0
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>System Center Configuration Manager のログ ファイル
 
@@ -132,7 +132,7 @@ System Center Configuration Manager では、クライアント コンポーネ�
 4.  サイトを展開して、管理したいコンポーネントのある場所に応じて、**[コンポーネント]** または **[サーバー]** に移動します。  
 5.  右側のウィンドウで、1 つまたは複数のコンポーネントを選択します。  
 6.  **[コンポーネント]** メニューで **[ログの記録]** を選択します。  
-7.  **[ Configuration Manager コンポーネントのログ ]** ダイアログ ボックスで、必要な構成オプションを設定します。  
+7.  **[Configuration Manager コンポーネントのログ]** ダイアログ ボックスで、必要な構成オプションを設定します。  
 8.  **[OK]** を選択して構成を保存します。  
 
 ###  <a name="BKMK_LogLocation"></a> Configuration Manager のログ ファイルの検索  
@@ -228,8 +228,8 @@ Configuration Manager のログ ファイルは、ログ ファイルを作成�
 
 |ログの名前|説明|  
 |--------------|-------------|  
-|Scxcm.log|Linux および UNIX 用の Configuration Manager クライアントのコア サービス (ccmexec.bin) のログ ファイルです。 このログ ファイルには、ccmexec.bin のインストールと実行中の処理に関する情報が含まれます。<br /><br /> 既定でこのログ ファイルは **/var/opt/microsoft/scxcm.log** にあります<br /><br /> ログ ファイルの場所を変更するには、 **/opt/microsoft/configmgr/etc/scxcm.conf** を編集して **[ パス ]** フィールドを変更します。 変更を有効にするために、クライアント コンピューターやサービスを再起動する必要はありません。<br /><br /> ログ レベルを 4 種類の設定のいずれかに設定できます。|  
-|Scxcmprovider.log|Linux および UNIX 用の Configuration Manager クライアントの CIM サービス (omiserver.bin) のログ ファイルです。 このログ ファイルには、nwserver.bin の実行中の処理に関する情報が含まれます。<br /><br /> このログは **/var/opt/microsoft/configmgr/scxcmprovider.log** にあります<br /><br /> ログ ファイルの場所を変更するには、 **/opt/microsoft/omi/etc/scxcmprovider.conf** を編集して **[ パス ]** フィールドを変更します。 変更を有効にするために、クライアント コンピューターやサービスを再起動する必要はありません。<br /><br /> ログ レベルを 3 つの設定のいずれかに設定できます。|  
+|Scxcm.log|Linux および UNIX 用の Configuration Manager クライアントのコア サービス (ccmexec.bin) のログ ファイルです。 このログ ファイルには、ccmexec.bin のインストールと実行中の処理に関する情報が含まれます。<br /><br /> 既定でこのログ ファイルは **/var/opt/microsoft/scxcm.log** にあります<br /><br /> ログ ファイルの場所を変更するには、 **/opt/microsoft/configmgr/etc/scxcm.conf** を編集して **[パス]** フィールドを変更します。 変更を有効にするために、クライアント コンピューターやサービスを再起動する必要はありません。<br /><br /> ログ レベルを 4 種類の設定のいずれかに設定できます。|  
+|Scxcmprovider.log|Linux および UNIX 用の Configuration Manager クライアントの CIM サービス (omiserver.bin) のログ ファイルです。 このログ ファイルには、nwserver.bin の実行中の処理に関する情報が含まれます。<br /><br /> このログは **/var/opt/microsoft/configmgr/scxcmprovider.log** にあります<br /><br /> ログ ファイルの場所を変更するには、 **/opt/microsoft/omi/etc/scxcmprovider.conf** を編集して **[パス]** フィールドを変更します。 変更を有効にするために、クライアント コンピューターやサービスを再起動する必要はありません。<br /><br /> ログ レベルを 3 つの設定のいずれかに設定できます。|  
 
  両方のログ ファイルは、いくつかのレベルのログ記録をサポートします。  
 

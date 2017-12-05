@@ -15,11 +15,11 @@ caps.latest.revision: "17"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: ae1bc53cf15b2a1746656667f7bf546742432c11
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 8afb217524d5c2236fb07b13cb42ca50ae200183
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアントを管理する方法
 
@@ -269,12 +269,7 @@ CCMSetup.exe 用のこれらのコマンド ライン プロパティを使用�
 
 2.  **[キャッシュ]** タブで領域と場所のプロパティを設定します。 既定の場所は *%windir%*\ccmcache です。  
 
-5.  キャッシュ フォルダーのファイルを削除するには、**[ファイルの削除]** を選択します。  
-
-    > [!NOTE]
-    >
-    > キャッシュ フォルダーは通常の Windows フォルダーです。そのため、スクリプト、ユーティリティ、または PowerShell コマンドレット `Remove-Item` を使用してフォルダーの内容を自動的に削除することができます。
-
+3.  キャッシュ フォルダーのファイルを削除するには、**[ファイルの削除]** を選択します。  
 
 ### <a name="to-configure-client-cache-size-in-client-settings"></a>[クライアント設定] でクライアント キャッシュ サイズを構成するには
 

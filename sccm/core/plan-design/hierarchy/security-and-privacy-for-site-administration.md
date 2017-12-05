@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 caps.latest.revision: "8"
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 8ac421cca154f99251c13e1dcd0bed21e5b68078
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: f16a66788160ab6c9689f267d493daa0c7e84fa8
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="security-and-privacy-for-site-administration-in-system-center-configuration-manager"></a>System Center Configuration Manager のサイト管理のセキュリティとプライバシー
 
@@ -150,7 +150,7 @@ Configuration Manager のバックアップ時に、この情報には、攻撃�
 
 **サイト システム サーバーが信頼されていないネットワーク (境界ネットワークなど) 上にある場合、サイト システムへの接続を開始するようにサイト サーバーを構成する**  
 
-既定では、サイト システムは、データを転送するためにサイト サーバーへの接続を開始します。この接続は、信頼されていないネットワークから信頼されているネットワークに対して開始される場合に、セキュリティ上のリスクになる可能性があります。 サイト システムがインターネットから接続を受け入れる場合、または信頼されていないフォレストに配置されている場合、サイト システムおよびサイト システムの役割のインストール後にすべての接続が信頼されているネットワークから開始されるように、サイト システム オプション **[ サイト サーバーがこのサイト システムへの接続を開始する必要がある ]** を構成します。  
+既定では、サイト システムは、データを転送するためにサイト サーバーへの接続を開始します。この接続は、信頼されていないネットワークから信頼されているネットワークに対して開始される場合に、セキュリティ上のリスクになる可能性があります。 サイト システムがインターネットから接続を受け入れる場合、または信頼されていないフォレストに配置されている場合、サイト システムおよびサイト システムの役割のインストール後にすべての接続が信頼されているネットワークから開始されるように、サイト システム オプション **[サイト サーバーがこのサイト システムへの接続を開始する必要がある]** を構成します。  
 
 **インターネットベースのクライアント管理に Web プロキシ サーバーを使用する場合、認証終了を使用して SSL への SSL ブリッジングを使用する**  
 

@@ -11,14 +11,14 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ca3b4714-2a16-495e-8a17-1d87991d5556
-author: Brenduns
-ms.author: brenduns
+author: erikje
+ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: 5849c79acaf943f3a8ebb1bb7f862029f6d50903
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: d7819dd71a37bc581b629ac180f657134495f50c
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1706 の機能
 
@@ -339,8 +339,8 @@ Configuration Manager のセキュリティ ロールの詳細については、
 
 ユーザーが自身のスクリプトを承認できるようにするには、次の手順を実行します。
 
-1. Configuration Manager コンソールで、**[ 管理]** をクリックします。
-2. **[ 管理 ]** ワークスペースで **[ サイトの構成]** を展開して、**[ サイト]** をクリックします。
+1. Configuration Manager コンソールで、**[管理]** をクリックします。
+2. **[管理]** ワークスペースで **[サイトの構成]** を展開して、**[サイト]** をクリックします。
 3. サイトの一覧で、自分のサイトを選択し、**[ホーム]** タブの **[サイト]** グループで **[階層設定]** をクリックします。
 4. **[階層設定のプロパティ]** ダイアログ ボックスの **[全般]** タブで、**[Do not allow script authors to approve their own scripts]\(スクリプト作成者に自身のスクリプトの承認を許可しない\)** チェック ボックスをオフにします。
 
@@ -377,8 +377,8 @@ Configuration Manager のセキュリティ ロールの詳細については、
 
 スクリプトが承認されたら、選択したコレクションに対してそのスクリプトを実行できます。
 
-1. Configuration Manager コンソールで、**[ 資産とコンプライアンス]** をクリックします。
-2. **[ 資産とコンプライアンス ]** ワークスペースで **[ デバイス コレクション]** をクリックします。
+1. Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。
+2. **[資産とコンプライアンス]** ワークスペースで **[デバイス コレクション]** をクリックします。
 3. **[デバイス コレクション]** リストで、スクリプトを実行するデバイスのコレクションをクリックします。
 3. **[ホーム]** タブの **[すべてのシステム]** グループで、**[スクリプトの実行]**をクリックします。
 4. **スクリプトの実行**ウィザードの **[スクリプト]** ページで、リストからスクリプトを選択します。 承認済みスクリプトのみが表示されます。 **[次へ]** をクリックして、ウィザードを完了します。
@@ -387,7 +387,7 @@ Configuration Manager のセキュリティ ロールの詳細については、
 
 クライアント デバイスにスクリプトを実行したら、次の手順を使用して操作の成功を監視します。
 
-1. Configuration Manager コンソールで、**[ 監視]** をクリックします。
+1. Configuration Manager コンソールで、**[監視]** をクリックします。
 2. **[監視]** ワークスペースで、**[Script Results]\(スクリプトの結果\)** をクリックします。
 3. **[Script Results]\(スクリプトの結果\)** リストには、クライアント デバイスで実行した各スクリプトの結果が表示されます。 スクリプトの終了コード **0** は、通常、スクリプトが正常に実行されたことを示します。
 
