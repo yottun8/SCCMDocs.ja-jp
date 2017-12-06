@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
 caps.latest.revision: "6"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: b409e8b050a3f1871819bd857c225a8cf6333712
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 14d2d9cfc25f7445ad6e873f1969e1ffcd522737
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="deploy-and-manage-content-for-system-center-configuration-manager"></a>System Center Configuration Manager でのコンテンツの展開および管理
 
@@ -96,7 +96,7 @@ System Center Configuration Manager の配布ポイントをインストール�
 
     -   **配付ポイント**:既存の配布ポイントを選択して、[OK ****] をクリックします。 コンテンツを既に受信した配布ポインは表示されません。  
 
-    -   **配布ポイント グループ**:既存の配布ポイント グループを選択して、[OK ****] をクリックします。 コンテンツを既に受信した配布ポイント グループは表示されません。  
+    -   **配布ポイント グループ**:既存の配布ポイント グループを選択して、**[OK]** をクリックします。 コンテンツを既に受信した配布ポイント グループは表示されません。  
 
     コンテンツの配布先の追加が完了したら、**[次へ]** をクリックします。  
 
@@ -150,7 +150,7 @@ System Center Configuration Manager の配布ポイントをインストール�
 
     -   **オペレーティング システム インストーラー**:**[オペレーティング システム]** を展開し、**[オペレーティング システム インストーラー]** をクリックして、事前設定するオペレーティング システム インストーラーを選択します。  
 
-    -   **ブート イメージ**:**オペレーティング システム]**[ を展開し、]**[ブート イメージ** をクリックして、事前設定するブート イメージを選択します。  
+    -   **ブート イメージ**:**[オペレーティング システム]** を展開し、**[ブート イメージ]** をクリックして、事前設定するブート イメージを選択します。  
 
     -   **タスク シーケンス**:**[オペレーティング システム]** を展開し、**[タスク シーケンス]** をクリックして、事前設定するタスク シーケンスを選択します。  
 
@@ -222,14 +222,14 @@ System Center Configuration Manager の配布ポイントをインストール�
 
 6.  **[コンテンツの配布先]** ページで **[追加]** をクリックし、事前設定対象の配布ポイントを含む次のいずれかを選択して、該当の手順に従います。  
 
-    -   **コレクション**:[ユーザー コレクション **** ] または [デバイス コレクション ****] を選択し、1 つまたは複数の配布ポイント グループに関連付けられているコレクションをクリックして、[OK ****] をクリックします。  
+    -   **コレクション**:**[ユーザー コレクション]** または **[デバイス コレクション]** を選択し、1 つまたは複数の配布ポイント グループに関連付けられているコレクションをクリックして、**[OK]** をクリックします。  
 
         > [!NOTE]  
         >  配布ポイント グループに関連付けられているコレクションのみが表示されます。  詳細については、「[System Center Configuration Manager の配布ポイントのインストールと構成](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md)」トピックの「[配布ポイント グループの管理](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage)」をご覧ください。  
 
-    -   **配付ポイント**:既存の配布ポイントを選択して、[OK ****] をクリックします。 コンテンツを既に受信した配布ポインは表示されません。  
+    -   **配付ポイント**:既存の配布ポイントを選択して、**[OK]** をクリックします。 コンテンツを既に受信した配布ポインは表示されません。  
 
-    -   **配布ポイント グループ**:既存の配布ポイント グループを選択して、[OK ****] をクリックします。 コンテンツを既に受信した配布ポイント グループは表示されません。  
+    -   **配布ポイント グループ**:既存の配布ポイント グループを選択して、**[OK]** をクリックします。 コンテンツを既に受信した配布ポイント グループは表示されません。  
 
     コンテンツの配布先の追加が完了したら、**[次へ]** をクリックします。  
 
@@ -289,7 +289,7 @@ System Center Configuration Manager の配布ポイントをインストール�
 
 1.  以下の手順に従い、配布ポイントで事前設定コンテンツが有効になっていることを確認します。  
 
-    1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
+    1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
     2.  **[管理]** ワークスペースで、**[配布ポイント]**をクリックし、サイト サーバーに置かれた配布ポイントを選択します。  
 
@@ -386,7 +386,7 @@ System Center Configuration Manager の配布ポイントをインストール�
 
 #### <a name="to-redistribute-content-from-distribution-point-properties"></a>配布ポイント プロパティを使用してコンテンツを再配布するには  
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
 2.  **[管理]** ワークスペースで **[配布ポイント]** をクリックして、コンテンツを再配信する配布ポイントを選択します。  
 
@@ -396,7 +396,7 @@ System Center Configuration Manager の配布ポイントをインストール�
 
 #### <a name="to-redistribute-content-from-distribution-point-group-properties"></a>配布ポイント グループ プロパティを使用してコンテンツを再配布するには  
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
 2.  **[管理]** ワークスペースで **[配布ポイント]** をクリックして、コンテンツを再配信する配布ポイント グループを選択します。  
 
@@ -450,7 +450,7 @@ Configuration Manager SDK の **RetryContentReplication** Windows Management Ins
 
 #### <a name="to-remove-package-content-from-distribution-point-properties"></a>配布ポイント プロパティを使用してコンテンツを削除するには  
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
 2.  **[管理]** ワークスペースで **[配布ポイント]** をクリックして、コンテンツを削除する配布ポイントを選択します。  
 
@@ -460,7 +460,7 @@ Configuration Manager SDK の **RetryContentReplication** Windows Management Ins
 
 #### <a name="to-remove-content-from-distribution-point-group-properties"></a>配布ポイント グループ プロパティを使用してコンテンツを削除するには  
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
 2.  **[管理]** ワークスペースで **[配布ポイント]** をクリックして、コンテンツを削除する配布ポイント グループを選択します。  
 
@@ -479,7 +479,7 @@ Configuration Manager SDK の **RetryContentReplication** Windows Management Ins
 
 #### <a name="to-initiate-content-validation-for-all-content-on-a-distribution-point"></a>配布ポイントにあるすべてのコンテンツの検証を開始するには  
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
 2.  **[管理]** ワークスペースで **[配布ポイント]** をクリックし、コンテンツを検証する配布ポイントを選択します。  
 
