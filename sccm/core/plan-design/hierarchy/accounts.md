@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 caps.latest.revision: "7"
 caps.handback.revision: "0"
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: ed1013226bbcd1094214adc2b327dfe8ed5a4ad5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 16416313b1ea171f695d2b4908331f78f584d28f
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="accounts-used-in-system-center-configuration-manager"></a>System Center Configuration Manager で使用されるアカウント
 
@@ -43,7 +43,7 @@ Configuration Manager は、このグループを使用して、ソフトウェ�
 |項目|説明|  
 |------------|----------------------|  
 |種類と場所|このグループは、プライマリ サイト サーバー上に作成されるローカル セキュリティ グループです。<br /><br /> サイトをアンインストールしても、このグループが自動的に削除されることはありません。 手動で削除する必要があります。|  
-|メンバーシップ|Configuration Manager は、グループ メンバーシップを自動的に管理します。 メンバーシップには、割り当てられたセキュリティ ロールからの保護可能な **[ コレクション ]** オブジェクトに対する **[ 収集ファイルの表示 ]** アクセス許可が付与されている管理ユーザーが含まれます。|  
+|メンバーシップ|Configuration Manager は、グループ メンバーシップを自動的に管理します。 メンバーシップには、割り当てられたセキュリティ ロールからの保護可能な **[コレクション]** オブジェクトに対する **[収集ファイルの表示]** アクセス許可が付与されている管理ユーザーが含まれます。|  
 |アクセス許可|既定では、このグループには、サイト サーバーの **%path%\Microsoft Configuration Manager\sinv.box\FileCol** フォルダーに対する **Read**アクセス許可が与えられます。|  
 
 ### <a name="configmgrdviewaccess"></a>ConfigMgr_DViewAccess  
@@ -304,7 +304,7 @@ Configuration Manager は、このグループを使用して、ソフトウェ�
 >  Configuration Manager コンソールの **[管理]** ワークスペースの **[アカウント]** ノードでは、ソース サイトのアカウントとソース サイトのデータベース アカウントの両方が **[移行マネージャー]** として識別されます。  
 
 ### <a name="task-sequence-editor-domain-joining-account"></a>タスク シーケンス エディターのドメイン参加アカウント  
- **タスク シーケンス エディターのドメイン参加アカウント** は、新しくイメージングされたコンピューターをドメインに参加させるために、タスク シーケンスで使用されます。 **[ ドメインまたはワークグループへの参加 ]** ステップをタスク シーケンスに追加した後、**[ ドメインに参加]** を選択する場合は、このアカウントが必要です。 このアカウントは、**[ネットワーク設定の適用]** ステップをタスク シーケンスに追加した場合も設定できますが、必須ではありません。  
+ **タスク シーケンス エディターのドメイン参加アカウント** は、新しくイメージングされたコンピューターをドメインに参加させるために、タスク シーケンスで使用されます。 **[ドメインまたはワークグループへの参加]** ステップをタスク シーケンスに追加した後、**[ドメインに参加]** を選択する場合は、このアカウントが必要です。 このアカウントは、**[ネットワーク設定の適用]** ステップをタスク シーケンスに追加した場合も設定できますが、必須ではありません。  
 
  このアカウントには、コンピューターが参加するドメインにおける **[ドメイン参加]** 権利が必要です。  
 

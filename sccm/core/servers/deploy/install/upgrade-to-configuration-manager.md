@@ -11,14 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
 caps.latest.revision: "21"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: b16d9779c130bd83304d1b369c48c7e691bd8db3
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 770976309fbd5e8884dfec4bdaa29630ef1c02d0
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>System Center Configuration Manager へのアップグレード
 
@@ -122,7 +122,7 @@ Configuration Manager では、管理ポイントのデータベース レプリ
 
 詳細については、次をご覧ください。  
 -   System Center 2012 Configuration Manager: 「[管理ポイントのデータベース レプリカの構成](https://technet.microsoft.com/library/hh846234.aspx)」  
--   System Center Configuration Manager: 「[System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」  
+-   System Center Configuration Manager: 「[Database replicas for management points for System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」 (System Center Configuration Manager の管理ポイントのデータベース レプリカ)  
 
 **NLB を使用するソフトウェアの更新ポイントを再構成する:**  
 Configuration Manager では、ネットワーク負荷分散 (NLB) クラスターを使用してソフトウェアの更新ポイントをホストしているサイトは、アップグレードできません。  
@@ -224,7 +224,7 @@ Configuration Manager では、セカンダリ サイトのバックアップと
 
 **プライマリ サイトで管理ポイント用のデータベース レプリカを再構成する:**  
 プライマリ サイトで管理ポイント用のデータベース レプリカを使用する場合、データベース レプリカをアンインストールしてから、サイトをアップグレードする必要があります。 プライマリ サイトをアップグレードしたら、管理ポイント用のデータベース レプリカを再構成します。   
-詳しくは、「  [System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」をご覧ください。  
+詳しくは、「  [Database replicas for management points for System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」をご覧ください。  
 
 **アップグレードの前に無効にしたデータベース メンテナンス タスクを再構成する:**  
 アップグレードの前にサイトのデータベースの [System Center Configuration Manager のメンテナンス タスクのリファレンス](../../../../core/servers/manage/reference-for-maintenance-tasks.md)を無効にした場合、アップグレードの前に使用していたのと同じ設定を使用して、サイトでこれらのタスクを再構成します。  
