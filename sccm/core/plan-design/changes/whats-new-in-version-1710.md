@@ -10,14 +10,14 @@ ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 33a5bff1e202822ce3ec5755958d34af461957e9
-ms.sourcegitcommit: 536f7295e9ea361f1f9ead6c25f3685deb041ad8
+ms.openlocfilehash: 83bd5fc972bc0bef07b206e160463db71837e827
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1710 の新機能
 
@@ -28,8 +28,8 @@ System Center Configuration Manager Current Branch の更新プログラム 1710
 > [!TIP]  
 > 新しいサイトをインストールするには、Configuration Manager の基準バージョンを使用する必要があります。  
 >  詳細については、下記のリンクをクリックしてください。    
->   - [新しいサイトのインストール](https://technet.microsoft.com/library/mt590197.aspx)  
->   - [サイトで更新プログラムをインストールする](https://technet.microsoft.com/library/mt607046.aspx)  
+>   - [新しいサイトのインストール](/sccm/core/servers/deploy/install/installing-sites)  
+>   - [サイトで更新プログラムをインストールする](/sccm/core/servers/manage/updates)  
 >   - [基準バージョンと更新プログラムのバージョン](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
 次の各セクションでは、Configuration Manager のバージョン 1710 で導入された変更点および新機能について詳しく説明します。  
@@ -60,13 +60,13 @@ Azure Government クラウドで[クラウドベースの配布ポイント](/sc
 <!-- 1350871 -->
 Windows 10 バージョン 1607 (Anniversary Update とも呼ばれます) より、Windows 10 デバイスをオンプレミスの Active Directory (AD) とクラウドベースの Azure AD (ハイブリッド Azure AD) に同時に結合できるようになりました。 共同管理ではこの機能強化を活用し、Configuration Manager と Intune の両方を使用して複数の Windows 10 デバイスを同時に管理できます。 これは、従来の管理から最新の管理への橋渡しとなるソリューションであり、段階的なアプローチを使って移行する方向を提示します。 詳細については、「[Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)」をご覧ください。
 
-### <a name="restart-computers-form-the-configuration-manager-console-----1356283---"></a>Configuration Manager コンソールからコンピューターを再起動  <!-- 1356283 -->
+### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>Configuration Manager コンソールからコンピューターを再起動 <!-- 1356283 -->
 これ以降のリリースでは、Configuration Manager コンソールを使用して再起動を必要とするクライアント デバイスを識別し、再起動するようにクライアント通知を行うアクションを使用できます。
 
 「[System Center Configuration Manager でクライアントを管理する方法](/sccm/core/clients/manage/manage-clients#restart-clients)」を参照してください。
 
 
-<!--  ## Compliance settings  -->
+<!-- ## Compliance settings -->
 
 
 ## <a name="application-management"></a>アプリケーション管理
@@ -130,6 +130,10 @@ Windows 10 テレメトリ データ コレクション レベルを **[拡張 (
 
 
 ## <a name="mobile-device-management"></a>モバイル デバイス管理
+
+### <a name="actions-for-non-compliance"></a>コンプライアンス非対応に対するアクション 
+<!--1321366 -->    
+コンプライアンスに対応していないデバイスに適用される時間順のアクションを構成できるようになりました。 たとえば、コンプライアンスに対応していないデバイスをユーザーに電子メールで通知したり、そのようなデバイスにコンプライアンス非対応とマークしたりすることができます。 詳細については、「[コンプライアンス非対応に対するアクションの設定](/sccm/mdm/deploy-use/actions-for-noncompliance)」を参照してください。
 
 ### <a name="windows-10-arm64-device-support"></a>Windows 10 ARM64 デバイスのサポート
 <!-- 1355000 -->

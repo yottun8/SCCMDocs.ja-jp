@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 caps.latest.revision: "4"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: c0277fed7db5803aa2b2246ca879640136dce02a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: bda1ab737a3af5e13f180771cc17c9850165906c
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイズとスケールの数
 
@@ -147,7 +147,10 @@ System Center Configuration Manager の各展開には、サポートできる�
  たとえば、階層では、700,000 個のデスクトップ、最大 25,000 個の Mac および Windows CE 7.0、および Microsoft Intune と統合する場合は最大 300,000 個のクラウドベースのデバイスをサポートでき、合計 1,025,000 個のデバイスになります。 オンプレミス MDM で管理されているデバイスをサポートする場合は、階層のデバイス数の合計は 825,000 個です。  
 
 > [!IMPORTANT]  
->  中央管理サイトが SQL Server の Standard エディションを使用する階層では、階層は、最大 50,000 個のデスクトップとデバイスをサポートします。 スタンドアロン プライマリ サイトで使用している SQL Server のエディションでは、規定された数までのクライアントをサポートするそのサイト容量は制限されません。  
+>  中央管理サイトが SQL Server の Standard エディションを使用する階層では、階層は、最大 50,000 個のデスクトップとデバイスをサポートします。 50,000 個を超えるデスクトップおよびデバイスをサポートするには、SQL Server の Enterprise エディションを使用する必要があります。 この要件は、中央管理サイトにのみ適用され、スタンドアロン プライマリ サイトまたは子プライマリ サイトには適用されません。ここで、使用する SQL Server のエディションは、規定されたクライアント数をサポートするために、中央管理サイトの容量を制限しません。   
+
+
+ スタンドアロン プライマリ サイトで使用している SQL Server のエディションでは、規定された数までのクライアントをサポートするそのサイト容量は制限されません。  
 
 
 ###  <a name="bkmk_chipri"></a> 子プライマリ サイト  

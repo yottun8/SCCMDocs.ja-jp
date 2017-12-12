@@ -3,7 +3,7 @@ title: "リリース ノート "
 titleSuffix: Configuration Manager
 description: "製品でまだ修正されていないまたは Microsoft サポート技術情報の記事で説明されていない緊急の問題については以下のメモを参照してください。"
 ms.custom: na
-ms.date: 08/23/2017
+ms.date: 11/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 caps.latest.revision: "41"
 caps.handback.revision: "0"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 2571cfbff1373db05279918af776d8be81a5c322
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 8030ce7f98ebb34d9581ad036513b9b1c879c0ad
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>System Center Configuration Manager リリース ノート
 
@@ -37,30 +37,10 @@ System Center Configuration Manager の製品リリース ノートは、この�
 - [バージョン 1706 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
 - [バージョン 1702 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1702)
 - [バージョン 1610 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1610)
-   
+
 
 
 ## <a name="setup-and-upgrade"></a>セットアップとアップグレード  
-
-### <a name="after-you-update-a-configuration-manager-console-using-consolesetupexe-from-the-site-server-folder-recent-language-pack-changes-are-not-available"></a>サイト サーバー フォルダーの ConsoleSetup.exe を使用して Configuration Manager コンソールを更新すると、最近の言語パックの変更内容が利用できなくなります。
-<!--  SMS 486420  Applicability should be 1610 and 1702.  -->
-*次のものは、バージョン 1610 と 1702に適用されます。*   
-サイト サーバーのインストール フォルダーの ConsoleSetup.exe を使用して、コンソールに対してインプレース更新を実行すると、最近インストールした更新パックが使用できなくなる場合があります。 この問題は次のような場合に発生します。
-- サイトでバージョン 1610 または 1702 を実行している。
-- コンソールが、サイト サーバーのインストール フォルダーの ConsoleSetup.exe を使用して更新されている。
-
-この問題が発生した場合、再インストールしたコンソールでは、構成済みの最新の言語パック セットは使用されません。 エラーは返されませんが、コンソールで使用可能な言語パックは変更されません。  
-
-**対応策:** 現在のコンソールをアンインストールしてから、新しいインストールとしてコンソールを再インストールします。 サイト サーバーのインストール フォルダーの ConsoleSetup.exe を使用することができます。 インストール時に、必ず、使用する言語バック ファイルを選択してください。
-
-
-### <a name="with-version-1702-the-default-site-boundary-group-is-configured-for-use-for-site-assignment"></a>バージョン 1702 では、既定サイトの境界グループはサイトの割り当て用に構成されます。
-<!--  SMS 486380   Applicability should only be to 1702. -->
-*次のものは、バージョン 1702 に適用されます。*  
-既定サイトの境界グループの [参照] タブの **[サイト割り当てにこの境界グループを使用する]** がオンになっており、**[割り当て済みサイト]** としてサイトがリストされ、構成を編集したり、削除したりできないように灰色表示されます。
-
-**対応策 :** なし。 この設定は無視してかまいません。 グループはサイト割り当てに対して有効になっていますが、既定サイトの境界グループはサイト割り当てでは使用されません。 1702 では、この構成により、既定サイトの境界グループが確実に正しいサイトに関連付けられます。
-
 
 
 ### <a name="when-installing-a-long-term-service-branch-site-using-version-1606-a-current-branch-site-is-installed"></a>バージョン 1606 を使用して Long-Term Service Branch をインストールすると、Current Branch サイトがインストールされる
@@ -112,29 +92,6 @@ ConfigMgrSetup.log:
  - *cd.latest\redist\languagepack\zhh* フォルダーを手動で削除してから、セットアップを再実行します。
 
 
-### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>SQL Server がリモートの場合、または共有メモリが無効な場合、サービス接続ツールから例外がスローされる
-<!-- 479223   Fixed in 1702 and later   -->
-*次のものは、バージョン 1610 以前のバージョンに適用されます。*  
-次のいずれかの条件に該当する場合、サービス接続ツールから例外が生成されます。  
- -  サービス接続ポイントをホストし、標準以外のポート (1433 以外のポート) を使用しているコンピューターとは別のコンピューターにサイト データベースがある
- -  サイト データベースがサービス接続ポイントと同じサーバー上にあるが、SQL プロトコルの**共有メモリ**が無効
-
-次のような例外がスローされます。
- - *未処理の例外が発生しました: System.Data.SqlClient.SqlException: SQL Server への接続を確立しているときにネットワーク関連またはインスタンス固有のエラーが発生しました。サーバーが見つからなかったか、アクセスできませんでした。インスタンス名が正しいことと、SQL Server がリモート接続を許可するように構成されていることを確認してください。(プロバイダー: 名前付きパイプのプロバイダー、エラー: 40 - SQL Server への接続を開けませんでした) --*
-
-**回避策**: ツールの使用時に、サービス接続ポイントをホストするサーバーのレジストリを変更して、SQL Server ポートに関する情報を含める必要があります。
-
-   1.   このツールの使用前に、次のレジストリ キーを編集し、使用しているポート番号を SQL Server 名に追加します。
-    - キー: HKLM\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\
-      - 値: &lt;SQL Server 名>
-    - 追加: **,&lt;ポート番号>**
-
-    たとえば、ポート *15001* を *testserver.test.net* というサーバーに追加する場合、結果のキーは ***HKLM\Software\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\testserver.test.net,15001*** になります。
-
-   2.   ポートをレジストリに追加すると、ツールは正常に動作するようになります。  
-
-   3.   ツールの使用が完了したら、**-connect** ステップと **-import** ステップの両方について、レジストリ キーを元の値に変更します。  
-
 
 <!-- ## Backup and recovery  -->
 
@@ -157,15 +114,6 @@ ConfigMgrSetup.log:
 サービス プランを作成した後で、サービス プランのプロパティを開き、**[評価スケジュール]** タブに移動し、**[スケジュールに基づいて規則を実行する]** を選んで、**[カスタマイズ]** をクリックし、カスタム スケジュールを作成します。 たとえば、60 日おきに実行するサービス プランを作成できます。  
 
 
-### <a name="when-a-high-risk-deployment-dialog-is-visible-to-a-user-subsequent-high-risk-dialogs-with-a-sooner-deadline-are-not-displayed"></a>危険度の高い展開のダイアログ ボックスがユーザーに表示されると、有効期限が迫っている後続の危険度の高いダイアログ ボックスが表示されない
-<!-- Fixed in 1702 and later -->
-*次のものは、バージョン 1610 以前のバージョンに適用されます。*   
-危険度の高いタスクの展開を作成しユーザーに展開すると、危険度の高い展開のダイアログ ボックスがユーザーに表示されます。 ユーザーがこのダイアログ ボックスを終了しないでいると、最初の危険度の高い展開より有効期限が近い別の危険度の高い展開を作成しても、最初のダイアログ ボックスを終了するまで、ダイアログ ボックスの更新は行われません。 それでも展開は、構成された期限で実行されます。
-
-**回避策**:  
-ユーザーは、最初の危険度の高い展開のダイアログ ボックスを閉じて、次の危険度の高い展開のダイアログ ボックスを表示する必要があります。
-
-
 
 ## <a name="software-updates"></a>ソフトウェア更新プログラム
 
@@ -180,6 +128,12 @@ XML 構成ファイルに、[Office 365 ProPlus クライアントでサポー�
 
 
 ## <a name="mobile-device-management"></a>モバイル デバイス管理  
+
+### <a name="beginning-with-version-1710-you-can-no-longer-deploy-windows-phone-81-vpn-profiles-to-windows-10------503274--should-be-fixed-by-1802-if-not-sooner---"></a>バージョン 1710 以降、Windows Phone 8.1 の VPN プロファイルを Windows 10 に展開できなくなりました   <!-- 503274  Should be fixed by 1802, if not sooner -->
+1710 では、Windows 10 デバイスにも適用可能な Windows Phone 8.1 ワークフローを使用して、VPN プロファイルを作成することができなくなりました。 これらのプロファイルの場合は、作成ウィザードに [サポートされているプラットフォーム] ページが表示されなくなり、Windows Phone 8.1 はバックエンドで自動的に選択されます。プロパティ ページでは、[サポートされているプラットフォーム] ページを利用できますが、Windows 10 のオプションは表示されません。
+
+**回避策**: Windows 10 デバイス用の Windows 10 VPN プロファイル ワークフローを使用してください。 ご利用の環境でそれが実行不可能な場合は、サポートにお問い合わせください。 サポートは、必要に応じて、Windows 10 のターゲット設定の追加を支援することができます。
+
 
 ### <a name="full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram"></a>フル ワイプを実行すると 4 GB RAM 未満の Windows 10 デバイスが無効になる
 RAM が 4 GB 未満の Windows 10 RTM デバイスでフル ワイプを実行すると (バージョン 1511 より前のバージョン)、デバイスが使用不可のままになる場合があります。 ワイプを試みた後、デバイスは起動できなくなり、応答しなくなります。
@@ -204,20 +158,4 @@ Android for Work の電子メール プロファイルを作成する場合、�
 
 <!-- ## Reports and monitoring    -->
 <!-- ## Conditional access   -->
-
-
-## <a name="endpoint-protection"></a>Endpoint Protection
-
-### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>マルウェア対策ポリシーを Windows Server 2016 Core に適用できません
-<!--  Product Studio bug 485370 added 04 19 2017   Fixed in 1702 -->
-*次のものは、バージョン 1610 以前のバージョンに適用されます。*  
-マルウェア対策ポリシーを Windows Server 2016 Core に適用できません。  エラー コードは 0x80070002 です。  ConfigSecurityPolicy.exe に依存関係がありません。
-
-**回避策:** 2017 年 5 月 9 日に配信された[サポート技術情報の記事 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) でこの問題は解決されています。
-
-
-### <a name="windows-defender-advanced-threat-protection-policies-fail-on-older-client-agents"></a>以前のクライアント エージェントで Windows Defender Advanced Threat Protection ポリシーが失敗する
-<!-- Product Studio bug 462286 added  05 25 2017 and valid until July 2017 GA release      Fixed in 1610 -->
-Configuration Manager バージョン 1610 以降のサイト サーバーから作成された Windows Defender Advanced Threat Protection ポリシーを、Configuration Manager 1606 以前のクライアントに適用できません。  クライアントがオンボードされておらず、ポリシー評価でエラーが報告されます。 Windows Defender Advanced Threat Protection の構成の **[展開状態]** に **[エラー]** と表示されます。
-
-**回避策**: Configuration Manager クライアントをバージョン 1610 以降にアップグレードします。
+<!-- ## Endpoint Protection -->

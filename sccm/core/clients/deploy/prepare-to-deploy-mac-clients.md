@@ -3,7 +3,7 @@ title: "Mac コンピューターにクライアント ソフトウェアを展�
 titleSuffix: Configuration Manager
 description: "Configuration Manager クライアントを Mac コンピューターに展開する前の構成タスク。"
 ms.custom: na
-ms.date: 05/04/2017
+ms.date: 11/28/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -15,17 +15,17 @@ caps.latest.revision: "12"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: b878c7b0328e89ff7b12bf44167fd12444a0cba4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 1d096111250af4061c94e71f8dc602ccae2d4607
+ms.sourcegitcommit: 1dd051d8548a19b724bb8f9e6a2278a4901ed916
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="prepare-to-deploy-client-software-to-macs"></a>Mac コンピューターにクライアント ソフトウェアを展開するための準備
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-[Configuration Manager クライアントを Mac コンピューターに展開](/sccm/core/clients/deploy/deploy-clients-to-macs)する準備ができていることを確認するには、以下の手順に従ってください。 
+[Configuration Manager クライアントを Mac コンピューターに展開](/sccm/core/clients/deploy/deploy-clients-to-macs)する準備ができていることを確認するには、以下の手順に従ってください。
 
 ## <a name="mac-prerequisites"></a>Mac の前提条件
 
@@ -33,9 +33,9 @@ Configuration Manager メディアでは、Mac クライアント インスト�
 
 **サポートされるバージョン:**  
 
--   **Mac OS X 10.6** (Snow Leopard) 
+-   **Mac OS X 10.6** (Snow Leopard)
 
--   **Mac OS X 10.7** (Lion) 
+-   **Mac OS X 10.7** (Lion)
 
 -   **Mac OS X 10.8** (Mountain Lion)
 
@@ -49,11 +49,13 @@ Configuration Manager メディアでは、Mac クライアント インスト�
 
 -   **Mac OS X 10.12** (macOS Sierra)  
 
+-   **Mac OS X 10.13** (macOS High Sierra)  
+
 ## <a name="certificate-requirements"></a>証明書の要件
 Mac コンピューターにクライアントをインストールして管理するには、公開キー基盤 (PKI) 証明書が必要です。 PKI 証明書は、相互認証と暗号化データ転送を使用して、Mac コンピューターと Configuration Manager サイト間の通信を保護します。 Configuration Manager では、Microsoft 証明書サービスを使用して、エンタープライズ証明機関 (CA) と、Configuration Manager 登録ポイントおよび登録プロキシ ポイント サイト システムの役割に、ユーザー クライアント証明書を要求してインストールできます。 または、証明書が Configuration Manager の要件を満たしている場合、Configuration Manager とは独立して、コンピューター証明書を要求してインストールできます。   
-  
+
 Configuration Manager の Mac クライアントは常に証明書失効確認を実行します。 この機能を無効にすることはできません。  
-  
+
 Mac クライアントで、CRL の場所を特定できないことが原因でサーバー証明書の証明書失効ステータスを確認できない場合、クライアントは Configuration Manager サイト システムに正常に接続できなくなります。 特に、Mac クライアントが発行側の証明機関とは別のフォレストにある場合、CRL の設計を確認して、サイト システム サーバーに接続するために、Mac クライアントが CRL 配布ポイント (CDP) の場所を特定し、接続できるようにしてください。  
 
 Mac コンピューターに構成マネージャー クライアントをインストールする前に、クライアント証明書をインストールする方法を決定します。  
@@ -83,7 +85,7 @@ Mac クライアントは、クライアントを管理する Configuration Mana
 
 Web サーバー証明書には、サイト システム プロパティで指定されるインターネット FQDN が含まれていなければなりません。 サーバーはインターネットからアクセスできない場合でも Mac コンピューターをサポートできます。 インターネットベースのクライアント管理が不要な場合、インターネット FQDN にイントラネット FQDN 値を指定できます。  
 
-管理ポイント、配布ポイント、および登録プロキシ ポイントの Web サーバー証明書に、サイト システムのインターネット FQDN 値を指定します。 
+管理ポイント、配布ポイント、および登録プロキシ ポイントの Web サーバー証明書に、サイト システムのインターネット FQDN 値を指定します。
 
 この Web サーバー証明書を作成してインストールする展開の例については、「[IIS を実行するサイト システム用の Web サーバー証明書の展開](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012)」をご覧ください。  
 
@@ -119,10 +121,10 @@ Web サーバー証明書には、サイト システム プロパティで指�
 
  クライアントのインストールに配布ポイントは必要ありませんが、クライアントをインストールした後で、これらのコンピューターにソフトウェアを展開する場合は、インターネットからのクライアント接続を許可するように配布ポイントを構成する必要があります。  
 
- 
+
 ### <a name="to-configure-management-points-and-distribution-points-to-support-macs"></a>管理ポイントと配布ポイントで Mac のサポートを構成するには  
 
-この手順を開始する前に、管理ポイントおよび配布ポイントを実行するサイト システム サーバーがインターネット FQDN を指定して構成されていることを確認してください。 このようなサーバーがインターネットベースのクライアント管理をサポートしない場合、インターネット FQDN 値としてイントラネット FQDN を指定できます。 
+この手順を開始する前に、管理ポイントおよび配布ポイントを実行するサイト システム サーバーがインターネット FQDN を指定して構成されていることを確認してください。 このようなサーバーがインターネットベースのクライアント管理をサポートしない場合、インターネット FQDN 値としてイントラネット FQDN を指定できます。
 
 これらのサイト システムの役割はプライマリ サイト内にある必要があります。  
 
