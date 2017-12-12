@@ -3,7 +3,7 @@ title: "Endpoint Protection クライアントのよく寄せられる質問"
 titleSuffix: Configuration Manager
 description: "Windows Defender と Endpoint Protection についてよく寄せられる質問に回答します。"
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 12/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 caps.latest.revision: "15"
-author: NathBarn
-ms.author: nathbarn
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: a3fb0bc39f1606f1a65b5623c9567819b1a0c52e
-ms.sourcegitcommit: 5d46ed593b1cc461ea3f6ff6917bcd272b095ed7
+ms.openlocfilehash: 2656a5c40dbd2916ef36268936a4e2163ebde14d
+ms.sourcegitcommit: 372171a5cd8d143d6d47b651018cda0c91cad67c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection クライアントのよく寄せられる質問
 
@@ -203,7 +203,7 @@ Windows Defender によって検出された望ましくない項目または有
 
 ##  <a name="what-is-real-time-protection"></a>リアルタイム保護とは何ですか。  
 
- リアルタイム保護を使用すると、Windows Defender はコンピューターを常時監視し、ウイルスやスパイウェアなどの潜在的な脅威がコンピューター上でインストールまたは実行を試みるとアラートを通知することができます。 この機能は、Windows Defender よるコンピューターの保護における重要な要素であるため、リアルタイム保護は常に有効にしてください。 リアルタイム保護がオフにされると、Windows Defender はユーザーに通知を行い、コンピューターの状態を [危険] に変更します。  
+ リアルタイム保護を使用すると、Windows Defender はコンピューターを常時監視し、ウイルスやスパイウェアなどの潜在的な脅威がコンピューター上でインストールまたは実行を試みるとアラートを通知することができます。 この機能は、Windows Defender よるコンピューターの保護における重要な要素であるため、リアルタイム保護は常に有効にしてください。 リアルタイム保護がオフにされると、Windows Defender はユーザーに通知を行い、コンピューターの状態を**「危険」**に変更します。  
 
  リアルタイム保護によって脅威や潜在的な脅威が検出されると、Windows Defender によって必ず通知が表示されます。 次のオプションから選択できます。  
 
