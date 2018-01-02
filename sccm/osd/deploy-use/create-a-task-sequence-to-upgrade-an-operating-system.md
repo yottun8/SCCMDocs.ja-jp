@@ -3,7 +3,7 @@ title: "オペレーティング システムをアップグレードするタ�
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager のタスク シーケンスで、オペレーティング システムを Windows 7 以降から Windows 10 に自動的にアップグレードできます。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "12"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 2787c8a692321a49cf287fc2f09858690360dc25
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 002acbcff01105e612e8c090606a6aa5d45a014b
+ms.sourcegitcommit: 52b956cfe32c3f06ae68d6ba6fc3244ce5a66325
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-operating-system-in-system-center-configuration-manager"></a>System Center Configuration Manager のオペレーティング システムをアップグレードするタスク シーケンスを作成する
 
@@ -47,11 +47,11 @@ System Center Configuration Manager でタスク シーケンスを使用して�
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 
-3.  **[ ホーム ]** タブの **[ 作成 ]** グループで **[ タスク シーケンスの作成 ]** をクリックして、タスク シーケンスの作成ウィザードを起動します。  
+3.  **[ホーム]** タブの **[作成]** グループで **[タスク シーケンスの作成]** をクリックして、タスク シーケンスの作成ウィザードを起動します。  
 
 4.  **[新しいタスク シーケンスの作成]** ページで、 **[オペレーティング システムをアップグレード パッケージからアップグレードする]**をクリックしてから、 **[次へ]**をクリックします。  
 
-5.  **[ タスク シーケンス情報 ]** ページで次の設定を指定し、**[ 次へ ]** をクリックします。  
+5.  **[タスク シーケンス情報]** ページで次の設定を指定し、**[次へ]** をクリックします。  
 
     -   **タスク シーケンス名**:タスク シーケンスを識別する名前を指定します。  
 
@@ -78,7 +78,7 @@ System Center Configuration Manager でタスク シーケンスを使用して�
 ## <a name="configure-pre-cache-content"></a>コンテンツの事前キャッシュを構成する
 バージョン 1702 以降では、タスク シーケンスの利用可能な展開について、事前キャッシュ機能を使うように設定できます。これにより、ユーザーがコンテンツをインストールする前に、関連するコンテンツのみをクライアントにダウンロードさせることができます。
 > [!TIP]  
-> バージョン 1702 で導入された事前キャッシュは、プレリリース機能です。 有効にするには、「[更新プログラムからのプレリリース機能の使用](/sccm/core/servers/manage/pre-release-features)」をご覧ください。
+> この機能はバージョン 1702 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 1706 以降のバージョンでは、この機能はプレリリース機能ではありません。
 
 たとえば、Windows 10 のインプレース アップグレード タスク シーケンスを展開する場合で、すべてのユーザーに対して必要なタスク シーケンスは 1 つのみで、複数のアーキテクチャおよび/または言語に対応する必要があるとします。 1702 より前のバージョンでは、利用可能な展開を作成した場合、その後ユーザーがソフトウェア センターで **[インストール]** をクリックすると、その時点でコンテンツがダウンロードされます。 この場合は、インストールできる状態になるまで、さらに時間がかかります。 また、タスク シーケンスで参照されているすべてのコンテンツがダウンロードされます。 これには、すべての言語およびアーキテクチャ用のオペレーティング システム アップグレード パッケージが含まれます。 それぞれのサイズが約 3 GB だとすると、ダウンロード パッケージは非常に大きなものとなります。
 

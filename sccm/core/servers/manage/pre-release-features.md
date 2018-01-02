@@ -3,7 +3,7 @@ title: "プレリリース機能"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager のプレリリース機能"
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "36"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 441b698d514fda8877eb1b020b7833350f46111f
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: c132f1512d8a1d6a4657079c8ecd2d7a050797b9
+ms.sourcegitcommit: 52b956cfe32c3f06ae68d6ba6fc3244ce5a66325
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="pre-release-features-in-system-center-configuration-manager"></a>System Center Configuration Manager のプレリリース機能
 *適用対象: System Center Configuration Manager (Current Branch)*
@@ -31,9 +31,6 @@ ms.lasthandoff: 12/04/2017
 同意する操作は階層ごとに 1 回限りの操作であり、元に戻すことはできません 同意するまでは、更新プログラムに含まれている新しいプレリリース機能を有効にすることはできません。 プレリリース機能を有効にした後で無効にすることはできません。
 
 同意するには、コンソールで、**[管理]** > **[サイトの構成]** > **[サイト]** に移動してから、**[階層設定]** を選択します。 **[全般]** タブで、**[プレリリース機能を使用することに同意する]** を選択します。
-
- > [!NOTE]
- > 1602 より後の更新バージョンをインストールする前に更新プログラム 1602 のプレリリース機能を有効にした場合は、プレリリース機能を使用することに同意しなくても、それらの機能は有効です。
 
 プレリリース機能を含む更新プログラムをインストールすると、これらの機能は、更新プログラムに含まれる標準の機能と一緒に、[更新とサービス] ウィザードに表示されます。
   - **既に同意した場合:** 更新プログラムのインストール時に、[更新とサービス] ウィザード内でプレリリース機能を有効にすることができます。 これを行うには、その他の機能の場合と同様に、プレリリース機能を選択します。     
@@ -49,13 +46,15 @@ ms.lasthandoff: 12/04/2017
 
  |機能          |プレリリース版として追加 | 完全機能として追加|  
 |------------------|---------------------|---------------------|
-| Configuration Manager コンソールから PowerShell スクリプトを作成して実行する |  [バージョン 1706](/sccm/apps/deploy-use/create-deploy-scripts)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Configuration Manager を使用した Device Guard 管理 |  [バージョン 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| アプリケーションをインストールする前に実行中の実行可能ファイルを確認する  |   [バージョン 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |[バージョン 1706](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application)|
-| データ ウェアハウス サービス ポイント  |  [バージョン 1702](/sccm/core/servers/manage/data-warehouse) |[バージョン 1706](/sccm/core/servers/manage/data-warehouse)|
-| クライアントへのコンテンツ配布のピア キャッシュ |  [バージョン 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) | [バージョン 1710](/sccm/core/plan-design/hierarchy/client-peer-cache)|
-| クラウド管理ゲートウェイ |  [バージョン 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| クライアント データ ソース ダッシュボード |  [バージョン 1610](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Microsoft Operations Management Suite コネクタ  | [バージョン 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| クラスター対応のコレクションのサービス (サーバー グループの提供)| [バージョン 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-|System Center Configuration Manager が管理する PC の条件付きアクセス | [バージョン 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     | [バージョン 1702](/sccm/mdm/deploy-use/manage-access-to-services)                     |
+| タスク シーケンス ステップの実行<!-- 1261338 --> |  [バージョン 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| Windows Defender Exploit Guard <!-- 1355468 --> |  [バージョン 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| Configuration Manager コンソールから PowerShell スクリプトを作成して実行する<!-- 1236459 --> |  [バージョン 1706](/sccm/apps/deploy-use/create-deploy-scripts)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| Configuration Manager を使用した Device Guard 管理<!-- 1319346 --> |  [バージョン 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| タスク シーケンス コンテンツの事前キャッシュ<!-- 1021244 --> |  [バージョン 1702](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) | [バージョン 1706](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)|
+| アプリケーションをインストールする前に実行中の実行可能ファイルを確認する<!-- 1284624 --> |   [バージョン 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |[バージョン 1706](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application)|
+| データ ウェアハウス サービス ポイント<!-- 1277922 --> |  [バージョン 1702](/sccm/core/servers/manage/data-warehouse) |[バージョン 1706](/sccm/core/servers/manage/data-warehouse)|
+| クライアントへのコンテンツ配布のピア キャッシュ<!-- 1101436 --> |  [バージョン 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) | [バージョン 1710](/sccm/core/plan-design/hierarchy/client-peer-cache)|
+| クラウド管理ゲートウェイ<!-- 1101764 --> |  [バージョン 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| Microsoft Operations Management Suite コネクタ<!-- 1236739 --> | [バージョン 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| クラスター対応のコレクションのサービス (サーバー グループの提供)<!-- 1081776 --> | [バージョン 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| System Center Configuration Manager が管理する PC の条件付きアクセス<!--  --> | [バージョン 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     | [バージョン 1702](/sccm/mdm/deploy-use/manage-access-to-services)                     |

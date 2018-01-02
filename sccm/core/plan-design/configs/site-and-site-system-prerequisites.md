@@ -15,11 +15,11 @@ caps.latest.revision: "5"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 34886a38ed4b797b254e3fb83eb66588c7e1d116
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 2c87cf0e63e4b95f5b94b6cda9e2aa40c4389184
+ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイトとサイト システムの前提条件
 
@@ -258,8 +258,9 @@ ms.lasthandoff: 12/04/2017
     > [!NOTE]  
     >  WDS は、PXE またはマルチキャストをサポートするように配布ポイントを構成するときに、Windows Server 2012 以降を実行するサーバーに自動的にインストールされ構成されます。  
 
+<!--sms.503672 -Clarified BITS use-->
 > [!NOTE]  
-> 配布ポイント サイト システムの役割に、バックグラウンド インテリジェント転送サービス (BITS) は必要ありません。 配布ポイントのコンピューターに BITS が構成されている場合、BITS を使用するクライアントによるコンテンツのダウンロードを効率化するために、配布ポイントのコンピューターの BITS は使用されません。  
+> 配布ポイントはコンテンツを転送するときに、Windows オペレーティング システムに組み込まれた**バックグラウンド インテリジェント転送サービス** (BITS) を使用します。 配布ポイントの役割には、クライアントがそこに情報をアップロードしないため、オプションの BITS IIS サーバー拡張機能をインストールする必要はありません。  
 
 ###  <a name="bkmk_2012EPPpreq"></a> Endpoint Protection ポイント  
 **Windows Server の役割と機能:**  
@@ -626,8 +627,9 @@ ms.lasthandoff: 12/04/2017
     > [!NOTE]  
     >  WDS は、PXE またはマルチキャストをサポートするように配布ポイントを構成するときに、Windows Server 2012 以降を実行するサーバーに自動的にインストールされ構成されます。  
 
+<!--sms.503672 -Clarified BITS use-->
 > [!NOTE]  
-> 配布ポイント サイト システムの役割に、バックグラウンド インテリジェント転送サービス (BITS) は必要ありません。 配布ポイントのコンピューターに BITS が構成されている場合、BITS を使用するクライアントによるコンテンツのダウンロードを効率化するために、配布ポイントのコンピューターの BITS は使用されません。  
+> 配布ポイントはコンテンツを転送するときに、Windows オペレーティング システムに組み込まれた**バックグラウンド インテリジェント転送サービス** (BITS) を使用します。 配布ポイントの役割には、クライアントがそこに情報をアップロードしないため、オプションの BITS IIS サーバー拡張機能をインストールする必要はありません。   
 
 
 ###  <a name="bkmk_2008EPPpreq"></a> Endpoint Protection ポイント  

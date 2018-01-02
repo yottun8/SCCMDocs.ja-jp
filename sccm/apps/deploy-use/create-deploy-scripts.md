@@ -3,7 +3,7 @@ title: "スクリプトを作成して実行する"
 titleSuffix: Configuration Manager
 description: "クライアント デバイスで PowerShell スクリプトを作成して実行する"
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 11/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,31 +16,31 @@ caps.handback.revision: "0"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: angrobe
-ms.openlocfilehash: 964f6d39c4c1afc82ff4336821740923d27cd569
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 1472f697ae8b82e6268433aa6398fcc10a429994
+ms.sourcegitcommit: 5f4a584d4a833b0cc22bd8c47da7dd55aced97fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Configuration Manager コンソールから PowerShell スクリプトを作成して実行する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-PowerShell スクリプトを実行する機能と System Center Configuration Manager の統合を改善しました。 PowerShell には、高度な自動化されたスクリプトを作成できるという利点があります。PowerShell スクリプトは、多くの方が参加するコミュニティで理解され、共有されています。 PowerShell スクリプトを使用すると、ソフトウェアを管理するカスタム ツールを簡単に構築できます。また、大規模なジョブをより簡単に、一貫した方法で実行できるので、日常のタスクをすぐに完了できるようになります。
+>[!TIP]
+>PowerShell スクリプトを実行する機能は、バージョン 1706 で導入されたプレリリース機能です。 スクリプトを有効にする方法については、「[System Center Configuration Manager のプレリリース機能](/sccm/core/servers/manage/pre-release-features)」を参照してください。
+
+PowerShell スクリプトを実行する機能と System Center Configuration Manager の統合を改善しました。 PowerShell には、高度な自動化されたスクリプトを作成できるという利点があります。PowerShell スクリプトは、多くの方が参加するコミュニティで理解され、共有されています。 このスクリプトを使用すると、ソフトウェアを管理するカスタム ツールを簡単に構築できます。また、大規模なジョブをより簡単に、一貫した方法で実行できるので、日常のタスクをすぐに完了できるようになります。
 
 PowerShell スクリプトは System Center Configuration Manager と統合されているので、*スクリプトの実行*機能を使用して以下を実行できます。
 
-- Configuration Manager と共に使用するようにスクリプトを作成して編集する。
-- ロールとセキュリティ スコープを使用してスクリプトの使用法を管理する。  
+- System Center Configuration Manager と共に使用するようにスクリプトを作成して編集する。
+- ロールとセキュリティ スコープを使用してスクリプトの使用法を管理する。 
 - コレクションまたは個々のオンプレミスの管理対象 Windows PC でスクリプトを実行する。
 - クライアント デバイスから高速に集計されたスクリプト結果を取得する。
 - スクリプトの実行を監視し、スクリプトの出力からレポート結果を表示する。
 
->[!IMPORTANT]
+>[!WARNING]
 >スクリプトを利用する場合は、目的を持って注意して使用することをお勧めします。 分離されたロールとスコープという、開発時に役立つ追加の保護策も組み込まれています。 意図しないスクリプトの実行を防ぐために、実行前にスクリプトが正しいことを検証し、信頼できる発行元のスクリプトであることを確認してください。 拡張文字や他の難読化を配慮し、スクリプトのセキュリティ保護について学習してください。
-
->[!TIP]
->PowerShell スクリプトはバージョン 1706 で導入されたプレリリース機能です。 スクリプトを有効にする方法については、「[System Center Configuration Manager のプレリリース機能](/sccm/core/servers/manage/pre-release-features)」を参照してください。
 
 ## <a name="prerequisites"></a>必要条件
 
@@ -49,7 +49,7 @@ PowerShell スクリプトは System Center Configuration Manager と統合さ�
 - スクリプトを使用するには、適切な Configuration Manager のセキュリティ ロールのメンバーである必要があります。
 - スクリプトをインポートおよび作成するには: **完全な権限を持つ管理者**のセキュリティ ロールで、**SMS スクリプト**への**作成**アクセス許可がアカウントに付与されている必要があります。
 - スクリプトを承認または拒否するには: **完全な権限を持つ管理者**のセキュリティ ロールで、**SMS スクリプト**への**承認**アクセス許可がアカウントに付与されている必要があります。
-- スクリプトを実行するには: **コンプライアンス設定マネージャー**のセキュリティ ロールで、**コレクション**への**スクリプトの実行**アクセス許可がアカウントに付与されている必要があります。
+- スクリプトを実行するには: **完全な権限を持つ管理者**のセキュリティ ロールで、**コレクション**への**スクリプトの実行**アクセス許可がアカウントに付与されている必要があります。
 
 Configuration Manager のセキュリティ ロールの詳細については、「[ロール ベース管理の基礎](/sccm/core/understand/fundamentals-of-role-based-administration)」を参照してください。
 
@@ -58,7 +58,7 @@ Configuration Manager のセキュリティ ロールの詳細については、
 現在、スクリプトの実行は以下をサポートしています。
 
 - スクリプト言語: PowerShell
-- パラメーターの型: 整数、文字列
+- パラメーターの型: 整数、文字列、リスト
 
 ## <a name="run-script-authors-and-approvers"></a>スクリプトの実行の作成者と承認者
 
@@ -120,79 +120,83 @@ Configuration Manager のセキュリティ ロールの詳細については、
 
 スクリプト内の各パラメーターには、そのパラメーターに検証を追加するための **[Script Parameter Properties]\(スクリプト パラメーター プロパティ\)** ダイアログがあります。 検証を追加した後に、その検証を満たしていないパラメーターの値を入力すると、エラーが発生します。
 
-#### <a name="example-firstname"></a>例: FirstName
+#### <a name="example-firstname"></a>例: *FirstName*
 
-この例では、文字列パラメーター *FirstName* のプロパティを設定できます。 **カスタム エラー**には、省略可能なフィールドがあります。 このフィールドは、特定のフィールドに関するユーザー ガイダンスや、文字列パラメーター (この例では *FirstName*) の使用に関するユーザー向けのガイダンスを追加する場合に便利です。
+この例では、文字列パラメーター *FirstName* のプロパティを設定できます。
 
 ![スクリプトのパラメーター - 文字列](./media/run-scripts/RS-parameters-string.png)
+
+
+**[スクリプト パラメーターのプロパティ]** ダイアログの検証セクションでは、次のフィールドを使用できます。
+
+- **[最小の長さ]** - *[FirstName]* フィールドの最小の文字数。
+- **[最大の長さ]** - *[FirstName]* フィールドの最大の文字数。
+- **[RegEx]** - *正規表現 (Regular Expression)* の短縮形。 正規表現の使用方法については、次のセクション「*正規表現による検証を使用する*」をご覧ください。
+- **[カスタム エラー]** - システム検証エラー メッセージの代わりに使う独自のカスタム エラー メッセージを追加するのに役立ちます。
+
+#### <a name="using-regular-expression-validation"></a>正規表現による検証を使用する
+
+正規表現はプログラミングのコンパクトな形式で、エンコードされた検証に対して文字列をチェックします。 たとえば、*[RegEx]* フィールドに `[^A-Z]` を指定することによって、*[FirstName]* フィールド内の大文字アルファベット文字の有無をチェックすることができます。
+
+このダイアログ ボックスの正規表現処理は、.NET Framework でサポートされています。 正規表現の使用方法の詳細については、「[.NET の正規表現](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions)」をご覧ください。 
+
 
 ## <a name="script-examples"></a>スクリプトの例
 
 この機能で利用する可能性があるスクリプトの例をいくつか紹介します。
 
-### <a name="create-a-folder"></a>フォルダーを作成する
+### <a name="create-a-new-folder-and-file"></a>新しいフォルダーとファイルの作成
+
+このスクリプトは、入力した名前に基づいて新しいフォルダーを作成し、その中にファイルを作成します。
 
 ``` powershell
-New-Item "c:\scripts" -type folder name
-```
-
-### <a name="create-a-file"></a>ファイルを作成する
-
-```powershell
-New-Item "c:\scripts\new_file.txt" -type file name
-```
-
-### <a name="ping-a-given-computer"></a>特定のコンピューターに ping 送信する
-
-このスクリプトは文字列を受け取り、*ping* 操作のパラメーターとして使用します。
-
-``` powershell
-Param
-(
- [String][Parameter(Mandatory=$True, Position=1)] $Computername
+Param(
+[Parameter(Mandatory=$True)]
+[string]$FolderName,
+[Parameter(Mandatory=$True)]
+[string]$FileName,
 )
 
-Ping $Computername
+New-Item $FolderName -type directory
+New-Item $FileName -type file
 ```
 
-### <a name="get-battery-status"></a>バッテリのステータスを取得する
+### <a name="get-os-version"></a>OS バージョンの取得
 
-このスクリプトは、WMI を使用してコンピューターにバッテリのステータスを照会します。
+このスクリプトは WMI を使用してコンピューターに OS バージョンを照会します。
 
 ``` powershell
-Write-Output (Get-WmiObject -Class Win32_Battery).BatteryStatus
-
+Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ```
 
-## <a name="run-a-script"></a>スクリプトの実行
+## <a name="run-a-script"></a>[スクリプトの実行]
 
-スクリプトが承認されたら、選択したコレクションに対してそのスクリプトを実行できます。 スクリプトの実行が開始されると、高い優先度のシステムを使用してすばやく起動され、1 時間以内に実行されます。 スクリプトの結果は、低速な状態メッセージ システムを使用して返されます。
+スクリプトが承認されたら、1 つのデバイスまたはコレクションに対してそのスクリプトを実行できます。 スクリプトは実行が始まると、優先度の高いシステムを使用してすばやく起動され、1 時間以内にタイムアウトします。 そしてスクリプトの結果は、状態メッセージ システムを使用して返されます。
+
+スクリプトのターゲットのコレクションを選択するには、以下の操作を行います。
 
 1. Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。
 2. [資産とコンプライアンス] ワークスペースで **[デバイス コレクション]** をクリックします。
 3. **[デバイス コレクション]** リストで、スクリプトを実行するデバイスのコレクションをクリックします。
-4. **[ホーム]** タブの **[すべてのシステム]** グループで、**[スクリプトの実行]**をクリックします。
+4. コレクションを選択し、**[スクリプトの実行]** をクリックします。
 5. **スクリプトの実行**ウィザードの **[スクリプト]** ページで、リストからスクリプトを選択します。 承認済みスクリプトのみが表示されます。
 6. **[次へ]** をクリックして、ウィザードを完了します。
 
 >[!IMPORTANT]
->ターゲット クライアントの電源が切れているなどの理由で、スクリプトが 1 時間以内に実行されない場合は、再実行する必要があります。
+>ターゲット デバイスの電源が 1 時間のあいだ切れているなどの理由で、スクリプトが実行されない場合は、再実行する必要があります。
 
 ### <a name="target-machine-execution"></a>ターゲット コンピューターの実行
+
 スクリプトは、対象となるクライアントの*システム* アカウントまたは*コンピューター* アカウントとして実行されます。 このアカウントのネットワーク アクセスは制限されています。 スクリプトによるリモート システムおよびリモートの場所へのアクセスは、その点を考慮して準備する必要があります。
 
-## <a name="work-flow-and-monitoring"></a>ワーク フローと監視
+## <a name="script-monitoring"></a>スクリプトの監視
 
-ここでは、スクリプトの実行を作成、承認、実行、監視というワーク フローとして見た場合について説明します。
+デバイスのコレクション上でスクリプトの実行を開始した後は、次の手順で操作を監視します。 バージョン 1710 以降、スクリプトの実行時にリアルタイムで監視し、特定のスクリプトの実行についてレポートに返すこともできるようになりました。 <br>
 
-![スクリプトの実行 - ワーク フロー](./media/run-scripts/RS-run-scripts-work-flow.png)
-
-### <a name="script-monitoring"></a>スクリプトの監視
-
-デバイスのコレクション上でスクリプトの実行を開始した後は、次の手順で操作を監視します。 バージョン 1710 以降、スクリプトの実行時にリアルタイムで監視し、特定のスクリプトの実行についてレポートに返すこともできるようになりました。
+![スクリプト モニター - スクリプトの実行ステータス](./media/run-scripts/RS-monitoring-three-bar.png)
 
 1. Configuration Manager コンソールで、**[監視]** をクリックします。
-2. **[監視]** ワークスペースで、**[スクリプトのステータス]** をクリックします。 ![スクリプト モニター - スクリプトの実行のステータス](./media/run-scripts/RS-monitoring-three-bar.png)
+2. **[監視]** ワークスペースで、**[スクリプトのステータス]** をクリックします。
 3. **[スクリプトのステータス]** リストには、クライアント デバイスで実行した各スクリプトの結果が表示されます。 スクリプトの終了コード **0** は、通常、スクリプトが正常に実行されたことを示します。
 
 ## <a name="see-also"></a>関連項目

@@ -3,7 +3,7 @@ title: "ライセンスとブランチの詳細"
 titleSuffix: Configuration Manager
 description: "このトピックでは、2016 年 10 月リリースの System Center Configuration Manager で利用できるインストール オプションのライセンス要件について説明します。Current Branch バージョン 1606、Long-Term Servicing Branch (LTSB)、Current Branch の評価版インストールが対象となります。"
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: aaroncz
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 0890b25f4b5b96a8d39b0dcf6f0aa659c07265db
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: bcb25fc6faad3d5f7162ae4ceb200c6de1c1c25b
+ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>System Center Configuration Manager のライセンスとブランチ
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/01/2017
 
 |ブランチ|ライセンス|説明|
 |----------------|---------------------|--------------------|
-|Current Branch | Configuration Manager に対してソフトウェア アシュアランス契約 (または同等の権限) が有効になっている必要があります。 </br></br> このトピックの「[ソフトウェア アシュアランスと Current Branch](#software-assurance-and-the-current-Branch)」を参照してください。| 品質と機能に関する更新プログラムを Microsoft から定期的に受信する必要がある運用環境での使用に対応しています。 </br></br> このブランチでは、すべての機能と強化された機能を使用するためのアクセス権が提供されます。 </br></br> 各バージョン更新は、リリース後、1 年間はサポートされます。この[サポート期間内](/sccm/core/servers/manage/current-branch-versions-supported)に次の新しいバージョンへの更新を行う必要があります。|
+|Current Branch | Configuration Manager に対してソフトウェア アシュアランス契約 (または同等の権限) が有効になっている必要があります。 </br></br> このトピックの「[ソフトウェア アシュアランスと Current Branch](#software-assurance-and-the-current-Branch)」を参照してください。| 品質と機能に関する更新プログラムを Microsoft から定期的に受信する必要がある運用環境での使用に対応しています。 </br></br> このブランチでは、すべての機能と強化された機能を使用するためのアクセス権が提供されます。 </br></br> Configuration Manager 1710 より前にリリースされたバージョンについては、サポートは 12 か月間です。 1710 リリース以降では、更新プログラムの各バージョンは一般公開リリース日から 18 か月間サポートされます。 詳細については、「[System Center Configuration Manager の Current Branch バージョンのサポート](/sccm/core/servers/manage/current-branch-versions-supported)」をご覧ください。|
 |Long-Term Servicing Branch (LTSB)| リリース時 (2016 年 10 月 1 日) に Microsoft との間で現在有効になっているソフトウェア アシュアランス契約が必要です。 </br></br> このトピックの「[ソフトウェア アシュアランスと LTSB](#software-assurance-and-the-ltsb)」を参照してください。 | 運用環境での使用に対応しています。 2016 年 10 月 1 日以降、Configuration Manager に対するソフトウェア アシュアランス (SA) または同等のサブスクリプション権限が期限切れになったお客様向けです。 </br></br> Current Branch と比較して、このブランチには制限があります。 </br></br> このブランチでは、Configuration Manager に対するセキュリティ上重要な更新プログラムは利用できますが、新機能については利用できません。 |
 |Current Branch の評価版インストール| Microsoft とのソフトウェア アシュアランス契約は必要ありません。 | [評価版インストール](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) は必ず Current Branch となり、180 日間使用できます。 </br></br> 評価版インストールは、Current Branch の完全インストールにアップグレードできます。 評価版インストールを Long-Term Servicing Branch にアップグレードすることはできません。|
 

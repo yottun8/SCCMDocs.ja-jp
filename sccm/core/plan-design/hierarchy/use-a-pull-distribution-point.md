@@ -15,11 +15,11 @@ caps.latest.revision: "9"
 author: aaroncz
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: ea8eead4706472a02f216b432ea9f2e6bdf23f66
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: f0feba771dcc75d84cd1233fea562472ff6c1158
+ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="use-a-pull-distribution-point-with-system-center-configuration-manager"></a>System Center Configuration Manager でのプル配布ポイントの使用
 
@@ -105,8 +105,10 @@ System Center Configuration Manager のプル配布ポイントは、サイト �
 -   このフレームワークは、配布ポイントをプル配布ポイントとして構成するときに **Pulldp.msi** によってインストールされます。 フレームワークは、Configuration Manager クライアントを必要としません。  
 
 -   プル配布ポイントのインストール後に、そのコンピューターで CCMExec サービスが実行されていないと、プル配付ポイントが正常に機能しません。  
+<!--sms.503672 -Clarified BITS use-->
+-   プル配布ポイントはコンテンツを転送するときに、Windows オペレーティング システムに組み込まれた**バックグラウンド インテリジェント転送サービス** (BITS) を使用します。 プル配布ポイントには、オプションの BITS IIS Server 拡張機能をインストールする必要はありません。
 
--   プル配布ポイントがコンテンツを転送するときに、 **バックグラウンド インテリジェント転送サービス** (BITS) を使用してコンテンツが転送され、配布ポイントのコンピューターの **datatransferservice.log** と **pulldp.log** に操作が記録されます。  
+-  プル配布ポイントは、配布ポイントのコンピューターの **datatransferservice.log** および **pulldp.log** に操作を記録します。
 
 ## <a name="see-also"></a>関連項目  
  [System Center Configuration Manager でのコンテンツ管理の基本的な概念](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   

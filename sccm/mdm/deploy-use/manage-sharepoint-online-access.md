@@ -3,7 +3,7 @@ title: "SharePoint Online アクセスの管理"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の SharePoint Online 条件付きアクセスを使用して OneDrive へのアクセスを管理する方法について説明します。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 12/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 49cec466-1676-4fe2-a2fe-5004f01d735e
 caps.latest.revision: "11"
 caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 2c1d7cd3462a54a064ec47d0b375ee4cdb25a4b4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 99b2aca418b7ce28a4216b38e711b3d38973e2b7
+ms.sourcegitcommit: 372171a5cd8d143d6d47b651018cda0c91cad67c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="manage-sharepoint-online-access-in-system-center-configuration-manager"></a>System Center Configuration Manager での SharePoint Online アクセスの管理
 
@@ -138,7 +138,7 @@ System Center Configuration Manager の **SharePoint Online** 条件付きアク
  >[!NOTE]
  >Azure AD 管理コンソールで条件付きアクセス ポリシーを作成することもできます。 Azure AD の管理コンソールでは、Intune デバイス条件付きアクセス ポリシー (Azure AD のデバイスベースの条件付きアクセス ポリシーと呼ぶ) に加えて、多要素認証のような他の条件付きアクセス ポリシーを作成することができます。 また、Salesforce や Box など、Azure AD がサポートするサード パーティ製エンタープライズ アプリ用の条件付きアクセス ポリシーを設定することもできます。 詳細については、「[Azure Active Directory に接続されたアプリケーションのアクセスを制御する Azure Active Directory デバイス ベースの条件付きアクセス ポリシーを設定する方法](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/)」を参照してください。  
 
-1.  Configuration Manager コンソールで、**[ 資産とコンプライアンス]** をクリックします。  
+1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
 
 2.  **[SharePoint Online の条件付きアクセス ポリシーを有効にする]**を選択します。  
 
@@ -164,7 +164,7 @@ System Center Configuration Manager の **SharePoint Online** 条件付きアク
 
 4.  SharePoint Online および OneDrive for Business への**ブラウザー アクセス**で、サポートされるブラウザーである Safari (iOS) および Chrome (Android) による Exchange Online へのアクセスのみ許可することができます。 その他のブラウザーからのアクセスはブロックされます。  OneDrive のアプリケーション アクセス用に選択した、同じプラットフォーム制限もここで適用されます。
 
-    **Android** デバイスで、ユーザーはブラウザー アクセスを有効にする必要があります。  これを行うには、エンドユーザーは以下のように、登録されたデバイス上で [ブラウザー アクセスを有効にする] オプションを有効にする必要があります。
+    **Android** デバイスで、ユーザーはブラウザー アクセスを有効にする必要があります。  これを行うには、エンドユーザーは登録されたデバイス上で、以下のように **[ブラウザー アクセスを有効にする]** オプションを有効にする必要があります。
     1.  **ポータル サイト アプリ**を起動します。
     2.  トリプル ドット (...) またはハードウェアのメニュー ボタンから、 **[設定]** ページに移動します。
     3.  **[ブラウザー アクセスを有効にする]** ボタンを押します。
@@ -180,13 +180,13 @@ System Center Configuration Manager の **SharePoint Online** 条件付きアク
 
       ![Android デバイスでの証明書プロンプトのスクリーンショット](media/mdm-browser-ca-android-cert-prompt.png)
 
-4.  **[ ホーム ]** タブの **[ リンク ]** グループで、**[ Intune コンソールでの条件付きアクセス ポリシーの構成]** をクリックします。 Configuration Manager を Intune に接続するために使用されるアカウントのユーザー名とパスワードを指定する必要がある場合があります。  
+4.  **[ホーム]** タブの **[リンク]** グループで、**[Intune コンソールでの条件付きアクセス ポリシーの構成]** をクリックします。 Configuration Manager を Intune に接続するために使用されるアカウントのユーザー名とパスワードを指定する必要がある場合があります。  
 
      Intune 管理コンソールが開きます。  
 
 5.  [Microsoft Intune 管理コンソール](https://manage.microsoft.com)で、**[ポリシー]** > **[条件付きアクセス]** > **[SharePoint Online ポリシー]** の順にクリックします。  
 
-6.  **[ デバイスが準拠していない場合は、アプリの SharePoint Online へのアクセスをブロックする]** を選択します。  
+6.  **[デバイスが準拠していない場合は、アプリの SharePoint Online へのアクセスをブロックする]** を選択します。  
 
 7.  **[対象グループ]**で、 **[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。  
 

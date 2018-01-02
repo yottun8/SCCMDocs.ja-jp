@@ -3,7 +3,7 @@ title: "クライアントのピア キャッシュ"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でコンテンツを展開する場合は、クライアントのコンテンツ ソースの場所のピア キャッシュを使用します。"
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/07/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision: "3"
 author: aaroncz
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 60f70d3e24f6290fb022b9bd8ca1512b0ed3d719
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: cadc62ab21ac8cd43120a5baa79dd635a12b4069
+ms.sourcegitcommit: 2dc9c83e57e9734ffc4a93f79cd71285036eeb8b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Configuration Manager クライアントのピア キャッシュ
 
@@ -36,7 +36,7 @@ System Center Configuration Manager バージョン 1610 以降、**ピア キ�
  -  ピア キャッシュ ソースとしてコンテンツを共有するには、ピア キャッシュ クライアントは以下である必要があります。
     -  ドメインに参加している必要があります。 ただし、ドメインに参加していないコンテンツは、ドメインに参加しているピア キャッシュ ソースからコンテンツを取得できます。
     -  コンテンツをシークしている、クライアントの現在の境界グループのメンバーである必要があります。 クライアントがフォールバックを使用して近隣の境界グループからコンテンツをシークする場合は、近隣の境界グループのピア クライアントは使用可能なコンテンツ ソースの場所のプールに含まれません。 現在および近隣の境界グループの詳細については、「[境界グループ](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups)」を参照してください。
- - Configuration Manager クライアントのキャッシュに保持されているコンテンツのすべての種類は、ピア キャッシュを使用して他のクライアントに提供できます。
+ - Configuration Manager クライアントのキャッシュに保持されているコンテンツのすべての種類は、Office 365 ファイルおよび高速インストール ファイル<!--SMS.500850-->を含むピア キャッシュを使用して他のクライアントに提供できます。
  -  ピア キャッシュは、BranchCache などのその他のソリューションの使用に取って代わるものではなく、それらのソリューションと並列動作し、配布ポイントなどの従来のコンテンツ展開ソリューションを拡張する追加のオプションを提供します。 これは、BranchCache に依存しないカスタム ソリューションであるため、Windows BranchCache を有効にしない、または使用しない場合でも機能します。
 
 ### <a name="operations"></a>オペレーション
