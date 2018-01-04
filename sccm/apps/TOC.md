@@ -31,7 +31,7 @@
 ## アプリケーションを管理する
 ### [管理タスク](deploy-use/management-tasks-applications.md)
 ### [ユーザーとデバイスのアフィニティ](deploy-use/link-users-and-devices-with-user-device-affinity.md)
-### [ビジネス向け一括購入アプリ向けの Windows ストア](deploy-use/manage-apps-from-the-windows-store-for-business.md)
+### [ビジネス向け一括購入アプリ向けの Microsoft ストア](deploy-use/manage-apps-from-the-windows-store-for-business.md)
 ### [App-V 仮想環境](deploy-use/create-app-v-virtual-environments.md)
 
 ## アプリケーションの更新とインベントリからの削除

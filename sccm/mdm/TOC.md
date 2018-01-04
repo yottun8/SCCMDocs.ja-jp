@@ -52,7 +52,7 @@
 ### [Android アプリ構成ポリシー](deploy-use/configure-android-apps-with-app-configuration-policies.md)
 ### [モバイル アプリケーション管理ポリシー](deploy-use/protect-apps-using-mam-policies.md)
 ### [管理対象ブラウザーのポリシー](deploy-use/manage-internet-access-using-managed-browser-policies.md)
-### [ビジネス向け Windows ストアのアプリ](deploy-use/windows-store-for-business.md)
+### [ビジネス向け Microsoft ストア アプリ](deploy-use/windows-store-for-business.md)
 
 ## [Intune サブスクリプションを管理する](deploy-use/manage-intune-subscriptions.md)
 ## [MDM 機関を変更する](deploy-use/change-mdm-authority.md)
