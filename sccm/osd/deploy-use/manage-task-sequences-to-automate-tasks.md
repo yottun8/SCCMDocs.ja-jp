@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 caps.latest.revision: "10"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 44e6afbfac3ef1e8318991854c8fdd22ead4c6ed
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: b3071905a368ff9bc8e932d91f9b1e7d707b106b
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>System Center Configuration Manager でのタスクを自動化するためのタスク シーケンスの管理
 
@@ -55,7 +55,7 @@ Configuration Manager バージョン 1702 以降では、タスク シーケン
 
 #### <a name="to-edit-a-task-sequence"></a>タスク シーケンスを編集するには  
 
-1.  Configuration Manager コンソールで、 **[ソフトウェア ライブラリ]** をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、 [**タスク シーケンス]** をクリックします。  
 
@@ -178,7 +178,7 @@ Configuration Manager バージョン 1702 以降では、タスク シーケン
 
 #### <a name="to-distribute-referenced-content-to-distribution-points"></a>参照コンテンツを配布ポイントに配布するには  
 
-1.  Configuration Manager コンソールで、 **[ソフトウェア ライブラリ]** をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、 **[タスク シーケンス]** をクリックします。  
 
@@ -296,7 +296,7 @@ Configuration Manager バージョン 1702 以降では、タスク シーケン
 
         -   **[前回失敗した場合に再実行する]**: 展開がスケジュールされている場合に、前回の実行が失敗していれば、タスク シーケンスが再実行されます。 この設定は、特に、必須の展開で前回の実行が失敗したときに自動的に割り当てスケジュールに従って再試行されるようにする場合に便利です。  
 
-        -   [前回成功した場合に再実行する]: 前回クライアントで正常に実行された場合にのみ、タスク シーケンスが再実行されます。 この設定は、特に、タスク シーケンスが定期的に更新され、それぞれの更新で前回の更新プログラムが正常にインストールされていることが必要となる反復的な展開を使用する場合に便利です。  
+        -   前回成功した場合に再実行する: 前回クライアントで正常に実行された場合にのみ、タスク シーケンスが再実行されます。 この設定は、特に、タスク シーケンスが定期的に更新され、それぞれの更新で前回の更新プログラムが正常にインストールされていることが必要となる反復的な展開を使用する場合に便利です。  
 
         > [!NOTE]  
         >  ユーザーは使用可能なタスク シーケンスの展開を再実行できるので、使用可能なタスク シーケンスを実稼働環境に展開する前に、ユーザーがタスク シーケンスを何回も再実行した場合にどのようなことが起こるかを慎重に評価およびテストしてください。  
@@ -347,7 +347,7 @@ Configuration Manager バージョン 1702 以降では、タスク シーケン
 
 #### <a name="to-export-task-sequences"></a>タスク シーケンスをエクスポートするには  
 
-1.  Configuration Manager コンソールで、 **[ソフトウェア ライブラリ]** をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 
@@ -377,7 +377,7 @@ Configuration Manager バージョン 1702 以降では、タスク シーケン
 
 #### <a name="to-import-task-sequences"></a>タスク シーケンスをインポートするには  
 
-1.  Configuration Manager コンソールで、 **[ソフトウェア ライブラリ]** をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 
@@ -468,7 +468,7 @@ Configuration Manager バージョン 1710 以降では、別のタスク シー
 
 #### <a name="to-select-a-task-sequence-to-manage"></a>管理するタスク シーケンスを選択するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 

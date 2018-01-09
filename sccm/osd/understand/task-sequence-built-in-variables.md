@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
 caps.latest.revision: "15"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: d584c6db85a5466e76a79f398e635ba93f8081ff
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: e29efd4de847a861afa75a7a10868cad30e4cf97
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>System Center Configuration Manager のタスク シーケンス組み込み変数
 
@@ -94,7 +94,7 @@ ms.lasthandoff: 10/12/2017
 |SMSTSPostAction|タスク シーケンスの完了後に実行されるコマンドを指定します。 たとえば、指定のデバイスにタスク シーケンスがオペレーティング システムを展開した後、埋め込みデバイスでフィルターを有効にするスクリプトを記述するのにこの変数を使用できます。|  
 |SMSTSPreferredAdvertID|対象のコンピューターで特定の展開が実行されるように強制します。 これはメディアまたは PXE から起動前コマンドを使って設定できます。 この変数が設定されると、タスク シーケンスは要求されたすべての展開を上書きします。|  
 |SMSTSPreserveContent|この変数は、展開後に Configuration Manager クライアント キャッシュに残すタスク シーケンス内のコンテンツにフラグを設定します。 これは、タスク シーケンスの持続期間だけコンテンツを保持して、Configuration Manager クライアント キャッシュではなくタスク シーケンス キャッシュを使用する SMSTSPersistContent の使用とは異なります。<br /><br /> 例:<br /><br /> この機能は、SMSTSPreserveContent = **TRUE** により有効になります。|  
-|SMSTSRebootDelay|コンピューターが再起動するまでの待機時間を秒単位で指定します。 この変数を 0 以外に設定すると、タスク シーケンス マネージャーは再起動の前に通知ダイアログ ボックスを表示します。<br /><br /> 例:<br /><br /> **0**<br /><br /> **30**|  
+|SMSTSRebootDelay|コンピューターが再起動するまでの待機時間を秒単位で指定します。 この変数を 0 以外に設定すると、タスク シーケンス マネージャーは再起動の前に通知ダイアログ ボックスを表示します。<br /><br /> 次に例を示します。<br /><br /> **0**<br /><br /> **30**|  
 |SMSTSRebootMessage|再起動が要求されたときにスケジュール ダイアログ ボックスに表示するメッセージを指定します。 この変数を設定しなかった場合、既定のメッセージが表示されます。<br /><br /> 例:<br /><br /> **このコンピューターはタスク シーケンス マネージャーによって再起動されます**。|  
 |SMSTSRebootRequested|現在のタスク シーケンスのステップを完了した後で再起動が必要であることを示します。 再起動が必要な場合は、この変数を **TRUE**に設定すると、このタスク シーケンス ステップの後で、タスク シーケンス マネージャーが自動的にコンピューターを再起動します。 タスク シーケンス ステップの完了に再起動が必要な場合は、タスク シーケンス ステップでこのタスク シーケンス変数を設定する必要があります。 コンピューターの再起動後、タスク シーケンスは次のタスク シーケンス ステップから続行されます。|  
 |SMSTSRetryRequested|現在のタスク シーケンスのステップを完了した後で再試行を要求します。 このタスク シーケンス変数を設定した場合、 **SMSTSRebootRequested** も **TRUE**に設定する必要があります。 コンピューターの再起動後、タスク シーケンス マネージャーは同じタスク シーケンスのステップを再実行します。|  

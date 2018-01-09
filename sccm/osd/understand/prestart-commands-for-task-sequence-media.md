@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: ccc9f652-2953-4c38-8a90-c799484105ca
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 52a4dccfe547f8c25759669dd1b09976302d5c50
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 3a1b39bb988d305c02d85ef168789d081637c084
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="prestart-commands-for-task-sequence-media-in-system-center-configuration-manager"></a>System Center Configuration Manager でのタスク シーケンス メディアの起動前コマンド
 
@@ -52,17 +52,17 @@ env("MyCustomVariable") = "varname"
 
 #### <a name="to-create-a-prestart-command-in-media"></a>メディアで起動前コマンドを作成するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
-2.  **[ ソフトウェア ライブラリ ]** ワークスペースで **[ オペレーティング システム]** を展開して、**[ タスク シーケンス]** をクリックします。  
+2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 
-3.  **[ ホーム ]** タブの **[ 作成 ]** グループで **[ タスク シーケンス メディアの作成 ]** をクリックして、タスク シーケンス メディアの作成ウィザードを起動します。  
+3.  **[ホーム]** タブの **[作成]** グループで **[タスク シーケンス メディアの作成]** をクリックして、タスク シーケンス メディアの作成ウィザードを起動します。  
 
 4.  **[メディアの種類の選択]** ページで、**[スタンドアロン メディア]**、**[起動可能なメディア]**、または **[事前設定されたメディア]** をクリックして、**[次へ]** をクリックします。  
 
 5.  ウィザードの **[カスタマイズ]** ページに進みます。 ウィザードの他のページを構成する方法の詳細については、「[タスク シーケンス メディアの作成](../deploy-use/create-task-sequence-media.md)」を参照してください。  
 
-6.  **[ カスタマイズ ]** ページで、次の情報を指定して **[ 次へ]** をクリックします。  
+6.  **[カスタマイズ]** ページで、次の情報を指定して **[次へ]** をクリックします。  
 
     -   **[起動前コマンドを有効にする]** を選択します。  
 

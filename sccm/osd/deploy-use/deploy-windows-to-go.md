@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 caps.latest.revision: "8"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 91e3fa4aba93dc3012fe1e702f50c4f9438a69e8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 9d902f75911b484d22d38b07cea40e1c00ea0d93
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用した Windows to Go の展開
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-create-prestaged-media"></a>事前設定メディアを作成するには  
 
-1.  Configuration Manager コンソールで、 **[ソフトウェア ライブラリ]** をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 
@@ -197,7 +197,7 @@ ms.lasthandoff: 10/12/2017
             > [!WARNING]  
             >  BitLocker でパスフレーズが有効にされた後、コンピューターで Windows To Go ドライブがブートされるたびに、ユーザーはパスフレーズを入力する必要があります。  
 
-        -   **SMSTSUDAUsers**: 対象のコンピューターのプライマリ ユーザーを指定します。 ユーザー名を収集するには、この変数を使用します。ユーザー名は、ユーザーとデバイスの関連付けに使用できます。 詳細については、「[展開先のコンピューターにユーザーを関連付ける](../get-started/associate-users-with-a-destination-computer.md)」をご覧ください。  
+        -   **SMSTSUDAUsers**: 対象のコンピューターのプライマリ ユーザーを指定します。 ユーザー名を収集するには、この変数を使用します。ユーザー名は、ユーザーとデバイスの関連付けに使用できます。 詳細については、「[System Center Configuration Manager でユーザーをセットアップ先のコンピューターに関連付ける](../get-started/associate-users-with-a-destination-computer.md)」を参照してください。  
 
             > [!TIP]  
             >  ユーザー名を取得するには、起動前コマンドの一部として、入力ボックスを作成し、ユーザーにユーザー名の入力を求めて、変数に値を設定します。 たとえば、次の行を起動前コマンドのスクリプト ファイルに追加します。  
@@ -229,7 +229,7 @@ ms.lasthandoff: 10/12/2017
 
 4.  パッケージとプログラムの作成ウィザードを使用して、パッケージとプログラムを作成します。  
 
-5.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+5.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 6.  **[ソフトウェア ライブラリ]** ワークスペースで **[アプリケーション管理]** を展開して、**[パッケージ]** をクリックします。  
 
@@ -288,7 +288,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-update-the-windows-8-task-sequence-to-enable-bitlocker"></a>Windows 8 タスク シーケンスを更新して BitLocker を有効にするには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[アプリケーション管理]** を展開して、**[パッケージ]** をクリックします。  
 
@@ -302,7 +302,7 @@ ms.lasthandoff: 10/12/2017
 
 7.  **[次へ]** をクリックして、ウィザードを完了します。  
 
-8.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+8.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 9. **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 
@@ -346,7 +346,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-deploy-the-windows-to-go-creator-package"></a>Windows To Go Creator パッケージを展開するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[アプリケーション管理]** を展開して、**[パッケージ]** をクリックします。  
 
@@ -396,7 +396,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-deploy-the-windows-8-task-sequence"></a>Windows 8 タスク シーケンスを展開するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 

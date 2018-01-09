@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 217c8a0e-5112-420e-a325-2a6d75326290
 caps.latest.revision: "13"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 47210939c66bb31d173c7e406a66c764d5008879
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 433a1778213b357c6c41eb20e4b975b2e682050d
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-a-task-sequence-to-install-an-operating-system-in-system-center-configuration-manager"></a>System Center Configuration Manager のオペレーティング システムをインストールするタスク シーケンスを作成する
 
@@ -44,7 +44,7 @@ System Center Configuration Manager でタスク シーケンスを使用して�
 
 #### <a name="to-create-a-task-sequence-that-installs-an-operating-system"></a>オペレーティング システムをインストールするタスク シーケンスを作成するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 
@@ -67,7 +67,7 @@ System Center Configuration Manager でタスク シーケンスを使用して�
 
     -   **イメージ パッケージ**:インストールするオペレーティング システムを含むパッケージを指定します。 詳細については、「[オペレーティング システム イメージの管理](../get-started/manage-operating-system-images.md)」をご覧ください。  
 
-    -   **[イメージ]**:オペレーティング システム イメージ パッケージに複数のイメージがある場合は、インストールするオペレーティング システム イメージのインデックスを指定します。  
+    -   **イメージ**: オペレーティング システム イメージ パッケージに複数のイメージがある場合は、インストールするオペレーティング システム イメージのインデックスを指定します。  
 
     -   **[オペレーティング システムをインストールする前に対象のコンピューターのパーティションを作成してフォーマットする]**:展開先コンピューターのパーティション作成とフォーマットを、オペレーティング システムがインストールされる前に行うかどうかを指定します。  
 
