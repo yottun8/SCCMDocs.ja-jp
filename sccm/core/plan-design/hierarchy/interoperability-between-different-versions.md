@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b0a7859-747f-4495-a2f4-13fd5991f897
 caps.latest.revision: "8"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 5b7b4c938ae057e7bcb7f281ddb266ade0cdafb4
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 66bfb130a27ed8e4b8b9d052a672ef7f72b56f59
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="interoperability-between-different-versions-of-system-center-configuration-manager"></a>異なるバージョンの Configuration Manager 間の相互運用性
 
@@ -70,7 +70,7 @@ System Center Configuration Manager の複数の独立した階層を同じネ�
 
 ### <a name="limitations-when-upgrading--configuration-manager"></a>Configuration Manager のアップグレード時の制限事項  
 
-|オブジェクト|説明|  
+|オブジェクト|詳細|  
 |------------|-------------|  
 |ネットワーク アクセス アカウント|**System Center 2012 Configuration Manager から System Center Configuration Manager にアップグレードする場合:** System Center Configuration Manager に更新された中央管理サイトに接続されている Configuration Manager コンソールからネットワーク アクセス アカウントの詳細を表示する場合、コンソールには System Center 2012 Configuration Manager を実行するプライマリ サイトで構成されたアカウントの詳細が表示されません。 プライマリ サイトを中央管理サイトと同じバージョンにアップグレードすると、コンソールにアカウントの詳細が表示されます。<br /><br /> **System Center Configuration Manager バージョン間でアップグレードする場合:** System Center Configuration Manager の新しいバージョンに更新された中央管理サイトに接続されている Configuration Manager コンソールからネットワーク アクセス アカウントの詳細を表示する場合、コンソールには、以前のバージョンを実行するプライマリ サイトで構成されたアカウントの詳細が表示されません。 プライマリ サイトを中央管理サイトと同じバージョンにアップグレードすると、コンソールにアカウントの詳細が表示されます。|  
 |オペレーティング システム展開用のブート イメージ|**System Center 2012 Configuration Manager から System Center Configuration Manager にアップグレードする場合:** 階層の最上位サイトが System Center Configuration Manager にアップグレードされると、既定のブート イメージは、Windows アセスメント & デプロイメント キット 10 (Windows ADK) に基づいてブート イメージに自動的に更新されます。 これらのブート イメージは、System Center Configuration Manager サイトのクライアントへの展開にのみ使用してください。 詳細については、「[System Center Configuration Manager のオペレーティング システムの展開の相互運用性に関する計画](../../../osd/plan-design/planning-for-operating-system-deployment-interoperability.md)」を参照してください。<br /><br /> **System Center Configuration Manager バージョン間のアップグレードの場合:** 新しいバージョンの cm6long が使用中のバージョンの Windows ADK を更新しない限り、ブート イメージには影響ありません。|  

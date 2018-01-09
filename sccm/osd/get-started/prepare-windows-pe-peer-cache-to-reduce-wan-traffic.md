@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
 caps.latest.revision: "11"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: bb0ed6809d1350c4ce28e20d1a83082a51c2e687
-ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
+ms.openlocfilehash: 24e6aaa404054f5b9ac477cc0dbdd6fa9cce1860
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>System Center Configuration Manager における WAN トラフィックを減らすための Windows PE ピア キャッシュの準備
 
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/01/2017
     >   
     >  この設定を **[既定のクライアント設定]**の一部として構成した場合は、その構成が環境内のすべてのクライアントに適用されることも覚えておいてください。  
 
-2.  **[ Windows PE ピア キャッシュ]** で、**[ 完全な OS 上の Configuration Manager クライアントにコンテンツの共有を許可する ]** を **[ はい]** に設定します。  
+2.  **[Windows PE ピア キャッシュ]** で、**[完全な OS 上の Configuration Manager クライアントにコンテンツの共有を許可する]** を **[はい]** に設定します。  
 
     -   既定では、HTTP のみが有効になります。 クライアントに HTTPS 経由のコンテンツのダウンロードを許可する場合は、 **[クライアント ピア通信に対して HTTPS を有効にする]** を **[はい]**に設定します。  
 

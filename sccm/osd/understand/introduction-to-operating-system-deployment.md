@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d9a1c545-8301-492c-832f-2c108ff93c77
 caps.latest.revision: "12"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 5835bde38cb940d2e38df4a38146753a6842f1d7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 31f18ce9df3fcdb133589ce5214cef96372ee1b0
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="introduction-to-operating-system-deployment-in-system-center-configuration-manager"></a>System Center Configuration Manager のオペレーティング システムの展開の概要
 
@@ -82,7 +82,7 @@ Configuration Manager を使用してオペレーティング システムを展
  Configuration Manager のブート イメージは、オペレーティング システムの展開中に使用される Windows PE (WinPE) のイメージです。 ブート イメージは、WinPE でコンピューターを起動するために使用されます。WinPE は、セットアップ先のコンピューターで Windows のインストールを準備する限られたコンポーネントとサービスが含まれた、最小限のオペレーティング システムです。 Configuration Manager には 2 つのブート イメージがあります。一方は x86 プラットフォームをサポートし、もう一方は x64 プラットフォームをサポートします。 これらは、既定のブート イメージと見なされます。 作成して Configuration Manager に追加したブート イメージは、カスタム イメージと見なされます。 Configuration Manager を更新するときに、既定のブート イメージが自動的に置換されるようにできます。 ブート イメージの詳細については、「[ブート イメージの管理](../get-started/manage-boot-images.md)」を参照してください。  
 
 ##  <a name="BKMK_OSImages"></a> オペレーティング システム イメージ  
- Configuration Manager のオペレーティング システム イメージは、Windows Imaging (WIM) ファイル形式で格納され、コンピューターのオペレーティング システムを正常にインストールおよび構成するのに必要な参照ファイルおよびフォルダーのコレクションを圧縮したものです。 オペレーティング システムのすべての展開シナリオで、オペレーティング システム イメージを選択する必要があります。 既定のオペレーティング システム イメージを使用するか、構成する参照コンピューターからオペレーティング システム イメージを構築することができます。 詳細については、「[オペレーティング システム イメージの管理](../get-started/manage-operating-system-images.md)」を参照してください。  
+ Configuration Manager のオペレーティング システム イメージは、Windows Imaging (WIM) ファイル形式で格納され、コンピューターのオペレーティング システムを正常にインストールおよび構成するのに必要な参照ファイルおよびフォルダーのコレクションを圧縮したものです。 オペレーティング システムのすべての展開シナリオで、オペレーティング システム イメージを選択する必要があります。 既定のオペレーティング システム イメージを使用するか、構成する参照コンピューターからオペレーティング システム イメージを構築することができます。 詳細については、「[オペレーティング システム イメージの管理](../get-started/manage-operating-system-images.md)」をご覧ください。  
 
 ##  <a name="BKMK_OSUpgradePackages"></a> オペレーティング システムのアップグレード パッケージ  
  オペレーティング システム アップグレード パッケージは、オペレーティング システムをアップグレードするために使用し、セットアップによって開始されるオペレーティング システム展開です。 オペレーティング システム アップグレード パッケージは、DVD またはマウントされている ISO ファイルから、Configuration Manager にインポートします。 詳細については、「[オペレーティング システムのアップグレード パッケージの管理](../get-started/manage-operating-system-upgrade-packages.md)」を参照してください。  
@@ -91,7 +91,7 @@ Configuration Manager を使用してオペレーティング システムを展
  オペレーティング システムの展開に使用するために作成するメディアには数種類があります。 これには、オペレーティング システム イメージをキャプチャするために使用するキャプチャ メディア、オペレーティング システムを展開するために使用するスタンドアロン メディア、事前設定されたメディア、および起動可能なメディアが含まれます。 メディアを使用することによって、展開の対象となるコンピューターがネットワークに未接続、または Configuration Manager サイトへ低帯域幅で接続していても、オペレーティング システムを展開できます。 タスク シーケンス メディアの使用方法の詳細については、「[Create task sequence media](../deploy-use/create-task-sequence-media.md)」(タスク シーケンス メディアの作成) を参照してください。  
 
 ##  <a name="BKMK_DeviceDrivers"></a> デバイス ドライバー  
- 展開するオペレーティング システム イメージにデバイス ドライバーを含まなくても、対象となるコンピューターにインストールできます。 Configuration Manager は、Configuration Manager にインポートするすべてのデバイス ドライバーへの参照を含むドライバー カタログを提供します。 ドライバー カタログは **[ ソフトウェア ライブラリ ]** ワークスペースに保存されており、2 つのノードで構成されます。 **ドライバー** と **ドライバー パッケージ**。 **[ ドライバー ]** ノードにはドライバー カタログにインポートしたすべてのドライバーが一覧になっています。 このノードを使用して、インポートした各ドライバーの詳細を参照したり、ドライバーが属するドライバー パッケージやブート イメージを変更したり、ドライバーを有効または無効にしたりできます。 詳細については、「[Manage drivers](../get-started/manage-drivers.md)」(ドライバーの管理) を参照してください。  
+ 展開するオペレーティング システム イメージにデバイス ドライバーを含まなくても、対象となるコンピューターにインストールできます。 Configuration Manager は、Configuration Manager にインポートするすべてのデバイス ドライバーへの参照を含むドライバー カタログを提供します。 ドライバー カタログは **[ソフトウェア ライブラリ]** ワークスペースに保存されており、2 つのノードで構成されます。 **ドライバー** と **ドライバー パッケージ**。 **[ドライバー]** ノードにはドライバー カタログにインポートしたすべてのドライバーが一覧になっています。 このノードを使用して、インポートした各ドライバーの詳細を参照したり、ドライバーが属するドライバー パッケージやブート イメージを変更したり、ドライバーを有効または無効にしたりできます。 詳細については、「[Manage drivers](../get-started/manage-drivers.md)」(ドライバーの管理) を参照してください。  
 
 ##  <a name="BKMK_OSDUserState"></a> ユーザー状態の保存と復元  
  オペレーティング システムを展開する際は、対象となるコンピューターのユーザー状態を保存し、オペレーティング システムを展開して、オペレーティング システムを展開し終わったらユーザー状態を復元することができます。 このプロセスは、通常、Configuration Manager クライアント コンピューターにオペレーティング システムをインストールするときに使用します。  

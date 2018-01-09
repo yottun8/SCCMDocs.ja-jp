@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 caps.latest.revision: "0"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: bcb25fc6faad3d5f7162ae4ceb200c6de1c1c25b
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: 8c5fcb718cf03a1e779212207d696cfa5fe9f0e2
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>System Center Configuration Manager のライセンスとブランチ
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/06/2017
 このトピックでは、Configuration Manager をインストールして使用する権限を付与する Microsoft ライセンス契約であるソフトウェア アシュアランス契約 (または同等のサブスクリプション権限) に言及します。
 
 
-|ブランチ|ライセンス|説明|
+|ブランチ|ライセンス|詳細|
 |----------------|---------------------|--------------------|
 |Current Branch | Configuration Manager に対してソフトウェア アシュアランス契約 (または同等の権限) が有効になっている必要があります。 </br></br> このトピックの「[ソフトウェア アシュアランスと Current Branch](#software-assurance-and-the-current-Branch)」を参照してください。| 品質と機能に関する更新プログラムを Microsoft から定期的に受信する必要がある運用環境での使用に対応しています。 </br></br> このブランチでは、すべての機能と強化された機能を使用するためのアクセス権が提供されます。 </br></br> Configuration Manager 1710 より前にリリースされたバージョンについては、サポートは 12 か月間です。 1710 リリース以降では、更新プログラムの各バージョンは一般公開リリース日から 18 か月間サポートされます。 詳細については、「[System Center Configuration Manager の Current Branch バージョンのサポート](/sccm/core/servers/manage/current-branch-versions-supported)」をご覧ください。|
 |Long-Term Servicing Branch (LTSB)| リリース時 (2016 年 10 月 1 日) に Microsoft との間で現在有効になっているソフトウェア アシュアランス契約が必要です。 </br></br> このトピックの「[ソフトウェア アシュアランスと LTSB](#software-assurance-and-the-ltsb)」を参照してください。 | 運用環境での使用に対応しています。 2016 年 10 月 1 日以降、Configuration Manager に対するソフトウェア アシュアランス (SA) または同等のサブスクリプション権限が期限切れになったお客様向けです。 </br></br> Current Branch と比較して、このブランチには制限があります。 </br></br> このブランチでは、Configuration Manager に対するセキュリティ上重要な更新プログラムは利用できますが、新機能については利用できません。 |

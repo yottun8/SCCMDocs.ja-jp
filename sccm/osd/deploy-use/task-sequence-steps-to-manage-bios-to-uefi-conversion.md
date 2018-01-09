@@ -11,14 +11,14 @@ ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 58a5c60e2d8b819051916b49911a236a9c5ac4ee
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: f2d53b7f525d4f827b78840a7f0d9482d203c08d
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>BIOS からUEFI への変換を管理するためのタスク シーケンス手順
 Windows 10 では、UEFI 対応デバイスを必要とする新しいセキュリティ機能が多数提供されます。 最新の Windows PC では、UEFI がサポートされていても、従来の BIOS が使用されている場合があります。 デバイスを UEFI に変換する場合、各 PC に移動して、ハード ディスクのパーティションを再分割し、ファームウェアを再構成する必要がありました。 Configuration Manager でタスク シーケンスを使用すれば、BIOS から UEFI への変換のためにハード ドライブを準備し、インプレース アップグレード プロセスの一環として BIOS から UEFI への変換を行い、ハードウェア インベントリの一部として UEFI 情報を収集することができます。

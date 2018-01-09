@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: c7c94ba0-d709-4129-8077-075a8abaea1c
 caps.latest.revision: "4"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 936dead7461162779d85796808a8a94e9b8bc44a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: f5fa0951ff07ad4d4722b521c5039078a7baaec4
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="preprovision-bitlocker-in-windows-pe-with-system-center-configuration-manager"></a>System Center Configuration Manager による Windows PE での BitLocker の事前準備
 
@@ -48,7 +48,7 @@ System Center Configuration Manager のタスク シーケンスの **BitLocker 
 > [!NOTE]  
 >  ウィザードで選択した設定によっては、他のステップが含まれることがあります。 たとえば、ウィザードの **[状態移行]** ページで **[キャプチャした Microsoft Windows 設定]** を選択した場合は、 **[Windows 設定のキャプチャ]** というステップが追加されます。  
 
-|タスク シーケンスのステップ|説明|  
+|タスク シーケンスのステップ|詳細|  
 |------------------------|-------------|  
 |BitLocker の無効化|現在、BitLocker による暗号化が有効になっている場合は、無効にします。 詳細については、「[BitLocker の無効化](../understand/task-sequence-steps.md#BKMK_DisableBitLocker)」を参照してください。|  
 |Windows PE でのコンピューターの再起動|タスク シーケンスに割り当てられている Windows PE ブート イメージを実行することにより、コンピューターを再起動します。 BitLocker を事前プロビジョニングするには、Windows PE 4 以降のブート イメージを使用する必要があります。 詳細については、「[コンピューターの再起動](../understand/task-sequence-steps.md#BKMK_RestartComputer)」を参照してください。|  

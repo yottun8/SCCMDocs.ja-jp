@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58a0d2ae-de76-401f-b854-7a5243949033
 caps.latest.revision: "16"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 1da213763c99af69963b12b15fa8413f9e1965dc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 02f7c1d549b38c6bddb31fef91de49b0aa1d7969
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="use-stand-alone-media-to-deploy-windows-without-using-the-network-in-system-center-configuration-manager"></a>System Center Configuration Manager でのネットワークではなくスタンドアロン メディアを使用した Windows の展開
 
@@ -61,7 +61,7 @@ System Center Configuration Manager のスタンドアロン メディアには�
 >   
 >  `"WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"`
 >   
->  **[パッケージのインストール]** ステップを含むスタンドアロン メディアの場合、ソフトウェアの配布エージェントが有効なプライマリ サイトにスタンドアロン メディアを作成するか、または [[Windows と ConfigMgr のセットアップ]](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) ステップの後かつタスク シーケンスの最初の **[パッケージのインストール]** ステップの前に [[コマンド ラインの実行]](../understand/task-sequence-steps.md#BKMK_RunCommandLine) ステップを追加する必要があります。 **[ コマンド ラインの実行 ]** ステップでは、最初の [パッケージのインストール] ステップを実行する前に、ソフトウェアの配布エージェントを有効にする WMIC コマンドを実行します。 **[ コマンド ラインの実行 ]** タスク シーケンス ステップでは、次のコマンド ラインを使用できます。  
+>  **[パッケージのインストール]** ステップを含むスタンドアロン メディアの場合、ソフトウェアの配布エージェントが有効なプライマリ サイトにスタンドアロン メディアを作成するか、または [[Windows と ConfigMgr のセットアップ]](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) ステップの後かつタスク シーケンスの最初の **[パッケージのインストール]** ステップの前に [[コマンド ラインの実行]](../understand/task-sequence-steps.md#BKMK_RunCommandLine) ステップを追加する必要があります。 **[コマンド ラインの実行]** ステップでは、最初の [パッケージのインストール] ステップを実行する前に、ソフトウェアの配布エージェントを有効にする WMIC コマンドを実行します。 **[コマンド ラインの実行]** タスク シーケンス ステップでは、次のコマンド ラインを使用できます。  
 >   
 >  **コマンド ライン**: **WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE**  
 

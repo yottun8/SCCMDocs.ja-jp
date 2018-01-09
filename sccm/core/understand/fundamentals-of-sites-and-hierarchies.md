@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4db1e15f-e832-4cf9-be33-d3971e635a55
 caps.latest.revision: "6"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 3e1cd18a3791b6ad009ca21851bb7173f8510f71
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 0355219b1270dd5fb9b0ed78406ee0059fbceeba
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="fundamentals-of-sites-and-hierarchies-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイトおよび階層の基礎
 
@@ -66,7 +66,7 @@ System Center Configuration Manager を初めてインストールするとき�
 
  さまざまなサイト システムの役割については、「[System Center Configuration Manager のサイト システム サーバーとサイト システムの役割の計画](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)」の「[サイト システムの役割](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md#bkmk_planroles)」を参照してください。
 
-## <a name="publishing-site-information-to-active-directory-domain-services"></a>Active Directory ドメイン サービスへのサイト情報の発行  
+## <a name="publishing-site-information-to-active-directory-domain-services"></a>Active Directory Domain Services へのサイト情報の発行  
  Configuration Manager の管理を簡素化するために、Configuration Manager で使用される詳細情報をサポートするように Active Directory スキーマを拡張してから、サイトのキー情報が Active Directory Domain Services (AD DS) に公開されるようにすることができます。 これにより、管理対象コンピューターが AD DS の信頼されたソースからサイト関連情報を安全に取得できるようになります。 クライアントが取得できる情報は、使用可能なサイト、サイト システム サーバー、およびそれらのサイト システム サーバーが提供するサービスを識別します。  
 
  *Active Directory スキーマの拡張*は、フォレストごとに 1 回だけ実行され、Configuration Manager のインストールの前または後に実行できます。   スキーマを拡張したら、各ドメインで System Management という名前の新しい Active Directory コンテナーを作成する必要があります。 このコンテナーには、クライアントで検索するためのデータを発行する Configuration Manager サイトが含まれます。 詳細については、「[サイト発行のために Active Directory を準備する](../../core/plan-design/network/extend-the-active-directory-schema.md)」を参照してください。  
