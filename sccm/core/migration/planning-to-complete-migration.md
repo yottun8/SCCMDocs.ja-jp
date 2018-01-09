@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: f4854b50-2e8c-414c-a872-9579554dca98
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: f2e260a9ae046ed3a6ba1d234d1afe84a6976ff7
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 67e1d850043d5b922ab53dd13a782414730d5866
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="plan-to-complete-migration-in-system-center-configuration-manager"></a>System Center Configuration Manager での移行完了の計画
 
@@ -43,7 +43,7 @@ System Center Configuration Manager では、移行先階層に移行するデ�
 -   [移行データのクリーンアップを計画する](#Plan_to_clean_up)  
 
 ##  <a name="Plan_to_Stop_Data_Gath"></a> データ収集の停止を計画する  
- 移行を完了して移行データをクリーンアップする前に、ソース階層内の各ソース サイトからのデータ収集を停止する必要があります。 各ソース サイトからのデータ収集を停止するには、最下位のソースサイトで **[データ収集の停止]** コマンドを実行してから、各親サイトごとにそのプロセスを繰り返し実行する必要があります。  ソース階層の最上位サイトは、データ収集を停止する最後のサイトにする必要があります。 親サイトでデータ収集の停止コマンドを実行する前に、各子サイトでデータ収集を停止する必要があります。 通常、移行処理を完了する準備ができた時点でデータ収集を停止します。  
+ 移行を完了して移行データをクリーンアップする前に、ソース階層内の各ソース サイトからのデータ収集を停止する必要があります。 各ソース サイトからのデータ収集を停止するには、最下位のソースサイトで **[データ収集の停止]** コマンドを実行してから、各親サイトごとにそのプロセスを繰り返し実行する必要があります。 ソース階層の最上位サイトは、データ収集を停止する最後のサイトにする必要があります。 親サイトでデータ収集の停止コマンドを実行する前に、各子サイトでデータ収集を停止する必要があります。 通常、移行処理を完了する準備ができた時点でデータ収集を停止します。  
 
  ソース サイトからのデータ収集を停止すると、移行先階層内のクライアントは、コンテンツの場所としてソース サイトの共有配布ポイントを使用できなくなります。 そのため、移行先階層のクライアントで必要な移行済みコンテンツを引き続き使用できるようにするには、次のいずれかの方法を実行してください。  
 

@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 caps.latest.revision: "9"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 1463aa5a64de50b31ad0fc94709e2b41fd1c3bb0
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: c310e23b543e8767a393ca5bf87a224a9269e359
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>System Center Configuration Manager のログ ファイル
 
@@ -207,7 +207,7 @@ Configuration Manager のログ ファイルは、ログ ファイルを作成�
 ###  <a name="BKMK_ClientInstallLog"></a> クライアントのインストール ログ ファイル  
  次の表に、Configuration Manager クライアントのインストールに関係のある情報を含むログ ファイルを示します。  
 
-|ログの名前|[説明]|  
+|ログの名前|説明|  
 |--------------|-----------------|  
 |ccmsetup.log|クライアントのセットアップ、クライアントのアップグレード、およびクライアントの削除に関する ccmsetup.exe のタスクを記録します。 クライアントのインストールのトラブルシューティングに使用できます。|  
 |ccmsetup-ccmeval.log|クライアントのステータスと修復に関する ccmsetup.exe のタスクを記録します。|  
@@ -226,7 +226,7 @@ Configuration Manager のログ ファイルは、ログ ファイルを作成�
 >  -   **omiserver.bin** を **nwserver.bin**に置き換え  
 > -   **omi** を **nanowbem**に置き換え  
 
-|ログの名前|説明|  
+|ログの名前|詳細|  
 |--------------|-------------|  
 |Scxcm.log|Linux および UNIX 用の Configuration Manager クライアントのコア サービス (ccmexec.bin) のログ ファイルです。 このログ ファイルには、ccmexec.bin のインストールと実行中の処理に関する情報が含まれます。<br /><br /> 既定でこのログ ファイルは **/var/opt/microsoft/scxcm.log** にあります<br /><br /> ログ ファイルの場所を変更するには、 **/opt/microsoft/configmgr/etc/scxcm.conf** を編集して **[パス]** フィールドを変更します。 変更を有効にするために、クライアント コンピューターやサービスを再起動する必要はありません。<br /><br /> ログ レベルを 4 種類の設定のいずれかに設定できます。|  
 |Scxcmprovider.log|Linux および UNIX 用の Configuration Manager クライアントの CIM サービス (omiserver.bin) のログ ファイルです。 このログ ファイルには、nwserver.bin の実行中の処理に関する情報が含まれます。<br /><br /> このログは **/var/opt/microsoft/configmgr/scxcmprovider.log** にあります<br /><br /> ログ ファイルの場所を変更するには、 **/opt/microsoft/omi/etc/scxcmprovider.conf** を編集して **[パス]** フィールドを変更します。 変更を有効にするために、クライアント コンピューターやサービスを再起動する必要はありません。<br /><br /> ログ レベルを 3 つの設定のいずれかに設定できます。|  
@@ -263,7 +263,7 @@ Linux および UNIX 用のクライアントでは、クライアント ログ 
 ###  <a name="BKMK_LogfilesforMac"></a> Mac コンピューター用のクライアント  
 Mac コンピューター用の Configuration Manager クライアントでは、次のログ ファイルに情報を記録します。  
 
-|ログの名前|説明|  
+|ログの名前|詳細|  
 |--------------|-------------|  
 |CCMClient-&lt;*date_time*>.log|アプリケーション管理、インベントリ、エラー記録などの、Mac クライアントの操作に関連する処理が記録されます。<br /><br /> このログ ファイルは、Mac コンピューターの /Library/Application Support/Microsoft/CCM/Logs フォルダーに配置されます。|  
 |CCMAgent-&lt;*date_time*>.log|ユーザーのログオン操作とログオフ操作、Mac コンピューターの処理など、クライアントの処理に関連する情報を記録します。<br /><br /> このログ ファイルは、Mac コンピューターの ~/Library/Logs フォルダーに配置されます。|  

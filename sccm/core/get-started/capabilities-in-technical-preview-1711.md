@@ -14,11 +14,11 @@ ms.assetid: 2e68dc12-6776-437a-9138-45cd7d4bf9cf
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: e970dff4ea295694fcc5cf80e238baf2c9d081b5
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: b740c422a71e625ccc110a043028cf986cdffb20
+ms.sourcegitcommit: ed8b2438ef85c9160741ef61f9171be41dd1ae0a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/17/2017
 ---
 # <a name="capabilities-in-technical-preview-1711-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1711 の機能
 
@@ -109,20 +109,6 @@ ms.lasthandoff: 12/01/2017
 1. アプリケーションを作成または編集します。
 2. アプリケーションをクライアントに展開します。
 3. ソフトウェア センターからアプリケーションをインストールします。 アプリケーションのインストール インターフェイスが表示されます。 エンドユーザーはアプリケーションのインストール ウィザードに従うことで、アプリケーションが正常にインストールされます。
-
-## <a name="new-compliance-policy-options-for-windows-10"></a>Windows 10 用の新しいコンプライアンス ポリシー オプション
-以下は、Windows 10 デバイス用に構成できる新しいコンプライアンス ポリシーです。
-- **ファイアウォールが必要**。  デバイスでファイアウォールが有効になっている必要があるかどうか、およびすべてのネットワークを監視するかどうかを指定します。
-- **ユーザー アカウント制御が必要**。 デバイスでユーザー アカウント制御が有効になっている必要があることを指定します。
-- **Defender**:
-  - **Windows Defender ウイルス対策が必要**。  デバイスで Windows Defender ウイルス対策が有効になっている必要があります。
-  - **Windows Defender ウイルス対策のバージョン**。  デバイスにインストールされている必要があるスパイウェア定義の最小バージョンを指定します。
-  - **Windows Defender ウイルス対策署名が必要**。 デバイスの Windows Defender ウイルス対策署名が最新になっていることを確認します。
-  - **リアルタイム保護が必要**。  デバイスに Windows Defender ウイルス対策のリアルタイム保護が有効になっている必要があるかどうかを指定します。
-- **有効なオペレーティング システムのビルド**。  オペレーティング システム ビルドの最小要件と最大要件を指定します。  
-
-コンプライアンス ポリシーの作成ウィザードを使用して、これらのポリシーを構成し、構成しているポリシーにルールを追加するときに、これらの新しいオプションを選択します。  
-コンプライアンス ポリシーの[作成](/sccm/mdm/deploy-use/create-compliance-policy#create-a-compliance-policy)方法と[展開](/sccm/mdm/deploy-use/create-compliance-policy#deploy-a-compliance-policy)方法を学習します。
 
 
 

@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 caps.latest.revision: "23"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 1f169dbf645096777f3fd244d24ca5be92efa180
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 21cd2d2f8087cb39dc47fbcca01ec700d79f41d0
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>System Center Configuration Manager でのブート イメージの管理
 
@@ -86,7 +86,7 @@ Configuration Manager バージョン 1706 以降、そのブート イメージ
 
 #### <a name="to-add-a-boot-image"></a>ブート イメージを追加するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開し、**[ブート イメージ]** をクリックします。  
 
@@ -98,15 +98,15 @@ Configuration Manager バージョン 1706 以降、そのブート イメージ
 
          このパスは、UNC 形式の有効なネットワーク パスでなければなりません。 例: \\\\<*servername*\\<*sharename*>\\<*bootimagename*>.wim  
 
-    -   **[ ブート イメージ ]** ドロップダウン リストで、インポートするブート イメージを選択します。 WIM ファイルに複数のブート イメージが含まれている場合、該当するイメージを選びます。  
+    -   **[ブート イメージ]** ドロップダウン リストで、インポートするブート イメージを選択します。 WIM ファイルに複数のブート イメージが含まれている場合、該当するイメージを選びます。  
 
-5.  **[ 全般  ]** ページで、以下のオプションを指定して **[ 次へ]** をクリックします。  
+5.  **[全般]** ページで、以下のオプションを指定して **[次へ]** をクリックします。  
 
-    -   **[ 名前 ]** ボックスで、ブート イメージの一意の名前を指定します。  
+    -   **[名前]** ボックスで、ブート イメージの一意の名前を指定します。  
 
-    -   **[ バージョン ]** ボックスで、ブート イメージのバージョン番号を指定します。  
+    -   **[バージョン]** ボックスで、ブート イメージのバージョン番号を指定します。  
 
-    -   **[ コメント ]** ボックスで、ブート イメージの使用方法について簡単な説明を指定します。  
+    -   **[コメント]** ボックスで、ブート イメージの使用方法について簡単な説明を指定します。  
 
 6.  ウィザードを完了します。  
 
@@ -142,7 +142,7 @@ Configuration Manager バージョン 1706 以降、そのブート イメージ
 
 #### <a name="to-modify-the-properties-of-a-boot-image"></a>ブート イメージのプロパティを変更するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開し、**[ブート イメージ]** をクリックします。  
 
@@ -236,7 +236,7 @@ Configuration Manager バージョン 1706 以降、そのブート イメージ
 
 #### <a name="to-configure-a-boot-image-to-deploy-from-a-pxe-enabled-distribution-point"></a>PXE 対応の配布ポイントから展開するブート イメージを構成するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開し、**[ブート イメージ]** をクリックします。  
 

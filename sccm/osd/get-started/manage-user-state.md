@@ -13,20 +13,20 @@ ms.topic: article
 ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 caps.latest.revision: "12"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: eae8f16a43dd8b1c6f6c695fbefafbb26084ff36
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: b85199d1109d216cbb7d7368717b99c110ec3219
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="manage-user-state-in-system-center-configuration-manager"></a>System Center Configuration Manager でのユーザー状態の管理
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-オペレーティング システムを展開するときに、現在のオペレーティング システムのユーザー状態を維持したい場合は、System Center Configuration Manager のタスク シーケンスを使って、ユーザー状態データをキャプチャして復元します。 たとえば、  
+オペレーティング システムを展開するときに、現在のオペレーティング システムのユーザー状態を維持したい場合は、System Center Configuration Manager のタスク シーケンスを使って、ユーザー状態データをキャプチャして復元します。 次に例を示します。  
 
 -   あるコンピューターのユーザー状態をキャプチャし、別のコンピューターで復元する展開。  
 
@@ -112,13 +112,13 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-create-a-computer-association"></a>コンピューターの関連付けを作成するには  
 
-1.  Configuration Manager コンソールで、**[ 資産とコンプライアンス]** をクリックします。  
+1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
 
-2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ ユーザー状態の移行]** をクリックします。  
+2.  **[資産とコンプライアンス]** ワークスペースで **[ユーザー状態の移行]** をクリックします。  
 
-3.  **[ ホーム ]** タブの **[ 作成 ]** グループで、**[ コンピューターの関連付けの作成]** をクリックします。  
+3.  **[ホーム]** タブの **[作成]** グループで、**[コンピューターの関連付けの作成]** をクリックします。  
 
-4.  **[ コンピューターの関連付けのプロパティ ]** ダイアログ ボックスの **[ コンピューターの関連付け ]** のタブで、ユーザー状態のキャプチャ元のコンピューターと、ユーザー状態データの復元先のコンピューターを指定します。  
+4.  **[コンピューターの関連付けのプロパティ]** ダイアログ ボックスの **[コンピューターの関連付け]** のタブで、ユーザー状態のキャプチャ元のコンピューターと、ユーザー状態データの復元先のコンピューターを指定します。  
 
 5.  **[ユーザー アカウント]** タブで、展開先コンピューターに移行するユーザー アカウントを指定します。 次のいずれかの設定を指定します。  
 
