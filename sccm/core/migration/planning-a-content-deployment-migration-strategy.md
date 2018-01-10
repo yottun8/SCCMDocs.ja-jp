@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 66f7759c-6272-4116-aad7-0d05db1d46cd
 caps.latest.revision: "8"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 4d1b8c46dc517573c7d8051660837bb80859e993
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 7332ff4bf0ad10bd18e42485fb548eee70deaf04
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="plan-a-content-deployment-migration-strategy-in-system-center-configuration-manager"></a>System Center Configuration Manager のコンテンツ展開移行戦略の計画
 
@@ -105,9 +105,9 @@ Configuration Manager によってコンテンツが単一インスタンス ス
 
 |配布ポイントの種類|サイト サーバー以外のサイト システム コンピューターの配布ポイント|他のサイト システムの役割をホストする、サイト サーバー以外のサイト システム コンピューターの配布ポイント|セカンダリ サイト サーバーの配布ポイント|  
 |--------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------------------------------------------|  
-|標準配布ポイント|○|×|○|  
-|サーバー共有上の配布ポイント<sup>1</sup>|○|いいえ|×|  
-|ブランチ配布ポイント|○|いいえ|×|  
+|標準配布ポイント|はい|いいえ|はい|  
+|サーバー共有上の配布ポイント<sup>1</sup>|はい|いいえ|いいえ|  
+|ブランチ配布ポイント|はい|いいえ|いいえ|  
 
  <sup>1</sup> System Center Configuration Manager では、サイト システムでのサーバー共有をサポートしていませんが、サーバー共有上の Configuration Manager 2007 配布ポイントのアップグレードをサポートしています。 サーバー共有上の Configuration Manager 2007 配布ポイントをアップグレードするときに、配布ポイントの種類が自動的にサーバーに変換されるため、単一インスタンスのコンテンツ ストアを格納する配布ポイント コンピューターのドライブを選択する必要があります。  
 
