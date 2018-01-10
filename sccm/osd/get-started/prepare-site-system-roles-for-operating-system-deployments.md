@@ -13,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: 0ef5f3ce-b0e4-4775-b5c2-b245e45b4194
 caps.latest.revision: "11"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: c07172bec1032b021c2d7b7ccaabe33c96b930d2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 379a77ad83916a4a4660aea8816b353dd8c11c60
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="prepare-site-system-roles-for-operating-system-deployments-with-system-center-configuration-manager"></a>System Center Configuration Manager でのオペレーティング システム展開のサイト システムの役割の準備
 
@@ -140,9 +140,9 @@ Configuration Manager バージョン 1606 では、PXE 対応配布ポイント
 
 #### <a name="to-enable-multicast-for-a-distribution-point"></a>配布ポイントでマルチキャストを有効にするには  
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
-2.  **[ 管理 ]** ワークスペースで、**[ 概要]** を展開し、**[ 配布ポイント ]** ノードを選択します。  
+2.  **[管理]** ワークスペースで、**[概要]** を展開し、**[配布ポイント]** ノードを選択します。  
 
 3.  オペレーティング システムのイメージをマルチキャスト用に使用する配布ポイントを選択します。  
 
@@ -174,7 +174,7 @@ Configuration Manager バージョン 1606 では、PXE 対応配布ポイント
 
     -   **最大クライアント数**: この配布ポイントからオペレーティング システムをダウンロードできる展開先のコンピューターの最大数を指定します。  
 
-6.  **[OK]**をクリックします。  
+6.  **[OK]** をクリックします。  
 
 ##  <a name="BKMK_StateMigrationPoints"></a> 状態移行ポイント  
  状態移行ポイントには、あるコンピューターでキャプチャされて別のコンピューターで復元されるユーザー状態データが保存されます。 ただし、セットアップ先のコンピューターでオペレーティング システムを更新する展開など、同じコンピューター上のオペレーティング システム展開のユーザー設定をキャプチャする場合、データをハードリンクを使用して同じコンピューターに保存するか、または状態移行ポイントを使用して保存するかを選択することができます。 一部のコンピューター展開では、状態ストアを作成すると、Configuration Manager によって状態ストアと対象コンピューターの関連付けが自動的に作成されます。 状態移行ポイントを計画する際には、以下の点を検討してください。  

@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: e2269031-0977-4f01-a274-420e00630575
 caps.latest.revision: "10"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 8c1462ca922f23250ffa44c6433f01a8220d3ad7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: da1a9b9d73a06a099b71e59cbf3621791eaed527
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>System Center Configuration Manager でのタスク シーケンス アクション変数
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_ApplyDataImage"></a> データ イメージの適用タスク シーケンス アクション変数  
  このアクションの変数では、WIM ファイルのどのイメージを対象のコンピューターに適用するのか、および対象のパーティションのファイルを削除するかどうかを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Apply Data Image Task Sequence Step](task-sequence-steps.md#BKMK_ApplyDataImage)」 (データ イメージの適用タスク シーケンス ステップ) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_ApplyDriverPackage"></a> ドライバー パッケージの適用タスク シーケンス アクション変数  
  このアクションの変数では、大容量記憶装置ドライバーのインストールに関する情報、および署名されていないドライバーをインストールするかどうかを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Apply Driver Package](task-sequence-steps.md#BKMK_ApplyDriverPackage)」 (ドライバー パッケージの適用) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -65,7 +65,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_ApplyNetworkSettings"></a> ネットワーク設定の適用タスク シーケンス アクション変数  
  このアクションの変数では、コンピューターのネットワーク アダプターの設定、ドメイン設定、ワークグループ設定などの、対象コンピューターのネットワーク設定を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Apply Network Settings Step](task-sequence-steps.md#BKMK_ApplyNetworkSettings)」 (ネットワーク設定の適用ステップ) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_ApplyOperatingSystem"></a> オペレーティング システム イメージの適用タスク シーケンス アクション変数  
  このアクションの変数では、対象のコンピューターにインストールするオペレーティング システムの設定を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Apply Operating System Image](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)」 (オペレーティング システム イメージの適用) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -96,7 +96,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_ApplyWindowsSettings"></a> Windows 設定の適用タスク シーケンス アクション変数  
  このアクションの変数では、コンピューター名、Windows プロダクト キー、登録ユーザーと組織、ローカルの管理者パスワードなどの、対象のコンピューターの Windows 設定を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「 [Apply Windows Settings](task-sequence-steps.md#BKMK_ApplyWindowsSettings)」 (Windows 設定の適用) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -113,7 +113,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_AutoApplyDrivers"></a> ドライバーの自動適用タスク シーケンス アクション変数  
  このアクションの変数では、対象のコンピューターにどの Windows ドライバーをインストールするのか、および署名されていないドライバーをインストールするかどうかを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Auto Apply Drivers](task-sequence-steps.md#BKMK_AutoApplyDrivers)」 (ドライバーの自動適用) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -124,17 +124,17 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_CaptureNetworkSettings"></a> ネットワーク設定のキャプチャ タスク シーケンス アクション変数  
  このアクションの変数では、ネットワーク アダプター設定 (TCP/IP、DNS、WINS) の構成情報をキャプチャするかどうか、およびワークグループまたはドメインのメンバーシップ情報をオペレーティング システム展開の一部として移行するかどうかを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Capture Network Settings](task-sequence-steps.md#BKMK_CaptureNetworkSettings)」 (ネットワーク設定のキャプチャ) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
-|OSDMigrateAdapterSettings<br /><br /> (入力)|ネットワーク アダプター設定 (TCP/IP、DNS、WINS) の構成情報をキャプチャするかどうかを指定します。<br /><br /> 例:<br /><br /> **"TRUE"** (既定)<br /><br /> **"FALSE"**|  
-|OSDMigrateNetworkMembership<br /><br /> (入力)|ワークグループまたはドメインのメンバーシップ情報をオペレーティング システムの展開の一部として移行するかどうかを指定します。<br /><br /> 例:<br /><br /> **"TRUE"** (既定)<br /><br /> **"FALSE"**|  
+|OSDMigrateAdapterSettings<br /><br /> (入力)|ネットワーク アダプター設定 (TCP/IP、DNS、WINS) の構成情報をキャプチャするかどうかを指定します。<br /><br /> 次に例を示します。<br /><br /> **"TRUE"** (既定)<br /><br /> **"FALSE"**|  
+|OSDMigrateNetworkMembership<br /><br /> (入力)|ワークグループまたはドメインのメンバーシップ情報をオペレーティング システムの展開の一部として移行するかどうかを指定します。<br /><br /> 次に例を示します。<br /><br /> **"TRUE"** (既定)<br /><br /> **"FALSE"**|  
 
 ###  <a name="BKMK_CaptureOperatingSystemImage"></a> オペレーティング システム イメージのキャプチャ タスク シーケンス アクション変数  
  このアクションの変数では、イメージの格納場所、イメージの作成者、イメージの説明などの、キャプチャするオペレーティング システム イメージに関する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Capture Operating System Image](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)」 (オペレーティング システム イメージのキャプチャ) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -149,7 +149,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_CaptureUserState"></a> ユーザー状態のキャプチャ タスク シーケンス アクション変数  
  このアクションの変数では、ユーザー状態を保存するフォルダー、USMT のコマンド ライン オプション、ユーザー プロファイルの制御とキャプチャに使用する構成ファイルなどの、ユーザー状態移行ツール (USMT) で使用される情報を指定します。  これらの変数に関連するタスク シーケンス ステップの詳細については、「[Capture User State](task-sequence-steps.md#BKMK_CaptureUserState)」 (ユーザー状態のキャプチャ) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -165,7 +165,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_CaptureWindowsSettings"></a> Windows 設定のキャプチャ タスク シーケンス アクション変数  
  このアクションの変数では、コンピューター名、登録組織名、タイム ゾーン情報などの特定の Windows 設定を対象のコンピューターに移行するかどうかを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Capture Windows Settings](task-sequence-steps.md#BKMK_CaptureWindowsSettings)」 (Windows 設定のキャプチャ) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -179,19 +179,19 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_ConnecttoNetworkFolder"></a> ネットワーク フォルダーへの接続タスク シーケンス アクション変数  
  このアクションの変数では、ネットワーク フォルダーへの接続に使用するアカウントとパスワード、フォルダーのドライブ文字、フォルダーへのパスなどの、ネットワーク上のフォルダーに関する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Connect To Network Folder](task-sequence-steps.md#BKMK_ConnectToNetworkFolder)」 (ネットワーク フォルダーに接続) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
 |SMSConnectNetworkFolderAccount<br /><br /> (入力)|ネットワーク共有に接続するために使用する管理者アカウントを指定します。|  
-|SMSConnectNetworkFolderDriveLetter<br /><br /> (入力)|接続先のネットワーク ドライブ文字を指定します。 この値は省略可能です。指定しない場合、ネットワーク接続はドライブ文字にマップされません。 値を指定する場合は、D: から Z: の範囲で指定する必要があります。  また、X: は使用しないでください。X: は、Windows PE 段階で Windows PE によって使用されるドライブ文字です。<br /><br /> 例:<br /><br /> **"D:"**<br /><br /> **"E:"**|  
+|SMSConnectNetworkFolderDriveLetter<br /><br /> (入力)|接続先のネットワーク ドライブ文字を指定します。 この値は省略可能です。指定しない場合、ネットワーク接続はドライブ文字にマップされません。 値を指定する場合は、D: から Z: の範囲で指定する必要があります。  また、X: は使用しないでください。X: は、Windows PE 段階で Windows PE によって使用されるドライブ文字です。<br /><br /> 次に例を示します。<br /><br /> **"D:"**<br /><br /> **"E:"**|  
 |SMSConnectNetworkFolderPassword<br /><br /> (入力)|ネットワーク共有に接続するために使用するネットワーク パスワードを指定します。|  
 |SMSConnectNetworkFolderPath<br /><br /> (入力)|接続に使用するネットワーク パスを指定します。<br /><br /> 例:<br /><br /> **"\\\サーバー名\共有名"**|  
 
 ###  <a name="BKMK_EnableBitLocker"></a> BitLocker の有効化タスク シーケンス アクション変数  
  このアクションの変数では、対象のコンピューターで BitLocker を有効にするために使用する、回復パスワード オプションとスタートアップ キー オプションを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Enable BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker)」 (BitLocker の有効化) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -201,7 +201,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_FormatPartitionDisk"></a> ディスクのフォーマットとパーティション作成タスク シーケンス アクション変数  
  このアクションの変数では、ディスク番号やパーティション設定の配列などの、物理ディスクをフォーマットおよびパーティション作成するための情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Format and Partition Disk](task-sequence-steps.md#BKMK_FormatandPartitionDisk)」 (ディスクのフォーマットとパーティション作成) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -214,7 +214,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_InstallSoftwareUpdates"></a> ソフトウェアの更新のインストール タスク シーケンス アクション変数  
  このアクションの変数では、すべての更新プログラムをインストールするのか、必須の更新プログラムのみインストールするのかを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Install Software Updates](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)」 (ソフトウェアの更新プログラムのインストール) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名<br /><br /> (入力)|説明|  
 |----------------------------------------|-----------------|  
@@ -223,7 +223,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_JoinDomainWorkgroup"></a> ドメインまたはワークグループへの参加タスク シーケンス アクション変数  
  このアクションの変数では、対象のコンピューターを Windows ドメインまたはワークグループに参加させるために必要な情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Join Domain or Workgroup](task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)」 (ドメインまたはワークグループに参加) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -238,7 +238,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_PrepareWindowsCapture"></a> Windows のキャプチャの準備タスク シーケンス アクション変数  
  このアクションの変数は、対象コンピューターから Windows オペレーティング システムをキャプチャするのに使用する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Prepare ConfigMgr Client for Capture](task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture)」 (ConfigMgr クライアントのキャプチャの準備) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -249,7 +249,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_ReleaseStateStore"></a> 状態ストアのリリース シーケンス アクション変数  
  このアクションの変数は、格納されたユーザー状態をリリースするのに使用する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Release State Store](task-sequence-steps.md#BKMK_ReleaseStateStore)」 (状態ストアのリリース) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -258,7 +258,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_RequestState"></a> 状態ストアの要求タスク シーケンス アクション変数  
  このアクションの変数は、ユーザー データが格納されている状態移行ポイント上のフォルダーのように、格納されたユーザー状態を要求するのに使用する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Release State Store](../../osd/understand/task-sequence-steps.md#BKMK_ReleaseStateStore)」 (状態ストアのリリース) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -270,17 +270,17 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_RestartComputer"></a> コンピューターの再起動タスク シーケンス アクション変数  
  このアクションの変数は、対象コンピューターを再起動するのに使用する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Restart Computer](task-sequence-steps.md#BKMK_RestartComputer)」 (コンピューターの再起動) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
 |SMSRebootMessage<br /><br /> (入力)|対象コンピューターの再起動前にユーザーに表示されるメッセージを指定します。 この変数を設定しなかった場合、既定のメッセージ テキストが表示されます。 メッセージは、512 文字以内で指定する必要があります。<br /><br /> 例:<br /><br /> "このコンピューターは再起動されます。作業中のファイルを保存してください。"|  
-|SMSRebootTimeout<br /><br /> (入力)|コンピューターが再起動される前にユーザーに警告を表示する秒数を指定します。 0 秒を指定すると、再起動されるというメッセージは表示されません。<br /><br /> 例:<br /><br /> **"0"** (既定)<br /><br /> **"5"**<br /><br /> **"10"**|  
+|SMSRebootTimeout<br /><br /> (入力)|コンピューターが再起動される前にユーザーに警告を表示する秒数を指定します。 0 秒を指定すると、再起動されるというメッセージは表示されません。<br /><br /> 次に例を示します。<br /><br /> **"0"** (既定)<br /><br /> **"5"**<br /><br /> **"10"**|  
 
 ###  <a name="BKMK_RestoreUserState"></a> ユーザー状態の復元 タスク シーケンス アクション変数  
  このアクションの変数は、ユーザー状態が復元されるフォルダーのパス名など、対象コンピューターのユーザー状態を復元するのに使用される情報を指定します。また、ローカル コンピューター アカウントを復元するかどうかも指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Restore User State](task-sequence-steps.md#BKMK_RestoreUserState)」 (ユーザー状態の復元) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -295,7 +295,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_RunCommand"></a> コマンド ラインの実行タスク シーケンス アクション変数  
  このアクションの変数は、コマンドが実行される作業ディレクトリなど、コマンド ラインからコマンドを実行するのに使用する情報を指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine)」 (コマンド ラインの実行) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名|説明|  
 |--------------------------|-----------------|  
@@ -307,7 +307,7 @@ ms.lasthandoff: 10/12/2017
 ### <a name="set-dynamic-variables"></a>動的変数の設定  
  [動的変数の設定] タスク シーケンス ステップを追加すると、このアクションの変数が自動的に設定されます。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Set Dynamic Variables](task-sequence-steps.md#BKMK_SetDynamicVariables)」 (動的変数の設定) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名<br /><br /> (入力)|説明|  
 |----------------------------------------|-----------------|  
@@ -323,7 +323,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="BKMK_SetupWindows"></a> Windows と ConfigMgr のセットアップ タスク シーケンス アクション変数  
  このアクションの変数は、Configuration Manager クライアントをインストールするときに使用されるクライアント インストール プロパティを指定します。 これらの変数に関連するタスク シーケンス ステップの詳細については、「[Setup Windows and ConfigMgr](task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr)」 (Windows と ConfigMgr のセットアップ) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名<br /><br /> (入力)|説明|  
 |----------------------------------------|-----------------|  
@@ -332,7 +332,7 @@ ms.lasthandoff: 10/12/2017
 ### <a name="upgrade-operating-system"></a>オペレーティング システムのアップグレード  
  このアクションの変数では、Windows 10 へのアップグレードの際にセットアップに追加されるコマンド ライン オプションを指定します。これらのオプションは Configuration Manager コンソールでは使用できません。 この変数に関連するタスク シーケンス ステップの詳細については、「[Upgrade Operating System](task-sequence-steps.md#BKMK_UpgradeOS)」 (オペレーティング システムのアップグレード) を参照してください。  
 
-#### <a name="details"></a>説明  
+#### <a name="details"></a>詳細  
 
 |アクション変数名<br /><br /> (入力)|説明|  
 |----------------------------------------|-----------------|  

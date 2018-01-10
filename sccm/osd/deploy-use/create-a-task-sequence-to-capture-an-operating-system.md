@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 caps.latest.revision: "19"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 48530c177a03b66dbc126025ca61e0078bc89d9f
-ms.sourcegitcommit: 5ec9f8c312688bf7f4de4d6007b121d743b80c4d
+ms.openlocfilehash: c376a6b600e775f532410ad467b99cda1fbfc575
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>System Center Configuration Manager でオペレーティング システムをキャプチャするタスク シーケンスを作成する
 
@@ -78,7 +78,7 @@ System Center Configuration Manager でタスク シーケンスを使用して�
 
     -   **イメージ インデックス**: インストールするオペレーティング システムを指定します。 オペレーティング システム イメージに複数のバージョンが含まれている場合は、インストールするバージョンを選択します。  
 
-    -   **プロダクト キー**: インストールする Windows オペレーティング システムのプロダクト キーを指定します。 エンコードされたボリューム ライセンス キーと標準のプロダクト キーを指定できます。 エンコードされていないプロダクト キーを使用する場合は、5 桁ごとにハイフン (-) で区切る必要があります。 例: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+    -   **プロダクト キー**:インストールする Windows オペレーティング システムのプロダクト キーを指定します。 エンコードされたボリューム ライセンス キーと標準のプロダクト キーを指定できます。 エンコードされていないプロダクト キーを使用する場合は、5 桁ごとにハイフン (-) で区切る必要があります。 例: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
     -   **サーバー ライセンス モード**: サーバー ライセンスが **[接続クライアント数]**と **[同時使用ユーザー数]**のいずれか、または決められていないかを指定します。 サーバー ライセンスが **[同時使用ユーザー数]**の場合は、サーバー接続の最大数も指定します。  
 
@@ -162,7 +162,7 @@ System Center Configuration Manager でタスク シーケンスを使用して�
 
 5.  **[タスク シーケンス情報]** ページで、タスク シーケンスの名前と説明を指定します。  
 
-6.  タスク シーケンスのブート イメージを指定します。 このブート イメージは参照コンピューターを Windows PE で起動するために使用されます。  詳細については、「[ブート イメージの管理](../get-started/manage-boot-images.md)」を参照してください。  
+6.  タスク シーケンスのブート イメージを指定します。 このブート イメージは参照コンピューターを Windows PE で起動するために使用されます。  詳細については、「[ブート イメージの管理](../get-started/manage-boot-images.md)」をご覧ください。  
 
 7.  ウィザードを完了します。  
 
