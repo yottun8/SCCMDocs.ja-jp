@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: b60a1b9e85b00cbaba54db4ea4cd92a1038c3fcf
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 1d98cd234b2444873f1ffa5819af74d507dfa9c1
+ms.sourcegitcommit: ba23ff90709a5fde1a63c650ab0d848f441afc43
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager のモバイル デバイスの VPN プロファイル
 
@@ -38,17 +38,17 @@ System Center Configuration Manager の VPN プロファイルを使用して、
 
  |接続の種類|iOS と macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop および Mobile|  
  |---------------------|----------------------|-------------|-----------------|----------------|--------------------|-----------------------|-----------------------------------|  
- |Cisco AnyConnect|○|○|いいえ|いいえ|いいえ|いいえ|○|
- |Cisco (IPSec)|iOS のみ|×|いいえ|いいえ|いいえ|いいえ|×|  
- |Pulse Secure|[はい]|[はい]|○|×|[はい]|[はい]|○|  
- |F5 Edge Client|[はい]|[はい]|○|×|[はい]|[はい]|○|  
- |Dell SonicWALL Mobile Connect|[はい]|[はい]|○|×|[はい]|[はい]|[はい]|  
- |チェック ポイント モバイル VPN|○|[はい]|○|×|[はい]|[はい]|○|  
- |Microsoft SSL (SSTP)|×|いいえ|[はい]|[はい]|○|いいえ|いいえ|  
- |Microsoft 自動|いいえ|いいえ|[はい]|[はい]|○|×|○|  
- |IKEv2|はい (カスタム ポリシー、iOS 9 以降)|いいえ|[はい]|[はい]|[はい]|[はい]|[はい]|  
- |PPTP|○|×|[はい]|[はい]|○|×|○|  
- |L2TP|[はい]|×|[はい]|[はい]|○|×|はい (OMA-URI)|  
+ |Cisco AnyConnect|はい|はい|いいえ|いいえ|いいえ|いいえ|いいえ|
+ |Cisco (IPSec)|iOS のみ|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|  
+ |Pulse Secure|はい|はい|はい|いいえ|はい|はい|はい|  
+ |F5 Edge Client|はい|はい|はい|いいえ|はい|はい|はい|  
+ |Dell SonicWALL Mobile Connect|はい|はい|はい|いいえ|はい|はい|はい|  
+ |チェック ポイント モバイル VPN|はい|はい|はい|いいえ|はい|はい|はい|  
+ |Microsoft SSL (SSTP)|いいえ|いいえ|はい|はい|はい|いいえ|いいえ|  
+ |Microsoft 自動|いいえ|いいえ|はい|はい|はい|いいえ|はい|  
+ |IKEv2|はい (カスタム ポリシー、iOS 9 以降)|いいえ|はい|はい|はい|はい|はい|  
+ |PPTP|はい|いいえ|はい|はい|はい|いいえ|はい|  
+ |L2TP|はい|いいえ|はい|はい|はい|いいえ|はい (OMA-URI)|  
 
 ## <a name="create-vpn-profiles"></a>VPN プロファイルの作成
 VPN プロファイルの作成方法に関する一般情報は、「[System Center Configuration Manager で VPN プロファイルを作成する方法](../../protect/deploy-use/create-vpn-profiles.md)」をご覧ください。
