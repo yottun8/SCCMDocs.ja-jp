@@ -14,11 +14,11 @@ ms.assetid: ca3b4714-2a16-495e-8a17-1d87991d5556
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: d7819dd71a37bc581b629ac180f657134495f50c
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: cfb14ebb7b4f7eb9a008ad4464978778e57514a6
+ms.sourcegitcommit: d029b373113051634ed030545348a458eb7b25f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1706 の機能
 
@@ -298,7 +298,7 @@ ms.lasthandoff: 12/01/2017
 
 これらの新しい設定は、[Configuration Manager の Technical Preview 1705](/sccm/core/get-started/capabilities-in-technical-preview-1705#new-capabilities-for-azure-ad-and-cloud-management) で説明されている機能を実行するのに役立ちます。
 
-### <a name="before-you-start"></a>アップグレードを開始する前に
+### <a name="before-you-start"></a>開始する前に
 
 オンプレミスの Active Directory と Azure AD テナントの間に Azure AD Connect をインストールして構成している必要があります。
 
@@ -325,7 +325,7 @@ Configuration Manager では、パッケージとプログラムを使用して�
 - Configuration Manager コンソールで、スクリプトによって返される結果を確認する
 
 
-### <a name="prerequisites"></a>必要条件
+### <a name="prerequisites"></a>[前提条件]
 
 スクリプトを使用するには、適切な Configuration Manager のセキュリティ ロールのメンバーである必要があります。
 
@@ -349,7 +349,7 @@ Configuration Manager のセキュリティ ロールの詳細については、
 
 #### <a name="import-and-edit-a-script"></a>スクリプトをインポートして編集する
 
-1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。
+1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。
 2. **[ソフトウェア ライブラリ]** ワークスペースで **[スクリプト]** をクリックします。
 3. **[ホーム]** タブの **[作成]** グループで、**[スクリプトの作成]** をクリックします。
 4. **スクリプトの作成**ウィザードの **[スクリプト]** ページで、次を構成します。
@@ -367,7 +367,7 @@ Configuration Manager のセキュリティ ロールの詳細については、
 
 スクリプトを実行する前に、そのスクリプトが承認されている必要があります。 スクリプトを承認するには、次の手順を実行します。
 
-1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。
+1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。
 2. **[ソフトウェア ライブラリ]** ワークスペースで **[スクリプト]** をクリックします。
 3. **[スクリプト]** リストで、承認または拒否するスクリプトを選択し、**[ホーム]** タブの **[スクリプト]** グループで、**[承認]/[拒否]** をクリックします。
 4. **[Approve or deny script]\(スクリプトの承認または拒否\)** ダイアログ ボックスで、スクリプトを**承認**または**拒否**します。必要に応じて決定に関するコメントを入力します。 スクリプトを拒否すると、クライアント デバイスでそのスクリプトを実行できません。
@@ -405,7 +405,7 @@ PXE の IPv6 サポートのオプションを有効にするには、次の手�
 <!-- 1098490 -->
 Configuration Manager を使用して、Microsoft Surface ドライバーの更新プログラムを管理できるようになりました。
 
-### <a name="prerequisites"></a>必要条件
+### <a name="prerequisites"></a>[前提条件]
 すべてのソフトウェアの更新ポイントで Windows Server 2016 を実行している必要があります。
 
 ### <a name="try-it-out"></a>試してみましょう。
@@ -418,7 +418,7 @@ Configuration Manager を使用して、Microsoft Surface ドライバーの更�
 <!-- 1290890 -->
 Windows Update for Business によって直接管理されている Windows 10 デバイスの Windows 10 機能更新プログラムまたは品質更新プログラムに対し、遅延ポリシーを構成できるようになりました。 遅延ポリシーの管理は、**[ソフトウェア ライブラリ]** > **[Windows 10 のサービス]** の下の新しい **[Windows Update for Business ポリシー]** ノードでできます。
 
-### <a name="prerequisites"></a>必要条件
+### <a name="prerequisites"></a>[前提条件]
 Windows Update for Business で管理されている Windows 10 デバイスには、インターネット接続が必要です。
 
 #### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>Windows Update for Business 遅延ポリシーを作成するには
@@ -462,10 +462,10 @@ Configuration Manager で証明書登録ポイントの役割を追加すると�
 **既知の問題**: 1706 Technical Preview では、PFX 証明書は、Microsoft 証明機関用に発行されません。 これは、インポートされた PFX 証明書または SCEP プロファイルには影響ありません。
 
 
-## <a name="cisco-ipsec-support-for-macos-vpn-profiles"></a>macOS VPN プロファイルの Cisco (IPsec) のサポート
+## <a name="cisco-ipsec-support-for-ios-vpn-profiles"></a>iOS VPN プロファイルの Cisco (IPsec) サポート
 <!-- 1321367 -->
 
-接続タイプとして Cisco (IPsec) を指定して macOS VPN プロファイルを作成できます。 詳細については、「[VPN プロファイルの作成](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles)」を参照してください。
+接続タイプとして Cisco (IPsec) を指定して iOS VPN プロファイルを作成できます。 詳細については、「[VPN プロファイルの作成](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles)」を参照してください。
 
 
 ## <a name="new-windows-configuration-item-settings"></a>新しい Windows 構成アイテムの設定
