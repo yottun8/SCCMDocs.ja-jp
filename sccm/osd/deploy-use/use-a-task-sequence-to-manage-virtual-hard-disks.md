@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0212b023-804a-4f84-b880-7a59cdb49c67
 caps.latest.revision: "5"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 586eec745bdf86a42a9d33fb9e1163f03efa1c59
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 89e30f81648aff16de2f7db55cbdda06cf69551d
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>タスク シーケンスによる System Center Configuration Manager でのバーチャル ハード ディスクの管理
 
@@ -29,7 +29,7 @@ System Center Configuration Manager では、Configuration Manager コンソー�
 
  次の手順に従って、Configuration Manager で VHD を管理します。
 
-## <a name="prerequisites"></a>必要条件  
+## <a name="prerequisites"></a>[前提条件]  
  開始する前に、次の前提条件を確認します。  
 
 -   VHD を管理するコンピューターは、次のオペレーティング システムのいずれかを実行する必要があります。  
@@ -64,7 +64,7 @@ System Center Configuration Manager では、Configuration Manager コンソー�
  VHD を作成するには、まず、VHD を作成するタスク シーケンスを作成してから、バーチャル ハード ディスクの作成ウィザードで、そのタスク シーケンスを使います。 次に、その手順を詳しく説明します。  
 
 ###  <a name="BKMK_CreateTS"></a> VHD のタスク シーケンスを作成する  
- VHD を作成するステップを含むタスク シーケンスを作成する必要があります。 タスク シーケンスの作成ウィザードには、VHD の作成に使用するステップを作成する **[既存のイメージ パッケージをバーチャル ハード ディスクにインストールする]** オプションがあります。 たとえば、[Windows PE での再起動]、[ディスクのフォーマットとパーティション作成]、[オペレーティング システムの適用]、および [コンピューターのシャットダウン] の必要なステップが追加されます。 フルバージョンのオペレーティング システムでは、VHD を作成できません。 また、Configuration Manager は、バーチャル マシンをシャットダウンしてからパッケージを完了するまで待つ必要があります。 ウィザードの既定では、バーチャル マシンをシャットダウンするまで 5 分間待ちます。 タスク シーケンスの作成後は、必要に応じてステップを追加することができます。  
+ VHD を作成するステップを含むタスク シーケンスを作成する必要があります。 タスク シーケンスの作成ウィザードには、VHD の作成に使用するステップを作成する **[既存のイメージ パッケージをバーチャル ハード ディスクにインストールする]** オプションがあります。 たとえば、[Windows PE での再起動]、[ディスクのフォーマットとパーティション作成]、[オペレーティング システムの適用]、および [コンピューターのシャットダウン] の必要なステップが追加されます。 フルバージョンのオペレーティング システムでは、VHD を作成できません。 また、Configuration Manager は、仮想マシンをシャットダウンしてからパッケージを完了するまで待つ必要があります。 ウィザードの既定では、バーチャル マシンをシャットダウンするまで 5 分間待ちます。 タスク シーケンスの作成後は、必要に応じてステップを追加することができます。  
 
 > [!IMPORTANT]  
 >  次の手順では、**[既存のイメージ パッケージをバーチャル ハード ディスクにインストールする]** オプションを使用してタスク シーケンスを作成します。その結果、VHD を正常に作成するために必要なステップが自動的に含まれます。 既存のタスク シーケンスを使用する場合、または手動でタスク シーケンスを作成する場合、タスク シーケンスの終了時に [コンピューターのシャットダウン] ステップを追加してください。 このステップがない場合、一時的なバーチャル マシンは削除されず、VHD を作成するプロセスは完了しません。 ただし、ウィザードは完了し、成功とレポートされます。  
@@ -73,7 +73,7 @@ System Center Configuration Manager では、Configuration Manager コンソー�
 
 #### <a name="to-create-the-task-sequence-to-create-the-vhd"></a>VHD を作成するタスク シーケンスを作成するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 
@@ -87,7 +87,7 @@ System Center Configuration Manager では、Configuration Manager コンソー�
 
     -   **説明**: タスク シーケンスの説明を指定します。  
 
-    -   **ブート イメージ**:展開先コンピューターにオペレーティング システムをインストールするブート イメージを指定します。 詳細については、「[ブート イメージの管理](../get-started/manage-boot-images.md)」を参照してください。  
+    -   **ブート イメージ**:展開先コンピューターにオペレーティング システムをインストールするブート イメージを指定します。 詳細については、「[ブート イメージの管理](../get-started/manage-boot-images.md)」をご覧ください。  
 
 6.  **[Windows のインストール]** ページで次の設定を指定し、**[次へ]**をクリックします。  
 
@@ -95,7 +95,7 @@ System Center Configuration Manager では、Configuration Manager コンソー�
 
     -   **イメージ**: オペレーティング システム イメージ パッケージに複数のイメージがある場合は、インストールするオペレーティング システム イメージのインデックスを指定します。  
 
-    -   **プロダクト キー**: インストールする Windows オペレーティング システムのプロダクト キーを指定します。 エンコードされたボリューム ライセンス キーと標準のプロダクト キーを指定できます。 エンコードされていないプロダクト キーを使用する場合は、5 桁ごとにハイフン (-) で区切る必要があります。 例: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+    -   **プロダクト キー**:インストールする Windows オペレーティング システムのプロダクト キーを指定します。 エンコードされたボリューム ライセンス キーと標準のプロダクト キーを指定できます。 エンコードされていないプロダクト キーを使用する場合は、5 桁ごとにハイフン (-) で区切る必要があります。 例: *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
     -   **サーバー ライセンス モード**: サーバー ライセンスが **[接続クライアント数]**と **[同時使用ユーザー数]**のいずれか、または決められていないかを指定します。 サーバー ライセンスが **[同時使用ユーザー数]**の場合は、サーバー接続の最大数も指定します。  
 
@@ -134,7 +134,7 @@ System Center Configuration Manager では、Configuration Manager コンソー�
 
 #### <a name="to-create-a-vhd"></a>VHD を作成するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[バーチャル ハード ディスク]** をクリックします。  
 
@@ -192,7 +192,7 @@ System Center Configuration Manager では、Configuration Manager コンソー�
 
 #### <a name="to-create-a-custom-task-sequence-to-modify-the-vhd"></a>VHD を変更するタスク シーケンスを作成するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 
@@ -214,7 +214,7 @@ System Center Configuration Manager では、Configuration Manager コンソー�
 
 #### <a name="to-add-task-sequence-steps-to-the-custom-task-sequence"></a>カスタム タスク シーケンスにステップを追加するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースの **[オペレーティング システム]**を展開して **[タスク シーケンス]**をクリックし、前の手順で作成したカスタム タスク シーケンスを選択します。  
 
@@ -231,7 +231,7 @@ System Center Configuration Manager では、Configuration Manager コンソー�
 
 #### <a name="to-modify-a-vhd"></a>VHD を変更するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースの **[オペレーティング システム]** を展開して **[バーチャル ハード ディスク]** をクリックし、変更する VHD を選択します。  
 
@@ -283,7 +283,7 @@ System Center Configuration Manager では、Configuration Manager コンソー�
 
 #### <a name="to-apply-software-updates-to-a-vhd"></a>ソフトウェア更新プログラムを VHD に適用するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[バーチャル ハード ディスク]** をクリックします。  
 
@@ -313,7 +313,7 @@ System Center Configuration Manager では、Configuration Manager コンソー�
 
 #### <a name="to-import-a-vhd-to-vmm"></a>VHD を VMM にインポートするには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[バーチャル ハード ディスク]** をクリックします。  
 

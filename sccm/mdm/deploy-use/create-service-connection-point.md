@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 9ae26c55cf92c954a54311e2e698353bbe359a83
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ee038d8579d63f2afbf0b677181dd06751403ba0
+ms.sourcegitcommit: 0a6b2c53ff4445b5d4f3638fdb0b489d54e333d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="create-a-service-connection-point-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用したサービス接続ポイントの作成
 
@@ -36,9 +36,9 @@ ms.lasthandoff: 10/12/2017
 
 ## <a name="configure-the-service-connection-point-role"></a>サービス接続ポイントの役割を構成する
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。
 
-2.  **[管理]** ワークスペースで **[サイト]** を展開して、**[サーバーとサイト システムの役割]** をクリックします。
+2.  **[管理]** ワークスペースで、**[サイトの構成]** を展開してから **[サーバーとサイト システムの役割]** をクリックします。
 
 3.  対応する手順を使用して、 **サービス接続ポイント** の役割を新規または既存のサイト システム サーバーに追加します。
 

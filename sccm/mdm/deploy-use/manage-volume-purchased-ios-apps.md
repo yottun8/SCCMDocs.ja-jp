@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: c5ce168afe8668c67d7a66aaf79fce91d082afd5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 1411675b11074b610d7370f93eafd7359cfb46ee
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>Manage volume-purchased iOS apps with System Center Configuration Manager
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 10/12/2017
 
 -   Configuration Manager では、展開されている Volume Purchase Program をアンインストールすることによって、必要な場合にライセンスを再利用できます。  
 
-## <a name="before-you-start"></a>アップグレードを開始する前に  
+## <a name="before-you-start"></a>開始する前に  
  開始する前に、Apple から VPP トークンを取得し、これを Configuration Manager にアップロードする必要があります。  
 
 -   既存の Apple VPP アカウントの VPP トークンを異なる MDM 製品で使用していた場合、Configuration Manager で使用するための新しい VPP トークンを生成する必要があります。  
@@ -64,18 +64,18 @@ System Center Configuration Manager 1702 以降では、デバイスとユーザ
 |||||
 |-|-|-|-|
 |Configuration Manager バージョン|アプリでのデバイス ライセンスのサポート|展開コレクションの種類|要求されるライセンス|
-|1702 より前|○|ユーザー|ユーザー ライセンス|
-|1702 より前|×|ユーザー|ユーザー ライセンス|
-|1702 より前|○|デバイス|ユーザー ライセンス|
-|1702 より前|×|デバイス|ユーザー ライセンス|
-|1702 以降|○|ユーザー|ユーザー ライセンス|
-|1702 以降|×|ユーザー|ユーザー ライセンス|
-|1702 以降|○|デバイス|デバイス ライセンス|
-|1702 以降|×|デバイス|ユーザー ライセンス|
+|1702 より前|はい|ユーザー|ユーザー ライセンス|
+|1702 より前|いいえ|ユーザー|ユーザー ライセンス|
+|1702 より前|はい|デバイス|ユーザー ライセンス|
+|1702 より前|いいえ|デバイス|ユーザー ライセンス|
+|1702 以降|はい|ユーザー|ユーザー ライセンス|
+|1702 以降|いいえ|ユーザー|ユーザー ライセンス|
+|1702 以降|はい|デバイス|デバイス ライセンス|
+|1702 以降|いいえ|デバイス|ユーザー ライセンス|
 
 ## <a name="step-1---to-get-and-upload-an-apple-vpp-token"></a>手順 1 - Apple VPP トークンを取得およびアップロードするには  
 
-1.  Configuration Manager コンソールで、**[管理]** > **[クラウド サービス]** > **[Apple Volume Purchase Program のトークン]** の順に選択します。   
+1.  Configuration Manager コンソールで、**[管理]**、**[クラウド サービス]**、**[Apple Volume Purchase Program のトークン]** の順に選択します。   
 
 3.  **[ホーム]** タブの **[Apple Volume Purchase Program のトークン]** グループで、**[Apple Volume Purchase Program トークンを追加する]** を選択します。  
 
@@ -101,10 +101,10 @@ System Center Configuration Manager 1702 以降では、デバイスとユーザ
 
 ## <a name="step-2---deploy-a-volume-purchased-app"></a>手順 2 - ボリューム購入アプリのデプロイ  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[ストア アプリのライセンス情報]** の順に選択します。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**、**[アプリケーション管理]**、**[ストア アプリのライセンス情報]** の順に選択します。  
 
 3.  展開するアプリを選択し、**[ホーム]** タブの **[作成]** グループで、**[アプリケーションの作成]** を選択します。
-作成された Configuration Manager アプリケーションには、ビジネス向け Windows ストアのアプリが含まれます。 他の Configuration Manager のアプリケーションと同様に、このアプリケーションを展開して監視できます。
+作成された Configuration Manager アプリケーションには、ビジネス向け Microsoft Store のアプリが含まれます。 他の Configuration Manager のアプリケーションと同様に、このアプリケーションを展開して監視できます。
 
     > [!IMPORTANT]  
     > 展開の目的として **[必須]** を選択する必要があります。 [利用可能] のインストールは現在サポートされていません。
