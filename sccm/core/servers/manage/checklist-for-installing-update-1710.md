@@ -3,7 +3,7 @@ title: "1710 のチェックリスト | System Center Configuration Manager"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager バージョン 1710 に更新する前に、実行するアクションについて説明します。"
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/19/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: bf015eed67fc28faad259f4c3a54ad51ab33d531
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: f1f80a630a607d6d914fc6e6106a2ce9df39dcc3
+ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="checklist-for-installing-update-1710-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム 1710 をインストールするためのチェックリスト
 
@@ -127,6 +127,8 @@ Configuration Manager では、ネットワーク負荷分散 (NLB) クラスタ
 更新プログラムのインストール中にサイト データベースのメンテナンス タスクを実行すると、更新プログラムのインストールが失敗することができます。 タスクを無効にする前に、更新プログラムをインストールした後で構成を復元できるように、タスクのスケジュールを記録してください。
 
 詳細については、「[System Center Configuration Manager のメンテナンス タスク](/sccm/core/servers/manage/maintenance-tasks)」および「[System Center Configuration Manager のメンテナンス タスクのリファレンス](/sccm/core/servers/manage/reference-for-maintenance-tasks)」を参照してください。
+
+**System Center Configuration Manager サーバー上のウイルス対策ソフトウェアを一時的に停止する:** サイトを更新する前に、Configuration Manager サーバー上のウイルス対策ソフトウェアを停止したことを確認してください。 <!--SMS.503481--> 
 
 **中央管理サイトとプライマリ サイトでサイト データベースのバックアップを作成する:** サイトを更新する前に、サイト データベースをバックアップして、障害復旧に使用する正常なバックアップがあるようにします。
 

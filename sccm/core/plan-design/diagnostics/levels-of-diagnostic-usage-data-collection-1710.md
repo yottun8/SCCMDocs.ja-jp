@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: ce5239340032db7deb5bcb20d00aba77c9b140e2
-ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
+ms.openlocfilehash: 1129da43f9c50d21f2ce8392721c77a4e614e410
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager バージョン 1710 で収集される診断結果および使用状況データのレベル
 
@@ -168,7 +168,7 @@ System Center Configuration Manager バージョン 1710 では、このレベ�
 
    - Windows インストーラーの展開の種類の数 (アンインストール コンテンツの設定別)
 
-   - ビジネス向け Windows ストア アプリの数と同期の統計情報 (集計されたアプリの種類、ライセンスされたアプリの状態、オンラインおよびオフラインのライセンスされたアプリ数を含みます)  
+   - ビジネス向け Microsoft ストア アプリの数と同期の統計情報 (集計されたアプリの種類、ライセンスされたアプリの状態、オンラインおよびオフラインのライセンスされたアプリ数を含む)  
 
    - メンテナンス期間の種類と期間  
 
@@ -519,4 +519,4 @@ System Center Configuration Manager バージョン 1710 では、このレベ�
 
 - Intune で管理されるデバイス向けの EAS 条件付きアクセス ポリシーの種類 (ブロックまたは検疫)
 
-- ビジネス向け Windows ストアの詳細 (AppID、オンラインまたはオフラインの状態、合計購入ライセンス数を含む、同期したアプリケーションの非集計リスト)
+- ビジネス向け Microsoft ストア アプリケーションの詳細 (AppID、オンラインまたはオフラインの状態、合計購入ライセンス数を含む、同期したアプリケーションの非集計リスト)

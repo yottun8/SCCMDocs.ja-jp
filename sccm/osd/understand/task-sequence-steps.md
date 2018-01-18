@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 caps.latest.revision: "26"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 40a2d91baf8c02cdda96e9520ce155032272ebdd
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 77ce50cf363c9429f9ef38aa2acf5b898bc8052d
+ms.sourcegitcommit: b97aa456b392d817bc9723cbd5c0ce6602e7ae34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/28/2017
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>System Center Configuration Manager のタスク シーケンスのステップ
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/01/2017
 
  このステップは Windows PE でのみ実行されます。 このステップは標準のオペレーティング システムでは実行できません。 このアクションのタスク シーケンス変数の詳細については、「[Task sequence action variables](task-sequence-action-variables.md)」 (タスク シーケンスのアクション変数) を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/01/2017
 
  このタスク シーケンス ステップは Windows PE でのみ実行されます。 このステップは標準のオペレーティング システムでは実行できません。 このアクションのタスク シーケンス変数の詳細については、「 [Apply Driver Package Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyDriverPackage)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -122,7 +122,7 @@ ms.lasthandoff: 12/01/2017
 
  このタスク シーケンスのステップは標準のオペレーティング システムまたは Windows PE で実行されます。 このアクションのタスク シーケンス変数の詳細については、「 [Apply Network Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyNetworkSettings)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -185,7 +185,7 @@ ms.lasthandoff: 12/01/2017
 
  このタスク シーケンス ステップは Windows PE でのみ実行されます。 このステップは標準のオペレーティング システムでは実行できません。 このアクションのタスク シーケンス変数の詳細については、「 [Apply Operating System Image Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyOperatingSystem)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -239,7 +239,7 @@ ms.lasthandoff: 12/01/2017
 
  このタスク シーケンス ステップは Windows PE でのみ実行されます。 このステップは標準のオペレーティング システムでは実行できません。 このアクションのタスク シーケンス変数の詳細については、「 [Apply Windows Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyWindowsSettings)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -304,7 +304,7 @@ ms.lasthandoff: 12/01/2017
 
 このタスク シーケンス ステップは Windows PE でのみ実行されます。 このステップは標準のオペレーティング システムでは実行できません。 このアクションのタスク シーケンス変数の詳細については、「 [Auto Apply Drivers Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_AutoApplyDrivers)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -344,7 +344,7 @@ ms.lasthandoff: 12/01/2017
 
  このタスク シーケンス ステップは、標準のオペレーティング システムでのみ実行できます。 Windows PE では実行できません。 このアクションのタスク シーケンス変数の詳細については、「 [Capture Network Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureNetworkSettings)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -378,7 +378,7 @@ ms.lasthandoff: 12/01/2017
 
  このタスク シーケンス ステップは Windows PE でのみ実行されます。 このステップは標準のオペレーティング システムでは実行できません。 このアクションのタスク シーケンス変数の詳細については、「 [Capture Operating System Image Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureOperatingSystemImage)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -421,7 +421,7 @@ ms.lasthandoff: 12/01/2017
 
  このタスク シーケンス ステップは Windows PE でのみ実行されます。 このステップは標準のオペレーティング システムでは実行できません。 このアクションのタスク シーケンス変数の詳細については、「 [Capture User State Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureUserState)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -481,7 +481,7 @@ ms.lasthandoff: 12/01/2017
 
  このタスク シーケンスのステップは Windows PE または標準のオペレーティング システムで実行されます。 このアクションのタスク シーケンス変数の詳細については、「 [Capture Windows Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureWindowsSettings)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -510,7 +510,7 @@ ms.lasthandoff: 12/01/2017
 ##  <a name="BKMK_CheckReadiness"></a> 準備の確認  
  **[準備の確認]** タスク シーケンス ステップを使用して、指定した展開の前提条件を対象のコンピューターが満たしていることを確認します。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -544,7 +544,7 @@ ms.lasthandoff: 12/01/2017
 
  このタスク シーケンス ステップは標準のオペレーティング システムまたは Windows PE で実行できます。 このアクションのタスク シーケンス変数の詳細については、「 [Connect to Network Folder Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ConnecttoNetworkFolder)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -565,7 +565,7 @@ ms.lasthandoff: 12/01/2017
 
  このステップは標準のオペレーティング システムでのみ実行できます。 Windows PE では実行できません。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -610,7 +610,7 @@ ms.lasthandoff: 12/01/2017
 
 このステップは標準のオペレーティング システムまたは Windows PE で実行できます。 ただし、Configuration Manager クライアント キャッシュにパッケージを保存するオプションは、WinPE ではサポートされません。
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -681,7 +681,7 @@ ms.lasthandoff: 12/01/2017
 
  このアクションのタスク シーケンス変数の詳細については、「 [Enable BitLocker Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_EnableBitLocker)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -727,7 +727,7 @@ ms.lasthandoff: 12/01/2017
 
  このタスク シーケンス ステップは Windows PE でのみ実行されます。 このステップは標準のオペレーティング システムでは実行できません。 このアクションのタスク シーケンス変数の詳細については、「 [Format and Partition Disk Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_FormatPartitionDisk)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -795,7 +795,7 @@ ms.lasthandoff: 12/01/2017
 
  このタスク シーケンス ステップは、標準のオペレーティング システムでのみ実行できます。 Windows PE では実行できません。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明されている設定を構成することができます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -880,7 +880,7 @@ ms.lasthandoff: 12/01/2017
 
  このタスク シーケンス ステップは、標準のオペレーティング システムでのみ実行できます。 Windows PE では実行できません。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -948,7 +948,7 @@ ms.lasthandoff: 12/01/2017
 > [!NOTE]
 >[オプション] タブでは、コンピューターが予期せず再起動した場合に再試行するようこのタスク シーケンスを構成できます。 たとえば、コンピューターを自動的に再起動するソフトウェア更新プログラムのインストールなどです。 Configuration Manager の 1602 以降では、SMSTSWaitForSecondReboot 変数を構成して、ソフトウェア更新プログラムをインストールするときにコンピューターを再起動した後、タスク シーケンスを何秒間一時停止させるかを指定できます。 組み込みのタスク シーケンス変数の詳細については、「[タスク シーケンス組み込み変数](task-sequence-built-in-variables.md)」を参照してください。
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -984,7 +984,7 @@ Configuration Manager バージョン 1606 以降では、キャッシュされ�
 
  このタスク シーケンス ステップは、標準のオペレーティング システムでのみ実行できます。 Windows PE では実行できません。 このタスク シーケンス アクション用のタスク シーケンス変数の詳細については、「 [Join Domain or Workgroup Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_JoinDomainWorkgroup)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -1038,7 +1038,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
 
  このタスク シーケンス ステップは、標準のオペレーティング システムでのみ実行できます。 Windows PE では実行できません。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -1060,7 +1060,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
 
  このタスク シーケンス ステップは、標準のオペレーティング システムでのみ実行できます。 Windows PE では実行できません。 このタスク シーケンス アクション用のタスク シーケンス変数の詳細については、「 [Prepare Windows for Capture Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_PrepareWindowsCapture)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -1089,7 +1089,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
 > [!IMPORTANT]  
 >  BitLocker を事前プロビジョニングするには、Windows 7 以降のオペレーティング システムを展開する必要があり、対象のコンピューターで TPM がサポートされ、有効になっている必要があります。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -1126,7 +1126,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
 
  このタスク シーケンス ステップは、標準のオペレーティング システムでのみ実行できます。 Windows PE では実行できません。 このタスク シーケンス アクション用のタスク シーケンス変数の詳細については、「 [Release State Store Sequence Action Variables](task-sequence-action-variables.md#BKMK_ReleaseStateStore)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -1155,7 +1155,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
 
  このタスク シーケンス ステップは、標準のオペレーティング システムおよびオフライン USMT の Windows PE に対して実行できます。 このタスク シーケンス アクションのタスク シーケンス変数については、「 [Request State Store Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RequestState)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -1196,7 +1196,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
 
  このステップは、標準のオペレーティング システムでも、Windows PE でも実行できます。 このタスク シーケンス アクションのタスク シーケンス変数の詳細については、「[Restart Computer Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RestartComputer)」 (コンピューターの再起動タスク シーケンス アクション変数) を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -1242,7 +1242,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
 
  このタスク シーケンス ステップは、標準のオペレーティング システムでのみ実行できます。 Windows PE では実行できません。 このタスク シーケンス アクションのタスク シーケンス変数については、「 [Restore User State Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RestoreUserState)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -1282,7 +1282,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
 
  このステップは、標準のオペレーティング システムでも、Windows PE でも実行できます。 このタスク シーケンス アクション用のタスク シーケンス変数の詳細については、「 [Run Command Line Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RunCommand)」を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -1359,7 +1359,7 @@ Configuration Manager バージョン 1610 より前のこの手順では、次�
 > [!NOTE]  
 >  PowerShell は、Windows Embedded オペレーティング システムでは既定では無効です。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -1419,7 +1419,7 @@ Configuration Manager バージョン 1710 以降では、別のタスク シー
  - ステータス メッセージは、通常どおり 1 つのタスク シーケンス操作で複数送信されること。
  - タスク シーケンスは、エントリを smsts.log ファイルに書き込み、新しいログ エントリによって子タスク シーケンスの開始タイミングを明確にするということ。
 
-### <a name="details"></a>説明
+### <a name="details"></a>詳細
 
 1. タスク シーケンス エディターで、**[追加]** をクリックし、**[全般]** を選択してから **[タスク シーケンスの実行]** をクリックします。
 2. **[参照]** をクリックして子タスク シーケンスを選択します。  
@@ -1449,7 +1449,7 @@ Configuration Manager バージョン 1710 以降では、別のタスク シー
 
  このステップは、標準のオペレーティング システムでも、Windows PE でも実行できます。 タスク シーケンス変数の詳細については、「[Task sequence action variables](task-sequence-action-variables.md)」 (タスク シーケンス アクション変数) を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -1477,7 +1477,7 @@ Configuration Manager バージョン 1710 以降では、別のタスク シー
 
 -   **メーカーおよびモデル**: コンピューターのメーカーおよびモデルの値を評価するには、この規則カテゴリを使用します。 規則を true と評価するには、製造元とモデルの両方が true と評価される必要があります。   
 
-    Configuration Manager バージョン 1610 以降では、ワイルドカードとしてアスタリスク ( ***** ) および疑問符 ( **?** ) を指定できます。***** は複数の文字と一致し、 **?** は  1 文字と一致します。 たとえば、"DELL*900?" という文字列は、 DELL-ABC-9001 や DELL9009 と一致します。
+    Configuration Manager バージョン 1610 以降では、ワイルドカードとしてアスタリスク (**&#42;**) と疑問符 (**?**) を指定できます。**&#42;** は複数の文字と一致し、**?** は 1 文字と一致します。 たとえば、"DELL*900?" という文字列は、 DELL-ABC-9001 や DELL9009 と一致します。 
 
 -   **タスク シーケンス変数**: 評価するタスク シーケンス変数、条件、および値を追加するには、この規則カテゴリを使用します。 変数に設定された値が指定した条件を満たしている場合、規則は true と評価されます。  
 
@@ -1497,7 +1497,7 @@ true と評価される規則に 1 つ以上の変数を設定して指定する
 
 このステップは、標準のオペレーティング システムでも、Windows PE でも実行できます。 タスク シーケンス変数はタスク シーケンス アクションによって読み取られます。また、これらのアクションの動作はタスク シーケンス変数によって指定されます。 特定のタスク シーケンス変数の詳細については、「[Task sequence action variables](task-sequence-action-variables.md)」 (タスク シーケンス アクション変数) を参照してください。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -1520,7 +1520,7 @@ true と評価される規則に 1 つ以上の変数を設定して指定する
  **値**  
  タスク シーケンス変数に関連付けられた値。 この値は、%<varname\>% という構文で、別のタスク シーケンス変数にすることができます。  
 
-## <a name="hide-task-sequence-progress"></a>タスク シーケンスの進行状況の非表示
+## <a name="hide-task-sequence-progress"></a>タスク シーケンスの進行状況を非表示にする
 <!-- 1354291 -->
 1706 リリースでは、新しい変数を使用して、エンド ユーザーにタスク シーケンスの進行状況を表示するタイミングを制御できます。 タスク シーケンスで、**タスク シーケンス変数の設定**手順を使用して、変数 **TSDisableProgressUI** に値を設定して、タスク シーケンスの進行状況を表示または非表示にします。 タスク シーケンスでは、タスク シーケンス変数の設定手順を複数回使用して変数の値を変更できます。 これにより、タスク シーケンスの各セクションでタスク シーケンスの進行状況を表示または非表示できます。
 
@@ -1582,7 +1582,7 @@ true と評価される規則に 1 つ以上の変数を設定して指定する
 > [!NOTE]  
 >  **[Windows と ConfigMgr のセットアップ]** タスク シーケンス アクションには、新しくインストールされたコンピューター上でグループ ポリシーを実行する役割があります。 グループ ポリシーは、タスク シーケンスの完了後に適用されます。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -1615,7 +1615,7 @@ true と評価される規則に 1 つ以上の変数を設定して指定する
 
  このタスク シーケンス ステップは、標準のオペレーティング システムでのみ実行できます。 Windows PE では実行できません。  
 
-### <a name="details"></a>説明  
+### <a name="details"></a>詳細  
  このステップの **[プロパティ]** タブで、このセクションで説明する設定を構成できます。  
 
  さらに、**[オプション]** タブを使用して、次の操作を実行できます。  
@@ -1657,7 +1657,7 @@ true と評価される規則に 1 つ以上の変数を設定して指定する
  **アップグレードを開始しない Windows セットアップ互換性スキャンの実行**  
  アップグレード プロセスを開始しないで Windows セットアップの互換性スキャンを実行するように指定します (/Compat ScanOnly コマンド ライン オプションに対応)。 このオプションを使用する場合は、引き続きインストール ソース全体を展開する必要があります。 セットアップでは、スキャンの結果として終了コードが返されます。 次の表に一般的な終了コードをいくつか示します。  
 
-|終了コード|説明|  
+|終了コード|詳細|  
 |-|-|  
 |MOSETUP_E_COMPAT_SCANONLY (0xC1900210)|互換性の問題なし ("成功")。|  
 |MOSETUP_E_COMPAT_INSTALLREQ_BLOCK (0xC1900208)|対応可能な互換性の問題。|  

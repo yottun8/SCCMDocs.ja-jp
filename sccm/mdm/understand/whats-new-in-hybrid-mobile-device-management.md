@@ -3,7 +3,7 @@ title: "ハイブリッド MDM の新機能"
 titleSuffix: Configuration Manager
 description: "Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。"
 ms.custom: na
-ms.date: 11/29/2017
+ms.date: 01/04/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 189e737eca5dee5bca3f0748cd1b4d944f868565
-ms.sourcegitcommit: 4af1da9c18f5bdff31426cf1d58c7d949372292d
+ms.openlocfilehash: 243daf8626e329214ce1b94f109d19773bbc57c5
+ms.sourcegitcommit: 2da6b06818371e93f28e36cadf3a154d50ce5bf4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -38,8 +38,15 @@ ms.lasthandoff: 12/01/2017
 |機能のカテゴリ|説明|
 |-|-|
 |**Microsoft Intune の新機能** | 通常、このカテゴリに一覧表示されたすべての機能は、Configuration Manager のすべてのリリースで動作します。 これには System Center 2012 R2 Configuration Manager リリースが含まれています。これらの機能では Intune サービスのみが必要であり、Configuration Manager の追加機能は不要なためです。|
-|**Configuration Manager Technical Preview の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Technical Preview リリースでのみ動作します。 これらの機能を試すには、機能の説明で指定されたバージョンの Technical Preview をインストールする必要があります。 詳細については、「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」をご覧ください。|
+|**Configuration Manager Technical Preview の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Technical Preview リリースでのみ動作します。 これらの機能を試すには、機能の説明で指定されたバージョンの Technical Preview をインストールする必要があります。 詳細については、「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を参照してください。|
 |**Configuration Manager (現在のブランチ) の新機能**| このカテゴリに一覧表示されたすべての機能は、バージョン 1511 や 1602 など、指定されたバージョンの Configuration Manager (現在のブランチ) でのみ動作します。 ハイブリッド展開に旧バージョンの Configuration Manager を使用している場合は、機能の説明で指定されたバージョンの Configuration Manager (現在の分岐) にアップグレードする必要があります。 詳細については、「[System Center Configuration Manager へのアップグレード](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)」を参照してください。|
+
+## <a name="december-2017"></a>2017 年 12 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+- **利用可能なアプリケーションの展開で Android Enterprise がサポートされるようになりました**    
+  Android Enterprise (旧称 Android for Work) アプリを、**必須**に加えて、**利用可能**として展開できるようになりました。 詳細については、「[System Center Configuration Manager で Android アプリケーションを作成する](/sccm/mdm/deploy-use/creating-android-applications)」を参照してください。
 
 
 ## <a name="november-2017"></a>2017 年 11 月
@@ -202,7 +209,7 @@ Configuration Manager Technical Preview リリースで以前に提供されて�
 
 - **MDM 機関を変更する**
 
-  Configuration Manager バージョン 1610 以降では、Microsoft サポートに連絡しなくても、また、既存の管理対象デバイスの登録を解除してから再登録しなくても、MDM 機関を変更できます。 詳細については、「[MDM 機関を変更する](/sccm/mdm/deploy-use/change-mdm-authority)」を参照してください。
+  Configuration Manager バージョン 1610 以降では、Microsoft サポートに連絡しなくても、また、既存の管理対象デバイスの登録を解除してから再登録しなくても、MDM 機関を変更できます。 詳細については、「[Change your MDM authority](/sccm/mdm/deploy-use/change-mdm-authority)」(MDM 機関を変更する) を参照してください。
 
 - **管理対象ブラウザーとアプリケーション プロキシの統合**
 
@@ -359,14 +366,14 @@ Configuration Manager Technical Preview リリースで以前に提供されて�
 
     | Configuration Manager バージョン | アプリでのデバイス ライセンスのサポート | 展開コレクションの種類 | 要求されるライセンス |
     |-|-|-|-|
-    |1702 より前|○|ユーザー|ユーザー ライセンス|
-    |1702 より前|×|ユーザー|ユーザー ライセンス|
-    |1702 より前|○|デバイス|ユーザー ライセンス|
-    |1702 より前|×|デバイス|ユーザー ライセンス|
-    |1702 以降|○|ユーザー|ユーザー ライセンス|
-    |1702 以降|×|ユーザー|ユーザー ライセンス|
-    |1702 以降|○|デバイス|デバイス ライセンス|
-    |1702 以降|×|デバイス|ユーザー ライセンス|
+    |1702 より前|はい|ユーザー|ユーザー ライセンス|
+    |1702 より前|いいえ|ユーザー|ユーザー ライセンス|
+    |1702 より前|はい|デバイス|ユーザー ライセンス|
+    |1702 より前|いいえ|デバイス|ユーザー ライセンス|
+    |1702 以降|はい|ユーザー|ユーザー ライセンス|
+    |1702 以降|いいえ|ユーザー|ユーザー ライセンス|
+    |1702 以降|はい|デバイス|デバイス ライセンス|
+    |1702 以降|いいえ|デバイス|ユーザー ライセンス|
 
   - iOS Volume Purchase Program for Education から購入したアプリを展開し追跡できるようになりました。
 
@@ -374,9 +381,9 @@ Configuration Manager Technical Preview リリースで以前に提供されて�
 
   ボリューム購入した iOS アプリの詳細については、[「ボリューム購入 iOS アプリの管理」](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps) を参照してください。
 
-- **ビジネス向け Windows ストアでの基幹業務アプリのサポート**
+- **ビジネス向け Microsoft Store での基幹業務アプリのサポート**
 
-  ビジネス向け Windows ストアから、カスタマイズされた基幹業務アプリを同期できるようになりました。
+  ビジネス向け Microsoft Store から、カスタマイズされた基幹業務アプリを同期できるようになりました。
 
 - **新しい Mobile Threat Defense 監視ツール**
 

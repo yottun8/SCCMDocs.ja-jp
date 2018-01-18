@@ -3,21 +3,21 @@ title: "暗号化コントロールのテクニカル リファレンス"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で、署名と暗号化を使用して、攻撃者によるデータの読み取りを防ぐ方法について説明します。"
 ms.custom: na
-ms.date: 12/5/2017
+ms.date: 12/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
-author: arob98
-ms.author: angrobe
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: ebaff93d346b53afea8770fbe0634112bcecf82d
-ms.sourcegitcommit: 372171a5cd8d143d6d47b651018cda0c91cad67c
+ms.openlocfilehash: 2c1ed6f4c93f74719ab3fe5d723f7dc01eb1ede7
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="cryptographic-controls-technical-reference"></a>暗号化コントロールのテクニカル リファレンス
 
@@ -125,7 +125,7 @@ System Center Configuration Manager では、署名と暗号化を使用して�
 ### <a name="out-of-band-management-and-pki-certificates"></a>帯域外管理および PKI 証明書  
  Intel AMT ベースのコンピューターでの帯域外管理では、少なくとも AMT プロビジョニング証明書と Web サーバー証明書という 2 種類の PKI 発行の証明書を使用します。  
 
- 帯域外サービス ポイントは、AMT プロビジョニング証明書を使用して帯域外管理用のコンピューターを準備します。 プロビジョニングされる AMT ベースのコンピューターは、帯域外管理ポイントによって提示される証明書を信頼する必要があります。 既定では、コンピューターの製造元が AMT ベースのコンピューターを VeriSign、Go Daddy、Comodo、Starfield などの外部の証明機関 (CA) を使用するように構成します。 外部の CA からプロビジョニング証明書を購入し、このプロビジョニング証明書を使用するように Configuration Manager を構成した場合、AMT ベースのコンピューターがプロビジョニング証明書の CA を信頼するので、プロビジョニングを正常に実行できます。 ただし、推奨されるセキュリティ運用方法は、独自の内部 CA を使用して AMT プロビジョニング証明書を発行することです。  
+ 帯域外サービス ポイントは、AMT プロビジョニング証明書を使用して帯域外管理用のコンピューターを準備します。 プロビジョニングされる AMT ベースのコンピューターは、帯域外管理ポイントによって提示される証明書を信頼する必要があります。 既定では、コンピューターの製造元が AMT ベースのコンピューターを VeriSign、Go Daddy、Comodo、Starfield などの外部の証明機関 (CA) を使用するように構成します。 外部の CA からプロビジョニング証明書を購入し、このプロビジョニング証明書を使用するように Configuration Manager を構成した場合、AMT ベースのコンピュータがプロビジョニング証明書の CA を信頼するので、プロビジョニングを正常に実行できます。 ただし、推奨されるセキュリティ運用方法は、独自の内部 CA を使用して AMT プロビジョニング証明書を発行することです。  
 
  AMT ベースのコンピューターは、Web サーバー コンポーネントをファームウェア内で実行します。また、この Web サーバー コンポーネントは、Transport Layer Security (TLS) を使用して、帯域外サービス ポイントとの通信チャネルを暗号化します。 証明書を手動で構成できる AMT BIOS のユーザー インターフェイスはありません。したがって、要求元の AMT ベースのコンピューターからの証明書要求を自動的に承認する Microsoft エンタープライズ証明機関を使用する必要があります。 要求では、要求の形式に PKCS#10 が使用され、次に AMT ベースのコンピューターに証明書情報を送信するために PKCS#7 が使用されます。  
 
@@ -277,8 +277,8 @@ System Center Configuration Manager では、署名と暗号化を使用して�
 
  管理ポイントが最初に自己署名入りクライアント証明書を使用してクライアントを認証する場合、すべてのコンピューターは自己署名入り証明書を生成できるため、このメカニズムでのセキュリティは最低限のものとなります。 この場合は、クライアントを承認することによって、識別プロセスを強化する必要があります。 信頼されたコンピューターのみを、Configuration Manager によって自動的に承認するか、管理ユーザーによって手動で承認する必要があります。 詳細については、「[Communications between endpoints in System Center Configuration Manager](../../core/plan-design/hierarchy/communications-between-endpoints.md)」 (System Center Configuration Manager でのエンドポイント間の通信) の承認のセクションをご覧ください。  
 
-## <a name="to-make-configuration-manager-servers-more-secure"></a>Configuration Manager サーバーをよりセキュアにするには  
-Configuration Manager サーバーをよりセキュアにするには、次の操作を行います。
+## <a name="about-ssl-vulnerabilities"></a>SSL の脆弱性について
+Configuration Manager クライアントとサーバーのセキュリティを強化するには、次の操作を行います。
 
 -   TLS 1.2 の有効化
 
@@ -286,5 +286,5 @@ Configuration Manager サーバーをよりセキュアにするには、次の�
 -   SSL 3.0、TLS 1.0 および TLS 1.1 の無効化 
 -   TLS 関連の暗号スイートを調整する 
 
-詳細については、次のサポート技術情報の記事「[Schannel.dll において特定の暗号化アルゴリズムおよびプロトコルの使用を制限する方法](https://support.microsoft.com/en-us/kb/245030/)」をご覧ください。 これらの操作は、Configuration Manager の機能には影響しません。
+詳細については、「[Schannel.dll において特定の暗号化アルゴリズムおよびプロトコルの使用を制限する方法](https://support.microsoft.com/en-us/kb/245030/)」と「[Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/en-us/library/windows/desktop/bb870930.aspx)」 (Schannel 暗号スイートの優先順位設定) を参照してください。 これらの操作は、Configuration Manager の機能には影響しません。
 

@@ -3,7 +3,7 @@ title: "クエリを作成する"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でクエリを作成してインポートする方法を紹介します。 クエリの例とヒントが含まれています。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: cbd9710cec365323e754d2109c8c61c29a4c301f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 32400ebcd834e3b98bf0f1ff6a1f6b41d8e12076
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-to-create-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager でクエリを作成する方法
 
@@ -54,7 +54,7 @@ System Center Configuration Manager でクエリを作成またはインポー�
 7.  *[&lt;クエリ名\>* **ステートメントのプロパティ]** ダイアログ ボックスの **[全般]** タブで、クエリが返す属性と、その属性の表示方法を指定します。 **[新規]** アイコンをクリックして、新しい属性を追加します。 **[クエリ言語を表示する]** を選択して、クエリを、直接 WMI クエリ言語 (WQL) で入力または編集することもできます。 WMI クエリの例については、このトピックの「 [Example WQL queries](#BKMK_Example) 」セクションを参照してください。  
 
     > [!TIP]  
-    > 独自の WQL クエリを作成する場合は、次の MSDN リファレンス ドキュメントを参考にしてください。  
+    > 次の MSDN リファレンス ドキュメントを使用すると、独自の WQL クエリを構築できます。  
     >   
     > -   [WQL (WMI 用の SQL)](http://go.microsoft.com/fwlink/p/?LinkId=256653)  
     > -   [WHERE 句](http://go.microsoft.com/fwlink/p/?LinkId=256654)  
@@ -178,6 +178,10 @@ Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdi
 |Android|11|  
 |Intel System-on-a-Chip|12|  
 |Unix および Linux サーバー|13|  
+|Apple macOS (MDM)|14|
+|Microsoft HoloLens (MDM)|15|
+|Microsoft Surface Hub (MDM)|16|
+|Android for Work|17|
 
  たとえば、クエリで Mac コンピューターのみを返すには、次のクエリを使用します。  
 

@@ -15,11 +15,11 @@ caps.latest.revision: "6"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 2ec4f4fdd1e351379922302e81af88e311a37c8e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: c512cba550e405c866204af981aba75639665de2
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="create-android-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager で Android アプリケーションを作成する
 
@@ -48,7 +48,7 @@ Configuration Manager では、Android 用の次のアプリの種類の展開�
 |デバイスの種類|サポートされている操作|
 |-|-|
 |Android|**利用可能**、**必須** インストールとアンインストールの両方に、ユーザーが同意する必要があります。|
-|Android for Work | **必須** |
+|Android for Work |**利用可能**、**必須** |
 
 ## <a name="approve-and-deploy-android-for-work-apps"></a>Android for Work アプリの承認と展開
 Configuration Manager の管理者は、[Play for Work Web サイト](https://play.google.com/work)でアプリを承認したり、管理対象の Android for Work デバイスにそれらのアプリを展開したりすることもできます。
@@ -65,3 +65,5 @@ Play for Work ストアのアプリを承認し、Configuration Manager コン�
 8. **[ソフトウェア ライブラリ]** > **[概要]** > **[アプリケーション管理]** > **[アプリケーション]** の順に選択し、Android for Work アプリを選択して、通常どおりに展開します。
 
 Play for Work アプリを Configuration Manager と同期するには、最初に少なくとも 1 つのアプリを Play for Work Web サイトで承認する必要があります。
+
+**利用可能**として展開されたアプリは、ポータル サイトではなく、仕事用バッジの付いた Google Play アプリに表示されます。 これにより、信頼できない発行元からのアプリを許可することなく、信頼できる発行元 (仕事用バッジの付いた Google Play アプリは信頼できる発行元です) からアプリを展開することができます。

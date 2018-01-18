@@ -3,7 +3,7 @@ title: "サポートされている SQL Server のバージョン"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager サイト データベースをホストするための SQL Server のバージョンおよび構成要件を取得します。"
 ms.custom: na
-ms.date: 11/30/2017
+ms.date: 12/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "21"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 7006d6cd03da53daf0f6cb59cc4ef83e7e800a1e
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: ccc07aa709c0a168a8df7a1bd7944e9399bec13f
+ms.sourcegitcommit: 3dea4342f79909c5064289bd18ed36269812e30c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager のサポートされている SQL Server バージョン
 
@@ -67,21 +67,29 @@ SQL Server のトランザクション レプリケーションは、[データ�
 
  特に指定のない限り、次のバージョンの SQL Server はすべてのアクティブ バージョンの System Center Configuration Manager でサポートされます。 新しい SQL Server バージョンまたは Service Pack のサポートが追加されている場合、そのサポートを追加する Configuration Manager バージョンが示されます。 同様に、サポートが推奨されていない場合は、Configuration Manager の影響を受けるバージョンの詳細を確認してください。   
 
-特定の SQL Server Service Pack のサポートには、基本の Service Pack バージョンに戻せない場合を除き、その Service Pack の累積的な更新プログラムが含まれます。 Service Pack のバージョンが示されない場合、サポートは、そのバージョンの Service Pack なしの SQL Server に対するものです。 今後、そのバージョンの Service Pack がリリースされた場合、その新しい Service Pack バージョンがサポートされる前に、別のサポート ステートメントが宣言されます。
+特定の SQL Server Service Pack のサポートには、基本の Service Pack バージョンへの後方互換性が失われる場合を除き、累積的な更新プログラムが含まれます。 Service Pack のバージョンが示されない場合、サポートは、そのバージョンの Service Pack なしの SQL Server に対するものです。 今後、SQL Server バージョンの Service Pack がリリースされた場合、新しい Service Pack バージョンがサポートされる前に、別のサポート ステートメントが宣言されます。
 
 
 > [!IMPORTANT]  
 >  中央管理サイトでデータベース用に SQL Server Standard を使用する場合、階層でサポートできるクライアントの合計数が制限されます。 「[サイジングとスケールの数値](../../../core/plan-design/configs/size-and-scale-numbers.md)」をご覧ください。
 
+### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017: Standard、Enterprise  
+[Configuration Manager バージョン 1710](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/whats-new-in-version-1710) 以降では次のサイトの最小の[累積的な更新プログラム バージョン 2](https://support.microsoft.com/help/4052574) で、このバージョンの SQL Server を使用できます。 
+
+-   中央管理サイト  
+-   プライマリ サイト  
+-   セカンダリ サイト  
+<!--SMS.498506-->
+
 ### <a name="sql-server-2016-sp1-standard-enterprise"></a>SQL Server 2016 SP1: Standard、Enterprise  
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+次のサイトの累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
 -   プライマリ サイト  
 -   セカンダリ サイト  
 
 ### <a name="sql-server-2016-standard-enterprise"></a>SQL Server 2016: Standard、Enterprise  
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+次のサイトの累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
 -   プライマリ サイト  
@@ -89,28 +97,28 @@ SQL Server のトランザクション レプリケーションは、[データ�
 
 
 ### <a name="sql-server-2014-sp2-standard-enterprise"></a>SQL Server 2014 SP2: Standard、Enterprise  
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+次のサイトの累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
 -   プライマリ サイト  
 -   セカンダリ サイト
 
 ### <a name="sql-server-2014-sp1-standard-enterprise"></a>SQL Server 2014 SP1: Standard、Enterprise  
- 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+ 次のサイトの累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
 -   プライマリ サイト  
 -   セカンダリ サイト
 
 ### <a name="sql-server-2012-sp4-standard-enterprise"></a>SQL Server 2012 SP4: Standard、Enterprise  
- 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+ 次のサイトの累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
 -   プライマリ サイト  
 -   セカンダリ サイト  
 
 ### <a name="sql-server-2012-sp3-standard-enterprise"></a>SQL Server 2012 SP3: Standard、Enterprise  
- 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+ 次のサイトの累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
 -   プライマリ サイト  
@@ -118,7 +126,7 @@ SQL Server のトランザクション レプリケーションは、[データ�
 
 <!-- Support for this service pack version has been dropped by Microsoft    
 ### SQL Server 2012 SP2: Standard, Enterprise   
- You can use this version of SQL Server with no minimum cumulative update version for the following:  
+ You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
 -   A central administration site  
 -   A primary site  
@@ -129,40 +137,45 @@ SQL Server のトランザクション レプリケーションは、[データ�
   [バージョン 1702 以降](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database)では、このバージョンの SQL Server はサポートされていません。  
  1702 より前のバージョンの Configuration Manager を使用している場合、このバージョンの SQL Server は引き続きサポートされます。
 
-使用しているバージョンの Configuration Manager でサポートされている場合は、次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+Configuration Manager バージョンでサポートされている場合は、次のサイトの累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   中央管理サイト  
 -   プライマリ サイト
 -   セカンダリ サイト
 
+### <a name="sql-server-2017-express"></a>SQL Server 2017 Express   
+[Configuration Manager バージョン 1710](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/whats-new-in-version-1710) 以降では次のサイトの最小の[累積的な更新プログラム バージョン 2](https://support.microsoft.com/help/4052574) で、このバージョンの SQL Server を使用できます。
+-   セカンダリ サイト
+<!--SMS.498506-->
+
 ### <a name="sql-server-2016-express-sp1"></a>SQL Server 2016 Express SP1  
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。
+次のサイトの累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。
 -   セカンダリ サイト
 
 ### <a name="sql-server-2016-express"></a>SQL Server 2016 Express
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。
+次のサイトの累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。
 -   セカンダリ サイト
 
 
 ### <a name="sql-server-2014-express-sp2"></a>SQL Server 2014 Express SP2   
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+次のサイトの累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   セカンダリ サイト  
 
 
 ### <a name="sql-server-2014-express-sp1"></a>SQL Server 2014 Express SP1   
- 次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+ 次のサイトの累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   セカンダリ サイト  
 
 ### <a name="sql-server-2012-express-sp3"></a>SQL Server 2012 Express SP3  
-次の累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
+次のサイトの累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
 
 -   セカンダリ サイト  
 
 <!-- Support for this service pack version has been dropped by Microsoft   
 ### SQL Server 2012 Express SP2   
- You can use this version of SQL Server with no minimum cumulative update version for the following:  
+ You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
 -   A secondary site  
 -->
@@ -188,7 +201,7 @@ SQL Server のトランザクション レプリケーションは、[データ�
  Configuration Manager は、データベースへの接続を検証するために、**Windows 認証**を必要とします。  
 
  **SQL Server インスタンス:**  
- サイトごとに専用の SQL Server のインスタンスを使用する必要があります。 **名前付きインスタンス** か、 **既定のインスタンス**を使用できます。  
+ サイトごとに専用の SQL Server のインスタンスを使用する必要があります。 インスタンスには、**名前付きインスタンス** か**既定のインスタンス**を使用できます。  
 
  **SQL Server のメモリ：**  
  SQL Server Management Studio を使用して、 **[サーバー メモリ オプション]** で **[最小サーバー メモリ]**設定を指定して、SQL Server のメモリを予約します。 固定量のメモリを設定する方法の詳細については、「 [固定量のメモリを設定する方法 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759)」を参照してください。  
@@ -227,7 +240,7 @@ SQL Server のトランザクション レプリケーションは、[データ�
 
 SQL Server を実行するコンピューターが、ローカル システム アカウントを使用して SQL Server サービスを実行していない場合、SQL Server サービスを実行するアカウントの SPN を Active Directory Domain Services で構成する必要があります  (システム アカウントを使用する場合、SPN が自動的に登録されます)。
 
-サイト データベースの SPN については、「[Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md#bkmk_SPN)」 (System Center Configuration Manager インフラストラクチャの変更) トピックの「[Manage the SPN for the site database server](../../../core/servers/manage/modify-your-infrastructure.md)」 (サイト データベース サーバーの SPN の管理) を参照してください。  
+サイト データベースの SPN については、「[System Center Configuration Manager インフラストラクチャの変更](../../../core/servers/manage/modify-your-infrastructure.md#bkmk_SPN)」記事の「[サイト データベース サーバーの SPN を管理する](../../../core/servers/manage/modify-your-infrastructure.md)」を参照してください。  
 
 SQL Server サービスで使用されるアカウントを変更する方法については、「 [方法: SQL Server のサービス開始アカウントの変更 (SQL Server 構成マネージャー)](http://go.microsoft.com/fwlink/p/?LinkId=237661)」を参照してください。  
 

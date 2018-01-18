@@ -11,11 +11,11 @@ ms.prod: configmgr-hybrid
 ms.service: 
 ms.technology: 
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
-ms.openlocfilehash: 643b33810c2862e2d1c602bfe941c36605ad2631
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: 59fb06d14002f781e0448a64bb0064b4add2f087
+ms.sourcegitcommit: ac9268e31440ffe91b133c2ba8405d885248d404
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>特定のユーザー (混在 MDM 機関) の MDM 機関を変更する 
 
@@ -49,6 +49,7 @@ ms.lasthandoff: 12/06/2017
       
   > [!Important]    
   > Configuration Manager コンソールを使用してテナント レベルのポリシーの編集を続行します。 [テナントレベルの MDM 機関を Intune に変更](change-mdm-authority.md)したら、これらのポリシーを Azure の Intune で管理します。 
+-   コード署名証明書を使用する場合、段階的にユーザーを移行することをお勧めします。 モバイル デバイスを移行すると、新しい証明書の証明書機関要求が行われます。 ユーザー (とそのデバイス) を移行する段階的なアプローチを使用して、同時の証明機関要求の数を制限します。
 - Configuration Manager でデバイス登録マネージャーとして追加されているユーザー アカウントは、いずれも移行しないことをお勧めします。 これらのユーザー アカウントは、後でテナントレベル MDM 機関を Intune に変更するときに正しく移行されます。 テナント レベル MDM 機関の変更前にデバイス登録マネージャーのユーザー アカウントを移行する場合、Azure の Intune でデバイス登録マネージャーとしてユーザーを手動で追加する必要があります。 ただし、デバイス登録マネージャーを使用して登録されたデバイスは正常に移行されません。 これらのデバイスを移行するには、サポートに連絡する必要があります。 詳細については、「[デバイス登録マネージャーの追加](https://docs.microsoft.com/en-us/intune/device-enrollment-manager-enroll#add-a-device-enrollment-manager)」を参照してください。
 - デバイス登録マネージャーを使用して登録されたデバイスと、[ユーザー アフィニティ](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices)のないデバイスは、新しい MDM 機関に自動的には移行されません。 これらのMDM デバイスの管理機関を切り替えるには、「[ユーザー アフィニティなしのデバイスの移行](#migrate-devices-without-user-affinity)」をご覧ください。
 

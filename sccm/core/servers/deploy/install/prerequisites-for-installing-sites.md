@@ -15,11 +15,11 @@ caps.latest.revision: "5"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 2875a90b1f2ae853563d7716fcfe634efd551fe5
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 07e57a15834d2f29444f47b9503cc04947f36150
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="prerequisites-for-installing-system-center-configuration-manager-sites"></a>System Center Configuration Manager サイトのインストールの前提条件
 
@@ -106,7 +106,7 @@ Configuration Manager で次の Azure サービスのいずれかを使用する
 サービス:  
 -       [Operations Manager Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) (OMS)
 -       [アップグレードの準備](/sccm/core/clients/manage/upgrade/upgrade-analytics)
--       [ビジネス向け Windows ストア](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+-       [ビジネス向け Microsoft ストア](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
 
 次の手順でこの問題を解決してください。
  1.    Configuration Manager コンソールで、Azure サービス ノードから Azure サービスを削除します。

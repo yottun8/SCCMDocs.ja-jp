@@ -3,7 +3,7 @@ title: SQL Server AlwaysOn
 titleSuffix: Configuration Manager
 description: "SCCM での SQL Server Always On 可用性グループの使用を計画します。"
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "16"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 42d5a059e11dffc7890ec78ce7361ebfe905a050
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 7efd0c76a0723a98661b0861eb16298eee524f35
+ms.sourcegitcommit: f1535281b2c3fecff773b722c3f7590bf6ba10a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager で SQL Server Always On 可用性グループを使用するための準備
 
@@ -47,7 +47,7 @@ Configuration Manager で可用性グループを使用する場合にサポー�
 -     [サイト データベースを、可用性グループから、スタンドアロン SQL Server の指定したインスタンスまたは既定のインスタンスに移動します](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)。
 
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>[前提条件]
 すべてのシナリオに以下の必要条件が適用されます。 追加の必要条件が特定のシナリオに適用される場合は、そのシナリオで詳しく説明します。   
 
 ### <a name="configuration-manager-accounts-and-permissions"></a>Configuration Manager のアカウントとアクセス許可
@@ -78,7 +78,7 @@ SQL Server の各インスタンスは、ドメイン ユーザー アカウン�
 
 -   バージョン 1706 より、非同期コミット レプリカを使用して同期レプリカを復旧できます。 これを実行する方法については、バックアップと回復に関するトピックで[サイト データベースの回復オプション]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)を参照してください。
     > [!CAUTION]  
-    > Configuration Manager では、非同期コミット レプリカをサイト データベースとして使用するためのフェールオーバーはサポートされていません。
+    > Configuration Manager では、非同期コミット レプリカをサイト データベースとして使用するための[フェールオーバー](https://go.microsoft.com/fwlink/?linkid=626885)はサポートされていません。
 Configuration Manager では、非同期コミット レプリカが最新のものかどうかを確認するために状態を検証せず、また、[このようなレプリカは意図的に非同期にできる]( https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes)ため、非同期コミット レプリカをサイト データベースとして使用すると、サイトとデータの整合性が危険にさらされる場合があります。
 
 各レプリカ メンバーには以下が必要です。
