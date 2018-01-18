@@ -48,7 +48,7 @@ System Center Configuration Manager における事前設定されたメディ�
 -   **メディアと PXE のみ (非表示)**  
 
 ## <a name="create-the-prestaged-media"></a>事前設定メディアの作成  
- OEM または現地保管場所に送信する事前設定メディア ファイルを作成します。 詳細については、「 [Create prestaged media with System Center Configuration Manager](create-prestaged-media.md)」をご覧ください。  
+ OEM または現地保管場所に送信する事前設定メディア ファイルを作成します。 詳細については、「 [System Center Configuration Manager を使用した事前設定されたメディアの作成](create-prestaged-media.md)」をご覧ください。  
 
 ## <a name="send-the-prestaged-media-file-to-the-oem-or-local-depot"></a>OEM または現地保管場所への事前設定されたメディア ファイルの送信  
  OEM または現地保管場所へメディアを送信し、コンピューターを事前設定します。 事前設定されたメディア ファイルは、コンピューターのフォーマット済みのハード ディスクに適用されます。  

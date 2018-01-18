@@ -50,7 +50,7 @@ System Center Configuration Manager では、次のオペレーティング シ�
 
  Configuration Manager クライアントの既定のキャッシュ サイズでは、ほとんどの場合、オペレーティング システム イメージの展開に十分な容量を確保できません。 クライアントのキャッシュにイメージをすべてダウンロードしてからそのイメージを実行する場合は、展開するイメージのサイズに合わせて、ダウンロード先のコンピューターにおける Configuration Manager クライアントのキャッシュ サイズを調整する必要があります。  
 
- 詳細については、「 [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache)」を参照してください。  
+ 詳細については、「 [Configuration Manager クライアントにクライアントキャッシュを構成する](../../core/clients/manage/manage-clients.md#BKMK_ClientCache)」を参照してください。  
 
 ## <a name="task-sequence-deployments"></a>タスク シーケンスの展開  
  作成したタスク シーケンスは、次のいずれかの方法で、Configuration Manager クライアント コンピューターにオペレーティング システム イメージを展開できます。  

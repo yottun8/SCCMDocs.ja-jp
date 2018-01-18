@@ -35,7 +35,7 @@ ms.lasthandoff: 12/12/2017
 ##  <a name="BKMK_Prerequisites"></a> 必要条件  
  Windows 10 サービス ダッシュボードにデータを表示するには、次の操作を行う必要があります。  
 
--   ソフトウェアの更新管理のために、Windows 10 コンピューターで、Windows Server Update Services (WSUS) の Configuration Manager ソフトウェア更新プログラムを使用する必要があります。 コンピューターで、Windows Update for Business (または Windows Insider) を使用してソフトウェアの更新管理を行っている場合、そのコンピューターは Windows 10 サービス プランでは評価されません。 詳細については、「 [Integration with Windows Update for Business in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md)」をご覧ください。  
+-   ソフトウェアの更新管理のために、Windows 10 コンピューターで、Windows Server Update Services (WSUS) の Configuration Manager ソフトウェア更新プログラムを使用する必要があります。 コンピューターで、Windows Update for Business (または Windows Insider) を使用してソフトウェアの更新管理を行っている場合、そのコンピューターは Windows 10 サービス プランでは評価されません。 詳細については、「 [Windows 10 における Windows Update for Business との統合](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md)」をご覧ください。  
 
 -   ソフトウェアの更新ポイントとサイト サーバーに、WSUS 4.0 を [修正プログラム 3095113](https://support.microsoft.com/kb/3095113) と共にインストールする必要があります。 これにより、ソフトウェア更新プログラムの分類に **アップグレード** が追加されます。 詳細については、「[Prerequisites for software updates](../../sum/plan-design/prerequisites-for-software-updates.md)」 (ソフトウェア更新プログラムの前提条件) を参照してください。  
 
