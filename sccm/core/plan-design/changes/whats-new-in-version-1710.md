@@ -3,7 +3,7 @@ title: "新しいバージョン 1710 | Microsoft Docs"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager のバージョン 1710 で導入された変更点および新機能について詳しく説明します。"
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 1/08/2018
 ms.reviewer: na
 ms.suite: na
 ms.technology: configmgr-other
@@ -13,11 +13,11 @@ ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 8431ebffc6d1aa463c5622bd67db8a140c0cfe69
-ms.sourcegitcommit: 2dc9c83e57e9734ffc4a93f79cd71285036eeb8b
+ms.openlocfilehash: f944d4625e2e67a82098bf3b4373ea5f0ed70619
+ms.sourcegitcommit: 9de3d74030b7c3313c34b5cbe2dbe6e18a48c043
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1710 の新機能
 
@@ -50,6 +50,9 @@ Version 1710 drops support for the following products:
 ### <a name="cloud-distribution-point-support-for-azure-government-cloud------sms491428---"></a>クラウド配布ポイントの Azure Government クラウドのサポート   <!-- sms491428 -->
 Azure Government クラウドで[クラウドベースの配布ポイント](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)を使用できるようになりました。   
 
+### <a name="inventory-default-unit-revision----sms503697---"></a>インベントリの既定の単位のリビジョン <!-- sms503697 -->
+デバイスにギガバイト (GB)、テラバイト (TB)、およびそれより大きいサイズのハード ドライブが含まれるようになったため、このリリースでは、多くのビューで使用される既定の単位 (SMS_Units) をメガバイト (MB) から GB に変更しています。 たとえば、v_gs_LogicalDisk.FreeSpace 値では GB 単位で報告されるようになりました。
+
 
 <!-- ## Migration  -->
 
@@ -58,7 +61,7 @@ Azure Government クラウドで[クラウドベースの配布ポイント](/sc
 
 ### <a name="co-management-for-windows-10-devices"></a>Windows 10 デバイスの共同管理    
 <!-- 1350871 -->
-以前の Windows 10 の更新プログラムですでに、Windows 10 デバイスをオンプレミスの Active Directory (AD) とクラウドベースの Azure AD (ハイブリッド Azure AD) に同時に結合できるようになりました。 Configuration Manager バージョン 1710 以降、共同管理ではこの機能強化を活用し、Configuration Manager と Intune の両方を使用して複数の Windows 10 バージョン 1709 (Fall Creators Update とも呼ばれる) のデバイスを同時に管理できるようになりました。 これは、従来の管理から最新の管理への橋渡しとなるソリューションであり、段階的なアプローチを使って移行する方向を提示します。 詳細については、「[Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)」をご覧ください。
+以前の Windows 10 の更新プログラムで、Windows 10 デバイスをオンプレミスの Active Directory (AD) とクラウドベースの Azure AD に同時に結合できるようになっています (ハイブリッド Azure AD)。 Configuration Manager バージョン 1710 以降、共同管理ではこの機能強化を活用し、Configuration Manager と Intune の両方を使用して複数の Windows 10 バージョン 1709 (Fall Creators Update とも呼ばれる) のデバイスを同時に管理できるようになりました。 これは、従来の管理から最新の管理への橋渡しとなるソリューションであり、段階的なアプローチを使って移行する方向を提示します。 詳細については、「[Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)」をご覧ください。
 
 ### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>Configuration Manager コンソールからコンピューターを再起動 <!-- 1356283 -->
 これ以降のリリースでは、Configuration Manager コンソールを使用して再起動を必要とするクライアント デバイスを識別し、再起動するようにクライアント通知を行うアクションを使用できます。
@@ -145,7 +148,7 @@ Windows 10 を実行する ARM64 デバイスを使用できるようになる�
 - [デバイスの登録](../../../mdm/deploy-use/enroll-hybrid-windows.md)
 - [リモートの完全ワイプおよび選択的ワイプ アクションの実行](../../../mdm/deploy-use/wipe-lock-reset-devices.md)
 - [構成項目とベースラインによる設定の管理](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)
-- [コンプライアンス ポリシーの管理](../../../mdm/deploy-use/device-compliance-policies.md)
+- [コンプライアンス ポリシー](../../../mdm/deploy-use/device-compliance-policies.md)と[条件付きアクセス](../../../protect/deploy-use/manage-access-to-services.md)の管理
 - 以下による会社のリソースへのアクセス管理:
    - [証明書プロファイル](../../../mdm/deploy-use/create-pfx-certificate-profiles.md)
    - [VPN プロファイル](../../../mdm/deploy-use/create-vpn-profiles.md)
@@ -153,6 +156,9 @@ Windows 10 を実行する ARM64 デバイスを使用できるようになる�
    - [電子メール プロファイル](../../../mdm/deploy-use/create-exchange-activesync-profiles.md)
 - [Windows Hello for Business ポリシーの構成](../../../mdm/deploy-use/windows-hello-for-business-settings.md)
 - [アプリケーションを管理する](../../../mdm/deploy-use/management-tasks-applications.md)
+
+> [!NOTE]
+> これらのデバイスで複数のアーキテクチャ用にビルドされた .appxbundle アプリケーションの配置は機能しない可能性があり、この時点でこのシナリオはサポートされていません。
 
 ### <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Configuration Manager コンソールの VPN プロファイル エクスペリエンスの向上 
 <!-- 1318232 -->
