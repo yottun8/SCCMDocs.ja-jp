@@ -29,7 +29,7 @@ ms.lasthandoff: 01/04/2018
 
 このツールでは、ツールを実行するときに指定する配布ポイントのコンテンツのみが処理されます。 このツールで、サイト サーバー上のコンテンツ ライブラリからコンテンツを削除することはできません。
 
-**ContentLibraryCleanup.exe** は、中央管理サイトまたはプライマリ サイトのサイト サーバーの *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* フォルダーにあります。
+**ContentLibraryCleanup.exe** は、中央管理サイトまたはプライマリ サイトのサイト サーバーの \*%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* フォルダーにあります。
 
 ## <a name="requirements"></a>［要件］  
  このツールは、一度に 1 つの配布ポイントに対してのみ実行できます。  
