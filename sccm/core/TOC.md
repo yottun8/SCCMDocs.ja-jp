@@ -15,6 +15,7 @@
 ### [Long-Term Servicing Branch の管理](understand/manage-the-ltsb.md)
 ### [Long-Term Servicing Branch の Current Branch へのアップグレード](understand/convert-to-current-branch.md)
 ##  [どの Configuration Manager の分岐を使用するべきか](understand/which-branch-should-i-use.md)
+##  [Configuration Manager とサービスとしての Windows](understand/configuration-manager-and-windows-as-service.md)
 ##  [拡張相互運用性クライアント](understand/interoperability-client.md)
 ##  [System Center Configuration Manager のライセンス付与](understand/learn-more-editions.md)
 ##  [クラウド サービスの使用](understand/use-cloud-services.md)
@@ -106,12 +107,13 @@
 
 <!-- Only show the current plus three, i.e., four total) -->
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [1801 の機能](get-started/capabilities-in-technical-preview-1801.md)
 ###  [1712 の機能](get-started/capabilities-in-technical-preview-1712.md)
 ###  [1711 の機能](get-started/capabilities-in-technical-preview-1711.md)
 ###  [1710 の機能](get-started/capabilities-in-technical-preview-1710.md)
-###  [1709 の機能](get-started/capabilities-in-technical-preview-1709.md)
 
 <!-- No longer in support
+###  [Capabilities in 1709](get-started/capabilities-in-technical-preview-1709.md)
 ###  [Capabilities in 1708](get-started/capabilities-in-technical-preview-1708.md)
 ###  [Capabilities in 1707](get-started/capabilities-in-technical-preview-1707.md)
 ###  [Capabilities in 1706](get-started/capabilities-in-technical-preview-1706.md)
