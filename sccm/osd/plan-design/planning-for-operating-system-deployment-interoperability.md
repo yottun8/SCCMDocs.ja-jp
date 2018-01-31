@@ -7,11 +7,12 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e327ce38-6c07-4a27-b6eb-7e5bf74ed04b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/12/2017
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-単一の階層内の異なる System Center Configuration Manager サイトで異なるバージョンを使用する場合、一部の Configuration Managerの機能が使用できなくなります。 通常、Configuration Manager の新しいバージョンの機能は、古いバージョンを実行しているサイトでアクセスしたり、古いバージョンを実行しているクライアントで使用したりすることはできません。 詳細については、「 [Interoperability between different versions of System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md)」をご覧ください。  
+単一の階層内の異なる System Center Configuration Manager サイトで異なるバージョンを使用する場合、一部の Configuration Managerの機能が使用できなくなります。 通常、Configuration Manager の新しいバージョンの機能は、古いバージョンを実行しているサイトでアクセスしたり、古いバージョンを実行しているクライアントで使用したりすることはできません。 詳細については、「 [異なるバージョンの Configuration Manager 間の相互運用性](../../core/plan-design/hierarchy/interoperability-between-different-versions.md)」をご覧ください。  
 
  階層内の最上位サイトをアップグレードし、階層内の他のサイトは古いバージョンの Configuration Manager を実行する場合、次の点を考慮してください。  
 

@@ -7,12 +7,13 @@ ms.date: 3/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
-caps.latest.revision: "10"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
@@ -87,7 +88,7 @@ System Center 2012 Configuration Manager または System Center Configuration M
 
         -   Configuration Manager 2007 SP2 ソース サイトの場合は、このアカウントにはすべてのソース サイト オブジェクトへの**読み取り**アクセス許可が必要です。  
 
-        -   System Center 2012 Configuration Manager または System Center Configuration Manager ソース サイトの場合は、このアカウントにはすべてのソース サイト オブジェクトの **読み取り**アクセス許可が必要です。ロールベースの管理を使用して、このアクセス許可をアカウントに付与します。 ロール ベース管理の使用方法については、「 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。  
+        -   System Center 2012 Configuration Manager または System Center Configuration Manager ソース サイトの場合は、このアカウントにはすべてのソース サイト オブジェクトの **読み取り**アクセス許可が必要です。ロールベースの管理を使用して、このアクセス許可をアカウントに付与します。 ロール ベース管理の使用方法については、「 [System Center Configuration Manager のロール ベース管理の基礎](../../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。  
 
     -   **ソース サイトのデータベース アカウント** : このアカウントは、ソース サイトの SQL Server データベースへのアクセスに使用され、ソース サイト データベースの **Connect**、 **Execute**、 **Select** のアクセス許可を必要とします。  
 
@@ -114,7 +115,7 @@ System Center 2012 Configuration Manager または System Center Configuration M
 
      各ソース サイトでは、FQDN で構成されているサイト システム サーバーにインストールされた配布ポイントのみ共有されます。  
 
-     また、System Center 2012 Configuration Manager または System Center Configuration Manager ソース サイトの配布ポイントを共有するには、**[ソース サイト アカウント]** (ソース サイト サーバーの SMS プロバイダーにアクセスするアカウント) に、ソース サイトの **[サイト]** オブジェクトの **[変更]** アクセス許可が必要です。 アカウントにこのアクセス許可を付与するには、ロールベースの管理を使用します。 ロール ベース管理の使用方法については、「 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。  
+     また、System Center 2012 Configuration Manager または System Center Configuration Manager ソース サイトの配布ポイントを共有するには、**[ソース サイト アカウント]** (ソース サイト サーバーの SMS プロバイダーにアクセスするアカウント) に、ソース サイトの **[サイト]** オブジェクトの **[変更]** アクセス許可が必要です。 アカウントにこのアクセス許可を付与するには、ロールベースの管理を使用します。 ロール ベース管理の使用方法については、「 [System Center Configuration Manager のロール ベース管理の基礎](../../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。  
 
 
 -   **配布ポイントのアップグレードまたは再割り当て:**  
@@ -123,6 +124,6 @@ System Center 2012 Configuration Manager または System Center Configuration M
 
     -   Configuration Manager 2007 配布ポイントをアップグレードするためには、Configuration Manager 2007 ソース サイトから配布ポイントを削除するため、アカウントに Configuration Manager 2007 サイト サーバーの **[サイト]** クラスの **[読み取り]**、**[実行]**、**[削除]** アクセス許可が必要です。  
 
-    -   System Center 2012 Configuration Manager または System Center Configuration Manager の配布ポイントを再割り当てするには、アカウントにソース サイト上の **[サイト]** オブジェクトの **[変更]** アクセス許可が必要です。 アカウントにこのアクセス許可を付与するには、ロールベースの管理を使用します。 ロール ベース管理の使用方法については、「 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。  
+    -   System Center 2012 Configuration Manager または System Center Configuration Manager の配布ポイントを再割り当てするには、アカウントにソース サイト上の **[サイト]** オブジェクトの **[変更]** アクセス許可が必要です。 アカウントにこのアクセス許可を付与するには、ロールベースの管理を使用します。 ロール ベース管理の使用方法については、「 [System Center Configuration Manager のロール ベース管理の基礎](../../core/understand/fundamentals-of-role-based-administration.md)」を参照してください。  
 
      配布ポイントを新しい階層に正常にアップグレードまたは再割り当てするには、ソース階層の配布ポイントを管理するサイトのクライアント要求用に構成されたポートが、配布ポイントを管理する移行先サイトのクライアント要求用に構成されたポートと一致している必要があります。 クライアント要求ポートの詳細については、「[System Center Configuration Manager でのクライアント通信ポートの構成方法](../../core/clients/deploy/configure-client-communication-ports.md)」を参照してください。  

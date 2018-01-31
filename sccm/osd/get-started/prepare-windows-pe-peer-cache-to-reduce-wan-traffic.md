@@ -7,11 +7,12 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
@@ -74,7 +75,7 @@ ms.lasthandoff: 12/12/2017
         > [!TIP]  
         >  クライアントは、HTTPS を使用して、コンテンツが使用可能になるとダウンロードします。 ただし、HTTP と HTTPS で同じポート番号が使用されます。  
 
--   クライアント上で[Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) することによって、展開されたイメージを保存するのに十分なスペースを確保する必要があります。 Windows PE ピア キャッシュは、クライアント キャッシュの構成にも動作にも影響を与えません。  
+-   クライアント上で[Configuration Manager クライアントにクライアントキャッシュを構成する](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) することによって、展開されたイメージを保存するのに十分なスペースを確保する必要があります。 Windows PE ピア キャッシュは、クライアント キャッシュの構成にも動作にも影響を与えません。  
 
 -   タスク シーケンス展開用の展開オプションは、タスク シーケンスで必要な場合のコンテンツのローカル ダウンロードとして構成する必要があります。  
 
