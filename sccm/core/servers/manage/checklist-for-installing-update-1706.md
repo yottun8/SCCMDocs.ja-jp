@@ -175,6 +175,6 @@ Configuration Manager では、ネットワーク負荷分散 (NLB) クラスタ
 
 ## <a name="known-issues"></a>既知の問題 
 バージョン 1706 に更新すると、SMS_Executive が起動するたびに、次の警告ステータス メッセージが SMS_CERTIFICATE_MANAGER により作成されます。
--    [Microsoft SQL Server reported SQL message 515, severity 16: [23000][515][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot insert the value NULL into column 'RowVersion', table 'CM_GF1.dbo.AAD_SecretChange_Notify'; column does not allow nulls.]\(Microsoft SQL Server が SQL メッセージ 515 を報告しました、重大度 16: [23000][515][Microsoft][SQL Server Native Client 11.0][SQL Server] 列 'RowVersion' に値 NULL を挿入できません、テーブル 'CM_GF1.dbo.AAD_SecretChange_Notify'; 列では NULL を使用できません。\) [INSERT fails.]\(挿入は失敗します。\)
+-    Microsoft SQL Server が SQL メッセージ 515 を報告しました、重大度 16: [23000][515][Microsoft][SQL Server Native Client 11.0][SQL Server] 列 'RowVersion' に値 NULL を挿入できません、テーブル 'CM_GF1.dbo.AAD_SecretChange_Notify'; 列では NULL を使用できません。 [INSERT fails.]\(挿入は失敗します。\)
 
 このメッセージは無視してかまいません。  バージョン 1706 に更新する前にクラウド サービスの使用を構成していなかったときに表示されます。 この問題は、今後のリリースで解決される予定です。

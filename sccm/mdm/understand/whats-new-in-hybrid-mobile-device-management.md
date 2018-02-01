@@ -7,18 +7,19 @@ ms.date: 01/04/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 243daf8626e329214ce1b94f109d19773bbc57c5
-ms.sourcegitcommit: 2da6b06818371e93f28e36cadf3a154d50ce5bf4
+ms.openlocfilehash: 04ed2ac1abe54c3b8c7c86f210b35f5f52d80ef6
+ms.sourcegitcommit: c432624b8816f59d51a3c8ef68960ed4099d9124
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -40,6 +41,17 @@ ms.lasthandoff: 01/05/2018
 |**Microsoft Intune の新機能** | 通常、このカテゴリに一覧表示されたすべての機能は、Configuration Manager のすべてのリリースで動作します。 これには System Center 2012 R2 Configuration Manager リリースが含まれています。これらの機能では Intune サービスのみが必要であり、Configuration Manager の追加機能は不要なためです。|
 |**Configuration Manager Technical Preview の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Technical Preview リリースでのみ動作します。 これらの機能を試すには、機能の説明で指定されたバージョンの Technical Preview をインストールする必要があります。 詳細については、「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を参照してください。|
 |**Configuration Manager (現在のブランチ) の新機能**| このカテゴリに一覧表示されたすべての機能は、バージョン 1511 や 1602 など、指定されたバージョンの Configuration Manager (現在のブランチ) でのみ動作します。 ハイブリッド展開に旧バージョンの Configuration Manager を使用している場合は、機能の説明で指定されたバージョンの Configuration Manager (現在の分岐) にアップグレードする必要があります。 詳細については、「[System Center Configuration Manager へのアップグレード](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)」を参照してください。|
+
+
+## <a name="january-2018"></a>2018 年 1 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+- **Windows 10 向けポータル サイト アプリで利用できるリモート ロック**<!--676506-->    
+  エンドユーザーは、Windows 10 向けポータル サイト アプリから自分のデバイスをリモートでロックできるようになりました。 この機能はエンド ユーザーがアクティブに使用しているローカル デバイスには表示されません。
+
+- **Windows 10 向けポータル サイト アプリの準拠に関する問題を容易に解決できる**<!--676546-->    
+  Windows デバイスを使用するエンド ユーザーは、ポータル サイト アプリ内で非準拠の理由をタップできるようになりました。 可能な場合には、問題を解決するために設定アプリの適切な場所に直接移動します。
 
 ## <a name="december-2017"></a>2017 年 12 月
 
@@ -114,6 +126,11 @@ Windows 10 用ポータル サイト アプリの [デバイスの詳細] 画面
 
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能  
+
+- **Android 向けポータル サイト アプリに関してユーザーの自己解決をサポートする** <!-- 1573324, 1573150, 1558616, 1564878 -->      
+  Android 向けポータル サイト アプリでは、エンド ユーザーへの指示が追加されています。それは新しいユース ケースの理解や、可能な場合にはその自己解決にも役立ちます。
+    - 追加が許されているデバイスの最大数に到達した場合、デバイスを削除するように、エンド ユーザーは [Azure Active Directory ポータル](https://account.activedirectory.windowsazure.com/r/#/profile) に誘導されます。
+    - [Samsung Knox デバイスのアクティベーション エラーを解消する](https://go.microsoft.com/fwlink/?linkid=859718)か、[節電モードをオフにする](https://docs.microsoft.com/intune-user-help/power-saving-mode-android)ための手順がエンド ユーザーに表示されます。 いずれの解決策でも問題が解消されない場合、[Microsoft にログを送信する](https://docs.microsoft.com/intune-user-help/send-logs-to-microsoft-android)方法を説明します。
 
 - **Android 用ポータル サイトのデバイスのセットアップ進行状況インジケーター** <!--1565657-->    
   Android 用ポータル サイト アプリでは、ユーザーがデバイスを登録しているときに、デバイスのセットアップ進行状況インジケーターが示されます。 このインジケーターで新しいステータスが表示されます。初めに表示されるものから挙げると、[デバイスをセットアップしています...]、[デバイスを登録しています]、[デバイスの登録を終了しています]、[デバイスのセットアップを終了しています] です。  
