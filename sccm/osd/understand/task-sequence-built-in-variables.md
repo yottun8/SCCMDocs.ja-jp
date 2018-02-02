@@ -3,24 +3,25 @@ title: "タスク シーケンス組み込み変数"
 titleSuffix: Configuration Manager
 description: "タスク シーケンス組み込み変数は、タスク シーケンスが実行されている環境に関する情報を提供し、その値は、タスク シーケンス全体で使用できます。"
 ms.custom: na
-ms.date: 03/26/2017
+ms.date: 01/12/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
-caps.latest.revision: "15"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: e29efd4de847a861afa75a7a10868cad30e4cf97
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+ms.openlocfilehash: 29b2ae2a9a8ee41d11fbf7e032ef8262411f3dd0
+ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>System Center Configuration Manager のタスク シーケンス組み込み変数
 
@@ -81,8 +82,8 @@ ms.lasthandoff: 12/12/2017
 |SMSTSDriverRequestResolveTimeOut|この変数を使用して、[ドライバーの自動適用] タスク シーケンス ステップにおける、ドライバー カタログ要求に対する HTTP 名前解決の待機時間 (秒) を指定します。 設定したタイムアウトまでの時間よりも接続に時間がかかる場合は、ドライバー カタログの要求はキャンセルされます。 既定では、タイムアウトまでの時間は 60 秒に設定されます。|
 |SMSTSDriverRequestSendTimeOut|この変数を使用して、[ドライバーの自動適用] タスク シーケンス ステップにおける、ドライバー カタログ要求の送信に要する時間 (秒) を指定します。 設定したタイムアウトまでの時間よりも要求に時間がかかる場合は、ドライバー カタログの要求はキャンセルされます。 既定では、タイムアウトまでの時間は 60 秒に設定されます。|
 |SMSTSErrorDialogTimeout|タスク シーケンスでエラーが発生すると、ダイアログが表示されます。このダイアログは、既定のタイムアウト値が経過すると自動的に閉じられます。 既定では、 **900** 秒 (15 分) 後にダイアログ ボックスが自動的に閉じます。|  
-| TSDisableProgressUI | この変数を使用して、タスク シーケンスの各セクションでタスク シーケンスの進行状況を表示または非表示にできます。 | 
-|TSErrorOnWarning|タスク シーケンス エンジンがタスク シーケンスのステップのアプリケーションのインストール中に、検出された警告をエラーとしてと見なされるかどうかを指定するには、この変数を使用します。 1 つまたは複数のアプリケーション、または、必要な依存関係がインストールされていない場合、要件を満たしていないため、タスク シーケンスは _TSAppInstallStatus 変数を **警告** に設定します。 TSErrorOnWarning 変数を **True** に設定し、_TSAppInstallStatus 変数を [警告] に設定すると、エラーとして扱われます。 値 **False** が既定の動作です。| 
+| TSDisableProgressUI | <!-- 1354291 -->Configuration Manager バージョン 1706 以降では、この変数を使って、タスク シーケンスが進行状況をエンド ユーザーに表示するタイミングを制御します。 異なる時点で進行状況の非表示または表示を切り替えるには、タスク シーケンス内で複数回この変数を設定します。 タスク シーケンスの進行状況を非表示にするには、この変数の値を **True** に設定します。 タスク シーケンスの進行状況を表示するには、この変数の値を **False** に設定します。 | 
+| TSErrorOnWarning |タスク シーケンス エンジンがタスク シーケンスのステップのアプリケーションのインストール中に、検出された警告をエラーとしてと見なされるかどうかを指定するには、この変数を使用します。 1 つまたは複数のアプリケーション、または、必要な依存関係がインストールされていない場合、要件を満たしていないため、タスク シーケンスは _TSAppInstallStatus 変数を **警告** に設定します。 TSErrorOnWarning 変数を **True** に設定し、_TSAppInstallStatus 変数を [警告] に設定すると、エラーとして扱われます。 値 **False** が既定の動作です。| 
 |SMSTSLanguageFolder|言語に依存しないブート イメージの表示言語を変更するときに使用します。|  
 |SMSTSLocalDataDrive|タスク シーケンスの実行中に一時ファイルを対象コンピューターに格納する場所を指定します。<br /><br /> この変数は、コレクション変数の設定によって行うなど、タスク シーケンスが開始する前に設定される必要があります。 タスク シーケンスが開始された後で、Configuration Manager は _SMSTSMDataPath 変数を定義します。|  
 |SMSTSMP|この変数を使用して、Configuration Manager の管理ポイントの URL または IP アドレスを指定します。|  
