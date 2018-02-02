@@ -7,20 +7,21 @@ ms.date: 11/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-caps.latest.revision: "14"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: f680b692f3ae92fb8a5e8b6640ed053ceedba436
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: d7073b397cdf7b233f8264bd07019303a77a610f
+ms.sourcegitcommit: 2f6a13d208dcd8aa59c88f107791f9c4388e78e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager でアプリケーションを作成する
 
@@ -261,7 +262,7 @@ Configuration Manager コンソールの **[アプリケーション]** ノー�
 
  次の表に、スクリプトの出力を使用してアプリケーションがインストール済みかどうかを確認する方法を示します。  
 
-|スクリプトの終了コード|説明|
+|スクリプトの終了コード|詳細|
 |--------------------------------|-----------------|
 |0|**STDOUT から読み取られるデータ** -- 空<br /><br /> **STDERR から読み取られるデータ** -- 空<br /><br /> **スクリプトの結果** -- 成功<br /><br /> **アプリケーション検出状態** -- 未インストール|  
 |0|**STDOUT から読み取られるデータ** -- 空<br /><br /> **STDERR から読み取られるデータ** -- 空ではない<br /><br /> **スクリプトの結果** -- 失敗<br /><br /> **アプリケーション検出状態** -- 不明|  
@@ -337,7 +338,16 @@ Configuration Manager コンソールの **[アプリケーション]** ノー�
         > [!IMPORTANT]  
         >  スケジュールされているメンテナンス期間より **[許可最長実行時間]** が長い場合は、競合が発生することがあります。 ユーザーが [最長実行時間] をメンテナンス期間より長く設定した場合は、その展開の種類は実行されません。  
 
-2.  **インストールの推定時間 (分)** -- 展開の種類のインストールにかかる推定時間を指定します。 これは、ソフトウェア センターのユーザーに表示されます。  
+    -   **インストールの推定時間 (分)** -- 展開の種類のインストールにかかる推定時間を指定します。 これは、ソフトウェア センターのユーザーに表示されます。  
+
+    -   **Specify specific reboot behavior (特定の再起動の動作を指定する)** -- インストール後の操作を指定します。 次のオプションを使用できます。  
+
+        -   **リターン コードを基に動作を決定する** -- [リターン コード] タブで構成されたコードに基づいて、再起動を処理します。ソフトウェア センターには、"**再起動を必要とする可能性がある**" ことを示すメッセージが表示されます。  インストール中にユーザーがログインすると、展開のユーザー エクスペリエンス構成に応じて、プロンプトが表示されます。  
+
+        -   **何もしない** -- インストール後の再起動は不要です。  ソフトウェア センターでは、再起動は不要と報告されます。  
+        -   **The software installation program might force a device restart (ソフトウェア インストール プログラムによってデバイスの再起動が強制実行されるようにする)** -- Configuration Manager で再起動の制御や開始を行うことはありませんが、実際のインストールでは警告なしでこれらが行われる場合があります。  インストーラーでの再起動の開始時に Configuration Manager がインストールの失敗を報告しないようにする場合は、この設定を使用します。  ソフトウェア センターには、"**再起動を必要とする可能性がある**" ことを示すメッセージが表示されます。  
+
+        -   **Configuration Manager クライアントによって、デバイスの必須の再起動が強制実行されるようにする** -- インストールが正常に行われてから、Configuration Manager によってデバイスの再起動が強制実行されます。  ソフトウェア センターでは、再起動が必要と報告されます。  インストール中にユーザーがログインすると、展開のユーザー エクスペリエンス構成に応じて、プロンプトが表示されます。
 
 ## <a name="specify-requirements-for-the-deployment-type"></a>展開の種類の要件を指定する  
 

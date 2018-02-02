@@ -3,32 +3,35 @@ title: "管理対象 PC の O365 サービスへのアクセスを管理する"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager で管理されている PC の条件付きアクセスを構成する方法について説明します。"
 ms.custom: na
-ms.date: 12/19/2017
+ms.date: 01/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: bf38358d12c2617d924fe59bf7bf7457dfa95143
-ms.sourcegitcommit: 6c2aa79924c0e7fc64ef5e9003498fc00c349db9
+ms.openlocfilehash: e1f50ea65236473f059ded6ef85c37646e929e53
+ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>System Center Configuration Manager で管理されている PC の O365 サービスへのアクセスを管理する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager のバージョン 1602 より、System Center Configuration Manager によって管理されている PC の条件付きアクセスを構成することができます。  
+この記事では、Configuration Manager で管理されている PC の条件付きアクセスを構成する方法について説明します。  
 
-> [!Tip]  
-> この機能はバージョン 1602 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 1702 以降のバージョンでは、この機能はプレリリース機能ではありません。
+<!--
+ >> [!Tip]  
+> This feature was first introduced in version 1602 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1702, this feature is no longer a pre-release feature.
+-->
 
 Microsoft Intune で登録および管理されるデバイスの条件付きアクセスの構成については、「[System Center Configuration Manager でサービスへのアクセスを管理する](../../protect/deploy-use/manage-access-to-services.md)」を参照してください。 その記事では、ドメインに参加しているデバイスのうち、コンプライアンス評価対象でないデバイスについても説明します。
 
@@ -45,16 +48,16 @@ Microsoft Intune で登録および管理されるデバイスの条件付きア
 
 ## <a name="supported-windows-servers"></a>サポートされている Windows サーバー
 
--   2008 R2
--   2012
--   2012 R2
--   2016
+-   Windows Server 2008 R2
+-   Windows Server 2012
+-   Windows Server 2012 R2
+-   Windows Server 2016
 
     > [!IMPORTANT]
-    > 複数のユーザーが同時にサインインしている可能性のある Windows サーバーについては、サインインしているすべてのユーザーに同じ条件付きアクセス ポリシーを展開する必要があります。
+    > 複数のユーザーが同時にサインインしている可能性のある Windows サーバーについては、サインインしているすべてのユーザーに同じ条件付きアクセス ポリシーを展開してください。
 
 ## <a name="configure-conditional-access"></a>条件付きアクセスの構成  
- 条件付きアクセスをセットアップするには、最初にコンプライアンス ポリシーを作成して、条件付きアクセス ポリシーを構成する必要があります。 PC の条件付きアクセス ポリシーを構成する際に、PC が Exchange Online サービスと SharePoint Online サービスにアクセスする場合にコンプライアンス ポリシーに準拠するよう要求することができます。  
+ 条件付きアクセスをセットアップするには、最初にコンプライアンス ポリシーを作成して、条件付きアクセス ポリシーを構成する必要があります。 PC の条件付きアクセス ポリシーを構成する場合、Exchange Online サービスと SharePoint Online サービスにアクセスするには PC が準拠するよう要求することができます。  
 
 ### <a name="prerequisites"></a>[前提条件]  
 
@@ -81,7 +84,7 @@ Microsoft Intune で登録および管理されるデバイスの条件付きア
 
 -   **Azure Active Directory への登録が必要:** この規則では、ユーザーのデバイスが Azure AD に社内参加しているかどうかを確認し、参加していない場合には Azure AD に自動的に登録します。 自動登録がサポートされているのは Windows 8.1 のみです。 Windows 7 PC の場合には、MSI を展開して自動登録を実行します。 詳細については、[Azure Active Directory への自動デバイス登録](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)に関するページを参照してください。  
 
--   **必要な更新が特定の日数の期限を過ぎている場合、そのすべてをインストール:** この規則では、ユーザーが指定した期限および猶予期間内の必須のすべての更新 (「Required automatic updates rule」 (必須の自動更新ルール) で指定) がユーザーのデバイスに含まれているかどうかを確認し、保留されている必須の更新すべてを自動的にインストールします。  
+-   **All required updates installed with a deadline older than a certain number of days (期限よりも特定の日数前に必要な更新プログラムをすべてインストールする):** この規則では、ユーザーのデバイス上で必要な更新プログラムについて、展開期限からの猶予期間の値を指定します。 この規則を追加すると、保留中の必要な更新プログラムも自動的にインストールされます。 **必須の自動更新**規則で、必要な更新プログラムを指定します。   
 
 -   **BitLocker ドライブ暗号化が必要:** この規則では、デバイスのプライマリ ドライブ (C:\\ など) が BitLocker で暗号化されているかどうかを確認します。 Bitlocker 暗号化がプライマリ デバイスで有効でない場合、電子メール サービスおよび SharePoint サービスへのアクセスがブロックされます。  
 
@@ -134,7 +137,7 @@ Microsoft Intune で登録および管理されるデバイスの条件付きア
 
 5.  Windows PC の要件を**[デバイスは準拠デバイスである必要があります]**オプションに設定します。  
 
-6.  **[対象グループ]**で、 **[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。  
+6.  **[対象グループ]**で、**[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。  
 
     > [!NOTE]  
     >  コンプライアンス ポリシーの展開と条件付きアクセス ポリシーの対象グループに同じセキュリティ ユーザー グループを使用してください。  

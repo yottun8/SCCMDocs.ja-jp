@@ -7,19 +7,20 @@ ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 3848d0d6a9f3b5d778879c598bf859fb1e8a7ac7
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+ms.openlocfilehash: a67d75f27cbc2d53cc5d8c418e25232d88b4f067
+ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>System Center Configuration Manager を使用して、サービスとしての Windows を管理する
 
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/12/2017
     -   **オペレーティング システムのビルド**: オペレーティング システムのビルドを指定します。 たとえば、**10.0.10240** (RTM) または **10.0.10586** (バージョン 1511) などです。  
 
 -   Windows 10 サービス ダッシュボードにデータが表示されるようにするには、サービス接続ポイントをインストールし、 **オンライン、固定接続** モード用に構成する必要があります。 オフライン モードでは、Configuration Manager サービス更新を取得するまで、ダッシュボードにデータ更新が表示されません。   
-     詳細については、「[About the service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md)」 (サービスの接続ポイントについて) を参照してください。  
+      詳細については、「[About the service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md)」 (サービスの接続ポイントについて) を参照してください。  
 
 
 -   Configuration Manager コンソールを実行するコンピューター上に、Internet Explorer 9 以降をインストールする必要があります。  
@@ -280,3 +281,6 @@ Windows 10 サービス ダッシュボードから基本的なサービス プ�
 
     > [!NOTE]  
     >  ソフトウェア更新プログラムに関する最新のアラートは、**[ソフトウェア ライブラリ]** ワークスペースの **[ソフトウェア更新プログラム]** ノードで確認することができます。  
+
+**詳細情報:** <br/>
+[サービスとしての Configuration Manager とサービスとしての Windows の基本情報](/sccm/core/understand/configuration-manager-and-windows-as-service.md)

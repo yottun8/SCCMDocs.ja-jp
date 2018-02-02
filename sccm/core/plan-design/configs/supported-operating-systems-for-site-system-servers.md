@@ -7,19 +7,20 @@ ms.date: 06/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: e7606e087e2540b49e8aa23c09d09831651ee48b
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 03618b541f8f00ccab69fa4ebcef81ffc146010c
+ms.sourcegitcommit: 645cd5a324bdd299906efa27eaca5885eafc9e9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>System Center Configuration Manager サイト システム サーバーのサポートされるオペレーティング システム
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 12/04/2017
 この記事では、System Center Configuration Manager サイトまたはサイト システムの役割をホストできる Windows バージョンについて説明します。
 
 
-このトピックの情報は、次の記事の情報とともに使用します。
+この記事の情報は、次の記事の情報とともに使用します。
 -   [Configuration Manager の推奨ハードウェア](../../../core/plan-design/configs/recommended-hardware.md)
 -   [Configuration Manager のサイトとサイト システムの前提条件](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 -   [Configuration Manager のサイズとスケール番号](../../../core/plan-design/configs/size-and-scale-numbers.md)
@@ -73,7 +74,7 @@ ms.lasthandoff: 12/04/2017
 
 -   レポート サービス ポイント  
 
--   サービス接続ポイント  
+-   [サービス接続ポイント]  
 
 -   サイト データベース サーバー  
 
@@ -120,7 +121,7 @@ ms.lasthandoff: 12/04/2017
 
 -   レポート サービス ポイント  
 
--   サービス接続ポイント  
+-   [サービス接続ポイント]  
 
 -   サイト データベース サーバー  
 
@@ -167,7 +168,7 @@ ms.lasthandoff: 12/04/2017
 
 -   レポート サービス ポイント  
 
--   サービス接続ポイント  
+-   [サービス接続ポイント]  
 
 -   サイト データベース サーバー  
 
@@ -221,7 +222,7 @@ ms.lasthandoff: 12/04/2017
 
 -   レポート サービス ポイント  
 
--   サービス接続ポイント  
+-   [サービス接続ポイント]  
 
 -   サイト データベース サーバー  
 
@@ -271,16 +272,18 @@ ms.lasthandoff: 12/04/2017
 
     -   配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
 
-## <a name="windows-8-x86-x64-professional-and-enterprise"></a>Windows 8 (x86、x64): Professional、Enterprise
-**サイト システム サーバー:**  
+<!--## Windows 8 (x86, x64): Professional and Enterprise
+**Site system servers:**  
 
--   配布ポイント  
+-   Distribution point  
 
-    -   このオペレーティング システムの配布ポイントは、PXE ではサポートされません。  
+    -   Distribution points on this operating system are not supported for PXE.  
 
-    -   このオペレーティング システムのバージョンの配布ポイントでは、マルチキャストをサポートしません。  
+    -   Distribution points on this operating system version do not support Multicast.  
 
-    -   配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
+    -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+   
+    -  - -removed Jan 12,2018 sms505863-->
 
 ## <a name="windows-7-with-sp1-x86-x64-professional-enterprise-and-ultimate"></a>Windows 7 SP1 (x86、x64): Professional、Enterprise、Ultimate  
 **サイト システム サーバー:**  

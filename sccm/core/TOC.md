@@ -36,8 +36,10 @@
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 -->
-###  [削除された機能と非推奨の機能](plan-design/changes/removed-and-deprecated-features.md)
-
+###  [削除された機能と非推奨の機能](plan-design/changes/deprecated/removed-and-deprecated.md)
+#### [削除された機能と非推奨の機能](plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)
+#### [サイト サーバー向けの削除された機能と非推奨の機能](plan-design/changes/deprecated/removed-and-deprecated-server.md)
+#### [クライアント向けの削除された機能と非推奨の機能](plan-design/changes/deprecated/removed-and-deprecated-client.md)
 ##   [サポートされている構成](plan-design/configs/supported-configurations.md)
 ###  [サイジングとスケールの数値](plan-design/configs/size-and-scale-numbers.md)
 ###  [サイトとサイト システムの前提条件](plan-design/configs/site-and-site-system-prerequisites.md)
