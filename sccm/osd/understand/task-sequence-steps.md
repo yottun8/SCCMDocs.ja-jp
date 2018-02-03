@@ -17,11 +17,11 @@ caps.handback.revision:
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 695d21eb065f4d89143644dad28bfdb711392ab9
-ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
+ms.openlocfilehash: 158817547d40f09fb8bd30ebedd5aea6420a8571
+ms.sourcegitcommit: aee9ac45c15f27d8cf827890edcae94c03f5fd5e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>System Center Configuration Manager のタスク シーケンスのステップ
 
@@ -536,7 +536,7 @@ ms.lasthandoff: 01/17/2018
 
  -   **Configuration Manager クライアント キャッシュ**: クライアント キャッシュにコンテンツを格納します。 クライアントは、他のピア キャッシュ クライアントのピア キャッシュ ソースとして機能します。 詳細については、「[WAN トラフィックを削減するための Windows PE ピア キャッシュの準備](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)」を参照してください。  
 
- -   **カスタム パス**  
+ -    **カスタム パス**: このオプションにより、タスク シーケンス エンジンは、まず、タスク シーケンス作業ディレクトリにパッケージをダウンロードし、次に、指定したパスに移動します。 タスク シーケンス エンジンが、パッケージ ID を使用してパスを追加します。 
    
 **パスを変数として保存する**  
  パスは、別のタスク シーケンスのステップで使用できる変数として保存できます。 Configuration Manager によって、数字のサフィックスが変数名に追加されます。 たとえば、カスタム変数として変数 %*mycontent*% を指定した場合、それは参照されているすべてのコンテンツをタスク シーケンスが格納する場所のルートになります。 このコンテンツには、複数のパッケージを含めることができます。 その場合は、変数を参照するときに、数字のサフィックスを追加します。 たとえば、最初のパッケージの場合は、%*mycontent01*% を参照します。 **オペレーティング システムのアップグレード**など、後続のステップで変数を参照するときは、%*mycontent02*% または %*mycontent03*% を使います。この数字は、**[パッケージ コンテンツのダウンロード]** ステップでのパッケージのリスト順に対応します。  
