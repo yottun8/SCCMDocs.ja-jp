@@ -6,18 +6,19 @@ ms.custom: na
 ms.date: 08/11/2017
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: fddb31279587df5306c07a9f23dfc4dace418ea7
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: fb6c377edee5cbf387398ed2166ca2cca0cdb765
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1706 の新機能
 
@@ -36,7 +37,7 @@ System Center Configuration Manager の現在のブランチの更新プログ�
 
 <!--
 ## Deprecated features and operating systems
-Learn about support changes before they are implemented in [removed and deprecated features](/sccm/core/plan-design/changes/removed-and-deprecated-features).
+Learn about support changes before they are implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
 
 Version 1706 drops support for the following products:
 -->
@@ -214,7 +215,7 @@ Configuration Manager では、パッケージとプログラムを使用して�
 Configuration Manager を使用して、Microsoft Surface ドライバーの更新プログラムを管理できるようになりました。    
 
 
-#### <a name="prerequisites"></a>必要条件
+#### <a name="prerequisites"></a>[前提条件]
 - すべてのソフトウェアの更新ポイントで Windows Server 2016 を実行している必要があります。    
 - これは、使用するために有効にする必要があるプレリリース機能です。 詳細については、「[更新プログラムからプレリリース機能を使用する](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)」を参照してください。
 
