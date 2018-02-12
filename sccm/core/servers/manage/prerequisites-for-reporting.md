@@ -3,24 +3,25 @@ title: "レポートの前提条件"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager のレポートの使用に影響するさまざまな依存関係について理解します。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/29/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
-caps.latest.revision: "5"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 09f6ebd47070c63d238a74242d4b04b84c95ef49
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 3feafa8a20bedfba381c29a5d7fe80a47517b6ab
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="prerequisites-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager のレポートの前提条件
 
@@ -49,17 +50,19 @@ System Center Configuration Manager のレポートには、外部依存関係�
  次の表に、レポート サービス ポイントがサポートする SQL Server バージョンを示します。  
 
 |SQL Server バージョン|レポート サービス ポイント|  
-|------------------------|------------------------------|  
-|累積的な更新プログラム 9 以上を適用した SQL Server 2008 SP2<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|○|  
-|累積的な更新プログラム 4 以上を適用した SQL Server 2008 SP3<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|○|  
-|SP1 と累積的な更新プログラム 6 以上を適用した SQL Server 2008 R2<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|○|  
-|SP2 を適用した SQL Server 2008 R2<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|○|  
-|SP1 と累積的な更新プログラム 4 以上を適用した SQL Server Express 2008 R2|サポートされません|  
-|SP2 を適用した SQL Server Express 2008 R2|サポートされません|  
-|累積的な更新プログラム 2 以上を適用した SQL Server 2012<br /><br /> -   Standard<br />-   Enterprise|○|  
-|SP1 を適用し、最小の累積的な更新プログラムを適用していない SQL Server 2012<br /><br /> -   Standard<br />-   Enterprise|○|  
-|SQL Server 2014<br /><br /> -   Standard<br />-   Enterprise|○|
-|SQL Server 2016<br /><br /> -   Standard<br />-   Enterprise|○|
-|SQL Server 2016 SP1<br /><br /> -   Standard<br />-   Enterprise|○|
+|------------------------|------------------------------|
+|累積的な更新プログラム 2 以上を適用した SQL Server 2017<br /><br /> -   Standard<br />-   Enterprise|はい、Configuration Manager バージョン 1710 以降|  
+|SQL Server 2016 SP1<br /><br /> -   Standard<br />-   Enterprise|はい| 
+|SQL Server 2016<br /><br /> -   Standard<br />-   Enterprise|はい|
+|SQL Server 2014 SP2<br /><br /> -   Standard<br />-   Enterprise|はい|
+|SQL Server 2014 SP1<br /><br /> -   Standard<br />-   Enterprise|はい|
+|SQL Server 2012 SP4 <br /><br /> -   Standard<br />-   Enterprise|はい|  
+|SQL Server 2012 SP3 <br /><br /> -   Standard<br />-   Enterprise|はい|  
+|SQL Server 2008 R2 SP3<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|はい、Configuration Manager 1702 より前のサポートされるバージョンの場合。|  
+|SQL Server Express 2008 R2 SP3|サポートされません| 
+
+
+
+
 ## <a name="next-steps"></a>次のステップ
 [レポートの操作とメンテナンス](operations-and-maintenance-for-reporting.md)

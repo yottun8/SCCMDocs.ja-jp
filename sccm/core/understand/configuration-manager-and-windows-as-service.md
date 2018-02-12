@@ -16,11 +16,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 90542085af2a1e5cf0701c5eac6d2625c23eb8c6
-ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
+ms.openlocfilehash: 40894c4ebb562e5c979f1226349ff91c38516618
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="keep-windows-10-up-to-date-in-the-enterprise-using-configuration-manager"></a>Configuration Manager を使用して企業の Windows 10 を最新の状態に保つ
 
@@ -34,7 +34,7 @@ System Center Configuration Manager では、Windows 10 の機能更新プログ
 | ------------- |-------------|
 |[サービスとしての Configuration Manager の概要](/sccm/core/plan-design/changes/whats-new-incremental-versions)|Configuration Manager (Current Branch) の新しいサービス モデルの要点を簡単に説明します。|
 |[サポート ライフサイクル](/sccm/core/servers/manage/current-branch-versions-supported)|新しいサポートおよびサービス モデルについて説明します。|
-|[削除された機能と非推奨の機能](/sccm/core/plan-design/changes/removed-and-deprecated-features)|Configuration Manager の使用に影響する可能性のある将来の変更について早期に注意するものです。|
+|[削除された項目と非推奨の項目](/sccm//core/plan-design/changes/deprecated/removed-and-deprecated)|Configuration Manager の使用に影響する可能性のある将来の変更について早期に注意するものです。|
 |[サービスとしての Configuration Manager](/sccm/core/servers/manage/updates)|Configuration Manager に機能更新プログラムを適用するための簡単なコンソール内の方式について説明します。|
 |[利用可能な更新プログラムの取得](/core/servers/manage/install-in-console-updates#get-available-updates)|新しい Configuration Manager の機能更新プログラムを取得するために利用できる 2 つのモードについて説明します。|
 |[更新プログラムのチェックリスト](/sccm/core/servers/manage/install-in-console-updates#bkmk_beforeinstall)|更新プログラムのバージョン固有のチェックリスト (適用可能な場合) を提供します。| 

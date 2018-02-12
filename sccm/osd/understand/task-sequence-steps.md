@@ -17,11 +17,11 @@ caps.handback.revision:
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 158817547d40f09fb8bd30ebedd5aea6420a8571
-ms.sourcegitcommit: aee9ac45c15f27d8cf827890edcae94c03f5fd5e
+ms.openlocfilehash: 5320d7747f7e2c6164da8c1801e631b749935d6d
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>System Center Configuration Manager のタスク シーケンスのステップ
 
@@ -1313,7 +1313,7 @@ Configuration Manager バージョン 1710 以降では、別のタスク シー
  **[参照]** をクリックし、このステップで使う Configuration Manager クライアント インストール パッケージを選びます。  
 
  **使用可能な場合に実稼働前クライアント パッケージを使用する**  
- 使用可能な実稼働前クライアント パッケージがある場合、タスク シーケンスは実稼働クライアント パッケージではなく、このパッケージを使います。 実稼働前クライアントは、実稼働環境でのテスト用の新しいバージョンです。 **[参照]** をクリックし、このステップで使う実稼働前クライアント インストール パッケージを選びます。  
+ 使用可能な実稼働前クライアント パッケージがあり、コンピューターがパイロット コレクションのメンバーである場合、タスク シーケンスは実稼働クライアント パッケージではなく、このパッケージを使います。 実稼働前クライアントは、実稼働環境でのテスト用の新しいバージョンです。 **[参照]** をクリックし、このステップで使う実稼働前クライアント インストール パッケージを選びます。  
 
  **インストールのプロパティ**  
  サイトの割り当てと既定の構成は、タスク シーケンス アクションによって自動的に指定されます。 このフィールドは、クライアントのインストール時に使用する追加のインストールのプロパティを指定するために使用できます。 複数のインストールのプロパティを入力するには、各プロパティの間にスペースを入力します。  

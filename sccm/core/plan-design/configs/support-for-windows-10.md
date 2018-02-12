@@ -3,37 +3,39 @@ title: "Windows 10 のサポート"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でクライアントとして、または OSD 用にサポートされている Windows 10 バージョンについて説明します。"
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 01/25/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: b2cacddfbd94340c30681bf03fc3afd7d71122c8
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+manager: dougeby
+ms.openlocfilehash: 2dfe9b63e9e7c41a4f8457dc5622f386c7cceec2
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="support-for-windows-10-for-system-center-configuration-manager"></a>System Center Configuration Manager の Windows 10 のサポート  
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 
- このトピックでは、さまざまなバージョンの System Center Configuration Manager Current Branch で使用できる Windows 10 のリリースについて説明します。 以下は、必要な操作の例です。
- -  Configuration Manager クライアントとしての Windows 10。
- -  Windows 10 Windows アセスメント & デプロイメント キット (ADK)。
+ このトピックでは、さまざまなバージョンの System Center Configuration Manager Current Branch で使用できる Windows 10 のリリースについて説明します。 サポートには次のものが含まれます。
+ -  Configuration Manager クライアントとしての Windows 10
+ -  Windows 10 用のアセスメント & デプロイメント キット (ADK)
 
 ## <a name="windows-10-as-a-client"></a>クライアントとしての Windows 10
 Configuration Manager は、Windows 10 の新しいリリースが利用可能になると、できるだけ早くそのバージョンに対してクライアントとしてのサポートを提供しようとします。 製品には個別の開発およびリリースのスケジュールがあるため、Configuration Manager で提供するサポートは、各製品のリリース時期によって異なります。
 
-たとえば、Configuration Manager バージョンは、[そのバージョンのサポート](/sccm/core/servers/manage/current-branch-versions-supported)の終了後に、マトリックスから除外されます。 同様に、Enterprise 2015 LTSB または 1511 などの Windows 10 バージョンのサポートは、サポートから削除されると、マトリックスから除外されます。 詳細については、「[非推奨オペレーティング システム](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems)」を参照してください。
+たとえば、Configuration Manager バージョンは、[そのバージョンのサポート](/sccm/core/servers/manage/current-branch-versions-supported)の終了後に、マトリックスから除外されます。 同様に、Enterprise 2015 LTSB または 1511 などの Windows 10 バージョンのサポートは、サポートから削除されると、マトリックスから除外されます。 詳細については、「[非推奨オペレーティング システム](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems)」を参照してください。
+
 
 -   次の情報は、「[クライアントとデバイスのサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)」の補足です。
 -   Configuration Manager の Long-Term Servicing Branch を使用する場合は、「[Long-Term Servicing Branch でサポートされている構成](/sccm/core/understand/supported-configurations-for-ltsb)」を参照してください。
@@ -53,7 +55,7 @@ Configuration Manager は、Windows 10 の新しいリリースが利用可能�
 |キー|
 |--|
 |![サポートされています](media/green_check.png) = **サポートされています**  |
-|![サポートされていません](media/blue_compat.png)  = **下位互換性あり** - つまり、既存のクライアント管理機能 (ハードウェア インベントリ、ソフトウェア インベントリ、ソフトウェア更新プログラムなど) は、新しい Windows 10 リリースで動作する必要があります。 既知の問題や注意事項が記述されます。 <br><br>この方法では、新しい Configuration Manager 更新バージョンを必要とせずに、アプリケーションの互換性サポートが含まれる新しい Windows ビルドを即日で展開して管理することができます。 |
+|![サポートされていません](media/blue_compat.png)  = **下位互換性あり** - 既存のクライアント管理機能 (ハードウェア インベントリ、ソフトウェア インベントリ、ソフトウェア更新プログラムなど) は、新しい Windows 10 リリースで動作する必要があります。 既知の問題や注意事項が記述されます。 <br><br>この方法では、新しい Configuration Manager 更新バージョンを必要とせずに、アプリケーションの互換性サポートが含まれる新しい Windows ビルドを即日で展開して管理することができます。 |
 |![サポートされています](media/Red_X.png) = **サポートされていません**|
 
 
@@ -70,6 +72,6 @@ Configuration Manager を使用してオペレーティング システムを展
 
 |キー|
 |--|
-|![サポートされています](media/green_check.png) = **サポートされています** - Windows では、展開している Windows のバージョンに合う Windows ADK を使用することをお勧めします。 たとえば、Windows 10 バージョン 1703 を展開している場合は、Windows 10 バージョン 1703 用 Windows ADK を使用します。  |
+|![サポートされています](media/green_check.png) = **サポートされています** - Windows では、展開している Windows のバージョンに合う Windows ADK を使用することをお勧めします。 たとえば、Windows 10 バージョン 1703 を展開している場合は、Windows 10 バージョン 1703 用 Windows ADK を使用します。 Windows ADK コンポーネントのサポートについては、「[DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)」(DISM でサポートされているプラットフォーム) および「[USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1)」(USMT の要件) を参照してください。 |
 |![下位互換性あり](media/blue_compat.png)  = **下位互換性あり** - この組み合わせはテストされていませんが、おそらく動作します。 既知の問題や注意事項が記述されます。 |
 |![サポートされています](media/Red_X.png) = **サポートされていません**|

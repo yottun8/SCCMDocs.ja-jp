@@ -6,18 +6,19 @@ ms.custom: na
 ms.date: 05/02/2017
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: aa8d80cf9c036e63dc74ffe78bc8d5b060d6053e
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: cf46bb32994ddb8a1fa3b9de0dbffc94228ad7fd
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1702 の新機能
 
@@ -35,13 +36,13 @@ System Center Configuration Manager の現在のブランチの更新プログ�
 次の各セクションでは、Configuration Manager のバージョン 1702 で導入された変更点および新機能について詳しく説明します。  
 
 ## <a name="deprecated-features-and-operating-systems"></a>非推奨の機能とオペレーティング システム
-[「System Center Configuration Manager から削除された機能と非推奨の機能」](/sccm/core/plan-design/changes/removed-and-deprecated-features)で適用する前のサポートに関する変更点について説明します。
+[削除された項目と非推奨の項目](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)で実装される前のサポートに関する変更点について説明します。
 
 バージョン 1702 では、次の製品のサポートを廃止します。
-- **SQL Server 2008 R2** (サイト データベース サーバー用)。 サポートの廃止が[最初に発表された](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database)のは、2015 年 7 月 10 日でした。 使用している Configuration Manager のバージョンが 1702 より前のバージョンである場合、このバージョンの SQL Server は引き続きサポートされます。
-- **Windows Server 2008 R2** (サイト システム サーバーとほとんどのサイト システムの役割用)。 サポートの廃止が[最初に発表された](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems)のは、2015 年 7 月 10 日でした。 使用している Configuration Manager のバージョンが 1702 より前のバージョンである場合、このバージョンの Windows は引き続きサポートされます。  
-- **Windows Server 2008** (サイト システム サーバーとほとんどのサイト システムの役割用)。 サポートの廃止が[最初に発表された](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems)のは、2015 年 7 月 10 日でした。
-- **Windows XP Embedded** (クライアント オペレーティング システムとして)。 廃止が[最初に発表された](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems)のは、2015 年 7 月 10 日でした。 使用している Configuration Manager のバージョンが 1702 より前のバージョンである場合、このバージョンの Windows は引き続きサポートされます。
+- **SQL Server 2008 R2** (サイト データベース サーバー用)。 サポートの廃止が[最初に発表された](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database)のは、2015 年 7 月 10 日でした。 使用している Configuration Manager のバージョンが 1702 より前のバージョンである場合、このバージョンの SQL Server は引き続きサポートされます。
+- **Windows Server 2008 R2** (サイト システム サーバーとほとんどのサイト システムの役割用)。 サポートの廃止が[最初に発表された](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)のは、2015 年 7 月 10 日でした。 使用している Configuration Manager のバージョンが 1702 より前のバージョンである場合、このバージョンの Windows は引き続きサポートされます。  
+- **Windows Server 2008** (サイト システム サーバーとほとんどのサイト システムの役割用)。 サポートの廃止が[最初に発表された](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)のは、2015 年 7 月 10 日でした。
+- **Windows XP Embedded** (クライアント オペレーティング システムとして)。 廃止が[最初に発表された](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems)のは、2015 年 7 月 10 日でした。 使用している Configuration Manager のバージョンが 1702 より前のバージョンである場合、このバージョンの Windows は引き続きサポートされます。
 
 
 
@@ -283,14 +284,14 @@ HTTP カタログの要求時に [ドライバーの自動適用] タスク シ�
 |||||
 |-|-|-|-|
 |Configuration Manager バージョン|アプリでのデバイス ライセンスのサポート|展開コレクションの種類|要求されるライセンス|
-|1702 より前|○|ユーザー|ユーザー ライセンス|
-|1702 より前|×|ユーザー|ユーザー ライセンス|
-|1702 より前|○|デバイス|ユーザー ライセンス|
-|1702 より前|×|デバイス|ユーザー ライセンス|
-|1702 以降|○|ユーザー|ユーザー ライセンス|
-|1702 以降|×|ユーザー|ユーザー ライセンス|
-|1702 以降|○|デバイス|デバイス ライセンス|
-|1702 以降|×|デバイス|ユーザー ライセンス|
+|1702 より前|はい|ユーザー|ユーザー ライセンス|
+|1702 より前|いいえ|ユーザー|ユーザー ライセンス|
+|1702 より前|はい|デバイス|ユーザー ライセンス|
+|1702 より前|いいえ|デバイス|ユーザー ライセンス|
+|1702 以降|はい|ユーザー|ユーザー ライセンス|
+|1702 以降|いいえ|ユーザー|ユーザー ライセンス|
+|1702 以降|はい|デバイス|デバイス ライセンス|
+|1702 以降|いいえ|デバイス|ユーザー ライセンス|
 
 ボリューム購入した iOS アプリの詳細については、[「ボリューム購入 iOS アプリの管理」](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps) を参照してください。
 

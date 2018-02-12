@@ -7,19 +7,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 76dfa18cb7f794be9102bf045cd4212adc7ad56f
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: b63386f69ea05a610868de9bc85ff606d4ade73d
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="introduction-to-system-center-configuration-manager"></a>System Center Configuration Manager の概要
 
@@ -72,7 +73,7 @@ Configuration Manager の詳細については、以下のトピックと、こ�
 -   [System Center Configuration Manager の基本](../../core/understand/fundamentals.md)  
 -   [独自のラボ環境を構築して System Center Configuration Manager を評価する](/sccm/core/get-started/set-up-your-lab)
 -   [System Center Configuration Manager の使用に関するヘルプの検索](../../core/understand/find-help.md)  
--   [System Center Configuration Manager から削除された機能と非推奨の機能](../../core/plan-design/changes/removed-and-deprecated-features.md)  
+-   [System Center Configuration Manager から削除された項目と非推奨の項目](../../core/plan-design/changes/deprecated/removed-and-deprecated.md)  
 
 ##  <a name="BKMK_Console"></a> Configuration Manager コンソール  
  Configuration Manager をインストールしたら、Configuration Manager コンソールを使用して、サイトとクライアントを構成し、管理タスクを実行および監視します。 このコンソールは管理の中核であり、このコンソールで複数のサイトを管理できます。  

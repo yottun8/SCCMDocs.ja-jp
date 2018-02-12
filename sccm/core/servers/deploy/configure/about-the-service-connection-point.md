@@ -3,7 +3,7 @@ title: "[サービス接続ポイント]"
 titleSuffix: Configuration Manager
 description: "この Configuration Manager サイト システムの役割について学習し、その使用範囲を理解し計画します。"
 ms.custom: na
-ms.date: 6/28/2017
+ms.date: 1/29/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,17 +17,17 @@ caps.handback.revision:
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 9651694530d1258100c9c564bfc59447ac454a96
-ms.sourcegitcommit: ac20475ae9c1ea5ca3632cb6a44440c316f171f4
+ms.openlocfilehash: a029d54000dee669ae437a460ebcb31f359bfd27
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="about-the-service-connection-point-in-system-center-configuration-manager"></a>System Center Configuration Manager のサービス接続ポイントについて
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager サービス接続ポイントは、階層のいくつかの重要な機能を提供するサイト システムの役割です。 サービス接続ポイントを設定する前に、このサイト システムの役割の設定方法に影響を与える可能性がある使用範囲を理解し、計画を立ててください。  
+System Center Configuration Manager サービス接続ポイントは、階層のいくつかの重要な機能を提供するサイト システムの役割です。 サービス接続ポイントを設定する前に、その使用範囲を理解し、計画を立ててください。  使用計画によっては、このサイト システムの役割の設定方法に影響がある可能性があります。  
 
 -   **Microsoft Intune を使用してモバイル デバイスを管理する** – この役割は、Configuration Manager の前のバージョンによって使用される Windows Intune コネクタを置き換え、Intune のサブスクリプションの詳細で構成することができます。 「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../../../mdm/understand/hybrid-mobile-device-management.md)」をご覧ください。  
 
@@ -41,9 +41,9 @@ System Center Configuration Manager サービス接続ポイントは、階層�
 
     -   使用する Configuration Manager のバージョンに適用する Configuration Manager の更新プログラムの識別  
 
-  各レベルで収集されたデータについて、また、ロールがインストールされた後でコレクションのレベルを変更する方法については、「[System Center Configuration Manager の診断結果と使用状況データ](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data)」を参照して、使用する Configuration Manager のバージョンへのリンクをたどります。  
+  各レベルで収集されるデータ、および役割をインストールした後で収集レベルを変更する方法については、「[診断結果と使用状況データ](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data)」を参照してください。 その後、使う Configuration Manager のバージョンに対応するリンクをご覧ください。  
 
-  詳細については、「[使用状況データのレベルと設定](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage)」をご覧ください。  
+  詳細については、「[使用状況データのレベルと設定](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage)」を参照してください。  
 
 -   **Configuration Manager インフラストラクチャに適用される更新プログラムのダウンロード** – アップロードする使用データに基づいて、インフラストラクチャに関連する更新プログラムのみを入手することができます。  
 
@@ -57,11 +57,11 @@ System Center Configuration Manager サービス接続ポイントは、階層�
 ##  <a name="bkmk_modes"></a> 操作モード  
  サービス接続ポイントは、操作の 2 つのモードをサポートしています。  
 
--   **オンライン モード**。このモードでは、サービス接続ポイントは、更新プログラムの 24 時間ごとの確認と、現在のインフラストラクチャおよび製品バージョンで使用可能な新しい更新プログラムのダウンロードを自動的に行い、Configuration Manager コンソールで使用できるようにします。  
+-   **オンライン モード**では、サービス接続ポイントは 24 時間ごとに更新プログラムを自動的にチェックします。 そして、現在のインフラストラクチャおよび製品バージョンで使用可能な新しい更新プログラムをダウンロードし、Configuration Manager コンソールで使用できるようにします。  
 
--   **オフライン モード**では、サービス接続ポイントは、Microsoft クラウド サービスに接続しません。そのため、[System Center Configuration Manager のサービス接続ツールを使用して](../../../../core/servers/manage/use-the-service-connection-tool.md)、手動で、使用可能な更新プログラムをインポートする必要があります。  
+-   **オフライン モード**では、サービス接続ポイントは、Microsoft クラウド サービスに接続しません。 使用可能な更新プログラムを手動でインポートするには、[System Center Configuration Manager のサービス接続ツールを使います](../../../../core/servers/manage/use-the-service-connection-tool.md)。  
 
-サービス接続ポイントをインストールした後にオンラインまたはオフラインのモードを変更したら、Configuration Manager SMS_Executive サービスの SMS_DMP_DOWNLOADER スレッドを再起動する必要があります。これにより、この変更が有効になります。 これを行うには、Configuration Manager サービス マネージャーを使用して、SMS_Executive サービスの SMS_DMP_DOWNLOADER スレッドのみを再起動します。 Configuration Manager の SMS_Executive サービスを再起動することもできます (これにより、ほとんどのサイト コンポーネントが再起動されます)。あるいは、サイト バックアップのようにスケジュール タスクを待って、自動的に SMS_Executive サービスを停止後、再起動することもできます。  
+サービス接続ポイントをインストールした後でオンライン モードとオフライン モードを変更する場合は、Configuration Manager SMS_Executive サービスの SMS_DMP_DOWNLOADER スレッドを再起動する必要があります。これにより、この変更が有効になります。 Configuration Manager の Service Manager を使って、SMS_Executive サービスの SMS_DMP_DOWNLOADER スレッドのみを再起動できます。 また、Configuration Manager の SMS_Executive サービスを再起動することもでき、それによりほとんどのサイト コンポーネントが再起動されます。 または、サイトのバックアップなどのスケジュールされたタスクを待つこともできます。そうすると、SMS_Executive サービスが自動的に停止されて後で再起動されます。  
 
 Configuration Manager サービス マネージャーを使用するには、コンソールで **[監視]** > **[システムのステータス]** > **[コンポーネントのステータス]** に移動して **[開始]** を選択してから、**[Configuration Manager サービス マネージャー]** を選択します。 サービス マネージャー:  
 
@@ -71,7 +71,7 @@ Configuration Manager サービス マネージャーを使用するには、コ
 
 -   コンポーネントのステータスを確認したら、コンポーネントを再び右クリックして、**[停止]** を選択します。  
 
--   コンポーネントに再び**クエリ**を実行して、コンポーネントが停止していることを確認します。もう一度コンポーネントを右クリックして、**[開始]** を選択します。  
+-   コンポーネントを再び**クエリ**して停止していることを確認します。 コンポーネントをもう一度右クリックし、**[開始]** を選びます。  
 
 > [!IMPORTANT]  
 >  サービス接続ポイントに Microsoft Intune サブスクリプションを追加するプロセスで、サイト システムの役割が自動的にオンラインに設定されます。 サービス接続ポイントは Intune サブスクリプションで設定されている場合にオフライン モードをサポートしません。  
@@ -124,7 +124,7 @@ Configuration Manager サービス マネージャーを使用するには、コ
 [セットアップ] を実行した後、またはサイト システムの役割を再インストールする場合は、**サイト システムの役割の追加**ウィザード、または**サイト システム サーバーの作成**ウィザードを使用して、サーバー上のサイト システムを階層の最上位サイト (中央管理サイトまたはスタンドアロン プライマリ サイト) にインストールします。 どちらのウィザードも、コンソールの **[ホーム]** タブの、**[管理]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** にあります。
 
 ## <a name="log-files-used-by-the-service-connection-point"></a>サービス接続ポイントにより使用されるログ ファイル
-Microsoft へのアップロードに関する情報については、サービス接続ポイントを実行するコンピューターの **Dmpuploader.log** をご覧ください。  更新プログラムのダウンロード進捗状況など、ダウンロードについては、**Dmpdownloader.log** をご覧ください。 サービス接続ポイント関連のログの完全な一覧については、Configuration Manager ログ ファイル トピックの「[サービス接続ポイント](/sccm/core/plan-design/hierarchy/log-files#BKMK_WITLog)」を参照してください。
+Microsoft へのアップロードに関する情報については、サービス接続ポイントを実行するコンピューターの **Dmpuploader.log** をご覧ください。  更新プログラムのダウンロード進捗状況など、ダウンロードについては、**Dmpdownloader.log** をご覧ください。 サービス接続ポイント関連のログの完全な一覧については、Configuration Manager ログ ファイルの記事の「[サービス接続ポイント](/sccm/core/plan-design/hierarchy/log-files#BKMK_WITLog)」を参照してください。
 
 更新プログラムをダウンロードするプロセスと更新プログラムを他のサイトに複製するプロセスの流れや重要なログ エントリについては、次のフローチャートを使用して理解に役立てることもできます。
  - [フローチャート - 更新プログラムのダウンロード](/sccm/core/servers/manage/download-updates-flowchart)
