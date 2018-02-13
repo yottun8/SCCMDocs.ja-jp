@@ -7,20 +7,21 @@ ms.date: 2/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
-caps.latest.revision: "7"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 518be0c1cb4c361d8802ed70779d192725eb8feb
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 1b8248cbbade7d46d1a1ad41edd704b5ad8d49aa
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="accounts-used-in-system-center-configuration-manager"></a>System Center Configuration Manager で使用されるアカウント
 
@@ -72,7 +73,7 @@ Configuration Manager は、このグループを使用して、ソフトウェ�
 |------------|----------------------|  
 |種類と場所|このグループは、SMS プロバイダーのある各コンピューターに作成されるローカル セキュリティ グループです。<br /><br /> サイトをアンインストールしても、このグループが自動的に削除されることはありません。 手動で削除する必要があります。|  
 |メンバーシップ|Configuration Manager は、グループ メンバーシップを自動的に管理します。 既定では、階層内の各管理ユーザーおよびサイト サーバーのコンピューター アカウントが、サイト内の各 SMS プロバイダー コンピューターの SMS Admins グループのメンバーとなります。|  
-|アクセス許可|SMS Admins の権限とアクセス許可は、WMI コントロール MMC スナップインで設定します。 既定では、SMS Admins グループには Root\SMS 名前空間に対する **Enable Account** と **Remote Enable** が付与されます。 認証されたユーザーは、**メソッドの実行**、**プロバイダーの書き込み**、および **アカウントの有効化**を実行できます。<br /><br /> リモートの Configuration Manager コンソールを使用する管理ユーザーは、サイト サーバー コンピューターおよび SMS プロバイダー コンピューターの両方で、リモートからアクティブ化するための DCOM アクセス許可が必要です。 管理を簡略化するために、これらの権限は、ユーザーまたはグループに直接付与するのではなく、SMS Admins に付与することをお勧めします。 詳細については、「 [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 」トピックの「 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) 」セクションを参照してください。|  
+|アクセス許可|SMS Admins の権限とアクセス許可は、WMI コントロール MMC スナップインで設定します。 既定では、SMS Admins グループには Root\SMS 名前空間に対する **Enable Account** と **Remote Enable** が付与されます。 認証されたユーザーは、**メソッドの実行**、**プロバイダーの書き込み**、および **アカウントの有効化**を実行できます。<br /><br /> リモートの Configuration Manager コンソールを使用する管理ユーザーは、サイト サーバー コンピューターおよび SMS プロバイダー コンピューターの両方で、リモートからアクティブ化するための DCOM アクセス許可が必要です。 管理を簡略化するために、これらの権限は、ユーザーまたはグループに直接付与するのではなく、SMS Admins に付与することをお勧めします。 詳細については、「[System Center Configuration Manager インフラストラクチャの変更](../../../core/servers/manage/modify-your-infrastructure.md)」記事の「[リモートからの Configuration Manager コンソールに対する DCOM アクセス許可の構成](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 」セクションを参照してください。|  
 
 ### <a name="smssitesystemtositeserverconnectionmpltsitecode"></a>SMS_SiteSystemToSiteServerConnection_MP_&lt;sitecode\>  
  サイト サーバーからリモートにある Configuration Manager 管理ポイントは、サイト データベースに接続するためにこのグループを使用します。 このグループは、サイトサーバーおよびサイト データベース上の受信トレイ フォルダーへの管理ポイント アクセスを提供します。  
@@ -245,6 +246,8 @@ Configuration Manager は、このグループを使用して、ソフトウェ�
 
 ### <a name="reporting-services-point-account"></a>レポート サービス ポイントのアカウント  
  SQL Server Reporting Services は、**レポート サービス ポイント アカウント** を使用して、サイト データベースから Configuration Manager レポート用のデータを取得します。 指定した Windows ユーザー アカウントとパスワードは暗号化されて、SQL Server Reporting Services データベースに保存されます。  
+>[!NOTE]
+>指定するアカウントは、Reporting Services データベースをホストするコンピューターにローカル ログオンのアクセス許可がある必要があります。
 
 ### <a name="remote-tools-permitted-viewer-accounts"></a>リモート ツールの許可されたビューアー アカウント  
  リモート コントロール用に **[アクセス許可のあるユーザー]** として指定するアカウントとは、クライアントでのリモート ツール機能の使用を許可されたユーザーの一覧です。  
@@ -306,7 +309,7 @@ Configuration Manager は、このグループを使用して、ソフトウェ�
 ### <a name="task-sequence-editor-domain-joining-account"></a>タスク シーケンス エディターのドメイン参加アカウント  
  **タスク シーケンス エディターのドメイン参加アカウント** は、新しくイメージングされたコンピューターをドメインに参加させるために、タスク シーケンスで使用されます。 **[ドメインまたはワークグループへの参加]** ステップをタスク シーケンスに追加した後、**[ドメインに参加]** を選択する場合は、このアカウントが必要です。 このアカウントは、**[ネットワーク設定の適用]** ステップをタスク シーケンスに追加した場合も設定できますが、必須ではありません。  
 
- このアカウントには、コンピューターが参加するドメインにおける **[ドメイン参加]** 権利が必要です。  
+ このアカウントには、コンピューターが参加するドメインにおける**ドメイン参加**権限が必要です。  
 
 > [!TIP]  
 >  タスク シーケンスにこのアカウントが必要な場合は、必要なネットワーク リソースにアクセスするために最小限必要なアクセス許可を持つドメイン ユーザー アカウントを 1 つ作成し、すべてのタスク シーケンス アカウントに対して使用できます。  
