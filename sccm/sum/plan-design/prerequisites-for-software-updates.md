@@ -3,26 +3,27 @@ title: "ソフトウェア更新プログラムの前提条件"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager でのソフトウェア更新プログラムの前提条件について説明します。"
 keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.date: 10/06/2016
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 02/02/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology: configmgr-sum
+ms.technology:
+- configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: 905ecc023dd181a8d4801860898b05aff5e4e07f
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: 1907ff5bf6b1146b967e64bd381915ac863b3e55
+ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager でのソフトウェア更新プログラムの前提条件
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-このトピックでは、System Center Configuration Manager でのソフトウェア更新プログラムの前提条件の一覧を示します。 前提条件ごとに、外部の依存関係と内部の依存関係を別の表にまとめています。  
+この記事では、System Center Configuration Manager でのソフトウェア更新プログラムの前提条件の一覧を示します。 前提条件ごとに、外部の依存関係と内部の依存関係を別の表にまとめています。  
 
 ## <a name="software-update-dependencies-external-to-configuration-manager"></a>Configuration Manager 外部のソフトウェア更新プログラムの依存関係  
  次のセクションに、ソフトウェア更新の外部の依存関係の一覧を示します。  
@@ -31,10 +32,10 @@ ms.lasthandoff: 11/17/2017
  ソフトウェアの更新ポイント、管理ポイント、および配布ポイントを実行するすには、サイト システム サーバーにインターネット インフォメーション サービス (IIS) が置かれている必要があります。 詳細については、「[サイト システムの役割の前提条件](../../core/plan-design/configs/site-and-site-system-prerequisites.md)」を参照してください。  
 
 ### <a name="windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS)  
- ソフトウェア更新プログラムの同期と、クライアントでのソフトウェア更新プログラムのコンプライアンス評価スキャンを行うには、WSUS が必要です。 WSUS サーバーは、ソフトウェア更新ポイント サイト システムの役割を作成する前にインストールする必要があります。 ソフトウェアの更新ポイントでは、次のバージョンの WSUS がサポートされています。  
+ ソフトウェア更新プログラムの同期と、クライアントでのソフトウェア更新プログラムの適用性スキャンを行うには、WSUS が必要です。 WSUS サーバーは、ソフトウェア更新ポイントの役割を作成する前にインストールする必要があります。 ソフトウェアの更新ポイントでは、次のバージョンの WSUS がサポートされています。  
 
--   WSUS 4 (Windows Server 2012 および Windows Server 2012 R2 における役割)  
-
+-   WSUS 10.0 (Windows Server 2016 における役割)
+-   WSUS 6.2 および 6.3 (Windows Server 2012 および Windows Server 2012 R2 における役割)  
 -   WSUS 3.2 (Windows Server 2008 R2 における役割)  
 
  1 つのサイトにソフトウェアの更新ポイントが複数ある場合、すべてのポイントが同じバージョンの WSUS を実行するようにします。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 >  WSUS 管理コンソールを使ってWSUS の設定を構成しないでください。 Configuration Manager はソフトウェアの更新ポイントで実行されている WSUS に接続し、適切な設定を構成します。  
 
 ### <a name="windows-update-agent-wua"></a>Windows Update エージェント (WUA)  
- クライアントが WSUS サーバーに接続し、コンプライアンス対応スキャンに必要なソフトウェア更新プログラムの一覧を取得するには、WUA クライアントが必要です。  
+ クライアントが WSUS サーバーに接続するには、WUA クライアントが必要です。 WUA は、コンプライアンスのスキャンに必要なソフトウェア更新プログラムの一覧を取得します。  
 
  Configuration Manager をインストールすると、最新バージョンの WUA がダウンロードされます。 次に、Configuration Manager クライアントをインストールすると、必要に応じて WUA がアップグレードされます。 インストールに失敗した場合は、別の方法で WUA をアップグレードする必要があります。  
 
@@ -71,19 +72,19 @@ ms.lasthandoff: 11/17/2017
  ソフトウェア更新プログラムのコンテンツを保存できる配布ポイントが必要です。 配布ポイントをインストールして、コンテンツを管理する方法の詳細については、「[コンテンツとコンテンツ インフラストラクチャの管理](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
 
 ### <a name="client-settings-for-software-updates"></a>ソフトウェア更新プログラムのクライアントの設定  
- 既定で、クライアントのソフトウェア更新プログラムは有効です。 ただし、クライアントがソフトウェア更新プログラムのコンプライアンスを評価する方法とタイミングを制御し、ソフトウェア更新プログラムのインストール方法を制御するために使用できるその他の設定があります。  
+ 既定では、クライアントのソフトウェア更新プログラムは有効です。 ただし、クライアントがソフトウェア更新プログラムのコンプライアンスを評価する方法とタイミングを制御し、ソフトウェア更新プログラムのインストール方法を制御するために使用できるその他の設定があります。  
 
  詳細については、次をご覧ください。  
 
 -   [ソフトウェア更新プログラムのクライアントの設定](../get-started/manage-settings-for-software-updates.md#BKMK_ClientSettings)   
 
--   [ソフトウェア更新プログラムのクライアントの設定](../../core/clients/deploy/about-client-settings.md#software-updates)トピック  
+-   [クライアントのソフトウェア更新プログラムの設定](../../core/clients/deploy/about-client-settings.md#software-updates)に関する記事。  
 
 ### <a name="reporting-services-point"></a>レポート サービス ポイント  
- レポート サービス ポイントのサイト システムの役割は、ソフトウェア更新プログラムのレポートを表示できます。 この役割は任意ですが、使用することをお勧めします。 レポート サービス ポイント作成の詳細については、「[レポートの構成](../../core/servers/manage/configuring-reporting.md)」を参照してください。  
+ レポート サービス ポイントのサイト システムの役割は、ソフトウェア更新プログラムのレポートを表示できます。 この役割は任意ですが、使用することをお勧めします。 レポート サービス ポイントの作成方法の詳細については、レポートの構成に関するページを参照してください。  
 
 ##  <a name="BKMK_RecoverUpgrades"></a> KB 3095113 をインストールする前のアップグレード カテゴリの同期からの回復  
- **アップグレード**分類を同期する前に、ソフトウェアの更新ポイントとサイト サーバーに WSUS の[修正プログラム 3095113](https://support.microsoft.com/kb/3095113) をインストールする必要があります。 **アップグレード** 分類が有効になっているときに修正プログラムがインストールされていない場合、WSUS は関連付けられているパッケージを適切にダウンロードおよび展開できない場合でも、Windows 10 ビルド 1511 の機能アップグレードを表示します。 [修正プログラム 3095113](https://support.microsoft.com/kb/3095113)を最初にインストールせずにアップグレードを同期する場合、アップグレードを適切に展開するには、WSUS データベース (SUSDB) に、クリアする必要がある使用不可のデータを読み込みます。  この問題から回復するには、次の手順を実行します。  
+ **アップグレード**分類を同期する前に、ソフトウェアの更新ポイントとサイト サーバーに WSUS の[修正プログラム 3095113](https://support.microsoft.com/kb/3095113) をインストールする必要があります。 **アップグレード**分類が有効になっているときに修正プログラムがインストールされていない場合、WSUS は関連付けられているパッケージを適切にダウンロードして展開できない場合でも、Windows 10 ビルド 1511 の機能アップグレードを表示します。 [修正プログラム 3095113](https://support.microsoft.com/kb/3095113) を最初にインストールせずにアップグレードを同期する場合、WSUS データベース (SUSDB) に使用できないデータを読み込みます。 アップグレードを適切に展開するには、そのデータをクリアする必要があります。 この問題から回復するには、以下の手順を使用します。  
 
 #### <a name="to-recover-from-synchronizing-the-upgrades-classification-before-you-install-kb-3095113"></a>KB 3095113 をインストールする前に、アップグレード分類の同期から回復するには  
 
@@ -102,11 +103,11 @@ ms.lasthandoff: 11/17/2017
 
      アップグレード分類のソフトウェア更新プログラムを一括で削除するために、txt ファイルから複数の GUID を読み取るように PowerShell スクリプトを変更できます。  
 
-2.  ソフトウェア更新プログラムの **[アップグレード]** 分類チェック ボックスをオフにし (詳細については、「[分類と製品の構成](../get-started/configure-classifications-and-products.md)」を参照してください)、ソフトウェア更新プログラムの同期を開始します (詳細については、「[ソフトウェア更新プログラムの同期](../get-started/synchronize-software-updates.md)」を参照してください)。  
+2.  ソフトウェアの更新ポイント コンポーネント プロパティの **[アップグレード]** 分類チェック ボックスをオフにし (詳細については、「[分類と製品の構成](../get-started/configure-classifications-and-products.md)」を参照してください)、ソフトウェア更新プログラムの同期を開始します (詳細については、「[ソフトウェア更新プログラムの同期](../get-started/synchronize-software-updates.md)」を参照してください)。  
 
 3.  ソフトウェアの更新ポイントとサイト サーバーに、WSUS の [修正プログラム 3095113](https://support.microsoft.com/kb/3095113) をインストールする必要があります。  
 
-4.  ソフトウェア更新プログラムの **[アップグレード]** 分類チェック ボックスをオンにし (詳細については、「[分類と製品の構成](../get-started/configure-classifications-and-products.md)」を参照してください)、ソフトウェア更新プログラムの同期を開始します (詳細については、「[ソフトウェア更新プログラムの同期](../get-started/synchronize-software-updates.md)」を参照してください)。  
+4.  ソフトウェアの更新ポイント コンポーネント プロパティの **[アップグレード]** 分類チェック ボックスをオンにし (詳細については、「[分類と製品の構成](../get-started/configure-classifications-and-products.md)」を参照してください)、ソフトウェア更新プログラムの同期を開始します (詳細については、「[ソフトウェア更新プログラムの同期](../get-started/synchronize-software-updates.md)」を参照してください)。  
 
 ## <a name="next-steps"></a>次のステップ
 [ソフトウェア更新管理の準備](../get-started/prepare-for-software-updates-management.md)

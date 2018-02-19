@@ -3,7 +3,7 @@ title: "ハイブリッド MDM の新機能"
 titleSuffix: Configuration Manager
 description: "Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。"
 ms.custom: na
-ms.date: 01/04/2018
+ms.date: 02/06/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: aca30a199e38b2d4ed38a458694d98010b5e2496
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+ms.openlocfilehash: c724d9eafde6aa9abc0d3f9bfa867418046b2ecb
+ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -46,6 +46,16 @@ ms.lasthandoff: 02/01/2018
 ## <a name="january-2018"></a>2018 年 1 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+- **Android for Work のポータル サイト アプリの承認** <!--1797090 -->    
+  Android for Work を使用している組織は、Android 用のポータル サイト アプリを手動で承認して、管理された Google Play ストアから引き続き自動更新を受信できるようにする必要があります。
+
+- **Intune の条件付きアクセス ポリシーは、Azure Portal からのみ利用できる**  <!-- 1737088 1634311 -->    
+  このリリース以降は、**[Azure Active Directory]** > **[条件付きアクセス]** から [Azure Portal](https://portal.azure.com) の条件付きアクセス ポリシーを構成して管理する必要があります。 便宜上、**[Intune]** > **[条件付きアクセス]** の、Azure Portal 内にある Intune からこのブレードにアクセスすることもできます。
+
+- **コンプライアンス メールの更新** <!--1637547 -->    
+  コンプライアンス違反のデバイスを報告するメールが送信される際に、そのコンプライアンス違反のデバイスの詳細が含まれます。 
+
 
 - **Android デバイスの "解決" アクションの新しい機能** <!--1583480-->    
   Android 用ポータル サイト アプリは、[デバイス暗号化の問題](https://docs.microsoft.com/intune-user-help/encrypt-your-device-android)を解決するために、**[デバイス設定の更新]** の "解決" アクションを拡張しています。

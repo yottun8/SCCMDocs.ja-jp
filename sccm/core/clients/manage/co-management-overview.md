@@ -10,20 +10,23 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: 
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 4b582d5fbd9e2e916c439b149e117f1a65da98bf
-ms.sourcegitcommit: 5f4a584d4a833b0cc22bd8c47da7dd55aced97fa
+ms.openlocfilehash: 0cc11a05013fd9c25ee98ec35adcbe822d8a21fb
+ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="co-management-for-windows-10-devices"></a>Windows 10 デバイスの共同管理    
 <!-- 1350871 -->
 多くのユーザーは、モバイル デバイスを管理する場合と同じ低コストで簡単なクラウド ベースのソリューションを使って、Windows 10 デバイスを管理することを望んでいます。 ただし、従来の管理から最新の管理への移行は困難な場合があります。 以前の Windows 10 の更新プログラムで、Windows 10 デバイスをオンプレミスの Active Directory (AD) とクラウドベースの Azure AD に同時に結合できるようになっています (ハイブリッド Azure AD)。 Configuration Manager バージョン 1710 以降、共同管理ではこの機能強化を活用し、Configuration Manager と Intune の両方を使用して複数の Windows 10 バージョン 1709 (Fall Creators Update とも呼ばれる) のデバイスを同時に管理できるようになりました。 これは、従来の管理から最新の管理への橋渡しとなるソリューションであり、段階的なアプローチを使って移行する方向を提示します。 
 
-共同管理を達成するには、主に 2 つのパスがあります。  1 つは、Configuration Manager の管理対象でハイブリッド Azure AD 参加済みの Windows 10 デバイスを Intune に登録する、という Configuration Manager がプロビジョニングする共同管理です。 もう 1 つは、Intune に登録してから Configuration Manager クライアントでインストールする、という Intune がプロビジョニングするデバイスで、共同管理状態を達成する方法です。  
+共同管理を達成するには、主に 2 つのパスがあります。  1 つは、Configuration Manager の管理対象でハイブリッド Azure AD 参加済みの Windows 10 デバイスを Intune に登録する、という Configuration Manager がプロビジョニングする共同管理です。 もう 1 つは、Intune に登録してから Configuration Manager クライアントでインストールする、という Intune がプロビジョニングするデバイスで、共同管理状態を達成する方法です。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>[前提条件]
 共同管理を有効にする前に、次の前提条件が満たされている必要があります。 一般的な前提条件のほか、Configuration Manager クライアントがインストールされているデバイスとインストールされていないデバイスとで異なる前提条件があります。
+
+> [!IMPORTANT]
+> Windows 10 Mobile デバイスでは共同管理はサポートされません。
 
 ### <a name="general-prerequisites"></a>一般的な前提条件
 共同管理を有効にするための一般的な前提条件は次のとおりです。  
