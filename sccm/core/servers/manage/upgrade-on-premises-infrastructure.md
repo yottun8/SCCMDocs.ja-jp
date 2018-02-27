@@ -3,30 +3,31 @@ title: "オンプレミス インフラストラクチャのアップグレー�
 titleSuffix: Configuration Manager
 description: "SQL Server やサイト システムのサイト オペレーティング システムなどのインフラストラクチャをアップグレードする方法について説明します。"
 ms.custom: na
-ms.date: 06/05/2017
+ms.date: 02/15/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
-caps.latest.revision: "7"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 3296fe01ebe7d3343a174ffd18483156683b69f7
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 8e17ffad2b972119c92e449bef8f086b950b106c
+ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-system-center-configuration-manager"></a>System Center Configuration Manager をサポートするオンプレミス インフラストラクチャのアップグレード
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager を実行するサーバー インフラストラクチャをアップグレードする場合は、このトピックの情報を参考にしてください。  
+System Center Configuration Manager を実行するサーバー インフラストラクチャをアップグレードする場合は、この記事の情報を参考にしてください。  
 
  - 以前バージョンの Configuration Manager から System Center Configuration Manager にアップグレードする場合は、「[Upgrade to System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)」(System Center Configuration Manager へのアップグレード) を参照してください。
 
@@ -43,9 +44,7 @@ System Center Configuration Manager を実行するサーバー インフラス�
     - Configuration Manager バージョン 1602 以降を使用する場合は、Windows Server 2008 R2 から Windows Server 2012 R2 へのアップグレードもサポート ([詳細を参照](#bkmk_from2008r2))。
 
     > [!WARNING]  
-    >  Windows Server 2012 R2 にアップグレードする前に、サーバーから *WSUS 3.2 をアンインストールする必要があります* 。  
-    >   
-    >  この重要な手順の詳細については、Windows Server ドキュメントの「[Windows Server Update Services の概要](https://technet.microsoft.com/library/hh852345.aspx)」の「新機能と変更された機能」セクションを参照してください。  
+    >  異なるオペレーティング システムにアップグレードする前に、サーバーから "*WSUS をアンインストールする必要があります*"。 SUSDB を残しておき、WSUS を再インストールした後で再アタッチできます。 この重要な手順の詳細については、Windows Server ドキュメントの「[Windows Server Update Services の概要](https://technet.microsoft.com/library/hh852345.aspx)」の「新機能と変更された機能」セクションを参照してください。  
 
 サーバーをアップグレードするには、アップグレード先のオペレーティング システムによって提供されるアップグレード手順を使用します。  以下を参照してください。
   -  Windows Server のドキュメントの「[Windows Server 2012 R2 のアップグレード オプション](https://technet.microsoft.com/library/dn303416.aspx)」。  
@@ -57,6 +56,7 @@ Windows Server 2012 または Windows Server 2012 R2 から Windows Server 2016 
 
 **アップグレード前:**  
 -   System Center Endpoint Protection (SCEP) クライアントを削除します。 Windows Server 2016 では、SCEP クライアントの代わりとして、Windows Defender が組み込まれています。 SCEP クライアントが存在している場合、Windows Server 2016 へのアップグレードが妨げられる可能性があります。
+-   WSUS ロールがサーバーにインストールされている場合は削除します。 SUSDB を残しておき、WSUS を再インストールした後で再アタッチできます。
 
 **アップグレード後:**
 -   Windows Defender が有効であり、自動開始が設定され、実行されていることを確認します。
@@ -93,7 +93,7 @@ Windows Server 2012 または Windows Server 2012 R2 から Windows Server 2016 
 ### <a name="bkmk_2012r2"></a>Windows Server 2012 から Windows Server 2012 R2
 
 **アップグレード前:**
--  他のサポートされるシナリオとは異なり、このシナリオではアップグレードの前に特別な考慮事項は必要ありません。
+-   WSUS ロールがサーバーにインストールされている場合は削除します。 SUSDB を残しておき、WSUS を再インストールした後で再アタッチできます。
 
 **アップグレード後:**
   - Windows 展開サービスが開始され、次のサイト システムの役割を実行していることを確認します (このサービスはアップグレード時に停止されます)。

@@ -3,24 +3,25 @@ title: "問題のトラブルシューティングのためのログ ファイ�
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager 階層内での問題に対してトラブルシューティングを行うには、ログ ファイルを使用します。"
 ms.custom: na
-ms.date: 7/03/2017
+ms.date: 02/14/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
-caps.latest.revision: "9"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: c310e23b543e8767a393ca5bf87a224a9269e359
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: b0f15b0c7cf983234f41e3f202be7d46ce4954e2
+ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>System Center Configuration Manager のログ ファイル
 
@@ -50,7 +51,9 @@ System Center Configuration Manager では、クライアント コンポーネ�
 
     -   [サイト サーバーとサイト システムのログ ファイル](#BKMK_SiteSiteServerLog)  
 
-    -   [サイト サーバーのインストール ログ ファイル](#BKMK_SiteInstallLog)  
+    -   [サイト サーバーのインストール ログ ファイル](#BKMK_SiteInstallLog) 
+
+    -   [データ ウェアハウス サービス ポイントのログ ファイル](#BKMK_DataWarehouse)
 
     -   [フォールバック ステータス ポイントのログ ファイル](#BKMK_FSPLog)  
 
@@ -73,6 +76,8 @@ System Center Configuration Manager では、クライアント コンポーネ�
     -   [クラウド管理ゲートウェイ](#cloud-management-gateway)
 
     -   [コンプライアンス設定と会社のリソースへのアクセス](#BKMK_CompSettingsLog)  
+
+    -   [条件付きアクセス](#BKMK_CA)
 
     -   [Configuration Manager コンソール](#BKMK_ConsoleLog)  
 
@@ -115,7 +120,7 @@ System Center Configuration Manager では、クライアント コンポーネ�
     -   [WSUS サーバー](#BKMK_WSUSLog)  
 
 ##  <a name="BKMK_AboutLogs"></a> Configuration Manager のログ ファイルについて  
- Configuration Manager のプロセスの多くで、そのプロセス専用のログ ファイルに処理情報が書き込まれます。 これらのログ ファイルには、**.log** 拡張子か **.lo_** 拡張子が付いています。 Configuration Manager は、ログが最大サイズに達するまで .log ファイルに書き込みます。 このファイルがいっぱいになると、同じ名前で .lo_ 拡張子の付いたファイルに内容がコピーされ、元の .log ファイルへの書き込みが続行されます。 .log ファイルが再びいっぱいになると、.lo_ ファイルが上書きされ、元の .log ファイルに書き込まれます。この同じプロセスが繰り返されます。 コンポーネントによっては、そのログ ファイルの .log 拡張子は変わらず、ファイル名にタイムスタンプが加えられるので、履歴がわかるものがあります。 最大サイズと .lo_ ファイルの使用の例外は、Linux および UNIX 用のクライアントです。 Linux および UNIX 用のクライアントでログ ファイルを使用する方法の詳細については、このトピックの「[Linux および UNIX 用のクライアントのログ ファイルを管理する](#BKMK_ManageLinuxLogs)」を参照してください。  
+ Configuration Manager のプロセスの多くで、そのプロセス専用のログ ファイルに処理情報が書き込まれます。 これらのログ ファイルには、**.log** 拡張子か **.lo_** 拡張子が付いています。 Configuration Manager は、ログが最大サイズに達するまで .log ファイルに書き込みます。 このファイルがいっぱいになると、同じ名前で .lo_ 拡張子の付いたファイルに内容がコピーされ、元の .log ファイルへの書き込みが続行されます。 .log ファイルが再びいっぱいになると、.lo_ ファイルが上書きされ、元の .log ファイルに書き込まれます。この同じプロセスが繰り返されます。 コンポーネントによっては、そのログ ファイルの .log 拡張子は変わらず、ファイル名にタイムスタンプが加えられるので、履歴がわかるものがあります。 最大サイズと .lo_ ファイルの使用の例外は、Linux および UNIX 用のクライアントです。 Linux および UNIX 用のクライアントでログ ファイルを使用する方法については、この記事の「[Linux および UNIX 用のクライアントのログ ファイルを管理する](#BKMK_ManageLinuxLogs)」を参照してください。  
 
  ログ ファイルを表示するには、CMTrace という Configuration Manager のログ ビューアー ツールを使用できます。このツールは、Configuration Manager のソース メディアの \\SMSSetup\\Tools フォルダーにあります。 また、CMTrace ツールは、[ソフトウェア ライブラリ] に格納されるすべてのブート イメージに追加されます。  
 
@@ -147,7 +152,7 @@ Configuration Manager のログ ファイルは、ログ ファイルを作成�
 |ログの名前|説明|  
 |--------------|-----------------|  
 |CAS.log|コンテンツ アクセス サービス。 クライアントのローカル パッケージのキャッシュを管理します。|  
-|Ccm32BitLauncher.log|クライアントにある "run as 32bit" とマークされたアプリケーションの起動を記録します。|  
+|Ccm32BitLauncher.log|クライアントにある "run as 32 bit" とマークされたアプリケーションの起動を記録します。|  
 |CcmEval.log|Configuration Manager クライアント ステータスを評価するときの処理と、Configuration Manager クライアントが必要とするコンポーネントの詳細を記録します。|  
 |CcmEvalTask.log|スケジュールに従って開始される Configuration Manager クライアント ステータスの評価に関する処理を記録します。|  
 |CcmExec.log|クライアントと SMS Agent Host サービスによって行われる処理を記録します。 ウェイクアップ プロキシの有効化と無効化に関する情報も記録します。|  
@@ -361,6 +366,15 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |SMS_BOOTSTRAP.log|セカンダリ サイトのインストール プロセスの進行状況を記録します。 実際のセットアップ プロセスの詳細は、ConfigMgrSetup.log に記録されます。|サイト サーバー|  
 |smstsvc.log|サーバー間のネットワーク接続とアクセス許可 (接続元のサーバーのコンピューター アカウントを使用) のテスト用 Windows サービスのインストール、使用、削除に関する情報を記録します。|サイト サーバーとサイト システム サーバー|  
 
+###  <a name="BKMK_DataWarehouse"></a> データ ウェアハウス サービス ポイントのログ ファイル  
+ 次の表に、データ ウェアハウス サービス ポイントに関係のある情報を含むログ ファイルを示します。  
+
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
+|--------------|-----------------|----------------------------|  
+|DWSSMSI.log|データ ウェアハウス サービス ポイントのインストールによって生成されたメッセージを記録します。|サイト システム サーバー|  
+|DWSSSetup.log|データ ウェアハウス サービス ポイントのインストールによって生成されたメッセージを記録します。|サイト システム サーバー|  
+|Microsoft.ConfigMgrDataWarehouse.log|サイト データベースとデータ ウェアハウス データベースの間のデータ同期に関する情報を記録します。|サイト システム サーバー|  
+
 ###  <a name="BKMK_FSPLog"></a> フォールバック ステータス ポイントのログ ファイル  
  次の表に、フォールバック ステータス ポイントのインストールに関係のある情報を含むログ ファイルを示します。  
 
@@ -389,7 +403,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |MP_Retry.log|ハードウェア インベントリの再試行プロセスを記録します。|サイト システム サーバー|  
 |MP_Sinv.log|クライアントの XML 形式のソフトウェア インベントリ レコードの変換と、変換されたファイルのサイト サーバーへのコピーを記録します。|サイト システム サーバー|  
 |MP_SinvCollFile.log|ファイルの収集の詳細を記録します。|サイト システム サーバー|  
-|MP_Status.log|クライアントからの XML 形式のステータス メッセージ ファイルの変換と、変換されたファイルのサイト サーバーへのコピーを記録します。|サイト システム サーバー|  
+|MP_Status.log|クライアントからの XML 形式のステータス メッセージ ファイルの変換と、変換されたファイルのサイト サーバーへのコピーを記録します。|サイト システム サーバー|
 |mpcontrol.log|管理ポイントの WINS への登録を記録します。 管理ポイントの可用性を 10 分おきに記録します。|サイト サーバー|  
 |mpfdm.log|管理ポイント コンポーネントによる、クライアント ファイルの、サイト サーバーの対応する受信トレイ フォルダーへの移動処理を記録します。|サイト システム サーバー|  
 |mpMSI.log|管理ポイントのインストールの詳細を記録します。|サイト サーバー|  
@@ -511,7 +525,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |CMGService.log または CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|Azure のクラウド管理ゲートウェイ サービスのコア コンポーネントの詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** (**[情報]** (既定)、**[詳細]**、**[エラー]**) の設定を使用してログ レベルを構成できます。|Azure サーバーの **[%approot%\logs]**、またはサイト システム サーバーの [SMS/ログ] フォルダー|
 |SMS_Cloud_ProxyConnector.log|クラウド管理ゲートウェイ サービスとクラウド管理ゲートウェイ接続ポイントの間の接続の設定に関する詳細を記録します。|サイト システム サーバー|
 
-<sup>1</sup> これはクラウド サービス管理マネージャーと Azure Storage との間で 5 分おきに同期されるローカル構成マネージャーのログ ファイルです。 クラウド管理ゲートウェイは、Azure Storage に 5 分おきにログをプッシュします。 したがって遅延の最大値は 10 分になります。 [詳細] に切り替えると、ローカルとリモートの両方のログに影響します。
+<sup>1</sup> これはクラウド サービス管理マネージャーと Azure Storage との間で 5 分おきに同期されるローカル構成マネージャーのログ ファイルです。 クラウド管理ゲートウェイは、Azure Storage に 5 分おきにログをプッシュします。 そのための最大遅延時間は 10 分です。 [詳細] に切り替えると、ローカルとリモートの両方のログに影響します。
 
 - 展開のトラブルシューティングの場合は、**CloudMgr.log** および **CMGSetup.log** を使用します。
 - サービス正常性のトラブルシューティングの場合は、**CMGService.log** および **SMS_Cloud_ProxyConnector.log** を使用します。
@@ -527,6 +541,19 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |DCMAgent.log|構成項目とアプリケーションの評価、競合の報告、修復の全般的な情報を記録します。|クライアント|  
 |DCMReporting.log|ポリシー プラットフォームによるポリシー施行結果を構成項目の状態メッセージとしてレポートする処理に関する情報を記録します。|クライアント|  
 |DcmWmiProvider.log|WMI からの構成項目の同期プログラムの読み取りに関する情報を記録します。|クライアント|  
+
+###  <a name="BKMK_CA"></a> 条件付きアクセス
+ 次の表に、条件付きアクセスに関係のある情報を含むログ ファイルを示します。  
+
+|ログの名前|説明|ログ ファイルのあるコンピューター|  
+|--------------|-----------------|----------------------------|  
+|ADALOperationProvider.log|AAD トークンの取得に関する詳細を記録します。|クライアント|  
+|cloudusersync.log|ユーザーのライセンス有効化を記録します。|サービス接続ポイントのあるコンピューター|  
+|ComplRelayAgent.log|DCM から全体的なコンプライアンス対応状態を受け取り、MP トークンを取得し、AAD トークンを取得し、Intune (CA リレー サービス) にコンプライアンスの状態を報告します。|クライアント|  
+|DcmWmiProvider.log|WMI からの構成項目の同期プログラムの読み取りに関する情報を記録します。|クライアント|  
+|dmpdownloader.log|Microsoft Intune からのダウンロードに関する情報を記録します。|サービス接続ポイントのあるコンピューター|
+|dmpuploader.log|Microsoft Intune へのデータベースの変更のアップロードに関する情報を記録します。|サービス接続ポイントのあるコンピューター|   
+|MP_Token.log|クライアントからのトークン要求を記録します。|サイト システム サーバー|  
 
 ###  <a name="BKMK_ConsoleLog"></a> Configuration Manager コンソール  
  次の表に、Configuration Manager コンソールに関係のある情報を含むログ ファイルを示します。  
@@ -549,7 +576,6 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |PrestageContent.log|事前設定されたリモート配布ポイントの ExtractContent.exe の使用に関する詳細を記録します。 このツールは、ファイルにエクスポートされているコンテンツを抽出します。|サイト システムの役割|  
 |SMSdpmon.log|配布ポイントで構成されている、スケジュールに従った配布ポイントの正常性の監視タスクの詳細を記録します。|サイト システムの役割|  
 |smsdpprov.log|プライマリ サイトから受け取った圧縮ファイルの抽出に関する詳細を記録します。 このログは、リモート配布ポイントの WMI プロバイダーによって生成されます。|サイト サーバーに併置されていない配布ポイント コンピューター|  
-
 
 ###  <a name="BKMK_DiscoveryLog"></a> 探索  
 次の表に、探索に関係のある情報を含むログ ファイルを示します。  
@@ -772,7 +798,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
  次の表に、Wake On LAN の使用に関係のある情報を含むログ ファイルを示します。  
 
 > [!NOTE]  
->  ウェイクアップ プロキシを使用して Wake On LAN を補うと、この処理がクライアントに記録されます。 たとえば、このトピックの「[クライアントによる処理](#BKMK_ClientOpLogs)」セクションの CcmExec.log と SleepAgent_<*domain*\>@SYSTEM_0.log を参照してください。  
+>  ウェイクアップ プロキシを使用して Wake On LAN を補うと、この処理がクライアントに記録されます。 たとえば、この記事の「[クライアントによる処理](#BKMK_ClientOpLogs)」セクションの CcmExec.log と SleepAgent_<*domain*\>@SYSTEM_0.log をご覧ください。  
 
 |ログの名前|説明|ログ ファイルのあるコンピューター|  
 |--------------|-----------------|----------------------------|  

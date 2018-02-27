@@ -3,7 +3,7 @@ title: "サポートされている SQL Server のバージョン"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager サイト データベースをホストするための SQL Server のバージョンおよび構成要件を取得します。"
 ms.custom: na
-ms.date: 12/18/2017
+ms.date: 02/14/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 82df06873449d538b7efbe414a451d746d48e11f
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+ms.openlocfilehash: 5c17efa3498907fcc57d366965bec3b4198890bb
+ms.sourcegitcommit: 37e990d191028160486dbca286d2ea945bd5c8c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager のサポートされている SQL Server バージョン
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/01/2018
 
 ##  <a name="bkmk_Instances"></a> SQL Server インスタンスと場所  
  **中央管理サイトとプライマリ サイト**  
-サイト データベースは SQL Server のフル インストールを使用する必要があります。  
+ サイト データベースは SQL Server のフル インストールを使用する必要があります。  
 
  SQL Server は次の場所に配置できます。  
 
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/01/2018
 -   SQL Server AlwaysOn 可用性グループ。 このオプションでは、Configuration Manager 1602 以降のバージョンが必要です。 詳細については、「[System Center Configuration Manager 用の高可用性サイト データベースの SQL Server AlwaysOn](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)」を参照してください。
 
 
- **セカンダリ サイト:**  
+ **セカンダリ サイト**  
  サイト データベースは SQL Server または SQL Server Express のフル インストールの既定のインスタンスを使用できます。  
 
  SQL Server はサイト サーバー コンピューターに配置する必要があります。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/01/2018
 SQL Server のトランザクション レプリケーションは、[データベース レプリカ](https://technet.microsoft.com/library/mt608546.aspx)を使用するように構成されている管理ポイントにオブジェクトをレプリケートする場合にのみサポートされます。  
 
 ##  <a name="bkmk_SQLVersions"></a> サポートされている SQL Server のバージョン  
- 複数のサイトを含む階層では、次の条件を満たす場合、それぞれのサイトが異なるバージョンの SQL Server を使用してサイト データベースをホストできます。
+ 複数のサイトを含む階層では、それぞれのサイトが異なるバージョンの SQL Server を使用してサイト データベースをホストできます。 ただし、次の条件が満たされる場合です。
  -  Configuration Manager によってサポートされている SQL Server のバージョンを使用していること。
  -  使用する SQL Server のバージョンが、Microsoft によって引き続きサポートされていること。
  -  SQL Server で、SQL Server の 2 つのバージョン間のレプリケーションをサポートしていること。  たとえば、[SQL Server では SQL Server 2008 R2 と SQL Server 2016 間のレプリケーションをサポートしていません](https://docs.microsoft.com/sql/relational-databases/replication/deprecated-features-in-sql-server-replication)。
@@ -185,34 +185,34 @@ Configuration Manager バージョンでサポートされている場合は、�
 ##  <a name="bkmk_SQLConfig"></a> SQL Server の必須構成  
  サイト データベースに使用する SQL Server (SQL Server Express を含む) のすべてのインストールでの要件は次のとおりです。 Configuration Manager が SQL Server Express をセカンダリ サイト インストールの一部としてインストールするときには、これらの構成は自動的に作成されます。  
 
- **SQL Server アーキテクチャのバージョン:**  
+ **SQL Server アーキテクチャのバージョン**  
  Configuration Manager には、サイト データベースをホストするために 64 ビット版の SQL Server が必要です。  
 
- **データベース照合順序：**  
+ **データベース照合順序**  
  各サイトでは、サイトとサイト データベースの両方に使用される SQL Server のインスタンスが、 **SQL_Latin1_General_CP1_CI_AS**の照合順序を使用する必要があります。  
 
  Configuration Manager は、GB18030 で定義されている中国で使用するための標準を満たすために、この照合順序に対して 2 つの例外をサポートしています。 詳細については、「[System Center Configuration Manager のインターナショナル サポート](../../../core/plan-design/hierarchy/international-support.md)」をご覧ください。  
 
- **データベース互換性レベル:** </br>
+ **データベース互換性レベル** </br>
  Configuration Manager では、サイト データベースの互換性レベルがご利用の Configuration Manager バージョンでサポートされている最小の SQL Server バージョン以上である必要があります。 たとえば、バージョン 1702 以降では、[データベースの互換性レベル](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database)が 110 以上である必要があります。 <!-- SMS.506266--> 
 
- **SQL Server の機能：**  
+ **SQL Server の機能**  
  各サイト サーバーに必要な機能は、 **データベース エンジン サービス** 機能のみです。  
 
- Configuration Manager データベース レプリケーションは、**SQL Server レプリケーション**機能を必要としません。 ただし、[System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)を使用する場合は、この SQL Server の構成が必要です。  
+ Configuration Manager データベース レプリケーションは、**SQL Server レプリケーション**機能を必要としません。 ただし、[System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)を使うときは、この SQL Server の構成が必要です。  
 
- **Windows 認証:**  
+ **Windows 認証**  
  Configuration Manager は、データベースへの接続を検証するために、**Windows 認証**を必要とします。  
 
- **SQL Server インスタンス:**  
+ **SQL Server インスタンス**  
  サイトごとに専用の SQL Server のインスタンスを使用する必要があります。 インスタンスには、**名前付きインスタンス** か**既定のインスタンス**を使用できます。  
 
- **SQL Server のメモリ：**  
- SQL Server Management Studio を使用して、 **[サーバー メモリ オプション]** で **[最小サーバー メモリ]**設定を指定して、SQL Server のメモリを予約します。 固定量のメモリを設定する方法の詳細については、「 [固定量のメモリを設定する方法 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759)」を参照してください。  
+ **SQL Server のメモリ**  
+ SQL Server Management Studio を使用して、 **[サーバー メモリ オプション]** で **[最小サーバー メモリ]**設定を指定して、SQL Server のメモリを予約します。 これを設定する方法については、「[固定量のメモリを設定する方法 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759)」を参照してください。  
 
--   **サイト サーバーと同じコンピューターにインストールされたデータベース サーバーの場合:** SQL Server 用のメモリをアドレス可能なシステム メモリの 50% から 80% に制限します。  
+-   **サイト サーバーと同じコンピューターにインストールされたデータベース サーバーの場合** SQL Server 用のメモリをアドレス可能なシステム メモリの 50% から 80% に制限します。  
 
--   **専用データベース サーバー (サイト サーバーからリモート) の場合:** SQL Server 用のメモリをアドレス指定可能なシステム メモリの 80% から 90% に制限します。  
+-   **専用データベース サーバー (サイト サーバーからリモート) の場合** SQL Server 用のメモリをアドレス指定可能なシステム メモリの 80% から 90% に制限します。  
 
 -   **使用中の各 SQL Server インスタンスのバッファー プール用のメモリ予約の場合:**   
 
@@ -229,7 +229,7 @@ Configuration Manager バージョンでサポートされている場合は、�
 ##  <a name="bkmk_optional"></a> SQL Server のオプション構成  
  以下の構成は、SQL Server の完全インストールを使用する各データベースのオプションです。  
 
- **SQL Server サービス:**  
+ **SQL Server サービス**  
  SQL Server サービスを、以下のものを使用して実行するように構成できます。  
 
 -   *権限の低いドメイン ユーザー* アカウント:  
@@ -248,14 +248,14 @@ SQL Server を実行するコンピューターが、ローカル システム �
 
 SQL Server サービスで使用されるアカウントを変更する方法については、「 [方法: SQL Server のサービス開始アカウントの変更 (SQL Server 構成マネージャー)](http://go.microsoft.com/fwlink/p/?LinkId=237661)」を参照してください。  
 
-**SQL Server Reporting Services:**  
+**SQL Server Reporting Services**  
 レポートを実行できるようにするレポート サービス ポイントをインストールするには、SQL Server Reporting Services が必要です。  
 
 > [!IMPORTANT]  
 > 以前のバージョンから SQL Server をアップグレードした後、「*Report Builder Does Not Exist*」 (レポート ビルダーが存在しません) というエラーが表示されることがあります。    
 > このエラーを解決するには、レポート サービス ポイント サイト システムの役割を再インストールする必要があります。
 
-**SQL Server のポート:**  
+**SQL Server のポート**  
 SQL Server データベース エンジンとの通信、およびサイト間のレプリケーションには、SQL Server の既定ポート構成を使用することも、カスタム ポートを指定することもできます。  
 
 -   **サイト間の通信** には SQL Server Service Broker が使用され、既定ではポート TCP 4022 が使用されます。  
@@ -279,4 +279,4 @@ SQL Server を実行しているコンピューターのファイアウォール
 使用している SQL Server のバージョンをアップグレードする必要がある場合は、次の方法 (簡単な方法から順に示されています) を使用することをお勧めします。
 1. [SQL Server をインプレースでアップグレードします](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (推奨)。
 2. 新しいコンピューターに新しいバージョンの SQL Server をインストールしてから、Configuration Manager セットアップの[データベースの移動オプションを使用](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)して、サイト サーバーを新しい SQL Server にポイントします。
-3. [バックアップと回復](/sccm/protect/understand/backup-and-recovery)を使用します。
+3. [バックアップと回復](/sccm/protect/understand/backup-and-recovery)を使用します。 SQL アップグレード シナリオに対するバックアップと回復の使用がサポートされています。 「[サイトを回復する前の注意事項](/sccm/protect/understand/recover-sites.md#considerations-before-recovering-a-site)」を確認するとき、SQL のバージョンの要件は無視してかまいません。 

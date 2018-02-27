@@ -3,7 +3,7 @@ title: "Technical Preview リリース"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の新機能を体験できるテクニカル プレビュー リリースについて説明します。"
 ms.custom: na
-ms.date: 01/19/2018
+ms.date: 02/09/2018
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision:
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 975bd66bb86efb133ccd7017295e8108558f633d
-ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
+ms.openlocfilehash: 4f16216bd1bbb662cc8d532664ccd593f94d3898
+ms.sourcegitcommit: e15516983883a4dd002c4bdd114147b04b811021
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 01/22/2018
 
  このリリースはテクニカル プレビューであるため、詳細や機能は変更されることがあります。  
 
- この記事には、Technical Preview のすべてのバージョンに適用される情報が含まれています。 さらに、新しい機能 (またはフィーチャー) とそれが初めて導入された Technical Preview のバージョン (たとえば、2018 年 1 月であればバージョン 1801) を一覧に示します。 これらの機能の詳細は、各プレビュー バージョンに特化した個別のトピックで説明されています。  
+ この記事には、Technical Preview のすべてのバージョンに適用される情報が含まれています。 さらに、新しい機能 (またはフィーチャー) とそれが初めて導入された Technical Preview のバージョン (たとえば、2018 年 2 月であればバージョン 1802) を一覧に示します。 これらの機能の詳細は、各プレビュー バージョンに特化した個別のトピックで説明されています。  
 
  Configuration Manager の現在のブランチの新機能については、「[What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012)」 (System Center Configuration Manager の新機能) を参照してください。
 
@@ -60,7 +60,9 @@ ms.lasthandoff: 01/22/2018
 
 -   このプレビュー ビルドへの移行、またはこのプレビュー ビルドからの移行はサポートされません。  
 
--   このプレビュー ビルドへのアップグレードはサポートされません。  
+-   このプレビュー ビルドへのアップグレードはサポートされません。 
+
+-   cd.latest フォルダーからのサイトの回復はサポートされません。  <!--507106-->
 
 -   このプレビュー ビルドから、製品版 (現在のブランチ) へのアップグレードはサポートされません。 ただし、プレビュー バージョンから更新プログラムが使用できる場合は、Configuration Manager コンソールの **[更新とサービス]** ノードから検索してからインストールできます。 コンソール内アップグレード プロセスに関する「 [ConfigMgr 更新プログラム パッケージをインストールする](https://www.youtube.com/embed/KBd_EGFbUT8) 」というビデオを youtube.com でご覧ください。  
 -   スタンドアロンのプライマリ サイトのみがサポートされます。 中央管理サイト、複数のプライマリ サイト、またはセカンダリ サイトはサポートされません。  
@@ -112,16 +114,28 @@ ms.lasthandoff: 01/22/2018
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1801"></a>Technical Preview バージョン 1801
-- [段階的展開の作成](capabilities-in-technical-preview-1801.md#create-phased-deployments) <!-- 1357405 --> 
-- [共同管理レポート](capabilities-in-technical-preview-1801.md#co-management-reporting) <!-- 1356648 --> 
-- [自動展開規則の評価スケジュールの機能拡張](capabilities-in-technical-preview-1801.md#improvements-to-automatic-deployment-rule-evaluation-schedule) <!-- 1357133 --> 
-- [配布ポイントの再割り当て](capabilities-in-technical-preview-1801.md#reassign-distribution-point) <!-- 1306937 --> 
-- [ハードウェア インベントリの機能拡張](capabilities-in-technical-preview-1801.md#improvements-to-hardware-inventory) <!-- 1357389 --> 
-- [ソフトウェア センターのクライアント設定の機能拡張](capabilities-in-technical-preview-1801.md#improvements-to-client-settings-for-software-center) <!-- 1355146 --> 
-- [Windows Defender Application Guard の新しい設定](capabilities-in-technical-preview-1801.md#new-settings-for-windows-defender-application-guard) <!-- 1356256 --> 
-- [スクリプトの実行の改善](capabilities-in-technical-preview-1801.md#improvements-to-run-scripts) <!-- 1236459 --> 
-
+### <a name="technical-preview-version-1802"></a>Technical Preview バージョン 1802
+- [共同管理を使用して Intune に Endpoint Protection ワークロードを移行する](capabilities-in-technical-preview-1802.md#transition-endpoint-protection-workload-to-intune-using-co-management) <!-- 1357365 -->
+- [Configuration Manager 境界グループを使用するように Windows の配信の最適化を構成する](capabilities-in-technical-preview-1802.md#configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups) <!-- 1324696 --> 
+- [クラウド管理ゲートウェイ経由での Windows 10 一括アップグレード タスク シーケンス](capabilities-in-technical-preview-1802.md#windows-10-in-place-upgrade-task-sequence-via-cloud-management-gateway) <!-- 1357149 -->
+- [Windows 10 一括アップグレード タスク シーケンスの機能強化](capabilities-in-technical-preview-1802.md#improvements-to-windows-10-in-place-upgrade-task-sequence) <!-- 1357425 --> 
+- [PXE 対応の配布ポイントの機能強化](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) <!-- 1357580 --> 
+- [タスク シーケンスの展開テンプレート](capabilities-in-technical-preview-1802.md#deployment-templates-for-task-sequences) <!-- 1357391 --> 
+- [製品ライフサイクル ダッシュボード](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) <!--1319632 --> 
+- [レポートの機能強化](capabilities-in-technical-preview-1802.md#improvements-to-reporting) <!--1357653 --> 
+- [ソフトウェア センターの機能強化](capabilities-in-technical-preview-1802.md#improvements-to-software-center) <!--1357592 --> 
+- [スクリプトの実行の改善](capabilities-in-technical-preview-1802.md#improvements-to-run-scripts) <!--1236459 --> 
+- [管理ポイントに対する境界グループのフォールバック](capabilities-in-technical-preview-1802.md#boundary-group-fallback-for-management-points) <!-- 1324594 --> 
+- [CNG 証明書のサポートの強化](capabilities-in-technical-preview-1802.md#improved-support-for-cng-certificates) <!-- 1357314 --> 
+- [Azure Resource Manager に対するクラウド管理ゲートウェイのサポート](capabilities-in-technical-preview-1802.md#cloud-management-gateway-support-for-azure-resource-manager) <!-- 1324735 --> 
+- [デバイスごとにユーザーのアプリケーション要求を承認する](capabilities-in-technical-preview-1802.md#approve-application-requests-for-users-per-device) <!-- 1357015 --> 
+- [ソフトウェア センターを使用してユーザーが利用できるアプリケーションを参照し、Azure AD に参加しているデバイスにインストールする](capabilities-in-technical-preview-1802.md#use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices) <!-- 1322613 --> 
+- [Windows AutoPilot のデバイス情報についてのレポート](capabilities-in-technical-preview-1802.md#report-on-windows-autopilot-device-information) <!-- 1351442 --> 
+- [Windows Device Exploit Guard に対する Configuration Manager ポリシーの機能強化](capabilities-in-technical-preview-1802.md#improvements-to-configuration-manager-policies-for-windows-device-exploit-guard) <!-- 1356220 -->
+- [Microsoft Edge ブラウザーのポリシー](capabilities-in-technical-preview-1802.md#microsoft-edge-browser-policies) <!-- 1357310 -->
+- [既定のブラウザー数についてのレポート](capabilities-in-technical-preview-1802.md#report-for-default-browser-counts) <!-- 1357830 --> 
+- [Windows 10 ARM64 デバイスのサポート](capabilities-in-technical-preview-1802.md#support-for-windows-10-arm64-devices) <!-- 1353704 --> 
+- [段階的展開に対する変更](capabilities-in-technical-preview-1802.md#changes-to-phased-deployments) <!-- 1357405 -->
 
 
 
@@ -135,8 +149,17 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |機能 |Technical Preview バージョン |Current Branch バージョン|  
  |----------------|---------------------|--------------------|
+ |段階的展開を作成する <!-- 1357405 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#create-phased-deployments)  |![追加されていません](media/Red_X.gif)    |
+ |共同管理のレポート <!-- 1356648 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#co-management-reporting)  |![追加されていません](media/Red_X.gif)    |
+ |自動展開規則の評価スケジュールの機能強化 <!-- 1357133 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-automatic-deployment-rule-evaluation-schedule)  |![追加されていません](media/Red_X.gif)    |
+ |配布ポイントの再割り当て <!-- 1306937 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#reassign-distribution-point)  |![追加されていません](media/Red_X.gif)    |
+ |ハードウェア インベントリの機能強化 <!-- 1357389 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-hardware-inventory)  |![追加されていません](media/Red_X.gif)    |
+ |ソフトウェア センターのクライアント設定の機能強化 <!-- 1355146 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-client-settings-for-software-center)  |![追加されていません](media/Red_X.gif)    |
+ |Windows Defender Application Guard の新しい設定 <!-- 1356256 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#new-settings-for-windows-defender-application-guard)  |![追加されていません](media/Red_X.gif)    |
+ |スクリプト実行の機能強化 <!-- 1236459 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-run-scripts)  |![追加されていません](media/Red_X.gif)    |
  |置き換えられたアプリケーションを自動的にアップグレードしない <!-- 1351266 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#do-not-automatically-upgrade-superseded-applications)  |![追加されていません](media/Red_X.gif)    | 
  |ソフトウェア センターで複数のアプリケーションをインストールする <!-- 1357126 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#install-multiple-applications-in-software-center)  |![追加されていません](media/Red_X.gif)    |
+ |クライアント ベースの PXE レスポンダー サービス <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service)  |![追加されていません](media/Red_X.gif)    |
  |Configuration Manager クライアント インストールにおける変更 <!-- 1356195 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-in-the-configuration-manager-client-install)  |![追加されていません](media/Red_X.gif)    | 
  |Surface デバイス ダッシュボードに対する変更 <!-- 1355788 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-to-the-surface-device-dashboard)  |![追加されていません](media/Red_X.gif)    | 
  |Office 365 クライアント管理ダッシュボードの機能拡張 <!-- 1357281 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-office-365-client-management-dashboard)  |![追加されていません](media/Red_X.gif)    | 
@@ -144,15 +167,7 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  |オペレーティング システムの展開に関する機能拡張 <!-- SMS 500897 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-operating-system-deployment)  |![追加されていません](media/Red_X.gif)    | 
  |タスク シーケンス ステップの実行<!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |[バージョン 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence)    |
  |アプリケーションをインストールするときに、ユーザー操作を許可する <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![追加されていません](media/Red_X.gif)    |
- |Windows Analytics デバイスの正常性に関する Windows 10 のテレメトリ<!--1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |[バージョン 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710#reporting)    |
- |ソフトウェア センター アイコンの機能強化<!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |[バージョン 1710](/sccm/apps/plan-design/plan-for-and-configure-application-management#supplemental-procedures-to-install-and-configure-the-application-catalog-and-software-center)    |
- |ソフトウェア センターから共同管理対象デバイスのコンプライアンスを確認する<!-- 1356374 -->|[Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|[バージョン 1710](/sccm/core/clients/manage/co-management-overview)    |
- |CNG 証明書の制限付きサポート<!-- 1356191 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limited-support-for-cng-certificates)|[バージョン 1710](/sccm/core/plan-design/network/cng-certificates-overview)    |
- |Exploit Guard のサポート<!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |[バージョン 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)    |
- |再起動を待機しているコンピューターに関する説明を改善   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[バージョン 1710](/sccm/core/clients/manage/manage-clients)    |
- |Device Guard ポリシーの変更<!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[バージョン 1710](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)    |
- |Windows Defender Application Guard ポリシーの構成と展開<!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[バージョン 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)    |
- |Configuration Manager から PowerShell スクリプトを展開するための機能強化 <!-- 1236459 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#improvements-for-deploying-powershell-scripts-from-configuration-manager) | [バージョン 1710](/sccm/apps/deploy-use/create-deploy-scripts)
+
  
 
 ## <a name="capabilities-delivered-in-previous-technical-previews"></a>以前の Technical Preview で提供される機能
