@@ -7,12 +7,13 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
-caps.latest.revision: "8"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
@@ -289,7 +290,7 @@ System Center Configuration Manager は、Configuration Manager 2007 で使用�
 |**配布ポイントの更新**|配布ポイントを選択されたパッケージやプログラムの最新のコンテンツで更新します。|  
 
 ##  <a name="about-the-package-definition-file-format"></a>パッケージ定義ファイルの形式について  
- パッケージ定義ファイルは、Configuration Manager でパッケージとプログラム作成を自動化するために使用できるスクリプトです。 このファイルでは、パッケージ ソース ファイルの場所を除き、Configuration Manager がパッケージとプログラムを作成するために必要なすべての情報を提供します。 各パッケージ定義ファイルは、ASCII または UTF-8 テキスト ファイルとなります。.ini ファイル形式を利用し、次のセクションが含まれます。  
+ パッケージ定義ファイルは、Configuration Manager でパッケージとプログラム作成を自動化するために使用できるスクリプトです。 このファイルでは、パッケージ ソース ファイルの場所を除き、Configuration Manager がパッケージとプログラムを作成するために必要なすべての情報を提供します。 各パッケージ定義ファイルは、ASCII または UTF-8 テキスト ファイルとなります.ini ファイル形式を利用し、次のセクションが含まれます。  
 
 ###  <a name="pdf"></a>[PDF]  
  このセクションでは、パッケージ定義ファイルとしてファイルを指定します。 これには、次の情報が含まれています。  
