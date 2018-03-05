@@ -7,12 +7,13 @@ ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
-caps.latest.revision: "20"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
@@ -31,9 +32,9 @@ ms.lasthandoff: 10/12/2017
   
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
   
-2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ コンプライアンス設定 ]** を展開して、**[ 構成項目 ]** をクリックします。  
+2.  **[資産とコンプライアンス]** ワークスペースで **[コンプライアンス設定]** を展開して、**[構成項目]** をクリックします。  
   
-3.  **[ ホーム ]** タブの **[ 作成 ]** グループで、**[ 構成項目の作成 ]** をクリックします。  
+3.  **[ホーム]** タブの **[作成]** グループで、**[構成項目の作成]** をクリックします。  
   
 4.  **構成項目の作成ウィザード** の **[全般]**ページで、構成項目の名前と、必要に応じて説明を入力します。  
   
@@ -370,8 +371,8 @@ Configuration Manage で企業のデータ保護を構成する方法につい�
 |**SmartScreen を有効にする**|ユーザーがダウンロードしたファイルに悪意のあるコードが含まれていないことを SmartScreen で確認します。|  
 |**ポップアップを許可する**|ブラウザーのポップアップを許可するか、または無効にします。|  
 |**Cookie を使用する**|Cookie を許可するか、または無効にします。|  
-|**オートコンプリートを使用する**|Edge ブラウザーの Autofill 機能を使用できるようにします。|  
-|**Password Manager を許可する**|Edge ブラウザーの Password Manager 機能を使用できるようにします。|  
+|**オートコンプリートを使用する**|Microsoft Edge ブラウザーの Autofill 機能を使用できるようにします。|  
+|**Password Manager を許可する**|Microsoft Edge ブラウザーの Password Manager 機能を使用できるようにします。|  
 |**エンタープライズ モード サイト リストの場所**|エンタープライズ モードで開く Web サイトの一覧を検索できる場所を指定します。 ユーザーは、この一覧を編集できません。|
 |**About Flags へのアクセスをブロック**|Edge で、開発者向け設定と実験的設定が含まれる about:flags ページにエンド ユーザーがアクセスできないようにします。|
 |**SmartScreen のプロンプトの上書き**|悪意のある可能性がある Web サイトに関する SmartScreen フィルターの警告を無視してアクセスすることをエンド ユーザーに許可します。|
