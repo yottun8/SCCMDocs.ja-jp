@@ -7,19 +7,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 37ad3eb2d7e6796dcd88b2b01b8b0cea97bb41fe
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 84fe2fd0959051ea42e555cb484c95fb82ec8fb3
+ms.sourcegitcommit: 1378532fac2620ddcfd31061982f344a290c2e67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>System Center Configuration Manager のアラートとステータス システムの使用
 
@@ -152,7 +153,7 @@ ms.lasthandoff: 12/04/2017
 
     2.  ステータス メッセージの種類と重要度を Windows のイベント ログに書き込むように **[ログ]** を構成します。  
 
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
 
 ###  <a name="BKMK_MonitorSystemStatus"></a> Configuration Manager のステータス システムの監視  
  Configuration Manager の **[システムのステータス]** には、サイトの全般的な操作および階層内のサイト サーバーの操作の概要が示されます。 これにより、サイト システム サーバーまたはコンポーネントでの操作の問題が見つかる場合があります。システムのステータスを使用すると、各種の Configuration Manager 操作の特定の詳細を確認できます。 システムのステータスは、Configuration Manager コンソールの **[監視]** ワークスペースの **[システムのステータス]** ノードから監視できます。  
@@ -212,16 +213,16 @@ ms.lasthandoff: 12/04/2017
 
   次の表で、管理タスクに関する詳細と、各タスクを選択する前に必要となる追加情報について説明します。  
 
-|管理タスク|説明|  
+|管理タスク|詳細|  
     |---------------------|-------------|  
     |**ステータス メッセージを**|[*&lt;アラート名*\> **のプロパティ**] ダイアログ ボックスを開きます。このダイアログ ボックスで、選択したアラートの名前、重要度、しきい値を変更できます。 アラートの重要度を変更すると、Configuration Manager コンソールにアラートが表示される方法に影響します。|  
     |**コメントの編集**|選択したアラートに関するコメントを入力します。 このコメントが、Configuration Manager コンソールにアラートと共に表示されます。|  
     |**延期**|アラートの監視を指定した日まで延期します。 指定日に、アラートの状態が更新されます。<br /><br /> 延期できるのは有効になっているアラートのみです。|  
     |**サブスクリプションの作成**|**[新規サブスクリプション]** ダイアログ ボックスを開きます。このダイアログ ボックスで、選択したアラートに対する電子メールのサブスクリプションを作成できます。|  
 
-##### <a name="to-configure-endpoint-protection-alerts-for-a-collection"></a>コレクションに対して Endpoint Protection アラートを構成するには  
+<!--##### To configure Endpoint Protection alerts for a collection  
 
-1.  保留中  
+1.  pending  -->
 
 ##### <a name="to-configure-client-status-alerts-for-a-collection"></a>コレクションに対してクライアント ステータス アラートを構成するには  
 
