@@ -3,30 +3,31 @@ title: "接続に使用するポート"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager が接続に使用する必要なポートとカスタマイズ可能なポートについて説明します。"
 ms.custom: na
-ms.date: 09/19/2017
+ms.date: 02/16/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
-caps.latest.revision: "8"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 0b6fa22a7bc3de7bb5bc0d26f8e35b51d55c5e72
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 8db098f69180aac3785087af6ee305b3651094e5
+ms.sourcegitcommit: 1378532fac2620ddcfd31061982f344a290c2e67
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="ports-used-in-system-center-configuration-manager"></a>System Center Configuration Manager で使用されるポート
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager は、分散クライアント/サーバー システムです。 Configuration Manager が分散であるということは、サイト サーバー、サイト システム、およびクライアントの間で接続を確立できることを意味します。 接続によっては、構成不可能なポートを使用する場合も、ユーザーが指定するカスタム ポートをサポートする場合もあります。 ファイアウォール、ルーター、プロキシ サーバー、IPsec など、何らかのポート フィルタリング テクノロジを使用する場合は、必要なポートが利用可能であることを確認する必要があります。  
+System Center Configuration Manager は、分散クライアント/サーバー システムです。 Configuration Manager が分散であるということは、サイト サーバー、サイト システム、およびクライアントの間で接続を確立できることを意味します。 接続によっては、構成不可能なポートを使用する場合も、ユーザーが指定するカスタム ポートをサポートする場合もあります。 ファイアウォール、ルーター、プロキシ サーバー、IPsec など、何らかのポート フィルタリング テクノロジを使う場合は、必要なポートが利用可能であることを確認します。  
     
 > [!NOTE]  
 >  SSL ブリッジを使用してインターネットベースのクライアントをサポートする場合は、特定の HTTP 動詞とヘッダーでファイアウォールの通過を許可することが必要になることもあります。   
@@ -205,6 +206,13 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |ハイパーテキスト転送プロトコル (HTTP)|--|80|  
+|セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|
+
+Configuration Manager コンソールは、次のことにインターネット アクセスを使います。 
+- Microsoft Update からの展開パッケージ用ソフトウェア更新プログラムのダウンロード。
+- リボンのフィードバック項目。
+- コンソール内のドキュメントへのリンク。
+<!--506823-->
 
 ###  <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager コンソール -- > レポート サービス ポイント  
 
@@ -338,7 +346,7 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS)|--|443|
-詳細については、サービス接続ポイントの[インターネット アクセス要件](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls)を参照してください。
+詳しくは、サービス接続ポイントの「[インターネット アクセス要件](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls)」をご覧ください。
 
 ###  <a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> サイト サーバー &lt; -- > アプリケーション カタログ Web サービス ポイント  
 
@@ -689,12 +697,12 @@ SQL Server コンピューターでファイアウォールを有効にしてい
 >  これらのサイト システムをインストールする前に、リモート レジストリ サービスがサイト システム サーバーで実行されていること、サイト システムが信頼関係のない別の Active Directory フォレストにある場合は、サイト システムのインストール アカウントを指定していることを確認します。  
 
 ###  <a name="BKMK_PortsClientInstall"></a> Configuration Manager クライアント インストールで使用されるポート  
-クライアントのインストール中に使用されるポートは、クライアントの展開方法に応じて異なります。 クライアントの展開方法別のポートの一覧については、「[System Center Configuration Manager におけるクライアントの Windows ファイアウォールとポートの設定](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md)」の「**Configuration Manager クライアントの展開で使用されるポート**」を参照してください。 クライアントのインストールとインストール後の通信用にクライアントの Windows ファイアウォールを構成する方法については、「[System Center Configuration Manager におけるクライアントの Windows ファイアウォールとポートの設定](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md)」を参照してください。  
+クライアントのインストール中に使用されるポートは、クライアントの展開方法に応じて異なります。 クライアントの展開方法別のポートの一覧については、「[System Center Configuration Manager におけるクライアントの Windows ファイアウォールとポートの設定](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md)」の「**Configuration Manager クライアントの展開で使用されるポート**」をご覧ください。 クライアントのインストールとインストール後の通信用にクライアントの Windows ファイアウォールを構成する方法については、「[System Center Configuration Manager におけるクライアントの Windows ファイアウォールとポートの設定](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md)」を参照してください。  
 
 ###  <a name="BKMK_MigrationPorts"></a> 移行で使用されるポート  
 移行を実行しているサイト サーバーは、ソース階層内の該当するサイトに接続するいくつかのポートを使用して、ソース サイトの SQL Server データベースからデータを収集し、配布ポイントを共有します。  
 
- これらのポートの詳細については、「[System Center Configuration Manager での移行の前提条件](../../../core/migration/prerequisites-for-migration.md)」の「[移行に必要な構成](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations)」セクションを参照してください。  
+ これらのポートについて詳しくは、「[System Center Configuration Manager での移行の前提条件](../../../core/migration/prerequisites-for-migration.md)」の「[移行に必要な構成](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations)」セクションをご覧ください。  
 
 ###  <a name="BKMK_ServerPorts"></a> Windows サーバーで使用されるポート  
  次の表に、Windows サーバーで使用される主なポートとそれらの機能について示します。 Windows サーバーのサービスとネットワーク ポートの要件の詳細の一覧については、「 [Windows サーバー システムのサービス概要およびネットワーク ポート要件](http://go.microsoft.com/fwlink/p/?LinkID=123652)」を参照してください。  

@@ -3,7 +3,7 @@ title: "サイトの前提条件"
 titleSuffix: Configuration Manager
 description: "Windows コンピューターを System Center Configuration Manager サイト システム サーバーとして構成する方法について説明します。"
 ms.custom: na
-ms.date: 8/25/2017
+ms.date: 02/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,12 +15,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 caps.latest.revision: 
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: cb1b81fc0765e6754c7dea9ce421e41fcd58a70e
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+manager: dougeby
+ms.openlocfilehash: 6d1be6375dde2df51aafe076e5613647ecca3c4c
+ms.sourcegitcommit: d0fc79214bc35ca172fd2023dfa617b977ee865b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイトとサイト システムの前提条件
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/01/2018
  Windows コンピューターを System Center Configuration Manager サイト システム サーバーとして使用するには、特定の構成が必要です。  
 
  
- ソフトウェア更新ポイント用の Windows Server Update Services (WSUS) など、一部の製品では、その製品のドキュメントで、その製品を使用するための追加の前提条件と制限を確認する必要があります。 ここでは、Configuration Manager で使用するために行う必要のある構成についてのみ説明します。   
+ ソフトウェア更新ポイント用の Windows Server Update Services (WSUS) など、一部の製品では、その製品のドキュメントで、使用に関する追加の前提条件と制限を確認する必要があります。 ここでは、Configuration Manager で使用するために行う必要のある構成についてのみ説明します。   
 
 > [!NOTE]  
 >  2016 年 1 月に .NET Framework 4.0、4.5、および 4.5.1 のサポートは終了しました。 詳細については、support.microsoft.com の [Microsoft .NET Framework のサポート ライフサイクル ポリシーに関する FAQ](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) を参照してください。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/01/2018
 
 -   各サイト システム サーバーでは、64 ビットのオペレーティング システムを使用する必要があります。 唯一の例外は、配布ポイント サイト システムの役割です。これは、一部の 32 ビット版のオペレーティング システムにインストール可能です。  
 
--   サイト システムは、オペレーティング システムの Server Core インストールではサポートされません。 この例外は、PXE やマルチキャストのサポートなしで、配布ポイント サイト システムの役割に対して、Server Core インストールがサポートされていることです。  
+-   サイト システムは、オペレーティング システムの Server Core インストールではサポートされません。 例外は、PXE やマルチキャストのサポートなしで、配布ポイント サイト システムの役割に対して、Server Core インストールがサポートされていることです。  
 
 -   サイト システム サーバーは、インストール後、次を変更できません。  
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/01/2018
 
     -   コンピューターの名前です。  
 
-  これらのいずれかの変更が必要な場合は、最初にコンピューターからサイト システムの役割を削除して、変更の完了後に役割を再インストールする必要があります。 これがサイト サーバー コンピューターに影響する場合は、サイトをアンインストールして、変更の完了後にサイトを再インストールする必要があります。  
+  これらの項目のいずれかの変更が必要な場合は、最初にコンピューターからサイト システムの役割を削除して、変更の完了後に役割を再インストールする必要があります。 サイト サーバー コンピューターに影響を与える変更の場合は、サイトをアンインストールして、変更の完了後にサイトを再インストールする必要があります。  
 
 -   サイト システムの役割は、Windows Server クラスターのインスタンスではサポートされません。 唯一の例外は、サイト データベース サーバーです。  
 
@@ -62,13 +62,13 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降)
 
 -   Remote Differential Compression  
 
 **Windows ADK:**  
 
--   中央管理サイトまたはプライマリ サイトをインストールまたはアップグレードする前に、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows アセスメント & デプロイメント キットのバージョンをインストールする必要があります。 クライアントとしての Windows 10 に関するサポート内の [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) のトピックをご覧ください。  
+-   中央管理サイトまたはプライマリ サイトをインストールまたはアップグレードする前に、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows アセスメント & デプロイメント キットのバージョンをインストールする必要があります。 クライアントとしての Windows 10 に関するサポート内の [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) の記事をご覧ください。  
 
 -   要件の詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)」を参照してください。  
 
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降)   
 
 -   Remote Differential Compression  
 
@@ -115,7 +115,7 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2012smsprovpreq"></a> SMS プロバイダー サーバー  
 **Windows ADK:**  
 
--   SMS プロバイダーのインスタンスをインストールするコンピューターには、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンが必要です。 クライアントとしての Windows 10 に関するサポート内の [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) のトピックをご覧ください。
+-   SMS プロバイダーのインスタンスをインストールするコンピューターには、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンが必要です。 クライアントとしての Windows 10 に関するサポート内の [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) の記事をご覧ください。
 
 -   要件の詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)」を参照してください。  
 
@@ -124,7 +124,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2:  
+-   .NET Framework 4.5.2 (またはそれ以降)  
 
     -   ASP.NET 4.5  
 
@@ -159,7 +159,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2:  
+-   .NET Framework 4.5.2 (またはそれ以降)  
 
     -   ASP.NET 4.5:  
 
@@ -194,12 +194,12 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2012AIpreq"></a> 資産インテリジェンス同期ポイント  
 **Windows Server の役割と機能:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降)  
 
 ###  <a name="bkmk_2012crppreq"></a> 証明書登録ポイント  
 **Windows Server の役割と機能:**  
 
--   .NET Framework 4.5.2:  
+-   .NET Framework 4.5.2 (またはそれ以降)  
 
     -   HTTP アクティブ化  
 
@@ -273,7 +273,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET framework 3.5 (またはそれ以降)  
 
--   .NET Framework 4.5.2:  
+-   .NET Framework 4.5.2 (またはそれ以降)  
 
      このサイト システムの役割のインストール時に Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 
@@ -313,7 +313,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET framework 3.5 (またはそれ以降)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降) 
 
      このサイト システムの役割のインストール時に Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 
@@ -359,7 +359,7 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2012MPpreq"></a> 管理ポイント  
 **Windows Server の役割と機能:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降) 
 
 -   BITS サーバー拡張 (および自動的に選択されるオプション)、またはバックグラウンド インテリジェント転送サービス (BITS) (および自動的に選択されるオプション)  
 
@@ -382,11 +382,11 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2012RSpoint"></a> レポート サービス ポイント  
 **Windows Server の役割と機能:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降) 
 
 **SQL Server Reporting Services:**  
 
--   レポート サービス ポイントをインストールする前に、SQL Server Reporting Services をサポートするために、SQL Server の 1 つ以上のインスタンスをインストールして構成する必要があります。  
+-   Reporting Services ポイントをインストールする前に、SQL Server Reporting Services をサポートするために、SQL Server の 1 つ以上のインスタンスをインストールして構成します。  
 
 -   SQL Server Reporting Services に使用するインスタンスは、サイト データベースに使用するインスタンスと同じものにすることができます。  
 
@@ -395,7 +395,7 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_SCPpreq"></a> サービス接続ポイント  
 **Windows Server の役割と機能:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降) 
 
      このサイト システムの役割のインストール時に Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 
@@ -410,7 +410,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降) 
 
 既定の IIS 構成が必要です。
 
@@ -432,14 +432,14 @@ ms.lasthandoff: 02/01/2018
 
 **次は、すべての Windows Communication Foundation (WCF) の有効化の要件に適用されます。**  
 
--   WCF のアクティブ化は、サイト システム サーバーの .NET Framework Windows 機能の一部として構成できます。 たとえば、Windows Server 2008 R2 では、**機能の追加ウィザード**を実行して、追加の機能をサーバーにインストールします。 **[機能の選択]** ページで、**[NET Framework 3.5.1 の機能]** を展開してから **[WCF アクティブ化]** を展開します。**[HTTP アクティブ化]** と **[非 HTTP アクティブ化]** の両方のチェック ボックスをオンにして、これらのオプションを有効にします。  
+-   WCF のアクティブ化は、サイト システム サーバーの .NET Framework Windows 機能の一部として構成できます。 たとえば、Windows Server 2008 R2 では、**機能の追加ウィザード**を実行して、追加の機能をサーバーにインストールします。 **[機能の選択]** ページで、**[NET Framework 3.5.1 の機能]** を展開してから **[WCF アクティブ化]** を展開します。 **[HTTP アクティブ化]** と **[非 HTTP アクティブ化]** の両方のチェック ボックスをオンにして、これらのオプションを有効にします。  
 
 ###  <a name="bkmk_2008sspreq"></a> サイト サーバー: 中央管理サイトおよびプライマリ サイト  
 **.NET Framework:**  
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降) 
 
 **Windows の機能:**  
 
@@ -447,7 +447,7 @@ ms.lasthandoff: 02/01/2018
 
 **Windows ADK:**  
 
--   中央管理サイトまたはプライマリ サイトをインストールまたはアップグレードする前に、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンをインストールする必要があります。  クライアントとしての Windows 10 に関するサポート内の [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) のトピックをご覧ください。  
+-   中央管理サイトまたはプライマリ サイトをインストールまたはアップグレードする前に、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンをインストールする必要があります。  クライアントとしての Windows 10 に関するサポート内の [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) の記事をご覧ください。  
 
 -   要件の詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)」を参照してください。  
 
@@ -462,7 +462,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降)  
 
 **Visual C++ 再頒布可能ファイル:**  
 
@@ -492,14 +492,14 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2008smsprovpreq"></a> SMS プロバイダー サーバー  
 **Windows ADK:**  
 
--   SMS プロバイダーのインスタンスをインストールするコンピューターには、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンが必要です。 クライアントとしての Windows 10 に関するサポート内の [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) のトピックをご覧ください。  
+-   SMS プロバイダーのインスタンスをインストールするコンピューターには、インストールまたはアップグレードする Configuration Manager のバージョンで必要な Windows ADK のバージョンが必要です。 クライアントとしての Windows 10 に関するサポート内の [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk) の記事をご覧ください。  
 
 -   要件の詳細については、「[オペレーティング システムの展開のインフラストラクチャ要件](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)」を参照してください。  
 
 ###  <a name="bkmk_2008acwspreq"></a> アプリケーション カタログ Web サイト ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降) 
 
 **IIS の構成:**
 
@@ -530,7 +530,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降) 
 
 **Windows Communication Foundation (WCF) アクティブ化:**  
 
@@ -561,12 +561,12 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2008AIpreq"></a> 資産インテリジェンス同期ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降) 
 
 ###  <a name="bkmk_2008crppreq"></a> 証明書登録ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降) 
 
 -   HTTP アクティブ化  
 
@@ -599,7 +599,7 @@ ms.lasthandoff: 02/01/2018
 
     -   IIS 6 WMI 互換  
 
-カスタムの IIS 構成を使用する場合は、次に示すような不要なオプションを削除できます。  
+カスタムの IIS 構成を使用する場合は、次に示すような不要な項目を削除できます。  
 
 -   共通の HTTP 機能:  
 
@@ -641,7 +641,7 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2008Enrollpreq"></a> 登録ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降) 
 
      このサイト システムの役割をインストールすると、サーバーにサポートされているバージョンの .NET Framework がまだインストールされていない場合、Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 
@@ -670,7 +670,7 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2008EnrollProxpreq"></a> 登録プロキシ ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降) 
 
      このサイト システムの役割をインストールすると、サーバーにサポートされているバージョンの .NET Framework がまだインストールされていない場合、Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 
@@ -708,7 +708,7 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2008MPpreq"></a> 管理ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降)
 
 **IIS の構成:**
 
@@ -749,11 +749,11 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2008RSpoint"></a> レポート サービス ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降)  
 
 **SQL Server Reporting Services:**  
 
--   レポート サービス ポイントをインストールする前に、SQL Server Reporting Services をサポートするために、SQL Server の 1 つ以上のインスタンスをインストールして構成する必要があります。  
+-   Reporting Services ポイントをインストールする前に、SQL Server Reporting Services をサポートするために、SQL Server の 1 つ以上のインスタンスをインストールして構成します。  
 
 -   SQL Server Reporting Services に使用するインスタンスは、サイト データベースに使用するインスタンスと同じものにすることができます。  
 
@@ -762,7 +762,7 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2008SCPpreq"></a> サービス接続ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降) 
 
      このサイト システムの役割をインストールすると、サーバーにサポートされているバージョンの .NET Framework がまだインストールされていない場合、Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 
@@ -777,7 +777,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2 (またはそれ以降) 
 
 **IIS の構成:**
 

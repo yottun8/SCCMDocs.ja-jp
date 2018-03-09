@@ -15,11 +15,11 @@ ms.assetid: 4884a2d3-13ce-44e5-88c4-a66dc7ec6014
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b5e8f744573680ab55fcfff26622e312206ca1a
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+ms.openlocfilehash: 162c47d867e78498650da685327c0fe296aa2eda
+ms.sourcegitcommit: b1fa7be6a6fa5bb7c49e90c0e28a21ba8b41c842
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="capabilities-in-technical-preview-1802-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1802 の機能
 
@@ -318,9 +318,9 @@ Windows AutoPilot は、最新の方法で新しい Windows 10 デバイスを�
 
 
 
-## <a name="improvements-to-configuration-manager-policies-for-windows-device-exploit-guard"></a>Windows Device Exploit Guard に対する Configuration Manager ポリシーの機能強化
+## <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Windows Defender Exploit Guard に対する Configuration Manager ポリシーの機能強化
 <!-- 1356220 -->
-攻撃の回避およびフォルダー アクセスの制御コンポーネントに対する新しいポリシー設定が、Configuration Manager の Windows Device Exploit Guard に追加されました。
+攻撃の回避およびフォルダー アクセスの制御コンポーネントに対する新しいポリシー設定が、[Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) 用に Configuration Manager に追加されました。
 
 **フォルダー アクセスの制御の新しい設定**<br/>
 フォルダー アクセスの制御を構成するときのオプションとして、**[ディスク セクターのみをブロックする]** と **[ディスク セクターのみを監査する]** の 2 つが新しく追加されました。 これら 2 つの設定を使うと、ブート セクターに対してだけフォルダー アクセスの制御を有効にし、特定のフォルダーまたは既定の保護されたフォルダーの保護を有効にしないことができます。 

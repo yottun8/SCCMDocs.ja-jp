@@ -5,18 +5,19 @@ description: "Configuration Manager が WSUS カタログからサイト サー�
 keywords: 
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.date: 12/28/2017
+manager: dougeby
+ms.date: 02/16/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology: configmgr-sum
+ms.technology:
+- configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: b951e72635806c12bd0ec0dd66e382a767b99b43
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 2f765df84b94524cf56f6d1d9e051157f1a325ef
+ms.sourcegitcommit: 45ff3ffa040eada5656b17f47dcabd3c637bdb60
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Configuration Manager での Office 365 ProPlus の管理
 
@@ -30,7 +31,7 @@ Configuration Manager では、次の方法で Office 365 ProPlus アプリを�
 
 - [Office 365 更新プログラムを展開する](#deploy-office-365-updates): Configuration Manager バージョン 1602 以降では、ソフトウェア更新管理のワークフローを使用して、Office 365 クライアントの更新プログラムを管理できます。 マイクロソフトが Office コンテンツ配信ネットワーク (CDN) に対する新しい Office 365 のクライアント更新プログラムを公開するときには、Windows Server Update Services (WSUS) に対する更新パッケージも公開します。 Configuration Manager が WSUS カタログからサイト サーバーに Office 365 クライアント更新プログラムを同期したら、その更新プログラムをクライアントに展開できるようになります。    
 
-- [Office 365 更新プログラムのダウンロード対象言語を追加する](#add-languages-for-office-365-update-downloads): バージョン 1610 以降の Configuration Manager では、Office 365 でサポートされている言語であれば、その言語の更新プログラムをダウンロード対象に含めることができます。 つまり、Office 365 がその言語をサポートしている限り、Configuration Manager でサポートする必要はありません。  
+- [Office 365 更新プログラムのダウンロード対象言語を追加する](#add-languages-for-office-365-update-downloads): バージョン 1610 以降の Configuration Manager では、Office 365 でサポートされている言語であれば、その言語の更新プログラムをダウンロード対象に含めることができます。 つまり、Office 365 がその言語をサポートしている限り、Configuration Manager でサポートする必要はありません。 バージョン 1610 より前の Configuration Manager では、Office 365 クライアントに構成されているものと同じ言語の更新プログラムをダウンロードして展開する必要があります。 
 
 - [更新チャネルを変更する](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager): グループ ポリシーを使用して、レジストリ キー値の変更を Office 365 クライアントに配信して、更新チャネルを変更することができます。
 
@@ -98,6 +99,8 @@ Office 365 インストーラーを使用して Office 365 アプリケーショ
 
 
 ## <a name="deploy-office-365-updates"></a>Office 365 更新プログラムを展開する
+Configuration Manager バージョン 1706 以降では、Office 365 のクライアント更新プログラムは **[Office 365 クライアント管理]** > **[Office 365 の更新プログラム]** ノードに移動されています。 こによる ADR の構成への影響はありません。 
+
 Configuration Manager で Office 365 の更新プログラムを展開するには、次の手順を使用します。
 
 1.  Configuration Manager を使用して Office 365 クライアントの更新プログラムを管理するための[要件を確認します](https://technet.microsoft.com/library/mt628083.aspx) (この記事の「**構成マネージャーを使用して Office 365 クライアントの更新を管理するための要件**」セクションを参照してください)。  
@@ -118,7 +121,7 @@ Configuration Manager で Office 365 の更新プログラムを展開するに�
 4. [Office 365 の更新プログラムをクライアントに展開します](deploy-software-updates.md)。   
 
 > [!Important]
-> Office 365 クライアントに構成されたものと同じ言語の更新プログラムをダウンロードして展開する必要があります。 たとえば、Office 365 クライアントに en-us と de-de の言語を構成しているとします。 サイト サーバーで、適用可能な Office 365 更新プログラムに対して en-us のコンテンツのみをダウンロードして展開します。 ユーザーがソフトウェア センターからこの更新プログラムのインストールを開始すると、更新プログラムはコンテンツのダウンロード中にハングします。   
+> バージョン 1610 より前の Configuration Manager では、Office 365 クライアントに構成されているものと同じ言語の更新プログラムをダウンロードして展開する必要があります。 たとえば、Office 365 クライアントに en-us と de-de の言語を構成しているとします。 サイト サーバーで、適用可能な Office 365 更新プログラムに対して en-us のコンテンツのみをダウンロードして展開します。 ユーザーがソフトウェア センターからこの更新プログラムのインストールを開始すると、更新プログラムは de-de のコンテンツのダウンロード中にハングします。   
 
 ## <a name="restart-behavior-and-client-notifications-for-office-365-updates"></a>Office 365 の更新プログラムの動作とクライアント通知を再起動する
 Office 365 クライアントに更新プログラムを展開する場合、再起動の動作とクライアント通知は、Configuration Manager のバージョンによって異なります。 次の表では、クライアントが Office 365 の更新プログラムを受け取るときのエンド ユーザーのエクスペリエンスに関する情報を示します。
@@ -131,7 +134,7 @@ Office 365 クライアントに更新プログラムを展開する場合、再
 |1706|クライアントは、ポップアップとアプリ内通知、および更新プログラムをインストールする前にカウント ダウン ダイアログを受け取ります。|
 
 > [!Important]
-> Configuration Manager バージョン 1706 では、次の詳細に注意してください。
+> Configuration Manager バージョン 1706 以降では、次の詳細に注意してください。
 >
 >- 今後 48 時間以内に期限に達し、コンテンツの更新がダウンロードされていることを通知するアイコンが、必要なアプリのタスク バーの通知領域に表示されます。 
 >- 今後 7.5 時間以内に期限に達し、更新プログラムがダウンロードされている必要なアプリに対し、カウントダウン ダイアログが表示されます。 ユーザーは、期限に達する前に、カウントダウン ダイアログを 3 回まで延期することができます。 延期すると、2 時間後にもう一度カウントダウンが表示されます。 延期しない場合は、30 分のカウントダウンの終了後、更新プログラムがインストールされます。
