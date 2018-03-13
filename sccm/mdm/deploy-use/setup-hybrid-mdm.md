@@ -3,24 +3,25 @@ title: "ハイブリッド MDM をセットアップする"
 titleSuffix: Configuration Manager
 description: "Configuration Manager と Intune を使用してハイブリッド デバイス登録をセットアップします。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/08/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
-caps.latest.revision: "34"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 63b49cbef7c584b0bc77752ec9b0e89811c68494
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 9c233a8601d68aae76b105ff86afe41d4121da40
+ms.sourcegitcommit: b653342fb5d69a16e71b3548a7e9a2e47e54bf88
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="setup-hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用してハイブリッド モバイル デバイス管理 (MDM) をセットアップする
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/12/2017
 
 Configuration Manager で iOS デバイス、Windows デバイス、および Android デバイスを管理するには、まず Intune に登録する必要があります。 Intune を使用して Configuration Manager へのハイブリッド デバイス登録をセットアップするには、以下の手順を実行します。 以下の手順を完了すると、ユーザーが "Bring Your Own Device" (BYOD) 登録を利用できるようになります。 この手順は、[BYOD デバイスの登録](enroll-hybrid-ios-mac.md)および[会社所有のデバイスの登録](enroll-company-owned-devices.md)のための前提条件でもあります。
 
- |手順|説明|  
+ |手順|詳細|  
  |-----------|-------------|  
  |**手順 1:** [MDM コレクションを作成する](create-mdm-collection.md)|デバイスの登録を許可するユーザーを使用して Configuration Manager ユーザー コレクションを作成します|  
  |**手順 2:** [ドメイン名の要件](confirm-dns.md)|組織のドメイン ネーム サービス (DNS) と Active Directory ユーザー管理が MDM の要件を満たしていることを確認します|
