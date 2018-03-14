@@ -3,24 +3,25 @@ title: "サイト データベースの計画"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager の階層を計画するとき、サイト データベースとサイト データベース サーバーの役割を考える必要があります。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/08/20168
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
-caps.latest.revision: "5"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 2db5658958cbeef0c3c49922b06d8ae288fbea37
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 908ca61bc99db3ca93f46120a806cd9ae54c81f7
+ms.sourcegitcommit: b653342fb5d69a16e71b3548a7e9a2e47e54bf88
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="plan-for-the-site-database-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイト データベースの計画
 
@@ -31,6 +32,12 @@ ms.lasthandoff: 01/04/2018
 -   中央管理サイトとプライマリ サイトでは、SQL Server をサイト サーバーにインストールすることも、サイト サーバー以外のサーバーにインストールすることもできます。  
 
 -   セカンダリ サイトでは、SQL Server の完全版の代わりに、SQL Server Express をインストールできます。 ただし、データベース サーバーは、セカンダリ サイト サーバーで実行する必要があります。  
+
+-  SQL 可用性グループを使用するためには、データベース復旧モデルを FULL に設定する必要があります。  
+
+-  SQL 可用性グループを使用しない場合は、データベース復旧モデルを SIMPLE に設定する必要があります。  
+
+SQL の復旧モードについて詳しくは、「[復旧モデル (SQL Server)] (https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server)」を参照してください。
 
 次の SQL Server 構成を使用して、サイト データベースをホストできます。  
 

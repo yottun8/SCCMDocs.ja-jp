@@ -2,18 +2,19 @@
 title: "クラウド管理ゲートウェイの計画"
 titleSuffix: Configuration Manager
 description: 
-ms.date: 10/06/2017
+ms.date: 03/08/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: b1063826841c37973e26954e164d867649c3fb9f
-ms.sourcegitcommit: c4a1bafcd004638d264a93d307c70d8b6f7fe023
+ms.openlocfilehash: 051d3fcba379aec83ea7c4dc1e407b3d3e774e12
+ms.sourcegitcommit: b653342fb5d69a16e71b3548a7e9a2e47e54bf88
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager でクラウド管理ゲートウェイを計画する
 
@@ -30,7 +31,7 @@ Configuration Manager コンソールを使って、Azure にサービスを展�
 
 ## <a name="requirements-for-cloud-management-gateway"></a>クラウド管理ゲートウェイの要件
 
--   クライアント コンピューターとクラウド管理ゲートウェイ コネクタ ポイントを実行するサイト システム サーバー
+-    インターネット ベースのクライアントが使用するためのクラウド管理ゲートウェイ コネクタを実行しているサイト システム
 
 -   クライアント コンピューターからの通信を暗号化し、クラウド管理ゲートウェイ サービスの ID を認証するために使用される内部 CA からのカスタムの SSL 証明書
 
@@ -70,7 +71,7 @@ Configuration Manager コンソールを使って、Azure にサービスを展�
 
     -   現在のところ、クラウド管理ゲートウェイには Standard\_A2 バーチャル マシンが必要になります。 サービスを作成するとき、サービスをサポートする VM の数を選択できます (既定は 1 です)。
 
-    -   1 台の Azure Standard\_A2 バーチャル マシンでインターネット ベースのクライアントを約 2,000 台同時にサポートできると予想されます (この数値は見積もり目的でのみ提供されます)。
+    -   1 台の Azure Standard\_A2 バーチャル マシンでは、インターネット ベースのクライアントを同時に約 2,000 台サポートできると予想されます (この数値は見積もり目的でのみ提供されます)。
 
     -   予想されるコストについては、「[Azure の料金計算ツール](https://azure.microsoft.com/en-us/pricing/calculator/)」を参照してください。
 
