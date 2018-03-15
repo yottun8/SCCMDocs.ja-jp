@@ -7,11 +7,12 @@ ms.date: 4/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 887f8029-1a3a-423c-a9c1-31dc0d693386
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
@@ -58,7 +59,7 @@ Updates Publisher は起動するたびに、自動でサブスクリプショ�
 
     -   コンソールで、**[カタログ] ワークスペース** > **[My Catalogs]\(自分のカタログ)** に移動します。 次に、リボンの **[Add Catalogs]\(カタログの追加)** を選択します。
 
--   **ユーザー カタログの追加**: コンソールで、**[カタログ] ワークスペース** > **[My Catalogs]\(自分のカタログ)** に移動します。 次に、リボンの **[Add Catalogs] (カタログの追加)** を選択します。 .cab ファイルの場所の他に [発行元]、[名前]、[説明] を指定して、カタログを識別する必要があります。
+-   **ユーザー カタログの追加**: コンソールで、**[カタログ] ワークスペース** > **[My Catalogs]\(自分のカタログ)** に移動します。 次に、リボンの **[Add Catalogs] \(カタログの追加)** を選択します。 .cab ファイルの場所の他に [発行元]、[名前]、[説明] を指定して、カタログを識別する必要があります。
 
 
 -   **カタログの更新プログラムのチェック:** 1 つまたは複数のカタログを選択し、リボンの **[最新の情報に更新]** を選択します。
