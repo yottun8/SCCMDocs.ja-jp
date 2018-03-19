@@ -7,12 +7,13 @@ ms.date: 04/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
-caps.latest.revision: "5"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
@@ -50,9 +51,9 @@ System Center Configuration Manager では、証明書資格情報をインポ�
 ### <a name="get-started"></a>作業開始
 
 1.  System Center Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
-2.  **[ 資産とコンプライアンス ]** ワークスペースで、**[ コンプライアンス設定 ]**、**[ 会社のリソースへのアクセス ]** の順に展開してから、**[ 証明書プロファイル ]** をクリックします。  
+2.  **[資産とコンプライアンス]** ワークスペースで、**[コンプライアンス設定]**、**[会社のリソースへのアクセス]** の順に展開してから、**[証明書プロファイル]** をクリックします。  
 
-3.  **[ ホーム ]** タブの **[ 作成 ]** グループで、**[ 証明書プロファイルの作成]** をクリックします。
+3.  **[ホーム]** タブの **[作成]** グループで、**[証明書プロファイルの作成]** をクリックします。
 
 4.  **[証明書プロファイルの作成]** ウィザードの **[全般]** ページで、次の情報を指定します。  
 

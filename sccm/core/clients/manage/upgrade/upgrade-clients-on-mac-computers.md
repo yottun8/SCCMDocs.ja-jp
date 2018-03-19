@@ -7,11 +7,12 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 74c60941-5eae-4905-9e58-252bdb39df96
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: arob98
 ms.author: angrobe
 manager: angrobe
@@ -69,7 +70,7 @@ System Center Configuration Manager アプリケーションを使用して Mac 
 
 -   Configuration Manager コンソールで、種類が **[Mac OS X]** の構成項目を作成します。  
 
--   **[ スクリプト ]** という設定の種類を使用して、この構成項目に設定を追加します。  
+-   **[スクリプト]** という設定の種類を使用して、この構成項目に設定を追加します。  
 
 -   次のスクリプトを設定に追加します。  
 

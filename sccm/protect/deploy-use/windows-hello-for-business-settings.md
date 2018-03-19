@@ -7,11 +7,12 @@ ms.date: 09/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
@@ -78,7 +79,7 @@ Configuration Manager コンソールの **[会社のリソースへのアクセ
 2.  **[Active Directory Users and Computers]** を開きます。
 3.  ナビゲーション ウィンドウで、ドメイン名を右クリックし、**[プロパティ]** をクリックします。
 4.  **[*<domain name>* のプロパティ]** ダイアログ ボックスの **[セキュリティ]** タブで、**[詳細設定]** をクリックします。 **[セキュリティ]** タブが表示されない場合、**[Active Directory Users and Computers]** の **[表示]** メニューの **[高度な機能]** をオンにします。
-5.  **[ 追加]** をクリックします。
+5.  **[追加]** をクリックします。
 6.  **[*<domain name>* のアクセス許可エントリ]** ダイアログ ボックスで **[プリンシパルの選択]** をクリックします。
 7.  **[ユーザー、コンピューター、サービス アカウント、またはグループの選択]** ダイアログ ボックスの **[選択するオブジェクト名を入力します]** テキスト ボックスに「**Key Admins**」と入力します。  **[OK]**をクリックします。
 8.  **[適用先]** リストから **[Descendant User objects (子孫ユーザー オブジェクト)]** を選択します。
