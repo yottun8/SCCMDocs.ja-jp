@@ -65,7 +65,7 @@ ms.lasthandoff: 03/20/2018
 >
 > **FBWF のみを使用するデバイスの場合:** デバイスを再起動した後でクライアントの状態とインベントリ データを保持するには、次の例外を構成します。  
 >   
->  -   CCMINSTALLDIR\\*.sdf  
+>  -   CCMINSTALLDIR\\\*.sdf  
 > -   CCMINSTALLDIR\ServiceData  
 > -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 >   
