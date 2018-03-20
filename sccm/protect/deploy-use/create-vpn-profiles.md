@@ -7,20 +7,21 @@ ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: lleonard-msft
-caps.handback.revision: "0"
+caps.handback.revision: 
 ms.author: alleonar
 ms.manager: angrobe
 ms.openlocfilehash: 21fc286cdcc05244e1895ded5623d346e6cb8ebe
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="how-to-create-vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager で VPN プロファイルを作成する方法
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 2.  **[ホーム]** タブの **[作成]** グループで、**[VPN プロファイルの作成]** を選択します。  
 
 
-3.  **[全般]** ページに入力します。 」を参照し、次のことに注意してください。  
+3.  **[全般]** ページに入力します。 次の点に注意してください。  
 
     - 適切な**プラットフォーム**を選択します。
 
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/21/2017
 |**企業の Wi-Fi ネットワークに接続しているときは VPN をバイパスする**  |デバイスが企業の Wi-Fi ネットワークに接続されている場合、VPN 接続は使用されません。|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - チェック ポイント モバイル VPN<br /><br /> - Microsoft SSL (SSTP)<br /><br /> - Microsoft 自動<br /><br /> - IKEv2<br /><br /> - L2TP|  
 |**家庭の Wi-Fi ネットワークに接続しているときは VPN をバイパスする**  |デバイスが家庭の Wi-Fi ネットワークに接続されている場合、VPN 接続は使用されません。|すべて|  
 |**アプリ VPN ごと (iOS 7 以降、Mac OS X 10.9 以降)** |VPN 接続を iOS アプリに関連付けて、アプリを実行すると接続が開かれるようにします。 アプリを展開するときに VPN プロファイルをアプリに関連付けることができます。|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - チェック ポイント モバイル VPN|  
-|**カスタム XML (省略可能)** |VPN 接続を構成するカスタムの XML コマンドを指定します。<br /><br /> 例:<br /><br /> **Pulse Secure**の場合:<br /><br /> **&lt;pulse-schema><br /> &nbsp; &lt;isSingleSignOnCredential>true&lt;/isSingleSignOnCredential\><br />&lt;/pulse-schema>**<br /><br /> **チェックポイント モバイル VPN**の場合:<br /><br /> **&lt;CheckPointVPN <br /> &nbsp; port="443" name="CheckPointSelfhost" <br /> &nbsp; sso="true" <br /> &nbsp; debug="3"<br />/>**<br /><br /> **Dell SonicWALL Mobile Connect**の場合:<br /><br /> **&lt;MobileConnect\><br />&nbsp; &nbsp; &lt;Compression\>false&lt;/Compression\><br />&nbsp; &nbsp; &lt;debugLogging\>True&lt;/debugLogging\><br />&nbsp; &nbsp; &lt;packetCapture\>False&lt;/packetCapture\><br />&lt;/MobileConnect\>**<br /><br /> **F5 Edge Client**の場合:<br /><br /> **&lt;f5-vpn-conf>&lt;single-sign-on-credential>&lt;/f5-vpn-conf>**<br /><br /> カスタムの XML コマンドの記述方法については、各製造元の VPN に関するマニュアルを参照してください。|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - チェック ポイント モバイル VPN|  
+|**カスタム XML (省略可能)** |VPN 接続を構成するカスタムの XML コマンドを指定します。<br /><br /> 次に例を示します。<br /><br /> **Pulse Secure**の場合:<br /><br /> **&lt;pulse-schema><br /> &nbsp; &lt;isSingleSignOnCredential>true&lt;/isSingleSignOnCredential\><br />&lt;/pulse-schema>**<br /><br /> **チェックポイント モバイル VPN**の場合:<br /><br /> **&lt;CheckPointVPN <br /> &nbsp; port="443" name="CheckPointSelfhost" <br /> &nbsp; sso="true" <br /> &nbsp; debug="3"<br />/>**<br /><br /> **Dell SonicWALL Mobile Connect**の場合:<br /><br /> **&lt;MobileConnect\><br />&nbsp; &nbsp; &lt;Compression\>false&lt;/Compression\><br />&nbsp; &nbsp; &lt;debugLogging\>True&lt;/debugLogging\><br />&nbsp; &nbsp; &lt;packetCapture\>False&lt;/packetCapture\><br />&lt;/MobileConnect\>**<br /><br /> **F5 Edge Client**の場合:<br /><br /> **&lt;f5-vpn-conf>&lt;single-sign-on-credential>&lt;/f5-vpn-conf>**<br /><br /> カスタムの XML コマンドの記述方法については、各製造元の VPN に関するマニュアルを参照してください。|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - チェック ポイント モバイル VPN|  
 
 > [!NOTE]  
 >  モバイル デバイスの VPN プロファイルの作成に特化した情報については、[VPN プロファイルの作成](../../mdm/deploy-use/create-vpn-profiles.md)に関する記事を参照してください。  
