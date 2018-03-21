@@ -33,8 +33,8 @@ ms.lasthandoff: 03/20/2018
 
 |デバイスの種類|サポートされているファイルの種類|  
 |-----------------|---------------------|  
-|Windows RT および Windows RT 8.1|*.appx、\*.appxbundle|  
-|モバイル デバイスとして登録された Windows 8.1 以降|*.appx、\*.appxbundle|  
+|Windows RT および Windows RT 8.1|\*.appx、\*.appxbundle|  
+|モバイル デバイスとして登録された Windows 8.1 以降|\*.appx、\*.appxbundle|  
 
  次の展開操作がサポートされています。  
 

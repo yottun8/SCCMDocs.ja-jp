@@ -55,7 +55,7 @@ ms.lasthandoff: 03/20/2018
  Configuration Manager では、次の種類のアプリケーションを展開できます。  
 
 - Windows インストーラー (*.msi ファイル)
-- Windows アプリケーション パッケージ (*.appx、*.appxbundle)
+- Windows アプリケーション パッケージ (\*.appx、\*.appxbundle)
 - Windows アプリケーション パッケージ (Windows ストア内)
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization 5
