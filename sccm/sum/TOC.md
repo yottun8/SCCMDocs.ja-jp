@@ -32,3 +32,14 @@
 ## [Windows 10 更新プログラムに対する高速インストール ファイルの管理](deploy-use/manage-express-installation-files-for-windows-10-updates.md)
 ## [Windows 10 における Windows Update for Business との統合](deploy-use/integrate-windows-update-for-business-windows-10.md)
 ## [セキュリティ更新プログラムを展開するシナリオ例](deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
+
+# [System Center Updates Publisher](tools/updates-publisher.md)
+## [インストール](tools/install-updates-publisher.md)
+## [オプションの構成](tools/updates-publisher-options.md)
+## [カタログの管理](tools/updates-publisher-catalogs.md)
+## [更新の管理](tools/manage-updates-with-updates-publisher.md)
+## [パブリケーションの管理](tools/updates-publisher-publications.md)
+## [新しい更新プログラムの作成](tools/create-updates-with-updates-publisher.md)
+## [適用規則](tools/updates-publisher-applicability-rules.md)
+## [証明書とセキュリティ](tools/updates-publisher-security.md)
+
