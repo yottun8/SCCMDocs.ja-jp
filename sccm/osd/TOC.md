@@ -46,6 +46,7 @@
 
 ## [サービスとしての Windows の管理](deploy-use/manage-windows-as-a-service.md)
 ## [オペレーティング システムの展開の監視](deploy-use/monitor-operating-system-deployments.md)
+## [タスク シーケンスの段階的展開の作成](deploy-use/create-phased-deployment-for-task-sequence.md)
 
 ## [タスクを自動化するためのタスク シーケンスの管理](deploy-use/manage-task-sequences-to-automate-tasks.md)
 ### [オペレーティング システムをインストールするタスク シーケンスの作成](deploy-use/create-a-task-sequence-to-install-an-operating-system.md)
