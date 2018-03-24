@@ -1,26 +1,27 @@
 ---
-title: "Managed Browser ポリシーを使用したインターネット アクセスの管理"
+title: Managed Browser ポリシーを使用したインターネット アクセスの管理
 titleSuffix: Configuration Manager
-description: "Intune Managed Browser を展開してインターネット アクセスを管理および制限します。"
+description: Intune Managed Browser を展開してインターネット アクセスを管理および制限します。
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
-caps.latest.revision: "6"
-caps.handback.revision: "0"
+caps.latest.revision: ''
+caps.handback.revision: ''
 author: dougeby
 ms.author: dougeby
 manager: angrobe
 ms.openlocfilehash: 3aea2a65733a52ab532d451b21ae98fbc0f122c6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>System Center Configuration Manager での Managed Browser ポリシーを使用したインターネット アクセスの管理
 
@@ -101,7 +102,7 @@ System Center Configuration Manager では、Intune Managed Browser という We
 
     -   https の場合はポート 443  
 
-     **http://www.contoso.com:\*** や **http://www.contoso.com: /\*** のように、ポート番号にワイルドカードを使用することはできません。  
+     たとえば、**http://www.contoso.com:\*** および **http://www.contoso.com: /\*** のように、ポート番号にワイルドカードを使用することはできません。  
 
 -   URL を指定するときに使用できるパターンの詳細については、次の表を参照してください。  
 
@@ -136,7 +137,7 @@ System Center Configuration Manager では、Intune Managed Browser という We
 
     -   http://www.contoso.com:*  
 
-    -   http://www.contoso.com:/*  
+    -   http://www.contoso.com: /*  
 
 > [!NOTE]  
 >  *.microsoft.com は常に許可されます。  

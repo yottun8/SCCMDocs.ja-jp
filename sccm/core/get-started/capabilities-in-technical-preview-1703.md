@@ -1,25 +1,26 @@
 ---
-title: "Technical Preview 1703 の機能"
+title: Technical Preview 1703 の機能
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1703 で使用できる機能について説明します。"
+description: System Center Configuration Manager の Technical Preview バージョン 1703 で使用できる機能について説明します。
 ms.custom: na
 ms.date: 03/24/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2e801f8c-d331-41ee-8f27-908448fc0951
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: erikje
 ms.author: erikje
 manager: angrobe
 ms.openlocfilehash: a44d6a0c9b02a529fe8776033e58e971af37e332
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1703 の機能
 
@@ -37,14 +38,14 @@ ms.lasthandoff: 12/01/2017
 |||||
 |-|-|-|-|
 |Configuration Manager バージョン|アプリでのデバイス ライセンスのサポート|展開コレクションの種類|要求されるライセンス|
-|1702 より前|○|ユーザー|ユーザー ライセンス|
-|1702 より前|×|ユーザー|ユーザー ライセンス|
-|1702 より前|○|デバイス|ユーザー ライセンス|
-|1702 より前|×|デバイス|ユーザー ライセンス|
-|1702 以降|○|ユーザー|ユーザー ライセンス|
-|1702 以降|×|ユーザー|ユーザー ライセンス|
-|1702 以降|○|デバイス|デバイス ライセンス|
-|1702 以降|×|デバイス|ユーザー ライセンス|
+|1702 より前|はい|ユーザー|ユーザー ライセンス|
+|1702 より前|いいえ|ユーザー|ユーザー ライセンス|
+|1702 より前|はい|デバイス|ユーザー ライセンス|
+|1702 より前|いいえ|デバイス|ユーザー ライセンス|
+|1702 以降|はい|ユーザー|ユーザー ライセンス|
+|1702 以降|いいえ|ユーザー|ユーザー ライセンス|
+|1702 以降|はい|デバイス|デバイス ライセンス|
+|1702 以降|いいえ|デバイス|ユーザー ライセンス|
 
 ボリューム購入した iOS アプリの詳細については、「[ボリューム購入 iOS アプリの管理](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)」を参照してください。
 
@@ -60,7 +61,7 @@ ms.lasthandoff: 12/01/2017
 
 ### <a name="how-to-get-the-application-identifier-of-an-application"></a>アプリケーションのアプリケーションの識別子を取得する方法
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**をクリックします。
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。
 2.  [ソフトウェア ライブラリ] ワークスペースで **[アプリケーション管理]** を展開し、**[アプリケーション]** をクリックします。
 3.  **[アプリケーション]** ビューで、列ヘッダーのいずれかを右クリックし、一覧から **[CI の固有 ID]** を選択します。 各アプリケーションの一意の ID が一覧に表示されます。
 4.  リンク先のアプリケーションの **[CI の固有 ID]** (**ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2** など) をメモしておきます。
@@ -145,7 +146,7 @@ Windows 10 Creators Update では、EFI 対応ハードウェアのハード デ
 
 Windows 利用統計情報の設定については、「[組織内の Windows 利用統計情報の構成](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)」を参照してください。
 
-### <a name="prerequisites"></a>必要条件
+### <a name="prerequisites"></a>[前提条件]
 - Upgrade Readiness クラウド サービスを使用するにはサイトを構成しておく必要があります。 詳細については、[Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) に関するページをご覧ください。
 
 ### <a name="configure-windows-analytics-client-settings"></a>Windows Analytics クライアント設定の構成
