@@ -40,3 +40,4 @@
 ### [アプリケーションのアンインストール](deploy-use/uninstall-applications.md)
 
 ## [スクリプトの実行と管理](deploy-use/create-deploy-scripts.md)
+### [PowerShell スクリプトのセキュリティの詳細情報](deploy-use/learn-script-security.md)

@@ -30,4 +30,5 @@
 ## [ユーザー データとプロファイルの構成項目の作成](deploy-use/create-user-data-and-profiles-configuration-items.md)
 ## [リモート接続プロファイルの作成](deploy-use/create-remote-connection-profiles.md)
 ## [Windows デバイスを新しいエディションにアップグレードする](deploy-use/upgrade-windows-version.md)
+## [Microsoft Edge の設定の構成](deploy-use/browser-profiles.md)
 ## [コンプライアンス設定を監視する](deploy-use/monitor-compliance-settings.md)
