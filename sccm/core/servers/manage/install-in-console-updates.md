@@ -1,25 +1,26 @@
 ---
-title: "コンソール内の更新プログラム"
+title: コンソール内の更新プログラム
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager は Microsoft クラウドと同期して更新プログラムを取得します。その更新プログラムはコンソール内からインストールできます。"
+description: System Center Configuration Manager は Microsoft クラウドと同期して更新プログラムを取得します。その更新プログラムはコンソール内からインストールできます。
 ms.custom: na
 ms.date: 09/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
-caps.latest.revision: "36"
+caps.latest.revision: ''
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 081935ebb3ef2cc12d2023d86c0b68bbd816f2f3
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 5c202ede7be14bb60c6b28d87dfa77577597e955
+ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>System Center Configuration Manager のコンソール内の更新プログラムのインストール
 
@@ -96,7 +97,8 @@ System Center Configuration Manager は Microsoft クラウド サービスと�
 
 - 1606 から 1610 への更新: 「[System Center Configuration Manager の更新プログラム 1610 をインストールするためのチェックリスト](../../../core/servers/manage/checklist-for-installing-update-1610.md)」を参照してください。  
 
-- 1606 または 1610 から 1702 に更新します。「[1702 に更新するためのチェックリスト](../../../core/servers/manage/checklist-for-installing-update-1702.md)」を参照してください。
+- 1610、1702、または 1706 から 1710 に更新します。「[System Center Configuration Manager の更新プログラム 1710 をインストールするためのチェックリスト](../../../core/servers/manage/checklist-for-installing-update-1710.md)」を参照してください。
+
 
 <!-- Removed as update guidance 6/6/2017. The Test DB Upgrade details are no longer recommended nor required. They live on in a new topic for customers who still want to use them. -->
 
@@ -122,7 +124,7 @@ System Center Configuration Manager は Microsoft クラウド サービスと�
 
      前提条件チェックを実行すると、更新プログラムのコンテンツが子サイトにレプリケートされます。  サイト サーバーの distmgr.log を表示して、そのコンテンツが正常にレプリケートされたことを確認できます。  
 
-4.  チェックの結果を表示するには、Configuration Manager コンソールで **[監視]**、 > **[更新とサービスの状態]** に移動して、前提条件の状態を探します。 詳細について、サイト サーバーの ConfigMgrPrereq.log を表示することもできます。  
+4.  チェックの結果を表示するには、Configuration Manager コンソールで **[監視]**、**[更新とサービスの状態]** に移動して、前提条件の状態を探します。 詳細について、サイト サーバーの ConfigMgrPrereq.log を表示することもできます。  
 
 
 
@@ -199,7 +201,7 @@ System Center Configuration Manager は Microsoft クラウド サービスと�
 > セカンダリ サイトのバージョンはコンソールに表示されませんが、Configuration Manager SDK を利用してサイトのバージョンを確認できます。 「[SMS_Site Server WMI クラス](https://technet.microsoft.com/library/hh442832(CMSDK.16).aspx)」を参照してください。
 
 
--   階層内のすべてのサイトが新しい製品バージョンにアップグレードされるまで、階層はバージョン混在モードで動作します。 詳細については、「 [Interoperability between different versions of System Center Configuration Manager](../../../core/plan-design/hierarchy/interoperability-between-different-versions.md)」をご覧ください。  
+-   階層内のすべてのサイトが新しい製品バージョンにアップグレードされるまで、階層はバージョン混在モードで動作します。 詳細については、「 [異なるバージョンの Configuration Manager 間の相互運用性](../../../core/plan-design/hierarchy/interoperability-between-different-versions.md)」をご覧ください。  
 
 **5. Configuration Manager コンソールの更新**  
 中央管理サイトまたはプライマリ サイトの更新後に、そのサイトに接続する各 Configuration Manager コンソールも更新する必要があります。 次の場合には、コンソールを更新するように求められます。  
