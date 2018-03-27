@@ -1,25 +1,27 @@
 ---
-title: "コンテンツ ソースの場所"
+title: コンテンツ ソースの場所
 titleSuffix: Configuration Manager
-description: "クライアントが低速ネットワークでコンテンツを検索できるようにする System Center Configuration Manager 設定について説明します。"
+description: クライアントが低速ネットワークでコンテンツを検索できるようにする System Center Configuration Manager 設定について説明します。
 ms.custom: na
 ms.date: 1/3/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 70b5cbc0-64ba-49bd-8b34-fb4c09b2b95b
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 03eb4d1fb08bfe8bf69af2c3e9ee035c8e2f8ab6
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ROBOTS: NOINDEX
+ms.openlocfilehash: 8db263c6a2ae7792cea50b1c41a377a7f05314b4
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="content-source-location-scenarios-in-system-center-configuration-manager"></a>System Center Configuration Manager でのコンテンツ ソースの場所に関するシナリオ
 
