@@ -1,7 +1,7 @@
 ---
-title: "Windows Embedded デバイスへのクライアント展開の計画"
+title: Windows Embedded デバイスへのクライアント展開の計画
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager での Windows Embedded デバイスへのクライアント展開の計画"
+description: System Center Configuration Manager での Windows Embedded デバイスへのクライアント展開の計画
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: ''
+caps.handback.revision: ''
 author: arob98
 ms.author: angrobe
 manager: angrobe
 ms.openlocfilehash: c4f3d8a9b043707340e56d3ae483ad66ca17dc10
-ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager での Windows Embedded デバイスへのクライアント展開の計画
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 03/20/2018
 >
 > **FBWF のみを使用するデバイスの場合:** デバイスを再起動した後でクライアントの状態とインベントリ データを保持するには、次の例外を構成します。  
 >   
->  -   CCMINSTALLDIR\\\*.sdf  
+>  -   CCMINSTALLDIR\\*.sdf  
 > -   CCMINSTALLDIR\ServiceData  
 > -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 >   
