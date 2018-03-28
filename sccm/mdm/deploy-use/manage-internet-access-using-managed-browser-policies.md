@@ -92,7 +92,7 @@ System Center Configuration Manager では、Intune Managed Browser という We
 
 許可リストとブロック リストで URL を指定するときに使用できる形式とワイルドカードについて説明します。  
 
--   ワイルドカード記号 "**\***" は、以下の許可されているパターン リストの規則に従って使用できます。  
+-   ワイルドカード記号 "**\\***" は、以下の許可されているパターン リストの規則に従って使用できます。  
 
 -   リストに入力するときは、すべての URL の先頭に必ず **http** または **https** を付けてください。  
 
@@ -111,7 +111,7 @@ System Center Configuration Manager では、Intune Managed Browser という We
     |http://www.contoso.com<br /><br /> 単一のページと一致する|www.contoso.com|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> contoso.com/|  
     |http://contoso.com<br /><br /> 単一のページと一致する|contoso.com/|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com|  
     |http://www.contoso.com/*<br /><br /> www.contoso.com で始まるすべての URL と一致する|www.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com/videos/tvshows|host.contoso.com<br /><br /> host.contoso.com/images|  
-    |http://*.contoso.com/\*<br /><br /> contoso.com の下のすべてのサブドメインに一致する|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/videos|contoso.host.com|  
+    |http://\*.contoso.com/\*<br /><br /> contoso.com の下のすべてのサブドメインに一致する|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/videos|contoso.host.com|  
     |http://www.contoso.com/images<br /><br /> 単一のフォルダーと一致する|www.contoso.com/images|www.contoso.com/images/dogs|  
     |http://www.contoso.com:80<br /><br /> ポート番号を使用し、単一のページと一致する|http://www.contoso.com:80||  
     |https://www.contoso.com<br /><br /> セキュリティで保護された単一のページと一致する|https://www.contoso.com|http://www.contoso.com|  
@@ -121,11 +121,11 @@ System Center Configuration Manager では、Intune Managed Browser という We
 
     -   *.com  
 
-    -   *.contoso/\*  
+    -   \*.contoso/\*  
 
     -   www.contoso.com/*images  
 
-    -   www.contoso.com/*images\*pigs  
+    -   www.contoso.com/\*images\*pigs  
 
     -   www.contoso.com/page*  
 
