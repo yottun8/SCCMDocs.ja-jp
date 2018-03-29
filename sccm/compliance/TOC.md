@@ -11,6 +11,11 @@
 ### [構成基準を展開する](plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)
 ## [セキュリティとプライバシー](plan-design/security-and-privacy-for-compliance-settings.md)
 
+## [Security Content Automation Protocol (SCAP) 拡張機能](plan-design/scap/about-scap.md)
+### [SCAP 拡張機能のインストールと構成](plan-design/scap/install-configure-scap.md)
+### [SCAP コンプライアンス設定のインポート](plan-design/scap/import-scap-compliance-settings.md)
+### [SCAP 拡張機能のトラブルシューティング](plan-design/scap/troubleshooting-scap.md)
+
 # 展開と使用
 
 ## [構成アイテムの作成](deploy-use/create-configuration-items.md)
