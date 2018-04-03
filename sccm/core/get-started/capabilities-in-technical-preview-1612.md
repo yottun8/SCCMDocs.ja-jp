@@ -1,25 +1,26 @@
 ---
-title: "Technical Preview 1612 の機能"
+title: Technical Preview 1612 の機能
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1612 で使用できる機能について説明します。"
+description: System Center Configuration Manager の Technical Preview バージョン 1612 で使用できる機能について説明します。
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bceab2e8-2f05-4a17-9ac8-a7a558670fb7
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: erikje
 ms.author: erikje
 manager: angrobe
 ms.openlocfilehash: 80cace2bec8cb9c39d5f3f00ea244b697e1d75c9
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1612 の機能
 
@@ -49,7 +50,7 @@ Technical Preview バージョン 1612 以降、データ ウェアハウス サ
 ### <a name="data-warehouse-dataflow"></a>データ ウェアハウスのデータフロー   
 ![Datawarehouse_flow](./media/datawarehouse.png)
 
-| 手順         | 説明  |
+| 手順         | 詳細  |
 |:------:|-----------|  
 | **1**  |  サイト サーバーは、サイト データベースにデータを転送して格納します。  |  
 | **2** |   データ ウェアハウス サービス ポイントでは、スケジュールと構成に基づいて、サイト データベースからデータを取得します。  |  
@@ -113,7 +114,7 @@ Technical Preview バージョン 1612 以降、データ ウェアハウス サ
 ### <a name="reporting"></a>レポート
 データ ウェアハウス サイト システムのロールをインストールすると、*カテゴリ*が**データ ウェアハウス**になっているレポート サービス ポイントでは、以下のレポートが利用できるようになります。
 
-|レポート                   | 説明                                  |
+|レポート                   | 詳細                                  |
 |-------------------------|------------------------------------------|
 | **アプリケーションの展開に関するレポート** | 特定のアプリケーションとコンピューターについてアプリケーション展開の詳細を表示します。|
 | **エンドポイントの保護とソフトウェア更新プログラムのコンプライアンスに関するレポート**   | ソフトウェアの更新プログラムが欠落しているコンピューターを表示します。|
@@ -197,7 +198,7 @@ Technical Preview 1612 をインストールすると、Technical Preview サイ
 ### <a name="command-line-switches"></a>コマンド ライン スイッチ  
 コマンドライン スイッチは、任意の順に使用できます。   
 
-|スイッチ|説明|
+|スイッチ|詳細|
 |---------|-------|
 |**/delete**  |**省略可能** </br> 配布ポイントからコンテンツを削除する場合は、このスイッチを使用します。 コンテンツが削除される前に確認を求めるメッセージが表示されます。 </br></br> このスイッチが使用されていない場合、ツールはどのコンテンツが削除対象かについて結果をログに記録しますが、配布ポイントからコンテンツを削除しません。 </br></br> 例: ***ContentLibraryCleanup.exe /dp server1.contoso.com /delete*** |
 | **/q**       |**省略可能** </br> すべてのプロンプト (コンテンツを削除する場合のプロンプトなど) を非表示にする Quiet モードでツールを実行すると、ログ ファイルは自動的に開きません。 </br></br> 例: ***ContentLibraryCleanup.exe /q /dp server1.contoso.com*** |

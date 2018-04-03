@@ -1,25 +1,26 @@
 ---
-title: "アプリケーションの管理タスク"
+title: アプリケーションの管理タスク
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager アプリケーションおよび展開の種類を管理します。"
+description: System Center Configuration Manager アプリケーションおよび展開の種類を管理します。
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c4041e21-21ff-4d95-ab05-14007e0047cf
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
 ms.openlocfilehash: 8d4cc2cd8de9626b6911dc50dbdec2ccdaada94c
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="management-tasks-for-system-center-configuration-manager-applications"></a>System Center Configuration Manager アプリケーションの管理タスク
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/12/2017
 ##  <a name="manage-applications"></a>アプリケーションを管理する  
  **[ソフトウェア ライブラリ]** ワークスペースで、**[アプリケーション管理]** > **[アプリケーション]** の順に展開し、管理するパッケージを選んで、管理タスクを選びます。  
 
-|タスク|説明|  
+|タスク|詳細|  
 |----------|-------------|  
 |**アクセス アカウントの管理**|**[アクセス アカウントの管理]** ダイアログ ボックスを開くと、選択したアプリケーションに関連付けられたコンテンツへのアクセス許可のレベルを指定できます。|  
 |**事前設定コンテンツ ファイルの作成**|**事前設定コンテンツ ファイルの作成ウィザード**を開始します。このウィザードは、コンテンツのリモート配布ポイントへの配布を管理するのに役立ちます。 スケジュールおよび調整によってリモート配布ポイントの問題が有効に解決できない場合は、配布ポイントにコンテンツを事前設定することができます。<br /><br /> 「[コンテンツとコンテンツ インフラストラクチャの管理](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。|  
@@ -47,14 +48,14 @@ ms.lasthandoff: 10/12/2017
 |**エクスポート**|**アプリケーションのエクスポート ウィザード**が開きます。このウィザードは選択したアプリケーションを .zip ファイルにエクスポートするので、これをアーカイブしたり、別のサイトにインストールしたりできます。 アプリケーションのコンテンツをエクスポートすると、そのコンテンツを含むフォルダーが作成されます。<br /><br /> さらに、アプリケーションの依存関係や、置き換え関係、そのアプリケーションと依存関係の条件やコンテンツもエクスポートできます。<br /><br /> Windows PowerShell コマンドレットの **Export-CMApplication** は、同じ機能を実行します。 詳細については、Microsoft System Center 2012 Configuration Manager SP1 コマンドレット リファレンス ドキュメントの「[Export-CMApplication](http://go.microsoft.com/fwlink/p/?LinkID=258880)」を参照してください。|  
 |**削除**|現在選択しているアプリケーションを削除します。<br /><br /> ほかのアプリケーションが依存している場合、アクティブな展開がある場合、または依存タスク シーケンスがある場合は、そのアプリケーションを削除できません。|  
 |**展開のシミュレート**|**アプリケーション展開のシミュレーション ウィザード**を開きます。このウィザードを使うと、アプリケーションをインストールしたり、アンインストールせずに、コンピューターへのアプリケーションの展開結果をテストできます。<br /><br /> 「[Simulate application deployments with System Center Configuration Manager](../../apps/deploy-use/simulate-application-deployments.md)」 (System Center Configuration Manager でアプリケーションの展開をシミュレーションする) を参照してください。|  
-|**デプロイ**|**ソフトウェアの展開ウィザード**を開きます。このウィザードを使うと、階層内のコンピューターのグループに対して選択したアプリケーションを展開できます。<br /><br /> 「[Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md)」 (System Center Configuration Manager でアプリケーションを展開する) を参照してください。|  
+|**展開**|**ソフトウェアの展開ウィザード** を開きます。このウィザードを使うと、階層内のコンピューターのグループに対して選択したアプリケーションを展開できます。<br /><br /> 「[Deploy applications with System Center Configuration Manager](../../apps/deploy-use/deploy-applications.md)」 (System Center Configuration Manager でアプリケーションを展開する) を参照してください。|  
 |**コンテンツの配布**|**コンテンツの配布ウィザード**を開きます。このウィザードを使うと、階層内の配布ポイントに選択したアプリケーションのコンテンツをコピーできます。<br /><br /> 「[コンテンツとコンテンツ インフラストラクチャの管理](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。|  
 |**関係の表示**|選択したアプリケーションと他のアプリケーションの関係図が表示されます。 次のいずれかを選択します。<br><br><ul><li>**依存関係** – 選択したアプリケーションに依存しているアプリケーションや、選択したアプリケーションが依存しているアプリケーションが表示されます。</li><li>**置き換え** – 選択したアプリケーションによって置き換えられるアプリケーションと、選択したアプリケーションを置き換えるアプリケーションが表示されます。</li><li>**グローバル条件** – このアプリケーションが参照するグローバル条件が表示されます。</li></ol><br /> 「[How to revise and supersede applications in System Center Configuration Manager](../../apps/deploy-use/revise-and-supersede-applications.md)」 (System Center Configuration Manager でアプリケーションを修正して置き換える方法) および「[How to create global conditions in System Center Configuration Manager](../../apps/deploy-use/create-global-conditions.md)」 (System Center Configuration Manager でグローバル条件を作成する方法) を参照してください。|  
 
 ##  <a name="manage-deployment-types"></a>展開の種類を管理する  
  **[ソフトウェア ライブラリ]** ワークスペースで、**[アプリケーション管理]** を展開し、**[アプリケーション]** を選択してから、管理する展開の種類のアプリケーションを選択します。 詳細ウィンドウで **[展開の種類]** タブを選び、管理する展開の種類を選んで、管理タスクを選びます。  
 
-|タスク|説明|  
+|タスク|詳細|  
 |----------|-------------|  
 |**優先順位を上げる**|選択した展開の種類の優先順位を上げます。 展開の種類は順番に評価されます。 展開の種類が特定の要件を満たしている場合はそれが実行され、優先順位一覧に表示された他の展開の種類は評価されません。|  
 |**優先順位を下げる**|選択した展開の種類の優先順位を下げます。|  

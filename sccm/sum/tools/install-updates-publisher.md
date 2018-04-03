@@ -1,26 +1,27 @@
 ---
-title: "Updates Publisher のインストール"
+title: Updates Publisher のインストール
 titleSuffix: Configuration Manager
-description: "環境に System Center Updates Publisher をインストールする"
+description: 環境に System Center Updates Publisher をインストールする
 ms.custom: na
 ms.date: 07/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
-caps.latest.revision: "1"
+caps.latest.revision: 1
 author: mestew
 ms.author: mstewart
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 629e7dd98b1b5ff7f240461b61893dfc433f61dc
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: ce65e58a2c1be0420077bddded7567ff931d041f
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-updates-publisher"></a>Updates Publisher のインストール
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/04/2017
 -   Windows 10 (Pro、Education、Pro Education、Enterprise)
 -   Windows 8.1 (Professional、Enterprise)
 
-### <a name="prerequisites"></a>必要条件
+### <a name="prerequisites"></a>[前提条件]
 Updates Publisher を実行するコンピューターには、以下のものが必要です。
 
 -   **64 ビット オペレーティング システム**: Updates Publisher をインストールするコンピューターは、64 ビット版のオペレーティング システムで動作している必要があります。
@@ -109,7 +110,7 @@ Updates Publisher で使用できる言語は英語のみですが、他言語�
 
 
 ## <a name="install-updates-publisher"></a>Updates Publisher のインストール
-[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=847967)から、System Center Updates Publisher をインストールするための **UpdatesPubliser.msi** を取得します。
+[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55543)から、System Center Updates Publisher をインストールするための **UpdatesPubliser.msi** を取得します。
 
 Updates Publisher をインストールするには、上記の*前提条件*を満たしているコンピューター上で **UpdatesPublisher.msi** を実行します。 インストーラーは、Updates Publisher を実行するために必要なファイルを格納する次のフォルダーを作成します: *&lt;path&gt;\Program Files\Microsoft\UpdatesPublisher*。
 
