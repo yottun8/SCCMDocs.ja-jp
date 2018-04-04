@@ -1,8 +1,8 @@
 ---
 layout: HubPage
-hide_bc: 
-title: "System Center Configuration Manager のドキュメント"
-description: "System Center Configuration Manager を使用する方法について説明します。"
+hide_bc: true
+title: System Center Configuration Manager のドキュメント
+description: System Center Configuration Manager を使用する方法について説明します。
 ms.topic: hub-page
 ms.openlocfilehash: 250f5cf0793f5afd396a82f96389c937ed9be14b
 ms.sourcegitcommit: 32bbc006a41868a6d9a708db5f7b372d9c71d985
