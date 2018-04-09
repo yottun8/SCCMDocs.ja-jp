@@ -1,37 +1,40 @@
 ---
-title: "スクリプトを作成して実行する"
+title: スクリプトを作成して実行する
 titleSuffix: Configuration Manager
-description: "クライアント デバイスで PowerShell スクリプトを作成して実行する"
+description: クライアント デバイスで PowerShell スクリプトを作成して実行する
 ms.custom: na
-ms.date: 01/05/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-caps.latest.revision: "14"
-caps.handback.revision: "0"
+caps.latest.revision: 14
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: b00dfb875ca032032a9782e9950247eb3fceb124
-ms.sourcegitcommit: 9de3d74030b7c3313c34b5cbe2dbe6e18a48c043
+manager: dougeby
+ms.openlocfilehash: 29806161b29b87834c0cb4b1e478d92bff7a7b3c
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Configuration Manager コンソールから PowerShell スクリプトを作成して実行する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
->[!TIP]
->PowerShell スクリプトを実行する機能は、バージョン 1706 で導入されたプレリリース機能です。 スクリプトを有効にする方法については、「[System Center Configuration Manager のプレリリース機能](/sccm/core/servers/manage/pre-release-features)」を参照してください。
 
-PowerShell スクリプトを実行する機能と System Center Configuration Manager の統合を改善しました。 PowerShell には、高度な自動化されたスクリプトを作成できるという利点があります。PowerShell スクリプトは、多くの方が参加するコミュニティで理解され、共有されています。 このスクリプトを使用すると、ソフトウェアを管理するカスタム ツールを簡単に構築できます。また、大規模なジョブをより簡単に、一貫した方法で実行できるので、日常のタスクをすぐに完了できるようになります。
+System Center Configuration Manager には、PowerShell スクリプトを実行するための統合機能があります。 PowerShell には、高度な自動化されたスクリプトを作成できるという利点があります。PowerShell スクリプトは、多くの方が参加するコミュニティで理解され、共有されています。 このスクリプトを使用すると、ソフトウェアを管理するカスタム ツールを簡単に構築できます。また、大規模なジョブをより簡単に、一貫した方法で実行できるので、日常のタスクをすぐに完了できるようになります。
 
-PowerShell スクリプトは System Center Configuration Manager と統合されているので、*スクリプトの実行*機能を使用して以下を実行できます。
+> [!TIP]  
+> この機能はバージョン 1706 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 バージョン 1802 以降、この機能はプレリリース機能ではなくなりました。
+
+
+System Center Configuration Manager でのこの統合により、*スクリプトの実行*機能を使用して以下を実行することができます。
 
 - System Center Configuration Manager と共に使用するようにスクリプトを作成して編集する。
 - ロールとセキュリティ スコープを使用してスクリプトの使用法を管理する。 
@@ -40,33 +43,45 @@ PowerShell スクリプトは System Center Configuration Manager と統合さ�
 - スクリプトの実行を監視し、スクリプトの出力からレポート結果を表示する。
 
 >[!WARNING]
->スクリプトを利用する場合は、目的を持って注意して使用することをお勧めします。 分離されたロールとスコープという、開発時に役立つ追加の保護策も組み込まれています。 意図しないスクリプトの実行を防ぐために、実行前にスクリプトが正しいことを検証し、信頼できる発行元のスクリプトであることを確認してください。 拡張文字や他の難読化を配慮し、スクリプトのセキュリティ保護について学習してください。
+>スクリプトを利用する場合は、目的を持って注意して使用することをお勧めします。 分離されたロールとスコープという、開発時に役立つ追加の保護策も組み込まれています。 意図しないスクリプトの実行を防ぐために、実行前にスクリプトが正しいことを検証し、信頼できる発行元のスクリプトであることを確認してください。 拡張文字や他の難読化を配慮し、スクリプトのセキュリティ保護について学習してください。 [PowerShell スクリプトのセキュリティの詳細情報](/sccm/apps/deploy-use/learn-script-security)
 
 ## <a name="prerequisites"></a>[前提条件]
 
 - PowerShell スクリプトを実行するには、クライアントで PowerShell バージョン 3.0 以降を実行している必要があります。 ただし、実行するスクリプトに、より新しいバージョンの PowerShell の機能が含まれている場合、スクリプトを実行するクライアントがそのバージョンの PowerShell を実行している必要があります。
 - Configuration Manager クライアントがスクリプトを実行するには、1706 リリース以降のクライアントを実行している必要があります。
 - スクリプトを使用するには、適切な Configuration Manager のセキュリティ ロールのメンバーである必要があります。
-- スクリプトをインポートおよび作成するには: **完全な権限を持つ管理者**のセキュリティ ロールで、**SMS スクリプト**への**作成**アクセス許可がアカウントに付与されている必要があります。
-- スクリプトを承認または拒否するには: **完全な権限を持つ管理者**のセキュリティ ロールで、**SMS スクリプト**への**承認**アクセス許可がアカウントに付与されている必要があります。
-- スクリプトを実行するには: **完全な権限を持つ管理者**のセキュリティ ロールで、**コレクション**への**スクリプトの実行**アクセス許可がアカウントに付与されている必要があります。
+- スクリプトをインポートおよび作成するには: **SMS スクリプト**への**作成**アクセス許可がアカウントに付与されている必要があります。
+- スクリプトを承認または拒否するには: **SMS スクリプト**への**承認**アクセス許可がアカウントに付与されている必要があります。
+- スクリプトを実行するには: **コレクション**への**スクリプトの実行**アクセス許可がアカウントに付与されている必要があります。
 
-Configuration Manager のセキュリティ ロールの詳細については、「[ロール ベース管理の基礎](/sccm/core/understand/fundamentals-of-role-based-administration)」を参照してください。
+Configuration Manager セキュリティ ロールの詳細については、以下を参照してください。</br>
+[スクリプトの実行のセキュリティ スコープ](#BKMK_Scopes)</br>
+[スクリプトの実行のセキュリティ ロール](#BKMK_ScriptRoles)</br>
+[ロール ベース管理の基礎](/sccm/core/understand/fundamentals-of-role-based-administration)。
 
 ## <a name="limitations"></a>制限事項
 
 現在、スクリプトの実行は以下をサポートしています。
 
 - スクリプト言語: PowerShell
-- パラメーターの型: 整数、文字列、リスト
+- パラメーターの型: 整数、文字列、リスト。
+
+
+>[!WARNING]
+>パラメーターを使用する場合、潜在的な PowerShell インジェクション攻撃のリスクが伴うことに注意してください。 パラメーター入力を検証するための正規表現の使用や、定義済みパラメーターの使用など、さまざまな緩和および回避方法があります。 通常は PowerShell スクリプトのシークレットに含めないことをお勧めします (パスワードなしなど)。 [PowerShell スクリプトのセキュリティの詳細情報](/sccm/apps/deploy-use/learn-script-security) <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
+
+
+## <a name="group-policy-considerations-for-scripts"></a>スクリプトのグループ ポリシーに関する考慮事項
+<!--While running scripts on devices, Configuration Manager sets policy to allow local scripts and remote signed scripts.--> 
+グループ ポリシーを使用して実行ポリシーを設定すると、Configuration Manager でスクリプトを実行できない場合があります。 実行ポリシーと、その設定方法については、「[About Execution Policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies)」 (実行ポリシーについて) の記事を参照してください。 <!--507185-->
 
 ## <a name="run-script-authors-and-approvers"></a>スクリプトの実行の作成者と承認者
 
-スクリプトの実行では、スクリプトの実装と実行に別のロールとして*スクリプト作成者*と*スクリプト承認者*の概念を使用しています。 作成者ロールと承認者ロールが分かれているので、スクリプトの実行という強力なツールの重要なプロセス チェックが可能になります。
+スクリプトの実行では、スクリプトの実装と実行に別のロールとして*スクリプト作成者*と*スクリプト承認者*の概念を使用しています。 作成者ロールと承認者ロールが分かれているので、スクリプトの実行という強力なツールの重要なプロセス チェックが可能になります。 スクリプトの実行は許可するが、スクリプトの作成や承認は許可しない、追加の*スクリプト ランナー* があります。 「[スクリプトのセキュリティ ロールの作成](#BKMK_ScriptRoles)」を参照してください。
 
 ### <a name="scripts-roles-control"></a>スクリプト ロールの制御
 
-既定では、ユーザーは自分が作成したスクリプトを承認できません。 スクリプトは強力で用途が広く、多くのデバイスに展開できるため、スクリプトを作成する人と、そのスクリプトを承認する人とでロールを分けることができます。 ロールを分けることで、監視なしのスクリプト実行に対してセキュリティ レベルがさらに高くなります。 テストの場合は、便宜的にこの 2 つ目の承認を無効にすることもできます。
+既定では、ユーザーは自分が作成したスクリプトを承認できません。 スクリプトは強力で用途が広く、多くのデバイスに展開される可能性があるため、スクリプトを作成する人と、そのスクリプトを承認する人とでロールを分けることができます。 ロールを分けることで、監視なしのスクリプト実行に対してセキュリティ レベルがさらに高くなります。 テストの場合は、便宜的に 2 つ目の承認を無効にすることもできます。
 
 ### <a name="approve-or-deny-a-script"></a>スクリプトの承認または拒否
 
@@ -89,11 +104,59 @@ Configuration Manager のセキュリティ ロールの詳細については、
 4. **[階層設定のプロパティ]** ダイアログ ボックスの **[全般]** タブで、**[Do not allow script authors to approve their own scripts]\(スクリプト作成者に自身のスクリプトの承認を許可しない\)** チェック ボックスをオフにします。
 
 >[!IMPORTANT]
->ベスト プラクティスとして、スクリプト作成者に自分のスクリプトの承認を許可しないようにする必要があります。 これは、ラボ環境でのみ許可する必要があります。 運用環境でこの設定を変更する場合の影響を慎重に検討してください。
+>ベスト プラクティスとして、スクリプト作成者に自分のスクリプトの承認を許可しないようにする必要があります。 これは、ラボ設定でのみ許可する必要があります。 運用環境でこの設定を変更する場合の影響を慎重に検討してください。
 
 ## <a name="security-scopes"></a>セキュリティ スコープ
 *(バージョン 1710 で導入されました)*  
 スクリプトの実行は、Configuration Manager の既存の機能であるセキュリティ スコープを使用し、ユーザー グループを表すタグを割り当てることで、スクリプトの作成と実行を制御しています。 セキュリティ スコープの使用の詳細については、「[System Center Configuration Manager のロール ベース管理の構成](../../core/servers/deploy/configure/configure-role-based-administration.md)」を参照してください。
+
+## <a name="bkmk_ScriptRoles"></a> スクリプトのセキュリティ ロールの作成
+Configuration Manager では、スクリプトを実行するために使用される 3 つのセキュリティ ロールが既定で作成されません。 スクリプト ランナー、スクリプト作成者、スクリプト承認者のロールを作成するには、概説されている手順に従います。
+
+1. Configuration Manager コンソールで、**[管理]** >**[セキュリティ]** >**[セキュリティ ロール]** の順に移動します。
+2. ロールを右クリックして、**[コピー]** をクリックします。 コピーするロールには既にアクセス許可が割り当てられています。 必要なアクセス許可のみを使用するようにしてください。 
+3. カスタム ロールの**名前**と**説明**を入力します。 
+4. セキュリティ ロールに、以下に概説されているアクセス許可を割り当てます。 
+
+    ### <a name="security-role-permissions"></a>**セキュリティ ロールのアクセス許可**
+
+     **ロール名**: スクリプト ランナー
+    - **説明**: これらのアクセス許可では、このロールで、以前他のロールで作成および承認されたスクリプトのみを実行できるようにします。 
+    - **アクセス許可:** 以下が **[はい]** に設定されていることを確認します。
+         |**カテゴリ**|**アクセス許可**|**状態**|
+         |---|---|---|
+         |コレクション|スクリプトを実行する|はい|
+         |SMS スクリプト|作成|はい|
+         |SMS スクリプト|読み取り|はい|
+
+     **ロール名**: スクリプト作成者
+    - **説明**: これらのアクセス許可では、このロールでスクリプトを作成できるようにしますが、承認したり、実行したりすることはできません。 
+    - **アクセス許可:** 以下のアクセス許可が設定されていることを確認します。
+    - 
+         |**カテゴリ**|**アクセス許可**|**状態**|
+         |---|---|---|
+         |コレクション|スクリプトを実行する|いいえ|
+         |SMS スクリプト|作成|はい|
+         |SMS スクリプト|読み取り|はい|
+         |SMS スクリプト|削除|はい|
+         |SMS スクリプト|変更|はい|
+
+    **ロール名**: スクリプト作成者
+    - **説明**: これらのアクセス許可では、このロールでスクリプトを承認できますが、作成したり、実行したりすることはできません。 
+    - **アクセス許可:** 以下のアクセス許可が設定されていることを確認します。
+
+         |**カテゴリ**|**アクセス許可**|**状態**|
+         |---|---|---|
+         |コレクション|スクリプトを実行する|いいえ|
+         |SMS スクリプト|読み取り|はい|
+         |SMS スクリプト|承認|はい|
+         |SMS スクリプト|変更|はい|
+     
+**スクリプト作成者ロールの SMS スクリプト アクセス許可の例**
+
+ ![スクリプト作成者ロールの SMS スクリプト アクセス許可の例](./media/run-scripts/script_authors_permissions.png)
+
+   
 
 ## <a name="create-a-script"></a>スクリプトの作成
 
@@ -109,8 +172,8 @@ Configuration Manager のセキュリティ ロールの詳細については、
 5. ウィザードを完了します。 新しいスクリプトが**[承認を待っています]**の状態で **[スクリプト]** リストに表示されます。 このスクリプトをクライアント デバイスで実行するには、先にそのスクリプトを承認する必要があります。 
 
 > [!IMPORTANT]
-    >  スクリプトの実行機能を使用する場合は、デバイスのリブートや Configuration Manager エージェントの再起動のスクリプトを実行することは避けてください。 そうすると、リブート状態が続くことになりかねません。 必要な場合は、クライアント通知機能を拡張して、デバイスの再起動を有効にできます (Configuration Manager 1710 以降)。 [[再起動を保留しています] 列](/sccm/core/clients/manage/manage-clients#Restart-clients)は、再起動が必要なデバイスを特定するのに役立ちます。 
-<!--SMS503978--Script reboot warning-->
+    >スクリプトの実行機能を使用する場合は、デバイスのリブートや Configuration Manager エージェントの再起動のスクリプトを実行することは避けてください。 そうすると、リブート状態が続くことになりかねません。 必要な場合は、クライアント通知機能を拡張して、デバイスの再起動を有効にできます (Configuration Manager 1710 以降)。 [[再起動を保留しています] 列](/sccm/core/clients/manage/manage-clients#Restart-clients)は、再起動が必要なデバイスを特定するのに役立ちます。 
+<!--SMS503978  -->
 
 ## <a name="script-parameters"></a>スクリプト パラメーター
 *(バージョン 1710 で導入されました)*  
@@ -119,6 +182,10 @@ Configuration Manager のセキュリティ ロールの詳細については、
 **[スクリプトの作成]** ダイアログの **[スクリプト]** で **[スクリプト パラメーター]** をクリックします。
 
 スクリプトの各パラメーターには独自のダイアログがあり、詳細や検証を追加できます。
+
+>[!IMPORTANT]
+> パラメーター値にアポストロフィを含めることはできません。 
+
 
 ### <a name="parameter-validation"></a>パラメーターの検証
 
@@ -151,7 +218,7 @@ Configuration Manager のセキュリティ ロールの詳細については、
 
 ### <a name="create-a-new-folder-and-file"></a>新しいフォルダーとファイルの作成
 
-このスクリプトは、入力した名前に基づいて新しいフォルダーを作成し、その中にファイルを作成します。
+このスクリプトでは、入力した名前に基づいて、新しいフォルダーを作成し、そのフォルダー内にファイルを作成します。
 
 ``` powershell
 Param(
@@ -202,6 +269,18 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 1. Configuration Manager コンソールで、**[監視]** をクリックします。
 2. **[監視]** ワークスペースで、**[スクリプトのステータス]** をクリックします。
 3. **[スクリプトのステータス]** リストには、クライアント デバイスで実行した各スクリプトの結果が表示されます。 スクリプトの終了コード **0** は、通常、スクリプトが正常に実行されたことを示します。
+    - Configuration Manager 1802 以降では、スクリプトの出力は 4 KB に切り捨てられます。これにより、より優れた表示エクスペリエンスが得られます。  <!--510013-->
+      ![スクリプト モニター - 切り捨てられたスクリプト](./media/run-scripts/Script-monitoring-truncated.png) 
+
+## <a name="script-output"></a>スクリプトの出力
+
+- Configuration Manager バージョン 1802 以降では、スクリプトの出力は JSON 形式を使用して返されます。 この形式は、読み取り可能なスクリプトの出力を一貫して返します。 
+- 不明な結果を取得するスクリプトや、クライアントがオフラインだったスクリプトは、グラフやデータ セットには表示されません。 <!--507179-->
+- 大きいスクリプトの出力は 4 KB に切り捨てられるため、そのような出力が返されないようにしてください。 <!--508488-->
+- ダウンレベル バージョンのクライアントで Configuration Manager バージョン 1802 以降を実行する場合、スクリプト出力形式の一部の機能は使用できません。 <!--508487-->
+- スクリプトで列挙オブジェクトを文字列値に変換して、JSON 形式で適切に表示されるようにしてください。 <!--508377--> ![列挙オブジェクトを文字列値に変換する](./media/run-scripts/enum-tostring-JSON.png)
+
+
 
 ## <a name="see-also"></a>関連項目
 
