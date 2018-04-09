@@ -1,36 +1,39 @@
 ---
-title: "クライアント インストール プロパティ"
+title: クライアント インストール プロパティ
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager のクライアント インストール プロパティについて説明します。"
+description: Configuration Manager クライアントをインストールするための ccmsetup コマンド ライン プロパティについて説明します。
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
-caps.latest.revision: "15"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 903a415a936bc62aad5c889d5d8f6572ba9759c1
-ms.sourcegitcommit: 5437b2823bada8f8c9e67940f584953b9d190628
+caps.latest.revision: 15
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 057b078767a08574a806cb6af1cdb3812148a457
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>System Center Configuration Manager のクライアント インストール プロパティについて
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager CCMSetup.exe コマンドを使用して、Configuration Manager クライアントを手動でインストールします。  
+CCMSetup.exe コマンドを使用して、Configuration Manager クライアントをインストールします。 コマンド ラインでこれらのクライアント インストール プロパティを指定すると、インストール動作が変更されます。
+
+
 
 ##  <a name="aboutCCMSetup"></a> CCMSetup.exe について  
  CCMSetup.exe コマンドは、クライアントのインストールに必要なファイルを管理ポイントまたはソースの場所からダウンロードします。 次のようなファイルが含まれます。  
 
--   クライアント ソフトウェアをインストールする Windows インストーラー パッケージ Client.msi。  
+-   クライアント ソフトウェアをインストールする Windows インストーラー パッケージ client.msi。  
 
 -   Microsoft バックグラウンド インテリジェント転送サービス (BITS) インストール ファイル。  
 
@@ -41,22 +44,22 @@ System Center Configuration Manager CCMSetup.exe コマンドを使用して、C
 > [!NOTE]  
 >  Configuration Manager では、Client.msi ファイルを直接実行することはできません。  
 
- CCMSetup.exe には、インストールをカスタマイズするための[コマンド ライン プロパティ](#ccmsetup-exe-command-line-properties)が用意されています。 CCMSetup.exe コマンド ラインで Client.msi の動作を変更するプロパティを指定することもできます。  
+ CCMSetup.exe には、インストールをカスタマイズするための[コマンド ライン プロパティ](#ccmsetup-exe-command-line-properties)が用意されています。 CCMSetup.exe コマンド ラインで client.msi の動作を変更するプロパティを指定することもできます。  
 
 > [!IMPORTANT]  
->  Client.msi のプロパティを指定する前に、CCMSetup のプロパティを指定します。  
+>  client.msi のプロパティの前に、CCMSetup のプロパティを指定します。  
 
- CCMSetup.exe およびそのサポート ファイルは、Configuration Manager サイト サーバーの Configuration Manager インストール フォルダーの **[クライアント]** フォルダーにあります。 このフォルダーは **&lt;サイト サーバー名\>\SMS_&lt;サイト コード\>\Client** としてネットワークで共有されます。  
+ CCMSetup.exe およびサポート ファイルは、サイト サーバーの Configuration Manager インストール フォルダーの **[クライアント]** フォルダーにあります。 このフォルダーは **&lt;サイト サーバー名\>\SMS_&lt;サイト コード\>\Client** としてネットワークで共有されます。  
 
  コマンド プロンプトで、CCMSetup.exe コマンドは次の形式を使用します。  
 
  `CCMSetup.exe [<Ccmsetup properties>] [<client.msi setup properties>]`  
 
- 例:  
+ 次に例を示します。  
 
-      'CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=S01 FSP=SMSFSP01`  
+   `CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=S01 FSP=SMSFSP01`  
 
- この例では次が実行されます。  
+ この例では次のことが行われます。  
 
 -   配布ポイントの一覧を要求し、クライアント インストール ファイルをダウンロードするために SMSMP01 という名前の管理ポイントを指定します。  
 
@@ -67,11 +70,13 @@ System Center Configuration Manager CCMSetup.exe コマンドを使用して、C
 -   SMSFP01 というフォールバック ステータス ポイントを使用するように client.msi で指定します。  
 
 > [!NOTE]  
->  プロパティにスペースを含める場合は、引用符で囲みます。  
+>  プロパティにスペースがある場合は、引用符で囲みます。  
 
 
 > [!IMPORTANT]  
->  Configuration Manager 用に Active Directory スキーマを拡張した場合は、多くのクライアント インストール プロパティが Active Directory Domain Services に発行され、Configuration Manager クライアントによって自動的に読み取られます。 Active Directory ドメイン サービスに発行されるクライアント インストールのプロパティの一覧は、「 [System Center Configuration Manager で Active Directory ドメイン サービスに発行されたクライアント インストールのプロパティについて](about-client-installation-properties-published-to-active-directory-domain-services.md)」を参照してください。  
+>  Configuration Manager 用に Active Directory スキーマを拡張した場合、サイトでは多くのクライアント インストール プロパティが Active Directory Domain Services に発行されます。 Configuration Manager クライアントはこれらのプロパティを自動的に読み取ります。 詳細については、「[Active Directory Domain Services に発行されたクライアント インストールのプロパティについて](about-client-installation-properties-published-to-active-directory-domain-services.md)」を参照してください。  
+
+
 
 ##  <a name="ccmsetupexe-command-line-properties"></a>CCMSetup.exe のコマンド ライン プロパティ  
 
@@ -83,39 +88,52 @@ CCMSetup.exe のコマンド ライン プロパティを表示する **[CCMSetu
 
 ### <a name="sourceltpath"></a>/source:&lt;パス\>  
 
- ファイルのダウンロード場所を指定します。 ローカルまたは UNC パスを使用します。 ファイルはサーバー メッセージ ブロック (SMB) プロトコルを使用してダウンロードされます。  **/source** を使用するには、クライアント インストール用の Windows ユーザー アカウントに、その場所に対する読み取りアクセス許可が必要です。
+ ファイルのダウンロード場所を指定します。 ローカルまたは UNC パスを使用します。 ファイルはサーバー メッセージ ブロック (SMB) プロトコルを使用してダウンロードされます。 **/source** を使用するには、クライアント インストール用の Windows ユーザー アカウントに、その場所に対する読み取りアクセス許可が必要です。
 
 > [!NOTE]  
 >  コマンド ラインで **/source** プロパティを複数回使用して、ダウンロードの代替場所を指定することができます。  
 
  例: **ccmsetup.exe /source:"\\\computer\folder"**  
 
-### <a name="mpltcomputer"></a>/mp:&lt;コンピューター\>
+### <a name="mpltserver"></a>/mp:&lt;サーバー\>
 
- インストール ファイルの最も近い配布ポイントを探せるように、コンピューターが接続するソース管理ポイントを指定します。 配布ポイントがない、またはコンピューターが 4 時間経っても配布ポイントからファイルをダウンロードできない場合は、クライアントは指定された管理ポイントからファイルをダウンロードします。  
+ コンピューターの接続先のソース管理ポイントを指定します。 コンピューターではこの管理ポイントを使用して、インストール ファイルの最も近い配布ポイントを見つけます。 配布ポイントがない、またはコンピューターで 4 時間経っても配布ポイントからファイルをダウンロードできない場合、指定された管理ポイントからファイルがダウンロードされます。  
 
 > [!IMPORTANT]  
->  このプロパティは、ダウンロード ソースを見つけるためのコンピューターの最初の管理ポイントを指定するために使用され、任意のサイト内の任意の管理ポイントを指定できます。 クライアントを管理ポイントに*割り当てる*ことはありません。   
+>  このプロパティは、ダウンロード ソースを見つけるためのコンピューターの最初の管理ポイントを指定するために使用され、任意のサイト内の任意の管理ポイントを指定できます。 クライアントは管理ポイントに*割り当て* られません。   
 
- クライアント接続におけるサイト システムの役割の構成によって、コンピューターは HTTP または HTTPS 接続でファイルをダウンロードします。 BITS スロットルが構成されている場合は、ダウンロードで使用されます。 すべての配布ポイントおよび管理ポイントが HTTPS クライアント接続のみに構成されている場合は、クライアント コンピューターに有効なクライアント証明書があることを確認します。  
+ クライアント接続におけるサイト システムの役割の構成によって、コンピューターは HTTP または HTTPS 接続でファイルをダウンロードします。 構成されている場合は、ダウンロードで BITS スロットルが使用されます。 すべての配布ポイントおよび管理ポイントが HTTPS クライアント接続のみに構成されている場合は、クライアント コンピューターに有効なクライアント証明書があることを確認します。  
 
-**/mp** コマンドライン プロパティを使用すると、複数の管理ポイントを指定し、コンピューターが接続に失敗しても、次の管理ポイントを試すように構成できます。 複数の管理ポイントは、値をセミコロンで区切って指定します。
+**/mp** コマンド ライン プロパティを使用して、複数の管理ポイントを指定できます。 コンピューターで最初の管理ポイントへの接続に失敗した場合は、指定されたリスト内の次の管理ポイントが試行されます。 複数の管理ポイントは、値をセミコロンで区切って指定します。
 
-クライアントが HTTPS を使用して管理ポイントに接続する場合、通常はコンピューター名ではなく FQDN を指定する必要があります。 値は、管理ポイントの PKI 証明書のサブジェクトまたはサブジェクトの別名と一致している必要があります。 Configuration Manager は、証明書のコンピューター名を使用してイントラネットでの接続をサポートしますが、セキュリティのベスト プラクティスとして、FQDN が推奨されます。
+クライアントが HTTPS を使用して管理ポイントに接続する場合、通常はコンピューター名ではなく FQDN を指定する必要があります。 値は、管理ポイントの PKI 証明書のサブジェクトまたはサブジェクトの別名と一致している必要があります。 Configuration Manager は、証明書のコンピューター名を使用してイントラネットでの接続をサポートしますが、推奨されるセキュリティのベスト プラクティスは FQDN です。
 
 コンピューター名を使用する場合の例: `ccmsetup.exe /mp:SMSMP01`  
 
 FQDN を使用する場合の例: `ccmsetup.exe /mp:smsmp01.contoso.com`  
 
+このプロパティでは、クラウド管理ゲートウェイの URL を指定できます。 この URL を使用して、インターネット ベースのデバイスにクライアントをインストールします。 このプロパティの値を取得するには、次の手順を使用します。
+- クラウド管理ゲートウェイを作成します。
+- アクティブなクライアントで、管理者として Windows PowerShell コマンド プロンプトを開きます。 
+- 
+          `(Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP` コマンドを実行します。
+- **/mp** プロパティで使用する "https://" プレフィックスを追加します。
+
+クラウド管理ゲートウェイの URL を使用する場合の例: `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
+
+ > [!Important]
+ > **/mp** プロパティにクラウド管理ゲートウェイの URL を指定する場合は、先頭に **https://** を指定する必要があります。
+
+
 ### <a name="retryltminutes"></a>/retry:&lt;分\>
 
-CCMSetup.exe がインストール ファイルのダウンロードに失敗した場合の再試行間隔です。  CCMSetup は、**downloadtimeout** プロパティで指定された制限に達するまで再試行し続けます。  
+CCMSetup.exe がインストール ファイルのダウンロードに失敗した場合の再試行間隔です。 CCMSetup は、**downloadtimeout** プロパティで指定された制限に達するまで再試行し続けます。  
 
 例: `ccmsetup.exe /retry:20`  
 
 ### <a name="noservice"></a>/noservice
 
-CCMSetup がサービスとして実行 (既定) されるのを防ぎます。 CCMSetup がサービスとして実行されると、コンピューターのローカル システム アカウントとの関連で実行されます。ローカル システム アカウントには、インストールに必要なネットワーク リソースにアクセスする十分な権利がない場合があります。 **/noservice** を使用すると、CCMSetup.exe は、インストールを開始するために使用するユーザー アカウントの関連で実行されます。 また、スクリプトを使用して、**/service** プロパティで CCMSetup.exe を実行すると、CCMSetup.exe はサービスが開始されると終了し、インストールの詳細を正しくレポートしないことがあります。   
+CCMSetup がサービスとして実行 (既定) されるのを防ぎます。 CCMSetup がサービスとして実行される場合、コンピューターのローカル システム アカウントのコンテキストで実行されます。 このアカウントには、インストールに必要なネットワーク リソースにアクセスするための十分な権限がない可能性があります。 **/noservice** を使用すると、CCMSetup.exe は、インストールを開始するために使用するユーザー アカウントの関連で実行されます。 また、スクリプトを使用して、**/service** プロパティで CCMSetup.exe を実行すると、CCMSetup.exe はサービスが開始されると終了し、インストールの詳細を正しくレポートしないことがあります。   
 
 例: `ccmsetup.exe /noservice`  
 
@@ -127,19 +145,19 @@ CCMSetup がローカル システム アカウントを使用してサービス
 
 ### <a name="uninstall"></a>/uninstall
 
-クライアント ソフトウェアをアンインストールすることを指定します。 詳細については、「 [How to manage clients in System Center Configuration Manager](../manage/manage-clients.md)」をご覧ください。  
+クライアント ソフトウェアをアンインストールすることを指定します。 詳細については、「[クライアントを管理する方法](../manage/manage-clients.md)」を参照してください。  
 
 例: `ccmsetup.exe /uninstall`  
 
 ### <a name="logon"></a>/logon
 
-クライアントの任意のバージョンが既にインストールされている場合にクライアント インストールを停止するように指定します。  
+任意のバージョンのクライアントが既にインストールされている場合は、このプロパティでクライアント インストールを停止するように指定します。  
 
 例: `ccmsetup.exe /logon`  
 
 ### <a name="forcereboot"></a>/forcereboot
 
- インストールを完了するためにクライアント コンピューターの再起動が必要な場合に、CCMSetup でクライアント コンピューターを強制的に再起動することを指定します。 これが指定されていないと、CCMSetup は再起動が必要なときに終了し、次回手動で再起動した後に続行します。  
+ インストールを完了するためにクライアント コンピューターの再起動が必要な場合に、CCMSetup でクライアント コンピューターを強制的に再起動することを指定します。 このプロパティが指定されていない場合、CCMSetup は再起動が必要なときに終了します。 次回手動で再起動した後に続行します。  
 
  例: `CCMSetup.exe /forcereboot`  
 
@@ -161,16 +179,16 @@ CCMSetup がローカル システム アカウントを使用してサービス
 
 ### <a name="downloadtimeoutltminutes"></a>/downloadtimeout:&lt;分\>
 
-CCMSetup がインストール ファイルのダウンロードの試行を開始してから停止するまでの時間 (分単位) です。 既定値は **1440** 分 (1 日) です。  
+CCMSetup がインストール ファイルのダウンロードを試行してから停止するまでの時間 (分単位)。 既定値は **1440** 分 (1 日) です。  
 
 例: `ccmsetup.exe /downloadtimeout:100`  
 
 ### <a name="usepkicert"></a>/UsePKICert
 
- 指定されるとクライアントは、利用可能であれば、クライアントの認証を含んだ PKI 証明書を使用します。 有効な証明書が見つからない場合、クライアントは、HTTP 接続と自己署名証明書を使用します。これはこのプロパティを使用しない場合の動作でもあります。
+ 指定されるとクライアントは、利用可能であれば、クライアントの認証を含んだ PKI 証明書を使用します。 クライアントで有効な証明書が見つからない場合は、自己署名証明書による HTTP 接続が使用されます。 このプロパティを使用しない場合でも、この動作は同じです。
 
 > [!NOTE]  
->  クライアントをインストールし、クライアントの証明書を引き続き使用する場合には、このプロパティを指定する必要はありません。 これらのシナリオには、クライアント プッシュおよびソフトウェアの更新ポイント ベースを使用したクライアントのインストールが含まれます。 しかし、手動でクライアントをインストールするときは、このプロパティを指定し、 **/mp** プロパティを使用して HTTPS クライアント接続のみを許可するように構成された管理ポイントを指定する必要があります。 また、インターネット通信のみのクライアントをインストールする場合も、(インターネットベースの管理ポイントおよびサイト コードと共に) CCMALWAYSINF=1 プロパティを使って、このプロパティを指定する必要があります。 インターネット ベースのクライアント管理の詳細については、「[System Center Configuration Manager でのエンドポイント間の通信](../../plan-design/hierarchy/communications-between-endpoints.md)」の「[インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)」を参照してください。  
+>  一部のシナリオでは、クライアントをインストールし、クライアントの証明書を引き続き使用する場合、このプロパティを指定する必要はありません。 これらのシナリオには、クライアント プッシュおよびソフトウェアの更新ポイント ベースを使用したクライアントのインストールが含まれます。 しかし、手動でクライアントをインストールするときは、このプロパティを指定し、 **/mp** プロパティを使用して HTTPS クライアント接続のみを許可するように構成された管理ポイントを指定する必要があります。 インターネットのみの通信用にクライアントをインストールする場合も、このプロパティを指定する必要があります。 CCMALWAYSINF=1 プロパティを、インターネット ベースの管理ポイントとサイト コードのプロパティと共に使用します。 インターネット ベースのクライアント管理の詳細については、「[インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)」を参照してください。  
 
  例: `CCMSetup.exe /UsePKICert`  
 
@@ -180,42 +198,44 @@ CCMSetup がインストール ファイルのダウンロードの試行を開�
 
  指定しない場合、クライアントは HTTPS 接続を確立する前に CRL を確認します。  
 
- クライアントの CRL の確認について詳しくは、「[System Center Configuration Manager でのセキュリティの計画](../../plan-design/security/plan-for-security.md)」の「[PKI 証明書失効の計画](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs)」をご覧ください。  
+ クライアントの CRL チェックの詳細については、「[PKI 証明書失効の計画](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs)」を参照してください。  
 
  例: `CCMSetup.exe /UsePKICert /NoCRLCheck`  
 
 ### <a name="configltconfiguration-file"></a>/config:&lt;構成ファイル\>
 
-クライアント インストールのプロパティを含むテキスト ファイルの名前を指定します。
+クライアント インストールのプロパティを一覧表示するテキスト ファイルの名前を指定します。
 
 - **/noservice** CCMSetup プロパティを指定しない場合、このファイルは CCMSetup フォルダーに置く必要があります。このフォルダーは、32 ビット版と 64 ビット版のいずれのオペレーティング システムでも %Windir%\\Ccmsetup にあります。
 - **/noservice** プロパティを指定する場合、このファイルは CCMSetup.exe を実行するフォルダーと同じフォルダーに存在する必要があります。  
 
 例: `CCMSetup.exe /config:&lt;Configuration File Name.txt\>`  
 
-サイト サーバー コンピューターの &lt;Configuration Manager ディレクトリ\>\\bin\\&lt;プラットフォーム\> フォルダーにある mobileclienttemplate.tcf ファイルを使用して、正しいファイル形式を提供します。 このファイルには、セクションに関するコメントと、その使用方法に関する情報も含まれています。 **Install=INSTALL=ALL**というテキストに続く [Client Install] セクションに、クライアント インストールのプロパティを指定します。  
+正しいファイル形式を提供するには、サイト サーバーの &lt;Configuration Manager ディレクトリ\>\\bin\\&lt;プラットフォーム\> フォルダーにある mobileclienttemplate.tcf ファイルを使用します。 このファイルには、セクションに関するコメントと、その使用方法に関する情報も含まれています。 **Install=INSTALL=ALL**というテキストに続く [Client Install] セクションに、クライアント インストールのプロパティを指定します。  
 
 [Client Install] セクション エントリの例: `Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
 ### <a name="skipprereqltfilename"></a>/skipprereq:&lt;ファイル名\>
 
- Configuration Manager クライアントがインストールされた場合は、指定した前提条件のプログラムを CCMSetup.exe がインストールしないように指定します。 このプロパティは複数値の入力をサポートします。 個々の値を区切るには、セミコロン文字 (;) を使用します。  
+ Configuration Manager クライアントのインストール時に、指定した前提条件のプログラムが CCMSetup.exe でインストールされないように指定します。 このプロパティでは複数値の入力がサポートされます。 個々の値を区切るには、セミコロン文字 (;) を使用します。  
 
 
- 例: `CCMSetup.exe /skipprereq:silverlight.exe` または `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe;Silverlight.exe`  
+ 例: `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe` または `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe;windowsupdateagent30_x86.exe`  
 
 ### <a name="forceinstall"></a>/forceinstall
 
- 既存のクライアントがアンインストールされてから、新しいクライアントがインストールされることを指定します。  
+ CCMSetup.exe で既存のクライアントをすべてアンインストールし、新しいクライアントをインストールするように指定します。  
 
 ### <a name="excludefeaturesltfeature"></a>/ExcludeFeatures:&lt;機能\>
 
-クライアントをインストールするときに、指定した機能を CCMSetup.exe がインストールしないように指定します。  
+CCMSetup.exe でクライアントをインストールするときに、指定した機能をインストールしないように指定します。  
 
 例: `CCMSetup.exe /ExcludeFeatures:ClientUI` は、クライアントにソフトウェア センターをインストールしません。  
 
 > [!NOTE]  
->  このリリースでは、 **ClientUI** が、 **/ExcludeFeatures** プロパティでサポートされる唯一の値です。  
+>  **ClientUI** が、**/ExcludeFeatures** プロパティでサポートされる唯一の値です。  
+
+
 
 ##  <a name="ccmsetupReturnCodes"></a> CCMSetup.exe のリターン コード  
  CCMSetup.exe コマンドは、完了すると次のリターン コードを提供します。 問題を解決するには、クライアント コンピューターで ccmsetup.log ファイルを確認して、リターン コードのコンテキストと詳細を確認します。  
@@ -229,31 +249,75 @@ CCMSetup がインストール ファイルのダウンロードの試行を開�
 |9|前提条件の評価エラー|  
 |10|セットアップのマニフェスト ハッシュ検証エラー|  
 
+
+
 ##  <a name="clientMsiProps"></a> Client.msi のプロパティ  
- 次のプロパティを使って、client.msi のインストールの動作を変更することができます。 クライアント プッシュ インストール方式を使用する場合は、**[ クライアント プッシュ インストールのプロパティ ]** ダイアログ ボックスの **[ クライアント ]** タブでプロパティを指定することもできます。  
+ 次のプロパティを使って、client.msi のインストールの動作を変更することができます。 クライアント プッシュ インストール方式を使用する場合は、**[クライアント プッシュ インストールのプロパティ]** ダイアログ ボックスの **[クライアント]** タブでプロパティを指定することもできます。  
+
+
+### <a name="aadclientappid"></a>AADCLIENTAPPID
+
+Azure Active Directory (Azure AD) クライアント アプリの ID を指定します。 クライアント アプリは、クラウド管理用に [Azure サービスを構成する](/sccm/core/servers/deploy/configure/azure-services-wizard)ときに作成またはインポートされます。 Azure 管理者は、Azure Portal からこのプロパティの値を取得することができます。 詳細については、「[アプリケーション ID の取得](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key)」を参照してください。 **AADCLIENTAPPID** プロパティの場合、これが "ネイティブ" アプリケーションの種類の ID となります。
+
+例: `ccmsetup.exe AADCLIENTAPPID=aa28e7f1-b88a-43cd-a2e3-f88b257c863b`
+
+
+### <a name="aadresourceuri"></a>AADRESOURCEURI
+
+Azure AD サーバー アプリの ID を指定します。 サーバー アプリは、クラウド管理用に [Azure サービスを構成する](/sccm/core/servers/deploy/configure/azure-services-wizard)ときに作成またはインポートされます。 [サーバー アプリケーションの作成] ダイアログでサーバー アプリを作成する場合、このプロパティは **[アプリケーション ID/URI]** になります。
+
+Azure 管理者は、Azure Portal からこのプロパティの値を取得することができます。 **Azure Active Directory** ブレードの **[アプリの登録]** で、サーバー アプリを見つけます。 このアプリの種類は "Web アプリ/API" です。 アプリを開き、**[設定]**、**[プロパティ]** の順にクリックします。 この AADRESOURCEURI クライアント インストール プロパティで **[アプリケーション ID/URI]** の値を使用します。
+
+例: `ccmsetup.exe AADRESOURCEURI=https://contososerver`
+
+
+### <a name="aadtenantid"></a>AADTENANTID
+
+Azure AD テナントの ID を指定します。 このテナントは、クラウド管理用に [Azure サービスを構成する](/sccm/core/servers/deploy/configure/azure-services-wizard)際に Configuration Manager にリンクされます。 このプロパティの値を取得するには、次の手順を使用します。
+- 同じ Azure AD テナントに参加している Windows 10 デバイスで、コマンド プロンプトを開きます。
+- 
+          `dsregcmd.exe /status` コマンドを実行します。
+- [デバイスの状態] セクションで、**TenantId** の値を見つけます。 たとえば、`TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a` などです。
+
+ > [!Note]
+ > Azure 管理者は、Azure Portal でこの値を取得することもできます。 詳細については、「[テナント ID を取得する](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id)」を参照してください。
+
+例: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
+
+
+### <a name="aadtenantname"></a>AADTENANTNAME
+
+Azure AD テナント名を指定します。 このテナントは、クラウド管理用に [Azure サービスを構成する](/sccm/core/servers/deploy/configure/azure-services-wizard)際に Configuration Manager にリンクされます。 このプロパティの値を取得するには、次の手順を使用します。
+- 同じ Azure AD テナントに参加している Windows 10 デバイスで、コマンド プロンプトを開きます。
+- 
+          `dsregcmd.exe /status` コマンドを実行します。
+- [デバイスの状態] セクションで、**TenantName** の値を見つけます。 たとえば、`TenantName : Contoso` などです。
+
+例: `ccmsetup.exe AADTENANTNAME=Contoso`
+
 
 ### <a name="ccmadmins"></a>CCMADMINS  
 
-クライアント設定およびポリシーへのアクセスを許可する 1 つまたは複数の Windows ユーザー アカウントまたはグループを指定します。 これは、Configuration Manager 管理者に、クライアント コンピューターに対するローカル管理者資格情報がない場合に役立ちます。 セミコロンで区切って、アカウントの一覧を指定します。  
+クライアント設定およびポリシーへのアクセスを許可する 1 つまたは複数の Windows ユーザー アカウントまたはグループを指定します。 このプロパティは、Configuration Manager 管理者に、クライアント コンピューターに対するローカル管理者資格情報がない場合に役立ちます。 セミコロンで区切って、アカウントの一覧を指定します。  
 
 例: `CCMSetup.exe CCMADMINS="Domain\Account1;Domain\Group1"`  
 
 ### <a name="ccmallowsilentreboot"></a>CCMALLOWSILENTREBOOT
 
-クライアント インストール後に、必要に応じてコンピューターを再起動できるように指定します。  
+必要に応じて、クライアント インストール後に、コンピューターを再起動できるように指定します。  
 
 > [!IMPORTANT]  
->  ユーザーがログオンしている場合でもコンピューターは警告なしに再起動します。  
+>  ユーザーがログオンしている場合でも、コンピューターは警告なしで再起動します。  
 
 例: **CCMSetup.exe  CCMALLOWSILENTREBOOT**  
 
 ### <a name="ccmalwaysinf"></a>CCMALWAYSINF
 
- クライアントが常にインターネットベースであり、イントラネットには接続しないことを指定するには、「1」に設定します。 クライアントの接続の種類に **[常にインターネット]**と表示されます。  
+ クライアントが常にインターネット ベースであり、イントラネットには接続しないことを指定するには、**1** に設定します。 クライアントの接続の種類に **[常にインターネット]**と表示されます。  
 
- このプロパティは、インターネットベースの管理ポイントの FQDN を指定する CCMHOSTNAME と共に使用する必要があります。 このプロパティはまた、CCMSetup プロパティ /UsePKICert およびサイト コードと共に使用する必要があります。  
+ このプロパティは、インターネット ベースの管理ポイントの FQDN を指定する CCMHOSTNAME と共に使用します。 また、CCMSetup プロパティ /UsePKICert、およびサイト コードと共に使用します。  
 
- インターネット ベースのクライアント管理の詳細については、「[System Center Configuration Manager でのエンドポイント間の通信](../../plan-design/hierarchy/communications-between-endpoints.md)」の「[インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)」を参照してください。  
+ インターネット ベースのクライアント管理の詳細については、「[インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)」を参照してください。  
 
  例: `CCMSetup.exe /UsePKICert  CCMALWAYSINF=1 CCMHOSTNAME=SERVER3.CONTOSO.COM SMSSITECODE=ABC`  
 
@@ -261,20 +325,20 @@ CCMSetup がインストール ファイルのダウンロードの試行を開�
 
  Configuration Manager サイトが信頼する、信頼されたルート証明機関の一覧である証明書発行元一覧を指定します。  
 
- 証明書発行者リストと、これをクライアントが証明書選択プロセスで使用する方法の詳細については、「 [Plan for Security 」 の「 System Center Configuration Manager](../../plan-design/security/plan-for-security.md#BKMK_PlanningForClientCertificateSelection) 」 の「 [Plan for security 」 の「 System Center Configuration Manager](../../plan-design/security/plan-for-security.md)」を参照してください。  
+ 証明書発行者リストと、これをクライアントが証明書選択プロセスで使用する方法の詳細については、「[PKI クライアント証明書の選択の計画](../../plan-design/security/plan-for-security.md#BKMK_PlanningForClientCertificateSelection)」を参照してください。  
 
- ルート CA 証明書のオブジェクトの属性では、大文字と小文字が区別されます。 属性はコンマ (,) またはセミコロン (;) で区切ることができます。 区切り文字を使用すると、複数のルート CA 証明書を指定することができます。 例:  
+ ルート CA 証明書のサブジェクト属性では、この値の大文字と小文字が区別されます。 属性はコンマ (,) またはセミコロン (;) で区切ることができます。 複数のルート CA 証明書は、区分線を使用して指定します。 例:  
 
  `CCMCERTISSUERS=”CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US &#124; CN=Litware Corporate Root CA; O=Litware, Inc.”`  
 
 > [!TIP]  
->  サイト サーバー コンピューターの &lt;Configuration Manager ディレクトリ\>\bin\\&lt;プラットフォーム\> フォルダーで mobileclient.tcf ファイルを参照して、サイト用に構成された **CertificateIssuers=&lt;文字列\>** をコピーします。  
+>  サイトの **CertificateIssuers=&lt;文字列\>** をコピーするには、サイト サーバーの &lt;Configuration Manager ディレクトリ\>\bin\\&lt;プラットフォーム\> フォルダーで mobileclient.tcf ファイルを参照します。  
 
 ### <a name="ccmcertsel"></a>CCMCERTSEL
 
- クライアントに HTTPS 通信用の複数の証明書 (クライアント認証機能を含む有効な証明書) がある場合の証明書の選択条件を指定します。  
+ クライアントに HTTPS 通信用の複数の証明書がある場合の証明書の選択条件を指定します。 この証明書は、クライアント認証機能を含む有効な証明書です。  
 
- サブジェクト名またはサブジェクトの別名の完全一致を検索 (**Subject:** を使用) することも、部分一致を検索 (**SubjectStr:** を使用) することもできます。 例:  
+ サブジェクト名またはサブジェクトの別名の完全一致を検索 (**Subject:** を使用) することも、部分一致を検索 (**SubjectStr:** を使用) することもできます。 次に例を示します。  
 
  `CCMCERTSEL="Subject:computer1.contoso.com"` と指定すると、サブジェクト名またはサブジェクトの別名でコンピューター名 "computer1.contoso.com" と完全に一致する証明書を検索します。  
 
@@ -291,25 +355,25 @@ CCMSetup がインストール ファイルのダウンロードの試行を開�
 >   
 >  [サブジェクトの別名] ボックスを使用する場合、**Subject:** と **SubjectStr:** では大文字と小文字は区別されません。  
 
- 証明書の選択に使用できる属性の完全な一覧は、「 [PKI 証明書の選択条件としてサポートされている属性値](#BKMK_attributevalues)」に記載されています。  
+ 証明書の選択に使用できる属性の完全な一覧は、「[PKI 証明書の選択条件としてサポートされている属性値](#BKMK_attributevalues)」に記載されています。  
 
  1 つ以上の証明書が検索で一致し、プロパティ CCMFIRSTCERT が「1」に設定されている場合は、有効期限の最も長い証明書が選択されます。  
 
 ### <a name="ccmcertstore"></a>CCMCERTSTORE
 
- HTTPS 用のクライアント証明書が、コンピューター ストアの既定の **個人**用証明書ストアにない場合の代替の証明書ストアの名前を指定します。  
+ HTTPS 用のクライアント証明書が、コンピューター ストアの既定の**個人**用証明書ストアにない場合の代替の証明書ストアの名前を指定します。  
 
  例: `CCMSetup.exe /UsePKICert CCMCERTSTORE="ConfigMgr"`  
 
 ### <a name="ccmdebuglogging"></a>CCMDEBUGLOGGING
 
-  デバッグ ログを有効にします。 設定できる値は 0 (オフ、既定) または 1 (オン) です。 この場合、クライアントでは、トラブルシューティングのための低レベルの情報がログ出力されます。 実稼働サイトではこのプロパティを使用しないことをお勧めします。これは、このプロパティを使用すると、過度のログ記録が実行され、ログ ファイル内で適切な情報を見つけることが困難になる可能性があるためです。 デバッグ ログを有効にするには、CCMENABLELOGGING も TRUE に設定する必要があります。  
+  デバッグ ログを有効にします。 設定できる値は 0 (オフ、既定) または 1 (オン) です。 このプロパティの場合、クライアントではトラブルシューティングのための低レベルの情報がログ出力されます。 実稼働サイトではこのプロパティを使用しないことをお勧めします。 過度のログ記録が実行され、ログ ファイル内で関連情報を見つけることが困難になる可能性があります。 また、デバッグ ログを有効にするには、CCMENABLELOGGING を TRUE に設定します。  
 
   例: `CCMSetup.exe CCMDEBUGLOGGING=1`  
 
 ### <a name="ccmenablelogging"></a>CCMENABLELOGGING
 
-  既定では、ログ記録を有効にするように TRUE に設定されています。 ログ ファイルは、Configuration Manager クライアントのインストール フォルダー内の **Logs** フォルダーに保存されます。 既定では、このフォルダーは %Windir%\CCM\Logs にあります。  
+  既定では、このプロパティはログ記録を有効にするように TRUE に設定されています。 ログ ファイルは、Configuration Manager クライアントのインストール フォルダー内の **Logs** フォルダーに保存されます。 既定では、このフォルダーは %Windir%\CCM\Logs にあります。  
 
   例: `CCMSetup.exe CCMENABLELOGGING=TRUE`  
 
@@ -327,13 +391,28 @@ CCMSetup がインストール ファイルのダウンロードの試行を開�
 
  例: `CCMSetup.exe /UsePKICert CCMFIRSTCERT=1`  
 
+
 ### <a name="ccmhostname"></a>CCMHOSTNAME
 
- クライアントがインターネット経由で管理される場合の、インターネットベースの管理ポイントの FQDN を指定します。  
+ クライアントがインターネット経由で管理される場合は、このプロパティでインターネット ベースの管理ポイントの FQDN を指定します。  
 
- SMSSITECODE=AUTO のインストール プロパティでこのオプションを指定しないでください。 インターネットベースのクライアントはインターネットベースのサイトに直接割り当てる必要があります。  
+ SMSSITECODE=AUTO のインストール プロパティでこのオプションを指定しないでください。 インターネット ベースのクライアントはインターネット ベースのサイトに直接割り当てる必要があります。  
 
  例: `CCMSetup.exe  /UsePKICert CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
+
+このプロパティでは、クラウド管理ゲートウェイのアドレスを指定できます。 このプロパティの値を取得するには、次の手順を使用します。
+- クラウド管理ゲートウェイを作成します。
+- アクティブなクライアントで、管理者として Windows PowerShell コマンド プロンプトを開きます。 
+- 
+          `(Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP` コマンドを実行します。
+- **CCMHOSTNAME** プロパティで戻り値をそのまま使用します。
+
+例: `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
+
+ > [!Important]
+ > **CCMHOSTNAME** プロパティでクラウド管理ゲートウェイのアドレスを指定する場合は、**https://** などのプレフィックスを追加*しない* でください。 このプレフィックスは、クラウド管理ゲートウェイの **/mp** URL とのみ使用されます。
+
+
 
 ### <a name="ccmhttpport"></a>CCMHTTPPORT
 
@@ -349,7 +428,7 @@ HTTPS を介してサイト システム サーバーと通信するときにク
 
 ### <a name="ccminstalldir"></a>CCMINSTALLDIR
 
- Configuration Manager クライアント ファイルがインストールされるフォルダーを指定します。既定では *%Windir%*\CCM です。 ファイルのインストール場所に関係なく、Ccmcore.dll ファイルは常に *%Windir%\System32* フォルダーにインストールされます。 また、64 ビット オペレーティング システムでは、Configuration Manager ソフトウェア開発キット (SDK) からの Configuration Manager クライアント API の 32 ビット版を使用する 32 ビット アプリケーションをサポートするために、必ず、Ccmcore.dll ファイルのコピーが *%Windir%*\SysWOW64 フォルダーにインストールされます。  
+ Configuration Manager クライアント ファイルがインストールされるフォルダーを指定します。既定では *%Windir%*\CCM です。 ファイルのインストール場所に関係なく、Ccmcore.dll ファイルは常に *%Windir%\System32* フォルダーにインストールされます。 また、64 ビット OS では、Ccmcore.dll ファイルのコピーは常に *%Windir%*\SysWOW64 フォルダーにインストールされます。 このファイルでは、Configuration Manager SDK の 32 ビット バージョンのクライアント API を使用する 32 ビット アプリケーションがサポートされます。  
 
  例: `CCMSetup.exe CCMINSTALLDIR="C:\ConfigMgr"`  
 
@@ -361,7 +440,7 @@ Configuration Manager ログ ファイルに記録する詳細レベルを指定
 
 ### <a name="ccmlogmaxhistory"></a>CCMLOGMAXHISTORY
 
-Configuration Manager ログ ファイルのサイズが 250000 バイト (または CCMLOGMAXSIZE プロパティで指定された値) になると、バックアップとして名前が変更され、新しいログ ファイルが作成されます。  
+Configuration Manager ログ ファイルが最大サイズに達した場合、クライアントはバックアップとしてその名前を変更し、新しいログ ファイルを作成します。 最大サイズは 250,000 バイト (既定値)、または CCMLOGMAXSIZE プロパティで指定された値になります。
 
 このプロパティでは、保持する以前のバージョンのログ ファイルの数を指定します。 既定値は 1 です。 このプロパティを 0 に設定すると、ログ ファイルは保持されません。  
 
@@ -369,33 +448,33 @@ Configuration Manager ログ ファイルのサイズが 250000 バイト (ま�
 
 ### <a name="ccmlogmaxsize"></a>CCMLOGMAXSIZE
 
-ログ ファイルの最大サイズ (バイト単位) です。 ログ ファイルが指定されたサイズに達すると、履歴ファイルとして名前が変更され、新しいファイルが作成されます。 このプロパティは、10000 バイト以上に設定する必要があります。 既定値は 250000 バイトです。  
+ログ ファイルの最大サイズ (バイト単位) です。 ログが指定されたサイズに達した場合、クライアントは履歴ファイルとしてその名前を変更し、新しいファイルを作成します。 このプロパティは、10,000 バイト以上に設定する必要があります。 既定値は 250,000 バイトです。  
 
 例: `CCMSetup.exe CCMLOGMAXSIZE=300000`  
 
 ### <a name="disablesiteopt"></a>DISABLESITEOPT
 
- TRUE に設定すると、クライアント コンピューターの管理者資格情報を持つエンド ユーザーが、クライアントのコントロール パネルの **Configuration Manager** で、Configuration Manager の割り当て済みサイトを変更することができなくなります。  
+ このプロパティを TRUE に設定すると、管理ユーザーは、**Configuration Manager** コントロール パネルで割り当て済みサイトを変更できなくなります。  
 
  例: **CCMSetup.exe DISABLESITEOPT=TRUE**  
 
 ### <a name="disablecacheopt"></a>DISABLECACHEOPT
 
-「TRUE」 に設定すると、クライアント コンピューターの管理者資格情報を持つエンドユーザーが、クライアント コンピューターのコントロール パネルで Configuration Manager を使用して、Configuration Manager クライアントのプログラム クライアントのキャッシュ フォルダーの設定を変更することができなくなります。  
+このプロパティを TRUE に設定すると、管理ユーザーは、**Configuration Manager** コントロール パネルでクライアント キャッシュ フォルダー設定を変更できなくなります。  
 
 例: `CCMSetup.exe DISABLECACHEOPT=TRUE`  
 
 ### <a name="dnssuffix"></a>DNSSUFFIX
 
- クライアント用に、DNS で発行されている管理ポイントを検索する DNS ドメインを指定します。 管理ポイントが特定されると、その管理ポイントは、階層内のその他の管理ポイントについて、クライアントに通知します。 つまり、DNS 発行によって特定される管理ポイントは、クライアントのサイトに存在する必要はなく、階層内のすべての管理ポイントが対象となります。  
+ クライアント用に、DNS で発行されている管理ポイントを検索する DNS ドメインを指定します。 管理ポイントが特定されると、その管理ポイントは、階層内のその他の管理ポイントについて、クライアントに通知します。 この動作は、DNS 発行を使用して特定される管理ポイントが、クライアントのサイトに存在する必要はなく、階層内のすべての管理ポイントが対象となることを意味します。  
 
 > [!NOTE]  
->  このプロパティは、発行された管理ポイントとクライアントが同じドメインにある場合、指定する必要はありません。 この場合、DNS での管理ポイントの検索で、クライアントのドメインが自動的に使用されます。  
+>  発行された管理ポイントとクライアントが同じドメインにある場合は、このプロパティを指定する必要はありません。 この場合、DNS での管理ポイントの検索で、クライアントのドメインが自動的に使用されます。  
 
- Configuration Manager クライアントに対するサービスの場所の検索方法として DNS 発行を使用することの詳細については、「[クライアントが System Center Configuration Manager のサイト リソースやサービスを検索する方法を理解する](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)」の「[サービスの場所とクライアントが割り当て済み管理ポイントを特定する方法](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location)」を参照してください。  
+ Configuration Manager クライアントに対するサービスの場所の検索方法として DNS 発行を使用することの詳細については、「[サービスの場所とクライアントが割り当て済み管理ポイントを特定する方法](../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location)」を参照してください。  
 
 > [!NOTE]  
->  既定では、DNS 発行は Configuration Manager で無効になっています。  
+>  既定では、DNS 発行は Configuration Manager で有効になっていません。  
 
  例: `CCMSetup.exe SMSSITECODE=ABC DNSSUFFIX=contoso.com`  
 
@@ -418,15 +497,15 @@ Configuration Manager クライアント コンピューターによって送信
 
 ### <a name="notifyonly"></a>NOTIFYONLY
 
-クライアントで見つかった問題について、クライアントのステータスで報告しますが、修復はしないことを指定します。  
+クライアントでステータスを報告するが、見つかった問題を修復しないように指定します。  
 
 例: `CCMSetup.exe NOTIFYONLY=TRUE`  
 
-詳細については、「 [How to configure client status in System Center Configuration Manager](configure-client-status.md)」をご覧ください。  
+詳細については、「[クライアント ステータスを構成する方法](configure-client-status.md)」を参照してください。  
 
 ### <a name="resetkeyinformation"></a>RESETKEYINFORMATION
 
- Configuration Manager クライアントに間違った Configuration Manager の信頼されたルート キーがあり、信頼された管理ポイントに接続して新しい信頼されたルート キーを取得できない場合は、このプロパティを使用して古い信頼されたルート キーを手動で削除する必要があります。 この状況は、クライアントを 1 つのサイト階層から別のサイト階層に移動したときに発生する場合があります。 このプロパティは、HTTP および HTTPS クライアント接続を使用するクライアントに適用されます。  
+ クライアントに間違った Configuration Manager の信頼されたルート キーがあり、信頼された管理ポイントに接続して新しい信頼されたルート キーを取得できない場合は、このプロパティを使用して古い信頼されたルート キーを手動で削除します。 この状況は、クライアントを 1 つのサイト階層から別のサイト階層に移動したときに発生する場合があります。 このプロパティは、HTTP および HTTPS クライアント接続を使用するクライアントに適用されます。  
 
  例: `CCMSetup.exe RESETKEYINFORMATION=TRUE`  
 
@@ -438,7 +517,7 @@ Configuration Manager クライアント コンピューターによって送信
 
 ### <a name="smscachedir"></a>SMSCACHEDIR
 
-一時ファイルを保存するクライアント コンピューターのクライアントキャッシュ フォルダーの場所を指定します。 既定では、 *%Windir \ccmcache*にあります。  
+一時ファイルを保存するクライアント コンピューターのクライアントキャッシュ フォルダーの場所を指定します。 既定の場所は *%Windir%\ccmcache* です。  
 
 例: `CCMSetup.exe SMSCACHEDIR="C:\Temp"`  
 
@@ -464,7 +543,7 @@ Configuration Manager クライアント コンピューターによって送信
 
 -   NTFSONLY: NTFS ディスク ドライブにのみフォルダーをインストールするように指定します。 この値は、パスが SMSCACHEDIR プロパティと共に指定されている場合は無視されます。  
 
--   COMPRESS: フォルダーを圧縮形式で保持するように指定します。  
+-   COMPRESS: フォルダーを圧縮形式で格納するように指定します。  
 
 -   FAILIFNOSPACE: フォルダーをインストールするための領域が十分にない場合にクライアント ソフトウェアを削除するように指定します。  
 
@@ -474,9 +553,9 @@ Configuration Manager クライアント コンピューターによって送信
 ### <a name="smscachesize"></a>SMSCACHESIZE
 
 > [!IMPORTANT]
-> Configuration Manager バージョン 1606 以降では、新しいクライアント設定でクライアント キャッシュ フォルダーのサイズを指定できます。 これらのクライアント設定を追加すると、SMSCACHESIZE を使用して、クライアント キャッシュのサイズを指定する client.msi プロパティとして効果的に置き換えられます。 詳細については、「[キャッシュ サイズに関するクライアント設定](about-client-settings.md#client-cache-settings)」を参照してください。  
+> クライアント設定でクライアント キャッシュ フォルダーのサイズを指定できます。 これらのクライアント設定を追加すると、SMSCACHESIZE を使用して、クライアント キャッシュのサイズを指定する client.msi プロパティとして効果的に置き換えられます。 詳細については、「[キャッシュ サイズに関するクライアント設定](about-client-settings.md#client-cache-settings)」を参照してください。  
 
-1602 より前では、PERCENTDISKSPACE プロパティまたは PERCENTFREEDISKSPACE プロパティと共に使用する場合は、SMSCACHESIZE はクライアント キャッシュ フォルダーのサイズをメガバイト (MB) 単位またはパーセント単位で指定します。 このプロパティを設定しない場合は、フォルダーは既定の最大サイズの 5120 MB に設定されます。 指定できる最小値は 1 MB です。  
+<!-- For 1602 and earlier, SMSCACHESIZE specifies the size of the client cache folder in megabyte (MB) or as a percentage when used with the PERCENTDISKSPACE or PERCENTFREEDISKSPACE property. If this property isn't set, the folder defaults to a maximum size of 5120 MB. The lowest value that you can specify is 1 MB.  -->
 
 > [!NOTE]  
 >  ダウンロードが必要な新しいパッケージが原因でフォルダーが最大サイズを超えた場合で、フォルダーを消去して十分な領域を空けることができない場合は、パッケージのダウンロードは失敗し、プログラムまたはアプリケーションは実行されません。  
@@ -486,7 +565,7 @@ Configuration Manager クライアント コンピューターによって送信
 例: `CCMSetup.exe SMSCACHESIZE=100`  
 
 > [!NOTE]  
->  クライアントをインストールする場合、SMSCACHESIZE プロパティまたは SMSCACHEFLAGS プロパティを使用して以前よりも小さいキャッシュ サイズを設定することはできません。 小さいサイズを設定しようとすると、値は無視され、キャッシュ サイズには以前の設定値が自動的に設定されます。  
+>  クライアントを再インストールする場合、SMSCACHESIZE または SMSCACHEFLAGS インストール プロパティを使用して以前よりも小さいキャッシュ サイズを設定することはできません。 この操作を実行しようとすると、値は無視されます。 キャッシュ サイズは、前のサイズに自動的に設定されます。  
 
 ### <a name="smsconfigsource"></a>SMSCONFIGSOURCE
 
@@ -494,7 +573,7 @@ Configuration Manager インストーラーで構成設定を確認する場所�
 
 -   R: レジストリで構成設定を確認します。  
 
-   詳しくは、[レジストリ内のクライアント インストール プロパティの保存に関する情報](https://technet.microsoft.com/library/gg712298.aspx#BKMK_Provision)をご覧ください。  
+   詳細については、[レジストリ内のクライアント インストール プロパティの格納に関する情報](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision)を参照してください。  
 
 -   P: コマンド プロンプトで指定したインストール プロパティで構成設定を確認します。  
 
@@ -508,15 +587,15 @@ Configuration Manager インストーラーで構成設定を確認する場所�
 
 ### <a name="smsdirectorylookup"></a>SMSDIRECTORYLOOKUP
 
- クライアントが Windows Internet Name Service (WINS) を使用して HTTP 接続を許可する管理ポイントを検索できるようにするかどうかを指定します。 Active Directory ドメイン サービスまたは DNS に管理ポイントが見つからないとき、クライアントはこの方法を使用します。  
+ クライアントが Windows Internet Name Service (WINS) を使用して HTTP 接続を許可する管理ポイントを検索できるようにするかどうかを指定します。 Active Directory Domain Services または DNS に管理ポイントが見つからないときに、クライアントではこの方法を使用します。  
 
  このプロパティは、クライアントが名前解決に WINS を使用するかどうかに影響しません。  
 
  このプロパティでは 2 つの異なるモードを構成できます。  
 
--   NOWINS: これはこのプロパティでは最も安全な設定であり、クライアントが WINS で管理ポイントを探すのを防ぎます。  この設定を使用する場合は、クライアントには、Active Directory ドメイン サービスといったイントラネット上、または DNS 公開の使用などで管理ポイントを探す代替の方法が用意されている必要があります。  
+-   NOWINS: この値はこのプロパティでは最も安全な設定であり、クライアントが WINS で管理ポイントを探すのを防ぎます。 この設定を使用する場合は、クライアントには、Active Directory ドメイン サービスといったイントラネット上、または DNS 公開の使用などで管理ポイントを探す代替の方法が用意されている必要があります。  
 
--   WINSSECURE (既定): このモードでは、HTTP 通信を使用するクライアントは、WIN を使用して管理ポイントを探すことができます。 しかし、クライアントは管理ポイントへ接続する前に信頼されたルート キーを持っている必要があります。 詳細については、「 [Plan for Security 」の「 System Center Configuration Manager](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) 」の「 [Plan for security 」の「 System Center Configuration Manager](../../plan-design/security/plan-for-security.md)」を参照してください。  
+-   WINSSECURE (既定): このモードでは、HTTP 通信を使用するクライアントは、WIN を使用して管理ポイントを探すことができます。 しかし、クライアントは管理ポイントへ接続する前に信頼されたルート キーを持っている必要があります。 詳細については、「[信頼されたルート キーの計画](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)」を参照してください。  
 
 
  例: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`  
@@ -532,15 +611,16 @@ Configuration Manager クライアントが使用する最初の管理ポイン�
 
 例: `CCMSetup.exe SMSMP=https://smsmp01.contoso.com`  
 
+
 ### <a name="smspublicrootkey"></a>SMSPUBLICROOTKEY
 
- Configuration Manager の信頼されたルート キーを Active Directory Domain Services から取得できない場合は、Configuration Manager の信頼されたルート キーを指定します。 このプロパティは、HTTP および HTTPS クライアント接続を使用するクライアントに適用されます。 詳細については、「 [Plan for Security 」の「 System Center Configuration Manager](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) 」の「 [Plan for security 」の「 System Center Configuration Manager](../../plan-design/security/plan-for-security.md)」を参照してください。  
+ Configuration Manager の信頼されたルート キーを Active Directory Domain Services から取得できない場合は、Configuration Manager の信頼されたルート キーを指定します。 このプロパティは、HTTP および HTTPS クライアント接続を使用するクライアントに適用されます。 詳細については、「[信頼されたルート キーの計画](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)」を参照してください。  
 
  例: `CCMSetup.exe SMSPUBLICROOTKEY=&lt;key\>`  
 
 ### <a name="smsrootkeypath"></a>SMSROOTKEYPATH
 
- Configuration Manager の信頼されたルート キーを再インストールするために使用します。 信頼されたルート キーを含むファイルの完全なパスとファイル名を指定します。 このプロパティは、HTTP および HTTPS クライアント接続を使用するクライアントに適用されます。 詳細については、「 [Plan for Security 」の「 System Center Configuration Manager](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK) 」の「 [Plan for security 」の「 System Center Configuration Manager](../../plan-design/security/plan-for-security.md)」を参照してください。  
+ Configuration Manager の信頼されたルート キーを再インストールするために使用します。 信頼されたルート キーを含むファイルの完全なパスとファイル名を指定します。 このプロパティは、HTTP および HTTPS クライアント接続を使用するクライアントに適用されます。 詳細については、「[信頼されたルート キーの計画](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)」を参照してください。  
 
  例: CCMSetup.exe SMSROOTKEYPATH=&lt;完全なパスとファイル名\>`  
 
@@ -554,10 +634,10 @@ Configuration Manager クライアントが使用する最初の管理ポイン�
 
 ### <a name="smssitecode"></a>SMSSITECODE
 
- Configuration Manager クライアントを割り当てる Configuration Manager サイトを指定します。 3 文字のサイト コードか、または AUTO を指定できます。 AUTO が指定された場合、またはこのプロパティが指定されなかった場合は、クライアントは、Active Directory Domain Services または指定した管理ポイントからの Configuration Manager サイト割り当てを判断しようと試みます。 クライアントのアップグレードに対して AUTO を有効にするには、[SITEREASSIGN](#sitereassign) を TRUE に設定する必要もあります。    
+ クライアントを割り当てる Configuration Manager サイトを指定します。 この値には、3 文字のサイト コード、または AUTO という単語を指定できます。 AUTO を指定する場合、またはこのプロパティを指定しない場合、クライアントは、Active Directory Domain Services または指定した管理ポイントからのサイト割り当てを判断しようとします。 クライアントのアップグレードに対して AUTO を有効にするには、[SITEREASSIGN](#sitereassign) を TRUE に設定する必要もあります。    
 
 > [!NOTE]  
->  インターネットベースの管理ポイント (CCMHOSTNAME) も指定する場合、AUTO を使用しないでください。 この場合、クライアントをそのサイトに直接割り当てる必要があります。  
+>  インターネット ベースの管理ポイント (CCMHOSTNAME) も指定する場合は、AUTO を使用しないでください。 この場合、クライアントをそのサイトに直接割り当てる必要があります。  
 
  例: `CCMSetup.exe SMSSITECODE=XZY`  
 

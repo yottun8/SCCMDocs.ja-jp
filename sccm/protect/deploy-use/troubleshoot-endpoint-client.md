@@ -1,26 +1,27 @@
 ---
-title: "Windows Defender または Endpoint Protection クライアントのトラブルシューティング"
+title: Windows Defender または Endpoint Protection クライアントのトラブルシューティング
 titleSuffix: Configuration Manager
-description: "Windows Defender および Endpoint Protection の問題をトラブルシューティングする方法について説明します。"
+description: Windows Defender および Endpoint Protection の問題をトラブルシューティングする方法について説明します。
 ms.custom: na
-ms.date: 01/03/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: b667db471a16faef057f49a0a26759849e03f237
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 7
+caps.handback.revision: 0
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.openlocfilehash: a8460cafce15e5fb97ace76983932841ec77412f
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>Windows Defender または Endpoint Protection クライアントのトラブルシューティング
 
@@ -88,7 +89,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 4.  **[既定の Web ブラウザー]**の下の **[既定に設定する]**をクリックします。  
 
-5.  **[OK]**をクリックします。  
+5.  **[OK]** をクリックします。  
 
 6.  Windows Defender または Endpoint Protection を開きます。 **[更新]** タブをクリックして、 **[更新]**をクリックします。  
 
@@ -100,7 +101,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 2.  受け取ったエラー メッセージにコード 0x80072f8f が含まれている場合、問題の原因はおそらく、コンピューターに設定されている日付と時刻が不正確なことです。  
 
-3.  コンピューターの日付と時刻の設定を再設定するには、「 [診断ツール Fix it : デスクトップ アイコンが動かないなど一般的なシステムの問題](http://go.microsoft.com/fwlink/?LinkId=155579) (http://go.microsoft.com/fwlink/?LinkId=155579)」にある手順を実行してください。  
+3.  コンピューターの日付と時刻の設定を再設定する場合は、「[診断ツール Fix it: デスクトップ アイコンが動かないなど一般的なシステムの問題](http://go.microsoft.com/fwlink/?LinkId=155579)」 (http://go.microsoft.com/fwlink/?LinkId=155579) にある手順に従ってください。  
 
 ### <a name="step-4-rename-the-software-distribution-folder-on-your-computer"></a>手順 4: コンピューターにあるソフトウェア配布フォルダーの名前を変更する  
 
@@ -153,16 +154,16 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 ### <a name="step-6-manually-install-the-virus-and-spyware-definition-updates"></a>手順 6: ウイルスおよびスパイウェア定義の更新を手動でインストールする  
 
--   32 ビット Windows オペレーティング システムを実行している場合は、次の URL から手動で最新の更新プログラムをダウンロードします: [http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) (http://go.microsoft.com/fwlink/?LinkID=87342)。  
+-   32 ビット Windows オペレーティング システムを実行している場合は、[http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) (http://go.microsoft.com/fwlink/?LinkID=87342) で最新の更新プログラムを手動でダウンロードします。  
 
--   64 ビット Windows オペレーティング システムを実行している場合は、次の URL から手動で最新の更新プログラムをダウンロードします: [http://go.microsoft.com/fwlink/?LinkID=87341](http://go.microsoft.com/fwlink/?LinkID=87341) (http://go.microsoft.com/fwlink/?LinkID=87341)。  
+-   64 ビット Windows オペレーティング システムを実行している場合は、[http://go.microsoft.com/fwlink/?LinkID=87341](http://go.microsoft.com/fwlink/?LinkID=87341) (http://go.microsoft.com/fwlink/?LinkID=87341) で最新の更新プログラムを手動でダウンロードします。  
 
--   **[ 実行]** をクリックします。 最新の更新プログラムが、お使いのコンピューターに手動でインストールされます。  
+-   **[実行]** をクリックします。 最新の更新プログラムが、お使いのコンピューターに手動でインストールされます。  
 
 
 ### <a name="step-7-contact-support"></a>手順 7: サポートに問い合わせる  
 
--   これらの手順を実行しても問題が解決しない場合は、サポートにお問い合わせください。 詳細については「 [カスタマー サポート](http://go.microsoft.com/fwlink/?LinkID=196174) (http://go.microsoft.com/fwlink/?LinkID=196174)」をご覧ください。  
+-   これらの手順を実行しても問題が解決しない場合は、サポートにお問い合わせください。 詳細については、「[カスタマー サポート](http://go.microsoft.com/fwlink/?LinkID=196174)」 (http://go.microsoft.com/fwlink/?LinkID=196174) を参照してください。  
 
 ##  <a name="starting-windows-defender-or-endpoint-protection-service"></a>Windows Defender または Endpoint Protection サービスの開始  
  **現象**  
@@ -179,11 +180,11 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 1.  **[スタート]** をクリックし、 **services.msc**を検索して、 **Enter**キーを押します。  
 
-2.  **[ Microsoft Antimalware Service]** を探します。 それを右クリックして **[ プロパティ ]** を選択するか、それをダブルクリックしてサービスを開きます。  
+2.  **[Microsoft Antimalware Service]** を探します。 それを右クリックして **[プロパティ]** を選択するか、それをダブルクリックしてサービスを開きます。  
 
 3.  **[スタートアップの種類]** が **[自動]** に設定されていることを確認します。  
 
-4.  **[ 開始 ]** ボタンをクリックして、サービスを開始します。 **[ 開始 ]** ボタンが使用できない場合は、**[ 停止 ]** ボタンをクリックしてから **[ 開始 ]** ボタンをクリックして、サービスを再開させます。  
+4.  **[開始]** ボタンをクリックして、サービスを開始します。 **[開始]** ボタンが使用できない場合は、**[停止]** ボタンをクリックしてから **[開始]** ボタンをクリックして、サービスを再開させます。  
 
 5.  このプロセスの間に表示されるエラーは必ずメモしておき、オンラインで問い合わせるときに、そのエラー情報を含めるようにします。  
 
@@ -238,8 +239,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 3.  ケーブル モデムまたは DSL ルーターを使用している場合は、ルーターへの接続と、コンピューターへの接続がしっかりとできていることを確認します。 プラグを抜き、ルーターとモデムをオフにしてみます。 数分待ってから、まずモデムにプラグを接続します。1 分待ってから、ルーターにプラグを接続します。コンピューターを再起動します。  
 
 ##  <a name="detected-threat-cant-be-remediated"></a>検出された脅威を修復できない  
- Windows Defender または   
-      Endpoint Protection が、ファイル名の拡張子が .zip である圧縮ファイル内やネットワーク共有内に隠れている潜在的な脅威を検出すると、その脅威を検疫または削除して対処しようとします。  
+ Windows Defender または Endpoint Protection は、ファイル名の拡張子が .zip である圧縮ファイル内やネットワーク共有内に隠れている潜在的な脅威を検出すると、その脅威を検疫または削除して対処しようとします。  
 
 ### <a name="remove-or-scan-the-file"></a>ファイルを削除またはスキャンする  
 
@@ -286,11 +286,11 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 1.  **[スタート]** をクリックし、 **services.msc**を検索して、 **Enter**キーを押します。  
 
-2.  **[ Windows Installer]** を右クリックし、**[ 開始]** をクリックします。 **[ 開始 ]** ボタンが使用できず、**[ 停止 ]** および **[ 再開 ]** ボタンが使用可能である場合は、このサービスが既に開始されていることを意味しています。  
+2.  **[Windows Installer]** を右クリックし、**[開始]** をクリックします。 **[開始]** ボタンが使用できず、**[停止]** および **[再開]** ボタンが使用可能である場合は、このサービスが既に開始されていることを意味しています。  
 
-3.  **[ サービス ]** ページで **[ ファイル ]** メニューの **[ 終了]** をクリックします。  
+3.  **[サービス]** ページで **[ファイル]** メニューの **[終了]** をクリックします。  
 
-4.  **[スタート]** ボタンをクリックして **[コマンド プロンプト]** を検索します。 **[ Command Prompt]** を右クリックし、**[ 管理者として実行]** をクリックします。  
+4.  **[スタート]** ボタンをクリックして **[コマンド プロンプト]** を検索します。 **[Command Prompt]** を右クリックし、**[管理者として実行]** をクリックします。  
 
 5.  「 **MSIEXEC /REGSERVER**」と入力し、 **Enter**キーを押します。  
 
@@ -303,11 +303,11 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 1.  **[スタート]** をクリックし、 **msconfig**を検索して、 **Enter**キーを押します。  
 
-2.  **[ 全般 ]** タブで **[ スタートアップのオプションを選択]** をクリックし、**[ スタートアップの項目を読み込む ]** チェック ボックスをオフにします。  
+2.  **[全般]** タブで **[スタートアップのオプションを選択]** をクリックし、**[スタートアップの項目を読み込む]** チェック ボックスをオフにします。  
 
-3.  **[ サービス ]** タブで **[ Microsoft のサービスをすべて隠す ]** チェック ボックスをオンにし、一覧に残っているサービスのすべてのチェック ボックスをオフにします。  
+3.  **[サービス]** タブで **[Microsoft のサービスをすべて隠す]** チェック ボックスをオンにし、一覧に残っているサービスのすべてのチェック ボックスをオフにします。  
 
-4.  **[ OK]** をクリックし、**[ 再起動 ]** をクリックして、コンピューターを再起動します。  
+4.  **[OK]** をクリックし、**[再起動]** をクリックして、コンピューターを再起動します。  
 
 5.  もう一度 Endpoint Protection をインストールしてみます。  
 

@@ -1,9 +1,9 @@
 ---
-title: "タスク シーケンスのステップ"
+title: タスク シーケンスのステップ
 titleSuffix: Configuration Manager
-description: "Configuration Manager タスク シーケンスに追加できるタスク シーケンス ステップについて説明します。"
+description: Configuration Manager タスク シーケンスに追加できるステップについて説明します。
 ms.custom: na
-ms.date: 01/12/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 26
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 5320d7747f7e2c6164da8c1801e631b749935d6d
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+manager: dougeby
+ms.openlocfilehash: ad68209784b78da5c6e75745094ba8e6bc002c44
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>System Center Configuration Manager のタスク シーケンスのステップ
 
@@ -509,6 +509,8 @@ ms.lasthandoff: 02/01/2018
 -   ドライバー パッケージ  
 
 -   パッケージ  
+
+-   ブート イメージ
     
 このステップは、次のシナリオでオペレーティング システムをアップグレードするためのタスク シーケンスに適しています。  
 

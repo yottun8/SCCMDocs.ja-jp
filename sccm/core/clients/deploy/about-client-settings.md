@@ -1,9 +1,9 @@
 ---
-title: "クライアント設定"
+title: クライアント設定
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の管理コンソールを使って、クライアント設定を選びます。"
+description: クライアントの動作を制御する既定の設定とカスタム設定について説明します。
 ms.custom: na
-ms.date: 01/05/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 15
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: dddfde242a67a0b4a9311c0fb6f0b2f0e6742cc2
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+manager: dougeby
+ms.openlocfilehash: 42b9364fc88acc3f403db8d2ca9243a117fd78bf
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager のクライアント設定について
 
@@ -114,18 +114,19 @@ Configuration Manager は、このトラフィックを許可する Windows Fire
 
 ユーザーがインターネット ベースのコンピューターを使っているときもユーザー ポリシーを受け取るようにするには、これを **[はい]** に設定します。 以下の要件も適用されます。  
 
--   クライアントがインターネット ベースのクライアント管理用に構成されている。
+-   クライアントとサイトは、[インターネット ベースのクライアント管理](/sccm/core/clients/manage/plan-internet-based-client-management)に対してか、[クラウド管理ゲートウェイ](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)に対して構成されます。  
 
 -   **[クライアントでユーザー ポリシーを有効にする]** が **[はい]** に設定されている。  
 
--   インターネット ベースの管理ポイントが、Windows 認証 (Kerberos または NTLM) を使ってユーザーを正しく認証する。  
+-   インターネット ベースの管理ポイントが、Windows 認証 (Kerberos または NTLM) を使ってユーザーを正しく認証する。 詳細については、[インターネットからのクライアント通信に関する考慮事項](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)のページを参照してください。  
+
+-   バージョン 1710 より、クラウド管理ゲートウェイは Azure Active Directory を使用してユーザーを正常に認証するようになりました。 詳細については、[Azure AD 参加デバイスにユーザーが利用できるアプリケーションを展開する方法](\sccm\apps\deploy-use\deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)に関するページを参照してください。  
 
 このオプションを **[いいえ]** に設定した場合、または上記の要件のいずれかが満たされていない場合は、インターネット上のコンピューターはコンピューター ポリシーのみを受け取ります。 この場合は、ユーザーは、インターネットベースのアプリケーション カタログからアプリケーションを表示、要求、およびインストールできます。 この設定が **[いいえ]** に設定されていて、**[クライアントでユーザー ポリシーを有効にする]** が **[はい]** に設定されている場合は、コンピューターがイントラネットに接続されるまで、ユーザーはユーザー ポリシーを受け取りません。  
 
-インターネットでのクライアント管理のについて詳しくは、「[インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)」をご覧ください。  
-
 > [!NOTE]  
->  ユーザーからのアプリケーションの承認要求には、ユーザー ポリシーまたはユーザー認証は必要ありません。  
+>  インターネットベースのクライアント管理の場合、ユーザーからのアプリケーションの承認要求には、ユーザー ポリシーまたはユーザー認証は必要ありません。 クラウド管理ゲートウェイでは、アプリケーション承認要求がサポートされません。   
+
 
 
 ## <a name="cloud-services"></a>クラウド サービス
@@ -228,7 +229,7 @@ Configuration Manager は、この設定を使用して、ソフトウェア セ
 
 ### <a name="use-new-software-center"></a>新しいソフトウェア センターの使用
 
-これを **[はい]** に設定すると、すべてのクライアント コンピューターが新しいソフトウェア センターを使います。 ソフトウェア センターでは、以前はアプリケーション カタログ内だけでアクセスできた、ユーザーが利用できるアプリが表示されます。 アプリケーション カタログには Silverlight が必要ですが、ソフトウェア センターではこれは前提条件ではありません。   
+これを **[はい]** に設定すると、すべてのクライアント コンピューターが新しいソフトウェア センターを使います。 ソフトウェア センターでは、以前はアプリケーション カタログ内だけでアクセスできた、ユーザーが利用できるアプリが表示されます。 アプリケーション カタログには Silverlight が必要ですが、ソフトウェア センターではこれは前提条件ではありません。 Configuration Manager 1802 より、既定の設定は **[はい]** です。  
 
 ユーザーが利用できるアプリをソフトウェア センターに表示するには、アプリケーション カタログ Web サイト ポイントとアプリケーション カタログ Web サービス ポイントのサイト システムの役割が引き続き必要です。  
 
@@ -284,7 +285,7 @@ Configuration Manager クライアントで Windows PowerShell スクリプト�
 
 -   **[制限済み]**: Configuration Manager クライアントは、クライアント コンピューターの現在の PowerShell 構成を使います。 この構成により、署名されていないスクリプトを実行できるかどうかが決まります。  
 
--   **[すべて署名済み]**: Configuration Manager クライアントは、信頼された発行元によって署名されている場合にのみ、スクリプトを実行します。 この制限は、クライアント コンピューターの現在の PowerShell 構成とは独立して適用されます。  
+-   **すべて署名済み**: Configuration Manager クライアントは、信頼された発行元によって署名されている場合にのみ、スクリプトを実行します。 この制限は、クライアント コンピューターの現在の PowerShell 構成とは独立して適用されます。  
 
 このオプションには Windows PowerShell バージョン 2.0 以降が必要です。 既定値は **[すべて署名済み]** です。  
 
@@ -322,6 +323,21 @@ Configuration Manager クライアントで Windows PowerShell スクリプト�
 
 メンテナンス期間の詳細については、「[System Center Configuration Manager でメンテナンス期間を使用する方法](../../../core/clients/manage/collections/use-maintenance-windows.md)」を参照してください。
 
+
+
+## <a name="delivery-optimization"></a>配信の最適化
+
+<!-- 1324696 -->
+Configuration Manager の境界グループを使って、企業ネットワークおよびリモート オフィスへのコンテンツ配布を定義して調整します。 [Windows の配信最適化](/windows/deployment/update/waas-delivery-optimization)は、Windows 10 デバイス間でコンテンツを共有するための、クラウド ベースのピア ツー ピア テクノロジです。 バージョン 1802 以降、ピア間でコンテンツを共有するときは、境界グループを使うように配信の最適化を構成します。
+
+ > [!Note]
+ > 配信の最適化は Windows 10 クライアントでのみ利用できます
+
+### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>配信の最適化グループ ID の Configuration Manager 境界グループを使用します
+ **[はい]** を選択すると、クライアントでの配信最適化グループ識別子として境界グループ識別子が適用されます。 クライアントは、配信の最適化クラウド サービスと通信するとき、この識別子を使って目的のコンテンツを含むピアを探します。 
+
+
+
 ##  <a name="endpoint-protection"></a>Endpoint Protection  
 >  [!Tip]   
 > 次の情報の他に、「[シナリオ例: System Center Configuration Manager で System Center Endpoint Protection を使用してマルウェアからコンピューターを保護する](/sccm/protect/deploy-use/scenarios-endpoint-protection)」にも、Endpoint Protection クライアント設定を使用することに関する詳細があります。
@@ -330,11 +346,11 @@ Configuration Manager クライアントで Windows PowerShell スクリプト�
 
 階層内のコンピューター上の既存の Endpoint Protection クライアントおよび Windows Defender クライアントを管理する必要がある場合は、**[はい]** を選びます。  
 
-このオプションは、Endpoint Protection クライアントを既にインストールしており、Configuration Manager によってクライアントを管理する必要がある場合に選びます。 この個別のインストールには、Configuration Manager のアプリケーションまたはパッケージとプログラムを使うスクリプト化されたプロセスが含まれます。
+このオプションは、Endpoint Protection クライアントを既にインストールしており、Configuration Manager によってクライアントを管理する必要がある場合に選びます。 この個別のインストールには、Configuration Manager のアプリケーションまたはパッケージとプログラムを使うスクリプト化されたプロセスが含まれます。 Configuration Manager 1802 以降、Windows 10 デバイスには、Endpoint Protection エージェントをインストールする必要がありません。 ただし、引き続き、**[クライアント コンピューターの Endpoint Protection クライアントを管理する]** を有効にする必要があります。 <!--503654-->
 
 ### <a name="install-endpoint-protection-client-on-client-computers"></a>[Endpoint Protection クライアントをクライアント コンピューターにインストールする]
 
-クライアントをまだ実行していないクライアント コンピューターに Endpoint Protection クライアントをインストールして有効にする場合は、**[はい]** を選びます。  
+クライアントをまだ実行していないクライアント コンピューターに Endpoint Protection クライアントをインストールして有効にする場合は、**[はい]** を選びます。 Configuration Manager 1802 以降、Windows 10 クライアントには、Endpoint Protection エージェントをインストールする必要がありません。  
 
 > [!NOTE]  
 >  Endpoint Protection クライアントが既にインストールされている場合は、**[いいえ]** を選んでも Endpoint Protection クライアントはアンインストールされません。 Endpoint Protection クライアントをアンインストールするには、**[クライアント コンピューターの Endpoint Protection クライアントを管理する]** クライアント設定を **[いいえ]** に設定します。 その後、パッケージとプログラムを展開して Endpoint Protection クライアントをアンインストールします。  
@@ -609,8 +625,14 @@ Configuration Manager がコンピューターのリモート デスクトップ
 - **ソフトウェア センターの配色** </br>
 **[色の選択]** を選んで、ソフトウェア センターで主に使う色を定義します。
 - **ソフトウェア センターのロゴを選択する** </br>
-**[参照]** を選んで、ソフトウェア センターで表示する画像を選びます。 ロゴは、400 x 100 ピクセルの JPEG、PNG、または BMP で、サイズは 750 KB である必要があります。 ロゴのファイル名にスペースが含めることはできません。 <!--SMS.503731 space in filename, noticed BMP missing as filetype-->
+**[参照]** を選んで、ソフトウェア センターで表示する画像を選びます。 ロゴは、400 x 100 ピクセルの JPEG、PNG、または BMP で、サイズは 750 KB である必要があります。 ロゴのファイル名にスペースが含めることはできません。  
+         
+### <a name="bkmk_HideUnapproved"></a> ソフトウェア センターで承認されていないアプリケーションを非表示にする
+Configuration Manager バージョン 1802 以降、このオプションを有効にすると、承認を必要とするユーザーの使用可能なアプリケーションがソフトウェア センターでは非表示になります。   <!--1355146-->
 
+### <a name="bkmk_HideInstalled"></a> ソフトウェア センターでインストール済みのアプリケーションを非表示にする
+Configuration Manager バージョン 1802 以降、このオプションを有効にすると、既にインストールされているアプリケーションが、[アプリケーション] タブに表示されなくなります。 Configuration Manager 1802 をインストールすると、あるいはこのバージョンにアップグレードすると、このオプションが既定として設定されます。  インストールされているアプリケーションは、[インストールの状態] タブで引き続き確認できます。<!--1357592-->   
+  
 ### <a name="software-center-tab-visibility"></a>ソフトウェア センターのタブの表示
 ソフトウェア センターで次のタブを表示するには、このグループの追加設定を **[はい]** に構成します。
 - **アプリケーション**

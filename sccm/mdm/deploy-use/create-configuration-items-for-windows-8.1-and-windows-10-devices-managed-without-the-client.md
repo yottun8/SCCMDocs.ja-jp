@@ -1,7 +1,7 @@
 ---
-title: "Intune を使用して管理されている Windows 8.1 および Windows 10 デバイスの構成項目を作成する"
+title: Intune を使用して管理されている Windows 8.1 および Windows 10 デバイスの構成項目を作成する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Windows 10 構成項目使用して、Windows 10 コンピューターの設定を管理します。"
+description: System Center Configuration Manager の Windows 10 構成項目使用して、Windows 10 コンピューターの設定を管理します。
 ms.custom: na
 ms.date: 07/31/2017
 ms.prod: configuration-manager
@@ -12,8 +12,8 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 20
+caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
@@ -374,13 +374,13 @@ Configuration Manage で企業のデータ保護を構成する方法につい�
 |**オートコンプリートを使用する**|Microsoft Edge ブラウザーの Autofill 機能を使用できるようにします。|  
 |**Password Manager を許可する**|Microsoft Edge ブラウザーの Password Manager 機能を使用できるようにします。|  
 |**エンタープライズ モード サイト リストの場所**|エンタープライズ モードで開く Web サイトの一覧を検索できる場所を指定します。 ユーザーは、この一覧を編集できません。|
-|**About Flags へのアクセスをブロック**|Edge で、開発者向け設定と実験的設定が含まれる about:flags ページにエンド ユーザーがアクセスできないようにします。|
+|**About Flags へのアクセスをブロック**|Microsoft Edge で、開発者向け設定と実験的設定が含まれる about:flags ページにエンド ユーザーがアクセスできないようにします。|
 |**SmartScreen のプロンプトの上書き**|悪意のある可能性がある Web サイトに関する SmartScreen フィルターの警告を無視してアクセスすることをエンド ユーザーに許可します。|
 |**ファイルに対する SmartScreen プロンプトの上書き**|悪意のある可能性があるファイルのダウンロードに関する SmartScreen フィルターの警告を無視してダウンロードすることをエンド ユーザーに許可します。|
 |**WebRtc localhost IP アドレス**|Web RTC プロトコルを使用して電話を発信するときに、ユーザーの localhost IP アドレスが表示されないようにします。|
 |**既定の検索エンジン**|使用する既定の検索エンジンを指定します。 エンド ユーザーはこの値をいつでも変更できます。|
 |**OpenSearch XML URL**|OpenSearch XML ファイルを使用して、Microsoft Edge の検索サービスを作成できます。<br>詳細については、「[OpenSearch](https://msdn.microsoft.com/library/windows/desktop/dd940337)」を参照してください。|
-|**ホームページ (デスクトップのみ)**|Edge ブラウザーでホーム ページとして使用するサイト一覧を追加します (デスクトップのみ)。|  
+|**ホームページ (デスクトップのみ)**|Microsoft Edge ブラウザーでホーム ページとして使用するサイト一覧を追加します (デスクトップのみ)。|  
 
 
 ### <a name="windows-defender"></a>Windows Defender

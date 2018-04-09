@@ -1,20 +1,22 @@
 ---
-title: "Windows 10 デバイスの共同管理"
-description: "Configuration Manager と Microsoft Intune の両方を使用して Windows 10 デバイスを同時に管理する方法について説明します。"
-keywords: 
-author: dougeby
-manager: angrobe
-ms.date: 11/20/2017
+title: Windows 10 デバイスの共同管理
+titleSuffix: Configuration Manager
+description: Configuration Manager と Microsoft Intune の両方を使用して Windows 10 デバイスを同時に管理する方法について説明します。
+keywords: ''
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
-ms.service: 
-ms.technology: 
+ms.service: ''
+ms.technology: ''
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 0cc11a05013fd9c25ee98ec35adcbe822d8a21fb
-ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
+ms.openlocfilehash: e4b8bd58d30cd87ffc461289edbfc5da9a684cda
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="co-management-for-windows-10-devices"></a>Windows 10 デバイスの共同管理    
 <!-- 1350871 -->
@@ -60,6 +62,10 @@ Windows Update for Business ポリシーでは、Windows Update for Business に
 
 ### <a name="resource-access-policies"></a>リソースのアクセス ポリシー
 リソースのアクセス ポリシーで、デバイスに対する VPN、Wi-Fi、電子メール、および証明書の設定を構成します。 詳細については、[リソース アクセス プロファイルの展開](/sccm/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles)に関するページを参照してください。
+
+### <a name="endpoint-protection"></a>Endpoint Protection 
+<!-- 1357365 -->
+Configuration Manager 1802 以降では、Endpoint Protection のワークロードを Intune に移行することができます。 詳細については、[Intune に移行可能なワークロード](/sccm/core/clients/manage/co-management-switch-workloads.md#Workloads-able-to-be-transitioned-to-Intune)と[Configuration Manager の Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection) に関するページを参照してください。
 
 ## <a name="architectural-overview-for-co-management"></a>共同管理のアーキテクチャの概要
 次の図では、共同管理のアーキテクチャの概要と、既存の構成および Intune インフラストラクチャに共同管理がどのように組み込まれるのかを示します。

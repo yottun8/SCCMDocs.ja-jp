@@ -1,9 +1,9 @@
 ---
-title: "Technical Preview リリース"
+title: Technical Preview リリース
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の新機能を体験できるテクニカル プレビュー リリースについて説明します。"
+description: Configuration Manager の新機能を体験するテクニカル プレビュー リリースについて説明します。
 ms.custom: na
-ms.date: 02/09/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
-caps.latest.revision: 
+caps.latest.revision: 157
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 1cb4d775985839ea7c4fb1b48a04ab0be64f5d8c
-ms.sourcegitcommit: 32bbc006a41868a6d9a708db5f7b372d9c71d985
+ms.openlocfilehash: 4509c7da3ca36d2ffd3de36774bf069c40d95ce2
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview
 
@@ -149,26 +149,45 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |機能 |Technical Preview バージョン |Current Branch バージョン|  
  |----------------|---------------------|--------------------|
- |段階的展開を作成する <!-- 1357405 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#create-phased-deployments)  |![追加されていません](media/Red_X.gif)    |
- |共同管理のレポート <!-- 1356648 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#co-management-reporting)  |![追加されていません](media/Red_X.gif)    |
- |自動展開規則の評価スケジュールの機能強化 <!-- 1357133 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-automatic-deployment-rule-evaluation-schedule)  |![追加されていません](media/Red_X.gif)    |
- |配布ポイントの再割り当て <!-- 1306937 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#reassign-distribution-point)  |![追加されていません](media/Red_X.gif)    |
- |ハードウェア インベントリの機能強化 <!-- 1357389 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-hardware-inventory)  |![追加されていません](media/Red_X.gif)    |
- |ソフトウェア センターのクライアント設定の機能強化 <!-- 1355146 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-client-settings-for-software-center)  |![追加されていません](media/Red_X.gif)    |
- |Windows Defender Application Guard の新しい設定 <!-- 1356256 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#new-settings-for-windows-defender-application-guard)  |![追加されていません](media/Red_X.gif)    |
- |スクリプト実行の機能強化 <!-- 1236459 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-run-scripts)  |![追加されていません](media/Red_X.gif)    |
- |置き換えられたアプリケーションを自動的にアップグレードしない <!-- 1351266 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#do-not-automatically-upgrade-superseded-applications)  |![追加されていません](media/Red_X.gif)    | 
- |ソフトウェア センターで複数のアプリケーションをインストールする <!-- 1357126 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#install-multiple-applications-in-software-center)  |![追加されていません](media/Red_X.gif)    |
- |クライアント ベースの PXE レスポンダー サービス <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service)  |![追加されていません](media/Red_X.gif)    |
- |Configuration Manager クライアント インストールにおける変更 <!-- 1356195 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-in-the-configuration-manager-client-install)  |![追加されていません](media/Red_X.gif)    | 
- |Surface デバイス ダッシュボードに対する変更 <!-- 1355788 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-to-the-surface-device-dashboard)  |![追加されていません](media/Red_X.gif)    | 
- |Office 365 クライアント管理ダッシュボードの機能拡張 <!-- 1357281 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-office-365-client-management-dashboard)  |![追加されていません](media/Red_X.gif)    | 
- |Configuration Manager コンソールの機能拡張 <!-- 1357280,1357282 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-the-configuration-manager-console)  |![追加されていません](media/Red_X.gif)    | 
- |オペレーティング システムの展開に関する機能拡張 <!-- SMS 500897 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-operating-system-deployment)  |![追加されていません](media/Red_X.gif)    | 
- |タスク シーケンス ステップの実行<!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |[バージョン 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence)    |
- |アプリケーションをインストールするときに、ユーザー操作を許可する <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![追加されていません](media/Red_X.gif)    |
+ | 共同管理を使用して Intune に Endpoint Protection ワークロードを移行する <!-- 1357365 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#transition-endpoint-protection-workload-to-intune-using-co-management) | [バージョン 1802](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune) |  
+ | Configuration Manager 境界グループを使用するように Windows の配信の最適化を構成する <!-- 1324696 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups) | [バージョン 1802](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization) |  
+ | クラウド管理ゲートウェイ経由での Windows 10 一括アップグレード タスク シーケンス <!-- 1357149 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#windows-10-in-place-upgrade-task-sequence-via-cloud-management-gateway) | [バージョン 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy-windows-10-in-place-upgrade-via-cmg) |  
+ | Windows 10 一括アップグレード タスク シーケンスの機能強化 <!-- 1357425 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-windows-10-in-place-upgrade-task-sequence) | [バージョン 1802](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system) |  
+ | PXE 対応の配布ポイントの機能強化 <!-- 1357580 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) | ![追加されていません](media/Red_X.gif) | 
+ | タスク シーケンスの展開テンプレート <!-- 1357391 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#deployment-templates-for-task-sequences) | [バージョン 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS) |  
+ | 製品ライフサイクル ダッシュボード <!--1319632 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) | ![追加されていません](media/Red_X.gif) | 
+ | レポートの機能強化 <!--1357653 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-reporting) | [バージョン 1802](/sccm/core/servers/manage/list-of-reports#operating-system) |  
+ | ソフトウェア センターの機能強化 <!--1357592 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-software-center) | [バージョン 1802](/sccm/core/clients/deploy/about-client-settings#BKMK_HideInstalled) |  
+ | 管理ポイントに対する境界グループのフォールバック <!-- 1324594 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#boundary-group-fallback-for-management-points) | [バージョン 1802](/sccm/core/servers/deploy/configure/boundary-groups#management-points) |  
+ | CNG 証明書のサポートの強化 <!-- 1357314 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improved-support-for-cng-certificates) | [バージョン 1802](/sccm/core/plan-design/network/cng-certificates-overview) |  
+ | Azure Resource Manager に対するクラウド管理ゲートウェイのサポート <!-- 1324735 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#cloud-management-gateway-support-for-azure-resource-manager) | [バージョン 1802](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager) |  
+ | デバイスごとにユーザーのアプリケーション要求を承認する <!-- 1357015 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#approve-application-requests-for-users-per-device) | [バージョン 1802](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) |  
+ | ソフトウェア センターを使用してユーザーが利用できるアプリケーションを参照し、Azure AD に参加しているデバイスにインストールする <!-- 1322613 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices) | [バージョン 1802](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices) |  
+ | Windows AutoPilot のデバイス情報についてのレポート <!-- 1351442 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#report-on-windows-autopilot-device-information) | [バージョン 1802](/sccm/core/clients/manage/co-management-prepare#new-windows-10-devices) |  
+ | Windows Defender Exploit Guard に対する Configuration Manager ポリシーの機能強化 <!-- 1356220 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard) | [バージョン 1802](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |  
+ | Microsoft Edge ブラウザーのポリシー <!-- 1357310 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#microsoft-edge-browser-policies) | [バージョン 1802](/sccm/compliance/deploy-use/browser-profiles) | 
+ | 既定のブラウザー数についてのレポート <!-- 1357830 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#report-for-default-browser-counts) | [バージョン 1802](/sccm/core/servers/manage/list-of-reports#software---companies-and-products) | 
+ | Windows 10 ARM64 デバイスのサポート <!-- 1353704 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#support-for-windows-10-arm64-devices) | [バージョン 1802](/sccm/core/plan-design/configs/support-for-windows-10) |  
+ | 段階的展開を作成する <!-- 1356837 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#create-phased-deployments) | [バージョン 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) |
+ | 共同管理のレポート <!-- 1356648 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#co-management-reporting) | [バージョン 1802](\sccm\core\clients\manage\client-management-dashboard) |
+ | 自動展開規則の評価スケジュールの機能強化 <!-- 1357133 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-automatic-deployment-rule-evaluation-schedule) | [バージョン 1802](/sccm/sum/deploy-use/automatically-deploy-software-updates#BKMK_CreateAutomaticDeploymentRule) |
+ | 配布ポイントの再割り当て <!-- 1306937 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#reassign-distribution-point) | [バージョン 1802](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_reassign) |
+ | ハードウェア インベントリの機能強化 <!-- 1357389 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-hardware-inventory) | [バージョン 1802](/sccm/core/clients/manage/inventory/extend-hardware-inventory#BKMK_GreaterThan255) |
+ | ソフトウェア センターのクライアント設定の機能強化 <!-- 1355146 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-client-settings-for-software-center) | [バージョン 1802](/sccm/core/clients/deploy/about-client-settings#BKMK_HideUnapproved) |
+ | Windows Defender Application Guard の新しい設定 <!-- 1356256 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#new-settings-for-windows-defender-application-guard) | [バージョン 1802](/sccm/protect/deploy-use/create-deploy-application-guard-policy#BKMK_HIS) |
+ | スクリプト実行の機能強化 <!-- 1236459 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-run-scripts) | [バージョン 1802](/sccm/apps/deploy-use/create-deploy-scripts) |
+ | 置き換えられたアプリケーションを自動的にアップグレードしない <!-- 1351266 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#do-not-automatically-upgrade-superseded-applications) | [バージョン 1802](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) | 
+ | ソフトウェア センターで複数のアプリケーションをインストールする <!-- 1357126 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#install-multiple-applications-in-software-center) | [バージョン 1802](/sccm/core/understand/software-center#install-multiple-applications) |
+ | クライアント ベースの PXE レスポンダー サービス <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) | ![追加されていません](media/Red_X.gif) |
+ | Configuration Manager クライアント インストールにおける変更 <!-- 1356195 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-in-the-configuration-manager-client-install) | [バージョン 1802](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.#BKMK_ExternalDependencies) | 
+ | Surface デバイス ダッシュボードに対する変更 <!-- 1355788 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-to-the-surface-device-dashboard) | [バージョン 1802](/sccm/core/clients/manage/surface-device-dashboard) | 
+ | Office 365 クライアント管理ダッシュボードの機能拡張 <!-- 1357281 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-office-365-client-management-dashboard) | [バージョン 1802](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) | 
+ | Configuration Manager コンソールの機能拡張 <!-- 1357280,1357282 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-the-configuration-manager-console) | バージョン 1802 | 
+ | OS 展開の機能強化 <!-- SMS 500897 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-operating-system-deployment) | バージョン 1802 | 
+ | タスク シーケンス ステップの実行<!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) | [バージョン 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |
+ | アプリケーションをインストールするときに、ユーザー操作を許可する <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) | [バージョン 1802](/sccm/apps/deploy-use/create-applications#specify-user-experience-options-for-the-deployment-type) |
 
- 
+  
 
 ## <a name="capabilities-delivered-in-previous-technical-previews"></a>以前の Technical Preview で提供される機能
 以下は、Configuration Manager Technical Preview リリースの以前のバージョンで提供された特定の機能です。 これらの機能は、以降のバージョンでも使用できますが、Current Branch リリースではまだ提供されていません。 
