@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/27/2018
 |デバイスの種類|サポートされているファイルの種類|  
 |-----------------|---------------------|  
 |Windows RT および Windows RT 8.1|\*.appx、\*.appxbundle|  
-|モバイル デバイスとして登録された Windows 8.1 以降|*.appx、\*.appxbundle|  
+|モバイル デバイスとして登録された Windows 8.1 以降|\*.appx、\*.appxbundle|  
 
  次の展開操作がサポートされています。  
 
