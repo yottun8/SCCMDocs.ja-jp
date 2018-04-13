@@ -1,7 +1,7 @@
 ---
-title: "新しいバージョン 1710 | Microsoft Docs"
+title: 新しいバージョン 1710 | Microsoft Docs
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager のバージョン 1710 で導入された変更点および新機能について詳しく説明します。"
+description: System Center Configuration Manager のバージョン 1710 で導入された変更点および新機能について詳しく説明します。
 ms.custom: na
 ms.date: 1/08/2018
 ms.reviewer: na
@@ -14,17 +14,23 @@ ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: c75ed431c6a786759e2ddcd6dc6b55d5b55412c7
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+ms.openlocfilehash: e9d1ac44bf0455ff0b1caec94d07cfa734dfbeb0
+ms.sourcegitcommit: d8a4a53630351b3d677bbdc5d203e7d330472cba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1710 の新機能
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager Current Branch の更新プログラム 1710 は、バージョン 1610、1702、または 1706 を実行しているインストール済みのサイトで、コンソール内の更新プログラムとして利用可能です。
+
+このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Summary of changes in System Center Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4056470/summary-of-changes-in-system-center-configuration-manager-current-bran)」(System Center Configuration Manager Current Branch バージョン 1710 の変更点の概要) を参照してください。
+
+このリリースでは、次の追加の更新プログラムも利用できるようになりました。
+- [System Center Configuration Manager Current Branch バージョン 1710 の更新プログラムのロールアップ](https://support.microsoft.com/help/4057517/update-rollup-for-system-center-configuration-manager-current-branch-v)
+- [System Center Configuration Manager Current Branch バージョン 1710 の更新プログラムのロールアップ 2](https://support.microsoft.com/en-us/help/4086143/update-rollup-2-for-system-center-configuration-manager-current-branch)
 
 > [!TIP]  
 > 新しいサイトをインストールするには、Configuration Manager の基準バージョンを使用する必要があります。  
