@@ -1,9 +1,9 @@
 ---
-title: "問題のトラブルシューティングのためのログ ファイル"
+title: トラブルシューティングのためのログ ファイル
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager 階層内での問題に対してトラブルシューティングを行うには、ログ ファイルを使用します。"
+description: Configuration Manager クライアントとサイト システムに関する問題のトラブルシューティングを行うには、ログ ファイルを使用します。
 ms.custom: na
-ms.date: 02/14/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,24 +12,24 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 9
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b0f15b0c7cf983234f41e3f202be7d46ce4954e2
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+ms.openlocfilehash: 471730e056ca512f300ead234b9a8a9e4f10a835
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>System Center Configuration Manager のログ ファイル
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager では、クライアント コンポーネントとサイト サーバー コンポーネントによって、処理情報が個々のログ ファイルに記録されます。 ログに記録された情報を、 Configuration Manager 階層で発生した問題を解決するときの参考にしてください。 既定では、クライアント コンポーネントとサーバー コンポーネントのログ記録は Configuration Manager で有効になっています。   
+Configuration Manager では、クライアント コンポーネントとサイト サーバー コンポーネントによって、処理情報が個々のログ ファイルに記録されます。 ログに記録された情報を、発生した問題を解決するときの参考にしてください。 既定では、Configuration Manager ではクライアント コンポーネントとサーバー コンポーネントのログ記録が有効になっています。   
 
- 次のセクションに、各ログ ファイルの説明を示します。 Configuration Manager のクライアントとサーバーのログ ファイルでエラーの原因を調べて解決するときの参考にしてください。  
+ 次のセクションに、各ログ ファイルの説明を示します。 操作の詳細に関する Configuration Manager のクライアントとサーバーのログを監視し、エラーの情報を表示して問題のトラブルシューティングを行います。  
 
 -   [Configuration Manager のログ ファイルについて](#BKMK_AboutLogs)  
 
@@ -125,7 +125,7 @@ System Center Configuration Manager では、クライアント コンポーネ�
  ログ ファイルを表示するには、CMTrace という Configuration Manager のログ ビューアー ツールを使用できます。このツールは、Configuration Manager のソース メディアの \\SMSSetup\\Tools フォルダーにあります。 また、CMTrace ツールは、[ソフトウェア ライブラリ] に格納されるすべてのブート イメージに追加されます。  
 
 ###  <a name="BKMK_LogOptions"></a> Configuration Manager サービス マネージャーを使用したログのオプションの構成  
- Configuration Manager では、ログ ファイルの格納場所を変更し、ログ ファイル サイズを変更できます。  
+ Configuration Manager によって格納されるログ ファイルの場所とそのサイズを変更することができます。  
 
  ログ ファイルのサイズを変更するには、ログ ファイルの名前と場所を変更します。また、1 つのログ ファイルに対して複数のコンポーネントを強制的に書き込むには、次の手順を実行します。  
 
@@ -141,7 +141,7 @@ System Center Configuration Manager では、クライアント コンポーネ�
 8.  **[OK]** を選択して構成を保存します。  
 
 ###  <a name="BKMK_LogLocation"></a> Configuration Manager のログ ファイルの検索  
-Configuration Manager のログ ファイルは、ログ ファイルを作成するプロセスや、サイト システムの構成に応じて、さまざまな場所に保存されるようになっています。 コンピューターによってログ ファイルの場所が異なるので、トラブルシューティングを行うときは、Configuration Manager コンピューターで、検索機能を使って、問題に関係のあるログ ファイルを見つけてください。  
+Configuration Manager では、さまざまな場所にログ ファイルが格納されます。 これらの場所は、ログ ファイルを作成するプロセスと、サイト システムの構成よって異なります。 コンピューターによってログ ファイルの場所が異なるので、トラブルシューティングを行うときは、Configuration Manager コンピューターで、検索機能を使って、問題に関係のあるログ ファイルを見つけてください。  
 
 ##  <a name="BKMK_ClientLogs"></a> Configuration Manager クライアントのログ ファイル  
 次のセクションでは、クライアントによる処理が記録されるログ ファイルと、クライアントのインストール時に記録されるログ ファイルについて説明します。  
@@ -152,7 +152,7 @@ Configuration Manager のログ ファイルは、ログ ファイルを作成�
 |ログの名前|説明|  
 |--------------|-----------------|  
 |CAS.log|コンテンツ アクセス サービス。 クライアントのローカル パッケージのキャッシュを管理します。|  
-|Ccm32BitLauncher.log|クライアントにある "run as 32 bit" とマークされたアプリケーションの起動を記録します。|  
+|Ccm32BitLauncher.log|クライアントにある *run as 32 bit* とマークされたアプリケーションの起動を記録します。|  
 |CcmEval.log|Configuration Manager クライアント ステータスを評価するときの処理と、Configuration Manager クライアントが必要とするコンポーネントの詳細を記録します。|  
 |CcmEvalTask.log|スケジュールに従って開始される Configuration Manager クライアント ステータスの評価に関する処理を記録します。|  
 |CcmExec.log|クライアントと SMS Agent Host サービスによって行われる処理を記録します。 ウェイクアップ プロキシの有効化と無効化に関する情報も記録します。|  
@@ -223,7 +223,7 @@ Configuration Manager のログ ファイルは、ログ ファイルを作成�
  Linux および UNIX 用の Configuration Manager クライアントでは、次のログ ファイルに情報を記録します。  
 
 > [!TIP]  
->  Linux および UNIX 用のクライアントの累積的な更新プログラム 1 以降、CMTrace を使用して、Linux および UNIX 用のクライアントのログ ファイルを表示できます。  
+>  Linux および UNIX 用のクライアントのログ ファイルを表示するには、CMTrace を使用します。  
 
 > [!NOTE]  
 >  Linux および UNIX 用のクライアントの最初のリリースを使用し、このセクションのドキュメントを参照する場合、各ファイルまたは手順の次の参照項目を置き換えてください。  
@@ -338,7 +338,8 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |sinvproc.log|サイト データベースに格納されるソフトウェアのインベントリ データの処理に関する情報を記録します。|サイト サーバー|  
 |sitecomp.log|サイトのすべてのサイト システム サーバーにインストールされているサイト コンポーネントのメンテナンスに関する詳細を記録します。|サイト サーバー|  
 |sitectrl.log|データベースのサイト コントロール オブジェクトに加えられたサイト設定の変更を記録します。|サイト サーバー|  
-|sitestat.log|すべてのサイト システムの可用性とディスク領域の監視プロセスを記録します。|サイト サーバー|  
+|sitestat.log|すべてのサイト システムの可用性とディスク領域の監視プロセスを記録します。|サイト サーバー|
+|SMS_PhasedDeployment.log| Configuration Manager バージョン 1802 以降のプレリリース機能である段階的展開用のログ ファイルです。|Configuration Manager 階層の最上位サイト|   
 |SmsAdminUI.log|Configuration Manager コンソール アクティビティを記録します。|Configuration Manager コンソールを実行しているコンピューター|  
 |SMSAWEBSVCSetup.log|アプリケーション カタログ Web サービスのインストール処理を記録します。|サイト システム サーバー|  
 |smsbkup.log|サイトのバックアップ プロセスの出力を記録します。|サイト サーバー|  
@@ -516,16 +517,15 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 
 次の表に、クラウド管理ゲートウェイに関係のある情報を含むログ ファイルを示します。
 
-||||
-|-|-|-|
 |ログの名前|説明|ログ ファイルのあるコンピューター|
-|CloudMgr.log|クラウド管理ゲートウェイ サービスの展開、進行中のサービスの状態、およびサービスに関連する使用状況データについての情報を記録します。<br>レジストリ **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level** を編集することで、ログ レベルを構成することができます|プライマリ サイト サーバーまたは CAS の *installdir* フォルダー。|
-|CMGSetup.log または CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|クラウド管理ゲートウェイ展開 (Azure のローカル展開) の 2 番目のフェーズに関する詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** (**[情報]** (既定)、**[詳細]**、**[エラー]**) の設定を使用してログ レベルを構成できます。|Azure サーバーの **[%approot%\logs]**、またはサイト システム サーバーの [SMS/ログ] フォルダー|
-|CMGHttpHandler.log または CMG-*RoleInstanceID*- CMGHttpHandler.log<sup>1</sup>|Azure でのインターネット インフォメーション サービスに含まれるクラウド管理ゲートウェイの http ハンドラーに関する詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** (**[情報]** (既定)、**[詳細]**、**[エラー]**) の設定を使用してログ レベルを構成できます。|Azure サーバーの **[%approot%\logs]**、またはサイト システム サーバーの [SMS/ログ] フォルダー|
-|CMGService.log または CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|Azure のクラウド管理ゲートウェイ サービスのコア コンポーネントの詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** (**[情報]** (既定)、**[詳細]**、**[エラー]**) の設定を使用してログ レベルを構成できます。|Azure サーバーの **[%approot%\logs]**、またはサイト システム サーバーの [SMS/ログ] フォルダー|
-|SMS_Cloud_ProxyConnector.log|クラウド管理ゲートウェイ サービスとクラウド管理ゲートウェイ接続ポイントの間の接続の設定に関する詳細を記録します。|サイト システム サーバー|
+|--------------|-----------------|----------------------------|  
+|CloudMgr.log|クラウド管理ゲートウェイ サービスの展開、進行中のサービスの状態、およびサービスに関連する使用状況データについての情報を記録します。<br>レジストリ キー HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER で **Logging level** の値を編集することで、ログ レベルを構成することができます|プライマリ サイト サーバーまたは CAS の *installdir* フォルダー。|
+|CMGSetup.log<sup>1</sup>|クラウド管理ゲートウェイ展開 (Azure のローカル展開) の 2 番目のフェーズに関する詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** (**[情報]** (既定)、**[詳細]**、**[エラー]**) の設定を使用してログ レベルを構成できます。|Azure サーバーの **[%approot%\logs]**、またはサイト システム サーバーの [SMS/ログ] フォルダー|
+|CMGHttpHandler.log<sup>1</sup>|Azure でのインターネット インフォメーション サービスに含まれるクラウド管理ゲートウェイの http ハンドラーに関する詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** (**[情報]** (既定)、**[詳細]**、**[エラー]**) の設定を使用してログ レベルを構成できます。|Azure サーバーの **[%approot%\logs]**、またはサイト システム サーバーの [SMS/ログ] フォルダー|
+|CMGService.log<sup>1</sup>|Azure のクラウド管理ゲートウェイ サービスのコア コンポーネントの詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** (**[情報]** (既定)、**[詳細]**、**[エラー]**) の設定を使用してログ レベルを構成できます。|Azure サーバーの **[%approot%\logs]**、またはサイト システム サーバーの [SMS/ログ] フォルダー|
+|SMS_Cloud_</br>ProxyConnector.log|クラウド管理ゲートウェイ サービスとクラウド管理ゲートウェイ接続ポイントの間の接続の設定に関する詳細を記録します。|サイト システム サーバー|
 
-<sup>1</sup> これはクラウド サービス管理マネージャーと Azure Storage との間で 5 分おきに同期されるローカル構成マネージャーのログ ファイルです。 クラウド管理ゲートウェイは、Azure Storage に 5 分おきにログをプッシュします。 そのための最大遅延時間は 10 分です。 [詳細] に切り替えると、ローカルとリモートの両方のログに影響します。
+<sup>1</sup> これはクラウド サービス管理マネージャーと Azure Storage との間で 5 分おきに同期されるローカル構成マネージャーのログ ファイルです。 クラウド管理ゲートウェイは、Azure Storage に 5 分おきにログをプッシュします。 そのための最大遅延時間は 10 分です。 [詳細] に切り替えると、ローカルとリモートの両方のログに影響します。 実際のファイル名には、サービス名とロール インスタンスの識別子が含まれます。 例: CMG-*ServiceName*-*RoleInstanceID*-CMGSetup.log
 
 - 展開のトラブルシューティングの場合は、**CloudMgr.log** および **CMGSetup.log** を使用します。
 - サービス正常性のトラブルシューティングの場合は、**CMGService.log** および **SMS_Cloud_ProxyConnector.log** を使用します。
@@ -699,7 +699,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |MCSSetup.log|マルチキャスト サーバーの役割のインストールの詳細を記録します。|サイト システム サーバー|  
 |MCSMSI.log|マルチキャスト サーバーの役割のインストールの詳細を記録します。|サイト システム サーバー|  
 |Mcsperf.log|マルチキャスト パフォーマンス カウンターの更新の詳細を記録します。|サイト システム サーバー|  
-|MP_ClientIDManager.log|PXE またはブート メディアによって開始された、クライアント ID を要求するタスク シーケンスへの管理ポイントの応答を記録します。|サイト システム サーバー|  
+|MP_ClientIDManager.log|タスク シーケンスが PXE またはブート メディアから開始する、クライアント ID 要求への管理ポイントの応答を記録します。|サイト システム サーバー|  
 |MP_DriverManager.log|ドライバーの自動適用を要求するタスク シーケンス アクションへの管理ポイントの応答を記録します。|サイト システム サーバー|  
 |OfflineServicingMgr.log|オフライン サービスのスケジュールと、オペレーティング システムの Windows Imaging Format (WIM) ファイルへの更新プログラムの適用操作を記録します。|サイト システム サーバー|  
 |Setupact.log|Windows Sysprep とセットアップのログの詳細を記録します。|クライアント|  
@@ -710,7 +710,8 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |smpmsi.log|状態移行ポイントのインストールと構成の詳細を記録します。|サイト システム サーバー|  
 |smpperf.log|状態移行ポイントのパフォーマンス カウンターの更新を記録します。|サイト システム サーバー|  
 |smspxe.log|PXE ブートを使用するクライアントへの応答と、ブート イメージとブート ファイルの展開の詳細を記録します。|サイト システム サーバー|  
-|smssmpsetup.log|状態移行ポイントのインストールと構成の詳細を記録します。|サイト システム サーバー|  
+|smssmpsetup.log|状態移行ポイントのインストールと構成の詳細を記録します。|サイト システム サーバー|
+| SMS_PhasedDeployment.log| Configuration Manager バージョン 1802 以降のプレリリース機能である段階的展開用のログ ファイルです。|Configuration Manager 階層の最上位サイト| 
 |Smsts.log|タスク シーケンスによる操作を記録します。|クライアント|  
 |TSAgent.log|タスク シーケンス開始前の依存関係の解決結果を記録します。|クライアント|  
 |TaskSequenceProvider.log|タスク シーケンスのインポート、エクスポート、編集の詳細を記録します。|サイト システム サーバー|  

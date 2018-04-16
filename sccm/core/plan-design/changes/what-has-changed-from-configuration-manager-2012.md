@@ -1,8 +1,8 @@
 ---
-title: "Configuration Manager 2012 からの変更点 "
-description: "System Center 2012 Configuration Manager と比較した System Center Configuration Manger の新機能と変更をご確認いただけます。"
+title: 'Configuration Manager 2012 からの変更点 '
+description: System Center 2012 Configuration Manager と比較した System Center Configuration Manger の新機能と変更をご確認いただけます。
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,15 +11,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
-caps.latest.revision: 
+caps.latest.revision: 51
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 6e0da4f8c42bb0b2275566eba35b1e06b2028c1b
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+manager: dougeby
+ms.openlocfilehash: 70f6604e6f1b6731d6d2685e20262552f2b80590
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>System Center 2012 Configuration Manager からの System Center Configuration Manager の変更点
 
@@ -36,8 +36,8 @@ ms.lasthandoff: 02/01/2018
 
 -   Configuration Manager 2007 や System Center 2012 Configuration Manager などの過去のバージョンとは異なり、製品名に年や製品識別子を使用していません。
 
--   製品組み込みの増分更新をサポートしているため、更新プログラム バージョンとも呼ばれます。 最初のリリースはバージョン 1511 でした。 後続のバージョンは、バージョン 1610 のように、コンソール内の更新プログラムとして年に数回リリースされます。
--   基準バージョンを使用してインストールします。 1511 は元の基準バージョンでしたが、新しい基準バージョンも、1702 のように、ときどきリリースされます。 基準バージョンを使用して、新しい System Center Configuration Manager サイトと階層をインストールしたり、サポート対象バージョンの Configuration Manager 2012 からアップグレードしたりすることができます。
+-   製品組み込みの増分更新をサポートしているため、更新プログラム バージョンとも呼ばれます。 最初のリリースはバージョン 1511 でした。 後続のバージョンは、バージョン 1710 のように、コンソール内の更新プログラムとして年に数回リリースされます。
+-   基準バージョンを使用してインストールします。 1511 は元の基準バージョンでしたが、新しい基準バージョンも、1802 のように、ときどきリリースされます。 基準バージョンを使用して、新しい System Center Configuration Manager サイトと階層をインストールしたり、サポート対象バージョンの Configuration Manager 2012 からアップグレードしたりすることができます。
 
 
 
@@ -46,9 +46,9 @@ ms.lasthandoff: 02/01/2018
  System Center Configuration Manager では、**更新とサービス**と呼ばれるコンソール内でのサービス提供方式が採られています。この方式により、推奨される更新プログラムを簡単に特定し、インストールすることができます。  
 
  バージョンによっては、(Configuration Manager コンソール内から) 既存のサイトに対する更新プログラムとしてのみ使用できて、新規 Configuration Manager サイトのインストールに使用できないものがあります。   
-たとえば、1610 更新プログラムは、Configuration Manager コンソール内からのみ使用可能です。 任意のバージョンの System Center Configuration Manager を既に実行しているサイトを更新する場合に使用されます。
+たとえば、1710 更新プログラムは、Configuration Manager コンソール内からのみ使用可能です。 任意のバージョンの System Center Configuration Manager を既に実行しているサイトを更新する場合に使用されます。
 
-更新プログラム バージョンも、新しい基準バージョン (更新プログラム 1702 など) として定期的にリリースされます。 このような更新プログラムを使用すれば、古い基準バージョン (1511 など) から開始して最新バージョンまでアップグレードしなくても、新しい階層をインストールできます。
+更新プログラム バージョンも、新しい基準バージョン (更新プログラム 1802 など) として定期的にリリースされます。 このような更新プログラムを使用すれば、古い基準バージョン (1511 など) から開始して最新バージョンまでアップグレードしなくても、新しい階層をインストールできます。
 
 
 更新プログラムの使用の詳細については、「[System Center Configuration Manager の更新プログラム](../../../core/servers/manage/updates.md)」を参照してください。  

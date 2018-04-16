@@ -1,24 +1,25 @@
 ---
-title: "CNG 証明書の概要"
+title: CNG 証明書の概要
 titleSuffix: Configuration Manager
-description: "Configuration Manager の CNG 証明書の概要"
+description: 'Configuration Manager クライアントとサーバーの Cryptography: Next Generation (CNG) 証明書のサポートについて説明します。'
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
-ms.assetid: 
-author: vhorne
-ms.author: victorh
-manager: angrobe
-ms.openlocfilehash: f5f5138270d4f14b76b2c41e41ec034a0c12a932
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.assetid: ''
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 271cc0e2753f1a65740187a4faf6875c1a018014
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="cng-certificates-overview"></a>CNG 証明書の概要
 <!-- 1356191 --> 
@@ -28,11 +29,17 @@ Configuration Manager の Cryptography: Next Generation (CNG) 証明書のサポ
 ## <a name="supported-scenarios"></a>サポートされるシナリオ
 次のシナリオに [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) 証明書テンプレートを使用できます。
 
-- HTTPS 管理ポイントを使用したクライアントの登録と通信。   
-- HTTPS 配布ポイントを使用したソフトウェアの配布とアプリケーションの展開。   
-- オペレーティング システムの展開。  
-- クライアント メッセージ SDK (最新の更新プログラム) と ISV プロキシ。   
-- クラウド管理ゲートウェイの構成。  
+- HTTPS 管理ポイントを使用したクライアントの登録と通信   
+- HTTPS 配布ポイントを使用したソフトウェアの配布とアプリケーションの展開   
+- オペレーティング システムの展開  
+- クライアント メッセージ SDK (最新の更新プログラム) と ISV プロキシ   
+- クラウド管理ゲートウェイの構成  
+
+バージョン 1802 以降では、以下の HTTPS が有効なサーバーの役割には CNG 証明書を使ってください。<!-- 1357314 -->   
+- 管理ポイント
+- 配布ポイント
+- ソフトウェアの更新ポイント
+- 状態移行ポイント     
 
 > [!NOTE]
 > CNG は Crypto API (CAPI) と下位互換性があります。 クライアントで CNG のサポートが有効な場合でも、CAPI 証明書は引き続きサポートされます。
@@ -41,15 +48,19 @@ Configuration Manager の Cryptography: Next Generation (CNG) 証明書のサポ
 
 次のシナリオは、現在サポートされていません。
 
-- アプリケーション カタログ Web サービス、アプリケーション カタログ Web サイト、登録ポイント、および登録プロキシ ポイント ロールは、インターネット インフォメーション サービス (IIS) の Web サイトに CNG 証明書がバインドされた HTTPS モードでインストールされている場合に機能しません。 ユーザーまたはユーザー グループ コレクションに展開されているアプリケーションやパッケージでも、ソフトウェア センターに使用可能と表示されません。
+- 次のサーバーの役割は、インターネット インフォメーション サービス (IIS) の Web サイトに CNG 証明書がバインドされた HTTPS モードでインストールされている場合には機能しません。 
+    - アプリケーション カタログ Web サービス
+    - アプリケーション カタログ Web サイト
+    - 登録ポイント  
+    - 登録プロキシ ポイント  
 
-- 状態移行ポイントは、IIS の Web サイトに CNG 証明書がバインドされた HTTPS モードでインストールされている場合に機能しません。
+- ユーザーまたはユーザー グループ コレクションに展開されているアプリケーションやパッケージでも、ソフトウェア センターに使用可能と表示されません。
 
 - CNG 証明書を使用したクラウド配布ポイントの作成。
 
-- NDES ポリシー モジュールがクライアント認証証明書に CNG 証明書を使用している場合、NDES ポリシー モジュールから証明書登録ポイント (CRP) への通信は失敗します。
+- NDES ポリシー モジュールがクライアント認証に CNG 証明書を使用している場合、証明書登録ポイントへの通信は失敗します。
 
-- CNG 証明書が指定されている場合、タスク シーケンス メディアの作成で起動可能なメディアを作成できません。
+- タスク シーケンス メディアの作成時に CNG 証明書を指定すると、起動可能なメディアを作成するウィザードが失敗します。
 
 ## <a name="to-use-cng-certificates"></a>CNG 証明書を使用するには
 

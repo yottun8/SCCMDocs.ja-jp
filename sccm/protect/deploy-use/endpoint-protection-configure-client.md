@@ -1,25 +1,26 @@
 ---
-title: "Endpoint Protection クライアントを構成する"
+title: Endpoint Protection クライアントを構成する
 titleSuffix: Configuration Manager
-description: "階層内のコンピューターのコレクションに展開できる Endpoint Protection のカスタム クライアント設定を構成する方法について説明します。"
+description: 階層内のコンピューターのコレクションに展開できる Endpoint Protection のカスタム クライアント設定を構成する方法について説明します。
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: de8f7411219446420a8c8bca00799d8d7d18fd2f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 21
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.openlocfilehash: 22c56bac25cc6e3129f2e8478bbae9fa8782de9f
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="configure-custom-client-settings-for-endpoint-protection"></a>Endpoint Protection のカスタム クライアント設定を構成する
 
@@ -28,13 +29,13 @@ ms.lasthandoff: 10/12/2017
 この手順では、階層内のコンピューターのコレクションに展開できる Endpoint Protection のカスタム クライアント設定を構成します。
 
 > [!IMPORTANT]
->  階層内のすべてのコンピューターに適用する場合にのみ、既定の Endpoint Protection クライアント設定を構成します。
+>  階層内のすべてのコンピューターに適用する場合にのみ、既定の Endpoint Protection クライアント設定を構成します。 
 
 ## <a name="to-enable-endpoint-protection-and-configure-custom-client-settings"></a>Endpoint Protection を有効にしてカスタム クライアント設定を構成するには
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。
 
-2.  **[ 管理 ]** ワークスペースで **[ クライアント設定]** をクリックします。
+2.  **[管理]** ワークスペースで **[クライアント設定]** をクリックします。
 
 3.  **[ホーム]** タブの **[作成]** グループで、**[カスタム クライアント デバイス設定の作成]** をクリックします。
 
@@ -56,12 +57,12 @@ ms.lasthandoff: 10/12/2017
 ## <a name="how-to-provision-the-endpoint-protection-client-in-a-disk-image-in-configuration-manager"></a>Configuration Manager で Endpoint Protection クライアントをディスク イメージにプロビジョニングする方法
 Configuration Manager のオペレーティング システムの展開でディスク イメージ ソースとして使用するコンピューターに、Endpoint Protection クライアントをインストールできます。 このコンピューターは通常、参照コンピューターと呼ばれます。 オペレーティング システムのイメージを作成したら、次に、Configuration Manager のオペレーティング システムの展開を使用して、Endpoint Protection などのソフトウェア パッケージを含めることができるイメージをクライアント コンピューターに展開できます。
 
-参照コンピューターに Endpoint Protection クライアントをインストールして構成するには、このトピックの手順に従います。
+参照コンピューターに Endpoint Protection クライアントをインストールして構成するには、この記事の手順に従います。
 
 ### <a name="prerequisites-for-installing-the-endpoint-protection-client-on-the-reference-computer"></a>参照コンピューターに Endpoint Protection クライアントをインストールするための前提条件
 以下に、参照コンピューターに Endpoint Protection クライアント ソフトウェアをインストールするために必要な前提条件を示します。
 
--   Endpoint Protection クライアント インストール パッケージ **scepinstall.exe** にアクセスできる必要があります。 このパッケージは、サイト サーバー上の Microsoft System Center Configuration Manager インストール フォルダーの **Client** フォルダーにあります。
+-   Endpoint Protection クライアント インストール パッケージ **scepinstall.exe** にアクセスできる必要があります。 このパッケージは、サイト サーバー上の Microsoft System Center Configuration Manager インストール フォルダーの **Client** フォルダーにあります。 Windows 10 および Windows Server 2016 には Windows Defender がインストールされています。 
 
 -   Endpoint Protection クライアントを組織で必要な構成で展開できるように、マルウェア対策ポリシーを作成してから、そのポリシーをエクスポートします。 その後、Endpoint Protection クライアントを手動でインストールするときに、使用するマルウェア対策ポリシーを指定できます。 詳細については、「[System Center Configuration Manager で Endpoint Protection 用にマルウェア対策ポリシーを作成し展開する方法](endpoint-antimalware-policies.md)」をご覧ください。
 
@@ -70,6 +71,8 @@ Configuration Manager のオペレーティング システムの展開でディ
 
 -   Endpoint Protection クライアントを最新の定義とともにインストールする場合、[Microsoft マルウェア プロテクション センター](http://go.microsoft.com/fwlink/?LinkID=200965)からダウンロードする必要があります。
 
+>[!NOTE]
+> Configuration Manager 1802 以降、Windows 10 デバイスには、Endpoint Protection エージェント (SCEPInstall) をインストールする必要がありません。 Windows 10 デバイスに既にインストールされている場合、Configuration Manager は削除されません。 管理者は、少なくとも 1802 クライアント バージョンで実行されている Windows 10 デバイス上の Endpoint Protection エージェントを削除できます。 SCEPInstall.exe は、一部のコンピューターの C:\Windows\ccmsetup 上に引き続き存在する可能性がありますが、新しいクライアントのインストールにはダウンロードされない必要があります。 <!--503654-->
 ### <a name="how-to-install-the-endpoint-protection-client-software-on-the-reference-computer"></a>参照コンピューターに Endpoint Protection クライアント ソフトウェアをインストールする方法
 コマンド プロンプトから、Endpoint Protection クライアントを参照コンピューターのローカルにインストールできます。 このためには、まず、インストール ファイル **scepinstall.exe**を取得する必要があります。 事前に構成したマルウェア対策ポリシーまたは先にエクスポートしたマルウェア対策ポリシーとともに、クライアントをインストールすることもできます。
 
@@ -77,7 +80,7 @@ Configuration Manager のオペレーティング システムの展開でディ
 
 1.  System Center Configuration Manager インストール メディアの **Client** フォルダーから、Endpoint Protection クライアント ソフトウェアをインストールするコンピューターに **scepinstall.exe** をコピーします。
 
-2.  管理者特権でコマンド プロンプトを開き、 **scepinstall.exe** が配置されているフォルダーに移動してから、必要なコマンド ライン プロパティを追加して次のコマンドを実行します。
+2.  管理者特権でコマンド プロンプトを開き、**scepinstall.exe** が配置されているフォルダーに移動してから、必要なコマンドライン プロパティを追加して次のコマンドを実行します。
 
    ```
    scepinstall.exe
@@ -127,7 +130,7 @@ Configuration Manager のオペレーティング システムの展開でディ
 
 2.  **[System Center Endpoint Protection]** ダイアログ ボックスの **[ホーム]** タブで、**[リアルタイム保護]** が **[オン]** に設定されていることを確認します。
 
-3.  **[ウイルス定義およびスパイウェアの定義]** で **[最新]**が表示されていることを確認します。
+3.  **[ウイルス定義およびスパイウェアの定義]** で **[最新]** が表示されていることを確認します。
 
 4.  参照コンピューターのイメージングの準備ができていることを確認するには、**[スキャン オプション]** で **[フル]** を選択してから、**[今すぐスキャン]** をクリックします。
 

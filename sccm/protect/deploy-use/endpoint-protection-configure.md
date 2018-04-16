@@ -1,31 +1,32 @@
 ---
-title: "Endpoint Protection の構成"
+title: Endpoint Protection の構成
 titleSuffix: Configuration Manager
-description: "Configuration Manager を設定して Windows Defender のマルウェア定義を更新および配布する方法について説明します。"
+description: Configuration Manager を設定して Windows Defender のマルウェア定義を更新および配布する方法について説明します。
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 5f005e7cd9c396fcf7e02aafefcb34c37ddab901
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 21
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.openlocfilehash: 9e54b433224b86650178b4df0cd6d0f2ab827b6c
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="configure-endpoint-protection"></a>Endpoint Protection の構成
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Endpoint Protection を使用して構成マネージャー クライアント コンピューターのセキュリティとマルウェアを管理するには、事前にこのトピックの構成手順を実行する必要があります。  
+Endpoint Protection を使用して構成マネージャー クライアント コンピューターのセキュリティとマルウェアを管理するには、事前にこの記事の構成手順を実行する必要があります。  
 
 ## <a name="how-to-configure-endpoint-protection-in-configuration-manager"></a>Configuration Manager の Endpoint Protection の構成方法  
  Configuration Manager の Endpoint Protection には、外部依存関係と製品内部の依存関係があります。  
@@ -34,9 +35,10 @@ Endpoint Protection を使用して構成マネージャー クライアント �
  次の表に、Endpoint Protection の構成に関する手順、説明、および参照情報を示します。  
 
 > [!IMPORTANT]  
->  Windows 10 コンピューターの Endpoint Protection を管理する場合、Windows Defender のマルウェア定義ファイルを更新し、配布するように Configuration Manager を構成する必要があります。 Windows Defender は Windows 10 に含まれていますが、SCEPInstall をインストールする必要があります。また、Endpoint Protection のカスタム クライアント設定が必要です (以下の**手順 5**)。  
+>  Windows 10 コンピューターの Endpoint Protection を管理する場合、Windows Defender のマルウェア定義ファイルを更新し、配布するように Configuration Manager を構成する必要があります。 Windows Defender は Windows 10 に含まれていますが、SCEPInstall をインストールする必要があります。また、Endpoint Protection のカスタム クライアント設定が必要です (以下の**手順 5**)。 </br> </br>
+> Configuration Manager 1802 以降、Windows 10 デバイスには、Endpoint Protection エージェント (SCEPInstall) をインストールする必要がありません。 Windows 10 デバイスに既にインストールされている場合、Configuration Manager は削除されません。 管理者は、少なくとも 1802 クライアント バージョンで実行されている Windows 10 デバイス上の Endpoint Protection エージェントを削除できます。 SCEPInstall.exe は、一部のコンピューターの C:\Windows\ccmsetup 上に引き続き存在する可能性がありますが、新しいクライアントのインストールにはダウンロードされない必要があります。 この場合も Endpoint Protection のカスタム クライアント設定 (**手順 5**) は必要です。 <!--503654-->
 
-|手順|説明|  
+|手順|詳細|  
 |-----------|-------------|  
 |**手順 1:** [Endpoint Protection ポイント サイト システムの役割を作成する](endpoint-protection-site-role.md)|Endpoint Protection を使用するには、事前に Endpoint Protection ポイント サイト システムの役割をインストールしておく必要があります。 これは、1 つのサイト システム サーバーのみにインストールします。また、中央管理サイトまたはスタンドアロンのプライマリ サイトの階層の最上位にインストールしなければなりません。 |  
 |**手順 2:** [Endpoint Protection のアラートを構成する](endpoint-configure-alerts.md)|マルウェア感染などの特定のイベントが発生すると、管理者にアラートが通知されます。 アラートは、 **[監視]** ワークスペースの **[アラート]** ノードに表示されます。必要に応じて、指定のユーザーに電子メールで送信することもできます。 |  

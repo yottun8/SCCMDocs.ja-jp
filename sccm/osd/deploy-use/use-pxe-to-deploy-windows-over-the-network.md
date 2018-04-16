@@ -1,53 +1,60 @@
 ---
-title: "PXE を使用したネットワーク経由での Windows の展開"
+title: ネットワーク経由で OSD に PXE を使用する
 titleSuffix: Configuration Manager
-description: "PXE によるオペレーティング システムの展開を使用して、コンピューターのオペレーティング システムを更新するか、新しいコンピューターに新しいバージョンの Windows をインストールします。"
+description: PXE による OS の展開を使用して、コンピューターのオペレーティング システムを更新するか、新しいコンピューターに新しいバージョンの Windows をインストールします。
 ms.custom: na
-ms.date: 06/15/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
-caps.latest.revision: "19"
-caps.handback.revision: "0"
+caps.latest.revision: 19
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 1ae9c9385abe90a38169f5d539be944f03817007
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 310807547df9fdb2ccd4f0098eec6b0b7ccca996
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>System Center Configuration Manager で PXE を使用してネットワーク経由で Windows を展開する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager での PXE (Preboot execution environment) によるオペレーティング システムの展開では、クライアント コンピューターはネットワーク経由でオペレーティング システムを要求し、展開することができます。 この展開シナリオでは、オペレーティング システム イメージ、および x86 と x64 の Windows PE ブート イメージを、PXE ブート要求を許可するように構成された配布ポイントに送信します。
+System Center Configuration Manager での PXE (Preboot execution environment) によるオペレーティング システムの展開では、クライアント コンピューターはネットワーク経由でオペレーティング システムを要求し、展開することができます。 この展開シナリオでは、OS イメージとブート イメージを PXE 対応配布ポイントに送信します。
 
 > [!NOTE]  
->  x64 BIOS コンピューターのみを対象とするオペレーティング システムの展開を作成する場合は、配布ポイントに x64 ブート イメージと x86 ブート イメージの両方を用意する必要があります。
+>  x64 BIOS コンピューターのみを対象とする OS の展開を作成する場合は、配布ポイントに x64 ブート イメージと x86 ブート イメージの両方を用意する必要があります。
 
-次のオペレーティング システムの展開シナリオでは、PXE によるオペレーティング システムの展開を使用できます。
+PXE を使用した OS の展開は、次のシナリオで使用できます。
 
 -   [新しいバージョンの Windows で既存のコンピューターを更新する](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
 -   [新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする](install-new-windows-version-new-computer-bare-metal.md)  
 
-いずれかのオペレーティング システムの展開シナリオのステップを完了させてから、次のセクションを参照して、PXE による展開を準備します。
+いずれかの OS の展開シナリオのステップを完了させてから、この記事のセクションを参照して、PXE による展開を準備します。
+
+
 
 ##  <a name="BKMK_Configure"></a> PXE 要求を許可するために少なくとも 1 つの配布ポイントを構成する
-PXE ブート要求を作成するクライアントにオペレーティング システムを展開するには、PXE ブート要求に応答するように構成された 1 つ以上の配布ポイントを使用します。 配布ポイントで PXE を有効にする手順については、「[PXE 要求を受け入れるための配布ポイントの構成](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)」を参照してください。
+PXE ブート要求を作成する Configuration Manager クライアントにオペレーティング システムを展開するには、PXE 要求を受け入れるように 1 つ以上の配布ポイントを構成する必要があります。 構成された配布ポイントは、PXE ブート要求に応答し、実行する適切な展開アクションを決定します。 詳細については、[配布ポイントのインストールと変更に関するトピック](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#pxe)を参照してください。  
+
+
 
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>PXE 対応のブート イメージの作成
-PXE を使用してオペレーティング システムを展開するには、1 つ以上の PXE 対応配布ポイントに配布される、x86 と x64 の両方の PXE 対応ブート イメージが必要です。 この情報を使用して、ブート イメージで PXE を有効にして、配布ポイントにブート イメージを配布します。
+PXE を使用して OS を展開するには、1 つ以上の PXE 対応配布ポイントに配布される、x86 と x64 の両方の PXE 対応ブート イメージが必要です。 この情報を使用して、ブート イメージで PXE を有効にして、配布ポイントにブート イメージを配布します。
 
 -   ブート イメージで PXE を有効にするには、**[データ ソース]** タブのブート イメージ プロパティで、**[このブート イメージを PXE 対応の配布ポイントから展開する]** を選択します。
 
 -   ブート イメージのプロパティを変更する場合は、再配布ポイントにブート イメージを再配布します。 詳細については、「[コンテンツの配布](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)」をご覧ください。
+
+
 
 ##  <a name="BKMK_PXEExclusionList"></a> PXE 展開の除外リストの作成
 PXE を使用してオペレーティング システムを展開する場合、配布ポイントで除外リストを作成できます。 除外リストには、配布ポイントが無視すべきコンピューターの MAC アドレスを追加します。 リストに追加されたコンピューターは、Configuration Manager が PXE 展開で使用する展開タスク シーケンスを受け取りません。
@@ -69,11 +76,20 @@ PXE を使用してオペレーティング システムを展開する場合、
 
      このレジストリの変更を行った後、サーバーの再起動は必要ありません。
 
+
+
+## <a name="manage-duplicate-hardware-identifiers"></a>重複するハードウェア識別子を管理する
+複数のコンピューターが重複する SMBIOS 属性を持っている場合、または共有ネットワーク アダプターを使用している場合は、Configuration Manager で複数のコンピューターが同じデバイスとして認識される場合があります。 階層の設定で重複するハードウェア識別子を管理することにより、これらの問題を軽減できます。 詳細については、「[重複するハードウェア識別子を管理する](/sccm/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers)」を参照してください。
+
+
+
 ##  <a name="BKMK_RamDiskTFTP"></a>RamDisk TFTP ブロック サイズとウィンドウ サイズ
-Configuration Manager バージョン 1606 では、PXE 対応配布ポイントの RamDisk TFTP ブロック サイズとウィンドウ サイズをカスタマイズできます。 ネットワークをカスタマイズしている場合、ブロックまたはウィンドウのサイズが大きすぎるために、ブート イメージのダウンロードがタイムアウト エラーで失敗する可能性があります。 RamDisk TFTP ブロック サイズとウィンドウ サイズのカスタマイズにより、特定のネットワーク要件に対応する PXE を使用する場合に、TFTP トラフィックを最適化できます。 最も効率的な方法を確認するために、環境内でカスタマイズした設定をテストします。 詳細については、「[PXE 対応配布ポイント上の RamDisk TFTP ブロック サイズとウィンドウ サイズのカスタマイズ](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP)」を参照してください。
+PXE 対応配布ポイントの RamDisk TFTP ブロック サイズとウィンドウ サイズをカスタマイズできます。 ネットワークをカスタマイズしている場合、ブロックまたはウィンドウのサイズが大きいと、ブート イメージのダウンロードがタイムアウト エラーで失敗する可能性があります。 RamDisk TFTP ブロック サイズとウィンドウ サイズのカスタマイズにより、特定のネットワーク要件に対応する PXE を使用する場合に、TFTP トラフィックを最適化できます。 最も効率的な構成を判断するには、環境内でカスタマイズした設定をテストします。 詳細については、「[PXE 対応配布ポイント上の RamDisk TFTP ブロック サイズとウィンドウ サイズのカスタマイズ](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP)」を参照してください。
+
+
 
 ## <a name="configure-deployment-settings"></a>展開の設定の構成
-PXE によるオペレーティング システムの展開を使用する場合、オペレーティング システムを PXE ブート要求から使用できるように展開を構成する必要があります。 ソフトウェアの展開ウィザードの **[展開の設定]** ページか展開のプロパティの **[配置の設定]** タブで使用可能なオペレーティング システムを構成することができます。 **[利用できるようにする項目]** の設定では、次のいずれかを設定します。
+PXE による OS の展開を使用するには、OS を PXE ブート要求から使用できるように展開を構成します。 展開のプロパティの **[展開設定]** タブで、使用できるオペレーティング システムを構成します。 **[利用できるようにする項目]** の設定では、次のいずれかのオプションを選択します。
 
 -   Configuration Manager クライアント、メディア、PXE
 
@@ -81,20 +97,24 @@ PXE によるオペレーティング システムの展開を使用する場合
 
 -   メディアと PXE のみ (非表示)
 
+
+
 ##  <a name="BKMK_Deploy"></a> タスク シーケンスの展開
-オペレーティング システムをターゲット コレクションに展開します。 詳細については、「 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)」をご覧ください。 PXE を使用してオペレーティング システムを展開するとき、展開が必須か使用可能かを設定することができます。
+ターゲット コレクションに OS を展開します。 詳細については、「 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)」をご覧ください。 PXE を使用してオペレーティング システムを展開するとき、展開が必須か使用可能かを設定することができます。
 
--   **必要な展開**: 必要な展開では、ユーザーの介入なしに、PXE を使用します。 ユーザーは PXE ブートをバイパスできません。 しかし、ユーザーが配布ポイントが応答する前に PXE ブートをキャンセルすれば、オペレーティング システムは展開されません。
+-   **必要な展開**: 必要な展開では、ユーザーの介入なしに、PXE を使用します。 ユーザーは PXE ブートをバイパスできません。 ただし、ユーザーが配布ポイントが応答する前に PXE ブートをキャンセルすれば、OS は展開されません。
 
--   **利用可能な展開**: 利用可能な展開では、PXE ブート プロセスを続けるために F12 キーを押すユーザーがセットアップ先のコンピューターにいる必要があります。 F12 を押すユーザーがいない場合、コンピューターは現在のオペレーティング システム、または次に利用可能なブート デバイスから起動します。
+-   **利用可能な展開**: 利用可能な展開では、ユーザーがセットアップ先のコンピューターにいる必要があります。 ユーザーは、PXE ブート プロセスを続けるために F12 キーを押す必要があります。 F12 キーを押すユーザーがいない場合、コンピューターは現在の OS、または次に利用可能なブート デバイスから起動します。
 
-Configuration Manager コレクションまたはコンピューターに割り当てられた最終の PXE 展開の状態をクリアすることにより、必要な PXE 展開を再展開することができます。 この操作でその展開の状態がリセットされ、最新の必要な展開が再インストールされます。
+Configuration Manager コレクションまたはコンピューターに割り当てられた最終の PXE 展開の状態をクリアすることにより、必要な PXE 展開を再展開することができます。 **必須の PXE 展開の消去**アクションの詳細については、[クライアントの管理](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode)または[コレクションの管理](/sccm/core/clients/manage/collections/manage-collections#how-to-manage-device-collections)に関するトピックを参照してください。 この操作でその展開の状態がリセットされ、最新の必要な展開が再インストールされます。
 
 > [!IMPORTANT]
 > PXE プロトコルはセキュリティ保護されていません。 PXE サーバーと PXE クライアントのどちらも、サイトへの不正なアクセスを防御するデータセンターといった物理的に安全なネットワークに置かれていることを確認します。
 
+
+
 ##  <a name="how-is-the-boot-image-selected-for-clients-booting-with-pxe"></a>PXE ブートのクライアントが使用するブート イメージの選択方法
-クライアントが PXE で起動する場合、使用するブート イメージが Configuration Manager によってクライアントに提供されます。 Configuration Manager バージョン 1606 以降、Configuration Manager は、アーキテクチャが厳密に一致するブート イメージを使用します。 正確なアーキテクチャのブート イメージがない場合、Configuration Manager は、互換性のあるアーキテクチャを持つブート イメージを使用します。 次の一覧では、PXE ブートのクライアントが使用するブート イメージがどのように選択されるかについて説明します。
+クライアントが PXE で起動する場合、使用するブート イメージが Configuration Manager によってクライアントに提供されます。 Configuration Manager は、アーキテクチャが厳密に一致するブート イメージを使用します。 正確なアーキテクチャのブート イメージがない場合、Configuration Manager は、互換性のあるアーキテクチャを持つブート イメージを使用します。 次の一覧では、PXE ブートのクライアントが使用するブート イメージがどのように選択されるかについて説明します。
 1. Configuration Manager は、ブートしようとしているクライアントの MAC アドレスまたは SMBIOS に一致するシステム レコードをサイト データベースで検索します。  
 
     > [!NOTE]

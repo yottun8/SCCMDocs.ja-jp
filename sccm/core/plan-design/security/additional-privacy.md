@@ -1,20 +1,22 @@
 ---
-title: "System Center Configuration Manager のプライバシーに関する声明 - 詳細情報"
-description: "System Center Configuration Manager 展開からデータを Microsoft が収集して使用する方法について説明します。"
+title: プライバシーに関する声明 - 追加情報
+titleSuffix: Configuration Manager
+description: System Center Configuration Manager からデータを Microsoft が収集して使用する方法について説明します。
 ms.custom: na
-ms.date: 10/13/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
-caps.latest.revision: "5"
-caps.handback.revision: "0"
+caps.latest.revision: 5
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -34,11 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 5332d02f4d128516f310a2edff897b4efc5b971b
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: eb557a29b1412e136023b3e6caddf358732659e9
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="additional-information-about-privacy-for-system-center-configuration-manager"></a>System Center Configuration Manager のプライバシーに関する詳細
 
@@ -57,18 +59,22 @@ Configuration Manager は、サイトの SQL Server データベースからの�
 
 管理者は、Configuration Manager コンソールの**利用状況データ** セクションで、収集されるデータのレベルを変更できます。
 
-詳細については、「[System Center Configuration Manager の診断結果と使用状況データ](http://go.microsoft.com/fwlink/?LinkID=626566)」記事の「関連項目」で、使用状況データのレベルと設定に関する記事をご覧ください。
+詳細については、「[System Center Configuration Manager の診断結果と使用状況データ](https://go.microsoft.com/fwlink/?LinkID=626566)」記事の「関連項目」で、使用状況データのレベルと設定に関する記事を参照してください。
 
 
 ## <a name="customer-experience-improvement-program"></a>カスタマー エクスペリエンス向上プログラム
+
+> [!Note]  
+> Configuration Manager バージョン 1802 以降では、CEIP 機能が製品から削除されます。
+
 カスタマー エクスペリエンス向上プログラム (CEIP) は、お使いのコンピューターのハードウェア構成とマイクロソフトのソフトウェアおよびサービスの使用方法について情報を Configuration Manager コンソールから収集し、傾向や使用パターンを分析するためのプログラムです。 また、CEIP は発生したエラーの種類と回数、ソフトウェアとハードウェアのパフォーマンス、およびサービスの速度の情報も収集します。 お客様の氏名、住所、またはその他の連絡先情報は収集しません。 お客様のコンピューターから CEIP データは収集されません。
 
 収集した情報は、Microsoft 製品やサービスの品質、信頼性、およびパフォーマンスの向上のために役立たせていただきます。
 
-CEIP によって収集、処理、または送信される情報については、「[CEIP のプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkID=525211)」を参照してください。
+CEIP によって収集、処理、または送信される情報については、「[CEIP のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=525211)」を参照してください。
 
 ## <a name="operations-management-suite-connector"></a>Operations Management Suite Connector
-Microsoft Operations Management Suite Connector では、System Center Configuration Manager から Microsoft Operations Management Suite にコレクションなどのデータが同期されます。 Microsoft Azure サブスクリプション ID と秘密鍵は、管理者が機能を構成するときに Configuration Manager データベースに保管されます。 Azure Active Directory クライアント シークレットと Microsoft Operations Management Suite ワークスペース共有キーは、オンプレミス System Center Configuration Manager データベースに保存されます。 System Center Configuration Manager と Microsoft Operations Management Suite 間のすべての通信で HTTPS が使用されます。 無作為に選択された製品利用統計情報データを除き、コレクションに関する追加情報は Microsoft に提供されません。 Microsoft Operations Management Suite で収集される情報の詳細については、「[Log Analytics データのセキュリティ](http://go.microsoft.com/fwlink/?LinkId=823545)」をご覧ください。
+Microsoft Operations Management Suite Connector では、System Center Configuration Manager から Microsoft Operations Management Suite にコレクションなどのデータが同期されます。 Microsoft Azure サブスクリプション ID と秘密鍵は、管理者が機能を構成するときに Configuration Manager データベースに保管されます。 Azure Active Directory クライアント シークレットと Microsoft Operations Management Suite ワークスペース共有キーは、オンプレミス System Center Configuration Manager データベースに保存されます。 System Center Configuration Manager と Microsoft Operations Management Suite 間のすべての通信で HTTPS が使用されます。 無作為に選択された製品利用統計情報データを除き、コレクションに関する追加情報は Microsoft に提供されません。 Microsoft Operations Management Suite で収集される情報の詳細については、「[Log Analytics データのセキュリティ](https://go.microsoft.com/fwlink/?LinkId=823545)」をご覧ください。
 
 ## <a name="asset-intelligence"></a>資産インテリジェンス
 資産インテリジェンスによって、IT 管理者が構成標準への適合性を定義し、追跡して積極的に管理することができます。 物理アプリケーションおよび仮想アプリケーションの展開と使用に関するメータリング機能やレポート機能を使用して、組織は情報を十分に把握したうえでソフトウェア ライセンスに関する決定を下し、ライセンス上のコンプライアンス要件を遵守できます。 Configuration Manager クライアントから使用状況データを収集した後で、管理者は各種の機能を使用してコレクション、クエリ、レポートなどのデータを表示できます。
@@ -96,16 +102,16 @@ Microsoft Cloud Protection Service レポートは、マイクロソフトのソ
 
 Microsoft Cloud Protection Service が意図的に個人情報を収集することはありません。 Microsoft Cloud Protection Service によって個人情報が収集された場合でも、Microsoft がその情報を使用してお客様の身元を特定したりお客様に連絡したりすることはありません。
 
-収集されたデータに関する詳しい情報は、「[System Center Configuration Manager での Endpoint Protection](http://go.microsoft.com/fwlink/?LinkId=823547)」の製品ドキュメントをご覧ください。
+収集されたデータに関する詳しい情報は、「[System Center Configuration Manager での Endpoint Protection](https://go.microsoft.com/fwlink/?LinkId=823547)」の製品ドキュメントをご覧ください。
 
 ## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>サイト階層 – Bing Maps を使用した地図
 サイト階層の地図機能では、Microsoft Bing Maps の提供する地図を使って Configuration Manager 物理サーバー トポロジを表示できます。 この機能を実現するために、お客様の入力した場所情報が、サーバーから Bing Maps の Web サービスに送信されます。
 
-マイクロソフトではこの情報を、Microsoft Bing Maps およびその他の Microsoft のサイトとサービスを提供および向上するために役立てています。 詳細については、「[Microsoft のプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=823548)」を参照してください。
+マイクロソフトではこの情報を、Microsoft Bing Maps およびその他の Microsoft のサイトとサービスを提供および向上するために役立てています。 詳細については、「[Microsoft のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=823548)」を参照してください。
 サイト階層で地図を使用しないように選択できます。 階層図では、Bing Maps サービスを使用せずに階層を表示することができます。
 
 ## <a name="microsoft-intune-subscription"></a>Microsoft Intune サブスクリプション
-Microsoft Intune のサブスクリプションを購入したお客様は、Microsoft Intune を介して接続しているモバイル デバイスを Configuration Manager を使用して管理できます。 [Microsoft オンライン サービスのプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=262214)は、Microsoft Intune など、Microsoft オンライン サービスに適用されます。 お客様が Microsoft Intune サブスクリプションもお持ちの場合、このプライバシーに関する声明と共に [Microsoft Online Services のプライバシーに関する声明](http://go.microsoft.com/fwlink/?LinkId=262214)もお読みください。
+Microsoft Intune のサブスクリプションを購入したお客様は、Microsoft Intune を介して接続しているモバイル デバイスを Configuration Manager を使用して管理できます。 [Microsoft オンライン サービスのプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=262214)は、Microsoft Intune など、Microsoft オンライン サービスに適用されます。 お客様が Microsoft Intune サブスクリプションもお持ちの場合、このプライバシーに関する声明と共に [Microsoft Online Services のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=262214)もお読みください。
 
 Microsoft Intune とのすべての通信で HTTPS が使用されます。 管理者が Microsoft Intune サブスクリプションを構成し、iOS サポートの構成に必要な Certificate Signing Request (CSR) をダウンロードするには、職場アカウントとパスワードを使用して Microsoft Intune にサインインする必要があります。 これらの資格情報は Configuration Manager に保管されません。 Microsoft Intune とのその他の通信はすべて、Microsoft Intune によって自動生成される PKI 証明書を使用して認証されます。
 

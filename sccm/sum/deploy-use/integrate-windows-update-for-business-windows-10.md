@@ -1,28 +1,29 @@
 ---
-title: "Windows 10 における Windows Update for Business との統合"
+title: Windows 10 における Windows Update for Business との統合
 titleSuffix: Configuration Manager
-description: "Windows Update サービスに接続しているデバイスに関して、Windows Update for Business を利用し、組織の Windows 10 デバイスを最新の状態に維持します。"
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.date: 10/06/2016
+description: Windows Update サービスに接続しているデバイスに関して、Windows Update for Business を利用し、組織の Windows 10 デバイスを最新の状態に維持します。
+keywords: ''
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
-ms.service: 
-ms.technology: configmgr-sum
+ms.service: ''
+ms.technology:
+- configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 070275f65cf69dc6491720338d30e666a08b6129
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: e27e5f043af28b74369f21d19e5b20e19572213a
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>Windows 10 における Windows Update for Business との統合
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Windows Update for Business (WUfB) を使用すると、組織内の Windows 10 ベースのデバイスが Windows Update (WU) サービスに直接接続しているときに、最新のセキュリティ防御と Windows の機能によってこれらのデバイスが常に最新に保たれるようにすることができます。 Configuration Manager には、WUfB を使用してソフトウェア更新プログラムを取得する Windows 10 コンピューターと、WSUS を使用して取得する Windows 10 コンピューターを区別する機能があります。  
+Windows Update for Business (WUfB) を使用すると、組織内の Windows 10 ベースのデバイスが Windows Update (WU) サービスに直接接続しているときに、最新のセキュリティ防御と Windows の機能によってこれらのデバイスが常に最新に保たれるようにすることができます。 Configuration Manager では、WUfB を使用してソフトウェア更新プログラムを取得する Windows 10 コンピューターと、WSUS を使用して取得する Windows 10 コンピューターを区別することができます。  
 
  WUfB または Windows Insider などの WU から更新プログラムを受信するように Configuration Manager クライアントが設定されている場合に、以下に示す Configuration Manager の一部の機能が使用できなくなりました。  
 
@@ -30,7 +31,7 @@ Windows Update for Business (WUfB) を使用すると、組織内の Windows 10 
 
     -   Configuration Manager では WU に発行された更新プログラムは認識されません。 WU から更新プログラムを受信するように構成された Configuration Manager クライアントでは、これらの更新プログラムは Configuration Manager コンソールで **[不明]** と表示されます。  
 
-    -   全体的な適用ステータスのトラブルシューティングが困難になっています。これは、以前は **[不明]** ステータスが WSUS からのスキャン状態を報告していないクライアントに対してのみ使用されていたためです。  今後はこれに、WU から更新プログラムを受信する Configuration Manager クライアントも含まれることになります。  
+    -   全体的な適用ステータスのトラブルシューティングが困難になっています。これは、以前は **[不明]** ステータスが WSUS からのスキャン状態を報告していないクライアントに対してのみ使用されていたためです。 今後はこれに、WU から更新プログラムを受信する Configuration Manager クライアントも含まれることになります。  
 
     -   更新プログラムの適用ステータスに基づいた (会社のリソースに対する) 条件付きアクセスは、WU から更新プログラムを受信するクライアントに対して適切に機能しません。これは、これらのクライアントが Configuration Manager からの適用状況要件を満たすことがないためです。  
 
@@ -45,7 +46,7 @@ Windows Update for Business (WUfB) を使用すると、組織内の Windows 10 
 -   ソフトウェア更新プログラムのインフラストラクチャを使用する Configuration Manager の完全なクライアント展開は、WUfB に接続して更新プログラムを受信するクライアントに対しては機能しません。  
 
 ## <a name="identify-clients-that-use-wufb-for-windows-10-updates"></a>WUfB を使用して Windows 10 の更新プログラムを取得するクライアントを識別する  
- 次の手順を使用して、Windows 10 の更新プログラムとアップグレードの取得に WUfB を使用するクライアントを識別し、WSUS を使用して更新プログラムを取得することをやめるようそれらのクライアントを構成して、これらのクライアントのソフトウェア更新ワークフローを無効にするためのクライアント エージェント設定を展開します。  
+ 次の手順を使用して、Windows 10 の更新プログラムとアップグレードの取得に WUfB を使用するクライアントを特定します。 次に、WSUS を使用して更新プログラムを取得することをやめるようこれらのクライアントを構成し、これらのクライアントのソフトウェア更新ワークフローを無効にするクライアント エージェント設定を展開します。  
 
  **必要条件**  
 
@@ -55,14 +56,14 @@ Windows Update for Business (WUfB) を使用すると、組織内の Windows 10 
 
 #### <a name="to-identify-clients-that-use-wufb"></a>WUfB を使用するクライアントを識別するには  
 
-1.  Windows Update エージェントが以前有効になっていた場合は、WSUS がスキャンされないように、無効にします。   
-    レジストリ キー **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\UseWUServer** を設定し、コンピューターによって WSUS または Windows Update がスキャンされるかどうかを指定できます。  この値が 2 の場合、WSUS についてはスキャンされません。  
+1.  Windows Update エージェントが以前は有効になっていた場合は、WSUS がスキャンされないように、無効にします。 コンピューターが WSUS または Windows Update に対してスキャンを実行しているかどうかを示すために、次のレジストリ キーを設定できます。  この値が 2 の場合、WSUS に対するスキャンは実行されていません。  
+    - **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\UseWUServer**
 
 2.  Configuration Manager リソース エクスプローラーで、**Windows Update** ノードの下に新しい属性 **UseWUServer** を確認できます。  
 
 3.  更新プログラムとアップグレードのために WUfB を介して接続されているすべてのコンピューターを対象とした **UseWUServer** 属性に基づいて、コレクションを作成します。  
 
-4.  ソフトウェア更新プログラム ワークフローを無効にするクライアント エージェント設定を作成し、WUfB に直接接続されているコンピューターのコレクションに、この設定を展開します。  
+4.  ソフトウェア更新ワークフローを無効にするクライアント エージェント設定を作成します。 WUfB に直接接続されているコンピューターのコレクションに設定を展開します。  
 
 5.  WUfB を介して管理されているコンピューターの対応ステータスには **[不明]** と表示され、全体のコンプライアンス対応率をカウントする際に、これらのコンピューターは除外されます。  
 
@@ -70,20 +71,21 @@ Windows Update for Business (WUfB) を使用すると、組織内の Windows 10 
 <!-- 1290890 -->
 Configuration Manager バージョン 1706 以降、Windows Update for Business によって直接管理されている Windows 10 デバイスの Windows 10 機能更新プログラムまたは品質更新プログラムに対し、遅延ポリシーを構成できるようになりました。 遅延ポリシーの管理は、**[ソフトウェア ライブラリ]** > **[Windows 10 のサービス]** の下の新しい **[Windows Update for Business ポリシー]** ノードでできます。
 
-### <a name="prerequisites"></a>必要条件
+>[!NOTE] 
+>Configuration Manager バージョン 1802 以降では、Windows Insider の遅延ポリシーを設定できます。 <!--507201-->Windows Insider プログラムの詳細については、[Windows Insider Program for Business の概要](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business)に関するページを参照してください。
+
+### <a name="prerequisites"></a>[前提条件]
 Windows Update for Business で管理されている Windows 10 デバイスには、インターネット接続が必要です。
 
 #### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>Windows Update for Business 遅延ポリシーを作成するには
 1. **[ソフトウェア ライブラリ]** > **[Windows 10 のサービス]** > **[Windows Update for Business ポリシー]** に移動します。
 2. **[ホーム]** タブの **[作成]** グループで、**[Windows Update for Business ポリシーを作成する]** を選択し、Windows Update for Business ポリシーの作成ウィザードを開きます。
 3. **[全般]** ページで、ポリシーの名前と説明を入力します。
-4. **[遅延ポリシー]** ページで、機能更新プログラムを遅延または一時停止するかどうかを設定します。    
-    機能更新プログラムは通常、Windows の新機能です。 **[ブランチ準備レベル]** を設定すると、機能更新プログラムが Microsoft からリリースされた場合に、受け取りを遅延させるかどうか、およびその期間を定義できます。
+4. **[遅延ポリシー]** ページで、機能更新プログラムを遅延または一時停止するかどうかを設定します。 機能更新プログラムは通常、Windows の新機能です。 **[ブランチ準備レベル]** を設定すると、機能更新プログラムが Microsoft からリリースされた場合に、受け取りを遅延させるかどうか、およびその期間を定義できます。
     - **[ブランチ準備レベル]**: Windows Update を受け取るデバイスのブランチを設定します (Current Branch または Current Branch for Business)。
     - **[遅延期間 (日数)]**: 機能更新プログラムを遅延させる日数を指定します。 これらの機能更新プログラムの受け取りは、リリースから 180 日間遅延させることができます。
     - **[Pause Features Updates starting]\(機能更新プログラムの一時停止の開始\)**: デバイスでの機能更新プログラムの受け取りを一時停止するかどうかを選択します。一時停止の期間は最大 60 日間です。 最大日数が経過すると、一時停止機能は自動的に期限切れとなり、デバイスは適用可能な更新を確認するために Windows Update をスキャンします。 このスキャンが終ったら、もう一度更新を一時停止することができます。 機能更新プログラムの一時停止を解除するには、チェック ボックスをオフにします。   
-5. 品質更新プログラムを遅延または一時停止するかどうかを選択します。     
-    品質更新プログラムは通常、既存の Windows 機能の修正と機能強化で、通常は毎月第 1 火曜日に公開されますが、Microsoft が任意のタイミングでリリースすることもあります。 品質更新プログラムが利用可能になった場合に受け取りを遅延させるかどうか、およびその期間を定義できます。
+5. 品質更新プログラムを遅延または一時停止するかどうかを選択します。 品質更新プログラムは通常、既存の Windows 機能の修正と機能強化で、通常は毎月第 1 火曜日に公開されますが、Microsoft が任意のタイミングでリリースすることもあります。 品質更新プログラムが利用可能になった場合に受け取りを遅延させるかどうか、およびその期間を定義できます。
     - **[遅延期間 (日数)]**: 機能更新プログラムを遅延させる日数を指定します。 これらの機能更新プログラムの受け取りは、リリースから 180 日間遅延させることができます。
     - **[品質更新プログラムの一時停止の開始]**: デバイスでの品質更新プログラムの受け取りを一時停止するかどうかを選択します。一時停止の期間は最大 35 日間です。 最大日数が経過すると、一時停止機能は自動的に期限切れとなり、デバイスは適用可能な更新を確認するために Windows Update をスキャンします。 このスキャンが終ったら、もう一度更新を一時停止することができます。 品質更新プログラムの一時停止を解除するには、チェック ボックスをオフにします。
 6. **[他の Microsoft 製品の更新プログラムのインストール]** を選択して、遅延の設定を Microsoft Update と Windows Update に適用可能にするグループ ポリシー設定を有効にします。

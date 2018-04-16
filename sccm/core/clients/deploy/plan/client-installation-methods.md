@@ -1,38 +1,39 @@
 ---
-title: "クライアント インストール方法"
+title: クライアント インストール方法
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でのクライアントのインストール方法について説明します。"
+description: Configuration Manager クライアントをインストールする方法について説明します。
 ms.custom: na
-ms.date: 04/25/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
-caps.latest.revision: "9"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 4c600212c817e8b490e93938387b18c65baee042
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 9
+caps.handback.revision: 0
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 38f7d428149f4a4ac2b0bcb604031eca60a0fae5
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="client-installation-methods-in-system-center-configuration-manager"></a>System Center Configuration Manager でのクライアントのインストール方法
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager クライアント ソフトウェアはさまざまな方法でインストールできます。 1 つの方法を利用することも、複数の方法を組み合わせることもできます。 このトピックでは、それぞれの方法について説明します。組織にとって最適な方法を理解できます。  
+Configuration Manager クライアント ソフトウェアはさまざまな方法でインストールできます。 1 つの方法を利用することも、複数の方法を組み合わせることもできます。 この記事では、各方法について説明するので、どれが組織に最適か学習できます。  
 
 ## <a name="client-push-installation"></a>クライアント プッシュ インストール  
 
- **サポートされるクライアント プラットフォーム:** Windows  
+**サポートされるクライアント プラットフォーム:** Windows  
 
- **長所**  
+#### <a name="advantages"></a>長所  
 
 -   単一コンピューター、コンピューターのコレクション、またはクエリの結果に対してクライアントをインストールするのに使用できます。  
 
@@ -40,7 +41,7 @@ Configuration Manager クライアント ソフトウェアはさまざまな方
 
 -   **[クライアント プッシュ インストールのプロパティ]** ダイアログ ボックスの **[クライアント]** タブで定義したクライアント インストールのプロパティが自動的に使用されます。  
 
- **短所**  
+#### <a name="disadvantages"></a>短所  
 
 -   大きなコレクションにプッシュするとき、ネットワーク トラフィックの量が増加する可能性があります。  
 
@@ -50,16 +51,19 @@ Configuration Manager クライアント ソフトウェアはさまざまな方
 
 -   クライアント プッシュ インストールのアカウントでは、どのアカウントに目的のクライアント コンピューターに対する管理者権限を付与するかを指定する必要があります。  
 
--   クライアント プッシュ インストールを完了するには、クライアント コンピューターで Windows ファイアウォールに例外を構成する必要があります。  
+-   クライアント コンピューターで、例外を使用して、Windows ファイアウォールを構成する必要があります。   
 
--   クライアント プッシュ インストールはキャンセルできません。 このクライアントのインストール方法をサイトで使用すると、Configuration Manager はクライアントを検出されたすべてのリソースにインストールしようとし、失敗した場合は最大 7 日間にわたって再試行します。  
+-   クライアント プッシュ インストールはキャンセルできません。 Configuration Manager は、検出されたすべてのリソースにクライアントをインストールしようとします。 最大 7 日間、失敗した操作を再試行します。  
 
- このインストール方法の詳細については、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」を参照してください。  
+詳細については、「[クライアント プッシュを使用したクライアントのインストール方法](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush)」を参照してください。  
+
+
 
 ## <a name="software-update-point-based-installation"></a>ソフトウェアの更新ポイント経由のインストール  
- **サポートされるクライアント プラットフォーム:** Windows  
 
- **利点:**  
+**サポートされるクライアント プラットフォーム:** Windows  
+
+#### <a name="advantages"></a>長所  
 
 -   既存のソフトウェアの更新のインフラストラクチャを使用して、クライアント ソフトウェアを管理できます。  
 
@@ -69,26 +73,29 @@ Configuration Manager クライアント ソフトウェアはさまざまな方
 
 -   コンピューターは、Active Directory ドメイン サービスに公表されたクライアント インストール プロパティを読み取ることができます。  
 
--   クライアント ソフトウェアが削除された場合、再インストールします。  
+-   この方法では、クライアントが削除された場合、再インストールされます。  
 
 -   目的のクライアント コンピューターのインストール アカウントを構成してメンテナンスを行う必要はありません。  
 
- **欠点:**  
+#### <a name="disadvantages"></a>短所  
 
 -   ソフトウェアの更新のインフラストラクチャが機能していることが前提条件です。  
 
--   クライアントのインストールとソフトウェアの更新に同じサーバーを使用する必要があります。また、このサーバーはプライマリ サイトに存在している必要があります。  
+-   クライアントのインストールとソフトウェアの更新に同じサーバーを使用する必要があります。 このサーバーは、プライマリ サイトに存在する必要があります。  
 
--   新しいクライアントをインストールするには、クライアントのアクティブなソフトウェアの更新ポイントおよびポートを使用して、Active Directory Domain Services 内のグループ ポリシー オブジェクト (GPO) を構成する必要があります。  
+-   新しいクライアントをインストールするには、クライアントのアクティブなソフトウェアの更新ポイントおよびポートを使用して、Active Directory Domain Services 内のグループ ポリシー オブジェクトを構成する必要があります。  
 
 -   Active Directory スキーマが Configuration Manager 向けに拡張されていない場合、グループ ポリシー設定を使用してクライアント インストールのプロパティをコンピューターにプロビジョニングする必要があります。  
 
- このインストール方法の詳細については、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」を参照してください。  
+詳細については、「[ソフトウェアの更新に基づいたインストールを使用したクライアントのインストール方法](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientSUP)」を参照してください。  
+
+
 
 ## <a name="group-policy-installation"></a>グループ ポリシーによるインストール  
- **サポートされるクライアント プラットフォーム:** Windows  
 
- **利点:**  
+**サポートされるクライアント プラットフォーム:** Windows  
+
+#### <a name="advantages"></a>長所  
 
 -   クライアントをインストールする前に、コンピューターが検出されている必要はありません。  
 
@@ -98,35 +105,41 @@ Configuration Manager クライアント ソフトウェアはさまざまな方
 
 -   目的のクライアント コンピューターのインストール アカウントを構成してメンテナンスを行う必要はありません。  
 
- **欠点:**  
+#### <a name="disadvantages"></a>短所  
 
 -   多数のクライアントがインストールされた場合、ネットワーク トラフィックの量が増加する可能性があります。  
 
 -   Active Directory スキーマが Configuration Manager 向けに拡張されていない場合、グループ ポリシー設定を使用してサイト内のコンピューターにクライアント インストール プロパティを追加する必要があります。  
 
- このインストール方法の詳細については、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」を参照してください。  
+詳細については、「[グループ ポリシーを使用したクライアントのインストール方法](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientGP)」を参照してください。  
+
+
 
 ## <a name="logon-script-installation"></a>ログオン スクリプトによるインストール  
- **サポートされるクライアント プラットフォーム:** Windows  
 
- **利点:**  
+**サポートされるクライアント プラットフォーム:** Windows  
+
+#### <a name="advantages"></a>長所  
 
 -   クライアントをインストールする前に、コンピューターが検出されている必要はありません。  
 
 -   CCMSetup のコマンド ライン プロパティを使用してサポートします。  
 
- **欠点:**  
+#### <a name="disadvantages"></a>短所  
 
 -   多数のクライアントが短時間にインストールされた場合、ネットワーク トラフィックの量が増加する可能性があります。  
 
 -   ユーザーがネットワークに頻繁にログオンしない場合は、すべてのクライアント コンピューターにインストールするのに長時間かかる場合があります。  
 
- このインストール方法の詳細については、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」を参照してください。  
+詳細については、「[ログオン スクリプトを使用したクライアントのインストール方法](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientLogonScript)」を参照してください。  
+
+
 
 ## <a name="manual-installation"></a>手動インストール  
- **サポートされるクライアント プラットフォーム:** Windows、UNIX/Linux、Mac OS X  
 
- **利点:**  
+**サポートされるクライアント プラットフォーム:** Windows、UNIX/Linux、Mac OS X  
+
+#### <a name="advantages"></a>長所  
 
 -   クライアントをインストールする前に、コンピューターが検出されている必要はありません。  
 
@@ -134,14 +147,45 @@ Configuration Manager クライアント ソフトウェアはさまざまな方
 
 -   CCMSetup のコマンド ライン プロパティを使用してサポートします。  
 
- **欠点:**  
+#### <a name="disadvantages"></a>短所  
 
 -   自動化されていないため、時間を削減できます。  
 
- 各プラットフォームのクライアントを手動でインストールする方法の詳細については、次をご覧ください。  
+各プラットフォームのクライアントを手動でインストールする方法の詳細については、次の記事をご覧ください。  
 
--   [System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)  
+-   [Windows コンピューターにクライアントを展開する方法](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual)  
 
--   [System Center Configuration Manager で UNIX および Linux サーバーにクライアントを展開する方法](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md)  
+-   [UNIX および Linux サーバーにクライアントを展開する方法](/sccm/core/clients/deploy/deploy-clients-to-unix-and-linux-servers)  
 
--   [System Center Configuration Manager で Mac にクライアントを展開する方法](../../../../core/clients/deploy/deploy-clients-to-macs.md)  
+-   [Mac にクライアントを展開する方法](/sccm/core/clients/deploy/deploy-clients-to-macs)  
+
+
+
+## <a name="microsoft-intune-mdm-installation"></a>Microsoft Intune MDM のインストール
+
+**サポートされるクライアント プラットフォーム:** Windows 10
+
+#### <a name="advantages"></a>長所  
+
+-   クライアントをインストールする前に、コンピューターが検出されている必要はありません。  
+
+-   目的のクライアント コンピューターのインストール アカウントを構成してメンテナンスを行う必要はありません。  
+
+-   Azure Active Directory での先進認証を使用できます。  
+
+-   インターネット上のコンピューターにインストールして割り当てることがことができます。  
+
+-   共同管理用に Windows AutoPilot と Microsoft Intune で自動化できます。  
+
+#### <a name="disadvantages"></a>短所  
+
+-   Configuration Manager の外部での他のテクノロジーが必要です。  
+
+-   デバイスは、インターネット ベースでない場合でもインターネットにアクセスできる必要があります。  
+
+詳細については、以下の記事を参照してください。  
+
+-   [Intune に登録されている MDM 管理対象 Windows デバイスへのクライアントのインストール方法](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#bkmk_mdm)  
+
+-   [認証のため Azure AD を使用して、Configuration Manager の Windows 10 クライアントをインストールして割り当てる](/sccm/core/clients/deploy/deploy-clients-cmg-azure)  
+

@@ -1,50 +1,52 @@
 ---
-title: "探索の構成"
+title: 探索の構成
 titleSuffix: Configuration Manager
-description: "ネットワーク インフラストラクチャや Active Directory から管理できるリソースを見つけるように Configuration Manager サイトで実行する探索方法を構成します。"
+description: 探索方法を構成して、ネットワーク、Active Directory、および Azure Active Directory から管理するリソースを検索します。
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: f2d928e066702190eba32b2a2c06fe89636d59f6
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+manager: dougeby
+ms.openlocfilehash: 825b9b250000e8353b1428cbee45f8fda9a30c35
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>System Center Configuration Manager の探索方法を構成する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 
-ネットワーク インフラストラクチャや Active Directory から管理できるリソースを見つけるように System Center Configuration Manager サイトで実行する探索方法を構成します。 これを行うには、環境の検索に使用する各方法を有効にして構成する必要があります  (探索方法は、有効にするのと同じ手順で無効にすることもできます)。唯一の例外は、定期探索とサーバー検出です。  
+探索方法を構成して、ネットワーク、Active Directory、および Azure Active Directory (Azure AD) から管理するリソースを検索します。 最初に環境の検索に使用する各方法を有効にしてから構成します。 探索方法は、有効にするのと同じ手順で無効にすることもできます。 このプロセスの唯一の例外は、定期探索とサーバー検出です。  
 
--   既定では、Configuration Manager プライマリ サイトをインストールすると、定期探索が有効になり、基本スケジュールで実行するように構成されています。 定期探索によってデバイスの探索データ レコード (DDR) が最新の状態になるため、定期探索は有効のままにすることをお勧めします。 定期探索の詳細については、「[定期探索について](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutHeartbeat)」を参照してください。  
+-   既定では、**定期探索**は、Configuration Manager プライマリ サイトをインストールするときに既に有効になっています。 これは基本スケジュールで実行するために構成されています。 定期探索は有効にしたままにしてください。 定期探索によってデバイスの探索データ レコード (DDR) が最新の状態になります。 定期探索の詳細については、「[定期探索について](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutHeartbeat)」を参照してください。  
 
--   サーバー検出はサイト システムとして使用するコンピューターを見つける自動探索方法です。 構成も無効化も実行できません。  
+-   **サーバー検出**は自動検出方法です。 サイト システムとして使用しているコンピューターを検索します。 構成も無効化も実行できません。  
 
-**構成可能な探索方法を有効にするには:**  
+### <a name="enable-a-configurable-discovery-method"></a>構成可能な探索方法を有効にする  
  > [!NOTE]  
- > 次の情報は、Azure Active Directory ユーザー探索には適用されません。 Azure Active Directory の場合は、このトピックで後述する「[Azure AD ユーザー探索を構成する](#azureaadisc)」を参照してください。
+ > 次の情報は、Azure AD ユーザー探索には適用されません。 代わりに、この記事で後述する「[Azure AD ユーザー探索を構成する](#azureaadisc)」を参照してください。
 
-1.  Configuration Manager コンソールで **[管理]** > **[階層の構成]** を選択し、**[探索方法]** をクリックします。  
+1.  Configuration Manager コンソールで **[管理]** ワークスペースに移動し、**[階層の構成]** を展開してから、**[探索方法]** を選択します。  
 
 2.  探索を有効にするサイトの探索方法を選択します。  
 
-3.  **[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** を選択してから、**[全般]** タブで **[&lt;探索方法\>を有効にする]** チェック ボックスをオンにします。  
+3.  **[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** を選択します。 **[全般]** タブで、**[&lt;探索方法\> を有効にする]** チェック ボックスをオンにします。  
 
      このチェック ボックスが既にオンになっている場合、このチェック ボックスをオフにすると探索方法が無効になります。  
 
 4.  **[OK]** をクリックして構成を保存します。  
+
 
 
 ##  <a name="BKMK_ConfigADForestDisc"></a> Active Directory フォレストの探索の構成  
@@ -101,8 +103,10 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
 
 4.  このフォレストを Active Directory フォレストの探索で使用するための構成が完了したら、**[OK]** をクリックして構成を保存します。  
 
+
+
 ##  <a name="BKMK_ConfigADDiscGeneral"></a> Active Directory のコンピューター、ユーザー、またはグループの探索の構成  
- 次のセクションの情報を参照して、コンピューター、ユーザー、またはグループの探索を構成します。 次の探索方法を使用します。  
+ コンピューター、ユーザー、またはグループの探索を構成するには、次の探索方法のこれらのセクションにある情報を使用します。  
 
 -   Active Directory グループの探索  
 
@@ -146,7 +150,7 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
 
 7.  **[ポーリングのスケジュール]** タブで、完全な探索ポーリングのスケジュールと差分探索の両方を構成します。  
 
-8.  必要に応じて、**[オプション]** タブで、古いコンピューターのレコードをフィルター処理して探索から除外するためのオプションや、配布グループのメンバーシップを探索するためのオプションを構成できます。  
+8.  必要に応じて、**[オプション]** タブで、探索による古いコンピューターのレコードをフィルタリングして取り除く、つまり除外するように、オプションを構成します。 また、配布グループのメンバーシップの探索も構成します。  
 
     > [!NOTE]  
     >  既定では、Active Directory グループの探索では、セキュリティ グループのメンバーシップのみ探索されます。  
@@ -172,7 +176,7 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
     3.  場所ごとに、**[Active Directory 探索アカウント]** として使用するアカウントを指定します。  
 
         > [!TIP]  
-        >  指定する場所ごとに、探索オプションのセットおよび一意の Active Directory 探索アカウントを構成できます。  
+        >  指定した場所ごとに、探索オプションのセットおよび一意の Active Directory 探索アカウントを構成できます。  
 
     4.  **[OK]** をクリックして Active Directory コンテナーの構成を保存します。  
 
@@ -203,7 +207,7 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
     3.  場所ごとに、**[Active Directory 探索アカウント]** として使用するアカウントを指定します。  
 
         > [!NOTE]  
-        >  指定する場所ごとに、探索オプションの一意のセットおよび一意の Active Directory 探索アカウントを構成できます。  
+        >  指定した場所ごとに、探索オプションの一意のセットおよび一意の Active Directory 探索アカウントを構成できます。  
 
     4.  **[OK]** をクリックして Active Directory コンテナーの構成を保存します。  
 
@@ -213,11 +217,29 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
 
 8.  このサイトの Active Directory ユーザー探索の構成が完了したら、**[OK]** をクリックして構成を保存します。  
 
+
+
 ## <a name="azureaadisc"></a> Azure AD ユーザー探索を構成する
-バージョン 1706 以降、Configuration Manager を [Azure サブスクリプションと Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard) に接続するときに、Azure Active Directory ユーザー探索を構成できるようになりました。
+Azure AD ユーザー探索は、他の探索方法と同じように、有効にしたり構成することはできません。 Configuration Manager サイトを Azure AD にオンボードする際に構成します。 **クラウド管理**用に [Azure サービスを構成する](/sccm/core/servers/deploy/configure/azure-services-wizard)場合も、この探索方法を有効にして構成することができます。 
 
-Azure AD ユーザーの探索は、*クラウド管理*の一部として構成されています。 詳細な手順については、トピック「*Configure Azure services for use with Configuration Manager*」(Configuration Manager と共に使用するように Azure サービスを構成する) の「[Create the Azure web app for use with Configuration Manager](/sccm/core/servers/deploy/configure/Azure-services-wizard#webapp)」(Configuration Manager と共に使用するように Azure Web アプリを作成する) を参照してください。
+**クラウド管理** Azure サービスを構成する場合は、次の手順を実行します。 
+- ウィザードの **[検出]** ページで、**[Azure Active Directory ユーザーの探索を有効にする]** をクリックします。 
+- **[設定]** をクリックします。 
+- [Azure AD ユーザー探索設定] ダイアログ ボックスで、検出を実行するスケジュールを設定します。 Azure AD の新規または変更されたアカウントのみをチェックする差分探索を有効にすることもできます。 
 
+詳細については、「[Azure AD ユーザー探索](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)」を参照してください。
+
+ > [!Important]  
+ > Azure AD アプリを Configuration Manager に*インポート*する前に、Azure AD からディレクトリ データを読み取るためにサーバー アプリケーションのアクセス許可を付与する必要があります。 
+ >  - [Azure Portal](https://portal.azure.com) で、**[Azure Active Directory]** ブレードに移動します。 
+ >  - **[アプリの登録]** をクリックして、必要に応じて **[すべてのアプリ]** に切り替えます。 
+ >  - サーバー アプリの種類 *[Web アプリ/API]* を選択して、**[設定]** をクリックします。 
+ >  - **[必要なアクセス許可]**、**[アクセス許可の付与]** の順にクリックします。
+ >  
+ > Configuration Manager からサーバー アプリを*作成*すると、Azure AD がアプリケーションを使用してアクセス許可を自動的に作成します。 その場合も、Azure Portal でアプリケーションに同意する必要があります。
+
+ > [!Note]  
+ > ユーザーがフェデレーション ID または同期 ID である場合、Azure AD ユーザー探索だけでなく、Configuration Manager の [Active Directory ユーザー探索](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser)を使用する必要があります。 ハイブリッド ID の詳細については、「[ハイブリッド ID 導入戦略の定義](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy)」を参照してください。<!--497750-->
 
 
 
@@ -237,11 +259,13 @@ Azure AD ユーザーの探索は、*クラウド管理*の一部として構成
 
 4.  クライアントが定期探索データ レコードを送信する頻度を構成し、**[OK]** をクリックして構成を保存します。  
 
+
+
 ##  <a name="BKMK_ConfigNetworkDisc"></a> ネットワーク探索の構成  
- ネットワーク探索を構成するときに、次のセクションの情報を参照してください。  
+ ネットワーク探索を構成するには、次のセクションの情報を使用します。  
 
 ###  <a name="BKMK_AboutConfigNetworkDisc"></a> ネットワーク探索の構成について  
- ネットワーク探索を構成する前に、次のことを把握しておく必要があります。  
+ ネットワーク探索を構成する前に、次のトピックを把握しておく必要があります。  
 
 -   利用可能なレベルのネットワーク探索  
 
@@ -299,7 +323,7 @@ Azure AD ユーザーの探索は、*クラウド管理*の一部として構成
  **[ネットワーク探索のプロパティ]** ダイアログ ボックスの **[SNMP]** タブに複数の SNMP コミュニティが表示される場合、ネットワーク探索は表示されている順序で検索を行います。 さまざまな名前を使ってデバイスへの接続が試みられると、ネットワーク トラフィックが発生します。このようなネットワーク トラフィックを最小限に抑えるため、最も頻繁に使用される名前を一覧の一番上に配置するようにします。  
 
 > [!NOTE]  
->  SNMP コミュニティ名を使用できるだけでなく、特定の SNMP デバイスの IP アドレスまたは解決可能な名前も指定できます。 これは、**［ネットワーク探索のプロパティ］**ダイアログ ボックスの **［SNMP デバイス］**タブで行います。  
+>  SNMP コミュニティ名を使用できるだけでなく、特定の SNMP デバイスの IP アドレスまたは解決可能な名前も指定できます。 このアクションは、**[ネットワーク探索のプロパティ]** ダイアログ ボックスの **[SNMP デバイス]** タブで行います。  
 
 ####  <a name="BKMK_SearchByDHCP"></a> 特定の DHCP サーバーの検索  
  特定の DHCP サーバーまたは複数のサーバーを使用して探索の実行中に DHCP クライアントを探索するように、ネットワーク探索を構成できます。  
@@ -325,7 +349,7 @@ Azure AD ユーザーの探索は、*クラウド管理*の一部として構成
     -   **[サブネット]** タブで、**[ローカル サブネットを探索]** チェック ボックスをオンにします。  
 
         > [!TIP]  
-        >  ネットワークを構成する特定のサブネットがわかっている場合、**[ローカル サブネットを検索]** チェック ボックスをオフにし、**[新規]** アイコン ![[新規] アイコン](media/Disc_new_Icon.gif) を使用して、検索する特定のサブネットを追加できます。 大規模なネットワークの場合、サブネットを一度に 1 つまたは 2 つだけ検索することで、ネットワーク帯域幅の使用を最小限に抑えることができる場合があります。  
+        >  ネットワークを構成している特定のサブネットがわかっている場合は、**[ローカル サブネットを検索する]** チェック ボックスをオフにします。 次に、**[新規]** アイコン ![新規アイコン](media/Disc_new_Icon.gif) を使用して、検索する特定のサブネットを追加します。 大規模なネットワークの場合、サブネットを一度に 1 つまたは 2 つだけ検索することで、ネットワーク帯域幅の使用を最小限に抑えることができる場合があります。  
 
     -   **[ドメイン]** タブで、**[ローカル ドメインを検索]** チェック ボックスをオンにします。  
 
@@ -399,7 +423,7 @@ Azure AD ユーザーの探索は、*クラウド管理*の一部として構成
 
 10. DHCP クライアント用に特定の DHCP サーバーを照会するための探索を構成するには、**[DHCP]** タブを選択し、次のオプションを 1 つ以上構成します。  
 
-    -   探索を実行しているコンピューターで DHCP サーバーを照会するには、**[サイト サーバーの DHCP サーバーを常に使用する]** チェック ボックスをオンにします。  
+    -   探索を実行しているコンピューターで DHCP サーバーを照会するには、**[サイト サーバーの DHCP サーバーを常に使用する]** を選択します。  
 
         > [!NOTE]  
         >  このオプションを使用するには、サーバーが DHCP サーバーから IP アドレスをリースしている必要があります。また、静的 IP アドレスは使用できません。  
@@ -414,12 +438,12 @@ Azure AD ユーザーの探索は、*クラウド管理*の一部として構成
      複数の定期スケジュールや、繰り返しパターンのない複数のスケジュールなど、複数のスケジュールを構成できます。  
 
     > [!NOTE]  
-    >  複数のスケジュールが **[スケジュール]** タブで同じ時刻に表示される場合、すべてのスケジュールで、スケジュールに示されている時刻で構成されているとおりにネットワーク探索が実行されます。 これは定期スケジュールにも当てはまります。  
+    >  複数のスケジュールが **[スケジュール]** タブで同じ時刻に表示される場合、すべてのスケジュールで、スケジュールに示されている時刻で構成されているとおりにネットワーク探索が実行されます。 この動作は定期スケジュールにも当てはまります。  
 
 12. **[OK]** をクリックして構成を保存します。  
 
 ###  <a name="BKMK_HowToVerifyNetDisc"></a> ネットワーク探索の終了を確認する方法  
- ネットワーク検索が完了するのに必要な時間は、さまざまな要因によって異なります。 この要因としては、次のうちのいずれかまたは複数が該当する可能性があります。  
+ ネットワーク検索が完了するのに必要な時間は、次の 1 つ以上の要因によって異なります。  
 
 -   ネットワークの規模  
 

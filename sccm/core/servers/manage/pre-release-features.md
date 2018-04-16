@@ -1,25 +1,26 @@
 ---
-title: "プレリリース機能"
+title: プレリリース機能
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager のプレリリース機能"
+description: System Center Configuration Manager のプレリリース機能
 ms.custom: na
-ms.date: 12/19/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 2ef961732431bd4314229e3da6a65df58592342f
-ms.sourcegitcommit: 6c2aa79924c0e7fc64ef5e9003498fc00c349db9
+manager: dougeby
+ms.openlocfilehash: c30fbeaad87b18750f65f90427366044d30c6609
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="pre-release-features-in-system-center-configuration-manager"></a>System Center Configuration Manager のプレリリース機能
 *適用対象: System Center Configuration Manager (Current Branch)*
@@ -46,17 +47,19 @@ ms.lasthandoff: 12/21/2017
 
  |機能          |プレリリース版として追加 | 完全機能として追加|  
 |------------------|---------------------|---------------------|
-| タスク シーケンス ステップの実行<!-- 1261338 --> |  [バージョン 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Windows Defender Exploit Guard <!-- 1355468 --> |  [バージョン 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| 条件付きアクセス コンプライアンス ポリシーに対するデバイス正常性構成証明の評価 <!-- 1235616 --> |  [バージョン 1710](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Configuration Manager コンソールから PowerShell スクリプトを作成して実行する<!-- 1236459 --> |  [バージョン 1706](/sccm/apps/deploy-use/create-deploy-scripts)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+|段階的展開<!--1356837-->|[バージョン 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence.md)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| タスク シーケンス ステップの実行<!-- 1261338 --> |  [バージョン 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |[バージョン 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)|
+| Windows Defender Exploit Guard <!-- 1355468 --> |  [バージョン 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |[バージョン 1802](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)|
+| 条件付きアクセス コンプライアンス ポリシーに対するデバイス正常性構成証明の評価 <!-- 1235616 --> |  [バージョン 1710](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) |[バージョン 1802](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)|
+| Configuration Manager コンソールから PowerShell スクリプトを作成して実行する<!-- 1236459 --> |  [バージョン 1706](/sccm/apps/deploy-use/create-deploy-scripts)|[バージョン 1802](/sccm/apps/deploy-use/create-deploy-scripts)|
 | Microsoft Surface ドライバーの更新プログラムの管理 <!-- 1098490 --> |  [バージョン 1706](/sccm/sum/get-started/configure-classifications-and-products) | [バージョン 1710](/sccm/sum/get-started/configure-classifications-and-products)|
 | Configuration Manager を使用した Device Guard 管理<!-- 1319346 --> |  [バージョン 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | タスク シーケンス コンテンツの事前キャッシュ<!-- 1021244 --> |  [バージョン 1702](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) | [バージョン 1706](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)|
 | アプリケーションをインストールする前に実行中の実行可能ファイルを確認する<!-- 1284624 --> |   [バージョン 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |[バージョン 1706](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application)|
 | データ ウェアハウス サービス ポイント<!-- 1277922 --> |  [バージョン 1702](/sccm/core/servers/manage/data-warehouse) |[バージョン 1706](/sccm/core/servers/manage/data-warehouse)|
 | クライアントへのコンテンツ配布のピア キャッシュ<!-- 1101436 --> |  [バージョン 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) | [バージョン 1710](/sccm/core/plan-design/hierarchy/client-peer-cache)|
-| クラウド管理ゲートウェイ<!-- 1101764 --> |  [バージョン 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Microsoft Operations Management Suite コネクタ<!-- 1236739 --> | [バージョン 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| クラウド管理ゲートウェイ<!-- 1101764 --> |  [バージョン 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |[バージョン 1802](/sccm/core/clients/manage/plan-cloud-management-gateway)|
+| Microsoft Operations Management Suite コネクタ<!-- 1236739 --> | [バージョン 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |[バージョン 1802](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md)|
 | クラスター対応のコレクションのサービス (サーバー グループの提供)<!-- 1081776 --> | [バージョン 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | System Center Configuration Manager が管理する PC の条件付きアクセス<!--  --> | [バージョン 1602](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)     | [バージョン 1702](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)                     |
+<!--Image used = ![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif) -->

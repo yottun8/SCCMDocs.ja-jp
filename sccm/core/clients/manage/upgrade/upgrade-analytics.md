@@ -1,22 +1,23 @@
 ---
 title: Upgrade Readiness
-titleSuffix: Configuration Manager
-description: "Upgrade Readiness と Configuration Manager を統合します。 管理コンソールでアップグレードの互換性データにアクセスします。 アップグレードまたは修復対象のデバイスを指定します。"
-keywords: 
-author: mattbriggs
-ms.author: mabrigg
-manager: angerobe
-ms.date: 7/31/2017
+titleSuffix: System Center Configuration Manager
+description: Upgrade Readiness と Configuration Manager を統合します。 管理コンソールでアップグレードの互換性データにアクセスします。 アップグレードまたは修復対象のデバイスを指定します。
+keywords: ''
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
-ms.service: 
-ms.technology: configmgr-client
+ms.service: ''
+ms.technology:
+- configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
-ms.openlocfilehash: df2950551e527788aeb01d57cdbf01ad19817ccd
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: 96f20c3559ac08cb4c5a16d1d33b74c63a02e4b7
+ms.sourcegitcommit: f0bfd9fa0ec5b416f0ea2beee889b94e2ad9c97d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="integrate-upgrade-readiness-with-system-center-configuration-manager"></a>Upgrade Readiness と System Center Configuration Manager との統合
 
@@ -25,6 +26,12 @@ ms.lasthandoff: 11/17/2017
 Upgrade Readiness (旧 Upgrade Analytics) は、[Windows Analytics](https://www.microsoft.com/WindowsForBusiness/windows-analytics) の一部で、Windows 10 にアップグレードするため、ご使用の環境内のデバイスの対応性を評価および分析することができます。 特定のバージョンを構成することができます。 Upgrade Readiness と System Center Configuration Manager を統合することで、クライアントは Configuration Manager 管理コンソールでアップグレードの互換性データにアクセスできるようになります。 このデータに基づいて作成された動的なコレクションを使用して、アップグレードまたは修復対象のデバイスを指定できます。
 
 Upgrade Readiness は、[Microsoft Operations Management Suite (OMS)](/azure/operations-management-suite/operations-management-suite-overview) で実行するソリューションです。 Upgrade Readiness の詳細については、「[Manage Windows upgrades with Upgrade Readiness](/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness)」(Upgrade Readiness を使用した Windows アップグレードの管理) を参照してください。
+
+<!--
+>[!WARNING]
+>For Upgrade Readiness to function within Configuration Manager, you must upgrade to Configuration Manager version 1802. The Upgrade Readiness Connector will no longer function in Configuration Manager versions earlier than 1802. 
+SMS.507205 Pulled 4/5/18 -->
+
 
 ## <a name="configure-clients"></a>クライアントを構成する
 
@@ -44,7 +51,7 @@ Upgrade Readiness は、すべての Windows Analytics ソリューションと�
 Current Branch バージョン 1706 以降、[Azure サービス ウィザード](../../../servers/deploy/configure/azure-services-wizard.md)を使用して、Configuration Manager で使用する Azure サービスの構成のプロセスを簡単にできます。 Configuration Manager と Upgrade Readiness を接続するには、[Azure Portal](https://portal.azure.com) で *[Web アプリ/API]* タイプの Azure AD アプリ登録を作成する必要があります。 アプリ登録の作成方法の詳細については、「[Azure Active Directory テナントにアプリケーションを登録する](/azure/active-directory/active-directory-app-registration)」をご覧ください。 **Azure Portal** で、Upgrade Readiness データをホストする OMS ワークスペースを含むリソース グループに対して、新しい登録済みの Web アプリの*共同作成者*アクセス許可を付与する必要もあります。 **Azure サービス ウィザード**は、このアプリ登録を使用して、Configuration Manager が Azure AD と安全に通信し、インフラストラクチャを Upgrade Readiness データに接続できるようにします。
 
 >[!IMPORTANT]
->*共同作成者*アクセス許可は、Azure AD ユーザー ID ではなく、アプリ自体に付与する必要があります。 これは、Configuration Manager インフラストラクチャの代わりにデータにアクセスするのは登録済みアプリで、Azure AD ユーザーではないからです。 これを行うには、アクセス許可を割り当てるときに **[ユーザーの追加]** ブレードでアプリ登録名を検索する必要があります。 [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm) に接続するために [Configuration Manager に OMS へのアクセス許可を付与する](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)場合も、これと同じ手順に従う必要があります。 これらの手順は、*Azure サービス ウィザード*を使用してアプリ登録が Configuration Manager にインポートされる前に完了する必要があります。
+>*共同作成者*アクセス許可は、Azure AD ユーザー ID ではなく、アプリ自体に付与する必要があります。 これは、Configuration Manager インフラストラクチャの代わりにデータにアクセスするのは登録済みアプリで、Azure AD ユーザーではないからです。 アクセス許可を与えるには、アクセス許可を割り当てるときに **[ユーザーの追加]** ブレードでアプリ登録名を検索する必要があります。 [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm) に接続するために [Configuration Manager に OMS へのアクセス許可を付与する](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)場合も、これと同じ手順に従う必要があります。 これらの手順は、*Azure サービス ウィザード*を使用してアプリ登録が Configuration Manager にインポートされる前に完了する必要があります。
 
 ### <a name="use-the-azure-wizard-to-create-the-connection"></a>Azure ウィザードを使用して、接続を作成する
 
@@ -70,7 +77,7 @@ Upgrade Readiness と Configuration Manager を統合したら、クライアン
 
 Configuration Manager バージョン 1702 以前では、Upgrade Readiness への接続を作成するには、異なる一連の手順と要件が必要です。
 
-### <a name="prerequisites"></a>必要条件
+### <a name="prerequisites"></a>[前提条件]
 
 - 接続を追加するために、Configuration Manager 環境で最初に[サービス接続ポイント](/sccm/core/servers/deploy/configure/about-the-service-connection-point)を[オンライン モード](https://azure.microsoft.com/documentation/articles/resource-group-create-service-principal-portal/)で構成する必要があります。 接続を環境に追加する場合、このサイト システムの役割を実行するマシンに Microsoft Monitoring Agent もインストールされます。
 - "Web アプリケーションや Web API" 管理ツールとして Configuration Manager を登録し、[この登録のクライアント ID](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/) を取得します。

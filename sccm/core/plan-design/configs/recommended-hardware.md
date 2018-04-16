@@ -1,9 +1,9 @@
 ---
-title: "推奨ハードウェア"
+title: 推奨ハードウェア
 titleSuffix: Configuration Manager
-description: "基本的な展開だけでなく、System Center Configuration Manager 環境を拡張するために役立つハードウェアの推奨事項を確認します。"
+description: 基本的な展開だけでなく、System Center Configuration Manager 環境を拡張するために役立つハードウェアの推奨事項を確認します。
 ms.custom: na
-ms.date: 05/04/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5267f0af-34d3-47a0-9ab8-986c41276e6c
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 26
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 5def3fdef8e9182cb624640fa54ff2eae224e6a1
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 8d0883c7c2a735a2e651d61083d4d45570408ebb
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="recommended-hardware-for-system-center-configuration-manager"></a>System Center Configuration Manager の推奨ハードウェア
 
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/04/2017
 
 -   中央管理サイトの一時データベース サイズは、通常、プライマリ サイトのサイズよりも大幅に小さくなります。  
 
--   セカンダリ サイト データベースのサイズは、次のように制限されます。  
+-   セカンダリ サイトのデータベースには、次のサイズ制限があります。  
 
     -   SQL Server 2012 Express: 10 GB  
 
@@ -120,7 +120,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **ディスク領域:** 500 MB の空きディスク領域。Configuration Manager クライアントのキャッシュには、5 GB の空きディスク領域をお勧めします。 次に示すように、カスタマイズした設定を使用して Configuration Manager クライアントをインストールすると、必要とされるディスク領域が少なくなります。  
 
-    -   CCMSetup のコマンドライン プロパティ /skipprereq を使用して、クライアントには不要なファイルがインストールされないようにします。 たとえば、クライアントがアプリケーション カタログを使用しない場合は、**CCMSetup.exe /skipprereq:silverlight.exe** を実行します。  
+    -   CCMSetup のコマンドライン プロパティ /skipprereq を使用して、クライアントには不要なファイルがインストールされないようにします。 たとえば、クライアントがアプリケーション カタログを使用しない場合は、**CCMSetup.exe /skipprereq:silverlight.exe** を実行します。 Configuration Manager 1802 以降では、Silverlight は自動的にインストールされなくなりました。  
 
     -   Client.msi のプロパティ SMSCACHESIZE を使用して、既定の 5120 MB よりも小さいキャッシュ ファイルを設定します。 最小サイズは 1 MB です。 たとえば、 **CCMSetup.exe SMSCachesize=2** は、サイズが 2 MB のキャッシュを作成します。  
 
@@ -142,7 +142,7 @@ ms.lasthandoff: 12/04/2017
 ### <a name="client-for-linux-and-unix"></a>Linux および UNIX 用のクライアント  
  以下は、Configuration Manager で管理する Linux および UNIX サーバーの最小要件です。  
 
-|要件|説明|  
+|要件|詳細|  
 |-----------------|-------------|  
 |プロセッサとメモリ|コンピューターのオペレーティング システムのプロセッサと RAM に関する要件を参照してください。|  
 |ディスク領域|500MB の空きディスク領域。Configuration Manager クライアントのキャッシュには、5 GB の空きディスク領域をお勧めします。|  

@@ -1,9 +1,9 @@
 ---
-title: "Endpoint Protection でマルウェアからコンピューターを保護するシナリオ"
+title: Endpoint Protection でマルウェアからコンピューターを保護するシナリオ
 titleSuffix: Configuration Manager
-description: "Configuration Manager で Endpoint Protection を実装してマルウェアからコンピューターを保護する方法について説明します。"
+description: Configuration Manager で Endpoint Protection を実装してマルウェアからコンピューターを保護する方法について説明します。
 ms.custom: na
-ms.date: 03/13/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,21 +11,21 @@ ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 539c7a89-3c03-4571-9cb4-02d455064eeb
-caps.latest.revision: "8"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: a0aa02a9091ea9ecdd060f1e7023e9d3f95269a1
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 8
+author: mestew
+ms.author: mstewart
+manager: doubeby
+ms.openlocfilehash: 36f63a585fdcdc00d6ace9ea1ac6941aead5fce2
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="example-scenario-using-system-center-endpoint-protection-to-protect-computers-from-malware-in-system-center-configuration-manager"></a>シナリオ例: System Center Configuration Manager でSystem Center Endpoint Protection を使用してマルウェアからコンピューターを保護する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-このトピックには、Configuration Manager で Endpoint Protection を実装して、組織のコンピューターをマルウェアによる攻撃から保護する方法に関するサンプル シナリオを示します。  
+この記事には、Configuration Manager で Endpoint Protection を実装して、組織のコンピューターをマルウェアによる攻撃から保護する方法に関するサンプル シナリオを示します。  
 
  John は、Woodgrove Bank の Configuration Manager 管理者です。 現在この銀行は System Center Endpoint Protection を使用して、マルウェアによる攻撃からコンピューターを保護しています。 また、Windows グループ ポリシーによって、社内のすべてのコンピューターで Windows ファイアウォールが有効になっていること、Windows ファイアウォールが新しいプログラムをブロックする場合にはユーザーに通知することが確認されています。  
 
@@ -67,7 +67,7 @@ ms.lasthandoff: 10/12/2017
 |**「ウッドグローブ銀行のサーバー ポリシー」**という名前のカスタム マルウェア対策ポリシーを作成します。 **[スケジュールされたスキャン]** の設定にのみ、次の変更を加えます。<br /><br /> **スキャンの種類**:  **完全**<br /><br /> **スキャンの実行**:  **土曜日**<br /><br /> **スキャン時刻**: **午前 1:00**<br /><br /> **クライアント コンピューターでクイック スキャンを毎日実行する**:  **いいえ**|「[System Center Configuration Manager で Endpoint Protection 用にマルウェア対策ポリシーを作成し展開する方法](endpoint-antimalware-policies.md)」を参照してください。|  
 |**「ウッドグローブ銀行のサーバー ポリシー」** カスタム マルウェア対策ポリシーを **「ウッドグローブ銀行のサーバー」** コレクションに展開します。|「[Endpoint Protection 用にマルウェア対策ポリシーを作成し展開する方法](endpoint-antimalware-policies.md)」の「マルウェア対策ポリシーをクライアント コンピューターに展開するには」を参照してください。|  
 |Endpoint Protection の新しいカスタム クライアント デバイス設定セットを作成し、「**ウッドグローブ銀行の Endpoint Protection 設定**」という名前を付けます。<br /><br /> **注:** 階層内のすべてのクライアントにおいて Endpoint Protection をインストールして使用可能にする必要がない場合には、**[クライアント コンピューターの Endpoint Protection クライアントを管理する]** と **[Endpoint Protection クライアントをクライアント コンピューターにインストールする]** のどちらも既定のクライアント設定として **[いいえ]** に構成されていることを確認してください。|詳しくは、の「[Endpoint Protection のカスタム クライアント設定を構成する](endpoint-protection-configure-client.md)」を参照してください。|  
-|Endpoint Protection に関して以下の設定を構成します。<br /><br /> **[クライアント コンピューターの Endpoint Protection クライアントを管理する]**を実装するために次の手順を実行します。  **はい**<br /><br /> この設定と値を使用すると、インストールされている既存のすべての Endpoint Protection クライアントが Configuration Manager によって管理されます。<br /><br /> **Endpoint Protection クライアントをクライアント コンピューターにインストールする**:  **はい**<br /><br /> **Endpoint Protection をインストールする前に、インストールされているマルウェア対策ソフトウェアを自動的に削除する**:  **はい**<br /><br /> この設定と値を使用すると、Endpoint Protection がインストールされて利用可能になる前に、既存のマルウェア対策ソフトウェアが削除されるというビジネス要件が満たされます。|詳しくは、の「[Endpoint Protection のカスタム クライアント設定を構成する](endpoint-protection-configure-client.md)」を参照してください。|  
+|Endpoint Protection に関して以下の設定を構成します。<br /><br /> **[クライアント コンピューターの Endpoint Protection クライアントを管理する]**を実装するために次の手順を実行します。  **はい**<br /><br /> この設定と値を使用すると、インストールされている既存のすべての Endpoint Protection クライアントが Configuration Manager によって管理されます。<br /><br /> **Endpoint Protection クライアントをクライアント コンピューターにインストールする**:  **はい**</br></br>**注**: Configuration Manager 1802 以降、Windows 10 デバイスには、Endpoint Protection エージェントをインストールする必要がありません。 Windows 10 デバイスに既にインストールされている場合、Configuration Manager は削除されません。 管理者は、少なくとも 1802 クライアント バージョンで実行されている Windows 10 デバイス上の Endpoint Protection エージェントを削除できます。<br /><br /> **Endpoint Protection をインストールする前に、インストールされているマルウェア対策ソフトウェアを自動的に削除する**:  **はい**<br /><br /> この設定と値を使用すると、Endpoint Protection がインストールされて利用可能になる前に、既存のマルウェア対策ソフトウェアが削除されるというビジネス要件が満たされます。|詳しくは、の「[Endpoint Protection のカスタム クライアント設定を構成する](endpoint-protection-configure-client.md)」を参照してください。|  
 |「**ウッドグローブ銀行の Endpoint Protection 設定**」クライアント設定を**「Endpoint Protection によって保護されたすべてのコンピューター」**コレクションに展開します。|「[Configuration Manager の Endpoint Protection の構成](endpoint-antimalware-policies.md)」の「Endpoint Protection のカスタム クライアント設定を構成する」を参照してください。|  
 |Windows ファイアウォール ポリシーの作成ウィザードを使用して、ドメイン プロファイル用の次の設定を構成してポリシーを作成します。<br /><br /> 1) **Windows ファイアウォールを有効にする**: **はい**<br /><br /> 2)<br />                    **Windows ファイアウォールが新しいプログラムをブロックしたときにユーザーに通知する**: **はい**|「[System Center Configuration Manager の Endpoint Protection 用 Windows ファイアウォール ポリシーを作成および展開する方法](../../protect/deploy-use/create-windows-firewall-policies.md)」を参照してください。|  
 |新しいファイアウォール ポリシーを、先に作成した**「Endpoint Protection によって保護されたすべてのコンピューター」**コレクションに展開します。|「[System Center Configuration Manager の Endpoint Protection 用 Windows ファイアウォール ポリシーを作成および展開する方法](create-windows-firewall-policies.md)」を参照してください。|  

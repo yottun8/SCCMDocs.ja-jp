@@ -1,9 +1,9 @@
 ---
-title: "データ ウェアハウス"
+title: データ ウェアハウス
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager のデータ ウェアハウス サービス ポイントとデータベース"
+description: System Center Configuration Manager のデータ ウェアハウス サービス ポイントとデータベース
 ms.custom: na
-ms.date: 02/26/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 954ec65bae15e087d6cf5afbcc8e0da1ebf83533
-ms.sourcegitcommit: be939893f0ceca4add8655ae2c24e42aa16aec38
+ms.openlocfilehash: 83bfc0e3d7bdf1ff8718c7c211c897e37b21a06b
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/23/2018
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>System Center Configuration Manager のデータ ウェアハウス サービス ポイント
 *適用対象: System Center Configuration Manager (Current Branch)*
@@ -88,6 +88,7 @@ ms.lasthandoff: 02/27/2018
      - **データベース名**: データ ウェアハウス データベースの名前を指定します。 データベース名は、10 文字以内にする必要があります  (サポートされる名前の長さは、将来のリリースで増える可能性があります)。
      Configuration Manager はこの名前を使用して、データ ウェアハウス データベースを作成します。 SQL server のインスタンスに既に存在しているデータベース名を指定した場合、Configuration Manager はそのデータベースを使用します。
      - **接続に使用するSQL Server ポート**: データ ウェアハウス データベースをホストする SQL Server によって使われる TCP/IP ポート番号を指定します。 データ ウェアハウスの同期サービスはこのポートを使用して、データ ウェアハウス データベースに接続します。  
+     - **データ ウェアハウス サービス ポイント アカウント**: バージョン 1802 以降、SQL Server Reporting Services がデータ ウェアハウス データベースに接続するときに使用するアカウントを指定します。 
 
 **[同期スケジュール]** ページ:   
 - **同期スケジュール**:
@@ -96,8 +97,12 @@ ms.lasthandoff: 02/27/2018
          - **毎日**: 同期が毎日実行されるように指定します。
          - **毎週**: 各週の曜日を 1 つ指定して、同期が毎週繰り返されるようにします。
 
+
 ## <a name="reporting"></a>レポート
 データ ウェアハウス サービス ポイントをインストールすると、同じサイトにインストールされているレポート サービス ポイントでいくつかのレポートが利用できます。 レポート サービス ポイントをインストールする前にデータ ウェアハウス サービス ポイントをインストールした場合は、後でレポート サービス ポイントをインストールしたときにレポートが自動的に追加されます。
+
+>[!WARNING]
+>Configuration Manager のバージョンの 1802 では、データ ウェアハウス ポイントの代替資格情報のサポートが追加されました。 <!--507334-->以前のバージョンの Configuration Manager からアップグレードした場合は、SQL Server Reporting Services がデータ ウェアハウス データベースへの接続に使用する資格情報を指定する必要があります。 資格情報が指定されるまで、データ ウェアハウス レポートは開きません。 アカウントを指定するには、**[管理]** >**[サイトの構成]** >**[サーバーとサイト システムの役割]** の順に移動します。 データ ウェアハウス サービス ポイントがあるサーバーをクリックし、データ ウェアハウス サービス ポイントの役割を右クリックします。 **[プロパティ]** を選択し、**[データ ウェアハウス サービス ポイントのアカウント]** を指定します。
 
 データ ウェアハウス サイト システムの役割には、**データ ウェアハウス**のカテゴリを持つ次のレポートが含まれます。
  - **アプリケーションの展開 - 履歴**: 特定のアプリケーションとコンピューターについてアプリケーション展開の詳細を表示します。

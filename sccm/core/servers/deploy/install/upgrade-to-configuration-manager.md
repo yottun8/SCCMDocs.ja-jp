@@ -1,24 +1,25 @@
 ---
-title: "System Center Configuration Manager へのアップグレード"
-description: "System Center 2012 Configuration Manager を実行しているサイトおよび階層から適切に一括アップグレードを実行するための手順を説明します。"
+title: System Center Configuration Manager へのアップグレード
+description: System Center 2012 Configuration Manager を実行しているサイトおよび階層から適切に一括アップグレードを実行するための手順を説明します。
 ms.custom: na
-ms.date: 6/6/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 770976309fbd5e8884dfec4bdaa29630ef1c02d0
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 72e11a04eb64d649749f2001ac4e3550c784132c
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>System Center Configuration Manager へのアップグレード
 
@@ -32,6 +33,14 @@ System Center 2012 Configuration Manager を実行しているサイトおよび
  > System Center Configuration Manager のサイトと階層のインフラストラクチャの管理において、*アップグレード*、*更新*、および*インストール* という用語は 3 つの異なる概念を説明するものです。 各用語の使用方法については、「[サイトと階層のインフラストラクチャでのアップグレード、更新、およびインストールについて](/sccm/core/understand/upgrade-update-install)」を参照してください。
 
 ##  <a name="bkmk_path"></a> 一括アップグレード パス  
+
+**バージョン 1802 へのアップグレード**   
+バージョン 1702 基準メディアがある場合は、次のバージョンを System Center Configuration Manager バージョン 1802 の正規ライセンス版にアップグレードできます。   
+-     System Center Configuration Manager バージョン 1802 の評価版のインストール
+-     System Center 2012 Configuration Manager Service Pack 1
+-     System Center 2012 Configuration Manager Service Pack 2
+-     System Center 2012 R2 Configuration Manager
+-     System Center 2012 R2 Configuration Manager Service Pack 1
 
 **バージョン 1702 へのアップグレード**   
 バージョン 1702 基準メディアがある場合は、次のバージョンを System Center Configuration Manager バージョン 1702 の正規ライセンス版にアップグレードできます。   
@@ -224,7 +233,7 @@ Configuration Manager では、セカンダリ サイトのバックアップと
 
 **プライマリ サイトで管理ポイント用のデータベース レプリカを再構成する:**  
 プライマリ サイトで管理ポイント用のデータベース レプリカを使用する場合、データベース レプリカをアンインストールしてから、サイトをアップグレードする必要があります。 プライマリ サイトをアップグレードしたら、管理ポイント用のデータベース レプリカを再構成します。   
-詳しくは、「  [Database replicas for management points for System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」をご覧ください。  
+詳しくは、「  [System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」をご覧ください。  
 
 **アップグレードの前に無効にしたデータベース メンテナンス タスクを再構成する:**  
 アップグレードの前にサイトのデータベースの [System Center Configuration Manager のメンテナンス タスクのリファレンス](../../../../core/servers/manage/reference-for-maintenance-tasks.md)を無効にした場合、アップグレードの前に使用していたのと同じ設定を使用して、サイトでこれらのタスクを再構成します。  
