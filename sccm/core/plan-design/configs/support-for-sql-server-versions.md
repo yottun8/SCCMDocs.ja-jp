@@ -1,7 +1,7 @@
 ---
-title: "サポートされている SQL Server のバージョン"
+title: サポートされている SQL Server のバージョン
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager サイト データベースをホストするための SQL Server のバージョンおよび構成要件を取得します。"
+description: System Center Configuration Manager サイト データベースをホストするための SQL Server のバージョンおよび構成要件を取得します。
 ms.custom: na
 ms.date: 02/14/2018
 ms.prod: configuration-manager
@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
-caps.latest.revision: 
+caps.latest.revision: 21
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5c17efa3498907fcc57d366965bec3b4198890bb
-ms.sourcegitcommit: 37e990d191028160486dbca286d2ea945bd5c8c3
+ms.openlocfilehash: 0e1cafc9b1900dd370cb8dac80f5a02fbb3d12dc
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager のサポートされている SQL Server バージョン
 
@@ -75,7 +75,7 @@ SQL Server のトランザクション レプリケーションは、[データ�
 >  中央管理サイトでデータベース用に SQL Server Standard を使用する場合、階層でサポートできるクライアントの合計数が制限されます。 「[サイジングとスケールの数値](../../../core/plan-design/configs/size-and-scale-numbers.md)」をご覧ください。
 
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017: Standard、Enterprise  
-[Configuration Manager バージョン 1710](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/whats-new-in-version-1710) 以降では次のサイトの最小の[累積的な更新プログラム バージョン 2](https://support.microsoft.com/help/4052574) で、このバージョンの SQL Server を使用できます。 
+[Configuration Manager バージョン 1710](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1710) 以降では次のサイトの最小の[累積的な更新プログラム バージョン 2](https://support.microsoft.com/help/4052574) で、このバージョンの SQL Server を使用できます。 
 
 -   中央管理サイト  
 -   プライマリ サイト  
@@ -145,7 +145,7 @@ Configuration Manager バージョンでサポートされている場合は、�
 -   セカンダリ サイト
 
 ### <a name="sql-server-2017-express"></a>SQL Server 2017 Express   
-[Configuration Manager バージョン 1710](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/whats-new-in-version-1710) 以降では次のサイトの最小の[累積的な更新プログラム バージョン 2](https://support.microsoft.com/help/4052574) で、このバージョンの SQL Server を使用できます。
+[Configuration Manager バージョン 1710](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1710) 以降では次のサイトの最小の[累積的な更新プログラム バージョン 2](https://support.microsoft.com/help/4052574) で、このバージョンの SQL Server を使用できます。
 -   セカンダリ サイト
 <!--SMS.498506-->
 

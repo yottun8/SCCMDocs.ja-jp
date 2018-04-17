@@ -1,26 +1,27 @@
 ---
-title: "Technical Preview 1601 の機能"
+title: Technical Preview 1601 の機能
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1601 で使用できる機能について説明します。"
+description: System Center Configuration Manager の Technical Preview バージョン 1601 で使用できる機能について説明します。
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aae1cf2f-2c04-4f68-a03a-f4a925433c09
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: erikje
 ms.author: erikje
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 70efb483ac15ba14497b884ed753032e8e48a4b5
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: b17a89ab08c99a1c3cd8a501e7d58d5b42a110a3
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1601 の機能
 
@@ -79,11 +80,11 @@ ms.lasthandoff: 12/01/2017
 
     -   Microsoft Intune サブスクリプション。 Microsoft Intune サブスクリプションは、Configuration Manager コンソールで構成する必要があります。  
 
-    -   [Azure AD 自動登録の前提条件](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
+    -   [Azure AD 自動登録の前提条件](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
 
     このオプションを使用するには、以下に示す特定のルールが含まれるコンプライアンス ポリシーを Configuration Manager で作成し、Intune コンソールで条件付きアクセス ポリシーを設定する必要があります。  また、コンプライアンスに適合した PC のみにアクセスが許可されるようにするため、Windows コンピューターの要件で **[デバイスは準拠デバイスである必要があります]** オプションを設定しなければなりません。 System Center Configuration Manager によって管理される PC に適用されるコンプライアンス ポリシー ルールを次に示します。  
 
-    -   **Azure Active Directory への登録が必要**: このルールは、ユーザーのデバイスが Azure AD に社内参加しているかどうかをチェックし、参加していない場合には Azure AD に自動的に登録します。 自動登録がサポートされているのは Windows 8.1 のみです。 Windows 7 PC の場合には、MSI を展開して自動登録を実行します。 詳しくは、[こちら](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)をご覧ください。  
+    -   **Azure Active Directory への登録が必要**: このルールは、ユーザーのデバイスが Azure AD に社内参加しているかどうかをチェックし、参加していない場合には Azure AD に自動的に登録します。 自動登録がサポートされているのは Windows 8.1 のみです。 Windows 7 PC の場合には、MSI を展開して自動登録を実行します。 詳しくは、[こちら](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)をご覧ください。  
 
     -   **必要な更新が特定の日数の期限を過ぎている場合、そのすべてをインストール:** このルールは、ユーザーが指定した期限および猶予期間内の必須のすべての更新 「**Required automatic updates**」 (必須の自動更新) ルールで指定 がユーザーのデバイスに含まれているかどうかを確認し、保留されている必須の更新すべてを自動的にインストールします。  
 
@@ -140,7 +141,7 @@ Technical Preview 1601 以降、Configuration Manager コンソールでクラ�
 |![クライアントのオフライン状態アイコン](media/offline-status-icon.png)|クライアントはオフラインです。|  
 |![クライアントの不明な状態アイコン](media/unknown-status-icon.png)|クライアントの状態は不明です。|  
 
-### <a name="prerequisites"></a>必要条件  
+### <a name="prerequisites"></a>[前提条件]  
  クライアントのオンライン状態には、前提条件はありません。 Configuration Manager Technical Preview 1601 がインストールされるとすぐに使用を開始できます。  
 
 ### <a name="limitations"></a>制限事項  

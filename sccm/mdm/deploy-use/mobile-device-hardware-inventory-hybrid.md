@@ -1,25 +1,26 @@
 ---
-title: "モバイル デバイスのハードウェア インベントリを構成する"
+title: モバイル デバイスのハードウェア インベントリを構成する
 titleSuffix: Configuration Manager
-description: "Microsoft Intune と System Center Configuration Manager によって登録されたモバイル デバイス用のハードウェア インベントリを構成します。"
+description: Microsoft Intune と System Center Configuration Manager によって登録されたモバイル デバイス用のハードウェア インベントリを構成します。
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 78a0aecc-f775-451e-aa05-56377ec91b1f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: c176955c3fcfe40f2089b84c50a982906b59f04d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: c3dcb39b50293d5c221a1b8b13fcfbf8aa53ad83
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-hardware-inventory-for-mobile-devices-enrolled-by-microsoft-intune-and-system-center-configuration-manager"></a>System Center Configuration Manager と Microsoft Intune で登録されたモバイル デバイスのハードウェア インベントリを構成する方法
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/12/2017
 
 Configuration Manager では、Microsoft Intune コネクタを使って、iOS、Android、および Windows デバイスのハードウェア インベントリを収集することができます。 カスタム ハードウェア インベントリを構成する方法については、「[System Center Configuration Manager でのハードウェア インベントリの拡張方法](../../core/clients/manage/inventory/extend-hardware-inventory.md)」を参照してください。  
 
- Microsoft Intune にデバイスを登録する方法については、「[Microsoft Intune を使用してモバイル デバイスを管理する](https://technet.microsoft.com/en-us/library/dn646962.aspx)」を参照してください。  
+ Microsoft Intune にデバイスを登録する方法については、「[Microsoft Intune を使用してモバイル デバイスを管理する](https://technet.microsoft.com/library/dn646962.aspx)」を参照してください。  
 
 ## <a name="hardware-inventory-for-mobile-devices"></a>モバイル デバイスのハードウェア インベントリ  
  次の表は、一般的に使用されるモバイル プラットフォームのハードウェア インベントリに使用できるインベントリ クラスの一覧です。  

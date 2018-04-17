@@ -1,26 +1,27 @@
 ---
-title: "Exchange ActiveSync 電子メール プロファイルを作成する"
+title: Exchange ActiveSync 電子メール プロファイルを作成する
 titleSuffix: Configuration Manager
-description: "Microsoft Intune と連携して機能する System Center Configuration Manager で電子メール プロファイルを作成および構成する方法について説明します。"
+description: Microsoft Intune と連携して機能する System Center Configuration Manager で電子メール プロファイルを作成および構成する方法について説明します。
 ms.custom: na
 ms.date: 07/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 120442be-179e-450c-a0c4-284046895da3
-caps.latest.revision: "4"
-caps.handback.revision: "0"
+caps.latest.revision: 4
+caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 5fc0d5e68e27b3bde9ed3aa45a439c8b333da1d6
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: ab429e2702ab1595b035c8e2895dad584be4061a
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exchange-activesync-email-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager で Exchange ActiveSync 電子メール プロファイルを作成する
 
@@ -37,7 +38,7 @@ Microsoft Intune と Exchange ActiveSync を利用すると、デバイスに電
 - Samsung KNOX Standard (4 以降)
 - Android for Work
 
-電子メール プロファイルをデバイスに展開するには、デバイスを Intune に登録する必要があります。 デバイスの登録方法については、「 [Microsoft Intune を使用したモバイル デバイスの管理](https://technet.microsoft.com/en-us/library/dn646962.aspx)」を参照してください。
+電子メール プロファイルをデバイスに展開するには、デバイスを Intune に登録する必要があります。 デバイスの登録方法については、「 [Microsoft Intune を使用したモバイル デバイスの管理](https://technet.microsoft.com/library/dn646962.aspx)」を参照してください。
 
 > [!NOTE]
 > Intune には Android for Work 電子メール プロファイルが 2 つあります。それぞれ、Gmail 電子メール アプリ用と Nine Work 電子メール アプリ用です。 これらのアプリは Google Play ストアで入手できます。また、Exchange への接続をサポートしています。 電子メール接続を有効にするには、いずれかの電子メール アプリをユーザーのデバイスに展開し、適切なプロファイルを作成して展開します。 Nine Work などの電子メール アプリは有料になる場合があります。 アプリケーションのライセンスの詳細を確認するか、アプリの会社に問い合わせてください。
@@ -118,7 +119,7 @@ Microsoft Intune と Exchange ActiveSync を利用すると、デバイスに電
 
 ## <a name="configure-synchronization-settings-for-the-exchange-activesync-email-profile"></a>Exchange ActiveSync 電子メール プロファイルの同期設定を構成します。  
 
-Exchange ActiveSync 電子メール プロファイルの作成ウィザードの **[ 同期設定の構成 ]** ページで、次の情報を指定します。  
+Exchange ActiveSync 電子メール プロファイルの作成ウィザードの **[同期設定の構成]** ページで、次の情報を指定します。  
 
 -   **スケジュール**。 デバイスが Exchange サーバーからデータを同期するスケジュールを選択します。 このオプションは Windows Phone デバイスにのみ適用できます。 次の中から選択します。  
 

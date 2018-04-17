@@ -1,25 +1,26 @@
 ---
-title: "条件付きアクセス"
+title: 条件付きアクセス
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で条件付きアクセスを使用して、電子メールおよびその他のサービスをセキュリティで保護する方法について説明します。"
+description: System Center Configuration Manager で条件付きアクセスを使用して、電子メールおよびその他のサービスをセキュリティで保護する方法について説明します。
 ms.custom: na
 ms.date: 12/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b04727b-d563-422f-8d59-4dd66215d0b3
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: f215e1c22d40e1fe402084b665ae624bc0c21d97
-ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
+ms.openlocfilehash: 7fea8d0e47fff5288a58232eb9bd17171481b3a3
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-access-to-services-in-system-center-configuration-manager"></a>System Center Configuration Manager でサービスへのアクセスを管理する
 
@@ -163,7 +164,7 @@ SharePoint Online への条件付きアクセスでは、次を実行するデ�
 
  準拠するためには、PC は Microsoft Intune に登録済みで、ポリシーに準拠している必要があります。
 
- ドメインに参加する PC の場合、Azure Active Directory に [デバイスを自動的に登録](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) するように設定する必要があります。
+ ドメインに参加する PC の場合、Azure Active Directory に [デバイスを自動的に登録](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) するように設定する必要があります。
  -   [Office 365 の最新の認証が有効化](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/)されていて、最新の Office 更新プログラムがすべて適用されている必要があります。<br />     最新の認証により、Active Directory Authentication Library (ADAL) ベースのサインインが Office 2013 Windows クライアントに導入され、多要素認証および証明書ベースの認証などのより強力なセキュリティが有効になります。
  -   最新ではない認証プロトコルをブロックするように ADFS 要求規則を設定します。  
 

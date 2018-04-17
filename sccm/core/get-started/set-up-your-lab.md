@@ -1,26 +1,27 @@
 ---
-title: "ラボのセットアップ"
+title: ラボのセットアップ
 titleSuffix: Configuration Manager
-description: "シミュレートされた現実のアクティビティを使用して Configuration Manager を評価するためのラボを設定します。"
+description: シミュレートされた現実のアクティビティを使用して Configuration Manager を評価するためのラボを設定します。
 ms.custom: na
 ms.date: 09/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
-caps.latest.revision: "11"
-caps.handback.revision: "0"
+caps.latest.revision: 11
+caps.handback.revision: 0
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: a95dda6f536ff9c608abb03d94692b2d9fc6093c
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 3441cb417a0b8fc7979b71018f6cfa345c47a02d
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>System Center Configuration Manager ラボのセットアップ
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/01/2017
 
     -   **SQL 照合順序** クラスとしての **SQL_Latin1_General_CP1_CI_AS** 。  
 
-    -   **SQL 認証**ではなく、 [Windows 認証](https://technet.microsoft.com/en-us/library/ms144284.aspx)ではなく、 is required.  
+    -   **SQL 認証**ではなく、 [Windows 認証](https://technet.microsoft.com/library/ms144284.aspx)ではなく、 is required.  
 
     -   **専用の SQL Server インスタンス**が必要です。  
 
@@ -381,7 +382,7 @@ IIS では、複数の種類のファイル拡張子と場所が、HTTP また�
 
 3.  **[Active Directory フォレストの探索]** をクリックし、 **[プロパティ]**をクリックします。  
 
-4.  **[プロパティ]** ダイアログ ボックスで、 **[Active Directory フォレストの探索を有効にする]**をオンにします。 これがアクティブになったら、 **[探索時に Active Directory サイトの境界を自動的に作成する]**をオンにします。 ダイアログ ボックスが表示され、 **[今すぐ完全な探索を実行しますか?]** [はい]のインストールをサポートするコア コンポーネントがいくつか必要です。  
+4.  **[プロパティ]** ダイアログ ボックスで、 **[Active Directory フォレストの探索を有効にする]**をオンにします。 これがアクティブになったら、 **[探索時に Active Directory サイトの境界を自動的に作成する]**をオンにします。 ダイアログ ボックスが表示され、 **[今すぐ完全な探索を実行しますか?]** **[はい]**のインストールをサポートするコア コンポーネントがいくつか必要です。  
 
 5.  画面上部の **[探索方法]** グループで、 **[今すぐフォレスト探索を実行する]**をクリックし、サイドバーの **[Active Directory フォレスト]** に移動します。 Active Directory フォレストは、検出されたフォレストの一覧に表示されます。  
 

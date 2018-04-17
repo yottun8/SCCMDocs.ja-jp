@@ -1,26 +1,27 @@
 ---
-title: "移行対象を選択する"
+title: 移行対象を選択する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager に移行できるデータと移行できないデータについて説明します。"
+description: System Center Configuration Manager に移行できるデータと移行できないデータについて説明します。
 ms.custom: na
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
-caps.latest.revision: "6"
-caps.handback.revision: "0"
+caps.latest.revision: 6
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 822bc5b4e17bdc611243fadfb13c551b0a8237a8
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 0718b7863c45f7b7e56380d4a2fa74e8d1a17b54
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="determine-whether-to-migrate-data-to-system-center-configuration-manager"></a>データを System Center Configuration Manager に移行するかどうかの判断
 
@@ -59,8 +60,6 @@ System Center Configuration Manager の移行では、作成したデータと�
 
 ### <a name="objects-that-you-can-migrate-from-system-center-2012-configuration-manager-or-system-center-configuration-manager-current-branch"></a>System Center 2012 Configuration Manager または System Center Configuration Manager の現在のブランチから移行できるオブジェクト
 
--   開示通知 (旧称「提供情報」)  
-
 -   System Center 2012 Configuration Manager およびそれ以降のバージョン用のアプリケーション  
 
 -   System Center 2012 Configuration Manager およびそれ以降のバージョンの App-V 仮想環境  
@@ -76,6 +75,8 @@ System Center Configuration Manager の移行では、作成したデータと�
     -   構成基準  
 
     -   構成項目  
+
+-   展開  
 
 -   オペレーティング システムの展開:  
 

@@ -1,27 +1,28 @@
 ---
-title: "スキーマ拡張"
+title: スキーマ拡張
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager をサポートするように Active Directory スキーマを拡張します。"
+description: System Center Configuration Manager をサポートするように Active Directory スキーマを拡張します。
 ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
-caps.latest.revision: "8"
-caps.handback.revision: "0"
+caps.latest.revision: 8
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
 robots: noindex
-ms.openlocfilehash: 1fa1e3be3d08c9aa1f9271868f6b01e20b63e444
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: cc658166a7094f716db0ee495bc2338b52303b50
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schema-extensions-for-system-center-configuration-manager"></a>System Center Configuration Manager のスキーマ拡張
 
@@ -31,7 +32,7 @@ Configuration Manager をサポートするように Active Directory スキー�
 
 -   Active Directory スキーマは拡張することをお勧めしますが、必須ではありません。  
 
-[Active Directory スキーマを拡張する](https://docs.microsoft.com/en-us/sccm/core/plan-design/network/extend-the-active-directory-schema)前に、Active Directory ドメイン サービスに精通し、 [Active Directory スキーマの変更](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx)に慣れておく必要があります。  
+[Active Directory スキーマを拡張する](https://docs.microsoft.com/sccm/core/plan-design/network/extend-the-active-directory-schema)前に、Active Directory ドメイン サービスに精通し、 [Active Directory スキーマの変更](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx)に慣れておく必要があります。  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>Configuration Manager 向けの Active Directory スキーマの拡張に関する考慮事項  
 
@@ -142,7 +143,7 @@ System Center Configuration Manager のスキーマを拡張すると、次の�
 
 > [!NOTE]  
 
->  スキーマの拡張には、旧バージョンの製品から継承され、System Center Configuration Manager では使用されなくなった属性とクラスが含まれる場合があります。 たとえば、  
+>  スキーマの拡張には、旧バージョンの製品から継承され、System Center Configuration Manager では使用されなくなった属性とクラスが含まれる場合があります。 次に例を示します。  
 
 >   
 >  -   属性: cn=MS-SMS-Site-Boundaries  

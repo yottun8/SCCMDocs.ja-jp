@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 1d98cd234b2444873f1ffa5819af74d507dfa9c1
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: a66212537c9e6829965f81d7622ae825ca6b80bb
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager のモバイル デバイスの VPN プロファイル
 
@@ -35,7 +35,7 @@ System Center Configuration Manager の VPN プロファイルを使用して、
 
  ## <a name="vpn-profiles-when-using-configuration-manager-together-with-intune"></a>Configuration Manager と Intune を併用する場合の VPN プロファイル
 
- プロファイルを iOS、Android、Windows Phone、Windows 8.1 の各デバイスに展開するには、これらのデバイスを Microsoft Intune に登録する必要があります。 その他のプラットフォームのデバイスも、Intune に登録できます。 登録方法については、「[Microsoft Intune を使用したモバイル デバイスの管理](https://technet.microsoft.com/en-us/library/dn646962.aspx)」を参照してください。 次の表は、各デバイス プラットフォームでサポートされている接続の種類を示しています。  
+ プロファイルを iOS、Android、Windows Phone、Windows 8.1 の各デバイスに展開するには、これらのデバイスを Microsoft Intune に登録する必要があります。 その他のプラットフォームのデバイスも、Intune に登録できます。 登録方法については、「[Microsoft Intune を使用したモバイル デバイスの管理](https://technet.microsoft.com/library/dn646962.aspx)」を参照してください。 次の表は、各デバイス プラットフォームでサポートされている接続の種類を示しています。  
 
  |接続の種類|iOS と macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 Desktop および Mobile|  
  |---------------------|----------------------|-------------|-----------------|----------------|--------------------|-----------------------|-----------------------------------|  
@@ -103,11 +103,11 @@ VPN プロファイルの作成方法に関する一般情報は、「[System Ce
             >  IOS を実行するデバイスは、接続種類が PPTP の場合に認証方法として RSA SecurID と MSCHAP v2のみをサポートします。 エラーの報告を回避するには、iOS を実行するデバイスに、個別に PPTP VPN プロファイルを展開します。  
 
         - **条件付きアクセス**
-            - VPN に接続するデバイスについて、接続前に条件付きアクセスのコンプライアンスのためにテストするには、**[この VPN 接続に対して条件付きアクセスを有効にする]** をオンにします。 コンプライアンス ポリシーについては、「[Device compliance policies in System Center Configuration Manager (System Center Configuration Manager でのデバイス コンプライアンス ポリシー)](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/device-compliance-policies.md)」をご覧ください。
+            - VPN に接続するデバイスについて、接続前に条件付きアクセスのコンプライアンスのためにテストするには、**[この VPN 接続に対して条件付きアクセスを有効にする]** をオンにします。 コンプライアンス ポリシーについては、「[Device compliance policies in System Center Configuration Manager (System Center Configuration Manager でのデバイス コンプライアンス ポリシー)](https://docs.microsoft.com/sccm/protect/deploy-use/device-compliance-policies.md)」をご覧ください。
             - デバイスのコンプライアンスのために VPN 認証証明書以外の証明書を選択するには、**[別の証明書でのシングル サインオン (SSO) を有効にする]** をオンにします。 このオプションをオンにする場合は、VPN クライアントを特定できる正しい証明書の **[EKU]** (コンマ区切りリスト) と **[発行元ハッシュ]** を指定します。
 
          - **[Windows 情報保護]** には、企業が管理する企業 ID を指定します。通常、これは組織のプライマリ ドメインです (*contoso.com* など)。組織が所有している複数のドメインを指定するには、"|" 文字で区切ります。 たとえば、「*contoso.com|newcontoso.com*」と指定します。   
-            Windows 情報保護については、「[Create a Windows Information Protection (WIP) policy using Microsoft Intune (Microsoft Intune を使用した Windows 情報保護 (WIP) ポリシーの作成)](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune)」をご覧ください。   
+            Windows 情報保護については、「[Create a Windows Information Protection (WIP) policy using Microsoft Intune (Microsoft Intune を使用した Windows 情報保護 (WIP) ポリシーの作成)](https://technet.microsoft.com/itpro/windows/keep-secure/create-wip-policy-using-intune)」をご覧ください。   
 
          ![VPN に条件付きアクセスを構成する](media/vpn-conditional-access.png)
 

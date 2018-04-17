@@ -16,11 +16,11 @@ caps.latest.revision: 5
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: faa1a50b29fe4ba966812441243b81ee2d31b024
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 3f122dc7ba1bce5aaf8fe0ac6e4c75165a9b5a0b
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Windows Defender Application Guard ポリシーの作成と展開 
 *適用対象: System Center Configuration Manager (Current Branch)*
@@ -29,7 +29,7 @@ Configuration Manager Endpoint Protection を使用して [Windows Defender Appl
 
 ## <a name="prerequisites"></a>[前提条件]
 
-Windows Defender Application Guard ポリシーを作成して展開するには、Windows 10 Fall Creator (1709) の更新プログラムを使用する必要があります。 また、ネットワーク分離ポリシーを使用して、ポリシーを展開する Windows 10 デバイスを構成する必要があります。 詳細については、「[Windows Defender Application Guard の概要](https://docs.microsoft.com/en-us/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)」を参照してください。 
+Windows Defender Application Guard ポリシーを作成して展開するには、Windows 10 Fall Creator (1709) の更新プログラムを使用する必要があります。 また、ネットワーク分離ポリシーを使用して、ポリシーを展開する Windows 10 デバイスを構成する必要があります。 詳細については、「[Windows Defender Application Guard の概要](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)」を参照してください。 
 
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>ポリシーを作成します。使用可能な設定を参照するには、次の手順を実行します。

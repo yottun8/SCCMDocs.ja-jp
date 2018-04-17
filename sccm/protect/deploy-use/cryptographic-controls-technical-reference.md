@@ -1,23 +1,24 @@
 ---
-title: "暗号化コントロールのテクニカル リファレンス"
+title: 暗号化コントロールのテクニカル リファレンス
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で、署名と暗号化を使用して、攻撃者によるデータの読み取りを防ぐ方法について説明します。"
+description: System Center Configuration Manager で、署名と暗号化を使用して、攻撃者によるデータの読み取りを防ぐ方法について説明します。
 ms.custom: na
 ms.date: 12/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 2c1ed6f4c93f74719ab3fe5d723f7dc01eb1ede7
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+ms.openlocfilehash: 3057d3d78dbb67e0b1b061a6845a6885570b239a
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cryptographic-controls-technical-reference"></a>暗号化コントロールのテクニカル リファレンス
 
@@ -286,5 +287,5 @@ Configuration Manager クライアントとサーバーのセキュリティを�
 -   SSL 3.0、TLS 1.0 および TLS 1.1 の無効化 
 -   TLS 関連の暗号スイートを調整する 
 
-詳細については、「[Schannel.dll において特定の暗号化アルゴリズムおよびプロトコルの使用を制限する方法](https://support.microsoft.com/en-us/kb/245030/)」と「[Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/en-us/library/windows/desktop/bb870930.aspx)」 (Schannel 暗号スイートの優先順位設定) を参照してください。 これらの操作は、Configuration Manager の機能には影響しません。
+詳細については、「[Schannel.dll において特定の暗号化アルゴリズムおよびプロトコルの使用を制限する方法](https://support.microsoft.com/en-us/kb/245030/)」と「[Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx)」 (Schannel 暗号スイートの優先順位設定) を参照してください。 これらの操作は、Configuration Manager の機能には影響しません。
 

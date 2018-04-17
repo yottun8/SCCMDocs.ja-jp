@@ -1,25 +1,26 @@
 ---
-title: "Technical Preview 1609 の機能"
+title: Technical Preview 1609 の機能
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1609 で使用できる機能について説明します。"
+description: System Center Configuration Manager の Technical Preview バージョン 1609 で使用できる機能について説明します。
 ms.custom: na
 ms.date: 01/23/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.topic: article
 ms.assetid: e2a59116-b2e5-4dd2-90eb-0b8a5eb50b56
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: e1cceae5f73d003be2fe64df9e6dbaa7badaf0c7
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 4beca8479e5adbfa24b597769b792fd91bed9a2c
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="capabilities-in-technical-preview-1609-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1609 の機能
 
@@ -95,7 +96,7 @@ Intune で Configuration Manager を使用すると、OMA-URI を使用しなく
 
 さまざまなデバイス プラットフォームの構成アイテムで使用できる多くの新しい設定が追加されました。
 これらの設定は、以前はスタンドアロン構成での Microsoft Intune にありましたが、Intune を Configuration Manager で使用する際にも使用できるようになりました。
-これらのいずれかの設定のヘルプが必要な場合は、「[Microsoft Intune ポリシーを使用してデバイスの設定と機能を管理する](https://docs.microsoft.com/en-us/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies)」を開き、対象のプラットフォームの設定のサブトピックを選択します。
+これらのいずれかの設定のヘルプが必要な場合は、「[Microsoft Intune ポリシーを使用してデバイスの設定と機能を管理する](https://docs.microsoft.com/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies)」を開き、対象のプラットフォームの設定のサブトピックを選択します。
 
 
 ### <a name="new-settings-for-android-devices"></a>Android デバイス向けの新しい設定

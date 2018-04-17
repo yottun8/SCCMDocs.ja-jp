@@ -1,25 +1,26 @@
 ---
-title: "電子メールへのアクセスの管理"
+title: 電子メールへのアクセスの管理
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の条件付きアクセスを使用して Exchange メールへのアクセスを管理する方法について説明します。"
+description: System Center Configuration Manager の条件付きアクセスを使用して Exchange メールへのアクセスを管理する方法について説明します。
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa648e73-5fb8-4818-ab57-7466ffaf888e
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: a83c2030de8a146dad7bf2258e8a983c8ab6c45e
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: e36674d27757daab9ced4e7e8b51942a4929b5ff
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-email-access-in-system-center-configuration-manager"></a>System Center Configuration Manager でのメール アクセスの管理
 
@@ -47,7 +48,7 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
 以下を実行している PC で、Office デスクトップ アプリケーションから Exchange Online にアクセスできます。  
 
--   [最新の認証](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) が有効にされた Office デスクトップ 2013 以降。  
+-   [最新の認証](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) が有効にされた Office デスクトップ 2013 以降。  
 
 -   Windows 7.0 または Windows 8.1  
 
@@ -125,7 +126,7 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
 -   **[準拠]** - デバイスが、展開したすべてのコンプライアンス ポリシーに準拠しているかどうかを示します。  
 
--   **[EAS アクティブ化]** - iOS および Android デバイスで、Exchange ActiveSync ID が Azure Active Directory のデバイス登録レコードに関連付けられている必要があります。 これは、ユーザーが検疫電子メールで **[ 電子メールのアクティブ化 ]** のリンクをクリックしたときに発生します。  
+-   **[EAS アクティブ化]** - iOS および Android デバイスで、Exchange ActiveSync ID が Azure Active Directory のデバイス登録レコードに関連付けられている必要があります。 これは、ユーザーが検疫電子メールで **[電子メールのアクティブ化]** のリンクをクリックしたときに発生します。  
 
     > [!NOTE]  
     >  Windows Phone デバイスは、常にこの列の値を表示します。  
@@ -134,7 +135,7 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
 |[管理チャネル]|AAD に登録済み|[準拠]|[EAS アクティブ化]|結果の動作|  
 |------------------------|--------------------|---------------|-------------------|----------------------|  
-|**Microsoft Intune および Exchange ActiveSync による管理の対象**|○|○|**[はい ]** または **[ いいえ ]** が表示されます|電子メール アクセスが許可される|  
+|**Microsoft Intune および Exchange ActiveSync による管理の対象**|はい|はい|**[はい]** または **[いいえ]** が表示されます|電子メール アクセスが許可される|  
 |その他の値|いいえ|いいえ|値が表示されない|電子メール アクセスがブロックされる|  
 
  レポートの内容をエクスポートし、 **[電子メール アドレス]** 列を使って、ブロックされることをユーザーに通知できます。  
@@ -144,7 +145,7 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
 -   **Exchange Online ポリシーの場合** - Azure Active Directory セキュリティ ユーザー グループを対象。 これらのグループは、 **Office 365 管理センター**または **Intune アカウント ポータル**で構成できます。  
 
--   **Exchange On-premises ポリシーの場合** - Configuration Manager ユーザー コレクションを対象。 **[ 資産とコンプライアンス ]** ワークスペースでこれらを構成できます。  
+-   **Exchange On-premises ポリシーの場合** - Configuration Manager ユーザー コレクションを対象。 **[資産とコンプライアンス]** ワークスペースでこれらを構成できます。  
 
  各ポリシーには、次の 2 つのグループの種類を指定できます。  
 
@@ -171,7 +172,7 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 #### <a name="for-exchange-online-and-tenants-in-the-new-exchange-online-dedicated-environment"></a>Exchange Online (および新しい Exchange Online Dedicated 環境のテナント) の場合
 
 >[!NOTE]
->Azure AD 管理コンソールで条件付きアクセス ポリシーを作成することもできます。 Azure AD の管理コンソールでは、Intune デバイス条件付きアクセス ポリシー (Azure AD のデバイスベースの条件付きアクセス ポリシーと呼ぶ) に加えて、多要素認証のような他の条件付きアクセス ポリシーを作成することができます。 また、Salesforce や Box など、Azure AD がサポートするサード パーティ製エンタープライズ アプリ用の条件付きアクセス ポリシーを設定することもできます。 詳細については、「[Azure Active Directory に接続されたアプリケーションのアクセスを制御する Azure Active Directory デバイス ベースの条件付きアクセス ポリシーを設定する方法](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/)」を参照してください。
+>Azure AD 管理コンソールで条件付きアクセス ポリシーを作成することもできます。 Azure AD の管理コンソールでは、Intune デバイス条件付きアクセス ポリシー (Azure AD のデバイスベースの条件付きアクセス ポリシーと呼ぶ) に加えて、多要素認証のような他の条件付きアクセス ポリシーを作成することができます。 また、Salesforce や Box など、Azure AD がサポートするサード パーティ製エンタープライズ アプリ用の条件付きアクセス ポリシーを設定することもできます。 詳細については、「[Azure Active Directory に接続されたアプリケーションのアクセスを制御する Azure Active Directory デバイス ベースの条件付きアクセス ポリシーを設定する方法](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/)」を参照してください。
 
  Exchange Online の条件付きアクセス ポリシーは、次のフローを使用して、デバイスを許可するかブロックするかを評価します。  
 
@@ -185,7 +186,7 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
 -   デバイスが Azure Active Directory に登録されている (デバイスが Intune に登録されている場合は、自動的に登録されます)。  
 
-     ドメインに参加する PC の場合、Azure Active Directory に [デバイスを自動的に登録](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) するように設定する必要があります。  
+     ドメインに参加する PC の場合、Azure Active Directory に [デバイスを自動的に登録](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) するように設定する必要があります。  
 
 -   アクティブ化された電子メールがある。これによって、デバイスの Exchange ActiveSync ID が Azure Active Directory のデバイス レコードに関連付けられます (iOS および Android デバイスのみに適用)。  
 
@@ -215,11 +216,11 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
 ##### <a name="to-enable-the-exchange-online-policy"></a>Exchange Online ポリシーを有効にするには  
 
-1.  Configuration Manager コンソールで、**[ 資産とコンプライアンス]** をクリックします。  
+1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
 
-2.  **[ コンプライアンス設定]**、**[ 条件付きアクセス]** の順に展開し、**[ Exchange Online]** をクリックします。  
+2.  **[コンプライアンス設定]**、**[条件付きアクセス]** の順に展開し、**[Exchange Online]** をクリックします。  
 
-3.  **[ ホーム ]** タブの **[ リンク ]** グループで、**[ Intune コンソールでの条件付きアクセス ポリシーの構成]** をクリックします。 Configuration Manager を Intune サービスの全体管理者と結び付けるために使用したアカウントのユーザー名とパスワードの入力が必要になる場合があります。  
+3.  **[ホーム]** タブの **[リンク]** グループで、**[Intune コンソールでの条件付きアクセス ポリシーの構成]** をクリックします。 Configuration Manager を Intune サービスの全体管理者と結び付けるために使用したアカウントのユーザー名とパスワードの入力が必要になる場合があります。  
 
      Intune 管理コンソールが開きます。  
 
@@ -301,11 +302,11 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
 ##### <a name="to-enable-the-exchange-on-premises-policy"></a>Exchange On-premises ポリシーを有効にするには  
 
-1.  Configuration Manager コンソールで、**[ 資産とコンプライアンス]** をクリックします。  
+1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
 
-2.  **[ コンプライアンス設定]**、**[ 条件付きアクセス]** の順に展開し、**[ On-Premises Exchange]** をクリックします。  
+2.  **[コンプライアンス設定]**、**[条件付きアクセス]** の順に展開し、**[On-Premises Exchange]** をクリックします。  
 
-3.  **[ ホーム ]** タブの **[ On-Premises Exchange ]** グループで、**[ 条件付きアクセス ポリシーの構成]** をクリックします。  
+3.  **[ホーム]** タブの **[On-Premises Exchange]** グループで、**[条件付きアクセス ポリシーの構成]** をクリックします。  
 
 4.  **Configuration Manager のバージョン 1602 以降**では、 **条件付きアクセス ポリシーの構成ウィザード** の **[全般]**ページで、Exchange Active Sync の既定ルールを上書きするかどうかを指定します。 既定のルールが検疫またはアクセス禁止に設定されていたとしても、登録された準拠デバイスが電子メールにいつでもアクセスできるようにするには、このオプションの登録をクリックします。  
 
@@ -316,21 +317,21 @@ System Center Configuration Manager の条件付きアクセスを使用して�
 
      ![HybridCondAccessWiz1](media/HybridCondAccessWiz1.PNG)  
 
-     **[次へ]** をクリックします。  
+     **[次へ]**をクリックします。  
 
-5.  **[ 対象コレクション ]** ページで、1 つまたは複数のユーザー コレクションを追加します。 Exchange にアクセスするには、これらのコレクション内のユーザーは、Intune にデバイスを登録し、展開されたすべてのコンプライアンス ポリシーに準拠する必要があります。  
+5.  **[対象コレクション]** ページで、1 つまたは複数のユーザー コレクションを追加します。 Exchange にアクセスするには、これらのコレクション内のユーザーは、Intune にデバイスを登録し、展開されたすべてのコンプライアンス ポリシーに準拠する必要があります。  
 
      ![HybridCondAccessWiz2](media/HybridCondAccessWiz2.PNG)  
 
-     **[次へ]** をクリックします。  
+     **[次へ]**をクリックします。  
 
-6.  **[ 除外コレクション ]** ページで、条件付きアクセス ポリシーから除外するすべてのユーザー コレクションを追加します。 これらのグループ内のユーザーは、Intune にデバイスを登録する必要はなく、Exchange にアクセスするために、展開されたコンプライアンス ポリシーに準拠する必要もありません。  
+6.  **[除外コレクション]** ページで、条件付きアクセス ポリシーから除外するすべてのユーザー コレクションを追加します。 これらのグループ内のユーザーは、Intune にデバイスを登録する必要はなく、Exchange にアクセスするために、展開されたコンプライアンス ポリシーに準拠する必要もありません。  
 
      ![HybridCondAccessWiz3](media/HybridCondAccessWiz3.png)  
 
      ユーザーが対象リストと例外リストの両方に属している場合、ユーザーは条件付きアクセス ポリシーから除外されます。  
 
-     **[次へ]** をクリックします。  
+     **[次へ]**をクリックします。  
 
 7.  **[ユーザー通知の編集]** ページで、Intune がデバイスのブロックを解除する方法についての指示と共にユーザーに送信するメールを構成します (Exchange が送信するメールに加えて)。  
 
@@ -346,9 +347,9 @@ System Center Configuration Manager の条件付きアクセスを使用して�
     >   
     >  詳細については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)」を参照してください。  
 
-     **[次へ]** をクリックします。  
+     **[次へ]**をクリックします。  
 
-8.  **[  概要 ]** ページで設定を確認し、ウィザードを完了します。  
+8.  **[概要]** ページで設定を確認し、ウィザードを完了します。  
 
 -   条件付きアクセス ポリシーを展開する必要はありません。直ちに有効になります。  
 

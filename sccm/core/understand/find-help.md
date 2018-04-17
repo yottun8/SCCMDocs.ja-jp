@@ -1,26 +1,27 @@
 ---
-title: "ヘルプの検索"
+title: ヘルプの検索
 titleSuffix: Configuration Manager
-description: "リソースを検索して System Center Configuration Manager の詳細情報を参照します。"
+description: リソースを検索して System Center Configuration Manager の詳細情報を参照します。
 ms.custom: na
 ms.date: 12/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
-caps.latest.revision: "19"
-caps.handback.revision: "0"
+caps.latest.revision: 19
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 73c057af033a91535d79c743e05df83601112626
-ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
+ms.openlocfilehash: bcf53c11a30aa2fc3995697f36f00960035bbe57
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="find-help-for-using-system-center-configuration-manager"></a>System Center Configuration Manager の使用に関するヘルプの検索
 
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/02/2018
 
 
 ## <a name="product-feedback"></a>製品に関するフィードバック
-製品の潜在的な欠陥は、Windows 10 に組み込まれている[フィードバック ハブ アプリ](https://support.microsoft.com/en-us/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app)を通じて報告してください。 **新しいフィードバックを追加する**場合は、必ず、**[エンタープライズ管理]** カテゴリを選択してから、以下のサブカテゴリのいずれかを選択してださい。
+製品の潜在的な欠陥は、Windows 10 に組み込まれている[フィードバック ハブ アプリ](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app)を通じて報告してください。 **新しいフィードバックを追加する**場合は、必ず、**[エンタープライズ管理]** カテゴリを選択してから、以下のサブカテゴリのいずれかを選択してださい。
  - Configuration Manager クライアント
  - Configuration Manager コンソール
  - Configuration Manager OS の展開

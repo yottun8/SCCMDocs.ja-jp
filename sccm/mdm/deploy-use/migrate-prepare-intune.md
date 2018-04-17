@@ -1,21 +1,21 @@
 ---
-title: "Intune でのユーザーの移行を準備する"
+title: Intune でのユーザーの移行を準備する
 titleSuffix: Configuration Manager
-description: "ハイブリッド MDM. からユーザーを移行するため、Azure で Intune を準備する方法について説明します。"
-keywords: 
+description: ハイブリッド MDM. からユーザーを移行するため、Azure で Intune を準備する方法について説明します。
+keywords: ''
 author: dougeby
 manager: dougeby
 ms.date: 12/05/2017
 ms.topic: article
 ms.prod: configmgr-hybrid
-ms.service: 
-ms.technology: 
+ms.service: ''
+ms.technology: ''
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
-ms.openlocfilehash: 226586f0ee42cdad98b1d74f25421685d85e0dcf
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: 8d636f2c46f3fa14fbc76a605d2cf55a2c0375c6
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepare-intune-for-user-migration"></a>Intune でのユーザーの移行を準備する 
 
@@ -42,7 +42,7 @@ Configuration Manager で、Intune サブスクリプションにコレクショ
 ディレクトリ同期を構成したため、ユーザーとグループが AAD に既にある可能性があります。 ユーザーが適切なユーザー グループに含まれていることを確認するには、Intune ユーザー グループを確認することをお勧めします。 ポリシー、プロファイル、アプリなどをこれらのグループの対象にします。 Intune スタンドアロンに移行するユーザーが正しいグループに含まれていることを確認します。 
 
 ## <a name="configure-role-based-administration-control-rbac"></a>ロール ベースの管理制御 (RBAC) の構成
-移行の一環として、Intune で必要なすべての RBAC ロールを構成して、これらのロールにユーザーを割り当てます。 Configuration Manager と Intune の RBAC には、リソースのスコープの設定など、いくつかの相違点があることに注意してください。 詳細については、「[Intune でのロール ベースの管理制御 (RBAC)](https://docs.microsoft.com/en-us/intune/role-based-access-control)」を参照してください。
+移行の一環として、Intune で必要なすべての RBAC ロールを構成して、これらのロールにユーザーを割り当てます。 Configuration Manager と Intune の RBAC には、リソースのスコープの設定など、いくつかの相違点があることに注意してください。 詳細については、「[Intune でのロール ベースの管理制御 (RBAC)](https://docs.microsoft.com/intune/role-based-access-control)」を参照してください。
 
 ## <a name="assign-apps-and-policies-to-aad-groups"></a>AAD グループにアプリとポリシーを割り当てる
 移行プロセスの [Configuration Manager データの Microsoft Intune へのインポート](migrate-import-data.md) フェーズを実行して異なる Configuration Manager オブジェクトを Intune に移行した場合、オブジェクトの多くが既に AAD グループに割り当てられている可能性があります。 ただし、すべてのオブジェクト (アプリ、ポリシー、プロファイルなど) が正しい AAD グループに割り当てられていることを確認する必要があります。 オブジェクトを正しく割り当てると、ユーザーが移行された後にユーザーのデバイスが自動的に構成され、移行がユーザーに対して透過的になります。 AAD グループへのオブジェクトの割り当ての詳細については、次を参照してください。 
@@ -62,7 +62,7 @@ Exchange を使用して Configuration Manager でオンプレミスの Exchange
 ### <a name="steps-to-ensure-conditional-access-works-properly-after-user-migration"></a>ユーザー移行後に、条件付きアクセスが正常に機能することを確認する手順
 ユーザーを移行後、条件付きアクセスが正常に機能するため、およびユーザーが自分の電子メール サーバーに引き続きアクセスできるようにするには、次の条件に当てはまることを確認します。
 - Exchange ActiveSync の既定のアクセス レベルの設定 (DefaultAccessLevel) がブロックまたは検疫に設定されている場合、デバイスが電子メールへのアクセスを失う可能性があります。 
-- Configuration Manager が Exchange Connector にインストールされていて、**[モバイル デバイスをアクセス規則で管理しない場合のアクセス レベル]** 設定の値が **[アクセスを許可する]** になっている場合、ユーザーを移行する前に、Intune に [On-Premises Exchange Connector](https://docs.microsoft.com/en-us/intune/conditional-access-exchange-create#configure-exchange-on-premises-access) をインストールする必要があります。 **[Exchange ActiveSync アクセスの詳細設定]** の **[Exchange on-premises]\(Exchange On-Premises\)** ブレードで、Intune に既定のアクセス レベルの設定を構成します。 詳細については、「[Exchange On-premises アクセスの構成](https://docs.microsoft.com/intune/conditional-access-exchange-create#configure-exchange-on-premises-access)」を参照してください。
+- Configuration Manager が Exchange Connector にインストールされていて、**[モバイル デバイスをアクセス規則で管理しない場合のアクセス レベル]** 設定の値が **[アクセスを許可する]** になっている場合、ユーザーを移行する前に、Intune に [On-Premises Exchange Connector](https://docs.microsoft.com/intune/conditional-access-exchange-create#configure-exchange-on-premises-access) をインストールする必要があります。 **[Exchange ActiveSync アクセスの詳細設定]** の **[Exchange on-premises]\(Exchange On-Premises\)** ブレードで、Intune に既定のアクセス レベルの設定を構成します。 詳細については、「[Exchange On-premises アクセスの構成](https://docs.microsoft.com/intune/conditional-access-exchange-create#configure-exchange-on-premises-access)」を参照してください。
 - 両方のコネクタに同じ構成を使用します。 構成した最後のコネクタにより、他のコネクタによって以前に書き込まれた ActiveSync の組織設定が上書きされます。 コネクタを異なる方法で構成すると、予期しない条件付きアクセスの変更が発生する可能性があります。
 - ユーザーが Intune スタンドアロンに移行されたら、Configuration Manager での条件付きアクセスの対象からそれらのユーザーを削除します。
 
@@ -73,6 +73,6 @@ NDES を使用して SCEP を使用する証明書を発行する場合は、Mic
 > コネクタを構成した後に、インポートした SCEP プロファイルを新しいサーバーの URL を参照するように変更する必要があります。
 
 ## <a name="next-step"></a>次のステップ
-移行のための Intune の準備が終わったら、一連のテスト ユーザーを Intune スタンドアロンに移行することができます。 詳細については、「[Change the MDM authority for specific users (mixed authority)](migrate-mixed-authority.md)」 (特定のユーザーの MDM 機関を変更する (混在機関)) を参照してください。
+移行のための Intune の準備が終ったら、一連のテスト ユーザーを Intune スタンドアロンに移行することができます。 詳細については、「[Change the MDM authority for specific users (mixed authority)](migrate-mixed-authority.md)」 (特定のユーザーの MDM 機関を変更する (混在機関)) を参照してください。
 
 

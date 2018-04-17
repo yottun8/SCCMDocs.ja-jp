@@ -1,25 +1,26 @@
 ---
-title: "バージョン 1606 の新機能"
+title: バージョン 1606 の新機能
 titleSuffix: Configuraton Manager
-description: "System Center Configuration Manager のバージョン 1606 の変更点および導入された新機能について詳しく説明します。"
+description: System Center Configuration Manager のバージョン 1606 の変更点および導入された新機能について詳しく説明します。
 ms.custom: na
 ms.date: 12/30/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: e26519de8ce0b905fd52ca6ab0762a406d2f1e2c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 9c948e0ff84c4741d77b9096e52d3abd765aba7b
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1606 の新機能
 
@@ -89,7 +90,7 @@ Configuration Manager コンソールの [更新とサービス] ノードの変
 Configuration Manager コンソールの [管理] の変更点を次に示します。
 ### <a name="oms-connector"></a>OMS コネクタ
 
-Configuration Manager を System Center Configuration Manager のコレクションとして [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/en-us/documentation/articles/operations-management-suite-overview/) に接続できるようになりました。 これにより、Configuration Manager 展開のコレクションなどのデータを OMS に表示できるようになります。 [Configuration Manager から Microsoft Operations Management Suite へのデータの同期については、こちら](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md)をご覧ください。
+Configuration Manager を System Center Configuration Manager のコレクションとして [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/) に接続できるようになりました。 これにより、Configuration Manager 展開のコレクションなどのデータを OMS に表示できるようになります。 [Configuration Manager から Microsoft Operations Management Suite へのデータの同期については、こちら](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md)をご覧ください。
 
 OMS コネクタは、プレリリースの機能です。 有効にするには、「[更新プログラムからのプレリリース機能の使用](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease)」をご覧ください。
 
@@ -108,7 +109,7 @@ Configuration Manager コンソールの **[クライアント設定]** で、�
 
 ### <a name="manage-apps-from-the-windows-store-for-business"></a>ビジネス向け Windows ストアからのアプリの管理
 
-[ビジネス向け Windows ストア](https://www.microsoft.com/business-store)は、組織向けの Windows アプリを検索して、個別に、または一括で購入できる場所です。 Configuration Manager にストアを接続することで、購入したアプリのリストを Configuration Manager と同期し、それらを Configuration Manager コンソールで表示して、他のアプリと同様に展開できます。
+[ビジネス向け Windows ストア](https://www.microsoft.com/business-store)は、組織向けの Windows アプリを検索して、個別に、または一括で購入できる場所です。 Configuration Manager にストアを接続することで、購入したアプリのリストを Configuration Manager と同期し、それらを Configuration Manager コンソールで表示し、他のアプリと同様に展開できます。
 
 詳細については、「[System Center Configuration Manager によるビジネス向け Windows ストアからのアプリの管理](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)」をご覧ください。
 

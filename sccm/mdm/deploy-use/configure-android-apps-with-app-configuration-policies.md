@@ -1,26 +1,27 @@
 ---
-title: "アプリ構成ポリシーを使用した Android for Work アプリの構成"
+title: アプリ構成ポリシーを使用した Android for Work アプリの構成
 titleSuffix: Configuration Manager
-description: "ユーザーがアプリを実行する前にアプリ構成ポリシーをユーザーに展開すると、Android for Work を実行しているデバイスの構成の問題を解消するのに役立ちます。"
+description: ユーザーがアプリを実行する前にアプリ構成ポリシーをユーザーに展開すると、Android for Work を実行しているデバイスの構成の問題を解消するのに役立ちます。
 ms.custom: na
 ms.date: 09/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9126d188-7780-45a4-b21d-7fcf4fad7da2
-caps.latest.revision: "0"
-caps.handback.revision: "0"
+caps.latest.revision: 0
+caps.handback.revision: 0
 author: NathBarn
 ms.author: NathBarn
 manager: angrobe
-ms.openlocfilehash: 79d1b3fed3baa74c8ad195925ccda35713cb8865
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 0b1d4993e6ddb2301121a1e32b1672425e919dea
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="apply-settings-to-android-for-work-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager でアプリ構成ポリシーを使用し、Android for Work アプリに設定を適用する
 
@@ -35,7 +36,7 @@ System Center Configuration Manager のアプリ構成ポリシーを使用し�
 ユーザーが設定を間違って入力すると、それを修正する負担がヘルプ デスクにかかり、アプリの展開が遅くなります。 そのような問題を回避するために、アプリ構成ポリシーを使用することで、ユーザーがアプリを実行する前に、必要な設定をユーザーに展開できます。 設定はユーザーに自動的に関連付けられています。 ユーザー側では、いかなる操作も必要ありません。
 構成ポリシーをユーザーやデバイスに直接展開する代わりに、アプリを展開するときに、ポリシーを展開の種類に関連付けます。 アプリでポリシー設定が確認されるたびに (通常はアプリの初回実行時)、ポリシー設定が適用されます。
 
-Android アプリ構成ポリシーは、Android for Work を実行しているデバイス上でのみ使用できます。 アプリ構成ポリシーは、Play for Work ストアから承認されたアプリに適用されます。 Android のボリューム購入アプリに関する詳細については、[アプリを Android for Work デバイスに展開する方法](https://docs.microsoft.com/en-us/intune/deploy-use/android-for-work-apps)に関するページをご覧ください。
+Android アプリ構成ポリシーは、Android for Work を実行しているデバイス上でのみ使用できます。 アプリ構成ポリシーは、Play for Work ストアから承認されたアプリに適用されます。 Android のボリューム購入アプリに関する詳細については、[アプリを Android for Work デバイスに展開する方法](https://docs.microsoft.com/intune/deploy-use/android-for-work-apps)に関するページをご覧ください。
 
 アプリのインストールの種類については、「[アプリケーション管理の概要](/sccm/apps/understand/introduction-to-application-management)」を参照してください。
 
