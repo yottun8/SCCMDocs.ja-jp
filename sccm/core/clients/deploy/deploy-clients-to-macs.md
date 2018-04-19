@@ -1,25 +1,26 @@
 ---
-title: "Mac クライアントを展開する"
+title: Mac クライアントを展開する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でクライアントを Mac コンピューターに展開する方法を説明します。"
+description: System Center Configuration Manager でクライアントを Mac コンピューターに展開する方法を説明します。
 ms.custom: na
 ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e46ad501-5d73-44ac-92de-0de14ef72b83
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: arob98
 ms.author: angrobe
 manager: angrobe
 ms.openlocfilehash: 1b7f20a48e0e7219d933c367fb9f0315fc287dfd
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="how-to-deploy-clients-to-macs"></a>How to deploy clients to Macs
 
@@ -58,7 +59,7 @@ Mac コンピューター用の新しいクライアントをインストール�
 
 6.  **[モバイル デバイス登録プロファイル]** ダイアログ ボックスで、**[作成]** をクリックします。  
 
-7.  **[ 登録プロファイルの作成 ]** ダイアログ ボックスで、この登録プロファイルの名前を入力し、**[ 管理サイト コード]** を構成します。 Mac コンピューターを管理する管理ポイントを含む Configuration Manager プライマリ サイトを選択します。  
+7.  **[登録プロファイルの作成]** ダイアログ ボックスで、この登録プロファイルの名前を入力し、**[管理サイト コード]** を構成します。 Mac コンピューターを管理する管理ポイントを含む Configuration Manager プライマリ サイトを選択します。  
 
     > [!NOTE]  
     >  サイトを選択できない場合は、そのサイト内で少なくとも 1 つの管理ポイントがモバイル デバイスをサポートするように構成されていることを確認してください。  
@@ -187,7 +188,7 @@ CMEnroll ツールでクライアントのインストール、クライアン�
 
 7.  Mac コンピューターを再起動します。  
 
- Mac コンピューターの **[ システム環境設定 ]** で **[ Configuration Manager ]** 項目を開いて、クライアントのインストールが正常に完了したことを確認します。 また、**[ すべてのシステム ]** コレクションを更新して表示し、Mac コンピューターが管理されたクライアントとして、このコレクションに表示されていることを確認できます。  
+ Mac コンピューターの **[システム環境設定]** で **[Configuration Manager]** 項目を開いて、クライアントのインストールが正常に完了したことを確認します。 また、**[すべてのシステム]** コレクションを更新して表示し、Mac コンピューターが管理されたクライアントとして、このコレクションに表示されていることを確認できます。  
 
 > [!TIP]  
 >  Mac クライアントに関するトラブルシューティングを行うために、Mac OS X クライアント パッケージに含まれている CMDiagnostics プログラムを使用して、次の診断情報を収集できます。  
@@ -198,7 +199,7 @@ CMEnroll ツールでクライアントのインストール、クライアン�
 > -   構成マネージャー クライアントのインストールで作成される Bill of Materials (BOM) ファイルとプロパティ一覧 (.plist) ファイル  
 > -   /Library/Application Support/Microsoft/CCM/Logs フォルダーの内容  
 >   
->  CmDiagnostics で収集された情報は、コンピューターのデスクトップに保存される zip ファイルに追加され、cmdiag-*<ホスト名\>***-***&gt;日付と時刻\>*.zip という名前が付けられます。***
+>  CmDiagnostics で収集された情報は、コンピューターのデスクトップに保存される zip ファイルに追加され、cmdiag-*<ホスト名\>***-***<日付と時刻\>*.zip という名前が付けられます。
 
 
 ##  <a name="use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager"></a>Configuration Manager とは独立した証明書要求およびインストール方法を使用する  
@@ -257,17 +258,17 @@ CMEnroll ツールでクライアントのインストール、クライアン�
 
 1.  ユーザー証明書を更新する必要がある Mac コンピューターのデバイス コレクションを作成します。  
 
-2.  **[ 資産とコンプライアンス ]** ワークスペースで、 **構成項目の作成ウィザード** を開始します。  
+2.  **[資産とコンプライアンス]** ワークスペースで、 **構成項目の作成ウィザード** を開始します。  
 
-3.  ウィザードの **[ 全般 ]** ページで、次の情報を指定します。  
+3.  ウィザードの **[全般]** ページで、次の情報を指定します。  
 
     -   **[名前]:Mac の SMSID の削除**  
 
     -   **[種類]:Mac OS X**  
 
-4.  ウィザードの **[ サポートされているプラットフォーム ]** ページで、すべての Mac OS X バージョンが選択されていることを確認します。  
+4.  ウィザードの **[サポートされているプラットフォーム]** ページで、すべての Mac OS X バージョンが選択されていることを確認します。  
 
-5.  ウィザードの **[ 設定 ]** ページで **[ 新規作成 ]** をクリックし、**[ 設定の作成 ]** ダイアログ ボックスで次の情報を指定します。  
+5.  ウィザードの **[設定]** ページで **[新規作成]** をクリックし、**[設定の作成]** ダイアログ ボックスで次の情報を指定します。  
 
     -   **[名前]:Mac の SMSID の削除**  
 
@@ -277,7 +278,7 @@ CMEnroll ツールでクライアントのインストール、クライアン�
 
 6.  **[設定の作成]** ダイアログ ボックスの **[検索スクリプト]**で **[スクリプトの追加]** をクリックし、SMSID が構成されている Mac コンピューターを検出するスクリプトを指定します。  
 
-7.  **[ 探索スクリプトの編集 ]** ダイアログ ボックスで、次のシェル スクリプトを入力します。  
+7.  **[探索スクリプトの編集]** ダイアログ ボックスで、次のシェル スクリプトを入力します。  
 
     ```  
     defaults read com.microsoft.ccmclient SMSID  
@@ -287,7 +288,7 @@ CMEnroll ツールでクライアントのインストール、クライアン�
 
 9. **[設定の作成]** ダイアログ ボックスの **[修復スクリプト (オプション)]** で、**[スクリプトの追加]** を選択して、Mac コンピューターで見つかった SMSID を削除するスクリプトを指定します。  
 
-10. **[ 修復スクリプトの作成 ]** ダイアログ ボックスで、次のシェル スクリプトを入力します。  
+10. **[修復スクリプトの作成]** ダイアログ ボックスで、次のシェル スクリプトを入力します。  
 
     ```  
     defaults delete com.microsoft.ccmclient SMSID  
@@ -303,7 +304,7 @@ CMEnroll ツールでクライアントのインストール、クライアン�
 
     -   **[次の値]** フィールドに「**存在しないドメインと既定のペア (com.microsoft.ccmclient, SMSID)**」と入力します。  
 
-    -   オプション **[ この設定が対応していない場合に指定した修復スクリプトを実行する ]** を有効にします。  
+    -   オプション **[この設定が対応していない場合に指定した修復スクリプトを実行する]** を有効にします。  
 
 13. 構成項目の作成ウィザードを完了します。  
 
