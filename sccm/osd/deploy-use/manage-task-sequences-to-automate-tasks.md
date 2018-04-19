@@ -16,11 +16,11 @@ caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 5ec9266f33b318ac9c42f86840ebd7ac59713bdf
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 262bfa3991bbd95fad779da9520358d527a42b07
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>System Center Configuration Manager でのタスクを自動化するためのタスク シーケンスの管理
 
@@ -251,7 +251,14 @@ Configuration Manager 環境のステップを自動化するには、タスク 
         >     - コレクションにサーバーが含まれている場合  
 
     -   **[コメント (オプション)]**: タスク シーケンスの展開について説明する追加情報を指定します。  
-    - **[展開テンプレートの選択]**: Configuration Manager バージョン 1802 以降では、タスク シーケンスの展開テンプレートを保存および指定できます。 <!--1357391-->
+    - **[展開テンプレートの選択]**: Configuration Manager バージョン 1802 以降では、<!--1357391-->タスク シーケンスの展開テンプレートを保存および指定できます。     
+
+         > [!IMPORTANT]
+         > Configuration Manager バージョン 1802 では、テンプレートに一部の項目が保存されません。  <!--510610--> 展開ウィザードを実行する際には必ず、以下の項目を適用してください。
+         > - ソフトウェア インストール 
+         > - スケジュール 
+         > - コンテンツの事前ダウンロード
+ 
 6.  **[展開設定]** ページで、次の情報を指定して、 **[次へ]** をクリックします。  
 
     -   **[目的]**: ドロップダウン リストから、次のいずれかのオプションを選びます。  

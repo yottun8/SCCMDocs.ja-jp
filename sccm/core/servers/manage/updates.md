@@ -1,9 +1,9 @@
 ---
-title: 更新プログラム
+title: 更新プログラムとサービス
 titleSuffix: Configuration Manager
-description: 推奨更新プログラムを簡単に特定してインストールできる、**更新とサービス**と呼ばれるコンソール内サービス方式について説明します。
+description: 推奨更新プログラムを簡単に特定してインストールできる、更新とサービスと呼ばれるコンソール内サービス方式について説明します。
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,12 @@ caps.latest.revision: 51
 caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 8be32aa07819239820711079e4ff3637e96367db
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+manager: dougeby
+ms.openlocfilehash: 7660736dbacebb7167cb6bd19d7590d7f774e17c
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="updates-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム
 
@@ -90,6 +90,10 @@ Configuration Manager の次のバージョンは、基準バージョンと更�
 *(注 1)* この 1802 および 1702 基準メディアは、Microsoft System Center 2016 または System Center Configuration Manager (Current Branch および Long-Term Servicing Branch) リリースの一部として[ボリューム ライセンス サービス センター](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) で使用できます。 たとえば、VLSC で、*System Center Config Mgr (current branch および LTSB)* を検索すると、1802 と 1702 の両方のバージョンの構成基準メディアが返され、ダウンロードできます。
 
 お使いの Configuration Manager サイトのバージョンを確認するには、コンソールの左上隅にある **[System Center Configuration Manager について]** に移動してください。ここに新しいサイトとコンソールのバージョンが表示されます。  
+
+ > [!Note]  
+ > バージョン 1802 以降、コンソール バージョンがサイト バージョンと若干異なります。 コンソールのマイナー バージョンは、Configuration Manager リリース バージョンに対応するようになりました。 たとえば、Configuration Manager バージョン 1802 では、初回のサイト バージョンは 5.0.8634.1000 で、初回のコンソール バージョンは 5.**1802**.1082.1700 です。 ビルド (1082) とリビジョン (1700) の番号は、1802 リリースの今後の修正プログラムによって変わることがあります。
+
 
 ##  <a name="bkmk_inconsole"></a> コンソール内の更新プログラムとサービス  
  System Center Configuration Manager の運用環境対応バージョン (Current Branch とも呼ばれます) を使用する場合、インストールする更新プログラムのほとんどは、更新プログラムとサービス チャネルを通じて入手できます。 この方式では、現在のインフラストラクチャ バージョンと構成に適用される更新プログラムが特定され、ダウンロードのうえ、利用可能になります。また、Microsoft がすべてのお客様にお勧めする更新プログラムのみが対象となります。   

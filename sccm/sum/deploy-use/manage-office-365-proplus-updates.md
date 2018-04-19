@@ -6,18 +6,18 @@ keywords: ''
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: ''
 ms.technology:
 - configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 5bd1a3afd7957e4db1b43e344a7b88e18de50695
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 4fbbe4b6792c51cd7adeeae3a96f81927153362c
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Configuration Manager での Office 365 ProPlus の管理
 
@@ -174,6 +174,17 @@ Office 365 でサポートされている言語であれば、Configuration Mana
 11. 以後、Office 365 更新プログラムをダウンロードすると、ウィザードで選択した言語およびこの手順で構成した言語の更新プログラムがダウンロードされます。 正しい言語の更新プログラムがダウンロードされたことを確認するには、その更新プログラムのパッケージ ソースにアクセスし、その言語コードを名前に含んだファイルを探します。  
 ![Filenames with additional languages](..\media\5-verification.png)
 
+## <a name="updating-office-365-during-task-sequences-when-office-365-is-installed-in-the-base-image"></a>基本イメージに Office 365 がインストールされている場合のタスク シーケンス中の Office 365 の更新
+イメージに Office 365 が既にインストールされているオペレーティング システムをインストールするときに、更新チャネル登録キーの値に元のインストールの場所が含まれている可能性があります。 この場合、更新プログラム スキャンでは、Office 365 クライアントの更新プログラムが適切に表示されません。 1 週間に複数回実行される、スケジュールされている Office 自動更新タスクがあります。 そのタスクが実行されると、更新チャネルは構成済みの Office CDN URL を指し、スキャンでこれらの更新プログラムが適切に表示されます。 <!--510452-->
+
+適切な更新プログラムが見つかるように更新チャネルが設定されていることを確認するには、以下の手順を実行します。
+1. OS 基本イメージと同じバージョンの Office 365 があるコンピューターで、タスク スケジューラ (taskschd.msc) を開き、Office 365 自動更新タスクを特定します。 通常は **[タスク スケジューラ ライブラリ]** >**[Microsoft]**>**[Office]** にあります。
+2. 自動更新タスクを右クリックして、**[プロパティ]** を選択します。
+3. **[アクション]** タブに移動して、**[編集]** をクリックします。 コマンドとすべての引数をコピーします。 
+4. Configuration Manager コンソールで、タスク シーケンスを編集します。
+5. タスク シーケンスの**更新プログラムのインストール**手順の前に、新しい**コマンド ラインの実行**手順を追加します。 
+6. Office 自動更新のスケジュールされたタスクから収集した引数とコマンドをコピーします。 
+7. **[OK]** をクリックします。 
 
 ## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>Configuration Manager から更新プログラムを適用できるように Office 365 クライアントを設定した後で更新チャネルを変更する
 Configuration Manager から更新プログラムを適用できるように Office 365 クライアントを設定した後で更新チャネルを変更するには、グループ ポリシーを使用して、レジストリ キー値の変更を Office 365 クライアントに配信します。 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** というレジストリ キーを次のいずれかの値を使用するように変更します。

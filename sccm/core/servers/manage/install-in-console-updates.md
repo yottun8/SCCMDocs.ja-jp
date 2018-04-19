@@ -3,7 +3,7 @@ title: コンソール内の更新プログラム
 titleSuffix: Configuration Manager
 description: Microsoft クラウドから Configuration Manager に更新プログラムをインストールする
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision: 36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5d364e35c8777c782499da978f0d1a31694278cc
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 054bbd8e7b1dd3f5d565afe60eb7e3379cc7a9ee
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>System Center Configuration Manager のコンソール内の更新プログラムのインストール
 
@@ -217,6 +217,10 @@ Configuration Manager は Microsoft クラウド サービスと同期して更�
 更新プログラムを直ちにインストールすることをお勧めします。  
 
 コンソールの更新が完了したら、コンソールとサイトのバージョンが正しいことを確認できます。 コンソールの左上隅にある **[System Center Configuration Manager について]** に移動します。  
+
+ > [!Note]  
+ > バージョン 1802 以降、コンソール バージョンがサイト バージョンと若干異なります。 コンソールのマイナー バージョンは、Configuration Manager リリース バージョンに対応するようになりました。 たとえば、Configuration Manager バージョン 1802 では、初回のサイト バージョンは 5.0.8634.1000 で、初回のコンソール バージョンは 5.**1802**.1082.1700 です。 ビルド (1082) とリビジョン (1700) の番号は、1802 リリースの今後の修正プログラムによって変わることがあります。
+
 
 
 ###  <a name="bkmk_toptier"></a> 最上位サイトで更新プログラムのインストールを開始する方法  

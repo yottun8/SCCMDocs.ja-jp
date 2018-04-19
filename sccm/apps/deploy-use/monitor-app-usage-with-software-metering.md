@@ -1,25 +1,26 @@
 ---
-title: "ソフトウェア使用状況測定でアプリの使用状況を監視する"
+title: ソフトウェア使用状況測定でアプリの使用状況を監視する
 titleSuffix: Configuration Manager
-description: 
+description: System Center Configuration Manager のソフトウェア使用状況測定で使用できる操作について説明します。
 ms.custom: na
 ms.date: 09/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: c44d606efbbcd099bdcd6d5f83aad156525d9279
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 6864c1a7b10056d664706c25f958b3c73e6855a6
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="software-metering-in-system-center-configuration-manager"></a>System Center Configuration Manager のソフトウェア使用状況測定
 
@@ -95,7 +96,7 @@ ms.lasthandoff: 10/12/2017
 
     -   **このソフトウェアの使用状況測定規則を次のクライアントに適用** – 使用状況測定規則で指定されたサイトに割り当てられているクライアントを階層内のすべてのクライアントにソフトウェアを適用するかどうかを **サイト**  ボックスの一覧です。
 
-5.  続行するには、**[ 次へ]** をクリックします。
+5.  続行するには、**[次へ]** をクリックします。
 
 6.  設定を確認して確定し、ウィザードを完了してソフトウェア使用状況測定規則を作成します。 新しいソフトウェア メータリングの規則が表示される、 **ソフトウェア使用状況測定** 内のノード、 **資産とコンプライアンス** ワークスペース。
 
@@ -111,7 +112,7 @@ ms.lasthandoff: 10/12/2017
 
     -   **[データの保管日数]** - ソフトウェア使用状況測定規則で生成されたデータがサイト データベースに保持される期間を指定します。 既定値は **90** 日です。
 
-    -   **[ 最新の使用状況インベントリ データから、無効にした使用状況測定規則を自動的に作成する]** を有効にします。
+    -   **[最新の使用状況インベントリ データから、無効にした使用状況測定規則を自動的に作成する]** を有効にします。
 
     -   **[階層内でプログラムを使用する必要のあるコンピューターの割合 (%) が次の値に達すると、ソフトウェア使用状況測定規則が自動的に作成されるようにする]** - 既定値は **[10]** パーセントです。
 
@@ -124,14 +125,14 @@ ms.lasthandoff: 10/12/2017
 
  次の表で、管理タスクに関する詳細と、各タスクを選択する前に必要となる追加情報について説明します。
 
-|管理タスク|説明|
+|管理タスク|詳細|
 |---------------------|-------------|
 |**有効化**<br /><br /> **無効化**|ソフトウェア使用状況測定規則の有効化または無効化 この設定はに従ってクライアント コンピュータにダウンロード、 **クライアント ポリシーのポーリング間隔** で、 **クライアント ポリシー** (既定では 60 分ごと) のクライアント設定のセクションです。<br /><br /> 「[Configure client settings](../../core/clients/deploy/configure-client-settings.md)」 (クライアント設定の構成) を参照してください。|
 
 ##  <a name="monitor-software-metering"></a>ソフトウェア使用状況測定の監視
  Configuration Manager のソフトウェア使用状況の測定機能には、ソフトウェア使用状況測定操作に関する情報を監視できる複数の組み込みレポートが含まれています。 これらのレポートは、 **ソフトウェア使用状況測定**に分類されています。
 
- Configuration Manager でのレポートの構成方法に関して詳しくは、「[System Center Configuration Manager のレポート](../../core/servers/manage/reporting.md)」を参照してください。
+ Configuration Manager でのレポートの構成方法に関して詳しくは、「[System Center Configuration Manager のレポート](../../core/servers/manage/reporting.md)」をご覧ください。
 
  また、ソフトウェア使用状況の測定機能によって Configuration Manager データベースに格納されたデータを使用して、クエリとコレクションを作成することもできます。
 

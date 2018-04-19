@@ -3,7 +3,7 @@ title: Azure AD でのクライアントのインストール
 titleSuffix: Configuration Manager
 description: 認証のために Azure Active Directory を使用して、Windows 10 デバイスで Configuration Manager クライアントをインストールして割り当てる
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a8ca1a60a249756065ee2af6cb9c37f3fe2a1e0
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 12fc1b394ae98c2b384630f4a00e4239e4e8d9d6
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>認証のため Azure AD を使用して、Configuration Manager の Windows 10 クライアントをインストールして割り当てる
 
@@ -48,6 +48,8 @@ Azure AD 認証を使用して Windows 10 デバイスで Configuration Manager 
 - 管理ポイント サイト システムの役割に関する[既存の前提条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012MPpreq)に加え、このサーバーでは **ASP.NET 4.5** も有効にします。 ASP.NET 4.5 を有効にするときに自動的に選択される他のすべてのオプションを含めます。  
 
 - HTTPS モードのすべての管理ポイントを構成します。 詳細については、「[PKI 証明書の要件](/sccm/core/plan-design/network/pki-certificate-requirements)」と「[IIS を実行するサイト システム用の Web サーバー証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012)」を参照してください。  
+    - クラウド管理ゲートウェイを使用している場合、そのクラウド管理ゲートウェイに対して有効にする管理ポイントにのみ HTTPS を構成する必要があります。
+    - Azure AD トークンベース認証を利用してイントラネットにクライアントを展開している場合、クライアントが接触する可能性があるすべての管理ポイントで HTTPS を有効にする必要があります。 
 
 - 必要に応じて、インターネット ベースのクライアントを展開するために[クラウド管理ゲートウェイ](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (CMG) を設定します。 Azure AD で認証するオンプレミス クライアントの場合、CMG は必要ありません。  
 
@@ -87,7 +89,7 @@ Azure AD の ID を使用してクライアントを手動でインストール�
  > [!Note]  
  > デバイスは Azure AD に接続する際にインターネットにアクセスする必要がありますが、インターネット ベースである必要はありません。 
 
-次の例は、コマンド ラインの一般的な構造を示しています。`ccmsetup.exe /mp:<source management point> CCMHOSTNAME=<internet-based management point> SMSSiteCode=<site code> SMSMP=<initial management point> AADTENANTID=<Azure AD tenant identifier> AADTENANTNAME=<Azure AD tenant name> AADCLIENTAPPID=<Azure AD client app identifier> AADRESOURCEURI=<Azure AD server app identifier>`
+次の例は、コマンド ラインの一般的な構造を示しています。`ccmsetup.exe /mp:<source management point> CCMHOSTNAME=<internet-based management point> SMSSiteCode=<site code> SMSMP=<initial management point> AADTENANTID=<Azure AD tenant identifier> AADCLIENTAPPID=<Azure AD client app identifier> AADRESOURCEURI=<Azure AD server app identifier>`
 
 詳細については、「[クライアント インストールのプロパティ](/sccm/core/clients/deploy/about-client-installation-properties)」を参照してください。
 
@@ -96,7 +98,7 @@ Azure AD の ID を使用してクライアントを手動でインストール�
 - クラウド管理ゲートウェイ
 - インターネット ベースの管理ポイント。SMSMP プロパティでは、オンプレミスまたはインターネット ベースの管理ポイントを指定します。
 
-この例では、クラウド管理ゲートウェイを使用します。 各プロパティのサンプルの値が置き換えられます。`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADTENANTNAME=contoso AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
+この例では、クラウド管理ゲートウェイを使用します。 各プロパティのサンプルの値が置き換えられます。`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
 
 Microsoft Intune で Azure AD の ID を使用してクライアントのインストールを自動化する場合は、[共同管理用に Windows 10 デバイスを準備する](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)プロセスを参照してください。
 

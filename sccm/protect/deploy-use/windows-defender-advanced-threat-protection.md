@@ -1,39 +1,40 @@
 ---
 title: Windows Defender Advanced Threat Protection
 titleSuffix: Configuration Manager
-description: "企業が高度な攻撃に対応するための新しいサービスである Windows Defender Advanced Threat Protection を管理および監視する方法について説明します。"
+description: 企業が高度な攻撃に対応するための新しいサービスである Windows Defender Advanced Threat Protection を管理および監視する方法について説明します。
 ms.custom: na
 ms.date: 03/07/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 561a03c7046accaa8e6d36407c75cbd4248188ce
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 84786d741eda2be24a7deb39478e68c68adc38fe
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender Advanced Threat Protection
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager のバージョン 1606 (Current Branch) 以降、Endpoint Protection を使用して、Windows Defender Advanced Threat Protection (ATP) を管理および監視できるようになりました。 Windows Defender ATP は、企業が自社のネットワークに対する高度な攻撃を検出して調査し、対応するのに役立つ新しいサービスです。  Windows Defender ATP の詳細は、[こちら](http://aka.ms/technet-wdatp)をご覧ください。 Configuration Manager ポリシーは、管理対象となる Windows 10 バージョン 1607 (ビルド 14328) 以降の登録と監視に役立ちます。
+Configuration Manager のバージョン 1606 (Current Branch) 以降、Endpoint Protection を使用して、[Windows Defender Advanced Threat Protection (ATP)](http://aka.ms/technet-wdatp) を管理および監視できるようになりました。 Windows Defender ATP は、企業が自社ネットワークに対する高度な攻撃を検出して調査し、対処するのに役立ちます。  Configuration Manager ポリシーまたは Microsoft Intune ポリシーは、管理対象となる Windows 10 バージョン 1607 (ビルド 14328) 以降の登録と監視に役立ちます。
 
-Windows Defender ATP は、[Windows セキュリティ センター](https://securitycenter.windows.com)のサービスです。 Configuration Manager は、クライアントのオンボード構成ファイルを追加して展開することにより、展開の状態と Windows Defender ATP エージェントの正常性を監視できます。 Windows Defender ATP は、構成マネージャー クライアントを実行するコンピューターでのみサポートされます。 オンプレミス モバイル デバイス管理と Intune ハイブリッド MDM で管理されたコンピューターはサポートされていません。
+Windows Defender ATP は、[Windows Defender セキュリティ センター](https://securitycenter.windows.com)のサービスです。 Configuration Manager は、クライアントのオンボード構成ファイルを追加して展開することにより、展開の状態と Windows Defender ATP エージェントの正常性を監視できます。 Windows Defender ATP は、Configuration Manager クライアントを実行している PC でサポートされるか、Microsoft Intune によって管理されますが、Intune ハイブリッド MDM 管理コンピューターはサポートされません。
 
  **必要条件**  
 
 -   Windows Defender Advanced Threat Protection オンライン サービスのサブスクリプション  
 -   Windows 10 バージョン 1607 以降を実行しているクライアント コンピューター  
--   Configuration Manager 1610 バージョン以降のクライアント エージェントを実行しているクライアント コンピューター
+-   Configuration Manager 1610 バージョン以降のクライアント エージェントを実行しているか、Microsoft Intune によって管理されているクライアント コンピューター
 
 ## <a name="how-to-create-an-onboarding-configuration-file"></a>オンボード構成ファイルの作成方法  
 
@@ -52,9 +53,9 @@ Windows Defender ATP は、[Windows セキュリティ センター](https://sec
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[概要]** > **[Endpoint Protection]** > **[Windows Defender ATP ポリシー]** の順に移動し、**[Windows Defender ATP ポリシーの作成]** をクリックします。 Windows Defender ATP ポリシーの作成ウィザードが開きます。  
 
-2.  Windows Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、**[オンボード]** を選択します。 **[ 次へ ]** をクリックします。  
+2.  Windows Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、**[オンボード]** を選択します。 **[次へ]**をクリックします。  
 
-3.  組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 **[ 次へ ]** をクリックします。  
+3.  組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 **[次へ]**をクリックします。  
 
 4.  管理対象のデバイスから分析用に収集され共有されるファイルのサンプルを指定します。  
 
@@ -62,7 +63,7 @@ Windows Defender ATP は、[Windows セキュリティ センター](https://sec
 
     -   **すべてのファイルの種類**  
 
-     **[ 次へ ]** をクリックします。  
+     **[次へ]** をクリックします。  
 
 5.  概要を確認して、ウィザードを完了します。  
 

@@ -3,7 +3,7 @@ title: クライアント インストール プロパティ
 titleSuffix: Configuration Manager
 description: Configuration Manager クライアントをインストールするための ccmsetup コマンド ライン プロパティについて説明します。
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 057b078767a08574a806cb6af1cdb3812148a457
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 40e844fbb15a101574d9628648dde0db59c855c4
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>System Center Configuration Manager のクライアント インストール プロパティについて
 
@@ -78,7 +78,7 @@ CCMSetup.exe コマンドを使用して、Configuration Manager クライアン
 
 
 
-##  <a name="ccmsetupexe-command-line-properties"></a>CCMSetup.exe のコマンド ライン プロパティ  
+##  <a name="ccmsetupexe-command-line-properties"></a>CCMSetup.exe のコマンドライン プロパティ  
 
 ### <a name=""></a>/?  
 
@@ -251,6 +251,20 @@ CCMSetup.exe でクライアントをインストールするときに、指定�
 
 
 
+## <a name="ccmsetupMsiProps"></a> Ccmsetup.msi プロパティ  
+ 次のプロパティを使用し、ccmsetup.msi のインストールの動作を変更できます。
+
+### <a name="ccmsetupcmd"></a>CCMSETUPCMD 
+
+ccmsetup.msi によってインストールされた後に ccmsetup.exe に渡されるコマンドライン プロパティを指定します。 他のプロパティは引用符の中に含めます。 Intune MDM インストール方法を使用して Configuration Manager クライアントをブートストラップするときにこのプロパティを使用します。 
+
+例: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
+
+ > [!Tip]
+ > Microsoft Intune では、コマンド ラインが 1024 文字に制限されます。 
+
+
+
 ##  <a name="clientMsiProps"></a> Client.msi のプロパティ  
  次のプロパティを使って、client.msi のインストールの動作を変更することができます。 クライアント プッシュ インストール方式を使用する場合は、**[クライアント プッシュ インストールのプロパティ]** ダイアログ ボックスの **[クライアント]** タブでプロパティを指定することもできます。  
 
@@ -284,17 +298,16 @@ Azure AD テナントの ID を指定します。 このテナントは、クラ
 
 例: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
+<!-- 
+### AADTENANTNAME
 
-### <a name="aadtenantname"></a>AADTENANTNAME
+Specifies the Azure AD tenant name. This tenant is linked to Configuration Manager when you [configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for Cloud Management. To obtain the value for this property, use the following steps:
+- On a Windows 10 device that is joined to the same Azure AD tenant, open a command prompt.
+- Run the following command: `dsregcmd.exe /status`
+- In the Device State section, find the **TenantName** value. For example, `TenantName : Contoso`
 
-Azure AD テナント名を指定します。 このテナントは、クラウド管理用に [Azure サービスを構成する](/sccm/core/servers/deploy/configure/azure-services-wizard)際に Configuration Manager にリンクされます。 このプロパティの値を取得するには、次の手順を使用します。
-- 同じ Azure AD テナントに参加している Windows 10 デバイスで、コマンド プロンプトを開きます。
-- 
-          `dsregcmd.exe /status` コマンドを実行します。
-- [デバイスの状態] セクションで、**TenantName** の値を見つけます。 たとえば、`TenantName : Contoso` などです。
-
-例: `ccmsetup.exe AADTENANTNAME=Contoso`
-
+Example: `ccmsetup.exe AADTENANTNAME=Contoso`
+-->
 
 ### <a name="ccmadmins"></a>CCMADMINS  
 

@@ -3,7 +3,7 @@ title: Technical Preview リリース
 titleSuffix: Configuration Manager
 description: Configuration Manager の新機能を体験するテクニカル プレビュー リリースについて説明します。
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/27/2018
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -15,12 +15,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 caps.latest.revision: 157
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 4509c7da3ca36d2ffd3de36774bf069c40d95ce2
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+manager: dougeby
+ms.openlocfilehash: 753503fd8c59ef8f93c0968c3d5c386cec35f88e
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/23/2018
 
  このリリースはテクニカル プレビューであるため、詳細や機能は変更されることがあります。  
 
- この記事には、Technical Preview のすべてのバージョンに適用される情報が含まれています。 さらに、新しい機能 (またはフィーチャー) とそれが初めて導入された Technical Preview のバージョン (たとえば、2018 年 2 月であればバージョン 1802) を一覧に示します。 これらの機能の詳細は、各プレビュー バージョンに特化した個別のトピックで説明されています。  
+ この記事には、Technical Preview のすべてのバージョンに適用される情報が含まれています。 また、新しい各機能 (またはフィーチャー) とそれが初めて導入された Technical Preview のバージョン (たとえば、2018 年 3 月であればバージョン 1803) がリストされます。 これらの機能の詳細は、各プレビュー バージョンに特化した個別のトピックで説明されています。  
 
  Configuration Manager の現在のブランチの新機能については、「[What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012)」 (System Center Configuration Manager の新機能) を参照してください。
 
@@ -91,7 +91,7 @@ ms.lasthandoff: 03/23/2018
 各プレビュー リリースは、3 つの連続したリリースが使用可能になるまでサポートされます。 つまり、バージョン 1708 がリリースされると、バージョン 1704 はサポートされなくなりますが、バージョン 1705、1706、1707 は引き続きサポートされます。 ベースラインがサポート対象でなくなっても、そのインストールをサポートされるバージョンに更新すれば、(新しいベースライン バージョンが使用できるようになるまでは) 新しい Technical Preview サイトのインストールがサポートされます。 提供されている最新のバージョンに更新した後、最新バージョンの Technical Preview をインストールできるようになるまでそのプロセスを繰り返します。
 
 > [!TIP]  
->  Technical Preview への更新をインストールするときに、プレビュー インストール環境を対象の新しい Technical Preview バージョンに更新します。    Technical Preview インストールでは、現在のブランチ インストールにアップグレードすることも、現在のブランチ リリースから更新を受け取ることもできません。  
+>  Technical Preview の更新プログラムをインストールするときに、プレビュー インストール環境を対象の新しい Technical Preview バージョンに更新します。 Technical Preview のインストールでは、現在のブランチのインストールにアップグレードすることも、現在のブランチ リリースから更新を受け取ることもできません。  
 
 **Technical Preview のアクティブ ベースライン バージョン:**
    
@@ -114,28 +114,14 @@ ms.lasthandoff: 03/23/2018
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1802"></a>Technical Preview バージョン 1802
-- [共同管理を使用して Intune に Endpoint Protection ワークロードを移行する](capabilities-in-technical-preview-1802.md#transition-endpoint-protection-workload-to-intune-using-co-management) <!-- 1357365 -->
-- [Configuration Manager 境界グループを使用するように Windows の配信の最適化を構成する](capabilities-in-technical-preview-1802.md#configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups) <!-- 1324696 --> 
-- [クラウド管理ゲートウェイ経由での Windows 10 一括アップグレード タスク シーケンス](capabilities-in-technical-preview-1802.md#windows-10-in-place-upgrade-task-sequence-via-cloud-management-gateway) <!-- 1357149 -->
-- [Windows 10 一括アップグレード タスク シーケンスの機能強化](capabilities-in-technical-preview-1802.md#improvements-to-windows-10-in-place-upgrade-task-sequence) <!-- 1357425 --> 
-- [PXE 対応の配布ポイントの機能強化](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) <!-- 1357580 --> 
-- [タスク シーケンスの展開テンプレート](capabilities-in-technical-preview-1802.md#deployment-templates-for-task-sequences) <!-- 1357391 --> 
-- [製品ライフサイクル ダッシュボード](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) <!--1319632 --> 
-- [レポートの機能強化](capabilities-in-technical-preview-1802.md#improvements-to-reporting) <!--1357653 --> 
-- [ソフトウェア センターの機能強化](capabilities-in-technical-preview-1802.md#improvements-to-software-center) <!--1357592 --> 
-- [スクリプトの実行の改善](capabilities-in-technical-preview-1802.md#improvements-to-run-scripts) <!--1236459 --> 
-- [管理ポイントに対する境界グループのフォールバック](capabilities-in-technical-preview-1802.md#boundary-group-fallback-for-management-points) <!-- 1324594 --> 
-- [CNG 証明書のサポートの強化](capabilities-in-technical-preview-1802.md#improved-support-for-cng-certificates) <!-- 1357314 --> 
-- [Azure Resource Manager に対するクラウド管理ゲートウェイのサポート](capabilities-in-technical-preview-1802.md#cloud-management-gateway-support-for-azure-resource-manager) <!-- 1324735 --> 
-- [デバイスごとにユーザーのアプリケーション要求を承認する](capabilities-in-technical-preview-1802.md#approve-application-requests-for-users-per-device) <!-- 1357015 --> 
-- [ソフトウェア センターを使用してユーザーが利用できるアプリケーションを参照し、Azure AD に参加しているデバイスにインストールする](capabilities-in-technical-preview-1802.md#use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices) <!-- 1322613 --> 
-- [Windows AutoPilot のデバイス情報についてのレポート](capabilities-in-technical-preview-1802.md#report-on-windows-autopilot-device-information) <!-- 1351442 --> 
-- [Windows Defender Exploit Guard に対する Configuration Manager ポリシーの機能強化](capabilities-in-technical-preview-1802.md#improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard) <!-- 1356220 -->
-- [Microsoft Edge ブラウザーのポリシー](capabilities-in-technical-preview-1802.md#microsoft-edge-browser-policies) <!-- 1357310 -->
-- [既定のブラウザー数についてのレポート](capabilities-in-technical-preview-1802.md#report-for-default-browser-counts) <!-- 1357830 --> 
-- [Windows 10 ARM64 デバイスのサポート](capabilities-in-technical-preview-1802.md#support-for-windows-10-arm64-devices) <!-- 1353704 --> 
-- [段階的展開に対する変更](capabilities-in-technical-preview-1802.md#changes-to-phased-deployments) <!-- 1357405 -->
+### <a name="technical-preview-version-1803"></a>Technical Preview バージョン 1803
+- [ソースとしてのクラウド配布ポイントのプル配布ポイントのサポート](capabilities-in-technical-preview-1803.md#pull-distribution-points-support-cloud-distribution-points-as-source) <!--1321554--> 
+- [WAN の使用率を減らすためのクライアント ピア キャッシュでの部分的なダウンロードのサポート](capabilities-in-technical-preview-1803.md#partial-download-support-in-client-peer-cache-to-reduce-wan-utilization) <!--1357346--> 
+- [ソフトウェア センターのメンテナンス期間](capabilities-in-technical-preview-1803.md#maintenance-windows-in-software-center) <!--1358131--> 
+- [ソフトウェア センターの Web ページのカスタム タブ](capabilities-in-technical-preview-1803.md#custom-tab-for-webpage-in-software-center) <!--1358132--> 
+- [クライアントでサード パーティ製ソフトウェア更新プログラムを有効にするサポート](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients) <!--1357605-->
+- [監視ビューからの資産の詳細のコピー/貼り付けを有効にする](capabilities-in-technical-preview-1803.md#enable-copypaste-of-asset-details-from-monitoring-views) <!--1357552-->
+- [SCAP 拡張機能](capabilities-in-technical-preview-1803.md#scap-extensions) <!--1357552-->
 
 
 
@@ -184,8 +170,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Office 365 クライアント管理ダッシュボードの機能拡張 <!-- 1357281 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-office-365-client-management-dashboard) | [バージョン 1802](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) | 
  | Configuration Manager コンソールの機能拡張 <!-- 1357280,1357282 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-the-configuration-manager-console) | バージョン 1802 | 
  | OS 展開の機能強化 <!-- SMS 500897 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-operating-system-deployment) | バージョン 1802 | 
- | タスク シーケンス ステップの実行<!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) | [バージョン 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |
- | アプリケーションをインストールするときに、ユーザー操作を許可する <!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) | [バージョン 1802](/sccm/apps/deploy-use/create-applications#specify-user-experience-options-for-the-deployment-type) |
 
   
 
@@ -200,12 +184,8 @@ With each CB release, review and remove from this list for anything that's now a
 
  |機能 |Technical Preview バージョン |  
  |----------------|---------------------|
- |Configuration Manager コンソールの向上した VPN プロファイル エクスペリエンス <!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |
- |管理分析情報 <!-- 1353967 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#management-insights)|
- |Surface デバイス ダッシュボード<!-- 1355788 --> |[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|
  |サイト サーバーの役割の高可用性<!-- 1128774 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |
  |PXE ネットワーク ブートでの IPv6 のサポート<!-- 1269793 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
- |条件付きアクセスのコンプライアンス ポリシーに対するデバイス正常性構成証明の評価<!-- 1235616 -->|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#device-health-attestation-assessment-for-compliance-policies-for-conditional-access)|
  |Azure Active Directory の使用 <!-- 1322145? --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
  |Windows Update for Business 更新プログラムのコンプライアンス評価<!-- 1235390 --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#compliance-assessment-for-windows-update-for-business-updates) |
  |OData エンドポイントのデータ アクセス<!-- 1321523 --> |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|

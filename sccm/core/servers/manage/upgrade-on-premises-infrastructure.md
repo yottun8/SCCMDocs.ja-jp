@@ -1,7 +1,7 @@
 ---
-title: "オンプレミス インフラストラクチャのアップグレード"
+title: オンプレミス インフラストラクチャのアップグレード
 titleSuffix: Configuration Manager
-description: "SQL Server やサイト システムのサイト オペレーティング システムなどのインフラストラクチャをアップグレードする方法について説明します。"
+description: SQL Server やサイト システムのサイト オペレーティング システムなどのインフラストラクチャをアップグレードする方法について説明します。
 ms.custom: na
 ms.date: 02/15/2018
 ms.prod: configuration-manager
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 7
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 8e17ffad2b972119c92e449bef8f086b950b106c
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+ms.openlocfilehash: 5c4403588872e426a9346e6c4c50f1853b75f4b9
+ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-system-center-configuration-manager"></a>System Center Configuration Manager をサポートするオンプレミス インフラストラクチャのアップグレード
 
@@ -74,6 +74,8 @@ Windows Server 2012 または Windows Server 2012 R2 から Windows Server 2016 
 -   サイト システムの役割をホストする各サーバーが、そのサーバーで実行される[サイト システムの役割の前提条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)のすべてを引き続き満たしていることを確認します。 たとえば、BITS、WSUS を再インストールしたり、IIS の特定の設定を構成したりすることが必要になる場合があります。
 
 -   不足している前提条件を復元した後で、もう一度サーバーを再起動して、サービスが開始され、動作していることを確認します。
+
+-   プライマリ サイト サーバーをアップグレードしている場合、[サイト リセットを実行](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_reset)します。
 
 **リモートの Configuration Manager コンソールに関する既知の問題:**  
 サイト サーバーまたは SMS_Provider のインスタンスをホストするサーバーを Windows Server 2016 にアップグレードした後、管理ユーザーが Configuration Manager コンソールをサイトに接続できない場合があります。 この問題を回避するには、WMI の SMS Admins グループのアクセス許可を手動で復元する必要があります。 サイト サーバーと、SMS_Provider のインスタンスをホストする各リモート サーバーで、アクセス許可を設定する必要があります。

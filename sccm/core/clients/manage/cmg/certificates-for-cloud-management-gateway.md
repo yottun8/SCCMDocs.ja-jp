@@ -10,11 +10,11 @@ ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 1c7adec8f8919736c61859791802a96766af31bb
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 0e4d2add8ece7f548955064a479d9545a1fc64e1
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>クラウド管理ゲートウェイの証明書
 
@@ -136,7 +136,7 @@ CMG はクライアント認証証明書を信頼する必要があります。 
 *証明書の要件*
 - バージョン 1706 または 1710 で、クライアント認証証明書を利用してオンプレミス ID で従来のクライアントを管理するとき、この証明書が推奨されますが、必須ではありません。
 - バージョン 1710 では、Azure AD に参加している Windows 10 クライアントを管理するとき、管理ポイントにこの証明書が必要になります。 
-- バージョン 1802 より、この証明書はすべてのシナリオで必要です。 
+- バージョン 1802 より、この証明書はすべてのシナリオで必要です。 CMG に対して有効にする管理ポイントのみが HTTPS である必要があります。 この動作の変更により、Azure AD トークン ベースの認証のサポートが強化されます。 
 
 この証明書は Configuration Manager と前後関係のないところでプロビジョニングします。 たとえば、Active Directory 証明書サービスとグループ ポリシーを使用し、Web サーバー証明書を発行します。 詳細については、「[PKI 証明書の要件](/sccm/core/plan-design/network/pki-certificate-requirements)」と「[IIS を実行するサイト システム用の Web サーバー証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012)」を参照してください。
 

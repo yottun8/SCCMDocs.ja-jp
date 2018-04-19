@@ -3,7 +3,7 @@ title: CD.Latest フォルダー
 titleSuffix: Configuration Manager
 description: Configuration Manager コンソール内から製品の更新を提供する新しい更新プロセスについて説明します。
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision: 6
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 9371762a3f6acb9df7e7138c693b0a529c81a2ff
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 86b6393a6719895357d34fe8e562f3d0c967ad06
+ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="the-cdlatest-folder-for-system-center-configuration-manager"></a>System Center Configuration Manager の CD.Latest フォルダー
 
@@ -63,3 +63,6 @@ CD.Latest フォルダーからのソース ファイルは、次に対してサ
 >   
 >  -   新しい階層の新しいサイトのインストール  
 >  -   Upgrading a Microsoft System Center 2012 Configuration Manager サイトから System Center Configuration Manager へのアップグレード
+>  -   Configuration Manager クライアントのインストール
+>  -   Configuration Manager 管理コンソールのインストール
+

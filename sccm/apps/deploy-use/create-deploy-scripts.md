@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 29806161b29b87834c0cb4b1e478d92bff7a7b3c
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 19bb8b2c4e47dcc8a75db568e7f93541544a4566
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Configuration Manager コンソールから PowerShell スクリプトを作成して実行する
 
@@ -70,10 +70,6 @@ Configuration Manager セキュリティ ロールの詳細については、以
 >[!WARNING]
 >パラメーターを使用する場合、潜在的な PowerShell インジェクション攻撃のリスクが伴うことに注意してください。 パラメーター入力を検証するための正規表現の使用や、定義済みパラメーターの使用など、さまざまな緩和および回避方法があります。 通常は PowerShell スクリプトのシークレットに含めないことをお勧めします (パスワードなしなど)。 [PowerShell スクリプトのセキュリティの詳細情報](/sccm/apps/deploy-use/learn-script-security) <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
 
-
-## <a name="group-policy-considerations-for-scripts"></a>スクリプトのグループ ポリシーに関する考慮事項
-<!--While running scripts on devices, Configuration Manager sets policy to allow local scripts and remote signed scripts.--> 
-グループ ポリシーを使用して実行ポリシーを設定すると、Configuration Manager でスクリプトを実行できない場合があります。 実行ポリシーと、その設定方法については、「[About Execution Policies](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies)」 (実行ポリシーについて) の記事を参照してください。 <!--507185-->
 
 ## <a name="run-script-authors-and-approvers"></a>スクリプトの実行の作成者と承認者
 
@@ -278,6 +274,10 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 - 不明な結果を取得するスクリプトや、クライアントがオフラインだったスクリプトは、グラフやデータ セットには表示されません。 <!--507179-->
 - 大きいスクリプトの出力は 4 KB に切り捨てられるため、そのような出力が返されないようにしてください。 <!--508488-->
 - ダウンレベル バージョンのクライアントで Configuration Manager バージョン 1802 以降を実行する場合、スクリプト出力形式の一部の機能は使用できません。 <!--508487-->
+    - 1802 より前の Configuration Manager クライアントの場合は、文字列出力が表示されます。
+    -  Configuration Manager クライアント バージョン 1802 以降の場合は、JSON 形式となります。
+        - たとえば、あるクライアント バージョンでは TEXT という結果が得られ、別のバージョンでは "TEXT" (出力が二重引用符で囲まれている) となる可能性があります。これらは 2 つの異なるカテゴリとしてグラフに配置されます。
+        - この動作を回避する必要がある場合は、2 つの異なるコレクションに対してスクリプトを実行することを検討してください。 つまり、1802 より前のクライアントで 1 つ、1802 以降のクライアントでもう 1 つです。 または、スクリプトで列挙オブジェクトを文字列値に変換して、JSON 形式で適切に表示されるようにすることもできます。 
 - スクリプトで列挙オブジェクトを文字列値に変換して、JSON 形式で適切に表示されるようにしてください。 <!--508377--> ![列挙オブジェクトを文字列値に変換する](./media/run-scripts/enum-tostring-JSON.png)
 
 

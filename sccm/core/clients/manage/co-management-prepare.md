@@ -1,45 +1,46 @@
 ---
-title: 共同管理用に Windows 10 デバイスを準備する
+title: 共同管理のために Windows 10 を準備する
+titleSuffix: Configuration Manager
 description: 共同管理用に Windows 10 デバイスを準備する方法について説明します。
-keywords: ''
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 61aef0351e32ef6cf31911a8dfd27e86de82f38c
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: a45ded0f3824c148f64f9578e51cc112c05d9f78
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>共同管理用に Windows 10 デバイスを準備する
-AD と Azure AD に参加し Intune に登録されている Windows 10 デバイスと、Configuration Manager のクライアントで、共同管理を有効にできます。 新しい Windows 10 デバイスおよび Intune に既に登録されているデバイスでは、共同管理を有効にする前に Configuration Manager クライアントをインストールします。 既に Configuration Manager クライアントになっている Windows 10 デバイスの場合は、デバイスを Intune に登録して、Configuration Manager コンソールで共同管理を有効にできます。
+AD と Azure AD に参加し Microsoft Intune に登録されている Windows 10 デバイスと、Configuration Manager のクライアントで、共同管理を有効にできます。 新しい Windows 10 デバイスおよび Intune に既に登録されているデバイスでは、共同管理を有効にする前に Configuration Manager クライアントをインストールします。 既に Configuration Manager クライアントになっている Windows 10 デバイスの場合は、デバイスを Intune に登録して、Configuration Manager コンソールで共同管理を有効にできます。
 
 > [!IMPORTANT]
 > Windows 10 Mobile デバイスでは共同管理はサポートされません。
 
+
+
 ## <a name="command-line-to-install-configuration-manager-client"></a>Configuration Manager クライアントをインストールするためのコマンド ライン
 まだ Configuration Manager クライアントではない Windows 10 デバイスの Intune でアプリを作成します。 次のセクションでアプリを作成するときは、次のコマンド ラインを使います。
 
-ccmsetup.msi CCMSETUPCMD="/mp:&#60;*クラウド管理ゲートウェイ相互認証エンドポイントの URL*&#62;/ CCMHOSTNAME=&#60;*クラウド管理ゲートウェイ相互認証エンドポイントの URL*&#62; SMSSiteCode=&#60;*サイト コード*&#62; SMSMP=https:&#47;/&#60;*MP の FQDN*&#62; AADTENANTID=&#60;*AAD テナント ID*&#62; AADTENANTNAME=&#60;*テナント名*&#62; AADCLIENTAPPID=&#60;*AAD 統合用のサーバー アプリ ID*&#62; AADRESOURCEURI=https:&#47;/&#60;*リソース ID*&#62;”
+`ccmsetup.msi CCMSETUPCMD="/mp:<URL of cloud management gateway mutual auth endpoint> CCMHOSTNAME=<URL of cloud management gateway mutual auth endpoint> SMSSiteCode=<Sitecode> SMSMP=https://<FQDN of MP> AADTENANTID=<AAD tenant ID> AADCLIENTAPPID=<Server AppID for AAD Integration> AADRESOURCEURI=https://<Resource ID>"`
 
 たとえば、次のような値を使うものとします。
 
-- **クラウド管理ゲートウェイ相互認証エンドポイントの URL**: https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    
+- **クラウド管理ゲートウェイ相互認証エンドポイントの URL**: https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    
 
    >[!Note]    
    >**クラウド管理ゲートウェイ相互認証エンドポイントの URL** の値には、**vProxy_Roles** SQL ビューの **MutualAuthPath** の値を使います。
 
-- **管理ポイント (MP) の FQDN**: sccmmp.corp.contoso.com    
+- **管理ポイント (MP) の FQDN**: mp1.contoso.com    
 - **サイト コード**: PS1    
-- **Azure AD テナント ID**: 72F988BF-86F1-41AF-91AB-2D7CD011XXXX    
-- **Azure AD テナント名**: contoso    
-- **Azure AD クライアント アプリ ID**: bef323b3-042f-41a6-907a-f9faf0d1XXXX     
+- **Azure AD テナント ID**: daf4a1c2-3a0c-401b-966f-0b855d3abd1a    
+- **Azure AD クライアント アプリ ID**: 7506ee10-f7ec-415a-b415-cd3d58790d97     
 - **AAD リソース ID URI**: ConfigMgrServer    
 
   > [!Note]    
@@ -47,7 +48,7 @@ ccmsetup.msi CCMSETUPCMD="/mp:&#60;*クラウド管理ゲートウェイ相互�
 
 この場合は、次のようなコマンド ラインを使います。
 
-ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;ConfigMgrServer”
+`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://ConfigMgrServer"`
 
 > [!Tip]
 > サイトのコマンド ライン パラメーターは、次の手順を使って探すことができます。     

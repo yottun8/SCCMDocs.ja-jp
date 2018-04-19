@@ -1,9 +1,9 @@
 ---
-title: "ハイブリッド MDM の新機能"
+title: ハイブリッド MDM の新機能
 titleSuffix: Configuration Manager
-description: "Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。"
+description: Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。
 ms.custom: na
-ms.date: 03/01/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b48c5296caecd66b5abb6d40578af2009ef0f11
-ms.sourcegitcommit: 6e4fca19083b5dbdcd841012f6e1051bb7c00eb8
+ms.openlocfilehash: 3c3d1c813c307e520b3a9709187937f0d3f732c7
+ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -41,6 +41,16 @@ ms.lasthandoff: 03/05/2018
 |**Microsoft Intune の新機能** | 通常、このカテゴリに一覧表示されたすべての機能は、Configuration Manager のすべてのリリースで動作します。 これには System Center 2012 R2 Configuration Manager リリースが含まれています。これらの機能では Intune サービスのみが必要であり、Configuration Manager の追加機能は不要なためです。|
 |**Configuration Manager Technical Preview の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Technical Preview リリースでのみ動作します。 これらの機能を試すには、機能の説明で指定されたバージョンの Technical Preview をインストールする必要があります。 詳細については、「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を参照してください。|
 |**Configuration Manager (現在のブランチ) の新機能**| このカテゴリに一覧表示されたすべての機能は、バージョン 1511 や 1602 など、指定されたバージョンの Configuration Manager (現在のブランチ) でのみ動作します。 ハイブリッド展開に旧バージョンの Configuration Manager を使用している場合は、機能の説明で指定されたバージョンの Configuration Manager (現在の分岐) にアップグレードする必要があります。 詳細については、「[System Center Configuration Manager へのアップグレード](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)」を参照してください。|
+
+
+
+## <a name="march-2018"></a>2018 年 3 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+#### <a name="azure-active-directory-web-sites-can-require-the-intune-managed-browser-app-and-support-single-sign-on-for-the-managed-browser-public-preview"></a>Azure Active Directory の Web サイトでは、Intune Managed Browser アプリを要求し、Managed Browser (パブリック プレビュー) に対するシングル サインオンをサポートすることができる
+<!-- 710595 --> 
+Azure Active Directory (Azure AD) を使用している場合、モバイル デバイスでの Web サイトへのアクセスを Intune Managed Browser アプリに制限できるようになりました。 Managed Browser では、Web サイトのデータは安全性を維持され、エンド ユーザーの個人データと分離されます。 さらに、Managed Browser は、Azure AD によって保護されているサイトに対するシングル サインオン機能をサポートします。 Managed Browser にサインインすると、または Intune によって管理されている別のアプリでデバイスの Managed Browser を使うと、ユーザーが資格情報を入力しなくても、Managed Browser は Azure AD によって保護されている会社サイトにアクセスできます。 この機能は、Outlook Web Access (OWA) や SharePoint Online などのサイトだけでなく、Azure App プロキシ経由でアクセスされるイントラネット リソースのような他の企業サイトにも適用されます。
 
 
 
@@ -456,6 +466,35 @@ ms.lasthandoff: 03/05/2018
 
 
 ## <a name="notices"></a>通知
+
+### <a name="windows-company-portal-send-feedback-option-may-no-longer-work"></a>Windows ポータル サイトの [フィードバックの送信] オプションは今後機能しない場合がある
+
+Windows ポータル サイト アプリには、アプリに関するフィードバックを Microsoft に送信できるように 'フィードバックの送信' オプションがあります。 2018 年 4 月 30 日から、Windows 10 バージョン 1607 以降を実行している Windows 10 ポータル サイト アプリでのみ、このオプションが引き続きサポートされます。   
+
+#### <a name="how-does-this-affect-me"></a>ユーザーへの影響
+
+エンド ユーザーに Windows ポータル サイト アプリをインストールしていない場合、このメッセージは無視してください。
+
+エンド ユーザーの中にポータル サイト アプリをインストールしている人がいる場合、次のシナリオにおいて、4 月 30 日から 'フィードバックの送信' ボタンが機能しなくなることに注意してください。  
+
+ - Windows 10 バージョン 1507 とバージョン 1511 の Windows 10 ポータル サイト アプリ  
+
+ - Windows Phone Windows 8.1 ポータル サイト アプリ  
+
+影響を受けるデバイスの場合、'フィードバックの送信' オプションは機能せず、再試行でも動作しません。 影響を受けるデバイスで発生した現象について Microsoft にフィードバックを送信するには、下に記す代替フィードバック チャネルをご利用ください。
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>この変更に対して必要な準備
+
+エンド ユーザーにこの変更を通知し、必要に応じてユーザー ガイダンスを更新してください。 
+
+Windows Phone 8.1、Windows 10 バージョン 1507、Windows 10 バージョン 1511 でポータル サイトを利用しているエンド ユーザーに 2 つの代替フィードバック チャネルを利用できることをお知らせください。 代替フィードバック方法:  
+
+- Windows 10 でフィードバック ハブ アプリを使用する  
+- WinCPfeedback@microsoft.com に電子メールを送信する  
+
+Windows 10 バージョン 1607 以降を利用しているエンド ユーザーに Microsoft Store で入手できる Windows ポータル サイトの最新版に更新するように要請します。
+
+
 
 ### <a name="company-portal-for-windows-81-and-windows-phone-81-moving-to-sustaining-mode"></a>維持モードに移行中の Windows 8.1 および Windows Phone 8.1 用ポータル サイト 
 <!--1428681-->

@@ -10,11 +10,11 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 614c5ba3acb81f90a75726e8783125fb53a39a93
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: dabc248c1788ecad4d7b25c0a1f592e0ddeef826
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager でクラウド管理ゲートウェイを計画する
 
@@ -155,7 +155,7 @@ Fourth Coffee は、シアトルの本社にあるオンプレミス データ�
 
 - クライアントの OS バージョンと認証モデルによっては、**他の証明書**が必要になることがあります。 詳細については、「[CMG 証明書](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)」を参照してください。  
 
-    - バージョン 1802 以降では、[**HTTPS を使用するようにすべての管理ポイントを構成する**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https)必要があります。  
+    - バージョン 1802 以降では、CMG が有効なすべての[**管理ポイントで HTTPS を使用する**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https)ように構成する必要があります。  
 
 - Windows 10 クライアントの場合、**Azure AD** との統合が必要になることがあります。 詳細については、「[Azure サービスの構成](/sccm/core/servers/deploy/configure/azure-services-wizard)」を参照してください。  
 

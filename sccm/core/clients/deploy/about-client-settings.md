@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 42b9364fc88acc3f403db8d2ca9243a117fd78bf
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: bd03457abdd5cc4464c10227626ba72637c96f90
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager のクライアント設定について
 
@@ -801,8 +801,9 @@ Configuration Manager バージョン 1802 以降、このオプションを有�
 
 これを **[はい]** に設定すると、Office 365 のインストール設定を構成できます。 また、Office コンテンツ配信ネットワーク (CDN) からファイルをダウンロードし、Configuration Manager でファイルをアプリケーションとして展開することもできます。 詳しくは、「[Office 365 ProPlus の更新プログラムの管理](/sccm/sum/deploy-use/manage-office-365-proplus-updates)」をご覧ください。
 
+### <a name="enable-third-party-software-updates"></a>サードパーティ製ソフトウェア更新プログラムを有効にする 
 
-
+これを **[はい]** に設定すると、[イントラネットの Microsoft 更新サービスの保存場所にある署名済み更新を許可する] のポリシーが設定され、クライアントの信頼できる発行元ストアに署名証明書がインストールされます。 このクライアント設定は、Configuration Manager バージョン 1802 で追加されました。
 ## <a name="state-messaging"></a>状態メッセージ
 
 ### <a name="state-message-reporting-cycle-minutes"></a>［状態メッセージのレポート サイクル (分)］

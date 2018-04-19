@@ -6,17 +6,17 @@ keywords: ''
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: e4b8bd58d30cd87ffc461289edbfc5da9a684cda
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: cda2ef22bbfb86d0c25c44d5b97b0e1551010374
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="co-management-for-windows-10-devices"></a>Windows 10 デバイスの共同管理    
 <!-- 1350871 -->
@@ -41,7 +41,7 @@ ms.lasthandoff: 03/23/2018
 
 
    > [!Note]  
-   > ハイブリッド MDM 環境 (Intune と Configuration Manager が統合された環境) では、共同管理を有効にできません。 Intune スタンドアロンへの移行については、[ハイブリッド MDM から Intune スタンドアロンへの移行の開始](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)に関する記事をご覧ください。
+   > ハイブリッド MDM 環境 (Intune と Configuration Manager が統合された環境) では、共同管理を有効にできません。 ただし、Intune スタンドアロンへのユーザー移行を開始し、関連 Windows 10 デバイスの共同管理を有効にできます。 Intune スタンドアロンへの移行については、[ハイブリッド MDM から Intune スタンドアロンへの移行の開始](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)に関する記事をご覧ください。
 
 ### <a name="additional-prerequisites-for-devices-with-the-configuration-manager-client"></a>Configuration Manager クライアントがインストールされているデバイスの追加の前提条件
 - Windows 10、バージョン 1709 (Fall Creators Update とも呼ばれます) 以降
