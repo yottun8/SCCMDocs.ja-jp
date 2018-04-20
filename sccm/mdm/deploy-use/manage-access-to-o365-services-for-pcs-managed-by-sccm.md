@@ -1,9 +1,9 @@
 ---
-title: "管理対象 PC の O365 サービスへのアクセスを管理する"
+title: O365 サービスへのアクセスの管理
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で管理されている PC の条件付きアクセスを構成する方法について説明します。"
+description: System Center Configuration Manager で管理されている PC の Office 365 サービスへの条件付きアクセスを構成する方法について説明します。
 ms.custom: na
-ms.date: 01/10/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,26 +12,26 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
-caps.latest.revision: 
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: e1f50ea65236473f059ded6ef85c37646e929e53
-ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
+caps.latest.revision: 15
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1e02cb911397d5f1f837996318b12049d328c9c3
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>System Center Configuration Manager で管理されている PC の O365 サービスへのアクセスを管理する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-この記事では、Configuration Manager で管理されている PC の条件付きアクセスを構成する方法について説明します。  
+<!--1191496-->
+Configuration Manager で管理されている PC の Office 365 サービスへ条件付きアクセスを構成する方法について説明します。  
 
-<!--
- >> [!Tip]  
-> This feature was first introduced in version 1602 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1702, this feature is no longer a pre-release feature.
--->
+> [!Note]  
+> Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[更新プログラムのオプション機能の有効化](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」を参照してください。<!--505213-->  
+
 
 Microsoft Intune で登録および管理されるデバイスの条件付きアクセスの構成については、「[System Center Configuration Manager でサービスへのアクセスを管理する](../../protect/deploy-use/manage-access-to-services.md)」を参照してください。 その記事では、ドメインに参加しているデバイスのうち、コンプライアンス評価対象でないデバイスについても説明します。
 
@@ -95,15 +95,18 @@ Microsoft Intune で登録および管理されるデバイスの条件付きア
     - **デバイス上で BitLocker の有効化が必要**
     - **デバイス上でセキュア ブートの有効化が必要** 
     - **デバイス上でコードの整合性の有効化が必要**
-    - **デバイス上で起動時マルウェア対策の有効化が必要**
+    - **デバイス上で起動時マルウェア対策の有効化が必要**  
 
->[!Tip]
-> バージョン 1710 のバージョンで導入されたデバイスの正常性構成証明書の条件付きアクセス条件はプレリリース機能です。 この機能を有効にする場合は、[プレリリース機能](/sccm/core/servers/manage/pre-release-features)に関するページを参照してください。 
+    >[!Tip]  
+    > デバイス正常性構成証明書の条件付きアクセス条件は、最初にバージョン 1710 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として導入されました。 バージョン 1802 以降、この機能はプレリリース機能ではなくなりました。<!--1235616-->  
+
+    > [!Note]  
+    > Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[更新プログラムのオプション機能の有効化](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」を参照してください。<!--505213-->  
 
 ### <a name="step-2-evaluate-the-effect-of-conditional-access"></a>手順 2. 条件付きアクセスの効果の評価  
- 条件付きアクセス コンプライアンス レポートを実行します。 これは [レポート] > [コンプライアンスと設定の管理] の [監視] セクションにあります。 このレポートには、すべてのデバイスのコンプライアンス対応状態が表示されます。  非対応としてレポートされるデバイスから Exchange Online および SharePoint Online へのアクセスはブロックされます。  
+ **条件付きアクセス コンプライアンス レポート**を実行します。 これは **[レポート]** > **[コンプライアンスと設定の管理]** の **[監視]** ワークスペースにあります。 このレポートには、すべてのデバイスのコンプライアンス対応状態が表示されます。 非対応としてレポートされるデバイスから Exchange Online および SharePoint Online へのアクセスはブロックされます。  
 
- ![CA&#95;compliance&#95;report](media/CA_compliance_report.png)  
+ ![Configuration Manager コンソール、監視ワークスペース、レポート、コンプライアンスと設定の管理: 条件付きアクセス コンプライアンス レポート](media/CA_compliance_report.png)  
 
 ### <a name="configure-active-directory-security-groups"></a>Active Directory セキュリティ グループの構成  
  条件付きアクセス ポリシーは、ポリシーの種類に応じてユーザーのグループを対象とします。 これらのグループには、ポリシーの対象となるユーザーや、ポリシーから除外されるユーザーが含まれます。 ポリシーの対象がユーザーである場合、使用される各デバイスがサービスにアクセスするには、ポリシーに準拠している必要があります。  
@@ -114,12 +117,12 @@ Microsoft Intune で登録および管理されるデバイスの条件付きア
 
 -   **対象グループ** – ポリシーが適用されるユーザー グループ。 コンプライアンスと条件付きアクセス ポリシーの両方に同じグループを使用してください。  
 
--   **例外グループ** – ポリシーから除外されるユーザー グループ (省略可能)  
+-   **例外グループ** – ポリシーから除外されるユーザー グループ (省略可能)。  
     ユーザーが両方に含まれている場合は、ポリシーから除外されます。  
 
      条件付きアクセス ポリシーの対象となるグループだけが評価されます。  
 
-### <a name="step-3--create-a-conditional-access-policy-for-exchange-online-and-sharepoint-online"></a>手順 3.  Exchange Online および SharePoint Online の条件付きアクセス ポリシーを作成します。  
+### <a name="step-3-create-a-conditional-access-policy-for-exchange-online-and-sharepoint-online"></a>手順 3. Exchange Online および SharePoint Online の条件付きアクセス ポリシーを作成します。  
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
 

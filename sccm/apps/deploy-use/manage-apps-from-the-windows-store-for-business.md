@@ -1,25 +1,26 @@
 ---
-title: "ビジネス向け Microsoft Store からのアプリの管理"
+title: ビジネス向け Microsoft Store からのアプリの管理
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager を使用してビジネス向け Microsoft Store からアプリを管理および展開します。"
+description: System Center Configuration Manager を使用してビジネス向け Microsoft Store からアプリを管理および展開します。
 ms.custom: na
 ms.date: 12/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 15644a8c1acdbde85c7ca194a72a10c3cc2c0fcc
-ms.sourcegitcommit: f1535281b2c3fecff773b722c3f7590bf6ba10a0
+ms.openlocfilehash: 89bb52b806c99395bca14be34d06611174823a3c
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-with-system-center-configuration-manager"></a>System Center Configuration Manager によるビジネス向け Microsoft Store からのアプリの管理
 [ビジネス向け Microsoft Store ](https://www.microsoft.com/business-store) は、組織向けの Windows アプリを検索して、個別に、または一括で購入できる場所です。 Configuration Manager にストアを接続することで、購入したアプリの一覧と Configuration Manager を同期できます。 同期後、Configuration Manager コンソールでアプリを表示し、他のアプリを展開する場合と同様に展開できます。
@@ -88,10 +89,10 @@ Configuration Manager では、Configuration Manager クライアントを使用
 ### <a name="for-configuration-manager-versions-prior-to-1706"></a>1706 より前の Configuration Manager バージョンの場合
 
 **Azure Active Directory で、"Web アプリケーションや Web API" 管理ツールとして Configuration Manager を登録します。これで、後で必要になるクライアント ID が与えられます。**
-1. [https://manage.windowsazure.com](https://manage.windowsazure.com) の Active Directory ノードで、Azure Active Directory を選択し、**[アプリケーション]**  >  **[追加]** をクリックします。
+1. [https://manage.windowsazure.com](https://manage.windowsazure.com) の Active Directory ノードで、Azure Active Directory を選択し、**[アプリケーション]** > **[追加]** をクリックします。
 2.  **[組織で開発中のアプリケーションを追加]** をクリックします。
 3.  アプリケーションの名前を入力し、**[Web アプリケーション]** または **[Web API]**、あるいはその両方を選択し、**次へ進む**矢印をクリックします。
-4.  **[サインオン URL]** と **[アプリケーション ID/URI]** の両方に同じ URL を入力します。 URL はあらゆるものを使用でき、実際のアドレスに解決する必要はありません。 たとえば、*https://yourdomain/sccm*を入力できます。
+4.  **[サインオン URL]** と **[アプリケーション ID/URI]** の両方に同じ URL を入力します。 URL はあらゆるものを使用でき、実際のアドレスに解決する必要はありません。 たとえば、「*https://yourdomain/sccm*」と入力できます。
 5.  ウィザードを完了します。
 
 **Azure Active Directory で、登録済み管理ツールのクライアント キーを作成します。**
@@ -99,7 +100,7 @@ Configuration Manager では、Configuration Manager クライアントを使用
 2.  **[キー]** で、リストから期間を選択して、**[保存]** をクリックします。 これで新しいクライアント キーが作成されます。 ビジネス向け Microsoft Store を Configuration Manager に正常にオンボードするまで、このページから移動しないでください。
 
 **ビジネス向け Microsoft Store で、ストア管理ツールとして Configuration Manager を構成します。**
-1.  [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/en-us/managementtools) を開き、サインインを求められたらサインインします。
+1.  [https://businessstore.microsoft.com/managementtools](https://businessstore.microsoft.com/managementtools) を開き、求められたらサインインします。
 2.  要求された場合は、使用条件に同意します。
 3.  **[管理ツール]** で、**[Add a management tool]** (管理ツールを追加) をクリックします。
 4.  **[Search for the tool by name]** (名前でツールを検索) で、先ほど AAD で作成したアプリケーションの名前を入力して、**[追加]** クリックします。
@@ -151,6 +152,6 @@ Configuration Manager では、Configuration Manager クライアントを使用
 
 オンライン アプリを展開した後、そのアプリに対する更新プログラムは Microsoft Store から直接提供されます。 さらに、Configuration Manager はオンライン アプリのバージョンの準拠状況をチェックしません。アプリがインストール済みであることが Windows によって報告されるだけです。  
 
-オフライン アプリを Configuration Manager クライアントを使用した Windows 10 デバイスに展開する場合、Configuration Manager の展開の外部のアプリケーションをユーザーが更新できないようにしてください。 オフライン アプリの更新の制御は、教室などのマルチ ユーザー環境で特に重要です。 Microsoft Store を無効にする 1 つのオプションは、[グループ ポリシー](https://docs.microsoft.com/en-us/windows/configuration/stop-employees-from-using-microsoft-store#a-href-idblock-store-group-policyablock-microsoft-store-using-group-policy)を使用することです。 
+オフライン アプリを Configuration Manager クライアントを使用した Windows 10 デバイスに展開する場合、Configuration Manager の展開の外部のアプリケーションをユーザーが更新できないようにしてください。 オフライン アプリの更新の制御は、教室などのマルチ ユーザー環境で特に重要です。 Microsoft Store を無効にする 1 つのオプションは、[グループ ポリシー](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#a-href-idblock-store-group-policyablock-microsoft-store-using-group-policy)を使用することです。 
 
 ビジネス向け Microsoft Store 管理者がオフライン アプリを購入した後に、そのアプリをストアを経由してユーザーに公開しないでください。 この構成は、ユーザーがオンラインでインストールまたは更新できないようにします。 ユーザーは Configuration Manager を介してオフライン アプリの更新プログラムのみを受信します。 

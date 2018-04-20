@@ -1,9 +1,9 @@
 ---
-title: 'Microsoft Operations Management Suite にデータを同期する '
+title: OMS へのデータの同期
 titleSuffix: Configuration Manager
 description: Microsoft Operations Management Suite に System Center Configuration Manager からのデータを同期します。
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,24 +13,31 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33bcf8b3-a6b6-4fc9-bb59-70a9621b2b0d
 caps.latest.revision: 9
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df57255108d0e5e8b8f5e4e8d73a392c4cf2faae
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 4ac6d69d07e17946abefdc4f5b7d4a1a73385c44
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 #  <a name="sync-data-from-configuration-manager-to-the-microsoft-operations-management-suite"></a>Microsoft Operations Management Suite に Configuration Manager からのデータを同期
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
+<!--1258052-->
 **Azure サービス ウィザード**を使用して、Configuration Manager から Operations Management Suite (OMS) のクラウド サービスへの接続を構成できます。 バージョン 1706 以降、ウィザードは、前のワークフローを置き換えてこの接続を構成します。 以前のバージョンについては、「[Microsoft Operations Management Suite に Configuration Manager からのデータを同期 (1702 以前)](#Sync-data-from-Configuration-Manager-to-the-Microsoft-Operations-Management-Suite-(1702-and-earlier))」を参照してください。
 
 -   ウィザードは、Configuration Manager (OMS など)、ビジネス向け Microsoft ストア、Azure Active Directory (Azure AD) 用にクラウド サービスを構成するために使用されます。  
 
 -   Configuration Manager は、[ログ分析](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)や[アップグレードの準備](/sccm/core/clients/manage/upgrade/upgrade-analytics)などの機能のために OMS に接続します。
+
+
+> [!Note]  
+> Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[更新プログラムのオプション機能の有効化](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」を参照してください。<!--505213-->  
+
+
 
 ## <a name="prerequisites-for-the-oms-connector"></a>OMS コネクタの前提条件
 OMS への接続を構成するための前提条件は、[Current Branch バージョン 1702 のドキュメント](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#prerequisites)に記載されているものと変わりません。 ここではその情報を再掲します。  

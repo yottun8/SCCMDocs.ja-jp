@@ -1,26 +1,27 @@
 ---
-title: "App-V 仮想アプリケーションの展開"
+title: App-V 仮想アプリケーションの展開
 titleSuffix: Configuration Manager
-description: "仮想アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。"
+description: 仮想アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。
 ms.custom: na
-ms.date: 02/16/2017
+ms.date: 03/12/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
-caps.latest.revision: "11"
-caps.handback.revision: "0"
+caps.latest.revision: 11
+caps.handback.revision: 0
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: bf324f458c37fa137e24179eb4455fcbe75c855d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 99c259a20a7e9c9f34d7b355e6fea5d4c6861392
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager での App-V 仮想アプリケーションの展開
 
@@ -46,7 +47,7 @@ Microsoft Application Virtualization (App-V) を使用したアプリケーシ�
 
 -   アプリケーションをシーケンスするときには、Configuration Manager がアクセスできる場所にパッケージを保存する必要があります。 その後で、この仮想アプリケーションを含むアプリケーション展開を作成できます。  
 
--   Configuration Manager では、App-V の読み取り専用の共有キャッシュ機能の使用はサポートしていません。  
+-   Configuration Manager では、App-V 4.6 の読み取り専用の共有キャッシュ機能の使用はサポートしていません。  
 
 -   Configuration Manager では、App-V 5 の共有コンテンツ格納機能をサポートしています。  
 
@@ -66,7 +67,7 @@ Microsoft Application Virtualization (App-V) を使用したアプリケーシ�
      また、仮想アプリケーションを正常に展開できるようにするには、サポート技術情報の記事 [2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) で説明されている修正プログラムで、App-V 4.6 SP1 クライアントを更新する必要があります。  
 
 -   **App-V 5、App-V 5.0 SP1、App-V 5.0 SP2、App-V 5.0 SP3、および App-V 5.1:** App-V 5.0 SP2 については、 [修正プログラム パッケージ 5](https://support.microsoft.com/en-us/kb/2963211) をインストールするか、App-V 5.0 SP3 を使用する必要があります。  
--   **APP-V 5.2**: これは、Windows 10 Enterprise に組み込まれています (Anniversary Update 以降)。
+-   **App-V 5.2**: これは、Windows 10 Education (1607 以降)、Windows 10 Enterprise (1607 以降)、Windows Server 2016 に組み込まれています。
 
 Windows 10 の App-V の詳細については、次のトピックを参照してください。
 
@@ -83,7 +84,7 @@ Windows 10 の App-V の詳細については、次のトピックを参照し�
 
 3.   **配布** - 配布は、Configuration Manager の配布ポイントで App-V アプリケーションを使用できるようにするプロセスです。
 
-4.   **展開** - 展開は、クライアント コンピューターでアプリケーションを使用できるようにするプロセスです。 これは、APP-V の完全なインフラストラクチャでは、ストリーミングと呼ばれます。  
+4.   **展開** - 展開は、クライアント コンピューターでアプリケーションを使用できるようにするプロセスです。 これは、App-V の完全なインフラストラクチャでは、公開およびストリーミングと呼ばれます。  
 
 ##  <a name="configuration-manager-virtual-application-delivery-methods"></a>Configuration Manager の仮想アプリケーション配信方法  
 Configuration Manager では、仮想アプリケーションをクライアントに配信する方法として、ストリーミング配信とローカル配信 (ダウンロードして実行) の 2 つをサポートしています。
@@ -100,7 +101,7 @@ Configuration Manager を使用して App-V クライアントを管理すると
 |この方法では、標準のネットワーク プロトコルを使用して、配布ポイントからパッケージのコンテンツをストリーミングします。<br /><br /> 仮想アプリケーションのプログラム ショートカットをクリックすると、配布ポイントへの接続が起動されます。仮想アプリケーションの配信はオンデマンドです。<br /><br /> この方法は、配布ポイントへの接続の帯域幅が広いクライアントに向いています。<br /><br /> 企業全体に配信される、更新された仮想アプリケーションは、現在のバージョンが置き換えられたことを通知するポリシーをクライアントが受信したときに利用可能になります。クライアントは、前のバージョンからの変更点のみをダウンロードします。<br /><br /> 配布ポイントではアクセス権限が定義され、ユーザーは、承認されていないアプリケーションやパッケージにアクセスできません。|ユーザーが初めてアプリケーションを実行するまで、仮想アプリケーションはストリーミングされません。 このシナリオでは、ユーザーに仮想アプリケーションのプログラム ショートカットが送信され、仮想アプリケーションの初回実行前にネットワークから切断されることがあります。 クライアントがオフラインのときにユーザーが仮想アプリケーションを実行しようとすると、アプリケーションをストリーミングする Configuration Manager 配布ポイントを使用できないため、エラーが表示され、仮想化アプリケーションを実行できません。 アプリケーションは、ユーザーがネットワークに再接続して、アプリケーションを実行するまで使用できません。<br /><br /> これを回避するには、クライアントへの仮想アプリケーションの配信にローカル配信方法を使用するか、ストリーミング配信でインターネット ベースのクライアント管理を有効にします。|  
 
 ###  <a name="local-delivery-download-and-execute"></a>ローカル配信 (ダウンロードして実行)  
-ローカル配信方法を使用すると、Configuration Manager クライアントは、最初に全体の仮想アプリケーション パッケージを Configuration Manager クライアントのキャッシュにダウンロードします。 次に、Configuration Manager は、Configuration Manager キャッシュから APP-V キャッシュにアプリケーションをストリーミングするよう APP-V クライアントに指示します。 仮想アプリケーションをクライアント コンピューターに展開するときに、そのコンテンツが App-V キャッシュにない場合、App-V クライアントは、構成マネージャー クライアント キャッシュから App-V キャッシュにアプリケーションのコンテンツをストリーミングしてから、アプリケーションを実行します。 アプリケーションが正常に実行された後、次の削除サイクルで古いバージョンのパッケージをすべて削除するか、構成マネージャー クライアント キャッシュに保持するかを、構成マネージャー クライアントで設定できます。  
+Configuration Manager を使用するときの最も一般的なアプローチはダウンロードして実行することです。このアプローチが、Configuration Manager により他のアプリケーション形式が配信される方法にとても似ているためです。 ローカル配信方法を使用すると、Configuration Manager クライアントは、最初に全体の仮想アプリケーション パッケージを Configuration Manager クライアントのキャッシュにダウンロードします。 次に、Configuration Manager は、Configuration Manager キャッシュから APP-V キャッシュにアプリケーションをストリーミングするよう APP-V クライアントに指示します。 仮想アプリケーションをクライアント コンピューターに展開するときに、そのコンテンツが App-V キャッシュにない場合、App-V クライアントは、構成マネージャー クライアント キャッシュから App-V キャッシュにアプリケーションのコンテンツをストリーミングしてから、アプリケーションを実行します。 アプリケーションが正常に実行された後、次の削除サイクルで古いバージョンのパッケージをすべて削除するか、構成マネージャー クライアント キャッシュに保持するかを、構成マネージャー クライアントで設定できます。 コンテンツをローカルで永続化する場合、BranchCache と PeerCache のようなパッケージ コンテンツの配信を最適化するメソッドを利用できます。
 
 ローカル配信が最適な配信方法かを判断する場合、次の表の情報を参考にしてください。   
 

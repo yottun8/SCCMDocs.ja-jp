@@ -1,39 +1,42 @@
 ---
-title: "VPN プロファイル"
+title: VPN プロファイル
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の VPN プロファイルを使用して、VPN 設定を組織内のユーザーに展開する方法について説明します。"
+description: System Center Configuration Manager の VPN プロファイルを使用して、VPN 設定を組織内のユーザーに展開する方法について説明します。
 ms.custom: na
-ms.date: 11/27/2016
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c0f094f1-852e-4606-91db-97846d8f0772
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 02d9178dbfe8cb00d38367d0dfcb2f521d4c26a0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 6
+caps.handback.revision: 0
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: d30e7cc834f1693f2cbcf2db840d650421062a19
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager の VPN プロファイル
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
+<!--1283610-->
+組織内のユーザーに VPN 設定を展開するには、Configuration Manager の VPN プロファイルを使用します。 これらの設定を展開して、企業ネットワーク上のリソースに接続するために必要なエンド ユーザーの作業を最小化します。  
 
-System Center Configuration Manager (ConfigMgr または SCCM とも呼ばれます) の VPN プロファイルを使用して、VPN 設定を組織内のユーザーに展開します。 これらの設定を展開して、企業ネットワーク上のリソースに接続するために必要なエンド ユーザーの作業を最小化します。  
+ たとえば、企業ネットワーク上のファイル共有に接続するために必要な設定をすべての Windows 10 デバイスに構成したいとします。 企業ネットワークに接続するのに必要な設定が含まれる VPN プロファイルを作成します。 次いで、Windows 10 を実行しているデバイスを使用するすべてのユーザーに、このプロファイルを展開します。 VPN 接続は、これらのユーザーに、使用できるネットワークの一覧として表示されるので、ユーザーは最小限の労力で接続できます。  
 
- たとえば、Windows RT オペレーティング システムを実行するすべてのデバイスに対して、企業ネットワーク上のファイル共有に接続するために必要な設定をプロビジョニングするとします。 企業ネットワークに接続するために必要な設定が含まれている VPN プロファイルを作成した後、階層内で Windows RT を実行するデバイスを持つすべてのユーザーにこのプロファイルを展開することができます。 Windows RT デバイスのユーザーには利用可能なネットワークの一覧で VPN 接続が表示されるため、最小限の作業でこのネットワークに接続できます。  
+ VPN プロファイルを作成するときに、さまざまなセキュリティ設定を含めることができます。 これらの設定には、Configuration Manager の証明書プロファイルを使ってプロビジョニングする、サーバー評価用の証明書やクライアント認証用の証明書があります。 詳細については、「[Certificate profiles](introduction-to-certificate-profiles.md)」 (証明書プロファイル) をご覧ください。  
 
- VPN プロファイルを作成するときに、System Center Configuration Manager 証明書プロファイルを使用してプロビジョニングされた、サーバー検証用の証明書、クライアント認証用の証明書などの幅広いセキュリティ設定を含めることができます。 証明書プロファイルの詳細については、「[System Center Configuration Manager の証明書プロファイル](introduction-to-certificate-profiles.md)」を参照してください。  
+> [!Note]  
+> Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[更新プログラムのオプション機能の有効化](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」を参照してください。<!--505213-->  
 
- 以下のセクションでは、Configuration Manager を使用している場合に、VPN プロファイルを使用して構成できるデバイスについて説明します。
 
  [モバイル デバイスの VPN プロファイル](/sccm/mdm/deploy-use/create-vpn-profiles)に関する記事を参照して、Microsoft Intune で Configuration Manager を使用する場合に構成できるデバイスを確認してください。  
 
@@ -42,16 +45,16 @@ System Center Configuration Manager (ConfigMgr または SCCM とも呼ばれま
 
 |接続の種類|Windows 8.1|Windows RT|Windows RT 8.1|Windows 10|  
 |---------------------|-----------------|----------------|--------------------|----------------|  
-|**Cisco AnyConnect**|いいえ|いいえ|いいえ|×|  
-|**Pulse Secure**|○|×|[はい]|○|  
-|**F5 Edge Client**|○|×|[はい]|○|  
-|**Dell SonicWALL Mobile Connect**|○|×|[はい]|○|  
-|**チェック ポイント モバイル VPN**|○|×|[はい]|○|  
-|**Microsoft SSL (SSTP)**|○|[はい]|○|×|  
-|**Microsoft 自動**|○|[はい]|○|×|  
-|**IKEv2**|○|[はい]|○|いいえ|  
-|**PPTP**|○|[はい]|○|いいえ|  
-|**L2TP**|○|[はい]|○|いいえ|  
+|**Cisco AnyConnect**|いいえ|いいえ|いいえ|いいえ|  
+|**Pulse Secure**|はい|いいえ|はい|はい|  
+|**F5 Edge Client**|はい|いいえ|はい|はい|  
+|**Dell SonicWALL Mobile Connect**|はい|いいえ|はい|はい|  
+|**チェック ポイント モバイル VPN**|はい|いいえ|はい|はい|  
+|**Microsoft SSL (SSTP)**|はい|はい|はい|いいえ|  
+|**Microsoft 自動**|はい|はい|はい|いいえ|  
+|**IKEv2**|はい|はい|はい|いいえ|  
+|**PPTP**|はい|はい|はい|いいえ|  
+|**L2TP**|はい|はい|はい|いいえ|  
 
 ### <a name="next-steps"></a>次のステップ  
  Configuration Managerで VPN プロファイルの計画、構成、操作、およびメンテナンスを行うときに、次のトピックを参考にしてください。  

@@ -3,7 +3,7 @@ title: データ ウェアハウス
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager のデータ ウェアハウス サービス ポイントとデータベース
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,22 +13,28 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 caps.latest.revision: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 83bfc0e3d7bdf1ff8718c7c211c897e37b21a06b
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 02a3c672c95587aeecd41e804b32981104896923
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>System Center Configuration Manager のデータ ウェアハウス サービス ポイント
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-バージョン 1702 以降では、データ ウェアハウス サービス ポイントを使用して、Configuration Manager 展開の長期的な履歴データを格納およびレポートできるようになりました。
+<!--1277922-->
+データ ウェアハウス サービス ポイントを使用して、Configuration Manager 展開の長期的な履歴データを格納およびレポートできるようになりました。
 
 > [!TIP]
-> この機能はバージョン 1702 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 1706 以降のバージョンでは、この機能はプレリリース機能ではありません。
+> この機能はバージョン 1702 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 1706 以降のバージョンでは、この機能はプレリリース機能ではありません。  
+
+
+> [!Note]  
+> Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[更新プログラムのオプション機能の有効化](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」を参照してください。<!--505213-->  
+
 
 データ ウェアハウスでは、最大 2 TB のデータをサポートし、変更追跡にはタイムスタンプが使用されます。 データの格納は、Configuration Manager サイト データベースからデータ ウェアハウス データベースへの自動化された同期によって達成されます。 この情報には、レポート サービス ポイントからアクセスできます。 データ ウェアハウス データベースに同期されるデータは、3 年間保持されます。 3 年を経過したデータは、組み込みタスクによって定期的に削除されます。
 
@@ -168,7 +174,7 @@ ms.lasthandoff: 03/23/2018
 
 
 ## <a name="data-warehouse-dataflow"></a>データ ウェアハウスのデータフロー   
-![Datawarehouse_flow](./media/datawarehouse.png)
+![データ ウェアハウスのサイト コンポーネント間の論理的なデータフローを示す図](./media/datawarehouse.png)
 
 **データの格納と同期**
 

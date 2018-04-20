@@ -1,9 +1,9 @@
 ---
-title: "クライアントのピア キャッシュ"
+title: クライアントのピア キャッシュ
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でコンテンツを展開する場合は、クライアントのコンテンツ ソースの場所のピア キャッシュを使用します。"
+description: System Center Configuration Manager でコンテンツを展開する場合は、クライアントのコンテンツ ソースの場所のピア キャッシュを使用します。
 ms.custom: na
-ms.date: 12/07/2017
+ms.date: 04/10/2018
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -12,24 +12,30 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
-caps.latest.revision: 
+caps.latest.revision: 3
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 424f4030f2dd2a337a29d48ca831fa3a791de610
-ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
+manager: dougeby
+ms.openlocfilehash: 99eef9faf6ac66f65d16020b703e3a64d9beb9d0
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>Configuration Manager クライアントのピア キャッシュ
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager バージョン 1610 以降、**ピア キャッシュ**を使用して、コンテンツをリモートの場所にあるクライアントに展開できます。 ピア キャッシュとは、クライアントがローカル キャッシュで他のクライアントとコンテンツを直接共有できるようにするための組み込みの Configuration Manager ソリューションです。   
+<!--1101436-->
+**ピア キャッシュ**は、リモートの場所にあるクライアントへのコンテンツの展開を管理するのに役立ちます。 ピア キャッシュとは、クライアントがローカル キャッシュで他のクライアントとコンテンツを直接共有できるようにするための組み込みの Configuration Manager ソリューションです。   
 
 > [!TIP]  
-> この機能はバージョン 1610 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 1710 以降のバージョンでは、この機能はプレリリース機能ではありません。
+> この機能はバージョン 1610 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 1710 以降のバージョンでは、この機能はプレリリース機能ではありません。  
+
+
+> [!Note]  
+> Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[更新プログラムのオプション機能の有効化](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」を参照してください。<!--505213-->  
+
 
 ## <a name="overview"></a>概要
 ピア キャッシュ クライアントは、ピア キャッシュの使用が有効にされた構成マネージャー クライアントです。 追加のクライアントと共有できるコンテンツを含むピア キャッシュ クライアントは、ピア キャッシュ ソースです。
@@ -38,7 +44,7 @@ System Center Configuration Manager バージョン 1610 以降、**ピア キ�
     -  ドメインに参加している必要があります。 ただし、ドメインに参加していないコンテンツは、ドメインに参加しているピア キャッシュ ソースからコンテンツを取得できます。
     -  コンテンツをシークしている、クライアントの現在の境界グループのメンバーである必要があります。 クライアントがフォールバックを使用して近隣の境界グループからコンテンツをシークする場合は、近隣の境界グループのピア クライアントはコンテンツ ソースの場所の一覧に含まれません。 現在および近隣の境界グループの詳細については、「[境界グループ](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups)」を参照してください。
  - Configuration Manager クライアントは、キャッシュ内のすべての種類のコンテンツを、ピア キャッシュを使用して他のクライアントに提供できます。 このコンテンツは、Office 365 ファイルを含み、インストール ファイルを表します。<!--SMS.500850-->
- -  ピア キャッシュは、BranchCache のようなその他のソリューションに代わるものではありません。 ピア キャッシュを他のソリューションと組み合わせて使用することで、配布ポイントなどの従来のコンテンツ展開ソリューションを拡張するためのオプションを増やすことができます。 ピア キャッシュは、BranchCache に依存しないカスタム ソリューションです。  Windows BranchCache を有効にしていない場合または使用していない場合でも、ピア キャッシュは正常に動作します。
+ -  ピア キャッシュは、BranchCache のようなその他のソリューションに代わるものではありません。 ピア キャッシュを他のソリューションと組み合わせて使用することで、配布ポイントなどの従来のコンテンツ展開ソリューションを拡張するためのオプションを増やすことができます。 ピア キャッシュは、BranchCache に依存しないカスタム ソリューションです。 Windows BranchCache を有効にしていない場合または使用していない場合でも、ピア キャッシュは正常に動作します。
 
 ### <a name="operations"></a>オペレーション
 
@@ -82,7 +88,7 @@ System Center Configuration Manager バージョン 1610 以降、**ピア キ�
 3. **ピア キャッシュ ソース コンテンツの拒否の詳細**:   
   拒否されたときにクライアントが要求していたコンテンツを把握するには、このレポートを使います。
 
- - **既知の問題:** 使用可能なパラメーターから選ぶことができず、代わりに手入力する必要があります。 **[ピア キャッシュ ソース コンテンツの拒否]** レポートに表示されている "*拒否の種類*" の値を入力します。 詳細情報を確認するコンテンツ ソースの "*リソース ID*" を入力します。  コンテンツ ソースのリソース ID を調べるには:  
+ - **既知の問題:** 使用可能なパラメーターから選ぶことができず、代わりに手入力する必要があります。 **[ピア キャッシュ ソース コンテンツの拒否]** レポートに表示されている "*拒否の種類*" の値を入力します。 詳細情報を確認するコンテンツ ソースの "*リソース ID*" を入力します。 コンテンツ ソースのリソース ID を調べるには:  
 
     1. **[ピア キャッシュ ソース コンテンツの拒否 (条件別)]** レポートの結果に "*ピア キャッシュ ソース*" として表示されるコンピューター名を確認します。  
     2. 次に、**[資産とコンプライアンス]** > **[デバイス]** に移動し、そのコンピューター名を検索します。 [リソース ID] 列の値を使います。  
@@ -93,7 +99,7 @@ System Center Configuration Manager バージョン 1610 以降、**ピア キ�
 
 -   クライアントは、現在の境界グループ内にあるピア キャッシュ クライアントのコンテンツのみを転送できます。
 
--   バージョン 1706 以前の場合、クライアントがピア キャッシュを使用する各サイトは、[ネットワーク アクセス アカウント](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account)を使用して構成する必要があります。 バージョン 1706 以降、1 つの例外を除き、そのアカウントは不要になりました。  その例外シナリオとは、ピア キャッシュ対応のクライアントがソフトウェア センターからタスク シーケンスを実行し、そのタスク シーケンスがブート イメージを再起動する場合です。 このシナリオでは、クライアントは引き続きネットワーク アクセス アカウントを必要とします。 クライアントが Windows PE で動作している場合、クライアントはネットワーク アクセス アカウントを使用してピア キャッシュ ソースからコンテンツを取得します。
+-   バージョン 1706 以前の場合、クライアントがピア キャッシュを使用する各サイトは、[ネットワーク アクセス アカウント](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account)を使用して構成する必要があります。 バージョン 1706 以降、1 つの例外を除き、そのアカウントは不要になりました。 その例外シナリオとは、ピア キャッシュ対応のクライアントがソフトウェア センターからタスク シーケンスを実行し、そのタスク シーケンスがブート イメージを再起動する場合です。 このシナリオでは、クライアントは引き続きネットワーク アクセス アカウントを必要とします。 クライアントが Windows PE で動作している場合、クライアントはネットワーク アクセス アカウントを使用してピア キャッシュ ソースからコンテンツを取得します。
 
     必要に応じて、ピア キャッシュ ソース コンピューターはピアからのダウンロード要求を認証するためにネットワーク アクセス アカウントを使用します。 このような目的でこのアカウントを使用する場合はドメイン ユーザーのアクセス許可のみが必要です。
 

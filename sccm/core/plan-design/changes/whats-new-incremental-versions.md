@@ -1,45 +1,42 @@
 ---
-title: "増分バージョン"
+title: 増分バージョン
 titleSuffix: Configuraton Manager
-description: "System Center Configuration Manager の更新プログラムをインストールして管理する方法について説明します。"
-ms.custom: na
-ms.date: 7/31/2017
-ms.reviewer: na
-ms.suite: na
+description: Configuration Manager の最新の更新プログラムに含まれる新機能について説明します。
+ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
+ms.technology:
+- configmgr-other
 ms.topic: article
 ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
-caps.latest.revision: "4"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 4c29d2499dd5fe9665492219cbdc8300bab7568a
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+caps.latest.revision: 4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f80871b2bfbcb3cf783b51191feac82feb9b038d
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-system-center-configuration-manager-incremental-versions"></a>System Center Configuration Manager の増分バージョンの新機能
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
+ Configuration Manager コンソールでは、コンソール内での[更新プログラムとサービス](/sccm/core/servers/manage/updates)の手順を使用しています。 この更新手順により、Configuration Manager の更新プログラムを検出しインストールするのが容易になります。 サービス パックや累積的な更新プログラム バージョンを追跡してインストールする作業は必要ありません。 今後、最新のリリースや更新プログラムのダウンロードを検索する必要はありません。
 
+ 製品を現在のブランチの新しいバージョンに更新するには、Configuration Manager コンソールを使用し、[コンソール内の更新プログラムを検索してインストール](../../../core/servers/manage/install-in-console-updates.md)します。 毎年数回、Microsoft では、製品の更新プログラムが含まれた新しいバージョンをリリースしています。 各バージョンには、新機能もあります。 新機能をインストールして更新する場合は、その機能を使用するかどうかを選択できます。 
 
+ 更新プログラムにはさまざまなバージョンがあり、リリースの年と月に応じた番号が付いています。 たとえば、バージョン 1511 であれば、2015 年 11 月 (Configuration Manager の Current Branch が最初に RTM になった月) にリリースされたものであることを表します。 以降の更新プログラムには、1802 といったバージョン名が付けられます。1802 は 2018 年 2 月に作成された更新プログラムであることを意味します。 これらの更新プログラム バージョンが、Configuration Manager インストールの増分バージョンと、環境で使用できる機能を把握するための鍵となります。
 
- System Center Configuration Manager では、コンソール内の [[更新とサービス]](/sccm/core/servers/manage/updates) プロセスを使用して、Configuration Manager の更新プログラムを簡単に検出してインストールできます。 つまり、サービス パックや累積的な更新プログラム バージョンを追跡する作業がなくなります。今後、最新のリリースや更新プログラムのダウンロードを検索する必要はありません。
-
- 代わりに、製品を現在のブランチの新しいバージョンに更新するには、Configuration Manager コンソールを使用し、[コンソール内の更新プログラムを検索してインストール](../../../core/servers/manage/install-in-console-updates.md)します。 毎年数回、製品の更新プログラムが含まれた新しいバージョンがリリースされます。 各バージョンでは、新機能も導入されます。  
-
- 新機能を備えた更新プログラムをインストールする場合は、その機能を展開で使用するかどうかを選択できます。 更新プログラムにはさまざまなバージョンがあり、リリースの年と月に応じた番号が付いています。 たとえば、バージョン 1511 であれば、2015 年 11 月 (System Center Configuration Manager の Current Branch が最初に RTM リリースされた月) にリリースされたものであることを表します。 2016 年以降の更新プログラムには、1610 といったバージョン名が付けられます。1610 は 2016 年 10 月に作成された更新プログラムであることを意味します。
-
- これらの更新プログラム バージョンは、System Center Configuration Manager インストールの増分バージョンと、展開で使用できる機能を把握するための鍵となります。
-
- この System Center Configuration Manager の現在のブランチの初期リリースは、バージョン 1511 です。 この初期リリースから、追加の更新プログラムを利用できます。 次のリンクを使用して、引き続きサポートされる各バージョンの新機能を確認できます。
+## <a name="supported-versions"></a>サポートされるバージョン
+ 次のリンクを使用すると、サポートされる各バージョンの新機能を確認できます。
+  - [バージョン 1802 の新機能](../../../core/plan-design/changes/whats-new-in-version-1802.md)
+  - [バージョン 1710 の新機能](../../../core/plan-design/changes/whats-new-in-version-1710.md)
   - [バージョン 1706 の新機能](../../../core/plan-design/changes/whats-new-in-version-1706.md)  
-  - [バージョン 1702 の新機能](../../../core/plan-design/changes/whats-new-in-version-1702.md)
-  - [バージョン 1610 の新機能](../../../core/plan-design/changes/whats-new-in-version-1610.md)
 
 
- 更新プログラムの各バージョンは、リリース後 1 年間サポートされます。 可能な限り、更新プログラム バージョンを最新の状態に保つことをお勧めします。 詳細については、「[System Center Configuration Manager の Current Branch バージョンのサポート](../../../core/servers/manage/current-branch-versions-supported.md)」をご覧ください。  
+ 更新プログラムの各バージョンは、リリース後 1 年間サポートされます。 最新の更新プログラムのバージョンを、把握しておいてください。 詳細については、[Configuration Manager の Current Branch バージョンのサポート](../../../core/servers/manage/current-branch-versions-supported.md)に関するページをご覧ください。  
+
+
+## <a name="see-also"></a>関連項目
+[リリース ノート](/sccm/core/servers/deploy/install/release-notes)

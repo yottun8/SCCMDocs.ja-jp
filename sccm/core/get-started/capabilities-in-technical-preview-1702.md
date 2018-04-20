@@ -1,7 +1,7 @@
 ---
-title: "Technical Preview 1702 の機能"
+title: Technical Preview 1702 の機能
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1702 で使用できる機能について説明します。"
+description: System Center Configuration Manager の Technical Preview バージョン 1702 で使用できる機能について説明します。
 ms.custom: na
 ms.date: 02/24/2017
 ms.prod: configuration-manager
@@ -12,15 +12,15 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
-caps.latest.revision: 
+caps.latest.revision: 5
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: ed2a858c55cbf389a0e974f4699b5a9c548953ef
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 94c025a75cd0aef62ee00c11b8ee5a113fba2bb1
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1702 の機能
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/01/2017
 -  コンソールのオブジェクトを右クリックしたとき。   
     ![右クリック オプション](./media/feedback-option.png)   
 
-**[フィードバック]** を選択すると、ブラウザーが開いて Configuration Manager UserVoice フィードバック Web サイト (https://configurationmanager.uservoice.com/forums/300492-ideas) が表示されます。
+**[フィードバック]** を選択すると、ブラウザーが開いて https://configurationmanager.uservoice.com/forums/300492-ideas の Configuration Manager UserVoice フィードバック Web サイトが表示されます。
 ##  <a name="changes-for-updates-and-servicing"></a>更新プログラムとサービスの変更
 このプレビューで導入された更新内容は次のとおりです。
 
@@ -104,7 +104,7 @@ Azure AD は、**AADDC Computers** OU 以下にデバイスを格納します。
 Azure AD にはグループを格納する OU がありません。 その代わり、システム クエリまたはユーザー クエリと同じ一般的な構造を使用し、探索するグループを含む OU を示すように LDAP クエリを構成します。
 
 Azure AD の詳細については、以下を参照してください。  
- - 「[Azure Active Directory Domain Services](https://azure.microsoft.com/en-us/services/active-directory-ds)」(azure.microsoft.com)。
+ - 「[Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds)」(azure.microsoft.com)。
  - 「[Active Directory Domain Services のドキュメント](https://docs.microsoft.com/azure/active-directory-domain-services)」(docs.microsoft.com)。
 
 ## <a name="conditional-access-device-compliance-policy-improvements"></a>条件付きアクセス デバイス コンプライアンス ポリシーの改善
@@ -155,7 +155,7 @@ Windows Update for Business 更新プログラムのコンプライアンス評�
 4. 終了したら、 **[OK]**をクリックします。
 
 ### <a name="monitor-the-compliance-policy"></a>コンプライアンス ポリシーの監視
-コンプライアンス ポリシーを作成すると、Configuration Manager コンソールでコンプライアンス結果を監視できます。 詳細については、「[Monitor the compliance policy](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)」(コンプライアンス ポリシーの監視) を参照してください。
+コンプライアンス ポリシーを作成すると、Configuration Manager コンソールでコンプライアンス結果を監視できます。 詳細については、「[Monitor the compliance policy](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)」(コンプライアンス ポリシーの監視) を参照してください。
 
 
 ## <a name="improvements-to-software-center-settings-and-notification-messages-for-high-impact-task-sequences"></a>ソフトウェア センターの設定と影響の大きいタスク シーケンスの通知メッセージの改善
@@ -326,7 +326,7 @@ Android for Work は Android とは別のプラットフォームです。仕事
 #### <a name="approve-and-deploy-android-for-work-apps"></a>Android for Work アプリの承認と展開
 Play for Work ストアのアプリを承認し、Configuration Manager コンソールと同期し、管理対象の Android for Work デバイスに展開するには、次の手順を実行します。 アプリをユーザーの仕事用プロファイルに展開するには、Play for Work でアプリを承認し、アプリを Configuration Manager コンソールと同期する必要があります。
 
-1. ブラウザーを開き、https://play.google.com/work にアクセスします。
+1. ブラウザーを開き、https://play.google.com/work に移動します。
 2. Intune テナントにバインドした Google 管理者アカウントを使用してサインインします。
 3. 環境に展開するアプリを参照し、各アプリについて **[承認]** をクリックします。
 4. Configuration Manager コンソールで **[管理者]** > **[概要]** > **[クラウド サービス]** > **[Android for Work]** の順にクリックし、**[同期]** をクリックします。

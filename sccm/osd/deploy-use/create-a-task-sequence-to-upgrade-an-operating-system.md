@@ -1,9 +1,9 @@
 ---
-title: オペレーティング システムをアップグレードするタスク シーケンスの作成
+title: OS の更新タスク シーケンスを作成する
 titleSuffix: Configuration Manager
 description: タスク シーケンスを使用して、自動的に Windows 7 以降から Windows 10 にアップグレードします。
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision: 12
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 91d3bf5b1488eb7eac52c7426e4bdeeb92ff43b8
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 48a5e7aa381924e3c0ad052833c9588e3dffa4f5
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-operating-system-in-system-center-configuration-manager"></a>System Center Configuration Manager のオペレーティング システムをアップグレードするタスク シーケンスを作成する
 
@@ -87,9 +87,16 @@ Configuration Manager でタスク シーケンスを使用して、オペレー
 
 
 ## <a name="configure-pre-cache-content"></a>コンテンツの事前キャッシュを構成する
-タスク シーケンスの利用可能な展開について、事前キャッシュ機能を使用することで、ユーザーがタスク シーケンスをインストールする前に、関連する OS アップグレード パッケージ コンテンツをクライアントにダウンロードさせることができます。
+<!--1021244-->
+タスク シーケンスの利用可能な展開について、事前キャッシュ機能を使用することで、ユーザーがタスク シーケンスをインストールする前に、関連する OS アップグレード パッケージ コンテンツをクライアントにダウンロードさせることができます。  
+
 > [!TIP]  
-> この機能はバージョン 1702 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 1706 以降のバージョンでは、この機能はプレリリース機能ではありません。
+> この機能はバージョン 1702 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 1706 以降のバージョンでは、この機能はプレリリース機能ではありません。  
+
+
+> [!Note]  
+> Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[更新プログラムのオプション機能の有効化](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」を参照してください。<!--505213-->  
+
 
 たとえば、すべてのユーザーに対して、1 つのインプレース アップグレード タスク シーケンスのみを作成して、多くのアーキテクチャと言語を使用できます。 以前のバージョンでは、ユーザーがソフトウェア センターから利用可能なタスク シーケンスの展開をインストールするときに、コンテンツのダウンロードが開始されます。 この遅延のため、インストールできる状態になるまでさらに時間がかかります。 タスク シーケンスで参照されているすべてのコンテンツがダウンロードされます。 このコンテンツには、すべての言語とアーキテクチャ用のオペレーティング システム アップグレード パッケージが含まれます。 各アップグレード パッケージのサイズが約 3 GB の場合、コンテンツ全体が非常に大きくなります。
 

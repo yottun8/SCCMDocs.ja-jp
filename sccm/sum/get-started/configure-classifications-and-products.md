@@ -1,22 +1,23 @@
 ---
-title: "同期する分類と製品の構成"
+title: 分類と製品の構成
 titleSuffix: Configuration Manager
-description: "Configuration Manager コンソールで次の手順を利用し、同期させる分類と製品を構成します。"
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.date: 11/20/2017
+description: Configuration Manager コンソールで次の手順を利用し、同期させるソフトウェア更新プログラムの分類と製品を構成します。
+keywords: ''
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.date: 04/10/2018
 ms.topic: article
 ms.prod: configuration-manager
-ms.service: 
-ms.technology: configmgr-sum
+ms.service: ''
+ms.technology:
+- configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: f36ff74b794e57b51742c40d10bd25a9cb4a13a5
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 9ba0872b1d2e4ef5dd027df3f7c16a6b3a94e9ac
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 #  <a name="configure-classifications-and-products-to-synchronize"></a>同期する分類と製品の構成  
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/21/2017
 
 #### <a name="to-configure-classifications-and-products-to-synchronize"></a>同期させる分類と製品を構成する方法  
 
-1.  **Configuration Manager** コンソールで、**[管理]**、 > **[サイトの構成]**、 > **[サイト]** に移動します。
+1.  **Configuration Manager** コンソールで、**[管理]**、**[サイトの構成]**、**[サイト]** に移動します。
 
 2. 中央管理サイトまたはスタンドアロン プライマリ サイトを選択します。  
 
@@ -53,9 +54,11 @@ ms.lasthandoff: 11/21/2017
     >       
 
     > [!NOTE]    
-    > Configuration Manager バージョン 1706 以降では、**[Microsoft Surface のドライバーとファームウェアの更新プログラムを含める]** チェックボックスをオンにして Microsoft Surface ドライバーを同期することができるようになりました。 Surface ドライバーを正常に同期するには、すべてのソフトウェアの更新ポイントで Windows Server 2016 を実行している必要があります。 Surface ドライバーを有効にした後、Windows Server 2012 を実行するコンピューターにソフトウェアで更新ポイントを有効にすると、ドライバーの更新プログラムのスキャン結果が不正確になります。 これにより、不適切なコンプライアンス データが Configuration Manager コンソールと Configuration Manager レポートに表示されます。  
-    > 
-    > Configuration Manager バージョン 1710 では、**[Microsoft Surface のドライバーとファームウェアの更新プログラムを含める]** チェックボックスは常に利用できます。 ただし、これは Configuration Manager バージョン 1706 ではプレリリース機能のため、この機能をオンにして使用できるようにする必要があります。 プレリリース機能は、運用環境での初期テスト用の Current Branch に含まれている機能です。 これらの機能は完全にサポートされていますが、現在開発中のため、プレリリースのカテゴリから移動するまでは変更が行われる可能性があります。 詳細については、「[更新プログラムからプレリリース機能を使用する](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)」を参照してください。
+    > Configuration Manager バージョン 1706 以降では、**[Microsoft Surface のドライバーとファームウェアの更新プログラムを含める]** チェックボックスをオンにして Microsoft Surface ドライバーを同期することができるようになりました。<!--1098490--> Surface ドライバーを正常に同期するには、すべてのソフトウェアの更新ポイントで Windows Server 2016 を実行している必要があります。 Surface ドライバーを有効にした後、Windows Server 2012 を実行するコンピューターにソフトウェアで更新ポイントを有効にすると、ドライバーの更新プログラムのスキャン結果が不正確になります。 これにより、不適切なコンプライアンス データが Configuration Manager コンソールと Configuration Manager レポートに表示されます。  
+    >  
+    > この機能はバージョン 1706 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 1710 以降のバージョンでは、この機能はプレリリース機能ではありません。  
+    >  
+    > Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[更新プログラムのオプション機能の有効化](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」を参照してください。<!--505213-->  
 
 5.  **[製品]** タブで、ソフトウェア更新プログラムを同期させる製品の更新の分類を指定し、**[閉じる]** をクリックします。  
 

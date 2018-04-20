@@ -1,26 +1,27 @@
 ---
-title: "メンテナンス タスクのリファレンス"
+title: メンテナンス タスクのリファレンス
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager サイトの各メンテナンス タスクの詳細およびそれらのタスクが既定で有効になるかどうかについて説明します。"
+description: System Center Configuration Manager サイトの各メンテナンス タスクの詳細およびそれらのタスクが既定で有効になるかどうかについて説明します。
 ms.custom: na
 ms.date: 3/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
-caps.latest.revision: "16"
-caps.handback.revision: "0"
+caps.latest.revision: 16
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 3f67bddcb7233b62769271871354c86c5440e320
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 21b5e47efd2678f78fe7b7c0e10524ec7141634d
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager のメンテナンス タスクのリファレンス
 
@@ -105,7 +106,7 @@ ms.lasthandoff: 12/04/2017
 -   **プライマリ サイト**: 有効    
 -   セカンダリ サイト: 利用不可  
 
-**期限切れの探索データの削除**: このタスクは、期限切れの探索データをデータベースから削除する場合に使用します。 削除されるデータには、定期探索、ネットワーク探索、および Active Directory ドメイン サービスの探索 (システム、ユーザー、およびグループ) などの方法によって作成されたレコードが含まれます。 このタスクを 1 つのサイトで実行すると、そのサイトに関連付けられたデータが削除され、それらの変更が他のサイトにレプリケートされます。 探索の詳細については、「 [System Center Configuration Manager 用の探索の実行](../../../core/servers/deploy/configure/run-discovery.md)」を参照してください。  
+**期限切れの探索データの削除**: このタスクは、期限切れの探索データをデータベースから削除する場合に使用します。 削除されるデータには、定期探索、ネットワーク探索、および Active Directory ドメイン サービスの探索 (システム、ユーザー、およびグループ) などの方法によって作成されたレコードが含まれます。 このタスクは、使用停止とマークされている期限切れデバイスも削除します。 このタスクを 1 つのサイトで実行すると、そのサイトに関連付けられたデータが削除され、それらの変更が他のサイトにレプリケートされます。 探索の詳細については、「 [System Center Configuration Manager 用の探索の実行](../../../core/servers/deploy/configure/run-discovery.md)」を参照してください。  
 
 -   中央管理サイト: 利用不可    
 -   **プライマリ サイト**: 有効    
