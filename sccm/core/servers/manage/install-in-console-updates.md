@@ -3,7 +3,7 @@ title: コンソール内の更新プログラム
 titleSuffix: Configuration Manager
 description: Microsoft クラウドから Configuration Manager に更新プログラムをインストールする
 ms.custom: na
-ms.date: 03/28/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 caps.latest.revision: 36
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 054bbd8e7b1dd3f5d565afe60eb7e3379cc7a9ee
-ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
+ms.openlocfilehash: 9924346ccbd862aa4462075a3307b4ec40b955bc
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>System Center Configuration Manager のコンソール内の更新プログラムのインストール
 
@@ -324,7 +324,7 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 #### <a name="retry-installation-for-the-site"></a>サイトのインストールの再試行  
  更新プログラムが次の状態のいずれかである場合には、特定のサイトに対する更新プログラムのインストールを再試行できます。  
 
-  -   前提条件チェックは成功したが、1 つ以上の警告が発生し、更新ウィザードで前提条件チェックの警告を無視するオプションが設定されていない  ([更新とサービス] ノードの **[前提条件の警告を無視する]** の更新値は **[いいえ]**)。  
+  -   前提条件チェックは成功したが、1 つ以上の警告が発生し、更新ウィザードで前提条件チェックの警告を無視するオプションが設定されていない ([更新とサービス] ノードの **[前提条件の警告を無視する]** の更新値は **[いいえ]**)。  
   -   前提条件チェックの失敗    
   -   インストールの失敗    
 
@@ -369,10 +369,36 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 
 使用可能な機能とそれらの状態を表示するには、コンソールで **[管理]** > **[更新とサービス]** > **[機能]** に移動します。
 
-オプションでない機能は、自動的にインストールされ、**[機能]** ノードには表示されません。  
+省略可能でない機能は、自動的にインストールされます。 そのような機能は **[機能]** ノードに表示されません。  
+
+> [!Important]  
+> 複数サイトの階層では、中央管理サイトからオプション機能またはプレリリース機能のみを有効にできます。 この動作によって、階層全体で競合が発生しないようにします。 <!--507197-->
+ 
+
+新機能またはプレリリース機能を有効にすると、Configuration Manager の階層マネージャー (HMAN) は機能が利用可能になる前に変更を処理する必要があります。 多くの場合、変更の処理はすぐに行われますが、HMAN の処理サイクルによっては完了までに最大で 30 分かかることがあります。 変更が処理された後、その機能に関連する新しいノードが表示されるようにするには、コンソールを再起動する必要があります。
+
+#### <a name="list-of-optional-features"></a>オプションの機能の一覧
+次の機能は、最新バージョンの Configuration Manager では省略可能です。<!--505213-->  
+- [マネージド PC の条件付きアクセス](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)  <!--1191496-->
+- [Passport for Work](/sccm/protect/deploy-use/windows-hello-for-business-settings) (*Windows Hello for Business* とも呼ばれます) <!--1245704-->
+- [Windows 10 の VPN](/sccm/protect/deploy-use/vpn-profiles) <!--1283610-->
+- [Windows Defender Exploit Guard ポリシー](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468-->
+- [Microsoft Operations Management Suite (OMS) コネクタ](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) <!--1258052-->
+- [PFX の作成](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368-->
+- [クライアントのピア キャッシュ](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
+- [データ ウェアハウス サービス ポイント](/sccm/core/servers/manage/data-warehouse) <!--1277922-->
+- [クラウド管理ゲートウェイ](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764-->
+- [Surface ドライバーの更新プログラム](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490-->
+- [タスク シーケンス コンテンツの事前キャッシュ](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244-->
+- [タスク シーケンス ステップの実行](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338-->
+- [スクリプトの作成と実行](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459-->
+- [条件付きアクセスのコンプライアンス ポリシーに対するデバイス正常性構成証明の評価](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616-->
+- [デバイスごとにユーザーのアプリケーション要求を承認する](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) <!--1357015-->  
 
 
-新機能またはプレリリース機能を有効にすると、Configuration Manager の階層マネージャー (HMAN) は機能が利用可能になる前に変更を処理する必要があります。 多くの場合、変更の処理はすぐに行われますが、HMAN の処理サイクルによっては完了までに最大で 30 分かかることがあります。 変更が処理された後、その機能に関連する新しい UI が表示されるようにするには、コンソールを再起動する必要があります。
+> [!Tip]  
+> 有効化に同意が必要な機能の詳細については、[プレリリース機能](/sccm/core/servers/manage/pre-release-features)に関するページを参照してください。  
+> Technical Preview Branch でのみ利用できる機能の詳細については、[Technical Preview](/sccm/core/get-started/technical-preview) に関するページを参照してください。
 
 
 

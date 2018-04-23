@@ -3,7 +3,7 @@ title: スクリプトを作成して実行する
 titleSuffix: Configuration Manager
 description: クライアント デバイスで PowerShell スクリプトを作成して実行する
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,21 +17,25 @@ caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 19bb8b2c4e47dcc8a75db568e7f93541544a4566
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: b9699b2f4bd1f18890d25582be9a8d20778b64be
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Configuration Manager コンソールから PowerShell スクリプトを作成して実行する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-
-System Center Configuration Manager には、PowerShell スクリプトを実行するための統合機能があります。 PowerShell には、高度な自動化されたスクリプトを作成できるという利点があります。PowerShell スクリプトは、多くの方が参加するコミュニティで理解され、共有されています。 このスクリプトを使用すると、ソフトウェアを管理するカスタム ツールを簡単に構築できます。また、大規模なジョブをより簡単に、一貫した方法で実行できるので、日常のタスクをすぐに完了できるようになります。
+<!--1236459-->
+System Center Configuration Manager には、PowerShell スクリプトを実行するための統合機能があります。 PowerShell には、高度な自動化されたスクリプトを作成できるという利点があります。PowerShell スクリプトは、多くの方が参加するコミュニティで理解され、共有されています。 このスクリプトを使用すると、ソフトウェアを管理するカスタム ツールを簡単に構築できます。また、大規模なジョブをより簡単に、一貫した方法で実行できるので、日常のタスクをすぐに完了できるようになります。  
 
 > [!TIP]  
-> この機能はバージョン 1706 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 バージョン 1802 以降、この機能はプレリリース機能ではなくなりました。
+> この機能はバージョン 1706 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 バージョン 1802 以降、この機能はプレリリース機能ではなくなりました。  
+
+
+> [!Note]  
+> Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[更新プログラムのオプション機能の有効化](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」を参照してください。<!--505213-->  
 
 
 System Center Configuration Manager でのこの統合により、*スクリプトの実行*機能を使用して以下を実行することができます。
