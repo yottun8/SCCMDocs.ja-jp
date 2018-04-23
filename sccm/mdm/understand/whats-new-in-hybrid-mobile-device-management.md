@@ -3,7 +3,7 @@ title: ハイブリッド MDM の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。
 ms.custom: na
-ms.date: 03/28/2018
+ms.date: 04/02/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3c3d1c813c307e520b3a9709187937f0d3f732c7
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+ms.openlocfilehash: c6918983bca3e598fd99a8f7670ada3f7e43cfa6
+ms.sourcegitcommit: d8a4a53630351b3d677bbdc5d203e7d330472cba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -41,6 +41,24 @@ ms.lasthandoff: 03/28/2018
 |**Microsoft Intune の新機能** | 通常、このカテゴリに一覧表示されたすべての機能は、Configuration Manager のすべてのリリースで動作します。 これには System Center 2012 R2 Configuration Manager リリースが含まれています。これらの機能では Intune サービスのみが必要であり、Configuration Manager の追加機能は不要なためです。|
 |**Configuration Manager Technical Preview の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Technical Preview リリースでのみ動作します。 これらの機能を試すには、機能の説明で指定されたバージョンの Technical Preview をインストールする必要があります。 詳細については、「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を参照してください。|
 |**Configuration Manager (現在のブランチ) の新機能**| このカテゴリに一覧表示されたすべての機能は、バージョン 1511 や 1602 など、指定されたバージョンの Configuration Manager (現在のブランチ) でのみ動作します。 ハイブリッド展開に旧バージョンの Configuration Manager を使用している場合は、機能の説明で指定されたバージョンの Configuration Manager (現在の分岐) にアップグレードする必要があります。 詳細については、「[System Center Configuration Manager へのアップグレード](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)」を参照してください。|
+
+
+
+## <a name="april-2018"></a>2018 年 4 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+#### <a name="user-experience-update-for-the-company-portal-app-for-ios"></a>iOS 用ポータル サイト アプリに関するユーザー エクスペリエンスの更新プログラム 
+<!--1412866-->
+iOS 用のポータル サイト アプリに対して、主要なユーザー エクスペリエンスの更新プログラムをリリースしました。 この更新プログラムでは、ビジュアル面の完全な再設計により、最新の外観に一新されています。 アプリの機能が更新されていますが、その使いやすさとアクセシビリティも向上しています。  
+
+次の点も改善されています。
+- iPhone X のサポート。
+- アプリの起動時間と応答の読み込み時間の短縮。
+- 最新の状態情報をユーザーに提供する追加の進行状況バー。
+- 物事が正しく進まなかった場合、それを報告しやすくするためのログのアップロード方法の向上。  
+
+新しい外観を確認するには、[アプリの UI の新機能](/intune/whats-new-app-ui)に関するページを参照してください。
 
 
 

@@ -3,7 +3,7 @@ title: 新バージョン 1802
 titleSuffix: Configuration Manager
 description: Configuration Manager のバージョン 1802 で導入された変更点および新機能について説明します。
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/11/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,20 +12,27 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9c9ff975a58e7c56375fa7740a0a5bb6ebfa6341
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+ms.openlocfilehash: a667c34dc39ef0578ff840e5603080b09c67c63c
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1802 の新機能
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 Configuration Manager Current Branch の更新プログラム 1802 はコンソール内の更新プログラムとして利用できます。 バージョン 1702、1706、1710 を実行しているサイトでこの更新プログラムを適用します。 <!-- baseline only statement: -->新しいサイトをインストールするときにも基準のバージョンとしても利用できます。
+
+このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Summary of changes in System Center Configuration Manager current branch, version 1802](https://support.microsoft.com/help/4101375)」(System Center Configuration Manager Current Branch バージョン 1802 の変更点の概要) を参照してください。
+
+<!--
+The following additional updates to this release are also now available:
+- [Update rollup for System Center Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4057517)
+-->
 
 > [!TIP]  
 > 新しいサイトをインストールするには、Configuration Manager の基準バージョンを使用する必要があります。  
@@ -126,7 +133,7 @@ Configuration Manager 1802 では、次の分析情報を利用できます。
     - [クラウド管理ゲートウェイの計画](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)
     - [クラウド管理ゲートウェイのサイズとスケールの数値](/sccm/core/plan-design/configs/size-and-scale-numbers#bkmk_cmg)
     - [クラウド管理ゲートウェイのセキュリティとプライバシー](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)
-    - [クラウド管理ゲートウェイについてよく寄せられる質問](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
+    - [クラウド管理ゲートウェイについてよくあるご質問](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
     - [クラウド管理ゲートウェイの証明書](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)
     - [Set up cloud management gateway](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway) (クラウド管理ゲートウェイの設定)  
 

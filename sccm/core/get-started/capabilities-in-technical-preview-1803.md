@@ -15,11 +15,11 @@ ms.assetid: 56dc4b07-5aa4-43e2-9be8-d26ae5ff5613
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ac96927b563673311e9ca55d1f2d4edaac30adbe
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: f3c200fe699f85c195e41fc2b395a3d710b1788a
+ms.sourcegitcommit: d3863a9b34f9925515cabe9a290a6c733e10108b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="capabilities-in-technical-preview-1803-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1803 の機能
 
@@ -146,7 +146,7 @@ Contoso には、2 つの境界グループ (本社 (HQ) と支社) を持つ 1 
 [皆さまからのフィードバック](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/20234866-allow-us-to-copy-information-out-of-the-asset-det)を反映し、展開および配布ステータス監視ビューの資産の詳細ウィンドウでコピー/貼り付け機能を有効にできるようになりました。  <!--1357552-->
 
 ## <a name="scap-extensions"></a>SCAP 拡張機能
-プレリリース版の SCAP 拡張機能は、SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi の Cd.latest フォルダーにあります。 プレリリース版の SCAP 拡張機能は、現在サポートされているバージョンの Configuration Manager Current Branch と LTSB 1606 にインストールできます。
+プレリリース版の SCAP 拡張機能は、SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi の Cd.latest フォルダーにあります。 プレリリース版の SCAP 拡張機能は、現在サポートされているバージョンの Configuration Manager Current Branch と LTSB 1606 にインストールできます。 詳細については、「[About the Security Content Automation Protocol (SCAP) extensions](/sccm/compliance/plan-design/scap/about-scap)」(Security Content Automation Protocol (SCAP) 拡張機能について) を参照してください。
 
 
 

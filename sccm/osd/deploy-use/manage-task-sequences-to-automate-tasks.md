@@ -3,7 +3,7 @@ title: タスク シーケンスの管理
 titleSuffix: Configuration Manager
 description: ご利用の環境でタスク シーケンスを作成、編集、展開、インポート、エクスポートして管理し、タスクを自動化します。
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: nac
 ms.suite: na
@@ -15,12 +15,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 262bfa3991bbd95fad779da9520358d527a42b07
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+manager: dougeby
+ms.openlocfilehash: 9ed5a94d644aa0bdb7d63c3b976da7dd566dfedd
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>System Center Configuration Manager でのタスクを自動化するためのタスク シーケンスの管理
 
@@ -483,8 +483,12 @@ Configuration Manager 環境のステップを自動化するには、タスク 
 6.  すべての変数をコレクションに追加したら、**[OK]** をクリックします。  
 
 ## <a name="add-child-task-sequences-to-a-task-sequence"></a>子タスク シーケンスをタスク シーケンスに追加する
+<!--1261338-->
+Configuration Manager バージョン 1710 以降では、別のタスク シーケンスを実行する新しいタスク シーケンス ステップを追加できます。 このステップでは、タスク シーケンス間の親子関係を作成します。 このステップを使用することで、再利用可能なモジュール型のタスク シーケンスをより多く作成できます。  
 
-Configuration Manager バージョン 1710 以降では、別のタスク シーケンスを実行する新しいタスク シーケンス ステップを追加できます。 このステップでは、タスク シーケンス間の親子関係を作成します。 このステップを使用することで、再利用可能なモジュール型のタスク シーケンスをより多く作成できます。
+> [!Note]  
+> Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[更新プログラムのオプション機能の有効化](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」を参照してください。<!--505213-->  
+
 
 タスク シーケンスに子タスク シーケンスを追加する場合は、以下の点を考慮してください。
 
