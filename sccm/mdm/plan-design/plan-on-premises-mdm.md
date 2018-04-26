@@ -1,18 +1,19 @@
 ---
-title: "オンプレミス MDM の計画"
+title: オンプレミス MDM の計画
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でモバイル デバイスを管理するために、オンプレミス モバイル デバイス管理を計画します。"
+description: System Center Configuration Manager でモバイル デバイスを管理するために、オンプレミス モバイル デバイス管理を計画します。
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
-caps.latest.revision: "9"
-caps.handback.revision: "0"
+caps.latest.revision: 9
+caps.handback.revision: 0
 author: dougeby
 ms.author: dougeby
 manager: angrobe
@@ -104,7 +105,7 @@ Configuration Manager のインフラストラクチャでオンプレミス モ
 
 -   Out of Box Experience (OOBE) プロビジョニング パッケージ  
 
- 詳細については、「 [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)」をご覧ください。  
+ 詳細については、「 [System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために信頼された通信用の証明書をセットアップします](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)」をご覧ください。  
 
 ##  <a name="bkmk_enrollment"></a> 登録の注意事項  
  オンプレミス モバイル デバイス管理のデバイスの登録を有効にするには、登録する権限がユーザーに付与され、かつ、ユーザーのデバイスが、必要なサイト システムの役割をホストするサイト システム サーバーとの信頼された通信を行うことができる必要があります。  

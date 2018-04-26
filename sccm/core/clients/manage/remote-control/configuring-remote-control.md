@@ -1,18 +1,19 @@
 ---
-title: "リモート コントロールの構成"
+title: リモート コントロールの構成
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でリモート コントロールをセットアップします。"
+description: System Center Configuration Manager でリモート コントロールをセットアップします。
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
-caps.latest.revision: "4"
-caps.handback.revision: "0"
+caps.latest.revision: 4
+caps.handback.revision: 0
 author: arob98
 ms.author: angrobe
 manager: angrobe
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/12/2017
 
     表示される会社の名前を変更する、 **ConfigMgr リモート コントロール**  ダイアログ ボックスの値を構成する **ソフトウェア センターで表示される組織名** で、 **コンピューター エージェント** クライアント設定します。  
 
- クライアント コンピューターは、次にクライアント ポリシーをダウンロードするときに、これらの設定で構成されます。 1 つのクライアントのポリシーの取得を開始する場合は、「 [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md)」を参照してください。  
+ クライアント コンピューターは、次にクライアント ポリシーをダウンロードするときに、これらの設定で構成されます。 1 つのクライアントのポリシーの取得を開始する場合は、「 [System Center Configuration Manager でクライアントを管理する方法](../../../../core/clients/manage/manage-clients.md)」を参照してください。  
 
 #### <a name="enable-keyboard-translation"></a>キーボード変換を有効にする
 
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/12/2017
 |Alt + PageUp|実行しているプログラムの間を左から右へ切り替えます。|  
 |Alt + PageDown|実行しているプログラムの間を右から左へ切り替えます。|  
 |Alt + Insert|実行しているプログラムを開いた順に繰り返し表示します。|  
-|Alt + Home|**[ 開始 ]** メニューを表示します。|  
+|Alt + Home|**[開始]** メニューを表示します。|  
 |Ctrl + Alt + End|Windows セキュリティ ダイアログ ボックス (Ctrl+Alt+Del) を表示します。|  
 |Alt + Delete キー|Windows メニューを表示します。|  
 |Ctrl + Alt + (テンキーの) マイナス記号|ローカル コンピューターのアクティブ ウィンドウをリモート コンピューターのクリップボードにコピーします。|  
