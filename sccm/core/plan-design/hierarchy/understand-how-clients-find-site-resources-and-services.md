@@ -1,25 +1,26 @@
 ---
-title: "サイト リソースを検索する"
+title: サイト リソースを検索する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager クライアントがサービスの場所を使用してサイト リソースを検索する方法とタイミングについて説明します。"
+description: System Center Configuration Manager クライアントがサービスの場所を使用してサイト リソースを検索する方法とタイミングについて説明します。
 ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: d0cbaf0b9f10926015cf203dbb28633976034162
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 76d9d486bf0c07da3d81596b1b065fe6532b29fe
+ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>クライアントが System Center Configuration Manager のサイト リソースやサービスを検索する方法を理解する
 
@@ -61,8 +62,8 @@ System Center Configuration Manager クライアントは、そのクライア�
 
 クライアントは、そのクライアントの現在のネットワークの場所および境界グループの構成に基づき、通信する管理ポイントを選択します。 割り当て済み管理ポイントがある場合でも、その管理ポイントをクライアントが使用するとは限りません。  
 
-    > [!NOTE]  
-    >  A client always uses the assigned management point for registration messages and certain policy messages, even when other communications are sent to a proxy or local management point.  
+   > [!NOTE]  
+   >  クライアントは登録メッセージと特定のポリシー メッセージに対して常に割り当て済み管理ポイントを使用します。これは、他の通信がプロキシまたはローカル管理ポイントに送信される場合でも当てはまります。
 
 優先管理ポイントを使用できます。 優先管理ポイントは、クライアントの割り当て済みサイトの管理ポイントであり、クライアントがサイト システム サーバーを見つけるために使用している境界グループに関連付けられています。 優先管理ポイントは、配布ポイントや状態移行ポイントを境界グループに関連付けるのと同じような方法で、境界グループにサイト システム サーバーとして関連付けられています。 階層の優先管理ポイントを有効にすると、クライアントは、割り当て済みサイトの管理ポイントを使用するときに、割り当て済みサイトの他の管理ポイントを使用する前に優先管理ポイントを使用しようとします。  
 

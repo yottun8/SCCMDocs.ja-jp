@@ -38,7 +38,8 @@
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 -->
-###  [削除と非推奨](plan-design/changes/deprecated/removed-and-deprecated.md)
+###  
+  [削除と非推奨](plan-design/changes/deprecated/removed-and-deprecated.md)
 #### [削除された機能と非推奨の機能](plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)
 #### [サイト サーバーの削除された機能と非推奨の機能](plan-design/changes/deprecated/removed-and-deprecated-server.md)
 #### [クライアントの削除された機能と非推奨の機能](plan-design/changes/deprecated/removed-and-deprecated-client.md)
@@ -292,13 +293,13 @@
 ###  [Linux および UNIX クライアントを管理する方法](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [OMS へのデータの同期](clients/manage/sync-data-microsoft-operations-management-suite.md)
 ###  [Mac クライアントを維持する](clients/manage/maintain-mac-clients.md)
-### [共同管理ダッシュ ボード](clients/manage/co-management-dashboard.md)
 
 ### [Surface デバイス ダッシュ ボード](clients/manage/surface-device-dashboard.md)
 
 ##   [Windows 10 デバイスの共同管理](clients/manage/co-management-overview.md)
 ###  [共同管理用に Windows 10 デバイスを準備する](clients/manage/co-management-prepare.md)
 ###  [Configuration Manager のワークロードを Intune に切り替える](clients/manage/co-management-switch-workloads.md)
+### [共同管理ダッシュ ボード](clients/manage/co-management-dashboard.md)
 
 ##   [インターネット上のクライアントを管理する](clients/manage/manage-clients-internet.md)
 ###  [クラウド管理ゲートウェイの計画](clients/manage/cmg/plan-cloud-management-gateway.md)
