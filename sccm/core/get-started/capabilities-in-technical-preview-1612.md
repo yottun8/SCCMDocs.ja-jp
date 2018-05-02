@@ -16,11 +16,11 @@ caps.latest.revision: 5
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: 80cace2bec8cb9c39d5f3f00ea244b697e1d75c9
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: e0688c41978d95e0e1fd4da817e602a2c8a6483b
+ms.sourcegitcommit: f65d4d24f0533e5e196ece0d8a4df0fb3e30eba1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1612 の機能
 
@@ -122,7 +122,7 @@ Technical Preview バージョン 1612 以降、データ ウェアハウス サ
 | **全般的なソフトウェアのインベントリ レポート**  | 特定のコンピューターのすべてのソフトウェア インベントリを表示します。|
 | **インフラストラクチャの正常性の概要**  |Configuration Manager のインフラストラクチャの正常性の概要を表示します。|
 | **検出されたマルウェアの一覧**  |組織内で検出されたマルウェアを表示します。|
-|** ソフトウェア配布の概要レポート ** | 特定の提供情報を目的とし特定のコンピューターを対象としたソフトウェアの配布の概要。|
+| **ソフトウェア配布の概要レポート** | 特定の提供情報を目的とし特定のコンピューターを対象としたソフトウェアの配布の概要。|
 
 ### <a name="move-the-data-warehouse-database"></a>データ ウェアハウス データベースの移動
 データ ウェアハウス データベースを新しい SQL Server に移動するには、次の手順に従います。
@@ -226,7 +226,7 @@ User Voice に寄せられたご意見ご感想を基に、コンソール内検
 実行可能ファイルの一覧を構成するには
 1.  任意の展開の種類のプロパティ ページで、「**Installer Handling**」 (インストーラー処理) タブをクリックします。
 2.  **[追加]** をクリックして、他の実行可能ファイルのいずれかを一覧に追加します (たとえば**Edge.exe**)。
-3.  **OK** をクリックして、展開の種類プロパティ ダイアログ ボックスを閉じます。
+3.  **OK** をクリックして、[展開の種類プロパティ] ダイアログ ボックスを閉じます。
 
 これで、このアプリケーションをユーザーまたはデバイスに展開する場合、追加した実行可能ファイルのいずれかが実行されていると、エンド ユーザーにはソフトウェア センターのダイアログ ボックスが表示され、アプリケーションが実行されているためにインストールが失敗したことが通知されます。
 
