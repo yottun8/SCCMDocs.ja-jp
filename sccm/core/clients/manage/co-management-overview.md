@@ -12,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 1657cbacde468ef7c54f95524e0fa9607a1a0186
-ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
+ms.openlocfilehash: 3d7ca4bb72f6f3f76855faac125385374347ba55
+ms.sourcegitcommit: d67c6246bb6027cd5501e772b0521f9272407c28
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="co-management-for-windows-10-devices"></a>Windows 10 デバイスの共同管理    
  以前の Windows 10 の更新プログラムで、Windows 10 デバイスをオンプレミスの Active Directory (AD) とクラウドベースの Azure AD に同時に結合できるようになっています (ハイブリッド Azure AD)。 Configuration Manager バージョン 1710 以降、共同管理ではこの機能強化を活用し、Configuration Manager と Intune の両方を使用して複数の Windows 10 バージョン 1709 デバイスを同時に管理できるようになりました。 <!-- 1350871 -->
