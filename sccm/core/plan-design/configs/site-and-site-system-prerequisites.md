@@ -1,7 +1,7 @@
 ---
-title: "サイトの前提条件"
+title: サイトの前提条件
 titleSuffix: Configuration Manager
-description: "Windows コンピューターを System Center Configuration Manager サイト システム サーバーとして構成する方法について説明します。"
+description: Windows コンピューターを System Center Configuration Manager サイト システム サーバーとして構成する方法について説明します。
 ms.custom: na
 ms.date: 02/28/2018
 ms.prod: configuration-manager
@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
-caps.latest.revision: 
+caps.latest.revision: 5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6d1be6375dde2df51aafe076e5613647ecca3c4c
-ms.sourcegitcommit: d0fc79214bc35ca172fd2023dfa617b977ee865b
+ms.openlocfilehash: ae0a36acf4203fb5c7601a2960c0b5bb0a52082e
+ms.sourcegitcommit: ac06e034cc60db7b1acade1f541e26b6cc50506e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイトとサイト システムの前提条件
 
@@ -62,7 +62,8 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2 (またはそれ以降)
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1
+    - .Net Framework のバージョンについて詳しくは、「[.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)」をご覧ください。
 
 -   Remote Differential Compression  
 
@@ -83,7 +84,8 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2 (またはそれ以降)   
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1
+    - .Net Framework のバージョンについて詳しくは、「[.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)」をご覧ください。
 
 -   Remote Differential Compression  
 
@@ -124,9 +126,12 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2 (またはそれ以降)  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1
+    - ASP.NET 4.5 
 
-    -   ASP.NET 4.5  
+    - .Net Framework のバージョンについて詳しくは、「[.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)」をご覧ください。  
+
+    
 
 **IIS の構成:**  
 
@@ -159,7 +164,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2 (またはそれ以降)  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1:  
 
     -   ASP.NET 4.5:  
 
@@ -194,12 +199,12 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2012AIpreq"></a> 資産インテリジェンス同期ポイント  
 **Windows Server の役割と機能:**  
 
--   .NET Framework 4.5.2 (またはそれ以降)  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
 
 ###  <a name="bkmk_2012crppreq"></a> 証明書登録ポイント  
 **Windows Server の役割と機能:**  
 
--   .NET Framework 4.5.2 (またはそれ以降)  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1:  
 
     -   HTTP アクティブ化  
 
@@ -273,7 +278,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET framework 3.5 (またはそれ以降)  
 
--   .NET Framework 4.5.2 (またはそれ以降)  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1:  
 
      このサイト システムの役割のインストール時に Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 
@@ -313,7 +318,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET framework 3.5 (またはそれ以降)  
 
--   .NET Framework 4.5.2 (またはそれ以降) 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
 
      このサイト システムの役割のインストール時に Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 
@@ -359,7 +364,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2012MPpreq"></a> 管理ポイント  
 **Windows Server の役割と機能:**  
 
--   .NET Framework 4.5.2 (またはそれ以降) 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
 
 -   BITS サーバー拡張 (および自動的に選択されるオプション)、またはバックグラウンド インテリジェント転送サービス (BITS) (および自動的に選択されるオプション)  
 
@@ -382,7 +387,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2012RSpoint"></a> レポート サービス ポイント  
 **Windows Server の役割と機能:**  
 
--   .NET Framework 4.5.2 (またはそれ以降) 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
 
 **SQL Server Reporting Services:**  
 
@@ -395,7 +400,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_SCPpreq"></a> サービス接続ポイント  
 **Windows Server の役割と機能:**  
 
--   .NET Framework 4.5.2 (またはそれ以降) 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
 
      このサイト システムの役割のインストール時に Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 
@@ -410,7 +415,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2 (またはそれ以降) 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
 
 既定の IIS 構成が必要です。
 
@@ -439,7 +444,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2 (またはそれ以降) 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
 
 **Windows の機能:**  
 
@@ -462,7 +467,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2 (またはそれ以降)  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
 
 **Visual C++ 再頒布可能ファイル:**  
 
@@ -499,7 +504,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2008acwspreq"></a> アプリケーション カタログ Web サイト ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (またはそれ以降) 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1
 
 **IIS の構成:**
 
@@ -530,7 +535,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2 (またはそれ以降) 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
 
 **Windows Communication Foundation (WCF) アクティブ化:**  
 
@@ -561,12 +566,12 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2008AIpreq"></a> 資産インテリジェンス同期ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (またはそれ以降) 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1
 
 ###  <a name="bkmk_2008crppreq"></a> 証明書登録ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (またはそれ以降) 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
 
 -   HTTP アクティブ化  
 
@@ -641,7 +646,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2008Enrollpreq"></a> 登録ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (またはそれ以降) 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
 
      このサイト システムの役割をインストールすると、サーバーにサポートされているバージョンの .NET Framework がまだインストールされていない場合、Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 
@@ -670,7 +675,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2008EnrollProxpreq"></a> 登録プロキシ ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (またはそれ以降) 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1
 
      このサイト システムの役割をインストールすると、サーバーにサポートされているバージョンの .NET Framework がまだインストールされていない場合、Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 
@@ -708,7 +713,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2008MPpreq"></a> 管理ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (またはそれ以降)
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1
 
 **IIS の構成:**
 
@@ -749,7 +754,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2008RSpoint"></a> レポート サービス ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (またはそれ以降)  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
 
 **SQL Server Reporting Services:**  
 
@@ -762,7 +767,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2008SCPpreq"></a> サービス接続ポイント  
 **.NET Framework:**  
 
--   .NET Framework 4.5.2 (またはそれ以降) 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
 
      このサイト システムの役割をインストールすると、サーバーにサポートされているバージョンの .NET Framework がまだインストールされていない場合、Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 
@@ -777,7 +782,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2 (またはそれ以降) 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
 
 **IIS の構成:**
 

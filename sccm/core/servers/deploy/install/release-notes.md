@@ -3,7 +3,7 @@ title: リリース ノート
 titleSuffix: Configuration Manager
 description: 製品でまだ修正されていないまたは Microsoft サポート技術情報の記事で説明されていない緊急の問題については説明します。
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/18/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e22bc4818f10a1f60fdb2135eb705e46dbaa10a4
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 2eabcba6e56bd2a0a9977ab31610a9d747ab6207
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>System Center Configuration Manager リリース ノート
 
@@ -101,6 +101,21 @@ Configuration Manager バージョン 1802 以降では、カスタマー エク
 
 #### <a name="workaround"></a>回避策
  サービス プランを作成した後で、サービス プランのプロパティを開き、**[評価スケジュール]** タブに移動し、**[スケジュールに基づいて規則を実行する]** を選んで、**[カスタマイズ]** をクリックし、カスタム スケジュールを作成します。 たとえば、60 日おきに実行するサービス プランを作成できます。  
+
+
+### <a name="changing-office-365-client-setting-doesnt-apply"></a>Office 365 クライアント設定の変更が適用されない 
+<!--511551-->
+*適用対象: Configuration Manager バージョン 1802*  
+
+**[Enable Management of the Office 365 Client Agent]\(Office 365 クライアント エージェントの管理を有効にする\)** を `Yes` に構成した状態で、[クライアント設定](/sccm/core/clients/deploy/about-client-settings#enable-management-of-the-office-365-client-agent)をデプロイします。 その後で、その設定を `No` または `Not Configured` に変更します。 Office 365 更新プログラムは、ターゲットのクライアント上でポリシーを更新した後も、Configuration Manager によって管理されます。 
+
+#### <a name="workaround"></a>回避策
+次のレジストリ値を `0` に変更し、**Microsoft Office クイック実行サービス** (ClickToRunSvc) を再起動します。
+
+```
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\office\16.0\Common\officeupdate]
+"OfficeMgmtCOM"=dword:00000000
+```
 
 
 

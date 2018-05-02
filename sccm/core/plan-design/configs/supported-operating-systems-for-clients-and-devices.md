@@ -1,9 +1,9 @@
 ---
-title: "サポートされるクライアントとデバイス"
+title: サポートされるクライアントとデバイス
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager がクライアントとデバイスをサポートするオペレーティング システムについて説明します。"
+description: System Center Configuration Manager がクライアントとデバイスをサポートするオペレーティング システムについて説明します。
 ms.custom: na
-ms.date: 8/30/2017
+ms.date: 04/17/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,22 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 614226e60f9bcd7b8e3c1330f52a4847e89e0880
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+caps.latest.revision: 5
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: d6befce522bcfef293f36def39405e9555cd3510
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>System Center Configuration Manager のクライアントとデバイスのサポートされるオペレーティング システム
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 
- System Center Configuration Manager は、さまざまな Windows、Mac、Linux および UNIX コンピューター上のクライアント ソフトウェアのインストールをサポートします。  
+ Configuration Manager は、さまざまな Windows、Mac、Linux および UNIX コンピューター上のクライアント ソフトウェアのインストールをサポートします。  
 
  **すべてのクライアントの要件と制限事項:**  
 
@@ -43,6 +43,8 @@ ms.lasthandoff: 02/01/2018
 
 -  **Windows Server 2016**: Standard、Datacenter <sup>1</sup>
   - このオペレーティング システムは、Configuration Manager バージョン 1606 以降および KB3186654 以降の修正プログラム ロールアップ (2016 年 10 月にリリースされた 1606 のベースライン バージョン) でサポートされています。  
+
+-   **Windows Storage Server 2016**  
 
 -   **Windows Server 2012 R2** (x64): Standard、Datacenter <sup>1</sup>    
 
@@ -65,6 +67,9 @@ ms.lasthandoff: 02/01/2018
 <!---   **Windows 8** (x86, x64): Professional, Enterprise  -removed Jan 12,2018 sms505863-->
 
 -   **Windows 7 SP1** (x86、x64): Professional、Enterprise、Ultimate    
+
+-   **Windows Server バージョン 1709 の Server Core インストール** (x64) <sup>2</sup>
+  - このオペレーティング システムはバージョン 1710 以降でサポートされています。
 
 -   **Windows Server 2016 の Server Core インストール** (x64) <sup>2</sup>
   - このオペレーティング システムは、バージョン 1606 以降および KB3186654 以降の修正プログラム ロールアップ (2016 年 10 月にリリースされた 1606 のベースライン バージョン) でサポートされています。

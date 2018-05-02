@@ -16,11 +16,11 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: 7810191f270fde70cc573cb73af9b5ca23a6bfcb
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 856f23aaf64686b3e895d43e768350ea2ddc405c
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 <!-- 
 TFS 1357546
@@ -29,6 +29,10 @@ This page displays in-console, under the Support workspace, Documentation node.
 
 
 # <a name="configuration-manager-documentation"></a>Configuration Manager ドキュメント
+このページのリンクは、Configuration Manager の学習とサポートにおいてユーザーに役立つようにまとめられたコンテンツを示します。 
+
+[Configuration Manager ドキュメント ライブラリ](https://docs.microsoft.com/sccm)
+
 
 </br>
 
@@ -66,7 +70,7 @@ This page displays in-console, under the Support workspace, Documentation node.
 > - [最近更新](#bkmk_update)
 
 ### <a name="trending"></a>トレンド
-過去 1 か月の最も人気があった記事:
+過去 1 か月の最も人気があった記事。
 
 - [新しいバージョン 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)
 - [問題のトラブルシューティングのためのログ ファイル](/sccm/core/plan-design/hierarchy/log-files)
@@ -94,7 +98,7 @@ This page displays in-console, under the Support workspace, Documentation node.
 > - [最近更新](#bkmk_update)
 
 ### <a name="recently-updated"></a>最近更新
-過去 1 か月に改訂された記事:
+過去 1 か月に改訂された記事。
 
 - [サイトの前提条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)
 - [データ ウェアハウス](/sccm/core/servers/manage/data-warehouse)
@@ -108,3 +112,37 @@ This page displays in-console, under the Support workspace, Documentation node.
 - [問題のトラブルシューティングのためのログ ファイル](/sccm/core/plan-design/hierarchy/log-files)
 
 
+
+</br>
+
+</br>
+
+</br>
+
+### <a name="troubleshooting-articles"></a>トラブルシューティングの記事
+Configuration Manager のコンポーネントと機能のトラブルシューティングに役立つガイド付きチュートリアル。
+
+- PXE ブートの問題のトラブルシューティング  
+- ソフトウェア更新プログラムの同期の問題のトラブルシューティング  
+- コンテンツ配布の理解およびトラブルシューティング  
+- ビジネス向け Microsoft ストアの統合の理解およびトラブルシューティング  
+- ソフトウェア更新管理のトラブルシューティング  
+- [アプリケーションのインストール] タスク シーケンス ステップのトラブルシューティング  
+
+
+</br>
+
+</br>
+
+</br>
+
+### <a name="new-and-updated-support-articles"></a>新規および更新のサポートに関する記事
+過去 2 か月間の新規または更新のサポートに関する記事。
+
+- ユーザーがプライマリ サイトを CAS から回復した後で、Configuration Manager クライアントはポリシー データを受信しません。  
+- System Center Configuration Manager Current Branch バージョン 1710 の更新プログラムのロールアップ 2  
+- 共同管理デバイスの自動登録が System Center Configuration Manager の現在のブランチ (バージョン 1710) で失敗しました。  
+- Windows 10 デプロイは、Configuration Manager において言語を選択するように求めます。  
+
+> [!Tip]  
+> 新規 Configuration Manager サポート記事の Atom または RSS 通知をサブスクライブするには、「[サポート コンテンツの更新情報](https://support.microsoft.com/help/4089498/)」を参照して、**[System Center Configuration Manager]** を選択します。  

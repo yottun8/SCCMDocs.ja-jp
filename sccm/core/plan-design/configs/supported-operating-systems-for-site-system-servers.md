@@ -3,7 +3,7 @@ title: サポートされるサイト システム サーバー
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager サイトまたはサイト システムの役割をホストできる Windows バージョンについて説明します。
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/17/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,21 +13,21 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 caps.latest.revision: 44
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bcaddb38ea6ecf1c3b5e0543c676c6a99e06101
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 092fc9d47e0dc7bb7afe0e078bd835dd2d091226
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>System Center Configuration Manager サイト システム サーバーのサポートされるオペレーティング システム
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 
-この記事では、System Center Configuration Manager サイトまたはサイト システムの役割をホストできる Windows バージョンについて説明します。
+この記事では、Configuration Manager サイトまたはサイト システムの役割をホストできる Windows バージョンについて説明します。
 
 
 この記事の情報は、次の記事の情報とともに使用します。
@@ -85,6 +85,14 @@ KB3186654 からの修正プログラムのロールアップで、次の役割�
 -   ソフトウェアの更新ポイント  
 
 -   状態移行ポイント
+
+
+
+## <a name="windows-storage-server-2016"></a>Windows Storage Server 2016
+
+**サイト システム サーバー:**  
+
+-   配布ポイント  
 
 
 
@@ -253,7 +261,10 @@ KB3186654 からの修正プログラムのロールアップで、次の役割�
 
     -   配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[コンテンツとコンテンツ インフラストラクチャの管理](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。  
 
-
+## <a name="the-server-core-installation-of-windows-server-version-1709"></a>Windows Server バージョン 1709 の Server Core インストール
+Configuration Manager 1710 以降では、[Windows Server バージョン 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709) が、次の制限付きの配布ポイントとしての使用でサポートされます。  
+  -   64 ビット バージョンのみがサポートされています。
+  -   この OS の配布ポイントでは、PXE またはマルチキャストをサポートしません。  
 
 ## <a name="the-server-core-installation-of-windows-server-2016"></a>Windows Server 2016 の Server Core インストール
 KB3186654 からの修正プログラムのロールアップを適用すると、この OS が次の制限付きの配布ポイントとしてサポートされます。  

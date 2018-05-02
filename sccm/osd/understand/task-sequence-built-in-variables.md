@@ -1,9 +1,9 @@
 ---
-title: "タスク シーケンス組み込み変数"
+title: タスク シーケンス組み込み変数
 titleSuffix: Configuration Manager
-description: "タスク シーケンス組み込み変数は、タスク シーケンスが実行されている環境に関する情報を提供し、その値は、タスク シーケンス全体で使用できます。"
+description: タスク シーケンス組み込み変数は、タスク シーケンスが実行されている環境に関する情報を提供し、その値は、タスク シーケンス全体で使用できます。
 ms.custom: na
-ms.date: 02/09/2018
+ms.date: 04/18/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 15
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 673f29189fe03df706d9f277afc7bde5fc8e72b0
-ms.sourcegitcommit: fbde417e3c3002898bd216a7e110e725ae269893
+ms.openlocfilehash: fe26982195e7cae639cc457dbba31e3dbd45b6d3
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>System Center Configuration Manager のタスク シーケンス組み込み変数
 
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/12/2018
 |_SMSTSUserStarted|タスク シーケンスがユーザーによって開始されたかどうかを示します。 この変数は、タスク シーケンスがソフトウェア センターから開始された場合のみ設定されます。 たとえば、 **_SMSTSLaunchMode** が **SMS**に設定されている場合などです。 この変数は次の値のいずれかを取ります。<br /><br /> -   **TRUE** - タスク シーケンスがユーザーによってソフトウェア センターから手動で開始されたことを示します。<br />-   **false** - タスク シーケンスが Configuration Manager スケジューラによって自動的に開始されたことを示します。|  
 |_SMSTSUseSSL|タスク シーケンスが Configuration Manager 管理ポイントとの通信に SSL を使用するかどうかを表します。 サイトがネイティブ モードで実行されている場合、値は **TRUE**に設定されます。|  
 |_SMSTSWTG|コンピューターが Windows To Go デバイスとして動作しているかどうかを指定します。|  
-|OSDPreserveDriveLetter|このタスク シーケンス変数は推奨されていません。 既定では、オペレーティング システムの展開中に、Windows セットアップが、使用する最適なドライブ文字を決定します (通常は C:)。 <br /><br />以前の動作: イメージの適用時に、OSDPreverveDriveLetter 変数で、タスク シーケンスがイメージ ファイル (.WIM) にキャプチャされたドライブ文字を使用するかどうかを判断します。 この変数の値を **False** に設定して、**[オペレーティング システムの適用]** タスク シーケンス ステップの **[適用先]** 設定で指定した場所を使用します。 詳細については、「 [Apply Operating System Image](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)」を参照してください。|  
+|OSDPreserveDriveLetter|このタスク シーケンス変数は非推奨とされます。 既定では、オペレーティング システムの展開中に、Windows セットアップが、使用する最適なドライブ文字を決定します (通常は C:)。 <br /><br />以前の動作: イメージの適用時に、OSDPreverveDriveLetter 変数で、タスク シーケンスがイメージ ファイル (.WIM) にキャプチャされたドライブ文字を使用するかどうかを判断します。 この変数の値を **False** に設定して、**[オペレーティング システムの適用]** タスク シーケンス ステップの **[適用先]** 設定で指定した場所を使用します。 詳細については、「 [Apply Operating System Image](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)」を参照してください。|  
 |SMSTSAssignmentsDownloadInterval|ポリシーが返されなかった前回の試行から、ポリシーのダウンロードをクライアントが試行するまで待機する秒数。 既定では、クライアントは **0** 秒待機してから再試行します。<br /><br /> この変数は、メディアまたは PXE から起動前コマンドを使用して設定できます。|  
 |SMSTSAssignmentsDownloadRetry|初回の試行でポリシーが見つからなかった場合に、ポリシーのダウンロードをクライアントが試行する回数。 既定では、クライアントは **0** 回再試行します。<br /><br /> この変数は、メディアまたは PXE から起動前コマンドを使用して設定できます。|  
 |SMSTSAssignUsersMode|タスク シーケンスがユーザーを対象コンピューターと関連付ける方法を示します。 変数に次のいずれかの値を設定します。<br /><br /> -   **自動**: タスク シーケンスで、オペレーティング システムを対象コンピューターに展開するときに、指定されたユーザーと対象コンピューターの間の関係を作成します。<br />-   **保留中**: タスク シーケンスで、指定されたユーザーと対象コンピューターの間の関係を作成します。 管理者は関係を承認して設定する必要があります。<br />-   **無効**: タスク シーケンスでは、オペレーティング システムの展開時にユーザーを対象コンピューターに関連付けません。|  
@@ -78,6 +78,7 @@ ms.lasthandoff: 02/12/2018
 |SMSTSDriverReceiveTimeOut|サーバーへの接続がタイムアウトするまでの秒数。|
 |SMSTSErrorDialogTimeout|タスク シーケンスでエラーが発生すると、エラーを示すダイアログ ボックスが表示されます。 タスク シーケンスでは、この変数で指定された秒数の経過後にダイアログ ボックスが自動的に閉じられます。 既定では、この値は **900** 秒 (15 分) です。|  
 | TSDisableProgressUI | <!-- 1354291 -->Configuration Manager バージョン 1706 以降では、この変数を使って、タスク シーケンスが進行状況をエンド ユーザーに表示するタイミングを制御します。 異なる時点で進行状況の非表示または表示を切り替えるには、タスク シーケンス内で複数回この変数を設定します。 タスク シーケンスの進行状況を非表示にするには、この変数の値を **True** に設定します。 タスク シーケンスの進行状況を表示するには、この変数の値を **False** に設定します。 | 
+| SMSTSDisableStatusRetry | <!--512358--> 切断されたシナリオでは、タスク シーケンス エンジンが管理ポイントへのステータス メッセージの送信を繰り返し試行します。 このシナリオのこの動作によって、タスク シーケンスの処理に遅延が発生します。 Configuration Manager バージョン 1802 以降では、この変数を **True** に設定すると、タスク シーケンス エンジンは最初のエラーの後でステータス メッセージの再送信を試行しません。 次にリブートするときまで、あるいはこの変数の値が **False** に設定されるまで、この動作が継続します。 注: [タスク シーケンス状態レポート](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status)は、これらのステータス メッセージに基づいて、各ステップの進捗、履歴、詳細を表示します。 | 
 |SMSTSLanguageFolder|言語に依存しないブート イメージの表示言語を変更するときに使用します。|  
 |SMSTSLocalDataDrive|タスク シーケンスの実行中に一時ファイルを対象コンピューターに格納する場所を指定します。<br /><br /> この変数は、コレクション変数の設定によって行うなど、タスク シーケンスが開始する前に設定される必要があります。 タスク シーケンスが開始された後で、Configuration Manager は _SMSTSMDataPath 変数を定義します。|  
 |SMSTSMP|この変数を使用して、Configuration Manager の管理ポイントの URL または IP アドレスを指定します。|  

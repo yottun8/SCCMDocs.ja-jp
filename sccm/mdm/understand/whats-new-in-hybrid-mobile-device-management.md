@@ -15,11 +15,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6918983bca3e598fd99a8f7670ada3f7e43cfa6
-ms.sourcegitcommit: d8a4a53630351b3d677bbdc5d203e7d330472cba
+ms.openlocfilehash: 6a47569ee56931d76a41e5f14ed56f8276d264fb
+ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -47,6 +47,24 @@ ms.lasthandoff: 04/03/2018
 ## <a name="april-2018"></a>2018 年 4 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+#### <a name="updated-help-experience-on-company-portal-app-for-android"></a>Android 用ポータル サイト アプリの更新されたヘルプ エクスペリエンス 
+<!--1631531-->
+Android プラットフォームのベスト プラクティスに合うように Android 用ポータル サイト アプリのヘルプ エクスペリエンスを更新しました。 ユーザーがアプリで問題に直面したとき、**[メニュー]** > **[ヘルプ]** をタップしてから、次を行うことができるようになりました。
+- 診断ログを Microsoft にアップロードします。
+- 問題とインシデント ID を記載した電子メールを会社のサポート担当者に送信します。
+
+
+#### <a name="update-where-to-configure-your-app-protection-policies"></a>アプリの保護ポリシーを構成する場所を更新 
+<!--2144597-->
+Microsoft Intune サービス内の Azure Portal で、ユーザーが一時的に **[Intune App Protection]** サービス ブレードから **[モバイル アプリ]** ブレードにリダイレクトされます。 すべてのアプリ保護ポリシーが Intune のアプリ構成の **[モバイル アプリ]** ブレードに既に置かれていることに注意してください。 Intune App Protection に移動する代わりに、Intune に移動します。 2018 年 4 月にリダイレクトを停止し、**[Intune App Protection]** サービス ブレードを完全に削除する予定です。したがって、Intune 内のアプリ保護ポリシーのための場所は 1 つだけになります。 
+
+**ユーザーへの影響** この変更は、Intune スタンドアロンのお客様とハイブリッド (Intune と Configuration Manager) のお客様の両方に影響します。 この統合は、クラウド管理の簡素化に役立ちます。
+
+**この変更に対して必要な準備** **[Intune App Protection]** サービス ブレードの代わりに **Intune** をお気に入りとして登録し、Intune の **[モバイル アプリ]** ブレードのアプリ保護ポリシーのワークフローを習熟してください。 リダイレクトを短期間行い、その後 **[Intune App Protection]** ブレードを削除します。 すべてのアプリ保護ポリシーは既に Intune にあり、どの条件付きアクセス ポリシーでも変更できることを忘れないでください。 条件付きアクセス ポリシーの変更について詳しくは、「[Azure Active Directory の条件付きアクセス](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)」をご覧ください。 その他の情報については、「[アプリ保護ポリシーとは](/intune/app-protection-policy)」をご覧ください。 
+
+
+
 
 #### <a name="user-experience-update-for-the-company-portal-app-for-ios"></a>iOS 用ポータル サイト アプリに関するユーザー エクスペリエンスの更新プログラム 
 <!--1412866-->

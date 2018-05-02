@@ -13,11 +13,11 @@ ms.date: 03/22/2018
 ms.topic: article
 ms.service: ''
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: cdfe52768499b929db473ac08d42207059965ffd
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: d0cee0eb242011d6cc7b3085b4ae9df908604fa8
+ms.sourcegitcommit: ac06e034cc60db7b1acade1f541e26b6cc50506e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="switch-configuration-manager-workloads-to-intune"></a>Configuration Manager のワークロードを Intune に切り替える
 「[Prepare Windows 10 devices for co-management](co-management-prepare.md)」(共同管理用に Windows 10 デバイスを準備する) では、共同管理用に Windows 10 デバイスを準備しました。 これらのデバイスは AD、Azure AD に参加し、Intune に登録され、Configuration Manager クライアントがインストールされています。 Windows 10 デバイスが AD に参加し、Configuration Manager クライアントがインストールされていても、まだ Azure AD に参加していないか、Intune に登録されていない場合があります。 次の手順では、共同管理を有効にし、残りの Windows 10 デバイス (Intune に登録されていない Configuration Manager クライアント) を共同管理用に準備して、特定の Configuration Manager ワークロードの Intune への切り替えを開始できるようにします。
@@ -43,10 +43,13 @@ ms.lasthandoff: 03/23/2018
 ## <a name="workloads-able-to-be-transitioned-to-intune"></a>Intune に切り替えられるワークロード
 特定のワークロードについては Intune に切り替えることができます。 ワークロードが切り替えられるようになったことに伴い、次の一覧は更新されます。
 1. デバイス コンプライアンス ポリシー
-2. リソースのアクセス ポリシー
+2. リソース アクセス ポリシー: リソースのアクセス ポリシーで、デバイスに対する VPN、Wi-Fi、電子メール、および証明書の設定を構成します。 詳細については、[リソース アクセス プロファイルの展開](https://docs.microsoft.com/intune/device-profiles)に関するページを参照してください。
+      - 電子メールのプロファイル
+      - Wi-Fi プロファイル
+      - VPN プロファイル
+      - 証明書プロファイル
 3. Windows Update のポリシー
 4. エンドポイント保護 (Configuration Manager バージョン 1802 以降)
-      - Windows Defender ウイルス対策
       - Windows Defender Application Guard
       - Windows Defender ファイアウォール
       - Windows Defender SmartScreen
@@ -60,6 +63,8 @@ ms.lasthandoff: 03/23/2018
 
 ## <a name="monitor-co-management"></a>共同管理の監視
 共同管理を有効にした後に、次の方法を使用して共同管理デバイスを監視できます。
+
+- [共同管理ダッシュボード](/sccm/core/clients/manage/co-management-dashboard)
 - **SQL ビューと WMI クラス**: Configuration Manager サイト データベースの **v&#95;ClientCoManagementState** SQL ビュー、または **SMS&#95;Client&#95;ComanagementState** WMI クラスに対するクエリを実行できます。 WMI クラスの情報を使用して、共同管理の展開状態を判断するカスタム コレクションを Configuration Manager に作成することができます。 詳細については、[コレクションの作成方法](/sccm/core/clients/manage/collections/create-collections)に関するページを参照してください。 SQL ビューと WMI クラスでは次のフィールドを使用できます。 
     - **MachineId**: Configuration Manager クライアントの一意のデバイス ID を指定します。
     - **MDMEnrolled**: デバイスが MDM に登録されているかどうかを指定します。 

@@ -11,11 +11,11 @@ ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: a45ded0f3824c148f64f9578e51cc112c05d9f78
-ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
+ms.openlocfilehash: 93a991cb3fd78e44f5ae4434a9845a57450e1025
+ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>共同管理用に Windows 10 デバイスを準備する
 AD と Azure AD に参加し Microsoft Intune に登録されている Windows 10 デバイスと、Configuration Manager のクライアントで、共同管理を有効にできます。 新しい Windows 10 デバイスおよび Intune に既に登録されているデバイスでは、共同管理を有効にする前に Configuration Manager クライアントをインストールします。 既に Configuration Manager クライアントになっている Windows 10 デバイスの場合は、デバイスを Intune に登録して、Configuration Manager コンソールで共同管理を有効にできます。
@@ -23,6 +23,32 @@ AD と Azure AD に参加し Microsoft Intune に登録されている Windows 1
 > [!IMPORTANT]
 > Windows 10 Mobile デバイスでは共同管理はサポートされません。
 
+
+## <a name="prerequisites"></a>[前提条件]
+共同管理を有効にする前に、次の前提条件が満たされている必要があります。 一般的な前提条件のほか、Configuration Manager クライアントがインストールされているデバイスとインストールされていないデバイスとで異なる前提条件があります。
+### <a name="general-prerequisites"></a>一般的な前提条件
+共同管理を有効にするための一般的な前提条件は次のとおりです。  
+
+- Configuration Manager バージョン 1710 以降
+- Azure AD
+- すべてのユーザーの EMS または Intune のライセンス
+- [Azure AD の自動登録](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)が有効
+- Intune のサブスクリプション &#40;MDM 機関が **Intune** に設定されたもの&#41;
+
+
+   > [!Note]  
+   > ハイブリッド MDM 環境 (Intune と Configuration Manager が統合された環境) では、共同管理を有効にできません。 ただし、Intune スタンドアロンへのユーザー移行を開始し、関連 Windows 10 デバイスの共同管理を有効にできます。 Intune スタンドアロンへの移行については、[ハイブリッド MDM から Intune スタンドアロンへの移行の開始](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)に関する記事をご覧ください。
+
+### <a name="additional-prerequisites-for-devices-with-the-configuration-manager-client"></a>Configuration Manager クライアントがインストールされているデバイスの追加の前提条件
+- Windows 10 バージョン 1709 以降
+- [ハイブリッド Azure AD への参加](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (AD と Azure AD に参加)
+
+### <a name="additional-prerequisites-for-devices-without-the-configuration-manager-client"></a>Configuration Manager クライアントがインストールされていないデバイスの追加の前提条件
+- Windows 10 バージョン 1709 以降
+- Configuration Manager の[クラウド管理ゲートウェイ](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway) (Intune を使用して Configuration Manager クライアントをインストールする場合)
+
+> [!IMPORTANT]
+> Windows 10 Mobile デバイスでは共同管理はサポートされません。
 
 
 ## <a name="command-line-to-install-configuration-manager-client"></a>Configuration Manager クライアントをインストールするためのコマンド ライン
@@ -39,8 +65,8 @@ AD と Azure AD に参加し Microsoft Intune に登録されている Windows 1
 
 - **管理ポイント (MP) の FQDN**: mp1.contoso.com    
 - **サイト コード**: PS1    
-- **Azure AD テナント ID**: daf4a1c2-3a0c-401b-966f-0b855d3abd1a    
-- **Azure AD クライアント アプリ ID**: 7506ee10-f7ec-415a-b415-cd3d58790d97     
+- **Azure AD テナント ID**: 60a413f4-c606-4744-8adb-9476ae3XXXXX    
+- **Azure AD クライアント アプリ ID**: 9fb9315f-4c42-405f-8664-ae63283XXXXX     
 - **AAD リソース ID URI**: ConfigMgrServer    
 
   > [!Note]    
@@ -48,7 +74,7 @@ AD と Azure AD に参加し Microsoft Intune に登録されている Windows 1
 
 この場合は、次のようなコマンド ラインを使います。
 
-`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://ConfigMgrServer"`
+`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=60a413f4-c606-4744-8adb-9476ae3XXXXX AADCLIENTAPPID=9fb9315f-4c42-405f-8664-ae63283XXXXX AADRESOURCEURI=https://ConfigMgrServer"`
 
 > [!Tip]
 > サイトのコマンド ライン パラメーターは、次の手順を使って探すことができます。     
