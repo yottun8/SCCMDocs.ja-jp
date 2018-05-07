@@ -1,6 +1,7 @@
 #   理解と調査
 ##  [Configuration Manager の概要](understand/introduction.md)
 ### [Configuration Manager のヘルプの検索](understand/find-help.md)
+### [ドキュメントの使用方法](understand/use-docs.md)
 ### [ユーザー補助機能](understand/accessibility-features.md)
 ### [ソフトウェア センターのユーザー ガイド](understand/software-center.md)
 ##  [Configuration Manager の基本情報](understand/fundamentals.md)
