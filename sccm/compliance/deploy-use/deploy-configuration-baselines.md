@@ -1,26 +1,20 @@
 ---
-title: "構成基準を展開する"
+title: 構成基準を展開する
 titleSuffix: Configuration Manager
-description: "構成基準を展開し、構成基準の展開の定義や、展開に対する構成基準の追加や削除を行います。"
-ms.custom: na
+description: 構成基準を展開し、構成基準の展開の定義や、展開に対する構成基準の追加や削除を行います。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 9be8aaf3-075e-4acd-abd2-7459254e16e2
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: e61314c5c10f4a4c9eda1f0a292cb5a9c72b32bb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: c55382bf1fc377fd7e86f433a0cb92a5240eafa1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-deploy-configuration-baselines-in-system-center-configuration-manager"></a>System Center Configuration Manager で構成基準を展開する方法
 
@@ -45,7 +39,7 @@ System Center Configuration Manager の構成基準は、1 つまたは複数の
 
     -   **[サポートされている場合は対応していない規則を修復する]** – Windows Management Instrumentation (WMI)、レジストリ、スクリプト、および、Configuration Manager が登録したモバイル デバイスのすべての設定が対応しない規則があれば、自動的に修復します。  
 
-    -   **[メンテナンス期間以外の修復を許可する]** – このオプションを有効にすると、構成基準の展開先のコレクションにメンテナンス期間が設定されていても、コンプライアンス設定がメンテナンス期間外に値を修復します。 メンテナンス期間について詳しくは、「[メンテナンス期間を使用する方法](/sccm/core/clients/manage/collections/use-maintenance-windows)」をご覧ください。  
+    -   **[メンテナンス期間以外の修復を許可する]** – このオプションを有効にすると、構成基準の展開先のコレクションにメンテナンス期間が設定されていても、コンプライアンス設定がメンテナンス期間外に値を修復します。 メンテナンス期間について詳しくは、「[メンテナンス期間を使用する方法](/sccm/core/clients/manage/collections/use-maintenance-windows)」を参照してください。  
 
 6.  **[アラートを生成する]** – 構成基準のコンプライアンスが、指定した日付と時刻までに指定した割合に達しなかった場合に生成されるアラートを構成します。 アラートを System Center Operations Manager に送信するかどうかも指定できます。  
 

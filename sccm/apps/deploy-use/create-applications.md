@@ -2,26 +2,19 @@
 title: アプリケーションの作成
 titleSuffix: Configuration Manager
 description: 展開の種類、検出方法、およびソフトウェアのインストール要件を指定してアプリケーションを作成します。
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-caps.latest.revision: 14
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2569625daaf9a3e10dea26d86b01e10cacae0181
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: c9b90dfcc0916f62905af777e45222ceebf8300f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager でアプリケーションを作成する
 
@@ -58,7 +51,7 @@ Configuration Manager アプリケーションには、1 つ以上の展開の�
 
 ### <a name="automatically-detect-application-information"></a>アプリケーションの情報を自動的に検出する  
 
-1.  アプリケーションの作成ウィザードの **[全般]** ページで、 **[このアプリケーションの情報をインストール ファイルから自動的に検出する]**を選択します。  
+1.  アプリケーションの作成ウィザードの **[全般]** ページで、 **[このアプリケーションの情報をインストール ファイルから自動的に検出する]** を選択します。  
 
 2.  **[種類]** ドロップダウン リストから、アプリケーション情報の検出に使用するアプリケーション インストール ファイルの種類を選択します。 使用可能なインストールの種類については、このトピックの「[Configuration Manager でサポートされる展開の種類](/sccm/apps/deploy-use/create-applications#deployment-types-supported-by-configuration-manager)」を参照してください。  
 
@@ -206,7 +199,7 @@ Configuration Manager コンソールの **[アプリケーション]** ノー�
         - **インストール コンテンツと同じ**: インストール コンテンツとアンインストール コンテンツが同じ場合は、このオプションを選びます。 これが既定のオプションです。
         - **アンインストール コンテンツなし**: アプリケーションのアンインストールにコンテンツが必要ない場合は、このオプションを選びます。
         - **インストール コンテンツと異なる**: アンインストール コンテンツがインストール コンテンツと異なる場合は、このオプションを選びます。 そして、アプリケーションのアンインストールに使うアプリケーション コンテンツの場所を指定します。
-5. **OK** をクリックして、展開の種類プロパティ ダイアログ ボックスを閉じます。
+5. **OK** をクリックして、[展開の種類プロパティ] ダイアログ ボックスを閉じます。
 
     -   **クライアント キャッシュの内容を保持する**: コンテンツをキャッシュに無期限に保持する場合は、このオプションを選びます。 アプリが既にインストールされている場合でも、クライアントはコンテンツを保持します。 このオプションは、Windows インストーラー ベースのソフトウェアなど、一部の展開に便利です。 Windows インストーラーでは、更新プログラムを適用するためにソース コンテンツのローカル コピーが必要です。 ただし、このオプションを指定すると使用可能なキャッシュ領域が減ります。 このオプション選択した場合は、キャッシュに十分な空き領域がないと、後で大規模な展開に失敗する可能性があります。  
 
@@ -316,11 +309,11 @@ Configuration Manager コンソールの **[アプリケーション]** ノー�
 
     -   **インストール プログラムの表示**: 展開の種類をクライアント デバイスで実行するモードを指定します。 次のオプションを使用できます。  
 
-        -   **最大化**: 展開の種類をクライアント デバイスで最大化して実行します。 ユーザーにはすべてのインストール動作が表示されます。  
+        -   **[最大化]**:展開の種類をクライアント デバイスで最大化して実行します。 ユーザーにはすべてのインストール動作が表示されます。  
 
-        -   **通常**: 展開の種類をシステムとプログラムの既定のモードで実行します。 このモードが既定値です。  
+        -   **[通常]**:展開の種類をシステムとプログラムの既定のモードで実行します。 このモードが既定値です。  
 
-        -   **最小化**: 展開の種類をクライアント デバイスで最小化して実行します。 ユーザーは通知エリアまたはタスクバーでインストール動作を確認できます。  
+        -   **[最小化]**:展開の種類をクライアント デバイスで最小化して実行します。 ユーザーは通知エリアまたはタスクバーでインストール動作を確認できます。  
 
         -   **非表示**: クライアント デバイスで展開の種類を非表示にします。 ユーザーにはインストール動作が表示されません。  
 
