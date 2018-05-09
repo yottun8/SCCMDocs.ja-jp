@@ -1,24 +1,20 @@
 ---
 title: Technical Preview 1707
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1707 で使用できる機能について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の Technical Preview バージョン 1707 で使用できる機能について説明します。
 ms.date: 08/14/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cb405ba0-8792-4ab7-988b-2f835f3a9550
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: b7823ad6dc4c93eb2df935d46ac8479a0369abc2
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 375c743e1094f3b3f52090ae520ee9d8e86acbe0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1707-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1707 の機能
 
@@ -37,8 +33,8 @@ ms.lasthandoff: 12/01/2017
 -   **サイト サーバーがパッシブ モードの場合、プレビュー バージョン 1707 への更新に失敗します**。 プレビュー バージョン 1706 を実行し、[プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)の場合、プレビュー サイトをバージョン 1707 に正常に更新するには、パッシブ モードのサイト サーバーをアンインストールする必要があります。 パッシブ モードのサイト サーバーは、サイトでバージョン 1707 が実行された後に再インストールできます。
 
   パッシブ モードのサイト サーバーをアンインストールするには、次の手順を実行します。
-  1. コンソールで**[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
-  2. **[サイト システムの役割]** ウィンドウで、**[サイト サーバー]**の役割を右クリックし、**[役割の削除]** を選択します。
+  1. コンソールで **[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
+  2. **[サイト システムの役割]** ウィンドウで、**[サイト サーバー]** の役割を右クリックし、**[役割の削除]** を選択します。
   3. パッシブ モードのサイト サーバーを右クリックし、**[削除]** を選択します。
   4. サイト サーバーのアンインストール後に、アクティブなプライマリ サイト サーバーで **CONFIGURATION_MANAGER_UPDATE** のサービスを再起動します。
 
@@ -74,7 +70,7 @@ Surface デバイス ダッシュボードに、お使いの環境で検出さ�
 
 [Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) は、信頼できない Web サイトをオペレーティング システムの他の部分からはアクセスできない安全な分離コンテナーで開くことでユーザーを保護する Windows の新機能です。 この Technical Preview では、設定する Configuration Manager のコンプライアンス設定を使用して、この機能を構成し、コレクションに展開するためのサポートが追加されました。 この機能は、Windows 10 Fall Creators Update (コードネーム: RS3) の 64 ビット バージョンのプレビューでリリースされます。 この機能を今すぐテストするには、この更新プログラムのプレビュー バージョンを使用している必要があります。
 
-### <a name="before-you-start"></a>アップグレードを開始する前に
+### <a name="before-you-start"></a>開始する前に
 
 Windows Defender Application Guard ポリシーを作成して展開するには、ネットワーク分離ポリシーを使用して、ポリシーを展開する Windows 10 デバイスを構成する必要があります。 詳しくは、[このブログ投稿](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97)をご覧ください。 この機能は、最新の Windows 10 Insider Build でのみ動作します。 これをテストするには、クライアントが最新の Windows 10 Insider Build で実行されている必要があります。
 

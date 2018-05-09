@@ -2,22 +2,19 @@
 title: Office 365 ProPlus の更新プログラムの管理
 titleSuffix: Configuration Manager
 description: Configuration Manager が WSUS カタログからサイト サーバーに Office 365 のクライアント更新プログラムを同期したら、その更新プログラムをクライアントに展開できるようになります。
-keywords: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/26/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 4fbbe4b6792c51cd7adeeae3a96f81927153362c
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: a7c1786e9acce10d98da031d9d5df3b81f9a1a28
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Configuration Manager での Office 365 ProPlus の管理
 
@@ -43,7 +40,7 @@ Office 365 クライアント管理ダッシュボードには、次の情報の
 - Office 365 クライアントのバージョン
 - Office 365 クライアントの言語
 - Office 365 クライアントのチャネル     
-  詳細については、「[Office 365 ProPlus 更新プログラム チャネルの概要](https://technet.microsoft.com/library/mt455210.aspx)」をご覧ください。
+  詳細については、「[Office 365 ProPlus 更新プログラム チャネルの概要](/DeployOffice/overview-of-update-channels-for-office-365-proplus)」をご覧ください。
 
 Office 365 クライアント管理ダッシュボードを表示するには、Configuration Manager コンソールで **[ソフトウェア ライブラリ]** > **[概要]** > **[Office 365 クライアント管理]** に移動します。 ダッシュボードの上部にある **[コレクション]** ドロップダウン設定を使用して、特定のコレクションのメンバーでダッシュボードのデータをフィルター処理します。 Configuration Manager バージョン 1802 以降では、Office 365 クライアント管理ダッシュボードに、グラフ セクションが選択されたときに関連するデバイスのリストが表示されます。
 
@@ -52,7 +49,7 @@ Office 365 クライアント管理ダッシュ ボードに表示されるデ�
 #### <a name="to-display-data-in-the-office-365-client-management-dashboard"></a>Office 365 クライアント管理ダッシュボードにデータを表示するには
 1. ハードウェア インベントリがまだ有効になっていない場合は、有効にします。 詳細については、「[Configure hardware inventory](\sccm\core\clients\manage\configure-hardware-inventory)」(ハードウェア インベントリを構成する) を参照してください。
 2. Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** > **[既定のクライアント設定]** の順に選択します。  
-3. **[ホーム]** タブの **[プロパティ]** グループで、 **[プロパティ]**をクリックします。  
+3. **[ホーム]** タブの **[プロパティ]** グループで、 **[プロパティ]** をクリックします。  
 4. **[既定のクライアント設定]** ダイアログ ボックスで、**[ハードウェア インベントリ]** をクリックします。  
 5. **[デバイス設定]** の一覧で、**[クラスの設定]** をクリックします。  
 6. **[ハードウェア インベントリ クラス]** ダイアログ ボックスで、**[Office 365 ProPlus 構成]** を選択します。  
@@ -83,11 +80,11 @@ Configuration Manager の以前のバージョンでは、次の手順で最初�
 
     既存の構成ファイルを使用する場合は、ファイルの場所を入力し、ステップ 7 に進みます。 場所は &#92;&#92;*server*&#92;*share*&#92;*filename*.XML の形式で指定する必要があります。
     > [!IMPORTANT]    
-    > XML 構成ファイルには、[Office 365 ProPlus クライアントでサポートされる言語](https://technet.microsoft.com/library/cc179219&#40;v=office.16&#41;.aspx)のみを含める必要があります。
+    > XML 構成ファイルには、[Office 365 ProPlus クライアントでサポートされる言語](/DeployOffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016)のみを含める必要があります。
 
 5. **[クライアント製品]** ページで、使用する Office 365 スイートを選択します。 含めるアプリケーションを選択します。 含める必要がある追加の Office 製品を選択し、**[次へ]** をクリックします。
 6. **[クライアント設定]** ページで、含める設定を選び、**[次へ]** をクリックします。
-7. **[展開]** ページで、アプリケーションを展開するかどうかを選び**[次へ]** をクリックします。 <br/>ウィザードでパッケージを展開しないことを選択した場合は、ステップ 9 に進みます。
+7. **[展開]** ページで、アプリケーションを展開するかどうかを選び **[次へ]** をクリックします。 <br/>ウィザードでパッケージを展開しないことを選択した場合は、ステップ 9 に進みます。
 8. 一般的なアプリケーション展開の場合と同様に、ウィザードの残りのページを構成します。 詳細については、「[アプリケーションの作成手順と展開手順](/sccm/apps/get-started/create-and-deploy-an-application)」を参照してください。
 9. ウィザードを完了します。
 10. アプリケーションは **[ソフトウェア ライブラリ]** > **[概要]** > **[アプリケーション管理]** > **[アプリケーション]** から展開または編集することができます。    
@@ -103,7 +100,7 @@ Configuration Manager バージョン 1706 以降では、Office 365 のクラ�
 
 Configuration Manager で Office 365 の更新プログラムを展開するには、次の手順を使用します。
 
-1.  Configuration Manager を使用して Office 365 クライアントの更新プログラムを管理するための[要件を確認します](https://technet.microsoft.com/library/mt628083.aspx) (この記事の「**構成マネージャーを使用して Office 365 クライアントの更新を管理するための要件**」セクションを参照してください)。  
+1.  Configuration Manager を使用して Office 365 クライアントの更新プログラムを管理するための[要件を確認します](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#requirements-for-using-configuration-manager-to-manage-office-365-client-updates) (この記事の「**構成マネージャーを使用して Office 365 クライアントの更新を管理するための要件**」セクションを参照してください)。  
 
 2.  Office 365 のクライアント更新プログラムを同期するための[ソフトウェア更新ポイントを構成します](../get-started/configure-classifications-and-products.md)。 分類の**更新プログラム**を設定して、製品の **Office 365 クライアント**を選択します。 分類の**更新プログラム**を使用するには、ソフトウェア更新ポイントの構成後にソフトウェア更新プログラムを同期します。
 3.  Office 365 クライアントが Configuration Manager から更新プログラムを受信できるようにします。 クライアントを有効にするには、Configuration Manager クライアント設定またはグループ ポリシーを使用します。   
@@ -116,7 +113,7 @@ Configuration Manager で Office 365 の更新プログラムを展開するに�
 
       3.  **[ソフトウェアの更新]** を選択し、**[Office 365 クライアント エージェントの管理を有効にする]** の設定に **[はい]** を設定します。  
 
-    **方法 2**: Office 展開ツールまたはグループ ポリシーを使用して、Configuration Manager から [Office 365 クライアントが更新プログラムを受信できるようにします](https://technet.microsoft.com/library/mt628083.aspx#BKMK_EnableClient)。  
+    **方法 2**: Office 展開ツールまたはグループ ポリシーを使用して、Configuration Manager から [Office 365 クライアントが更新プログラムを受信できるようにします](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient)。  
 
 4. [Office 365 の更新プログラムをクライアントに展開します](deploy-software-updates.md)。   
 

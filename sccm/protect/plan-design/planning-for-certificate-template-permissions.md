@@ -1,26 +1,20 @@
 ---
-title: "証明書テンプレートのアクセス許可の計画"
+title: 証明書テンプレートのアクセス許可の計画
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で使用する証明書テンプレートを構成する必要があるアクセス許可の計画について説明します。"
-ms.custom: na
+description: System Center Configuration Manager で使用する証明書テンプレートを構成する必要があるアクセス許可の計画について説明します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: e5c748297b318e5256f2064811151ae96a55fccd
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 44be093d079a06ac2cbc7e8fa82392fa3afd4f72
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-certificate-template-permissions-for-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager の証明書プロファイルに関する証明書テンプレート アクセス許可の計画
 
@@ -38,7 +32,7 @@ ms.lasthandoff: 10/12/2017
 
  これらのセキュリティ アクセス許可の詳細については、「[証明書インフラストラクチャ](../deploy-use/certificate-infrastructure.md)」を参照してください。  
 
- 上記の既定の構成を使うと、ユーザーとデバイスは証明書テンプレートから直接証明書を要求することはできず、すべての要求が、必ず、ネットワーク デバイス登録サービスから発信されるようになります。 この制限は、セキュリティ上、重要なことです。というのは、これらの証明書テンプレートでは、証明書のサブジェクトを **[ 要求に含まれる ]** に構成しなければならないので、権限のないはずのユーザーやデバイスが正規ユーザーになりすまして証明書を要求する可能性があるからです。 既定の構成では、必ず、ネットワーク デバイス登録サービスが要求を開始しなければなりません。 ただし、ネットワーク デバイス登録サービスを実行するサービスが侵害された場合、依然として、このなりすましのリスクがあります。 このリスクを回避するには、ネットワーク デバイス登録サービスおよびこの役割サービスを実行するコンピューターに対する、セキュリティ上のすべてのベスト プラクティスに従ってください。  
+ 上記の既定の構成を使うと、ユーザーとデバイスは証明書テンプレートから直接証明書を要求することはできず、すべての要求が、必ず、ネットワーク デバイス登録サービスから発信されるようになります。 この制限は、セキュリティ上、重要なことです。というのは、これらの証明書テンプレートでは、証明書のサブジェクトを **[要求に含まれる]** に構成しなければならないので、権限のないはずのユーザーやデバイスが正規ユーザーになりすまして証明書を要求する可能性があるからです。 既定の構成では、必ず、ネットワーク デバイス登録サービスが要求を開始しなければなりません。 ただし、ネットワーク デバイス登録サービスを実行するサービスが侵害された場合、依然として、このなりすましのリスクがあります。 このリスクを回避するには、ネットワーク デバイス登録サービスおよびこの役割サービスを実行するコンピューターに対する、セキュリティ上のすべてのベスト プラクティスに従ってください。  
 
  既定のセキュリティ アクセス許可のままでは業務上支障がある場合は、ユーザーとコンピューターに、証明書テンプレートの読み取りと登録のアクセス許可を付与するという方法もあります。  
 
@@ -61,4 +55,4 @@ ms.lasthandoff: 10/12/2017
 
     -   証明書登録ポイントをホストするサイト システム サーバーで、次の DWORD レジストリ キー値を 1 に設定して作成します。HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SCCM\CRP\SkipTemplateCheckOnlyIfAccountAccessDenied  
 
-3.  発行元 CA の証明書テンプレートのプロパティの **[ セキュリティ ]** タブで、ユーザー アカウントまたはデバイス アカウントに読み取りと登録アクセス許可を付与する 1 つまたは複数のセキュリティ グループを追加します。  
+3.  発行元 CA の証明書テンプレートのプロパティの **[セキュリティ]** タブで、ユーザー アカウントまたはデバイス アカウントに読み取りと登録アクセス許可を付与する 1 つまたは複数のセキュリティ グループを追加します。  

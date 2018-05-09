@@ -1,43 +1,20 @@
 ---
-title: "1606 の診断データ"
+title: 1606 の診断データ
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager バージョン 1606 で収集される診断結果および使用状況データの各種レベルについて説明します。"
-ms.custom: na
+description: System Center Configuration Manager バージョン 1606 で収集される診断結果および使用状況データの各種レベルについて説明します。
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f7350d03-f440-4744-82d4-75f8c6c25028
-caps.latest.revision: "4"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- hu-hu
-- it-it
-- ja-jp
-- ko-kr
-- nl-nl
-- pl-pl
-- pt-br
-- pt-pt
-- ru-ru
-- sv-se
-- tr-tr
-- zh-cn
-- zh-tw
-ms.openlocfilehash: 7497f0e862f0464e85231d1bc6f0c532f2f4eaf9
-ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
+manager: dougeby
+ms.openlocfilehash: 902e5e91b64cf3061862deeb98b0d9bf427e4598
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager バージョン 1606 により収集される診断結果および使用状況データのレベル
 

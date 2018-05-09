@@ -2,26 +2,19 @@
 title: 証明書プロファイルを監視する
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager 証明書プロファイルのコンプライアンス状態を監視する方法を説明します。
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 98feaa06-64b1-4e86-a122-93017c97cd4f
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 6b0ae2042c1c463bce53c0c1a7438cc7102cd66e
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: a3a9c27eed58bce1b6d2371c545621b48f4b4f54
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager で証明書プロファイルを監視する方法
 
@@ -51,7 +44,7 @@ SCEP 証明書のコンプライアンスを監視するには、コンソール
 
     -   **不明**: 選択した証明書プロファイルに対応しているかどうかを報告しなかった全ユーザーと、デバイスにあるクライアントの現在の状態を一覧表示します。  
 
-5.  **[展開ステータス]** ページで、展開した証明書プロファイルのコンプライアンスの詳細情報を確認します。 **[展開]**ノードの下に一時ノードが作成されるため、後から再度この情報をすばやく確認できます。  
+5.  **[展開ステータス]** ページで、展開した証明書プロファイルのコンプライアンスの詳細情報を確認します。 **[展開]** ノードの下に一時ノードが作成されるため、後から再度この情報をすばやく確認できます。  
 
      証明書の登録ステータスは、数値で表示されます。 次の表に、その数値の意味を示します。  
 
@@ -67,12 +60,12 @@ SCEP 証明書のコンプライアンスを監視するには、コンソール
 
 ##  <a name="view-compliance-results-by-using-reports"></a>レポートを使用してコンプライアンス結果を表示する
 
- System Center Configuration Manager のコンプライアンスの設定には、証明書プロファイルの対応状態を監視するための組み込みレポートが含まれています。 これらのレポートには、**[コンプライアンスおよび設定管理]**のカテゴリがあります。  
+ System Center Configuration Manager のコンプライアンスの設定には、証明書プロファイルの対応状態を監視するための組み込みレポートが含まれています。 これらのレポートには、**[コンプライアンスおよび設定管理]** のカテゴリがあります。  
 
 > [!IMPORTANT]  
 >  コンプライアンス設定でレポートの **[デバイス フィルター]** と **[ユーザー フィルター]** パラメーターを指定するときは、必ず、ワイルドカード (%) 文字を使ってください。  
 
-SCEP 証明書コンプライアンスを監視するには、レポート ノード **[会社のリソースへのアクセス]**の下にあるこれらの証明書のレポートを使用します。  
+SCEP 証明書コンプライアンスを監視するには、レポート ノード **[会社のリソースへのアクセス]** の下にあるこれらの証明書のレポートを使用します。  
 
  -   証明書の発行履歴  
  -   証明書の有効期限が近づいている資産の一覧  

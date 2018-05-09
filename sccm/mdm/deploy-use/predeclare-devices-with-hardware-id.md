@@ -1,25 +1,20 @@
 ---
-title: "IMEI または iOS シリアル番号を持つデバイスの事前宣言"
+title: IMEI または iOS シリアル番号を持つデバイスの事前宣言
 titleSuffix: Configuration Manager
-description: "IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言"
-ms.custom: na
+description: IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言
 ms.date: 09/01/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ddb4c68e-e7f7-475a-89e2-7379a86e44c4
-caps.latest.revision: "3"
-author: nathbarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: a58c765833fe1ef65c2497fd1e2d079caa3f2ff3
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 86ef14c871f476df39923e01e47874702271a08d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>IMEI または iOS シリアル番号を持つデバイスの事前宣言
 
@@ -66,7 +61,7 @@ ms.lasthandoff: 10/12/2017
 
 IMEI または iOS シリアル番号でデバイスを識別するために使用する .csv ファイルは、ガイダンスとしてのみ示される一番上の行を除き、次の形式で作成する必要があります。 各行には、IMEI 番号または iOS シリアル番号のどちらかの ID 番号を含める必要があります。 IOS デバイスの場合は、両方を含めることができます。 IMEI 番号は、Android、iOS、Windows デバイスのものが使用できます。 この表には、サンプル データが含まれます。
 
-| IMEI 番号  | iOS シリアル番号  | OS | 説明 |
+| IMEI 番号  | iOS シリアル番号  | OS | 詳細 |
 |------------ |---------------|-----|-----|
 | 123456789012345    |   | WINDOWS | 会社所有の Windows デバイス|
 |   | A1B2C3D4E5C6 | IOS |  会社所有の iOS デバイス|

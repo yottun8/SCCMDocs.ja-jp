@@ -1,25 +1,20 @@
 ---
-title: "Technical Preview 1607 の機能"
+title: Technical Preview 1607 の機能
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1607 で使用できる機能について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の Technical Preview バージョン 1607 で使用できる機能について説明します。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bb69547-3370-4860-96b0-7fb600c56482
-caps.latest.revision: "11"
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: e69bee88aa4afccbaee055b058ad0a3e68a0e180
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 3bc18a9d061100e63d241c5078ea7dbac75db3f8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1607 の機能
 
@@ -74,6 +69,6 @@ Technical Preview バージョン 1607 では、(複数のデバイスで使用�
 
 ### <a name="add-hardware-identifiers-for-configuration-manager-to-ignore"></a>無視する Configuration Manager のハードウェア識別子を追加する  
 1. Configuration Manager コンソールで、**[管理]** > **[概要]** > **[サイトの構成]** > **[サイト]** の順に移動します。
-2. **[ホーム]** タブの **[サイト]** グループで、 **[階層設定]**をクリックします。
+2. **[ホーム]** タブの **[サイト]** グループで、 **[階層設定]** をクリックします。
 3. **[クライアントの承認と競合レコードの処理]** タブに移動します。
 4. **[重複するハードウェア ID]** セクションで **[追加]** をクリックして 新しいハードウェア識別子を追加します。

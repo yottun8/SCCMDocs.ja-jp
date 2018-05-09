@@ -2,26 +2,19 @@
 title: 診断結果と使用状況データ
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager が収集する自身の診断および使用状況データについて説明します。
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 88ac4e55-d47b-4c94-b9c3-704c6a48b845
-caps.latest.revision: 9
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f783f11f6fbabda2fd1d6f98748e945affa878e
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 5a70f632c04d7202ed1c41e5e138ed63dfdba1c6
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostics-and-usage-data-for-system-center-configuration-manager"></a>System Center Configuration Manager の診断結果と使用状況データ
 
@@ -61,7 +54,7 @@ Configuration Manager では、それ自体の診断および使用状況デー�
 -   [カスタマー エクスペリエンス向上プログラム (CEIP)](../../../core/plan-design/diagnostics/customer-experience-improvement-program-ceip.md)  
 
      > [!Note]  
-     > Configuration Manager バージョン 1802 以降、CEIP 機能が製品から削除されます。
+     > Configuration Manager バージョン 1802 以降では、CEIP 機能が製品から削除されます。
 
 
 -   [診断および使用状況データに関してよく寄せられる質問](../../../core/understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)  

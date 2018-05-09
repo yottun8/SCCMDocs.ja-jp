@@ -2,25 +2,19 @@
 title: クライアント インストール プロパティ
 titleSuffix: Configuration Manager
 description: Configuration Manager クライアントをインストールするための ccmsetup コマンド ライン プロパティについて説明します。
-ms.custom: na
 ms.date: 03/28/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
-caps.latest.revision: 15
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 40e844fbb15a101574d9628648dde0db59c855c4
-ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
+ms.openlocfilehash: 27479bf3db9ab0ed5d842f5cbf9db4e399a4168d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>System Center Configuration Manager のクライアント インストール プロパティについて
 
@@ -326,7 +320,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
 ### <a name="ccmalwaysinf"></a>CCMALWAYSINF
 
- クライアントが常にインターネット ベースであり、イントラネットには接続しないことを指定するには、**1** に設定します。 クライアントの接続の種類に **[常にインターネット]**と表示されます。  
+ クライアントが常にインターネット ベースであり、イントラネットには接続しないことを指定するには、**1** に設定します。 クライアントの接続の種類に **[常にインターネット]** と表示されます。  
 
  このプロパティは、インターネット ベースの管理ポイントの FQDN を指定する CCMHOSTNAME と共に使用します。 また、CCMSetup プロパティ /UsePKICert、およびサイト コードと共に使用します。  
 
@@ -441,7 +435,7 @@ HTTPS を介してサイト システム サーバーと通信するときにク
 
 ### <a name="ccminstalldir"></a>CCMINSTALLDIR
 
- Configuration Manager クライアント ファイルがインストールされるフォルダーを指定します。既定では *%Windir%*\CCM です。 ファイルのインストール場所に関係なく、Ccmcore.dll ファイルは常に *%Windir%\System32* フォルダーにインストールされます。 また、64 ビット OS では、Ccmcore.dll ファイルのコピーは常に *%Windir%*\SysWOW64 フォルダーにインストールされます。 このファイルでは、Configuration Manager SDK の 32 ビット バージョンのクライアント API を使用する 32 ビット アプリケーションがサポートされます。  
+ Configuration Manager クライアント ファイルがインストールされるフォルダーを指定します。既定では *%Windir%* \CCM です。 ファイルのインストール場所に関係なく、Ccmcore.dll ファイルは常に *%Windir%\System32* フォルダーにインストールされます。 また、64 ビット OS では、Ccmcore.dll ファイルのコピーは常に *%Windir%* \SysWOW64 フォルダーにインストールされます。 このファイルでは、Configuration Manager SDK の 32 ビット バージョンのクライアント API を使用する 32 ビット アプリケーションがサポートされます。  
 
  例: `CCMSetup.exe CCMINSTALLDIR="C:\ConfigMgr"`  
 

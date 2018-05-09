@@ -1,26 +1,20 @@
 ---
-title: "ユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け"
+title: ユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け
 titleSuffix: Configuration Manager
-description: "ユーザーとデバイスのアフィニティにユーザーとデバイスを関連付けて、ユーザーに関連付けられたすべてのデバイスにアプリを自動的に展開します。"
-ms.custom: na
+description: ユーザーとデバイスのアフィニティにユーザーとデバイスを関連付けて、ユーザーに関連付けられたすべてのデバイスにアプリを自動的に展開します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 1066028d0cd20521d78780ae2fdfbce91a0860b2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 40bab1725b074bc549eeb9e9764ab8a1dd8b83e7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-system-center-configuration-manager"></a>System Center Configuration Manager でのユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け
 
@@ -118,7 +112,7 @@ System Center Configuration Manager (Configuration Manager) のユーザーと�
     > [!NOTE]  
     > 規定のクライアント設定を変更すると、階層内のすべてのコンピューターに展開されます。 クライアント設定の構成については、「[Configure client settings](../../core/clients/deploy/configure-client-settings.md)」 (クライアント設定の構成) を参照してください。  
 
-3.  クライアント設定 **[ユーザーとデバイスのアフィニティ]** を選択し、 **[ユーザーがプライマリ デバイスを定義できるようにする]** ボックスの一覧で **[True]**を選択します。  
+3.  クライアント設定 **[ユーザーとデバイスのアフィニティ]** を選択し、 **[ユーザーがプライマリ デバイスを定義できるようにする]** ボックスの一覧で **[True]** を選択します。  
 
 ### <a name="set-up-a-user-device-affinity"></a>ユーザーとデバイスのアフィニティをセットアップする  
 
@@ -127,7 +121,7 @@ System Center Configuration Manager (Configuration Manager) のユーザーと�
 2.  **[このコンピューターを日常の仕事で使用します]** オプションを選びます。  
 
 ## <a name="manage-user-device-affinity-requests-from-users"></a>ユーザーからのユーザーとデバイスのアフィニティ要求の管理  
- クライアント設定の **[使用状況データに基づいてユーザーとデバイスのアフィニティを自動構成する]** が **[False]**に設定されている場合は、すべてのユーザーとデバイスのアフィニティ割り当てを承認する必要があります。  
+ クライアント設定の **[使用状況データに基づいてユーザーとデバイスのアフィニティを自動構成する]** が **[False]** に設定されている場合は、すべてのユーザーとデバイスのアフィニティ割り当てを承認する必要があります。  
 
 ### <a name="approve-or-reject-a-user-device-affinity-request"></a>ユーザーとデバイスのアフィニティ要求を承認または拒否する  
 

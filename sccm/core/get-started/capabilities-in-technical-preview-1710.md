@@ -1,24 +1,20 @@
 ---
 title: Technical Preview 1710 | Microsoft Docs
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1710 で使用できる機能について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の Technical Preview バージョン 1710 で使用できる機能について説明します。
 ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4706a58-1f11-4eab-b1eb-3d1a0da02d0f
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: ed5f977df79114e1209cd3cc82d2e56e8e728c3d
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 730d14c5985c088d964761bb83043f3a34924486
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1710-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1710 の機能
 
@@ -37,8 +33,8 @@ ms.lasthandoff: 12/01/2017
 -   **サイト サーバーがパッシブ モードの場合、新しいプレビュー バージョンへの更新に失敗します**。 [プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)であるプレビュー バージョンを実行する場合は、プレビュー サイトをこの新しいプレビュー バージョンに正常に更新するため、あらかじめパッシブ モードのサイト サーバーをアンインストールしておく必要があります。 パッシブ モードのサイト サーバーは、サイトの更新を完了したあとに再インストールできます。
 
   パッシブ モードのサイト サーバーをアンインストールするには、次の手順を実行します。
-  1. コンソールで**[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
-  2. **[サイト システムの役割]** ウィンドウで、**[サイト サーバー]**の役割を右クリックし、**[役割の削除]** を選択します。
+  1. コンソールで **[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
+  2. **[サイト システムの役割]** ウィンドウで、**[サイト サーバー]** の役割を右クリックし、**[役割の削除]** を選択します。
   3. パッシブ モードのサイト サーバーを右クリックし、**[削除]** を選択します。
   4. サイト サーバーのアンインストール後に、アクティブなプライマリ サイト サーバーで **CONFIGURATION_MANAGER_UPDATE** のサービスを再起動します。
 
@@ -104,7 +100,7 @@ Exploit Guard ポリシーのコンプライアンス データは、Configurati
 
 Exploit Guard と特定のコンポーネントおよび規則の詳細については、Windows ドキュメント ライブラリの「[Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard)」をご覧ください。
 
-### <a name="prerequisites"></a>必要条件
+### <a name="prerequisites"></a>[前提条件]
 管理対象デバイスでは、Windows 10 1709 Fall Creators Update 以降を実行し、構成するコンポーネントと規則に応じて次の要件を満たす必要があります。
 
 |Exploit Guard コンポーネント |追加の前提条件|
@@ -117,7 +113,7 @@ Exploit Guard と特定のコンポーネントおよび規則の詳細につい
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>Exploit Guard ポリシーを作成する  <!--1355468 -->
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[Endpoint Protection]** の順に移動し、**[Windows Defender Exploit Guard]** をクリックします。
 2.  **[ホーム]** タブの **[作成]** グループで、**[Create Exploit Policy]\(Exploit Policy の作成\)** をクリックします。
-3.  **構成項目の作成ウィザード** の **[全般]**ページで、構成項目の名前と、必要に応じて説明を入力します。
+3.  **構成項目の作成ウィザード** の **[全般]** ページで、構成項目の名前と、必要に応じて説明を入力します。
 4.  次に、このポリシーで管理する Exploit Guard コンポーネントを選択します。 選択したコンポーネントごとに、追加の詳細を構成できます。
   - **攻撃の回避:** ブロックまたは監査する Office に関連する脅威、スクリプトに関連する脅威、メールに関連する脅威について構成します。 この規則から特定のファイルまたはフォルダーを除外することもできます。
   - **フォルダー アクセスの制御:** ブロックと監査を構成し、このポリシーをバイパスできるアプリを追加します。  既定では保護されない追加のフォルダーを指定することもできます。
@@ -198,7 +194,7 @@ Windows Defender SmartScreen を実行しているデバイスで、信頼され
 
 [Windows Defender Application Guard](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97) は、信頼できない Web サイトをオペレーティング システムの他の部分からはアクセスできない安全な分離コンテナーで開くことでユーザーを保護する Windows の新機能です。 この Technical Preview では、設定する Configuration Manager のコンプライアンス設定を使用して、この機能を構成し、コレクションに展開するためのサポートが追加されました。 この機能は、Windows 10 Creators Update (コードネーム: RS2) の 64 ビット バージョンのプレビューでリリースされます。 この機能を今すぐテストするには、この更新プログラムのプレビュー バージョンを使用している必要があります。
 
-### <a name="before-you-start"></a>アップグレードを開始する前に
+### <a name="before-you-start"></a>開始する前に
 Windows Defender Application Guard ポリシーを作成して展開するには、ネットワーク分離ポリシーを使用して、ポリシーを展開する Windows 10 デバイスを構成する必要があります。 詳細については、後述のブログ記事をご覧ください。 この機能は、最新の Windows 10 Insider Build でのみ動作します。 これをテストするには、クライアントが最新の Windows 10 Insider Build で実行されている必要があります。
 
 ### <a name="try-it-out"></a>試してみましょう。

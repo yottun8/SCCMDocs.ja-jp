@@ -1,26 +1,20 @@
 ---
-title: "クライアントをアップグレードする"
+title: クライアントをアップグレードする
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で Windows コンピューターのクライアントをアップグレードします。"
-ms.custom: na
+description: System Center Configuration Manager で Windows コンピューターのクライアントをアップグレードします。
 ms.date: 05/04/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
-caps.latest.revision: "11"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 7e2319aaf8f1195118211493eeecb9f6d1872d2d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 9fce0c0a8602b51c3d05e5181023a0f9d05ab0ca
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager で Windows コンピューター用クライアントをアップグレードする方法
 
@@ -74,17 +68,17 @@ ms.lasthandoff: 10/12/2017
 
 ### <a name="to-configure-automatic-client-upgrades"></a>自動クライアント アップグレードを構成するには  
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
-2.  **[ 管理 ]** ワークスペースで **[ サイトの構成]** を展開して、**[ サイト]** をクリックします。  
+2.  **[管理]** ワークスペースで **[サイトの構成]** を展開して、**[サイト]** をクリックします。  
 
-3.  **[ホーム]** タブの **[サイト]** グループで、 **[階層設定]**をクリックします。  
+3.  **[ホーム]** タブの **[サイト]** グループで、 **[階層設定]** をクリックします。  
 
 4.  **[階層設定のプロパティ]** ダイアログ ボックスの **[クライアント アップグレード]** のタブで、実稼働クライアントのバージョンと日付を確認し、Windows コンピューターをアップグレードするために使用するバージョンであるかどうかを確認します。  目的のクライアント バージョンが表示されない場合は、実稼働前環境クライアントを実稼働環境に昇格させることが必要になることがあります。 詳細については、「[System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストする方法](../../../../core/clients/manage/upgrade/test-client-upgrades.md)」を参照してください。  
 
 5.  **[実稼働クライアントを使用して階層内のすべてのクライアントをアップグレードする]** をクリックし、確認ダイアログ ボックスで **[OK]** をクリックします。  
 
-6.  クライアントのアップグレードをサーバーに適用しない場合は、 **[サーバーをアップグレードしない]**をクリックします。  
+6.  クライアントのアップグレードをサーバーに適用しない場合は、 **[サーバーをアップグレードしない]** をクリックします。  
 
 7.  クライアント ポリシーを受信した後、コンピューターでクライアントを何日間以内にアップグレードしなければならないかを指定します。 クライアントはこの日数内のランダムな間隔でアップグレードされます。 この設定により、多数のクライアント コンピューターが同時にアップグレードされることを回避できます。
 
@@ -95,7 +89,7 @@ ms.lasthandoff: 10/12/2017
 
 7. バージョン 1610 以降では、クライアントをアップグレードから除外する場合に、**[指定したクライアントをアップグレードから除外する]** をクリックし、除外するコレクションを指定します。
 
-8.  事前設定されたコンテンツが有効になっている配布ポイントにクライアント インストール パッケージをコピーする場合は、 **[事前設定されたコンテンツ用に有効になっている配布ポイントにクライアント インストール パッケージを自動配布する]**をクリックします。  
+8.  事前設定されたコンテンツが有効になっている配布ポイントにクライアント インストール パッケージをコピーする場合は、 **[事前設定されたコンテンツ用に有効になっている配布ポイントにクライアント インストール パッケージを自動配布する]** をクリックします。  
 
 9. **[OK]** をクリックします。設定が保存され、 **[階層設定のプロパティ]** ダイアログ ボックスが閉じます。 次回クライアントでポリシーをダウンロードしたときに、これらの設定が受信されます。
 

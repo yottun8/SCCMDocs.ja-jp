@@ -1,25 +1,20 @@
 ---
-title: "Dynamics CRM Online アクセスの管理"
+title: Dynamics CRM Online アクセスの管理
 titleSuffix: Configuration Manager
-description: "Microsoft Intune 条件付きアクセスを使用して iOS および Android デバイスから Microsoft Dynamics CRM Online へのアクセスを制御する方法について説明します。"
-ms.custom: na
+description: Microsoft Intune 条件付きアクセスを使用して iOS および Android デバイスから Microsoft Dynamics CRM Online へのアクセスを制御する方法について説明します。
 ms.date: 03/05/2017
-ms.reviewer: na
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bfc4c51-b25c-4c70-b81e-8a3b6ddf02c8
-caps.latest.revision: "5"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 556bb29918327499cc9262a44b9810269d84822a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: d77dbcf0b8b7853153a0b2ead4b2db3affd03733
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-dynamics-crm-online-access-in-system-center-configuration-manager"></a>System Center Configuration Manager での Dynamics CRM Online アクセスの管理
 
@@ -75,20 +70,20 @@ Dynamics CRM ポリシーに適用する 2 つのグループの種類を指定�
 
      ![Dynamics CRM Online の条件付きアクセス ポリシー ページのスクリーン ショット](media/mdm-ca-dynamics-crm-policy-configuration.png)
 
-2.  **[条件付きアクセス ポリシーを有効にする]**を選択します。
-3.  **[アプリケーション アクセス]**で、条件付きアクセス ポリシーの適用対象を次の中から選択できます。
+2.  **[条件付きアクセス ポリシーを有効にする]** を選択します。
+3.  **[アプリケーション アクセス]** で、条件付きアクセス ポリシーの適用対象を次の中から選択できます。
   * **iOS**
   * **Outlook Web Access (OWA)**
-4.  **[対象グループ]**で、 **[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。 すべてのユーザーを対象にすることも、選んだユーザー グループのみを対象にすることもできます。
-5.  **[例外グループ]**で、必要に応じて **[変更]** をクリックして、このポリシーから除外する Azure Active Directory セキュリティ グループを選択します。
-6.  終了したら、 **[保存]**をクリックします。
+4.  **[対象グループ]** で、 **[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。 すべてのユーザーを対象にすることも、選んだユーザー グループのみを対象にすることもできます。
+5.  **[例外グループ]** で、必要に応じて **[変更]** をクリックして、このポリシーから除外する Azure Active Directory セキュリティ グループを選択します。
+6.  終了したら、 **[保存]** をクリックします。
 
 これで Dynamics CRM の条件付きアクセスの構成が完了します。 条件付きアクセス ポリシーを展開する必要はありません。直ちに有効になります。
 ##  <a name="monitor-the-compliance-and-conditional-access-policies"></a>コンプライアンスと条件付きアクセス ポリシーを監視する
 
 **[グループ]** ワークスペースで、デバイスの条件付きアクセスの状態を表示できます。
 
-モバイル デバイス グループを選択し、 **[デバイス]** タブで、次の **[フィルター]**のいずれかを選択します。
+モバイル デバイス グループを選択し、 **[デバイス]** タブで、次の **[フィルター]** のいずれかを選択します。
 * **AAD に登録されていないデバイス** – これらのデバイスは Dynamics CRM からブロックされます。
 * **準拠していないデバイス** – これらのデバイスは Dynamics CRM からブロックされます。
 * **AAD に登録され、準拠しているデバイス** – これらのデバイスは、Dynamics CRM にアクセスできます。

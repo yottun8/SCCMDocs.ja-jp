@@ -1,25 +1,20 @@
 ---
-title: "デバイス登録マネージャーを使用したデバイスの登録 "
+title: 'デバイス登録マネージャーを使用したデバイスの登録 '
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager を使用して、会社所有のデバイスをデバイス登録マネージャー アカウントで登録します。"
-ms.custom: na
+description: System Center Configuration Manager を使用して、会社所有のデバイスをデバイス登録マネージャー アカウントで登録します。
 ms.date: 09/08/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
-caps.latest.revision: "8"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: edfda4c65ac42c228b80015653678af0dbad8da3
-ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 9a691bc98a26cdf56d22c03840997d9e0a380b7b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>デバイス登録マネージャーと Configuration Manager を使用したデバイスの登録
 
@@ -50,9 +45,9 @@ ms.lasthandoff: 11/01/2017
 
 #### <a name="add-a-device-enrollment-manager"></a>デバイス登録マネージャーの追加  
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
-2.  **[管理]** ワークスペースで、 **[クラウド サービス]**を展開して **[Microsoft Intune サブスクリプション]**をクリックします。 デバイス登録マネージャーを追加する Microsoft Intune サブスクリプションを選び、**[プロパティ]** をクリックします。  
+2.  **[管理]** ワークスペースで、 **[クラウド サービス]** を展開して **[Microsoft Intune サブスクリプション]** をクリックします。 デバイス登録マネージャーを追加する Microsoft Intune サブスクリプションを選び、**[プロパティ]** をクリックします。  
 
 3.  [Microsoft Intune サブスクリプションのプロパティ] ダイアログ ボックスで、**[デバイス登録マネージャー]** タブをクリックします。  
 
@@ -72,7 +67,7 @@ ms.lasthandoff: 11/01/2017
 - 削除されたデバイス登録マネージャー アカウントの資格情報では、デバイスのワイプとインベントリからの削除を実行できません  
 - 削除されたデバイス登録マネージャー アカウントと登録済みデバイスの関係は残りますが、追加のデバイスは登録できません
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
-2.  **[管理]** ワークスペースで、 **[クラウド サービス]**を展開して **[Microsoft Intune サブスクリプション]**をクリックします。 デバイス登録マネージャーを追加する Microsoft Intune サブスクリプションを選び、**[プロパティ]** をクリックします。  
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
+2.  **[管理]** ワークスペースで、 **[クラウド サービス]** を展開して **[Microsoft Intune サブスクリプション]** をクリックします。 デバイス登録マネージャーを追加する Microsoft Intune サブスクリプションを選び、**[プロパティ]** をクリックします。  
 3.  [Microsoft Intune サブスクリプションのプロパティ] ダイアログ ボックスで、**[デバイス登録マネージャー]** タブをクリックします。  
 4.  削除するデバイス登録マネージャーを**検索**し、**[削除]** をクリックして、**[OK]** をクリックします。  

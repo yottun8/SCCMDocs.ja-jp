@@ -1,25 +1,20 @@
 ---
-title: "Wake On LAN の構成"
+title: Wake On LAN の構成
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で Wake On LAN 設定を選択します。"
-ms.custom: na
+description: System Center Configuration Manager で Wake On LAN 設定を選択します。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
-caps.latest.revision: "7"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: b2250b64609bc4c39a81312e1b41586a55f576df
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 32753e44d188aed8d47c22030fba82f86e605efc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-wake-on-lan-in-system-center-configuration-manager"></a>System Center Configuration Manager で Wake on LAN を構成する方法
 
@@ -27,7 +22,7 @@ ms.lasthandoff: 10/12/2017
 
 コンピューターをスリープ状態から復帰させて、必要なソフトウェア (ソフトウェア更新プログラム、アプリケーション、タスク シーケンス、プログラムなど) をインストールする場合は、System Center Configuration Manager の Wake On LAN 設定を指定します。
 
-ウェイクアップ プロキシ クライアント設定を使用して、Wake on LAN を補うことができます。 ただし、ウェイクアップ プロキシを使用する場合は、まずそのサイト用に Wake on LAN を有効にし、Wake on LAN 送信方法で **[ ウェイクアップ パケットのみを使用する ]** および **[ ユニキャスト ]** オプションを指定する必要があります。 このウェイクアップ ソリューションは、リモート デスクトップ接続などのアドホック接続もサポートします。
+ウェイクアップ プロキシ クライアント設定を使用して、Wake on LAN を補うことができます。 ただし、ウェイクアップ プロキシを使用する場合は、まずそのサイト用に Wake on LAN を有効にし、Wake on LAN 送信方法で **[ウェイクアップ パケットのみを使用する]** および **[ユニキャスト]** オプションを指定する必要があります。 このウェイクアップ ソリューションは、リモート デスクトップ接続などのアドホック接続もサポートします。
 
 最初の手順を Wake on LAN 用にプライマリ サイトを構成します。 次に、2 番目の手順を使用してウェイクアップ プロキシ クライアント設定を構成します。 この 2 番目の手順では、ウェイクアップ プロキシ設定用に既定のクライアント設定を構成し、階層内のすべてのコンピューターに適用します。 一部のコンピューターにのみこれらの設定を適用するには、カスタムのデバイス設定を作成し、ウェイクアップ プロキシ用に構成するコンピューターが含まれるコレクションに割り当てます。 カスタム クライアント設定の作成方法については、[System Center Configuration Manager でクライアント設定を構成する方法](../../../core/clients/deploy/configure-client-settings.md)を参照してください。
 

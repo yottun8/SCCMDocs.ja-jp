@@ -1,23 +1,20 @@
 ---
 title: Configuration Manager のワークロードを Intune に切り替える
-titleSuffix: System Center Configuration Manager
+titleSuffix: Configuraton Manager
 description: Configuration Manager で現在管理されているワークロードを Microsoft Intune に切り替える方法について説明します。
 ms.prod: configuration-manager
-ms.suite: na
-ms.technology:
-- configmgr-client
-author: mestew
-ms.author: mstewart
+ms.technology: configmgr-client
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
-ms.service: ''
+ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: d0cee0eb242011d6cc7b3085b4ae9df908604fa8
-ms.sourcegitcommit: ac06e034cc60db7b1acade1f541e26b6cc50506e
+ms.openlocfilehash: 439e4e26c08b5a2710da0978ed2407d715bc86bd
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="switch-configuration-manager-workloads-to-intune"></a>Configuration Manager のワークロードを Intune に切り替える
 「[Prepare Windows 10 devices for co-management](co-management-prepare.md)」(共同管理用に Windows 10 デバイスを準備する) では、共同管理用に Windows 10 デバイスを準備しました。 これらのデバイスは AD、Azure AD に参加し、Intune に登録され、Configuration Manager クライアントがインストールされています。 Windows 10 デバイスが AD に参加し、Configuration Manager クライアントがインストールされていても、まだ Azure AD に参加していないか、Intune に登録されていない場合があります。 次の手順では、共同管理を有効にし、残りの Windows 10 デバイス (Intune に登録されていない Configuration Manager クライアント) を共同管理用に準備して、特定の Configuration Manager ワークロードの Intune への切り替えを開始できるようにします。

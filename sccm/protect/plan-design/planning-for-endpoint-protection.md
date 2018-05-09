@@ -1,24 +1,19 @@
 ---
-title: "Endpoint Protection の計画"
+title: Endpoint Protection の計画
 titleSuffix: Configuration Manager
-ms.custom: na
 ms.date: 03/07/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
-caps.latest.revision: "16"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 3ffb112dc1aaf71162b0f706f5c07fb6d08e47f9
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 0e8cd4a409718645d06f17c8cea36e7b06ec61d2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-endpoint-protection-in-system-center-configuration-manager"></a>System Center Configuration Manager での Endpoint Protection の計画
 
@@ -51,7 +46,7 @@ Windows 10 コンピューターでは、Endpoint Protection 管理のために�
 -   Cloud Protection Service との統合によりマルウェアを Microsoft に報告。 このサービスに加入すると、コンピューターで不明なマルウェアが検出された場合に、Endpoint Protection クライアントまたは Windows Defender がマルウェア プロテクション センターから最新の定義をダウンロードできます。  
 
 > [!NOTE]  
->  Endpoint Protection クライアントは、Hyper-V を実行しているサーバーと、サポートされているオペレーティング システムを搭載したゲスト バーチャル マシンにインストールできます。 CPU の過剰使用を避けるため、Endpoint Protection のアクションには複数の保護サービスが同時に実行されないように遅延をランダムに発生させる機能が組み込まれています。  
+>  Endpoint Protection クライアントは、Hyper-V を実行しているサーバーと、サポートされているオペレーティング システムを搭載したゲスト仮想マシンにインストールできます。 CPU の過剰使用を避けるため、Endpoint Protection のアクションには複数の保護サービスが同時に実行されないように遅延をランダムに発生させる機能が組み込まれています。  
 
   さらに、Configuration Manager の Endpoint Protection を使用すると、Configuration Manager コンソールで Windows ファイアウォールの設定を管理することができます。  
 

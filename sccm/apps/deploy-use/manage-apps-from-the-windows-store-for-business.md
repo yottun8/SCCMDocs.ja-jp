@@ -2,25 +2,19 @@
 title: ビジネス向け Microsoft Store からのアプリの管理
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager を使用してビジネス向け Microsoft Store からアプリを管理および展開します。
-ms.custom: na
 ms.date: 12/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
-caps.latest.revision: 11
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 89bb52b806c99395bca14be34d06611174823a3c
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+manager: dougeby
+ms.openlocfilehash: 4999784140ece9df49a28063e8660566f7206df0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-with-system-center-configuration-manager"></a>System Center Configuration Manager によるビジネス向け Microsoft Store からのアプリの管理
 [ビジネス向け Microsoft Store ](https://www.microsoft.com/business-store) は、組織向けの Windows アプリを検索して、個別に、または一括で購入できる場所です。 Configuration Manager にストアを接続することで、購入したアプリの一覧と Configuration Manager を同期できます。 同期後、Configuration Manager コンソールでアプリを表示し、他のアプリを展開する場合と同様に展開できます。
@@ -110,7 +104,7 @@ Configuration Manager では、Configuration Manager クライアントを使用
 **ストアのアカウントを Configuration Manager に追加します。**
 
 1. ビジネス向け Microsoft Store から少なくとも 1 つのアプリを購入したことを確認します。 Configuration Manager コンソールの**管理**ワークスペースで、**[Cloud Services]** を展開して、**[ビジネス向け Microsoft Store]** をクリックします。
-2.  **[ホーム]** タブの**[ビジネス向け Microsoft Store]** グループで、**[ビジネス向け Microsoft Store アカウントの追加]** をクリックします。 
+2.  **[ホーム]** タブの **[ビジネス向け Microsoft Store]** グループで、**[ビジネス向け Microsoft Store アカウントの追加]** をクリックします。 
 3.  Azure Active Directory からテナント ID、クライアント ID、クライアント キーを追加し、ウィザードを完了します。
 4. 完了すると、Configuration Manager コンソールの **[ビジネス向け Microsoft Store]** の下にアカウントが表示されます。
 

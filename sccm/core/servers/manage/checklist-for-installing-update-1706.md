@@ -1,26 +1,20 @@
 ---
-title: "1706 のチェックリスト"
+title: 1706 のチェックリスト
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager バージョン 1706 に更新する前に、実行するアクションについて説明します。"
-ms.custom: na
+description: System Center Configuration Manager バージョン 1706 に更新する前に、実行するアクションについて説明します。
 ms.date: 12/19/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7def067e-845c-4db3-9d56-fa1dcf2fd7c7
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: b9acbf4a80bed52f0c720f70ee62042d1e90dd62
-ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: e3a5f04367057510c257b211c302cd5576929a71
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム 1706 をインストールするためのチェックリスト
 
@@ -93,7 +87,7 @@ Windows ADK を更新する前にサイトを更新する場合は、「[ブー�
 
 **サイトと階層の状態を確認して、解決されていない問題がないことを確認する:** サイトを更新する前に、サイト サーバー、サイト データベース サーバー、リモート コンピューターにインストールされているサイト システムの役割で、運用上のすべての問題を解決します。 運用上の問題があると、サイトの更新が失敗する可能性があります。
 
-詳細については、「 [System Center Configuration Manager のアラートとステータス システムの使用](/sccm/core/servers/manage/use-alerts-and-the-status-system)」を参照してください。
+詳細については、「 [Use alerts and the status system for System Center Configuration Manager](/sccm/core/servers/manage/use-alerts-and-the-status-system)」を参照してください。
 
 **サイト間でファイルとデータのレプリケーションを確認する:**   
 サイト間のファイルとデータベースのレプリケーションが機能していて最新の状態であることを確認します。 遅延またはバックログにより、円滑で正常な更新が行われない場合があります。
@@ -149,7 +143,7 @@ Configuration Manager では、ネットワーク負荷分散 (NLB) クラスタ
 **セットアップ前提条件チェッカーを実行する:**   
 更新プログラムが**利用可能**としてコンソールに表示されているとき、更新プログラムのインストール前に、前提条件チェッカーを別個に実行できます。 (サイトへの更新プログラムのインストール時に、前提条件チェッカーが再度実行されます。)
 
-前提条件の確認をコンソールから実行するには、**[管理]、[概要]、[クラウド サービス]、[更新とサービス]** の順に選択します。 次に、**[Configuration Manager 1706 update package ]**\(Configuration Manager 1706 更新プログラム パッケージ\) を右クリックし、**[前提条件チェックを実行]** を選びます。
+前提条件の確認をコンソールから実行するには、**[管理]、[概要]、[クラウド サービス]、[更新とサービス]** の順に選択します。 次に、**[Configuration Manager 1706 update package ]** \(Configuration Manager 1706 更新プログラム パッケージ\) を右クリックし、**[前提条件チェックを実行]** を選びます。
 
 前提条件チェックの開始と監視に関する詳細については、「[System Center Configuration Manager のコンソール内の更新プログラムのインストール](/sccm/core/servers/manage/install-in-console-updates)」トピックの「**手順 3: 更新プログラムをインストールする前の前提条件チェッカーの実行**」を参照してください。
 
@@ -165,7 +159,7 @@ Configuration Manager では、ネットワーク負荷分散 (NLB) クラスタ
 
 ## <a name="post-update-checklist"></a>更新後のチェックリスト
 更新プログラムのインストールが完了した後で以下の作業が行われることを確認します。
-1.  サイト間レプリケーションがアクティブであることを確認します。 コンソールで、**[監視]** > **[サイト階層]** および**[監視]** > **[データベースのレプリケーション]** を表示し、問題が発生していないこと、またはレプリケーション リンクがアクティブであることを確認します。
+1.  サイト間レプリケーションがアクティブであることを確認します。 コンソールで、**[監視]** > **[サイト階層]** および **[監視]** > **[データベースのレプリケーション]** を表示し、問題が発生していないこと、またはレプリケーション リンクがアクティブであることを確認します。
 2.  各サイト サーバーおよびサイト システムの役割がバージョン 1706 に更新されていることを確認します。 コンソールでは、**[サイト]** や **[配布ポイント]** などの一部のノードの表示に、オプションの列 **[バージョン]** を追加できます。
 
  必要な場合は、サイト システムの役割が自動的に再インストールされて、新しいバージョンに更新されます。 正常に更新されないリモート サイト システムは再起動してみます。
@@ -175,6 +169,6 @@ Configuration Manager では、ネットワーク負荷分散 (NLB) クラスタ
 
 ## <a name="known-issues"></a>既知の問題 
 バージョン 1706 に更新すると、SMS_Executive が起動するたびに、次の警告ステータス メッセージが SMS_CERTIFICATE_MANAGER により作成されます。
--    Microsoft SQL Server が SQL メッセージ 515 を報告しました、重大度 16: [23000][515][Microsoft][SQL Server Native Client 11.0][SQL Server] 列 'RowVersion' に値 NULL を挿入できません、テーブル 'CM_GF1.dbo.AAD_SecretChange_Notify'; 列では NULL を使用できません。 [INSERT fails.]\(挿入は失敗します。\)
+-    [Microsoft SQL Server reported SQL message 515, severity 16: [23000][515][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot insert the value NULL into column 'RowVersion', table 'CM_GF1.dbo.AAD_SecretChange_Notify'; column does not allow nulls.]\(Microsoft SQL Server が SQL メッセージ 515 を報告しました、重大度 16: [23000][515][Microsoft][SQL Server Native Client 11.0][SQL Server] 列 'RowVersion' に値 NULL を挿入できません、テーブル 'CM_GF1.dbo.AAD_SecretChange_Notify'; 列では NULL を使用できません。\) [INSERT fails.]\(挿入は失敗します。\)
 
 このメッセージは無視してかまいません。  バージョン 1706 に更新する前にクラウド サービスの使用を構成していなかったときに表示されます。 この問題は、今後のリリースで解決される予定です。

@@ -1,26 +1,20 @@
 ---
-title: "ワイプ、ロック、またはパスコードのリセットを使用したデータの保護"
+title: ワイプ、ロック、またはパスコードのリセットを使用したデータの保護
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager によるフル ワイプ、選択的ワイプ、リモート ロック、パスコードのリセットを使用してデバイスのデータを保護します。"
-ms.custom: na
+description: System Center Configuration Manager によるフル ワイプ、選択的ワイプ、リモート ロック、パスコードのリセットを使用してデバイスのデータを保護します。
 ms.date: 10/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: e8121480f3a9d61ba0a04667407a305119d80e12
-ms.sourcegitcommit: ba23ff90709a5fde1a63c650ab0d848f441afc43
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 670667c21e85d7e5c174c051b6adbdca3eba55a8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>System Center Configuration Manager によるリモート ワイプ、ロック、パスコードのリセットを使用したデータの保護
 

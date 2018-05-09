@@ -1,22 +1,20 @@
 ---
-title: "ソフトウェア更新プログラムのメンテナンス"
+title: ソフトウェア更新プログラムのメンテナンス
 titleSuffix: Configuration Manager
-description: "Configuration Manager の更新プログラムをメンテナンスするには、WSUS クリーンアップ タスクをスケジュールするか、手動で実行します。"
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: Configuration Manager の更新プログラムをメンテナンスするには、WSUS クリーンアップ タスクをスケジュールするか、手動で実行します。
+author: aczechowski
 ms.date: 10/06/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
-ms.openlocfilehash: 51e103b09ced9916fc76f9c87654379b538248b4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 03eabbfcd070bb61b2930fac89a551bbeb111eb4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="software-updates-maintenance"></a>ソフトウェア更新プログラムのメンテナンス
 
@@ -30,4 +28,4 @@ Configuration Manager コンソールから WSUS クリーンアップ タスク
 
 2.  **[設定]** グループで **[サイト コンポーネントの構成]** をクリックし、 **[ソフトウェアの更新ポイント]** をクリックして、ソフトウェアの更新ポイント コンポーネントのプロパティを開きます。  
 
-3.  **[置き換えの規則]** タブをクリックし、 **[WSUS クリーンアップ ウィザードの実行]**を選んでから **[OK]**をクリックします。
+3.  **[置き換えの規則]** タブをクリックし、 **[WSUS クリーンアップ ウィザードの実行]** を選んでから **[OK]** をクリックします。

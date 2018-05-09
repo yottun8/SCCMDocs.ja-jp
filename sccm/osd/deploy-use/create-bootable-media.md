@@ -1,26 +1,20 @@
 ---
-title: "起動可能なメディアの作成 "
+title: 起動可能なメディアの作成
 titleSuffix: Configuration Manager
-description: "Configuration Manager の起動可能なメディアは、新しいバージョンの Windows のインストールや、コンピューターの置き換えおよび設定の転送を容易にします。"
-ms.custom: na
+description: Configuration Manager の起動可能なメディアは、新しいバージョンの Windows のインストールや、コンピューターの置き換えおよび設定の転送を容易にします。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ead79e64-1b63-4d0d-8bd5-addff8919820
-caps.latest.revision: "11"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: f0dd624259e4f1b2a0bd14112a2cd25bb7a38767
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: d3b2ce474488ebf02c3a3c4a82def91d706b6bfc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-bootable-media-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用した起動可能なメディアの作成
 
@@ -75,7 +69,7 @@ Configuration Manager の起動可能なメディアには、ブート イメー
     > [!IMPORTANT]  
     >  スタンドアロン メディアでは FAT32 ファイル システムが使用されています。 スタンドアロン メディアは、サイズが 4 GB を超えるコンテンツが入っている USB フラッシュ ドライブには作成できません。  
 
-    -   **[USB フラッシュ ドライブ]**を選択した場合は、コンテンツを保存するドライブを指定します。  
+    -   **[USB フラッシュ ドライブ]** を選択した場合は、コンテンツを保存するドライブを指定します。  
 
     -   **CD/DVD セット**を選択した場合は、メディアの容量および出力ファイルの名前とパスを指定します。 この場所に出力ファイルが書き込まれます。 例: **\\\servername\folder\outputfile.iso**  
 
@@ -84,7 +78,7 @@ Configuration Manager の起動可能なメディアには、ブート イメー
         > [!IMPORTANT]  
         >  既存の .iso イメージを選択した場合は、タスク シーケンス メディア ウィザードの次のページに進むと、ドライブまたは共有フォルダーからイメージが削除されます。 既存のイメージは、ウィザードをキャンセルしても削除されます。  
 
-     **[次へ]**をクリックします。  
+     **[次へ]** をクリックします。  
 
 7.  **[セキュリティ]** ページで次のオプションを指定し、**[次へ]** をクリックします。  
 
@@ -131,7 +125,7 @@ Configuration Manager の起動可能なメディアには、ブート イメー
 
     -   ウィザードの **[メディア管理]** ページでサイトベースの起動可能なメディアを作成する場合は、 **[管理ポイント]** ボックスでプライマリ サイトの管理ポイントを指定します。  
 
-    -   ウィザードの **[メディア管理]** ページで動的起動可能メディアを作成する場合は、 **[関連付けられている管理ポイント]**ボックスで、使用するプライマリ サイトの管理ポイントと、初期通信での優先順位を指定します。  
+    -   ウィザードの **[メディア管理]** ページで動的起動可能メディアを作成する場合は、 **[関連付けられている管理ポイント]** ボックスで、使用するプライマリ サイトの管理ポイントと、初期通信での優先順位を指定します。  
 
 9. **[カスタマイズ]** ページで、次のオプションを指定してから、**[次へ]** をクリックします。  
 

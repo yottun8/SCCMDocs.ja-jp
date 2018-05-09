@@ -1,26 +1,20 @@
 ---
-title: "1610 のチェックリスト"
+title: 1610 のチェックリスト
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager バージョン 1610 に更新する前に、実行するアクションについて説明します。"
-ms.custom: na
+description: System Center Configuration Manager バージョン 1610 に更新する前に、実行するアクションについて説明します。
 ms.date: 6/6/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7b411cb0-4fd1-41f2-a2f6-33738a5bde96
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: c0746dc168394cda88bad682fc3ba185e83758f7
-ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 31367d3db55f64c375d451f2f08c8981ecfcb3d0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checklist-for-installing-update-1610-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム 1610 をインストールするためのチェックリスト
 
@@ -83,7 +77,7 @@ Current Branch バージョンの詳細については、「[System Center Confi
 
 **サイトと階層の状態を確認して、解決されていない問題がないことを確認する:** サイトを更新する前に、サイト サーバー、サイト データベース サーバー、リモート コンピューターにインストールされているサイト システムの役割で、運用上のすべての問題を解決します。 運用上の問題があると、サイトの更新が失敗する可能性があります。
 
-詳細については、「 [System Center Configuration Manager のアラートとステータス システムの使用](/sccm/core/servers/manage/use-alerts-and-the-status-system)」を参照してください。
+詳細については、「 [Use alerts and the status system for System Center Configuration Manager](/sccm/core/servers/manage/use-alerts-and-the-status-system)」を参照してください。
 
 **サイト間でファイルとデータのレプリケーションを確認する:**   
 サイト間のファイルとデータベースのレプリケーションが機能していて最新の状態であることを確認します。 遅延またはバックログにより、円滑で正常な更新が行われない場合があります。

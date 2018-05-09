@@ -1,25 +1,20 @@
 ---
-title: "ユーザー補助"
+title: ユーザー補助
 titleSuffix: Configuration Manager
-description: "障碍のあるユーザーに System Center Configuration Manager を利用してもらうための機能について説明します。"
-ms.custom: na
+description: 障碍のあるユーザーに System Center Configuration Manager を利用してもらうための機能について説明します。
 ms.date: 7/31/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
-caps.latest.revision: "6"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 8a56e14f1c366bb4e2218428c0e93b60aa13e015
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: fc0e7b81b4b46502e4477f098bdc129b0491be69
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accessibility-features-in-system-center-configuration-manager"></a>System Center Configuration Manager のユーザー補助機能
 
@@ -95,7 +90,7 @@ System Center Configuration Manager には、障碍のあるユーザーに利�
 |前に表示した一連のトピックの次のトピックを表示する|Alt + O、続けて F キーを選択|  
 |指定されているホーム ページに戻る|Alt + O、続けて H キーを選択|  
 |ヘルプ ウィンドウでヘルプ トピックが開かないようにする (Web ページのダウンロードを止める場合など)|Alt + O、続けて S キーを選択|  
-|ユーザー補助機能の設定を変更できる、Microsoft Internet Explorer の**[インターネット オプション]** ダイアログ ボックスを開く|Alt + O、続けて I キーを選択|  
+|ユーザー補助機能の設定を変更できる、Microsoft Internet Explorer の **[インターネット オプション]** ダイアログ ボックスを開く|Alt + O、続けて I キーを選択|  
 |リンクされている Web ページなど、トピックを更新する|Alt + O、続けて R キーを選択|  
 |ヘルプの全トピックまたは選択したトピックのみを印刷する|Alt + O、続けて P キーを選択|  
 |ヘルプ ウィンドウを閉じる|Alt + F4|  

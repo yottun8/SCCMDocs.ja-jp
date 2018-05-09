@@ -2,26 +2,19 @@
 title: コンテンツ管理の基礎
 titleSuffix: Configuration Manager
 description: Configuration Manager のツールとオプションを使用して、展開するコンテンツを管理します。
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
-caps.latest.revision: 28
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0595e34d096b2d7f6450b3255bae03ae3aa57862
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 5dfe33e7182eae158c15afb848d3a9f1702678ba
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamental-concepts-for-content-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのコンテンツ管理の基本的な概念
 
@@ -154,7 +147,7 @@ Configuration Manager で新しい OS を展開するとき、タスク シー�
 - この転送を制御するには、**スケジュール**や**帯域幅調整**などのコントロールを使います。  
 - ネットワークの消費量を最小限にして制御するには、**事前設定されたコンテンツ**や**プル配布ポイント**などのコントロールを使います。 
 - **BranchCache**、**ピア キャッシュ**、および**配信の最適化**は、コンテンツを展開するときに使われるネットワーク帯域幅を削減するためのピア ツー ピア テクノロジです。  
-- OS の展開には、**[PXE](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)** や**[マルチキャスト](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast)**など、さまざまな構成があります
+- OS の展開には、**[PXE](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)** や**[マルチキャスト](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast)** など、さまざまな構成があります
 - **モバイル デバイス**のオプション   
   
   

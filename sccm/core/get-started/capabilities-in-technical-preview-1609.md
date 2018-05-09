@@ -2,25 +2,19 @@
 title: Technical Preview 1609 の機能
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager の Technical Preview バージョン 1609 で使用できる機能について説明します。
-ms.custom: na
 ms.date: 01/23/2017
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: e2a59116-b2e5-4dd2-90eb-0b8a5eb50b56
-caps.latest.revision: 2
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 4beca8479e5adbfa24b597769b792fd91bed9a2c
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 3cfd7131f5b6fb721fdc96c6486183d3781af9d6
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1609-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1609 の機能
 
@@ -345,7 +339,7 @@ Intune で Configuration Manager を使用すると、OMA-URI を使用しなく
 ## <a name="office-365-client-management-dashboard"></a>Office 365 クライアント管理ダッシュボード  
 Configuration Manager の Technical Preview 1609 では、新しいダッシュボードが導入されています。 このダッシュボードを表示するには、Configuration Manager コンソールで **[ソフトウェア ライブラリ]** > **[概要]** > **[Office 365 クライアント管理]** に移動します。
 >[!NOTE]
->Configuration Manager コンソールの **[新着情報 ]** ワークスペースでは、新しいダッシュボードが正しくない名前の **[Office 365 サービス ダッシュボード]** と書かれています。
+>Configuration Manager コンソールの **[新着情報]** ワークスペースでは、新しいダッシュボードが正しくない名前の **[Office 365 サービス ダッシュボード]** と書かれています。
 
 ダッシュボードには、次のチャートが表示されます。
 
@@ -384,7 +378,7 @@ Office 365 ProPlus の更新プログラムの詳細については、「[Manage
 
 5. **[クライアント プロダクト]** ページで、使用する Office 365 スイートを選び、含めたいアプリケーションを選び、含める必要がある追加の Office 製品を選び、**[次へ]** をクリックします。
 6. **[クライアント設定]** ページで、含める設定を選び、**[次へ]** をクリックします。
-7. **[展開]** ページで、アプリケーションを展開するかどうかを選び**[次へ]** をクリックします。
+7. **[展開]** ページで、アプリケーションを展開するかどうかを選び **[次へ]** をクリックします。
 ウィザードでパッケージを展開しないことを選択した場合は、ステップ 9 に進みます。
 8. 一般的なアプリケーション展開の場合と同様に、ウィザードの残りのページを構成します。 詳細については、「[アプリケーションの作成と展開](/sccm/apps/get-started/create-and-deploy-an-application)」を参照してください。
 9. ウィザードを完了します。
@@ -419,10 +413,10 @@ Office 365 ProPlus の更新プログラムの詳細については、「[Manage
 
 
 ## <a name="intune-compliance-charts"></a>Intune 準拠チャート
-このリリースでは、Configuration Manager コンソールの**[監視]** ワークスペースで新しいチャートを使用して、デバイスの全体の準拠と非準拠の主な理由をすばやく表示することができます。
+このリリースでは、Configuration Manager コンソールの **[監視]** ワークスペースで新しいチャートを使用して、デバイスの全体の準拠と非準拠の主な理由をすばやく表示することができます。
 
 #### <a name="to-view-the-intune-compliance-charts"></a>Intune 準拠チャートを表示するには
-1. Configuration Manager コンソールで **[監視]** > **[概要]** > **[コンプライアンス設定]**に移動します。
+1. Configuration Manager コンソールで **[監視]** > **[概要]** > **[コンプライアンス設定]** に移動します。
 2. **デバイスの全体の準拠**チャートが表示されます。
 3. **[コンプライアンス ポリシー]** をクリックして、**デバイスの全体の準拠**チャートと**非準拠の主な理由**チャートを表示します。
 

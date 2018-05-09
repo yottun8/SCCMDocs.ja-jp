@@ -2,25 +2,19 @@
 title: サポートされている SQL Server のバージョン
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager サイト データベースをホストするための SQL Server のバージョンおよび構成要件を取得します。
-ms.custom: na
 ms.date: 02/14/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
-caps.latest.revision: 21
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0e1cafc9b1900dd370cb8dac80f5a02fbb3d12dc
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 48faef82ade8cf8dc1f9397a5029d96db1a68555
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager のサポートされている SQL Server バージョン
 
@@ -66,7 +60,7 @@ SQL Server のトランザクション レプリケーションは、[データ�
 
 
 
- 特に指定のない限り、次のバージョンの SQL Server はすべてのアクティブ バージョンの System Center Configuration Manager でサポートされます。 新しい SQL Server バージョンまたは Service Pack のサポートが追加されている場合、そのサポートを追加する Configuration Manager バージョンが示されます。 同様に、サポートが推奨されていない場合は、Configuration Manager の影響を受けるバージョンの詳細を確認してください。   
+ 特に指定のない限り、次のバージョンの SQL Server はすべてのアクティブ バージョンの System Center Configuration Manager でサポートされます。 新しい SQL Server バージョンまたは Service Pack のサポートが追加されている場合、そのサポートを追加する Configuration Manager バージョンが示されます。 同様に、サポートが非推奨とされる場合は、Configuration Manager の影響を受けるバージョンの詳細を確認してください。   
 
 特定の SQL Server Service Pack のサポートには、基本の Service Pack バージョンへの後方互換性が失われる場合を除き、累積的な更新プログラムが含まれます。 Service Pack のバージョンが示されない場合、サポートは、そのバージョンの Service Pack なしの SQL Server に対するものです。 今後、SQL Server バージョンの Service Pack がリリースされた場合、新しい Service Pack バージョンがサポートされる前に、別のサポート ステートメントが宣言されます。
 
@@ -208,7 +202,7 @@ Configuration Manager バージョンでサポートされている場合は、�
  サイトごとに専用の SQL Server のインスタンスを使用する必要があります。 インスタンスには、**名前付きインスタンス** か**既定のインスタンス**を使用できます。  
 
  **SQL Server のメモリ**  
- SQL Server Management Studio を使用して、 **[サーバー メモリ オプション]** で **[最小サーバー メモリ]**設定を指定して、SQL Server のメモリを予約します。 これを設定する方法については、「[固定量のメモリを設定する方法 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759)」を参照してください。  
+ SQL Server Management Studio を使用して、 **[サーバー メモリ オプション]** で **[最小サーバー メモリ]** 設定を指定して、SQL Server のメモリを予約します。 これを設定する方法については、「[固定量のメモリを設定する方法 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759)」を参照してください。  
 
 -   **サイト サーバーと同じコンピューターにインストールされたデータベース サーバーの場合** SQL Server 用のメモリをアドレス可能なシステム メモリの 50% から 80% に制限します。  
 

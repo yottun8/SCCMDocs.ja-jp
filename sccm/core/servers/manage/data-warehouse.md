@@ -2,25 +2,19 @@
 title: データ ウェアハウス
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager のデータ ウェアハウス サービス ポイントとデータベース
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
-caps.latest.revision: ''
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 02a3c672c95587aeecd41e804b32981104896923
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 6d6e1850c07207205cad696918f7cd4eb97d3ec8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>System Center Configuration Manager のデータ ウェアハウス サービス ポイント
 *適用対象: System Center Configuration Manager (Current Branch)*
@@ -168,7 +162,7 @@ ms.lasthandoff: 04/16/2018
 
     1. IIS を開き、**[サーバー証明書]** をクリックして、**[自己署名証明書の作成]** を右クリックし、証明書名の "フレンドリ名" を **Data Warehouse SQL Server Identification Certificate (データ ウェアハウス SQL サーバーの識別証明書)** に指定します。 証明書ストアを **[個人]** として選択します。
     2. **[SQL Server Configuration Manager]** を開き、**[SQL Server ネットワークの構成]** で **[MSSQLSERVER のプロトコル]** を右クリックし、**[プロパティ]** を選択します。 次に、**[証明書]** タブで **[Data Warehouse SQL Server Identification Certificate]\(データ ウェアハウス SQL サーバーの識別証明書)** を証明書として選択し、変更を保存します。  
-    3. **[SQL Server 構成マネージャー]**を開きます。 **[SQL Server サービス]** で、**SQL Server サービス**と**レポート サービス**を開始し直します。
+    3. **[SQL Server 構成マネージャー]** を開きます。 **[SQL Server サービス]** で、**SQL Server サービス**と**レポート サービス**を開始し直します。
     4.  Microsoft 管理コンソール (MMC) を開き、**証明書**のスナップインを追加して、ローカル コンピューターの**コンピューター アカウント**の証明書の管理を選択します。 次に、MMC で、**[個人用]** フォルダー > **[証明書]** を展開し、**Data Warehouse SQL Server Identification Certificate (データ ウェアハウス SQL サーバーの識別証明書)** を **DER encoded binary X.509 (.CER)** ファイルとしてエクスポートします。    
   2.    SQL Server Reporting Services をホストするコンピューターで、MMC を開いて**証明書**のスナップインを追加します。 次に、**コンピューター アカウント**の証明書の管理を選択します。 **[信頼されたルート証明機関]** フォルダーで、**Data Warehouse SQL Server Identification Certificate (データ ウェアハウス SQL サーバーの識別証明書)** をインポートします。
 

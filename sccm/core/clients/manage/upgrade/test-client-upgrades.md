@@ -1,26 +1,20 @@
 ---
-title: "実稼働前コレクションのクライアント アップグレードをテストする"
+title: 実稼働前コレクションのクライアント アップグレードをテストする
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストします。"
-ms.custom: na
+description: System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストします。
 ms.date: 05/04/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
-caps.latest.revision: "10"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: e301c3df57d3f625157015692374e512e00dfc60
-ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 019b275177e1f264a4bfc2926cfe45ebd0be8eae
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-test-client-upgrades-in-a-pre-production-collection-in-system-center-configuration-manager"></a>System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストする方法
 
@@ -47,9 +41,9 @@ ms.lasthandoff: 11/01/2017
 
 1.  Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** > **[サイト]** の順に選択し、**[階層設定]** を選択します。  
 
-     **[階層設定のプロパティ]** の **[クライアント アップグレード]**タブで次の操作を実行します。  
+     **[階層設定のプロパティ]** の **[クライアント アップグレード]** タブで次の操作を実行します。  
 
-    -   **[実稼働前クライアントを使用して実稼働前コレクション内のすべてのクライアントを自動的にアップグレードする]**を選びます。  
+    -   **[実稼働前クライアントを使用して実稼働前コレクション内のすべてのクライアントを自動的にアップグレードする]** を選びます。  
 
     -   実稼働前コレクションとして使用するコレクションの名前を入力します。  
 
@@ -65,11 +59,11 @@ ms.lasthandoff: 11/01/2017
 
      更新プログラムのインストールの詳細については、「[System Center Configuration Manager の更新プログラム](../../../../core/servers/manage/updates.md)」を参照してください  
 
-2.  更新プログラムのインストール中に、ウィザードの **[クライアント オプション]** ページで **[実稼働前コレクションでのテスト]**を選択します。  
+2.  更新プログラムのインストール中に、ウィザードの **[クライアント オプション]** ページで **[実稼働前コレクションでのテスト]** を選択します。  
 
 3.  ウィザードの残りの手順を完了し、更新パックをインストールします。  
 
-     ウィザードを完了すると、実稼働前コレクション内のクライアントが、更新されたクライアントの展開を開始します。 **[監視]** > **[クライアント ステータス]** > **[実稼働前クライアント展開]**と移動して、アップグレード済みのクライアントの展開を監視できます。 詳細については、「[System Center Configuration Manager でクライアントの展開ステータスを監視する方法](../../../../core/clients/deploy/monitor-client-deployment-status.md)」を参照してください。
+     ウィザードを完了すると、実稼働前コレクション内のクライアントが、更新されたクライアントの展開を開始します。 **[監視]** > **[クライアント ステータス]** > **[実稼働前クライアント展開]** と移動して、アップグレード済みのクライアントの展開を監視できます。 詳細については、「[System Center Configuration Manager でクライアントの展開ステータスを監視する方法](../../../../core/clients/deploy/monitor-client-deployment-status.md)」を参照してください。
 
     > [!NOTE]
     > 実稼働前コレクションでサイト システムの役割をホストしているコンピューターの展開ステータスは、クライアントが正常に展開された場合でも、**非対応**と報告されることがあります。 クライアントを実稼働環境に昇格すると、展開のステータスが正しく報告されます。
@@ -79,7 +73,7 @@ ms.lasthandoff: 11/01/2017
 1.  Configuration Manager コンソールで、**[管理]** > **[更新とサービス]** の順に開き、**[実稼働前クライアントの昇格]** を選択します  (1702 より前のバージョンでは、[更新とサービス] は、**[管理]** > **[クラウド サービス]** にありました)。
 
     > [!TIP]
-    > **[実稼働前クライアントの昇格]** ボタンは、コンソールの **[監視]** > **[クライアント ステータス]** > **[実稼働前クライアント展開]**で、クライアント展開を監視中である場合も使用することができます。
+    > **[実稼働前クライアントの昇格]** ボタンは、コンソールの **[監視]** > **[クライアント ステータス]** > **[実稼働前クライアント展開]** で、クライアント展開を監視中である場合も使用することができます。
 
 2.  実稼働および実稼働前のクライアント バージョンを確認し、正しい実稼働前コレクションが指定されていることを確認して、**[昇格]**、**[はい]** の順にクリックします。  
 

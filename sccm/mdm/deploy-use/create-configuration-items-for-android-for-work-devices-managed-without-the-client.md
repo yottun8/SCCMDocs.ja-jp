@@ -1,43 +1,18 @@
 ---
-title: "Intune で管理されている Android for Work デバイスの構成項目を作成する方法"
+title: Intune で管理されている Android for Work デバイスの構成項目を作成する方法
 titleSuffix: Configuration Manager
-ms.custom: na
 ms.date: 2017-07-31
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: ab6784fd-8c57-4be9-858f-50fe39f2ff5f
-caps.latest.revision: "17"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-translation.priority.ht:
-- cs-cz
-- de-de
-- en-gb
-- es-es
-- fr-fr
-- hu-hu
-- it-it
-- ja-jp
-- ko-kr
-- nl-nl
-- pl-pl
-- pt-br
-- pt-pt
-- ru-ru
-- sv-se
-- tr-tr
-- zh-cn
-- zh-tw
-ms.openlocfilehash: 8170348da6151088580645154b8975355d470731
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+ms.openlocfilehash: ba70e4d3a87f2a305312449907730174c62c4775
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-android-for-work-devices-managed-with-intune"></a>Intune で管理されている Android for Work デバイスの構成項目を作成する方法
 
@@ -47,22 +22,22 @@ ms.lasthandoff: 10/12/2017
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
 
-2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ コンプライアンス設定 ]** を展開して、**[ 構成項目 ]** をクリックします。  
+2.  **[資産とコンプライアンス]** ワークスペースで **[コンプライアンス設定]** を展開して、**[構成項目]** をクリックします。  
 
-3.  **[ ホーム ]** タブの **[ 作成 ]** グループで、**[ 構成項目の作成 ]** をクリックします。  
+3.  **[ホーム]** タブの **[作成]** グループで、**[構成項目の作成]** をクリックします。  
 
-4.  **構成項目の作成ウィザード** の **[全般]**ページで、構成項目の名前と、必要に応じて説明を入力します。  
+4.  **構成項目の作成ウィザード** の **[全般]** ページで、構成項目の名前と、必要に応じて説明を入力します。  
 
 5.  **[作成する構成項目の種類の指定]** で、**[Android for Work]** を選びます。  
 
 6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、**[カテゴリ]** を選択します。  
 
-  **[次へ]**をクリックします。
+  **[次へ]** をクリックします。
 
 7.  ウィザードの **[デバイスの設定]** ページで、構成する設定グループを選択します。 詳細については、「[Android for Work の構成項目設定のリファレンス](#android-for-work-configuration-item-settings-reference)」を参照してください。選択したら、**[次へ]** をクリックします。  
 
   > [!TIP]  
-  >  必要な設定が一覧にない場合は、 **[既定の設定グループに含まれない追加の設定を構成する]**チェック ボックスをオンにします。  
+  >  必要な設定が一覧にない場合は、 **[既定の設定グループに含まれない追加の設定を構成する]** チェック ボックスをオンにします。  
 
 9. 各設定ページで、必要な設定と、その設定がデバイスに対応していないときにその設定を修正するかどうかを構成します (これがサポートされている場合)。  
 
@@ -91,7 +66,7 @@ ms.lasthandoff: 10/12/2017
 
 ### <a name="password"></a>パスワード  
 
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**デバイスのパスワードの設定が必要**|サポート対象デバイスのパスワードが必要です。|  
 |**パスワードの最小文字数**|パスワードの最小の長さ。|  
@@ -106,7 +81,7 @@ ms.lasthandoff: 10/12/2017
 ###  <a name="work-profile"></a>仕事用プロファイル  
  これらの設定は、Samsung KNOX デバイスのみに適用されます。  
 
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**仕事用プロファイルと個人プロファイル間でのデータ共有を許可する**|次の中から選択します。<br>- **未構成**<br>- **既定の共有制限**<br>- **仕事用プロファイル内のアプリで、個人プロファイルからの共有要求の処理を許可する**<br>- **個人プロファイル内のアプリで、仕事用プロファイルからの共有要求の処理を許可する**<br><br>(カスタム URI を使用する「[コピーと貼り付け構成項目設定](#copy-paste-configuration-item-settings)」も参照してください)|  
 |**デバイスがロックされているときに仕事用プロファイルの通知を表示しない (Android 6.0 以上)**||

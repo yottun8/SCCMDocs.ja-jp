@@ -2,25 +2,19 @@
 title: Windows Defender Advanced Threat Protection
 titleSuffix: Configuration Manager
 description: 企業が高度な攻撃に対応するための新しいサービスである Windows Defender Advanced Threat Protection を管理および監視する方法について説明します。
-ms.custom: na
 ms.date: 03/07/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
-caps.latest.revision: 5
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 84786d741eda2be24a7deb39478e68c68adc38fe
-ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 10d746f88d0e7b869e2b73d389944f3b382d687d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender Advanced Threat Protection
 
@@ -53,9 +47,9 @@ Windows Defender ATP は、[Windows Defender セキュリティ センター](ht
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[概要]** > **[Endpoint Protection]** > **[Windows Defender ATP ポリシー]** の順に移動し、**[Windows Defender ATP ポリシーの作成]** をクリックします。 Windows Defender ATP ポリシーの作成ウィザードが開きます。  
 
-2.  Windows Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、**[オンボード]** を選択します。 **[次へ]**をクリックします。  
+2.  Windows Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、**[オンボード]** を選択します。 **[次へ]** をクリックします。  
 
-3.  組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 **[次へ]**をクリックします。  
+3.  組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 **[次へ]** をクリックします。  
 
 4.  管理対象のデバイスから分析用に収集され共有されるファイルのサンプルを指定します。  
 
@@ -100,9 +94,9 @@ Windows Defender ATP は、[Windows Defender セキュリティ センター](ht
 
 5.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[概要]** > **[Endpoint Protection]** > **[Windows Defender ATP ポリシー]** の順に移動し、**[Windows Defender ATP ポリシーの作成]** をクリックします。 Windows Defender ATP ポリシーの作成ウィザードが開きます。  
 
-6.  Windows Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、**[オフボード]** を選択します。 **[次へ]**をクリックします。  
+6.  Windows Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、**[オフボード]** を選択します。 **[次へ]** をクリックします。  
 
-7.  組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 **[次へ]**をクリックします。  
+7.  組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 **[次へ]** をクリックします。  
 
 8.  概要を確認して、ウィザードを完了します。  
 

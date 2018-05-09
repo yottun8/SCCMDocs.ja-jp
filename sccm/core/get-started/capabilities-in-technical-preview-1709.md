@@ -1,25 +1,20 @@
 ---
 title: Technical Preview 1709
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1709 で使用できる機能について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の Technical Preview バージョン 1709 で使用できる機能について説明します。
 ms.date: 09/28/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: a3ef6bdc-a204-4c4c-a02f-2bd03f35183e
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: f0acc5ae0d8207dce92c56a4c80e8321faf51393
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 74ffd06f8b9786d627dc7fd9cecb15215228313d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1709 の機能
 
@@ -37,8 +32,8 @@ ms.lasthandoff: 12/01/2017
 -   **サイト サーバーがパッシブ モードの場合、プレビュー バージョン 1709 への更新に失敗します**。 プレビュー バージョン 1706、1707、または 1708 を実行し、[プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)の場合、プレビュー サイトをバージョン 1709 に正常に更新するには、パッシブ モードのサイト サーバーをアンインストールする必要があります。 パッシブ モードのサイト サーバーは、サイトでバージョン 1709 が実行された後に再インストールできます。
 
   パッシブ モードのサイト サーバーをアンインストールするには、次の手順を実行します。
-  1. コンソールで**[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
-  2. **[サイト システムの役割]** ウィンドウで、**[サイト サーバー]**の役割を右クリックし、**[役割の削除]** を選択します。
+  1. コンソールで **[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
+  2. **[サイト システムの役割]** ウィンドウで、**[サイト サーバー]** の役割を右クリックし、**[役割の削除]** を選択します。
   3. パッシブ モードのサイト サーバーを右クリックし、**[削除]** を選択します。
   4. サイト サーバーのアンインストール後に、アクティブなプライマリ サイト サーバーで **CONFIGURATION_MANAGER_UPDATE** のサービスを再起動します。
 
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/01/2017
 <!-- 1350871 -->
 多くのユーザーは、モバイル デバイスを管理する場合と同じ低コストで簡単なクラウド ベースのソリューションを使って、Windows 10 デバイスを管理することを望んでいます。 ただし、従来の管理から最新の管理への移行は困難な場合があります。 Windows 10 バージョン 1607 (Anniversary Update とも呼ばれます) より、Windows 10 デバイスをオンプレミスの Active Directory (AD) とクラウドベースの Azure AD (ハイブリッド Azure AD) に同時に結合できるようになりました。 共同管理ではこの機能強化を活用し、Configuration Manager と Intune の両方を使用して複数の Windows 10 デバイスを同時に管理できます。 これは、従来の管理から最新の管理への橋渡しとなるソリューションであり、段階的なアプローチを使って移行する方向を提示します。 
 
-### <a name="prerequisites"></a>必要条件
+### <a name="prerequisites"></a>[前提条件]
 共同管理を有効にする前に、次の前提条件が満たされている必要があります。 一般的な前提条件のほか、既存の Configuration Manager クライアントとクライアント以外のデバイスで異なる前提条件があります。
 
 ### <a name="known-issues"></a>既知の問題

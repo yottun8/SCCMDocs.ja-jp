@@ -1,27 +1,20 @@
 ---
-title: "スタンドアロン メディアの作成"
+title: スタンドアロン メディアの作成
 titleSuffix: Configuration Manager
-description: "ネットワークに接続せずにコンピューターにオペレーティング システムを展開するには、スタンドアロン メディアを使用します。"
-ms.custom: na
+description: ネットワークに接続せずにコンピューターにオペレーティング システムを展開するには、スタンドアロン メディアを使用します。
 ms.date: 02/09/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
-caps.latest.revision: 
-caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 587804b026f01f25754a10f35967d18d0b8d471d
-ms.sourcegitcommit: fbde417e3c3002898bd216a7e110e725ae269893
+ms.openlocfilehash: 35dd110c2566dab945bb0701e113becb3412d65c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-stand-alone-media-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用したスタンドアロン メディアを作成する
 
@@ -115,7 +108,7 @@ Configuration Manager のスタンドアロン メディアには、ネットワ
          > [!IMPORTANT]  
          >  既存の .iso イメージを選択した場合は、タスク シーケンス メディア ウィザードの次のページに進むと、ドライブまたは共有フォルダーからイメージが削除されます。 既存のイメージは、ウィザードをキャンセルしても削除されます。  
 
-     **[次へ]**をクリックします。  
+     **[次へ]** をクリックします。  
 
 6.  **[セキュリティ]** ページで、次のいずれかの設定を選び、**[次へ]** をクリックします。
     - **[メディアをパスワードで保護する]**: 強力なパスワードを入力してメディアを保護します。 パスワードを指定した場合は、メディアを使用する際にパスワードが必要になります。  

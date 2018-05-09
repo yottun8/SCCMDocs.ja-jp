@@ -1,26 +1,20 @@
 ---
-title: "オブジェクトの移行"
+title: オブジェクトの移行
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager 環境での階層間でオブジェクトの移行を計画する方法について説明します。"
-ms.custom: na
+description: System Center Configuration Manager 環境での階層間でオブジェクトの移行を計画する方法について説明します。
 ms.date: 1/12/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
-caps.latest.revision: "7"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 6e046ed675614f15f2ea1a03ff3cf86f295da2da
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 0e42b7c8db3ef8c6d645d29f371fd6da475159bd
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-system-center-configuration-manager"></a>Configuration Manager オブジェクトの System Center Configuration Manager への移行の計画
 

@@ -1,25 +1,20 @@
 ---
-title: "デバイス コンプライアンスの保証"
+title: デバイス コンプライアンスの保証
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager を使用して、組織内のデバイスの構成とコンプライアンスを管理します。"
-ms.custom: na
+description: System Center Configuration Manager を使用して、組織内のデバイスの構成とコンプライアンスを管理します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 7568c9aa-b99e-4466-bfc8-0301aa376930
-caps.latest.revision: "8"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 27738aa8587d8930781bc5f70248c8c994227851
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 42b3925fa94ae1672e4241a3cddc66cdc1774aaf
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>System Center Configuration Manager でのデバイス コンプライアンスの確認
 

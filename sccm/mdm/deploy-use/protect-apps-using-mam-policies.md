@@ -2,26 +2,19 @@
 title: モバイル アプリケーション管理ポリシーを使用したアプリの保護
 titleSuffix: Configuration Manager
 description: 会社のコンプライアンスとセキュリティ ポリシーに従うように展開するアプリの機能を変更します。
-ms.custom: na
 ms.date: 11/20/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 28115475-e563-4e16-bf30-f4c9fe704754
-caps.latest.revision: 18
-caps.handback.revision: 0
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 3365f46026178d30c9bffa5078d251186d0ffba3
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: e410e50d05a0f190e3dfdc87df066b5ebce92321
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager のモバイル アプリケーション管理ポリシーを使ったアプリの保護
 
@@ -69,7 +62,7 @@ System Center Configuration Manager アプリケーション管理ポリシー�
 
 3.  **[ホーム]** タブの **[作成]** グループで **[アプリケーションの作成]** を選択して**アプリケーションの作成**ウィザードを開きます。  
 
-4.  **[全般]** ページで、 **[このアプリケーションの情報をインストール ファイルから自動的に検出する]**を選択します。  
+4.  **[全般]** ページで、 **[このアプリケーションの情報をインストール ファイルから自動的に検出する]** を選択します。  
 
 5.  **[種類]** ドロップダウン リストで、**[iOS アプリケーション パッケージ (\*.ipa ファイル)]** を選びます。  
 
@@ -87,7 +80,7 @@ System Center Configuration Manager アプリケーション管理ポリシー�
 
 3.  **[ホーム]** タブの **[作成]** グループで **[アプリケーションの作成]** を選択して**アプリケーションの作成**ウィザードを開きます。  
 
-4.  **[全般]** ページで、 **[このアプリケーションの情報をインストール ファイルから自動的に検出する]**を選択します。  
+4.  **[全般]** ページで、 **[このアプリケーションの情報をインストール ファイルから自動的に検出する]** を選択します。  
 
 5.  **[種類]** ドロップダウン リストから、次のいずれかを選択します。  
 

@@ -1,26 +1,20 @@
 ---
-title: "展開先のコンピューターにユーザーを関連付ける"
+title: 展開先のコンピューターにユーザーを関連付ける
 titleSuffix: Configuration Manager
-description: "オペレーティング システムを展開するときに、ユーザーをセットアップ先のコンピューターと関連付けるように、System Center Configuration Manager を構成します。"
-ms.custom: na
+description: オペレーティング システムを展開するときに、ユーザーをセットアップ先のコンピューターと関連付けるように、System Center Configuration Manager を構成します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 07c3c6d9-f056-4c4d-bc70-ede5ca933807
-caps.latest.revision: "9"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: a6aa06da33cbc537db30c7c885d9ca449ff7221c
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 2a4065b0e6774160efb6be22fe2ec8268c60d6ed
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="associate-users-with-a-destination-computer-in-system-center-configuration-manager"></a>System Center Configuration Manager でユーザーをセットアップ先のコンピューターに関連付ける
 

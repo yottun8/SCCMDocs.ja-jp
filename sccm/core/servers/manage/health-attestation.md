@@ -1,25 +1,20 @@
 ---
-title: "正常性構成証明書"
+title: 正常性構成証明書
 titleSuffix: Configuration Manager
-description: "Configuration Manager コンソールに表示できるデバイス正常性構成証明書の機能について説明します。"
-ms.custom: na
+description: Configuration Manager コンソールに表示できるデバイス正常性構成証明書の機能について説明します。
 ms.date: 10/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
-caps.latest.revision: "17"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 4b9ce2aad95036e12167626897052de23cc937ae
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: c41a04d82edb46a234b6e5bd10d796e6544cbfad
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="health-attestation-for-system-center-configuration-manager"></a>System Center Configuration Manager の正常性構成証明書
 
@@ -47,8 +42,8 @@ ms.lasthandoff: 10/12/2017
 次の手順を使用して、インターネットに接続するデバイスのデバイス正常性構成証明書の監視を有効にします。
 
 1.  Configuration Manager コンソールで、**[管理]**  >  **[概要]**  >  **[クライアント設定]** を選択します。  **[コンピューター エージェント]** 設定のタブを選択します。  
-2.  **[既定の設定]** ダイアログ ボックスで、 **[コンピューター エージェント]** を選択して、 **[正常性構成証明書サービスとの通信を有効にする]**まで下にスクロールします。  
-3.  **[正常性構成証明書サービスとの通信を有効にする]** を **[はい]**に設定し、 **[OK]**をクリックします。  
+2.  **[既定の設定]** ダイアログ ボックスで、 **[コンピューター エージェント]** を選択して、 **[正常性構成証明書サービスとの通信を有効にする]** まで下にスクロールします。  
+3.  **[正常性構成証明書サービスとの通信を有効にする]** を **[はい]** に設定し、 **[OK]** をクリックします。  
 4. デバイスの正常性を報告するデバイスのコレクションのターゲットを設定します。
 
 ### <a name="how-to-enable-on-premises-health-attestation-service-communication-on-configuration-manager-client-computers"></a>Configuration Manager クライアント コンピューターの内部設置型正常性構成証明書サービスの通信を有効にする方法
@@ -70,7 +65,7 @@ Configuration Manager 1702 から、インターネット アクセスのない�
 
 ## <a name="monitor-device-health-attestation"></a>Windows のデバイス正常性構成証明書
 
-1.  デバイス正常性構成証明書ビューを表示するには、Configuration Manager コンソールで **[監視]** ワークスペースに移動し、 **[セキュリティ]** ノードをクリックしてから **[正常性構成証明書]**をクリックします。  
+1.  デバイス正常性構成証明書ビューを表示するには、Configuration Manager コンソールで **[監視]** ワークスペースに移動し、 **[セキュリティ]** ノードをクリックしてから **[正常性構成証明書]** をクリックします。  
 2.  デバイス正常性構成証明書が表示されます。  
 
 Configuration Manager デバイス正常性構成証明書には、次の情報が表示されます。  

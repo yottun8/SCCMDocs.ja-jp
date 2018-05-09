@@ -2,26 +2,19 @@
 title: Windows Defender または Endpoint Protection クライアントのトラブルシューティング
 titleSuffix: Configuration Manager
 description: Windows Defender および Endpoint Protection の問題をトラブルシューティングする方法について説明します。
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a8460cafce15e5fb97ace76983932841ec77412f
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 2a8f0e51e5808a691251e4d9acf38d70f2874508
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>Windows Defender または Endpoint Protection クライアントのトラブルシューティング
 
@@ -69,13 +62,13 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 3.  **[インターネット オプション]** ダイアログ ボックスで、 **[詳細設定]** タブをクリックします。  
 
-4.  **[Internet Explorer の設定をリセット]**の下の **[リセット]**をクリックし、もう一度 **[リセット]** をクリックします。  
+4.  **[Internet Explorer の設定をリセット]** の下の **[リセット]** をクリックし、もう一度 **[リセット]** をクリックします。  
 
-5.  Internet Explorer の設定のリセットが完了するまで待ってから、 **[OK]**をクリックします。  
+5.  Internet Explorer の設定のリセットが完了するまで待ってから、 **[OK]** をクリックします。  
 
 6.  Internet Explorer を開きます。  
 
-7.  Microsoft Security Essentials を開き、 **[更新]** タブをクリックし、 **[更新]**をクリックします。  
+7.  Microsoft Security Essentials を開き、 **[更新]** タブをクリックし、 **[更新]** をクリックします。  
 
 8.  問題が解決しない場合は、次の手順に進みます。  
 
@@ -87,11 +80,11 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 3.  **[インターネット オプション]** ダイアログ ボックスで、 **[プログラム]** タブをクリックします。  
 
-4.  **[既定の Web ブラウザー]**の下の **[既定に設定する]**をクリックします。  
+4.  **[既定の Web ブラウザー]** の下の **[既定に設定する]** をクリックします。  
 
 5.  **[OK]** をクリックします。  
 
-6.  Windows Defender または Endpoint Protection を開きます。 **[更新]** タブをクリックして、 **[更新]**をクリックします。  
+6.  Windows Defender または Endpoint Protection を開きます。 **[更新]** タブをクリックして、 **[更新]** をクリックします。  
 
 7.  問題が解決しない場合は、次の手順に進みます。  
 
@@ -107,15 +100,15 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 1. 自動更新サービスを停止します。  
 
-    1.  **[スタート]** をクリックし、 **services.msc**を検索して、 **[OK]**をクリックします。  
+    1.  **[スタート]** をクリックし、 **services.msc**を検索して、 **[OK]** をクリックします。  
 
-    2.  **[自動更新サービス]**を右クリックし、 **[停止**] をクリックします。  
+    2.  **[自動更新サービス]** を右クリックし、 **[停止**] をクリックします。  
 
     3.  [サービス] スナップインを最小化します。  
 
 2.  **SoftwareDistribution** ディレクトリの名前を、次のようにして変更します。  
 
-    1.  **[スタート]** をクリックし、  **cmd**を検索して、 **[OK]**をクリックします。  
+    1.  **[スタート]** をクリックし、  **cmd**を検索して、 **[OK]** をクリックします。  
 
     2.  「 **cd %windir%**」と入力し、 **Enter**キーを押します。  
 
@@ -127,13 +120,13 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
     1.  [サービス] スナップインを最大化します。  
 
-    2.  **[自動更新サービス]**を右クリックし、 **[開始]**をクリックします。  
+    2.  **[自動更新サービス]** を右クリックし、 **[開始]** をクリックします。  
 
     3.  [サービス] スナップイン ウィンドウを閉じます。  
 
 ### <a name="step-5-reset-the-microsoft-antivirus-update-engine-on-your-computer"></a>手順 5: コンピューターの Microsoft ウイルス対策更新エンジンをリセットする  
 
-1.  **[スタート]** をクリックし、  **cmd**を検索して **[OK]**をクリックした後、 **[コマンド プロンプト]**を右クリックし、 **[管理者として実行]**を選びます。  
+1.  **[スタート]** をクリックし、  **cmd**を検索して **[OK]** をクリックした後、 **[コマンド プロンプト]** を右クリックし、 **[管理者として実行]** を選びます。  
 
 2.  **[コマンド プロンプト]** ウィンドウに次のコマンドを入力し、各コマンドを入力した後に **Enter** キーを押します。  
 
@@ -209,7 +202,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 1.  **[スタート]** をクリックし、 **appwiz.cpl**を検索して、 **Enter**キーを押します。  
 
-2.  インストールされているプログラムの一覧で、 **[Endpoint Protection]**をクリックし、アンインストールします。  
+2.  インストールされているプログラムの一覧で、 **[Endpoint Protection]** をクリックし、アンインストールします。  
 
 3.  必要ならメッセージに従ってコンピューターを再起動し、Endpoint Protection をもう一度インストールしてみてください。  
 
@@ -218,13 +211,13 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 ### <a name="step-1-verify-that-your-computer-is-connected-to-the-internet"></a>手順 1: お使いのコンピューターがインターネットに接続されていることを確認する  
 
-1.  **[スタート]**をクリックし、 **ncpa.cpl**を検索して、 **Enter**キーを押します。  
+1.  **[スタート]** をクリックし、 **ncpa.cpl**を検索して、 **Enter**キーを押します。  
 
-2.  接続名を右クリックし、 **[状態]**をクリックします。  
+2.  接続名を右クリックし、 **[状態]** をクリックします。  
 
-3.  お使いのコンピューターが接続されている場合、Windows XP では、接続の状態として **[接続]**、 **[有効]**、または **[認証に成功]** と表示されます。 Windows Vista および Windows 7 では、 **[IPv4]** の状態が **[インターネット]**と表示されます。  
+3.  お使いのコンピューターが接続されている場合、Windows XP では、接続の状態として **[接続]**、 **[有効]**、または **[認証に成功]** と表示されます。 Windows Vista および Windows 7 では、 **[IPv4]** の状態が **[インターネット]** と表示されます。  
 
-4.  コンピューターが接続されていない場合は、接続名を右クリックし、 **[接続]**、 **[有効にする]**、 **[認証]**、または **[修復]**をクリックします。  
+4.  コンピューターが接続されていない場合は、接続名を右クリックし、 **[接続]**、 **[有効にする]**、 **[認証]**、または **[修復]** をクリックします。  
 
 ### <a name="step-3-restart-your-computer"></a>手順 3: コンピューターを再起動する  
 
@@ -243,9 +236,9 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 ### <a name="remove-or-scan-the-file"></a>ファイルを削除またはスキャンする  
 
--   検出された脅威が .zip ファイル内にあった場合は、.zip ファイルの場所に移動し、そのファイルを削除するか、ファイルを右クリックして **[Windows Defender でスキャン]** または **[Endpoint Protection でスキャン]**を選択してスキャンを実行します。 Windows Defender または Endpoint Protection によってファイル内でさらに脅威が検出された場合は、それらの脅威について通知され、適切な操作を選択できます。  
+-   検出された脅威が .zip ファイル内にあった場合は、.zip ファイルの場所に移動し、そのファイルを削除するか、ファイルを右クリックして **[Windows Defender でスキャン]** または **[Endpoint Protection でスキャン]** を選択してスキャンを実行します。 Windows Defender または Endpoint Protection によってファイル内でさらに脅威が検出された場合は、それらの脅威について通知され、適切な操作を選択できます。  
 
--   検出された脅威がネットワーク共有内にあった場合は、ネットワーク共有の場所に移動し、ファイルを右クリックして **[Windows Defender でスキャン]** または **[Endpoint Protection でスキャン]**を選択してスキャンを実行します。 Windows Defender または Endpoint Protection によってネットワーク共有内でさらに脅威が検出された場合は、それらの脅威について通知され、適切な操作を選択できます。  
+-   検出された脅威がネットワーク共有内にあった場合は、ネットワーク共有の場所に移動し、ファイルを右クリックして **[Windows Defender でスキャン]** または **[Endpoint Protection でスキャン]** を選択してスキャンを実行します。 Windows Defender または Endpoint Protection によってネットワーク共有内でさらに脅威が検出された場合は、それらの脅威について通知され、適切な操作を選択できます。  
 
 -   ファイルの出所が明確でない場合、最も良い対処方法はコンピューターをフル スキャンすることです フル スキャンは完了までに時間がかかる場合がありますが、Windows Defender または Endpoint Protection で感染源を探し、除去できます。  
 

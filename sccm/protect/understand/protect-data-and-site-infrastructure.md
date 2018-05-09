@@ -1,25 +1,20 @@
 ---
-title: "データとサイト インフラストラクチャの保護"
+title: データとサイト インフラストラクチャの保護
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で組織のリソースを漏洩や悪意のある攻撃から保護する方法について説明します。"
-ms.custom: na
+description: System Center Configuration Manager で組織のリソースを漏洩や悪意のある攻撃から保護する方法について説明します。
 ms.date: 11/27/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
-caps.latest.revision: "8"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 925842a19f79e3674e988ea03661dfec36ba7145
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: e76a16fab84f5ccfcd71af4bc80913e31acdadd9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="protect-data-and-site-infrastructure-with-system-center-configuration-manager"></a>System Center Configuration Manager でのデータとサイト インフラストラクチャの保護
 

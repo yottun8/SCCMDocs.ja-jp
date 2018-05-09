@@ -1,25 +1,20 @@
 ---
-title: "Linux および UNIX のハードウェア インベントリ"
+title: Linux および UNIX のハードウェア インベントリ
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で Linux および UNIX のハードウェア インベントリを使用する方法について説明します。"
-ms.custom: na
+description: System Center Configuration Manager で Linux および UNIX のハードウェア インベントリを使用する方法について説明します。
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
-caps.latest.revision: "6"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 6f71478f6a2a8e5a2a41068624debfe3ac3e915d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 68e60611356cbaea3dc14a42776e89ecdc951008
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-system-center-configuration-manager"></a>System Center Configuration Manager における Linux および UNIX のハードウェア インベントリ
 
@@ -118,7 +113,7 @@ Linux および UNIX 用の System Center Configuration Manager クライアン�
      **omicli** およびカスタム プロバイダーのテストについては、OMI 入門ガイドをご覧ください。  
 
 > [!TIP]  
->  ソフトウェアの配布を使用して、それぞれの Linux および UNIX クライアント コンピューターにおけるカスタム プロバイダーの展開と、カスタム プロバイダーの登録を行います。  
+>  ソフトウェアの配布を使用して、カスタム プロバイダーを展開して、Linux および UNIX クライアント コンピューターごとに、カスタム プロバイダーを登録します。  
 
 ###  <a name="BKMK_AddLinuxProvidertoCM"></a> Configuration Manager で、新しいインベントリ クラスを次のように有効にします。  
  Configuration Manager で、Linux および UNIX コンピューターの新しいプロバイダーがレポートするインベントリについてレポートを作成するには、その前に、カスタム プロバイダーのスキーマを定義する管理オブジェクト フォーマット (MOF) ファイルをインポートする必要があります。  

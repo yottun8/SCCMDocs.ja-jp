@@ -2,24 +2,19 @@
 title: Technical Preview 1706
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager の Technical Preview バージョン 1706 で使用できる機能について説明します。
-ms.custom: na
 ms.date: 09/15/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: ca3b4714-2a16-495e-8a17-1d87991d5556
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 9b44f5659caca86150de68d43001c06d9d1a831f
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 2c6ceabc3a3f01ce541d4fbcdeaec5ae3db76c61
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1706 の機能
 
@@ -229,7 +224,7 @@ ms.lasthandoff: 04/16/2018
     - **[アンインストール コンテンツなし]**: アプリケーションのアンインストール コンテンツ場所を指定しない場合は、これを選択します。
     - **[インストール コンテンツと異なる]**: インストール コンテンツ場所と異なるアンインストール コンテンツ場所を指定する場合は、これを選択します。
 5. **[インストール コンテンツと異なる]** を選択した場合は、アプリケーションをアンインストールするために使用するアプリケーション コンテンツの場所を参照または入力します。
-6. **OK** をクリックして、展開の種類プロパティ ダイアログ ボックスを閉じます。
+6. **OK** をクリックして、[展開の種類プロパティ] ダイアログ ボックスを閉じます。
 
 
 ## <a name="accessibility-improvements"></a>ユーザー補助の機能強化  
@@ -359,7 +354,7 @@ Configuration Manager のセキュリティ ロールの詳細については、
     - **[インポート]**: PowerShell スクリプトをコンソールにインポートします。 スクリプトは **[スクリプト]** フィールドに表示されます。
     - **[クリア]**: **[スクリプト]** フィールドから現在のスクリプトを削除します。
     - **[スクリプト]**: 現在インポートされたスクリプトが表示されます。 必要に応じて、このフィールドでスクリプトを編集できます。
-5. ウィザードを完了します。 新しいスクリプトが**[承認を待っています]**の状態で **[スクリプト]** リストに表示されます。 このスクリプトをクライアント デバイスで実行するには、先にそのスクリプトを承認する必要があります。
+5. ウィザードを完了します。 新しいスクリプトが **[承認を待っています]** の状態で **[スクリプト]** リストに表示されます。 このスクリプトをクライアント デバイスで実行するには、先にそのスクリプトを承認する必要があります。
 
 
 #### <a name="approve-or-deny-a-script"></a>スクリプトの承認または拒否
@@ -381,7 +376,7 @@ Configuration Manager のセキュリティ ロールの詳細については、
 1. Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。
 2. **[資産とコンプライアンス]** ワークスペースで **[デバイス コレクション]** をクリックします。
 3. **[デバイス コレクション]** リストで、スクリプトを実行するデバイスのコレクションをクリックします。
-3. **[ホーム]** タブの **[すべてのシステム]** グループで、**[スクリプトの実行]**をクリックします。
+3. **[ホーム]** タブの **[すべてのシステム]** グループで、**[スクリプトの実行]** をクリックします。
 4. **スクリプトの実行**ウィザードの **[スクリプト]** ページで、リストからスクリプトを選択します。 承認済みスクリプトのみが表示されます。 **[次へ]** をクリックして、ウィザードを完了します。
 
 #### <a name="monitor-a-script"></a>スクリプトの監視
@@ -551,7 +546,7 @@ Configuration Manager で証明書登録ポイントの役割を追加すると�
 
 ### <a name="try-it-out"></a>試してみましょう
 1. Configuration Manager コンソールの **[管理]** ワークスペースで、**[クラウド サービス]**  >  **[Microsoft Intune サブスクリプション]** に移動します。
-2. **[ホーム]** タブの **[サブスクリプション]** グループで、**[プラットフォームの構成]**を選択し、**[Android]** または **[iOS]** のいずれかを選択します。
+2. **[ホーム]** タブの **[サブスクリプション]** グループで、**[プラットフォームの構成]** を選択し、**[Android]** または **[iOS]** のいずれかを選択します。
 3. **[事前に宣言されたデバイスのみに Intune への登録を許可する]** を選択します。
 
 ## <a name="android-for-work-application-management-policy-for-copy-paste"></a>コピー/貼り付け用の Android for Work アプリケーション管理ポリシー

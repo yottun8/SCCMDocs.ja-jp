@@ -1,25 +1,20 @@
 ---
-title: "Unix または Linux クライアントを展開する"
+title: Unix または Linux クライアントを展開する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で UNIX または Linux サーバーにクライアントを展開する方法を説明します。"
-ms.custom: na
+description: System Center Configuration Manager で UNIX または Linux サーバーにクライアントを展開する方法を説明します。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
-caps.latest.revision: "9"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 808997a423dbac6785c9da82f7b6bc8663168486
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7caffbbccfa53ef4e502685263cb0d81c6e83535
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-system-center-configuration-manager"></a>System Center Configuration Manager で UNIX および Linux サーバーにクライアントを展開する方法
 
@@ -174,7 +169,7 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
      コマンド ラインで信頼されたルート キーを指定しない場合、クライアントは、通信する最初の管理ポイントを信頼し、その管理ポイントから信頼されたルート キーを自動的に取得します。  
 
-     詳細については、「  [Planning for the Trusted Root Key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)」を参照してください。  
+     詳細については、「[Planning for the Trusted Root Key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)」を参照してください。  
 
      例: -rootkeypath &lt;Full path and filename\>  
 

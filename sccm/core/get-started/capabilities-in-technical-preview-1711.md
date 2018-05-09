@@ -1,24 +1,20 @@
 ---
 title: Technical Preview 1711 | Microsoft Docs
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1711 で使用できる機能について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の Technical Preview バージョン 1711 で使用できる機能について説明します。
 ms.date: 11/17/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2e68dc12-6776-437a-9138-45cd7d4bf9cf
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: b740c422a71e625ccc110a043028cf986cdffb20
-ms.sourcegitcommit: ed8b2438ef85c9160741ef61f9171be41dd1ae0a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 6353b765f769dfa57ea57926d12bf2b254ba8f68
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1711-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1711 の機能
 
@@ -37,8 +33,8 @@ ms.lasthandoff: 12/17/2017
 -   **サイト サーバーがパッシブ モードの場合、新しいプレビュー バージョンへの更新に失敗します**。 [プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)であるプレビュー バージョンを実行する場合は、プレビュー サイトをこの新しいプレビュー バージョンに正常に更新するため、あらかじめパッシブ モードのサイト サーバーをアンインストールしておく必要があります。 パッシブ モードのサイト サーバーは、サイトの更新を完了したあとに再インストールできます。
 
   パッシブ モードのサイト サーバーをアンインストールするには、次の手順を実行します。
-  1. コンソールで**[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
-  2. **[サイト システムの役割]** ウィンドウで、**[サイト サーバー]**の役割を右クリックし、**[役割の削除]** を選択します。
+  1. コンソールで **[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
+  2. **[サイト システムの役割]** ウィンドウで、**[サイト サーバー]** の役割を右クリックし、**[役割の削除]** を選択します。
   3. パッシブ モードのサイト サーバーを右クリックし、**[削除]** を選択します。
   4. サイト サーバーのアンインストール後に、アクティブなプライマリ サイト サーバーで **CONFIGURATION_MANAGER_UPDATE** のサービスを再起動します。
 

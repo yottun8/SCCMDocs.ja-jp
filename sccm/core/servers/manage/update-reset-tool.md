@@ -1,26 +1,20 @@
 ---
-title: "更新のリセット ツール"
+title: 更新のリセット ツール
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager のコンソール内の更新のリセット ツールを使用します。"
-ms.custom: na
+description: System Center Configuration Manager のコンソール内の更新のリセット ツールを使用します。
 ms.date: 7/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 25fa89d6-7e47-45a6-8f4e-70b77560fba6
-caps.latest.revision: "0"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: cf854b1ea571991c1f070d6b3896db7861fe020f
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: e6ae6ed46cc1db5f545182e4b4f6b46374b5c174
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-reset-tool"></a>更新のリセット ツール
 
@@ -35,7 +29,7 @@ ms.lasthandoff: 12/04/2017
 
 ツールを実行する際には、指定した更新プログラムに対して実行します。 既定では、このツールで正常にインストールまたはダウンロードされた更新プログラムが削除されることはありません。  
 
-### <a name="prerequisites"></a>必要条件
+### <a name="prerequisites"></a>[前提条件]
 ツールの実行に使用するアカウントには、次のアクセス許可が必要です。
 -   中央管理サイトと階層の各プライマリ サイトのサイト データベースへの**読み取り**と**書き込み**アクセス許可。 これらのアクセス許可を設定するため、各サイトの Configuration Manager データベースで、ユーザー アカウントを **db_datawriter** および **db_datareader** の[固定データベース ロール](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles)のメンバーとして追加できます。 このツールは、セカンダリ サイトとは対話しません。
 -   階層の最上位サイトの**ローカル管理者**。

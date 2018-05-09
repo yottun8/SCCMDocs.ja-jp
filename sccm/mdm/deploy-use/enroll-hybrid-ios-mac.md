@@ -1,26 +1,20 @@
 ---
-title: "Microsoft Intune を使用した iOS および Mac ハイブリッド デバイス管理の設定"
+title: Microsoft Intune を使用した iOS および Mac ハイブリッド デバイス管理の設定
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager と Microsoft Intune を使用して iOS デバイス管理を設定します。"
-ms.custom: na
+description: System Center Configuration Manager と Microsoft Intune を使用して iOS デバイス管理を設定します。
 ms.date: 08/11/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
-caps.latest.revision: "10"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: f15b82a0e04979f49fb8e2ab6bec6535783ac6e0
-ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 9407180df12902c17f4de8e52be13229ce35c60b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-ios-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune で iOS ハイブリッド デバイス管理の設定します
 
@@ -40,11 +34,11 @@ Apple からの APNs 証明書を要求するには、証明書署名要求フ�
 
 1.  Configuration Manager コンソールの **[管理]** ワークスペースで、**[クラウド サービス]** >  **[Microsoft Intune サブスクリプション]** に移動します。  
 
-2.  **[ホーム]** タブで、 **[APNs 証明書要求の作成]**をクリックします。 **[Apple Push Notification サービス証明書署名要求の要求]** ダイアログ ボックスが開きます。  
+2.  **[ホーム]** タブで、 **[APNs 証明書要求の作成]** をクリックします。 **[Apple Push Notification サービス証明書署名要求の要求]** ダイアログ ボックスが開きます。  
 
 3.  **[参照]** をクリックして、新しい証明書署名要求ファイルの保存先のパスを指定します。 証明書署名要求ファイルをローカルに保存します。  
 
-4.  **[ダウンロード]**をクリックします。 新しい Microsoft Intune 証明書署名要求ファイルがダウンロードされ、Configuration Manager によって保存されます。 証明書署名要求ファイルは、Apple Push Certificates Portal からの信頼関係証明書を要求するために使用します。  
+4.  **[ダウンロード]** をクリックします。 新しい Microsoft Intune 証明書署名要求ファイルがダウンロードされ、Configuration Manager によって保存されます。 証明書署名要求ファイルは、Apple Push Certificates Portal からの信頼関係証明書を要求するために使用します。  
 
 ## <a name="request-an-mdm-push-certificate-from-apple"></a>Apple からの MDM プッシュ証明書の要求
 MDM プッシュ証明書は、管理サービス、Intune、および登録済み iOS モバイル デバイスの間に信頼関係を確立するために使用されます。  
@@ -64,7 +58,7 @@ iOS の登録を有効にして APNs 証明書をアップロードします。
 2.  **[ホーム]** タブの **[サブスクリプション]** グループで、**[プラットフォームの構成]**  >  **[iOS]** の順にクリックします。  
 
 3.  **[Microsoft Intune サブスクリプションのプロパティ]** ダイアログ ボックスで、 **[iOS]** タブを選択し、 **[iOS の登録を有効にする]** チェック ボックスをオンにします。  
-4.  **[参照]**をクリックし、Apple からダウンロードした APNs 証明書 (.cer) ファイルに移動します。 Configuration Manager に APNs 証明書情報が表示されます。 **[OK]** をクリックして、APNs 証明書を Intune に保存します。  
+4.  **[参照]** をクリックし、Apple からダウンロードした APNs 証明書 (.cer) ファイルに移動します。 Configuration Manager に APNs 証明書情報が表示されます。 **[OK]** をクリックして、APNs 証明書を Intune に保存します。  
 
 セットアップが完了したら、デバイスを登録する方法をユーザーに知らせる必要があります。 「[デバイスの登録についてユーザーに通知する事柄](https://docs.microsoft.com/intune/end-user-educate)」に関する記事をご覧ください。 この情報は、Microsoft Intune と Configuration Manager の両方によって管理されるモバイル デバイスに適用されます。
 

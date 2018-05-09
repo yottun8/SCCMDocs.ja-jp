@@ -1,24 +1,20 @@
 ---
-title: "BIOS からUEFI への変換を管理するためのタスク シーケンス手順"
+title: BIOS からUEFI への変換を管理するためのタスク シーケンス手順
 titleSuffix: Configuration Manager
-description: "UEFI への移行用に FAT32 パーティションを準備するために、オペレーティング システム展開タスク シーケンスをカスタマイズする方法について説明します。"
-ms.custom: na
+description: UEFI への移行用に FAT32 パーティションを準備するために、オペレーティング システム展開タスク シーケンスをカスタマイズする方法について説明します。
 ms.date: 03/24/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: f2d53b7f525d4f827b78840a7f0d9482d203c08d
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 8c807f771d88701127c47d0290b6d8fc6bcb0f00
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>BIOS からUEFI への変換を管理するためのタスク シーケンス手順
 Windows 10 では、UEFI 対応デバイスを必要とする新しいセキュリティ機能が多数提供されます。 最新の Windows PC では、UEFI がサポートされていても、従来の BIOS が使用されている場合があります。 デバイスを UEFI に変換する場合、各 PC に移動して、ハード ディスクのパーティションを再分割し、ファームウェアを再構成する必要がありました。 Configuration Manager でタスク シーケンスを使用すれば、BIOS から UEFI への変換のためにハード ドライブを準備し、インプレース アップグレード プロセスの一環として BIOS から UEFI への変換を行い、ハードウェア インベントリの一部として UEFI 情報を収集することができます。

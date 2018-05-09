@@ -1,26 +1,20 @@
 ---
-title: "Windows 10 のクライアント管理の構成アイテムの作成 "
+title: 'Windows 10 のクライアント管理の構成アイテムの作成 '
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Windows 10 構成項目を使用して、Configuration Manager クライアントで管理されている Windows 10 コンピューターの設定を管理します。"
-ms.custom: na
+description: System Center Configuration Manager の Windows 10 構成項目を使用して、Configuration Manager クライアントで管理されている Windows 10 コンピューターの設定を管理します。
 ms.date: 03/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
-caps.latest.revision: "17"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 4f22ab22ec666c55962231bf92a42b25c4a7c127
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: bdb48689efba4c6f884d4c36c1a4dee0bbcc6b65
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-windows-10-devices-managed-with-the-system-center-configuration-manager-client"></a>System Center Configuration Manager クライアントを使用して管理されている Windows 10 デバイスの構成項目を作成する方法
 System Center Configuration Manager の **Windows 10** 構成項目を使用して、Configuration Manager クライアントで管理されている Windows 10 コンピューターの設定を管理します。  
@@ -28,28 +22,28 @@ System Center Configuration Manager の **Windows 10** 構成項目を使用し�
 > [!IMPORTANT]  
 >  このリリースで、**パスワード**設定を、種類が **Windows 10** の構成項目の一部として (Configuration Manager クライアントで管理されているデバイスに対して) 作成した場合、その設定がまだ存在しないか、Windows 10 デバイスで構成されていなくても、"対応" として誤って評価されます。  
 >   
->  この問題を回避するには、これらのデバイスの設定を作成するときに、構成項目の作成ウィザードの設定ページで、必ず **[対応していない設定を修復する]** を選択します。 さらに、パスワードの設定を含む Windows 10 構成項目が含まれる構成基準を展開するときに、[構成基準の展開] ダイアログ ボックスの **[サポートされている場合は対応していない規則を修復する]** を選択します。 この回避策を使用すると、設定が監視され、非対応であることが検出された場合は修復されます。 修復後、設定は **[対応]** として適切にレポートされます (問題が発生していない場合。問題が発生した場合は、 **[エラー]**としてレポートされます)。  
+>  この問題を回避するには、これらのデバイスの設定を作成するときに、構成項目の作成ウィザードの設定ページで、必ず **[対応していない設定を修復する]** を選択します。 さらに、パスワードの設定を含む Windows 10 構成項目が含まれる構成基準を展開するときに、[構成基準の展開] ダイアログ ボックスの **[サポートされている場合は対応していない規則を修復する]** を選択します。 この回避策を使用すると、設定が監視され、非対応であることが検出された場合は修復されます。 修復後、設定は **[対応]** として適切にレポートされます (問題が発生していない場合。問題が発生した場合は、 **[エラー]** としてレポートされます)。  
   
 ### <a name="to-create-a-windows-10-configuration-item"></a>Windows 10 構成項目を作成するには  
   
-1.  Configuration Manager コンソールで、**[ 資産とコンプライアンス ]** をクリックします。  
+1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
   
-2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ コンプライアンス設定 ]** を展開して、**[ 構成項目 ]** をクリックします。  
+2.  **[資産とコンプライアンス]** ワークスペースで **[コンプライアンス設定]** を展開して、**[構成項目]** をクリックします。  
   
-3.  **[ ホーム ]** タブの **[ 作成 ]** グループで、**[ 構成項目の作成 ]** をクリックします。  
+3.  **[ホーム]** タブの **[作成]** グループで、**[構成項目の作成]** をクリックします。  
   
-4.  **構成項目の作成ウィザード** の **[全般]**ページで、構成項目の名前と、必要に応じて説明を入力します。  
+4.  **構成項目の作成ウィザード** の **[全般]** ページで、構成項目の名前と、必要に応じて説明を入力します。  
   
-5.  **[作成する構成項目の種類の指定]**で、 **[Windows 10]**を選択します。  
+5.  **[作成する構成項目の種類の指定]** で、 **[Windows 10]** を選択します。  
   
-6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、**[ カテゴリ ]** をクリックします。  
+6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、**[カテゴリ]** をクリックします。  
   
 7.  ウィザードの **[サポートされているプラットフォーム]** ページで、構成項目を評価する特定の Windows 10 プラットフォームを選択します。  
   
-8.  ウィザードの **[デバイスの設定]** ページで、構成する設定グループを選択します。 このトピックの「 [Windows 10 configuration item settings reference](#BKMK_Ref) 」で詳細情報を確認し、 **[次へ]**をクリックします。  
+8.  ウィザードの **[デバイスの設定]** ページで、構成する設定グループを選択します。 このトピックの「 [Windows 10 configuration item settings reference](#BKMK_Ref) 」で詳細情報を確認し、 **[次へ]** をクリックします。  
   
     > [!TIP]  
-    >  必要な設定が一覧にない場合は、 **[既定の設定グループに含まれない追加の設定を構成する]**チェック ボックスをオンにします。  
+    >  必要な設定が一覧にない場合は、 **[既定の設定グループに含まれない追加の設定を構成する]** チェック ボックスをオンにします。  
   
 9. 各設定ページで、必要な設定と、その設定がデバイスに対応していないときにその設定を修正するかどうかを構成します (これがサポートされている場合)。  
   
@@ -78,7 +72,7 @@ System Center Configuration Manager の **Windows 10** 構成項目を使用し�
   
 ### <a name="password"></a>パスワード  
   
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**デバイスのパスワードの設定が必要**|サポート対象デバイスのパスワードが必要です。|  
 |**パスワードの最小文字数**|パスワードの最小文字数。|  
@@ -91,13 +85,13 @@ System Center Configuration Manager の **Windows 10** 構成項目を使用し�
   
 ###  <a name="device"></a>デバイス  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**Bluetooth**|デバイスの Bluetooth 機能を使用できるようにします。|  
   
 ### <a name="cloud"></a>クラウド  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**設定の同期**|デバイス間で設定を同期できるようにします。|  
 |**資格情報の同期**|デバイス間で資格情報を同期できるようにします。|  
@@ -105,19 +99,19 @@ System Center Configuration Manager の **Windows 10** 構成項目を使用し�
   
 ### <a name="roaming"></a>ローミング  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**データ ローミング**|データへのアクセス中にネットワーク間のローミングを許可します。|  
   
 ### <a name="encryption"></a>暗号化  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**デバイスのファイルの暗号化**|デバイス上のファイルを必ず暗号化するようにします。|  
   
 ### <a name="system-security"></a>システム セキュリティ  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**ユーザー アカウント コントロール**|デバイスの Windows ユーザー アカウント制御を構成します。<br />たとえば、ユーザー アカウント制御を無効にしたり、その通知レベルを設定したりできます。|  
 |**ネットワーク ファイアウォール**|Windows ファイアウォールを有効または無効にします。|  

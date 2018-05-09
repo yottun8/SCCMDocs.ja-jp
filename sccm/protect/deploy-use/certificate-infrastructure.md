@@ -2,26 +2,19 @@
 title: 証明書インフラストラクチャの構成
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager で証明書の登録を構成する方法を説明します。
-ms.custom: na
 ms.date: 07/25/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: lleonard-msft
-ms.author: alleonar
-manager: angrobe
-ms.openlocfilehash: 9ef62bbf6269a6090f2345b10c24cc4df16c1e3b
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c27f92374470c7d87d49661b20996a3f0c47f8a4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-certificate-infrastructure"></a>証明書インフラストラクチャの構成
 
@@ -117,7 +110,7 @@ System Center Configuration Manager の階層に証明書登録ポイントを�
 
 3.  **[ホーム]** タブの **[サーバー]** グループで、 **[サイト システムの役割の追加]** をクリックします。  
 
-4.  **[全般]**ページで、サイト システムの全般設定を指定し、**[次へ]**をクリックします。  
+4.  **[全般]** ページで、サイト システムの全般設定を指定し、**[次へ]** をクリックします。  
 
 5.  **[プロキシ]** ページで **[次へ]** をクリックします。 証明書登録ポイントでは、インターネット プロキシ設定を使用しません。  
 
@@ -161,11 +154,11 @@ System Center Configuration Manager の階層に証明書登録ポイントを�
 
     -   **[監視]** ワークスペースで **[システムのステータス]** を展開し、**[コンポーネントのステータス]** をクリックし、**[SMS_CERTIFICATE_REGISTRATION_POINT]** コンポーネントからのステータス メッセージを参照します。  
 
-    -   サイト システム サーバーで、*<ConfigMgr インストール パス\>*\Logs\crpsetup.log ファイルおよび *<ConfigMgr インストール パス\>*\Logs\crpmsi.log ファイルを使用します。 インストールが成功した場合、0 の終了コードを返します。  
+    -   サイト システム サーバーで、*<ConfigMgr インストール パス\>* \Logs\crpsetup.log ファイルおよび *<ConfigMgr インストール パス\>* \Logs\crpmsi.log ファイルを使用します。 インストールが成功した場合、0 の終了コードを返します。  
 
     -   ブラウザーを使用して、証明書登録ポイントの URL (https://server1.contoso.com/CMCertificateRegistration など) に接続できることを確認します。 アプリケーション名の **サーバー エラー** ページが開き、 HTTP 404 の説明が表示されます。  
 
-11. 証明書登録ポイントが自動的に作成してエクスポートしたルート CA 証明書ファイルを、プライマリ サイト サーバー コンピューターの *<ConfigMgr Installation Path\>*\inboxes\certmgr.box フォルダーで見つけます。 このファイルを、後でネットワーク デバイス登録サービスを実行しているサーバーに System Center Configuration Manager ポリシー モジュールをインストールするときに安全にアクセスできる場所に保存します。  
+11. 証明書登録ポイントが自動的に作成してエクスポートしたルート CA 証明書ファイルを、プライマリ サイト サーバー コンピューターの *<ConfigMgr Installation Path\>* \inboxes\certmgr.box フォルダーで見つけます。 このファイルを、後でネットワーク デバイス登録サービスを実行しているサーバーに System Center Configuration Manager ポリシー モジュールをインストールするときに安全にアクセスできる場所に保存します。  
 
     > [!TIP]  
     >  この証明書ファイルは、上に示されているフォルダー内にすぐに格納されません。 System Center Configuration Manager がこの場所にファイルをコピーするまで、しばらく (30 分ほど) 待つ必要がある場合があります。  
@@ -195,7 +188,7 @@ System Center Configuration Manager の階層に証明書登録ポイントを�
 
 6.  **[443]** という既定のポートをそのまま使用するか、証明書登録ポイントが使用する別のポート番号を指定して、**[次へ]** をクリックします。  
 
-7.  **[ポリシー モジュールのクライアント証明書]**ページで、「 **手順 1: ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成する**」で展開したクライアント認証証明書を参照して指定し、 **[次へ]**をクリックします。  
+7.  **[ポリシー モジュールのクライアント証明書]** ページで、「 **手順 1: ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成する**」で展開したクライアント認証証明書を参照して指定し、 **[次へ]** をクリックします。  
 
 8.  **[証明書登録ポイント証明書]** ページで **[参照]** をクリックし、「 **手順 2: 証明書登録ポイントをインストールおよび構成する**」の最後で見つけて保存した、ルート CA にエクスポートされた証明書ファイルを選択します。  
 

@@ -1,20 +1,19 @@
 ---
-title: "MDM 機関を Intune に変更する"
+title: MDM 機関を Intune に変更する
 titleSuffix: Configuration Manager
-description: "MDM 機関を Configuration Manager (ハイブリッド) から Intune スタンドアロンに変更する方法について説明します。"
-keywords: 
-author: dougeby
-manager: angrobe
+description: MDM 機関を Configuration Manager (ハイブリッド) から Intune スタンドアロンに変更する方法について説明します。
+author: aczechowski
+manager: dougeby
 ms.date: 12/05/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: 8884883c6e4e82cf38d83b9b7843002be3742bf1
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: b8bc778f4bcede45d3035b8b119fc3e4a4df4978
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>MDM 機関を Intune スタンドアロンに変更する
 
@@ -38,7 +37,7 @@ Configuration Manager コンソール (ハイブリッド MDM) から構成さ�
 - 最大 7 日間は、以前の MDM 機関 (ハイブリッド) の基本的な設定 (プロファイルなど) の一部がデバイスに残ります。 
 - 関連付けられているユーザーがいない (通常は iOS Device Enrollment Program または一括登録シナリオの場合) デバイスは、新しい MDM 機関に移行されません。 これらのデバイスでは、新しい MDM 機関への移行を支援してもらうためにサポートを要請する必要があります。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>[前提条件]
 MDM 機関の変更に備えて、次の情報を確認します。
 - MDM 機関を変更するオプションを使用するには、Configuration Manager バージョン 1610 以降が必要です。
 - MDM 機関の変更前に、ハイブリッド MDM で現在管理されているすべてのユーザーに、Intune/EMS ライセンスが割り当てられていることを確認しておきます。 ライセンスがあることで、MDM 機関の変更後も、ユーザーとそのデバイスが Intune スタンドアロンで管理されます。 詳細については、「[ユーザー アカウントに Intune のライセンスを割り当てる](https://docs.microsoft.com/intune/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-4)」を参照してください。

@@ -1,26 +1,20 @@
 ---
-title: "Windows Hello for Business の設定"
+title: Windows Hello for Business の設定
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager に Windows Hello for Business を統合する方法について説明します。"
-ms.custom: na
+description: System Center Configuration Manager に Windows Hello for Business を統合する方法について説明します。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: c0593c07-5dd7-4d23-a0d8-d30165f49ef7
-caps.latest.revision: 
-author: lleonard-msft
-ms.author: alleonar
-manager: angrobe
-ms.openlocfilehash: 285fb9e9a9d4538c0ff3b0f9e8b19bec99e9a8c5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7471b408fbc8ce55e443873e4662c2ed87410c3a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-hello-for-business-settings-in-system-center-configuration-manager-hybrid"></a>System Center Configuration Manager における Windows Hello for Business の設定 (ハイブリッド)
 
@@ -44,7 +38,7 @@ Windows Hello for Business 設定の構成に関する一般情報は、「[Syst
 
 1.  Configuration Manager コンソールで、**[管理]** > **[Cloud Services]** > **[Microsoft Intune サブスクリプション]** の順にクリックします。  
 
-3.  リストから、Microsoft Intune サブスクリプションを選び、 **[ホーム]** タブの **[サブスクリプション]** グループで、 **[プラットフォームの構成]** > **[Windows (MDM)]**をクリックします。  
+3.  リストから、Microsoft Intune サブスクリプションを選び、 **[ホーム]** タブの **[サブスクリプション]** グループで、 **[プラットフォームの構成]** > **[Windows (MDM)]** をクリックします。  
 
 4.  **[Microsoft Intune サブスクリプションのプロパティ]** ダイアログ ボックスの **[Windows Hello for Business]** タブで、登録されているすべての Windows 10 および Windows 10 Mobile デバイスに影響する次の値から選びます。  
 
@@ -92,15 +86,15 @@ Windows Hello for Business 設定の構成に関する一般情報は、「[Syst
 
     -   **生体認証のジェスチャを有効にする** - Windows Hello for Business の PIN の代わりとして、顔認識や指紋などの生体認証を有効にします。 ユーザーは、生体認証に失敗した場合のために、Work の PIN も設定する必要があります。  
 
-         **[有効]**に設定されている場合は、Windows Hello for Business で生体認証が利用できます。  **[無効]**に設定されている場合は、Windows Hello for Business で生体認証が利用できません (すべてのアカウントの種類が対象)。  
+         **[有効]** に設定されている場合は、Windows Hello for Business で生体認証が利用できます。  **[無効]** に設定されている場合は、Windows Hello for Business で生体認証が利用できません (すべてのアカウントの種類が対象)。  
 
     -   **拡張スプーフィング対策が使用可能な場合は使用する** - デバイスでサポートされている場合に拡張スプーフィング対策を使用するかどうかを構成します。  
 
-         **[有効]**に設定されている場合、Windows のすべてのユーザーは、サポートされている場合に顔の特徴のスプーフィング対策を使用する必要があります。  
+         **[有効]** に設定されている場合、Windows のすべてのユーザーは、サポートされている場合に顔の特徴のスプーフィング対策を使用する必要があります。  
 
-    -   **リモートの Passport を使用する** - このオプションが **[有効]**に設定されている場合、ユーザーはデスクトップ コンピューターの認証にポータブル コンパニオン デバイスとして機能するリモートの Hello for Business を使用することができます。 デスクトップ コンピューターは Azure Active Directory に参加している必要があり、コンパニオン デバイスは、Windows Hello for Business の PIN を使用して設定されている必要があります。  
+    -   **リモートの Passport を使用する** - このオプションが **[有効]** に設定されている場合、ユーザーはデスクトップ コンピューターの認証にポータブル コンパニオン デバイスとして機能するリモートの Hello for Business を使用することができます。 デスクトップ コンピューターは Azure Active Directory に参加している必要があり、コンパニオン デバイスは、Windows Hello for Business の PIN を使用して設定されている必要があります。  
 
-5.  操作が完了したら、 **[OK]**をクリックします。  
+5.  操作が完了したら、 **[OK]** をクリックします。  
 
 ### <a name="see-also"></a>関連項目  
  [System Center Configuration Manager でのデータとサイト インフラストラクチャの保護](../../protect/understand/protect-data-and-site-infrastructure.md)

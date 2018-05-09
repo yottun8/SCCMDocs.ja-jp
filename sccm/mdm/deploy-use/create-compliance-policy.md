@@ -2,26 +2,20 @@
 title: デバイス コンプライアンス ポリシーを作成して展開する
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager でのデバイス コンプライアンス ポリシーの作成および展開方法を説明します。
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 0fd76043-d7ee-423d-8c5f-aa7e9ed58ce0
-caps.latest.revision: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 robots: noindex
-ms.openlocfilehash: 2a576f3dac75d7c168b86ab0f26453706bda6115
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 3dd502e8ba9e03851af6ec58ad63d4aa805fe7b4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-deploy-a-device-compliance-policy"></a>デバイス コンプライアンス ポリシーを作成して展開する
 
@@ -144,7 +138,7 @@ ms.lasthandoff: 03/23/2018
 
 1. Configuration Manager コンソールで、**[監視]** をクリックします。
 
-2.  デバイスのコンプライアンス ステータスに基づいて現在の状態の概要レポートを表示するには、**[セキュリティ]**選択して、**[正常性構成]** を選択します。
+2.  デバイスのコンプライアンス ステータスに基づいて現在の状態の概要レポートを表示するには、**[セキュリティ]** 選択して、**[正常性構成]** を選択します。
 
 3.  すべてのデバイスと正常性構成のすべての属性を一覧表示するレポートを表示するには、**[セキュリティ]** 選択して、**[正常性構成]** を選択します。
 
@@ -201,7 +195,7 @@ ms.lasthandoff: 03/23/2018
   >[!NOTE]
   >Windows を実行し Microsoft アカウントでセキュリティ保護されるデバイスについては、**[パスワードの最小文字数]** が 8 文字より長い場合、または **[文字セットの最小数]** が 2 よりも大きい場合、コンプライアンス ポリシーは正しく評価を行うことができません。
 
-* **モバイル デバイスのファイルの暗号化:** リソースに接続するためのデバイスの暗号化を必須にすることができます。 Windows Phone 8 を実行するデバイスは自動的に暗号化されます。 iOS を実行するデバイスは、設定 **[モバイル デバイスのパスワードの設定が必要]**を構成すると、暗号化されます。 既定では、この設定は有効になっています。
+* **モバイル デバイスのファイルの暗号化:** リソースに接続するためのデバイスの暗号化を必須にすることができます。 Windows Phone 8 を実行するデバイスは自動的に暗号化されます。 iOS を実行するデバイスは、設定 **[モバイル デバイスのパスワードの設定が必要]** を構成すると、暗号化されます。 既定では、この設定は有効になっています。
 
   **以下でサポートされています。**
   * Windows Phone 8+

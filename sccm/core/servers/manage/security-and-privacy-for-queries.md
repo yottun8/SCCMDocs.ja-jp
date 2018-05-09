@@ -1,26 +1,20 @@
 ---
-title: "クエリのセキュリティとプライバシー"
+title: クエリのセキュリティとプライバシー
 titleSuffix: Configuration Manager
-description: "サイト データベースから情報のクエリを実行するときのセキュリティとプライバシーのベスト プラクティスを理解します。"
-ms.custom: na
+description: サイト データベースから情報のクエリを実行するときのセキュリティとプライバシーのベスト プラクティスを理解します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 30080620-20d3-4c38-b8dd-db5516e1acae
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 6ab8498a2153dd272e9451aa58b68b4f804cd93a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 2d84385782df17d4019d6de65bcc7006aeab8b24
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager のクエリのセキュリティとプライバシー
 

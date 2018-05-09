@@ -1,25 +1,20 @@
 ---
-title: "新バージョン 1610"
+title: 新バージョン 1610
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager のバージョン 1610 の変更点および導入された新機能について詳しく説明します。"
-ms.custom: na
+description: System Center Configuration Manager のバージョン 1610 の変更点および導入された新機能について詳しく説明します。
 ms.date: 11/23/2016
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f7eb0803-3f8f-4ab6-825a-99ac11f5ba7d
-caps.latest.revision: "40"
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: e3dac4ceb08c15c1eaeef0a6006ebcc6eccff49c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 9bb046cd08e4e9d8cff6e34ea88ce8e582e2c863
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1610 の新機能
 
@@ -206,7 +201,7 @@ Configuration Manager コンソールの **[監視]** ワークスペースで�
 ## <a name="lookout-integration-for-hybrid-implementations-to-protect-ios-and-android-devices"></a>iOS デバイスと Android デバイスを保護するハイブリッド実装のための Lookout 統合
 Microsoft は、デバイス上のマルウェアやリスクの高いアプリなどを検出して iOS および Android モバイル デバイスを保護するため、Lookout のモバイル脅威保護ソリューションに統合しています。 Lookout のソリューションにより、構成可能な脅威レベルを決定できます。 System Center Configuration Manager に、Lookout によるリスク評価に基づいてデバイスのコンプライアンスを判断するためのコンプライアンス ポリシー規則を作成できます。 条件付きアクセス ポリシーを使用すると、デバイスのコンプライアンス状態に基づいて、会社のリソースへのアクセスを許可したりブロックしたりできます。 統合とそのしくみの詳細については、「[Manage access based on device, network, and application risk](/sccm/protect/deploy-use/manage-access-based-on-device-network-app-risk)」(デバイス、ネットワーク、アプリケーションのリスクに基づいたアクセスの管理) を参照してください。
 
-コンプライアンスを満たしていない iOS デバイスのユーザーには登録が求められます。 会社のデータへのアクセス権を得るにはデバイスへの Lookout for Work アプリのインストール、アプリのアクティブ化、Lookout for Work アプリケーションで報告された脅威の修復が必要となります。 詳細については、「[Configure and deploy Lookout for Work apps](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps)」(Lookout for Work アプリの構成と展開) を参照してください。
+コンプライアンスを満たしていない iOS デバイスのユーザーには登録が求められます。 会社のデータへのアクセス権を得るにはデバイスへの Lookout for Work アプリのインストール、アプリのアクティブ化、Lookout for Work アプリケーションで報告された脅威の修復が必要となります。 [Lookout for Work アプリを構成して展開する](/sccm/protect/deploy-use/configure-and-deploy-lookout-for-work-apps)方法について説明します。
 
 
 

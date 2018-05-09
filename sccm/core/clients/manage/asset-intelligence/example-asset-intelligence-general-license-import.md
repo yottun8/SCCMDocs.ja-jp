@@ -1,26 +1,20 @@
 ---
-title: "資産インテリジェンスの一般的なライセンス インポート ファイルの例"
+title: 資産インテリジェンスの一般的なライセンス インポート ファイルの例
 titleSuffix: Configuration Manager
-description: "資産インテリジェンスの一般的なライセンス ファイルのサンプルを使用すると、System Center Configuration Manager でソフトウェア ライセンスをインポートするのに役立ちます。"
-ms.custom: na
+description: 資産インテリジェンスの一般的なライセンス ファイルのサンプルを使用すると、System Center Configuration Manager でソフトウェア ライセンスをインポートするのに役立ちます。
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e6258333-a783-440b-b1af-f8023b782fbc
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 8537622a418a141abf2b564b6211604ea85f7bab
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: d4ce90c28a8af0714f07ad5450d82202a7d5a543
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-asset-intelligence-general-license-import-file-in-system-center-configuration-manager"></a>System Center Configuration Manager における資産インテリジェンスの一般的なライセンス インポート ファイルの例
 

@@ -1,26 +1,20 @@
 ---
-title: "タスク シーケンス メディアの作成"
+title: タスク シーケンス メディアの作成
 titleSuffix: Configuration Manager
-description: "Configuration Manager 環境内で対象コンピューターにオペレーティング システムを展開するため、CD などのタスク シーケンス メディアを作成します。"
-ms.custom: na
+description: Configuration Manager 環境内で対象コンピューターにオペレーティング システムを展開するため、CD などのタスク シーケンス メディアを作成します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 90498b4b-6a9b-43cd-b465-1d6c9a52df1c
-caps.latest.revision: "8"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 790f7272240df7f19bb91fc0b4da15cbffb1463e
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 69c2f3620ed618711534366121aa1267efe6a8a5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-task-sequence-media-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用したタスク シーケンス メディアの作成
 

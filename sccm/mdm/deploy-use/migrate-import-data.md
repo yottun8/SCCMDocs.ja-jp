@@ -1,21 +1,19 @@
 ---
-title: "Microsoft Intune へのデータのインポート"
+title: Microsoft Intune へのデータのインポート
 titleSuffix: Configuration Manager
-description: 
-keywords: 
-author: dougeby
+description: Configuration Manager のデータの Microsoft Intune へのインポート
+author: aczechowski
 manager: dougeby
 ms.date: 12/05/2017
-ms.topic: article
-ms.prod: configmgr-hybrid
-ms.service: 
-ms.technology: 
+ms.topic: conceptual
+ms.prod: configuration-manager
+ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
-ms.openlocfilehash: d42a5fd64b5baead8ef87d8c08a99ec659f94633
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: dcd84e484f55cb799953bea83be917055ca1292a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>Configuration Manager のデータの Microsoft Intune へのインポート 
 
@@ -56,7 +54,7 @@ Data Importer ツールがご使用の Configuration Manager 環境を変更す�
 - 他のオブジェクトに依存しているいくつかのプロファイルがあります。 証明書に依存している電子メール プロファイルのように、別のオブジェクトに依存しているプロファイルをインポートする場合は、以前に一方のオブジェクトを同じコンピューターから同じユーザーでインポートしたことがない限り、同時に両方のオブジェクトをインポートする必要があります。  
 - このツールの実行後、手動で追加の手順を実行する必要がある場合があります。 たとえば、アプリとポリシーを AAD グループの対象とする場合などです。 
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>[前提条件]
 - Configuration Manager バージョン 1610 以降。最上位サイトを指定し、サイト階層内のすべてのオブジェクトへのアクセス権を持つユーザーでツールを実行することをお勧めします。 ツールは、ツールを実行しているユーザーがアクセスできるオブジェクトのみを検出します。 
 - グローバル管理者が最初に、次の ***intunedataimporter.exe - GlobalConsent*** パラメーターを使用して、Data Importer ツールを実行する必要があります。 その後、グローバル管理者または Intune 管理者がツールを実行できます。  
 
@@ -113,7 +111,7 @@ Data Importer ツールを実行すると、1 つの AD グループを対象と
 ![コレクション マッピング CSV ファイルの例](..\media\migrate-collectionmapping.png)
 
 #### <a name="start-the-data-importer-tool-using-collection-mapping"></a>コレクション マッピングを使用して Data Importer ツールを起動する
-コレクション マッピング ファイルを使用するには、*-CollectionMappingFile* コマンド ライン パラメーターおよび作成するコレクション マッピング .csv ファイルへの完全パスを使用して、Data Importer ツールを起動する必要があります。 たとえば、
+コレクション マッピング ファイルを使用するには、*-CollectionMappingFile* コマンド ライン パラメーターおよび作成するコレクション マッピング .csv ファイルへの完全パスを使用して、Data Importer ツールを起動する必要があります。 次に例を示します。
 
 ```IntuneDataImporter.exe -CollectionMappingFile c:\Users\myuser\Documents\collectionmapping.csv```
 

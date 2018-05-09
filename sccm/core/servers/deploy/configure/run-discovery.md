@@ -1,26 +1,20 @@
 ---
-title: "デバイスとユーザー リソースの探索"
+title: デバイスとユーザー リソースの探索
 titleSuffix: Configuration Manager
-description: "探索プロセスおよび探索データ レコードの概要を読んでください。"
-ms.custom: na
+description: 探索プロセスおよび探索データ レコードの概要を読んでください。
 ms.date: 2/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 30844519-ce14-456f-bfb8-4318b578e9f6
-caps.latest.revision: "20"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: b380df38c4e08a04691a0bca9d46580fedf7b78a
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7d43415ce9517843490c815f7c9f2f3490e87674
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="run-discovery-for-system-center-configuration-manager"></a>System Center Configuration Manager 用の探索の実行
 
@@ -56,7 +50,7 @@ ms.lasthandoff: 12/04/2017
 
  サイト データベースに追加された探索情報は、探索または処理された場所に関係なく、階層内の各サイトにレプリケートされます。 そのため、複数のサイトでさまざまなスケジュールや探索方法の設定を設定することができますが、特定の探索方法を 1 つのサイトだけで実行したほうがよいでしょう。 これによって、重複する探索処理によるネットワーク帯域幅の使用を減らすと同時に、複数サイトでの冗長な探索データの処理を減らすことができます。  
 
- 探索データを使用すると、次のような管理タスクのために、リソースを論理的にグループ化するカスタム コレクションやクエリを作成できます。 たとえば、  
+ 探索データを使用すると、次のような管理タスクのために、リソースを論理的にグループ化するカスタム コレクションやクエリを作成できます。 次に例を示します。  
 
 -   クライアントのインストールまたはアップグレードをプッシュする。  
 

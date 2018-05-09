@@ -1,27 +1,20 @@
 ---
-title: "Windows デバイスを別のバージョンにアップグレードする"
+title: Windows デバイスを別のバージョンにアップグレードする
 titleSuffix: Configuration Manager
-description: "Configuration Manager を利用し、Windows 10 Desktop または Windows 10 Mobile を実行するデバイスを自動的に別のエディションにアップグレードします。"
-ms.custom: na
+description: Configuration Manager を利用し、Windows 10 Desktop または Windows 10 Mobile を実行するデバイスを自動的に別のエディションにアップグレードします。
 ms.date: 01/26/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
-caps.latest.revision: 
-caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 95e3385ad9bca9c87e48d731ffeebfa387fece65
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+ms.openlocfilehash: 0c15e919978ae8458f426511dd9a0e6d7c311b4b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-windows-devices-with-the-edition-upgrade-policy-in-system-center-configuration-manager"></a>System Center Configuration Manager でエディションのアップグレード ポリシーを使用して、Windows デバイスをアップグレードする
 
@@ -54,11 +47,11 @@ ms.lasthandoff: 02/01/2018
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[コンプライアンス設定]** > **[Windows 10 エディションのアップグレード]** の順にクリックします。  
 
-3.  **[ホーム]** タブの **[作成]** グループで、 **[エディション アップグレード ポリシーの作成]**をクリックします。  
+3.  **[ホーム]** タブの **[作成]** グループで、 **[エディション アップグレード ポリシーの作成]** をクリックします。  
 
-4.  **[ポリシーを作成する]**をクリックします。  
+4.  **[ポリシーを作成する]** をクリックします。  
 
-5.  **エディション アップグレード ポリシーの作成ウィザード** の **[全般]**ページで、次の情報を指定します。  
+5.  **エディション アップグレード ポリシーの作成ウィザード** の **[全般]** ページで、次の情報を指定します。  
 
     -   **名前** - エディションのアップグレード ポリシーの名前を入力します  
 
@@ -82,7 +75,7 @@ ms.lasthandoff: 02/01/2018
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[コンプライアンス設定]** > **[Windows 10 エディションのアップグレード]** の順にクリックします。  
 
-3.  展開する Windows 10 のエディションのアップグレード ポリシーを選び、 **[ホーム]** タブの **[展開]** グループで **[展開]**をクリックします。  
+3.  展開する Windows 10 のエディションのアップグレード ポリシーを選び、 **[ホーム]** タブの **[展開]** グループで **[展開]** をクリックします。  
 
 4.  **[Windows 10 エディションのアップグレード ポリシーの展開]** ダイアログ ボックスで、最初に、ポリシーを展開するコレクションを選びます。 クライアントがポリシーを評価するスケジュールを選び、**[OK]** をクリックします。 Configuration Manager クライアントで管理されている PC の場合は、デバイス コレクションにポリシーを展開する必要があります。 Intune で登録されている PC の場合は、ユーザーまたはデバイス コレクションにポリシーを展開できます。 
 

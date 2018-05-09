@@ -1,25 +1,20 @@
 ---
 title: Technical Preview 1801 | Microsoft Docs
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1801 で使用できる機能について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の Technical Preview バージョン 1801 で使用できる機能について説明します。
 ms.date: 01/19/2018
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 5a352ae0-355f-4fcf-b863-fb0654f51c52
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: f4be3ffe817392bf8fefdcf4e481c739778025ff
-ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
+manager: dougeby
+ms.openlocfilehash: 995c84e51ec72b385390f76fabfe08d60c2832d7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1801-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1801 の機能
 
@@ -40,8 +35,8 @@ ms.lasthandoff: 01/22/2018
 -   **サイト サーバーがパッシブ モードの場合、新しいプレビュー バージョンへの更新に失敗します**。 [プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)の場合は、この新しいプレビュー バージョンに更新する前にパッシブ モードのサイト サーバーをアンインストールする必要があります。 パッシブ モードのサイト サーバーは、サイトの更新を完了したあとに再インストールできます。
 
   パッシブ モードのサイト サーバーをアンインストールするには、次の手順を実行します。
-  1. Configuration Manager コンソールで**[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
-  2. **[サイト システムの役割]** ウィンドウで、**[サイト サーバー]**の役割を右クリックし、**[役割の削除]** を選択します。
+  1. Configuration Manager コンソールで **[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
+  2. **[サイト システムの役割]** ウィンドウで、**[サイト サーバー]** の役割を右クリックし、**[役割の削除]** を選択します。
   3. パッシブ モードのサイト サーバーを右クリックし、**[削除]** を選択します。
   4. サイト サーバーのアンインストール後に、アクティブなプライマリ サイト サーバーで **CONFIGURATION_MANAGER_UPDATE** のサービスを再起動します。
 <!--sms 489412-->

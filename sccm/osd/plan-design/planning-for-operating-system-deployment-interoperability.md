@@ -1,32 +1,26 @@
 ---
-title: "オペレーティング システムの展開の相互運用性に関する計画"
+title: オペレーティング システムの展開の相互運用性に関する計画
 titleSuffix: Configuration Manager
-description: "単一の階層内の異なる System Center Configuration Manager サイトで異なるバージョンを使用する場合の相互運用性の問題について理解します。"
-ms.custom: na
+description: 単一の階層内の異なる System Center Configuration Manager サイトで異なるバージョンを使用する場合の相互運用性の問題について理解します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: e327ce38-6c07-4a27-b6eb-7e5bf74ed04b
-caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 41c7c83602f965cd4a225d38a00b90501206de45
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 4faaae2d261837043b8b6ec208dd8b53b2a97b15
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-operating-system-deployment-interoperability-in-system-center-configuration-manager"></a>System Center Configuration Manager のオペレーティング システムの展開の相互運用性の計画
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-単一の階層内の異なる System Center Configuration Manager サイトで異なるバージョンを使用する場合、一部の Configuration Managerの機能が使用できなくなります。 通常、Configuration Manager の新しいバージョンの機能は、古いバージョンを実行しているサイトでアクセスしたり、古いバージョンを実行しているクライアントで使用したりすることはできません。 詳細については、「 [異なるバージョンの Configuration Manager 間の相互運用性](../../core/plan-design/hierarchy/interoperability-between-different-versions.md)」をご覧ください。  
+単一の階層内の異なる System Center Configuration Manager サイトで異なるバージョンを使用する場合、一部の Configuration Managerの機能が使用できなくなります。 通常、Configuration Manager の新しいバージョンの機能は、古いバージョンを実行しているサイトでアクセスしたり、古いバージョンを実行しているクライアントで使用したりすることはできません。 詳細については、「 [Interoperability between different versions of System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md)」をご覧ください。  
 
  階層内の最上位サイトをアップグレードし、階層内の他のサイトは古いバージョンの Configuration Manager を実行する場合、次の点を考慮してください。  
 

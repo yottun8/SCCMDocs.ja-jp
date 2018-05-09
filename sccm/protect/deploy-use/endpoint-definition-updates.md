@@ -1,25 +1,20 @@
 ---
-title: "Endpoint Protection の構成"
+title: Endpoint Protection の構成
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で Endpoint Protection を使用する方法を選択および構成し、クライアント コンピューターでマルウェア対策定義を最新の状態に保つ方法について説明します。"
-ms.custom: na
+description: System Center Configuration Manager で Endpoint Protection を使用する方法を選択および構成し、クライアント コンピューターでマルウェア対策定義を最新の状態に保つ方法について説明します。
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 537dd2a7-4e44-4877-b8dd-5e1499407f8d
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: b0b178fad73b6490c4bfeb8ec4aaa7348e7cb2a2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f650ba7bc703ec4fa0492fc86859cb8742e0510d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="configure-definition-updates-for-endpoint-protection"></a>Endpoint Protection の定義ファイルの更新を構成する  
 
@@ -47,13 +42,13 @@ ms.lasthandoff: 10/12/2017
 ## <a name="how-to-configure-definition-update-sources"></a>定義ファイルの更新ソースを構成する方法
  次の手順を使用すると、各マルウェア対策ポリシーに使用する定義ファイルの更新ソースを構成できます。
 
-1.  Configuration Manager コンソールで、**[ 資産とコンプライアンス]** をクリックします。
+1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。
 
-2.  **[資産とコンプライアンス]** ワークスペースで **[Endpoint Protection]**を展開してから、 **[マルウェア対策ポリシー]**をクリックします。
+2.  **[資産とコンプライアンス]** ワークスペースで **[Endpoint Protection]** を展開してから、 **[マルウェア対策ポリシー]** をクリックします。
 
 3.  **[既定のマルウェア対策ポリシー]** プロパティ ページを開くか、新しいマルウェア対策ポリシーを作成します。 マルウェア対策ポリシーを作成する方法の詳細については、「[System Center Configuration Manager で Endpoint Protection 用にマルウェア対策ポリシーを作成し展開する方法](endpoint-antimalware-policies.md)」をご覧ください。
 
-4.  マルウェア対策プロパティ ダイアログ ボックスの **[定義ファイルの更新]** セクションで **[ソースの設定]**をクリックします。
+4.  マルウェア対策プロパティ ダイアログ ボックスの **[定義ファイルの更新]** セクションで **[ソースの設定]** をクリックします。
 
 5.  **[定義ファイルの更新ソースの構成]** ダイアログ ボックスで、定義ファイルの更新に使用するソースを選びます。 **[上]** または **[下]** をクリックしてそれらのソースを使用する順序を変更します。
 

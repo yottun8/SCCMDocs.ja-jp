@@ -1,26 +1,20 @@
 ---
-title: "タスクの自動化計画に関する考慮事項"
+title: タスクの自動化計画に関する考慮事項
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でのタスクの自動化の前の計画"
-ms.custom: na
+description: System Center Configuration Manager でのタスクの自動化の前の計画
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc497a8a-3c54-4529-8403-6f6171a21c64
-caps.latest.revision: "13"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 5d044e7c7869faeb0b3ea24e24ff40674a63920e
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 485f295e83d94ed5282003c7179a5f2c1e37773e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-considerations-for-automating-tasks-in-system-center-configuration-manager"></a>System Center Configuration Manager でのタスクの自動化計画に関する考慮事項
 
@@ -241,7 +235,7 @@ System Center Configuration Manager 環境でタスクを自動化するため�
 ##  <a name="BKMK_TSRun"></a> タスク シーケンスの実行  
  既定では、タスク シーケンスは常にローカル システム アカウントを使用して実行されます。 タスク シーケンスのコマンドライン ステップでは、別のアカウントとしてタスク シーケンスを実行できます。 タスク シーケンスを実行するときに、Configuration Manager クライアントはタスク シーケンスのステップを開始する前に、参照されているパッケージを最初に確認します。 参照されているパッケージが検証されていない場合や配布ポイントで使用できない場合、タスク シーケンスは関連付けられているタスク シーケンスのステップについてエラーを返します。  
 
- 配布されたタスク シーケンスがダウンロードと実行を行うように構成されている場合、すべての依存パッケージとアプリケーションが Configuration Manager クライアント キャッシュにダウンロードされます。 必要なパッケージとアプリケーションは配布ポイントから取得されます。Configuration Manager クライアント キャッシュ サイズが小さすぎる場合や、パッケージまたはアプリケーションが見つからなかった場合、タスク シーケンスは失敗し、ステータス メッセージが生成されます。 **[実行中のタスク シーケンスでコンテンツが必要になったときにローカルにダウンロードする]**を選ぶと、必要になったときにのみクライアントでコンテンツをダウンロードするように指定できます。または、 **[配布ポイントからプログラムを実行する]** オプションを使用して、クライアントで最初にキャッシュにファイルをダウンロードせずに、配布ポイントから直接ファイルをインストールするように指定できます。 **[配布ポイントからプログラムを実行する]** オプションは、参照されているパッケージで、**[パッケージ]** プロパティの **[データ アクセス]** タブの **[このパッケージのコンテンツを配布ポイントのパッケージ共有にコピーする]** 設定が有効にされている場合にのみ使用できます。  
+ 配布されたタスク シーケンスがダウンロードと実行を行うように構成されている場合、すべての依存パッケージとアプリケーションが Configuration Manager クライアント キャッシュにダウンロードされます。 必要なパッケージとアプリケーションは配布ポイントから取得されます。Configuration Manager クライアント キャッシュ サイズが小さすぎる場合や、パッケージまたはアプリケーションが見つからなかった場合、タスク シーケンスは失敗し、ステータス メッセージが生成されます。 **[実行中のタスク シーケンスでコンテンツが必要になったときにローカルにダウンロードする]** を選ぶと、必要になったときにのみクライアントでコンテンツをダウンロードするように指定できます。または、 **[配布ポイントからプログラムを実行する]** オプションを使用して、クライアントで最初にキャッシュにファイルをダウンロードせずに、配布ポイントから直接ファイルをインストールするように指定できます。 **[配布ポイントからプログラムを実行する]** オプションは、参照されているパッケージで、**[パッケージ]** プロパティの **[データ アクセス]** タブの **[このパッケージのコンテンツを配布ポイントのパッケージ共有にコピーする]** 設定が有効にされている場合にのみ使用できます。  
 
  タスク シーケンスを実行しているクライアントが依存パッケージまたは依存アプリケーションを見つけることができず、展開が **[利用可能]** として構成されている場合、クライアントは直ちにエラーを送信します。 ただし、展開が **[必須]** として構成されているときに、クライアントがアクセスできる配布ポイントにコンテンツがレプリケートされていない場合、Configuration Manager クライアントは待機して、期限までコンテンツのダウンロードを再試行します。  
 

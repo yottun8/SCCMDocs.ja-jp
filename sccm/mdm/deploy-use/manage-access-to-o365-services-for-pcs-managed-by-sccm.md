@@ -2,25 +2,19 @@
 title: O365 サービスへのアクセスの管理
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager で管理されている PC の Office 365 サービスへの条件付きアクセスを構成する方法について説明します。
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
-caps.latest.revision: 15
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e02cb911397d5f1f837996318b12049d328c9c3
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 7bf7114382c956dcac6302b3fc11617ad6b5eeec
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>System Center Configuration Manager で管理されている PC の O365 サービスへのアクセスを管理する
 
@@ -126,9 +120,9 @@ Microsoft Intune で登録および管理されるデバイスの条件付きア
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
 
-2.  Exchange Online のポリシーを作成するには、 **[Exchange Online の条件付きアクセス ポリシーを有効にする]**を選びます。  
+2.  Exchange Online のポリシーを作成するには、 **[Exchange Online の条件付きアクセス ポリシーを有効にする]** を選びます。  
 
-     SharePoint Online のポリシーを作成するには、 **[Exchange Online の条件付きアクセス ポリシーを有効にする]**を選びます。  
+     SharePoint Online のポリシーを作成するには、 **[Exchange Online の条件付きアクセス ポリシーを有効にする]** を選びます。  
 
 3.  **[ホーム]** タブの **[リンク]** グループで、**[Intune コンソールでの条件付きアクセス ポリシーの構成]** をクリックします。 Configuration Manager を Intune に接続するために使用されるアカウントのユーザー名とパスワードを指定する必要がある場合があります。  
 
@@ -138,14 +132,14 @@ Microsoft Intune で登録および管理されるデバイスの条件付きア
 
      SharePoint Online の場合は、Microsoft Intune の管理コンソールで **[ポリシー] > [条件付きアクセス] > [SharePoint Online ポリシー]** をクリックします。  
 
-5.  Windows PC の要件を**[デバイスは準拠デバイスである必要があります]**オプションに設定します。  
+5.  Windows PC の要件を **[デバイスは準拠デバイスである必要があります]** オプションに設定します。  
 
-6.  **[対象グループ]**で、**[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。  
+6.  **[対象グループ]** で、**[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。  
 
     > [!NOTE]  
     >  コンプライアンス ポリシーの展開と条件付きアクセス ポリシーの対象グループに同じセキュリティ ユーザー グループを使用してください。  
 
-     **[例外グループ]**で、必要に応じて **[変更]** をクリックして、このポリシーから除外する Azure Active Directory セキュリティ グループを選択します。  
+     **[例外グループ]** で、必要に応じて **[変更]** をクリックして、このポリシーから除外する Azure Active Directory セキュリティ グループを選択します。  
 
 7.  **[保存]** をクリックしてポリシーを作成および保存します  
 

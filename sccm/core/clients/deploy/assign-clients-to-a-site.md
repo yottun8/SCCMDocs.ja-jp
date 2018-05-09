@@ -1,25 +1,20 @@
 ---
-title: "クライアントをサイトに割り当てる"
+title: クライアントをサイトに割り当てる
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でクライアントをサイトに割り当てます。"
-ms.custom: na
+description: System Center Configuration Manager でクライアントをサイトに割り当てます。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
-caps.latest.revision: "10"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: e11287659f6df5503cdabf203cdffa7655232acd
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 15467e83be28e884acb14309bdbb57768d7f19f0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-assign-clients-to-a-site-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアントをサイトに割り当てる方法
 
@@ -51,13 +46,13 @@ Configuration Manager の登録中にモバイル デバイス クライアン�
 
 -   サイト コードを指定するクライアント インストールのプロパティを使用する  
 
--   コントロール パネルの **[ Configuration Manager ]** でサイト コードを指定する  
+-   コントロール パネルの **[Configuration Manager]** でサイト コードを指定する  
 
 > [!NOTE]  
 >  クライアント コンピューターを存在しない Configuration Manager サイト コードに手動で割り当てると、サイトの割り当ては失敗します。   
 
 ##  <a name="BKMK_AutomaticAssignment"></a> コンピューターにサイトの自動割り当てを使用する  
- サイトの自動割り当ては、クライアントの展開時に実行できます。または **[ Configuration Manager のプロパティ ]** の **[ 詳細設定 ]** タブにある **[ サイトの探索 ]** をクリックしても、実行できます。 Configuration Manager クライアントは、自身のネットワークの場所を、Configuration Manager 階層内に構成されている境界と比較します。 クライアントのネットワークの場所が、サイトの割り当てが有効な境界グループ内にある場合や、階層がフォールバック サイト用に構成されている場合、サイト コードを指定する必要なく、クライアントは自動的にそのサイトに割り当てられます。  
+ サイトの自動割り当ては、クライアントの展開時に実行できます。または **[Configuration Manager のプロパティ]** の **[詳細設定]** タブにある **[サイトの探索]** をクリックしても、実行できます。 Configuration Manager クライアントは、自身のネットワークの場所を、Configuration Manager 階層内に構成されている境界と比較します。 クライアントのネットワークの場所が、サイトの割り当てが有効な境界グループ内にある場合や、階層がフォールバック サイト用に構成されている場合、サイト コードを指定する必要なく、クライアントは自動的にそのサイトに割り当てられます。  
 
  次の 1 つまたは複数を使用して境界を構成できます。  
 
@@ -151,7 +146,7 @@ Configuration Manager に登録されているモバイル デバイス クラ�
 
 -   クライアント コンピューターの場合、**[資産とコンプライアンス]** ワークスペースの **[デバイス]** ノードで、コンピューターの **[クライアント]** 列に **[はい]** が表示され、**[サイト コード]** 列に正しいプライマリ サイト コードが表示されることを確認する。  
 
--   モバイル デバイス クライアントの場合、**[ 資産とコンプライアンス ]** ワークスペースの **[ すべてのモバイル デバイス ]** コレクションを使用して、モバイル デバイスの **[ クライアント ]** 列に **[ はい ]** が表示され、**[ サイト コード ]** 列に正しいプライマリ サイト コードが表示されることを確認する  
+-   モバイル デバイス クライアントの場合、**[資産とコンプライアンス]** ワークスペースの **[すべてのモバイル デバイス]** コレクションを使用して、モバイル デバイスの **[クライアント]** 列に **[はい]** が表示され、**[サイト コード]** 列に正しいプライマリ サイト コードが表示されることを確認する  
 
 -   クライアント割り当てとモバイル デバイス登録のレポートを使用する  
 

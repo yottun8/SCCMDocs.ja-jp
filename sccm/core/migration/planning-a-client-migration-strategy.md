@@ -1,25 +1,20 @@
 ---
-title: "クライアントの移行の計画"
+title: クライアントの移行の計画
 titleSuffix: Configuration Manager
-description: "ソース階層からクライアントを System Center Configuration Manager の移行先階層に移行するタスクについて説明します。"
-ms.custom: na
+description: ソース階層からクライアントを System Center Configuration Manager の移行先階層に移行するタスクについて説明します。
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2e27b0b7-7bd3-45cd-bc99-9c991606c637
-caps.latest.revision: "6"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: f45685c669d70ae057fb57b6e9bfb50d5494e79e
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: a67fb2d070c971004418ba47c9eb56b6b0de3e5a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-a-client-migration-strategy-in-system-center-configuration-manager"></a>System Center Configuration Manager でのクライアント移行戦略の計画
 
@@ -40,7 +35,7 @@ ms.lasthandoff: 01/04/2018
 
 -   **Configuration Manager 2007 のソース階層:** サポートされているバージョンの Configuration Manager を実行しているソース階層のクライアントを移行すると、クライアント ソフトウェアは移行先階層のクライアント バージョンにアップグレードされます。  
 
--    **System Center 2012 Configuration Manager 以降のソース階層:** 同じ製品バージョンの階層間でクライアントを移行する場合、クライアント ソフトウェアは変更またはアップグレードされません。 代わりに、クライアントがソース階層から移行先階層内のサイトに再割り当てされます。  
+-   **System Center 2012 Configuration Manager 以降のソース階層:** 同じ製品バージョンの階層間でクライアントを移行する場合、クライアント ソフトウェアは変更またはアップグレードされません。 代わりに、クライアントがソース階層から移行先階層内のサイトに再割り当てされます。  
 
     > [!NOTE]  
     >  階層の製品バージョンが、移行先階層への移行でサポートされていない場合、ソース階層のすべてのサイトとクライアントを互換性のある製品バージョンにアップグレードします。 ソース階層をサポートされる製品バージョンにアップグレードした後で、階層間の移行を実行できます。 詳細については、「[System Center Configuration Manager での移行の前提条件](../../core/migration/prerequisites-for-migration.md)」の「[移行がサポートされている Configuration Manager のバージョン](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions)」をご覧ください。  

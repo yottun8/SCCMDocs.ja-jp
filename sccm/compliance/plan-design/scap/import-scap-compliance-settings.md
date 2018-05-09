@@ -1,28 +1,21 @@
 ---
 title: SCAP コンプライアンス設定のインポート
-titleSuffix: System Center Configuration Manager
+titleSuffix: Configuraton Manager
 description: 構成基準として SCAP コンプライアンス設定をインポートし、結果をエクスポートする
-ms.custom: na
 ms.date: 03/27/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 0bdcb018-bac2-4540-b786-6242bac73ff4
-caps.latest.revision: 1
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: 5863f8b9a79e8e22e215e9feac7744b4a6ce279d
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+ms.openlocfilehash: 1f6b1fa0dd0775083eff9925a65509083b3f47d3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-the-compliance-settings-compliant-cab-files-into-system-center-configuration-manager"></a>System Center Configuration Manager へのコンプライアンス設定に準拠した .cab ファイルのインポート
 
@@ -48,11 +41,11 @@ ms.lasthandoff: 03/28/2018
 
 | ウィザードのページ名 | ユーザーの操作 |
 | --- | --- |
-| **ファイルの選択** |1.**[追加]**をクリックします。 </br>[開く] ダイアログ ボックスが表示されます。|
+| **ファイルの選択** |1.**[追加]** をクリックします。 </br>[開く] ダイアログ ボックスが表示されます。|
 ||2.**[開く]** ダイアログ ボックスで、**&lt;compliant cab output\_folder&gt;** に移動します。 **&lt; compliant\_cab&gt;**.cab ファイルをクリックします。ここで、_compliant cab **output\_folder** は、Sces.ScapToDcm.exe ツールの実行時に –output スイッチの後に指定されたフォルダーです。 **compliant\_file** は、プロセスの前半に作成した .cab ファイルの名前です。 次に、**[開く]** をクリックします。 </br> Configuration Manager コンソールの [セキュリティの警告] ダイアログ ボックスが表示されます。|
 ||3.**Configuration Manager コンソールの [セキュリティの警告]** ダイアログ ボックスで、**[実行]** をクリックします。 [ファイルの選択] ページで、インポートする基準の一覧に構成データが表示されます。|
-||3.**[次へ]**をクリックします。|
-| **概要** |5.**[次へ]**をクリックします。 |
+||3.**[次へ]** をクリックします。|
+| **概要** |5.**[次へ]** をクリックします。 |
 | **構成データのインポート ウィザードの完了** |6.**[閉じる]** をクリックします。 |
 
 新しい構成基準が Configuration Manager コンソールの情報ウィンドウに表示されます。
@@ -79,7 +72,7 @@ SCAP コンプライアンスを評価するコンピューターに適切なコ
 
     構成基準の構成項目の一覧が Configuration Manager の情報ウィンドウに表示されます。
 
-4. 操作ウィンドウで、 **[展開]**をクリックします。
+4. 操作ウィンドウで、 **[展開]** をクリックします。
 
 5. 次の表内の情報を使用して、それ以外の値を指定しない場合は既定値を受け入れながら、[**構成基準**の**展開**] **ダイアログ**を完了します。
 
@@ -87,7 +80,7 @@ SCAP コンプライアンスを評価するコンピューターに適切なコ
 
 | ウィザードのページ名 | ユーザーの操作 |
 | --- | --- |
-| **コレクションの選択** | 1.**[参照]**をクリックします。|
+| **コレクションの選択** | 1.**[参照]** をクリックします。|
 ||2.**[コレクションの選択]** ダイアログ ボックスで、**[デバイス コレクション]** を選択します。 次に、**&lt;computer\_collection&gt;** をクリックします。ここで、&lt;_computer\_collection&gt;_ は、プロセスの前半で作成したコンピューター コレクションの名前です。 **[OK]** をクリックします。|
 | **スケジュールの設定** |3.組織に適切なスケジュールを選択します。|
  

@@ -1,26 +1,20 @@
 ---
-title: "構成基準の一般的なタスク "
+title: '構成基準の一般的なタスク '
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の構成基準を作成して展開する方法について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の構成基準を作成して展開する方法について説明します。
 ms.date: 07/12/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 50f7bdf4dc537f734864304d96566347e6341de6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: bd76ecfcd4f5731e7fa078a00e79fdc6ab91ffa4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-tasks-for-creating-and-deploying-configuration-baselines-with-system-center-configuration-manager"></a>System Center Configuration Manager での構成基準の作成と展開に関する一般的なタスク
 
@@ -49,7 +43,7 @@ ms.lasthandoff: 10/12/2017
 
 5.  **[追加]** > **[構成項目]** の順にクリックします。  
 
-6.  **[構成項目の追加]** ダイアログ ボックスで、前に作成した **[Windows 10 パスワード適用]** 構成項目を選択し、 **[追加]**をクリックします。  
+6.  **[構成項目の追加]** ダイアログ ボックスで、前に作成した **[Windows 10 パスワード適用]** 構成項目を選択し、 **[追加]** をクリックします。  
 
 7.  [OK] をクリックして **[構成項目の追加]** ダイアログ ボックスを閉じて、**[構成基準の作成]** ダイアログ ボックスに戻ります。
 
@@ -62,9 +56,9 @@ ms.lasthandoff: 10/12/2017
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[コンプライアンス設定]** > **[構成基準]** の順にクリックします。  
 
-3.  構成基準の一覧から、 **[Windows 10 パスワード]**を選択します。  
+3.  構成基準の一覧から、 **[Windows 10 パスワード]** を選択します。  
 
-4.  **[ ホーム ]** タブの **[ 展開 ]** グループで、**[ 展開]** をクリックします。  
+4.  **[ホーム]** タブの **[展開]** グループで、**[展開]** をクリックします。  
 
 5.  **[構成基準の展開]** ダイアログ ボックスで、次の設定を構成します。  
 
@@ -81,7 +75,7 @@ ms.lasthandoff: 10/12/2017
 
 7.  **[OK]** をクリックして **[構成基準の展開]** ダイアログ ボックスを閉じると、展開が作成されます。  
 
- この展開のコンプライアンスに関する統計情報の概要を確認するには、 **[監視]** ワークスペースで **[展開]**をクリックします。 画面の下部に、 **[コンプライアンスに関する統計情報]** グラフが表示されます。  
+ この展開のコンプライアンスに関する統計情報の概要を確認するには、 **[監視]** ワークスペースで **[展開]** をクリックします。 画面の下部に、 **[コンプライアンスに関する統計情報]** グラフが表示されます。  
 
 ## <a name="next-steps"></a>次のステップ 
 

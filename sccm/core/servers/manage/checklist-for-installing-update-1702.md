@@ -1,26 +1,20 @@
 ---
-title: "1702 のチェックリスト"
+title: 1702 のチェックリスト
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager バージョン 1702 に更新する前に、実行するアクションについて説明します。"
-ms.custom: na
+description: System Center Configuration Manager バージョン 1702 に更新する前に、実行するアクションについて説明します。
 ms.date: 06/06/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: b587779e-1bd3-4ee3-8146-8e31f53499bd
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: d7b3f6d058e17e12ca910f43f7a9cbe98d128bee
-ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: db5ca29f093e27c2c572714dc4c85a630c774b15
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム 1702 をインストールするためのチェックリスト
 
@@ -97,7 +91,7 @@ ADK を更新する前にサイトを更新する場合は、ブート イメー
 
 **サイトと階層の状態を確認して、解決されていない問題がないことを確認する:** サイトを更新する前に、サイト サーバー、サイト データベース サーバー、リモート コンピューターにインストールされているサイト システムの役割で、運用上のすべての問題を解決します。 運用上の問題があると、サイトの更新が失敗する可能性があります。
 
-詳細については、「 [System Center Configuration Manager のアラートとステータス システムの使用](/sccm/core/servers/manage/use-alerts-and-the-status-system)」を参照してください。
+詳細については、「 [Use alerts and the status system for System Center Configuration Manager](/sccm/core/servers/manage/use-alerts-and-the-status-system)」を参照してください。
 
 **サイト間でファイルとデータのレプリケーションを確認する:**   
 サイト間のファイルとデータベースのレプリケーションが機能していて最新の状態であることを確認します。 遅延またはバックログにより、円滑で正常な更新が行われない場合があります。
@@ -188,7 +182,7 @@ Do not run a test database upgrade on the production site database. Doing so upd
 
 ## <a name="post-update-checklist"></a>更新後のチェックリスト
 更新プログラムのインストールが完了した後で以下の作業が行われることを確認します。
-1.  サイト間レプリケーションがアクティブであることを確認します。 コンソールで、**[監視]** > **[サイト階層]** および**[監視]** > **[データベースのレプリケーション]** を表示し、問題が発生していないこと、またはレプリケーション リンクがアクティブであることを確認します。
+1.  サイト間レプリケーションがアクティブであることを確認します。 コンソールで、**[監視]** > **[サイト階層]** および **[監視]** > **[データベースのレプリケーション]** を表示し、問題が発生していないこと、またはレプリケーション リンクがアクティブであることを確認します。
 2.  各サイト サーバーおよびサイト システムの役割がバージョン 1702 に更新されていることを確認します。 コンソールでは、**[サイト]** や **[配布ポイント]** などの一部のノードの表示に、オプションの列 **[バージョン]** を追加できます。
 
  必要な場合は、サイト システムの役割が自動的に再インストールされて、新しいバージョンに更新されます。 正常に更新されないリモート サイト システムは再起動してみます。

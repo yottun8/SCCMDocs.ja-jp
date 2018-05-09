@@ -1,26 +1,21 @@
 ---
-title: "更新プログラムを作成する"
+title: 更新プログラムを作成する
 titleSuffix: Configuration Manager
-description: "System Center Updates Publisher を使用してソフトウェア更新プログラムを作成およびバンドルする"
-ms.custom: na
+description: System Center Updates Publisher を使用してソフトウェア更新プログラムを作成およびバンドルする
 ms.date: 4/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: 46a1a8ac-126c-4ee6-ae09-32dfbdb83368
-caps.latest.revision: "1"
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: fe1e4e032c9dcad1a05fa7c13f68a3017a5273be
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 3f22e7ed209496c2d679591a9c7b282f811f4ae1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create--software-updates-and-update-bundles-with-updates-publisher"></a>Updates Publisher を使用してソフトウェア更新プログラムおよび更新プログラムのバンドルを作成する
 
@@ -51,7 +46,7 @@ Updates Publisher を使用すると、**Create Update (更新プログラムの
 
     -   ソフトウェア更新プログラムのインストールに必要なすべてのコマンドライン引数を指定します。
 
-        -   Windows インストーラー ファイルと修正プログラム (.MSI ファイルと .MSP ファイル) ではこれらの値が自動的に設定されます。 これらのファイルの種類の場合、引数は、**\[名\]=\[値\]**として指定する必要があります。 さらに、 **/**  で始まるすべてのオプション (**/qn** など) は .MSI または .MSP 形式のソフトウェア更新プログラムではサポートされていません。
+        -   Windows インストーラー ファイルと修正プログラム (.MSI ファイルと .MSP ファイル) ではこれらの値が自動的に設定されます。 これらのファイルの種類の場合、引数は、**\[名\]=\[値\]** として指定する必要があります。 さらに、**/** で始まるすべてのオプション (**/qn** など) は .MSI または .MSP 形式のソフトウェア更新プログラムではサポートされていません。
 
         -   .EXE 形式の更新プログラムでは、すべての引数が有効です。
 
@@ -177,7 +172,7 @@ Updates Publisher を使用すると、**Create Update (更新プログラムの
 ## <a name="use-the-create-bundle-wizard"></a>Create Bundle (バンドルの作成) ウィザードの使用
 このウィザードは、[Create Update (更新プログラムの作成) ウィザード](#use-the-create-update-wizard)と同じワークフローを使用しているため、そのワークフローを使用しますが、バンドルの場合は次の相違があることに注意してください。
 
-1.  ウィザードを開始するには、コンソールで **[更新プログラム ワークスペース]** に移動し、リボンの**[ホーム]** タブで **[バンドル]** をクリックします。
+1.  ウィザードを開始するには、コンソールで **[更新プログラム ワークスペース]** に移動し、リボンの **[ホーム]** タブで **[バンドル]** をクリックします。
 
 2.  Create Update (更新プログラムの作成) ウィザードとは異なり、バンドルを作成するときは [パッケージ] ページはありません。
 

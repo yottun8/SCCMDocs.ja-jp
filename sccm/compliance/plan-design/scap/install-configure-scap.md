@@ -1,28 +1,21 @@
 ---
 title: Security Content Automation Protocol (SCAP) 拡張機能をインストールし、構成する
-titleSuffix: System Center Configuration Manager
+titleSuffix: Configuraton Manager
 description: Security Content Automation Protocol (SCAP) 拡張機能をインストールし、構成する
-ms.custom: na
 ms.date: 03/27/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: f53b484b-5123-48f0-be2f-4e30318f3d39
-caps.latest.revision: 1
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: 03fc9fa9f82aeae8ab22d6b4c3fa7858e93401cc
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+ms.openlocfilehash: 891d21b44ed6efca73413a46d0483519b76f9cae
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-and-configure-the-scap-extensions-for-microsoft-system-center-configuration-manager"></a>Microsoft System Center Configuration Manager の SCAP 拡張機能をインストールして構成します
 
@@ -47,7 +40,7 @@ ms.lasthandoff: 03/28/2018
 | ようこそとエンド ユーザー使用許諾契約 |1.使用許諾契約書を確認します|
 | ようこそとエンド ユーザー使用許諾契約|2.**[使用許諾契約書に同意します]** をクリックします。|
 | ようこそとエンド ユーザー使用許諾契約|3.**[インストール]** をクリックします。|
-| Microsoft System Center Configuration Manager の SCAP 拡張機能のインストール ウィザードを実行します。 |4.**[完了]**をクリックします。|
+| Microsoft System Center Configuration Manager の SCAP 拡張機能のインストール ウィザードを実行します。 |4.**[完了]** をクリックします。|
  
 
 

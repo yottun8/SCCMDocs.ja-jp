@@ -2,25 +2,19 @@
 title: Technical Preview 1702 の機能
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager の Technical Preview バージョン 1702 で使用できる機能について説明します。
-ms.custom: na
 ms.date: 02/24/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
-caps.latest.revision: 5
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 94c025a75cd0aef62ee00c11b8ee5a113fba2bb1
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: dc1fc6668c61f2eafe04f92fc6b9ea27520ddc43
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1702 の機能
 
@@ -135,7 +129,7 @@ Azure AD の詳細については、以下を参照してください。
 
 ### <a name="allow-windows-update-for-business-to-manage-windows-10-updates"></a>Windows 10 の更新プログラム管理を Windows Update for Business に許可する
 Windows Update for Business 更新プログラムのコンプライアンス評価情報を収集するには、次の手順で、Windows 10 の更新プログラム管理を Windows Update for Business に明示的に許可するクライアント エージェント設定を構成します。
-1. Configuration Manager コンソールで、 **[管理]** > **[クライアント設定]**に移動します。
+1. Configuration Manager コンソールで、 **[管理]** > **[クライアント設定]** に移動します。
 2. クライアント設定のプロパティで、**[ソフトウェア更新プログラム]** を開き、**[Windows Update for Business で Windows 10 の更新プログラムを管理する]** 設定で **[はい]** を選択します。
 
 ### <a name="create-a-compliance-policy-for-windows-update-for-business-assessment"></a>Windows Update for Business 評価のコンプライアンス ポリシーを作成する
@@ -152,7 +146,7 @@ Windows Update for Business 更新プログラムのコンプライアンス評�
 2. **[ホーム]** タブの **[展開]** グループで、**[展開]** をクリックします。
 3. **[コンプライアンス ポリシーの展開]** ダイアログ ボックスで、 **[参照]** をクリックして、ポリシーを展開するユーザー コレクションを選択します。
    さらに、ポリシーが準拠していない場合にアラートを生成するオプションや、ポリシーのコンプライアンスを評価するスケジュールを構成するオプションを選択できます。
-4. 終了したら、 **[OK]**をクリックします。
+4. 終了したら、 **[OK]** をクリックします。
 
 ### <a name="monitor-the-compliance-policy"></a>コンプライアンス ポリシーの監視
 コンプライアンス ポリシーを作成すると、Configuration Manager コンソールでコンプライアンス結果を監視できます。 詳細については、「[Monitor the compliance policy](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)」(コンプライアンス ポリシーの監視) を参照してください。

@@ -1,26 +1,20 @@
 ---
-title: "クライアントの監視 "
+title: 'クライアントの監視 '
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でクライアントを監視する詳細な方法を説明します。"
-ms.custom: na
+description: System Center Configuration Manager でクライアントを監視する詳細な方法を説明します。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
-caps.latest.revision: 
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 2df5127f3eb5049d1a4277fd25ce04c6de05999d
-ms.sourcegitcommit: b653342fb5d69a16e71b3548a7e9a2e47e54bf88
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 976aeaacfadfa7d2f189f20ab001486d486b764e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-monitor-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアントを監視する方法
 

@@ -2,25 +2,19 @@
 title: OS の更新タスク シーケンスを作成する
 titleSuffix: Configuration Manager
 description: タスク シーケンスを使用して、自動的に Windows 7 以降から Windows 10 にアップグレードします。
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
-caps.latest.revision: 12
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 48a5e7aa381924e3c0ad052833c9588e3dffa4f5
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: d35a5ea3ebde6ce6ab0934832180223c2a634541
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-operating-system-in-system-center-configuration-manager"></a>System Center Configuration Manager のオペレーティング システムをアップグレードするタスク シーケンスを作成する
 
@@ -52,7 +46,7 @@ Configuration Manager でタスク シーケンスを使用して、オペレー
 
 3.  **[ホーム]** タブの **[作成]** グループで **[タスク シーケンスの作成]** をクリックして、タスク シーケンスの作成ウィザードを起動します。  
 
-4.  **[新しいタスク シーケンスの作成]** ページで、 **[オペレーティング システムをアップグレード パッケージからアップグレードする]**をクリックしてから、 **[次へ]**をクリックします。  
+4.  **[新しいタスク シーケンスの作成]** ページで、 **[オペレーティング システムをアップグレード パッケージからアップグレードする]** をクリックしてから、 **[次へ]** をクリックします。  
 
 5.  **[タスク シーケンス情報]** ページで次の設定を指定し、**[次へ]** をクリックします。  
 
@@ -60,7 +54,7 @@ Configuration Manager でタスク シーケンスを使用して、オペレー
 
     -   **説明**: タスク シーケンスによって実行されるタスクの説明を指定します。  
 
-6.  **[Windows オペレーティング システムのアップグレード]** ページで次の設定を指定し、 **[次へ]**をクリックします。  
+6.  **[Windows オペレーティング システムのアップグレード]** ページで次の設定を指定し、 **[次へ]** をクリックします。  
 
     -   **[アップグレード パッケージ]**: オペレーティング システムのアップグレードのソース ファイルを含むアップグレード パッケージを指定します。 **[プロパティ]** ウィンドウの情報を参照して、正しいアップグレード パッケージが選択されていることを確認できます。 詳細については、「[オペレーティング システムのアップグレード パッケージの管理](../get-started/manage-operating-system-upgrade-packages.md)」を参照してください。  
 
@@ -72,7 +66,7 @@ Configuration Manager でタスク シーケンスを使用して、オペレー
 
 7.  **[更新プログラムを含める]** ページで、必要なソフトウェア更新プログラムまたはすべてのソフトウェア更新プログラムをインストールするか、まったくインストールしないかを指定します。 **[次へ]** をクリックします。 ソフトウェア更新プログラムをインストールするように指定する場合、Configuration Manager は、セットアップ先のコンピューターがメンバーとなっているコレクション向けのソフトウェア更新プログラムのみをインストールします。  
 
-8.  **[アプリケーションのインストール]** ページで、展開先コンピューターにインストールするアプリケーションを指定してから、**[次へ]**をクリックします。 複数のアプリケーションを指定する場合は、特定のアプリケーションのインストールに失敗したときにタスク シーケンスを続行するかどうかも指定することができます。  
+8.  **[アプリケーションのインストール]** ページで、展開先コンピューターにインストールするアプリケーションを指定してから、**[次へ]** をクリックします。 複数のアプリケーションを指定する場合は、特定のアプリケーションのインストールに失敗したときにタスク シーケンスを続行するかどうかも指定することができます。  
 
 9. ウィザードを完了します。  
 

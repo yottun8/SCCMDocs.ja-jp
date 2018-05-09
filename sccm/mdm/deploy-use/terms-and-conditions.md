@@ -1,25 +1,20 @@
 ---
-title: "使用条件"
+title: 使用条件
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager のユーザー グループに使用条件ポリシーを展開します。"
-ms.custom: na
+description: System Center Configuration Manager のユーザー グループに使用条件ポリシーを展開します。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
-caps.latest.revision: "9"
-author: nathbarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: f616212b216ad4c94b60c7a805e2f45071947e81
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: cda5f01842f08ccc3e8dfbd17078fe157954d985
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-terms-and-conditions-with-system-center-configuration-manager"></a>System Center Configuration Manager での使用条件の追加
 
@@ -32,7 +27,7 @@ System Center Configuration Manager の使用条件をユーザー グループ�
 
 ## <a name="to-create-a-terms-and-conditions"></a>使用条件を作成するには  
 
-1.  Configuration Manager コンソールで、 **[資産とコンプライアンス]** > **[概要]** > **[コンプライアンス設定]** > **[使用条件]**と移動します。  
+1.  Configuration Manager コンソールで、 **[資産とコンプライアンス]** > **[概要]** > **[コンプライアンス設定]** > **[使用条件]** と移動します。  
 
 2.  **[使用条件の作成]** をクリックして、新しい使用条件を作成します。  
 
@@ -42,7 +37,7 @@ System Center Configuration Manager の使用条件をユーザー グループ�
 
     -   **[説明]** - Configuration Manager コンソールで使用条件を識別するための詳細  
 
-     **[次へ]**をクリックします。  
+     **[次へ]** をクリックします。  
 
 4.  **[条件]** ページで、次の情報を指定します。  
 
@@ -52,17 +47,17 @@ System Center Configuration Manager の使用条件をユーザー グループ�
 
     -   **[ユーザーによる同意の意味を説明するテキスト]** - ユーザーに表示される同意に関するラベル **例**: "使用条件に同意します。"  
 
-     **[次へ]**をクリックします。  
+     **[次へ]** をクリックします。  
 
 5.  新しい使用条件を作成するウィザードを完了します。 [資産とコンプライアンス] ワークスペースの [使用条件] ノードに新しい使用条件が表示されます。  
 
 ## <a name="to-deploy-a-terms-and-conditions"></a>使用条件を展開するには  
 
-1.  Configuration Manager コンソールで、 **[資産とコンプライアンス]** > **[概要]** > **[コンプライアンス設定]** > **[使用条件]**と移動します。  
+1.  Configuration Manager コンソールで、 **[資産とコンプライアンス]** > **[概要]** > **[コンプライアンス設定]** > **[使用条件]** と移動します。  
 
-2.  **[使用条件]** 一覧で、展開する項目を選択して、 **[展開]**をクリックします。  
+2.  **[使用条件]** 一覧で、展開する項目を選択して、 **[展開]** をクリックします。  
 
-3.  **[参照]** を使用して、使用条件の展開先となる **[コレクション]** を選択し、 **[OK]**をクリックします。  
+3.  **[参照]** を使用して、使用条件の展開先となる **[コレクション]** を選択し、 **[OK]** をクリックします。  
 
      対象デバイスが会社のポータルにアクセスすると、展開した使用条件が表示されます。 ユーザーは、これらの使用条件に同意しないと、会社のリソースへのアクセスできません。  
 
@@ -71,7 +66,7 @@ System Center Configuration Manager の使用条件をユーザー グループ�
 
 ## <a name="to-monitor-terms-and-conditions"></a>使用条件を監視するには  
 
-1.  Configuration Manager コンソールで使用条件の展開を監視できます。 Configuration Manager コンソールで **[監視]** > **[概要]** > **[展開]**に移動します。  
+1.  Configuration Manager コンソールで使用条件の展開を監視できます。 Configuration Manager コンソールで **[監視]** > **[概要]** > **[展開]** に移動します。  
 
 2.  使用条件の展開を 展開一覧から選択します。  
 
@@ -91,9 +86,9 @@ System Center Configuration Manager の使用条件をユーザー グループ�
 
 ## <a name="to-view--a-terms-and-conditions-report"></a>使用条件のレポートを表示するには  
 
-1.  Configuration Manager コンソールで、 **[監視]** > **[概要]** > **[レポート]** > **[レポート]**に移動します。  
+1.  Configuration Manager コンソールで、 **[監視]** > **[概要]** > **[レポート]** > **[レポート]** に移動します。  
 
-2.  **[使用条件の同意]** を選択して、 **[実行]**をクリックします。 使用条件への同意レポートが開きます。 このレポートには、使用条件が展開された各ユーザーが表示されます。 フィールドは次のとおりです。  
+2.  **[使用条件の同意]** を選択して、 **[実行]** をクリックします。 使用条件への同意レポートが開きます。 このレポートには、使用条件が展開された各ユーザーが表示されます。 フィールドは次のとおりです。  
 
     -   使用条件名  
 
@@ -110,7 +105,7 @@ System Center Configuration Manager の使用条件をユーザー グループ�
 
 ### <a name="how-to-work-with-multiple-versions-of-terms-and-conditions"></a>使用条件の複数のバージョンを使用する方法  
 
-1.  Configuration Manager コンソールで、 **[資産とコンプライアンス]** > **[概要]** > **[コンプライアンス設定]** > **[使用条件]**と移動します。  
+1.  Configuration Manager コンソールで、 **[資産とコンプライアンス]** > **[概要]** > **[コンプライアンス設定]** > **[使用条件]** と移動します。  
 
 2.  編集する使用条件インスタンスを選択してダブルクリックし、開きます。  
 

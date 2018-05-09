@@ -1,25 +1,20 @@
 ---
-title: "会社所有のデバイスを登録する "
+title: '会社所有のデバイスを登録する '
 titleSuffix: Configuration Manager
-description: "Configuration Manager を使用してハイブリッド展開用に会社所有のデバイスを登録するさまざまな方法について説明します。"
-ms.custom: na
+description: Configuration Manager を使用してハイブリッド展開用に会社所有のデバイスを登録するさまざまな方法について説明します。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2754ce6-1460-4ddd-9050-2cc87e7964f4
-caps.latest.revision: "13"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 5b1e05e45ec6193eeef5e48cfa8d8476a92dde56
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 36b4169f3bed1957f8ea14159902f408ba642944
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enroll-company-owned-devices-for-hybrid-deployments-with-configuration-manager"></a>Configuration Manager を使用してハイブリッド展開用に会社所有のデバイスを登録する
 
@@ -42,6 +37,6 @@ ms.lasthandoff: 10/12/2017
 ## <a name="manage-devices-with-activation-lock"></a>アクティブ化ロックによるデバイスの管理  
  Microsoft Intune は、iOS 7.1 以降のデバイス向けの iPhone を探すアプリの機能である iOS のアクティベーション ロックを管理するために役立ちます。 iPhone を探すアプリをデバイスで使用すると、アクティブ化ロックが自動的に有効になります。 「[System Center Configuration Manager を使用した iOS のアクティベーション ロックの管理](../../mdm/deploy-use/manage-ios-activation-lock.md)」をご覧ください。
 
- ## <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>IMEI または iOS シリアル番号によるデバイスの事前宣言
+ ## <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>IMEI または iOS シリアル番号を持つデバイスの事前宣言
 
 会社所有のデバイスの International station Mobile Equipment Identity (IMEI) 番号または iOS シリアル番号をインポートすることで、それらのデバイスを識別できます。 デバイスの IMEI 番号を含むコンマ区切り値 (.csv) ファイルをアップロードするか、デバイス情報を手動で入力することができます。  「[Predeclare devices with hardware ID numbers](../../mdm/deploy-use/predeclare-devices-with-hardware-id.md)」 (ハードウェア ID 番号によるデバイスの事前宣言) をご覧ください。

@@ -1,25 +1,20 @@
 ---
-title: "サイト コンポーネント"
+title: サイト コンポーネント
 titleSuffix: Configuration Manager
-description: "サイト コンポーネントを構成して、サイト システムの役割とサイト ステータス レポートの動作を変更する方法について説明します。"
-ms.custom: na
+description: サイト コンポーネントを構成して、サイト システムの役割とサイト ステータス レポートの動作を変更する方法について説明します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 5fccbbeb-0faa-4943-83c2-e67db62d392d
-caps.latest.revision: "9"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 4c5e6d4587f79eb52e9295d2641f985520738ebe
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: da7537ff9cda198f938eafdfc5db198e79a2cb5b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="site-components-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイト コンポーネント
 
@@ -112,7 +107,7 @@ Configuration Manager サービスによる処理が必要になると (通常�
 
 3.  Configuration Manager サービス マネージャーが開いたら、管理したいサイトに接続します。  
 
-     管理したいサイトが表示されない場合は、 **[サイト]**、 **[接続]**の順にクリックして、該当するサイトのサイト サーバーの名前を入力します。  
+     管理したいサイトが表示されない場合は、 **[サイト]**、 **[接続]** の順にクリックして、該当するサイトのサイト サーバーの名前を入力します。  
 
 4.  サイトを展開して、管理したいコンポーネントのある場所に応じて、**[コンポーネント]** または **[サーバー]** に移動します。  
 

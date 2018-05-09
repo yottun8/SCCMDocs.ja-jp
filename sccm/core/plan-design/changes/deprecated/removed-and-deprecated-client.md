@@ -1,27 +1,20 @@
 ---
-title: Configuration Manager クライアントで非推奨になった項目
+title: Configuration Manager クライアントで非推奨とされた項目
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager でサポートされなくなったクライアントの機能、製品、およびオペレーティング システムについて説明します。
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 604ab835-bce3-4fe3-a7f3-3f059cfc0ecf
-caps.latest.revision: 15
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: a745a67e3f3f4c61b3fa3f863cdb25d74ca6cbf8
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 02cb366ecf1935c79924b3ad23882f9952fe1f78
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="removed-and-deprecated-items-for-system-center-configuration-manager-clients"></a>System Center Configuration Manager クライアントから削除された項目と非推奨の項目
 
@@ -31,7 +24,7 @@ ms.lasthandoff: 03/23/2018
 
 この情報は、今後のリリースで変更される可能性があります。また、非推奨の機能、製品、またはオペレーティング システムをすべて記載しているわけではありません。  
 
-## <a name="deprecated-client-operating-systems"></a>非推奨クライアント オペレーティング システム  
+## <a name="deprecated-client-operating-systems"></a>非推奨のクライアント オペレーティング システム  
 
  特に明記されていない限り、Configuration Manager クライアントとしてサポートされている各オペレーティング システムは、オペレーティングシステムの延長サポート終了日までサポートされます。 延長サポート終了日の詳細については、「[Microsoft サポート ライフ サイクル](https://support.microsoft.com/lifecycle)」を参照してください。 延長サポート終了日より前にオペレーティング システムの Configuration Manager のサポートが終了する場合は、そのオペレーティング システムの廃止日とサポート削除日がここに表示されます。  
 

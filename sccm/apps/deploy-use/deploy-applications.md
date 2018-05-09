@@ -2,26 +2,19 @@
 title: アプリケーションの展開
 titleSuffix: Configuration Manager
 description: デバイスまたはユーザーのコレクションに対するアプリケーションの展開を作成またはシミュレートする
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
-caps.latest.revision: 10
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0101ba0eade5775577f52920f301a782afd7bbda
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 8a89c9d5a0fa4ea57a7824fe16b24120347ddaac
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager でアプリケーションを展開する
 
@@ -43,7 +36,7 @@ Configuration Manager でデバイスまたはユーザーのコレクション�
 
 1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリケーション]** に移動します。
 
-2.  **[アプリケーション]** 一覧で、展開するアプリケーションを選択します。 次に、**ホーム** タブで、 **展開** グループで、 **展開**です。
+2.  **[アプリケーション]** 一覧で、展開するアプリケーションを選択します。 次に、 **ホーム**  タブで、 **展開** グループで、 **展開**です。
 
 ### <a name="specify-general-information-about-the-deployment"></a>展開に関する全般情報を指定する
 

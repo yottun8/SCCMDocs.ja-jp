@@ -1,26 +1,20 @@
 ---
-title: "アプリケーションの作成と展開"
+title: アプリケーションの作成と展開
 titleSuffix: Configuration Manager
-description: "基幹業務アプリを含むアプリケーションの作成と展開、およびアプリを効果的に管理する方法について説明します。"
-ms.custom: na
+description: 基幹業務アプリを含むアプリケーションの作成と展開、およびアプリを効果的に管理する方法について説明します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3bd1e487-ea18-43c1-b7c3-acbd9b86d429
-caps.latest.revision: "15"
-caps.handback.revision: "0"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: a9f8a54400897e30d01d97f81b98e0e539fc86a7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 3d34ec4abb712ce6797033a5ff490280611e1b02
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-deploy-an-application-with-system-center-configuration-manager"></a>System Center Configuration Manager でのアプリケーションの作成と展開
 
@@ -43,7 +37,7 @@ ms.lasthandoff: 10/12/2017
 
 Configuration Manager アプリケーションに既に精通している場合は、このトピックをスキップできます。 ただし、アプリケーションを作成および展開するときに、使用可能なすべてのオプションについて確認するには、「[アプリケーションの作成](../../apps/deploy-use/create-applications.md)」を参照してください。  
 
-## <a name="before-you-start"></a>アップグレードを開始する前に  
+## <a name="before-you-start"></a>開始する前に  
 
 アプリケーションをインストールするサイトの準備を完了し、このトピックで使用されている用語を理解できるように、「[アプリケーション管理の概要](/sccm/apps/understand/introduction-to-application-management)」の情報を必ず確認してください。  
 
@@ -115,7 +109,7 @@ Configuration Manager アプリケーションに既に精通している場合�
 
     -   **[演算子]** - **[次のいずれか]**  
 
-    -   オペレーティング システムの一覧から、 **[Windows 10]**を選択します。  
+    -   オペレーティング システムの一覧から、 **[Windows 10]** を選択します。  
 
     ダイアログ ボックスは次のようになります。  
 
@@ -160,16 +154,16 @@ Configuration Manager アプリケーションに既に精通している場合�
 
 3.  アプリケーションの一覧から、先ほど作成したアプリケーション (**Contoso アプリケーション**) を選択し、**[ホーム]** タブで **[展開]** グループの **[展開]** を選択します。  
 
-4.  **ソフトウェアの展開ウィザード** の **[全般]**ページで、 **[参照]** を選択して **[すべてのシステム]** デバイス コレクションを選択します。  
+4.  **ソフトウェアの展開ウィザード** の **[全般]** ページで、 **[参照]** を選択して **[すべてのシステム]** デバイス コレクションを選択します。  
 
 5.  **[コンテンツ]** ページで、PC がアプリケーションをインストールする際の元となる配布ポイントが選択されていることを確認します。  
 
-6.  **[展開設定]** ページで、展開アクションが **[インストール]**に設定され、展開の目的が **[必須]** に設定されていることを確認します。  
+6.  **[展開設定]** ページで、展開アクションが **[インストール]** に設定され、展開の目的が **[必須]** に設定されていることを確認します。  
 
     > [!TIP]  
-    >  展開の目的を **[必須]** に設定すると、設定した要件を満たす PC にアプリケーションが確実にインストールされるようになります。 この値を **[利用可能]**に設定すると、ユーザーがソフトウェア センターから必要に応じてアプリケーションをインストールできるようになります。  
+    >  展開の目的を **[必須]** に設定すると、設定した要件を満たす PC にアプリケーションが確実にインストールされるようになります。 この値を **[利用可能]** に設定すると、ユーザーがソフトウェア センターから必要に応じてアプリケーションをインストールできるようになります。  
 
-7.  **[スケジュール]** ページで、アプリケーションをインストールする時間を構成できます。 この例では、 **[使用可能な時間後直ちに]**を選択します。  
+7.  **[スケジュール]** ページで、アプリケーションをインストールする時間を構成できます。 この例では、 **[使用可能な時間後直ちに]** を選択します。  
 
 8.  **[ユーザー エクスペリエンス]** ページで、**[次へ]** を選択して既定値をそのまま使用します。  
 

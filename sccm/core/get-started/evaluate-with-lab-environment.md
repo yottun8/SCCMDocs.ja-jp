@@ -1,26 +1,20 @@
 ---
-title: "ラボ環境での評価"
+title: ラボ環境での評価
 titleSuffix: Configuration Manager
-description: "組織で使用するために System Center Configuration Manager を評価するラボ環境を作成します。"
-ms.custom: na
+description: 組織で使用するために System Center Configuration Manager を評価するラボ環境を作成します。
 ms.date: 2/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
-caps.latest.revision: "25"
-caps.handback.revision: "0"
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 3f9916efa2ff250a1ae8cba4cf63ce7527561dee
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 6e8c5ac335e3baa3797ab81c324ff2282302779d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="evaluate-system-center-configuration-manager-by-building-your-own-lab-environment"></a>独自のラボ環境を構築して System Center Configuration Manager を評価する
 

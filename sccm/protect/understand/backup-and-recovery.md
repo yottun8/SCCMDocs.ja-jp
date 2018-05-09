@@ -1,25 +1,20 @@
 ---
-title: "バックアップ サイト"
+title: バックアップ サイト
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で、障害やデータの損失が発生する前にサイトをバックアップする方法について説明します。"
-ms.custom: na
+description: System Center Configuration Manager で、障害やデータの損失が発生する前にサイトをバックアップする方法について説明します。
 ms.date: 6/5/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
-caps.latest.revision: "22"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 6c7c1ebbe1fccfb641d39a3cb2e2b911b1dd5e02
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b69789fe6e685e2fe42c260e50329f85f2eb421e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Configuration Manager サイトのバックアップ
 
@@ -95,7 +90,7 @@ Configuration Manager のバックアップ サービスは、バックアップ
 
     バックアップを構成しているのと同じサイト サーバーで Configuration Manager コンソールを実行する場合は、サイト サーバーのバックアップ メンテナンス タスクのスケジュールでローカル時間が使用されます。 バックアップを構成しているサイトから離れたコンピューターから Configuration Manager コンソールが実行されている場合は、サイト サーバーのバックアップ メンテナンス タスクのスケジュールで UTC が使用されます。  
 
-7.  サイト バックアップ タスクが失敗した場合にアラートを作成するかどうかを選択し、**[OK]** をクリックしてから　**[OK]** をクリックします。 選択した場合は、Configuration Manager がバックアップ エラーに関する重大なアラートを作成したときに、**[監視]** ワークスペースの **[アラート]** ノードで確認できます。  
+7.  サイト バックアップ タスクが失敗した場合にアラートを作成するかどうかを選択し、**[OK]** をクリックしてから　 **[OK]** をクリックします。 選択した場合は、Configuration Manager がバックアップ エラーに関する重大なアラートを作成したときに、**[監視]** ワークスペースの **[アラート]** ノードで確認できます。  
 
  次に、サイト サーバーのバックアップ メンテナンス タスクが実行されており、バックアップが作成されることを確認します。  
 
@@ -182,7 +177,7 @@ Configuration Manager のコンテンツ ライブラリは、ソフトウェア
 3.  状態移行の役割をホストするサイト システムを選択し、**[サイト システムの役割]** で **[状態移行ポイント]** を選択します。  
 
 
-4.  **[サイトの役割** ] タブの **[プロパティ]** グループで、 **[プロパティ]**をクリックします。  
+4.  **[サイトの役割** ] タブの **[プロパティ]** グループで、 **[プロパティ]** をクリックします。  
 5.  ユーザー状態移行データが保存されているフォルダーが **[全般]** タブの **[フォルダーの詳細]** セクションに一覧表示されます。  
 
 

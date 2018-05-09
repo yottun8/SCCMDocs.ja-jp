@@ -2,25 +2,19 @@
 title: 'モバイル デバイスを管理する '
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager で Exchange Server コネクタを使用してモバイル デバイスを管理します。
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: aba688d9-fd5b-4c42-8cb4-f7e1b161ef50
-caps.latest.revision: 8
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 23073ff562e1ca533e196fff0415efc0451d6fee
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 5bdc881d6d6423aa357cf8916f54f1b5f31120f2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-mobile-devices-with-system-center-configuration-manager-and-exchange"></a>System Center Configuration Manager と Exchange によるモバイル デバイスの管理
 
@@ -35,7 +29,7 @@ Microsoft Exchange ActiveSync プロトコルを使って Exchange Server (社�
 > [!IMPORTANT]  
 >  Exchange Server コネクタをインストールする前に、使用する Microsoft Exchange のバージョンが Configuration Manager でサポートされているかどうかを確認してください。 詳細については、「[System Center Configuration Manager のサイトおよびクライアントのサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)」の「Exchange Server コネクタ」を参照してください。  
 
- Exchange Server コネクタを使用すると、既定の Exchange ActiveSync メール ボックス ポリシーでの代わりに、Configuration Manager で構成した設定でモバイル デバイスを管理することができます。 使用する設定は、 **[全般]**、 **[パスワード]**、 **[電子メール管理]**、 **[セキュリティ]**、 **[アプリケーション]**のグループに分けて定義します。 たとえば、**[パスワード]** グループでは、モバイル デバイスでパスワードを必要とするかどうか、パスワードに最低限必要な文字数と複雑さ、パスワードを回復可能にするかどうかを設定します。  
+ Exchange Server コネクタを使用すると、既定の Exchange ActiveSync メール ボックス ポリシーでの代わりに、Configuration Manager で構成した設定でモバイル デバイスを管理することができます。 使用する設定は、 **[全般]**、 **[パスワード]**、 **[電子メール管理]**、 **[セキュリティ]**、 **[アプリケーション]** のグループに分けて定義します。 たとえば、**[パスワード]** グループでは、モバイル デバイスでパスワードを必要とするかどうか、パスワードに最低限必要な文字数と複雑さ、パスワードを回復可能にするかどうかを設定します。  
 
  グループで 1 つでも設定を行うと、Configuration Manager がグループのすべてのモバイル デバイス用設定を管理します。 グループにあるどの設定も構成しないと、モバイル デバイスの該当する設定が Exchange Server によって管理されます。 その場合でも、Exchange Server で設定され、ユーザーに割り当てられた Exchange ActiveSync メールボックス ポリシーは適用されます。  
 

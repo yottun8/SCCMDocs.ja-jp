@@ -1,25 +1,20 @@
 ---
-title: "データ転送"
+title: データ転送
 titleSuffix: Configuration Manager
-description: "Configuration Manager がサイト間でどのようにデータを移動するか、およびネットワークでデータの転送をどのように管理できるかについて説明します。"
-ms.custom: na
+description: Configuration Manager がサイト間でどのようにデータを移動するか、およびネットワークでデータの転送をどのように管理できるかについて説明します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
-caps.latest.revision: "12"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 185598e9f6b0678ca1fcbe9c19ed420f37805861
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 45fb1bc31a7e888ca4caa21a710e74ec0fde422c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-transfers-between-sites-in-system-center-configuration-manager"></a>System Center Configuration Manager のサイト間でのデータの転送
 
@@ -54,7 +49,7 @@ Configuration Manager のファイルベースのレプリケーションは、�
     -  サイトがデータを送信できる時間の割合 (%) を指定する場合は、**[1 時間単位で最大転送率を制限する]** を選択します。 このオプションを使用すると、Configuration Manager ではネットワークの使用可能な帯域幅は考慮されず、代わりに、データを送信できる時間が分割されます。 その分割された短い時間にデータが送信され、次にデータが送信されない時間が続きます。 たとえば、最大転送率を **50%** に設定すると、Configuration Manager ではある一定の時間だけデータが転送され、その後、同じ長さの時間だけ転送が停止されます。 データの実際の量やデータ ブロックのサイズは考慮されません。 代わりに、どれだけの時間データを送信するかが管理されます。  
 
         > [!CAUTION]  
-        > 既定では、サイトがデータを転送するときは、 **送信スレッドを同時に** 3 本まで使用できます。 ファイル レプリケーション ルートの転送率の制限を有効にすると、そのサイトへのデータの **同時送信数** が 1 つに制限されます。 これは、**[使用可能な帯域幅の制限 (%)]** を **100%**に設定した場合も当てはまります。 たとえば、センダーの既定の設定を使用する場合、この制限により、サイトへの転送速度が既定の 3 分の 1 に低下します。  
+        > 既定では、サイトがデータを転送するときは、 **送信スレッドを同時に** 3 本まで使用できます。 ファイル レプリケーション ルートの転送率の制限を有効にすると、そのサイトへのデータの **同時送信数** が 1 つに制限されます。 これは、**[使用可能な帯域幅の制限 (%)]** を **100%** に設定した場合も当てはまります。 たとえば、センダーの既定の設定を使用する場合、この制限により、サイトへの転送速度が既定の 3 分の 1 に低下します。  
 
 -  2 つのセカンダリ サイト間でファイル レプリケーション ルートを構成すると、これらのサイト間でファイルベースのコンテンツをルーティングできます。  
 

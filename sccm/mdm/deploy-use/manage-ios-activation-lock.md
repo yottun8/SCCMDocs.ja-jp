@@ -1,25 +1,20 @@
 ---
-title: "iOS のアクティベーション ロックの管理"
+title: iOS のアクティベーション ロックの管理
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager を使用して iOS のアクティベーション ロックを管理します。"
-ms.custom: na
+description: System Center Configuration Manager を使用して iOS のアクティベーション ロックを管理します。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2745bac-e1b4-4dac-8ac7-32f1c820bc9c
-caps.latest.revision: "9"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 3b372d9f766fa48b4b57fcd0658f66573ed02d12
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4550116bd4635e7320e9cbdf18997e2e17ae0466
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-ios-activation-lock-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用した iOS のアクティベーション ロックの管理
 
@@ -39,7 +34,7 @@ System Center Configuration Manager は、iOS 7.1 以降向けの「iPhone を�
 > [!TIP]
 > iOS デバイスの監視モードでは、Apple Configurator ツールを使用して、デバイスをロックダウンし、特定のビジネス目的に必要な機能のみに制限することができます。 監視モードは、通常、企業所有のデバイス専用の機能です。
 
-アクティベーション ロックにより、iOS デバイスをセキュリティで保護でき、紛失や盗難にあった場合に戻ってくる可能性が高まりますが、この機能は IT 管理者にさまざまな課題をもたらすことがあります。 たとえば、
+アクティベーション ロックにより、iOS デバイスをセキュリティで保護でき、紛失や盗難にあった場合に戻ってくる可能性が高まりますが、この機能は IT 管理者にさまざまな課題をもたらすことがあります。 次に例を示します。
 
 - あるユーザーがデバイスでアクティブ化ロックを設定します。 その後、そのユーザーが退職し、デバイスを返却します。 ユーザーの Apple ID とパスワードがわからなければ、デバイスをワイプしても、再アクティベートすることはできません。
 - アクティベーション ロックが有効になっているすべてのデバイスのレポートが必要です。
@@ -73,7 +68,7 @@ Configuration Manager を使ってアクティベーション ロックを管理
 Configuration Manager のコンプライアンス設定を使用して、 **iOS および Mac OS X** タイプの構成項目を作成して展開し、監視対象のデバイスでアクティベーション ロックを有効にします。
 
 1. トピック「[System Center Configuration Manager クライアントを使用せずに管理されている iOS デバイスと Mac OS X デバイスの構成項目を作成する方法](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)」の情報を使用して、**iOS および Mac OS X** タイプの構成項目を作成します。
-2. 構成項目の作成ウィザードの「 **システム セキュリティ** 」ページで、 **[アクティブ化ロックを許可する (監視モードのみ)]** を **[許可]**に設定します。
+2. 構成項目の作成ウィザードの「 **システム セキュリティ** 」ページで、 **[アクティブ化ロックを許可する (監視モードのみ)]** を **[許可]** に設定します。
 3. [構成基準に構成項目を追加します](/sccm/compliance/deploy-use/create-configuration-baselines)。
 4. アクティベーション ロックを有効にする iOS デバイスが属するコレクションに、[この構成基準を展開](/sccm/compliance/deploy-use/deploy-configuration-baselines)します。
 
@@ -86,18 +81,18 @@ Configuration Manager のコンプライアンス設定を使用して、 **iOS 
 
 ## <a name="view-the-activation-lock-bypass-code"></a>アクティベーション ロックのバイパス コードを表示する
 
-1. Configuration Manager コンソールで、**[ 資産とコンプライアンス]** をクリックします。
-2. **[ 資産とコンプライアンス ]** ワークスペースで **[ デバイス]** をクリックします。
+1. Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。
+2. **[資産とコンプライアンス]** ワークスペースで **[デバイス]** をクリックします。
 3. アクティベーション ロックが有効になっている、監視モードの登録済みのデバイスを選びます。
-4. **[ホーム]** タブの **[デバイス]** グループで、 **[リモート デバイスの操作]** > **[アクティブ化ロックのバイパス コードの表示]**をクリックします。
+4. **[ホーム]** タブの **[デバイス]** グループで、 **[リモート デバイスの操作]** > **[アクティブ化ロックのバイパス コードの表示]** をクリックします。
 5. 選んだデバイスのバイパス コードが **[アクティベーション ロックのバイパス コード (Activation Lock Bypass Code)]** ダイアログ ボックスに表示されます。
 
 ## <a name="bypass-activation-lock"></a>アクティベーション ロックをバイパスする
 
-1. Configuration Manager コンソールで、**[ 資産とコンプライアンス]** をクリックします。
-2. **[ 資産とコンプライアンス ]** ワークスペースで **[ デバイス]** をクリックします。
+1. Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。
+2. **[資産とコンプライアンス]** ワークスペースで **[デバイス]** をクリックします。
 3. アクティベーション ロックが有効になっている、監視モードの登録済みのデバイスを選びます。
-3. **[ホーム]** タブの **[デバイス]** グループで、 **[リモート デバイスの操作]** > **[アクティブ化ロックのバイパス]**をクリックします。
+3. **[ホーム]** タブの **[デバイス]** グループで、 **[リモート デバイスの操作]** > **[アクティブ化ロックのバイパス]** をクリックします。
 5. 警告ダイアログ ボックスのメッセージを読み、続ける準備ができたら **[はい]** をクリックします。
 6. 次の場所で、ロック解除要求の状態を確認できます。
 

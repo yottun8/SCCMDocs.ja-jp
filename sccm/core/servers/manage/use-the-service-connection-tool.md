@@ -1,25 +1,20 @@
 ---
-title: "サービス接続ツール"
+title: サービス接続ツール
 titleSuffix: Configuration Manager
-description: "このツールによって、Configuration Manager クラウド サービスに接続し、使用状況の情報を手動でアップロードできます。"
-ms.custom: na
+description: このツールによって、Configuration Manager クラウド サービスに接続し、使用状況の情報を手動でアップロードできます。
 ms.date: 09/06/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
-caps.latest.revision: "11"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 3e7b397c2ef3bfb1feb44599756752f56a2ad465
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 906b39f01b05600d86a045e07d3e28184e9360e8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>System Center Configuration Manager のサービス接続ツールの使用
 
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/04/2017
 
 **必要条件:**
 
--   サービス接続ポイントがインストールされ、 **[オフライン (オンデマンド接続)]**に設定されている必要があります。  
+-   サービス接続ポイントがインストールされ、 **[オフライン (オンデマンド接続)]** に設定されている必要があります。  
 
 -   このツールがコマンド プロンプトから実行される必要があります。  
 
@@ -168,7 +163,7 @@ USB ドライブに ServiceConnectionTool フォルダーとその中身をす�
 ## <a name="bkmk_cmd"></a> コマンド ライン オプション  
  サービス接続ポイント ツールのヘルプ情報を表示するには、コマンド プロンプトを開き、ツールを格納するフォルダーに移動して、コマンド  **serviceconnectiontool.exe**を実行します。  
 
-|コマンド ライン オプション|説明|  
+|コマンド ライン オプション|詳細|  
 |---------------------------|-------------|  
 |**-prepare -usagedatadest [drive:][path][filename.cab]**|このコマンドは、現在の使用状況データを .cab ファイルに格納します。<br /><br /> サービス接続ポイントをホストするサーバーで、 **ローカル管理者** としてこのコマンドを実行します。<br /><br /> 例:   **-prepare -usagedatadest D:\USB\Usagedata.cab**|    
 |**-connect -usagedatasrc [drive:][path] -updatepackdest [drive:][path] -proxyserveruri [FQDN of proxy server] -proxyusername [username]** <br /> <br /> 1606 より前のバージョンの Configuration Manager を使用する場合は、.cab ファイルの名前を指定する必要があり、プロキシ サーバーのオプションを使用することはできません。  サポートされているコマンド パラメーターは次のとおりです。 <br /> **-connect -usagedatasrc [drive:][path][filename] -updatepackdest [drive:][path]** |このコマンドは、Configuration Manager のクラウド サービスに接続し、指定した場所から使用状況データの .cab ファイルをアップロードしたり、利用可能な更新パックとコンソールのコンテンツをダウンロードしたりします。 プロキシ サーバーのオプションは省略できます。<br /><br /> インターネットに接続できるコンピューターで、 **ローカル管理者** としてこのコマンドを実行します。<br /><br /> プロキシ サーバーを使用せずに接続する例: **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> プロキシ サーバーを使用して接続する例: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> 1606 より前のバージョンを使用する場合は、.cab ファイルのファイル名を指定する必要があります。また、プロキシ サーバーを指定することはできません。 次のコマンド ラインの例を使用します: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      

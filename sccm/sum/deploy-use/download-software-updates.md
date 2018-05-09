@@ -1,22 +1,20 @@
 ---
-title: "ソフトウェア更新プログラムのダウンロード "
+title: 'ソフトウェア更新プログラムのダウンロード '
 titleSuffix: Configuration Manager
-description: "ソフトウェア更新プログラムのダウンロード ウィザードを使用して、ソフトウェア更新プログラムをダウンロードし、クライアントに展開できるように配布ポイントに配布します。"
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: ソフトウェア更新プログラムのダウンロード ウィザードを使用して、ソフトウェア更新プログラムをダウンロードし、クライアントに展開できるように配布ポイントに配布します。
+author: aczechowski
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
-ms.openlocfilehash: 534592d3f240aa647d49e2045aa83798e872b9a4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 6c4aa062c79a1ed03d32b894ac6764d63c657ddb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="download-software-updates"></a>ソフトウェア更新プログラムのダウンロード  
 

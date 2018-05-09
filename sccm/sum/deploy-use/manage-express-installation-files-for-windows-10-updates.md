@@ -2,22 +2,19 @@
 title: Windows 10 更新プログラムに対する高速インストール ファイルの管理
 titleSuffix: Configuration Manager
 description: Configuration Manager では Windows 10 用の高速インストール ファイルがサポートされます。これを使用すると、クライアント上でのダウンロード量を少なくし、インストールに要する時間を短縮できます。
-keywords: ''
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 03/24/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-ms.openlocfilehash: 80ff608ca0e8270fc004995f861a0ccb312a6f34
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 4ca7a6c37137e266d719b76532b4131a6c43d4de
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-express-installation-files-for-windows-10-updates"></a>Windows 10 更新プログラムに対する高速インストール ファイルの管理
 Configuration Manager バージョン 1702 以降、Configuration Manager では Windows 10 更新プログラムに対する高速インストール ファイルがサポートされています。 サポートされているバージョンの Windows 10 を使用する場合は、当月の Windows 10 累積的な更新プログラムと、前月の更新プログラムとの差分のみをダウンロードする Configuration Manager クライアント設定をクライアントにダウンロードできます。 高速インストール ファイルを使用しない場合、Configuration Manager クライアントでは完全な Windows 10 累積的な更新プログラム (以前の月の更新プログラムをすべて含む) が毎月ダウンロードされます。 高速インストール ファイルを使用すると、クライアント上でのダウンロード量を少なくし、インストールに要する時間を短縮できます。

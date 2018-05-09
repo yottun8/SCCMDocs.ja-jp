@@ -1,25 +1,20 @@
 ---
 title: Technical Preview 1802 | Microsoft Docs
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1802 で使用できる機能について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の Technical Preview バージョン 1802 で使用できる機能について説明します。
 ms.date: 02/09/2018
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 4884a2d3-13ce-44e5-88c4-a66dc7ec6014
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 162c47d867e78498650da685327c0fe296aa2eda
-ms.sourcegitcommit: b1fa7be6a6fa5bb7c49e90c0e28a21ba8b41c842
+ms.openlocfilehash: c960ee37e5f4b7b3b644afd06a04c2747cc1f1eb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1802-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1802 の機能
 
@@ -39,8 +34,8 @@ ms.lasthandoff: 02/28/2018
 -   **サイト サーバーがパッシブ モードの場合、新しいプレビュー バージョンへの更新に失敗します**。 [プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)の場合は、この新しいプレビュー バージョンに更新する前にパッシブ モードのサイト サーバーをアンインストールする必要があります。 パッシブ モードのサイト サーバーは、サイトの更新を完了したあとに再インストールできます。
 
   パッシブ モードのサイト サーバーをアンインストールするには、次の手順を実行します。
-  1. Configuration Manager コンソールで**[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
-  2. **[サイト システムの役割]** ウィンドウで、**[サイト サーバー]**の役割を右クリックし、**[役割の削除]** を選択します。
+  1. Configuration Manager コンソールで **[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
+  2. **[サイト システムの役割]** ウィンドウで、**[サイト サーバー]** の役割を右クリックし、**[役割の削除]** を選択します。
   3. パッシブ モードのサイト サーバーを右クリックし、**[削除]** を選択します。
   4. サイト サーバーのアンインストール後に、アクティブなプライマリ サイト サーバーで **CONFIGURATION_MANAGER_UPDATE** のサービスを再起動します。
 <!--sms 489412-->
@@ -232,9 +227,9 @@ Configuration Manager (現在のブランチ) バージョン 1710 は、[Crypto
 <!-- 1324735 -->
 [クラウド管理ゲートウェイ](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG) のインスタンスを作成するとき、**Azure Resource Manager の展開**を作成するためのオプションがウィザードで提供されるようになりました。 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager で CMG を展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
 
-CMG ウィザードでは、Azure 管理証明書を使う**従来のサービス展開**のためのオプションがまだ提供されています。 リソースの展開と管理を簡単にするため、すべての新しい CMG インスタンスに Azure Resource Manager デプロイメント モデルを使うことをお勧めします。 可能であれば、Resource Manager で既存の CMG インスタンスを再展開してください。
+CMG ウィザードでは、Azure 管理証明書を使う**従来のサービス展開**のためのオプションがまだ提供されています。 リソースの展開と管理を簡単にするため、すべての新しい CMG インスタンスに Azure Resource Manager デプロイ モデルを使うことをお勧めします。 可能であれば、Resource Manager で既存の CMG インスタンスを再展開してください。
 
-Configuration Manager では、既存の従来の CMG インスタンスが Azure Resource Manager デプロイメント モデルに移行されることはありません。 Azure Resource Manager の展開を使って新しい CMG インスタンスを作成した後、従来の CMG インスタンスを削除します。 
+Configuration Manager では、既存の従来の CMG インスタンスが Azure Resource Manager デプロイ モデルに移行されることはありません。 Azure Resource Manager の展開を使って新しい CMG インスタンスを作成した後、従来の CMG インスタンスを削除します。 
 
 > [!IMPORTANT]
 > この機能では、Azure クラウド サービス プロバイダー (CSP) のサポートは有効になりません。 Azure Resource Manager での CMG の展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、「[Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services)」(Azure CSP で使用可能な Azure サービス) を参照してください。  
@@ -247,7 +242,7 @@ Configuration Manager では、既存の従来の CMG インスタンスが Azur
  タスクを実行してみます。 その後、**[ホーム]** タブから**フィードバック**を送信して、どのように動作したかを報告します。
 
 1. Configuration Manager コンソールの **[管理]** ワークスペースで、**[クラウド サービス]** を展開して、**[クラウド管理ゲートウェイ]** を選びます。 リボンの **[クラウド管理ゲートウェイの作成]** をクリックします。 
-2. **[全般]** ページで、**[Azure Resource Manager の展開]** を選びます。 **[サインイン]** をクリックし、Azure サブスクリプション管理者アカウントで認証を行います。 ウィザードは、統合の前提条件の間に格納された Azure AD サブスクリプション情報から、残りのフィールドを自動的に設定します。 複数のサブスクリプションを所有している場合は、使う適切なサブスクリプションを選びます。 **[次へ]**をクリックします。  
+2. **[全般]** ページで、**[Azure Resource Manager の展開]** を選びます。 **[サインイン]** をクリックし、Azure サブスクリプション管理者アカウントで認証を行います。 ウィザードは、統合の前提条件の間に格納された Azure AD サブスクリプション情報から、残りのフィールドを自動的に設定します。 複数のサブスクリプションを所有している場合は、使う適切なサブスクリプションを選びます。 **[次へ]** をクリックします。  
 3. **[設定]** ページで、サーバーの PKI 証明書ファイルを通常どおりに提供します。 この証明書では、Azure での CMG サービス名が定義されています。 **[領域]** を選び、リソース グループ オプションとして **[新規作成]** または **[既存のものを使用]** を選びます。 新しいリソース グループ名を入力するか、ドロップダウン リストから既存のリソース グループを選びます。 
 4. ウィザードを完了します。
 

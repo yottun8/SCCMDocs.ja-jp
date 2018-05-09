@@ -1,25 +1,20 @@
 ---
-title: "Skype for Business Online のアクセスの管理"
+title: Skype for Business Online のアクセスの管理
 titleSuffix: Configuration Manager
-description: "条件付きアクセス ポリシーを使用して、Skype for Business Online へのアクセスを管理する方法について説明します。"
-ms.custom: na
+description: 条件付きアクセス ポリシーを使用して、Skype for Business Online へのアクセスを管理する方法について説明します。
 ms.date: 12/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71c44250-626e-482c-8794-434c6aeb2fb1
-caps.latest.revision: "6"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 3c1d0c84dc28fb886048cf8d7ea310c2b4dfc4aa
-ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4a88706233e85be6960585963c26bd740e9ff6ed
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-skype-for-business-online-access"></a>Skype for Business Online のアクセスの管理
 
@@ -82,24 +77,24 @@ Skype for Business Online の条件付きアクセス ポリシーを使用し�
 
 2.  **[条件付きアクセス ポリシーを有効にする]** を選択します。  
 
-3.  **[アプリケーション アクセス]**で、条件付きアクセス ポリシーの適用対象を次の中から選択できます。  
+3.  **[アプリケーション アクセス]** で、条件付きアクセス ポリシーの適用対象を次の中から選択できます。  
 
     -   iOS  
 
     -   Android  
 
-4.  **[対象グループ]**で、**[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。 すべてのユーザーを対象にすることも、選んだユーザー グループのみを対象にすることもできます。  
+4.  **[対象グループ]** で、**[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。 すべてのユーザーを対象にすることも、選んだユーザー グループのみを対象にすることもできます。  
 
-5.  **[例外グループ]**で、必要に応じて **[変更]** をクリックして、このポリシーから除外する Azure Active Directory セキュリティ グループを選択します。  
+5.  **[例外グループ]** で、必要に応じて **[変更]** をクリックして、このポリシーから除外する Azure Active Directory セキュリティ グループを選択します。  
 
-6.  終了したら、 **[保存]**をクリックします。  
+6.  終了したら、 **[保存]** をクリックします。  
 
  これで Skype for Business Online の条件付きアクセスの構成が完了します。 条件付きアクセス ポリシーを展開する必要はありません。直ちに有効になります。  
 
 ## <a name="monitor-the-compliance-and-conditional-access-policies"></a>コンプライアンスと条件付きアクセス ポリシーを監視する  
  [グループ] ワークスペースで、デバイスの条件付きアクセスの状態を表示できます。  
 
- モバイル デバイス グループを選択し、 **[デバイス]** タブで、次の **[フィルター]**のいずれかを選択します。  
+ モバイル デバイス グループを選択し、 **[デバイス]** タブで、次の **[フィルター]** のいずれかを選択します。  
 
 -   **AAD に登録されていないデバイス**は、Skype for Business Online からブロックされます。
 

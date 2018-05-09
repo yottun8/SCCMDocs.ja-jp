@@ -1,26 +1,20 @@
 ---
-title: "ハイブリッド MDM のデバイス登録方法"
+title: ハイブリッド MDM のデバイス登録方法
 titleSuffix: Configuration Manager
-description: "ハイブリッド MDM のデバイス登録方法です。"
-ms.custom: na
+description: ハイブリッド MDM のデバイス登録方法です。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: b81d06dc-3844-4117-9937-16732a227994
-caps.latest.revision: "9"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 180f7699f184779d98db5ccedb296b409a119a30
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 89501e22c855f31264fbf94fe093d8ebde08708f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-device-enrollment-methods"></a>デバイス登録方法の概要
 
@@ -37,17 +31,17 @@ Configuration Manager を Intune を利用して拡張すると、会社所有�
 
 | **方法** |  **ワイプ** |  **アフィニティ**    |   **ロック** | **詳細** |
 |:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | いいえ|    [はい] |   × | [詳細](../deploy-use/enable-platform-enrollment.md)|
-|**[DEM](#dem)**|   いいえ |いいえ |×  | [詳細](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
-|**[DEP](#dep)**|   ○ |   オプション |  オプション|[詳細](../deploy-use/ios-device-enrollment-program-for-hybrid.md)|
-|**[USB-SA](#usb-sa)**| ○ |   オプション |  いいえ| [詳細](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)|
+|**[BYOD](#byod)** | いいえ|    はい |   いいえ | [詳細](../deploy-use/enable-platform-enrollment.md)|
+|**[DEM](#dem)**|   いいえ |いいえ |いいえ  | [詳細](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
+|**[DEP](#dep)**|   はい |   オプション |  オプション|[詳細](../deploy-use/ios-device-enrollment-program-for-hybrid.md)|
+|**[USB-SA](#usb-sa)**| はい |   オプション |  いいえ| [詳細](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)|
 
 **Windows と Android の登録方法**
 
 | **方法** |  **ワイプ** |  **アフィニティ**    |   **ロック** | **詳細**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | いいえ|    [はい] |   × | [詳細](../deploy-use/enroll-hybrid-windows.md)|
-|**[DEM](#dem)**|   いいえ |いいえ |×  |[詳細](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
+|**[BYOD](#byod)** | いいえ|    はい |   いいえ | [詳細](../deploy-use/enroll-hybrid-windows.md)|
+|**[DEM](#dem)**|   いいえ |いいえ |いいえ  |[詳細](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
 
 適切な方法を見つけるのに役立つ質問集が「[Choose how to enroll devices](/intune/get-started/choose-how-to-enroll-devices1)」 (デバイスの登録方法を選択する) にあります。
 

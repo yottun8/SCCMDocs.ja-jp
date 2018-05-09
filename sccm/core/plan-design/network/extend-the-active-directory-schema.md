@@ -1,26 +1,20 @@
 ---
-title: "発行と Active Directory スキーマ"
+title: 発行と Active Directory スキーマ
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Active Directory スキーマを拡張して、クライアントの展開と構成のプロセスを簡略化します。"
-ms.custom: na
+description: System Center Configuration Manager の Active Directory スキーマを拡張して、クライアントの展開と構成のプロセスを簡略化します。
 ms.date: 2/6/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: bc15ee7e-4d0a-4463-ae2c-f72d8d45d65d
-caps.latest.revision: "17"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: d495c7934b92d6042399f66fe578007c32ae10f4
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 6f0590a626cf75ed78e42235768a0d97a9fc3026
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-active-directory-for-site-publishing"></a>サイト発行のために Active Directory を準備する
 
@@ -87,7 +81,7 @@ Configuration Manager のスキーマを拡張するには
 
     -   **[ドメイン]** &lt;コンピューターの完全修飾ドメイン名\>、&lt;識別名\> の順に展開して **[CN=System]** を右クリックし、**[新規]**、**[オブジェクト]** の順に選択します。  
 
-    -   **[オブジェクトの作成]** ダイアログ ボックスで、**[コンテナー]**を選択し、**[次へ]** を選択します。  
+    -   **[オブジェクトの作成]** ダイアログ ボックスで、**[コンテナー]** を選択し、**[次へ]** を選択します。  
 
     -   **[値]** ボックスに、「**System Management**」と入力し、**[次へ]** をクリックします。  
 

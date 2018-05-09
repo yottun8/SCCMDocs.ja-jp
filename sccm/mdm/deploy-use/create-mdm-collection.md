@@ -1,26 +1,20 @@
 ---
-title: "MDM コレクションを作成する"
+title: MDM コレクションを作成する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager を使用して MDM コレクションを作成します。"
-ms.custom: na
+description: System Center Configuration Manager を使用して MDM コレクションを作成します。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d1b4337f-85e8-45e6-8bbe-9f18b49041c7
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: f8b865c48f6c69fe1cfd7221273b09f5557075e9
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: d271499baf48364fe24a8961cae767c46d05a332
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-an-mdm-collection-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用した MDM コレクションの作成
 

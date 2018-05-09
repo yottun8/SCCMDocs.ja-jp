@@ -1,25 +1,20 @@
 ---
-title: "前提条件の確認"
+title: 前提条件の確認
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の利用可能な前提条件の確認について説明します。 セキュリティ権限の前提条件の確認も対象となります。"
-ms.custom: na
+description: System Center Configuration Manager の利用可能な前提条件の確認について説明します。 セキュリティ権限の前提条件の確認も対象となります。
 ms.date: 4/17/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
-caps.latest.revision: "12"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 9ae5abeb5fe175f2e01a05cbda1a21232b54dd70
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f51f2d5f94a185f35a5d843d674a3dd8f1e8a275
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="list-of-prerequisite-checks-for-system-center-configuration-manager"></a>System Center Configuration Manager の前提条件の確認の一覧
 

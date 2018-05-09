@@ -1,26 +1,20 @@
 ---
-title: "SQL Server クラスター"
+title: SQL Server クラスター
 titleSuffix: Configuration Manager
-description: "SQL Server クラスターを使用して System Center Configuration Manager サイト データベースをホストします。 サポートされているオプションに関する情報が含まれます。"
-ms.custom: na
+description: SQL Server クラスターを使用して System Center Configuration Manager サイト データベースをホストします。 サポートされているオプションに関する情報が含まれます。
 ms.date: 2/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
-caps.latest.revision: "10"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: f3920c49ad9d1e11104e36569aa229bf4a13d319
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: dfd791dead376f22014156829bec1fa2fb75ab51
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-a-sql-server-cluster-for-the-system-center-configuration-manager-site-database"></a>SQL Server クラスターを使用した System Center Configuration Manager サイト データベースのホスト
 
@@ -58,7 +52,7 @@ ms.lasthandoff: 12/04/2017
 
 -   サイト サーバーのコンピューター アカウントを、クラスター内の各サーバーのローカルの Administrators グループに追加しなければなりません。  
 
--   Kerberos 認証をサポートするには、**TCP/IP** ネットワーク通信プロトコルを各 SQL Server クラスター ノードのネットワーク接続に対して有効にする必要があります。 **名前付きパイプ** は不要ですが、Kerberos 認証に問題が発生したときのトラブルシューティングに使用できます。 ネットワーク プロトコルの設定は、**[SQL Server ネットワークの構成]** にある **[SQL Server 構成マネージャー]**で構成します。  
+-   Kerberos 認証をサポートするには、**TCP/IP** ネットワーク通信プロトコルを各 SQL Server クラスター ノードのネットワーク接続に対して有効にする必要があります。 **名前付きパイプ** は不要ですが、Kerberos 認証に問題が発生したときのトラブルシューティングに使用できます。 ネットワーク プロトコルの設定は、**[SQL Server ネットワークの構成]** にある **[SQL Server 構成マネージャー]** で構成します。  
 
 -   PKI を使用する場合は、「Configuration Manager での PKI 証明書の要件」を参照し、サイト データベースに SQL Server クラスターを使用する場合に必要となる特定の証明書の要件を確認します。  
 

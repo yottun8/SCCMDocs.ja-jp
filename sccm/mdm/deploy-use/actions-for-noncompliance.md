@@ -1,26 +1,20 @@
 ---
-title: "コンプライアンス非対応に対するアクション"
+title: コンプライアンス非対応に対するアクション
 titleSuffix: Configuration Manager
-description: "Configuration Manager でコンプライアンス非対応に対するアクションを設定する方法について説明します。"
-ms.custom: na
+description: Configuration Manager でコンプライアンス非対応に対するアクションを設定する方法について説明します。
 ms.date: 11/10/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 1dd10d9452fae85f2ecc3d3077fba420454ef337
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: be17e1f2b5c3fec02cdd6fc5f89aee9319c4dbb4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-actions-for-non-compliance"></a>コンプライアンス非対応に対するアクションの設定
 
@@ -44,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 
 デバイスが会社のリソースにアクセスできないようにブロックするスケジュールを日数で指定できます。 ブロックは即時にすることもできますが、デバイスのコンプライアンス ポリシーに準拠できるように猶予期間をユーザーに与えることもできます。
 
-### <a name="supported-platforms"></a>サポートされているプラットフォーム
+### <a name="supported-platforms"></a>[サポートされているプラットフォーム]
 
 [Intune で管理されるすべてのプラットフォーム](https://docs.microsoft.com/intune/supported-devices-browsers)でサポートされています。
 

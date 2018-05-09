@@ -2,26 +2,19 @@
 title: オンプレミス インフラストラクチャのアップグレード
 titleSuffix: Configuration Manager
 description: SQL Server やサイト システムのサイト オペレーティング システムなどのインフラストラクチャをアップグレードする方法について説明します。
-ms.custom: na
 ms.date: 02/15/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
-caps.latest.revision: 7
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 5c4403588872e426a9346e6c4c50f1853b75f4b9
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 09cce65bd4bb4ccb8a9cfee6927aa86409e691a0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-system-center-configuration-manager"></a>System Center Configuration Manager をサポートするオンプレミス インフラストラクチャのアップグレード
 
@@ -182,8 +175,9 @@ Windows Server 2012 または Windows Server 2012 R2 から Windows Server 2016 
  2. セカンダリ サイトの親プライマリ サイトをアップグレードする前に、セカンダリ サイトをアップグレードします。
  3. 最後に親プライマリ サイトをアップグレードします。 これには、中央管理サイトに報告する子プライマリ サイトと、階層の最上位サイトであるスタンドアロンのプライマリ サイトの両方が含まれます。
 
-**SQL Server の基数推定レベルおよびサイト データベース:**   
-サイト データベースを以前のバージョンの SQL Server からアップグレードすると、既存の SQL 基数推定 (CE) レベルが SQL Server のそのインスタンスで許可されている最小レベルである場合に、データベースではそのレベルが保持されます。 許可レベルより低い互換性レベルのデータベースを持つ SQL Server をアップグレードすると、データベースは SQL で許可されている最も低い互換性レベルに設定されます。
+
+  **SQL Server のカーディナリティ推定レベルおよびサイト データベース:**   
+サイト データベースを以前のバージョンの SQL Server からアップグレードすると、既存の SQL カーディナリティ推定 (CE) レベルが SQL Server のそのインスタンスで許可されている最小レベルである場合に、データベースではそのレベルが保持されます。 許可レベルより低い互換性レベルのデータベースを持つ SQL Server をアップグレードすると、データベースは SQL で許可されている最も低い互換性レベルに設定されます。
 
 次の表に、Configuration Manager サイト データベースで推奨される互換性レベルを示します。
 

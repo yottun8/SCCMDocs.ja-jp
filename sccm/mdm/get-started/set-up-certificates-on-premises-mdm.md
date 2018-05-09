@@ -1,26 +1,20 @@
 ---
-title: "証明書を設定する "
+title: '証明書を設定する '
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために信頼された通信用の証明書をセットアップします。"
-ms.custom: na
+description: System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために信頼された通信用の証明書をセットアップします。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
-caps.latest.revision: "27"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 860f6e3f418a15ecfb79e9cbac5e6a09e17feb1a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c538c3b7668cc93069f0805b98f29586c3d7c86c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために信頼された通信用の証明書をセットアップする
 
@@ -83,15 +77,15 @@ ms.lasthandoff: 10/12/2017
 
 2.  [証明機関] コンソールで、**[証明書テンプレート]** を右クリックしてから、**[管理]** をクリックして、[証明書テンプレート] コンソールを読み込みます。  
 
-3.  結果ウィンドウで、 **[テンプレート表示名]** 列に **[Web サーバー]**と表示されているエントリを右クリックし、 **[テンプレートの複製]**をクリックします。  
+3.  結果ウィンドウで、 **[テンプレート表示名]** 列に **[Web サーバー]** と表示されているエントリを右クリックし、 **[テンプレートの複製]** をクリックします。  
 
-4.  **[ テンプレートの複製 ]** ダイアログ ボックスで、**[ Windows 2003 Server Enterprise Edition ]** が選択されていることを確認してから、**[ OK ]** をクリックします。  
+4.  **[テンプレートの複製]** ダイアログ ボックスで、**[Windows 2003 Server Enterprise Edition]** が選択されていることを確認してから、**[OK]** をクリックします。  
 
     > [!IMPORTANT]  
-    >  **[ Windows 2008 Server Enterprise Edition ]** を選択しないでください。 Configuration Manager では、HTTPS を使用する信頼された通信用の Windows Server 2008 証明書テンプレートはサポートされません。  
+    >  **[Windows 2008 Server Enterprise Edition]** を選択しないでください。 Configuration Manager では、HTTPS を使用する信頼された通信用の Windows Server 2008 証明書テンプレートはサポートされません。  
 
     > [!NOTE]  
-    >  使用している CA が Windows Server 2012 にある場合は、**[テンプレートの複製]** をクリックしても、証明書テンプレートのバージョンの入力は求められません。 代わりに、次のように、テンプレートのプロパティの **[ 互換性 ]** タブでバージョンを指定します。  
+    >  使用している CA が Windows Server 2012 にある場合は、**[テンプレートの複製]** をクリックしても、証明書テンプレートのバージョンの入力は求められません。 代わりに、次のように、テンプレートのプロパティの **[互換性]** タブでバージョンを指定します。  
     >   
     >  **証明機関**: **Windows Server 2003**  
     >   
@@ -105,11 +99,11 @@ ms.lasthandoff: 10/12/2017
 
 8.  **[追加]** をクリックして、テキスト ボックスに「**ConfigMgr MDM Servers**」と入力し、**[OK]** をクリックします。  
 
-9. このグループに対して **[ 登録 ]** アクセス許可を選択し、**[ 読み取り ]** をオフにしません。  
+9. このグループに対して **[登録]** アクセス許可を選択し、**[読み取り]** をオフにしません。  
 
-10. **[OK]**をクリックして、[証明書テンプレート] コンソールを閉じます。  
+10. **[OK]** をクリックして、[証明書テンプレート] コンソールを閉じます。  
 
-11. [証明機関] コンソールで、 **[証明書テンプレート]** を右クリックし、 **[新規作成x]** をクリックして **[発行する証明書テンプレート]** をクリックします。  
+11. [証明機関] コンソールで、**[証明書テンプレート]** を右クリックし、**[新規作成x]** をクリックして **[発行する証明書テンプレート]** をクリックします。  
 
 12. **[証明書テンプレートの選択]** ダイアログ ボックスで、先ほど作成した新しいテンプレート **ConfigMgr MDM Web Server** を選択して、**[OK]** をクリックします。  
 
@@ -168,6 +162,6 @@ ms.lasthandoff: 10/12/2017
 
      登録するデバイスは、ルート証明書をインポートするために、このファイルにアクセスする必要があります。そのために、ほとんどのコンピューターとデバイスがアクセスできる共通場所を選択するか、または当面都合の良い場所 (C ドライブなど) にこのファイルを保存しておいて、後で共通場所に移動します。  
 
-     **[ 次へ ]** をクリックします。  
+     **[次へ]** をクリックします。  
 
 9. 設定を確認して、**[完了]** をクリックします。  

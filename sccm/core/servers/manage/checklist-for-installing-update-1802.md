@@ -2,25 +2,19 @@
 title: 1802 のチェックリスト | System Center Configuration Manager
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager バージョン 1802 に更新する前に、実行するアクションについて説明します。
-ms.custom: na
 ms.date: 03/22/2018
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 6af92de2-b2c7-4d5c-affd-6cce81979fb5
-caps.latest.revision: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 702c891e6cedb56d3cc2934aeba5d3ed52611cf6
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 5f16f69e7b359112a03bb26c964ac0a6990c0b24
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checklist-for-installing-update-1802-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム 1802 をインストールするためのチェックリスト
 
@@ -166,7 +160,7 @@ Configuration Manager では、ネットワーク負荷分散 (NLB) クラスタ
 
 ## <a name="post-update-checklist"></a>更新後のチェックリスト
 更新プログラムのインストールが完了した後で以下の作業が行われることを確認します。
-1.  サイト間レプリケーションがアクティブであることを確認します。 コンソールで、**[監視]** > **[サイト階層]** および**[監視]** > **[データベースのレプリケーション]** を表示し、問題が発生していないこと、またはレプリケーション リンクがアクティブであることを確認します。
+1.  サイト間レプリケーションがアクティブであることを確認します。 コンソールで、**[監視]** > **[サイト階層]** および **[監視]** > **[データベースのレプリケーション]** を表示し、問題が発生していないこと、またはレプリケーション リンクがアクティブであることを確認します。
 2.  各サイト サーバーおよびサイト システムの役割がバージョン 1802 に更新されていることを確認します。 コンソールでは、**[サイト]** や **[配布ポイント]** などの一部のノードの表示に、オプションの列 **[バージョン]** を追加できます。
 
  必要な場合は、サイト システムの役割が自動的に再インストールされて、新しいバージョンに更新されます。 正常に更新されないリモート サイト システムは再起動してみます。

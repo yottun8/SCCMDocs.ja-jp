@@ -1,26 +1,20 @@
 ---
-title: "Windows クライアントのファイアウォールとポートの設定"
+title: Windows クライアントのファイアウォールとポートの設定
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager におけるクライアントの Windows ファイアウォールとポートの設定を選択します。"
-ms.custom: na
+description: System Center Configuration Manager におけるクライアントの Windows ファイアウォールとポートの設定を選択します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: fe9f98ad6567b4f691dcfe6f70868fc63d61a63d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 193ee803fd0a6bacf043dbabc6550ef68a4a629a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-firewall-and-port-settings-for-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager におけるクライアントの Windows ファイアウォールとポートの設定
 
@@ -37,7 +31,7 @@ Windows ファイアウォールを実行する System Center Configuration Mana
 
 1.  Windows ファイアウォールを実行しているコンピューターで、コントロール パネルを開きます。  
 
-2.  **[ Windows ファイアウォール]** を右クリックし、**[ 開く]** をクリックします。  
+2.  **[Windows ファイアウォール]** を右クリックし、**[開く]** をクリックします。  
 
 3.  必要な例外と、必要なカスタム プログラムやポートを構成します。  
 
@@ -45,7 +39,7 @@ Windows ファイアウォールを実行する System Center Configuration Mana
  次の Configuration Manager 機能では、Windows ファイアウォールで例外を設定する必要があります。  
 
 ### <a name="queries"></a>クエリ  
- Windows ファイアウォールを実行するコンピューターで Configuration Manager コンソールを実行する場合、初回実行時のクエリは失敗し、statview.exe のブロックを解除するかどうかを尋ねるダイアログ ボックスが表示されます。 statview.exe のブロックを解除すると、その後のクエリはエラーなしで実行されます。 また、クエリを実行する前に、Windows ファイアウォールの **[ 例外 ]** タブで、プログラムおよびサービスの一覧に statview.exe を手動で追加することもできます。  
+ Windows ファイアウォールを実行するコンピューターで Configuration Manager コンソールを実行する場合、初回実行時のクエリは失敗し、statview.exe のブロックを解除するかどうかを尋ねるダイアログ ボックスが表示されます。 statview.exe のブロックを解除すると、その後のクエリはエラーなしで実行されます。 また、クエリを実行する前に、Windows ファイアウォールの **[例外]** タブで、プログラムおよびサービスの一覧に statview.exe を手動で追加することもできます。  
 
 ### <a name="client-push-installation"></a>クライアント プッシュ インストール  
  クライアント プッシュを使用して構成マネージャー クライアントをインストールするには、Windows ファイアウォールに次の例外を追加する必要があります。  
@@ -150,7 +144,7 @@ Windows ファイアウォールを実行する System Center Configuration Mana
 
 |説明|UDP|TCP|  
 |-----------------|---------|---------|  
-|クライアント コンピューターと、CCMSetup.exe の実行元のネットワーク共有との間のサーバー メッセージ ブロック (SMB)。<br /><br /> Configuration Manager のインストール時、クライアント インストールのソース ファイルが、管理ポイントの *&lt;インストール パス\>*\Client フォルダーからコピーされて自動的に共有されます。 ただし、これらのファイルをコピーして、ネットワーク上の任意のコンピューターに新しい共有を作成することもできます。 または、リムーバブル メディアを使用するなどして CCMSetup.exe をローカルで実行し、このネットワーク トラフィックを回避することも可能です。|--|445|  
+|クライアント コンピューターと、CCMSetup.exe の実行元のネットワーク共有との間のサーバー メッセージ ブロック (SMB)。<br /><br /> Configuration Manager のインストール時、クライアント インストールのソース ファイルが、管理ポイントの *&lt;インストール パス\>* \Client フォルダーからコピーされて自動的に共有されます。 ただし、これらのファイルをコピーして、ネットワーク上の任意のコンピューターに新しい共有を作成することもできます。 または、リムーバブル メディアを使用するなどして CCMSetup.exe をローカルで実行し、このネットワーク トラフィックを回避することも可能です。|--|445|  
 |ハイパーテキスト転送プロトコル (HTTP) を介して接続され、CCMSetup のコマンドライン プロパティ **/source:&lt;Path\>** を指定しない場合の、クライアント コンピューターから管理ポイントへの HTTP。|--|80 (注1「 **代替ポートを利用可能**」を参照)|  
 |セキュア ハイパーテキスト転送プロトコル (HTTPS) を介して接続され、CCMSetup のコマンドライン プロパティ **/source:&lt;Path\>** を指定しない場合の、クライアント コンピューターから管理ポイントへの HTTPS。|--|443 (注 1「 **代替ポートを利用可能**」を参照)|  
 |CCMSetup のコマンドライン プロパティ **/source:&lt;Path\>** を指定するときの、ソース サーバーとクライアント コンピューター間のサーバー メッセージ ブロック (SMB)。|--|445|  

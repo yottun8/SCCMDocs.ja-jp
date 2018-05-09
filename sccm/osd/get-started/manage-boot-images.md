@@ -2,26 +2,19 @@
 title: 'ブート イメージの管理 '
 titleSuffix: Configuration Manager
 description: Configuration Manager で、オペレーティング システムの展開中に使用する Windows PE ブート イメージを管理する方法について説明します。
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
-caps.latest.revision: 23
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8fd5510ec00cdcf6829778b264b759588a2323cb
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 6a2fe20896a781d7c897bd5a827d25a7b70390b7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>System Center Configuration Manager でのブート イメージの管理
 
@@ -245,7 +238,7 @@ Configuration Manager バージョン 1706 以降、Windows ADK インストー�
 
 4.  **[ホーム]** タブの **[プロパティ]** グループで **[プロパティ]** をクリックして、ブート イメージの **[プロパティ]** ダイアログ ボックスを開きます。  
 
-5.  **[データ ソース]** タブで、 **[このブート イメージを PXE 対応の配布ポイントから展開する]**を選びます。  
+5.  **[データ ソース]** タブで、 **[このブート イメージを PXE 対応の配布ポイントから展開する]** を選びます。  
 
     > [!NOTE]  
     >  詳細については、「[PXE を使用したネットワーク経由での Windows の展開](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)」を参照してください。  

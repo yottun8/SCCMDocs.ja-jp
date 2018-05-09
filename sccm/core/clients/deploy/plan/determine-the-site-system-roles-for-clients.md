@@ -1,26 +1,20 @@
 ---
-title: "クライアントのサイト システムの役割"
+title: クライアントのサイト システムの役割
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でクライアントのサイト システムの役割を決定します。"
-ms.custom: na
+description: System Center Configuration Manager でクライアントのサイト システムの役割を決定します。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 984e8d92-7327-4b08-9228-0c955e6ac778
-caps.latest.revision: "9"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: f6c2b15f58fbd6e26ca1cb8a4fccbde36279571d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: eac38757ed2147d664b3bdbf2f7e0eb11947dcac
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="determine-the-site-system-roles-for-system-center-configuration-manager-clients"></a>System Center Configuration Manager クライアントのサイト システムの役割の決定
 
@@ -80,7 +74,7 @@ ms.lasthandoff: 10/12/2017
 
 -   アプリケーション カタログでアプリケーションを見つけてインストールする。  
 
--   展開の目的が **[ 利用可能 ]** のアプリケーションをユーザーまたはデバイスに展開します。  
+-   展開の目的が **[利用可能]** のアプリケーションをユーザーまたはデバイスに展開します。  
 
 ##  <a name="determine-whether-you-require-a-cloud-management-gateway-connector-point"></a>クラウド管理ゲートウェイ コネクタ ポイントが必要かどうかを判断する 
 

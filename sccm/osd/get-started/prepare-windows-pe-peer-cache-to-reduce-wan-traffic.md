@@ -1,26 +1,20 @@
 ---
-title: "WAN トラフィックを削減するための Windows PE ピア キャッシュの準備"
+title: WAN トラフィックを削減するための Windows PE ピア キャッシュの準備
 titleSuffix: Configuration Manager
-description: "Windows PE ピア キャッシュは、Windows PE で機能し、ローカルの配布ポイントがない場合にローカルのピアからコンテンツを取得して WAN のトラフィックを最小限に抑えます。"
-ms.custom: na
+description: Windows PE ピア キャッシュは、Windows PE で機能し、ローカルの配布ポイントがない場合にローカルのピアからコンテンツを取得して WAN のトラフィックを最小限に抑えます。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
-caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 24e6aaa404054f5b9ac477cc0dbdd6fa9cce1860
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 90eaaec52076e4ac4fbaddf6cc07cf20359b5a68
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>System Center Configuration Manager における WAN トラフィックを減らすための Windows PE ピア キャッシュの準備
 
@@ -75,7 +69,7 @@ ms.lasthandoff: 12/12/2017
         > [!TIP]  
         >  クライアントは、HTTPS を使用して、コンテンツが使用可能になるとダウンロードします。 ただし、HTTP と HTTPS で同じポート番号が使用されます。  
 
--   クライアント上で[Configuration Manager クライアントにクライアントキャッシュを構成する](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) することによって、展開されたイメージを保存するのに十分なスペースを確保する必要があります。 Windows PE ピア キャッシュは、クライアント キャッシュの構成にも動作にも影響を与えません。  
+-   クライアント上で[Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) することによって、展開されたイメージを保存するのに十分なスペースを確保する必要があります。 Windows PE ピア キャッシュは、クライアント キャッシュの構成にも動作にも影響を与えません。  
 
 -   タスク シーケンス展開用の展開オプションは、タスク シーケンスで必要な場合のコンテンツのローカル ダウンロードとして構成する必要があります。  
 
@@ -96,16 +90,16 @@ ms.lasthandoff: 12/12/2017
 
 ### <a name="to-configure-the-windows-pe-peer-cache-source-computers"></a>Windows PE ピア キャッシュ ソース コンピューターを構成するには  
 
-1.  Configuration Manager コンソールで、**[管理]** > **[クライアント設定]**に移動してから、新しい **[カスタム クライアント デバイス設定]** を作成するか、既存の設定オブジェクトを編集します。 これを **[既定のクライアント設定]** オブジェクト用に構成することもできます。  
+1.  Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** に移動してから、新しい **[カスタム クライアント デバイス設定]** を作成するか、既存の設定オブジェクトを編集します。 これを **[既定のクライアント設定]** オブジェクト用に構成することもできます。  
 
     > [!TIP]  
     >  カスタム設定オブジェクトを使用して、どのクライアントがこの構成を受信するかを管理します。 たとえば、頻繁に移動するユーザーのラップトップではこの構成が行われないようにしたい場合があります。 モバイル度の高いシステムは、他のピア キャッシュ クライアントにコンテンツを提供するのに不適切なソースになりかねません。  
     >   
-    >  この設定を **[既定のクライアント設定]**の一部として構成した場合は、その構成が環境内のすべてのクライアントに適用されることも覚えておいてください。  
+    >  この設定を **[既定のクライアント設定]** の一部として構成した場合は、その構成が環境内のすべてのクライアントに適用されることも覚えておいてください。  
 
 2.  **[Windows PE ピア キャッシュ]** で、**[完全な OS 上の Configuration Manager クライアントにコンテンツの共有を許可する]** を **[はい]** に設定します。  
 
-    -   既定では、HTTP のみが有効になります。 クライアントに HTTPS 経由のコンテンツのダウンロードを許可する場合は、 **[クライアント ピア通信に対して HTTPS を有効にする]** を **[はい]**に設定します。  
+    -   既定では、HTTP のみが有効になります。 クライアントに HTTPS 経由のコンテンツのダウンロードを許可する場合は、 **[クライアント ピア通信に対して HTTPS を有効にする]** を **[はい]** に設定します。  
 
     -   既定では、ブロードキャスト用のポートは 8004 に設定され、コンテンツ ダウンロード用のポートは 8003 に設定されます。 どちらも変更することができます。  
 

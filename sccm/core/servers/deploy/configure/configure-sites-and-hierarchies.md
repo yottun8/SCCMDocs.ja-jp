@@ -1,25 +1,20 @@
 ---
-title: "サイトの構成"
+title: サイトの構成
 titleSuffix: Configuration Manager
-description: "このチェックリストを利用し、サイトと階層の両方に影響を与える最も一般的な構成を考慮してください。"
-ms.custom: na
+description: このチェックリストを利用し、サイトと階層の両方に影響を与える最も一般的な構成を考慮してください。
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
-caps.latest.revision: "15"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 55daf30e3386e53f3711c07fa971750d6aa33423
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 8a74f998c7bae22d94f2471724c2d51de918dfc4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sites-and-hierarchies-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイトと階層の構成
 
@@ -36,11 +31,11 @@ ms.lasthandoff: 12/04/2017
 
 -   境界グループや配布ポイント グループなどのその他の構成は、使用前に構成が必要となります。  
 
-|操作|説明|  
+|操作|詳細|  
 |------------|-------------|  
 |ロール ベース管理の構成|Configuration Manager 環境でさまざまなオブジェクトやデータを表示および管理できる管理ユーザーを制御するために、管理の割り当て区分を設定します。<br /><br /> ロール ベース管理の構成は、階層内のすべてのサイトで共有されます。   <br/><br/>詳細については、「[Configure role-based administration for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-role-based-administration.md)」(System Center Configuration Manager の役割ベースの管理の構成) を参照してください。|  
 |サイト データを Active Directory ドメイン サービス (AD DS) に発行する|クライアントから簡単にサービスを検出し、サイトのリソースを効率よく使用できるようにします。<br /><br /> まず、[System Center Configuration Manager 向けに Active Directory スキーマを拡張し](../../../../core/plan-design/network/extend-the-active-directory-schema.md)、次に、各サイトがそれぞれ [System Center Configuration Manager のサイト データを発行する](../../../../core/servers/deploy/configure/publish-site-data.md)ように構成する必要があります。|  
-|サービス接続ポイントを構成する|サービス接続ポイントは、階層の最上位層にインストールして構成するようにします。 詳細については、[System Center Configuration Manager のサービス接続ポイントについて](../../../../core/servers/deploy/configure/about-the-service-connection-point.md)をご覧ください。|  
+|サービス接続ポイントを構成する|サービス接続ポイントは、階層の最上位層にインストールして構成するようにします。 詳細については、「 [System Center Configuration Manager のサービス接続ポイントについて](../../../../core/servers/deploy/configure/about-the-service-connection-point.md)」をご覧ください。|  
 |サイト システムの役割を追加する|個々のサイトに追加のサイト システムの役割を 1 つ以上インストールします。  詳細については、「[System Center Configuration Manager のサイト システム役割の追加](../../../../core/servers/deploy/configure/add-site-system-roles.md)」を参照してください。|  
 |サイト境界と境界グループを構成する|イントラネット上で管理対象デバイスを置くことのできるネットワークの場所は、境界を指定することによって定義します。 そのうえで、そうしたネットワークの場所に置かれたクライアントが Configuration Manager のリソースを検出できるように境界グループを構成します。 詳細については、「[System Center Configuration Manager のサイト境界と境界グループの定義](../../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)」を参照してください。|  
 |配布ポイント グループを構成する|展開を管理しやすくするために配布ポイントの論理グループを構成します。 詳しくは、「[System Center Configuration Manager の配布ポイントのインストールと構成](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md)」の「[配布ポイント グループの管理](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage)」をご覧ください。|  

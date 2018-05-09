@@ -1,25 +1,20 @@
 ---
-title: "Android アプリケーションを作成する"
+title: Android アプリケーションを作成する
 titleSuffix: Configuration Manager
-description: "Android デバイス用アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。"
-ms.custom: na
+description: Android デバイス用アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。
 ms.date: 07/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e025c48c-1514-4ab7-836c-e0635aaa993a
-caps.latest.revision: "6"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: c512cba550e405c866204af981aba75639665de2
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4c09216744b33412bf1840c20aad659c59b0f52b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-android-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager で Android アプリケーションを作成する
 
@@ -55,7 +50,7 @@ Configuration Manager の管理者は、[Play for Work Web サイト](https://pl
 
 Play for Work ストアのアプリを承認し、Configuration Manager コンソールと同期し、管理対象の Android for Work デバイスに展開するには、次の手順を実行します。 アプリをユーザーの仕事用プロファイルに展開するには、Play for Work でアプリを承認し、アプリを Configuration Manager コンソールと同期する必要があります。
 
-1. ブラウザーを開き、https://play.google.com/work にアクセスします。
+1. ブラウザーを開き、https://play.google.com/work に移動します。
 2. Intune テナントにバインドした Google 管理者アカウントを使用してサインインします。
 3. 環境に展開するアプリを参照し、各アプリについて **[承認]** を選択して、Android for Work でアプリを使用できるようにします。
 4. Configuration Manager コンソールで **[管理者]** > **[概要]** > **[クラウド サービス]** > **[Android for Work]** の順にクリックし、**[同期]** を選択します。

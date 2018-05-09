@@ -1,26 +1,20 @@
 ---
-title: "アップグレード、更新、およびインストールについて"
+title: アップグレード、更新、およびインストールについて
 titleSuffix: Configuration Manager
-description: "Configuration Manager のインフラストラクチャを管理するときのインストール、更新、およびアップグレードという用語の相違点について説明します。"
-ms.custom: na
+description: Configuration Manager のインフラストラクチャを管理するときのインストール、更新、およびアップグレードという用語の相違点について説明します。
 ms.date: 1/11/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 17fab17f-304d-4f6a-87c7-30ab4f5521ed
-caps.latest.revision: "0"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 98ece2b96053f077f057682be65c485131f51446
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: ba59f4139a46ff5f073d15495196324540f7857a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-upgrade-update-and-install-for-site-and-hierarchy-infrastructure"></a>サイトと階層のインフラストラクチャでのアップグレード、更新、およびインストールについて
 

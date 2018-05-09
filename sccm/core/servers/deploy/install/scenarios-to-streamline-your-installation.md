@@ -1,25 +1,20 @@
 ---
-title: "インストール シナリオ"
+title: インストール シナリオ
 titleSuffix: Configuration Manager
-description: "サイトを更新またはアップグレードするときに新しい Configuration Manager 階層をインストールする手法について説明します。"
-ms.custom: na
+description: サイトを更新またはアップグレードするときに新しい Configuration Manager 階層をインストールする手法について説明します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 35586a85-4af9-4c8b-925a-0e32dc8b7346
-caps.latest.revision: "6"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: c9fc7c502acca95ea19b6d7ba55f2aee79a929cd
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 77615ab53f715a5d3e5b2e21cda667e6f0a2bc0c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scenarios-to-streamline-your-installation-of-system-center-configuration-manager"></a>System Center Configuration Manager のインストールを合理化するシナリオ
 
@@ -35,7 +30,7 @@ System Center Configuration Manager の Current Branch の更新プログラム�
 -   このシナリオでは、基本レベルへの追加サイトのインストールのプロセスをスキップし、使用する更新プログラムのバージョンへそれらを更新します。  
 -   このシナリオでは、構成基準バージョンへのクライアントのインストールのプロセスをスキップし、新しいバージョンに更新するときにそれらを再インストールします。  
 
- **Microsoft System Center 2012 Configuration Manager** インフラストラクチャを System Center Configuration Manager の更新プログラムのバージョンにアップグレードします。  
+**Microsoft System Center 2012 Configuration Manager** インフラストラクチャを System Center Configuration Manager の更新プログラムのバージョンにアップグレードします。  
 
 -   中央管理サイトと各プライマリ サイトを構成基準のバージョン (バージョン 1606 など) に手動でアップグレードしてから、更新プログラムのバージョン (バージョン 1610 など) をインストールします。  
 -   使用する更新プログラムのバージョンがプライマリ サイトで実行されるようになるまで、セカンダリ サイトを System Center 2012 Configuration Manager からアップグレードしないでください。  
@@ -106,7 +101,7 @@ System Center Configuration Manager の Current Branch の更新プログラム�
 
     この手順の後には、各プライマリ サイトはバージョン 1606 を実行します。  
 
-3.  **子プライマリ サイトのメンテナンス期間を設定します。** すべてのプライマリ サイトを構成基準のバージョンにアップグレードしたら、それらのサイトがインフラストラクチャの更新プログラムをインストール時期を制御するメンテナンス期間の構成を計画します。 詳細については、「[System Center Configuration Manager でメンテナンス期間を使用する方法](../../../../core/clients/manage/collections/use-maintenance-windows.md)」をご覧ください。  (バージョン 1606 では、メンテナンス期間は*サービス時間帯*と呼ばれます。)  
+3.  **子プライマリ サイトのメンテナンス期間を設定します。** すべてのプライマリ サイトを構成基準のバージョンにアップグレードしたら、それらのサイトがインフラストラクチャの更新プログラムをインストール時期を制御するメンテナンス期間の構成を計画します。 詳細については、「[System Center Configuration Manager のメンテナンス期間の使用方法](../../../../core/clients/manage/collections/use-maintenance-windows.md)」を参照してください。  (バージョン 1606 では、メンテナンス期間は*サービス時間帯*と呼ばれます。)  
 
     -   子プライマリ サイトは、中央管理サイトにインストールされる同じ更新プログラムを自動的にインストールします。  
     -   セカンダリ サイトは新しいバージョンを自動的にインストールしません。 コンソール内から手動でそれらをアップグレードする必要があります。  

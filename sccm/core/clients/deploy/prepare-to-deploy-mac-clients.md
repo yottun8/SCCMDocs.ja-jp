@@ -1,25 +1,20 @@
 ---
-title: "Mac コンピューターにクライアント ソフトウェアを展開するための準備"
+title: Mac コンピューターにクライアント ソフトウェアを展開するための準備
 titleSuffix: Configuration Manager
-description: "Configuration Manager クライアントを Mac コンピューターに展開する前の構成タスク。"
-ms.custom: na
+description: Configuration Manager クライアントを Mac コンピューターに展開する前の構成タスク。
 ms.date: 11/28/2017
 ms.prod: configuration-manager
-ms.reviewer: aaroncz
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2285a953-6a86-4ed5-97dd-cd57b02bc1ee
-caps.latest.revision: "12"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 1d096111250af4061c94e71f8dc602ccae2d4607
-ms.sourcegitcommit: 1dd051d8548a19b724bb8f9e6a2278a4901ed916
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 748a56155ca7dbbcf6764c72cf5fdf37d24a277b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-to-deploy-client-software-to-macs"></a>Mac コンピューターにクライアント ソフトウェアを展開するための準備
 
@@ -180,7 +175,7 @@ Web サーバー証明書には、サイト システム プロパティで指�
 
 3.  **[ホーム]** タブの **[作成]** グループで、**[サイト システムの役割の追加]** を選択します。  
 
-4.  **[全般]** ページで、サイト システムの全般設定を指定し、 **[次へ]**をクリックします。 インターネット FQDN に値が指定されていることを確認します。 サーバーにインターネットからアクセスできない場合は、イントラネット FQDN を使用します。   
+4.  **[全般]** ページで、サイト システムの全般設定を指定し、**[次へ]** をクリックします。 インターネット FQDN に値が指定されていることを確認します。 サーバーにインターネットからアクセスできない場合は、イントラネット FQDN を使用します。   
 
 5.  **[システムの役割の選択]** ページの利用可能な役割の一覧で、**[登録プロキシ ポイント]** および **[登録ポイント]** を選択します。  
 

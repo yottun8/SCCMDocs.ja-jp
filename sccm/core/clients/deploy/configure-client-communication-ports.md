@@ -1,26 +1,20 @@
 ---
-title: "クライアント通信ポートを構成する"
+title: クライアント通信ポートを構成する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でクライアント通信ポートを設定します。"
-ms.custom: na
+description: System Center Configuration Manager でクライアント通信ポートを設定します。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 406bbdbf-ab4a-4121-a68b-154f96ea14ec
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: caec28f9e791bcbc2c67b63c9ff8886f9b750bca
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b6f90995d00767c1607cc74323ebe4feefc97130
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-client-communication-ports-in-system-center-configuration-manager"></a>System Center Configuration Manager でのクライアント通信ポートの構成方法
 
@@ -60,18 +54,18 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-configure-the-client-communication-port-numbers-for-a-site"></a>サイトのクライアント通信のポート番号を構成するには  
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
 2.  **管理**  ワークスペースで、展開 **サイトの構成**, 、 をクリックして **サイト**, 、し構成するプライマリ サイトを選択します。  
 
-3.  **[ ホーム ]** タブで、**[ プロパティ]** をクリックしてから、**[ ポート ]** タブをクリックします。  
+3.  **[ホーム]** タブで、**[プロパティ]** をクリックしてから、**[ポート]** タブをクリックします。  
 
-4.  いずれかの項目を選択し、**[ プロパティ ]** アイコンをクリックして、[ポートの詳細] ダイアログ ボックスを表示します。  
+4.  いずれかの項目を選択し、**[プロパティ]** アイコンをクリックして、[ポートの詳細] ダイアログ ボックスを表示します。  
 
-5.  **[ ポートの詳細 ]** ダイアログ ボックスで、ポート番号と項目の説明を指定してから、**[ OK]** をクリックします。  
+5.  **[ポートの詳細]** ダイアログ ボックスで、ポート番号と項目の説明を指定してから、**[OK]** をクリックします。  
 
-6.  IIS を実行するサイト システムの **SMSWeb** のカスタム Web サイト名を使用する場合は、**[ カスタム Web サイトを使用する ]** を選択します。  
+6.  IIS を実行するサイト システムの **SMSWeb** のカスタム Web サイト名を使用する場合は、**[カスタム Web サイトを使用する]** を選択します。  
 
-7.  **[ OK ]** をクリックして、サイトの [プロパティ] ダイアログ ボックスを閉じます。  
+7.  **[OK]** をクリックして、サイトの [プロパティ] ダイアログ ボックスを閉じます。  
 
  階層内のすべてのプライマリ サイトで、この手順を繰り返します。

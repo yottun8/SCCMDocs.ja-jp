@@ -2,25 +2,19 @@
 title: ソフトウェア使用状況測定でアプリの使用状況を監視する
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager のソフトウェア使用状況測定で使用できる操作について説明します。
-ms.custom: na
 ms.date: 09/20/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
-caps.latest.revision: 8
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 6864c1a7b10056d664706c25f958b3c73e6855a6
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 66099b45fb04b18c84cd9a3973c1a4d93f0e93a6
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="software-metering-in-system-center-configuration-manager"></a>System Center Configuration Manager のソフトウェア使用状況測定
 
@@ -42,9 +36,9 @@ ms.lasthandoff: 03/28/2018
 ##  <a name="configure-software-metering"></a>ソフトウェア使用状況測定の構成
  この手順に従って、ソフトウェア使用状況の測定に既定のクライアント設定を構成し、階層内のすべてのコンピューターに適用します。 これらの設定を一部のコンピューターのみに適用する場合は、カスタム クライアント デバイス設定を作成して、ソフトウェア使用状況測定を使用するコンピューターを含むコレクションに展開します。 カスタムのデバイス設定の作成方法について詳しくは、「[Configure client settings](../../core/clients/deploy/configure-client-settings.md)」 (クライアント設定の構成) を参照してください。
 
-1.  Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** > **[既定のクライアント設定]**の順にクリックします。
+1.  Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** > **[既定のクライアント設定]** の順にクリックします。
 
-2.  **[ホーム]** タブの **[プロパティ]** グループで、 **[プロパティ]**をクリックします。
+2.  **[ホーム]** タブの **[プロパティ]** グループで、 **[プロパティ]** をクリックします。
 
 3.  **既定の設定の** ダイアログ ボックスで、をクリックして **ソフトウェア使用状況測定**です。
 
@@ -170,7 +164,7 @@ ms.lasthandoff: 03/28/2018
  John は Woodgrove Bank の IT システム マネージャーです。Configuration Manager でソフトウェア使用状況測定を使用して、これらのビジネス目標を達成します。 彼は次の操作を実行します。
 
 - John は、ソフトウェア使用状況測定の前提条件を確認し、レポート サービス ポイントがインストールされていて機能していることを確認します。
-- ソフトウェア使用状況測定の既定のクライアント設定を構成します。<br>ソフトウェア使用状況測定を有効にし、7 日に 1 回という既定のデータ コレクション スケジュールを使用します。<br>John は、ソフトウェア インベントリのクライアント設定 **[これらのファイルの種類をインベントリ対象とする]**を構成して、ソフトウェア インベントリが、拡張子 .exe を持つファイルに対してインベントリを実行するように構成します。<br>レガシ アプリケーションを監視するために、 **woodgrove.exe**という名前の新しいソフトウェア メータリング規則を追加します。
+- ソフトウェア使用状況測定の既定のクライアント設定を構成します。<br>ソフトウェア使用状況測定を有効にし、7 日に 1 回という既定のデータ コレクション スケジュールを使用します。<br>John は、ソフトウェア インベントリのクライアント設定 **[これらのファイルの種類をインベントリ対象とする]** を構成して、ソフトウェア インベントリが、拡張子 .exe を持つファイルに対してインベントリを実行するように構成します。<br>レガシ アプリケーションを監視するために、 **woodgrove.exe**という名前の新しいソフトウェア メータリング規則を追加します。
 - 7 日後、クライアント コンピューターによって **woodgrove.exe** 実行可能ファイルの使用状況データのレポートが開始されます。
 - John は、Configuration Manager レポートの **[メータリングされたソフトウェア プログラムすべてのインストール ベース]** を使用して、どのコンピューターにアプリケーション **woodgrove.exe** がロードされたのかを調べます。
 - 6 か月後、 Woods は、ソフトウェア使用状況測定規則と過去 6 か月以内の日付を指定して、**[指定した日以降、インストール済みのメータリングされたプログラムが実行されていないコンピューター]** レポートを実行します。 このレポートでは、6 か月以内にこのプログラムを実行しなかった 120 台のコンピューターが特定されます。

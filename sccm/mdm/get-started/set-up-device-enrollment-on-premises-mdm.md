@@ -1,25 +1,20 @@
 ---
-title: "デバイス登録をセットアップする "
+title: 'デバイス登録をセットアップする '
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスを登録できるアクセス許可をユーザーに付与します。"
-ms.custom: na
+description: System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスを登録できるアクセス許可をユーザーに付与します。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 9ffaea91-1379-4b86-9953-b25e152f56a9
-caps.latest.revision: "10"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 50aef3a2e523353d488a53eed0b346ddfef42478
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7d0424b662df4baba7374685dd7631347501352c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-device-enrollment-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のデバイス登録の設定
 
@@ -38,11 +33,11 @@ ms.lasthandoff: 10/12/2017
 ##  <a name="bkmk_createProf"></a> ユーザーが最新のデバイスを登録できるようにするための登録プロファイルを作成する  
  最新のデバイスをユーザーが登録するのに必要な設定をプッシュするため、新しい登録プロファイルを既定のクライアント設定に追加できます。これは、Configuration Manager サイトで検出されるすべてのユーザーに適用されます。  
 
-1.  Configuration Manager コンソールで、**[管理]** > **[概要]** > **[クライアント設定]**の順にクリックして **[既定のクライアント設定]** を開き、**[登録]** を選択します。  
+1.  Configuration Manager コンソールで、**[管理]** > **[概要]** > **[クライアント設定]** の順にクリックして **[既定のクライアント設定]** を開き、**[登録]** を選択します。  
 
 2.  [デバイスの設定] で、最新のデバイスのポーリング間隔を指定します。  
 
-3.  [ユーザー設定] の **[ユーザーが最新のデバイスを登録できるようにする]** で **[はい]**を選びます。  
+3.  [ユーザー設定] の **[ユーザーが最新のデバイスを登録できるようにする]** で **[はい]** を選びます。  
 
 4.  **[最新のデバイス登録プロファイル]** の横にある **[プロファイルの設定...]** をクリックし、**[作成...]** をクリックします。  
 
@@ -79,12 +74,12 @@ ms.lasthandoff: 10/12/2017
 
 2.  [証明書] ウィンドウで **[証明書のインストール...]** をクリックします。  
 
-3.  証明書のインポート ウィザードで **[ローカル コンピューター]**を選び、 **[次へ]**をクリックします。  
+3.  証明書のインポート ウィザードで **[ローカル コンピューター]** を選び、 **[次へ]** をクリックします。  
 
-4.  [ユーザー アカウント コントロール] ウィンドウで **[はい]**をクリックします。  
+4.  [ユーザー アカウント コントロール] ウィンドウで **[はい]** をクリックします。  
 
-5.  **[証明書をすべて次のストアに配置する]**を選び、 **[参照]**をクリックします。  
+5.  **[証明書をすべて次のストアに配置する]** を選び、 **[参照]** をクリックします。  
 
-6.  **[信頼されたルート証明機関]**をクリックして、 **[OK]**をクリックし、 **[次へ]**をクリックします。  
+6.  **[信頼されたルート証明機関]** をクリックして、 **[OK]** をクリックし、 **[次へ]** をクリックします。  
 
-7.  **[完了]**をクリックします。  
+7.  **[完了]** をクリックします。  

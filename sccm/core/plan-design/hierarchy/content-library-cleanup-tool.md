@@ -1,25 +1,20 @@
 ---
-title: "コンテンツ ライブラリ クリーンアップ ツール"
+title: コンテンツ ライブラリ クリーンアップ ツール
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の展開と関連付けられなくなった孤立コンテンツを削除するには、コンテンツ ライブラリ クリーンアップ ツールを使います。"
-ms.custom: na
+description: System Center Configuration Manager の展開と関連付けられなくなった孤立コンテンツを削除するには、コンテンツ ライブラリ クリーンアップ ツールを使います。
 ms.date: 4/7/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
-caps.latest.revision: "4"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 334b79e675ea7804128b0feb9678de4ad06dbc93
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 5d83b23673d8eea6e98f21ea30b6b802eb7e5595
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>System Center Configuration Manager のコンテンツ ライブラリ クリーンアップ ツール
 
@@ -29,7 +24,7 @@ ms.lasthandoff: 01/04/2018
 
 このツールでは、ツールを実行するときに指定する配布ポイントのコンテンツのみが処理されます。 このツールで、サイト サーバー上のコンテンツ ライブラリからコンテンツを削除することはできません。
 
-**ContentLibraryCleanup.exe** は、中央管理サイトまたはプライマリ サイトのサイト サーバーの \*%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* フォルダーにあります。
+**ContentLibraryCleanup.exe** は、中央管理サイトまたはプライマリ サイトのサイト サーバーの *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* フォルダーにあります。
 
 ## <a name="requirements"></a>［要件］  
  このツールは、一度に 1 つの配布ポイントに対してのみ実行できます。  

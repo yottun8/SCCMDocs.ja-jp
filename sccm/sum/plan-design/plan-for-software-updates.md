@@ -2,22 +2,19 @@
 title: ソフトウェア更新プログラムの計画
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager の実稼働環境でソフトウェア更新プログラムを使用する前に、ソフトウェアの更新ポイント インフラストラクチャを計画する必要があります。
-keywords: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: b57a1b584ec40d67b263959ae52f694c486481d7
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 2debedd40fbde8094c14a873235a742ccf15cc95
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager でのソフトウェア更新プログラムの計画
 
@@ -118,7 +115,7 @@ Configuration Manager バージョン 1606 から、アクティブなソフト�
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス] > [概要] > [デバイス コレクション]** に移動します。  
 
-2.  **[ホーム]** タブの **[コレクション]** グループで、 **[クライアント通知]**をクリックして、 **[次のソフトウェアの更新ポイントに切り替える]**をクリックします。  
+2.  **[ホーム]** タブの **[コレクション]** グループで、 **[クライアント通知]** をクリックして、 **[次のソフトウェアの更新ポイントに切り替える]** をクリックします。  
 
 
 ###  <a name="BKMK_SUP_CrossForest"></a> 信頼されていないフォレストにあるソフトウェアの更新ポイント  
@@ -320,7 +317,7 @@ Configuration Manager バージョン 1606 から、アクティブなソフト�
 ##  <a name="BKMK_RestartOptions"></a> Windows 10 クライアントにおけるソフトウェア更新プログラムのインストール後の再起動オプション
 再起動の必要なソフトウェア更新プログラムが Configuration Manager により展開され、コンピューターにインストールされた場合、再起動が保留中としてスケジュールされ、再起動のダイアログ ボックスが表示されます。
 
-Configuration Manager バージョン 1606 から、Configuration Manager ソフトウェアの更新のために再起動が保留中となっているときはいつでも Windows 10 コンピューターの Windows 電源オプションで **[更新と再起動]**および **[更新とシャットダウン]** のオプションを利用できるようになりました。 これらのオプションのいずれかを使用した場合、コンピューターの再起動後に再起動ダイアログは表示されません。
+Configuration Manager バージョン 1606 から、Configuration Manager ソフトウェアの更新のために再起動が保留中となっているときはいつでも Windows 10 コンピューターの Windows 電源オプションで **[更新と再起動]** および **[更新とシャットダウン]** のオプションを利用できるようになりました。 これらのオプションのいずれかを使用した場合、コンピューターの再起動後に再起動ダイアログは表示されません。
 
 Configuration Manager の以前のバージョンでは、Windows 8 およびそれ以降のコンピューターにおいて再起動が保留中となっているときに、(再起動ダイアログから行う代わりに) Windows 電源オプションを使用してコンピューターをシャットダウンまたは再起動する場合、再起動ダイアログはコンピューターの再起動後もそのまま表示され、コンピューターも構成された期限までに再起動が必要なままとなります。
 

@@ -1,26 +1,20 @@
 ---
-title: "クライアント管理の Macs の構成項目を作成する "
+title: 'クライアント管理の Macs の構成項目を作成する '
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Mac OS X 構成項目使用して、Mac OS X デバイスの設定を管理します。"
-ms.custom: na
+description: System Center Configuration Manager の Mac OS X 構成項目使用して、Mac OS X デバイスの設定を管理します。
 ms.date: 03/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 1947bc8907d00a2f6d78acee5f563fa9b7f6cf78
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: e6358c8e84d12c37418d7a1af459e775783efaa2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-mac-os-x-devices-managed-with-the-system-center-configuration-manager-client"></a>System Center Configuration Manager クライアントを使用して管理されている Mac OS X デバイスの構成項目を作成する方法
 System Center Configuration Manager の **Mac OS X (カスタム)** 構成項目を使って、Configuration Manager クライアントで管理されている Mac OS X デバイスの設定を管理します。  
@@ -31,13 +25,13 @@ System Center Configuration Manager の **Mac OS X (カスタム)** 構成項目
   
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
   
-2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ コンプライアンス設定 ]** を展開して、**[ 構成項目 ]** をクリックします。  
+2.  **[資産とコンプライアンス]** ワークスペースで **[コンプライアンス設定]** を展開して、**[構成項目]** をクリックします。  
   
-3.  **[ ホーム ]** タブの **[ 作成 ]** グループで、**[ 構成項目の作成 ]** をクリックします。  
+3.  **[ホーム]** タブの **[作成]** グループで、**[構成項目の作成]** をクリックします。  
   
-4.  **構成項目の作成ウィザード** の **[全般]**ページで、構成項目の名前と、必要に応じて説明を入力します。  
+4.  **構成項目の作成ウィザード** の **[全般]** ページで、構成項目の名前と、必要に応じて説明を入力します。  
   
-5.  **[作成する構成項目の種類の指定]**で、 **[Mac OS X (カスタム)]**を選択します。  
+5.  **[作成する構成項目の種類の指定]** で、 **[Mac OS X (カスタム)]** を選択します。  
   
 6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、**[カテゴリ]** をクリックします。  
   
@@ -62,7 +56,7 @@ System Center Configuration Manager の **Mac OS X (カスタム)** 構成項目
   
     -   **スクリプト** -  
   
-        -   **探索スクリプト** - **[スクリプトの追加]**をクリックし、Mac コンピューターで設定のコンプライアンスを評価するシェル スクリプトを入力します。 シェル スクリプトで **echo** コマンドを使用し、コンプライアンスを評価するために Configuration Manager に値を返します。 Configuration Manager は、**STDOUT** で返された結果を使用して、コンプライアンスを評価します。  
+        -   **探索スクリプト** - **[スクリプトの追加]** をクリックし、Mac コンピューターで設定のコンプライアンスを評価するシェル スクリプトを入力します。 シェル スクリプトで **echo** コマンドを使用し、コンプライアンスを評価するために Configuration Manager に値を返します。 Configuration Manager は、**STDOUT** で返された結果を使用して、コンプライアンスを評価します。  
   
             > [!IMPORTANT]  
             >  探索スクリプトに **reboot** コマンドは含めないでください。 探索スクリプトはクライアントが再起動するたびに実行されるため、Mac コンピューターは継続的に再起動されます。  
@@ -75,7 +69,7 @@ System Center Configuration Manager の **Mac OS X (カスタム)** 構成項目
 11. 設定の評価に使用する前に、条件の戻り値となるデータの形式である **[データ型]** を選択します。  
   
     > [!NOTE]  
-    >  **[ 浮動小数点 ]**データの種類は、小数点第 3 位までをサポートしています。  
+    >  **[浮動小数点]** データの種類は、小数点第 3 位までをサポートしています。  
     >   
     >  Mac 構成項目のスクリプト設定の場合、Configuration Manager では、**ブール** データ型をサポートしません。 代わりに、スクリプトが必ず整数値を返すように、データ型は **整数** に設定してください。  
   
@@ -83,16 +77,16 @@ System Center Configuration Manager の **Mac OS X (カスタム)** 構成項目
   
 13. ウィザードの **[コンプライアンス規則]** ページで、構成項目のコンプライアンスを定義する条件を指定します。 設定のコンプライアンスを評価するには、コンプライアンス規則が少なくとも 1 つ必要です。 **[新規作成]** をクリックして、新しい規則を追加します。  
   
-14. **[ 規則の作成 ]**ダイアログ ボックスで、次の情報を入力します。  
+14. **[規則の作成]** ダイアログ ボックスで、次の情報を入力します。  
   
     -   **名前:** コンプライアンス規則の名前を入力します。  
   
     -   **説明 :** コンプライアンス規則の説明を入力します。  
   
-    -   **選択された設定:** **[ 参照 ]**をクリックして、**[ 設定の選択 ]**ダイアログ ボックスを開きます。 規則を定義する設定を選択するか、または **[ 新しい設定 ]**をクリックします。 完了したら、**[ 選択 ]**をクリックします。  
+    -   **選択された設定:** **[参照]** をクリックして、**[設定の選択]** ダイアログ ボックスを開きます。 規則を定義する設定を選択するか、または **[新しい設定]** をクリックします。 完了したら、**[選択]** をクリックします。  
   
         > [!TIP]  
-        >  **[ プロパティ ]**をクリックすると、現在選択されている設定についての情報も表示できます。  
+        >  **[プロパティ]** をクリックすると、現在選択されている設定についての情報も表示できます。  
   
     -   **ルールの種類:** 使用するコンプライアンス規則の種類を選択します。  
   
@@ -100,7 +94,7 @@ System Center Configuration Manager の **Mac OS X (カスタム)** 構成項目
   
         -   **存在:** デバイスに存在するかどうかに応じて、設定を評価する規則を作成します。  
   
-    -   **[ 値 ]**の種類の規則では、次の情報を指定します:  
+    -   **[値]** の種類の規則では、次の情報を指定します:  
   
         -   この設定は次の規則に対応する必要があります – 選択された設定のコンプライアンスで評価される演算子と値を選択します。 使用できる演算子は次のとおりです。  
   
@@ -125,7 +119,7 @@ System Center Configuration Manager の **Mac OS X (カスタム)** 構成項目
         -   **サポートされている場合は対応していない規則を修復する** - このオプションを選択すると、Configuration Manager がコンプライアンス非対応の規則を自動的に修復します。  
   
             > [!IMPORTANT]  
-            >  コンプライアンス非対応の規則は、演算子が **[ 等しい ]**に設定されている場合にのみ修復されます。  
+            >  コンプライアンス非対応の規則は、演算子が **[等しい]** に設定されている場合にのみ修復されます。  
   
         -   **この設定インスタンスが見つからない場合はコンプライアンス非対応としてレポートする** - 構成項目は、設定が Mac コンピューターで見つからなかった場合、コンプライアンス非対応を報告します。  
   
@@ -141,7 +135,7 @@ System Center Configuration Manager の **Mac OS X (カスタム)** 構成項目
   
         -   **重大 (イベント)** - このコンプライアンス規則を満たしていないコンピューターは、Configuration Manager レポート用に**重大**というレベルで非対応重要度を報告します。 この重要度のレベルも、Mac クライアント コンピューターにログ記録されます。  
   
-    -   **[ 存在 ]**の種類の規則では、次の情報を指定します:  
+    -   **[存在]** の種類の規則では、次の情報を指定します:  
   
         -   次のいずれかを選択します。  
   
@@ -164,7 +158,7 @@ System Center Configuration Manager の **Mac OS X (カスタム)** 構成項目
         > [!NOTE]  
         >  表示されるオプションは、規則を構成する設定の種類によって異なります。  
   
-    -   **[ OK ]**をクリックして **[ 規則の作成 ]**ダイアログ ボックスを閉じます。  
+    -   **[OK]** をクリックして **[規則の作成]** ダイアログ ボックスを閉じます。  
   
 15. **[概要]** ページで新しい構成項目の設定を確認し、ウィザードを完了します。  
   

@@ -2,26 +2,19 @@
 title: リモート コントロールの構成
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager でリモート コントロールをセットアップします。
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: dudeso
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
-caps.latest.revision: 4
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: b5183f64a4793d2d24fec71a29ceaf0148446a36
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4e4d380319704eda608930ac938232513800b81a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-remote-control-in-system-center-configuration-manager"></a>System Center Configuration Manager でのリモート コントロールの構成
 
@@ -43,7 +36,7 @@ ms.lasthandoff: 10/12/2017
 
     表示される会社の名前を変更する、 **ConfigMgr リモート コントロール**  ダイアログ ボックスの値を構成する **ソフトウェア センターで表示される組織名** で、 **コンピューター エージェント** クライアント設定します。  
 
- クライアント コンピューターは、次にクライアント ポリシーをダウンロードするときに、これらの設定で構成されます。 1 つのクライアントのポリシーの取得を開始する場合は、「 [System Center Configuration Manager でクライアントを管理する方法](../../../../core/clients/manage/manage-clients.md)」を参照してください。  
+ クライアント コンピューターは、次にクライアント ポリシーをダウンロードするときに、これらの設定で構成されます。 1 つのクライアントのポリシーの取得を開始する場合は、「 [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md)」を参照してください。  
 
 #### <a name="enable-keyboard-translation"></a>キーボード変換を有効にする
 

@@ -1,25 +1,20 @@
 ---
-title: "Intune スタンドアロンまたはハイブリッド MDM の選択"
+title: Intune スタンドアロンまたはハイブリッド MDM の選択
 titleSuffix: Configuration Manager
-description: "Intune と Configuration Manager を使用してハイブリッド モバイル デバイス管理を展開するか、Intune スタンドアロンを実行するかを選択します。"
-ms.custom: na
+description: Intune と Configuration Manager を使用してハイブリッド モバイル デバイス管理を展開するか、Intune スタンドアロンを実行するかを選択します。
 ms.date: 07/18/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 73ff9bb9-e605-4b68-92a1-487684fed42d
-caps.latest.revision: "10"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 993a3ada8b887adb52be468ea4e936140a455bca
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 2a7cd26fde23c560295117edcc148835b1397a55
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-between-microsoft-intune-standalone-and-hybrid-mobile-device-management-with-system-center-configuration-manager"></a>Microsoft Intune スタンドアロンか System Center Configuration Manager を使用するハイブリッド モバイル デバイス管理を選択する
 
@@ -50,7 +45,7 @@ Intune スタンドアロンは、Microsoft が推奨する展開トポロジで
 
 
 ## <a name="changing-the-mdm-authority-setting"></a>MDM 機関の設定変更
-MDM 機関の設定を変更する必要がある場合は、Microsoft サポートに連絡しなくても、また、既存の管理対象デバイスの登録を解除して再登録しなくても、お客様自身で変更できます。 詳細については、「[MDM 機関を変更する](../deploy-use/change-mdm-authority.md)」を参照してください。
+MDM 機関の設定を変更する必要がある場合は、Microsoft サポートに連絡しなくても、また、既存の管理対象デバイスの登録を解除して再登録しなくても、お客様自身で変更できます。 詳細については、「[Change your MDM authority](../deploy-use/change-mdm-authority.md)」(MDM 機関を変更する) を参照してください。
 
 > [!NOTE]    
 > MDM 機関を Intune スタンドアロンに変更するには、1610 以降のバージョンの Configuration Manager が必要です。 それより古いバージョンの Configuration Manager をお持ちの場合、MDM 機関の変更は可能ですが、Microsoft サポートによる支援や操作が必要です。 また、MDM 機関の変更後にすべてのデバイスの登録を解除して再登録する必要もあります。  

@@ -1,22 +1,20 @@
 ---
 title: クラウド管理ゲートウェイの設定
-titleSuffix: System Center Configuration Manager
+titleSuffix: Configuraton Manager
 description: クラウド管理ゲートウェイ (CMG) を設定するには、この段階的なプロセスを使用します。
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: fb2a44897064e88f7ab6fd4f4b293520f54f1db7
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 04c1b262704ec6458bd9773c28c43a50d8fc0840
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager のクラウド管理ゲートウェイを設定する
 
@@ -75,7 +73,7 @@ ms.lasthandoff: 03/23/2018
 
 4. この CMG の **Azure 環境**を指定します。 ドロップダウン リストのオプションは、展開方法に応じて異なる場合があります。  
 
-5. **[次へ]**をクリックします。 サイトで Azure への接続テストが完了するまで待ちます。  
+5. **[次へ]** をクリックします。 サイトで Azure への接続テストが完了するまで待ちます。  
 
 4. ウィザードの [設定] ページで、まず、**[参照]** をクリックし、CMG サーバー認証証明書の .PFX ファイルを選択します。 この証明書に含まれている名前で、必要な **[サービス FQDN]** フィールドと **[サービス名]** フィールドが設定されます。  
 
@@ -95,7 +93,7 @@ ms.lasthandoff: 03/23/2018
 
 8. 既定では、ウィザードで**クライアント証明書の失効状態を検証する**オプションが有効になります。 この検証を機能させるには、証明書失効リスト (CRL) を公開する必要があります。 CRL を公開しない場合は、このオプションの選択を解除します。  
 
-9. **[次へ]**をクリックします。  
+9. **[次へ]** をクリックします。  
 
 10. CMG トラフィックを 14 日間のしきい値で監視するには、チェック ボックスをオンにして、しきい値のアラートを有効にします。 次に、しきい値と、別のアラート レベルを上げる割合を指定します。 完了したら、**[次へ]** を選択します。  
 

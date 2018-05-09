@@ -1,26 +1,20 @@
 ---
-title: "構成基準を作成する"
+title: 構成基準を作成する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でコレクションに展開できる構成基準を作成します。"
-ms.custom: na
+description: System Center Configuration Manager でコレクションに展開できる構成基準を作成します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 1556594e439439ef30418d384d537d5efb6b46fc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 1a6d09e4a5552770a71dc44f473cebd13ba0715c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-configuration-baselines-in-system-center-configuration-manager"></a>System Center Configuration Manager での構成基準の作成
 
@@ -35,17 +29,17 @@ System Center Configuration Manager の構成基準には、定義済みの構�
 
 -   構成データをファイルからインポートします。 起動する、 **構成データのインポート ウィザード**, で、 **構成項目** または **構成基準** 内のノード、 **資産とコンプライアンス**  ワークスペースで、をクリックして **構成データのインポート**です。  
 
--   **[ 構成基準の作成 ]** ダイアログ ボックスを使用して、新しい構成基準を作成します。  
+-   **[構成基準の作成]** ダイアログ ボックスを使用して、新しい構成基準を作成します。  
 
- **[ 構成基準の作成 ]** ダイアログ ボックスを使用して構成基準を作成するには、次の手順に従います。  
+ **[構成基準の作成]** ダイアログ ボックスを使用して構成基準を作成するには、次の手順に従います。  
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[コンプライアンス設定]** > **[構成基準]** の順にクリックします。  
 
 3.  **ホーム** ] タブで、 **作成** グループで、[ **構成基準の作成**です。  
 
-4.  **[ 構成基準の作成 ]** ダイアログ ボックスで、構成基準に、一意の名前と説明を入力します。 名前には最大 255 文字を、説明には最大 512 文字を使用できます。  
+4.  **[構成基準の作成]** ダイアログ ボックスで、構成基準に、一意の名前と説明を入力します。 名前には最大 255 文字を、説明には最大 512 文字を使用できます。  
 
-5.  **[ 構成データ ]** 一覧に、この構成基準に含まれる、すべての構成項目または構成基準が表示されます。 新しい構成項目または構成基準を一覧に追加するには、**[ 追加 ]** をクリックします。 次のオプションから選択できます。  
+5.  **[構成データ]** 一覧に、この構成基準に含まれる、すべての構成項目または構成基準が表示されます。 新しい構成項目または構成基準を一覧に追加するには、**[追加]** をクリックします。 次のオプションから選択できます。  
 
     -   **構成項目**  
 

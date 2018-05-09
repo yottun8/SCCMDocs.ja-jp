@@ -1,26 +1,20 @@
 ---
-title: "Intune サブスクリプションを管理する"
+title: Intune サブスクリプションを管理する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager に関連付けられた Intune サブスクリプションを管理します。"
-ms.custom: na
+description: System Center Configuration Manager に関連付けられた Intune サブスクリプションを管理します。
 ms.date: 06/02/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9b494767-68c1-47b1-9a86-591bff0ad491
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: a6bb27adeddc366526df699b69e95c6e7d6482ae
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1b8390faa557f37b2ee148299079df81d3c13299
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-an-intune-subscription-associated-with-system-center-configuration-manager"></a>System Center Configuration Manager に関連付けられた Intune サブスクリプションの管理
 
@@ -54,4 +48,4 @@ Microsoft Intune (試用版サブスクリプションまたは有料サブス�
 これで、新しいサービス接続ポイントを作成したり、Configuration Manager に新規 Intune サブスクリプションを追加したり、Configuration Manager を MDM 機関として設定したりできるようになります。
 
 ## <a name="how-to-change-mdm-authority-to-intune"></a>MDM 機関を Intune に変更する方法
-Configuration Manager バージョン 1610 および Microsoft Intune バージョン 1705 以降では、Microsoft サポートに連絡しなくても、また、既存の管理対象デバイスの登録を解除してから再登録しなくても、MDM 機関を変更することができます。 詳細については、「[MDM 機関を変更する](/sccm/mdm/deploy-use/change-mdm-authority)」を参照してください。
+Configuration Manager バージョン 1610 および Microsoft Intune バージョン 1705 以降では、Microsoft サポートに連絡しなくても、また、既存の管理対象デバイスの登録を解除してから再登録しなくても、MDM 機関を変更することができます。 詳細については、「[Change your MDM authority](/sccm/mdm/deploy-use/change-mdm-authority)」(MDM 機関を変更する) を参照してください。
