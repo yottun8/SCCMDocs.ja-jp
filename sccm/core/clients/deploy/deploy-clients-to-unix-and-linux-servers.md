@@ -26,7 +26,7 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
  Linux および UNIX 用の構成マネージャー クライアントのインストール スクリプトは、コマンド ライン プロパティをサポートしています。 いくつかのコマンド ライン プロパティは、他のユーザーは省略可能な必要です。 たとえば、クライアントをインストールするときに、サイトとその初期の連絡先の Linux または UNIX サーバーで使用するサイトの管理ポイントを指定する必要があります。 コマンド ライン プロパティの完全な一覧については、「 [Linux サーバーおよび UNIX サーバーにクライアントをインストールするためのコマンド ライン プロパティ](#BKMK_CmdLineInstallLnUClient)」を参照してください。  
 
- クライアントをインストールした後、Configuration Manager コンソールでクライアント設定を指定して、Windows ベースのクライアントと同じ方法でクライアント エージェントを構成します。 詳細については、「  [Client settings for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU)」をご覧ください。  
+ クライアントをインストールした後、Configuration Manager コンソールでクライアント設定を指定して、Windows ベースのクライアントと同じ方法でクライアント エージェントを構成します。 詳細については、「  [Linux および UNIX サーバーのクライアント設定](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU)」をご覧ください。  
 
 ##  <a name="BKMK_AboutInstallPackages"></a> クライアント インストール パッケージと Universal Agent について  
  特定のプラットフォーム上に Linux および UNIX 用クライアントをインストールするには、クライアントをインストールするコンピューターに適したクライアント インストール パッケージを使用する必要があります。 適切なクライアント インストール パッケージは、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/?LinkID=525184)から各クライアントにダウンロードされるデータの一部として含まれています。 クライアント インストール パッケージに加え、クライアント ダウンロードには、各コンピューター上でクライアントのインストールを管理する **install** スクリプトも含まれています。  
@@ -111,7 +111,7 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
      任意。 状態メッセージを送信するクライアントが使用するフォールバック ステータス ポイント サーバーの FQDN を指定します。  
 
-     フォールバック ステータス ポイントの詳細については、「 [Determine Whether You Require a Fallback Status Point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) 」を参照してください。  
+     フォールバック ステータス ポイントの詳細については、「 [フォールバック ステータス ポイントが必要かどうかを判断する](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) 」を参照してください。  
 
 
 -   **-dir &lt;directory\>**  
@@ -138,7 +138,7 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
 -   **-UsePKICert &lt;parameter\>**  
 
-     任意。 公開キーの証明書標準 (PKCS #12) 形式では、X.509 の PKI 証明書に完全なパスとファイル名を指定します。 この証明書は、クライアント認証に使用されます。 証明書がインストール時に指定されていない場合、また証明書を追加または変更する必要がある場合、 **certutil** ユーティリティを使用します。 certutil については、「 [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 」を参照してください。  
+     任意。 公開キーの証明書標準 (PKCS #12) 形式では、X.509 の PKI 証明書に完全なパスとファイル名を指定します。 この証明書は、クライアント認証に使用されます。 証明書がインストール時に指定されていない場合、また証明書を追加または変更する必要がある場合、 **certutil** ユーティリティを使用します。 certutil については、「 [Linux および UNIX 用のクライアントで証明書を管理する方法](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 」を参照してください。  
 
      **-UsePKICert**を使用する場合は、 **-certpw** コマンド ライン パラメーターを使って、PKCS#12 ファイルに関連付けられているパスワードも指定する必要があります。  
 
@@ -187,13 +187,13 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
 -   **-ignoreSHA256validation**  
 
-     任意。 クライアントのインストールで sha-256 検証をスキップすることを指定します。 SHA-256 をサポートする OpenSSL のバージョンがリリースされていないオペレーティング システムにクライアントをインストールする場合に、このオプションを使用します。 詳細については、「 [About Linux and UNIX Operating Systems That do not Support SHA-256](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_NoSHA-256)」をご覧ください。  
+     任意。 クライアントのインストールで sha-256 検証をスキップすることを指定します。 SHA-256 をサポートする OpenSSL のバージョンがリリースされていないオペレーティング システムにクライアントをインストールする場合に、このオプションを使用します。 詳細については、「 [SHA-256 をサポートしていない Linux および UNIX オペレーティング システムについて](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_NoSHA-256)」をご覧ください。  
 
 -   **-signcertpath &lt;file location\>**  
 
      任意。 完全パスを指定し、 **.cer** サイト サーバーにエクスポートされた自己署名証明書のファイル名。 PKI 証明書を使用できない場合、Configuration Manager サイト サーバーは自己署名証明書を自動的に生成します。  
 
-     これらの証明書を使用して、目的のサイトから管理ポイントからダウンロードするクライアント ポリシーが送信されたことを検証します。 自己署名証明書がインストール時に指定されていない場合、また証明書を変更する必要がある場合、 **certutil** ユーティリティを使用します。 certutil については、「 [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 」を参照してください。  
+     これらの証明書を使用して、目的のサイトから管理ポイントからダウンロードするクライアント ポリシーが送信されたことを検証します。 自己署名証明書がインストール時に指定されていない場合、また証明書を変更する必要がある場合、 **certutil** ユーティリティを使用します。 certutil については、「 [Linux および UNIX 用のクライアントで証明書を管理する方法](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 」を参照してください。  
 
      この証明書は、 **SMS** 証明書ストアから取得することができます。サブジェクト名は **Site Server** 、フレンドリ名は **Site Server Signing Certificate**です。  
 
@@ -232,4 +232,4 @@ Linux または UNIX サーバーを System Center Configuration Manager で管�
 
  Linux および UNIX 用の構成マネージャー クライアントは、クライアントのインストール時にこの管理ポイントに接続します。 クライアントによる管理ポイントへの接続が失敗した場合、クライアント ソフトウェアは成功するまで試行し続けます。  
 
- クライアントが管理ポイントを検出する方法の詳細については、「 [Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points)」を参照してください。
+ クライアントが管理ポイントを検出する方法の詳細については、「 [管理ポイントを検出する](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points)」を参照してください。

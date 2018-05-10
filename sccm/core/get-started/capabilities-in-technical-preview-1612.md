@@ -147,7 +147,7 @@ Technical Preview バージョン 1612 以降では、新しいコマンド ラ�
 
 このツールは、ツールの実行時に指定した配布ポイントにあるコンテンツに影響を及ぼすだけであり、サイト サーバー上のコンテンツ ライブラリからコンテンツを削除することはできません。
 
-Technical Preview 1612 をインストールすると、Technical Preview サイト サーバー上の *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* フォルダーに **ContentLibraryCleanup.exe** が配置されます。
+Technical Preview 1612 をインストールすると、Technical Preview サイト サーバー上の \*%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* フォルダーに **ContentLibraryCleanup.exe** が配置されます。
 
 この Technical Preview でリリースされたツールは、以前の Configuration Manager 製品用にリリースされた旧バージョンの類似ツールに置き換わるものとして作成されました。 このツール バージョンは 2017 年 3 月 1 日を過ぎると機能しなくなります。ただし、このツールが Current Branch の一部として、または実稼働用の定例外リリースとしてリリースされるまで、今後の Technical Preview と一緒に新しいバージョンがリリースされる予定です。
 
