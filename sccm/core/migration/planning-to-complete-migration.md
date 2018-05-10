@@ -1,26 +1,20 @@
 ---
-title: "移行の完了"
+title: 移行の完了
 titleSuffix: Configuration Manager
-description: "ソース階層にデータが含まれなくなった後で、System Center Configuration Manager の移行先階層への移行を完了する方法について説明します。"
-ms.custom: na
+description: ソース階層にデータが含まれなくなった後で、System Center Configuration Manager の移行先階層への移行を完了する方法について説明します。
 ms.date: 1/12/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4854b50-2e8c-414c-a872-9579554dca98
-caps.latest.revision: "5"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 67e1d850043d5b922ab53dd13a782414730d5866
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: b9bdffc9271b1e59bbe459dffc0e3c69578a4711
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-to-complete-migration-in-system-center-configuration-manager"></a>System Center Configuration Manager での移行完了の計画
 
@@ -43,7 +37,7 @@ System Center Configuration Manager では、移行先階層に移行するデ�
 -   [移行データのクリーンアップを計画する](#Plan_to_clean_up)  
 
 ##  <a name="Plan_to_Stop_Data_Gath"></a> データ収集の停止を計画する  
- 移行を完了して移行データをクリーンアップする前に、ソース階層内の各ソース サイトからのデータ収集を停止する必要があります。 各ソース サイトからのデータ収集を停止するには、最下位のソースサイトで **[データ収集の停止]** コマンドを実行してから、各親サイトごとにそのプロセスを繰り返し実行する必要があります。 ソース階層の最上位サイトは、データ収集を停止する最後のサイトにする必要があります。 親サイトでデータ収集の停止コマンドを実行する前に、各子サイトでデータ収集を停止する必要があります。 通常、移行処理を完了する準備ができた時点でデータ収集を停止します。  
+ 移行を完了して移行データをクリーンアップする前に、ソース階層内の各ソース サイトからのデータ収集を停止する必要があります。 各ソース サイトからのデータ収集を停止するには、最下位のソースサイトで **[データ収集の停止]** コマンドを実行してから、各親サイトごとにそのプロセスを繰り返し実行する必要があります。  ソース階層の最上位サイトは、データ収集を停止する最後のサイトにする必要があります。 親サイトでデータ収集の停止コマンドを実行する前に、各子サイトでデータ収集を停止する必要があります。 通常、移行処理を完了する準備ができた時点でデータ収集を停止します。  
 
  ソース サイトからのデータ収集を停止すると、移行先階層内のクライアントは、コンテンツの場所としてソース サイトの共有配布ポイントを使用できなくなります。 そのため、移行先階層のクライアントで必要な移行済みコンテンツを引き続き使用できるようにするには、次のいずれかの方法を実行してください。  
 
