@@ -61,7 +61,7 @@ System Center Configuration Manager の更新プログラム 1602 は、以前�
 
 -   利用可能な Windows 10 アップグレードは、Configuration Manager コンソールの **[Windows 10 のサービス]** \ **[すべての Windows 10 更新プログラム]** ノードにのみ表示されるようになりました。 これらの更新プログラムは、コンソールの **[ソフトウェア更新プログラム]** \ **[すべてのソフトウェア更新プログラム]** ノードには表示されなくなりました。  
 
--   サービス プランは危険度の高い展開であると見なされるようになりました。**[コレクションの選択]** ウィンドウには、サイトのプロパティで構成されている展開の検証の設定に適合するカスタム コレクションのみが表示されます。 詳細については、「 [Settings to manage high-risk deployments for System Center Configuration Manager](../../../protect/understand/settings-to-manage-high-risk-deployments.md)」をご覧ください。  
+-   サービス プランは危険度の高い展開であると見なされるようになりました。**[コレクションの選択]** ウィンドウには、サイトのプロパティで構成されている展開の検証の設定に適合するカスタム コレクションのみが表示されます。 詳細については、「 [System Center Configuration Manager の危険度の高い展開を管理するための設定](../../../protect/understand/settings-to-manage-high-risk-deployments.md)」をご覧ください。  
 
 -   Windows 10 へのアップグレード パッケージを今すぐ開始するユーザーには、オペレーティング システムをアップグレードすることを知らせるメッセージが表示されます。  
 

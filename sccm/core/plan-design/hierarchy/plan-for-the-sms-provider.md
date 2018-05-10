@@ -164,7 +164,7 @@ Configuration Manager の管理ユーザーは、SMS プロバイダーを使用
 SMS 管理者グループの権限とアクセス許可を表示して構成するには、WMI コントロールという MMC スナップインを使います。 既定では、 **Everyone** に **[メソッドの実行]**、**[プロバイダーによる書き込み]**、および　 **[アカウントの有効化]** アクセス許可が割り当てられます。 ユーザーが SMS プロバイダーに接続すると、そのユーザーに Configuration Manager コンソールで定義されている、ユーザーの役割に基づいたセキュリティ権限に従って、サイト データベースのデータへのアクセス権が付与されます。 SMS Admins グループには、**Root\SMS** 名前空間に対するアクセス許可 "**アカウントの有効化**" と "**リモートの有効化**" が明示的に付与されます。  
 
 > [!NOTE]  
->  リモートの Configuration Manager コンソールを使用する管理ユーザーには、サイト サーバー コンピューターと SMS プロバイダーのコンピューターの DCOM をリモートから有効にするアクセス許可が必要です。 これらの権限はどのグループにも付与することができますが、権限の管理が簡単になるように、SMS 管理者グループに付与することをお勧めします。 詳細については、「 [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 」トピックの「 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) 」セクションを参照してください。  
+>  リモートの Configuration Manager コンソールを使用する管理ユーザーには、サイト サーバー コンピューターと SMS プロバイダーのコンピューターの DCOM をリモートから有効にするアクセス許可が必要です。 これらの権限はどのグループにも付与することができますが、権限の管理が簡単になるように、SMS 管理者グループに付与することをお勧めします。 詳細については、次を参照してください。、[リモートの Configuration Manager コンソールに対する Configure DCOM permissions](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 」の「、 [System Center Configuration Manager インフラストラクチャの変更](../../../core/servers/manage/modify-your-infrastructure.md)トピックです。  
 
 
 ##  <a name="BKMK_SMSProvNamespace"></a> SMS プロバイダーの名前空間について  
