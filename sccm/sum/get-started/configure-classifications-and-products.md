@@ -2,22 +2,19 @@
 title: 分類と製品の構成
 titleSuffix: Configuration Manager
 description: Configuration Manager コンソールで次の手順を利用し、同期させるソフトウェア更新プログラムの分類と製品を構成します。
-keywords: ''
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 04/10/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 9ba0872b1d2e4ef5dd027df3f7c16a6b3a94e9ac
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: a9af39cd5f57e8b2741facde269ea81bc1b10728
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="configure-classifications-and-products-to-synchronize"></a>同期する分類と製品の構成  
 

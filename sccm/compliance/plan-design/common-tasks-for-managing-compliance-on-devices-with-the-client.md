@@ -1,25 +1,20 @@
 ---
-title: "クライアントで管理されているデバイスの一般的なコンプライアンス管理タスク "
+title: 'クライアントで管理されているデバイスの一般的なコンプライアンス管理タスク '
 titleSuffix: Configuration Manager
-description: "いくつかの一般的なシナリオを使用して、System Center Configuration Manager のコンプライアンス設定について説明します。"
-ms.custom: na
+description: いくつかの一般的なシナリオを使用して、System Center Configuration Manager のコンプライアンス設定について説明します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
-caps.latest.revision: "8"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 0e70e565f7e1000aa452487cdd71ae165dd0c67b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: ed9be26417aceef3fb73f48c2a4a2f15f0ba1b52
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-tasks-for-managing-compliance-on-devices-with-the-system-center-configuration-manager-client"></a>System Center Configuration Manager クライアントでデバイスのコンプライアンスを管理するための一般的なタスク
 
@@ -47,13 +42,13 @@ ms.lasthandoff: 10/12/2017
 ### <a name="scenario-disable-the-use-of-bluetooth-on-windows-10-devices"></a>シナリオ: Windows 10 デバイスで Bluetooth の使用を無効にする  
  このシナリオでは、セキュリティ部門は会社の機密情報を社外に送信する手段としてデバイスの Bluetooth 機能が使用される可能性があると考えています。 最近になってすべての PC を Windows 10 にアップグレードしており、この機会にこれらのデバイスで Bluetooth 機能を無効にすることにしました。  
 
-1.  構成項目の作成ウィザードの **[全般]** ページで、構成項目の種類として **[Windows 10]** を選択し、 **[次へ]**をクリックします。  
+1.  構成項目の作成ウィザードの **[全般]** ページで、構成項目の種類として **[Windows 10]** を選択し、 **[次へ]** をクリックします。  
 
 2.  ウィザードの **[サポートされているプラットフォーム]** ページで、すべての Windows 10 プラットフォームを選択します。  
 
-3.  **[デバイス設定]** ページで、 **[デバイス]**を選択し、 **[次へ]**をクリックします。  
+3.  **[デバイス設定]** ページで、 **[デバイス]** を選択し、 **[次へ]** をクリックします。  
 
-4.  **[デバイス]** ページで、 **[Bluetooth]** の値として **[禁止]**を選択します。  
+4.  **[デバイス]** ページで、 **[Bluetooth]** の値として **[禁止]** を選択します。  
 
 5.  **[対応していない設定を修復する]** を選択して、変更がすべての Windows 10 デバイスに確実に適用されるようにします。  
 
@@ -75,7 +70,7 @@ ms.lasthandoff: 10/12/2017
 
  この手順では、レジストリ キーの値を監視し、正しくない値が見つかった場合には自動的に修復する構成項目を作成します。  
 
-1.  構成項目の作成ウィザードの **[全般]** ページで、構成項目の種類として **[Windows デスクトップおよびサーバー (カスタム)]** を選択し、 **[次へ]**をクリックします。  
+1.  構成項目の作成ウィザードの **[全般]** ページで、構成項目の種類として **[Windows デスクトップおよびサーバー (カスタム)]** を選択し、 **[次へ]** をクリックします。  
 
 2.  ウィザードの **[サポートされているプラットフォーム]** ページで、 **[Windows 8.1]** を選択します (これで、構成項目は対象となるコンピューターにのみ適用されます)。  
 
@@ -95,15 +90,15 @@ ms.lasthandoff: 10/12/2017
 
     -   **[値]** > **1** (必須の値)  
 
-5.  **[設定の作成]** ダイアログ ボックスの **[コンプライアンス規則]** タブで、 **[新規]**をクリックし、 **[規則の作成]** ダイアログ ボックスで次のように構成します。  
+5.  **[設定の作成]** ダイアログ ボックスの **[コンプライアンス規則]** タブで、 **[新規]** をクリックし、 **[規則の作成]** ダイアログ ボックスで次のように構成します。  
 
     -   **[名前]** > **[規則の例]**  
 
-    -   **[選択した設定]** - 選択した設定が **[設定例]**であることを確認します。  
+    -   **[選択した設定]** - 選択した設定が **[設定例]** であることを確認します。  
 
     -   **[規則の種類]** > **[値]**  
 
-    -   **[この設定は次の規則に対応する必要があります]** - 設定名が正しいことを確認して、設定値が **[1]**に等しくなければならないことを指定するオプションを構成します。  
+    -   **[この設定は次の規則に対応する必要があります]** - 設定名が正しいことを確認して、設定値が **[1]** に等しくなければならないことを指定するオプションを構成します。  
 
     -   **[サポートされている場合は対応していない規則を修復する]** – レジストリ キー値が正しくない場合に Configuration Manager が正しい値にリセットするようにするには、このボックスをオンにします。  
 

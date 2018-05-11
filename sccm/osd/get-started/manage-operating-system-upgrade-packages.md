@@ -1,26 +1,20 @@
 ---
-title: "オペレーティング システムのアップグレード パッケージの管理"
+title: オペレーティング システムのアップグレード パッケージの管理
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でオペレーティング システムのアップグレード パッケージを管理する方法について説明します。"
-ms.custom: na
+description: System Center Configuration Manager でオペレーティング システムのアップグレード パッケージを管理する方法について説明します。
 ms.date: 12/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
-caps.latest.revision: "12"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: b70e8ecd32957f19b9738d14c94c7e54b0312ea5
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: e323fa8df7d8ae88d6526a5d1777ceb8fa27c2de
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-operating-system-upgrade-packages-with-system-center-configuration-manager"></a>System Center Configuration Manager でのオペレーティング システムのアップグレード パッケージの管理
 
@@ -35,7 +29,7 @@ System Center Configuration Manager のアップグレード パッケージに�
 
 1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
-2.  **[ソフトウェア ライブラリ]** ワークスペースで、 **[オペレーティング システム]**を展開してから、 **[オペレーティング システムのアップグレード パッケージ]**をクリックします。  
+2.  **[ソフトウェア ライブラリ]** ワークスペースで、 **[オペレーティング システム]** を展開してから、 **[オペレーティング システムのアップグレード パッケージ]** をクリックします。  
 
 3.  **[ホーム]** タブの **[作成]** グループで、 **[オペレーティング システム アップグレード パッケージの追加]** をクリックして、オペレーティング システム アップグレード パッケージの追加ウィザードを開始します。  
 
@@ -73,7 +67,7 @@ System Center Configuration Manager のアップグレード パッケージに�
 
 1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
-2.  **[ソフトウェア ライブラリ]** ワークスペースで、 **[オペレーティング システム]**を展開してから、 **[オペレーティング システムのアップグレード パッケージ]**をクリックします。  
+2.  **[ソフトウェア ライブラリ]** ワークスペースで、 **[オペレーティング システム]** を展開してから、 **[オペレーティング システムのアップグレード パッケージ]** をクリックします。  
 
 3.  ソフトウェア更新プログラムを適用するオペレーティング システム アップグレード パッケージを選択します。  
 

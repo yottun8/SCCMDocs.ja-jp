@@ -1,22 +1,20 @@
 ---
-title: "ソフトウェア更新プログラムの手動展開"
+title: ソフトウェア更新プログラムの手動展開
 titleSuffix: Configuration Manager
-description: "更新プログラムを手動で展開するには、Configuration Manager コンソールで更新プログラムを選んで手動で展開するか、または更新プログラムを更新プログラム グループに追加してグループを展開します。"
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: 更新プログラムを手動で展開するには、Configuration Manager コンソールで更新プログラムを選んで手動で展開するか、または更新プログラムを更新プログラム グループに追加してグループを展開します。
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 12/07/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-ms.openlocfilehash: becab57c5f04bb67512d665175038f6c477b65b1
-ms.sourcegitcommit: e13bb2c86c40a88e5f4602beb1d31e4adc90e099
+ms.openlocfilehash: 3f79da78df10e97813b221ffca3df25396591fbc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="BKMK_ManualDeploy"></a> ソフトウェア更新プログラムの手動展開  
 

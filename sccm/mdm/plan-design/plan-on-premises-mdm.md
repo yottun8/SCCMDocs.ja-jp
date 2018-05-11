@@ -98,7 +98,7 @@ Configuration Manager のインフラストラクチャでオンプレミス モ
 
 -   Out of Box Experience (OOBE) プロビジョニング パッケージ  
 
- 詳細については、「 [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)」をご覧ください。  
+ 詳細については、「 [System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために信頼された通信用の証明書をセットアップします](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)」をご覧ください。  
 
 ##  <a name="bkmk_enrollment"></a> 登録の注意事項  
  オンプレミス モバイル デバイス管理のデバイスの登録を有効にするには、登録する権限がユーザーに付与され、かつ、ユーザーのデバイスが、必要なサイト システムの役割をホストするサイト システム サーバーとの信頼された通信を行うことができる必要があります。  
