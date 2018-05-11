@@ -2,25 +2,19 @@
 title: Windows アプリケーションを作成する
 titleSuffix: Configuration Manager
 description: Windows デバイス用アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
-caps.latest.revision: 8
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 76e421571fa96d5e9ee808ac5d61361f52c6cbe3
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 3ac0526d31bb46cce18e096ff1d120eda452c806
+ms.sourcegitcommit: 1701943932818e0df1928d9be36ebaf424dd93b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-windows-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager で Windows アプリケーションを作成する
 
@@ -34,7 +28,9 @@ ms.lasthandoff: 03/27/2018
 |デバイスの種類|サポートされているファイルの種類|  
 |-----------------|---------------------|  
 |Windows RT および Windows RT 8.1|\*.appx、\*.appxbundle|  
-|モバイル デバイスとして登録された Windows 8.1 以降|\*.appx、\*.appxbundle|  
+|Windows 8.1 以降|\*.appx、\*.appxbundle|  
+
+
 
  次の展開操作がサポートされています。  
 
