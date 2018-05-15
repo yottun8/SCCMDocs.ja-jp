@@ -1,26 +1,20 @@
 ---
-title: "グローバル条件を作成する"
+title: グローバル条件を作成する
 titleSuffix: Configuration Manager
-description: "アプリケーションの提供方法とクライアント デバイスへの展開方法を指定するグローバル条件を作成します。"
-ms.custom: na
+description: アプリケーションの提供方法とクライアント デバイスへの展開方法を指定するグローバル条件を作成します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d5f871a-19dc-4bd3-a3ad-4230c7a69f1b
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 480e7a68308d458bc77ddb4956db2616eaaced97
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: dac47f55a1ad0d287e789d555d2f0a93b40f9376
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-global-conditions-in-system-center-configuration-manager"></a>System Center Configuration Manager でグローバル条件を作成する方法
 
@@ -55,13 +49,13 @@ System Center Configuration Manager のグローバル条件は、クライア�
 
 ### <a name="to-set-up-a-setting-for-the-global-condition"></a>グローバル条件の設定をセットアップするには  
 
-1.  **[条件の種類]** ドロップダウン リストで、**[設定]**を選択します。  
+1.  **[条件の種類]** ドロップダウン リストで、**[設定]** を選択します。  
 
 2.  **[設定の種類]** ドロップダウン リストで、確認する要件が含まれている条件を選択します。 次の設定の種類と条件を利用できます。  
 
     -   **Active Directory クエリ**  
 
-        -   **[LDAP プレフィックス]** - クライアント コンピューターでコンプライアンス対応を評価するための Active Directory ドメイン サービス クエリの有効な LDAP プレフィックスを指定します。 **LDAP://** または **GC://**を使用できます。  
+        -   **[LDAP プレフィックス]** - クライアント コンピューターでコンプライアンス対応を評価するための Active Directory ドメイン サービス クエリの有効な LDAP プレフィックスを指定します。 **LDAP://** または **GC://** を使用できます。  
 
         -   **識別名 (DN)** - クライアント コンピューターのコンプライアンスを評価する Active Directory Domain Services オブジェクトの識別名を指定します。  
 
@@ -102,12 +96,12 @@ System Center Configuration Manager のグローバル条件は、クライア�
 
         -   **[サブフォルダーを含める]** - このオプションは、指定したパス内のサブフォルダーも検索する場合に有効にします。  
 
-        -   **このファイルまたはフォルダーは 64 ビット アプリケーションに関連付けられている** - 64 ビット バージョンの Windows を実行する Configuration Manager クライアントで、32 ビット システム ファイルの場所 (*%windir%*\system32) に加えて 64 ビット システム ファイルの場所 (*%windir%*\syswow64) も検索する必要があるかどうかを選択します。  
+        -   **このファイルまたはフォルダーは 64 ビット アプリケーションに関連付けられている** - 64 ビット バージョンの Windows を実行する Configuration Manager クライアントで、32 ビット システム ファイルの場所 (*%windir%* \system32) に加えて 64 ビット システム ファイルの場所 (*%windir%* \syswow64) も検索する必要があるかどうかを選択します。  
 
             > [!NOTE]  
             >  64 ビットコンピューターの 64 ビット および 32 ビット システム ファイルの場所に同じファイルまたはフォルダーが存在する場合は、グローバル条件によって複数のファイルが検知されます。  
 
-         **[ ファイル システム ]** 設定の種類では、**[ パス ]** フィールドで UNC パスのネットワーク共有への指定はサポートされていません。  
+         **[ファイル システム]** 設定の種類では、**[パス]** フィールドで UNC パスのネットワーク共有への指定はサポートされていません。  
 
     -   **IIS メタベース**  
 
@@ -181,11 +175,11 @@ System Center Configuration Manager のグローバル条件は、クライア�
 
         -   **サブフォルダーも含める** – 指定したパスの下にあるサブフォルダーも検索する場合は、このオプションをオンにします。  
 
-        -   **このファイルは 64 ビット アプリケーションに関連付けられている** - 64 ビット バージョンの Windows を実行する Configuration Manager クライアントで、32 ビット システム ファイルの場所 (*%windir%*\system32) に加えて 64 ビット システム ファイルの場所 (*%windir%*\syswow64) も検索する必要があるかどうかを選択します。  
+        -   **このファイルは 64 ビット アプリケーションに関連付けられている** - 64 ビット バージョンの Windows を実行する Configuration Manager クライアントで、32 ビット システム ファイルの場所 (*%windir%* \system32) に加えて 64 ビット システム ファイルの場所 (*%windir%* \syswow64) も検索する必要があるかどうかを選択します。  
 
         -   **XPath クエリ** - クライアント コンピューターのコンプライアンス評価に使用する有効な XML Path Language (XPath) クエリを完全な形式で指定します。  
 
-        -   **名前空間** - **[ XML 名前空間 ]** ダイアログ ボックスを開き、XPath クエリの中で使用する名前空間およびプレフィックスを識別します。  
+        -   **名前空間** - **[XML 名前空間]** ダイアログ ボックスを開き、XPath クエリの中で使用する名前空間およびプレフィックスを識別します。  
 
 3.  **[データの種類]** ドロップダウン リストで、要件を確認するために使用される前に、条件によって返されるデータの形式を選択します。  
 
@@ -198,7 +192,7 @@ System Center Configuration Manager のグローバル条件は、クライア�
 
 ### <a name="set-up-an-expression-for-the-global-condition"></a>グローバル条件の式をセットアップする  
 
-1.  **[条件の種類]** ドロップダウン リストで、**[式]**を選択します。  
+1.  **[条件の種類]** ドロップダウン リストで、**[式]** を選択します。  
 
 2.  **[句の追加]** を選択して **[句の追加]** ダイアログ ボックスを開きます。  
 
