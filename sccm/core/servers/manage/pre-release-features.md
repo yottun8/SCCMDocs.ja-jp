@@ -2,25 +2,19 @@
 title: プレリリース機能
 titleSuffix: Configuration Manager
 description: プレリリース機能は、運用環境での初期テスト用の Current Branch に含まれている機能です。
-ms.custom: na
-ms.date: 04/10/2018
+ms.date: 05/01/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
-caps.latest.revision: 36
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e3a6a8dd437238a9dd08b07494b51333283f41c
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: d4e9664832b37dd05f001404012acab80fd87a43
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pre-release-features-in-system-center-configuration-manager"></a>System Center Configuration Manager のプレリリース機能
 *適用対象: System Center Configuration Manager (Current Branch)*
@@ -50,7 +44,8 @@ ms.lasthandoff: 04/16/2018
 
  |機能          |プレリリース版として追加 | 完全機能として追加|  
 |------------------|---------------------|---------------------|
-|段階的展開<!--1356837-->|[バージョン 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence.md)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+|iOS 向け Cisco AnyConnect 4.0.07x 以降のサポート<!--1357393-->|[バージョン 1802](/sccm/mdm/deploy-use/create-vpn-profiles)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+|段階的展開<!--1356837-->|[バージョン 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|![未追加](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | タスク シーケンス ステップの実行<!-- 1261338 --> |  [バージョン 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |[バージョン 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)|
 | Windows Defender Exploit Guard <!-- 1355468 --> |  [バージョン 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |[バージョン 1802](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)|
 | 条件付きアクセス コンプライアンス ポリシーに対するデバイス正常性構成証明の評価 <!-- 1235616 --> |  [バージョン 1710](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) |[バージョン 1802](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)|

@@ -1,26 +1,20 @@
 ---
-title: "リソース エクスプローラーを使用してハードウェア インベントリを表示する"
+title: リソース エクスプローラーを使用してハードウェア インベントリを表示する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でリソース エクスプローラーを使用してハードウェア インベントリを表示します。"
-ms.custom: na
+description: System Center Configuration Manager でリソース エクスプローラーを使用してハードウェア インベントリを表示します。
 ms.date: 01/03/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 375912f5-436d-4315-bdbe-d77afee6c9f3
-caps.latest.revision: 
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: a08fdd76fee73e50cb1f1249dd3ef4f54ce378a0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: be2c8c3dbfef5ea0f35e338b14439c65150310be
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-use-resource-explorer-to-view-hardware-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager でリソース エクスプローラーを使用してハードウェア インベントリを表示する方法
 
@@ -49,5 +43,5 @@ System Center Configuration Manager のリソース エクスプローラーを�
 
 3.  表示するインベントリが含まれているコンピューターをクリックしたら、**[ホーム]** タブの **[デバイス]** グループで **[開始]** >  **[リソース エクスプローラー]** の順に選択します。   
 
-4.  **[リソース エクスプローラー]** ウィンドウの右ウィンドウの項目を右クリックし、**[プロパティ]** をクリックして、*[<項目名\>***のプロパティ]** ダイアログ ボックスを開くことができます。このダイアログ ボックスには、収集されたインベントリ情報を、より読みやすい形式で表示できます。  
+4.  **[リソース エクスプローラー]** ウィンドウの右ウィンドウの項目を右クリックし、**[プロパティ]** をクリックして、*[<項目名\>*** のプロパティ*]* ダイアログ ボックスを開くことができます。このダイアログ ボックスには、収集されたインベントリ情報を、より読みやすい形式で表示できます。  
 

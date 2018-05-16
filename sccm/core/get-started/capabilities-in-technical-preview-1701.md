@@ -1,25 +1,20 @@
 ---
-title: "Technical Preview 1701 の機能"
+title: Technical Preview 1701 の機能
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1701 で使用できる機能について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の Technical Preview バージョン 1701 で使用できる機能について説明します。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 18598eaa-1131-44ff-8f8b-6093e87ac7a1
-caps.latest.revision: "5"
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 90e5aa799516bf2a7d6715e12bb8f3d1b72737f3
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 894d268151f9c9dfb05ded812eb642f8025dc459
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1701 の機能
 
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/01/2017
 
 以下に、このテクニカル プレビューでのソフトウェアの更新ポイントの動作について説明します。  
 
--   **新しいクライアントでは境界グループを使用して、ソフトウェアの更新ポイントを選択します。**バージョン 1701 をインストールした後にインストールしたクライアントは、ソフトウェアの更新ポイントを、クライアントの境界グループに関連付けられているものの中から選択します。
+-   **新しいクライアントでは境界グループを使用して、ソフトウェアの更新ポイントを選択します。** バージョン 1701 をインストールした後にインストールしたクライアントは、ソフトウェアの更新ポイントを、クライアントの境界グループに関連付けられているものの中から選択します。
 
   これは、クライアントが、クライアント フォレストを共有するソフトウェアの更新ポイントのリストからランダムに選択する以前の動作に置き換わるものです。   
 
@@ -99,7 +94,7 @@ ms.lasthandoff: 12/01/2017
 
 ### <a name="try-it-out"></a>試してみましょう
 
-- **管理ポイントでオンプレミスデバイス正常性構成証明を有効にする**<br>  Configuration Manager コンソールで、管理ポイントに移動し、**[管理ポイント コンポーネントのプロパティ]** を開き、**[詳細オプション]** タブをクリックします。**[追加]** をクリックし、**オンプレミス デバイス正常性構成証明サービスの URL** として、オンプレミス URL (https://10.10.10.10 など) を指定します。
+- **管理ポイントでオンプレミスデバイス正常性構成証明を有効にする**<br>  Configuration Manager コンソールで、管理ポイントに移動し、**[管理ポイント コンポーネントのプロパティ]** を開き、**[詳細オプション]** タブをクリックします。**[追加]** をクリックし、**オンプレミス デバイス正常性構成証明サービスの URL** として、オンプレミス URL (https://10.10.10.10) など) を指定します。
 - **クライアント エージェントのオンプレミス管理ポイント正常性構成証明レポートを有効にする**<br>Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** の順に選択してダブルクリックするか、新しい**カスタム デバイス設定**を作成します。 **[コンピューター エージェント]** を選択し、**[オンプレミスの正常性構成証明サービスを使用する]** を **[はい]** に設定します。 **[Enable communication with Device Health Attestation Service]** (デバイス正常性構成証明サービスとの通信を有効にする) が **[はい]** に設定されており、**[Use on-premises Health Attestation]** (オンプレミスの正常性構成証明を使用する) が **[いいえ]** に設定されている場合、管理ポイントではクラウドベースのデバイス正常性構成証明サービスが使用されます。
 
 ## <a name="use-the-oms-connector-for-microsoft-azure-government-cloud"></a>Microsoft Azure Government クラウドで OMS コネクタを使用する

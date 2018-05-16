@@ -1,26 +1,20 @@
 ---
-title: "Intune で管理されている Android デバイスと Samsung KNOX Standard デバイスの構成項目を作成する"
+title: Intune で管理されている Android デバイスと Samsung KNOX Standard デバイスの構成項目を作成する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Android と Samsung KNOX Standard の構成項目を使用してデバイスの設定を管理します。"
-ms.custom: na
+description: System Center Configuration Manager の Android と Samsung KNOX Standard の構成項目を使用してデバイスの設定を管理します。
 ms.date: 03/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b66f3c4-e3bb-4f6a-abd5-55be649ff90d
-caps.latest.revision: "17"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 3fa824c94b02ed7141c7051bab86fa64a4a9ee49
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: fbfcc2189e2ce06e6348936caad6c68de51f5bdb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-system-center-configuration-manager-client"></a>System Center Configuration Manager クライアントを使用せずに管理されている Android デバイスと Samsung KNOX デバイスの構成項目を作成する方法
 
@@ -36,7 +30,7 @@ System Center Configuration Manager の **Android および Samsung KNOX** 構�
 
 4. 構成項目の作成ウィザードの **[全般]** ページで、構成項目の名前と、必要に応じて説明を入力します。  
 
-5. **[作成する構成項目の種類の指定]**で、**[Android および Samsung KNOX]** を選択します。  
+5. **[作成する構成項目の種類の指定]** で、**[Android および Samsung KNOX]** を選択します。  
 
 6. Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、**[カテゴリ]** を選択します。  
 
@@ -75,7 +69,7 @@ System Center Configuration Manager の **Android および Samsung KNOX** 構�
 ### <a name="password"></a>パスワード  
 これらの設定は Android と Samsung KNOX の両方のデバイスに適用されます。  
 
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**デバイスのパスワードの設定が必要**|サポート対象デバイスのパスワードが必要です。|  
 |**パスワードの最小文字数**|パスワードの最小の長さを指定します。|  
@@ -89,7 +83,7 @@ System Center Configuration Manager の **Android および Samsung KNOX** 構�
 
 ### <a name="device"></a>デバイス   
 
-|設定|説明|  
+|設定|詳細|  
 |------------------|-------------|  
 |**音声ダイヤル**|デバイスの音声ダイヤル機能を有効または無効にします。|
 |**音声アシスタント**|デバイスで音声アシスタント ソフトウェアを使用できるようにします。|
@@ -103,13 +97,13 @@ System Center Configuration Manager の **Android および Samsung KNOX** 構�
 
 ### <a name="store"></a>ストア
 
-|設定|説明|  
+|設定|詳細|  
 |------------------|-------------|  
 |**アプリケーション ストア**|ユーザーがデバイスで Google Play ストアにアクセスすることを許可します。|
 
 ### <a name="browser"></a>ブラウザー
 
-|設定|説明|  
+|設定|詳細|  
 |------------------|-------------|  
 |**Web ブラウザーを許可する**|デバイスの既定の Web ブラウザーを使用できます。|
 |**オートフィル**|Web ブラウザーのオートフィル機能を使用できるようにします。|
@@ -119,14 +113,14 @@ System Center Configuration Manager の **Android および Samsung KNOX** 構�
 
 ### <a name="cloud"></a>クラウド  
 
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**Google へのバックアップ**|Google バックアップの使用を許可します。|  
 |**Google アカウントの自動同期**|Google アカウントの設定を自動的に同期できるようにします。|  
 
 ### <a name="security"></a>セキュリティ  
 
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**SMS と MMS メッセージング**|デバイスで SMS と MMS メッセージングを使用できるようにします。|
 |**リムーバブル記憶域**|デバイスで SD カードなどのリムーバブル記憶域を使用できます。|
@@ -137,7 +131,7 @@ System Center Configuration Manager の **Android および Samsung KNOX** 構�
 
 ### <a name="roaming"></a>ローミング
 
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |音声通話ローミング|デバイスが移動体通信ネットワーク上にある場合の音声通話ローミングを許可します。|
 |データ ローミング|デバイスが移動体通信ネットワーク上にある場合のデータ ローミングを許可します。|
@@ -146,14 +140,14 @@ System Center Configuration Manager の **Android および Samsung KNOX** 構�
 ### <a name="encryption"></a>暗号化  
  これらの設定は Android と Samsung KNOX の両方のデバイスに適用されます。  
 
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**メモリ カードの暗号化**|デバイスのメモリ カードの暗号化を要求します。|
 |**デバイスのファイルの暗号化**|モバイル デバイス上のファイルを必ず暗号化するようにします。|  
 
 ### <a name="wireless-communications"></a>ワイヤレス通信
 
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**ワイヤレス ネットワーク接続**|デバイスの Wi-Fi 機能を使用できるようにします。|
 |**Wi-Fi テザリング**|デバイスで Wi-Fi テザリングを使用できるようにします。|

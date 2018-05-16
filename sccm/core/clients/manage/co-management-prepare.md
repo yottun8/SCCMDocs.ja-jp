@@ -2,20 +2,19 @@
 title: 共同管理のために Windows 10 を準備する
 titleSuffix: Configuration Manager
 description: 共同管理用に Windows 10 デバイスを準備する方法について説明します。
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology: ''
+ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 93a991cb3fd78e44f5ae4434a9845a57450e1025
-ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
+ms.openlocfilehash: 8c025d7c7a1dc452cb96f937801656bc4d0cadab
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>共同管理用に Windows 10 デバイスを準備する
 AD と Azure AD に参加し Microsoft Intune に登録されている Windows 10 デバイスと、Configuration Manager のクライアントで、共同管理を有効にできます。 新しい Windows 10 デバイスおよび Intune に既に登録されているデバイスでは、共同管理を有効にする前に Configuration Manager クライアントをインストールします。 既に Configuration Manager クライアントになっている Windows 10 デバイスの場合は、デバイスを Intune に登録して、Configuration Manager コンソールで共同管理を有効にできます。
@@ -30,7 +29,7 @@ AD と Azure AD に参加し Microsoft Intune に登録されている Windows 1
 共同管理を有効にするための一般的な前提条件は次のとおりです。  
 
 - Configuration Manager バージョン 1710 以降
-- Azure AD
+- [クラウド管理のために Azure AD でオンボードされたサイト](/sccm/core/servers/deploy/configure/azure-services-wizard)
 - すべてのユーザーの EMS または Intune のライセンス
 - [Azure AD の自動登録](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)が有効
 - Intune のサブスクリプション &#40;MDM 機関が **Intune** に設定されたもの&#41;

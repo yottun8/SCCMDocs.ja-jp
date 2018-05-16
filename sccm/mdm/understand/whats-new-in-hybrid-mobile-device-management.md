@@ -2,24 +2,19 @@
 title: ハイブリッド MDM の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。
-ms.custom: na
-ms.date: 04/02/2018
+ms.date: 05/01/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6a47569ee56931d76a41e5f14ed56f8276d264fb
-ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
+ms.openlocfilehash: 3105f9597d1f3971d6ef1092a33b0077118a1a22
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -44,9 +39,43 @@ ms.lasthandoff: 04/18/2018
 
 
 
+## <a name="may-2018"></a>2018 年 5 月
+
+### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (現在のブランチ) の新機能
+
+#### <a name="support-for-new-versions-of-cisco-anyconnect-client-for-ios"></a>iOS 用 Cisco AnyConnect クライアントの新しいバージョンのサポート
+<!--1357393-->
+iOS バージョン 4.0.7 以降の Cisco AnyConnect のサポートを有効にすることができます。 有効にした場合、既存の Cisco AnyConnect VPN プロファイルには **Cisco Legacy AnyConnect** というラベルが付けられ、引き続き従来どおり動作します。 **Cisco AnyConnect** オプションは、iOS バージョン 4.0.7 以降の Cisco AnyConnect で動作する新しい VPN プロファイル用です。
+
+この機能を有効にする方法の詳細については、「[プレリリース機能](/sccm/core/servers/manage/pre-release-features)」を参照してください。
+
+> [!Note]  
+> macOS VPN プロファイルでは、引き続き **Cisco Legacy AnyConnect** オプションを使用します。 
+
+
+
 ## <a name="april-2018"></a>2018 年 4 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+
+#### <a name="improved-device-tiles-in-the-windows-10-company-portal"></a>Windows 10 ポータル サイトのデバイス タイルの改善
+<!--2213364-->
+視覚障碍のあるユーザーにより簡単にお使いいただけるように、また、画面読み取りツールのパフォーマンスを向上させるためにタイルが更新されました。
+
+
+#### <a name="test-the-company-portal-for-macos-on-virtual-machines"></a>仮想マシンでの macOS 用ポータル サイトのテスト
+<!--2216679-->
+IT 管理者が Parallels Desktop と VMware Fusion の仮想マシンで macOS 用ポータル サイト アプリをテストする際に役立つガイダンスを公開しました。 詳細については、「[テスト用に仮想 macOS マシンを登録する](/intune/macos-enroll#enroll-virtual-macos-machines-for-testing)」を参照してください。
+
+
+#### <a name="send-diagnostic-reports-in-company-portal-app-for-macos"></a>macOS 用ポータル サイト アプリでの診断レポートの送信
+<!--2216677-->
+macOS デバイス用ポータル サイト アプリが更新され、ユーザーが Intune に関連するエラーを報告する方法が改善されました。 ポータル サイト アプリから、従業員は次の操作を行うことができます。
+
+- Microsoft 開発者チームに直接診断レポートをアップロードする。
+- 会社の IT サポート チームにインシデント ID をメールで送信する。
+
 
 #### <a name="updated-help-experience-on-company-portal-app-for-android"></a>Android 用ポータル サイト アプリの更新されたヘルプ エクスペリエンス 
 <!--1631531-->

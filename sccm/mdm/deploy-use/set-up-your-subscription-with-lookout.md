@@ -1,25 +1,20 @@
 ---
-title: "Lookout でサブスクリプションを設定する"
+title: Lookout でサブスクリプションを設定する
 titleSuffix: Configuration Manager
-description: "このトピックでは、Lookout デバイス脅威保護を構成する方法の詳細を説明します。"
-ms.custom: na
+description: このトピックでは、Lookout デバイス脅威保護を構成する方法の詳細を説明します。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6087b279-ba05-4824-b5e3-3af14f3d3cfe
-caps.latest.revision: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 142926bc41a79adc8d8300e413022fb0e3566c5a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 08bf88c0f6660c213c47a5ed283b3be0431056a2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-your-subscription-for--lookout-device-threat-protection"></a>Lookout デバイス脅威保護のサブスクリプションを設定する
 
@@ -65,7 +60,7 @@ Lookout コンソールに初めてログインするときは、グローバル
 
 ![Lookout コンソールの初回ログイン ページのスクリーンショット](media/lookout-initial-login.png)
 
-受け入れて同意すると、Lookout コンソールにリダイレクトされます。 最初の登録が済んだ後のログインは、URL (https://aad.lookout.com) を使って行うことができます。
+受け入れて同意すると、Lookout コンソールにリダイレクトされます。 初期登録後のログインは、URL (https://aad.lookout.com) を使って行うことができます。
 
 ログインに問題がある場合は、[トラブルシューティングに関する記事]()をご覧ください。
 

@@ -1,68 +1,76 @@
 ---
-title: "拡張相互運用性クライアントを Current Branch で使用する "
+title: 拡張相互運用性クライアント
 titleSuffix: Configuration Manager
-description: "Configuration Manager サイトで、Configuration Manager の Long-Term Servicing Branch のクライアントを使用する方法について説明します。"
-ms.custom: na
-ms.date: 08/09/2017
+description: Current Branch サイトでの静的な Configuration Manager クライアントの長期的サポートに対する拡張相互運用性クライアントの使用について説明します。
+ms.date: 05/01/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
-caps.latest.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: ba79f2b9cf0cdfc4525645a647dddb624a0a5e5b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f46fdb622a55c7281de89c84d5e66e54ab149548
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-configuration-manager-client-software-for-extended-interoperability-with-future-versions-of-a-current-branch-site"></a>将来のバージョンの Current Branch サイトとの拡張相互運用性のために構成マネージャー クライアント ソフトウェアを使用する
 
-*適用対象: System Center Configuration Manager (Current Branch)、(Long-Term Servicing Branch)*  
+*適用対象: System Center Configuration Manager (Current Branch)*  
 
-場合によっては、会社のポリシーで、構成マネージャー クライアントを一部の PC で定期的に更新することが許可されていないことがあります。 たとえば、変更管理ポリシーに準拠する必要がある場合や、デバイスがミッション クリティカルな場合が挙げられます。
-
-大半のクライアントについては、可能な場合、クライアントの自動更新を引き続き使用する必要がありますが、Configuration Manager の更新プログラム 1610 以降は、長期的な使用を目的とした新しいクライアントである拡張相互運用性クライアント (EIC) をインストールすることで、このようなニーズに対応できます。
-
-EIC は、バージョン 1610 以降を実行する Configuration Manager サイトと互換性があります。 EIC は、キオスク デバイスや販売時点管理デバイスのように、頻繁に更新できない特定の PC にのみ使用します。 それ以外の PC にはすべて、最新の構成マネージャー クライアントを使用します。
+ビジネス要件によっては、一部のデバイスで構成マネージャー クライアントを定期的に更新することができないことがあります。 たとえば、変更管理ポリシーに準拠する必要がある場合や、デバイスがミッション クリティカルな場合が挙げられます。 これらのニーズには、拡張相互運用性クライアント (EIC) と呼ばれる長期使用のための新しいクライアントをインストールすることによって対応します。 EIC は、キオスク デバイスや販売時点管理デバイスのように、頻繁に更新できない特定のデバイスにのみ使用します。 ほとんどのクライアントについては、[自動クライアント アップグレード](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade)を引き続き使用します。 
 
 ## <a name="how-this-scenario-works"></a>このシナリオのしくみ
 
-通常、Current Branch の新しいコンソール内更新プログラムをインストールすると、その新機能を使用できるように、クライアント ソフトウェアが自動的に更新されます。
+通常、Configuration Manager の新しい[コンソール内更新プログラム](/sccm/core/servers/manage/install-in-console-updates)をインストールすると、その新機能を使用できるように、クライアント ソフトウェアが自動的に更新されます。 このシナリオでは、新しい機能と更新プログラムを受け取る Current Branch にやはり更新します。 ほとんどのデバイスは、ユーザーがインストールする各バージョンの更新プログラムで Configuration Manager クライアント ソフトウェアを更新します。 ただし、クライアント ソフトウェアの更新プログラムを受信させたくない重要なシステムのサブセットには、拡張相互運用性クライアントをインストールします。 拡張相互運用性クライアントの場合、新しいバージョンのクライアント ソフトウェアを明示的に展開するまで、新しいクライアント ソフトウェアはインストールされません。
 
-このシナリオでは、Current Branch を使用し、新しい機能と更新プログラムを受信します。 ほとんどのクライアントは、Current Branch のクライアント ソフトウェアを実行しており、インストールする各バージョンの更新プログラムでそのクライアント ソフトウェアを更新できます。 ただし、クライアント ソフトウェアの更新プログラムを受信させたくない重要なシステムのサブセットには、拡張相互運用性クライアントをインストールします。 拡張相互運用性クライアントの場合、新しいバージョンのクライアント ソフトウェアを明示的に展開するまで、新しいクライアント ソフトウェアはインストールされません。
 
->[!IMPORTANT]
->Current Branch サイトはバージョン 1610 以降を実行する必要があります。
 
-## <a name="how-to-use-the-eic"></a>EIC の使用方法
+## <a name="supported-versions"></a>サポートされるバージョン
+次の表では、このシナリオでサポートされている Configuration Manager クライアントのバージョンを示します。
 
-1. Configuration Manager の更新プログラム 1606 のインストール メディアに含まれる \SMSSETUP\Client フォルダーから、EIC (クライアント バージョン 5.00.8412) を取得します。 フォルダーの内容をすべてコピーするようにします。
-2. デバイスに EIC を手動でインストールします。 [詳細については、クライアントを手動でインストールする方法に関するページをご覧ください](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual)。
-3. クライアントのアップグレードからこのコレクションを除外します。
+| バージョン  | 公開日  | サポート終了日  |
+|---------|---------|---------|
+|1802<br/>5.00.8634     | 2018 年 5 月 1 日        | 2020 年 5 月 1 日以降        |
+|1606<br/>5.00.8412     | 2016 年 11 月 18 日        | 2019 年 5 月 1 日        |
 
->[!TIP]
->ボリューム ランセンス サービス センター (VLSC) で System Center Configuration Manager バージョン 1606 を見つけるには、[VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) の **[Downloads and Keys]\(ダウンロードとキー\)** タブに移動し、"system center config" を検索し、**[System Center Config Mgr (current branch and LTSB)]\(System Center Configuration Manager (現在のブランチと LTSB)\)** を選択します。
-
-## <a name="the-extended-interoperability-client-software"></a>拡張相互運用性クライアント ソフトウェア
-
-少なくとも 2018 年 11 月 18 日までは、Configuration Manager (Current Branch) の更新バージョンで現在の EIC が継続的にサポートされる予定です。 それ以降は、新しい EIC の詳細、または既存の EIC のサポート延長について、こちらのページをご確認ください。
-
->[!TIP]
->EIC は、リリース日から少なくとも 2 年間にわたりサポートされます (「[System Center Configuration Manager の Current Branch バージョンのサポート](/sccm/core/servers/manage/current-branch-versions-supported)」をご覧ください)。 たとえば現在の EIC は、1610 のリリースから 2 年間、つまり 2018 年 11 月 18 日までサポートされます。
+> [!TIP]  
+> EIC は、リリース日から 2 年以上サポートされます。 リリース日の詳細については、「[System Center Configuration Manager の Current Branch バージョンのサポート](/sccm/core/servers/manage/current-branch-versions-supported)」をご覧ください。  
 
 クライアントのサポートが期限切れになる前に、Current Branch で管理するデバイスの拡張相互運用性クライアントを更新するように計画を立ててください。 更新するには、新しいバージョンのクライアントを Microsoft からダウンロードし、現在の拡張相互運用性クライアントを使用しているデバイスにその新しいクライアント ソフトウェアを展開します。
 
+
+
+## <a name="how-to-use-the-eic"></a>EIC の使用方法
+
+1. Configuration Manager 更新プログラムのインストール メディアの `\SMSSETUP\Client` フォルダーから、サポートされているバージョンから EIC を入手します。 フォルダーの内容をすべてコピーするようにします。  
+
+2. デバイスに EIC を手動でインストールします。 詳細については、「[クライアントの手動インストール方法](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual)」をご覧ください。  
+
+    > [!Important]  
+    > バージョン 1606 のクライアントをバージョン 1802 にアップグレードするときは、CCMSETUP のオプション **/AlwaysExcludeUpgrade:True** を使用します。 そうしないと、クライアントは除外ポリシーの前に自動的にアップグレードするためのポリシーを管理ポイントから受信する可能性があります。
+
+3. これらのデバイスをコレクションに追加し、そのコレクションを自動クライアント アップグレードから除外します。 詳細については、「[自動クライアント アップグレードの使用](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade)」を参照してください。  
+
+> [!TIP]  
+> [ボリューム ライセンス サービス センター](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) で Configuration Manager のメディアを見つけるには、**[Downloads and Keys]\(ダウンロードとキー\)** タブに移動し、`System Center Config` を検索して、**[System Center Config Mgr (current branch)]\(System Center Configuration Manager (Current Branch)\)** を選択します。
+
+
+
 ## <a name="limitations-of-the-extended-interoperability-client"></a>拡張相互運用性クライアントの制限
 
-- 拡張相互運用性クライアント ソフトウェアの更新プログラムは、コンソール内更新プログラムを使用して入手できません。 新しいクライアント ソフトウェアを展開する方法の詳細については、新しいクライアントのリリース時に提供されます。
-- EIC では、ソフトウェアの更新、インベントリ、およびパッケージとプログラムのみがサポートされます。
+- 拡張相互運用性クライアント ソフトウェアの更新プログラムは、コンソール内更新プログラムを使用して入手できません。 EIC クライアントの更新方法については、「[EIC の使用方法](#how-to-use-the-eic)」をご覧ください。  
+
+- EIC は次の機能のみをサポートします。  
+
+   - ソフトウェア更新プログラム  
+   - ハードウェアとソフトウェアのインベントリ
+   - パッケージとプログラム
+
+
 
 ## <a name="next-steps"></a>次のステップ
 
-[クライアントを監視する方法](/sccm/core/clients/manage/monitor-clients)に関するページの情報を使用して、クライアントがデバイスに適切にインストールされていることを確認します。
+クライアントがデバイスに適切にインストールされていることを確認するには、「[クライアントを監視する方法](/sccm/core/clients/manage/monitor-clients)」をご覧ください。

@@ -1,26 +1,20 @@
 ---
-title: "可用性グループを構成する"
+title: 可用性グループを構成する
 titleSuffix: Configuration Manager
-description: "SCCM で SQL Server AlwaysOn 可用性グループをセットアップして管理します。"
-ms.custom: na
+description: SCCM で SQL Server AlwaysOn 可用性グループをセットアップして管理します。
 ms.date: 7/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: d6b208da49e27775548ac6f544b7a7278b96d980
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 2baafa04c315ebc7512504f042c89615b7217b4c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>Configuration Manager の SQL Server Always On 可用性グループを構成する
 
@@ -65,7 +59,7 @@ SQL Server のドキュメントの「 [データベースの復旧モデルの�
 
           -    **リスナー**: 完全な DNS 名として **[リスナー DNS 名]** を指定します (例: **&lt;Listener_Server>.fabrikam.com**)。可用性グループのサイト データベースを使用するよう Configuration Manager を構成するときに、これが使用されます。
 
-      -    **[最初のデータの同期を選択]** ページで、 **[完全]**を選びます。 ウィザードでは、可用性グループが作成された後に、プライマリ データベースとトランザクション ログがバックアップされます。 それから、セカンダリ レプリカをホストする各サーバーで復元されます。 (この手順を使用しない場合は、セカンダリ レプリカをホストする各サーバーにサイト データベースのコピーを復元して、グループにそのデータベースを手動で結合する必要があります)。   
+      -    **[最初のデータの同期を選択]** ページで、 **[完全]** を選びます。 ウィザードでは、可用性グループが作成された後に、プライマリ データベースとトランザクション ログがバックアップされます。 それから、セカンダリ レプリカをホストする各サーバーで復元されます。 (この手順を使用しない場合は、セカンダリ レプリカをホストする各サーバーにサイト データベースのコピーを復元して、グループにそのデータベースを手動で結合する必要があります)。   
 
 5.  各レプリカで構成を確認します。   
   1.    サイト サーバーのコンピューター アカウントが、可用性グループのメンバーである各コンピューターの**ローカル管理者**グループのメンバーであることを確認します。  
@@ -91,12 +85,12 @@ SQL Server のドキュメントの「 [データベースの復旧モデルの�
 ### <a name="to-configure-a-site-to-use-the-availability-group"></a>可用性グループを使用するようにサイトを構成するには
 1.  **&lt;*Configuration Manager サイトのインストール フォルダー*>\BIN\X64\setup.exe** から **Configuration Manager のセットアップ**を実行します。
 
-2.  **[作業の開始]** ページで、 **[サイトのメンテナンスを実施するか、このサイトをリセットする]**を選択し、 **[次へ]**をクリックします。
+2.  **[作業の開始]** ページで、 **[サイトのメンテナンスを実施するか、このサイトをリセットする]** を選択し、 **[次へ]** をクリックします。
 
-3.  **[SQL Server の構成を変更する]** オプションを選んでから、 **[次へ]**をクリックします。
+3.  **[SQL Server の構成を変更する]** オプションを選んでから、 **[次へ]** をクリックします。
 
 4.  サイト データベースを次のように再構成します。
-    -   **SQL Server 名:** 可用性グループの作成時に構成した可用性グループ **リスナー**の仮想名を入力します。 仮想名は、**&lt;*endpointServer*>.fabrikam.com** のように完全な DNS 名にする必要があります。  
+    -   **SQL Server 名:** 可用性グループの作成時に構成した可用性グループ **リスナー**の仮想名を入力します。 仮想名は、**&lt;*エンドポイント サーバー*>.fabrikam.com** のように完全な DNS 名にする必要があります。  
 
     -   **インスタンス:** 可用性グループの*リスナー*の既定インスタンスを指定するには、この値は空白である必要があります。 現在のサイト データベースが名前付きインスタンスで実行される場合、その名前付きインスタンスが表示されます。このインスタンスはクリアする必要があります。
 
@@ -158,11 +152,11 @@ Configuration Manager バージョン 1706 以降、非同期レプリカを使�
 
 4.  サイト データベースをホストするサーバー (プライマリ レプリカ、またはサイト データベースを復元したサーバー) で、サイト データベースのバックアップ モデルを**完全**から**単純**に変更します。 SQL Server のドキュメントの「 [データベースの復旧モデルの表示または変更](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server) 」を参照してください。  
 
-5.  **&lt;*Configuration Manager サイトのインストール フォルダー>*\BIN\X64\setup.exe** から **Configuration Manager** のセットアップを実行します。
+5.  **&lt;*Configuration Manager サイトのインストール フォルダー*>\BIN\X64\setup.exe** から **Configuration Manager のセットアップ**を実行します。
 
-6.  **[作業の開始]** ページで、 **[サイトのメンテナンスを実施するか、このサイトをリセットする]**を選択し、 **[次へ]**をクリックします。  
+6.  **[作業の開始]** ページで、 **[サイトのメンテナンスを実施するか、このサイトをリセットする]** を選択し、 **[次へ]** をクリックします。  
 
-7.  **[SQL Server の構成を変更する]** オプションを選んでから、 **[次へ]**をクリックします。  
+7.  **[SQL Server の構成を変更する]** オプションを選んでから、 **[次へ]** をクリックします。  
 
 8.  サイト データベースを次のように再構成します。
     -   **SQL Server 名** : サイト データベースを現在ホストするサーバーの名前を入力します。

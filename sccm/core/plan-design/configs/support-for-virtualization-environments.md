@@ -1,33 +1,28 @@
 ---
-title: "仮想化のサポート"
+title: 仮想化のサポート
 titleSuffix: Configuration Manager
-description: "仮想化環境で System Center Configuration Manager クライアントとサイト システムの役割をインストールするための要件を取得します。"
-ms.custom: na
+description: 仮想化環境で System Center Configuration Manager クライアントとサイト システムの役割をインストールするための要件を取得します。
 ms.date: 1/12/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
-caps.latest.revision: "6"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 941c0fffd351a7cc345c5bcc0529633c22c27ed5
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 374a1643c5ea439a7406bbb1f6b53322caa50871
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="support-for-virtualization-environments-for-system-center-configuration-manager"></a>System Center Configuration Manager の仮想環境のサポート
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager は、この記事で説明する仮想環境内でバーチャル マシンとして実行するサポート対象オペレーティング システムに、クライアントの役割およびサイト システムの役割をインストールすることをサポートしています。 このサポートは、バーチャル マシンのホスト (仮想環境) が、クライアントまたはサイト サーバーとしてサポートされていない場合でも存続します。  
+Configuration Manager は、この記事で説明する仮想環境内で仮想マシンとして実行するサポート対象オペレーティング システムに、クライアントの役割およびサイト システムの役割をインストールすることをサポートしています。 このサポートは、バーチャル マシンのホスト (仮想環境) が、クライアントまたはサイト サーバーとしてサポートされていない場合でも存続します。  
 
- たとえば、Microsoft Hyper-V Server 2012 を使用して、Windows Server 2012 を実行するバーチャル マシンをホストする場合は、そのバーチャル マシン (Windows Server 2012) にクライアントの役割またはサイト システムの役割をインストールできますが、それらをホスト (Microsoft Hyper-V Server 2012) にインストールすることはできません。  
+ たとえば、Microsoft Hyper-V Server 2012 を使用して、Windows Server 2012 を実行する仮想マシンをホストする場合は、その仮想マシン (Windows Server 2012) にクライアントの役割またはサイト システムの役割をインストールできますが、それらをホスト (Microsoft Hyper-V Server 2012) にインストールすることはできません。  
 
 |仮想化環境|  
 |--------------------------------|  
@@ -48,9 +43,9 @@ Configuration Manager は、この記事で説明する仮想環境内でバー�
 > [!NOTE]  
 >  Configuration Manager では、Mac コンピューター上で実行されるバーチャル PC またはバーチャル サーバー ゲスト オペレーティング システムはサポートしていません。  
 
-Configuration Manager では、バーチャル マシンがオンラインでない限り、そのマシンを管理できません。 ホスト コンピューター上の Configuration Manager クライアントを使用して、オフラインのバーチャル マシン イメージを更新したり、インベントリを収集したりすることはできません。  
+Configuration Manager では、仮想マシンがオンラインでない限り、そのマシンを管理できません。 ホスト コンピューター上の Configuration Manager クライアントを使用して、オフラインの仮想マシン イメージを更新したり、インベントリを収集したりすることはできません。  
 
-バーチャル マシンについて特別に考慮する事項はありません。 たとえば、更新が適用されたバーチャル マシンの状態を保存せずにバーチャル マシンを停止して再起動した場合、Configuration Manager はバーチャル マシン イメージに更新を再適用する必要があるかどうかを判断できない可能性があります。  
+バーチャル マシンについて特別に考慮する事項はありません。 たとえば、更新が適用された仮想マシンの状態を保存せずに仮想マシンを停止して再起動した場合、Configuration Manager は仮想マシン イメージに更新を再適用する必要があるかどうかを判断できない可能性があります。  
 
 ##  <a name="bkmk_Azure"></a> Microsoft Azure 仮想マシン  
  Configuration Manager は、物理的な企業ネットワーク内のオンプレミスで実行されるコンピューターと同じように、Azure の仮想マシンで実行できます。 Azure Virtual Machines では、次のシナリオで Configuration Manager を使用できます。  

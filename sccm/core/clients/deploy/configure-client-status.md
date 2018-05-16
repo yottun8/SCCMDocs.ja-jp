@@ -1,27 +1,20 @@
 ---
-title: "クライアント ステータスを構成する"
+title: クライアント ステータスを構成する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager のクライアント ステータス設定を選択します。"
-ms.custom: na
+description: System Center Configuration Manager のクライアント ステータス設定を選択します。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
-caps.latest.revision: 
-caps.handback.revision: 
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 5db52925515e65797a43ed35775460369f742f49
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 8f919e647ae252731d60a98e01485a01aae10698
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-client-status-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアント ステータスを構成する方法
 
@@ -78,7 +71,7 @@ monitor System Center Configuration Manager クライアント ステータス�
     > [!NOTE]  
     >  ユーザーのコレクションに対してアラートを構成することはできません。  
 
-4.  *[&lt;コレクション名\>***のプロパティ]** ダイアログ ボックスの **[アラート]** タブで、**[追加]** をクリックします。  
+4.  *[&lt;コレクション名\> ***のプロパティ]** ダイアログ ボックスの **[アラート]** タブで、**[追加]** をクリックします。  
 
     > [!NOTE]  
     >  **[アラート]** タブは、ユーザーに割り当てられたセキュリティ ロールがアラートを許可している場合にだけ表示されます。  
@@ -93,7 +86,7 @@ monitor System Center Configuration Manager クライアント ステータス�
 
     -   **アラートの生成** – アラートのしきい値をパーセント値で指定します。  
 
-7.  **[OK]** をクリックして *[&lt;コレクション名\>***のプロパティ]** ダイアログ ボックスを閉じます。  
+7.  **[OK]** をクリックして *[&lt;コレクション名\> ***のプロパティ]** ダイアログ ボックスを閉じます。  
 
 ##  <a name="BKMK_3"></a> コンピューターを自動修復から除外するには  
 
@@ -112,4 +105,4 @@ monitor System Center Configuration Manager クライアント ステータス�
 
 4.  レジストリ エディターを閉じます。  
 
- CCMSetup の  **NotifyOnly**  インストール プロパティを使用してクライアントをインストールしても、自動修復から除外することができます。 クライアント インストールのプロパティの詳細については、「[System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
+ CCMSetup の **NotifyOnly** インストール プロパティを使用してクライアントをインストールしても、自動修復から除外することができます。 クライアント インストールのプロパティの詳細については、「[System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  

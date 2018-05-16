@@ -1,24 +1,20 @@
 ---
 title: Technical Preview 1705
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1705 で使用できる機能について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の Technical Preview バージョン 1705 で使用できる機能について説明します。
 ms.date: 06/02/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00684289-d21a-45f8-b1e3-c5c787d73096
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 60415539a645e40f1b097897d4b255924d61f389
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 49205ac1d1fc2dd20cbd4a0844632c5f3d181e45
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1705 の機能
 
@@ -59,7 +55,7 @@ ms.lasthandoff: 12/01/2017
 
 ツールを実行する際には、指定した更新プログラムに対して実行します。 既定では、このツールで正常にインストールまたはダウンロードされた更新プログラムが削除されることはありません。  
 
-### <a name="prerequisites"></a>必要条件
+### <a name="prerequisites"></a>[前提条件]
 ツールの実行に使用するアカウントには、次のアクセス許可が必要です。
 -   中央管理サイトと階層の各プライマリ サイトのサイト データベースへの**読み取り**と**書き込み**アクセス許可。 これらのアクセス許可を設定するため、各サイトの Configuration Manager データベースで、ユーザー アカウントを **db_datawriter** および **db_datareader** の[固定データベース ロール](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles)のメンバーとして追加できます。 このツールは、セカンダリ サイトとは対話しません。
 -   階層の最上位サイトの**ローカル管理者**。
@@ -143,7 +139,7 @@ ms.lasthandoff: 12/01/2017
 ## <a name="improved-user-notifications-for-office-365-updates"></a>Office 365 更新プログラムのユーザーへの通知の改善
 クライアントが Office 365 更新プログラムをインストールする場合に、Office クイック実行ユーザー エクスペリエンスを活用するように改善されました。 これには、ポップアップとアプリ内通知、およびカウントダウン エクスペリエンスが含まれます。 以前のリリースでは、Office 365 更新プログラムがクライアントに送信されると、開いていた Office アプリケーションが警告なしで自動的に閉じられていました。 この更新により、Office アプリケーションが予期せずに閉じられることはなくなります。
 
-### <a name="prerequisites"></a>必要条件
+### <a name="prerequisites"></a>[前提条件]
 この更新プログラムは、Office 365 ProPlus クライアントに適用されます。
 
 ### <a name="known-issues"></a>既知の問題
@@ -162,7 +158,7 @@ ms.lasthandoff: 12/01/2017
 この機能は、Windows 10 Creators Update (コードネーム: RS2) の 64 ビット バージョンのプレビューでリリースされます。 この機能を今すぐテストするには、この更新プログラムのプレビュー バージョンを使用している必要があります。
 
 
-### <a name="before-you-start"></a>アップグレードを開始する前に
+### <a name="before-you-start"></a>開始する前に
 
 Windows Defender Application Guard ポリシーを作成して展開するには、ネットワーク分離ポリシーを使用して、ポリシーを展開する Windows 10 デバイスを構成する必要があります。 詳細については、後述のブログ記事を参照してください。
 この機能は、最新の Windows 10 Insider Build でのみ動作します。 これをテストするには、クライアントが最新の Windows 10 Insider Build で実行されている必要があります。
@@ -200,7 +196,7 @@ Windows Defender Application Guard の詳細については、[このブログ�
 
 コレクションおよびその他の Configuration Manager の操作で使用するサイト内で Azure AD ユーザーを検出できます。
 
-### <a name="before-you-start"></a>アップグレードを開始する前に
+### <a name="before-you-start"></a>開始する前に
 
 - Azure AD テナントが必要です。
 - デバイスで、Windows 10 が実行され、Azure AD が参加している必要があります。  参加している Azure AD に加え、クライアントもドメインに参加できます。

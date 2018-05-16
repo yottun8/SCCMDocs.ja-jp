@@ -1,25 +1,20 @@
 ---
-title: "Endpoint Protection の状態を監視する"
+title: Endpoint Protection の状態を監視する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager 階層内の Endpoint Protection を監視する方法を説明します。"
-ms.custom: na
+description: System Center Configuration Manager 階層内の Endpoint Protection を監視する方法を説明します。
 ms.date: 03/13/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
-caps.latest.revision: "8"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 9e6356f8b3814ac49c26bfa4d319c3c9926a4382
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f4e1ea4cb097381467774af9c3161079419d6840
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-monitor-endpoint-protection-status"></a>Endpoint Protection 状態を監視する方法
 
@@ -29,33 +24,33 @@ ms.lasthandoff: 10/12/2017
 
 ##  <a name="BKMK_1"></a> [Endpoint Protection のステータス] ノードを使用して Endpoint Protection を監視する方法  
 
-1.  Configuration Manager コンソールで、**[ 監視]** をクリックします。  
+1.  Configuration Manager コンソールで、**[監視]** をクリックします。  
 
 2.  **[監視]** ワークスペースで **[セキュリティ]** を展開し、**[Endpoint Protection のステータス]** をクリックします。  
 
-3.  **[ コレクション ]** 一覧で、ステータス情報を確認するコレクションを選択します。  
+3.  **[コレクション]** 一覧で、ステータス情報を確認するコレクションを選択します。  
 
     > [!IMPORTANT]  
     >  コレクションは、次のような場合に選択できます。  
     >   
-    >  -   **[<*コレクション名*\> のプロパティ]** ダイアログ ボックスの **[アラート]** タブで **[このコレクションを Endpoint Protection ダッシュボードに表示する]** を選択するとき。  
+    >  -   *[<コレクション名\> の***プロパティ]** ダイアログ ボックスの **[アラート]** タブで **[このコレクションを Endpoint Protection ダッシュボードに表示する]** を選択するとき。  
     > -   Endpoint Protection マルウェア対策ポリシーをコレクションに展開するとき。  
     > -   Endpoint Protection クライアントの設定をコレクションに対して有効にして展開するとき。  
 
 4.  表示される情報を確認して、 **セキュリティ状態** と **操作状態** セクションです。 一時的なコレクションを作成する任意のステータス リンクをクリックすることができます、 **デバイス** 内のノード、 **資産とコンプライアンス** ワークスペース。 一時コレクションには、選択したステータスのコンピューターが含まれます。  
 
     > [!IMPORTANT]  
-    >  **[Endpoint Protection のステータス]** ノードに表示される情報は、Configuration Manager データベースからまとめられた最終データに基づいていて、最新ではない可能性があります。 最新のデータを取得するには、 **[ホーム]** タブの **[構成基準の概要]**をクリックするか、 **[概要作成スケジュール]** をクリックして、概要構成間隔を調整します。  
+    >  **[Endpoint Protection のステータス]** ノードに表示される情報は、Configuration Manager データベースからまとめられた最終データに基づいていて、最新ではない可能性があります。 最新のデータを取得するには、 **[ホーム]** タブの **[構成基準の概要]** をクリックするか、 **[概要作成スケジュール]** をクリックして、概要構成間隔を調整します。  
 
 ##  <a name="BKMK_2"></a> [資産とコンプライアンス] ワークスペースで Endpoint Protection を監視する方法  
 
-1.  Configuration Manager コンソールで、 **[資産とコンプライアンス]**をクリックします。  
+1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
 
-2.  **[ 資産とコンプライアンス ]** ワークスペースで、次のいずれかの操作を実行します。  
+2.  **[資産とコンプライアンス]** ワークスペースで、次のいずれかの操作を実行します。  
 
-    -   **[ デバイス ]** をクリックします。 **デバイス** ボックスの一覧、コンピューターを選択し、クリックして、 **マルウェアの詳細** タブです。  
+    -   **[デバイス]** をクリックします。 **デバイス** ボックスの一覧、コンピューターを選択し、クリックして、 **マルウェアの詳細** タブです。  
 
-    -   **[ デバイス コレクション ]** をクリックします。 [デバイス コレクション] 一覧で、監視するコンピューターを含むコレクションを選んで、 [ホーム] タブの [コレクション] グループで、 [メンバーの表示]をクリックします。  
+    -   **[デバイス コレクション]** をクリックします。 [デバイス コレクション] 一覧で、監視するコンピューターを含むコレクションを選んで、 [ホーム] タブの [コレクション] グループで、 [メンバーの表示]をクリックします。  
 
 3.  [<*コレクション名*\>] の一覧で、コンピューターを選択し、**[マルウェアの詳細]** タブをクリックします。  
 

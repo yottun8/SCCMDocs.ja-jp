@@ -1,25 +1,19 @@
 ---
-title: "Intune を使用して管理されている Windows Phone デバイスの構成項目を作成する方法"
+title: Intune を使用して管理されている Windows Phone デバイスの構成項目を作成する方法
 titleSuffix: Configuration Manager
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: df10dc4d-c9ff-4574-bb33-8d30eb14cfe3
-caps.latest.revision: "13"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: f0a032bfa1d8d6383caf3065678d9b0a4dd3dde0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4590077b303d5676aa72a816d785a0864fe2205f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-windows-phone-devices-managed-without-the-system-center-configuration-manager-client"></a>System Center Configuration Manager クライアントを使用せずに管理されている Windows Phone デバイスの構成項目を作成する方法
 System Center Configuration Manager の **Windows Phone** 構成項目を使用して、Microsoft Intune に登録されているか、Configuration Manager によってオンプレミスで管理されている Windows Phone デバイスの設定を管理します。  
@@ -28,22 +22,22 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
   
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
   
-2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ コンプライアンス設定 ]** を展開して、**[ 構成項目 ]** をクリックします。  
+2.  **[資産とコンプライアンス]** ワークスペースで **[コンプライアンス設定]** を展開して、**[構成項目]** をクリックします。  
   
-3.  **[ ホーム ]** タブの **[ 作成 ]** グループで、**[ 構成項目の作成 ]** をクリックします。  
+3.  **[ホーム]** タブの **[作成]** グループで、**[構成項目の作成]** をクリックします。  
   
-4.  **構成項目の作成ウィザード** の **[全般]**ページで、構成項目の名前と、必要に応じて説明を入力します。  
+4.  **構成項目の作成ウィザード** の **[全般]** ページで、構成項目の名前と、必要に応じて説明を入力します。  
   
-5.  **[作成する構成項目の種類の指定]**で、 **[Windows Phone]**を選択します。  
+5.  **[作成する構成項目の種類の指定]** で、 **[Windows Phone]** を選択します。  
   
 6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、**[カテゴリ]** をクリックします。  
   
 7.  ウィザードの **[サポートされているプラットフォーム]** ページで、構成項目を評価する特定の Windows Phone プラットフォームを選択します。  
   
-8.  ウィザードの **[デバイスの設定]** ページで、構成する設定グループを選択します。 このトピックの「 [Windows Phone の構成項目設定のリファレンス](#BKMK_Setref) 」で詳細情報を確認し、 **[次へ]**をクリックします。  
+8.  ウィザードの **[デバイスの設定]** ページで、構成する設定グループを選択します。 このトピックの「 [Windows Phone の構成項目設定のリファレンス](#BKMK_Setref) 」で詳細情報を確認し、 **[次へ]** をクリックします。  
   
     > [!TIP]  
-    >  必要な設定が一覧にない場合は、 **[既定の設定グループに含まれない追加の設定を構成する]**チェック ボックスをオンにします。  
+    >  必要な設定が一覧にない場合は、 **[既定の設定グループに含まれない追加の設定を構成する]** チェック ボックスをオンにします。  
   
 9. 各設定ページで、必要な設定と、その設定がデバイスに対応していないときにその設定を修正するかどうかを構成します (これがサポートされている場合)。  
   
@@ -73,7 +67,7 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
 ### <a name="password"></a>パスワード  
  これらの設定は、Windows Phone 8 および Windows Phone 8.1 の両方に適用されます。  
   
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**デバイスのパスワードの設定が必要**|サポート対象デバイスのパスワードが必要です。|  
 |**パスワードの最小文字数**|パスワードの最小の長さ。|  
@@ -85,7 +79,7 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
   
 ### <a name="device"></a>デバイス  
   
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**画面の取り込み**|ユーザーがデバイスのディスプレイのスクリーン ショットを取得できるようにします。<br /><br /> (Windows Phone 8.1 のみ)|  
 |**診断データの送信**|アプリのログ ファイルを送信できるようにします。|  
@@ -96,7 +90,7 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
 ### <a name="email-management"></a>電子メール管理  
  これらの設定は、Windows Phone 8 および Windows Phone 8.1 の両方に適用されます。  
   
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**POP と IMAP の電子メール**|POP および IMAP 標準を使用する電子メール アカウントに接続できるようにします。|  
 |**電子メールの最長保管期間**|電子メールをサーバーから削除する前に保持する期間。|  
@@ -111,14 +105,14 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
 ### <a name="store"></a>ストア  
  これらの設定は、Windows Phone 8.1 デバイスのみに適用されます。  
   
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**アプリケーション ストア**|デバイスからアプリ ストアにアクセスできるようにします。|  
   
 ### <a name="browser"></a>ブラウザー  
  これらの設定は、Windows Phone 8 および Windows Phone 8.1 の両方に適用されます。  
   
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**Web ブラウザーを許可する**|既定のインターネット ブラウザーを有効または無効にします。|  
 |**オートフィル**|ユーザーは、ブラウザーのオートコンプリートの設定を変更できます。|  
@@ -130,7 +124,7 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
 ### <a name="internet-explorer"></a>Internet Explorer  
  これらの設定は、Windows Phone 8 および Windows Phone 8.1 の両方に適用されます。  
   
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**常に Do Not Track ヘッダーを送信する**|参照情報がサード パーティのサイトに送信されないようにします。|  
 |**イントラネット セキュリティ ゾーン**||  
@@ -146,7 +140,7 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
   
 ### <a name="cloud"></a>クラウド  
   
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**設定の同期**|デバイス間で設定を同期できるようにします。|  
 |**資格情報の同期**|デバイス間で資格情報を同期できるようにします。|  
@@ -155,7 +149,7 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
   
 ### <a name="security"></a>セキュリティ  
   
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**署名されていないファイルのインストール**|署名されていないファイルの読み込みを許可します。|  
 |**署名されていないアプリケーション**|署名されていないアプリの読み込みを許可します。|  
@@ -168,7 +162,7 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
 ### <a name="peak-synchronization"></a>ピーク時の同期  
  これらの設定は、Windows Phone 8 および Windows Phone 8.1 の両方に適用されます。  
   
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**ピーク時間を指定します。**|次の 2 つの設定によって使われる時間帯を指定します。|  
 |**ピーク時の同期頻度**|指定したピーク時間中にデバイスが同期する頻度を選びます。|  
@@ -177,7 +171,7 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
 ### <a name="roaming"></a>ローミング  
  これらの設定は、Windows Phone 8 および Windows Phone 8.1 の両方に適用されます。  
   
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**ローミング中のデバイス管理**|デバイスがローミングされているときに、Configuration Manager でデバイスを管理できるようにします。|  
 |**ローミング中のソフトウェアのダウンロード**|ローミング中にアプリケーションやソフトウェアをダウンロードできるようにします。|  
@@ -187,7 +181,7 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
 ### <a name="encryption"></a>暗号化  
  これらの設定は、Windows Phone 8 および Windows Phone 8.1 の両方に適用されます。  
   
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**メモリ カードの暗号化**|デバイスと共に使用するストレージ カードを必ず暗号化するようにします。|  
 |**デバイスのファイルの暗号化**|モバイル デバイス上のファイルを必ず暗号化するようにします。|  
@@ -199,7 +193,7 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
 ###  <a name="wireless-communications"></a>ワイヤレス通信  
  これらの設定は、Windows Phone 8 および Windows Phone 8.1 の両方に適用されます。  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**ワイヤレス ネットワーク接続**|デバイスの Wi-Fi 機能を有効または無効にします。|  
 |**Wi-Fi テザリング**|ユーザーが自分のデバイスをモバイル ホットスポットとして使用できるようにします。|  
@@ -208,19 +202,19 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
   
 ##### <a name="to-configure-a-wireless-network-connection"></a>ワイヤレス ネットワーク接続を構成するには  
   
-1.  **[モバイル デバイスのワイヤレス通信設定の構成]** ページで、 **[追加]**をクリックします。  
+1.  **[モバイル デバイスのワイヤレス通信設定の構成]** ページで、 **[追加]** をクリックします。  
   
 2.  **[ワイヤレス ネットワーク接続]** ダイアログ ボックスで、モバイル デバイスに対してプロビジョニングするワイヤレス接続に関する次の情報を指定します。  
   
 |設定|説明|  
 |-------------|----------------------|  
 |**ネットワーク名 (SSID)**||  
-|**ネットワーク接続**|**[インターネット]** または **[社内ネットワーク]**を選択します。|  
+|**ネットワーク接続**|**[インターネット]** または **[社内ネットワーク]** を選択します。|  
 |**認証**|ワイヤレス接続の認証方法を次の中から選択します。<br><br> - **Open**<br> - **Shared**<br> - **WPA**<br> - **WPA-PSK**<br> - **WPA2**<br> - **WPA2-PSK**|  
 |**データの暗号化**|この接続で使用する暗号化方法を選択します。 選択できる値は、選択した **認証** 方法によって異なります。<br><br> - **Disabled**<br> - **WEP**<br> - **TKIP**<br> - **AES**|  
 |**キーのインデックス**|**[データの暗号化]** を **[WEP]** に設定した場合に使用するキーのインデックスを **1** から **4**から選択します。|  
 |**このネットワークはインターネットに接続する**|ワイヤレス接続上のモバイル デバイスをインターネットに接続するためのプロキシ設定を指定する場合は、このオプションを選択します。|  
-|**プロキシ サーバーの設定**|必要に応じて、 **[HTTP]** 、 **[WAP]** 、および **[Sockets]**の **[サーバー]** と **[ポート]**の設定値を指定します。|  
+|**プロキシ サーバーの設定**|必要に応じて、 **[HTTP]** 、 **[WAP]** 、および **[Sockets]** の **[サーバー]** と **[ポート]** の設定値を指定します。|  
 |**802.1 X ネットワーク アクセスを有効にする**|EAP の種類を指定して接続をセキュリティで保護する場合は、このオプションを選択します。|  
 |**EAP の種類**|使用する EAP の種類を次の中から選択します。<br><br> - **PEAP**<br> - **スマート カードまたは証明書**|  
     
@@ -228,7 +222,7 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
 ###  <a name="certificates"></a>証明書  
  モバイル デバイスに証明書をインポートしてインストールできるようにします。  
   
- **[インポート]**をクリックして、次の値を指定します。  
+ **[インポート]** をクリックして、次の値を指定します。  
   
 -   **[証明書ファイル]** - **[参照]** をクリックし、インポートする証明書ファイル (拡張子 **.cer** ) を選択します。  
   
@@ -263,7 +257,7 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
 ### <a name="system-security"></a>システム セキュリティ  
  これらの設定は、Windows Phone 8 および Windows Phone 8.1 の両方に適用されます。  
   
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**ユーザー アカウント コントロール**|デバイスの Windows ユーザー アカウント制御を有効または無効にします。|  
 |**ネットワーク ファイアウォール**|Windows ファイアウォールを有効または無効にします。|  
@@ -277,7 +271,7 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
 ### <a name="windows-server-work-folders"></a>Windows Server の作業フォルダー  
  これらの設定は、Windows Phone 8 および Windows Phone 8.1 の両方に適用されます。  
   
-|設定|説明|  
+|設定|詳細|  
 |-------------|-------------|  
 |**作業フォルダーの URL**|ユーザーが自分のデバイスから接続できる Windows Server の作業フォルダーの場所を構成します。|  
   

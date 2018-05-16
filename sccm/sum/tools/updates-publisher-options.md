@@ -1,27 +1,21 @@
 ---
-title: "オプションを構成する"
+title: オプションを構成する
 titleSuffix: Configuration Manager
-description: "System Center Updates Publisher を使用するためのオプションを構成する"
-ms.custom: na
+description: System Center Updates Publisher を使用するためのオプションを構成する
 ms.date: 4/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: 4e620080-5400-45bb-87c2-fbdbc8aeacac
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 0080e8067c0689d4a681a135b16d62b4af4f0fb8
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 497ff025dafcdb135e466a18f2f6661ca0f21a00
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-options-for-updates-publisher"></a>Updates Publisher のオプションを構成する
 
@@ -110,7 +104,7 @@ Updates Publisher は、インターネットからソフトウェア カタロ�
 
 -   **[タイムスタンプ]:** 有効な場合、署名日時を示すタイムスタンプが署名する更新プログラムに追加されます。 証明書が有効なときに署名された更新プログラムは、その署名証明書の期限が切れた後も使用できます。 既定では、署名証明書の期限が切れた後は、ソフトウェア更新プログラムをデプロイできません。
 
--   **[Check for updates to subscribed catalogs]\(サブスクライズ済みのカタログを調べて更新プログラムを確認する):** Updates Publisher では、起動されるたびに、サブスクライブされているカタログで更新プログラムを確認できます。 カタログの更新が検出されると、**[更新プログラム ワークスペース]**の **[概要]** ウィンドウに **[最近のアラート]** として詳細が表示されます。
+-   **[Check for updates to subscribed catalogs]\(サブスクライズ済みのカタログを調べて更新プログラムを確認する):** Updates Publisher では、起動されるたびに、サブスクライブされているカタログで更新プログラムを確認できます。 カタログの更新が検出されると、**[更新プログラム ワークスペース]** の **[概要]** ウィンドウに **[最近のアラート]** として詳細が表示されます。
 
 -   **[証明書失効]:** 証明書失効のチェックを有効にするには、このオプションを選択します。
 
@@ -127,7 +121,7 @@ Updates Publisher は、インターネットからソフトウェア カタロ�
 Updates Publisher で新しい更新プログラムを検出すると、**[更新プログラムを利用可能]** ウィンドウが表示され、選択してインストールできます。 更新プログラムをインストールしない場合は、次回コンソールを開くときに提供されます。
 
 ## <a name="logging"></a>ログの記録
-Updates Publisher は Updates Publisher についての基本的な情報を   **&lt;*パス*&gt;\Windows\Temp\UpdatesPublisher.log** ログに記録します。
+Updates Publisher は、Updates Publisher についての基本的な情報を **&lt;*path*&gt;\Windows\Temp\UpdatesPublisher.log** ログに記録します。
 
 メモ帳または **CMTrace** を使用してログを表示します。 CMTrace は Configuration Manager のログ ファイル ツールで、Configuration Manager のソース メディアの **\SMSSetup\Tools** フォルダーにあります。
 

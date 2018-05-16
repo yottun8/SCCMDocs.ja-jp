@@ -1,26 +1,20 @@
 ---
-title: "ブート イメージのカスタマイズ "
+title: 'ブート イメージのカスタマイズ '
 titleSuffix: Configuration Manager
-description: "Configuration Manager または展開イメージのサービスと管理 (DISM) コマンドライン ツールを使用して、ブート イメージをカスタマイズするいくつかの方法について説明します。"
-ms.custom: na
+description: Configuration Manager または展開イメージのサービスと管理 (DISM) コマンドライン ツールを使用して、ブート イメージをカスタマイズするいくつかの方法について説明します。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
-caps.latest.revision: "15"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 184768e87406051508c8dcacfa63db5ff85c3732
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 3532e6db7b4ece1676c9b9f41f9336274ac3d117
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-boot-images-with-system-center-configuration-manager"></a>System Center Configuration Manager でのブート イメージのカスタマイズ
 
@@ -141,7 +135,7 @@ Configuration Manager の各バージョンが、Windows アセスメントお�
 
     4.  **[データ ソース]** ページで以下のオプションを指定し、**[次へ]** をクリックします。  
 
-        -   **[パス]** ボックスで、ブート イメージ ファイルのパスを指定します。 このパスは、UNC 形式の有効なネットワーク パスでなければなりません。 例:  **\\\\<***servername***>\\<***WinPEWAIK share***>\winpe.wim**.  
+        -   **[パス]** ボックスで、ブート イメージ ファイルのパスを指定します。 このパスは、UNC 形式の有効なネットワーク パスでなければなりません。 例:  **\\\\<***servername***>\\<***WinPEWAIK share***>\winpe.wim**  
 
         -   **[ブート イメージ]** ドロップダウン リストで、インポートするブート イメージを選択します。 WIM ファイルに複数のブート イメージが含まれている場合は、それぞれのイメージが一覧表示されます。  
 
@@ -165,7 +159,7 @@ Configuration Manager の各バージョンが、Windows アセスメントお�
 
     4.  コマンド プロンプトで **wbemtest** と入力して、Windows Management Instrumentation テストを開きます。  
 
-    5.  **[名前空間]** に **\\\\<***SMS プロバイダー コンピューター***>\root\sms\site_<***sitecode***>** と入力し、**[接続]** をクリックします。  
+    5.  **[名前空間]** に「**\\\\<***SMS プロバイダー コンピューター***>\root\sms\site_<***sitecode***>**」と入力し、**[接続]** をクリックします。  
 
     6.  **[インスタンスを開く]** をクリックし、**sms_bootimagepackage.packageID="<packageID\>"** と入力して、**[OK]** をクリックします。 パッケージ ID には、手順 3 で確認した ID を入力してください。  
 
@@ -257,7 +251,7 @@ Configuration Manager の各バージョンが、Windows アセスメントお�
 
     4.  **[データ ソース]** ページで以下のオプションを指定し、**[次へ]** をクリックします。  
 
-        -   **[パス]** ボックスで、ブート イメージ ファイルのパスを指定します。 このパスは、UNC 形式の有効なネットワーク パスでなければなりません。 例:  **\\\\<***servername***>\\<***WinPEWAIK share***>\winpe.wim**.  
+        -   **[パス]** ボックスで、ブート イメージ ファイルのパスを指定します。 このパスは、UNC 形式の有効なネットワーク パスでなければなりません。 例:  **\\\\<***servername***>\\<***WinPEWAIK share***>\winpe.wim**  
 
         -   **[ブート イメージ]** ドロップダウン リストで、インポートするブート イメージを選択します。 WIM ファイルに複数のブート イメージが含まれている場合は、それぞれのイメージが一覧表示されます。  
 
@@ -281,7 +275,7 @@ Configuration Manager の各バージョンが、Windows アセスメントお�
 
     4.  コマンド プロンプトで **wbemtest** と入力して、Windows Management Instrumentation テストを開きます。  
 
-    5.  **[名前空間]** に **\\\\<***SMS プロバイダー コンピューター***>\root\sms\site_<***sitecode***>** と入力し、**[接続]** をクリックします。  
+    5.  **[名前空間]** に「**\\\\<***SMS プロバイダー コンピューター***>\root\sms\site_<***sitecode***>**」と入力し、**[接続]** をクリックします。  
 
     6.  **[インスタンスを開く]** をクリックし、**sms_bootimagepackage.packageID="<packageID\>"** と入力して、**[OK]** をクリックします。 パッケージ ID には、手順 3 で確認した ID を入力してください。  
 

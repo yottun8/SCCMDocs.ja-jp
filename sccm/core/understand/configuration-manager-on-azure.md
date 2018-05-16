@@ -1,24 +1,19 @@
 ---
-title: "Azure での Configuration Manager"
-description: "Azure 環境での Configuration Manager の使用に関する情報。"
-ms.custom: na
+title: Azure での Configuration Manager
+description: Azure 環境での Configuration Manager の使用に関する情報。
 ms.date: 03/27/2017
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
-caps.latest.revision: "2"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: d73ab50e5fc9472a977951f6c2d5bbd3fd408c39
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 2b952e76fc21e3190430cdf34cb4a264918fd199
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure の Configuration Manager - よく寄せられる質問
 *適用対象: System Center Configuration Manager (Current Branch)*
@@ -159,23 +154,23 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 **基本:** http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Azure Virtual Machine の種類:**
- - Azure Machine のサイズ: https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
- - VM の料金: http://azure.microsoft.com/pricing/details/virtual-machines/  
- - Storage の料金: http://azure.microsoft.com/pricing/details/storage/
+ - Azure マシンのサイズ: https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
+ - VM 価格設定: http://azure.microsoft.com/pricing/details/virtual-machines/  
+ - ストレージ価格設定: http://azure.microsoft.com/pricing/details/storage/
 
 **ディスク パフォーマンスに関する考慮事項:**    
  - Premium ディスクの概要: http://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
  - Premium ディスクの詳細情報: http://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
- - Storage の最大サイズとパフォーマンス ターゲットに関する便利なグラフ コレクション: https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
- - Premium Storage のしくみに関するその他の概要とかなり専門的ないくつかの役立つデータ: http://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
+ - ストレージの最大サイズとパフォーマンス ターゲットの表を集めた便利なページ: https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
+ - Premium Storage のしくみに関するその他の情報とかなり専門的ですが役に立つデータ:  http://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
 
 **可用性:**
- - Azure IaaS の稼働時間 SLA: https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
+ - Azure IaaS アップタイム SLA: https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
  - 可用性セットの説明: https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
 
 **接続:**
  - ExpressRoute と Azure VPN: http://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
- - ExpressRoute の料金: http://azure.microsoft.com/pricing/details/expressroute/
- - ExpressRoute の詳細: http://azure.microsoft.com/documentation/articles/expressroute-introduction/
+ - Express Route の価格設定: http://azure.microsoft.com/pricing/details/expressroute/
+ - Express Route の詳細: http://azure.microsoft.com/documentation/articles/expressroute-introduction/
 
  

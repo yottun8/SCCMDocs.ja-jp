@@ -2,25 +2,19 @@
 title: Azure サービスの構成
 titleSuffix: Configuration Manager
 description: Configuration Manager 環境を、クラウド管理、Upgrade Readiness、ビジネス向け Microsoft ストア、Operations Management Suite 用の Azure サービスと接続します。
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
-caps.latest.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b86c73f3f5662a00ca0b7f80b0c785c37aff0b1a
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 7ff953d658c54c2cebbbfd29a6bba83fe65cc08e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configuration Manager と共に使用するように Azure サービスを構成する
 
@@ -154,7 +148,7 @@ Azure サービス ウィザードのサーバー アプリのダイアログま
 - **クライアント ID**
 - **秘密鍵**
 - **秘密鍵の有効期限**: カレンダーから未来の日付を選択します。 
-- **アプリ ID URI**: この値は、Azure AD テナント内で一意である必要があります。 サービスへのアクセスを要求するために Configuration Manager クライアントで使用されるアクセス トークンにあります。 既定では、この値は https://ConfigMgrService です。  
+- **アプリ ID URI**: この値は、Azure AD テナント内で一意である必要があります。 サービスへのアクセスを要求するために Configuration Manager クライアントで使用されるアクセス トークンにあります。 既定値は https://ConfigMgrService です。  
 
 情報を入力したら、**[確認]** をクリックします。 次に **[OK]** をクリックして、アプリのインポート ダイアログを閉じます。 この操作で、Azure サービス ウィザードの[アプリ ページ](#azure-app-properties)、または[サーバー アプリのダイアログ](#server-app-dialog)に戻ります。
 
@@ -162,8 +156,8 @@ Azure サービス ウィザードのサーバー アプリのダイアログま
 
 サーバー アプリのダイアログで **[作成]** をクリックすると、サーバー アプリケーションの作成ダイアログが開きます。 このページでは、Azure AD での Web アプリの作成が自動化されます。 次の情報を指定します。
 - **アプリケーション名**: アプリのフレンドリ名。
-- **ホームページ URL**: この値は Configuration Manager では使用されませんが、Azure AD で必要になります。 既定では、この値は https://ConfigMgrService です。  
-- **アプリ ID URI**: この値は、Azure AD テナント内で一意である必要があります。 サービスへのアクセスを要求するために Configuration Manager クライアントで使用されるアクセス トークンにあります。 既定では、この値は https://ConfigMgrService です。  
+- **ホームページ URL**: この値は Configuration Manager では使用されませんが、Azure AD で必要になります。 既定値は https://ConfigMgrService です。  
+- **アプリ ID URI**: この値は、Azure AD テナント内で一意である必要があります。 サービスへのアクセスを要求するために Configuration Manager クライアントで使用されるアクセス トークンにあります。 既定値は https://ConfigMgrService です。  
 - **秘密鍵の有効期間**: ドロップダウン リストをクリックして、**[1 年]** または **[2 年]** を選択します。 1 年が既定値です。
 
 **[サインイン]** をクリックして、管理者ユーザーとして Azure への認証を行います。 これらの資格情報は Configuration Manager では保存されません。 この管理者には Configuration Manager のアクセス許可は必要ありません。また、Azure サービス ウィザードを実行するアカウントと同じものである必要もありません。 Azure への認証が正常に行われると、ページに参照用の **Azure AD テナント名**が表示されます。 
@@ -201,7 +195,7 @@ Azure サービス ウィザードのアプリ ページで **[ネイティブ �
 
 クライアント アプリのダイアログで **[作成]** をクリックすると、クライアント アプリケーションの作成ダイアログが開きます。 このページでは、Azure AD のネイティブの作成が自動化されます。 次の情報を指定します。
 - **アプリケーション名**: アプリのフレンドリ名。
-- **応答 URL**: この値は Configuration Manager では使用されませんが、Azure AD で必要になります。 既定では、この値は https://ConfigMgrService です。 
+- **応答 URL**: この値は Configuration Manager では使用されませんが、Azure AD で必要になります。 既定値は https://ConfigMgrService です。 
 
 **[サインイン]** をクリックして、管理者ユーザーとして Azure への認証を行います。 これらの資格情報は Configuration Manager では保存されません。 この管理者には Configuration Manager のアクセス許可は必要ありません。また、Azure サービス ウィザードを実行するアカウントと同じものである必要もありません。 Azure への認証が正常に行われると、ページに参照用の **Azure AD テナント名**が表示されます。 
 

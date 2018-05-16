@@ -1,41 +1,35 @@
 ---
-title: "サービスとしての Configuration Manager とサービスとしての Windows の基本情報"
+title: サービスとしての Windows の基礎
 titleSuffix: Configuration Manager
-description: "サービスとしての Windows をサポートするためのサービスとしての Configuration Manager の導入に関する基本情報について説明します。"
-ms.custom: na
-ms.date: 01/04/2018
+description: サービスとしての Windows をサポートするために Configuration Manager の Current Branch を導入する場合の基本情報について説明します。
+ms.date: 04/30/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: c8534a1e-57b8-4688-b6e6-299d82cfcec9
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 8ac078fa33e24bd1cc10ab04d6120bf5759461ff
-ms.sourcegitcommit: 1378532fac2620ddcfd31061982f344a290c2e67
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 6ca2b72cb3533c3b857b3edbb4e37ca846d4cfa4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keep-windows-10-up-to-date-in-the-enterprise-using-configuration-manager"></a>Configuration Manager を使用して企業の Windows 10 を最新の状態に保つ
 
-*適用対象: System Center Configuration Manager (Current Branch)、Windows 10 (半期チャネル)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager では、Windows 10 の機能更新プログラムを包括的に制御できます。 サービス モデルとして Windows を完全に導入するには、サービス モデルとして Configuration Manager を導入する必要もあります。 Windows 10 を最新の状態に保つには、最適なエクスペリエンスを実現するために Configuration Manager を最新の状態に保つ必要があります。 Windows 10 の魅力的な新しい企業の機能を最大限に活用するには、新しいバージョンの Configuration Manager が必要です。 このコンテンツは、サービスとしての Configuration Manager を導入するために必要な主な記事のランディング ページとして提供されています。 サービスとしての Configuration Manager を準備してからサービスとしての Windows に進みます。
+System Center Configuration Manager では、Windows 10 の機能更新プログラムを包括的に制御できます。 サービス モデルとして Windows を完全に導入するには、Configuration Manager の Current Branch モデルを導入する必要もあります。 Windows 10 を最新の状態に保つには、最適なエクスペリエンスを実現するために Configuration Manager を最新の状態に保つ必要があります。 Windows 10 の魅力的な新しい企業の機能を最大限に活用するには、新しいバージョンの Configuration Manager が必要です。 このコンテンツは、Configuration Manager の Current Branch を導入するために必要な主な記事のランディング ページとして提供されています。 Configuration Manager の Current Branch を準備してからサービスとしての Windows に進みます。
 
-## <a name="key-topics-about-adopting-configuration-manager-as-a-service"></a>サービスとしての Configuration Manager の導入に関する主なトピック
+## <a name="key-topics-about-adopting-configuration-manager-current-branch"></a>Configuration Manager の Current Branch の導入に関する主なトピック
 
 | トピック        | 説明          | 
 | ------------- |-------------|
-|[サービスとしての Configuration Manager の概要](/sccm/core/plan-design/changes/whats-new-incremental-versions)|Configuration Manager (Current Branch) の新しいサービス モデルの要点を簡単に説明します。|
+|[Configuration Manager Current Branch の概要](/sccm/core/plan-design/changes/whats-new-incremental-versions)|Configuration Manager (Current Branch) の新しいサービス モデルの要点を簡単に説明します。|
 |[サポート ライフサイクル](/sccm/core/servers/manage/current-branch-versions-supported)|新しいサポートおよびサービス モデルについて説明します。|
 |[削除された項目と非推奨の項目](/sccm//core/plan-design/changes/deprecated/removed-and-deprecated)|Configuration Manager の使用に影響する可能性のある将来の変更について早期に注意するものです。|
-|[サービスとしての Configuration Manager](/sccm/core/servers/manage/updates)|Configuration Manager に機能更新プログラムを適用するための簡単なコンソール内の方式について説明します。|
+|[Configuration Manager Current Branch の更新](/sccm/core/servers/manage/updates)|Configuration Manager に機能更新プログラムを適用するための簡単なコンソール内の方式について説明します。|
 |[利用可能な更新プログラムの取得](/sccm/core/servers/manage/install-in-console-updates#get-available-updates)|新しい Configuration Manager の機能更新プログラムを取得するために利用できる 2 つのモードについて説明します。|
 |[更新プログラムのチェックリスト](/sccm/core/servers/manage/install-in-console-updates#bkmk_beforeinstall)|更新プログラムのバージョン固有のチェックリスト (適用可能な場合) を提供します。| 
 |[新しい Configuration Manager の機能更新プログラムのインストール](/sccm/core/servers/manage/install-in-console-updates#bkmk_install)|機能更新プログラムの簡単なインストール手順について説明します。|
@@ -47,6 +41,9 @@ System Center Configuration Manager では、Windows 10 の機能更新プログ
 | トピック        | 説明          | 
 | ------------- |-------------|
 |[サービスとしての Windows の管理](/sccm/osd/deploy-use/manage-windows-as-a-service)|サービス プランを使用して Windows 10 の機能更新プログラムを展開する方法について説明します。|
+|[タスク シーケンスによる Windows 10 のアップグレード](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)|追加の推奨事項で Windows 10 をアップグレードするためのタスク シーケンスの作成に関する詳細。|
+|[段階的展開](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|段階的展開は、複数のコレクションでのタスク シーケンスの調整および順序付けされたロールアウトを自動化します。|  
+|[Upgrade Readiness との統合](/sccm/core/clients/manage/upgrade/upgrade-analytics)|Upgrade Readiness を使用すると、Windows 10 にアップグレードするため、環境内のデバイスの対応性を評価および分析することができます。| 
 |[Windows Update for Business 統合 (オプション)](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)|Configuration Manager を使用して、Windows Update for Business (WUfB) ポリシーを定義して展開する方法について説明します。|
 |[Microsoft Intune と Windows Update for Business での共同管理の使用 (オプション)](/sccm/core/clients/manage/co-management-overview)|共同管理の概要を示します。| 
 

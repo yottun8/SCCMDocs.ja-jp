@@ -1,26 +1,21 @@
 ---
-title: "Technical Preview 1604 の機能"
+title: Technical Preview 1604 の機能
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1604 で使用できる機能について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の Technical Preview バージョン 1604 で使用できる機能について説明します。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 684a5559-9e6e-469b-86ae-e768e9f0c9ac
-caps.latest.revision: "8"
-author: erikje
-ms.author: erikje
-manager: angrobe
+author: aczechowski
 robots: noindex,nofollow
-ms.openlocfilehash: a6a3bb10b751768cd0e3987b30c80b5953e8eda5
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 113e22c33e9e8545c382373f3ba093dba3969939
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1604 の機能
 
@@ -63,11 +58,11 @@ ms.lasthandoff: 12/01/2017
 
 3.  ビジネス向け Windows ストアで、ストア管理ツールとして Configuration Manager を構成します。  
 
-    1.  [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/en-us/managementtools) を開き、サインインを求められたらサインインします。  
+    1.  [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/en-us/managementtools) を開き、求められたらサインインします。  
 
     2.  要求された場合は、使用条件に同意します。  
 
-    3.  **[管理ツール]** で、**[Add a management tool]**\(管理ツールを追加) をクリックします。  
+    3.  **[管理ツール]** で、**[Add a management tool]** \(管理ツールを追加) をクリックします。  
 
     4.  **[Search for the tool by name]** (名前でツールを検索) で、先ほど AAD で作成したアプリケーションの名前を入力して、**[追加]** クリックします。  
 
@@ -89,7 +84,7 @@ ms.lasthandoff: 12/01/2017
 
 1.  Configuration Manager コンソールの **[ソフトウェア ライブラリ]** ワークスペースで **[アプリケーション管理]** を展開し、**[ストア アプリのライセンス情報]** をクリックします。  
 
-2.  **[購入されたビジネス向け Windows ストア]** のリストにストアから同期されたアプリが一覧表示されます。 展開するアプリを選び、**[ホーム]** タブの **[作成]** グループで、**[アプリケーションの作成]**をクリックします。  
+2.  **[購入されたビジネス向け Windows ストア]** のリストにストアから同期されたアプリが一覧表示されます。 展開するアプリを選び、**[ホーム]** タブの **[作成]** グループで、**[アプリケーションの作成]** をクリックします。  
 
 3.  ビジネス向け Windows ストアのアプリを含む Configuration Manager アプリケーションが作成されます。 他の Configuration Manager のアプリケーションと同様に、このアプリケーションを展開して監視できます。  
 
@@ -103,7 +98,7 @@ ms.lasthandoff: 12/01/2017
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス] > [概要] > [デバイス コレクション]** に移動します。  
 
-2.  **[ホーム]** タブの **[コレクション]** グループで、 **[クライアント通知]**をクリックして、 **[次のソフトウェアの更新ポイントに切り替える]**をクリックします。  
+2.  **[ホーム]** タブの **[コレクション]** グループで、 **[クライアント通知]** をクリックして、 **[次のソフトウェアの更新ポイントに切り替える]** をクリックします。  
 
 > [!NOTE]  
 >  このオプションは、複数のソフトウェア更新ポイントを持つサイトでのみ使用できます。  
@@ -165,9 +160,9 @@ Passport を使用すると、パスワードの代わりにユーザー ジェ�
 
 1.  Configuration Manager コンソールで、**[管理]**  >  **[概要]**  >  **[クライアント設定]** に移動し、**[オンプレミスの正常性構成証明書サービスを使用]** を **[はい]** に設定します。  
 
-2.  **[オンプレミスの正常性構成証明書サービスの URL]**を指定し、 **[OK]**をクリックします。  
+2.  **[オンプレミスの正常性構成証明書サービスの URL]** を指定し、**[OK]** をクリックします。  
 
 これを試すには、クライアント エージェント設定を使用して、オンプレミスの正常性構成証明書サービスを構成します。  
 
 ##  <a name="BKMK_Smart"></a> Android デバイスの SmartLock 設定  
- 新しい設定の **[Allow SmartLock and other trust agents]**\(SmartLock およびその他の信頼エージェントを許可) が **[Android and Samsung KNOX]**\(Android および Samsung KNOX) 構成項目に追加され、互換性のある Android デバイスで SmartLock 機能を制御することができます。 信頼エージェントとも呼ばれるこの電話機能では、デバイスが特定の Bluetooth デバイスに接続したときや、NFC タグの近くにある場合など、信頼できる場所にある場合、デバイスのロック画面のパスワードを無効化またはバイパスすることができます。 この設定を使用して、エンドユーザーが SmartLock を構成することを禁止できます。  
+ 新しい設定の **[Allow SmartLock and other trust agents]** \(SmartLock およびその他の信頼エージェントを許可) が **[Android and Samsung KNOX]** \(Android および Samsung KNOX) 構成項目に追加され、互換性のある Android デバイスで SmartLock 機能を制御することができます。 信頼エージェントとも呼ばれるこの電話機能では、デバイスが特定の Bluetooth デバイスに接続したときや、NFC タグの近くにある場合など、信頼できる場所にある場合、デバイスのロック画面のパスワードを無効化またはバイパスすることができます。 この設定を使用して、エンドユーザーが SmartLock を構成することを禁止できます。  

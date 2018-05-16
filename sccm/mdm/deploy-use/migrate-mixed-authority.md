@@ -1,21 +1,20 @@
 ---
-title: "特定のユーザー (混在 MDM 機関) の MDM 機関を変更する"
+title: 特定のユーザー (混在 MDM 機関) の MDM 機関を変更する
 titleSuffix: Configuration Manager
-description: "一部のユーザーに対し、MDM 機関をハイブリッド MDM から Intune スタンドアロンに変更する方法について説明します。"
-keywords: 
-author: dougeby
+description: 一部のユーザーに対し、MDM 機関をハイブリッド MDM から Intune スタンドアロンに変更する方法について説明します。
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.date: 12/05/2017
-ms.topic: article
-ms.prod: configmgr-hybrid
-ms.service: 
-ms.technology: 
+ms.date: 04/30/2018
+ms.topic: conceptual
+ms.prod: configuration-manager
+ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
-ms.openlocfilehash: 59fb06d14002f781e0448a64bb0064b4add2f087
-ms.sourcegitcommit: ac9268e31440ffe91b133c2ba8405d885248d404
+ms.openlocfilehash: 46fb1333c58f3010acde4d064044a124050d211a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>特定のユーザー (混在 MDM 機関) の MDM 機関を変更する 
 
@@ -105,45 +104,40 @@ Intune スタンドアロンが期待どおりに機能していることを確�
 
 
 ### <a name="parameters"></a>パラメータ
-``` powershell
--Credential <PSCredential>
-Credential for Intune Tenant Admin or Service Admin account to use when switching device management authorities. The user is prompted for credentials if the parameter is not specified.
+#### `-Credential <PSCredential>`
+デバイスの管理機関を切り替えるときに使用される Azure AD ユーザー アカウントの PowerShell 資格情報オブジェクト。 パラメーターが指定されていない場合、ユーザーは資格情報を求められます。 このユーザー アカウントのディレクトリ ロールは、**グローバル管理者**、または **Intuen 管理者**の管理者ロールのある**制限付き管理者**である必要があります。
 
--DeviceIds <Guid[]>
-The ids of the MDM devices that need to have their management authority switched. The device ids are unique identifiers for the devices displayed by the Configuration Manager console.
+#### `-DeviceIds <Guid[]>`
+管理機関を切り替える必要がある MDM デバイスの ID。 デバイス ID は、Configuration Manager コンソールで表示されるデバイスの一意識別子です。
 
--Force [<SwitchParameter>]
-Specify parameter to disable the Should Continue prompt.<br>
+#### `-Force [<SwitchParameter>]`
+続行を求めるプロンプトを無効にするパラメーターを指定します。<br>
  
--LogFilePath <string>
-Path to log file location.
+#### `-LogFilePath <string>`
+ログ ファイルの場所へのパス。
  
--LoggingLevel <SourceLevels>
-The log level used to determine the type of logs that need to be written to the log file.
+#### `-LoggingLevel <SourceLevels>`
+ログ ファイルに書き込む必要があるログの種類を決定するために使用されるログ レベル。
  
-The following are the possible values for LoggingLevel:
+LoggingLevel に指定できる値は次のとおりです。
 
   - ActivityTracing
-  - All
-  - Critical
-  - Error
-  - Information
-  - Off
-  - Verbose
-  - Warning
+  - すべて
+  - 重要
+  - エラー
+  - 情報
+  - オフ
+  - 詳細
+  - 警告
  
--Confirm [<SwitchParameter>]
-Prompts you for confirmation before executing the command.
+#### `-Confirm [<SwitchParameter>]`
+コマンドを実行する前に確認メッセージを表示します。
  
--WhatIf [<SwitchParameter>]
-Describes what would happen if you executed the command without actually executing the command.
+#### `-WhatIf [<SwitchParameter>]`
+実際にはコマンドを実行せずに、コマンドを実行した場合に何が起こるかを説明しています。
  
-<CommonParameters>
-This cmdlet supports the common parameters: Verbose, Debug,
-ErrorAction, ErrorVariable, WarningAction, WarningVariable,
-OutBuffer, PipelineVariable, and OutVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-```
+#### `<CommonParameters>`
+このコマンドレットは共通のパラメーター (Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer、PipelineVariable、OutVariable) をサポートしています。 詳細については、「[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)」を参照してください。
 
 ### <a name="example-1"></a>例 1
 
@@ -162,13 +156,13 @@ Description
  
 Successfully switched the management authority of the device from Configuration Manager to Intune.
 ```
+
 ### <a name="remarks"></a>備考
-``` powershell
-To see the examples, type: "get-help Switch-MdmDeviceAuthority -examples".
-For more information, type: "get-help Switch-MdmDeviceAuthority -detailed".
-For technical information, type: "get-help Switch-MdmDeviceAuthority -full".
-For online help, type: "get-help Switch-MdmDeviceAuthority -online".
-```
+- 例を表示するには、「`get-help Switch-MdmDeviceAuthority -examples`」と入力します。  
+- 詳細については、「`get-help Switch-MdmDeviceAuthority -detailed`」と入力します。  
+- 技術情報については、「`get-help Switch-MdmDeviceAuthority -full`」と入力します。  
+- オンライン ヘルプについては、「`get-help Switch-MdmDeviceAuthority -online`」と入力します。   
+
 
 ## <a name="next-steps"></a>次のステップ
 ユーザーを移行して、Intune の機能をテストしたら、Configuration Manager から Intune にご利用の Intune テナントの [MDM 機関を変更](migrate-change-mdm-authority.md)する準備ができているかどうかを検討します。 

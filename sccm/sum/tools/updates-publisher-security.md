@@ -1,27 +1,21 @@
 ---
-title: "証明書とセキュリティ"
+title: 証明書とセキュリティ
 titleSuffix: Configuration Manager
-description: "System Center Updates Publisher 用の証明書とセキュリティを管理する"
-ms.custom: na
+description: System Center Updates Publisher 用の証明書とセキュリティを管理する
 ms.date: 4/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 9d8812da3588b60f388288cef6f9a093731d873f
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: b3ce22747cddc1371fb38718cc97b70cda8afcb1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>Updates Publisher 用の証明書とセキュリティを管理する
 
@@ -41,7 +35,7 @@ ms.lasthandoff: 12/04/2017
 
 3.  **[別のコンピューター]** を選択し、更新サーバーの名前を入力するか、**[参照]** をクリックして更新サーバーのコンピューターを検索し、**[完了]** をクリックします。**[閉じる]** をクリックしてから **[OK]** をクリックします。
 
-4.  **[証明書 (*更新サーバー名*)**] を展開し、**[WSUS]** を展開してから **[証明書]** をクリックします。
+4.  **[証明書 (*更新サーバー名*)]**、**[WSUS]** の順に展開して、**[証明書]** をクリックします。
 
 5.  結果ウィンドウで目的の証明書を右クリックして、**[All Tasks]\(すべてのタスク)**、**[エクスポート]** の順にクリックします。
 
@@ -51,7 +45,7 @@ ms.lasthandoff: 12/04/2017
 
 8.  **WSUS Publishers Self-signed** などの自己署名証明書を使用する場合は、**[信頼されたルート証明機関]** を右クリックし、**[All Tasks]\(すべてのタスク)**、**[インポート]** の順にクリックします。 手順 6 でエクスポートされたファイルを使用して証明書のインポート ウィザードを完了します。
 
-9.  **[証明書 (*更新のサーバー名*) * *] を右クリックし、**[別のコンピューターに接続]** をクリックしてから Updates Publisher コンピューターのコンピューター名を入力し、**[OK]** をクリックします。
+9.  **[証明書 (*更新サーバー名*)]** を右クリックし、**[別のコンピューターに接続]** をクリックします。次に、Updates Publisher コンピューターのコンピューター名を入力して、**[OK]** をクリックします。
 
 10. Updates Publisher が更新サーバーからリモートの場合は、手順 7 から 9 を繰り返して、Updates Publisher コンピューター上の証明書ストアに証明書をインポートします。
 
@@ -71,7 +65,7 @@ ms.lasthandoff: 12/04/2017
 
 3.  **[別のコンピューター]** を選択し、更新サーバーの名前を入力するか、**[参照]** をクリックして更新サーバーのコンピューターを検索し、**[完了]** をクリックします。**[閉じる]** をクリックしてから **[OK]** をクリックします。
 
-4.  **[証明書 (*更新サーバー名*)**] を展開し、**[WSUS]** を展開してから **[証明書]** をクリックします。
+4.  **[証明書 (*更新サーバー名*)]**、**[WSUS]** の順に展開して、**[証明書]** をクリックします。
 
 5.  結果ウィンドウで証明書を右クリックして、**[All Tasks]\(すべてのタスク)**、**[エクスポート]** の順にクリックします。 既定の設定を使用して**証明書のエクスポート ウィザード**を完了し、ウィザードで指定した場所と名前でエクスポート ファイルを作成します。
 
@@ -82,7 +76,7 @@ ms.lasthandoff: 12/04/2017
     -   証明機関 (CA) 発行の証明書の場合: **[信頼された発行元]** 証明書ストアに証明書を追加します。
 
     > [!NOTE]
-    > また、WUA では、ローカル コンピューターで **[イントラネットの Microsoft 更新サービスの場所からの署名済みコンテンツを許可する]** グループ ポリシー設定が有効になっているかどうかも確認します。 Updates Publisher で作成および発行された更新プログラムをスキャンするには、WUA でこのポリシー設定が有効になっている必要があります。 このグループ ポリシー設定を有効にする方法の詳細については、「クライアント コンピュータ上でのグループ ポリシーの構成方法」 (https://technet.microsoft.com/library/bb530967.aspx(d=robot)) を参照してください。
+    > また、WUA では、ローカル コンピューターで **[イントラネットの Microsoft 更新サービスの場所からの署名済みコンテンツを許可する]** グループ ポリシー設定が有効になっているかどうかも確認します。 Updates Publisher で作成および発行された更新プログラムをスキャンするには、WUA でこのポリシー設定が有効になっている必要があります。 このグループ ポリシー設定を有効にする方法の詳細については、[クライアント コンピューター上でのグループ ポリシーの構成方法] (https://technet.microsoft.com/library/bb530967.aspx(d=robot) を参照してください。
 
 
 

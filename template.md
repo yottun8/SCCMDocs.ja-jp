@@ -1,20 +1,25 @@
 ---
-title: "記事のタイトル | Microsoft Docs"
-description: 
-keywords: 
-author: GITHUB USERNAME
-manager: ALIAS
-ms.date: 10/06/2016
-ms.topic: article
-ms.prod: 
-ms.service: 
-ms.technology: 
-ms.assetid: GET ONE FROM guidgenerator.com
-ms.openlocfilehash: a218011ded1ff3acc1dbd24471119b701f2cce23
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+title:
+- 35 文字以下の記事のタイトル
+titleSuffix: Configuration Manager
+description: ''
+ms.date: mm/dd/yyyy
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+ms.assetid:
+- GET ONE FROM guidgenerator.com
+author:
+- GITHUB USERNAME
+ms.author:
+- ALIAS
+manager:
+- ALIAS
+ms.openlocfilehash: bb0a23b8870d31136967b1bc594580bcc2cd0cd9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="metadata-and-markdown-template"></a>メタデータと Markdown テンプレート
 
@@ -32,7 +37,7 @@ ms.lasthandoff: 08/07/2017
 - 値にコロンが含まれていると (例: タイトル) 、メタデータのパーサーが正常に機能しません。 コロンのある場所には、&#58 の HTML エンコードを使用します (例: "タイトル: Azure Rights Management&#58; 基本 | Azure RMS")。
 - **タイトル**: このタイトルが検索エンジンの結果に表示されます。 タイトルは、末尾にパイプ (|) を付け、その後にサービス名を付ける必要があります (例: 上の方をご覧ください)。 タイトルと H1 見出しを一致させる必要はありません (おそらく、一致させないほうがよいでしょう)。 だいたい 65 文字まで ("| サービス名" を含む) にします。
 - **作成者**、**管理者**、**レビュー担当者**: 作成者フィールドには、作成者のエイリアスではなく、 **Github のユーザー名**を含める必要があります。  反対に、"管理者" と "レビュー担当者" フィールドにはエイリアスを含める必要があります。 ms.reviewer は記事またはサービスに関連付けられている PM の名前を指定します。
-- **ms.assetid**: これは CAPS の記事の GUID です。 新しいマークダウン ファイルを作成する場合は、[https://www.guidgenerator.com](https://www.guidgenerator.com) からGUID を取得します。
+- **ms.assetid**: これは CAPS の記事の GUID です。 新しいマークダウン ファイルを作成する場合は、[https://www.guidgenerator.com](https://www.guidgenerator.com) から GUID を取得します。
 - **ms.prod**、**ms.service**、**ms.technology**、**ms.devlang**、**ms.topic**、**ms.tgt_pltfrm**: これらの要素に使用できる値は[こちら](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default)で確認できます。
 
 ## <a name="basic-markdown-and-gfm"></a>基本的な Markdown と GFM
@@ -65,7 +70,7 @@ ms.lasthandoff: 08/07/2017
 
 
 
-## <a name="links"></a>リンク
+## <a name="links"></a>Links
 
 同じリポジトリ内のマークダウン ファイルにリンクするには、[相対リンク](https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2)を使用します。
 
@@ -95,7 +100,7 @@ ms.lasthandoff: 08/07/2017
 1. が
 1. 順序指定済み
 1. リスト
-1. です  
+1. リスト  
 
 
 #### <a name="ordered-list-with-an-embedded-list"></a>埋め込みリスト付きの順序指定済みリスト
@@ -107,26 +112,26 @@ ms.lasthandoff: 08/07/2017
     1. Miss Scarlett
     1. Plum 教授
 1. 順序指定済み
-1. リストです
+1. 一覧
 
 
 ### <a name="unordered-lists"></a>順序指定されていないリスト
 
-- これ
+- これが
 - が
-- 箇条書き
-- リスト
-- です
+- a
+- 埋め込み
+- 一覧
 
 
 ##### <a name="unordered-list-with-an-embedded-lists"></a>埋め込みリスト付きの順序指定されていないリスト
 
 - これが
 - 埋め込み
-- リスト付きの
+- 一覧
     - Mrs. Peacock
     - Mr. Green
-- 順序指定  
+- 次の値を含む  
 - されていない
     1. Mustard 大佐
     1. Mrs. White

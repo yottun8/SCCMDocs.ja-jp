@@ -1,25 +1,20 @@
 ---
-title: "Lookout 統合のトラブルシューティング"
+title: Lookout 統合のトラブルシューティング
 titleSuffix: Configuration Manager
-description: "このトピックでは、Lookout 統合でよく発生する問題のトラブルシューティングについて説明します。"
-ms.custom: na
+description: このトピックでは、Lookout 統合でよく発生する問題のトラブルシューティングについて説明します。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e36b98c7-d0f4-4dd6-bac3-6a6c4b4bf841
-caps.latest.revision: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 244d32e98ad863f6c9ea1747b4f786c3a1279fc0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: ee978543248e70182e12a3d6234cfd12be80dc98
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>Intune による Lookout 統合のトラブルシューティング
 
@@ -35,7 +30,7 @@ Lookout サポートには次の方法で連絡することができます。
 
 * 電子メール: enterprisesupport@lookout.com
 * [MTP コンソール](http://aad.lookout.com)にログインし、**[サポート]** モジュールに移動します。
-* https://enterprise.support.lookout.com/hc/requests に移動して、サポートを要求します。
+* https://enterprise.support.lookout.com/hc/requests に移動し、サポートを依頼します。
 
 ### <a name="unable-to-sign-in"></a>サインインできない
 Azure AD グローバル管理者ユーザーが初期の Lookout セットアップを受け入れていない場合、次のエラーが表示される可能性があります。

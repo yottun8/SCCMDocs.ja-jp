@@ -1,26 +1,20 @@
 ---
-title: "階層のメンテナンス ツール"
+title: 階層のメンテナンス ツール
 titleSuffix: Configuration Manager
-description: "階層のメンテナンス メールでできることとそれを利用する理由について説明します。 コマンド ライン オプションの参照が含まれています。"
-ms.custom: na
+description: 階層のメンテナンス メールでできることとそれを利用する理由について説明します。 コマンド ライン オプションの参照が含まれています。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cead6825-6113-4ba5-a381-ac3598dfee86
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 02bd5bfe0fc4ccc976d95b944bd51e9f0a276db0
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4dd1bf9b4085b6e1591d5841bfc307398505f5d1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hierarchy-maintenance-tool-preinstexe-for-system-center-configuration-manager"></a>System Center Configuration Manager の階層のメンテナンス ツール (Preinst.exe)
 
@@ -47,14 +41,14 @@ ms.lasthandoff: 12/04/2017
 
 階層のメンテナンス ツールの実行時には、preinst.exe /&lt;オプション\> という構文を使用する必要があります。 コマンド ライン オプションは以下のとおりです。  
 
- **/DELJOB &lt;*SiteCode*>** - このオプションをサイトで使用して、現在のサイトから指定のターゲット サイトに対するすべてのジョブまたはコマンドを削除します。  
+ **/DELJOB &lt;*サイト コード*>** - このオプションをサイトで使用して、現在のサイトから指定のターゲット サイトに対するすべてのジョブまたはコマンドを削除します。  
 
- **/DELSITE &lt;*ChildSiteCodeToRemove*>** - このオプションを親サイトで使用して、親サイトのサイト データベースから子サイトのデータを削除します。 通常、サイト サーバー コンピューターからサイトをアンインストールする前に使用停止とされた場合に、このオプションを使用します。  
+ **/DELSITE &lt;*削除する子サイト コード*>** - このオプションを親サイトで使用して、親サイトのサイト データベースから子サイトのデータを削除します。 通常、サイト サーバー コンピューターからサイトをアンインストールする前に使用停止とされた場合に、このオプションを使用します。  
 
 > [!NOTE]  
 >  /DELSITE オプションでは、ChildSiteCodeToRemove パラメーターで指定されたコンピューター上のサイトはアンインストールされません。 このオプションは、サイト情報を Configuration Manager サイト データベースから削除するだけです。  
 
-**/DUMP &lt;*SiteCode*>** - ローカル サイト サーバーでこのオプションを使用して、サイトがインストールされているドライブのルート フォルダーにサイト コントロール イメージを書き込みます。 特定のサイト コントロール イメージをフォルダーに書き込むか、階層内のすべてのサイト コントロール ファイルを書き込むことができます。  
+**/DUMP &lt;*サイト コード*>** - ローカル サイト サーバーでこのオプションを使用して、サイトがインストールされているドライブのルート フォルダーにサイト コントロール イメージを書き込みます。 特定のサイト コントロール イメージをフォルダーに書き込むか、階層内のすべてのサイト コントロール ファイルを書き込むことができます。  
 
 -   /DUMP &lt;*SiteCode*> は、指定されたサイトについてのみサイト コントロール イメージを書き込みます。  
 

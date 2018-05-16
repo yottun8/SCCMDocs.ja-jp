@@ -2,56 +2,45 @@
 title: ヘルプの検索
 titleSuffix: Configuration Manager
 description: リソースを検索して System Center Configuration Manager の詳細情報を参照します。
-ms.custom: na
-ms.date: 12/22/2017
+ms.date: 04/30/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
-caps.latest.revision: 19
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: bcf53c11a30aa2fc3995697f36f00960035bbe57
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+manager: dougeby
+ms.openlocfilehash: 2c9e2f0b570360b730f7a8659791a7f054200d36
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-help-for-using-system-center-configuration-manager"></a>System Center Configuration Manager の使用に関するヘルプの検索
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-この記事では、Configuration Manager の使用に関するヘルプを検索するための複数のリソースを提供します。  
+この記事では、Configuration Manager の使用に関するヘルプを検索するための複数のリソースで以下のセクションを提供します。  
 
-製品のユーザー補助機能については、「[System Center Configuration Manager のユーザー補助機能](../../core/understand/accessibility-features.md)」をご覧ください。
+- [製品ドキュメント](#bkmk_Info)  
+
+- [製品に関するフィードバックの共有](#product-feedback)  
+
+- [Configuration Manager チームのブログをフォローする](#BKMK_ProductGroupBlog)  
+
+- [サポート オプションとコミュニティ リソース](#BKMK_SupportOptions)  
+
+製品のユーザー補助機能については、[Configuration Manager のユーザー補助機能](../../core/understand/accessibility-features.md)に関するページをご覧ください。  
 
 
 ##  <a name="bkmk_Info"></a> 製品ドキュメント  
- Configuration Manager の詳細情報については、次のリソースをご覧ください。  
 
--   最新の製品ドキュメントにアクセスするには、[ライブラリのインデックス](https://docs.microsoft.com/sccm/)から開始します。
+最新の製品ドキュメントにアクセスするには、[ライブラリのインデックス](https://docs.microsoft.com/sccm/)から開始します。  
 
--   ドキュメントに関するフィードバックは、[UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation) から送信してください。  
+<a name="BKMK_SearchTips"></a>  
 
+検索、フィードバックの提供、および製品ドキュメントの使用の詳細に関するヒントについては、「[ドキュメントの使用方法](/sccm/core/understand/use-docs)」をご覧ください。  
 
-###  <a name="BKMK_SearchTips"></a> ドキュメント ライブラリを検索する  
- 必要な情報を検索するときに、以下の検索のヒントをご覧ください。  
-
--   お好みの検索エンジンを使用して Configuration Manager のコンテンツを検索する場合、**SCCM** と **Docs** という 2 つの語句を含めると、検索結果を現在のコンテンツ ライブラリに限定します。
-
--   ユーザー インターフェイスとオンライン ドキュメントの用語と一致する検索用語を使用します。 コミュニティ コンテンツで見られる非公式な用語や略語は使用しないでください。 たとえば、「MP」ではなく「管理ポイント」、「DT」ではなく「展開の種類」、「SUM」ではなく「ソフトウェア更新プログラム」のように検索します。  
-
--   docs.microsoft.com で現在表示している記事内で検索するには、Ctrl キーを押しながら F キーを押し、ブラウザーの**[検索]** ボックスに検索語句を入力します。 
-
--   docs.microsoft.com の各記事には、コンテンツの検索を支援するため、次のフィールドが含まれています。
-    - **[検索]**: 右上隅にあります。 すべての記事を検索するには、このフィールドに語句を入力します。 Configuration Manager ライブラリ内の記事には、"ConfigMgr" スコープが自動的に含まれます。
-    - **[フィルター]**: 左側の目次の上にあります。 現在の目次を検索するには、このフィールドに語句を入力します。 このフィールドは、記事のタイトルに表示される語句のみと一致します。 
 
 
 ## <a name="product-feedback"></a>製品に関するフィードバック

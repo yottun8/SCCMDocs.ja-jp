@@ -1,25 +1,20 @@
 ---
-title: "Endpoint Protection 用のアラートの構成"
+title: Endpoint Protection 用のアラートの構成
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で Endpoint Protection のアラートを構成する方法について説明します。"
-ms.custom: na
+description: System Center Configuration Manager で Endpoint Protection のアラートを構成する方法について説明します。
 ms.date: 03/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 91df245565cfe99f79a18618d62c00f0cea579d2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 275ce06520174adf10100b77a8034620b072c93f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configuration Manager での Endpoint Protection 用のアラートの構成
 
@@ -34,21 +29,21 @@ ms.lasthandoff: 10/12/2017
 
 ## <a name="steps-to-configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configuration Manager で Endpoint Protection 用のアラートを構成する手順
 
-1.  Configuration Manager コンソールで、**[ 資産とコンプライアンス ]** をクリックします。
+1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。
 
-2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ デバイス コレクション ]** をクリックします。
+2.  **[資産とコンプライアンス]** ワークスペースで **[デバイス コレクション]** をクリックします。
 
 3.  **[デバイス コレクション]** 一覧で、アラートを構成するコレクションを選んでから、 **[ホーム]** タブの **[プロパティ]** グループで、 **[プロパティ]** をクリックします。
 
     > [!NOTE]
     >  ユーザーのコレクションに対してアラートを構成することはできません。
 
-4.  Configuration Manager コンソールの **[監視]** ワークスペースで、このコレクションのマルウェア対策操作についての詳細を表示する場合は、[*<コレクション名\>***のプロパティ**] ダイアログ ボックスの **[アラート]** タブで、**[このコレクションを Endpoint Protection ダッシュボードに表示する]** を選びます。
+4.  Configuration Manager コンソールの **[監視]** ワークスペースで、このコレクションのマルウェア対策操作についての詳細を表示する場合は、*[<コレクション名\> ***のプロパティ]** ダイアログ ボックスの **[アラート]** タブで、**[このコレクションを Endpoint Protection ダッシュボードに表示する]** を選びます。
 
     > [!NOTE]
     >  このオプションは、 **[すべてのシステム]** コレクションには選択できません。
 
-5.  [*<コレクション名\>***のプロパティ**] ダイアログ ボックスの **[アラート]** タブで、**[追加]** をクリックします。
+5.  *[<コレクション名\>***プロパティ]** ダイアログ ボックスの **[アラート]** タブで、**[追加]** をクリックします。
 
 6.  **[コレクションの新しいアラートの追加]** ダイアログ ボックスの **[Generate an alert when these conditions apply]** (これらの条件を満たす場合にアラートを生成する) セクションで、特定の Endpoint Protection イベントが発生したときに Configuration Manager が生成するアラートを選択してから、**[OK]** をクリックします。
 
@@ -83,11 +78,11 @@ ms.lasthandoff: 10/12/2017
 
     -   **[複数のマルウェア検出]** - このアラートは、監視するコレクション内のコンピューターで、指定した時間数にわたって指定した種類の数を超えたマルウェアが検出されると、生成されます。 次の情報を指定して、このアラートを構成します。
 
-        -   **[検出されたマルウェアの種類の数:]** 別のマルウェアの種類の指定した数が、コレクション内のコンピューターで検出されたときに、アラートが生成されます。 値を指定して **2** を通じて **32** です。
+        -   **[検出されたマルウェアの種類の数:]** 別のマルウェアの種類の指定した数が、コレクション内のコンピューターで検出されたときに、アラートが生成されます。 値を指定して **2** を通じて **32**です。
 
         -   **[検出期間 (時間):]** マルウェアの検出の数が発生する必要がありますを時間単位では、検出の間隔を指定します。 **[1]** から **[168]** までの数で指定します。
 
-9. **[OK]** をクリックして [ *<コレクション名\>***のプロパティ** ] ダイアログ ボックスを閉じます。  
+9. **[OK]** をクリックして *[<コレクション名\> ***のプロパティ]** ダイアログ ボックスを閉じます。  
 
 ## <a name="alert-for-outdated-malware-client"></a>期限切れのマルウェア クライアントのアラート
 

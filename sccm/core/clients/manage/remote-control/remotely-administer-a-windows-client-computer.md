@@ -1,26 +1,20 @@
 ---
-title: "Windows クライアント コンピューターのリモート管理"
+title: Windows クライアント コンピューターのリモート管理
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager を使用してリモートの Windows クライアント コンピューターを管理します。"
-ms.custom: na
+description: System Center Configuration Manager を使用してリモートの Windows クライアント コンピューターを管理します。
 ms.date: 07/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 3c9648c4-645e-4e47-ae10-2da817b8c83b
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 7cce5f2deab7ec6f5c16628dc53e4d1cb5507f37
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4437ef8f88b18b7148eadbc3d125d8ac72fb240a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-remotely-administer-a-windows-client-computer-by-using-system-center-configuration-manager"></a>System Center Configuration Manager を使用して Windows クライアント コンピューターをリモート管理する方法
 
@@ -49,7 +43,7 @@ ms.lasthandoff: 10/12/2017
     > [!IMPORTANT]  
     >  場合、クライアント設定 **リモート制御のプロンプトのユーザー** にアクセス許可が設定されている **True**, 、接続では、リモート コンピューターのユーザーがリモート コントロール プロンプトに同意するまでは開始されません。 詳しくは、「[System Center Configuration Manager でのリモート コントロールの構成](../../../../core/clients/manage/remote-control/configuring-remote-control.md)」を参照してください。  
 
-4.  **[ Configuration Manager リモート コントロール ]** ウィンドウが開いたら、クライアント コンピューターをリモート管理できます。 接続を構成するには、次のオプションを使用します。  
+4.  **[Configuration Manager リモート コントロール]** ウィンドウが開いたら、クライアント コンピューターをリモート管理できます。 接続を構成するには、次のオプションを使用します。  
 
     > [!NOTE]  
     >  接続するコンピューターに複数のモニターがある場合は、すべてのモニターの表示画面がリモート コントロール ウィンドウに表示されます。  
@@ -87,7 +81,7 @@ ms.lasthandoff: 10/12/2017
 
 ### <a name="to-start-the-remote-control-viewer-from-the-windows-command-line"></a>Windows のコマンド ラインから、リモート コントロール ビューアーを起動するには  
 
--   Windows のコマンド プロンプトで、「*<Configuration Manager インストール フォルダー>\>***\AdminConsole\Bin\x64\CmRcViewer.exe**」と入力します。  
+-   Windows のコマンド プロンプトで、「*<Configuration Manager インストール フォルダー\>***\AdminConsole\Bin\x64\CmRcViewer.exe**」と入力します。  
 
 CmRcViewer.exe は次のコマンドライン オプションをサポートします。  
 

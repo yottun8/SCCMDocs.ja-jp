@@ -1,25 +1,20 @@
 ---
-title: "クラウドベースの配布ポイントのインストール"
+title: クラウドベースの配布ポイントのインストール
 titleSuffix: Configuration Manager
-description: "Microsoft Azure でクラウドベース配布ポイントの使用を開始するために必要なことについて説明します。"
-ms.custom: na
+description: Microsoft Azure でクラウドベース配布ポイントの使用を開始するために必要なことについて説明します。
 ms.date: 2/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
-caps.latest.revision: "7"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 6471ac81718666403127c0ebcfaa19c41d3af47b
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 2c9c79c5e635a50fecf02c46e2a134df87c2d784
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-cloud-based-distribution-points-in-microsoft-azure-for-system-center-configuration-manager"></a>Microsoft Azure for System Center Configuration Manager のクラウド ベース配布ポイントのインストール
 
@@ -46,7 +41,7 @@ Microsoft Azure では、System Center Configuration Manager のクラウドベ�
 
 ### <a name="to-set-up-a-cloud-service-in-azure-for-a-distribution-point"></a>配布ポイント用に Azure にクラウド サービスを設定するには  
 
-1.  Web ブラウザーを開いて Azure ポータル (https://manage.windowsazure.com) に移動し、自分のアカウントにアクセスします。  
+1.  Web ブラウザーを開いて Azure Portal (https://manage.windowsazure.com) に移動し、自分のアカウントにアクセスします。  
 
 2.  **[ホステッド サービス、ストレージ アカウント、CDN]** をクリックしてから、**[管理証明書]** を選択します。  
 
@@ -84,7 +79,7 @@ Microsoft Azure では、System Center Configuration Manager のクラウドベ�
         >   
         >  ワイルドカード証明書は、テスト環境でのみサポートされています。  
 
-6.  **[アラート]** ページで、記憶域クォータ、転送クォータを設定し、Configuration Manage にアラートを生成させるそれぞれのクォータの使用率を指定します。 **[次へ]**をクリックします。  
+6.  **[アラート]** ページで、記憶域クォータ、転送クォータを設定し、Configuration Manage にアラートを生成させるそれぞれのクォータの使用率を指定します。 **[次へ]** をクリックします。  
 
 7.  ウィザードを完了します。  
 
@@ -104,7 +99,7 @@ Microsoft Azure では、System Center Configuration Manager のクラウドベ�
 ##  <a name="BKMK_ConfigDNSforCloudDPs"></a> クラウドベースの配布ポイントの名前解決の設定  
  クライアントは、クラウドベースの配布ポイントにクライアントがアクセスするためには、クラウドベースの配布ポイントの名前を Azure で管理される IP アドレスに解決できる必要があります。 クライアントでは、これを 2 段階で行います。  
 
-1.  クライアントは、Configuration Manager のクラウドベースの配布ポイントのサービスの証明書に指定されているサービス名を Azure サービスの FQDN にマップします。 この FQDN には、 **cloudapp.net**の GUID と DNS サフィックスが含まれています。 GUID は、クラウドベースの配布ポイントがインストールされると自動的に生成されます。 Azure ポータルで完全な FQDN を確認するには、クラウド サービスのダッシュボードにある **[サイトの URL]** を参照します。 サイトの URL の例として、 **http://d1594d4527614a09b934d470.cloudapp.net**があります。  
+1.  クライアントは、Configuration Manager のクラウドベースの配布ポイントのサービスの証明書に指定されているサービス名を Azure サービスの FQDN にマップします。 この FQDN には、 **cloudapp.net**の GUID と DNS サフィックスが含まれています。 GUID は、クラウドベースの配布ポイントがインストールされると自動的に生成されます。 Azure ポータルで完全な FQDN を確認するには、クラウド サービスのダッシュボードにある **[サイトの URL]** を参照します。 サイトの URL の例は **http://d1594d4527614a09b934d470.cloudapp.net** です。  
 
 2.  クライアントは、Azure サービスの FQDN を Azure によって割り当てられる IP アドレスに解決します。 この IP アドレスも、Azure ポータルのクラウド サービスのダッシュボードで確認できます。名前は、**[公開仮想 IP アドレス (VIP)]** です。  
 
@@ -124,7 +119,7 @@ Configuration Manager のクラウドベースの配布ポイントのサービ�
 
 1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
-2.  **[管理]** ワークスペースで、 **[サイトの構成]**を展開して **[サーバーとサイト システムの役割]**をクリックします。 次に、クラウドベースの配布ポイントを管理するプライマリ サイト サーバーを選択します。  
+2.  **[管理]** ワークスペースで、 **[サイトの構成]** を展開して **[サーバーとサイト システムの役割]** をクリックします。 次に、クラウドベースの配布ポイントを管理するプライマリ サイト サーバーを選択します。  
 
 3.  詳細ウィンドウで、**[サイト システム]** を右クリックし、**[プロパティ]** をクリックします。  
 

@@ -1,25 +1,20 @@
 ---
-title: "セットアップのリファレンス"
+title: セットアップのリファレンス
 titleSuffix: Configuration Manager
-description: "Configuration Manager サイトまたは階層をインストールするための準備をするには、このリファレンスを参照してください。"
-ms.custom: na
+description: Configuration Manager サイトまたは階層をインストールするための準備をするには、このリファレンスを参照してください。
 ms.date: 4/18/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
-caps.latest.revision: "22"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: bc85d1140b19167b31d5ae2176ddbcb9320b21e1
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f9f857a2045f67690579955236c082ff29721a5f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reference-for-system-center-configuration-manager-setup"></a>System Center Configuration Manager のセットアップのリファレンス
 

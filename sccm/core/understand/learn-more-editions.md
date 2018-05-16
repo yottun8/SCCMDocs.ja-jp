@@ -1,26 +1,20 @@
 ---
-title: "ライセンスとブランチの詳細"
+title: ライセンスとブランチの詳細
 titleSuffix: Configuration Manager
-description: "このトピックでは、2016 年 10 月リリースの System Center Configuration Manager で利用できるインストール オプションのライセンス要件について説明します。Current Branch バージョン 1606、Long-Term Servicing Branch (LTSB)、Current Branch の評価版インストールが対象となります。"
-ms.custom: na
+description: このトピックでは、2016 年 10 月リリースの System Center Configuration Manager で利用できるインストール オプションのライセンス要件について説明します。Current Branch バージョン 1606、Long-Term Servicing Branch (LTSB)、Current Branch の評価版インストールが対象となります。
 ms.date: 12/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
-caps.latest.revision: "0"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 8c5fcb718cf03a1e779212207d696cfa5fe9f0e2
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 8eb561d9867c6bde778ffd5fb6ef404395c359da
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>System Center Configuration Manager のライセンスとブランチ
 
@@ -100,16 +94,16 @@ System Center Configuration Manager については、2016 年 10 月リリー�
 製品のライセンスに関する詳細については、次のリンクを使用してください。
 
 **Microsoft ボリューム ランセンス サービス センター (VLSC) のリンク:**
-- VLSC の概要: [https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx)
+- VLSC の概要: [https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx)。
 
-- Microsoft ボリューム ライセンスでの製品の使用条件: [http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052)
+- Microsoft ボリューム ライセンスでの製品の使用条件: [http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052)。
 
-- ボリューム ライセンスをお持ちのお客様は、ライセンスの概要を次のリンクを使用して確認できます: [https://www.microsoft.com/Licensing/servicecenter/default.aspx](https://www.microsoft.com/Licensing/servicecenter/default.aspx)  
+- ボリューム ライセンスをお持ちのお客様は、ライセンスの概要を次のリンクを使用して確認できます: [https://www.microsoft.com/Licensing/servicecenter/default.aspx](https://www.microsoft.com/Licensing/servicecenter/default.aspx)。  
   **[ライセンス]** メニューに移動して、**[ライセンスの概要]** をクリックすると、ライセンスの概要が表示されます。
 
 **VLSC ビデオ:**
-- VLSC の動作方法を示すビデオ: m[https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2)
+- VLSC の動作方法を示すビデオ: [https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2)。
 
-- 有効なアクティブなソフトウェア アシュアランス契約を参照する場所 (約 43 秒で開始): [https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0)
+- 有効なアクティブなソフトウェア アシュアランス契約を参照する場所 (約 43 秒で開始): [https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0)。
 
-- VLSC のアクセス許可を取得する方法: [https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4).  VLSC の読み取りおよび書き込みのアクセス許可は、組織内の他のユーザーに委任することができます。
+- VLSC のアクセス許可を取得する方法: [https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4)。  VLSC の読み取りおよび書き込みのアクセス許可は、組織内の他のユーザーに委任することができます。

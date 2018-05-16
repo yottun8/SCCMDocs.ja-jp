@@ -2,26 +2,19 @@
 title: タスク シーケンス組み込み変数
 titleSuffix: Configuration Manager
 description: タスク シーケンス組み込み変数は、タスク シーケンスが実行されている環境に関する情報を提供し、その値は、タスク シーケンス全体で使用できます。
-ms.custom: na
 ms.date: 04/18/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
-caps.latest.revision: 15
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe26982195e7cae639cc457dbba31e3dbd45b6d3
-ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
+ms.openlocfilehash: d3ea1b35c5f220155cecafddaf3a2ff1acf5ed53
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>System Center Configuration Manager のタスク シーケンス組み込み変数
 
@@ -78,7 +71,7 @@ ms.lasthandoff: 04/20/2018
 |SMSTSDriverReceiveTimeOut|サーバーへの接続がタイムアウトするまでの秒数。|
 |SMSTSErrorDialogTimeout|タスク シーケンスでエラーが発生すると、エラーを示すダイアログ ボックスが表示されます。 タスク シーケンスでは、この変数で指定された秒数の経過後にダイアログ ボックスが自動的に閉じられます。 既定では、この値は **900** 秒 (15 分) です。|  
 | TSDisableProgressUI | <!-- 1354291 -->Configuration Manager バージョン 1706 以降では、この変数を使って、タスク シーケンスが進行状況をエンド ユーザーに表示するタイミングを制御します。 異なる時点で進行状況の非表示または表示を切り替えるには、タスク シーケンス内で複数回この変数を設定します。 タスク シーケンスの進行状況を非表示にするには、この変数の値を **True** に設定します。 タスク シーケンスの進行状況を表示するには、この変数の値を **False** に設定します。 | 
-| SMSTSDisableStatusRetry | <!--512358--> 切断されたシナリオでは、タスク シーケンス エンジンが管理ポイントへのステータス メッセージの送信を繰り返し試行します。 このシナリオのこの動作によって、タスク シーケンスの処理に遅延が発生します。 Configuration Manager バージョン 1802 以降では、この変数を **True** に設定すると、タスク シーケンス エンジンは最初のエラーの後でステータス メッセージの再送信を試行しません。 次にリブートするときまで、あるいはこの変数の値が **False** に設定されるまで、この動作が継続します。 注: [タスク シーケンス状態レポート](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status)は、これらのステータス メッセージに基づいて、各ステップの進捗、履歴、詳細を表示します。 | 
+| SMSTSDisableStatusRetry | <!--512358--> 切断されたシナリオでは、タスク シーケンス エンジンが管理ポイントへのステータス メッセージの送信を繰り返し試行します。 このシナリオのこの動作によって、タスク シーケンスの処理に遅延が発生します。 Configuration Manager バージョン 1802 以降では、この変数を **True** に設定すると、タスク シーケンス エンジンは最初のメッセージの送信に失敗した後でステータス メッセージの送信を試行しません。 この最初の試行には複数回の再試行が含まれます。<br/><br/>タスク シーケンスの再開時に、この変数の値は保持されます。 ただし、タスク シーケンスでは初期ステータス メッセージの送信が試行されます。 この最初の試行には複数回の再試行が含まれます。 成功した場合、この変数の値に関係なく、タスク シーケンスではステータスの送信が続行されます。 ステータスの送信に失敗した場合、タスク シーケンスではこの変数の値が使用されます。<br/><br/>注: [タスク シーケンス状態レポート](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status)は、これらのステータス メッセージに基づいて、各ステップの進捗、履歴、詳細を表示します。 | 
 |SMSTSLanguageFolder|言語に依存しないブート イメージの表示言語を変更するときに使用します。|  
 |SMSTSLocalDataDrive|タスク シーケンスの実行中に一時ファイルを対象コンピューターに格納する場所を指定します。<br /><br /> この変数は、コレクション変数の設定によって行うなど、タスク シーケンスが開始する前に設定される必要があります。 タスク シーケンスが開始された後で、Configuration Manager は _SMSTSMDataPath 変数を定義します。|  
 |SMSTSMP|この変数を使用して、Configuration Manager の管理ポイントの URL または IP アドレスを指定します。|  

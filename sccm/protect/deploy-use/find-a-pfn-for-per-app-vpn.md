@@ -1,25 +1,20 @@
 ---
-title: "アプリごとの VPN のパッケージ ファミリ名 (PFN) の検索"
+title: アプリごとの VPN のパッケージ ファミリ名 (PFN) の検索
 titleSuffix: Configuration Manager
-description: "アプリごとの VPN を構成できるようにするためにパッケージ ファミリ名を検索する 2 つの方法について説明します。"
-ms.custom: na
+description: アプリごとの VPN を構成できるようにするためにパッケージ ファミリ名を検索する 2 つの方法について説明します。
 ms.date: 10/06/2016
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
-caps.latest.revision: "3"
-author: Nbigman
-ms.author: nbigman
-manager: angrobe
-ms.openlocfilehash: 640f44985ad45442b05f2bbf4ee1ec9c2590cba4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 1228133baca139fb17975f91139a8dedaee9ebe9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>アプリごとの VPN のパッケージ ファミリ名 (PFN) の検索
 
@@ -73,10 +68,10 @@ OneNote について取得された情報を次に示します。
 
 ## <a name="find-a-pfn-if-the-app-is-not-installed-on-a-computer"></a>アプリがコンピューターにインストールされていない場合の PFN の検索
 
-1.  https://www.microsoft.com/en-us/store/apps にアクセスします。
+1.  https://www.microsoft.com/en-us/store/apps に移動します。
 2.  検索バーで、アプリの名前を入力します。 この例では、OneNote を検索します。
 3.  アプリへのリンクをクリックします。 アクセスする URL の末尾には一連の文字が含まれていることに注意してください。 この例では、URL は次のようになります: `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`
-4.  別のタブに、次の URL を貼り付けます: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata`。ここで、`<app id>` を、https://www.microsoft.com/en-us/store/apps から取得したアプリ ID (手順 3 の URL の末尾に含まれる一連の文字) で置き換えます。 ここでの OneNote の例では、次の URL を貼り付けます: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`
+4.  別のタブに、`https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata` という URL を貼り付けます。ここで `<app id>` を、https://www.microsoft.com/en-us/store/apps から取得したアプリ ID (手順 3 の URL の末尾に含まれる一連の文字) で置き換えます。 ここでの OneNote の例では、次の URL を貼り付けます: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`
 
 Microsoft Edge では、必要な情報が表示されます。Internet Explorer では、**[開く]** をクリックすると情報が表示されます。 PFN 値は 1 行目に記述されています。 この例での結果を次に示します。
 

@@ -4,18 +4,17 @@ titleSuffix: Configuration Manager
 description: Configuration Manager Technical Preview バージョン 1804 で利用できる新しい機能について説明します。
 ms.date: 04/25/2018
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 8af43618-ec60-4c3e-a007-12399d1335b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 82de25f24771d4b66d58a550eb4caed6ad262869
-ms.sourcegitcommit: d67c6246bb6027cd5501e772b0521f9272407c28
+ms.openlocfilehash: 0fcdcc984e267e6c54ad7c6194e8494854f0a1ee
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1804-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1804 の機能
 
@@ -176,6 +175,9 @@ Configuration Manager のサーバー ツールとクライアント ツール�
 >  - Send Schedule Tool
 > 
 > <sup>1</sup> CMTrace は .NET または Windows Presentation Foundation (WPF) に依存していないため、Windows PE のブート イメージでも使用されます。
+
+### <a name="known-issues"></a>既知の問題
+一部のクライアント ツールやサーバー ツールは、起動時に突然終了することがあります。 この問題は、メディアにファイルが見つからないためです。 この問題を回避するには、**Microsoft.Diagnostics.Tracing.EventSource.dll** ファイルを AdminConsole\bin ディレクトリから SMSSETUP\Tools\ClientTools ディレクトリと ServerTools ディレクトリの両方にコピーします。 このファイルは、Configuration Manager コンソールで使用されているものと同じバージョンである必要があります。 他のバージョンでは動作しない可能性があります。 <!--513977-->
 
 
 
