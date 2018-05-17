@@ -1,26 +1,20 @@
 ---
-title: "電源管理の構成"
+title: 電源管理の構成
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で電源管理をセットアップします。"
-ms.custom: na
+description: System Center Configuration Manager で電源管理をセットアップします。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 435c923c-ea30-4dce-8afd-48962ed85502
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: ed6aa0ce35d93837ac133cccedb44dedaa4a9602
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: ceb8c07c111818136db7c3815eee58cc87ae75c8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager での電源管理の構成
 
@@ -33,13 +27,13 @@ System Center Configuration Manager で電源管理を使用するには、次�
 
 #### <a name="to-enable-power-management-and-configure-client-settings"></a>電源管理を有効にしてクライアント設定を構成するには  
 
-1.  Configuration Manager コンソールで、**[ 管理]** をクリックします。  
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
-2.  **[ 管理 ]** ワークスペースで **[ クライアント設定]** をクリックします。  
+2.  **[管理]** ワークスペースで **[クライアント設定]** をクリックします。  
 
 3.  **[既定のクライアント設定]** をクリックします。  
 
-4.  **[ホーム]** タブの **[プロパティ]** グループで、 **[プロパティ]**をクリックします。  
+4.  **[ホーム]** タブの **[プロパティ]** グループで、 **[プロパティ]** をクリックします。  
 
 5.  **既定のクライアント設定** ダイアログ ボックスで、クリックして **電源管理**です。  
 
@@ -49,9 +43,9 @@ System Center Configuration Manager で電源管理を使用するには、次�
 
 7.  必要なクライアント設定を構成します。 構成できる電源管理のクライアント設定の一覧については、「[About client settings in System Center Configuration Manager](../../../../core/clients/deploy/about-client-settings.md)」 (System Center Configuration Manager のクライアント設定について) トピックの「[Power Management](../../../../core/clients/deploy/about-client-settings.md#power-management)」 (電源管理) セクションを参照してください。  
 
-8.  **[ OK ]** をクリックして **[ 既定のクライアント設定 ]** ダイアログ ボックスを閉じます。  
+8.  **[OK]** をクリックして **[既定のクライアント設定]** ダイアログ ボックスを閉じます。  
 
- クライアント コンピューターは、次にクライアント ポリシーをダウンロードするときに、これらの設定で構成されます。 1 つのクライアントのポリシーの取得を開始する場合は、「 [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md)」を参照してください。  
+ クライアント コンピューターは、次にクライアント ポリシーをダウンロードするときに、これらの設定で構成されます。 1 つのクライアントのポリシーの取得を開始する場合は、「 [System Center Configuration Manager でクライアントを管理する方法](../../../../core/clients/manage/manage-clients.md)」を参照してください。  
 
 ## <a name="exclude-computers-from-power-management"></a>電源管理からのコンピューターの除外  
  コンピューターに電源管理設定が適用されるのを防ぐことができます。 コンピューターが電源管理設定から除外されるコレクションのメンバーである場合、そのコンピューターが電源管理設定を適用する別のコレクションに属していても、電源管理設定は適用されません。  
@@ -76,12 +70,12 @@ System Center Configuration Manager で電源管理を使用するには、次�
 
 #### <a name="to-exclude-a-collection-of-computers-from-power-management"></a>コンピューターのコレクションを電源管理から除外するには  
 
-1.  Configuration Manager コンソールで、**[ 資産とコンプライアンス]** をクリックします。  
+1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
 
-2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ デバイス コレクション]** をクリックします。  
+2.  **[資産とコンプライアンス]** ワークスペースで **[デバイス コレクション]** をクリックします。  
 
 3.  **デバイス コレクション** ボックスの一覧で、電源管理から除外するコレクションを選択し、、 **ホーム**  タブで、 **プロパティ** グループで、 **プロパティ**です。  
 
-4.  *[<コレクション名\>* **のプロパティ]** ダイアログ ボックスの **[電源管理]** タブで、**[このコレクションのコンピューターに電源管理設定を適用しない]** を選択します。  
+4.  *[<コレクション名\> ***のプロパティ]** ダイアログ ボックスの **[電源管理]** タブで、**[このコレクションのコンピューターに電源管理設定を適用しない]** を選択します。  
 
-5.  **[OK]** をクリックし、*[<コレクション名\>* **のプロパティ]** ダイアログ ボックスを閉じて設定を保存します。  
+5.  **[OK]** をクリックし、**[<*コレクション名*\> のプロパティ]** ダイアログ ボックスを閉じて設定を保存します。  

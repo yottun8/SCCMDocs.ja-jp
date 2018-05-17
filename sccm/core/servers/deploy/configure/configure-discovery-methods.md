@@ -2,25 +2,19 @@
 title: 探索の構成
 titleSuffix: Configuration Manager
 description: 探索方法を構成して、ネットワーク、Active Directory、および Azure Active Directory から管理するリソースを検索します。
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
-caps.latest.revision: 5
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 825b9b250000e8353b1428cbee45f8fda9a30c35
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: e7ac10fdc08569e519468633f30548c5c76b5838
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>System Center Configuration Manager の探索方法を構成する
 
@@ -183,6 +177,9 @@ Active Directory フォレストの探索を有効にし、Active Directory フ�
 6.  **[ポーリングのスケジュール]** タブで、完全な探索ポーリングのスケジュールと差分探索の両方を構成します。  
 
 7.  必要に応じて、**[Active Directory の属性]** タブで、探索するコンピューターの追加の Active Directory 属性を構成できます。 既定のオブジェクト属性も表示されます。  
+
+     > [!Tip]  
+     > たとえば、組織が Active Directory のコンピューター アカウントの **Description** 属性を使用します。 **[カスタム]** をクリックし、カスタム属性として `Description` を追加します。 この探索方法の実行後、この属性は、Configuration Manager コンソールでデバイスの [プロパティ] タブに表示されます。<!--513948-->
 
 8.  必要に応じて、**[オプション]** タブで、探索による古いコンピューターのレコードをフィルタリングして取り除く、つまり除外するように、オプションを構成できます。  
 
