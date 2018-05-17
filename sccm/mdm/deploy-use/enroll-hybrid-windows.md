@@ -1,25 +1,20 @@
 ---
-title: "Microsoft Intune を使用して Windows ハイブリッド デバイスの管理をセットアップする"
+title: Microsoft Intune を使用して Windows ハイブリッド デバイスの管理をセットアップする
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager と Microsoft Intune を使用して Windows デバイス管理を設定します。"
-ms.custom: na
+description: System Center Configuration Manager と Microsoft Intune を使用して Windows デバイス管理を設定します。
 ms.date: 03/17/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: dc1f70f5-64ab-42ab-aa91-d3858803e12f
-caps.latest.revision: "9"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 95808d4fd743d5cc18cacb69bb38bc729acdda25
-ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1e45cae03754fcfa3a310bf59e8e3280d5088518
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-windows-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使ったハイブリッド Windows デバイス管理のセットアップ
 
@@ -34,7 +29,7 @@ PC やモバイル デバイスの Windows デバイスの管理を有効にす�
 2.  Configuration Manager コンソールの **[管理]** ワークスペースで、**[概要]** > **[クラウド サービス]** > **[Microsoft Intune サブスクリプション]** に移動します。  
 3.  リボンで、**[プラットフォームの構成]** をクリックし、Windows プラットフォームを選択します。
     - Windows PC やラップトップの場合は、**[Windows]** を選択し、次の手順を実行します。
-      1. **[全般]** タブで **[Windows の登録を有効にする]**をクリックします。
+      1. **[全般]** タブで **[Windows の登録を有効にする]** をクリックします。
       2. 証明書を使用して会社ポータル アプリにコード署名して展開する場合は、「**コード署名証明書**」を参照してください。 デバイスのユーザーが Microsoft Store から会社ポータル アプリをインストールすることも、管理者がコード署名せずにビジネス向け Microsoft Store からアプリを展開することもできます。
       3. [Windows Hello for Business 設定](windows-hello-for-business-settings.md)を構成することもできます。
     - Windows Phone やタブレットの場合は、**[Windows Phone]** を選択し、次の手順を実行します。

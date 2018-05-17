@@ -1,25 +1,20 @@
 ---
-title: "Mac クライアントを維持する"
+title: Mac クライアントを維持する
 titleSuffix: Configuration Manager
-description: "Configuration Manager の Mac クライアントのメンテナンス タスク"
-ms.custom: na
+description: Configuration Manager の Mac クライアントのメンテナンス タスク
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: aaroncz
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf6337a2-700c-47f3-b6f8-5814f9b81e59
-caps.latest.revision: "12"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 18464a1ba604350e1c871b6bbddc5d03b1d3d956
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 32d36f041ed42ef0afa8fe0c0e052389587a2c8f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maintain-mac-clients"></a>Mac クライアントを維持する
 *適用対象: System Center Configuration Manager (Current Branch)*
@@ -112,7 +107,7 @@ ms.lasthandoff: 10/12/2017
 
 9. **[設定の作成]** ダイアログ ボックスの **[修復スクリプト (オプション)]** で、**[スクリプトの追加]** を選択して、Mac コンピューターで見つかった SMSID を削除するスクリプトを指定します。  
 
-10. **[ 修復スクリプトの作成 ]** ダイアログ ボックスで、次のシェル スクリプトを入力します。  
+10. **[修復スクリプトの作成]** ダイアログ ボックスで、次のシェル スクリプトを入力します。  
 
     ```  
     defaults delete com.microsoft.ccmclient SMSID  
@@ -128,7 +123,7 @@ ms.lasthandoff: 10/12/2017
 
     -   **[次の値]** フィールドに「**存在しないドメインと既定のペア (com.microsoft.ccmclient, SMSID)**」と入力します。  
 
-    -   オプション **[ この設定が対応していない場合に指定した修復スクリプトを実行する ]** を有効にします。  
+    -   オプション **[この設定が対応していない場合に指定した修復スクリプトを実行する]** を有効にします。  
 
 13. 構成項目の作成ウィザードを完了します。  
 

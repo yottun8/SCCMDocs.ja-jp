@@ -1,26 +1,20 @@
 ---
-title: "コレクションを管理する"
+title: コレクションを管理する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で一般的なコレクション管理タスクを実行します。"
-ms.custom: na
+description: System Center Configuration Manager で一般的なコレクション管理タスクを実行します。
 ms.date: 4/25/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 0655a1dc566657cb27cdc7537603871dc36cc568
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b00b62a90f496eb19a77dcc431ccf157b1227923
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-manage-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager でコレクションを管理する方法
 
@@ -32,11 +26,11 @@ System Center Configuration Manager でコレクションの管理タスクを�
 >  Configuration Manager コレクションを作成する方法については、「[System Center Configuration Manager でコレクションを作成する方法](../../../../core/clients/manage/collections/create-collections.md)」を参照してください。  
 
 ## <a name="how-to-manage-device-collections"></a>デバイス コレクションを管理する方法  
- **[資産とコンプライアンス]** ワークスペースで **[デバイス コレクション]**を選択し、管理するコレクションと管理タスクを選択します。  
+ **[資産とコンプライアンス]** ワークスペースで **[デバイス コレクション]** を選択し、管理するコレクションと管理タスクを選択します。  
 
  次の表で、管理タスクに関する詳細と、各タスクを選択する前に必要となる追加情報について説明します。  
 
-|管理タスク|説明|説明|  
+|管理タスク|詳細|説明|  
 |---------------------|-------------|----------------------|  
 |**メンバーの表示**|**[デバイス]** ノードの一時ノードで選択されたコレクションのメンバーであるすべてのリソースを表示します。|詳細情報はありません。|  
 |**選択された項目の追加**|次のアクションのいずれかを行うために次のオプションを提供します。<br /><br /> - <br />                    **選択した項目を既存のデバイス コレクションに追加する** - 選択したコレクションのメンバーを追加するコレクションを選択できる **[コレクションの選択]** ダイアログ ボックスを開きます。 **[コレクションを含める]** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。<br /><br /> - **選択した項目を新しいデバイス コレクションに追加する** - 新しいコレクションを作成できる**デバイス コレクションの作成ウィザード**を開きます。 **[コレクションを含める]** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。|[System Center Configuration Manager でコレクションを作成する方法](../../../../core/clients/manage/collections/create-collections.md)|  
@@ -51,14 +45,14 @@ System Center Configuration Manager でコレクションの管理タスクを�
 |**コピー**|選択したコレクションのコピーを作成します。 新しいコレクションは選択したコレクションを限定コレクションとして使用します。|詳細情報はありません。|  
 |**削除**|選択したコレクションを削除します。 コレクションのすべてのリソースをサイト データベースから削除することもできます。<br /><br /> Configuration Manager に構築されたコレクションは削除することができません。|組み込みコレクションの一覧については、「[Configuration Manager でのコレクションの概要](../../../../core/clients/manage/collections/introduction-to-collections.md)」を参照してください。|  
 |**展開のシミュレート**|アプリケーションをインストールしたりアンインストールしたりせずにアプリケーションの結果をテストできる、**展開アプリケーションのシミュレート ウィザード**を開きます。|[System Center Configuration Manager でアプリケーションの展開をシミュレーションする方法](../../../../apps/deploy-use/simulate-application-deployments.md)|  
-|**デプロイ**|次のオプションを表示します。<br /><br /> - <br />                    **アプリケーション** - 選択したコレクションへのアプリケーションの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - <br />                    **プログラム** – 選択したコレクションへのパッケージやプログラムの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - **構成基準** - 選択されたコレクションへの 1 つ以上の構成基準の展開を構成できる **[構成基準の展開]** ダイアログ ボックスを開きます。<br /><br /> - <br />                    **タスク シーケンス** – 選択したコレクションへのタスク シーケンスの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - <br />                    **ソフトウェア更新プログラム** - 選択したコレクションのリソースへのソフトウェア更新プログラムの展開を構成できる、**ソフトウェア更新の展開ウィザード**を開きます。|[System Center Configuration Manager でアプリケーションを展開する方法](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager のパッケージとプログラム](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [System Center Configuration Manager で構成基準を展開する方法](../../../../compliance/deploy-use/deploy-configuration-baselines.md)<br /><br /> [System Center Configuration Manager でのタスクを自動化するためのタスク シーケンスの管理](../../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)<br /><br /> [System Center Configuration Manager でのソフトウェア更新プログラムの管理](/sccm/sum/understand/software-updates-introduction)|  
+|**展開**|次のオプションを表示します。<br /><br /> - <br />                    **アプリケーション** - 選択したコレクションへのアプリケーションの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - <br />                    **プログラム** – 選択したコレクションへのパッケージやプログラムの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - **構成基準** - 選択されたコレクションへの 1 つ以上の構成基準の展開を構成できる **[構成基準の展開]** ダイアログ ボックスを開きます。<br /><br /> - <br />                    **タスク シーケンス** – 選択したコレクションへのタスク シーケンスの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - <br />                    **ソフトウェア更新プログラム** - 選択したコレクションのリソースへのソフトウェア更新プログラムの展開を構成できる、**ソフトウェア更新の展開ウィザード**を開きます。|[System Center Configuration Manager でアプリケーションを展開する方法](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager のパッケージとプログラム](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [System Center Configuration Manager で構成基準を展開する方法](../../../../compliance/deploy-use/deploy-configuration-baselines.md)<br /><br /> [System Center Configuration Manager でのタスクを自動化するためのタスク シーケンスの管理](../../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)<br /><br /> [System Center Configuration Manager でのソフトウェア更新プログラムの管理](/sccm/sum/understand/software-updates-introduction)|  
 
 ## <a name="how-to-manage-user-collections"></a>ユーザー コレクションを管理する方法  
- **[資産とコンプライアンス]** ワークスペースで **[ユーザー コレクション]**を選択し、管理するコレクションと管理タスクを選択します。  
+ **[資産とコンプライアンス]** ワークスペースで **[ユーザー コレクション]** を選択し、管理するコレクションと管理タスクを選択します。  
 
  次の表で、管理タスクに関する詳細と、各タスクを選択する前に必要となる追加情報について説明します。  
 
-|管理タスク|説明|説明|  
+|管理タスク|詳細|説明|  
 |---------------------|-------------|----------------------|  
 |**メンバーの表示**|**[ユーザー]** ノードの一時ノードで選択されたコレクションのメンバーであるすべてのリソースを表示します。|詳細情報はありません。|  
 |**選択された項目の追加**|このオプションでは次のアクションのいずれかが実行できます。<br /><br /> - <br />                    **選択した項目を既存のユーザー コレクションに追加する** - 選択したコレクションのメンバーを追加するコレクションを選択できる **[コレクションの選択]** ダイアログ ボックスを開きます。 **[コレクションを含める]** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。<br /><br /> - **選択した項目を新しいユーザー コレクションに追加する** - 新しいコレクションを作成できる、**ユーザー コレクションの作成ウィザード**を開きます。 **[コレクションを含める]** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。|[System Center Configuration Manager でコレクションを作成する方法](../../../../core/clients/manage/collections/create-collections.md)|  
@@ -69,7 +63,7 @@ System Center Configuration Manager でコレクションの管理タスクを�
 |**コピー**|選択したコレクションのコピーを作成します。 新しいコレクションは選択したコレクションを限定コレクションとして使用します。|詳細情報はありません。|  
 |**削除**|選択したコレクションを削除します。 コレクションのすべてのリソースをサイト データベースから削除することもできます。<br /><br /> Configuration Manager に構築されたコレクションは削除することができません。|組み込みコレクションの一覧については、「[Configuration Manager でのコレクションの概要](../../../../core/clients/manage/collections/introduction-to-collections.md)」を参照してください。|  
 |**展開のシミュレート**|アプリケーションをインストールしたりアンインストールしたりせずにアプリケーションの結果をテストできる、**展開アプリケーションのシミュレート ウィザード**を開きます。|[System Center Configuration Manager でアプリケーションの展開をシミュレーションする方法](../../../../apps/deploy-use/simulate-application-deployments.md)|  
-|**デプロイ**|次のオプションを表示します。<br /><br /> - **アプリケーション** - 選択したコレクションへのアプリケーションの展開を選択して構成できる、**ソフトウェアの展開ウィザード**を開きます。<br /><br /> - <br />                    **プログラム** – 選択したコレクションへのパッケージやプログラムの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - **構成基準** - 選択されたコレクションへの 1 つ以上の構成基準の展開を構成できる **[構成基準の展開]** ダイアログ ボックスを開きます。|[System Center Configuration Manager でアプリケーションを展開する方法](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager のパッケージとプログラム](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [System Center Configuration Manager で構成基準を展開する方法](../../../../compliance/deploy-use/deploy-configuration-baselines.md)|  
+|**展開**|次のオプションを表示します。<br /><br /> - **アプリケーション** - 選択したコレクションへのアプリケーションの展開を選択して構成できる、**ソフトウェアの展開ウィザード**を開きます。<br /><br /> - <br />                    **プログラム** – 選択したコレクションへのパッケージやプログラムの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - **構成基準** - 選択されたコレクションへの 1 つ以上の構成基準の展開を構成できる **[構成基準の展開]** ダイアログ ボックスを開きます。|[System Center Configuration Manager でアプリケーションを展開する方法](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager のパッケージとプログラム](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [System Center Configuration Manager で構成基準を展開する方法](../../../../compliance/deploy-use/deploy-configuration-baselines.md)|  
 
 ##  <a name="BKMK_CollProp"></a> コレクションのプロパティ  
  コレクションの **[プロパティ]** ダイアログ ボックスを開くと、コレクションの次のプロパティを表示し構成することができます。  

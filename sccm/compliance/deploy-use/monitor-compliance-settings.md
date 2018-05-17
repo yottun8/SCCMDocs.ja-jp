@@ -1,26 +1,20 @@
 ---
-title: "コンプライアンス設定を監視する"
+title: コンプライアンス設定を監視する
 titleSuffix: Configuration Manager
-description: "構成基準のコンプライアンスのステータスを表示するには、このトピックの 1 つ以上の手順を使用します。"
-ms.custom: na
+description: 構成基準のコンプライアンスのステータスを表示するには、このトピックの 1 つ以上の手順を使用します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 1da8bf6ab83be7c72cc95ec5e07cb9b1a17526d5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 9920bd48ad7b953469261602c21a6664580143a2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-compliance-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager でコンプライアンス設定を監視する
 
@@ -58,7 +52,7 @@ ms.lasthandoff: 10/12/2017
 5.  **[展開のステータス]** ページで、展開された構成基準のコンプライアンスについての詳細を確認できます。 **[展開]** ノードの下に一時ノードが作成されるため、後から再度この情報をすばやく確認できます。  
 
 ##  <a name="view-compliance-results-by-using-reports"></a>レポートを使用してコンプライアンス結果を表示する  
- Configuration Manager のコンプライアンス設定には、無数の組み込みレポートが含まれており、構成アイテム、構成基準、および展開についての情報監視に便利です。 これらのレポートには、**[コンプライアンスおよび設定管理]**のカテゴリがあります。  
+ Configuration Manager のコンプライアンス設定には、無数の組み込みレポートが含まれており、構成アイテム、構成基準、および展開についての情報監視に便利です。 これらのレポートには、**[コンプライアンスおよび設定管理]** のカテゴリがあります。  
 
 > [!IMPORTANT]  
 >  コンプライアンス設定でレポートの**%**[デバイス フィルター] **と [ユーザー フィルター] パラメーターを指定するときは必ず、ワイルドカード (** ) 文字を使ってください。  
@@ -83,12 +77,12 @@ ms.lasthandoff: 10/12/2017
 
     -   **非対応**: クライアント コンピューターは、評価された構成基準に対応していません。  
 
-    -   **不明**: クライアント コンピューターは構成基準をまだ評価していません。 対応評価スケジュールとは別に評価を開始する場合は、評価する構成基準を選択し、**[評価]**をクリックします。  
+    -   **不明**: クライアント コンピューターは構成基準をまだ評価していません。 対応評価スケジュールとは別に評価を開始する場合は、評価する構成基準を選択し、**[評価]** をクリックします。  
 
         > [!NOTE]  
-        >  クライアント コンピューターにローカルな管理者資格がある場合は、評価された各構成基準の詳細を表示し、どの構成項目がコンプライアンス非対応状態かを判別できます。 これを行うには、構成基準を選択して、 **[レポートの表示]**をクリックします。  
+        >  クライアント コンピューターにローカルな管理者資格がある場合は、評価された各構成基準の詳細を表示し、どの構成項目がコンプライアンス非対応状態かを判別できます。 これを行うには、構成基準を選択して、 **[レポートの表示]** をクリックします。  
 
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
 
 ##  <a name="create-collections-based-on-configuration-baseline-compliance"></a>構成基準のコンプライアンスに基づいてコレクションを作成する  
  指定したコンプライアンスのデバイスに基づいて、Configuration Manager コレクションを作成するには次の手順に従います。 次のコンプライアンス状態に基づいて、コレクションを作成することができます。  
@@ -105,7 +99,7 @@ ms.lasthandoff: 10/12/2017
 
 3.  **[構成基準]** の一覧で、コレクションを作成する構成基準を選択します。  
 
-4.  **[展開]** タブの **[展開]**グループで、**[新しいコレクションの作成]** をクリックし、ドロップダウン リストから作成するコレクションに適用するコンプライアンスのレベルを選択します。  
+4.  **[展開]** タブの **[展開]** グループで、**[新しいコレクションの作成]** をクリックし、ドロップダウン リストから作成するコレクションに適用するコンプライアンスのレベルを選択します。  
 
 5.  構成項目の展開がユーザーか、デバイスかによって、 **ユーザー コレクションの作成ウィザード** または **デバイス コレクションの作成ウィザード** が開きます。 ウィザードは自動的にコレクションを作成するための正しい値を挿入しますが、これらの値は編集することができます。  
 

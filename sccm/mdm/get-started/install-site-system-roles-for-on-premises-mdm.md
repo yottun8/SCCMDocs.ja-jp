@@ -1,25 +1,20 @@
 ---
-title: "オンプレミス MDM の役割のインストール "
+title: 'オンプレミス MDM の役割のインストール '
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でのオンプレミス モバイル デバイス管理のサイト システムの役割のインストール"
-ms.custom: na
+description: System Center Configuration Manager でのオンプレミス モバイル デバイス管理のサイト システムの役割のインストール
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: c3cf9f64-c2b9-4ace-9527-2aba6d4eef04
-caps.latest.revision: "9"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: d8d107f1ba3720e7974cda5bbbcd7bfefe9301cc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: dc3efe5438d583bc5d850261a1bb80253a608c6c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-site-system-roles-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミス モバイル デバイス管理のサイト システムの役割のインストール
 
@@ -51,7 +46,7 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 
 1.  Configuration Manager コンソールで、**[管理]**、**[概要]**、**[サイトの構成]**、**[サーバーとサイト システムの役割]** の順にクリックします。  
 
-2.  構成する配布ポイントまたはデバイス管理ポイントとともにサイト システムのサーバーを選択し、**[サイト システム]** のプロパティを開き、FQDN が指定されていることを確認します。 **[OK]**をクリックします。  
+2.  構成する配布ポイントまたはデバイス管理ポイントとともにサイト システムのサーバーを選択し、**[サイト システム]** のプロパティを開き、FQDN が指定されていることを確認します。 **[OK]** をクリックします。  
 
 3.  配布ポイント サイト システムの役割のプロパティを開きます。 [全般] タブで、**[HTTPS]** が選択されていることを確認し、**[イントラネットのみのクライアント接続を許可する]** を選択します。  
 
@@ -66,7 +61,7 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 
      Configuration Manager クライアントとともに Mac コンピューターも別に管理している場合、代わりに **[イントラネットとインターネットの接続を許可する]** を使用します。  
 
-6.  **[モバイル デバイスおよび Mac コンピューターでこの管理ポイントを使用できるようにする]** の横にあるチェック ボックスをクリックします。 **[OK]**をクリックします。  
+6.  **[モバイル デバイスおよび Mac コンピューターでこの管理ポイントを使用できるようにする]** の横にあるチェック ボックスをクリックします。 **[OK]** をクリックします。  
 
      これにより実際、管理ポイントがデバイス管理ポイントに変換されます。  
 

@@ -1,26 +1,20 @@
 ---
-title: "オンプレミス MDM のデバイスの一括登録"
+title: オンプレミス MDM のデバイスの一括登録
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager のオンプレミス モバイル デバイス管理を使用して、デバイスの一括登録を自動で行います。"
-ms.custom: na
+description: System Center Configuration Manager のオンプレミス モバイル デバイス管理を使用して、デバイスの一括登録を自動で行います。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
-caps.latest.revision: "13"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 3d2f61a60b4f78e5e1edb883b6a6834237a36acf
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 437f6e6068fb56f1a906cbb8bea24cd3c707f0e3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-bulk-enroll-devices-with-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager オンプレミス モバイル デバイス管理を使ったデバイスの一括登録の方法
 
@@ -86,17 +80,17 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** >**[概要]** >**[会社が所有しているすべてのデバイス]** >**[Windows]** >**[登録プロファイル]** の順にクリックします。  
 
-2.  **[登録プロファイル]** を右クリックし、 **[プロファイルの作成]**をクリックします。  
+2.  **[登録プロファイル]** を右クリックし、 **[プロファイルの作成]** をクリックします。  
 
-3.  登録プロファイルの作成ウィザードでプロファイルの名前を入力して、 **[管理機関]** には **[オンプレミス]**を選び、 **[次へ]**をクリックします。  
+3.  登録プロファイルの作成ウィザードでプロファイルの名前を入力して、 **[管理機関]** には **[オンプレミス]** を選び、 **[次へ]** をクリックします。  
 
-4.  サイト コードを選んで、 **[次へ]**をクリックします。  
+4.  サイト コードを選んで、 **[次へ]** をクリックします。  
 
-5.  **[イントラネットのみ]**を選んで、デバイスが登録プロセスを開始するために使用する登録プロキシ ポイントを選び、 **[次へ]**をクリックします。  
+5.  **[イントラネットのみ]** を選んで、デバイスが登録プロセスを開始するために使用する登録プロキシ ポイントを選び、 **[次へ]** をクリックします。  
 
-6.  信頼されたルート証明書 (これは、「 [Create a certificate profile](#bkmk_createCert)」で作成したプロファイルです) を含む証明書プロファイルを選び、 **[次へ]**をクリックします。  
+6.  信頼されたルート証明書 (これは、「 [Create a certificate profile](#bkmk_createCert)」で作成したプロファイルです) を含む証明書プロファイルを選び、 **[次へ]** をクリックします。  
 
-7.  デバイスがイントラネットに接続するために必要なネットワーク設定を含んだ W-Fi プロファイル (これは、「 [Create a Wi-Fi profile](#CreateWifi)」で作成したプロファイルです) を選び、 **[次へ]**をクリックします。  
+7.  デバイスがイントラネットに接続するために必要なネットワーク設定を含んだ W-Fi プロファイル (これは、「 [Create a Wi-Fi profile](#CreateWifi)」で作成したプロファイルです) を選び、 **[次へ]** をクリックします。  
 
     > [!NOTE]  
     >  登録パッケージで Wi-Fi プロファイルを使用しない場合は、この手順をスキップします。  
@@ -113,16 +107,16 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 
 #### <a name="to-create-an-enrollment-package-ppkg-file"></a>登録パッケージ (ppkg) ファイルを作成するには  
 
-1.  「 [登録プロファイルの作成](#bkmk_createEnroll)」で作成したばかりのプロファイルを右クリックし、 **[エクスポート]**をクリックします。  
+1.  「 [登録プロファイルの作成](#bkmk_createEnroll)」で作成したばかりのプロファイルを右クリックし、 **[エクスポート]** をクリックします。  
 
-2.  	**[参照]**をクリックして、.ppkg ファイルを保存する場所を見つけます。次にパッケージの名前を入力し、 **[保存]**をクリックします。  
+2.  	 **[参照]** をクリックして、.ppkg ファイルを保存する場所を見つけます。次にパッケージの名前を入力し、 **[保存]** をクリックします。  
 
-3.  パッケージをパスワードで保護するには、 **[パッケージの暗号化]**の横にあるチェック ボックスをクリックします。次に、 **[エクスポート]** をクリックし、エクスポートが完了するまで、約 10 秒間待ちます。  
+3.  パッケージをパスワードで保護するには、 **[パッケージの暗号化]** の横にあるチェック ボックスをクリックします。次に、 **[エクスポート]** をクリックし、エクスポートが完了するまで、約 10 秒間待ちます。  
 
     > [!NOTE]  
     >  パッケージを暗号化した場合、Configuration Manager は復号化パスワードが示されているメッセージを表示します。 デバイスでパッケージをプロビジョニングする際に必要になるため、パスワード情報を必ず保存してください。  
 
-4.  **[OK]**をクリックします。  
+4.  **[OK]** をクリックします。  
 
 ##  <a name="bkmk_getPpkg"></a> パッケージを使用するデバイスの一括登録  
  パッケージを使用すると、デバイスを OOBE (out-of-box experience) プロセスを介してプロビジョニングする前または後に、デバイスを登録できます。   登録パッケージを、相手先ブランド供給 (OEM) のプロビジョニング パッケージの一部として含めることもできます。  
@@ -153,9 +147,9 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 
      登録プロセスが開始し、5 分程度かかります。  
 
-4.  **[設定]**を開きます。  
+4.  **[設定]** を開きます。  
 
-5.   [アカウント][作業のアクセス]が必要とするサイト システムの役割との間で信頼された通信を行うために必要です。 登録が正常に行われると、 **[企業のアプリ]**の下にアカウントが表示されます。  
+5.   [アカウント][作業のアクセス]が必要とするサイト システムの役割との間で信頼された通信を行うために必要です。 登録が正常に行われると、 **[企業のアプリ]** の下にアカウントが表示されます。  
 
 6.  アカウントをクリックし、**[同期]** をクリックすると、Configuration Manager による管理が開始します。  
 

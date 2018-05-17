@@ -1,26 +1,20 @@
 ---
-title: "Intune で管理されている iOS および Mac OS X デバイスの構成項目を作成する"
+title: Intune で管理されている iOS および Mac OS X デバイスの構成項目を作成する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の iOS および Mac OS X 構成項目使用して、iOS デバイスと Mac OS X デバイスの設定を管理します。"
-ms.custom: na
+description: System Center Configuration Manager の iOS および Mac OS X 構成項目使用して、iOS デバイスと Mac OS X デバイスの設定を管理します。
 ms.date: 03/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 613a48ac-c55d-4c4a-94ea-d3747a1b10cb
-caps.latest.revision: "15"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: d101ffc649928c1136386bc7979d4a37ad404af1
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0a6925cdc1f3b3a5018cc4895820019d88254bd3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>Intune で管理されている iOS および Mac OS X デバイスの構成項目を作成する方法
 System Center Configuration Manager の **iOS および Mac OS X** 構成項目を使用して、Microsoft Intune に登録されているか、Configuration Manager によってオンプレミスで管理されている iOS デバイスと Mac OS X デバイスの設定を管理します。  
@@ -29,22 +23,22 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
   
 1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
   
-2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ コンプライアンス設定 ]** を展開して、**[ 構成項目 ]** をクリックします。  
+2.  **[資産とコンプライアンス]** ワークスペースで **[コンプライアンス設定]** を展開して、**[構成項目]** をクリックします。  
   
-3.  **[ ホーム ]** タブの **[ 作成 ]** グループで、**[ 構成項目の作成 ]** をクリックします。  
+3.  **[ホーム]** タブの **[作成]** グループで、**[構成項目の作成]** をクリックします。  
   
-4.  **構成項目の作成ウィザード** の **[全般]**ページで、構成項目の名前と、必要に応じて説明を入力します。  
+4.  **構成項目の作成ウィザード** の **[全般]** ページで、構成項目の名前と、必要に応じて説明を入力します。  
   
-5.  **[作成する構成項目の種類の指定]**で、 **[iOS および Mac OS X]**を選択します。  
+5.  **[作成する構成項目の種類の指定]** で、 **[iOS および Mac OS X]** を選択します。  
   
 6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、**[カテゴリ]** をクリックします。  
   
 7.  ウィザードの **[サポートされているプラットフォーム]** ページで、構成項目を評価する特定の iOS または Mac OS X プラットフォームを選択します。  
   
-8.  ウィザードの **[デバイスの設定]** ページで、構成する設定グループを選択します。 このトピックの「 [iOS と Mac OS X の構成項目設定のリファレンス](#BKMK_Setref) 」で詳細情報を確認し、 **[次へ]**をクリックします。  
+8.  ウィザードの **[デバイスの設定]** ページで、構成する設定グループを選択します。 このトピックの「 [iOS と Mac OS X の構成項目設定のリファレンス](#BKMK_Setref) 」で詳細情報を確認し、 **[次へ]** をクリックします。  
   
     > [!TIP]  
-    >  必要な設定が一覧にない場合は、 **[既定の設定グループに含まれない追加の設定を構成する]**チェック ボックスをオンにします。  
+    >  必要な設定が一覧にない場合は、 **[既定の設定グループに含まれない追加の設定を構成する]** チェック ボックスをオンにします。  
   
 9. 各設定ページで、必要な設定と、その設定がデバイスに対応していないときにその設定を修正するかどうかを構成します (これがサポートされている場合)。  
   
@@ -73,7 +67,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
   
 ###  <a name="password"></a>パスワード  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**モバイル デバイスのパスワードの設定が必要**|サポート対象デバイスのパスワードが必要です。|  
 |**パスワードの最小文字数**|パスワードの最小の長さ。|  
@@ -88,7 +82,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
 ###  <a name="device"></a>デバイス  
  これらの設定は、iOS と Mac OS X のどちらのデバイスにも適用されます。  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**Game Center の友達の追加**|Game Center アプリで友達を追加できるようにします。|
 |**音声ダイヤル**|デバイスの音声ダイヤル機能を使用できるようにします。|  
@@ -127,7 +121,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
 ###  <a name="store"></a>ストア  
  これらの設定は、iOS デバイスのみに適用されます。  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**アプリケーション ストア**|デバイスからアプリ ストアにアクセスできるようにします。|  
 |**アプリケーション ストアにアクセスするパスワードを入力する**|ユーザーは、アプリ ストアにアクセスするためにパスワードを入力する必要があります。|  
@@ -140,7 +134,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
 ###  <a name="browser"></a>ブラウザー  
  これらの設定は、iOS デバイスのみに適用されます。  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**既定のブラウザー**|ユーザーは、既定のインターネット ブラウザーを変更できます。|  
 |**オートフィル**|ユーザーは、ブラウザーのオートコンプリートの設定を変更できます。|  
@@ -152,7 +146,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
 ###  <a name="content-rating"></a>コンテンツの年齢区分  
  これらの設定は、iOS デバイスのみに適用されます。  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**メディア ストアの過激な描写のコンテンツ**|アプリ ストアから成人向けコンテンツにアクセスできるようにするかどうかを指定します。|  
 |**年齢区分の地域**|年齢区分による制限を適用する国を指定します。|  
@@ -167,7 +161,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
 ###  <a name="cloud"></a>クラウド  
  これらの設定は、iOS デバイスのみに適用されます。  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**クラウドのバックアップ**|iCloud のようなクラウド サービスへのバックアップを許可します。|  
 |**暗号化バックアップ**|クラウド サービスへのバックアップを暗号化できるようにします。|  
@@ -182,7 +176,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
 ###  <a name="security"></a>セキュリティ  
  これらの設定は、iOS デバイスのみに適用されます。  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**カメラ**|デバイスのカメラを使用できるようにします。| 
 |**新しいエンタープライズ アプリ作成者を信頼**|アプリ ストアからダウンロードされたのではないアプリを信頼するようにユーザーが選択できます。| 
@@ -190,7 +184,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
 ###  <a name="roaming"></a>ローミング  
  これらの設定は、iOS デバイスのみに適用されます。  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**音声通話ローミング**|ローミング中の音声通話を許可します。|  
 |**ローミング中の自動同期**|ローミング中にデバイスが自動的に同期されるようにします。|  
@@ -199,9 +193,9 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
 ###  <a name="system-security"></a>システム セキュリティ  
  これらの設定は、iOS デバイスのみに適用されます。  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
-|**信頼されていない TLS 証明書を許可するユーザー**|**[許可]**の場合、ユーザーはこれらの証明書を受け入れることができます。 **[禁止]**の場合は、信頼されていない証明書が自動的に拒否されます。|
+|**信頼されていない TLS 証明書を許可するユーザー**|**[許可]** の場合、ユーザーはこれらの証明書を受け入れることができます。 **[禁止]** の場合は、信頼されていない証明書が自動的に拒否されます。|
 |**アクティブ化ロックを許可する (監視モードのみ)**|この設定を使用して、管理する**監視対象** iOS デバイスの iOS アクティベーション ロックを有効にします。 アクティベーション ロックの詳細については、「[System Center Configuration Manager を使用した iOS のアクティベーション ロックの管理](../../mdm/deploy-use/manage-ios-activation-lock.md)」を参照してください。
 |**ロック画面のコントロール センター**|デバイスがロックされているときにコントロール センター アプリにアクセスできるかどうかを制御します。|  
 |**ロック画面の通知ビュー**|デバイスがロックされているときに通知が表示されるかどうかを制御します。|  
@@ -217,7 +211,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
 ###  <a name="data-protection"></a>データの保護  
  これらの設定は、iOS デバイスのみに適用されます。  
   
-|設定の名前|説明|  
+|設定の名前|詳細|  
 |------------------|-------------|  
 |**管理対象のアプリのドキュメントを他の管理されていないアプリで開く**|Configuration Manager のアプリケーション管理ポリシーによって管理されているアプリで使用します。|  
 |**管理されていないアプリのドキュメントを他の管理対象のアプリで開く**|Configuration Manager のアプリケーション管理ポリシーによって管理されているアプリで使用します。| 
@@ -243,7 +237,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
   
          アプリのページを開き、URL をクリップボードにコピーします。 準拠アプリおよび非準拠アプリの一覧で URL として使用できるようになります。  
   
-         **例:** ストアで **Microsoft Word for iPad** アプリを検索します。 **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**という URL を使用します。  
+         **例:** ストアで **Microsoft Word for iPad** アプリを検索します。 **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8** という URL を使用します。  
   
     -   **編集** - 選んだアプリの名前、発行者、および URL を編集します。  
   
@@ -251,7 +245,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
   
     -   **インポート** - コンマ区切り値ファイルで指定したアプリの一覧をインポートします。 ファイルの形式、アプリケーション名、発行者、アプリの URL を使用します。  
   
-2.  終了したら、 **[次へ]**をクリックします。  
+2.  終了したら、 **[次へ]** をクリックします。  
   
  次のレポートのいずれかを使用して、準拠アプリと非準拠アプリを監視できます。  
   
@@ -280,7 +274,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
         >  アプリのバンドル ID を検索するには、アプリがインストールされている Mac コンピューターで次の手順を使用します。  
         >   
         >  1.  アプリがインストールされているフォルダーを開きます (たとえば、 **/Applications**)。  
-        > 2.  *<アプリ名\>***.app** バンドルを選び、**[パッケージの内容を表示]** を選びます。  
+        > 2.  *<アプリ名\>***.app** バンドルを選択し、**[パッケージの内容を表示]** を選びます。  
         > 3.  **Info.plist** ファイルを開きます。  
         > 4.  キー **CFBundleIdentifier**に関連付けられた値を確認します。  
         >   
@@ -292,7 +286,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
   
     -   **インポート** - コンマ区切り値ファイルで指定したアプリの一覧をインポートします。 ファイルの形式、アプリ名、発行者、アプリのバンドル ID を使用します。  
   
-2.  終了したら、 **[次へ]**をクリックします。  
+2.  終了したら、 **[次へ]** をクリックします。  
   
  次のレポートのいずれかを使用して、準拠アプリと非準拠アプリを監視できます。  
   
@@ -310,7 +304,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
   
 #### <a name="to-create-an-ios-and-mac-os-x-custom-profile"></a>iOS および Mac OS X カスタム プロファイルを作成するには  
   
-1.  **構成項目の作成ウィザード** の **[iOS および Mac OS X カスタム プロファイル設定の構成]**ページで、次の情報を指定します。  
+1.  **構成項目の作成ウィザード** の **[iOS および Mac OS X カスタム プロファイル設定の構成]** ページで、次の情報を指定します。  
   
     -   **カスタム構成プロファイル名 (ユーザーに表示されます)**: ポリシーの名前を指定します。この名前が、デバイスや Configuration Manager レポートに表示されます。  
   
@@ -349,7 +343,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
   
 #### <a name="to-configure-kiosk-mode-for-ios-devices"></a>iOS デバイスのキオスク モードを構成するには  
   
-1.  **構成項目の作成ウィザード** の **[iOS デバイスのキオスク モード設定の構成]**ページで、次の情報を指定します。  
+1.  **構成項目の作成ウィザード** の **[iOS デバイスのキオスク モード設定の構成]** ページで、次の情報を指定します。  
   
     -   **アプリの選択** - デバイスがキオスク モードのときに実行が許可されるアプリを選びます。 他のアプリはデバイスでの実行が許可されません。 次の中から選択します。  
   
@@ -363,7 +357,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
   
         -   ページの URL をコピーし、これをキオスク モードで実行するアプリを指定するための URL として使用します。  
   
-        -   **例:** **Microsoft Word for iPad**を検索します。 **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**という URL を使用します。  
+        -   **例:** **Microsoft Word for iPad**を検索します。 **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8** という URL を使用します。  
   
     -   **タッチ** - デバイスのタッチ スクリーンを有効または無効にします。  
   

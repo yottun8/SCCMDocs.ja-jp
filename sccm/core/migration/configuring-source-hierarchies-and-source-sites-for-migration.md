@@ -1,26 +1,20 @@
 ---
-title: "移行ソース階層"
+title: 移行ソース階層
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager 環境にデータを移行できるように、ソース階層とソース サイトを構成します。"
-ms.custom: na
+description: System Center Configuration Manager 環境にデータを移行できるように、ソース階層とソース サイトを構成します。
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccce7cb5-e18f-4337-8adf-2018edca3c00
-caps.latest.revision: "5"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 7977f66c71da300c59c7781f09975ca08ddea0b9
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: d9ef1ca2dd2763cf5b96fd82031a2ef38ef64927
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-source-hierarchies-and-source-sites-for-migration-to-system-center-configuration-manager"></a>System Center Configuration Manager に移行するためのソース階層とソース サイトの構成
 
@@ -48,7 +42,7 @@ System Center Configuration Manager 環境へのデータの移行を有効に�
 
 1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
-2.  **[管理]** ワークスペースで、 **[移行]**を展開してから **[ソース階層]**をクリックします。  
+2.  **[管理]** ワークスペースで、 **[移行]** を展開してから **[ソース階層]** をクリックします。  
 
 3.  **[ホーム]** タブの **[移行]** グループで、**[ソース階層の指定]** をクリックします。  
 
@@ -85,7 +79,7 @@ Configuration Manager 2007 ソース階層の追加ソース サイトを構成�
 
 1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
 
-2.  **[管理]** ワークスペースで、 **[移行]**を展開してから **[ソース階層]**をクリックします。  
+2.  **[管理]** ワークスペースで、 **[移行]** を展開してから **[ソース階層]** をクリックします。  
 
 3.  ソース サイトとして構成するサイトを選択します。  
 

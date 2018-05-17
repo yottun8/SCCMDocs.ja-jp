@@ -1,27 +1,20 @@
 ---
-title: "Intune サブスクリプションの構成"
+title: Intune サブスクリプションの構成
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager を使用して Intune サブスクリプションを構成します。"
-ms.custom: na
+description: System Center Configuration Manager を使用して Intune サブスクリプションを構成します。
 ms.date: 06/02/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 99de8fe7-560e-401a-8ab2-6d87d091be17
-caps.latest.revision: 
-caps.handback.revision: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 720ba9e11ea16f5318ba78504cfe455e1019ab3f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 6ab10b0bc099aa58b1a0703bbc1c7b53c9de85cf
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-your-intune-subscription-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用した Intune サブスクリプションの構成
 
@@ -44,7 +37,7 @@ Intune サブスクリプションは、次のことを実行します。
 
 2.  Configuration Manager コンソールで、**[管理]** をクリックします。
 
-3.  **[管理]** ワークスペースで、 **[クラウド サービス]**を展開して **[Microsoft Intune サブスクリプション]**をクリックします。 **[ホーム]** タブで、 **[Microsoft Intune サブスクリプションの追加]**をクリックします。
+3.  **[管理]** ワークスペースで、 **[クラウド サービス]** を展開して **[Microsoft Intune サブスクリプション]** をクリックします。 **[ホーム]** タブで、 **[Microsoft Intune サブスクリプションの追加]** をクリックします。
 
 ![Intune サブスクリプションを作成する](../media/mdm-set-intune.png)
 
@@ -77,7 +70,7 @@ Intune サブスクリプションは、次のことを実行します。
 
 8.  **[会社の連絡先情報]** ページで、ポータル サイト アプリの **[IT に連絡]** でユーザーに表示する会社の連絡先情報を指定します。 会社の連絡先情報を指定し、**[次へ]** をクリックします。
 
-9. **[会社のロゴ]** ページでは、ポータル サイトにロゴを表示するかどうかを選択し、**[次へ]**をクリックします。
+9. **[会社のロゴ]** ページでは、ポータル サイトにロゴを表示するかどうかを選択し、**[次へ]** をクリックします。
 
 10. ウィザードを完了します。
 

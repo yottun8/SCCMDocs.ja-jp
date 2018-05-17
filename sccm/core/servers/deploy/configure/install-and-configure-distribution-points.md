@@ -2,25 +2,19 @@
 title: 配布ポイントの管理
 titleSuffix: Configuration Manager
 description: 配布ポイントを使用して、デバイスやユーザーに展開するコンテンツをホストします。
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
-caps.latest.revision: 5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1010e339c586922f818e1af1e193abba95dace7b
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 1c9e6dc50b47a1cfcf12f23eaf607eb55837a57d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>System Center Configuration Manager の配布ポイントのインストールと構成
 
@@ -429,4 +423,4 @@ Configuration Manager がコンテンツを配布ポイントに転送すると�
 
 -   **パルス モード**: このオプションは、配布ポイントに送信するデータ ブロックのサイズを指定します。 また、データ ブロックを送信する間隔を指定することもできます。 このオプションは、帯域幅が非常に小さなネットワーク接続でデータを配布ポイントに送信しなければならない場合に使用してください。 たとえば、リンク速度や特定の時間帯の使用率に関係なく、5 秒に 1 KB のデータを送信するように構成します。  
 
--   **指定された時間帯の最大転送率を制限する** :この設定を指定して、構成した時間の割合 (%) のみを使用してサイトが配布ポイントにデータを送信するようにします。 このオプションを使用すると、Configuration Manager ではネットワークの使用可能な帯域幅は考慮されず、代わりに、データを送信できる時間が分割されます。 その分割された短い時間にデータが送信され、次にデータが送信されない時間が続きます。 たとえば、最大転送率を **50%**に設定すると、Configuration Manager ではある一定の時間だけデータが転送され、その後、同じ長さの時間だけ転送が停止されます。 データの実際の量やデータ ブロックのサイズは考慮されません。 代わりに、どれだけの時間データを送信するかが管理されます。  
+-   **指定された時間帯の最大転送率を制限する** :この設定を指定して、構成した時間の割合 (%) のみを使用してサイトが配布ポイントにデータを送信するようにします。 このオプションを使用すると、Configuration Manager ではネットワークの使用可能な帯域幅は考慮されず、代わりに、データを送信できる時間が分割されます。 その分割された短い時間にデータが送信され、次にデータが送信されない時間が続きます。 たとえば、最大転送率を **50%** に設定すると、Configuration Manager ではある一定の時間だけデータが転送され、その後、同じ長さの時間だけ転送が停止されます。 データの実際の量やデータ ブロックのサイズは考慮されません。 代わりに、どれだけの時間データを送信するかが管理されます。  

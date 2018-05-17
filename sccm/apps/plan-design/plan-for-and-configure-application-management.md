@@ -1,25 +1,20 @@
 ---
-title: "アプリケーション管理の計画と構成"
+title: アプリケーション管理の計画と構成
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でアプリケーションを展開するために必要な依存関係を実装および構成します。"
-ms.custom: na
+description: System Center Configuration Manager でアプリケーションを展開するために必要な依存関係を実装および構成します。
 ms.date: 11/07/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
-caps.latest.revision: "13"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: cd06d3ee2ea14c9ff1b9cf09980c2b25a5263db9
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 18d9fe80a1c5525457579dadbfeaeafa3425202d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>System Center Configuration Manager のアプリケーション管理の計画と構成
 
@@ -55,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 
 -   **新しいソフトウェア センター**: 新しいソフトウェア センターは現代的な新しい外観へと一新されました。 Silverlight を使用するアプリケーション カタログにしか表示されなかったアプリ (ユーザーが利用できるアプリ) がソフトウェア センターの **[アプリケーション]** タブに表示されるようになりました。アプリケーション カタログには、ソフトウェア センターの **[インストールのステータス]** タブの下のリンクを使用してもアクセスできます。  
 
-     新しいソフトウェア センターを使用するようにクライアントを構成するには、クライアント設定 **[コンピューター エージェント]** > **[新しいソフトウェア センターの使用]**を有効化します。  
+     新しいソフトウェア センターを使用するようにクライアントを構成するには、クライアント設定 **[コンピューター エージェント]** > **[新しいソフトウェア センターの使用]** を有効化します。  
 
     > [!IMPORTANT]  
     >  ユーザーはアプリケーション カタログに接続する必要はなくなりましたが、次のセクションで説明する、アプリケーション カタログ Web サイト ポイントとアプリケーション カタログ Web サービス ポイントはまだ構成する必要があります。  
@@ -69,14 +64,14 @@ ms.lasthandoff: 11/21/2017
 
     > [!IMPORTANT]
     > 以前のバージョンのソフトウェア センターは、今後数か月の間に削除されて使用できなくなります。
-    > 新しいソフトウェア センターを使用するようにクライアントを構成するには、クライアント設定 **[コンピューター エージェント]** > **[新しいソフトウェア センターの使用]**を有効化します。 
+    > 新しいソフトウェア センターを使用するようにクライアントを構成するには、クライアント設定 **[コンピューター エージェント]** > **[新しいソフトウェア センターの使用]** を有効化します。 
 
 ## <a name="steps-to-install-and-configure-the-application-catalog-and-software-center"></a>アプリケーション カタログおよびソフトウェア センターのインストールと構成手順  
 
 > [!IMPORTANT]  
 >  これらの手順を行う前に、上記のすべての前提条件を満たしていることを確認してください。  
 
-|手順|説明|説明|  
+|手順|詳細|説明|  
 |-----------|-------------|----------------------|  
 |**ステップ 1:** HTTPS 接続を使用する場合は、必ずサイト システム サーバーに Web サーバー証明書を展開します。|アプリケーション カタログの Web サイト ポイントおよびアプリケーション カタログの Web サービス ポイントを実行するサイト システム サーバーに、Web サーバー証明書を展開します。<br /><br /> さらに、クライアントがインターネット経由でアプリケーション カタログを使用できるようにする場合は、Web サービス証明書を少なくとも 1 つの管理ポイント サイト システム サーバーに展開し、それをインターネット経由のクライアント接続用に構成します。|証明書の要件の詳細については、[PKI 証明書の要件](../../core/plan-design/network/pki-certificate-requirements.md)に関する記事をご覧ください。|  
 |**ステップ 2:** 管理ポイントへの接続にクライアント PKI 証明書を使用する場合は、クライアント認証証明書をクライアント コンピューターに展開します。|クライアントは、アプリケーション カタログに接続するためにクライアント PKI 証明書を使用することはありませんが、アプリケーション カタログを使用するには、まず管理ポイントに接続する必要があります。 次のシナリオでは、クライアント認証証明書をクライアント コンピューターに展開する必要があります。<br /><br /><ul><li>イントラネットのすべての管理ポイントが、HTTPS クライアント接続のみを受け付けている。</li><li>クライアントがインターネット経由でアプリケーション カタログに接続している。</li></ul>|証明書の要件の詳細については、[PKI 証明書の要件](../../core/plan-design/network/pki-certificate-requirements.md)に関する記事をご覧ください。|  
@@ -140,7 +135,7 @@ ms.lasthandoff: 11/21/2017
 
 3.  **[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** を選択します。  
 
-4.  ユーザーへの通知やアプリケーション カタログ、ソフトウェア 先端に関連する設定を確認し構成します。 たとえば、  
+4.  ユーザーへの通知やアプリケーション カタログ、ソフトウェア 先端に関連する設定を確認し構成します。 次に例を示します。  
 
     1.  **[コンピューター エージェント]** グループ:  
 
@@ -193,9 +188,9 @@ ms.lasthandoff: 11/21/2017
 1. **Configuration Manager** コンソールで、**[管理]**  >  **[クライアント設定]** の順に選択します。 対象のクライアント設定のインスタンスをクリックします。
 2. **[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** を選択します。
 3. **[既定の設定]** ダイアログ ボックスで、**[ソフトウェア センター]** を選択します。
-4. **[Select new settings to specify company information]\(新しい設定を選択して会社情報を指定する\)** に対して **[はい]** を選択し、ソフトウェア センターのカスタマイズ設定を有効にします。
+4. **[Select new settings to specify company information] (新しい設定を選択して会社情報を指定する\)** に対して **[はい]** を選択し、ソフトウェア センターのカスタマイズ設定を有効にします。
 5. **[会社名]** を入力します。
-6. **[Color Scheme for Software Center]\(ソフトウェア センターのカラー スキーマ\)** を選択します。
+6. **[Color Scheme for Software Center] (ソフトウェア センターのカラー スキーマ\)** を選択します。
 7. **[参照]** をクリックしてソフトウェア センターのロゴに移動します。 ロゴは 400 x 100 ピクセルの JPEG または PNG とし、サイズは 750 KB までとする必要があります。
 8. **[はい]** を選択して、クライアント デバイスにソフトウェア センターのタブが表示されるようにします。 少なくとも 1 つのタブが表示されている必要があります。
 
@@ -237,7 +232,7 @@ ms.lasthandoff: 11/21/2017
 
 ### <a name="to-use-the-application-catalog-from-software-center-does-not-apply-to-the-new-version-of-software-center"></a>ソフトウェア センターからアプリケーション カタログを使用するには (新しいバージョンのソフトウェア センターには適用されません)  
 
-1.  クライアント コンピューターで、**[スタート]** > **[すべてのプログラム]** > **[Microsoft System Center 2012]** > **[Configuration Manager]** > **[ソフトウェア センター]** の順に選択します。  
+1.  クライアント コンピューターで、**[スタート]****[すべてのプログラム]****[Microsoft System Center 2012]****[Configuration Manager]****[ソフトウェア センター]** の順に選択します。  
 
 2.  クライアント設定としてソフトウェア センターの組織名を構成した場合は、指定したとおりに表示されていることを確認します。  
 

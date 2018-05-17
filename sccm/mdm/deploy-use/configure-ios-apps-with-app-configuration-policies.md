@@ -1,26 +1,20 @@
 ---
 title: Configure iOS apps with app configuration policies
 titleSuffix: Configuration Manager
-description: "iOS 8 以降を実行しているデバイスの構成問題の解消に役立ちます。ユーザーがアプリを実行する前にアプリ構成ポリシーをユーザーに展開します。"
-ms.custom: na
+description: iOS 8 以降を実行しているデバイスの構成問題の解消に役立ちます。ユーザーがアプリを実行する前にアプリ構成ポリシーをユーザーに展開します。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f0a78038-ea22-4826-9c07-1771b7dd2e8d
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 905b0925f88395942c954561aa0828c15d3ba758
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: e5d00b1efd02d3b096a0b64033b450f0da949eeb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager でアプリ構成ポリシーを使用し、iOS アプリに設定を適用する
 
@@ -39,14 +33,14 @@ System Center Configuration Manager (Configuration Manager) のアプリ構成�
 
 現在のところ、アプリ構成ポリシーは、iOS 8 以降を実行しているデバイスのみで利用可能で、次のアプリケーションの種類をサポートします。
 
-- **iOS アプリ パッケージ (*.ipa ファイル)**
+- **iOS 用アプリ パッケージ (*.ipa ファイル)**
 - **iOS 用アプリ パッケージ (App ストア内)**
 
 アプリのインストールの種類については、「[アプリケーション管理の概要](/sccm/apps/understand/introduction-to-application-management)」を参照してください。
 
 ## <a name="create-an-app-configuration-policy"></a>アプリ構成ポリシーを作成する
 
-1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリ構成ポリシー]** の順に選択します。
+1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**、**[アプリケーション管理]**、**[アプリ構成ポリシー]** の順に選択します。
 2. **[ホーム]** タブの **[アプリ構成ポリシー]** グループで、**[新しいアプリケーション構成ポリシーを作成します]** を選択します。
 3. アプリ構成ポリシーの作成ウィザードの **[全般]** ページで、ポリシーの次の情報を設定します。
   - **名前**。 ポリシーの一意の名前を入力します。

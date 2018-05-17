@@ -1,26 +1,20 @@
 ---
-title: "ユーザーがオンプレミス MDM にデバイスを登録する方法 "
+title: 'ユーザーがオンプレミス MDM にデバイスを登録する方法 '
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスをユーザーが登録する方法について説明します。"
-ms.custom: na
+description: System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスをユーザーが登録する方法について説明します。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 59004b34-b64f-4d77-898c-07bf3dc75430
-caps.latest.revision: "9"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: c63cf121c75d5920e51987236f33707afcc08c6b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 15774704665b2b52daf1061db221ab0eb158eceb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-users-enroll-devices-with-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミス モバイル デバイス管理の対象となるデバイスをユーザーが登録する方法
 
@@ -48,29 +42,29 @@ System Center Configuration Manager オンプレミス モバイル デバイス
 
 ##  <a name="bkmk_enrollDesk"></a> Windows 10 コンピューターの登録  
 
-1.  Windows 10 コンピューターで、 **[設定]**に移動します。  
+1.  Windows 10 コンピューターで、 **[設定]** に移動します。  
 
-2.  **[アカウント]**をクリックし、 **[職場のアクセス]**をクリックします。  
+2.  **[アカウント]** をクリックし、 **[職場のアクセス]** をクリックします。  
 
-3.  [職場のアクセス] の **[職場または学校への接続]**で、 **[接続]**をクリックし、職場の電子メール アドレスを入力し、 **[続行]**をクリックします。  
+3.  [職場のアクセス] の **[職場または学校への接続]** で、 **[接続]** をクリックし、職場の電子メール アドレスを入力し、 **[続行]** をクリックします。  
 
 4.  登録プロキシ ポイント サイト システムの役割をホストしているサーバーの FQDN を入力し、**[続行]** をクリックします。  
 
-5.  [サービスに接続しています] で、職場の電子メールのパスワードを入力し、 **[サインイン]**をクリックします。  
+5.  [サービスに接続しています] で、職場の電子メールのパスワードを入力し、 **[サインイン]** をクリックします。  
 
 6.  サインイン情報を記憶するために **[スキップ]** をクリックします。少し経つと、デバイスが接続されます。  
 
 ##  <a name="bkmk_enrollMob"></a> Windows 10 Mobile デバイスの登録  
 
-1.  Windows 10 Mobile デバイスで、 **[設定]**に移動します。  
+1.  Windows 10 Mobile デバイスで、 **[設定]** に移動します。  
 
-2.  **[アカウント]**をクリックし、 **[職場のアクセス]**をクリックします。  
+2.  **[アカウント]** をクリックし、 **[職場のアクセス]** をクリックします。  
 
-3.  **[接続]**をクリックします。  
+3.  **[接続]** をクリックします。  
 
-4.  職場の電子メール アドレスと、登録プロキシ ポイント サイト システムの役割をホストしているサーバーの FQDN を入力します。 **[接続]**をクリックします。  
+4.  職場の電子メール アドレスと、登録プロキシ ポイント サイト システムの役割をホストしているサーバーの FQDN を入力します。 **[接続]** をクリックします。  
 
-5.  次の画面で、職場の電子メール アドレスとパスワードを入力し、 **[サインイン]**をクリックします。 少し経つと、デバイスが登録されます。 **[完了]**をクリックします。  
+5.  次の画面で、職場の電子メール アドレスとパスワードを入力し、 **[サインイン]** をクリックします。 少し経つと、デバイスが登録されます。 **[完了]** をクリックします。  
 
 ##  <a name="bkmk_verify"></a> デバイス登録の確認  
  Configuration Manager コンソールで、デバイスが正常に登録されていることを確認できます。  

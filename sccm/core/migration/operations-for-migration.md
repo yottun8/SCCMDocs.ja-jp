@@ -1,25 +1,20 @@
 ---
-title: "移行操作"
+title: 移行操作
 titleSuffix: Configuration Manager
-description: "データとクライアントを System Center Configuration Manager に移行するジョブを作成して実行します。"
-ms.custom: na
+description: データとクライアントを System Center Configuration Manager に移行するジョブを作成して実行します。
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c28e3492-851a-40fc-ba13-67ebc2d8b41a
-caps.latest.revision: "6"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 286be682da590ca7a03717d29ff9b3714d4fac42
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: a038377e4b29852157fd0d92836f26f1b5e18433
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operations-for-migrating-to-system-center-configuration-manager"></a>System Center Configuration Manager に移行するための操作
 
@@ -57,7 +52,7 @@ System Center Configuration Manager での移行の場合、サポートされ�
 
     -   移行ジョブの名前を指定します。  
 
-    -   **[ジョブの種類]** ドロップダウン リストで、 **[コレクションの移行]**をクリックします。  
+    -   **[ジョブの種類]** ドロップダウン リストで、 **[コレクションの移行]** をクリックします。  
 
 5.  **[コレクションの選択]** ページで、次のように設定してから、**[次へ]** を選びます。  
 
@@ -93,7 +88,7 @@ System Center Configuration Manager での移行の場合、サポートされ�
 
     -   移行ジョブの名前を指定します。  
 
-    -   **[ジョブの種類]** ドロップダウン リストで、 **[オブジェクトの移行]**をクリックします。  
+    -   **[ジョブの種類]** ドロップダウン リストで、 **[オブジェクトの移行]** をクリックします。  
 
 5.  **[オブジェクトの選択]** ページで、移行するオブジェクトの種類を選択します。 既定では、選択したオブジェクトの各種類を対象に、利用可能なすべてのオブジェクトが選択されます。  
 
@@ -213,7 +208,7 @@ System Center Configuration Manager での移行の場合、サポートされ�
 
 3.  監視する移行ジョブを選びます。  
 
-4.  **[概要]** と **[ジョブ内のオブジェクト]**の各タブに、選択された移行ジョブに関する内容と状態を表示します。  
+4.  **[概要]** と **[ジョブ内のオブジェクト]** の各タブに、選択された移行ジョブに関する内容と状態を表示します。  
 
 ##  <a name="BKMK_MigrateClients"></a> クライアントの移行  
  階層間でクライアントのデータを移行した後、移行を終了する前に、クライアントを移行先階層に移行する計画を立てます。 階層間のクライアントの移行には、ソース階層に割り当てられているコンピューターから Configuration Manager クライアント ソフトウェアを削除し、その後で、移行先階層から Configuration Manager クライアント ソフトウェアをインストールする手順が含まれます。 移行先階層からクライアントをインストールするときに、その階層のプライマリ サイトへのクライアントの割り当ても行います。 クライアントの移行の詳細については、「[System Center Configuration Manager でのクライアント移行戦略の計画](../../core/migration/planning-a-client-migration-strategy.md)」をご覧ください。  

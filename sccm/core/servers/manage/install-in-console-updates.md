@@ -2,25 +2,19 @@
 title: コンソール内の更新プログラム
 titleSuffix: Configuration Manager
 description: Microsoft クラウドから Configuration Manager に更新プログラムをインストールする
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
-caps.latest.revision: 36
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9924346ccbd862aa4462075a3307b4ec40b955bc
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 9edf02333ec4ce272e69a896ed22e97fa6de0955
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>System Center Configuration Manager のコンソール内の更新プログラムのインストール
 
@@ -43,9 +37,9 @@ Configuration Manager は Microsoft クラウド サービスと同期して更�
 
 更新プログラムが同期されたら、**[管理]** > **[更新とサービス]** ノードに移動して、更新プログラムを Configuration Manager コンソールで表示できます。  
 
--   インストールしていない更新プログラムは **[利用可能]**として表示されます。
+-   インストールしていない更新プログラムは **[利用可能]** として表示されます。
 
--   インストールした更新プログラムは **[インストール済み]**として表示されます。 最後にインストールされた更新プログラムのみが表示されます。 リボンで **[履歴]** ボタンを選ぶと、以前にインストールした更新プログラムを表示できます。
+-   インストールした更新プログラムは **[インストール済み]** として表示されます。 最後にインストールされた更新プログラムのみが表示されます。 リボンで **[履歴]** ボタンを選ぶと、以前にインストールした更新プログラムを表示できます。
 
 
 
@@ -120,7 +114,7 @@ Configuration Manager は Microsoft クラウド サービスと同期して更�
 
 2.  前提条件チェックを実行する対象となる更新プログラム パッケージを右クリックします。  
 
-3.  **[前提条件チェックを実行]**を選択します。  
+3.  **[前提条件チェックを実行]** を選択します。  
 
      前提条件チェックを実行すると、更新プログラムのコンテンツが子サイトにレプリケートされます。 サイト サーバーの distmgr.log を表示して、そのコンテンツが正常にレプリケートされたことを確認できます。  
 
@@ -146,7 +140,7 @@ Configuration Manager は Microsoft クラウド サービスと同期して更�
 #### <a name="1-when-the-update-installation-starts"></a>1.更新プログラムのインストール開始時  
 更新プログラムが適用される製品領域の一覧を示す更新ウィザードが表示されます。  
 
--   ウィザードの **[全般]** ページで **[前提条件チェックの警告]**を構成できます。  
+-   ウィザードの **[全般]** ページで **[前提条件チェックの警告]** を構成できます。  
     -   前提条件チェックのエラーが発生すると、更新プログラムのインストールは必ず停止します。 更新プログラムのインストールを正常に再試行できるようにエラーを修正します。 詳細については、「[失敗した更新プログラムのインストールの再試行](#bkmk_retry)」を参照してください。  
 
     -   前提条件チェックの警告によって更新プログラムのインストールが停止することもあります。 更新プログラムのインストールを再試行する前に、警告を修正します。 詳細については、「[失敗した更新プログラムのインストールの再試行](#bkmk_retry)」を参照してください。  
@@ -328,7 +322,7 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
   -   前提条件チェックの失敗    
   -   インストールの失敗    
 
-**[監視]** > **[概要]** > **[Site Servicing Status ]\(サイト サービスの状況\)** の順に移動し、更新プログラムを選択してから、次のいずれかのオプションをクリックします。
+**[監視]** > **[概要]** > **[Site Servicing Status ] (サイト サービスの状況\)** の順に移動し、更新プログラムを選択してから、次のいずれかのオプションをクリックします。
 
   - **[再試行]** - このノードから **[再試行]** を実行すると、そのサイトでのみ更新プログラムのインストールが再開されます。 **[更新とサービス]** ノードから **[再試行]** を実行する場合とは異なり、この再試行では前提条件の警告が無視されません。
   - **前提条件チェックの警告を無視する** - 更新プログラムのインストールが警告によって停止した場合は、**[前提条件チェックの警告を無視する]** をクリックすることができます。 このアクションによって、更新プログラムのインストールが許可されて (数分後に) 続行され、前提条件チェックの警告を無視するオプションが使用されます。

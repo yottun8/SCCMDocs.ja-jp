@@ -1,26 +1,20 @@
 ---
-title: "アプリケーションを修正して置き換える"
+title: アプリケーションを修正して置き換える
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager アプリケーションのバージョンを操作し、置き換える方法を学習します。"
-ms.custom: na
+description: System Center Configuration Manager アプリケーションのバージョンを操作し、置き換える方法を学習します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 60d5e05423b959baa5110ae7f2b9fc7d77dc9ebf
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: d32a2997da45f02dfd4d2abaf3bf292295f88224
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="revise-and-supersede-applications-in-system-center-configuration-manager"></a>System Center Configuration Manager でアプリケーションを修正して置き換える
 
@@ -70,11 +64,11 @@ ms.lasthandoff: 10/12/2017
 >  置き換え対象の展開の種類をアンインストールするオプションを選択すると、別のコレクションの種類に展開された展開の種類で展開の種類を置き換えることはできません。  たとえば、置換対象の展開の種類をアンインストールするオプションが選択されている場合、デバイス コレクションに展開されている展開の種類を、ユーザー コレクションに展開されている展開の種類で置き換えることはできません。  
 
 ### <a name="decide-whether-to-upgrade-or-replace-an-application"></a>アプリケーションをアップグレードするか、置き換えるかを決定します。  
- アプリケーションを置き換えるか、アップグレードするかどうかは、アプリケーション プロパティ ダイアログ ボックスの **[ 置き換えの関係の指定 ]** ダイアログ ボックスで指定します。 このダイアログ ボックスで **[ アンインストール ]** オプションを有効にするかどうかによって、置き換えの種類が決まります。  
+ アプリケーションを置き換えるか、アップグレードするかどうかは、アプリケーション プロパティ ダイアログ ボックスの **[置き換えの関係の指定]** ダイアログ ボックスで指定します。 このダイアログ ボックスで **[アンインストール]** オプションを有効にするかどうかによって、置き換えの種類が決まります。  
 
 -   (同じアプリケーション ID のまま) 同じアプリケーションの新しいバージョンに更新する必要がある場合は、**[アンインストール]** を有効に**しない**でください。  
 
--   (アプリケーション ID が異なる) 別のアプリケーションに変更する場合は、**[ アンインストール]** を有効にします。 置き換えられたアプリケーションのバージョンは、削除する必要があります。  
+-   (アプリケーション ID が異なる) 別のアプリケーションに変更する場合は、**[アンインストール]** を有効にします。 置き換えられたアプリケーションのバージョンは、削除する必要があります。  
 
 ### <a name="supersede-dependent-applications"></a>依存アプリケーションの置き換え  
  この例の**マスター アプリケーション**とは、依存関係がある展開対象のアプリケーションを指します。  
@@ -103,7 +97,7 @@ ms.lasthandoff: 10/12/2017
 
 3.  **[ホーム]** タブの **[プロパティ]** グループで **[プロパティ]** を選択して、**[<アプリケーション名> プロパティ]** ダイアログ ボックスを開きます。  
 
-4.  *[<アプリケーション名\>* **プロパティ]**ダイアログ ボックスの **[置き換え]** タブで、**[追加]** を選択します。  
+4.  *[<アプリケーション名\>* **プロパティ]** ダイアログ ボックスの **[置き換え]** タブで、**[追加]** を選択します。  
 
 5.  **[置き換えの関係の指定]** ダイアログ ボックスで、**[参照]** をクリックします。  
 

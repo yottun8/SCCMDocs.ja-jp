@@ -2,26 +2,19 @@
 title: Manage volume-purchased iOS apps
 titleSuffix: Configuration Manager
 description: Apple iOS アプリ ストアから購入したアプリを展開および管理し、そのライセンスを追跡します。
-ms.custom: na
 ms.date: 03/30/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 7c3b9316-247b-490b-a363-8f8553821579
-caps.latest.revision: 18
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c85695282a965ea8b8f7defdb0534869638224cd
-ms.sourcegitcommit: d8a4a53630351b3d677bbdc5d203e7d330472cba
+ms.openlocfilehash: f94cc80d41eb346cb1d4c2fc314d310005c7b5f2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>Manage volume-purchased iOS apps with System Center Configuration Manager
 
@@ -77,7 +70,7 @@ ms.lasthandoff: 04/03/2018
 
 ## <a name="step-1---to-get-and-upload-an-apple-vpp-token"></a>手順 1 - Apple VPP トークンを取得およびアップロードするには  
 
-1.  Configuration Manager コンソールで、**[管理]** > **[クラウド サービス]** > **[Apple Volume Purchase Program のトークン]** の順に選択します。   
+1.  Configuration Manager コンソールで、**[管理]**、**[クラウド サービス]**、**[Apple Volume Purchase Program のトークン]** の順に選択します。   
 
 3.  **[ホーム]** タブの **[Apple Volume Purchase Program のトークン]** グループで、**[Apple Volume Purchase Program トークンを追加する]** を選択します。  
 
@@ -105,7 +98,7 @@ ms.lasthandoff: 04/03/2018
 
 ## <a name="step-2---deploy-a-volume-purchased-app"></a>手順 2 - ボリューム購入アプリのデプロイ  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[ストア アプリのライセンス情報]** の順に選択します。  
+1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**、**[アプリケーション管理]**、**[ストア アプリのライセンス情報]** の順に選択します。  
 
 3.  展開するアプリを選択し、**[ホーム]** タブの **[作成]** グループで、**[アプリケーションの作成]** を選択します。
 作成された Configuration Manager アプリケーションには、ビジネス向け Microsoft Store のアプリが含まれます。 他の Configuration Manager のアプリケーションと同様に、このアプリケーションを展開して監視できます。  

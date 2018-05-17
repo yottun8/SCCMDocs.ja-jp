@@ -1,25 +1,20 @@
 ---
-title: "コンソールからのアプリケーションの監視"
+title: コンソールからのアプリケーションの監視
 titleSuffix: Configuration Manager
-description: "Configuration Manager の [監視] ワークスペースを使用して、更新プログラム、コンプライアンス設定、アプリケーションなどのソフトウェアの展開を監視します。"
-ms.custom: na
+description: Configuration Manager の [監視] ワークスペースを使用して、更新プログラム、コンプライアンス設定、アプリケーションなどのソフトウェアの展開を監視します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
-caps.latest.revision: "5"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 015f4410f576fac90d913abfa30064b2eecb2a5b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 4aed4ecda35fded9314ae54b6601deb6f8e07197
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-applications-from-the-system-center-configuration-manager-console"></a>System Center Configuration Manager コンソールからのアプリケーションの監視
 
@@ -33,17 +28,17 @@ System Center Configuration Managerでは、ソフトウェア更新プログラ
 ## <a name="learn-about-compliance-states-in-system-center-configuration-manager"></a>System Center Configuration Manager でコンプライアンス状態を確認する
  アプリケーション展開状態は、以下のいずれかのコンプライアンス対応状態になります。  
 
--   **[成功 ]** – アプリケーションの展開が成功したか、既にインストールされていることが検出されました。  
+-   **[成功]** – アプリケーションの展開が成功したか、既にインストールされていることが検出されました。  
 
--   **[進行中 ]** – アプリケーションの展開が進行中です。  
+-   **[進行中]** – アプリケーションの展開が進行中です。  
 
--   **[不明 ]** – アプリケーション展開の状態を判断できませんでした。 この状態は、目的が **[ 利用可能]** の展開には表示されません。 この状態は、通常、クライアントからまだ状態メッセージを受信していない場合に表示されます。  
+-   **[不明]** – アプリケーション展開の状態を判断できませんでした。 この状態は、目的が **[利用可能]** の展開には表示されません。 この状態は、通常、クライアントからまだ状態メッセージを受信していない場合に表示されます。  
 
 -   **要件が満たされていません** – アプリケーションが依存関係または要件規則に対応していないため、または展開先のオペレーティング システムが適用されないため、アプリケーションは展開されませんでした。  
 
 -   **[エラー]** – エラーのためにアプリケーションを展開できませんでした。  
 
-コンプライアンス対応状態のサブカテゴリ、階層内のユーザーとデバイスの数などの、各コンプライアンス対応状態の詳細情報を表示できます。 たとえば、**[ エラー ]** コンプライアンス対応状態には、次のサブカテゴリがあります。  
+コンプライアンス対応状態のサブカテゴリ、階層内のユーザーとデバイスの数などの、各コンプライアンス対応状態の詳細情報を表示できます。 たとえば、**[エラー]** コンプライアンス対応状態には、次のサブカテゴリがあります。  
 
 -   エラー評価要件  
 
@@ -51,7 +46,7 @@ System Center Configuration Managerでは、ソフトウェア更新プログラ
 
 -   インストール エラー  
 
- アプリケーションの展開に複数のコンプライアンス対応状態が該当するときは、最も低い対応状態を示す集合状態が表示されます。 たとえば、  
+ アプリケーションの展開に複数のコンプライアンス対応状態が該当するときは、最も低い対応状態を示す集合状態が表示されます。 次に例を示します。  
 
     -   ユーザーが 2 つのデバイスにサインインしており、アプリケーションのインストールが一方のデバイスでは成功したがもう一方のデバイスでは失敗した場合、このユーザーのアプリケーションの総合的な展開状態は **[エラー]** と表示されます。  
 

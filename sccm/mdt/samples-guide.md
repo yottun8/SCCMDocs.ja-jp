@@ -11,11 +11,11 @@ ms.assetid: 2ff0100c-b7ef-4e09-8c96-fc1898390b6d
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: fe61cecea2b2a4f4083933b937af90dfb61ea5bf
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 6b36da9f98749858829ab591571496532b26f290
+ms.sourcegitcommit: 7198ec49d9ce68c6d55bfb9e2d537b5442a132cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="microsoft-deployment-toolkit-samples-guide"></a>Microsoft Deployment Toolkit サンプル ガイド  
  このガイドは Microsoft® Deployment Toolkit (MDT) 2013 に付属し、Windows オペレーティング システムと Microsoft Office の展開に関するガイダンスを専門家チーム向けに提供します。 具体的には、このガイドは特定の展開シナリオに適したサンプル構成設定を示すことを目的としています。  
@@ -3670,9 +3670,11 @@ Remove-item -path "DS002:\Task Sequences\Windows Vista Business Production Build
 -   ```  
     New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
     ```  
-
--   Update\-MDTDeploymentShare \-path "DS002:" \-Verbose  
-
+    
+-   ```
+    Update\-MDTDeploymentShare \-path "DS002:" \-Verbose  
+    ```
+    
 ###  <a name="CreateLinkedDeployShare"></a> リンクされた展開共有の作成  
  次の Windows PowerShell コマンドにより、運用展開共有にリンクされた展開共有が作成され、\\\\*remote\_server\_name*\\Deployment$ 共有に格納されます。 Everything (すべて) という選択プロファイルは、リンクされた展開共有にレプリケートされる内容を決定するために使われます。 運用展開共有の内容が、\\\\*remote\_server\_name*\\Deployment$ 共有に既に存在する内容とマージされます。  
 
