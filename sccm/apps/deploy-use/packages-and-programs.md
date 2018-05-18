@@ -1,27 +1,20 @@
 ---
-title: "パッケージとプログラム"
+title: パッケージとプログラム
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でパッケージとプログラムまたはアプリケーションを使用する展開をサポートします。"
-ms.custom: na
+description: System Center Configuration Manager でパッケージとプログラムまたはアプリケーションを使用する展開をサポートします。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
-caps.latest.revision: 
-caps.handback.revision: 
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 7712721167edad5808c46827f68fc32a2b890bfd
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 6f34fd322e5f94550602d7883a0303d10059b702
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="packages-and-programs-in-system-center-configuration-manager"></a>System Center Configuration Manager のパッケージとプログラム
 
@@ -52,7 +45,7 @@ System Center Configuration Manager は、Configuration Manager 2007 で使用�
 
 1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[パッケージ]** の順に選択します。  
 
-3.  **[ホーム]** タブの **[作成]** グループで **[パッケージの作成]**を選択します。  
+3.  **[ホーム]** タブの **[作成]** グループで **[パッケージの作成]** を選択します。  
 
 4.  **パッケージとプログラムの作成ウィザード** の **[パッケージ]** ページで、次の情報を指定します。  
 
@@ -172,7 +165,7 @@ System Center Configuration Manager は、Configuration Manager 2007 で使用�
 
         -   **推定ディスク空き領域**: ソフトウェアに必要なディスク空き領域を指定します。 これはプログラムをインストールする前に、モバイル デバイスのユーザーに表示されます。  
 
-        -   **ダウンロード プログラム**: このプログラムをモバイル デバイスにいつダウンロードできるようにするかに関する情報を指定します。 **[直ちに]**、 **[高速ネットワーク経由のみ]**、または **[デバイスがドッキングされているときのみ]**を指定できます。  
+        -   **ダウンロード プログラム**: このプログラムをモバイル デバイスにいつダウンロードできるようにするかに関する情報を指定します。 **[直ちに]**、 **[高速ネットワーク経由のみ]**、または **[デバイスがドッキングされているときのみ]** を指定できます。  
 
         -   **追加要件**: このプログラムの追加の要件を指定します。 ソフトウェアをインストールする前にユーザーに表示されます。 たとえば、ユーザーをプログラムを実行する前に、その他のすべてのアプリケーションを閉じる必要があることを通知できます。  
 
@@ -227,7 +220,7 @@ System Center Configuration Manager は、Configuration Manager 2007 で使用�
 
 6.  **[スケジュール]** ページで、このパッケージとプログラムを展開するタイミングまたはクライアント デバイスで利用できるようにするタイミングを構成します。  
 
-     このページのオプションは、展開操作が **[利用可能]** または **[必須]**のどちらに設定されているかによって変わります。  
+     このページのオプションは、展開操作が **[利用可能]** または **[必須]** のどちらに設定されているかによって変わります。  
 
 7.  展開の目的を **[必須]** に設定している場合は、**[再実行の動作]** ドロップダウン メニューで、プログラムの再実行の動作を構成します。 次のオプションを選択します。  
 
@@ -275,7 +268,7 @@ System Center Configuration Manager は、Configuration Manager 2007 で使用�
 
  また、パッケージとプログラムには、パッケージとプログラムの展開状況の情報を監視できる、複数の組み込みレポートも含まれています。 これらのレポートのレポート カテゴリをある **ソフトウェアの配布-パッケージとプログラム** と **ソフトウェアの配布-パッケージとプログラムの展開ステータス**です。  
 
- Configuration Manager でのレポートの構成方法に関して詳しくは、「[System Center Configuration Manager のレポート](../../core/servers/manage/reporting.md)」を参照してください。  
+ Configuration Manager でのレポートの構成方法に関して詳しくは、「[System Center Configuration Manager のレポート](../../core/servers/manage/reporting.md)」をご覧ください。  
 
 ##  <a name="manage-packages-and-programs"></a>パッケージとプログラムを管理する  
  **[ソフトウェア ライブラリ]** ワークスペースで、**[アプリケーション管理]** を展開し、**[パッケージ]** を選択します。次に、管理するパッケージを選択し、次の表にある管理タスクを選択します。  
@@ -286,11 +279,11 @@ System Center Configuration Manager は、Configuration Manager 2007 で使用�
 |**プログラムの作成**|**プログラムの作成ウィザード**を開きます。このウィザードでは、パッケージに新しいプログラムを作成できます。|  
 |**エクスポート**|**パッケージのエクスポート ウィザード**を開きます。このウィザードでは、選択されたパッケージとそのコンテンツをファイルにエクスポートできます。<br /><br /> パッケージとプログラムをインポートする方法については、このトピックの「[パッケージとプログラムを作成する](/sccm/apps/deploy-use/packages-and-programs#create-packages-and-programs)」を参照してください。|  
 |**展開**|**ソフトウェアの展開ウィザード**を開きます。選択されたパッケージとそのコンテンツをコレクションに展開できます。 詳しくは、このトピックの「[パッケージとプログラムを展開する](/sccm/apps/deploy-use/packages-and-programs#deploy-packages-and-programs)」を参照してください。|  
-|**コンテンツの配布**|**コンテンツの配布ウィザード**を開きます。このウィザードでは、パッケージとプログラムに関連付けられたコンテンツを、選択された配布ポイントまたは配布ポイント グループに送信できます。|  
+|**[ドライバー パッケージ]**|**コンテンツの配布ウィザード**を開きます。このウィザードでは、パッケージとプログラムに関連付けられたコンテンツを、選択された配布ポイントまたは配布ポイント グループに送信できます。|  
 |**配布ポイントの更新**|配布ポイントを選択されたパッケージやプログラムの最新のコンテンツで更新します。|  
 
 ##  <a name="about-the-package-definition-file-format"></a>パッケージ定義ファイルの形式について  
- パッケージ定義ファイルは、Configuration Manager でパッケージとプログラム作成を自動化するために使用できるスクリプトです。 このファイルでは、パッケージ ソース ファイルの場所を除き、Configuration Manager がパッケージとプログラムを作成するために必要なすべての情報を提供します。 各パッケージ定義ファイルは、ASCII または UTF-8 テキスト ファイルとなります.ini ファイル形式を利用し、次のセクションが含まれます。  
+ パッケージ定義ファイルは、Configuration Manager でパッケージとプログラム作成を自動化するために使用できるスクリプトです。 このファイルでは、パッケージ ソース ファイルの場所を除き、Configuration Manager がパッケージとプログラムを作成するために必要なすべての情報を提供します。 各パッケージ定義ファイルは、ASCII または UTF-8 テキスト ファイルとなります。 .ini ファイル形式を利用し、次のセクションが含まれます。  
 
 ###  <a name="pdf"></a>[PDF]  
  このセクションでは、パッケージ定義ファイルとしてファイルを指定します。 これには、次の情報が含まれています。  

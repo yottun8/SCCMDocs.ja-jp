@@ -2,7 +2,7 @@
 title: ハイブリッド MDM の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。
-ms.date: 05/01/2018
+ms.date: 05/09/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,11 +10,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3105f9597d1f3971d6ef1092a33b0077118a1a22
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 72aeff7874456c3866ccb658395b8706057bdfaf
+ms.sourcegitcommit: 7bec1331c4f3096e6a278ff9ea0e929cff0a9cb9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -41,6 +41,13 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="may-2018"></a>2018 年 5 月
 
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+#### <a name="requesting-help-in-the-company-portal-for-windows-10"></a>Windows 10 ポータル サイト でのヘルプの要求 
+<!--1874137-->
+Windows 10 のポータル サイトでは、ユーザーが問題のヘルプを入手するワークフローを開始した時点で、アプリ ログ ファイルを直接 Microsoft に送信するようになりました。 この動作によって、Microsoft に発生した問題をトラブルシューティングして解決しやすくなりました。  
+
+
 ### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (現在のブランチ) の新機能
 
 #### <a name="support-for-new-versions-of-cisco-anyconnect-client-for-ios"></a>iOS 用 Cisco AnyConnect クライアントの新しいバージョンのサポート
@@ -58,6 +65,9 @@ iOS バージョン 4.0.7 以降の Cisco AnyConnect のサポートを有効に
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
+#### <a name="intune-adapts-to-fluent-design-system-in-the-company-portal-app-for-windows-10"></a>Intune は、Windows 10 のポータル サイト アプリの Fluent Design System に適合します。 
+<!--1195010-->
+Windows 10 の Intune ポータル サイト アプリは、[Fluent Design System のナビゲーション ビュー](/windows/uwp/design/basics/navigation-basics)で更新済みです。 アプリの側面に沿って、すべての最上位ページの静的な一覧が縦方向に表示されることがわかります。 任意のリンクをすばやくクリックして、ページの閲覧やページ間の切り替えを行います。 この更新プログラムは、Intune により適応しやすく、親しみやすい、使い慣れたエクスペリエンスを作成するための継続的な取り組みの一環として提供されている、いくつかの試みの 1 つです。 更新後の外観を確認するには、[アプリの UI の新機能](/intune/whats-new-app-ui)に関するページを参照してください。
 
 #### <a name="improved-device-tiles-in-the-windows-10-company-portal"></a>Windows 10 ポータル サイトのデバイス タイルの改善
 <!--2213364-->
@@ -112,6 +122,35 @@ iOS 用のポータル サイト アプリに対して、主要なユーザー �
 ## <a name="march-2018"></a>2018 年 3 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+#### <a name="windows-company-portal-send-feedback-option-may-no-longer-work"></a>Windows ポータル サイトの [フィードバックの送信] オプションは今後機能しない場合がある
+<!--2070166-->
+Windows ポータル サイト アプリには、アプリに関するフィードバックを Microsoft に送信できるように 'フィードバックの送信' オプションがあります。 2018 年 4 月 30 日から、Windows 10 バージョン 1607 以降を実行している Windows 10 ポータル サイト アプリでのみ、このオプションが引き続きサポートされます。   
+
+**ユーザーへの影響**
+
+エンド ユーザーに Windows ポータル サイト アプリをインストールしていない場合、このメッセージは無視してください。
+
+エンド ユーザーの中にポータル サイト アプリをインストールしている人がいる場合、次のシナリオにおいて、4 月 30 日から 'フィードバックの送信' ボタンが機能しなくなることに注意してください。  
+
+ - Windows 10 バージョン 1507 とバージョン 1511 の Windows 10 ポータル サイト アプリ  
+
+ - Windows Phone Windows 8.1 ポータル サイト アプリ  
+
+影響を受けるデバイスの場合、'フィードバックの送信' オプションは機能せず、再試行でも動作しません。 影響を受けるデバイスで発生した現象について Microsoft にフィードバックを送信するには、下に記す代替フィードバック チャネルをご利用ください。
+
+**この変更に対して必要な準備**
+
+エンド ユーザーにこの変更を通知し、必要に応じてユーザー ガイダンスを更新してください。 
+
+Windows Phone 8.1、Windows 10 バージョン 1507、Windows 10 バージョン 1511 でポータル サイトを利用しているエンド ユーザーに 2 つの代替フィードバック チャネルを利用できることをお知らせください。 代替フィードバック方法:  
+
+- Windows 10 でフィードバック ハブ アプリを使用する  
+- WinCPfeedback@microsoft.com に電子メールを送信する  
+
+Windows 10 バージョン 1607 以降を利用しているエンド ユーザーに Microsoft Store で入手できる Windows ポータル サイトの最新版に更新するように要請します。
+
+
 
 #### <a name="azure-active-directory-web-sites-can-require-the-intune-managed-browser-app-and-support-single-sign-on-for-the-managed-browser-public-preview"></a>Azure Active Directory の Web サイトでは、Intune Managed Browser アプリを要求し、Managed Browser (パブリック プレビュー) に対するシングル サインオンをサポートすることができる
 <!-- 710595 --> 
@@ -531,35 +570,6 @@ Azure Active Directory (Azure AD) を使用している場合、モバイル デ
 
 
 ## <a name="notices"></a>通知
-
-### <a name="windows-company-portal-send-feedback-option-may-no-longer-work"></a>Windows ポータル サイトの [フィードバックの送信] オプションは今後機能しない場合がある
-
-Windows ポータル サイト アプリには、アプリに関するフィードバックを Microsoft に送信できるように 'フィードバックの送信' オプションがあります。 2018 年 4 月 30 日から、Windows 10 バージョン 1607 以降を実行している Windows 10 ポータル サイト アプリでのみ、このオプションが引き続きサポートされます。   
-
-#### <a name="how-does-this-affect-me"></a>ユーザーへの影響
-
-エンド ユーザーに Windows ポータル サイト アプリをインストールしていない場合、このメッセージは無視してください。
-
-エンド ユーザーの中にポータル サイト アプリをインストールしている人がいる場合、次のシナリオにおいて、4 月 30 日から 'フィードバックの送信' ボタンが機能しなくなることに注意してください。  
-
- - Windows 10 バージョン 1507 とバージョン 1511 の Windows 10 ポータル サイト アプリ  
-
- - Windows Phone Windows 8.1 ポータル サイト アプリ  
-
-影響を受けるデバイスの場合、'フィードバックの送信' オプションは機能せず、再試行でも動作しません。 影響を受けるデバイスで発生した現象について Microsoft にフィードバックを送信するには、下に記す代替フィードバック チャネルをご利用ください。
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>この変更に対して必要な準備
-
-エンド ユーザーにこの変更を通知し、必要に応じてユーザー ガイダンスを更新してください。 
-
-Windows Phone 8.1、Windows 10 バージョン 1507、Windows 10 バージョン 1511 でポータル サイトを利用しているエンド ユーザーに 2 つの代替フィードバック チャネルを利用できることをお知らせください。 代替フィードバック方法:  
-
-- Windows 10 でフィードバック ハブ アプリを使用する  
-- WinCPfeedback@microsoft.com に電子メールを送信する  
-
-Windows 10 バージョン 1607 以降を利用しているエンド ユーザーに Microsoft Store で入手できる Windows ポータル サイトの最新版に更新するように要請します。
-
-
 
 ### <a name="company-portal-for-windows-81-and-windows-phone-81-moving-to-sustaining-mode"></a>維持モードに移行中の Windows 8.1 および Windows Phone 8.1 用ポータル サイト 
 <!--1428681-->

@@ -10,11 +10,11 @@ ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0b34163bfb5aea716062882d4c2ebb1360bba2c9
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 376d75a2aed5fe0b14b3af309e48a75d8f392c11
+ms.sourcegitcommit: defdaf493c1dc5a7a380541bc028fbd2b21c1047
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-system-center-configuration-manager-windows-server-2008-certification-authority"></a>System Center Configuration Manager PKI 証明書の展開手順の例: Windows Server 2008 証明機関
 
@@ -145,7 +145,7 @@ ms.lasthandoff: 05/03/2018
 
 10. **[証明書の登録ポリシーの選択]** ページを表示する場合は、**[次へ]** を選択します。  
 
-11. **[証明書の要求]** ページで、使用可能な証明書の一覧から **[ConfigMgr Web サーバー証明書]** を見つけて、**[この証明書の登録には詳細情報が必要です] を選択します。**設定を構成するにはここをクリックします。  
+11. **[証明書の要求]** ページで、使用可能な証明書の一覧から **[ConfigMgr Web サーバー証明書]** を見つけて、**[この証明書の登録には詳細情報が必要です] を選択します。** 設定を構成するにはここをクリックします。  
 
 12. **[証明書のプロパティ]** ダイアログ ボックスの **[サブジェクト]** タブでは、**[サブジェクト名]** を一切変更しないでください。 つまり、**[サブジェクト名]** の **[値]** ボックスは空欄のままにしておきます。 その代わりに、**[名前の変更]** セクションの **[種類]** ドロップダウン リストで、**[DNS]** を選択します。  
 
@@ -239,6 +239,9 @@ ms.lasthandoff: 05/03/2018
 8.  **[追加]** を選択して、テキスト ボックスに「**ConfigMgr Site Server**」と入力し、**[OK]** を選択します。  
 
 9. このグループに対して **[登録]** アクセス許可を選択し、**[読み取り]** をオフにしません。  
+
+    > [!NOTE]
+    > **[暗号]** タブの **[最小キー サイズ]** が **2048** に設定済みであることを確認します。
 
 10. **[OK]** を選択して、**[証明書テンプレート]** コンソールを閉じます。  
 
