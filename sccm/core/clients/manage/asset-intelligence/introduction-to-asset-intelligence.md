@@ -1,26 +1,20 @@
 ---
-title: "資産インテリジェンスの概要"
+title: 資産インテリジェンスの概要
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の資産インテリジェンスの概要について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の資産インテリジェンスの概要について説明します。
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 0bdfdef5-390f-4099-8bde-de51d9a89175
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 349f5998c0d5e96a626e901ae99fee76541d1b4e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0c09160e88d8a713caadfdd9a6973fd436b4cad1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager の資産インテリジェンスの概要
 
@@ -115,7 +109,7 @@ System Center Configuration Manager の資産インテリジェンスでは、�
 > [!NOTE]  
 >  **[資産インテリジェンス]** ホーム ページは、表示中に自動的には更新されません。  
 
- **[資産インテリジェンス]** ホーム ページには、次のセクションが表示されます。  
+ **カタログ同期**: 資産インテリジェンスが有効になっているかどうかと、資産インテリジェンス同期ポイントの現在の状態に関する情報を提供します。  
 
 -   **カタログ同期**: 資産インテリジェンスが有効になっているかどうかと、資産インテリジェンス同期ポイントの現在の状態に関する情報を提供します。 また、同期スケジュール、カスタマー ライセンス ステートメントがインポートされているかどうか、前回状態が更新された日時と次回の更新予定の日時、および資産インテリジェンス同期ポイント サイト システムがインストールされてから加えられた変更の数も提供します。  
 
@@ -146,7 +140,7 @@ System Center Configuration Manager の資産インテリジェンスでは、�
  資産インテリジェンス ソフトウェア レポートは、組織内のコンピューターにインストールされているソフトウェア ファミリ、カテゴリ、および特定のソフトウェア タイトルに関する情報を提供します。 ソフトウェア レポートには、ブラウザー ヘルパー オブジェクトや自動的に始動するソフトウェアなどの情報が表示されます。 このレポートは、アドウェアやスパイウェアなどのマルウェアを識別するのに使用することができます。また、余剰ソフトウェアを特定して、ソフトウェアの購入とサポートを合理化するのに役立ちます。  
 
 ###  <a name="BKMK_SoftwareIdTagReports"></a> 資産インテリジェンス ソフトウェア識別タグ レポート  
- 資産インテリジェンス ソフトウェア識別タグ レポートには、ISO/IEC 19770-2 に準拠したソフトウェア識別タグが含まれるソフトウェアに関する情報が示されます。 ソフトウェア識別タグは、インストールされたソフトウェアの識別に使用される信頼できる情報を提供します。 SMS_SoftwareTag ハードウェア インベントリ レポート クラスを有効にすると、Configuration Manager によって、ソフトウェア識別タグを含むソフトウェアに関する情報が収集されます。 ソフトウェアに関する情報を提供するレポートは次のとおりです。  
+ 資産インテリジェンス ソフトウェア識別タグ レポートでは、ISO/IEC 19770-2 に準拠したソフトウェア識別タグを含むソフトウェアに関する情報を提供します。 ソフトウェア識別タグは、インストールされたソフトウェアの識別に使用される信頼できる情報を提供します。 SMS_SoftwareTag ハードウェア インベントリ レポート クラスを有効にすると、Configuration Manager によって、ソフトウェア識別タグを含むソフトウェアに関する情報が収集されます。 ソフトウェアに関する情報を提供するレポートは次のとおりです。  
 
 -   **ソフトウェア 14A - ソフトウェア識別タグが有効になっているソフトウェアの検索**: ソフトウェア識別タグが有効になっている、インストール済みソフトウェアの数が示されます。  
 
@@ -158,7 +152,7 @@ System Center Configuration Manager の資産インテリジェンスでは、�
  資産インテリジェンス レポートは、使用されているインストール済みソフトウェア タイトルおよび購入済みソフトウェア ライセンスに関する大量の情報を提供することができます。 ただし、それらの情報のみに基づいて購入済みソフトウェア ライセンスのコンプライアンスを判断しないでください。  
 
 ####  <a name="BKMK_ExampleDependencies"></a> 依存関係の例  
- 資産インテリジェンス レポートに表示されるインストール済みのソフトウェア タイトルおよびライセンス情報は、使用されているライセンスの実際の数と異なる場合があります。 これは、エンタープライズ環境で使用されているソフトウェア タイトルのソフトウェア ライセンス情報のインベントリには複雑な依存関係が伴うためです。 次の例は、資産インテリジェンスを使用した企業における、インストール済みソフトウェアのインベントリに関連する依存関係を示しています。これらの依存関係は、資産インテリジェンス レポートの精度に影響を与える可能性があります。  
+ 資産インテリジェンス レポートに表示される数量の精度には、ソフトウェア タイトルがインストールされているし、ライセンス情報は、現在使用されている実際の金額を異なることができます。 これは、エンタープライズ環境で使用されているソフトウェア タイトルのソフトウェア ライセンス情報のインベントリには複雑な依存関係が伴うためです。 次の例は、資産インテリジェンスを使用した企業における、インストール済みソフトウェアのインベントリに関連する依存関係を示しています。これらの依存関係は、資産インテリジェンス レポートの精度に影響を与える可能性があります。  
 
  **クライアント ハードウェア インベントリの依存関係**  
  資産インテリジェンスのインストール済みソフトウェアのレポートは、ハードウェア インベントリを拡張して資産インテリジェンス レポートを有効にした Configuration Manager クライアントから収集されたデータに基づいています。 このハードウェア インベントリ レポートにおけるこの依存関係のため、資産インテリジェンス レポートは、必要な資産インテリジェンス WMI レポート クラスが有効になっているハードウェア インベントリ処理が正常に完了した Configuration Manager クライアントからのデータのみを反映します。 また、Configuration Manager クライアントは管理ユーザーが定義したスケジュールに従ってハードウェア インベントリ プロセスを実行するため、資産インテリジェンス レポートの精度に影響する遅延がデータ レポート作成時に発生する可能性があります。 たとえば、クライアントが正常にハードウェア インベントリ サイクルを完了した後に、インベントリ対象のライセンスされたソフトウェア タイトルがアンインストールされる場合があります。 しかし、そのソフトウェア タイトルは、クライアントに対してスケジュールされている次回のハードウェア インベントリ レポート サイクルまでは、インストール済みとして資産インテリジェンス レポートに表示されます。  
@@ -194,7 +188,7 @@ System Center Configuration Manager の資産インテリジェンスでは、�
 |**状態**|**定義**|**管理者の操作**|**コメント**|  
 |---------------|--------------------|------------------------------|-----------------|  
 |**検証済み**|カタログ項目が System Center Online の調査担当者によって定義済みです。|ありません。|最善の状態です。|  
-|**ユーザー定義**|カタログ項目が System Center Online の調査担当者によって定義されていません。|ローカルのカタログ情報をカスタマイズした。|この状態は、資産インテリジェンス レポートに表示されます。|  
+|**ユーザー定義の**|カタログ項目が System Center Online の調査担当者によって定義されていません。|ローカルのカタログ情報をカスタマイズした。|この状態は、資産インテリジェンス レポートに表示されます。|  
 |**保留**|カタログ項目が System Center Online の調査担当者によって定義されていませんが、カテゴリ化のために System Center Online に送信済みです。|System Center Online によるカテゴリ化を要求した。|カタログ項目は、System Center Online の調査担当者によってカテゴリ化され、資産インテリジェンス カタログが同期化されるまで、この状態に留まります。|  
 |**[更新可能]**|ユーザー定義のカタログ項目が、その後のカタログ同期時に System Center Online により、異なるようにカテゴリ化されました。|項目をユーザー定義としてカテゴリ化するよう、ローカルの資産インテリジェンス カタログをカスタマイズした。|[競合の解決] の操作を使用し、新しいカテゴリ化情報または以前のユーザー定義値を使用するかどうかを決定できます。 ソフトウェア ラベルを管理する方法の詳細については、「[Operations for Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md)」(System Center Configuration Manager の資産インテリジェンスの操作) を参照してください。|  
 |**カテゴリ化されていない**|カタログ項目が System Center Online の調査担当者によって定義されていないか、カテゴリ化のために System Center Online に送信されていないか、または管理者がユーザー定義のカテゴリ化の値を割り当てていません。|ありません。|カテゴリ化を要求するか、ローカルのカタログ情報をカスタマイズします。<br /><br /> カテゴリ化を要求する方法の詳細については、「[Operations for Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md)」(System Center Configuration Manager の資産インテリジェンスの操作) を参照してください。<br /><br /> ソフトウェア タイトルのカテゴリを変更する方法の詳細については、「[Operations for Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md)」(System Center Configuration Manager の資産インテリジェンスの操作) を参照してください。|  

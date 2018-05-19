@@ -1,26 +1,20 @@
 ---
-title: "コンプライアンス設定のセキュリティとプライバシー"
+title: コンプライアンス設定のセキュリティとプライバシー
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager のコンプライアンス設定のセキュリティのベスト プラクティスについて説明します。"
-ms.custom: na
+description: System Center Configuration Manager のコンプライアンス設定のセキュリティのベスト プラクティスについて説明します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 1c409244-6778-4970-a99c-d2508c9cf62b
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: cba7ceff6114e19c8bf86068c7390de8c9e505e8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 3a8b7a98746649d430388804194e0b847788c86a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-compliance-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager のコンプライアンス設定のセキュリティとプライバシー
 
@@ -39,6 +33,6 @@ ms.lasthandoff: 10/12/2017
 |コンプライアンス設定マネージャーの役割によってセキュリティ ロールを付与された管理者を制限し、監視してください。|**コンプライアンス設定マネージャー** の役割が付与された管理者は、階層内のすべてのデバイスとすべてのユーザーに構成項目を展開できます。 構成項目は、きわめて強力で、たとえばスクリプトやレジストリの再構成を含むことが可能です。|  
 
 ## <a name="privacy-information-for-compliance-settings"></a>コンプライアンス設定に関するプライバシー情報  
- コンプライアンス設定を使って、構成基準によって展開する構成項目に対して、クライアント デバイスがコンプライアンス対応しているかどうかを評価できます。 コンプライアンス対応していない場合、一部の設定は自動修復できます。 コンプライアンス対応情報は管理ポイントによってサイト サーバーに送信され、サイト データベースに保存されます。 情報はデバイスが管理ポイントに送信するときは暗号化されますが、サイト データベースに保存するときは暗号化されません。 情報は、90 日ごとに実行されるサイトのメンテナンス タスク **[期限切れの構成管理データの削除]** によって削除されるまでデータベースに保持されます。 削除間隔は構成できます。 対応情報がマイクロソフトに送信されることはありません。  
+ コンプライアンス設定を使って、構成基準によって展開する構成項目に対して、クライアント デバイスがコンプライアンス対応しているかどうかを評価できます。 コンプライアンス対応していない場合、一部の設定は自動修復できます。 コンプライアンス対応情報は管理ポイントによってサイト サーバーに送信され、サイト データベースに保存されます。 情報はデバイスが管理ポイントに送信するときは暗号化されますが、サイト データベースに保存するときは暗号化されません。 情報は、90 日ごとに実行されるサイトのメンテナンス タスク **[期限切れの構成管理データの削除]** によって削除されるまでデータベースに保持されます。  削除間隔は構成できます。 対応情報がマイクロソフトに送信されることはありません。  
 
  既定では、デバイスはコンプライアンス設定を評価しません。 さらに、構成項目と構成基準を設定してから、それをデバイスに展開することが必要です。  

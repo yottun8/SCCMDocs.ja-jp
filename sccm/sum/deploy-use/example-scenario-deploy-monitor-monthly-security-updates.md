@@ -1,22 +1,20 @@
 ---
-title: "セキュリティ ソフトウェア更新プログラムを展開および監視するシナリオの例"
+title: セキュリティ ソフトウェア更新プログラムを展開および監視するシナリオの例
 titleSuffix: Configuration Manager
-description: "このシナリオ例では、Configuration Manager でソフトウェア更新プログラムを使用して、マイクロソフトから毎月リリースされるセキュリティ ソフトウェア更新プログラムを展開および監視する方法を説明します。"
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: このシナリオ例では、Configuration Manager でソフトウェア更新プログラムを使用して、マイクロソフトから毎月リリースされるセキュリティ ソフトウェア更新プログラムを展開および監視する方法を説明します。
+author: aczechowski
+manager: dougeby
 ms.date: 10/06/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.service: 
 ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
-ms.openlocfilehash: bec19340e9f349849d8dbc041799cece13e2f0fb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.author: aaroncz
+ms.openlocfilehash: eadb7dc9f3f9fc4f4ccca1b27257d8f05cb19ebc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-scenario-for-using-system-center-configuration-manager-to-deploy-and-monitor-the-security-software-updates-released-monthly-by-microsoft"></a>System Center Configuration Manager を使用して Microsoft から毎月リリースされるセキュリティ ソフトウェア更新プログラムを展開および監視するシナリオ例
 
@@ -55,7 +53,7 @@ ms.lasthandoff: 10/12/2017
 
 |プロセス|参照先|  
 |-------------|---------------|  
-|加藤さんは、次の要件で自動展開規則を作成します。<br /><br /><ol><li>**[全般]** タブで、次のように構成します。<br /> <ul><li>名前に**月次セキュリティ更新プログラム**を指定します。</li><li>少数のクライアントが含まれたテスト用のコレクションを選択します。</li><li>**[新しいソフトウェア更新プログラム グループを作成する]** を選択します。</li><li>**[この規則の実行後に展開を有効にする]** を選択していないことを確認します。</li></ul></li><li>**[展開設定]** タブで、既定の設定を選択します。</li><li>**[ソフトウェア更新プログラム]** ページで、次のプロパティ フィルターと検索条件を構成します。<br /><ul><li>リリース日または変更日 **[過去 1 か月間]**。</li><li>更新プログラムの分類 **[セキュリティ更新プログラム]**。</li></ul></li><li>**[評価]** ページで、毎**月****第 2 木曜日**のスケジュールで実行するように規則を有効にします。 また、毎**月****第 2 水曜日**に同期が実行されるようにスケジュールが設定されていることを確認します。</li><li>[展開スケジュール] ページ、[ユーザー側の表示と操作] ページ、[アラート] ページ、および [ダウンロードの設定] ページで、既定の設定を使用します。</li><li>**[展開パッケージ]** ページで、新しい展開パッケージを指定します。</li><li>[ダウンロード場所] ページと [言語の選択] ページで、既定の設定を使用します。</li></ol>|[ソフトウェア更新プログラムの自動展開](automatically-deploy-software-updates.md)|  
+|加藤さんは、次の要件で自動展開規則を作成します。<br /><br /><ol><li>**[全般]** タブで、次のように構成します。<br /> <ul><li>名前に**月次セキュリティ更新プログラム**を指定します。</li><li>少数のクライアントが含まれたテスト用のコレクションを選択します。</li><li>**[新しいソフトウェア更新プログラム グループを作成する]** を選択します。</li><li>**[この規則の実行後に展開を有効にする]** を選択していないことを確認します。</li></ul></li><li>**[展開設定]** タブで、既定の設定を選択します。</li><li>**[ソフトウェア更新プログラム]** ページで、次のプロパティ フィルターと検索条件を構成します。<br /><ul><li>リリース日または変更日 **[過去 1 か月間]**</li><li>更新プログラムの分類 **[セキュリティ更新プログラム]**</li></ul></li><li>**[評価]** ページで、毎**月****第 2 木曜日**のスケジュールで実行するように規則を有効にします。 また、毎**月****第 2 水曜日**に同期が実行されるようにスケジュールが設定されていることを確認します。</li><li>[展開スケジュール] ページ、[ユーザー側の表示と操作] ページ、[アラート] ページ、および [ダウンロードの設定] ページで、既定の設定を使用します。</li><li>**[展開パッケージ]** ページで、新しい展開パッケージを指定します。</li><li>[ダウンロード場所] ページと [言語の選択] ページで、既定の設定を使用します。</li></ol>|[ソフトウェア更新プログラムの自動展開](automatically-deploy-software-updates.md)|  
 
 ##  <a name="BKMK_Step3"></a> 手順 3: ソフトウェア更新プログラムを展開する準備ができていることを確認する  
  毎月第 2 木曜日に、加藤さんは、ソフトウェア更新プログラムを展開する準備ができていることを確認します。 彼は、次の手順を実行します。  

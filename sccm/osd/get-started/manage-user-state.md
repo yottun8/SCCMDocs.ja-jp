@@ -1,26 +1,20 @@
 ---
-title: "ユーザー状態の管理 "
+title: 'ユーザー状態の管理 '
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager では、ユーザー状態移行ツールを使用してオペレーティング システムの展開シナリオでのユーザー状態データをキャプチャして復元します。"
-ms.custom: na
+description: System Center Configuration Manager では、ユーザー状態移行ツールを使用してオペレーティング システムの展開シナリオでのユーザー状態データをキャプチャして復元します。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
-caps.latest.revision: "12"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: b85199d1109d216cbb7d7368717b99c110ec3219
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 8a5f801edced78306316a63d125d9b90b37600b2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-user-state-in-system-center-configuration-manager"></a>System Center Configuration Manager でのユーザー状態の管理
 
@@ -86,9 +80,9 @@ ms.lasthandoff: 12/12/2017
 ##  <a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
  状態移行ポイントには、あるコンピューターでキャプチャされて別のコンピューターで復元されるユーザー状態データが保存されます。 ただし、セットアップ先のコンピューターでオペレーティング システムを更新する展開など、同じコンピューター上のオペレーティング システム展開のユーザー設定をキャプチャする場合、データは、ハードリンクを使用して同じコンピューターに保存したり、状態移行ポイントに保存したりすることができます。 一部のコンピューター展開では、状態ストアを作成すると、Configuration Manager によって状態ストアと対象コンピューターの関連付けが自動的に作成されます。 次の方法を使用して、ユーザー移行ポイントがユーザー状態データを保存するように構成できます。  
 
--   **サイト システム サーバーの作成ウィザード**を使用して、状態移行ポイント用の新しいサイト システム サーバーを作成します。  
+-   **サイト システム サーバーの作成**ウィザードを使用して、状態移行ポイント用の新しいサイト システム サーバーを作成します。   
 
--   **サイト システムの役割の追加ウィザード**を使用して、状態移行ポイントを既存のサーバーに追加します。  
+-   **サイト システムの役割の追加ウィザード**を使用して、状態移行ポイントを既存のサーバーに追加します。   
 
  これらのウィザードを使用すると、次の状態移行ポイント情報の入力を求められます。  
 
@@ -120,7 +114,7 @@ ms.lasthandoff: 12/12/2017
 
 4.  **[コンピューターの関連付けのプロパティ]** ダイアログ ボックスの **[コンピューターの関連付け]** のタブで、ユーザー状態のキャプチャ元のコンピューターと、ユーザー状態データの復元先のコンピューターを指定します。  
 
-5.  **[ユーザー アカウント]** タブで、展開先コンピューターに移行するユーザー アカウントを指定します。 次のいずれかの設定を指定します。  
+5.  **[ユーザー アカウント]** タブで、展開先コンピューターに移行するユーザー アカウントを指定します。  次のいずれかの設定を指定します。  
 
     -   **すべてのユーザー アカウントをキャプチャして復元する**: この設定は、すべてのユーザー アカウントをキャプチャして復元します。 この設定を使用して、同じソース コンピューターに対する複数の関連付けを作成します。  
 
