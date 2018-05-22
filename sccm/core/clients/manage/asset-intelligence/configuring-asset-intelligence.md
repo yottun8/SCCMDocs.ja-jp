@@ -1,26 +1,20 @@
 ---
-title: "資産インテリジェンスを構成する"
+title: 資産インテリジェンスを構成する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で資産インテリジェンスをセットアップします。"
-ms.custom: na
+description: System Center Configuration Manager で資産インテリジェンスをセットアップします。
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: d6137426c4960d0e9a9117fc78d3f26803b4f001
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 182006f0e4fcaf2304570ef4110527a61180c290
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager で資産インテリジェンスを構成する
 
@@ -78,7 +72,7 @@ ms.lasthandoff: 10/12/2017
 
 ##### <a name="to-install-an-asset-intelligence-synchronization-point-site-system-role"></a>資産インテリジェンス同期ポイント サイト システムの役割をインストールするには  
 
-1.  Configuration Manager コンソールで、**[管理]**> **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に選択します。  
+1.  Configuration Manager コンソールで、**[管理]**、> **[サイトの構成]**、 > **[サーバーとサイト システムの役割]** の順に選択します。  
 
 3.  資産インテリジェンス同期ポイント サイト システムの役割を新規または既存のサイト システム サーバーに追加します。  
 
@@ -197,17 +191,17 @@ ms.lasthandoff: 10/12/2017
 
 |列名|データ型|必須|例|  
 |-----------------|---------------|--------------|-------------|  
-|名前|255 文字まで|○|［ソフトウェア タイトル］|  
-|発行者|255 文字まで|○|ソフトウェア発行元|  
-|バージョン|255 文字まで|○|ソフトウェア タイトルのバージョン|  
-|言語|255 文字まで|○|ソフトウェア タイトルの言語|  
-|有効な数量|整数値|○|購入ライセンス数|  
-|発注番号|255 文字まで|×|注文書情報|  
-|販売店名|255 文字まで|×|販売店情報|  
-|購入日|次の形式の日付の値: MM/DD/YYYY|×|ライセンスの購入日|  
+|名前|255 文字まで|はい|［ソフトウェア タイトル］|  
+|発行者|255 文字まで|はい|ソフトウェア発行元|  
+|バージョン|255 文字まで|はい|ソフトウェア タイトルのバージョン|  
+|言語|255 文字まで|はい|ソフトウェア タイトルの言語|  
+|有効な数量|整数値|はい|購入ライセンス数|  
+|発注番号|255 文字まで|いいえ|注文書情報|  
+|販売店名|255 文字まで|いいえ|販売店情報|  
+|購入日|次の形式の日付の値: MM/DD/YYYY|いいえ|ライセンスの購入日|  
 |サポートの購入|ビット値|×|0 または 1。[はい] の場合は 0、[いいえ] の場合は 1 を入力|  
-|サポートの有効期限|次の形式の日付の値: MM/DD/YYYY|×|購入したサポートの終了日|  
-|コメント|255 文字まで|×|備考|  
+|サポートの有効期限|次の形式の日付の値: MM/DD/YYYY|いいえ|購入したサポートの終了日|  
+|コメント|255 文字まで|いいえ|備考|  
 
 ###  <a name="BKMK_ConfigureMaintenanceTasks"></a> Configure Asset Intelligence maintenance tasks  
  次のメンテナンス タスクが資産インテリジェンスで使用できます。  

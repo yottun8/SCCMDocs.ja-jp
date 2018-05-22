@@ -1,25 +1,20 @@
 ---
-title: "Technical Preview 1608 の機能"
+title: Technical Preview 1608 の機能
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1608 で使用できる機能について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の Technical Preview バージョン 1608 で使用できる機能について説明します。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 63e1df5e-637c-4b07-b7ec-95340f43a805
-caps.latest.revision: "15"
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 09f85813c2572351e7d2f6192c06c7ea55a055a6
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: d2a55ed81017bc8deb10ec9af74278d35b2eea39
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1608-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1608 の機能
 
@@ -45,7 +40,7 @@ ConfigMgr クライアントの準備手順で、キー情報だけではなく�
 他のソフトウェアと親子の関係を設定できるように、インベントリされたソフトウェアのプロパティにフィールドを追加しました。 [インベントリされたソフトウェア] の一覧で、任意のソフトウェアの親を表示したり、すべての子ソフトウェアを非表示したりすることもできます。
 
 ### <a name="configure-a-parent-to-child-relationship"></a>親子のリレーションシップを構成する
-  1. 親ソフトウェアを設定するには、インベントリされたソフトウェア ノードの**インベントリされたソフトウェア** 一覧でソフトウェア項目を右クリックし、**プロパティ** を選択します。
+  1. 親ソフトウェアを設定するには、インベントリされたソフトウェア] ノードの **[インベントリされたソフトウェア]** 一覧でソフトウェア項目を右クリックし、**[プロパティ]** を選択します。
   2. 表示されたダイアログ ボックスで、最初の選択の親ソフトウェアとして設定するソフトウェアを選択します。
 
 ### <a name="filter-the-software-display"></a>ソフトウェアの表示をフィルター処理する
@@ -58,7 +53,7 @@ ConfigMgr クライアントの準備手順で、キー情報だけではなく�
 ## <a name="remote-control-keyboard-translation"></a>リモート コントロール キーボードの変換
 以前は、Configuration Manager は、キーの位置をビューアーの場所から共有先の場所に転送していました。 これは、ビューアーと共有先でキーボードの構成が異なる場合に問題がありました。 たとえば、英語キーボードを使用しているビューアーが「A」を入力しても、共有先のフランス語キーボードでは「Q」となってしまいます。 文字そのものがビューアーのキーボードから共有先に送信され、ビューアーが入力したものが共有先に届くように、既定の動作を変更しています。
 
-共有先のキーボードの配置に従って入力する場合には、ビューアーでこの動作を無効にできます。 動作を変更するには、**[Configuration Manager のリモート コントロール]** で**[アクション]** を選択し、**[キーボード変換を有効にする]** を選択してキーの位置を送信します。
+共有先のキーボードの配置に従って入力する場合には、ビューアーでこの動作を無効にできます。 動作を変更するには、**[Configuration Manager のリモート コントロール]** で **[アクション]** を選択し、**[キーボード変換を有効にする]** を選択してキーの位置を送信します。
 
 > [!NOTE]
 >

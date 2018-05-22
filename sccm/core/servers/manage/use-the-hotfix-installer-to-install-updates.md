@@ -1,26 +1,20 @@
 ---
-title: "修正プログラム インストーラー"
+title: 修正プログラム インストーラー
 titleSuffix: Configuration Manager
-description: "どのような場合に、どのような方法で Configuration Manager の修正プログラム インストーラーを使用して更新プログラムをインストールするかについて説明します。"
-ms.custom: na
+description: どのような場合に、どのような方法で Configuration Manager の修正プログラム インストーラーを使用して更新プログラムをインストールするかについて説明します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 0ed8399c080994745f79f58818781e9d32be7e48
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 5c90889861db55a27da897e709b16b66edece08a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>Use the Hotfix Installer to install updates for System Center Configuration Manager (修正プログラム インストーラーを使用して、System Center Configuration Manager の更新プログラムをインストールする)
 
@@ -78,19 +72,19 @@ ms.lasthandoff: 12/04/2017
 
  Configuration Manager の各更新バンドルは、自己抽出型の .exe ファイル (SFX) です。このファイルには、Configuration Manager の適用対象コンポーネントに更新プログラムをインストールするために必要なファイルが含まれています。 通常、SFX ファイルには次のファイルが含まれています。  
 
-|ファイル|説明|  
+|ファイル|詳細|  
 |----------|-------------|  
-|&lt;製品バージョン\>-QFE-KB&lt;サポート技術情報の記事 ID\>-&lt;プラットフォーム\>-&lt;言語\>.exe|更新プログラム ファイルです。 このファイルのコマンド ラインは、Updatesetup.exe によって管理されます。<br /><br /> たとえば、<br />CM1511RTM-QFE-KB123456-X64-ENU.exe|  
+|&lt;製品バージョン\>-QFE-KB&lt;サポート技術情報の記事 ID\>-&lt;プラットフォーム\>-&lt;言語\>.exe|更新プログラム ファイルです。 このファイルのコマンド ラインは、Updatesetup.exe によって管理されます。<br /><br /> 次に例を示します。<br />CM1511RTM-QFE-KB123456-X64-ENU.exe|  
 |Updatesetup.exe|.msi ラッパーは、更新プログラムのバンドルのインストールを管理します。<br /><br /> 更新プログラムを実行すると、Updatesetup.exe によって、このファイルを実行するコンピューターの表示言語が検出されます。 既定では、更新プログラムのユーザー インターフェイスは英語で表示されます。 ただし、表示言語がサポートされている場合、ユーザー インターフェイスは、コンピューターのローカル言語で表示されます。|  
 |License_&lt;言語\>.rtf|適用対象となる場合、各更新プログラムには、サポートされる言語の 1 つまたは複数のライセンス ファイルが含まれます。|  
-|&lt;製品と更新の種類>-&lt;製品バージョン\>-&lt;サポート技術情報の記事 ID\>-&lt;プラットフォーム\>.msp|更新プログラムが Configuration Manager コンソールまたはクライアントに適用される場合、更新プログラムのバンドルには、個別の Windows インストーラー修正プログラム (.msp) ファイルが含まれます。<br /><br /> たとえば、<br /><br /> **Configuration Manager コンソールの更新プログラム:** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **クライアントの更新プログラム:** ConfigMgr1511-client-KB1234567-i386.msp<br />ConfigMgr1511-client-KB1234567-x64.msp|  
+|&lt;製品と更新の種類>-&lt;製品バージョン\>-&lt;サポート技術情報の記事 ID\>-&lt;プラットフォーム\>.msp|更新プログラムが Configuration Manager コンソールまたはクライアントに適用される場合、更新プログラムのバンドルには、個別の Windows インストーラー修正プログラム (.msp) ファイルが含まれます。<br /><br /> 次に例を示します。<br /><br /> **Configuration Manager コンソールの更新プログラム:** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **クライアントの更新プログラム:** ConfigMgr1511-client-KB1234567-i386.msp<br />ConfigMgr1511-client-KB1234567-x64.msp|  
 
  既定では、更新プログラムのバンドルは、サイト サーバーの .log ファイルに操作の履歴を記録します。 ログ ファイルは、更新プログラムのバンドルと同じ名前で、 **%SystemRoot%/Temp** フォルダーに保存されます。  
 
  更新プログラムのバンドルを実行すると、更新プログラムのバンドルと同じ名前のファイルがコンピューターの一時フォルダーに抽出され、Updatesetup.exe が実行されます。 Updatesetup.exe によって、Configuration Manager のソフトウェア更新プログラム &lt;製品バージョン\> &lt;サポート技術情報の記事番号\> のウィザードが開始されます。  
 
  更新プログラムのスコープに当てはまる場合は、サイト サーバーの System Center Configuration Manager インストール フォルダーに一連のフォルダーがウィザードによって作成されます。 フォルダー構造は   
- **\\\\&lt;サーバー名\>\SMS_&lt;サイト コード\>\Hotfix\\&lt;サポート技術情報の記事番号\>\\&lt;更新プログラムの種類\>\\&lt;プラットフォーム\>**です。  
+ **\\\\&lt;サーバー名\>\SMS_&lt;サイト コード\>\Hotfix\\&lt;サポート技術情報の記事番号\>\\&lt;更新プログラムの種類\>\\&lt;プラットフォーム\>** です。  
 
  次の表に、フォルダー構造内のフォルダーに関する詳細を示します。  
 
@@ -169,7 +163,7 @@ ms.lasthandoff: 12/04/2017
 5.  更新プログラムのバンドルをインストールすると、サイト サーバーの場所 **\\\\&lt;サーバー名\>\SMS_&lt;サイト コード\>\Hotfix\\&lt;サポート技術情報の記事\>\update.sql** に **update.sql** が抽出されます。  
 
 ####  <a name="bkmk_provider"></a> SMS プロバイダーを実行するコンピューターの更新  
- SMS プロバイダーの更新プログラムが含まれた更新バンドルをインストールした後で、SMS プロバイダーを実行する各コンピューターに更新プログラムを展開する必要があります。 この唯一の例外は、更新バンドルをインストールしたサイト サーバーに以前にインストールされた SMS プロバイダーのインスタンスです。 サイト サーバーの SMS プロバイダーのローカル インスタンスは、更新バンドルをインストールすると更新されます。  
+ SMS プロバイダーの更新プログラムが含まれた更新バンドルをインストールした後で、SMS プロバイダーを実行する各コンピューターに更新プログラムを展開する必要があります。 この唯一の例外は、更新バンドルをインストールするサイト サーバーに以前にインストールされた SMS プロバイダーのインスタンスです。 サイト サーバーの SMS プロバイダーのローカル インスタンスは、更新バンドルをインストールすると更新されます。  
 
  SMS プロバイダーを削除してからコンピューターに再インストールする場合は、次に、そのコンピューターに SMS プロバイダーの更新プログラムを再インストールする必要があります。  
 
@@ -205,7 +199,7 @@ ms.lasthandoff: 12/04/2017
  サイト サーバーに更新バンドルをインストールしたら、以下の 3 つの方法のいずれかで他のコンピューターに更新プログラムを展開できます。  
 
 ###  <a name="BKMK_DeploySCUP"></a> Updates Publisher 2011 を使用した更新プログラムのインストール  
- サイト サーバーに更新バンドルをインストールすると、対象コンピューターに更新プログラムを展開するのに使用できる Updates Publisher のカタログ ファイルがインストール ウィザードによって作成されます。 オプション **[パッケージとプログラムを使用して、この更新プログラムを展開する]**を更新する修正プログラムのインストール方法について一般的なガイダンスを提供します。  
+ サイト サーバーに更新バンドルをインストールすると、対象コンピューターに更新プログラムを展開するのに使用できる Updates Publisher のカタログ ファイルがインストール ウィザードによって作成されます。 オプション **[パッケージとプログラムを使用して、この更新プログラムを展開する]** を更新する修正プログラムのインストール方法について一般的なガイダンスを提供します。  
 
  Updates Publisher のカタログは **SCUPCatalog.cab** という名前で、更新バンドルを実行しているコンピューター上の場所 **\\\\&lt;サーバー名\>\SMS_&lt;サイト コード\>\Hotfix\\&lt;サポート技術情報の記事番号\>\SCUP\SCUPCatalog.cab** にあります。  
 
@@ -235,7 +229,7 @@ ms.lasthandoff: 12/04/2017
 ###  <a name="BKMK_DeploySWDist"></a> ソフトウェア展開を使用した更新プログラムのインストール  
  プライマリ サイトまたは中央管理サイトのサイト サーバーに更新バンドルをインストールするときに、ソフトウェア展開の更新プログラム パッケージを作成するようにインストール ウィザードを構成できます。 その後で、更新するコンピューターのコレクションに各パッケージを展開できます。  
 
- ソフトウェア展開パッケージを作成するには、ウィザードの **[ソフトウェア更新プログラムの展開の構成]** ページで、更新する更新プログラム パッケージの各種類のチェック ボックスをオンにします。  使用可能な種類には、サーバー、Configuration Manager コンソール、クライアントを含めることができます。 選択した更新プログラムの種類ごとに、別々のパッケージが作成されます。  
+ ソフトウェア展開パッケージを作成するには、ウィザードの **[ソフトウェア更新プログラムの展開の構成]** ページで、更新する更新プログラム パッケージの各種類のチェック ボックスをオンにします。 使用可能な種類には、サーバー、Configuration Manager コンソール、クライアントを含めることができます。 選択した更新プログラムの種類ごとに、別々のパッケージが作成されます。  
 
 > [!NOTE]  
 >  サーバーのパッケージには、次のコンポーネントの更新プログラムが含まれます。  

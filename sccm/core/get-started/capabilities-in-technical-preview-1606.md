@@ -1,26 +1,20 @@
 ---
-title: "Technical Preview 1606 の機能"
+title: Technical Preview 1606 の機能
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1606 で使用できる機能について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の Technical Preview バージョン 1606 で使用できる機能について説明します。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 134a2f60-811e-4dc9-a8f5-1ce0018c5c12
-caps.latest.revision: 
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 59a57e20a21aac7c650c25e13df0f3180c2110ea
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: f3ee48d60c46def5daef25a2f3654e8a79a0e9e1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1606 の機能
 
@@ -54,7 +48,7 @@ Microsoft Intune と Configuration Manager を使用している場合に、デ�
 コレクションをデバイス カテゴリと関連付けると、指定したカテゴリのすべてのデバイスがそのコレクションに追加されます。
 1.  デバイス コレクションの **[プロパティ]** ダイアログをクリックして、**[規則の追加]** > **[デバイス カテゴリの規則]** の順にクリックします。
 2.  **[デバイス カテゴリのメンバーシップ規則の作成]** ダイアログ ボックスで、コレクション内のすべてのデバイスに適用されるカテゴリを選択します。
-3.  **デバイス カテゴリのメンバーシップ規則の作成** ダイアログ ボックスと コレクションのプロパティ ダイアログ ボックスを閉じます。
+3.  **[デバイス カテゴリのメンバーシップ規則の作成]** ダイアログ ボックスと [コレクションのプロパティ ダイアログ ボックスを閉じます。
 
 ### <a name="change-the-category-of-a-device"></a>デバイスのカテゴリを変更する
 1.  Configuration Manager コンソールの **[資産とコンプライアンス]** ワークスペースで、**[概要]** を展開してから **[デバイス]** をクリックします。
@@ -164,11 +158,11 @@ Configuration Manager コンソールを使用して、Azure にサービスを�
 >クライアント証明書は、クラウド プロキシ サービスで管理するコンピューター上およびクラウド プロキシ コネクタ ポイントをホストしているサイト システム サーバー上で必要です。 これらの任意のコンピューターにクライアント証明書を追加する必要がある場合は、「[Windows コンピューター用のクライアント証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012)」をご覧ください。
 
 1. [実行] ウィンドウで、「**mmc**」を入力して Return キーを押します。
-2. 管理コンソールの ファイル メニューで **スナップインの追加と削除** をクリックします。
-3. スナップインの追加と削除 ダイアログ ボックスで **証明書** をクリックして、**追加**、**コンピューター アカウント**、**次へ**、**ローカル コンピューター** の順にクリックし、**完了** をクリックします。 **[OK]** をクリックしてダイアログ ボックスを閉じます。
+2. 管理コンソールの ファイル] メニューで **[スナップインの追加と削除]** をクリックします。
+3. スナップインの追加と削除] ダイアログ ボックスで **[証明書]** をクリックして、**[追加]**、**[コンピューター アカウント]**、**[次へ]**、**[ローカル コンピューター]** の順にクリックし、**[完了]** をクリックします。 **[OK]** をクリックしてダイアログ ボックスを閉じます。
 4. **[証明書] > [個人用] > [証明書]** に移動します。
 5. コンピューターでクライアント認証用の証明書をダブルクリックして、[証明パス] タブをクリックし、ルート証明機関 (パスの先頭) をダブルクリックします。
-6.  詳細 タブをクリックし、**ファイルにコピー** をクリックします。
+6.  詳細] タブをクリックし、**[ファイルにコピー]** をクリックします。
 7. 既定の証明書形式を使用して証明書のエクスポート ウィザードを完了します。 作成したルート証明書の名前と場所をメモします。 これは後の手順でクラウド プロキシ サービスを構成する際に必要になります。
 
 #### <a name="upload-the-management-certificate-to-azure"></a>管理証明書を Azure にアップロードする
@@ -196,9 +190,9 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 
 1. Configuration Manager コンソールで、**[管理]、[サイトの構成]、[サイト]** の順に移動します。
 2. クラウド プロキシ サービスを使用して管理するクライアントのプライマリ サイトを選択して **[プロパティ]** をクリックします。
-3. プライマリ サイトのプロパティ シートの クライアント コンピューターの通信方法 タブで、**使用可能な場合は PKI クライアント証明書 (クライアント認証機能) を使用する** の横のチェック ボックスをオンにします。
+3. プライマリ サイトのプロパティ シートの クライアント コンピューターの通信方法] タブで、**[使用可能な場合は PKI クライアント証明書 (クライアント認証機能) を使用する]** の横のチェック ボックスをオンにします。
 4. **[サイト システムの証明書失効リスト (CRL) をチェックする]** の横のチェック ボックスがオフになっていることを確認します。 このオプションは、CRL をパブリックに公開した場合にのみ必要になります。
-5. **[OK]**をクリックします。
+5. **[OK]** をクリックします。
 
 #### <a name="add-the-cloud-proxy-connector-point"></a>クラウド プロキシ コネクタ ポイントを追加する
 
@@ -211,7 +205,7 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 1. Configuration Manager コンソールで、**[管理] > [サイトの構成] > [サーバーとサイト システムの役割]** の順に移動します。
 2. クラウド プロキシ トラフィックに構成したい役割のサイト システム サーバーをクリックします。
 3. 役割をクリックして、**[プロパティ]** をクリックします。
-4. 役割のプロパティ シートの クライアント接続 の下で、**HTTPS** を選択し、**Configuration Manager のクラウド プロキシ トラフィックを許可する** の横のチェック ボックスをオンにして **OK** をクリックします。 残りの役割にこれらの手順を繰り返します。
+4. 役割のプロパティ シートの クライアント接続] の下で、**[HTTPS]** を選択し、**[Configuration Manager のクラウド プロキシ トラフィックを許可する]** の横のチェック ボックスをオンにして **[OK]** をクリックします。 残りの役割にこれらの手順を繰り返します。
 
 #### <a name="check-status-on-a-client-on-the-internet"></a>インターネットでクライアントの状態を確認する
 
@@ -233,7 +227,7 @@ Technical Preview 1606 を起動すると、グループ ポリシーの代わ�
 
 ## <a name="osdpreservedriveletter"></a>OSDPreserveDriveLetter タスク シーケンス変数は使用されなくなった
 OSDPreserveDriveLetter タスク シーケンス変数は、タスク シーケンスが対象コンピューターにそのイメージを適用するときに、オペレーティング システム イメージ WIM ファイルにキャプチャされたドライブ文字を使用するかどうかを判断します。
-- Technical Preview 1606 では、このタスク シーケンス変数は使用されていません。
+- Technical Preview 1606 では、このタスク シーケンス変数は非推奨とされます。
 
 既定で、オペレーティング システムの展開中に、Windows セットアップが使用する最適なドライブ文字を決定するようになりました (通常は C:)。 別のドライブを使用するように指定する場合は、オペレーティング システムの適用タスク シーケンスのステップで場所を変更できます。 **[このオペレーティング システムの適用先を選択してください。]** 設定に移動し、**[特定の論理ドライブ文字]** を選択し、使用するドライブを選択します。 設定先のコンピューター上に、選択した文字が割り当てられたドライブが作成されているはずです。 
 
@@ -265,4 +259,4 @@ Technical Preview 1606 では、Configuration Manager コンソールの [更新
 
 -   **実稼働前の名前変更されたオプション:**
 
-    更新とサービス ノードで、**クライアント オプション** という名前だったボタンが **実稼働前クライアントの昇格** に変更されました。
+    更新とサービス] ノードで、**[クライアント オプション]** という名前だったボタンが **[実稼働前クライアントの昇格]** に変更されました。

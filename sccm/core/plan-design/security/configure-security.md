@@ -1,25 +1,20 @@
 ---
-title: "セキュリティの構成"
+title: セキュリティの構成
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager のセキュリティ関連オプションを構成します。"
-ms.custom: na
+description: System Center Configuration Manager のセキュリティ関連オプションを構成します。
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
-caps.latest.revision: "5"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 4066ec43e5553859d983671a0df549a67b2cfe59
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 165f7fc0b73e288ac1718def96a50bc91a181cc2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-security-in-system-center-configuration-manager"></a>System Center Configuration Manager でのセキュリティの構成
 
@@ -58,7 +53,7 @@ ms.lasthandoff: 01/04/2018
 
     この設定の詳細については、「[PKI 信頼されたルート証明書と証明書発行者リストの計画](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRootCAs)」を参照してください。  
 
-9. **OK** を選び、サイトの プロパティ ダイアログ ボックスを閉じます。  
+9. **[OK]** を選び、サイトの [プロパティ ダイアログ ボックスを閉じます。  
 
 階層内のすべてのプライマリ サイトで、この手順を繰り返します。  
 

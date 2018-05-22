@@ -232,7 +232,7 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="to-use-the-application-catalog-from-software-center-does-not-apply-to-the-new-version-of-software-center"></a>ソフトウェア センターからアプリケーション カタログを使用するには (新しいバージョンのソフトウェア センターには適用されません)  
 
-1.  クライアント コンピューターで、**[スタート]****[すべてのプログラム]****[Microsoft System Center 2012]****[Configuration Manager]****[ソフトウェア センター]** の順に選択します。  
+1.  クライアント コンピューターで、**[スタート]** > **[すべてのプログラム]** > **[Microsoft System Center 2012]** > **[Configuration Manager]** > **[ソフトウェア センター]** の順に選択します。  
 
 2.  クライアント設定としてソフトウェア センターの組織名を構成した場合は、指定したとおりに表示されていることを確認します。  
 

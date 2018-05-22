@@ -1,25 +1,20 @@
 ---
-title: "Technical Preview 1610 の機能"
+title: Technical Preview 1610 の機能
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1610 で使用できる機能について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の Technical Preview バージョン 1610 で使用できる機能について説明します。
 ms.date: 01/23/2017
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b31fd3e-875a-4a31-9498-5b050aadce32
-caps.latest.revision: "2"
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 1ab5ce458b4892422aa82ae99ed69ae2eb671583
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0798deff2f4904cb1cecac79251e7bc0688e0d4e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1610 の機能
 
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/01/2017
 
 ![クライアント エージェント設定の [コンピューター エージェント] ページ](media/computeragentsettings.png)
 
-最大の再通知時間は、展開のタイムラインに沿って、クライアント エージェント設定で毎回構成された値に常に基づきます。 たとえば、コンピューター エージェント ページで **展開期限まで 24 時間以上の場合に、ユーザーに通知する間隔 (時間)** 設定が 10 時間に設定されていて、ダイアログが起動する期限まで 24 時間以上ある場合は、ユーザーに最大で 10 時間以内の再通知を設定するオプションが表示されます。 期限が近づくと、展開タイムラインの各コンポーネントに関連するクライアント エージェント設定に合わせて、ダイアログに表示されるオプションが減ります。
+最大の再通知時間は、展開のタイムラインに沿って、クライアント エージェント設定で毎回構成された値に常に基づきます。 たとえば、コンピューター エージェント] ページで **[展開期限まで 24 時間以上の場合に、ユーザーに通知する間隔 (時間)]** 設定が 10 時間に設定されていて、ダイアログが起動する期限まで 24 時間以上ある場合は、ユーザーに最大で 10 時間以内の再通知を設定するオプションが表示されます。 期限が近づくと、展開タイムラインの各コンポーネントに関連するクライアント エージェント設定に合わせて、ダイアログに表示されるオプションが減ります。
 
 さらに、オペレーティング システムを展開するタスク シーケンスなど、危険度の高い展開に対しては、エンドユーザー通知のエクスペリエンスがより煩わしいものになりました。 一時的なタスク バーの代わりに、重要なソフトウェア メンテナンスが必要なことがユーザーに通知されるたび、次のようなダイアログ ボックスがユーザーのコンピューターに表示されます。
 
@@ -146,7 +141,7 @@ Configuration Manager コンソールから、モバイル デバイスのポリ
 
 ### <a name="try-it-out"></a>試してみましょう。
 
-1.  Configuration Manager コンソールで、**資産とコンプライアンス** > **概要** > デバイス の順に移動します。
+1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[概要]** > [デバイス の順に移動します。
 2.  **[リモート デバイスの操作]** メニューの **[同期要求の送信]** をクリックします。
 
 同期には 5 ～ 10 分かかることがあります。 ポリシーに変更が生じると、デバイスに反映されます。 同期要求の状態は、**[デバイス]** ビューの 「**Remote Sync State**」 (リモート同期の状態) 列で、またはデバイスの **[プロパティ]** ダイアログ ボックスで把握できます。

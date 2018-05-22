@@ -2,25 +2,19 @@
 title: バージョン 1606 の新機能
 titleSuffix: Configuraton Manager
 description: System Center Configuration Manager のバージョン 1606 の変更点および導入された新機能について詳しく説明します。
-ms.custom: na
 ms.date: 12/30/2016
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
-caps.latest.revision: 40
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 9c948e0ff84c4741d77b9096e52d3abd765aba7b
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 9aec81239dbfb816cdc6eb66cc17875c5d484e79
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1606 の新機能
 
@@ -60,7 +54,7 @@ Configuration Manager コンソールの [更新とサービス] ノードの変
 
     **[管理]** ワークスペースと **[監視]** ワークスペースの両方で、**[更新とサービス]** ノードのリボンに **[前提条件チェックの警告を無視する]** という名前の新しいボタンが含まれています。
 
-    前提条件チェックの警告を無視するオプションを使用せずに更新プログラムを (更新ウィザードから) インストールし、その更新プログラムのインストールが警告状態になって停止した場合は、後でリボンから **[前提条件チェックの警告を無視する]** を選択できます。 これにより、更新プログラムのインストールの自動継続がトリガーされます。  
+    前提条件チェックの警告を無視する] オプションを使用せずに更新プログラムを (更新ウィザードから) インストールし、その更新プログラムのインストールが警告状態になって停止した場合は、後でリボンから **[前提条件チェックの警告を無視する]** を選択できます。 これにより、更新プログラムのインストールの自動継続がトリガーされます。  
 
 
 
@@ -156,8 +150,8 @@ Configuration Manager コンソールの **[クライアント設定]** で、�
 
 また、新しいタスク シーケンス変数 **SMSTSSoftwareUpdateScanTimeout** が使用できるようになりました。 この変数を使用すると、ソフトウェア更新プログラムのインストール タスク シーケンスのステップ中に、ソフトウェア更新プログラムのスキャンのタイムアウトを制御することができます。 既定値は 30 分です。 詳細については、「[System Center Configuration Manager のタスク シーケンス組み込み変数](../../../osd/understand/task-sequence-built-in-variables.md)」をご覧ください。
 
-### <a name="osdpreservedriveletter-task-sequence-variable-has-been-deprecated"></a>OSDPreserveDriveLetter タスク シーケンス変数の廃止
-OSDPreserveDriveLetter タスク シーケンス変数は使用されなくなりました。 Configuration Manager バージョン 1606 以降、Windows セットアップにより、オペレーティング システムの展開中に使用する最適なドライブ文字 (通常は C:) が既定で決定されます。
+### <a name="osdpreservedriveletter-task-sequence-variable-has-been-deprecated"></a>OSDPreserveDriveLetter タスク シーケンス変数は非推奨とされました
+OSDPreserveDriveLetter タスク シーケンス変数は非推奨とされました。 Configuration Manager バージョン 1606 以降、Windows セットアップにより、オペレーティング システムの展開中に使用する最適なドライブ文字 (通常は C:) が既定で決定されます。
 
 詳細については、「[System Center Configuration Manager のタスク シーケンス組み込み変数](../../../osd/understand/task-sequence-built-in-variables.md)」をご覧ください。
 

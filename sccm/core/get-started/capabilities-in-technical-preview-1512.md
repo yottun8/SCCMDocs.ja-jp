@@ -1,26 +1,21 @@
 ---
-title: "Technical Preview 1512 の機能"
+title: Technical Preview 1512 の機能
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1512 で使用できる機能について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の Technical Preview バージョン 1512 で使用できる機能について説明します。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e4d9e414-1346-4ed4-85d0-64d602b68731
-caps.latest.revision: "6"
-author: erikje
-ms.author: erikje
-manager: angrobe
+author: aczechowski
 robots: noindex,nofollow
-ms.openlocfilehash: e107b24a821ebbd575db9c00a817938d50931344
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 939a767820983c1fe2d575d7a745d6dabb45f25c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1512 の機能
 
@@ -71,7 +66,7 @@ Technical Preview 1512 以降、Configuration Manager を Microsoft Intune と�
 
     -   この設定により、管理者はより詳細な操作ができるようになり、スケジュールされたフル スキャン中にマップされたネットワーク ドライブが必ずスキャンされるリスクなしに、ネットワーク ファイルのオンデマンド スキャンができるようになります。  
 
-    -   この設定を構成できるようにするには、設定 **ネットワーク ファイルをスキャンする** を最初に有効 (はい) にする必要があります。  
+    -   この設定を構成できるようにするには、設定 **[ネットワーク ファイルをスキャンする]** を最初に有効 ([はい) にする必要があります。  
 
     -   既定で、この設定は [いいえ] になっており、マップされたネットワーク ドライブはフル スキャンでアクセスされません。  
 

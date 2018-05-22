@@ -1,25 +1,20 @@
 ---
-title: "Technical Preview 1605 の機能"
+title: Technical Preview 1605 の機能
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager の Technical Preview バージョン 1605 で使用できる機能について説明します。"
-ms.custom: na
+description: System Center Configuration Manager の Technical Preview バージョン 1605 で使用できる機能について説明します。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bafd028-1923-4463-9e3e-ee41bc0c437b
-caps.latest.revision: "36"
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 795b7658f5da8f863f208f01896ae2d7823ff2a6
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 05d87b253f2387dd8428f4b9fadea3fe5f3a48e8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1605 の機能
 
@@ -102,7 +97,7 @@ ms.lasthandoff: 12/01/2017
 
 1.  Azure Active Directory で、"Web アプリケーションや Web API" 管理ツールとして Configuration Manager を登録します。 後で必要なクライアント ID が表示されます。  
 
-    1.  [https://manage.windowsazure.com](https://manage.windowsazure.com) の Active Directory ノードで、Azure Active Directory を選択し、**[アプリケーション]**  >  **[追加]** をクリックします。  
+    1.  [https://manage.windowsazure.com](https://manage.windowsazure.com) の Active Directory ノードで、Azure Active Directory を選択し、**[アプリケーション]** > **[追加]** をクリックします。  
 
     2.  **[組織で開発中のアプリケーションを追加]** をクリックします。  
 
@@ -120,11 +115,11 @@ ms.lasthandoff: 12/01/2017
 
 3.  ビジネス向け Windows ストアで、ストア管理ツールとして Configuration Manager を構成します。  
 
-    1.  [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/managementtools) を開き、サインインを求められたらサインインします。  
+    1.  [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/managementtools) を開き、求められたらサインインします。  
 
     2.  要求された場合は、使用条件に同意します。  
 
-    3.  **[管理ツール]** で、**[Add a management tool]**\(管理ツールを追加) をクリックします。  
+    3.  **[管理ツール]** で、**[Add a management tool]** (管理ツールを追加) をクリックします。  
 
     4.  **[Search for the tool by name]** (名前でツールを検索) で、先ほど AAD で作成したアプリケーションの名前を入力して、**[追加]** クリックします。  
 
@@ -162,11 +157,11 @@ ms.lasthandoff: 12/01/2017
 
 -   このリリースでは、ビジネス向け Windows ストアおよび iOS App Store のボリューム購入アプリが同じビューの **[ストア アプリのライセンス情報]** に統合されています。  
 
--   iOS のボリューム購入アプリの場合、アプリケーションの作成ウィザードの **iOS アプリケーション パッケージ ブラウザー** ダイアログ ボックスから Apple Volume Purchase Program タブが削除されています。 iOS のボリューム購入アプリを作成するには、次の手順を使用します。  
+-   iOS のボリューム購入アプリの場合、アプリケーションの作成ウィザードの **[iOS アプリケーション パッケージ ブラウザー]** ダイアログ ボックスから [Apple Volume Purchase Program タブが削除されています。 iOS のボリューム購入アプリを作成するには、次の手順を使用します。  
 
     1.  1.  Configuration Manager コンソールの **[ソフトウェア ライブラリ]** ワークスペースで **[アプリケーション管理]** を展開し、**[ストア アプリのライセンス情報]** をクリックします。  
 
-    2.  2.  展開するアプリを選び、**[ホーム]** タブの **[作成]** グループで、**[アプリケーションの作成]**をクリックします。  
+    2.  2.  展開するアプリを選び、**[ホーム]** タブの **[作成]** グループで、**[アプリケーションの作成]** をクリックします。  
 
 -   ボリューム購入アプリの Apple VPP トークンの取得とアップロードに使用する Configuration Manager コンソール内の場所が変更されました。 これは、**[Cloud Services]** > **[Apple Volume Purchase Program のトークン]** ノードの下の **[管理者]** ワークスペースで行えます。  
 
@@ -183,7 +178,7 @@ ms.lasthandoff: 12/01/2017
  このリリースでは、オンプレミスの MDM で管理された Windows 10 コンピューターのユーザーにアプリを**使用可能にする**目的で展開できるようになり、ユーザーはこれらのアプリをポータル サイトから自身でインストールできるようになりました。
 この Technical Preview では、会社のポータルを 15 分以上開いたままにすると、エンド ユーザーにエラー メッセージが表示されます。 この問題に対処するには、会社のポータルを再起動します。  
 
-### <a name="before-you-start"></a>アップグレードを開始する前に  
+### <a name="before-you-start"></a>開始する前に  
 
 #### <a name="server-prerequisites"></a>サーバーの前提条件  
 
@@ -257,7 +252,7 @@ ms.lasthandoff: 12/01/2017
     >  -   **[資産とコンプライアンス]** ワークスペースで、構成項目 **OnPremMDM Portal Configuration CI - server urls** を検索します。  
     > -   **[コンプライアンス規則]** の値をアプリケーション カタログの役割が配置されているサイト システムの完全修飾ドメイン名に変更します。  
 
-2.  会社のポータル アプリケーションとその構成がどちらも展開されたら、Configuration Manager コンソールの **[展開]** セクションを使用して、アプリケーションと構成基準が特定のデバイスに対応していることを確認します。 デバイスの スタート メニューに、会社のポータルが **会社のポータル (Technical Preview)** として表示されます。  
+2.  会社のポータル アプリケーションとその構成がどちらも展開されたら、Configuration Manager コンソールの **[展開]** セクションを使用して、アプリケーションと構成基準が特定のデバイスに対応していることを確認します。 デバイスの スタート] メニューに、会社のポータルが **[会社のポータル (Technical Preview)]** として表示されます。  
 
 ### <a name="try-it-out"></a>試してみましょう。  
  次のタスクを完了し、Microsoft Connect サイトの「[Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback)」 (Configuration Manager フィードバック プログラム) ページのフィードバック フォームを使用して、どのように動作したかをお知らせください。  
@@ -332,7 +327,7 @@ ms.lasthandoff: 12/01/2017
 
 1.  サーバーグループ コレクションに[ソフトウェア更新プログラムを展開](https://technet.microsoft.com/library/gg712304.aspx)します。  
 
-2.  [ソフトウェア更新プログラムの展開を監視します](https://technet.microsoft.com/library/gg712304.aspx)。 ソフトウェア更新プログラムの展開の標準の監視ビューに加え、クライアントがソフトウェア更新プログラムをインストールする順番を待機している際に、新しい状態の説明が表示されるようになりました。 **[ロックを待っています]** がこの新しい状態に表示されます。  
+2.  [ソフトウェア更新プログラムの展開を監視](https://technet.microsoft.com/library/gg712304.aspx)します。 ソフトウェア更新プログラムの展開の標準の監視ビューに加え、クライアントがソフトウェア更新プログラムをインストールする順番を待機している際に、新しい状態の説明が表示されるようになりました。 **[ロックを待っています]** がこの新しい状態に表示されます。  
 
 #### <a name="to-clear-the-deployment-locks-for-computers-in-a-server-group"></a>サーバー グループ内のコンピューターの展開のロックを解除するには  
 
@@ -418,7 +413,7 @@ ms.lasthandoff: 12/01/2017
 2.  **[オンプレミスの正常性構成証明書サービスの URL]** を指定し、**[OK]** をクリックします。  
 
 ##  <a name="BKMK_RestartOptions"></a> Windows 10 クライアントにおけるソフトウェア更新プログラムのインストール後の新しい再起動オプション  
- 再起動の必要なソフトウェア更新プログラムが Configuration Manager により展開され、コンピューターにインストールされた場合、再起動が保留中としてスケジュールされ、再起動のダイアログ ボックスが表示されます。 現在、Windows 8 以降のコンピューターでは、再起動が保留中となっているときに、(再起動ダイアログから行う代わりに) Windows 電源オプションを使用してコンピューターをシャットダウンまたは再起動する場合、再起動ダイアログはコンピューターの再起動後もそのまま表示され、コンピューターも構成された期限までに再起動が必要になります。 この Technical Preview では、Configuration Manager ソフトウェアの更新のために再起動が保留中となっているときはいつでも Windows 10 コンピューターの Windows 電源オプションで **[更新と再起動]**および **[更新とシャットダウン]** のオプションを利用できるようになりました。 これらのオプションのいずれかを使用した場合、コンピューターの再起動後に再起動ダイアログは表示されません。  
+ 再起動の必要なソフトウェア更新プログラムが Configuration Manager により展開され、コンピューターにインストールされた場合、再起動が保留中としてスケジュールされ、再起動のダイアログ ボックスが表示されます。 現在、Windows 8 以降のコンピューターでは、再起動が保留中となっているときに、(再起動ダイアログから行う代わりに) Windows 電源オプションを使用してコンピューターをシャットダウンまたは再起動する場合、再起動ダイアログはコンピューターの再起動後もそのまま表示され、コンピューターも構成された期限までに再起動が必要になります。 この Technical Preview では、Configuration Manager ソフトウェアの更新のために再起動が保留中となっているときはいつでも Windows 10 コンピューターの Windows 電源オプションで **[更新と再起動]** および **[更新とシャットダウン]** のオプションを利用できるようになりました。 これらのオプションのいずれかを使用した場合、コンピューターの再起動後に再起動ダイアログは表示されません。  
 
 ##  <a name="BKMK_IMEI"></a> IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言  
  会社が所有するデバイスの International station Mobile Equipment Identity (IMEI) 番号をインポートすることでデバイスを識別できるようになりました。 デバイスの IMEI 番号を含むコンマ区切り値 (.csv) ファイルをアップロードするか、デバイス情報を手動で入力することができます。  iOS デバイスのシリアル番号をインポートすることもできます。  インポートされた情報によって登録するデバイスの所有権が "企業" として設定されます。  Intune ライセンスも、サービスにアクセスする各ユーザーに必要です。  
