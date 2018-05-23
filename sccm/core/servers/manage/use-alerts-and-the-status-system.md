@@ -1,26 +1,20 @@
 ---
-title: "アラートとステータス システム"
+title: アラートとステータス システム
 titleSuffix: Configuration Manager
-description: "アラートを構成し、組み込みステータス システムを使用して、Configuration Manager 展開の状態について常に通知される状態にします。"
-ms.custom: na
+description: アラートを構成し、組み込みステータス システムを使用して、Configuration Manager 展開の状態について常に通知される状態にします。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 84fe2fd0959051ea42e555cb484c95fb82ec8fb3
-ms.sourcegitcommit: 1378532fac2620ddcfd31061982f344a290c2e67
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 891366f7e5fa3f4fd2b8f9a8606e823f0a48c394
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>System Center Configuration Manager のアラートとステータス システムの使用
 
@@ -106,7 +100,7 @@ ms.lasthandoff: 02/20/2018
 
 2.  **[ホーム]** タブの **[設定]** グループで、**[ステータス フィルター規則]** をクリックします。 **[ステータス フィルター規則]** ダイアログ ボックスが開きます。  
 
-3.  **[作成]**をクリックします。  
+3.  **[作成]** をクリックします。  
 
 4.  **ステータス フィルター規則の作成ウィザード**の **[全般]** ページで、新しいステータス フィルター規則の名前とその規則のメッセージ一致条件を指定してから、**[次へ]** をクリックします。  
 
@@ -272,9 +266,9 @@ ms.lasthandoff: 02/20/2018
 
 ##### <a name="to-subscribe-to-email-alerts"></a>電子メール アラートにサブスクライブするには  
 
-1.  Configuration Manager コンソールで、**[監視]** > **[アラート]**に移動します。  
+1.  Configuration Manager コンソールで、**[監視]** > **[アラート]** に移動します。  
 
-2.  アラートを選択してから、 **[ホーム]** タブの **[サブスクリプション]** グループで、 **[サブスクリプションの作成]**をクリックします。  
+2.  アラートを選択してから、 **[ホーム]** タブの **[サブスクリプション]** グループで、 **[サブスクリプションの作成]** をクリックします。  
 
 3.  **[新規サブスクリプション]** ダイアログ ボックスで、次の情報を指定します。  
 
@@ -282,7 +276,7 @@ ms.lasthandoff: 02/20/2018
 
     -   **[電子メール アドレス]**: アラートの送信先の電子メール アドレスを入力します。 セミコロンで複数の電子メール アドレスを区切ることができます。  
 
-    -   **[電子メールの言語]**:この一覧で、電子メール用の言語を指定します。  
+    -   **[電子メールの言語]**: この一覧で、電子メール用の言語を指定します。  
 
 4.  をクリックして **ok** を閉じる、 **新しいサブスクリプション**  ダイアログ ボックスを電子メールのサブスクリプションを作成するとします。  
 

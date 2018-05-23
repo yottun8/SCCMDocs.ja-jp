@@ -1,25 +1,20 @@
 ---
-title: "Endpoint Protection 用 Windows ファイアウォール ポリシー"
+title: Endpoint Protection 用 Windows ファイアウォール ポリシー
 titleSuffix: Configuration Manager
-description: "System Center 2012 Configuration Manager で Endpoint Protection のファイアウォール ポリシーを作成および展開する方法を説明します。"
-ms.custom: na
+description: System Center 2012 Configuration Manager で Endpoint Protection のファイアウォール ポリシーを作成および展開する方法を説明します。
 ms.date: 03/07/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 6ecdfad1-6305-45a8-ae75-3f33b967cb8f
-caps.latest.revision: "5"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: cce8eb704b88e551051e7a90b37f1ca3250c3da3
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: e3030b4390e38ca2dfce6805c04d5b0bb7916bba
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-deploy-windows-firewall-policies-for-endpoint-protection-in-system-center-configuration-manager"></a>System Center Configuration Manager の Endpoint Protection 用 Windows ファイアウォール ポリシーを作成および展開する
 
@@ -33,13 +28,13 @@ System Center 2012 Configuration Manager の Endpoint Protection のファイア
 
 -   Windows ファイアウォールが新しいプログラムをブロックしたときにユーザーに通知するかどうかを制御する。  
 
-1.  Configuration Manager コンソールで、**[ 資産とコンプライアンス ]** をクリックします。  
+1.  Configuration Manager コンソールで、[ **資産とコンプライアンス** ] をクリックします。  
 
-2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ Endpoint Protection ]** を展開してから、**[ Windows ファイアウォール ポリシー ]**をクリックします。  
+2.  [ **資産とコンプライアンス** ] ワークスペースで [ **Endpoint Protection** ] を展開してから、[ **Windows ファイアウォール ポリシー** ]をクリックします。  
 
-3.  **[ ホーム ]** タブの **[ 作成 ]** グループで、**[ Windows ファイアウォール ポリシーの作成 ]** をクリックします。  
+3.  [ **ホーム** ] タブの [ **作成** ] グループで、[ **Windows ファイアウォール ポリシーの作成** ] をクリックします。  
 
-4.  **Windows ファイアウォール ポリシーの作成ウィザード** の **[ 全般 ]** ページで、このファイアウォール ポリシーの名前とオプションの説明を指定し、**[ 次へ ]** をクリックします。  
+4.  **Windows ファイアウォール ポリシーの作成ウィザード** の [ **全般** ] ページで、このファイアウォール ポリシーの名前とオプションの説明を指定し、[ **次へ** ] をクリックします。  
 
 5.  ウィザードの **[プロファイルの設定]** ページで、ネットワーク プロファイルごとに以下の設定を構成します。  
 
@@ -52,27 +47,27 @@ System Center 2012 Configuration Manager の Endpoint Protection のファイア
     -   **[Windows ファイアウォールを有効にする]**  
 
         > [!NOTE]  
-        >  **[ Windows ファイアウォールを有効にする ]** が有効になっていない場合は、ウィザードのこのページの他の設定を利用できません。  
+        >  [ **Windows ファイアウォールを有効にする** ] が有効になっていない場合は、ウィザードのこのページの他の設定を利用できません。  
 
     -   **許可されたプログラムの一覧にあるプログラムからの接続も含み、すべての着信をブロックする**  
 
     -   **Windows ファイアウォールが新しいプログラムをブロックしたときにユーザーに通知する**  
 
-6.  ウィザードの **[ 概要 ]** ページで、実行される操作を確認してから、ウィザードを完了します。  
+6.  ウィザードの [ **概要** ] ページで、実行される操作を確認してから、ウィザードを完了します。  
 
-7.  **[ Windows ファイアウォール ポリシー ]** の一覧に表示される新しい Windows ファイアウォール ポリシーを確認します。  
+7.  [ **Windows ファイアウォール ポリシー** ] の一覧に表示される新しい Windows ファイアウォール ポリシーを確認します。  
 
 ##  <a name="BKMK_Assign"></a> Windows ファイアウォール ポリシーを展開するには  
 
-1.  Configuration Manager コンソールで、**[ 資産とコンプライアンス ]** をクリックします。  
+1.  Configuration Manager コンソールで、[ **資産とコンプライアンス** ] をクリックします。  
 
-2.  **[ 資産とコンプライアンス ]** ワークスペースで **[ Endpoint Protection ]** を展開してから、**[ Windows ファイアウォール ポリシー ]**をクリックします。  
+2.  [ **資産とコンプライアンス** ] ワークスペースで [ **Endpoint Protection** ] を展開してから、[ **Windows ファイアウォール ポリシー** ]をクリックします。  
 
-3.  **[ Windows ファイアウォール ポリシー ]** の一覧で、展開する Windows ファイアウォール ポリシーを選択します。  
+3.  [ **Windows ファイアウォール ポリシー** ] の一覧で、展開する Windows ファイアウォール ポリシーを選択します。  
 
-4.  **[ ホーム ]** タブの **[ 展開 ]** グループで、**[ 展開 ]** をクリックします。  
+4.  [ **ホーム** ] タブの [ **展開** ] グループで、[ **展開** ] をクリックします。  
 
-5.  **[ Windows ファイアウォール ポリシーの展開 ]** ダイアログ ボックスで、このWindows ファイアウォール ポリシーを割り当てるコレクションを指定して、割り当てスケジュールを指定します。 Windows ファイアウォール ポリシーは、このスケジュールとクライアントの Windows ファイアウォール設定を使用して対応を評価し、Windows ファイアウォール ポリシーと一致するように再構成します。  
+5.  [ **Windows ファイアウォール ポリシーの展開** ] ダイアログ ボックスで、このWindows ファイアウォール ポリシーを割り当てるコレクションを指定して、割り当てスケジュールを指定します。 Windows ファイアウォール ポリシーは、このスケジュールとクライアントの Windows ファイアウォール設定を使用して対応を評価し、Windows ファイアウォール ポリシーと一致するように再構成します。  
 
 6.  **[OK]** をクリックし、 **[Windows ファイアウォール ポリシーの展開]** ダイアログ ボックスを閉じて Windows ファイアウォール ポリシーを展開します。  
 

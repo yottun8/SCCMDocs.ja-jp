@@ -2,25 +2,19 @@
 title: アプリケーション管理の概要
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager アプリケーションの管理と展開に必要な基本的な情報について説明します。
-ms.custom: na
 ms.date: 12/23/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
-caps.latest.revision: ''
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: a8a66169f3c187f8fa0319548ddde23b399811f3
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: bcdc5800a1c280c99289528c40e0efee8acf5ad5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-application-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのアプリケーション管理の概要
 
@@ -40,11 +34,11 @@ ms.lasthandoff: 03/27/2018
 
 |概念|説明|    
 |-|-|  
-|**Requirements**|以前のバージョンの Configuration Manager では、多くの場合、アプリケーションの展開先デバイスを含むコレクションを作成していました。 コレクションを引き続き作成することはできますが、要件を使ってアプリケーションの展開に詳細な条件を指定することができます。<br /><br /> たとえば、Windows 10 を実行しているデバイスにのみアプリケーションをインストールするように指定できます。 これにより、アプリケーションをデバイスに展開することはできますが、Windows 10 を実行しているデバイスにしかインストールされません。<br /><br /> Configuration Manager クライアントは、要件を評価して、アプリケーションとその展開の種類のいずれかがインストールされるかどうかを判別します。 その後、適切な展開の種類を判別します。この展開の種類を使用して、アプリケーションがインストールされます。 クライアント設定の **[展開の再評価スケジュールを指定する]** に従って、コンプライアンスを確認するため、要件が再評価されます (既定では 7 日ごと)。<br /><br /> 詳細については、「[アプリケーションの作成手順と展開手順](../../apps/get-started/create-and-deploy-an-application.md)」を参照してください。|  
+|**Requirements**|以前のバージョンの Configuration Manager では、多くの場合、アプリケーションの展開先デバイスを含むコレクションを作成していました。 コレクションを引き続き作成することはできますが、要件を使ってアプリケーションの展開に詳細な条件を指定することができます。<br /><br /> たとえば、Windows 10 を実行しているデバイスにのみアプリケーションをインストールするように指定できます。 これにより、アプリケーションをデバイスに展開することはできますが、Windows 10 を実行しているデバイスにしかインストールされません。<br /><br /> Configuration Manager クライアントは、要件を評価して、アプリケーションとその展開の種類のいずれかがインストールされるかどうかを判別します。 その後、適切な展開の種類を判別します。この展開の種類を使用して、アプリケーションがインストールされます。 クライアント設定の [ **展開の再評価スケジュールを指定する**] に従って、コンプライアンスを確認するため、要件が再評価されます (既定では 7 日ごと)。<br /><br /> 詳細については、「[アプリケーションの作成手順と展開手順](../../apps/get-started/create-and-deploy-an-application.md)」を参照してください。|  
 |**グローバル条件**|単一のアプリケーションの特定の展開の種類では要件が使用されますが、グローバル条件を作成することもできます。 これらは、任意のアプリケーションと展開の種類で使用できる定義済みの要件のライブラリです。<br /><br /> Configuration Manager には、一連の組み込みグローバル条件が用意されていますが、独自の条件を作成することもできます。<br /><br /> 詳細については、「[System Center Configuration Manager でグローバル条件を作成する方法](../../apps/deploy-use/create-global-conditions.md)」を参照してください。|  
 |**展開シミュレーション**|アプリケーションの要件、検出方法、依存関係を評価します。 実際には、アプリケーションをインストールすることなく結果を報告します。<br /><br /> 詳細については、「[System Center Configuration Manager でアプリケーションの展開をシミュレーションする方法](../../apps/deploy-use/simulate-application-deployments.md)」を参照してください。|  
 |**展開の操作**|展開しているアプリケーションをインストールするかアンインストールするかを指定します (ただし、サポートされている場合のみ)。<br /><br /> 詳細については、「[System Center Configuration Manager でアプリケーションを展開する方法](../../apps/deploy-use/deploy-applications.md)」を参照してください。|  
-|**展開の目的**|展開アプリが **必須**であるか **利用可能**であるかを指定します。<br /><br /> **必須**を指定した場合、アプリケーションは、設定されたスケジュールに従って自動的に展開されます。 ただし、ユーザーはアプリケーションの展開ステータスを (非表示にされていなければ) 追跡して、ソフトウェア センターを使用してアプリケーションを期限前にインストールすることができます。<br /><br /> **[利用可能]** を選択した場合、アプリケーションが展開されたユーザーは、公開されているアプリケーションをソフトウェア センターで確認し、必要に応じてインストールできます。<br /><br /> 詳細については、「[System Center Configuration Manager でアプリケーションを展開する方法](../../apps/deploy-use/deploy-applications.md)」を参照してください。|  
+|**展開の目的**|展開アプリが **必須**であるか **利用可能**であるかを指定します。<br /><br /> **必須**を指定した場合、アプリケーションは、設定されたスケジュールに従って自動的に展開されます。 ただし、ユーザーはアプリケーションの展開ステータスを (非表示にされていなければ) 追跡して、ソフトウェア センターを使用してアプリケーションを期限前にインストールすることができます。<br /><br /> [**利用可能** ] を選択した場合、アプリケーションが展開されたユーザーは、公開されているアプリケーションをソフトウェア センターで確認し、必要に応じてインストールできます。<br /><br /> 詳細については、「[System Center Configuration Manager でアプリケーションを展開する方法](../../apps/deploy-use/deploy-applications.md)」を参照してください。|  
 |**リビジョン**|アプリケーションまたはアプリケーションに含まれる展開の種類を修正すると、Configuration Manager はそのアプリケーションの新しいバージョンを作成します。 各アプリケーションのバージョンの履歴を表示したり、プロパティを閲覧したり、アプリケーションの以前のバージョンを復元したり、古いバージョンを削除したりすることができます。<br /><br /> 詳細については、「[System Center Configuration Manager でのアプリケーションの更新とインベントリからの削除](../../apps/deploy-use/update-and-retire-applications.md)」を参照してください。|  
 |**検出方法**|検出方法は、展開されたアプリケーションが既にインストールされているかどうかを判別するために使用されます。 検出方法によってアプリケーションがインストール済みであることが判明した場合、Configuration Manager はそのアプリケーションを再度インストールしようとはしません。<br /><br /> 詳細については、「[System Center Configuration Manager でアプリケーションを作成する方法](../../apps/deploy-use/create-applications.md)」を参照してください。|  
 |**の依存関係**|依存関係は、展開の種類をインストールする前にインストールする必要がある、別のアプリケーションからの 1 つまたは複数の展開の種類を定義します。 展開の種類がインストールされる前に、依存する展開の種類が自動的にインストールされるようにセットアップすることができます。<br /><br /> 詳細については、「[System Center Configuration Manager でアプリケーションを作成する方法](../../apps/deploy-use/create-applications.md)」を参照してください。|  
@@ -55,7 +49,7 @@ ms.lasthandoff: 03/27/2018
  Configuration Manager では、次の種類のアプリケーションを展開できます。  
 
 - Windows インストーラー (*.msi ファイル)
-- Windows アプリケーション パッケージ (*.appx、*.appxbundle)
+- Windows アプリケーション パッケージ (\*.appx、\*.appxbundle)
 - Windows アプリケーション パッケージ (Windows ストア内)
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization 5
@@ -85,7 +79,7 @@ ms.lasthandoff: 03/27/2018
 -   アプリケーションは、要件を満たしていないため、デバイスにインストールされませんでした。 その後、デバイスが変更され、要件を満たすようになります。 Configuration Manager はその変更を検出し、アプリケーションはインストールされます。  
 
 
- **[展開の再評価のスケジュール]** クライアント設定を使用し、アプリケーションの展開の再評価間隔を設定できます。 詳細については、「[クライアント設定について](../../core/clients/deploy/about-client-settings.md)」を参照してください。  
+ [**展開の再評価のスケジュール**] クライアント設定を使用し、アプリケーションの展開の再評価間隔を設定できます。 詳細については、「[クライアント設定について](../../core/clients/deploy/about-client-settings.md)」を参照してください。  
 
 ## <a name="get-started-creating-an-application"></a>アプリケーション作成の概要  
  すぐにアプリケーションの作成を開始する場合は、「[Create and deploy an application](../../apps/get-started/create-and-deploy-an-application.md)」(アプリケーションの作成と展開) に単純なアプリケーションを作成するためのチュートリアルがあります。  

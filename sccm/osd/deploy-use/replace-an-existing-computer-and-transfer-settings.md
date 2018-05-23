@@ -1,25 +1,20 @@
 ---
-title: "既存のコンピューターの置き換えと設定の転送"
+title: 既存のコンピューターの置き換えと設定の転送
 titleSuffix: Configuration Manager
-description: "Configuration Manager で、起動可能なメディア、マルチキャスト、またはソフトウェア センターなどの展開方法から選択して、既存のコンピューターを新しいコンピューターに置き換えます。"
-ms.custom: na
+description: Configuration Manager で、起動可能なメディア、マルチキャスト、またはソフトウェア センターなどの展開方法から選択して、既存のコンピューターを新しいコンピューターに置き換えます。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d28f4363-9e8a-4c54-9cb7-0594fabfff26
-caps.latest.revision: "6"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 862b3b8da0c1f9be0a5883c3f07b2759606d0fc1
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 2693196ab21474877b5eda4ecce4a93737d1ac59
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replace-an-existing-computer-and-transfer-settings-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用して、既存のコンピューターを置き換え、設定を転送する
 

@@ -1,26 +1,20 @@
 ---
-title: "サービス接続ポイントを作成する"
+title: サービス接続ポイントを作成する
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager を使用してサービス接続ポイントを作成します。"
-ms.custom: na
+description: System Center Configuration Manager を使用してサービス接続ポイントを作成します。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 617abb22-d22f-41fb-a76b-1c4259e419d2
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: ee038d8579d63f2afbf0b677181dd06751403ba0
-ms.sourcegitcommit: 0a6b2c53ff4445b5d4f3638fdb0b489d54e333d3
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 3dfd02a84cef31c22023b7fc4cb75931dc82160f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-service-connection-point-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用したサービス接続ポイントの作成
 
@@ -36,7 +30,7 @@ ms.lasthandoff: 12/14/2017
 
 ## <a name="configure-the-service-connection-point-role"></a>サービス接続ポイントの役割を構成する
 
-1.  Configuration Manager コンソールで、**[管理]** をクリックします。
+1.  Configuration Manager コンソールで、[ **管理** ] をクリックします。
 
 2.  **[管理]** ワークスペースで、**[サイトの構成]** を展開してから **[サーバーとサイト システムの役割]** をクリックします。
 
@@ -46,7 +40,7 @@ ms.lasthandoff: 12/14/2017
 
     -   既存のサイト システム サーバー: サービス接続ポイントの役割をインストールするサーバーをクリックします。 **[ホーム]** タブの **[サーバー]** グループにある **[サイト システムの役割の追加]** をクリックして、サイト システムの役割の追加ウィザードを開始します。
 
-4.  **[システムの役割の選択]** ページで、 **[サービス接続ポイント]**を選んで、 **[次へ]**をクリックします。
+4.  **[システムの役割の選択]** ページで、 **[サービス接続ポイント]** を選んで、 **[次へ]** をクリックします。
 ![サービス接続ポイントを作成する](../media/mdm-service-connection-point.png)
 
 * ウィザードを完了します。

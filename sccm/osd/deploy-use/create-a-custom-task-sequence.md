@@ -1,26 +1,20 @@
 ---
-title: "カスタム タスク シーケンスの作成"
+title: カスタム タスク シーケンスの作成
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager でカスタム タスク シーケンスを編集して、タスク シーケンスにステップを追加します。"
-ms.custom: na
+description: System Center Configuration Manager でカスタム タスク シーケンスを編集して、タスク シーケンスにステップを追加します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b9800a66-7541-47ca-8276-da8ef6cb6d1b
-caps.latest.revision: "6"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: add5ad2ed82e394b62613951fcaad6c38fee2465
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: e5a0e6d8066fc52bf64dd4e53eba4c4dc1c84aa6
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-custom-task-sequence-with-system-center-configuration-manager"></a>System Center Configuration Manager のカスタム タスク シーケンスの作成
 
@@ -43,7 +37,7 @@ System Center Configuration Manager で作成したばかりのカスタム タ�
 
 5.  **[タスク シーケンス情報]** ページで、タスク シーケンスの名前、タスク シーケンスの説明、および使用するタスク シーケンスのオプションのブート イメージを指定して、ウィザードを完了します。  
 
- タスク シーケンスの作成ウィザードを完了すると、Configuration Manager によってカスタム タスク シーケンスが **[タスク シーケンス]** ノードに追加されます。 これで、タスク シーケンスを編集してタスク シーケンス ステップを追加できるようになります。  
+ タスク シーケンスの作成ウィザードを完了すると、Configuration Manager によってカスタム タスク シーケンスが [**タスク シーケンス**] ノードに追加されます。 これで、タスク シーケンスを編集してタスク シーケンス ステップを追加できるようになります。  
 
  使用可能なタスク シーケンス ステップの一覧については、「[タスク シーケンスのステップ](../understand/task-sequence-steps.md)」をご覧ください。  
 

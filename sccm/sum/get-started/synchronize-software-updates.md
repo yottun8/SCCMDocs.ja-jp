@@ -1,23 +1,20 @@
 ---
-title: "ソフトウェア更新プログラムの同期の管理"
+title: ソフトウェア更新プログラムの同期の管理
 titleSuffix: Configuration Manager
-description: "ソフトウェア更新プログラムの同期のスケジュール、手動によるソフトウェア更新プログラムの同期の開始、ソフトウェア更新プログラムの同期の監視を行うには、次の手順を実行します。"
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: ソフトウェア更新プログラムの同期のスケジュール、手動によるソフトウェア更新プログラムの同期の開始、ソフトウェア更新プログラムの同期の監視を行うには、次の手順を実行します。
+author: aczechowski
 ms.date: 10/06/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
-ms.openlocfilehash: 3a17fb317553c783250b92212315a6ea895105c6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 7e2e5493f1aaee448c6573d08a57a69aafb478c7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="BKMK_SUMSync"></a> ソフトウェア更新プログラムの同期
 
@@ -37,26 +34,26 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-schedule-software-updates-synchronization"></a>ソフトウェア更新プログラムの同期をスケジュールするには  
 
-  1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
+  1.  Configuration Manager コンソールで、[ **管理**] をクリックします。  
 
   2.  [管理] ワークスペースで **[サイトの構成]** を展開して、**[サイト]** をクリックします。  
 
   3.  結果ウィンドウで、中央管理サイトまたはスタンドアロン プライマリ サイトをクリックします。  
 
-  4.  **[ホーム]** タブの **[設定]** グループで、**[サイト コンポーネントの構成]** をクリックして **[ソフトウェアの更新ポイント]** を選択します。  
+  4.  [ **ホーム** ] タブの [ **設定** ] グループで、[ **サイト コンポーネントの構成**] をクリックして [ **ソフトウェアの更新ポイント**] を選択します。  
 
   5.  [ソフトウェアの更新ポイント コンポーネントのプロパティ] ダイアログ ボックスで、**[スケジュールによる同期を有効にする]** を選択して、同期スケジュールを指定します。  
 
 ## <a name="manually-start-software-updates-synchronization"></a>ソフトウェア更新プログラムの同期を手動で開始
-Configuration Manager コンソールで **[ソフトウェア ライブラリ]** ワークスペースの **[すべてのソフトウェア更新]** ノードから、最上位サイトのソフトウェア更新プログラムの同期を手動で開始することもできます。  
+Configuration Manager コンソールで [**ソフトウェア ライブラリ**] ワークスペースの [**すべてのソフトウェア更新**] ノードから、最上位サイトのソフトウェア更新プログラムの同期を手動で開始することもできます。  
 
 ソフトウェア更新プログラムの同期を手動で開始するには、最上位サイトで次の手順を実行します。  
 
 #### <a name="to-manually-start-software-updates-synchronization"></a>ソフトウェア更新プログラムの同期を手動で開始するには  
 
-  1.  中央管理サイトまたはスタンドアロン プライマリ サイトに接続された Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
+  1.  中央管理サイトまたはスタンドアロン プライマリ サイトに接続された Configuration Manager コンソールで、[**ソフトウェア ライブラリ**] をクリックします。  
 
-  2.  [ソフトウェア ライブラリ] ワークスペースで、**[ソフトウェア更新プログラム]** を展開して、**[すべてのソフトウェア更新プログラム]** または **[ソフトウェア更新プログラム グループ]** をクリックします。  
+  2.  [ソフトウェア ライブラリ] ワークスペースで、[ **ソフトウェア更新プログラム** ] を展開して、[ **すべてのソフトウェア更新プログラム** ] または [ **ソフトウェア更新プログラム グループ**] をクリックします。  
 
   3.  **[ホーム]** タブの **[作成]** グループで、**[ソフトウェア更新プログラムの同期]** をクリックします。 ダイアログ ボックスで **[はい]** をクリックして、同期プロセスの開始を確定します。  
 
@@ -70,7 +67,7 @@ Configuration Manager コンソールで **[ソフトウェア ライブラリ]*
 
   1.  Configuration Manager コンソールで、**[監視]** をクリックします。  
 
-  2.  **[監視]** ワークスペースで、**[ソフトウェアの更新ポイントの同期ステータス]** をクリックします。  
+  2.  [ **監視** ] ワークスペースで、[ **ソフトウェアの更新ポイントの同期ステータス**] をクリックします。  
 
     Configuration Manager 階層内のソフトウェアの更新ポイントが結果ウィンドウに表示されます。 このビューから、すべてのソフトウェアの更新ポイントの同期ステータスを監視することができます。 同期プロセスの詳細情報が必要な場合は、各サイト サーバーの <*ConfigMgrInstallationPath*>\Logs にある wsyncmgr.log ファイルを確認できます。  
 

@@ -1,26 +1,20 @@
 ---
-title: "タスク シーケンス メディアの起動前コマンド"
+title: タスク シーケンス メディアの起動前コマンド
 titleSuffix: Configuration Manager
-description: "起動前コマンドに使用するスクリプトを作成し、起動前コマンドに関連付けられたコンテンツを配布し、メディアで起動前コマンドを構成します。"
-ms.custom: na
+description: 起動前コマンドに使用するスクリプトを作成し、起動前コマンドに関連付けられたコンテンツを配布し、メディアで起動前コマンドを構成します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccc9f652-2953-4c38-8a90-c799484105ca
-caps.latest.revision: "6"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 3a1b39bb988d305c02d85ef168789d081637c084
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: bc20195824af03a361cb38837a061b68e78d098a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prestart-commands-for-task-sequence-media-in-system-center-configuration-manager"></a>System Center Configuration Manager でのタスク シーケンス メディアの起動前コマンド
 
@@ -56,13 +50,13 @@ env("MyCustomVariable") = "varname"
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開して、**[タスク シーケンス]** をクリックします。  
 
-3.  **[ホーム]** タブの **[作成]** グループで **[タスク シーケンス メディアの作成]** をクリックして、タスク シーケンス メディアの作成ウィザードを起動します。  
+3.  [ **ホーム** ] タブの [ **作成** ] グループで [ **タスク シーケンス メディアの作成** ] をクリックして、タスク シーケンス メディアの作成ウィザードを起動します。  
 
 4.  **[メディアの種類の選択]** ページで、**[スタンドアロン メディア]**、**[起動可能なメディア]**、または **[事前設定されたメディア]** をクリックして、**[次へ]** をクリックします。  
 
 5.  ウィザードの **[カスタマイズ]** ページに進みます。 ウィザードの他のページを構成する方法の詳細については、「[タスク シーケンス メディアの作成](../deploy-use/create-task-sequence-media.md)」を参照してください。  
 
-6.  **[カスタマイズ]** ページで、次の情報を指定して **[次へ]** をクリックします。  
+6.  [ **カスタマイズ** ] ページで、次の情報を指定して [ **次へ** ] をクリックします。  
 
     -   **[起動前コマンドを有効にする]** を選択します。  
 
@@ -75,6 +69,6 @@ env("MyCustomVariable") = "varname"
 
     -   **[設定]** をクリックし、起動前コマンド ファイルと関連付けられているパッケージを選択します。  
 
-    -   **[参照]** をクリックして、起動前コマンドのコンテンツをホストする配布ポイントを選択します。  
+    -   **[設定]** をクリックし、起動前コマンド ファイルと関連付けられているパッケージを選択します。  
 
 7.  ウィザードを完了します。  
