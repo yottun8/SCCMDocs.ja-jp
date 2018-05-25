@@ -1,26 +1,20 @@
 ---
-title: "Windows to Go の展開"
+title: Windows to Go の展開
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager で Windows To Go をプロビジョニングして、外部ドライブから起動する Windows To Go ワークスペースを作成する方法について説明します。"
-ms.custom: na
+description: System Center Configuration Manager で Windows To Go をプロビジョニングして、外部ドライブから起動する Windows To Go ワークスペースを作成する方法について説明します。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
-caps.latest.revision: "8"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 9d902f75911b484d22d38b07cea40e1c00ea0d93
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 12b7a28ff5ea0e2e1870c0c37edd8e056930b09f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用した Windows to Go の展開
 
@@ -386,7 +380,7 @@ ms.lasthandoff: 12/12/2017
 
 11. **[配布ポイント]** ページで、次の情報を指定します。  
 
-    -   **[配布ポイント]** : **[配布ポイントからコンテンツをダウンロードしてローカルで実行する]**を指定します。  
+    -   **[配布ポイント]** : **[配布ポイントからコンテンツをダウンロードしてローカルで実行する]** を指定します。  
 
     -   **[同じサブネットにある他のクライアントとのコンテンツの共有を許可する]**: コンテンツを既にダウンロードしてキャッシュしているネットワーク上の他のクライアントから、クライアントがコンテンツをダウンロードできるようにして、ネットワークの負荷を軽減するには、このオプションを選択します。 このオプションは Windows BranchCache を利用し、Windows Vista SP2 以降を実行しているコンピューターで使用できます。  
 
@@ -417,7 +411,7 @@ ms.lasthandoff: 12/12/2017
 
 6.  **[展開設定]** ページで、次の設定を構成してから、**[次へ]** をクリックします。  
 
-    -   **[目的]**: **[利用可能]**を選択します。 タスク シーケンスをユーザーに展開すると、ユーザーは、公開されているタスク シーケンスをアプリケーション カタログで参照して、必要に応じて要求できます。 タスク シーケンスをデバイスに展開すると、ユーザーは、タスク シーケンスをソフトウェア センターで参照して、必要に応じてインストールできます。  
+    -   **[目的]**: **[利用可能]** を選択します。 タスク シーケンスをユーザーに展開すると、ユーザーは、公開されているタスク シーケンスをアプリケーション カタログで参照して、必要に応じて要求できます。 タスク シーケンスをデバイスに展開すると、ユーザーは、タスク シーケンスをソフトウェア センターで参照して、必要に応じてインストールできます。  
 
     -   **[利用できるようにする項目]**: タスク シーケンスを構成マネージャー クライアント、メディア、または PXE で使用可能にするかどうかを指定します。  
 

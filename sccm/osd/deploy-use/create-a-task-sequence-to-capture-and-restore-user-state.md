@@ -1,26 +1,20 @@
 ---
-title: "ユーザー状態をキャプチャおよび復元するタスク シーケンスの作成"
+title: ユーザー状態をキャプチャおよび復元するタスク シーケンスの作成
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager のタスク シーケンスを使用してオペレーティング システムの展開シナリオでのユーザー状態のデータをキャプチャして復元します。"
-ms.custom: na
+description: System Center Configuration Manager のタスク シーケンスを使用してオペレーティング システムの展開シナリオでのユーザー状態のデータをキャプチャして復元します。
 ms.date: 06/07/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d566d85c-bf7a-40e7-8239-57640a1db5f4
-caps.latest.revision: "7"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 3fb30240c7d926657e01a4b9e03cef38fd2ee128
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: ab5cbaf481842cf814d5f1b90af4f6743bb8a803
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-system-center-configuration-manager"></a>System Center Configuration Manager でユーザー状態をキャプチャおよび復元するためのタスク シーケンスを作成する
 
@@ -94,7 +88,7 @@ ms.lasthandoff: 12/12/2017
 
         -   **オフライン モードでキャプチャする (Windows PE のみ)**: この設定では、既存のオペレーティング システムを起動せずに、Windows PE からユーザー状態をキャプチャできます。 USMT 4.0 より前のバージョンの USMT を使用している場合、この設定は無視されます。  
 
-    -   **[Volume Copy Shadow Services (VSS) を使用してキャプチャする]**を選択します。 USMT 4.0 より前のバージョンの USMT を使用している場合、この設定は無視されます。  
+    -   **[Volume Copy Shadow Services (VSS) を使用してキャプチャする]** を選択します。 USMT 4.0 より前のバージョンの USMT を使用している場合、この設定は無視されます。  
 
      **[オプション]** タブで、次のオプションを指定します。  
 
@@ -133,12 +127,12 @@ ms.lasthandoff: 12/12/2017
 
         -   **[キャプチャしたすべてのユーザー プロファイルを標準オプションを使用して復元する]** をクリックし、ユーザー プロファイルをすべて復元します。  
 
-        -   **[Customize user profile restore]\(ユーザー プロファイルの復元方法をカスタマイズする\)** をクリックし、個別のユーザー プロファイルを復元します。 ユーザー プロファイル情報を含む構成ファイル (miguser.xml、migsys.xml、または migapp.xml) を選択します。 ここでは config.xml 構成ファイルを使用できませんが、OSDMigrageAdditionalCaptureOptions 変数と OSDMigrateAdditionalRestoreOptions 変数を使用して、USMT コマンド ラインに手動で追加することができます。
+        -   **[Customize user profile restore] (ユーザー プロファイルの復元方法をカスタマイズする\)** をクリックし、個別のユーザー プロファイルを復元します。 ユーザー プロファイル情報を含む構成ファイル (miguser.xml、migsys.xml、または migapp.xml) を選択します。 ここでは config.xml 構成ファイルを使用できませんが、OSDMigrageAdditionalCaptureOptions 変数と OSDMigrateAdditionalRestoreOptions 変数を使用して、USMT コマンド ラインに手動で追加することができます。
 
     -   **[ローカル コンピューターのユーザー プロファイルを復元する]** を選択し、復元したプロファイルの新しいパスワードを入力します。 ローカル プロファイルのパスワードは移行できません。  
 
         > [!NOTE]  
-        >  ローカル ユーザー アカウントがあり、[[ユーザー状態のキャプチャ](../understand/task-sequence-steps.md#BKMK_CaptureUserState)] ステップを使用して、**[すべてのユーザー プロファイルを標準オプションでキャプチャする]**を選択する場合、[[ユーザー状態の復元](../understand/task-sequence-steps.md#BKMK_RestoreUserState)] ステップで、**[ローカル コンピューターのユーザー プロファイルを復元する]** 設定を選択する必要があります。そうしないと、タスク シーケンスは失敗します。  
+        >  ローカル ユーザー アカウントがあり、[[ユーザー状態のキャプチャ](../understand/task-sequence-steps.md#BKMK_CaptureUserState)] ステップを使用して、**[すべてのユーザー プロファイルを標準オプションでキャプチャする]** を選択する場合、[[ユーザー状態の復元](../understand/task-sequence-steps.md#BKMK_RestoreUserState)] ステップで、**[ローカル コンピューターのユーザー プロファイルを復元する]** 設定を選択する必要があります。そうしないと、タスク シーケンスは失敗します。  
 
     -   ファイルを復元できない状態で **[ユーザー状態の復元]** 手順を続行する場合は、**[復元できないファイルがあっても続行する]** を選択します。  
 
