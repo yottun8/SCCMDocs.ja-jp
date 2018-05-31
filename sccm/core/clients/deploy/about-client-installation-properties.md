@@ -1,7 +1,7 @@
 ---
-title: クライアント インストール プロパティ
+title: クライアント インストール パラメーターとプロパティ
 titleSuffix: Configuration Manager
-description: Configuration Manager クライアントをインストールするための ccmsetup コマンド ライン プロパティについて説明します。
+description: Configuration Manager クライアントをインストールするための ccmsetup コマンド ライン パラメーターとプロパティについて説明します。
 ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,17 +10,18 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 27479bf3db9ab0ed5d842f5cbf9db4e399a4168d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 735a8da57c0225aee533568eb997dc82d9816d6b
+ms.sourcegitcommit: db6074317d5c68ebb5fc478be5bceeb441aa0737
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220430"
 ---
-# <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>System Center Configuration Manager のクライアント インストール プロパティについて
+# <a name="about-client-installation-parameters-and-properties-in-system-center-configuration-manager"></a>System Center Configuration Manager のクライアント インストール パラメーターとプロパティについて
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-CCMSetup.exe コマンドを使用して、Configuration Manager クライアントをインストールします。 コマンド ラインでこれらのクライアント インストール プロパティを指定すると、インストール動作が変更されます。
+CCMSetup.exe コマンドを使用して、Configuration Manager クライアントをインストールします。 コマンド ラインでクライアント インストール パラメーターを指定すると、インストール動作が変更されます。 コマンド ラインでクライアント インストール プロパティを指定すると、インストールされたクライアント エージェントの初期構成が変更されます。
 
 
 
@@ -38,16 +39,16 @@ CCMSetup.exe コマンドを使用して、Configuration Manager クライアン
 > [!NOTE]  
 >  Configuration Manager では、Client.msi ファイルを直接実行することはできません。  
 
- CCMSetup.exe には、インストールをカスタマイズするための[コマンド ライン プロパティ](#ccmsetup-exe-command-line-properties)が用意されています。 CCMSetup.exe コマンド ラインで client.msi の動作を変更するプロパティを指定することもできます。  
+ CCMSetup.exe によって、インストールをカスタマイズするための[コマンド ライン パラメーター](#ccmsetup-exe-command-line-parameters)が提供されます -- パラメーターは先頭に円記号が付き、慣例により小文字で表されます。 コロンの直後に値を置くことで、必要に応じてパラメーターの値を指定できます。 CCMSetup.exe コマンド ラインで client.msi の動作を変更するプロパティを指定することもできます -- 慣例により、プロパティはすべて大文字で表されます。 等号の直後に必要な値を置くことで、プロパティの値を指定します。  
 
 > [!IMPORTANT]  
->  client.msi のプロパティの前に、CCMSetup のプロパティを指定します。  
+>  client.msi のプロパティを指定する前に、CCMSetup のパラメーターを指定します。  
 
  CCMSetup.exe およびサポート ファイルは、サイト サーバーの Configuration Manager インストール フォルダーの **[クライアント]** フォルダーにあります。 このフォルダーは **&lt;サイト サーバー名\>\SMS_&lt;サイト コード\>\Client** としてネットワークで共有されます。  
 
  コマンド プロンプトで、CCMSetup.exe コマンドは次の形式を使用します。  
 
- `CCMSetup.exe [<Ccmsetup properties>] [<client.msi setup properties>]`  
+ `CCMSetup.exe [<Ccmsetup parameters>] [<client.msi setup properties>]`  
 
  次に例を示します。  
 
@@ -64,7 +65,7 @@ CCMSetup.exe コマンドを使用して、Configuration Manager クライアン
 -   SMSFP01 というフォールバック ステータス ポイントを使用するように client.msi で指定します。  
 
 > [!NOTE]  
->  プロパティにスペースがある場合は、引用符で囲みます。  
+>  パラメーターの値がスペースを含む場合は、引用符で囲みます。  
 
 
 > [!IMPORTANT]  
@@ -72,11 +73,11 @@ CCMSetup.exe コマンドを使用して、Configuration Manager クライアン
 
 
 
-##  <a name="ccmsetupexe-command-line-properties"></a>CCMSetup.exe のコマンドライン プロパティ  
+##  <a name="ccmsetupexe-command-line-parameters"></a>CCMSetup.exe のコマンドライン パラメーター  
 
 ### <a name=""></a>/?  
 
-CCMSetup.exe のコマンド ライン プロパティを表示する **[CCMSetup]** のダイアログ ボックスを開きます。  
+ccmsetup.exe のコマンド ライン パラメーターを表示する **[CCMSetup]** ダイアログ ボックスを開きます。  
 
 例: **ccmsetup.exe /?**  
 
@@ -85,7 +86,7 @@ CCMSetup.exe のコマンド ライン プロパティを表示する **[CCMSetu
  ファイルのダウンロード場所を指定します。 ローカルまたは UNC パスを使用します。 ファイルはサーバー メッセージ ブロック (SMB) プロトコルを使用してダウンロードされます。 **/source** を使用するには、クライアント インストール用の Windows ユーザー アカウントに、その場所に対する読み取りアクセス許可が必要です。
 
 > [!NOTE]  
->  コマンド ラインで **/source** プロパティを複数回使用して、ダウンロードの代替場所を指定することができます。  
+>  コマンド ラインで **/source** パラメーターを複数回使用して、ダウンロードの代替場所を指定することができます。  
 
  例: **ccmsetup.exe /source:"\\\computer\folder"**  
 
@@ -94,40 +95,40 @@ CCMSetup.exe のコマンド ライン プロパティを表示する **[CCMSetu
  コンピューターの接続先のソース管理ポイントを指定します。 コンピューターではこの管理ポイントを使用して、インストール ファイルの最も近い配布ポイントを見つけます。 配布ポイントがない、またはコンピューターで 4 時間経っても配布ポイントからファイルをダウンロードできない場合、指定された管理ポイントからファイルがダウンロードされます。  
 
 > [!IMPORTANT]  
->  このプロパティは、ダウンロード ソースを見つけるためのコンピューターの最初の管理ポイントを指定するために使用され、任意のサイト内の任意の管理ポイントを指定できます。 クライアントは管理ポイントに*割り当て* られません。   
+>  このパラメーターは、ダウンロード ソースを見つけるためのコンピューターの最初の管理ポイントを指定するために使用され、任意のサイト内の任意の管理ポイントを指定できます。 クライアントは管理ポイントに*割り当て* られません。   
 
  クライアント接続におけるサイト システムの役割の構成によって、コンピューターは HTTP または HTTPS 接続でファイルをダウンロードします。 構成されている場合は、ダウンロードで BITS スロットルが使用されます。 すべての配布ポイントおよび管理ポイントが HTTPS クライアント接続のみに構成されている場合は、クライアント コンピューターに有効なクライアント証明書があることを確認します。  
 
-**/mp** コマンド ライン プロパティを使用して、複数の管理ポイントを指定できます。 コンピューターで最初の管理ポイントへの接続に失敗した場合は、指定されたリスト内の次の管理ポイントが試行されます。 複数の管理ポイントは、値をセミコロンで区切って指定します。
+**/mp** コマンド ライン パラメーターを使用して、複数の管理ポイントを指定できます。 コンピューターで最初の管理ポイントへの接続に失敗した場合は、指定されたリスト内の次の管理ポイントが試行されます。 複数の管理ポイントは、値をセミコロンで区切って指定します。
 
-クライアントが HTTPS を使用して管理ポイントに接続する場合、通常はコンピューター名ではなく FQDN を指定する必要があります。 値は、管理ポイントの PKI 証明書のサブジェクトまたはサブジェクトの別名と一致している必要があります。 Configuration Manager は、証明書のコンピューター名を使用してイントラネットでの接続をサポートしますが、推奨されるセキュリティのベスト プラクティスは FQDN です。
+クライアントが HTTPS を使用して管理ポイントに接続する場合、通常はコンピューター名ではなく FQDN を指定する必要があります。 値は、管理ポイントの PKI 証明書のサブジェクトまたはサブジェクトの別名と一致している必要があります。 Configuration Manager では、イントラネットの接続のために証明書のコンピューター名を使用することがサポートされますが、FQDN を使用することが推奨されます。
 
 コンピューター名を使用する場合の例: `ccmsetup.exe /mp:SMSMP01`  
 
 FQDN を使用する場合の例: `ccmsetup.exe /mp:smsmp01.contoso.com`  
 
-このプロパティでは、クラウド管理ゲートウェイの URL を指定できます。 この URL を使用して、インターネット ベースのデバイスにクライアントをインストールします。 このプロパティの値を取得するには、次の手順を使用します。
+このパラメーターでは、クラウド管理ゲートウェイの URL を指定できます。 この URL を使用して、インターネット ベースのデバイスにクライアントをインストールします。 このパラメーターの値を取得するには、次の手順を使用します。
 - クラウド管理ゲートウェイを作成します。
 - アクティブなクライアントで、管理者として Windows PowerShell コマンド プロンプトを開きます。 
 - 
           `(Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP` コマンドを実行します。
-- **/mp** プロパティで使用する "https://" プレフィックスを追加します。
+- **/mp** パラメーターで使用する "https://" プレフィックスを追加します。
 
 クラウド管理ゲートウェイの URL を使用する場合の例: `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
  > [!Important]
- > **/mp** プロパティにクラウド管理ゲートウェイの URL を指定する場合は、先頭に **https://** を指定する必要があります。
+ > **/mp** パラメーターにクラウド管理ゲートウェイの URL を指定する場合は、先頭に **https://** を指定する必要があります。
 
 
 ### <a name="retryltminutes"></a>/retry:&lt;分\>
 
-CCMSetup.exe がインストール ファイルのダウンロードに失敗した場合の再試行間隔です。 CCMSetup は、**downloadtimeout** プロパティで指定された制限に達するまで再試行し続けます。  
+CCMSetup.exe がインストール ファイルのダウンロードに失敗した場合の再試行間隔です。 CCMSetup は、**downloadtimeout** パラメーターで指定された制限に達するまで再試行し続けます。  
 
 例: `ccmsetup.exe /retry:20`  
 
 ### <a name="noservice"></a>/noservice
 
-CCMSetup がサービスとして実行 (既定) されるのを防ぎます。 CCMSetup がサービスとして実行される場合、コンピューターのローカル システム アカウントのコンテキストで実行されます。 このアカウントには、インストールに必要なネットワーク リソースにアクセスするための十分な権限がない可能性があります。 **/noservice** を使用すると、CCMSetup.exe は、インストールを開始するために使用するユーザー アカウントの関連で実行されます。 また、スクリプトを使用して、**/service** プロパティで CCMSetup.exe を実行すると、CCMSetup.exe はサービスが開始されると終了し、インストールの詳細を正しくレポートしないことがあります。   
+CCMSetup がサービスとして実行 (既定) されるのを防ぎます。 CCMSetup がサービスとして実行される場合、コンピューターのローカル システム アカウントのコンテキストで実行されます。 このアカウントには、インストールに必要なネットワーク リソースにアクセスするための十分な権限がない可能性があります。 **/noservice** を使用すると、CCMSetup.exe は、インストールを開始するために使用するユーザー アカウントの関連で実行されます。 また、スクリプトを使用して **/service** パラメーターと共に CCMSetup.exe を実行すると、サービスが開始した後に CCMSetup.exe は終了し、インストールの詳細を正しくレポートしない場合があります。   
 
 例: `ccmsetup.exe /noservice`  
 
@@ -145,13 +146,13 @@ CCMSetup がローカル システム アカウントを使用してサービス
 
 ### <a name="logon"></a>/logon
 
-任意のバージョンのクライアントが既にインストールされている場合は、このプロパティでクライアント インストールを停止するように指定します。  
+任意のバージョンのクライアントが既にインストールされている場合は、このパラメーターでクライアント インストールを停止するように指定します。  
 
 例: `ccmsetup.exe /logon`  
 
 ### <a name="forcereboot"></a>/forcereboot
 
- インストールを完了するためにクライアント コンピューターの再起動が必要な場合に、CCMSetup でクライアント コンピューターを強制的に再起動することを指定します。 このプロパティが指定されていない場合、CCMSetup は再起動が必要なときに終了します。 次回手動で再起動した後に続行します。  
+ インストールを完了するためにクライアント コンピューターの再起動が必要な場合に、CCMSetup でクライアント コンピューターを強制的に再起動することを指定します。 このパラメーターが指定されていない場合、CCMSetup は再起動が必要なときに終了します。 次回手動で再起動した後に続行します。  
 
  例: `CCMSetup.exe /forcereboot`  
 
@@ -179,10 +180,10 @@ CCMSetup がインストール ファイルのダウンロードを試行して�
 
 ### <a name="usepkicert"></a>/UsePKICert
 
- 指定されるとクライアントは、利用可能であれば、クライアントの認証を含んだ PKI 証明書を使用します。 クライアントで有効な証明書が見つからない場合は、自己署名証明書による HTTP 接続が使用されます。 このプロパティを使用しない場合でも、この動作は同じです。
+指定されるとクライアントは、利用可能であれば、クライアントの認証を含んだ PKI 証明書を使用します。 クライアントで有効な証明書が見つからない場合は、自己署名証明書による HTTP 接続が使用されます。 このパラメーターを使用しない場合でも、この動作は同じです。
 
 > [!NOTE]  
->  一部のシナリオでは、クライアントをインストールし、クライアントの証明書を引き続き使用する場合、このプロパティを指定する必要はありません。 これらのシナリオには、クライアント プッシュおよびソフトウェアの更新ポイント ベースを使用したクライアントのインストールが含まれます。 しかし、手動でクライアントをインストールするときは、このプロパティを指定し、 **/mp** プロパティを使用して HTTPS クライアント接続のみを許可するように構成された管理ポイントを指定する必要があります。 インターネットのみの通信用にクライアントをインストールする場合も、このプロパティを指定する必要があります。 CCMALWAYSINF=1 プロパティを、インターネット ベースの管理ポイントとサイト コードのプロパティと共に使用します。 インターネット ベースのクライアント管理の詳細については、「[インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)」を参照してください。  
+>  一部のシナリオでは、クライアントをインストールし、クライアントの証明書を引き続き使用する場合、このパラメーターを指定する必要はありません。 これらのシナリオには、クライアント プッシュおよびソフトウェアの更新ポイント ベースを使用したクライアントのインストールが含まれます。 しかし、手動でクライアントをインストールするときは、このパラメーターを指定し、**/mp** パラメーターを使用して HTTPS クライアント接続のみを許可するように構成された管理ポイントを指定する必要があります。 インターネットのみの通信用にクライアントをインストールする場合も、このパラメーターを指定する必要があります。 CCMALWAYSINF=1 プロパティを、インターネット ベースの管理ポイント (CCMHOSTNAME) とサイト コード (SMSSITECODE) のプロパティと共に使用します。 インターネット ベースのクライアント管理の詳細については、「[インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)」を参照してください。  
 
  例: `CCMSetup.exe /UsePKICert`  
 
@@ -200,8 +201,8 @@ CCMSetup がインストール ファイルのダウンロードを試行して�
 
 クライアント インストールのプロパティを一覧表示するテキスト ファイルの名前を指定します。
 
-- **/noservice** CCMSetup プロパティを指定しない場合、このファイルは CCMSetup フォルダーに置く必要があります。このフォルダーは、32 ビット版と 64 ビット版のいずれのオペレーティング システムでも %Windir%\\Ccmsetup にあります。
-- **/noservice** プロパティを指定する場合、このファイルは CCMSetup.exe を実行するフォルダーと同じフォルダーに存在する必要があります。  
+- **/noservice** CCMSetup パラメーターを指定しない場合、このファイルは CCMSetup フォルダーに置く必要があります。このフォルダーは、32 ビット版と 64 ビット版のいずれのオペレーティング システムでも %Windir%\\Ccmsetup にあります。
+- **/noservice** パラメーターを指定する場合、このファイルは CCMSetup.exe を実行するフォルダーと同じフォルダーに存在する必要があります。  
 
 例: `CCMSetup.exe /config:&lt;Configuration File Name.txt\>`  
 
@@ -211,7 +212,7 @@ CCMSetup がインストール ファイルのダウンロードを試行して�
 
 ### <a name="skipprereqltfilename"></a>/skipprereq:&lt;ファイル名\>
 
- Configuration Manager クライアントのインストール時に、指定した前提条件のプログラムが CCMSetup.exe でインストールされないように指定します。 このプロパティでは複数値の入力がサポートされます。 個々の値を区切るには、セミコロン文字 (;) を使用します。  
+ Configuration Manager クライアントのインストール時に、指定した前提条件のプログラムが CCMSetup.exe でインストールされないように指定します。 このパラメーターでは複数値の入力がサポートされます。 個々の値を区切るには、セミコロン文字 (;) を使用します。  
 
 
  例: `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe` または `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe;windowsupdateagent30_x86.exe`  
@@ -227,7 +228,7 @@ CCMSetup.exe でクライアントをインストールするときに、指定�
 例: `CCMSetup.exe /ExcludeFeatures:ClientUI` は、クライアントにソフトウェア センターをインストールしません。  
 
 > [!NOTE]  
->  **ClientUI** が、**/ExcludeFeatures** プロパティでサポートされる唯一の値です。  
+>  **ClientUI** が、**/ExcludeFeatures** パラメーターでサポートされる唯一の値です。  
 
 
 
@@ -250,7 +251,7 @@ CCMSetup.exe でクライアントをインストールするときに、指定�
 
 ### <a name="ccmsetupcmd"></a>CCMSETUPCMD 
 
-ccmsetup.msi によってインストールされた後に ccmsetup.exe に渡されるコマンドライン プロパティを指定します。 他のプロパティは引用符の中に含めます。 Intune MDM インストール方法を使用して Configuration Manager クライアントをブートストラップするときにこのプロパティを使用します。 
+ccmsetup.msi によってインストールされた後に ccmsetup.exe に渡されるコマンドライン パラメーターとプロパティを指定します。 他のプロパティは引用符の中に含めます。 Intune MDM インストール方法を使用して Configuration Manager クライアントをブートストラップするときにこのプロパティを使用します。 
 
 例: `ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
 
@@ -322,7 +323,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
  クライアントが常にインターネット ベースであり、イントラネットには接続しないことを指定するには、**1** に設定します。 クライアントの接続の種類に **[常にインターネット]** と表示されます。  
 
- このプロパティは、インターネット ベースの管理ポイントの FQDN を指定する CCMHOSTNAME と共に使用します。 また、CCMSetup プロパティ /UsePKICert、およびサイト コードと共に使用します。  
+ このプロパティは、インターネット ベースの管理ポイントの FQDN を指定する CCMHOSTNAME と共に使用します。 また、CCMSetup パラメーター /UsePKICert、およびサイト コードと共に使用します。  
 
  インターネット ベースのクライアント管理の詳細については、「[インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)」を参照してください。  
 
