@@ -10,11 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 3a667ae075ac688d4b49789ed88f858c2ff39397
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9324126014245b586ba8fed87c670ac829f6cb81
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703470"
 ---
 # <a name="co-management-for-windows-10-devices"></a>Windows 10 デバイスの共同管理    
  以前の Windows 10 の更新プログラムで、Windows 10 デバイスをオンプレミスの Active Directory (AD) とクラウドベースの Azure AD に同時に結合できるようになっています (ハイブリッド Azure AD)。 Configuration Manager バージョン 1710 以降、共同管理ではこの機能強化を活用し、Configuration Manager と Intune の両方を使用して複数の Windows 10 バージョン 1709 デバイスを同時に管理できるようになりました。 <!-- 1350871 -->
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="enable-co-management"></a>共同管理を有効にする 
  Configuration Manager コンソールで、**[管理]** > **[概要]** > **[クラウド サービス]** > **[Co-management]\(共同管理\)** の順に移動します。 リボンから  **[Configure co-management]\(共同管理の構成\)** を選んで、**共同管理オンボード ウィザード**を開きます。 
    
-1. **[サブスクリプション]** ページで **[サインイン]** をクリックして Intune テナントにサインインし、**[次へ]** をクリックします。    
+1. **[サブスクリプション]** ページで **[サインイン]** をクリックして Intune テナントにサインインし、**[次へ]** をクリックします。 テナントへのサインインに使用されたアカウントに Intune ライセンスが割り当てられていることを確認してください。割り当てられていない場合は失敗し、"User not recognized" (ユーザーが認識されません) というエラー メッセージが表示されます。   
 2. **[Enablement]\(有効化\)** ページで **[Automatic enrollment into Intune]\(Intune への自動登録\)** 設定を選択します。 必要な場合には、Intune に既に登録されているデバイスのコマンド ラインをコピーします。 
 3. **[ワークロード]** ページで、各ワークロードについて、Intune による管理のために移動するデバイス グループを選択します。
 4. **[ステージング]** ページで、**[パイロット コレクション]** にするデバイス コレクションを選択します。 **[概要]** を確認して、ウィザードを完了します。 

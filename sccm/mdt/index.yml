@@ -1,54 +1,55 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: "Microsoft Deployment Toolkit ドキュメント"
+title: Microsoft Deployment Toolkit ドキュメント
 metadata:
   document_id: bfb05467-f6ec-4cb2-b108-254972de2d06
-  title: "Microsoft Deployment Toolkit ドキュメント"
-  description: "Microsoft Deployment Toolkit では、デスクトップとサーバーのデプロイを自動化するための、ツール、プロセス、およびガイダンスの統合されたコレクションを提供します。"
-  keywords: "フリーウェア、ツール、プロセス、ワークフロー、自動化、デプロイ、自動化された、配布"
-  author: arob98
-  ms.author: angrobe
-  manager: angrobe
-  ms.date: 12/27/2017
+  title: Microsoft Deployment Toolkit ドキュメント
+  description: Microsoft Deployment Toolkit では、デスクトップとサーバーのデプロイを自動化するための、ツール、プロセス、およびガイダンスの統合されたコレクションを提供します。
+  keywords: フリーウェア、ツール、プロセス、ワークフロー、自動化、デプロイ、自動化された、配布
+  author: aczechowski
+  ms.author: aaroncz
+  manager: dougeby
+  ms.date: 06/04/2018
   ms.topic: landing-page
   ms.devlang: na
   ms.prod: configuration-manager
-  ms.openlocfilehash: 56462ae538a2336f94a1883d099ad7b45c714633
-  ms.sourcegitcommit: 32bbc006a41868a6d9a708db5f7b372d9c71d985
+  ms.openlocfilehash: e02afe511d0c9f240bba68161551857d13d33de0
+  ms.sourcegitcommit: 10b3a571e2a822bbd7b58a25840ee1e6f703a7a2
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/08/2018
+  ms.lasthandoff: 06/06/2018
+  ms.locfileid: "34814224"
 sections:
 - items:
   - type: markdown
-    text: "Microsoft Deployment Toolkit では、デスクトップとサーバーのデプロイを自動化するための、ツール、プロセス、およびガイダンスの統合されたコレクションを提供します。"
+    text: Microsoft Deployment Toolkit では、デスクトップとサーバーのデプロイを自動化するための、ツール、プロセス、およびガイダンスの統合されたコレクションを提供します。
 - items:
   - type: list
     style: cards
     className: cardsM
     columns: 2
     items:
-    - href: whats-new-in-mdt.md
-      html: "<p>新機能を確認します。</p>"
+    - href: https://aka.ms/mdtdownload
+      html: <p>最新 MDT をダウンロードします。</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_whats-new.svg
-      title: "新機能"
+        src: https://docs.microsoft.com/media/common/i_download-generic.svg
+      title: MDT のダウンロード
     - href: release-notes.md
-      html: "<p>今回のリリースに含まれる修正とバグの詳細です。</p>"
+      html: <p>今回のリリースに含まれる修正とバグの詳細です。</p>
       image:
         src: https://docs.microsoft.com/media/common/i_whats-new.svg
-      title: "リリース ノート"
+      title: リリース ノート
     - href: samples-guide.md
-      html: "<p>特定のデプロイ シナリオに向けたサンプル構成の設定です。</p>"
+      html: <p>特定のデプロイ シナリオに向けたサンプル構成の設定です。</p>
       image:
         src: https://docs.microsoft.com/media/common/i_code-samples.svg
-      title: "サンプル ガイド"
-    - href: user-driven-installation-developers-guide.md
-      html: "<p>組織用のユーザー駆動型インストールをカスタマイズします。</p>"
+      title: サンプル ガイド
+    - href: use-the-mdt.md
+      html: <p>ライト タッチ (LTI)、ゼロ タッチ (ZTI)、ユーザー駆動型 (UDI) インストールを使用し、Windows 展開を実行します。</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_architecture.svg
-      title: "開発者ガイド"
-- title: "クイックスタート"
+        src: https://docs.microsoft.com/media/common/i_api-reference.svg
+      title: Microsoft Deployment Toolkit の使用方法
+- title: クイックスタート
   items:
   - type: list
     style: cards
@@ -56,33 +57,33 @@ sections:
     columns: 3
     items:
     - href: lite-touch-installation-guide.md
-      title: "起動可能なメディアを使用したインストール"
+      title: 起動可能なメディアを使用したインストール
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
     - href: user-driven-installation-guide.md
-      title: "ユーザー駆動型インストールでのデプロイ"
+      title: ユーザー駆動型インストールでのデプロイ
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
     - href: sccm-guide.md
-      title: "新しいコンピューターへのデプロイ"
+      title: 新しいコンピューターへのデプロイ
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-- title: "その他のリソース"
+- title: その他のリソース
   items:
   - type: list
     style: cards
     className: cardsM
     columns: 3
     items:
-    - href: use-the-mdt.md
-      title: "ライトタッチ、ゼロタッチ、およびユーザー駆動型デプロイを使用したデプロイの実行。"
-      image:
-        src: https://docs.microsoft.com/media/common/i_api-reference.svg
     - href: toolkit-reference.md
-      title: "デプロイに役立つ構成設定。"
+      title: デプロイに役立つ構成設定。
       image:
         src: https://docs.microsoft.com/media/common/i_download-install.svg
     - href: troubleshooting-reference.md
-      title: "ログ ファイル、エラー コード、およびその他のトラブルシューティングの詳細。"
+      title: ログ ファイル、エラー コード、およびその他のトラブルシューティングの詳細。
       image:
         src: https://docs.microsoft.com/media/common/i_support.svg
+    - href: user-driven-installation-developers-guide.md
+      title: 組織用のユーザー駆動型インストールをカスタマイズします。
+      image:
+        src: https://docs.microsoft.com/media/common/i_architecture.svg

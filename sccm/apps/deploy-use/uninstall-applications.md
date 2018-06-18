@@ -10,11 +10,12 @@ ms.assetid: 0ea3edaa-27c6-4391-9896-cd97d9c5d06d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7587fa6d96d6f8737921c9e5edae992cdd0ea614
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: e5b0ee5cb677cff5e57f24a20122fb017aea056c
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569665"
 ---
 # <a name="uninstall-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager でのアプリケーションのアンインストール
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 -   展開の目的が **[アンインストール]** である展開は、要件の規則を確認しません。 その展開が実行されているコンピューターにアプリケーションがインストールされると、そのアプリケーションはアンインストールされます。  
 
 > [!IMPORTANT]  
-> **[アンインストール]** の展開操作を使用してアプリケーションを展開する前に、コレクションに対するアプリケーションの既存の展開またはシミュレート済みの展開を削除する必要があります。  
+> アンインストール アクションでアプリケーションを展開するには、既存のアプリケーション展開、シミュレーションされた展開、このアプリケーションを含むタスク シーケンス展開を先に削除する必要があります。 
 
  展開の種類を作成する方法の詳細については、「[アプリケーションの作成](../../apps/deploy-use/create-applications.md)」を参照してください。  
 

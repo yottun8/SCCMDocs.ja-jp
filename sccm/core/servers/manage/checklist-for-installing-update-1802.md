@@ -1,8 +1,8 @@
 ---
-title: 1802 のチェックリスト | System Center Configuration Manager
+title: 1802 のチェックリスト
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager バージョン 1802 に更新する前に、実行するアクションについて説明します。
-ms.date: 03/22/2018
+ms.date: 06/08/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 6af92de2-b2c7-4d5c-affd-6cce81979fb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f16f69e7b359112a03bb26c964ac0a6990c0b24
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 74fa4e9240cf4a3d369d6b20bcb9233fb6319a8d
+ms.sourcegitcommit: 690f64bd02139f893bd0b45e2e0f00ed6bb4e1c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35259300"
 ---
 # <a name="checklist-for-installing-update-1802-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム 1802 をインストールするためのチェックリスト
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/03/2018
 
 System Center Configuration Manager の Current Branch を使用している場合、バージョン 1802 のコンソール内の更新プログラムをインストールし、階層を前のバージョンから更新できます  <!-- baseline only statement: -->(バージョン 1802 は[構成基準メディア](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)としても利用でき、インストール メディアを使用して新しい階層の最初のサイトをインストールできます)。
 
-バージョン 1802 の更新プログラムを取得するには、階層の最上位サイトでサービス接続ポイントのサイト システムの役割を利用する必要があります。 これはオンラインまたはオフライン モードで可能です。 階層で Microsoft からダウンロードした更新プログラム パッケージは、**[管理] &gt; [概要] &gt; [クラウド サービス] &gt; [更新とサービス]** にあります。
+バージョン 1802 の更新プログラムを取得するには、階層の最上位サイトでサービス接続ポイントを利用する必要があります。 このサイト システムの役割はオンライン モードまたはオフライン モードで使用可能です。 階層で Microsoft からダウンロードした更新プログラム パッケージは、コンソールの **[管理]** ワークスペースの下の **[更新とサービス]** ノードにあります。
 
 -   更新プログラムが**利用可能**として掲載されているとき、インストールできます。 バージョン 1802 のインストール前に、[更新プログラム 1802 のインストールに関する](#about-installing-update-1802)次の情報と、更新プログラムを開始する前に行う構成の[チェックリスト](#checklist)を確認します。
 
@@ -141,10 +142,14 @@ Configuration Manager では、ネットワーク負荷分散 (NLB) クラスタ
 
 これは、階層内のサイトが更新プログラムをインストールするタイミングの制御に役立ちます。 詳細については、「[サイト サーバーのサービス ウィンドウ](/sccm/core/servers/manage/service-windows)」を参照してください。
 
+**サポートされる拡張機能を確認する:**   
+<!--SCCMdocs#587-->   
+Microsoft または Microsoft パートナーの他の製品で Configuration Manager を拡張する場合は、その製品でバージョン 1802 がサポートされていることを確認します。 この情報については、製品のベンダーに確認してください。 たとえば、Microsoft Deployment Toolkit [リリース ノート](/sccm/mdt/release-notes)を参照します。
+
 **セットアップ前提条件チェッカーを実行する:**   
 更新プログラムが**利用可能**としてコンソールに表示されているとき、更新プログラムのインストール前に、前提条件チェッカーを別個に実行できます。 (サイトへの更新プログラムのインストール時に、前提条件チェッカーが再度実行されます。)
 
-前提条件の確認をコンソールから実行するには、**[管理]、[概要]、[クラウド サービス]、[更新とサービス]** の順に選択します。 次に、**Configuration Manager 1802 更新プログラム パッケージ**を右クリックし、**[前提条件チェックを実行]** を選択します。
+コンソールから前提条件チェックを実行するには、**[管理]** ワークスペースに移動して、**[更新とサービス]** を選択します。 **Configuration Manager 1802** 更新プログラム パッケージを選択し、リボンの **[前提条件チェックを実行]** をクリックします。
 
 前提条件チェックの開始と監視に関する詳細については、「[System Center Configuration Manager のコンソール内の更新プログラムのインストール](/sccm/core/servers/manage/install-in-console-updates)」トピックの「**手順 3: 更新プログラムをインストールする前の前提条件チェッカーの実行**」を参照してください。
 
@@ -167,3 +172,4 @@ Configuration Manager では、ネットワーク負荷分散 (NLB) クラスタ
 3.  更新を始める前に無効にした、プライマリ サイトでの管理ポイントのデータベース レプリカを、再構成します。
 4.  更新を始める前に無効にしたデータベース メンテナンス タスクを、再構成します。
 5.  更新プログラムをインストールする前にクライアントのパイロット運用を構成した場合は、作成した計画に従ってクライアントをアップグレードします。
+6.  Configuration Manager のすべての拡張機能を使用する場合は、この Configuration Manager 更新プログラムをサポートするために最新バージョンに更新します。 

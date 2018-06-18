@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: b8bc778f4bcede45d3035b8b119fc3e4a4df4978
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b295dad503b801ff9d04767f75c1688107016d0b
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569682"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>MDM 機関を Intune スタンドアロンに変更する
 
@@ -53,7 +54,9 @@ MDM 機関の変更に備えて、次の情報を確認します。
 3.  Configuration Manager で MDM 機関を設定したときに元々使用していた Intune テナントにサインインします。
 4.  **[次へ]** をクリックして、ウィザードを完了します。
 5.  これで MDM 機関はリセットされました。 Configuration Manager コンソールの [Microsoft Intune サブスクリプション] ノードに Intune サブスクリプションは表示されなくなります。
-6.  以前に使用したのと同じ Intune テナントを使用して、[Azure Portal で Intune](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) にログインします。    
+6.  [Intune ポータル](https://aka.ms/IntunePortal)にログインします。
+7.  [Microsoft Intune] ブレードで、**[デバイスの登録]** をクリックします。
+8.  [Device enrollment Overview]\(デバイスの登録概要\) ブレードで、**[MDM 権限]** プロパティを確認します。
 
   > [!Important]    
   > Intune のクラシック コンソールを使用しないでください。 Azure Portal で Intune にログインする必要があります。

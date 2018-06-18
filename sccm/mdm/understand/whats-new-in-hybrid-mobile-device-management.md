@@ -2,7 +2,7 @@
 title: ハイブリッド MDM の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。
-ms.date: 05/09/2018
+ms.date: 06/04/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 72aeff7874456c3866ccb658395b8706057bdfaf
-ms.sourcegitcommit: 7bec1331c4f3096e6a278ff9ea0e929cff0a9cb9
+ms.openlocfilehash: 62b86310b8a7eb183cc5e759e9c1087b80a72d6b
+ms.sourcegitcommit: 032e6e19b819863e43e36b24b57761d0a173d0dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34754575"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -43,12 +44,29 @@ ms.lasthandoff: 05/10/2018
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
+#### <a name="intune-app-protection-policies-and-microsoft-edge"></a>Intune アプリ保護ポリシーと Microsoft Edge 
+<!--1818968,1818969-->
+モバイル デバイス (iOS と Android) 向けの Microsoft Edge ブラウザーが Microsoft Intune アプリ保護ポリシー対応になりました。 iOS デバイスか Android デバイスの利用者が Edge アプリケーションで企業 Azure Active Directory アカウントを利用してサインインすると、Intune によって保護されます。 iOS デバイスの場合、**[Require managed browser for web content]\(Web コンテンツに Managed Browser を要求する\)** ポリシーによって、Edge が管理されているとき、Edge でリンクを開くことができます。
+
 #### <a name="requesting-help-in-the-company-portal-for-windows-10"></a>Windows 10 ポータル サイト でのヘルプの要求 
 <!--1874137-->
 Windows 10 のポータル サイトでは、ユーザーが問題のヘルプを入手するワークフローを開始した時点で、アプリ ログ ファイルを直接 Microsoft に送信するようになりました。 この動作によって、Microsoft に発生した問題をトラブルシューティングして解決しやすくなりました。  
 
 
 ### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (現在のブランチ) の新機能
+
+#### <a name="android-for-work-and-lookout-onboarding-moved-to-intune-on-azure"></a>Android for Work と Lookout のオンボーディングが Azure の Intune に移動
+<!--2355022,2357366-->
+Intune の最新更新プログラムを適用すると、Azure Portal の Intune のハイブリッド モバイル デバイス管理で、Android for Work 統合と Lookout Mobile Threat Defense 統合を有効にし、管理できます。 この更新プログラムが公開される前は、Intune Classic (Silverlight) ポータルでのみこれらの統合を構成できました。
+ 
+注: Lookout は、ハイブリッドでサポートされている唯一の Mobile Threat Defense (MTD) プロバイダーです。 以前に他の MTD プロバイダーと統合していた場合、Azure Portal の Intune に引き続き表示されます。 そのコネクタを削除した場合、再び追加することはできません。
+ 
+これらの変更は、既存の機能には影響を与えません。 関連するアプリ、レポート、ポリシーの管理には、引き続き Configuration Manager コンソールを使用します。
+ 
+詳細については、以下の記事を参照してください。
+- [Android ハイブリッド デバイスの管理をセットアップする](/sccm/mdm/deploy-use/enroll-hybrid-android)
+- [デバイス、ネットワーク、アプリケーションのリスクに基づき、会社のリソースへのアクセスを管理する](/sccm/mdm/deploy-use/lookout-mobile-threat-defense-in-configuration-manager)
+
 
 #### <a name="support-for-new-versions-of-cisco-anyconnect-client-for-ios"></a>iOS 用 Cisco AnyConnect クライアントの新しいバージョンのサポート
 <!--1357393-->
@@ -454,119 +472,6 @@ Azure Active Directory (Azure AD) を使用している場合、モバイル デ
 - **macOS VPN プロファイルの Cisco (IPsec) のサポート**      
   接続タイプとして Cisco (IPsec) を指定して macOS VPN プロファイルを作成できます。 詳細については、「[VPN プロファイルの作成](/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles)」を参照してください。
   <!-- 1321367 -->
-
-
-## <a name="april-2017"></a>2017 年 4 月
-
-### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
-
-- **管理対象ブラウザーで利用できる MyApps**  
-  Microsoft MyApps では、管理対象ブラウザー内のサポートが改善されました。 管理対象ではない管理対象ブラウザーのユーザーは MyApps サービスに直接移動します。そこで管理者によってプロビジョニングされた自分の SaaS アプリにアクセスできます。 Intune 管理の対象になっているユーザーは、組み込まれている管理対象ブラウザーのブックマークから MyApps に引き続きアクセスできます。
-
-- **管理対象ブラウザーとポータル サイトの新しいアイコン**  
-  管理対象ブラウザーは、Android 版アプリと iOS 版アプリの両方で更新されたアイコンを受け取ります。 新しいアイコンには更新された Intune バッジが含まれ、Enterprise Mobility + Security (EM+S) の他のアプリとの一貫性が向上します。 管理対象ブラウザーの新しいアイコンは、[Intune アプリ UI の新機能に関するページ](https://docs.microsoft.com/intune/whats-new-app-ui)で確認できます。
-
-  ポータル サイトは、Android 版アプリ、iOS 版アプリ、Windows 版アプリの更新されたアイコンを受け取り、EM+S の他のアプリとの一貫性を向上させます。 アイコンは 4 月から 5 月後半にかけてすべてのプラットフォームに徐々に提供されます。
-
-- **Android ポータル サイトのサインイン進捗状況インジケーター**  
-  Android ポータル サイト アプリの更新プログラムには、ユーザーがアプリを起動または再開したとき、サインイン進捗状況インジケーターが表示されます。 このインジケーターには新しい状態が次々と表示されます。"接続しています..." から始まり、"サインインしています..." に進み、さらに "セキュリティ要件を確認しています..." に進み、その後、ユーザーはアプリにアクセスできます。 Android のポータル サイト アプリの新しい画面は [Intune アプリ UI の新機能に関するページ](https://docs.microsoft.com/intune/whats-new-app-ui)で確認できます。
-
-- **アプリが SharePoint Online にアクセスすることを禁止する**  
-  アプリ基準の条件付きアクセス ポリシーを作成し、アプリ保護ポリシーが適用されていないアプリが [SharePoint Online](https://docs.microsoft.com/intune-classic/deploy-use/mam-ca-for-sharepoint-online) にアクセスすることを禁止できるようになりました。 アプリ基準の条件付きアクセス シナリオでは、Azure ポータルを利用して SharePoint Online へのアクセスを与えるアプリを指定できます。
-
-### <a name="new-in-configuration-manager-technical-preview-1704"></a>Configuration Manager Technical Preview 1704 の新機能
-
-- **アプリ構成ポリシーを使用した Android アプリの構成**  
-  Android for Work デバイスでアプリを実行するとき、ユーザーは Configuration Manager のアプリ構成ポリシーを使って、事前に構成された設定を配布します。 Android アプリ構成ポリシーは、Android for Work を実行しているデバイス上でのみ使用できます。 これらのポリシーは、Play for Work ストアから承認されたアプリに適用されます。 詳しくは、「[アプリ構成ポリシーを使用した Android アプリの構成](/sccm/core/get-started/capabilities-in-technical-preview-1704#configure-android-apps-with-app-configuration-policies)」をご覧ください。
-
-
-
-## <a name="march-2017"></a>2017 年 3 月
-
-### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
-
-- **Android 用ポータル サイト アプリに関する新しいユーザー エクスペリエンス**  
-  Android のポータル サイト アプリのユーザー インターフェイスが変わり、より現代的な外観になりました。 注目の新機能:
-
-  - 色: ポータル サイトのタブ ヘッダーに IT が設定したブランディングの色が付きます。
-  - アプリ: **[アプリ]** タブの **[おすすめアプリ]** ボタンと **[すべてのアプリ]** ボタンが更新されました。
-  - 検索: **[アプリ]** タブの **[検索]** ボタンはフローティング アクション ボタンです。
-  - アプリ ナビゲーション: **[すべてのアプリ]** ビューで **[おすすめ]**、**[すべて]**、**[カテゴリ]** のタブ付きビューが表示され、移動がより簡単になりました。
-  - サポート: **[マイ デバイス]** タブと **[IT に連絡]** タブが更新され、読みやすくなりました。
-
-  以上の変更に関する詳細については、「[Intune とエンド ユーザー アプリの UI の更新](https://docs.microsoft.com/intune/whats-new-app-ui)」を参照してください。
-
-- **Windows 10 ポータル サイトの署名スクリプト**  
-  Windows 10 ポータル サイト アプリをダウンロードし、サイドロードする必要がある場合に、スクリプトを利用し、組織のアプリ署名プロセスを簡素化および合理化できるようになりました。 スクリプトとその使用方法に関する手順をダウンロードする方法については、TechNet ギャラリーの「[Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/win10cpscript)」 (Windows 10 ポータル サイトの Microsoft Intune の署名スクリプト) を参照してください。 この告知の詳細については、Intune サポート チーム ブログの「[Updating your Windows 10 Company Portal app](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/)」 (Windows 10 ポータル サイト アプリを更新する) を参照してください。
-
-- **中国の Android ユーザー向けサポートを強化**  
-  中国には Google Play ストアがないため、Android デバイスでは中国のマーケットプレースからアプリを入手する必要があります。 ポータル サイトはこのワークフローをサポートします。 中国の Android ユーザーをリダイレクトし、現地のアプリ ストアからポータル サイト アプリや Outlook アプリをダウンロードできるようにします。 これにより、モバイル デバイス管理とモバイル アプリケーション管理の両方で、条件付きアクセス ポリシーを有効にしたときのユーザー エクスペリエンスが向上します。 Android 向けのポータル サイト アプリまたは Outlook アプリは中国の次のアプリ ストアで入手できます。
-
-  - [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
-  - [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)
-  - [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
-  - [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
-  - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
-
-- **ポータル サイト アプリを最新の状態に維持**  
-  2016 年 12 月に公開した更新プログラムでは、iOS、Android、Windows 8.1 以降、Windows Phone 8.1 以降のデバイスを登録するときに、ユーザーのグループに対する多要素認証 (MFA) の強制を有効にできるようになりました。 この機能は、Android (v5.0.3419.0 以降) 向けまたは iOS (v2.1.17 以降) 向けのポータル サイト アプリの特定のベースライン バージョンがないと動作しません。
-
-  Intune の管理機能は継続的に改善されています。 その多くが、サポートされているすべてのプラットフォームのポータル サイト アプリに合わせて、更新プログラムが調整されています。 デバイスにインストールされているポータル サイト アプリを常に最新バージョンにしておくことをお勧めします。 そうすることで、機能強化された Intune を活用し、最高のユーザー エクスペリエンスを得られます。
-
-  >[!Tip]
-  > アプリ ストアからアプリを自動的に更新するようにデバイスを設定するよう、ユーザーに連絡してください。 Android 向けポータル サイト アプリをネットワーク共有で利用できるようにしている場合、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=49140)から最新版をダウンロードできます。
-
-- **iOS および Android の MAM での Microsoft Teams の有効化**  
-  iOS と Android 向けの Microsoft Teams アプリが、Intune モバイル アプリ管理 (MAM) 機能で有効になりました。 会話や会社のデータは常に保護された状態で、デバイスを問わず、自由に働く能力をチームに与えることができるようになりました。 詳しくは、Enterprise Mobility and Security ブログの「[Microsoft Teams announcement](https://blogs.technet.microsoft.com/enterprisemobility/2017/03/14/microsoft-teams-is-now-generally-available-and-mam-enabled-on-ios-and-android/)」(Microsoft Teams からの告知) をご覧ください。
-
-### <a name="new-in-configuration-manager-technical-preview-1703"></a>Configuration Manager Technical Preview 1703 の新機能
-
-- **Apple Volume Purchase Program シナリオのサポートの追加**  
-   テクニカル プレビュー 1703 以降、次のボリューム購入プログラム (VPP) シナリオがサポートされています。
-
-   - デバイスのライセンス - デバイスのライセンスをサポートし、デバイス コレクションに展開されるアプリで必要なライセンスは、デバイスごとに 1 つのみになりました。 以前は、デバイスのユーザーごとにライセンスを使用する必要がありました。 詳細については、「[ボリューム購入した iOS アプリをデバイス コレクションに展開する](/sccm/core/get-started/capabilities-in-technical-preview-1703#deploy-volume-purchased-ios-apps-to-device-collections)」を参照してください。
-   - 1 つのハイブリッド テナントに対する複数の VPP トークンの使用。両方のトークンは VPP アプリを管理するために使用されます。
-   - VPP 教育用トークンの使用。ビジネス用トークンと教育用トークンを区別できます。
-
-### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (現在のブランチ) の新機能
-
-以下の機能は以前、Configuration Manager Technical Preview リリースで利用できました。 現在は、Intune と Configuration Manager (Current Branch) バージョン 1702 のハイブリッド展開で使用できます。
-
-- [Android for Work のサポート](/sccm/core/plan-design/changes/whats-new-in-version-1702##android-for-work-support)
-- [非準拠アプリのコンプライアンス設定](/sccm/core/plan-design/changes/whats-new-in-version-1702#conditional-access-device-compliance-policy-improvements)
-- [PFX 証明書の作成と配布および S/MIME のサポート](/sccm/core/plan-design/changes/whats-new-in-version-1702#improvements-to-certificate-profiles)
-- [ハイブリッド MDM の作成ウィザードで Android と iOS のバージョン指定が不要に](/sccm/core/plan-design/changes/whats-new-in-version-1702#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)
-
-次の追加のハイブリッド機能も、Configuration Manager (Current Branch) のバージョン 1702 に含まれます。
-
-- **Apple Volume Purchase Program (VPP) のサポートの向上**  
-  - ライセンスされたアプリをユーザーだけでなくデバイスにも展開できるようになりました。 デバイス ライセンスをサポートするアプリ機能に応じて、次のように、展開時に適切なライセンスが要求されます。
-
-    | Configuration Manager バージョン | アプリでのデバイス ライセンスのサポート | 展開コレクションの種類 | 要求されるライセンス |
-    |-|-|-|-|
-    |1702 より前|はい|ユーザー|ユーザー ライセンス|
-    |1702 より前|いいえ|ユーザー|ユーザー ライセンス|
-    |1702 より前|はい|デバイス|ユーザー ライセンス|
-    |1702 より前|いいえ|デバイス|ユーザー ライセンス|
-    |1702 以降|はい|ユーザー|ユーザー ライセンス|
-    |1702 以降|いいえ|ユーザー|ユーザー ライセンス|
-    |1702 以降|はい|デバイス|デバイス ライセンス|
-    |1702 以降|いいえ|デバイス|ユーザー ライセンス|
-
-  - iOS Volume Purchase Program for Education から購入したアプリを展開し追跡できるようになりました。
-
-  - 複数の Apple Volume Purchase Program トークンを Configuration Manager に関連付けることができるようになりました。
-
-  ボリューム購入した iOS アプリの詳細については、[「ボリューム購入 iOS アプリの管理」](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps) を参照してください。
-
-- **ビジネス向け Microsoft Store での基幹業務アプリのサポート**  
-  ビジネス向け Microsoft Store から、カスタマイズされた基幹業務アプリを同期できるようになりました。
-
-- **新しい Mobile Threat Defense 監視ツール**  
-    Mobile Threat Defense サービス プロバイダーでコンプライアンス状態を監視する新しい方法を利用できるようになりました。
-
-    詳細については、[「Mobile Threat Defense コンプライアンスの監視」](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance) を参照してください。
-
 
 
 ## <a name="notices"></a>通知

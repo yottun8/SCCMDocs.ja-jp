@@ -10,11 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 3dd5a7f9717843244ab8477a09b109261618f9aa
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 07616a1c03c0383e9001418043dc6cd7ec117c1d
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703487"
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>Windows 10 における Windows Update for Business との統合
 
@@ -72,7 +73,8 @@ Configuration Manager バージョン 1706 以降、Windows Update for Business 
 >Configuration Manager バージョン 1802 以降では、Windows Insider の遅延ポリシーを設定できます。 <!--507201-->Windows Insider プログラムの詳細については、[Windows Insider Program for Business の概要](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business)に関するページを参照してください。
 
 ### <a name="prerequisites"></a>[前提条件]
-Windows Update for Business で管理されている Windows 10 デバイスには、インターネット接続が必要です。
+-   Windows 10 バージョン 1703 以降
+-   Windows Update for Business で管理されている Windows 10 デバイスには、インターネット接続が必要です
 
 #### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>Windows Update for Business 遅延ポリシーを作成するには
 1. **[ソフトウェア ライブラリ]** > **[Windows 10 のサービス]** > **[Windows Update for Business ポリシー]** に移動します。

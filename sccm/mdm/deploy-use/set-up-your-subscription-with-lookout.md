@@ -1,8 +1,8 @@
 ---
-title: Lookout でサブスクリプションを設定する
+title: Lookout サブスクリプションを設定する
 titleSuffix: Configuration Manager
-description: このトピックでは、Lookout デバイス脅威保護を構成する方法の詳細を説明します。
-ms.date: 03/05/2017
+description: Lookout Mobile Threat Defense を構成する方法を説明します。
+ms.date: 05/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,117 +10,148 @@ ms.assetid: 6087b279-ba05-4824-b5e3-3af14f3d3cfe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 08bf88c0f6660c213c47a5ed283b3be0431056a2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 85c2ae1039058f39bd96c7d0752f798504b0dd4d
+ms.sourcegitcommit: 9cff0702c2cc0f214173b47ec241f7e5a40f84e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746112"
 ---
-# <a name="set-up-your-subscription-for--lookout-device-threat-protection"></a>Lookout デバイス脅威保護のサブスクリプションを設定する
+# <a name="set-up-your-subscription-for-lookout-mobile-threat-defense"></a>Lookout Mobile Threat Defense のサブスクリプションを設定する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Lookout デバイス脅威保護サービス用にサブスクリプションを準備するには、Lookout サポート (enterprisesupport@lookout.com) で Azure Active Directory (Azure AD) サブスクリプションに関する次の情報が必要です。 Lookout Mobility Endpoint Security テナントは、Lookout と Intune を統合するために Azure AD サブスクリプションに関連付けられます。 
+Lookout Mobile Threat Defense のサブスクリプションを設定するには、次の手順が必要です。
 
-* **Azure AD テナント ID**
-* Lookout コンソールへの**フル** アクセス用の **Azure AD グループ オブジェクト ID**
-* Lookout コンソールへの**制限付き**アクセス用の **Azure AD グループ オブジェクト ID** (省略可能)
+| #        |手順  |
+| ------------- |-------------|
+| 1 | [Azure AD の情報を収集する](#collect-azure-ad-information) |
+| 2 | [サブスクリプションを構成する](#configure-your-subscription) |
+| 3 | [登録グループを構成する](#configure-enrollment-groups) |
+| 4 | [状態の同期を構成する](#configure-state-sync) |
+| 5 | [エラー レポートの電子メール受信者情報を構成する](#configure-error-report-email-recipient-information) |
+| 6 | [登録設定を構成する](#configure-enrollment-settings) |
+| 7 | [電子メールの通知を構成する](#configure-email-notifications) |
+| 8 | [脅威の分類を構成する](#configure-threat-classification) |
+| 9 | [登録の監視](#watching-enrollment) |
 
-> [!IMPORTANT]
+
+> [!IMPORTANT]  
 > Azure AD テナントとまだ関連付けられていない既存の Lookout Mobile Endpoint Security テナントは、Azure AD および Intune との統合に使用できません。 新しい Lookout Mobile Endpoint Security テナントの作成については、Lookout のサポートに問い合わせてください。 新しいテナントを使って Azure AD ユーザーをオンボーディングします。
 
-Lookout サポート チームに提供する必要がある情報を収集するには、次のセクションを使用します。  
-
-## <a name="get-your-azure-ad-information"></a>Azure AD の情報を取得する
-### <a name="azure-ad-tenant-id"></a>Azure AD テナント ID
-[Azure AD 管理ポータル](https://manage.windowsazure.com)にサインインし、サブスクリプションを選択します。 
-
-![テナントの名前を示す Azure AD のページのスクリーンショット](media/aad_tenant_name.png)サブスクリプションの名前を選択すると、結果の URL にはサブスクリプション ID が含まれます。  サブスクリプション ID の検索に問題がある場合は、[Microsoft サポート記事](https://support.office.com/en-us/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b?ui=en-US&rs=en-US&ad=US)でサブスクリプション ID の検索に関するヒントを参照してください。   
-### <a name="azure-ad-group-id"></a>Azure AD グループ ID
-Lookout コンソールは 2 つのレベルのアクセスをサポートします。  
-* **フル アクセス:** Azure AD 管理者は、フル アクセス権を持つユーザーのグループを作成でき、必要に応じて制限付きアクセス権を持つユーザーのグループを作成できます。  これらのグループのユーザーだけが、**Lookout コンソール**にログインできます。
-* **制限付きアクセス:** このグループのユーザーは、Lookout コンソールの構成と登録に関連する複数のモジュールにアクセスできず、Lookout コンソールの**セキュリティ ポリシー** モジュールには読み取りアクセス権だけがあります。  
-
-アクセス許可の詳細については、Lookout の Web サイトの[こちらの記事](https://personal.support.lookout.com/hc/en-us/articles/114094105653)をご覧ください。
-
-**グループ オブジェクト ID** は、**Azure AD 管理コンソール**のグループの **[プロパティ]** ページにあります。
-
-![[グループ ID] フィールドが強調表示されているプロパティ ページのスクリーンショット](media/aad_group_object_id.png)
-
-この情報を収集した後で、Lookout のサポート (メール: enterprisesupport@lookout.com) にお問い合わせください。
-
-Lookout サポートは、主要連絡先を使用してサブスクリプションをオンボーディングし、収集された情報を使用して Lookout Enterprise アカウントを作成します。
 
 
-## <a name="configure-your-subscription-with-lookout-device-threat-protection"></a>Lookout デバイス脅威保護でサブスクリプションを構成する
-### <a name="step-1-set-up-your-device-threat-protection"></a>ステップ 1: デバイス脅威保護をセットアップする
-Lookout サポートが Lookout Enterprise アカウントを作成した後、Lookout コンソールにサインインできます。   ログイン URL (https://aad.lookout.com/les?action=consent) へのリンクを含む Lookout からメールが、会社の主要連絡先に送信されます。
 
-Lookout コンソールに初めてログインするときは、グローバル管理者の Azure AD の役割を持つユーザー アカウントを使う必要があります。Lookout は、Azure AD テナントを登録するためにこの情報を必要とします。   それ以降にユーザーがサインインするときは、このレベルの Azure AD 権限は不要です。  この最初のログインでは、同意ページが表示されます。 **[同意する]** を選んで登録を完了します。
+## <a name="collect-azure-ad-information"></a>Azure AD の情報を収集する
+Lookout Mobility Endpoint Security テナントは、Lookout と Intune を統合するために Azure AD サブスクリプションに関連付けられます。 Lookout Mobile Threat Defense サービスのサブスクリプションを有効にするには、Lookout のサポート (enterprisesupport@lookout.com) に次の情報を伝えてください。
 
-![Lookout コンソールの初回ログイン ページのスクリーンショット](media/lookout-initial-login.png)
+- **Azure AD テナント ID**
+- Lookout コンソールへの*フル* アクセス用の **Azure AD グループ オブジェクト ID**
+- Lookout コンソールへの*制限付き*アクセス用の **Azure AD グループ オブジェクト ID** (省略可能)
 
-受け入れて同意すると、Lookout コンソールにリダイレクトされます。 初期登録後のログインは、URL (https://aad.lookout.com) を使って行うことができます。
+次の手順に従って、Lookout サポート チームに提供する必要のある情報を収集してください。
 
-ログインに問題がある場合は、[トラブルシューティングに関する記事]()をご覧ください。
+1. [Azure Portal](https://portal.azure.com) にサインインして、サブスクリプションを選択します。 
 
-以下の手順では、[Lookout コンソール](https://aad.lookout.com)で Lookout のセットアップを完了するために行う必要のあるタスクの概要を説明します。
+2. サブスクリプションの名前を選択すると、表示される URL にサブスクリプション ID が含まれています。 サブスクリプション ID の検索に問題がある場合は、[Microsoft サポート記事](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b)でサブスクリプション ID の検索に関するヒントを参照してください。
 
-### <a name="step-2-configure-the-intune-connector"></a>ステップ 2: Intune コネクタを構成する
+3. Azure AD のグループ ID を確認します。  
+     > [!NOTE]   
+     > **グループ オブジェクト ID** は、Azure Portal の [Azure AD] ブレードのグループの **[プロパティ]** ページにあります。  
 
-1.  Lookout コンソールの **[System]** (システム) モジュールから、**[Connectors]** (コネクタ) タブを選択し、**[Intune]** を選択します。
+   Lookout コンソールは 2 つのレベルのアクセスをサポートします。  
 
-  ![[Connectors] (コネクタ) タブが開き [Intune] オプションが強調表示されている Lookout コンソールのスクリーンショット](media/lookout-setup-intune-connector.png)
+   - **フル アクセス:** Azure AD の管理者は、フル アクセス権を持つユーザーのグループを作成できるだけでなく、必要に応じて制限付きアクセス権を持つユーザーのグループも作成できます。 これらのグループのユーザーだけが、**Lookout コンソール**にサインインできます。
+   - **制限付きアクセス:** このグループのユーザーは、Lookout コンソールの構成と登録に関連する複数のモジュールにアクセスできず、Lookout コンソールの**セキュリティ ポリシー** モジュールには読み取りアクセス権だけがあります。  
 
-2.  接続設定のオプションで、ハートビートの頻度を分単位で構成します。  Intune コネクタの準備ができます。  
-
-  ![ハートビートの頻度が構成された接続設定タブのスクリーンショット](media/lookout-connection-settings.png)
-
-### <a name="step-3-configure-enrollment-groups"></a>ステップ 3: 登録グループを構成する
-**[Enrollment Management]** (登録管理) オプションで、デバイスを Lookout に登録する必要があるユーザーのセットを定義します。 小さなユーザー グループから始めてテストし、統合のしくみを理解するのがベスト プラクティスです。  テスト結果に問題がなければ、他のユーザー グループに登録を拡張できます。
-
-登録グループを使い始めるときは、最初に Azure AD セキュリティ グループを定義します。これは、Lookout デバイス脅威保護に初めて登録するのに適したユーザー セットです。 Azure AD でグループを作成した後、Lookout コンソールで **[Enrollment Management]** (登録管理) オプションに移動し、登録用に Azure AD セキュリティ グループの **[Display Name(s)]** (表示名) を追加します。
-
-ユーザーが登録グループ内にいると、Azure AD で識別されてサポートされるすべてのデバイスが登録され、Lookout デバイス脅威保護のアクティブ化の対象になります。  サポートされるデバイスで Lookout for Work アプリを初めて開くと、デバイスが Lookout でアクティブ化されます。
-
-![Intune コネクタ登録ページのスクリーンショット](media/lookout-enrollment.png)
-
-新しいデバイスをチェックする時間の増分には既定値 (5 分) を使うのがベスト プラクティスです。
-
->[!IMPORTANT]
-> 表示名は大文字と小文字が区別されます。  Azure Portal でセキュリティ グループの **[プロパティ]** ページに表示される **[表示名]** を使います。 下に示すセキュリティ グループの **[プロパティ]** ページでは、[表示名] が大文字で始まっていることに注意してください。  一方、タイトルはすべて小文字で表示されており、これを Lookout コンソールへの入力には使用しないでください。
->![Azure Portal での Azure Active Directory サービスの [プロパティ] ページのスクリーンショット](media/aad-group-display-name.png)
-
-現在のリリースには次の制限があります。  
-* グループの表示名の検証は行われません。  Azure Portal で Azure AD セキュリティ グループに表示される **[表示名]** フィールドの値を使用してください。
-* グループ内にグループを作成することは、現在はサポートされていません。  指定されている Azure AD セキュリティ グループはユーザーのみを含むことができ、入れ子になったグループを含むことはできません。
+     > [!TIP]  
+     > アクセス許可の詳細については、[Lookout サポートに関するこの記事](https://personal.support.lookout.com/hc/articles/114094105653)をご覧ください。
 
 
-### <a name="step-4-configure-state-sync"></a>ステップ 4: 状態の同期を構成する
-**[State Sync]** (状態同期) オプションで、Intune に送信するデータの種類を指定します。  現在は、Lookout と Intune の統合が正常に動作するには、デバイスと脅威の両方の状態を有効にする必要があります。  これらは既定で有効になります。
-### <a name="step-5-configure-error-report-email-recipient-information"></a>ステップ 5: エラー レポート メール受信者情報を構成する
+4. この情報を収集した後で、Lookout のサポート (メール: enterprisesupport@lookout.com) にお問い合わせください。 Lookout サポートは、主要連絡先を使用してサブスクリプションをオンボーディングし、収集された情報を使用して Lookout Enterprise アカウントを作成します。
+
+
+
+## <a name="configure-your-subscription"></a>サブスクリプションを構成する
+
+1. Lookout のサポート担当者が Lookout Enterprise アカウントを作成すると、[ログイン URL](https://aad.lookout.com/les?action=consent) へのリンクを含む Lookout からの電子メールが、会社の主要な連絡先に送られます。
+
+2. Lookout コンソールに初めてログインする場合、グローバル管理者の Azure AD ロールを持つユーザー アカウントを使用し、Azure AD テナントを登録する必要があります。 以降のサインインにこのレベルの Azure AD 特権は必要ありません。 同意ページが表示されます。 **[同意する]** を選んで登録を完了します。 受け入れて同意すると、Lookout コンソールにリダイレクトされます。
+
+   ![Lookout コンソールの初回ログイン ページのスクリーンショット](media/lookout-initial-login.png)
+
+3. [Lookout コンソール](https://aad.lookout.com)で **[System]\(システム\)** モジュールから **[Connectors]\(コネクタ\)** タブを選択し、**[Intune]** を選択します。
+
+   ![[Connectors] (コネクタ) タブが開き [Intune] オプションが強調表示されている Lookout コンソールのスクリーンショット](media/lookout-setup-intune-connector.png)
+
+4. **[Connectors]\(コネクタ)** > **[Connection Settings]\(接続設定)** を選択し、**[Heartbeat Frequency]\(ハートビート頻度)** を分単位で指定します。
+
+   ![ハートビートの頻度が構成された接続設定タブのスクリーンショット](media/lookout-connection-settings.png)
+
+
+
+## <a name="configure-enrollment-groups"></a>登録グループを構成する
+1. ベスト プラクティスとして、Lookout の統合をテストする少数のユーザーを含む Azure AD セキュリティ グループを [Azure Portal](https://portal.azure.com) に作成することをお勧めします。
+
+    > [!NOTE]  
+    > Azure AD の登録グループに属するユーザーが有する、Lookout のサポートを受け Intune に登録されているデバイスのうち、識別されてサポートされているものはすべて、Lookout MTD コンソールでのアクティブ化の対象になります。
+
+2. [Lookout コンソール](https://aad.lookout.com)の **[System]\(システム\)** モジュールで、**[Connectors]\(コネクタ)** タブを選択し、**[Enrollment Management]\(登録管理\)** を選択し、Lookout に登録するデバイスのユーザー セットを定義します。 Azure AD セキュリティ グループの登録の **[表示名]** を追加します。
+
+    ![Intune コネクタ登録ページのスクリーンショット](media/lookout-enrollment.png)
+
+    >[!IMPORTANT]  
+    > Azure Portal のセキュリティ グループの **[プロパティ]** に表示される **[表示名]** は大文字と小文字が区別されます。 次の画像のように、セキュリティ グループの **[Display Name]\(表示名\)** は大文字と小文字が混在していますが、タイトルはすべて小文字です。 Lookout コンソールでは、セキュリティ グループの **[Display Name]\(表示名\)** の大文字/小文字と一致させます。
+    >![Azure Portal での Azure Active Directory サービスの [プロパティ] ページのスクリーンショット](media/aad-group-display-name.png)
+
+    >[!NOTE]  
+    >新しいデバイスをチェックする時間の増分には既定値 (5 分) を使うのがベスト プラクティスです。 現時点での制限事項、**Lookout はグループの表示名を検証できません:** Azure Portal の **[表示名]** フィールドが Azure AD セキュリティ グループと厳密に一致していることを確認してください。 **入れ子のグループを作成することはできません:** Lookout で使用する Azure AD セキュリティ グループには、ユーザーのみを含める必要があります。 他のグループを含めることはできません。
+
+3.  グループを追加して、次にサポートされるデバイスでユーザーが Lookout for Work アプリを開いたときに、そのデバイスが Lookout でアクティブ化されます。
+
+4.  結果に問題がなければ、他のユーザー グループまで登録を広げます。
+
+
+
+## <a name="configure-state-sync"></a>状態の同期を構成する
+**[State Sync]** (状態同期) オプションで、Intune に送信するデータの種類を指定します。 Lookout と Intune の統合が正常に動作するには、デバイスの状態と脅威の状態の両方が必要です。 これらの設定は既定では有効になっています。
+
+
+
+## <a name="configure-error-report-email-recipient-information"></a>エラー レポートの電子メール受信者情報を構成する
 **[Error Management]** (エラー管理) オプションで、エラー レポートを受け取る必要のあるメール アドレスを入力します。
 
 ![Intune コネクタ エラー管理ページのスクリーンショット](media/lookout-connector-error-notifications.png)
 
-### <a name="step-6-configure-enrollment-settings"></a>ステップ 6:  登録の設定を構成する
-**[System]** (システム) モジュールの **[Connectors]** (コネクタ) ページで、デバイスが切断と判断されるようになるまでの日数を指定します。  切断されたデバイスは非準拠と見なされ、SCCM 条件付きアクセス ポリシーに基づいて、社内アプリケーションへのアクセスをブロックされます。 1 ～ 90 日の範囲の値を指定できます。
 
-![](media/lookout-console-enrollment-settings.png)
 
-### <a name="step-7-configure-email-notifications"></a>ステップ 7: メール通知を構成する
-脅威のメール通知を受け取る場合は、通知を受け取るユーザー アカウントで [Lookout コンソール](https://aad.lookout.com)にサインインします。 **[System]** (システム) モジュールの **[Preferences]** (設定) タブで、目的の通知を選んで **[ON]** (オン) に設定します。 変更内容を保存します。
+## <a name="configure-enrollment-settings"></a>登録の設定を構成する
+**[System]** (システム) モジュールの **[Connectors]** (コネクタ) ページで、デバイスが切断と判断されるようになるまでの日数を指定します。 切断されたデバイスは非準拠と見なされ、SCCM 条件付きアクセス ポリシーに基づいて、社内アプリケーションへのアクセスをブロックされます。 1 ～ 90 日の範囲の値を指定できます。
 
-![ユーザー アカウントが表示された設定ページのスクリーンショット](media/lookout-email-notifications.png) メール通知を受け取る必要がなくなったら、通知を **[OFF]** (オフ) に設定して変更を保存します。
-### <a name="step-8-configure-threat-classification"></a>ステップ 8: が脅威の分類を構成する
-Lookout のデバイス脅威保護は、さまざまな種類のモバイル脅威を分類します。 [Lookout の脅威分類](http://personal.support.lookout.com/hc/en-us/articles/114094130693)には、既定のリスク レベルが関連付けられています。 これらは、会社の要件に合わせていつでも変更できます。
+![Lookout 登録設定](media/lookout-console-enrollment-settings.png)
+
+
+
+## <a name="configure-email-notifications"></a>電子メールの通知を構成する
+脅威のメール通知を受け取る場合は、通知を受け取るユーザー アカウントで [Lookout コンソール](https://aad.lookout.com)にサインインします。 **[System]\(システム\)** モジュールの **[Preferences]\(基本設定\)** タブで、通知が必要な脅威レベルを選択して、**[ON]\(オン\)** に設定します。 変更内容を保存します。
+
+![ユーザー アカウントが表示された設定ページのスクリーンショット](media/lookout-email-notifications.png) メール通知を受け取る必要がなくなったら、通知を [オフ] に設定して変更を保存します。
+
+
+
+## <a name="configure-threat-classification"></a>脅威の分類を構成する
+Lookout Mobile Threat Defense によって、さまざまな種類のモバイルの脅威が分類されます。 [Lookout の脅威分類](http://personal.support.lookout.com/hc/articles/114094130693)には、既定のリスク レベルが関連付けられています。 これらの設定は会社の要件に合わせていつでも変更できます。
 
 ![脅威と分類を示すポリシー ページのスクリーンショット](media/lookout-threat-classification.png)
 
->[!IMPORTANT]
-> Intune 統合は実行時にこれらのリスク レベルに従ってデバイスのコンプライアンスを計算するため、ここで指定するリスク レベルはデバイス脅威保護の重要な側面です。 つまり、Intune 管理者は、デバイスが最低レベル (高、中、低) のアクティブな脅威を持っている場合に非準拠としてデバイスを識別するように、ポリシーのルールを設定します。 Lookout デバイス脅威保護の脅威分類ポリシーが、Intune のデバイス コンプライアンス計算に直接反映されます。
+>[!IMPORTANT]  
+> リスク レベルは、モバイルでの脅威に対する防御の重要な側面です。 Intune 統合では、実行時、これらのリスク レベルに基づいてデバイスのコンプライアンスが判断されます。 Intune 管理者は、デバイスにアクティブな脅威がある場合にデバイスを非準拠として特定するルールをポリシーに設定します。脅威には、**高**、**中**、**低**の最小レベルがあります。 Mobile Threat Defense での脅威分類ポリシーは、Intune でのデバイスのコンプライアンス判断に直接影響を与えます。
+
+
 
 ## <a name="watching-enrollment"></a>登録の監視
-セットアップが完了すると、Lookout デバイス脅威保護は、指定された登録グループに対応するデバイスの Azure AD でのポーリングを開始します。  デバイス モジュールで登録されたデバイスに関する情報を検索できます。  デバイスの初期状態は保留中と表示されます。  デバイスで Lookout for Work アプリがインストールされ、開かれ、アクティブ化されると、デバイスの状態が変化します。  Lookout for Work アプリをデバイスにプッシュする方法の詳細については、「[Configure and deploy Lookout for work apps](configure-and-deploy-lookout-for-work-apps.md)」 (Lookout for work アプリを構成して展開する) トピックをご覧ください。
+セットアップが完了すると、Mobile Threat Defense は Azure AD のポーリングを開始し、指定された登録グループに対応するデバイスを探します。 デバイス モジュールで登録されたデバイスに関する情報を検索できます。 デバイスの初期状態は保留中と表示されます。 デバイスで Lookout for Work アプリがインストールされ、開かれ、アクティブ化されると、デバイスの状態が変化します。 Lookout for Work アプリをデバイスにプッシュする方法の詳細については、「[Lookout for Work アプリを構成し、展開する](configure-and-deploy-lookout-for-work-apps.md)」を参照してください。
+
+
 ## <a name="next-steps"></a>次のステップ
 [Intune 管理コンソールで Lookout MTP の接続を有効にする](enable-lookout-connection-in-intune.md)
