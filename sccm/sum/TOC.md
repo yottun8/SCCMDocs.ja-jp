@@ -29,6 +29,7 @@
 ## [ソフトウェア更新プログラムのメンテナンス](deploy-use/software-updates-maintenance.md)
 ## [サーバー グループの提供](deploy-use/service-a-server-group.md)
 ## [Office 365 ProPlus の更新プログラムの管理](deploy-use/manage-office-365-proplus-updates.md)
+## [Windows 10 更新プログラムの配信の最適化](deploy-use/optimize-windows-10-update-delivery.md)
 ## [Windows 10 更新プログラムに対する高速インストール ファイルの管理](deploy-use/manage-express-installation-files-for-windows-10-updates.md)
 ## [Windows 10 における Windows Update for Business との統合](deploy-use/integrate-windows-update-for-business-windows-10.md)
 ## [セキュリティ更新プログラムを展開するシナリオ例](deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
