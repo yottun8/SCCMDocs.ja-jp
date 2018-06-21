@@ -9,11 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c28964d8cf6b11e9999a9d0967422ececafe234b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: dd37bb3f452f5018dd1130d43ead0117481f2aab
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34450191"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>暗号化コントロールのテクニカル リファレンス
 
@@ -116,18 +117,7 @@ System Center Configuration Manager では、署名と暗号化を使用して�
 ### <a name="mobile-device-management-and-pki-certificates"></a>モバイル デバイスの管理および PKI 証明書  
  モバイル デバイスが携帯電話会社によってロックされていない場合は、Configuration Manager または Microsoft Intune を使用してクライアント証明書を要求してインストールできます。 この証明書は、モバイル デバイス上のクライアントと Configuration Manager サイト システムまたは Microsoft Intune サービスとの間に相互認証を提供します。 モバイル デバイスがロックされている場合は、Configuration Manager または Microsoft Intune を使用して証明書を展開することはできません。  
 
- モバイル デバイスのハードウェア インベントリを有効にすると、Configuration Manager または Microsoft Intune ではモバイル デバイスにインストールされている証明書もインベントリされます。  
-
-### <a name="out-of-band-management-and-pki-certificates"></a>帯域外管理および PKI 証明書  
- Intel AMT ベースのコンピューターでの帯域外管理では、少なくとも AMT プロビジョニング証明書と Web サーバー証明書という 2 種類の PKI 発行の証明書を使用します。  
-
- 帯域外サービス ポイントは、AMT プロビジョニング証明書を使用して帯域外管理用のコンピューターを準備します。 プロビジョニングされる AMT ベースのコンピューターは、帯域外管理ポイントによって提示される証明書を信頼する必要があります。 既定では、コンピューターの製造元が AMT ベースのコンピューターを VeriSign、Go Daddy、Comodo、Starfield などの外部の証明機関 (CA) を使用するように構成します。 外部の CA からプロビジョニング証明書を購入し、このプロビジョニング証明書を使用するように Configuration Manager を構成した場合、AMT ベースのコンピュータがプロビジョニング証明書の CA を信頼するので、プロビジョニングを正常に実行できます。 ただし、推奨されるセキュリティ運用方法は、独自の内部 CA を使用して AMT プロビジョニング証明書を発行することです。  
-
- AMT ベースのコンピューターは、Web サーバー コンポーネントをファームウェア内で実行します。また、この Web サーバー コンポーネントは、Transport Layer Security (TLS) を使用して、帯域外サービス ポイントとの通信チャネルを暗号化します。 証明書を手動で構成できる AMT BIOS のユーザー インターフェイスはありません。したがって、要求元の AMT ベースのコンピューターからの証明書要求を自動的に承認する Microsoft エンタープライズ証明機関を使用する必要があります。 要求では、要求の形式に PKCS#10 が使用され、次に AMT ベースのコンピューターに証明書情報を送信するために PKCS#7 が使用されます。  
-
- AMT ベースのコンピューターは、それを管理するコンピューターに対して認証されますが、管理しているコンピューターには、対応するクライアント PKI 証明書はありません。 その代わり、これらの通信では、Kerberos または HTTP Digest 認証が使用されます。 HTTP Digest が使用される場合、TLS を使用して暗号化されます。  
-
- 帯域外の AMT ベースのコンピューターの管理には、802.1X 認証ワイヤード (有線) ネットワークおよびワイヤレス ネットワーク用のオプションのクライアント証明書のような、追加の種類の証明書が必要な場合があります。 RADIUS サーバーで認証するために、AMT ベースのコンピューターのクライアント証明書が必要な場合があります。 RADIUS サーバーが EAP-TLS 認証用に構成されている場合、クライアント証明書は常に必要です。 RADIUS サーバーが、EAP-TTLS/MSCHAPv2 または PEAPv0/EAP-MSCHAPv2 用に構成されている場合、クライアント証明書が必要かどうかはその RADIUS 構成によって指定されます。 この証明書は、Web サーバー証明書の要求と同じ処理を使用して、AMT ベースのコンピューターによって要求されます。  
+ モバイル デバイスのハードウェア インベントリを有効にすると、Configuration Manager または Microsoft Intune ではモバイル デバイスにインストールされている証明書もインベントリされます。   
 
 ### <a name="operating-system-deployment-and-pki-certificates"></a>オペレーティング システムの展開と PKI 証明書  
  Configuration Manager を使用してオペレーティング システムを展開していて、管理ポイントが HTTPS を使用したクライアント接続を要求している場合、クライアント コンピューターには管理ポイントと通信するための証明書も必要となります。移行段階にある場合 (タスク シーケンス メディアや PXE 対応配布ポイントから起動中である場合など) でも同様です。 この場合は、PKI クライアント認証証明書を作成し、秘密キーを使用してエクスポートしてから、サイト サーバーのプロパティにインポートし、管理ポイントの信頼されたルート CA の証明書も追加する必要があります。  
