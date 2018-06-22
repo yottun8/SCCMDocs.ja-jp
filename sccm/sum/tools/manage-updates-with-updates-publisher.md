@@ -16,6 +16,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32351838"
 ---
 # <a name="manage-software-updates-in-updates-publisher"></a>Updates Publisher のソフトウェア更新プログラムの管理
 

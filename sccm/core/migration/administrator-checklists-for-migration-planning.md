@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32336342"
 ---
 # <a name="administrator-checklists-for-migration-planning-in-system-center-configuration-manager"></a>System Center Configuration Manager での移行計画の管理者チェックリスト
 
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 
     詳細については、「[System Center Configuration Manager のロール ベース管理の基礎](../../core/understand/fundamentals-of-role-based-administration.md)」をご覧ください。  
 
--   **ネットワークと Active Directory のトポロジを評価する。**既存のドメイン構造とネットワーク トポロジを見直し、これが階層の設計と移行タスクに及ぼす影響について検討します。  
+-   **ネットワークと Active Directory のトポロジを評価する。** 既存のドメイン構造とネットワーク トポロジを見直し、これが階層の設計と移行タスクに及ぼす影響について検討します。  
 
 -   **移行先階層の設計を完成させる。**  
 

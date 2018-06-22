@@ -10,11 +10,12 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8eb561d9867c6bde778ffd5fb6ef404395c359da
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a8ce492aa34fa130a11bde0d5823252a9d782960
+ms.sourcegitcommit: e35d07870656eadd29faacc378ecd091ff3bdcfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848630"
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>System Center Configuration Manager のライセンスとブランチ
 
@@ -38,9 +39,9 @@ ms.lasthandoff: 05/03/2018
 |----------------|---------------------|--------------------|
 |Current Branch | Configuration Manager に対してソフトウェア アシュアランス契約 (または同等の権限) が有効になっている必要があります。 </br></br> このトピックの「[ソフトウェア アシュアランスと Current Branch](#software-assurance-and-the-current-Branch)」を参照してください。| 品質と機能に関する更新プログラムを Microsoft から定期的に受信する必要がある運用環境での使用に対応しています。 </br></br> このブランチでは、すべての機能と強化された機能を使用するためのアクセス権が提供されます。 </br></br> Configuration Manager 1710 より前にリリースされたバージョンについては、サポートは 12 か月間です。 1710 リリース以降では、更新プログラムの各バージョンは一般公開リリース日から 18 か月間サポートされます。 詳細については、「[System Center Configuration Manager の Current Branch バージョンのサポート](/sccm/core/servers/manage/current-branch-versions-supported)」をご覧ください。|
 |Long-Term Servicing Branch (LTSB)| リリース時 (2016 年 10 月 1 日) に Microsoft との間で現在有効になっているソフトウェア アシュアランス契約が必要です。 </br></br> このトピックの「[ソフトウェア アシュアランスと LTSB](#software-assurance-and-the-ltsb)」を参照してください。 | 運用環境での使用に対応しています。 2016 年 10 月 1 日以降、Configuration Manager に対するソフトウェア アシュアランス (SA) または同等のサブスクリプション権限が期限切れになったお客様向けです。 </br></br> Current Branch と比較して、このブランチには制限があります。 </br></br> このブランチでは、Configuration Manager に対するセキュリティ上重要な更新プログラムは利用できますが、新機能については利用できません。 |
-|Current Branch の評価版インストール| Microsoft とのソフトウェア アシュアランス契約は必要ありません。 | [評価版インストール](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) は必ず Current Branch となり、180 日間使用できます。 </br></br> 評価版インストールは、Current Branch の完全インストールにアップグレードできます。 評価版インストールを Long-Term Servicing Branch にアップグレードすることはできません。|
+|Current Branch の評価版インストール| Microsoft とのソフトウェア アシュアランス契約は必要ありません。 | [評価版インストール](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) は必ず Current Branch となり、180 日間使用できます。 </br></br> 評価版インストールは、Current Branch の完全インストールにアップグレードできます。 評価版インストールを Long-Term Servicing Branch にアップグレードすることはできません。|
 
-Current Branch、LTSB、および Current Branch の評価版インストールに加えて、[System Center Configuration Manager のテクニカル プレビュー](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) も利用できます。 これは、今後の更新プログラムで Current Branch に追加される可能性のある新機能をお客様にお試しいただくための Configuration Manager の制限付きビルドです。 テクニカル プレビューは、ライセンス版とは異なるメディアを使用してインストールします。 詳細については、[テクニカル プレビュー](/sccm/core/get-started/technical-preview)に関するドキュメントを参照してください。
+Current Branch、LTSB、および Current Branch の評価版インストールに加えて、[System Center Configuration Manager のテクニカル プレビュー](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) も利用できます。 これは、今後の更新プログラムで Current Branch に追加される可能性のある新機能をお客様にお試しいただくための Configuration Manager の制限付きビルドです。 テクニカル プレビューは、ライセンス版とは異なるメディアを使用してインストールします。 詳細については、[テクニカル プレビュー](/sccm/core/get-started/technical-preview)に関するドキュメントを参照してください。
 
 
 ## <a name="licensed-branches"></a>ライセンスされたブランチ

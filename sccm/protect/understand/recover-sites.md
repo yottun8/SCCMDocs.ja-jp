@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32351712"
 ---
 #  <a name="recover-a-configuration-manager-site"></a>Configuration Manager サイトの回復
 
@@ -31,7 +32,7 @@ Configuration Manager サイトで障害が発生した場合や、サイト デ
 > - [インフラストラクチャの変更](/sccm/core/servers/manage/modify-your-infrastructure)
 
 
-**同じバージョンおよびエディションの SQL Server を使用する必要があります。**たとえば、SQL Server 2014 で実行していたデータベースを SQL Server 2016 に復元することはできません。 同様に、SQL Server 2016 の Standard エディションで実行していたサイト データベースを SQL Server 2016 の Enterprise エディションに復元することはできません。
+**同じバージョンおよびエディションの SQL Server を使用する必要があります。** たとえば、SQL Server 2014 で実行していたデータベースを SQL Server 2016 に復元することはできません。 同様に、SQL Server 2016 の Standard エディションで実行していたサイト データベースを SQL Server 2016 の Enterprise エディションに復元することはできません。
 -   SQL Server を **シングル ユーザー モード**に設定しないでください。
 -   MDF ファイルと LDF ファイルが有効であることを確認します。 サイトを回復するときに、復元するファイルの状態は確認されません。
 

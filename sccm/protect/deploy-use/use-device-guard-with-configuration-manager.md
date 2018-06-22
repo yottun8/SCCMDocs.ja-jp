@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353554"
 ---
 # <a name="device-guard-management-with-configuration-manager"></a>Configuration Manager を使用した Device Guard 管理
 
@@ -92,7 +93,7 @@ Windows Defender Application Control ポリシーを構成または展開する�
     - 管理されたインストーラーの動作で問題を解決する
     - Configuration Manager で展開できない基幹業務アプリを信頼する
     - オペレーティング システムの展開イメージに含まれているアプリを信頼する 
-8.  **［次へ］**をクリックして、ウィザードを完了します。
+8.  **［次へ］** をクリックして、ウィザードを完了します。
 
 >[!IMPORTANT]
 >信頼するファイルやフォルダーの追加は、1706 以降のバージョンの Configuration Manager クライアントを実行するクライアント PC でのみサポートされます。 いずれかの追加ルールが Windows Defender Application Control ポリシーに含まれており、そのポリシーを、以前のバージョンの Configuration Manager クライアントを実行するクライアント PC に展開した場合、ポリシーは適用されません。 この問題は、これらの古いクライアントをアップグレードすると解決します。 追加ルールを含まないポリシーは、古いバージョンの Configuration Manager クライアントにも適用できます。
