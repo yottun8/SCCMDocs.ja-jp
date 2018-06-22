@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32337243"
 ---
 # <a name="manage-network-bandwidth-for-content"></a>コンテンツのネットワーク帯域幅の管理
 System Center Configuration Manager のコンテンツ管理プロセスに使用されるネットワーク帯域幅を効率よく利用するために、組み込みの制御機構を使用してスケジューリングと帯域幅調整を行うことができます。 事前設定されたコンテンツを使用することもできます。 以降のセクションでは、これらの方法について詳しく説明します。

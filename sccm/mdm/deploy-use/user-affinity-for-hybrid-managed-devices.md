@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32347435"
 ---
 # <a name="user-affinity-for-hybrid-managed-devices-in-configuration-manager"></a>Configuration Manager でのハイブリッド管理のデバイス向けユーザー アフィニティ
 

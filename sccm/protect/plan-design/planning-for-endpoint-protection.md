@@ -14,6 +14,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32352014"
 ---
 # <a name="planning-for-endpoint-protection-in-system-center-configuration-manager"></a>System Center Configuration Manager での Endpoint Protection の計画
 

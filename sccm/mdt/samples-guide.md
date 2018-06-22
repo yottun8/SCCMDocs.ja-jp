@@ -16,6 +16,7 @@ ms.sourcegitcommit: 7198ec49d9ce68c6d55bfb9e2d537b5442a132cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33915974"
 ---
 # <a name="microsoft-deployment-toolkit-samples-guide"></a>Microsoft Deployment Toolkit サンプル ガイド  
  このガイドは Microsoft® Deployment Toolkit (MDT) 2013 に付属し、Windows オペレーティング システムと Microsoft Office の展開に関するガイダンスを専門家チーム向けに提供します。 具体的には、このガイドは特定の展開シナリオに適したサンプル構成設定を示すことを目的としています。  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/27/2018
+ms.locfileid: "27821016"
 ---
 # <a name="troubleshooting-reference-for-the-microsoft-deployment-toolkit"></a>Microsoft Deployment Toolkit のトラブルシューティング リファレンス
  オペレーティング システムやアプリケーションの展開、およびユーザー状態の移行は、適切なツールとガイダンスを利用できる場合でも、困難な作業になることがあります。 Microsoft® Deployment Toolkit (MDT) 2013 に付属するこのリファレンスでは、現時点でわかっている問題、それらについて可能な回避策、およびトラブルシューティングのガイダンスを提供します。  

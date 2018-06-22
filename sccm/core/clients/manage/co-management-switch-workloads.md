@@ -10,16 +10,18 @@ manager: dougeby
 ms.date: 03/22/2018
 ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: 439e4e26c08b5a2710da0978ed2407d715bc86bd
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ceb4004c7f4cc24ff17f0e9648cddb29cb26d898
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569648"
 ---
 # <a name="switch-configuration-manager-workloads-to-intune"></a>Configuration Manager のワークロードを Intune に切り替える
 「[Prepare Windows 10 devices for co-management](co-management-prepare.md)」(共同管理用に Windows 10 デバイスを準備する) では、共同管理用に Windows 10 デバイスを準備しました。 これらのデバイスは AD、Azure AD に参加し、Intune に登録され、Configuration Manager クライアントがインストールされています。 Windows 10 デバイスが AD に参加し、Configuration Manager クライアントがインストールされていても、まだ Azure AD に参加していないか、Intune に登録されていない場合があります。 次の手順では、共同管理を有効にし、残りの Windows 10 デバイス (Intune に登録されていない Configuration Manager クライアント) を共同管理用に準備して、特定の Configuration Manager ワークロードの Intune への切り替えを開始できるようにします。
 
 1. Configuration Manager コンソールで、**[管理]** > **[概要]** > **[クラウド サービス]** > **[Co-management]\(共同管理\)** の順に移動します。    
+
 2. [ホーム] タブの [管理] グループで、 **[Configure co-management]\(共同管理の構成\)** を選択して Co-management Configuration Wizard \(共同管理の構成ウィザード\) を開きます。    
 3. [サブスクリプション] ページで **[サインイン]** をクリックして Intune テナントにサインインし、**[次へ]** をクリックします。   
 4. [Enablement]\(有効化\) ページで、**[パイロット]** または **[すべて]** を選択して Intune での自動登録を有効にし、**[次へ]** をクリックします。 **[パイロット]** を選ぶと、パイロット グループのメンバーである Configuration manager クライアントのみが Intune に自動的に登録されます。 このオプションにより、クライアントのサブセットで共同管理を有効にして初期テストを行ってから、段階的アプローチでロールアウトできます。 デバイス用の Intune のアプリが Intune に既に登録されている場合、Configuration Manager クライアントの展開にコマンド ラインを使用できます。 詳細については、「[Windows 10 devices enrolled in Intune](co-management-prepare.md#windows-10-devices-enrolled-in-intune)」(Intune に登録されている Windows 10 デバイス) を参照してください。
@@ -55,8 +57,8 @@ ms.lasthandoff: 05/03/2018
       - Windows Defender Application Control
       - Windows Defender セキュリティ センター
       - Windows Defender Advanced Threat Protection
-
-
+      - Windows Information Protection
+      
 
 ## <a name="monitor-co-management"></a>共同管理の監視
 共同管理を有効にした後に、次の方法を使用して共同管理デバイスを監視できます。

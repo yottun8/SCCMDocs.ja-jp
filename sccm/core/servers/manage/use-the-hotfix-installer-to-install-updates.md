@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342428"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>Use the Hotfix Installer to install updates for System Center Configuration Manager (修正プログラム インストーラーを使用して、System Center Configuration Manager の更新プログラムをインストールする)
 

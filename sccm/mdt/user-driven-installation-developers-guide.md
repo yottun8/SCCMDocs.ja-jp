@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/27/2018
+ms.locfileid: "27821086"
 ---
 # <a name="user-driven-installation---developers-guide"></a>ユーザー駆動型インストール - 開発者ガイド
 ユーザー駆動型インストール (UDI) は、Microsoft® System Center 2012 R2 Configuration Manager でオペレーティング システムの展開 (OSD) 機能を使用して、Windows 8.1 などの Windows® クライアント オペレーティング システムのコンピューターへの展開を簡略化するのに役立ちます。 UDI は Microsoft Deployment Toolkit (MDT) の一部です。  

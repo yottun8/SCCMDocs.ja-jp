@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32334676"
 ---
 # <a name="how-to-create-configuration-items-for-windows-10-devices-managed-with-the-system-center-configuration-manager-client"></a>System Center Configuration Manager クライアントを使用して管理されている Windows 10 デバイスの構成項目を作成する方法
 System Center Configuration Manager の **Windows 10** 構成項目を使用して、Configuration Manager クライアントで管理されている Windows 10 コンピューターの設定を管理します。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 1701943932818e0df1928d9be36ebaf424dd93b7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34049245"
 ---
 # <a name="create-windows-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager で Windows アプリケーションを作成する
 

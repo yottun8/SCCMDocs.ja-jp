@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32349519"
 ---
 # <a name="change-your-mdm-authority"></a>MDM 機関を変更する
 Microsoft サポートに問い合わせずに、また、既存の管理されたデバイスの登録解除と再登録を行わずに、MDM 機関を変更できます。 この記事では、Configuration Manager コンソール (ハイブリッド) から構成された既存の Microsoft Intune テナントを Intune スタンドアロンに変更する手順を説明します。 この記事の手順を完了すると、デバイスが [Azure Portal](https://portal.azure.com) の Microsoft Intune で管理されます。 
