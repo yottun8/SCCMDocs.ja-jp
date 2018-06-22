@@ -1791,7 +1791,7 @@ IF ((Computer Model IS “Contoso 1950”) AND (operating system=2003 OR operati
 > [!NOTE]
 >  このデータベースは、マスター展開サーバー上の MDT DB と同じ名前にする必要があります。 たとえば、マスター展開サーバー上の MDT DB が *MDTDB* という名前の場合は、子展開サーバー上に *MDTDB* という名前の空のデータベースを作成します。  
 
-###  <a name="ConfigureSQLReplication"> SQL Server レプリケーションの構成</a>  
+###  <a name="ConfigureSQLReplication"></a> SQL Server レプリケーションの構成  
  展開インフラストラクチャを構築するために必要なファイルとフォルダーのレプリケーションを構成した後は、MDT DB をレプリケートする SQL Server を構成します。  
 
 > [!NOTE]
@@ -3810,7 +3810,7 @@ Remove-item -path "DS002:\Media\MEDIA001" -Verbos
 
 3.  操作ウィンドウで **[プロパティ]** をクリックします。  
 
-4.  **[Task Sequence]** \(タスク シーケンス\) タブ上の [State Restore]\(状態復元\) ノードに移動します。  
+4.  **[Task Sequence]** \(タスク シーケンス\) タブ上の State Restore\(状態復元\) ノードに移動します。  
 
 5.  **Recover From Domain** (ドメインから復旧) タスク シーケンス ステップが存在することを確認します。 存在する場合は、手順 9. に進みます。  
 
