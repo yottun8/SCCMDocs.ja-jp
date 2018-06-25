@@ -2,7 +2,7 @@
 title: Technical Preview 1804
 titleSuffix: Configuration Manager
 description: Configuration Manager Technical Preview バージョン 1804 で利用できる新しい機能について説明します。
-ms.date: 04/25/2018
+ms.date: 05/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 8af43618-ec60-4c3e-a007-12399d1335b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0fcdcc984e267e6c54ad7c6194e8494854f0a1ee
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a796c8cc23ab15e3fbeb09fca6ffa6f1dbd45bc3
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474345"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1804 の機能
 
@@ -28,9 +29,15 @@ ms.lasthandoff: 05/03/2018
 <!--  Known Issues Template   -->
 ## <a name="known-issues-in-this-technical-preview"></a>この Technical Preview の既知の問題
 
+### <a name="bkmk_ki-prereqs"></a> 更新プログラムのダウンロードのリンクのセットアップが機能しない
+<!--514334--> メディアからセットアップを実行する場合、最初のページに **[最新の Configuration Manager 更新プログラムの取得]** という名前のリンクが表示されますが、このリリースではこのリンクが機能しません。 このリンクは、セットアップに必要なファイルをダウンロードするためのものです。
+
+#### <a name="workaround"></a>回避策
+セットアップに必要なファイルをダウンロードするには、セットアップ ウィザードを実行します。 [必須ファイルのダウンロード] ページで、**[必須ファイルをダウンロードする]** オプションを使用します。 
+
+
 ### <a name="bkmk_appcathttps"></a> アプリケーション カタログ Web サービス ポイントを HTTPS 対応にすることができません。
-<!--512637-->
-アプリケーション カタログ Web サービス ポイントが HTTPS 対応の場合:
+<!--512637--> アプリケーション カタログ Web サービス ポイントが HTTPS 対応の場合:
 
 - ユーザーが使用できるように展開されたアプリケーションがソフトウェア センターに表示されません  
 
@@ -50,8 +57,7 @@ HTTP 接続を使用して通信するようにアプリケーション カタ�
 
 
 ## <a name="configure-a-remote-content-library-for-the-site-server"></a>サイト サーバーのリモート コンテンツ ライブラリを構成する  
-<!--1357525-->
-プライマリ サイト サーバー上のハード ドライブ領域を解放するために、[コンテンツ ライブラリ](/sccm/core/plan-design/hierarchy/the-content-library)を別の保存場所に移動します。 コンテンツ ライブラリは、サイト サーバー上の別のドライブ、別のサーバー、または記憶域ネットワーク (SAN) 内のフォールトトレラント ディスクに移動できます。 変化するコンテンツの要件に合わせて、時間の経過と共に拡張または縮小する弾力性記憶域の機能があるので、SAN をお勧めします。 
+<!--1357525--> プライマリ サイト サーバー上のハード ドライブ領域を解放するために、その[コンテンツ ライブラリ](/sccm/core/plan-design/hierarchy/the-content-library)を別の保存場所に移動します。 コンテンツ ライブラリは、サイト サーバー上の別のドライブ、別のサーバー、または記憶域ネットワーク (SAN) 内のフォールトトレラント ディスクに移動できます。 変化するコンテンツの要件に合わせて、時間の経過と共に拡張または縮小する弾力性記憶域の機能があるので、SAN をお勧めします。 
 
 このリモート コンテンツ ライブラリは、[サイト サーバー ロールの高可用性](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)に対応するための新しい前提条件です。 
 
@@ -210,8 +216,7 @@ Configuration Manager のサーバー ツールとクライアント ツール�
 
 
 ## <a name="exclude-active-directory-containers-from-discovery"></a>探索から Active Directory コンテナーを除外する
-<!--1358143-->
-探索されるオブジェクト数を減らすために、Active Directory システム探索から特定のコンテナーを除外できるようになりました。 この機能は、[UserVoice のフィードバック](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8414520-exclude-virtual-cluster-and-ou-from-discovery)の結果です。
+<!--1358143--> 探索されるオブジェクト数を減らすために、Active Directory システム探索から特定のコンテナーを除外できるようになりました。 この機能は、[UserVoice のフィードバック](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8414520-exclude-virtual-cluster-and-ou-from-discovery)の結果です。
 
 ### <a name="try-it-out"></a>試してみましょう。
  タスクを実行してみます。 試した結果の[フィードバック](#bkmk_feedback)をお送りください。
@@ -257,8 +262,7 @@ Configuration Manager のサーバー ツールとクライアント ツール�
 
 
 ## <a name="filter-automatic-deployment-rules-by-software-update-architecture"></a>ソフトウェア更新アーキテクチャを使用した自動展開規則のフィルター処理
- <!--1322266-->
-自動展開規則をフィルター処理して、Itanium や ARM64 などのアーキテクチャを除外できるようになりました。
+ <!--1322266--> 自動展開規則をフィルター処理して、Itanium や ARM64 などのアーキテクチャを除外できるようになりました。
 
 ### <a name="try-it-out"></a>試してみましょう。
 タスクを実行してみます。 試した結果の[フィードバック](#bkmk_feedback)をお送りください。

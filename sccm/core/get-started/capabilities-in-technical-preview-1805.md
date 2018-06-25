@@ -2,7 +2,7 @@
 title: Technical Preview 1805
 titleSuffix: Configuration Manager
 description: Configuration Manager Technical Preview バージョン 1805 で利用できる新しい機能について説明します。
-ms.date: 05/11/2018
+ms.date: 05/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 7996b3eb-5259-483b-af40-adae2943d123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bb2b25440c87d4969d152ce410b8a28f010868ce
-ms.sourcegitcommit: 021272d5858e5dbb650b95644736d1de3dab7d8a
+ms.openlocfilehash: 24cb16ab17475bdd063949c7e3e2961b53341026
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34450153"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1805 の機能
 
@@ -45,8 +46,7 @@ Steps to workaround, if any.
 
 
 ## <a name="create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence"></a>タスク シーケンスに手動で構成されたフェーズを使用して段階的展開を作成する
-<!--1358148--> 
-タスク シーケンスに手動で構成されたフェーズを使用して、[段階的展開を作成](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)できます。 [Create Phased Deployment]\(段階的展開の作成\) ウィザードの **[フェーズ]** タブから、最大 10 個のフェーズを追加できます。 
+<!--1358148--> タスク シーケンスに手動で構成されたフェーズを使用して、[段階的展開を作成](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)できます。 [Create Phased Deployment]\(段階的展開の作成\) ウィザードの **[フェーズ]** タブから、最大 10 個のフェーズを追加できます。 
 
 
 ### <a name="try-it-out"></a>試してみましょう。
@@ -84,8 +84,7 @@ Steps to workaround, if any.
 
 
 ## <a name="cloud-distribution-point-support-for-azure-resource-manager"></a>Azure Resource Manager のためのクラウド配布ポイントのサポート
-<!--1322209-->
-[クラウド配布ポイント](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure) のインスタンスを作成するとき、**Azure Resource Manager の展開**を作成するためのオプションがウィザードで提供されるようになりました。 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager でクラウド配布ポイントを展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
+<!--1322209--> [クラウド配布ポイント](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure)のインスタンスを作成するときに、**Azure Resource Manager の展開**を作成するためのオプションがウィザードで提供されるようになりました。 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager でクラウド配布ポイントを展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
 
 クラウド配布ポイント ウィザードでは、Azure 管理証明書を使う**従来のサービス展開**のためのオプションがまだ提供されています。 リソースの展開と管理を簡単にするため、すべての新しいクラウド配布ポイントに Azure Resource Manager デプロイ モデルを使うことをお勧めします。 可能であれば、Resource Manager で既存のクラウド配布ポイントを再展開してください。
 
@@ -120,8 +119,7 @@ Configuration Manager では、既存の従来のクラウド配布ポイント�
 
 
 ## <a name="take-actions-based-on-management-insights"></a>管理の洞察に基づいて対策する
-<!--1357930-->
-[管理の洞察](/sccm/core/servers/manage/management-insights)のいくつかで、対策を行うことが可能になりました。 ルールに応じて、この対策は次の動作のいずれかになります。  
+<!--1357930--> [管理の洞察](/sccm/core/servers/manage/management-insights)のいくつかで、対策を行うことが可能になりました。 ルールに応じて、この対策は次の動作のいずれかになります。  
 
 - コンソールで、さらに詳細な対策を行うことが可能なノードへ、自動的に移動する。 たとえば、管理の洞察によって、クライアント設定の変更が推奨された場合、[クライアント設定] ノードへの移動という対策を行います。 既定またはカスタムのクライアント設定オブジェクトを変更することで、さらに詳細な対策を行うことができます。  
 
@@ -181,8 +179,7 @@ Windows LEDBAT の詳細については、「[New transport advancements](https:
 
 
 ## <a name="cloud-management-dashboard"></a>クラウド管理ダッシュボード
-<!--1358461-->
-新しい**クラウド管理ダッシュ ボード**では、クラウド管理ゲートウェイ (CMG) 使用量を一元化したビューを提供します。 Azure AD でサイトがオンボードになっている場合、クラウド ユーザーおよびデバイスに関するデータも表示します。  
+<!--1358461--> 新しい**クラウド管理ダッシュ ボード**では、クラウド管理ゲートウェイ (CMG) 使用量を一元化したビューを提供します。 Azure AD でサイトがオンボードになっている場合、クラウド ユーザーおよびデバイスに関するデータも表示します。  
 
 次のスクリーンショットは、利用可能な 2 つのタイルを表示したクラウド管理ダッシュ ボードの一部です。  
 ![クラウド管理ダッシュボード タイルの CMG トラフィックと現在のオンライン クライアント](media/1358461-cmg-dashboard.png)
@@ -220,8 +217,7 @@ Configuration Manager コンソールで、**[監視]** ワークスペースに
 
 
 ## <a name="cmpivot"></a>CMPivot
-<!--1358456-->
-Configuration Manager では、レポートを目的として顧客が使用する、デバイス データの大規模な一元化ストアを常に提供しています。 ただし、データは、クライアントから最後に収集された時点までの精度です。 
+<!--1358456--> Configuration Manager では、レポートを目的として顧客が使用する、デバイス データの大規模な一元化ストアを常に提供しています。 ただし、データは、クライアントから最後に収集された時点までの精度です。 
 
 CMPivot は、お使いの環境でリアルタイム状態のデバイスへのアクセスを提供する、新しいコンソール内ユーティリティです。 対象となるコレクション内の現在接続されているすべてのデバイス上で直ちにクエリを実行して、結果を返します。 ツール内で、このデータのフィルター処理およびグループ化が可能です。 オンライン クライアントからリアルタイム データを提供することで、業務上の質問に迅速に回答し、問題をトラブルシューティングし、セキュリティの問題に対応できます。
 
@@ -264,8 +260,7 @@ CMPivot は、お使いの環境でリアルタイム状態のデバイスへの
 
 
 ## <a name="improved-secure-client-communications"></a>改善されたセキュアなクライアント通信
-<!--1356889,1358228,1358460-->
-HTTPS 通信の使用は、すべての Configuration Manager 通信パスで推奨されていますが、PKI 証明書の管理のオーバーヘッドが原因で、一部の顧客にとっては、この使用が困難な課題になってしまう場合があります。 Azure Active Directory (Azure AD) の統合を導入することで、一部は軽減されますが、証明書要件のすべてには対応できません。 
+<!--1356889,1358228,1358460--> HTTPS 通信の使用は、すべての Configuration Manager 通信パスで推奨されていますが、PKI 証明書の管理のオーバーヘッドが原因で、一部の顧客にとっては、この使用が困難な課題になってしまう場合があります。 Azure Active Directory (Azure AD) の統合を導入することで、一部は軽減されますが、証明書要件のすべてには対応できません。 
 
 このリリースでは、クライアントがシステム クライアントと通信する方法を強化しました。 これらの強化の主な目的は、以下の 2 つです。  
 
@@ -288,12 +283,10 @@ HTTPS 通信の使用は、すべての Configuration Manager 通信パスで推
 > この動作は、このシナリオに HTTPS を有効化した管理ポイントを必要とする Configuration Manager の現在のブランチ バージョン 1802 から変更されました。 詳細については、「[HTTPS 用の管理ポイントを有効にする](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https)」を参照してください。  
 
 #### <a name="bkmk_token2"></a> シナリオ 2: 配布ポイントに対するクライアント
-<!--1358228-->
-ワークグループまたは Azure AD に参加しているクライアントは、HTTP 用に構成されている配布ポイントから安全なチャネル経由でコンテンツをダウンロードできます。   
+<!--1358228--> ワークグループまたは Azure AD に参加しているクライアントは、HTTP 用に構成されている配布ポイントから安全なチャネル経由でコンテンツをダウンロードできます。   
 
 #### <a name="bkmk_token3"></a> シナリオ 3 Azure AD デバイス ID 
-<!--1358460-->
-Azure AD に参加している、または[ハイブリッドの Azure AD デバイス](/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices)は、ログインしている Azure AD ユーザーがいない場合、割り当てられているサイトと安全に通信できます。 現在は、CMG および管理ポイントで認証するには、クラウドベースのデバイス ID で十分になりました。  
+<!--1358460--> Azure AD に参加している、または[ハイブリッドの Azure AD デバイス](/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices)は、ログインしている Azure AD ユーザーがいない場合、割り当てられているサイトと安全に通信できます。 現在は、CMG および管理ポイントで認証するには、クラウドベースのデバイス ID で十分になりました。  
 
 
 ### <a name="prerequisites"></a>[前提条件]  
@@ -336,8 +329,7 @@ Configuration Manager コンソールでこれらの証明書を確認できま�
 
 
 ## <a name="improvements-for-enabling-third-party-software-update-support"></a>サード パーティ製のソフトウェア更新プログラムのサポートを有効にするための機能強化
-<!--1357605-->
-[[サード パーティ製のソフトウェア更新プログラムのサポートを有効にする]](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co) に寄せられるUserVoice フィードバックの結果として、このリリースでは、System Center Updates Publisher (SCUP) との統合において、さらにイテレーション機能を強化しました。 Configuration Manager Technical Preview [バージョン 1803](/sccm/core/get-started/capabilities-in-technical-preview-1803#enable-third-party-software-update-support-on-clients) では、サードパーティ製更新プログラムのために WSUS から証明書を読み取り、その証明書をクライアントに展開する機能が追加されました。 しかし、以前と同様に、サードパーティ製ソフトウェア更新プログラムに署名するために、SCUP ツールを使用して証明書を作成および管理する必要がありました。
+<!--1357605--> [サード パーティ製のソフトウェア更新プログラムのサポート](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co)に寄せられる UserVoice フィードバックの結果として、このリリースでは、System Center Updates Publisher (SCUP) との統合において、さらにイテレーション機能を強化しました。 Configuration Manager Technical Preview [バージョン 1803](/sccm/core/get-started/capabilities-in-technical-preview-1803#enable-third-party-software-update-support-on-clients) では、サードパーティ製更新プログラムのために WSUS から証明書を読み取り、その証明書をクライアントに展開する機能が追加されました。 しかし、以前と同様に、サードパーティ製ソフトウェア更新プログラムに署名するために、SCUP ツールを使用して証明書を作成および管理する必要がありました。
 
 このリリースでは、自動的に証明書を構成する Configuration Manager サイトを有効にできます。 サイトは、WSUS と通信して、この目的に合った証明書を生成します。 Configuration Manager は、続けてその証明書をクライアントに展開します。 このイテレーション機能によって、SCUP ツールを使用して証明書を作成および管理する必要がなくなりました。 
 
@@ -396,8 +388,7 @@ CMTrace ログ表示ツールが、Configuration Manager クライアントと�
 
 
 ## <a name="improvement-to-the-configuration-manager-console"></a>Configuration Manager コンソールの機能強化
-<!--1358202-->
-Configuration Manager コンソールに次の機能強化を行いました。
+<!--1358202--> Configuration Manager コンソールに次の機能強化を行いました。
 
 - [資産とコンプライアンス]、[デバイス] の下の [デバイス] 一覧に既定で、現在ログオンしているユーザーが表示されるようになりました。 この値は、現在の[クライアント ステータス](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus)を示します。 ユーザーがログオフすると、値はクリアされます。 ログオンしているユーザーがいない場合、値は空白になります。 
 
@@ -407,12 +398,14 @@ Configuration Manager コンソールに次の機能強化を行いました。
 
 
 ## <a name="improvements-to-console-feedback"></a>コンソール フィードバックの機能強化
-<!--1357542-->
-このリリースでは、Configuration Manager コンソールの新しい[フィードバック](capabilities-in-technical-preview-1804.md#bkmk_feedback)機構に対して、次の機能強化を行いました。  
+<!--1357542--> このリリースでは、Configuration Manager コンソールの新しい[フィードバック](capabilities-in-technical-preview-1804.md#bkmk_feedback)機構に対して、次の機能強化を行いました。  
 
 - フィードバック ダイアログで、選択したオプションや自分の電子メール アドレスなど、以前の設定を記憶できるようになりました。  
 
 - オフラインのフィードバックがサポートされるようになりました。 コンソールから自分のフィードバックを保存して、インターネット接続システムから Microsoft にアップロードしてください。 `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe` に配置されている新しいオフライン フィードバック アップロード ツールを使用してください。 使用可能および必須のコマンド ライン オプションを確認するには、`--help` オプションを指定してツールを実行します。 接続されたシステムでは、**petrol.office.microsoft.com** へのアクセスが必要になります。
+
+### <a name="known-issues"></a>既知の問題
+インターネットに接続されたコンピューターのコンソールから **[気に入った機能の報告]** または **[問題点、改善点の報告]** を使用すると、"フィードバックの送信中にエラーが発生しました。" というメッセージが返される場合があります。 **[詳細]** をクリックすると、「`{"Message":""}`」というテキストが表示されます。 このエラーは、バックエンドのフィードバック システムの応答に関連する既知の問題が原因で発生します。 このエラーは無視できます。 Microsoft では、引き続きお客様のフィードバックも受信しています。 (詳細で別のメッセージが表示される場合は、オフラインのフィードバック オプションを使用して、後でフィードバックを送信し直してください。)
 
 
 
@@ -427,8 +420,7 @@ Configuration Manager コンソールに次の機能強化を行いました。
 
 
 ## <a name="improvement-to-hardware-inventory-for-large-integer-values"></a>大きな整数値でのハードウェア インベントリの機能強化
-<!--1357880-->
-ハードウェア インベントリには現在、 4,294,967,296 (2^32) を超える整数値に対して制限があります。 この制限は、バイト単位のハード ドライブ サイズなどの属性も対象になる場合があります。 管理ポイントはこの制限を超える整数値を処理せず、そのため、値がデータベースに格納されません。 このリリースでは、制限が 18,446,744,073,709,551,616 (2^64) に引き上げられました。 
+<!--1357880--> ハードウェア インベントリには現在、4,294,967,296 (2^32) を超える整数値に対して制限があります。 この制限は、バイト単位のハード ドライブ サイズなどの属性も対象になる場合があります。 管理ポイントはこの制限を超える整数値を処理せず、そのため、値がデータベースに格納されません。 このリリースでは、制限が 18,446,744,073,709,551,616 (2^64) に引き上げられました。 
 
 合計ディスク サイズなど、値が変更されないプロパティの場合は、サイトのアップグレード後に、すぐに値を確認することはできません。 ほとんどのハードウェア インベントリは、累計レポートです。 クライアントは、変更された値のみを送信します。 この動作を回避するには、同じクラスにもう 1 つのプロパティを追加します。 これにより、クライアントでは、変更されたクラス内のすべてのプロパティを更新するようになります。 
 
@@ -451,8 +443,7 @@ WSUS クリーンアップ ウィザードでは、有効期限が切れてて�
 
 
 ## <a name="improvement-to-support-for-cng-certificates"></a>CNG 証明書のサポートの強化
-<!--1357314-->
-このリリースでは、HTTPS が有効な以下の追加のサーバー役割に [CNG 証明書](/sccm/core/plan-design/network/cng-certificates-overview)を使用します。  
+<!--1357314--> このリリースでは、HTTPS が有効な以下の追加のサーバー役割に [CNG 証明書](/sccm/core/plan-design/network/cng-certificates-overview)を使用します。  
 - Configuration Manager ポリシー モジュールを使った NDES サーバーを含む、証明書登録ポイント
 
 

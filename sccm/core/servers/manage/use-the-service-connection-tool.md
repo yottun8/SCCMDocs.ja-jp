@@ -10,11 +10,12 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 906b39f01b05600d86a045e07d3e28184e9360e8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 1faabd64d11eeef8e825f22f7f661112813f5459
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474311"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>System Center Configuration Manager のサービス接続ツールの使用
 
@@ -101,7 +102,13 @@ USB ドライブに ServiceConnectionTool フォルダーとその中身をす�
 バージョン 1706 より、ツールの既定のダウンロード動作が変更され、ダウンロードするファイルの種類を制御するオプションがツールでサポートされるようになりました。
 -   既定では、サイトのバージョンに適用される最新の更新プログラムのみがダウンロードされます。 修正プログラムはダウンロードされません。
 
-この動作を変更するには、次のパラメーターのいずれか 1 つを使用してダウンロードするファイルの種類を変更します。 サイトのバージョンは、ツールの実行時にアップロードされる .cab ファイル内のデータから決定されます。
+この動作を変更するには、次のパラメーターのいずれか 1 つを使用してダウンロードするファイルの種類を変更します。 
+
+> [!NOTE]
+> サイトのバージョンは、ツールの実行時にアップロードされる .cab ファイル内のデータから決定されます。
+>
+> バージョンを確認するには、.cab ファイル内の *SiteVersion*.txt ファイルを探してください。
+
 -   **-downloadall**  このオプションではサイトのバージョンに関係なく、更新プログラムと修正プログラムを含めたすべてがダウンロードされます。
 -   **-downloadhotfix**  このオプションではサイトのバージョンに関係なくすべての修正プログラムがダウンロードされます。
 -   **-downloadsiteversion**  このオプションでは、サイトのバージョン以降のバージョンの更新プログラムと修正プログラムがダウンロードされます。
@@ -160,8 +167,19 @@ USB ドライブに ServiceConnectionTool フォルダーとその中身をす�
 
  更新プログラムのインストールの詳細については、「[System Center Configuration Manager のコンソール内の更新プログラムのインストール](../../../core/servers/manage/install-in-console-updates.md)」を参照してください。  
 
+## <a name="bkmk_cmd"></a> ログ ファイル
+
+**ServiceConnectionTool.log**
+
+サービス接続ツールを実行するたびに、ツールと同じ場所に **ServiceConnectionTool.log** という名前のログ ファイルが生成されます。  このログ ファイルでは、使用コマンドに基づく、ツールの実行に関する簡単な詳細が示されます。  ツールを実行するたびに、既存のログ ファイルが置き換えられます。
+
+**ConfigMgrSetup.log**
+
+ツールを使用して接続し更新プログラムをダウンロードする場合、システム ドライブのルート上に、**ConfigMgrSetup.log** という名前のログ ファイルが生成されます。  このログ ファイルでは、ダウンロードされたファイル、抽出されたファイル、ハッシュのチェックの成否など、より詳しい情報が示されます。
+
 ## <a name="bkmk_cmd"></a> コマンド ライン オプション  
  サービス接続ポイント ツールのヘルプ情報を表示するには、コマンド プロンプトを開き、ツールを格納するフォルダーに移動して、コマンド  **serviceconnectiontool.exe**を実行します。  
+
 
 |コマンド ライン オプション|詳細|  
 |---------------------------|-------------|  

@@ -1,8 +1,8 @@
 ---
 title: オンプレミス インフラストラクチャのアップグレード
 titleSuffix: Configuration Manager
-description: SQL Server やサイト システムのサイト オペレーティング システムなどのインフラストラクチャをアップグレードする方法について説明します。
-ms.date: 02/15/2018
+description: SQL Server やサイト システムの OS などのインフラストラクチャをアップグレードする方法について説明します。
+ms.date: 05/23/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,48 +10,51 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 09cce65bd4bb4ccb8a9cfee6927aa86409e691a0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: dc433d63eb647ef7a0a88ada212f949783ac25c0
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474253"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-system-center-configuration-manager"></a>System Center Configuration Manager をサポートするオンプレミス インフラストラクチャのアップグレード
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager を実行するサーバー インフラストラクチャをアップグレードする場合は、この記事の情報を参考にしてください。  
+Configuration Manager を実行するサーバー インフラストラクチャをアップグレードする場合は、この記事の情報を参考にしてください。  
 
- - 以前バージョンの Configuration Manager から System Center Configuration Manager にアップグレードする場合は、「[Upgrade to System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)」(System Center Configuration Manager へのアップグレード) を参照してください。
+ - 以前バージョンの Configuration Manager から System Center Configuration Manager (current branch) に*アップグレード*する場合は、「[System Center Configuration Manager へのアップグレード](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)」をご覧ください。
 
-- System Center Configuration Manager インフラストラクチャを新しいバージョンにアップグレードする場合は、「[System Center Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)」を参照してください。
+- System Center Configuration Manager (current branch) インフラストラクチャを新しいバージョンに*アップグレード*する場合は、「[System Center Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)」をご覧ください。
 
-##  <a name="BKMK_SupConfigUpgradeSiteSrv"></a> サイト システムのサイト オペレーティング システムのアップグレード  
- Configuration Manager には、次の状況で、サイト サーバーをホストするサーバーとサイト システムの役割をホストするリモート サーバーのオペレーティング システムの一括アップグレードをサポートしています。  
+
+
+##  <a name="BKMK_SupConfigUpgradeSiteSrv"></a> サイト システムの OS のアップグレード  
+ Configuration Manager には、次の状況で、サイト サーバーをホストするサーバーとサイト システムの役割をホストするリモート サーバーのオペレーティング システム (0S) の一括アップグレードをサポートしています。  
 
 -   アップグレード後の Service Pack レベルが Configuration Manager によってサポートされている場合の、Windows Server の上位 Service Pack への一括アップグレード。  
 -   以下の一括アップグレード。
     - Windows Server 2012 R2 から Windows Server 2016 ([詳細を参照](#bkmk_2016))。
     - Windows Server 2012 から Windows Server 2016 ([詳細を参照](#bkmk_2016))。
     - Windows Server 2012 から Windows Server 2012 R2 ([詳細を参照](#bkmk_2012r2))。
-    - Configuration Manager バージョン 1602 以降を使用する場合は、Windows Server 2008 R2 から Windows Server 2012 R2 へのアップグレードもサポート ([詳細を参照](#bkmk_from2008r2))。
+    - Windows Server 2008 R2 から Windows Server 2012 R2 ([詳細を参照](#bkmk_from2008r2))。
 
     > [!WARNING]  
-    >  異なるオペレーティング システムにアップグレードする前に、サーバーから "*WSUS をアンインストールする必要があります*"。 SUSDB を残しておき、WSUS を再インストールした後で再アタッチできます。 この重要な手順の詳細については、Windows Server ドキュメントの「[Windows Server Update Services の概要](https://technet.microsoft.com/library/hh852345.aspx)」の「新機能と変更された機能」セクションを参照してください。  
+    >  異なる OS にアップグレードする前に、サーバーから "*WSUS をアンインストールする必要があります*"。 SUSDB を残しておき、WSUS を再インストールした後で再アタッチできます。 この重要な手順について詳しくは、Windows Server ドキュメントの「[Windows Server Update Services の概要](https://technet.microsoft.com/library/hh852345.aspx)」の「新機能と変更された機能」セクションをご覧ください。  
 
-サーバーをアップグレードするには、アップグレード先のオペレーティング システムによって提供されるアップグレード手順を使用します。  以下を参照してください。
+サーバーをアップグレードするには、アップグレード先の OS によって提供されるアップグレード手順を使用します。 次の記事をご覧ください。
   -  Windows Server のドキュメントの「[Windows Server 2012 R2 のアップグレード オプション](https://technet.microsoft.com/library/dn303416.aspx)」。  
-  - Windows Server のドキュメントの「[Windows Server 2016 のアップグレード オプションと変換オプション](https://technet.microsoft.com/windows-server-docs/get-started/supported-upgrade-paths)」。
+  - Windows Server のドキュメントの「[Windows Server 2016 のアップグレード オプションと変換オプション](/windows-server/get-started/supported-upgrade-paths)」。
 
 ### <a name="bkmk_2016"></a> Windows Server 2012 または Windows Server 2012 R2 から Windows Server 2016 へのアップグレード
 Windows Server 2012 または Windows Server 2012 R2 から Windows Server 2016 にアップグレードする場合は、以下が適用されます。
 
 
-**アップグレード前:**  
+#### <a name="before-upgrade"></a>アップグレードの前に  
 -   System Center Endpoint Protection (SCEP) クライアントを削除します。 Windows Server 2016 では、SCEP クライアントの代わりとして、Windows Defender が組み込まれています。 SCEP クライアントが存在している場合、Windows Server 2016 へのアップグレードが妨げられる可能性があります。
 -   WSUS ロールがサーバーにインストールされている場合は削除します。 SUSDB を残しておき、WSUS を再インストールした後で再アタッチできます。
 
-**アップグレード後:**
+#### <a name="after-upgrade"></a>アップグレードの後に   
 -   Windows Defender が有効であり、自動開始が設定され、実行されていることを確認します。
 -   次の Configuration Manager のサービスが実行されていることを確認します。
   -     SMS_EXECUTIVE
@@ -70,7 +73,7 @@ Windows Server 2012 または Windows Server 2012 R2 から Windows Server 2016 
 
 -   プライマリ サイト サーバーをアップグレードしている場合、[サイト リセットを実行](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_reset)します。
 
-**リモートの Configuration Manager コンソールに関する既知の問題:**  
+#### <a name="known-issue-for-remote-configuration-manager-consoles"></a>リモートの Configuration Manager コンソールに関する既知の問題   
 サイト サーバーまたは SMS_Provider のインスタンスをホストするサーバーを Windows Server 2016 にアップグレードした後、管理ユーザーが Configuration Manager コンソールをサイトに接続できない場合があります。 この問題を回避するには、WMI の SMS Admins グループのアクセス許可を手動で復元する必要があります。 サイト サーバーと、SMS_Provider のインスタンスをホストする各リモート サーバーで、アクセス許可を設定する必要があります。
 
 1. 該当するサーバー上で Microsoft 管理コンソール (MMC) を開き、**WMI コントロール**のスナップインを追加し、**[ローカル コンピューター]** を選択します。
@@ -85,12 +88,13 @@ Windows Server 2012 または Windows Server 2012 R2 から Windows Server 2016 
   -   リモートの有効化
 5. アクセス許可を保存して、Configuration Manager コンソールへのアクセスを復元します。
 
+
 ### <a name="bkmk_2012r2"></a>Windows Server 2012 から Windows Server 2012 R2
 
-**アップグレード前:**
+#### <a name="before-upgrade"></a>アップグレードの前に  
 -   WSUS ロールがサーバーにインストールされている場合は削除します。 SUSDB を残しておき、WSUS を再インストールした後で再アタッチできます。
 
-**アップグレード後:**
+#### <a name="after-upgrade"></a>アップグレードの後に  
   - Windows 展開サービスが開始され、次のサイト システムの役割を実行していることを確認します (このサービスはアップグレード時に停止されます)。
     - サイト サーバー
     - 管理ポイント
@@ -109,13 +113,13 @@ Windows Server 2012 または Windows Server 2012 R2 から Windows Server 2016 
   不足している前提条件を復元した後で、もう一度サーバーを再起動して、サービスが開始され、動作していることを確認します。
 
 ### <a name="bkmk_from2008r2"></a>Windows Server 2008 R2 から Windows Server 2012 R2 へのアップグレード
-このオペレーティング システムのアップグレード シナリオには、次のような条件があります。  
+この OS のアップグレード シナリオには、次のような条件があります。  
 
-**アップグレード前:**
+#### <a name="before-upgrade"></a>アップグレードの前に  
 -   WSUS 3.2 をアンインストールします。  
-    サーバー オペレーティングシステムを Windows Server 2012 R2 にアップグレードする前に、サーバーから WSUS 3.2 をアンインストールする必要があります。 この重要な手順の詳細については、Windows Server ドキュメントの「Windows Server Update Services の概要」の「新機能と変更された機能」セクションを参照してください。
+    サーバーの OS を Windows Server 2012 R2 にアップグレードする前に、サーバーから WSUS 3.2 をアンインストールする必要があります。 この重要な手順について詳しくは、Windows Server ドキュメントの「[Windows Server Update Services の概要](https://technet.microsoft.com/library/hh852345.aspx)」の「新機能と変更された機能」セクションをご覧ください。
 
-**アップグレード後:**
+#### <a name="after-upgrade"></a>アップグレードの後に  
   - Windows 展開サービスが開始され、次のサイト システムの役割を実行していることを確認します (このサービスはアップグレード時に停止されます)。
     - サイト サーバー
     - 管理ポイント
@@ -143,58 +147,61 @@ Windows Server 2012 または Windows Server 2012 R2 から Windows Server 2016 
 
 
 
-##  <a name="BKMK_SupConfigUpgradeClient"></a> Configuration Manager クライアントのオペレーティング システムのアップグレード  
- 次の状況で、Configuration Manager は Configuration Manager クライアントのオペレーティング システムの一括アップグレードをサポートします。  
+##  <a name="BKMK_SupConfigUpgradeClient"></a> Configuration Manager クライアントの OS のアップグレード  
+ 次の状況で、Configuration Manager は Configuration Manager クライアントの OS の一括アップグレードをサポートします。  
 
 -   アップグレード後の Service Pack レベルが Configuration Manager によってサポートされている場合の、Windows の上位 Service Pack への一括アップグレード。  
 
--   Windows のサポートされているバージョンから Windows 10 への一括アップグレード。 詳細については、「[System Center Configuration Manager を使用して、Windows を最新のバージョンにアップグレードする](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md)」をご覧ください。  
+-   Windows のサポートされているバージョンから Windows 10 への一括アップグレード。 詳細については、「[Windows を最新バージョンにアップグレードする](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md)」をご覧ください。  
 
--   Windows 10 のビルドからビルドへのサービス アップグレード。  詳細については、「[System Center Configuration Manager を使用して、サービスとしての Windows を管理する](../../../osd/deploy-use/manage-windows-as-a-service.md)」をご覧ください。  
+-   Windows 10 のビルドからビルドへのサービス アップグレード。 詳細については、「[サービスとしての Windows の管理](../../../osd/deploy-use/manage-windows-as-a-service.md)」を参照してください。  
+
+
 
 ##  <a name="BKMK_SupConfigUpgradeDBSrv"></a> サイト データベース サーバーでの SQL Server のアップグレード  
   Configuration Manager では、サイト データベース サーバー上の SQL のサポートされたバージョンからの、SQL Server の一括アップグレードをサポートしています。 このセクションの SQL Server のアップグレード シナリオは Configuration Manager でサポートされており、各シナリオの要件を含んでいます。
 
- Configuration Manager によってサポートされている SQL Server のバージョンの詳細については、「[System Center Configuration Manager の SQL Server バージョンのサポート](../../../core/plan-design/configs/support-for-sql-server-versions.md)」を参照してください。  
+ Configuration Manager によってサポートされている SQL Server のバージョンの詳細については、「[SQL Server バージョンのサポート](../../../core/plan-design/configs/support-for-sql-server-versions.md)」をご覧ください。  
 
- **SQL Server のサービス パック バージョンのアップグレード:**    
+ ### <a name="upgrade-the-service-pack-version-of-sql-server"></a>SQL Server のサービス パック バージョンのアップグレード    
  Configuration Manager は、アップグレード後の SQL Server の Service Pack レベルが Configuration Manager によってサポートされている場合、SQL Server の上位 Service Pack への一括アップグレードをサポートします。
 
- 1 つの階層に複数の Configuration Manager サイトがある場合は、各サイトで SQL Server の異なるサービス パックのバージョンを実行できます。また、サイトがサイト データベースに使用する SQL Server のサービス パックのバージョンをアップグレードする順序に制限はありません。
+ 階層内に複数の Configuration Manager サイトがある場合、各サイトで異なるバージョンの SQL Server のサービス パックを実行できます。 サイトのデータベースに使用される SQL Server のサービス パックのバージョンをアップグレードするサイトの順番に制限はありません。
 
- **SQL Server の新しいバージョンへのアップグレード:**   
+### <a name="upgrade-to-a-new-version-of-sql-server"></a>SQL Server の新しいバージョンへのアップグレード   
  Configuration Manager は次のバージョンへの SQL Server の一括アップグレードをサポートしています。
 
- - SQL Server 2012  
- - SQL Server 2014  
+ - SQL Server 2017
  - SQL Server 2016  
+ - SQL Server 2014  
 
 各サイトでサイト データベースをホストする SQL Server のバージョンをアップグレードする場合は、サイトで使用される SQL Server のバージョンを、次の順序でアップグレードする必要があります。
 
  1. 最初に中央管理サイトで SQL Server をアップグレードします。
  2. セカンダリ サイトの親プライマリ サイトをアップグレードする前に、セカンダリ サイトをアップグレードします。
- 3. 最後に親プライマリ サイトをアップグレードします。 これには、中央管理サイトに報告する子プライマリ サイトと、階層の最上位サイトであるスタンドアロンのプライマリ サイトの両方が含まれます。
+ 3. 最後に親プライマリ サイトをアップグレードします。 これらのサイトには、中央管理サイトに報告する子プライマリ サイトと、階層の最上位サイトであるスタンドアロンのプライマリ サイトの両方が含まれます。
 
-
-  **SQL Server のカーディナリティ推定レベルおよびサイト データベース:**   
+### <a name="sql-server-cardinality-estimation-level-and-the-site-database"></a>SQL Server のカーディナリティ推定レベルおよびサイト データベース   
 サイト データベースを以前のバージョンの SQL Server からアップグレードすると、既存の SQL カーディナリティ推定 (CE) レベルが SQL Server のそのインスタンスで許可されている最小レベルである場合に、データベースではそのレベルが保持されます。 許可レベルより低い互換性レベルのデータベースを持つ SQL Server をアップグレードすると、データベースは SQL で許可されている最も低い互換性レベルに設定されます。
 
 次の表に、Configuration Manager サイト データベースで推奨される互換性レベルを示します。
 
 |SQL Server バージョン | サポートされる互換性レベル |推奨レベル|
 |----------------|--------------------|--------|
-| SQL Server 2016| 130、120、110、100 | 130|
-| SQL Server 2014| 120、110、100      | 110|
+| SQL Server 2017 | 140、130、120、110  | 140 |
+| SQL Server 2016 | 130、120、110  | 130 |
+| SQL Server 2014 | 120、110      | 110 |
 
-サイト データベースで使用されている SQL Server の CE 互換性レベルを識別するには、サイト データベース サーバーで **SELECT name, compatibility_level FROM sys.databases** という SQL クエリを実行します。
+サイト データベースで使用されている SQL Server の CE 互換性レベルを識別するには、サイト データベース サーバーで次の SQL クエリを実行します。  
+`SELECT name, compatibility_level FROM sys.databases`
 
- SQL CE の互換性レベルとその設定方法の詳細については、「[ALTER DATABASE 互換性レベル (Transact-SQL)](https://msdn.microsoft.com/library/bb510680.aspx)」を参照してください。
+ SQL CE の互換性レベルとその設定方法の詳細については、「[ALTER DATABASE 互換性レベル (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017)」を参照してください。
 
 
-SQL Server の詳細については、TechNet にある SQL Server のドキュメントを参照してください。
--   [SQL Server 2012 へのアップグレード](http://technet.microsoft.com/library/ms143393\(v=sql.110))
+SQL Server のアップグレードについて詳しくは、次の SQL Server のドキュメントをご覧ください。
+-   [SQL Server 2017 へのアップグレード](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)
+-   [SQL Server 2016 へのアップグレード](/sql/database-engine/install-windows/supported-version-and-edition-upgrades)
 -   [SQL Server 2014 へのアップグレード](http://technet.microsoft.com/library/ms143393\(v=sql.120))  
--   [SQL Server 2016 へのアップグレード](https://technet.microsoft.com/library/bb677622(v=sql.130))
 
 
 
