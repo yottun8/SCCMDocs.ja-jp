@@ -112,6 +112,7 @@
 
 <!-- Only show the current plus three; four total) -->
 ##   [Technical Preview](get-started/technical-preview.md)
+###  [1806.2 の機能](get-started/capabilities-in-technical-preview-1806-2.md)
 ###  [1806 の機能](get-started/capabilities-in-technical-preview-1806.md)
 ###  [1805 の機能](get-started/capabilities-in-technical-preview-1805.md)
 ###  [1804 の機能](get-started/capabilities-in-technical-preview-1804.md)
