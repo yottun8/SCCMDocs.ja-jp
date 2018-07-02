@@ -10,12 +10,12 @@ ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f346c47188bf71512ec2cbc46f6c9cb352cd642e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 28b7819b915eb2dea8a34d1474141067ac7751b5
+ms.sourcegitcommit: 0305e710f634529793ae73e5aac24168ee4fe02f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333180"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042781"
 ---
 # <a name="whats-new-in-system-center-configuration-manager-incremental-versions"></a>System Center Configuration Manager の増分バージョンの新機能
 
@@ -34,7 +34,7 @@ ms.locfileid: "32333180"
   - [バージョン 1706 の新機能](../../../core/plan-design/changes/whats-new-in-version-1706.md)  
 
 
- 更新プログラムの各バージョンは、リリース後 1 年間サポートされます。 最新の更新プログラムのバージョンを、把握しておいてください。 詳細については、[Configuration Manager の Current Branch バージョンのサポート](../../../core/servers/manage/current-branch-versions-supported.md)に関するページをご覧ください。  
+Configuration Manager 1710 より前にリリースされたバージョンについては、サポートは 12 か月間です。 1710 リリース以降では、更新プログラムの各バージョンは、一般公開 (GA) リリース日から 18 か月間サポートされます。  最新の更新プログラムのバージョンを、把握しておいてください。 詳細については、[Configuration Manager の Current Branch バージョンのサポート](../../../core/servers/manage/current-branch-versions-supported.md)に関するページをご覧ください。  
 
 
 ## <a name="see-also"></a>関連項目
