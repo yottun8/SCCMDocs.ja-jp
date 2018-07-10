@@ -1,8 +1,8 @@
 ---
 title: 言語パック
 titleSuffix: Configuration Manager
-description: System Center Configuration Manager で使用できる言語サポートについて説明します。
-ms.date: 1/3/2017
+description: Configuration Manager で使用できる言語サポートについて説明します。
+ms.date: 06/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,27 +10,39 @@ ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a198e15a1ef389d792acc73f2253aa4a704ac35a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 54034ec94ad2a0ea2b7ce095d9da669aea02f0b3
+ms.sourcegitcommit: 702e6017b6dee4629b67bb9f3bd5d9b5a889ebee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37340228"
 ---
-# <a name="language-packs-in-system-center-configuration-manager"></a>System Center Configuration Manager の言語パック
+# <a name="language-packs-in-configuration-manager"></a>Configuration Manager の言語パック
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-このトピックでは、System Center Configuration Manager の言語サポートの技術的な詳細情報について説明します。  
+この記事では、Configuration Manager の言語サポートに関する技術的な詳細情報について説明します。 Configuration Manager のサイト サーバーとクライアントは、言語に依存しないと見なされます。 中央管理サイトおよびプライマリ サイトに **サーバー言語パック** または **クライアント言語パック** をインストールすることで、表示言語のサポートを追加できます。 サイトのインストール中、そのサイトでサポートするサーバーとクライアントの言語を利用可能な言語パック ファイルから選びます。
+ 
+各サイトに複数の言語をインストールします。 使用する言語のみをインストールする必要があります。  
 
-## <a name="BKMK_SupLanguagePacks"></a> サポートされるオペレーティング システム言語  
- 中央管理サイトおよびプライマリ サイトに **サーバー言語パック** または **クライアント言語パック** をインストールすることで、次の表の表示言語のサポートをインストールできます。 サイトのインストール中、そのサイトでサポートするサーバーとクライアントの言語を利用可能な言語パック ファイルから選びます。
+- 各サイトで、Configuration Manager コンソール用に複数の言語がサポートされます。  
 
- 前提条件かつ再配布可能なファイル ダウンロードの一部としてセットアップを実行するときに、言語パック ファイルがダウンロードされます。 [セットアップ ダウンローダー](setup-downloader.md)を使用して、セットアップを実行する前にこれらのファイルをダウンロードできます。   
+- 各サイトで個々のクライアント言語パックをインストールすることで、サポートが必要なクライアント言語のサポートのみを追加します。  
 
- 次の表を参照して、サーバーまたはクライアント クライアントでサポートする言語にロケール ID をマッピングしてください。 ロケール ID の詳細については、「[Locale IDs Assigned by Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=252609)」 (Microsoft による割り当て済みロケール ID) を参照してください。  
+次のコンポーネントに一致する言語のサポートをインストールする場合について:  
 
-### <a name="server-languages"></a>サーバーの言語  
+- コンピューターの表示言語: Configuration Manager コンソールおよびそのコンピューターで実行されるクライアント ユーザー インターフェイスの両方において、その言語で情報が表示されます。  
+
+- コンピューターの Web ブラウザーで使用している言語設定: アプリケーション カタログや SQL Server Reporting Services などの Web ベースの情報への接続時に、その言語で情報が表示されます。  
+
+
+Configuration Manager のセットアップを実行すると、前提条件および再配布可能なファイルの一部として、言語パック ファイルがダウンロードされます。 [セットアップ ダウンローダー](setup-downloader.md)を使用して、セットアップを実行する前にこれらのファイルをダウンロードすることもできます。   
+
+
+
+## <a name="server-languages"></a>サーバーの言語  
+
+次の表を使用して、サーバーでサポートする言語にロケール ID をマッピングしてください。 ロケール ID の詳細については、「[Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=252609)」 (Microsoft による割り当て済みロケール ID) を参照してください。  
 
 |サーバーの言語|ロケール ID (LCID)|3 文字コード|  
 |---------------------|------------------------|-----------------------|  
@@ -54,7 +66,11 @@ ms.locfileid: "32340311"
 |スウェーデン語|041d|SVE|  
 |トルコ語|041f|TRK|  
 
-### <a name="client-languages"></a>クライアントの言語  
+
+
+## <a name="client-languages"></a>クライアントの言語  
+
+次の表を使用して、クライアント コンピューターでサポートする言語にロケール ID をマッピングしてください。 ロケール ID の詳細については、「[Locale IDs Assigned by Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=252609)」 (Microsoft による割り当て済みロケール ID) を参照してください。  
 
 |クライアントの言語|ロケール ID (LCID)|3 文字コード|  
 |---------------------|------------------------|-----------------------|  
@@ -82,12 +98,15 @@ ms.locfileid: "32340311"
 |スウェーデン語|041d|SVE|  
 |トルコ語|041f|TRK|  
 
+
 ### <a name="mobile-device-client-languages"></a>モバイル デバイス クライアントの言語  
- モバイル デバイスの言語のサポートを追加する場合、サポートされるすべてのモバイル デバイス クライアントの言語が含まれます。 モバイル デバイスをサポートするために個々の言語パックを選択することはできません。  
+モバイル デバイスの言語のサポートを追加する場合、サポートされるすべてのモバイル デバイス クライアントの言語が含まれます。 モバイル デバイスをサポートするために個々の言語パックを選択することはできません。  
 
-### <a name="identify-installed-language-packs"></a>インストール済みの言語パックを特定する  
-Configuration Manager クライアントを実行するコンピューターにインストールされている言語パックを特定するには、コンピューターのレジストリで、インストール済み言語パックのロケール ID (LCID) を確認します。 この情報は次の場所にあります。
 
- **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs**  
 
-ハードウェア インベントリを使用してこの情報を収集し、カスタム レポートを作成して言語の詳細情報を確認することができます。 カスタム ハードウェア インベントリを収集する方法については、「[How to configure hardware inventory in System Center Configuration Manager](../../../../core/clients/manage/inventory/configure-hardware-inventory.md)」(System Center Configuration Manager でハードウェア インベントリを構成する方法) を参照してください。 レポートの作成の詳細については、「[Operations and maintenance for reporting in System Center Configuration Manager](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md)」(System Center Configuration Manager のレポートの操作とメンテナンス) トピックの「[Manage Configuration Manager reports](../../../../core/servers/manage/operations-and-maintenance-for-reporting.md#BKMK_ManageReports)」(Configuration Manager レポートの管理) セクションを参照してください。  
+## <a name="identify-installed-language-packs"></a>インストール済みの言語パックを特定する  
+Configuration Manager クライアントを実行するコンピューターにインストールされている言語パックを特定するには、コンピューターのレジストリで、インストール済み言語パックのロケール ID (LCID) を確認します。 この情報は、次のレジストリ パスで確認できます。  
+
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs`  
+
+ハードウェア インベントリをカスタマイズして、この情報を収集します。 次に、カスタム レポートを構築して言語の詳細を表示します。 カスタム ハードウェア インベントリの収集について詳しくは、「[ハードウェア インベントリを構成する方法](/sccm/core/clients/manage/inventory/configure-hardware-inventory)」をご覧ください。 レポートの作成について詳しくは、「[Configuration Manager レポートの管理](/sccm/core/servers/manage/operations-and-maintenance-for-reporting#BKMK_ManageReports)」をご覧ください。  

@@ -10,11 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0893df43f7979fa3c36ba90ab400e399f96e6228
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5ab632367e6cc30210db00a61ee4d3b9c414fdbd
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260814"
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>System Center Configuration Manager の管理ポイントのデータベース レプリカ
 
@@ -78,7 +79,7 @@ System Center Configuration Manager プライマリ サイトでは、データ�
 
     -   [データベースのレプリカを発行するサイト サーバー データベースの移動](#BKMK_DBReplicaOps_Move)  
 
--   **System Center Configuration Manager へのアップグレード**: サイトを System Center 2012 Configuration Manager から System Center Configuration Manager にアップグレードする前に、管理ポイントのデータベース レプリカを無効にする必要があります。  サイトをアップグレードしたら、管理ポイントのデータベース レプリカを再構成できます。  
+-   **System Center Configuration Manager へのアップグレード**: サイトを System Center 2012 Configuration Manager から System Center Configuration Manager Current Branch にアップグレードする前、または Configuration Manager Current Branch を最新リリースに更新する前に、管理ポイントのデータベース レプリカを無効にする必要があります。  サイトをアップグレードしたら、管理ポイントのデータベース レプリカを再構成できます。  
 
 -   **単一 SQL Server 上の複数レプリカ:** 管理ポイントの複数のデータベース レプリカをホストするようにデータベース レプリカ サーバーを構成する場合 (各レプリカは別々のインスタンス上にある必要があります)、変更した構成スクリプト (次のセクションの手順 4 から) を使用して、そのサーバー上の以前に構成されたデータベース レプリカで使用されている自己署名入り証明書が上書きされないようにする必要があります。  
 
@@ -199,7 +200,7 @@ Windows Server 2008 R2 コンピューターにデータベース レプリカ �
 
         -   **SQL Server Management Studio**で、サイト データベース コンピューターに接続し、**[レプリケーション]** フォルダーを右クリックして **[レプリケーション モニターの起動]** を選択します。  
 
-5.  データベースのレプリカで共通言語ランタイム (CLR) 統合を有効にするには、 **SQL Server Management Studio** を使用して、データベース レプリカ サーバーのデータベースのレプリカに接続し、ストアド プロシージャ **exec sp_configure 'clr enabled', 1; RECONFIGURE WITH OVERRIDE**をクエリとして実行します。  
+5.  データベースのレプリカで共通言語ランタイム (CLR) 統合を有効にするには、**SQL Server Management Studio** を使用して、データベース レプリカ サーバーのデータベースのレプリカに接続し、ストアド プロシージャ **exec sp_configure 'clr enabled', 1; RECONFIGURE WITH OVERRIDE**をクエリとして実行します  
 
 6.  データベース レプリカ サーバーを使用する各管理ポイントで、管理ポイントのコンピューター アカウントをそのデータベース レプリカ サーバーのローカルの **[Administrators]** グループに追加します。  
 

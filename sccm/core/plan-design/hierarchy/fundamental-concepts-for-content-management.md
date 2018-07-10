@@ -2,7 +2,7 @@
 title: コンテンツ管理の基礎
 titleSuffix: Configuration Manager
 description: Configuration Manager のツールとオプションを使用して、展開するコンテンツを管理します。
-ms.date: 03/22/2018
+ms.date: 06/15/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,13 +10,14 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5dfe33e7182eae158c15afb848d3a9f1702678ba
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4419a563a65ab9d98a76dcf58b48ae00e0763dab
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260736"
 ---
-# <a name="fundamental-concepts-for-content-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのコンテンツ管理の基本的な概念
+# <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager でのコンテンツ管理の基本的な概念
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -69,19 +70,22 @@ BDR は、同じ階層内の親サイトと子サイト間でサポートされ�
 
 
 ## <a name="branchcache"></a>BranchCache  
- [BranchCache](/windows-server/networking/branchcache/branchcache) は Windows のテクノロジです。 BranchCache をサポートし、BranchCache 用に構成されている展開をダウンロードしたクライアントは、BranchCache が有効な他のクライアントに対するコンテンツ ソースとして機能します。  
+ [BranchCache](https://docs.microsoft.com/windows-server/networking/branchcache/branchcache) は Windows のテクノロジです。 BranchCache をサポートし、BranchCache 用に構成されている展開をダウンロードしたクライアントは、BranchCache が有効な他のクライアントに対するコンテンツ ソースとして機能します。  
 
  たとえば、Windows Server 2012 以降を実行する配布ポイントがあり、BranchCache サーバーとして構成されているものとします。 最初の BranchCache が有効なクライアントがこのサーバーのコンテンツを要求すると、クライアントはそのコンテンツをダウンロードしてキャッシュします。  
 
 - その後、このクライアントは、同じサブネット上にあって BranchCache が有効であり、やはりコンテンツをキャッシュするようになっている他のクライアントが、コンテンツを利用できるようにします。  
 - 同じサブネット上の他のクライアントは、配布ポイントからコンテンツをダウンロードする必要はありません。  
-- コンテンツは、さらに転送されるために複数のクライアントに配布されます。  
+- コンテンツは、今後の転送に備えて複数のクライアントに分散されます。  
+
+詳細については、[Windows BranchCache のサポート](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache)に関するページをご覧ください。
 
 
 
 ## <a name="delivery-optimization"></a>配信の最適化
-<!-- 1324696 -->
-Configuration Manager の境界グループを使って、企業ネットワークおよびリモート オフィスへのコンテンツ配布を定義して調整します。 [Windows の配信最適化](/windows/deployment/update/waas-delivery-optimization)は、Windows 10 デバイス間でコンテンツを共有するための、クラウド ベースのピア ツー ピア テクノロジです。 バージョン 1802 以降、ピア間でコンテンツを共有するときは、境界グループを使うように配信の最適化を構成します。 クライアントの設定は、クライアントでの配信最適化グループの識別子として境界グループ識別子を適用します。 クライアントは、配信の最適化クラウド サービスと通信するとき、この識別子を使って目的のコンテンツを含むピアを探します。 詳細については、「[配信の最適化](/sccm/core/clients/deploy/about-client-settings#delivery-optimization)」のクライアント設定をご覧ください。
+<!-- 1324696 --> Configuration Manager の境界グループを使って、企業ネットワークおよびリモート オフィスへのコンテンツ配布を定義して調整します。 [Windows の配信最適化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)は、Windows 10 デバイス間でコンテンツを共有するための、クラウド ベースのピア ツー ピア テクノロジです。 バージョン 1802 以降、ピア間でコンテンツを共有するときは、境界グループを使うように配信の最適化を構成します。 クライアントの設定は、クライアントでの配信最適化グループの識別子として境界グループ識別子を適用します。 クライアントは、配信の最適化クラウド サービスと通信するとき、この識別子を使って目的のコンテンツを含むピアを探します。 詳細については、「[配信の最適化](/sccm/core/clients/deploy/about-client-settings#delivery-optimization)」のクライアント設定をご覧ください。
+
+配信の最適化は、Windows 10 品質更新プログラム用の高速インストール ファイルの [Windows 10 更新プログラムの配信を最適化](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)するために推奨されるテクノロジです。
 
 
 

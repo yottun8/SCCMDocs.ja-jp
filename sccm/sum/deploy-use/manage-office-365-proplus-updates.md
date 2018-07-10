@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: a94ac00b8fce6098cbd829947f4e2fbdcb761b9e
-ms.sourcegitcommit: c5e078b8eee87f527e5b5a0c2eb687bb9d6896c5
+ms.openlocfilehash: fa73ed132a00455b47355877b1c20e8d2f8c4f3a
+ms.sourcegitcommit: 59afe6f05333d4150afaf88ab0a85a979818e3fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34270716"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957799"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Configuration Manager での Office 365 ProPlus の管理
 
@@ -48,7 +48,7 @@ Office 365 クライアント管理ダッシュボードを表示するには、
 ### <a name="display-data-in-the-office-365-client-management-dashboard"></a>Office 365 クライアント管理ダッシュボードにデータを表示する
 Office 365 クライアント管理ダッシュ ボードに表示されるデータは、ハードウェア インベントリから取得されます。 データがダッシュボードに表示されるようにするため、ハードウェア インベントリを有効にし、**Office 365 ProPlus 構成**ハードウェア インベントリ クラスを選択します。 
 #### <a name="to-display-data-in-the-office-365-client-management-dashboard"></a>Office 365 クライアント管理ダッシュボードにデータを表示するには
-1. ハードウェア インベントリがまだ有効になっていない場合は、有効にします。 詳細については、「[Configure hardware inventory](\sccm\core\clients\manage\configure-hardware-inventory)」(ハードウェア インベントリを構成する) を参照してください。
+1. ハードウェア インベントリがまだ有効になっていない場合は、有効にします。 詳細については、「[Configure hardware inventory](/sccm/core/clients/manage/inventory/configure-hardware-inventory)」(ハードウェア インベントリを構成する) を参照してください。
 2. Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** > **[既定のクライアント設定]** の順に選択します。  
 3. **[ホーム]** タブの **[プロパティ]** グループで、 **[プロパティ]** をクリックします。  
 4. **[既定のクライアント設定]** ダイアログ ボックスで、**[ハードウェア インベントリ]** をクリックします。  

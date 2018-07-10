@@ -10,11 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 947392d4c11b419e0e373fbe83db42522d3c5f25
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: bea7d3d0e2c4482a08473f49fbdc3916065627b7
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260719"
 ---
 # <a name="support-for-windows-10-in-system-center-configuration-manager"></a>System Center Configuration Manager での Windows 10 のサポート  
 
@@ -78,7 +79,7 @@ Configuration Manager を使用してオペレーティング システムを展
 
 |キー|
 |--|
-| ![サポートされています](media/green_check.png) = **サポートされています** <br/> Windows では、展開している Windows のバージョンに合う Windows ADK を使用することをお勧めします。 たとえば、Windows 10 バージョン 1703 を展開している場合は、Windows 10 バージョン 1703 用 Windows ADK を使用します。 Windows ADK コンポーネントのサポートについては、「[DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)」(DISM でサポートされているプラットフォーム) および「[USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1)」(USMT の要件) を参照してください。 |
+| ![サポートされています](media/green_check.png) = **サポートされています** <br/> Microsoft では、展開している Windows のバージョンに合う Windows ADK を使用することをお勧めします。 たとえば、Windows 10 バージョン 1703 を展開している場合は、Windows 10 バージョン 1703 用 Windows ADK を使用します。 Windows ADK コンポーネントのサポートについては、「[DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)」(DISM でサポートされているプラットフォーム) および「[USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1)」(USMT の要件) を参照してください。 |
 | ![下位互換性あり](media/blue_compat.png)  = **下位互換性あり** <br/> この組み合わせはテストされていませんが、動作するはずです。 既知の問題や注意事項が記述されます。 |
 | ![サポートされていません](media/Red_X.png) = **サポートされていません** |
 

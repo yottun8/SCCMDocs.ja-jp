@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 258d8ac160e9ee31189f8771fd6109d1bb17f714
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4331ec4120141ab9aa20301b9a99c3c6ebeef568
+ms.sourcegitcommit: 0305e710f634529793ae73e5aac24168ee4fe02f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341340"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042747"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>適切な Configuration Manager のブランチを選択する
 
@@ -37,7 +37,7 @@ System Center Configuration Manager で使用できるブランチは、Current 
 
 ソフトウェア アシュアランスとライセンスのオプションについては、「[System Center Configuration Manager のライセンスとブランチ](learn-more-editions.md)」および「[Configuration Manager のブランチとライセンスに関してよく寄せられる質問](/sccm/core/understand/product-and-licensing-faq)」をご覧ください。
 
-Current Branch は年に数回更新され、新機能が追加されます。 更新プログラムの各バージョンは、リリース後 1 年間サポートされます。 その 1 年間の有効期間が切れる前に、最新バージョンの Current Branch に更新します。 新しいバージョンへの更新プログラムは、コンソール内の更新プログラムとして利用できます。
+Microsoft は、System Center Configuration Manager の Current Branch に対し、年に数回の更新プログラムのリリースを予定しています。 Configuration Manager 1710 より前にリリースされたバージョンについては、サポートは 12 か月間です。 1710 リリース以降では、更新プログラムの各バージョンは、一般公開 (GA) リリース日から 18 か月間サポートされます。 この期間中、テクニカル サポートが提供されます。 ただし、弊社のサポート体制は、最新の Current Branch バージョンの利用状況に応じて 2 種類のサービス提供フェーズのいずれかが適用されるしくみに変わっています。 (詳細については次を参照: [System Center Configuration Manager の Current Branch バージョンのサポート](https://docs.microsoft.com/sccm/core/servers/manage/current-branch-versions-supported)。 新しいバージョンへの更新プログラムは、コンソール内の更新プログラムとして利用できます。
 
 新しいサイトとして Current Branch をインストールするには、[構成基準メディア](/sccm/core/servers/manage/updates#baseline-and-update-versions)を使います。 System Center 2012 Configuration Manager Service Pack 2 または System Center 2012 R2 Configuration Manager Service Pack 1 からアップグレードする場合も、構成基準メディアを使います。 このメディアへのアクセス方法は、System Center Configuration Manager のライセンス形態によって異なります。 
 

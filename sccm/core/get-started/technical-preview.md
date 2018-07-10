@@ -2,7 +2,7 @@
 title: Technical Preview リリース
 titleSuffix: Configuration Manager
 description: Configuration Manager の新機能を体験するテクニカル プレビュー リリースについて説明します。
-ms.date: 06/01/2018
+ms.date: 06/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b7372e0b894e93a5a8ec15e54bfeb09e18be6c32
-ms.sourcegitcommit: 10a6e3444da631786e9b1729e79a5b728d54ca72
+ms.openlocfilehash: 1fd848c3e0ed663e0731eb86d39c930db3af7819
+ms.sourcegitcommit: d1bf26bcf0d78b37ac7598fab36eb58ca69b1dc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753996"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066285"
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview
 
@@ -34,7 +34,7 @@ ms.locfileid: "34753996"
 ##  <a name="bkmk_reqs"></a> Technical Preview の要件と制限事項  
 
 > [!IMPORTANT]     
->  Technical Preview はラボ環境での使用目的に限定してライセンスされます。  Microsoft はサポート サービスを提供しない場合があり、また、プレビュー ソフトウェアでは特定の機能が使用できない場合があります。 さらに、プレビュー ソフトウェアは、製品版ソフトウェアに比べて、セキュリティ、プライバシー、アクセシビリティ、可用性および信頼性の基準が低いか、または異なる場合があります。  
+>  Technical Preview はラボ環境での使用目的に限定してライセンスされます。 Microsoft はサポート サービスを提供しない場合があり、また、プレビュー ソフトウェアでは特定の機能が使用できない場合があります。 さらに、プレビュー ソフトウェアは、製品版ソフトウェアに比べて、セキュリティ、プライバシー、アクセシビリティ、可用性および信頼性の基準が低いか、または異なる場合があります。  
 
  ほとんどの製品の前提条件については、「[Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md)」 (System Center Configuration Manager でサポートされる構成) を参照してください。 次の例外がテクニカル プレビュー リリースに適用されます。  
 
@@ -62,7 +62,7 @@ ms.locfileid: "34753996"
 -   このプレビュー ビルドから、製品版 (現在のブランチ) へのアップグレードはサポートされません。 ただし、プレビュー バージョンから更新プログラムが使用できる場合は、Configuration Manager コンソールの **[更新とサービス]** ノードから検索してからインストールできます。 コンソール内アップグレード プロセスに関する「 [ConfigMgr 更新プログラム パッケージをインストールする](https://www.youtube.com/embed/KBd_EGFbUT8) 」というビデオを youtube.com でご覧ください。  
 -   スタンドアロンのプライマリ サイトのみがサポートされます。 中央管理サイト、複数のプライマリ サイト、またはセカンダリ サイトはサポートされません。  
 
-この Configuration Manager のブランチでは、次の製品とテクノロジがサポートされています。 ただし、これは製品またはバージョンの各サポート ライフサイクルが過ぎてもサポートを延長するという意味ではありません。 既にサポート ライフサイクルが終了している製品は、Configuration Manager ではサポートされません。 マイクロソフト サポート ライフサイクルの詳細については、 [「マイクロソフト サポート ライフサイクル」](http://go.microsoft.com/fwlink/p/?LinkId=208270) Web サイトを参照してください。  
+この Configuration Manager のブランチでは、次の製品とテクノロジがサポートされています。 ただし、これは製品またはバージョンの各サポート ライフサイクルが過ぎてもサポートを延長するという意味ではありません。 既にサポート ライフサイクルが終了している製品は、Configuration Manager ではサポートされません。 マイクロソフト サポート ライフサイクルの詳細については、 [「マイクロソフト サポート ライフサイクル」](https://go.microsoft.com/fwlink/p/?LinkId=208270) Web サイトを参照してください。  
 
 -   次のバージョンの SQL Server のみがサポートされます。  
 
@@ -97,7 +97,7 @@ ms.locfileid: "34753996"
 ##  <a name="BKMK_TPFeedback"></a> フィードバックについて  
  Technical Preview の機能に関するフィードバックをお寄せください。 詳細については、「[製品に関するフィードバック](../understand/find-help.md#product-feedback)」を参照してください。
 
-希望する新しい機能のアイデアがありましたら、その内容もお知らせください。 新しいアイデアを提出する、または、他の人が提出したアイデアに投票するには、 [ユーザー ボイスのページにアクセス](http://configurationmanager.uservoice.com)してください。  
+希望する新しい機能のアイデアがありましたら、その内容もお知らせください。 新しいアイデアを提出する、または、他の人が提出したアイデアに投票するには、 [ユーザー ボイスのページにアクセス](https://configurationmanager.uservoice.com)してください。  
 
 <!--   ##  <a name="bdmk_tpknownissues"></a> General changes introduced in Technical Previews    -->
 
@@ -105,24 +105,20 @@ ms.locfileid: "34753996"
 
 
 ##  <a name="bkmk_tpCaps"></a> 最新の Technical Preview で提供される機能  
-以下は、最新の Configuration Manager Technical Preview リリースで提供される機能です。  Technical Preview の以前のバージョンで利用できるようになった機能は、以降のバージョンでも利用できます。 同様に、Configuration Manager の Current Branch に追加された機能は、後続の Technical Preview でも引き続き利用できます。  特定の機能の詳細については、各プレビュー バージョンのコンテンツをクリックします。  
+以下は、最新の Configuration Manager Technical Preview リリースで提供される機能です。 Technical Preview の以前のバージョンで利用できるようになった機能は、以降のバージョンでも利用できます。 同様に、Configuration Manager の Current Branch に追加された機能は、後続の Technical Preview でも引き続き利用できます。 特定の機能の詳細については、各プレビュー バージョンのコンテンツをクリックします。  
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1806"></a>Technical Preview バージョン 1806
-- [サード パーティのソフトウェア更新プログラム](capabilities-in-technical-preview-1806.md#bkmk-3pupdate) <!--1352101-->
-- [Microsoft Edge 用に Windows Defender SmartScreen 設定を構成する](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge) <!--1353701-->
-- [共同管理されたデバイスのために MDM ポリシーを Microsoft Intune から同期する](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device) <!--1357377-->
-- [共同管理を使用して Intune に Office 365 ワークロードを移行する](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management) <!--1357841-->
-- [Package Conversion Manager](capabilities-in-technical-preview-1806.md#package-conversion-manager) <!--1357861-->
-- [コンテンツなしのソフトウェア更新プログラムの展開](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content) <!--1357933-->
-- [Office 365 インストーラーと Office カスタマイズ ツールの統合](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer) <!--1358149-->
-- [クラウド管理ゲートウェイの機能改善](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway) <!--1358215,1358651,503899--> 
-- [セキュアなクライアント通信の改善](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications) <!--1358278,1358279-->
-- [ソフトウェア センターのインフラストラクチャの改善](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements) <!--1358309-->
-- [デバイス上のすべてのユーザーに対して Windows アプリ パッケージをプロビジョニングする](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device) <!--1358310-->
-- [Surface ダッシュボードの改善](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard) <!--1358654-->
-- [ハードウェア インベントリの既定の単位のリビジョン](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision) <!--514442-->
+### <a name="technical-preview-version-18062"></a>Technical Preview バージョン 1806.2
+- [段階的展開の機能強化](capabilities-in-technical-preview-1806-2.md#bkmk_pod) <!--1358577,1358147,1358578-->
+- [新しい Windows アプリケーション パッケージ形式のサポート](capabilities-in-technical-preview-1806-2.md#bkmk_msix) <!--1357427-->
+- [クライアント プッシュ セキュリティの機能改善](capabilities-in-technical-preview-1806-2.md#bkmk_client-push) <!--1358204-->
+- [プロアクティブ メンテナンスの管理分析情報](capabilities-in-technical-preview-1806-2.md#bkmk_insights) <!--1352184,et al-->
+- [共同管理されたデバイスのモバイル アプリ ワークロードの移行](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt) <!--1357892-->
+- [ピアのダウンロードの境界グループのオプション](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions) <!--1356193-->
+- [カスタム カタログ用のサード パーティ製ソフトウェアの更新プログラムのサポート](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate) <!--1358714-->
+- [クラウド管理機能の改善](capabilities-in-technical-preview-1806-2.md#bkmk_cloud) <!--511980,515854-->
+- [新しいソフトウェア更新プログラムのコンプライアンス レポート](capabilities-in-technical-preview-1806-2.md#bkmk_report) <!--1357775-->
 
 
 
@@ -136,6 +132,19 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |機能 |Technical Preview バージョン |Current Branch バージョン|  
  |----------------|---------------------|--------------------|
+ | サード パーティ製ソフトウェアの更新プログラム <!--1352101--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate)  | ![追加されていません](media/Red_X.gif) |  
+ | Microsoft Edge 用に Windows Defender SmartScreen 設定を構成する <!--1353701--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge)  | ![追加されていません](media/Red_X.gif) |  
+ | 共同管理されたデバイスのために MDM ポリシーを Microsoft Intune から同期する <!--1357377--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device)  | ![追加されていません](media/Red_X.gif) |  
+ | 共同管理を使用して Intune に Office 365 ワークロードを移行する <!--1357841--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management)  | ![追加されていません](media/Red_X.gif) |  
+ | Package Conversion Manager <!--1357861--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#package-conversion-manager)  | ![追加されていません](media/Red_X.gif) |  
+ | コンテンツなしのソフトウェア更新プログラムの展開 <!--1357933--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content)  | ![追加されていません](media/Red_X.gif) |  
+ | Office 365 インストーラーと Office カスタマイズ ツールの統合 <!--1358149--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer)  | ![追加されていません](media/Red_X.gif) |  
+ | クラウド管理ゲートウェイの機能改善 <!--1358215,1358651,503899--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway)   | ![追加されていません](media/Red_X.gif) |  
+ | セキュアなクライアント通信の改善 <!--1358278,1358279--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications)  | ![追加されていません](media/Red_X.gif) |  
+ | ソフトウェア センターのインフラストラクチャの改善 <!--1358309--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements)  | ![追加されていません](media/Red_X.gif) |  
+ | デバイス上のすべてのユーザーに対して Windows アプリ パッケージをプロビジョニングする <!--1358310--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device)  | ![追加されていません](media/Red_X.gif) |  
+ | Surface ダッシュボードの改善 <!--1358654--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard)  | ![追加されていません](media/Red_X.gif) |  
+ | ハードウェア インベントリの既定の単位のリビジョン <!--514442--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision)  | ![追加されていません](media/Red_X.gif) |  
  | タスク シーケンスに手動で構成されたフェーズを使用して段階的展開を作成する <!--1358148--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence)  | ![追加されていません](media/Red_X.gif) |  
  | Azure Resource Manager のためのクラウド配布ポイントのサポート <!--1322209--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  | ![追加されていません](media/Red_X.gif) |  
  | 管理の洞察に基づいて対策する <!--1357930--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights)  | ![追加されていません](media/Red_X.gif) |  

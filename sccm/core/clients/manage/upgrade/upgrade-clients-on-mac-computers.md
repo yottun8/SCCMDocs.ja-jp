@@ -10,12 +10,12 @@ ms.assetid: 74c60941-5eae-4905-9e58-252bdb39df96
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 667c8c3ea986e39627f3ed96e53719d6de74d3b2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: fb0ef52bc3359e1b31b2e2237a87e58bf671bcb7
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334160"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260838"
 ---
 # <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager で Mac コンピューター上のクライアントをアップグレードする方法
 
@@ -56,7 +56,7 @@ System Center Configuration Manager アプリケーションを使用して Mac 
 ## <a name="step-6-users-install-the-latest-client"></a>手順 6: ユーザーが最新のクライアントをインストールする  
  Mac クライアントのユーザーに、Configuration Manager クライアントの更新プログラムを使用可能であり、インストールする必要がある、というメッセージが表示されます。 ユーザーは、クライアントをインストールした後に Mac コンピューターを再起動する必要があります。  
 
- コンピューターを再起動すると、コンピューターの登録ウィザードが自動的に実行され、新しいユーザー証明書が要求されます。  
+ コンピューターを再起動すると、コンピューターの登録ウィザードが自動的に実行され、新しいユーザー証明書が要求されます。 コンピューターの登録ウィザードが自動的に実行されるのは、SCCM クライアントの初回のインストール時のみです。 後から新しいインストーラーを使用してクライアントを更新する場合にこのウィザードが再び実行されることはありません。これは、有効なユーザー証明書が既に存在するためです。 
 
  Configuration Manager の登録を使用せず、Configuration Manager とは独立したクライアント証明書をインストールする場合は、「[アップグレードしたクライアントが既存の証明書を使用するように構成する](#BKMK_UpgradingClient_MachineEnrollment)」を参照してください。  
 

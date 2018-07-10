@@ -2,7 +2,7 @@
 title: VPN プロファイル
 titleSuffix: Configuration Manager
 description: Configuration Manager のモバイル デバイスの VPN プロファイルについて説明します。
-ms.date: 05/01/2018
+ms.date: 06/12/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b59c413fdd857db3aadd94b9851ad0778937a0a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9409b6cc71ea238755f40baf75e6211c447b547f
+ms.sourcegitcommit: 826e9ec385d6a1c1f3aa86ac202883154e0c1285
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37116498"
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager のモバイル デバイスの VPN プロファイル
 
@@ -55,9 +56,12 @@ VPN プロファイルを作成するときに、さまざまなセキュリテ�
    - 次のバージョンの VPN プロファイルには **Cisco AnyConnect** オプションを使用します。
        - バージョン 4.0.7 以降の Cisco AnyConnect を適用した iOS
 
-     > [!Note]  
-     > iOS 向け Cisco AnyConnect 4.0.07x 以降はプレリリース機能です。 これを有効にする場合は、「[プレリリース機能](/sccm/core/servers/manage/pre-release-features)」を参照してください。  
-
+     > [!Tip]  
+     > iOS 向け Cisco AnyConnect 4.0.07x 以降は、最初はバージョン 1802 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として導入されました。 バージョン 1802 に対する[更新 4163547](https://support.microsoft.com/help/4163547) 以降、この機能はプレリリース機能ではなくなりました。  
+  
+  
+> [!Note]  
+> F5 Access 2018 はハイブリッド MDM の VPN プロファイルではサポートされません。  
 
 
 ## <a name="windows-10-vpn-features-available-when-using-configuration-manager-with-intune"></a>Intune と Configuration Manager を使用するときに使用できる Windows 10 の VPN 機能  
@@ -132,7 +136,7 @@ Windows 10 では、すべての接続の種類に次のオプションを使用
 
             - デバイスのコンプライアンスのために VPN 認証証明書以外の証明書を選択するには、**[別の証明書でのシングル サインオン (SSO) を有効にする]** をオンにします。 このオプションをオンにする場合は、VPN クライアントを特定できる正しい証明書の **[EKU]** (コンマ区切りリスト) と **[発行元ハッシュ]** を指定します。  
 
-         - **[Windows 情報保護]** には、企業が管理する企業 ID を指定します。通常、これは組織のプライマリ ドメインです (*contoso.com* など)。組織が所有している複数のドメインを指定するには、"|" 文字で区切ります。 たとえば、「*contoso.com|newcontoso.com*」と指定します。詳細については、「[Intune で Windows 情報保護 (WIP) アプリ保護ポリシーを作成して展開する](/intune/windows-information-protection-policy-create)」を参照してください。   
+         - **[Windows 情報保護]** には、企業が管理する企業 ID を指定します。通常、これは組織のプライマリ ドメインです (*contoso.com* など)。 組織が所有している複数のドメインを指定するには、"|" 文字で区切ります。 たとえば、「*contoso.com|newcontoso.com*」と指定します。 詳細については、「[Intune で Windows 情報保護 (WIP) アプリ保護ポリシーを作成して展開する](/intune/windows-information-protection-policy-create)」を参照してください。   
 
          ![VPN プロファイルの作成ウィザードの [認証方法] ページ](media/vpn-conditional-access.png)
 
