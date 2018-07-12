@@ -2,7 +2,7 @@
 title: Managed Browser ポリシーを使用したインターネット アクセスの管理
 titleSuffix: Configuration Manager
 description: Intune Managed Browser を展開してインターネット アクセスを管理および制限します。
-ms.date: 03/05/2017
+ms.date: 07/06/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8754219f36e30f2442178dc5521e05246948d3de
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9fe64aef541a4e6405b0fbf6308afc6269d88f56
+ms.sourcegitcommit: f03cb34693b9806e9fecd3c0162de70cc8cb4b1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350148"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886486"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>System Center Configuration Manager での Managed Browser ポリシーを使用したインターネット アクセスの管理
 
@@ -45,13 +45,17 @@ System Center Configuration Manager では、Intune Managed Browser という We
 
 4.  **[全般]** ページで、ポリシーの名前と説明を入力してから、**[次へ]** を選択します。  
 
-5.  **[ポリシーの種類]** ページで、プラットフォームを選択し、ポリシーの種類で **[管理対象ブラウザー]** を選択してから、 **[次へ]** を選択します。  
+5.  
+  **[ポリシーの種類]** ページで、プラットフォームを選択し、ポリシーの種類で **[管理対象ブラウザー]** を選択してから、 **[次へ]** を選択します。  
 
-     **[管理対象ブラウザー]** ページで、次のオプションのいずれかを選択します。  
+     
+  **[管理対象ブラウザー]** ページで、次のオプションのいずれかを選択します。  
 
-    -   **Managed Browser が以下に示す URL のみを開けるようにする** : Managed Browser で開くことができる URL の一覧を指定します。  
+    -   
+  **Managed Browser が以下に示す URL のみを開けるようにする** : Managed Browser で開くことができる URL の一覧を指定します。  
 
-    -   **Managed Browser が以下に示す URL を開けないようにする** : Managed Browser で開けないようにブロックする URL の一覧を指定します。  
+    -   
+  **Managed Browser が以下に示す URL を開けないようにする** : Managed Browser で開けないようにブロックする URL の一覧を指定します。  
 
     > [!NOTE]  
     >  同じ Managed Browser ポリシーに、許可される URL とブロックされる URL の両方を含めることはできません。  
@@ -86,55 +90,55 @@ System Center Configuration Manager では、Intune Managed Browser という We
 
 許可リストとブロック リストで URL を指定するときに使用できる形式とワイルドカードについて説明します。  
 
--   ワイルドカード記号 "**\***" は、以下の許可されているパターン リストの規則に従って使用できます。  
+-   次の許可パターンのリストに記載されている規則に従って、ワイルドカード記号 `*` (アスタリスク) を使用します。  
 
--   リストに入力するときは、すべての URL の先頭に必ず **http** または **https** を付けてください。  
+-   リストに URL を入力するときは、すべての URL の先頭に **http** または **https** を付けます。  
 
--   アドレスにはポート番号を指定できます。 ポート番号を指定しない場合は、次の値が使用されます。  
+-   アドレスにはポート番号を指定します。 ポート番号を指定しない場合は、次の値が使用されます。  
 
     -   http の場合はポート 80  
 
     -   https の場合はポート 443  
 
-     たとえば、**http://www.contoso.com:\*** および **http://www.contoso.com: /\*** のように、ポート番号にワイルドカードを使用することはできません。  
+     ポート番号でのワイルドカードはサポートされていないため、使用しないでください。 たとえば、`http://www.contoso.com:*` などです。   
 
 -   URL を指定するときに使用できるパターンの詳細については、次の表を参照してください。  
 
     |[URL]|［一致する］|［次の値に一致しない］|  
     |---------|-------------|--------------------|  
-    |http://www.contoso.com<br /><br /> 単一のページと一致する|www.contoso.com|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> contoso.com/|  
-    |http://contoso.com<br /><br /> 単一のページと一致する|contoso.com/|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com|  
-    |http://www.contoso.com/*<br /><br /> www.contoso.com で始まるすべての URL と一致する|www.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com/videos/tvshows|host.contoso.com<br /><br /> host.contoso.com/images|  
-    |http://*.contoso.com/\*<br /><br /> contoso.com の下のすべてのサブドメインに一致する|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/videos|contoso.host.com|  
-    |http://www.contoso.com/images<br /><br /> 単一のフォルダーと一致する|www.contoso.com/images|www.contoso.com/images/dogs|  
-    |http://www.contoso.com:80<br /><br /> ポート番号を使用し、単一のページと一致する|http://www.contoso.com:80||  
-    |https://www.contoso.com<br /><br /> セキュリティで保護された単一のページと一致する|https://www.contoso.com|http://www.contoso.com|  
-    |http://www.contoso.com/images/*<br /><br /> 1 つのフォルダーおよびすべてのサブフォルダーと一致する|www.contoso.com/images/dogs<br /><br /> www.contoso.com/images/cats|www.contoso.com/videos|  
+    |`http://www.contoso.com`<br /><br /> 単一のページと一致する|`www.contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `contoso.com/`|  
+    |`http://contoso.com`<br /><br /> 単一のページと一致する|`contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com`|  
+    |`http://www.contoso.com/*`<br /><br /> `www.contoso.com` で始まるすべての URL と一致する|`www.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com/videos/tvshows`|`host.contoso.com`<br /><br /> `host.contoso.com/images`|  
+    |`http://*.contoso.com/*`<br /><br /> contoso.com の下のすべてのサブドメインに一致する|`developer.contoso.com/resources`<br /><br /> `news.contoso.com/images`<br /><br /> `news.contoso.com/videos`|`contoso.host.com`|  
+    |`http://www.contoso.com/images`<br /><br /> 単一のフォルダーと一致する|`www.contoso.com/images`|`www.contoso.com/images/dogs`|  
+    |`http://www.contoso.com:80`<br /><br /> ポート番号を使用し、単一のページと一致する|`http://www.contoso.com:80`||  
+    |`https://www.contoso.com`<br /><br /> セキュリティで保護された単一のページと一致する|`https://www.contoso.com`|`http://www.contoso.com`|  
+    |`http://www.contoso.com/images/*`<br /><br /> 1 つのフォルダーおよびすべてのサブフォルダーと一致する|`www.contoso.com/images/dogs`<br /><br /> `www.contoso.com/images/cats`|`www.contoso.com/videos`|  
 
 -   指定することができない入力例を次に示します。  
 
-    -   *.com  
+    -   `*.com`  
 
-    -   *.contoso/\*  
+    -   `*.contoso/*`  
 
-    -   www.contoso.com/*images  
+    -   `www.contoso.com/*images`  
 
-    -   www.contoso.com/*images\*pigs  
+    -   `www.contoso.com/*images*pigs`  
 
-    -   www.contoso.com/page*  
+    -   `www.contoso.com/page*`  
 
     -   IP アドレス  
 
-    -   https://*  
+    -   `https://*`  
 
-    -   http://*  
+    -   `http://*`  
 
-    -   http://www.contoso.com:*  
+    -   `http://www.contoso.com:*`  
 
-    -   http://www.contoso.com: /*  
+    -   `http://www.contoso.com: /*`  
 
 > [!NOTE]  
->  *.microsoft.com は常に許可されます。  
+>  `*.microsoft.com` は常に許可されます。  
 
 ### <a name="how-conflicts-between-the-allow-and-block-list-are-resolved"></a>許可リストとブロック リストの競合を解決する方法  
  複数の Managed Browser ポリシーがデバイスに展開され、設定が競合する場合、モード (許可またはブロック) と URL の一覧の両方が競合していると判断されます。 競合が発生した場合は、次の動作が適用されます。  
