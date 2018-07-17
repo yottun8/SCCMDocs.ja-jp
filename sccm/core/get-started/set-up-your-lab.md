@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a1799dcffa55de80c0c700a56301d7d71f3b4a48
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 14251bb062423a31bcf74d2079b2e1b667f61ba9
+ms.sourcegitcommit: 06d490d526070e17d77e86bc6c200899ded911cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341969"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38967166"
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>System Center Configuration Manager ラボのセットアップ
 
@@ -30,7 +30,7 @@ ms.locfileid: "32341969"
 
      Windows Server 2012 R2 の評価版は、[TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012) からダウンロードできます。  
 
-     これらの演習で参照されている一部のダウンロードに簡単にアクセスできるように、Internet Explorer のセキュリティ強化の構成を変更または無効化することを検討してください。 WCF の詳細については、「 [Internet Explorer のセキュリティ強化の構成](https://technet.microsoft.com/en-us/library/dd883248\(v=ws.10\).aspx) に関するページをご覧ください。  
+     これらの演習で参照されている一部のダウンロードに簡単にアクセスできるように、Internet Explorer のセキュリティ強化の構成を変更または無効化することを検討してください。 WCF の詳細については、「 [Internet Explorer のセキュリティ強化の構成](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx) に関するページをご覧ください。  
 
 -   **ラボ環境では SQL Server 2012 SP2 が使用** されています (サイト データベース用)。  
 
@@ -58,11 +58,11 @@ ms.locfileid: "32341969"
 
 -   ドメイン コントローラーは、**Active Directory Domain Services がインストールされた Windows Server 2008 R2** を使用します。 ドメイン コントローラーは、完全修飾ドメイン名で使用するための DHCP サーバーと DNS サーバーのホストとしても機能します。  
 
-     詳細については、「[overview of Active Directory Domain Services](https://technet.microsoft.com/en-us/library/hh831484)」 (Active Directory Domain Services の概要) を参照してください。  
+     詳細については、「[overview of Active Directory Domain Services](https://technet.microsoft.com/library/hh831484)」 (Active Directory Domain Services の概要) を参照してください。  
 
 -   演習で実行する管理手順が意図したとおりに機能していることを確認するため、**Hyper-V がいくつかの仮想マシンで使用されます**。 Windows 7 (以降) がインストールされている 3 台以上の仮想マシンをお勧めします。  
 
-     詳細については、「[Hyper-V の概要](https://technet.microsoft.com/en-us/library/hh831531.aspx)」を参照してください。  
+     詳細については、「[Hyper-V の概要](https://technet.microsoft.com/library/hh831531.aspx)」を参照してください。  
 
 -   **管理者のアクセス許可** が必要になります。  
 
@@ -92,7 +92,7 @@ ms.locfileid: "32341969"
 次の手順では、Configuration Manager クライアントが Active Directory Domain Services に対してクエリを実行して、サイトのリソースを見つける方法について説明します。  
 
 ##  <a name="BKMK_CreateSysMgmtLab"></a> System Management コンテナーの作成  
- Configuration Manager では、スキーマの拡張時に、必要な System Management コンテナーが Active Directory Domain Services に自動的に作成されません。 したがって、これをラボ向けに作成します。 この手順では、 [ADSI エディターをインストール](https://technet.microsoft.com/en-us/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)する必要があります。  
+ Configuration Manager では、スキーマの拡張時に、必要な System Management コンテナーが Active Directory Domain Services に自動的に作成されません。 したがって、これをラボ向けに作成します。 この手順では、 [ADSI エディターをインストール](https://technet.microsoft.com/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)する必要があります。  
 
  Active Directory ドメイン サービス内の **System** コンテナーで **すべての子オブジェクトを作成する** アクセス許可を持つアカウントとしてログオンします。  
 
@@ -136,7 +136,7 @@ ms.locfileid: "32341969"
 
 #### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>extadsch.exe を使用して Active Directory スキーマを拡張するには:  
 
-1.  スキーマ マスター ドメイン コントローラーのシステム状態のバックアップを作成します。 マスター ドメイン コント ローラーのバックアップの詳細については、「 [Windows Server バックアップ](https://technet.microsoft.com/en-us/library/cc770757.aspx)」を参照してください。  
+1.  スキーマ マスター ドメイン コントローラーのシステム状態のバックアップを作成します。 マスター ドメイン コント ローラーのバックアップの詳細については、「 [Windows Server バックアップ](https://technet.microsoft.com/library/cc770757.aspx)」を参照してください。  
 
 2.  インストール メディアの **\SMSSETUP\BIN\X64** に移動します。  
 
@@ -155,7 +155,7 @@ ms.locfileid: "32341969"
 
  **.NET をインストールし、Windows Communication Foundation をアクティブ化する**  
 
- 2 つの .NET Framework をインストールする必要があります。最初に .NET 3.5.1 をインストールしてから、.NET 4.5.2+ をインストールします。 また、Windows Communication Foundation (WCF) をアクティブ化する必要もあります。 WCF は、分散コンピューティング、広範な相互運用性、およびサービス指向の直接サポートに対する管理しやすいアプローチを提供するように設計されており、サービス指向のプログラミング モデルで接続アプリケーションの開発を簡略化します。 WCF の詳細については、「 [Windows Communication Foundation とは](https://technet.microsoft.com/en-us/subscriptions/ms731082\(v=vs.90\).aspx) 」を参照してください。  
+ 2 つの .NET Framework をインストールする必要があります。最初に .NET 3.5.1 をインストールしてから、.NET 4.5.2+ をインストールします。 また、Windows Communication Foundation (WCF) をアクティブ化する必要もあります。 WCF は、分散コンピューティング、広範な相互運用性、およびサービス指向の直接サポートに対する管理しやすいアプローチを提供するように設計されており、サービス指向のプログラミング モデルで接続アプリケーションの開発を簡略化します。 WCF の詳細については、「 [Windows Communication Foundation とは](https://technet.microsoft.com/subscriptions/ms731082\(v=vs.90\).aspx) 」を参照してください。  
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>.NET をインストールし、Windows Communication Foundation をアクティブ化するには:  
 
@@ -197,25 +197,25 @@ ms.locfileid: "32341969"
 
 これらの .NET Framework が必要な理由の詳細については、次の記事を参照してください。  
 
--   [.NET Framework のバージョンおよび依存関係](https://technet.microsoft.com/en-us/library/bb822049.aspx)  
+-   [.NET Framework のバージョンおよび依存関係](https://technet.microsoft.com/library/bb822049.aspx)  
 
--   [.NET Framework 4 RTM アプリケーションの互換性に関するチュートリアル](https://technet.microsoft.com/en-us/library/dd889541.aspx)  
+-   [.NET Framework 4 RTM アプリケーションの互換性に関するチュートリアル](https://technet.microsoft.com/library/dd889541.aspx)  
 
--   [方法: ASP.NET Web アプリケーションを ASP.NET 4 にアップグレードする](https://technet.microsoft.com/en-us/library/dd483478\(VS.100\).aspx)  
+-   [方法: ASP.NET Web アプリケーションを ASP.NET 4 にアップグレードする](https://technet.microsoft.com/library/dd483478\(VS.100\).aspx)  
 
 -   [Microsoft .NET Framework のサポート ライフサイクル ポリシーに関する FAQ](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
 
--   [CLR 徹底解剖 - インプロセス サイドバイサイド](https://msdn.microsoft.com/en-us/magazine/ee819091.aspx)  
+-   [CLR 徹底解剖 - インプロセス サイドバイサイド](https://msdn.microsoft.com/magazine/ee819091.aspx)  
 
 **BITS、IIS、および RDC の有効化**  
 
-[バックグラウンド インテリジェント転送サービス (BITS)](https://technet.microsoft.com/en-us/library/dn282296.aspx) は、クライアントとサーバーの間でファイルを非同期的に転送する必要があるアプリケーションに使用します。 BITS では、フォアグラウンドとバックグラウンドの転送フローを測定することで、他のネットワーク アプリケーションの応答性を保持します。 また、転送セッションが中断した場合は、ファイル転送を自動的に再開します。  
+[バックグラウンド インテリジェント転送サービス (BITS)](https://technet.microsoft.com/library/dn282296.aspx) は、クライアントとサーバーの間でファイルを非同期的に転送する必要があるアプリケーションに使用します。 BITS では、フォアグラウンドとバックグラウンドの転送フローを測定することで、他のネットワーク アプリケーションの応答性を保持します。 また、転送セッションが中断した場合は、ファイル転送を自動的に再開します。  
 
 このサイト サーバーは管理ポイントとしても使用されるため、このラボでは BITS をインストールします。  
 
 インターネット インフォメーション サービス (IIS) は、柔軟でスケーラブルな Web サーバーです。これを使用すると、Web であらゆるものをホストできます。 IIS は、さまざまなサイト システムの役割に対して Configuration Manager によって使用されます。 IIS の詳細については、「[System Center Configuration Manager のサイト システム サーバーの Web サイト](../../core/plan-design/network/websites-for-site-system-servers.md)」を参照してください。  
 
-[Remote Differential Compression (RDC)](https://technet.microsoft.com/en-us/library/cc754372.aspx) は、一連のファイルに変更が行われたかどうかをアプリケーションが判断するときに使用できる一連の API です。 RDC を使用すると、ファイルの変更された部分のみをレプリケートすることで、ネットワーク トラフィックを最小限に抑えることができます。  
+[Remote Differential Compression (RDC)](https://technet.microsoft.com/library/cc754372.aspx) は、一連のファイルに変更が行われたかどうかをアプリケーションが判断するときに使用できる一連の API です。 RDC を使用すると、ファイルの変更された部分のみをレプリケートすることで、ネットワーク トラフィックを最小限に抑えることができます。  
 
 #### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>BITS、IIS、および RDC サイト サーバーの役割を有効にするには:  
 

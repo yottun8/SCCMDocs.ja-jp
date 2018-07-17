@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
-ms.openlocfilehash: a2636713f8c121eecd826eeba060f8e3f8e865f3
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0d71abbe33def6e12e75c2042e48f3d7ddcfe5c6
+ms.sourcegitcommit: 06d490d526070e17d77e86bc6c200899ded911cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353166"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38967149"
 ---
 # <a name="prepare-intune-for-user-migration"></a>Intune でのユーザーの移行を準備する 
 
@@ -66,7 +66,7 @@ Exchange を使用して Configuration Manager でオンプレミスの Exchange
 - ユーザーが Intune スタンドアロンに移行されたら、Configuration Manager での条件付きアクセスの対象からそれらのユーザーを削除します。
 
 ## <a name="configure-the-microsoft-intune-certificate-connector"></a>Microsoft Intune Certificate Connector の構成
-NDES を使用して SCEP を使用する証明書を発行する場合は、Microsoft Intune Certificate Connector を構成する必要があります。 Intune で NDES コネクタをホストするコンピューターは、Configuration Manager で NDES コネクタをホストするのと同じコンピューターにすることはできません。 詳細については、「[Intune で SCEP 証明書を構成して管理する](https://docs.microsoft.com/en-us/intune/certificates-scep-configure)」を参照してください。 
+NDES を使用して SCEP を使用する証明書を発行する場合は、Microsoft Intune Certificate Connector を構成する必要があります。 Intune で NDES コネクタをホストするコンピューターは、Configuration Manager で NDES コネクタをホストするのと同じコンピューターにすることはできません。 詳細については、「[Intune で SCEP 証明書を構成して管理する](https://docs.microsoft.com/intune/certificates-scep-configure)」を参照してください。 
 
 > [!Important]    
 > コネクタを構成した後に、インポートした SCEP プロファイルを新しいサーバーの URL を参照するように変更する必要があります。
