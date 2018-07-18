@@ -2,7 +2,7 @@
 title: ハイブリッド MDM の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。
-ms.date: 07/05/2018
+ms.date: 07/12/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5d527d2fc4fdc52e132b6f603d9b83851e1693f3
-ms.sourcegitcommit: c9d0a4c24ce90825cb2d05e4fe37c5b41fa48a50
+ms.openlocfilehash: d2a705ed8b09e4c2de92baa22164cbe97f180462
+ms.sourcegitcommit: e54e9d4a735e72b84095e0017c5bec50af480207
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37923540"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039626"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -43,6 +43,17 @@ ms.locfileid: "37923540"
 ## <a name="july-2018"></a>2018 年 7 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+#### <a name="support-for-security-enhancement-in-intune-service"></a>Intune サービスでのセキュリティ拡張機能のサポート
+<!--2520152--> コンプライアンス ポリシーが割り当てられていないデバイスはハイブリッドで非準拠であると指定できるようになりました。 Azure Portal 上で Intune のこの設定を構成します。 内部リソースをセキュリティで保護するために、この機能を有効にすることを強くお勧めします。
+
+この機能はハイブリッド テナントにおいて既定では無効になっています。 この機能を有効にした場合、コンプライアンス ポリシーが割り当てられていないデバイスは非準拠と見なされます。 また、条件付きアクセスを有効にした場合、これらのデバイスは内部リソースにアクセスできなくなります。 このようなリソースは、環境内の条件付きアクセス ポリシーに基づいて、Outlook の場合もあれば SharePoint の場合もあります。 この設定をオフのままとした場合、これらのデバイスは引き続き現在と同じレベルのアクセス権を保持します。
+
+この機能を有効にした場合にどのような影響があるかを判断するのに役立つように、Microsoft では [TechNet ギャラリーにスクリプト](https://gallery.technet.microsoft.com/SQL-Query-for-Hybrid-MDM-5bcb8695)を提供しています。 Configuration Manager データベースに対してこのスクリプトを実行すると、コンプライアンス ポリシーの対象となっていないデバイスが一覧表示されます。
+
+詳細については、以下の記事を参照してください。
+- [Intune サービスでのセキュリティ拡張機能](https://aka.ms/compliance_policies)に関するブログ記事 
+- [Configuration Manager でのデバイス コンプライアンス ポリシー](/sccm/mdm/deploy-use/device-compliance-policies)
 
 #### <a name="updates-to-out-of-compliance-messages-in-company-portal-app"></a>ポータル サイト アプリの非対応メッセージへの更新 
 <!--1832222--> 非対応デバイスのユーザーに表示されるメッセージを修正しています。 メッセージの意味は同じですが、よりわかりやすく、技術的な専門用語が少ない言い方に変更されます。 また、最新の状態を保持するためにドキュメントと修復の手順へのリンクを更新しています。  

@@ -1,8 +1,8 @@
 ---
 title: デバイス コンプライアンス ポリシー
 titleSuffix: Configuration Manager
-description: デバイスが条件付きアクセス ポリシーに準拠するように System Center Configuration Manager でコンプライアンス ポリシーを管理する方法について説明します。
-ms.date: 03/05/2017
+description: デバイスが条件付きアクセス ポリシーに準拠するように Configuration Manager でコンプライアンス ポリシーを管理する方法について説明します。
+ms.date: 07/12/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,36 +10,41 @@ ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 776af7499c576f21d47dafec8a668f3c4051ad88
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 8c27c945b384a9769d008667f124d414275a3c11
+ms.sourcegitcommit: e54e9d4a735e72b84095e0017c5bec50af480207
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347265"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039592"
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager でのデバイス コンプライアンス ポリシー
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager の**コンプライアンス ポリシー**では、デバイスが条件付きアクセス ポリシーに準拠していると見なされるために遵守する必要があるルールと設定を定義します。 コンプライアンス ポリシーを使用して、条件付きアクセスとは別に、デバイスのコンプライアンスに関する問題を監視および修復することもできます。  
+Configuration Manager のコンプライアンス ポリシーでは、デバイスが条件付きアクセス ポリシーに準拠していると見なされるために遵守する必要があるルールと設定を定義します。 コンプライアンス ポリシーを使用して、条件付きアクセスとは別に、デバイスのコンプライアンスに関する問題を監視および修復することもできます。  
 
 
 > [!IMPORTANT]  
->  この記事では、Microsoft Intune によって管理されるデバイスのコンプライアンス ポリシーについて説明します。    System Center Configuration Manager の管理対象 PC のコンプライアンス ポリシーについては、「[Manage access to O365 services for PCs managed by System Center Configuration Manager (System Center Configuration Manager の管理対象 PC の O365 サービスへのアクセス管理)](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)」に説明されています。  
+>  この記事では、Microsoft Intune によって管理されるデバイスのコンプライアンス ポリシーについて説明します。 Configuration Manager クライアントによって管理されているデバイスのコンプライアンス ポリシーについては、[Configuration Manager で管理されているデバイス用の O365 サービスへのアクセス管理](/sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)に関するページを参照してください。  
 
  これらのルールには、次のような要件が含まれます。  
 
--   デバイスにアクセスするための PIN とパスワード
+-   デバイスにアクセスするための PIN とパスワード  
 
--   デバイスに格納されたデータの暗号化
+-   デバイスに格納されたデータの暗号化  
 
 -   デバイスが脱獄またはルート化されているかどうか  
 
--   デバイス上の電子メールが Intune のポリシーで管理されるかどうか、または Windows デバイスの正常性構成証明サービスでデバイスが異常であると報告されたかどうか
--   デバイスにインストールできないアプリ。
+-   デバイス上の電子メールが Intune のポリシーで管理されるかどうか、または Windows デバイスの正常性構成証明サービスでデバイスが異常であると報告されたかどうか  
+
+-   デバイスにインストールできないアプリ。  
 
 
  コンプライアンス ポリシーをユーザー コレクションに展開します。 コンプライアンス ポリシーがユーザーに展開されると、すべてのユーザー デバイスがコンプライアンスをチェックされます。  
+
+
+
+## <a name="supported-device-types"></a>サポートされているデバイスの種類
 
  次の表は、コンプライアンス ポリシーによってサポートされているデバイスの種類と、ポリシーが条件付きアクセス ポリシーと共に使用される場合に非準拠設定がどのように管理されるかを示した一覧です。  
 
@@ -54,16 +59,37 @@ System Center Configuration Manager の**コンプライアンス ポリシー**
 |**デバイス正常性構成証明 (1602 更新プログラム)**|設定を Windows 8.1 に適用できません<br /><br /> Windows 10 および Windows 10 Mobile は検疫されます。|該当なし|該当なし|該当なし|  
 |**アプリをインストールすることはできません。**|該当なし|該当なし|検疫済み|検疫済み|
 
- **修復** = デバイスのオペレーティング システムによってコンプライアンスが適用されます (たとえば、PIN の設定を求められます)。  設定が非準拠となる場合はありません。  
+ **修復** = デバイス OS によってコンプライアンスが適用されています。 たとえば、ユーザーは PIN を設定するように強制されます。 設定が非準拠となる場合はありません。  
 
- **検疫済み** = デバイスのオペレーティング システムはコンプライアンスを適用しません (たとえば、Android デバイスはユーザーにデバイスの暗号化を求めません)。  この場合、次のようになります。  
+ **検疫済み** = デバイス OS によってコンプライアンスが適用されていません。 たとえば、Android デバイスでは、デバイスを暗号化するようにユーザーに強制していません。 この場合、次のようになります。  
 
 -   ユーザーが条件付きアクセス ポリシーの対象となる場合は、デバイスがブロックされます。  
 
 -   ポータル サイトまたは Web ポータルは、コンプライアンスの問題をユーザーに通知します。  
 
 
-### <a name="next-steps"></a>次のステップ  
-[デバイス コンプライアンス ポリシーを作成して展開する](create-compliance-policy.md)
+
+## <a name="devices-without-any-assigned-compliance-policy"></a>コンプライアンス ポリシーが割り当てられていないデバイス
+<!--2520152--> 2018 年 7 月以降、コンプライアンス ポリシーが割り当てられていないすべてのデバイスを準拠または非準拠のいずれと見なすかを構成します。 既定では、コンプライアンス ポリシーが割り当てられていないデバイスは準拠と見なされます。 Azure Portal で、この設定を変更するには、次の手順を使用します。
+
+1. [Azure Portal 上で Intune](https://aka.ms/intuneportal) にサインインします。  
+
+2. **[デバイス コンプライアンス]** を選択し、次に [設定] グループの **[コンプライアンス ポリシーの設定]** を選択します。  
+
+3. 設定 **[コンプライアンス ポリシーが割り当てられていないデバイスをマークする]** では、次のオプションのいずれかを選択します。  
+
+     - **準拠** (既定) - コンプライアンス ポリシーが割り当てられていないデバイスはポリシーに準拠していると見なされます。 条件付きアクセスが有効になっている場合、これらのデバイスは内部リソースにアクセスできます。  
+
+     - **非準拠** - コンプライアンス ポリシーが割り当てられていないデバイスはポリシーに準拠していないと見なされます。 条件付きアクセスが有効になっている場合、これらのデバイスは、条件付きアクセス ポリシー内の条件に従って、内部リソースからブロックされます。  
+
+4. [保存] をクリックします。  
+
+プラットフォームごとに少なくとも 1 つのコンプライアンス ポリシーを環境内のすべてのユーザーに展開することを強くお勧めします。 次に、内部リソースのセキュリティを確保するために、この設定を **[非準拠]** に構成します。 詳細については、[Intune サービスでのセキュリティ拡張機能](https://aka.ms/compliance_policies)に関するブログ記事を参照してください。
+
+
+
+## <a name="next-steps"></a>次のステップ  
+[デバイス コンプライアンス ポリシーを作成して展開する](/sccm/mdm/deploy-use/create-compliance-policy)
+
 ### <a name="see-also"></a>関連項目  
- [System Center Configuration Manager でサービスへのアクセスを管理する](../../protect/deploy-use/manage-access-to-services.md)
+ [Configuration Manager でサービスへのアクセスを管理する](/sccm/protect/deploy-use/manage-access-to-services)
