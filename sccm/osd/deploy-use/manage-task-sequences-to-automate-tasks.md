@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 26d43b1ee065f3ae0b1221ca81e69f6cb1da6f6c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 983b6b73c79c51792bf015c74d40466231fbaf3d
+ms.sourcegitcommit: 7c26485b600544a64a5cf2edca6f2f8f29fecde9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351862"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130672"
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>System Center Configuration Manager でのタスクを自動化するためのタスク シーケンスの管理
 
@@ -262,6 +262,9 @@ Configuration Manager 環境のステップを自動化するには、タスク 
 
         -   **[必須]**: タスク シーケンスは、構成されたスケジュールに従って自動的に展開されます。 タスク シーケンスが非表示になっていなければ、ユーザーはその展開状態を引き続き追跡できます。 ソフトウェア センターを使用して、タスク シーケンスを期限前にインストールすることもできます。  
 
+        >  [!NOTE]  
+        >  デバイスに複数のユーザーがサインインしている場合、パッケージとタスク シーケンスの展開がソフトウェア センターに表示されない場合があります。
+
     -   **[ユーザーのログインに関係なくスケジュールに従って自動的に展開する]**: このオプションは、タスク シーケンスを展開する場合には使用できません。  
 
     -   **[ウェイクアップ パケットを送信する]**: 展開目的が **[必須]** に設定されていて、このオプションが選択されていると、サイトでは展開の実行前にコンピューターにウェイクアップ パケットが送信されます。 このパケットで、インストールの期限時間にコンピューターのスリープ状態が解除されます。 このオプションを使用する前に、コンピューターおよびネットワークを Wake On Lan 用に構成する必要があります。  
@@ -478,8 +481,7 @@ Configuration Manager 環境のステップを自動化するには、タスク 
 6.  すべての変数をコレクションに追加したら、**[OK]** をクリックします。  
 
 ## <a name="add-child-task-sequences-to-a-task-sequence"></a>子タスク シーケンスをタスク シーケンスに追加する
-<!--1261338-->
-Configuration Manager バージョン 1710 以降では、別のタスク シーケンスを実行する新しいタスク シーケンス ステップを追加できます。 このステップでは、タスク シーケンス間の親子関係を作成します。 このステップを使用することで、再利用可能なモジュール型のタスク シーケンスをより多く作成できます。  
+<!--1261338--> Configuration Manager バージョン 1710 以降では、別のタスク シーケンスを実行する新しいタスク シーケンス ステップを追加できます。 このステップでは、タスク シーケンス間の親子関係を作成します。 このステップを使用することで、再利用可能なモジュール型のタスク シーケンスをより多く作成できます。  
 
 > [!Note]  
 > Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[更新プログラムのオプション機能の有効化](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」を参照してください。<!--505213-->  

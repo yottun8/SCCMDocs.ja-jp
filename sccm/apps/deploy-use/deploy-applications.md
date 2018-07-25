@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a89c9d5a0fa4ea57a7824fe16b24120347ddaac
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ed6174bcb3c99461b00ec5fc57d4508b9390747d
+ms.sourcegitcommit: acad0674b2743193f87990fb50194c4f17823a8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338035"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146930"
 ---
 # <a name="deploy-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager でアプリケーションを展開する
 
@@ -102,7 +102,7 @@ Configuration Manager でデバイスまたはユーザーのコレクション�
 - **[このアプリケーションの置き換えられるバージョンを自動的にアップグレードする]** -- クライアントは、アプリケーションの置き換えられるバージョンを、優先されるアプリケーションでアップグレードします。    
 
     > [!NOTE]  
-    > バージョン 1802 以降、**[利用可能]** または **[必須]** のインストールの目的の場合、このオプションを有効または無効にすることができます。 <!--1351266--> 
+    > バージョン 1802 以降、**[利用可能]** インストールのために、このオプションを有効または無効にすることができます。 <!--1351266--> 
 
 
 ### <a name="specify-scheduling-settings-for-the-deployment"></a>展開のスケジュール設定を指定する
@@ -195,8 +195,7 @@ Configuration Manager でデバイスまたはユーザーのコレクション�
 
 
 ## <a name="deploy-user-available-applications-on-azure-ad-joined-devices"></a>Azure AD 参加デバイスにユーザーが利用できるアプリケーションを展開する方法
-<!-- 1322613 -->
-ユーザーが利用できるようにアプリケーションを展開した場合、バージョン 1802 以降、ユーザーは Azure Active Directory (Azure AD) デバイスのソフトウェア センターでアプリケーションを参照してインストールできます。  
+<!-- 1322613 --> ユーザーが利用できるようにアプリケーションを展開した場合、バージョン 1802 以降、ユーザーは Azure Active Directory (Azure AD) デバイスのソフトウェア センターでアプリケーションを参照してインストールできます。  
 
 #### <a name="prerequisites"></a>[前提条件]
 
