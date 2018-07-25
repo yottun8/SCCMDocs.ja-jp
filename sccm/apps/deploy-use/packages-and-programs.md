@@ -10,12 +10,12 @@ ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6f34fd322e5f94550602d7883a0303d10059b702
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4815695ad67ac86491da9ea3274fd7db660c8190
+ms.sourcegitcommit: 7c26485b600544a64a5cf2edca6f2f8f29fecde9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341952"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130648"
 ---
 # <a name="packages-and-programs-in-system-center-configuration-manager"></a>System Center Configuration Manager のパッケージとプログラム
 
@@ -212,6 +212,9 @@ System Center Configuration Manager は、Configuration Manager 2007 で使用�
 
         -   **[必須]**: パッケージとプログラムは、構成されたスケジュールに従って自動的に展開されます。 ただし、ユーザーは、パッケージとプログラムの展開ステータスを追跡し、ソフトウェア センターを使用して期限前にパッケージとプログラムをインストールできます。  
 
+        >  [!NOTE]  
+        >  デバイスに複数のユーザーがサインインしている場合、パッケージとタスク シーケンスの展開がソフトウェア センターに表示されない場合があります。
+        
     -   **[ウェイクアップ パケットを送信する]**: 展開目的に **[必須]** が設定されていて、このオプションが選択されていると、インストールの期限時間にスリープ状態のコンピューターをウェイクするために、展開のインストール前にコンピューターにウェイクアップ パケットが送信されます。 このオプションを使用する前に、コンピューターを Wake On LAN 用に構成する必要があります。  
 
     -  **[インストールの期限後、クライアントが従量制のインターネット接続を使用してコンテンツをダウンロードできるようにする (追加料金が生じる可能性があります)]**: 必要に応じて、これを選択します。  
