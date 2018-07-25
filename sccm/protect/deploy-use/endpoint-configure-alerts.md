@@ -10,12 +10,12 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 275ce06520174adf10100b77a8034620b072c93f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 514404119044bbf994eb88c5705bb5051281ee9f
+ms.sourcegitcommit: cea5152422a60e61601fdaeae1519300001fe6ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348669"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39175223"
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configuration Manager での Endpoint Protection 用のアラートの構成
 
@@ -87,7 +87,7 @@ ms.locfileid: "32348669"
 
 ## <a name="alert-for-outdated-malware-client"></a>期限切れのマルウェア クライアントのアラート
 
-Configuration Manager のバージョン 1702 から、Endpoint Protection クライアントが古くならないようにするためのアラートを構成することができます。 **[資産とコンプライアンス]** > **[概要]** > **[デバイス]** > **[All Desktops and Serve Clients (すべてのデスクトップとサービス クライアント)]** の順に選択して、**[マルウェア対策クライアント バージョン]** と **[Endpoint Protection Deployment Status (Endpoint Protection の展開ステータス)]** を確認できます。 アラートを確認するには、**[監視]** ワークスペースの **[アラート]** を表示します。 20% を超える管理対象クライアントが期限切れバージョンのマルウェア対策ソフトウェアを実行している場合、"マルウェア対策クライアント バージョンが期限切れです" のアラートが表示されます。 このアラートは、**[監視]** > **[概要]** タブには表示されません。期限切れのマルウェア対策クライアントを更新するには、マルウェア対策クライアントのソフトウェア更新プログラムを有効にします。
+Configuration Manager のバージョン 1702 から、Endpoint Protection クライアントが古くならないようにするためのアラートを構成することができます。 **[資産とコンプライアンス]** > **[概要]** > **[デバイス コレクション]** > **[すべてのデスクトップ クライアントおよびサーバー クライアント]** の順に移動することで、**[マルウェア対策クライアント バージョン]** と **[Endpoint Protection の展開状態]** を確認できるようになりました。 アラートを確認するには、**[監視]** ワークスペースの **[アラート]** を表示します。 20% を超える管理対象クライアントが期限切れバージョンのマルウェア対策ソフトウェアを実行している場合、"マルウェア対策クライアント バージョンが期限切れです" のアラートが表示されます。 このアラートは、**[監視]** > **[概要]** タブには表示されません。期限切れのマルウェア対策クライアントを更新するには、マルウェア対策クライアントのソフトウェア更新プログラムを有効にします。
 
 アラートを生成するパーセント値を構成するには、**[監視]** > **[アラート]** > **[すべてのアラート]** を展開し、**[期限切れのマルウェア対策クライアント]** をダブルクリックし、**[管理されたクライアントのうち、期限切れのバージョンのマルウェア対策クライアントを使用しているものが次の割合を超えたら、アラートを生成する]** オプションを変更します。
 
