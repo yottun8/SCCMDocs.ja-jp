@@ -1,10 +1,5 @@
 # 理解と調査
 ## [概要](understand\protect-data-and-site-infrastructure.md)
-## [サイトのバックアップ](understand/backup-and-recovery.md)
-## [サイトの回復](understand/recover-sites.md)
-## [サイトの無人回復](understand/unattended-recovery.md)
-## [高可用性オプション](understand/high-availability-options.md)
-## [危険度の高い展開の管理](understand/settings-to-manage-high-risk-deployments.md)
 
 # 計画と設計
 ## [証明書プロファイルの前提条件](plan-design/prerequisites-for-certificate-profiles.md)
