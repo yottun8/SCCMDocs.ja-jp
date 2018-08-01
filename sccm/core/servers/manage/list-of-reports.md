@@ -207,18 +207,14 @@ Configuration Manager には、次のレポートが付属しています。 こ
   **Windows CE 用 Configuration Manager クライアントで管理されるモバイル デバイスへのクライアントの正常な展開**|Windows CE 用 Configuration Manager クライアントで管理されるモバイル デバイスへのクライアントの正常な展開に関する詳細情報が表示されます。|  
 |
   **Windows CE 用 Configuration Manager クライアントで管理される異常な状態のモバイル デバイスの通信の問題**|このレポートには、Windows CE 用 Configuration Manager クライアントで管理されるモバイル デバイスの通信の問題の詳細情報が表示されます。|  
-|
-  **Exchange Server コネクタで管理されるモバイル デバイスの既定の ActiveSync メールボックス ポリシーのコンプライアンス ステータス**|Exchange Server コネクタで管理されるモバイル デバイスの既定の Exchange ActiveSync メールボックス ポリシーのコンプライアンス ステータスの概要が表示されます。|  
+|**Exchange Server コネクタで管理されるモバイル デバイスの既定の ActiveSync メールボックス ポリシーのコンプライアンス ステータス**|Exchange Server コネクタで管理されるモバイル デバイスの既定の Exchange ActiveSync メールボックス ポリシーのコンプライアンス ステータスの概要が表示されます。|  
 |**表示構成別モバイル デバイス数**|表示設定別に、モバイル デバイスの数が表示されます。|  
 |**オペレーティング システム別モバイル デバイス数**|オペレーティング システム別に、モバイル デバイスの数が表示されます。|  
 |**プログラム実行用メモリ別モバイル デバイス数**|プログラム実行用メモリ別に、モバイル デバイスの数が表示されます。|  
 |**データ記憶用メモリ構成別のモバイル デバイス数**|データ記憶用メモリ構成別のモバイル デバイス数です。|  
-|
-  **Windows CE 用 Configuration Manager クライアントで管理されるモバイル デバイスの正常な状態の情報**|Windows CE 用 Configuration Manager クライアントで管理されるモバイル デバイスの正常な状態の情報が表示されます。|  
-|
-  **Windows CE 用 Configuration Manager クライアントで管理されるモバイル デバイスのヘルス概要**|Windows CE 用 Configuration Manager クライアントで管理されるモバイル デバイスの正常性の概要が表示されます。|  
-|
-  **Exchange Server コネクタで管理されている非アクティブなモバイル デバイス**|Exchange Server コネクタによって管理されているが、指定した日数の間 Exchange Server に接続されていないモバイル デバイスが表示されます。|  
+|**Windows CE 用 Configuration Manager クライアントで管理されるモバイル デバイスの正常な状態の情報**|Windows CE 用 Configuration Manager クライアントで管理されるモバイル デバイスの正常な状態の情報が表示されます。|  
+|**Windows CE 用 Configuration Manager クライアントで管理されるモバイル デバイスのヘルス概要**|Windows CE 用 Configuration Manager クライアントで管理されるモバイル デバイスの正常性の概要が表示されます。|  
+|**Exchange Server コネクタで管理されている非アクティブなモバイル デバイス**|Exchange Server コネクタによって管理されているが、指定した日数の間 Exchange Server に接続されていないモバイル デバイスが表示されます。|  
 |**条件付きアクセスの状態ごとのデバイスの一覧**|現在のコンプライアンスとデバイスの条件付きアクセスの状態に関する情報を表示します。 条件付きアクセス ポリシーと共に、このレポートを使用することができます。 Configuration Manager のバージョン 1602 以降でこのレポートを使用できます。|  
 |**正常性構成証明の状態別のデバイス一覧**|正常性構成証明サービスにより報告された属性を備えたデバイスが一覧表示されます。|
 |**Microsoft Intune に各ユーザーが登録したデバイス一覧**|ユーザーが Microsoft Intune に登録したデバイスがすべて表示されます。|  
