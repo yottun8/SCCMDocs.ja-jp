@@ -20,12 +20,14 @@
 
 ## アプリケーションの展開
 ### [アプリケーションの展開](deploy-use/deploy-applications.md)
+### [段階的な展開の作成](../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
 ### [アプリケーションの共有](deploy-use/share-applications.md)
 ### [アプリケーション展開のシミュレーション](deploy-use/simulate-application-deployments.md)
 ### [App-V 仮想アプリケーションの展開](get-started/deploying-app-v-virtual-applications.md)
 
 ## アプリケーションの監視
 ### [コンソールからのアプリケーションの監視](deploy-use/monitor-applications-from-the-console.md)
+### [段階的な展開の管理と監視](../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
 ### [ソフトウェア使用状況測定でアプリの使用状況を監視する](deploy-use/monitor-app-usage-with-software-metering.md)
 
 ## アプリケーションを管理する

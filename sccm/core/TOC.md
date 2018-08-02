@@ -2,6 +2,7 @@
 ##  [Configuration Manager の概要](understand/introduction.md)
 ### [Configuration Manager のヘルプの検索](understand/find-help.md)
 ### [ドキュメントの使用方法](understand/use-docs.md)
+### [コンソールの使用](servers/manage/admin-console.md)
 ### [ユーザー補助機能](understand/accessibility-features.md)
 ### [ソフトウェア センターのユーザー ガイド](understand/software-center.md)
 ##  [Configuration Manager の基本情報](understand/fundamentals.md)
@@ -30,15 +31,9 @@
 ###  [特徴と機能](plan-design/changes/features-and-capabilities.md)
 ###  [Configuration Manager 2012 からの変更点](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [増分バージョンの新機能](plan-design/changes/whats-new-incremental-versions.md)
+###  [バージョン 1806 の新機能](plan-design/changes/whats-new-in-version-1806.md)
 ###  [バージョン 1802 の新機能](plan-design/changes/whats-new-in-version-1802.md)
 ###  [バージョン 1710 の新機能](plan-design/changes/whats-new-in-version-1710.md)
-###  [バージョン 1706 の新機能](plan-design/changes/whats-new-in-version-1706.md)
-<!--
-###  [What's new in version 1702](plan-design/changes/whats-new-in-version-1702.md)
-###  [What's new in version 1610](plan-design/changes/whats-new-in-version-1610.md)
-###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
-###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
--->
 ###  [削除と非推奨](plan-design/changes/deprecated/removed-and-deprecated.md)
 #### [削除された機能と非推奨の機能](plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)
 #### [サイト サーバーの削除された機能と非推奨の機能](plan-design/changes/deprecated/removed-and-deprecated-server.md)
@@ -65,6 +60,7 @@
 #### [クラウドベースの配布ポイントの使用](plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
 #### [プル配布ポイントの使用](plan-design/hierarchy/use-a-pull-distribution-point.md)
 #### [コンテンツ ライブラリ](plan-design/hierarchy/the-content-library.md)
+#### [フローチャート - コンテンツ ライブラリの管理](plan-design/hierarchy/manage-content-library-flowchart.md)
 #### [コンテンツ ライブラリのクリーンアップ ツール](plan-design/hierarchy/content-library-cleanup-tool.md)
 #### [コンテンツにアクセスするためのアカウントの管理](plan-design/hierarchy/manage-accounts-to-access-content.md)
 #### [Configuration Manager クライアントのピア キャッシュ](plan-design/hierarchy/client-peer-cache.md)
@@ -84,17 +80,9 @@
 
 ##   [診断結果と使用状況データ](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [診断結果と使用状況データの使用方法](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
+###  [1806 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md)
 ###  [1802 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802.md)
 ###  [1710 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md)
-###  [1706 の診断データ](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1706.md)
-<!--
-###  [Diagnostic data for 1702](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md)
-###  [Diagnostic data for 1610](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
-###  [Diagnostic data for 1606](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
-###  [Diagnostic data for 1602](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
-###  [Diagnostic data for 1511](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
-
--->
 ###  [診断と使用状況データを収集する方法](plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)
 ###  [診断および使用状況データを使用する方法](plan-design/diagnostics/view-diagnostics-and-usage-data.md)
 ###  [カスタマー エクスペリエンス向上プログラム (CEIP)](plan-design/diagnostics/customer-experience-improvement-program-ceip.md)
@@ -175,9 +163,14 @@
 ###  [サイト境界と境界グループ](servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)
 #### [境界](servers/deploy/configure/boundaries.md)
 #### [境界グループ](servers/deploy/configure/boundary-groups.md)
-###  [SQL Server Always On を使用するための準備](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
-###  [SQL Server Always On の構成](servers/deploy/configure/configure-aoag.md)
-###  [SQL Server クラスターの使用](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
+###  [高可用性オプション](servers/deploy/configure/high-availability-options.md)
+#### [サイト サーバーの高可用性](servers/deploy/configure/site-server-high-availability.md)
+#### [フローチャート - パッシブ サイト サーバーのセットアップ](servers/deploy/configure/passive-site-server-flowchart.md)
+#### [フローチャート - サイト サーバーの昇格 (計画済)](servers/deploy/configure/promote-site-server-flowchart.md)
+#### [フローチャート - サイト サーバーの昇格 (計画外)](servers/deploy/configure/promote-site-server-unplanned-flowchart.md)
+#### [SQL Server Always On を使用するための準備](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
+#### [SQL Server Always On の構成](servers/deploy/configure/configure-aoag.md)
+#### [SQL Server クラスターの使用](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [データベース ファイルのカスタムの場所](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [ロール ベース管理の構成](servers/deploy/configure/configure-role-based-administration.md)
 ###  [Azure サービスの構成](servers/deploy/configure/azure-services-wizard.md)
@@ -193,12 +186,10 @@
 ###  [プロキシ サーバーのサポート](plan-design/network/proxy-server-support.md)
 ###  [リリース ノート](servers/deploy/install/release-notes.md)
 ###  [Unicode および ASCII のサポート](plan-design/hierarchy/unicode-and-ascii-support.md)
-<!-- Deprecated from Content - still published but out of TOC:
-#### [Boundary groups for versions prior to 1610](servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md)
--->
 
 #    管理インフラストラクチャ
-## [管理分析情報](servers/manage/management-insights.md)
+##   [管理分析情報](servers/manage/management-insights.md)
+##   [CMPivot](servers/manage/cmpivot.md)
 ##   [メンテナンス タスク](servers/manage/maintenance-tasks.md)
 ###  [メンテナンス タスクのリファレンス](servers/manage/reference-for-maintenance-tasks.md)
 ##   [インフラストラクチャの変更](servers/manage/modify-your-infrastructure.md)
@@ -215,17 +206,17 @@
 ###  [サービス接続ツールの使用](servers/manage/use-the-service-connection-tool.md)
 ###  [更新登録ツールの使用](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [修正プログラム インストーラーの使用](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+###  [1806 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1806.md)
 ###  [1802 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1802.md)
 ###  [1710 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1710.md)
-###  [1706 に更新するためのチェックリスト](servers/manage/checklist-for-installing-update-1706.md)
-<!-- Deprecated from Content - still published but out of TOC:
-###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
-###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
-###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
-###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
--->
 ###  [Current Branch バージョンのサポート](servers/manage/current-branch-versions-supported.md)  
 
+##   バックアップと回復
+###  [サイトのバックアップ](servers/manage/backup-and-recovery.md)
+###  [サイトの回復](servers/manage/recover-sites.md)
+###  [サイトの無人回復](servers/manage/unattended-recovery.md)
+
+##   [サイト障害の影響](servers/manage/site-failure-impacts.md)
 
 ##   監視インフラストラクチャ
 ###  [アラートとステータス システムの使用](servers/manage/use-alerts-and-the-status-system.md)
@@ -249,6 +240,25 @@
 #### [カスタム レポート モデルの作成](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [レポートのセキュリティとプライバシー](servers/manage/security-and-privacy-for-reporting.md)
 ###  [データ ウェアハウス](servers/manage/data-warehouse.md)
+
+## [Configuration Manager ツール](support/tools.md)
+### [CMTrace](support/cmtrace.md) 
+### [Client Spy](support/clispy.md)
+### [Deployment Monitoring Tool](support/deployment-monitoring-tool.md)
+### [Policy Spy](support/policy-spy.md)
+### [Power Viewer Tool](support/power-viewer-tool.md)
+### [Send Schedule Tool](support/send-schedule-tool.md)
+### [DP Job Queue Manager](support/dp-job-manager.md)
+### [Collection Evaluation Viewer](support/ceviewer.md)
+### [Content Library Explorer](support/content-library-explorer.md)
+### [Content Library Transfer](support/content-library-transfer.md)
+### [Content Ownership Tool](support/content-ownership-tool.md)
+### [Role-based Administration and Auditing Tool](support/rbaviewer.md)
+### [Run Meter Summarization Tool](support/run-meter-summ.md)
+
+<!--## [Support Center]-->
+
+## [危険度の高い展開の管理](servers/manage/settings-to-manage-high-risk-deployments.md)
 
 #    クライアントの展開
 ##   クライアント展開の計画
