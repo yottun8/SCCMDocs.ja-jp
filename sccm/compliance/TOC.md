@@ -19,8 +19,7 @@
 # 展開と使用
 
 ## [構成アイテムの作成](deploy-use/create-configuration-items.md)
-### 
-  [Configuration Manager クライアントを使用して管理されているデバイス](deploy-use/configuration-items-for-devices-managed-with-the-client.md)
+### [Configuration Manager クライアントを使用して管理されているデバイス](deploy-use/configuration-items-for-devices-managed-with-the-client.md)
 #### [Windows 10](deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md)
 #### [Mac OS X](deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)
 #### [ デスクトップおよびサーバー (クライアント)](deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md)
