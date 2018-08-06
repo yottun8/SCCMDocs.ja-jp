@@ -10,12 +10,12 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a8ce492aa34fa130a11bde0d5823252a9d782960
-ms.sourcegitcommit: e35d07870656eadd29faacc378ecd091ff3bdcfb
+ms.openlocfilehash: 33cd99fd51bd7fabc1ae7f8379bcf2a69a5c4898
+ms.sourcegitcommit: f195190347a98b6c5be957564d33b6c4dfb610d7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848630"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39309376"
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>System Center Configuration Manager のライセンスとブランチ
 
@@ -28,7 +28,7 @@ ms.locfileid: "34848630"
 
 
 **ライセンスの詳細:**  
-[Microsoft ボリューム ライセンス プログラムを通して購入する製品の使用条件についてはこちらを参照してください](http://go.microsoft.com/fwlink/?LinkId=800052)。
+[Microsoft ボリューム ライセンス プログラムを通して購入する製品の使用条件についてはこちらを参照してください](https://go.microsoft.com/fwlink/?LinkId=800052)。
 
 
 ## <a name="system-center-configuration-manager-licensed-branches"></a>System Center Configuration Manager のライセンされたブランチ  
@@ -95,16 +95,15 @@ System Center Configuration Manager については、2016 年 10 月リリー�
 製品のライセンスに関する詳細については、次のリンクを使用してください。
 
 **Microsoft ボリューム ランセンス サービス センター (VLSC) のリンク:**
-- VLSC の概要: [https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx)。
+- [VLSC の概要](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- Microsoft ボリューム ライセンスでの製品の使用条件: [http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052)。
+- [Microsoft ボリューム ライセンスでの製品の使用条件](https://go.microsoft.com/fwlink/?LinkId=800052)
 
-- ボリューム ライセンスをお持ちのお客様は、ライセンスの概要を次のリンクを使用して確認できます: [https://www.microsoft.com/Licensing/servicecenter/default.aspx](https://www.microsoft.com/Licensing/servicecenter/default.aspx)。  
-  **[ライセンス]** メニューに移動して、**[ライセンスの概要]** をクリックすると、ライセンスの概要が表示されます。
+- ボリューム ライセンスをお持ちのお客様は、ライセンスの概要を[ボリューム ライセンス サービス センター](https://www.microsoft.com/Licensing/servicecenter/default.aspx)で確認できます。 **[ライセンス]** メニューに移動して、**[ライセンスの概要]** をクリックすると、ライセンスの概要が表示されます。
 
 **VLSC ビデオ:**
-- VLSC の動作方法を示すビデオ: [https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2)。
+- [VLSC の動作方法を示すビデオ](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2)  
 
-- 有効なアクティブなソフトウェア アシュアランス契約を参照する場所 (約 43 秒で開始): [https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0)。
+- [有効なアクティブなソフトウェア アシュアランス契約を参照する場所](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0) (約 43 秒で開始)  
 
-- VLSC のアクセス許可を取得する方法: [https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4)。  VLSC の読み取りおよび書き込みのアクセス許可は、組織内の他のユーザーに委任することができます。
+- [VLSC のアクセス許可を取得する方法](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4) VLSC の読み取りおよび書き込みのアクセス許可は、組織内の他のユーザーに委任することができます。

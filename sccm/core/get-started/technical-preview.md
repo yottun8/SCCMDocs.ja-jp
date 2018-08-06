@@ -1,8 +1,8 @@
 ---
 title: Technical Preview リリース
 titleSuffix: Configuration Manager
-description: Configuration Manager の新機能を体験するテクニカル プレビュー リリースについて説明します。
-ms.date: 06/27/2018
+description: Configuration Manager の新機能を体験する Technical Preview Branch について説明します。
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,66 +10,69 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1fd848c3e0ed663e0731eb86d39c930db3af7819
-ms.sourcegitcommit: d1bf26bcf0d78b37ac7598fab36eb58ca69b1dc5
+ms.openlocfilehash: ec9c4cdf54e6ffc55cc2983152f56492e5b1b354
+ms.sourcegitcommit: af4f8bd8dffe6fb05f51322ea9e94d335a2cc0c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066285"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39360717"
 ---
-# <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview
+# <a name="technical-preview-for-configuration-manager"></a>Configuration Manager の Technical Preview
 
 *適用対象: System Center Configuration Manager (Technical Preview)*
 
-**System Center Configuration Manager Technical Preview へようこそ**。 この記事では、最新のプレビュー リリースについて詳しく説明します。プレビュー リリースには、現在開発中の新しい機能と可能性が含まれます。 Technical Preview の各バージョンでは、そのバージョンが公開された時点において Configuration Manager の Current Branch に組み込まれていない新しい機能が導入されます。 これらの機能は、最終的に現在のブランチのリリースに対する更新プログラムに組み込まれる場合がありますが、最終版として追加される前に、これらの機能をお試しいただき、フィードバックをご提供いただければと思います。  
+この記事では、Configuration Manager の毎月の Technical Preview Branch の詳細を説明します。 Technical Preview では、マイクロソフトが取り組んでいる新しい機能が紹介されます。 Configuration Manager の Current Branch にまだ組み込まれていない新機能が導入されています。 これらの機能は、最終的に Current Branch の更新プログラムに組み込まれる可能性があります。 機能が最終的に確定する前に実際に試してみて、フィードバックを提供してください。  
 
- このリリースはテクニカル プレビューであるため、詳細や機能は変更されることがあります。  
+このリリースはテクニカル プレビューであるため、詳細や機能は変更されることがあります。  
 
- この記事には、Technical Preview のすべてのバージョンに適用される情報が含まれています。 また、新しい各機能 (またはフィーチャー) とそれが初めて導入された Technical Preview のバージョン (たとえば、2018 年 6 月であればバージョン 1806) がリストされます。 これらの機能の詳細は、各プレビュー バージョンに特化した個別のトピックで説明されています。  
+この情報は、Configuration Manager Technical Preview Branch のすべてのバージョンに適用されます。 この記事では、各新機能とそれが最初に組み込まれる Technical Preview バージョンの一覧を示します。 たとえば、2018 年 (18) 6 月 (06) のバージョンは **1806** です。 個々の機能の詳細については、Preview バージョンごとの記事で説明します。  
 
- Configuration Manager の現在のブランチの新機能については、「[What's new in System Center Configuration Manager](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012)」 (System Center Configuration Manager の新機能) を参照してください。
+Configuration Manager の *Current Branch* の新機能については、「[System Center Configuration Manager の増分バージョンの新機能](/sccm/core/plan-design/changes/whats-new-incremental-versions)」をご覧ください。
 
 
 
-##  <a name="bkmk_reqs"></a> Technical Preview の要件と制限事項  
+##  <a name="bkmk_reqs"></a> 要件と制限事項  
 
 > [!IMPORTANT]     
 >  Technical Preview はラボ環境での使用目的に限定してライセンスされます。 Microsoft はサポート サービスを提供しない場合があり、また、プレビュー ソフトウェアでは特定の機能が使用できない場合があります。 さらに、プレビュー ソフトウェアは、製品版ソフトウェアに比べて、セキュリティ、プライバシー、アクセシビリティ、可用性および信頼性の基準が低いか、または異なる場合があります。  
 
- ほとんどの製品の前提条件については、「[Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md)」 (System Center Configuration Manager でサポートされる構成) を参照してください。 次の例外がテクニカル プレビュー リリースに適用されます。  
+ ほとんどの製品の前提条件については、[サポートされている構成](/sccm/core/plan-design/configs/supported-configurations)に関するページの情報をご覧ください。 Technical Preview Branch には次の例外が適用されます。  
 
 -   各インストールは 90 日後に使用期限が切れるまでアクティブです。  
 
--   サポートされる言語は英語のみです。
+-   サポートされる言語は英語のみです。  
 
+-   次のセットアップ コマンド ライン パラメーターのみをサポートしています。  
+    -   `/silent`  
+    -   `/testdbupgrade`    
 
--   次のインストール フラグ (スイッチ) のみがサポートされます。  
-
-    -   **/silent**  
-    -   **/testdbupgrade**    
-
-
--   既定では、Technical Preview を使用すると、サービス接続ポイントがオンライン モードにインストールされます。 オフライン モードへの変更はサポートされていません。
+-   サービス接続ポイントはオンライン モードでインストールされます。 オフライン モードはサポートされません。  
 
 -   Technical Preview の特定バージョンごとの個別の記事には、追加の制限または要件が含まれています。
 
--   このプレビュー ビルドへの移行、またはこのプレビュー ビルドからの移行はサポートされません。  
+-   Technical Preview Branch では、次の機能はサポートされません。  
 
--   このプレビュー ビルドへのアップグレードはサポートされません。 
+    - この Preview Branch への、またはこの Preview Branch からの[移行](/sccm/core/migration/migrate-data-between-hierarchies)。  
 
--   cd.latest フォルダーからのサイトの回復はサポートされません。  <!--507106-->
+    - この Preview Branch への[アップグレード](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)。  
 
--   このプレビュー ビルドから、製品版 (現在のブランチ) へのアップグレードはサポートされません。 ただし、プレビュー バージョンから更新プログラムが使用できる場合は、Configuration Manager コンソールの **[更新とサービス]** ノードから検索してからインストールできます。 コンソール内アップグレード プロセスに関する「 [ConfigMgr 更新プログラム パッケージをインストールする](https://www.youtube.com/embed/KBd_EGFbUT8) 」というビデオを youtube.com でご覧ください。  
--   スタンドアロンのプライマリ サイトのみがサポートされます。 中央管理サイト、複数のプライマリ サイト、またはセカンダリ サイトはサポートされません。  
+    - cd.latest フォルダーからの[サイトの回復](/sccm/core/servers/manage/recover-sites)。  <!--507106-->
 
-この Configuration Manager のブランチでは、次の製品とテクノロジがサポートされています。 ただし、これは製品またはバージョンの各サポート ライフサイクルが過ぎてもサポートを延長するという意味ではありません。 既にサポート ライフサイクルが終了している製品は、Configuration Manager ではサポートされません。 マイクロソフト サポート ライフサイクルの詳細については、 [「マイクロソフト サポート ライフサイクル」](https://go.microsoft.com/fwlink/p/?LinkId=208270) Web サイトを参照してください。  
+-   この Preview Branch から Current Branch への更新はサポートされていません。  
 
--   次のバージョンの SQL Server のみがサポートされます。  
+    > [!Note]  
+    > Preview バージョンから更新プログラムが使用できる場合は、Configuration Manager コンソールの **[更新とサービス]** ノードから検索してからインストールできます。 コンソール内アップグレード プロセスについては、youtube.com のビデオ「[Installing Configuration Manager update packages](https://www.youtube.com/embed/KBd_EGFbUT8)」(Configuration Manager 更新プログラム パッケージのインストール) をご覧ください。  
+
+-   スタンドアロン プライマリ サイトのみをサポートします。 中央管理サイト、複数のプライマリ サイト、またはセカンダリ サイトはサポートされません。  
+
+Configuration Manager の Technical Preview Branch では、次の製品とテクノロジがサポートされています。 
+
+-   次のバージョンの **SQL Server** のみをサポートします。  
 
     -   Configuration Manager バージョン 1710 以降の SQL Server 2017 (累積的な更新プログラム 2 以降適用済み)
     -   SQL Server 2016 (Service Pack なし、およびそれ以降)
     -   SQL Server 2014 (Service Pack 1 以降)
-    -   SQL Server 2012 (Service Pack 3 以降)
+    -   SQL Server 2012 (Service Pack 3 以降)  
 
 
 -   サイトは最大 10 台のクライアントをサポートします。各クライアントは次のいずれかの Windows バージョンを実行している必要があります。  
@@ -78,60 +81,84 @@ ms.locfileid: "37066285"
       -   Windows 8.1  
       -   Windows 7  
 
-##  <a name="bkmk_install"></a> Technical Preview のインストールと更新  
- System Center Configuration Manager の Technical Preview は、System Center Configuration Manager の最新リリースとは異なります。  
+> [!Note]  
+> ここに製品が記載されていても、そのサポート ライフサイクルを超えてサポートが延長されることを意味するものではありません。 Configuration Manager では、サポート ライフサイクルが終了している製品はサポートされません。 詳しくは、「[Microsoft ライフサイクル ポリシー](https://go.microsoft.com/fwlink/p/?LinkId=208270)」をご覧ください。  
 
- Technical Preview を使用するには、Technical Preview ビルドの **ベースライン バージョン** を最初にインストールする必要があります。 ベースライン バージョンをインストールしたら、**コンソール内更新**を使用して、最新のプレビュー バージョンでインストール環境を最新の状態にすることができます。 通常、Technical Preview の新バージョンは毎月使用可能です。
 
-各プレビュー リリースは、3 つの連続したリリースが使用可能になるまでサポートされます。 つまり、バージョン 1708 がリリースされると、バージョン 1704 はサポートされなくなりますが、バージョン 1705、1706、1707 は引き続きサポートされます。 ベースラインがサポート対象でなくなっても、そのインストールをサポートされるバージョンに更新すれば、(新しいベースライン バージョンが使用できるようになるまでは) 新しい Technical Preview サイトのインストールがサポートされます。 提供されている最新のバージョンに更新した後、最新バージョンの Technical Preview をインストールできるようになるまでそのプロセスを繰り返します。
+
+##  <a name="bkmk_install"></a> インストールと更新  
+
+ラボ用の Configuration Manager Technical Preview Branch は、運用環境用の Configuration Manager Current Branch とは異なります。  
+
+最初に、Technical Preview Branch のベースライン バージョンをインストールします。 ベースライン バージョンをインストールした後、コンソール内更新を使用して、最新のプレビュー バージョンでインストール環境を最新の状態にします。 通常、Technical Preview の新バージョンは毎月使用可能になります。
+
+各 Technical Preview Branch は、それより後の 3 つの連続するバージョンが利用可能になるまでサポートされます。 たとえば、バージョン 1708 がリリースされた時点で、バージョン 1704 はサポートされなくなります。 バージョン 1705、1706、1707 はまだサポートされています。 ベースラインがサポートされなくなったときも、すぐにサポートされるバージョンに更新するのであれば、新しい Technical Preview サイトのインストール用にサポートされます。 古いベースラインは、新しいベースライン バージョンが使用できるようになるまでサポートされます。 ベースラインから使用可能な最新のバージョンに更新した後、最新の Technical Preview バージョンをインストールするまで更新プロセスを繰り返します。
 
 > [!TIP]  
->  Technical Preview の更新プログラムをインストールするときに、プレビュー インストール環境を対象の新しい Technical Preview バージョンに更新します。 Technical Preview のインストールでは、現在のブランチのインストールにアップグレードすることも、現在のブランチ リリースから更新を受け取ることもできません。  
+>  Technical Preview の更新プログラムをインストールするときに、プレビュー インストール環境を対象の新しい Technical Preview バージョンに更新します。 Technical Preview のインストールでは、Current Branch のインストールにはアップグレードできません。 また、Current Branch リリースから更新プログラムを受け取ることもありません。 
+> 
+> 1 年の間に何回か、Technical Preview Branch と Current Branch のバージョン番号が同じになることがあります。 たとえば、Technical Preview バージョン 1802 と Current Branch バージョン 1802 が存在します。 
 
-**Technical Preview のアクティブ ベースライン バージョン:**
    
-リリース後、最長 1 年間、ベースライン バージョンをインストールできます。 ただし、新しい Technical Preview サイトをインストールする場合は、利用可能な最新のベースライン バージョンを使用することをお勧めします。
--  **Technical Preview 1806** - Configuration Manager Technical Preview 1806 は、コンソール内更新と、新しいベースライン バージョンの両方として使用できます。 ベースライン バージョンを [TechNet Evaluation Center から](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)ダウンロードします。
+### <a name="active-baseline-versions"></a>アクティブなベースライン バージョン
+   
+リリース後、最長 1 年間、ベースライン バージョンをインストールできます。 新しい Technical Preview サイトをインストールする時点で、使用できるベースライン バージョンが複数ある場合は、最新のベースライン バージョンを使用します。
+
+-  **Technical Preview バージョン 1806**: Configuration Manager Technical Preview バージョン 1806 は、コンソール内更新と、新しいベースライン バージョンの両方として使用できます。 ベースライン バージョンを [TechNet Evaluation Center から](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)ダウンロードします。
+
 
 
 ##  <a name="BKMK_TPFeedback"></a> フィードバックについて  
- Technical Preview の機能に関するフィードバックをお寄せください。 詳細については、「[製品に関するフィードバック](../understand/find-help.md#product-feedback)」を参照してください。
 
-希望する新しい機能のアイデアがありましたら、その内容もお知らせください。 新しいアイデアを提出する、または、他の人が提出したアイデアに投票するには、 [ユーザー ボイスのページにアクセス](https://configurationmanager.uservoice.com)してください。  
+Technical Preview の新機能に関するフィードバックをお寄せください。 詳細については、「[製品に関するフィードバック](/sccm/core/understand/find-help#product-feedback)」を参照してください。
+
+希望する新しい機能のアイデアがありましたら、その内容もお知らせください。 新しいアイデアを提出する、または、他の人が提出したアイデアに投票するには、[UserVoice ページにアクセス](https://configurationmanager.uservoice.com)してください。  
 
 <!--   ##  <a name="bdmk_tpknownissues"></a> General changes introduced in Technical Previews    -->
 
 
 
+##  <a name="bkmk_tpCaps"></a> 最新バージョンの機能  
 
-##  <a name="bkmk_tpCaps"></a> 最新の Technical Preview で提供される機能  
-以下は、最新の Configuration Manager Technical Preview リリースで提供される機能です。 Technical Preview の以前のバージョンで利用できるようになった機能は、以降のバージョンでも利用できます。 同様に、Configuration Manager の Current Branch に追加された機能は、後続の Technical Preview でも引き続き利用できます。 特定の機能の詳細については、各プレビュー バージョンのコンテンツをクリックします。  
+最新の Configuration Manager Technical Preview バージョンでは、以下の機能を使用できます。 
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-18062"></a>Technical Preview バージョン 1806.2
-- [段階的展開の機能強化](capabilities-in-technical-preview-1806-2.md#bkmk_pod) <!--1358577,1358147,1358578-->
-- [新しい Windows アプリケーション パッケージ形式のサポート](capabilities-in-technical-preview-1806-2.md#bkmk_msix) <!--1357427-->
-- [クライアント プッシュ セキュリティの機能改善](capabilities-in-technical-preview-1806-2.md#bkmk_client-push) <!--1358204-->
-- [プロアクティブ メンテナンスの管理分析情報](capabilities-in-technical-preview-1806-2.md#bkmk_insights) <!--1352184,et al-->
-- [共同管理されたデバイスのモバイル アプリ ワークロードの移行](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt) <!--1357892-->
-- [ピアのダウンロードの境界グループのオプション](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions) <!--1356193-->
-- [カスタム カタログ用のサード パーティ製ソフトウェアの更新プログラムのサポート](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate) <!--1358714-->
-- [クラウド管理機能の改善](capabilities-in-technical-preview-1806-2.md#bkmk_cloud) <!--511980,515854-->
-- [新しいソフトウェア更新プログラムのコンプライアンス レポート](capabilities-in-technical-preview-1806-2.md#bkmk_report) <!--1357775-->
+### <a name="technical-preview-version-1807"></a>Technical Preview バージョン 1807
+
+- [コミュニティ ハブ](capabilities-in-technical-preview-1807.md#bkmk_hub) <!--1357766-->
+- [オフライン OS イメージ サービス用のドライブを指定する](capabilities-in-technical-preview-1807.md#bkmk_osd) <!--1358924-->
+- [Intune での共同管理されたデバイス同期アクティビティ](capabilities-in-technical-preview-1807.md#bkmk_comgmt) <!--1358565-->
+- [アプリケーションの修復](capabilities-in-technical-preview-1807.md#bkmk_app-repair) <!--1357866-->
+- [電子メールでアプリケーション要求を承認する](capabilities-in-technical-preview-1807.md#bkmk_email-approve) <!--1321550-->
+- [スクリプトの出力の改良](capabilities-in-technical-preview-1807.md#bkmk_script) <!--1236459-->
+- [サード パーティ製ソフトウェアの更新プログラムの改良](capabilities-in-technical-preview-1807.md#bkmk_3pupdate) <!--1358714-->
+
+> [!Note]  
+> Technical Preview の以前のバージョンで利用できるようになった機能は、以降のバージョンでも利用できます。 同様に、Configuration Manager の Current Branch に追加された機能は、Technical Preview Branch でも引き続き利用できます。   
 
 
 
-## <a name="capabilities-delivered-in-recent-supported-technical-previews"></a>サポートされている最新の Technical Preview で提供される機能
-以下は、Configuration Manager Technical Preview の以前のリリースで提供され、引き続きサポートされている機能です。 
+## <a name="features-in-recent-supported-technical-previews"></a>サポートされている最近の Technical Preview での機能
+
+Configuration Manager Technical Preview Branch の以前のバージョンでリリースされた以下の機能は、まだサポートされています。 
 
 <!-- This is the full list of new features in the past THREE (3) TP releases. 
 Each month, add features from the list above to the top of this table. 
 Then remove the bottom of this list and/or move individual items not in CB to the third table below.
 -->
 
- |機能 |Technical Preview バージョン |Current Branch バージョン|  
+ |機能 |Technical Preview のバージョン |Current Branch のバージョン|  
  |----------------|---------------------|--------------------|
+ | 段階的な展開の機能強化 <!--1358577,1358147,1358578--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_pod)  | ![追加されていません](media/Red_X.gif) |  
+ | 新しい Windows アプリケーション パッケージ形式のサポート <!--1357427--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_msix)  | ![追加されていません](media/Red_X.gif) |  
+ | クライアント プッシュ セキュリティの機能改善 <!--1358204--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_client-push)  | ![追加されていません](media/Red_X.gif) |  
+ | プロアクティブ メンテナンスの管理分析情報 <!--1352184,et al--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_insights)  | ![追加されていません](media/Red_X.gif) |  
+ | 共同管理されたデバイスのモバイル アプリ ワークロードの移行 <!--1357892--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt)  | ![追加されていません](media/Red_X.gif) |  
+ | ピアのダウンロードの境界グループのオプション <!--1356193--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions)  | ![追加されていません](media/Red_X.gif) |  
+ | カスタム カタログ用のサード パーティ製ソフトウェアの更新プログラムのサポート <!--1358714--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate)  | ![追加されていません](media/Red_X.gif) |  
+ | クラウド管理機能の改善 <!--511980,515854--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_cloud)  | ![追加されていません](media/Red_X.gif) |  
+ | 新しいソフトウェア更新プログラムのコンプライアンス レポート <!--1357775--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_report)  | ![追加されていません](media/Red_X.gif) |  
  | サード パーティ製ソフトウェアの更新プログラム <!--1352101--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate)  | ![追加されていません](media/Red_X.gif) |  
  | Microsoft Edge 用に Windows Defender SmartScreen 設定を構成する <!--1353701--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge)  | ![追加されていません](media/Red_X.gif) |  
  | 共同管理されたデバイスのために MDM ポリシーを Microsoft Intune から同期する <!--1357377--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device)  | ![追加されていません](media/Red_X.gif) |  
@@ -162,7 +189,7 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | 大きな整数値でのハードウェア インベントリの機能強化 <!--1357880--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values)  | ![追加されていません](media/Red_X.gif) |  
  | WSUS メンテナンスの機能強化 <!--1357898--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance)  | ![追加されていません](media/Red_X.gif) |  
  | CNG 証明書のサポートの強化 <!--1357314--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates)  | ![追加されていません](media/Red_X.gif) |  
-| サイト サーバーのリモート コンテンツ ライブラリを構成する <!--1357525--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server)  | ![追加されていません](media/Red_X.gif) | 
+ | サイト サーバーのリモート コンテンツ ライブラリを構成する <!--1357525--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server)  | ![追加されていません](media/Red_X.gif) | 
  | Configuration Manager コンソールからフィードバックを送信する<!--1357542--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#bkmk_feedback)  | ![追加されていません](media/Red_X.gif) | 
  | サポート センター <!--1357489--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#support-center)  | ![追加されていません](media/Red_X.gif) | 
  | Configuration Manager Toolkit <!--1357145--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configuration-manager-toolkit)  | ![追加されていません](media/Red_X.gif) | 
@@ -181,8 +208,9 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  
   
 
-## <a name="capabilities-delivered-in-previous-technical-previews"></a>以前の Technical Preview で提供される機能
-以下は、Configuration Manager Technical Preview リリースの以前のバージョンで提供された特定の機能です。 これらの機能は、以降のバージョンでも使用できますが、Current Branch リリースではまだ提供されていません。 
+## <a name="features-in-previous-technical-previews"></a>以前の Technical Preview の機能
+
+以下の機能は、Configuration Manager Technical Preview Branch の以前のバージョンでリリースされました。 これらの機能は、以降のバージョンでも使用できますが、Current Branch ではまだ使用できません。 
 
 <!-- This is the list of individual features that are still in TP (not in CB). 
 **Note there is no third column in this table!**
@@ -190,7 +218,7 @@ Copy from the bottom of the list above any individual feature that is still in T
 With each CB release, review and remove from this list for anything that's now available in CB. 
 -->
 
- |機能 |Technical Preview バージョン |  
+ |機能 |Technical Preview のバージョン |  
  |----------------|---------------------|
  | PXE 対応の配布ポイントの機能強化 <!-- 1357580 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) | 
  | 製品ライフサイクル ダッシュボード <!--1319632 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) | 
@@ -205,11 +233,13 @@ With each CB release, review and remove from this list for anything that's now a
 
 
 
-## <a name="see-also"></a>関連項目  
-[System Center Configuration Manager の新機能](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
- [System Center Configuration Manager の概要](../../core/understand/introduction.md)
+## <a name="see-also"></a>関連項目
+  
+- [ラボでの Configuration Manager の評価](/sccm/core/get-started/evaluate-with-lab-environment)
+- [Configuration Manager の増分バージョンの新機能](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
+- [Configuration Manager の概要](/sccm/core/understand/introduction)
 
 > [!Tip]  
 > 有効化に同意が必要な最新のブランチ機能の詳細については、[プレリリース機能](/sccm/core/servers/manage/pre-release-features)に関するページを参照してください。  
+> 
 > 最初に有効にする必要があるプレリリース版以外の最新のブランチ機能の詳細については、「[更新プログラムのオプション機能の有効化](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」を参照してください。  
-
