@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-ms.openlocfilehash: 5f29b7a5d82b58358bdecd5508391db219b2cedc
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: 54e91c729739d7bf1f0417a80a0143cc4969ed74
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260926"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383136"
 ---
 # <a name="manage-express-installation-files-for-windows-10-updates"></a>Windows 10 更新プログラムに対する高速インストール ファイルの管理
 
@@ -58,4 +58,4 @@ Windows 10 高速インストール ファイルのメタデータの同期を�
 
 3. 適切なクライアント設定を選択し、リボンの **[プロパティ]** をクリックします。  
 
-4. **[ソフトウェア更新プログラム]** グループを選択します。 **[クライアントでの高速インストール ファイルのインストールを有効にする]** を **[はい]** に設定します。 クライアントで HTTP リスナーが使用するポートを使用して **[高速インストール ファイルのコンテンツをダウンロードするために使用するポート]** を構成します。  
+4. **[ソフトウェア更新プログラム]** グループを選択します。 **[クライアントでの高速インストール ファイルのインストールを有効にする]** を **[はい]** に設定します。 クライアントで HTTP リスナーが使用するポートを使用して **[高速インストール ファイルのコンテンツをダウンロードするために使用するポート]** を構成します。

@@ -10,12 +10,12 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b995687e330fe4beca26da83ee29ddc504c38e3a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: de8116e1fec500750e429edfb48303b8c24822f4
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343934"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384839"
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイズとスケールの数
 
@@ -150,8 +150,6 @@ Configuration Manager の各展開には、サポートできるサイト、サ�
 -   サイト サーバーにインストールしたソフトウェアの更新ポイントでは、最大 25,000 台のクライアントをサポートできます。   
 
 -   サイト サーバーから離れた場所にあるソフトウェアの更新ポイントで、最大 150,000 台のクライアントをサポートできます。ただし、このクライアント数をサポートするには、リモート コンピューターが Windows Server Update Services (WSUS) の要件を満たしている必要があります。  
-
--   既定で、Configuration Manager はソフトウェアの更新ポイントをネットワーク負荷分散 (NLB) クラスターとして構成することはサポートされていません。 ただし、Configuration Manager SDK を使って、NLB クラスターに最大 4 つのソフトウェアの更新ポイントを構成できます。  
 
 
 
