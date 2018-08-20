@@ -1,8 +1,8 @@
 ---
-title: コンテンツ ライブラリ クリーンアップ ツール
+title: コンテンツ ライブラリのクリーンアップ ツール
 titleSuffix: Configuration Manager
-description: System Center Configuration Manager の展開と関連付けられなくなった孤立コンテンツを削除するには、コンテンツ ライブラリ クリーンアップ ツールを使います。
-ms.date: 4/7/2017
+description: Configuration Manager の展開と関連付けられなくなった孤立コンテンツを削除するには、コンテンツ ライブラリ クリーンアップ ツールを使います。
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,66 +10,127 @@ ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a3a091a526a385fadf0353073048d33ae704cd76
-ms.sourcegitcommit: f9b11bb0942cd3d03d90005b1681e9a14dc052a1
+ms.openlocfilehash: 1e71b95642160d519f222a50a66bc8f636628d6e
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39229373"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383525"
 ---
-# <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>System Center Configuration Manager のコンテンツ ライブラリ クリーンアップ ツール
+# <a name="content-library-cleanup-tool"></a>コンテンツ ライブラリのクリーンアップ ツール
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
- バージョン 1702 以降では、コマンド ライン ツール (**ContentLibraryCleanup.exe**) を使って、どのパッケージまたはアプリケーションにも関連付けられなくなったコンテンツ (孤立コンテンツ) を配布ポイントから削除できます。 このツールはコンテンツ ライブラリ クリーンアップ ツールと呼ばれ、過去の Configuration Manager 製品用にリリースされた同様のツールの古いバージョンに代わるものです。  
+配布ポイントのパッケージまたはアプリケーションと関連付けられなくなったコンテンツを削除するには、コンテンツ ライブラリ クリーンアップ コマンドライン ツールを使います。 この種類のコンテンツのことを "*孤立コンテンツ*" と呼びます。 このツールは、過去の Configuration Manager 製品用にリリースされた同様のツールの古いバージョンに代わるものです。  
 
 このツールでは、ツールを実行するときに指定する配布ポイントのコンテンツのみが処理されます。 このツールで、サイト サーバー上のコンテンツ ライブラリからコンテンツを削除することはできません。
 
-**ContentLibraryCleanup.exe** は、中央管理サイトまたはプライマリ サイトのサイト サーバーの *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* フォルダーにあります。
+サイト サーバーの  **で `CD.Latest\SMSSETUP\TOOLS\ContentLibraryCleanup`ContentLibraryCleanup.exe** を探します。
+
+
 
 ## <a name="requirements"></a>［要件］  
- このツールは、一度に 1 つの配布ポイントに対してのみ実行できます。  
- - このツールは、クリーンアップする配布ポイントをホストするコンピューター上で直接実行することも、別のサーバーからリモートで実行することもできます。
- - ツールを実行するユーザー アカウントは、Configuration Manager 階層の完全な権限を持つ管理者と同じロールベース管理アクセス許可を直接持っている必要があります。 完全なアクセス許可を持つ管理者のアクセス許可がある Windows セキュリティ グループのメンバーとしてこれらのアクセス許可を付与される場合、このツールは機能しません。
+
+- 一度に 1 つの配布ポイントに対してのみツールを実行します。  
+
+- クリーンアップする配布ポイントをホストしているコンピューター上で直接、または別のサーバーからリモートで、ツールを実行します。  
+
+- ツールを実行するユーザー アカウントには、Configuration Manager の**完全な権限を持つ管理者**セキュリティ ロールと同じアクセス許可が必要です。  
+
+
 
 ## <a name="modes-of-operation"></a>操作モード
-このツールは、次の 2 つのモードで実行できます。 *What If モード*でツールを実行して結果を確認した後、*削除モード*でツールを実行することをお勧めします。
-  1.    **What If モード**:   
-      **/delete** スイッチを指定しないと、ツールは What If モードで実行され、配布ポイントから削除されるコンテンツを識別します。
-   - このモードでツールを実行した場合、データは削除されません。
-   - 削除されるコンテンツに関する情報はツールのログ ファイルに書き込まれ、可能性のある削除ごとにユーザーが確認を求められることはありません。  
-      </br>   
 
-  2. **削除モード**:   
-    **/delete** スイッチを使ってツールを実行すると、ツールは削除モードで実行されます。
+ツールの実行モードは、[What-if](#what-if-mode) モードと[削除](#delete-mode)モードの 2 つです。
 
-     - このモードでツールを実行すると、指定した配布ポイントで検出された孤立コンテンツを、配布ポイントのコンテンツ ライブラリから削除することができます。
-     -  各ファイルを削除する前に、ユーザーはファイルを削除することを確認する必要があります。  削除する場合は **[Y]** を選択し、削除しない場合は **[N]** を選択します。あるいは、**[すべて削除]** を選択すると、以降のメッセージは省略され、孤立したすべてのコンテンツが削除されます。  
-     </br>
+> [!Tip]  
+> 最初に *What-if* モードを使います。 結果に満足した後、"*削除*" モードでツールを実行します。  
 
-ツールをどちらのモードで実行しても、自動的にログが作成されます。このログには、ツールの実行モード、配布ポイントの名前、日付、および操作時刻を含んだ名前が付けられます。 ツールが終了すると、ログ ファイルが自動的に開きます。
 
-既定では、ログ ファイルは、ツールが実行されているコンピューターの、ツールを実行しているユーザー アカウントの一時フォルダーに書き込まれます。 **/log** スイッチを使って、ネットワーク共有などの別の場所にログ ファイルをリダイレクトできます。
+### <a name="what-if-mode"></a>What-if モード   
+
+`/delete` パラメーターを指定しないと、ツールは What-if モードで実行します。 このモードでは、配布ポイントから削除されるコンテンツが識別されます。
+
+- このモードでツールを実行した場合、データは削除されません。  
+
+- 削除されるコンテンツに関する情報がログ ファイルに書き込まれます。 各削除候補についての確認は求められません。  
+
+
+### <a name="delete-mode"></a>削除モード   
+
+`/delete` パラメーターを使ってツールを実行すると、ツールは削除モードで実行されます。
+
+- このモードでツールを実行すると、指定した配布ポイントで検出された孤立コンテンツを、配布ポイントのコンテンツ ライブラリから削除することができます。  
+
+- 各ファイルを削除する前に、ツールがそれを削除する必要があることを確認します。 削除する場合は **[Y]**、削除しない場合は **[N]**、以降のメッセージを省略してすべての孤立コンテンツを削除する場合は **[すべてはい]** を選択します。  
+
+
+### <a name="log-file"></a>ログ ファイル
+
+いずれかのモードでツールを実行すると、ログが自動的に作成されます。 ログ ファイルの名前は次の情報を基にして付けられます。 
+- ツールが実行されたモード  
+- 配布ポイントの名前  
+- 操作日時  
+
+ツールが終了すると、Windows でログ ファイルが自動的に開かれます。 
+
+既定では、ログ ファイルはツールが実行されているユーザー アカウントの一時フォルダーに書き込まれます。 この場所は、常にツールを実行したコンピューター上であり、ツールのターゲットではありません。 ネットワーク共有などの別の場所にログ ファイルをリダイレクトするには、`/log` パラメーターを使います。
+
 
 
 ## <a name="run-the-tool"></a>ツールを実行します。
-ツールを実行するには:
-1. 管理コマンド プロンプトで、**ContentLibraryCleanup.exe** を含むフォルダーを開きます。  
-2. 次に、必須のコマンド ライン スイッチと、使用する省略可能なスイッチを含めたコマンドラインを入力します。
 
-**既知の問題** パッケージまたは展開が失敗した場合、または進行中の場合、ツールを実行すると、次のようなエラーが返される可能性があります。
--  *System.InvalidOperationException: This content library cannot be cleaned up right now because package <packageID> is not fully installed.* (System.InvalidOperationException: パッケージ <パッケージ ID> が完全にインストールされていないため、このコンテンツ ライブラリを今すぐクリーンアップすることはできません。)
+ツールを実行するには: 
 
-**対応策 :** なし。 コンテンツの展開が進行中または失敗した場合、このツールは孤立ファイルを確実に識別することはできません。 したがって、その問題が解決されるまで、ツールではコンテンツのクリーンアップが許可されません。
+1. コマンド プロンプトを管理者として開きます。 **ContentLibraryCleanup.exe** を含むフォルダーにディレクトリを変更します。  
 
-### <a name="command-line-switches"></a>コマンド ライン スイッチ  
-コマンドライン スイッチは、任意の順に使用できます。   
+2. 必須の[コマンド ライン パラメーター](#bkmk_params)と、使用する省略可能なパラメーターを含むコマンド ラインを入力します。
 
-|スイッチ|詳細|
+
+
+## <a name="bkmk_params"></a> コマンド ライン パラメーター  
+
+以下のコマンド ライン パラメーターを任意の順で使います。   
+
+### <a name="required-parameters"></a>必須のパラメーター
+|パラメーター|詳細|
 |---------|-------|
-|**/delete**  |**省略可能** </br> 配布ポイントからコンテンツを削除する場合は、このスイッチを使用します。 コンテンツが削除される前に確認を求めるメッセージが表示されます。 </br></br> このスイッチが使われていない場合、ツールはどのコンテンツが削除対象かについて結果をログに記録しますが、配布ポイントからコンテンツを削除しません。 </br></br> 例: ***ContentLibraryCleanup.exe /dp server1.contoso.com /delete*** |
-| **/q**       |**省略可能** </br> このスイッチを指定すると、ツールはすべてのプロンプト (コンテンツを削除する場合のプロンプトなど) を非表示にする Quiet モードで実行し、ログ ファイルは自動的に開かれません。 </br></br> 例: ***ContentLibraryCleanup.exe /q /dp server1.contoso.com*** |
-| **/dp &lt;配布ポイント FQDN>**  | **必須** </br> クリーニングする配布ポイントの完全修飾ドメイン名 (FQDN) を指定します。 </br></br> 例: ***ContentLibraryCleanup.exe /dp server1.contoso.com***|
-| **/ps &lt;プライマリ サイト FQDN>**       | プライマリ サイトで配布ポイントからコンテンツをクリーニングする場合は**省略可能**。</br>セカンダリ サイトで配布ポイントからコンテンツをクリーニングする場合は**必須**。 </br></br>このツールは、親プライマリ サイトに接続して、SMS_Provider に対するクエリを実行します。 このクエリによって、どのコンテンツを配布ポイントに置くかをツールが決定して、孤立しているコンテンツや削除できるコンテンツを特定できるようになります。 必要な情報がセカンダリ サイトからは直接入手できないため、親プライマリ サイトへのこの接続はセカンダリ サイトの配布ポイントに対して行う必要があります。</br></br> 配布ポイントが属するプライマリ サイトの FQDN を指定します。または、配布ポイントがセカンダリ サイトにある場合は、親であるプライマリ サイトの FQDN を指定します。 </br></br> 例: ***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
-| **/sc &lt;プライマリ サイト コード>**  | プライマリ サイトで配布ポイントからコンテンツをクリーニングする場合は**省略可能**。</br>セカンダリ サイトで配布ポイントからコンテンツをクリーニングする場合は**必須**。 </br></br> 配布ポイントが属するプライマリ サイトのサイト コードを指定します。あるいは、配布ポイントがセカンダリ サイトにある場合は親であるプライマリ サイトのサイト コードを指定します。</br></br> 例: ***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
-| **/log <log file directory>**       |**省略可能** </br> ツールがログ ファイルを書き込む場所を指定します。 ローカル ドライブやネットワーク共有上の場所を指定できます。</br></br> このスイッチを指定しないと、ログ ファイルは、ツールが実行されているコンピューター上のユーザーの一時フォルダーに格納されます。</br></br> ローカル ドライブの例: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>ネットワーク共有の例: ***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
+| `/dp <distribution point FQDN>`  | クリーンアップする配布ポイントの完全修飾ドメイン名 (FQDN) を指定します。 |
+| `/ps <primary site FQDN>` | セカンダリ サイトで配布ポイントからコンテンツをクリーンアップする場合にのみ "*必須*" です。 このツールは、親プライマリ サイトに接続して、SMS プロバイダーに対するクエリを実行します。 これらのクエリにより、ツールは配布ポイントに必要なコンテンツを決定します。 その後、削除する孤立コンテンツを特定できます。 必要な情報がセカンダリ サイトからは直接入手できないため、親プライマリ サイトへのこの接続はセカンダリ サイトの配布ポイントに対して行う必要があります。|
+| `/sc <primary site code>`  | セカンダリ サイトで配布ポイントからコンテンツをクリーンアップする場合にのみ "*必須*" です。 親プライマリ サイトのサイト コードを指定します。 |
+
+#### <a name="example-scan-and-log-what-content-it-would-delete-what-if"></a>例: 削除するコンテンツをスキャンしてログに記録する (What-if)
+`ContentLibraryCleanup.exe /dp server1.contoso.com`
+
+#### <a name="example-scan-and-log-content-for-a-dp-at-a-secondary-site"></a>例: セカンダリ サイトの配布ポイントをスキャンしてコンテンツを記録する
+`ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com /sc ABC` 
+
+
+### <a name="optional-parameters"></a>省略可能なパラメーター
+
+|パラメーター|詳細|
+|---------|-------|
+|`/delete`| 配布ポイントからコンテンツを削除する準備ができたらこのパラメーターを使います。 コンテンツを削除する前にユーザーの確認を求めます。 </br></br> このパラメーターを使用しないと、ツールは削除されるコンテンツに関する結果を記録します。 このパラメーターを指定しないと、配布ポイントからコンテンツが実際に削除されることはありません。 |
+| `/q` | このパラメーターは、すべてのプロンプトを表示しない Quiet モードでツールを実行します。 コンテンツを削除するときのプロンプトが含まれます。 また、自動的にログ ファイルを開きません。 |
+| `/ps <primary site FQDN>` | プライマリ サイトで配布ポイントからコンテンツをクリーニングする場合にのみ省略可能です。 配布ポイントが属するプライマリ サイトの FQDN を指定します。 |
+| `/sc <primary site code>` | プライマリ サイトで配布ポイントからコンテンツをクリーニングする場合にのみ省略可能です。 配布ポイントが属するプライマリ サイトのサイト コードを指定します。 |
+| `/log <log file directory>` | ツールがログ ファイルを書き込む場所を指定します。 ローカル ドライブやネットワーク共有上の場所を指定できます。</br></br> このパラメーターを使用しないと、ログ ファイルはツールを実行ているコンピューター上のユーザーの一時ディレクトリに格納されます。|
+
+#### <a name="example-delete-content"></a>例: コンテンツを削除する 
+`ContentLibraryCleanup.exe /dp server1.contoso.com /delete`
+
+#### <a name="example-delete-content-without-prompts"></a>例: プロンプトを表示せずにコンテンツを削除する
+`ContentLibraryCleanup.exe /q /dp server1.contoso.com /delete` 
+
+#### <a name="example-log-to-local-drive"></a>例: ローカル ドライブにログを格納する
+`ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop` 
+
+#### <a name="example-log-to-network-share"></a>例: ネットワーク共有にログを格納する
+`ContentLibraryCleanup.exe /dp server1.contoso.com /log \\server\share`
+
+
+### <a name="known-issue"></a>既知の問題
+
+いずれかのパッケージまたは展開が失敗した場合、または実行中の場合、ツールは次のエラーを返す可能性があります。`System.InvalidOperationException: This content library cannot be cleaned up right now because package <packageID> is not fully installed.`
+
+この問題の回避策はありません。 コンテンツの展開が進行中または失敗した場合、このツールは孤立ファイルを確実に識別することはできません。 その問題を解決するまで、ツールではコンテンツのクリーンアップが許可されません。

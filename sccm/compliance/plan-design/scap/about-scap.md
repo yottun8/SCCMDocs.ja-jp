@@ -1,8 +1,8 @@
 ---
-title: Security Content Automation Protocol (SCAP) 拡張機能について
+title: SCAP 拡張機能
 titleSuffix: Configuraton Manager
-description: Security Content Automation Protocol (SCAP) 拡張機能について説明します
-ms.date: 03/27/2018
+description: Configuration Manager の Security Content Automation Protocol (SCAP) 拡張機能について説明します。
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -10,129 +10,148 @@ ms.assetid: a315489d-5e12-46d6-903e-3a35235b72c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: 18463e4f87c60135bdc29d0f7ce4cb2f80a0eea7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0992b3853776cc487c6c0a88d80cbce21bf79782
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336189"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384856"
 ---
 # <a name="about-the-security-content-automation-protocol-scap-extensions"></a>Security Content Automation Protocol (SCAP) 拡張機能について
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-> [!Tip]  
-> この機能は、Technical Preview バージョン 1803 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 プレリリース版の SCAP 拡張機能は、現在サポートされているバージョンの Configuration Manager Current Branch と LTSB 1606 にインストールできます。 1803 Technical Preview 以降のインストール ファイルは cd.latest\SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi にあります。 
+Configuration Manager の SCAP 拡張機能は、Security Content Automation Protocol (SCAP) に準拠するためにネットワーク環境の分析と評価を実行するのに役立ちます。 SCAP は、米国標準技術研究所 (NIST) によって定義および管理されています。 詳細については、[SCAP プロジェクトの概要](https://csrc.nist.gov/projects/security-content-automation-protocol)を参照してください。
 
-Microsoft System Center Configuration Manager の SCAP 拡張機能は、Security Content Automation Protocol (SCAP) に準拠するためにネットワーク環境の分析と評価を実行するのに役立ちます。 SCAP は、米国標準技術研究所 (NIST) によって定義および管理されています。
+Configuration Manager の SCAP 拡張機能では、コンプライアンス設定機能を使用して、まず環境内のコンピューターをスキャンします。 次に、United States Government Configuration Baseline (USGCB) へのコンプライアンスのレベルを文書化します。
 
-Microsoft System Center Configuration Manager の SCAP 拡張機能では、Microsoft System Center Configuration Manager のコンプライアンス設定を使用して、環境内のコンピューターをスキャンしてから、United States Government Configuration Baseline (USGCB) 命令の遵守レベルを文書化します。
+拡張機能は、Configuration Manager が SCAP データ ストリームを使用して、システムの対応状態を評価し、レポートの結果を SCAP 形式で生成できるようにします。 組織では、既存の Configuration Manager インフラストラクチャを使用して、管理するコンピューターがこの連邦政府のコンプライアンス要件を満たすようにすることができます。 Configuration Manager を使用して、NIST および米国行政管理予算局 (OMB) が要求する USGCB レポートも生成します。
 
-拡張機能は、Configuration Manager が Security Content Automation Protocol (SCAP) データ ストリームを使用して、システムの対応状態を評価し、レポートの結果を SCAP 形式で生成します。 組織で既存の Configuration Manager のインフラストラクチャを利用し、確実に管理対象のコンピューターがこの連邦政府の対応要件を満たし、National Institute of Standards and Technology (NIST) と米国行政管理予算局 (OMB) に必要な USGCB レポートを生成できるようになりました。
-
-このガイドでは、System Center Configuration Manager インフラストラクチャでの SCAP 拡張機能のインストール、構成、実行に役立つ情報を提供します。
+この記事では、Configuration Manager インフラストラクチャでの SCAP 拡張機能のインストール、構成、実行に役立つ情報を提供します。
 
 
 
-# <a name="what39s-new-in-scap-extensions-prerelease-for-microsoft-system-center-configuration-manager"></a>Microsoft System Center Configuration Manager の SCAP 拡張機能の新機能
+## <a name="whats-new"></a>新機能
 
-このセクションでは、最新版の新機能について説明します。
+このバージョンの Configuration Manager の SCEP 拡張機能には、次の機能が含まれ、サポートされています。  
 
-System Center Configuration Manager の SCAP 拡張機能プレリリース:
+- コンプライアンス設定基準への SCAP コンテンツの変換をサポートする Configuration Manager コンソール拡張機能。  
 
-- System Center Configuration Manager Current Branch のコンプライアンス設定基準に SCAP コンテンツを完全に変換できる Configuration Manager コンソール拡張機能が含まれます。
-- SCAP バージョン 1.2 をサポートし、SCAP バージョン 1.1 および 1.0 と下位互換性があります。
+- 次のコンポーネントを含む SCAP バージョン 1.2。  
+
+  - 拡張可能な構成のチェックリストの説明形式 (XCCDF) バージョン 1.2
+  - Open Vulnerability and Assessment Language (OVAL) バージョン 5.10 まで
+  - 資産レポート形式 (ARF) 1.1 のレポートの生成
+  - 共通プラットフォーム一覧 (CPE) 2.3
+  - 共通脆弱性識別子 (CVE)
+  - 共通セキュリティ設定一覧 (CCE) バージョン 5
+  - USGCB Internet Explorer 8、USGCB Windows 7、USGCB Windows 7 Firewall  
+
+- SCAP バージョン 1.1 および 1.0 との下位互換性。  
+
+- 構成基準に変換するための SCAP 1.2/1.1/1.0 および OVAL コンテンツをインポートするためのコンソール ウィザード。  
+
+  - SCAP ソース データ ストリーム、および XCCDF ベンチマークと変換用プロファイルを選択できます。
+
+- 構成評価の結果を SCAP 形式 XML レポートにエクスポートするためのコンソール ウィザード。  
+
+  - 基準の生成に使用されるソース ファイル、SCAP データ ストリーム、XCCDF ベンチマーク、XCCDF プロファイルが表示されます。
+  - Cyberscope Lightweight Asset Summary Results (LASR) レポートが生成されます。  
+
+- 構成基準の展開に基づいて SCAP レポートを生成します。 このコンポーネントには、クライアント コンプライアンスと XCCDF ルール コンプライアンスを視覚化するための新しいダッシュボードが含まれます。 このダッシュボードでは、さらに詳しいレポートに移動し、そこで検索したり、フィルターを適用したりできます。  
+
+- OVAL テストから変換したいくつかの種類の構成アイテムのパフォーマンスを改善し、評価を速く行えるようにします。  
+
+- Windows 10 DISA v1r3 コンテンツで見つかったいくつかの問題を修正します。  
 
 
-  - 拡張可能な構成のチェックリストの説明形式 (XCCDF) バージョン 1.2 をサポートしています。
-  - Open Vulnerability and Assessment Language (OVAL) をバージョン 5.10 までサポートしています。
-  - 資産レポート形式 (ARF) 1.1 のレポートの生成をサポートしています。
-  - 共通プラットフォーム一覧 (CPE) 2.3 をサポートしています。
-  - 共通脆弱性識別子 (CVE) をサポートしています。
-  - 共通セキュリティ設定一覧 (CCE) バージョン 5 をサポートしています。
-  - USGCB Internet Explorer 8、USGCB Windows 7、USGCB Windows 7 Firewall をサポートしています。
 
-- 構成基準に変換するための SCAP 1.2/1.1/1.0 および OVAL コンテンツをインポートするための UI ウィザードが含まれます。
+## <a name="terms"></a>用語
 
+- **OVAL ID**: 特定の OVAL を定義する識別子であり、OVAL ID の形式に準拠します。  
 
-  - SCAP ソース データ ストリーム、および XCCDF ベンチマークと変換用のプロファイルを選択できます。
+- **SCAP 結果データ ストリーム**: 出力 (結果) コンテンツを保持する SCAP コンポーネントの集合に SCAP コンポーネント間の参照マッピングが追加されたもの。  
 
-- 構成評価の結果を SCAP 形式 XML レポートにエクスポートするための UI ウィザードが含まれます。
+- **SCAP ソース データ ストリーム**: 入力 (ソース) コンテンツを保持する SCAP コンポーネントの集合に SCAP コンポーネント間の参照マッピングが追加されたもの。
 
 
-  - 基準の生成に使用されるソース ファイル、SCAP データストリーム、XCCDF ベンチマーク、XCCDF プロファイルが表示されます。
-  - Cyberscope Lightweight Asset Summary Results (LASR) レポートの生成をサポートしています。
 
-- 構成基準の展開に基づいて SCAP レポートを生成できます。 クライアント コンプライアンスと XCCDF ルール コンプライアンスを視覚化するための新しいダッシュボードが含まれます。 このダッシュボードでは、さらに詳しいレポートに移動し、そこで検索したり、フィルターを適用したりできます。
-- OVAL テストから変換した中で、いくつかの構成アイテムのパフォーマンスを改善し、評価を速くします。
+## <a name="deployment-process"></a>デプロイのプロセス
 
-- Windows 10 DISA v1r3 コンテンツで見つかったいくつかの問題を修正します。
+全体的な展開プロセスの概要を次に示します。  
 
-# <a name="scap-extensions-for-microsoft-system-center-configuration-manager-deployment-process"></a>Microsoft System Center Configuration Manager 配置プロセスの SCAP 拡張機能
+- 拡張機能を使用するための[インフラストラクチャの準備](#bkmk_prepare)  
 
-このガイドでは、Microsoft System Center Configuration Manager の SCAP 拡張機能を使用した SCAP コンプライアンスの分析、評価、およびレポートの方法について説明します。 実行する手順の概要を次に示します。
+- Configuration Manager の [SCAP 拡張機能のインストールと構成](/sccm/compliance/plan-design/scap/install-configure-scap#bkmk_install)  
 
-- 拡張機能を活用するために、前提条件となるインフラストラクチャを準備します。
-- Microsoft System Center Configuration Manager の SCAP 拡張機能をインストールして構成します。
-- [国家脆弱性データベース](http://nvd.nist.gov) (NVD) から SCAP データのストリーム ファイルをダウンロード、インストール、構成します。
-- インポート ウィザードを使用して、**あるいは**コマンドライン Microsoft.Sces.ScapToDcm.exe ツールを利用したキャビネット (.cab) ファイルを介して、System Center Configuration Manager コンプライアンス設定基準に直接、SCAP データ ストリーム ファイルを変換し、インポートします。
-- エクスポート ウィザードまたはコマンドライン Microsoft.Sces.DcmToScap.exe ツールを使用して SCAP 形式にコンプライアンス結果をエクスポートします。
+- NIST からの [SCAP データ ストリーム ファイルのダウンロードとインストール](/sccm/compliance/plan-design/scap/install-configure-scap#bkmk_scap-data-stream-files)  
 
-# <a name="terms"></a>用語
+- SCAP データ ストリーム ファイルを Configuration Manager のコンプライアンス設定基準に変換およびインポートします。 次のいずれかの操作を行います。   
 
-**OVAL ID:** 特定の OVAL を定義する識別子であり、OVAL ID の形式に準拠します。
+    - Configuration Manager コンソールのインポート ウィザードを使用した[手動プロセス](/sccm/compliance/plan-design/scap/install-configure-scap#bkmk_convert-and-import)  
 
-**SCAP 結果データ ストリーム:** 出力 (結果) コンテンツを保持する SCAP コンポーネントの集合に SCAP コンポーネント間の参照マッピングが追加されたもの。
+    - Microsoft.Sces.ScapToDcm.exe コマンドライン ツールを使用した[自動プロセス](/sccm/compliance/plan-design/scap/install-configure-scap#bkmk_auto-convert-and-import)  
 
-**SCAP ソース データ ストリーム:** 入力 (ソース) コンテンツを保持する SCAP コンポーネントの集合に SCAP コンポーネント間の参照マッピングが追加されたもの。
+- コレクションへの構成基準の[展開](/sccm/compliance/plan-design/scap/deploy-monitor-export#bkmk_deploy)  
 
-# <a name="prepare-the-prerequisite-infrastructure"></a>前提条件となるインフラストラクチャの準備
+- コンプライアンス データの[監視](/sccm/compliance/plan-design/scap/deploy-monitor-export#bkmk_monitor)  
 
-Microsoft System Center Configuration Manager の SCAP 拡張機能を利用するために、次のソフトウェアとハードウェアの要件が満たされていることを確認します。
+- 次の 2 つの方法のいずれかを使用して、SCAP 形式にコンプライアンス結果をエクスポートします。  
 
-## <a name="software-requirements"></a>ソフトウェア要件
+    - コンソールのエクスポート ウィザードを使用した[手動プロセス](/sccm/compliance/plan-design/scap/deploy-monitor-export#bkmk_export)  
 
-Microsoft System Center Configuration Manager の SCAP 拡張機能をインストール、構成、および実行するには、次のソフトウェアを使用しているコンピューターが必要です。
+    - Microsoft.Sces.DcmToScap.exe コマンドライン ツールを使用した[自動プロセス](/sccm/compliance/plan-design/scap/deploy-monitor-export#bkmk_auto-export)  
 
-- System Center Configuration Manager Current Branch コンソールのサポートされている[バージョン](/sccm/core/servers/manage/current-branch-versions-supported)。
-- System Center Configuration Manager コンソールと互換性のあるオペレーティング システム。 互換性のあるオペレーティング システムの一覧は、「[System Center Configuration Manager コンソールのサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-consoles)」という記事でご確認ください。
+
+
+## <a name="bkmk_prepare"></a> インフラストラクチャの準備
+
+### <a name="software-requirements"></a>ソフトウェア要件
+
+Configuration Manager の SCAP 拡張機能をインストール、構成、および実行するには、次のソフトウェアを使用しているコンピューターが必要です。
+
+- Configuration Manager Current Branch コンソールの[サポートされているバージョン](/sccm/core/servers/manage/current-branch-versions-supported)。  
+
+- Configuration Manager コンソールと互換性のある OS バージョン。 詳細については、[Configuration Manager コンソールのサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-consoles)に関する記事を参照してください。  
 
 SCAP 拡張機能を実行しているコンピューターに加えて、次のアイテムも必要になります。
 
-- System Center Configuration Manager Current Branch インフラストラクチャ。 Configuration Manager の展開要件の詳細については、「[Configuration Manager のサポートされている構成](/sccm/core/plan-design/configs/supported-configurations)」という記事を参照してください。
+- Configuration Manager Current Branch インフラストラクチャ。 Configuration Manager の展開要件の詳細については、「[Configuration Manager のサポートされている構成](/sccm/core/plan-design/configs/supported-configurations)」という記事を参照してください。  
 
 SCAP コンプライアンスを評価するコンピューターには、次のようなソフトウェアおよび構成が必要です。
 
-- Configuration Manager クライアントで有効なコンプライアンスと設定の管理コンポーネント。
-- Windows PowerShell 2.0 またはそれ以降。
-- **バイパス** に設定された Configuration Manager の PowerShell 実行ポリシー。 詳細については、「[PowerShell 実行ポリシー](/sccm/core/clients/deploy/about-client-settings#computer-agent)」という記事を参照してください。
-- 次のいずれかのオペレーティング システム
-  - Windows 7 リリース バージョンまたは SP1、32 ビットまたは 64 ビット
-  - Windows 10 の 32 ビットまたは 64 ビット
+- Configuration Manager クライアント。  
+
+- Windows PowerShell 2.0 またはそれ以降。  
+
+- **バイパス** に設定された Configuration Manager の PowerShell 実行ポリシー。 詳細については、「[PowerShell 実行ポリシー](/sccm/core/clients/deploy/about-client-settings#computer-agent)」という記事を参照してください。  
+
+- 次のいずれかのオペレーティング システム  
+  - Windows 7 SP1、32 ビットまたは 64 ビット
+  - Windows 10、32 ビットまたは 64 ビット
   - Windows Server 2012 R2
 
-## <a name="hardware-requirements"></a>ハードウェア要件
+### <a name="hardware-requirements"></a>ハードウェア要件
 
-最小システム要件はこちらにあります。
-
-[Configuration Manager のハードウェア構成の計画](/sccm/core/plan-design/configs/recommended-hardware)
+Configuration Manager の最小システム要件について詳しくは、[Configuration Manager のハードウェア構成の計画](/sccm/core/plan-design/configs/recommended-hardware)に関する記事をご覧ください。
 
 
 
 ## <a name="accessibility-features"></a>ユーザー補助機能
 
-System Center Configuration Manager の SCAP 拡張機能には、Windows のユーザー補助機能とツールを活用できる Windows コマンド ライン ツールが含まれます。
+Configuration Manager の SCAP 拡張機能には、Windows コマンドライン ツールが含まれます。 これらのツールは、Windows のユーザー補助機能とツールを利用できます。
 
-- Microsoft.Sces.ScapToDcm.exe と Microsoft.Sces.DcmToScap.exe については、このユーザー ガイドにコマンドライン パラメーターが記載されています。
-- -help と -? により、ツールの使用法がスクリーンに出力され、スクリーン リーダーやその他の補助的な技術によって使用可能です。
-- Windows [ユーザー補助](http://windows.microsoft.com/windows/help/accessibility)
+- Microsoft.Sces.ScapToDcm.exe と Microsoft.Sces.DcmToScap.exe のコマンドライン パラメーターが記載されています。 詳細については、[Microsoft.Sces.ScapToDcm.exe コマンドライン パラメーター](/sccm/compliance/plan-design/scap/install-configure-scap#microsoftscesscaptodcmexe-command-line-parameters)および [Microsoft.Sces.DcmToScap.exe コマンドライン パラメーター](/sccm/compliance/plan-design/scap/import-scap-compliance-settings#microsoftscesdcmtoscapexe-command-line-parameters)に関するページを参照してください。  
 
-SCAP 拡張機能では、System Center Configuration Manager の機能も利用されます。  System Center Configuration Manager には、障碍のあるユーザーに製品を利用してもらうための機能があります。
+- 各ツールのコマンドライン パラメーター `-help` と `-?` は、画面に使用方法を出力します。 これらの使用方法の詳細は、スクリーン リーダーやその他の支援技術で利用できます。  
 
-- [System Center Configuration Manager のユーザー補助機能](/sccm/core/understand/accessibility-features)
+- 詳細については、[Windows のユーザー補助](http://windows.microsoft.com/windows/help/accessibility)に関するページを参照してください。
 
-マイクロソフト アクセシビリティ製品およびサービスの一般的な情報については、[マイクロソフト アクセシビリティ Web サイト](http://go.microsoft.com/fwlink/p/?LinkId=9212)を参照してください。
+SCAP 拡張機能では、Configuration Manager ユーザー補助機能能も利用されます。 詳細については、[Configuration Manager のユーザー補助機能](/sccm/core/understand/accessibility-features)に関する記事を参照してください。
+
+マイクロソフト のアクセシビリティおよびサービスについて詳しくは、[マイクロソフトのユーザー補助 Web サイト](http://go.microsoft.com/fwlink/p/?LinkId=9212)をご覧ください。
+
+
 
 ## <a name="next-step"></a>次のステップ
 > [!div class="nextstepaction"]

@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7ff953d658c54c2cebbbfd29a6bba83fe65cc08e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5607402171a3b771560ff439b1f1f99a6a947e83
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342343"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383298"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configuration Manager と共に使用するように Azure サービスを構成する
 
@@ -63,7 +63,7 @@ ms.locfileid: "32342343"
 |クラウド管理</br>(Azure AD ユーザー探索を使用) | 複数 | パブリック | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | インポート、作成 |
 |OMS コネクタ | 1 台 | パブリック、プライベート | ![サポートされています](media/green_check.png) | ![サポートされていません](media/Red_X.png) | インポート |
 |Upgrade Readiness | 1 台 | パブリック | ![サポートされています](media/green_check.png) | ![サポートされていません](media/Red_X.png) | インポート |
-|Microsoft Store</br>(ビジネス向けおよび教育機関向け) | 1 台 | パブリック | ![サポートされています](media/green_check.png) | ![サポートされていません](media/Red_X.png) | インポート、作成 |
+|Microsoft Store</br>Business | 1 台 | パブリック | ![サポートされています](media/green_check.png) | ![サポートされていません](media/Red_X.png) | インポート、作成 |
 
 
 ### <a name="about-azure-ad-apps"></a>Azure AD アプリについて
@@ -90,7 +90,7 @@ Azure アプリの詳細については、まず、以下の記事を参照し�
 
 接続するサービスを決定したら、「[サービスの詳細](#service-details)」の表を参照してください。 この表には、Azure サービス ウィザードを完了するために必要な情報が示されています。 事前に Azure AD 管理者と話し合ってください。 Azure Portal で事前にアプリを手動で作成し、アプリの詳細を Configuration Manager にインポートするかどうかを決定します。 または、Configuration Manager を使用して、Azure AD でアプリを直接作成します。 Azure AD から必要なデータを収集する場合は、この記事の他のセクションの情報を確認してください。
 
-一部のサービスでは、Azure AD アプリに特定のアクセス許可を割り当てる必要があります。 各サービスの情報を確認して、必要なアクセス許可を判別してください。 たとえば、Web アプリをインポートする前に、Azure 管理者はまず、[Azure Portal](https://portal.azure.com) でそれを作成する必要があります。 Upgrade Readiness または OMS コネクタを構成する場合、関連する OMS ワークスペースを含むリソース グループに対して、新たに登録した Web アプリの*共同作成者* アクセス許可を付与する必要があります。 これにより、Configuration Manager からそのワークスペースへのアクセスが許可されます。 アクセス許可を割り当てるときに、**[ユーザーの追加]** ブレードでアプリ登録名を検索します。 このプロセスは、[OMS へのアクセス許可を Configuration Manager に提供する](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)場合と同じです。 Azure 管理者は、アプリを Configuration Manager にインポートする前に、これらのアクセス許可を割り当てる必要があります。
+一部のサービスでは、Azure AD アプリに特定のアクセス許可を割り当てる必要があります。 各サービスの情報を確認して、必要なアクセス許可を判別してください。 たとえば、Web アプリをインポートする前に、Azure 管理者はまず、[Azure Portal](https://portal.azure.com) でそれを作成する必要があります。 Upgrade Readiness または OMS コネクタを構成する場合、関連する OMS ワークスペースを含むリソース グループに対して、新たに登録した Web アプリの*共同作成者* アクセス許可を付与する必要があります。 これにより、Configuration Manager からそのワークスペースへのアクセスが許可されます。 アクセス許可を割り当てるときは、Azure portal の **[ユーザーの追加]** 領域でアプリの登録名を検索します。 このプロセスは、[OMS へのアクセス許可を Configuration Manager に提供する](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)場合と同じです。 Azure 管理者は、アプリを Configuration Manager にインポートする前に、これらのアクセス許可を割り当てる必要があります。
 
 
 
@@ -213,14 +213,14 @@ Azure サービス ウィザードのアプリ ページで **[ネイティブ �
 
 -   **Upgrade Readiness コネクタ** サービス、**[構成]** ページ: [Azure ウィザードを使用して、接続を作成する](/sccm/core/clients/manage/upgrade/upgrade-analytics#use-the-azure-wizard-to-create-the-connection)  
 
--   **ビジネス向け Microsoft ストア** サービス、**[構成]** ページ: [ビジネス向け Microsoft Store の同期の設定](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#for-configuration-manager-version-1706-and-later)  
+-   **ビジネス向け Microsoft ストア** サービス、**[構成]** ページ: [ビジネス向け Microsoft Store の同期を構成する](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_config)  
 
 
 最後に、[概要]、[進行状況]、および [完了] の各ページを使用して Azure サービス ウィザードを完了します。 Configuration Manager での Azure サービスの構成が完了しました。 他の Azure サービスを構成する場合にも、この手順を繰り返します。
 
 
 ## <a name="view-the-configuration-of-an-azure-service"></a>Azure サービスの構成を表示する
-構成した Azure サービスのプロパティを表示できます。 Configuration Manager コンソールで、**[管理]** ワークスペースに移動し、**[Cloud Services]** を展開して **[Azure サービス]** を選択します。 表示または編集するサービスを選択し、**[プロパティ]** をクリックします。
+構成した Azure サービスのプロパティを表示します。 Configuration Manager コンソールで、**[管理]** ワークスペースに移動し、**[Cloud Services]** を展開して **[Azure サービス]** を選択します。 表示または編集するサービスを選択し、**[プロパティ]** をクリックします。
 
 サービスを選択し、リボンの **[削除]** をクリックした場合、この操作で Configuration Manager の接続が削除されます。 Azure AD のアプリは削除されません。 不要になったときにアプリを削除する場合は、Azure 管理者に依頼してください。 または、Azure サービス ウィザードを実行してアプリをインポートします。<!--483440-->
 

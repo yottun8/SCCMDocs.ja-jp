@@ -5,24 +5,23 @@ description: Windows 10 クライアントで Microsoft Edge Web ブラウザー
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/28/2018
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 81bd0a59a24cab446668911f714548581c1347df
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2b0b553b7281015bfee89f8409fd6c5e255d753c
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343798"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384145"
 ---
 # <a name="configure-microsoft-edge-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager で Microsoft Edge 設定を構成する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-<!-- 1357310 -->
-バージョン 1802 以降、Windows 10 クライアントで [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) Web ブラウザーを使用する場合、Configuration Manager のコンプライアンス設定ポリシーを作成し、Microsoft Edge の一部の設定を構成します。 
+<!-- 1357310 --> バージョン 1802 以降、Windows 10 クライアントで [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) Web ブラウザーを使用する場合は、Configuration Manager のコンプライアンス設定ポリシーを作成して、Microsoft Edge の一部の設定を構成します。 
 
 このポリシーは、Windows 10 バージョン 1703 以降のクライアントにのみ適用されます。 <!--511552-->
 
@@ -44,14 +43,23 @@ ms.locfileid: "32343798"
 - **[拡張機能を許可する]**: 詳細については、[AllowExtensions ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)に関する説明を参照してください。
 
 
+### <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge"></a>Microsoft Edge 用に Windows Defender SmartScreen 設定を構成する
+<!--1353701--> バージョン 1806 以降、このポリシーは [Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) に 3 つの設定を追加します。 ポリシーには、**[SmartScreen の設定]** ページの次の追加設定が含まれるようになりました。
+
+- **SmartScreen を許可する**: Windows Defender SmartScreen を許可するかどうかを指定します。 詳細については、[AllowSmartScreen ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)に関するページを参照してください。
+- **サイトの SmartScreen プロンプトをユーザーがオーバーライドできる**: 悪意のある可能性がある Web サイトに関する Windows Defender SmartScreen フィルターの警告をユーザーがオーバーライドできるかどうかを指定します。 詳細については、[PreventSmartScreenPromptOverride ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)に関するページを参照してください。
+- **Users can override SmartScreen prompt for files (ファイルの SmartScreen プロンプトをユーザーがオーバーライドできる)**: 確認されていないファイルのダウンロードに関する Windows Defender SmartScreen フィルターの警告をユーザーがオーバーライドできるかどうかを指定します。 詳細については、[PreventSmartScreenPromptOverrideForFiles ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)に関するページを参照してください。
+
+
 
 ## <a name="create-the-microsoft-edge-browser-profile"></a>Microsoft Edge ブラウザー プロファイルを作成する
 
-1. Configuration Manager コンソールで、**[資産とコンプライアンス]** ワークスペースに移動します。 **[コンプライアンス設定]** を展開し、新しい **[Microsoft Edge ブラウザーのプロファイル]** ノードを選びます。 リボンの **[Microsoft Edge ブラウザー ポリシーの作成]** オプションをクリックします。
+1. Configuration Manager コンソールで、**[資産とコンプライアンス]** ワークスペースに移動します。 **[コンプライアンス設定]** を展開し、**[Microsoft Edge ブラウザーのプロファイル]** ノードを選びます。 リボンの **[Microsoft Edge のプロファイルを作成する]** オプションをクリックします。
 2. ポリシーの **[名前]** を指定し、必要に応じて **[説明]** を入力してから、**[次へ]** をクリックします。
-3. **[設定]** ページで、このポリシーに含める設定の値を **[構成済み]** に変更して、**[次へ]** をクリックします。
-4. **[サポートされているプラットフォーム]** ページで、このポリシーを適用するオペレーティング システムのバージョンとアーキテクチャを選び、**[次へ]** をクリックします。 
-5. ウィザードを完了します。
+3. **[全般設定]** ページで、このポリシーに含める設定の値を **[構成済み]** に変更して、**[次へ]** をクリックします。 続行するには設定を **[Edge ブラウザーを既定として設定する]** に構成する必要があります。
+4. バージョン 1806 以降では、**[SmartScreen の設定]** ページの設定を構成し、**[次へ]** をクリックします。 
+5. **[サポートされているプラットフォーム]** ページで、このポリシーを適用する OS のバージョンとアーキテクチャを選び、**[次へ]** をクリックします。 
+6. ウィザードを完了します。
 
 
 
@@ -59,9 +67,9 @@ ms.locfileid: "32343798"
 
 1. ポリシーを選び、リボンのオプション **[展開]** をクリックします。
 2. **[参照]** をクリックして、ポリシーを展開するユーザー コレクションまたはデバイス コレクションを選びます。 
-3. 必要に応じて、追加のオプションを選びます。 
-    a. ポリシーに準拠していない場合は、アラートを生成します。 
-    b. クライアントがこのポリシーについてデバイスのコンプライアンスを評価するスケジュールを設定します。
+3. 必要に応じて、追加のオプションを選びます。  
+     a. ポリシーに準拠していない場合は、アラートを生成します。  
+     b. クライアントがこのポリシーについてデバイスのコンプライアンスを評価するスケジュールを設定します。 
 4. **[OK]** をクリックして展開を作成します。
 
 

@@ -1,8 +1,8 @@
 ---
-title: Security Content Automation Protocol (SCAP) 拡張機能をインストールし、構成する
-titleSuffix: Configuraton Manager
-description: Security Content Automation Protocol (SCAP) 拡張機能をインストールし、構成する
-ms.date: 03/27/2018
+title: SCAP 拡張機能のインストールと構成
+titleSuffix: Configuration Manager
+description: Configuration Manager の Security Content Automation Protocol (SCAP) 拡張機能をインストールし、構成します。
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -10,194 +10,186 @@ ms.assetid: f53b484b-5123-48f0-be2f-4e30318f3d39
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: 891d21b44ed6efca73413a46d0483519b76f9cae
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4fd440905bb736dfbfac01de804373d29c9fbb59
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336597"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384616"
 ---
-# <a name="install-and-configure-the-scap-extensions-for-microsoft-system-center-configuration-manager"></a>Microsoft System Center Configuration Manager の SCAP 拡張機能をインストールして構成します
+# <a name="install-and-configure-the-scap-extensions-for-configuration-manager"></a>Configuration Manager の SCAP 拡張機能のインストールと構成
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-> [!Tip]  
-> この機能は、Technical Preview バージョン 1803 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 プレリリース版の SCAP 拡張機能は、現在サポートされているバージョンの Configuration Manager Current Branch と LTSB 1606 にインストールできます。 1803 Technical Preview 以降のインストール ファイルは cd.latest\SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi にあります。   
-
-前提条件となるインフラストラクチャの準備ができたら、このプロセスを実行するコンピューターに Microsoft System Center Configuration Manager の SCAP 拡張機能をインストールして構成できます。
-
-## <a name="install-scap-extensions-configuration-manager"></a>SCAP 拡張機能 Configuration Manager のインストール
-
-1. ConfigMgr\_Extensions\_for\_SCAP.msi を実行してツールをインストールします。
-2. Windows エクスプローラーで、**ConfigMgr\_Extensions\_for\_SCAP.msi** ファイルをダウンロードしたフォルダーに移動して、**ConfigMgr\_Extensions\_for\_SCAP.msi** ファイルをダブルクリックします。 Microsoft System Center Configuration Manager の SCAP 拡張機能のインストール ウィザードが起動します。
-
-次の表内の情報を使用し、指定する必要がない場合はウィザードの既定値をそのまま選択し、**Microsoft System Center Configuration Manager の SCAP 拡張機能のインストール ウィザード**を完了します。
-
-**表 1.0** Microsoft System Center Configuration Manager の SCAP 拡張機能のインストール ウィザード プロセス
-
-| ウィザードのページ名 | ユーザーの操作 |
-| --- | --- |
-| ようこそとエンド ユーザー使用許諾契約 |1.使用許諾契約書を確認します|
-| ようこそとエンド ユーザー使用許諾契約|2.**[使用許諾契約書に同意します]** をクリックします。|
-| ようこそとエンド ユーザー使用許諾契約|3.**[インストール]** をクリックします。|
-| Microsoft System Center Configuration Manager の SCAP 拡張機能のインストール ウィザードを実行します。 |4.**[完了]** をクリックします。|
- 
+[インフラストラクチャの準備](/sccm/compliance/plan-design/scap/about-scap#bkmk_prepare)ができたら、このプロセスを実行するコンピューターに Configuration Manager の SCAP 拡張機能をインストールして構成できます。
 
 
 
-Microsoft System Center Configuration Manager の SCAP 拡張機能のインストール ウィザードは、既定で、Configuration Manager コンソール インストール フォルダーに拡張機能をインストールします。
+## <a name="bkmk_install"></a> SCAP 拡張機能のインストール
+
+インストール ファイルは、Configuration Manager サイト サーバーのインストール ディレクトリ内の次のパスにあります。  
+`cd.latest\SMSSETUP\TOOLS\ConfigMgrSCAPExtension\ConfigMgrExtensionsForSCAP.msi`
+
+1. このプロセスを実行する Configuration Manager コンソールがあるコンピューターに **ConfigMgrExtensionsforSCAP.msi** をコピーします。  
+
+2. Windows エクスプローラーで、**ConfigMgrExtensionsforSCAP.msi** をコピーしたフォルダーに移動します。 ファイルをダブルクリックして開き、Configuration Manager のインストール ウィザードの SCAP 拡張機能を開始します。  
+
+3. 使用許諾契約書を確認します。 **[使用許諾契約書に同意します]** をクリックし、**[インストール]** をクリックします。  
+
+4. インストールが完了したら、**[完了]** をクリックしてインストール ウィザードを終了します。  
+
+インストール ウィザードでは、Configuration Manager コンソールのインストール フォルダーに SCAP 拡張機能がインストールされます。 既定では、コンソールのインストール フォルダーは `C:\Program Files (x86)\Microsoft Configuration Manager\AdminConsole` です。  
 
 
 
-## <a name="download-and-install-the-scap-data-stream-files"></a>SCAP データ ストリーム ファイルのダウンロードとインストール
+## <a name="bkmk_scap-data-stream-files"></a> SCAP データ ストリーム ファイルのダウンロードとインストール
 
-SCAP 拡張機能を実行して SCAP データ ストリーム ファイルを変換してから、それらをコンプライアンス設定機能にインポートするには、Web サイトの National Vulnerability Database (NVD) [ダウンロード ページ](http://nvd.nist.gov/fdcc/download_fdcc.cfm)から SCAP データ ストリーム ファイルをダウンロードする必要があります。 次に、それらを SCAP 拡張機能をインストールしたフォルダーにコピーします。
+SCAP 拡張機能を実行する前に、National Vulnerability Database (NVD) の[ダウンロード ページ](https://csrc.nist.gov/Projects/United-States-Government-Configuration-Baseline)から SCAP データ ストリーム ファイルをダウンロードする必要があります。 次に、SCAP 拡張機能をインストールしたフォルダーにそれらをコピーします。
 
 環境によっては、ダウンロード ページに一覧表示された SCAP データ ストリーム ファイルのすべてが必要ではない場合があります。
 
-SCAP データ ストリームをインストールするには:
+### <a name="install-the-scap-data-streams"></a>SCAP データ ストリームのインストール
 
 1. [NVD Web サイト](http://nvd.nist.gov/) にアクセスして、組織に必要な SCAP データ ストリームを特定します。
-NIST によって発行された SCAP データ ストリームは、_チェックリスト_とも呼ばれる複数のバンドルに編成されます。
+NIST によって発行された SCAP データ ストリームは、_チェックリスト_とも呼ばれる複数のバンドルに編成されます。  
 
-2. [NVD Web サイト](http://nvd.nist.gov/home.cfm)から SCAP データ ストリームをダウンロードします。このデータ ストリームは、.zip ファイル名拡張子付きの圧縮ファイルに保存されているか、DataStream XML ファイルとしてマークされています。
+2. [NVD Web サイト](http://nvd.nist.gov/home.cfm)から SCAP データ ストリームをダウンロードします。このデータ ストリームは、.zip ファイル名拡張子付きの圧縮ファイルに保存されているか、DataStream XML ファイルとしてマークされています。  
 
-    >[!IMPORTANT] 
-    >NVD からダウンロード可能な .xml 拡張子付きの SCAP データ ストリーム ファイルは数多くあります。 ただし、XCCDF (SCAP1.0 と 1.1)/DataStream (SCAP1.2) コンテンツを含む .xml ファイルだけが SCAP 拡張機能での使用に適しています。
+    > [!IMPORTANT]  
+    > NVD からダウンロード可能な .xml 拡張子付きの SCAP データ ストリーム ファイルは数多くあります。 ただし、XCCDF (SCAP1.0 と 1.1)/DataStream (SCAP1.2) コンテンツを含む .xml ファイルだけが SCAP 拡張機能での使用に適しています。  
 
-3. SCAP 拡張機能をインストールしたフォルダーと同じフォルダーに、ダウンロードした SCAP データ ストリーム .zip ファイル/DataStream XML を解凍します。
+3. SCAP 拡張機能をインストールしたフォルダーと同じフォルダーに、ダウンロードした SCAP データ ストリーム .zip ファイル/DataStream XML ファイルを抽出します。  
 
-## <a name="convert-and-import-the-scap-data-stream-files-using-the-import-scap-content-wizard"></a>SCAP コンテンツのインポート ウィザードを利用し、SCAP データ ストリーム ファイルを変換し、インポートする
 
-SCAP データ ストリームを取得したら、データ ストリームを構成基準にインポートし、変換する準備は完了です。 NIST によって発行された SCAP データ ストリームは複数のバンドルに編成されます。 NIST の指示に従って、環境内で使用するバンドルを確認します。 たとえば、Windows の各バージョン固有のバンドル、ファイアウォール構成用の別のバージョン固有のバンドルや Internet Explorer 8.0 用のバンドルがあります。 次の手順を使用してこのタスクを完了します。
 
-### <a name="to-import-the-scap-data-streams-into-configuration-manager"></a>SCAP データ ストリームを Configuration Manager にインポートするには
+## <a name="bkmk_convert-and-import"></a> SCAP データ ストリーム ファイルの手動での変換とインポート 
 
-1. 構成基準のリボンから SCAP コンテンツのインポート ウィザードを起動します。
+SCAP データ ストリームを取得したら、データ ストリームを構成基準にインポートし、変換する準備は完了です。 NIST によって発行された SCAP データ ストリームは複数のバンドルに編成されます。 NIST の指示に従って、環境内で使用するバンドルを確認します。 たとえば、Windows の各バージョン固有のバンドル、ファイアウォール構成用の別のバージョン固有のバンドルや Internet Explorer 用のバンドルがあります。 次の手順を使用してこのタスクを完了します。  
 
-     ![CI 基準リボンから SCAP コンテンツのインポート ウィザードを起動する](./media/import-scap-content.png)
+> [!Note]  
+> このセクションでは、Configuration Manager コンソールを使ってデータ ストリーム ファイルを変換およびインポートする手動プロセスについて説明します。 このプロセスを自動化するには、次の「[SCAP データ ストリーム ファイルの自動での変換とインポート](#bkmk_auto-convert-and-import)」のセクションを参照してください。  
 
-2. コンテンツの種類を選択します。
+1. 構成基準グループのリボンで **[SCAP コンテンツのインポート]** ウィザードをクリックします。
 
-      ![コンテンツの種類を選択する](./media/import-new-scap-content.png)
+     ![コンソールのリボンの [SCAP コンテンツのインポート]](./media/import-scap-content.png)
+
+2. SCAP コンテンツのオプションを選択します。
+
+      ![インポート ウィザードの SCAP コンテンツ オプションの選択ページ](./media/import-new-scap-content.png)
 
 3. SCAP データストリーム ファイル、XCCDF、CPE ディクショナリ ファイル、または OVAL コンテンツ ファイルを選択します。
 
      ![SCAP データストリーム ファイルを選択する](./media/select-datastream-file.png)
 
-4. SCAP 1.2 の場合、データストリームを選択します。 次に、SCAP 1.x のベンチマークとプロファイルを選択します。  **[次へ]** を選択し、コンテンツを変換します。 進行状況バーが表示されます。
+4. SCAP 1.2 の場合は、データストリームを選択します。 次に、SCAP 1.x のベンチマークとプロファイルを選択します。 **[次へ]** をクリックしてコンテンツを変換します。 
 
       ![SCAP 1.2 のベンチマークとプロファイルを選択する](./media/select-benchmark-and-profile.png)
+
+      > [!Tip]  
+      > ウィザードのこのページには、同じプロセスを自動化する **ScapToDcm.exe** ツールで使用するコマンド ラインが表示されます。  
 
 5. インポートする構成データを確認します。
 
       ![構成確認のスクリーンショット](./media/confirm-configuration.png)
 
-6. **[次へ]** をクリックし、構成データをインポートします。
+6. **[次へ]** をクリックして構成データをインポートします。
 
       ![インポートの完了](./media/complete-import.png)
 
-## <a name="alternate-method-convert-and-import-the-scap-data-stream-files-using-the-cmd-line-tool"></a>(代替方法) コマンド ライン ツールを利用し、SCAP データ ストリーム ファイルを変換し、インポートします。
-
-SCAP データ ストリームを取得したら、Microsoft.Sces.ScapToDcm.exe ツールを利用し、SCAP データ ストリームをコンプライアンス設定準拠の .cab ファイルに変換できます。 次に、.cab ファイルを Configuration Manager にインポートします。 Microsoft.Sces.ScapToDcm.exe ツールによって、Configuration Manager のコンプライアンス設定機能を使用してアクセス可能な構成項目と構成基準に SCAP データ ストリームが変換されます。 Microsoft.Sces.ScapToDcm.exe ツールによって、SCAP データ ストリームが XML マニフェストに変換されます。 それから、XML マニフェストがパッケージ化され、Configuration Manager にインポートできる .cab ファイルが生成されます。
-
-NIST によって発行された SCAP データ ストリームは複数のバンドルに編成されます。 NIST の指示に従って、環境内で使用するバンドルを確認します。 たとえば、Windows の各バージョン固有のバンドル、ファイアウォール構成用の別のバージョン固有のバンドルや Internet Explorer 8.0 用のバンドルがあります。 次の手順を使用してこのタスクを完了します。
 
 
+## <a name="bkmk_auto-convert-and-import"></a> SCAP データ ストリーム ファイルの自動での変換とインポート 
+
+### <a name="import-with-the-command-line-tool"></a>コマンドライン ツールを使用してエクスポートする
+
+SCAP データ ストリームを取得したら、**Microsoft.Sces.ScapToDcm.exe** ツールを利用し、SCAP データ ストリームをコンプライアンス設定準拠の .cab ファイルに変換できます。 次に、.cab ファイルを Configuration Manager にインポートします。 Microsoft.Sces.ScapToDcm.exe ツールによって、Configuration Manager で使用できる構成項目と構成基準に SCAP データ ストリームが変換されます。 Microsoft.Sces.ScapToDcm.exe ツールによって、SCAP データ ストリームが XML マニフェストに変換されます。 それから、XML マニフェストがパッケージ化され、Configuration Manager にインポートできる .cab ファイルが生成されます。
+
+> [!Tip]  
+> 前のセクションの手動プロセスの手順 4 では、同じプロセスを自動化する **ScapToDcm.exe** ツールで使用するコマンド ラインを表示するウィザードのページが示されています。  
 
 
+#### <a name="use-microsoftscesscaptodcmexe-to-convert-scap-data-streams-into-cab-files"></a>Microsoft.Sces.ScapToDcm.exe を使用して、SCAP データ ストリームを .cab ファイルに変換します
 
-## <a name="to-import-the-scap-data-streams-into-configuration-manager"></a>SCAP データ ストリームを Configuration Manager にインポートするには
+コマンド プロンプトで、**AdminConsole\Bin** フォルダーに移動し、**Microsoft.Sces.ScapToDcm.exe** を実行します。 このツールは、コンプライアンスの設定に準拠した .cab ファイルを生成し、Configuration Manager サイトにインポートします。
 
-1. SCAP データ ストリームをコンプライアンス設定に準拠した .cab ファイルに変換します。
-2. .cab ファイルを Configuration Manager にインポートします。
+   > [!NOTE]  
+   > 出力フォルダーに対する読み取り/書き込みアクセス許可がアカウントに必要です。
 
-### <a name="convert-the-scap-data-streams-into-compliance-settings-compliant-cab-files"></a>SCAP データ ストリームからコンプライアンス設定に準拠した .cab ファイルへの変換
+**SCAP 1.0/1.1 コンテンツ (USGCB や DISA コンテンツなどの XCCDF XML ファイル) での使用方法:**  
 
-システムのコンプライアンスを分析して評価する前に、XML 形式の SCAP データ ストリームをコンプライアンス設定の構成項目と構成基準に準拠している XML マニフェストに変換する必要があります。 Microsoft.Sces.ScapToDcm.exe ツールによって、SCAP データ ストリームが XML マニフェストに変換されます。 それから、XML マニフェストがパッケージ化され、後で Configuration Manager にインポートできる .cab ファイルが生成されます。
+`Microsoft.Sces.ScapToDcm.exe –xccdf <xccdf.xml> -cpe <cpe.xml> -out <outputFolder> [-select benchmark/profile] [-log LogFileName]`  
 
-#### <a name="to-convert-the-scap-data-streams-into-compliance-settings-compliant-cab-files-using-the-microsoftscesscaptodcmexe-tool"></a>**Microsoft.Sces.ScapToDcm.exe ツールを使用して、SCAP データ ストリームをコンプライアンス設定に準拠した .cab ファイルに変換するには**
+   > [!NOTE]  
+   > `–select` パラメーターを使用してベンチマーク/プロファイルを指定しなかった場合は、ツールがコンテンツ ファイル内のベンチマークごとに .cab ファイルを生成します。  
 
-コマンド プロンプトで、AdminConsole\Bin フォルダーに移動し、Microsoft.Sces.ScapToDcm.exe を実行してコンプライアンス設定に準拠した cab を生成し、それを Configuration Manager サイトにインポートします。
+**SCAP1.2 コンテンツ (最新の USGCB コンテンツなどの DataStream XML ファイル) での使用方法:**  
 
-   >[!NOTE] 
-   > 出力フォルダーの読み取り/書き込みアクセス許可をアカウントに与える必要があります
+`Microsoft.Sces.ScapToDcm.exe –scap <scapdatastreamfile.xml> -out <outputFolder> [-select datastream/benchmark/profile] [-log LogFileName]`  
 
-**SCAP 1.0/1.1 コンテンツ (USGCB や DISA コンテンツなどの XCCDF XML ファイル) の場合:**
+   > [!NOTE]  
+   > `–select` パラメーターを使用してデータストリーム/ベンチマーク/プロファイルを指定しなかった場合は、ツールがコンテンツ ファイル内のベンチマークごとに .cab ファイルを生成します。
 
- Microsoft.Sces.ScapToDcm.exe –xccdf &lt;xccdf.xml&gt; -cpe &lt;cpe.xml&gt; -out &lt;outputFolder&gt; [-select benchmark/profile] [-log LogFileName]
+**外部変数を含む単一の OVAL ファイルでの使用方法:**  
 
-   >[!NOTE] 
-   >–select パラメーターを使用してベンチマーク/プロファイルを指定しなかった場合は、ツールがコンテンツ ファイル内のベンチマークごとに DCM cab を生成します。
+`Microsoft.Sces.ScapToDcm.exe –oval <singleOvalFile.xml> [-variable <externalVariableFile.xml>] -out <outputFolder> [-log LogFileName]`  
 
-**SCAP1.2 コンテンツ (最新の USGCB コンテンツなどの DataStream XML ファイル) の場合:**
-
-Microsoft.Sces.ScapToDcm.exe –scap &lt;scapdatastreamfile.xml&gt; -out &lt;outputFolder&gt; [-select datastream/benchmark/profile] [-log LogFileName]
-
-   >[!NOTE] 
-   > –select パラメーターを使用してデータストリーム/ベンチマーク/プロファイルを指定しなかった場合は、ツールがコンテンツ ファイル内のベンチマークごとに DCM cab を生成します。
-
-**外部変数を含む単一の OVAL ファイルの場合:**
-
-Microsoft.Sces.ScapToDcm.exe –oval &lt;singleOvalFile.xml&gt; [-variable &lt;externalVariableFile.xml&gt;] -out &lt;outputFolder&gt; [-log LogFileName]
-
-   >[!NOTE] 
-   > 外部変数ファイル内で 1 つの変数に対して複数の値が存在する場合、Microsoft.Sces.ScapToDcm.exe ツールは値をこの変数の配列として扱います。
+   > [!NOTE]  
+   > 外部変数ファイル内で 1 つの変数に対して複数の値が存在する場合、Microsoft.Sces.ScapToDcm.exe ツールは値をこの変数の配列として扱います。  
 
 
 
-#### <a name="microsoftscesscaptodcmexe-command-line-parameters"></a>Microsoft.Sces.ScapToDcm.exe. コマンドライン パラメーター
+#### <a name="microsoftscesscaptodcmexe-command-line-parameters"></a>Microsoft.Sces.ScapToDcm.exe コマンド ライン パラメーター
 
-| **パラメーター** | **使用方法** | **必須** |
+| パラメーター | 使用方法 | 必須 |
 | --- | --- | --- |
-| -scap [scap data stream file] | SCAP データ ストリームのファイルを指定します。 | はい (SCAP 1.2 データ ストリームの場合、-xccdf と -oval / -variable で相互に排他的) |
-| -xccdf [xccdf file] | XCCDF ファイルを指定します。 | はい (SCAP 1.0/1.1 XCCDF の場合、-scap と -oval / -variable で相互に排他的) |
-| -cpe [cpe file] | CPE ファイルを指定します。 | はい (SCAP 1.0/1.1 XCCDF の場合、-scap と -oval / -variable で相互に排他的) |
-| -oval [oval file] | OVAL ファイルを指定します。 | はい (スタンドアロン OVAL ファイルの場合、-xccdf と -scap で相互に排他的) |
-| -variable [oval external variable file] | OVAL 外部変数ファイルを指定します。 | いいえ (外部 OVAL 変数ファイルが存在する場合のスタンドアロン OVAL ファイルに対しては任意、-xccdf と -scap で相互に排他的) |
-| -select [xccdf benchmark/profile] | SCAP データ ストリームと XCCDF ファイルのどちらかから、XCCDF ベンチマークまたはプロファイルを選択します。 | いいえ (このスイッチを指定することをお勧めします。 指定しなかった場合、ツールはすべての組み込みデータ ストリーム/ベンチマークですべてのプロファイルに対して 1 つの cab を生成します) |
-| -out [output directory] | DCM cab ファイルを出力する場所を指定します。 | いいえ (指定しなかった場合、ツールは変換せずにコンテンツを一覧表示するだけです) |
-| -log [log file] | ログ ファイルを指定します。 | いいえ (指定しなかった場合、Microsoft.Sces.ScapToDcm.log ファイルにログが書き込まれます) |
-| -help / -? | ツールの使用方法を出力します。 | いいえ |
+| `-scap [scap data stream file]` | SCAP データ ストリームのファイルを指定します。 | はい (SCAP 1.2 データ ストリームの場合、-xccdf と -oval / -variable で相互に排他的) |
+| `-xccdf [xccdf file]` | XCCDF ファイルを指定します。 | はい (SCAP 1.0/1.1 XCCDF の場合、-scap と -oval / -variable で相互に排他的) |
+| `-cpe [cpe file]` | CPE ファイルを指定します。 | はい (SCAP 1.0/1.1 XCCDF の場合、-scap と -oval / -variable で相互に排他的) |
+| `-oval [oval file]` | OVAL ファイルを指定します。 | はい (スタンドアロン OVAL ファイルの場合、-xccdf と -scap で相互に排他的) |
+| `-variable [oval external variable file]` | OVAL 外部変数ファイルを指定します。 | いいえ (外部 OVAL 変数ファイルが存在する場合のスタンドアロン OVAL ファイルに対しては任意、-xccdf と -scap で相互に排他的) |
+| `-select [xccdf benchmark/profile]` | SCAP データ ストリームと XCCDF ファイルのどちらかから、XCCDF ベンチマークまたはプロファイルを選択します。 | いいえ (このパラメーターは必要ではありませんがお勧めします。 指定しなかった場合、ツールはすべての組み込みデータストリーム/ベンチマークですべてのプロファイルに対して 1 つの cab を生成します) |
+| `-out [output directory]` | DCM cab ファイルを出力する場所を指定します。 | いいえ (指定しなかった場合、ツールはコンテンツを変換せずに一覧表示するだけです) |
+| `-log [log file]` | ログ ファイルを指定します。 | いいえ (指定しなかった場合、Microsoft.Sces.ScapToDcm.log ファイルにログが書き込まれます) |
+| `-help` または `-?` | ツールの使用方法を出力します。 | いいえ |
 
 
+#### <a name="microsoftscesscaptodcmexe-examples"></a>Microsoft.Sces.ScapToDcm.exe の例
+
+**SCAP 1.2 のコンテンツ:**  
+
+`Microsoft.Sces.ScapToDcm.exe –scap scap_gov.nist_USTCB-ie8.xml –out .\mytestfolder –select mySCAPDataStreamID/myBenchMarkID/myProfileID`  
+
+**SCAP 1.0/1.1 のコンテンツ:**  
+
+`Microsoft.Sces.ScapToDcm.exe–xccdf scap_gov.nist_Test-WinXP_xccdf.xml –cpe scap_gov.nist_Test-WinXP_cpe.xml –out .\mytestfolder –select XCCDFBenchmarkID/MyProfileID`  
+
+**SCAP OVAL のコンテンツ:**  
+
+`Microsoft.Sces.ScapToDcm.exe –oval myOvalFile.xml –variable myOvalExternalVariableFile.xml –out .\mytestfolder`  
 
 
+#### <a name="sample-output-from-microsoftscesscaptodcmexe"></a>Microsoft.Sces.ScapToDcm.exe からのサンプル出力
 
-#### <a name="the-following-command-lines-are-samples-for-the-microsoftscesscaptodcmexe-tool"></a>次のコマンド ラインは、Microsoft.Sces.ScapToDcm.exe ツールのサンプルです。
-
-**SCAP1.2 Content:**
-
-  Microsoft.Sces.ScapToDcm.exe –scap scap\_gov.nist\_USTCB-ie8.xml –out .\mytestfolder –select mySCAPDataStreamID/myBenchMarkID/myProfileID
-
-**SCAP1.0/1.1 Content:**
-
-   Microsoft.Sces.ScapToDcm.exe–xccdf scap\_gov.nist\_Test-WinXP\_xccdf.xml –cpe scap\_gov.nist\_Test-WinXP\_cpe.xml –out .\mytestfolder –select XCCDFBenchmarkID/MyProfileID
-
-**SCAP OVAL Content:**
-
-  Microsoft.Sces.ScapToDcm.exe –oval myOvalFile.xml –variable myOvalExternalVariableFile.xml –out .\mytestfolder
-
-**次の出力は Microsoft.Sces.ScapToDcm.exe ツールからのサンプルです。**
-
+```
   Compliance Settings compliant cab file created:
 
-  Validate the schema of SCAP data stream file C:\24SCAP\BVT\_Test\_Data\_Stream.xml
+  Validate the schema of SCAP data stream file C:\24SCAP\BVT_Test_Data_Stream.xml
 
-  Successfully validate the schema of SCAP data stream file C:\24SCAP\BVT\_Test\_Data\_Stream.xml
+  Successfully validate the schema of SCAP data stream file C:\24SCAP\BVT_Test_Data_Stream.xml
 
-  Process XCCDF Benchmark xccdf\_tst.bvt\_benchmark\_Windows-F
+  Process XCCDF Benchmark xccdf_tst.bvt_benchmark_Windows-F
 
-  Process XCCDF Profile: xccdf\_tst.bvt\_profile\_version\_1.0.0.0-BVT Profile #1
+  Process XCCDF Profile: xccdf_tst.bvt_profile_version_1.0.0.0-BVT Profile #1
 
-  Process OVAL: scap\_tst.bvt\_comp\_Windows-F-oval.xml
+  Process OVAL: scap_tst.bvt_comp_Windows-F-oval.xml
 
-  Successfully finished process OVAL: scap\_tst.bvt\_comp\_Windows-F-oval.xml
+  Successfully finished process OVAL: scap_tst.bvt_comp_Windows-F-oval.xml
 
-  Process OVAL: scap\_tst.bvt\_comp\_Windows-F-cpe-oval.xml
+  Process OVAL: scap_tst.bvt_comp_Windows-F-cpe-oval.xml
 
-  Successfully finished process OVAL: scap\_tst.bvt\_comp\_Windows-F-cpe-oval.xml Process SCAP data stream: scap\_tst.bvt\_datastream\_Windows-F.zip SCAP Data Stream: [scap\_tst.bvt\_datastream\_Windows-F.zip]
+  Successfully finished process OVAL: scap_tst.bvt_comp_Windows-F-cpe-oval.xml
+   Process SCAP data stream: scap_tst.bvt_datastream_Windows-F.zip
+    SCAP Data Stream: [scap_tst.bvt_datastream_Windows-F.zip]
 
   Version:        [1.2]
 
@@ -205,9 +197,10 @@ Microsoft.Sces.ScapToDcm.exe –oval &lt;singleOvalFile.xml&gt; [-variable &lt;e
 
   Use-case:       [CONFIGURATION]
 
-  CPE Dictionary:  [scap\_tst.bvt\_comp\_Windows-F-cpe-dictionary.xml]
+  CPE Dictionary:  [scap_tst.bvt_comp_Windows-F-cpe-dictionary.xml]
 
-  OVAL:              [Windows-F-cpe-oval.xml] Product name:    [National Institute of Standards and Technology]
+  OVAL:              [Windows-F-cpe-oval.xml]
+  Product name:    [National Institute of Standards and Technology]
 
   Product version: []
 
@@ -215,9 +208,10 @@ Microsoft.Sces.ScapToDcm.exe –oval &lt;singleOvalFile.xml&gt; [-variable &lt;e
 
   Timestamp:       [2/24/2012]
 
-  XCCDF Benchmark: [xccdf\_tst.bvt\_benchmark\_Windows-F]
+  XCCDF Benchmark: [xccdf_tst.bvt_benchmark_Windows-F]
 
-  Version:       [v1.0.0.0] Update:        [http://usgcb.nist.gov]
+  Version:       [v1.0.0.0]
+   Update:        [http://usgcb.nist.gov]
 
   Timestamp:     [2/24/2012]
 
@@ -229,7 +223,7 @@ Microsoft.Sces.ScapToDcm.exe –oval &lt;singleOvalFile.xml&gt; [-variable &lt;e
 
  Description:   [My description]
 
-  XCCDF Profile: [xccdf\_tst.bvt\_profile\_version\_1.0.0.0]
+  XCCDF Profile: [xccdf_tst.bvt_profile_version_1.0.0.0]
  
   OVAL:              [Windows-F-oval.xml]
 
@@ -243,18 +237,33 @@ Microsoft.Sces.ScapToDcm.exe –oval &lt;singleOvalFile.xml&gt; [-variable &lt;e
 
   Start SCAP to DCM conversion...
 
-  Processing SCAP data stream: scap\_tst.bvt\_datastream\_Windows-F.zip
+  Processing SCAP data stream: scap_tst.bvt_datastream_Windows-F.zip
 
-  Processing CPE dictionary: scap\_tst.bvt\_comp\_Windows-F-cpe-dictionary.xml
+  Processing CPE dictionary: scap_tst.bvt_comp_Windows-F-cpe-dictionary.xml
 
   …
 
-  Generating CI baseline cab file: C:\28\bbt\xccdf\_tst.bvt\_benchmark\_Windows-F[xccdf\_tst.bvt\_profile\_version\_1.0.0.0].cab
+  Generating CI baseline cab file: C:\28\bbt\xccdf_tst.bvt_benchmark_Windows-F[xccdf_tst.bvt_profile_version_1.0.0.0].cab
 
-  Successfully generated CI baseline cab file: C:\28\bbt\xccdf\_tst.bvt\_benchmark\_Windows-F[xccdf\_tst.bvt\_profile\_version\_1.0.0.0].cab
+  Successfully generated CI baseline cab file: C:\28\bbt\xccdf_tst.bvt_benchmark_Windows-F[xccdf_tst.bvt_profile_version_1.0.0.0].cab
 
-  Successfully converted XCCDF profile: xccdf\_tst.bvt\_profile\_version\_1.0.0.0 into DCM baseline xccdf\_tst.bvt\_benchmark\_Windows-F[xccdf\_tst.bvt\_profile\_version\_1.0.0.0].cab
+  Successfully converted XCCDF profile: xccdf_tst.bvt_profile_version_1.0.0.0 into DCM baseline xccdf_tst.bvt_benchmark_Windows-F[xccdf_tst.bvt_profile_version_1.0.0.0].cab
+```
+
+
+### <a name="import-the-cab-file"></a>.cab ファイルのインポート
+
+プロセスの次のステップは、Configuration Manager コンソールを使用して、コンプライアンス設定に準拠した .cab ファイルを Configuration Manager にインポートすることです。 このプロセスの前半で作成した .cab ファイルをインポートするときに、1 つ以上の構成項目と構成基準が Configuration Manager データベースに作成されています。 プロセスの後半では、デバイス コレクションに構成基準を展開できます。 詳細については、「[構成データのインポート](/sccm/compliance/deploy-use/import-configuration-data)」を参照してください。
+
+以前に作成した .cab ファイルの場所は、Microsoft.Sces.ScapToDcm.exe ツールの `–output` パラメーターによって指定されたフォルダーです。
+
+> [!IMPORTANT]  
+> このプロセスの前半で作成した .cab ファイルごとに、このプロセスを繰り返します。 NVD Web サイトからダウンロードした XCCDF/DataStreamXML ファイルに選択した各プロファイルの .cab ファイルがあります。 これらのファイルを処理するには、Microsoft.Sces.ScapToDcm.exe ツールを実行します。  
+
+インポートした構成基準は読み取り専用であり、その状態は *[有効]* で、初期展開状態は *[いいえ]* です。 **[更新日]** プロパティは、基準をインポートした時刻を示します。 構成基準の名前は、XCCDF/Datastream XML の表示名セクションから取得されます。 この名前は、`ABC[XYZ]` という規則を使用して作成されます。**ABC** は XCCDF ベンチマーク ID で、**XYZ** は XCCDF プロファイル ID (プロファイルが選択されている場合) です。
+
+
 
 ## <a name="next-step"></a>次のステップ
 > [!div class="nextstepaction"]
-> [SCAP コンプライアンス設定をインポートし、コンプライアンス結果をエクスポートする](/sccm/compliance/plan-design/scap/import-scap-compliance-settings)
+> [SCAP コンプライアンスを展開および監視し、コンプライアンス結果をエクスポートする](/sccm/compliance/plan-design/scap/deploy-monitor-export)

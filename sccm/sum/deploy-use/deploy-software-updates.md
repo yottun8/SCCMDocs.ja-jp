@@ -1,81 +1,103 @@
 ---
 title: ソフトウェアの更新を展開する
 titleSuffix: Configuration Manager
-description: Configuration Manager コンソールでソフトウェア更新プログラムを選択し、展開プロセスを手動で開始するか、更新プログラムを自動的に展開します。
+description: Configuration Manager コンソールでソフトウェア更新プログラムを手動または自動で展開する方法を説明します。
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 02/16/2018
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: e6a825f0d4333dc551405e38db70f8417ee2b5ce
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3a99c2b1310d5e78699b0b9c97a5074c329bac46
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350359"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383747"
 ---
-#  <a name="BKMK_SUMDeploy"></a> ソフトウェアの更新を展開する  
+# <a name="deploy-software-updates"></a>ソフトウェアの更新を展開する  
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-ソフトウェア更新プログラムの展開フェーズは、ソフトウェア更新プログラムを展開するプロセスです。 ソフトウェア更新プログラムの展開方法に関係なく、通常、更新プログラムは次のように処理されます。
-- ソフトウェア更新プログラム グループに追加されます。
-- 配布ポイントにダウンロードされます。
-- 更新プログラム グループがクライアントに展開されます。 ユーザーが展開を作成すると、関連付けられているソフトウェア更新プログラム ポリシーがクライアント コンピューターに送信されます。 ソフトウェア更新プログラムのコンテンツ ファイルが、配布ポイントからクライアント コンピューターのローカル キャッシュにダウンロードされます。 その後、ソフトウェア更新プログラムはクライアントによるインストールで使用できるようになります。 インターネットに接続されているクライアントは、Microsoft Update からコンテンツをダウンロードします。  
+ソフトウェア更新プログラムの展開フェーズは、ソフトウェア更新プログラムを展開するプロセスです。 ソフトウェア更新プログラムの展開方法に関係なく、サイトでは次のように処理されます。
+- ソフトウェア更新プログラム グループに更新プログラムを追加します
+- 更新プログラム コンテンツを配布ポイントに配布します
+- 更新プログラム グループをクライアントに展開します  
+
+ユーザーが展開を作成すると、関連付けられているソフトウェア更新プログラム ポリシーがサイトによってターゲット クライアントに送信されます。 クライアントは、コンテンツ ソースからローカル キャッシュにソフトウェア更新プログラムのコンテンツ ファイルをダウンロードします。 インターネットに接続されているクライアントは常に、Microsoft Update クラウド サービスからコンテンツをダウンロードします。 その後、ソフトウェア更新プログラムはクライアントによるインストールで使用できるようになります。   
+
+> [!Tip]  
+>  配布ポイントを利用できない場合、イントラネットのクライアントは Microsoft Update からソフトウェア更新プログラムをダウンロードすることもできます。  
 
 > [!NOTE]  
->  配布ポイントを利用できない場合は、Microsoft Update からソフトウェア更新プログラムをダウンロードするように、イントラネットのクライアントを構成できます。  
+>  他の展開の種類とは異なり、ソフトウェア更新プログラムはすべて、クライアントのキャッシュにダウンロードされます。 これは、クライアントでの最大キャッシュ サイズの設定に関係ありません。 クライアント キャッシュ設定について詳しくは、「[Configuration Manager クライアントにクライアントキャッシュを構成する](/sccm/core/clients/manage/manage-clients#BKMK_ClientCache)」をご覧ください。  
 
-> [!NOTE]  
->  他の展開の種類とは異なり、ソフトウェア更新プログラムはすべて、クライアントのキャッシュにダウンロードされます。 これは、クライアントでの最大キャッシュ サイズの設定に関係ありません。 クライアント キャッシュ設定の詳細については、「 [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache)」を参照してください。  
+必要なソフトウェア更新プログラムの展開を構成すると、ソフトウェア更新プログラムは、スケジュールされた期限に自動的にインストールされます。 または、クライアント コンピューターのユーザーが、期限前にソフトウェア更新プログラムのインストールをスケジュール設定または開始できます。 指定したインストール後、ソフトウェア更新プログラムのインストールが正常に完了したかどうかを報告する状態メッセージがクライアント コンピューターからサイト サーバーに送信されます。 ソフトウェア更新プログラムの展開の詳細については、「 [Software update deployment workflows](/sccm/sum/understand/software-updates-introduction#BKMK_DeploymentWorkflows)」を参照してください。  
 
-必要なソフトウェア更新プログラムの展開を構成すると、ソフトウェア更新プログラムは、スケジュールされた期限に自動的にインストールされます。 または、クライアント コンピューターのユーザーが、期限前にソフトウェア更新プログラムのインストールをスケジュール設定または開始できます。 指定したインストール後、ソフトウェア更新プログラムのインストールが正常に完了したかどうかを報告する状態メッセージがクライアント コンピューターからサイト サーバーに送信されます。 ソフトウェア更新プログラムの展開の詳細については、「 [Software update deployment workflows](../understand/software-updates-introduction.md#BKMK_DeploymentWorkflows)」を参照してください。  
+ソフトウェ更新プログラムを展開するための主なシナリオには、手動展開と自動展開の 2 つがあります。 通常は、最初にソフトウェア更新プログラムを手動で展開してクライアントの基準を作成してから、自動展開を使ってクライアントでソフトウェア更新プログラムを管理します。  
 
-ソフトウェ更新プログラムを展開するための主なシナリオには、手動展開と自動展開の 2 つがあります。 通常は、最初にソフトウェア更新プログラムを手動で展開してクライアント コンピューターの基準を作成してから、自動展開を使ってクライアントでソフトウェア更新プログラムを管理します。  
+
 
 ## <a name="BKMK_ManualDeployment"></a> ソフトウェア更新プログラムの手動展開
-Configuration Manager コンソールでソフトウェア更新プログラムを選択し、展開プロセスを手動で開始することができます。 継続的な月ごとのソフトウェア更新プログラムの展開を管理する自動展開規則を作成する前に、必要なソフトウェア更新プログラムでクライアントを最新の状態にする場合と、帯域外のソフトウェア更新プログラム要件を展開する場合は、通常、この展開方法を使用します。 次の一覧に、ソフトウェア更新プログラムの手動展開の一般的なワークフローを示します。  
+Configuration Manager コンソールでソフトウェア更新プログラムを選択し、展開プロセスを手動で開始します。 通常、次の目的にはこの展開方法を使用します。  
 
-1. 特定の要件を使用するソフトウェア更新プログラムをフィルター処理します。 たとえば、50 を超えるクライアント コンピューターで必要なすべてのセキュリティまたは重要なソフトウェア更新プログラムを取得する条件を指定できます。  
+- 毎月の展開を管理する自動展開規則を作成する前に、必要なソフトウェア更新プログラムでクライアントを最新の状態にします  
+
+- 帯域外のソフトウェア更新プログラムを展開します  
+
+
+次の一覧に、ソフトウェア更新プログラムの手動展開の一般的なワークフローを示します。  
+
+1. 特定の要件を使用するソフトウェア更新プログラムをフィルター処理します。 たとえば、50 を超えるクライアントで必要なすべてのセキュリティまたは重要なソフトウェア更新プログラムを取得する条件を指定します。  
+
 2. ソフトウェア更新プログラムを格納するソフトウェア更新プログラム グループを作成します。  
+
 3. ソフトウェア更新プログラム グループにソフトウェア更新プログラムのコンテンツをダウンロードします。  
-4. 手動でソフトウェア更新プログラム グループを展開します。
+
+4. 手動でソフトウェア更新プログラム グループを展開します。  
 
 詳細な手順については、「[ソフトウェア更新プログラムの手動展開](manually-deploy-software-updates.md)」をご覧ください。
 
->[!NOTE]
->Configuration Manager バージョン 1706 以降では、Office 365 のクライアント更新プログラムは **[Office 365 クライアント管理]** > **[Office 365 の更新プログラム]** ノードに移動されています。 これにより、ADR の構成には影響ありませんが、Office 365 更新プログラムの手動展開には影響があります。 
+> [!Tip]  
+> Office 365 クライアント更新プログラムを手動で展開するときは、**[ソフトウェア ライブラリ]** ワークスペースの **[Office 365 クライアント管理]** の **[Office 365 の更新プログラム]** ノードで検索します。  
+
+
 
 ## <a name="automatically-deploy-software-updates"></a>ソフトウェア更新プログラムの自動展開
-ソフトウェア更新プログラムの自動展開は自動展開規則 (ADR) を使用して構成します。 月ごとのソフトウェア更新プログラム (一般的に "月例パッチ" として知られています) と、定義の更新の管理には、通常、この展開方法が使用されます。 ルールの実行時、ソフトウェア更新プログラムがソフトウェア更新プログラム グループから削除され (既存の更新プログラム グループを使用している場合)、指定した基準 (たとえば、先月リリースされたすべてのセキュリティ ソフトウェア更新プログラム) を満たすソフトウェア更新プログラムがソフトウェア更新プログラム グループに追加され、ソフトウェア更新プログラムのコンテンツ ファイルがダウンロードされ、配布ポイントにコピーされ、ソフトウェア更新プログラムがターゲット コレクションのクライアントに展開されます。 次の一覧に、ソフトウェア更新プログラムの自動展開の一般的なワークフローを示します。  
 
-1.  展開設定を指定する ADR を作成します。
-2.  ソフトウェア更新プログラムがソフトウェア更新プログラム グループに追加されます。  
-3.  ソフトウェア更新プログラム グループは、ターゲット コレクションが指定されている場合、そのターゲット コレクションのクライアント コンピューターに展開されます。  
+自動展開規則 (ADR) を使用してソフトウェア更新プログラムの自動展開を構成します。 月ごとのソフトウェア更新プログラム (一般的に "月例パッチ" として知られています) と、定義の更新の管理には、通常、この展開方法が使用されます。 ADR が展開プロセスを自動化する条件を定義します。 次の一覧に、ソフトウェア更新プログラムの自動展開の一般的なワークフローを示します。  
 
-環境で使用する展開戦略を決定する必要があります。 たとえば、ADR を作成して、テスト用クライアントのコレクションをターゲットにします。 ソフトウェア更新プログラムがテスト グループにインストールされることを確認した後で、規則に新しい展開を追加したり、この既存の展開規則に指定したコレクションを、さらに多くのクライアントが含まれるターゲット コレクションに変更したりすることができます。 ADR で作成されるソフトウェア更新プログラムのオブジェクトは双方向です。  
+1.  展開設定を指定する ADR を作成します。  
 
--   ADR を使用して展開されたソフトウェア更新プログラムは、ターゲット コレクションに追加された新しいクライアントに自動的に展開されます。  
--   ソフトウェア更新プログラム グループに追加された新しいソフトウェア更新プログラムは、ターゲット コレクションのクライアントに自動的に展開されます。  
--   ADR では、展開をいつでも有効または無効にできます。  
+2.  サイトによってソフトウェア更新プログラムがソフトウェア更新プログラム グループに追加されます。  
 
-ADR を作成した後、ルールにさらに他の展開を追加できます。 これにより、コレクションごとに異なる更新プログラムを展開する複雑さが軽減されます。 それぞれの新しい展開がさまざまな機能と展開監視エクスペリエンスを備え、追加するそれぞれの新しい展開には次の機能があります。  
+3.  サイトは、ソフトウェア更新プログラム グループをターゲット コレクション内のクライアントに展開します。  
 
--   ADR を初めて実行したときに作成されたものと同じ更新グループとパッケージを使います。  
--   別のコレクションを指定することができます。  
+最初に、ソフトウェア更新プログラムの自動展開戦略を決定します。 たとえば、ADR を作成し、最初にテスト用クライアントのコレクションをターゲットにします。 テスト グループがソフトウェア更新プログラムを正常にインストールしたことを確認した後、新しい展開を規則に追加します。 既存の展開のターゲット コレクションをさらに大きいクライアント セットを含むコレクションに変更することもできます。 使用する戦略を決定するときは次の動作を考慮します。  
+
+- ADR によって作成されたソフトウェア更新プログラム オブジェクトのプロパティを変更できます。   
+
+- ターゲット コレクションにソフトウェア更新プログラムを追加すると、ADR はそれをクライアントに自動的に展開します。  
+
+- ユーザーまたは ADR がソフトウェア更新プログラム グループに新しいソフトウェア更新プログラムを追加すると、サイトはターゲット コレクション内のクライアントにそれを自動的に展開します。  
+
+- ADR の展開をいつでも有効または無効にします。  
+
+
+ADR を作成した後、ルールにさらに他の展開を追加します。 これにより、コレクションごとに異なる更新プログラムを展開する複雑さが軽減されます。 それぞれの新しい展開がさまざまな機能と展開監視エクスペリエンスを備えています。  
+
+追加した新しい展開ごとに:  
+
+-   ADR を初めて実行するときに作成されるものと同じ更新グループとパッケージを使います。  
+-   別のコレクションをターゲットにできます  
 -   次のような独自の展開プロパティをサポートします。  
    -   アクティベーション時間  
    -   期限  
-   -   エンド ユーザー エクスペリエンスの表示/非表示  
-   -   この展開の個別のアラート  
+   -   ユーザー側の表示と操作  
+   -   展開ごとに個別のアラート  
+
 
 詳細な手順については、「[ソフトウェア更新プログラムの自動展開](automatically-deploy-software-updates.md)」をご覧ください。
 
-<!-- ###  <a name="BKMK_ClientCache"></a> Client cache setting  
-The Configuration Manager client downloads the content for required software updates to the local client cache soon after it receives the deployment. However, the client waits to download the content until after the **Software available time** setting for the deployment. The client does not download software updates in optional deployments (deployments that do not have a scheduled installation deadline) until the user manually starts the installation. When the configured deadline passes, the software updates client agent performs a scan to verify that the software update is still required, then the software updates client agent checks the local cache on the client computer to verify that the software update source file is still available, and then installs the software update. If the content was deleted from the client cache to make room for another deployment, the client downloads the software updates to the cache. Software updates are always downloaded to the client cache regardless of the configured maximum client cache size. For other deployments, such as applications or packages, the client only downloads content that is within the maximum cache size that you configure for the client. Cached content is not automatically deleted, but it remains in the cache for at least one day after the client used that content.  -->
-
-
- <!-- For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).  -->

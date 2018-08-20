@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 8c025d7c7a1dc452cb96f937801656bc4d0cadab
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a34a50d4c7b917666316f9a4651aaebc2c001287
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339599"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384265"
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>共同管理用に Windows 10 デバイスを準備する
 AD と Azure AD に参加し Microsoft Intune に登録されている Windows 10 デバイスと、Configuration Manager のクライアントで、共同管理を有効にできます。 新しい Windows 10 デバイスおよび Intune に既に登録されているデバイスでは、共同管理を有効にする前に Configuration Manager クライアントをインストールします。 既に Configuration Manager クライアントになっている Windows 10 デバイスの場合は、デバイスを Intune に登録して、Configuration Manager コンソールで共同管理を有効にできます。
@@ -30,6 +30,7 @@ AD と Azure AD に参加し Microsoft Intune に登録されている Windows 1
 共同管理を有効にするための一般的な前提条件は次のとおりです。  
 
 - Configuration Manager バージョン 1710 以降
+    - Configuration Manager バージョン 1806 以降では、複数の Configuration Manager インスタンスを 1 つの Intune テナントに接続できます。 <!--1357944-->
 - [クラウド管理のために Azure AD でオンボードされたサイト](/sccm/core/servers/deploy/configure/azure-services-wizard)
 - すべてのユーザーの EMS または Intune のライセンス
 - [Azure AD の自動登録](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)が有効
@@ -39,6 +40,16 @@ AD と Azure AD に参加し Microsoft Intune に登録されている Windows 1
    > [!Note]  
    > ハイブリッド MDM 環境 (Intune と Configuration Manager が統合された環境) では、共同管理を有効にできません。 ただし、Intune スタンドアロンへのユーザー移行を開始し、関連 Windows 10 デバイスの共同管理を有効にできます。 Intune スタンドアロンへの移行については、[ハイブリッド MDM から Intune スタンドアロンへの移行の開始](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)に関する記事をご覧ください。
 
+### <a name="prerequisite-azure-resource-manager-roles"></a>前提条件となる Azure Resource Manager の役割
+Azure の役割について詳しくは、[さまざまな役割](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles)に関するページをご覧ください。
+|操作|必要な役割|
+|----|----|
+|クラウド管理ゲートウェイの設定|Azure サブスクリプション マネージャー|
+|クラウド配布ポイントの設定|Azure サブスクリプション マネージャー|
+|Configuration Manager コンソールからの Azure Active Directory アプリの作成|Azure Active Directory の全体管理者|
+|Configuration Manager コンソールでの Azure クライアントとサーバー アプリのインポート| Configuration Manager 管理者。追加の Azure 役割は不要です。|
+|共同管理ウィザードを使用した共同管理の設定| すべてのスコープの権限を持つ Configuration Manager の管理者と Azure Active Directory ユーザー権限。 
+ 
 ### <a name="additional-prerequisites-for-devices-with-the-configuration-manager-client"></a>Configuration Manager クライアントがインストールされているデバイスの追加の前提条件
 - Windows 10 バージョン 1709 以降
 - [ハイブリッド Azure AD への参加](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (AD と Azure AD に参加)

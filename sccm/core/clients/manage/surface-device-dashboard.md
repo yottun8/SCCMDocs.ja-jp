@@ -5,17 +5,17 @@ description: ダッシュボードを使用して Surface デバイスに関す�
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: db5df73db6a973ca689def785ee99a40425303fa
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 96bca886b25cbe5f6ae1c2f06cbc823b4f017075
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334557"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383917"
 ---
 # <a name="surface-device-dashboard-in-system-center-configuration-manager"></a>System Center Configuration Manager の Surface デバイス ダッシュボード
 
@@ -51,8 +51,7 @@ Surface デバイス ダッシュボードには、ご利用の環境の 3 つ�
         ![Surface モデル デバイスのリスト](media\Surface-Model-Device-List.PNG)
 
 - **上位 5 つのファームウェア バージョン** - 環境内の上位 5 つのファームウェア モデルを示すグラフが表示されます。 
-    - グラフ セクションにカーソルを合わせると、選択されたファームウェア バージョンである Surface デバイスの数が表示されます。 
-       ![Surface モデル デバイスのリスト](media\Surface-Firmware-Hover.PNG)
+    - グラフ セクションにカーソルを合わせると、選択されたファームウェア バージョンである Surface デバイスの数が表示されます。 Configuration Manager バージョン 1806 以降では、グラフのセクションをクリックすると、関連するデバイスの一覧が表示されます。 <!--1358654--> ![Surface モデル デバイスの一覧](media\Surface-Firmware-Hover.PNG)
 
 
 ## <a name="more-information"></a>説明

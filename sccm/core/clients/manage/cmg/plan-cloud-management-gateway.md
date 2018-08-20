@@ -2,26 +2,25 @@
 title: クラウド管理ゲートウェイの計画
 titleSuffix: Configuration Manager
 description: インターネットを基盤とするクライアントの管理を簡素化するクラウド管理ゲートウェイ (CMG) を計画し、設計します。
-ms.date: 04/10/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e5274398b1a53b5a8dce8b854bccbe0e0d92081
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 78300528fde4a75f8ff816fb5ac2bb8549c2571c
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340857"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383764"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager でクラウド管理ゲートウェイを計画する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
  
-<!--1101764-->
-クラウド管理ゲートウェイ (CMG) は、インターネット上で Configuration Manager クライアントを管理する簡単な方法を提供します。 Microsoft Azure のクラウド サービスとして CMG を展開して、インフラストラクチャを追加せずに、インターネット上を移動する従来のクライアントを管理できます。 また、オンプレミス インフラストラクチャをインターネットに公開する必要がありません。 
+<!--1101764--> クラウド管理ゲートウェイ (CMG) は、インターネット上で構成マネージャー クライアントを管理する簡単な方法を提供します。 Microsoft Azure のクラウド サービスとして CMG を展開して、インフラストラクチャを追加せずに、インターネット上を移動する従来のクライアントを管理できます。 また、オンプレミス インフラストラクチャをインターネットに公開する必要がありません。 
 
 > [!Tip]  
 > この機能はバージョン 1610 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 バージョン 1802 以降、この機能はプレリリース機能ではなくなりました。  
@@ -96,8 +95,7 @@ CMG の展開と操作には、次のコンポーネントが含まれます。
 
 
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
-<!-- 1324735 -->
-バージョン 1802 以降、**Azure Resource Manager の展開**を利用し、CMG を作成できます。 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager で CMG を展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
+<!-- 1324735 --> バージョン 1802 以降、**Azure Resource Manager の展開**を利用し、CMG を作成できます。 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager で CMG を展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
 
 CMG ウィザードでは、Azure 管理証明書を使う**従来のサービス展開**のためのオプションがまだ提供されています。 リソースの展開と管理を簡単にするため、すべての新しい CMG インスタンスに Azure Resource Manager デプロイ モデル を使うことをお勧めします。 可能であれば、Resource Manager で既存の CMG インスタンスを再展開してください。 詳細については、[CMG の変更](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg)に関するページを参照してください。
 
@@ -199,6 +197,7 @@ Fourth Coffee は、シアトルの本社にあるオンプレミス データ�
 | ソフトウェア配布 (ユーザーを対象とし、必須)</br>(Azure AD 統合で)     | ![サポートされています](media/green_check.png)  (1710) |
 | ソフトウェア配布 (ユーザーを対象とし、利用可能)</br>([すべての要件](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![サポートされています](media/green_check.png)  (1802) |
 | Windows 10 一括アップグレード タスク シーケンス     | ![サポートされています](media/green_check.png)  (1802) |
+| CMPivot     | ![サポートされています](media/green_check.png)  (1806) |
 | その他のタスク シーケンス シナリオ     | ![サポートされていません](media/Red_X.png) |
 | クライアント プッシュ     | ![サポートされていません](media/Red_X.png) |
 | サイトの自動割り当て     | ![サポートされていません](media/Red_X.png) |
@@ -264,9 +263,9 @@ CMG では次の Azure コンポーネントが利用され、Azure サブスク
 
 - インターネットベース クライアントは、Windows Update から無料で Microsoft ソフトウェア更新コンテンツを受け取ります。 Microsoft 更新コンテンツが含まれる更新パッケージをクラウド配布ポイントに配布しないでください。配布すると、ストレージとデータ エグレスのコストが発生することがあります。  
 
-- アプリケーションやサードパーティのソフトウェア更新など、他の必要なコンテンツの場合、クラウドベースの配布ポイントに配布する必要があります。 現在のところ、CMG では、コンテンツをクライアントに送信するクラウドベースの配布ポイントのみをサポートしています。  
+- アプリケーションやサードパーティのソフトウェア更新など、他の必要なコンテンツの場合、クラウドの配布ポイントに配布する必要があります。 現在のところ、CMG では、コンテンツをクライアントに送信するクラウドの配布ポイントのみをサポートしています。  
 
-- 詳細については、[クラウドベース配布](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#cost-of-using-cloud-based-distribution)の使用コストに関するページを参照してください。  
+- 詳細については、[クラウド配布ポイント](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost)の使用のコストに関するページを参照してください。  
 
 #### <a name="other-costs"></a>その他のコスト
 

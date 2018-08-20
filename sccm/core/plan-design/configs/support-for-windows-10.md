@@ -2,7 +2,7 @@
 title: Windows 10 のサポート
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager でクライアントとして、または OSD 用にサポートされている Windows 10 のバージョンについて説明します
-ms.date: 04/30/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bea7d3d0e2c4482a08473f49fbdc3916065627b7
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: f5aac395c71b76a0b83826e8f7c9de1e656aa884
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260719"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383641"
 ---
-# <a name="support-for-windows-10-in-system-center-configuration-manager"></a>System Center Configuration Manager での Windows 10 のサポート  
+# <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager での Windows 10 のサポート  
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -40,14 +40,14 @@ Configuration Manager は、Windows 10 の新しいバージョンが利用可�
 <br/>
 次の表は、さまざまなバージョンの Configuration Manager でクライアントとして使用できる Windows 10 のバージョン一覧です。
 
-| Windows 10 バージョン | Configuration Manager 1706 | Configuration Manager 1710 | Configuration Manager 1802 |
-|---------------------|-----|-----|-----|
-| Enterprise 2015 LTSB            <!--10/14/2025-->   | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) |
-| Enterprise 2016 LTSB            <!--10/13/2026-->   | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) |
-| 1607   <br />(*エディションを参照*)   <!--04+6/10/2018-->   | ![サポートされています](media/green_check.png) <sup>1</sup> | ![サポートされています](media/green_check.png) <sup>1</sup> | ![サポートされています](media/green_check.png) <sup>1</sup> |
-| 1703   <br />(*エディションを参照*)   <!--10+6/09/2018-->   | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) |
-| 1709   <br />(*エディションを参照*)   <!--04+6/09/2019-->   | ![下位互換性あり](media/blue_compat.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) |
-| 1803   <br />(*エディションを参照*)   <!--11/12/2019-->   | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされています](media/green_check.png) |
+| Windows 10 バージョン | Configuration Manager 1706 | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 |
+|---------------------|-----|-----|-----|-----|
+| Enterprise 2015 LTSB            <!--10/14/2025-->   | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) |
+| Enterprise 2016 LTSB            <!--10/13/2026-->   | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) |
+| 1607   <br />(*エディションを参照*)   <!--04+6/10/2018-->   | ![サポートされています](media/green_check.png) <sup>1</sup> | ![サポートされています](media/green_check.png) <sup>1</sup> | ![サポートされています](media/green_check.png) <sup>1</sup> | ![サポートされています](media/green_check.png) <sup>1</sup> |
+| 1703   <br />(*エディションを参照*)   <!--10+6/09/2018-->   | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) |
+| 1709   <br />(*エディションを参照*)   <!--04+6/09/2019-->   | ![下位互換性あり](media/blue_compat.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) |
+| 1803   <br />(*エディションを参照*)   <!--11/12/2019-->   | ![サポートされていません](media/Red_X.png) | ![サポートされていません](media/Red_X.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) |
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
@@ -71,11 +71,11 @@ Configuration Manager を使用してオペレーティング システムを展
 
 次の表は、さまざまなバージョンの Configuration Manager で使用できる Windows 10 ADK のバージョン一覧です。
 
-| Windows 10 ADK バージョン  | Configuration Manager 1706 | Configuration Manager 1710 | Configuration Manager 1802   |
-|--------------------|-----|-----|-----|
-| 1703  | ![サポートされています](media/green_check.png) | ![下位互換性あり](media/blue_compat.png) | ![下位互換性あり](media/blue_compat.png) |
-| 1709  | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) |
-| 1803  | ![サポートされていません](media/Red_X.png)   | ![サポートされていません](media/Red_X.png) | ![サポートされています](media/green_check.png) |
+| Windows 10 ADK バージョン  | Configuration Manager 1706 | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 |
+|--------------------|-----|-----|-----|-----|
+| 1703  | ![サポートされています](media/green_check.png) | ![下位互換性あり](media/blue_compat.png) | ![下位互換性あり](media/blue_compat.png) | ![サポートされていません](media/Red_X.png)   |
+| 1709  | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | ![下位互換性あり](media/blue_compat.png) |
+| 1803  | ![サポートされていません](media/Red_X.png)   | ![サポートされていません](media/Red_X.png) | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) |
 
 |キー|
 |--|

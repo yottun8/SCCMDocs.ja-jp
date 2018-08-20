@@ -2,7 +2,7 @@
 title: CNG 証明書の概要
 titleSuffix: Configuration Manager
 description: 'Configuration Manager クライアントとサーバーの Cryptography: Next Generation (CNG) 証明書のサポートについて説明します。'
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a4f37330f94111bcc41b81d9127039056f69e2b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 8b85961c14c3db69c3e02e776798588fadd0fc89
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334268"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383155"
 ---
 # <a name="cng-certificates-overview"></a>CNG 証明書の概要
 <!-- 1356191 --> 
@@ -37,6 +37,10 @@ Configuration Manager の Cryptography: Next Generation (CNG) 証明書のサポ
 - ソフトウェアの更新ポイント
 - 状態移行ポイント     
 
+バージョン 1806 以降では、以下の HTTPS が有効なサーバーの役割には CNG 証明書を使ってください。
+
+- Configuration Manager ポリシー モジュールを使った NDES サーバーを含む、証明書登録ポイント <!--1357314-->
+
 > [!NOTE]
 > CNG は Crypto API (CAPI) と下位互換性があります。 クライアントで CNG のサポートが有効な場合でも、CAPI 証明書は引き続きサポートされます。
 
@@ -54,9 +58,11 @@ Configuration Manager の Cryptography: Next Generation (CNG) 証明書のサポ
 
 - CNG 証明書を使用したクラウド配布ポイントの作成。
 
-- NDES ポリシー モジュールがクライアント認証に CNG 証明書を使用している場合、証明書登録ポイントへの通信は失敗します。
+- NDES ポリシー モジュールがクライアント認証に CNG 証明書を使用している場合、証明書登録ポイントへの通信は失敗します。 
+    - これは、Configuration Manager バージョン 1806 以降でサポートされます。
 
 - タスク シーケンス メディアの作成時に CNG 証明書を指定すると、起動可能なメディアを作成するウィザードが失敗します。
+    - これは、Configuration Manager バージョン 1806 以降でサポートされます。
 
 ## <a name="to-use-cng-certificates"></a>CNG 証明書を使用するには
 
@@ -71,6 +77,7 @@ CNG 証明書を使用するには、証明機関 (CA) が対象コンピュー�
 - **[暗号化]** タブ
 
     - **[プロバイダーのカテゴリ]** が **[キー格納プロバイダー]** である必要があります。 (必須)
+    - **[以下のプロバイダーのうちいずれか 1 つ:]** は、**Microsoft ソフトウェア キー記憶域プロバイダー**にする必要があります。 
 
 > [!NOTE]
 > 環境または組織によって要件は異なる場合があります。 組織の PKI 専門家に相談してください。 CNG を利用するには、証明書テンプレートにキー格納プロバイダーを使用する必要がある、という点を考慮することが重要です。
