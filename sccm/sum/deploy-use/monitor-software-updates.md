@@ -5,17 +5,17 @@ description: System Center Configuration Manager コンソールには、更新�
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 11/20/2016
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-ms.openlocfilehash: bc594fe6b870e1054033601a67209aa9ad72ccef
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: e51e2c8236b014063efe9734baf338ebe70d1eb3
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351868"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384485"
 ---
 # <a name="monitor-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager でのソフトウェア更新プログラムの監視
 
@@ -61,6 +61,26 @@ Configuration Manager バージョン 1610 以降、ソフトウェア更新プ�
 
 ##  <a name="BKMK_SUReports"></a> ソフトウェア更新プログラムのレポート  
  ソフトウェアの更新の状態メッセージには、ソフトウェア更新プログラムのコンプライアンスに関する情報と、ソフトウェア更新プログラムの展開についての評価と強制実行状態に関する情報が示されます。 ソフトウェア更新プログラム レポートを実行して、これらの状態メッセージを表示できます。 事前定義されたソフトウェア更新プログラム レポートが 30 種類以上用意されています。 レポートは複数のカテゴリに分類され、ソフトウェア更新プログラムと展開に関する特定の情報のレポートに使用できます。 事前に構成されたレポートを使用するだけでなく、企業のニーズに応じて、ソフトウェア更新プログラムのカスタム レポートを作成することもできます。 詳しくは、「[レポートの操作とメンテナンス](../../core/servers/manage/operations-and-maintenance-for-reporting.md)」を参照してください。  
+
+### <a name="recommended-software-updates-reports"></a>推奨されるソフトウェア更新プログラムのレポート
+潜在的な問題を特定するのに便利なレポートの一部を次に示します。 
+
+#### <a name="compliance-9---overall-health-and-compliance-starting-in-version-1806"></a>コンプライアンス 9 - 全体的な正常性とコンプライアンス (バージョン 1806 以降)
+レポートには、次の部分が含まれます。
+
+- **[Healthy Clients vs Total Clients]\(正常なクライアントとクライアントの合計数\)**: この棒グラフでは、指定した期間にサイトと通信した "正常な" クライアントと、指定したコレクション内のクライアントの合計数が比較されます。
+- **[Compliance Overview]\(コンプライアンスの概要\)**: この円グラフでは、指定したコレクション内のアクティブなクライアントでの、特定のソフトウェア更新プログラム グループの全体的なコンプライアンスの状態が示されます。
+- **[Top 5 Non-Compliant by Article ID]\(アーティクル ID 別非準拠トップ 5\)**: この棒グラフでは、指定したコレクション内のアクティブなクライアントで準拠していない、指定したグループ内の上位 5 つのソフトウェア更新プログラムが表示されます。
+- レポートの下部には、さらなる詳細のテーブルがあります。ここでは、指定したグループ内のソフトウェア更新プログラムが一覧表示されます。
+
+#### <a name="management-2---updates-required-but-not-deployed"></a>管理 2 - 更新が必要であるが展開されていない
+
+このレポートは、クライアントに必須として検出されているがまだ特定のコレクションに展開されていない、特定の更新プログラムの分類に含まれるベンダー固有のソフトウェア更新プログラムを表示します。 
+
+#### <a name="troubleshooting-2---deployment-errors"></a>トラブルシューティング 2 - 展開エラー
+
+このレポートには、サイトで発生した展開エラーと、各エラーが発生したコンピューターの数が表示されます。 
+
 
 ##  <a name="BKMK_MonitorContent"></a> コンテンツの監視  
  Configuration Manager コンソールでコンテンツを監視して、関連する配布ポイントについて、すべての種類のパッケージのステータスを確認できます。 たとえば、パッケージのコンテンツのコンテンツ検証ステータス、特定の配布ポイント グループに割り当てられているコンテンツのステータス、配布ポイントに割り当てられているコンテンツの状態、各配布ポイントのオプション機能 (コンテンツ検証、PXE、マルチキャスト) のステータスなどを確認できます。  
