@@ -60,7 +60,7 @@ ms.locfileid: "32340711"
 
 -   対象の展開に適用する更新プログラムを Configuration Manager 内から利用できるようにします。  
 
-このサイト システムの役割は、オンラインとオフラインの両方の操作モードをサポートしています。 詳細については、「 [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md)」をご覧ください。  
+このサイト システムの役割は、オンラインとオフラインの両方の操作モードをサポートしています。 詳細については、[System Center Configuration Manager のサービス接続ポイントについて](../../../core/servers/deploy/configure/about-the-service-connection-point.md)をご覧ください。  
 
 ##  <a name="bkmk_usage"></a> 使用状況データの収集  
  System Center Configuration Manager は、サイトとインフラストラクチャに関する使用状況データを収集します。 この情報がコンパイルされ、サービス接続ポイントによって Microsoft クラウド サービスに送信されます。 使用している Configuration Manager のバージョンに適用される更新プログラムをダウンロードするには、Configuration Manager を有効にする必要があります。 サービス接続ポイントを設定するときには、収集するデータのレベルと、そのデータを自動的に送信するか (オンライン モード)、手動で送信するか (オフライン モード) の両方を設定できます。  
