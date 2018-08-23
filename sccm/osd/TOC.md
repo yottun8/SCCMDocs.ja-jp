@@ -56,7 +56,7 @@
 ### [ユーザー状態をキャプチャおよび復元するタスク シーケンスの作成](deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)
 ### [バーチャル ハード ディスクを管理するためのタスク シーケンスの使用](deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md)
 
-## [カスタム タスク シーケンスのシナリオ](deploy-use/custom-task-sequence-scenarios.md)
+## カスタム タスク シーケンスのシナリオ
 ### [カスタム タスク シーケンスの作成](deploy-use/create-a-custom-task-sequence.md)
 ### [オペレーティング システム以外の展開用タスク シーケンスの作成](deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)
 ### [BIOS からUEFI への変換を管理するためのタスク シーケンス手順](deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)

@@ -4,12 +4,12 @@ hide_bc: true
 title: System Center Configuration Manager のドキュメント
 description: System Center Configuration Manager を使用する方法について説明します。
 ms.topic: hub-page
-ms.openlocfilehash: 250f5cf0793f5afd396a82f96389c937ed9be14b
-ms.sourcegitcommit: e3f7bb8cec4b37a311bc86098297534cab947de8
+ms.openlocfilehash: 9288732db8771d9ae83c006b1865683fe58ebc0e
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "29781764"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42587896"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -70,8 +70,8 @@ ms.locfileid: "29781764"
                                             <div class="cardText">
                                                 <h3>モバイル デバイス管理</h3>
                                                 <p><a href="/sccm/mdm/understand/hybrid-mobile-device-management">ハイブリッド モバイル デバイス管理 の概要</a></p>
-                                                <p><a href="/sccm/mdm/deploy-use/setup-hybrid-mdm">Intune でハイブリッド MDM を設定する</a></p>
-                                                <p><a href="/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management">Configuration Manager を利用し、Intune スタンドアロンまたはハイブリッド MDM を選択する</a></p>
+                                                <p><a href="/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa">ハイブリッド MDM のユーザーとデバイスを Intune スタンドアロンに移行する</a></p>
+                                                <p><a href="/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management">ハイブリッド MDM の新機能</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -344,7 +344,7 @@ ms.locfileid: "29781764"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/mdm/deploy-use/setup-hybrid-mdm">
+                                <a href="/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -354,8 +354,8 @@ ms.locfileid: "29781764"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Intune でハイブリッド MDM を設定する</h3>
-                                                <p>BYOD シナリオを有効にして、ほとんどの企業所有のデバイス管理戦略の前提条件を満たします。</p>
+                                                <h3>ハイブリッド MDM のユーザーとデバイスを Intune スタンドアロンに移行する</h3>
+                                                <p>ハイブリッド MDM から推奨される Intune スタンドアロンのソリューションに移行するには、段階的なアプローチを使用します。</p>
                                             </div>
                                         </div>
                                     </div>
@@ -363,7 +363,7 @@ ms.locfileid: "29781764"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management">
+                                <a href="/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -373,8 +373,8 @@ ms.locfileid: "29781764"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Configuration Manager を利用し、Intune スタンドアロンまたはハイブリッド MDM を選択する</h3>
-                                                <p>Intune はスタンドアロンまたはハイブリッド MDM ですか? いずれかを選択するメリット </p>
+                                                <h3>ハイブリッド MDM の新機能</h3>
+                                                <p>ハイブリッド MDM. でサポートされている Intune の新機能について説明します。</p>
                                             </div>
                                         </div>
                                     </div>
