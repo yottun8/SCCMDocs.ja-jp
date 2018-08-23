@@ -136,7 +136,7 @@ ms.locfileid: "32341017"
 
 2.  **[ホーム]** タブの **[資産インテリジェンス]** グループで **[ソフトウェア ライセンスのインポート]** を選択します。   
 
-4.  **[インポート]** ページで、Microsoft Volume Licensing Services (MVLS) ファイル (.xml または .csv) と標準ライセンス ステートメント ファイル (.csv) のどちらをインポートするのかを指定します。 一般的なライセンス ステートメント ファイル作成の詳細については、このトピックの「 [Create a general license statement information file for import](#BKMK_CreateGeneralLicenseStatement) 」を参照してください。  
+4.  **[インポート]** ページで、Microsoft Volume Licensing Services (MVLS) ファイル (.xml または .csv) と標準ライセンス ステートメント ファイル (.csv) のどちらをインポートするのかを指定します。 一般的なライセンス ステートメント ファイル作成の詳細については、このトピックの「 [インポート用の標準ライセンス ステートメント情報ファイルの作成](#BKMK_CreateGeneralLicenseStatement) 」を参照してください。  
 
     > [!WARNING]  
     >  資産インテリジェンスカタログにインポートできる .csv 形式のMVLS ファイルをダウンロードするには、「 [Microsoft Volume Licensing Service Center](http://go.microsoft.com/fwlink/p/?LinkId=226547)」を参照してください。 この情報にアクセスするには、Web サイトに登録済アカウントを持っている必要があります。 MVLS ファイルを .xml 形式にする方法の詳細については、Microsoft アカウント担当者に問い合わせる必要があります。  
@@ -148,7 +148,7 @@ ms.locfileid: "32341017"
 
 6. ウィザードを完了します。  
 
-###  <a name="BKMK_CreateGeneralLicenseStatement"></a> Create a general license statement information file for import  
+###  <a name="BKMK_CreateGeneralLicenseStatement"></a> インポート用の標準ライセンス ステートメント情報ファイルの作成  
  手動で作成したコンマ区切りの .csv ファイル形式のライセンス インポート ファイルを使用すると、一般的なライセンス ステートメントも資産インテリジェンス カタログにインポートできます。  
 
 > [!NOTE]  

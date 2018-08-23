@@ -60,7 +60,7 @@ System Center Configuration Manager アプリケーションを使用して Mac 
 
  Configuration Manager の登録を使用せず、Configuration Manager とは独立したクライアント証明書をインストールする場合は、「[アップグレードしたクライアントが既存の証明書を使用するように構成する](#BKMK_UpgradingClient_MachineEnrollment)」を参照してください。  
 
-##  <a name="BKMK_UpgradingClient_MachineEnrollment"></a> Configure the upgraded client to use an existing certificate  
+##  <a name="BKMK_UpgradingClient_MachineEnrollment"></a> アップグレードしたクライアントが既存の証明書を使用するように構成する  
  次の手順に従って、コンピューターの登録ウィザードの実行を回避し、アップグレードしたクライアントが既存のクライアント証明書を使用するように構成します。  
 
 -   Configuration Manager コンソールで、種類が **[Mac OS X]** の構成項目を作成します。  

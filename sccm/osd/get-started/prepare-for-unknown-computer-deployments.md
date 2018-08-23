@@ -78,4 +78,4 @@ System Center Configuration Manager 環境でオペレーティング システ�
 
 -   **事前設定されたメディア**  
 
-     タスク シーケンス メディアの作成ウィザードの **[セキュリティ]** ページで、 **[不明なコンピューターのサポートを有効にする]** チェック ボックスをオンにします。 詳細については、「 [Create prestaged media with System Center Configuration Manager](../deploy-use/create-prestaged-media.md)」をご覧ください。  
+     タスク シーケンス メディアの作成ウィザードの **[セキュリティ]** ページで、 **[不明なコンピューターのサポートを有効にする]** チェック ボックスをオンにします。 詳細については、「 [System Center Configuration Manager を使用した事前設定されたメディアの作成](../deploy-use/create-prestaged-media.md)」をご覧ください。  
