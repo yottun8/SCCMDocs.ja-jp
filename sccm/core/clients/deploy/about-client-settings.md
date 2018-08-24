@@ -2,7 +2,7 @@
 title: クライアント設定
 titleSuffix: Configuration Manager
 description: クライアントの動作を制御する既定の設定とカスタム設定について説明します。
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a60e54ffac3ae029f07c2df555e905b55ca7b0b5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 38306efc9fbd7b38a5c5f0dad57fbd1a1b2c0557
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342887"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385407"
 ---
-# <a name="about-client-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager のクライアント設定について
+# <a name="about-client-settings-in-configuration-manager"></a>Configuration Manager のクライアント設定について
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-すべてのクライアント設定は、Configuration Manager コンソールの **[管理]** ワークスペースの **[クライアント設定]** ノードから管理します。 Configuration Manager には、一連の既定の設定が用意されています。 既定のクライアント設定を変更すると、変更された設定が階層内のすべてのクライアントに適用されます。 カスタムのクライアント設定も構成でき、これらの設定をコレクションに割り当てると、既定のクライアント設定よりも優先されます。 詳しくは、「[クライアント設定を構成する方法](../../../core/clients/deploy/configure-client-settings.md)」をご覧ください。
+すべてのクライアント設定は、Configuration Manager コンソールの **[管理]** ワークスペースの **[クライアント設定]** ノードから管理します。 Configuration Manager には、一連の既定の設定が用意されています。 既定のクライアント設定を変更すると、変更された設定が階層内のすべてのクライアントに適用されます。 カスタムのクライアント設定も構成でき、これらの設定をコレクションに割り当てると、既定のクライアント設定をオーバーライドします。 詳しくは、「[クライアント設定を構成する方法](/sccm/core/clients/deploy/configure-client-settings)」をご覧ください。
 
 以下のセクションでは、設定とオプションについて詳しく説明します。  
  
@@ -88,7 +88,7 @@ Configuration Manager は、このトラフィックを許可する Windows Fire
 
 ### <a name="enable-user-policy-on-clients"></a>クライアントでユーザー ポリシーを有効にする
 
-このオプションを **[はい]** に設定して、[ユーザーの探索](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)を使うと、クライアントはサインイン ユーザーの対象になっているアプリケーションとプログラムを受け取ります。  
+このオプションを **[はい]** に設定して、[ユーザーの探索](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser)を使うと、クライアントはサインイン ユーザーの対象になっているアプリケーションとプログラムを受け取ります。  
 
 アプリケーション カタログは、ユーザーが利用可能なソフトウェアの一覧をサイト サーバーから受け取ります。 したがって、ユーザーがアプリケーション カタログを使ってアプリケーションを表示および要求する場合は、この設定を **[はい]** に設定する必要はありません。 この設定を **[いいえ]** にした場合、ユーザーがアプリケーション カタログを使うと次のような動作になります。  
 
@@ -106,13 +106,13 @@ Configuration Manager は、このトラフィックを許可する Windows Fire
 
 ### <a name="enable-user-policy-requests-from-internet-clients"></a>インターネット クライアントからのユーザー ポリシー要求を有効にする
 
-ユーザーがインターネット ベースのコンピューターを使っているときもユーザー ポリシーを受け取るようにするには、これを **[はい]** に設定します。 以下の要件も適用されます。  
+ユーザーがインターネット ベースのコンピューターを使っているときもユーザー ポリシーを受け取るようにするには、このオプションを **[はい]** に設定します。 以下の要件も適用されます。  
 
 -   クライアントとサイトは、[インターネット ベースのクライアント管理](/sccm/core/clients/manage/plan-internet-based-client-management)に対してか、[クラウド管理ゲートウェイ](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)に対して構成されます。  
 
 -   **[クライアントでユーザー ポリシーを有効にする]** が **[はい]** に設定されている。  
 
--   インターネット ベースの管理ポイントが、Windows 認証 (Kerberos または NTLM) を使ってユーザーを正しく認証する。 詳細については、[インターネットからのクライアント通信に関する考慮事項](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)のページを参照してください。  
+-   インターネット ベースの管理ポイントが、Windows 認証 (Kerberos または NTLM) を使ってユーザーを正しく認証する。 詳細については、[インターネットからのクライアント通信に関する考慮事項](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan)のページを参照してください。  
 
 -   バージョン 1710 より、クラウド管理ゲートウェイは Azure Active Directory を使用してユーザーを正常に認証するようになりました。 詳細については、[Azure AD 参加デバイスにユーザーが利用できるアプリケーションを展開する方法](\sccm\apps\deploy-use\deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)に関するページを参照してください。  
 
@@ -126,7 +126,7 @@ Configuration Manager は、このトラフィックを許可する Windows Fire
 ## <a name="cloud-services"></a>クラウド サービス
 
 ### <a name="allow-access-to-cloud-distribution-point"></a>クラウド配布ポイントへのアクセスを許可する
-クライアントがクラウド配布ポイントからコンテンツを取得できるようにする場合は、これを **[はい]** に設定します。 この設定を有効にする場合、デバイスがインターネット ベースである必要はありません。
+クライアントがクラウド配布ポイントからコンテンツを取得できるようにする場合は、このオプションを **[はい]** に設定します。 この設定を有効にする場合、デバイスがインターネット ベースである必要はありません。
 
 ### <a name="automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory"></a>新しい Windows 10 ドメインに参加しているデバイスを自動的に Azure Active Directory に登録する 
 ハイブリッド結合をサポートするように Azure Active Directory を構成すると、Configuration Manager はこの機能対応に Windows 10 デバイスを構成します。 詳しくは、「[ハイブリッド Azure Active Directory 参加済みデバイスの構成方法](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)」をご覧ください。
@@ -139,13 +139,13 @@ Configuration Manager は、このトラフィックを許可する Windows Fire
 ##  <a name="compliance-settings"></a>コンプライアンス設定  
 
 ### <a name="enable-compliance-evaluation-on-clients"></a>[クライアントのコンプライアンス評価を有効にする]
-このグループの他の設定を構成するには、これを **[はい]** に設定します。
+このグループの他の設定を構成するには、このオプションを **[はい]** に設定します。
  
 ### <a name="schedule-compliance-evaluation"></a>[コンプライアンスの評価スケジュールを設定する]
 構成基準展開の既定のスケジュールを作成するには、**[スケジュール]** を選びます。 この値は、**[構成基準の展開]** ダイアログ ボックスの基準ごとに構成できます。  
 
 ### <a name="enable-user-data-and-profiles"></a>[ユーザー データとプロファイルを有効にする]
-[ユーザー データとプロファイル](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md)の構成項目を展開する場合は、**[はい]** を選びます。
+[ユーザー データとプロファイル](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items)の構成項目を展開する場合は、**[はい]** を選びます。
 
 
 
@@ -169,9 +169,9 @@ Configuration Manager は、この設定を使用して、ソフトウェア セ
 
 -   管理ポイントは、インターネット ベースのクライアントに、インターネット ベースのアプリケーション カタログ Web サイト ポイントを提供します。 管理ポイントは、イントラネット ベースのクライアントに、イントラネット ベースのアプリケーション カタログ Web サイト ポイントを提供します。  
 
-自動検出では、最も近いアプリケーション カタログ Web サイト ポイントがクライアントに提供されるとは限りません。 次の理由から、**[自動検出]** を使用しない場合があります。  
+自動検出では、最も近いアプリケーション カタログ Web サイト ポイントがクライアントに提供されるとは限りません。 次の理由から、**[自動検出]** のオプションを使用しない場合があります。  
 
--   クライアントに最も近いサーバーを手動で構成する必要がある、または低速のネットワーク接続経由でクライアントがサーバーに接続しないようにする必要がある。  
+-   クライアントに最も近いサーバーを手動で構成する必要がある、または低速のネットワーク接続経由でクライアントがサーバーに接続しないように確認する必要がある。  
 
 -   各クライアントがどのサーバーに接続するのかを制御する必要がある。 この構成は、テスト、パフォーマンス、またはビジネス上の理由から行われることがあります。  
 
@@ -215,7 +215,7 @@ Configuration Manager は、この設定を使用して、ソフトウェア セ
 
 この設定を変更すると、次にユーザーがブラウザーを読み込むか、現在開いているブラウザー ウィンドウを更新したときに、有効になります。  
 
-この設定について詳しくは、「[Microsoft Silverlight 5 用の証明書、およびアプリケーション カタログに必要な管理者特権での信頼モード](../../../apps/plan-design/security-and-privacy-for-application-management.md#BKMK_CertificatesSilverlight5)」をご覧ください。  
+この設定について詳しくは、「[Microsoft Silverlight 5 用の証明書、およびアプリケーション カタログに必要な管理者特権での信頼モード](/sccm/apps/plan-design/security-and-privacy-for-application-management#BKMK_CertificatesSilverlight5)」をご覧ください。  
 
 ### <a name="organization-name-displayed-in-software-center"></a>ソフトウェア センターに表示される組織名
 
@@ -223,19 +223,19 @@ Configuration Manager は、この設定を使用して、ソフトウェア セ
 
 ### <a name="use-new-software-center"></a>新しいソフトウェア センターの使用
 
-これを **[はい]** に設定すると、すべてのクライアント コンピューターが新しいソフトウェア センターを使います。 ソフトウェア センターでは、以前はアプリケーション カタログ内だけでアクセスできた、ユーザーが利用できるアプリが表示されます。 アプリケーション カタログには Silverlight が必要ですが、ソフトウェア センターではこれは前提条件ではありません。 Configuration Manager 1802 より、既定の設定は **[はい]** です。  
+このオプションを **[はい]** に設定すると、すべてのクライアント コンピューターが新しいソフトウェア センターを使います。 ソフトウェア センターでは、以前はアプリケーション カタログ内だけでアクセスできた、ユーザーが利用できるアプリが表示されます。 アプリケーション カタログには Silverlight が必要ですが、ソフトウェア センターではこれは前提条件ではありません。 Configuration Manager 1802 より、既定の設定は **[はい]** です。  
 
 ユーザーが利用できるアプリをソフトウェア センターに表示するには、アプリケーション カタログ Web サイト ポイントとアプリケーション カタログ Web サービス ポイントのサイト システムの役割が引き続き必要です。  
 
-詳細については、「[Plan for and configure application management](../../../apps/plan-design/plan-for-and-configure-application-management.md)」(アプリケーション管理の計画と構成) を参照してください。  
+詳細については、「[Plan for and configure application management](/sccm/apps/plan-design/plan-for-and-configure-application-management)」(アプリケーション管理の計画と構成) を参照してください。  
 
 ### <a name="enable-communication-with-health-attestation-service"></a>正常性構成証明サービスとの通信を有効にします
 
-Windows 10 デバイスで[正常性構成証明](/sccm/core/servers/manage/health-attestation)を使う場合は、これを **[はい]** に設定します。 この設定を有効にすると、次の設定も構成できるようになります。
+Windows 10 デバイスで[正常性構成証明](/sccm/core/servers/manage/health-attestation)を使う場合は、このオプションを **[はい]** に設定します。 この設定を有効にすると、次の設定も構成できるようになります。
 
 ### <a name="use-on-premises-health-attestation-service"></a>オンプレミスの正常性構成証明サービスを使用する
 
-デバイスがオンプレミスのサービスを使う場合は、これを **[はい]** に設定します。 Microsoft クラウド ベースのサービスを使うデバイスでは、**[いいえ]** に設定します。  
+デバイスがオンプレミスのサービスを使う場合は、このオプションを **[はい]** に設定します。 Microsoft クラウド ベースのサービスを使うデバイスでは、**[いいえ]** に設定します。  
 
 ### <a name="install-permissions"></a>インストール権限
 
@@ -304,7 +304,7 @@ Configuration Manager クライアントで Windows PowerShell スクリプト�
 
 ### <a name="grace-period-for-enforcement-after-deployment-deadline-hours"></a>展開期限後の実施の猶予期間 (時間)
 
-必要なアプリケーションのインストール、またはソフトウェア更新プログラムの展開の期限が過ぎてからも、さらにユーザーに時間を与えられるようにする場合は、これを **[はい]** に設定します。 この猶予期間は、ユーザーが、長い間コンピューターの電源を切っていて、多くのアプリケーションまたは更新プログラムの展開をインストールする必要がある場合のためのものです。 たとえば、ユーザーが休暇から戻ってきて、期限を過ぎたアプリケーションの展開をクライアントがインストールするのを長時間待たなければならないような場合に、この設定が役立ちます。 
+必要なアプリケーションのインストール、またはソフトウェア更新プログラムの展開の期限が過ぎてからも、さらにユーザーに時間を与えられるようにする場合は、このオプションを **[はい]** に設定します。 この猶予期間は、ユーザーが、長い間コンピューターの電源を切っていて、多くのアプリケーションまたは更新プログラムの展開をインストールする必要がある場合のためのものです。 たとえば、ユーザーが休暇から戻ってきて、期限を過ぎたアプリケーションの展開をクライアントがインストールするのを長時間待たなければならないような場合に、この設定が役立ちます。 
 
 1 から 120 時間の間で猶予期間を設定します。 この設定は、展開プロパティ **[ユーザー設定に従い、この展開の実施を延期する]** と共に使います。 詳細については、「[アプリケーションの展開](/sccm/apps/deploy-use/deploy-applications)」をご覧ください。
 
@@ -315,14 +315,13 @@ Configuration Manager クライアントで Windows PowerShell スクリプト�
 -   **ユーザーがログオフするかコンピューターを再起動するまでの時間を知らせる一時的な通知を表示する (分)**
 -   **ユーザーがログオフするかコンピューターを再起動するまでの時間を知らせる、ユーザーが閉じることのできないダイアログ ボックスを表示する (分)**
 
-メンテナンス期間の詳細については、「[System Center Configuration Manager でメンテナンス期間を使用する方法](../../../core/clients/manage/collections/use-maintenance-windows.md)」を参照してください。
+メンテナンス期間の詳細については、「[System Center Configuration Manager でメンテナンス期間を使用する方法](/sccm/core/clients/manage/collections/use-maintenance-windows)」を参照してください。
 
 
 
 ## <a name="delivery-optimization"></a>配信の最適化
 
-<!-- 1324696 -->
-Configuration Manager の境界グループを使って、企業ネットワークおよびリモート オフィスへのコンテンツ配布を定義して調整します。 [Windows の配信最適化](/windows/deployment/update/waas-delivery-optimization)は、Windows 10 デバイス間でコンテンツを共有するための、クラウド ベースのピア ツー ピア テクノロジです。 バージョン 1802 以降、ピア間でコンテンツを共有するときは、境界グループを使うように配信の最適化を構成します。
+<!-- 1324696 --> Configuration Manager の境界グループを使って、企業ネットワークおよびリモート オフィスへのコンテンツ配布を定義して調整します。 [Windows の配信最適化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)は、Windows 10 デバイス間でコンテンツを共有するための、クラウド ベースのピア ツー ピア テクノロジです。 バージョン 1802 以降、ピア間でコンテンツを共有するときは、境界グループを使うように配信の最適化を構成します。
 
  > [!Note]
  > 配信の最適化は Windows 10 クライアントでのみ利用できます
@@ -349,13 +348,15 @@ Configuration Manager の境界グループを使って、企業ネットワー�
 > [!NOTE]  
 >  Endpoint Protection クライアントが既にインストールされている場合は、**[いいえ]** を選んでも Endpoint Protection クライアントはアンインストールされません。 Endpoint Protection クライアントをアンインストールするには、**[クライアント コンピューターの Endpoint Protection クライアントを管理する]** クライアント設定を **[いいえ]** に設定します。 その後、パッケージとプログラムを展開して Endpoint Protection クライアントをアンインストールします。  
 
-### <a name="automatically-remove-previously-installed-antimalware-software-before-endpoint-protection-is-installed"></a>Endpoint Protection をインストールする前に、インストールされているマルウェア対策ソフトウェアを自動的に削除する
+<!-- removed in 1806, SMS 511544
+### Automatically remove previously installed antimalware software before Endpoint Protection is installed
 
-Endpoint Protection クライアントで他のマルウェア対策アプリケーションのアンインストールを試みる場合は、これを **[はい]** に設定します。 同じデバイスに複数のマルウェア対策クライアントがあると、競合してシステムのパフォーマンスに影響を与える可能性があります。
+Set this option to **Yes** for the Endpoint Protection client to attempt to uninstall other antimalware applications. Multiple antimalware clients on the same device can conflict, and impact system performance.
+-->
 
 ### <a name="allow-endpoint-protection-client-installation-and-restarts-outside-maintenance-windows-maintenance-windows-must-be-at-least-30-minutes-long-for-client-installation"></a>メンテナンス期間外の Endpoint Protection クライアントのインストールと再起動を許可します。 クライアント インストール用のメンテナンス期間は、最短で 30 分にする必要があります。
 
-通常のインストール動作をメンテナンス期間で上書きする場合は、これを **[はい]** に設定します。 この設定は、セキュリティのためにシステムのメンテナンスを優先させるビジネス要件を満たします。 
+通常のインストール動作をメンテナンス期間でオーバーライドする場合は、このオプションを **[はい]** に設定します。 この設定は、セキュリティのためにシステムのメンテナンスを優先させるビジネス要件を満たします。 
 
 ### <a name="for-windows-embedded-devices-with-write-filters-commit-endpoint-protection-client-installation-requires-restarts"></a>書き込みフィルターのある Windows Embedded デバイスに対し、Endpoint Protection クライアントのインストールをコミットする (再起動が必要)
 
@@ -389,13 +390,13 @@ Configuration Manager に初期定義の更新プログラムのみをクライ�
 最新のデバイスがポリシーのポーリングを行う間隔を分単位で入力します。 この設定は、オンプレミスのモバイル デバイス管理によって管理される Windows 10 デバイスのためのものです。
 
 ### <a name="allow-users-to-enroll-mobile-devices-and-mac-computers"></a>ユーザーがモバイル デバイスと Mac コンピューターを登録できるようにする
-レガシ デバイスのユーザー ベースの登録を有効にするには、これを **[はい]** に設定して、次の設定を構成します。
+レガシ デバイスのユーザー ベースの登録を有効にするには、このオプションを **[はい]** に設定して、次の設定を構成します。
 
 -   **登録プロファイル** </br>
 **[プロファイルの設定]** を選び、登録プロファイルを作成または選択します。 詳しくは、「[登録のためのクライアント設定を構成する](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings-for-enrollment)」をご覧ください。
 
 ### <a name="allow-users-to-enroll-modern-devices"></a>新しいデバイスの登録をユーザーに許可する
-新しいデバイスのユーザー ベースの登録を有効にするには、これを **[はい]** に設定して、次の設定を構成します。
+新しいデバイスのユーザー ベースの登録を有効にするには、このオプションを **[はい]** に設定して、次の設定を構成します。
 
 -   **新しいデバイスの登録プロファイル** </br>
 **[プロファイルの設定]** を選び、登録プロファイルを作成または選択します。 詳しくは、「[ユーザーが最新のデバイスを登録できるようにするための登録プロファイルを作成する](/sccm/mdm/get-started/set-up-device-enrollment-on-premises-mdm#bkmk_createProf)」をご覧ください。
@@ -425,7 +426,7 @@ Configuration Manager に初期定義の更新プログラムのみをクライ�
 
 ### <a name="hardware-inventory-classes"></a>ハードウェア インベントリ クラス
 
-**[クラスの設定]** を選ぶと、sms_def.mof ファイルを手動で編集することなくクライアントから収集できるハードウェア情報が表示されます。 詳しくは、「[ハードウェア インベントリを構成する方法](../../../core/clients/manage/inventory/configure-hardware-inventory.md)」をご覧ください。  
+**[クラスの設定]** を選ぶと、sms_def.mof ファイルを手動で編集することなくクライアントから収集できるハードウェア情報が表示されます。 詳しくは、「[ハードウェア インベントリを構成する方法](/sccm/core/clients/manage/inventory/configure-hardware-inventory)」をご覧ください。  
 
 ### <a name="collect-mif-files"></a>MIF ファイルを収集する
 
@@ -448,7 +449,7 @@ MIF ファイルをハードウェア インベントリで収集するために
 > [!NOTE]  
 >  構成したクライアント設定は、次のシナリオでは適用されません。  
 >   
-> -   コンピューターがローミング データ接続を使っている場合、Configuration Manager クライアントは、Configuration Manager サイトへのデータ転送が必要なタスクを実行しません。  
+> -   コンピューターがローミング データ接続を使っている場合、構成マネージャー クライアントは、Configuration Manager サイトへのデータ転送が必要なタスクを実行しません。  
 > -   Windows ネットワーク接続のプロパティが従量制以外に構成されている場合、構成マネージャー クライアントは、接続が従量制以外であるものとして動作し、サイトにデータを転送します。  
 
 ### <a name="client-communication-on-metered-internet-connections"></a>従量制ネットワーク接続でのクライアントの通信方法
@@ -472,7 +473,7 @@ MIF ファイルをハードウェア インベントリで収集するために
 
     クライアントが従量制インターネット接続のデータ転送の制限に達した場合、クライアントはそれ以上 Configuration Manager サイトとの通信を試行しません。  
 
--   **[ブロック]**: Configuration Manager クライアントは、従量制インターネット接続を使っている場合に、Configuration Manager サイトとの通信を試行しません。 これは既定のオプションです  
+-   **[ブロック]**:構成マネージャー クライアントは、従量制インターネット接続を使っている場合に、Configuration Manager サイトとの通信を試行しません。 これが既定のオプションです。  
 
 
 
@@ -480,7 +481,7 @@ MIF ファイルをハードウェア インベントリで収集するために
 
 ### <a name="allow-power-management-of-devices"></a>デバイスの電源管理を許可する
 
-クライアントでの電源管理を有効にするには、これを **[はい]** に設定します。 詳細については、「[電源管理の概要](/sccm/core/clients/manage/power/introduction-to-power-management)」を参照してください。
+クライアントでの電源管理を有効にするには、このオプションを **[はい]** に設定します。 詳細については、「[電源管理の概要](/sccm/core/clients/manage/power/introduction-to-power-management)」を参照してください。
 
 ### <a name="allow-users-to-exclude-their-device-from-power-management"></a>ユーザーがデバイスを電源管理対象から外せるようにする
 
@@ -490,29 +491,25 @@ MIF ファイルをハードウェア インベントリで収集するために
 
 サイトでユニキャスト パケットが構成されている場合に、サイトの Wake On LAN 設定を補足するには、**[はい]** を指定します。  
 
-ウェイクアップ プロキシの詳細については、「[Plan how to wake up clients in System Center Configuration Manager](../../../core/clients/deploy/plan/plan-wake-up-clients.md)」 (System Center Configuration Manager でのクライアントのウェイクアップ方法の計画) を参照してください。  
+ウェイクアップ プロキシの詳細については、[クライアントをウェイク アップする方法の計画](/sccm/core/clients/deploy/plan/plan-wake-up-clients)に関するページを参照してください。  
 
 > [!WARNING]  
 >  テスト環境でウェイクアップ プロキシがどのように動作するかを理解するまで、実稼動環境でウェイクアップ プロキシを有効にしないでください。  
 
 確認した後、必要に応じて以下の追加設定を構成します。
 
--   **[ウェイクアップ プロキシのポート番号 (UDP)]**  </br>
-         スリープ状態のコンピューターにウェイクアップ パケットを送信するためにクライアントが使うポート番号です。 既定のポート 25536 のままにするか、または適切な値に変更します。  
+-   **[ウェイクアップ プロキシのポート番号 (UDP)]**: スリープ状態のコンピューターにウェイクアップ パケットを送信するためにクライアントが使うポート番号です。 既定のポート 25536 のままにするか、または適切な値に変更します。  
 
--   **[Wake On LAN ポート番号 (UDP)]** </br> 
-         サイトの **[プロパティ]** の **[ポート]** タブで Wake On LAN (UDP) ポート番号を変更していない場合は、既定値 9 のままにします。  
+-   **[Wake On LAN ポート番号 (UDP)]**: サイトの **[プロパティ]** の **[ポート]** タブで Wake On LAN (UDP) ポート番号を変更していない場合は、既定値 9 のままにします。  
 
     > [!IMPORTANT]  
     >  この数値は、サイトの **[プロパティ]** の数値と一致する必要があります。 一方でこの数値を変更した場合、もう一方では自動的に更新されません。  
 
--   **ウェイクアップ プロキシ用の Windows Defender ファイアウォールの例外** </br>
-         構成マネージャー クライアントは、Windows Defender ファイアウォールを実行しているデバイスのウェイクアップ プロキシのポート番号を自動的に構成します。 必要なファイアウォール プロファイルを指定するには、**[構成]** を選びます。
+-   **ウェイクアップ プロキシ用の Windows Defender ファイアウォールの例外**: 構成マネージャー クライアントは、Windows Defender ファイアウォールを実行しているデバイスのウェイクアップ プロキシのポート番号を自動的に構成します。 必要なファイアウォール プロファイルを指定するには、**[構成]** を選びます。
 
-    クライアントが別のファイアウォールを実行している場合は、**[ウェイクアップ プロキシのポート番号 (UDP)]** を許可するように手動で構成する必要があります。  
+    クライアントが別のファイアウォールを実行している場合は、**[ウェイクアップ プロキシのポート番号 (UDP)]** を許可するように手動で構成します。  
         
--   **DirectAccess または他の介在するネットワーク デバイスで必要な場合は、IPv6 プレフィックス。複数のエントリを指定する場合は、コンマで区切ります。** </br>
-        ウェイクアップ プロキシがネットワーク上で機能するために必要な IPv6 プレフィックスを入力します。
+-   **DirectAccess または他の介在するネットワーク デバイスで必要な場合は、IPv6 プレフィックス。コンマを使用して複数のエントリを指定する**: ウェイクアップ プロキシがネットワーク上で機能するために必要な IPv6 プレフィックスを入力します。
 
 
 
@@ -525,7 +522,7 @@ Configuration Manager のリモート制御機能を有効にするには、**[�
 既定では、リモート コントロールは無効になっています。  
 
 > [!IMPORTANT]  
->  ファイアウォール設定が構成されていないと、リモート コントロールが正しく機能しない可能性があります。  
+>  ファイアウォール設定を構成しないと、リモート コントロールが正しく機能しない可能性があります。  
 
 ### <a name="users-can-change-policy-or-notification-settings-in-software-center"></a>ユーザーはソフトウェア センターでポリシー設定または通知設定を変更できる
 
@@ -541,7 +538,7 @@ Configuration Manager のリモート制御機能を有効にするには、**[�
 
 ### <a name="prompt-user-for-permission-to-transfer-content-from-shared-clipboard"></a>共有クリップボードからコンテンツを転送するアクセス許可を求めるプロンプトをユーザーに表示する
 
-リモート コントロール セッションで共有クリップボードからコンテンツを転送する前に、ユーザーはファイル転送を許可するかどうかを選択できます。 ユーザーはセッションごとに一度アクセス許可を与えるだけで済みます。ビューアーはファイル転送を続行するためのアクセス許可を自身に与えることはできません。
+リモート コントロール セッションで共有クリップボードからコンテンツを転送する前に、ユーザーはファイル転送を許可するかどうかを選択できます。 ユーザーはセッションごとに一度アクセス許可を与えるだけで済みます。 ビューアーはファイル転送するためのアクセス許可を自身に付与することはできません。
 
 ### <a name="grant-remote-control-permission-to-local-administrators-group"></a>ローカルの Administrators グループにリモート コントロール権限を付与する
 
@@ -564,11 +561,11 @@ Configuration Manager のリモート制御機能を有効にするには、**[�
 
 ### <a name="show-session-connection-bar"></a>セッション接続バーを表示する
 
-アクティブなリモート コントロール セッションを示す視認性の良いセッション接続バーをクライアントに表示するには、これを **[はい]** に設定します。  
+アクティブなリモート コントロール セッションを示す視認性のよいセッション接続バーをクライアントに表示するには、このオプションを **[はい]** に設定します。  
 
 ### <a name="play-a-sound-on-client"></a>クライアントで音を鳴らす
 
-音を使用してクライアント コンピューターでリモート コントロール セッションがアクティブであることを示すには、これを設定します。 次のいずれかのオプションを選択します。
+音を使用してクライアント コンピューターでリモート コントロール セッションがアクティブであることを示すには、このオプションを設定します。 次のいずれかのオプションを選択します。
 - **音を鳴らさない**
 - **セッションの開始時と終了時** (既定値)
 - **セッションの実行中に繰り返し鳴らす**  
@@ -581,7 +578,7 @@ Configuration Manager が要請されていないリモート アシスタンス
 
 ### <a name="manage-solicited-remote-assistance-settings"></a>[要請されたリモート アシスタンス設定を管理する]
 
-Configuration Manager が要請されたリモート アシスタンス セッションを管理できるようにするには、これを **[はい]** に設定します。  
+このオプションを **[はい]** に設定すると、Configuration Manager が要請されたリモート アシスタンス セッションを管理します。  
 
 要請されたリモート アシスタンス セッションでは、クライアント コンピューターのユーザーが管理者にリモート アシスタンスを要求しています。  
 
@@ -597,36 +594,39 @@ Configuration Manager コンソールで開始されるリモート アシスタ
 
 ### <a name="manage-remote-desktop-settings"></a>リモート デスクトップ設定の管理
 
-Configuration Manager がコンピューターのリモート デスクトップ セッションを管理できるようにするには、これを **[はい]** に設定します。  
+このオプションを **[はい]** に設定すると、Configuration Manager がコンピューターのリモート デスクトップ セッションを管理します。  
 
 ### <a name="allow-permitted-viewers-to-connect-by-using-remote-desktop-connection"></a>[セッションを表示できるユーザーにリモート デスクトップ接続を許可する]
 
-表示を許可するユーザーの一覧で指定されているユーザーをクライアントのリモート デスクトップ ローカル ユーザー グループに追加するには、これを **[はい]** に設定します。  
+表示を許可するユーザーの一覧で指定されているユーザーをクライアントのリモート デスクトップ ローカル ユーザー グループに追加するには、このオプションを **[はい]** に設定します。  
 
 ### <a name="require-network-level-authentication-on-computers-that-run-windows-vista-operating-system-and-later-versions"></a>[Windows Vista 以降のバージョンのオペレーティング システムが実行されているコンピューターではネットワーク レベルの認証を必要とする]
 
-ネットワーク レベル認証 (NLA) を使ってクライアント コンピューターへのリモート デスクトップ接続を確立するには、これを **[はい]** に設定します。 NLA は、リモート デスクトップ接続を確立する前にユーザー認証を終了するため、最初に必要なリモート コンピューター リソースが少なくて済みます。 NLA を使うと構成がいっそう安全になります。 NLA は、悪意のあるユーザーやソフトウェアからコンピューターを保護するのに役立ち、サービス拒否攻撃からのリスクを軽減します。  
+ネットワーク レベル認証 (NLA) を使ってクライアント コンピューターへのリモート デスクトップ接続を確立するには、このオプションを **[はい]** に設定します。 NLA は、リモート デスクトップ接続を確立する前にユーザー認証を終了するため、最初に必要なリモート コンピューター リソースが少なくて済みます。 NLA を使うと構成がいっそう安全になります。 NLA は、悪意のあるユーザーやソフトウェアからコンピューターを保護するのに役立ち、サービス拒否攻撃からのリスクを軽減します。  
 
 
 
 ## <a name="software-center"></a>ソフトウェア センター
 
 ### <a name="select-these-new-settings-to-specify-company-information"></a>新しい設定を選択して会社の情報を指定する
-ソフトウェア センターを組織のブランドにするには、これを **[はい]** に設定してから、次の設定を指定します。
+ソフトウェア センターを組織のブランドにするには、このオプションを **[はい]** に設定してから、次の設定を指定します。
 
-- **会社名** </br>
-ソフトウェア センターでユーザーに表示する組織の名前を入力します。
-- **ソフトウェア センターの配色** </br>
-**[色の選択]** を選んで、ソフトウェア センターで主に使う色を定義します。
-- **ソフトウェア センターのロゴを選択する** </br>
-**[参照]** を選んで、ソフトウェア センターで表示する画像を選びます。 ロゴは、400 x 100 ピクセルの JPEG、PNG、または BMP で、サイズは 750 KB である必要があります。 ロゴのファイル名にスペースが含めることはできません。  
+- **会社名**: ソフトウェア センターでユーザーに表示する組織の名前を入力します。  
+
+- **ソフトウェア センターの配色**: **[色の選択]** をクリックして、ソフトウェア センターで主に使う色を定義します。  
+
+- **ソフトウェア センターのロゴを選択する**: **[参照]** をクリックして、ソフトウェア センターで表示する画像を選びます。 ロゴは、400 x 100 ピクセルの JPEG、PNG、または BMP で、サイズは 750 KB である必要があります。 ロゴのファイル名にスペースが含めることはできません。  
          
 ### <a name="bkmk_HideUnapproved"></a> ソフトウェア センターで承認されていないアプリケーションを非表示にする
 Configuration Manager バージョン 1802 以降、このオプションを有効にすると、承認を必要とするユーザーの使用可能なアプリケーションがソフトウェア センターでは非表示になります。   <!--1355146-->
 
 ### <a name="bkmk_HideInstalled"></a> ソフトウェア センターでインストール済みのアプリケーションを非表示にする
-Configuration Manager バージョン 1802 以降、このオプションを有効にすると、既にインストールされているアプリケーションが、[アプリケーション] タブに表示されなくなります。 Configuration Manager 1802 をインストールすると、あるいはこのバージョンにアップグレードすると、このオプションが既定として設定されます。  インストールされているアプリケーションは、[インストールの状態] タブで引き続き確認できます。<!--1357592-->   
-  
+Configuration Manager バージョン 1802 以降、このオプションを有効にすると、既にインストールされているアプリケーションが、[アプリケーション] タブに表示されなくなります。Configuration Manager 1802 をインストールすると、あるいはこのバージョンにアップグレードすると、このオプションが既定として設定されます。 インストールされているアプリケーションは、[インストールの状態] タブで引き続き確認できます。<!--1357592-->   
+ 
+### <a name="bkmk_HideAppCat"></a> ソフトウェア センターでアプリケーション カタログへのリンクを非表示にします
+Configuration Manager バージョン 1806 以降、ソフトウェア センターでアプリケーション カタログ Web サイト リンクの表示を指定できるようになりました。 このオプションを設定すると、ソフトウェア センターのインストールのステータス ノードでアプリケーション カタログ Web サイト リンクが表示されなくなります。 <!--1358214-->
+
+
 ### <a name="software-center-tab-visibility"></a>ソフトウェア センターのタブの表示
 ソフトウェア センターで次のタブを表示するには、このグループの追加設定を **[はい]** に構成します。
 - **アプリケーション**
@@ -635,6 +635,12 @@ Configuration Manager バージョン 1802 以降、このオプションを有�
 - **インストールのステータス**
 - **デバイス コンプライアンス**
 - **Options**
+- **ソフトウェア センターのカスタム タブを指定する** (バージョン 1806 以降)<!--1358132-->
+    - **タブ名**
+    - **コンテンツ URL**
+
+>[!NOTE]
+> Web サイトの一部の機能は、ソフトウェア センターでカスタム タブとして使用すると、機能しない場合があります。 これをクライアントに展開する前に、必ず結果をテストしてください。 <!--519659-->
 
 たとえば、組織でコンプライアンス ポリシーが使われておらず、ソフトウェア センターの [デバイス コンプライアンス] タブを非表示にする場合は、**[[デバイス コンプライアンス] タブを有効にする]** を **[いいえ]** に設定します。
 
@@ -646,7 +652,7 @@ Configuration Manager バージョン 1802 以降、このオプションを有�
 すべての展開に関して、Configuration Manager によって要件の規則を再評価するスケジュールを構成します。 既定値は 7 日ごとです。  
 
 > [!IMPORTANT]  
->  この値を既定値より小さい値に変更しないことをお勧めします。 より頻繁にスケジュールを再評価すると、ネットワークとクライアント コンピューターのパフォーマンスが低下します。  
+>  この値を既定値より小さい値に変更しないでください。 より頻繁にスケジュールを再評価すると、ネットワークとクライアント コンピューターのパフォーマンスが低下します。  
 
 クライアントからこのアクションを開始するには、**[Configuration Manager]** コントロール パネルの **[アクション]** タブで **[アプリケーション展開の評価サイクル]** を選びます。  
 
@@ -656,7 +662,7 @@ Configuration Manager バージョン 1802 以降、このオプションを有�
 
 ### <a name="enable-software-inventory-on-clients"></a>［クライアントのソフトウェア インベントリを有効にする］
 
-既定では、これは **[はい]** に設定されます。 詳しくは、「[ソフトウェア インベントリの概要](/sccm/core/clients/manage/inventory/introduction-to-software-inventory)」をご覧ください。
+既定では、このオプションは **[はい]** に設定されます。 詳しくは、「[ソフトウェア インベントリの概要](/sccm/core/clients/manage/inventory/introduction-to-software-inventory)」をご覧ください。
 
 ### <a name="schedule-software-inventory-and-file-collection"></a>ソフトウェア インベントリおよびファイル収集をスケジュールする
 
@@ -708,7 +714,7 @@ Configuration Manager バージョン 1802 以降、このオプションを有�
     -   **[ファイルの合計サイズが次のサイズ (KB) を超える場合はファイルの収集を停止する]**: 指定したファイルの収集をクライアントが停止するファイルのサイズ (単位: キロバイト(KB)) を指定します。  
 
     > [!NOTE]  
-    >  サイト サーバーは、新しいものから 5 つまでの変更された収集ファイルを収集し、*&lt;ConfigMgr インストール ディレクトリ\>* \Inboxes\Sinv.box\Filecol ディレクトリに保存します。 前回のソフトウェア インベントリ サイクルの後でファイルが変更されていない場合、ファイルは再収集されません。  
+    >  サイト サーバーは、収集ファイルについて最近に変更されたもの順に 5 つのバージョンを収集し、`<ConfigMgr installation directory>\Inboxes\Sinv.box\Filecol` ディレクトリに格納します。 前回のソフトウェア インベントリ サイクルの後でファイルが変更されていない場合、ファイルは再収集されません。  
     >   
     >  20 MB より大きいファイルはソフトウェア インベントリでは収集されません。  
     >   
@@ -717,7 +723,7 @@ Configuration Manager バージョン 1802 以降、このオプションを有�
     > [!IMPORTANT]
     >  多数の大きいファイルを収集するようにソフトウェア インベントリを構成すると、ネットワークとサイト サーバーのパフォーマンスに悪影響となる場合があります。  
 
-    収集されたファイルを表示する方法については、「[リソース エクスプローラーを使用してソフトウェア インベントリを表示する方法](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)」をご覧ください。  
+    収集されたファイルを表示する方法については、「[リソース エクスプローラーを使用してソフトウェア インベントリを表示する方法](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory)」をご覧ください。  
 
     **[OK]** を選んで **[収集するファイルのプロパティ]** ダイアログ ボックスを閉じます。 収集するファイルをすべて追加し、**[OK]** を選んで、**[クライアント設定の構成]** ダイアログ ボックスを閉じます。  
 
@@ -754,7 +760,7 @@ Configuration Manager バージョン 1802 以降、このオプションを有�
 
 ### <a name="software-update-scan-schedule"></a>ソフトウェア更新プログラムのスキャンのスケジュール
 
-クライアントがコンプライアンス評価スキャンを開始する頻度を指定するには、**[スケジュール]** を選びます。 このスキャンでは、クライアント上のソフトウェア更新プログラムのステータスを判別します (必要、インストール済みなど)。 コンプライアンス対応評価の詳細については、「[Software updates compliance assessment](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance)」 (ソフトウェア更新プログラムのコンプライアンス評価) を参照してください。  
+クライアントがコンプライアンス評価スキャンを開始する頻度を指定するには、**[スケジュール]** を選びます。 このスキャンでは、クライアント上のソフトウェア更新プログラムのステータスを判別します (必要、インストール済みなど)。 コンプライアンス対応評価の詳細については、「[Software updates compliance assessment](/sccm/sum/understand/software-updates-introduction#BKMK_SUMCompliance)」 (ソフトウェア更新プログラムのコンプライアンス評価) を参照してください。  
 
 既定では、このスキャンは 7 日ごとに開始する単純なスケジュールを使います。 カスタム スケジュールを作成することができます。 正確な開始日時を指定したり、世界協定時刻 (UTC) またはローカル時刻を使ったり、繰り返しの間隔を特定の曜日に構成したりできます。  
 
@@ -766,7 +772,7 @@ Configuration Manager バージョン 1802 以降、このオプションを有�
 
 ### <a name="schedule-deployment-re-evaluation"></a>[展開の再評価のスケジュール]
 
-ソフトウェア更新クライアント エージェントが Configuration Manager クライアント コンピューターでソフトウェア更新プログラムのインストール ステータスを再評価する頻度を構成するには、**[スケジュール]** を選びます。 以前にインストールされたソフトウェア更新プログラムがクライアント上で見つからないが、まだ必要である場合、クライアントはそのソフトウェア更新プログラムを再インストールします。
+ソフトウェア更新クライアント エージェントが構成マネージャー クライアント コンピューターでソフトウェア更新プログラムのインストール ステータスを再評価する頻度を構成するには、**[スケジュール]** を選びます。 以前にインストールされたソフトウェア更新プログラムがクライアント上で見つからないが、まだ必要である場合、クライアントはそのソフトウェア更新プログラムを再インストールします。
 
 ソフトウェア更新プログラムのコンプライアンスに関する企業のポリシーと、ユーザーがソフトウェア更新プログラムをアンインストールできるかどうかに基づいて、このスケジュールを調整します。 展開の再評価のすべてのサイクルで、ネットワークおよびクライアント コンピューターのプロセッサにアクティビティが発生します。 既定の設定では、7 日ごとに展開の再評価スキャンを開始する単純なスケジュールが使われます。  
 
@@ -775,7 +781,7 @@ Configuration Manager バージョン 1802 以降、このオプションを有�
 
 ### <a name="when-any-software-update-deployment-deadline-is-reached-install-all-other-software-update-deployments-with-deadline-coming-within-a-specified-period-of-time"></a>いずれかのソフトウェア更新プログラムの展開期限に達した場合に、指定した期間内に期限に達する他のソフトウェア更新プログラムの展開をすべてインストールする
 
-指定した期間内に期限を迎える必須の展開からすべてのソフトウェア更新プログラムをインストールするには、これを **[はい]** に設定します。 必須のソフトウェア更新プログラムの展開が期限に達すると、クライアントは展開に含まれるソフトウェア更新プログラムのインストールを開始します。 この設定は、指定した時間内に期限を迎える他の必須展開からソフトウェア更新プログラムをインストールするかどうかを決定します。  
+指定した期間内に期限を迎える必須の展開からすべてのソフトウェア更新プログラムをインストールするには、このオプションを **[はい]** に設定します。 必須のソフトウェア更新プログラムの展開が期限に達すると、クライアントは展開に含まれるソフトウェア更新プログラムのインストールを開始します。 この設定は、指定した時間内に期限を迎える他の必須展開からソフトウェア更新プログラムをインストールするかどうかを決定します。  
 
 必須ソフトウェア更新プログラムのインストールを高速化するには、この設定を使います。 この設定は、クライアントのセキュリティを強化し、ユーザーへの通知を減らし、クライアントの再起動を少なくする可能性もあります。 既定では、この設定は **[いいえ]** に設定されています。  
 
@@ -785,7 +791,8 @@ Configuration Manager バージョン 1802 以降、このオプションを有�
 
 ### <a name="enable-installation-of-express-installation-files-on-clients"></a>高速インストール ファイルのクライアントでのインストールを有効にする
 
-クライアントが高速インストール ファイルを使用できるようにするには、これを **[はい]** に設定します。 詳細については、「[Windows 10 更新プログラムに対する高速インストール ファイルの管理](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates)」を参照してください。
+クライアントが高速インストール ファイルを使用できるようにするには、このオプションを **[はい]** に設定します。 詳細については、「[Windows 10 更新プログラムに対する高速インストール ファイルの管理](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates)」を参照してください。 
+
 
 ### <a name="port-used-to-download-content-for-express-installation-files"></a>高速インストール ファイルのコンテンツをダウンロードするために使用するポート
 
@@ -793,11 +800,14 @@ Configuration Manager バージョン 1802 以降、このオプションを有�
 
 ### <a name="enable-management-of-the-office-365-client-agent"></a>Office 365 クライアント エージェントの管理を有効にする
 
-これを **[はい]** に設定すると、Office 365 のインストール設定を構成できます。 また、Office コンテンツ配信ネットワーク (CDN) からファイルをダウンロードし、Configuration Manager でファイルをアプリケーションとして展開することもできます。 詳しくは、「[Office 365 ProPlus の更新プログラムの管理](/sccm/sum/deploy-use/manage-office-365-proplus-updates)」をご覧ください。
+このオプションを **[はい]** に設定すると、Office 365 のインストール設定を構成できます。 また、Office コンテンツ配信ネットワーク (CDN) からファイルをダウンロードし、Configuration Manager でファイルをアプリケーションとして展開することもできます。 詳しくは、「[Office 365 ProPlus の更新プログラムの管理](/sccm/sum/deploy-use/manage-office-365-proplus-updates)」をご覧ください。
 
 ### <a name="enable-third-party-software-updates"></a>サードパーティ製ソフトウェア更新プログラムを有効にする 
 
-これを **[はい]** に設定すると、[イントラネットの Microsoft 更新サービスの保存場所にある署名済み更新を許可する] のポリシーが設定され、クライアントの信頼できる発行元ストアに署名証明書がインストールされます。 このクライアント設定は、Configuration Manager バージョン 1802 で追加されました。
+このオプションを **[はい]** に設定すると、[イントラネットの Microsoft 更新サービスの保存場所にある署名済み更新を許可する] のポリシーが設定され、クライアントの信頼できる発行元ストアに署名証明書がインストールされます。 このクライアント設定は、Configuration Manager バージョン 1802 で追加されました。
+
+
+
 ## <a name="state-messaging"></a>状態メッセージ
 
 ### <a name="state-message-reporting-cycle-minutes"></a>［状態メッセージのレポート サイクル (分)］
@@ -808,10 +818,10 @@ Configuration Manager バージョン 1802 以降、このオプションを有�
 ##  <a name="user-and-device-affinity"></a>ユーザーとデバイスのアフィニティ  
 
 ### <a name="user-device-affinity-usage-threshold-minutes"></a>ユーザーとデバイスのアフィニティ使用状況のしきい値 (分)
-ユーザー デバイスのアフィニティ マッピングを Configuration Manager が作成するまでの時間 (分) を指定します。  既定値は 2880 分 (2 日) です。
+ユーザー デバイスのアフィニティ マッピングを Configuration Manager が作成するまでの時間 (分) を指定します。 既定値は 2880 分 (2 日) です。
 
 ### <a name="user-device-affinity-usage-threshold-days"></a>ユーザーとデバイスのアフィニティ使用状況のしきい値 (日)
-使用状況に基づくデバイスのアフィニティのしきい値をクライアントが測定する日数を指定します。  既定値は 30 日です。
+使用状況に基づくデバイスのアフィニティのしきい値をクライアントが測定する日数を指定します。 既定値は 30 日です。
 
 > [!NOTE]  
 >  たとえば、**[ユーザーとデバイスのアフィニティ使用状況のしきい値 (分)]** に **60** 分を指定し、**[ユーザーとデバイスのアフィニティ使用状況のしきい値 (日)]** に **5** 日を指定します。 この場合、ユーザーは、デバイスで自動アフィニティを作成するには、5 日間にわたって 60 分デバイスを使う必要があります。  

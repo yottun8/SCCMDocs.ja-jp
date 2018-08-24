@@ -2,7 +2,7 @@
 title: 製品とライセンスに関する FAQ
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager の一般的な製品とライセンスの質問に対する回答を検索できます。
-ms.date: 04/30/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,21 +10,21 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 781ffffac4367fb899c37c50492390a65244e17d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9e58e11bec9441f73bff021c8a6a24d150777cbe
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340314"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385543"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager のブランチとライセンスに関してよく寄せられる質問
 
  *適用対象: System Center Configuration Manager (Current Branch)、System Center Configuration Manager (Long-Term Servicing Branch)*
 
 ## <a name="summary"></a>概要
-この FAQ では、マイクロソフト ボリューム ライセンス プログラムで利用可能な、System Center Configuration Manager Current Branch および Long Term Servicing Branch (LTSB) バージョンに関する一般的なライセンスの質問にお答えします。 この記事は情報提供を目的としています。 System Center Configuration Manager ライセンスに関するドキュメントに優先する、またはこれを置き換えるものではありません。 詳しくは、[System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> の製品ライセンスと、[製品条項](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)をご覧ください。 製品条項では、すべての Microsoft 製品のボリューム ライセンスの使用条件を説明しています。
+この FAQ では、マイクロソフト ボリューム ライセンス プログラムで利用可能な、System Center Configuration Manager Current Branch および Long Term Servicing Branch (LTSB) バージョンに関する一般的なライセンスの質問にお答えします。 この記事は情報提供を目的としています。 System Center Configuration Manager ライセンスに関するドキュメントに優先する、またはこれを置き換えるものではありません。 詳しくは、[System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> の製品ライセンスと、[製品条項](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)をご覧ください。 製品条項では、すべての Microsoft 製品のボリューム ライセンスの使用条件を説明しています。
 
-System Center Configuration Manager の機能について詳しくは、[製品のページ](https://www.microsoft.com/cloud-platform/system-center-configuration-manager)をご覧ください。
+Configuration Manager の機能の詳細については、[製品のページ](https://www.microsoft.com/cloud-platform/system-center-configuration-manager)をご覧ください。
 
 
 
@@ -67,6 +67,8 @@ EMS は System Center Configuration Manager (Current Branch および Long-Term 
 
 2016 年 10 月 1 日以前に SA の有効期限が切れており、System Center Configuration Manager に対する永続的ライセンスを保持していた場合、引き続き使用するには System Center 2012 R2 Configuration Manager と、これで利用できるサービス パックをインストールして使用するしかありません。 SA の有効期限が切れたときに、Current Branch をアンインストールして、それ以前のバージョンの製品を再インストールする必要がありました。 System Center Configuration Manager Current Branch からそれ以前のバージョンの Configuration Manager に移行またはダウングレードするためのサポートはありません。   
 
+System Center Endpoint Protection を使用する場合、SA の有効期限が切れたらアンインストールする必要があります。 System Center Endpoint Protection は、*L (ライセンス)* 権限も永続的な権限も付与しません。<!--506238--> 
+
 
 ### <a name="bkmk_owncb"></a> Current Branch は自分で "所有" するものですか?   
 いいえ。 アクティブな SA を所有している間は、Current Branch を使用するライセンスがあります。 たとえば、*L&SA* で *SA* の有効期限が切れると、"*L (ライセンス)*" の権限のみを持つことになるため Current Branch を使用する権限は含まれません。 L で永続的な権限が提供される場合は、Current Branch の代わりに System Center Configuration Manager の Long-Term Servicing Branch (2016 年 10 月 1 日以前に SA の有効期限が切れた場合は System Center 2012 R2 Configuration Manager) を使用できます。
@@ -76,7 +78,9 @@ EMS は System Center Configuration Manager (Current Branch および Long-Term 
 いいえ。 System Center Configuration Manager を使用する権限を得るには、SA または同等のサブスクリプションを含むライセンスを取得するしかありません。 開発およびテストのために System Center Configuration Manager が提供される (MSDN などの) 開発者プログラムはありますが、運用環境では使用できません。
 
 
-### <a name="bkmk_update-rights"></a> バージョン 1610 のような System Center Configuration Manager の更新プログラムがコンソールに表示されています。 これをインストールする権限はありますか?   
+### 
+  <a name="bkmk_update-rights">
+  </a> バージョン 1610 のような System Center Configuration Manager の更新プログラムがコンソールに表示されています。 これをインストールする権限はありますか?   
 アクティブな *SA* があれば可能です。 アクティブな SA がない場合は、Current Branch をアンインストールすると、System Center Configuration Manager の LTSB をインストールできるようになります。 LTSB は System Center Configuration Manager の増分バージョンの更新プログラムを受信しませんが、サポート ライフサイクルに基づくセキュリティ更新プログラムは受信します。
 
 

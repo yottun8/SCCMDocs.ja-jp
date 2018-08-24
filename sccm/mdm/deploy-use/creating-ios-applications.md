@@ -1,8 +1,8 @@
 ---
 title: iOS アプリケーションを作成する
 titleSuffix: Configuration Manager
-description: iOS デバイス用アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。
-ms.date: 03/05/2017
+description: Configuration Manager で iOS デバイス用アプリケーションを作成して展開する方法。
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,41 +10,26 @@ ms.assetid: ff633013-5313-4cd3-949c-56d45e777280
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 985a8177602bd32da0b6134eeddb564a44749d65
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 246ca26b8fab3a1006e8d72b803c298fe48df9df
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346432"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385237"
 ---
-# <a name="create-ios-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager で iOS アプリケーションを作成する
+# <a name="create-ios-applications-in-configuration-manager"></a>Configuration Manager で iOS アプリケーションを作成する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager アプリケーションには、デバイスにソフトウェアを展開するために必要なインストール ファイルと情報からなる、1 つまたは複数の展開の種類があります。 また、展開の種類には、ソフトウェアを展開するタイミングと方法を指定する規則があります。  
+Configuration Manager アプリケーションには、デバイスにソフトウェアを展開するために必要なインストール ファイルと情報からなる、1 つまたは複数の展開の種類があります。 また、展開の種類には、ソフトウェアを展開するタイミングと方法を指定する規則があります。  
 
- アプリケーションを作成するには、次の 2 通りの方法があります。  
+Configuration Manager アプリケーションと展開の種類を作成する手順については、[アプリケーションの作成](/sccm/apps/deploy-use/create-applications#bkmk_create)に関するページを参照してください。 
 
--   アプリケーション インストール ファイルを読み取って、アプリケーションおよび展開の種類を自動的に作成する。  
+iOS デバイス用アプリケーションを作成して展開するときに、以下の考慮事項について留意してください。  
 
--   アプリケーションを手動で作成してから、後で展開の種類を追加する。  
+- Configuration Manager では、iOS の .ipa パッケージの展開がサポートされています。 iOS アプリをインポートするときに、プロパティ一覧 (.plist) ファイルを指定する必要はありません。 
 
--   アプリケーションをファイルからインポートする。  
-
-Configuration Manager アプリケーションと展開の種類の作成に必要な手順については、「[アプリケーションの作成ウィザードを開始する](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard)」を参照してください。 また、iOS デバイス用アプリケーションを作成して展開するときは、以下の考慮事項について留意してください。  
-
-## <a name="general-considerations"></a>一般的な考慮事項  
- Configuration Manager では、次のアプリの種類の展開がサポートされています。  
-
-|デバイスの種類|サポートされているファイル|  
-|-----------------|---------------------|  
-|iOS|*.ipa<br /><br /> System Center Configuration Manager では、iOS アプリをインポートするときに、プロパティ一覧 (.plist) ファイルを指定する必要はありません。|  
-
- 次の展開操作がサポートされています。  
-
-|デバイスの種類|サポートされている操作|  
-|-----------------|-----------------------|  
-|iOS|**利用可能**、**必須**。 インストールとアンインストールの両方に、ユーザーが同意する必要があります。
+- iOS アプリケーションを**利用可能**または**必須**として展開します。 インストールとアンインストールの両方に、ユーザーが同意する必要があります。
 
 > [!IMPORTANT]  
->  現在、エンド ユーザーは iOS 向け Microsoft Intune 会社ポータル アプリから会社のアプリをインストールできません。 これは、iOS App Store に公開されたアプリに設けられた制限によるものです (「App Store レビューに関するガイドライン」の第 2 節をご覧ください)。 ユーザーが会社アプリ (管理されている App Store アプリ、基幹業務アプリ パッケージなど) をインストールするには、自身のデバイスで Intune Web ポータルを参照する必要があります (portal.manage.microsoft.com)。 Intune ポータル サイト アプリで有効化されるモバイル管理機能について詳しくは、「[Microsoft Intune の登録済みデバイス管理機能](https://technet.microsoft.com/library/dn600287.aspx)」をご覧ください。  
+>  現在、エンド ユーザーは iOS 向け Microsoft Intune ポータル サイト アプリから会社のアプリをインストールできません。 これは、iOS App Store に公開されたアプリに関する制限があるためです  (「App Store Review ガイドライン」の第 2 節をご覧ください)。 ユーザーは自分のデバイスで Intune ポータルを参照して、会社のアプリをインストールできます。 これらのアプリには、管理対象 App Store アプリおよび基幹業務アプリのパッケージが含まれます。 Intune ポータル サイト アプリで有効化されるモバイル管理機能の詳細については、[Microsoft Intune の登録済みデバイス管理機能](https://docs.microsoft.com/intune/device-enrollment)に関するページを参照してください。  

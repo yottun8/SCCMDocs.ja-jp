@@ -2,7 +2,7 @@
 title: トラブルシューティングのためのログ ファイル
 titleSuffix: Configuration Manager
 description: Configuration Manager クライアントとサイト システムに関する問題のトラブルシューティングを行うには、ログ ファイルを使用します。
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c068ea5a079d43148191e41dc9a2b4fb7a2e00c7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2bd3f76b982356fc444681d1990bee08e90b32fc
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342666"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385288"
 ---
-# <a name="log-files-in-system-center-configuration-manager"></a>System Center Configuration Manager のログ ファイル
+# <a name="log-files-in-configuration-manager"></a>Configuration Manager のログ ファイル
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -116,7 +116,7 @@ Configuration Manager では、クライアント コンポーネントとサイ
 ##  <a name="BKMK_AboutLogs"></a> Configuration Manager のログ ファイルについて  
  Configuration Manager のプロセスの多くで、そのプロセス専用のログ ファイルに処理情報が書き込まれます。 これらのログ ファイルには、**.log** 拡張子か **.lo_** 拡張子が付いています。 Configuration Manager は、ログが最大サイズに達するまで .log ファイルに書き込みます。 このファイルがいっぱいになると、同じ名前で .lo_ 拡張子の付いたファイルに内容がコピーされ、元の .log ファイルへの書き込みが続行されます。 .log ファイルが再びいっぱいになると、.lo_ ファイルが上書きされ、元の .log ファイルに書き込まれます。この同じプロセスが繰り返されます。 コンポーネントによっては、そのログ ファイルの .log 拡張子は変わらず、ファイル名にタイムスタンプが加えられるので、履歴がわかるものがあります。 最大サイズと .lo_ ファイルの使用の例外は、Linux および UNIX 用のクライアントです。 Linux および UNIX 用のクライアントでログ ファイルを使用する方法については、この記事の「[Linux および UNIX 用のクライアントのログ ファイルを管理する](#BKMK_ManageLinuxLogs)」を参照してください。  
 
- ログ ファイルを表示するには、CMTrace という Configuration Manager のログ ビューアー ツールを使用できます。このツールは、Configuration Manager のソース メディアの \\SMSSetup\\Tools フォルダーにあります。 また、CMTrace ツールは、[ソフトウェア ライブラリ] に格納されるすべてのブート イメージに追加されます。  
+ ログ ファイルを表示するには、CMTrace という Configuration Manager のログ ビューアー ツールを使用できます。このツールは、Configuration Manager のソース メディアの \\SMSSetup\\Tools フォルダーにあります。 また、CMTrace ツールは、[ソフトウェア ライブラリ] に格納されるすべてのブート イメージに追加されます。 バージョン 1806 以降では、CMTrace ログ表示ツールが構成マネージャー クライアントと共に自動的にインストールされます。<!--1357971--> 詳細については、「[CMTrace](/sccm/core/support/cmtrace)」を参照してください。 
 
 ###  <a name="BKMK_LogOptions"></a> Configuration Manager サービス マネージャーを使用したログのオプションの構成  
  Configuration Manager によって格納されるログ ファイルの場所とそのサイズを変更することができます。  
@@ -333,6 +333,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |sitecomp.log|サイトのすべてのサイト システム サーバーにインストールされているサイト コンポーネントのメンテナンスに関する詳細を記録します。|サイト サーバー|  
 |sitectrl.log|データベースのサイト コントロール オブジェクトに加えられたサイト設定の変更を記録します。|サイト サーバー|  
 |sitestat.log|すべてのサイト システムの可用性とディスク領域の監視プロセスを記録します。|サイト サーバー|
+|SMS_ISVUPDATES_SYNCAGENT.log| Configuration Manager バージョン 1806 以降のサード パーティ製ソフトウェア更新プログラムの同期用ログ ファイル。| Configuration Manager 階層内の最上位のソフトウェア更新ポイント。|
 |SMS_PhasedDeployment.log| Configuration Manager バージョン 1802 以降のプレリリース機能である段階的展開用のログ ファイルです。|Configuration Manager 階層の最上位サイト|   
 |SmsAdminUI.log|Configuration Manager コンソール アクティビティを記録します。|Configuration Manager コンソールを実行しているコンピューター|  
 |SMSAWEBSVCSetup.log|アプリケーション カタログ Web サービスのインストール処理を記録します。|サイト システム サーバー|  
@@ -411,7 +412,8 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |--------------|-----------------|----------------------------|  
 |objreplmgr.log|ソフトウェアの更新の通知ファイルの親サイトから子サイトへのレプリケーションに関する詳細を記録します。|サイト サーバー|  
 |PatchDownloader.log|更新プログラムのソースから、ソフトウェア更新プログラムをサイト サーバーにダウンロードするプロセスの詳細を記録します。|ダウンロードを開始した Configuration Manager コンソールをホストしているコンピューター|  
-|ruleengine.log|自動展開規則に関する情報 (確認、コンテンツのダウンロード、およびソフトウェア更新プログラム グループと展開の作成) を記録します。|サイト サーバー|  
+|ruleengine.log|自動展開規則に関する情報 (確認、コンテンツのダウンロード、およびソフトウェア更新プログラム グループと展開の作成) を記録します。|サイト サーバー| 
+|SMS_ISVUPDATES_SYNCAGENT.log| Configuration Manager バージョン 1806 以降のサード パーティ製ソフトウェア更新プログラムの同期用ログ ファイル。| Configuration Manager 階層内の最上位のソフトウェア更新ポイント。| 
 |SUPSetup.log|ソフトウェアの更新ポイントのインストールに関する詳細を記録します。 ソフトウェアの更新ポイントのインストールが完了すると、このログ ファイルに「 **Installation was successful** 」と書き込まれます。|サイト システム サーバー|  
 |WCM.log|ソフトウェアの更新ポイントの構成に関する情報、およびサブスクライブ済みの更新カテゴリ、分類、言語のための WSUS サーバーへの接続に関する情報を記録します。|WSUS サーバーに接続するサイト サーバー|  
 |WSUSCtrl.log|サイトの WSUS サーバーの構成、データベース接続、正常性に関する詳細を記録します。|サイト システム サーバー|  
@@ -777,7 +779,8 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |RebootCoordinator.log|ソフトウェア更新プログラムがインストールされた後のシステムの再起動の調整に関する詳細を記録します。|クライアント|  
 |ScanAgent.log|ソフトウェア更新プログラムのスキャン要求、WSUS の場所、および関連する操作の詳細を記録します。|クライアント|  
 |SdmAgent.log|コンプライアンス対応状態と修復の追跡情報を記録します。 ただし、ソフトウェア更新プログラムのログ ファイル (Updateshandler.log) に、コンプライアンス対応に必要なソフトウェア更新プログラムのインストールのより詳しい情報が記録されます。<br /><br /> このログ ファイルは、コンプライアンス設定で共有されます。|クライアント|  
-|ServiceWindowManager.log|メンテナンス期間の評価の詳細を記録します。|クライアント|  
+|ServiceWindowManager.log|メンテナンス期間の評価の詳細を記録します。|クライアント|
+|SMS_ISVUPDATES_SYNCAGENT.log| Configuration Manager バージョン 1806 以降のサード パーティ製ソフトウェア更新プログラムの同期用ログ ファイル。| Configuration Manager 階層内の最上位のソフトウェア更新ポイント。|  
 |SmsWusHandler.log|Microsoft 更新プログラム用インベントリ ツールのスキャン プロセスの詳細を記録します。|クライアント|  
 |StateMessage.log|作成されて管理ポイントに送信されたソフトウェア更新プログラムの状態メッセージの詳細を記録します。|クライアント|  
 |SUPSetup.log|ソフトウェアの更新ポイントのインストールに関する詳細を記録します。 ソフトウェアの更新ポイントのインストールが完了すると、このログ ファイルに「 **Installation was successful** 」と書き込まれます。|サイト システム サーバー|  

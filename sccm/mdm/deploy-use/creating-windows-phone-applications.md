@@ -1,8 +1,8 @@
 ---
 title: Windows Phone アプリケーションを作成する
 titleSuffix: Configuration Manager
-description: Windows Phone デバイス用アプリケーションを作成して展開するときに検討する必要がある考慮事項について説明します。
-ms.date: 03/05/2017
+description: Configuration Manager で Windows Phone デバイス用アプリケーションを作成して展開する方法。
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,53 +10,30 @@ ms.assetid: 68fe11fa-5fb2-4b81-b0f5-b6f2392fb4ad
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c755db47c9d3acb9c858ecb5bed14bb36055663b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 77eb0b750934641ceb66b2c8aa611544c654f54f
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347231"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385441"
 ---
-# <a name="create-windows-phone-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager で Windows Phone アプリケーションを作成する
+# <a name="create-windows-phone-applications-in-configuration-manager"></a>Configuration Manager で Windows Phone アプリケーションを作成する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager アプリケーションには、デバイスにソフトウェアを展開するために必要なインストール ファイルと情報からなる、1 つまたは複数の展開の種類があります。 また、展開の種類には、ソフトウェアを展開するタイミングと方法を指定する規則があります。  
+Configuration Manager アプリケーションには、1 つ以上の展開の種類があります。 展開の種類には、インストール ファイルとデバイスにソフトウェアを展開するために必要な情報が含まれています。 また、展開の種類には、ソフトウェアを展開するタイミングと方法を指定する規則があります。  
 
- アプリケーションを作成するには、次の 2 通りの方法があります。  
+Configuration Manager アプリケーションと展開の種類を作成する手順については、[アプリケーションの作成](/sccm/apps/deploy-use/create-applications#bkmk_create)に関するページを参照してください。 
 
--   アプリケーション インストール ファイルを読み取って、アプリケーションおよび展開の種類を自動的に作成する。  
+Windows Phone デバイス用アプリケーションを作成して展開するときは、以下の考慮事項について留意してください。  
 
--   アプリケーションを手動で作成してから、後で展開の種類を追加する。  
 
--   アプリケーションをファイルからインポートする。  
-
-Configuration Manager アプリケーションと展開の種類の作成に必要な手順については、「[アプリケーションの作成ウィザードを開始する](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard)」を参照してください。 また、Windows Phone デバイス用アプリケーションを作成して展開するときは、以下の考慮事項について留意してください。  
-
-## <a name="general-considerations"></a>一般的な考慮事項  
- Configuration Manager では、次のアプリ ファイルの種類の展開がサポートされています。  
+Configuration Manager では、次のアプリ ファイルの種類の展開がサポートされています。  
 
 |デバイスの種類|サポートされているファイルの種類|  
 |-----------------|---------------------|  
-|Windows Phone 8|.xap|  
-|Windows Phone 8.1|.xap、.appx、.appxbundle|
-|Windows 10 Mobile|.xap、.appx、.appxbundle|
+|Windows Phone 8|xap|  
+|Windows Phone 8.1|xap、appx、appxbundle|
+|Windows 10 Mobile|xap、appx、appxbundle|
 
- 次の展開操作がサポートされています。  
-
-|デバイスの種類|サポートされている操作|  
-|-----------------|-----------------------|  
-|Windows Phone 8、Windows Phone 8.1、および Windows 10 Mobile|利用可能、必須、アンインストール|  
-
-## <a name="steps-to-deploy-the-latest-windows-phone-company-portal-app-with-supersedence"></a>最新の Windows Phone 会社ポータル アプリケーションに置き換え関係を展開する手順  
- 次の表に、Windows Phone 8 用の最新の会社ポータル アプリケーションを作成する手順とその簡単な説明、および関連情報のある場所へのリンクをまとめます。  
-
-|手順|説明|  
-|----------|----------------------|  
-|**ステップ 1:** 最新の会社ポータル アプリケーションを取得する。|[Windows Phone 8 ポータル サイト アプリ](http://go.microsoft.com/fwlink/?LinkId=268440)をダウンロードします。|  
-|**ステップ 2:** 会社ポータル アプリケーションに、Symantec 証明書を使って署名する。|ポータル サイト アプリに署名する方法については、「[System Center Configuration Manager と Microsoft Intune による Windows Phone および Windows 10 Mobile のハイブリッドのデバイス管理のセットアップ](../../mdm/deploy-use/enroll-hybrid-windows.md)」を参照してください。|  
-|**ステップ 3:** 最新バージョンの会社ポータルアプリケーションを含む新しいアプリケーションを作成して置き換え関係を指定する。|詳細については、「[アプリケーションの作成](../../apps/deploy-use/create-applications.md)」と「[アプリケーションを修正して置き換える方法](../../apps/deploy-use/revise-and-supersede-applications.md)」を参照してください。|  
-|**ステップ 4:** Microsoft Intune サブスクリプションの作成ウィザードでアプリケーションを追加する。|詳細については、「[System Center Configuration Manager と Microsoft Intune による Windows Phone および Windows 10 Mobile のハイブリッドのデバイス管理のセットアップ](../../mdm/deploy-use/enroll-hybrid-windows.md)」を参照してください。|  
-|**ステップ 5:** Microsoft Intune サブスクリプションの作成ウィザードで会社ポータル アプリケーションを追加したときに自動的に作成された展開を削除する。|Microsoft Intune のサブスクリプションによって、このアプリケーションの展開が自動的に作成されますが、この展開には置き換えを設定できないので削除します。|  
-|**手順 6:** アプリケーションの新しい展開を作成する。 **ソフトウェアの展開ウィザード**の **[展開設定]** ページで **[このアプリケーションの置き換えられるバージョンを自動的にアップグレードする]** チェック ボックスをオンにします。|置き換え関係を設定して作成したアプリケーションの新しい展開を作成します。|  
-|**ステップ 7 (オプション):** 既定では、置き換えるアプリケーションがデバイスに 7 日後にインストールされる。 登録済みデバイスに、これより早く会社ポータル アプリケーションを展開したい場合は、**[展開の再評価スケジュールを指定する]** を小さな値に設定します。<br /><br /> この値を既定値より小さくすると、ネットワークとクライアント コンピューターのパフォーマンスが低下する可能性があります。|詳細情報はありません。|  
+Windows Phone アプリを**利用可能**または**必須**として展開します。 アプリのアンインストールにも展開を使用します。  

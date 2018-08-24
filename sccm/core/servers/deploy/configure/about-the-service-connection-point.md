@@ -2,7 +2,7 @@
 title: '[サービス接続ポイント]'
 titleSuffix: Configuration Manager
 description: この Configuration Manager サイト システムの役割について学習し、その使用範囲を理解し計画します。
-ms.date: 07/05/2018
+ms.date: 08/01/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: bc2282d5-0571-465b-9528-a555855eaacd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6002c077ae0a8e34f35a9d0e36d02f5950946bde
-ms.sourcegitcommit: 73b241a72db8f8f3bd7e269fc81ad49e14f01058
+ms.openlocfilehash: 560fa3480f00811f325eb22dda439facac36e6e4
+ms.sourcegitcommit: 6e0e5b4b7779ce03e2b56b3b5f68f4ace1acedd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37843289"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467676"
 ---
 # <a name="about-the-service-connection-point-in-system-center-configuration-manager"></a>System Center Configuration Manager のサービス接続ポイントについて
 
@@ -80,6 +80,9 @@ Configuration Manager サービス マネージャーを使用するには、コ
 
 ##  <a name="bkmk_urls"></a> インターネット アクセス要件  
 操作を有効にするには、サービス接続ポイントをホストするコンピューター、およびそのコンピューターとインターネットの間のファイアウォールが、HTTPS の場合は送信ポート **TCP 443**、HTTP の場合は送信ポート **TCP 80** を通して、次のインターネット上の場所に通信が届くようにする必要があります。 サービス接続ポイントから、これらの場所を利用する際は、Web プロキシ (認証あり、または認証なし) を使用することもできます。  Web プロキシ アカウントを構成する必要がある場合は、「[System Center Configuration Manager でのプロキシ サーバーのサポート](/sccm/core/plan-design/network/proxy-server-support)」を参照してください。
+
+> [!TIP]
+> サービス接続ポイントは、 http://go.Microsoft.com または http://manage.Microsoft.com に接続するときに Microsoft Intune サービスを使います。 Baltimore CyberTrust ルート証明書がインストールされていない場合、有効期限切れの場合、またはサービス接続ポイントの役割がインストールされている Configuration Manager サイト システム上で破損している場合に、Intune コネクタで接続の問題が発生する既知の問題があります。 詳細については、「[Configuration Manager Service Connection Point doesn't download updates](https://support.microsoft.com/help/3187516)」(Configuration Manager サービス接続ポイントが更新プログラムをダウンロードしない) を参照してください。
 
 **更新プログラムとサービス**  
 

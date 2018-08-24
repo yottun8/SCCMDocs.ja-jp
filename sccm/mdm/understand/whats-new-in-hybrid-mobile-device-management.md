@@ -2,7 +2,7 @@
 title: ハイブリッド MDM の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。
-ms.date: 07/12/2018
+ms.date: 08/01/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d2a705ed8b09e4c2de92baa22164cbe97f180462
-ms.sourcegitcommit: e54e9d4a735e72b84095e0017c5bec50af480207
+ms.openlocfilehash: cdb5720778366cea951476ad9b314b69bdd0c492
+ms.sourcegitcommit: 6e0e5b4b7779ce03e2b56b3b5f68f4ace1acedd8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39039626"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467608"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -26,17 +26,20 @@ ms.locfileid: "39039626"
 > [!Note]    
 > Azure 上の Intune は、Microsoft が推奨する MDM ソリューションです。     
 > - Intune スタンドアロンの新機能と更新内容の詳細については、「[Microsoft Intune の新機能](https://docs.microsoft.com/intune/whats-new)」を参照してください。    
-> - Intune スタンドアロンに移行する詳細な方法については、「[Migrate hybrid MDM users and devices to Intune standalone](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)」(ハイブリッド MDM ユーザーとデバイスを Intune スタンドアロンに移行する) を参照してください。
+> - Intune スタンドアロンに移行する詳細な方法については、「[Migrate hybrid MDM users and devices to Intune standalone](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)」(ハイブリッド MDM ユーザーとデバイスを Intune スタンドアロンに移行する) を参照してください。
 > - Intune とハイブリッド MDM の UI の更新の詳細については、「[Intune とエンド ユーザー アプリの UI の更新](https://docs.microsoft.com/intune/whats-new-app-ui)」を参照してください。 
 
+
+
 ##  <a name="compatibility-with-configuration-manager-versions"></a>Configuration Manager のバージョンとの互換性  
+
 この記事の各セクションでは、3 つの異なるカテゴリにあるハイブリッド機能を一覧表示します。 次のガイダンスを使用すると、各カテゴリの機能とさまざまなバージョンの Configuration Manager との互換性を判断できます。  
 
 |機能のカテゴリ|説明|
 |-|-|
 |**Microsoft Intune の新機能** | 通常、このカテゴリに一覧表示されたすべての機能は、Configuration Manager のすべてのリリースで動作します。 これには System Center 2012 R2 Configuration Manager リリースが含まれています。これらの機能では Intune サービスのみが必要であり、Configuration Manager の追加機能は不要なためです。|
-|**Configuration Manager Technical Preview の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Technical Preview リリースでのみ動作します。 これらの機能を試すには、機能の説明で指定されたバージョンの Technical Preview をインストールする必要があります。 詳細については、「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を参照してください。|
-|**Configuration Manager (現在のブランチ) の新機能**| このカテゴリに一覧表示されたすべての機能は、バージョン 1511 や 1602 など、指定されたバージョンの Configuration Manager (現在のブランチ) でのみ動作します。 ハイブリッド展開に旧バージョンの Configuration Manager を使用している場合は、機能の説明で指定されたバージョンの Configuration Manager (現在の分岐) にアップグレードする必要があります。 詳細については、「[System Center Configuration Manager へのアップグレード](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)」を参照してください。|
+|**Configuration Manager Technical Preview の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Technical Preview Branch でのみ動作します。 これらの機能を試すには、機能の説明で指定されたバージョンの Technical Preview をインストールする必要があります。 詳細については、「[Configuration Manager の Technical Preview](/sccm/core/get-started/technical-preview)」を参照してください。|
+|**Configuration Manager (現在のブランチ) の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Configuration Manager (Current Branch) でのみ動作します。 ハイブリッド展開に旧バージョンの Configuration Manager を使用している場合は、機能の説明で指定されたバージョンの Configuration Manager (現在の分岐) にアップグレードします。 詳細については、「[System Center Configuration Manager へのアップグレード](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)」を参照してください。|
 
 
 
@@ -58,7 +61,7 @@ ms.locfileid: "39039626"
 #### <a name="updates-to-out-of-compliance-messages-in-company-portal-app"></a>ポータル サイト アプリの非対応メッセージへの更新 
 <!--1832222--> 非対応デバイスのユーザーに表示されるメッセージを修正しています。 メッセージの意味は同じですが、よりわかりやすく、技術的な専門用語が少ない言い方に変更されます。 また、最新の状態を保持するためにドキュメントと修復の手順へのリンクを更新しています。  
 
-次の前後のテキストは、表示されるメッセージの改善例の 1 つを示しています。  
+次のテキストは、表示されるメッセージの改善例の 1 つを示しています。  
 
 - 前: "*このデバイスは、IT 管理者によって要求された指定の期間に Intune サービスに接続していません。この問題を解決するためには、デバイスでポータル サイト アプリを開いて [コンプライアンスの確認] ボタンをクリックしてください。*"  
 
@@ -66,6 +69,14 @@ ms.locfileid: "39039626"
 
 #### <a name="select-device-categories-by-using-the-access-work-or-school-settings"></a>[職場または学校にアクセスする] 設定を使用したデバイス カテゴリの選択 
 <!--1058963--> [デバイス グループ マッピング](https://docs.microsoft.com/intune/device-group-mapping)を有効にした場合、Windows 10 のユーザーは、**[設定]** > **[アカウント]** > **[職場または学校にアクセスする]** の **[接続]** から登録した後に、デバイス カテゴリの選択を求められます。  
+
+#### <a name="new-browsing-experiences-in-the-company-portal-app-for-windows"></a>Windows 用ポータル サイト アプリでの新しい閲覧エクスペリエンス 
+<!--2317227-->Windows 用ポータル サイト アプリでアプリを閲覧または検索するときに、既存の**タイル**表示と新しく追加された**詳細**表示を切り替えます。 新しいビューには、名前、発行者、発行日、インストール状態など、アプリケーションの詳細が一覧表示されます。 
+
+**[アプリ]** ページの **[インストール済み]** ビューでは、完了したアプリのインストールと進行中のアプリのインストールに関する詳細を見ることができます。 新しい表示がどのような見た目か確認するには、[新しい UI](https://docs.microsoft.com/intune/whats-new-app-ui) に関するページをご覧ください。
+
+#### <a name="more-opportunities-to-sync-in-the-company-portal-app-for-windows"></a>Windows 用ポータル サイト アプリでの同期の機会の増加  
+<!--2683177-->Windows 用ポータル サイト アプリでは、Windows のタスク バーと [スタート] メニューから直接同期を開始できるようになりました。 この機能は、ユーザーの作業が会社のリソースへのデバイスの同期とアクセスだけの場合に特に便利です。 新しい機能にアクセスするには、タスク バーまたは [スタート] メニューに固定されているポータル サイト アイコンを右クリックします。 メニューのオプションで、**[Sync this device]\(このデバイスを同期\)** を選択します (このメニューはジャンプ リストとも呼ばれます)。ポータル サイトで **[設定]** ページが開き、同期が開始します。更新された手順については、「[Sync your Windows device manually](https://docs.microsoft.com/intune/intune-user-help/sync-your-device-manually-windows#sync-from-device-taskbar-or-start-menu)」(Windows デバイスを手動で同期する) をご覧ください。
 
 
 
@@ -92,9 +103,9 @@ ms.locfileid: "39039626"
 ### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (現在のブランチ) の新機能
 
 #### <a name="android-for-work-and-lookout-onboarding-moved-to-intune-on-azure"></a>Android for Work と Lookout のオンボーディングが Azure の Intune に移動
-<!--2355022,2357366--> Intune の最新更新プログラムを適用すると、Azure Portal の Intune のハイブリッド モバイル デバイス管理で、Android for Work 統合と Lookout Mobile Threat Defense 統合を有効にし、管理できます。 この更新プログラムが公開される前は、Intune Classic (Silverlight) ポータルでのみこれらの統合を構成できました。
+<!--2355022,2357366--> Intune の最新更新プログラムを適用すると、Azure Portal の Intune のハイブリッド モバイル デバイス管理で、Android for Work 統合と Lookout Mobile Threat Defense 統合を有効にし、管理できます。 この更新の前は、Intune Classic (Silverlight) ポータルでのみこれらの設定を構成できました。
  
-注: Lookout は、ハイブリッドでサポートされている唯一の Mobile Threat Defense (MTD) プロバイダーです。 以前に他の MTD プロバイダーと統合していた場合、Azure Portal の Intune に引き続き表示されます。 そのコネクタを削除した場合、再び追加することはできません。
+注: Lookout は、ハイブリッドでサポートされている唯一の Mobile Threat Defense (MTD) プロバイダーです。 以前に他の MTD プロバイダーと統合していた場合、Azure portal の Intune に引き続き表示されます。 そのコネクタを削除した場合、再び追加することはできません。
  
 これらの変更は、既存の機能には影響を与えません。 関連するアプリ、レポート、ポリシーの管理には、引き続き Configuration Manager コンソールを使用します。
  
@@ -143,11 +154,11 @@ ms.locfileid: "39039626"
 
 
 #### <a name="update-where-to-configure-your-app-protection-policies"></a>アプリの保護ポリシーを構成する場所を更新 
-<!--2144597--> Microsoft Intune サービス内の Azure Portal で、ユーザーが一時的に **[Intune App Protection]** サービス ブレードから **[モバイル アプリ]** ブレードにリダイレクトされます。 すべてのアプリ保護ポリシーが Intune のアプリ構成の **[モバイル アプリ]** ブレードに既に置かれていることに注意してください。 Intune App Protection に移動する代わりに、Intune に移動します。 2018 年 4 月にリダイレクトを停止し、**[Intune App Protection]** サービス ブレードを完全に削除する予定です。したがって、Intune 内のアプリ保護ポリシーのための場所は 1 つだけになります。 
+<!--2144597-->Microsoft Intune サービス内の Azure portal で、ユーザーが一時的に **[Intune アプリ保護]** 領域から **[モバイル アプリ]** セクションにリダイレクトされます。 すべてのアプリ保護ポリシーが、Intune のアプリ構成の **[モバイル アプリ]** セクションに既にあります。 Intune App Protection に移動する代わりに、Intune に移動します。 2018 年 4 月には、リダイレクトを停止し、**[Intune アプリ保護]** を完全に削除します。 これ以降、Intune 内のアプリ保護ポリシーは 1 か所だけになります。 
 
-**ユーザーへの影響** この変更は、Intune スタンドアロンのお客様とハイブリッド (Intune と Configuration Manager) のお客様の両方に影響します。 この統合は、クラウド管理の簡素化に役立ちます。
+**この変更によるユーザーへの影響** この変更は、Intune スタンドアロンのお客様とハイブリッド (Intune と Configuration Manager) のお客様の両方に影響します。 この統合は、クラウド管理の簡素化に役立ちます。
 
-**この変更に対して必要な準備** **[Intune App Protection]** サービス ブレードの代わりに **Intune** をお気に入りとして登録し、Intune の **[モバイル アプリ]** ブレードのアプリ保護ポリシーのワークフローを習熟してください。 リダイレクトを短期間行い、その後 **[Intune App Protection]** ブレードを削除します。 すべてのアプリ保護ポリシーは既に Intune にあり、どの条件付きアクセス ポリシーでも変更できることを忘れないでください。 条件付きアクセス ポリシーの変更について詳しくは、「[Azure Active Directory の条件付きアクセス](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)」をご覧ください。 その他の情報については、「[アプリ保護ポリシーとは](/intune/app-protection-policy)」をご覧ください。 
+**この変更に対して必要な準備** お気に入りとして **Intune アプリ保護**ではなく **Intune** を設定します。 Intune の **[モバイル アプリ]** 領域でアプリ保護ポリシーのワークフローに習熟します。 リダイレクトを短期間行い、その後 **[Intune アプリ保護]** を削除します。 すべてのアプリ保護ポリシーは既に Intune にあり、どの条件付きアクセス ポリシーでも変更できることを忘れないでください。 条件付きアクセス ポリシーの変更について詳しくは、「[Azure Active Directory の条件付きアクセス](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)」をご覧ください。 詳細については、「[アプリ保護ポリシーとは](https://docs.microsoft.com/intune/app-protection-policy)」を参照してください。 
 
 
 
@@ -161,7 +172,7 @@ ms.locfileid: "39039626"
 - 最新の状態情報をユーザーに提供する追加の進行状況バー。
 - 物事が正しく進まなかった場合、それを報告しやすくするためのログのアップロード方法の向上。  
 
-新しい外観を確認するには、[アプリの UI の新機能](/intune/whats-new-app-ui)に関するページを参照してください。
+更新後の外観を確認するには、[アプリの UI の新機能](https://docs.microsoft.com/intune/whats-new-app-ui)に関するページを参照してください。
 
 
 
@@ -172,11 +183,11 @@ ms.locfileid: "39039626"
 #### <a name="windows-company-portal-send-feedback-option-may-no-longer-work"></a>Windows ポータル サイトの [フィードバックの送信] オプションは今後機能しない場合がある
 <!--2070166--> Windows ポータル サイト アプリには、アプリに関するフィードバックを Microsoft に送信できるように 'フィードバックの送信' オプションがあります。 2018 年 4 月 30 日から、Windows 10 バージョン 1607 以降を実行している Windows 10 ポータル サイト アプリでのみ、このオプションが引き続きサポートされます。   
 
-**ユーザーへの影響**
+**この変更によるユーザーへの影響**
 
 エンド ユーザーに Windows ポータル サイト アプリをインストールしていない場合、このメッセージは無視してください。
 
-エンド ユーザーの中にポータル サイト アプリをインストールしている人がいる場合、次のシナリオにおいて、4 月 30 日から 'フィードバックの送信' ボタンが機能しなくなることに注意してください。  
+エンド ユーザーの中にポータル サイト アプリをインストールしている人がいる場合、次のシナリオにおいて、4 月 30 日から [フィードバックの送信] ボタンが機能しなくなります。  
 
  - Windows 10 バージョン 1507 とバージョン 1511 の Windows 10 ポータル サイト アプリ  
 
@@ -186,7 +197,7 @@ ms.locfileid: "39039626"
 
 **この変更に対して必要な準備**
 
-エンド ユーザーにこの変更を通知し、必要に応じてユーザー ガイダンスを更新してください。 
+エンド ユーザーにこの変更を通知し、必要に応じてユーザー ガイダンスを更新します。 
 
 Windows Phone 8.1、Windows 10 バージョン 1507、Windows 10 バージョン 1511 でポータル サイトを利用しているエンド ユーザーに 2 つの代替フィードバック チャネルを利用できることをお知らせください。 代替フィードバック方法:  
 
@@ -220,7 +231,7 @@ Windows 10 バージョン 1607 以降を利用しているエンド ユーザ�
   <!--1797090 -->  
 
 - **Intune の条件付きアクセス ポリシーは、Azure Portal からのみ利用できる**   
-  このリリース以降は、**[Azure Active Directory]** > **[条件付きアクセス]** から [Azure Portal](https://portal.azure.com) の条件付きアクセス ポリシーを構成して管理する必要があります。 便宜上、**[Intune]** > **[条件付きアクセス]** の、Azure Portal 内にある Intune からこのブレードにアクセスすることもできます。
+  このリリース以降は、**[Azure Active Directory]** > **[条件付きアクセス]** から [Azure Portal](https://portal.azure.com) の条件付きアクセス ポリシーを構成して管理する必要があります。 便宜上、**[Intune]** > **[条件付きアクセス]** の、Azure portal 内にある Intune からこれらの設定にアクセスすることもできます。
   <!-- 1737088 1634311 --> 
 
 - **コンプライアンス メールの更新**    
@@ -264,7 +275,7 @@ Windows 10 バージョン 1607 以降を利用しているエンド ユーザ�
   <!--1541700-->   
 
 - **Microsoft Planner が承認済みアプリのモバイル アプリ管理 (MAM) リストの一部に**    
-  iOS および Android 用の Microsoft Planner アプリが、モバイル アプリ管理 (MAM) に対する承認済みアプリの一部となりました。 Azure Portal の Intune App Protection ブレードからすべてのテナントに対してアプリを構成します。 詳細については、[承認済みアプリの MAM リスト](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)に関するページをご覧ください。
+  iOS および Android 用の Microsoft Planner アプリが、モバイル アプリ管理 (MAM) に対する承認済みアプリの一部となりました。 Azure portal の Intune App Protection からすべてのテナントに対してアプリを構成します。 詳細については、[承認済みアプリの MAM リスト](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)に関するページをご覧ください。
   <!-- 1248473 -->    
 
 - 
@@ -342,7 +353,7 @@ Windows 10 バージョン 1607 以降を利用しているエンド ユーザ�
   <!--1565657-->    
 
 - **iOS 用ポータル サイトでの証明書ベースの認証のサポート**    
-  iOS 用ポータル サイト アプリでの証明書ベースの認証 (CBA) のサポートが追加されました。 CBA を使用するユーザーは、ユーザー名を入力してから [Sign in with a certificate]\(証明書でサインイン\) リンクをタップします。 Android および Windows 用ポータル サイト アプリでは、既に CBA がサポートされています。 詳細については、[ポータル サイト アプリにサインインする](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal)方法に関するページをご覧ください。
+  iOS 用ポータル サイト アプリでの証明書ベースの認証 (CBA) のサポートが追加されました。 CBA を使用するユーザーは、ユーザー名を入力してから [Sign in with a certificate]\(証明書でサインイン\) リンクをタップします。 Android および Windows 用ポータル サイト アプリでは、既に CBA がサポートされています。 詳細については、[ポータル サイト アプリにサインインする方法](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal)に関するページを参照してください。
   <!--1029830-->   
 
 - **ポータル サイトのデバイスのセットアップ ワークフローを改善**     
@@ -504,18 +515,29 @@ Intune Managed Browser は、ユーザーがリモートで作業している場
   <!-- 1321367 -->
 
 
+
 ## <a name="notices"></a>通知
+
+### <a name="plan-for-change-upcoming-macos-and-intune-password-enforcement-change"></a>変更の計画: macOS と Intune でのパスワード適用の変更の予定
+<!--1873216-->9 月のサービス リリースでは、Intune は Apple の macOS バージョン 10.13 以降を実行するデバイスに対して新しくリリースされた [Change Password at Next Auth]\(次の認証でパスワードを変更する\) 設定を統合する予定です。 この設定が導入される前は、MDM プロバイダーにはコンプライアンス確認のためにデバイスのパスコードが変更されたことを確認する方法がありませんでした。 Intune の構成とコンプライアンスのポリシーでは、次にデバイスでパスワードが変更されるときに準拠とマークされることだけが検証されていました。 この新しい Apple 機能を統合すると、macOS ユーザーは、パスワードが既に準拠している場合であっても、パスワード更新要求を受け取ります。
+
+#### <a name="how-does-this-change-affect-me"></a>この変更によるユーザーへの影響
+この変更は、macOS デバイス ポリシーを使用している Intune スタンドアロンまたはハイブリッド MDM のお客様にのみ影響します。 Apple は、[Change Password at Next Auth]\(次の認証でパスワードを変更する\) という設定を導入しました。 Intune でパスワード ポリシーをプッシュするときに、準拠するパスワードへの更新をユーザーに強制できます。 デバイスが準拠としてマークされるまで会社のリソースをブロックする場合、エンド ユーザーは自分のパスワードをリセットするまでメールや SharePoint サイトなどの会社のリソースへのアクセスをブロックされる場合があることを、知っておいてください。 将来的には、構成とコンプライアンスのパスワード ポリシーに対するすべての更新で、特定のユーザーにパスワードの更新を強制的するようになります。
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>この変更に対して必要な準備
+ヘルプデスクへの通知が必要な場合があります。 この macOS デバイス ポリシーを適用しない場合は、既存の macOS ポリシーを割り当て解除または削除します。 この変更の実装に先立つ顧客調査では、ほとんどのお客様がこの変更による影響を受けないことが示されています。 通常、エンド ユーザーは、準拠を維持するためにパスワードの登録またはパスワードのリセットを要求されると、自分のパスワードを更新します。  
+
 
 ### <a name="plan-for-change-intune-moving-to-support-ios-10-and-later-in-september-2018"></a>変更の計画: Intune の iOS 10 以降のサポートへの移行 (2018 年 9 月) 
 <!--2454656-->
 
 2018 年 9 月には、Apple が iOS 12 をリリースする予定です。 リリースのすぐ後に、Intune の登録、ポータル サイト、Managed Browser は iOS 10 以降のサポートに移行します。
 
-#### <a name="how-does-this-affect-me"></a>ユーザーへの影響
+#### <a name="how-does-this-change-affect-me"></a>この変更によるユーザーへの影響
 
 Office 365 モバイル アプリは iOS 10 以降でサポートされています。このため、ユーザーは OS やデバイスを既にアップグレードしている場合があります。 その場合、この変更は影響を及ぼしません。
 
-ただし、次に一覧表示するデバイスのいずれかを所有している場合、または登録する場合は、iOS 9 以前しかサポートされないことに注意してください。 引き続き Intune ポータル サイトにアクセスするには、9 月までに、これらのデバイスを iOS 10 以降をサポートするデバイスにアップグレードする必要があります。 
+ただし、次に一覧表示するデバイスのいずれかを所有している場合、または登録する場合は、iOS 9 以前しかサポートされません。 引き続き Intune ポータル サイトにアクセスするには、9 月までに、これらのデバイスを iOS 10 以降をサポートするデバイスにアップグレードする必要があります。 
 
 - iPhone 4S
 - iPod Touch 
@@ -534,11 +556,11 @@ Office 365 モバイル アプリは iOS 10 以降でサポートされていま
 
 Intune は、クラス最高の暗号化を提供し、サービスが既定で安全であることを保証し、Microsoft Office 365 などの他の Microsoft サービスと連携するために、2018 年 10 月 31 日以降、トランスポート層セキュリティ (TLS) プロトコル バージョン 1.2 をサポートします。 Office は MC128929 でこの変更を伝えています。
 
-#### <a name="how-does-this-affect-me"></a>ユーザーへの影響
+#### <a name="how-does-this-change-affect-me"></a>この変更によるユーザーへの影響
 
-2018 年 10 月 31 日時点で、Intune は TLS プロトコル バージョン 1.0 や 1.1 をサポートしなくなります。 すべてのクライアント/サーバーおよびブラウザー/サーバーの組み合わせで TLS バージョン 1.2 を使用して、Intune への正常な接続を保証する必要があります。 この変更は、Intune でサポートされなくなったが Intune 経由で引き続きポリシーを受け取っているエンド ユーザーのデバイス、および TLS バージョン 1.2 を使用できないエンド ユーザーのデバイスに影響を及ぼすことに注意してください。 これには、Android 4.3 以前を実行しているデバイスなどが含まれます。 影響を受けるデバイスとブラウザーの一覧については、以下の追加情報をご覧ください。
+2018 年 10 月 31 日時点で、Intune は TLS プロトコル バージョン 1.0 や 1.1 をサポートしなくなります。 すべてのクライアント/サーバーおよびブラウザー/サーバーの組み合わせで TLS バージョン 1.2 を使用して、Intune への正常な接続を保証する必要があります。 この変更は、Intune でサポートされなくなったが Intune 経由で引き続きポリシーを受け取っているエンド ユーザーのデバイス、および TLS バージョン 1.2 を使用できないエンド ユーザーのデバイスに、影響を及ぼします。 このようなデバイスには、Android 4.3 以前を実行しているデバイスなどが含まれます。 影響を受けるデバイスとブラウザーの一覧については、以下のリンクをご覧ください。
 
-2018 年 10 月 31 日以降に古い TLS バージョンの使用に関連する問題が生じる場合は、解決の一環として、TLS 1.2 または TLS 1.2 をサポートしているデバイスに更新する必要があります。
+2018 年 10 月 31 日以降に古い TLS バージョンの使用に関連する問題が生じる場合は、解決の一環として、TLS 1.2 または TLS 1.2 をサポートしているデバイスに更新します。
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>この変更に対して必要な準備
 

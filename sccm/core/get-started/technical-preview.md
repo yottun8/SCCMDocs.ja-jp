@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec9c4cdf54e6ffc55cc2983152f56492e5b1b354
-ms.sourcegitcommit: af4f8bd8dffe6fb05f51322ea9e94d335a2cc0c0
+ms.openlocfilehash: b60ebcf0ce94dfdc25466b31c9a64d0d556e1ac6
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/31/2018
-ms.locfileid: "39360717"
+ms.locfileid: "39385390"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager の Technical Preview
 
@@ -36,7 +36,7 @@ Configuration Manager の *Current Branch* の新機能については、「[Sys
 > [!IMPORTANT]     
 >  Technical Preview はラボ環境での使用目的に限定してライセンスされます。 Microsoft はサポート サービスを提供しない場合があり、また、プレビュー ソフトウェアでは特定の機能が使用できない場合があります。 さらに、プレビュー ソフトウェアは、製品版ソフトウェアに比べて、セキュリティ、プライバシー、アクセシビリティ、可用性および信頼性の基準が低いか、または異なる場合があります。  
 
- ほとんどの製品の前提条件については、[サポートされている構成](/sccm/core/plan-design/configs/supported-configurations)に関するページの情報をご覧ください。 Technical Preview Branch には次の例外が適用されます。  
+ほとんどの製品の前提条件については、[サポートされている構成](/sccm/core/plan-design/configs/supported-configurations)に関するページの情報をご覧ください。 Technical Preview Branch には次の例外が適用されます。  
 
 -   各インストールは 90 日後に使用期限が切れるまでアクティブです。  
 
@@ -99,7 +99,7 @@ Configuration Manager の Technical Preview Branch では、次の製品とテ�
 > 
 > 1 年の間に何回か、Technical Preview Branch と Current Branch のバージョン番号が同じになることがあります。 たとえば、Technical Preview バージョン 1802 と Current Branch バージョン 1802 が存在します。 
 
-   
+
 ### <a name="active-baseline-versions"></a>アクティブなベースライン バージョン
    
 リリース後、最長 1 年間、ベースライン バージョンをインストールできます。 新しい Technical Preview サイトをインストールする時点で、使用できるベースライン バージョンが複数ある場合は、最新のベースライン バージョンを使用します。
@@ -134,6 +134,7 @@ Technical Preview の新機能に関するフィードバックをお寄せく�
 - [スクリプトの出力の改良](capabilities-in-technical-preview-1807.md#bkmk_script) <!--1236459-->
 - [サード パーティ製ソフトウェアの更新プログラムの改良](capabilities-in-technical-preview-1807.md#bkmk_3pupdate) <!--1358714-->
 
+
 > [!Note]  
 > Technical Preview の以前のバージョンで利用できるようになった機能は、以降のバージョンでも利用できます。 同様に、Configuration Manager の Current Branch に追加された機能は、Technical Preview Branch でも引き続き利用できます。   
 
@@ -150,61 +151,61 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |機能 |Technical Preview のバージョン |Current Branch のバージョン|  
  |----------------|---------------------|--------------------|
- | 段階的な展開の機能強化 <!--1358577,1358147,1358578--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_pod)  | ![追加されていません](media/Red_X.gif) |  
- | 新しい Windows アプリケーション パッケージ形式のサポート <!--1357427--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_msix)  | ![追加されていません](media/Red_X.gif) |  
- | クライアント プッシュ セキュリティの機能改善 <!--1358204--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_client-push)  | ![追加されていません](media/Red_X.gif) |  
- | プロアクティブ メンテナンスの管理分析情報 <!--1352184,et al--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_insights)  | ![追加されていません](media/Red_X.gif) |  
- | 共同管理されたデバイスのモバイル アプリ ワークロードの移行 <!--1357892--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt)  | ![追加されていません](media/Red_X.gif) |  
- | ピアのダウンロードの境界グループのオプション <!--1356193--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions)  | ![追加されていません](media/Red_X.gif) |  
- | カスタム カタログ用のサード パーティ製ソフトウェアの更新プログラムのサポート <!--1358714--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate)  | ![追加されていません](media/Red_X.gif) |  
- | クラウド管理機能の改善 <!--511980,515854--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_cloud)  | ![追加されていません](media/Red_X.gif) |  
- | 新しいソフトウェア更新プログラムのコンプライアンス レポート <!--1357775--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_report)  | ![追加されていません](media/Red_X.gif) |  
- | サード パーティ製ソフトウェアの更新プログラム <!--1352101--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate)  | ![追加されていません](media/Red_X.gif) |  
- | Microsoft Edge 用に Windows Defender SmartScreen 設定を構成する <!--1353701--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge)  | ![追加されていません](media/Red_X.gif) |  
- | 共同管理されたデバイスのために MDM ポリシーを Microsoft Intune から同期する <!--1357377--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device)  | ![追加されていません](media/Red_X.gif) |  
- | 共同管理を使用して Intune に Office 365 ワークロードを移行する <!--1357841--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management)  | ![追加されていません](media/Red_X.gif) |  
- | Package Conversion Manager <!--1357861--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#package-conversion-manager)  | ![追加されていません](media/Red_X.gif) |  
- | コンテンツなしのソフトウェア更新プログラムの展開 <!--1357933--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content)  | ![追加されていません](media/Red_X.gif) |  
- | Office 365 インストーラーと Office カスタマイズ ツールの統合 <!--1358149--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer)  | ![追加されていません](media/Red_X.gif) |  
- | クラウド管理ゲートウェイの機能改善 <!--1358215,1358651,503899--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway)   | ![追加されていません](media/Red_X.gif) |  
- | セキュアなクライアント通信の改善 <!--1358278,1358279--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications)  | ![追加されていません](media/Red_X.gif) |  
- | ソフトウェア センターのインフラストラクチャの改善 <!--1358309--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements)  | ![追加されていません](media/Red_X.gif) |  
- | デバイス上のすべてのユーザーに対して Windows アプリ パッケージをプロビジョニングする <!--1358310--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device)  | ![追加されていません](media/Red_X.gif) |  
- | Surface ダッシュボードの改善 <!--1358654--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard)  | ![追加されていません](media/Red_X.gif) |  
- | ハードウェア インベントリの既定の単位のリビジョン <!--514442--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision)  | ![追加されていません](media/Red_X.gif) |  
- | タスク シーケンスに手動で構成されたフェーズを使用して段階的展開を作成する <!--1358148--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence)  | ![追加されていません](media/Red_X.gif) |  
- | Azure Resource Manager のためのクラウド配布ポイントのサポート <!--1322209--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  | ![追加されていません](media/Red_X.gif) |  
- | 管理の洞察に基づいて対策する <!--1357930--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights)  | ![追加されていません](media/Red_X.gif) |  
- | 共同管理を使用して Intune にデバイス構成ワークロードを移行する <!--1357903--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#transition-device-configuration-workload-to-intune-using-co-management)  | ![追加されていません](media/Red_X.gif) |  
- | ネットワークの輻そう制御を使用する配布ポイントを有効にする <!--1358112--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#enable-distribution-points-to-use-network-congestion-control)  | ![追加されていません](media/Red_X.gif) |  
- | クラウド管理ダッシュボード <!--1358461--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-management-dashboard)  | ![追加されていません](media/Red_X.gif) |  
- | CMPivot <!--1358456--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmpivot)  | ![追加されていません](media/Red_X.gif) |  
- | 改善されたセキュアなクライアント通信 <!--1356889,1358228,1358460--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improved-secure-client-communications)  | ![追加されていません](media/Red_X.gif) |  
- | サード パーティ製のソフトウェア更新プログラムのサポートを有効にするための機能強化 <!--1357605--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support)  | ![追加されていません](media/Red_X.gif) |  
- | Windows 10 一括アップグレード タスク シーケンスの機能強化 <!--1358500--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence)  | ![追加されていません](media/Red_X.gif) |  
- | クライアントと共にインストールされる CMTrace <!--1357971--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client)  | ![追加されていません](media/Red_X.gif) |  
- | Configuration Manager コンソールの機能強化 <!--1358202--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console)  | ![追加されていません](media/Red_X.gif) |  
- | コンソール フィードバックの機能強化 <!--1357542--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback)  | ![追加されていません](media/Red_X.gif) |  
- | PXE 対応の配布ポイントの機能強化 <!--1357580--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-pxe-enabled-distribution-points)  | ![追加されていません](media/Red_X.gif) |  
- | 大きな整数値でのハードウェア インベントリの機能強化 <!--1357880--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values)  | ![追加されていません](media/Red_X.gif) |  
- | WSUS メンテナンスの機能強化 <!--1357898--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance)  | ![追加されていません](media/Red_X.gif) |  
- | CNG 証明書のサポートの強化 <!--1357314--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates)  | ![追加されていません](media/Red_X.gif) |  
- | サイト サーバーのリモート コンテンツ ライブラリを構成する <!--1357525--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server)  | ![追加されていません](media/Red_X.gif) | 
- | Configuration Manager コンソールからフィードバックを送信する<!--1357542--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#bkmk_feedback)  | ![追加されていません](media/Red_X.gif) | 
+ | 段階的な展開の機能強化 <!--1358577,1358147,1358578--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_pod)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 新しい Windows アプリケーション パッケージ形式のサポート <!--1357427--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_msix)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | クライアント プッシュ セキュリティの機能改善 <!--1358204--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_client-push)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | プロアクティブ メンテナンスの管理分析情報 <!--1352184,et al--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_insights)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 共同管理されたデバイスのモバイル アプリ ワークロードの移行 <!--1357892--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | ピアのダウンロードの境界グループのオプション <!--1356193--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | カスタム カタログ用のサード パーティ製ソフトウェアの更新プログラムのサポート <!--1358714--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | クラウド管理機能の改善 <!--511980,515854--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_cloud)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 新しいソフトウェア更新プログラムのコンプライアンス レポート <!--1357775--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_report)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | サード パーティ製ソフトウェアの更新プログラム <!--1352101--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Microsoft Edge 用に Windows Defender SmartScreen 設定を構成する <!--1353701--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 共同管理されたデバイスのために MDM ポリシーを Microsoft Intune から同期する <!--1357377--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 共同管理を使用して Intune に Office 365 ワークロードを移行する <!--1357841--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Package Conversion Manager <!--1357861--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#package-conversion-manager)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | コンテンツなしのソフトウェア更新プログラムの展開 <!--1357933--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Office 365 インストーラーと Office カスタマイズ ツールの統合 <!--1358149--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | クラウド管理ゲートウェイの機能改善 <!--1358215,1358651,503899--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway)   | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | セキュアなクライアント通信の改善 <!--1358278,1358279--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | ソフトウェア センターのインフラストラクチャの改善 <!--1358309--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | デバイス上のすべてのユーザーに対して Windows アプリ パッケージをプロビジョニングする <!--1358310--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Surface ダッシュボードの改善 <!--1358654--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | ハードウェア インベントリの既定の単位のリビジョン <!--514442--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | タスク シーケンスに手動で構成されたフェーズを使用して段階的展開を作成する <!--1358148--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Azure Resource Manager のためのクラウド配布ポイントのサポート <!--1322209--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 管理の洞察に基づいて対策する <!--1357930--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 共同管理を使用して Intune にデバイス構成ワークロードを移行する <!--1357903--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#transition-device-configuration-workload-to-intune-using-co-management)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | ネットワークの輻そう制御を使用する配布ポイントを有効にする <!--1358112--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#enable-distribution-points-to-use-network-congestion-control)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | クラウド管理ダッシュボード <!--1358461--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-management-dashboard)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | CMPivot <!--1358456--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmpivot)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 改善されたセキュアなクライアント通信 <!--1356889,1358228,1358460--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improved-secure-client-communications)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | サード パーティ製のソフトウェア更新プログラムのサポートを有効にするための機能強化 <!--1357605--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Windows 10 一括アップグレード タスク シーケンスの機能強化 <!--1358500--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | クライアントと共にインストールされる CMTrace <!--1357971--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Configuration Manager コンソールの機能強化 <!--1358202--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | コンソール フィードバックの機能強化 <!--1357542--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | PXE 対応の配布ポイントの機能強化 <!--1357580--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-pxe-enabled-distribution-points)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 大きな整数値でのハードウェア インベントリの機能強化 <!--1357880--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | WSUS メンテナンスの機能強化 <!--1357898--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | CNG 証明書のサポートの強化 <!--1357314--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | サイト サーバーのリモート コンテンツ ライブラリを構成する <!--1357525--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | Configuration Manager コンソールからフィードバックを送信する<!--1357542--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#bkmk_feedback)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
  | サポート センター <!--1357489--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#support-center)  | ![追加されていません](media/Red_X.gif) | 
- | Configuration Manager Toolkit <!--1357145--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configuration-manager-toolkit)  | ![追加されていません](media/Red_X.gif) | 
- | 承認を取り消したときにアプリケーションをアンインストールする <!--1357891--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#uninstall-application-on-approval-revocation)  | ![追加されていません](media/Red_X.gif) | 
- | 探索から Active Directory コンテナーを除外する <!--1358143--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#exclude-active-directory-containers-from-discovery)  | ![追加されていません](media/Red_X.gif) | 
- | ソフトウェア センターのアプリケーション カタログ Web サイト リンクの表示を指定する <!--1358214--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#specify-the-visibility-of-the-application-catalog-website-link-in-software-center)  | ![追加されていません](media/Red_X.gif) | 
- | ソフトウェア更新アーキテクチャを使用した自動展開規則のフィルター処理 <!--1322266--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#filter-automatic-deployment-rules-by-software-update-architecture)  | ![追加されていません](media/Red_X.gif) | 
- | OS 展開の機能強化 <!--1358330,1358493--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#improvements-to-os-deployment) | ![追加されていません](media/Red_X.gif) | 
- | ソースとしてのクラウド配布ポイントのプル配布ポイントのサポート <!--1321554--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#pull-distribution-points-support-cloud-distribution-points-as-source)  | ![追加されていません](media/Red_X.gif) | 
- | WAN の使用率を減らすためのクライアント ピア キャッシュでの部分的なダウンロードのサポート <!--1357346--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#partial-download-support-in-client-peer-cache-to-reduce-wan-utilization)  | ![追加されていません](media/Red_X.gif) | 
- | ソフトウェア センターのメンテナンス期間 <!--1358131--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#maintenance-windows-in-software-center)  | ![追加されていません](media/Red_X.gif) | 
- | ソフトウェア センターの Web ページのカスタム タブ <!--1358132--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#custom-tab-for-webpage-in-software-center)  | ![追加されていません](media/Red_X.gif) | 
- | クライアントでサード パーティ製ソフトウェア更新プログラムを有効にするサポート <!--1357605--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients)  | ![追加されていません](media/Red_X.gif) | 
- | 監視ビューからの資産の詳細のコピー/貼り付けを有効にする <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-copypaste-of-asset-details-from-monitoring-views)  | ![追加されていません](media/Red_X.gif) | 
- | SCAP 拡張機能 <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#scap-extensions)  | ![追加されていません](media/Red_X.gif) | 
+ | Configuration Manager Toolkit <!--1357145--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configuration-manager-toolkit)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | 承認を取り消したときにアプリケーションをアンインストールする <!--1357891--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#uninstall-application-on-approval-revocation)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | 探索から Active Directory コンテナーを除外する <!--1358143--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#exclude-active-directory-containers-from-discovery)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | ソフトウェア センターのアプリケーション カタログ Web サイト リンクの表示を指定する <!--1358214--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#specify-the-visibility-of-the-application-catalog-website-link-in-software-center)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | ソフトウェア更新アーキテクチャを使用した自動展開規則のフィルター処理 <!--1322266--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#filter-automatic-deployment-rules-by-software-update-architecture)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | OS 展開の機能強化 <!--1358330,1358493--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#improvements-to-os-deployment) | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | ソースとしてのクラウド配布ポイントのプル配布ポイントのサポート <!--1321554--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#pull-distribution-points-support-cloud-distribution-points-as-source)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | WAN の使用率を減らすためのクライアント ピア キャッシュでの部分的なダウンロードのサポート <!--1357346--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#partial-download-support-in-client-peer-cache-to-reduce-wan-utilization)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | ソフトウェア センターのメンテナンス期間 <!--1358131--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#maintenance-windows-in-software-center)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | ソフトウェア センターの Web ページのカスタム タブ <!--1358132--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#custom-tab-for-webpage-in-software-center)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | クライアントでサード パーティ製ソフトウェア更新プログラムを有効にするサポート <!--1357605--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | 監視ビューからの資産の詳細のコピー/貼り付けを有効にする <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-copypaste-of-asset-details-from-monitoring-views)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | SCAP 拡張機能 <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#scap-extensions)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
  
   
 
@@ -218,23 +219,28 @@ Copy from the bottom of the list above any individual feature that is still in T
 With each CB release, review and remove from this list for anything that's now available in CB. 
 -->
 
- |機能 |Technical Preview のバージョン |  
- |----------------|---------------------|
- | PXE 対応の配布ポイントの機能強化 <!-- 1357580 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) | 
- | 製品ライフサイクル ダッシュボード <!--1319632 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) | 
- | クライアント ベースの PXE レスポンダー サービス <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
- |サイト サーバーの役割の高可用性<!-- 1128774 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |
- |PXE ネットワーク ブートでの IPv6 のサポート<!-- 1269793 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
- |Azure Active Directory の使用 <!-- 1322145? --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
- |Windows Update for Business 更新プログラムのコンプライアンス評価<!-- 1235390 --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#compliance-assessment-for-windows-update-for-business-updates) |
- |OData エンドポイントのデータ アクセス<!-- 1321523 --> |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|
- |資産インテリジェンスの改善 <!-- 1307390 --> |[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence)|
- |エンド ユーザーはポータル サイトからアプリをインストールできる<!-- 1037233? --> |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End)|
+|機能 |Technical Preview バージョン |  
+|----------------|---------------------|
+| クライアント ベースの PXE レスポンダー サービス <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
+|PXE ネットワーク ブートでの IPv6 のサポート<!-- 1269793 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
+|Azure Active Directory の使用 <!-- 1322145? --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
+|Windows Update for Business 更新プログラムのコンプライアンス評価<!-- 1235390 --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#compliance-assessment-for-windows-update-for-business-updates) |
+|OData エンドポイントのデータ アクセス<!-- 1321523 --> |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|
+|資産インテリジェンスの改善 <!-- 1307390 --> |[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence)|
+|エンド ユーザーはポータル サイトからアプリをインストールできる<!-- 1037233? --> |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End)|
+
+<!--Removed for 1806 CB:
+ |Site server role high availability <!-- 1128774  |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |
+ | Product lifecycle dashboard <!--1319632  | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) | 
+ | Improvements to PXE-enabled distribution points <!-- 1357580  | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) | 
+-->
 
 
 
-## <a name="see-also"></a>関連項目
-  
+## <a name="see-also"></a>関連項目  
+
+詳細については、以下の記事を参照してください。  
+
 - [ラボでの Configuration Manager の評価](/sccm/core/get-started/evaluate-with-lab-environment)
 - [Configuration Manager の増分バージョンの新機能](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
 - [Configuration Manager の概要](/sccm/core/understand/introduction)

@@ -2,7 +2,7 @@
 title: コンテンツ管理の基礎
 titleSuffix: Configuration Manager
 description: Configuration Manager のツールとオプションを使用して、展開するコンテンツを管理します。
-ms.date: 06/15/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4419a563a65ab9d98a76dcf58b48ae00e0763dab
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: a8f4d93c7bfa73b04ed2c760db17b27e8f1f6de2
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260736"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385261"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager でのコンテンツ管理の基本的な概念
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-Configuration Manager は、アプリケーション、パッケージ、ソフトウェア更新プログラム、および OS の展開として展開するコンテンツを管理するための、信頼性の高いツールとオプションのシステムをサポートしています。 Configuration Manager は、サイト サーバーと配布ポイントの両方にコンテンツを格納します。 このコンテンツを地点間で転送するときに、大きなネットワーク帯域幅が必要になります。 コンテンツ管理インフラストラクチャを効果的に計画および使用するには、使用可能なオプションと構成を理解することをお勧めします。 その後、ネットワーク環境やコンテンツ展開ニーズに最適な使い方を検討します。  
+Configuration Manager では、ソフトウェア コンテンツを管理するためのツールとオプションの信頼性の高いシステムがサポートされます。 アプリケーション、パッケージ、ソフトウェア更新プログラム、OS の展開などのソフトウェアの展開にはすべてコンテンツが必要です。 Configuration Manager は、サイト サーバーと配布ポイントの両方にコンテンツを格納します。 このコンテンツを地点間で転送するときに、大きなネットワーク帯域幅が必要になります。 コンテンツ管理インフラストラクチャを効果的に計画および使用するには、まず、利用可能なオプションと構成を理解します。 その後、ネットワーク環境やコンテンツ展開ニーズに最適な使い方を検討します。  
 
 > [!TIP]    
 > コンテンツ配布プロセスの詳細、およびコンテンツ配布に関する一般的な問題の診断と解決に役立つ情報の探し方については、「[Understanding and Troubleshooting Content Distribution in Microsoft Configuration Manager](https://support.microsoft.com/help/4000401/content-distribution-in-mcm)」(Microsoft Configuration Manager でのコンテンツ配布の理解とトラブルシューティング) をご覧ください。
@@ -41,7 +41,7 @@ Configuration Manager は、アプリケーション、パッケージ、ソフ�
 
 -   **マルチキャスト接続アカウント**: OS の展開に使われます。  
 
-これらのアカウントの詳細については、「[コンテンツにアクセスするためのアカウントの管理](../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)」を参照してください。
+これらのアカウントの詳細については、「[コンテンツにアクセスするためのアカウントの管理](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content)」を参照してください。
 
 
 
@@ -59,13 +59,13 @@ Configuration Manager は、アプリケーション、パッケージ、ソフ�
 
  BDR が使われていると、Configuration Manager は、以前に配布された各コンテンツ セットについて、ソース ファイルに対して行われた変更を識別します。  
 
--   ソース コンテンツ内のファイルが変化すると、サイトはコンテンツ セットの新しい増分バージョンを作成します。 その後、変更されたファイルのみがレプリケーション先サイトと配布ポイントにレプリケートします。 ファイルは、名前が変更された場合、移動された場合、またはファイルの内容が変更された場合に、変更されたものと見なされます。 たとえば、以前に複数のサイトに配布したドライバー パッケージの 1 つのドライバー ファイルを置き換えた場合は、変更されたドライバー ファイルのみがレプリケートされます。  
+-   ソース コンテンツ内のファイルが変更されると、サイトではコンテンツの新しい増分バージョンが作成されます。 その後、変更されたファイルのみがレプリケーション先サイトと配布ポイントにレプリケートします。 ファイルは、名前が変更された場合、移動された場合、またはファイルの内容が変更された場合に、変更されたものと見なされます。 たとえば、以前に複数のサイトに配布したドライバー パッケージの 1 つのドライバー ファイルを置き換えた場合は、変更されたドライバー ファイルのみがレプリケートされます。  
 
 -   Configuration Manager は、全体のコンテンツ セットを再送信するまでに、最大 5 つの増分バージョンのコンテンツ セットを保持できます。 5 番目の更新の後で、コンテンツ セットを次に変更すると、サイトはコンテンツ セットの新しいバージョンを作成します。 Configuration Manager はその後、コンテンツ セットの新しいバージョンを配布し、前のセットとその増分バージョンを置き換えます。 新しいコンテンツ セットが配布された後は、BDR によって、またソース ファイルの増分の変更がレプリケートされます。  
 
-BDR は、同じ階層内の親サイトと子サイト間でサポートされます。 また、BDR は、サイト内のサイト サーバーとその定期的な配布ポイント間でサポートされます。 ただし、プル配布ポイントとクラウドベースの配布ポイントでは、BDR によるコンテンツの転送はサポートされません。 プル配布ポイントは、ファイル レベルのデルタをサポートしており、新しいファイルは転送されますが、ファイル内のブロックは転送されません。
+BDR は、同じ階層内の親サイトと子サイト間でサポートされます。 また、BDR は、サイト内のサイト サーバーとその定期的な配布ポイント間でサポートされます。 しかし、プル配布ポイントとクラウドの配布ポイントでは、BDR によるコンテンツの転送はサポートされません。 プル配布ポイントは、ファイル レベルのデルタをサポートしており、新しいファイルは転送されますが、ファイル内のブロックは転送されません。
 
-アプリケーションは、常にバイナリ差分レプリケーションを使用します。 パッケージの BDR はオプションであり、既定では無効になっています。 パッケージに BDR を使うには、パッケージごとにこの機能を有効にします。 パッケージを作成または編集するときに、**[バイナリ差分レプリケーションを有効にする]** オプションを有効にします。   
+アプリケーションは、常にバイナリ差分レプリケーションを使用します。 パッケージの BDR はオプションであり、既定では有効になりません。 パッケージに BDR を使うには、パッケージごとにこの機能を有効にします。 パッケージを作成または編集するときに、**[バイナリ差分レプリケーションを有効にする]** オプションを有効にします。   
 
 
 
@@ -89,10 +89,21 @@ BDR は、同じ階層内の親サイトと子サイト間でサポートされ�
 
 
 
+## <a name="windows-ledbat"></a>Windows LEDBAT
+<!--1358112--> Windows Low Extra Delay Background Transport (LEDBAT) は、バックグラウンド ネットワーク転送の管理に役立つ、Windows Server のネットワークの輻そう制御機能です。 サポートされている Windows Server のバージョンで実行される配布ポイントに対して、ネットワーク トラフィックの調整に役立つオプションを有効にします。 その後、クライアントでは利用可能な場合にのみ、ネットワーク帯域幅が使用されます。 
+
+一般的な Windows LEDBAT の詳細については、[新しいトランスポートの発展](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/)に関するブログ投稿を参照してください。
+
+Configuration Manager 配布ポイントで Windows LEDBAT を使用する方法の詳細については、[配布ポイントの全般設定を構成する](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-general)際に **[Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)]\(未使用のネットワーク帯域幅を使用するようにダウンロード速度を調整する (Windows LEDBAT)\)** の設定を確認してください。
+
+
+
 ## <a name="peer-cache"></a>ピア キャッシュ
 クライアントのピア キャッシュは、リモートの場所にあるクライアントへのコンテンツの展開を管理するのに役立ちます。 ピア キャッシュとは、クライアントがローカル キャッシュで他のクライアントとコンテンツを直接共有できるようにするための組み込みの Configuration Manager ソリューションです。
 
-ピア キャッシュを有効にするクライアント設定をコレクションに展開すると、そのコレクションのメンバーは同じ境界グループ内の他のクライアントのピア コンテンツ ソースとして動作できます。
+まず、コレクションにピア キャッシュを有効にするクライアント設定を展開します。 これにより、そのコレクションのメンバーは、同じ境界グループ内の他のクライアント用のピア コンテンツ ソースとして機能できます。
+
+バージョン 1806 以降では、クライアント ピア キャッシュ ソースのコンテンツを分割できます。 これにより、ネットワーク転送が最小限に抑えられ、WAN の使用率が減ります。 管理ポイントでは、コンテンツの各パートをより詳細に追跡することができます。 境界グループごとに同じコンテンツが複数回ダウンロードされないようにします。<!--1357346-->
 
 詳細については、「[Configuration Manager クライアントのピア キャッシュ](/sccm/core/plan-design/hierarchy/client-peer-cache)」を参照してください。
 
@@ -101,7 +112,7 @@ BDR は、同じ階層内の親サイトと子サイト間でサポートされ�
 ## <a name="windows-pe-peer-cache"></a>Windows PE ピア キャッシュ
 Configuration Manager で新しい OS を展開するとき、タスク シーケンスを実行しているコンピューターは Windows PE ピア キャッシュを使うことができます。 このようなコンピューターは、配布ポイントの代わりに、ピア キャッシュ ソースからコンテンツをダウンロードします。 この動作により、ローカル配布ポイントが存在しないブランチ オフィス シナリオで WAN のトラフィックが最小限に抑えられます。
 
-詳細については、「[Windows PE ピア キャッシュ](../../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)」を参照してください。
+詳細については、「[Windows PE ピア キャッシュ](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic)」を参照してください。
 
 
 
@@ -112,26 +123,45 @@ Configuration Manager で新しい OS を展開するとき、タスク シー�
 
     -   配布ポイントでは、HTTP または HTTPS を使用できます。  
 
-    -   オンプレミスの配布ポイントを使用できない場合、フォールバックとしてクラウドベースの配布ポイントのみを使用します。  
+    -   オンプレミスの配布ポイントを使用できない場合、フォールバックとしてクラウドの配布ポイントのみを使用します。  
 
 -   **インターネット**:  
 
-    -   HTTPS を受け入れるには配布ポイントが必要です。  
+    -   HTTPS を受け入れるには、インターネットに接続されている配布ポイントが必要です。  
 
-    -   フォールバックとしてクラウドベースの配布ポイントを使用できます。  
+    -   クラウドの配布ポイントを使用することができます。  
 
 -   **ワークグループ**:  
 
     -   HTTPS を受け入れるには配布ポイントが必要です。  
 
-    -   フォールバックとしてクラウドベースの配布ポイントを使用できます。  
+    -   クラウドの配布ポイントを使用することができます。  
+
+
+
+## <a name="content-source-priority"></a>コンテンツ ソースの優先順位
+
+クライアントでコンテンツが必要な場合は、コンテンツの場所の要求を管理ポイントに対して行います。 管理ポイントからは、要求されたコンテンツで有効なソースの場所の一覧が返されます。 この一覧は、特定のシナリオ、使用されているテクノロジ、サイト設計、境界グループ、展開の設定によって異なります。 次の一覧には、クライアントで使用できる、利用可能なコンテンツ ソースの場所がすべて含まれており、優先順に示されています。  
+
+1.  クライアントと同じコンピューター上の配布ポイント
+2.  同じネットワーク サブネット内のピア ソース
+3.  同じネットワーク サブネット内の配布ポイント
+4.  同じ Active Directory サイト内のピア ソース
+5.  同じ Active Directory サイト内の配布ポイント
+6.  同じ境界グループ内のピア ソース
+7.  現在の境界グループ内の配布ポイント
+8.  フォールバック用に構成された近隣境界グループ内の配布ポイント
+9.  既定のサイト境界グループ内の配布ポイント 
+10. Windows Update クラウド サービス
+11. インターネットに接続されている配布ポイント
+12. Azure 内のクラウド配布ポイント
 
 
 
 ## <a name="content-library"></a>コンテンツ ライブラリ  
  コンテンツ ライブラリは、Configuration Manager でのコンテンツの単一インスタンス ストアです。 このライブラリにより、配布されるコンテンツの全体的なサイズが減ります。  
 
-- [コンテンツ ライブラリ](../../../core/plan-design/hierarchy/the-content-library.md)の詳細を確認してください。
+- [コンテンツ ライブラリ](/sccm/core/plan-design/hierarchy/the-content-library)の詳細を確認してください。
 - コンテンツがもはやアプリケーションに関連していない場合は、[コンテンツ ライブラリのクリーンアップ ツール](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) を使用して、コンテンツを削除します。  
 
 
@@ -143,26 +173,29 @@ Configuration Manager で新しい OS を展開するとき、タスク シー�
 
 -   **プル配布ポイント**: 配布ポイントが他の配布ポイント (ソース配布ポイント) からコンテンツを取得する、配布ポイントのバリエーションの 1 つ。 このプロセスは、クライアントが配布ポイントからコンテンツをダウンロードするのと同じです。 プル配布ポイントを使用すると、サイト サーバーが各配布ポイントにコンテンツを直接配布する必要があるときに発生するネットワーク帯域幅のボトルネックを解消することができます。 [プル配布ポイントを使う](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)。
 
--   **クラウドベースの配布ポイント**: Microsoft Azure にインストールされている配布ポイントのバリエーションの 1 つ。 クラウドベースの配布ポイントの使い方については[こちら](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)を参照してください。  
+-   **クラウド配布ポイント**: Microsoft Azure にインストールされている配布ポイントのバリエーションの 1 つ。 クラウド配布ポイントの使い方については、[こちら](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)を参照してください。  
 
 
 標準配布ポイントは、さまざまな構成と機能をサポートします。  
 
 - この転送を制御するには、**スケジュール**や**帯域幅調整**などのコントロールを使います。  
-- ネットワークの消費量を最小限にして制御するには、**事前設定されたコンテンツ**や**プル配布ポイント**などのコントロールを使います。 
+
+- ネットワークの消費量を最小限にして制御するには、**事前設定されたコンテンツ**や**プル配布ポイント**などのコントロールを使います。  
+
 - **BranchCache**、**ピア キャッシュ**、および**配信の最適化**は、コンテンツを展開するときに使われるネットワーク帯域幅を削減するためのピア ツー ピア テクノロジです。  
-- OS の展開には、**[PXE](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)** や**[マルチキャスト](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast)** など、さまざまな構成があります
+
+- OS の展開には、**[PXE](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_PXEDistributionPoint)** や**[マルチキャスト](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_DPMulticast)** など、さまざまな構成があります  
+
 - **モバイル デバイス**のオプション   
   
-  
-クラウドベースのプル配布ポイントは、これらの同じ構成の多くをサポートしますが、各配布ポイントのバリエーションに固有の制限事項があります。  
+クラウドおよびプル配布ポイントでは、これらの同じ構成の多くがサポートされますが、各配布ポイントのバリエーションに固有の制限事項があります。  
 
 
 
 ## <a name="distribution-point-groups"></a>配布ポイント グループ  
  配布ポイント グループは、コンテンツ配布の簡素化に役立つ、配布ポイントの論理的グループです。  
 
- 詳細については、「[配布ポイント グループの管理](../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage)」を参照してください。
+ 詳細については、「[配布ポイント グループの管理](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_manage)」を参照してください。
 
 
 
@@ -196,17 +229,6 @@ Configuration Manager で新しい OS を展開するとき、タスク シー�
 
 詳細については、「[境界グループ](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)」を参照してください。
 
-<!--
-**Version 1511, 1602, and 1606**   
-Fallback settings are related to the use of **preferred distribution points** and to content source locations that are used by clients.
-
--   By default, clients only download content from a preferred distribution point (one that is associated with the client's boundary groups).  
-
--   However, when a distribution point is configured with **Allow clients to use this site system as a fallback source location for content**, that distribution point is only offered as a valid content source to any client that can't get a deployment from one of its preferred distribution points.  
-
-For information about the different content location and fallback scenarios, see [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md). For information about boundary groups, see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606).
--->
-
 
 
 ## <a name="network-bandwidth"></a>ネットワークの帯域幅  
@@ -227,19 +249,6 @@ For information about the different content location and fallback scenarios, see
 
 詳細については、「[境界グループ](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)」を参照してください。
 
-<!--
-**Version 1511, 1602, and 1606**   
- You can configure the network connection speed of each distribution point in a boundary group:  
-
--   Clients use this value when they connect to the distribution point.
-
--   By default, the network connection speed is configured as **Fast**, but it can also be set as **Slow**.  
-
--   The **network connection speed**, along with the configuration of a deployment, determine if a client can download content from a distribution point when the client is in an associated boundary group  
-
-For information about the different content location and fallback scenarios, see [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md). For information about boundary groups, see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606).
--->
-
 
 
 ## <a name="on-demand-content-distribution"></a>オンデマンドのコンテンツ配布  
@@ -247,39 +256,18 @@ For information about the different content location and fallback scenarios, see
 
 -   展開に対してこの設定を有効にするには、**[このパッケージのコンテンツを優先配布ポイントに配布する]** を有効にします。  
 
--   このオプションが展開で有効になっていて、クライアントがこのコンテンツを要求したときにコンテンツがクライアントの優先配布ポイントのいずれかで利用できない場合、Configuration Manager は、このコンテンツを自動的にクライアントの優先配布ポイントに配布します。  
+-   このオプションを展開に対して有効にしており、クライアントでコンテンツが要求されたものの、そのコンテンツがクライアントの優先配布ポイントのいずれかで利用できない場合、Configuration Manager によって、そのコンテンツが自動的にクライアントの優先配布ポイントに配布されます。  
 
 -   このオプションが有効になっていると、Configuration Manager によってクライアントの優先配布ポイントにコンテンツが自動的に配布されますが、クライアントの優先配布ポイントが展開を受け取る前にクライアントが他の配布ポイントからコンテンツを取得する可能性があります。 この動作が発生した場合、コンテンツは、その展開を必要とする他のクライアントで利用できるように、その配布ポイント上に保持されます。  
 
 詳細については、「[境界グループ](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)」を参照してください。
-
-<!--
-If you use version 1511, 1602, or 1606, see  [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) for information about the different content location and fallback scenarios.
--->
 
 
 
 ## <a name="package-transfer-manager"></a>パッケージ転送マネージャー  
  パッケージ転送マネージャーは、他のコンピューター上の配布ポイントにコンテンツを転送するサイト サーバー コンポーネントです。  
 
- 詳細については、「[パッケージ転送マネージャー](../../../core/plan-design/hierarchy/package-transfer-manager.md)」をご覧ください。  
-
-
-
-<!--
-## Preferred distribution point  
- A preferred distribution point includes any distribution points that are associated with a client's current boundary groups.  
-
- You have the option to associate each distribution point with one or more boundary groups:  
-
--   This association helps the client identify distribution points from which it can download content.  
--   By default, clients can only download content from a preferred distribution point.  
-
-
-For more information:
- - If you use version 1610 or later, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
- - If you use version 1511, 1602, or 1606, see [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).
--->
+ 詳細については、「[パッケージ転送マネージャー](/sccm/core/plan-design/hierarchy/package-transfer-manager)」をご覧ください。  
 
 
 

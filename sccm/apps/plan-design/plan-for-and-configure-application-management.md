@@ -2,7 +2,7 @@
 title: アプリケーション管理の計画と構成
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager でアプリケーションを展開するために必要な依存関係を実装および構成します。
-ms.date: 11/07/2017
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18d9fe80a1c5525457579dadbfeaeafa3425202d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 626fbb8d431857b1b672fffd9f3ba0df8b2a3da0
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340150"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385203"
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>System Center Configuration Manager のアプリケーション管理の計画と構成
 
@@ -183,8 +183,7 @@ ms.locfileid: "32340150"
 3. Microsoft Intune サブスクリプションが構成されていて Configuration Manager に接続されている場合は、Intune サブスクリプションのプロパティに指定されている組織名、色、会社のロゴがソフトウェア センターに表示されます。 詳細については、「 [Configuring the Microsoft Intune subscription](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription)」をご覧ください。
 
 #### <a name="to-manually-set-software-center-branding"></a>ソフトウェア センターのブランドを手動で設定するには
-<!-- 1351224 -->
-1710 リリースでは、エンタープライズ ブランド要素を手動で追加して、ソフトウェア センターのタブの表示を指定できます。 ソフトウェア センターに特定の会社名を追加したり、ソフトウェア センターの構成の基調となる色を設定したり、会社のロゴを設定したり、またはクライアント デバイスに表示されるタブを設定したりできます。
+<!-- 1351224 --> 1710 リリースでは、エンタープライズ ブランド要素を手動で追加して、ソフトウェア センターのタブの表示を指定できます。 ソフトウェア センターに特定の会社名を追加したり、ソフトウェア センターの構成の基調となる色を設定したり、会社のロゴを設定したり、またはクライアント デバイスに表示されるタブを設定したりできます。
 
 1. **Configuration Manager** コンソールで、**[管理]**  >  **[クライアント設定]** の順に選択します。 対象のクライアント設定のインスタンスをクリックします。
 2. **[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** を選択します。
@@ -201,9 +200,13 @@ ms.locfileid: "32340150"
     -  [インストールのステータス] タブを有効にする
     -  [デバイスのポリシー準拠] タブを有効にする
     -  [オプション] タブを有効にする
+    -  ソフトウェア センターのカスタム タブを指定する (バージョン 1806 以降) <!--1358132 -->
+        - タブ名
+        - コンテンツ URL
 
 > [!IMPORTANT]  
->  ソフトウェア センターのブランド設定は、14 日ごとに Intune サービスと同期されます。 そのため、Intune での変更が Configuration Manager に反映されて表示されるまでに時間がかかる場合があります。
+> - Web サイトの一部の機能は、ソフトウェア センターでカスタム タブとして使用すると、機能しない場合があります。 これをクライアントに展開する前に、必ず結果をテストしてください。 <!--519659--> 
+> - ソフトウェア センターのブランド設定は、14 日ごとに Intune サービスと同期されます。 そのため、Intune での変更が Configuration Manager に反映されて表示されるまでに時間がかかる場合があります。
 
 ###  <a name="step-5-verify-that-the-application-catalog-is-operational"></a>ステップ 5: アプリケーション カタログが操作可能であることの確認  
  アプリケーション カタログが操作可能であることを確認するには、次の手順に従います。 アプリケーション カタログは、ブラウザーから直接、またはソフトウェア センターから使用できます。  

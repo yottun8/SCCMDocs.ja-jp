@@ -2,7 +2,7 @@
 title: リリース ノート
 titleSuffix: Configuration Manager
 description: 製品でまだ修正されていないまたは Microsoft サポート技術情報の記事で説明されていない緊急の問題については説明します。
-ms.date: 04/18/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4aeacdbc73e21c3bae18111e22c8407eba865a87
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9daf0fb53face0cf7ed56f2a45ab044fbfac203c
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338161"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385509"
 ---
-# <a name="release-notes-for-system-center-configuration-manager"></a>System Center Configuration Manager リリース ノート
+# <a name="release-notes-for-configuration-manager"></a>Configuration Manager のリリース ノート
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -26,12 +26,12 @@ Configuration Manager 製品のリリース ノートには、緊急の問題の
 機能固有のドキュメントには、主要なシナリオに影響を与える既知の問題に関する情報が含まれます。  
 
 > [!TIP]  
->  このトピックには、Configuration Manager の現在のブランチのリリース ノートが含まれています。 Technical Preview ブランチについては、「[System Center Configuration Manager の Technical Preview](../../../../core/get-started/technical-preview.md)」をご覧ください。  
+>  このトピックには、Configuration Manager の現在のブランチのリリース ノートが含まれています。 Technical Preview ブランチについては、「[Technical Preview](../../../../core/get-started/technical-preview.md)」を参照してください。  
 
 異なるバージョンで導入された新しい機能については、以下の記事をご覧ください。
+- [バージョン 1806 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 - [バージョン 1802 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1802)
 - [バージョン 1710 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1710)
-- [バージョン 1706 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
 
 
 
@@ -74,8 +74,7 @@ Configuration Manager バージョン 1802 以降では、カスタマー エク
 ### <a name="azure-ad-enabled-clients-cant-communicate-with-management-point"></a>Azure AD が有効なクライアントが管理ポイントと通信できない
 <!--501089-->
 *適用対象: Configuration Manager バージョン 1706*
-<!--also fixed in 1710 HFRU-->
-認証のための Azure AD を使用して、Configuration Manager の Windows 10 クライアントを[インストールして割り当てる](/sccm/core/clients/deploy/deploy-clients-cmg-azure)シナリオで、HTTPS が有効な管理ポイントが別のデータベースの資格情報を使用する場合、クライアントとの通信が失敗します。 
+<!--also fixed in 1710 HFRU--> 認証のための Azure AD を使用して、Configuration Manager の Windows 10 クライアントを[インストールして割り当てる](/sccm/core/clients/deploy/deploy-clients-cmg-azure)シナリオで、HTTPS が有効な管理ポイントが別のデータベースの資格情報を使用する場合、クライアントとの通信が失敗します。 
 
 #### <a name="workaround"></a>回避策
 この問題を緩和するには、次の手順のどれかを実行してください。
@@ -88,14 +87,6 @@ Configuration Manager バージョン 1802 以降では、カスタマー エク
 
 
 ## <a name="software-updates"></a>ソフトウェア更新プログラム
-
-### <a name="servicing-plans-create-many-duplicate-software-update-groups-and-deployments-by-default"></a>既定で、サービス プランが多くの重複したソフトウェア更新プログラム グループと展開を作成する  
-<!-- 474326 -->
-現在の既定では、サービス プランの作成ウィザードが、すべてのソフトウェア更新プログラムの同期後に実行されます。 ウィザードを実行するたびに新しいソフトウェア更新プログラム グループと展開が作成されます。 1 日に複数回実行するソフトウェア更新プログラムの同期スケジュールがある場合、サービス プランの作成ウィザードが複数のソフトウェア更新プログラム グループと展開を毎日作成します。  
-
-#### <a name="workaround"></a>回避策
- サービス プランを作成した後で、サービス プランのプロパティを開き、**[評価スケジュール]** タブに移動し、**[スケジュールに基づいて規則を実行する]** を選んで、**[カスタマイズ]** をクリックし、カスタム スケジュールを作成します。 たとえば、60 日おきに実行するサービス プランを作成できます。  
-
 
 ### <a name="changing-office-365-client-setting-doesnt-apply"></a>Office 365 クライアント設定の変更が適用されない 
 <!--511551-->
