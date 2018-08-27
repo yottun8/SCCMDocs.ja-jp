@@ -93,6 +93,7 @@
 ###  [プライバシーに関する声明 - Configuration Manager Cmdlet Library](plan-design/security/privacy-statement-cmdlet-library.md)
 ###  [追加のプライバシー情報](plan-design/security/additional-privacy.md)
 ###  [セキュリティの構成](plan-design/security/configure-security.md)
+###  [暗号化コントロールのテクニカル リファレンス](plan-design/security/cryptographic-controls-technical-reference.md)
 
 #    作業開始
 ##   [ラボでの Configuration Manager の評価](get-started/evaluate-with-lab-environment.md)

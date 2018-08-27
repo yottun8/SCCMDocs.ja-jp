@@ -29,7 +29,6 @@
 ## [証明書プロファイル](deploy-use/introduction-to-certificate-profiles.md)
 ### [証明書プロファイルの作成](deploy-use/create-certificate-profiles.md)
 ### [証明書インフラストラクチャの構成](deploy-use/certificate-infrastructure.md)
-### [暗号化コントロールのテクニカル リファレンス](deploy-use/cryptographic-controls-technical-reference.md)
 
 ## [Endpoint Protection](deploy-use/endpoint-protection.md)
 ### [Endpoint Protection の構成](deploy-use/endpoint-protection-configure.md)
