@@ -2,7 +2,7 @@
 title: バックアップ サイト
 titleSuffix: Configuration Manager
 description: Configuration Manager で、障害やデータの損失が発生する前にサイトをバックアップする方法について説明します。
-ms.date: 07/30/2018
+ms.date: 08/24/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39af53c6ddfdb58f340432aa3392a046cdeef428
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 85ce1c4b5201c29ffa3543357f50a379c1b11e7f
+ms.sourcegitcommit: 84afecee44200e27d1d5bb5ed2d54fd6a8c51617
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386213"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43053883"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>Configuration Manager サイトのバックアップ
 
@@ -129,7 +129,7 @@ Configuration Manager のバックアップ サービスは、バックアップ
 
 
 ## <a name="using-the-afterbackupbat-file"></a>AfterBackup.bat ファイルの使用  
-バックアップ タスクでサイトが正常にバックアップされると、**AfterBackup.bat** というスクリプトが自動的に実行されます。 AfterBackup.bat ファイルは、`<ConfigMgrInstallationFolder>\Inboxes\Smsbkup` でサイト サーバーに手動で作成します。 AfterBackup.bat ファイルが正しいフォルダーにあれば、バックアップ タスクの完了後に自動的に実行されます。
+バックアップ タスクでサイトが正常にバックアップされると、**AfterBackup.bat** というスクリプトが自動的に実行されます。 AfterBackup.bat ファイルは、`<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box` でサイト サーバーに手動で作成します。 AfterBackup.bat ファイルが正しいフォルダーにあれば、バックアップ タスクの完了後に自動的に実行されます。
 
 AfterBackup.bat ファイルを使用して、バックアップが完了するたびにバックアップ スナップショットをアーカイブすることができます。 サイト サーバーのバックアップ メンテナンス タスクに含まれていないその他のバックアップ後のタスクを自動的に実行できます。 前者の場合は、AfterBackup.bat でアーカイブ処理とバックアップ処理を統合することにより、常に新しいバックアップ スナップショットがアーカイブされるようにします。
 
