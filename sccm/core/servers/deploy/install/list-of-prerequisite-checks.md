@@ -1,8 +1,8 @@
 ---
 title: 前提条件の確認
 titleSuffix: Configuration Manager
-description: System Center Configuration Manager の利用可能な前提条件の確認について説明します。 セキュリティ権限の前提条件の確認も対象となります。
-ms.date: 4/17/2017
+description: Configuration Manager の更新プログラムに関する特定の前提条件の確認のリファレンス。
+ms.date: 08/23/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,23 +10,24 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f51f2d5f94a185f35a5d843d674a3dd8f1e8a275
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 1c66e91341a316ea9115e577d48cab8d56d1e74c
+ms.sourcegitcommit: a17be6f5e4659ba3f38c7732b43f3afafcb95171
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342581"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42906389"
 ---
-# <a name="list-of-prerequisite-checks-for-system-center-configuration-manager"></a>System Center Configuration Manager の前提条件の確認の一覧
+# <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Configuration Manager の前提条件の確認の一覧
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 次のセクションでは、利用可能な前提条件の確認について詳しく説明しています。
 
-前提条件チェッカーの使用の詳細については、[前提条件チェッカー](prerequisite-checker.md)に関するページを参照してください。  
+詳細については、[前提条件チェッカー](prerequisite-checker.md)に関するページを参照してください。  
+
+
 
 ##  <a name="BKMK_Security"></a> セキュリティ権限の前提条件の確認  
-次の表に、前提条件チェッカーが実行するセキュリティ権限の確認を示します。
 
 |実行される確認|説明|重大度|サイトの適用性|
 |---|---|---|---|
@@ -41,8 +42,9 @@ ms.locfileid: "32342581"
 |**SQL Server の sysadmin 権限**|Configuration Manager セットアップを実行するユーザー アカウントに、サイト データベースのインストール用に選択された SQL Server インスタンスに対する **sysadmin** の役割があることを確認します。 この確認は、アクセス許可の確認のためにセットアップが SQL Server のインスタンスにアクセスできない場合も失敗します。|エラー|SQL Server|
 |**基準サイト用の SQL Server sysadmin 権限**|Configuration Manager セットアップを実行するユーザー アカウントに、基準サイトのデータベースとして選択した SQL Server の役割インスタンスに対する **sysadmin** の役割があることを確認します。 SQL Server の役割アクセス許可 **sysadmin** は、サイト データベースを変更するために必要です。|エラー|SQL Server|
 
+
+
 ##  <a name="BKMK_Dependencies"></a> Configuration Manager の依存関係の前提条件の確認
-次の表に、前提条件チェッカーが実行する Configuration Manager の依存関係の前提条件の確認を示します。
 
 |実行される確認|説明|重大度|サイトの適用性|
 |---|---|---|---|
@@ -77,7 +79,7 @@ ms.locfileid: "32342581"
 |**サイト サーバーの PowerShell 2.0**|Configuration Manager Exchange Connector 用のサイト サーバーに Windows PowerShell 2.0 以降がインストールされているかどうかを確認します。 PowerShell 2.0 の詳細については、Microsoft サポート技術情報の [記事 968930](http://go.microsoft.com/fwlink/p/?LinkId=226450) を参照してください。|警告|プライマリ サイト|
 |**プライマリ FQDN**|完全修飾ドメイン名 (FQDN) を使用して、コンピューターの NetBIOS 名がコンピューターのローカル ホスト名 (FQDN の最初のラベル) に一致するかどうか確認します。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト、 <br>SQL Server|
 |**セカンダリ サイトの WMI へのリモート接続**|セカンダリ サイトの WMI へのリモート接続をチェックします。|警告|セカンダリ サイト|
-|**SQL Server の必須の照合順序**|SQL Server インスタンスと Configuration Manager サイト データベース (インストール済みの場合) が、SQL_Latin1_General_CP1_CI_AS 照合順序を使用するように構成されているかどうかを確認します。ただし、中国語のオペレーティング システムを使用していて、GB18030 のサポートが必要な場合はこの例外となります。<br><br>SQL Server インスタンスとデータベースの照合順序の変更方法の詳細については、SQL Server 2008 R2 オンライン ブックの「[照合順序の設定と変更](http://go.microsoft.com/fwlink/p/?LinkID=234541)」を参照してください。  GB18030 サポートの有効化の詳細については、「[System Center Configuration Manager のインターナショナル サポート](../../../../core/plan-design/hierarchy/international-support.md)」を参照してください。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト|
+|**SQL Server の必須の照合順序**|SQL Server インスタンスと Configuration Manager サイト データベース (インストール済みの場合) が、**SQL_Latin1_General_CP1_CI_AS** 照合順序を使用するように構成されているかどうかを確認します。ただし、中国語の OS を使用していて、GB18030 のサポートが必要な場合はこの例外となります。<br><br>SQL Server インスタンスとデータベースの照合順序の変更方法の詳細については、[SQL の照合順序と Unicode サポート](https://docs.microsoft.com/sql/relational-databases/collations/collation-and-unicode-support)に関するページを参照してください。 GB18030 サポートの有効化の詳細については、「[International support](/sccm/core/plan-design/hierarchy/international-support)」(インターナショナル サポート) を参照してください。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト|
 |**セットアップのソース フォルダー**|セカンダリ サイトのコンピューター アカウントに、セットアップ ソースのあるフォルダーまたは共有に対する NTFS ファイル システムの **読み取り** アクセス許可と共有に対する **読み取り** アクセス許可が割り当てられていることを確認します。<br><br>**注**: 管理用共有 (C$ や D$ など) を使用している場合は、セカンダリ サイトのコンピューター アカウントはコンピューターの**管理者**ユーザーでなければなりません。|エラー|セカンダリ サイト|
 |**セットアップ ソースのバージョン**|セカンダリ サイトのインストール用に指定したソース フォルダーの Configuration Manager バージョンが、プライマリ サイトの Configuration Manager バージョンに一致することを確認します。|エラー|セカンダリ サイト|
 |**使用中のサイト コード**|指定したサイト コードが Configuration Manager 階層内で既に使用されていないかどうか確認します。 このサイトで一意のサイト コードを指定する必要があります。|エラー|プライマリ サイト|
@@ -85,10 +87,10 @@ ms.locfileid: "32342581"
 |**SQL Server のエディション**|サイトの SQL Server のエディションが SQL Server Express でないことを確認します。|エラー|SQL Server|
 |**セカンダリ サイトの SQL Server Express**|SQL Server Express をセカンダリ サイトのサイト サーバー コンピューターに正常にインストールできることを確認します。|エラー|セカンダリ サイト|
 |**セカンダリ サイト コンピューターの SQL Server**|SQL Server がセカンダリ サイト コンピューターにインストールされているかどうかチェックします。 リモート サイト システムに、SQL Server をインストールすることはできません。<br><br>**警告**: この確認は、セットアップで既存の SQL Server インスタンスを使用するように選択した場合にのみ適用されます。|エラー|セカンダリ サイト|
-|**SQL Server プロセスのメモリの割り当て**|SQL Server が、中央管理サイトとプライマリ サイトには少なくとも 8 GB、セカンダリ サイトには 4 GB のメモリを割り当てていることを確認します。 SQL Server Management Studio を使用して、固定量のメモリを設定する方法の詳細については、「[固定量のメモリを設定する方法 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759)」を参照してください。<br><br>**注**: セカンダリ サイトの SQL Server Express では、割り当てられるメモリが 1 GB に制限されるため、この確認は適用されません。|警告|SQL Server|
+|**SQL Server プロセスのメモリの割り当て**|SQL Server が、中央管理サイトとプライマリ サイトには少なくとも 8 GB、セカンダリ サイトには 4 GB のメモリを割り当てていることを確認します。 詳細については、「[[SQL Server Management Studio] を利用してメモリ オプションを構成する方法](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options#how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd)」を参照してください。<br><br>**注**: セカンダリ サイトの SQL Server Express では、割り当てられるメモリが 1 GB に制限されるため、この確認は適用されません。|警告|SQL Server|
 |**SQL Server サービスの実行アカウント**|SQL Server サービスのログオン アカウントに、ローカル ユーザー アカウントまたはローカル サービスが使用されていないことを確認します。 SQL Server サービスは、有効なドメイン アカウント、ネットワーク サービス、またはローカル システムを使用するように構成する必要があります。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト|
 |**SQL Server の TCP ポート**|TCP が SQL Server インスタンスに対して有効になっており、静的ポートを使用するように設定されていることを確認します。|エラー|SQL Server|
-|**SQL Server バージョン**|指定したサイト データベース サーバーに、サポートされるバージョンの SQL Server がインストールされていることを確認します。 詳細については、「[System Center Configuration Manager の SQL Server バージョンのサポート](../../../../core/plan-design/configs/support-for-sql-server-versions.md)」を参照してください。|エラー|SQL Server|
+|**SQL Server バージョン**|指定したサイト データベース サーバーに、サポートされるバージョンの SQL Server がインストールされていることを確認します。 詳細については、「[Support for SQL Server versions](/sccm/core/plan-design/configs/support-for-sql-server-versions)」(SQL Server バージョンのサポート) を参照してください。|エラー|SQL Server|
 |**アップグレードでサポートされていないサイト システムのオペレーティング システムのバージョン**|アップグレード中に、このルールにより、配布ポイント以外のサイト システムの役割が、Windows Server 2008 以前のバージョンを実行するコンピューターにインストールされているかどうかが確認されます。<br><br>**注**: このチェックでは、Azure にインストールされているサイト システムの役割、または Microsoft Intune と Configuration Manager を統合するときに Microsoft Intune によって使用されるクラウド ストレージ用のサイト システムの役割の状態を解決できないため、これらの役割に対する誤検知としての警告を無視することができます。|警告|プライマリ サイト、 <br>セカンダリ サイト|
 |**展開プライマリ サイトに、サポートされていないサイト システムの役割 '資産インテリジェンス同期ポイント'**|展開するスタンドアロン プライマリ サイトに資産インテリジェンス同期ポイントのサイト システムの役割がインストールされていないことを確認します。|エラー|中央管理サイト|
 |**展開プライマリ サイトでサポートされていないサイト システムの役割 'Endpoint Protection ポイント'**|展開するスタンドアロン プライマリサイトに Endpoint Protection ポイントのサイト システムの役割がインストールされていないことを確認します。|エラー|中央管理サイト|
@@ -96,15 +98,17 @@ ms.locfileid: "32342581"
 |**ユーザー状態移行ツール (USMT) のインストール**|Windows 8.1 用 Windows アセスメント & デプロイメント キット (ADK) のユーザー状態移行ツール (USMT) コンポーネントがインストールされているかどうかを確認します。|エラー|中央管理サイト、 <br>プライマリ サイト (スタンドアロンのみ)|  
 |**SQL Server コンピューターの FQDN の検証**|SQL Server コンピューターに対して指定された FQDN が有効かどうかをチェックします。|エラー|SQL Server|
 |**中央管理サイトのバージョンの確認**|中央管理サイトの Configuration Manager のバージョンが同じであることを確認します。|エラー|プライマリ サイト|
-|**Active Directory に発行するためのサイト サーバーのアクセス許可の確認**|サイト サーバーのコンピューター アカウントに、Active Directory ドメイン内の **System Management** コンテナーに対する **[フル コントロール]** アクセス許可が割り当てられていることを確認します。 必要なアクセス許可の構成オプションの詳細については、「[サイト発行のために Active Directory を準備する](../../../../core/plan-design/network/extend-the-active-directory-schema.md)」を参照してください。<br><br>**注**: これらのアクセス許可を手動で確認済みの場合は、この警告を無視できます。|警告|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト|
+|**Active Directory に発行するためのサイト サーバーのアクセス許可の確認**|サイト サーバーのコンピューター アカウントに、Active Directory ドメイン内の **System Management** コンテナーに対する **[フル コントロール]** アクセス許可が割り当てられていることを確認します。 必要なアクセス許可の構成オプションの詳細については、「[サイト発行のために Active Directory を準備する](/sccm/core/plan-design/network/extend-the-active-directory-schema)」を参照してください。<br><br>**注**: これらのアクセス許可を手動で確認済みの場合は、この警告を無視できます。|警告|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト|
 |**Windows 展開ツールのインストール**|Windows 10 用 Windows ADK の Windows 展開ツール コンポーネントがインストールされているかどうかを確認します。|エラー|SMS プロバイダー|
 |**Windows フェールオーバー クラスター**|管理ポイントまたは配布ポイントを備えたコンピューターが Windows クラスターに含まれていないことを確認します。|エラー|管理ポイント<br>配布ポイント|
 |**Windows プレインストール環境のインストール**|Windows 10 用 Windows ADK の Windows プレインストール環境コンポーネントがインストールされているかどうかを確認します。|エラー|SMS プロバイダー|
 |**Windows Remote Management (WinRM) v1.1**|プライマリ サイト サーバーまたは Configuration Manager コンソール コンピューターに、帯域外管理コンソールの実行に必要な WinRM 1.1 がインストールされていることを確認します。 WinRM 1.1 のダウンロード方法の詳細については、Microsoft サポート技術情報の [記事 936059](https://support.microsoft.com/en-us/kb/936059) を参照してください。|警告|プライマリ サイト、 <br>Configuration Manager コンソール|
-|**サイト サーバー上の WSUS**|Windows Server Update Services (WSUS) 3.0 Service Pack 2 (SP2) がサイト サーバーにインストールされていることを確認します。 サイト サーバー以外のコンピューターでソフトウェアの更新ポイントを使用する場合は、サイト サーバーに WSUS 管理コンソールをインストールする必要があります。 WSUS の詳細については、「[Windows Server Update Services](http://go.microsoft.com/fwlink/p/?LinkID=79477)」を参照してください。|警告|中央管理サイト、 <br>プライマリ サイト|  
+|**サイト サーバー上の WSUS**|Windows Server Update Services (WSUS) 3.0 Service Pack 2 (SP2) がサイト サーバーにインストールされていることを確認します。 サイト サーバー以外のコンピューターでソフトウェアの更新ポイントを使用する場合は、サイト サーバーに WSUS 管理コンソールをインストールする必要があります。 WSUS の詳細については、「[Windows Server Update Services](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus)」を参照してください。|警告|中央管理サイト、 <br>プライマリ サイト|  
+|**保留中の構成アイテム ポリシーの更新プログラム**|<!--SCCMDocs-pr issue 2814-->バージョン 1806 以降でバージョン 1706 以前から更新を行っている場合に、アプリケーションの展開数が多く、そのうち少なくとも 1 つで承認が必要であると、この警告が表示される場合があります。 次の 2 つのオプションがあります。<br/><br/> - 警告を無視して、アップグレードを続行する。 この操作によって、更新中のポリシーを処理する際に、サイト サーバーに高い負荷がかかります。 更新後の管理ポイント上でも、プロセッサの負荷が増える可能性があります。<br/><br/> - 要件のないアプリケーション、または特定の OS 要件を含むいずれかのアプリケーションを変更する。 その時点でのサイト サーバー上の一部の負荷を事前に処理します。 **objreplmgr.log** を確認し、管理ポイント上のプロセッサを監視します。 処理が完了したら、サイトを更新します。 更新後もさらに処理が発生する可能性がありますが、最初のオプションで警告を無視した場合よりは少なくなります。|警告|プライマリ サイト|  
+
+
 
 ##  <a name="BKMK_Requirements"></a> システム要件の前提条件の確認  
-次の表に、前提条件チェッカーが実行するシステム要件の確認を示します。  
 
 |実行される確認|説明|重大度|サイトの適用性|
 |---|---|---|---|
@@ -115,9 +119,9 @@ ms.locfileid: "32342581"
 |**サイト サーバー上の FAT ドライブ**|ディスク ドライブが FAT ファイル システムでフォーマットされているかどうかを確認します。 セキュリティを強化するには、NTFS ファイル システムでフォーマットされたディスク ドライブにサイト サーバー コンポーネントをインストールします。|警告|プライマリ サイト|
 |**サイト サーバーの空きディスク領域**|サイト サーバーをインストールするには、サイト サーバー コンピューターに少なくとも 15 GB の空きディスク領域が必要です。 同じコンピューターに SMS プロバイダーのサイト システムの役割をインストールする場合は、さらに 1 GB の空きディスク領域が必要です。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト|
 |**保留中のシステムの再起動**|セットアップを実行する前にサーバーを再起動することが別のプログラムで要求されているかどうかをチェックします。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト、 <br>Configuration Manager コンソール、 <br>SMS プロバイダー、 <br>SQL Server、 <br>管理ポイント、 <br>配布ポイント|
-|**読み取り専用のドメイン コントローラー**|サイト データベース サーバーとセカンダリ サイト サーバーは、読み取り専用のドメイン コントローラー (RODC) ではサポートされていません。 詳細については、Microsoft サポート技術情報の「[You may encounter problems when installing SQL Server on a domain controller (ドメイン コントローラーに SQL Server をインストールすると問題が発生する)](http://go.microsoft.com/fwlink/p/?LinkId=264856)」を参照してください。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト|
-|**スキーマ拡張**|Active Directory ドメイン サービスのスキーマが拡張されているかどうかを判定し、拡張されている場合は、使用されたスキーマ拡張のバージョンを確認します。 Configuration Manager の Active Directory スキーマ拡張は、サイト サーバーのインストールには必要ありませんが、Configuration Manager のすべての機能を利用するためには、スキーマの拡張をお勧めします。 スキーマ拡張の詳細については、「[サイト発行のために Active Directory を準備する](../../../../core/plan-design/network/extend-the-active-directory-schema.md)」を参照してください。|警告|中央管理サイト、 <br>プライマリ サイト|
+|**読み取り専用のドメイン コントローラー**|サイト データベース サーバーとセカンダリ サイト サーバーは、読み取り専用のドメイン コントローラー (RODC) ではサポートされていません。 詳細については、Microsoft サポート記事の「[Problems when installing SQL Server on a domain controller](https://support.microsoft.com/help/2032911)」(ドメイン コントローラーに SQL Server をインストールすると問題が発生する) を参照してください。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト|
+|**スキーマ拡張**|Active Directory ドメイン サービスのスキーマが拡張されているかどうかを判定し、拡張されている場合は、使用されたスキーマ拡張のバージョンを確認します。 Configuration Manager の Active Directory スキーマ拡張は、サイト サーバーのインストールには必要ありませんが、Configuration Manager のすべての機能を利用するためには、スキーマの拡張をお勧めします。 スキーマ拡張の詳細については、「[サイト発行のために Active Directory を準備する](/sccm/core/plan-design/network/extend-the-active-directory-schema)」を参照してください。|警告|中央管理サイト、 <br>プライマリ サイト|
 |**サイト サーバーの FQDN の長さ**|サイト サーバー コンピューターの FQDN の長さを確認します。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト|
-|**サポートされていない Configuration Manager コンソールのオペレーティング システム**|Configuration Manager コンソールを、サポートされるオペレーティング システムのバージョンを実行するコンピューターにインストールできることを確認します。 詳細については、「[System Center Configuration Manager コンソールのサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-consoles)」を参照してください。|エラー|Configuration Manager コンソール|
-|**セットアップでサポートされていないサイト サーバーのオペレーティング システムのバージョン**|サーバーでサポートされているオペレーティング システムが実行されていることを確認します。 詳細については、「[System Center Configuration Manager サイト システム サーバーのサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)」を参照してください。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト、 <br>Configuration Manager コンソール、 <br>管理ポイント、 <br>配布ポイント|
+|**サポートされていない Configuration Manager コンソールのオペレーティング システム**|Configuration Manager コンソールを、サポートされる OS のバージョンを実行するコンピューターにインストールできることを確認します。 詳細については、「[System Center Configuration Manager コンソールのサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-consoles)」を参照してください。|エラー|Configuration Manager コンソール|
+|**セットアップでサポートされていないサイト サーバーのオペレーティング システムのバージョン**|サーバーでサポートされている OS が実行されていることを確認します。 詳細については、「[Configuration Manager サイト システム サーバーでサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)」を参照してください。|エラー|中央管理サイト、 <br>プライマリ サイト、 <br>セカンダリ サイト、 <br>Configuration Manager コンソール、 <br>管理ポイント、 <br>配布ポイント|
 |**データベースの整合性の検証**|バージョン 1602 以降で、このチェックによりデータベースの整合性が検証されます。|エラー|中央管理サイト、 <br>プライマリ サイト|  
