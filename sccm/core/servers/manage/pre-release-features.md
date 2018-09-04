@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 04d23383d13e981d8a48f88e84444df1ac4915fe
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: e72cdf667f96828fb6730cf3294c8d20ec553130
+ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386043"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43289256"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Configuration Manager のプレリリース機能
 
@@ -77,7 +77,7 @@ ms.locfileid: "39386043"
 |------------------|----------------------|-------------------------|
 | 拡張 HTTP サイト システム<!--1356889,1358228-->|バージョン 1806|![未追加](media/red_x.png)|
 | 共同管理デバイス向けのモバイル アプリ<!--1357892-->|[バージョン 1806](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune)|![未追加](media/red_x.png)|
-| パッケージ変換マネージャー<!--1357861-->|バージョン 1806|![未追加](media/red_x.png)|
+| パッケージ変換マネージャー<!--1357861-->|[バージョン 1806](/sccm/apps/pcm/package-conversion-manager)|![未追加](media/red_x.png)|
 | iOS 向け Cisco AnyConnect 4.0.07x 以降のサポート<!--1357393-->|[バージョン 1802](/sccm/mdm/deploy-use/create-vpn-profiles)| [バージョン 1802 (更新プログラム 4163547 適用)](/sccm/mdm/deploy-use/create-vpn-profiles) |
 | 段階的展開<!--1356837-->|[バージョン 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|[バージョン 1806](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|
 | タスク シーケンス ステップの実行<!-- 1261338 --> |  [バージョン 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |[バージョン 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)|

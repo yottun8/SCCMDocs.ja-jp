@@ -10,12 +10,12 @@ ms.assetid: 7996b3eb-5259-483b-af40-adae2943d123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 24cb16ab17475bdd063949c7e3e2961b53341026
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: 21833d124ee998f0b943d2620370a2fcff264e28
+ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "34450153"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591647"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1805 の機能
 
@@ -166,7 +166,7 @@ Windows LEDBAT の詳細については、「[New transport advancements](https:
 ### <a name="prerequisites"></a>[前提条件]
 - Windows Server、バージョン 1709 での配布ポイント。  
 
-- Windows 10 以降、バージョン 1607 で実行されるクライアント デバイス。
+- クライアントの前提条件はありません。<!--SCCMDocs issue 699-->  
 
 
 ### <a name="try-it-out"></a>試してみましょう。
