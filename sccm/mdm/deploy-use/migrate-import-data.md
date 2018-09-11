@@ -3,18 +3,19 @@ title: Microsoft Intune へのデータのインポート
 titleSuffix: Configuration Manager
 description: Configuration Manager のデータの Microsoft Intune へのインポート
 author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 12/05/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
-ms.openlocfilehash: dcd84e484f55cb799953bea83be917055ca1292a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 89db0abe9a60e6850ae36e619483e0dcdc3e5360
+ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350699"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44111146"
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>Configuration Manager のデータの Microsoft Intune へのインポート 
 
@@ -100,7 +101,7 @@ Data Importer ツールを実行するには、事前にグローバル管理者
     > グローバル管理者が最初に同意していない場合、Intune 管理者が Data Importer ツールを実行し、Intune サブスクリプションにログインすると、ツールで「**このアプリケーションにアクセスできません**」と表示される場合があります。
 
 ### <a name="manually-map-collections-to-azure-ad-groups"></a>Azure AD グループにコレクションを手動でマップする
-Data Importer ツールを実行すると、1 つの AD グループを対象とする 1 つの規則を使用して、コレクションから AD グループの名前が抽出されます。 Intune で割り当てが作成されると、Data Importer は AD グループと同じ名前の Azure AD グループを検索し、存在する場合は、インポートしたオブジェクトをその Azure AD グループに割り当てます。 Data Importer が検出したコレクションの AD グループ名を上書きして、そのコレクションに使用する 1 つまたは複数の Azure AD グループを指定できます。 コレクション マッピング ファイルを使用すると、通常 Data Importer ではインポートできないコレクションを Azure AD グループにマップできます。
+Data Importer ツールを実行すると、1 つの AD グループを対象とする 1 つの規則を使用して、コレクションから AD グループの名前が抽出されます。 Intune で割り当てが作成されると、Data Importer は AD グループと同じ名前の Azure AD グループを検索し、存在する場合は、インポートしたオブジェクトをその Azure AD グループに割り当てます。 Data Importer が検出したコレクションの AD グループ名をオーバーライドして、そのコレクションに使用する 1 つまたは複数の Azure AD グループを指定できます。 コレクション マッピング ファイルを使用すると、通常 Data Importer ではインポートできないコレクションを Azure AD グループにマップできます。
 #### <a name="find-the-collections-that-cannot-be-imported"></a>インポートできないコレクションを検索する
 インポートできないすべてのコレクションの一覧を取得して、それらをコレクション マッピングの .csv ファイルに追加できます。 
 1. Data Importer ツールを実行し、インポートするオブジェクトを選択します。 「[フェーズ 1: Configuration Manager オブジェクトの検出とデータの収集](#phase-1:-discover-configuration-manager-objects-and-collect-data)」および「[フェーズ 2: 問題を解決し、インポートするオブジェクトを選択する](#phase-2:-resolve-issues-and-select-the-objects-to-import)」の手順に従って、オブジェクトを検出し選択します。 次に **[概要]** ページで、**[エクスポートの詳細]** を選択して .csv ファイルを作成します。このファイルには、インポートできないオブジェクトやデプロイなどの、インポートに選択したすべての詳細が含まれます。 

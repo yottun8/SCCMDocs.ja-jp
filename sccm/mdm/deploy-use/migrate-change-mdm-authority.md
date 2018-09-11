@@ -3,18 +3,19 @@ title: MDM 機関を Intune に変更する
 titleSuffix: Configuration Manager
 description: MDM 機関を Configuration Manager (ハイブリッド) から Intune スタンドアロンに変更する方法について説明します。
 author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 12/05/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: b295dad503b801ff9d04767f75c1688107016d0b
-ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
+ms.openlocfilehash: d5efcb78ad5e732691cc2f214f81db0b357e0e19
+ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569682"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44111112"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>MDM 機関を Intune スタンドアロンに変更する
 
@@ -73,7 +74,7 @@ MDM 機関の変更が完了したら、次の情報を確認します。
     - 管理コンソールからデバイスに対して、リモート ロックなどのアクションを実行します。 成功した場合、そのデバイスは新しい MDM 機関で管理されていることを示します。
 - 特定のデバイスで問題がある場合、できるだけ早くデバイスを新しい機関に接続し、管理対象にするには、そのデバイスの登録を解除してから再登録します。
 - あらかじめ移行されていないユーザーとデバイスについて
-    - デバイスが**デバイス** ブレードに、管理対象デバイスとして現在表示されていることを確認します。 MDM 機関の変更後、これらのデバイスが表示される前に、デバイスをサービスにチェックインして、同期する必要があります。 
+    - デバイスが**デバイス** ブレードに、マネージド デバイスとして現在表示されていることを確認します。 MDM 機関の変更後、これらのデバイスが表示される前に、デバイスをサービスにチェックインして、同期する必要があります。 
     - テナントの MDM 機関が変更されたことを Intune サービスが検出すると、登録されているすべてのデバイスに、サービスにチェックインして同期するように促す通知メッセージが送信されます (定期的にスケジュールされているチェックインとは別です)。 そのため、テナントの MDM 機関がハイブリッドから Intune スタンドアロンに変更された後は、電源を入れてオンラインになったすべてのデバイスはサービスに接続し、新しい MDM 機関を受信し、以降は Intune スタンドアロンで管理されるようになります。 これらのデバイスの管理と保護は中断されません。
     - MDM 機関の変更中 (または変更直後) に電源を切っていたかオフラインだったデバイスは、電源を入れ、オンラインになったときに新しい MDM 機関のサービスに接続し、同期します。  
     - ユーザーが新しい MDM 機関にすぐに変更するには、デバイスからサービスへのチェックインを手動で開始します。 ポータル サイト アプリを使用して、デバイス コンプライアンス チェックを開始することで、簡単にチェックインを開始できます。
