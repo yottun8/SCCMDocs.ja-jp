@@ -4,12 +4,12 @@ hide_bc: true
 title: System Center Configuration Manager のドキュメント
 description: System Center Configuration Manager を使用する方法について説明します。
 ms.topic: hub-page
-ms.openlocfilehash: 9288732db8771d9ae83c006b1865683fe58ebc0e
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
+ms.openlocfilehash: 939647a08abc6e884d6cfcfd12665a4101517596
+ms.sourcegitcommit: 5875553bd814b7f82c16125f690c4bd2b6dd3a2b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42587896"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44385101"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -18,7 +18,7 @@ ms.locfileid: "42587896"
             <li>
                 <a href="#tasks">タスク</a>
                 <ul id="tasks">
-                     <li>
+                    <li>
                         <a data-default="true" href="#all">すべて</a>
                         <ul id="all" class="cardsW">
                             <li>
@@ -27,9 +27,36 @@ ms.locfileid: "42587896"
                                         <div class="card">
                                             <div class="cardText">
                                                 <h3>コア インフラストラクチャ</h3>
-                                                <p><a href="/sccm/core/understand/introduction">System Center Configuration Manager の概要</a></p>
-                                                <p><a href="/sccm/core/servers/manage/updates">System Center Configuration Manager の更新プログラム</a></p>
-                                                <p><a href="/sccm/core/clients/deploy/deploy-clients-to-windows-computers">Windows コンピューターにクライアントを展開する方法</a></p>
+                                                <p><a href="/sccm/core/plan-design/changes/whats-new-incremental-versions">Configuration Manager の増分バージョンの新機能</a></p>
+                                                <p><a href="/sccm/core/servers/manage/updates">Configuration Manager の更新プログラム</a></p>
+                                                <p><a href="/sccm/core/plan-design/configs/supported-configurations">Configuration Manager のサポートされている構成</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>クラウド接続の管理</h3>
+                                                <p><a href="/sccm/core/clients/manage/co-management-overview">Windows 10 の共同管理</a></p>
+                                                <p><a href="/sccm/core/clients/manage/manage-clients-internet">インターネット上のクライアントを管理する</a></p>
+                                                <p><a href="/sccm/osd/deploy-use/manage-windows-as-a-service">サービスとしての Windows</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>リアルタイムの管理</h3>
+                                                <p><a href="/sccm/apps/deploy-use/create-deploy-scripts">PowerShell スクリプトの作成と実行</a></p>
+                                                <p><a href="/sccm/core/servers/manage/cmpivot">CMPivot</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -42,8 +69,8 @@ ms.locfileid: "42587896"
                                             <div class="cardText">
                                                 <h3>アプリケーション管理</h3>
                                                 <p><a href="/sccm/apps/understand/introduction-to-application-management">アプリケーション管理の概要</a></p>
-                                                <p><a href="/sccm/apps/deploy-use/create-applications">アプリケーションの作成</a></p>
-                                                <p><a href="/sccm/apps/deploy-use/monitor-applications-from-the-console">アプリケーションの監視</a></p>
+                                                <p><a href="/sccm/apps/get-started/create-and-deploy-an-application">アプリケーションの作成</a></p>
+                                                <p><a href="/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business">ビジネス向け Microsoft Store からのアプリの管理</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -54,52 +81,10 @@ ms.locfileid: "42587896"
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <h3>デバイスのポリシー準拠</h3>
-                                                <p><a href="/sccm/compliance/understand/ensure-device-compliance">デバイス コンプライアンスの保証</a></p>
-                                                <p><a href="/sccm/compliance/deploy-use/create-configuration-items">構成項目を作成する方法</a></p>
-                                                <p><a href="/sccm/compliance/deploy-use/upgrade-windows-version">エディションのアップグレード ポリシーで Windows デバイスをアップグレードする</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardText">
-                                                <h3>モバイル デバイス管理</h3>
-                                                <p><a href="/sccm/mdm/understand/hybrid-mobile-device-management">ハイブリッド モバイル デバイス管理 の概要</a></p>
-                                                <p><a href="/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa">ハイブリッド MDM のユーザーとデバイスを Intune スタンドアロンに移行する</a></p>
-                                                <p><a href="/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management">ハイブリッド MDM の新機能</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardText">
-                                                <h3>オペレーティング システムの展開</h3>
-                                                <p><a href="/sccm/osd/understand/introduction-to-operating-system-deployment">オペレーティング システムの展開の概要</a></p>
-                                                <p><a href="/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems">オペレーティングシステムを展開するシナリオ</a></p>
-                                                <p><a href="/sccm/osd/deploy-use/manage-windows-as-a-service">サービスとしての Windows の管理</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardText">
-                                                <h3>データとインフラストラクチャの保護</h3>
-                                                <p><a href="/sccm/protect/understand/backup-and-recovery">バックアップと回復のオプション</a></p>
-                                                <p><a href="/sccm/protect/deploy-use/manage-access-to-services">条件付きアクセス</a></p>
-                                                <p><a href="/sccm/protect/deploy-use/endpoint-protection">Endpoint Protection</a></p>
+                                                <h3>OS の展開</h3>
+                                                <p><a href="/sccm/osd/understand/introduction-to-operating-system-deployment">OS の展開の概要</a></p>
+                                                <p><a href="/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version">Windows 10 へのアップグレード</a></p>
+                                                <p><a href="/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence">段階的展開</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -112,8 +97,8 @@ ms.locfileid: "42587896"
                                             <div class="cardText">
                                                 <h3>ソフトウェア更新管理</h3>
                                                 <p><a href="/sccm/sum/understand/software-updates-introduction">ソフトウェア更新管理の概要</a></p>
-                                                <p><a href="/sccm/sum/get-started/prepare-for-software-updates-management">ソフトウェア更新管理の準備</a></p>
-                                                <p><a href="/sccm/sum/deploy-use/deploy-software-updates">ソフトウェア更新プログラムの展開</a></p>
+                                                <p><a href="/sccm/sum/deploy-use/manage-office-365-proplus-updates">Office 365 ProPlus の更新プログラムの管理</a></p>
+                                                <p><a href="/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10">Windows Update for Business の使用</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -124,10 +109,38 @@ ms.locfileid: "42587896"
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <h3>その他のリリースとブランチ</h3>
+                                                <h3>データとインフラストラクチャの保護</h3>
+                                                <p><a href="/sccm/protect/deploy-use/manage-access-to-services">条件付きアクセス</a></p>
+                                                <p><a href="/sccm/protect/deploy-use/endpoint-protection">Windows Defender のエンドポイント保護</a></p>
+                                                <p><a href="/sccm/protect/deploy-use/windows-hello-for-business-settings">Windows Hello for Business</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>デバイスのポリシー準拠</h3>
+                                                <p><a href="/sccm/compliance/understand/ensure-device-compliance">デバイス コンプライアンスの保証</a></p>
+                                                <p><a href="/sccm/compliance/deploy-use/browser-profiles">Microsoft Edge の設定の構成</a></p>
+                                                <p><a href="/sccm/compliance/deploy-use/upgrade-windows-version">エディションのアップグレード ポリシーで Windows デバイスをアップグレードする</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardText">
+                                                <h3>その他のリリースと情報</h3>
                                                 <p><a href="/sccm/core/get-started/technical-preview">System Center Configuration Manager の Technical Preview</a></p>
-                                                <p><a href="/sccm/core/understand/introduction-to-the-ltsb">System Center Configuration Manager の Long-Term Servicing Branch</a></p>
-                                                <p><a href="https://technet.microsoft.com/library/gg682144.aspx">System Center 2012/2012 R2 Configuration Manager</a></p>
+                                                <p><a href="/sccm/core/migration/migrate-data-between-hierarchies">Configuration Manager Current Branch への移行</a></p>
+                                                <p><a href="/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa">ハイブリッド MDM のユーザーとデバイスを Intune スタンドアロンに移行する</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -139,18 +152,18 @@ ms.locfileid: "42587896"
                         <a data-default="true" href="#tasksPanel1">コア インフラストラクチャ</a>
                         <ul id="tasksPanel1" class="cardsC">
                             <li>
-                                <a href="/sccm/core/understand/introduction">
+                                <a href="/sccm/core/plan-design/changes/whats-new-incremental-versions">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-core-infrastructure-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/ms365enterprise-partner-news-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>System Center Configuration Manager の概要</h3>
-                                                <p>Configuration Manager の機能に関する基本について説明します。</p>
+                                                <h3>Configuration Manager の増分バージョンの新機能</h3>
+                                                <p>Configuration Manager の最新の更新プログラムに含まれる新機能について説明します。</p>
                                             </div>
                                         </div>
                                     </div>
@@ -164,11 +177,11 @@ ms.locfileid: "42587896"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-core-infrastructure-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-core-infrastructure-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>System Center Configuration Manager の更新プログラム</h3>
+                                                <h3>Configuration Manager の更新プログラム</h3>
                                                 <p>Configuration Manager の最新の状態を保持するには、ここから開始します。 </p>
                                             </div>
                                         </div>
@@ -177,18 +190,18 @@ ms.locfileid: "42587896"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/core/clients/deploy/deploy-clients-to-windows-computers">
+                                <a href="/sccm/core/plan-design/configs/supported-configurations">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-core-infrastructure-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/nuget-tools-reference_2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Windows コンピューターにクライアントを展開する方法</h3>
-                                                <p>さまざまインストール方法を利用し、クライアントを Windows コンピューターに展開する方法について説明します。</p>
+                                                <h3>Configuration Manager のサポートされている構成</h3>
+                                                <p>サポートされている OS バージョン、サイズとスケール、推奨されるハードウェアについて説明します。</p>
                                             </div>
                                         </div>
                                     </div>
@@ -198,8 +211,113 @@ ms.locfileid: "42587896"
                         </ul>
                     </li>
                     <li>
-                        <a href="#tasksPanel2">アプリケーション管理</a>
+                        <a href="#tasksPanel2">クラウド接続の管理</a>
                         <ul id="tasksPanel2" class="cardsC">
+                            <li>
+                                <a href="/sccm/core/clients/manage/co-management-overview">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/virtualization-hperv-server-management-tools.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Windows 10 の共同管理</h3>
+                                                <p>Configuration Manager と Microsoft Intune の両方を使用して Windows 10 デバイスを同時に管理します。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/core/clients/manage/manage-clients-internet">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/biztalk-get-started-get-started.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>インターネット上のクライアントを管理する</h3>
+                                                <p>クラウド管理ゲートウェイ、クラウドベースの配布ポイント、Azure Active Directory などの機能を使用して、インターネット ベースのクライアントを管理します。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/osd/deploy-use/manage-windows-as-a-service">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/biztalk-host-integration-update-center.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>サービスとしての Windows</h3>
+                                                <p>Windows 10 デバイスのサービス チャネルを表示し、サービス プランを使用して最新の状態を保持します。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tasksPanel3">リアルタイムの管理</a>
+                        <ul id="tasksPanel3" class="cardsC">
+                            <li>
+                                <a href="/sccm/apps/deploy-use/create-deploy-scripts">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-settings-8.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>PowerShell スクリプトの作成と実行</h3>
+                                                <p>Configuration Manager コンソールを使用して、Windows PowerShell スクリプトを管理してクライアントに展開します。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/core/servers/manage/cmpivot">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/teams-fast-track.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>CMPivot</h3>
+                                                <p>すぐにオンラインのデバイスを照会し、詳細な分析情報を得るためにデータのフィルター処理とグループ化を実行します。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tasksPanel4">アプリケーション管理</a>
+                        <ul id="tasksPanel4" class="cardsC">
                             <li>
                                 <a href="/sccm/apps/understand/introduction-to-application-management">
                                 <div class="cardSize">
@@ -207,7 +325,7 @@ ms.locfileid: "42587896"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-app-mgmt-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-app-mgmt-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -226,7 +344,7 @@ ms.locfileid: "42587896"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-app-mgmt-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-app-mgmt-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -239,18 +357,18 @@ ms.locfileid: "42587896"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/apps/deploy-use/monitor-applications-from-the-console">
+                                <a href="/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-app-mgmt-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-core-infrastructure-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>アプリケーションの監視</h3>
-                                                <p>アプリケーションを展開した後、展開の進行状況を監視する方法について説明します。</p>
+                                                <h3>ビジネス向け Microsoft Store からのアプリの管理</h3>
+                                                <p>Microsoft Store からオンラインまたはオフラインのアプリを取得し、展開します。</p>
                                             </div>
                                         </div>
                                     </div>
@@ -260,131 +378,7 @@ ms.locfileid: "42587896"
                         </ul>
                     </li>
                     <li>
-                        <a href="#tasksPanel3">デバイスのポリシー準拠</a>
-                        <ul id="tasksPanel3" class="cardsC">
-                            <li>
-                                <a href="/sccm/compliance/understand/ensure-device-compliance">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-device-compliance-1.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>デバイス コンプライアンスの保証</h3>
-                                                <p>管理しているデバイスで設定および評価のコンプライアンスを構成します。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sccm/compliance/deploy-use/create-configuration-items">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-device-compliance-2.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>構成項目を作成する方法</h3>
-                                                <p>構成項目を作成するために知っておくべきすべてのこと。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sccm/compliance/deploy-use/upgrade-windows-version">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-device-compliance-3.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>エディションのアップグレード ポリシーで Windows デバイスをアップグレードする</h3>
-                                                <p>プロダクト キーやライセンス ファイルを利用し、Windows 10 デバイスを最新版に簡単にアップグレードします。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#tasksPanel4">モバイル デバイス管理</a>
-                        <ul id="tasksPanel4" class="cardsC">
-                            <li>
-                                <a href="/sccm/mdm/understand/hybrid-mobile-device-management">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-mobile-device-mgmt-1.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>ハイブリッド モバイル デバイス管理 の概要</h3>
-                                                <p>Configuration Manager を使用して iOS、Android、Android デバイスを管理する方法について説明します。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-mobile-device-mgmt-2.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>ハイブリッド MDM のユーザーとデバイスを Intune スタンドアロンに移行する</h3>
-                                                <p>ハイブリッド MDM から推奨される Intune スタンドアロンのソリューションに移行するには、段階的なアプローチを使用します。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management">
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-mobile-device-mgmt-3.svg" alt="" />
-                                                </div>
-                                            </div>
-                                            <div class="cardText">
-                                                <h3>ハイブリッド MDM の新機能</h3>
-                                                <p>ハイブリッド MDM. でサポートされている Intune の新機能について説明します。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#tasksPanel5">オペレーティング システムの展開</a>
+                        <a href="#tasksPanel5">OS の展開</a>
                         <ul id="tasksPanel5" class="cardsC">
                             <li>
                                 <a href="/sccm/osd/understand/introduction-to-operating-system-deployment">
@@ -393,7 +387,7 @@ ms.locfileid: "42587896"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-operating-sys-deploy-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -406,18 +400,18 @@ ms.locfileid: "42587896"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems">
+                                <a href="/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-operating-sys-deploy-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>オペレーティングシステムを展開するシナリオ</h3>
-                                                <p>いずれかのオペレーティング システム展開シナリオを利用し、オペレーティング システムを展開します。</p>
+                                                <h3>Windows 10 へのアップグレード</h3>
+                                                <p>Configuration Manager のタスク シーケンスを使用して、デバイスを Windows 10 にアップグレードします。</p>
                                             </div>
                                         </div>
                                     </div>
@@ -425,18 +419,18 @@ ms.locfileid: "42587896"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/osd/deploy-use/manage-windows-as-a-service">
+                                <a href="/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-operating-sys-deploy-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>サービスとしての Windows の管理</h3>
-                                                <p>サービス プランを作成して展開リングを形成し、新しいビルドが利用可能になったときに Windows 10 Current Branch を最新の状態に維持します。</p>
+                                                <h3>段階的展開</h3>
+                                                <p>複数のコレクション全体で、調整され順序付けされたソフトウェアのロールアウトを自動化します。</p>
                                             </div>
                                         </div>
                                     </div>
@@ -446,21 +440,21 @@ ms.locfileid: "42587896"
                         </ul>
                     </li>
                     <li>
-                        <a href="#tasksPanel6">データとインフラストラクチャの保護</a>
+                        <a href="#tasksPanel6">ソフトウェア更新管理</a>
                         <ul id="tasksPanel6" class="cardsC">
                             <li>
-                                <a href="/sccm/protect/understand/backup-and-recovery">
+                                <a href="/sccm/sum/understand/software-updates-introduction">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-protect-data-infrastruct-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-software-update-mgmt-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>バックアップと回復のオプション</h3>
-                                                <p>バックアップと回復の計画を立てることで、データを失う危険を回避できます。 </p>
+                                                <h3>ソフトウェア更新管理の概要</h3>
+                                                <p>Configuration Manager でのソフトウェア更新プログラムの管理</p>
                                             </div>
                                         </div>
                                     </div>
@@ -468,13 +462,56 @@ ms.locfileid: "42587896"
                                 </a>
                             </li>
                             <li>
+                                <a href="/sccm/sum/deploy-use/manage-office-365-proplus-updates">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-software-update-mgmt-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Office 365 ProPlus の更新プログラムの管理</h3>
+                                                <p>Configuration Manager を使用して、ダッシュ ボードで Office 365 のクライアント情報を表示したり、アプリを構成してクライアントに展開したり、Office の更新プログラムを管理したりします。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-software-update-mgmt-3.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Windows Update for Business の使用</h3>
+                                                <p>Configuration Manager を Windows Update for Business と統合して、Windows 10 デバイスを常に最新状態に保ちます。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#tasksPanel7">データとインフラストラクチャの保護</a>
+                        <ul id="tasksPanel7" class="cardsC">
+                            <li>
                                 <a href="/sccm/protect/deploy-use/manage-access-to-services">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-protect-data-infrastruct-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -493,12 +530,31 @@ ms.locfileid: "42587896"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-protect-data-infrastruct-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Endpoint Protection</h3>
-                                                <p>Windows Defender、Endpoint Protection、Windows ファイアウォールを管理し、クライアント コンピューターをセキュリティで保護します。</p>
+                                                <h3>Windows Defender のエンドポイント保護</h3>
+                                                <p>Configuration Manager を使用して、Windows Defender スイートの機能の管理と制御を行います。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/protect/deploy-use/windows-hello-for-business-settings">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-password-3.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Windows Hello for Business</h3>
+                                                <p>Windows 10 デバイス用の代替サインイン方法を管理するためのポリシーを作成します。</p>
                                             </div>
                                         </div>
                                     </div>
@@ -508,21 +564,21 @@ ms.locfileid: "42587896"
                         </ul>
                     </li>
                     <li>
-                        <a href="#tasksPanel7">ソフトウェア更新管理</a>
-                        <ul id="tasksPanel7" class="cardsC">
+                        <a href="#tasksPanel8">デバイス コンプライアンス</a>
+                        <ul id="tasksPanel8" class="cardsC">
                             <li>
-                                <a href="/sccm/sum/understand/software-updates-introduction">
+                                <a href="/sccm/compliance/understand/ensure-device-compliance">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-software-update-mgmt-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-device-compliance-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>ソフトウェア更新管理の概要</h3>
-                                                <p>Configuration Manager でのソフトウェア更新プログラムの管理</p>
+                                                <h3>デバイス コンプライアンスの保証</h3>
+                                                <p>管理しているデバイスで設定の構成とコンプライアンスの評価を行います。</p>
                                             </div>
                                         </div>
                                     </div>
@@ -530,18 +586,18 @@ ms.locfileid: "42587896"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/sum/get-started/prepare-for-software-updates-management">
+                                <a href="/sccm/compliance/deploy-use/browser-profiles">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-software-update-mgmt-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-device-compliance-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>ソフトウェア更新管理の準備</h3>
-                                                <p>ソフトウェア更新のインフラストラクチャ、ソフトウェアの更新ポイントなどの更新、および同期の更新を準備します。</p>
+                                                <h3>Microsoft Edge の設定の構成</h3>
+                                                <p>Configuration Manager のコンプライアンス ポリシーを使用して、Microsoft Edge の設定をいくつか構成します。</p>
                                             </div>
                                         </div>
                                     </div>
@@ -549,18 +605,18 @@ ms.locfileid: "42587896"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/sum/deploy-use/deploy-software-updates">
+                                <a href="/sccm/compliance/deploy-use/upgrade-windows-version">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-software-update-mgmt-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-device-compliance-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>ソフトウェアの更新を展開する</h3>
-                                                <p>作成したインフラストラクチャでソフトウェアの更新を展開します。</p>
+                                                <h3>エディションのアップグレード ポリシーで Windows デバイスをアップグレードする</h3>
+                                                <p>プロダクト キーやライセンス ファイルを利用し、Windows 10 デバイスを最新版に簡単にアップグレードします。</p>
                                             </div>
                                         </div>
                                     </div>
@@ -572,61 +628,334 @@ ms.locfileid: "42587896"
                 </ul>
             </li>
             <li>
-                <a href="#sdkstools">SDK/ツール</a>
-                <ul id="sdkstools">
+                <a href="#current">現在を取得</a>
+                <ul id="current">
                     <li>
-                        <a href="#sdkstools-all">すべて</a>
-                        <ul id="sdkstools-all" class="cardsC">
+                        <a href="#current-all">すべて</a>
+                        <ul id="current-all" class="cardsF">
                             <li>
+                                <a href="/sccm/core/understand/configuration-manager-and-windows-as-service">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-tools-1.svg" alt="" />
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_progressive.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/sccm/develop/core/misc/system-center-configuration-manager-sdk">System Center Configuration Manager SDK</a></h3>
-                                                <p>スクリプトを通じて Configuration Manager を自動化することで、開発者は機能と拡張機能を追加できます。</p>
+                                                <h3>Configuration Manager を使用して Windows 10 を最新状態に保つ</h3>
+                                                <p>Windows 10 を最新状態に保つには、Configuration Manager を最新状態に保ちます</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
-                                                <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-tools-2.svg" alt="" />
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_upgrade.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/sccm/develop/core/understand/configuration-manager-programming-fundamentals">Configuration Manager のプログラミングの基礎</a></h3>
-                                                <p>Configuration Manager を適切にプログラムするためのプログラミング技法について説明します。 </p>
+                                                <h3>Windows 10 へのアップグレード</h3>
+                                                <p>タスク シーケンスを使用して、デバイスを Windows 10 にアップグレードする</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="/sccm/osd/deploy-use/manage-windows-as-a-service">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo_Windows.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>サービスとしての Windows の管理</h3>
+                                                <p>サービス チャネルを表示して、サービス プランを使用する</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/sum/deploy-use/manage-office-365-proplus-updates">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo_office.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Office 365 の管理</h3>
+                                                <p>Office 365 アプリの展開、構成、更新</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/core/migration/migrate-data-between-hierarchies">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_get-started.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Configuration Manager Current Branch への移行</h3>
+                                                <p>Configuration Manager 2007 など、別の階層からの移行</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/core/migration/planning-for-migration">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_guidelines.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>移行の計画</h3>
+                                                <p>Configuration Manager Current Branch へ移行するための計画の展開</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.microsoft.com/fasttrack/microsoft-365/ems">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_deploy.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>FastTrack プログラム</h3>
+                                                <p>FastTrack から Microsoft 365 または EMS に対して移行サポートを要求する</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#tools">ツール</a>
+                <ul id="tools">
+                    <li>
+                        <a href="#tools-all">すべて</a>
+                        <ul id="tools-all" class="cardsF">
+                            <li>
+                                <a href="/sccm/core/support/tools">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_tools.svg"  alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Configuration Manager ツール</h3>
+                                                    <p>クライアント ベースまたはサーバー ベースの各ツールを使用して、サポートおよびトラブルシューティングを行います。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn688621(v=technet.10)" data-linktype="absolute-path">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_support.svg"  alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>サポート センター</h3>
+                                                    <p>トラブルシューティングの際に分析を容易にするためクライアントから情報を収集します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/mdt/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_deploy.svg"  alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Microsoft Deployment Toolkit (MDT)</h3>
+                                                    <p>デスクトップ OS とサーバー OS のデプロイを自動化するための、ツール、プロセス、ガイダンスのコレクションです。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/sum/tools/updates-publisher">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_upgrade.svg"  alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>System Center Updates Publisher (SCUP)</h3>
+                                                    <p>カスタム ソフトウェアの更新プログラムを管理してインポートするためのスタンドアロン ツールです。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/compliance/plan-design/scap/about-scap">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_security-management.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Security Content Automation Protocol (SCAP) 拡張機能</h3>
+                                                    <p>NIST の基準に準拠するために環境の分析と評価を行います。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sccm/apps/pcm">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_package.svg"  alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Package Conversion Manager</h3>
+                                                    <p>レガシ パッケージをアプリケーションに変換します。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#sdkps">SDK/Powershell</a>
+                <ul id="sdkps">
+                    <li>
+                        <a href="#sdkps-all">すべて</a>
+                        <ul id="sdkps-all" class="cardsC">
+                            <li>
+                              <a href="/sccm/develop/core/misc/system-center-configuration-manager-sdk">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/media/hubs/sccm/sccm-tools-4.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-tools-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/powershell/sccm/configurationmanager/">System Center Configuration Manager コマンドレットを開始する</a></h3>
-                                                <p>Configuration Manager 階層を管理するには、Windows PowerShell スクリプト、コマンドレット、およびドライブのプロバイダーを使用します。</p>
+                                                <h3>Configuration Manager Software Development Kit (SDK)</h3>
+                                                <p>Configuration Manager をスクリプトで自動化します。 開発者は機能と拡張機能を追加できます。</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/sccm/develop/core/understand/configuration-manager-programming-fundamentals">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-tools-2.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Configuration Manager のプログラミングの基礎</h3>
+                                                <p>Configuration Manager を適切にプログラムするためのプログラミング技法について説明します。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/powershell/sccm/configurationmanager/">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage bgdAccent1">
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-tools-4.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Configuration Manager の PowerShell のリファレンス</h3>
+                                                <p>Windows PowerShell のコマンドレットとスクリプトを使用して、Configuration Manager 階層を管理します。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </a>
                             </li>
                         </ul>
                     </li>
@@ -639,89 +968,118 @@ ms.locfileid: "42587896"
                         <a href="#community-all">すべて</a>
                         <ul id="community-all" class="cardsF">
                             <li>
+                                <a href="https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/media/common/i_blog.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_blog.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://blogs.technet.microsoft.com/enterprisemobility/">Enterprise Mobility + Security ブログ</a></h3>
-                                                <p>Enterprise Mobility およびセキュリティのサービスに関する最新のニュースです。</p>
+                                                <h3>Enterprise Mobility + Security ブログ</h3>
+                                                <p>Configuration Manager に関する最新のニュース。</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="https://twitter.com/hashtag/configmgr">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/media/hubs/sccm/sccm-social-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-social-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://twitter.com/hashtag/configmgr">#ConfigMgr on Twitter</a></h3>
-                                                <p>System Center Configuration Manager に関する最新のツイートを参照してください。 </p>
+                                                <h3>#Twitter で ConfigMgr</h3>
+                                                <p>Configuration Manager に関する最新のツイートをご覧ください。 </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="https://social.technet.microsoft.com/Forums/en-US/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/media/common/i_support.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_support.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://social.technet.microsoft.com/Forums/en-US/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc">Configuration Manager TechNet フォーラム</a></h3>
+                                                <h3>Configuration Manager TechNet フォーラム</h3>
                                                 <p>TechNet フォーラムでは、最新の質問と回答を参照してください。</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="https://configurationmanager.uservoice.com/forums/300492-ideas">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/media/common/i_feedback.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo-uservoice.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://configurationmanager.uservoice.com/forums/300492-ideas">Configuration Manager に関するフィードバックを送信する</a></h3>
+                                                <h3>Configuration Manager に関するフィードバックを送信する</h3>
                                                 <p>希望する機能についてお聞かせください。</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
                             </li>
                             <li>
+                                <a href="/sccm/core/understand/use-docs#bkmk_docfeedback">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/media/common/i_feedback.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo-uservoice.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation">ドキュメントに関するフィードバックを送信する</a></h3>
+                                                <h3>ドキュメントに関するフィードバックを送信する</h3>
                                                 <p>技術的なコンテンツを向上させる方法について、アイデアを共有できます。</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://blogs.technet.microsoft.com/configurationmgr/">
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_blog.svg" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Configuration Manager サポート ブログ</h3>
+                                                <p>Configuration Manager チームからのサポートおよびサービス情報。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </a>
                             </li>
                         </ul>
                     </li>
