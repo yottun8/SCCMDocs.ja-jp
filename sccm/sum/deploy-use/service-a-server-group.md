@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-ms.openlocfilehash: cefdaec6aff16f0159f9811b6deb7379ab69a4ec
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 7c775df2446dbd0da1d9317982fc752dbfe5120a
+ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350546"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46533815"
 ---
 # <a name="service-a-server-group"></a>サーバー グループの提供
 
@@ -63,7 +63,7 @@ System Center Configuration Manager バージョン 1606 以降では、コレ�
     >   
     >  `Write-Output "Universal Time: " + $a.ToUniversalTime()  |`  
     >   
-    >  `Out-File C:\temp\start.txt`  
+    >  `Out-File C:\Windows\Temp\start.txt`  
     >   
     >  **展開後**  
     >   
@@ -73,7 +73,7 @@ System Center Configuration Manager バージョン 1606 以降では、コレ�
     >   
     >  `Write-Output "Universal Time: " + $a.ToUniversalTime()  |`  
     >   
-    >  `Out-File C:\temp\end.txt`  
+    >  `Out-File C:\Windows\Temp\end.txt`  
 
 ## <a name="deploy-software-updates-to-the-server-group-and-monitor-status"></a>ソフトウェア更新プログラムをサーバー グループに展開して状態を監視する  
 サーバー グループのコレクションにソフトウェア更新プログラムを展開するには、標準的な展開プロセスを使用します。 ソフトウェア更新プログラムを展開した後は、Configuration Manager コンソールでソフトウェア更新プログラムの展開を監視できます。
