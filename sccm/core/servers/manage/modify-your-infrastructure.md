@@ -171,7 +171,7 @@ ms.locfileid: "32342566"
 
 
 > [!IMPORTANT]  
->  管理ポイントの 1 つまたは複数のデータベースのレプリカを持つデータベースを移動する場合は、最初にデータベースのレプリカを削除する必要があります。 データベースの移動が完了したら、データベースのレプリカを再構成できます。 詳細については、「 [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」をご覧ください。  
+>  管理ポイントの 1 つまたは複数のデータベースのレプリカを持つデータベースを移動する場合は、最初にデータベースのレプリカを削除する必要があります。 データベースの移動が完了したら、データベースのレプリカを再構成できます。 詳しくは、「[System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」をご覧ください。  
 
 ##  <a name="bkmk_SPN"></a> サイト データベース サーバーの SPN を管理する  
 サイト データベースの SQL サービスを実行するアカウントを選択することができます。  
