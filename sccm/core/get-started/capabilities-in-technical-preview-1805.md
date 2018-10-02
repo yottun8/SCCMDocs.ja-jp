@@ -10,12 +10,12 @@ ms.assetid: 7996b3eb-5259-483b-af40-adae2943d123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 21833d124ee998f0b943d2620370a2fcff264e28
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: ebd51b397e37c69e8f6e8d1e154fc369347bd63a
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591647"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229366"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1805 の機能
 
@@ -255,7 +255,7 @@ CMPivot は、お使いの環境でリアルタイム状態のデバイスへの
 2. インターフェイスでは、ツールの使用に関する詳細情報を提供しています。 
      - 最上部でクエリ文字列を手動入力したり、インライン ドキュメントのリンクをクリックしたりすることも可能です。
      - いずれかの**エントリ**をクリックして、クエリ文字列にそのエントリを追加します。 
-     - **テーブル演算子**、**集計関数**、および**スカラー関数**へのリンクでは、Web ブラウザーの言語リファレンス ドキュメントが開かれます。 CMPivot では、[Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log)と同じクエリ言語を使用します。
+     - **テーブル演算子**、**集計関数**、および**スカラー関数**へのリンクでは、Web ブラウザーの言語リファレンス ドキュメントが開かれます。 CMPivot では、[Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/)と同じクエリ言語を使用します。
 
 
 
