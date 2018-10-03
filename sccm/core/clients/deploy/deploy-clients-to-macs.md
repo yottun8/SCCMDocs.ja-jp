@@ -146,7 +146,7 @@ CMEnroll ツールでクライアントのインストール、クライアン�
 
 4.  Mac コンピューターの Tools フォルダーで、次のコマンドを入力します: **sudo ./CMEnroll -s &lt;enrollment_proxy_server_name> -ignorecertchainvalidation -u &lt;user name'>**  
 
-    クライアントのインストール後に、Mac コンピューターの登録ウィザードを使用して Mac コンピューターを登録できます。 この方法でクライアントを登録する場合は、このトピックの「 [To enroll the client by using the Mac Computer Enrollment Wizard](#BKMK_EnrollR2) 」を参照してください。  
+    クライアントのインストール後に、Mac コンピューターの登録ウィザードを使用して Mac コンピューターを登録できます。 この方法でクライアントを登録する場合は、このトピックの「 [Mac コンピューターの登録ウィザードを使用してクライアントを登録するには](#BKMK_EnrollR2) 」を参照してください。  
 
 5. Active Directory ユーザー アカウントのパスワードを入力します。  このコマンドを入力すると、2 つのパスワードの入力が求められます。最初のプロンプトは、コマンドを実行するスーパー ユーザー アカウント用です。 2 つ目のプロンプトは、Active Directory ユーザー アカウント用です。 プロンプトは似ているため、正しい順番で指定するように気を付けてください。  
 

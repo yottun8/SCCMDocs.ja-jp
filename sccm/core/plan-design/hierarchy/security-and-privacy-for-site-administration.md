@@ -120,7 +120,7 @@ Configuration Manager は、これらのセキュリティ グループを自動
 
 管理ユーザーの割り当てと承認レベルを定期的に監査して、必要な変更を確認します。  
 
-役割に基づいた管理の構成の詳細については、「 [Configure role-based administration for System Center Configuration Manager](../../../core/servers/deploy/configure/configure-role-based-administration.md)」を参照してください。  
+役割に基づいた管理の構成の詳細については、「 [System Center Configuration Manager のロール ベース管理の構成](../../../core/servers/deploy/configure/configure-role-based-administration.md)」を参照してください。  
 
 **Configuration Manager のバックアップをセキュリティで保護し、バックアップ時と復元時に通信チャネルをセキュリティで保護する**  
 
@@ -301,7 +301,7 @@ IIS を実行するサイト システムでは、IIS に既定の Web サイト
 ##  <a name="BKMK_Security_FSP"></a> フォールバック ステータス ポイントのセキュリティのベスト プラクティス  
  ここでは、Configuration Manager でフォールバック ステータス ポイントをインストールするときのセキュリティのベスト プラクティスについて説明します。  
 
- フォールバック ステータス ポイントをインストールするときのセキュリティの注意事項については、「 [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#determine-if-you-need-a-fallback-status-point)」を参照してください。  
+ フォールバック ステータス ポイントをインストールするときのセキュリティの注意事項については、「 [フォールバック ステータス ポイントが必要かどうかを判断する](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#determine-if-you-need-a-fallback-status-point)」を参照してください。  
 
 
 **他のサイト システムの役割は、サイト システムで実行しない。また、ドメイン コントローラーにステータス フォールバック ポイントをインストールしない**  

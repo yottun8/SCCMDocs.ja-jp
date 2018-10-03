@@ -126,7 +126,7 @@ Configuration Manager では、管理ポイントのデータベース レプリ
 
 詳細については、次をご覧ください。  
 -   System Center 2012 Configuration Manager: 「[管理ポイントのデータベース レプリカの構成](https://technet.microsoft.com/library/hh846234.aspx)」  
--   System Center Configuration Manager: 「[Database replicas for management points for System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」 (System Center Configuration Manager の管理ポイントのデータベース レプリカ)  
+-   System Center Configuration Manager: 「[System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」   
 
 **NLB を使用するソフトウェアの更新ポイントを再構成する:**  
 Configuration Manager では、ネットワーク負荷分散 (NLB) クラスターを使用してソフトウェアの更新ポイントをホストしているサイトは、アップグレードできません。  
