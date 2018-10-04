@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0429c62f68a111bc7f620d1c954d5c8cf944d1c1
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: 2e0f74790437b34d1c5cd5dc00767ec782a51b45
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590058"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229298"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>Configuration Manager でのリアルタイム データ用の CMPivot
 
@@ -78,7 +78,7 @@ Configuration Manager では、レポートを目的として顧客が使用す�
 
      - いずれかの**エントリ**をクリックして、クエリ文字列にそのエントリを追加します。  
 
-     - **テーブル演算子**、**集計関数**、および**スカラー関数**へのリンクでは、Web ブラウザーの言語リファレンス ドキュメントが開かれます。 CMPivot では、[Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log)と同じクエリ言語を使用します。  
+     - **テーブル演算子**、**集計関数**、および**スカラー関数**へのリンクでは、Web ブラウザーの言語リファレンス ドキュメントが開かれます。 CMPivot では、[Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/)と同じクエリ言語を使用します。  
 
 3. クライアントからの結果を表示するために CMPivot ウィンドウは開いたままにします。 CMPivot ウィンドウを閉じたら、このセッションは完了です。  
 
@@ -113,7 +113,7 @@ CMPivot ウィンドウには、次の要素があります。
 
 5. [クエリ] ウィンドウは、コレクション内のクライアント上で実行するクエリをビルドまたは入力する場所です。  
 
-    - CMPivot では、[Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log) と同じクエリ言語のサブセットを使用します。  
+    - CMPivot では、[Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/) と同じクエリ言語のサブセットを使用します。  
 
     - クエリ ウィンドウのコンテンツを切り取ったり、コピーしたり、貼り付けます。  
 
