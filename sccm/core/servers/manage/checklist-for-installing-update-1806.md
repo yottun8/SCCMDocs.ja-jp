@@ -2,7 +2,7 @@
 title: 1806 のチェックリスト
 titleSuffix: Configuration Manager
 description: Configuration Manager バージョン 1806 に更新する前に、実行するアクションについて説明します。
-ms.date: 07/30/2018
+ms.date: 08/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: bb0a87a6-fd65-440b-90a5-2fef35622c9d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f1eda33d040f823a4ee12fc523634e62881bc5ca
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: d0f79053eba91ac7177fe117a79612d1c1988965
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385923"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755778"
 ---
-# <a name="checklist-for-installing-update-1806-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム 1806 をインストールするためのチェックリスト
+# <a name="checklist-for-installing-update-1806-for-configuration-manager"></a>Configuration Manager の更新プログラム 1806 をインストールするためのチェックリスト
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager の Current Branch を使用している場合、バージョン 1806 のコンソール内の更新プログラムをインストールし、階層を前のバージョンから更新できます。 <!-- baseline only statement: (Because version 1802 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
+Configuration Manager の Current Branch を使用している場合、バージョン 1806 のコンソール内の更新プログラムをインストールし、階層を前のバージョンから更新できます。 <!-- baseline only statement: (Because version 1802 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
 
 バージョン 1806 の更新プログラムを取得するには、階層の最上位サイトでサービス接続ポイントを利用する必要があります。 このサイト システムの役割はオンライン モードまたはオフライン モードで使用可能です。 階層により Microsoft から更新プログラム パッケージがダウンロードされたら、それをコンソールで検索します。 **[管理]** ワークスペースで **[更新とサービス]** ノードを選択します。
 
@@ -161,16 +161,59 @@ Configuration Manager では、管理ポイントのデータベース レプリ
 
 
 ## <a name="post-update-checklist"></a>更新後のチェックリスト
-サイトが更新されたら、次の操作を確認します。
 
-1.  マルチサイト階層で、サイト間レプリケーションがアクティブであることを確認します。 コンソールで、**[監視]** ワークスペースの **[サイト階層]** と **[データベース レプリケーション]** ノードに移動します。 これらのノードには、問題の兆候が示されたり、レプリケーション リンクがアクティブであることの確認が示されます。  
+サイトの更新後に、次のチェックリストを使用して一般的なタスクと構成を完了します。
 
-2.  各サイト サーバーおよびサイト システムの役割がバージョン 1806 に更新されていることを確認します。 コンソールで、**[バージョン]** 列を **[管理]** ワークスペースの **[サイト]** と **[配布ポイント]** ノードに追加します。 必要な場合は、サイト システムの役割が自動的に再インストールされて、新しいバージョンに更新されます。 最初に正常に更新されないリモート サイト システムは再起動してみます。  
 
-3.  更新を始める前に無効にした、プライマリ サイトでの管理ポイントのデータベース レプリカを、再構成します。  
+#### <a name="confirm-version-and-restart-if-necessary"></a>バージョンを確認して再起動する (必要な場合)
+各サイト サーバーおよびサイト システムの役割がバージョン 1806 に更新されていることを確認します。 コンソールで、**[バージョン]** 列を **[管理]** ワークスペースの **[サイト]** と **[配布ポイント]** ノードに追加します。 必要な場合は、サイト システムの役割が自動的に再インストールされて、新しいバージョンに更新されます。 
 
-4.  更新を始める前に無効にしたデータベース メンテナンス タスクを、再構成します。  
+最初に正常に更新されないリモート サイト システムは再起動してみます。 サイト インフラストラクチャを確認し、該当するサイト サーバーとリモート サイト システム サーバーが正常に再起動されたことを確認します。 通常は、サイト システムの役割の前提条件として Configuration Manager が .NET をインストールするときにのみ、サイト サーバーが再起動されます。
 
-5.  更新プログラムをインストールする前にクライアントのパイロット運用を構成した場合は、作成した計画に従ってクライアントをアップグレードします。
 
-6.  Configuration Manager のすべての拡張機能を使用する場合は、Configuration Manager バージョン 1806 をサポートするために最新バージョンに更新します。 
+#### <a name="confirm-site-to-site-replication-is-active"></a>サイト間レプリケーションがアクティブであることを確認する
+Configuration Manager コンソールで次の場所に移動し、状態を表示して、レプリケーションがアクティブであることを確認します。  
+
+-   **[監視]** ワークスペース、**[サイト階層]** ノード  
+
+-   **[監視]** ワークスペース、**[データベースのレプリケーション]** ノード  
+
+詳細については、以下の記事を参照してください。  
+- [階層とレプリケーション インフラストラクチャの監視](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
+- [ レプリケーション リンク アナライザーについて](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  
+
+
+#### <a name="update-configuration-manager-consoles"></a>Configuration Manager コンソールの更新
+すべてのリモートの Configuration Manager コンソールを同じバージョンに更新します。 次の場合には、コンソールを更新するようにダイアログが表示されます。  
+
+-   コンソールを開くとき  
+
+-   コンソールの新しいノードに移動するとき  
+
+
+#### <a name="reconfigure-database-replicas-for-management-points"></a>管理ポイントのデータベース レプリカを構成する
+プライマリ サイトを更新した後、サイトを更新する前にアンインストールした管理ポイント用データベース レプリカを再構成します。 詳細については、「[管理ポイントのデータベース レプリカ](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)」を参照してください。  
+
+
+#### <a name="reconfigure-any-disabled-maintenance-tasks"></a>無効にしたメンテナンス タスクを再構成する
+更新プログラムのインストール前にサイトでデータベースの [メンテナンス タスク](/sccm/core/servers/manage/maintenance-tasks)を無効にした場合は、これらのタスクを再構成します。 更新前に適用されていたのと同じ設定を使用します。  
+
+
+#### <a name="update-clients"></a>クライアントの更新
+作成した計画に従ってクライアントをアップグレードします (特に、更新プログラムをインストールする前にクライアントのパイロット運用を構成した場合)。 詳細については、「[Windows コンピューター用クライアントをアップグレードする方法](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers)」を参照してください。  
+
+
+#### <a name="third-party-extensions"></a>サード パーティの拡張機能
+Configuration Manager のすべての拡張機能を使用する場合は、Configuration Manager バージョン 1806 をサポートするために最新バージョンに更新します。 
+
+
+#### <a name="update-custom-boot-images-and-media"></a>カスタム ブート イメージとメディアを更新する
+<!--SCCMDocs issue 775-->
+
+既定またはカスタムどちらのブート イメージでも、使用するブート イメージの **[配布ポイントの更新]** アクションを使用します。 このアクションでは、クライアントが最新バージョンを使用できることが確認されます。 Windows ADK の新しいバージョンがない場合でも、Configuration Manager クライアント コンポーネントを更新プログラムで変更できます。 ブート イメージとメディアを更新しない場合、デバイスでタスク シーケンスの展開が失敗する可能性があります。 
+
+サイトを更新すると、Configuration Manager によって "*既定の*" ブート イメージが自動的に更新されます。 更新されたコンテンツの配布ポイントへの配布は自動的には行われません。 このコンテンツをネットワーク全体に配布する準備ができたら、特定のブート イメージで**配布ポイントの更新**アクションを使用します。 
+
+サイトの更新後、すべての "*カスタム*" ブート イメージを手動で更新します。 このアクションでは、必要な場合は最新のクライアント コンポーネントでブート イメージが更新され、必要に応じて現在の Windows PE のバージョンが再読み込みされて、配布ポイントにコンテンツが再配布されます。 
+
+詳細については、「[Update distribution points with the boot image](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image)」(ブートイメージによる配布ポイントの更新) を参照してください。 

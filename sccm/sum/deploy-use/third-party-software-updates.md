@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a50aa9d2269830fa09c494c63c7681f1dbda3cc0
-ms.sourcegitcommit: 6e0e5b4b7779ce03e2b56b3b5f68f4ace1acedd8
+ms.openlocfilehash: 3c31b950ef59147f6f3f46c1cba7780b7789948c
+ms.sourcegitcommit: 4b7812b505e80f79fc90dfa8a6db06eea79a3550
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467591"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42584418"
 ---
 # <a name="enable-third-party-updates"></a>サード パーティの更新プログラムを有効にする 
 
@@ -164,6 +164,7 @@ Configuration Manager コンソールでサード パーティのカタログを
 -  Configuration Manager には、カタログの cab ファイル形式用の新しいバージョンがあります。 新しいバージョンには、ベンダーのバイナリ ファイル用の証明書が含まれています。 カタログを承認して信頼すると、これらの証明書は **[管理]** ワークスペースの **[セキュリティ]** の下にある **[証明書]** ノードに追加されます。  
      - ダウンロード URL が https であり、更新プログラムが署名されている限り、古いカタログの cab ファイル バージョンを引き続き使用できます。 バイナリの証明書が cab ファイル内になく、まだ承認されていないため、コンテンツの発行は失敗します。 **[証明書]** ノードで証明書を見つけてブロックを解除し、更新プログラムをもう一度発行することで、この問題を回避できます。 別の証明書で署名された複数の更新プログラムを発行する場合は、使用される各証明書のブロックを解除する必要があります。
      - 詳細については、以下のステータス メッセージ表の 11523 と 11524 のステータス メッセージを参照してください。
+-  最上位のソフトウェア更新ポイントにあるサード パーティ製ソフトウェア更新同期サービスで、インターネット アクセスのためにプロキシ サーバーが必要な場合は、デジタル署名のチェックが失敗する可能性があります。 この問題を緩和するには、サイト システムで WinHTTP プロキシ設定を構成します。 詳しくは、「[Netsh commands for WinHTTP](https://go.microsoft.com/fwlink/p/?linkid=199086)」(WinHTTP 用の Netsh コマンド) をご覧ください。
 
 ## <a name="status-messages"></a>ステータス メッセージ
 
@@ -176,7 +177,7 @@ Configuration Manager コンソールでサード パーティのカタログを
 
 
 ## <a name="working-with-third-party-updates-video"></a>サード パーティの更新プログラムの操作に関するビデオ
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bvAQeDSJIbs?ecver=1" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ai8rLCLtuTI?rel=0" frameborder="0" allowfullscreen></iframe>
 
 
 

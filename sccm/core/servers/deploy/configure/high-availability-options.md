@@ -10,12 +10,12 @@ ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18435bd43ed74daee646096d1e8d8b6ed7b7bc27
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 057310d7f580cfc61f23a53977716743ed906867
+ms.sourcegitcommit: 849391d3985b057027cae610bd3a79fdaa708b94
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386343"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42584481"
 ---
 # <a name="high-availability-options-for-configuration-manager"></a>Configuration Manager の高可用性オプション
 
@@ -25,7 +25,7 @@ ms.locfileid: "39386343"
 
 次の Configuration Manager のオプションでは、高可用性がサポートされています。   
 
-- バージョン 1806 以降、中央管理サイトと各プライマリ サイトをパッシブ モードの追加のサイト サーバーで構成する。  
+- バージョン 1806 以降で、パッシブ モードのサイト サーバーを追加してスタンドアロン プライマリ サイトを構成する。  
  
 - プライマリ サイトと中央管理サイトのサイト データベースに対して SQL Server AlwaysOn 可用性グループを構成する。
 
@@ -70,7 +70,7 @@ Configuration Manager のその他の機能には、リアルタイムのサー�
 ##  <a name="bkmk_snh"></a> サイトと階層の高可用性  
 
 #### <a name="use-a-site-server-in-passive-mode"></a>サイト サーバーをパッシブ モードで使用する
-バージョン 1806 以降では、*パッシブ* モードで追加のサイト サーバーをインストールします。 パッシブ モードのサイト サーバーは、*アクティブ* モードになっている既存のサイト サーバーに加えられます。 パッシブ モードのサイト サーバーは、必要なときにすぐに使用できます。 詳細については、[サイト サーバーの高可用性](/sccm/core/servers/deploy/configure/site-server-high-availability)に関するページを参照してください。  
+バージョン 1806 以降では、スタンドアロン プライマリ サイト用に "*パッシブ*" モードで追加のサイト サーバーをインストールします。 パッシブ モードのサイト サーバーは、*アクティブ* モードになっている既存のサイト サーバーに加えられます。 パッシブ モードのサイト サーバーは、必要なときにすぐに使用できます。 詳細については、[サイト サーバーの高可用性](/sccm/core/servers/deploy/configure/site-server-high-availability)に関するページを参照してください。  
 
 #### <a name="use-a-remote-content-library"></a>リモート コンテンツ ライブラリを使用する
 バージョン 1806 以降では、高可用性ストレージを提供するリモートの場所に、サイトのコンテンツ ライブラリを移動します。 この機能は、サイト サーバーの高可用性に対する要件です。 詳細については、[コンテンツ ライブラリ](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote)に関するページを参照してください。

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: fbae44d1344dd36d3c0a6faf2e50727dfa830ba0
-ms.sourcegitcommit: 8060ea520fb08629e1d5f249daffe825536673a5
+ms.openlocfilehash: 02a830d10263164e26902247856f999523092c76
+ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35232372"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42584513"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>クラウド管理ゲートウェイの証明書
 
@@ -63,7 +63,8 @@ CMG によって、インターネットベースのクライアントが接続�
 
 クラウド配布ポイントの場合と同じように、CMG のカスタム SSL 証明書を作成します。 次の操作以外は、「[クラウドベースの配布ポイント用のサービス証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012)」の指示に従います。
 
-- カスタム Web サーバー証明書を要求するとき、証明書の共通名の FQDN を提供します。 Azure パブリック クラウドで CMG を使用する場合、**cloudapp.net** または Azure 米国政府クラウドの **usgovcloudapp.net** で終わる名前を使用します。
+- カスタム Web サーバー証明書を要求するとき、証明書の共通名の FQDN を提供します。 これは、自分が所有するパブリック ドメイン名でも、cloudapp.net ドメインでもかまいません。 独自のパブリック ドメインを使用する場合は、組織のパブリック DNS に DNS エイリアスを作成するための上記のプロセスを参照してください。
+- Azure パブリック クラウドで CMG Web サーバー証明書用の cloudapp.net パブリック ドメインを使用する場合は、**cloudapp.net** または Azure 米国政府クラウドの **usgovcloudapp.net** で終わる名前を使用します。
 
 
 

@@ -1,8 +1,8 @@
 ---
 title: コレクションを管理する
 titleSuffix: Configuration Manager
-description: System Center Configuration Manager で一般的なコレクション管理タスクを実行します。
-ms.date: 4/25/2017
+description: Configuration Manager で一般的なコレクション管理タスクを実行します。
+ms.date: 08/17/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,73 +10,209 @@ ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b00b62a90f496eb19a77dcc431ccf157b1227923
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5d7c967ce02c009cd9659c7956f7ca79f4a34faf
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337969"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755974"
 ---
-# <a name="how-to-manage-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager でコレクションを管理する方法
+# <a name="how-to-manage-collections-in-configuration-manager"></a>Configuration Manager でコレクションを管理する方法
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager でコレクションの管理タスクを行う際は、このトピックの概要情報を参考にしてください。  
+Configuration Manager でコレクションの管理タスクを行う際は、この記事の概要情報を参考にしてください。  
 
 > [!NOTE]  
->  Configuration Manager コレクションを作成する方法については、「[System Center Configuration Manager でコレクションを作成する方法](../../../../core/clients/manage/collections/create-collections.md)」を参照してください。  
+>  Configuration Manager コレクションを作成する方法については、「[コレクションを作成する方法](/sccm/core/clients/manage/collections/create-collections)」をご覧ください。  
 
-## <a name="how-to-manage-device-collections"></a>デバイス コレクションを管理する方法  
+
+
+## <a name="bkmk_device"></a> デバイス コレクションを管理する方法  
+
  **[資産とコンプライアンス]** ワークスペースで **[デバイス コレクション]** を選択し、管理するコレクションと管理タスクを選択します。  
 
- 次の表で、管理タスクに関する詳細と、各タスクを選択する前に必要となる追加情報について説明します。  
 
-|管理タスク|詳細|説明|  
-|---------------------|-------------|----------------------|  
-|**メンバーの表示**|**[デバイス]** ノードの一時ノードで選択されたコレクションのメンバーであるすべてのリソースを表示します。|詳細情報はありません。|  
-|**選択された項目の追加**|次のアクションのいずれかを行うために次のオプションを提供します。<br /><br /> - <br />                    **選択した項目を既存のデバイス コレクションに追加する** - 選択したコレクションのメンバーを追加するコレクションを選択できる **[コレクションの選択]** ダイアログ ボックスを開きます。 **[コレクションを含める]** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。<br /><br /> - **選択した項目を新しいデバイス コレクションに追加する** - 新しいコレクションを作成できる**デバイス コレクションの作成ウィザード**を開きます。 **[コレクションを含める]** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。|[System Center Configuration Manager でコレクションを作成する方法](../../../../core/clients/manage/collections/create-collections.md)|  
-|**クライアントのインストール**|クライアント プッシュのインストールを使用して、Configuration Manager クライアントを選択したコレクションのすべてのコンピューターにインストールする**クライアントのインストール ウィザード**を開きます。|[Windows コンピューターにクライアントを展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)|  
-|**アフィニティ要求の管理**|保留中の要求を承認または拒否して選択されたコレクションのデバイスにおけるユーザーとデバイスのアフィニティを確立できる **[ユーザーとデバイスのアフィニティ要求の管理]** ダイアログボックスを開きます。|[System Center Configuration Manager でのユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)|  
-|**必須の PXE 展開の消去**|選択されたコレクションのすべてのメンバーから必要な PXE ブート展開を消去します。|[オペレーティング システムの展開の概要](../../../../osd/understand/introduction-to-operating-system-deployment.md)|  
-|**メンバーシップの更新**|選択されたコレクションのメンバーシップを評価します。 多くのメンバーからなるコレクションでは、更新の完了には時間がかかることがあります。 更新が完了したら、**[リフレッシュ]** アクションを使用して、新しいコレクションのメンバーで画面を更新します。|詳細情報はありません。|  
-|**リソースの追加**|新しいリソースを検索して選択されたコレクションに追加できる **[コレクションへのリソースの追加]** ダイアログ ボックスを開きます。<br /><br /> 更新中は選択されたコレクションで砂時計のアイコンが表示されます。|詳細情報はありません。|  
-|**クライアント通知**|選択したデバイス コレクションのすべてのクライアントがコンピューターまたはユーザー ポリシーをダウンロードするように指定します。|詳細情報はありません。|  
-|**Endpoint Protection**|選択されたコレクションで、フルまたはクイックのアンチマルウェア スキャンの実行、または最新のアンチマルウェアの定義をコンピューターにダウンロードをします。|[System Center Configuration Manager での Endpoint Protection](../../../../protect/deploy-use/endpoint-protection.md)|  
-|**エクスポート**|別の Configuration Manager サイトでアーカイブまたは使用できる Managed Object Format (MOF) と呼ばれる形式のファイルにコレクションをエクスポートする**コレクションのエクスポート ウィザード** を開きます。<br /><br /> コレクションをエクスポートするとき、コレクションは **[含む]** の規則の使用を通じて選択されたコレクションを参照し、または **[除外する]** の規則についてはエクスポートしません。|詳細情報はありません。|  
-|**コピー**|選択したコレクションのコピーを作成します。 新しいコレクションは選択したコレクションを限定コレクションとして使用します。|詳細情報はありません。|  
-|**削除**|選択したコレクションを削除します。 コレクションのすべてのリソースをサイト データベースから削除することもできます。<br /><br /> Configuration Manager に構築されたコレクションは削除することができません。|組み込みコレクションの一覧については、「[Configuration Manager でのコレクションの概要](../../../../core/clients/manage/collections/introduction-to-collections.md)」を参照してください。|  
-|**展開のシミュレート**|アプリケーションをインストールしたりアンインストールしたりせずにアプリケーションの結果をテストできる、**展開アプリケーションのシミュレート ウィザード**を開きます。|[System Center Configuration Manager でアプリケーションの展開をシミュレーションする方法](../../../../apps/deploy-use/simulate-application-deployments.md)|  
-|**展開**|次のオプションを表示します。<br /><br /> - <br />                    **アプリケーション** - 選択したコレクションへのアプリケーションの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - <br />                    **プログラム** – 選択したコレクションへのパッケージやプログラムの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - **構成基準** - 選択されたコレクションへの 1 つ以上の構成基準の展開を構成できる **[構成基準の展開]** ダイアログ ボックスを開きます。<br /><br /> - <br />                    **タスク シーケンス** – 選択したコレクションへのタスク シーケンスの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - <br />                    **ソフトウェア更新プログラム** - 選択したコレクションのリソースへのソフトウェア更新プログラムの展開を構成できる、**ソフトウェア更新の展開ウィザード**を開きます。|[System Center Configuration Manager でアプリケーションを展開する方法](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager のパッケージとプログラム](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [System Center Configuration Manager で構成基準を展開する方法](../../../../compliance/deploy-use/deploy-configuration-baselines.md)<br /><br /> [System Center Configuration Manager でのタスクを自動化するためのタスク シーケンスの管理](../../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)<br /><br /> [System Center Configuration Manager でのソフトウェア更新プログラムの管理](/sccm/sum/understand/software-updates-introduction)|  
+#### <a name="show-members"></a>メンバーの表示
+ **[デバイス]** ノードの一時ノードで選択されたコレクションのメンバーであるすべてのリソースを表示します。
 
-## <a name="how-to-manage-user-collections"></a>ユーザー コレクションを管理する方法  
+
+#### <a name="add-selected-items"></a>選択された項目の追加
+ 次のオプションを使用できます。 
+
+ - **[選択した項目を既存のデバイス コレクションに追加する]**: **[コレクションの選択]** ダイアログ ボックスを開きます。 選択したコレクションのメンバーを追加するコレクションを選択します。 **[コレクションを含める]** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。  
+
+ - **[選択した項目を新しいデバイス コレクションに追加する]**: 新しいコレクションを作成できる**デバイス コレクションの作成ウィザード**を開きます。 **[コレクションを含める]** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。  
+
+
+ 詳しくは、「[コレクションを作成する方法](/sccm/core/clients/manage/collections/create-collections)」をご覧ください。
+
+
+#### <a name="install-client"></a>クライアントのインストール
+ **クライアントのインストール ウィザード**を開きます。 このウィザードでは、クライアント プッシュのインストールを使用して、選択したコレクションのすべてのコンピューターに Configuration Manager クライアントがインストールされます。 詳しくは、「[クライアント プッシュ インストール](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush)」をご覧ください。
+
+
+#### <a name="run-script"></a>スクリプトを実行する
+ **スクリプトの実行**ウィザードを開き、コレクション内のすべてのクライアントで PowerShell スクリプトを実行します。 詳しくは、「[PowerShell スクリプトの作成と実行](/sccm/apps/deploy-use/create-deploy-scripts)」をご覧ください。
+
+
+#### <a name="manage-affinity-requests"></a>アフィニティ要求の管理
+ **[ユーザーとデバイスのアフィニティ要求の管理]** ダイアログ ボックスを開きます。 保留中の要求を承認または拒否して、選択したコレクションのデバイスに対するユーザーとデバイスのアフィニティを確立します。 詳しくは、「[ユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity)」をご覧ください。
+
+
+#### <a name="clear-required-pxe-deployments"></a>必須の PXE 展開の消去
+ 選択されたコレクションのすべてのメンバーから必要な PXE ブート展開を消去します。 詳細については、「[PXE を使用したネットワーク経由での Windows の展開](/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network)」を参照してください。
+
+
+#### <a name="update-membership"></a>メンバーシップの更新
+ 選択されたコレクションのメンバーシップを評価します。 多くのメンバーからなるコレクションでは、更新の完了には時間がかかることがあります。 更新が完了したら、**[リフレッシュ]** アクションを使用して、新しいコレクションのメンバーで画面を更新します。
+
+
+#### <a name="add-resources"></a>リソースの追加
+ **[コレクションへのリソースの追加]** ダイアログ ボックスを開きます。 選択したコレクションに追加する新しいリソースを検索します。 更新中は選択されたコレクションで砂時計のアイコンが表示されます。
+
+
+#### <a name="client-notification"></a>クライアント通知
+ 選択したデバイス コレクションのすべてのクライアントに、次のいずれかの操作をすぐに行うよう指示します。
+
+ - **[コンピューター ポリシーのダウンロード]**: デバイスのポリシーを更新します。 詳細については、「[Configuration Manager クライアントのポリシーの取得開始](/sccm/core/clients/manage/manage-clients#BKMK_PolicyRetrieval)」を参照してください。  
+
+ - **[ユーザー ポリシーのダウンロード]**: ユーザー ポリシーを更新します。  
+
+ - **[探索データの収集]**: クライアントによる探索データ レコード (DDR) の送信をトリガーします。 詳しくは、「[定期探索](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutHeartbeat)」をご覧ください。  
+
+ - **[ソフトウェア インベントリの収集]**: クライアントによるソフトウェア インベントリ サイクルの実行をトリガーします。 詳しくは、「[ソフトウェア インベントリの概要](/sccm/core/clients/manage/inventory/introduction-to-software-inventory)」をご覧ください。  
+
+ - **[ハードウェア インベントリの収集]**: クライアントによるハードウェア インベントリ サイクルの実行をトリガーします。 詳しくは、「[ハードウェア インベントリの概要](/sccm/core/clients/manage/inventory/introduction-to-hardware-inventory)」をご覧ください。  
+
+ - **[アプリケーション展開の評価]**: クライアントによるアプリケーション展開評価サイクルの実行をトリガーします。 詳しくは、「[展開の再評価スケジュールを指定する](/sccm/core/clients/deploy/about-client-settings#schedule-re-evaluation-for-deployments)」をご覧ください。  
+
+ - **[ソフトウェア更新展開の評価]**: クライアントによるソフトウェア更新展開評価サイクルの実行をトリガーします。 詳しくは、「[ソフトウェア更新プログラムの概要](/sccm/sum/understand/software-updates-introduction)」をご覧ください。  
+
+ - **[次のソフトウェアの更新ポイントに切り替える]**: クライアントによる次の利用可能なソフトウェア更新ポイントへの切り替えをトリガーします。 詳しくは、「[ソフトウェアの更新ポイントの切り替え](/sccm/sum/plan-design/plan-for-software-updates#BKMK_SUPSwitching)」をご覧ください。  
+
+ - **[デバイス正常性構成証明の評価]**: Windows 10 クライアントによる最新のデバイスの正常性状態の確認と送信をトリガーします。 詳細については、[正常性構成証明書](/sccm/core/servers/manage/health-attestation)に関するページを参照してください。  
+
+ - **[条件付きアクセス コンプライアンスを確認する]**: クライアントによる条件付きアクセスへの準拠の確認をトリガーします。 詳しくは、[PC の O365 サービスへのアクセスの管理](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)に関するページをご覧ください。  
+
+
+#### <a name="endpoint-protection"></a>Endpoint Protection
+ 選択したデバイス コレクションのすべてのクライアントに、次のいずれかの操作をすぐに行うよう指示します。
+
+ - **[フル スキャン]**: Endpoint Protection または Windows Defender による "*完全な*" マルウェア対策スキャンの実行をトリガーします  
+
+ - **[クイック スキャン]**: Endpoint Protection または Windows Defender による "*簡易*" マルウェア対策スキャンの実行をトリガーします  
+
+ - **[定義のダウンロード]**: Endpoint Protection または Windows Defender による最新のマルウェア対策定義のダウンロードをトリガーします  
+
+
+ 詳細については、[Configuration Manager のエンドポイント保護](/sccm/protect/deploy-use/endpoint-protection)に関するページを参照してください。
+
+
+#### <a name="export"></a>エクスポート
+ このコレクションを管理オブジェクト フォーマット (MOF) ファイルにエクスポートできる**コレクションのエクスポート** ウィザードを開きます。 このファイルを別の Configuration Manager サイトでアーカイブまたはインポートできます。 コレクションをエクスポートするとき、参照されているコレクションはエクスポートされません。 参照されているコレクションは、**[含む]** 規則または **[除外する]** 規則を使用することによって、選択したコレクションで参照されています。
+
+
+#### <a name="copy"></a>コピー
+ 選択したコレクションのコピーを作成します。 新しいコレクションは選択したコレクションを限定コレクションとして使用します。
+
+
+#### <a name="refresh"></a>最新の情報に更新
+ ビューに表示されている情報を更新します。
+
+
+#### <a name="delete"></a>削除
+ 選択したコレクションを削除します。 コレクションのすべてのリソースをサイト データベースから削除することもできます。 
+
+ Configuration Manager に構築されたコレクションは削除することができません。 組み込みコレクションの一覧については、「[コレクションの概要](/sccm/core/clients/manage/collections/introduction-to-collections#built-in-collections)」をご覧ください。
+
+
+#### <a name="simulate-deployment"></a>展開のシミュレート
+ **アプリケーション展開のシミュレーション ウィザード**を開きます。 このウィザードでは、アプリケーションをインストールしたりアンインストールしたりせずにアプリケーションの結果をテストできます。 詳しくは、「[アプリケーションの展開をシミュレーションする方法](/sccm/apps/deploy-use/simulate-application-deployments)」をご覧ください。
+
+
+#### <a name="deploy"></a>[展開]
+ 次のオプションを表示します。  
+
+ - **[アプリケーション]**: **ソフトウェアの展開ウィザード**を開きます。 選択したコレクションに対するアプリケーションの展開を選択して構成します。 詳しくは、「[アプリケーションを展開する方法](/sccm/apps/deploy-use/deploy-applications)」をご覧ください。  
+
+ - **[プログラム]**: **ソフトウェアの展開ウィザード**を開きます。 選択したコレクションに対するパッケージとプログラムの展開を選択して構成します。 詳細については「[Packages and programs](/sccm/apps/deploy-use/packages-and-programs)」(パッケージとプログラム) を参照してください。  
+
+ - **[構成基準]**: **[構成基準の展開]** ダイアログ ボックスを開きます。 選択したコレクションに対する 1 つ以上の構成基準の展開を構成します。 詳細については、[構成基準を展開する方法](/sccm/compliance/deploy-use/deploy-configuration-baselines)に関するページを参照してください。  
+
+ - **[タスク シーケンス]**: **ソフトウェアの展開ウィザード**を開きます。 選択したコレクションに対するタスク シーケンスの展開を選択して構成します。 詳細については、「[タスクを自動化するためのタスク シーケンスの管理](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)」をご覧ください。  
+
+ - **[ソフトウェア更新プログラム]**: **ソフトウェアの更新の展開ウィザード**を開きます。 選択したコレクション内のリソースへのソフトウェア更新プログラムの展開を構成します。 詳しくは、「[ソフトウェア更新プログラムの管理](/sccm/sum/understand/software-updates-introduction)」をご覧ください。  
+
+
+#### <a name="clear-server-group-deployment-locks"></a>サーバー グループ展開のロックを解除
+ コレクションに対するすべてのサーバー グループ展開のロックを手動で解放します。 詳しくは、「[サーバー グループの提供](/sccm/sum/deploy-use/service-a-server-group)」をご覧ください。
+
+
+#### <a name="move"></a>移動
+ 選択したコレクションを **[デバイス コレクション]** ノードの別のフォルダーに移動します。 
+
+
+#### <a name="properties"></a>プロパティ
+ 詳しくは、「[コレクションのプロパティ](#BKMK_CollProp)」をご覧ください。  
+
+
+
+## <a name="bkmk_user"></a> ユーザー コレクションを管理する方法  
+
  **[資産とコンプライアンス]** ワークスペースで **[ユーザー コレクション]** を選択し、管理するコレクションと管理タスクを選択します。  
 
- 次の表で、管理タスクに関する詳細と、各タスクを選択する前に必要となる追加情報について説明します。  
+ > [!Note]  
+ > ユーザー コレクションでは次のアクションを使用できますが、動作はデバイス コレクションと同じです。 それ以外では、アクションはユーザー コレクションとその中のユーザーに適用されます。 詳しくは、「[デバイス コレクションを管理する方法](#bkmk_device)」の対応するアクションをご覧ください。  
 
-|管理タスク|詳細|説明|  
-|---------------------|-------------|----------------------|  
-|**メンバーの表示**|**[ユーザー]** ノードの一時ノードで選択されたコレクションのメンバーであるすべてのリソースを表示します。|詳細情報はありません。|  
-|**選択された項目の追加**|このオプションでは次のアクションのいずれかが実行できます。<br /><br /> - <br />                    **選択した項目を既存のユーザー コレクションに追加する** - 選択したコレクションのメンバーを追加するコレクションを選択できる **[コレクションの選択]** ダイアログ ボックスを開きます。 **[コレクションを含める]** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。<br /><br /> - **選択した項目を新しいユーザー コレクションに追加する** - 新しいコレクションを作成できる、**ユーザー コレクションの作成ウィザード**を開きます。 **[コレクションを含める]** のメンバーシップ規則を使用すると、選択されたコレクションは、このコレクションに含められます。|[System Center Configuration Manager でコレクションを作成する方法](../../../../core/clients/manage/collections/create-collections.md)|  
-|**アフィニティ要求の管理**|保留中の要求を承認または拒否して選択されたコレクションのユーザーにおけるユーザーとデバイスのアフィニティを確立できる **[ユーザーとデバイスのアフィニティ要求の管理]** ダイアログ ボックスを開きます。|[System Center Configuration Manager でのユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)|  
-|**メンバーシップの更新**|選択されたコレクションのメンバーシップを評価します。 多くのメンバーからなるコレクションでは、更新の完了には時間がかかることがあります。 更新が完了したら、**[リフレッシュ]** アクションを使用して、新しいコレクションのメンバーで画面を更新します。<br /><br /> 更新中は選択されたコレクションで砂時計のアイコンが表示されます。|詳細情報はありません。|  
-|**リソースの追加**|新しいリソースを検索して選択されたコレクションに追加できる **[コレクションへのリソースの追加]** ダイアログ ボックスを開きます。|詳細情報はありません。|  
-|**エクスポート**|別の Configuration Manager サイトでアーカイブまたは使用できる Managed Object Format (MOF) と呼ばれる形式のファイルにコレクションをエクスポートする**コレクションのエクスポート ウィザード** を開きます。<br /><br /> コレクションをエクスポートするとき、コレクションは **[含む]** の規則の使用を通じて選択されたコレクションを参照し、または **[除外する]** の規則についてはエクスポートしません。|詳細情報はありません。|  
-|**コピー**|選択したコレクションのコピーを作成します。 新しいコレクションは選択したコレクションを限定コレクションとして使用します。|詳細情報はありません。|  
-|**削除**|選択したコレクションを削除します。 コレクションのすべてのリソースをサイト データベースから削除することもできます。<br /><br /> Configuration Manager に構築されたコレクションは削除することができません。|組み込みコレクションの一覧については、「[Configuration Manager でのコレクションの概要](../../../../core/clients/manage/collections/introduction-to-collections.md)」を参照してください。|  
-|**展開のシミュレート**|アプリケーションをインストールしたりアンインストールしたりせずにアプリケーションの結果をテストできる、**展開アプリケーションのシミュレート ウィザード**を開きます。|[System Center Configuration Manager でアプリケーションの展開をシミュレーションする方法](../../../../apps/deploy-use/simulate-application-deployments.md)|  
-|**展開**|次のオプションを表示します。<br /><br /> - **アプリケーション** - 選択したコレクションへのアプリケーションの展開を選択して構成できる、**ソフトウェアの展開ウィザード**を開きます。<br /><br /> - <br />                    **プログラム** – 選択したコレクションへのパッケージやプログラムの展開を選択して構成できる、 **ソフトウェアの展開ウィザード** を開きます。<br /><br /> - **構成基準** - 選択されたコレクションへの 1 つ以上の構成基準の展開を構成できる **[構成基準の展開]** ダイアログ ボックスを開きます。|[System Center Configuration Manager でアプリケーションを展開する方法](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager のパッケージとプログラム](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [System Center Configuration Manager で構成基準を展開する方法](../../../../compliance/deploy-use/deploy-configuration-baselines.md)|  
+ - **メンバーの表示**  
+ - **選択された項目の追加**  
+     - **選択した項目を既存のユーザー コレクションに追加する**  
+     - **選択した項目を新しいユーザー コレクションに追加する**  
+ - **アフィニティ要求の管理**  
+ - **メンバーシップの更新**  
+ - **リソースの追加**  
+ - **エクスポート**  
+ - **コピー**  
+ - **更新**  
+ - **削除**  
+ - **展開のシミュレート**  
+ - **展開**  
+     - **アプリケーション**。  
+     - **プログラム**  
+     - **構成基準**   
+ - **移動**  
+ - **プロパティ**
+
+
 
 ##  <a name="BKMK_CollProp"></a> コレクションのプロパティ  
- コレクションの **[プロパティ]** ダイアログ ボックスを開くと、コレクションの次のプロパティを表示し構成することができます。  
 
-|タブ名|説明|  
-|--------------|----------------------|  
-|**全般**|コレクション名や限定コレクションを含め選択されたコレクションに関する概要を表示し構成することができます。|  
-|**メンバーシップの規則**|このコレクションのメンバーシップを定義するメンバーシップ規則を構成することができます。 詳細については、「[Configuration Manager でのコレクションの作成方法](../../../../core/clients/manage/collections/create-collections.md)」を参照してください。|  
-|**電源管理**|選択したコレクションのコンピューターに割り当てられた電源管理の計画を構成することができます。 詳細については、「[電源管理の概要](../../../../core/clients/manage/power/introduction-to-power-management.md)」を参照してください。|  
-|**展開**|選択されたコレクションのメンバーに展開されたソフトウェアを表示します。|  
-|**メンテナンス期間**|選択されたコレクションのメンバーに適用されたメンテナンス期間を表示し構成することができます。 詳細については、「[System Center Configuration Manager のメンテナンス期間の使用方法](../../../../core/clients/manage/collections/use-maintenance-windows.md)」を参照してください。|  
-|**コレクション変数**|コレクションに適用され、タスク シーケンスで使用することができる変数を構成します。 組み込みのタスク シーケンス変数の詳細については、「[タスク シーケンス組み込み変数](../../../../osd/understand/task-sequence-built-in-variables.md)」を参照してください。|  
-|**配布ポイント グループ**|1 つ以上の配布ポイント グループを選択されたコレクションのメンバーに関連付けることができます。 詳細については、「[System Center Configuration Manager のコンテンツ インフラストラクチャとコンテンツの管理](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)」を参照してください。|  
-|**セキュリティ**|関連付けられた役割やセキュリティの範囲で選択されたコレクションへの権限を持つ管理者ユーザーを表示します。|  
-|**モニター**|クライアント ステータスや Endpoint Protection に関するアラートが生成されたときの設定ができます。 詳細については、「[How to configure client status in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-status.md)」 (System Center Configuration Manager でクライアント ステータスを構成する方法) および「[System Center Configuration Manager で Endpoint Protection を監視する方法](../../../../protect/deploy-use/monitor-endpoint-protection.md)」を参照してください。|  
+ コレクションの **[プロパティ]** ダイアログ ボックスを開くと、次のオプションを表示し構成することができます。  
+
+#### <a name="general"></a>全般
+ コレクション名や限定コレクションを含め選択されたコレクションに関する概要を表示し構成します。
+
+#### <a name="membership-rules"></a>メンバーシップの規則
+ このコレクションのメンバーシップを定義するメンバーシップ規則を構成します。 詳しくは、「[コレクションを作成する方法](/sccm/core/clients/manage/collections/create-collections)」をご覧ください。  
+
+#### <a name="power-management"></a>電源管理
+ 選択したコレクションのコンピューターに割り当てられた電源管理の計画を構成します。 詳細については、「[電源管理の概要](/sccm/core/clients/manage/power/introduction-to-power-management)」を参照してください。  
+
+#### <a name="deployments"></a>展開
+ 選択したコレクションのメンバーに展開したソフトウェアが表示されます。  
+
+#### <a name="maintenance-windows"></a>メンテナンス期間
+ 選択されたコレクションのメンバーに適用されたメンテナンス期間を表示し構成します。 詳細については、「[メンテナンス期間を使用する方法](/sccm/core/clients/manage/collections/use-maintenance-windows)」を参照してください。
+
+#### <a name="collection-variables"></a>コレクション変数
+ コレクションに適用され、タスク シーケンスで使用することができる変数を構成します。 詳しくは、「[How to set task sequence variables](/sccm/osd/understand/using-task-sequence-variables#bkmk_set)」(タスク シーケンス変数の設定方法) をご覧ください。  
+
+#### <a name="distribution-point-groups"></a>配布ポイント グループ
+ 1 つ以上の配布ポイント グループを選択されたコレクションのメンバーに関連付けます。 詳細については、「[コンテンツ管理インフラストラクチャの展開と管理](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)」をご覧ください。
+
+#### <a name="security"></a>セキュリティ
+ 関連付けられた役割やセキュリティの範囲で選択されたコレクションへの権限を持つ管理者ユーザーを表示します。 詳細については、「[ロール ベース管理の基礎](/sccm/core/understand/fundamentals-of-role-based-administration)」を参照してください。  
+
+#### <a name="alerts"></a>アラート 
+ クライアント ステータスや Endpoint Protection に関するアラートが生成されるタイミングを構成します。 詳しくは、「[クライアント ステータスを構成する方法](/sccm/core/clients/deploy/configure-client-status)」および「[Endpoint Protection を監視する方法](/sccm/protect/deploy-use/monitor-endpoint-protection)」をご覧ください。  

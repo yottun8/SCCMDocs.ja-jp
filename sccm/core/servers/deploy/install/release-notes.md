@@ -2,7 +2,7 @@
 title: リリース ノート
 titleSuffix: Configuration Manager
 description: 製品でまだ修正されていないまたは Microsoft サポート技術情報の記事で説明されていない緊急の問題については説明します。
-ms.date: 07/30/2018
+ms.date: 08/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9daf0fb53face0cf7ed56f2a45ab044fbfac203c
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 939ab4b97a1a62eeae834873dd39e2f0d435527d
+ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385509"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "42590099"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager のリリース ノート
 
@@ -26,7 +26,7 @@ Configuration Manager 製品のリリース ノートには、緊急の問題の
 機能固有のドキュメントには、主要なシナリオに影響を与える既知の問題に関する情報が含まれます。  
 
 > [!TIP]  
->  このトピックには、Configuration Manager の現在のブランチのリリース ノートが含まれています。 Technical Preview ブランチについては、「[Technical Preview](../../../../core/get-started/technical-preview.md)」を参照してください。  
+>  このトピックには、Configuration Manager の現在のブランチのリリース ノートが含まれています。 Technical Preview ブランチについては、「[Technical Preview](/sccm/core/get-started/technical-preview)」を参照してください。  
 
 異なるバージョンで導入された新しい機能については、以下の記事をご覧ください。
 - [バージョン 1806 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
@@ -63,6 +63,16 @@ Configuration Manager バージョン 1802 以降では、カスタマー エク
 
  > [!Note]  
  > [コンソールのセットアップ](/sccm/core/servers/deploy/install/install-consoles)の EnableSQM パラメーターは必要ありません。
+
+
+### <a name="cloud-service-manager-component-stopped-on-site-server-in-passive-mode"></a>パッシブ モードのサイト サーバー上でクラウド サービス マネージャー コンポーネントが停止している
+<!--VSO 2858826, SCCMDocs issue 772-->
+*適用対象: Configuration Manager バージョン 1806*
+
+[サービス接続ポイント](/sccm/core/servers/deploy/configure/about-the-service-connection-point)が[パッシブ モードのサイト サーバー](/sccm/core/servers/deploy/configure/site-server-high-availability)と同じ場所にある場合、[クラウド管理ゲートウェイ](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)の展開および監視は開始しません。 クラウド サービス マネージャー コンポーネント (SMS_CLOUD_SERVICES_MANAGER) は停止状態になります。
+
+#### <a name="workaround"></a>回避策
+サービス接続ポイントの役割を別のサーバーに移動します。
 
 
 

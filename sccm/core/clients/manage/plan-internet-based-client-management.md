@@ -10,12 +10,12 @@ ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7f4de7295075de4b5baa5e7ba3fa1a3aea2ec032
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f31a221151239b6a72a750652731dca7e4557649
+ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336284"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42584423"
 ---
 # <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でインターネット ベースのクライアント管理を計画する
 
@@ -85,6 +85,9 @@ ms.locfileid: "32336284"
     インターネットベースのクライアント管理でプロキシ Web サーバーを使用する場合は、認証と SSL 終了を使用する SSL から SSL へのブリッジングを構成することをお勧めします。 クライアント コンピューターは、コンピューター認証によって、モバイル デバイス レガシ クライアントは、ユーザー認証によって認証されなければなりません。 Configuration Manager によって登録されるモバイル デバイスは、SSL ブリッジングをサポートしていません。  
 
      プロキシ Web サーバーで SSL 終了を使用する利点は、インターネットからのパケットが内部ネットワークに転送される前に検査されることです。 プロキシ Web サーバーはクライアントからの接続を認証してから終了します。次に、インターネット ベースのサイト システムに認証済みの新しい接続を開きます。 Configuration Manager クライアントでプロキシ Web サーバーが使用される場合、クライアント ID (クライアント GUID) はパケット ペイロード内に安全に格納されるので、管理ポイントではプロキシ Web サーバーはクライアントとは見なされません。 HTTP から HTTPS、または HTTPS から HTTP へのブリッジングは Configuration Manager ではサポートされていません。  
+     
+    > [!Note]  
+    > Configuration Manager では、サードパーティの SSL ブリッジ構成の設定はサポートされていません。 たとえば、Citrix Netscaler や F5 BIG-IP などです。 これらを Configuration Manager で使用する場合の構成については、デバイスのベンダーにお問い合わせください。  
 
 -   **トンネリング**:   
     プロキシ Web サーバーが SSL ブリッジングの要件をサポートできない場合や、Configuration Manager によって登録されたモバイル デバイスに対してインターネット サポートを構成する場合は、SSL トンネリングもサポートされます。 ただし、この方法は、安全性が低くなります。これは、インターネットからの SSL パケットが SSL 終了なしにサイト システムに転送されるので、悪意のあるコンテンツがないかどうかを検査できないためです。 SSL トンネリングを使用する場合は、プロキシ Web サーバーに証明書は必要ありません。  

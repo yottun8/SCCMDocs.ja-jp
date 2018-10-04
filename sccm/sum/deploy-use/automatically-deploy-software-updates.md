@@ -5,17 +5,17 @@ description: 自動展開規則 (ADR) を使用して、ソフトウェア更新
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 08/21/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: 2ae76e9bca172b4f45a39444800a0fe152104aa4
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 6c23dc7328e2618d42b70f12bf7df8aa22fddb91
+ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383601"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589028"
 ---
 #  <a name="automatically-deploy-software-updates"></a>ソフトウェア更新プログラムの自動展開  
 
@@ -158,7 +158,7 @@ ADR を使用して、ソフトウェア更新プログラムを自動的に承�
 
     - ソフトウェア更新プログラムのコンテンツが現在または近隣の境界グループの配布ポイントから利用できないときに、クライアントでサイトの既定の境界グループの配布ポイントからソフトウェア更新プログラムをダウンロードしてインストールするかどうかを指定します。  
 
-    - **同じサブネットにある他のクライアントとのコンテンツの共有を許可する**: コンテンツのダウンロードで BranchCache の使用を有効にするかどうかを指定します。 詳細については、「[BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache)」を参照してください。 バージョン 1802 以降では、BranchCache は常にクライアントで有効になります。 配布ポイントで BranchCache がサポートされている場合はクライアントでそれが使用されるため、この設定は削除されます。  
+    - **同じサブネットにある他のクライアントとのコンテンツの共有を許可する**: コンテンツのダウンロードで BranchCache の使用を有効にするかどうかを指定します。 詳細については、「[BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache)」を参照してください。 バージョン 1802 以降では、BranchCache は常にクライアントで有効になっています。 配布ポイントで BranchCache がサポートされている場合はクライアントでそれが使用されるため、この設定は削除されます。  
 
     - **現在、近隣、またはサイトの境界グループ内の配布ポイントでソフトウェア更新プログラムを利用できない場合は、Microsoft Update からコンテンツをダウンロードします**: 配布ポイントで更新プログラムを利用できない場合は、イントラネットに接続されているクライアントが Microsoft Update からソフトウェア更新プログラムをダウンロードするように、この設定を選択します。 インターネット ベースのクライアントは、ソフトウェア更新プログラムのコンテンツを取得するために Microsoft Update にいつでも移動することができます。  
 
@@ -190,6 +190,9 @@ ADR を使用して、ソフトウェア更新プログラムを自動的に承�
         - **バイナリ差分レプリケーションを有効にする**: サイト間のネットワーク トラフィックを最小限に抑えるには、この設定を有効にします。 バイナリ差分レプリケーション (BDR) は、パッケージ全体の内容を更新するのではなく、パッケージ内の変更されたコンテンツのみを更新します。 詳細については、「[バイナリ差分レプリケーションについて](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#binary-differential-replication)」を参照してください。  
 
     - **展開パッケージなし**: バージョン 1806 以降、最初にコンテンツをダウンロードして配布ポイントに配布することなく、ソフトウェア更新プログラムをデバイスに展開します。 この設定は、きわめて大規模な更新プログラムのコンテンツを扱うときに役立ちます。 また、クライアントが常に Microsoft Update のクラウド サービスからコンテンツを取得するようにしたい場合にも使用します。 このシナリオのクライアントでは、既に必要なコンテンツがあるピアからコンテンツをダウンロードすることもできます。 Configuration Manager クライアントで引き続きコンテンツのダウンロードが管理されるため、Configuration Manager のピア キャッシュ機能や、配信の最適化などの他のテクノロジを利用することができます。 この機能では、Windows および Office の更新プログラムを含む、Configuration Manager ソフトウェア更新プログラム管理でサポートされるすべての更新プログラムの種類がサポートされます。<!--1357933-->  
+
+        > [!Note]  
+        > このオプションは、新しい自動展開規則の場合のみです。 この設定で既存の規則を変更することはできません。<!--SCCMDocs issue 741-->  
 
 12. **[配布ポイント]** ページで、ソフトウェア更新ファイルをホストする配布ポイントまたは配布ポイント グループを指定します。 配布ポイントの詳細については、「[配布ポイントの構成](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs)」を参照してください。 このページは、ソフトウェア更新プログラムの新しい展開パッケージを作成する場合にのみ、使用することができます。  
   

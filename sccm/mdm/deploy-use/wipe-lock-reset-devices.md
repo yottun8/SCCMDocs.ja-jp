@@ -1,8 +1,8 @@
 ---
 title: ワイプ、ロック、またはパスコードのリセットを使用したデータの保護
 titleSuffix: Configuration Manager
-description: System Center Configuration Manager によるフル ワイプ、選択的ワイプ、リモート ロック、パスコードのリセットを使用してデバイスのデータを保護します。
-ms.date: 10/27/2017
+description: Configuration Manager によるフル ワイプ、選択的ワイプ、リモート ロック、パスコードのリセットを使用してデバイスのデータを保護します。
+ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,28 +10,34 @@ ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 670667c21e85d7e5c174c051b6adbdca3eba55a8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 21fed8dbba8cc5c8e96218459288b57364fe350e
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353003"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42584534"
 ---
-# <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>System Center Configuration Manager によるリモート ワイプ、ロック、パスコードのリセットを使用したデータの保護
+# <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-configuration-manager"></a>Configuration Manager を使用してリモート ワイプ、ロック、パスコードのリセットでデータを保護する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager には、選択的ワイプ、フル ワイプ、リモート ロック、パスコードのリセットの機能があります。 モバイル デバイスに会社の機密情報を保存したり、モバイル デバイスから会社のリソースにアクセスしたりすることがあります。 デバイスを保護するために、次のコマンドを発行できます。  
+Configuration Manager には、選択的ワイプ、フル ワイプ、リモート ロック、パスコードのリセットの機能があります。 モバイル デバイスに会社の機密情報を保存したり、モバイル デバイスから会社のリソースにアクセスしたりすることがあります。 デバイスを保護するために、次のコマンドを発行できます。  
 
-- デバイスを工場出荷時の状態に戻すフル ワイプ。  
+- デバイスを工場出荷時の状態に戻すフル ワイプ  
 
-- 会社のデータのみを削除する選択的ワイプ。  
+- 会社のデータのみを削除する選択的ワイプ  
 
-- 紛失した可能性があるデバイスをセキュリティで保護できるリモート ロック。  
+- 紛失した可能性があるデバイスをセキュリティで保護できるリモート ロック  
 
-- デバイスのパスコードのリセット。  
+- デバイスのパスコードのリセット  
+
+> [!Important]  
+> 2018 年 8 月 14 日の時点では、ハイブリッド モバイル デバイス管理は[非推奨の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)です。 詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。<!--Intune feature 2683117-->  
+
+
 
 ## <a name="full-wipe"></a>完全なワイプ  
+
 紛失したデバイスをセキュリティで保護する必要がある場合や、アクティブな使用状態のインベントリからデバイスを削除する場合、ワイプ コマンドをデバイスに発行することができます。  
 
 デバイスを工場出荷時の既定値に戻すには、 **フル ワイプ** をデバイスに発行します。 フル ワイプの場合、すべての会社とユーザーのデータと設定が削除されます。 Windows Phone、iOS、Android、Windows 10 の各デバイスでは、フル ワイプを実行できます。  
@@ -50,7 +56,10 @@ System Center Configuration Manager には、選択的ワイプ、フル ワイ�
 
 3. **[デバイス グループ]** の **[リモート デバイスの操作]** を選択し、**[削除/ワイプ]** を選択します。  
 
+
+
 ## <a name="selective-wipe"></a>選択的ワイプ  
+
 会社のデータのみを削除するには、 **選択的ワイプ** をデバイスに発行します。 次の表では、プラットフォームごとに、削除されるデータと、選択的ワイプの実行後にデバイスに残るデータへの影響について説明します。  
 
 **iOS**  
@@ -136,7 +145,10 @@ Windows 10 Mobile および Windows Phone 8.1 のデバイスからは、次の�
 
 3. **[デバイス グループ]** の **[リモート デバイスの操作]** を選択し、**[削除/ワイプ]** を選択します。  
 
+
+
 ## <a name="wiping-efs-enabled-content"></a>EFS 対応コンテンツのワイプ  
+
 Windows 8.1 と Windows RT 8.1 では、暗号化ファイル システム (EFS) 暗号化コンテンツの選択的ワイプをサポートしています。 EFS 対応コンテンツの選択的ワイプには次のものが適用されます。  
 
 - Intune アカウントと同じインターネット ドメインを使用して EFS で保護されているアプリとデータのみが、選択的にワイプされます。 詳細については、「 [Windows のデバイス データ管理の選択的ワイプ (英語)](http://technet.microsoft.com/library/dn486874.aspx)」を参照してください。  
@@ -153,6 +165,7 @@ EFS の選択的ワイプで現在サポートされているデータとアプ�
 
 - EFS で暗号化されたファイルとフォルダー 詳細については、「 [ファイル システムを暗号化するためのベスト プラクティス](http://support.microsoft.com/kb/223316)」を参照してください。  
 
+
 ### <a name="best-practices-for-selective-wipe"></a>選択的ワイプのベスト プラクティス  
 
 - 電子メールのワイプを成功させるには、iOS と Windows Phone 8.1 デバイスに電子メール プロファイルを設定します。  
@@ -163,7 +176,10 @@ EFS の選択的ワイプで現在サポートされているデータとアプ�
 
 - アカウントが非アクティブになっていると、1 年後にアカウントが Intune によって削除され、選択的ワイプが実行されます。  
 
+
+
 ##  <a name="passcode-reset"></a>パスコードのリセット  
+
 ユーザーがパスコードを忘れた場合、デバイスからパスコードを削除したり、デバイスに新しい一時的なパスコードを強制したりすることができます。 以下の表は、各モバイル プラットフォームでパスコードをリセットしたときの動作です。  
 
 | プラットフォーム                              | パスコードのリセット                                                                               |
@@ -197,7 +213,10 @@ EFS の選択的ワイプで現在サポートされているデータとアプ�
 
 3. **[デバイス グループ]** の **[リモート デバイスの操作]** を選択し、**[Show Passcode State (パスコードの状態の表示)]** を選択します。  
 
+
+
 ## <a name="remote-lock"></a>リモート ロック  
+
 ユーザーがデバイスを紛失した場合は、リモートでデバイスをロックできます。 次の表に、各モバイル プラットフォームのリモート ロックの動作を示します。  
 
 |プラットフォーム|リモート ロック|  
@@ -228,5 +247,8 @@ EFS の選択的ワイプで現在サポートされているデータとアプ�
 
 3. **[デバイス グループ]** の **[リモート デバイスの操作]** を選択し、**[リモート ロック状態の表示]** を選択します。  
 
-### <a name="see-also"></a>関連項目  
+
+
+## <a name="see-also"></a>関連項目  
+
 [Windows のデバイス データ管理の選択的ワイプ (英語)](http://technet.microsoft.com/library/dn486874.aspx)   

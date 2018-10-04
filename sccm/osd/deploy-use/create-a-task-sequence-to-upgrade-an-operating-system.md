@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 483b5f8b285fb256005e31e01a0786cef6c8e11d
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: bddcd356a3ee221d5b67935a5be91bbe89d2afc2
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383087"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42756056"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>Configuration Manager で OS をアップグレードするタスク シーケンスを作成する
 
@@ -155,7 +155,7 @@ Configuration Manager でタスク シーケンスを使用して、OS をイン
 
 - **[サード パーティ セキュリティの削除/停止]**: ウイルス対策ソフトウェアなど、サード パーティのセキュリティ プログラムを削除または中断するには、このグループにステップを追加します。  
 
-   - サード パーティのディスク暗号化プログラムを使っている場合は、`/ReflectDrivers` [コマンド ライン オプション](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#23)で、Windows セットアップにその暗号化ドライバーを提供します。 [[タスク シーケンス変数の設定]](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) ステップを、このグループのタスク シーケンスに追加します。 タスク シーケンス変数を **OSDSetupAdditionalUpgradeOptions** に設定します。 値をドライバーへのパス `/ReflectDrivers` に設定します。 この[タスク シーケンス アクション変数](/sccm/osd/understand/task-sequence-action-variables#upgrade-operating-system)をタスク シーケンスで使われる Windows セットアップ コマンド ラインに追加します。 このプロセスの他のガイダンスについては、ソフトウェアの製造元にお問い合わせください。  
+   - サード パーティのディスク暗号化プログラムを使っている場合は、`/ReflectDrivers` [コマンド ライン オプション](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#23)で、Windows セットアップにその暗号化ドライバーを提供します。 [[タスク シーケンス変数の設定]](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) ステップを、このグループのタスク シーケンスに追加します。 タスク シーケンス変数を **OSDSetupAdditionalUpgradeOptions** に設定します。 値をドライバーへのパス `/ReflectDrivers` に設定します。 この[タスク シーケンス変数](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions)は、タスク シーケンスで使用される Windows セットアップ コマンド ラインを追加します。 このプロセスの他のガイダンスについては、ソフトウェアの製造元にお問い合わせください。  
 
 
 ### <a name="download-package-content-task-sequence-step"></a>パッケージ コンテンツのダウンロードのタスク シーケンスのステップ  
@@ -215,7 +215,7 @@ Configuration Manager でタスク シーケンスを使用して、OS をイン
 
     - 構成マネージャー クライアントのログ ファイルについて詳しくは、「[Configuration Manager クライアントのログ ファイル](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs)」をご覧ください。  
 
-    - _SMSTSLogPath および他の便利な変数について詳しくは、「[タスク シーケンス組み込み変数](/sccm/osd/understand/task-sequence-built-in-variables)」をご覧ください。  
+    - **_SMSTSLogPath** および他の便利な変数について詳しくは、「[タスク シーケンス変数](/sccm/osd/understand/task-sequence-variables)」をご覧ください。  
 
 - **診断ツールの実行**: 追加の診断ツールを実行するには、このグループで手順を追加します。 失敗後すぐにシステムから追加情報を収集するために、これらのツールを自動化します。  
 
@@ -234,18 +234,18 @@ Configuration Manager でタスク シーケンスを使用して、OS をイン
 
 - 既定の **[準備の確認]** ステップで、**[最小空きディスク容量 (MB) を満たすことを確認する]** を有効にします。 値を、32 ビット OS のアップグレード パッケージの場合は **16384** (16 GB) 以上、64 ビットの場合は **20480** (20 GB) 以上に設定します。  
 
-- **SMSTSDownloadRetryCount** [組み込みタスク シーケンス変数](/sccm/osd/understand/task-sequence-built-in-variables)を使って、ポリシーのダウンロードを再試行します。 現在の既定では、クライアントは 2 回再試行します。この変数は 2 に設定されます。 クライアントがイントラネット ネットワークに有線接続されていない場合は、再試行回数を増やすと、クライアントがポリシーを取得するのに役立ちます。 この変数を使っても、ポリシーをダウンロードできない場合の障害の遅延以外に、悪影響はありません。<!--501016--> また、**SMSTSDownloadRetryDelay** 変数を既定値の 15 秒から増やします。  
+- **SMSTSDownloadRetryCount** [タスク シーケンス変数](/sccm/osd/understand/task-sequence-variables#SMSTSDownloadRetryCount)を使って、ポリシーのダウンロードを再試行します。 現在の既定では、クライアントは 2 回再試行します。この変数は 2 に設定されます。 クライアントがイントラネット ネットワークに有線接続されていない場合は、再試行回数を増やすと、クライアントがポリシーを取得するのに役立ちます。 この変数を使っても、ポリシーをダウンロードできない場合の障害の遅延以外に、悪影響はありません。<!--501016--> また、**SMSTSDownloadRetryDelay** 変数を既定値の 15 秒から増やします。  
 
 - インラインの互換性評価を実行します。  
 
    - **[アップグレードの準備]** グループの早い段階に、第 2 の **[オペレーティング システムのアップグレード]** ステップを追加します。 その名前を "*アップグレード評価*" にします。 同じアップグレード パッケージを指定し、**[アップグレードを開始せずに Windows セットアップの互換性スキャンを実行する]** オプションを有効にします。 [オプション] タブで **[エラー時に続行する]** を有効にします。  
 
-   - この "*アップグレード評価*" ステップの直後に、**[コマンド ラインの実行]** ステップを追加します。 次のコマンド ラインを指定します。</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>**[オプション]** タブで、次の条件を追加します。 </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>このリターン コードは MOSETUP_E_COMPAT_SCANONLY (0xC1900210) に相当する 10 進数で、互換性スキャンが成功して問題がなかったことを示します。 "*アップグレード評価*" ステップが成功してこのコードを返した場合、タスク シーケンスはこのステップをスキップします。 評価ステップが他のリターン コードを返した場合、このステップは Windows セットアップ互換性スキャンからのリターン コードでタスク シーケンスを失敗させます。  
+   - この "*アップグレード評価*" ステップの直後に、**[コマンド ラインの実行]** ステップを追加します。 次のコマンド ラインを指定します。</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>**[オプション]** タブで、次の条件を追加します。 </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>このリターン コードは MOSETUP_E_COMPAT_SCANONLY (0xC1900210) に相当する 10 進数で、互換性スキャンが成功して問題がなかったことを示します。 "*アップグレード評価*" ステップが成功してこのコードを返した場合、タスク シーケンスはこのステップをスキップします。 評価ステップが他のリターン コードを返した場合、このステップは Windows セットアップ互換性スキャンからのリターン コードでタスク シーケンスを失敗させます。 **_SMSTSOSUpgradeActionReturnCode** について詳しくは、「[タスク シーケンス変数](/sccm/osd/understand/task-sequence-variables#SMSTSOSUpgradeActionReturnCode)」をご覧ください。  
 
    - 詳細については、「[オペレーティング システムのアップグレード](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS)」を参照してください。  
 
 - このタスク シーケンスの間にデバイスを BIOS から UEFI に変更する場合は、「[インプレース アップグレード時に BIOS から UEFI に変換する](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)」を参照してください。  
 
-- BitLocker Disk Encryption を使っている場合、Windows セットアップはアップグレード中にそれを既定で自動的に一時停止します。 Windows 10 バージョン 1803 以降、Windows セットアップにはこの動作を制御するための `/BitLocker` コマンド ライン パラメーターが含まれます。 セキュリティ要件のためディスク暗号化を常にアクティブに維持する必要がある場合は、**アップグレードの準備**グループの **OSDSetupAdditionalUpgradeOptions** タスク シーケンス変数を使って `/BitLocker TryKeepActive` を含めます。 詳しくは、「[Windows Setup Command-line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#33)」(Windows セットアップ コマンド ライン オプション) をご覧ください。<!--SCCMDocs issue #494-->  
+- BitLocker Disk Encryption を使っている場合、Windows セットアップはアップグレード中にそれを既定で自動的に一時停止します。 Windows 10 バージョン 1803 以降、Windows セットアップにはこの動作を制御するための `/BitLocker` コマンド ライン パラメーターが含まれます。 セキュリティ要件のためディスク暗号化を常にアクティブに維持する必要がある場合は、**アップグレードの準備**グループの **OSDSetupAdditionalUpgradeOptions** [タスク シーケンス変数](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions)を使って `/BitLocker TryKeepActive` を含めます。 詳しくは、「[Windows Setup Command-line Options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#33)」(Windows セットアップ コマンド ライン オプション) をご覧ください。<!--SCCMDocs issue #494-->  
 
 - お客様によっては、Windows 10 に既定でプロビジョニングされるアプリを削除することがあります。 たとえば、Bing 天気アプリや Microsoft Solitaire Collection などです。 状況によっては、Windows 10 の更新後にこれらのアプリが戻る場合があります。 詳しくは、「[How to keep apps removed from Windows 10](https://docs.microsoft.com/windows/application-management/remove-provisioned-apps-during-update)」(Windows 10 から削除されたアプリを維持する方法) をご覧ください。 **アップグレードの準備**グループのタスク シーケンスに**コマンド ラインの実行**ステップを追加します。 次の例のようなコマンド ラインを指定します。</br> `cmd /c reg delete "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.BingWeather_8wekyb3d8bbwe" /f` <!--SCCMDocs issue #526-->  

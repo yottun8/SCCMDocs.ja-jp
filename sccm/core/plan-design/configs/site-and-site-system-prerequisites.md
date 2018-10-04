@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 765f599af115e481197603fabd0f3698807ec13a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 10dfebccd997a42f4c79e5d88bdf05e26585aebb
+ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385322"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589874"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Configuration Manager のサイトとサイト システムの前提条件
 
@@ -84,7 +84,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 - .NET Framework 3.5 SP1 (またはそれ以降)  
 
-- .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1  
+- .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1、4.7.2  
 
     - .NET Framework のバージョンの詳細については、「[.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)」を参照してください。
 
@@ -110,7 +110,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 - .NET Framework 3.5 SP1 (またはそれ以降)  
 
-- .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1  
+- .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1、4.7.2  
 
     - .NET Framework のバージョンの詳細については、「[.NET Framework のバージョンおよび依存関係](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)」を参照してください。  
 
@@ -162,7 +162,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 - .NET Framework 3.5 SP1 (またはそれ以降)  
 
-- .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1  
+- .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1、4.7.2  
 
     - ASP.NET 4.5  
 
@@ -203,7 +203,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1:  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1、4.7.2:  
 
     -   ASP.NET 4.5:  
 
@@ -241,7 +241,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 #### <a name="windows-server-roles-and-features"></a>Windows Server の役割と機能  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1、4.7.2 
 
 
 
@@ -249,7 +249,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 #### <a name="windows-server-roles-and-features"></a>Windows Server の役割と機能  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1:  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1、4.7.2:  
 
     -   HTTP アクティブ化  
 
@@ -336,7 +336,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 -   .NET framework 3.5 (またはそれ以降)  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1:  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1、4.7.2:  
 
      このサイト システムの役割のインストール時に Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 
@@ -378,7 +378,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 -   .NET framework 3.5 (またはそれ以降)  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1、4.7.2 
 
      このサイト システムの役割のインストール時に Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 
@@ -430,7 +430,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 #### <a name="windows-server-roles-and-features"></a>Windows Server の役割と機能  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1、4.7.2 
 
 -   BITS サーバー拡張 (および自動的に選択されるオプション)、またはバックグラウンド インテリジェント転送サービス (BITS) (および自動的に選択されるオプション)  
 
@@ -456,7 +456,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 #### <a name="windows-server-roles-and-features"></a>Windows Server の役割と機能  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1、4.7.2 
 
 #### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services  
 
@@ -472,7 +472,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 #### <a name="windows-server-roles-and-features"></a>Windows Server の役割と機能  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1、4.7.2 
 
      このサイト システムの役割のインストール時に Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 
@@ -490,7 +490,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 -   .NET Framework 3.5 SP1 (またはそれ以降)  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1、4.7.2 
 
 既定の IIS 構成が必要です。
 
@@ -508,7 +508,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 -   .NET framework 3.5 (またはそれ以降)  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1:  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1、4.7.2:  
 
      このサイト システムの役割のインストール時に Configuration Manager は自動的に .NET Framework 4.5.2 をインストールします。 このインストールでは、サーバーが再起動保留中の状態になる場合があります。 .NET Framework の再起動が保留中である場合は、サーバーが再起動されて、インストールが完了するまで、.NET アプリケーションが失敗する可能性があります。  
 

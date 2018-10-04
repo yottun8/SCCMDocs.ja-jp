@@ -1,8 +1,8 @@
 ---
-title: 展開先のコンピューターにユーザーを関連付ける
+title: ユーザーとデバイスの関連付け
 titleSuffix: Configuration Manager
-description: オペレーティング システムを展開するときに、ユーザーをセットアップ先のコンピューターと関連付けるように、System Center Configuration Manager を構成します。
-ms.date: 10/06/2016
+description: オペレーティング システムを展開するときに、ユーザーをセットアップ先のコンピューターと関連付けるように、Configuration Manager を構成します。
+ms.date: 08/17/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,32 +10,49 @@ ms.assetid: 07c3c6d9-f056-4c4d-bc70-ede5ca933807
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2a4065b0e6774160efb6be22fe2ec8268c60d6ed
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 325b571adbcb2750eaa0b3a856dda753c43634f0
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347588"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755902"
 ---
-# <a name="associate-users-with-a-destination-computer-in-system-center-configuration-manager"></a>System Center Configuration Manager でユーザーをセットアップ先のコンピューターに関連付ける
+# <a name="associate-users-with-a-destination-computer-in-configuration-manager"></a>Configuration Manager でユーザーをセットアップ先のコンピューターに関連付ける
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager を使ってオペレーティング システムを展開するときに、ユーザーを、オペレーティング システムの展開先のコンピューターに関連付けることができます。 この構成には、次の事柄が含まれます。  
+ Configuration Manager を使ってオペレーティング システムを展開するときに、ユーザーを展開先のコンピューターと関連付けることができます。 このオプションは、展開先コンピューターのプライマリ ユーザーが 1 人でも複数でも機能します  
 
--   単一ユーザーが展開先コンピューターのプライマリ ユーザーであること  
+ ユーザーとデバイスのアフィニティは、アプリケーションを展開するときにユーザー中心の管理をサポートします。 OS をインストールするセットアップ先のコンピューターにユーザーを関連付けると、後でそのユーザーにアプリケーションを展開することにより、セットアップ先のコンピューターにアプリケーションが自動的にインストールされるようになります。 OS を展開するときにユーザーとデバイスのアフィニティのサポートを構成できますが、ユーザーとデバイスのアフィニティを使用して OS を展開することはできません。  
 
--   複数ユーザーが展開先コンピューターのプライマリ ユーザーであること  
+ ユーザーとデバイスのアフィニティの詳細については、「[ユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity)」をご覧ください。  
 
- ユーザーとデバイスのアフィニティは、アプリケーションを展開するときにユーザー中心の管理をサポートします。 オペレーティング システムをインストールするセットアップ先のコンピューターにユーザーを関連付けると、後でそのユーザーにアプリケーションを展開することにより、セットアップ先のコンピューターにアプリケーションが自動的にインストールされるようになります。 ただし、オペレーティング システムを展開するときにユーザーとデバイスのアフィニティのサポートを構成することはできますが、ユーザーとデバイスのアフィニティを使ってオペレーティング システムを展開することはできません。  
+ 複数の方法を使用して、OS の展開にユーザーとデバイスのアフィニティを統合できます。 ユーザーとデバイスのアフィニティは、PXE 展開、起動可能なメディアの展開、事前設定されたメディアの展開に統合することができます。  
 
- ユーザーとデバイスのアフィニティの詳細については、「[ユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)」をご覧ください。  
 
-## <a name="how-to-specify-a-user-when-you-deploy-operating-systems"></a>オペレーティング システムを展開するときにユーザーを指定する方法  
- 次の表に、ユーザーとデバイスのアフィニティをオペレーティング システムの展開に統合するときに実行できる操作を示します。 ユーザーとデバイスのアフィニティは、PXE 展開、起動可能なメディアの展開、事前設定されたメディアの展開に統合することができます。  
+### <a name="create-a-task-sequence-that-includes-the-smstsassignusersmode-variable"></a>**SMSTSAssignUsersMode** 変数を含むタスク シーケンスを作成する
 
-|操作|説明|  
-|------------|----------------------|  
-|**SMSTSAssignUsersMode** 変数を含むタスク シーケンスを作成する|**Set Task Sequence Variable** のタスク シーケンスの手順に沿って、タスク シーケンスの最初に  [SMSTSAssignUsersMode](../../osd/understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable) 変数を追加します。 この変数は、タスク シーケンスでのユーザー情報の処理方法を指定します。<br /><br /> 変数に次のいずれかの値を設定します。<br /><br /> <br /><br /> **自動**:タスク シーケンスが自動的にユーザーと展開先コンピューターの関係を作成し、オペレーティング システムを展開します。<br /><br /> **保留中**:タスク シーケンスは、ユーザーと展開先コンピューターの関係を作成しますが、オペレーティング システムを展開する前に管理ユーザーの承認を待ちます。<br /><br /> **無効**:タスク シーケンスは、ユーザーを展開先コンピューターに関連付けずに、オペレーティング システムの展開を続行します。<br /><br /> <br /><br /> この変数は、コンピューターまたはコレクションにも設定することができます。 組み込み変数の詳細については、「[タスク シーケンス組み込み変数](../../osd/understand/task-sequence-built-in-variables.md)」をご覧ください。|  
-|ユーザー情報を収集する起動前コマンドを作成する|起動前コマンドは、入力ボックスのある Visual Basic (VB) スクリプト、または、入力されたユーザー データを検証する HTML アプリケーション (HTA) です。<br /><br /> 起動前コマンドには、タスク シーケンスの実行時に使用される **SMSTSUdaUsers** 変数を設定する必要があります。 この変数は、コンピューター、コレクション、あるいはタスク シーケンスの変数にも設定することができます。 複数のユーザー ( *domain\user1、domain\user2、domain\user3*) を追加するときには、次の形式を使用します。|  
-|配布ポイントとメディアによるユーザーと展開先コンピューターの関連付けを構成する|[配布ポイントが PXE ブート要求を受け入れるように構成し](https://technet.microsoft.com/library/mt627944\(TechNet.10\).aspx#BKMK_PXEDistributionPoint) 、 [起動可能なメディア](http://technet.microsoft.com/library/mt627921\(TechNet.10\).aspx) や [事前設定されたメディア](https://technet.microsoft.com/library/mt627922\(TechNet.10\).aspx) をタスク シーケンス メディアの作成ウィザードを使って作成する場合、配布ポイントやメディアが、ユーザーとオペレーティング システムのセットアップ先のコンピューターとの関連付けをどのようにサポートするかを指定できます。<br /><br /> ユーザーとデバイスのアフィニティのサポートの構成には、ユーザー ID を検証する方法は組み込まれていません。 このことは、技術者がコンピューターをプロビジョニングするときに、ユーザーに代わって情報を入力するときに重要になります。 タスク シーケンスによるユーザー情報の処理方法の設定に加えて、配布ポイントとメディアにこれらのオプションを構成することで、PXE ブートや特定の種類のメディアからの展開開始を制限することができます。|  
+ [タスク シーケンス変数の設定](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)ステップを使用することで、タスク シーケンスの最初に **SMSTSAssignUsersMode** 変数を追加します。 この変数は、タスク シーケンスでのユーザー情報の処理方法を指定します。
+
+ 詳しくは、「[タスク シーケンス変数](/sccm/osd/understand/task-sequence-variables#SMSTSAssignUsersMode)」をご覧ください。
+
+
+### <a name="create-a-prestart-command-that-gathers-the-user-information"></a>ユーザー情報を収集する起動前コマンドを作成する
+
+ 起動前コマンドには、入力ボックスを含む VBScript を使用できます。 ユーザーが入力したデータを検証する HTML アプリケーション (HTA) にすることもできます。 
+
+ この起動前コマンドでは、タスク シーケンスの実行時に使用される **SMSTSUDAUsers** 変数を設定する必要があります。 この変数は、コンピューター、コレクション、あるいはタスク シーケンスの変数にも設定することができます。
+
+ 詳しくは、「[タスク シーケンス変数](/sccm/osd/understand/task-sequence-variables#SMSTSUDAUsers)」をご覧ください。
+
+
+### <a name="configure-how-distribution-points-and-media-associate-the-user-with-the-destination-computer"></a>配布ポイントとメディアによるユーザーと展開先コンピューターの関連付けを構成する
+
+ 配布ポイントまたはメディアでは、OS が展開されている展開先コンピューターとユーザーの関連付けがサポートされています。 次のいずれかの操作を行います。 
+
+ - [PXE ブート要求を受け入れるための配布ポイントを構成する](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_PXEDistributionPoint)  
+ - [起動可能なメディアの作成](/sccm/osd/deploy-use/create-bootable-media)  
+ - [事前設定されたメディアを作成する](/sccm/osd/deploy-use/create-prestaged-media)  
+
+
+ ユーザーとデバイスのアフィニティのサポートの構成には、ユーザー ID を検証する方法は組み込まれていません。 この動作は、技術者がコンピューターをプロビジョニングするときに、ユーザーに代わって情報を入力するときに重要になります。 タスク シーケンスによるユーザー情報の処理方法の設定に加えて、配布ポイントとメディアにこれらのオプションを構成することで、PXE ブートや特定の種類のメディアからの展開開始を制限することができます。

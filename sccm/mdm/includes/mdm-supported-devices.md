@@ -5,7 +5,7 @@
 - Windows 10 (Home、Pro、Education、Enterprise バージョン) を実行している PC
 - Windows 10 IoT Enterprise (x86、x64) を実行しているデバイス
 - Windows 10 IoT Mobile Enterprise を実行しているデバイス
-- Windows Holographic、Windows Holographic Enterprise
+- Windows Holographic for Business
 - Mac OS X 10.9 以降
 - Windows Phone 8.1、Windows 8.1 を実行する PC、および Windows 8.1 RT は維持モードです (Windows Embedded 8.1 Handheld はサポートされていません)
 

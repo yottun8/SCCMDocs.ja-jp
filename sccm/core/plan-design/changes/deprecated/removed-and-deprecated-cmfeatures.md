@@ -2,7 +2,7 @@
 title: 非推奨の機能
 titleSuffix: Configuration Manager
 description: Configuration Manager でサポートされなくなった機能について説明します。
-ms.date: 07/30/2018
+ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8075fb0e00a0cc9bd8190bb2838431be8c2d1ce8
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: a84d25203fc0addc32271446e1375c9013c0bb6e
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382874"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42584535"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager から削除された機能と非推奨の機能
 
@@ -31,6 +31,7 @@ ms.locfileid: "39382874"
 
 |機能|最初に非推奨と発表|削除されたサポート&nbsp;|  
 |-----------|---|--------------|  
+|ハイブリッド モバイル デバイス管理。 詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。<!--Intune feature 2683117-->|2018 年 8 月 14 日|2019 年 9 月 1 日|
 |アプリケーション カタログ Web サイト ポイントの **Silverlight ユーザー エクスペリエンス**は現在サポートされていません。 新しいソフトウェア センターを使う必要があります。 注: アプリケーション カタログの Web サイト ポイントの役割と Web サービス ポイントの役割は、まだサポートされています。 一部のシナリオでは、新しいソフトウェア センターはアプリケーション カタログ Web サイト ポイントと通信します。|2017 年 8 月 11 日| バージョン 1806|
 |以前のバージョンのソフトウェア センター。<br><br>ソフトウェア センターの詳細については、「[アプリケーション管理の計画と構成](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only)」をご覧ください。|2016 年 12 月 13 日|バージョン 1802|
 |Configuration Manager によるバーチャル ハード ディスク (VHD) の管理。 </br></br>この非推奨機能には、新しい VHD の作成オプション、またはタスク シーケンスを使用した VHD の管理オプションの削除と、Configuration Manager コンソールからのバーチャル ハード ディスクのノードの削除が含まれます。 </br></br>既存の VHD は削除されませんが、Configuration Manager コンソール内からはアクセスできなくなります。  |2017 年 1 月 6 日 |バージョン 1710|
@@ -49,8 +50,7 @@ ms.locfileid: "39382874"
 ###  <a name="bkmk_amt"></a> 帯域外管理  
  Configuration Manager では、Configuration Manager コンソール内からの AMT ベースのコンピューターに対するネイティブ サポートは削除されました。  
 
--   
-  [Microsoft System Center Configuration Manager 用 Intel SCS アドオン](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html)を使用すれば、AMT ベースのコンピューターは引き続き完全に管理されます。 アドオンを使用することで、最新の機能にアクセスして AMT を管理できます。Configuration Manager にこれらの変更が組み込まれるまでに適用されていた制限は解除されます。  
+-   [Microsoft System Center Configuration Manager 用 Intel SCS アドオン](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html)を使用すれば、AMT ベースのコンピューターは引き続き完全に管理されます。 アドオンを使用することで、最新の機能にアクセスして AMT を管理できます。Configuration Manager にこれらの変更が組み込まれるまでに適用されていた制限は解除されます。  
 
 -   System Center 2012 Configuration Manager での帯域外管理は、この変更の影響を受けません。  
 

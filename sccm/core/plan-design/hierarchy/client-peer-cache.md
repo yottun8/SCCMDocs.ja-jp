@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 00a79e099255b9ec19660914825334dc95b30682
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: c3dc6189f73b939f632581a8b50f05a72310111d
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383852"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755998"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>構成マネージャー クライアントのピア キャッシュ
 
@@ -45,7 +45,7 @@ ms.locfileid: "39383852"
 ピア キャッシュによって、Windows BranchCache や配信の最適化などの他のソリューションが置き換えられることはありません。 ピア キャッシュは、他のソリューションと共に動作します。 これらのテクノロジにより、配布ポイントなどの従来のコンテンツ展開ソリューションを拡張するオプションが提供されます。 ピア キャッシュは、BranchCache に依存しないカスタム ソリューションです。 BranchCache を有効にしていない場合または使用していない場合でも、ピア キャッシュは正常に動作します。  
 
   > [!Note]  
-  > バージョン 1802 以降では、Windows BranchCache は常にクライアントで有効になります。 **[同じサブネットにある他のクライアントとのコンテンツの共有を許可する]** の設定は削除されます。 配布ポイントで BranchCache がサポートされている場合はクライアントでそれが使用されます。<!--SCCMDocs issue 539-->  
+  > バージョン 1802 以降では、Windows BranchCache は常に展開で有効になります。 **[同じサブネットにある他のクライアントとのコンテンツの共有を許可する]** の設定は削除されます。<!--SCCMDocs issue 539--> BranchCache が配布ポイントでサポートされていて、クライアントの設定で有効になっている場合、クライアントは BranchCache を使用します。 詳しくは、「[BranchCache の構成](/sccm/core/clients/deploy/about-client-settings#configure-branchcache)」をご覧ください。<!--SCCMDocs issue 735-->   
 
 
 
@@ -175,7 +175,7 @@ Contoso には、2 つの境界グループ (本社 (HQ) と支社) を持つ 1 
 
 - ピア キャッシュ ソース クライアントは、ピアがキャッシュ内のコンテンツをダウンロードするときに、その最終参照時刻を更新します。 クライアントは、キャッシュの自動メンテナンスでこのタイムスタンプを使用して、古いコンテンツから先に削除します。 したがって、ピア キャッシュ クライアントが頻繁にダウンロードするコンテンツがある場合は削除を待つ必要があります。  
 
-- 必要な場合は、OS 展開タスク シーケンスの間に、**SMSTSPreserveContent** 変数を使用してクライアント キャッシュ内のコンテンツを保持します。 組み込みのタスク シーケンス変数の詳細については、「[タスク シーケンス組み込み変数](/sccm/osd/understand/task-sequence-built-in-variables)」を参照してください。  
+- 必要な場合は、OS 展開タスク シーケンスの間に、**SMSTSPreserveContent** 変数を使用してクライアント キャッシュ内のコンテンツを保持します。 詳しくは、「[タスク シーケンス変数](/sccm/osd/understand/task-sequence-variables#SMSTSPreserveContent)」をご覧ください。  
 
 - 必要に応じて、次のソフトウェアを作成するときに、**[クライアント キャッシュの内容を保持する]** オプションを使用します。  
     - アプリケーション

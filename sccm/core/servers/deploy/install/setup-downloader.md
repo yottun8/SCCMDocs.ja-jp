@@ -10,12 +10,12 @@ ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f8948556ebee069e4ea1c8bf16302ef92fe7b3c1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 1b29fb48d8d8abc2e0c6693725b65c90a0cf1cd1
+ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344063"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42584741"
 ---
 # <a name="setup-downloader-for-system-center-configuration-manager"></a>System Center Configuration Manager のセットアップ ダウンローダー
 
@@ -69,7 +69,7 @@ ms.locfileid: "32344063"
 
     コマンドの例:
 
-    -   **setupd &lt;DownloadPath\>**  
+    -   **setupdl &lt;DownloadPath\>**  
 
         -   セットアップ ダウンローダーを起動して、指定のダウンロード フォルダーにあるファイルを確認し、不足しているファイルと、既存のファイルより新しいバージョンだけをダウンロードします。     
 

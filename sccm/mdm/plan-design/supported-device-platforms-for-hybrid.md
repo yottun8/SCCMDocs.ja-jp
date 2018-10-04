@@ -2,7 +2,7 @@
 title: ハイブリッド MDM でサポートされているデバイス プラットフォーム
 titleSuffix: Configuration Manager
 description: ハイブリッド MDM でサポートされているデバイス プラットフォームです。
-ms.date: 09/22/2017
+ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6b0732c8-1be8-44ba-8f8e-6fb2b67782e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 16cb6655a05c6f52cdf92f6900af3a63d46067bb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 07c08ce756c70ec4ab96c63de49a87514f9c3cea
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32345939"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42584594"
 ---
 # <a name="supported-device-platforms-for-hybrid-mdm"></a>ハイブリッド MDM でサポートされているデバイス プラットフォーム
 
@@ -25,4 +25,9 @@ Microsoft Intune を使用した Configuration Manager でモバイル デバイ
 
 [!INCLUDE[../includes/mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
-モバイル デバイスの管理には、モバイル デバイス管理機関という管理ソリューションのみ使用できます。 この設定を行う前に、[Microsoft Intune のスタンドアロンと Configuration Manager を使用したハイブリッド モバイル デバイス管理のいずれかを選択](../understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)する必要があります。
+> [!Important]  
+> 2018 年 8 月 14 日の時点では、ハイブリッド モバイル デバイス管理は[非推奨の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)です。 詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。<!--Intune feature 2683117-->  
+
+
+モバイル デバイスの管理には、モバイル デバイス管理機関という管理ソリューションのみ使用できます。 Azure 上の Intune は、Microsoft が推奨する MDM ソリューションです。 
+

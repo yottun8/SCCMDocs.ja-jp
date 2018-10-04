@@ -1,36 +1,79 @@
 ---
-title: ハイブリッド MDM のユーザーとデバイスを Intune スタンドアロンに移行する
+title: ハイブリッド MDM のリソースを Intune スタンドアロンに移行する
 titleSuffix: Configuration Manager
 description: ハイブリッド MDM のユーザーとデバイスを Azure 上の Intune に移行する方法を説明します。
 author: aczechowski
 manager: dougeby
-ms.date: 09/12/2017
+ms.date: 08/14/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 1dd696ce-3e46-4dfa-a76d-592fe0f0320e
-ms.openlocfilehash: 4e2471b06c1767bcf914000d626bb22b6ee2bd6b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: cff1a695f3f3227f7ec849b34b75762b082c3f31
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346323"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42584533"
 ---
 # <a name="migrate-hybrid-mdm-users-and-devices-to-intune-standalone"></a>ハイブリッド MDM のユーザーとデバイスを Intune スタンドアロンに移行する
 
 *適用対象: System Center Configuration Manager (Current Branch)*    
 
-この記事は、Azure 上の Intune を使用してハイブリッド MDM (Intune と Configuration Manager の統合) からクラウドのみのエクスペリエンスに移行する準備ができたと判断した場合に役立ちます。 準備ができたか判断できない場合は、「[Microsoft Intune スタンドアロンか System Center Configuration Manager を使用するハイブリッド モバイル デバイス管理を選択する](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management)」を参照してください。 
+この記事では、ハイブリッド MDM から Azure での Intune を使用するクラウドのみのエクスペリエンスに移行します。 
 
-ほとんどのユーザーとデバイスをハイブリッド MDM. で管理しつつ、ごく一部のユーザーとデバイスをテストできるようにする段階的なアプローチを使用して、Intune スタンドアロンへの移行を開始できます。 そして Intune の機能の検証後、さらに多くのユーザーの Intune への移行を開始できます。    
+> [!Important]  
+> 2018 年 8 月 14 日の時点では、ハイブリッド モバイル デバイス管理は[非推奨の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)です。 詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。<!--Intune feature 2683117-->  
 
-次のトピックでは、段階的なアプローチを使用して Intune スタンドアロンにユーザーを移行する手順を説明します。    
+
+段階的なアプローチを使用して、Intune スタンドアロンへの移行を開始します。 このアプローチでは、ほとんどのユーザーとデバイスはまだハイブリッド MDM で管理したまま、ユーザーとデバイスの小さなサブセットでテストします。 Intune の機能を検証した後、さらに多くのリソースの Intune への移行を開始します。    
+
+詳細については、以下の記事を参照してください。    
   
 1.  [Configuration Manager のデータの Microsoft Intune へのインポート](migrate-import-data.md)   
-    Intune Data Importer ツールは、Configuration Manager 階層から選択したオブジェクトに関するデータを収集し、インポートのために選択できるオブジェクトに関する詳細と、一部のオブジェクトがインポートできない理由に関する情報を提供し、選択したオブジェクトを Microsoft Intune テナントにインポートできるようにします。 この手順は任意ですが、Configuration Manager から Intune にオブジェクトを再作成するプロセスを自動化することによって、多くの時間を節約できます。 
+
+    Intune Data Importer ツール:  
+
+    - Configuration Manager 階層から選択したオブジェクトに関するデータを収集します  
+
+    - インポートの対象に選択できるオブジェクトについての詳細を提供します   
+
+    - 一部のオブジェクトをインポートできない理由についての情報を提供します  
+
+    - 選択したオブジェクトを Microsoft Intune テナントにインポートします  
+
+    この手順は省略可能です。 Configuration Manager から Intune にオブジェクトを再作成するプロセスを自動化することによって、時間を節約できます。  
+
 2.  [Intune でのユーザーの移行を準備する](migrate-prepare-intune.md)    
-    Configuration Manager からインポートされたオブジェクトを検証する、新しいオブジェクトを作成する、AAD グループを作成する、これらのグループにオブジェクトを割り当てる、NDES と Exchange コネクタをインストールするなどを行います。手順を完了して、Intune スタンドアロンへの移行を開始するときに、ユーザーに対して透過的にする必要があります。  
-3.  [特定のユーザー (混在 MDM 機関) の MDM 機関を変更する](migrate-mixed-authority.md)    
-    一部のユーザーを Intune で管理し、他のすべてのデバイスを引き続きハイブリッド MDM (Intune と Configuration Manager の統合) で管理するように選択することで、同じテナントで混在 MDM 機関を構成します。 追加のユーザー移行を開始する前に、ごく一部のユーザーのデバイス上で Intune 機能が想定通りに機能していることをテストできます。 
+
+    - Configuration Manager からインポートされたオブジェクトを検証します  
+
+    - 新しいオブジェクトを作成します  
+
+    - Azure AD グループを作成し、これらのグループにオブジェクトを割り当てます  
+
+    - NDES と Exchange コネクタをインストールします  
+
+    手順を完了して、Intune スタンドアロンへの移行を開始するときに、ユーザーに対して透過的にする必要があります。   
+
+3.  [特定のユーザー (混在 MDM 機関) のMDM 機関を変更する](migrate-mixed-authority.md)    
+
+    同じテナントに混在 MDM 機関を構成します。 一部のユーザーを選択して Intune で管理し、他のすべてのデバイスは引き続きハイブリッド MDM で管理します。 他のユーザーの移行を始める前に、少数のユーザーのデバイス上で Intune の機能が動作していることをテストします。   
+
 4.  [MDM 機関を Intune スタンドアロンに変更する](change-mdm-authority.md)     
-    テナント レベルの MDM 機関を Configuration Manager から Intune に変更します。 残りのすべてのユーザーとデバイスは、Intune スタンドアロンに移行されます。 前の手順で Intune の機能を徹底的にテストし、ユーザーのほとんどまたはすべてを既に移行した後に、テナント レベルの MDM 機関を変更します。
+
+    テナント レベルの MDM 機関を Configuration Manager から Intune に変更します。 残りのすべてのユーザーとデバイスは、Intune スタンドアロンに移行されます。 前の手順で Intune の機能を徹底的にテストし、ユーザーのほとんどまたはすべてを移行した後、テナント レベルの MDM 機関を変更します。
+
+
+
+## <a name="request-assistance"></a>サポートを要求する
+<!--Intune bug 2339232--> Microsoft FastTrack プログラムからのサポートを求めるには、[FastTrack for Microsoft 365](https://fasttrack.microsoft.com/microsoft365/capabilities?view=security) に移動して開始します。
+
+1. [サインイン] をクリックして、組織の ID を入力します  
+
+2. ダッシュボードに移動し、指示に従って **[Request for Assistance]\(サポートの要求\)** フォームに移動します。    
+
+3. Microsoft は要求を確認し、特定のニーズや適格性に応じて適切なチームに渡します。  
+
+このダッシュボードでは、Microsoft Cloud でのエクスペリエンスをすばらしいものにするのに役立つ FastTrack の専門家からのベスト プラクティス、ツール、リソースを見つけることもできます。
+

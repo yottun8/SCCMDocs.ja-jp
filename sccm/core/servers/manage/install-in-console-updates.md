@@ -2,7 +2,7 @@
 title: コンソール内の更新プログラム
 titleSuffix: Configuration Manager
 description: Microsoft クラウドから Configuration Manager に更新プログラムをインストールする
-ms.date: 07/30/2018
+ms.date: 08/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ea03f3a91d086a3528047ac6fcd18ff09b03537
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 46aa845197010694e1a1c48ec1d3f18a13268cdf
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385560"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42756131"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Configuration Manager のコンソール内更新プログラムのインストール
 
@@ -365,40 +365,13 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 
 ##  <a name="bkmk_after"></a> サイトでの更新プログラムのインストール後  
 
-サイトの更新後に行われた一般的なタスクと構成を完了するには、以下のチェックリストを使用します。   
+サイトが更新された後、該当するバージョンの更新後のチェックリストを確認します。  
 
-#### <a name="confirm-site-to-site-replication-is-active"></a>サイト間レプリケーションがアクティブであることを確認する
-Configuration Manager コンソールで次の場所に移動し、状態を表示して、レプリケーションがアクティブであることを確認します。  
+- [バージョン 1806 の更新後のチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)  
 
--   **[監視]** ワークスペース、**[サイト階層]** ノード  
+- [バージョン 1802 の更新後のチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1802#post-update-checklist)  
 
--   **[監視]** ワークスペース、**[データベースのレプリケーション]** ノード  
-
-詳細については、以下の記事を参照してください。  
-- [階層とレプリケーション インフラストラクチャの監視](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
-- [ レプリケーション リンク アナライザーについて](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  
-
-#### <a name="confirm-that-servers-restarted-if-necessary"></a>サーバーが再起動されたことを確認する (必要に応じて) 
-サイト インフラストラクチャを確認し、該当するサイト サーバーとリモート サイト システム サーバーが正常に再起動されたことを確認します。 通常は、サイト システムの役割の前提条件として Configuration Manager が .NET をインストールするときにのみ、サイト サーバーが再起動されます。  
-
-#### <a name="update-standalone-configuration-manager-consoles"></a>スタンドアロンの Configuration Manager コンソールを更新する
-すべてのリモートの Configuration Manager コンソールを同じバージョンに更新します。 次の場合には、コンソールを更新するようにダイアログが表示されます。  
-
--   コンソールの新しいノードに移動するとき  
-
--   コンソールを開くとき  
-
-#### <a name="reconfigure-database-replicas-for-management-points"></a>管理ポイントのデータベース レプリカを構成する
-プライマリ サイトで管理ポイント用のデータベース レプリカを使用する場合、データベース レプリカをアンインストールしてから、サイトを更新します。 プライマリ サイトを更新したら、管理ポイント用データベース レプリカを再構成します。 詳細については、「[管理ポイントのデータベース レプリカ](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)」を参照してください。  
-
-#### <a name="reconfigure-any-disabled-maintenance-tasks"></a>無効にしたメンテナンス タスクを再構成する
-更新プログラムのインストール前にサイトでデータベースの [メンテナンス タスク](/sccm/core/servers/manage/maintenance-tasks)を無効にした場合は、サイトでこれらのタスクを再構成します。 更新前に適用されていたのと同じ設定を使用します。  
-
-#### <a name="upgrade-clients"></a>クライアントをアップグレードする
-詳細については、「[Windows コンピューター用クライアントをアップグレードする方法](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers)」を参照してください。  
-
-#### <a name="additional-configurations"></a>追加の構成
-更新を始める前に加えた変更を確認して、サイトと階層にこれらの構成を復元します。  
+- [バージョン 1710 の更新後のチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1710#post-update-checklist)  
 
 
 

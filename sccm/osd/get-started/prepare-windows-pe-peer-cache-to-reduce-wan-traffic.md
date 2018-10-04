@@ -10,12 +10,12 @@ ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 90eaaec52076e4ac4fbaddf6cc07cf20359b5a68
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 69d8db3cceff45319ed4f2fc0b2962c3bb50b0f2
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353639"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42756174"
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>System Center Configuration Manager における WAN トラフィックを減らすための Windows PE ピア キャッシュの準備
 
@@ -23,7 +23,7 @@ ms.locfileid: "32353639"
 
 新しいオペレーティング システムを System Center Configuration Manager に展開すると、タスク シーケンスを実行しているコンピューターで、配布ポイントからコンテンツをダウンロードするのではなく、Windows PE ピア キャッシュを使用してローカル ピア (ピア キャッシュ ソース) からコンテンツを取得することができます。 これにより、ローカル配布ポイントが存在しないブランチ オフィス シナリオでワイド エリア ネットワーク (WAN) トラフィックが最小限に抑えられます。  
 
- Windows PE ピア キャッシュは [Windows BranchCache](http://technet.microsoft.com/library/mt617255\(TechNet.10\).aspx#bkmk_branchcache)に似ていますが、Windows プレインストール環境 (Windows PE) で機能します。 Windows PE ピア キャッシュを使用するクライアントの記述に、以下の用語が使用されています。  
+ Windows PE ピア キャッシュは [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache)に似ていますが、Windows プレインストール環境 (Windows PE) で機能します。 Windows PE ピア キャッシュを使用するクライアントの記述に、以下の用語が使用されています。  
 
 -   **ピア キャッシュ クライアント** は、Windows PE ピア キャッシュを使用するように構成されたコンピューターです。  
 
@@ -70,7 +70,7 @@ ms.locfileid: "32353639"
         > [!TIP]  
         >  クライアントは、HTTPS を使用して、コンテンツが使用可能になるとダウンロードします。 ただし、HTTP と HTTPS で同じポート番号が使用されます。  
 
--   クライアント上で[Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) することによって、展開されたイメージを保存するのに十分なスペースを確保する必要があります。 Windows PE ピア キャッシュは、クライアント キャッシュの構成にも動作にも影響を与えません。  
+-   クライアント上で[Configure the Client Cache for Configuration Manager Clients](/sccm/core/clients/manage/manage-clients#BKMK_ClientCache) することによって、展開されたイメージを保存するのに十分なスペースを確保する必要があります。 Windows PE ピア キャッシュは、クライアント キャッシュの構成にも動作にも影響を与えません。  
 
 -   タスク シーケンス展開用の展開オプションは、タスク シーケンスで必要な場合のコンテンツのローカル ダウンロードとして構成する必要があります。  
 
@@ -81,7 +81,7 @@ ms.locfileid: "32353639"
 
 -   ピア キャッシュ クライアントは別のピア キャッシュ クライアント (ピア キャッシュ ソース) からコンテンツを取得することができます。  クライアントはピア キャッシュ用に構成されているため、キャッシュされたコンテンツを保持するように構成されたタスク シーケンスを実行すると、そのクライアントがピア キャッシュ ソースになります。  
 
--   クライアントはオプション ステップの [Download Package Content](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent)を含むタスク シーケンスを実行します。このオプション ステップは、Windows PE ピア キャッシュ タスク シーケンスに含まれる関連コンテンツの事前設定に使用されます。 この方法を使用する場合:  
+-   クライアントはオプション ステップの [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent)を含むタスク シーケンスを実行します。このオプション ステップは、Windows PE ピア キャッシュ タスク シーケンスに含まれる関連コンテンツの事前設定に使用されます。 この方法を使用する場合:  
 
     -   クライアントは展開されているイメージをインストールする必要がありません。  
 
@@ -129,7 +129,7 @@ ms.locfileid: "32353639"
 
      展開後に Configuration Manager クライアント キャッシュに残すタスク シーケンス内のコンテンツにフラグを設定します。 これは、タスク シーケンスの持続期間だけコンテンツを保持して、Configuration Manager クライアント キャッシュではなくタスク シーケンス キャッシュを使用する SMSTSPersisContent の使用とは異なります。  
 
- 組み込みのタスク シーケンス変数の詳細については、「[タスク シーケンス組み込み変数](../understand/task-sequence-built-in-variables.md)」を参照してください。  
+ 詳しくは、「[タスク シーケンス変数](/sccm/osd/understand/task-sequence-variables)」をご覧ください。  
 
 ###  <a name="BKMK_PeerCacheValidate"></a> Windows PE ピア キャッシュの使用が成功したかどうかの検証  
  Windows PE ピア キャッシュを使用してタスク シーケンスを展開してインストールしたら、タスク シーケンスを実行したクライアント上で **smsts.log** を表示することによって、プロセスでピア キャッシュが正常に使用されたことを確認できます。  

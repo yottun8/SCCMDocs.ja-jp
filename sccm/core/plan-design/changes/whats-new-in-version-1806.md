@@ -2,7 +2,7 @@
 title: バージョン 1806 の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager Current Branch のバージョン 1806 で導入された変更点および新機能について説明します。
-ms.date: 07/31/2018
+ms.date: 08/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1c6ae28a50f3145420895b295ebe730fb7b2a9a7
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 89742711f17997487fec403d51c89a42ceff34ec
+ms.sourcegitcommit: 52ec30245ba559596d2f88a3eff70c467b4a056f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386063"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381042"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1806 の新機能
 
@@ -23,12 +23,12 @@ ms.locfileid: "39386063"
 
 Configuration Manager Current Branch の更新プログラム 1806 はコンソール内の更新プログラムとして利用できます。 バージョン 1706、1710、1802 を実行しているサイトでこの更新プログラムを適用します。 <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
 
+この更新プログラムをインストールするための最新のチェックリストを常に確認してください。 詳細については「[更新プログラム 1806 をインストールするためのチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1806)」を参照してください。 サイトを更新した後は、[更新後のチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)に関するページも確認してください。
+
 > [!Important]  
 > この記事では現在、このバージョンの重要な機能をすべて取り上げています。 しかしながら、一部のセクションのコンテンツは、新機能に関する後続情報で更新されていません。 更新がないか、このページを定期的にご確認ください。 変更には ***[更新]*** タグが付きます。 コンテンツが最終的に承認されると、この注記は削除されます。  
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4101375).
--->
+このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[システム センター構成マネージャーで現在の分岐、1806 のバージョンでの変更の概要](https://support.microsoft.com/help/4459701)」を参照してください。
 
 <!--
 The following additional updates to this release are also now available:
@@ -40,10 +40,13 @@ The following additional updates to this release are also now available:
 
 
 
-<!--
-## Deprecated features and operating systems
-Learn about support changes before they are implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
+## <a name="deprecated-features-and-operating-systems"></a>非推奨の機能とオペレーティング システム
 
+[削除された項目と非推奨の項目](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)で実装される前のサポートに関する変更点について説明します。
+
+"***[更新]***" 2018 年 8 月 14 日の時点で、ハイブリッド モバイル デバイス管理機能は非推奨です。 詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。<!--Intune feature 2683117-->  
+
+<!--
 Version 1806 drops support for the following products:
 -->
 
@@ -84,7 +87,10 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="exclude-active-directory-containers-from-discovery"></a>探索から Active Directory コンテナーを除外する
-<!--1358143--> 探索されるオブジェクト数を減らすためには、Active Directory システム探索から特定のコンテナーを除外します。 
+<!--1358143-->
+"***[更新]***" 探索されるオブジェクト数を減らすためには、Active Directory システム探索から特定のコンテナーを除外します。 
+
+詳細については、[Active Directory システム探索の構成](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adsd)に関するページを参照してください。
 
 
 
@@ -125,11 +131,14 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="boundary-group-options-for-peer-downloads"></a>ピアのダウンロードの境界グループのオプション
-<!--1356193--> 環境内のコンテンツ配布をより細かく制御できるように、境界グループに追加の設定が設けられました。 このリリースでは、次のオプションが追加されます。  
+<!--1356193-->
+"***[更新]***" 環境内のコンテンツ配布をより細かく制御できるように、境界グループに追加の設定が設けられました。 このリリースでは、次のオプションが追加されます。  
 
-- **[この境界グループのピアのダウンロードを許可する]**: この設定は既定で有効になります。 管理ポイントでは、ピア ソースを含むコンテンツの場所のリストがクライアントに提供されます。 この設定は、配信の最適化のグループ ID 適用にも反映されます。  
+- **[この境界グループのピアのダウンロードを許可する]**: 管理ポイントでは、ピア ソースを含むコンテンツの場所のリストがクライアントに提供されます。 この設定は、配信の最適化のグループ ID 適用にも反映されます。  
 
-- **[ピアのダウンロード中に、同じサブネット内のピアのみを使用する]**: この設定は、上記のいずれかに依存します。 このオプションを有効にした場合、管理ポイントのコンテンツの場所のリストには、クライアントと同じサブネット内にあるピア ソースのみが含まれます。  
+- **[ピアのダウンロード中に、同じサブネット内のピアのみを使用する]**: 管理ポイントのコンテンツの場所のリストには、クライアントと同じサブネット内にあるピア ソースのみが含まれます。  
+
+詳細については、「[ピアのダウンロードの境界グループのオプション](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions)」を参照してください。
 
 
 
@@ -266,7 +275,7 @@ PKI ベースのクライアント認証証明書ではなく、クライアン�
 ### <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>デバイス上のすべてのユーザーに対して Windows アプリ パッケージをプロビジョニングする
 <!--1358310--> デバイス上のすべてのユーザーに対して、Windows アプリ パッケージを含むアプリケーションをプロビジョニングします。 このシナリオの 1 つの一般的な例では、ある学校の生徒が使用するすべてのデバイスに、Minecraft: Education Edition などの、ビジネス向け Microsoft Store および教育機関向け Microsoft Store からアプリをプロビジョニングします。 これまでは、Configuration Manager では、これらのアプリケーションのユーザーごとのインストールのみがサポートされていました。 新しいデバイスにサインインした後、学生はアプリにアクセスするまで待機する必要があります。 これからは、すべてのユーザー用のデバイスにアプリがプロビジョニングされている場合、より迅速に生産性を高めることができます。 
 
-詳細については、[Windows アプリケーションの作成](/sccm/apps/get-started/creating-windows-applications#bkmk_provision)に関する記述を参照してください。
+詳しくは、「[Windows アプリケーションを作成する](/sccm/apps/get-started/creating-windows-applications#bkmk_provision)」をご覧ください。
 
 
 ### <a name="office-customization-tool-integration-with-the-office-365-installer"></a>Office 365 インストーラーと Office カスタマイズ ツールの統合
@@ -278,7 +287,7 @@ PKI ベースのクライアント認証証明書ではなく、クライアン�
 ### <a name="support-for-new-windows-app-package-formats"></a>新しい Windows アプリ パッケージ形式のサポート
 <!--1357427--> Configuration Manager は、新しい Windows 10 アプリ パッケージ (.msix) とアプリ バンドル (.msixbundle) 形式の展開をサポートするようになりました。 
 
-詳細については、[Windows アプリケーションの作成](/sccm/apps/get-started/creating-windows-applications#bkmk_general)に関する記述を参照してください。
+詳しくは、「[Windows アプリケーションを作成する](/sccm/apps/get-started/creating-windows-applications#bkmk_general)」をご覧ください。
 
 
 ### <a name="uninstall-application-on-approval-revocation"></a>承認を取り消したときにアプリケーションをアンインストールする
@@ -288,17 +297,10 @@ PKI ベースのクライアント認証証明書ではなく、クライアン�
 
 
 ### <a name="package-conversion-manager"></a>Package Conversion Manager 
-<!--1357861--> Package Conversion Manager は統合ツールとなりました。これを使用して、従来の Configuration Manager 2007 パッケージを Configuration Manager の現在のブランチのアプリケーションに変換することができます。 その後、依存関係、要件の規則、およびユーザーとデバイスのアフィニティなど、アプリケーションの機能を使用することができます。
+<!--1357861-->
+"***[更新]***" Package Conversion Manager は統合ツールとなりました。これを使用して、従来の パッケージを Configuration Manager の現在のブランチのアプリケーションに変換することができます。 その後、依存関係、要件の規則、およびユーザーとデバイスのアフィニティなど、アプリケーションの機能を使用することができます。
 
-Configuration Manager コンソールの **[パッケージ]** ノードの次のアクションから始めます。  
-
-   - **パッケージの分析**: パッケージを分析して、変換プロセスを開始します。  
-
-   - **Convert Package (パッケージの変換)**: 一部のパッケージは、この操作でアプリケーションに簡単に変換することができます。  
-
-   - **Fix and Convert (修正と変換)**: 一部のパッケージでは、アプリケーションに変換する前に問題を修正する必要があります。  
-
-次に、**[監視]** ワークスペースの **[パッケージ変換のステータス]** に移動します。 この新しいダッシュボードには、サイトでのパッケージの全体的な分析と変換の状態が示されます。 この機能は[プレリリース版の機能](/sccm/core/servers/manage/pre-release-features)です。
+詳細については、[Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager) に関するページを参照してください。
 
 
 
@@ -348,16 +350,36 @@ Configuration Manager コンソールの **[パッケージ]** ノードの次�
 ### <a name="other-improvements-to-os-deployment"></a>OS 展開のその他の機能強化
 
 #### <a name="mask-sensitive-data-stored-in-task-sequence-variables"></a>タスク シーケンス変数に格納されている機密データをマスキングする
-<!--1358330--> [[タスク シーケンス変数の設定]](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) 手順で **[この値を表示しない]** という新しいオプションを選択します。 たとえば、パスワードを指定するときに使用します。 
+ <!--1358330--> "***[更新]***" **[タスク シーケンス変数の設定]** 手順で **[この値を表示しない]** という新しいオプションを選択します。 
+
+ 詳細については、[タスク シーケンス変数の設定](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)に関するページを参照してください。 
 
 #### <a name="mask-program-name-during-run-command-step-of-a-task-sequence"></a>タスク シーケンスのコマンドの実行ステップ中にプログラム名をマスキングする
-<!--1358493--> 機密性が高い可能性のあるデータが表示または記録されないようにするには、タスク シーケンス変数 **OSDDoNotLogCommand** を `TRUE` に設定します。 この変数は、[[コマンド ラインの実行]](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) タスク シーケンス ステップ中に smsts.log のプログラム名をマスキングします。   
+ <!--1358493--> "***[更新]***" 機密性が高い可能性のあるデータが表示または記録されないようにするには、タスク シーケンス変数 **OSDDoNotLogCommand** を構成します。  
+
+ 詳細については、[タスク シーケンスの変数](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand)に関するページを参照してください。 
 
 #### <a name="task-sequence-variable-for-dism-parameters-when-installing-drivers"></a>ドライバーをインストールするときの DISM パラメーターのタスク シーケンス変数
-<!--516679--> DISM の追加コマンドライン パラメーターを指定するには、**OSDInstallDriversAdditionalOptions** という新しいタスク シーケンス変数を使用します。 [ドライバー パッケージの適用](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage)手順設定を有効にし、**再帰処理オプションを付けて DISM を実行してドライバー パッケージをインストール**します。 
+ <!--516679/2840016--> "***[更新]***" DISM の追加コマンドライン パラメーターを指定するには、**OSDInstallDriversAdditionalOptions** という新しいタスク シーケンス変数を使用します。 
+
+ 詳細については、[タスク シーケンスの変数](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)に関するページを参照してください。 
 
 #### <a name="option-to-use-full-disk-encryption"></a>ディスク全体の暗号化を使用するオプション
-<!--SCCMDocs-pr issue 2671--> [BitLocker の有効化](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker)手順と [BitLocker の事前プロビジョニング](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker)手順の両方に**ディスク全体の暗号化を使用する**オプションが含まれるようになりました。 既定では、これらの手順により、ドライブ上の使用済み領域が暗号化されます。 高速であり、効率性に優れているため、この既定の動作をお勧めします。 組織でセットアップ中、ドライブ全体の暗号化が要求される場合、このオプションを有効にしてください。 Windows セットアップでは、ドライブ全体が暗号化されるのを待ちます。これには、特に大きなドライブで、時間がかかります。 
+ <!--SCCMDocs-pr issue 2671--> "***[更新]***" **BitLocker の有効化**手順と **BitLocker の事前プロビジョニング**手順の両方に**ディスク全体の暗号化を使用する**オプションが含まれるようになりました。 既定では、これらの手順により、ドライブ上の使用済み領域が暗号化されます。 高速であり、効率性に優れているため、この既定の動作をお勧めします。 
+
+ 詳細については、[BitLocker の有効化](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker)および [BitLocker の事前プロビジョニング](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker)に関するページを参照してください。 
+
+#### <a name="client-provisioning-mode-isnt-enabled-with-windows-10-upgrade-compatibility-scan"></a>クライアント プロビジョニング モードは Windows 10 のアップグレード互換性スキャンでは有効ではない
+ <!--SCCMDocs-pr issue 2812--> "***[更新]***" **[アップグレードを開始せずに Windows セットアップの互換性スキャンを実行する]** オプションを有効にした場合、**Upgrade Operating System** タスク シーケンスの手順で、Configuration Manager クライアントはプロビジョニング モードに設定されなくなりました。
+
+ 詳細については、「[オペレーティング システムのアップグレード](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS)」を参照してください。
+
+#### <a name="revised-documentation-for-task-sequence-variables"></a>タスク シーケンス変数の改訂版ドキュメント
+ "***[更新]***" タスク シーケンス変数の理解に役立つ 2 つの新しい記事が利用可能になりました。  
+
+ - [タスク シーケンス変数の使用方法](/sccm/osd/understand/using-task-sequence-variables)は、さまざまな種類の変数、変数を設定するメソッド、および変数へのアクセス方法を示す新しい記事です。  
+
+ - [タスク シーケンス変数](/sccm/osd/understand/task-sequence-variables)は、使用可能なすべてのタスク シーケンス変数へのリファレンスです。 この記事は、組み込み変数とアクション変数を区別していた以前の記事と統合されています。 
 
 
 
@@ -509,7 +531,7 @@ Configuration Manager コンソールの **[パッケージ]** ノードの次�
 
 ## <a name="next-steps"></a>次のステップ
 
-このバージョンをインストールする準備ができたら、[Configuration Manager の更新プログラムのインストール](/sccm/core/servers/manage/updates)に関するページを参照してください。
+このバージョンをインストールする準備ができたら、[Configuration Manager の更新プログラムのインストール](/sccm/core/servers/manage/updates)および[更新プログラム 1806 をインストールするためのチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1806)に関するページを参照してください。
 
 > [!TIP]  
 > 新しいサイトをインストールするには、Configuration Manager の基準バージョンを使用します。  
@@ -519,3 +541,5 @@ Configuration Manager コンソールの **[パッケージ]** ノードの次�
 >   - [基準バージョンと更新プログラムのバージョン](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
 既知の重大な問題については、[リリース ノート](/sccm/core/servers/deploy/install/release-notes)を参照してください。
+
+サイトを更新した後は、[更新後のチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)に関するページも確認してください。

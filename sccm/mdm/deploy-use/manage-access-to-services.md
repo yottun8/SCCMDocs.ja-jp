@@ -10,12 +10,12 @@ ms.assetid: 7b04727b-d563-422f-8d59-4dd66215d0b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f354647ba9376ff18db1a4b63944ef31272308e1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9091c233ad18b2ab9ddea32819a37f3cc9484036
+ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350580"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42584424"
 ---
 # <a name="manage-access-to-services-in-system-center-configuration-manager"></a>System Center Configuration Manager でサービスへのアクセスを管理する
 
@@ -126,7 +126,7 @@ Exchange On-premises に対する条件付きアクセスでは、次のデバ�
 
 
 ## <a name="requirements-for-skype-for-business-online"></a>Skype for Business Online の要件
-SharePoint Online への条件付きアクセスでは、次を実行するデバイスがサポートされます。
+Skype Online への条件付きのアクセスでは、次を実行するデバイスがサポートされます。
  -   iOS 7.1 以降
  -   Android 4.0 以降
  -   Samsung KNOX Standard 4.0 以降

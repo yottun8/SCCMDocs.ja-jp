@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f5aac395c71b76a0b83826e8f7c9de1e656aa884
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 588eeefc8f383a52150dc91e9837e51a718af33c
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383641"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755862"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager での Windows 10 のサポート  
 
@@ -85,3 +85,6 @@ Configuration Manager を使用してオペレーティング システムを展
 
  > [!Note]  
  > Configuration Manager は、Windows 10 ADK の x86 および amd64 コンポーネントのみをサポートします。 ARM または ARM64 コンポーネントは現在はサポートされていません。 
+
+> [!Tip]
+> サーバー OS の展開に対する ADK のバージョンのサポート: Windows Server のビルドには、関連付けられている Windows 10 バージョンと同じ ADK が必要です。 たとえば、Windows Server 2016 は Windows 10 LTSB 2016 と同じビルド バージョンです。

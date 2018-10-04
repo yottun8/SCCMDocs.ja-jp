@@ -2,7 +2,7 @@
 title: リアルタイム データ用 CMPivot
 titleSuffix: Configuration Manager
 description: Configuration Manager でクライアントに対してクエリをリアルタイムで実行するために CMPivot を使用する方法について学習します。
-ms.date: 07/30/2018
+ms.date: 08/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0766bc765712fc493f01eb5aa807426ec44fa5d7
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 0429c62f68a111bc7f620d1c954d5c8cf944d1c1
+ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385943"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590058"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>Configuration Manager でのリアルタイム データ用の CMPivot
 
@@ -56,6 +56,8 @@ Configuration Manager では、レポートを目的として顧客が使用す�
 - エンティティのプロパティ、結果用の列、デバイスのアクションはカスタマイズできません。  
 
 - Configuration Manager コンソールを実行するコンピューターでは、CMPivot のインスタンスは 1 つしか同時に実行できません。  
+
+- バージョン 1806 では、**Administrators** エンティティに対するクエリは、グループの名前が "Administrators" の場合にのみ機能します。 グループ名がローカライズされている場合は機能しません。 たとえば、日本語の "管理者" などです。<!--SCCMDocs issue 759-->  
 
 
 
@@ -229,6 +231,20 @@ CMPivot は、Configuration Manager の "高速チャネル" を使用してク�
 
 1 時間後にクエリはタイム アウトします。 たとえば、コレクションには 500 のデバイスがあり、450 のクライアントが現在オンラインです。 これらのアクティブなデバイスはクエリを受け取り、ほぼ瞬時に結果を返します。 他の 50 のクライアントがオンラインになるときに、CMPivot ウィンドウを開いたままにした場合、それらもクエリを受け取り、結果を返します。 
 
+>[!TIP]
+> CMPivot の相互作用は、次のログ ファイルに記録されます。
+>
+> **サーバー側:**
+> - SmsProv.log
+> - bgbServer.log
+> - StateSys.log
+>
+> **クライアント側:**
+> - CCMNotificationAgent.log
+> - Scripts.log
+> - StateMessage.log
+>
+> 詳細については、[ログ ファイル](/sccm/core/plan-design/hierarchy/log-files)に関するページを参照してください。
 
 
 ## <a name="see-also"></a>関連項目
