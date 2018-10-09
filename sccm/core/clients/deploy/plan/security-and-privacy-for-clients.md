@@ -404,9 +404,7 @@ Configuration Manager クライアントをクライアント ステータス �
 
 
 
-##  
-  <a name="BKMK_Privacy_ExchangeConnector">
-  </a> Exchange Server コネクタを使用して管理されるモバイル デバイスのプライバシー情報  
+##  <a name="BKMK_Privacy_ExchangeConnector"></a> Exchange Server コネクタを使用して管理されるモバイル デバイスのプライバシー情報  
 
 Exchange Server コネクタは、ActiveSync プロトコルを使うことによってオンプレミスまたはホスト型の Exchange Server に接続するデバイスを見つけて管理します。 Exchange Server コネクタにより検出されたレコードは、SQL サーバーの Configuration Manager データベースに格納されます。 この情報は、Exchange Server から収集されます。 これには、モバイル デバイスが Exchange Server に送信したその他の情報は一切含まれません。  
 

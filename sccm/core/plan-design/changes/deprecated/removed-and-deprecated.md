@@ -38,12 +38,9 @@ ms.locfileid: "32333273"
 ## <a name="removed-and-deprecated-items-for-configuration-manager"></a>Configuration Manager から削除された項目と非推奨の項目
 削除された項目または非推奨の項目は、3 つのカテゴリに分かれます。  
 
-### <a name="removed-and-deprecated-configuration-manager-featuressccmcoreplan-designchangesdeprecatedremoved-and-deprecated-cmfeatures"></a>
-  [削除されたり非推奨の Configuration Manager の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)
-### <a name="removed-and-deprecated-items-for-configuration-manager-site-serverssccmcoreplan-designchangesdeprecatedremoved-and-deprecated-server"></a>
-  [削除されたり非推奨の Configuration Manager サイト サーバーの項目](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server)
-### <a name="removed-and-deprecated-items-for-configuration-manager-clientssccmcoreplan-designchangesdeprecatedremoved-and-deprecated-client"></a>
-  [削除されたり非推奨の Configuration Manager クライアントの項目](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client)
+### <a name="removed-and-deprecated-configuration-manager-featuressccmcoreplan-designchangesdeprecatedremoved-and-deprecated-cmfeatures"></a>[削除されたり非推奨の Configuration Manager の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)
+### <a name="removed-and-deprecated-items-for-configuration-manager-site-serverssccmcoreplan-designchangesdeprecatedremoved-and-deprecated-server"></a>[削除されたり非推奨の Configuration Manager サイト サーバーの項目](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server)
+### <a name="removed-and-deprecated-items-for-configuration-manager-clientssccmcoreplan-designchangesdeprecatedremoved-and-deprecated-client"></a>[削除されたり非推奨の Configuration Manager クライアントの項目](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client)
 
 
 ## <a name="more-information"></a>説明
