@@ -10,12 +10,12 @@ ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3da4edf50480821ac9b3677fe80c38e8ed3d7e28
-ms.sourcegitcommit: acad0674b2743193f87990fb50194c4f17823a8e
+ms.openlocfilehash: 0757e7f3fac12c2945a3eab860851b0debf28fd5
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39146981"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893891"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1802 の新機能
 
@@ -128,7 +128,7 @@ Configuration Manager 1802 では、次の分析情報を利用できます。
 <!-- 1357389 --> ハードウェア インベントリ プロパティに対して、文字列の長さを 255 文字以上に構成できます。 この変更は、新しく追加されたクラスと、キーではないハードウェア インベントリ プロパティに対してのみ適用されます。 詳細については、[ハードウェア インベントリの拡張](/sccm/core/clients/manage/inventory/extend-hardware-inventory#BKMK_GreaterThan255)に関する記事を参照してください。 
 
  ### <a name="deprecation-announcement-for-linux-and-unix-client-support"></a>Linux と Unix のクライアント サポートの廃止告知
- <!--510139--> Microsoft は、今からおよそ 1 年のうちに、System Center Configuration Manager での Linux と UNIX のクライアント サポートを廃止する方針を立てています。2019 年の早期に予定されている SCCM 1902 リリースには Linux と UNIX のクライアントが含まれません。  2018 年の後半に予定されている Configuration Manager 1810 リリースが Linux クライアントと UNIX クライアントを含む最後のリリースになります。Configuration Manager 1810 のライフサイクル全体でサポートされる予定です。  Configuration Manager 1810 以降、顧客は Linux サーバーの管理に Microsoft の Operations Management Suite を検討してください。  OMS には、広範囲な Linux サポートが用意されています。ほとんどの場合、Linux のエンドツーエンド パッチ管理など、Configuration Manager 以上の機能が与えられます。
+ <!--510139--> Microsoft は、今からおよそ 1 年のうちに、System Center Configuration Manager での Linux と UNIX のクライアント サポートを廃止する方針を立てています。2019 年の早期に予定されている SCCM 1902 リリースには Linux と UNIX のクライアントが含まれません。 2018 年の後半に予定されている Configuration Manager 1810 リリースが Linux クライアントと UNIX クライアントを含む最後のリリースになります。Configuration Manager 1810 のライフサイクル全体でサポートされる予定です。 Configuration Manager 1810 以降、ユーザーは Linux サーバーを管理するために Microsoft Azure 管理を検討する必要があります。 Azure ソリューションには広範囲な Linux サポートが含まれており、ほとんどの場合、Linux のエンドツーエンド パッチ管理など、Configuration Manager 以上の機能を備えています。
 
 ### <a name="surface-device-dashboard"></a>Surface デバイス ダッシュボード
 <!--1355788--> Surface デバイス ダッシュボードには、お使いの環境内で見つかった Surface デバイスに関する情報が表示されます。 コンソールでは、**[監視]** > **[Surface Devices]\(Surface デバイス\)** の順に進みます。 次のような項目を表示できます。

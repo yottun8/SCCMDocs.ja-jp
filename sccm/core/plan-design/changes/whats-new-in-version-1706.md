@@ -9,12 +9,12 @@ ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 925a881c6d9cf7249fc138027ceef2d225ee91e2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b83dd71f144e49d6dd9021cfb432927019b3d4ff
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339062"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893731"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1706 の新機能
 
@@ -42,35 +42,28 @@ Version 1706 drops support for the following products:
 ## <a name="site-infrastructure"></a>サイトのインフラストラクチャ
 
 ### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>クライアント ピア キャッシュで、Windows 10 と Office 365 の高速インストール ファイルに対応  
-<!-- 1352486 -->
-今回のリリースから、ピア キャッシュで、Windows 10 のコンテンツ高速インストール ファイルと Office 365 の更新ファイルを配信できるようになりました。 この変更サポートするために追加の構成は必要ありません。
+<!-- 1352486 -->今回のリリースから、ピア キャッシュで、Windows 10 のコンテンツ高速インストール ファイルと Office 365 の更新ファイルを配信できるようになりました。 この変更サポートするために追加の構成は必要ありません。
 
 ### <a name="updates-for-the-data-warehouse"></a>データ ウェアハウスの更新
-<!-- 1277922 -->
-データ ウェアハウスは、プレリリース版の機能ではなくなりました。 さらに、SQL Server Always On 可用性グループとフェールオーバー クラスターのデータベースのサポートを含めるように前提条件を更新しました。 詳細については、「[データ ウェアハウス サービス ポイント](/sccm/core/servers/manage/data-warehouse)」を参照してください。
+<!-- 1277922 -->データ ウェアハウスは、プレリリース版の機能ではなくなりました。 さらに、SQL Server Always On 可用性グループとフェールオーバー クラスターのデータベースのサポートを含めるように前提条件を更新しました。 詳細については、「[データ ウェアハウス サービス ポイント](/sccm/core/servers/manage/data-warehouse)」を参照してください。
 
-### <a name="accessibility-improvements"></a>アクセシビリティの機能強化
-<!-- 1253000 -->
-Configuration Manager コンソールのユーザー補助機能の機能強化を追加しました。 詳細については、「[ユーザー補助機能](/sccm/core/understand/accessibility-features)」を参照してください。
+### <a name="accessibility-improvements"></a>ユーザー補助の機能強化
+<!-- 1253000 -->Configuration Manager コンソールのユーザー補助機能の機能強化を追加しました。 詳細については、「[ユーザー補助機能](/sccm/core/understand/accessibility-features)」を参照してください。
 
 ### <a name="improvements--for-sql-server-always-on-availability-groups"></a>SQL Server Always On 可用性グループの機能強化
-<!-- 1352094 -->
-このリリースでは、Configuration Manager で使用する SQL Server Always On 可用性グループで非同期コミット レプリカを使用できるようになりました。 これにより、オフサイトの (リモート) バックアップとして使用する追加のレプリカを可用性グループに追加して、それらをディザスター リカバリー シナリオで使用することができます。  
+<!-- 1352094 -->このリリースでは、Configuration Manager で使用する SQL Server Always On 可用性グループで非同期コミット レプリカを使用できるようになりました。 これにより、オフサイトの (リモート) バックアップとして使用する追加のレプリカを可用性グループに追加して、それらをディザスター リカバリー シナリオで使用することができます。  
   -   Configuration Manager は、同期レプリカを復旧するために非同期コミット レプリカの使用をサポートしています。 これを実行する方法については、バックアップと回復に関するトピックで[サイト データベースの回復オプション](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)を参照してください。
   -   このリリースでは、非同期コミット レプリカをサイト データベースとして使用するためのフェールオーバーはサポートされていません。
 詳細については、「[Configuration Manager で SQL Server Always On 可用性グループを使用するための準備](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)」を参照してください。
 
 ### <a name="update-reset-tool"></a>更新のリセット ツール
-<!-- 1324589 -->
-バージョン 1706 以降、Configuration Manager のプライマリ サイトと中央管理サイトには、Configuration Manager 更新のリセット ツール **CMUpdateReset.exe** が含まれています。 Current Branch のいずれかのバージョンでこのツールを使用し、コンソール内の更新のダウンロードをまたはレプリケーションの問題がある場合に問題を修正します。 詳細については、「[更新のリセット ツール](/sccm/core/servers/manage/update-reset-tool)」を参照してください。
+<!-- 1324589 -->バージョン 1706 以降、Configuration Manager のプライマリ サイトと中央管理サイトには、Configuration Manager 更新のリセット ツール **CMUpdateReset.exe** が含まれています。 Current Branch のいずれかのバージョンでこのツールを使用し、コンソール内の更新のダウンロードをまたはレプリケーションの問題がある場合に問題を修正します。 詳細については、「[更新のリセット ツール](/sccm/core/servers/manage/update-reset-tool)」を参照してください。
 
 ### <a name="high-dpi-console-support"></a>高 DPI コンソールのサポート  
-<!-- 1353476 -->
-このリリースでは、高 DPI デバイス (Surface Book など) で表示したときに、Configuration Manager コンソールのスケーリング方法と、UI のさまざまな部分を表示する方法に修正すべき問題があります。
+<!-- 1353476 -->このリリースでは、高 DPI デバイス (Surface Book など) で表示したときに、Configuration Manager コンソールのスケーリング方法と、UI のさまざまな部分を表示する方法に修正すべき問題があります。
 
 ### <a name="improved-boundary-groups-for-software-update-points"></a>ソフトウェアの更新ポイントのための境界グループの改善
-<!-- 1324591 -->
-このリリースでは、ソフトウェアの更新ポイントでの境界グループの使用方法が改善されています。 新しいフォールバック動作を次にまとめます。
+<!-- 1324591 -->このリリースでは、ソフトウェアの更新ポイントでの境界グループの使用方法が改善されています。 新しいフォールバック動作を次にまとめます。
 -   ソフトウェアの更新ポイントのフォールバックで、近隣境界グループへのフォールバックに時間構成を使用するようになりました。
 -   フォールバックの構成に関係なく、クライアントは、使用した最後のソフトウェアの更新ポイントへの到達を 120 分間試行します。 120 分以内にそのサーバーに到達できない場合は、新しいサーバーを見つけるため、クライアントは利用可能なソフトウェアの更新ポイントのプールをチェックします。
 -   2 時間で元のサーバーに到達できない場合、クライアントは、新しいソフトウェアの更新ポイントに接続するためにより短いサイクルに切り替えます。 つまり、クライアントは新しいサーバーとの接続に失敗すると、使用可能なサーバー プールからすぐに次のサーバーを選択して、接続を試行します。
@@ -78,13 +71,12 @@ Configuration Manager コンソールのユーザー補助機能の機能強化�
 詳細については、Current Branch の境界グループに関するトピックの[ソフトウェアの更新ポイント](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)の記述を参照してください。
 
 ### <a name="azure-ad-integration-with-configuration-manager"></a>Azure AD と Configuration Manager の統合
-<!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
-このリリースでは、Configuration Manager と Azure Active Directory (Azure AD) の統合を改善しました。  この改善により、Configuration Manager で使用する Azure サービスの構成方法を効率化し、Azure AD を介して認証するクライアントとユーザーの管理を容易にすることができます。
+<!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->このリリースでは、Configuration Manager と Azure Active Directory (Azure AD) の統合を改善しました。  この改善により、Configuration Manager で使用する Azure サービスの構成方法を効率化し、Azure AD を介して認証するクライアントとユーザーの管理を容易にすることができます。
 
 改善された統合により以下のことが可能になります。  
   -   Azure サービス ウィザード - このウィザードは、Configuration Manager で使用する以下の Azure サービスを設定するための個々のワークフローに代わる、共通の構成エクスペリエンスを提供します。
       - **クラウド管理**Azure Active Directory (Azure AD) を利用し、クライアントの認証を有効にします。 Azure AD ユーザー探索を構成することもできます。
-      - **OMS コネクタ**Operations Manager Suite (OMS) に接続し、OMS Log Analytics にコレクションなどのデータを同期します。
+      - **Log Analytics コネクタ** Azure Log Analytics に接続してコレクション データを同期します。
       - **Upgrade Readiness** Upgrade Readiness に接続し、クライアント アップグレード互換性データを表示します。
       - **Windows Store for Business** Windows Store for Business のオンライン ストアに接続し、Configuration Manager でデプロイできるアプリを組織のために入手します。
 
@@ -98,8 +90,7 @@ Configuration Manager コンソールのユーザー補助機能の機能強化�
 -   Azure AD ユーザー探索を構成する  Azure サービス ウィザードを使用して、この新しい探索方法を構成します。 この新しい方法は、Azure AD でユーザー データのクエリを行い、従来の探索データと併用することができます。  完全と差分の両方の同期がサポートされています。  詳細については、「[Azure AD ユーザー探索](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)」を参照してください。
 
 ### <a name="peer-cache-improvements"></a>ピア キャッシュの改善
-<!-- 1252345 -->
-ピア キャッシュはピアからのダウンロード要求を認証するためにネットワーク アクセス アカウントを使用しなくなりました。 クライアントで引き続きアカウントは必要な場合、1 つの注意事項があります。 これにより、WinPE で起動し、ピア キャッシュ ソースからコンテンツにアクセスするクライアントの要件が残ります。 詳細については、「[ピア キャッシュの要件と考慮事項](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache)」を参照してください。
+<!-- 1252345 -->ピア キャッシュはピアからのダウンロード要求を認証するためにネットワーク アクセス アカウントを使用しなくなりました。 クライアントで引き続きアカウントは必要な場合、1 つの注意事項があります。 これにより、WinPE で起動し、ピア キャッシュ ソースからコンテンツにアクセスするクライアントの要件が残ります。 詳細については、「[ピア キャッシュの要件と考慮事項](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache)」を参照してください。
 
 
 <!-- ## Migration  -->
@@ -111,8 +102,7 @@ Configuration Manager コンソールのユーザー補助機能の機能強化�
 ## <a name="compliance-settings"></a>コンプライアンス設定
 
 ### <a name="new-configuration-settings-for-windows-10-devices-that-are-not-managed-with-the-configuration-manager-client"></a>Configuration Manager クライアントを使用して管理されていない Windows 10 デバイスの新しい構成設定
-<!-- 1354715 -->
-このリリースでは、Intune に登録されるか、Configuration Manager でオンプレミスで管理されている Windows 10 デバイス用の新しい構成項目設定が追加されました。 設定は、次のとおりです。
+<!-- 1354715 -->このリリースでは、Intune に登録されるか、Configuration Manager でオンプレミスで管理されている Windows 10 デバイス用の新しい構成項目設定が追加されました。 設定は、次のとおりです。
 
 - **パスワード**
     - デバイスの暗号化
@@ -128,8 +118,8 @@ Configuration Manager コンソールのユーザー補助機能の機能強化�
     - ストアから配信されたアプリの起動
 - **Microsoft Edge**
     - About Flags へのアクセスをブロック
-    - SmartScreen のプロンプトの上書き
-    - ファイルに対する SmartScreen プロンプトの上書き
+    - SmartScreen のプロンプトのオーバーライド
+    - ファイルに対する SmartScreen プロンプトのオーバーライド
     - WebRtc localhost IP アドレス
     - 既定の検索エンジン
     - OpenSearch XML URL
@@ -182,8 +172,7 @@ Configuration Manager では、パッケージとプログラムを使用して�
 詳細については、「[Configuration Manager コンソールから PowerShell スクリプトを作成して実行する](/sccm/apps/deploy-use/create-deploy-scripts)」を参照してください。
 
 ### <a name="new-mobile-application-management-policy-settings"></a>新しいモバイル アプリケーション管理ポリシーの設定    
-<!--1324760-->
-このリリースから、3 つの新しいモバイル アプリケーション管理 (MAM) ポリシー設定が使用できます。
+<!--1324760-->このリリースから、3 つの新しいモバイル アプリケーション管理 (MAM) ポリシー設定が使用できます。
 
 - **画面キャプチャの禁止 (Android デバイスのみ):** このアプリを使用するときに、デバイスの画面キャプチャ機能をブロックするように指定します。
 
@@ -207,8 +196,7 @@ Configuration Manager では、パッケージとプログラムを使用して�
 このリリースでは、Express Update のダウンロードにかかる時間を大幅に短縮しました。 詳細については、「[Windows 10 更新プログラムに対する高速インストール ファイルの管理](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates)」を参照してください。
 
 ### <a name="manage-microsoft-surface-driver-updates"></a>Microsoft Surface ドライバーの更新プログラムの管理
-<!-- 1098490 -->
-Configuration Manager を使用して、Microsoft Surface ドライバーの更新プログラムを管理できるようになりました。    
+<!-- 1098490 -->Configuration Manager を使用して、Microsoft Surface ドライバーの更新プログラムを管理できるようになりました。    
 
 
 #### <a name="prerequisites"></a>[前提条件]
@@ -222,8 +210,7 @@ Configuration Manager を使用して、Microsoft Surface ドライバーの更�
 3. [同期した Microsoft Surface ドライバーを展開します](/sccm/sum/deploy-use/deploy-software-updates)。
 
 ### <a name="configure-windows-update-for-business-deferral-policies"></a>Windows Update for Business 遅延ポリシーの構成
-<!-- 1290890 -->
-Windows Update for Business によって直接管理されている Windows 10 デバイスの Windows 10 機能更新プログラムまたは品質更新プログラムに対し、遅延ポリシーを構成できるようになりました。 遅延ポリシーの管理は、**[ソフトウェア ライブラリ]** > **[Windows 10 のサービス]** の下の新しい **[Windows Update for Business ポリシー]** ノードでできます。
+<!-- 1290890 -->Windows Update for Business によって直接管理されている Windows 10 デバイスの Windows 10 機能更新プログラムまたは品質更新プログラムに対し、遅延ポリシーを構成できるようになりました。 遅延ポリシーの管理は、**[ソフトウェア ライブラリ]** > **[Windows 10 のサービス]** の下の新しい **[Windows Update for Business ポリシー]** ノードでできます。
 
 詳細については、「[Windows 10 における Windows Update for Business との統合](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)」を参照してください。
 
@@ -233,8 +220,7 @@ Windows Update for Business によって直接管理されている Windows 10 �
 ## <a name="reporting"></a>レポート
 
 ### <a name="use-windows-analytics-with-configuration-manager"></a>Configuration Manager で Windows Analytics を使用する
-<!-- 1318608 -->
-Windows Analytics は、Operations Management Suite 上で実行するソリューションのセットです。 このソリューションでは、環境の現在の状態に洞察を形成することができます。 環境内のデバイスでは、Windows の利用統計情報がレポートされます。 このデータは、Operations Management Suite の Web ポータルによって、アクセスすることができます。 Upgrade Readiness の場合は、データは、Configuration Manager コンソールの監視ノードで直接使用できます。
+<!-- 1318608 -->Windows Analytics は、環境の現在の状態に関する有益な分析情報が得られるソリューションのセットです。 環境内のデバイスでは、Windows の利用統計情報がレポートされます。 データには、Azure portal からアクセスできます。 Upgrade Readiness の場合は、データは、Configuration Manager コンソールの監視ノードで直接使用できます。
 
 詳細については、「[Configuration Manager で Windows Analytics を使用する](/sccm/core/clients/manage/monitor-windows-analytics)」を参照してください。
 
@@ -244,22 +230,19 @@ Windows Analytics は、Operations Management Suite 上で実行するソリュ�
 ## <a name="mobile-device-management"></a>モバイル デバイス管理
 
 ### <a name="updates-to-android-for-work-sharing-configuration"></a>Android for Work の共有構成の更新
-<!-- 1338403 -->
-このリリースでは、**[仕事用プロファイル]** 設定グループの **[仕事用プロファイルと個人プロファイル間でのデータ共有を許可する**] 設定の値が更新されました。 仕事用プロファイルと個人用プロファイルの間のコピーおよび貼り付けをブロックするユーザー設定も追加されました。
+<!-- 1338403 -->このリリースでは、**[仕事用プロファイル]** 設定グループの **[仕事用プロファイルと個人プロファイル間でのデータ共有を許可する]** 設定の値が更新されました。 仕事用プロファイルと個人用プロファイルの間のコピーおよび貼り付けをブロックするユーザー設定も追加されました。
 
 詳細については、「[Intune で管理されている Android for Work デバイスの構成項目を作成する方法](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client)」を参照してください。
 
 ### <a name="android-and-ios-enrollment-restrictions"></a>Android および iOS の登録制限
-<!-- 1290826 -->
-このリリースでは、管理者は、ユーザーが個人の Android または iOS デバイスを登録できないことを指定できるようになりました。 新しいデバイス制限の設定を使用して、Android デバイスの登録を、事前に宣言されたデバイスに制限できます。 iOS デバイスの場合は、Apple の Device Enrollment Program、Apple Configurator、または Intune のデバイス登録マネージャー アカウントを使用して登録されているデバイスを除くすべてのデバイスの登録をブロックできます。
+<!-- 1290826 -->このリリースでは、管理者は、ユーザーが個人の Android または iOS デバイスを登録できないことを指定できるようになりました。 新しいデバイス制限の設定を使用して、Android デバイスの登録を、事前に宣言されたデバイスに制限できます。 iOS デバイスの場合は、Apple の Device Enrollment Program、Apple Configurator、または Intune のデバイス登録マネージャー アカウントを使用して登録されているデバイスを除くすべてのデバイスの登録をブロックできます。
 - Android の登録制限について詳しくは、[Android デバイス管理の設定](/sccm/mdm/deploy-use/enroll-hybrid-android)に関するページをご覧ください。
 - iOS の登録制限について詳しくは、[iOS の登録制限の構成](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac#configure-enrollment-restrictions)に関するセクションをご覧ください。
 
 ## <a name="protect-devices"></a>デバイスを保護する
 
 ### <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>Device Guard ポリシーに特定のファイルとフォルダーの信頼を含める
-<!--1324676-->
-このリリースでは、Device Guard ポリシー管理に機能が追加されています。
+<!--1324676-->このリリースでは、Device Guard ポリシー管理に機能が追加されています。
 
 必要に応じて、Device Guard ポリシー内のフォルダーの特定のファイルに信頼を追加できるようになりました。 これにより、次のことが可能になります。
 

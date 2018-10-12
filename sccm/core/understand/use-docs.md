@@ -2,7 +2,7 @@
 title: ドキュメントの使用方法
 titleSuffix: Configuration Manager
 description: Configuration Manager テクニカル ドキュメント ライブラリの使用に関するヒントについて説明します。
-ms.date: 04/30/2018
+ms.date: 09/07/2018
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -11,12 +11,12 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 46bff7e26a5df326b686b07c37f1d58352755857
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 6bd4675d3b366c5f414467b76627e25b91259ef2
+ms.sourcegitcommit: 240d3199e1c6fa47af6eda499492b2527516ab18
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32345092"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44326205"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>Configuration Manager ドキュメントの使用方法
 
@@ -63,9 +63,9 @@ ms.locfileid: "32345092"
 
 記事の右上にある **[フィードバック]** リンクをクリックし、一番下の [フィードバック] セクションに進みます。 このセクションは GitHub Issues と統合されています。 GitHub Issues との統合の詳細については、[ドキュメント プラットフォームのブログの投稿](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs)に関するページを参照してください。
 
-Configuration Manager 製品自体のフィードバックを投稿するには、**[Give product feedback]\(製品に関するフィードバックを送信する\)** をクリックしてください。 詳細については、「[製品に関するフィードバック](/sccm/core/understand/find-help#product-feedback)」を参照してください。 
+Configuration Manager 製品自体のフィードバックを投稿するには、**[製品のフィードバック]** をクリックしてください。 詳細については、「[製品に関するフィードバック](/sccm/core/understand/find-help#product-feedback)」を参照してください。 
 
-ドキュメントに関するフィードバックを送信するには、[GitHub アカウント](https://github.com/join)が必要です。 サインイン後、MicrosoftDocs の 1 回限りの承認を受けます。 承認後、**[Give documentation feedback]\(ドキュメントに関するフィードバックを送信する\)** をクリックし、タイトルとコメントを入力し、**[フィードバックの送信]** をクリックします。 このアクションによって、[SCCMdocs リポジトリ](https://github.com/MicrosoftDocs/SCCMdocs/issues)に対象記事の新しい問題が提出されます。
+ドキュメントに関するフィードバックを送信するには、[GitHub アカウント](https://github.com/join)が必要です。 サインイン後、MicrosoftDocs の 1 回限りの承認を受けます。 次に **[コンテンツに関するフィードバック]** をクリックし、タイトルとコメントを入力し、**[フィードバックの送信]** をクリックします。 このアクションによって、[SCCMdocs リポジトリ](https://github.com/MicrosoftDocs/SCCMdocs/issues)に対象記事の新しい問題が提出されます。
 
 この統合によって、対象記事に未処理または終了済みの問題があればそれも表示されます。 表示された場合、確認してから新しい問題を送信してください。 関連する問題が見つかった場合、顔アイコンをクリックして意見を追加します。あるいは、問題を展開してコメントを追加できます。 
 
@@ -106,15 +106,49 @@ docs.microsoft.com プラットフォームに関するフィードバックを�
 Configuration Manager ドキュメント ライブラリは、docs.microsoft.com のほとんどのコンテンツと同様に、GitHub ではオープンソースになっています。 このライブラリは、コミュニティの寄稿を受け入れ、奨励しています。 概要については、[投稿に関するガイド](https://docs.microsoft.com/contribute) ページをご覧ください。 [GitHub アカウント](https://github.com/join)の作成が唯一の前提条件です。
 
 #### <a name="basic-steps-to-contribute-to-sccmdocs"></a>SCCMdocs に寄稿するための基本手順
-1. 対象記事で **[編集]** をクリックします。 GitHub でソース ファイルが開きます。
-2. ソース ファイルを編集するには、鉛筆アイコンをクリックします。
-3. マークダウン ソースで変更を加えます。 詳細については、「[How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/how-to-write-use-markdown)」 (ドキュメントの記述にマークダウンを使用する方法) を参照してください。 
-4. ファイル変更の提案セクションで、公開コミット コメントを入力し、自分が "変更した内容" を説明します。 **[Propose file change]\(ファイル変更の提案\)** をクリックします。
-5. 下にスクロールし、行った変更を確認します。 **[プル要求の作成]** をクリックし、フォームを開きます。 この変更を行った "理由" を説明します。 記事の作成者のタグを付け、確認を求めます。 **[プル要求の作成]** をクリックします。
+1. 対象記事で **[編集]** をクリックします。 GitHub でソース ファイルが開きます。  
+
+2. ソース ファイルを編集するには、鉛筆アイコンをクリックします。  
+
+3. マークダウン ソースで変更を加えます。 詳細については、「[How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/how-to-write-use-markdown)」 (ドキュメントの記述にマークダウンを使用する方法) を参照してください。  
+
+4. ファイル変更の提案セクションで、公開コミット コメントを入力し、自分が "変更した内容" を説明します。 **[Propose file change]\(ファイル変更の提案\)** をクリックします。  
+
+5. 下にスクロールし、行った変更を確認します。 **[プル要求の作成]** をクリックし、フォームを開きます。 この変更を行った "理由" を説明します。 記事の作成者のタグを付け、確認を求めます。 **[プル要求の作成]** をクリックします。  
+
 
 ### <a name="what-to-contribute"></a>貢献できること
-投稿に興味があるがどこから始めればわからない場合、以下の提案をご覧ください。
-- 記事の正しさを確認します。 `mm/dd/yyyy` 形式で **ms.date** メタデータを更新します。 このような貢献によって、コンテンツが新しい状態で維持されます。
-- 自分の経験に基づき、説明、例、手本を追加します。 このような貢献によって、コミュニティの力が利用され、知識が共有されます。  
-- 英語以外の言語の翻訳を訂正します。 このような貢献によって、ローカライズされたコンテンツの有用性が上がります。
-- 問題の一覧を見て、コミュニティに宛てられた「[good-first-issue](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:good-first-issue)」や「[help-wanted](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:help-wanted)」というラベルを探します。 このようなラベルは、コミュニティの貢献が求められる問題に対して Microsoft の作成者が割り当てるものです。
+
+投稿に関心があるがどこから始めればよいかわからない場合は、以下の提案をご覧ください。  
+
+- 問題の一覧を見て、コミュニティ宛てのラベルを探します。  
+    - [good-first-issue](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:good-first-issue)   
+    - [help-wanted](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:help-wanted)  
+
+    このようなラベルは、コミュニティの貢献が求められる問題に対して Microsoft の作成者が割り当てるものです。  
+
+- 記事の正しさを確認します。 `mm/dd/yyyy` 形式で **ms.date** メタデータを更新します。 このような貢献によって、コンテンツが新しい状態で維持されます。  
+
+- 自分の経験に基づき、説明、例、手本を追加します。 このような貢献によって、コミュニティの力が利用され、知識が共有されます。   
+
+- 英語以外の言語の翻訳を訂正します。 このような貢献によって、ローカライズされたコンテンツの有用性が上がります。  
+
+> [!Note]  
+> Microsoft の従業員でない場合、規模の大きい投稿を行うには貢献者使用許諾契約書 (CLA) に署名する必要があります。 GitHub では、投稿がしきい値に達すると自動的にこの契約への署名が求められます。  
+
+
+### <a name="tips"></a>ヒント
+
+Configuration Manager のドキュメントに投稿する場合、次の一般的なガイドラインに従ってください。
+
+- いきなり大規模なプル要求を行わないでください。 そうではなく、[問題を報告](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_docfeedback)してディスカッションを開始してください。 これで、大量の時間を費やす前にその方向性が正しいかどうか確認できます。  
+
+- [Microsoft スタイル ガイド](https://aka.ms/MicrosoftStyle)をご覧ください。 [Microsoft のスタイルとボイスに関する 10 のヒント](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)を把握してください。  
+
+- 作業の出発点として[プル要求のテンプレート](https://github.com/MicrosoftDocs/SCCMdocs/blob/master/PULL_REQUEST_TEMPLATE.md)を使用してください。  
+
+- [GitHub Flow ワークフロー](https://guides.github.com/introduction/flow/)に従ってください。  
+
+- ご自身の投稿について、ブログやツイート (その他何でも) を使ってたくさん報告しましょう。  
+
+(この一覧は、[.NET の投稿に関するガイド](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md#dos-and-donts)から借用されたものです。)

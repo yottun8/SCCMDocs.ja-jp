@@ -1,7 +1,7 @@
 ---
 title: Azure サービスの構成
 titleSuffix: Configuration Manager
-description: Configuration Manager 環境を、クラウド管理、Upgrade Readiness、ビジネス向け Microsoft ストア、Operations Management Suite 用の Azure サービスと接続します。
+description: Configuration Manager 環境を、クラウド管理、Upgrade Readiness、ビジネス向け Microsoft ストア、Log Analytics 用の Azure サービスと接続します。
 ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5607402171a3b771560ff439b1f1f99a6a947e83
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 1ea47941be51d1bf38de53203aad00c02d0a11d3
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383298"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893772"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configuration Manager と共に使用するように Azure サービスを構成する
 
@@ -37,7 +37,10 @@ ms.locfileid: "39383298"
 
     - 特定の[クラウド管理ゲートウェイ シナリオ](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#scenarios)をサポートする  
 
--   **OMS コネクタ**: [Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) (OMS) に接続します。 OMS Log Analytics にコレクションなどのデータを同期します。  
+-   **Log Analytics コネクタ**: [Azure Log Analytics に接続します](/sccm/core/clients/manage/sync-data-log-analytics)。 コレクションのデータを Log Analytics に同期します。  
+
+    > [!Note]  
+    > この記事で "*Log Analytics コネクタ*" と呼んでいるものは、以前は "*OMS コネクタ*" という名前でした。 機能に違いはありません。 詳しくは、[Azure 管理の監視](https://docs.microsoft.com/azure/monitoring/#operations-management-suite)に関するページをご覧ください。  
 
 -   **Upgrade Readiness コネクタ**: Windows Analytics [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) に接続します。 クライアント アップグレード互換性データを表示します。  
 
@@ -61,7 +64,7 @@ ms.locfileid: "39383298"
 |[サービス]  |テナント  |クラウド  |Web アプリ  |ネイティブ アプリ  |操作  |
 |---------|---------|---------|---------|---------|---------|
 |クラウド管理</br>(Azure AD ユーザー探索を使用) | 複数 | パブリック | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | インポート、作成 |
-|OMS コネクタ | 1 台 | パブリック、プライベート | ![サポートされています](media/green_check.png) | ![サポートされていません](media/Red_X.png) | インポート |
+|Log Analytics コネクタ | 1 台 | パブリック、プライベート | ![サポートされています](media/green_check.png) | ![サポートされていません](media/Red_X.png) | インポート |
 |Upgrade Readiness | 1 台 | パブリック | ![サポートされています](media/green_check.png) | ![サポートされていません](media/Red_X.png) | インポート |
 |Microsoft Store</br>Business | 1 台 | パブリック | ![サポートされています](media/green_check.png) | ![サポートされていません](media/Red_X.png) | インポート、作成 |
 
@@ -90,7 +93,7 @@ Azure アプリの詳細については、まず、以下の記事を参照し�
 
 接続するサービスを決定したら、「[サービスの詳細](#service-details)」の表を参照してください。 この表には、Azure サービス ウィザードを完了するために必要な情報が示されています。 事前に Azure AD 管理者と話し合ってください。 Azure Portal で事前にアプリを手動で作成し、アプリの詳細を Configuration Manager にインポートするかどうかを決定します。 または、Configuration Manager を使用して、Azure AD でアプリを直接作成します。 Azure AD から必要なデータを収集する場合は、この記事の他のセクションの情報を確認してください。
 
-一部のサービスでは、Azure AD アプリに特定のアクセス許可を割り当てる必要があります。 各サービスの情報を確認して、必要なアクセス許可を判別してください。 たとえば、Web アプリをインポートする前に、Azure 管理者はまず、[Azure Portal](https://portal.azure.com) でそれを作成する必要があります。 Upgrade Readiness または OMS コネクタを構成する場合、関連する OMS ワークスペースを含むリソース グループに対して、新たに登録した Web アプリの*共同作成者* アクセス許可を付与する必要があります。 これにより、Configuration Manager からそのワークスペースへのアクセスが許可されます。 アクセス許可を割り当てるときは、Azure portal の **[ユーザーの追加]** 領域でアプリの登録名を検索します。 このプロセスは、[OMS へのアクセス許可を Configuration Manager に提供する](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)場合と同じです。 Azure 管理者は、アプリを Configuration Manager にインポートする前に、これらのアクセス許可を割り当てる必要があります。
+一部のサービスでは、Azure AD アプリに特定のアクセス許可を割り当てる必要があります。 各サービスの情報を確認して、必要なアクセス許可を判別してください。 たとえば、Web アプリをインポートする前に、Azure 管理者はまず、[Azure Portal](https://portal.azure.com) でそれを作成する必要があります。 Upgrade Readiness または Log Analytics コネクタを構成する場合、関連するワークスペースを含むリソース グループに対して、新たに登録した Web アプリの "*共同作成者*" アクセス許可を付与する必要があります。 これにより、Configuration Manager からそのワークスペースへのアクセスが許可されます。 アクセス許可を割り当てるときは、Azure portal の **[ユーザーの追加]** 領域でアプリの登録名を検索します。 このプロセスは、[Log Analytics へのアクセス許可を Configuration Manager に提供する](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics)場合と同じです。 Azure 管理者は、アプリを Configuration Manager にインポートする前に、これらのアクセス許可を割り当てる必要があります。
 
 
 
@@ -209,7 +212,7 @@ Azure サービス ウィザードのアプリ ページで **[ネイティブ �
 
 -   **クラウド管理**サービス、**[探索]** ページ: [Azure AD ユーザー探索を構成する](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
 
--   **OMS コネクタ** サービス、**[構成]** ページ: [OMS への接続を構成する](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#use-the-azure-services-wizard-to-configure-the-connection-to-oms)  
+-   **Log Analytics コネクタ** サービス、**[構成]** ページ: [Configure the connection to Log Analytics](/sccm/core/clients/manage/sync-data-log-analytics#configure-the-connection-to-log-analytics) (Log Analytics への接続を構成する)  
 
 -   **Upgrade Readiness コネクタ** サービス、**[構成]** ページ: [Azure ウィザードを使用して、接続を作成する](/sccm/core/clients/manage/upgrade/upgrade-analytics#use-the-azure-wizard-to-create-the-connection)  
 

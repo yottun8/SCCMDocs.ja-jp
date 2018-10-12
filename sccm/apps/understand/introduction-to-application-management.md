@@ -1,8 +1,8 @@
 ---
 title: アプリ管理の概要
 titleSuffix: Configuration Manager
-description: Configuration Manager アプリケーションの管理と展開に必要な基本的な情報について説明します。
-ms.date: 07/30/2018
+description: Configuration Manager でアプリケーションを管理および展開するために必要となる基本的な情報について説明します。
+ms.date: 08/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 70ab4136f39b4bf559c3d460ca1528bb4de0f6e1
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 0d4e83cbcb1c95303719b1d86ffc9a8969c16998
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384292"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893908"
 ---
 # <a name="introduction-to-application-management-in-configuration-manager"></a>Configuration Manager でのアプリケーション管理の概要
 
@@ -186,9 +186,9 @@ Configuration Manager クライアントはアプリケーションの展開を�
 - [ソフトウェア センターのユーザー ガイド](/sccm/core/understand/software-center)
 
 > [!Note]  
-> アプリケーション カタログ Web サービス ポイントの役割は、1806 では必須ではなくなりましたが、依然としてサポートされている役割です。 
+> アプリケーション カタログの Web サイト ポイントの役割と Web サービス ポイントの役割は 1806 では*不要*になりましたが、依然として*サポート*されている役割です。 
 > 
-> アプリケーション カタログ Web サイトの役割は、バージョン 1806 ではサポートされていません。 詳細については、[削除された機能と非推奨の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)に関するページを参照してください。  
+> アプリケーション カタログ Web サイト ポイントの **Silverlight ユーザー エクスペリエンス**は現在サポートされていません。 詳細については、[削除された機能と非推奨の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)に関するページを参照してください。  
 
 
 

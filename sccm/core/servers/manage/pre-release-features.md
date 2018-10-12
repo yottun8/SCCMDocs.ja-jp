@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e72cdf667f96828fb6730cf3294c8d20ec553130
-ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ms.openlocfilehash: 7b82bdfcbe69c7e9d59185fc6af20a85e65a6e7d
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43289256"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893568"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Configuration Manager のプレリリース機能
 
@@ -91,7 +91,7 @@ ms.locfileid: "43289256"
 | データ ウェアハウス サービス ポイント<!-- 1277922 --> |  [バージョン 1702](/sccm/core/servers/manage/data-warehouse) |[バージョン 1706](/sccm/core/servers/manage/data-warehouse)|
 | クライアントへのコンテンツ配布のピア キャッシュ<!-- 1101436 --> |  [バージョン 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) | [バージョン 1710](/sccm/core/plan-design/hierarchy/client-peer-cache)|
 | クラウド管理ゲートウェイ<!-- 1101764 --> |  [バージョン 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |[バージョン 1802](/sccm/core/clients/manage/plan-cloud-management-gateway)|
-| Microsoft Operations Management Suite コネクタ<!-- 1236739 --> | [バージョン 1606](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) |[バージョン 1802](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)|
+| Log Analytics コネクタ <!-- 1236739 --> | [バージョン 1606](/sccm/core/clients/manage/sync-data-log-analytics) |[バージョン 1802](/sccm/core/clients/manage/sync-data-log-analytics)|
 | クラスター対応のコレクションのサービス (サーバー グループの提供)<!-- 1081776 --> | [バージョン 1602](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups)|![未追加](media/red_x.png)|
 | System Center Configuration Manager が管理する PC の条件付きアクセス<!--  --> | [バージョン 1602](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)     | [バージョン 1702](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)                     |
 <!--Image used = ![Not yet](media/red_x.png) -->

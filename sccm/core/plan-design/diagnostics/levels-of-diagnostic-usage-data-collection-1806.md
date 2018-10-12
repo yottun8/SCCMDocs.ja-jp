@@ -10,12 +10,12 @@ ms.assetid: a0287beb-70a9-4b57-a627-e7bfba27fd3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5da60a9dd45b3993f9c1afd95c41a90956ec70c4
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: d964295134538cf281af214830a5bc416484be51
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385963"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893673"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1806"></a>バージョン 1806 での診断の使用状況データ収集のレベル
 
@@ -258,11 +258,11 @@ Configuration Manager バージョン 1806 では、このレベルには次の�
 
   - Configuration Manager に接続されている Azure Active Directory アプリケーションとサービスの数
 
-  - Operations Management Suite に同期されているコレクションの数
+  - Azure Log Analytics に同期されているコレクションの数
 
   - Upgrade Analytics コネクタの数
 
-  - Operations Management Suite クラウド コネクタが有効になっているかどうか  
+  - Azure Log Analytics クラウド コネクタが有効になっているかどうか  
 
   - ***[新規]*** クラウド配布ポイントをソースの場所として使ったプル配布ポイントの数  
 

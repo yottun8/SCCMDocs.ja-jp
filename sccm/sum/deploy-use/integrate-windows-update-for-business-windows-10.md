@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 07616a1c03c0383e9001418043dc6cd7ec117c1d
-ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
+ms.openlocfilehash: ce3937b630eea38af34f1abd7c7348ebf2f8dfdb
+ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703487"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44111095"
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>Windows 10 における Windows Update for Business との統合
 
@@ -66,8 +66,7 @@ Windows Update for Business (WUfB) を使用すると、組織内の Windows 10 
 5.  WUfB を介して管理されているコンピューターの対応ステータスには **[不明]** と表示され、全体のコンプライアンス対応率をカウントする際に、これらのコンピューターは除外されます。  
 
 ## <a name="configure-windows-update-for-business-deferral-policies"></a>Windows Update for Business 遅延ポリシーの構成
-<!-- 1290890 -->
-Configuration Manager バージョン 1706 以降、Windows Update for Business によって直接管理されている Windows 10 デバイスの Windows 10 機能更新プログラムまたは品質更新プログラムに対し、遅延ポリシーを構成できるようになりました。 遅延ポリシーの管理は、**[ソフトウェア ライブラリ]** > **[Windows 10 のサービス]** の下の新しい **[Windows Update for Business ポリシー]** ノードでできます。
+<!-- 1290890 --> Configuration Manager バージョン 1706 以降、Windows Update for Business によって直接管理されている Windows 10 デバイスの Windows 10 機能更新プログラムまたは品質更新プログラムに対し、遅延ポリシーを構成できるようになりました。 遅延ポリシーの管理は、**[ソフトウェア ライブラリ]** > **[Windows 10 のサービス]** の下の新しい **[Windows Update for Business ポリシー]** ノードでできます。
 
 >[!NOTE] 
 >Configuration Manager バージョン 1802 以降では、Windows Insider の遅延ポリシーを設定できます。 <!--507201-->Windows Insider プログラムの詳細については、[Windows Insider Program for Business の概要](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business)に関するページを参照してください。
@@ -82,10 +81,10 @@ Configuration Manager バージョン 1706 以降、Windows Update for Business 
 3. **[全般]** ページで、ポリシーの名前と説明を入力します。
 4. **[遅延ポリシー]** ページで、機能更新プログラムを遅延または一時停止するかどうかを設定します。 機能更新プログラムは通常、Windows の新機能です。 **[ブランチ準備レベル]** を設定すると、機能更新プログラムが Microsoft からリリースされた場合に、受け取りを遅延させるかどうか、およびその期間を定義できます。
     - **[ブランチ準備レベル]**: Windows Update を受け取るデバイスのブランチを設定します (Current Branch または Current Branch for Business)。
-    - **[遅延期間 (日数)]**: 機能更新プログラムを遅延させる日数を指定します。 これらの機能更新プログラムの受け取りは、リリースから 180 日間遅延させることができます。
+    - **[遅延期間 (日数)]**: 機能更新プログラムを遅延させる日数を指定します。 これらの機能更新プログラムの受け取りは、リリースから 365 日間遅延させることができます。
     - **[Pause Features Updates starting]\(機能更新プログラムの一時停止の開始\)**: デバイスでの機能更新プログラムの受け取りを一時停止するかどうかを選択します。一時停止の期間は最大 60 日間です。 最大日数が経過すると、一時停止機能は自動的に期限切れとなり、デバイスは適用可能な更新を確認するために Windows Update をスキャンします。 このスキャンが終ったら、もう一度更新を一時停止することができます。 機能更新プログラムの一時停止を解除するには、チェック ボックスをオフにします。   
 5. 品質更新プログラムを遅延または一時停止するかどうかを選択します。 品質更新プログラムは通常、既存の Windows 機能の修正と機能強化で、通常は毎月第 1 火曜日に公開されますが、Microsoft が任意のタイミングでリリースすることもあります。 品質更新プログラムが利用可能になった場合に受け取りを遅延させるかどうか、およびその期間を定義できます。
-    - **[遅延期間 (日数)]**: 機能更新プログラムを遅延させる日数を指定します。 これらの機能更新プログラムの受け取りは、リリースから 180 日間遅延させることができます。
+    - **[遅延期間 (日数)]**: 品質更新プログラムを遅延させる日数を指定します。 これらの品質更新プログラムの受け取りは、リリースから 30 日間遅延させることができます。
     - **[品質更新プログラムの一時停止の開始]**: デバイスでの品質更新プログラムの受け取りを一時停止するかどうかを選択します。一時停止の期間は最大 35 日間です。 最大日数が経過すると、一時停止機能は自動的に期限切れとなり、デバイスは適用可能な更新を確認するために Windows Update をスキャンします。 このスキャンが終ったら、もう一度更新を一時停止することができます。 品質更新プログラムの一時停止を解除するには、チェック ボックスをオフにします。
 6. **[他の Microsoft 製品の更新プログラムのインストール]** を選択して、遅延の設定を Microsoft Update と Windows Update に適用可能にするグループ ポリシー設定を有効にします。
 7. **[Include drivers with Windows Update]\(ドライバーと Windows Update を含める\)** を選択して、Windows Update から自動的にドライバーを更新します。 この設定をオフにすると、Windows Update からドライバーの更新プログラムがダウンロードされません。

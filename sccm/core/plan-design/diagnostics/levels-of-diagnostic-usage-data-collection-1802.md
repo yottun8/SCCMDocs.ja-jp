@@ -10,12 +10,12 @@ ms.assetid: 29dd51b8-6576-4010-81ba-3129ed2c3421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 561fd23795d52debe0304fa16fd07234dc63e4c2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d630c5d02b6c7729e5f26ce3915f48bf20aef7e2
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344774"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893755"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1802-of-system-center-configuration-manager"></a>System Center Configuration Manager バージョン 1802 で収集される診断結果および使用状況データのレベル
 
@@ -67,7 +67,7 @@ Configuration Manager バージョン 1802 では、このレベルには次の�
 
 - Configuration Manager クライアント バージョン、OS バージョン、Office バージョンの数
 
-- 管理対象デバイスのオペレーティング システムおよび Exchange Connector によって設定されたポリシーの数
+- マネージド デバイスのオペレーティング システムおよび Exchange Connector によって設定されたポリシーの数
 
 - Windows 10 デバイスの数 (ブランチおよびビルド別)
 
@@ -223,11 +223,11 @@ Configuration Manager バージョン 1802 では、このレベルには次の�
 
   - Configuration Manager に接続されている Azure Active Directory アプリケーションとサービスの数
 
-  - Operations Management Suite に同期されているコレクションの数
+  - Azure Log Analytics に同期されているコレクションの数
 
   - Upgrade Analytics コネクタの数
 
-  - Operations Management Suite クラウド コネクタが有効になっているかどうか
+  - Azure Log Analytics クラウド コネクタが有効になっているかどうか
 
 
 ### <a name="co-management"></a>共同管理  
