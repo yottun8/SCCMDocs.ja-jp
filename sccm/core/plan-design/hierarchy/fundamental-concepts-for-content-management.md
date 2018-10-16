@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a8f4d93c7bfa73b04ed2c760db17b27e8f1f6de2
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 5c3af900bae26262ba402ea258b8859ba07b999b
+ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385261"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48891216"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager でのコンテンツ管理の基本的な概念
 
@@ -146,11 +146,9 @@ Configuration Manager で新しい OS を展開するとき、タスク シー�
 1.  クライアントと同じコンピューター上の配布ポイント
 2.  同じネットワーク サブネット内のピア ソース
 3.  同じネットワーク サブネット内の配布ポイント
-4.  同じ Active Directory サイト内のピア ソース
-5.  同じ Active Directory サイト内の配布ポイント
-6.  同じ境界グループ内のピア ソース
-7.  現在の境界グループ内の配布ポイント
-8.  フォールバック用に構成された近隣境界グループ内の配布ポイント
+4.  同じ境界グループ内のピア ソース
+5.  現在の境界グループ内の配布ポイント
+6.  フォールバック用に構成された近隣境界グループ内の配布ポイント
 9.  既定のサイト境界グループ内の配布ポイント 
 10. Windows Update クラウド サービス
 11. インターネットに接続されている配布ポイント
