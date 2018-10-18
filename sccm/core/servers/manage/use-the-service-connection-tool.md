@@ -10,12 +10,12 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1faabd64d11eeef8e825f22f7f661112813f5459
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: e0051b00f9c9540291db94c79a81c600c87ad59c
+ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "34474311"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48891199"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>System Center Configuration Manager のサービス接続ツールの使用
 
@@ -48,7 +48,7 @@ ms.locfileid: "34474311"
 
 
 
--   ファイルと更新プログラムを格納するための十分な空き領域を持つ USB ドライブ、またはサービス接続ポイントのコンピューターとインターネットに接続しているコンピューターの間でファイルを転送する別の方法が必要になります。 (このシナリオでは、サイトと管理対象のコンピューターはインターネットに直接接続されていないことを想定しています)。  
+-   ファイルと更新プログラムを格納するための十分な空き領域を持つ USB ドライブ、またはサービス接続ポイントのコンピューターとインターネットに接続しているコンピューターの間でファイルを転送する別の方法が必要になります。 (このシナリオでは、サイトとマネージド コンピューターはインターネットに直接接続されていないことを想定しています)。  
 
 
 
