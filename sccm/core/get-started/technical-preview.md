@@ -2,7 +2,7 @@
 title: Technical Preview リリース
 titleSuffix: Configuration Manager
 description: Configuration Manager の新機能を体験する Technical Preview Branch について説明します。
-ms.date: 08/17/2018
+ms.date: 10/03/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4be568e997a85acf49c3c86971f8d678d916aef0
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: c43b501e8305f97f178d2eba9d3ab64fa9efe2a7
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589527"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862449"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager の Technical Preview
 
@@ -25,7 +25,7 @@ ms.locfileid: "42589527"
 
 このリリースはテクニカル プレビューであるため、詳細や機能は変更されることがあります。  
 
-この情報は、Configuration Manager Technical Preview Branch のすべてのバージョンに適用されます。 この記事では、各新機能とそれが最初に組み込まれる Technical Preview バージョンの一覧を示します。 たとえば、2018 年 (18) 6 月 (06) のバージョンは **1806** です。 個々の機能の詳細については、Preview バージョンごとの記事で説明します。  
+この情報は、Configuration Manager Technical Preview Branch のすべてのバージョンに適用されます。 この記事では、各新機能とそれが最初に組み込まれる Technical Preview バージョンの一覧を示します。 たとえば、2018 年 (18) 9 月 (09) のバージョンは **1809** です。 個々の機能の詳細については、Preview バージョンごとの記事で説明します。  
 
 Configuration Manager の *Current Branch* の新機能については、「[System Center Configuration Manager の増分バージョンの新機能](/sccm/core/plan-design/changes/whats-new-incremental-versions)」をご覧ください。
 
@@ -124,10 +124,20 @@ Technical Preview の新機能に関するフィードバックをお寄せく�
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1808"></a>Technical Preview バージョン 1808
+### <a name="technical-preview-version-1810"></a>Technical Preview バージョン 1810
 
-- [ ソフトウェア更新プログラムの段階的展開](capabilities-in-technical-preview-1808.md#bkmk_pod) <!--1358146-->
-- [アプリケーション修復の機能強化](capabilities-in-technical-preview-1808.md#bkmk_repair) <!--1357866-->
+- [ クライアント インストールの改善](capabilities-in-technical-preview-1810.md#bkmk_ccmsetup) <!--1358840-->
+- [ 共同管理デバイスに必要なアプリ コンプライアンス ポリシー](capabilities-in-technical-preview-1810.md#bkmk_app-compliance) <!--1358196-->
+- [ 共同管理ダッシュボードの改善](capabilities-in-technical-preview-1810.md#bkmk_comgmt-report) <!--1358980-->
+- [新しい境界グループのオプション](capabilities-in-technical-preview-1810.md#bkmk_bgoptions) <!--1358749-->
+- [Windows クラスター ノード上のサイト システム](capabilities-in-technical-preview-1810.md#bkmk_cluster) <!--1359132-->
+- [CMPivot の改善](capabilities-in-technical-preview-1810.md#bkmk_cmpivot) <!--1359068-->
+- [スクリプトの改善](capabilities-in-technical-preview-1810.md#bkmk_scripts) <!--1358239-->
+- [デバイスを復帰させる新しいクライアント通知アクション](capabilities-in-technical-preview-1810.md#bkmk_wakeup) <!--1317364-->
+- [境界グループのタスク シーケンス サポート](capabilities-in-technical-preview-1810.md#bkmk_bgr-osd) <!--1359025-->
+- [管理分析情報ダッシュボード](capabilities-in-technical-preview-1810.md#bkmk_insights) <!--1357979-->
+- [コンソール内ドキュメント ダッシュボード](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) <!--1357546-->
+- [ドライバーのメンテナンスの機能強化](capabilities-in-technical-preview-1810.md#bkmk_drivers)<!--1358270-->  
 
 
 > [!Note]  
@@ -146,6 +156,12 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |機能 |Technical Preview のバージョン |Current Branch のバージョン|  
  |----------------|---------------------|--------------------|
+ | CMPivot の改善 <!--1359068--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_cmpivot) | ![追加されていません](media/Red_X.gif) | 
+ | ライフサイクル ダッシュボードの改善 <!--1358702--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_lifecycle) | ![追加されていません](media/Red_X.gif) | 
+ | データ ウェアハウスの機能強化 <!--1358870--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_dataw) | ![追加されていません](media/Red_X.gif) | 
+ | ソフトウェア更新プログラムのメンテナンス期間の改善 <!--vso2839307--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_sum-mw) | ![追加されていません](media/Red_X.gif) | 
+ | ソフトウェア更新プログラムの段階的展開 <!--1358146--> | [Tech Preview 1808](capabilities-in-technical-preview-1808.md#bkmk_pod) | ![追加されていません](media/Red_X.gif) | 
+ | アプリケーション修復の機能強化 <!--1357866--> | [Tech Preview 1808](capabilities-in-technical-preview-1808.md#bkmk_repair) | ![追加されていません](media/Red_X.gif) | 
  | コミュニティ ハブ <!--1357766--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) | ![追加されていません](media/Red_X.gif) | 
  | オフライン OS イメージ サービス用のドライブを指定する <!--1358924--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_osd) | ![追加されていません](media/Red_X.gif) | 
  | Intune での共同管理されたデバイス同期アクティビティ <!--1358565--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_comgmt) | ![追加されていません](media/Red_X.gif) | 
@@ -153,47 +169,8 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | 電子メールでアプリケーション要求を承認する <!--1321550--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_email-approve) | ![追加されていません](media/Red_X.gif) | 
  | スクリプトの出力の改良 <!--1236459--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_script) | ![追加されていません](media/Red_X.gif) | 
  | サード パーティ製ソフトウェアの更新プログラムの改良 <!--1358714--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_3pupdate) | ![追加されていません](media/Red_X.gif) | 
- | 段階的な展開の機能強化 <!--1358577,1358147,1358578--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_pod)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | 新しい Windows アプリケーション パッケージ形式のサポート <!--1357427--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_msix)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | クライアント プッシュ セキュリティの機能改善 <!--1358204--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_client-push)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | プロアクティブ メンテナンスの管理分析情報 <!--1352184,et al--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_insights)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | 共同管理されたデバイスのモバイル アプリ ワークロードの移行 <!--1357892--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | ピアのダウンロードの境界グループのオプション <!--1356193--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | カスタム カタログ用のサード パーティ製ソフトウェアの更新プログラムのサポート <!--1358714--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | クラウド管理機能の改善 <!--511980,515854--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_cloud)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | 新しいソフトウェア更新プログラムのコンプライアンス レポート <!--1357775--> | [Tech Preview 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_report)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | サード パーティ製ソフトウェアの更新プログラム <!--1352101--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Microsoft Edge 用に Windows Defender SmartScreen 設定を構成する <!--1353701--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | 共同管理されたデバイスのために MDM ポリシーを Microsoft Intune から同期する <!--1357377--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | 共同管理を使用して Intune に Office 365 ワークロードを移行する <!--1357841--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Package Conversion Manager <!--1357861--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#package-conversion-manager)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | コンテンツなしのソフトウェア更新プログラムの展開 <!--1357933--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Office 365 インストーラーと Office カスタマイズ ツールの統合 <!--1358149--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | クラウド管理ゲートウェイの機能改善 <!--1358215,1358651,503899--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway)   | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | セキュアなクライアント通信の改善 <!--1358278,1358279--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | ソフトウェア センターのインフラストラクチャの改善 <!--1358309--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | デバイス上のすべてのユーザーに対して Windows アプリ パッケージをプロビジョニングする <!--1358310--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Surface ダッシュボードの改善 <!--1358654--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | ハードウェア インベントリの既定の単位のリビジョン <!--514442--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | タスク シーケンスに手動で構成されたフェーズを使用して段階的展開を作成する <!--1358148--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Azure Resource Manager のためのクラウド配布ポイントのサポート <!--1322209--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | 管理の洞察に基づいて対策する <!--1357930--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | 共同管理を使用して Intune にデバイス構成ワークロードを移行する <!--1357903--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#transition-device-configuration-workload-to-intune-using-co-management)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | ネットワークの輻そう制御を使用する配布ポイントを有効にする <!--1358112--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#enable-distribution-points-to-use-network-congestion-control)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | クラウド管理ダッシュボード <!--1358461--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-management-dashboard)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | CMPivot <!--1358456--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmpivot)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | 改善されたセキュアなクライアント通信 <!--1356889,1358228,1358460--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improved-secure-client-communications)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | サード パーティ製のソフトウェア更新プログラムのサポートを有効にするための機能強化 <!--1357605--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Windows 10 一括アップグレード タスク シーケンスの機能強化 <!--1358500--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | クライアントと共にインストールされる CMTrace <!--1357971--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | Configuration Manager コンソールの機能強化 <!--1358202--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | コンソール フィードバックの機能強化 <!--1357542--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | PXE 対応の配布ポイントの機能強化 <!--1357580--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-pxe-enabled-distribution-points)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | 大きな整数値でのハードウェア インベントリの機能強化 <!--1357880--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | WSUS メンテナンスの機能強化 <!--1357898--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
- | CNG 証明書のサポートの強化 <!--1357314--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates)  | [バージョン 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
 
-  
+
 
 ## <a name="features-in-previous-technical-previews"></a>以前の Technical Preview の機能
 

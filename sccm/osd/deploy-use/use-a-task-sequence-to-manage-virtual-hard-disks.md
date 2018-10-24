@@ -10,20 +10,20 @@ ms.assetid: 0212b023-804a-4f84-b880-7a59cdb49c67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fc5af771d6ab15f4e26c22c5272abf2bb46de047
-ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
+ms.openlocfilehash: 49de1e2f94d1016f3c0139ccf534b85a718bf7e0
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448890"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862500"
 ---
 # <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>タスク シーケンスによる System Center Configuration Manager でのバーチャル ハード ディスクの管理
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 
-    > [!NOTE] 
-    >  Support for this feature was deprecated in version 1710. For more information, see [Removed and deprecated features for Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
+   > [!NOTE] 
+   >  この機能のサポートは、バージョン 1710 で非推奨になりました。 詳しくは、「[Configuration Manager から削除された機能と非推奨の機能](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)」をご覧ください。
 
 System Center Configuration Manager では、Configuration Manager コンソールから、バーチャル ハード ディスク (VHD) を管理し、作成した VHD をデータセンターに統合できます。 具体的には、Configuration Manager コンソールから VHD を作成および変更し、アプリケーションとソフトウェア更新プログラムを VHD に追加して、VHD を System Center Virtual Machine Manager (VMM) に発行することができます。  
 

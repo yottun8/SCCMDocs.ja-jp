@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d783211396f3cdc9f14798ed7dc97e921e45554
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 793ba0f05c7a188a6bda9649c9d25922ce27d42c
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385913"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862466"
 ---
 # <a name="using-the-system-center-configuration-manager-console"></a>System Center Configuration Manager コンソールを使用する
 
@@ -82,6 +82,17 @@ Configuration Manager コンソールには、**ワークスペース**が 4 つ
 列の右クリック メニューの下部で、列を並べ替えたりグループ化できます。 また、その見出しをクリックして、列で並べ替えることができます。 
 
 ![Configuration Manager での列でグループ化](media/column-group-by.png)
+
+##<a name="console-command-line-options"></a>コンソール コマンド ライン オプション
+Microsoft System Center Configuration Manager コンソールには次のコマンド ライン オプションがあります。
+
+|オプション|説明|  
+|------------|-----------------|  
+|**/sms:debugview=1**|ビューが指定されているすべての ResultView に DebugView を含めます。 DebugView では、生のプロパティ (名前と値) が示されます。|  
+|**/sms:NamespaceView=1**|System Center Configuration Manager コンソールに名前空間ビューを表示します。|  
+|**/sms:ResetSettings**|System Center Configuration Manager コンソールで、ユーザーの永続的な接続とビューの状態を無視します (Microsoft 管理コンソール ウィンドウのサイズはリセットされません)。|  
+|**/sms:IgnoreExtensions**|System Center Configuration Manager のすべての拡張機能を無効にします。|  
+|**/sms:NoRestore**|System Center Configuration Manager コンソールで、前に永続化されていたノードのナビゲーションを無視します。|  
 
 ## <a name="console-improvements-in-version-1806"></a>バージョン 1806 のコンソールの機能強化
 Configuration Manager バージョン 1806 では、コンソールに次の機能強化が追加されています。

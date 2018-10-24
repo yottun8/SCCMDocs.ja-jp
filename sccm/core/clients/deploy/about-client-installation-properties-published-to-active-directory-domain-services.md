@@ -10,12 +10,12 @@ ms.assetid: 101d7d4d-92db-419d-b2ae-3c1c1dea68e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 585aa6ea6874ac6d6a5264b0f75d8dbcf39ddd0a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 46ede93e8366b4ae387f7e04b83dcb33ce854c5e
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334285"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862517"
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>Active Directory Domain Services に発行されたクライアント インストールのプロパティについて
 
@@ -73,12 +73,13 @@ Active Directory スキーマを System Center Configuration Manager 用に拡�
 ## <a name="client-push-installation"></a>クライアント プッシュ インストール  
  クライアント プッシュ インストールでは、インストール　プロパティの取得に Active Directory ドメイン サービスは使用されません。  
 
- その代わりに、**[クライアント プッシュ インストールのプロパティ]** ダイアログ ボックスの **[クライアント]** タブで、クライアント インストール プロパティを指定することができます。 これらのオプションとクライアント関連のサイト設定は、クライアントがクライアント インストールの際に読み込むファイルに保存されています。  
+ その代わりに、**[クライアント プッシュ インストールのプロパティ]** ダイアログ ボックスの **[インストールのプロパティ]** タブで、クライアント インストール プロパティを指定することができます。 これらのオプションとクライアント関連のサイト設定は、クライアントがクライアント インストールの際に読み込むファイルに保存されています。  
 
 > [!NOTE]  
->  クライアント プッシュ インストール、フォールバック ステータス ポイント、または信頼されたルート キーでは、**[クライアント]** タブで CCMSetup プロパティを設定する必要はありません。これらの設定はクライアント プッシュ インストールを使用してインストールをしたときに、自動で行われます。  
+>  クライアント プッシュ インストール、フォールバック ステータス ポイント、または信頼されたルート キーでは、**[インストールのプロパティ]** タブで CCMSetup プロパティを設定する必要はありません。これらの設定はクライアント プッシュ インストールを使用してインストールをしたときに、自動で行われます。
+Client.msi プロパティに加えて、CCMSetup では /forcereboot、/skipprereq、/logon、/BITSPriority、/downloadtimeout、/forceinstall の各パラメーターがサポートされます
 
- **[クライアント]** タブで指定したプロパティは、サイトが Active Directory Domain Services に公開されると、Active Directory Domain Services に発行されます。 これらの設定は CCMSetup がインストール プロパティなしで実行されるクライアント インストールで読み込まれます。  
+ **[インストールのプロパティ]** タブで指定したプロパティは、サイトが Active Directory Domain Services に公開されると、Active Directory Domain Services に発行されます。 これらの設定は CCMSetup がインストール プロパティなしで実行されるクライアント インストールで読み込まれます。  
 
 ## <a name="software-update-point-based-installation"></a>ソフトウェアの更新ポイント経由のインストール  
  ソフトウェアの更新ポイント ベースのインストール方法では、CCMSetup コマンド ラインへのインストール プロパティの追加はサポートされていません。  

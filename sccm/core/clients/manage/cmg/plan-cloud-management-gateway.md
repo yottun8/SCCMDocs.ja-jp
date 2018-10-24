@@ -2,7 +2,7 @@
 title: クラウド管理ゲートウェイの計画
 titleSuffix: Configuration Manager
 description: インターネットを基盤とするクライアントの管理を簡素化するクラウド管理ゲートウェイ (CMG) を計画し、設計します。
-ms.date: 07/30/2018
+ms.date: 09/10/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c60a269ade54c87c754fc9b5a3fb90deecd32f5
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
+ms.openlocfilehash: 9b25b7a5b7df42dc83bec18d38b44c7807e6dc1a
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111163"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601128"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager でクラウド管理ゲートウェイを計画する
 
@@ -93,6 +93,8 @@ CMG の展開と操作には、次のコンポーネントが含まれます。
 - インターネットベースのクライアントでは、ID や認証に **PKI 証明書または Azure AD** が使用されます。  
 
 - [**クラウド配布ポイント**](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)によって、必要に応じて、インターネットベースのクライアントにコンテンツを提供されます。  
+
+    - バージョン 1806 からは、CMG でクライアントにコンテンツを提供できるようにもなりました。 この機能により、Azure VM の必要な証明書とコストが削減されます。 詳細については、「[CMG を変更する](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg)」を参照してください。<!--1358651-->  
 
 
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
@@ -193,10 +195,10 @@ Fourth Coffee は、シアトルの本社にあるオンプレミス データ�
 | クライアント ステータスと通知     | ![サポートされています](media/green_check.png) |
 | スクリプトの実行     | ![サポートされています](media/green_check.png) |
 | コンプライアンス設定     | ![サポートされています](media/green_check.png) |
-| クライアント インストール</br>(Azure AD 統合で)     | ![サポートされています](media/green_check.png)  (1706) |
+| クライアント インストール<br>(Azure AD 統合で)     | ![サポートされています](media/green_check.png)  (1706) |
 | ソフトウェア配布 (デバイスを対象に)     | ![サポートされています](media/green_check.png) |
-| ソフトウェア配布 (ユーザーを対象とし、必須)</br>(Azure AD 統合で)     | ![サポートされています](media/green_check.png)  (1710) |
-| ソフトウェア配布 (ユーザーを対象とし、利用可能)</br>([すべての要件](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![サポートされています](media/green_check.png)  (1802) |
+| ソフトウェア配布 (ユーザーを対象とし、必須)<br>(Azure AD 統合で)     | ![サポートされています](media/green_check.png)  (1710) |
+| ソフトウェア配布 (ユーザーを対象とし、利用可能)<br>([すべての要件](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)) | ![サポートされています](media/green_check.png)  (1802) |
 | Windows 10 一括アップグレード タスク シーケンス     | ![サポートされています](media/green_check.png)  (1802) |
 | CMPivot     | ![サポートされています](media/green_check.png)  (1806) |
 | その他のタスク シーケンス シナリオ     | ![サポートされていません](media/Red_X.png) |
@@ -268,6 +270,9 @@ CMG では次の Azure コンポーネントが利用され、Azure サブスク
 
 - 詳細については、[クラウド配布ポイント](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost)の使用のコストに関するページを参照してください。  
 
+- バージョン 1806 からは、CMG でクライアントにコンテンツを提供できるようにもなりました。 この機能により、Azure VM の必要な証明書とコストが削減されます。 詳細については、「[CMG を変更する](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg)」を参照してください。<!--1358651-->  
+
+
 #### <a name="other-costs"></a>その他のコスト
 
 - クラウド サービスにはそれぞれ、動的 IP アドレスが与えられます。 個々の CMG で新しい動的 IP アドレスが使用されます。 CMG あたりの VM を追加しても、このようなアドレスは増えません。  
@@ -323,8 +328,8 @@ CMG の概念を表す基本的なデータ フロー図: ![CMG データ フロ
 | CMG 接続ポイント     | HTTPS | 443        | CMG サービス       | フォールバックで唯一の VM インスタンスに CMG チャネルを構築する<sup>2</sup> |
 | CMG 接続ポイント     |  HTTPS   | 10124-10139     | CMG サービス       | フォールバックで 2 つ以上の VM インスタンスに CMG チャネルを構築する<sup>3</sup> |
 | クライアント     |  HTTPS | 443         | CMG        | 一般クライアント通信 |
-| CMG 接続ポイント      | HTTPS または HTTP | 443 または 80         | 管理ポイント</br>(バージョン 1706 または 1710) | オンプレミス トラフィック、ポートは管理ポイント構成に依存 |
-| CMG 接続ポイント      | HTTPS | 443      | 管理ポイント</br>(バージョン 1802) | オンプレミス トラフィックは HTTPS にする必要あり |
+| CMG 接続ポイント      | HTTPS または HTTP | 443 または 80         | 管理ポイント<br>(バージョン 1706 または 1710) | オンプレミス トラフィック、ポートは管理ポイント構成に依存 |
+| CMG 接続ポイント      | HTTPS | 443      | 管理ポイント<br>(バージョン 1802) | オンプレミス トラフィックは HTTPS にする必要あり |
 | CMG 接続ポイント      | HTTPS または HTTP | 443 または 80         | ソフトウェアの更新ポイント | オンプレミス トラフィック、ポートはソフトウェア更新ポイント構成に依存 |
 
 <sup>1</sup> CMG 接続ポイントは最初に、各 CMG VM インスタンスと長時間 TCP-TLS 接続を確立しようとします。 ポート 10140 の最初の VM インスタンスに接続します。 2 番目の VM インスタンスではポート 10141 が使用されます。最大で 16 番目のポートでポート 10155 が使用されます。 TCP TLS 接続がパフォーマンスの面で最高ですが、インターネット プロキシをサポートしていません。 CMG 接続ポイントが TCP TLS 経由で接続できない場合、HTTPS にフォールバックします。<sup>2</sup>  

@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: afb32cd827a223ca9f317f2ddc96d9b176858d2d
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: ef8bfead4bb73871f990a455aef87971413701ba
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385339"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601111"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>Configuration Manager 用にクラウド配布ポイントをインストールする
 
@@ -224,17 +224,22 @@ Configuration Manager では、Azure サービスを定期的にチェックし�
 
 配布ポイントの概要は、Configuration Manager コンソールの **[管理]** ワークスペースにある **[クラウド サービス]** の **[クラウド配布ポイント]** ノードに表示されます。 配布ポイントを選択し、**[プロパティ]** をクリックすると詳細が表示されます。  
 
-クラウド配布ポイントのプロパティを編集するとき、次の値を編集できます。  
+クラウド配布ポイントのプロパティを編集するときに、次のタブに編集する設定が含まれます。  
 
-- **[設定]** タブ:  
+#### <a name="settings"></a>設定  
 
-    - **説明**  
+- **説明**  
 
-    - **証明書ファイル**: サーバー認証証明書が失効する前に、同じ共通名で新しい証明書を発行します。 次に、ここで新しい証明書を追加し、サービスで使用を開始します。 証明書が失効した場合、クライアントではサービスが信頼されず、使用されません。  
+- **証明書ファイル**: サーバー認証証明書が失効する前に、同じ共通名で新しい証明書を発行します。 次に、ここで新しい証明書を追加し、サービスで使用を開始します。 証明書が失効した場合、クライアントではサービスが信頼されず、使用されません。  
 
-- **[アラート]** タブ: ストレージと月単位の転送のアラートのデータしきい値を調整します。  
+#### <a name="alerts"></a>アラート
+ストレージと月単位の転送のアラートのデータしきい値を調整します。  
 
-- **[コンテンツ]** タブ: オンプレミス配布ポイントの場合と同様にコンテンツを管理します。  
+#### <a name="content"></a>Content
+オンプレミス配布ポイントの場合と同様にコンテンツを管理します。  
+
+
+### <a name="redeploy-the-service"></a>サービスの再展開
 
 次の構成など、より重要な変更には、サービスの再展開が必要です。
 - 従来の展開方法から Azure Resource Manager へ
@@ -260,6 +265,11 @@ Configuration Manager では、Azure サービスを定期的にチェックし�
     2. 新しいクラウド配布ポイントに必要なソフトウェア パッケージ コンテンツを配布します。  
 
     3. 従来のクラウド配布ポイントを削除します。
+
+> [!Tip]  
+> クラウド配布ポイントの現在のデプロイ モデルを決定するには、次の手順を実行します。<!--SCCMDocs issue #611-->  
+> 1. Configuration Manager コンソールで **[管理]** ワークスペースに進み、**[クラウド サービス]** を展開して **[クラウド配布ポイント]** ノードを選択します。  
+> 2. **デプロイ モデル**属性をリスト ビューに列として追加します。 Resource Manager のデプロイでは、この属性は **Azure Resource Manager** です。  
 
 
 ### <a name="stop-or-start-the-cloud-service-on-demand"></a>クラウド サービスのオンデマンドの停止と開始

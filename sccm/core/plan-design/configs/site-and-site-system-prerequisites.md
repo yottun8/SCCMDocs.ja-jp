@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 10dfebccd997a42f4c79e5d88bdf05e26585aebb
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: 4ba23a42acb111f4ed7d0337552b2ea90b0268d6
+ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589874"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448924"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Configuration Manager のサイトとサイト システムの前提条件
 
@@ -73,7 +73,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 - [登録プロキシ ポイント](#bkmk_2012EnrollProxpreq)
 - [フォールバック ステータス ポイント](#bkmk_2012FSPpreq)
 - [管理ポイント](#bkmk_2012MPpreq)
-- [レポート ポイント](#bkmk_2012RSpoint)
+- [レポート サービス ポイント](#bkmk_2012RSpoint)
 - [サービス接続ポイント](#bkmk_SCPpreq)
 - [ソフトウェアの更新ポイント](#bkmk_2012SUPpreq)
 - [状態移行ポイント](#bkmk_2012SMPpreq)
@@ -452,7 +452,7 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 
 
-##  <a name="bkmk_2012RSpoint"></a> レポート ポイント  
+##  <a name="bkmk_2012RSpoint"></a> レポート サービス ポイント  
 
 #### <a name="windows-server-roles-and-features"></a>Windows Server の役割と機能  
 

@@ -1,0 +1,206 @@
+items:
+- name: 概要
+  items:
+  - name: ハイブリッド MDM とは
+    href: understand/hybrid-mobile-device-management.md
+  - name: ハイブリッド MDM の新機能
+    href: understand/whats-new-in-hybrid-mobile-device-management.md
+- name: 計画と設計
+  href: plan-design/plan-hybrid-mobile-device-management.md
+  items:
+  - name: サポートされているデバイス プラットフォーム
+    href: plan-design/supported-device-platforms-for-hybrid.md
+  - name: デバイスの登録方法
+    href: plan-design/device-enrollment-methods.md
+- name: 作業開始
+  href: deploy-use/setup-hybrid-mdm.md
+  items:
+  - name: MDM コレクションを作成する
+    href: deploy-use/create-mdm-collection.md
+  - name: ドメイン名の要件を確認する
+    href: deploy-use/confirm-dns.md
+  - name: Intune サブスクリプションを構成する
+    href: deploy-use/configure-intune-subscription.md
+  - name: 使用条件を追加する
+    href: deploy-use/terms-and-conditions.md
+  - name: サービス接続ポイントを作成する
+    href: deploy-use/create-service-connection-point.md
+  - name: プラットフォームの登録を有効にする
+    href: deploy-use/enable-platform-enrollment.md
+    items:
+    - name: iOS および Mac
+      href: deploy-use/enroll-hybrid-ios-mac.md
+    - name: Windows
+      href: deploy-use/enroll-hybrid-windows.md
+    - name: Android
+      href: deploy-use/enroll-hybrid-android.md
+  - name: 追加の管理をセットアップする
+    href: deploy-use/set-up-additional-management.md
+  - name: MDM の構成を確認する
+    href: deploy-use/verify-mdm-configuration.md
+- name: 操作手順
+  items:
+  - name: (BYOD の) ユーザーが所有するデバイスを登録する
+    href: deploy-use/enroll-user-owned-devices.md
+  - name: 企業所有のデバイスの登録
+    href: deploy-use/enroll-company-owned-devices.md
+    items:
+    - name: iOS の DEP 登録
+      href: deploy-use/ios-device-enrollment-program-for-hybrid.md
+    - name: Apple Configurator の登録
+      href: deploy-use/ios-hybrid-enrollment-using-apple-configurator.md
+    - name: デバイス登録マネージャー
+      href: deploy-use/enroll-devices-with-device-enrollment-manager.md
+    - name: ハードウェア ID の事前宣言
+      href: deploy-use/predeclare-devices-with-hardware-id.md
+    - name: iOS のアクティベーション ロックの管理
+      href: deploy-use/manage-ios-activation-lock.md
+    - name: ユーザーとデバイスのアフィニティ
+      href: deploy-use/user-affinity-for-hybrid-managed-devices.md
+  - name: デバイスの削除/ワイプ、ロック、リセット
+    href: deploy-use/wipe-lock-reset-devices.md
+  - name: ハードウェア インベントリを構成する
+    href: deploy-use/mobile-device-hardware-inventory-hybrid.md
+  - name: ソフトウェア インベントリを構成する
+    href: deploy-use/software-inventory-mobile-devices.md
+  - name: コンプライアンス設定を管理する
+    href: deploy-use/manage-compliance-settings.md
+    items:
+    - name: Windows 8.1 および Windows 10
+      href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
+    - name: Windows Phone
+      href: deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client.md
+    - name: iOS および Mac OS X
+      href: deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md
+    - name: Android デバイスと Samsung KNOX Standard デバイス
+      href: deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md
+    - name: Android for Work
+      href: deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client.md
+  - name: Intune に登録されたデバイスの同期
+    href: deploy-use/sync-intune-device.md
+  - name: アプリケーションを管理する
+    href: deploy-use/management-tasks-applications.md
+    items:
+    - name: iOS アプリケーションを作成する
+      href: deploy-use/creating-ios-applications.md
+    - name: iOS アプリ構成ポリシー
+      href: deploy-use/configure-ios-apps-with-app-configuration-policies.md
+    - name: iOS 大量購入アプリ
+      href: deploy-use/manage-volume-purchased-ios-apps.md
+    - name: Windows Phone アプリケーションを作成する
+      href: deploy-use/creating-windows-phone-applications.md
+    - name: Android アプリケーションを作成する
+      href: deploy-use/creating-android-applications.md
+    - name: Android アプリ構成ポリシー
+      href: deploy-use/configure-android-apps-with-app-configuration-policies.md
+    - name: モバイル アプリケーション管理ポリシー
+      href: deploy-use/protect-apps-using-mam-policies.md
+    - name: 管理対象ブラウザーのポリシー
+      href: deploy-use/manage-internet-access-using-managed-browser-policies.md
+    - name: ビジネス向け Microsoft ストア アプリ
+      href: deploy-use/windows-store-for-business.md
+  - name: Intune サブスクリプションを管理する
+    href: deploy-use/manage-intune-subscriptions.md
+  - name: MDM 機関を変更する
+    href: deploy-use/change-mdm-authority.md
+  - name: ハイブリッド MDM から Intune スタンドアロンへの移行を開始
+    href: deploy-use/migrate-hybridmdm-to-intunesa.md
+    items:
+    - name: Configuration Manager のデータの Microsoft Intune へのインポート
+      href: deploy-use/migrate-import-data.md
+    - name: Intune でのユーザーの移行を準備する
+      href: deploy-use/migrate-prepare-intune.md
+    - name: 特定のユーザー (混在 MDM 機関) の MDM 機関を変更する
+      href: deploy-use/migrate-mixed-authority.md
+    - name: MDM 機関を変更する
+      href: deploy-use/migrate-change-mdm-authority.md
+  - name: リソースへのアクセスを管理する
+    items:
+    - name: Wi-Fi プロファイルの作成
+      href: deploy-use/create-wifi-profiles.md
+    - name: PFX 証明書プロファイルの作成
+      href: deploy-use/create-pfx-certificate-profiles.md
+    - name: PFX 証明書プロファイルインポート
+      href: deploy-use/import-pfx-certificate-profiles.md
+    - name: VPN プロファイル
+      href: deploy-use/create-vpn-profiles.md
+    - name: 電子メール プロファイルの作成
+      href: deploy-use/create-exchange-activesync-profiles.md
+    - name: Windows Hello for Business の設定
+      href: deploy-use/windows-hello-for-business-settings.md
+  - name: 条件付きアクセスを管理する
+    href: deploy-use/manage-access-to-services.md
+    items:
+    - name: デバイス コンプライアンス ポリシー
+      href: deploy-use/device-compliance-policies.md
+      items:
+      - name: コンプライアンス非対応に対するアクション
+        href: deploy-use/actions-for-noncompliance.md
+    - name: デバイス コンプライアンス ポリシーを作成する
+      href: deploy-use/create-compliance-policy.md
+    - name: 電子メールへのアクセスの管理
+      href: deploy-use/manage-email-access.md
+    - name: SharePoint Online アクセスの管理
+      href: deploy-use/manage-sharepoint-online-access.md
+    - name: Skype for Business Online のアクセスの管理
+      href: deploy-use/manage-skype-for-business-online-access.md
+    - name: Dynamics CRM Online アクセスの管理
+      href: deploy-use/manage-dynamics-crm-online-access.md
+    - name: O365 サービスへの PC アクセスの管理
+      href: deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md
+  - name: デバイスのリスクに基づいたアクセスの管理
+    href: deploy-use/mobile-threat-defense.md
+    items:
+    - name: Configuration Manager の Lookout
+      href: deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md
+      items:
+      - name: Lookout Mobile Threat Defense の設定
+        href: deploy-use/set-up-your-subscription-with-lookout.md
+      - name: Intune で Lookout を有効にする
+        href: deploy-use/enable-lookout-connection-in-intune.md
+      - name: Lookout for Work アプリを展開する
+        href: deploy-use/configure-and-deploy-lookout-for-work-apps.md
+      - name: Lookout コンプライアンス ポリシーの作成
+        href: deploy-use/enable-device-threat-protection-rule-compliance-policy.md
+      - name: Lookout 統合のトラブルシューティング
+        href: deploy-use/troubleshoot-lookout-integration.md
+      - name: Mobile Threat Defense の監視
+        href: deploy-use/monitor-mobile-threat-defense-compliance.md
+- name: オンプレミス モバイル デバイス管理 (MDM)
+  items:
+  - name: オンプレミス MDM とは
+    href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+  - name: オンプレミス MDM の計画
+    href: plan-design/plan-on-premises-mdm.md
+  - name: セットアップ手順
+    href: get-started/preparation-steps-for-on-premises-mdm.md
+    items:
+    - name: Intune サブスクリプションの設定
+      href: get-started/set-up-intune-subscription-on-premises-mdm.md
+    - name: オンプレミスの役割のインストール
+      href: get-started/install-site-system-roles-for-on-premises-mdm.md
+    - name: 証明書を設定する
+      href: get-started/set-up-certificates-on-premises-mdm.md
+    - name: 登録の設定
+      href: get-started/set-up-device-enrollment-on-premises-mdm.md
+  - name: オンプレミス MDM のデバイスの登録
+    href: deploy-use/enroll-devices-on-premises-mdm.md
+    items:
+    - name: ユーザー登録
+      href: deploy-use/user-enroll-devices-on-premises-mdm.md
+    - name: 一括登録
+      href: deploy-use/bulk-enroll-devices-on-premises-mdm.md
+  - name: デバイスの管理
+    href: deploy-use/onprem-manage-devices.md
+  - name: アプリケーションを管理する
+    href: deploy-use/onprem-manage-applications.md
+  - name: データとデバイスの保護
+    href: deploy-use/onprem-protect-data-devices.md
+- name: Exchange でのデバイスの管理
+  href: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+ms.openlocfilehash: 1ecf2c9c9264f7851982e59d47e0e42b9c8ca1ab
+ms.sourcegitcommit: 8661f10596f565ca2b7bdb5951388b44b3b622ee
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "48817678"

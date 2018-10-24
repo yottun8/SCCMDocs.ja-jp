@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 46aa845197010694e1a1c48ec1d3f18a13268cdf
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 503255c571288fa0da0b0b81f3a76fc2b38bbb19
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756131"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893925"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Configuration Manager のコンソール内更新プログラムのインストール
 
@@ -412,7 +412,7 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 - [データ ウェアハウス サービス ポイント](/sccm/core/servers/manage/data-warehouse) <!--1277922-->
 - [クライアントのピア キャッシュ](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
 - [PFX の作成](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368-->
-- [Microsoft Operations Management Suite (OMS) コネクタ](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) <!--1258052-->
+- [Azure Log Analytics コネクタ](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052-->
 - [Windows Defender Exploit Guard ポリシー](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468-->
 - [Windows 10 の VPN](/sccm/protect/deploy-use/vpn-profiles) <!--1283610-->
 - [Passport for Work](/sccm/protect/deploy-use/windows-hello-for-business-settings) (*Windows Hello for Business* とも呼ばれます) <!--1245704-->

@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3c31b950ef59147f6f3f46c1cba7780b7789948c
-ms.sourcegitcommit: 4b7812b505e80f79fc90dfa8a6db06eea79a3550
+ms.openlocfilehash: fbcf7a7d76146cc11dd4bb57b86fe4752c694e02
+ms.sourcegitcommit: 1e782268d6c0211bd854b5860de72cfd6c6985c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42584418"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697040"
 ---
 # <a name="enable-third-party-updates"></a>サード パーティの更新プログラムを有効にする 
 
@@ -36,13 +36,13 @@ ms.locfileid: "42584418"
 
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>SUP が最上位サイト サーバーから離れている場合の追加の要件 
 
-1. SUP が離れている場合、SUP で SSL を有効にする必要があります。 
+1. SUP が離れている場合、SUP で SSL を有効にする必要があります。 これには、内部の証明機関からまたはパブリック プロバイダーを通じて生成されたサーバー認証証明書が必要です。
     - [WSUS で SSL を構成する](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL)
         - WSUS で SSL を構成する場合、一部の Web サービスおよび仮想ディレクトリは、HTTPS ではなく、常に HTTP であることに注意してください。 
         - Configuration Manager では、HTTP 経由で WSUS コンテンツ ディレクトリからソフトウェア更新プログラム パッケージ用のサード パーティのコンテンツがダウンロードされます。   
     - [SUP で SSL を構成する](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
 
-2. 自己署名入りの WSUS 証明書の作成を許可するには: 
+2. [ソフトウェア更新ポイント コンポーネントのプロパティ] で、サード パーティの更新プログラムの WSUS 署名証明書の構成を **[Configuration Manager manages the updates]\(Configuration Manager で更新プログラムを管理する\)** に設定すると、自己署名済みの WSUS 署名証明書を作成するには、次の構成が必要になります。 
    - SUP サーバー上でリモート レジストリを有効にする必要があります。
    -  **WSUS サーバー接続アカウント**に、SUP/WSUS サーバーに対するリモート レジストリ アクセス許可が必要です。 
 
@@ -50,7 +50,7 @@ ms.locfileid: "42584418"
 3. Configuration Manager サイト サーバーで次のレジストリ キーを作成します。 
     - `HKLM\Software\Microsoft\Update Services\Server\Setup`。値 `1` が設定された **EnableSelfSignedCertificates** という新しい DWORD を作成します。 
 
-4. リモート SUP サーバー上で信頼された発行元ストアと信頼されたルート ストアへの証明書のインストールを有効にするには:
+4. リモート SUP サーバー上で信頼された発行元ストアと信頼されたルート ストアへの自己署名済みの WSUS 署名証明書のインストールを有効にするには:
    - **WSUS サーバー接続アカウント**に、SUP サーバーに対するリモート管理アクセス許可が必要です。
 
     この要件を満たせない場合は、証明書をローカル コンピューターの WSUS ストアから信頼された発行元ストアと信頼されたルート ストアにエクスポートします。 
@@ -69,7 +69,7 @@ ms.locfileid: "42584418"
 
 
 ## <a name="configure-the-wsus-signing-certificate"></a>WSUS 署名証明書を構成する
-Configuration Manager でサード パーティの WSUS 署名証明書を自動的に管理するか、証明書を手動で構成する必要があるかを判断する必要があります。 
+Configuration Manager で自己署名証明書を使用してサード パーティの WSUS 署名証明書を自動的に管理するか、証明書を手動で構成する必要があるかを判断する必要があります。 
 
 ### <a name="automatically-manage-the-wsus-signing-certificate"></a>WSUS 署名証明書を自動的に管理する
 PKI 証明書を使用する必要がない場合は、サード パーティの更新プログラム用の署名証明書を自動的に管理するように選択できます。 WSUS 証明書の管理は同期サイクルの一部として行われ、ログは `wsyncmgr.log` に記録されます。 

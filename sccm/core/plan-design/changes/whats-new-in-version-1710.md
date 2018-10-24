@@ -3,18 +3,19 @@ title: 新しいバージョン 1710 | Microsoft Docs
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager のバージョン 1710 で導入された変更点および新機能について詳しく説明します。
 ms.date: 1/08/2018
+ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e33a56a2d7fe395265d76c668db91492c410046f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 821c7f32799020948630cd873fead144ae21e39e
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337413"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229264"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1710 の新機能
 
@@ -63,8 +64,7 @@ Azure Government クラウドで[クラウドベースの配布ポイント](/sc
 ## <a name="client-management"></a>クライアント管理
 
 ### <a name="co-management-for-windows-10-devices"></a>Windows 10 デバイスの共同管理    
-<!-- 1350871 -->
-以前の Windows 10 の更新プログラムで、Windows 10 デバイスをオンプレミスの Active Directory (AD) とクラウドベースの Azure AD に同時に結合できるようになっています (ハイブリッド Azure AD)。 Configuration Manager バージョン 1710 以降、共同管理ではこの機能強化を活用し、Configuration Manager と Intune の両方を使用して複数の Windows 10 バージョン 1709 (Fall Creators Update とも呼ばれる) のデバイスを同時に管理できるようになりました。 これは、従来の管理から最新の管理への橋渡しとなるソリューションであり、段階的なアプローチを使って移行する方向を提示します。 詳細については、「[Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)」をご覧ください。
+<!-- 1350871 -->以前の Windows 10 の更新プログラムで、Windows 10 デバイスをオンプレミスの Active Directory (AD) とクラウドベースの Azure AD に同時に結合できるようになっています (ハイブリッド Azure AD)。 Configuration Manager バージョン 1710 以降、共同管理ではこの機能強化を活用し、Configuration Manager と Intune の両方を使用して複数の Windows 10 バージョン 1709 (Fall Creators Update とも呼ばれる) のデバイスを同時に管理できるようになりました。 これは、従来の管理から最新の管理への橋渡しとなるソリューションであり、段階的なアプローチを使って移行する方向を提示します。 詳細については、「[Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)」をご覧ください。
 
 ### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>Configuration Manager コンソールからコンピューターを再起動 <!-- 1356283 -->
 これ以降のリリースでは、Configuration Manager コンソールを使用して再起動を必要とするクライアント デバイスを識別し、再起動するようにクライアント通知を行うアクションを使用できます。
@@ -77,7 +77,7 @@ Azure Government クラウドで[クラウドベースの配布ポイント](/sc
 
 ## <a name="application-management"></a>アプリケーション管理
 ### <a name="improvements-for-run-scripts------1236459---"></a>スクリプトの実行の改善   <!-- 1236459 -->
-今回のリリースでは、**スクリプトの実行**機能がいくつか改善され、管理対象デバイス上で実行する PowerShell スクリプトを展開できるようになりました。 この機能はバージョン 1706 で初めて導入されました。
+今回のリリースでは、**スクリプトの実行**機能がいくつか改善され、マネージド デバイス上で実行する PowerShell スクリプトを展開できるようになりました。 この機能はバージョン 1706 で初めて導入されました。
 
 次のような改善点があります。
 - セキュリティ スコープを使用してスクリプトの実行を使用できるユーザーを制御する
@@ -87,8 +87,7 @@ Azure Government クラウドで[クラウドベースの配布ポイント](/sc
 スクリプトの実行の使用については、[スクリプトの作成と実行](../../../apps/deploy-use/create-deploy-scripts.md)に関するページを参照してください。
 
 ### <a name="new-mobile-application-management-policy-settings"></a>新しいモバイル アプリケーション管理ポリシーの設定
-<!-- 1324760 -->
-次の設定がモバイル アプリケーション管理ポリシーの設定に追加されました。
+<!-- 1324760 -->次の設定がモバイル アプリケーション管理ポリシーの設定に追加されました。
 - **連絡先の同期を無効にする:** アプリでデバイス上のネイティブ連絡先アプリにデータを保存できなくなります。
 - **印刷を無効にする:** アプリで職場または学校のデータを印刷できなくなります。
 
@@ -101,8 +100,7 @@ Azure Government クラウドで[クラウドベースの配布ポイント](/sc
 
 ## <a name="operating-system-deployment"></a>オペレーティング システムの展開
  > [!TIP]   
- > <!-- 1354281 -->
- > Windows 10 バージョン 1709 (Fall Creators Update とも呼ばれます) リリース以降、Windows メディアには複数のエディションが含まれるようになりました。 オペレーティング システム アップグレード パッケージまたはオペレーティング システム イメージを使用するようにタスク シーケンスを構成する場合は、必ず [Configuration Manager による使用をサポートしているエディション](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client)を選択してください。
+ > <!-- 1354281 -->Windows 10 バージョン 1709 (Fall Creators Update とも呼ばれます) リリース以降、Windows メディアには複数のエディションが含まれるようになりました。 オペレーティング システム アップグレード パッケージまたはオペレーティング システム イメージを使用するようにタスク シーケンスを構成する場合は、必ず [Configuration Manager による使用をサポートしているエディション](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client)を選択してください。
 
 ### <a name="add-child-task-sequences-to-a-task-sequence"></a>子タスク シーケンスをタスク シーケンスに追加する
 <!-- 1261338 -->
@@ -112,8 +110,7 @@ Azure Government クラウドで[クラウドベースの配布ポイント](/sc
 子タスク シーケンスの詳細については、[子タスク シーケンス](/sccm/osd/understand/task-sequence-steps#child-task-sequence)に関するセクションを参照してください。
 
 ## <a name="software-center-customization"></a>ソフトウェア センターのカスタマイズ
-<!-- 1351224 -->
-エンタープライズ ブランド要素を追加して、ソフトウェア センターのタブの表示を指定できます。 ソフトウェア センターに特定の会社名を追加したり、ソフトウェア センターの構成の基調となる色を設定したり、会社のロゴを設定したり、またはクライアント デバイスに表示されるタブを設定したりできます。
+<!-- 1351224 -->エンタープライズ ブランド要素を追加して、ソフトウェア センターのタブの表示を指定できます。 ソフトウェア センターに特定の会社名を追加したり、ソフトウェア センターの構成の基調となる色を設定したり、会社のロゴを設定したり、またはクライアント デバイスに表示されるタブを設定したりできます。
 
 詳細については、「[System Center Configuration Manager のアプリケーション管理の計画と構成](/sccm/apps/plan-design/plan-for-and-configure-application-management)」を参照してください。
 
@@ -201,8 +198,7 @@ Configuration Manager の Cryptography: Next Generation (CNG) 証明書のサポ
 Configuration Manager Endpoint Protection を使用して [Windows Defender Application Guard ポリシーを作成して展開](/sccm/protect/deploy-use/create-deploy-application-guard-policy)できます。
 
 ### <a name="device-guard-policy-changes"></a>Device Guard ポリシーの変更
-<!-- 1355092 -->
-Device Guard ポリシーに関連する次の 3 つの変更が加えられました。
+<!-- 1355092 -->Device Guard ポリシーに関連する次の 3 つの変更が加えられました。
 
 - Device Guard ポリシーは、Windows Defender Application Control ポリシーという名前に変更されました。 そのため、たとえば、**Device Guard ポリシーの作成ウィザード**は **Windows Defender Application Control ポリシーの作成ウィザード**になります。
 - Windows バージョン 1709 の Fall Creators Update を使用するデバイスでは、Windows Defender Application Control ポリシーを適用するための再起動は必要なくなりました。 再起動は既定ですが、[再起動を無効にする](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)ことができます。

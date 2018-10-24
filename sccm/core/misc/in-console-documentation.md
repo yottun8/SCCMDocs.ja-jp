@@ -1,6 +1,6 @@
 ---
 title: コンソール内ドキュメント
-ms.date: 05/03/2018
+ms.date: 09/05/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -9,16 +9,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: 0535e36c2531667e93507a149339fe8d85dc1398
-ms.sourcegitcommit: 7812956f93f95c81b4364230aea363559b79ea9f
+ms.openlocfilehash: 12b10fe6c532a690dcb8fd1d3a69d742687db06c
+ms.sourcegitcommit: 5def8b0ca72daad99fe8901af232bf17f35da55d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2018
-ms.locfileid: "33673451"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793809"
 ---
 <!-- 
 feature 1357546
-This page displays in-console, under the Support workspace, Documentation node. 
+This page displays in-console, under the Community workspace, Documentation node. 
 -->
 
 
@@ -34,50 +34,52 @@ This page displays in-console, under the Support workspace, Documentation node.
 ## <a name="recommended"></a>推奨 
 手動でまとめた重要な記事の一覧です。
 
-- [Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)
+- [Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)  
+- [CMPivot](/sccm/core/servers/manage/cmpivot)  
+- [PowerShell スクリプトの作成と実行](/sccm/apps/deploy-use/create-deploy-scripts)  
+- [段階的展開](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
+- [Office 365 ProPlus の更新プログラムの管理](/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
 - [サービスとしての Configuration Manager Current Branch とサービスとしての Windows の基本情報](/sccm/core/understand/configuration-manager-and-windows-as-service)
 - [Technical Preview リリース](/sccm/core/get-started/technical-preview)
 - [クラウド サービスを使用したオンプレミス インフラストラクチャの補完](/sccm/core/understand/use-cloud-services)
 - [クラウド管理ゲートウェイの計画](/sccm/core/clients/manage/plan-cloud-management-gateway)
-- [Windows 10 における Windows Update for Business との統合](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)
 - [階層間でのデータの移行](/sccm/core/migration/migrate-data-between-hierarchies)
-- [アップグレードの準備](/sccm/core/clients/manage/upgrade/upgrade-analytics)
 
 
 
 ## <a name="trending"></a>トレンド
-2018 年 4 月に最も人気があった記事。
+2018 年 8 月に最も人気があった記事。
 
 | ページ ビュー | タイトル | 
 | ----- | ----- | 
-| 23053 | [新バージョン 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802) | 
-| 13785 | [トラブルシューティングのためのログ ファイル](/sccm/core/plan-design/hierarchy/log-files) | 
-| 8432 | [更新とサービス](/sccm/core/servers/manage/updates) | 
-| 8149 | [新しいバージョン 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) | 
-| 7796 | [Windows 10 のサポート](/sccm/core/plan-design/configs/support-for-windows-10) | 
-| 7312 | [コンソールをインストールする](/sccm/core/servers/deploy/install/install-consoles) | 
-| 6978 | [Office 365 ProPlus の更新プログラムの管理](/sccm/sum/deploy-use/manage-office-365-proplus-updates) | 
-| 6160 | [サポートされている SQL Server のバージョン](/sccm/core/plan-design/configs/support-for-sql-server-versions) | 
-| 6136 | [推奨ハードウェア](/sccm/core/plan-design/configs/recommended-hardware) | 
-| 6110 | [Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview) | 
+| 27627 | [バージョン 1806 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+| 19364 | [トラブルシューティングのためのログ ファイル](/sccm/core/plan-design/hierarchy/log-files) |
+| 11113 | [新バージョン 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802) |
+| 9419 | [Windows 10 のサポート](/sccm/core/plan-design/configs/support-for-windows-10) |
+| 8688 | [更新プログラムとサービス](/sccm/core/servers/manage/updates) |
+| 8423 | [コンソールをインストールする](/sccm/core/servers/deploy/install/install-consoles) |
+| 8408 | [Windows にクライアントを展開する](/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 8271 | [クライアント インストール パラメーターとプロパティ](/sccm/core/clients/deploy/about-client-installation-properties) |
+| 7751 | [Office 365 ProPlus の更新プログラムの管理](/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
+| 7705 | [配布ポイントの管理](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) |
 
 
 
 ## <a name="recently-updated"></a>最近更新
-過去 1 か月に改訂された記事。
+最近の重要な更新が含まれる記事。
 
 | 最終確認 | タイトル | 
 |-----|-----|
-| 2018 年 5 月 1 日 | [ハイブリッド MDM の新機能](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) | 
-| 2018 年 5 月 1 日 | [拡張相互運用性クライアント](/sccm/core/understand/interoperability-client) | 
-| 2018 年 4 月 30 日 | [ヘルプの検索](/sccm/core/understand/find-help) | 
-| 2018 年 4 月 25 日 | [Technical Preview リリース](/sccm/core/get-started/technical-preview) | 
-| 2018 年 4 月 25 日 | [Technical Preview 1804](/sccm/core/get-started/capabilities-in-technical-preview-1804) | 
-| 2018 年 4 月 18 日 | [タスク シーケンス組み込み変数](/sccm/osd/understand/task-sequence-built-in-variables) | 
-| 2018 年 4 月 18 日 | [リリース ノート](/sccm/core/servers/deploy/install/release-notes) | 
-| 2018 年 4 月 17 日 | [サポートされるクライアントとデバイス](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) | 
-| 2018 年 4 月 17 日 | [サポートされるサイト システム サーバー](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers) | 
-| 2018 年 4 月 12 日 | [SDK の新機能](/sccm/develop/core/changes/what-s-new-in-the-system-center-configuration-manager-sdk) | 
+| 2018 年 9 月 4 日 | [Technical Preview リリース](/sccm/core/get-started/technical-preview) |
+| 2018 年 9 月 4 日 | [Technical Preview 1809](/sccm/core/get-started/capabilities-in-technical-preview-1809) |
+| 2018 年 8 月 30 日 | [探索の構成](/sccm/core/servers/deploy/configure/configure-discovery-methods) |
+| 2018 年 8 月 29 日 | [クライアントのピア キャッシュ](/sccm/core/plan-design/hierarchy/client-peer-cache) |
+| 2018 年 8 月 29 日 | [境界グループの構成](/sccm/core/servers/deploy/configure/boundary-groups) |
+| 2018 年 8 月 29 日 | [ハイブリッド MDM の新機能](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
+| 2018 年 8 月 29 日 | [バージョン 1806 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+| 2018 年 8 月 24 日 | [バックアップ サイト](/sccm/core/servers/manage/backup-and-recovery) |
+| 2018 年 8 月 24 日 | [パッケージ変換マネージャー](/sccm/apps/pcm/package-conversion-manager) |
+| 2018 年 8 月 23 日 | [前提条件の確認](/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
 
 
 
@@ -94,12 +96,13 @@ Configuration Manager のコンポーネントと機能のトラブルシュー�
 
 
 ## <a name="new-and-updated-support-articles"></a>新規および更新のサポートに関する記事
-2018 年 3 月または 4 月の新規または更新のサポートに関する記事。
+2018 年 9 月の新規または更新のサポートに関する記事。
 
-- [ユーザーがプライマリ サイトを CAS から回復した後で、Configuration Manager クライアントはポリシー データを受信しません](https://support.microsoft.com/help/4095539)
-- [System Center Configuration Manager Current Branch バージョン 1710 の更新プログラムのロールアップ 2](https://support.microsoft.com/help/4086143)
-- [共同管理デバイスの自動登録が System Center Configuration Manager の現在のブランチ (バージョン 1710) で失敗しました](https://support.microsoft.com/help/4088970)
-- [Windows 10 デプロイは、Configuration Manager において言語を選択するように求めます](https://support.microsoft.com/help/4088140)
+- [KB 4458169: アプリケーション展開に関する問題を解決するためのヒント](https://support.microsoft.com/help/4458169)  
+- [KB 4346901: Configuration Manager Current Branch のソフトウェア更新の詳細 - クライアント操作](https://support.microsoft.com/help/4346901)  
+- [KB 4345216: [修正済み] Configuration Manager Current Branch でソフトウェア センターが突然停止する、バージョン 1802](https://support.microsoft.com/help/4345216)  
+- [KB 4342419: [修正済み] Configuration Manager Current Branch で配布ポイントを再割り当てすると、SMSExec.exe サービスが突然停止する、バージョン 1802](https://support.microsoft.com/help/4342419)  
+- [KB 4339794: [修正済み] Windows Express のインストール ファイルが Configuration Manager Current Branch にダウンロードされない、バージョン 1802](https://support.microsoft.com/help/4339794)  
 
-> [!Tip]  
-> 新規 Configuration Manager サポート記事の Atom または RSS 通知をサブスクライブするには、「[サポート コンテンツの更新情報](https://support.microsoft.com/help/4089498/)」を参照して、**[System Center Configuration Manager]** を選択します。  
+
+新規 Configuration Manager サポート記事の Atom または RSS 通知をサブスクライブするには、「[サポート コンテンツの更新情報](https://support.microsoft.com/help/4089498/)」を参照して、**[System Center Configuration Manager]** を選択します。  

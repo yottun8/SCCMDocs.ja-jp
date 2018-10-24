@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 939ab4b97a1a62eeae834873dd39e2f0d435527d
-ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
+ms.openlocfilehash: b31e0c84d0e3920024870361239e22bb90005ccb
+ms.sourcegitcommit: e7732dd67f19218cec576f70fe4ab44e2626b8e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "42590099"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48045217"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager のリリース ノート
 
@@ -82,9 +82,10 @@ Configuration Manager バージョン 1802 以降では、カスタマー エク
 ## <a name="client-deployment-and-upgrade"></a>クライアントの展開とアップグレード
 
 ### <a name="azure-ad-enabled-clients-cant-communicate-with-management-point"></a>Azure AD が有効なクライアントが管理ポイントと通信できない
-<!--501089-->
+<!--501089-->  
 *適用対象: Configuration Manager バージョン 1706*
-<!--also fixed in 1710 HFRU--> 認証のための Azure AD を使用して、Configuration Manager の Windows 10 クライアントを[インストールして割り当てる](/sccm/core/clients/deploy/deploy-clients-cmg-azure)シナリオで、HTTPS が有効な管理ポイントが別のデータベースの資格情報を使用する場合、クライアントとの通信が失敗します。 
+<!--also fixed in 1710 HFRU-->  
+認証のための Azure AD を使用して、Configuration Manager の Windows 10 クライアントを[インストールして割り当てる](/sccm/core/clients/deploy/deploy-clients-cmg-azure)シナリオで、HTTPS が有効な管理ポイントが別のデータベースの資格情報を使用する場合、クライアントとの通信が失敗します。 
 
 #### <a name="workaround"></a>回避策
 この問題を緩和するには、次の手順のどれかを実行してください。

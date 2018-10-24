@@ -2,7 +2,7 @@
 title: バージョン 1806 の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager Current Branch のバージョン 1806 で導入された変更点および新機能について説明します。
-ms.date: 08/29/2018
+ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 89742711f17997487fec403d51c89a42ceff34ec
-ms.sourcegitcommit: 52ec30245ba559596d2f88a3eff70c467b4a056f
+ms.openlocfilehash: 3b5cb217b9351f5d2491070b447d0a96efe0aa29
+ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381042"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46533781"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1806 の新機能
 
@@ -29,6 +29,8 @@ Configuration Manager Current Branch の更新プログラム 1806 はコンソ�
 > この記事では現在、このバージョンの重要な機能をすべて取り上げています。 しかしながら、一部のセクションのコンテンツは、新機能に関する後続情報で更新されていません。 更新がないか、このページを定期的にご確認ください。 変更には ***[更新]*** タグが付きます。 コンテンツが最終的に承認されると、この注記は削除されます。  
 
 このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[システム センター構成マネージャーで現在の分岐、1806 のバージョンでの変更の概要](https://support.microsoft.com/help/4459701)」を参照してください。
+
+Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell 1806 リリース ノート](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps)を参照してください。
 
 <!--
 The following additional updates to this release are also now available:
@@ -141,6 +143,13 @@ Version 1806 drops support for the following products:
 詳細については、「[ピアのダウンロードの境界グループのオプション](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions)」を参照してください。
 
 
+### <a name="improvement-to-peer-cache-source-location-status"></a>ピア キャッシュ ソースの場所の状態の改善
+<!--SCCMDocs issue 850-->
+ ***[更新]*** Configuration Manager は、ピア キャッシュ ソースが別の場所にローミングしたとき、決定の効率性が上がります。 この動作により、管理ポイントによって、以前の場所ではなく、新しい場所でピア キャッシュ ソースがコンテンツ ソースとしてクライアントに提供されます。 ピア キャッシュ機能をローミング ピア キャッシュ ソースと共に使用している場合、サイトをバージョン 1806 に更新した後、すべてのピア キャッシュ ソースも最新版のクライアント バージョンに更新してください。 少なくともバージョン 1806 に更新されるまで、管理ポイントのコンテンツの場所一覧にはこれらのピア キャッシュ ソースが含まれません。
+
+詳細については、[ピア キャッシュの要件](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements)に関するページを参照してください。
+
+
 
 <!-- ## Migration  -->
 
@@ -177,9 +186,14 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="cloud-management-dashboard"></a>クラウド管理ダッシュボード
-<!--1358461--> 新しいクラウド管理ダッシュボードでは、クラウド管理ゲートウェイ (CMG) 使用量を一元化したビューを提供します。 Azure AD でサイトがオンボードになっている場合、クラウド ユーザーおよびデバイスに関するデータも表示します。 Configuration Manager コンソールで、**[監視]** ワークスペースに移動します。 **[クラウド管理]** ノードを選択して、ダッシュボード タイルを表示します。  
+<!--1358461-->
+ ***[更新]*** 新しいクラウド管理ダッシュボードでは、クラウド管理ゲートウェイ (CMG) 使用量を一元化したビューを提供します。 Azure AD でサイトがオンボードになっている場合、クラウド ユーザーおよびデバイスに関するデータも表示します。   
 
-また、この機能には、トラブルシューティングを支援するリアルタイム検証のための **CMG 接続アナライザー**も含まれます。 コンソール内ユーティリティは、サービスの状態と、CMG 接続ポイント経由で CMG トラフィックを許可する任意の管理ポイントへの通信チャネルをチェックします。 Configuration Manager コンソールで、**[管理]** ワークスペースに移動します。 **[クラウド サービス]** を展開し、**[クラウド管理ゲートウェイ]** を選択します。 対象となる CMG インスタンスを選択して、リボンにある **[接続アナライザー]** をクリックします。
+また、この機能には、トラブルシューティングを支援するリアルタイム検証のための **CMG 接続アナライザー**も含まれます。 コンソール内ユーティリティは、サービスの状態と、CMG 接続ポイント経由で CMG トラフィックを許可する任意の管理ポイントへの通信チャネルをチェックします。 
+
+詳細については、[CMG の監視](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway)に関する記事の以下のセクションを参照してください。  
+- [クラウド管理ダッシュボード](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#cloud-management-dashboard)  
+- [接続アナライザー](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#connection-analyzer)  
 
 
 ### <a name="improvements-to-cloud-management-gateway"></a>クラウド管理ゲートウェイの機能改善
@@ -187,26 +201,16 @@ Version 1806 drops support for the following products:
 バージョン 1806 では、クラウド管理ゲートウェイ (CMG) が次の点で機能強化されています。
 
 #### <a name="simplified-client-bootstrap-command-line"></a>簡略化されたクライアント ブートストラップ コマンド ライン
-<!--1358215--> CMG を介してインターネット上に Configuration Manager クライアントをインストールするときに、コマンド ラインで必要となるプロパティが少なくなりました。 この改善により、共同管理のための準備をするとき、Microsoft Intune で使用されるコマンド ラインのサイズが縮小されます。 
+<!--1358215-->
+ ***[更新]*** CMG を介してインターネット上に Configuration Manager クライアントをインストールするときに、コマンド ラインで必要となるプロパティが少なくなりました。 この改善により、共同管理のための準備をするとき、Microsoft Intune で使用されるコマンド ラインのサイズが縮小されます。 
 
-すべてのシナリオで次のコマンド ライン プロパティが必要になります。
-  - CCMHOSTNAME  
-  - SMSSITECODE  
-
-PKI ベースのクライアント認証証明書ではなく、クライアント認証で Azure AD を使用する場合は、次のプロパティが必要です。
-  - AADCLIENTAPPID  
-  - AADRESOURCEURI  
-
-クライアントがイントラネットに再度ローミングされる場合は、次のプロパティが必要です。
-  - SMSMP  
-
-次の例には、上記のプロパティのすべてが含まれます。   
-`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
-
-<!--For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).-->
+詳細については、「[共同管理用に Windows 10 デバイスを準備する](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)」を参照してください。
 
 #### <a name="download-content-from-a-cmg"></a>CMG からコンテンツをダウンロードする
-<!--1358651--> これまでは、別の役割として、クラウド配布ポイントと CMG を展開する必要がありました。 CMG では、コンテンツをクライアントに提供できるようになりました。 この機能により、Azure VM の必要な証明書とコストが削減されます。 この機能を有効にするには、CMG プロパティの **[設定]** タブで **[Allow CMG to function as a cloud distribution point and serve content from Azure storage]\(CMG をクラウド配布ポイントとして機能させて、Azure Storage からのコンテンツを提供できるようにする\)** という新しいオプションを有効にします。 
+<!--1358651-->
+ ***[更新]*** これまでは、別の役割として、クラウド配布ポイントと CMG を展開する必要がありました。 CMG では、コンテンツをクライアントに提供できるようになりました。 この機能により、Azure VM の必要な証明書とコストが削減されます。 
+
+詳細については、[CMG の変更](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg)に関するページを参照してください。
 
 #### <a name="trusted-root-certificate-isnt-required-with-azure-ad"></a>Azure AD では信頼されたルート証明書が必要ない
 <!--503899--> CMG を作成するときに、[設定] ページで[信頼されたルート証明書](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients)を指定する必要はなくなりました。 クライアント認証で Azure Active Directory (Azure AD) を使用するときにこの証明書は必要ありませんが、ウィザードで必要な場合は使用されます。 PKI クライアント認証証明書を使用する場合は、引き続き信頼されたルート証明書を CMG に追加する必要があります。
@@ -385,8 +389,15 @@ PKI ベースのクライアント認証証明書ではなく、クライアン�
 
 ## <a name="software-center"></a>ソフトウェア センター
 
+> [!Important]  
+> Configuration Manager の新機能を利用するには、最初にクライアントを最新バージョンに更新します。 サイトとコンソールを更新すると Configuration Manager コンソールに新しい機能が表示されますが、クライアントのバージョンも最新になるまでは完全なシナリオは機能しません。
+
+
 ### <a name="software-center-infrastructure-improvements"></a>ソフトウェア センターのインフラストラクチャの改善
-<!--1358309--> ユーザーが利用できるアプリケーションをソフトウェア センターに表示するのにアプリケーション カタログの役割は必要なくなりました。 この変更は、ユーザーにアプリケーションを配布するために必要なサーバー インフラストラクチャを減らすのに役立ちます。 ソフトウェア センターは、この情報を取得するために管理ポイントに依存するようになりました。より大規模な環境を、[境界グループ](/sccm/core/servers/deploy/configure/boundary-groups#management-points)に割り当てることでより適切にスケーリングすることができます。
+<!--1358309-->
+ ***[更新]*** ユーザーが利用できるアプリケーションをソフトウェア センターに表示するのにアプリケーション カタログの役割は必要なくなりました。 この変更は、ユーザーにアプリケーションを配布するために必要なサーバー インフラストラクチャを減らすのに役立ちます。 ソフトウェア センターは、この情報を取得するために管理ポイントに依存するようになりました。より大規模な環境を、[境界グループ](/sccm/core/servers/deploy/configure/boundary-groups#management-points)に割り当てることでより適切にスケーリングすることができます。
+
+詳細については、「[ソフトウェア センターの構成](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)」をご覧ください。  
 
 > [!Note]  
 > アプリケーション カタログの Web サイト ポイントの役割と Web サービス ポイントの役割は 1806 では*不要*になりましたが、依然として*サポート*されている役割です。 

@@ -1,0 +1,73 @@
+items:
+- name: 理解と調査
+  items:
+  - name: デバイス コンプライアンスの保証
+    href: understand/ensure-device-compliance.md
+- name: 作業開始
+  items:
+  - name: コンプライアンス設定を使ってみる
+    href: get-started/get-started-with-compliance-settings.md
+- name: 計画と設計
+  items:
+  - name: コンプライアンス設定の計画と構成
+    href: plan-design/plan-for-and-configure-compliance-settings.md
+  - name: コンプライアンスを管理するための一般的なタスク
+    href: plan-design/common-tasks-for-managing-compliance.md
+    items:
+    - name: Configuration Manager クライアントを使用したデバイス
+      href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+    - name: 構成基準を展開する
+      href: plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md
+  - name: セキュリティとプライバシー
+    href: plan-design/security-and-privacy-for-compliance-settings.md
+  - name: Security Content Automation Protocol (SCAP) 拡張機能
+    href: plan-design/scap/about-scap.md
+    items:
+    - name: SCAP 拡張機能のインストールと構成
+      href: plan-design/scap/install-configure-scap.md
+    - name: SCAP コンプライアンスの展開と監視
+      href: plan-design/scap/deploy-monitor-export.md
+    - name: SCAP 拡張機能のトラブルシューティング
+      href: plan-design/scap/troubleshooting-scap.md
+- name: 展開と使用
+  items:
+  - name: 構成アイテムの作成
+    href: deploy-use/create-configuration-items.md
+    items:
+    - name: Configuration Manager クライアントを使用して管理されているデバイス
+      href: deploy-use/configuration-items-for-devices-managed-with-the-client.md
+      items:
+      - name: Windows 10
+        href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+      - name: Mac OS X
+        href: deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md
+      - name: Windows デスクトップおよびサーバー (カスタム)
+        href: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+  - name: 子構成項目を作成する
+    href: deploy-use/create-child-configuration-items.md
+  - name: 構成基準を作成する
+    href: deploy-use/create-configuration-baselines.md
+  - name: 構成基準を展開する
+    href: deploy-use/deploy-configuration-baselines.md
+  - name: 構成データを管理する
+    items:
+    - name: 構成データを管理する
+      href: deploy-use/management-tasks-for-configuration-data.md
+    - name: 構成データのインポート
+      href: deploy-use/import-configuration-data.md
+  - name: ユーザー データとプロファイル構成項目を作成する
+    href: deploy-use/create-user-data-and-profiles-configuration-items.md
+  - name: リモート接続プロファイルを作成する
+    href: deploy-use/create-remote-connection-profiles.md
+  - name: Windows デバイスを新しいエディションにアップグレードする
+    href: deploy-use/upgrade-windows-version.md
+  - name: Microsoft Edge の設定の構成
+    href: deploy-use/browser-profiles.md
+  - name: コンプライアンス設定を監視する
+    href: deploy-use/monitor-compliance-settings.md
+ms.openlocfilehash: 38815fd56a9eb9f3f8054ed4518981d9d8938eb9
+ms.sourcegitcommit: 8661f10596f565ca2b7bdb5951388b44b3b622ee
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "48817692"

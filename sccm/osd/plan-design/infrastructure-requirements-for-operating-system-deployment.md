@@ -2,7 +2,7 @@
 title: OSD インフラストラクチャの要件
 titleSuffix: Configuration Manager
 description: Configuration Manager での OS の展開に対する外部および製品の依存関係と要件について説明します
-ms.date: 07/30/2018
+ms.date: 10/02/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4e54c6c7d8f827a17c69f4e166aeb4dccca4272f
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 03ec9c046e1b32f137777f15393b5d26b49e5520
+ms.sourcegitcommit: 265d38d55ca0db043e3a7131a56f123e1d98aa5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382920"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236159"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-configuration-manager"></a>Configuration Manager での OS の展開に対するインフラストラクチャ要件
 
@@ -33,21 +33,6 @@ Configuration Manager での OS の展開には、外部依存関係と製品内
 
 Windows アセスメント & デプロイメント キット (ADK) は、Windows の構成と展開をサポートするツールとドキュメントのセットです。 Configuration Manager は Windows ADK を使用して、Windows のインストール、イメージのキャプチャ、ユーザー プロファイルおよびデータの移行などの操作を自動化します。  
 
-階層の最上位サイトのサイト サーバーと、階層内の各プライマリ サイトのサイト サーバー、サイト システム サーバーの SMS プロバイダーに、Windows ADK の次の機能をインストールする必要があります。  
-
--   ユーザー状態移行ツール (USMT) <sup>1</sup>  
-
--   Windows 展開ツール  
-
--   Windows プレインストール環境 (Windows PE)  
-
-さまざまなバージョンの Configuration Manager で使用できる Windows 10 ADK のバージョン一覧については、[Windows 10 のサポート](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)に関するページを参照してください。
-
- <sup>1</sup> USMT は、SMS プロバイダー サイト システム サーバーでは必要ありません。  
-
-> [!NOTE]  
->  Configuration Manager サイトをインストールする前に、各サイト サーバーに Windows ADK を手動でインストールする必要があります。  
-
 詳細については、以下の記事を参照してください。  
 
 - [IT 担当者向け Windows ADK for Windows 10 シナリオ](https://docs.microsoft.com/windows/deployment/windows-adk-scenarios-for-it-pros)  
@@ -55,6 +40,37 @@ Windows アセスメント & デプロイメント キット (ADK) は、Windows
 - [Windows ADK for Windows 10 をダウンロードする](https://docs.microsoft.com/windows-hardware/get-started/adk-install)  
 
 - [Windows 10 のサポート](/sccm/core/plan-design/configs/support-for-windows-10)  
+
+
+#### <a name="site-systems"></a>サイト システム
+Windows ADK は、次のサイト システム サーバーの前提条件です。
+
+- 階層の最上位サイトのサイト サーバー  
+
+- 階層の各プライマリ サイトのサイト サーバー  
+
+- SMS プロバイダーの各インスタンス  
+
+
+> [!NOTE]  
+> Configuration Manager サイトをインストールする前に、各サイト サーバーに Windows ADK を手動でインストールします。  
+
+#### <a name="windows-adk-features"></a>Windows ADK の機能
+Windows ADK の次の機能をインストールします。  
+
+-   ユーザー状態移行ツール (USMT)  
+
+    > [!Note]  
+    > USMT は、SMS プロバイダーでは必要ありません。
+
+-   Windows 展開ツール  
+
+-   Windows プレインストール環境 (Windows PE)  
+
+    > [!Important]  
+    > Windows 10 バージョン 1809 以降、Windows PE は個別のインストーラーとなっています。 それ以外に機能の違いはありません。<!--SCCMDocs-pr issue 2908-->  
+
+さまざまなバージョンの Configuration Manager で使用できる Windows 10 ADK のバージョン一覧については、[Windows 10 のサポート](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)に関するページを参照してください。
 
 
 ### <a name="user-state-migration-tool-usmt"></a>ユーザー状態移行ツール (USMT)  

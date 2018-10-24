@@ -2,7 +2,7 @@
 title: 非推奨の機能
 titleSuffix: Configuration Manager
 description: Configuration Manager でサポートされなくなった機能について説明します。
-ms.date: 08/14/2018
+ms.date: 08/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a84d25203fc0addc32271446e1375c9013c0bb6e
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
+ms.openlocfilehash: dbebfa1ef5d4851cfd6bbc118c2d7bab30f0b01f
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584535"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893452"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager から削除された機能と非推奨の機能
 
@@ -32,8 +32,8 @@ ms.locfileid: "42584535"
 |機能|最初に非推奨と発表|削除されたサポート&nbsp;|  
 |-----------|---|--------------|  
 |ハイブリッド モバイル デバイス管理。 詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。<!--Intune feature 2683117-->|2018 年 8 月 14 日|2019 年 9 月 1 日|
-|アプリケーション カタログ Web サイト ポイントの **Silverlight ユーザー エクスペリエンス**は現在サポートされていません。 新しいソフトウェア センターを使う必要があります。 注: アプリケーション カタログの Web サイト ポイントの役割と Web サービス ポイントの役割は、まだサポートされています。 一部のシナリオでは、新しいソフトウェア センターはアプリケーション カタログ Web サイト ポイントと通信します。|2017 年 8 月 11 日| バージョン 1806|
-|以前のバージョンのソフトウェア センター。<br><br>ソフトウェア センターの詳細については、「[アプリケーション管理の計画と構成](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only)」をご覧ください。|2016 年 12 月 13 日|バージョン 1802|
+|アプリケーション カタログ Web サイト ポイントの **Silverlight ユーザー エクスペリエンス**は現在サポートされていません。 新しいソフトウェア センターを使う必要があります。 注: アプリケーション カタログの Web サイト ポイントの役割と Web サービス ポイントの役割は、まだサポートされています。 一部のシナリオでは、新しいソフトウェア センターはアプリケーション カタログ Web サイト ポイントと通信します。 詳細については、「[ソフトウェア センターの構成](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)」をご覧ください。<!--1358309-->|2017 年 8 月 11 日| バージョン 1806|
+|以前のバージョンのソフトウェア センター。<br><br>ソフトウェア センターの詳細については、「[アプリケーション管理の計画と構成](/sccm/apps/plan-design/plan-for-and-configure-application-management##bkmk_userex)」をご覧ください。|2016 年 12 月 13 日|バージョン 1802|
 |Configuration Manager によるバーチャル ハード ディスク (VHD) の管理。 </br></br>この非推奨機能には、新しい VHD の作成オプション、またはタスク シーケンスを使用した VHD の管理オプションの削除と、Configuration Manager コンソールからのバーチャル ハード ディスクのノードの削除が含まれます。 </br></br>既存の VHD は削除されませんが、Configuration Manager コンソール内からはアクセスできなくなります。  |2017 年 1 月 6 日 |バージョン 1710|
 |タスク シーケンス: <br /> - ディスクをダイナミックに変換 <br /> - 展開ツールのインストール |2016 年 11 月 18 日|バージョン 1710|
 |System Center Configuration Manager Upgrade Assessment Tool。 </br></br>Upgrade Assessment Tool は、System Center Configuration Manager と Application Compatibility Toolkit (ACT) 6.x の両方に依存します。 ACT の最終バージョンは、Windows 10 v1511 ADK に同梱されていました。 今後、ACT が更新されることはないため、Upgrade Assessment Tool のサポートは廃止されます。 </br></br>Upgrade Assessment Tool は、[アップグレードの準備](/sccm/core/clients/manage/upgrade/upgrade-analytics)機能に置き換えられます。 非推奨に関する注記は、2016 年 9 月 12 日に [UAT のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=37145)に追加されました。 | 2016 年 9 月 12 日  | 2017 年 7 月 11 日 |

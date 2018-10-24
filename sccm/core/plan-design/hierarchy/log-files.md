@@ -2,7 +2,7 @@
 title: トラブルシューティングのためのログ ファイル
 titleSuffix: Configuration Manager
 description: Configuration Manager クライアントとサイト システムに関する問題のトラブルシューティングを行うには、ログ ファイルを使用します。
-ms.date: 07/30/2018
+ms.date: 09/10/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2bd3f76b982356fc444681d1990bee08e90b32fc
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 4435d39dd736db1058b06d09e5722a80a173bf6e
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385288"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601213"
 ---
 # <a name="log-files-in-configuration-manager"></a>Configuration Manager のログ ファイル
 
@@ -517,9 +517,10 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |--------------|-----------------|----------------------------|  
 |CloudMgr.log|クラウド管理ゲートウェイ サービスの展開、進行中のサービスの状態、およびサービスに関連する使用状況データについての情報を記録します。<br>レジストリ キー HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER で **Logging level** の値を編集することで、ログ レベルを構成することができます|プライマリ サイト サーバーまたは CAS の *installdir* フォルダー。|
 |CMGSetup.log<sup>1</sup>|クラウド管理ゲートウェイ展開 (Azure のローカル展開) の 2 番目のフェーズに関する詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** (**[情報]** (既定)、**[詳細]**、**[エラー]**) の設定を使用してログ レベルを構成できます。|Azure サーバーの **[%approot%\logs]**、またはサイト システム サーバーの [SMS/ログ] フォルダー|
-|CMGHttpHandler.log<sup>1</sup>|Azure でのインターネット インフォメーション サービスに含まれるクラウド管理ゲートウェイの http ハンドラーに関する詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** (**[情報]** (既定)、**[詳細]**、**[エラー]**) の設定を使用してログ レベルを構成できます。|Azure サーバーの **[%approot%\logs]**、またはサイト システム サーバーの [SMS/ログ] フォルダー|
+|CMGHttpHandler.log<sup>1</sup>|Azure でのインターネット インフォメーション サービスに含まれるクラウド管理ゲートウェイの http ハンドラーに関する詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** (**[情報]** (既定)、**[詳細]**、**[エラー]**) の設定を使用してログ レベルを構成できます。<br>バージョン 1806 以降では、このログは存在しません。 コンポーネントの機能は、CMG サービス コンポーネントにマージされます。 代わりに、CMGService.log を参照します。<!--SCCMDocs-pr issue #2822-->|Azure サーバーの **[%approot%\logs]**、またはサイト システム サーバーの [SMS/ログ] フォルダー|
 |CMGService.log<sup>1</sup>|Azure のクラウド管理ゲートウェイ サービスのコア コンポーネントの詳細を記録します<br>**[Azure portal\Cloud services configuration (Azure Portal\クラウド サービス構成)]** タブで **[トレース レベル]** (**[情報]** (既定)、**[詳細]**、**[エラー]**) の設定を使用してログ レベルを構成できます。|Azure サーバーの **[%approot%\logs]**、またはサイト システム サーバーの [SMS/ログ] フォルダー|
-|SMS_Cloud_</br>ProxyConnector.log|クラウド管理ゲートウェイ サービスとクラウド管理ゲートウェイ接続ポイントの間の接続の設定に関する詳細を記録します。|サイト システム サーバー|
+|SMS_Cloud_<br>ProxyConnector.log|クラウド管理ゲートウェイ サービスとクラウド管理ゲートウェイ接続ポイントの間の接続の設定に関する詳細を記録します。|サイト システム サーバー|
+|CMGContentService.log<sup>1</sup>|<!--SCCMDocs-pr issue #2822-->バージョン 1806 以降では、Azure Storage からコンテンツも提供するように CMG を有効にすると、このログにそのサービスの詳細が記録されます。|Azure サーバーの **[%approot%\logs]**、またはサイト システム サーバーの [SMS/ログ] フォルダー|
 
 <sup>1</sup> これはクラウド サービス管理マネージャーと Azure Storage との間で 5 分おきに同期されるローカル構成マネージャーのログ ファイルです。 クラウド管理ゲートウェイは、Azure Storage に 5 分おきにログをプッシュします。 そのための最大遅延時間は 10 分です。 [詳細] に切り替えると、ローカルとリモートの両方のログに影響します。 実際のファイル名には、サービス名とロール インスタンスの識別子が含まれます。 例: CMG-*ServiceName*-*RoleInstanceID*-CMGSetup.log
 

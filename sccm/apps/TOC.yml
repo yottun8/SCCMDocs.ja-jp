@@ -1,0 +1,92 @@
+items:
+- name: 理解と調査
+  items:
+  - name: 概要
+    href: understand/introduction-to-application-management.md
+- name: 作業開始
+  items:
+  - name: アプリケーションの作成と展開
+    href: get-started/create-and-deploy-an-application.md
+- name: 計画と設計
+  items:
+  - name: アプリケーション管理の計画と構成
+    href: plan-design/plan-for-and-configure-application-management.md
+  - name: セキュリティとプライバシー
+    href: plan-design/security-and-privacy-for-application-management.md
+- name: 展開と使用
+  items:
+  - name: アプリケーションの作成
+    href: deploy-use/create-applications.md
+    items:
+    - name: Mac コンピューター アプリケーションを作成する
+      href: get-started/creating-mac-computer-applications.md
+    - name: Windows アプリケーションを作成する
+      href: get-started/creating-windows-applications.md
+    - name: Linux および UNIX のサーバー アプリケーションを作成する
+      href: get-started/creating-linux-and-unix-server-applications.md
+    - name: Windows Embedded アプリケーションを作成する
+      href: get-started/creating-windows-embedded-applications.md
+    - name: グローバル条件を作成する
+      href: deploy-use/create-global-conditions.md
+    - name: パッケージとプログラム
+      href: deploy-use/packages-and-programs.md
+  - name: アプリケーションの展開
+    items:
+    - name: アプリケーションの展開
+      href: deploy-use/deploy-applications.md
+    - name: 段階的な展開を作成する
+      href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+    - name: アプリケーションの共有
+      href: deploy-use/share-applications.md
+    - name: アプリケーション展開をシミュレートする
+      href: deploy-use/simulate-application-deployments.md
+    - name: App-V 仮想アプリケーションの展開
+      href: get-started/deploying-app-v-virtual-applications.md
+  - name: アプリケーションの監視
+    items:
+    - name: コンソールからのアプリケーションの監視
+      href: deploy-use/monitor-applications-from-the-console.md
+    - name: 段階的な展開の管理と監視
+      href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+    - name: ソフトウェア使用状況測定でアプリの使用状況を監視する
+      href: deploy-use/monitor-app-usage-with-software-metering.md
+  - name: アプリケーションを管理する
+    items:
+    - name: 管理タスク
+      href: deploy-use/management-tasks-applications.md
+    - name: ユーザーとデバイスのアフィニティ
+      href: deploy-use/link-users-and-devices-with-user-device-affinity.md
+    - name: ビジネス向け一括購入アプリ向けの Microsoft ストア
+      href: deploy-use/manage-apps-from-the-windows-store-for-business.md
+    - name: App-V 仮想環境
+      href: deploy-use/create-app-v-virtual-environments.md
+  - name: アプリケーションの更新とインベントリからの削除
+    items:
+    - name: アプリケーションの更新とインベントリからの削除
+      href: deploy-use/update-and-retire-applications.md
+    - name: アプリケーションを修正して置き換える
+      href: deploy-use/revise-and-supersede-applications.md
+    - name: アプリケーションのアンインストール
+      href: deploy-use/uninstall-applications.md
+  - name: スクリプトの実行と管理
+    href: deploy-use/create-deploy-scripts.md
+    items:
+    - name: PowerShell スクリプトのセキュリティの詳細情報
+      href: deploy-use/learn-script-security.md
+  - name: Package Conversion Manager
+    href: pcm/package-conversion-manager.md
+    items:
+    - name: パッケージの分析および変換方法
+      href: pcm/how-to-analyze-and-convert.md
+    - name: パッケージ変換マネージャーのトラブルシューティング
+      href: pcm/troubleshoot-pcm.md
+    - name: テクニカル リファレンス
+      items:
+      - name: エラー メッセージ
+        href: pcm/error-messages.md
+ms.openlocfilehash: c77312e99b6c08ecea729ade9e3de1ade4fccfa7
+ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "48817762"

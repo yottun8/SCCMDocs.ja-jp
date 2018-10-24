@@ -2,7 +2,7 @@
 title: クラウド配布ポイント
 titleSuffix: Configuration Manager
 description: Configuration Manager でクラウド配布ポイントを使用して、Microsoft Azure を通じてソフトウェア コンテンツを配布するための計画と設計を行います。
-ms.date: 07/30/2018
+ms.date: 09/10/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c41fddef794049456529d9577275a21668717f5
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 79b17ba00274459401dc81035833163e75939be0
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385458"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601145"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Configuration Manager でクラウド配布ポイントを使用する
 
@@ -305,6 +305,18 @@ Azure ストレージ サービスは、1 つのファイルに対して 1 秒�
 ##  <a name="bkmk_certs"></a> 証明書  
 
 クラウド配布ポイントの設計によっては、1 つ以上のデジタル証明書が必要です。  
+
+
+### <a name="general-information"></a>一般情報
+<!--SCCMDocs issue #779--> クラウド配布ポイント用の証明書は、次の構成をサポートします。  
+
+- **4096 ビットのキーの長さ**  
+
+- バージョン 1710 以降、**バージョン 3** の証明書のサポート。 詳細については、「[CNG certificates overview](/sccm/core/plan-design/network/cng-certificates-overview)」(CNG 証明書の概要) を参照してください。  
+
+- バージョン 1802 以降、ポリシー: **[システム暗号化: 暗号化、ハッシュ、署名のための FIPS 準拠アルゴリズムを使う]** を使用して Windows を構成した場合。  
+
+- バージョン 1802 より、**TLS 1.2** のサポート。 詳細については、「[暗号化コントロールのテクニカル リファレンス](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities)」を参照してください。  
 
 
 ### <a name="azure-management-certificate"></a>Azure 管理証明書

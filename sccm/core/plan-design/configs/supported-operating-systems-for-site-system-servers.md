@@ -2,7 +2,7 @@
 title: サポートされるサイト システム サーバー
 titleSuffix: Configuration Manager
 description: Configuration Manager サイトまたはサイト システムの役割をホストできる Windows バージョンについて説明します。
-ms.date: 07/30/2018
+ms.date: 10/02/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cccd695c51aa5628b18f8341f50849a73b0d9a2c
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 3fd8e815ab57730ad2186a7e75cd51f21012383a
+ms.sourcegitcommit: 265d38d55ca0db043e3a7131a56f123e1d98aa5b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384913"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236176"
 ---
 # <a name="supported-operating-systems-for-configuration-manager-site-system-servers"></a>Configuration Manager サイト システム サーバーでサポートされるオペレーティング システム
 
@@ -32,240 +32,174 @@ ms.locfileid: "39384913"
 
 
 
-## <a name="windows-server-2016-standard-and-datacenter"></a>Windows Server 2016: Standard、Datacenter
-KB3186654 からの修正プログラムのロールアップで、次の役割に対してこの OS がサポートされています。
+## <a name="bkmk_2016"></a> Windows Server 2016: Standard、Datacenter
 
-**サイト サーバー:**  
+Configuration Manager バージョン 1606 用の更新プログラムのロールアップ 1 ([KB3186654](https://support.microsoft.com/help/3186654)) により、この OS バージョンは次の役割でサポートされます。
+
+#### <a name="site-servers"></a>サイト サーバー
 
 -   中央管理サイト  
-
 -   プライマリ サイト  
-
 -   セカンダリ サイト  
 
-**サイト システム サーバー:**  
+#### <a name="site-system-servers"></a>サイト システム サーバー
 
 -   アプリケーション カタログ Web サービス ポイント  
-
 -   アプリケーション カタログ Web サイト ポイント  
-
 -   資産インテリジェンス同期ポイント  
-
 -   証明書登録ポイント  
-
--   配布ポイント  
-
-     配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[コンテンツとコンテンツ インフラストラクチャの管理](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)」を参照してください。  
-
+-   クラウド管理ゲートウェイ コネクション ポイント  
+-   データ ウェアハウス サービス ポイント  
+-   配布ポイント<sup>[注 1](#bkmk_note1)</sup>  
 -   Endpoint Protection ポイント  
-
 -   登録ポイント  
-
 -   登録プロキシ ポイント  
-
 -   フォールバック ステータス ポイント  
-
 -   管理ポイント
-
 -   レポート サービス ポイント  
-
 -   [サービス接続ポイント]  
-
--   サイト データベース サーバー  
-
-     サイト データベース サーバーは、読み取り専用のドメイン コントローラー (RODC) ではサポートされていません。 詳細については、Microsoft サポート技術情報の「 [You may encounter problems when installing SQL Server on a domain controller (ドメイン コントローラーに SQL Server をインストールすると問題が発生する)](https://support.microsoft.com/help/2032911) 」を参照してください。 さらに、セカンダリ サイト サーバーは、ドメイン コントローラーではサポートされません。  
-
+-   サイト データベース サーバー<sup>[注 2](#bkmk_note2)</sup>  
 -   SMS_Provider  
-
 -   ソフトウェアの更新ポイント  
-
 -   状態移行ポイント
 
 
 
-## <a name="windows-storage-server-2016"></a>Windows Storage Server 2016
+## <a name="bkmk_stor2016"></a> Windows Storage Server 2016
 
-**サイト システム サーバー:**  
+#### <a name="site-system-server"></a>サイト システム サーバー
 
--   配布ポイント  
+-   配布ポイント<sup>[注 1](#bkmk_note1)</sup>  
 
 
 
-## <a name="windows-server-2012-r2-x64-standard-and-datacenter"></a>Windows Server 2012 R2 (x64): Standard、Datacenter  
+## <a name="bkmk_2012r2"></a> Windows Server 2012 R2 (x64): Standard、Datacenter  
 
-**サイト サーバー:**  
+#### <a name="site-servers"></a>サイト サーバー
 
 -   中央管理サイト  
-
 -   プライマリ サイト  
-
 -   セカンダリ サイト  
 
-**サイト システム サーバー:**  
+#### <a name="site-system-servers"></a>サイト システム サーバー
 
 -   アプリケーション カタログ Web サービス ポイント  
-
 -   アプリケーション カタログ Web サイト ポイント  
-
 -   資産インテリジェンス同期ポイント  
-
 -   証明書登録ポイント  
-
--   配布ポイント  
-
-     配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[コンテンツとコンテンツ インフラストラクチャの管理](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)」を参照してください。  
-
+-   クラウド管理ゲートウェイ コネクション ポイント  
+-   データ ウェアハウス サービス ポイント  
+-   配布ポイント<sup>[注 1](#bkmk_note1)</sup>  
 -   Endpoint Protection ポイント  
-
 -   登録ポイント  
-
 -   登録プロキシ ポイント  
-
 -   フォールバック ステータス ポイント  
-
 -   管理ポイント
-
 -   レポート サービス ポイント  
-
 -   [サービス接続ポイント]  
-
--   サイト データベース サーバー  
-
-     サイト データベース サーバーは、読み取り専用のドメイン コントローラー (RODC) ではサポートされていません。 詳細については、Microsoft サポート技術情報の「 [You may encounter problems when installing SQL Server on a domain controller (ドメイン コントローラーに SQL Server をインストールすると問題が発生する)](https://support.microsoft.com/help/2032911) 」を参照してください。 さらに、セカンダリ サイト サーバーは、ドメイン コントローラーではサポートされません。  
-
+-   サイト データベース サーバー<sup>[注 2](#bkmk_note2)</sup>  
 -   SMS_Provider  
-
 -   ソフトウェアの更新ポイント  
-
 -   状態移行ポイント  
 
 
 
-## <a name="windows-server-2012-x64-standard-and-datacenter"></a>Windows Server 2012 (x64): Standard、Datacenter  
+## <a name="bkmk_2012"></a> Windows Server 2012 (x64): Standard、Datacenter  
 
-**サイト サーバー:**  
+#### <a name="site-servers"></a>サイト サーバー
 
 -   中央管理サイト  
-
 -   プライマリ サイト  
-
 -   セカンダリ サイト  
 
-**サイト システム サーバー:**  
+#### <a name="site-system-servers"></a>サイト システム サーバー
 
 -   アプリケーション カタログ Web サービス ポイント  
-
 -   アプリケーション カタログ Web サイト ポイント  
-
 -   資産インテリジェンス同期ポイント  
-
 -   証明書登録ポイント  
-
--   配布ポイント  
-
-     配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[コンテンツとコンテンツ インフラストラクチャの管理](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)」を参照してください。  
-
+-   クラウド管理ゲートウェイ コネクション ポイント  
+-   データ ウェアハウス サービス ポイント  
+-   配布ポイント<sup>[注 1](#bkmk_note1)</sup>  
 -   Endpoint Protection ポイント  
-
 -   登録ポイント  
-
 -   登録プロキシ ポイント  
-
 -   フォールバック ステータス ポイント  
-
 -   管理ポイント
-
 -   レポート サービス ポイント  
-
 -   [サービス接続ポイント]  
-
--   サイト データベース サーバー  
-
-     サイト データベース サーバーは、読み取り専用のドメイン コントローラー (RODC) ではサポートされていません。 詳細については、Microsoft サポート技術情報の「 [You may encounter problems when installing SQL Server on a domain controller (ドメイン コントローラーに SQL Server をインストールすると問題が発生する)](https://support.microsoft.com/help/2032911) 」を参照してください。 さらに、セカンダリ サイト サーバーは、ドメイン コントローラーではサポートされません。  
-
+-   サイト データベース サーバー<sup>[注 2](#bkmk_note2)</sup>  
 -   SMS_Provider  
-
 -   ソフトウェアの更新ポイント  
-
 -   状態移行ポイント  
 
 
 
-## <a name="windows-server-2008-r2-with-sp1-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 R2 SP1 (x64): Standard、Enterprise、Datacenter  
+## <a name="bkmk_2008r2sp1"></a> Windows Server 2008 R2 SP1 (x64): Standard、Enterprise、Datacenter  
 
 [マイクロソフト サポート ライフサイクル](https://support.microsoft.com/lifecycle)で詳述するように、Windows Server 2008 R2 が延長サポートになり、メインストリーム サポートが終了しました。 Configuration Manager を使用したサイト システム サーバーとしてのこれらのオペレーティング システムの将来のサポートについては、「[非推奨のサーバー オペレーティング システム](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)」を参照してください。  
 
 この OS は、サイト サーバーやほとんどのサイト システムの役割に対してサポートされていません。 プル配布ポイント、PXE およびマルチキャストを含む配布ポイントのサイト システムの役割に対しては引き続きサポートされます。
 
-**サイト システム サーバー:**  
--   配布ポイント  
+#### <a name="site-system-servers"></a>サイト システム サーバー
+-   配布ポイント<sup>[注 1](#bkmk_note1)</sup>  
 
-    -   この OS の配布ポイントでは、PXE およびマルチキャストをサポートします。  
-
-    -   配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[コンテンツとコンテンツ インフラストラクチャの管理](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)」を参照してください。  
+    - この OS の配布ポイントでは、PXE およびマルチキャストをサポートします。  
 
 
 
-## <a name="windows-server-2008-with-sp2-x86-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 SP2 (x86, x64): Standard、Enterprise、Datacenter  
+## <a name="bkmk_2008sp2"></a> Windows Server 2008 SP2 (x86, x64): Standard、Enterprise、Datacenter  
 
 [マイクロソフト サポート ライフサイクル](https://support.microsoft.com/lifecycle)で詳述するように、Windows Server 2008 が延長サポートになり、メインストリーム サポートが終了しました。 Configuration Manager を使用したサイト システム サーバーとしてのこれらのオペレーティング システムの将来のサポートについては、「[非推奨のサーバー オペレーティング システム](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)」を参照してください。  
 
 この OS は、サイト サーバーとして、または配布ポイントとプル配布ポイントを除くサイト システムの役割としてはサポートされていません。 このサポートの廃止が発表されるまで、またはこの OS の拡張サポート期間が終了するまでは、この OS を配布ポイントとして引き続き使用してください。 詳細については、「[Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)」 (Windows Server 2008 で System Center Configuration Manager CB および LTSB のインストールに失敗する) を参照してください。
 
-**サイト システム サーバー:**  
--   配布ポイント  
+#### <a name="site-system-servers"></a>サイト システム サーバー
+-   配布ポイント<sup>[注 1](#bkmk_note1)</sup>  
 
     -   この OS の配布ポイントでは、PXE およびマルチキャストをサポートします。  
 
     -   この OS の配布ポイントは、EFI モードでのクライアント コンピューターのネットワーク ブートはサポートしません。 クライアント コンピューターのレガシ モードでの BIOS ブートまたは EFI ブートはサポートされます。  
 
-    -   配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[コンテンツとコンテンツ インフラストラクチャの管理](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)」を参照してください。  
 
 
+## <a name="bkmk_win10"></a> Windows 10 (x86, x64): Pro、Enterprise  
 
-## <a name="windows-10-x86-x64-pro-and-enterprise"></a>Windows 10 (x86, x64): Pro、Enterprise  
+#### <a name="site-system-servers"></a>サイト システム サーバー
 
-**サイト システム サーバー:**  
-
--   配布ポイント  
+-   配布ポイント<sup>[注 1](#bkmk_note1)</sup>  
 
     -   この OS の配布ポイントは、既定の Windows 展開サービスによる PXE ではサポートされません。 バージョン 1806 より、この OS の配布ポイントを **Windows 展開サービスなしで PXE レスポンダーを有効にする**オプションで PXE 対応にすることができます。 詳細については、[配布ポイントのインストールと構成](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)に関するページを参照してください。  
 
     -   この OS バージョンの配布ポイントでは、マルチキャストをサポートしません。  
 
-    -   配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[コンテンツとコンテンツ インフラストラクチャの管理](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)」を参照してください。  
 
 
+## <a name="bkmk_win81"></a> Windows 8.1 (x86、x64): Professional、Enterprise  
 
-## <a name="windows-81-x86-x64-professional-and-enterprise"></a>Windows 8.1 (x86、x64): Professional、Enterprise  
+#### <a name="site-system-servers"></a>サイト システム サーバー
 
-**サイト システム サーバー:**  
-
--   配布ポイント  
+-   配布ポイント<sup>[注 1](#bkmk_note1)</sup>  
 
     -   この OS の配布ポイントは、既定の Windows 展開サービスによる PXE ではサポートされません。 バージョン 1806 より、この OS の配布ポイントを **Windows 展開サービスなしで PXE レスポンダーを有効にする**オプションで PXE 対応にすることができます。 詳細については、[配布ポイントのインストールと構成](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)に関するページを参照してください。  
 
     -   この OS バージョンの配布ポイントでは、マルチキャストをサポートしません。  
 
-    -   配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[コンテンツとコンテンツ インフラストラクチャの管理](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)」を参照してください。  
 
 
+## <a name="bkmk_win7sp1"></a> Windows 7 SP1 (x86、x64): Professional、Enterprise、Ultimate  
 
-## <a name="windows-7-with-sp1-x86-x64-professional-enterprise-and-ultimate"></a>Windows 7 SP1 (x86、x64): Professional、Enterprise、Ultimate  
+#### <a name="site-system-servers"></a>サイト システム サーバー
 
-**サイト システム サーバー:**  
-
--   配布ポイント  
+-   配布ポイント<sup>[注 1](#bkmk_note1)</sup>  
 
     -   この OS の配布ポイントは、既定の Windows 展開サービスによる PXE ではサポートされません。 バージョン 1806 より、この OS の配布ポイントを **Windows 展開サービスなしで PXE レスポンダーを有効にする**オプションで PXE 対応にすることができます。 詳細については、[配布ポイントのインストールと構成](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)に関するページを参照してください。  
 
     -   この OS バージョンの配布ポイントでは、マルチキャストをサポートしません。  
 
-    -   配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 配布ポイントで使用可能なオプションの詳細については、「[コンテンツとコンテンツ インフラストラクチャの管理](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)」を参照してください。  
 
 
-
-## <a name="the-server-core-installation-of-windows-server-version-1803"></a>Windows Server バージョン 1803 の Server Core インストール
+## <a name="bkmk_core1803"></a> Windows Server バージョン 1803 の Server Core インストール
 <!--503702--> Configuration Manager 1802 以降では、[Windows Server バージョン 1803](https://docs.microsoft.com/windows-server/get-started/get-started-with-1803) が、次の制限付きの配布ポイントとしての使用でサポートされます。  
 
   -   64 ビット バージョンのみがサポートされています。  
@@ -274,7 +208,7 @@ KB3186654 からの修正プログラムのロールアップで、次の役割�
 
 
 
-## <a name="the-server-core-installation-of-windows-server-version-1709"></a>Windows Server バージョン 1709 の Server Core インストール
+## <a name="bkmk_core1709"></a> Windows Server バージョン 1709 の Server Core インストール
 
 Configuration Manager 1710 以降では、[Windows Server バージョン 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709) が、次の制限付きの配布ポイントとしての使用でサポートされます。  
 
@@ -284,9 +218,9 @@ Configuration Manager 1710 以降では、[Windows Server バージョン 1709](
 
 
 
-## <a name="the-server-core-installation-of-windows-server-2016"></a>Windows Server 2016 の Server Core インストール
+## <a name="bkmk_core2016"></a> Windows Server 2016 の Server Core のインストール
 
-KB3186654 からの修正プログラムのロールアップを適用すると、この OS が次の制限付きの配布ポイントとしてサポートされます。  
+Configuration Manager バージョン 1606 用の更新プログラムのロールアップ 1 ([KB3186654](https://support.microsoft.com/help/3186654)) により、この OS バージョンは次の制限付きの配布ポイントとしての使用でサポートされます。  
 
   -   64 ビット バージョンのみがサポートされています。  
 
@@ -294,7 +228,7 @@ KB3186654 からの修正プログラムのロールアップを適用すると�
 
 
 
-## <a name="the-server-core-installation-of-windows-server-2012-r2"></a>Windows Server 2012 R2 の Server Core のインストール  
+## <a name="bkmk_core2012r2"></a> Windows Server 2012 R2 の Server Core のインストール  
 
 Windows Server 2012 R2 の Server Core インストールが、次の制限付きの配布ポイントとしての使用でサポートされます。  
 
@@ -304,10 +238,22 @@ Windows Server 2012 R2 の Server Core インストールが、次の制限付�
 
 
 
-## <a name="the-server-core-installation-of-windows-server-2012"></a>Windows Server 2012 の Server Core のインストール  
+## <a name="bkmk_core2012"></a> Windows Server 2012 の Server Core のインストール  
 
 Windows Server 2012 の Server Core インストールが、次の制限付きの配布ポイントとしての使用でサポートされます。  
 
 -   64 ビット バージョンのみがサポートされています。  
 
 -   この OS の配布ポイントでは、既定の Windows 展開サービスによる PXE またはマルチキャストをサポートしません。 バージョン 1806 より、この OS の配布ポイントを **Windows 展開サービスなしで PXE レスポンダーを有効にする**オプションで PXE 対応にすることができます。 詳細については、[配布ポイントのインストールと構成](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)に関するページを参照してください。
+
+
+
+## <a name="general-notes"></a>一般的な注意事項
+
+#### <a name="bkmk_note1"></a> 注 1: 配布ポイント
+配布ポイントは、それぞれに異なる要件を持つ複数の異なる構成をサポートします。 場合によっては、これらの構成は、サーバー上のインストールだけでなく、クライアント オペレーティング システム上のインストールをサポートします。 詳細については、「[コンテンツ管理インフラストラクチャの展開と管理](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)」をご覧ください。  
+
+#### <a name="bkmk_note2"></a> 注 2: サイト データベース サーバー
+サイト データベース サーバーは、読み取り専用のドメイン コントローラー (RODC) ではサポートされていません。 詳細については、Microsoft サポート記事の「[You may encounter problems when installing SQL Server on a domain controller](https://support.microsoft.com/help/2032911)」(ドメイン コント ローラーに SQL Server をインストールするときに問題が発生する可能性があります) を参照してください。 
+
+さらに、セカンダリ サイト サーバーは、ドメイン コントローラーではサポートされません。  
