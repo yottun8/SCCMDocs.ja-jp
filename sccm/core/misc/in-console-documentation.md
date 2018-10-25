@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: 12b10fe6c532a690dcb8fd1d3a69d742687db06c
-ms.sourcegitcommit: 5def8b0ca72daad99fe8901af232bf17f35da55d
+ms.openlocfilehash: d3c3b1c418650297f9fe02b839ccbc98a4204925
+ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793809"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48891165"
 ---
 <!-- 
 feature 1357546
@@ -34,16 +34,16 @@ This page displays in-console, under the Community workspace, Documentation node
 ## <a name="recommended"></a>推奨 
 手動でまとめた重要な記事の一覧です。
 
-- [Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)  
-- [CMPivot](/sccm/core/servers/manage/cmpivot)  
-- [PowerShell スクリプトの作成と実行](/sccm/apps/deploy-use/create-deploy-scripts)  
-- [段階的展開](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
-- [Office 365 ProPlus の更新プログラムの管理](/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
-- [サービスとしての Configuration Manager Current Branch とサービスとしての Windows の基本情報](/sccm/core/understand/configuration-manager-and-windows-as-service)
-- [Technical Preview リリース](/sccm/core/get-started/technical-preview)
-- [クラウド サービスを使用したオンプレミス インフラストラクチャの補完](/sccm/core/understand/use-cloud-services)
-- [クラウド管理ゲートウェイの計画](/sccm/core/clients/manage/plan-cloud-management-gateway)
-- [階層間でのデータの移行](/sccm/core/migration/migrate-data-between-hierarchies)
+- [Windows 10 デバイスの共同管理](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)  
+- [CMPivot](https://docs.microsoft.com/sccm/core/servers/manage/cmpivot)  
+- [PowerShell スクリプトの作成と実行](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts)  
+- [段階的展開](https://docs.microsoft.com/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
+- [Office 365 ProPlus の更新プログラムの管理](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
+- [サービスとしての Configuration Manager Current Branch とサービスとしての Windows の基本情報](https://docs.microsoft.com/sccm/core/understand/configuration-manager-and-windows-as-service)
+- [Technical Preview リリース](https://docs.microsoft.com/sccm/core/get-started/technical-preview)
+- [クラウド サービスを使用したオンプレミス インフラストラクチャの補完](https://docs.microsoft.com/sccm/core/understand/use-cloud-services)
+- [クラウド管理ゲートウェイの計画](https://docs.microsoft.com/sccm/core/clients/manage/plan-cloud-management-gateway)
+- [階層間でのデータの移行](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies)
 
 
 
@@ -52,16 +52,16 @@ This page displays in-console, under the Community workspace, Documentation node
 
 | ページ ビュー | タイトル | 
 | ----- | ----- | 
-| 27627 | [バージョン 1806 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1806) |
-| 19364 | [トラブルシューティングのためのログ ファイル](/sccm/core/plan-design/hierarchy/log-files) |
-| 11113 | [新バージョン 1802](/sccm/core/plan-design/changes/whats-new-in-version-1802) |
-| 9419 | [Windows 10 のサポート](/sccm/core/plan-design/configs/support-for-windows-10) |
-| 8688 | [更新プログラムとサービス](/sccm/core/servers/manage/updates) |
-| 8423 | [コンソールをインストールする](/sccm/core/servers/deploy/install/install-consoles) |
-| 8408 | [Windows にクライアントを展開する](/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 8271 | [クライアント インストール パラメーターとプロパティ](/sccm/core/clients/deploy/about-client-installation-properties) |
-| 7751 | [Office 365 ProPlus の更新プログラムの管理](/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
-| 7705 | [配布ポイントの管理](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) |
+| 27627 | [バージョン 1806 の新機能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+| 19364 | [トラブルシューティングのためのログ ファイル](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 11113 | [新バージョン 1802](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1802) |
+| 9419 | [Windows 10 のサポート](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 8688 | [更新プログラムとサービス](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 8423 | [コンソールをインストールする](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
+| 8408 | [Windows にクライアントを展開する](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 8271 | [クライアント インストール パラメーターとプロパティ](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
+| 7751 | [Office 365 ProPlus の更新プログラムの管理](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
+| 7705 | [配布ポイントの管理](https://docs.microsoft.com/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) |
 
 
 
@@ -70,16 +70,16 @@ This page displays in-console, under the Community workspace, Documentation node
 
 | 最終確認 | タイトル | 
 |-----|-----|
-| 2018 年 9 月 4 日 | [Technical Preview リリース](/sccm/core/get-started/technical-preview) |
-| 2018 年 9 月 4 日 | [Technical Preview 1809](/sccm/core/get-started/capabilities-in-technical-preview-1809) |
-| 2018 年 8 月 30 日 | [探索の構成](/sccm/core/servers/deploy/configure/configure-discovery-methods) |
-| 2018 年 8 月 29 日 | [クライアントのピア キャッシュ](/sccm/core/plan-design/hierarchy/client-peer-cache) |
-| 2018 年 8 月 29 日 | [境界グループの構成](/sccm/core/servers/deploy/configure/boundary-groups) |
-| 2018 年 8 月 29 日 | [ハイブリッド MDM の新機能](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
-| 2018 年 8 月 29 日 | [バージョン 1806 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1806) |
-| 2018 年 8 月 24 日 | [バックアップ サイト](/sccm/core/servers/manage/backup-and-recovery) |
-| 2018 年 8 月 24 日 | [パッケージ変換マネージャー](/sccm/apps/pcm/package-conversion-manager) |
-| 2018 年 8 月 23 日 | [前提条件の確認](/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
+| 2018 年 9 月 4 日 | [Technical Preview リリース](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
+| 2018 年 9 月 4 日 | [Technical Preview 1809](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1809) |
+| 2018 年 8 月 30 日 | [探索の構成](https://docs.microsoft.com/sccm/core/servers/deploy/configure/configure-discovery-methods) |
+| 2018 年 8 月 29 日 | [クライアントのピア キャッシュ](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/client-peer-cache) |
+| 2018 年 8 月 29 日 | [境界グループの構成](https://docs.microsoft.com/sccm/core/servers/deploy/configure/boundary-groups) |
+| 2018 年 8 月 29 日 | [ハイブリッド MDM の新機能](https://docs.microsoft.com/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
+| 2018 年 8 月 29 日 | [バージョン 1806 の新機能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+| 2018 年 8 月 24 日 | [バックアップ サイト](https://docs.microsoft.com/sccm/core/servers/manage/backup-and-recovery) |
+| 2018 年 8 月 24 日 | [パッケージ変換マネージャー](https://docs.microsoft.com/sccm/apps/pcm/package-conversion-manager) |
+| 2018 年 8 月 23 日 | [前提条件の確認](https://docs.microsoft.com/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
 
 
 
