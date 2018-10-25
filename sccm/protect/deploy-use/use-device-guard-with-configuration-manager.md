@@ -10,12 +10,12 @@ ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3750e91d96c1ca3eda1ad0ca2fc67b5f627c7a03
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2ccc918bf5f15798c201ed491dd3824bb20b2ebb
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353554"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862568"
 ---
 # <a name="device-guard-management-with-configuration-manager"></a>Configuration Manager を使用した Device Guard 管理
 
@@ -148,7 +148,7 @@ You can let locked-down devices run software with a good reputation as determine
 - **[強制の有効化]** でポリシーを展開し、その後、**[監査のみ]** で同じデバイスにポリシーを展開する行為はお止めください。 この構成により、信頼されていないソフトウェアが実行される可能性があります。
 - Configuration Manager を利用し、クライアント PC 上の Windows Defender アプリケーション制御を有効にすると、ローカル管理者権限を持つユーザーがアプリケーション制御ポリシーを回避したり、その他の方法で信頼されていないソフトウェアを実行したりすることをポリシーは防げません。 
 - ローカル管理者権限を持つユーザーがアプリケーション制御を無効にすることを防ぐ唯一の方法は、署名付きのバイナリ ポリシーを展開することです。 これはグループ ポリシーで可能ですが、現在のところ、Configuration Manager ではサポートされていません。
-- クライアント PC に管理インストーラーとして Configuration Manager を設定するとき、AppLocker ポリシーが使用されます。 AppLocker は管理インストーラーの識別にのみ利用されます。すべての強制はアプリケーションで行われます。 
+- クライアント PC に管理インストーラーとして Configuration Manager を設定するとき、AppLocker ポリシーが使用されます。 AppLocker は管理インストーラーの識別にのみ利用されます。すべての適用は Windows Defender アプリケーション制御で行われます。 
 
 
 

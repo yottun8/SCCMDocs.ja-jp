@@ -10,12 +10,12 @@ ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1ef2883bfeb61df55ff045b76e9bc45a11b4da2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 34536114e6cb1be8f256da385b3d69d07c17f676
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352171"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862483"
 ---
 # <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>System Center Configuration Manager でオペレーティング システムをキャプチャするタスク シーケンスを作成する
 
@@ -103,7 +103,7 @@ System Center Configuration Manager でタスク シーケンスを使用して�
 
      クライアントのインストールで使用できるプロパティの詳細については、「[クライアント インストールのプロパティについて](../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
 
-9. **[更新プログラムを含める]** ページで、必要なソフトウェア更新プログラム、すべてのソフトウェア更新プログラム、またはソフトウェア更新プログラムなしを指定してから、 **[次へ]** をクリックします。 ソフトウェア更新プログラムをインストールするように指定する場合、Configuration Manager は、セットアップ先のコンピューターがメンバーとなっているコレクション向けのソフトウェア更新プログラムのみをインストールします。  
+9. **[更新プログラムを含める]** ページで、必要なソフトウェア更新プログラム、すべてのソフトウェア更新プログラム、またはソフトウェア更新プログラムなしを指定してから、**[次へ]** をクリックします。 ソフトウェア更新プログラムをインストールするように指定する場合、Configuration Manager は、セットアップ先のコンピューターがメンバーとなっているコレクション向けのソフトウェア更新プログラムのみをインストールします。  
 
 10. **[アプリケーションのインストール]** ページで、展開先コンピューターにインストールするアプリケーションを指定してから、**[次へ]** をクリックします。 複数のアプリケーションを指定する場合は、特定のアプリケーションのインストールに失敗したときにタスク シーケンスを続行するかどうかも指定することができます。  
 
