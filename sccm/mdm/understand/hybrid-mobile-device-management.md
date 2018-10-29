@@ -10,12 +10,12 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f65c7665d5c055fc2a1636a1c9556b4ff75a4f7
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
+ms.openlocfilehash: 22e685889f51f3b35c3ba58e94d161816424b2a3
+ms.sourcegitcommit: dd785ad7146b8491c98ccd7804d0959a5c1fb034
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584483"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383016"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用するハイブリッド MDM
 
@@ -23,7 +23,8 @@ ms.locfileid: "42584483"
 
 > [!Important]  
 > 2018 年 8 月 14 日の時点では、ハイブリッド モバイル デバイス管理は[非推奨の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)です。
-> <!--Intune feature 2683117--> 1 年以上前に Azure で利用できるようになってから、Intune には、お客様からの要望や市場の発展に従って何百もの新しいサービス機能が追加されています。 ハイブリッド モバイル デバイス管理 (MDM) で提供されるものよりはるかに多くの機能が用意されています。 Azure での Intune では、エンタープライズ モビリティのニーズに対していっそう統合された効率的な管理エクスペリエンスが提供されています。
+> <!--Intune feature 2683117-->  
+> 1 年以上前に Azure で利用できるようになってから、Intune には、お客様からの要望や市場の発展に従って何百もの新しいサービス機能が追加されています。 ハイブリッド モバイル デバイス管理 (MDM) で提供されるものよりはるかに多くの機能が用意されています。 Azure での Intune では、エンタープライズ モビリティのニーズに対していっそう統合された効率的な管理エクスペリエンスが提供されています。
 > 
 > その結果、ほとんどのお客様は、ハイブリッド MDM ではなく Azure での Intune を選択されています。 クラウドに移行するお客様の増加により、ハイブリッド MDM を使用するお客様の数は減り続けています。 そのため、2019 年 9 月 1 日をもって、Microsoft はハイブリッド MDM サービスの提供を終了します。 MDM のニーズを [Azure での Intune に移行する](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)ことを計画してください。 
 > 

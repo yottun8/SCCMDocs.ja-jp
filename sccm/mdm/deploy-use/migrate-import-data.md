@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
-ms.openlocfilehash: 89db0abe9a60e6850ae36e619483e0dcdc3e5360
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
+ms.openlocfilehash: 655d7663a6597ce1b13fb26a5340d482be1ba7ed
+ms.sourcegitcommit: 8827ffaea108678da968a3623f072876990c830c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111146"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411312"
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>Configuration Manager のデータの Microsoft Intune へのインポート 
 
@@ -55,6 +55,7 @@ Data Importer ツールがご使用の Configuration Manager 環境を変更す�
 - ツールは、オブジェクトをインポートできない理由を提供しようとします。 場合によっては、Intune にオブジェクトをインポートする前に、Configuration Manager コンソールに戻って、問題を修正し、Configuration Manager オブジェクトの検出スキャンをもう一度開始してから、オブジェクトをインポートすることができます。 Intune でこれらのオブジェクトを手動で再作成する必要がある場合があります。
 - 他のオブジェクトに依存しているいくつかのプロファイルがあります。 証明書に依存している電子メール プロファイルのように、別のオブジェクトに依存しているプロファイルをインポートする場合は、以前に一方のオブジェクトを同じコンピューターから同じユーザーでインポートしたことがない限り、同時に両方のオブジェクトをインポートする必要があります。  
 - このツールの実行後、手動で追加の手順を実行する必要がある場合があります。 たとえば、アプリとポリシーを AAD グループの対象とする場合などです。 
+- ユーザーに何らかの Web アプリ (Web クリップとも呼ばれます) が割り当てられている場合は、ユーザーを移行する前にこれらの Web アプリを削除し、移行が完了したら Web アプリを再び割り当てる必要があります。 このようにしないと、移行後に Web クリップを管理できなくなります。
 
 ## <a name="prerequisites"></a>[前提条件]
 - Configuration Manager バージョン 1610 以降。最上位サイトを指定し、サイト階層内のすべてのオブジェクトへのアクセス権を持つユーザーでツールを実行することをお勧めします。 ツールは、ツールを実行しているユーザーがアクセスできるオブジェクトのみを検出します。 

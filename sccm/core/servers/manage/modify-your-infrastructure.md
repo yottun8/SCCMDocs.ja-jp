@@ -10,12 +10,12 @@ ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7f798fdb1183b852bded92711cc5f489666f4f2a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 13d9e83adcdf0e125d1596ff93fbb1a0fa67c09f
+ms.sourcegitcommit: 8827ffaea108678da968a3623f072876990c830c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342566"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411329"
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>System Center Configuration Manager インフラストラクチャの変更
 
@@ -284,7 +284,7 @@ SQL Server ドキュメントは [SPN を手動で登録する](https://technet.
     -   **プライマリ サイト**: このサイトでサイトのリセットの実行に使用するアカウントは、プライマリ サイト サーバーのローカル管理者であり、 **[完全な権限を持つ管理者]** の役割に基づいた管理セキュリティ ロールと同等の権限を持っている必要があります。 プライマリ サイトが中央管理サイトの階層内にある場合、このアカウントは中央管理サイト サーバーのローカル管理者でもある必要があります。  
 
 **サイトのリセットに関する制限事項**
-  - バージョン 1602 以降、[実稼働前コレクションでのクライアント アップグレードのテスト](/sccm/core/clients/manage/upgrade/test-client-upgrades)をサポートするように階層が構成されている場合、サイトにインストールされているサーバーまたはクライアント言語パックをサイトのリセットによって変更することはできません。
+  - バージョン 1602 以降、[運用前コレクションでのクライアント アップグレードのテスト](/sccm/core/clients/manage/upgrade/test-client-upgrades)をサポートするように階層が構成されている場合、サイトにインストールされているサーバーまたはクライアント言語パックをサイトのリセットによって変更することはできません。
 
 #### <a name="to-perform-a-site-reset"></a>サイトのリセットを実行するには  
 

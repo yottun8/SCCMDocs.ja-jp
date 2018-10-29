@@ -10,12 +10,12 @@ author: aczechowski
 description: 定義ファイルの更新を自動的に承認するように Windows Server Update Services を構成する方法を説明します。
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: b1c79a839ad1c83c96d7fe4583b46f6a3edbffba
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5aa857141b047fc0f9929ca72041980a8bc8b6a7
+ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349859"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461258"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>Configuration Manager で Endpoint Protection のマルウェア定義を Windows Server Update Services (WSUS) からダウンロードできるようにする
 
@@ -37,7 +37,7 @@ ms.locfileid: "32349859"
 
     -   Windows 8.1 以前では、 **[ソフトウェアの更新ポイント コンポーネントのプロパティ]** ダイアログ ボックスの **[製品]** タブで、 **[Forefront Endpoint Protection 2010]** チェック ボックスをオンにします。
 
-    -   Windows 10 以降では、 **[ソフトウェアの更新ポイント コンポーネントのプロパティ]** ダイアログ ボックスの **[製品]** タブで、 **[Windows Defender]** と **[Windows Technical Preview 2]** チェック ボックスをオンにします。
+    -   Windows 10 以降では、**[ソフトウェアの更新ポイント コンポーネントのプロパティ]** ダイアログ ボックスの **[製品]** タブで、**[Windows Defender]** チェック ボックスをオンにします。
 
 6.  **[OK]** をクリックして、[ **[分類]** ] ダイアログ ボックスを閉じます。
 
@@ -51,7 +51,7 @@ ms.locfileid: "32349859"
 
     -   Windows 8.1 以前では、 **[ソフトウェアの更新ポイント コンポーネントのプロパティ]** ダイアログ ボックスの **[製品]** タブで、 **[Forefront Endpoint Protection 2010]** チェック ボックスをオンにします。
 
-    -   Windows 10 以降では、 **[ソフトウェアの更新ポイント コンポーネントのプロパティ]** ダイアログ ボックスの **[製品]** タブで、 **[Windows Defender]** と **[Windows Technical Preview 2]** チェック ボックスをオンにします。
+    -   Windows 10 以降では、**[ソフトウェアの更新ポイント コンポーネントのプロパティ]** ダイアログ ボックスの **[製品]** タブで、**[Windows Defender]** チェック ボックスをオンにします。
 
 3.  **[製品と分類]** ダイアログ ボックスの **[分類]** タブで、 **[定義ファイルの更新]** と **[更新プログラム]** チェック ボックスをオンにします。
 
