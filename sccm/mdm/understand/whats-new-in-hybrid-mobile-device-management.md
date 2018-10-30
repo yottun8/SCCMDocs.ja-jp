@@ -2,7 +2,7 @@
 title: ハイブリッド MDM の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。
-ms.date: 09/18/2018
+ms.date: 10/18/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 195fb8c4ae584b9b5ccb2401b145d9c78a0be781
-ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
+ms.openlocfilehash: 3082bb6d6cc96be8ba7a56e1e2bb5a6bcd32bc9b
+ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448873"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461275"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -46,11 +46,38 @@ ms.locfileid: "46448873"
 |**Configuration Manager (現在のブランチ) の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Configuration Manager (Current Branch) でのみ動作します。 ハイブリッド展開に旧バージョンの Configuration Manager を使用している場合は、機能の説明で指定されたバージョンの Configuration Manager (現在の分岐) にアップグレードします。 詳細については、「[System Center Configuration Manager へのアップグレード](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)」を参照してください。|
 
 
+
+## <a name="october-2018"></a>2018 年 10 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+#### <a name="access-to-key-profile-properties-using-the-company-portal-app"></a>ポータル サイト アプリを使用したキーのプロファイル プロパティへのアクセス
+<!--772203-->  
+
+エンド ユーザーがポータル サイト アプリからキー アカウントのプロパティと、パスワード リセットなどのアクションにアクセスできるようになりました。 
+
+#### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device"></a>iOS デバイス上での指紋または Face ID の変更時の PIN プロンプト  
+<!--2637704-->  
+
+iOS デバイス上での生体認証の変更後、ユーザーに PIN の入力が求められるようになりました。 これには、登録済みの指紋や Face ID の変更が含まれます。 プロンプトのタイミングは、*[アクセス要件を再確認するまでの時間 (分)]* の構成によって異なります。  PIN が設定されていない場合は、ユーザーに設定を求められます。  
+
+この機能は iOS でのみ使用可能で、iOS 向け Intune App SDK のバージョン 8.1.1 以降を統合するアプリケーションの参加が必要です。 SDK の統合は、対象のアプリケーション上で動作を適用するために必要です。 この統合は、ローリング方式で行われ、特定のアプリケーション チームに依存します。 参加するアプリケーションには、WXP、Outlook、Managed Browser、Yammer などが含まれます。
+
+#### <a name="end-user-device-and-app-content-menu"></a>エンド ユーザー デバイスとアプリのコンテンツのメニュー 
+<!--2771453-->  
+エンド ユーザーはデバイス上のコンテキスト メニューとアプリを使用して、デバイスの名前変更、準拠状況の確認などの一般的なアクションをトリガーできるようになりました。 
+
+#### <a name="windows-company-portal-keyboard-shortcuts"></a>Windows ポータル サイトのキーボード ショートカット
+<!--2771518-->  
+エンドユーザーは、Windows ポータル サイトでキーボード ショートカット (アクセラレータ) を使用してアプリとデバイスのアクションをトリガーできるようになりました。
+
+
+
 ## <a name="august-2018"></a>2018 年 8 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
-### <a name="new-user-experience-update-for-the-company-portal-website"></a>Intune ポータル サイトの新しいユーザー エクスペリエンスの更新
+#### <a name="new-user-experience-update-for-the-company-portal-website"></a>Intune ポータル サイトの新しいユーザー エクスペリエンスの更新
 <!--2000968-->お客様のフィードバックに基づいて、Intune ポータル サイトに新機能が追加されました。 Android、iOS、Windows デバイスの既存の機能および使いやすさが、大幅に改善されました。 サイトの領域には、最新のレスポンシブ デザインが取り入れられました。 これらの領域には、デバイスの詳細、フィードバックとサポート、およびデバイスの概要が含まれます。 また、次の機能強化も確認できます。
 
 - すべてのデバイス プラットフォームにわたる合理化されたワークフロー
