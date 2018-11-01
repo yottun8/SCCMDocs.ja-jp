@@ -10,12 +10,12 @@ ms.assetid: 7568c9aa-b99e-4466-bfc8-0301aa376930
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 42b3925fa94ae1672e4241a3cddc66cdc1774aaf
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 081e485211e3bb5b2b0d8e6a9606c4037c29d4e3
+ms.sourcegitcommit: 2deba3d3aaba47a532273bcd377da8e60f7b1a68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333061"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169602"
 ---
 # <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>System Center Configuration Manager でのデバイス コンプライアンスの確認
 
@@ -44,7 +44,7 @@ System Center Configuration Manager でのコンプライアンス設定は、�
  [コンプライアンス設定を使ってみる](../../compliance/get-started/get-started-with-compliance-settings.md)  
 
 ## <a name="plan-and-design"></a>計画と設計  
- コンプライアンス設定での作業を開始する前に、このトピックで必要な前提条件を実施しておきます。  
+ コンプライアンス設定の操作を開始する前に、このトピックで必要な前提条件を実装しておきます。  
 
  [コンプライアンス設定の計画と構成](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  
 

@@ -10,12 +10,12 @@ ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f31a221151239b6a72a750652731dca7e4557649
-ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
+ms.openlocfilehash: aaa033fb64c3b525eff3ca54537df6dcdf773502
+ms.sourcegitcommit: dfb2cb01c1608b848f2f2fee7c84500e7adcb7a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42584423"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101264"
 ---
 # <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でインターネット ベースのクライアント管理を計画する
 
@@ -47,6 +47,9 @@ ms.locfileid: "42584423"
  また、インターネット ベースのクライアント管理では、ローミングをサポートしません。 ローミングによって、クライアントが常に一番近い配布ポイントを見つけて、コンテンツをダウンロードできるようになります。 しかし、インターネット上で管理されるクライアントは、割り当てられているサイトのサイト システムがインターネット FQDN を使用するように構成され、サイト システムの役割がインターネットからのクライアント接続を受け入れる場合に、そのサイト システムと通信します。 クライアントは、帯域幅や物理的な場所に関係なく、インターネット ベースのサイト システムのいずれかを無作為に選択します。  
 
  インターネットからの接続を受け付けるように構成したソフトウェアの更新ポイントがある場合は、インターネット上にある Configuration Manager のインターネット ベースのクライアントは、必ずこのソフトウェアの更新ポイントをスキャンして、どのソフトウェア更新プログラムが必要かを判断します。 ただし、これらのクライアントがインターネット上にある場合は、インターネット ベースの配布ポイントからではなく、まず Microsoft Update からソフトウェア更新プログラムをダウンロードしようとします。 Microsoft Update からダウンロードできなかった場合だけ、クライアントに割り当てられているサイトのインターネットベースの配布ポイントからダウンロードします。 インターネット ベースのクライアント管理用に構成されていないクライアントは、Microsoft Update からはソフトウェア更新プログラムをダウンロードせず、常に Configuration Manager の配布ポイントを使用します。  
+ 
+[!Tip]  
+Configuration Manager クライアントは、イントラネット上にあるか、インターネット上にあるかを自動的に判断します。 クライアントがドメイン コントローラーまたはオンプレミス管理ポイントに接続できる場合、その接続の種類が [現在はイントラネット] に設定されます。 それ以外の場合は [現在はインターネット] に切り替わり、クライアントの通信にはそのサイトに割り当てられている管理ポイント、ソフトウェアの更新ポイント、配布ポイントが使用されます。
 
 ##  <a name="considerations-for-client-communications-from-the-internet-or-untrusted-forest"></a>インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項  
  プライマリ サイトにインストールされた次のサイト システムの役割では、インターネットや信頼されていないフォレストなどの信頼されていない場所にあるクライアントからの接続がサポートされます (セカンダリ サイトでは信頼されていない場所からのクライアント接続はサポートされません)。  

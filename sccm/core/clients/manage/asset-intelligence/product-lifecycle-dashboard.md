@@ -10,12 +10,12 @@ ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f99aeba109ed4de3ef1b88b721b59eebb4653cb6
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: dd1a3a56bac6d7917c70db731b1735a195fae3df
+ms.sourcegitcommit: dfb2cb01c1608b848f2f2fee7c84500e7adcb7a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384633"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101247"
 ---
 # <a name="manage-microsoft-lifecycle-policy-with-configuration-manager"></a>Configuration Manager を使って Microsoft のライフサイクル ポリシーを管理する
 
@@ -63,7 +63,7 @@ Configuration Manager コンソールのライフサイクル ダッシュボー
 
 - **[Top five products past end-of-life]\(ライフサイクルが終了した上位 5 製品\)**: このタイルは、環境内で見つかった、ライフサイクルが終了した製品の統合データ ビューです。 グラフには、インストールされているソフトウェアのうち、オペレーティング システムおよび SQL サーバー製品のサポート ライフサイクルと比較して有効期限が切れているものが示されます。  
 
-- **[Top five products nearing end-of-life]\(ライフサイクル終了が近づいている上位 5 製品\)**: このタイルは、環境内で見つかった、ライフサイクル終了が 6 か月以内に近づいている製品の統合データ ビューです。 グラフには、インストールされているソフトウェアのうち、オペレーティング システムおよび SQL サーバー製品のサポート ライフサイクルと比較して有効期限が 6 か月以内のものが示されます。  
+- **[Top five products nearing end-of-life]\(ライフサイクル終了が近づいている上位 5 製品\)**: このタイルは、環境内で見つかった、ライフサイクル終了が 18 か月以内に近づいている製品の統合データ ビューです。 グラフには、インストールされているソフトウェアのうち、オペレーティング システムおよび SQL サーバー製品のサポート ライフサイクルと比較して有効期限が 18 か月以内のものが示されます。  
 
 - **[インストールされている製品のライフサイクル データ]**: このタイルには、製品がサポート対象から期限切れ状態に移行する時期の概要が示されます。 グラフには、製品がインストールされているクライアントの数の内訳、サポート可用性の状態、および次に行う手順の詳細へのリンクが表示されます。 このグラフには次の情報が含まれています。     
     - 残りサポート時間
