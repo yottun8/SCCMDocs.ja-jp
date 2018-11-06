@@ -2,7 +2,7 @@
 title: プレリリース機能
 titleSuffix: Configuration Manager
 description: プレリリース機能は、運用環境での初期テスト用の Current Branch に含まれている機能です。
-ms.date: 07/30/2018
+ms.date: 10/24/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b82bdfcbe69c7e9d59185fc6af20a85e65a6e7d
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: e3b3b31c31725c6b9931d0c2cc67324c4b39f974
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893568"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411138"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Configuration Manager のプレリリース機能
 
@@ -75,7 +75,7 @@ ms.locfileid: "43893568"
 
 | 機能          | プレリリース版として追加 | 完全機能として追加 |  
 |------------------|----------------------|-------------------------|
-| 拡張 HTTP サイト システム<!--1356889,1358228-->|バージョン 1806|![未追加](media/red_x.png)|
+| 拡張 HTTP サイト システム<!--1356889,1358228-->|[バージョン 1806](/sccm/core/plan-design/hierarchy/enhanced-http)|![未追加](media/red_x.png)|
 | 共同管理デバイス向けのモバイル アプリ<!--1357892-->|[バージョン 1806](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune)|![未追加](media/red_x.png)|
 | パッケージ変換マネージャー<!--1357861-->|[バージョン 1806](/sccm/apps/pcm/package-conversion-manager)|![未追加](media/red_x.png)|
 | iOS 向け Cisco AnyConnect 4.0.07x 以降のサポート<!--1357393-->|[バージョン 1802](/sccm/mdm/deploy-use/create-vpn-profiles)| [バージョン 1802 (更新プログラム 4163547 適用)](/sccm/mdm/deploy-use/create-vpn-profiles) |
