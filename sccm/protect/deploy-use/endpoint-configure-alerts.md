@@ -10,12 +10,12 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 78afa39b173abc79c4ed1cadc79f41ab32150ecf
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: 626c52b827e38a53ed3b8982963496f29f11acb5
+ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862364"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083770"
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configuration Manager での Endpoint Protection 用のアラートの構成
 
@@ -39,12 +39,12 @@ ms.locfileid: "48862364"
     > [!NOTE]
     >  ユーザーのコレクションに対してアラートを構成することはできません。
 
-4.  Configuration Manager コンソールの **[監視]** ワークスペースで、このコレクションのマルウェア対策操作についての詳細を表示する場合は、*[<コレクション名\> ***のプロパティ]** ダイアログ ボックスの **[アラート]** タブで、**[このコレクションを Endpoint Protection ダッシュボードに表示する]** を選びます。
+4.  Configuration Manager コンソールの **[監視]** ワークスペースで、このコレクションのマルウェア対策操作についての詳細を表示する場合は、_[<コレクション名\>_ **のプロパティ]** ダイアログ ボックスの **[アラート]** タブで、**[このコレクションを Endpoint Protection ダッシュボードに表示する]** を選びます。
 
     > [!NOTE]
     >  このオプションは、 **[すべてのシステム]** コレクションには選択できません。
 
-5.  *[<コレクション名\>***プロパティ]** ダイアログ ボックスの **[アラート]** タブで、**[追加]** をクリックします。
+5.  _[\>コレクション名_ **のプロパティ]** ダイアログ ボックスの **[アラート]** タブで、**[追加]** をクリックします。
 
 6.  **[コレクションの新しいアラートの追加]** ダイアログ ボックスの **[Generate an alert when these conditions apply]** (これらの条件を満たす場合にアラートを生成する) セクションで、特定の Endpoint Protection イベントが発生したときに Configuration Manager が生成するアラートを選択してから、**[OK]** をクリックします。
 
@@ -83,7 +83,7 @@ ms.locfileid: "48862364"
 
         -   **[検出期間 (時間):]** マルウェアの検出の数が発生する必要がありますを時間単位では、検出の間隔を指定します。 **[1]** から **[168]** までの数で指定します。
 
-9. **[OK]** をクリックして *[<コレクション名\> ***のプロパティ]** ダイアログ ボックスを閉じます。  
+9. **[OK]** をクリックして _[<コレクション名\>_ **のプロパティ]** ダイアログ ボックスを閉じます。  
 
 ## <a name="alert-for-outdated-malware-client"></a>期限切れのマルウェア クライアントのアラート
 

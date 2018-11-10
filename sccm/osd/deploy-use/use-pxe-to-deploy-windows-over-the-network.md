@@ -10,12 +10,12 @@ ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4c6069f81c9a5d086ef7c3ed13312d4f878d524a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 1efd4197e63ddc12c0afc9e37b633c38d0df0f14
+ms.sourcegitcommit: a52255da16c9f8b0b60a6c299a369347c7e01bef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384093"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989146"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>Configuration Manager で PXE を使用して Windows をネットワーク経由で展開する
 
@@ -40,7 +40,8 @@ PXE を使用した OS の展開は、次のシナリオで使用できます。
 
 PXE ブート要求を作成する Configuration Manager クライアントにオペレーティング システムを展開するには、PXE 要求を受け入れるように 1 つ以上の配布ポイントを構成する必要があります。 構成された配布ポイントは、PXE ブート要求に応答し、実行する適切な展開アクションを決定します。 詳細については、[配布ポイントのインストールと変更に関するトピック](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)を参照してください。  
 
-
+> [!NOTE]  
+>  複数のサブネットをサポートする目的で PXE 対応配布ポイントを 1 つ構成するとき、DHCP オプションの使用はサポートされません。 PXE 対応配布ポイントへの PXE 要求の転送を許可するようにルーター上で IP ヘルパーを構成してください。
 
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>PXE 対応のブート イメージの作成
 
