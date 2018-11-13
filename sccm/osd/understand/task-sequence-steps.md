@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3e0b70a2b024555bd67f63b3a31a6408b07c273b
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: bec95b13ecba5ae5238d758ae06566042a95d939
+ms.sourcegitcommit: 303d826f45c8fd9a05d8883afc1ca645e56bd576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756079"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269248"
 ---
 # <a name="task-sequence-steps-in-configuration-manager"></a>Configuration Manager のタスク シーケンス ステップ
 
@@ -134,7 +134,7 @@ ms.locfileid: "42756079"
 
  このステップでは、対象のコンピューターのネットワークまたはワークグループの構成情報を指定します。 タスク シーケンスは、これらの値を適切な応答ファイルに格納します。 Windows セットアップは、**Windows と ConfigMgr のセットアップ** アクションの間にこの応答ファイルを使います。  
 
- このタスク シーケンス ステップは、完全な OS または Windows PE のいずれかで実行されます。 
+ このタスク シーケンス ステップは Windows PE でのみ実行されます。 完全な OS では実行されません。 
 
  このステップでは、次のタスク シーケンス変数を使用します。  
  - [OSDAdapter](/sccm/osd/understand/task-sequence-variables#OSDAdapter)  
@@ -160,7 +160,7 @@ ms.locfileid: "42756079"
  対象コンピューターを指定したワークグループに参加させるには、このオプションを選択します。 **[ワークグループ]** 行にワークグループの名前を入力します。 この値は、**ネットワーク設定のキャプチャ** タスク シーケンス ステップでキャプチャされた値によってオーバーライドできます。 
 
 #### <a name="join-a-domain"></a>ドメインに参加
- 対象コンピューターを指定したドメインに参加させるには、このオプションを選択します。 ドメイン (たとえば `fabricam.com`) を直接指定するか参照します。 組織単位の LDAP (Lightweight Directory Access Protocol) パスを指定または参照します。 例: `LDAP//OU=computers, DC=Fabricam.com, C=com`。  
+ 対象コンピューターを指定したドメインに参加させるには、このオプションを選択します。 ドメイン (たとえば `fabricam.com`) を直接指定するか参照します。 組織単位の LDAP (Lightweight Directory Access Protocol) パスを指定または参照します。 例: `LDAP//OU=computers, DC=Fabricam.com, C=com`  
 
 #### <a name="account"></a>アカウント
  コンピューターをドメインに参加させるには、**[設定]** をクリックして必要なアクセス許可を持つアカウントを指定します。 **[Windows ユーザー アカウント]** ダイアログ ボックスで、ユーザー名を `Domain\User` という形式で入力します。 詳しくは、[ドメイン参加アカウント](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account)に関するページをご覧ください。 
@@ -1357,7 +1357,7 @@ ms.locfileid: "42756079"
 
  ファイル名拡張子を指定しないと、.com、.exe、.bat が試されます。 ファイル名に拡張子が付いていても、それが実行可能ファイルの種類でない場合は、ローカルの関連付けが試されます。 たとえば、コマンド ラインが readme.gif の場合は、Configuration Manager では .gif ファイルを開くために対象のコンピューターで指定されたアプリケーションを起動します。  
 
- 次に例を示します。  
+ 例:  
 
  `setup.exe /a`  
 
@@ -1372,7 +1372,7 @@ ms.locfileid: "42756079"
 #### <a name="start-in"></a>作業フォルダー
  プログラムの実行可能フォルダーを 127 文字以内で指定します。 このフォルダーには、対象のコンピューターの絶対パスを指定することも、パッケージを含む配布ポイント フォルダーを基準としたパスを指定することもできます。 このフィールドは省略可能です。  
 
- 次に例を示します。  
+ 例:  
 
  `c:\officexp`  
 
@@ -1710,7 +1710,7 @@ ms.locfileid: "42756079"
 
  セットアップでは、スキャンの結果として終了コードが返されます。 次の表に一般的な終了コードをいくつか示します。  
 
- |終了コード|詳細|  
+ |終了コード|説明|  
  |-|-|  
  |MOSETUP_E_COMPAT_SCANONLY (0xC1900210)|互換性の問題なし ("成功")。|  
  |MOSETUP_E_COMPAT_INSTALLREQ_BLOCK (0xC1900208)|対応可能な互換性の問題。|  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: d15484ef38264a5c954dc664f9885b800a078ca6
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: 9aab4273129e6a3032d7e85d2545e6abc5b616c4
+ms.sourcegitcommit: 8dd9199bfe8e27f62e9df307f1c6ac58a3b81717
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601009"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237158"
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>共同管理用に Windows 10 デバイスを準備する
 AD と Azure AD に参加し Microsoft Intune に登録されている Windows 10 デバイスと、Configuration Manager のクライアントで、共同管理を有効にできます。 新しい Windows 10 デバイスおよび Intune に既に登録されているデバイスでは、共同管理を有効にする前に Configuration Manager クライアントをインストールします。 既に Configuration Manager クライアントになっている Windows 10 デバイスの場合は、デバイスを Intune に登録して、Configuration Manager コンソールで共同管理を有効にできます。
@@ -68,7 +68,7 @@ AD と Azure AD に参加し Microsoft Intune に登録されている Windows 1
 
 - Windows 10 バージョン 1709 以降  
 
-- [ハイブリッド Azure AD への参加](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (AD と Azure AD に参加)  
+- [ハイブリッド Azure AD 参加済み](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (AD と Azure AD に参加) または Azure AD のみ参加済み (この種類は "クラウド ドメイン参加済み" と呼ばれることがあります)。
 
 
 ### <a name="additional-prerequisites-for-devices-without-the-configuration-manager-client"></a>Configuration Manager クライアントがインストールされていないデバイスの追加の前提条件

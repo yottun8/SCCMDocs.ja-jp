@@ -2,7 +2,7 @@
 title: クラウド管理ゲートウェイの計画
 titleSuffix: Configuration Manager
 description: インターネットを基盤とするクライアントの管理を簡素化するクラウド管理ゲートウェイ (CMG) を計画し、設計します。
-ms.date: 09/10/2018
+ms.date: 10/24/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9b25b7a5b7df42dc83bec18d38b44c7807e6dc1a
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: 0f7e598da0953a20412f6c8279b90a95c1d26581
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601128"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411478"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager でクラウド管理ゲートウェイを計画する
 
@@ -153,16 +153,19 @@ Fourth Coffee は、シアトルの本社にあるオンプレミス データ�
 
 - **サービス接続ポイント**は[オンライン モード](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes)にする必要があります。   
 
-- CMG の[**サーバー認証証明書**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate)。  
+- CMG の[**サーバー認証証明書**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_serverauth)。  
 
-- Azure クラシック デプロイメントの方法を利用している場合、[**Azure 管理証明書**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#azure-management-certificate)を使用する必要があります。  
+- Azure クラシック デプロイメントの方法を利用している場合、[**Azure 管理証明書**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_azuremgmt)を使用する必要があります。  
 
     > [!TIP]  
-    > Configuration Manager バージョン 1802 以降は、**Azure Resource Manager** 展開モデルの利用をお勧めします。 この管理証明書は必要ありません。  
+    > Configuration Manager バージョン 1802 以降では、**Azure Resource Manager** デプロイ モデルの使用をお勧めします。 この管理証明書は必要ありません。  
 
 - クライアントの OS バージョンと認証モデルによっては、**他の証明書**が必要になることがあります。 詳細については、「[CMG 証明書](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)」を参照してください。  
 
-    - バージョン 1802 以降では、CMG が有効なすべての[**管理ポイントで HTTPS を使用する**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https)ように構成する必要があります。  
+    - バージョン 1802 以降では、CMG が有効なすべての[**管理ポイントで HTTPS を使用する**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps)ように構成する必要があります。  
+
+    - バージョン 1806 以降では、**[HTTP サイト システムには Configuration Manager によって生成された証明書を使用する]** サイト オプションを使用するときは、管理ポイントは HTTP でもかまいません。 詳細については、「[Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)」(拡張 HTTP) をご覧ください。  
+
 
 - Windows 10 クライアントの場合、**Azure AD** との統合が必要になることがあります。 詳細については、「[Azure サービスの構成](/sccm/core/servers/deploy/configure/azure-services-wizard)」を参照してください。  
 
@@ -325,8 +328,8 @@ CMG の概念を表す基本的なデータ フロー図: ![CMG データ フロ
 |---------|---------|---------|---------|---------|
 | [サービス接続ポイント]     | HTTPS | 443        | Azure        | CMG のデプロイ |
 | CMG 接続ポイント     |  TCP-TLS | 10140-10155        | CMG サービス        | CMG チャネル <sup>1</sup> を構築するための優先プロトコル |
-| CMG 接続ポイント     | HTTPS | 443        | CMG サービス       | フォールバックで唯一の VM インスタンスに CMG チャネルを構築する<sup>2</sup> |
-| CMG 接続ポイント     |  HTTPS   | 10124-10139     | CMG サービス       | フォールバックで 2 つ以上の VM インスタンスに CMG チャネルを構築する<sup>3</sup> |
+| CMG 接続ポイント     | HTTPS | 443        | CMG サービス       | ただ 1 つの VM インスタンスに CMG チャネルを構築するためのフォールバック プロトコル <sup>2</sup> |
+| CMG 接続ポイント     |  HTTPS   | 10124-10139     | CMG サービス       | 複数の VM インスタンスに CMG チャネルを構築するためのフォールバック プロトコル <sup>3</sup> |
 | クライアント     |  HTTPS | 443         | CMG        | 一般クライアント通信 |
 | CMG 接続ポイント      | HTTPS または HTTP | 443 または 80         | 管理ポイント<br>(バージョン 1706 または 1710) | オンプレミス トラフィック、ポートは管理ポイント構成に依存 |
 | CMG 接続ポイント      | HTTPS | 443      | 管理ポイント<br>(バージョン 1802) | オンプレミス トラフィックは HTTPS にする必要あり |

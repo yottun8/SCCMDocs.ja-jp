@@ -4,23 +4,38 @@ description: クラウド管理ゲートウェイと共に使用するさまざ�
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 09/10/2018
+ms.date: 10/24/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 052210b53ec330a75d73508ae41218231bd75153
-ms.sourcegitcommit: 65423b94f0fee5dc5026804d88f13416872b93d4
+ms.openlocfilehash: 121b3840ea4f61f4789c5d6c21ab857cb091e199
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47173480"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411308"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>クラウド管理ゲートウェイの証明書
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-クラウド管理ゲートウェイ (CMG) でインターネット上のクライアントを管理するためのシナリオによっては、1 つまたは複数のデジタル証明書が必要になります。 さまざまなシナリオに関する詳細については、「[クラウド管理ゲートウェイの計画](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)」を参照してください。
+クラウド管理ゲートウェイ (CMG) でインターネット上のクライアントを管理するためのシナリオによっては、1 つまたは複数の次のデジタル証明書が必要になります。  
+
+- [CMG サーバー認証証明書](#bkmk_serverauth)  
+    - [クライアントが信頼する CMG のルート証明書](#bkmk_cmgroot)  
+    - [パブリック プロバイダーが発行したサーバー認証証明書](#bkmk_serverauthpublic)  
+    - [エンタープライズ PKI から発行されたサーバー認証証明書](#bkmk_serverauthpki)  
+
+- [Azure 管理証明書](#bkmk_azuremgmt)  
+
+- [クライアント認証証明書](#bkmk_clientauth)  
+    - [CMG が信頼するクライアントのルート証明書](#bkmk_clientroot)  
+
+- [HTTPS 用の管理ポイントを有効にする](#bkmk_mphttps)  
+
+
+さまざまなシナリオに関する詳細については、「[クラウド管理ゲートウェイの計画](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)」を参照してください。
 
 
 ### <a name="general-information"></a>一般情報
@@ -28,15 +43,15 @@ ms.locfileid: "47173480"
 
 - **4096 ビットのキーの長さ**  
 
-- バージョン 1710 以降、**バージョン 3** の証明書のサポート。 詳細については、「[CNG certificates overview](/sccm/core/plan-design/network/cng-certificates-overview)」(CNG 証明書の概要) を参照してください。  
+- バージョン 1710 以降では、証明書の秘密キーのキー記憶域プロバイダーがサポートされます。 詳細については、「[CNG certificates overview](/sccm/core/plan-design/network/cng-certificates-overview)」(CNG 証明書の概要) を参照してください。  
 
-- バージョン 1802 以降、ポリシー: **[システム暗号化: 暗号化、ハッシュ、署名のための FIPS 準拠アルゴリズムを使う]** を使用して Windows を構成した場合。  
+- バージョン 1802 以降で、ポリシー: **[システム暗号化: 暗号化、ハッシュ、署名のための FIPS 準拠アルゴリズムを使う]** を使用して Windows を構成した場合。  
 
 - バージョン 1802 より、**TLS 1.2** のサポート。 詳細については、「[暗号化コントロールのテクニカル リファレンス](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities)」を参照してください。  
 
 
 
-## <a name="cmg-server-authentication-certificate"></a>CMG サーバー認証証明書
+## <a name="bkmk_serverauth"></a> CMG サーバー認証証明書
 
 *この証明書はすべてのシナリオで必要です。*
 
@@ -53,7 +68,7 @@ CMG によって、インターネットベースのクライアントが接続�
  > CMG でワイルドカード証明書を使用する方法の詳細については、「[CMG を設定する](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#set-up-a-cmg)」を参照してください。<!--SCCMDocs issue #565-->  
 
 
-### <a name="cmg-trusted-root-certificate-to-clients"></a>クライアントが信頼する CMG のルート証明書
+### <a name="bkmk_cmgroot"></a> クライアントが信頼する CMG のルート証明書
 
 クライアントは、CMG サーバー認証証明書を信頼する必要があります。 この信頼は、次の 2 つの方法で実現できます。 
 
@@ -67,7 +82,7 @@ CMG によって、インターネットベースのクライアントが接続�
 > バージョン 1806 以降、CMG を作成するときに、[設定] ページで信頼されたルート証明書を指定する必要はなくなりました。 クライアント認証で Azure Active Directory (Azure AD) を使用するときにこの証明書は必要ありませんが、ウィザードで必要な場合は使用されます。 PKI クライアント認証証明書を使用する場合は、引き続き信頼されたルート証明書を CMG に追加する必要があります。<!--SCCMDocs-pr issue #2872-->  
 
 
-### <a name="server-authentication-certificate-issued-by-public-provider"></a>パブリック プロバイダーが発行したサーバー認証証明書
+### <a name="bkmk_serverauthpublic"></a> パブリック プロバイダーが発行したサーバー認証証明書
 
 サード パーティの証明書プロバイダーは、CloudApp.net の証明書を作成できません。これは、そのドメインが Microsoft によって所有されているためです。 自分が所有するドメインに対して発行された証明書のみを取得できます。 サード パーティ プロバイダーから証明書を取得する主な理由は、クライアントがそのプロバイダーのルート証明書を既に信頼していることにあります。
 
@@ -91,7 +106,7 @@ CMG によって、インターネットベースのクライアントが接続�
 Configuration Manager で CMG インスタンスを作成する際には、証明書に GraniteFalls.Contoso.com が含まれるものの、Configuration Manager によってホスト名 (たとえば、GraniteFalls) のみが抽出されます。 このホスト名は CloudApp.net に追加されます。Azure でクラウド サービスを作成する際には、このドメインが必要となります。 Contoso.com ドメインの DNS 名前空間内の CNAME エイリアスにより、これらの 2 つの FQDN がまとめてマップされます。 Configuration Manager により、この CMG にアクセスするためのポリシーがクライアントに提供され、DNS マッピングによって結び付けられて、クライアントが Azure のサービスに安全にアクセスできるようになります。<!--SCCMDocs issue #565-->  
 
 
-### <a name="server-authentication-certificate-issued-from-enterprise-pki"></a>エンタープライズ PKI から発行されたサーバー認証証明書
+### <a name="bkmk_serverauthpki"></a> エンタープライズ PKI から発行されたサーバー認証証明書
 
 クラウド配布ポイントの場合と同じように、CMG のカスタム SSL 証明書を作成します。 次の操作以外は、「[クラウドベースの配布ポイント用のサービス証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012)」の指示に従います。
 
@@ -105,7 +120,7 @@ Configuration Manager で CMG インスタンスを作成する際には、証�
 
 
 
-## <a name="azure-management-certificate"></a>Azure 管理証明書
+## <a name="bkmk_azuremgmt"></a> Azure 管理証明書
 
 *この証明書は従来のサービス展開に必要です。Azure Resource Manager の展開には必要ありません。*
 
@@ -124,7 +139,7 @@ Azure で CMG を作成するには、Configuration Manager サービス接続�
 
 
 
-## <a name="client-authentication-certificate"></a>クライアント認証証明書
+## <a name="bkmk_clientauth"></a> クライアント認証証明書
 
 *この証明書は、Windows 7 デバイス、Windows 8.1 デバイス、Azure Active Directory (Azure AD) に参加していない Windows 10 デバイスを実行しているインターネットベースのクライアントに必要です。CMG 接続ポイントにも必要です。Azure AD に参加している Windows 10 クライアントには必要ありません。*
 
@@ -132,8 +147,10 @@ Azure で CMG を作成するには、Configuration Manager サービス接続�
 
 この証明書は Configuration Manager と前後関係のないところでプロビジョニングします。 たとえば、Active Directory 証明書サービスとグループ ポリシーを使用し、クライアント認証証明書を発行します。 詳細については、「[Windows コンピューター用のクライアント証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012)」を参照してください。
 
+CMG 接続ポイントでは、HTTPS 管理ポイントにクライアント要求を安全に転送するためにこの証明書が必要です。 Azure AD または拡張 HTTP を使用している場合は、この証明書は必要ありません。 詳細については、「[HTTPS 用の管理ポイントを有効にする](#bkmk_mphttps)」を参照してください。
 
-### <a name="client-trusted-root-certificate-to-cmg"></a>CMG が信頼するクライアントのルート証明書
+
+### <a name="bkmk_clientroot"></a> CMG が信頼するクライアントのルート証明書
 
 *この証明書は、クライアント認証証明書を利用するときに必要です。すべてのクライアントで認証に Azure AD を使用するとき、この証明書は必要ありません。* 
 
@@ -176,9 +193,10 @@ CMG はクライアント認証証明書を信頼する必要があります。 
 
 
 
-## <a name="enable-management-point-for-https"></a>HTTPS 用の管理ポイントを有効にする
+## <a name="bkmk_mphttps"></a> HTTPS 用の管理ポイントを有効にする
 
-*証明書の要件*
+この証明書は Configuration Manager と前後関係のないところでプロビジョニングします。 たとえば、Active Directory 証明書サービスとグループ ポリシーを使用し、Web サーバー証明書を発行します。 詳細については、「[PKI 証明書の要件](/sccm/core/plan-design/network/pki-certificate-requirements)」と「[IIS を実行するサイト システム用の Web サーバー証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012)」を参照してください。
+
 
 - バージョン 1706 または 1710 で、クライアント認証証明書を利用してオンプレミス ID で従来のクライアントを管理するとき、この証明書が推奨されますが、必須ではありません。  
 
@@ -186,12 +204,57 @@ CMG はクライアント認証証明書を信頼する必要があります。 
 
 - バージョン 1802 より、この証明書はすべてのシナリオで必要です。 CMG に対して有効にする管理ポイントのみが HTTPS である必要があります。 この動作の変更により、Azure AD トークン ベースの認証のサポートが強化されます。  
 
-この証明書は Configuration Manager と前後関係のないところでプロビジョニングします。 たとえば、Active Directory 証明書サービスとグループ ポリシーを使用し、Web サーバー証明書を発行します。 詳細については、「[PKI 証明書の要件](/sccm/core/plan-design/network/pki-certificate-requirements)」と「[IIS を実行するサイト システム用の Web サーバー証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012)」を参照してください。
+- バージョン 1806 以降では、**[HTTP サイト システムには Configuration Manager によって生成された証明書を使用する]** サイト オプションを使用するときは、管理ポイントは HTTP でもかまいません。 詳細については、「[Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)」(拡張 HTTP) をご覧ください。
+
+### <a name="management-point-client-connection-mode-summary"></a>管理ポイントのクライアント接続モードの概要
+これらの表は、クライアントの種類とサイトのバージョンに応じて、管理ポイントで HTTP または HTTPS が必要かどうかをまとめたものです。
+
+#### <a name="for-internet-based-clients-communicating-with-the-cloud-management-gateway"></a>クラウド管理ゲートウェイと通信するインターネットベースのクライアントの場合
+次のクライアント接続モードを使用して、CMG からの接続を許可するように、オンプレミスの管理ポイントを構成します。
+
+| クライアントの種類   | 1706        | 1710        | 1802        | 1806        |
+|------------------|-------------|-------------|-------------|-------------|
+| ワークグループ        | HTTP、HTTPS | HTTP、HTTPS | HTTPS       | E-HTTP<sup>[注 1](#bkmk_note1)</sup>、HTTPS |
+| AD ドメイン参加済み | HTTP、HTTPS | HTTP、HTTPS | HTTPS       | E-HTTP<sup>[注 1](#bkmk_note1)</sup>、HTTPS |
+| Azure AD 参加済み  | HTTPS       | HTTPS       | HTTPS       | E-HTTP、HTTPS |
+| ハイブリッド参加済み    | HTTP、HTTPS | HTTP、HTTPS | HTTPS       | E-HTTP、HTTPS |
+
+<a name="bkmk_note1"></a> 
+
+> [!Note]  
+> **注 1**: この構成では、クライアントに[クライアント認証証明書](#bkmk_clientauth)が必要で、デバイス中心のシナリオのみがサポートされます。  
+
+#### <a name="for-on-premises-clients-communicating-with-the-on-premises-management-point"></a>オンプレミスの管理ポイントと通信するオンプレミスのクライアントの場合
+次のクライアント接続モードを使用して、オンプレミスの管理ポイントを構成します。
+
+| クライアントの種類   | 1706        | 1710        | 1802        | 1806        |
+|------------------|-------------|-------------|-------------|-------------|
+| ワークグループ        | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS |
+| AD ドメイン参加済み | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS |
+| Azure AD 参加済み  | HTTPS       | HTTPS       | HTTPS       | HTTPS       |
+| ハイブリッド参加済み    | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS |
+
+> [!Note]  
+> バージョン 1806 では、AD ドメイン参加済みのクライアントは、HTTP または HTTPS の管理ポイントと通信するデバイス中心のシナリオとユーザー中心のシナリオの両方をサポートします。  
+> 
+> Azure AD 参加済みのクライアントとハイブリッド参加済みのクライアントは、デバイス中心のシナリオでは HTTP 経由で通信できますが、ユーザー中心のシナリオを有効にするには、E-HTTP または HTTPS が必要です。 そうでない場合、これらのクライアントはワークグループ クライアントと同じように動作します。  
+
+
+#### <a name="legend-of-terms"></a>用語の凡例
+- *ワークグループ*: デバイスはドメインまたは Azure AD に参加していませんが、[クライアント認証証明書](#bkmk_clientauth)を持っています。  
+- *AD ドメイン参加済み*: デバイスをオンプレミスの Active Directory ドメインに参加させます。  
+- *Azure AD 参加済み*: クラウド ドメイン参加済みとも呼ばれ、デバイスを Azure Active Directory テナントに参加させます。  
+- *ハイブリッド参加済み*: デバイスを Active Directory ドメインと Azure AD テナントの両方に参加させます。  
+- *HTTP*: 管理ポイント プロパティで、クライアント接続を **[HTTP]** に設定します。  
+- *HTTPS*: 管理ポイント プロパティで、クライアント接続を **[HTTPS]** に設定します。  
+- *E-HTTP*: サイトのプロパティの [クライアント コンピューターの通信方法] タブで、サイト システムの設定を **[HTTPS または HTTP]** に設定し、**[HTTP サイト システムには Configuration Manager によって生成された証明書を使用する]** のオプションを有効にします。 管理ポイントを HTTP または HTTPS に構成します。  
 
 
 
 ## <a name="next-steps"></a>次のステップ
 
-- [Set up cloud management gateway](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway) (クラウド管理ゲートウェイの設定)
-- [クラウド管理ゲートウェイについてよくあるご質問](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
-- [クラウド管理ゲートウェイのセキュリティとプライバシー](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)
+- [Set up cloud management gateway](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway) (クラウド管理ゲートウェイの設定)  
+
+- [クラウド管理ゲートウェイについてよくあるご質問](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)  
+
+- [クラウド管理ゲートウェイのセキュリティとプライバシー](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)  

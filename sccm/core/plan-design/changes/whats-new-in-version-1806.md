@@ -2,7 +2,7 @@
 title: バージョン 1806 の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager Current Branch のバージョン 1806 で導入された変更点および新機能について説明します。
-ms.date: 09/19/2018
+ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b5cb217b9351f5d2491070b447d0a96efe0aa29
-ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
+ms.openlocfilehash: e5fd7c26c190407ba5e497068582704b03c71f00
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46533781"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411512"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1806 の新機能
 
@@ -25,17 +25,17 @@ Configuration Manager Current Branch の更新プログラム 1806 はコンソ�
 
 この更新プログラムをインストールするための最新のチェックリストを常に確認してください。 詳細については「[更新プログラム 1806 をインストールするためのチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1806)」を参照してください。 サイトを更新した後は、[更新後のチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)に関するページも確認してください。
 
+<!--
 > [!Important]  
-> この記事では現在、このバージョンの重要な機能をすべて取り上げています。 しかしながら、一部のセクションのコンテンツは、新機能に関する後続情報で更新されていません。 更新がないか、このページを定期的にご確認ください。 変更には ***[更新]*** タグが付きます。 コンテンツが最終的に承認されると、この注記は削除されます。  
+> This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
+-->
 
-このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[システム センター構成マネージャーで現在の分岐、1806 のバージョンでの変更の概要](https://support.microsoft.com/help/4459701)」を参照してください。
+このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Summary of changes in Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4459701)」(Configuration Manager Current Branch バージョン 1806 での変更の概要) をご覧ください。
 
 Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell 1806 リリース ノート](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps)を参照してください。
 
-<!--
-The following additional updates to this release are also now available:
-- [Update rollup for System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4057517)
--->
+このリリースでは、次の追加の更新プログラムも利用できるようになりました。
+- [Configuration Manager Current Branch バージョン 1806 の更新プログラムのロールアップ](https://support.microsoft.com/help/4462978)
 
 
 次の各セクションでは、Configuration Manager Current Branch のバージョン 1806 の変更点と新機能について説明します。  
@@ -46,7 +46,7 @@ The following additional updates to this release are also now available:
 
 [削除された項目と非推奨の項目](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)で実装される前のサポートに関する変更点について説明します。
 
-"***[更新]***" 2018 年 8 月 14 日の時点で、ハイブリッド モバイル デバイス管理機能は非推奨です。 詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。<!--Intune feature 2683117-->  
+2018 年 8 月 14 日の時点で、ハイブリッド モバイル デバイス管理機能は非推奨です。 詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。<!--Intune feature 2683117-->  
 
 <!--
 Version 1806 drops support for the following products:
@@ -89,8 +89,7 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="exclude-active-directory-containers-from-discovery"></a>探索から Active Directory コンテナーを除外する
-<!--1358143-->
-"***[更新]***" 探索されるオブジェクト数を減らすためには、Active Directory システム探索から特定のコンテナーを除外します。 
+<!--1358143--> 探索されるオブジェクト数を減らすためには、Active Directory システム探索から特定のコンテナーを除外します。 
 
 詳細については、[Active Directory システム探索の構成](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adsd)に関するページを参照してください。
 
@@ -133,8 +132,7 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="boundary-group-options-for-peer-downloads"></a>ピアのダウンロードの境界グループのオプション
-<!--1356193-->
-"***[更新]***" 環境内のコンテンツ配布をより細かく制御できるように、境界グループに追加の設定が設けられました。 このリリースでは、次のオプションが追加されます。  
+<!--1356193--> 環境内のコンテンツ配布をより細かく制御できるように、境界グループに追加の設定が設けられました。 このリリースでは、次のオプションが追加されます。  
 
 - **[この境界グループのピアのダウンロードを許可する]**: 管理ポイントでは、ピア ソースを含むコンテンツの場所のリストがクライアントに提供されます。 この設定は、配信の最適化のグループ ID 適用にも反映されます。  
 
@@ -144,8 +142,7 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="improvement-to-peer-cache-source-location-status"></a>ピア キャッシュ ソースの場所の状態の改善
-<!--SCCMDocs issue 850-->
- ***[更新]*** Configuration Manager は、ピア キャッシュ ソースが別の場所にローミングしたとき、決定の効率性が上がります。 この動作により、管理ポイントによって、以前の場所ではなく、新しい場所でピア キャッシュ ソースがコンテンツ ソースとしてクライアントに提供されます。 ピア キャッシュ機能をローミング ピア キャッシュ ソースと共に使用している場合、サイトをバージョン 1806 に更新した後、すべてのピア キャッシュ ソースも最新版のクライアント バージョンに更新してください。 少なくともバージョン 1806 に更新されるまで、管理ポイントのコンテンツの場所一覧にはこれらのピア キャッシュ ソースが含まれません。
+<!--SCCMDocs issue 850--> Configuration Manager は、ピア キャッシュ ソースが別の場所にローミングしたとき、決定の効率性が上がります。 この動作により、管理ポイントによって、以前の場所ではなく、新しい場所でピア キャッシュ ソースがコンテンツ ソースとしてクライアントに提供されます。 ピア キャッシュ機能をローミング ピア キャッシュ ソースと共に使用している場合、サイトをバージョン 1806 に更新した後、すべてのピア キャッシュ ソースも最新版のクライアント バージョンに更新してください。 少なくともバージョン 1806 に更新されるまで、管理ポイントのコンテンツの場所一覧にはこれらのピア キャッシュ ソースが含まれません。
 
 詳細については、[ピア キャッシュの要件](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements)に関するページを参照してください。
 
@@ -168,15 +165,13 @@ Version 1806 drops support for the following products:
 
 このリリースでは、クライアントがシステム クライアントと通信する方法を強化しました。 サイトのプロパティの **[クライアント コンピューターの通信方法]** タブで、**[HTTPS または HTTP]** のオプションを選択してから、**[HTTP サイト システムには Configuration Manager によって生成された証明書を使用する]** の新しいオプションを有効にします。 この機能は[プレリリース版の機能](/sccm/core/servers/manage/pre-release-features)です。
 
-このオプションでは、次のプライマリ シナリオがサポートされます。  
-
-- **HTTP 管理ポイントへのクライアント**<!--1356889-->: [Azure AD に参加したデバイス](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices)は、HTTP 用に構成された管理ポイントを使用して、クラウド管理ゲートウェイ (CMG) 経由で通信できます。 サイト サーバーは、管理ポイントに対する証明書を生成して、安全なチャネル経由での通信を可能にします。   
-
-- **HTTP 配布ポイントへのクライアント**<!--1358228-->: ワークグループまたは Azure AD に参加しているクライアントは、HTTP 用に構成されている配布ポイントから安全なチャネル経由でコンテンツをダウンロードできます。   
+詳細については、「[Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)」(拡張 HTTP) をご覧ください。
 
 
 ### <a name="azure-ad-device-identity"></a>Azure AD デバイス ID 
 <!--1358460--> [Azure AD に参加している](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices)、または[ハイブリッドの Azure AD デバイス](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices)は、サインインしている Azure AD ユーザーがいない場合、割り当てられているサイトと安全に通信できます。 現在は、CMG および管理ポイントで認証するには、クラウドベースのデバイス ID で十分になりました。  
+
+詳細については、「[Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)」(拡張 HTTP) をご覧ください。
 
 
 ### <a name="cmtrace-installed-with-client"></a>クライアントと共にインストールされる CMTrace
@@ -186,8 +181,7 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="cloud-management-dashboard"></a>クラウド管理ダッシュボード
-<!--1358461-->
- ***[更新]*** 新しいクラウド管理ダッシュボードでは、クラウド管理ゲートウェイ (CMG) 使用量を一元化したビューを提供します。 Azure AD でサイトがオンボードになっている場合、クラウド ユーザーおよびデバイスに関するデータも表示します。   
+<!--1358461--> 新しいクラウド管理ダッシュボードでは、クラウド管理ゲートウェイ (CMG) 使用量を一元化したビューを提供します。 Azure AD でサイトがオンボードになっている場合、クラウド ユーザーおよびデバイスに関するデータも表示します。   
 
 また、この機能には、トラブルシューティングを支援するリアルタイム検証のための **CMG 接続アナライザー**も含まれます。 コンソール内ユーティリティは、サービスの状態と、CMG 接続ポイント経由で CMG トラフィックを許可する任意の管理ポイントへの通信チャネルをチェックします。 
 
@@ -201,14 +195,12 @@ Version 1806 drops support for the following products:
 バージョン 1806 では、クラウド管理ゲートウェイ (CMG) が次の点で機能強化されています。
 
 #### <a name="simplified-client-bootstrap-command-line"></a>簡略化されたクライアント ブートストラップ コマンド ライン
-<!--1358215-->
- ***[更新]*** CMG を介してインターネット上に Configuration Manager クライアントをインストールするときに、コマンド ラインで必要となるプロパティが少なくなりました。 この改善により、共同管理のための準備をするとき、Microsoft Intune で使用されるコマンド ラインのサイズが縮小されます。 
+<!--1358215--> CMG を介してインターネット上に Configuration Manager クライアントをインストールするときに、コマンド ラインで必要となるプロパティが少なくなりました。 この改善により、共同管理のための準備をするとき、Microsoft Intune で使用されるコマンド ラインのサイズが縮小されます。 
 
 詳細については、「[共同管理用に Windows 10 デバイスを準備する](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)」を参照してください。
 
 #### <a name="download-content-from-a-cmg"></a>CMG からコンテンツをダウンロードする
-<!--1358651-->
- ***[更新]*** これまでは、別の役割として、クラウド配布ポイントと CMG を展開する必要がありました。 CMG では、コンテンツをクライアントに提供できるようになりました。 この機能により、Azure VM の必要な証明書とコストが削減されます。 
+<!--1358651--> これまでは、別の役割として、クラウド配布ポイントと CMG を展開する必要がありました。 CMG では、コンテンツをクライアントに提供できるようになりました。 この機能により、Azure VM の必要な証明書とコストが削減されます。 
 
 詳細については、[CMG の変更](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg)に関するページを参照してください。
 
@@ -301,8 +293,7 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="package-conversion-manager"></a>Package Conversion Manager 
-<!--1357861-->
-"***[更新]***" Package Conversion Manager は統合ツールとなりました。これを使用して、従来の パッケージを Configuration Manager の現在のブランチのアプリケーションに変換することができます。 その後、依存関係、要件の規則、およびユーザーとデバイスのアフィニティなど、アプリケーションの機能を使用することができます。
+<!--1357861--> Package Conversion Manager は統合ツールとなりました。これを使用して、従来のパッケージを Configuration Manager の現在のブランチのアプリケーションに変換することができます。 その後、依存関係、要件の規則、およびユーザーとデバイスのアフィニティなど、アプリケーションの機能を使用することができます。
 
 詳細については、[Package Conversion Manager](/sccm/apps/pcm/package-conversion-manager) に関するページを参照してください。
 
@@ -350,36 +341,38 @@ Version 1806 drops support for the following products:
 
 これらのタスク シーケンスは、OS の展開用またはカスタム用の場合があります。 ワークグループ コンピューターでもサポートされます。
 
+詳細については、「[タスク シーケンスとネットワーク アクセス アカウント](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSNetworkAccessAccount)」をご覧ください。
+
 
 ### <a name="other-improvements-to-os-deployment"></a>OS 展開のその他の機能強化
 
 #### <a name="mask-sensitive-data-stored-in-task-sequence-variables"></a>タスク シーケンス変数に格納されている機密データをマスキングする
- <!--1358330--> "***[更新]***" **[タスク シーケンス変数の設定]** 手順で **[この値を表示しない]** という新しいオプションを選択します。 
+ <!--1358330--> **[タスク シーケンス変数の設定]** 手順で **[この値を表示しない]** という新しいオプションを選択します。 
 
- 詳細については、[タスク シーケンス変数の設定](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)に関するページを参照してください。 
+ 詳しくは、「[タスク シーケンス変数の設定](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)」をご覧ください。 
 
 #### <a name="mask-program-name-during-run-command-step-of-a-task-sequence"></a>タスク シーケンスのコマンドの実行ステップ中にプログラム名をマスキングする
- <!--1358493--> "***[更新]***" 機密性が高い可能性のあるデータが表示または記録されないようにするには、タスク シーケンス変数 **OSDDoNotLogCommand** を構成します。  
+ <!--1358493--> 機密性が高い可能性のあるデータが表示または記録されないようにするには、タスク シーケンス変数 **OSDDoNotLogCommand** を構成します。  
 
- 詳細については、[タスク シーケンスの変数](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand)に関するページを参照してください。 
+ 詳しくは、「[タスク シーケンス変数](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand)」をご覧ください。 
 
 #### <a name="task-sequence-variable-for-dism-parameters-when-installing-drivers"></a>ドライバーをインストールするときの DISM パラメーターのタスク シーケンス変数
- <!--516679/2840016--> "***[更新]***" DISM の追加コマンドライン パラメーターを指定するには、**OSDInstallDriversAdditionalOptions** という新しいタスク シーケンス変数を使用します。 
+ <!--516679/2840016--> DISM の追加コマンドライン パラメーターを指定するには、**OSDInstallDriversAdditionalOptions** という新しいタスク シーケンス変数を使用します。 
 
- 詳細については、[タスク シーケンスの変数](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)に関するページを参照してください。 
+ 詳しくは、「[タスク シーケンス変数](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)」をご覧ください。 
 
 #### <a name="option-to-use-full-disk-encryption"></a>ディスク全体の暗号化を使用するオプション
- <!--SCCMDocs-pr issue 2671--> "***[更新]***" **BitLocker の有効化**手順と **BitLocker の事前プロビジョニング**手順の両方に**ディスク全体の暗号化を使用する**オプションが含まれるようになりました。 既定では、これらの手順により、ドライブ上の使用済み領域が暗号化されます。 高速であり、効率性に優れているため、この既定の動作をお勧めします。 
+ <!--SCCMDocs-pr issue 2671--> **BitLocker の有効化**手順と **BitLocker の事前プロビジョニング**手順の両方に**ディスク全体の暗号化を使用する**オプションが含まれるようになりました。 既定では、これらの手順により、ドライブ上の使用済み領域が暗号化されます。 高速であり、効率性に優れているため、この既定の動作をお勧めします。 
 
  詳細については、[BitLocker の有効化](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker)および [BitLocker の事前プロビジョニング](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker)に関するページを参照してください。 
 
 #### <a name="client-provisioning-mode-isnt-enabled-with-windows-10-upgrade-compatibility-scan"></a>クライアント プロビジョニング モードは Windows 10 のアップグレード互換性スキャンでは有効ではない
- <!--SCCMDocs-pr issue 2812--> "***[更新]***" **[アップグレードを開始せずに Windows セットアップの互換性スキャンを実行する]** オプションを有効にした場合、**Upgrade Operating System** タスク シーケンスの手順で、Configuration Manager クライアントはプロビジョニング モードに設定されなくなりました。
+ <!--SCCMDocs-pr issue 2812-->  **[アップグレードを開始せずに Windows セットアップの互換性スキャンを実行する]** オプションを有効にした場合、**Upgrade Operating System** タスク シーケンスの手順で、Configuration Manager クライアントはプロビジョニング モードに設定されなくなりました。
 
  詳細については、「[オペレーティング システムのアップグレード](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS)」を参照してください。
 
 #### <a name="revised-documentation-for-task-sequence-variables"></a>タスク シーケンス変数の改訂版ドキュメント
- "***[更新]***" タスク シーケンス変数の理解に役立つ 2 つの新しい記事が利用可能になりました。  
+ タスク シーケンス変数の理解に役立つ 2 つの新しい記事が利用可能になりました。  
 
  - [タスク シーケンス変数の使用方法](/sccm/osd/understand/using-task-sequence-variables)は、さまざまな種類の変数、変数を設定するメソッド、および変数へのアクセス方法を示す新しい記事です。  
 
@@ -394,8 +387,7 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="software-center-infrastructure-improvements"></a>ソフトウェア センターのインフラストラクチャの改善
-<!--1358309-->
- ***[更新]*** ユーザーが利用できるアプリケーションをソフトウェア センターに表示するのにアプリケーション カタログの役割は必要なくなりました。 この変更は、ユーザーにアプリケーションを配布するために必要なサーバー インフラストラクチャを減らすのに役立ちます。 ソフトウェア センターは、この情報を取得するために管理ポイントに依存するようになりました。より大規模な環境を、[境界グループ](/sccm/core/servers/deploy/configure/boundary-groups#management-points)に割り当てることでより適切にスケーリングすることができます。
+<!--1358309--> ユーザーが利用できるアプリケーションをソフトウェア センターに表示するのにアプリケーション カタログの役割は必要なくなりました。 この変更は、ユーザーにアプリケーションを配布するために必要なサーバー インフラストラクチャを減らすのに役立ちます。 ソフトウェア センターは、この情報を取得するために管理ポイントに依存するようになりました。より大規模な環境を、[境界グループ](/sccm/core/servers/deploy/configure/boundary-groups#management-points)に割り当てることでより適切にスケーリングすることができます。
 
 詳細については、「[ソフトウェア センターの構成](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)」をご覧ください。  
 

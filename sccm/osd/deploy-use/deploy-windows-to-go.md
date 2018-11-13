@@ -1,5 +1,5 @@
 ---
-title: Windows to Go の展開
+title: Windows To Go を展開する
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager で Windows To Go をプロビジョニングして、外部ドライブから起動する Windows To Go ワークスペースを作成する方法について説明します。
 ms.date: 10/06/2016
@@ -10,14 +10,14 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 12b7a28ff5ea0e2e1870c0c37edd8e056930b09f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: afc76b59d594c6b8f52062add480874ba5c5686d
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351889"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411495"
 ---
-# <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用した Windows to Go の展開
+# <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用して Windows To Go を展開する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
@@ -151,7 +151,7 @@ ms.locfileid: "32351889"
     -   **[配布ポイント]**: ブート イメージをホストする配布ポイントを指定します。 配布ポイントからブート イメージが取得されてメディアに書き込まれます。  
 
         > [!NOTE]  
-        >  管理ユーザーは、配布ポイントのブート イメージ コンテンツの **読み取り** アクセス権を持っている必要があります。 詳細については、「[コンテンツにアクセスするためのアカウントの管理](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)」をご覧ください。  
+        >  管理ユーザーは、配布ポイントのブート イメージ コンテンツの **読み取り** アクセス権を持っている必要があります。 詳細については、「[パッケージ アクセス アカウント](/sccm/core/plan-design/hierarchy/accounts#package-access-account)」をご覧ください。  
 
     -   このウィザードの **[メディア管理]** ページで **[サイトベースのメディア]** を選択した場合、**[管理ポイント]** ボックスで、プライマリ サイトの管理ポイントを指定します。  
 
@@ -166,7 +166,7 @@ ms.locfileid: "32351889"
     -   **[配布ポイント]**: オペレーティング システムのブート イメージをホストする配布ポイントを指定します。 ウィザードにより、配布ポイントからオペレーティング システム イメージが取得されてメディアに書き込まれます。  
 
         > [!NOTE]  
-        >  管理ユーザーは、配布ポイントのオペレーティング システム イメージ コンテンツの **読み取り** アクセス権を持っている必要があります。 詳細については、「[コンテンツにアクセスするためのアカウントの管理](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)」をご覧ください。  
+        >  管理ユーザーは、配布ポイントのオペレーティング システム イメージ コンテンツの **読み取り** アクセス権を持っている必要があります。 詳細については、「[パッケージ アクセス アカウント](/sccm/core/plan-design/hierarchy/accounts#package-access-account)」をご覧ください。  
 
 11. **[アプリケーションの選択]** ページで、メディア ファイルに含めるアプリケーション コンテンツを選択して、**[次へ]** をクリックします。  
 

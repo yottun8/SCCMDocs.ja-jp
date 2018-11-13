@@ -2,7 +2,7 @@
 title: サイト コンポーネント
 titleSuffix: Configuration Manager
 description: サイト コンポーネントを構成して、サイト システムの役割とサイト ステータス レポートの動作を変更する方法について説明します。
-ms.date: 10/06/2016
+ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,109 +10,134 @@ ms.assetid: 5fccbbeb-0faa-4943-83c2-e67db62d392d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: da7537ff9cda198f938eafdfc5db198e79a2cb5b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5ffe1a95252d575a5f828d46932f583f4276c5c0
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334771"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411176"
 ---
-# <a name="site-components-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイト コンポーネント
+# <a name="site-components-for-configuration-manager"></a>Configuration Manager のサイト コンポーネント
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-各 System Center Configuration Manager サイトでサイト コンポーネントを設定すると、サイト システムの役割とサイト ステータス レポートの動作を変更できます。 サイト コンポーネントの構成はサイトと、サイトで適用可能なサイト システムの役割の各インスタンスに適用されます。  
+Configuration Manager サイトごとにサイト コンポーネントを構成し、サイト システムの役割とサイト ステータス レポートの動作を変更できます。 サイト コンポーネントの構成はサイトと、サイトで適用可能なサイト システムの役割の各インスタンスに適用されます。  
+
+Configuration Manager コンソールで、**[管理]** ワークスペースに移動し、**[サイトの構成]** を展開して **[サイト]** ノードを選択します。 サイトを選択します。 リボンの **[設定]** グループで、**[サイト コンポーネントの構成]** を選択します。 次のいずれかのオプションを選択します。
+
+- [ソフトウェアの配布](#software-distribution)  
+- [ソフトウェアの更新ポイント](#software-update-point)  
+- [管理ポイント](#management-point)  
+- [ステータス レポート](#status-reporting)  
+- [電子メール通知](#email-notification)
+- [コレクション メンバーシップの評価](#bkmk_colleval)
+
 
 ## <a name="about-site-components"></a>サイト コンポーネントについて  
- さまざまなサイト コンポーネントのオプションのほとんどは、Configuration Manager コンソールに表示すると、ひとめでわかります。 ただし、次の詳細では、一部のより複雑な構成について説明しています。または、より複雑な構成について説明している追加のコンテンツを参照できます。  
+
+ さまざまなサイト コンポーネントのオプションのほとんどは、Configuration Manager コンソールに表示すると、ひとめでわかります。 より複雑な構成であれば、以下で紹介する場所で一部の構成の詳細を確認できます。あるいは、追加のコンテンツに移動できます。  
+
+> [!Note]  
+> 一部のコンポーネントで利用できるオプションは、中央管理サイト、プライマリ サイト、セカンダリ サイトのどれを選択したかによって変わります。 サイトの種類によっては、一部のコンポーネントをまったく利用できません。  
+
+
 
 ### <a name="software-distribution"></a>ソフトウェアの配布  
 
--   **コンテンツ配布の設定:**  サイト サーバーから配布ポイントへのコンテンツの転送方法を変更する設定を指定できます。 同時配布設定に使用する値を増やすと、コンテンツの配布でより多くのネットワーク帯域幅を使用できます。  
+#### <a name="content-distribution-settings"></a>コンテンツ配布設定
+**[全般]** タブで、サイト サーバーから配布ポイントへのコンテンツの転送方法を変更する設定を指定します。 同時配布設定に使用する値を増やすと、コンテンツの配布でより多くのネットワーク帯域幅を使用できます。  
 
--   **ネットワーク アクセス アカウント:**  ネットワーク アクセス アカウントの設定と使用の詳細については、「[Network Access Account](../../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#bkmk_NAA)」(ネットワーク アクセス アカウント) を参照してください。  
+#### <a name="pull-distribution-point"></a>プル配布ポイント
+詳細については、「[プル配布ポイントの使用](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)」をご覧ください。
+
+#### <a name="network-access-account"></a>ネットワーク アクセス アカウント
+詳細については、「[ネットワーク アクセス アカウント](/sccm/core/plan-design/hierarchy/accounts#network-access-account)」を参照してください。  
+
 
 ### <a name="software-update-point"></a>ソフトウェアの更新ポイント  
 
--   ソフトウェアの更新ポイント コンポーネントの構成オプションについては、「[Install a software update point](../../../../sum/get-started/install-a-software-update-point.md)」(ソフトウェアの更新ポイントをインストールする) を参照してください。  
+詳細については、「[Install a software update point](/sccm/sum/get-started/install-a-software-update-point)」 (ソフトウェアの更新ポイントのインストール) をご覧ください。  
+
 
 ### <a name="management-point"></a>管理ポイント  
 
--   **管理ポイント:** 管理ポイントに関する情報を Active Directory Domain Services に発行するようにサイトを設定することができます。  
+**[全般]** タブで、管理ポイントに関する情報を Active Directory Domain Services に発行するようにサイトを設定します。  
 
-     Configuration Manager クライアントは、管理ポイントを使用してサービスを特定し、境界グループのメンバーシップや PKI 証明書の選択オプションなどのサイト情報を検索します。 また、クライアントは、サイト内の他の管理ポイントの検索や、ソフトウェアのダウンロード元の配布ポイントの検索にも管理ポイントを使用します。 クライアントは、管理ポイントを使用して、サイト割り当ての実行、クライアント ポリシーのダウンロード、クライアント情報のアップロードも行うことができます。  
+Configuration Manager クライアントは、管理ポイントを使用してサービスを特定し、境界グループのメンバーシップや PKI 証明書の選択オプションなどのサイト情報を検索します。 また、クライアントは、サイト内の他の管理ポイントの検索や、ソフトウェアのダウンロード元の配布ポイントの検索にも管理ポイントを使用します。 クライアントは、管理ポイントを使用して、サイト割り当ての実行、クライアント ポリシーのダウンロード、クライアント情報のアップロードも行うことができます。  
 
-     クライアントが管理ポイントを見つけるには、Active Directory ドメイン サービスに発行するのが最も安全な方法であるため、通常は、機能している管理ポイントをすべて選択して Active Directory ドメイン サービスに発行します。 ただし、このサービスの場所検索方法では、次の条件を満たしている必要があります。
+クライアントが管理ポイントを見つける最も安全な方法は、Active Directory Domain Services で管理ポイントを公開することです。 このサービスの場所検索方法では、次の条件を満たしている必要があります。
 
-     - Configuration Manager のスキーマが拡張されている。
-     - **System Management** コンテナーがあり、サイト サーバーがこのコンテナーに発行するための適切なセキュリティ アクセス許可が設定されている。
-     - Configuration Manager サイトが Active Directory Domain Services に発行するように設定されている。
-     - クライアントが、サイト サーバーと同じ Active Directory フォレストに属している  
+- Configuration Manager のスキーマが拡張されている。
+- **System Management** コンテナーがあり、サイト サーバーがこのコンテナーに発行するための適切なセキュリティ アクセス許可が設定されている。
+- Configuration Manager サイトが Active Directory Domain Services に発行するように設定されている。
+- クライアントが、サイト サーバーと同じ Active Directory フォレストに属している  
 
-     イントラネット上のクライアントが管理ポイントの検索に Active Directory Domain Services を使用できない場合は、代わりに [DNS](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_dns) 発行を使用します。  
+イントラネット上のクライアントが管理ポイントの検索に Active Directory Domain Services を使用できない場合は、[DNS](/sccm/core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services#bkmk_dns) 発行を使用します。  
 
- サービスの場所の概要については、「[Understand how clients find site resources and services for System Center Configuration Manager](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)」(クライアントが System Center Configuration Manager のサイト リソースやサービスを検索する方法を理解する) を参照してください。  
+サービスの場所の概要については、[クライアントがサイト リソースやサービスを検索する](/sccm/core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services)方法に関するページを参照してください。  
 
--   **選択したイントラネット管理ポイントを DNS に発行する:** イントラネット上のクライアントが Active Directory ドメイン サービスから管理ポイントを検索できない場合は、このオプションを指定します。 代わりに、DNS サービスの場所リソース レコード (SRV RR) を使用して、割り当てられたサイト内の管理ポイントを検索できます。  
 
-    Configuration Manager がイントラネットの管理ポイントを DNS に発行するには、次の条件が満たされていなければなりません。  
+#### <a name="publish-selected-intranet-management-points-in-dns"></a>選択したイントラネット管理ポイントを DNS に発行する
+イントラネット上のクライアントで Active Directory Domain Services から管理ポイントを見つけられないときにこのオプションを指定します。 代わりに、DNS サービスの場所リソース レコード (SRV RR) を使用して、割り当てられたサイト内の管理ポイントを検索できます。  
 
-    -   DNS サーバーが、バージョン 8.1.2 以降の BIND を使用している。  
+Configuration Manager がイントラネットの管理ポイントを DNS に発行するには、次の条件が満たされていなければなりません。  
 
-    -   DNS サーバーが自動更新用に設定されていて、サービスの場所のリソース レコードをサポートする。  
+-   DNS サーバーが、バージョン 8.1.2 以降の BIND を使用している。  
 
-    -   Configuration Manager 内の管理ポイント用に指定された完全修飾ドメイン名 (FQDN) に DNS のホスト エントリ (A または AAA レコード) がある。  
+-   DNS サーバーが自動更新用に設定されていて、サービスの場所のリソース レコードをサポートする。  
 
-    > [!WARNING]  
-    >  クライアントが DNS で発行された管理ポイントを見つけるには、自動サイト割り当てを使用せずに、クライアントを特定のサイトに割り当てる必要があります。 管理ポイントのドメイン サフィックスを持つサイト コードを使用するには、これらのクライアントを設定します。 詳細については、「[How to assign clients to a site in System Center Configuration Manager](/sccm/core/clients/deploy/assign-clients-to-a-site)」(System Center Configuration Manager のサイトにクライアントを割り当てる方法) の「[Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points)」(管理ポイントの特定) を参照してください。  
+-   Configuration Manager 内の管理ポイント用に指定された完全修飾ドメイン名 (FQDN) に DNS のホスト エントリ (A または AAA レコード) がある。  
 
-     Configuration Manager クライアントがイントラネット上の管理ポイントの検索に Active Directory Domain Services も DNS も使用できない場合は、[WINS](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_wins) を使用します。 イントラネット上の HTTP クライアント接続を受信するように設定されている場合、サイトで最初にインストールされた管理ポイントが自動的に WINS に発行されます。  
+> [!WARNING]  
+>  クライアントが DNS で発行された管理ポイントを見つけるには、自動サイト割り当てを使用せずに、クライアントを特定のサイトに割り当てる必要があります。 管理ポイントのドメイン サフィックスを持つサイト コードを使用するには、これらのクライアントを設定します。 詳細については、「[管理ポイントを検出する](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points)」をご覧ください。  
+
+Configuration Manager クライアントがイントラネット上の管理ポイントの検索に Active Directory Domain Services も DNS も使用できない場合は、[WINS](/sccm/core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services#bkmk_wins) を使用します。 イントラネット上の HTTP クライアント接続を受信するように設定されている場合、サイトで最初にインストールされた管理ポイントが自動的に WINS に発行されます。  
+
 
 ### <a name="status-reporting"></a>ステータス レポート  
 
--   これらの設定は、サイトとクライアントからの状態レポートに含まれている詳細のレベルを直接設定します。  
+これらの設定は、サイトとクライアントからの状態レポートに含まれている詳細のレベルを直接設定します。  
+
 
 ### <a name="email-notification"></a>電子メール通知  
 
--   アカウントと電子メール サーバーの詳細を指定して、Configuration Manager を有効にし、アラートとして電子メール通知を送信します。  
+アカウントと電子メール サーバーの詳細を指定して、Configuration Manager を有効にし、アラートとして電子メール通知を送信します。  
 
-### <a name="collection-membership-evaluation"></a>コレクション メンバーシップの評価  
+詳細については、「[アラートとステータス システムの使用](/sccm/core/servers/manage/use-alerts-and-the-status-system)」を参照してください。
 
--   このタスクは、コレクションのメンバーシップの変更箇所を評価する頻度を設定する場合に使用します。 変更箇所の評価は、新しいリソースが追加された場合またはリソースが変更された場合にのみコレクションのメンバーシップを更新します。  
 
-### <a name="edit-the-site-components-at-a-site"></a>サイトでサイト コンポーネントを編集する  
+### <a name="bkmk_colleval"></a> コレクション メンバーシップの評価  
 
-サイト コンポーネントを編集するには、次の手順を使用します。
+このコンポーネントは、コレクションのメンバーシップの変更箇所を評価する頻度を設定する場合に使用します。 変更箇所の評価は、新しいリソースが追加された場合またはリソースが変更された場合にのみコレクションのメンバーシップを更新します。  
 
-1.  Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** > **[サイト]** の順にクリックし、構成するサイト コンポーネントのあるサイトを選択します。  
+詳細については、[コレクションのベスト プラクティス](/sccm/core/clients/manage/collections/best-practices-for-collections)に関するページを参照してください。
 
-2.  **[ホーム]** タブの **[設定]** グループで、**[サイト コンポーネントの構成]** をクリックします。 構成するサイト コンポーネントを選択します。  
+
 
 ##  <a name="BKMK_ServiceMgr"></a> Configuration Manager サービス マネージャーによるサイト コンポーネントの管理  
-Configuration Manager サービス マネージャーを使用して、Configuration Manager サービスを管理し、Configuration Manager サービスや実行中のスレッド (まとめて Configuration Manager コンポーネントと呼びます) のステータスを確認することができます。 Configuration Manager コンポーネントについて次のことを理解してください。  
+
+Configuration Manager サービス マネージャーを使用して、Configuration Manager サービスを管理し、Configuration Manager サービスや実行中のスレッドのステータスを確認できます。 これらのサービスとスレッドはまとめて Configuration Manager コンポーネントと呼ばれています。 Configuration Manager コンポーネントについて次のことを理解してください。  
 
 -   コンポーネントは任意のサイト システムで実行できます。  
 
 -   コンポーネントは、Windows のサービスを管理する場合と同じ方法で管理されます。 Configuration Manager コンポーネントの開始、停止、一時停止、再開、または照会を行うことができます。  
 
-Configuration Manager サービスによる処理が必要になると (通常は構成ファイルがコンポーネントの受信トレイに書き込まれたとき)、サービスが実行されます。 操作に関連するコンポーネントを識別する必要がある場合は、Configuration Manager サービス マネージャーを使用して、各種のサービスとスレッドを操作することができます。 Configuration Manager の動作で発生した変更を表示できます。 たとえば、特定の応答が排除されるまで Configuration Manager サービスを一度に 1 つずつ停止できます。 これにより、特定の動作の原因となっているサービスを判別できます。  
+Configuration Manager サービスは、このサービスが実行するものが存在するときに実行されます。 これは一般的に、構成ファイルがコンポーネントの受信トレイに書き込まれるときのアクションとなります。 
 
-> [!TIP]  
->  次の手順は、Configuration Manager コンポーネントの操作を変更するために使用できます。  
 
 ### <a name="use-the-configuration-manager-service-manager"></a>Configuration Manager サービス マネージャーを使用する  
 
-1.  Configuration Manager コンソールで **[監視]** >  **[システムのステータス]** の順にクリックし、**[コンポーネントのステータス]** をクリックします。  
+1.  Configuration Manager コンソールで、**[監視]** ワークスペースに移動し、**[システム ステータス]** を展開し、**[コンポーネントのステータス]** ノードを選択します。  
 
-2.  **[ホーム]** タブの **[コンポーネント]** グループで、**[開始]** をクリックします。 次に **[Configuration Manager サービス マネージャー]** を選択します。  
+2.  リボンの **[コンポーネント]** グループで **[起動]** を選択し、**[Configuration Manager サービス マネージャー]** を選択します。  
 
 3.  Configuration Manager サービス マネージャーが開いたら、管理したいサイトに接続します。  
 
-     管理したいサイトが表示されない場合は、 **[サイト]**、 **[接続]** の順にクリックして、該当するサイトのサイト サーバーの名前を入力します。  
+     管理するサイトが表示されない場合、**[サイト]** メニューに進み、**[接続]** を選択します。 次に、正しいサイトのサイト サーバーの名前を入力します。  
 
 4.  サイトを展開して、管理したいコンポーネントのある場所に応じて、**[コンポーネント]** または **[サーバー]** に移動します。  
 
-5.  右側のウィンドウで、1 つまたは複数のコンポーネントを選択します。 次に、**[コンポーネント]** メニューの **[クエリ]** をクリックして、選択項目の状態を更新します。  
+5.  右側のウィンドウで、1 つまたは複数のコンポーネントを選択します。 次に、**[コンポーネント]** メニューの **[クエリ]** を選択し、選択項目の状態を更新します。  
 
 6.  コンポーネントのステータスを更新したら、**[コンポーネント]** メニューの 4 つのアクション ベースのオプションのいずれかを使用して、コンポーネントの操作を変更します。 アクションを要求したら、コンポーネントを照会して、コンポーネントの新しいステータスを表示する必要があります。  
 

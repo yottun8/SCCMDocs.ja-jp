@@ -10,19 +10,18 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fcf3bc335efc4c7436842b29d30c67c118ceb05d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4435802ad67857ad9f79168f96aa046eae8f7097
+ms.sourcegitcommit: 471cf13bc1ff7543c3d32465df9eecff9aaaa5be
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339028"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753651"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Configuration Manager コンソールから PowerShell スクリプトを作成して実行する
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
-<!--1236459-->
-System Center Configuration Manager には、PowerShell スクリプトを実行するための統合機能があります。 PowerShell には、高度な自動化されたスクリプトを作成できるという利点があります。PowerShell スクリプトは、多くの方が参加するコミュニティで理解され、共有されています。 このスクリプトを使用すると、ソフトウェアを管理するカスタム ツールを簡単に構築できます。また、大規模なジョブをより簡単に、一貫した方法で実行できるので、日常のタスクをすぐに完了できるようになります。  
+<!--1236459--> System Center Configuration Manager には、PowerShell スクリプトを実行するための統合機能があります。 PowerShell には、高度な自動化されたスクリプトを作成できるという利点があります。PowerShell スクリプトは、多くの方が参加するコミュニティで理解され、共有されています。 このスクリプトを使用すると、ソフトウェアを管理するカスタム ツールを簡単に構築できます。また、大規模なジョブをより簡単に、一貫した方法で実行できるので、日常のタスクをすぐに完了できるようになります。  
 
 > [!TIP]  
 > この機能はバージョン 1706 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 バージョン 1802 以降、この機能はプレリリース機能ではなくなりました。  
@@ -95,7 +94,7 @@ Configuration Manager セキュリティ ロールの詳細については、以
 1. Configuration Manager コンソールで、**[管理]** をクリックします。
 2. **[管理]** ワークスペースで **[サイトの構成]** を展開して、**[サイト]** をクリックします。
 3. サイトの一覧で、自分のサイトを選択し、**[ホーム]** タブの **[サイト]** グループで **[階層設定]** をクリックします。
-4. **[階層設定のプロパティ]** ダイアログ ボックスの **[全般]** タブで、**[Do not allow script authors to approve their own scripts]\(スクリプト作成者に自身のスクリプトの承認を許可しない\)** チェック ボックスをオフにします。
+4. **[階層設定のプロパティ]** ダイアログ ボックスの **[全般]** タブで、**[スクリプトの作成者には追加のスクリプト承認者が必要]** チェック ボックスをオフにします。
 
 >[!IMPORTANT]
 >ベスト プラクティスとして、スクリプト作成者に自分のスクリプトの承認を許可しないようにする必要があります。 これは、ラボ設定でのみ許可する必要があります。 運用環境でこの設定を変更する場合の影響を慎重に検討してください。

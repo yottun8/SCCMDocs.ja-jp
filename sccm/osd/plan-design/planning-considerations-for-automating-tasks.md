@@ -2,7 +2,7 @@
 title: タスクの自動化を計画する
 titleSuffix: Configuration Manager
 description: タスク シーケンスを作成する前に、Configuration Manager でのタスクの自動化を計画します。
-ms.date: 08/17/2018
+ms.date: 10/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: fc497a8a-3c54-4529-8403-6f6171a21c64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ea1b104dfbdf23a080bc71da94b88cdcad31fa1
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 608b947e75ff29cf9653b2a12497918846556f4d
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755950"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411291"
 ---
 # <a name="planning-considerations-for-automating-tasks-in-configuration-manager"></a>Configuration Manager でのタスクの自動化計画に関する考慮事項
 
@@ -236,18 +236,42 @@ ms.locfileid: "42755950"
 
 ##  <a name="BKMK_TSNetworkAccessAccount"></a> タスク シーケンスとネットワーク アクセス アカウント  
 
- タスク シーケンスはローカル システム アカウントのコンテキストでのみ実行されます。次のような状況では、[ネットワーク アクセス アカウント](/sccm/core/plan-design/hierarchy/accounts#network-access)の構成が必要になることがあります。  
+> [!Important]  
+> バージョン 1806 以降では、一部の OS 展開シナリオでは、ネットワーク アクセス アカウントを使用する必要がありません。 詳細については、「[拡張 HTTP](#enhanced-http)」を参照してください。
 
- - タスク シーケンスが配布ポイント上の Configuration Manager コンテンツにアクセスを試みる場合。 ネットワーク アクセス アカウントを正しく構成しないと、タスク シーケンスは失敗します。   
+タスク シーケンスはローカル システム アカウントのコンテキストでのみ実行されます。次のような状況では、[ネットワーク アクセス アカウント](/sccm/core/plan-design/hierarchy/accounts#network-access-account)の構成が必要になることがあります。  
 
- - ブート イメージを使用して OS の展開を開始するとき。 この場合、Configuration Manager は Windows PE 環境を使用し、これは完全な OS ではありません。 Windows PE 環境では、自動的に生成されたランダムな名前が使用されます。この名前はどのドメインのメンバーでもありません。 ネットワーク アクセス アカウントを正しく構成しないと、コンピューターはタスク シーケンスに必要なコンテンツにアクセスできません。  
+- タスク シーケンスが配布ポイント上の Configuration Manager コンテンツにアクセスを試みる場合。 ネットワーク アクセス アカウントを正しく構成しないと、タスク シーケンスは失敗します。   
+
+- ブート イメージを使用して OS の展開を開始するとき。 この場合、Configuration Manager は Windows PE 環境を使用し、これは完全な OS ではありません。 Windows PE 環境では、自動的に生成されたランダムな名前が使用されます。この名前はどのドメインのメンバーでもありません。 ネットワーク アクセス アカウントを正しく構成しないと、コンピューターはタスク シーケンスに必要なコンテンツにアクセスできません。  
+
+> [!NOTE]  
+>  プログラムの実行、アプリケーションのインストール、更新のインストール、タスク シーケンスの実行のためのセキュリティ コンテキストとして、ネットワーク アクセス アカウントが使用されることはありません。 ネットワーク アクセス アカウントは、ネットワーク上の関連付けられているリソースへのアクセスにのみ使用されます。  
+
+ネットワーク アクセス アカウントについて詳しくは、「[ネットワーク アクセス アカウント](/sccm/core/plan-design/hierarchy/accounts#network-access-account)」をご覧ください。  
 
 
- > [!NOTE]  
- >  プログラムの実行、アプリケーションのインストール、更新のインストール、タスク シーケンスの実行のためのセキュリティ コンテキストとして、ネットワーク アクセス アカウントが使用されることはありません。 ネットワーク アクセス アカウントは、ネットワーク上の関連付けられているリソースへのアクセスにのみ使用されます。  
+### <a name="enhanced-http"></a>拡張 HTTP
+<!--1358278-->
 
+バージョン 1806 以降では、**拡張 HTTP** を有効にすると、次のシナリオでは、配布ポイントからコンテンツをダウンロードするためにネットワーク アクセス アカウントを必要としません。
+  
+- ブート メディアまたは PXE から実行されているタスク シーケンス  
+- ソフトウェア センターから実行されているタスク シーケンス  
 
- ネットワーク アクセス アカウントについて詳しくは、「[ネットワーク アクセス アカウント](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#bkmk_NAA)」をご覧ください。  
+これらのタスク シーケンスは、OS の展開用またはカスタム用の場合があります。 ワークグループ コンピューターでもサポートされます。
+ 
+詳細については、「[Enhanced HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)」(拡張 HTTP) をご覧ください。  
+
+> [!Note]  
+> 次の OS 展開シナリオには、引き続きネットワーク アクセス アカウントを使用する必要があります。
+>  
+> - タスク シーケンス[展開オプション](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)、**実行中のタスク シーケンスで必要になったときに、配布ポイントからコンテンツに直接アクセスする**   
+> - [状態ストアの要求](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore)ステップ オプション、**コンピューター アカウントで状態ストアに接続できない場合、ネットワーク アクセス アカウントを使用する** 
+> - 信頼されていないドメインに接続または Active Directory フォレスト間で接続するとき 
+> - [OS イメージの適用](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyOperatingSystemImage)ステップ オプション、**配布ポイントからコンテンツに直接アクセスする** 
+> - タスク シーケンス[詳細設定](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#bkmk_prop-advanced)で**別のプログラムを最初に実行する** 
+> - [マルチキャスト](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network)  
 
 
 

@@ -10,12 +10,12 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e0051b00f9c9540291db94c79a81c600c87ad59c
-ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
+ms.openlocfilehash: e88d40317fe0c1385d78ab7b5919f0f766254598
+ms.sourcegitcommit: 303d826f45c8fd9a05d8883afc1ca645e56bd576
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48891199"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269214"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>System Center Configuration Manager のサービス接続ツールの使用
 
@@ -181,7 +181,7 @@ USB ドライブに ServiceConnectionTool フォルダーとその中身をす�
  サービス接続ポイント ツールのヘルプ情報を表示するには、コマンド プロンプトを開き、ツールを格納するフォルダーに移動して、コマンド  **serviceconnectiontool.exe**を実行します。  
 
 
-|コマンド ライン オプション|詳細|  
+|コマンド ライン オプション|説明|  
 |---------------------------|-------------|  
 |**-prepare -usagedatadest [drive:][path][filename.cab]**|このコマンドは、現在の使用状況データを .cab ファイルに格納します。<br /><br /> サービス接続ポイントをホストするサーバーで、 **ローカル管理者** としてこのコマンドを実行します。<br /><br /> 例:   **-prepare -usagedatadest D:\USB\Usagedata.cab**|    
 |**-connect -usagedatasrc [drive:][path] -updatepackdest [drive:][path] -proxyserveruri [FQDN of proxy server] -proxyusername [username]** <br /> <br /> 1606 より前のバージョンの Configuration Manager を使用する場合は、.cab ファイルの名前を指定する必要があり、プロキシ サーバーのオプションを使用することはできません。  サポートされているコマンド パラメーターは次のとおりです。 <br /> **-connect -usagedatasrc [drive:][path][filename] -updatepackdest [drive:][path]** |このコマンドは、Configuration Manager のクラウド サービスに接続し、指定した場所から使用状況データの .cab ファイルをアップロードしたり、利用可能な更新パックとコンソールのコンテンツをダウンロードしたりします。 プロキシ サーバーのオプションは省略できます。<br /><br /> インターネットに接続できるコンピューターで、 **ローカル管理者** としてこのコマンドを実行します。<br /><br /> プロキシ サーバーを使用せずに接続する例: **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> プロキシ サーバーを使用して接続する例: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> 1606 より前のバージョンを使用する場合は、.cab ファイルのファイル名を指定する必要があります。また、プロキシ サーバーを指定することはできません。 次のコマンド ラインの例を使用します: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      

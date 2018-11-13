@@ -2,7 +2,7 @@
 title: ハイブリッド MDM の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。
-ms.date: 10/18/2018
+ms.date: 10/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3082bb6d6cc96be8ba7a56e1e2bb5a6bcd32bc9b
-ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
+ms.openlocfilehash: f51e54ede8df8c18ca8614f6a75c82c53bb7916c
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461275"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411529"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -51,14 +51,23 @@ ms.locfileid: "49461275"
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
 
+#### <a name="updates-for-application-transport-security"></a>Application Transport Security 対応のための更新 
+<!--748318--> Microsoft Intune は、クラス最高の暗号化を提供し、既定の状態でも安全であることを保証し、Microsoft Office 365 などの他の Microsoft サービスと連携するために、トランスポート層セキュリティ (TLS) 1.2 以降をサポートします。 この要件を満たすため、iOS と macOS のポータル サイトでは、やはり TLS 1.2 以降が要求されている Apple の更新された Application Transport Security (ATS) の要件が適用されます。 ATS では、HTTPS 経由で行われるアプリ通信すべてに、より厳格なセキュリティ保護が適用されます。 この変更により、iOS および macOS のポータル サイト アプリを使用している Intune ユーザーが影響を受けます。 詳細については、「[Intune moving to TLS 1.2 for encryption](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)」(暗号化のための Intune の TLS 1.2 への移行) をご覧ください。
+
+#### <a name="remove-an-email-profile-from-a-device-even-when-theres-only-one-email-profile"></a>メール プロファイルが 1 つだけの場合でも、デバイスからメール プロファイルを削除する 
+<!--1818139--> 以前は、メール プロファイルが 1 つしかない場合は、デバイスからメール プロファイルを削除できませんでした。 この更新により、この動作が変わります。 デバイス上で唯一のメール プロファイルであっても、削除できるようになります。 
+
+#### <a name="remove-pkcs-and-scep-certificates-from-your-devices"></a>デバイスから PKCS および SCEP 証明書を削除する 
+<!--3218390--> 一部のシナリオでは、グループからポリシーを削除したり、構成やコンプライアンスの展開を削除したり、管理者が既存の SCEP または PKCS プロファイルを更新したりしても、PKCS および SCEP 証明書がデバイスに残っていました。 
+
+この更新により動作が変わります。 一部のシナリオでは PKCS および SCEP 証明書がデバイスから削除され、一部のシナリオではこれらの証明書がデバイスに残ります。 
+
 #### <a name="access-to-key-profile-properties-using-the-company-portal-app"></a>ポータル サイト アプリを使用したキーのプロファイル プロパティへのアクセス
 <!--772203-->  
-
 エンド ユーザーがポータル サイト アプリからキー アカウントのプロパティと、パスワード リセットなどのアクションにアクセスできるようになりました。 
 
 #### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device"></a>iOS デバイス上での指紋または Face ID の変更時の PIN プロンプト  
 <!--2637704-->  
-
 iOS デバイス上での生体認証の変更後、ユーザーに PIN の入力が求められるようになりました。 これには、登録済みの指紋や Face ID の変更が含まれます。 プロンプトのタイミングは、*[アクセス要件を再確認するまでの時間 (分)]* の構成によって異なります。  PIN が設定されていない場合は、ユーザーに設定を求められます。  
 
 この機能は iOS でのみ使用可能で、iOS 向け Intune App SDK のバージョン 8.1.1 以降を統合するアプリケーションの参加が必要です。 SDK の統合は、対象のアプリケーション上で動作を適用するために必要です。 この統合は、ローリング方式で行われ、特定のアプリケーション チームに依存します。 参加するアプリケーションには、WXP、Outlook、Managed Browser、Yammer などが含まれます。
@@ -408,23 +417,23 @@ Windows 10 バージョン 1607 以降を利用しているエンド ユーザ�
   <!--1029830-->   
 
 - **ポータル サイトのデバイスのセットアップ ワークフローを改善**     
-  Android 用ポータル サイト アプリにおけるデバイスのセットアップ ワークフローを改善しました。 言語がよりわかりやすく、会社固有のものとなり、可能な範囲で画面をまとめるようにしました。 これらの機能強化は、[アプリ UI の新機能](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-october-2-2017)に関するページで確認できます。
+  Android 用ポータル サイト アプリにおけるデバイスのセットアップ ワークフローを改善しました。 言語がよりわかりやすく、会社固有のものとなり、可能な範囲で画面をまとめるようにしました。 これらの機能強化は、[アプリ UI の新機能](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-october-2-2017)に関するページで確認できます。
   <!--1490692-->     
 
 - **Android デバイスの連絡先情報へのアクセスを要求するガイダンスを改善**     
-  Android 用ポータル サイト アプリでは、エンド ユーザーに対して連絡先情報へのアクセス許可を求めることがあります。 エンド ユーザーがこのアクセスを拒否した場合に、条件付きアクセスを許可するよう求めるアプリ内通知が表示されます。 
+  Android 用ポータル サイト アプリでは、エンド ユーザーに対して連絡先情報へのアクセス許可を求めることがあります。 エンド ユーザーがこのアクセスを拒否した場合に、条件付きアクセスを許可するよう求めるアプリ内通知が表示されます。 
   <!--1484985-->     
 
 - **Android 用に安全なスタートアップ修復**     
-  Android デバイスを使用するエンド ユーザーは、ポータル サイト アプリ内で非準拠の理由をタップできます。 可能な場合には、問題を解決するために設定アプリの適切な場所に直接移動します。 
+  Android デバイスを使用するエンド ユーザーは、ポータル サイト アプリ内で非準拠の理由をタップできます。 可能な場合には、問題を解決するために設定アプリの適切な場所に直接移動します。 
   <!--1490712-->    
 
 - **Android Oreo 用ポータル サイト アプリでのエンド ユーザー向けの追加のプッシュ通知**    
-  Android Oreo 用のポータル サイト アプリがバック グラウンド タスク (Intune サービスからポリシーを取得するなど) を実行しているときに、エンド ユーザーに知らせる追加の通知が表示されます。 この通知により、ポータル サイトがデバイス上でいつ管理タスクを実行しているかが、エンド ユーザーにとってより分かりやすくなります。 この機能強化は、Android Oreo 用のポータル サイト アプリの[ポータル サイト UI の全体的な最適化](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune)の一部です。 
+  Android Oreo 用のポータル サイト アプリがバック グラウンド タスク (Intune サービスからポリシーを取得するなど) を実行しているときに、エンド ユーザーに知らせる追加の通知が表示されます。 この通知により、ポータル サイトがデバイス上でいつ管理タスクを実行しているかが、エンド ユーザーにとってより分かりやすくなります。 この機能強化は、Android Oreo 用のポータル サイト アプリの[ポータル サイト UI の全体的な最適化](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune)の一部です。 
   <!--1475932 -->     
 
 - **仕事用プロファイルを使用した場合の Android 用ポータル サイト アプリの新しい動作**     
-  仕事用プロファイルを使用して Android for Work デバイスを登録した場合は、仕事用プロファイルのポータル サイト アプリでデバイスの管理タスクが実行されます。 
+  仕事用プロファイルを使用して Android for Work デバイスを登録した場合は、仕事用プロファイルのポータル サイト アプリでデバイスの管理タスクが実行されます。 
 
   個人用プロファイルの MAM が有効なアプリを使用している場合を除いては、Android 用ポータル サイト アプリを使用することはなくなります。 仕事用プロファイルが正常に登録されると、仕事用プロファイル エクスペリエンスを向上させるために Intune が自動で個人用ポータル サイト アプリを非表示にします。
 
@@ -436,7 +445,7 @@ Windows 10 バージョン 1607 以降を利用しているエンド ユーザ�
   <!--1428681-->    
 
 - **サポートされていない Samsung Knox デバイスの登録をブロック**   
-  ポータル サイト アプリは、サポートされている Samsung Knox デバイスのみを登録しようとします。 MDM 登録を妨げる KNOX のアクティベーション エラーを回避するため、デバイス登録はそのデバイスが [Samsung が公開しているデバイス一覧](https://www.samsungknox.com/knox-supported-devices/knox-workspace)にある場合のみ実行されます。 KNOX をサポートしている Samsung デバイスにはモデル番号がありますが、サポートしていないデバイスにはありません。 使用するデバイスが Knox に対応しているかどうかを、デバイスを購入したり展開したりする前に販売店に確認してください。 対応しているデバイスの一覧は、[Android および Samsung KNOX Standard ポリシー設定](https://docs.microsoft.com/intune-classic/deploy-use/android-policy-settings-in-microsoft-intune#supported-samsung-knox-standard-devices)に関するページで確認できます。
+  ポータル サイト アプリは、サポートされている Samsung Knox デバイスのみを登録しようとします。 MDM 登録を妨げる KNOX のアクティベーション エラーを回避するため、デバイス登録はそのデバイスが [Samsung が公開しているデバイス一覧](https://www.samsungknox.com/knox-supported-devices/knox-workspace)にある場合のみ実行されます。 KNOX をサポートしている Samsung デバイスにはモデル番号がありますが、サポートしていないデバイスにはありません。 使用するデバイスが Knox に対応しているかどうかを、デバイスを購入したり展開したりする前に販売店に確認してください。 対応しているデバイスの一覧は、[Android および Samsung KNOX Standard ポリシー設定](https://docs.microsoft.com/intune-classic/deploy-use/android-policy-settings-in-microsoft-intune#supported-samsung-knox-standard-devices)に関するページで確認できます。
   <!-- 1490695 -->     
 
 - **Android 4.3 以前のサポートを終了**     
@@ -458,7 +467,7 @@ Windows 10 バージョン 1607 以降を利用しているエンド ユーザ�
     <!-- 1132468 -->     
 
 - **iOS でどのようなデバイス情報を表示できるかをエンド ユーザーに通知**   
-    iOS 用のポータル サイト アプリの [デバイスの詳細] 画面に **[所有権の種類]** が追加されました。 この情報により、ユーザーは Intune のエンド ユーザー ドキュメントから直接プライバシーの詳細を参照できます。この情報は、[バージョン情報] 画面でも確認できます。 
+    iOS 用のポータル サイト アプリの [デバイスの詳細] 画面に   **[所有権の種類]** が追加されました。 この情報により、ユーザーは Intune のエンド ユーザー ドキュメントから直接プライバシーの詳細を参照できます。この情報は、[バージョン情報] 画面でも確認できます。 
     <!--739894-->    
 
 - **Android 用ポータル サイト アプリの文言の分かりやすさの向上**   
@@ -510,7 +519,7 @@ macOS 10.12 以降は現在、以下でサポートされています。
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>この変更に対して必要な準備
 
 - 2018 年 12 月までに、サポートされる OS バージョンにデバイスをアップグレードすることがユーザーに求められます。  
-- Azure portal の Intune で影響を受けるデバイスまたはユーザーを確認してください。 **[デバイス]**、**[すべてのデバイス]**、の順に移動し、**[OS]** でフィルターを適用します。 組織の人で、macOS 10.11 を実行しているデバイスを持つ人を特定するのに役立つ列を追加できます。  
+- Azure portal の Intune で影響を受けるデバイスまたはユーザーを確認してください。 **[デバイス]** > **[すべてのデバイス]**、の順に移動し、**[OS]** でフィルターを適用します。 組織の人で、macOS 10.11 を実行しているデバイスを持つ人を特定するのに役立つ列を追加できます。  
 - ハイブリッド MDM (モバイル デバイス管理) を使用している場合、Configuration Manager コンソールで、**[資産とコンプライアンス]** ワークスペースに移動して、**[デバイス]** ノードを選択します。 列を右クリックし、**[オペレーティング システム]** 列と **[クライアント バージョン]** 列を追加します。 次に、OS バージョンで並べ替えます。 ハイブリッド MDM が非推奨になりました。できるだけ早く、Azure での Intune に移行してください。 
  
 #### <a name="additional-information"></a>追加情報
@@ -574,33 +583,16 @@ Office 365 モバイル アプリは iOS 10 以降でサポートされていま
 組織内で影響を受けるデバイスまたはユーザーを確認します。 Azure Portal の Intune で、**[デバイス]** > **[すべてのデバイス]** に移動し、**[OS]** でフィルター処理します。  **[列]** をクリックして、OS バージョンなどの詳細が目立つようにします。 ユーザーに対して、9 月以前に各自のデバイスをサポートされる OS バージョンにアップグレードするよう要求します。
 
 
-### <a name="plan-for-change-intune-moving-to-tls-12"></a>変更の計画: Intune の TLS 1.2 への移行
-
-Intune は、クラス最高の暗号化を提供し、サービスが既定で安全であることを保証し、Microsoft Office 365 などの他の Microsoft サービスと連携するために、2018 年 10 月 31 日以降、トランスポート層セキュリティ (TLS) プロトコル バージョン 1.2 をサポートします。 Office は MC128929 でこの変更を伝えています。
-
-#### <a name="how-does-this-change-affect-me"></a>この変更によるユーザーへの影響
-
-2018 年 10 月 31 日時点で、Intune は TLS プロトコル バージョン 1.0 や 1.1 をサポートしなくなります。 すべてのクライアント/サーバーおよびブラウザー/サーバーの組み合わせで TLS バージョン 1.2 を使用して、Intune への正常な接続を保証する必要があります。 この変更は、Intune でサポートされなくなったが Intune 経由で引き続きポリシーを受け取っているエンド ユーザーのデバイス、および TLS バージョン 1.2 を使用できないエンド ユーザーのデバイスに、影響を及ぼします。 このようなデバイスには、Android 4.3 以前を実行しているデバイスなどが含まれます。 影響を受けるデバイスとブラウザーの一覧については、以下のリンクをご覧ください。
-
-2018 年 10 月 31 日以降に古い TLS バージョンの使用に関連する問題が生じる場合は、解決の一環として、TLS 1.2 または TLS 1.2 をサポートしているデバイスに更新します。
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>この変更に対して必要な準備
-
-事前に環境での TLS 1.0 と 1.1 の依存関係を削除し、可能な限りオペレーティング システムのレベルで TLS 1.0 と 1.1 を無効にすることをお勧めします。 TLS 1.2 への移行の計画をすぐに始めてください。 現在 Intune でサポートされていないが引き続きポリシーを受信する可能性があるデバイスの一覧、および TLS バージョン 1.2 を使用して通信することができなくなるデバイスの一覧については、以下のサポート ブログ記事を確認してください。 会社のリソースにアクセスできなくなることを、これらのエンド ユーザーに通知する必要がある場合があります。
-
-詳細については、「[Intune moving to TLS 1.2 for encryption](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)」(暗号化のための Intune の TLS 1.2 への移行) をご覧ください。
-
-
 ### <a name="company-portal-for-windows-81-and-windows-phone-81-moving-to-sustaining-mode"></a>維持モードに移行中の Windows 8.1 および Windows Phone 8.1 用ポータル サイト 
 <!--1428681-->
 *2017 年 10 月 6 日*   
  
-2017 年 10 月以降、Windows 8.1 および Windows Phone 8.1 用ポータル サイト アプリは維持モードに移行されます。 このモードは、アプリや既存のシナリオ (登録やコンプライアンスなど) で、引き続きこれらのプラットフォームがサポートされることを意味します。 これらのアプリは引き続き、Microsoft Store などの既存のリリース チャネルからダウンロードできます。 
+2017 年 10 月以降、Windows 8.1 および Windows Phone 8.1 用ポータル サイト アプリは維持モードに移行されます。 このモードは、アプリや既存のシナリオ (登録やコンプライアンスなど) で、引き続きこれらのプラットフォームがサポートされることを意味します。 これらのアプリは引き続き、Microsoft Store などの既存のリリース チャネルからダウンロードできます。 
 
-維持モードに移行すると、これらのアプリには重要なセキュリティ更新プログラムのみが適用されるようになります。 追加の更新プログラムや追加機能はリリースされなくなります。 新機能が必要な場合は、デバイスを Windows 10 または Windows 10 Mobile に更新することをおすすめします。 
+維持モードに移行すると、これらのアプリには重要なセキュリティ更新プログラムのみが適用されるようになります。 追加の更新プログラムや追加機能はリリースされなくなります。 新機能が必要な場合は、デバイスを Windows 10 または Windows 10 Mobile に更新することをおすすめします。 
 
 ### <a name="end-of-support-for-ios-80"></a>iOS 8.0 のサポートの終了 
-<!---1164477---> iOS のマネージド アプリとポータル サイト アプリから会社のリソースにアクセスするには、iOS 9.0 以降が必要になりました。 9 月以前に更新されていないデバイスは、ポータル サイトまたはそのアプリにアクセスできなくなります。 
+<!---1164477---> iOS のマネージド アプリとポータル サイト アプリから会社のリソースにアクセスするには、iOS 9.0 以降が必要になりました。 9 月以前に更新されていないデバイスは、ポータル サイトまたはそのアプリにアクセスできなくなります。 
 
 ### <a name="platform-support-reminder-windows-phone-81-mainstream-support-ended-july-11-2017"></a>プラットフォーム サポートのお知らせ: Windows Phone 8.1 のメインストリーム サポートが 2017 年 7 月 11 日に終了
 <!-- 1327781 -->

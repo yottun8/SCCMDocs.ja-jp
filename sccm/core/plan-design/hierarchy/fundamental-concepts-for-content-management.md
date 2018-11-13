@@ -2,7 +2,7 @@
 title: コンテンツ管理の基礎
 titleSuffix: Configuration Manager
 description: Configuration Manager のツールとオプションを使用して、展開するコンテンツを管理します。
-ms.date: 07/30/2018
+ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5c3af900bae26262ba402ea258b8859ba07b999b
-ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
+ms.openlocfilehash: b73ead1492b143260d327f428db5a6183f84434c
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48891216"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411342"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager でのコンテンツ管理の基本的な概念
 
@@ -33,15 +33,19 @@ Configuration Manager では、ソフトウェア コンテンツを管理する
 ## <a name="accounts-used-for-content-management"></a>コンテンツ管理に使用されるアカウント  
  コンテンツ管理では、次のアカウントを使用できます。  
 
--   **ネットワーク アクセス アカウント**: クライアントが配布ポイントに接続してコンテンツにアクセスするために使用します。 既定では、コンピューター アカウントが最初に試行されます。  
+#### <a name="network-access-account"></a>ネットワーク アクセス アカウント
+クライアントが配布ポイントに接続してコンテンツにアクセスするために使用します。 既定では、コンピューター アカウントが最初に試行されます。  
 
-     このアカウントは、リモート フォレスト内のソース配布ポイントからコンテンツをダウンロードするためにプル配布ポイントによっても使われます  
+このアカウントは、リモート フォレスト内のソース配布ポイントからコンテンツをダウンロードするためにプル配布ポイントによっても使われます  
 
--   **パッケージ アクセス アカウント**: 既定では、Configuration Manager は、汎用アクセス アカウントである Users および Administrators に対して配布ポイント上のコンテンツへのアクセスを許可します。 ただし、追加のアクセス許可を構成してアクセスを制限することができます。   
+バージョン 1806 以降では、一部のシナリオでネットワーク アクセス アカウントが不要になりました。 サイトで Azure Active Directory 認証を使用した拡張 HTTP の使用を有効にすることができます。<!--1358228--> 
 
--   **マルチキャスト接続アカウント**: OS の展開に使われます。  
+詳細については、「[ネットワーク アクセス アカウント](/sccm/core/plan-design/hierarchy/accounts#network-access-account)」を参照してください。
 
-これらのアカウントの詳細については、「[コンテンツにアクセスするためのアカウントの管理](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content)」を参照してください。
+#### <a name="package-access-account"></a>［パッケージ アクセス アカウント］
+既定では、Configuration Manager は、汎用アクセス アカウントである Users および Administrators に対して配布ポイント上のコンテンツへのアクセスを許可します。 ただし、追加のアクセス許可を構成してアクセスを制限することができます。   
+
+詳細については、「[パッケージ アクセス アカウント](/sccm/core/plan-design/hierarchy/accounts#package-access-account)」をご覧ください。
 
 
 
