@@ -2,7 +2,7 @@
 title: サポートの終了
 titleSuffix: Configuration Manager 2007
 description: System Center Configuration Manager 2007 と Forefront Endpoint Protection 2010 のサポートは 2019 年 7 月 9 日をもって終了します。
-ms.date: 09/19/2018
+ms.date: 11/05/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: c142b77ed20bb2b77f75a24bf1c6058151d950ac
-ms.sourcegitcommit: d020aee900c12c1f71cf402774c3befb435c8d9f
+ms.openlocfilehash: 04679fc70ffa326066f5755646193c8d0072f989
+ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493845"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223621"
 ---
 # <a name="product-end-of-support"></a>製品とサポート
 
@@ -43,6 +43,6 @@ Microsoft が推奨する移行計画:
 - [Configuration Manager サポート ブログ投稿](https://blogs.technet.microsoft.com/configurationmgr/2018/03/30/configuration-manager-2007-approaching-end-of-support-what-you-need-to-know/)  
 - [Configuration Manager Current Branch の概要](/sccm/core/understand/introduction)  
 - [Configuration Manager Current Branch への移行方法に関するドキュメント](/sccm/core/migration/migrate-data-between-hierarchies)  
-
+    - この記事には、一般的な移行シナリオについて説明し、例を示すビデオも掲載されています。
 
 Configuration Manager 2007 ドキュメント ライブラリは、[Microsoft TechNet](https://technet.microsoft.com/library/bb735860.aspx) で引き続きご利用いただけます。

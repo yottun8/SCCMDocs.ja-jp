@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: a99983583aa8c21f8a987f3e20550752e7b77ba4
-ms.sourcegitcommit: 83806460b6fd88a1d08a2c97f4d72b9e36e04102
+ms.openlocfilehash: 1791217e22e2bcc6d5fd2603abee3aaced816afe
+ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39495562"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223740"
 ---
 # <a name="co-management-for-windows-10-devices"></a>Windows 10 デバイスの共同管理    
 
@@ -72,7 +72,7 @@ ms.locfileid: "39495562"
 
  - Windows 10 デバイスは、Azure AD に参加している必要があります。 次のいずれかの種類です。  
 
-     - [ハイブリッド Azure AD 参加済み](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)。デバイスは Azure AD とオンプレミス ドメインの両方に参加します。  
+     - [Hybrid Azure AD 参加済み](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup): デバイスがオンプレミスの Active Directory に参加し、Azure Active Directory に登録されている場合。
 
      - Azure AD のみに参加。 (このタイプは "クラウド ドメイン参加済み" とも呼ばれます)<!--SCCMDocs issue 605-->
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: 1c5377096ef67057f3f38bb71fb611b7993ecb6b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ffe1546e3d7561a0bbda787ef6b1aaeac6e8d2e0
+ms.sourcegitcommit: 2504617dc4db90e205327d06cab32f050e88dbf2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353108"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51505127"
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager でのソフトウェア更新プログラムの前提条件
 
@@ -33,8 +33,10 @@ ms.locfileid: "32353108"
  ソフトウェア更新プログラムの同期と、クライアントでのソフトウェア更新プログラムの適用性スキャンを行うには、Windows Server Update Services (WSUS) が必要です。 WSUS サーバーは、ソフトウェア更新ポイントの役割を作成する前にインストールする必要があります。 ソフトウェアの更新ポイントでは、次のバージョンの WSUS がサポートされています。  
 
 -   WSUS 10.0 (Windows Server 2016 における役割)
--   WSUS 6.2 および 6.3 (Windows Server 2012 および Windows Server 2012 R2 における役割)  
--   WSUS 3.2 (Windows Server 2008 R2 における役割)  
+-   WSUS 6.2 および 6.3 (Windows Server 2012 および Windows Server 2012 R2 における役割)
+
+>[!NOTE]
+>-   バージョン 1702 以降では、Windows Server 2008 R2 はソフトウェア更新ポイントの役割としてサポートされていません。 詳細については、[サイト システム サーバーでサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_2008r2sp1)に関するページを参照してください。  
 
 1 つのサイトにソフトウェアの更新ポイントが複数ある場合、すべてのポイントが同じバージョンの WSUS を実行するようにします。  
 
