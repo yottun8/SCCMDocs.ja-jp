@@ -1,8 +1,8 @@
 ---
 title: Endpoint Protection
 titleSuffix: Configuration Manager
-description: Configuration Manager 階層内のクライアント コンピューターのマルウェア対策ポリシーと Windows ファイアウォールのセキュリティを管理する方法について説明します。
-ms.date: 02/09/2018
+description: クライアントのマルウェア対策ポリシーと Windows ファイアウォールのセキュリティを管理する方法について説明します。
+ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2da4b91411822b6274da3e165ff3e43e8752dc45
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 2a8cf57de0214080a1b581faa044950219d11355
+ms.sourcegitcommit: 3772ece83823714b2aae46ec20523cc094701760
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352022"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681452"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -85,18 +85,24 @@ Endpoint Protection では Windows Defender Advanced Threat Protection (ATP) を
 
  ![Endpoint Protection のワークフロー](../media/Endpoint-Protection-Workflow.gif)  
 
-## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>Mac コンピューターと Linux サーバー用の Endpoint Protection クライアント  
- System Center Endpoint Protection には、Linux コンピューターと Mac コンピューター用の Endpoint Protection クライアントが付属しています。 Configuration Manager にはこれらのクライアントが付属していないため、[Microsoft ボリューム ライセンス サービス センター](https://www.microsoft.com/licensing/servicecenter/default.aspx)から次の製品をダウンロードする必要があります。  
 
--   System Center Endpoint Protection for the Mac  
+
+## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>Mac コンピューターと Linux サーバー用の Endpoint Protection クライアント  
+
+> [!Important]  
+> Mac と Linux (すべてのバージョン) の System Center Endpoint Protection (SCEP) のサポートは 2018 年 12 月 31 日で終了します。 Mac 用の SCEP および Linux 用の SCEP の新しいウイルスの定義の可用性は、サポートの終了後に停止されます。 詳しくは、[サポートの終了ブログ投稿](https://go.microsoft.com/fwlink/?linkid=870182)をご覧ください。  
+
+ System Center Endpoint Protection には、Linux コンピューターと Mac コンピューター用の Endpoint Protection クライアントが付属しています。 これらのクライアントは、Configuration Manager には付属していません。 [Microsoft ボリューム ライセンス サービス センター](https://www.microsoft.com/licensing/servicecenter/default.aspx)から次の製品をダウンロードする必要があります。  
+
+-   System Center Endpoint Protection for Mac  
 
 -   System Center Endpoint Protection for Linux  
 
 
-> [!IMPORTANT]  
+> [!Note]  
 >  Mac 用と Linux 用の Endpoint Protection インストール ファイルをダウンロードするには、Microsoft ボリューム ライセンスを購入する必要があります。  
 
- これらの製品は、Configuration Manager コンソールから管理することができません。 ただし、System Center Operations Manager 管理パックがインストール ファイルに付属しているため、Operations Manager を使用して Linux 用のクライアントを管理することができます。  
+ これらの製品は、Configuration Manager のコンソールから管理することができません。 System Center Operations Manager 管理パックがインストール ファイルに付属しているため、Linux 用のクライアントを管理することができます。  
 
 ### <a name="how-to-get-the-endpoint-protection-client-for-mac-computers-and-linux-servers"></a>Mac コンピューターと Linux サーバー用の Endpoint Protection クライアントを取得する方法
 
