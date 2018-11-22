@@ -2,7 +2,7 @@
 title: サポートされるクライアントとデバイス
 titleSuffix: Configuration Manager
 description: Configuration Manager がクライアントとデバイスをサポートする OS のバージョンについて説明します。
-ms.date: 08/21/2018
+ms.date: 10/02/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8abe612272dd8a48a23ffdcb945aa7b6766afdb9
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: 82fd328d65e67df2506f31679ed3c1b3abc1262c
+ms.sourcegitcommit: e0209e4549e9828eb74089313dbee323ece1fc2f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586404"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598599"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager でクライアントとデバイスに対してサポートされる OS のバージョン
 
@@ -36,7 +36,21 @@ ms.locfileid: "42586404"
  次のバージョンの Windows OS を管理するには、Configuration Manager に含まれているクライアントを使用します。 詳しくは、「[Windows コンピューターにクライアントを展開する方法](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)」をご覧ください。  
 
 
-### <a name="supported-os-versions"></a>サポートされている OS のバージョン  
+### <a name="supported-client-os-versions"></a>サポートされているクライアントの OS のバージョン
+
+-   **Windows 10**  
+
+    詳細については、[Windows 10 のサポート](/sccm/core/plan-design/configs/support-for-windows-10)に関するページをご覧ください。  
+
+-   **Windows 8.1** (x86、x64): Professional、Enterprise    
+
+-   **Windows 7 SP1** (x86、x64): Professional、Enterprise、Ultimate    
+
+
+### <a name="supported-server-os-versions"></a>サポートされているサーバーの OS のバージョン
+
+-  **Windows Server 2019**: Standard、Datacenter <sup>[注 1](#bkmk_note1)</sup>  
+    (Configuration Manager バージョン 1806 以降。)
 
 -  **Windows Server 2016**: Standard、Datacenter <sup>[注 1](#bkmk_note1)</sup>  
 
@@ -56,32 +70,30 @@ ms.locfileid: "42586404"
 
 -   **Windows Server 2008 SP2** (x86、x64): Standard、Enterprise、Datacenter <sup>[注 1](#bkmk_note1)</sup>    
 
--   **Windows 10**  
 
-    異なるバージョンの Configuration Manager でサポートされている、異なるリリース バージョンの Windows 10 の詳細については、[Windows 10 の各バージョンのサポート](/sccm/core/plan-design/configs/support-for-windows-10)に関するページを参照してください。  
+#### <a name="server-core"></a>Server Core
+次のバージョンでは具体的に OS の Server Core インストールが参照されます。 <sup>[注 3](#bkmk_note3)</sup>  
 
--   **Windows 8.1** (x86、x64): Professional、Enterprise    
+Windows Server の半期チャネル バージョンは Server Core インストールです (Windows Server バージョン 1809 など)。 Configuration Manager クライアントとして、これらは関連する Windows 10 の半期チャネル バージョンと同じようにサポートされています。 詳細については、[Windows 10 のサポート](/sccm/core/plan-design/configs/support-for-windows-10)に関するページをご覧ください。
 
--   **Windows 7 SP1** (x86、x64): Professional、Enterprise、Ultimate    
 
--   **Windows Server バージョン 1709 の Server Core インストール** (x64) <sup>[注 2](#bkmk_note2)</sup> <sup>[注 3](#bkmk_note3)</sup>  
-    この OS バージョンは、Configuration Manager バージョン 1710 以降でサポートされます。  
+-   **Windows Server 2019** (x64) <sup>[注 2](#bkmk_note2)</sup>  
 
--   **Windows Server 2016 の Server Core のインストール** (x64) <sup>[注 2](#bkmk_note2)</sup> <sup>[注 3](#bkmk_note3)</sup>  
+-   **Windows Server 2016** (x64) <sup>[注 2](#bkmk_note2)</sup>   
 
--   **Windows Server 2012 R2 の Server Core のインストール** (x64) <sup>[注 2](#bkmk_note2)</sup> <sup>[注 3](#bkmk_note3)</sup>    
+-   **Windows Server 2012 R2** (x64) <sup>[注 2](#bkmk_note2)</sup>     
 
--   **Windows Server 2012 の Server Core のインストール** (x64) <sup>[注 2](#bkmk_note2)</sup> <sup>[注 3](#bkmk_note3)</sup>    
+-   **Windows Server 2012** (x64) <sup>[注 2](#bkmk_note2)</sup>     
 
--   **Windows Server 2008 R2 の Server Core のインストール** (サービス パックなし、または SP1) (x64) <sup>[注 3](#bkmk_note3)</sup>    
+-   **Windows Server 2008 R2** サービス パックなし、または SP1 (x64)     
 
--   **Windows Server 2008 SP2 の Server Core のインストール** (x86、x64) <sup>[注 3](#bkmk_note3)</sup>  
+-   **Windows Server 2008 SP2** (x86、x64)   
 
 #### <a name="bkmk_note1"></a> 注 1
- Datacenter リリースは、Configuration Manager でサポートされますが動作は保障されません。 Windows Server Datacenter エディションに固有の問題に対しては、修正プログラムのサポートは提供されません。  
+ Configuration Manager では Windows Server Datacenter エディションがテストおよびサポートされていますが、Windows Server に対して公式に認定されていません。 Windows Server Datacenter エディションに固有の問題に対しては、Configuration Manager の修正プログラムのサポートは提供されません。 Windows Server の認定プログラムについて詳しくは、[Windows Server カタログ](https://www.windowsservercatalog.com/)をご覧ください。 
 
 #### <a name="bkmk_note2"></a> 注 2
- クライアント プッシュ インストールをサポートするには、この OS のバージョンを実行するコンピューターで、ファイルおよびストレージ サービスのサーバーの役割のための、ファイル サーバーの役割サービスを実行する必要があります。 Server Core コンピューターへの Windows 機能のインストールについて詳しくは、「[Install roles, role services, and features by using Windows PowerShell cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installwps)」(Windows PowerShell コマンドレットを使用して役割、役割サービス、機能をインストールする) をご覧ください。  
+ [クライアント プッシュ インストール](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation)をサポートするには、[ファイルおよび記憶域サービス] サーバー ロールのファイル サーバー サービスを追加します。 Server Core への Windows 機能のインストールについて詳しくは、「[Install roles, role services, and features by using Windows PowerShell cmdlets](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installwps)」(Windows PowerShell コマンドレットを使用して役割、役割サービス、機能をインストールする) をご覧ください。  
 
 #### <a name="bkmk_note3"></a> 注 3
  新しいソフトウェア センター アプリは、Windows Server Core のどのバージョンでもサポートされていません。<!--SCCMDocs issue 683-->
@@ -107,8 +119,6 @@ ms.locfileid: "42586404"
 
 -   アプリケーション カタログは、どのような Windows Embedded デバイスについてもサポートされません。  
 
--   Windows XP ベースの Windows Embedded デバイスで検出したマルウェアを監視するには、デバイスに Microsoft Windows WMI スクリプト パッケージを先にインストールしておく必要があります。 このパッケージは、Windows Embedded Target Designer を使用してインストールします。 検出したマルウェアが確実に報告されるようにするには、Embedded デバイスにファイル **WBEMDISP.DLL** および **WBEMDISP.TLB** が存在している必要があり、フォルダー **%windir%\System32\WBEM** に登録されている必要があります。  
-
 
 ### <a name="supported-os-versions"></a>サポートされている OS のバージョン  
 
@@ -126,21 +136,6 @@ ms.locfileid: "42586404"
 -   **Windows Embedded POSReady 7** (x86、x64)    
 
 -   **Windows Embedded Standard 7 SP1** (x86、x64)    
-
-
-### <a name="unsupported-os-versions"></a>サポートされていない OS のバージョン
-
-以下の OS のバージョンは、Windows XP Embedded に基づいています。 バージョン 1702 以降、これらの Embedded OS バージョンはサポートされていません。 詳細については、「[非推奨のクライアント オペレーティング システム](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems)」を参照してください。  
-
--   **WEPOS 1.1 SP3** (x86)    
-
--   **Windows Embedded POSReady 2009** (x86)    
-
--   **Windows Fundamentals for Legacy PCs (WinFLP)** (x86)    
-
--   **Windows XP Embedded SP3** (x86)    
-
--   **Windows Embedded Standard 2009** (x86)  
 
 
 
@@ -328,15 +323,6 @@ ms.locfileid: "42586404"
 
 
 
-##  <a name="mobile-devices-enrolled-by-microsoft-intune"></a>Microsoft Intune で登録されるモバイル デバイス  
-
- Microsoft Intune を Configuration Manager と統合すると管理できるコンピューターとデバイスの詳細については、Microsoft Intune ドキュメント ライブラリの次の記事を参照してください。  
-
--   [Microsoft Intune のモバイル デバイス管理機能](https://docs.microsoft.com/intune/get-started/choose-how-to-manage-devices)  
--   [Microsoft Intune の Windows PC 管理機能](https://docs.microsoft.com/intune/get-started/windows-pc-management-capabilities-in-microsoft-intune)  
-
-
-
 ##  <a name="bkmk_OnpremOS"></a> オンプレミス モバイル デバイス管理  
 
  Configuration Manager には、クライアント ソフトウェアをインストールすることがないオンプレミスであるデバイスを管理する組み込みの機能があります。 詳しくは、「[オンプレミス インフラストラクチャを使用したモバイル デバイスの管理](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure)」をご覧ください。  
@@ -368,7 +354,7 @@ ms.locfileid: "42586404"
 
 ##  <a name="bkmk_ExSrvConOS"></a> Exchange Server コネクタ  
 
-Configuration Manager は、Configuration Manager クライアントをインストールすることがない、Exchange サーバーに接続するデバイスの限定された管理をサポートしています。 詳しくは、「[Configuration Manager と Exchange によるモバイル デバイスの管理](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync)」をご覧ください。  
+Configuration Manager は、Configuration Manager クライアントをインストールすることがない、Exchange サーバーに接続するデバイスの限定された管理をサポートしています。 詳しくは、「[Configuration Manager と Exchange によるモバイル デバイスの管理](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync)」をご覧ください。  
 
 
 ### <a name="supported-versions-of-exchange-server"></a>サポートされている Exchange Server のバージョン

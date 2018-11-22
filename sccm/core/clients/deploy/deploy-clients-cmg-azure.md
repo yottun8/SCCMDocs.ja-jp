@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 91ebb0c35687b231a6f08b7bc92cccb83cf0e602
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 490e5a614a98633629df98abcd554b02cec1261a
+ms.sourcegitcommit: ae03ad403b1732a5a61dec981e3a3010a0f09188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344689"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51860248"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>認証のため Azure AD を使用して、Configuration Manager の Windows 10 クライアントをインストールして割り当てる
 
@@ -41,9 +41,7 @@ Azure AD 認証を使用して Windows 10 デバイスで Configuration Manager 
 
 - 管理ポイント サイト システムの役割に関する[既存の前提条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012MPpreq)に加え、このサーバーでは **ASP.NET 4.5** も有効にします。 ASP.NET 4.5 を有効にするときに自動的に選択される他のすべてのオプションを含めます。  
 
-- HTTPS モードのすべての管理ポイントを構成します。 詳細については、「[PKI 証明書の要件](/sccm/core/plan-design/network/pki-certificate-requirements)」と「[IIS を実行するサイト システム用の Web サーバー証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012)」を参照してください。  
-    - クラウド管理ゲートウェイを使用している場合、そのクラウド管理ゲートウェイに対して有効にする管理ポイントにのみ HTTPS を構成する必要があります。
-    - Azure AD トークンベース認証を利用してイントラネットにクライアントを展開している場合、クライアントが接触する可能性があるすべての管理ポイントで HTTPS を有効にする必要があります。 
+- 管理ポイントで HTTPS が必要かどうかを判断します。 詳細については、「[HTTPS 用の管理ポイントを有効にする](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps)」を参照してください。  
 
 - 必要に応じて、インターネット ベースのクライアントを展開するために[クラウド管理ゲートウェイ](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (CMG) を設定します。 Azure AD で認証するオンプレミス クライアントの場合、CMG は必要ありません。  
 

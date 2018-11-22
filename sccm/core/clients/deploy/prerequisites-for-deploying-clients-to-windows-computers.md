@@ -10,12 +10,12 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 025edee312e1c67eba9f9e4f812b03806f51dbbb
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 11474f54aaf7a9afe13d411b0dd469abb1eef963
+ms.sourcegitcommit: c2c44329f1f9a2e6c14095360b4fc4aafabc27f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384316"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694945"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>Configuration Manager で Windows コンピューターにクライアントを展開するための前提条件
 
@@ -60,7 +60,7 @@ Configuration Manager クライアントには外部の依存関係がありま�
 |Microsoft Policy Platform 1.2.3514.0|クライアントがコンプライアンス設定を評価するのを許可するために必要となります。|  
 |Microsoft Silverlight 5.1.41212.0|アプリケーション カタログ ウェブサイトのユーザー エクスペリエンスをサポートするために必要となります。 Configuration Manager 1802 以降では、クライアントは Silverlight を自動的にインストールしません。 アプリケーション カタログの主な機能はソフトウェア センターに含まれるようになりました。 アプリケーション カタログ Web サイトのサポートは、バージョン 1806 で終了します。<!--1356195-->|  
 |Microsoft .NET Framework バージョン 4.5.2|クライアントのオペレーションをサポートするために必要となります。 Microsoft .NET Framework バージョン 4.5 以降がインストールされていない場合は、クライアント コンピューターに自動的にインストールされます。 詳細については、「[Microsoft .NET Framework バージョン 4.5.2 に関する追加情報](#dotNet)」を参照してください。|  
-|Microsoft SQL Server Compact 3.5 SP2 コンポーネント|クライアント オペレーションに関連した情報を保存するために必要となります。|  
+|Microsoft SQL Server Compact 4.0 SP1 コンポーネント|クライアント オペレーションに関連した情報を保存するために必要となります。|  
 
 
 ####  <a name="dotNet"></a> Microsoft .NET Framework バージョン 4.5.2 に関する追加情報  
