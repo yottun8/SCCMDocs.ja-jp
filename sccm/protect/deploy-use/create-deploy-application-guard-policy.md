@@ -1,6 +1,6 @@
 ---
 title: Windows Defender Application Guard ポリシーの作成と展開
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Windows Defender Application Guard ポリシーを作成して展開します。
 ms.date: 03/22/2018
 ms.prod: configuration-manager
@@ -10,17 +10,16 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e7f0a1ccb71abb2fec27e0430bd4195dc85aceae
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 82423914b1d1f5cae8fa4ecea3d02ef02d23703a
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348074"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52258912"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>Windows Defender Application Guard ポリシーの作成と展開 
-*適用対象: System Center Configuration Manager (Current Branch)*
-<!-- 1351960 -->
-Configuration Manager Endpoint Protection を使用して [Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) ポリシーを作成して展開できます。 これらのポリシーを使用すると、信頼できない Web サイトをオペレーティング システムの他の部分からはアクセスできない安全な分離コンテナーで開くことでユーザーを保護できます。
+*適用対象: System Center Configuration Manager (Current Branch)* 
+ <!-- 1351960 -->作成して展開[Windows Defender Application Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview) Configuration Manager のエンドポイントを使用してポリシー保護します。 これらのポリシーを使用すると、信頼できない Web サイトをオペレーティング システムの他の部分からはアクセスできない安全な分離コンテナーで開くことでユーザーを保護できます。
 
 ## <a name="prerequisites"></a>[前提条件]
 
