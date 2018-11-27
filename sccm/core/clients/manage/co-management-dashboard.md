@@ -1,6 +1,6 @@
 ---
 title: 共同管理ダッシュボード
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: ダッシュボードを使用して、共同管理に関する情報を確認します。
 ms.date: 03/22/2018
 ms.prod: configuration-manager
@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a3d4cbbf78639a135e9e36e3402f9920a6ef71ed
-ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
+ms.openlocfilehash: 72b42aec2b50e229b90e9a642343386e8588aab7
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448788"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52259006"
 ---
 # <a name="co-management-dashboard-in-system-center-configuration-manager"></a>System Center Configuration Manager の共同管理ダッシュボード
 *適用対象: System Center Configuration Manager (Current Branch)*

@@ -1,6 +1,6 @@
 ---
 title: 増分バージョン
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: Configuration Manager の最新の更新プログラムに含まれる新機能について説明します。
 ms.date: 07/30/2018
 ms.prod: configuration-manager
@@ -10,12 +10,12 @@ ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13037b857b890d400881d8d7173b7ca03dd83ebc
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 3afe14d62f55bf5ef7923882bbb2bbe57e245661
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384128"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52258929"
 ---
 # <a name="whats-new-in-configuration-manager-incremental-versions"></a>Configuration Manager の増分バージョンの新機能
 

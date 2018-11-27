@@ -10,12 +10,12 @@ ms.assetid: f4f9a5fd-f573-4b99-ad93-b2c76812e922
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e0a4369e9c302c687f15b29b0daafbf4329e22a5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 7d6b957ebcc19dfe8c14dd781f71678db8e160af
+ms.sourcegitcommit: 1a1bac2d5ee0f20ce565d29798ee4dd99aaca044
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342309"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281908"
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1606 構成基準メディアでインストールし、アップグレードする
 
@@ -23,7 +23,7 @@ ms.locfileid: "32342309"
 
 Configuration Manager のバージョン 1606 基準メディアからセットアップを実行する場合は、System Center Configuration Manager の Long-Term Servicing Branch または Current Branch サイトをインストールできます。
 
-基準メディアは、Microsoft System Center 2016 に付属する DVD または System Center Configuration Manager (Current Branch および Long-Term Servicing Branch 1606) リリースから使用できます。 基準メディアの詳細については、「[Baseline and update versions](/sccm/core/servers/manage/updates#baseline-and-udpate-versions)」(基準バージョンと更新プログラムのバージョン) を参照してください。
+基準メディアは、Microsoft System Center 2016 に付属する DVD または System Center Configuration Manager (Current Branch および Long-Term Servicing Branch 1606) リリースから使用できます。 基準メディアの詳細については、「[Baseline and update versions](../servers/manage/updates.md#bkmk_Baselines)」(基準バージョンと更新プログラムのバージョン) を参照してください。
 
 
 バージョン 1606 構成基準メディアを使用するときにインストールまたはアップグレードするサイト:
