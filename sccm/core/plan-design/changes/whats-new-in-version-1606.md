@@ -1,6 +1,6 @@
 ---
 title: バージョン 1606 の新機能
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: System Center Configuration Manager のバージョン 1606 の変更点および導入された新機能について詳しく説明します。
 ms.date: 12/30/2016
 ms.prod: configuration-manager
@@ -10,12 +10,12 @@ ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9aec81239dbfb816cdc6eb66cc17875c5d484e79
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0dcd2db7543d68a97e00244536d2aac218d440e7
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340252"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52259065"
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1606 の新機能
 
@@ -199,7 +199,7 @@ Configuration Manager を使ってアクティベーション ロックを管理
 
 ### <a name="windows-defender-advanced-threat-protection"></a>Windows Defender Advanced Threat Protection
 
-Endpoint Protection を使用して、Windows Defender Advanced Threat Protection (ATP) を管理および監視することができます。 Windows Defender ATP は、企業が自社のネットワークに対する高度な攻撃を検出して調査し、対応するのに役立つ新しいサービスです。 Configuration Manager ポリシーは、Windows 10 バージョン 1607 (ビルド 14328) 以降を実行している管理対象のコンピューターの登録と監視に役立ちます。
+Endpoint Protection を使用して、Windows Defender Advanced Threat Protection (ATP) を管理および監視することができます。 Windows Defender ATP は、企業が自社のネットワークに対する高度な攻撃を検出して調査し、対応するのに役立つ新しいサービスです。 Configuration Manager ポリシーは、Windows 10 バージョン 1607 (ビルド 14328) 以降を実行しているマネージド コンピューターの登録と監視に役立ちます。
 
 詳細については、「[Windows Defender Advanced Threat Protection](../../../protect/deploy-use/windows-defender-advanced-threat-protection.md)」をご覧ください。
 
