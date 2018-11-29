@@ -1,6 +1,6 @@
 ---
 title: バージョン 1602 の新機能
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: System Center Configuration Manager のバージョン 1602 の変更点および導入された新機能について詳しく説明します。
 ms.date: 12/30/2016
 ms.prod: configuration-manager
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: cdc8797d436e50c60f17d4c26c802465608bb26a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c6d085fd33513a32207a3b9acfdfe6fe91657a88
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338586"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52259048"
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1602 の新機能
 
@@ -122,7 +122,7 @@ System Center Configuration Manager の更新プログラム 1602 は、以前�
  詳細については、「[Manage access to O365 services for PCs managed by System Center Configuration Manager](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)」 (System Center Configuration Manager で管理されている PC の O365 サービスへのアクセスを管理する) をご覧ください。  
 
 ### <a name="restricting-access-based-on-the-health-of-devices"></a>デバイスの正常性に基づいてアクセスを制限する  
- 正常性構成証明サービスで報告されるデバイスの正常性に基づいて、電子メールおよび 0ffice 365 サービスへのアクセスを制限できるようになりました。 さらに、Intune で管理されているデバイスが、デバイスの正常性レポートに含まれます。  
+ 正常性構成証明サービスで報告されるデバイスの正常性に基づいて、電子メールおよび Office 365 サービスへのアクセスを制限できるようになりました。 さらに、Intune で管理されているデバイスが、デバイスの正常性レポートに含まれます。  
 
  新しいコンプライアンス ルールが Configuration Manager コンソールに追加されました。このルールを使用すると、デバイスの正常性の状態に基づいてアクセスを許可するかブロックするかを指定できます。 正常性構成証明サービスの詳細、およびデバイスの正常性が Intune でどのように報告されるのかについての詳細は、「[System Center Configuration Manager の正常性構成証明書](../../../core/servers/manage/health-attestation.md)」をご覧ください。  
 
@@ -132,9 +132,9 @@ System Center Configuration Manager の更新プログラム 1602 は、以前�
  詳細については、「[System Center Configuration Manager でのデバイス コンプライアンス ポリシー](../../../protect/deploy-use/device-compliance-policies.md)」をご覧ください。  
 
 ### <a name="make-sure-enrolled-and-compliant-devices-always-have-access-to-exchange-on-premises"></a>登録された準拠デバイスがいつも Exchange On-Premises ポリシーにアクセスできるかどうかを確認します。  
- **[既定の規則より優先 - Intune に登録された準拠デバイスに Exchange On-Premises へのアクセスを常に許可する]** オプションをオンにすると、Intune に登録されていてコンプライアンス ポリシーに準拠しているデバイスが Exchange On-Premises にアクセスすることを許可されます。 この規則は、Exchange On-Premises の**条件付きアクセス ポリシーの構成ウィザード**の **[全般]** ページにあります。
+ **[既定の規則をオーバーライド - Intune に登録された準拠デバイスに Exchange On-Premises へのアクセスを常に許可する]** オプションをオンにすると、Intune に登録されていてコンプライアンス ポリシーに準拠しているデバイスが Exchange On-Premises にアクセスすることを許可されます。 この規則は、Exchange On-Premises の**条件付きアクセス ポリシーの構成ウィザード**の **[全般]** ページにあります。
 
- このルールは既定のルールに優先します。つまり、アクセスを検疫またはブロックする既定のルールを設定した場合でも、登録された準拠デバイスは引き続きオンプレミスの Exchange にアクセスできます。 登録された準拠デバイスが Exchange On-Premises 経由で電子メールにいつでもアクセスできるようにするには、この設定を使用します。   
+ このルールは既定のルールをオーバーライドします。つまり、アクセスを検疫またはブロックする既定のルールを設定した場合でも、登録された準拠デバイスは引き続きオンプレミスの Exchange にアクセスできます。 登録された準拠デバイスが Exchange On-Premises 経由で電子メールにいつでもアクセスできるようにするには、この設定を使用します。   
 
  詳細のウォークスルーについては、「[System Center Configuration Manager でのメール アクセスの管理](../../../protect/deploy-use/manage-email-access.md)」をご覧ください。  
 

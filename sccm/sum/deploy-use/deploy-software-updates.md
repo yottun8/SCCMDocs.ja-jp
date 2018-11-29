@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: 3a99c2b1310d5e78699b0b9c97a5074c329bac46
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: d456d7232133333bf6cd88374d5288227f6dfea1
+ms.sourcegitcommit: 2ea71b048307a93a2db7898700aea984a8f88824
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383747"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52304284"
 ---
 # <a name="deploy-software-updates"></a>ソフトウェアの更新を展開する  
 
@@ -26,7 +26,7 @@ ms.locfileid: "39383747"
 - 更新プログラム コンテンツを配布ポイントに配布します
 - 更新プログラム グループをクライアントに展開します  
 
-ユーザーが展開を作成すると、関連付けられているソフトウェア更新プログラム ポリシーがサイトによってターゲット クライアントに送信されます。 クライアントは、コンテンツ ソースからローカル キャッシュにソフトウェア更新プログラムのコンテンツ ファイルをダウンロードします。 インターネットに接続されているクライアントは常に、Microsoft Update クラウド サービスからコンテンツをダウンロードします。 その後、ソフトウェア更新プログラムはクライアントによるインストールで使用できるようになります。   
+ユーザーが展開を作成すると、関連付けられているソフトウェア更新プログラム ポリシーがサイトによってターゲット クライアントに送信されます。 クライアントは、コンテンツ ソースからローカル キャッシュにソフトウェア更新プログラムのコンテンツ ファイルをダウンロードします。 インターネットに接続されているクライアントでは、常に Microsoft Update クラウド サービスからコンテンツがダウンロードされます。 その後、ソフトウェア更新プログラムはクライアントによるインストールで使用できるようになります。   
 
 > [!Tip]  
 >  配布ポイントを利用できない場合、イントラネットのクライアントは Microsoft Update からソフトウェア更新プログラムをダウンロードすることもできます。  
