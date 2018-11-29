@@ -69,12 +69,12 @@ items:
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: 増分バージョンの新機能
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: バージョン 1810 の新機能
+      href: plan-design/changes/whats-new-in-version-1810.md
     - name: バージョン 1806 の新機能
       href: plan-design/changes/whats-new-in-version-1806.md
     - name: バージョン 1802 の新機能
       href: plan-design/changes/whats-new-in-version-1802.md
-    - name: バージョン 1710 の新機能
-      href: plan-design/changes/whats-new-in-version-1710.md
     - name: 削除と非推奨
       href: plan-design/changes/deprecated/removed-and-deprecated.md
       items:
@@ -166,12 +166,12 @@ items:
     items:
     - name: 診断結果と使用状況データの使用方法
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
+    - name: 1810 の診断データ
+      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
     - name: 1806 の診断データ
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
     - name: 1802 の診断データ
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802.md
-    - name: 1710 の診断データ
-      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md
     - name: 診断と使用状況データを収集する方法
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md
     - name: 診断および使用状況データを使用する方法
@@ -306,7 +306,7 @@ items:
       href: servers/deploy/configure/site-components.md
     - name: サイト データの発行
       href: servers/deploy/configure/publish-site-data.md
-    - name: Manage content and content infrastructure
+    - name: コンテンツ管理インフラストラクチャの展開と管理
       href: servers/deploy/configure/manage-content-and-content-infrastructure.md
       items:
       - name: 配布ポイントのインストールと構成
@@ -331,6 +331,8 @@ items:
         href: servers/deploy/configure/boundaries.md
       - name: 境界グループ
         href: servers/deploy/configure/boundary-groups.md
+      - name: 境界グループの手順
+        href: servers/deploy/configure/boundary-group-procedures.md
     - name: 高可用性オプション
       href: servers/deploy/configure/high-availability-options.md
       items:
@@ -350,7 +352,7 @@ items:
         href: servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md
     - name: データベース ファイルのカスタムの場所
       href: servers/deploy/configure/custom-locations-for-site-database-files.md
-    - name: ロール ベース管理の構成
+    - name: 役割に基づいた管理の構成
       href: servers/deploy/configure/configure-role-based-administration.md
     - name: Azure サービスの構成
       href: servers/deploy/configure/azure-services-wizard.md
@@ -422,12 +424,12 @@ items:
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: 修正プログラム インストーラーの使用
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: 1810 に更新するためのチェックリスト
+      href: servers/manage/checklist-for-installing-update-1810.md
     - name: 1806 に更新するためのチェックリスト
       href: servers/manage/checklist-for-installing-update-1806.md
     - name: 1802 に更新するためのチェックリスト
       href: servers/manage/checklist-for-installing-update-1802.md
-    - name: 1710 に更新するためのチェックリスト
-      href: servers/manage/checklist-for-installing-update-1710.md
     - name: Current Branch バージョンのサポート
       href: servers/manage/current-branch-versions-supported.md
   - name: バックアップと回復
@@ -489,6 +491,17 @@ items:
         href: servers/manage/security-and-privacy-for-reporting.md
     - name: データ ウェアハウス
       href: servers/manage/data-warehouse.md
+  - name: サポート センター
+    href: support/support-center.md
+    items:
+    - name: クイック スタート ガイド
+      href: support/support-center-quickstart.md
+    - name: ユーザー補助
+      href: support/support-center-accessibility.md
+    - name: ユーザー インターフェイスのリファレンス
+      href: support/support-center-ui-reference.md
+    - name: カスタマイズ
+      href: support/support-center-customize.md
   - name: Configuration Manager ツール
     href: support/tools.md
     items:
@@ -593,7 +606,6 @@ items:
   href: clients/manage/monitor-and-manage-clients.md
   items:
   - name: クライアントの監視と管理
-    href: clients/manage/monitor-clients.md
     items:
     - name: クライアントを監視する方法
       href: clients/manage/monitor-clients.md
@@ -605,6 +617,8 @@ items:
       href: clients/manage/monitor-clients-for-linux-and-unix-servers.md
     - name: クライアントを管理する方法
       href: clients/manage/manage-clients.md
+    - name: クライアント通知
+      href: clients/manage/client-notification.md
     - name: Linux および UNIX クライアントを管理する方法
       href: clients/manage/manage-clients-for-linux-and-unix-servers.md
     - name: Log Analytics にデータを同期する
@@ -662,9 +676,9 @@ items:
     items:
     - name: ハードウェア インベントリの概要
       href: clients/manage/inventory/introduction-to-hardware-inventory.md
-    - name: ハードウェア インベントリを拡張する方法
+    - name: ハードウェア インベントリの拡張方法
       href: clients/manage/inventory/extend-hardware-inventory.md
-    - name: How to configure hardware inventory
+    - name: ハードウェア インベントリを構成する方法
       href: clients/manage/inventory/configure-hardware-inventory.md
     - name: リソース エクスプローラーを使用してハードウェア インベントリを表示する方法
       href: clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md
@@ -745,9 +759,9 @@ items:
       href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
     - name: Mac クライアントのアップグレード
       href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md
-ms.openlocfilehash: 3b0eef7092583e2b5558e324069cbb48fbefe17b
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: afc91b99ee040b4c338fb763d6f74a0d9a96005e
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411359"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456500"
