@@ -88,7 +88,7 @@ Configuration Manager では、次のような多くのピアツーピア テク
 | 一部のコンテンツをサポート | はい | Office 365 および高速更新の場合のみ | はい |
 | ディスク制御におけるキャッシュ サイズ | はい | はい | はい |
 | ピア ソースの検出 | 自動 | 手動 (クライアント エージェント設定) | 自動 |
-| ピア検出 | 配信の最適化クラウド サービスを使用 (インターネット アクセスが必要) | 管理ポイントを使用 (クライアントの境界グループに基づく) | ブロードキャスト |
+| ピア検出 | 配信の最適化クラウド サービスを使用 (インターネット アクセスが必要) | 管理ポイントを使用 (クライアントの境界グループに基づく) | マルチキャスト |
 | レポート | ○ (Windows Analytics を使用) | Configuration Manager クライアント データ ソース ダッシュボード | Configuration Manager クライアント データ ソース ダッシュボード |
 | WAN の使用の制御 | ○ (ネイティブ、グループ ポリシー設定による制御が可能) | 境界グループ | サブネットのサポートのみ |
 | サポートされているコンテンツの種類 | - 高速更新 (Configuration Manager を使用)</br> - Windows 更新プログラムとセキュリティ更新プログラム</br> - ドライバー</br> - Windows ストア アプリ</br> - ビジネス向け Windows ストアのアプリ | Configuration Manager のすべてのコンテンツの種類 ([Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) でダウンロードされるイメージを含む) | Configuration Manager のすべてのコンテンツの種類 (イメージを除く) |
