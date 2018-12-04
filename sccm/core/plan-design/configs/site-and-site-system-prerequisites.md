@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ba23a42acb111f4ed7d0337552b2ea90b0268d6
-ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
+ms.openlocfilehash: 00789c0c469e7de5ccd0b4dcac4130fdb14bb485
+ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448924"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52820120"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>Configuration Manager のサイトとサイト システムの前提条件
 
@@ -416,7 +416,13 @@ Windows Server 2012 以降のサイト システム サーバーと役割に関�
 
 
 
-##  <a name="bkmk_2012FSPpreq"></a> フォールバック ステータス ポイント  
+##  <a name="bkmk_2012FSPpreq"></a> フォールバック ステータス ポイント 
+
+#### <a name="windows-server-roles-and-features"></a>Windows Server の役割と機能 
+
+-   BITS サーバー拡張 (および自動的に選択されるオプション)、またはバックグラウンド インテリジェント転送サービス (BITS) (および自動的に選択されるオプション) 
+
+#### <a name="iis-configuration"></a>IIS の構成 
 
 既定の IIS 構成に加え、次が必要です。  
 

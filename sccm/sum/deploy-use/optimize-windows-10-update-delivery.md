@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 801cd2cd35d370fbe469b16613da7f7592feff6e
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 6fb655ae6094d7c764f2c3d0b84a505e9dfda3d2
+ms.sourcegitcommit: 9f02f21fbd4324ee8cc1af2d56db67c9c2fce969
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893810"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52709935"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>Configuration Manager による Windows 10 更新プログラムの配信の最適化
 
@@ -88,7 +88,7 @@ Configuration Manager では、次のような多くのピアツーピア テク
 | 一部のコンテンツをサポート | はい | Office 365 および高速更新の場合のみ | はい |
 | ディスク制御におけるキャッシュ サイズ | はい | はい | はい |
 | ピア ソースの検出 | 自動 | 手動 (クライアント エージェント設定) | 自動 |
-| ピア検出 | 配信の最適化クラウド サービスを使用 (インターネット アクセスが必要) | 管理ポイントを使用 (クライアントの境界グループに基づく) | ブロードキャスト |
+| ピア検出 | 配信の最適化クラウド サービスを使用 (インターネット アクセスが必要) | 管理ポイントを使用 (クライアントの境界グループに基づく) | マルチキャスト |
 | レポート | ○ (Windows Analytics を使用) | Configuration Manager クライアント データ ソース ダッシュボード | Configuration Manager クライアント データ ソース ダッシュボード |
 | WAN の使用の制御 | ○ (ネイティブ、グループ ポリシー設定による制御が可能) | 境界グループ | サブネットのサポートのみ |
 | サポートされているコンテンツの種類 | - 高速更新 (Configuration Manager を使用)</br> - Windows 更新プログラムとセキュリティ更新プログラム</br> - ドライバー</br> - Windows ストア アプリ</br> - ビジネス向け Windows ストアのアプリ | Configuration Manager のすべてのコンテンツの種類 ([Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) でダウンロードされるイメージを含む) | Configuration Manager のすべてのコンテンツの種類 (イメージを除く) |
