@@ -12,7 +12,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.openlocfilehash: 639fabbe1e2f51194669fc1f196d88140193a727
 ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/03/2018
 ms.locfileid: "32352103"
@@ -365,7 +365,7 @@ Configuration Manage で企業のデータ保護を構成する方法につい�
 |**SmartScreen を有効にする**|ユーザーがダウンロードしたファイルに悪意のあるコードが含まれていないことを SmartScreen で確認します。|  
 |**ポップアップを許可する**|ブラウザーのポップアップを許可するか、または無効にします。|  
 |**Cookie を使用する**|Cookie を許可するか、または無効にします。|  
-|**オートコンプリートを使用する**|Edge ブラウザーの Autofill 機能を使用できるようにします。|  
+|**オートコンプリートを使用する**|Microsoft Edge ブラウザーの Autofill 機能を使用できるようにします。|  
 |**Password Manager を許可する**|Microsoft Edge ブラウザーの Password Manager 機能を使用できるようにします。|  
 |**エンタープライズ モード サイト リストの場所**|エンタープライズ モードで開く Web サイトの一覧を検索できる場所を指定します。 ユーザーは、この一覧を編集できません。|
 |**About Flags へのアクセスをブロック**|Edge で、開発者向け設定と実験的設定が含まれる about:flags ページにエンド ユーザーがアクセスできないようにします。|
@@ -374,7 +374,7 @@ Configuration Manage で企業のデータ保護を構成する方法につい�
 |**WebRtc localhost IP アドレス**|Web RTC プロトコルを使用して電話を発信するときに、ユーザーの localhost IP アドレスが表示されないようにします。|
 |**既定の検索エンジン**|使用する既定の検索エンジンを指定します。 エンド ユーザーはこの値をいつでも変更できます。|
 |**OpenSearch XML URL**|OpenSearch XML ファイルを使用して、Microsoft Edge の検索サービスを作成できます。<br>詳細については、「[OpenSearch](https://msdn.microsoft.com/library/windows/desktop/dd940337)」を参照してください。|
-|**ホームページ (デスクトップのみ)**|Edge ブラウザーでホーム ページとして使用するサイト一覧を追加します (デスクトップのみ)。|  
+|**ホームページ (デスクトップのみ)**|Microsoft Edge ブラウザーでホーム ページとして使用するサイト一覧を追加します (デスクトップのみ)。|  
 
 
 ### <a name="windows-defender"></a>Windows Defender
