@@ -2,7 +2,7 @@
 
 このリポジトリには、[System Center Configuration Manager](https://docs.microsoft.com/sccm) に向けた概念的な技術コンテンツが含まれています。
 
-フィードバック (問題) や投稿 (プル要求) という形でぜひコミュニティに参加しましょう。 詳細については、「[Configuration Manager ドキュメントの使用方法](https://docs.microsoft.com/sccm/core/understand/use-docs)」をご覧ください。 
+フィードバック (問題) や投稿 (pull requests) という形でぜひコミュニティに参加しましょう。 詳細については、「[Configuration Manager ドキュメントの使用方法](https://docs.microsoft.com/sccm/core/understand/use-docs)」をご覧ください。 
 
 Configuration Manager の [PowerShell のドキュメント](https://docs.microsoft.com/powershell/sccm/overview?view=sccm-ps)は、[sccm-docs-powershell](https://github.com/MicrosoftDocs/sccm-docs-powershell) リポジトリ内にあります。
 

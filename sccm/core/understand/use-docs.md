@@ -141,11 +141,11 @@ Configuration Manager ドキュメント ライブラリは、docs.microsoft.com
 
 Configuration Manager のドキュメントに投稿する場合、次の一般的なガイドラインに従ってください。
 
-- いきなり大規模なプル要求を行わないでください。 そうではなく、[問題を報告](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_docfeedback)してディスカッションを開始してください。 これで、大量の時間を費やす前にその方向性が正しいかどうか確認できます。  
+- いきなり大規模な pull requests を行わないでください。 そうではなく、[問題を報告](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_docfeedback)してディスカッションを開始してください。 これで、大量の時間を費やす前にその方向性が正しいかどうか確認できます。  
 
 - [Microsoft スタイル ガイド](https://aka.ms/MicrosoftStyle)をご覧ください。 [Microsoft のスタイルとボイスに関する 10 のヒント](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)を把握してください。  
 
-- 作業の出発点として[プル要求のテンプレート](https://github.com/MicrosoftDocs/SCCMdocs/blob/master/PULL_REQUEST_TEMPLATE.md)を使用してください。  
+- 作業の出発点として[pull request のテンプレート](https://github.com/MicrosoftDocs/SCCMdocs/blob/master/PULL_REQUEST_TEMPLATE.md)を使用してください。  
 
 - [GitHub Flow ワークフロー](https://guides.github.com/introduction/flow/)に従ってください。  
 

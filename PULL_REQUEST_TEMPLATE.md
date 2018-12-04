@@ -1,4 +1,4 @@
-### <a name="summarize-the-change-in-the-pull-request-title"></a>プル要求のタイトルに変更の要約を入力します
+### <a name="summarize-the-change-in-the-pull-request-title"></a>pull request のタイトルに変更の要約を入力します
 
 変更内容を説明します。*なぜ*変更が必要だと考えるのか具体的に記述します。
 
