@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c637703fc65b6d867dd1670ff40abc8214e6d234
-ms.sourcegitcommit: 4f34250aa850f13f415b7afe975a033d6a00fa9d
+ms.openlocfilehash: 6ecc3f47b908678b1849e16c2cb2053f100a655a
+ms.sourcegitcommit: 2491fbe98915b7a30c2422a371c929d0d4ebf22f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52978624"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53247528"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -489,7 +489,7 @@ Windows 10 バージョン 1607 以降を利用しているエンド ユーザ�
     <!-- 1132468 -->     
 
 - **iOS でどのようなデバイス情報を表示できるかをエンド ユーザーに通知**   
-    iOS 用のポータル サイト アプリの [デバイスの詳細] 画面に   **[所有権の種類]** が追加されました。 この情報により、ユーザーは Intune のエンド ユーザー ドキュメントから直接プライバシーの詳細を参照できます。この情報は、[バージョン情報] 画面でも確認できます。 
+    追加した**所有権の種類**iOS 用ポータル サイト アプリでデバイスの詳細画面にします。 この情報により、ユーザーは Intune のエンド ユーザー ドキュメントから直接プライバシーの詳細を参照できます。この情報は、[バージョン情報] 画面でも確認できます。 
     <!--739894-->    
 
 - **Android 用ポータル サイト アプリの文言の分かりやすさの向上**   
