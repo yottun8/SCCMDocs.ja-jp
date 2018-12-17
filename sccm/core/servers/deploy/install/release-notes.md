@@ -1,8 +1,8 @@
 ---
 title: リリース ノート
 titleSuffix: Configuration Manager
-description: 製品でまだ修正されていないまたは Microsoft サポート技術情報の記事で説明されていない緊急の問題については説明します。
-ms.date: 08/21/2018
+description: 製品でまだ修正されていないまたは Microsoft サポート技術情報の記事で説明されていない緊急の問題について説明します。
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b31e0c84d0e3920024870361239e22bb90005ccb
-ms.sourcegitcommit: e7732dd67f19218cec576f70fe4ab44e2626b8e0
+ms.openlocfilehash: 41039ec31c11573424f044df009e9c364491b5f7
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48045217"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456347"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager のリリース ノート
 
@@ -29,9 +29,9 @@ Configuration Manager 製品のリリース ノートには、緊急の問題の
 >  このトピックには、Configuration Manager の現在のブランチのリリース ノートが含まれています。 Technical Preview ブランチについては、「[Technical Preview](/sccm/core/get-started/technical-preview)」を参照してください。  
 
 異なるバージョンで導入された新しい機能については、以下の記事をご覧ください。
+- [バージョン 1810 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1810)
 - [バージョン 1806 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 - [バージョン 1802 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1802)
-- [バージョン 1710 の新機能](/sccm/core/plan-design/changes/whats-new-in-version-1710)
 
 
 
@@ -79,18 +79,8 @@ Configuration Manager バージョン 1802 以降では、カスタマー エク
 <!-- ## Backup and recovery  -->
 
 
-## <a name="client-deployment-and-upgrade"></a>クライアントの展開とアップグレード
+<!--## Client deployment and upgrade-->
 
-### <a name="azure-ad-enabled-clients-cant-communicate-with-management-point"></a>Azure AD が有効なクライアントが管理ポイントと通信できない
-<!--501089-->  
-*適用対象: Configuration Manager バージョン 1706*
-<!--also fixed in 1710 HFRU-->  
-認証のための Azure AD を使用して、Configuration Manager の Windows 10 クライアントを[インストールして割り当てる](/sccm/core/clients/deploy/deploy-clients-cmg-azure)シナリオで、HTTPS が有効な管理ポイントが別のデータベースの資格情報を使用する場合、クライアントとの通信が失敗します。 
-
-#### <a name="workaround"></a>回避策
-この問題を緩和するには、次の手順のどれかを実行してください。
-- サイトを最新のバージョンに更新して最新の修正プログラムを適用します。
-- 管理ポイントで使用される資格情報を変更します。
 
 
 <!-- ## Operating system deployment  -->

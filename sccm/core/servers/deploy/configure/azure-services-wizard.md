@@ -2,7 +2,7 @@
 title: Azure サービスの構成
 titleSuffix: Configuration Manager
 description: Configuration Manager 環境を、クラウド管理、Upgrade Readiness、ビジネス向け Microsoft ストア、Log Analytics 用の Azure サービスと接続します。
-ms.date: 03/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ea47941be51d1bf38de53203aad00c02d0a11d3
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 0e1cdef0acc799fc60c622f11e4c9c7426dfc19c
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893772"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456460"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>Configuration Manager と共に使用するように Azure サービスを構成する
 
@@ -63,10 +63,10 @@ ms.locfileid: "43893772"
 
 |[サービス]  |テナント  |クラウド  |Web アプリ  |ネイティブ アプリ  |操作  |
 |---------|---------|---------|---------|---------|---------|
-|クラウド管理</br>(Azure AD ユーザー探索を使用) | 複数 | パブリック | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | インポート、作成 |
+|クラウド管理<br>(Azure AD ユーザー探索を使用) | 複数 | パブリック、プライベート | ![サポートされています](media/green_check.png) | ![サポートされています](media/green_check.png) | インポート、作成 |
 |Log Analytics コネクタ | 1 台 | パブリック、プライベート | ![サポートされています](media/green_check.png) | ![サポートされていません](media/Red_X.png) | インポート |
 |Upgrade Readiness | 1 台 | パブリック | ![サポートされています](media/green_check.png) | ![サポートされていません](media/Red_X.png) | インポート |
-|Microsoft Store</br>Business | 1 台 | パブリック | ![サポートされています](media/green_check.png) | ![サポートされていません](media/Red_X.png) | インポート、作成 |
+|Microsoft Store<br>Business | 1 台 | パブリック | ![サポートされています](media/green_check.png) | ![サポートされていません](media/Red_X.png) | インポート、作成 |
 
 
 ### <a name="about-azure-ad-apps"></a>Azure AD アプリについて
@@ -75,9 +75,10 @@ Azure サービスごとに異なる構成が必要になります。この構�
 
 複数のサービスに対して 1 つのアプリを使用することができます。 Configuration Manager と Azure AD で管理するオブジェクトは 1 つだけです。 アプリのセキュリティ キーの期限が切れた場合、更新する必要があるキーは 1 つだけです。
 
-最も安全な構成では、サービスごとに別のアプリを使用します。 1 つのサービスのみのアプリに、別のサービスでは必要としない追加のアクセス許可が必要な場合があります。 さまざまなサービスで 1 つのアプリを使用することで、そのアプリが必要とするより多くのアクセス許可をアプリに提供できます。 
+<!-- The most secure configuration is using separate apps for each service. An app for one service might require additional permissions that another service doesn't require. Using one app for different services can provide the app with more permissions than it otherwise requires. 
+ --> 
 
-Configuration Manager は、ウィザードで追加の Azure サービスを作成する際に、サービス間で共通の情報を再利用するように設計されています。 これにより、同じ情報を複数回入力する必要がなくなります。 
+Configuration Manager は、ウィザードで追加の Azure サービスを作成する際に、サービス間で共通の情報を再利用するように設計されています。 この動作により、同じ情報を複数回入力する必要がなくなります。 
 
 サービスごとの必要なアプリのアクセス許可と構成の詳細については、「[利用可能なサービス](#available-services)」の関連する Configuration Manager の記事を参照してください。 
 
@@ -91,9 +92,15 @@ Azure アプリの詳細については、まず、以下の記事を参照し�
 
 ## <a name="before-you-begin"></a>始める前に
 
-接続するサービスを決定したら、「[サービスの詳細](#service-details)」の表を参照してください。 この表には、Azure サービス ウィザードを完了するために必要な情報が示されています。 事前に Azure AD 管理者と話し合ってください。 Azure Portal で事前にアプリを手動で作成し、アプリの詳細を Configuration Manager にインポートするかどうかを決定します。 または、Configuration Manager を使用して、Azure AD でアプリを直接作成します。 Azure AD から必要なデータを収集する場合は、この記事の他のセクションの情報を確認してください。
+接続するサービスを決定したら、「[サービスの詳細](#service-details)」の表を参照してください。 この表には、Azure サービス ウィザードを完了するために必要な情報が示されています。 事前に Azure AD 管理者と話し合ってください。 次の操作のどれを実行するかを決めます。 
 
-一部のサービスでは、Azure AD アプリに特定のアクセス許可を割り当てる必要があります。 各サービスの情報を確認して、必要なアクセス許可を判別してください。 たとえば、Web アプリをインポートする前に、Azure 管理者はまず、[Azure Portal](https://portal.azure.com) でそれを作成する必要があります。 Upgrade Readiness または Log Analytics コネクタを構成する場合、関連するワークスペースを含むリソース グループに対して、新たに登録した Web アプリの "*共同作成者*" アクセス許可を付与する必要があります。 これにより、Configuration Manager からそのワークスペースへのアクセスが許可されます。 アクセス許可を割り当てるときは、Azure portal の **[ユーザーの追加]** 領域でアプリの登録名を検索します。 このプロセスは、[Log Analytics へのアクセス許可を Configuration Manager に提供する](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics)場合と同じです。 Azure 管理者は、アプリを Configuration Manager にインポートする前に、これらのアクセス許可を割り当てる必要があります。
+- Azure ポータルで事前にアプリを手動で作成します。 次に、アプリの詳細を Configuration Manager にインポートします。  
+
+- Configuration Manager を使用して、Azure AD でアプリを直接作成します。 Azure AD から必要なデータを収集する場合は、この記事の他のセクションの情報を確認してください。  
+
+一部のサービスでは、Azure AD アプリに特定のアクセス許可を割り当てる必要があります。 各サービスの情報を確認して、必要なアクセス許可を判別してください。 たとえば、Web アプリをインポートする前に、Azure 管理者はまず、[Azure Portal](https://portal.azure.com) でそれを作成する必要があります。 
+
+Upgrade Readiness または Log Analytics コネクタを構成する場合は、関連するワークスペースを含むリソース グループに対して、新たに登録した Web アプリの "*共同作成者*" アクセス許可を付与します。 これにより、Configuration Manager からそのワークスペースへのアクセスが許可されます。 アクセス許可を割り当てるときは、Azure portal の **[ユーザーの追加]** 領域でアプリの登録名を検索します。 このプロセスは、[Log Analytics へのアクセス許可を Configuration Manager に提供する](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics)場合と同じです。 Azure 管理者は、アプリを Configuration Manager にインポートする前に、これらのアクセス許可を割り当てる必要があります。
 
 
 
@@ -101,7 +108,7 @@ Azure アプリの詳細については、まず、以下の記事を参照し�
 
 1.  Configuration Manager コンソールで、**[管理]** ワークスペースに移動し、**[Cloud Services]** を展開して **[Azure サービス]** ノードを選択します。  
 
-2.  リボンの **[ホーム]** タブの **[Azure サービス]** グループで、**[Azure サービスの構成]** をクリックします。  
+2.  リボンの **[ホーム]** タブの **[Azure サービス]** グループで、**[Azure サービスの構成]** を選択します。  
 
 3.  Azure サービス ウィザードの **[Azure サービス]** ページで、以下の操作を行います。  
 
@@ -111,7 +118,7 @@ Azure アプリの詳細については、まず、以下の記事を参照し�
 
     3. Configuration Manager に接続する Azure サービスを選択します。  
 
-4. **[次へ]** をクリックして、Azure サービス ウィザードの「[Azure アプリのプロパティ](#azure-app-properties)」のページに進みます。  
+4. **[次へ]** を選択して、Azure サービス ウィザードの [Azure アプリのプロパティ](#azure-app-properties)のページに進みます。  
 
 
 
@@ -120,10 +127,12 @@ Azure アプリの詳細については、まず、以下の記事を参照し�
 Azure サービス ウィザードの**アプリ** ページで、まず、一覧から **[Azure 環境]** を選択します。 サービスで現在使用できる環境については、「[サービスの詳細](#service-details)」の表を参照してください。
 
 アプリ ページの残りの部分は、サービスによって異なります。 サービスで使用されるアプリの種類や、使用できる操作については、「[サービスの詳細](#service-details)」の表を参照してください。 
-- アプリでインポートと作成の両方の操作がサポートされている場合は、**[参照]** をクリックします。 この操作で、[サーバー アプリのダイアログ](#server-app-dialog)または[クライアント アプリのダイアログ](#client-app-dialog)が開きます。
-- アプリでインポート操作のみがサポートされている場合は、**[インポート]** をクリックします。 この操作で、[アプリのインポート ダイアログ (サーバー)](#import-apps-dialog-server) または[アプリのインポート ダイアログ (クライアント)](#import-apps-dialog-client) が開きます。
 
-このページでアプリを指定したら、**[次へ]** をクリックして、Azure サービス ウィザードの [[構成] または [探索]](#configuration-or-discovery) ページに進みます。
+- アプリでインポートと作成の両方の操作がサポートされている場合は、**[参照]** を選択します。 この操作で、[サーバー アプリのダイアログ](#server-app-dialog)または[クライアント アプリのダイアログ](#client-app-dialog)が開きます。  
+
+- アプリでインポート操作のみがサポートされている場合は、**[インポート]** を選択します。 この操作で、[アプリのインポート ダイアログ (サーバー)](#import-apps-dialog-server) または[アプリのインポート ダイアログ (クライアント)](#import-apps-dialog-client) が開きます。
+
+このページでアプリを指定した後、**[次へ]** を選択して、Azure サービス ウィザードの [[構成] または [探索]](#configuration-or-discovery) ページに進みます。
 
 ### <a name="web-app"></a>Web アプリ
 
@@ -131,21 +140,21 @@ Azure サービス ウィザードの**アプリ** ページで、まず、一�
 
 #### <a name="server-app-dialog"></a>サーバー アプリのダイアログ
 
-Azure サービス ウィザードのアプリ ページで **[Web アプリ]** の **[参照]** をクリックすると、サーバー アプリのダイアログが開きます。 ここには、既存の Web アプリの以下のプロパティを示す一覧が表示されます。
+Azure サービス ウィザードのアプリ ページで **[Web アプリ]** の **[参照]** を選択すると、サーバー アプリのダイアログが開きます。 ここには、既存の Web アプリの以下のプロパティを示す一覧が表示されます。
 - テナントのフレンドリ名
 - アプリのフレンドリ名
 - サービスの種類
 
 サーバー アプリのダイアログから実行できる以下の 3 つの操作があります。
 - 既存の Web アプリを再利用するには、一覧から選択します。 
-- **[インポート]** をクリックして、[アプリのインポート ダイアログ](#import-apps-dialog-server)を開きます。
-- **[作成]** をクリックして、[サーバー アプリケーションの作成](#create-server-application-dialog)ダイアログを開きます。
+- **[インポート]** を選択して、[アプリのインポート ダイアログ](#import-apps-dialog-server)を開きます。
+- **[作成]** を選択して、[サーバー アプリケーションの作成ダイアログ](#create-server-application-dialog)を開きます。
 
-選択したら、Web アプリをインポートまたは作成し、**[OK]** をクリックしてサーバー アプリのダイアログを閉じます。 この操作で、Azure サービス ウィザードの[アプリ ページ](#azure-app-properties)に戻ります。
+選択した後、Web アプリをインポートまたは作成し、**[OK]** を選択してサーバー アプリのダイアログを閉じます。 この操作で、Azure サービス ウィザードの[アプリ ページ](#azure-app-properties)に戻ります。
 
 #### <a name="import-apps-dialog-server"></a>アプリのインポート ダイアログ (サーバー)
 
-Azure サービス ウィザードのサーバー アプリのダイアログまたはアプリ ページで **[インポート]** をクリックすると、アプリのインポート ダイアログが開きます。 このページでは、Azure Portal で既に作成されている Azure AD Web アプリに関する情報を入力できます。 Configuration Manager にその Web アプリに関するメタデータがインポートされます。 次の情報を指定します。
+Azure サービス ウィザードのサーバー アプリのダイアログまたはアプリ ページで **[インポート]** を選択すると、アプリのインポート ダイアログが開きます。 このページでは、Azure Portal で既に作成されている Azure AD Web アプリに関する情報を入力できます。 Configuration Manager にその Web アプリに関するメタデータがインポートされます。 次の情報を指定します。
 - **Azure AD テナント名**
 - **Azure AD テナント ID**
 - **アプリケーション名**: アプリのフレンドリ名。
@@ -154,19 +163,19 @@ Azure サービス ウィザードのサーバー アプリのダイアログま
 - **秘密鍵の有効期限**: カレンダーから未来の日付を選択します。 
 - **アプリ ID URI**: この値は、Azure AD テナント内で一意である必要があります。 サービスへのアクセスを要求するために Configuration Manager クライアントで使用されるアクセス トークンにあります。 既定値は https://ConfigMgrService です。  
 
-情報を入力したら、**[確認]** をクリックします。 次に **[OK]** をクリックして、アプリのインポート ダイアログを閉じます。 この操作で、Azure サービス ウィザードの[アプリ ページ](#azure-app-properties)、または[サーバー アプリのダイアログ](#server-app-dialog)に戻ります。
+情報を入力した後、**[確認]** を選択します。 次に **[OK]** を選択して、アプリのインポート ダイアログを閉じます。 この操作で、Azure サービス ウィザードの[アプリ ページ](#azure-app-properties)、または[サーバー アプリのダイアログ](#server-app-dialog)に戻ります。
 
 #### <a name="create-server-application-dialog"></a>サーバー アプリケーションの作成ダイアログ
 
-サーバー アプリのダイアログで **[作成]** をクリックすると、サーバー アプリケーションの作成ダイアログが開きます。 このページでは、Azure AD での Web アプリの作成が自動化されます。 次の情報を指定します。
+サーバー アプリのダイアログで **[作成]** を選択すると、サーバー アプリケーションの作成ダイアログが開きます。 このページでは、Azure AD での Web アプリの作成が自動化されます。 次の情報を指定します。
 - **アプリケーション名**: アプリのフレンドリ名。
 - **ホームページ URL**: この値は Configuration Manager では使用されませんが、Azure AD で必要になります。 既定値は https://ConfigMgrService です。  
 - **アプリ ID URI**: この値は、Azure AD テナント内で一意である必要があります。 サービスへのアクセスを要求するために Configuration Manager クライアントで使用されるアクセス トークンにあります。 既定値は https://ConfigMgrService です。  
-- **秘密鍵の有効期間**: ドロップダウン リストをクリックして、**[1 年]** または **[2 年]** を選択します。 1 年が既定値です。
+- **秘密鍵の有効期間**: ドロップダウン リストから、**[1 年]** または **[2 年]** を選択します。 1 年が既定値です。
 
-**[サインイン]** をクリックして、管理者ユーザーとして Azure への認証を行います。 これらの資格情報は Configuration Manager では保存されません。 この管理者には Configuration Manager のアクセス許可は必要ありません。また、Azure サービス ウィザードを実行するアカウントと同じものである必要もありません。 Azure への認証が正常に行われると、ページに参照用の **Azure AD テナント名**が表示されます。 
+**[サインイン]** を選択して、管理ユーザーとして Azure への認証を行います。 これらの資格情報は Configuration Manager では保存されません。 この管理者には Configuration Manager のアクセス許可は必要ありません。また、Azure サービス ウィザードを実行するアカウントと同じものである必要もありません。 Azure への認証が正常に行われると、ページに参照用の **Azure AD テナント名**が表示されます。 
 
-**[OK]** をクリックして Azure AD で Web アプリを作成し、サーバー アプリケーションの作成ダイアログを閉じます。 この操作で、[サーバー アプリのダイアログ](#server-app-dialog)に戻ります。
+**[OK]** を選択して Azure AD で Web アプリを作成し、サーバー アプリケーションの作成ダイアログを閉じます。 この操作で、[サーバー アプリのダイアログ](#server-app-dialog)に戻ります。
 
 
 ### <a name="native-client-app"></a>ネイティブ クライアント アプリ
@@ -175,35 +184,35 @@ Azure サービス ウィザードのサーバー アプリのダイアログま
 
 #### <a name="client-app-dialog"></a>クライアント アプリのダイアログ
 
-Azure サービス ウィザードのアプリ ページで **[ネイティブ クライアント アプリ]** の **[参照]** をクリックすると、クライアント アプリのダイアログが開きます。 ここには、既存のネイティブ アプリの以下のプロパティを示す一覧が表示されます。
+Azure サービス ウィザードのアプリ ページで **[ネイティブ クライアント アプリ]** の **[参照]** を選択すると、クライアント アプリのダイアログが開きます。 ここには、既存のネイティブ アプリの以下のプロパティを示す一覧が表示されます。
 - テナントのフレンドリ名
 - アプリのフレンドリ名
 - サービスの種類
 
 クライアント アプリのダイアログから実行できる以下の 3 つの操作があります。
 - 既存のネイティブ アプリを再利用するには、一覧から選択します。 
-- **[インポート]** をクリックして、[アプリのインポート ダイアログ](#import-apps-dialog-client)を開きます。
-- **[作成]** をクリックして、[クライアント アプリケーションの作成ダイアログ](#create-client-application-dialog)を開きます。
+- **[インポート]** を選択して、[アプリのインポート ダイアログ](#import-apps-dialog-client)を開きます。
+- **[作成]** を選択して、[クライアント アプリケーションの作成ダイアログ](#create-client-application-dialog)を開きます。
 
-選択したら、ネイティブ アプリをインポートまたは作成し、**[OK]** をクリックしてクライアント アプリのダイアログを閉じます。 この操作で、Azure サービス ウィザードの[アプリ ページ](#azure-app-properties)に戻ります。
+選択した後、ネイティブ アプリをインポートまたは作成し、**[OK]** を選択してクライアント アプリのダイアログを閉じます。 この操作で、Azure サービス ウィザードの[アプリ ページ](#azure-app-properties)に戻ります。
 
 #### <a name="import-apps-dialog-client"></a>アプリのインポート ダイアログ (クライアント)
 
-クライアント アプリのダイアログで **[インポート]** をクリックすると、アプリのインポート ダイアログが開きます。 このページでは、Azure Portal で既に作成されている Azure AD ネイティブ アプリに関する情報を入力できます。 Configuration Manager にそのネイティブ アプリに関するメタデータがインポートされます。 次の情報を指定します。
+クライアント アプリのダイアログで **[インポート]** を選択すると、アプリのインポート ダイアログが開きます。 このページでは、Azure Portal で既に作成されている Azure AD ネイティブ アプリに関する情報を入力できます。 Configuration Manager にそのネイティブ アプリに関するメタデータがインポートされます。 次の情報を指定します。
 - **アプリケーション名**: アプリのフレンドリ名。
 - **クライアント ID** 
 
-情報を入力したら、**[確認]** をクリックします。 次に **[OK]** をクリックして、アプリのインポート ダイアログを閉じます。 この操作で、[クライアント アプリのダイアログ](#client-app-dialog)に戻ります。
+情報を入力した後、**[確認]** を選択します。 次に **[OK]** を選択して、アプリのインポート ダイアログを閉じます。 この操作で、[クライアント アプリのダイアログ](#client-app-dialog)に戻ります。
 
 #### <a name="create-client-application-dialog"></a>クライアント アプリケーションの作成ダイアログ
 
-クライアント アプリのダイアログで **[作成]** をクリックすると、クライアント アプリケーションの作成ダイアログが開きます。 このページでは、Azure AD のネイティブの作成が自動化されます。 次の情報を指定します。
+クライアント アプリのダイアログで **[作成]** を選択すると、クライアント アプリケーションの作成ダイアログが開きます。 このページでは、Azure AD のネイティブの作成が自動化されます。 次の情報を指定します。
 - **アプリケーション名**: アプリのフレンドリ名。
 - **応答 URL**: この値は Configuration Manager では使用されませんが、Azure AD で必要になります。 既定値は https://ConfigMgrService です。 
 
-**[サインイン]** をクリックして、管理者ユーザーとして Azure への認証を行います。 これらの資格情報は Configuration Manager では保存されません。 この管理者には Configuration Manager のアクセス許可は必要ありません。また、Azure サービス ウィザードを実行するアカウントと同じものである必要もありません。 Azure への認証が正常に行われると、ページに参照用の **Azure AD テナント名**が表示されます。 
+**[サインイン]** を選択して、管理ユーザーとして Azure への認証を行います。 これらの資格情報は Configuration Manager では保存されません。 この管理者には Configuration Manager のアクセス許可は必要ありません。また、Azure サービス ウィザードを実行するアカウントと同じものである必要もありません。 Azure への認証が正常に行われると、ページに参照用の **Azure AD テナント名**が表示されます。 
 
-**[OK]** をクリックして Azure AD でネイティブ アプリを作成し、クライアント アプリケーションの作成ダイアログを閉じます。 この操作で、[クライアント アプリのダイアログ](#client-app-dialog)に戻ります。
+**[OK]** を選択して Azure AD でネイティブ アプリを作成し、クライアント アプリケーションの作成ダイアログを閉じます。 この操作で、[クライアント アプリのダイアログ](#client-app-dialog)に戻ります。
 
 
 ## <a name="configuration-or-discovery"></a>[構成] または [探索]
@@ -223,9 +232,9 @@ Azure サービス ウィザードのアプリ ページで **[ネイティブ �
 
 
 ## <a name="view-the-configuration-of-an-azure-service"></a>Azure サービスの構成を表示する
-構成した Azure サービスのプロパティを表示します。 Configuration Manager コンソールで、**[管理]** ワークスペースに移動し、**[Cloud Services]** を展開して **[Azure サービス]** を選択します。 表示または編集するサービスを選択し、**[プロパティ]** をクリックします。
+構成した Azure サービスのプロパティを表示します。 Configuration Manager コンソールで、**[管理]** ワークスペースに移動し、**[Cloud Services]** を展開して **[Azure サービス]** を選択します。 表示または編集するサービスを選択し、**[プロパティ]** を選びます。
 
-サービスを選択し、リボンの **[削除]** をクリックした場合、この操作で Configuration Manager の接続が削除されます。 Azure AD のアプリは削除されません。 不要になったときにアプリを削除する場合は、Azure 管理者に依頼してください。 または、Azure サービス ウィザードを実行してアプリをインポートします。<!--483440-->
+サービスを選択し、リボンの **[削除]** を選んだ場合、この操作で Configuration Manager の接続が削除されます。 Azure AD のアプリは削除されません。 不要になったときにアプリを削除する場合は、Azure 管理者に依頼してください。 または、Azure サービス ウィザードを実行してアプリをインポートします。<!--483440-->
 
 
 ## <a name="cloud-management-data-flow"></a>クラウド管理データ フロー

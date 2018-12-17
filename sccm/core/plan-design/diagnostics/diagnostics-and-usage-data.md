@@ -2,7 +2,7 @@
 title: 診断結果と使用状況データ
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager が収集する自身の診断および使用状況データについて説明します。
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88ac4e55-d47b-4c94-b9c3-704c6a48b845
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 031815e741128d605bf7ee50079338eba7aa720b
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 132604418ce810fb78b397f3d5f322b10abe6bb3
+ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384111"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52820018"
 ---
 # <a name="diagnostics-and-usage-data-for-system-center-configuration-manager"></a>System Center Configuration Manager の診断結果と使用状況データ
 
@@ -33,28 +33,30 @@ Configuration Manager では、それ自体の診断および使用状況デー�
 ## <a name="articles"></a>記事
  Configuration Manager の診断および使用状況データの詳細については、次の記事を参照してください。  
 
--   [診断結果と使用状況データの使用方法](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)  
+-   [診断結果と使用状況データの使用方法](/sccm/core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used)  
 
 -   診断の使用状況データ収集のレベル
+    - [1810 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810)  
+
     - [1806 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806)  
 
     - [1802 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802)  
-
-    - [1710 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710)  
     
--   [診断と使用状況データを収集する方法](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)  
+    - [1710 の診断データ](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710)  
 
--   [診断および使用状況データを使用する方法](../../../core/plan-design/diagnostics/view-diagnostics-and-usage-data.md)  
+-   [診断と使用状況データを収集する方法](/sccm/core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected)  
 
--   [カスタマー エクスペリエンス向上プログラム (CEIP)](../../../core/plan-design/diagnostics/customer-experience-improvement-program-ceip.md)  
+-   [診断および使用状況データを使用する方法](/sccm/core/plan-design/diagnostics/view-diagnostics-and-usage-data)  
+
+-   [カスタマー エクスペリエンス向上プログラム (CEIP)](/sccm/core/plan-design/diagnostics/customer-experience-improvement-program-ceip)  
 
      > [!Note]  
      > Configuration Manager バージョン 1802 以降では、CEIP 機能が製品から削除されます。  
 
 
--   [診断および使用状況データに関してよく寄せられる質問](../../../core/understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)  
+-   [診断および使用状況データに関してよく寄せられる質問](/sccm/core/understand/frequently-asked-questions-about-diagnostics-and-usage-data)  
 
 
 
 ## <a name="see-also"></a>関連項目  
- [サービス接続ポイントについて](../../../core/servers/deploy/configure/about-the-service-connection-point.md)
+ [サービス接続ポイントについて](/sccm/core/servers/deploy/configure/about-the-service-connection-point)

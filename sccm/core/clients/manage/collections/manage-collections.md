@@ -10,12 +10,12 @@ ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5d7c967ce02c009cd9659c7956f7ca79f4a34faf
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 03b34c09a5fef63316bb1d9d1a94dbbfc3ccf69f
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755974"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456262"
 ---
 # <a name="how-to-manage-collections-in-configuration-manager"></a>Configuration Manager でコレクションを管理する方法
 
@@ -73,40 +73,11 @@ Configuration Manager でコレクションの管理タスクを行う際は、�
 
 
 #### <a name="client-notification"></a>クライアント通知
- 選択したデバイス コレクションのすべてのクライアントに、次のいずれかの操作をすぐに行うよう指示します。
-
- - **[コンピューター ポリシーのダウンロード]**: デバイスのポリシーを更新します。 詳細については、「[Configuration Manager クライアントのポリシーの取得開始](/sccm/core/clients/manage/manage-clients#BKMK_PolicyRetrieval)」を参照してください。  
-
- - **[ユーザー ポリシーのダウンロード]**: ユーザー ポリシーを更新します。  
-
- - **[探索データの収集]**: クライアントによる探索データ レコード (DDR) の送信をトリガーします。 詳しくは、「[定期探索](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutHeartbeat)」をご覧ください。  
-
- - **[ソフトウェア インベントリの収集]**: クライアントによるソフトウェア インベントリ サイクルの実行をトリガーします。 詳しくは、「[ソフトウェア インベントリの概要](/sccm/core/clients/manage/inventory/introduction-to-software-inventory)」をご覧ください。  
-
- - **[ハードウェア インベントリの収集]**: クライアントによるハードウェア インベントリ サイクルの実行をトリガーします。 詳しくは、「[ハードウェア インベントリの概要](/sccm/core/clients/manage/inventory/introduction-to-hardware-inventory)」をご覧ください。  
-
- - **[アプリケーション展開の評価]**: クライアントによるアプリケーション展開評価サイクルの実行をトリガーします。 詳しくは、「[展開の再評価スケジュールを指定する](/sccm/core/clients/deploy/about-client-settings#schedule-re-evaluation-for-deployments)」をご覧ください。  
-
- - **[ソフトウェア更新展開の評価]**: クライアントによるソフトウェア更新展開評価サイクルの実行をトリガーします。 詳しくは、「[ソフトウェア更新プログラムの概要](/sccm/sum/understand/software-updates-introduction)」をご覧ください。  
-
- - **[次のソフトウェアの更新ポイントに切り替える]**: クライアントによる次の利用可能なソフトウェア更新ポイントへの切り替えをトリガーします。 詳しくは、「[ソフトウェアの更新ポイントの切り替え](/sccm/sum/plan-design/plan-for-software-updates#BKMK_SUPSwitching)」をご覧ください。  
-
- - **[デバイス正常性構成証明の評価]**: Windows 10 クライアントによる最新のデバイスの正常性状態の確認と送信をトリガーします。 詳細については、[正常性構成証明書](/sccm/core/servers/manage/health-attestation)に関するページを参照してください。  
-
- - **[条件付きアクセス コンプライアンスを確認する]**: クライアントによる条件付きアクセスへの準拠の確認をトリガーします。 詳しくは、[PC の O365 サービスへのアクセスの管理](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)に関するページをご覧ください。  
+ 詳細については、[クライアント通知](/sccm/core/clients/manage/client-notification)に関するページをご覧ください。
 
 
 #### <a name="endpoint-protection"></a>Endpoint Protection
- 選択したデバイス コレクションのすべてのクライアントに、次のいずれかの操作をすぐに行うよう指示します。
-
- - **[フル スキャン]**: Endpoint Protection または Windows Defender による "*完全な*" マルウェア対策スキャンの実行をトリガーします  
-
- - **[クイック スキャン]**: Endpoint Protection または Windows Defender による "*簡易*" マルウェア対策スキャンの実行をトリガーします  
-
- - **[定義のダウンロード]**: Endpoint Protection または Windows Defender による最新のマルウェア対策定義のダウンロードをトリガーします  
-
-
- 詳細については、[Configuration Manager のエンドポイント保護](/sccm/protect/deploy-use/endpoint-protection)に関するページを参照してください。
+ 詳細については、[クライアント通知](/sccm/core/clients/manage/client-notification)に関するページをご覧ください。
 
 
 #### <a name="export"></a>エクスポート

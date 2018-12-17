@@ -2,7 +2,7 @@
 title: 製品ライフサイクル ダッシュボード
 titleSuffix: Configuration Manager
 description: Configuration Manager の製品ライフサイクル ダッシュボードを使って Microsoft のライフサイクル ポリシーを表示します。
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd1a3a56bac6d7917c70db731b1735a195fae3df
-ms.sourcegitcommit: dfb2cb01c1608b848f2f2fee7c84500e7adcb7a4
+ms.openlocfilehash: bda6e266c6be8897de87a2a30fb0198a4b4c8446
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49101247"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456025"
 ---
 # <a name="manage-microsoft-lifecycle-policy-with-configuration-manager"></a>Configuration Manager を使って Microsoft のライフサイクル ポリシーを管理する
 
@@ -24,6 +24,8 @@ ms.locfileid: "49101247"
 バージョン 1806 以降では、Configuration Manager の製品ライフサイクル ダッシュボードを使って Microsoft のライフサイクル ポリシーを表示できます。 このダッシュボードには、Configuration Manager で管理されているデバイスにインストールされている Microsoft 製品の Microsoft ライフサイクル ポリシーの状態が表示されます。 環境内にある Microsoft 製品についての情報、サポート可能性の状態、およびサポート終了日も提供されます。 このダッシュボードを使って、各製品のサポートを利用できるかどうかを理解することができます。 この情報は、お使いの Microsoft 製品の現在のサポート期限になる前に更新を計画するのに役立ちます。  
 
 詳細については、「[Microsoft ライフサイクル ポリシー](https://support.microsoft.com/lifecycle)」を参照してください。
+
+バージョン 1810 から、ダッシュボードに System Center 2012 Configuration Manager 以降の情報が含まれるようになりました。<!--1358702-->  
 
 
 
@@ -59,6 +61,13 @@ Configuration Manager コンソールのライフサイクル ダッシュボー
 
 ![コンソールの製品ライフサイクル ダッシュボードのスクリーンショット](media/product-lifecycle-dashboard.png)
 
+**[製品カテゴリ]** リストから次のいずれかのオプションを選択して、ビューを変更します。  
+- **すべて**: すべての製品を表示  
+- **Windows クライアント**: Windows クライアントの OS バージョンを表示  
+- **Windows サーバー**: Windows サーバーの OS バージョンを表示  
+- **データベース**: SQL Server のバージョンを表示  
+- **Configuration Manager**: バージョン 1810 以降では、Configuration Manager のバージョンを表示  
+
 ダッシュボードには、次のタイルがあります。  
 
 - **[Top five products past end-of-life]\(ライフサイクルが終了した上位 5 製品\)**: このタイルは、環境内で見つかった、ライフサイクルが終了した製品の統合データ ビューです。 グラフには、インストールされているソフトウェアのうち、オペレーティング システムおよび SQL サーバー製品のサポート ライフサイクルと比較して有効期限が切れているものが示されます。  
@@ -79,13 +88,16 @@ Configuration Manager コンソールのライフサイクル ダッシュボー
 
 ## <a name="reporting"></a>レポート
 
-その他のレポートも使用できます。 Configuration Manager コンソールの **[監視]** ワークスペースに移動し、**[レポート]**、**[レポート]** の順に展開します。 **[製品のライフサイクル]** カテゴリに次の新しいレポートが追加されます。  
+その他のレポートも使用できます。 Configuration Manager コンソールの **[監視]** ワークスペースに移動し、**[レポート]**、**[レポート]** の順に展開します。 **[資産インテリジェンス]** カテゴリに次の新しいレポートが追加されます。  
 
-- **[製品のライフサイクルの概要]**: 製品ライフサイクルの一覧が表示されます。 製品名と有効期限までの日数で一覧をフィルター処理します。  
+- **ライフサイクル 01A - 特定のソフトウェア製品を搭載したコンピューター**: 指定した製品が検出されたコンピューターの一覧が表示されます。  
 
-- **[特定のソフトウェア製品を搭載したコンピューター]**: 指定した製品が検出されたコンピューターの一覧が表示されます。  
+- **ライフサイクル 02A - 組織内で有効切れの製品を使用しているマシンの一覧**: 有効期限が切れた製品が存在するコンピューターが表示されます。 このレポートは、製品名でフィルター処理できます。
 
-- **[組織内の期限切れの製品一覧]**: 環境内にあるライフサイクルの有効期限が切れた製品の詳細が表示されます。  
+- **ライフサイクル 03A - 組織内の期限切れの製品一覧**: 環境内にあるライフサイクルの有効期限が切れた製品の詳細が表示されます。  
 
-- **[組織内で有効切れの製品を使用しているマシンの一覧]**: 有効期限が切れた製品が存在するコンピューターが表示されます。 このレポートは、製品名でフィルター処理できます。
+- **ライフサイクル 04A - 製品のライフサイクルの概要** 製品ライフサイクルの一覧が表示されます。 製品名と有効期限までの日数で一覧をフィルター処理します。  
 
+- **ライフサイクル 05A - 製品ライフサイクル ダッシュボード**: バージョン 1810 以降では、このレポートにコンソール内のダッシュボードと同様の情報が含まれます。 カテゴリを選択して、環境内の製品の数と、サポートの残りの日数を表示します。  
+
+詳細については、[レポートの一覧](/sccm/core/servers/manage/list-of-reports#asset-intelligence)を参照してください。<!--SCCMDocs issue 997-->  

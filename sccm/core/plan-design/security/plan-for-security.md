@@ -2,7 +2,7 @@
 title: セキュリティの計画
 titleSuffix: Configuration Manager
 description: Configuration Manager のセキュリティに関するベスト プラクティスとその他の情報を取得します。
-ms.date: 10/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e03c2b53044225eeb790d70474868e337a4cc997
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 5332fa778b343a5eaae93a08db0826823fffce42
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411461"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456381"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Configuration Manager でのセキュリティの計画
 
@@ -40,6 +40,8 @@ ms.locfileid: "50411461"
 - [ロールベース管理の計画](#BKMK_PlanningForRBA)  
 
 - [Azure Active Directory の計画](#bkmk_planazuread)  
+
+- [SMS プロバイダー認証の計画](#bkmk_auth)
 
 
 
@@ -409,6 +411,25 @@ Configuration Manager の構成オプションと選択肢の数のため、す�
 
 
  Azure AD の詳細については、「[Azure Active Directory のドキュメント](https://docs.microsoft.com/azure/active-directory/)」を参照してください。
+
+
+
+## <a name="bkmk_auth"></a> SMS プロバイダー認証の計画
+<!--1357013--> 
+
+バージョン 1810 以降では、Configuration Manager サイトにアクセスする管理者の最低限の認証レベルを指定することができます。 この機能では、Windows にサインインする管理者には必要なレベルを持つことが強制されます。 SMS プロバイダーにアクセスするすべてのコンポーネントに適用されます。 たとえば、Configuration Manager コンソール、SDK メソッド、Windows PowerShell コマンドレットなどです。 
+
+この構成は階層全体の設定です。 この設定を変更する前に、すべての Configuration Manager 管理者が必要な認証レベルで Windows にサインインできることを確認してください。 
+
+次のレベルを使用できます。
+
+- **Windows 認証**: Active Directory ドメイン資格情報による認証が必要です。   
+
+- **証明書認証**: 信頼された PKI 証明機関によって発行された有効な証明書による認証が必要です。  
+
+- **Windows Hello for Business 認証**: デバイスに関連付けられた、生体認証か PIN を使用する強力な 2 要素認証による認証が必要です。  
+
+詳細については、「[SMS プロバイダーの計画](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth)」を参照してください。 
 
 
 

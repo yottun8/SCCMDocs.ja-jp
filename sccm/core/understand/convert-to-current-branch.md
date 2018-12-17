@@ -10,12 +10,12 @@ ms.assetid: ec5b54cf-62b7-4ed1-9bb3-e8c63b9641c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c739f52553aca8680328e581e183a5ca974ffdf
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f1683f69ae065d0523719edd3d24da52d499341b
+ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337508"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52820001"
 ---
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>Long-Term Servicing Branch の Current Branch へのアップグレード
 
@@ -46,6 +46,6 @@ Current Branch の使用権を付与する現在のソフトウェア アシュ�
 
  1. コンソールで、**[管理]** > **[サイトの構成]** > **[サイト]** の順に移動し、**[階層設定]** を開きます。  
 
- 2. Current Branch に変換するためのオプションを選択し、**[適用]** を選択します。  
+ 2. **[階層設定]** で、**[ライセンス]** タブに切り替えます。**[Current Branch に変換]** オプションを選択し、**[適用]** を選択します。  
 
 サイトが Current Branch に変換されると、以前は使用できなかった機能が使用できるようになります。

@@ -10,12 +10,12 @@ ms.assetid: f053fa73-c553-4522-a6b9-f885f23fe57c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7057084ba976408f189a0d4fbb96f176bc0c6656
-ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ms.openlocfilehash: 41dd6ad6f8a0292fdb16a0d727665b17e038f87b
+ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43297204"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52820043"
 ---
 # <a name="package-conversion-manager"></a>Package Conversion Manager
 
@@ -25,8 +25,9 @@ ms.locfileid: "43297204"
 
 バージョン 1806 以降の Package Conversion Manager では、Configuration Manager の従来のパッケージをアプリケーションに変換できます。 アプリケーションには、依存関係、要件の規則、検出方法、およびユーザーとデバイスのアフィニティなど、追加の利点があります。
 
-> [!Note]  
-> このバージョンの Configuration Manager では、Package Conversion Manager はプレリリース機能です。 これを有効にする場合は、「[プレリリース機能](/sccm/core/servers/manage/pre-release-features)」を参照してください。  
+> [!Tip]  
+> この機能はバージョン 1806 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 バージョン 1810 からは、この機能はプレリリース機能ではなくなりました。  
+
 
 Configuration Manager アプリケーションには、クライアント デバイスに展開されるファイルやプログラムが含まれています。 しかし、従来のパッケージやプログラムとは異なり、アプリケーションはユーザーを中心に考えられた追加の機能を提供します。 たとえば、ソフトウェア パッケージや仮想アプリケーション パッケージの展開の種類、またはモバイル デバイス用アプリケーションのバージョンを含むアプリケーションもあります。
 

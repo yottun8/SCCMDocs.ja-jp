@@ -2,7 +2,7 @@
 title: Current Branch バージョン
 titleSuffix: Configuration Manager
 description: Configuration Manager のバージョン履歴を確認し、提供サービスのフェーズについて説明します。
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a8f646b1cd535809689daacb1390fd79f8ce5c1
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: dd8116bc74f855fff956d0bb201691c741a6d351
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383781"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52455990"
 ---
 # <a name="support-for-configuration-manager-current-branch-versions"></a>Configuration Manager の Current Branch バージョンのサポート
 
@@ -33,8 +33,8 @@ Microsoft は、Configuration Manager の Current Branch に対し、年に数�
 > [!NOTE]  
 >  Current Branch の最新バージョンは常に、**セキュリティ更新プログラムと重要な更新プログラム**のサービス提供フェーズとなります。 このサポートに関する説明は、重要な更新プログラムの発行に値するコード障害が発生した場合、修正プログラムを受け取るためには Current Branch の最新バージョンがインストールされている必要があることを意味しています。 その他のサポートされている Current Branch バージョンでは、セキュリティ更新プログラムを受信できるだけとなります。
 > - バージョン 1710 以降では、Current Branch バージョンの 18 か月間のライフ サイクルが有効期限切れになると、すべてのサポートが終了します。
-> - 1710 より前のバージョンでは、12 か月間のライフ サイクルが有効期限切れになると、サポートが終了します。
-
+> - 1706 以前のバージョンでは、12 か月間のライフ サイクルが有効期限切れになると、サポートが終了します。
+> 
 > 現在のバージョンのサポート有効期限が切れる前に、Configuration Manager の環境を最新バージョンに更新します。
 
 Current Branch バージョンの一覧は、「[バージョン詳細](/sccm/core/servers/manage/updates#version-details)」をご覧ください。

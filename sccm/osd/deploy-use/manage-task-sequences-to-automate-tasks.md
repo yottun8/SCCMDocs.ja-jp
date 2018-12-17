@@ -2,7 +2,7 @@
 title: タスク シーケンスの管理
 titleSuffix: Configuration Manager
 description: ご利用の環境でタスク シーケンスを作成、編集、展開、インポート、エクスポートして管理し、タスクを自動化します。
-ms.date: 08/17/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6c1fb447719a36bd3c0cb7e2c91daf6a58d85ff
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 44cfb06c8d92568a4468c1f46b90ceeb259c3c1f
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755926"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456636"
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-configuration-manager"></a>Configuration Manager でタスクを自動化するためのタスク シーケンスを管理する
 
@@ -392,6 +392,9 @@ Configuration Manager 環境のステップを自動化するには、タスク 
 
     - **[既定サイトの境界グループからの配布ポイントの使用をクライアントに許可する]**: コンテンツが現在または近隣境界グループの配布ポイントから利用できないときに、クライアントでサイトの既定の境界グループの配布ポイントからコンテンツをダウンロードするかどうかを指定します。  
 
+        > [!Note]  
+        > バージョン 1810 以降では、デバイスでタスク シーケンスが実行され、コンテンツを取得する必要がある場合、構成マネージャー クライアントに似た境界グループの動作が使用されます。 詳細については、「[Task sequence support for boundary groups](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgr-osd)」(境界グループのタスク シーケンス サポート) を参照してください。<!--1359025-->  
+
 11. Configuration Manager 1802 以降では、**[概要]** タブで、再度使用する設定を保存する場合、**[テンプレートとして保存]** をクリックします。 テンプレートの名前を指定して、保存する設定を選択します。  
 
 12. ウィザードを完了します。  
@@ -427,7 +430,7 @@ Configuration Manager 環境のステップを自動化するには、タスク 
  タスク シーケンスをエクスポートおよびインポートする際には、次の点を考慮してください。  
 
  - Configuration Manager では、タスク シーケンス内のパスワードはエクスポートされません。 パスワードを含むタスク シーケンスをエクスポートおよびインポートする場合は、インポートされたタスク シーケンスを編集して、任意のパスワードを再入力します。 パスワードを含むことがある次の手順を確認します。  
-    - [ドメインまたはワークグループへの参加](/sccm/osd/understand/task-sequence-steps#BKMK_JoinDomainorWorkgroup)  
+    - [ドメインまたはワークグループに参加](/sccm/osd/understand/task-sequence-steps#BKMK_JoinDomainorWorkgroup)  
     - [ネットワーク フォルダーへの接続](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder)  
     - [コマンド ラインの実行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)  
 

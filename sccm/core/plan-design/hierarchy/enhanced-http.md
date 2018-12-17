@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3a49fd8e171b053a5cc89d316fce3651e2a2f567
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 7b7cb4a6a7ec6738bdf045b75bf88c8b4d8c4650
+ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411563"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52820103"
 ---
 # <a name="enhanced-http"></a>拡張 HTTP
 
@@ -23,8 +23,9 @@ ms.locfileid: "50411563"
 
 <!--1356889,1358460-->
 
-> [!Note]  
-> このバージョンの Configuration Manager では、拡張 HTTP はプレリリース機能です。 これを有効にする場合は、「[プレリリース機能](/sccm/core/servers/manage/pre-release-features)」を参照してください。  
+> [!Tip]  
+> この機能はバージョン 1806 で[プレリリース機能](/sccm/core/servers/manage/pre-release-features)として初めて導入されました。 バージョン 1810 からは、この機能はプレリリース機能ではなくなりました。  
+
 
 すべての Configuration Manager 通信パスで HTTPS 通信を使用することが推奨されていますが、PKI 証明書の管理のオーバーヘッドが原因で、一部の顧客にとっては、この使用が困難な課題になります。 Azure Active Directory (Azure AD) の統合を導入することで、一部は軽減されますが、証明書要件のすべてには対応できません。 
 

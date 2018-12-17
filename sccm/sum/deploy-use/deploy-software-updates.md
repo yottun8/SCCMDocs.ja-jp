@@ -5,17 +5,17 @@ description: Configuration Manager コンソールでソフトウェア更新プ
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: d456d7232133333bf6cd88374d5288227f6dfea1
-ms.sourcegitcommit: 2ea71b048307a93a2db7898700aea984a8f88824
+ms.openlocfilehash: f59ca099325028ccf29904a2108939d0047df745
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52304284"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52455949"
 ---
 # <a name="deploy-software-updates"></a>ソフトウェアの更新を展開する  
 
@@ -36,7 +36,15 @@ ms.locfileid: "52304284"
 
 必要なソフトウェア更新プログラムの展開を構成すると、ソフトウェア更新プログラムは、スケジュールされた期限に自動的にインストールされます。 または、クライアント コンピューターのユーザーが、期限前にソフトウェア更新プログラムのインストールをスケジュール設定または開始できます。 指定したインストール後、ソフトウェア更新プログラムのインストールが正常に完了したかどうかを報告する状態メッセージがクライアント コンピューターからサイト サーバーに送信されます。 ソフトウェア更新プログラムの展開の詳細については、「 [Software update deployment workflows](/sccm/sum/understand/software-updates-introduction#BKMK_DeploymentWorkflows)」を参照してください。  
 
-ソフトウェ更新プログラムを展開するための主なシナリオには、手動展開と自動展開の 2 つがあります。 通常は、最初にソフトウェア更新プログラムを手動で展開してクライアントの基準を作成してから、自動展開を使ってクライアントでソフトウェア更新プログラムを管理します。  
+ソフトウェア更新プログラムの展開には、次の 3 つの主要なシナリオがあります。 
+- [手動による展開](#BKMK_ManualDeployment)  
+- [自動展開](#bkmk_auto)  
+- [段階的展開](#bkmk_phased)  
+
+通常は、最初にソフトウェア更新プログラムを手動で展開してクライアントの基準を作成してから、自動展開または段階的展開を使ってクライアントでソフトウェア更新プログラムを管理します。  
+
+> [!Note]  
+> 段階的展開で自動展開規則を使用することはできません。
 
 
 
@@ -65,7 +73,7 @@ Configuration Manager コンソールでソフトウェア更新プログラム�
 
 
 
-## <a name="automatically-deploy-software-updates"></a>ソフトウェア更新プログラムの自動展開
+## <a name="bkmk_auto"></a> ソフトウェア更新プログラムの自動展開
 
 自動展開規則 (ADR) を使用してソフトウェア更新プログラムの自動展開を構成します。 月ごとのソフトウェア更新プログラム (一般的に "月例パッチ" として知られています) と、定義の更新の管理には、通常、この展開方法が使用されます。 ADR が展開プロセスを自動化する条件を定義します。 次の一覧に、ソフトウェア更新プログラムの自動展開の一般的なワークフローを示します。  
 
@@ -100,4 +108,12 @@ ADR を作成した後、ルールにさらに他の展開を追加します。 
 
 
 詳細な手順については、「[ソフトウェア更新プログラムの自動展開](automatically-deploy-software-updates.md)」をご覧ください。
+
+
+
+## <a name="bkmk_phased"></a> 段階的にソフトウェアの更新プログラムを展開する
+
+<!--1358146--> バージョン 1810 以降では、ソフトウェア更新プログラムの段階的な展開を作成します。 段階的な展開を使用すると、カスタマイズ可能な条件およびグループに基づいて、調整およびシーケンス化されたソフトウェアの展開をまとめることができます。
+
+詳しくは、「[段階的展開の作成](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)」をご覧ください。
 

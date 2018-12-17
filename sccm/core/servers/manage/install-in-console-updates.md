@@ -2,7 +2,7 @@
 title: コンソール内の更新プログラム
 titleSuffix: Configuration Manager
 description: Microsoft クラウドから Configuration Manager に更新プログラムをインストールする
-ms.date: 08/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 503255c571288fa0da0b0b81f3a76fc2b38bbb19
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 7635dce325a2612c144c6eaa9c733b7dffc7c251
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893925"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456211"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>Configuration Manager のコンソール内更新プログラムのインストール
 
@@ -105,11 +105,11 @@ Configuration Manager は Microsoft クラウド サービスと同期して更�
 
 更新プログラムを開始する前に、実行するアクションの適用可能な更新のチェックリストを確認します。
 
+- [1810 に更新するためのチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1810)  
+
 - [1806 に更新するためのチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1806)  
 
 - [1802 に更新するためのチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1802)
-
-- [1710 に更新するためのチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1710)  
 
 
 ###  <a name="bkmk_step2"></a> 手順 2: 更新プログラムをインストールする前の前提条件チェッカーの実行  
@@ -367,11 +367,11 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 
 サイトが更新された後、該当するバージョンの更新後のチェックリストを確認します。  
 
+- [バージョン 1810 の更新後のチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist)  
+
 - [バージョン 1806 の更新後のチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)  
 
 - [バージョン 1802 の更新後のチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1802#post-update-checklist)  
-
-- [バージョン 1710 の更新後のチェックリスト](/sccm/core/servers/manage/checklist-for-installing-update-1710#post-update-checklist)  
 
 
 
@@ -399,7 +399,7 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 
 -->
 
-- [サイト サーバーの高可用性](/sccm/core/servers/deploy/configure/site-server-high-availability)<!--1128774-->
+- [パッケージ変換マネージャー](/sccm/apps/pcm/package-conversion-manager) <!--1357861-->
 - [サード パーティ製ソフトウェアの更新プログラム](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714-->
 - [デバイスごとにユーザーのアプリケーション要求を承認する](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) <!--1357015-->  
 - [iOS 向け Cisco AnyConnect 4.0.07x 以降のサポート](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393-->
@@ -415,7 +415,7 @@ Configuration Manager コンソールにある階層の最上位サイトで、*
 - [Azure Log Analytics コネクタ](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052-->
 - [Windows Defender Exploit Guard ポリシー](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468-->
 - [Windows 10 の VPN](/sccm/protect/deploy-use/vpn-profiles) <!--1283610-->
-- [Passport for Work](/sccm/protect/deploy-use/windows-hello-for-business-settings) (*Windows Hello for Business* とも呼ばれます) <!--1245704-->
+- [Windows Hello for Business](/sccm/protect/deploy-use/windows-hello-for-business-settings) (以前の *Passport for Work*) <!--1245704-->
 - [マネージド PC の条件付きアクセス](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)  <!--1191496-->
 
 

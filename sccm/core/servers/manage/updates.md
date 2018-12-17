@@ -2,7 +2,7 @@
 title: 更新プログラムとサービス
 titleSuffix: Configuration Manager
 description: 推奨される更新プログラムを簡単に検索してインストールできる、更新とサービスと呼ばれるコンソール内サービス方式について説明します。
-ms.date: 07/31/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 94d8f3a2ffafb078f3ffe92c4902cc610321ed86
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 1acc1bd6a6ccbd010308d026933a371f9e8227d8
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385051"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456551"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Configuration Manager の更新とサービス
 
@@ -25,20 +25,6 @@ Configuration Manager では、**更新とサービス**と呼ばれるコンソ
 
 > [!TIP]  
 > *アップグレード*、*更新*、*インストール*という言葉は、Configuration Manager における 3 つの異なる概念を表すために使用されています。 各用語の使用方法については、[アップグレード、更新、インストール](/sccm/core/understand/upgrade-update-install)に関するページを参照してください。  
-
-
-次の記事は、Configuration Manager 向けのさまざまな更新プログラムを見つけてインストールする方法を理解する上で役立ちます。  
-
--   [コンソール内の更新プログラムのインストール](/sccm/core/servers/manage/install-in-console-updates)  
-
--   [サービス接続ツールの使用](/sccm/core/servers/manage/use-the-service-connection-tool)  
-
--   [更新登録ツールを使用して修正プログラムをインポートする](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
-
--   [修正プログラム インストーラーを使用して更新プログラムをインストールする](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)  
-
-
-Technical Preview Branch の詳細については、[Technical Preview](/sccm/core/get-started/technical-preview) に関するページを参照してください。
 
 
 
@@ -70,35 +56,40 @@ Technical Preview Branch の詳細については、[Technical Preview](/sccm/co
 
 Configuration Manager の一部の更新プログラムは、既存のインフラストラクチャ向けのコンソール内の更新バージョンとして使用することも、新しい基準バージョンとして使用することもできます。  
 
+#### <a name="supported-versions"></a>サポートされるバージョン
 Configuration Manager の次のサポート対象バージョンは、現在、基準と更新バージョンのどちらか一方または両方として利用できます。  
 
 | バージョン | 公開日 | [サポート終了日](/sccm/core/servers/manage/current-branch-versions-supported) | Baseline | コンソール内の更新プログラム |  
 |-------------|-----------|------------|--------------|------------------------|  
+| [1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)<br /><br /> 5.00.8740.1000 | 2018 年 11 月 27 日 | 2020 年 5 月 27 日 | いいえ | はい |
 | [1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)<br /><br /> 5.00.8692.1000 | 2018 年 7 月 31 日 | 2020 年 1 月 31 日 | いいえ | はい |
-| [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | 2018 年 3 月 22 日 | 2019 年 9 月 22 日 | はい<sup>**1**</sup> | はい |
+| [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | 2018 年 3 月 22 日 | 2019 年 9 月 22 日 | はい<sup>[注 1](#bkmk_note1)</sup> | はい |
 | [1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000 | 2017 年 11 月 20 日 | 2019 年 5 月 20日 | いいえ | はい |
-| [1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000 | 2017 年 7 月 31 日 | 2018 年 7 月 31 日 | いいえ | はい |
+
+<a name="bkmk_note1"></a> 
 
 > [!Note]  
-> <sup>**1**</sup> 1802 基準メディアは、[ボリューム ライセンス サービス センター](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) で次のリリースの一部として利用できます。
+> <sup>**注 1**</sup>: 1802 基準メディアは、[ボリューム ライセンス サービス センター](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) で次のリリースの一部として利用できます。
 > - System Center Config Mgr (Current Branch)
 > - System Center 2016 Datacenter
 > - System Center 2016 Standard  
 > 
 > たとえば、`System Center Config Mgr (current branch)` という VLSC を探してみてください。 ファイルの一覧で 1802 基準メディアを見つけ、そのリリースでダウンロードしてください。  
 
+#### <a name="historical-versions"></a>過去のバージョン
 次の表に、サポート対象外である Configuration Manager Current Branch の過去のバージョンを一覧表示します。
 
 | バージョン | 公開日 | サポート終了日 | Baseline | コンソール内の更新プログラム |  
 |-------------|-----------|------------|--------------|------------------------|  
+| 1706 <br /><br /> 5.00.8540.1000 | 2017 年 7 月 31 日 | 2018 年 7 月 31 日 | いいえ | はい |
 | 更新プログラム 1702 を含む <br /><br /> 5.00.8498.1000 | 2017 年 3 月 27 日 | 2018 年 3 月 27 日 | はい | はい |
 | 1610 <br /><br /> 5.00.8458.1000 | 2016 年 11 月 18 日 | 2017 年 11 月 18 日 | いいえ | はい |
 | 1606 <br /><br /> 5.00.8412.1000 | 2016 年 7 月 22 日 | 2017 年 7 月 22 日 | いいえ | はい |
-| 1606 と 1606 修正プログラム ロールアップ (KB3186654) </br></br>5.00.8412.1307 | 2016 年 10 月 12 日 | 2017 年 10 月 12 日 | はい | いいえ |
+| 1606 と 1606 修正プログラム ロールアップ (KB3186654) <br><br>5.00.8412.1307 | 2016 年 10 月 12 日 | 2017 年 10 月 12 日 | はい | いいえ |
 | 1602<br /><br /> 5.00.8355.1000 | 2016 年 3 月 11 日 | 2017 年 3 月 11 日 | いいえ | はい |
 | 1511 <br /><br /> 5.00.8325.1000 | 2015 年 12 月 8 日 | 2016 年 12 月 8 日 | はい | いいえ |  
 
-
+#### <a name="how-to-check-the-version"></a>バージョンの確認方法
 Configuration Manager サイトのバージョンを確認するには、コンソールの左上隅にある **[System Center Configuration Manager のバージョン情報]** を選択します。 このダイアログには、サイトとコンソールのバージョンが表示されます。  
 
  > [!Note]  
@@ -112,7 +103,7 @@ Configuration Manager の運用環境対応バージョン (Current Branch) を�
 
 そのような更新プログラムには次が含まれます。  
 
--   新しいバージョン (バージョン 1710、1802、1806 など)。  
+-   新しいバージョン (バージョン 1802、1806、1810 など)。  
 
 -   現在のバージョンに対する新機能が含まれる更新プログラム。
 
@@ -182,3 +173,20 @@ Configuration Manager によって新しい更新プログラムが自動検出�
    `<Product>-<product version>-<KB article ID>-<platform>-<language>.exe`  
 
 詳細については、[修正プログラム インストーラーを使用して更新プログラムをインストールする](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)方法に関するページを参照してください。  
+
+
+
+## <a name="next-steps"></a>次のステップ
+
+次の記事は、Configuration Manager 向けのさまざまな更新プログラムを見つけてインストールする方法を理解する上で役立ちます。  
+
+-   [コンソール内の更新プログラムのインストール](/sccm/core/servers/manage/install-in-console-updates)  
+
+-   [サービス接続ツールの使用](/sccm/core/servers/manage/use-the-service-connection-tool)  
+
+-   [更新登録ツールを使用して修正プログラムをインポートする](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
+
+-   [修正プログラム インストーラーを使用して更新プログラムをインストールする](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)  
+
+
+Technical Preview Branch の詳細については、[Technical Preview](/sccm/core/get-started/technical-preview) に関するページを参照してください。

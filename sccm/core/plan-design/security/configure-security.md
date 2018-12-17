@@ -2,7 +2,7 @@
 title: セキュリティの構成
 titleSuffix: Configuration Manager
 description: Configuration Manager のセキュリティ関連オプションを構成します。
-ms.date: 10/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc0f57bcc06911f34da481c2e3be81c3cb0de1c2
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: d1aaf6db583d9749dda3be14cfd06acbff19b093
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411410"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456092"
 ---
 # <a name="configure-security-in-configuration-manager"></a>Configuration Manager でセキュリティを構成する
 
@@ -27,6 +27,7 @@ ms.locfileid: "50411410"
 - [役割に基づいた管理](#BKMK_ConfigureRBA)  
 - [アカウントの管理](#BKMK_ManageAccounts)  
 - [Azure Active Directory の構成](#bkmk_azuread)  
+- [SMS プロバイダー認証の構成](#bkmk_auth)  
 
 
 
@@ -145,6 +146,12 @@ Configuration Manager は、Windows アカウントのさまざまなタスク�
 ##  <a name="bkmk_azuread"></a> Azure Active Directory の構成
 
 Configuration Manager と Azure Active Directory (Azure AD) を統合し、ご利用の環境を簡素化し、クラウド対応にします。 Azure AD を利用し、サイトとクライアントの認証を有効にします。 詳細については、[Azure サービスの構成](/sccm/core/servers/deploy/configure/azure-services-wizard)に関するページの**クラウド管理**サービスに関するセクションを参照してください。
+
+
+
+## <a name="bkmk_auth"></a> SMS プロバイダー認証の構成
+
+バージョン 1810 以降では、Configuration Manager サイトにアクセスする管理者の最低限の認証レベルを指定することができます。 この機能では、Windows にサインインする管理者には必要なレベルを持つことが強制されます。 詳細については、「[SMS プロバイダーの計画](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth)」を参照してください。 <!--1357013-->  
 
 
 

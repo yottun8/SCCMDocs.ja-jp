@@ -2,7 +2,7 @@
 title: トラブルシューティングのためのログ ファイル
 titleSuffix: Configuration Manager
 description: Configuration Manager クライアントとサイト システムに関する問題のトラブルシューティングを行うには、ログ ファイルを使用します。
-ms.date: 09/10/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4435d39dd736db1058b06d09e5722a80a173bf6e
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: cf7ca86dd04d60f1ff914294a7430d9f4a7a2fb7
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601213"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456704"
 ---
 # <a name="log-files-in-configuration-manager"></a>Configuration Manager のログ ファイル
 
@@ -314,6 +314,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |mpMSI.log|管理ポイントのインストールの詳細を記録します。|サイト サーバー|  
 |MPSetup.log|管理ポイントのインストール ラッパー プロセスを記録します。|サイト サーバー|  
 |netdisc.log|ネットワーク探索操作を記録します。|サイト サーバー|  
+|NotiCtrl.log|アプリケーションの要求通知。|サイト サーバー|  
 |ntsvrdis.log|サイト システム サーバーの探索操作を記録します。|サイト サーバー|  
 |Objreplmgr|レプリケーションによるオブジェクトの変更通知の処理を記録します。|サイト サーバー|  
 |offermgr.log|開示通知の更新を記録します。|サイト サーバー|  
@@ -334,7 +335,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |sitectrl.log|データベースのサイト コントロール オブジェクトに加えられたサイト設定の変更を記録します。|サイト サーバー|  
 |sitestat.log|すべてのサイト システムの可用性とディスク領域の監視プロセスを記録します。|サイト サーバー|
 |SMS_ISVUPDATES_SYNCAGENT.log| Configuration Manager バージョン 1806 以降のサード パーティ製ソフトウェア更新プログラムの同期用ログ ファイル。| Configuration Manager 階層内の最上位のソフトウェア更新ポイント。|
-|SMS_PhasedDeployment.log| Configuration Manager バージョン 1802 以降のプレリリース機能である段階的展開用のログ ファイルです。|Configuration Manager 階層の最上位サイト|   
+|SMS_PhasedDeployment.log| 段階的展開のログ ファイル|Configuration Manager 階層の最上位サイト|   
 |SmsAdminUI.log|Configuration Manager コンソール アクティビティを記録します。|Configuration Manager コンソールを実行しているコンピューター|  
 |SMSAWEBSVCSetup.log|アプリケーション カタログ Web サービスのインストール処理を記録します。|サイト システム サーバー|  
 |smsbkup.log|サイトのバックアップ プロセスの出力を記録します。|サイト サーバー|  
@@ -436,6 +437,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |CCMSDKProvider.log|アプリケーション管理 SDK による処理を記録します。|クライアント|  
 |colleval.log|コレクション エバリュエーターによるコレクションの生成、変更、削除の詳細を記録します。|サイト システム サーバー|  
 |ConfigMgrSoftwareCatalog.log|Silverlight の使用を含む、アプリケーション カタログの動作を記録します。|クライアント|  
+|NotiCtrl.log|アプリケーションの要求通知。|サイト サーバー|  
 |portlctl.log|アプリケーション カタログ Web サイト ポイントのサイト サーバーの役割の監視操作を記録します。|サイト システム サーバー|  
 |portlwebMSI.log|アプリケーション カタログ Web サイトの役割の MSI によるインストール操作を記録します。|サイト システム サーバー|  
 |PrestageContent.log|事前設定されたリモート配布ポイントの ExtractContent.exe の使用に関する詳細を記録します。 このツールは、ファイルにエクスポートされているコンテンツを抽出します。|サイト システム サーバー|  
@@ -708,7 +710,7 @@ Mac コンピューター用の Configuration Manager クライアントでは�
 |smpperf.log|状態移行ポイントのパフォーマンス カウンターの更新を記録します。|サイト システム サーバー|  
 |smspxe.log|PXE ブートを使用するクライアントへの応答と、ブート イメージとブート ファイルの展開の詳細を記録します。|サイト システム サーバー|  
 |smssmpsetup.log|状態移行ポイントのインストールと構成の詳細を記録します。|サイト システム サーバー|
-| SMS_PhasedDeployment.log| Configuration Manager バージョン 1802 以降のプレリリース機能である段階的展開用のログ ファイルです。|Configuration Manager 階層の最上位サイト| 
+| SMS_PhasedDeployment.log| 段階的展開のログ ファイル|Configuration Manager 階層の最上位サイト| 
 |Smsts.log|タスク シーケンスによる操作を記録します。|クライアント|  
 |TSAgent.log|タスク シーケンス開始前の依存関係の解決結果を記録します。|クライアント|  
 |TaskSequenceProvider.log|タスク シーケンスのインポート、エクスポート、編集の詳細を記録します。|サイト システム サーバー|  

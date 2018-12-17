@@ -5,17 +5,17 @@ description: クラウド管理ゲートウェイ (CMG) を設定するには、
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 09/10/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: a5f356eef4d72040bd069fc17dd20fdbc3587cd6
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: 041ea28e91b77545b8984742b4199782d1edb6b7
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601060"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456534"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager のクラウド管理ゲートウェイを設定する
 
@@ -38,13 +38,16 @@ ms.locfileid: "45601060"
 
 - 設計に応じて、CMG には 1 つ以上の証明書が必要です。 詳細については、「[クラウド管理ゲートウェイの証明書](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)」を参照してください。  
 
-- バージョン 1802 以降では、**Azure Resource Manager の展開**と**従来のサービス展開**のどちらを使用するか選択します。 詳細については、[Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager) に関するページを参照してください。 CMG の Azure Resource Manager の展開には、以下の要件が必要です。  
+- バージョン 1802 以降では、**[Azure Resource Manager の展開]** を選択します。 詳細については、[Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager) に関するページを参照してください。 CMG の Azure Resource Manager の展開には、以下の要件が必要です。  
 
     - **クラウド管理**のための [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) との統合。 Azure AD のユーザー探索は必要ありません。  
 
     - サブスクリプション管理者はサインインする必要があります。  
 
 - CMG の従来のサービス展開には、以下の要件が必要です。  
+
+    > [!Important]  
+    > バージョン 1810 以降では、Configuration Manager での Azure の従来のサービス展開は推奨されていません。 クラウド管理ゲートウェイ用の Azure Resource Manager の展開の使用を開始します。 詳細については、[CMG の計画](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)に関するページを参照してください。  
 
     - Azure サブスクリプション ID  
 
@@ -66,11 +69,14 @@ ms.locfileid: "45601060"
 
 2. リボンの **[クラウド管理ゲートウェイの作成]** を選択します。  
 
-3. バージョン 1802 以降では、ウィザードの [全般] ページで、まず、CMG 展開方法として、**Azure Resource Manager の展開**または**従来のサービス展開**を選択します。  
+3. バージョン 1802 以降では、ウィザードの [全般] ページで、CMG の展開方法として **[Azure Resource Manager の展開]** を選択します。  
 
-    1. **Azure Resource Manager の展開**の場合: **[サインイン]** を選択して、Azure サブスクリプション管理者アカウントで認証を行います。 ウィザードは、Azure AD 統合の前提条件の間に格納された情報から、残りのフィールドを自動的に設定します。 複数のサブスクリプションを所有している場合は、使用する適切なサブスクリプションの**サブスクリプション ID** を選びます。  
+    **[サインイン]** を選択し、Azure サブスクリプション管理者アカウントで認証を行います。 ウィザードは、Azure AD 統合の前提条件の間に格納された情報から、残りのフィールドを自動的に設定します。 複数のサブスクリプションを所有している場合は、使用する適切なサブスクリプションの**サブスクリプション ID** を選びます。
 
-    2. **従来のサービスの展開**、 *および Configuration Manager バージョン 1706 と 1710 の場合*: Azure の**サブスクリプション ID** を入力します。 次に **[参照]** を選択して、Azure 管理証明書の .PFX ファイルを選択します。 
+    > [!Note]  
+    > バージョン 1810 以降では、Configuration Manager での Azure の従来のサービス展開は推奨されていません。 
+    > 
+    > 従来のサービス展開を使用する必要がある場合は、このページでそのオプションを選択します。 まず、Azure **サブスクリプション ID** を入力します。 次に **[参照]** を選択し、Azure 管理証明書の .PFX ファイルを選びます。 
 
 4. この CMG の **Azure 環境**を指定します。 ドロップダウン リストのオプションは、展開方法に応じて異なる場合があります。  
 

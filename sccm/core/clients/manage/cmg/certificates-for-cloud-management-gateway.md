@@ -4,17 +4,17 @@ description: クラウド管理ゲートウェイと共に使用するさまざ�
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 121b3840ea4f61f4789c5d6c21ab857cb091e199
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 4ef9746b9a1eb90beeec6a477ad1d406acebbb05
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411308"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456568"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>クラウド管理ゲートウェイの証明書
 
@@ -123,6 +123,9 @@ Configuration Manager で CMG インスタンスを作成する際には、証�
 ## <a name="bkmk_azuremgmt"></a> Azure 管理証明書
 
 *この証明書は従来のサービス展開に必要です。Azure Resource Manager の展開には必要ありません。*
+
+> [!Important]  
+> バージョン 1810 以降では、Configuration Manager での Azure の従来のサービス展開は推奨されていません。 クラウド管理ゲートウェイ用の Azure Resource Manager の展開の使用を開始します。 詳細については、[CMG の計画](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)に関するページを参照してください。
 
 この証明書は Azure Portal で、また、Configuration Manager コンソールで CMG を作成するときに提供します。
 

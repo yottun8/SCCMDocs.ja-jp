@@ -10,12 +10,12 @@ ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 45b65e5ff35f93bb79418f00795aecab5cc208b9
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 1a7d8e6fe1824ab2a7fe3cfb6f89965a4b5800c0
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411206"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456075"
 ---
 # <a name="fundamentals-of-security-for-configuration-manager"></a>Configuration Manager のセキュリティの基礎
 
@@ -65,6 +65,8 @@ Windows Server とネットワーク インフラストラクチャによって�
 #### <a name="bkmk_layer-provider"></a> SMS プロバイダー
 
 次のセキュリティ階層は、Windows Management Instrumentation (WMI) によるアクセスに基づいています。これは SMS プロバイダーに特有のものです。 SMS プロバイダーは、サイト データベースの情報を照会するためのユーザー アクセスを付与する Configuration Manager コンポーネントです。 既定では、プロバイダーへのアクセスは、ローカルの SMS 管理グループのメンバーに限定されています。 このグループには最初のうち、Configuration Manager をインストールしたユーザーのみが含まれています。 他のアカウントに Common Information Model (CIM) リポジトリおよび SMS プロバイダーへのアクセス許可を与えるには、SMS 管理グループに他のアカウントを追加します。  
+
+バージョン 1810 以降では、Configuration Manager サイトにアクセスする管理者の最低限の認証レベルを指定することができます。 この機能では、Windows にサインインする管理者には必要なレベルを持つことが強制されます。 <!--1357013-->  
 
 詳細については、「[SMS プロバイダーの計画](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider)」を参照してください。
 

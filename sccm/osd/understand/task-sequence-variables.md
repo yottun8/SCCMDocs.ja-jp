@@ -2,7 +2,7 @@
 title: タスク シーケンス変数リファレンス
 titleSuffix: Configuration Manager
 description: Configuration Manager のタスク シーケンスを制御およびカスタマイズするための変数について説明します。
-ms.date: 08/17/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cfecd7441abd206bdff1d2f6618d763a30dddc51
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: cde62242fc4db99d762d670037aad22bd25d6c00
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756281"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456738"
 ---
 # <a name="task-sequence-variables-in-configuration-manager"></a>Configuration Manager でのタスク シーケンス変数
 
@@ -124,6 +124,12 @@ ms.locfileid: "42756281"
  *[動的変数の設定](task-sequence-steps.md#BKMK_SetDynamicVariables)ステップに適用されます。*
 
  コンピューターで使用される IP アドレスを指定します。
+
+
+### <a name="SMSTSLastActionName"></a> _SMSTSLastActionName
+ *バージョン 1810 以降*  
+
+ 最後に実行された操作の名前を格納します。 この変数は **_SMSTSLastActionRetCode** に関連します。 タスク シーケンスで、これらの値が smsts.log ファイルに記録されます。 この変数は、タスク シーケンスのトラブルシューティングを行うときに役立ちます。 ステップが失敗した場合、カスタム スクリプトにリターン コードと共にステップ名を含めることができます。
 
 
 ### <a name="SMSTSLastActionRetCode"></a> _SMSTSLastActionRetCode

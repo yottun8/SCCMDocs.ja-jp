@@ -2,7 +2,7 @@
 title: クラウド配布ポイント
 titleSuffix: Configuration Manager
 description: Configuration Manager でクラウド配布ポイントを使用して、Microsoft Azure を通じてソフトウェア コンテンツを配布するための計画と設計を行います。
-ms.date: 09/10/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79b17ba00274459401dc81035833163e75939be0
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: 4673da59da7fede2f425948472c31a620d13a258
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601145"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456296"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Configuration Manager でクラウド配布ポイントを使用する
 
@@ -87,12 +87,15 @@ ms.locfileid: "45601145"
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
 <!--1322209--> バージョン 1806 以降では、**Azure Resource Manager の展開**を使用して、クラウド配布ポイントを作成します。 [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager でクラウド配布ポイントを展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
 
+> [!Note]  
+> この機能では、Azure クラウド サービス プロバイダー (CSP) のサポートは有効になりません。 Azure Resource Manager でのクラウド配布ポイントの展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、「[Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services)」(Azure CSP で使用可能な Azure サービス) を参照してください。  
+
 クラウド配布ポイント ウィザードでは、Azure 管理証明書を使う**従来のサービス展開**のためのオプションがまだ提供されています。 リソースの展開と管理を簡単にするため、すべての新しいクラウド配布ポイントに Azure Resource Manager デプロイ モデルを使うことをお勧めします。 可能であれば、Resource Manager で既存のクラウド配布ポイントを再展開してください。
 
-Configuration Manager では、既存の従来のクラウド配布ポイントが Azure Resource Manager デプロイ モデルに移行されることはありません。 Azure Resource Manager の展開を使用して新しいクラウド配布ポイントを作成してから、従来のクラウド配布ポイントを削除してください。 
+> [!Important]  
+> バージョン 1810 以降では、Configuration Manager での Azure の従来のサービス展開の使用は推奨されていません。 このバージョンが、これらの Azure の展開の作成がサポートされる最後のものとなります。 この機能は、2019 年 7 月 1 日以降にリリースされる最初の Configuration Manager バージョンで削除されます。 この日より前に、CMG およびクラウド配布ポイントを Azure Resource Manager の展開に移行してください。 <!--SCCMDocs-pr issue #2993-->  
 
-> [!IMPORTANT]  
-> この機能では、Azure クラウド サービス プロバイダー (CSP) のサポートは有効になりません。 Azure Resource Manager でのクラウド配布ポイントの展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、「[Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services)」(Azure CSP で使用可能な Azure サービス) を参照してください。  
+Configuration Manager では、既存の従来のクラウド配布ポイントが Azure Resource Manager デプロイ モデルに移行されることはありません。 Azure Resource Manager の展開を使用して新しいクラウド配布ポイントを作成してから、従来のクラウド配布ポイントを削除してください。 
 
 
 ### <a name="hierarchy-design"></a>階層の設計
@@ -134,12 +137,14 @@ Azure の特定のリージョンにクラウド配布ポイントをインス�
 
 - サイト サーバーでクラウド サービスを展開して管理するには、**インターネットへのアクセス**が必要です。  
 
+- **Azure Resource Manager** デプロイ方法を使用している場合は、Configuration Manager と**クラウド管理**の [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) を統合します。 Azure AD の*ユーザー探索*は必要ありません。  
+
 - Azure クラシック デプロイ方法を利用している場合は、**Azure 管理証明書**が必要です。 詳細については、この後の「[証明書](#bkmk_certs)」セクションを参照してください。   
 
     > [!TIP]  
     > Configuration Manager バージョン 1806 以降では、**Azure Resource Manager** デプロイ モデルを使用します。 この管理証明書は必要ありません。  
-
-- **Azure Resource Manager** デプロイ方法を使用している場合は、Configuration Manager と [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure) を統合します。 Azure AD のユーザー探索は必要ありません。  
+    > 
+    > バージョン 1810 以降では、従来の展開方法は推奨されません。   
 
 - **サーバー認証証明書**。 詳細については、この後の「[証明書](#bkmk_certs)」セクションを参照してください。  
 
@@ -327,6 +332,8 @@ Azure クラシック デプロイ方法を利用している場合は、**Azure
 
 > [!TIP]  
 > Configuration Manager バージョン 1806 以降では、**Azure Resource Manager** デプロイ モデルを使用します。 この管理証明書は必要ありません。  
+> 
+> バージョン 1810 以降では、従来の展開方法は推奨されません。   
 
 複雑さを軽減するには、すべての Azure サブスクリプションとすべての Configuration Manager サイトで、クラウド配布ポイントとクラウド管理ゲートウェイのすべてのクラシック デプロイに同じ Azure 管理証明書を使用します。
 

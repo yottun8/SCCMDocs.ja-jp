@@ -2,7 +2,7 @@
 title: プレリリース機能
 titleSuffix: Configuration Manager
 description: プレリリース機能は、運用環境での初期テスト用の Current Branch に含まれている機能です。
-ms.date: 10/24/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e3b3b31c31725c6b9931d0c2cc67324c4b39f974
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 6fb24c3e262f3d1f3991ab549592e3f21631b32d
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411138"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456135"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Configuration Manager のプレリリース機能
 
@@ -75,25 +75,27 @@ ms.locfileid: "50411138"
 
 | 機能          | プレリリース版として追加 | 完全機能として追加 |  
 |------------------|----------------------|-------------------------|
-| 拡張 HTTP サイト システム<!--1356889,1358228-->|[バージョン 1806](/sccm/core/plan-design/hierarchy/enhanced-http)|![未追加](media/red_x.png)|
-| 共同管理デバイス向けのモバイル アプリ<!--1357892-->|[バージョン 1806](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune)|![未追加](media/red_x.png)|
-| パッケージ変換マネージャー<!--1357861-->|[バージョン 1806](/sccm/apps/pcm/package-conversion-manager)|![未追加](media/red_x.png)|
-| iOS 向け Cisco AnyConnect 4.0.07x 以降のサポート<!--1357393-->|[バージョン 1802](/sccm/mdm/deploy-use/create-vpn-profiles)| [バージョン 1802 (更新プログラム 4163547 適用)](/sccm/mdm/deploy-use/create-vpn-profiles) |
-| 段階的展開<!--1356837-->|[バージョン 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|[バージョン 1806](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|
-| タスク シーケンス ステップの実行<!-- 1261338 --> |  [バージョン 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |[バージョン 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)|
-| Windows Defender Exploit Guard <!-- 1355468 --> |  [バージョン 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |[バージョン 1802](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)|
-| 条件付きアクセス コンプライアンス ポリシーに対するデバイス正常性構成証明の評価 <!-- 1235616 --> |  [バージョン 1710](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) |[バージョン 1802](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)|
-| Configuration Manager コンソールから PowerShell スクリプトを作成して実行する<!-- 1236459 --> |  [バージョン 1706](/sccm/apps/deploy-use/create-deploy-scripts)|[バージョン 1802](/sccm/apps/deploy-use/create-deploy-scripts)|
-| Microsoft Surface ドライバーの更新プログラムの管理 <!-- 1098490 --> |  [バージョン 1706](/sccm/sum/get-started/configure-classifications-and-products) | [バージョン 1710](/sccm/sum/get-started/configure-classifications-and-products)|
-| Configuration Manager を使用した Device Guard 管理<!-- 1319346 --> |  [バージョン 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![未追加](media/red_x.png)|
-| タスク シーケンス コンテンツの事前キャッシュ<!-- 1021244 --> |  [バージョン 1702](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) | [バージョン 1710](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)|
-| アプリケーションをインストールする前に実行中の実行可能ファイルを確認する<!-- 1284624 --> |   [バージョン 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |[バージョン 1706](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application)|
-| データ ウェアハウス サービス ポイント<!-- 1277922 --> |  [バージョン 1702](/sccm/core/servers/manage/data-warehouse) |[バージョン 1706](/sccm/core/servers/manage/data-warehouse)|
-| クライアントへのコンテンツ配布のピア キャッシュ<!-- 1101436 --> |  [バージョン 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) | [バージョン 1710](/sccm/core/plan-design/hierarchy/client-peer-cache)|
-| クラウド管理ゲートウェイ<!-- 1101764 --> |  [バージョン 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |[バージョン 1802](/sccm/core/clients/manage/plan-cloud-management-gateway)|
-| Log Analytics コネクタ <!-- 1236739 --> | [バージョン 1606](/sccm/core/clients/manage/sync-data-log-analytics) |[バージョン 1802](/sccm/core/clients/manage/sync-data-log-analytics)|
-| クラスター対応のコレクションのサービス (サーバー グループの提供)<!-- 1081776 --> | [バージョン 1602](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups)|![未追加](media/red_x.png)|
-| System Center Configuration Manager が管理する PC の条件付きアクセス<!--  --> | [バージョン 1602](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)     | [バージョン 1702](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)                     |
+| SMS プロバイダー API <!--1359052--> | バージョン 1810 | ![未追加](media/red_x.png) |
+| [拡張 HTTP サイト システム](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | バージョン 1806 | バージョン 1810 |
+| [共同管理デバイス向けのモバイル アプリ](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune) <!--1357892--> | バージョン 1806 | ![未追加](media/red_x.png) |
+| [パッケージ変換マネージャー](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | バージョン 1806 | バージョン 1810 |
+| [iOS 向け Cisco AnyConnect 4.0.07x 以降のサポート](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | バージョン 1802 | バージョン 1802 <br>更新プログラム 4163547 適用 |
+| [段階的展開](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | バージョン 1802 | バージョン 1806 |
+| [タスク シーケンス ステップの実行](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338--> |  バージョン 1710 | バージョン 1802 |
+| [Windows Defender Exploit Guard](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468--> | バージョン 1710 | バージョン 1802 |
+| [条件付きアクセス コンプライアンス ポリシーに対するデバイス正常性構成証明の評価](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616--> | バージョン 1710 | バージョン 1802 |
+| [Windows PowerShell スクリプトの作成と実行](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459--> | バージョン 1706 | バージョン 1802 |
+| [Microsoft Surface ドライバーの更新プログラムの管理](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490--> | バージョン 1706 | バージョン 1710 |
+| [Device Guard 管理](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--1355092 (1319346)--> | バージョン 1702 | ![未追加](media/red_x.png) |
+| [タスク シーケンス コンテンツの事前キャッシュ](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244--> | バージョン 1702 | バージョン 1710 |
+| [アプリケーションをインストールする前に実行中の実行可能ファイルを確認する](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) <!--1284624--> | バージョン 1702 | バージョン 1706 |
+| [データ ウェアハウス サービス ポイント](/sccm/core/servers/manage/data-warehouse) <!--1277922--> | バージョン 1702 | バージョン 1706 |
+| [クライアントへのコンテンツ配布のピア キャッシュ](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436--> | バージョン 1610 | バージョン 1710 |
+| [クラウド管理ゲートウェイ](/sccm/core/clients/manage/plan-cloud-management-gateway) <!--1101764--> | バージョン 1610 | バージョン 1802 |
+| [Azure Log Analytics コネクタ](/sccm/core/clients/manage/sync-data-log-analytics) <!--1236739--> | バージョン 1606 | バージョン 1802 |
+| [クラスター対応のコレクションのサービス (サーバー グループの提供)](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups) <!--1081776--> | バージョン 1602 | ![未追加](media/red_x.png) |
+| [Configuration Manager が管理する PC の条件付きアクセス](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--  --> | バージョン 1602 | バージョン 1702 |
+
 <!--Image used = ![Not yet](media/red_x.png) -->
 
 > [!Tip]  

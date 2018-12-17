@@ -2,7 +2,7 @@
 title: クラウド管理ゲートウェイの計画
 titleSuffix: Configuration Manager
 description: インターネットを基盤とするクライアントの管理を簡素化するクラウド管理ゲートウェイ (CMG) を計画し、設計します。
-ms.date: 10/24/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0f7e598da0953a20412f6c8279b90a95c1d26581
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: b059fd3b8511a3cbbf308ea7a3ee21a4ec9dbfaa
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411478"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456721"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>Configuration Manager でクラウド管理ゲートウェイを計画する
 
@@ -98,12 +98,15 @@ CMG の展開と操作には、次のコンポーネントが含まれます。
 
 
 ### <a name="azure-resource-manager"></a>Azure Resource Manager
-<!-- 1324735 --> バージョン 1802 以降、**Azure Resource Manager の展開**を利用し、CMG を作成できます。 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager で CMG を展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
+<!-- 1324735 --> バージョン 1802 以降、**Azure Resource Manager の展開**を利用し、CMG を作成できます。 [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager で CMG を展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
+
+> [!Note]  
+> この機能では、Azure クラウド サービス プロバイダー (CSP) のサポートは有効になりません。 Azure Resource Manager での CMG の展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、「[Available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)」(Azure CSP で使用可能な Azure サービス) を参照してください。 
 
 CMG ウィザードでは、Azure 管理証明書を使う**従来のサービス展開**のためのオプションがまだ提供されています。 リソースの展開と管理を簡単にするため、すべての新しい CMG インスタンスに Azure Resource Manager デプロイ モデル を使うことをお勧めします。 可能であれば、Resource Manager で既存の CMG インスタンスを再展開してください。 詳細については、[CMG の変更](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg)に関するページを参照してください。
 
-> [!IMPORTANT]  
-> この機能では、Azure クラウド サービス プロバイダー (CSP) のサポートは有効になりません。 Azure Resource Manager での CMG の展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、「[Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services)」(Azure CSP で使用可能な Azure サービス) を参照してください。 
+> [!Important]  
+> バージョン 1810 以降では、Configuration Manager での Azure の従来のサービス展開の使用は推奨されていません。 このバージョンが、これらの Azure の展開の作成がサポートされる最後のものとなります。 この機能は、2019 年 7 月 1 日以降にリリースされる最初の Configuration Manager バージョンで削除されます。 この日より前に、CMG およびクラウド配布ポイントを Azure Resource Manager の展開に移行してください。 <!--SCCMDocs-pr issue #2993-->  
 
 
 ### <a name="hierarchy-design"></a>階層の設計
@@ -158,7 +161,9 @@ Fourth Coffee は、シアトルの本社にあるオンプレミス データ�
 - Azure クラシック デプロイメントの方法を利用している場合、[**Azure 管理証明書**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_azuremgmt)を使用する必要があります。  
 
     > [!TIP]  
-    > Configuration Manager バージョン 1802 以降では、**Azure Resource Manager** デプロイ モデルの使用をお勧めします。 この管理証明書は必要ありません。  
+    > Configuration Manager バージョン 1802 以降では、**Azure Resource Manager** デプロイ モデルの使用をお勧めします。 この管理証明書は必要ありません。 
+    > 
+    > バージョン 1810 以降では、従来の展開方法は推奨されません。   
 
 - クライアントの OS バージョンと認証モデルによっては、**他の証明書**が必要になることがあります。 詳細については、「[CMG 証明書](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)」を参照してください。  
 
@@ -183,7 +188,7 @@ Fourth Coffee は、シアトルの本社にあるオンプレミス データ�
 
 - ネットワーク ロード バランサーを利用するソフトウェア更新ポイントは CMG と連動しません。 <!--505311-->  
 
-- バージョン 1802 以降では、Azure Resource Model を使用する CMG 展開では、Azure クラウド サービス プロバイダー (CSP) のサポートが有効になりません。 Azure Resource Manager での CMG の展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、「[Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services)」 (Azure CSP で使用可能な Azure サービス) を参照してください。  
+- バージョン 1802 以降では、Azure Resource Model を使用する CMG 展開では、Azure クラウド サービス プロバイダー (CSP) のサポートが有効になりません。 Azure Resource Manager での CMG の展開では引き続き従来のクラウド サービスが使われ、CSP はこれをサポートしません。 詳細については、「[Available Azure services in Azure CSP](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)」 (Azure CSP で使用可能な Azure サービス) を参照してください。  
 
 
 ### <a name="support-for-configuration-manager-features"></a>Configuration Manager の機能のサポート
