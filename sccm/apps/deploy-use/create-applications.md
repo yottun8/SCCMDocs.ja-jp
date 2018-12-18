@@ -2,7 +2,7 @@
 title: アプリケーションの作成
 titleSuffix: Configuration Manager
 description: 展開の種類、検出方法、およびソフトウェアのインストール要件を指定してアプリケーションを作成します。
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 848b81ee9e1d6d9ebc189a2d8cb0126648f91be0
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 947dfac82db43e5cb21d8304d31be23219bb83aa
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385186"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456653"
 ---
 # <a name="create-applications-in-configuration-manager"></a>Configuration Manager でアプリケーションを作成する
 
@@ -241,6 +241,10 @@ Configuration Manager アプリケーションではアプリに関するメタ�
 - **プログラムのアンインストール**: 必要に応じて、アンインストール プログラムの名前と必要なパラメーターを指定します。  
 
     - **開始までの時間**: 必要に応じて、展開の種類のアンインストール プログラムがあるフォルダーを指定します。 このフォルダーには、クライアント上の絶対パスを指定できます。 または、パッケージが含まれるフォルダーの配布ポイント上の相対パスでもかまいません。  
+
+- **プログラム修復**: バージョン 1810 以降では、Windows インストーラーとスクリプト インストーラーの展開の種類について、必要に応じて、修復プログラムの名前と必要なパラメーターを指定します。<!--1357866-->  
+
+    - **修復の開始**: 必要に応じて、展開の種類の修復プログラムがあるフォルダーを指定します。 このフォルダーには、クライアント上の絶対パスを指定できます。 または、パッケージが含まれるフォルダーの配布ポイント上の相対パスでもかまいません。  
 
 - **[64 ビット クライアント上で 32 ビット プロセスとしてインストールおよびアンインストール プログラムを実行する]**:Windows ベースのコンピューターで 32 ビットのファイルとレジストリの場所を使用し、展開の種類のインストール プログラムを実行します。  
 
