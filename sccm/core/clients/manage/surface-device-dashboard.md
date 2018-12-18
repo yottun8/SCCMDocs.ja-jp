@@ -60,7 +60,7 @@ Surface デバイスの詳細については、以下を参照してください
  - [Surface]( https://go.microsoft.com/fwlink/?linkid=861998) Web サイト。
     
 Configuration Manager に Surface のファームウェアの更新プログラムを配布する方法については、次を参照してください。
- - [How to manage Surface driver updates in Configuration Manager]( https://support.microsoft.com/help/4098906)(Configuration Manager で Surface のドライバーの更新プログラムを管理する方法)
+ - [Configuration Manager で Surface のドライバーの更新プログラムを管理する方法]( https://support.microsoft.com/help/4098906)
 
 
 
