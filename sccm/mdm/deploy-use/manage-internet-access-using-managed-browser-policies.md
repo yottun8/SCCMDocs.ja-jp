@@ -10,16 +10,16 @@ ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9fe64aef541a4e6405b0fbf6308afc6269d88f56
-ms.sourcegitcommit: f03cb34693b9806e9fecd3c0162de70cc8cb4b1e
-ms.translationtype: HT
+ms.openlocfilehash: 2483a15286a2784f2fb8a4256029004374a313dc
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886486"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419786"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>System Center Configuration Manager での Managed Browser ポリシーを使用したインターネット アクセスの管理
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager では、Intune Managed Browser という Web 閲覧アプリケーションを展開し、アプリケーションを Managed Browser ポリシーに関連付けることができます。 Managed Browser ポリシーは、Managed Browser のユーザーがアクセスできる Web サイトを制限する許可リストまたはブロック リストをセットアップするものです。  
 
@@ -45,17 +45,13 @@ System Center Configuration Manager では、Intune Managed Browser という We
 
 4.  **[全般]** ページで、ポリシーの名前と説明を入力してから、**[次へ]** を選択します。  
 
-5.  
-  **[ポリシーの種類]** ページで、プラットフォームを選択し、ポリシーの種類で **[管理対象ブラウザー]** を選択してから、 **[次へ]** を選択します。  
+5.  **[ポリシーの種類]** ページで、プラットフォームを選択し、ポリシーの種類で **[管理対象ブラウザー]** を選択してから、 **[次へ]** を選択します。  
 
-     
-  **[管理対象ブラウザー]** ページで、次のオプションのいずれかを選択します。  
+     **[管理対象ブラウザー]** ページで、次のオプションのいずれかを選択します。  
 
-    -   
-  **Managed Browser が以下に示す URL のみを開けるようにする** : Managed Browser で開くことができる URL の一覧を指定します。  
+    -   **Managed Browser が以下に示す URL のみを開けるようにする** : Managed Browser で開くことができる URL の一覧を指定します。  
 
-    -   
-  **Managed Browser が以下に示す URL を開けないようにする** : Managed Browser で開けないようにブロックする URL の一覧を指定します。  
+    -   **Managed Browser が以下に示す URL を開けないようにする** : Managed Browser で開けないようにブロックする URL の一覧を指定します。  
 
     > [!NOTE]  
     >  同じ Managed Browser ポリシーに、許可される URL とブロックされる URL の両方を含めることはできません。  
@@ -90,52 +86,54 @@ System Center Configuration Manager では、Intune Managed Browser という We
 
 許可リストとブロック リストで URL を指定するときに使用できる形式とワイルドカードについて説明します。  
 
--   次の許可パターンのリストに記載されている規則に従って、ワイルドカード記号 `*` (アスタリスク) を使用します。  
+- 次の許可パターンのリストに記載されている規則に従って、ワイルドカード記号 `*` (アスタリスク) を使用します。  
 
--   リストに URL を入力するときは、すべての URL の先頭に **http** または **https** を付けます。  
+- リストに URL を入力するときは、すべての URL の先頭に **http** または **https** を付けます。  
 
--   アドレスにはポート番号を指定します。 ポート番号を指定しない場合は、次の値が使用されます。  
+- アドレスにはポート番号を指定します。 ポート番号を指定しない場合は、次の値が使用されます。  
 
-    -   http の場合はポート 80  
+  - http の場合はポート 80  
 
-    -   https の場合はポート 443  
+  - https の場合はポート 443  
 
-     ポート番号でのワイルドカードはサポートされていないため、使用しないでください。 たとえば、`http://www.contoso.com:*` などです。   
+    ポート番号でのワイルドカードはサポートされていないため、使用しないでください。 たとえば、`http://www.contoso.com:*` などです。   
 
--   URL を指定するときに使用できるパターンの詳細については、次の表を参照してください。  
+- URL を指定するときに使用できるパターンの詳細については、次の表を参照してください。  
 
-    |[URL]|［一致する］|［次の値に一致しない］|  
-    |---------|-------------|--------------------|  
-    |`http://www.contoso.com`<br /><br /> 単一のページと一致する|`www.contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `contoso.com/`|  
-    |`http://contoso.com`<br /><br /> 単一のページと一致する|`contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com`|  
-    |`http://www.contoso.com/*`<br /><br /> `www.contoso.com` で始まるすべての URL と一致する|`www.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com/videos/tvshows`|`host.contoso.com`<br /><br /> `host.contoso.com/images`|  
-    |`http://*.contoso.com/*`<br /><br /> contoso.com の下のすべてのサブドメインに一致する|`developer.contoso.com/resources`<br /><br /> `news.contoso.com/images`<br /><br /> `news.contoso.com/videos`|`contoso.host.com`|  
-    |`http://www.contoso.com/images`<br /><br /> 単一のフォルダーと一致する|`www.contoso.com/images`|`www.contoso.com/images/dogs`|  
-    |`http://www.contoso.com:80`<br /><br /> ポート番号を使用し、単一のページと一致する|`http://www.contoso.com:80`||  
-    |`https://www.contoso.com`<br /><br /> セキュリティで保護された単一のページと一致する|`https://www.contoso.com`|`http://www.contoso.com`|  
-    |`http://www.contoso.com/images/*`<br /><br /> 1 つのフォルダーおよびすべてのサブフォルダーと一致する|`www.contoso.com/images/dogs`<br /><br /> `www.contoso.com/images/cats`|`www.contoso.com/videos`|  
 
--   指定することができない入力例を次に示します。  
+  |                                           [URL]                                            |                                                    ［一致する］                                                    |                                    ［次の値に一致しない］                                     |
+  |------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+  |                `http://www.contoso.com`<br /><br /> 単一のページと一致する                |                                               `www.contoso.com`                                               |  `host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `contoso.com/`   |
+  |                  `http://contoso.com`<br /><br /> 単一のページと一致する                  |                                                 `contoso.com`                                                 | `host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com` |
+  | `http://www.contoso.com/*`<br /><br /> `www.contoso.com` で始まるすべての URL と一致する |      `www.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com/videos/tvshows`      |               `host.contoso.com`<br /><br /> `host.contoso.com/images`                |
+  |      `http://*.contoso.com/*`<br /><br /> contoso.com の下のすべてのサブドメインに一致する      | `developer.contoso.com/resources`<br /><br /> `news.contoso.com/images`<br /><br /> `news.contoso.com/videos` |                                  `contoso.host.com`                                   |
+  |           `http://www.contoso.com/images`<br /><br /> 単一のフォルダーと一致する            |                                           `www.contoso.com/images`                                            |                             `www.contoso.com/images/dogs`                             |
+  |    `http://www.contoso.com:80`<br /><br /> ポート番号を使用し、単一のページと一致する    |                                          `http://www.contoso.com:80`                                          |                                                                                       |
+  |           `https://www.contoso.com`<br /><br /> セキュリティで保護された単一のページと一致する            |                                           `https://www.contoso.com`                                           |                               `http://www.contoso.com`                                |
+  | `http://www.contoso.com/images/*`<br /><br /> 1 つのフォルダーおよびすべてのサブフォルダーと一致する |                    `www.contoso.com/images/dogs`<br /><br /> `www.contoso.com/images/cats`                    |                               `www.contoso.com/videos`                                |
 
-    -   `*.com`  
 
-    -   `*.contoso/*`  
+- 指定することができない入力例を次に示します。  
 
-    -   `www.contoso.com/*images`  
+  -   `*.com`  
 
-    -   `www.contoso.com/*images*pigs`  
+  -   `*.contoso/*`  
 
-    -   `www.contoso.com/page*`  
+  -   `www.contoso.com/*images`  
 
-    -   IP アドレス  
+  -   `www.contoso.com/*images*pigs`  
 
-    -   `https://*`  
+  -   `www.contoso.com/page*`  
 
-    -   `http://*`  
+  -   IP アドレス  
 
-    -   `http://www.contoso.com:*`  
+  -   `https://*`  
 
-    -   `http://www.contoso.com: /*`  
+  -   `http://*`  
+
+  -   `http://www.contoso.com:*`  
+
+  -   `http://www.contoso.com: /*`  
 
 > [!NOTE]  
 >  `*.microsoft.com` は常に許可されます。  

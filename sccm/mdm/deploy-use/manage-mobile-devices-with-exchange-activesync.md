@@ -1,5 +1,5 @@
 ---
-title: 'モバイル デバイスを管理する '
+title: 'モバイル デバイスを管理します。 '
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager で Exchange Server コネクタを使用してモバイル デバイスを管理します。
 ms.date: 03/05/2017
@@ -10,16 +10,16 @@ ms.assetid: aba688d9-fd5b-4c42-8cb4-f7e1b161ef50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bdc881d6d6423aa357cf8916f54f1b5f31120f2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 98b573dcf72f4bbf3cde73cb9a5cd7905b8a0248
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353261"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417321"
 ---
 # <a name="manage-mobile-devices-with-system-center-configuration-manager-and-exchange"></a>System Center Configuration Manager と Exchange によるモバイル デバイスの管理
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 Microsoft Exchange ActiveSync プロトコルを使って Exchange Server (社内またはオンライン) に接続するモバイル デバイスを管理したいけれども、Configuration Manager でそのデバイスを登録できない場合は、System Center Configuration Manager の Exchange Server コネクタを使います。 Configuration Manager コンソールから、複数の Exchange サーバー向けにリモート デバイス ワイプおよび設定コントロールといった、Exchange モバイル デバイス管理機能を構成できます。  
 
@@ -30,7 +30,7 @@ Microsoft Exchange ActiveSync プロトコルを使って Exchange Server (社�
 > [!IMPORTANT]  
 >  Exchange Server コネクタをインストールする前に、使用する Microsoft Exchange のバージョンが Configuration Manager でサポートされているかどうかを確認してください。 詳細については、「[System Center Configuration Manager のサイトおよびクライアントのサポートされるオペレーティング システム](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)」の「Exchange Server コネクタ」を参照してください。  
 
- Exchange Server コネクタを使用すると、既定の Exchange ActiveSync メール ボックス ポリシーでの代わりに、Configuration Manager で構成した設定でモバイル デバイスを管理することができます。 使用する設定は、 **[全般]**、 **[パスワード]**、 **[電子メール管理]**、 **[セキュリティ]**、 **[アプリケーション]** のグループに分けて定義します。 たとえば、**[パスワード]** グループでは、モバイル デバイスでパスワードを必要とするかどうか、パスワードに最低限必要な文字数と複雑さ、パスワードを回復可能にするかどうかを設定します。  
+ Exchange Server コネクタを使用すると、既定の Exchange ActiveSync メール ボックス ポリシーでの代わりに、Configuration Manager で構成した設定でモバイル デバイスを管理することができます。 次のグループの設定を使用する設定を定義します。**一般的な**、**パスワード**、**電子メール管理**、**セキュリティ**、および**アプリケーション**します。 たとえば、**[パスワード]** グループでは、モバイル デバイスでパスワードを必要とするかどうか、パスワードに最低限必要な文字数と複雑さ、パスワードを回復可能にするかどうかを設定します。  
 
  グループで 1 つでも設定を行うと、Configuration Manager がグループのすべてのモバイル デバイス用設定を管理します。 グループにあるどの設定も構成しないと、モバイル デバイスの該当する設定が Exchange Server によって管理されます。 その場合でも、Exchange Server で設定され、ユーザーに割り当てられた Exchange ActiveSync メールボックス ポリシーは適用されます。  
 
@@ -44,23 +44,23 @@ Microsoft Exchange ActiveSync プロトコルを使って Exchange Server (社�
 ## <a name="required-security-permissions"></a>必要なセキュリティのアクセス許可  
  Exchange Server コネクタを構成するには、次のセキュリティのアクセス許可を持っている必要があります。  
 
--   Exchange Server コネクタを追加、変更、削除する: **サイト** オブジェクトの **変更** のアクセス許可。  
+- 追加するには、変更、および Exchange Server コネクタを削除します。**変更**に対するアクセス許可、**サイト**オブジェクト。  
 
--   モバイル デバイス設定を構成する: **サイト** オブジェクトの **ModifyConnectorPolicy** のアクセス許可。  
+- モバイル デバイスの設定を構成するには。**ModifyConnectorPolicy**に対するアクセス許可、**サイト**オブジェクト。  
 
- **[完全な権限を持つ管理者]** のセキュリティの役割には、Exchange Server コネクタを構成するために必要な許可が含まれています。  
+  **[完全な権限を持つ管理者]** のセキュリティの役割には、Exchange Server コネクタを構成するために必要な許可が含まれています。  
 
- モバイル デバイスを管理するには、次のセキュリティのアクセス許可が必要です。  
+  モバイル デバイスを管理するには、次のセキュリティのアクセス許可が必要です。  
 
--   モバイル デバイスをワイプする: **コレクション** オブジェクトの **リソースの削除** 。  
+- モバイル デバイスをワイプするには。**リソースを削除する**の**コレクション**オブジェクト。  
 
--   ワイプ コマンドを取り消す: **コレクション** オブジェクトの **リソースの変更** 。  
+- ワイプ コマンドをキャンセルします。**リソースの変更**の**コレクション**オブジェクト。  
 
--   モバイル デバイスを許可またはブロックする: **コレクション** オブジェクトの **リソースの変更**  
+- 許可し、モバイル デバイスをブロックします。**リソースの変更**の**コレクション**オブジェクト。  
 
- **[オペレーション管理者]** のセキュリティの役割には、Exchange Server コネクタを使用してモバイル デバイスを管理するために必要な許可が含まれています。  
+  **[オペレーション管理者]** のセキュリティの役割には、Exchange Server コネクタを使用してモバイル デバイスを管理するために必要な許可が含まれています。  
 
- セキュリティのアクセス許可を構成する方法の詳細については、「[System Center Configuration Manager のロール ベース管理の構成](../../core/servers/deploy/configure/configure-role-based-administration.md)」を参照してください。  
+  セキュリティのアクセス許可を構成する方法の詳細については、「[System Center Configuration Manager のロール ベース管理の構成](../../core/servers/deploy/configure/configure-role-based-administration.md)」を参照してください。  
 
 ## <a name="installing-and-configuring-an-exchange-server-connector"></a>Exchange Server コネクタのインストールと構成  
  モバイル デバイスを管理するように Exchange Server コネクタをインストールし構成するには次の手順に従います。 Configuration Manager では、1 つの Exchange 組織に設定できるコネクタは 1 つのみです。 これらの手順を完了すると、モバイル デバイスを表示するコレクションを表示するとき、およびモバイル デバイスのレポートを使用するとき、コネクタによって検索され管理されるモバイル デバイスを監視できます。  
@@ -111,7 +111,7 @@ Microsoft Exchange ActiveSync プロトコルを使って Exchange Server (社�
     -   **Set-ActiveSyncOrganizationSettings**  
 
     > [!NOTE]  
-    >  次の Exchange Server の管理の役割には、受信者管理、表示限定の組織管理、サーバー管理のコマンドレットが含まれます。 Microsoft Exchange Server 2010 の管理役割グループの詳細については、「 [管理役割グループについて](http://go.microsoft.com/fwlink/p/?LinkId=212914)」を参照してください。  
+    >  次の Exchange Server 管理の役割には、これらのコマンドレットが含まれます。受信者管理、表示のみの組織管理、およびサーバーの管理。 Microsoft Exchange Server 2010 の管理役割グループの詳細については、「 [管理役割グループについて](http://go.microsoft.com/fwlink/p/?LinkId=212914)」を参照してください。  
 
     > [!TIP]  
     >  必要なコマンドレットなしで Exchange Server コネクタをインストールしたり、使おうとしたりすると、サイト サーバー コンピューターの EasDisc.log ログ ファイルに、「 `Invoking cmdlet <cmdlet> failed` 」というメッセージが記録されます。  

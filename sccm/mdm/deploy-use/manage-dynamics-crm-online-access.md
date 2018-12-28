@@ -10,16 +10,16 @@ ms.assetid: 2bfc4c51-b25c-4c70-b81e-8a3b6ddf02c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d77dbcf0b8b7853153a0b2ead4b2db3affd03733
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 5e2c8ab4f8dc0b544a79b2113c278f97444357bf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352778"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420959"
 ---
 # <a name="manage-dynamics-crm-online-access-in-system-center-configuration-manager"></a>System Center Configuration Manager での Dynamics CRM Online アクセスの管理
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 Microsoft Intune の条件付きアクセスを使用して、iOS および Android デバイスから Microsoft Dynamics CRM Online へのアクセスを制御できます。  Intune の条件付きアクセスには、2 つのコンポーネントがあります。
 * [デバイス コンプライアンス ポリシー](../../protect/deploy-use/device-compliance-policies.md): 準拠と見なされるためにデバイスが準拠する必要があるポリシーです。
@@ -44,7 +44,7 @@ Dynamics CRM Online へのアクセスを必要とするデバイスは、次の
 * デバイスが準拠していない場合は、Microsoft Intune の会社ポータル Web サイトまたは会社ポータルのアプリにユーザーを誘導するメッセージが表示されます。このポータルで、ユーザーは問題とその解決方法に関する情報を確認できます。
 
 ## <a name="configure-conditional-access-for-dynamics-crm-online"></a>Dynamics CRM Online 用の条件付きアクセスの構成  
-### <a name="step-1-configure-active-directory-security-groups"></a>手順 1. Active Directory セキュリティ グループを構成する
+### <a name="step-1-configure-active-directory-security-groups"></a>手順 1:Active Directory セキュリティ グループを構成します。
 
 開始する前に、条件付きアクセス ポリシーの Azure Active Directory セキュリティ グループを構成します。 **Office 365 管理センター**でこれらのグループを構成できます。 これらのグループは、ユーザーをポリシーの対象にするか、または対象外にするために使用します。 ユーザーがポリシーの対象となる場合、ユーザーに使用される各デバイスがリソースにアクセスするには、ポリシーを遵守している必要があります。
 
@@ -54,7 +54,7 @@ Dynamics CRM ポリシーに適用する 2 つのグループの種類を指定�
 
 ユーザーが両方のグループに含まれている場合は、ポリシーから除外されます。
 
-### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>手順 2:コンプライアンス ポリシーを構成し展開する
+### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>手順 2:構成し、コンプライアンス ポリシーの展開
 影響を受けるすべてのデバイスに対してコンプライアンス ポリシーを[作成および展開](../../protect/deploy-use/device-compliance-policies.md)します。 これらは、対象グループ内のユーザーが使用するすべてのデバイスです。
 
 > [!NOTE]
@@ -64,20 +64,20 @@ Dynamics CRM ポリシーに適用する 2 つのグループの種類を指定�
 > コンプライアンス ポリシーを展開していない場合、デバイスは準拠として扱われます。
 
 準備ができたら、手順 3 に進みます。
-### <a name="step-3-configure-the-dynamics-crm-policy"></a>手順 3: Dynamics CRM ポリシーを構成する
+### <a name="step-3-configure-the-dynamics-crm-policy"></a>手順 3:Dynamics CRM ポリシーを構成します。
 次に、管理デバイスおよび準拠デバイスのみが Dynamics CRM にアクセスできるように要求するポリシーを構成します。 このポリシーは、Azure Active Directory に格納されます。
 
-1.  Microsoft Intune 管理コンソールで、**[ポリシー] > [条件付きアクセス] > [Dynamics CRM Online ポリシー]** をクリックします。
+1. Microsoft Intune 管理コンソールで、**[ポリシー] > [条件付きアクセス] > [Dynamics CRM Online ポリシー]** をクリックします。
 
-     ![Dynamics CRM Online の条件付きアクセス ポリシー ページのスクリーン ショット](media/mdm-ca-dynamics-crm-policy-configuration.png)
+    ![Dynamics CRM Online の条件付きアクセス ポリシー ページのスクリーン ショット](media/mdm-ca-dynamics-crm-policy-configuration.png)
 
-2.  **[条件付きアクセス ポリシーを有効にする]** を選択します。
-3.  **[アプリケーション アクセス]** で、条件付きアクセス ポリシーの適用対象を次の中から選択できます。
-  * **iOS**
-  * **Outlook Web Access (OWA)**
-4.  **[対象グループ]** で、 **[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。 すべてのユーザーを対象にすることも、選んだユーザー グループのみを対象にすることもできます。
-5.  **[例外グループ]** で、必要に応じて **[変更]** をクリックして、このポリシーから除外する Azure Active Directory セキュリティ グループを選択します。
-6.  終了したら、 **[保存]** をクリックします。
+2. **[条件付きアクセス ポリシーを有効にする]** を選択します。
+3. **[アプリケーション アクセス]** で、条件付きアクセス ポリシーの適用対象を次の中から選択できます。
+   * **iOS**
+   * **Outlook Web Access (OWA)**
+4. **[対象グループ]** で、 **[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。 すべてのユーザーを対象にすることも、選んだユーザー グループのみを対象にすることもできます。
+5. **[例外グループ]** で、必要に応じて **[変更]** をクリックして、このポリシーから除外する Azure Active Directory セキュリティ グループを選択します。
+6. 終了したら、 **[保存]** をクリックします。
 
 これで Dynamics CRM の条件付きアクセスの構成が完了します。 条件付きアクセス ポリシーを展開する必要はありません。直ちに有効になります。
 ##  <a name="monitor-the-compliance-and-conditional-access-policies"></a>コンプライアンスと条件付きアクセス ポリシーを監視する

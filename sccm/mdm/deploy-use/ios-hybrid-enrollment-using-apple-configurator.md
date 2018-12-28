@@ -10,16 +10,16 @@ ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4c3dea67cd16c8efe272038894aa4f958f4ef160
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: de83706e92150a654967ec5cf38c5b18508d4e2b
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348982"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416913"
 ---
 # <a name="ios-hybrid-enrollment-using-apple-configurator-with-configuration-manager"></a>Apple Configurator と Configuration Manager を使用した iOS ハイブリッド登録
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 企業で、従業員が使用する iOS デバイスを購入した場合、Microsoft Intune を使用してそのデバイスを管理できます。 企業所有の iOS デバイスの登録を準備するには、Configuration Manager コンソールで登録プロファイルを構成し、Apple Configurator で使用できるようにプロファイルの URL をエクスポートします。 登録のための iOS デバイスの準備として、USB ケーブルで Mac コンピューターにデバイスを接続し、Apple Configurator を使ってデバイスをセットアップします。 Apple Configurator はデバイスを出荷時の設定に戻して登録プロファイルを追加し、ユーザーが最初に電源をオンにしてセットアップ アシスタントのプロセスを実行したときに、デバイスを登録できるようにします。
 
@@ -47,9 +47,9 @@ ms.locfileid: "32348982"
 
     -   **[ユーザー アフィニティ]** – デバイスの登録方法を指定します。 ほとんどのセットアップ アシスタント シナリオに **[ユーザー アフィニティを要求する]** を使用します。  
 
-        -   **[ユーザー アフィニティの入力を求める]**: 初回セットアップ時にデバイスをユーザーに関連付ける必要があります。その後、デバイスはそのユーザーとして企業のデータや電子メールにアクセスすることが許可されます。  
+        -   **ユーザー アフィニティのプロンプト**:デバイスは、初期セットアップ時にユーザーに関連付ける必要があり、会社のデータとそのユーザーとしての電子メールにアクセスが許可されますできます。  
 
-        -   **ユーザー アフィニティなし**: デバイスは、ユーザーと関連付けられません。 このデバイス関連付け情報を使用すると、ローカルのユーザー データにアクセスしなくてもタスクを実行できます。 ユーザーへの関連付けが必要なアプリが動作しません。
+        -   **ユーザー アフィニティなし**:デバイスは、ユーザーと関連付けられません。 このデバイス関連付け情報を使用すると、ローカルのユーザー データにアクセスしなくてもタスクを実行できます。 ユーザーへの関連付けが必要なアプリが動作しません。
 
     **[次へ]** をクリックして、続行します。  
 
@@ -97,29 +97,29 @@ ms.locfileid: "32348982"
 > [!WARNING]  
 >  Apple Configurator は、デバイスをワイプし、出荷時の構成にリセットします。  
 
-1.  Mac コンピューターで **Apple Configurator 2** を開きます。  
+1. Mac コンピューターで **Apple Configurator 2** を開きます。  
 
-2.  メニュー バーの **[Apple Configurator 2]** > **[Preferences]** \(設定) をクリックします。  
+2. メニュー バーの **[Apple Configurator 2]** > **[Preferences]** \(設定) をクリックします。  
 
-2.  [Preferences]\(設定) ウィンドウで **[Servers]** (サーバー) を選択します。左側のウィンドウの下に表示されている "+" 記号をクリックすると、MDM サーバー ウィザードが起動します。 **[次へ]** をクリックします。  
+3. [Preferences]\(設定) ウィンドウで **[Servers]** (サーバー) を選択します。左側のウィンドウの下に表示されている "+" 記号をクリックすると、MDM サーバー ウィザードが起動します。 **[次へ]** をクリックします。  
 
-3.  [前のステップ](#step-3-export-the-profile-to-deploy-to-ios-devices)で保存した**名前**と**登録 URL** を入力します。 **[次へ]** をクリックします。  
+4. [前のステップ](#step-3-export-the-profile-to-deploy-to-ios-devices)で保存した**名前**と**登録 URL** を入力します。 **[次へ]** をクリックします。  
 
    > [!NOTE]
    > Apple TV の信頼プロファイルの要件について警告が表示された場合は、灰色の [X] をクリックすることで **[Trust Profile]** (信頼プロファイル) オプションを安全に無効にすることができます。 アンカー証明書の警告も安全に無視できます。
 
    続行するには、ウィザードが完了するまで **[Next]** (次へ) をクリックします。  
 
-4.  **[Servers]** (サーバー) ウィンドウで、新しいサーバーのプロファイルの隣にある 「Edit」 (編集) をクリックします。 先に入力した URL と登録 URL が完全に一致することを確認します。 異なる場合は再度 URL を入力し、**[Save]** (保存) をクリックします。  
+5. **[Servers]** (サーバー) ウィンドウで、新しいサーバーのプロファイルの隣にある 「Edit」 (編集) をクリックします。 先に入力した URL と登録 URL が完全に一致することを確認します。 異なる場合は再度 URL を入力し、**[Save]** (保存) をクリックします。  
 
-5.  USB ケーブルで iOS デバイスを Mac コンピューターに接続します。  
+6. USB ケーブルで iOS デバイスを Mac コンピューターに接続します。  
 
-  > [!WARNING]  
-  >  このプロセスでは、デバイスを出荷時の構成にリセットします。 デバイスを接続する前に、デバイスをリセットし、電源をオンにします。 ベスト プラクティスとして、デバイスが Hello 画面になってから続行する必要があります。  
+   > [!WARNING]  
+   >  このプロセスでは、デバイスを出荷時の構成にリセットします。 デバイスを接続する前に、デバイスをリセットし、電源をオンにします。 ベスト プラクティスとして、デバイスが Hello 画面になってから続行する必要があります。  
 
-6.  **[Prepare]** (準備) をクリックします。 **[Prepare iOS Device]** (iOS デバイスの準備) ウィンドウの **[Manual]** (手動) を選択して、**[Next]** (次へ) をクリックします。  
+7. **[Prepare]** (準備) をクリックします。 **[Prepare iOS Device]** (iOS デバイスの準備) ウィンドウの **[Manual]** (手動) を選択して、**[Next]** (次へ) をクリックします。  
 
-7.  **[Enroll in MDM Server]** (MDM サーバーへの登録) ウィンドウで、作成したサーバー名を選択して、**[Next]** (次へ) をクリックします。  
+8. **[Enroll in MDM Server]** (MDM サーバーへの登録) ウィンドウで、作成したサーバー名を選択して、**[Next]** (次へ) をクリックします。  
 
 9. **[Create an Organization]** (組織の作成) ウィンドウで、**組織**を選択するか、または新しい組織を作成して、**[Next]** (次へ) をクリックします。  
 

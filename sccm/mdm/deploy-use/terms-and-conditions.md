@@ -10,16 +10,16 @@ ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cda5f01842f08ccc3e8dfbd17078fe157954d985
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: e7f5eefe532c3a0a48bc0703365bf07028bfae71
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353472"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419633"
 ---
 # <a name="add-terms-and-conditions-with-system-center-configuration-manager"></a>System Center Configuration Manager での使用条件の追加
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager の使用条件をユーザー グループに展開すると、デバイスの登録、会社のリソースへのアクセス、会社のポータルの使用によるデバイスとユーザーへの影響を説明できます。 ユーザーは、会社のポータルを使用して登録したり作業にアクセスしたりする前に、使用条件に同意する必要があります。  
 
@@ -28,29 +28,29 @@ System Center Configuration Manager の使用条件をユーザー グループ�
 
 ## <a name="to-create-a-terms-and-conditions"></a>使用条件を作成するには  
 
-1.  Configuration Manager コンソールで、 **[資産とコンプライアンス]** > **[概要]** > **[コンプライアンス設定]** > **[使用条件]** と移動します。  
+1. Configuration Manager コンソールで、 **[資産とコンプライアンス]** > **[概要]** > **[コンプライアンス設定]** > **[使用条件]** と移動します。  
 
-2.  **[使用条件の作成]** をクリックして、新しい使用条件を作成します。  
+2. **[使用条件の作成]** をクリックして、新しい使用条件を作成します。  
 
-3.  **[全般]** ページで、以下の情報を指定します。  
+3. **[全般]** ページで、以下の情報を指定します。  
 
-    -   **[名前]** - Configuration Manager コンソールに表示される一意の名前  
+   - **[名前]** - Configuration Manager コンソールに表示される一意の名前  
 
-    -   **[説明]** - Configuration Manager コンソールで使用条件を識別するための詳細  
-
-     **[次へ]** をクリックします。  
-
-4.  **[条件]** ページで、次の情報を指定します。  
-
-    -   **[タイトル]** - 会社のポータルでユーザーに表示されるタイトル  
-
-    -   **[条件に関するテキスト]** - 会社のポータルでユーザーに表示される使用条件  
-
-    -   **[ユーザーによる同意の意味を説明するテキスト]** - ユーザーに表示される同意に関するラベル **例**: "使用条件に同意します。"  
+   - **[説明]** - Configuration Manager コンソールで使用条件を識別するための詳細  
 
      **[次へ]** をクリックします。  
 
-5.  新しい使用条件を作成するウィザードを完了します。 [資産とコンプライアンス] ワークスペースの [使用条件] ノードに新しい使用条件が表示されます。  
+4. **[条件]** ページで、次の情報を指定します。  
+
+   - **[タイトル]** - 会社のポータルでユーザーに表示されるタイトル  
+
+   - **[条件に関するテキスト]** - 会社のポータルでユーザーに表示される使用条件  
+
+   - **[ユーザーによる同意の意味を説明するテキスト]** - ユーザーに表示される同意に関するラベル **例**:「同意使用条件にします。」  
+
+     **[次へ]** をクリックします。  
+
+5. 新しい使用条件を作成するウィザードを完了します。 [資産とコンプライアンス] ワークスペースの [使用条件] ノードに新しい使用条件が表示されます。  
 
 ## <a name="to-deploy-a-terms-and-conditions"></a>使用条件を展開するには  
 
@@ -117,4 +117,4 @@ System Center Configuration Manager の使用条件をユーザー グループ�
      使用条件に対して重要な変更を行うときは常にバージョン番号を大きくし、同意を求めることをお勧めします。 誤植の修正や書式設定の変更などを行った場合は、現在のバージョン番号をそのままにします。
 
 > [!div class="button"]
-[< 前のステップ](configure-intune-subscription.md)  [次のステップ >](create-service-connection-point.md)
+> [< 前のステップ](configure-intune-subscription.md)  [次のステップ >](create-service-connection-point.md)

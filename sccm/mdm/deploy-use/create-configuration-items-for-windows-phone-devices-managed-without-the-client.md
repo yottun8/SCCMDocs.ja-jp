@@ -9,36 +9,36 @@ ms.assetid: df10dc4d-c9ff-4574-bb33-8d30eb14cfe3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4590077b303d5676aa72a816d785a0864fe2205f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 6cfeae4ddc582d1d641d1065f2542319d5519b5e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351974"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416424"
 ---
 # <a name="how-to-create-configuration-items-for-windows-phone-devices-managed-without-the-system-center-configuration-manager-client"></a>System Center Configuration Manager クライアントを使用せずに管理されている Windows Phone デバイスの構成項目を作成する方法
 System Center Configuration Manager の **Windows Phone** 構成項目を使用して、Microsoft Intune に登録されているか、Configuration Manager によってオンプレミスで管理されている Windows Phone デバイスの設定を管理します。  
   
 ### <a name="to-create-a-windows-phone-configuration-item"></a>Windows Phone 構成項目を作成するには  
   
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
+1. Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
   
-2.  **[資産とコンプライアンス]** ワークスペースで **[コンプライアンス設定]** を展開して、**[構成項目]** をクリックします。  
+2. **[資産とコンプライアンス]** ワークスペースで **[コンプライアンス設定]** を展開して、**[構成項目]** をクリックします。  
   
-3.  **[ホーム]** タブの **[作成]** グループで、**[構成項目の作成]** をクリックします。  
+3. **[ホーム]** タブの **[作成]** グループで、**[構成項目の作成]** をクリックします。  
   
-4.  **構成項目の作成ウィザード** の **[全般]** ページで、構成項目の名前と、必要に応じて説明を入力します。  
+4. **構成項目の作成ウィザード** の **[全般]** ページで、構成項目の名前と、必要に応じて説明を入力します。  
   
-5.  **[作成する構成項目の種類の指定]** で、 **[Windows Phone]** を選択します。  
+5. **[作成する構成項目の種類の指定]** で、 **[Windows Phone]** を選択します。  
   
-6.  Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、**[カテゴリ]** をクリックします。  
+6. Configuration Manager コンソールで構成項目を検索およびフィルター処理するのに役立つカテゴリを作成して割り当てる場合は、**[カテゴリ]** をクリックします。  
   
-7.  ウィザードの **[サポートされているプラットフォーム]** ページで、構成項目を評価する特定の Windows Phone プラットフォームを選択します。  
+7. ウィザードの **[サポートされているプラットフォーム]** ページで、構成項目を評価する特定の Windows Phone プラットフォームを選択します。  
   
-8.  ウィザードの **[デバイスの設定]** ページで、構成する設定グループを選択します。 このトピックの「 [Windows Phone の構成項目設定のリファレンス](#BKMK_Setref) 」で詳細情報を確認し、 **[次へ]** をクリックします。  
+8. ウィザードの **[デバイスの設定]** ページで、構成する設定グループを選択します。 このトピックの「 [Windows Phone の構成項目設定のリファレンス](#BKMK_Setref) 」で詳細情報を確認し、 **[次へ]** をクリックします。  
   
-    > [!TIP]  
-    >  必要な設定が一覧にない場合は、 **[既定の設定グループに含まれない追加の設定を構成する]** チェック ボックスをオンにします。  
+   > [!TIP]  
+   >  必要な設定が一覧にない場合は、 **[既定の設定グループに含まれない追加の設定を構成する]** チェック ボックスをオンにします。  
   
 9. 各設定ページで、必要な設定と、その設定がデバイスに対応していないときにその設定を修正するかどうかを構成します (これがサポートされている場合)。  
   
@@ -61,7 +61,7 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
   
 12. ウィザードを完了します。  
   
- 新しい構成項目は、 **[資産とコンプライアンス]** ワークスペースの **[構成項目]** ノードに表示されます。  
+    新しい構成項目は、 **[資産とコンプライアンス]** ワークスペースの **[構成項目]** ノードに表示されます。  
   
 ##  <a name="windows-phone-configuration-item-settings-reference"></a>Windows Phone の構成項目設定のリファレンス  
   
@@ -293,7 +293,7 @@ System Center Configuration Manager の **Windows Phone** 構成項目を使用�
 |設定|説明|  
 |**ブロックされているアプリの一覧**|ユーザーがインストールできないアプリの一覧を指定するには、このオプションを選択します。|  
 |**許可されているアプリの一覧**|ユーザーがインストールできるアプリの一覧を指定するには、このオプションを選択します。|  
-|**[追加]**|選択した一覧にアプリを追加します。 選択した名前と、必要に応じて、アプリの発行者、App Store のアプリへの URL を指定します。<br /><br /> URL を指定するには、Windows Phone ストア ページで、使用するアプリを検索します。<br /><br /> **例:** ストアで **Skype** アプリを検索します。 http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51 という URL を使用します。<br /><br /> ポータル サイトのアプリや基幹業務アプリの場合、完全な URL を指定する必要はなく、アプリの GUID のみで十分です。|  
+|**[追加]**|選択した一覧にアプリを追加します。 選択した名前と、必要に応じて、アプリの発行者、App Store のアプリへの URL を指定します。<br /><br /> URL を指定するには、Windows Phone ストア ページで、使用するアプリを検索します。<br /><br /> **例:** ストアを検索、 **Skype**アプリ。 http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51 という URL を使用します。<br /><br /> ポータル サイトのアプリや基幹業務アプリの場合、完全な URL を指定する必要はなく、アプリの GUID のみで十分です。|  
 |**編集**|選択したアプリの名前、発行者、および URL を編集します。|  
 |**削除**|選択したアプリを一覧から削除します。|  
 |**[インポート]**|コンマ区切り値ファイルで指定したアプリの一覧をインポートします。 ファイルの形式、アプリケーション名、発行者、アプリの URL を使用します。|  

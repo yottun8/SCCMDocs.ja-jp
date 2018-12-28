@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: d5efcb78ad5e732691cc2f214f81db0b357e0e19
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
-ms.translationtype: HT
+ms.openlocfilehash: 4ded99c2084f274d519680e78fdc54825b3857cb
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111112"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419514"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>MDM 機関を Intune スタンドアロンに変更する
 
-*適用対象: System Center Configuration Manager (Current Branch)*    
+*適用対象します。System Center Configuration Manager (Current Branch)*    
 
 Configuration Manager コンソール (ハイブリッド MDM) から構成された既存の Microsoft Intune テナントを Intune スタンドアロンに変更できます。 テナント レベルの MDM 機関を Intune に変更するのは、[ハイブリッド MDM のユーザーとデバイスを、クラウド専用構成の Intune スタンドアロンに移行する](migrate-hybridmdm-to-intunesa.md) プロセスの最後のフェーズです。    
 
@@ -48,20 +48,20 @@ MDM 機関の変更に備えて、次の情報を確認します。
 ## <a name="change-the-mdm-authority-to-intune"></a>MDM 機関を Intune に変更する
 次の手順を使用して、テナント レベルの MDM 機関を Intune に変更します。
 
-1.  Configuration Manager コンソールで **[管理]** &gt; **[概要]** &gt; **[クラウド サービス]** &gt; **[Microsoft Intune のサブスクリプション]** に移動し、既存の Intune サブスクリプションを削除します。
-2.  **[MDM 機関を Microsoft Intune に変更]** を選択し、**[次へ]** をクリックします。
+1. Configuration Manager コンソールで **[管理]** &gt; **[概要]** &gt; **[クラウド サービス]** &gt; **[Microsoft Intune のサブスクリプション]** に移動し、既存の Intune サブスクリプションを削除します。
+2. **[MDM 機関を Microsoft Intune に変更]** を選択し、**[次へ]** をクリックします。
 
-    ![Microsoft Intune サブスクリプションの削除ダイアログ](media/mdm-change-delete-subscription.png)
-3.  Configuration Manager で MDM 機関を設定したときに元々使用していた Intune テナントにサインインします。
-4.  **[次へ]** をクリックして、ウィザードを完了します。
-5.  これで MDM 機関はリセットされました。 Configuration Manager コンソールの [Microsoft Intune サブスクリプション] ノードに Intune サブスクリプションは表示されなくなります。
-6.  [Intune ポータル](https://aka.ms/IntunePortal)にログインします。
-7.  [Microsoft Intune] ブレードで、**[デバイスの登録]** をクリックします。
-8.  [Device enrollment Overview]\(デバイスの登録概要\) ブレードで、**[MDM 権限]** プロパティを確認します。
+   ![Microsoft Intune サブスクリプションの削除ダイアログ](media/mdm-change-delete-subscription.png)
+3. Configuration Manager で MDM 機関を設定したときに元々使用していた Intune テナントにサインインします。
+4. **[次へ]** をクリックして、ウィザードを完了します。
+5. これで MDM 機関はリセットされました。 Configuration Manager コンソールの [Microsoft Intune サブスクリプション] ノードに Intune サブスクリプションは表示されなくなります。
+6. [Intune ポータル](https://aka.ms/IntunePortal)にログインします。
+7. [Microsoft Intune] ブレードで、**[デバイスの登録]** をクリックします。
+8. [Device enrollment Overview]\(デバイスの登録概要\) ブレードで、**[MDM 権限]** プロパティを確認します。
 
-  > [!Important]    
-  > Intune のクラシック コンソールを使用しないでください。 Azure Portal で Intune にログインする必要があります。
-7.  MDM 機関が **Microsoft Intune** に変更されたことを確認します。 
+   > [!Important]    
+   > Intune のクラシック コンソールを使用しないでください。 Azure Portal で Intune にログインする必要があります。
+9. MDM 機関が **Microsoft Intune** に変更されたことを確認します。 
 
 ## <a name="next-steps"></a>次のステップ
 MDM 機関の変更が完了したら、次の情報を確認します。

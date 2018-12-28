@@ -10,32 +10,32 @@ ms.assetid: dc1f70f5-64ab-42ab-aa91-d3858803e12f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e45cae03754fcfa3a310bf59e8e3280d5088518
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 26529460498d10fb4ee747059ca050cd6af9db54
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349628"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415961"
 ---
 # <a name="set-up-windows-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使ったハイブリッド Windows デバイス管理のセットアップ
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 このトピックでは、IT 管理者を対象に、ユーザーが Configuration Manager と Microsoft Intune を使用して、Windows PC とモバイル デバイスを管理できるようにする方法について説明します。
 
 ## <a name="enable-windows-device-management"></a>Windows デバイスの管理を有効にする
 PC やモバイル デバイスの Windows デバイスの管理を有効にするには、次の手順を使用します。
 
-1.  任意のプラットフォームの登録をセットアップする前に、「[ハイブリッド MDM をセットアップする](setup-hybrid-mdm.md)」に記載されている前提条件と手順を完了しておきます。  
-2.  Configuration Manager コンソールの **[管理]** ワークスペースで、**[概要]** > **[クラウド サービス]** > **[Microsoft Intune サブスクリプション]** に移動します。  
-3.  リボンで、**[プラットフォームの構成]** をクリックし、Windows プラットフォームを選択します。
-    - Windows PC やラップトップの場合は、**[Windows]** を選択し、次の手順を実行します。
-      1. **[全般]** タブで **[Windows の登録を有効にする]** をクリックします。
-      2. 証明書を使用して会社ポータル アプリにコード署名して展開する場合は、「**コード署名証明書**」を参照してください。 デバイスのユーザーが Microsoft Store から会社ポータル アプリをインストールすることも、管理者がコード署名せずにビジネス向け Microsoft Store からアプリを展開することもできます。
-      3. [Windows Hello for Business 設定](windows-hello-for-business-settings.md)を構成することもできます。
-    - Windows Phone やタブレットの場合は、**[Windows Phone]** を選択し、次の手順を実行します。
-      1. **[全般]** タブで、**[Windows Phone 8.1 と Windows 10 Mobile]** チェック ボックスをオンにします。 Windows Phone 8.0 はサポートされなくなりました。
-      2. 組織で会社アプリをサイドロードする必要がある場合は、必要なトークンやファイルをアップロードできます。 アプリのサイドローディングの詳細については、「[Windows アプリの作成](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications)」を参照してください。
+1. 任意のプラットフォームの登録をセットアップする前に、「[ハイブリッド MDM をセットアップする](setup-hybrid-mdm.md)」に記載されている前提条件と手順を完了しておきます。  
+2. Configuration Manager コンソールの **[管理]** ワークスペースで、**[概要]** > **[クラウド サービス]** > **[Microsoft Intune サブスクリプション]** に移動します。  
+3. リボンで、**[プラットフォームの構成]** をクリックし、Windows プラットフォームを選択します。
+   - Windows PC やラップトップの場合は、**[Windows]** を選択し、次の手順を実行します。
+     1. **[全般]** タブで **[Windows の登録を有効にする]** をクリックします。
+     2. 証明書を使用して会社ポータル アプリにコード署名して展開する場合は、「**コード署名証明書**」を参照してください。 デバイスのユーザーが Microsoft Store から会社ポータル アプリをインストールすることも、管理者がコード署名せずにビジネス向け Microsoft Store からアプリを展開することもできます。
+     3. [Windows Hello for Business 設定](windows-hello-for-business-settings.md)を構成することもできます。
+   - Windows Phone やタブレットの場合は、**[Windows Phone]** を選択し、次の手順を実行します。
+     1. **[全般]** タブで、**[Windows Phone 8.1 と Windows 10 Mobile]** チェック ボックスをオンにします。 Windows Phone 8.0 はサポートされなくなりました。
+     2. 組織で会社アプリをサイドロードする必要がある場合は、必要なトークンやファイルをアップロードできます。 アプリのサイドローディングの詳細については、「[Windows アプリの作成](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications)」を参照してください。
         - **アプリケーション登録トークン**
         - **.pfx ファイル**
         - **[なし]** Symantec 証明書を使用する場合は、**[Symantec 証明書の有効期限が切れる前にアラートを表示する]** を指定できます。
@@ -67,15 +67,15 @@ Windows デバイスの登録を簡単にする方法は次の 2 つの要素で
 
 1. [Azure 管理ポータル](https://portal.azure.com) (https://manage.windowsazure.com) にサインインし、**[Azure Active Directory]** を選択します。
 
-  ![Azure ポータルのスクリーンショット](../media/auto-enroll-azure-main.png)
+   ![Azure ポータルのスクリーンショット](../media/auto-enroll-azure-main.png)
 
 2. **[モビリティ (MDM および MAM)]** を選択します。
 
-  ![Azure ポータルのスクリーンショット](../media/auto-enroll-mdm.png)
+   ![Azure ポータルのスクリーンショット](../media/auto-enroll-mdm.png)
 
 3. **[Microsoft Intune]** を選択します。
 
-  ![Azure ポータルのスクリーンショット](../media/auto-enroll-intune.png)
+   ![Azure ポータルのスクリーンショット](../media/auto-enroll-intune.png)
 
 4. **[MDM ユーザー スコープ]** を構成します。 Microsoft Intune で管理するユーザーのデバイスを指定します。 これらのユーザーの Windows 10 デバイスは、Microsoft Intune の管理対象として自動的に登録されます。
 
@@ -107,13 +107,13 @@ CNAME DNS エントリの作成は省略可能ですが、CNAME レコードに�
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 時間|
 
-複数の UPN サフィックスがある場合は、各ドメイン名について 1 つの CNAME レコードを作成し、それぞれで EnterpriseEnrollment s.manage.microsoft.com をポイントする必要があります。たとえば、Contoso 社でユーザーが name@contoso.com を使用しており、電子メール/UPN として name@us.contoso.com と name@eu.constoso.com も使用している場合、Contoso の DNS 管理者は次の CNAME を作成する必要があります。
+複数の UPN サフィックスがある場合は、各ドメイン名について 1 つの CNAME レコードを作成し、それぞれで EnterpriseEnrollment s.manage.microsoft.com をポイントする必要があります。 たとえば、Contoso 社でユーザーが name@contoso.com を使用しており、電子メール/UPN として name@us.contoso.com と name@eu.constoso.com も使用している場合、Contoso の DNS 管理者は次の CNAME を作成する必要があります。
 
 |「|ホスト名|指定先|TTL|  
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 時間|
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 時間|
-|CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 時間|
+|CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 時間|
 
 `EnterpriseEnrollment-s.manage.microsoft.com` – Intune サービスへのリダイレクトと電子メールのドメイン名によるドメイン認識をサポートします。
 
@@ -124,4 +124,4 @@ DNS レコードの変更が反映されるまでには、最大で 72 時間か
  セットアップが完了したら、デバイスを登録する方法をユーザーに知らせる必要があります。 ガイダンスとして[デバイスの登録についてユーザーに通知する項目](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)に関する記事を参照してください。 ユーザーに「[Enroll your Windows device in Intune](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows)」 (Intune での Windows デバイスの登録) のページを案内します。 この情報は、Microsoft Intune と Configuration Manager の両方によって管理されるモバイル デバイスに適用されます。
 
 > [!div class="button"]
-[< 前のステップ](create-service-connection-point.md)  [次のステップ >](set-up-additional-management.md)
+> [< 前のステップ](create-service-connection-point.md)  [次のステップ >](set-up-additional-management.md)

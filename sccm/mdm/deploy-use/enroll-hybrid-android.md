@@ -10,16 +10,16 @@ ms.assetid: c517fe34-0130-465b-a020-bdb555878778
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f833a28a22e4b3ffd2c8fc237effec94e26e69e8
-ms.sourcegitcommit: 10b3a571e2a822bbd7b58a25840ee1e6f703a7a2
-ms.translationtype: HT
+ms.openlocfilehash: fb488ccfc186fcc56ea91c30b6c0319aead5208e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814258"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416981"
 ---
 # <a name="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使ったハイブリッド Android モバイル デバイスのセットアップ
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 この記事では、Android デバイスと Android for Work デバイスのハイブリッド登録を有効にする方法について説明します。 Configuration Manger を使用し、構成された Microsoft Intune サブスクリプションからデバイスを管理できるようになります。 ユーザーは、Google Play から Android 用の会社のポータル アプリをダウンロードすることで、Android (Samsung KNOX Standard を含む) および Android for Work デバイスを登録することができます。
 
@@ -35,7 +35,7 @@ Configuration Manager を利用することで、コンプライアンス設定�
 3. **[ホーム]** タブの **[サブスクリプション]** グループで、**[プラットフォームの構成]**  >  **[Android]** の順に選択します。  
 4. **[Microsoft Intune サブスクリプションのプロパティ]** ダイアログ ボックスで、**[Android]** タブを選択し、**[Android の登録を有効にする]** ボックスをクリックします。 **[個人所有のデバイスをブロックする]** を選択して、登録を[事前に宣言されたデバイス](predeclare-devices-with-hardware-id.md)に制限できます。
 
- セットアップが完了したら、デバイスを登録する方法をユーザーに知らせる必要があります。 「[デバイスの登録についてユーザーに通知する事柄](/intune/end-user-educate)」に関する記事をご覧ください。 この情報は、Microsoft Intune と Configuration Manager の両方によって管理されるモバイル デバイスに適用されます。
+   セットアップが完了したら、デバイスを登録する方法をユーザーに知らせる必要があります。 「[デバイスの登録についてユーザーに通知する事柄](/intune/end-user-educate)」に関する記事をご覧ください。 この情報は、Microsoft Intune と Configuration Manager の両方によって管理されるモバイル デバイスに適用されます。
 
 
 
@@ -80,4 +80,4 @@ Android for Work の登録を有効にすると、Android for Work デバイス�
 - [仕事用プロファイルの選択的ワイプ](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)
 
 > [!div class="button"]
-[< 前のステップ](create-service-connection-point.md)  [次のステップ >](set-up-additional-management.md)
+> [< 前のステップ](create-service-connection-point.md)  [次のステップ >](set-up-additional-management.md)

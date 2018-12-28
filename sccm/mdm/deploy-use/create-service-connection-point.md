@@ -10,16 +10,16 @@ ms.assetid: 617abb22-d22f-41fb-a76b-1c4259e419d2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3dfd02a84cef31c22023b7fc4cb75931dc82160f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 12626a734138094e7558617b714b2b5acdac6450
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346459"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424325"
 ---
 # <a name="create-a-service-connection-point-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用したサービス接続ポイントの作成
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 サブスクリプションを作成したら、サービス接続ポイントのサイト システムの役割をインストールして、Intune サービスに接続できるようにします。 このサイト システムの役割は、設定とアプリケーションを Intune サービスにプッシュします。
 
@@ -31,15 +31,15 @@ ms.locfileid: "32346459"
 
 ## <a name="configure-the-service-connection-point-role"></a>サービス接続ポイントの役割を構成する
 
-1.  Configuration Manager コンソールで、[ **管理** ] をクリックします。
+1.  Configuration Manager コンソールで、**[管理]** をクリックします。
 
 2.  **[管理]** ワークスペースで、**[サイトの構成]** を展開してから **[サーバーとサイト システムの役割]** をクリックします。
 
 3.  対応する手順を使用して、 **サービス接続ポイント** の役割を新規または既存のサイト システム サーバーに追加します。
 
-    -   新しいサイト システム サーバー: **[ホーム]** タブの **[作成]** グループにある **[サイト システム サーバーの作成]** をクリックして、サイト システム サーバーの作成ウィザードを開始します。
+    -   新しいサイト システム サーバー:**ホーム**] タブで、**作成**グループで、[**サイト システム サーバーの作成**サイト システム サーバーの作成ウィザードを起動します。
 
-    -   既存のサイト システム サーバー: サービス接続ポイントの役割をインストールするサーバーをクリックします。 **[ホーム]** タブの **[サーバー]** グループにある **[サイト システムの役割の追加]** をクリックして、サイト システムの役割の追加ウィザードを開始します。
+    -   既存のサイト システム サーバー:サービス接続ポイントの役割をインストールするサーバーをクリックします。 **[ホーム]** タブの **[サーバー]** グループにある **[サイト システムの役割の追加]** をクリックして、サイト システムの役割の追加ウィザードを開始します。
 
 4.  **[システムの役割の選択]** ページで、 **[サービス接続ポイント]** を選んで、 **[次へ]** をクリックします。
 ![サービス接続ポイントを作成する](../media/mdm-service-connection-point.png)
@@ -54,4 +54,4 @@ ms.locfileid: "32346459"
 2.  手順 1 の証明書は、サービス接続ポイントのサイトの役割にインストールされ、Microsoft Intune サービスとのそれ以降のすべての通信を認証および承認するために使用されます。
 
 > [!div class="button"]
-[< 前のステップ](terms-and-conditions.md)  [次のステップ >](enable-platform-enrollment.md)
+> [< 前のステップ](terms-and-conditions.md)  [次のステップ >](enable-platform-enrollment.md)

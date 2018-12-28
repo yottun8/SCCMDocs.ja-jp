@@ -10,19 +10,18 @@ ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7bf7114382c956dcac6302b3fc11617ad6b5eeec
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: f4e67050740b9d05dd33f2f79b7820b6dc8d9093
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350376"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415808"
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>System Center Configuration Manager で管理されている PC の O365 サービスへのアクセスを管理する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
-<!--1191496-->
-Configuration Manager で管理されている PC の Office 365 サービスへ条件付きアクセスを構成する方法について説明します。  
+<!--1191496--> Configuration Manager によって管理される Pc の Office 365 サービスへの条件付きアクセスを構成します。  
 
 > [!Note]  
 > Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[更新プログラムのオプション機能の有効化](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」を参照してください。<!--505213-->  
@@ -56,36 +55,36 @@ Microsoft Intune で登録および管理されるデバイスの条件付きア
 
 ### <a name="prerequisites"></a>[前提条件]  
 
--   ADFS の同期と O365 サブスクリプション。 O365 サブスクリプションは、Exchange Online と SharePoint Online のセットアップのためのものです。  
+- ADFS の同期と O365 サブスクリプション。 O365 サブスクリプションは、Exchange Online と SharePoint Online のセットアップのためのものです。  
 
--   Microsoft Intune サブスクリプション。 Microsoft Intune サブスクリプションは、Configuration Manager コンソールで構成される必要があります。 Azure Active Directory にデバイスのコンプライアンス対応状態を中継するために、また、ユーザー ライセンスのために、Intune サブスクリプションが使用されます。  
+- Microsoft Intune サブスクリプション。 Microsoft Intune サブスクリプションは、Configuration Manager コンソールで構成される必要があります。 Azure Active Directory にデバイスのコンプライアンス対応状態を中継するために、また、ユーザー ライセンスのために、Intune サブスクリプションが使用されます。  
 
- PC は、次の要件を満たす必要があります。  
+  PC は、次の要件を満たす必要があります。  
 
--   Azure Active Directory への自動デバイス登録の[前提条件](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)   
+- Azure Active Directory への自動デバイス登録の[前提条件](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)   
 
-     コンプライアンス ポリシーに基づいて Azure AD に PC を登録できます。  
+   コンプライアンス ポリシーに基づいて Azure AD に PC を登録できます。  
 
-    -   Windows 8.1 と Windows 10 の PC では、Active Directory グループ ポリシーを使用して、Azure AD に自動的に登録するデバイスを構成することができます。  
+  -   Windows 8.1 と Windows 10 の PC では、Active Directory グループ ポリシーを使用して、Azure AD に自動的に登録するデバイスを構成することができます。  
 
-    -   Windows 7 の PC の場合には、System Center Configuration Manager を利用して Windows 7 PC にデバイス登録ソフトウェア パッケージを展開する必要があります。 詳細については、「[Azure Active Directory への Windows ドメイン参加済みデバイスの自動デバイス登録](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)」記事を参照してください。  
+  -   Windows 7 の PC の場合には、System Center Configuration Manager を利用して Windows 7 PC にデバイス登録ソフトウェア パッケージを展開する必要があります。 詳細については、「[Azure Active Directory への Windows ドメイン参加済みデバイスの自動デバイス登録](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)」記事を参照してください。  
 
--   先進認証が [有効になっている](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)Office 2013 または Office 2016 を使用する必要があります。  
+- 先進認証が [有効になっている](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)Office 2013 または Office 2016 を使用する必要があります。  
 
- 次の手順は、Exchange Online と SharePoint Online の両方に適用されます。  
+  次の手順は、Exchange Online と SharePoint Online の両方に適用されます。  
 
 ### <a name="step-1-configure-compliance-policy"></a>手順 1. コンプライアンス ポリシーの構成  
  Configuration Manager コンソールで、次の規則を含むコンプライアンス ポリシーを作成します。  
 
--   **Azure Active Directory への登録が必要:** この規則では、ユーザーのデバイスが Azure AD に社内参加しているかどうかを確認し、参加していない場合には Azure AD に自動的に登録します。 自動登録がサポートされているのは Windows 8.1 のみです。 Windows 7 PC の場合には、MSI を展開して自動登録を実行します。 詳細については、[Azure Active Directory への自動デバイス登録](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)に関するページを参照してください。  
+-   **Azure Active Directory への登録が必要です。** このルールは、ユーザーのデバイスがワークプ レースであり、Azure AD に参加していて、デバイスが Azure AD に自動的に登録されない場合は、確認します。 自動登録がサポートされているのは Windows 8.1 のみです。 Windows 7 PC の場合には、MSI を展開して自動登録を実行します。 詳細については、[Azure Active Directory への自動デバイス登録](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)に関するページを参照してください。  
 
--   **All required updates installed with a deadline older than a certain number of days (期限よりも特定の日数前に必要な更新プログラムをすべてインストールする):** この規則では、ユーザーのデバイス上で必要な更新プログラムについて、展開期限からの猶予期間の値を指定します。 この規則を追加すると、保留中の必要な更新プログラムも自動的にインストールされます。 **必須の自動更新**規則で、必要な更新プログラムを指定します。   
+-   **特定の日数より古い、期限付きでインストールされているすべての必要な更新プログラム:** ユーザーのデバイスに必要な更新プログラムの展開期限からの猶予期間の値を指定します。 この規則を追加すると、保留中の必要な更新プログラムも自動的にインストールされます。 **必須の自動更新**規則で、必要な更新プログラムを指定します。   
 
--   **BitLocker ドライブ暗号化が必要:** この規則では、デバイスのプライマリ ドライブ (C:\\ など) が BitLocker で暗号化されているかどうかを確認します。 Bitlocker 暗号化がプライマリ デバイスで有効でない場合、電子メール サービスおよび SharePoint サービスへのアクセスがブロックされます。  
+-   **BitLocker ドライブ暗号化が必要です。** このルールは、場合を確認します。 プライマリ ドライブ (c: たとえば、\\) デバイスは、BitLocker で暗号化されました。 Bitlocker 暗号化がプライマリ デバイスで有効でない場合、電子メール サービスおよび SharePoint サービスへのアクセスがブロックされます。  
 
--   **マルウェア対策が必要:** この規則では、System Center Endpoint Protection または Windows Defender が有効で実行されているかどうかを確認します。 無効な場合、電子メール サービスおよび SharePoint サービスへのアクセスがブロックされます。  
+-   **マルウェア対策が必要です。** このルールは、System Center Endpoint Protection または Windows Defender が有効にして実行を確認します。 無効な場合、電子メール サービスおよび SharePoint サービスへのアクセスがブロックされます。  
 
--   **正常性構成証明サービスにより、正常であると報告されました:** この条件には、デバイス正常性構成証明書サービスに対するデバイスのコンプライアンスを確認するための 4 つのサブ規則が含まれます。 詳細については、[正常性構成証明書](/sccm/core/servers/manage/health-attestation)に関するページを参照してください。 
+-   **正常性構成証明サービスにより正常として報告されます。** この条件には、デバイスの正常性構成証明サービスに対するデバイスのコンプライアンスをチェックする 4 つのサブが含まれています。 詳細については、[正常性構成証明書](/sccm/core/servers/manage/health-attestation)に関するページを参照してください。 
 
     - **デバイス上で BitLocker の有効化が必要**
     - **デバイス上でセキュア ブートの有効化が必要** 
@@ -101,7 +100,7 @@ Microsoft Intune で登録および管理されるデバイスの条件付きア
 ### <a name="step-2-evaluate-the-effect-of-conditional-access"></a>手順 2. 条件付きアクセスの効果の評価  
  **条件付きアクセス コンプライアンス レポート**を実行します。 これは **[レポート]** > **[コンプライアンスと設定の管理]** の **[監視]** ワークスペースにあります。 このレポートには、すべてのデバイスのコンプライアンス対応状態が表示されます。 非対応としてレポートされるデバイスから Exchange Online および SharePoint Online へのアクセスはブロックされます。  
 
- ![Configuration Manager コンソール、監視ワークスペース、レポート、コンプライアンスと設定の管理: 条件付きアクセス コンプライアンス レポート](media/CA_compliance_report.png)  
+ ![Configuration Manager コンソール、監視ワークスペース、レポート、レポート、コンプライアンスおよび設定の管理:条件付きアクセス コンプライアンス レポート](media/CA_compliance_report.png)  
 
 ### <a name="configure-active-directory-security-groups"></a>Active Directory セキュリティ グループの構成  
  条件付きアクセス ポリシーは、ポリシーの種類に応じてユーザーのグループを対象とします。 これらのグループには、ポリシーの対象となるユーザーや、ポリシーから除外されるユーザーが含まれます。 ポリシーの対象がユーザーである場合、使用される各デバイスがサービスにアクセスするには、ポリシーに準拠している必要があります。  

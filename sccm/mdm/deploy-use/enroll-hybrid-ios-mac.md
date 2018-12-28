@@ -10,16 +10,16 @@ ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9407180df12902c17f4de8e52be13229ce35c60b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: a1357c54b0f848374ea15727bb6265f68400f88c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348829"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422370"
 ---
 # <a name="set-up-ios-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune で iOS ハイブリッド デバイス管理の設定します
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 Configuration Manager と Intune を使用して、iOS および Mac OS デバイスの登録を有効にし、iPhone、iPad、Mac のユーザーが会社の電子メールとリソースにアクセスできるようにします。 ユーザーが Intune の会社のポータル アプリをインストールすると、そのデバイスをポリシーの対象にできます。 iOS および Mac デバイスを管理するには、Apple Push Notification サービス (APNs) 証明書を Apple からインポートする必要があります。 この証明書で、Intune が Apple のデバイス管理サービスと接続を確立して、iOS と Mac デバイスを管理できるようになります。  
 
@@ -67,8 +67,8 @@ iOS の登録を有効にして APNs 証明書をアップロードします。
 
 個人所有のデバイスをブロックすることで、登録できるデバイスを制限できます。 これにより、ユーザーが会社のポータルを使用して、個人のデバイスを登録するのを防ぐことができます。 個人所有のデバイスをブロックすると、登録できるデバイスは次に示すものに限定されます。
 - [事前に宣言されたデバイス](predeclare-devices-with-hardware-id.md)
-- [Apple Configurator の管理対象デバイス](ios-hybrid-enrollment-using-apple-configurator.md)
-- [Device Enrollment Program (DEP) の管理対象デバイス](ios-device-enrollment-program-for-hybrid.md)
+- [Apple Configurator のマネージド デバイス](ios-hybrid-enrollment-using-apple-configurator.md)
+- [Device Enrollment Program (DEP) のマネージド デバイス](ios-device-enrollment-program-for-hybrid.md)
 - [デバイス登録マネージャー アカウント](enroll-devices-with-device-enrollment-manager.md)で登録されているデバイス
 
 ### <a name="to-enable-enrollment-restrictions"></a>登録制限を有効にするには
@@ -77,4 +77,4 @@ iOS の登録を有効にして APNs 証明書をアップロードします。
 3.  **[個人所有のデバイスをブロックする]** を選択して、登録を会社所有のデバイスに制限します。
 
 > [!div class="button"]
-[< 前のステップ](create-service-connection-point.md)  [次のステップ >](set-up-additional-management.md)
+> [< 前のステップ](create-service-connection-point.md)  [次のステップ >](set-up-additional-management.md)

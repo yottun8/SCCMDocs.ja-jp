@@ -10,16 +10,16 @@ ms.assetid: 28115475-e563-4e16-bf30-f4c9fe704754
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e410e50d05a0f190e3dfdc87df066b5ebce92321
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 35064653fc00d63a1e5ad371ce337fea9b141684
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351168"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424750"
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager のモバイル アプリケーション管理ポリシーを使ったアプリの保護
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager アプリケーション管理ポリシーを使用すると、会社のコンプライアンス ポリシーやセキュリティ ポリシーに合わせて、展開するアプリの機能を変更することができます。 たとえば、制限付きアプリでの切り取り、コピー、貼り付け操作を制限することや、すべての URL を管理対象ブラウザー内で開くようにアプリを構成することができます。 アプリ管理ポリシーでは以下をサポートします。  
 
@@ -30,74 +30,74 @@ System Center Configuration Manager アプリケーション管理ポリシー�
 モバイル アプリ管理ポリシーを使って、Intune で管理されていないデバイス上のアプリも保護することができます。 この新機能を使用して、Office 365 サービスに接続するアプリに対してモバイル アプリ管理ポリシーを適用できます。 これは、オンプレミス Exchange や SharePoint に接続するアプリではサポートされていません。  
 
 この新機能を使用するには、Azure プレビュー ポータルを使用する必要があります。 使い始めるにあたり、次のトピックを参考にしてください。  
--   [Azure ポータルでモバイル アプリ管理ポリシーを使ってみる](https://technet.microsoft.com/library/mt627830.aspx)  
--   [Microsoft Intune でのモバイル アプリ管理ポリシーの作成および展開](https://technet.microsoft.com/library/mt627829.aspx)  
+- [Azure ポータルでモバイル アプリ管理ポリシーを使ってみる](https://technet.microsoft.com/library/mt627830.aspx)  
+- [Microsoft Intune でのモバイル アプリ管理ポリシーの作成および展開](https://technet.microsoft.com/library/mt627829.aspx)  
 
- Configuration Manager の構成項目および基準とは異なり、アプリケーションの管理ポリシーは直接展開しないでください。 代わりに、制限するアプリケーション展開の種類にポリシーを関連付けます。 アプリ展開の種類がデバイスに展開され、インストールされると、指定された設定が有効になります。  
+  Configuration Manager の構成項目および基準とは異なり、アプリケーションの管理ポリシーは直接展開しないでください。 代わりに、制限するアプリケーション展開の種類にポリシーを関連付けます。 アプリ展開の種類がデバイスに展開され、インストールされると、指定された設定が有効になります。  
 
 アプリに制限を適用するには、アプリに Microsoft Intune アプリケーション ソフトウェア開発キット (SDK) を組み込む必要があります。 この種類のアプリを取得するには、次の 2 つの方法があります。  
 
--   **ポリシー管理型アプリを使用する** (Android および iOS): これらのアプリには App SDK が組み込まれています。 この種類のアプリを追加するには、iTunes ストアや Google Play などのアプリ ストアからアプリへのリンクを指定します。 それ以上の処理は、この種類のアプリには必要ありません。 iOS デバイスと Android デバイスで使用可能なポリシー管理型アプリの一覧については、「 [Microsoft Intune モバイル アプリケーション管理ポリシー用の管理型アプリ](https://technet.microsoft.com/library/dn708489.aspx)」を参照してください。  
+-   **ポリシー管理型アプリを使用して、** (Android および iOS)。これらのアプリがあるアプリ SDK をビルドします。 この種類のアプリを追加するには、iTunes ストアや Google Play などのアプリ ストアからアプリへのリンクを指定します。 それ以上の処理は、この種類のアプリには必要ありません。 iOS デバイスと Android デバイスで使用可能なポリシー管理型アプリの一覧については、「 [Microsoft Intune モバイル アプリケーション管理ポリシー用の管理型アプリ](https://technet.microsoft.com/library/dn708489.aspx)」を参照してください。  
 
--   **"ラップされた" アプリを使用する** (Android および iOS): これらのアプリは、**Microsoft Intune アプリ ラッピング ツール**を使用して、アプリ SDK を含むように再パッケージされています。 通常、このツールは、社内で作成された企業アプリの処理に使用されます。 このツールを使用して、アプリ ストアからダウンロードされたアプリを処理することはできません。 詳細については、以下の記事を参照してください。
+-   **「ラップされた」アプリを使用して**(Android および iOS)。これらのアプリが SDK を含めるように、アプリを使用して再パッケージ化、 **Microsoft Intune アプリ ラッピング ツール**します。 通常、このツールは、社内で作成された企業アプリの処理に使用されます。 このツールを使用して、アプリ ストアからダウンロードされたアプリを処理することはできません。 詳細については、以下の記事を参照してください。
     - [Microsoft Intune アプリ ラッピング ツールでモバイル アプリケーション管理のために iOS アプリを準備する](https://technet.microsoft.com/library/dn878028.aspx)
 
     - [Microsoft Intune アプリ ラッピング ツールでモバイル アプリケーション管理のために Android アプリを準備する](https://technet.microsoft.com/library/mt147413.aspx)  
 
 ## <a name="create-and-deploy-an-app-with-a-mobile-application-management-policy"></a>モバイル アプリケーション管理ポリシーを使用したアプリの作成とデプロイ  
 
-##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>手順 1: ポリシー管理型アプリへのリンクを取得するか、ラップされたアプリを作成する  
+##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>手順 1:ポリシー管理型アプリへのリンクを取得またはラップされたアプリの作成  
 
--   **ポリシー管理型アプリへのリンクを取得するには**: アプリ ストアから、展開するポリシー管理型アプリの URL を見つけてメモします。  
+-   **管理対象アプリをポリシーにリンクを取得する**:アプリ ストアからの検索、および展開するポリシー管理型アプリの URL に注意してください。  
 
      たとえば、Microsoft Word for iPad アプリの URL は **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8** です。  
 
--   **ラップされたアプリを作成するには**: 「[Microsoft Intune アプリ ラッピング ツールでモバイル アプリケーション管理のために iOS アプリを準備する](https://technet.microsoft.com/library/dn878028.aspx)」と「[Microsoft Intune アプリ ラッピング ツールでモバイル アプリケーション管理のために Android アプリを準備する](https://technet.microsoft.com/library/mt147413.aspx)」の各トピックの情報を活用して、ラップされたアプリを作成します。  
+-   **ラップされたアプリを作成する**:トピックの情報を使って[iOS アプリを Microsoft Intune アプリ ラッピング ツールでモバイル アプリケーション管理の準備](https://technet.microsoft.com/library/dn878028.aspx)と[Microsoft Intune でモバイル アプリケーション管理の準備の Android アプリアプリ ラッピング ツール](https://technet.microsoft.com/library/mt147413.aspx)ラップされたアプリを作成します。  
 
      このツールは、処理済みのアプリと関連するマニフェスト ファイルを作成します。 アプリが含まれている Configuration Manager アプリケーションの作成時にこれらのファイルを使用します。  
 
-##  <a name="step-2-create-a-configuration-manager-application-that-contains-an-app"></a>手順 2: アプリが含まれた Configuration Manager アプリケーションを作成する  
+##  <a name="step-2-create-a-configuration-manager-application-that-contains-an-app"></a>手順 2:アプリが含まれた Configuration Manager アプリケーションを作成します。  
  Configuration Manager アプリケーションの作成手順は、ポリシー管理型アプリ (外部リンク) であるか、iOS 用 Microsoft Intune アプリ ラッピング ツール (iOS 用アプリ パッケージ) を使用して作成されたアプリかによって異なります。 次のいずれかの手順に従って、Configuration Manager アプリケーションを作成します。  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリケーション]** の順に選択します。  
+1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリケーション]** の順に選択します。  
 
-3.  **[ホーム]** タブの **[作成]** グループで **[アプリケーションの作成]** を選択して**アプリケーションの作成**ウィザードを開きます。  
+2. **[ホーム]** タブの **[作成]** グループで **[アプリケーションの作成]** を選択して**アプリケーションの作成**ウィザードを開きます。  
 
-4.  **[全般]** ページで、 **[このアプリケーションの情報をインストール ファイルから自動的に検出する]** を選択します。  
+3. **[全般]** ページで、 **[このアプリケーションの情報をインストール ファイルから自動的に検出する]** を選択します。  
 
-5.  **[種類]** ドロップダウン リストで、**[iOS アプリケーション パッケージ (\*.ipa ファイル)]** を選びます。  
+4. **[種類]** ドロップダウン リストで、**[iOS アプリケーション パッケージ (\*.ipa ファイル)]** を選びます。  
 
-6.  **[参照]** を選択してインポートするアプリケーション パッケージを選択し、**[次へ]** をクリックします。  
+5. **[参照]** を選択してインポートするアプリケーション パッケージを選択し、**[次へ]** をクリックします。  
 
-7.  **[一般情報]** ページで、会社ポータルでユーザーに表示する説明とカテゴリ情報を入力します。  
+6. **[一般情報]** ページで、会社ポータルでユーザーに表示する説明とカテゴリ情報を入力します。  
 
-8.  ウィザードを完了します。  
+7. ウィザードを完了します。  
 
- 新しいアプリケーションが **[ソフトウェア ライブラリ]** の **[アプリケーション]** ノードに表示されます。  
+   新しいアプリケーションが **[ソフトウェア ライブラリ]** の **[アプリケーション]** ノードに表示されます。  
 
 ### <a name="create-an-application-that-contains-a-link-to-a-policy-managed-app"></a>ポリシー管理型アプリへのリンクを含むアプリケーションを作成する  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリケーション]** の順に選択します。  
+1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリケーション]** の順に選択します。  
 
-3.  **[ホーム]** タブの **[作成]** グループで **[アプリケーションの作成]** を選択して**アプリケーションの作成**ウィザードを開きます。  
+2. **[ホーム]** タブの **[作成]** グループで **[アプリケーションの作成]** を選択して**アプリケーションの作成**ウィザードを開きます。  
 
-4.  **[全般]** ページで、 **[このアプリケーションの情報をインストール ファイルから自動的に検出する]** を選択します。  
+3. **[全般]** ページで、 **[このアプリケーションの情報をインストール ファイルから自動的に検出する]** を選択します。  
 
-5.  **[種類]** ドロップダウン リストから、次のいずれかを選択します。  
+4. **[種類]** ドロップダウン リストから、次のいずれかを選択します。  
 
-    -   iOS: **iOS アプリケーション パッケージ (App Store 内)**  
+   -   Ios:**iOS 用アプリ パッケージ (App ストア内)**  
 
-    -   Android: **Android アプリケーション パッケージ (Google Play 内)**  
+   -   Android:**Android 用アプリ パッケージ (Google Play 内)**  
 
-6.  (手順 1 の) アプリの URL を入力してから、**[次へ]** を選択します。  
+5. (手順 1 の) アプリの URL を入力してから、**[次へ]** を選択します。  
 
-7.  **[一般情報]** ページで、会社ポータルでユーザーに表示する説明とカテゴリ情報を入力します。  
+6. **[一般情報]** ページで、会社ポータルでユーザーに表示する説明とカテゴリ情報を入力します。  
 
-8.  ウィザードを完了します。  
+7. ウィザードを完了します。  
 
- 新しいアプリケーションが **[ソフトウェア ライブラリ]** の **[アプリケーション]** ノードに表示されます。  
+   新しいアプリケーションが **[ソフトウェア ライブラリ]** の **[アプリケーション]** ノードに表示されます。  
 
-##  <a name="step-3-create-an-application-management-policy"></a>手順 3: アプリケーション管理ポリシーを作成する  
+##  <a name="step-3-create-an-application-management-policy"></a>手順 3:アプリケーション管理ポリシーを作成します。  
  次に、アプリケーションと関連付けるアプリケーション管理ポリシーを作成します。 全般ポリシーまたは管理対象ブラウザー ポリシーを作成することができます。  
 
 1)  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリケーション管理ポリシー]** の順に選択します。  
@@ -108,9 +108,9 @@ System Center Configuration Manager アプリケーション管理ポリシー�
 
 4)  **[ポリシーの種類]** ページで、このポリシーのプラットフォームとポリシーの種類を選択してから、**[次へ]** を選択します。 次のポリシーの種類を使用できます。  
 
--   **[全般]**: [全般] ポリシーの種類を使用すると、会社のコンプライアンス ポリシーやセキュリティ ポリシーに合わせて、展開するアプリの機能を変更することができます。 たとえば、切り取り、コピー、貼り付けの各操作を制限付きのアプリ内で制限することができます。  
+-   **一般的な**:[全般] ポリシーの種類を合わせて、会社のコンプライアンスとセキュリティ ポリシーを展開するアプリの機能を変更できます。 たとえば、切り取り、コピー、貼り付けの各操作を制限付きのアプリ内で制限することができます。  
 
--   **[管理対象ブラウザー]**: [管理対象ブラウザー] ポリシーでは、管理対象ブラウザーが URL の一覧を開くことを許可またはブロックするように指定できます。 管理対象ブラウザー ポリシーの種類を使用すると、Intune 管理対象ブラウザー アプリの機能を変更できます。 これは、ユーザーが実行可能な操作 (ユーザーがアクセスできるサイト、ブラウザー内のコンテンツへのリンクを開く方法など) を管理できる Web ブラウザーです。 詳しくは、「  [iOS 用の Intune Managed Browser アプリ](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) 」と「 [Android 用の Intune Managed Browser アプリ](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en)」をご覧ください。
+-   **Managed Browser**:Managed Browser ポリシーを使用して、許可または Url の一覧を開く managed browser をブロックするかどうかを決定できます。 管理対象ブラウザー ポリシーの種類を使用すると、Intune 管理対象ブラウザー アプリの機能を変更できます。 これは、ユーザーが実行可能な操作 (ユーザーがアクセスできるサイト、ブラウザー内のコンテンツへのリンクを開く方法など) を管理できる Web ブラウザーです。 詳しくは、「  [iOS 用の Intune Managed Browser アプリ](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) 」と「 [Android 用の Intune Managed Browser アプリ](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en)」をご覧ください。
 
 5)  **[iOS ポリシー]** ページまたは **[Android ポリシー]** ページで、必要に応じて次の値を構成してから、**[次へ]** を選択します。 オプションは、ポリシーを構成するデバイスの種類によって異なる場合があります。  
 
@@ -139,7 +139,7 @@ System Center Configuration Manager アプリケーション管理ポリシー�
 
  新しいポリシーが **[ソフトウェア ライブラリ]** ワークスペースの **[アプリケーション管理ポリシー]** ノードに表示されます。  
 
-##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>手順 4: アプリケーション管理ポリシーを展開の種類と関連付ける  
+##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>手順 4:展開の種類とアプリケーション管理ポリシーを関連付ける  
 
  アプリケーション管理ポリシーを必須とするアプリの展開の種類を作成すると、Configuration Manager に認識され、アプリケーション管理ポリシーを関連付けるように求められます。 管理対象ブラウザーでは、全般ポリシーと管理対象ブラウザー ポリシーの両方を関連付ける必要があります 詳細については、「[Create applications](create-applications.md)」 (アプリケーションを作成する) を参照してください。  
 
@@ -151,16 +151,16 @@ System Center Configuration Manager アプリケーション管理ポリシー�
 >   
 >  デバイスが Configuration Manager から登録解除された場合、ポリシーはアプリから削除されません。 ポリシーが適用されたアプリは、アプリがアンインストールされ、再インストールされた後でもポリシー設定を保持します。  
 
-##  <a name="step-5-monitor-the-app-deployment"></a>手順 5: アプリの展開を監視する  
+##  <a name="step-5-monitor-the-app-deployment"></a>手順 5:アプリの展開を監視します。  
  モバイル アプリケーション管理ポリシーに関連付けられたアプリを作成し、展開したら、アプリを監視し、ポリシーの競合を解決することができます。  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[概要]** > **[展開]** を選択します。  
+1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[概要]** > **[展開]** を選択します。  
 
-3.  作成した展開を選択します。 **[ホーム]** タブで **[プロパティ]** を選択します。  
+2. 作成した展開を選択します。 **[ホーム]** タブで **[プロパティ]** を選択します。  
 
-4.  展開の [詳細] ウィンドウで、**[関連オブジェクト]** の下にある **[アプリケーション管理ポリシー]** を選択します。  
+3. 展開の [詳細] ウィンドウで、**[関連オブジェクト]** の下にある **[アプリケーション管理ポリシー]** を選択します。  
 
- アプリケーションの監視の詳細については、「[アプリケーションの監視](/sccm/apps/deploy-use/monitor-applications-from-the-console)」を参照してください。  
+   アプリケーションの監視の詳細については、「[アプリケーションの監視](/sccm/apps/deploy-use/monitor-applications-from-the-console)」を参照してください。  
 
 ##  <a name="learn-how-policy-conflicts-are-resolved"></a>ポリシー競合の解決方法  
  ユーザーまたはデバイスへの最初のデプロイで、モバイル アプリケーション管理ポリシーの競合がある場合、競合している特定の設定値が、アプリにデプロイされたポリシーから削除されます。 次に、アプリは組み込みの競合値を使用します。  

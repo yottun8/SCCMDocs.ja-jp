@@ -10,27 +10,27 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 81847846efe99bbc3ad5f0ff5a074b393c8b140a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 214dcdca927e515f776e99f005f968a4b98f4112
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349553"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418834"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-by-importing-certificate-details"></a>証明書の詳細をインポートして PFX 証明書プロファイルを作成する方法
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 
 ここでは、外部証明書から資格情報をインポートして証明書プロファイルを作成する方法を説明します。  
 
 [証明書プロファイル](../../protect/deploy-use/introduction-to-certificate-profiles.md)に関する記事には、証明書プロファイルの作成と構成に関する一般的な情報が記載されています。 このトピックでは、PFX 証明書に関連した証明書プロファイルの具体的な情報をいくつか取り上げます。
 
--  Configuration Manager は、さまざまなデバイスやオペレーティング システムに適した各種証明書ストアです。  次の設定があります。
+- Configuration Manager は、さまざまなデバイスやオペレーティング システムに適した各種証明書ストアです。  次の設定があります。
 
- -   iOS と Mac OS/OS X
- -   Android と Android for Work
- -   Windows 10 (Windows 10 mobile を含む)
+  -   iOS と Mac OS/OS X
+  -   Android と Android for Work
+  -   Windows 10 (Windows 10 mobile を含む)
 
 詳細については、「[System Center Configuration Manager での証明書プロファイルの前提条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)」を参照してください。
 
@@ -51,15 +51,15 @@ System Center Configuration Manager では、証明書資格情報をインポ�
 
 4.  **[証明書プロファイルの作成]** ウィザードの **[全般]** ページで、次の情報を指定します。  
 
-    -   **名前**: 証明書プロファイルの固有な名前を入力します。 最大 256 文字を使用できます。  
+    -   **名前**:証明書プロファイルの一意の名前を入力します。 最大 256 文字を使用できます。  
 
-    -   **説明**: System Center Configuration Manager コンソールで証明書プロファイルを区別しやすくなるように、簡単な説明と他の関連情報を入力します。 最大 256 文字を使用できます。  
+    -   **説明**:証明書プロファイルと System Center Configuration Manager コンソールで識別するのに役立つその他の関連する情報の概要を簡単な説明を提供します。 最大 256 文字を使用できます。  
 
-    -   **[作成する証明書プロファイルの種類を指定します]**: PFX 証明書の場合、次のいずれかのオプションを選びます。  
+    -   **作成する証明書プロファイルの種類を指定**:PFX 証明書の場合に、次のオプションのいずれかを選択します。  
 
-        -   **Personal Information Exchange - PKCS #12 (PFX) 設定 -- インポート**: プログラムによって既存の証明書から情報をインポートして、証明書プロファイルを作成します。  
+        -   **個人情報交換 PKCS #12 (PFX) 設定--インポート**:プログラムで既存の証明書から情報をインポートして、証明書プロファイルを作成します。  
 
-        -   **Personal Information Exchange - PKCS #12 (PFX) 設定 - 作成**: 証明機関によって提供された資格情報を使用して、PFX 証明書プロファイルを作成します。  詳細については、「[System Center Configuration Manager で PFX 証明書プロファイルを作成する方法](../../mdm/deploy-use/create-pfx-certificate-profiles.md)」を参照してください。
+        -   **Personal Information Exchange - PKCS #12 (PFX) 設定 - 作成**:証明機関によって提供された資格情報を使用して PFX 証明書プロファイルを作成します。  詳細については、「[System Center Configuration Manager で PFX 証明書プロファイルを作成する方法](../../mdm/deploy-use/create-pfx-certificate-profiles.md)」を参照してください。
 
 
 ### <a name="create-a-pfx-certificate-profile-for-the-imported-credentials"></a>インポートされた資格情報に PFX 証明書プロファイルを作成する

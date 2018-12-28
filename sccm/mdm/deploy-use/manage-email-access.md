@@ -1,7 +1,7 @@
 ---
 title: 電子メールへのアクセスの管理
 titleSuffix: Configuration Manager
-description: System Center Configuration Manager の条件付きアクセスを使用して Exchange メールへのアクセスを管理する方法について説明します。
+description: Configuration Manager 条件付きアクセスを使用して、Exchange 電子メールへのアクセスを管理する方法について説明します。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -10,349 +10,356 @@ ms.assetid: fa648e73-5fb8-4818-ab57-7466ffaf888e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 52785e1f432e1a18d1e8264dc2c78134af9f006e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: f1dbe514e8beca7250b7bfa62a9af7997bf5246c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351821"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417243"
 ---
-# <a name="manage-email-access-in-system-center-configuration-manager"></a>System Center Configuration Manager でのメール アクセスの管理
+# <a name="manage-email-access-in-configuration-manager"></a>Configuration Manager での電子メール アクセスを管理します。
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager の条件付きアクセスを使用して、指定した条件に基づいて Exchange メールへのアクセスを管理します。  
+指定した条件に基づいて Exchange 電子メールへのアクセスを管理する条件付きアクセスを構成マネージャーを使用します。  
 
 以下のものへのアクセスを管理できます。  
 
--   Microsoft Exchange On-premises  
+- Microsoft Exchange On-premises  
 
--   Microsoft Exchange Online  
+- Microsoft Exchange Online  
 
--   Exchange Online Dedicated
+- Exchange Online Dedicated  
 
 次のプラットフォームでは、組み込みの電子メール クライアントから Exchange Online と Exchange On-premises へのアクセスを制御できます。  
 
--   Android 4.0 以降、Samsung KNOX Standard 4.0 以降  
+- Android 4.0 以降、Samsung KNOX Standard 4.0 以降  
 
--   iOS 9.0 以降  
+- iOS 9.0 以降  
 
--   Windows Phone 8.1 以降  
+- Windows Phone 8.1 以降  
 
--   Windows 8.1 以降でのメール アプリケーション
+- Windows 8.1 以降でのメール アプリケーション  
 
 以下を実行している PC で、Office デスクトップ アプリケーションから Exchange Online にアクセスできます。  
 
--   [最新の認証](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) が有効にされた Office デスクトップ 2013 以降。  
+- [最新の認証](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) が有効にされた Office デスクトップ 2013 以降。  
 
--   Windows 7.0 または Windows 8.1  
+- Windows 7.0 または Windows 8.1  
 
 > [!NOTE]  
->  PC はドメインに参加しているか、Intune で設定されたポリシーに準拠している必要があります。  
+> Pc をドメインに参加しているまたは、Intune で設定されたポリシーに対応します。  
 
 
 ## <a name="device-requirements"></a>デバイスの要件
- 条件付きアクセスを構成すると、ユーザーが電子メールに接続するには、使用するデバイスが以下の条件を満たさなくてはならなくなります。  
+条件付きアクセスを構成すると、ユーザーが電子メールに接続するには、使用するデバイスが以下の条件を満たさなくてはならなくなります。  
 
--   Intune に登録されているか、ドメインに参加する PC である。  
+- Intune に登録されているか、ドメインに参加する PC である。  
 
--   デバイスが Azure Active Directory に登録されている (デバイスが Intune に登録されている場合は、自動的に登録されます) (Exchange Online のみ)。 また、クライアントの Exchange ActiveSync ID が Azure Active Directory に登録されている必要があります (Exchange On-premises に接続している Windows および Windows Phone デバイスには該当しません)。  
+- デバイスが Azure Active Directory に登録されている (デバイスが Intune に登録されている場合は、自動的に登録されます) (Exchange Online のみ)。 また、クライアントの Exchange ActiveSync ID が Azure Active Directory に登録されている必要があります (Exchange On-premises に接続している Windows および Windows Phone デバイスには該当しません)。  
 
-     ドメインに参加している PC の場合、Azure Active Directory に自動的に登録するように設定する必要があります。  「[System Center Configuration Manager でサービスへのアクセスを管理する](../../protect/deploy-use/manage-access-to-services.md)」トピックの「**PC の条件付きアクセス**」セクションでは、PC の条件付きアクセスを有効にするためのすべての要件を示します。  
+    ドメインに参加している PC の場合、Azure Active Directory に自動的に登録するように設定する必要があります。 **Pc の条件付きアクセス**セクション、[サービスへのアクセスを管理](../../protect/deploy-use/manage-access-to-services.md)記事には、Pc の条件付きアクセスを有効にするための要件の完全なセットが一覧表示されます。  
 
--   そのデバイスに展開されているすべての Configuration Manager コンプライアンス ポリシーを遵守している。  
+- そのデバイスに展開されているすべての Configuration Manager コンプライアンス ポリシーを遵守している。  
 
- 条件付きアクセス条件が満たされない場合、ユーザーにはログイン時に以下のうちのいずれかのメッセージが表示されます。  
+    条件付きアクセス条件が満たされない場合にログインするときに、次のメッセージのいずれかで、ユーザーが表示されます。  
 
--   デバイスが Intune に登録されていないか、Azure Active Directory に登録されていない場合は、ポータル サイト アプリのインストールとデバイスの登録の手順が示されているメッセージが表示されます。Android および iOS デバイスの場合は、メールをアクティブ化する手順も示されます。アクティブ化によって、デバイスの Exchange ActiveSync ID と Azure Active Directory 内のデバイス レコードが関連付けられます。  
+- デバイスが Intune に登録されていないか、Azure Active Directory に登録されていない場合、ポータル サイト アプリをインストール、デバイスの登録 (Android および iOS デバイス用)、電子メールで、関連付けるをアクティブ化する方法についての指示と共に、メッセージが表示されます、。デバイスの Exchange ActiveSync ID と Azure Active Directory 内のデバイス レコード。  
 
--   デバイスがポリシーに準拠していない場合は、ユーザーを Intune Web ポータルに導くメッセージが表示されます。このポータルで、問題とその修復方法に関する情報を確認することができます。  
+- デバイスが準拠していない場合は、問題に関する情報とその修復方法を確認できます、Intune web ポータルにユーザーを誘導するメッセージが表示されます。  
 
-**モバイル デバイスの場合:**
+#### <a name="for-mobile-devices"></a>モバイル デバイスの場合
 
-**iOS** および **Android** デバイスのブラウザーからアクセスされるときの Exchange Online 上の **Outlook Web Access (OWA)** へのアクセスを制限することができます。  準拠デバイスでの、サポートされる以下のブラウザーからのアクセスのみ許可されます。
+**iOS** および **Android** デバイスのブラウザーからアクセスされるときの Exchange Online 上の **Outlook Web Access (OWA)** へのアクセスを制限することができます。 準拠デバイスでの、サポートされる以下のブラウザーからのアクセスのみ許可されます。  
 
-* Safari (iOS)
-* Chrome (Android)
-* 管理対象ブラウザー (iOS と Android)
+- Safari (iOS)  
+- Chrome (Android)  
+- 管理対象ブラウザー (iOS と Android)  
 
-サポートされていないブラウザーはブロックされます。IOS および Android 用の OWA アプリはサポートされていません。  ADFS 要求規則を介してこれらをブロックする必要があります。
-* 最新ではない認証プロトコルをブロックするように ADFS 要求規則を設定します。 詳しい手順は、シナリオ 3 - [ブラウザー ベースのアプリケーション以外の O365 への外部アクセスをすべてブロックする](https://technet.microsoft.com/library/dn592182.aspx)に関するページを参照してください。
+サポートされていないブラウザーはブロックされます。 IOS および Android 用の OWA アプリはサポートされていません。 ADFS 要求規則を介してこれらをブロックする必要があります。  
 
- **PC の場合:**  
+- 最新ではない認証プロトコルをブロックするように ADFS 要求規則を設定します。 シナリオ 3 で詳細な手順が提供されている[O365 にブラウザー ベースのアプリケーションを除くすべてのアクセスをブロック](https://technet.microsoft.com/library/dn592182.aspx)します。  
 
--   条件付きアクセス ポリシーの要件が **[ドメインに参加する]** または **[準拠]** を許可することである場合、デバイスを登録する方法についての手順が示されているメッセージが表示されます。 PC がどちらの要件も満たさない場合、ユーザーはデバイスを Intune に登録するように求められます。  
+#### <a name="for-pcs"></a>Pc の
 
--   条件付きアクセス ポリシーの要件がドメインに参加している Windows デバイスのみを許可するように設定されている場合は、デバイスはブロックされ、IT 管理者に問い合わせるようにメッセージが表示されます。  
+- 条件付きアクセス ポリシーの要件が **[ドメインに参加する]** または **[準拠]** を許可することである場合、デバイスを登録する方法についての手順が示されているメッセージが表示されます。 PC がどちらの要件も満たさない場合、ユーザーはデバイスを Intune に登録するように求められます。  
 
- Exchange ActiveSync 電子メール クライアントを組み込まれた、以下のプラットフォームのデバイスから Exchange 電子メールへのアクセスをブロックできます。  
+- 条件付きアクセス ポリシーの要件がドメインに参加している Windows デバイスのみを許可するように設定されている場合は、デバイスはブロックされ、IT 管理者に問い合わせるようにメッセージが表示されます。  
 
--   Android 4.0 以降、Samsung KNOX Standard 4.0 以降  
+Exchange ActiveSync 電子メール クライアントを組み込まれた、以下のプラットフォームのデバイスから Exchange 電子メールへのアクセスをブロックできます。  
 
--   iOS 9.0 以降  
+- Android 4.0 以降、Samsung KNOX Standard 4.0 以降  
 
--   Windows Phone 8.1 以降  
+- iOS 9.0 以降  
 
--   Windows 8.1 以降での **メール** アプリケーション  
+- Windows Phone 8.1 以降  
 
- iOS と Android 用の Outlook アプリ、Outlook デスクトップ 2013 以上がサポートされるのは、Exchange Online のみです。  
+- Windows 8.1 以降での **メール** アプリケーション  
 
- 条件付きアクセスが機能するには、Configuration Manager と Exchange 間に **On-Premises Exchange Connector** が必要です。  
+iOS と Android 用の Outlook アプリ、Outlook デスクトップ 2013 以上がサポートされるのは、Exchange Online のみです。  
 
- Configuration Manager コンソールから、Exchange On-premises の条件付きアクセス ポリシーを構成できます。 Exchange Online 用の条件付きアクセス ポリシーを構成する場合、Configuration Manager コンソールでプロセスを開始できます。これにより、Intune コンソールが起動し、そこでプロセスを完了することができます。  
+条件付きアクセスが機能するには、Configuration Manager と Exchange 間に **On-Premises Exchange Connector** が必要です。  
+
+Configuration Manager コンソールから、Exchange On-premises の条件付きアクセス ポリシーを構成できます。 Exchange Online 用の条件付きアクセス ポリシーを構成する場合、Configuration Manager コンソールでプロセスを開始できます。これにより、Intune コンソールが起動し、そこでプロセスを完了することができます。  
+
+
 
 ## <a name="configure-conditional-access"></a>条件付きアクセスの構成
-### <a name="step-1-evaluate-the-effect-of-the-conditional-access-policy"></a>手順 1. 条件付きアクセス ポリシーの効果を評価する  
- **オンプレミスの Exchange Connector** を構成した後、Configuration Manager の**条件付きアクセスの状態ごとのデバイスの一覧**レポートを使用して、条件付きアクセス ポリシーを構成した後に Exchange へのアクセスがブロックされるデバイスを識別できます。 このレポートには以下も必要です。  
 
--   Intune のサブスクリプション  
+### <a name="step-1-evaluate-the-effect-of-the-conditional-access-policy"></a>手順 1:条件付きアクセス ポリシーの効果を評価します。  
 
--   サービス接続ポイントを構成して配置する必要があります。  
+構成した後、**オンプレミス Exchange connector**、Configuration Manager を使用することができます**条件付きアクセス状態ごとのデバイスの一覧**がブロックされるデバイスを識別するためにレポート条件付きアクセス ポリシーを構成した後、Exchange にアクセスします。 このレポートには以下も必要です。  
 
- レポート パラメーターで、評価する Intune グループを選び、必要に応じて、ポリシーを適用するデバイス プラットフォームを選びます。  
+- Intune のサブスクリプション  
 
- レポートの実行方法の詳細については、「[System Center Configuration Manager のレポート](../../core/servers/manage/reporting.md)」を参照してください。  
+- サービス接続ポイントを構成して配置する必要があります。  
 
- レポートを実行した後、ユーザーをブロックするかどうかを判断するために、次の 4 つの列を調べます。  
+レポート パラメーターで、評価する Intune グループを選び、必要に応じて、ポリシーを適用するデバイス プラットフォームを選びます。  
 
--   **[管理チャネル]** - デバイスが Intune、Exchange ActiveSync、またはその両方によって管理されているかどうかを示します。  
+レポートの実行方法の詳細については、「 [Reporting in Configuration Manager](/sccm/core/servers/manage/reporting)」を参照してください。  
 
--   **[AAD に登録済み]** - デバイスが Azure Active Directory に登録されている (社内参加と呼ばれます) かどうかを示します。  
+レポートを実行した後、ユーザーをブロックするかどうかを判断するために、次の 4 つの列を調べます。  
 
--   **[準拠]** - デバイスが、展開したすべてのコンプライアンス ポリシーに準拠しているかどうかを示します。  
+- **管理チャネル**:デバイスは、Intune、Exchange ActiveSync、またはその両方によって管理されます。  
 
--   **[EAS アクティブ化]** - iOS および Android デバイスで、Exchange ActiveSync ID が Azure Active Directory のデバイス登録レコードに関連付けられている必要があります。 これは、ユーザーが検疫電子メールで **[電子メールのアクティブ化]** のリンクをクリックしたときに発生します。  
+- **AAD に登録されている**:Azure Active Directory (社内参加と呼ばれます) とデバイスが登録されます。  
+
+- **準拠している**:デバイスがデプロイしたすべてのコンプライアンス ポリシーに準拠します。  
+
+- **EAS アクティブ化**: iOS および Android デバイスが、Exchange ActiveSync ID が Azure Active Directory でのデバイス登録レコードに関連付けられているが必要です。 これは、ユーザーが検疫電子メールで **[電子メールのアクティブ化]** のリンクをクリックしたときに発生します。  
 
     > [!NOTE]  
-    >  Windows Phone デバイスは、常にこの列の値を表示します。  
+    > Windows Phone デバイスは、常にこの列の値を表示します。  
 
- 対象グループまたはコレクションの一部であるデバイスは、列の値が以下の表に示されている値と一致しない限り、Exchange にアクセスできないようにブロックされます。  
+対象グループまたはコレクションの一部であるデバイスは、列の値が以下の表に示されている値と一致しない限り、Exchange にアクセスできないようにブロックされます。  
 
 |[管理チャネル]|AAD に登録済み|[準拠]|[EAS アクティブ化]|結果の動作|  
 |------------------------|--------------------|---------------|-------------------|----------------------|  
 |**Microsoft Intune および Exchange ActiveSync による管理の対象**|はい|はい|**[はい]** または **[いいえ]** が表示されます|電子メール アクセスが許可される|  
 |その他の値|いいえ|いいえ|値が表示されない|電子メール アクセスがブロックされる|  
 
- レポートの内容をエクスポートし、 **[電子メール アドレス]** 列を使って、ブロックされることをユーザーに通知できます。  
+レポートの内容をエクスポートし、 **[電子メール アドレス]** 列を使って、ブロックされることをユーザーに通知できます。  
 
-### <a name="step-2-configure-user-groups-or-collections-for-the-conditional-access-policy"></a>手順 2. 条件付きアクセス ポリシーの対象としてユーザー グループまたはコレクションを構成する  
- 条件付きアクセス ポリシーは、ポリシーの種類に応じて、さまざまなユーザーのグループまたはコレクションを対象とします。 これらのグループには、ポリシーの対象となるユーザーや、ポリシーから除外されるユーザーが含まれます。 ユーザーがポリシーの対象となる場合、ユーザーに使用される各デバイスが電子メールにアクセスするには、ポリシーを遵守している必要があります。  
 
--   **Exchange Online ポリシーの場合** - Azure Active Directory セキュリティ ユーザー グループを対象。 これらのグループは、 **Office 365 管理センター**または **Intune アカウント ポータル**で構成できます。  
+### <a name="step-2-configure-user-groups-or-collections-for-the-conditional-access-policy"></a>手順 2:ユーザー グループまたはコレクションを条件付きアクセス ポリシーを構成します。  
 
--   **Exchange On-premises ポリシーの場合** - Configuration Manager ユーザー コレクションを対象。 **[資産とコンプライアンス]** ワークスペースでこれらを構成できます。  
+条件付きアクセス ポリシーは、ポリシーの種類に応じて、さまざまなユーザーのグループまたはコレクションを対象とします。 これらのグループには、ポリシーの対象となるユーザーや、ポリシーから除外されるユーザーが含まれます。 ユーザーがポリシーの対象となる場合、ユーザーに使用される各デバイスが電子メールにアクセスするには、ポリシーを遵守している必要があります。  
 
- 各ポリシーには、次の 2 つのグループの種類を指定できます。  
+- **Exchange Online ポリシー**: Azure Active Directory セキュリティ ユーザー グループにします。 これらのグループは、 **Office 365 管理センター**または **Intune アカウント ポータル**で構成できます。  
 
--   **対象グループ** - ポリシーが適用されるユーザー グループまたはコレクション  
+- **Exchange on-premises ポリシー**: Configuration Manager ユーザー コレクションにします。 **[資産とコンプライアンス]** ワークスペースでこれらを構成できます。  
 
--   **例外グループ** - ポリシーから除外されるユーザー グループまたはコレクション (省略可能)  
+各ポリシーには、次の 2 つのグループの種類を指定できます。  
 
- ユーザーが両方に含まれている場合は、ポリシーから除外されます。  
+- **対象グループ**:ポリシーを適用するユーザー グループまたはコレクション  
 
- 条件付きアクセス ポリシーの対象となるグループまたはコレクションだけが、Exchange アクセスのために評価されます。  
+- **例外グループ**:ユーザー グループまたは (省略可能) のポリシーから除外されるコレクション  
 
-### <a name="step-3-configure-and-deploy-a-compliance-policy"></a>手順 3. コンプライアンス ポリシーを構成し、展開する  
- コンプライアンス ポリシーを作成し、Exchange 条件付きアクセス ポリシーの対象となるすべてのデバイスに展開したことを確認します。  
+ユーザーが両方に含まれている場合は、ポリシーから除外されます。  
 
- コンプライアンス ポリシーを構成する方法の詳細については、「[System Center Configuration Manager でのデバイス コンプライアンス ポリシーの管理](device-compliance-policies.md)」を参照してください。  
+条件付きアクセス ポリシーの対象となるグループまたはコレクションだけが、Exchange アクセスのために評価されます。  
+
+
+### <a name="step-3-configure-and-deploy-a-compliance-policy"></a>手順 3:構成し、コンプライアンス ポリシーの展開  
+
+コンプライアンス ポリシーを作成し、Exchange 条件付きアクセス ポリシーの対象となるすべてのデバイスに展開したことを確認します。  
+
+コンプライアンス ポリシーを構成する方法の詳細については、[デバイス コンプライアンス ポリシーの管理](device-compliance-policies.md)に関するページを参照してください。  
 
 > [!IMPORTANT]  
->  コンプライアンス ポリシーを展開していない状態で、Exchange 条件付きアクセス ポリシーを有効にすると、すべての対象デバイスによるアクセスが許可されます。  
+> コンプライアンス ポリシーを展開していないし、Exchange 条件付きアクセス ポリシーを有効にすると場合、すべての対象デバイスには、アクセスが許可されます。  
 
- 準備ができたら、 **手順 4.** に進みます。  
 
-### <a name="step-4-configure-the-conditional-access-policy"></a>手順 4. 条件付きアクセス ポリシーを構成する  
+### <a name="step-4-configure-the-conditional-access-policy"></a>手順 4:条件付きアクセス ポリシーを構成します。  
 
 #### <a name="for-exchange-online-and-tenants-in-the-new-exchange-online-dedicated-environment"></a>Exchange Online (および新しい Exchange Online Dedicated 環境のテナント) の場合
 
->[!NOTE]
->Azure AD 管理コンソールで条件付きアクセス ポリシーを作成することもできます。 Azure AD の管理コンソールでは、Intune デバイス条件付きアクセス ポリシー (Azure AD のデバイスベースの条件付きアクセス ポリシーと呼ぶ) に加えて、多要素認証のような他の条件付きアクセス ポリシーを作成することができます。 また、Salesforce や Box など、Azure AD がサポートするサード パーティ製エンタープライズ アプリ用の条件付きアクセス ポリシーを設定することもできます。 詳細については、「[Azure Active Directory に接続されたアプリケーションのアクセスを制御する Azure Active Directory デバイス ベースの条件付きアクセス ポリシーを設定する方法](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/)」を参照してください。
+> [!NOTE]  
+> Azure AD 管理コンソールで条件付きアクセス ポリシーを作成することもできます。 Azure AD の管理コンソールでは、Intune デバイス条件付きアクセス ポリシー (Azure AD のデバイスベースの条件付きアクセス ポリシーと呼ぶ) に加えて、多要素認証のような他の条件付きアクセス ポリシーを作成することができます。 また、Salesforce や Box など、Azure AD がサポートするサード パーティ製エンタープライズ アプリ用の条件付きアクセス ポリシーを設定することもできます。 詳細については、次を参照してください[How To:。条件付きアクセスのクラウド アプリへのアクセスの管理対象デバイスを必要と](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)します。  
 
- Exchange Online の条件付きアクセス ポリシーは、次のフローを使用して、デバイスを許可するかブロックするかを評価します。  
+Exchange Online の条件付きアクセス ポリシーは、次のフローを使用して、デバイスを許可するかブロックするかを評価します。  
 
- ![ConditionalAccess8&#45;1](media/ConditionalAccess8-1.png)  
+![条件付きアクセス フロー](media/ConditionalAccess8-1.png)  
 
- 電子メールにアクセスするには、デバイスは以下の条件を満たす必要があります。  
+電子メールにアクセスするには、デバイスは以下の条件を満たす必要があります。  
 
--   Intune に登録する。  
+- Intune に登録する。  
 
--   PC はドメインに参加しているか、登録されており、Intune で設定されたポリシーに準拠している必要があります。  
+- Pc のドメインに参加しているか、Intune で設定されたポリシーで、登録されており準拠している必要があります。  
 
--   デバイスが Azure Active Directory に登録されている (デバイスが Intune に登録されている場合は、自動的に登録されます)。  
+- Azure AD でデバイスを登録します。 デバイスが Intune で登録されている場合に自動的に発生します。 ドメインに参加する Pc、する必要がありますに設定する最大[自動的にデバイスを登録](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-manual-steps)と Azure AD。  
 
-     ドメインに参加する PC の場合、Azure Active Directory に [デバイスを自動的に登録](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) するように設定する必要があります。  
+- アクティブ化された電子メールがある。これによって、デバイスの Exchange ActiveSync ID が Azure Active Directory のデバイス レコードに関連付けられます (iOS および Android デバイスのみに適用)。  
 
--   アクティブ化された電子メールがある。これによって、デバイスの Exchange ActiveSync ID が Azure Active Directory のデバイス レコードに関連付けられます (iOS および Android デバイスのみに適用)。  
+- 展開されているすべてのコンプライアンス ポリシーを遵守している。  
 
--   展開されているすべてのコンプライアンス ポリシーを遵守している。  
+デバイスの状態は Azure Active Directory に格納され、条件の評価に基づいて、電子メールへのアクセスが許可されたりブロックされたりします。  
 
- デバイスの状態は Azure Active Directory に格納され、条件の評価に基づいて、電子メールへのアクセスが許可されたりブロックされたりします。  
+条件が満たされない場合にサインインしたときに、次のメッセージのいずれか、ユーザーが表示されます。  
 
- 条件が満たされない場合、ユーザーにはログイン時に以下のうちのいずれかのメッセージが表示されます。  
+- デバイスは登録されていないか、Azure AD に登録されている場合、ポータル サイト アプリをインストールして登録する方法についての指示と共に、メッセージが表示されます。  
 
--   デバイスが登録されていないか、Azure Active Directory に登録されている場合は、メッセージが表示され、ポータル サイト アプリのインストールと登録の手順が示されます。  
+- デバイスが準拠していない場合は、問題に関する情報とその修復方法を確認できます、Intune ポータル サイト web サイトまたはポータル サイト アプリにユーザーを誘導するメッセージが表示されます。  
 
--   デバイスが準拠していない場合は、Intune の会社ポータル Web サイトまたは会社ポータルのアプリにユーザーを誘導するメッセージが表示されます。このポータルで、ユーザーは問題とその解決方法に関する情報を確認できます。  
+- PC の場合:  
 
--   PC の場合:  
+    - ドメインへの参加を要求するポリシーを設定し、PC がドメインに参加している場合、IT 管理者にお問い合わせに、メッセージが表示されます。  
 
-    -   ドメインへの参加を要求するようにポリシーを設定して、PC がドメインに参加していない場合、IT 管理者に連絡するようにメッセージが表示されます。  
+    - ドメインへの参加を要求するポリシーが設定されている場合、または対応と、PC がいずれかの要件を満たしていない、ポータル サイト アプリをインストールして登録する方法についての指示と共にメッセージが表示されます。  
 
-    -   ドメインへの参加または遵守を要求するようにポリシーを設定して、PC がいずれかの要件を満たしていない場合、ポータル サイト アプリをインストールして登録する方法についての手順が示されたメッセージが表示されます。  
-
- メッセージは、新しい Exchange Online Dedicated 環境の Exchange Online ユーザーおよびテナントのデバイスに表示され、Exchange On-premises および従来の Exchange Online Dedicated デバイスのユーザー受信トレイに配信されます。  
+メッセージは、新しい Exchange Online Dedicated 環境の Exchange Online ユーザーおよびテナントのデバイスに表示され、Exchange On-premises および従来の Exchange Online Dedicated デバイスのユーザー受信トレイに配信されます。  
 
 > [!NOTE]  
->  Configuration Manager 条件付きアクセス規則は、Exchange Online 管理コンソールで定義された規則を上書き、許可、ブロック、および検疫します。  
-
-> [!NOTE]  
->  条件付きアクセス ポリシーは、Intune コンソールで構成する必要があります。 Intune コンソールに Configuration Manager を介してアクセスし、次の手順を開始します。 要求された場合は、Configuration Manager と Intune 間のサービス接続ポイントを設定するために使用した資格情報を使用してログインします。  
+> Configuration Manager 条件付きアクセス規則は、Exchange Online 管理コンソールで定義された規則をオーバーライド、許可、ブロック、および検疫します。  
+> 
+> 条件付きアクセス ポリシーは、Intune コンソールで構成する必要があります。 Intune コンソールに Configuration Manager を介してアクセスし、次の手順を開始します。 メッセージが表示されたら、Configuration Manager と Intune 間のサービス接続ポイントを設定するために使用された同じ資格情報を使用してサインインします。  
 
 ##### <a name="to-enable-the-exchange-online-policy"></a>Exchange Online ポリシーを有効にするには  
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
+1. Configuration Manager コンソールで選択**資産とコンプライアンス**します。  
 
-2.  **[コンプライアンス設定]**、**[条件付きアクセス]** の順に展開し、**[Exchange Online]** をクリックします。  
+2. 展開**コンプライアンス設定**、展開**条件付きアクセス**、し、 **Exchange Online**します。  
 
-3.  **[ホーム]** タブの **[リンク]** グループで、**[Intune コンソールでの条件付きアクセス ポリシーの構成]** をクリックします。 Configuration Manager を Intune サービスの全体管理者と結び付けるために使用したアカウントのユーザー名とパスワードの入力が必要になる場合があります。  
+3. **ホーム**] タブで、**リンク**グループで、[ **Intune コンソールで条件付きアクセス ポリシーを構成する**します。 Configuration Manager を Intune サービスの全体管理者と結び付けるために使用したアカウントのユーザー名とパスワードの入力が必要になる場合があります。 Intune 管理コンソールが開きます。  
 
-     Intune 管理コンソールが開きます。  
+4. Microsoft Intune ポータルで選択**ポリシー** > **条件付きアクセス** > **Exchange Online ポリシー**します。  
 
-4.  [Microsoft Intune 管理コンソール](https://manage.microsoft.com)で、**[ポリシー]**  >  **[条件付きアクセス]**  >  **[Exchange Online ポリシー]** をクリックします。  
+    ![HybridOnlineSetupIntune](media/HybridOnlineSetupIntune.png)  
 
-     ![HybridOnlineSetupIntune](media/HybridOnlineSetupIntune.png)  
-
-5.  **[Exchange Online ポリシー]** ページで、 **[Exchange Online の条件付きアクセス ポリシーを有効にする]** を選択します。 これをチェックする場合、デバイスは準拠している必要があります。 これをチェックしないと、条件付きアクセスは適用されません。  
+5. **[Exchange Online ポリシー]** ページで、 **[Exchange Online の条件付きアクセス ポリシーを有効にする]** を選択します。 これをチェックする場合、デバイスは準拠している必要があります。 これを確認しない場合、条件付きアクセスは適用されません。  
 
     > [!NOTE]  
-    >  コンプライアンス ポリシーを展開していない状態で、Exchange Online ポリシーを有効にすると、すべての対象となるデバイスが準拠デバイスとして報告されます。  
-    >   
-    >  コンプライアンスの状態に関係なく、ポリシーの対象となっているすべてのユーザーがデバイスを Intune に登録する必要があります。  
+    > コンプライアンス ポリシーを展開していないし、Exchange Online ポリシーを有効にすると場合、すべての対象デバイスは準拠として報告されます。  
+   >   
+   >  コンプライアンスの状態に関係なく、ポリシーの対象となっているすべてのユーザーがデバイスを Intune に登録する必要があります。  
 
-6.  Outlook、および先進認証を使用するその他のアプリの **[アプリケーション アクセス]** で、各プラットフォームの準拠デバイスのみにアクセスを制限することを選択できます。  Windows デバイスはドメインに参加しているか、Intune に登録または準拠している必要があります。  
+6. **アプリケーションへのアクセス**Outlook、およびその他のアプリを最新の認証を使用して、各プラットフォームの準拠デバイスのみにアクセスを制限する選択できます。 Windows デバイスはドメインに参加しているか、Intune に登録または準拠している必要があります。  
 
     > [!TIP]  
-    >  **先進認証** では、Active Directory Authentication Library (ADAL) ベースのサインインが Office クライアントに提供されます。  
-    >   
-    >  -   ADAL ベースの認証を使用すると、Office クライアントでブラウザー ベースの認証 (パッシブ認証とも呼ばれます) を利用できます。  認証する際に、ユーザーはサインイン Web ページに転送されます。  
-    > -   この新しいサインイン方法では、 **デバイスのコンプライアンス** と、 **多要素認証** が実行されたかどうかに基づいて、条件付きのアクセスなどの新しいシナリオを実現できます。  
-    >   
-    >  先進認証の動作の詳細については、この [記事](https://support.office.com/en-US/article/How-modern-authentication-works-for-Office-2013-and-Office-2016-client-apps-e4c45989-4b1a-462e-a81b-2a13191cf517) を参照してください。  
+    > **先進認証** では、Active Directory Authentication Library (ADAL) ベースのサインインが Office クライアントに提供されます。  
+    > 
+    > - ADAL ベースの認証を使用すると、Office クライアントでブラウザー ベースの認証 (パッシブ認証とも呼ばれます) を利用できます。 認証する際に、ユーザーはサインイン Web ページに転送されます。  
+    > - この新しいサインイン方法では、 **デバイスのコンプライアンス** と、 **多要素認証** が実行されたかどうかに基づいて、条件付きのアクセスなどの新しいシナリオを実現できます。  
+    > 
+    >  詳細については、「[Office 2013 クライアント アプリと Office 2016 クライアント アプリでの先進認証のしくみ](https://docs.microsoft.com/office365/enterprise/modern-auth-for-office-2013-and-2016)」を参照してください。  
 
-     Configuration Manager と Intune と共に Exchange Online を使用すると、条件付きアクセスでモバイル デバイスだけではなく、デスクトップ コンピューターも管理できます。 PC はドメインに参加しているか、または Intune に登録または準拠している必要があります。 以下の要件を設定できます。  
+    Configuration Manager と Intune と共に Exchange Online を使用すると、条件付きアクセスでモバイル デバイスだけではなく、デスクトップ コンピューターも管理できます。 Pc では、ドメインに参加しているいずれか、Intune で登録された準拠している必要があります。 以下の要件を設定できます。  
 
-    -   **デバイスはドメインに参加しているか準拠デバイスである必要があります。** PC はドメインに参加しているか、ポリシーに準拠している必要があります。 PC がどちらの要件も満たさない場合、ユーザーはデバイスを Intune に登録するように求められます。  
+    - **デバイスはドメインに参加しているか準拠デバイスである必要があります。** Pc には、ドメインに参加しているか、ポリシーに準拠してあること。 場合は、PC には、これらの要件のいずれかを満たしていない、Intune でデバイスを登録する入力が求められます。  
 
-    -   **デバイスはドメインに参加している必要があります** 。PC は Exchange Online にアクセスするために、ドメインに参加する必要があります。 PC がドメインに参加していない場合、メールへのアクセスはブロックされ、ユーザーは IT 管理者に連絡するように求められます。  
+    - **デバイスはドメインに参加している必要があります** Exchange Online へのアクセスにドメインに参加している Pc がある必要があります。 電子メールへのアクセスがブロックされているし、ユーザーが IT 管理者にお問い合わせするように求めの場合は、PC では、ドメインに参加していない場合は、  
 
-    -   **デバイスは準拠デバイスである必要があります** PC は Intune に登録および準拠している必要があります。 PC を登録していない場合は、登録する方法についての手順を示したメッセージが表示されます。  
+    - **デバイスは準拠デバイスである必要があります** PC は Intune に登録および準拠している必要があります。 PC が登録されていない場合は、登録する方法については、メッセージが表示されます。  
 
-7.  **Outlook web access (OWA)** で、サポートされるブラウザーである Safari (iOS) および Chrome (Android) による Exchange Online へのアクセスのみ許可することができます。 その他のブラウザーからのアクセスはブロックされます。 Outlook のアプリケーション アクセス用に選択した、同じプラットフォーム制限もここで適用されます。
+7. **Outlook web access (OWA)**、サポートされているブラウザーを通じてのみ、Exchange Online へのアクセスを許可することもできます。Safari (iOS) および Chrome (Android)。 その他のブラウザーからのアクセスはブロックされます。 Outlook のアプリケーション アクセス用に選択した、同じプラットフォーム制限もここで適用されます。  
 
-    **Android** デバイスで、ユーザーはブラウザー アクセスを有効にする必要があります。  これを行うには、エンドユーザーは以下のように、登録されたデバイス上で [ブラウザー アクセスを有効にする] オプションを有効にする必要があります。
-     1. **ポータル サイト アプリ**を起動します。
-     2. トリプル ドット (...) またはハードウェアのメニュー ボタンから、 **[設定]** ページに移動します。
-      3.    **[ブラウザー アクセスを有効にする]** ボタンを押します。
-      4.    Chrome ブラウザーでは、Office 365 からサインアウトし、Chrome を再起動します。
+    - **Android** デバイスで、ユーザーはブラウザー アクセスを有効にする必要があります。 この操作には、ユーザー必要がありますように有効に登録されたデバイスに「ブラウザー アクセスを有効にする」オプション。  
 
-     **IOS および Android** プラットフォームでは、サービスへのアクセスに使用するデバイスを特定するために、Azure Active Directory によってトランスポート層セキュリティ (TLS) 証明書がデバイスに対して発行されます。  デバイスは、次のスクリーンショットに示すように、証明書を選択するようエンドユーザーに促すプロンプトとともに証明書を表示します。 エンドユーザーは、ブラウザーを使用し続けるには、まずこの証明書を選択する必要があります。
+        1. **ポータル サイト アプリ**を起動します。  
 
-     **Android**
+        2. トリプル ドット (...) またはハードウェアのメニュー ボタンから、 **[設定]** ページに移動します。  
 
-     ![iPad での証明書プロンプトのスクリーンショット](media/mdm-browser-ca-ios-cert-prompt_v2.png)
+        3. **[ブラウザー アクセスを有効にする]** ボタンを押します。  
 
-    **Outlook Web Access (OWA)**
+        4. Chrome ブラウザーでは、Office 365 からサインアウトし、Chrome を再起動します。  
 
-    ![Android デバイスでの証明書プロンプトのスクリーンショット](media/mdm-browser-ca-android-cert-prompt.png)
+    - **IOS と Android**プラットフォーム、サービス、Azure AD へのアクセスに使用されるデバイスを識別するためには、デバイスに TLS 証明書を発行します。 デバイスでは、次のスクリーン ショットに示すように、証明書を選択するユーザーにプロンプトが証明書を表示します。 ユーザーは、ブラウザーを使用して続行する前に、この証明書を選択する必要があります。  
 
-7.  **[Exchange ActiveSync メール アプリ]** では、デバイスがポリシーに準拠していない場合にメールによる Exchange Online へのアクセスをブロックすることを選択できます。Intune がデバイスを管理できない場合にメールへのアクセスを許可またはブロックすることも選択できます。  
+        - **iOS**  
 
-8.  **[対象グループ]** で、ポリシーを適用するユーザーの Active Directory セキュリティ グループを選択します。  
+        ![iPad での証明書プロンプトのスクリーンショット](media/mdm-browser-ca-ios-cert-prompt_v2.png)  
+
+        - **Outlook Web Access (OWA)**  
+
+        ![Android デバイスでの証明書プロンプトのスクリーンショット](media/mdm-browser-ca-android-cert-prompt.png)  
+
+8. **[Exchange ActiveSync メール アプリ]** では、デバイスがポリシーに準拠していない場合にメールによる Exchange Online へのアクセスをブロックすることを選択できます。Intune がデバイスを管理できない場合にメールへのアクセスを許可またはブロックすることも選択できます。  
+
+9. **[対象グループ]** で、ポリシーを適用するユーザーの Active Directory セキュリティ グループを選択します。  
 
     > [!NOTE]  
-    >  対象グループに含まれているユーザーについては、Exchange のルールとポリシーが Intune のポリシーに置き換えられます。  
-    >   
-    >  次の場合にのみ、Exchange の許可、ブロック、検疫のルールと、Exchange のポリシーが適用されます。  
-    >   
-    >  -   ユーザーが Intune のライセンスを取得していない。  
-    > -   ユーザーが Intune のライセンスを取得しているが、条件付きアクセス ポリシーの対象となるどのセキュリティ グループにも属していない。  
+    > 対象となるグループ内にあるユーザーの場合、Intune のポリシーには Exchange のルールとポリシーを置き換えます。  
+    > 
+    > 次の場合にのみ、Exchange の許可、ブロック、検疫のルールと、Exchange のポリシーが適用されます。  
+    > 
+    > - ユーザーが Intune のライセンスを取得していない。  
+    > - ユーザーに、Intune のライセンスが、ユーザーは、条件付きアクセス ポリシーの対象となるすべてのセキュリティ グループに属していません。  
 
-9. **[例外グループ]** で、このポリシーから除外するユーザーの Active Directory セキュリティ グループを選択します。 ユーザーが対象グループと例外グループの両方に属している場合、ユーザーはポリシーから除外され、自分のメールにアクセスできます。  
+10. **[例外グループ]** で、このポリシーから除外するユーザーの Active Directory セキュリティ グループを選択します。 ユーザーが対象となると、例外の両方のグループにある場合、ポリシーから除外されは自分の電子メールにアクセスします。  
 
-10. 操作が完了したら、 **[保存]** をクリックします。  
+11. 操作が完了したら、 **[保存]** をクリックします。  
 
--   条件付きアクセス ポリシーを展開する必要はありません。直ちに有効になります。  
 
--   ユーザーが電子メール アカウントを作成すると、デバイスはすぐにブロックされます。  
+このポリシーの詳細については、次のノートを確認してください。  
 
--   ブロックされたユーザーがデバイスを Intune に登録すると (または非準拠を修復すると)、メールのアクセスは 2 分以内にブロック解除されます。  
+- 条件付きアクセス ポリシーを展開する必要はありません。すぐに有効になります。  
 
--   ユーザーがデバイスの登録を解除した場合、メールは約 6 時間後にブロックされます。  
+- ユーザーが電子メール アカウントを作成すると、デバイスはすぐにブロックされます。  
+
+- ブロックされたユーザーがデバイスを Intune に登録すると (または非準拠を修復すると)、メールのアクセスは 2 分以内にブロック解除されます。  
+
+- ユーザーがデバイスの登録を解除した場合、メールは約 6 時間後にブロックされます。  
+
 
 ### <a name="for-exchange-on-premises-and-tenants-in-the-legacy-exchange-online-dedicated-environment"></a>Exchange On-premises (および従来の Exchange Online Dedicated 環境のテナント) の場合  
- 従来の Exchange Online Dedicated 環境の Exchange On-premises およびテナントの条件付きアクセス ポリシーは、次のフローを使用して、デバイスを許可するかブロックするかを評価します。  
+従来の Exchange Online Dedicated 環境の Exchange On-premises およびテナントの条件付きアクセス ポリシーは、次のフローを使用して、デバイスを許可するかブロックするかを評価します。  
 
- ![ConditionalAccess8&#45;2](media/ConditionalAccess8-2.png)  
+![ConditionalAccess8&#45;2](media/ConditionalAccess8-2.png)  
 
-##### <a name="to-enable-the-exchange-on-premises-policy"></a>Exchange On-premises ポリシーを有効にするには  
+#### <a name="to-enable-the-exchange-on-premises-policy"></a>Exchange On-premises ポリシーを有効にするには  
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** をクリックします。  
+1. Configuration Manager コンソールで選択**資産とコンプライアンス**します。  
 
-2.  **[コンプライアンス設定]**、**[条件付きアクセス]** の順に展開し、**[On-Premises Exchange]** をクリックします。  
+2. 展開**コンプライアンス設定**、展開**条件付きアクセス**、し、 **、オンプレミスの Exchange**します。  
 
-3.  **[ホーム]** タブの **[On-Premises Exchange]** グループで、**[条件付きアクセス ポリシーの構成]** をクリックします。  
+3. **ホーム**] タブで、 **、オンプレミスの Exchange**グループで、[**条件付きアクセス ポリシーを構成する**します。  
 
-4.  **Configuration Manager のバージョン 1602 以降**では、 **条件付きアクセス ポリシーの構成ウィザード** の **[全般]** ページで、Exchange Active Sync の既定ルールを上書きするかどうかを指定します。 既定のルールが検疫またはアクセス禁止に設定されていたとしても、登録された準拠デバイスが電子メールにいつでもアクセスできるようにするには、このオプションの登録をクリックします。  
+4. **全般**のページ、**条件付きアクセス ポリシーの構成ウィザード**、Exchange Active Sync の既定のルールを上書きするかどうかを指定します。 登録して、既定のルールがブロックまたは検疫に設定されている場合でも、電子メールへのアクセスを常が準拠しているデバイスにアクセスする場合は、このオプションを選択します。  
 
     > [!NOTE]  
-    >  Android デバイスの既定の上書きに関する問題があります。 Exchange サーバーの既定のアクセス ルールが **[ブロック]** に設定されていて、既定のルールの上書きオプションと Exchange 条件付きアクセス ポリシーが有効である場合は、対象ユーザーの Android デバイスが Intune に登録されて準拠したとしても、デバイスのブロックが解除されない可能性があります。  この問題を回避するには、既定の Exchange アクセス ルールを **[検疫]** に設定します。 このデバイスから Exchange へのアクセスは既定で許可されることはありません。管理者は Exchange サーバーから検疫対象デバイスの一覧にレポートを取得できます。  
+    > Android デバイスの既定の上書きに関する問題があります。 Exchange サーバーの既定のアクセス ルールが **[ブロック]** に設定されていて、既定のルールのオーバーライドオプションと Exchange 条件付きアクセス ポリシーが有効である場合は、対象ユーザーの Android デバイスが Intune に登録されて準拠したとしても、デバイスのブロックが解除されない可能性があります。 この問題を回避するには、既定の Exchange アクセス ルールを **[検疫]** に設定します。 デバイスは既定では、Exchange へのアクセスを取得しないし、管理者は検疫されているデバイスの一覧で、Exchange サーバーからレポートを取得できます。  
 
-     Exchange Connector をセットアップするときに、通知の電子メール アカウントをセットアップしなかった場合は、このページに警告が表示されて、 **[次へ]** ボタンが無効になります。  続行するには、最初に Exchange Connector で通知の電子メール設定を構成してから、 **条件付きアクセス ポリシーの構成ウィザード** に戻って、プロセスを完了する必要があります。  
+    いない場合はセットアップ通知の電子メール アカウントに Exchange connector をセットアップするときに、このページで、警告が表示されます、**次**ボタンが無効になります。  続行するには、最初に Exchange Connector で通知の電子メール設定を構成してから、 **条件付きアクセス ポリシーの構成ウィザード** に戻って、プロセスを完了する必要があります。  
 
      ![HybridCondAccessWiz1](media/HybridCondAccessWiz1.PNG)  
 
-     **[次へ]** をクリックします。  
-
-5.  **[対象コレクション]** ページで、1 つまたは複数のユーザー コレクションを追加します。 Exchange にアクセスするには、これらのコレクション内のユーザーは、Intune にデバイスを登録し、展開されたすべてのコンプライアンス ポリシーに準拠する必要があります。  
+5. **[対象コレクション]** ページで、1 つまたは複数のユーザー コレクションを追加します。 Exchange にアクセスするには、これらのコレクション内のユーザーは、Intune にデバイスを登録し、展開されたすべてのコンプライアンス ポリシーに準拠する必要があります。  
 
      ![HybridCondAccessWiz2](media/HybridCondAccessWiz2.PNG)  
 
-     **[次へ]** をクリックします。  
-
-6.  **[除外コレクション]** ページで、条件付きアクセス ポリシーから除外するすべてのユーザー コレクションを追加します。 これらのグループ内のユーザーは、Intune にデバイスを登録する必要はなく、Exchange にアクセスするために、展開されたコンプライアンス ポリシーに準拠する必要もありません。  
+6. **[除外コレクション]** ページで、条件付きアクセス ポリシーから除外するすべてのユーザー コレクションを追加します。 これらのグループ内のユーザー、必要がありますしないおよび Intune でデバイスを登録する必要はありません Exchange にアクセスするために、展開されたコンプライアンス ポリシーに準拠します。  
 
      ![HybridCondAccessWiz3](media/HybridCondAccessWiz3.png)  
 
-     ユーザーが対象リストと例外リストの両方に属している場合、ユーザーは条件付きアクセス ポリシーから除外されます。  
+    ユーザーが対象リストと例外リストの両方に属している場合、ユーザーは条件付きアクセス ポリシーから除外されます。  
 
-     **[次へ]** をクリックします。  
+7. **[ユーザー通知の編集]** ページで、Intune がデバイスのブロックを解除する方法についての指示と共にユーザーに送信するメールを構成します (Exchange が送信するメールに加えて)。  
 
-7.  **[ユーザー通知の編集]** ページで、Intune がデバイスのブロックを解除する方法についての指示と共にユーザーに送信するメールを構成します (Exchange が送信するメールに加えて)。  
-
-     既定のメッセージを編集したり、テキストの表示方法を HTML タグで書式設定したりすることができます。 変更の予定を通知し、デバイスを登録する手順を説明するメールを事前に従業員に送信することもできます。  
+    既定のメッセージを編集したり、テキストの表示方法を HTML タグで書式設定したりすることができます。 変更の予定を通知し、デバイスを登録する手順を説明するメールを事前に従業員に送信することもできます。  
 
      ![HybridCondAccessWiz4](media/HybridCondAccessWiz4.PNG)  
 
     > [!NOTE]  
-    >  修復手順が記載されている Intune 通知電子メールはユーザーの Exchange 受信トレイに送信されるため、電子メール メッセージを受信する前にユーザーのデバイスがブロックされた場合は、ブロックされていないデバイスや、Exchange にアクセスするその他の方法を使用して、メッセージを表示できます。  
-
-    > [!NOTE]  
-    >  Exchange が通知電子メールを送信できるようにするには、通知電子メールの送信に使用されるアカウントを構成する必要があります。 Exchange Server コネクタのプロパティを構成する場合に、これを実行します。  
+    > 修復手順が記載されている Intune 通知電子メールはユーザーの Exchange 受信トレイに送信されるため、電子メール メッセージを受信する前にユーザーのデバイスがブロックされた場合は、ブロックされていないデバイスや、Exchange にアクセスするその他の方法を使用して、メッセージを表示できます。  
+    > 
+    > Exchange が通知電子メールを送信するためには、通知電子メールの送信に使用されるアカウントを構成します。 Exchange Server コネクタのプロパティを構成する場合に、これを実行します。  
     >   
-    >  詳細については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)」を参照してください。  
+    > 詳しくは、「[Configuration Manager と Exchange によるモバイル デバイスの管理](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync)」をご覧ください。  
 
-     **[次へ]** をクリックします。  
+8. **概要** ページでの設定を確認して、ウィザードを完了します。  
 
-8.  **[概要]** ページで設定を確認し、ウィザードを完了します。  
 
--   条件付きアクセス ポリシーを展開する必要はありません。直ちに有効になります。  
+このポリシーの詳細については、次のノートを確認してください。  
 
--   ユーザーが Exchange ActiveSync のプロファイルを設定してからデバイスがブロックされるまでに、1 ～ 3 時間かかる場合があります (Intune で管理されていない場合)。  
+- 条件付きアクセス ポリシーを展開する必要はありません。すぐに有効になります。  
 
--   ブロックされたユーザーがデバイスを Intune に登録すると (または非準拠を修復すると)、メールのアクセスは 2 分以内でブロック解除されます。  
+- ユーザーが、Exchange ActiveSync のプロファイルを設定 (Intune で管理されていない) 場合にブロックされるデバイスの 1 ~ 3 時間かかる場合があります。  
 
--   ユーザーが Intune から登録解除した場合、デバイスがブロックされるまでに 1 ～ 3 時間かかる場合があります。  
+- ブロックされたユーザー、デバイスを Intune に登録 (または非準拠の問題を修正) 場合、電子メールへのアクセスはブロック解除されます 2 分以内です。  
 
-### <a name="see-also"></a>関連項目  
- [System Center Configuration Manager でサービスへのアクセスを管理する](../../protect/deploy-use/manage-access-to-services.md)
+- 場合、ユーザー解除-がブロックされるデバイスの 1 ~ 3 時間がかかる場合があります Intune から登録します。  
+
+
+## <a name="see-also"></a>関連項目  
+
+[サービスへのアクセスの管理](/sccm/protect/deploy-use/manage-access-to-services)

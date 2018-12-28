@@ -10,16 +10,16 @@ ms.assetid: 3f62b763-4347-453d-b0a7-1f4a0d1d4105
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 87ad7a768128cb11a1fc361c90a6eccac454a28c
-ms.sourcegitcommit: 9cff0702c2cc0f214173b47ec241f7e5a40f84e6
-ms.translationtype: HT
+ms.openlocfilehash: 00fa7e538f6156f0dacee00feeb4b767a3c83a5c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752592"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417626"
 ---
 # <a name="configure-and-deploy-lookout-for-work-apps"></a>Lookout for Work アプリを構成し、展開する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 この記事では、Android デバイス用と iOS デバイス用の Lookout for Work アプリを構成し、展開する方法について説明します。
 
@@ -31,10 +31,10 @@ ms.locfileid: "34752592"
 2.  ソフトウェアの展開ウィザードの **[全般]** ページで、次の情報を指定します。  
     - 種類: **[Android アプリケーション パッケージ (Google Play 内)]** を選択します。
     - 場所: Google Play ストアから Lookout for Work アプリ リンクをコピーし、ここに貼り付けます。
-    - 発行元: Lookout Mobile Security
-    - 名前: Lookout for Work
-    - 説明: Lookout は、モバイルの脅威に対し最高レベルの保護性能があり、デバイスを安全に保ちます。 Lookout アプリがインストールされている場合は、このアプリによって、脅威からデバイスが保護されます。 脅威が検出された場合、ユーザーと IT 管理者に対してアラートが表示されます。
-    - 管理カテゴリ: コンピューター管理  
+    - 発行元:Lookout Mobile Security
+    - 名前:Lookout for Work
+    - 説明 :Lookout は、デバイスを安全に保管するモバイルの脅威に対する最適な保護を提供します。 Lookout アプリがインストールされている場合は、このアプリによって、脅威からデバイスが保護されます。 脅威が検出された場合、ユーザーと IT 管理者に対してアラートが表示されます。
+    - 管理カテゴリ:コンピューターの管理  
 
     正常に完了すると、アプリケーションの一覧に Lookout for Work アプリが表示されます。  
 
@@ -55,7 +55,7 @@ ms.locfileid: "34752592"
 3. iOS ユーザーの Azure Active Directory (Azure AD) 認証を有効にします。
    1.  [Azure Portal の [Azure AD] ブレード](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)にサインインし、アプリの登録ページに移動します。  
    2.  [名前] に **[Lookout for Work iOS アプリ]** を指定し、[アプリケーションの種類] として **[ネイティブ]** を選択します。  
-  ![アプリの追加ダイアログのスクリーンショット。ネイティブ クライアント アプリ オプションが表示されています。](media/aad-add-app-reg.png)
+   ![アプリの追加ダイアログのスクリーンショット。ネイティブ クライアント アプリ オプションが表示されています。](media/aad-add-app-reg.png)
 
    3.  このリダイレクト URI には、形式 `lookoutwork://com.lookout.enterprise.<yourcompanyname>` を使用します。`<yourcompanyname>` は会社の名前に変更してください。 例: `lookoutwork://com.lookout.enterprise.contoso`
    4. **[作成]** をクリックし、アプリを作成します。 
@@ -78,7 +78,7 @@ ms.locfileid: "34752592"
 
 6. Lookout for Work アプリをユーザーに展開します。 詳細については、「[アプリケーションの展開](/sccm/apps/deploy-use/deploy-applications)」をご覧ください。  
 
-  Lookout コンソールで登録管理オプションに追加した同じユーザーを選択します。 **[必須のインストール]** オプションを選択します。 このオプションを選択した場合は、ユーザーのデバイスに Lookout アプリをインストールする必要があります。
+   Lookout コンソールで登録管理オプションに追加した同じユーザーを選択します。 **[必須のインストール]** オプションを選択します。 このオプションを選択した場合は、ユーザーのデバイスに Lookout アプリをインストールする必要があります。
 
 
 

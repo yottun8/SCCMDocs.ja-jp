@@ -2,7 +2,7 @@
 title: ハイブリッド MDM の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。
-ms.date: 12/05/2018
+ms.date: 12/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ecc3f47b908678b1849e16c2cb2053f100a655a
-ms.sourcegitcommit: 2491fbe98915b7a30c2422a371c929d0d4ebf22f
+ms.openlocfilehash: 7cf1adf7d73e60fba0d748022ab7c241d60ffed7
+ms.sourcegitcommit: c60e057075a83f07d1ca2577c3de1c7d7c8e9cec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53247528"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626499"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -44,6 +44,23 @@ ms.locfileid: "53247528"
 |**Microsoft Intune の新機能** | 通常、このカテゴリに一覧表示されたすべての機能は、Configuration Manager のすべてのリリースで動作します。 これには System Center 2012 R2 Configuration Manager リリースが含まれています。これらの機能では Intune サービスのみが必要であり、Configuration Manager の追加機能は不要なためです。|
 |**Configuration Manager Technical Preview の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Technical Preview Branch でのみ動作します。 これらの機能を試すには、機能の説明で指定されたバージョンの Technical Preview をインストールする必要があります。 詳細については、「[Configuration Manager の Technical Preview](/sccm/core/get-started/technical-preview)」を参照してください。|
 |**Configuration Manager (現在のブランチ) の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Configuration Manager (Current Branch) でのみ動作します。 ハイブリッド展開に旧バージョンの Configuration Manager を使用している場合は、機能の説明で指定されたバージョンの Configuration Manager (現在の分岐) にアップグレードします。 詳細については、「[System Center Configuration Manager へのアップグレード](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)」を参照してください。|
+
+
+
+## <a name="december-2018"></a>2018 年の 12 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+#### <a name="microsoft-auto-update-version-450-required-for-macos-devices"></a>MacOS デバイスに必要な Microsoft 自動更新バージョン 4.5.0
+<!--3503442--> ポータル サイトおよびその他の Office アプリケーションの更新プログラムの受信を続行するには、Intune によって管理される macOS デバイスは、Microsoft 自動更新 4.5.0 にアップグレードする必要があります。 ユーザーは、Office アプリのこのバージョンが既にある場合があります。
+
+#### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys"></a>Intune アプリ SDK は 256 ビット暗号化キーをサポートします。 
+<!--1832174--> Android 用 Intune アプリ SDK では、アプリ保護ポリシーによって暗号化が有効な場合に 256 ビット暗号化キーを使用になりました。 SDK は引き続きコンテンツと以前の SDK バージョンを使用するアプリとの互換性のための 128 ビット キーのサポートを提供します。
+
+#### <a name="intune-requires-macos-1012-or-later"></a>Intune に macOS 10.12 以降が必要です。 
+<!--2827778--> Intune には、macOS バージョン 10.12 以降が必要になりました。 以前の macOS のバージョンを使用してデバイスを Intune に登録をポータル サイトを使用できません。 サポートと新しい機能を受信するには、ユーザーは macOS 10.12 以降にそのデバイスのアップグレードし、ポータル サイトを最新バージョンにアップグレードする必要があります。
+
+詳細については、次を参照してください。[変更の計画。Intune は、12 月に macOS 10.12 以降をサポートしている](#plan-for-change-intune-supports-macos-1012-and-higher-in-december)します。
 
 
 
@@ -549,7 +566,11 @@ macOS 10.12 以降は現在、以下でサポートされています。
 
 
 ### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>変更を計画します。Premier の顧客をエクスペリエンスの新しい Intune のサポート 
-<!--2828727--> Microsoft Premier をご利用のお客様は現在、[Microsoft Premier Online (MPO) ポータル](https://premier.microsoft.com)と [Azure での Intune](https://portal.azure.com) を利用し、Intune のサポート要求を作成できます。 2018 年 12 月 3 日以降、Premier サポートを引き続き強化するには、Azure での Intune でのみサポート要求を作成できます。
+<!--2828727-->
+
+2018 年 12 月 4 日の更新:このプロセスを改善しようとしています。 年 12 月 3 日に MPO でサポート リクエストの作成を無効にならないでしょう。 メッセージ センターから知っているし、この変更のタイムラインを共有するには、すぐにこの投稿を更新するお知らせします。
+
+Microsoft Premier のお客様では、現在使用できます、 [Microsoft Premier オンライン (MPO) ポータル](https://premier.microsoft.com)と[Azure での Intune](https://portal.azure.com) Intune のサポート要求を作成します。 2018 年 12 月 3 日以降、Premier サポートを引き続き強化するには、Azure での Intune でのみサポート要求を作成できます。
 
 #### <a name="how-does-this-affect-me"></a>ユーザーへの影響
 12 月 3 日以降、MPO ではサポート要求を作成できません。 作成しようとすると、Azure での Intune へのリダイレクトを拒否できないと表示されます。 Azure portal でサポート要求を作成するとき、Intune 専用の Microsoft サポートにルーティングされます。 迅速に問題が診断され、解決されます。 MPO ポータルでサポート要求を作成する場合、Azure portal でそれを表示できません。 サポート要求の作成は、Azure での Intune でのみ開始してください。  

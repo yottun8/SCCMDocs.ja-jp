@@ -10,16 +10,16 @@ ms.assetid: 7b04727b-d563-422f-8d59-4dd66215d0b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9091c233ad18b2ab9ddea32819a37f3cc9484036
-ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
-ms.translationtype: HT
+ms.openlocfilehash: 6724113633ab7043c65bad0664ae4a338c829fce
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42584424"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422574"
 ---
 # <a name="manage-access-to-services-in-system-center-configuration-manager"></a>System Center Configuration Manager でサービスへのアクセスを管理する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 
 ## <a name="conditional-access-in-system-center-configuration-manager"></a>System Center Configuration Manager での条件付きアクセス
@@ -34,73 +34,73 @@ ms.locfileid: "42584424"
 
  条件付きアクセスを使用すると、次のサービスへのアクセスを管理できます。  
 
--   Microsoft Exchange On-premises  
+- Microsoft Exchange On-premises  
 
--   Microsoft Exchange Online  
+- Microsoft Exchange Online  
 
--   Exchange Online Dedicated  
+- Exchange Online Dedicated  
 
--   SharePoint Online  
+- SharePoint Online  
 
--   Skype for Business Online
+- Skype for Business Online
 
--   Dynamics CRM Online
+- Dynamics CRM Online
 
- 条件付きアクセスを実装するには、Configuration Manager で次の 2 種類のポリシーを構成します。  
+  条件付きアクセスを実装するには、Configuration Manager で次の 2 種類のポリシーを構成します。  
 
--   **コンプライアンス ポリシー** 。ユーザー コレクションに展開できるオプションのポリシーで、次のような設定を評価します。  
+- **コンプライアンス ポリシー** 。ユーザー コレクションに展開できるオプションのポリシーで、次のような設定を評価します。  
 
-    -   パスコード  
+  - パスコード  
 
-    -   暗号化  
+  - 暗号化  
 
-    -   デバイスが脱獄またはルート化されているかどうか  
+  - デバイスが脱獄またはルート化されているかどうか  
 
-    -   Configuration Manager または Microsoft Intune ポリシーでデバイス上の電子メールを管理するかどうか  
+  - Configuration Manager または Microsoft Intune ポリシーでデバイス上の電子メールを管理するかどうか  
 
-     コンプライアンス ポリシーを展開しない場合、デバイスは該当するすべての条件付きアクセス ポリシーに対して対応を報告します。
+    コンプライアンス ポリシーを展開しない場合、デバイスは該当するすべての条件付きアクセス ポリシーに対して対応を報告します。
 
--   **条件付きアクセス ポリシー**は、特定のサービス向けです。 これらのポリシーは、どの Azure Active Directory セキュリティ ユーザー グループまたは Configuration Manager のユーザー コレクションを対象とするか、または除外するかなどのルールを定義します。  
+- **条件付きアクセス ポリシー**は、特定のサービス向けです。 これらのポリシーは、どの Azure Active Directory セキュリティ ユーザー グループまたは Configuration Manager のユーザー コレクションを対象とするか、または除外するかなどのルールを定義します。  
 
-     Configuration Manager コンソールから、オンプレミスの Exchange 条件付きアクセス ポリシーを構成します。 ただし、Exchange Online または SharePoint Online のポリシーを構成する場合は、そのポリシーを構成するための Microsoft Intune コンソールが開きます。  
+   Configuration Manager コンソールから、オンプレミスの Exchange 条件付きアクセス ポリシーを構成します。 ただし、Exchange Online または SharePoint Online のポリシーを構成する場合は、そのポリシーを構成するための Microsoft Intune コンソールが開きます。  
 
-     その他の Microsoft Intune または Configuration Manager ポリシーとは異なり、条件付きアクセス ポリシーは展開しません。 その代わり、これらのポリシーを 1 回構成すると、すべての対象ユーザーに適用されます。  
+   その他の Microsoft Intune または Configuration Manager ポリシーとは異なり、条件付きアクセス ポリシーは展開しません。 その代わり、これらのポリシーを 1 回構成すると、すべての対象ユーザーに適用されます。  
 
- デバイスが構成済みの条件を満たしていない場合、デバイスの登録と、デバイスの準拠問題の修正を行うプロセスがユーザーに案内されます。  
+  デバイスが構成済みの条件を満たしていない場合、デバイスの登録と、デバイスの準拠問題の修正を行うプロセスがユーザーに案内されます。  
 
 条件付きアクセスの使用を開始する前に、次の該当する要件を満たしていることを確認してください。  
 
 ## <a name="requirements-for-exchange-online-using-the-shared-multi-tenant-environment"></a>Exchange Online (共有マルチテナント環境を使用) の要件
 Exchange Online への条件付きのアクセスでは、次を実行するデバイスがサポートされます。
--   Windows 8.1 以降 (Intune に登録されている場合)
--   Windows 7.0 または Windows 8.1 (ドメインに参加している場合)
--   Windows Phone 8.1 以降
--   iOS 7.1 以降
--   Android 4.0 以降、Samsung KNOX Standard 4.0 以降
+- Windows 8.1 以降 (Intune に登録されている場合)
+- Windows 7.0 または Windows 8.1 (ドメインに参加している場合)
+- Windows Phone 8.1 以降
+- iOS 7.1 以降
+- Android 4.0 以降、Samsung KNOX Standard 4.0 以降
 
- **補足**:
--   デバイスをワークプレース参加させる必要があります。ワークプレース参加させると、デバイスは Azure Active Directory Device Registration Service (AAD DRS) に登録されます。<br />     
+  **補足**:
+- デバイスをワークプレース参加させる必要があります。ワークプレース参加させると、デバイスは Azure Active Directory Device Registration Service (AAD DRS) に登録されます。<br />     
 - ドメインに参加した PC は、グループ ポリシーまたは MSI によって自動的に Azure Active Directory に登録されるはずです。
 
   この記事の「**PC の条件付きアクセス**」セクションに、PC の条件付きアクセスを有効にするためのすべての要件が説明されています。<br />     
   AAD DRS は、Microsoft Intune や Office 365 のお客様に対して自動的にアクティブ化されます。 ADFS Device Registration Service を展開済みのお客様には、オンプレミスの Active Directory で登録されたデバイスは表示されません。
--   Exchange Online (E3 など) が含まれる、Office 365 のサブスクリプションを使用します。 ユーザーは、Exchange Online のライセンスを取得している必要があります。
--   Exchange Server コネクタはオプションで、Configuration Manager を Microsoft Exchange Online に接続します。 このコネクタは、Configuration Manager コンソールでデバイス情報を監視するのに役立ちます。 詳細については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)」を参照してください。
-コンプライアンス ポリシーまたは条件付きアクセス ポリシーを使用するためにコネクタは不要です。 条件付きアクセスの影響に関するレポートを実行するには、コネクタが必要です。
+- Exchange Online (E3 など) が含まれる、Office 365 のサブスクリプションを使用します。 ユーザーは、Exchange Online のライセンスが必要です。
+- Exchange Server コネクタはオプションで、Configuration Manager を Microsoft Exchange Online に接続します。 このコネクタは、Configuration Manager コンソールでデバイス情報を監視するのに役立ちます。 詳細については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)」を参照してください。
+  コンプライアンス ポリシーまたは条件付きアクセス ポリシーを使用するためにコネクタは不要です。 条件付きアクセスの影響に関するレポートを実行するには、コネクタが必要です。
 
 ## <a name="requirements-for-exchange-online-dedicated"></a>Exchange Online Dedicated の要件
 Exchange Online Dedicated への条件付きのアクセスでは、次を実行するデバイスがサポートされます。
--   Windows 8 以降 (Intune に登録されている場合)
--   Windows 7.0 または Windows 8.1 (ドメインに参加している場合)
+- Windows 8 以降 (Intune に登録されている場合)
+- Windows 7.0 または Windows 8.1 (ドメインに参加している場合)
 
   新しい Exchange Online 専用環境にあるテナント専用のドメイン参加 PC への条件付きアクセス
--   Windows Phone 8 以降
--   Exchange ActiveSync (EAS) 電子メール クライアントを使用する iOS デバイス
--   Android 4 以降
--   従来の Exchange Online Dedicated 環境のテナントの場合:    
+- Windows Phone 8 以降
+- Exchange ActiveSync (EAS) 電子メール クライアントを使用する iOS デバイス
+- Android 4 以降
+- テナント、従来の Exchange Online Dedicated 環境の場合。    
 
   Configuration Manager を Microsoft Exchange On-premises に接続する Exchange Server コネクタを使用します。 コネクタを使用すると、モバイル デバイスを管理でき、条件付きアクセスが有効になります。 詳細については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)」を参照してください。
--   新しい Exchange Online Dedicated 環境のテナントの場合:     
+- テナント新しい Exchange Online Dedicated 環境の場合。     
   Exchange Server コネクタはオプションで、Configuration Manager を Microsoft Exchange Online に接続し、デバイス情報の管理に役立ちます。 詳細については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)」を参照してください。 コンプライアンス ポリシーまたは条件付きアクセス ポリシーを使用するためにコネクタは不要です。 条件付きアクセスの影響に関するレポートを実行するには、コネクタが必要です。  
 
 ## <a name="requirements-for-exchange-on-premises"></a>Exchange On-premises の要件
@@ -118,9 +118,9 @@ Exchange On-premises に対する条件付きアクセスでは、次のデバ�
 
 > [!TIP]
 > Exchange 環境が CAS サーバー構成にある場合は、CAS サーバーのいずれかを指すようにオンプレミスの Exchange コネクタを構成する必要があります。
-- Configuration Manager を Microsoft Exchange On-premises に接続する Exchange Server コネクタを使用します。 コネクタを使用すると、モバイル デバイスを管理でき、条件付きアクセスが有効になります。 詳細については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)」を参照してください。
-  - 最新バージョンのオンプレミスの Exchange コネクタを使用していることを確認してください。 オンプレミスの Exchange コネクタは、Configuration Manager コンソールから構成します。 詳細な手順の説明については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)」を参照してください。
-  - Configuration Manager プライマリ サイトでコネクタのみを構成します。
+> - Configuration Manager を Microsoft Exchange On-premises に接続する Exchange Server コネクタを使用します。 コネクタを使用すると、モバイル デバイスを管理でき、条件付きアクセスが有効になります。 詳細については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)」を参照してください。
+>   - 最新バージョンのオンプレミスの Exchange コネクタを使用していることを確認してください。 オンプレミスの Exchange コネクタは、Configuration Manager コンソールから構成します。 詳細な手順の説明については、「[System Center Configuration Manager と Exchange によるモバイル デバイスの管理](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)」を参照してください。
+>   - Configuration Manager プライマリ サイトでコネクタのみを構成します。
 
 - Exchange ActiveSync は、証明書ベースの認証またはユーザーの資格情報のエントリで構成できます。
 
@@ -137,31 +137,31 @@ Skype for Business Online の[先進認証](https://aka.ms/SkypeModernAuth)を�
 
 ## <a name="requirements-for-sharepoint-online"></a>SharePoint Online の要件
 SharePoint Online への条件付きアクセスでは、次を実行するデバイスがサポートされます。
- -   Windows 8.1 以降 (Intune に登録されている場合)
- -   Windows 7.0 または Windows 8.1 (ドメインに参加している場合)
- -   Windows Phone 8.1 以降
- -   iOS 7.1 以降
- -   Android 4.0 以降、Samsung KNOX Standard 4.0 以降
+- Windows 8.1 以降 (Intune に登録されている場合)
+- Windows 7.0 または Windows 8.1 (ドメインに参加している場合)
+- Windows Phone 8.1 以降
+- iOS 7.1 以降
+- Android 4.0 以降、Samsung KNOX Standard 4.0 以降
 
- **補足**:
- -   デバイスをワークプレース参加させる必要があります。ワークプレース参加させると、デバイスは Azure Active Directory Device Registration Service (AAD DRS) に登録されます。
+  **補足**:
+- デバイスをワークプレース参加させる必要があります。ワークプレース参加させると、デバイスは Azure Active Directory Device Registration Service (AAD DRS) に登録されます。
 
- ドメインに参加した PC は、グループ ポリシーまたは MSI によって自動的に Azure Active Directory に登録されるはずです。 この記事の「**PC の条件付きアクセス**」セクションに、PC の条件付きアクセスを有効にするためのすべての要件が説明されています。
+  ドメインに参加した PC は、グループ ポリシーまたは MSI によって自動的に Azure Active Directory に登録されるはずです。 この記事の「**PC の条件付きアクセス**」セクションに、PC の条件付きアクセスを有効にするためのすべての要件が説明されています。
 
- AAD DRS は、Microsoft Intune や Office 365 のお客様に対して自動的にアクティブ化されます。 ADFS Device Registration Service を展開済みのお客様には、オンプレミスの Active Directory で登録されたデバイスは表示されません。
- -   SharePoint Online サブスクリプションが必要です。ユーザーには、SharePoint Online のライセンスが必要です。
+  AAD DRS は、Microsoft Intune や Office 365 のお客様に対して自動的にアクティブ化されます。 ADFS Device Registration Service を展開済みのお客様には、オンプレミスの Active Directory で登録されたデバイスは表示されません。
+- SharePoint Online サブスクリプションが必要です。ユーザーには、SharePoint Online のライセンスが必要です。
 
- ### <a name="conditional-access-for-pcs"></a>PC の条件付きアクセス
+  ### <a name="conditional-access-for-pcs"></a>PC の条件付きアクセス
 
- Office デスクトップ アプリケーションを実行する PC に対して条件付きアクセスを構成し、Exchange Online または SharePoint Online にアクセスすることができます。 PC は、次の要件を満たす必要があります。
- -   Windows 7.0 または Windows 8.1 を実行している PC であること
- -   ドメインに参加しているか、ドメイン対応の PC であること
+  Office デスクトップ アプリケーションを実行する PC に対して条件付きアクセスを構成し、Exchange Online または SharePoint Online にアクセスすることができます。 PC は、次の要件を満たす必要があります。
+- Windows 7.0 または Windows 8.1 を実行している PC であること
+- ドメインに参加しているか、ドメイン対応の PC であること
 
- 準拠するためには、PC は Microsoft Intune に登録済みで、ポリシーに準拠している必要があります。
+  準拠するためには、PC は Microsoft Intune に登録済みで、ポリシーに準拠している必要があります。
 
- ドメインに参加する PC の場合、Azure Active Directory に [デバイスを自動的に登録](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) するように設定する必要があります。
- -   [Office 365 の最新の認証が有効化](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/)されていて、最新の Office 更新プログラムがすべて適用されている必要があります。<br />     最新の認証により、Active Directory Authentication Library (ADAL) ベースのサインインが Office 2013 Windows クライアントに導入され、多要素認証および証明書ベースの認証などのより強力なセキュリティが有効になります。
- -   最新ではない認証プロトコルをブロックするように ADFS 要求規則を設定します。  
+  ドメインに参加する PC の場合、Azure Active Directory に [デバイスを自動的に登録](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) するように設定する必要があります。
+- [Office 365 の最新の認証が有効化](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/)されていて、最新の Office 更新プログラムがすべて適用されている必要があります。<br />     最新の認証により、Active Directory Authentication Library (ADAL) ベースのサインインが Office 2013 Windows クライアントに導入され、多要素認証および証明書ベースの認証などのより強力なセキュリティが有効になります。
+- 最新ではない認証プロトコルをブロックするように ADFS 要求規則を設定します。  
 
 ## <a name="next-steps"></a>次のステップ  
  必要なシナリオのコンプライアンス ポリシーと条件付きアクセス ポリシーを構成する方法については、次のトピックを参照してください。  
