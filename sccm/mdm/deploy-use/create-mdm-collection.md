@@ -10,16 +10,16 @@ ms.assetid: d1b4337f-85e8-45e6-8bbe-9f18b49041c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d271499baf48364fe24a8961cae767c46d05a332
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 8aba9fb658072ce4eaa2e4b2a364cf2b52f9c51b
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346306"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414652"
 ---
 # <a name="create-an-mdm-collection-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用した MDM コレクションの作成
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 デバイスを管理対象に登録できるユーザーを指定するには、Configuration Manager ユーザー コレクションが必要です。 Intune のライセンスはユーザーごとに割り当てられるため、使用できるのはユーザー コレクション (デバイス コレクションではなく) のみです。
 
@@ -31,4 +31,4 @@ ms.locfileid: "32346306"
 ![MDM のユーザー コレクションを作成する](../media/mdm-create-user-collection.png)
 
 > [!div class="button"]
-[次のステップ >](confirm-dns.md)
+> [次のステップ >](confirm-dns.md)
