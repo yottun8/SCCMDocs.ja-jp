@@ -10,16 +10,16 @@ ms.assetid: f0a78038-ea22-4826-9c07-1771b7dd2e8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5d00b1efd02d3b096a0b64033b450f0da949eeb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 19b55204566c49c95e76a3eff3f88206df553e13
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349461"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416165"
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager でアプリ構成ポリシーを使用し、iOS アプリに設定を適用する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 
 System Center Configuration Manager (Configuration Manager) のアプリ構成ポリシーを使用し、ユーザーがアプリを実行するときに必要となるような設定を配布できます。 たとえば、アプリで次のような詳細の指定がユーザーに要求されます。
@@ -44,11 +44,11 @@ System Center Configuration Manager (Configuration Manager) のアプリ構成�
 1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]**、**[アプリケーション管理]**、**[アプリ構成ポリシー]** の順に選択します。
 2. **[ホーム]** タブの **[アプリ構成ポリシー]** グループで、**[新しいアプリケーション構成ポリシーを作成します]** を選択します。
 3. アプリ構成ポリシーの作成ウィザードの **[全般]** ページで、ポリシーの次の情報を設定します。
-  - **名前**。 ポリシーの一意の名前を入力します。
-  - **説明**。 (オプション) ポリシーの識別を簡単にするために、説明を追加できます。
-  - **検索とフィルター処理を向上させるために割り当てたカテゴリ**。 (オプション) カテゴリを作成し、ポリシーに割り当てるには、**[カテゴリ]** を選択します。 カテゴリを利用すると、Configuration Manager コンソールの項目を並べ替えたり、検索したりするときに便利です。
+   - **名前**。 ポリシーの一意の名前を入力します。
+   - **説明**。 (オプション) ポリシーの識別を簡単にするために、説明を追加できます。
+   - **検索とフィルター処理を向上させるために割り当てたカテゴリ**。 (オプション) カテゴリを作成し、ポリシーに割り当てるには、**[カテゴリ]** を選択します。 カテゴリを利用すると、Configuration Manager コンソールの項目を並べ替えたり、検索したりするときに便利です。
 4. **[iOS ポリシー]** ページで、構成ポリシー情報の設定方法を選択します。
-  - **名前と値のペアを指定します**。 入れ子を利用しないプロパティ リスト ファイルにこのオプションを利用できます。
+   - **名前と値のペアを指定します**。 入れ子を利用しないプロパティ リスト ファイルにこのオプションを利用できます。
 
       *名前と値のペアを指定するには*
         1. 新しいペアを追加するには、**[新規作成]** を選択します。
@@ -57,13 +57,13 @@ System Center Configuration Manager (Configuration Manager) のアプリ構成�
             - **名前**。 値を指定するプロパティ リスト キーの名前を入力します。
             - **値**。 入力したキーに適用する値を入力します。
 
-  - **プロパティ リスト ファイルを参照する** アプリ構成 XML ファイルを既に用意している場合、あるいは入れ子を利用するより複雑なファイルに対してこのオプションを使用します。
+   - **プロパティ リスト ファイルを参照する** アプリ構成 XML ファイルを既に用意している場合、あるいは入れ子を利用するより複雑なファイルに対してこのオプションを使用します。
 
-    *プロパティ リスト ファイルを参照するには*
+     *プロパティ リスト ファイルを参照するには*
 
-      1.  **[アプリ構成ポリシー]** フィールドで、正しい XML 形式でプロパティ リスト情報を入力します。
+     1. **[アプリ構成ポリシー]** フィールドで、正しい XML 形式でプロパティ リスト情報を入力します。
 
-      XML プロパティ リストの詳細については、iOS 開発者ライブラリの [XML プロパティ リスト](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html)に関するページを参照してください。
+        XML プロパティ リストの詳細については、iOS 開発者ライブラリの [XML プロパティ リスト](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html)に関するページを参照してください。
 
 XML プロパティ リストの形式は、構成するアプリによって異なります。 使う形式について詳しくは、アプリの供給元にお問い合わせください。
 Intune は、プロパティ リストの次のデータ型をサポートしています。

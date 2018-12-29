@@ -10,30 +10,30 @@ ms.assetid: c3cf9f64-c2b9-4ace-9527-2aba6d4eef04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc3efe5438d583bc5d850261a1bb80253a608c6c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 0a24edacba97dcce91057e2403585a0843a4b212
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348421"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424427"
 ---
 # <a name="install-site-system-roles-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミス モバイル デバイス管理のサイト システムの役割のインストール
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager のオンプレミス モバイル デバイス管理では、Configuration Manager サイト インフラストラクチャに次のサイト システムの役割を必要とします。  
 
--   登録ポイント  
+- 登録ポイント  
 
--   登録プロキシ ポイント  
+- 登録プロキシ ポイント  
 
--   配布ポイント  
+- 配布ポイント  
 
--   デバイス管理ポイント  
+- デバイス管理ポイント  
 
--   [サービス接続ポイント]  
+- [サービス接続ポイント]  
 
- ほとんどの PC とデバイスを Configuration Manager クライアント ソフトウェアを使用して管理している組織にオンプレミス モバイル デバイス管理を追加する場合、ほとんどのサイト システムの役割が既存のインフラストラクチャの一部として既にインストールされている可能性があります。 インストールされていない場合、「[System Center Configuration Manager のサイト システム役割の追加](../../core/servers/deploy/configure/add-site-system-roles.md)」を参照してください。サイトに追加する方法をご確認いただけます。  
+  ほとんどの PC とデバイスを Configuration Manager クライアント ソフトウェアを使用して管理している組織にオンプレミス モバイル デバイス管理を追加する場合、ほとんどのサイト システムの役割が既存のインフラストラクチャの一部として既にインストールされている可能性があります。 インストールされていない場合、「[System Center Configuration Manager のサイト システム役割の追加](../../core/servers/deploy/configure/add-site-system-roles.md)」を参照してください。サイトに追加する方法をご確認いただけます。  
 
 > [!NOTE]  
 >  デバイス管理ポイント サイト システムの役割を持つデータベース レプリカを使用する場合、新しく登録されたデバイスは、データベース レプリカがデバイス管理ポイントと同期するまでの間、デバイス管理ポイントへの接続に失敗します。 この接続エラーは、正常に接続するために必要な、新しく登録されたデバイスに関する情報が、データベース レプリカにないために発生します。 レプリカは 5 分ごとに同期するため、デバイスが接続に失敗するのは、登録後の最初の 5 分間です (通常、2 回の接続試行)。その後、デバイスは正常に接続します。  
@@ -45,25 +45,25 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 
 ### <a name="to-configure-site-system-roles-to-manage-modern-devices"></a>最新のデバイスを管理するようサイト システムの役割を構成するには:  
 
-1.  Configuration Manager コンソールで、**[管理]**、**[概要]**、**[サイトの構成]**、**[サーバーとサイト システムの役割]** の順にクリックします。  
+1. Configuration Manager コンソールで、**[管理]**、**[概要]**、**[サイトの構成]**、**[サーバーとサイト システムの役割]** の順にクリックします。  
 
-2.  構成する配布ポイントまたはデバイス管理ポイントとともにサイト システムのサーバーを選択し、**[サイト システム]** のプロパティを開き、FQDN が指定されていることを確認します。 **[OK]** をクリックします。  
+2. 構成する配布ポイントまたはデバイス管理ポイントとともにサイト システムのサーバーを選択し、**[サイト システム]** のプロパティを開き、FQDN が指定されていることを確認します。 **[OK]** をクリックします。  
 
-3.  配布ポイント サイト システムの役割のプロパティを開きます。 [全般] タブで、**[HTTPS]** が選択されていることを確認し、**[イントラネットのみのクライアント接続を許可する]** を選択します。  
+3. 配布ポイント サイト システムの役割のプロパティを開きます。 [全般] タブで、**[HTTPS]** が選択されていることを確認し、**[イントラネットのみのクライアント接続を許可する]** を選択します。  
 
-     Configuration Manager クライアントとともに Mac コンピューターも別に管理している場合、代わりに **[イントラネットとインターネットの接続を許可する]** を使用します。  
+    Configuration Manager クライアントとともに Mac コンピューターも別に管理している場合、代わりに **[イントラネットとインターネットの接続を許可する]** を使用します。  
 
-    > [!NOTE]  
-    >  イントラネット接続用に構成された配布ポイントに対しては、サイトの境界を構成する必要があります。 Configuration Manager の現在のブランチは、オンプレミス モバイル デバイス管理に関して、IPv4 境界のみをサポートしています。 サイト境界構成については、「[System Center Configuration Manager のサイト境界と境界グループの定義](../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)」を参照してください。  
+   > [!NOTE]  
+   >  イントラネット接続用に構成された配布ポイントに対しては、サイトの境界を構成する必要があります。 Configuration Manager の現在のブランチは、オンプレミス モバイル デバイス管理に関して、IPv4 境界のみをサポートしています。 サイト境界構成については、「[System Center Configuration Manager のサイト境界と境界グループの定義](../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)」を参照してください。  
 
-4.  **[モバイル デバイスがこの配布ポイントに接続するのを許可する]** の横にあるチェック ボックスをクリックし、**[OK]** をクリックします。  
+4. **[モバイル デバイスがこの配布ポイントに接続するのを許可する]** の横にあるチェック ボックスをクリックし、**[OK]** をクリックします。  
 
-5.  管理ポイント サイト システムの役割のプロパティを開きます。 [全般] タブで、**[HTTPS]** が選択されていることを確認し、**[イントラネットのみのクライアント接続を許可する]** を選択します。  
+5. 管理ポイント サイト システムの役割のプロパティを開きます。 [全般] タブで、**[HTTPS]** が選択されていることを確認し、**[イントラネットのみのクライアント接続を許可する]** を選択します。  
 
-     Configuration Manager クライアントとともに Mac コンピューターも別に管理している場合、代わりに **[イントラネットとインターネットの接続を許可する]** を使用します。  
+    Configuration Manager クライアントとともに Mac コンピューターも別に管理している場合、代わりに **[イントラネットとインターネットの接続を許可する]** を使用します。  
 
-6.  **[モバイル デバイスおよび Mac コンピューターでこの管理ポイントを使用できるようにする]** の横にあるチェック ボックスをクリックします。 **[OK]** をクリックします。  
+6. **[モバイル デバイスおよび Mac コンピューターでこの管理ポイントを使用できるようにする]** の横にあるチェック ボックスをクリックします。 **[OK]** をクリックします。  
 
-     これにより実際、管理ポイントがデバイス管理ポイントに変換されます。  
+    これにより実際、管理ポイントがデバイス管理ポイントに変換されます。  
 
- 最新のデバイスを管理するためのサイト システムの役割を追加して構成したら、管理対象のデバイスを登録して通信するために、信頼されるエンドポイントとしてそれらの役割をホストするサーバーを構成する必要があります。 詳細については、「[System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために信頼された通信用の証明書をセットアップする](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)」を参照してください。  
+   最新のデバイスを管理するためのサイト システムの役割を追加して構成したら、マネージド デバイスを登録して通信するために、信頼されるエンドポイントとしてそれらの役割をホストするサーバーを構成する必要があります。 詳細については、「[System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために信頼された通信用の証明書をセットアップする](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)」を参照してください。  

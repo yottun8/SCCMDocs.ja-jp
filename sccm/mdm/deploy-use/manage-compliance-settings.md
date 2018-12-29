@@ -10,16 +10,16 @@ ms.assetid: 9e83007f-e81c-4b7e-b47e-b01d7b19cfbc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 012539cd5879691f0e42910c72cb03052e77b722
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 5f6ee6ae8d059905e8cda08fec3d75deff177163
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351447"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418545"
 ---
 # <a name="managing-compliance-on-devices-managed-with-intune"></a>Intune で管理されているデバイスでコンプライアンスを管理する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 以下のシナリオでは、一般的なシナリオに従って作業することで、System Center Configuration Manager コンプライアンス設定を使用する方法の概要を説明します。  
 
@@ -40,83 +40,83 @@ ms.locfileid: "32351447"
 
 ## <a name="scenarios-for-windows-81-and-windows-10-devices-managed-with-intune"></a>Intune で管理されている Windows 8.1 および Windows 10 デバイスのシナリオ  
 
-### <a name="scenario-restrict-access-to-the-app-store-on-all-windows-pcs"></a>シナリオ: すべての Windows PC でアプリ ストアへのアクセスを制限する  
+### <a name="scenario-restrict-access-to-the-app-store-on-all-windows-pcs"></a>シナリオ:すべての Windows Pc でアプリ ストアへのアクセスを制限します。  
  このシナリオでは、あなたは機密性の高い情報を処理する会社の IT 管理者です。 このため、ユーザーがインストールできるアプリを制限します。 Windows 10 PC のすべてのユーザーについて、Windows ストアからのアプリのダウンロードを禁止するために、次の操作を実行します。  
 
-1.  構成項目の作成ウィザードの **[全般]** ページで、構成項目の種類として **[Windows 8.1 および Windows 10]** を選択し、 **[次へ]** をクリックします。  
+1. 構成項目の作成ウィザードの **[全般]** ページで、構成項目の種類として **[Windows 8.1 および Windows 10]** を選択し、 **[次へ]** をクリックします。  
 
-2.  **[サポートされているプラットフォーム]** ページで、すべての Windows 10 プラットフォームを選択します。  
+2. **[サポートされているプラットフォーム]** ページで、すべての Windows 10 プラットフォームを選択します。  
 
-3.  **[デバイス設定]** ページで、 **[ストア]** を選択し、 **[次へ]** をクリックします。  
+3. **[デバイス設定]** ページで、 **[ストア]** を選択し、 **[次へ]** をクリックします。  
 
-4.  **[ストア]** ページで、 **[アプリケーション ストア]** の値として **[禁止]** を選択します。  
+4. **[ストア]** ページで、 **[アプリケーション ストア]** の値として **[禁止]** を選択します。  
 
-5.  **[対応していない設定を修復する]** を選択して、変更がすべての PC に確実に適用されるようにします。  
+5. **[対応していない設定を修復する]** を選択して、変更がすべての PC に確実に適用されるようにします。  
 
-6.  ウィザードを完了して構成項目を作成します。  
+6. ウィザードを完了して構成項目を作成します。  
 
- これで、「[構成基準の作成と展開に関する一般的なタスク](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)」トピックの情報を使用して、作成した構成をデバイスに簡単に展開できるようになります。  
+   これで、「[構成基準の作成と展開に関する一般的なタスク](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)」トピックの情報を使用して、作成した構成をデバイスに簡単に展開できるようになります。  
 
 ## <a name="scenarios-for-windows-phone-devices-managed-with-intune"></a>Intune で管理されている Windows Phone デバイスのシナリオ  
 
-### <a name="scenario-disable-the-use-of-screen-capture-on-a-windows-phone"></a>シナリオ: Windows Phone で画面のキャプチャの使用を無効にする  
+### <a name="scenario-disable-the-use-of-screen-capture-on-a-windows-phone"></a>シナリオ:Windows Phone の画面のキャプチャを無効にします。  
  このシナリオでは、会社で Windows Phone 8.1 デバイスを使用します。 これらのデバイスでは、機密情報を含む販売アプリを実行します。 会社を保護するため、会社の外部への機密情報の送信に使用される可能性がある、デバイスの画面のキャプチャを使用できないようにします。  
 
-1.  構成項目の作成ウィザードの **[全般]** ページで、構成項目の種類として **[Windows Phone]** を選択し、 **[次へ]** をクリックします。  
+1. 構成項目の作成ウィザードの **[全般]** ページで、構成項目の種類として **[Windows Phone]** を選択し、 **[次へ]** をクリックします。  
 
-2.  **[サポートされているプラットフォーム]** ページで、**[すべての Windows Phone 8.1]** プラットフォームを選択します。  
+2. **[サポートされているプラットフォーム]** ページで、**[すべての Windows Phone 8.1]** プラットフォームを選択します。  
 
-3.  **[デバイス設定]** ページで、 **[デバイス]** を選択し、 **[次へ]** をクリックします。  
+3. **[デバイス設定]** ページで、 **[デバイス]** を選択し、 **[次へ]** をクリックします。  
 
-4.  **[デバイス]** ページで、 **[画面の取り込み]** の値として **[無効]** を選択します。  
+4. **[デバイス]** ページで、 **[画面の取り込み]** の値として **[無効]** を選択します。  
 
-5.  **[対応していない設定を修復する]** を選択して、変更がすべての Windows Phone 8.1 デバイスに確実に適用されるようにします。  
+5. **[対応していない設定を修復する]** を選択して、変更がすべての Windows Phone 8.1 デバイスに確実に適用されるようにします。  
 
-6.  ウィザードを完了して構成項目を作成します。  
+6. ウィザードを完了して構成項目を作成します。  
 
- これで、「[System Center Configuration Manager での構成基準の作成と展開に関する一般的なタスク](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)」トピックの情報を使用して、作成した構成をデバイスに簡単に展開できるようになります。  
+   これで、「[System Center Configuration Manager での構成基準の作成と展開に関する一般的なタスク](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)」トピックの情報を使用して、作成した構成をデバイスに簡単に展開できるようになります。  
 
 ## <a name="scenarios-for-ios-and-mac-os-x-devices-managed-with-intune"></a>Intune で管理されている iOS および Mac OS X デバイスのシナリオ  
 
-### <a name="scenario-disable-the-camera-on-ios-devices"></a>シナリオ: iOS デバイスでカメラを無効にする  
+### <a name="scenario-disable-the-camera-on-ios-devices"></a>シナリオ:IOS デバイスでカメラを無効にします。  
  このシナリオでは、会社は、新しい製品デザインのための設計図を作成しています。 ここには、漏えいしてはならない機密情報が含まれています。 会社ではすべての従業員に iPhone または iPad を支給しているため、設計図の撮影に使用されないように、これらのデバイスのカメラを使用できないようにします。  
 
-1.  構成項目の作成ウィザードの **[全般]** ページで、構成項目の種類として **[iOS および Mac OS X]** を選択し、 **[次へ]** をクリックします。  
+1. 構成項目の作成ウィザードの **[全般]** ページで、構成項目の種類として **[iOS および Mac OS X]** を選択し、 **[次へ]** をクリックします。  
 
-2.  **[サポートされているプラットフォーム]** ページで、すべての iPhone および iPad デバイスのプラットフォームを選択します。  
+2. **[サポートされているプラットフォーム]** ページで、すべての iPhone および iPad デバイスのプラットフォームを選択します。  
 
-3.  **[デバイス設定]** ページで、 **[セキュリティ]** を選択し、 **[次へ]** をクリックします。  
+3. **[デバイス設定]** ページで、 **[セキュリティ]** を選択し、 **[次へ]** をクリックします。  
 
-4.  **[セキュリティ]** ページで、 **[カメラ]** の値として **[禁止]** を選択します。  
+4. **[セキュリティ]** ページで、 **[カメラ]** の値として **[禁止]** を選択します。  
 
-5.  **[対応していない設定を修復する]** を選択して、変更がすべての iOS デバイスに確実に適用されるようにします。  
+5. **[対応していない設定を修復する]** を選択して、変更がすべての iOS デバイスに確実に適用されるようにします。  
 
-6.  ウィザードを完了して構成項目を作成します。  
+6. ウィザードを完了して構成項目を作成します。  
 
- これで、「[System Center Configuration Manager での構成基準の作成と展開に関する一般的なタスク](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)」トピックの情報を使用して、作成した構成をデバイスに簡単に展開できるようになります。  
+   これで、「[System Center Configuration Manager での構成基準の作成と展開に関する一般的なタスク](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)」トピックの情報を使用して、作成した構成をデバイスに簡単に展開できるようになります。  
 
 ## <a name="scenarios-for-android-and-samsung-knox-standard-devices-managed-with-intune"></a>Intune で管理されている Android デバイスと Samsung KNOX Standard デバイスのシナリオ  
 
-### <a name="scenario-require-a-password-on-all-android-5-devices"></a>シナリオ: すべての Android 5 デバイスでパスワードを要求する  
+### <a name="scenario-require-a-password-on-all-android-5-devices"></a>シナリオ:すべての Android 5 デバイスでパスワードを要求します。  
  このシナリオでは、Android 5 デバイスに対してのみ、デバイスで 6 文字以上のパスワードを構成するようにユーザーに要求する構成アイテムを作成します。 さらに、ユーザーが 5 回正しくないパスワードを入力すると、デバイスがワイプされます。  
 
-1.  構成項目の作成ウィザードの **[全般]** ページで、構成項目の種類として **[Android および Samsung KNOX]** を選択し、 **[次へ]** をクリックします。  
+1. 構成項目の作成ウィザードの **[全般]** ページで、構成項目の種類として **[Android および Samsung KNOX]** を選択し、 **[次へ]** をクリックします。  
 
-2.  **[サポートされているプラットフォーム]** ページで、**[Android 5]** のみを選択します (設定がこのプラットフォームにのみ適用されるようにするため)。  
+2. **[サポートされているプラットフォーム]** ページで、**[Android 5]** のみを選択します (設定がこのプラットフォームにのみ適用されるようにするため)。  
 
-3.  **[デバイス設定]** ページで、 **[パスワード]** を選択し、 **[次へ]** をクリックします。  
+3. **[デバイス設定]** ページで、 **[パスワード]** を選択し、 **[次へ]** をクリックします。  
 
-4.  **[パスワード]** ページで、次の設定を構成します。  
+4. **[パスワード]** ページで、次の設定を構成します。  
 
-    -   **[デバイスのパスワードの設定が必要]** > **[必須]**  
+   -   **[デバイスのパスワードの設定が必要]** > **[必須]**  
 
-    -   **[パスワードの最小文字数]** > **6**  
+   -   **[パスワードの最小文字数]** > **6**  
 
-    -   **[デバイスをワイプするまでのログオン失敗回数]** > **5**  
+   -   **[デバイスをワイプするまでのログオン失敗回数]** > **5**  
 
-5.  ウィザードを完了して構成項目を作成します。  
+5. ウィザードを完了して構成項目を作成します。  
 
- これで、「[構成基準の作成と展開に関する一般的なタスク](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)」トピックの情報を使用して、作成した構成をデバイスに簡単に展開できるようになります。  
+   これで、「[構成基準の作成と展開に関する一般的なタスク](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)」トピックの情報を使用して、作成した構成をデバイスに簡単に展開できるようになります。  
 
 ## <a name="configuration-items-for-devices-managed-with-intune"></a>Intune で管理されているデバイスの構成項目
 

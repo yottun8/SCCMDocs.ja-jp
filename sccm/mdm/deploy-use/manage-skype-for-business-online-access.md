@@ -10,16 +10,16 @@ ms.assetid: 71c44250-626e-482c-8794-434c6aeb2fb1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a88706233e85be6960585963c26bd740e9ff6ed
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: f5a03629fdea4a8fc496db624d0b32657d9bec83
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348268"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419106"
 ---
 # <a name="manage-skype-for-business-online-access"></a>Skype for Business Online のアクセスの管理
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象します。System Center Configuration Manager (Current Branch)*
 
 
 Skype for Business Online の条件付きアクセス ポリシーを使用して、Skype for Business Online へのアクセスを指定条件に基づいて管理します。  
@@ -29,28 +29,28 @@ Skype for Business Online の条件付きアクセス ポリシーを使用し�
 
 ## <a name="prerequisites"></a>[前提条件]  
 
--   Skype for Business Online の[先進認証](https://aka.ms/SkypeModernAuth)を有効にします。   
+- Skype for Business Online の[先進認証](https://aka.ms/SkypeModernAuth)を有効にします。   
 
--   すべてのユーザーが Skype for Business Online を使用する必要があります。 Skype for Business Online と Skype for Business オンプレミスの両方が含まれている展開の場合は、条件付きアクセス ポリシーはオンプレミスのユーザーに適用されません。  
+- すべてのユーザーが Skype for Business Online を使用する必要があります。 Skype for Business Online と Skype for Business オンプレミスの両方が含まれている展開の場合は、条件付きアクセス ポリシーはオンプレミスのユーザーに適用されません。  
 
--   Skype for Business Online へのアクセスを必要とするデバイスは次の条件を満たしている必要があります。  
+- Skype for Business Online へのアクセスを必要とするデバイスは次の条件を満たしている必要があります。  
 
-    -   Android または iOS デバイスである
+  -   Android または iOS デバイスである
 
-    -   Microsoft Intune に登録されている
+  -   Microsoft Intune に登録されている
 
-    -   展開されているすべての Intune コンプライアンス ポリシーに準拠している
+  -   展開されているすべての Intune コンプライアンス ポリシーに準拠している
 
- デバイスの状態は、Azure Active Directory に格納され、指定した条件に基づいてアクセスが許可されたりブロックされたりします。  
-条件が満たされない場合、ユーザーにはログイン時に以下のうちのいずれかのメッセージが表示されます。  
+  デバイスの状態は、Azure Active Directory に格納され、指定した条件に基づいてアクセスが許可されたりブロックされたりします。  
+  条件が満たされない場合、ユーザーにはログイン時に以下のうちのいずれかのメッセージが表示されます。  
 
--   デバイスが Microsoft Intune または Azure Active Directory に登録されていない場合は、ポータル サイト アプリをインストールおよび登録する方法に関する指示が表示されます。  
+- デバイスが Microsoft Intune または Azure Active Directory に登録されていない場合は、ポータル サイト アプリをインストールおよび登録する方法に関する指示が表示されます。  
 
--   デバイスが準拠していない場合、デバイスをポータル Web サイトまたはポータル サイト アプリに誘導するメッセージがユーザーに表示されます。 ポータル サイトには、問題とその修復方法に関する情報があります。  
+- デバイスが準拠していない場合、デバイスをポータル Web サイトまたはポータル サイト アプリに誘導するメッセージがユーザーに表示されます。 ポータル サイトには、問題とその修復方法に関する情報があります。  
 
 ## <a name="configure-conditional-access-for-skype-for-business-online"></a>Skype for Business Online の条件付きアクセスの構成  
 
-### <a name="step-1-configure-active-directory-security-groups"></a>手順 1. Active Directory セキュリティ グループを構成する  
+### <a name="step-1-configure-active-directory-security-groups"></a>手順 1:Active Directory セキュリティ グループを構成します。  
  開始する前に、条件付きアクセス ポリシーの Azure Active Directory セキュリティ グループを構成します。 Office 365 管理センターでこれらのグループを構成します。 これらのグループには、ポリシーの対象となるユーザーまたはポリシーから除外するユーザーが含まれています。 ユーザーがポリシーの対象となる場合、ユーザーに使用される各デバイスがリソースにアクセスするには、ポリシーを遵守している必要があります。  
 
  Skype for Business ポリシーに適用する 2 つのグループの種類を指定できます。  
@@ -60,7 +60,7 @@ Skype for Business Online の条件付きアクセス ポリシーを使用し�
 -   **例外グループ**: ポリシーから除外するユーザーを含みます。  
     ユーザーが両方のグループに含まれている場合、それらのユーザーは除外対象となります。  
 
-### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>手順 2:コンプライアンス ポリシーを構成し展開する  
+### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>手順 2:構成し、コンプライアンス ポリシーの展開  
  コンプライアンス ポリシーを作成して、Skype for Business Online ポリシーの対象となるすべてのデバイスに展開します。  
 
  コンプライアンス ポリシーを構成する方法の詳細については、[デバイス コンプライアンス ポリシーの管理](../../protect/deploy-use/device-compliance-policies.md)に関するページを参照してください。  
@@ -69,28 +69,28 @@ Skype for Business Online の条件付きアクセス ポリシーを使用し�
 >  コンプライアンス ポリシーを展開していない場合に Skype for Business Online ポリシーを有効にすると、Microsoft Intune に登録されているすべての対象デバイスにアクセスが許可されます。  
 
 
-### <a name="step-3-configure-the-skype-for-business-online-policy"></a>手順 3: Skype for Business Online ポリシーを構成する  
+### <a name="step-3-configure-the-skype-for-business-online-policy"></a>手順 3:Skype for Business Online ポリシーを構成します。  
  管理対象の準拠デバイスのみが Skype for Business Online にアクセスできるようにポリシーを構成します。 このポリシーは、Azure Active Directory に格納されます。  
 
-1.  [Microsoft Intune 管理コンソール](https://manage.microsoft.com)で、 **[ポリシー]** > **[条件付きアクセス]** > **Skype for Business Online [ポリシー]**」を参照してください。  
+1. [Microsoft Intune 管理コンソール](https://manage.microsoft.com)で、 **[ポリシー]** > **[条件付きアクセス]** > **Skype for Business Online [ポリシー]**」を参照してください。  
 
-     ![ConditionalAccess&#95;SFBPolicy](media/ConditionalAccess_SFBPolicy.png)  
+    ![ConditionalAccess&#95;SFBPolicy](media/ConditionalAccess_SFBPolicy.png)  
 
-2.  **[条件付きアクセス ポリシーを有効にする]** を選択します。  
+2. **[条件付きアクセス ポリシーを有効にする]** を選択します。  
 
-3.  **[アプリケーション アクセス]** で、条件付きアクセス ポリシーの適用対象を次の中から選択できます。  
+3. **[アプリケーション アクセス]** で、条件付きアクセス ポリシーの適用対象を次の中から選択できます。  
 
-    -   iOS  
+   -   iOS  
 
-    -   Android  
+   -   Android  
 
-4.  **[対象グループ]** で、**[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。 すべてのユーザーを対象にすることも、選んだユーザー グループのみを対象にすることもできます。  
+4. **[対象グループ]** で、**[変更]** をクリックして、ポリシーを適用する Azure Active Directory セキュリティ グループを選択します。 すべてのユーザーを対象にすることも、選んだユーザー グループのみを対象にすることもできます。  
 
-5.  **[例外グループ]** で、必要に応じて **[変更]** をクリックして、このポリシーから除外する Azure Active Directory セキュリティ グループを選択します。  
+5. **[例外グループ]** で、必要に応じて **[変更]** をクリックして、このポリシーから除外する Azure Active Directory セキュリティ グループを選択します。  
 
-6.  終了したら、 **[保存]** をクリックします。  
+6. 終了したら、 **[保存]** をクリックします。  
 
- これで Skype for Business Online の条件付きアクセスの構成が完了します。 条件付きアクセス ポリシーを展開する必要はありません。直ちに有効になります。  
+   これで Skype for Business Online の条件付きアクセスの構成が完了します。 条件付きアクセス ポリシーを展開する必要はありません。直ちに有効になります。  
 
 ## <a name="monitor-the-compliance-and-conditional-access-policies"></a>コンプライアンスと条件付きアクセス ポリシーを監視する  
  [グループ] ワークスペースで、デバイスの条件付きアクセスの状態を表示できます。  
