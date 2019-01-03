@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 962029dc6bc5584e1edf0bd26d4be3fc280d6204
-ms.sourcegitcommit: 147aae8300831c722a559087c735df0f761b2041
+ms.openlocfilehash: 43093f38a2769c46d3d96a51afbf47f33ed38b51
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51645244"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423798"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager のサポートされている SQL Server バージョン
 
@@ -78,10 +78,10 @@ SQL Server のトランザクション レプリケーションは、[データ�
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017: Standard、Enterprise  
 [Configuration Manager バージョン 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) 以降では次のサイトの最小の[累積的な更新プログラム バージョン 2](https://support.microsoft.com/help/4052574) で、このバージョンの SQL Server を使用できます。 
 
--   中央管理サイト  
--   プライマリ サイト  
--   セカンダリ サイト  
-<!--SMS.498506-->
+- 中央管理サイト  
+- プライマリ サイト  
+- セカンダリ サイト  
+  <!--SMS.498506-->
 
 ### <a name="sql-server-2016-sp2-standard-enterprise"></a>SQL Server 2016 SP2: Standard、Enterprise  
 <!--514985--> 次のサイトの累積的な更新プログラムの最小バージョンなしで、このバージョンの SQL Server を使用できます。  
@@ -187,7 +187,7 @@ SQL Server のトランザクション レプリケーションは、[データ�
  Configuration Manager には、サイト データベースをホストするために 64 ビット版の SQL Server が必要です。  
 
 ### <a name="database-collation"></a>データベース照合順序  
- 各サイトでは、サイトとサイト データベースの両方に使用される SQL Server のインスタンスが、 **SQL_Latin1_General_CP1_CI_AS**の照合順序を使用する必要があります。  
+ 各サイトで、そのサイトに使用される SQL Server のインスタンスとサイト データベースの両方が次の照合順序を使用する必要があります: **SQL_Latin1_General_CP1_CI_AS**。  
 
  Configuration Manager は、GB18030 で定義されている中国で使用するための標準を満たすために、この照合順序に対して 2 つの例外をサポートしています。 詳細については、「[インターナショナル サポート](/sccm/core/plan-design/hierarchy/international-support)」をご覧ください。  
 
@@ -208,15 +208,15 @@ SQL Server のトランザクション レプリケーションは、[データ�
 ### <a name="sql-server-memory"></a>SQL Server のメモリ  
  SQL Server Management Studio を使用して、 **[サーバー メモリ オプション]** で **[最小サーバー メモリ]** 設定を指定して、SQL Server のメモリを予約します。 この設定を構成する方法について詳しくは、[SQL Server メモリに関するサーバー構成オプション](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options)に関するページをご覧ください。  
 
--   **サイト サーバーと同じコンピューターにインストールされたデータベース サーバーの場合**: SQL Server 用のメモリをアドレス可能なシステム メモリの 50% から 80% に制限します。  
+-   **データベース サーバーがサイト サーバーと同じコンピューターにインストールされている場合**: SQL Server 用のメモリをアドレス指定可能なシステム メモリの 50% から 80% に制限します。  
 
--   **専用データベース サーバー (サイト サーバーからリモート) の場合**: SQL Server 用のメモリをアドレス指定可能なシステム メモリの 80% から 90% に制限します。  
+-   **専用データベース サーバーの場合 (サイト サーバーからリモート)**: SQL Server 用のメモリをアドレス指定可能なシステム メモリの 80% から 90% に制限します。  
 
 -   **使用中の各 SQL Server インスタンスのバッファー プール用のメモリ予約の場合**:  
 
-    -   中央管理サイト: 最小で 8 ギガバイト (GB) に設定  
-    -   プライマリ サイト: 最小で 8 ギガバイト (GB) に設定  
-    -   セカンダリ サイト: 最小で 4 ギガバイト (GB) に設定  
+    -   中央管理サイトの場合: 最小で 8 ギガバイト (GB) に設定します。  
+    -   プライマリ サイトの場合: 最小で 8 ギガバイト (GB) に設定します。  
+    -   セカンダリ サイトの場合: 最小で 4 ギガバイト (GB) に設定します。  
 
 ### <a name="sql-nested-triggers"></a>SQL の入れ子になったトリガー  
  SQL の入れ子になったトリガーを有効にする必要があります。 詳細については、「[nested triggers サーバー構成オプションの構成](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option)」をご覧ください。 
@@ -252,7 +252,7 @@ SQL Server サービスで使用されるアカウントを変更する方法に
 レポートを実行できるようにするレポート サービス ポイントをインストールするには、SQL Server Reporting Services が必要です。  
 
 > [!IMPORTANT]  
-> 以前のバージョンから SQL Server をアップグレードした後、「*Report Builder Does Not Exist*」 (レポート ビルダーが存在しません) というエラーが表示されることがあります。  
+> 以前のバージョンから SQL Server をアップグレードした後に、「*Report Builder Does Not Exist*」 (レポート ビルダーが存在しません) というエラーが表示されることがあります。  
 > このエラーを解決するには、レポート サービス ポイント サイト システムの役割を再インストールする必要があります。  
 
 ### <a name="sql-server-ports"></a>SQL Server のポート  

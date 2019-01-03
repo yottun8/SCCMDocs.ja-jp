@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7ff6d885ca635e15c62eddcdfa06abdc1a09cdf8
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 2d51774688b80faf808653cde77aa3b651ea210c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456602"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422591"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Configuration Manager をサポートするオンプレミス インフラストラクチャのアップグレード
 
@@ -55,7 +55,7 @@ Configuration Manager では、次の状況で、サイト サーバーと任意
 
 - [Windows Server 2016 のアップグレードと変換オプション](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths)  
 
-- [Windows Server 2012 R2 のアップグレード オプション](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416\(v=ws.11)   
+- [Windows Server 2012 R2 のアップグレード オプション](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))   
 
 
 ### <a name="bkmk_2016-2019"></a> Windows Server 2016 または 2019 へのアップグレード
@@ -128,9 +128,9 @@ Configuration Manager では、次の状況で、サイト サーバーと任意
 Windows Server 2008 R2 または Windows Server 2012 から Windows Server 2012 R2 にアップグレードする場合は、次の条件が適用されます。
 
 #### <a name="before-upgrade"></a>アップグレードの前に  
-- Windows Server 2012 で: WSUS ロールがサーバーにインストールされている場合は削除します。 SUSDB を残しておき、WSUS を再インストールした後で再アタッチできます。  
+- Windows Server 2012 の場合: WSUS ロールがサーバーにインストールされている場合は削除します。 SUSDB を残しておき、WSUS を再インストールした後で再アタッチできます。  
 
-- Windows Server 2008 R2 で: Windows Server 2012 R2 にアップグレードする前に、サーバーから WSUS 3.2 をアンインストールする必要があります。 SUSDB を残しておき、WSUS を再インストールした後で再アタッチできます。 詳細については、「[Windows Server Update Services の概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345\(v=ws.11)」を参照してください。  
+- Windows Server 2008 R2 の場合: Windows Server 2012 R2 にアップグレードする前に、サーバーから WSUS 3.2 をアンインストールする必要があります。 SUSDB を残しておき、WSUS を再インストールした後で再アタッチできます。 詳細については、「[Windows Server Update Services の概要](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)」をご覧ください。  
 
 #### <a name="after-upgrade"></a>アップグレードの後に  
 - アップグレード プロセスでは、Windows 展開サービスが無効化されます。 次のサイト システムの役割に対し、このサービスが開始されて実行されていることを確認します。  

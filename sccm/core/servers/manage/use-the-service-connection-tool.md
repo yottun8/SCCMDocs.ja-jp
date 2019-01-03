@@ -10,12 +10,12 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e88d40317fe0c1385d78ab7b5919f0f766254598
-ms.sourcegitcommit: 303d826f45c8fd9a05d8883afc1ca645e56bd576
+ms.openlocfilehash: 96f816e20d31315e2eaf63b5bf4a14376f3c9261
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269214"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417899"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>System Center Configuration Manager のサービス接続ツールの使用
 
@@ -59,7 +59,7 @@ ms.locfileid: "51269214"
 
  この手順では、コマンド ラインの例で、次のファイル名とフォルダーの場所を使用します (これらのパスとファイル名を使用する必要はありません。ご使用の環境や設定に一致する代替のパスとファイル名を使用できます)。  
 
--   USB スティック (サーバー間で転送するためデータが格納される場所) へのパス:  **D:\USB\\**  
+-   USB スティック (サーバー間で転送するためデータが格納される場所) へのパス: **D:\USB\\**  
 
 -   サイトからエクスポートしたデータが格納される .cab ファイルの名前: **UsageData.cab**  
 
@@ -121,51 +121,51 @@ USB ドライブに ServiceConnectionTool フォルダーとその中身をす�
 
 ### <a name="to-use-the-service-connection-tool"></a>サービス接続ツールを使用するには  
 
-1.  サービス接続ポイントをホストするコンピューターで、以下を実行します。  
+1. サービス接続ポイントをホストするコンピューターで、以下を実行します。  
 
-    -   管理者特権でコマンド プロンプトを開き、 **serviceconnectiontool.exe**を格納する場所にディレクトリを変更します。   
+   -   管理者特権でコマンド プロンプトを開き、 **serviceconnectiontool.exe**を格納する場所にディレクトリを変更します。   
 
-2.  次のコマンドを実行して、ツールで使用状況の情報を含む .cab ファイルを準備し、指定した場所にコピーします。  
+2. 次のコマンドを実行して、ツールで使用状況の情報を含む .cab ファイルを準備し、指定した場所にコピーします。  
 
-    -   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+   -   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
 
-    1 つ以上の階層から同時に複数の .cab ファイルをアップロードする場合は、フォルダー内の各 .cab ファイルの名前は一意である必要があります。 フォルダーに追加するファイルの名前は手動で変更できます。
+   1 つ以上の階層から同時に複数の .cab ファイルをアップロードする場合は、フォルダー内の各 .cab ファイルの名前は一意である必要があります。 フォルダーに追加するファイルの名前は手動で変更できます。
 
-    Configuration Manager のクラウド サービスにアップロードするために収集される使用状況情報を表示する場合は、次のコマンドを実行し、.csv ファイルとして同じデータをエクスポートすると、Excel のようなアプリケーションを使用して表示できます。  
+   Configuration Manager のクラウド サービスにアップロードするために収集される使用状況情報を表示する場合は、次のコマンドを実行し、.csv ファイルとして同じデータをエクスポートすると、Excel のようなアプリケーションを使用して表示できます。  
 
-    -   **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
+   -   **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
 
-3.  準備ステップが完了したら、インターネットに接続しているコンピューターに USB ドライブを移動します (または別の方法でエクスポートされたデータを転送します)。  
+3. 準備ステップが完了したら、インターネットに接続しているコンピューターに USB ドライブを移動します (または別の方法でエクスポートされたデータを転送します)。  
 
-4.  インターネットにアクセスできるコンピューターで、管理者特権を使用してコマンド プロンプトを開き、ツール (  **serviceconnectiontool.exe** ) とそのフォルダーのその他のファイルのコピーを格納している場所にディレクトリを変更します。  
+4. インターネットにアクセスできるコンピューターで、管理者特権を使用してコマンド プロンプトを開き、ツール (  **serviceconnectiontool.exe** ) とそのフォルダーのその他のファイルのコピーを格納している場所にディレクトリを変更します。  
 
-5.  次のコマンドを実行し、使用状況情報のアップロードと Configuration Manager の更新プログラムのダウンロードを開始します。  
+5. 次のコマンドを実行し、使用状況情報のアップロードと Configuration Manager の更新プログラムのダウンロードを開始します。  
 
-    -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
+   -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
 
-    このコマンドラインのより多くの例については、このトピックで後述する「[コマンド ライン オプション](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd)」を参照してください。
+   このコマンドラインのより多くの例については、このトピックで後述する「[コマンド ライン オプション](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd)」を参照してください。
 
-    > [!NOTE]  
-    >  Configuration Manager のクラウド サービスに接続するためのコマンド ラインを実行すると、次のようなエラーが発生する可能性があります。  
-    >   
-    >  -   ハンドルされない例外: System.UnauthorizedAccessException:  
-    >   
-    >      パス C:\  
-    >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' へのアクセスが拒否されました。  
-    >   
-    > このエラーは無視しても問題ありません。エラー ウィンドウを閉じて、続行することができます。  
+   > [!NOTE]  
+   >  Configuration Manager のクラウド サービスに接続するためのコマンド ラインを実行すると、次のようなエラーが発生する可能性があります。  
+   >   
+   >  -   ハンドルされない例外: System.UnauthorizedAccessException:  
+   >   
+   >      パス C:\  
+   >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql' へのアクセスが拒否されました。  
+   >   
+   > このエラーは無視しても問題ありません。エラー ウィンドウを閉じて、続行することができます。  
 
-6.  Configuration Manager の更新プログラムのダウンロードが完了したら、サービス接続ポイントをホストしているコンピューターに USB ドライブを移動します (または別の方法でエクスポートされたデータを転送します)。  
+6. Configuration Manager の更新プログラムのダウンロードが完了したら、サービス接続ポイントをホストしているコンピューターに USB ドライブを移動します (または別の方法でエクスポートされたデータを転送します)。  
 
-7.  サービス接続ポイントをホストするコンピューターで、管理者特権でコマンド プロンプトを開き、 **serviceconnectiontool.exe**が格納されている場所にディレクトリを変更して、次のコマンドを実行します。  
+7. サービス接続ポイントをホストするコンピューターで、管理者特権でコマンド プロンプトを開き、 **serviceconnectiontool.exe**が格納されている場所にディレクトリを変更して、次のコマンドを実行します。  
 
-    -   **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
+   -   **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
 
-8.  インポートが完了したら、コマンド プロンプトを閉じることができます。 (該当する階層の更新プログラムのみがインポートされます)。  
+8. インポートが完了したら、コマンド プロンプトを閉じることができます。 (該当する階層の更新プログラムのみがインポートされます)。  
 
 9. Configuration Manager コンソールを開き、**[管理]** > **[更新とサービス]** の順に移動します。 インポートされた更新プログラムは、インストールできるようになりました  (1702 より前のバージョンでは、[更新とサービス] は、**[管理]** > **[クラウド サービス]** にありました)。
 
- 更新プログラムのインストールの詳細については、「[System Center Configuration Manager のコンソール内の更新プログラムのインストール](../../../core/servers/manage/install-in-console-updates.md)」を参照してください。  
+   更新プログラムのインストールの詳細については、「[System Center Configuration Manager のコンソール内の更新プログラムのインストール](../../../core/servers/manage/install-in-console-updates.md)」を参照してください。  
 
 ## <a name="bkmk_cmd"></a> ログ ファイル
 
@@ -181,7 +181,7 @@ USB ドライブに ServiceConnectionTool フォルダーとその中身をす�
  サービス接続ポイント ツールのヘルプ情報を表示するには、コマンド プロンプトを開き、ツールを格納するフォルダーに移動して、コマンド  **serviceconnectiontool.exe**を実行します。  
 
 
-|コマンド ライン オプション|説明|  
+|コマンド ライン オプション|詳細|  
 |---------------------------|-------------|  
 |**-prepare -usagedatadest [drive:][path][filename.cab]**|このコマンドは、現在の使用状況データを .cab ファイルに格納します。<br /><br /> サービス接続ポイントをホストするサーバーで、 **ローカル管理者** としてこのコマンドを実行します。<br /><br /> 例:   **-prepare -usagedatadest D:\USB\Usagedata.cab**|    
 |**-connect -usagedatasrc [drive:][path] -updatepackdest [drive:][path] -proxyserveruri [FQDN of proxy server] -proxyusername [username]** <br /> <br /> 1606 より前のバージョンの Configuration Manager を使用する場合は、.cab ファイルの名前を指定する必要があり、プロキシ サーバーのオプションを使用することはできません。  サポートされているコマンド パラメーターは次のとおりです。 <br /> **-connect -usagedatasrc [drive:][path][filename] -updatepackdest [drive:][path]** |このコマンドは、Configuration Manager のクラウド サービスに接続し、指定した場所から使用状況データの .cab ファイルをアップロードしたり、利用可能な更新パックとコンソールのコンテンツをダウンロードしたりします。 プロキシ サーバーのオプションは省略できます。<br /><br /> インターネットに接続できるコンピューターで、 **ローカル管理者** としてこのコマンドを実行します。<br /><br /> プロキシ サーバーを使用せずに接続する例: **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> プロキシ サーバーを使用して接続する例: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> 1606 より前のバージョンを使用する場合は、.cab ファイルのファイル名を指定する必要があります。また、プロキシ サーバーを指定することはできません。 次のコマンド ラインの例を使用します: **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
