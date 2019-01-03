@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 1dd696ce-3e46-4dfa-a76d-592fe0f0320e
-ms.openlocfilehash: 09ea3340d8474c69e6e346fc68120b8849159374
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
-ms.translationtype: HT
+ms.openlocfilehash: bc8a504a8490126fb9f4d7110c041f3c8916b162
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111044"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817921"
 ---
 # <a name="migrate-hybrid-mdm-users-and-devices-to-intune-standalone"></a>ハイブリッド MDM のユーザーとデバイスを Intune スタンドアロンに移行する
 
@@ -55,7 +55,7 @@ ms.locfileid: "44111044"
 
     - NDES と Exchange コネクタをインストールします  
 
-    手順を完了して、Intune スタンドアロンへの移行を開始するときに、ユーザーに対して透過的にする必要があります。   
+    手順を Intune スタンドアロンへの移行を開始すると、ユーザーに大きな影響を与えることはありません。   
 
 3.  [特定のユーザー (混在 MDM 機関) のMDM 機関を変更する](migrate-mixed-authority.md)    
 
