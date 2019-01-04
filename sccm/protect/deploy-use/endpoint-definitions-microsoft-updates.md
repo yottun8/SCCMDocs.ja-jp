@@ -10,12 +10,12 @@ ms.assetid: ab7626ae-d4bf-4ca6-ab25-c61f96800a02
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 0d8037f2258f97e2782d475598ca62d2f605e5cd
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: d401eea9b3556eae2ad8b3c26eda5a243fc07211
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346483"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419140"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-microsoft-updates-for-configuration-manager"></a>Configuration Manager で Endpoint Protection のマルウェア定義を Microsoft Update からダウンロードできるようにする
 
@@ -34,10 +34,10 @@ ms.locfileid: "32346483"
 
 > [!IMPORTANT]
 >  この方法を使用して定義ファイルの更新をダウンロードするには、クライアントがインターネット経由で Microsoft Update にアクセスできなければなりません。
-
-
+> 
+> 
 > [!div class="button"]
-[次のステップ >](endpoint-antimalware-policies.md)
-
+> [次のステップ >](endpoint-antimalware-policies.md)
+> 
 > [!div class="button"]
-[戻る >](endpoint-configure-alerts.md)
+> [戻る >](endpoint-configure-alerts.md)

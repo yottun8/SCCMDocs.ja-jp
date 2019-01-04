@@ -10,12 +10,12 @@ author: aczechowski
 description: 定義ファイルの更新を自動的に承認するように Windows Server Update Services を構成する方法を説明します。
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 5aa857141b047fc0f9929ca72041980a8bc8b6a7
-ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
-ms.translationtype: HT
+ms.openlocfilehash: b66c55da65f65c219b5c961949244f105885ba8f
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461258"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424287"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>Configuration Manager で Endpoint Protection のマルウェア定義を Windows Server Update Services (WSUS) からダウンロードできるようにする
 
@@ -25,23 +25,23 @@ ms.locfileid: "49461258"
 
 ## <a name="to-synchronize-endpoint-protection-definition-updates-in-configuration-manager-software-updates"></a>Configuration Manager ソフトウェア更新プログラムで Endpoint Protection の定義ファイルの更新を同期するには
 
-1.  Configuration Manager コンソールで、**[管理]** をクリックします。
+1. Configuration Manager コンソールで、**[管理]** をクリックします。
 
-2.  **[管理]** ワークスペースで **[サイトの構成]** を展開して、**[サイト]** をクリックします。
+2. **[管理]** ワークスペースで **[サイトの構成]** を展開して、**[サイト]** をクリックします。
 
-3.  ソフトウェアの更新ポイントが含まれているサイトを選びます。 **[設定]** グループで **[サイト コンポーネントの構成]** をクリックし、 **[ソフトウェアの更新ポイント]** をクリックします。
+3. ソフトウェアの更新ポイントが含まれているサイトを選びます。 **[設定]** グループで **[サイト コンポーネントの構成]** をクリックし、 **[ソフトウェアの更新ポイント]** をクリックします。
 
-4.  **[ソフトウェアの更新ポイント コンポーネントのプロパティ]** ダイアログ ボックスの **[分類]** タブで、 **[定義ファイルの更新]** チェック ボックスをオンにします。
+4. **[ソフトウェアの更新ポイント コンポーネントのプロパティ]** ダイアログ ボックスの **[分類]** タブで、 **[定義ファイルの更新]** チェック ボックスをオンにします。
 
-5.  WSUS で更新される **[製品]** を指定します。
+5. WSUS で更新される **[製品]** を指定します。
 
-    -   Windows 8.1 以前では、 **[ソフトウェアの更新ポイント コンポーネントのプロパティ]** ダイアログ ボックスの **[製品]** タブで、 **[Forefront Endpoint Protection 2010]** チェック ボックスをオンにします。
+   -   Windows 8.1 以前では、 **[ソフトウェアの更新ポイント コンポーネントのプロパティ]** ダイアログ ボックスの **[製品]** タブで、 **[Forefront Endpoint Protection 2010]** チェック ボックスをオンにします。
 
-    -   Windows 10 以降では、**[ソフトウェアの更新ポイント コンポーネントのプロパティ]** ダイアログ ボックスの **[製品]** タブで、**[Windows Defender]** チェック ボックスをオンにします。
+   -   Windows 10 以降では、**[ソフトウェアの更新ポイント コンポーネントのプロパティ]** ダイアログ ボックスの **[製品]** タブで、**[Windows Defender]** チェック ボックスをオンにします。
 
-6.  **[OK]** をクリックして、[ **[分類]** ] ダイアログ ボックスを閉じます。
+6. **[OK]** をクリックして、[ **[分類]** ] ダイアログ ボックスを閉じます。
 
- 次の手順を使用して、WSUS サーバーが Configuration Manager 環境に統合されていない場合の Endpoint Protection 更新ファイルを構成します。
+   次の手順を使用して、WSUS サーバーが Configuration Manager 環境に統合されていない場合の Endpoint Protection 更新ファイルを構成します。
 
 ## <a name="to-synchronize-endpoint-protection-definition-updates-in-standalone-wsus"></a>スタンドアロン WSUS で Endpoint Protection の定義ファイルの更新を同期するには
 
@@ -60,13 +60,13 @@ ms.locfileid: "49461258"
 
 ### <a name="to-approve-definitions-and-updates-in-wsus"></a>WSUS で定義ファイルと更新を承認するには
 
-1.  WSUS 管理コンソールで **[更新]** をクリックし、 **[すべての更新プログラム]** または承認する更新の分類をクリックします。
+1. WSUS 管理コンソールで **[更新]** をクリックし、 **[すべての更新プログラム]** または承認する更新の分類をクリックします。
 
-2.  更新の一覧で、インストールを承認する更新を右クリックして **[承認]** をクリックします。
+2. 更新の一覧で、インストールを承認する更新を右クリックして **[承認]** をクリックします。
 
-3.  **[更新プログラムの承認]** ダイアログ ボックスで更新を承認するコンピューター グループを選び、 **[インストールの承認]** をクリックします。
+3. **[更新プログラムの承認]** ダイアログ ボックスで更新を承認するコンピューター グループを選び、 **[インストールの承認]** をクリックします。
 
- 手動の承認だけでなく、定義ファイルの更新や Endpoint Protection 更新プログラムの自動承認規則も設定できます。 これによって、WSUS でダウンロードした Endpoint Protection 定義ファイルの更新を自動的に承認するように WSUS を構成します。
+   手動の承認だけでなく、定義ファイルの更新や Endpoint Protection 更新プログラムの自動承認規則も設定できます。 これによって、WSUS でダウンロードした Endpoint Protection 定義ファイルの更新を自動的に承認するように WSUS を構成します。
 
 ### <a name="to-configure-an-automatic-approval-rule"></a>自動承認規則を構成するには
 
@@ -74,27 +74,27 @@ ms.locfileid: "49461258"
 
 2.  **[更新規則]** タブで **[新しい規則]** をクリックします。
 
-3.  **[ルールの追加]** ダイアログ ボックスで、 **[ステップ 1: プロパティを選択します]** を選び、 **[更新が特定の分類に含まれる場合]** チェック ボックスをオンにします。
+3.  **規則の追加**ダイアログ ボックスで、**手順 1。プロパティを選択します。** を選択、**更新プログラムが特定の分類の場合に**チェック ボックスをオンします。
 
-4.  **[ステップ 2: プロパティを変更します]** で **任意の分類**をクリックします。
+4.  **手順 2。ステップ 2: プロパティを変更します**で **任意の分類**をクリックします。
 
 5.  **[定義ファイルの更新]** 以外のすべてのチェック ボックスをオフにし、 **[OK]** をクリックします。
 
-6.  **[ルールの追加]** ダイアログ ボックスで、 **[ステップ 1: プロパティを選択します]** を選び、 **[更新が特定の製品に含まれる場合]** チェック ボックスをオンにします。
+6.  **規則の追加**ダイアログ ボックスで、**手順 1。プロパティを選択します。** を選択、**更新プログラムが特定の製品の場合に**チェック ボックスをオンします。
 
-7.  **[ステップ 2: プロパティを変更します]** で **任意の製品**をクリックします。
+7.  **手順 2。ステップ 2: プロパティを変更します**で **任意の製品**をクリックします。
 
 8.  Windows 8.1 以前については **[Forefront Endpoint Protection]** 、Windows 10 以降については **[Windows Defender]** 以外のすべてのチェック ボックスをオフにし、 **[OK]** をクリックします。
 
-9. **[ステップ 3: 名前を指定します]** で、規則の名前を入力して **[OK]** をクリックします。
+9. **手順 3。ステップ 3: 名前を指定します**で、規則の名前を入力して **OK**をクリックします。
 
 10. **[自動承認]** ダイアログ ボックスで、新しく作成した規則のチェック ボックスをオンにし、 **[規則の実行]** をクリックします。
 
 > [!NOTE]
 >  WSUS サーバーとクライアント コンピューターのパフォーマンスを最大化するには、前の定義ファイルの更新を拒否します。 このタスクを実行するには、リビジョンの自動承認と、有効期限が切れた更新プログラムの自動拒否を構成します。 詳細については、 [マイクロソフト サポート技術情報の記事 938947](http://go.microsoft.com/fwlink/p/?LinkId=204078)をご覧ください。
-
+> 
 > [!div class="button"]
-[次のステップ >](endpoint-antimalware-policies.md)
-
+> [次のステップ >](endpoint-antimalware-policies.md)
+> 
 > [!div class="button"]
-[戻る >](endpoint-configure-alerts.md)
+> [戻る >](endpoint-configure-alerts.md)

@@ -10,12 +10,12 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e909f6d291816125415ef712bb00822f23951099
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
-ms.translationtype: HT
+ms.openlocfilehash: a7d66f11e67d8623eca696a5c996294a89e7458f
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384350"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420568"
 ---
 # <a name="configure-custom-client-settings-for-endpoint-protection"></a>Endpoint Protection のカスタム クライアント設定を構成する
 
@@ -30,24 +30,24 @@ ms.locfileid: "39384350"
 
 ## <a name="to-enable-endpoint-protection-and-configure-custom-client-settings"></a>Endpoint Protection を有効にしてカスタム クライアント設定を構成するには
 
-1.  Configuration Manager コンソールで、**[管理]** をクリックします。  
+1. Configuration Manager コンソールで、**[管理]** をクリックします。  
 
-2.  **[管理]** ワークスペースで **[クライアント設定]** をクリックします。  
+2. **[管理]** ワークスペースで **[クライアント設定]** をクリックします。  
 
-3.  **[ホーム]** タブの **[作成]** グループで、**[カスタム クライアント デバイス設定の作成]** をクリックします。  
+3. **[ホーム]** タブの **[作成]** グループで、**[カスタム クライアント デバイス設定の作成]** をクリックします。  
 
-4.  **[カスタム クライアント デバイス設定の作成]** ダイアログ ボックスで、設定のグループの名前と説明を指定し、**[Endpoint Protection]** を選択します。  
+4. **[カスタム クライアント デバイス設定の作成]** ダイアログ ボックスで、設定のグループの名前と説明を指定し、**[Endpoint Protection]** を選択します。  
 
-5.  必要な Endpoint Protection クライアント設定を構成します。 構成できる Endpoint Protection クライアント設定の完全な一覧については、「[クライアント設定について](/sccm/core/clients/deploy/about-client-settings#endpoint-protection)」の「Endpoint Protection」セクションを参照してください。  
+5. 必要な Endpoint Protection クライアント設定を構成します。 構成できる Endpoint Protection クライアント設定の完全な一覧については、「[クライアント設定について](/sccm/core/clients/deploy/about-client-settings#endpoint-protection)」の「Endpoint Protection」セクションを参照してください。  
 
    > [!IMPORTANT]  
    >  Endpoint Protection のクライアント設定を構成するには、事前に Endpoint Protection サイト システムの役割をインストールします。  
 
-6.  **[OK]** をクリックして **[カスタム クライアント デバイス設定の作成]** ダイアログ ボックスを閉じます。 新しいクライアント設定は、**[管理]** ワークスペースの **[クライアント設定]** ノードに表示されます。  
+6. **[OK]** をクリックして **[カスタム クライアント デバイス設定の作成]** ダイアログ ボックスを閉じます。 新しいクライアント設定は、**[管理]** ワークスペースの **[クライアント設定]** ノードに表示されます。  
 
-7.  次に、カスタム クライアント設定をコレクションに展開します。 展開するカスタム クライアント設定を選択します。 **[ホーム]** タブの **[クライアント設定]** グループで、**[展開]** をクリックします。  
+7. 次に、カスタム クライアント設定をコレクションに展開します。 展開するカスタム クライアント設定を選択します。 **[ホーム]** タブの **[クライアント設定]** グループで、**[展開]** をクリックします。  
 
-8.  **[コレクションの選択]** ダイアログ ボックスで、クライアント設定を展開するコレクションを選択し、**[OK]** をクリックします。 新しい展開は、詳細ウィンドウの **[展開]** タブに表示されます。  
+8. **[コレクションの選択]** ダイアログ ボックスで、クライアント設定を展開するコレクションを選択し、**[OK]** をクリックします。 新しい展開は、詳細ウィンドウの **[展開]** タブに表示されます。  
 
 クライアントは、次回クライアント ポリシーをダウンロードしたときに、これらの設定を使用して構成されます。 詳細については、「[Configuration Manager クライアントのポリシーの取得開始](/sccm/core/clients/manage/manage-clients#BKMK_PolicyRetrieval)」を参照してください。  
 
@@ -67,14 +67,14 @@ Configuration Manager の OS の展開でディスク イメージ ソースと�
 
 以下に、参照コンピューターに Endpoint Protection クライアント ソフトウェアをインストールするために必要な前提条件を示します。
 
--   Endpoint Protection クライアント インストール パッケージ **scepinstall.exe** にアクセスできる必要があります。 サイト サーバー上の Configuration Manager インストール フォルダーの **Client** フォルダーでこのパッケージを探します。  
+- Endpoint Protection クライアント インストール パッケージ **scepinstall.exe** にアクセスできる必要があります。 サイト サーバー上の Configuration Manager インストール フォルダーの **Client** フォルダーでこのパッケージを探します。  
 
--   組織の必須の構成で Endpoint Protection クライアントを展開するには、マルウェア対策ポリシーを作成し、エクスポートします。 その後、Endpoint Protection クライアントを手動でインストールするときに、このポリシーを指定します。 詳細については、[マルウェア対策ポリシーを作成し展開する方法](/sccm/protect/deploy-use/endpoint-antimalware-policies)に関する記事を参照してください。  
+- 組織の必須の構成で Endpoint Protection クライアントを展開するには、マルウェア対策ポリシーを作成し、エクスポートします。 その後、Endpoint Protection クライアントを手動でインストールするときに、このポリシーを指定します。 詳細については、[マルウェア対策ポリシーを作成し展開する方法](/sccm/protect/deploy-use/endpoint-antimalware-policies)に関する記事を参照してください。  
 
-   > [!NOTE]  
-   >  **[既定のクライアント マルウェア対策ポリシー]** をエクスポートすることはできません。  
+  > [!NOTE]  
+  >  **[既定のクライアント マルウェア対策ポリシー]** をエクスポートすることはできません。  
 
--   Endpoint Protection クライアントを最新の定義でインストールする場合は、[Windows Defender Security Intelligence](https://www.microsoft.com/wdsi) のページからダウンロードします。  
+- Endpoint Protection クライアントを最新の定義でインストールする場合は、[Windows Defender Security Intelligence](https://www.microsoft.com/wdsi) のページからダウンロードします。  
 
 > [!NOTE]  
 > Configuration Manager 1802 以降、Windows 10 デバイスには、Endpoint Protection エージェント (SCEPInstall) をインストールする必要がありません。 Windows 10 デバイスに既にインストールされている場合、Configuration Manager では削除されません。 管理者は、少なくとも 1802 クライアント バージョンで実行されている Windows 10 デバイス上の Endpoint Protection エージェントを削除できます。 SCEPInstall.exe は、一部のマシンの C:\Windows\ccmsetup 上に引き続き存在する可能性がありますが、新しいクライアントのインストールにはダウンロードされない必要があります。 <!--503654-->
@@ -90,21 +90,23 @@ Configuration Manager の OS の展開でディスク イメージ ソースと�
 
 ## <a name="bkmk_manual-install"></a> コマンド プロンプトで Endpoint Protection クライアントをインストールするには
 
-1.  Configuration Manager インストール フォルダーの **Client** フォルダーから、Endpoint Protection クライアント ソフトウェアをインストールするコンピューターに **scepinstall.exe** をコピーします。  
+1. Configuration Manager インストール フォルダーの **Client** フォルダーから、Endpoint Protection クライアント ソフトウェアをインストールするコンピューターに **scepinstall.exe** をコピーします。  
 
-2.  コマンド プロンプトを管理者として開きます。 ディレクトリをインストーラーが格納されているフォルダーに変更します。 次に、必要な他のコマンド ライン プロパティを追加して `scepinstall.exe` を実行します。
+2. コマンド プロンプトを管理者として開きます。 ディレクトリをインストーラーが格納されているフォルダーに変更します。 次に、必要な他のコマンド ライン プロパティを追加して `scepinstall.exe` を実行します。
 
-   |プロパティ|説明|
-   |--------------|-----------------|
-   |`/s`|インストーラーをサイレント モードで実行します|
-   |`/q`|セットアップ ファイルをサイレント モードで抽出します|
-   |`/i`|インストーラーを通常どおり実行します|
-   |`/policy`|インストール時にクライアントを構成するためのマルウェア対策ポリシー ファイルを指定します|
-   |`/sqmoptin`|カスタマー エクスペリエンス向上プログラム (CEIP) に参加することを選択します|
 
-3.  画面に表示される指示に従って、クライアントのインストールを完了します。  
+   |  プロパティ   |                                  説明                                   |
+   |-------------|--------------------------------------------------------------------------------|
+   |    `/s`     |                           インストーラーをサイレント モードで実行します                           |
+   |    `/q`     |                        セットアップ ファイルをサイレント モードで抽出します                        |
+   |    `/i`     |                           インストーラーを通常どおり実行します                           |
+   |  `/policy`  | インストール時にクライアントを構成するためのマルウェア対策ポリシー ファイルを指定します |
+   | `/sqmoptin` |     カスタマー エクスペリエンス向上プログラム (CEIP) に参加することを選択します     |
 
-4.  最新の更新定義パッケージをダウンロードしている場合、パッケージをクライアント コンピューターにコピーしてから、定義パッケージをダブルクリックしてインストールします。  
+
+3. 画面に表示される指示に従って、クライアントのインストールを完了します。  
+
+4. 最新の更新定義パッケージをダウンロードしている場合、パッケージをクライアント コンピューターにコピーしてから、定義パッケージをダブルクリックしてインストールします。  
 
    > [!NOTE]  
    >  Endpoint Protection クライアントのインストールが完了すると、クライアントで定義の更新チェックが自動的に実行されます。 この更新チェックが成功した場合は、最新の定義更新パッケージを手動でインストールする必要はありません。  
@@ -133,18 +135,18 @@ Configuration Manager の OS の展開でディスク イメージ ソースと�
 
 Endpoint Protection クライアントのイメージングを準備するには、次の手順を実行します。
 
-1.  参照コンピューターで管理者としてサインインします。  
+1. 参照コンピューターで管理者としてサインインします。  
 
-2.  **PsExec** を [Windows SysInternals](https://docs.microsoft.com/sysinternals/downloads/psexec) からダウンロードしてインストールします。  
+2. **PsExec** を [Windows SysInternals](https://docs.microsoft.com/sysinternals/downloads/psexec) からダウンロードしてインストールします。  
 
-3.  コマンド プロンプトを管理者として実行し、PsTools をインストールしたフォルダーにディレクトリを変更し、次のコマンドを入力します。  
+3. コマンド プロンプトを管理者として実行し、PsTools をインストールしたフォルダーにディレクトリを変更し、次のコマンドを入力します。  
 
    `psexec.exe -s -i regedit.exe`  
 
    > [!IMPORTANT]  
    >  この方法でレジストリ エディターを実行する場合は、ご注意ください。 PsExec.exe は、これを LocalSystem のコンテキストで実行します。  
 
-4.  レジストリ エディターで、次のレジストリ キーを削除します。  
+4. レジストリ エディターで、次のレジストリ キーを削除します。  
 
    > [!IMPORTANT]  
    >  これらのレジストリ キーの削除は、参照コンピューターをイメージングする前の最後の手順として行います。 Endpoint Protection クライアントでは、開始時にこれらのキーが再作成されます。 参照コンピューターを再起動する場合は、レジストリ キーをもう一度削除します。  

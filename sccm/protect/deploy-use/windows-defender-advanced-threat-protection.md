@@ -10,12 +10,12 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 10d746f88d0e7b869e2b73d389944f3b382d687d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: f474db6768204403978eb188c3dbd138e34035d4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348387"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422795"
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender Advanced Threat Protection
 
@@ -23,7 +23,7 @@ ms.locfileid: "32348387"
 
 Configuration Manager のバージョン 1606 (Current Branch) 以降、Endpoint Protection を使用して、[Windows Defender Advanced Threat Protection (ATP)](http://aka.ms/technet-wdatp) を管理および監視できるようになりました。 Windows Defender ATP は、企業が自社ネットワークに対する高度な攻撃を検出して調査し、対処するのに役立ちます。  Configuration Manager ポリシーまたは Microsoft Intune ポリシーは、管理対象となる Windows 10 バージョン 1607 (ビルド 14328) 以降の登録と監視に役立ちます。
 
-Windows Defender ATP は、[Windows Defender セキュリティ センター](https://securitycenter.windows.com)のサービスです。 Configuration Manager は、クライアントのオンボード構成ファイルを追加して展開することにより、展開の状態と Windows Defender ATP エージェントの正常性を監視できます。 Windows Defender ATP は、Configuration Manager クライアントを実行している PC でサポートされるか、Microsoft Intune によって管理されますが、Intune ハイブリッド MDM 管理コンピューターはサポートされません。
+Windows Defender ATP は、[Windows Defender セキュリティ センター](https://securitycenter.windows.com)のサービスです。 Configuration Manager は、クライアントのオンボード構成ファイルを追加して展開することにより、展開の状態と Windows Defender ATP エージェントの正常性を監視できます。 Windows Defender ATP は、Configuration Manager クライアントを実行している PC でサポートされるか、Microsoft Intune によって管理されますが、Intune ハイブリッド MDM マネージド コンピューターはサポートされません。
 
  **必要条件**  
 
@@ -46,23 +46,23 @@ Windows Defender ATP は、[Windows Defender セキュリティ センター](ht
 
 ## <a name="onboard-devices-for-windows-defender-atp"></a>Windows Defender ATP のオンボード デバイス  
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[概要]** > **[Endpoint Protection]** > **[Windows Defender ATP ポリシー]** の順に移動し、**[Windows Defender ATP ポリシーの作成]** をクリックします。 Windows Defender ATP ポリシーの作成ウィザードが開きます。  
+1. Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[概要]** > **[Endpoint Protection]** > **[Windows Defender ATP ポリシー]** の順に移動し、**[Windows Defender ATP ポリシーの作成]** をクリックします。 Windows Defender ATP ポリシーの作成ウィザードが開きます。  
 
-2.  Windows Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、**[オンボード]** を選択します。 **[次へ]** をクリックします。  
+2. Windows Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、**[オンボード]** を選択します。 **[次へ]** をクリックします。  
 
-3.  組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 **[次へ]** をクリックします。  
+3. 組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 **[次へ]** をクリックします。  
 
-4.  管理対象のデバイスから分析用に収集され共有されるファイルのサンプルを指定します。  
+4. マネージド デバイスから分析用に収集され共有されるファイルのサンプルを指定します。  
 
-    -   **なし**   
+   - **なし**   
 
-    -   **すべてのファイルの種類**  
+   - **すべてのファイルの種類**  
 
      **[次へ]** をクリックします。  
 
-5.  概要を確認して、ウィザードを完了します。  
+5. 概要を確認して、ウィザードを完了します。  
 
-6.  これで、**[展開]** をクリックすると、Windows Defender ATP ポリシーを管理対象のクライアント コンピューターに展開できます。  
+6. これで、**[展開]** をクリックすると、Windows Defender ATP ポリシーを管理対象のクライアント コンピューターに展開できます。  
 
 ## <a name="monitor-windows-defender-atp"></a>Windows Defender ATP の監視  
 

@@ -10,12 +10,12 @@ ms.assetid: 537dd2a7-4e44-4877-b8dd-5e1499407f8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f650ba7bc703ec4fa0492fc86859cb8742e0510d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: e83f999ccd3e7625b2f83372464569771520632a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347367"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419209"
 ---
 #  <a name="configure-definition-updates-for-endpoint-protection"></a>Endpoint Protection の定義ファイルの更新を構成する  
 
@@ -25,17 +25,17 @@ ms.locfileid: "32347367"
 
  マルウェア対策定義を更新するには、次の方法から 1 つ以上を使用できます。
 
--   [[Configuration Manager から配布される更新プログラム]](endpoint-definitions-configmgr.md) - この方法では、Configuration Manager ソフトウェア更新プログラムを使用して、階層内のコンピューターに定義とエンジンの更新プログラムを配布します。
+- [[Configuration Manager から配布される更新プログラム]](endpoint-definitions-configmgr.md) - この方法では、Configuration Manager ソフトウェア更新プログラムを使用して、階層内のコンピューターに定義とエンジンの更新プログラムを配布します。
 
--   [[Windows Server Update Services (WSUS) から配信される更新プログラム]](endpoint-definitions-wsus.md) - この方法では、WSUS インフラストラクチャを使用して定義とエンジンの更新プログラムをコンピューターに配布します。
+- [[Windows Server Update Services (WSUS) から配信される更新プログラム]](endpoint-definitions-wsus.md) - この方法では、WSUS インフラストラクチャを使用して定義とエンジンの更新プログラムをコンピューターに配布します。
 
--   [[Microsoft Update から配信される更新プログラム]](endpoint-definitions-microsoft-updates.md) - この方法では、コンピューターを Microsoft Update に直接接続し、定義とエンジンの更新プログラムをダウンロードできます。 この方法は、ビジネス ネットワークにあまり接続していないコンピューターに役立ちます。
+- [[Microsoft Update から配信される更新プログラム]](endpoint-definitions-microsoft-updates.md) - この方法では、コンピューターを Microsoft Update に直接接続し、定義とエンジンの更新プログラムをダウンロードできます。 この方法は、ビジネス ネットワークにあまり接続していないコンピューターに役立ちます。
 
--   [[Microsoft Malware Protection Center から配信された更新プログラム]](endpoint-definitions-protection-center.md) - この方法では、Microsoft Malware Protection Center から定義ファイルの更新をダウンロードします。
+- [[Microsoft Malware Protection Center から配信された更新プログラム]](endpoint-definitions-protection-center.md) - この方法では、Microsoft Malware Protection Center から定義ファイルの更新をダウンロードします。
 
--   [[UNC ファイル共有から更新する]](endpoint-definitions-network.md) - この方法では、最新の定義とエンジンの更新プログラムをネットワーク上の共有に保存できます。 各クライアントは、ネットワークにアクセスして更新プログラムをインストールできます。
+- [[UNC ファイル共有から更新する]](endpoint-definitions-network.md) - この方法では、最新の定義とエンジンの更新プログラムをネットワーク上の共有に保存できます。 各クライアントは、ネットワークにアクセスして更新プログラムをインストールできます。
 
- 定義ファイルの更新ソースを複数構成し、それを評価および適用する順序を制御できます。 これは、マルウェア対策ポリシーを作成するときに、 **[定義ファイルの更新ソースの構成]** ダイアログ ボックスで行います。
+  定義ファイルの更新ソースを複数構成し、それを評価および適用する順序を制御できます。 これは、マルウェア対策ポリシーを作成するときに、 **[定義ファイルの更新ソースの構成]** ダイアログ ボックスで行います。
 
 > [!IMPORTANT]
 >  Windows 10 が動作する PC の場合は、Endpoint Protection を構成して Windows Defender のマルウェア定義を更新する必要があります。
