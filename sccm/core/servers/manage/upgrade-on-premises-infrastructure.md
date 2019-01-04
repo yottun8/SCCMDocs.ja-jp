@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d51774688b80faf808653cde77aa3b651ea210c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 8b51685d97aea766757034c6f41afa5d4c8a11ee
+ms.sourcegitcommit: 32a257fafbb29aece8b4f435dd5614fcef305328
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422591"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "54005468"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>Configuration Manager をサポートするオンプレミス インフラストラクチャのアップグレード
 
@@ -121,6 +121,12 @@ Configuration Manager では、次の状況で、サイト サーバーと任意
     - リモートの有効化  
 
 5. アクセス許可を保存して、Configuration Manager コンソールへのアクセスを復元します。  
+
+
+#### <a name="known-issue-for-remote-site-systems"></a>リモート サイト システムの既知の問題
+サイト システムの役割をホストするサーバーをアップグレードした後、`HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths` のレジストリ キーに値 `Software\Microsoft\SMS` がない可能性があります。 
+
+サーバーで Windows をアップグレードした後、この値がない場合は、手動で追加します。 そうしないと、サイト システムの役割で、サイト サーバー受信トレイにファイルをアップロードするときに問題が発生する場合があります。
 
 
 ### <a name="bkmk_2012r2"></a> Windows Server 2012 R2 へのアップグレード
