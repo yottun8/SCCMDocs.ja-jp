@@ -10,21 +10,21 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c4230b935b7fabc44743d57fcb2315348edb4274
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 27a615a412bca7e30ab5f5a3dc5f794961d13d2c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349689"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424495"
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager における証明書プロファイルの概要
 
 *適用対象: System Center Configuration Manager (Current Branch)*
 
 
-証明書プロファイルは、Active Directory 証明書サービスおよびネットワーク デバイス登録サービス (NDES) ロールと共に使用されます。 ユーザーが会社のリソースに簡単にアクセスできるように、管理対象のデバイスに証明書認証を作成して展開します。 たとえば、証明書プロファイルを作成して展開し、ユーザーが VPN 接続およびワイヤレス接続に必要な証明書を提供することができます。
+証明書プロファイルは、Active Directory 証明書サービスおよびネットワーク デバイス登録サービス (NDES) ロールと共に使用されます。 ユーザーが会社のリソースに簡単にアクセスできるように、マネージド デバイスに証明書認証を作成して展開します。 たとえば、証明書プロファイルを作成して展開し、ユーザーが VPN 接続およびワイヤレス接続に必要な証明書を提供することができます。
 
-証明書プロファイルでは、ユーザー デバイスを自動的に構成できます。 ユーザーは、証明書を手動でインストールしたり、帯域外のプロセスを使用したりすることなく、Wi-Fi ネットワークや VPN サーバーなどの会社のリソースにアクセスします。 エンタープライズ公開キー基盤 (PKI) でサポートされているさらに安全な設定を使用できるため、証明書プロファイルは会社のリソースをセキュリティで保護した状態で維持するために役立ちます。 たとえば、管理対象のデバイスに必要な証明書を展開しているため、すべての Wi-Fi 接続と VPN 接続に対してサーバー認証を要求します。   
+証明書プロファイルでは、ユーザー デバイスを自動的に構成できます。 ユーザーは、証明書を手動でインストールしたり、帯域外のプロセスを使用したりすることなく、Wi-Fi ネットワークや VPN サーバーなどの会社のリソースにアクセスします。 エンタープライズ公開キー基盤 (PKI) でサポートされているさらに安全な設定を使用できるため、証明書プロファイルは会社のリソースをセキュリティで保護した状態で維持するために役立ちます。 たとえば、マネージド デバイスに必要な証明書を展開しているため、すべての Wi-Fi 接続と VPN 接続に対してサーバー認証を要求します。   
 
 証明書プロファイルが提供する管理機能:  
 
@@ -100,10 +100,10 @@ Configuration Manager の一般的なシナリオとして、接続に EAP-TLS�
 ## <a name="automatic-revocation-of-certificates"></a>証明書の自動失効  
  System Center Configuration Manager で証明書プロファイルを使用して展開したユーザー証明書とデバイス証明書は、次のような場合に自動的に失効します。  
 
--   デバイスが System Center Configuration Manager の管理下のインベントリから削除された場合。  
+- デバイスが System Center Configuration Manager の管理下のインベントリから削除された場合。  
 
--   デバイスの特定のコンテンツがワイプされた場合。  
+- デバイスの特定のコンテンツがワイプされた場合。  
 
--   デバイスが System Center Configuration Manager の階層からブロックされた場合。  
+- デバイスが System Center Configuration Manager の階層からブロックされた場合。  
 
- 証明書を失効させるために、サイト サーバーが、証明書の発行元の証明機関に失効コマンドを送信します。 この失効の理由は、「 **運用停止** 」です。  
+  証明書を失効させるために、サイト サーバーが、証明書の発行元の証明機関に失効コマンドを送信します。 この失効の理由は、「 **運用停止** 」です。  
