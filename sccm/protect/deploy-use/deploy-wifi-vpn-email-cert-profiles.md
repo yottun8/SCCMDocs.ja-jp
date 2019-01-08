@@ -10,12 +10,12 @@ ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: faf8d48614bc3e27381d57d86fc24da9356aa3f0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: abae42358e6baba660841eab9443410c0b818428
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347571"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419259"
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager でのプロファイルの展開
 
@@ -25,20 +25,19 @@ ms.locfileid: "32347571"
 
  **[Wi-Fi プロファイルの展開]**、**[VPN プロファイルの展開]**、**[Exchange ActiveSync プロファイルの展開]**、または **[Deploy Certificate Profile]** (証明書プロファイルの展開) ダイアログ ボックスを使用して、これらのプロファイルの展開を構成します。 この構成には、プロファイルの展開先のコレクションの定義と、プロファイルのコンプライアンスを評価する頻度の指定が含まれます。  
 
-> [!NOTE]  
+> [!NOTE]
 >  同じユーザーに複数の会社リソース アクセス プロファイルを展開する場合は、次の動作が発生します。  
->   
->  -   競合している設定にオプションの値が含まれている場合、その値はデバイスに送信されません。  
-> -   競合する設定に必須の値が含まれている場合、既定値がデバイスに送信されます。 既定値がない場合は、全体の会社リソース アクセス プロファイルは失敗します。 たとえば、同じユーザーに 2 つの電子メール プロファイルを展開し、**[Exchange ActiveSync ホスト]** または **[電子メール アドレス]** に指定した値が異なる場合、その両方の設定は必須のため、電子メール プロファイルは失敗します。  
-
-> -   証明書プロファイルを展開する前に、まず、インフラストラクチャを構成して証明書プロファイルを作成する必要があります。 詳細については、以下のトピックを参照してください。  
->   
->  -   [System Center Configuration Manager での証明書インフラストラクチャの構成](certificate-infrastructure.md)  
-> -   [System Center Configuration Manager で証明書プロファイルを作成する方法](create-certificate-profiles.md)    
-
-> [!IMPORTANT]  
+> 
+> - 競合している設定にオプションの値が含まれている場合、その値はデバイスに送信されません。  
+>   -   競合する設定に必須の値が含まれている場合、既定値がデバイスに送信されます。 既定値がない場合は、全体の会社リソース アクセス プロファイルは失敗します。 たとえば、同じユーザーに 2 つの電子メール プロファイルを展開し、**[Exchange ActiveSync ホスト]** または **[電子メール アドレス]** に指定した値が異なる場合、その両方の設定は必須のため、電子メール プロファイルは失敗します。  
+> 
+> - 証明書プロファイルを展開する前に、まず、インフラストラクチャを構成して証明書プロファイルを作成する必要があります。 詳細については、以下のトピックを参照してください。  
+> 
+>   -   [System Center Configuration Manager での証明書インフラストラクチャの構成](certificate-infrastructure.md)  
+> - [System Center Configuration Manager で証明書プロファイルを作成する方法](create-certificate-profiles.md)    
+> 
+> [!IMPORTANT]
 >  VPN プロファイルの展開を削除するときに、VPN プロファイルはクライアント デバイスから削除されません。 デバイスからプロファイルを削除する場合、手動で削除する必要があります。
->   
 
 ## <a name="deploying--profiles"></a>プロファイルの展開  
 
@@ -55,7 +54,7 @@ ms.locfileid: "32347571"
 
     -   **アラートを生成する**: このオプションを有効にすると、プロファイルのコンプライアンスが、指定した日付と時刻までに指定した割合に達しなかった場合に生成されるアラートを構成できます。 アラートを System Center Operations Manager に送信するかどうかも指定できます。  
 
-    -   -   **ランダム遅延 (時間)**: (Simple Certificate Enrollment Protocol 設定を含む証明書プロファイルのみ) ネットワーク デバイス登録サービスの処理量が多くなりすぎないように、処理を延期できる期間を指定します。 既定値は **64** 時間です。  
+    -   -   **ランダム遅延 (時間)**: (Simple Certificate Enrollment Protocol 設定を含む証明書プロファイルのみ) - ネットワーク デバイス登録サービスの処理量が多くなりすぎないように、処理を延期できる期間を指定します。 既定値は **64** 時間です。  
 
     -   **この <type> プロファイルのコンプライアンス評価スケジュールを指定してください**: 展開されたプロファイルをクライアント コンピューターで評価するスケジュールを指定します。 単純なスケジュールとカスタム スケジュールの 2種類あります。  
 

@@ -10,12 +10,12 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3e8c6cb33032b0c4283f3e35cbfa7b68535751ea
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 160713fe480b0a47c2ad57376c4a1dccdbfb00b1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456109"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418953"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -90,7 +90,7 @@ Endpoint Protection では Windows Defender Advanced Threat Protection (ATP) を
 ## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>Mac コンピューターと Linux サーバー用の Endpoint Protection クライアント  
 
 > [!Important]  
-> Mac と Linux (すべてのバージョン) の System Center Endpoint Protection (SCEP) のサポートは 2018 年 12 月 31 日で終了します。 Mac 用の SCEP および Linux 用の SCEP の新しいウイルスの定義の可用性は、サポートの終了後に停止されます。 詳しくは、[サポートの終了ブログ投稿](https://go.microsoft.com/fwlink/?linkid=870182)をご覧ください。  
+> Mac と Linux (すべてのバージョン) の System Center Endpoint Protection (SCEP) のサポートは 2018 年 12 月 31 日で終了します。 Mac 用の SCEP および Linux 用の SCEP の新しいウイルスの定義の可用性は、サポートの終了後に停止される可能性があります。 詳しくは、[サポートの終了ブログ投稿](https://go.microsoft.com/fwlink/?linkid=870182)をご覧ください。  
 
  System Center Endpoint Protection には、Linux コンピューターと Mac コンピューター用の Endpoint Protection クライアントが付属しています。 これらのクライアントは、Configuration Manager には付属していません。 [Microsoft ボリューム ライセンス サービス センター](https://www.microsoft.com/licensing/servicecenter/default.aspx)から次の製品をダウンロードする必要があります。  
 
@@ -111,7 +111,7 @@ Endpoint Protection では Windows Defender Advanced Threat Protection (ATP) を
 2. Web サイトの上部にある **[Downloads and Keys]**(ダウンロードとキー) タブを選択します。
 3. 製品 **System Center Endpoint Protection (Current Branch)** でフィルター処理します。
 4. **[ダウンロード]** リンクをクリックします。
-5. **[続行]** をクリックします。 **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1878 MB ISO** など、複数のファイルが表示されます。
+5. **[続行]** をクリックします。 など、いくつかのファイルが表示されます。**System Center Endpoint Protection (現在のブランチ - バージョン 1606) for Linux OS and Macintosh OS Multilanguage 32/64 bit 1878 MB ISO**します。
 6. ファイルをダウンロードするには、矢印アイコンをクリックします。 ファイル名は **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-3_EptProt_Lin_Mac_MLF_X21-67050.ISO** です。
 
 2018 年 1 月の更新 (X21-67050) には、次のバージョンが含まれます。
@@ -119,4 +119,4 @@ Endpoint Protection では Windows Defender Advanced Threat Protection (ATP) を
 - System Center Endpoint Protection for Mac 4.5.32.0 (macOS 10.13 High Sierra のサポート)
 - System Center Endpoint Protection for Linux 4.5.20.0 
 
- Linux コンピューターと Mac コンピューター用の Endpoint Protection クライアントをインストールして管理する方法の詳細については、これらの製品に付属のドキュメントを参照してください。 この製品ドキュメントは、.ISO ファイルの **Documentation** フォルダーにあります。
+  Linux コンピューターと Mac コンピューター用の Endpoint Protection クライアントをインストールして管理する方法の詳細については、これらの製品に付属のドキュメントを参照してください。 この製品ドキュメントは、.ISO ファイルの **Documentation** フォルダーにあります。

@@ -10,12 +10,12 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 626c52b827e38a53ed3b8982963496f29f11acb5
-ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
-ms.translationtype: HT
+ms.openlocfilehash: dbebdde88a5031eec91a2383e105d06cbc7541e5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083770"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420449"
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>Configuration Manager での Endpoint Protection 用のアラートの構成
 
@@ -75,13 +75,13 @@ ms.locfileid: "50083770"
 
         -   **マルウェアが検出された回数を超える:** -指定した回数よりも詳細のコレクション内のコンピューターで同じマルウェアが検出されたときに、アラートが生成されます。 値を指定して **2** を通じて **32** です。
 
-        -   **[検出期間 (時間):]** マルウェアの検出の数が行う必要があります (単位は時間) の検出間隔を指定します。 **[1]** から **[168]** までの数で指定します。
+        -   **[検出期間 (時間)]** マルウェア検出の指定した発生回数の検出期間を、時間で指定します。 **[1]** から **[168]** までの数で指定します。
 
     -   **[複数のマルウェア検出]** - このアラートは、監視するコレクション内のコンピューターで、指定した時間数にわたって指定した種類の数を超えたマルウェアが検出されると、生成されます。 次の情報を指定して、このアラートを構成します。
 
-        -   **[検出されたマルウェアの種類の数:]** 別のマルウェアの種類の指定した数が、コレクション内のコンピューターで検出されたときに、アラートが生成されます。 値を指定して **2** を通じて **32**です。
+        -   **[検出されたマルウェアの種類の数]** コレクション内のコンピューターで、指定した種類の数の異なるマルウェアが検出されると、アラートが生成されます。 値を指定して **2** を通じて **32** です。
 
-        -   **[検出期間 (時間):]** マルウェアの検出の数が発生する必要がありますを時間単位では、検出の間隔を指定します。 **[1]** から **[168]** までの数で指定します。
+        -   **[検出期間 (時間)]** マルウェア検出の指定した発生回数の検出期間を、時間で指定します。 **[1]** から **[168]** までの数で指定します。
 
 9. **[OK]** をクリックして _[<コレクション名\>_ **のプロパティ]** ダイアログ ボックスを閉じます。  
 
@@ -92,7 +92,7 @@ Configuration Manager のバージョン 1702 から、Endpoint Protection ク�
 アラートを生成するパーセント値を構成するには、**[監視]** > **[アラート]** > **[すべてのアラート]** を展開し、**[期限切れのマルウェア対策クライアント]** をダブルクリックし、**[管理されたクライアントのうち、期限切れのバージョンのマルウェア対策クライアントを使用しているものが次の割合を超えたら、アラートを生成する]** オプションを変更します。
 
 > [!div class="button"]
-[次のステップ >](endpoint-definition-updates.md)
-
+> [次のステップ >](endpoint-definition-updates.md)
+> 
 > [!div class="button"]
-[戻る >](endpoint-protection-site-role.md)
+> [戻る >](endpoint-protection-site-role.md)
