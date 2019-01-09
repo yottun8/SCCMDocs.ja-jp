@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f93b9c7e96c66fd2279d8d6e42f605a763c75025
-ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
+ms.openlocfilehash: 050cf81a99f29d24cad6eb13e691e332174627c3
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53747145"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53818023"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1810 の新機能
 
@@ -81,7 +81,7 @@ Version 1810 drops support for the following products:
 
 - **SQL 変更追跡のクリーンアップ**:サイト データベースに SQL 変更追跡データのバックログがあるかどうかの新しい確認です。 このバックログの確認とクリーンアップの手順など、詳しくは、「[SQL 変更追跡のクリーンアップ](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#bkmk_changetracking)」をご覧ください。 <!--SCCMDocs-pr issue 3023-->  
 
-- **SQL Native Client バージョン**:この前提条件の確認は、TLS 1.2 をサポートする SQL Native Client のバージョン用に更新されています。 最小バージョンは [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402) です。 詳細については、[SQL Native Client バージョン](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client)に関するトピックを参照してください。 <!--SCCMDocs-pr issue 3094->  
+- **SQL Native Client バージョン**:この前提条件の確認は、TLS 1.2 をサポートする SQL Native Client のバージョン用に更新されています。 最小バージョンは [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402) です。 詳細については、[SQL Native Client バージョン](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client)に関するトピックを参照してください。 <!--SCCMDocs-pr issue 3094-->  
 
 - **Windows クラスター ノード上のサイト システム**:Configuration Manager の設定手順では、フェールオーバー クラスタリング用の Windows ロールで、コンピューターにサイト サーバー ロールがインストールされるのをブロックしなくなりました。 SQL Always On では、このロールが必要なため、以前はサイト サーバーにサイト データベースを同時に配置できませんでした。 この変更により、SQL Always On とパッシブ モードのサイト サーバーを使用して、少ないサーバー数で高可用性サイトを作成できます。 詳しくは、「[Windows フェールオーバー クラスター](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster)」をご覧ください。 <!--1359132-->  
 

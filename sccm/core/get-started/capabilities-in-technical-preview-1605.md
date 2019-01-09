@@ -10,26 +10,26 @@ ms.assetid: 2bafd028-1923-4463-9e3e-ee41bc0c437b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 05d87b253f2387dd8428f4b9fadea3fe5f3a48e8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4eb41ba3a55d0de026d38a673d4e5dfad8e22cd7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342530"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416131"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1605 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1605 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。      このバージョンの Technical Preview をインストールする前に、説明のトピック「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。  
 
  **この Technical Preview の既知の問題:**  
 
--   Technical Preview 1605 をインストールした後、管理ポイントのプロパティを更新すると、コンソールを強制的に閉じまるコンソール エラーが発生する場合があります。  これが発生した場合、管理ポイントをアンインストールし、目的の設定を使用して管理ポイントを再インストールできます。 または、Technical Preview 1605 をインストールする前に、管理ポイントを変更することができます。  
+- Technical Preview 1605 をインストールした後、管理ポイントのプロパティを更新すると、コンソールを強制的に閉じまるコンソール エラーが発生する場合があります。  これが発生した場合、管理ポイントをアンインストールし、目的の設定を使用して管理ポイントを再インストールできます。 または、Technical Preview 1605 をインストールする前に、管理ポイントを変更することができます。  
 
--   ビジネス向け Windows ストア機能を Technical Preview 1604 で使用していて、Technical Preview 1605 にアップグレードすると、オンボード データを表示できなくなります。 他の機能はすべて引き続き機能します。 Technical Preview 1604 でオンボードした場合、Technical Preview 1605 をインストールした後もオンボードされたままで、追加のアクションを行う必要はありません。  
+- ビジネス向け Windows ストア機能を Technical Preview 1604 で使用していて、Technical Preview 1605 にアップグレードすると、オンボード データを表示できなくなります。 他の機能はすべて引き続き機能します。 Technical Preview 1604 でオンボードした場合、Technical Preview 1605 をインストールした後もオンボードされたままで、追加のアクションを行う必要はありません。  
 
- **このバージョンでお試しいただける新機能を次に示します。**  
+  **このバージョンでお試しいただける新機能を次に示します。**  
 
 ##  <a name="BKMK_PerAppVPN"></a> Windows 10 デバイス向けのアプリごとの VPN  
  Configuration Manager と Intune を使用して管理されている Windows 10 デバイスの場合、Configuration Manager 管理コンソールで構成した VPN 接続を自動的に開くアプリの一覧を追加できます。 これらのアプリへの VPN トラフィックを制限するか、VPN 接続を介してすべてのトラフィックを許可し続けることができます。  
@@ -57,15 +57,15 @@ ms.locfileid: "32342530"
 
  猶予期間を設定するには、次の操作を実行します。  
 
-1.  クライアント設定の **[コンピューター エージェント]** ページで、新しいプロパティ **[展開期限後の実施の猶予期間 (時間)]** の値を **1** ～ **120** 時間で設定します。  
+1. クライアント設定の **[コンピューター エージェント]** ページで、新しいプロパティ **[展開期限後の実施の猶予期間 (時間)]** の値を **1** ～ **120** 時間で設定します。  
 
-2.  新しいアプリケーションの展開、または既存の展開のプロパティで、**[スケジュール]** ページで **[ユーザー設定に従い、クライアント設定で定義された猶予期間が終了するまでこの展開の実施を延期する]** チェック ボックスをオンにします。  
+2. 新しいアプリケーションの展開、または既存の展開のプロパティで、**[スケジュール]** ページで **[ユーザー設定に従い、クライアント設定で定義された猶予期間が終了するまでこの展開の実施を延期する]** チェック ボックスをオンにします。  
 
-     このチェック ボックスがオンになっていて、クライアント設定も展開するデバイスを対象としているすべての展開が、猶予期間を使用します。  
+    このチェック ボックスがオンになっていて、クライアント設定も展開するデバイスを対象としているすべての展開が、猶予期間を使用します。  
 
- このリリースでは、構成する猶予期間はクライアント デバイスでは使用されません。 猶予期間を構成し、チェック ボックスをオンにすると、期限後にユーザーが構成した最初の非ビジネス ウィンドウで、アプリケーションがインストールされます。  
+   このリリースでは、構成する猶予期間はクライアント デバイスでは使用されません。 猶予期間を構成し、チェック ボックスをオンにすると、期限後にユーザーが構成した最初の非ビジネス ウィンドウで、アプリケーションがインストールされます。  
 
- ソフトウェア更新プログラムの展開ウィザード、自動展開規則の作成ウィザード、およびプロパティ ページに、同様のオプションが追加されています。 ただし、現在、これらはこの Technical Preview には実装されていません。  
+   ソフトウェア更新プログラムの展開ウィザード、自動展開規則の作成ウィザード、およびプロパティ ページに、同様のオプションが追加されています。 ただし、現在、これらはこの Technical Preview には実装されていません。  
 
 ##  <a name="BKMK_Remote"></a> リモート デバイスの操作の新しいエクスペリエンス  
  Configuration Manager コンソールからリモート デバイスの操作を実行するため、エクスペリエンスが改善されました。  
@@ -75,24 +75,24 @@ ms.locfileid: "32342530"
 
  これらの各操作の状態は次の場所で確認できます。  
 
--   **[デバイス]** ノードからデバイスを選択する場合は、詳細ウィンドウ  
+- **[デバイス]** ノードからデバイスを選択する場合は、詳細ウィンドウ  
 
--   デバイスの **[プロパティ]** ページ  
+- デバイスの **[プロパティ]** ページ  
 
--   **[デバイス]** ノードのメイン ページ (既定ではすべての列が表示されない場合があります)  
+- **[デバイス]** ノードのメイン ページ (既定ではすべての列が表示されない場合があります)  
 
- iOS のアクティブ化ロックのバイパスの詳細については、「[Help protect iOS devices with Activation Lock bypass for Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock)」(Configuration Manager のアクティブ化ロックのバイパスで iOS デバイスを保護する) の「**Current known issues with Activation Lock bypass in the Configuration Manager Technical Preview**」(Configuration Manager の Technical Preview におけるのアクティブ化ロックのバイパスの現在の既知の問題) セクションをご覧ください。  
+  iOS のアクティブ化ロックのバイパスの詳細については、「[Help protect iOS devices with Activation Lock bypass for Configuration Manager](/sccm/mdm/deploy-use/manage-ios-activation-lock)」(Configuration Manager のアクティブ化ロックのバイパスで iOS デバイスを保護する) の「**Current known issues with Activation Lock bypass in the Configuration Manager Technical Preview**」(Configuration Manager の Technical Preview におけるのアクティブ化ロックのバイパスの現在の既知の問題) セクションをご覧ください。  
 
 ##  <a name="BKMK_WSFB"></a> ビジネス向け Windows ストアのアプリ  
  [ビジネス向け Windows ストア](https://www.microsoft.com/business-store)は、組織向けのアプリを検索して、個別に、または一括で購入できる場所です。 ストアを Configuration Manager に接続すると、一括購入したアプリを Configuration Manager コンソールから管理できます。例を挙げます。  
 
--   購入したアプリの一覧を Configuration Manager に同期させることができます。  
+- 購入したアプリの一覧を Configuration Manager に同期させることができます。  
 
--   同期されたアプリは Configuration Manager コンソールに表示され、他のすべてのアプリと同様に展開できます。  
+- 同期されたアプリは Configuration Manager コンソールに表示され、他のすべてのアプリと同様に展開できます。  
 
--   Configuration Manager は 24 時間ごとにストアからアプリのライセンス情報をダウンロードし、Configuration Manager コンソールで、これを確認することができます。  
+- Configuration Manager は 24 時間ごとにストアからアプリのライセンス情報をダウンロードし、Configuration Manager コンソールで、これを確認することができます。  
 
- Technical Preview の 1604 リリースでは、Configuration Manager コンソールでビジネス向け Windows ストアからアプリの同期と表示ができました。 このリリースでは、同期されたストア アプリから Configuration Manager アプリケーションを作成して展開する機能が追加されています。  
+  Technical Preview の 1604 リリースでは、Configuration Manager コンソールでビジネス向け Windows ストアからアプリの同期と表示ができました。 このリリースでは、同期されたストア アプリから Configuration Manager アプリケーションを作成して展開する機能が追加されています。  
 
 ### <a name="set-up-windows-store-for-business-synchronization"></a>ビジネス向け Windows ストアの同期の設定  
 
@@ -143,11 +143,11 @@ ms.locfileid: "32342530"
 
  ビジネス向け Windows ストアのオフライン ライセンス付きアプリから Configuration Manager アプリケーションを作成して展開します。  
 
-1.  Configuration Manager コンソールの **[ソフトウェア ライブラリ]** ワークスペースで **[アプリケーション管理]** を展開し、**[ストア アプリのライセンス情報]** をクリックします。  
+1. Configuration Manager コンソールの **[ソフトウェア ライブラリ]** ワークスペースで **[アプリケーション管理]** を展開し、**[ストア アプリのライセンス情報]** をクリックします。  
 
-2.  展開するアプリを選び、**[ホーム]** タブの **[作成]** グループで、**[アプリケーションの作成]** をクリックします。  
+2. 展開するアプリを選び、**[ホーム]** タブの **[作成]** グループで、**[アプリケーションの作成]** をクリックします。  
 
- ビジネス向け Windows ストアのアプリを含む Configuration Manager アプリケーションが作成されます。 他の Configuration Manager のアプリケーションと同様に、このアプリケーションを展開して監視できます。  
+   ビジネス向け Windows ストアのアプリを含む Configuration Manager アプリケーションが作成されます。 他の Configuration Manager のアプリケーションと同様に、このアプリケーションを展開して監視できます。  
 
 > [!IMPORTANT]  
 >  オフライン ライセンス付きアプリから単一の展開の種類で Configuration Manager アプリケーションを作成すると、これを MDM 管理されたデバイスに展開して、Configuration Manager クライアントで管理することもできます。 複数の展開の種類でアプリを展開しようとすると、インストールは失敗します。  
@@ -158,7 +158,7 @@ ms.locfileid: "32342530"
 
 -   このリリースでは、ビジネス向け Windows ストアおよび iOS App Store のボリューム購入アプリが同じビューの **[ストア アプリのライセンス情報]** に統合されています。  
 
--   iOS のボリューム購入アプリの場合、アプリケーションの作成ウィザードの **[iOS アプリケーション パッケージ ブラウザー]** ダイアログ ボックスから [Apple Volume Purchase Program タブが削除されています。 iOS のボリューム購入アプリを作成するには、次の手順を使用します。  
+-   iOS のボリューム購入アプリの場合、アプリケーションの作成ウィザードの **[iOS アプリケーション パッケージ ブラウザー]** ダイアログ ボックスから [Apple Volume Purchase Program] タブが削除されています。 iOS のボリューム購入アプリを作成するには、次の手順を使用します。  
 
     1.  1.  Configuration Manager コンソールの **[ソフトウェア ライブラリ]** ワークスペースで **[アプリケーション管理]** を展開し、**[ストア アプリのライセンス情報]** をクリックします。  
 
@@ -231,29 +231,29 @@ ms.locfileid: "32342530"
 
 ### <a name="deploy-the-company-portal-application-and-configuration"></a>会社のポータル アプリケーションと構成を展開する  
 
-1.  Technical Preview に含まれている構成スクリプトを使用して、会社のポータルの展開と構成を準備します。  
+1. Technical Preview に含まれている構成スクリプトを使用して、会社のポータルの展開と構成を準備します。  
 
-    1.  管理者特権の PowerShell コマンド ウィンドウを開きます。  
+   1. 管理者特権の PowerShell コマンド ウィンドウを開きます。  
 
-    2.  **set-executionPolicy RemoteSigned** を実行します。  
+   2. **set-executionPolicy RemoteSigned** を実行します。  
 
-    3.  フォルダー **&lt;SCCM のインストール ディレクトリ\>\cd.latest\SMSSETUP\TOOLS\MDM** から **.\ConfigurationScript.ps1** を実行します。  
+   3. フォルダー **&lt;SCCM のインストール ディレクトリ\>\cd.latest\SMSSETUP\TOOLS\MDM** から **.\ConfigurationScript.ps1** を実行します。  
 
-     構成スクリプトは、以下を行います。  
+      構成スクリプトは、以下を行います。  
 
-    1.  同じフォルダー内の**CompanyPortalOnPremisesMDM.appx** を使用して、Windows アプリ パッケージの展開の種類を持つ Configuration Manager アプリケーションを作成する  
+   4. 同じフォルダー内の**CompanyPortalOnPremisesMDM.appx** を使用して、Windows アプリ パッケージの展開の種類を持つ Configuration Manager アプリケーションを作成する  
 
-    2.  会社のポータルを構成する構成項目と構成基準を作成する  
+   5. 会社のポータルを構成する構成項目と構成基準を作成する  
 
-    3.  構成基準とアプリケーションの両方を展開し、すべての配布ポイントにアプリケーションを追加する  
+   6. 構成基準とアプリケーションの両方を展開し、すべての配布ポイントにアプリケーションを追加する  
 
-    > [!NOTE]  
-    >  アプリケーション カタログの役割が、プライマリ サイトと併置されていない場合は、次の操作を実行します。  
-    >   
-    >  -   **[資産とコンプライアンス]** ワークスペースで、構成項目 **OnPremMDM Portal Configuration CI - server urls** を検索します。  
-    > -   **[コンプライアンス規則]** の値をアプリケーション カタログの役割が配置されているサイト システムの完全修飾ドメイン名に変更します。  
+   > [!NOTE]
+   >  アプリケーション カタログの役割が、プライマリ サイトと併置されていない場合は、次の操作を実行します。  
+   > 
+   > - **[資産とコンプライアンス]** ワークスペースで、構成項目 **OnPremMDM Portal Configuration CI - server urls** を検索します。  
+   >   -   **[コンプライアンス規則]** の値をアプリケーション カタログの役割が配置されているサイト システムの完全修飾ドメイン名に変更します。  
 
-2.  会社のポータル アプリケーションとその構成がどちらも展開されたら、Configuration Manager コンソールの **[展開]** セクションを使用して、アプリケーションと構成基準が特定のデバイスに対応していることを確認します。 デバイスの スタート] メニューに、会社のポータルが **[会社のポータル (Technical Preview)]** として表示されます。  
+2. 会社のポータル アプリケーションとその構成がどちらも展開されたら、Configuration Manager コンソールの **[展開]** セクションを使用して、アプリケーションと構成基準が特定のデバイスに対応していることを確認します。 デバイスの [スタート] メニューに、会社のポータルが **[会社のポータル (Technical Preview)]** として表示されます。  
 
 ### <a name="try-it-out"></a>試してみましょう。  
  次のタスクを完了し、Microsoft Connect サイトの「[Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback)」 (Configuration Manager フィードバック プログラム) ページのフィードバック フォームを使用して、どのように動作したかをお知らせください。  
@@ -293,11 +293,11 @@ ms.locfileid: "32342530"
 
 4.  **[サーバー グループ設定]** ページで、次のいずれかの設定を指定します。  
 
-    -   **[同時更新を許可するコンピューターの割合]**: 任意の時点で特定の割合のクライアントのみを更新するように指定します。 たとえば、コレクションに 10 のクライアントがあり、クライアントの 30% を同時に更新するようにコレクションが構成されている場合は、任意の時点で 3 つのクライアントだけがソフトウェア更新プログラムをインストールします。  
+    -   **同時更新を許可するコンピューターの割合**: 任意の時点で特定の割合のクライアントのみを更新するように指定します。 たとえば、コレクションに 10 のクライアントがあり、クライアントの 30% を同時に更新するようにコレクションが構成されている場合は、任意の時点で 3 つのクライアントだけがソフトウェア更新プログラムをインストールします。  
 
-    -   **[同時更新を許可するコンピューターの数]**: 任意の時点で特定の数のクライアントのみを更新するように指定します。  
+    -   **同時更新を許可するコンピューターの数**: 任意の時点で特定の数のクライアントのみを更新するように指定します。  
 
-    -   **[メンテナンス シーケンスを指定する]**: コレクション内のクライアントが、構成した順番で 1 つずつ更新されるように指定します。 クライアントは、一覧で前にあるクライアントがソフトウェア更新プログラムのインストールを完了しないと、ソフトウェア更新プログラムをインストールできません。  
+    -   **メンテナンス シーケンスを指定する**: コレクション内のクライアントが、構成した順番で 1 つずつ更新されるように指定します。 クライアントは、一覧で前にあるクライアントがソフトウェア更新プログラムのインストールを完了しないと、ソフトウェア更新プログラムをインストールできません。  
 
 5.  展開前 (ノードのドレイン) スクリプトまたは展開後 (ノードの再開) スクリプトを使用するかどうかを指定します。  
 
@@ -342,48 +342,48 @@ ms.locfileid: "32342530"
 ### <a name="try-it-now"></a>今すぐ試す  
  次のタスクを完了し、Microsoft Connect サイトの「[Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback)」 (Configuration Manager フィードバック プログラム) ページのフィードバック フォームを使用して、どのように動作したかをお知らせください。  
 
--   Windows Defender Advanced Threat Protection (ATP) オンライン サービスにデバイスをオンボードする  
+- Windows Defender Advanced Threat Protection (ATP) オンライン サービスにデバイスをオンボードする  
 
--   管理対象デバイスへの Windows Defender ATP の展開を監視する  
+- マネージド デバイスへの Windows Defender ATP の展開を監視する  
 
- **必要条件**  
+  **必要条件**  
 
--   Windows Defender Advanced Threat Protection オンライン サービスのサブスクリプション  
+- Windows Defender Advanced Threat Protection オンライン サービスのサブスクリプション  
 
--   Windows 10 Anniversary Edition (ビルド番号 14328 以降) を実行しているクライアント  
+- Windows 10 Anniversary Edition (ビルド番号 14328 以降) を実行しているクライアント  
 
--   クライアント オンボード構成ファイルの作成  
+- クライアント オンボード構成ファイルの作成  
 
-    ##### <a name="how-to-create-an-onboarding-configuration-file"></a>オンボード構成ファイルの作成方法  
+  ##### <a name="how-to-create-an-onboarding-configuration-file"></a>オンボード構成ファイルの作成方法  
 
-    1.  Windows Defender ATP オンライン サービスにログオンします。  
+  1.  Windows Defender ATP オンライン サービスにログオンします。  
 
-    2.  **[クライアント オンボーディング]** メニュー項目をクリックします。  
+  2.  **[クライアント オンボーディング]** メニュー項目をクリックします。  
 
-    3.  **[System Center Configuration Manager]** を選択し、**[パッケージのダウンロード]** をクリックします。  
+  3.  **[System Center Configuration Manager]** を選択し、**[パッケージのダウンロード]** をクリックします。  
 
-    4.  圧縮済みアーカイブ (.zip) ファイルをダウンロードして内容を抽出します。  
+  4.  圧縮済みアーカイブ (.zip) ファイルをダウンロードして内容を抽出します。  
 
 
 ##### <a name="onboard-devices-for-windows-defender-atp"></a>Windows Defender ATP のオンボード デバイス  
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[概要]** > **[Endpoint Protection]** > **[Windows Defender ATP ポリシー]** の順に移動し、**[Windows Defender ATP ポリシーの作成]** をクリックします。 Windows Defender ATP ポリシーの作成ウィザードが開きます。  
+1. Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[概要]** > **[Endpoint Protection]** > **[Windows Defender ATP ポリシー]** の順に移動し、**[Windows Defender ATP ポリシーの作成]** をクリックします。 Windows Defender ATP ポリシーの作成ウィザードが開きます。  
 
-2.  Windows Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、**[オンボード]** を選択します。 [次へ] をクリックします。  
+2. Windows Defender ATP ポリシーの **[名前]** と **[説明]** を入力し、**[オンボード]** を選択します。 [次へ] をクリックします。  
 
-3.  組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 **[次へ]** をクリックします。  
+3. 組織の Windows Defender ATP のクラウド サービス テナントによって提供される構成ファイルを**参照**します。 **[次へ]** をクリックします。  
 
-4.  管理対象のデバイスから分析用に収集され共有されるファイルのサンプルを指定します。  
+4. マネージド デバイスから分析用に収集され共有されるファイルのサンプルを指定します。  
 
-    -   **なし**: 分析用にサンプル ファイルは収集されません。  
+   - **なし**: 分析用にサンプル ファイルは収集されません。  
 
-    -   **移植可能な実行可能ファイル**: プログラム ファイル (.exe)、ダイナミック ライブラリ リンク (.dll) ファイル、およびサイバー攻撃にさらされる可能性がある同様のファイルなどが分析用に収集され共有されます。  
+   - **移植可能な実行可能ファイル**: プログラム ファイル (.exe)、ダイナミック ライブラリ リンク (.dll) ファイル、およびサイバー攻撃にさらされる可能性がある同様のファイルなどが分析用に収集され共有されます。  
 
      **[次へ]** をクリックします。  
 
-5.  概要を確認して、ウィザードを完了します。  
+5. 概要を確認して、ウィザードを完了します。  
 
-6.  これで、**[展開]** をクリックすると、Windows Defender ATP ポリシーを管理対象のクライアント コンピューターに展開できます。  
+6. これで、**[展開]** をクリックすると、Windows Defender ATP ポリシーを管理対象のクライアント コンピューターに展開できます。  
 
 ##### <a name="monitor-windows-defender-atp"></a>Windows Defender ATP の監視  
 
@@ -430,38 +430,38 @@ ms.locfileid: "32342530"
 
 ##### <a name="pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a>IMEI または iOS シリアル番号を持つ会社所有のデバイスの事前宣言  
 
-1.  Configuration Manager コンソールで **[資産とコンプライアンス]** > **[概要]** > **[会社が所有しているすべてのデバイス]** > **[事前に宣言されたデバイス]** の順に移動し、**[事前に宣言されたデバイスを作成します]** をクリックします。 事前に宣言されたデバイス ウィザードが開きます。  
+1. Configuration Manager コンソールで **[資産とコンプライアンス]** > **[概要]** > **[会社が所有しているすべてのデバイス]** > **[事前に宣言されたデバイス]** の順に移動し、**[事前に宣言されたデバイスを作成します]** をクリックします。 事前に宣言されたデバイス ウィザードが開きます。  
 
-2.  デバイス情報を追加する方法を指定します。  
+2. デバイス情報を追加する方法を指定します。  
 
-    -   **デバイスの IMEI 番号と詳細情報を記載した CSV ファイルをアップロードする**: 番号の一覧をアップロードするには、ステップ 3 を参照してください。  
+   -   **デバイスの IMEI 番号と詳細情報を記載した CSV ファイルをアップロードする**: 番号の一覧をアップロードするには、ステップ 3 を参照してください。  
 
-    -   **IMEI 番号と詳細情報を手作業で追加する**: 手動で情報を入力するには、IMEI 番号または iOS シリアル番号とデバイスの詳細を入力してからステップ 4 に進みます。  
+   -   **IMEI 番号と詳細情報を手作業で追加する**: 手動で情報を入力するには、IMEI 番号または iOS シリアル番号とデバイスの詳細を入力してからステップ 4 に進みます。  
 
-3.  アップロードされたファイルの場合、情報を含む .csv ファイルを参照し、会社所有のデバイスを事前に宣言します。 ファイルには、次の形式が必要です。ただし、一番上の行 (ガイダンスのためだけに提供) は除きます。  
+3. アップロードされたファイルの場合、情報を含む .csv ファイルを参照し、会社所有のデバイスを事前に宣言します。 ファイルには、次の形式が必要です。ただし、一番上の行 (ガイダンスのためだけに提供) は除きます。  
 
-    |**IMEI #**|**iOS シリアル**|**OS**|**詳細**|
-    |---|---|---|---|
-    |123456789012345||WINDOWS|会社所有の Windows デバイス|
-    |123456789012|A0BCD0EFGH0J|IOS|会社所有の iOS デバイス|
-    |123456789012346||ANDROID|会社所有の Android デバイス|
+   |**IMEI #**|**iOS シリアル**|**OS**|**詳細**|
+   |---|---|---|---|
+   |123456789012345||WINDOWS|会社所有の Windows デバイス|
+   |123456789012|A0BCD0EFGH0J|IOS|会社所有の iOS デバイス|
+   |123456789012346||ANDROID|会社所有の Android デバイス|
 
-     **列:**  
+    **列:**  
 
-    -   列 1: IMEI 番号: 各行に IMEI 番号または iOS シリアル番号のいずれかが必要です。  
+   - 列 1: IMEI 番号: 各行に IMEI 番号または iOS シリアル番号のいずれかが必要です。  
 
-    -   列 2: iOS シリアル番号: 事前宣言できるのは iOS シリアル番号だけです。 他のデバイス プラットフォームには IMEI 番号を使用します。  
+   - 列 2: iOS シリアル番号: 事前宣言できるのは iOS シリアル番号だけです。 他のデバイス プラットフォームには IMEI 番号を使用します。  
 
-    -   列 3: デバイスのオペレーティング システム (大文字化が必要):  
+   - 列 3: デバイスのオペレーティング システム (大文字化が必要):   
 
-        -   IOS: すべての iOS デバイス  
+     -   IOS: すべての iOS デバイス  
 
-        -   WINDOWS: Windows Phone、Window 10 Mobile、および Windows PC など  
+     -   WINDOWS: Windows Phone、Window 10 Mobile、および Windows PC など  
 
-        -   ANDROID: すべての Android デバイス  
+     -   ANDROID: すべての Android デバイス  
 
-    -   列 4: 詳細: Configuration Manager コンソールに表示される追加のデバイス情報  
+   - 列 4: 詳細: Configuration Manager コンソールに表示される追加のデバイス情報  
 
      **[次へ]** をクリックします。  
 
-4.  ファイル インポートの結果を確認します。 以前にインポートした IMEI またはシリアル番号には、新しい詳細で更新された詳細があります。  **[次へ]** をクリックして続行するか、**[戻る]** をクリックして最新の詳細を保持して、ウィザードを完了します。  
+4. ファイル インポートの結果を確認します。 以前にインポートした IMEI またはシリアル番号には、新しい詳細で更新された詳細があります。  **[次へ]** をクリックして続行するか、**[戻る]** をクリックして最新の詳細を保持して、ウィザードを完了します。  

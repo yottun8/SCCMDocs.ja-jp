@@ -10,16 +10,16 @@ ms.assetid: 134a2f60-811e-4dc9-a8f5-1ce0018c5c12
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f3ee48d60c46def5daef25a2f3654e8a79a0e9e1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 14e982592491ec5e8a10cd3313f748bddac40cff
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339861"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420076"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1606 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1606 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。      このバージョンの Technical Preview をインストールする前に、説明のトピック「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。    
 
@@ -36,7 +36,7 @@ ms.locfileid: "32339861"
 ## <a name="dmp_category"></a> デバイスを自動的にコレクションごとに分類
 Microsoft Intune と Configuration Manager を使用している場合に、デバイス コレクションにデバイスを自動的に配置するために使用できるデバイス カテゴリを作成することができます。 ユーザーは Intune にデバイスを登録するときに、デバイス カテゴリの選択を求められます。 Configuration Manager コンソールから、デバイスのカテゴリをさらに変更できます。
 
-**重要:** この機能は、Microsoft Intune の **2016 年 6 月** のリリースで機能します。 これらの手順を実行する前に、今回のリリースに更新していることを確認してください。
+**重要:** この機能は、Microsoft Intune の **2016 年 6 月**のリリースで機能します。 これらの手順を実行する前に、今回のリリースに更新していることを確認してください。
 
 ### <a name="try-it-out"></a>試してみましょう。
 
@@ -49,7 +49,7 @@ Microsoft Intune と Configuration Manager を使用している場合に、デ�
 コレクションをデバイス カテゴリと関連付けると、指定したカテゴリのすべてのデバイスがそのコレクションに追加されます。
 1.  デバイス コレクションの **[プロパティ]** ダイアログをクリックして、**[規則の追加]** > **[デバイス カテゴリの規則]** の順にクリックします。
 2.  **[デバイス カテゴリのメンバーシップ規則の作成]** ダイアログ ボックスで、コレクション内のすべてのデバイスに適用されるカテゴリを選択します。
-3.  **[デバイス カテゴリのメンバーシップ規則の作成]** ダイアログ ボックスと [コレクションのプロパティ ダイアログ ボックスを閉じます。
+3.  **[デバイス カテゴリのメンバーシップ規則の作成]** ダイアログ ボックスと [コレクションのプロパティ] ダイアログ ボックスを閉じます。
 
 ### <a name="change-the-category-of-a-device"></a>デバイスのカテゴリを変更する
 1.  Configuration Manager コンソールの **[資産とコンプライアンス]** ワークスペースで、**[概要]** を展開してから **[デバイス]** をクリックします。
@@ -98,8 +98,8 @@ Configuration Manager での Device Guard の詳しい使用方法は、[Enterpr
 - [Device Guard certification and compliance](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance) (Device Guard の証明書とコンプライアンス)
 - [Device Guard 展開ガイド](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
 
- ##  <a name="dmp_onprem"></a> オンプレミス モバイル デバイス管理のための複数のデバイス管理ポイント  
- Technical Preview 1606 では、オンプレミスのモバイル デバイス管理 (MDM) で、複数のデバイス管理ポイントが使用できるように登録済みのデバイスを自動的に構成する Windows 10 Anniversary Update の新機能をサポートしています。 この機能により、通常使用しているデバイスの管理ポイントが使用できない場合に、デバイスが別のデバイス管理ポイントにフォールバックすることができます。 この機能は、Windows 10 Anniversary Update がインストールされている PC でのみ機能します。  
+  ##  <a name="dmp_onprem"></a> オンプレミス モバイル デバイス管理のための複数のデバイス管理ポイント  
+  Technical Preview 1606 では、オンプレミスのモバイル デバイス管理 (MDM) で、複数のデバイス管理ポイントが使用できるように登録済みのデバイスを自動的に構成する Windows 10 Anniversary Update の新機能をサポートしています。 この機能により、通常使用しているデバイスの管理ポイントが使用できない場合に、デバイスが別のデバイス管理ポイントにフォールバックすることができます。 この機能は、Windows 10 Anniversary Update がインストールされている PC でのみ機能します。  
 
 ### <a name="try-it-out"></a>試してみましょう。  
 
@@ -159,11 +159,11 @@ Configuration Manager コンソールを使用して、Azure にサービスを�
 >クライアント証明書は、クラウド プロキシ サービスで管理するコンピューター上およびクラウド プロキシ コネクタ ポイントをホストしているサイト システム サーバー上で必要です。 これらの任意のコンピューターにクライアント証明書を追加する必要がある場合は、「[Windows コンピューター用のクライアント証明書の展開](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012)」をご覧ください。
 
 1. [実行] ウィンドウで、「**mmc**」を入力して Return キーを押します。
-2. 管理コンソールの ファイル] メニューで **[スナップインの追加と削除]** をクリックします。
-3. スナップインの追加と削除] ダイアログ ボックスで **[証明書]** をクリックして、**[追加]**、**[コンピューター アカウント]**、**[次へ]**、**[ローカル コンピューター]** の順にクリックし、**[完了]** をクリックします。 **[OK]** をクリックしてダイアログ ボックスを閉じます。
+2. 管理コンソールの [ファイル] メニューで **[スナップインの追加と削除]** をクリックします。
+3. [スナップインの追加と削除] ダイアログ ボックスで **[証明書]** をクリックして、**[追加]**、**[コンピューター アカウント]**、**[次へ]**、**[ローカル コンピューター]** の順にクリックし、**[完了]** をクリックします。 **[OK]** をクリックしてダイアログ ボックスを閉じます。
 4. **[証明書] > [個人用] > [証明書]** に移動します。
 5. コンピューターでクライアント認証用の証明書をダブルクリックして、[証明パス] タブをクリックし、ルート証明機関 (パスの先頭) をダブルクリックします。
-6.  詳細] タブをクリックし、**[ファイルにコピー]** をクリックします。
+6.  [詳細] タブをクリックし、**[ファイルにコピー]** をクリックします。
 7. 既定の証明書形式を使用して証明書のエクスポート ウィザードを完了します。 作成したルート証明書の名前と場所をメモします。 これは後の手順でクラウド プロキシ サービスを構成する際に必要になります。
 
 #### <a name="upload-the-management-certificate-to-azure"></a>管理証明書を Azure にアップロードする
@@ -191,7 +191,7 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 
 1. Configuration Manager コンソールで、**[管理]、[サイトの構成]、[サイト]** の順に移動します。
 2. クラウド プロキシ サービスを使用して管理するクライアントのプライマリ サイトを選択して **[プロパティ]** をクリックします。
-3. プライマリ サイトのプロパティ シートの クライアント コンピューターの通信方法] タブで、**[使用可能な場合は PKI クライアント証明書 (クライアント認証機能) を使用する]** の横のチェック ボックスをオンにします。
+3. プライマリ サイトのプロパティ シートの [クライアント コンピューターの通信方法] タブで、**[使用可能な場合は PKI クライアント証明書 (クライアント認証機能) を使用する]** の横のチェック ボックスをオンにします。
 4. **[サイト システムの証明書失効リスト (CRL) をチェックする]** の横のチェック ボックスがオフになっていることを確認します。 このオプションは、CRL をパブリックに公開した場合にのみ必要になります。
 5. **[OK]** をクリックします。
 
@@ -206,7 +206,7 @@ Azure 管理証明書は、Configuration Manager が Azure API にアクセス�
 1. Configuration Manager コンソールで、**[管理] > [サイトの構成] > [サーバーとサイト システムの役割]** の順に移動します。
 2. クラウド プロキシ トラフィックに構成したい役割のサイト システム サーバーをクリックします。
 3. 役割をクリックして、**[プロパティ]** をクリックします。
-4. 役割のプロパティ シートの クライアント接続] の下で、**[HTTPS]** を選択し、**[Configuration Manager のクラウド プロキシ トラフィックを許可する]** の横のチェック ボックスをオンにして **[OK]** をクリックします。 残りの役割にこれらの手順を繰り返します。
+4. 役割のプロパティ シートの [クライアント接続] の下で、**[HTTPS]** を選択し、**[Configuration Manager のクラウド プロキシ トラフィックを許可する]** の横のチェック ボックスをオンにして **[OK]** をクリックします。 残りの役割にこれらの手順を繰り返します。
 
 #### <a name="check-status-on-a-client-on-the-internet"></a>インターネットでクライアントの状態を確認する
 
@@ -260,4 +260,4 @@ Technical Preview 1606 では、Configuration Manager コンソールの [更新
 
 -   **実稼働前の名前変更されたオプション:**
 
-    更新とサービス] ノードで、**[クライアント オプション]** という名前だったボタンが **[実稼働前クライアントの昇格]** に変更されました。
+    [更新とサービス] ノードで、**[クライアント オプション]** という名前だったボタンが **[実稼働前クライアントの昇格]** に変更されました。

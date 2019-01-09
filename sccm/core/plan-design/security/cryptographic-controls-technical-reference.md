@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6d25c6a11821b73f34c8a3cd6aa95d4a78c86587
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 033f0fc3dd86c074f89804f6d9e70c173e9cf0b8
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418400"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817955"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>暗号化コントロールのテクニカル リファレンス
 
@@ -108,8 +108,6 @@ System Center Configuration Manager では、署名と暗号化を使用して�
 
 - クラウドベースの配布ポイントを使用する場合  
 
-- Intel AMT 搭載コンピューターを帯域外で管理する場合。  
-
   認証、署名、または暗号化に証明書を必要とするその他ほとんどの Configuration Manager 通信では、Configuration Manager は、使用可能な場合は自動的に PKI 証明書を使用します。 証明書を使用できない場合は、Configuration Manager により自己署名入り証明書が生成されます。  
 
   Exchange Server コネクタを使用してモバイル デバイスを管理する場合、Configuration Manager は PKI 証明書を使用しません。  
@@ -162,7 +160,7 @@ System Center Configuration Manager では、署名と暗号化を使用して�
 
  IIS では、証明書失効リスト (CRL) が既定で有効になっています。このため、PKI の展開で CRL を使用している場合、IIS を実行するほとんどの Configuration Manager サイト システムでは追加で構成する項目はありません。 ただし、ソフトウェア更新プログラムは例外です。ソフトウェア更新プログラム ファイルの署名を検証するには、手動で CRL チェックを有効にする必要があります。  
 
- クライアント コンピューターで HTTPS クライアント接続を使用する場合、CRL チェックは既定で有効にされます。 帯域外管理コンソールを実行して AMT ベースのコンピューターに接続する場合、CRL チェックは既定で有効になりませんが、このオプションを有効にすることができます。 Configuration Manager SP1 以降では、Mac コンピューターのクライアントで CRL チェックを無効にすることはできません。  
+ クライアント コンピューターで HTTPS クライアント接続を使用する場合、CRL チェックは既定で有効にされます。 Configuration Manager SP1 以降では、Mac コンピューターのクライアントで CRL チェックを無効にすることはできません。  
 
  CRL チェックは、Configuration Manager の次の接続ではサポートされません。  
 

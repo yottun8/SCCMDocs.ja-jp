@@ -10,12 +10,12 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cf5b55dddae34ac855f21e7d70967d3b9ab1c2dc
-ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
+ms.openlocfilehash: 2d6dc236381606b72dcb3603e269161dcdd5d6b9
+ms.sourcegitcommit: f2a1fa59fb3870a6bebca61daf15c0c157e9fdd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53747162"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031007"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager で SQL Server Always On 可用性グループを使用するための準備
 
@@ -111,7 +111,7 @@ Configuration Manager では、最新であることを確認するための非�
 
 Configuration Manager のセットアップでは、各レプリカに接続する必要があります。 Azure で可用性グループをセットアップし、グループが内部または外部ロード バランサーの背後にある場合、次の既定ポートを開きます。   
 
-- RCP エンドポイント マッパー:**TCP 135**   
+- RPC エンドポイント マッパー:**TCP 135**   
 
 - SQL Server Service Broker:**TCP 4022**  
 

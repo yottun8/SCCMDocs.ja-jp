@@ -10,32 +10,32 @@ ms.assetid: 9e447e34-0943-49ed-b6ba-3efebf3566c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 425ab566b5ddbfaad775d61609c0a4ccd98e96d0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 277881aab8a6d971c110b6ddd5b3dd34aae8fe7a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348567"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420160"
 ---
 # <a name="prepare-for-unknown-computer-deployments-in-system-center-configuration-manager"></a>System Center Configuration Manager での不明なコンピューターの展開の準備
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager 環境でオペレーティング システムを不明なコンピューターに展開するには、このトピックの情報を参考にしてください。 不明なコンピューターとは、Configuration Manager によって管理されていないコンピューターのことです。 これは、Configuration Manager データベースにそれらのコンピューターのレコードがないことを意味します。 不明なコンピューターには次のようなものがあります。  
 
--   Configuration Manager クライアントがインストールされていないコンピューター  
+- Configuration Manager クライアントがインストールされていないコンピューター  
 
--   Configuration Manager にインポートされていないコンピューター  
+- Configuration Manager にインポートされていないコンピューター  
 
--   Configuration Manager で検出されていないコンピューター  
+- Configuration Manager で検出されていないコンピューター  
 
- 以下の展開方法で、不明なコンピューターにオペレーティング システムを展開できます。  
+  以下の展開方法で、不明なコンピューターにオペレーティング システムを展開できます。  
 
--   [PXE を使用したネットワーク経由での Windows の展開](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)  
+- [PXE を使用したネットワーク経由での Windows の展開](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)  
 
--   [起動可能なメディアを使用して、オペレーティング システムを展開する](../deploy-use/create-bootable-media.md)  
+- [起動可能なメディアを使用して、オペレーティング システムを展開する](../deploy-use/create-bootable-media.md)  
 
--   [事前設定されたメディアを使用して、オペレーティング システムを展開する](../deploy-use/create-prestaged-media.md)  
+- [事前設定されたメディアを使用して、オペレーティング システムを展開する](../deploy-use/create-prestaged-media.md)  
 
 ## <a name="unknown-computer-deployment-workflow"></a>不明なコンピューターの展開のワークフロー  
  以下に、不明なコンピューターにオペレーティング システムを展開する際の基本的なワークフローについて説明します。  
@@ -43,7 +43,7 @@ System Center Configuration Manager 環境でオペレーティング システ�
 -   展開で使用する不明なコンピューター オブジェクトを選択する。 オペレーティング システムを、 **すべての不明なコンピューター** コレクションの不明なコンピューター オブジェクトのいずれかに展開したり、 **すべての不明なコンピューター** コレクション内のオブジェクトを別のコレクションに追加したりできます。 Configuration Manager では、**すべての不明なコンピューター** コレクション内に 2 つの不明なコンピューター オブジェクトがあります。 ひとつは x86 コンピューター用オブジェクトで、もうひとつは x64 コンピューター用オブジェクトです。  
 
     > [!NOTE]  
-    >  **[不明な x86 コンピューター]** は、x86 のみが可能なコンピューター用オブジェクトです。 **[不明な x64 コンピューター]** は、x86 および x64 が可能なコンピューター用オブジェクトです。 言い換えると、これらのオブジェクトは、展開先コンピューターのアーキテクチャの説明になります。 セットアップ先のコンピューターに展開するオペレーティング システムの説明ではありません。  
+    >  [不明な x86 コンピューター] は、x86 のみが可能なコンピューター用オブジェクトです。 **** **[不明な x64 コンピューター]** は、x86 および x64 が可能なコンピューター用オブジェクトです。 言い換えると、これらのオブジェクトは、展開先コンピューターのアーキテクチャの説明になります。 セットアップ先のコンピューターに展開するオペレーティング システムの説明ではありません。  
 
 -   不明なコンピューターの展開をサポートする PXE 対応配布ポイントを構成するか、メディアを作成する。  
 
@@ -52,15 +52,15 @@ System Center Configuration Manager 環境でオペレーティング システ�
 ## <a name="unknown-computer-installation-process"></a>不明なコンピューターのインストール プロセス  
  コンピューターが最初に PXE またはメディアから起動されると、 Configuration Manager は、コンピューターのレコードが Configuration Manager データベースに存在するかどうか確認します。 レコードがある場合は、Configuration Manager がさらに、そのレコードに展開されるタスク シーケンスがあるかどうかを確認します。 レコードがない場合は、Configuration Manager は、不明なコンピューター オブジェクトに展開されたタスク シーケンスがあるかどうか確認します。 いずれの場合も、Configuration Manager は、それから次のいずれかのアクションを実行します。  
 
--   タスク シーケンスを使用できる場合は、Configuration Manager はユーザーにタスク シーケンスの実行を求めます。  
+- タスク シーケンスを使用できる場合は、Configuration Manager はユーザーにタスク シーケンスの実行を求めます。  
 
--   必要なタスク シーケンスがある場合は、Configuration Manager がそのタスク シーケンスを自動的に実行します。  
+- 必要なタスク シーケンスがある場合は、Configuration Manager がそのタスク シーケンスを自動的に実行します。  
 
--   タスク シーケンスがレコードに展開されていない場合は、Configuration Manager は、展開先コンピューターにタスク シーケンスが展開されていないというエラーを生成します。  
+- タスク シーケンスがレコードに展開されていない場合は、Configuration Manager は、展開先コンピューターにタスク シーケンスが展開されていないというエラーを生成します。  
 
- 不明なコンピューターが開始された場合、Configuration Manager はそのコンピューターを、不明なコンピューターではなく、プロビジョニングが解除されたコンピューターとして認識します。 これは、そのコンピューターが、不明なコンピューター オブジェクトに展開されたタスク シーケンスを受信できることを意味します。 展開されたタスク シーケンスは、Configuration Manager クライアントを含むオペレーティング システム イメージをインストールします。  
+  不明なコンピューターが開始された場合、Configuration Manager はそのコンピューターを、不明なコンピューターではなく、プロビジョニングが解除されたコンピューターとして認識します。 これは、そのコンピューターが、不明なコンピューター オブジェクトに展開されたタスク シーケンスを受信できることを意味します。 展開されたタスク シーケンスは、Configuration Manager クライアントを含むオペレーティング システム イメージをインストールします。  
 
- Configuration Manager クライアントがインストールされた後、コンピューターのレコードが作成され、そのコンピューターが適切な Configuration Manager コレクションのリストに追加されます。 コンピューターがオペレーティング システム イメージまたは Configuration Manager クライアントのインストールに失敗した場合、コンピューターの "不明" のレコードが作成され、コンピューターは**すべてのシステム**コレクションに表示されます。  
+  Configuration Manager クライアントがインストールされた後、コンピューターのレコードが作成され、そのコンピューターが適切な Configuration Manager コレクションのリストに追加されます。 コンピューターがオペレーティング システム イメージまたは Configuration Manager クライアントのインストールに失敗した場合、コンピューターの "不明" のレコードが作成され、コンピューターは**すべてのシステム**コレクションに表示されます。  
 
 > [!NOTE]  
 >  オペレーティング システム イメージのインストール時、タスク シーケンスは、不明なコンピューターからコレクション変数を取得できますが、コンピューター変数は取得できません。  
