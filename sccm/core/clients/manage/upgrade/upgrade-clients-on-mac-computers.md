@@ -10,16 +10,16 @@ ms.assetid: 74c60941-5eae-4905-9e58-252bdb39df96
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fb0ef52bc3359e1b31b2e2237a87e58bf671bcb7
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: 37471367e95c6f0edc1d33b951776673037d845c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260838"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416391"
 ---
 # <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager で Mac コンピューター上のクライアントをアップグレードする方法
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager アプリケーションを使用して Mac コンピューター用のクライアントをアップグレードするには、次に説明する基本的な手順に従います。 または、Mac クライアントのインストール ファイルをダウンロードし、共有のネットワーク フォルダーまたは Mac コンピューターのローカル フォルダーにコピーして、手動でインストールするようにユーザーに指示することもできます。  
 
@@ -31,27 +31,27 @@ System Center Configuration Manager アプリケーションを使用して Mac 
 
  このファイルは、 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/p/?LinkId=525184)からダウンロードできます。  
 
-## <a name="step-2-run-the-downloaded-installation-file-to-create-the-mac-client-installation-file"></a>手順 2: ダウンロードしたインストール ファイルを実行して Mac クライアント インストール ファイルを作成する  
+## <a name="step-2-run-the-downloaded-installation-file-to-create-the-mac-client-installation-file"></a>手順 2:ダウンロードしたインストール ファイルを実行して Mac クライアント インストール ファイルを作成する  
  Windows を実行するコンピューターで、ダウンロードした **ConfigmgrMacClient.msi** を実行して、 **Macclient.dmg**という Mac クライアント インストール ファイルをアンパックします。 このファイルは、Windows コンピューターの既定で **C:\Program Files (x86)\Microsoft\System Center 2012 Configuration Manager Mac Client** フォルダーにアンパックされます。  
 
-## <a name="step-3-extract-the-client-installation-files"></a>手順 3: クライアント インストール ファイルを抽出する  
+## <a name="step-3-extract-the-client-installation-files"></a>手順 3:クライアント インストール ファイルを抽出する  
  Macclient.dmg ファイルをネットワーク共有または Mac コンピューターのローカル フォルダーにコピーします。 次に、Mac コンピューターから、Macclient.dmg ファイルをマウントして開き、Mac コンピューターのフォルダーにコピーします。  
 
 ## <a name="step-4-create-a-cmmac-file-that-can-be-used-to-create-an-application"></a>手順 4: アプリケーションの作成に使用できる .cmmac ファイルを作成する  
 
-1.  **CMAppUtil** ツール (Mac クライアント インストール ファイルの **Tools** フォルダーにあります) を使用して、クライアント インストール パッケージから .cmmac ファイルを作成します。 このファイルは Configuration Manager アプリケーションの作成に使用されます。  
+1. **CMAppUtil** ツール (Mac クライアント インストール ファイルの **Tools** フォルダーにあります) を使用して、クライアント インストール パッケージから .cmmac ファイルを作成します。 このファイルは Configuration Manager アプリケーションの作成に使用されます。  
 
-2.  新しいファイル **CMClient.pkg.cmmac** を、Configuration Manager コンソールを実行しているコンピューターから使用できる場所にコピーします。  
+2. 新しいファイル **CMClient.pkg.cmmac** を、Configuration Manager コンソールを実行しているコンピューターから使用できる場所にコピーします。  
 
- 詳細については、「[Mac コンピューターのアプリケーションを作成および展開するための補足手順](/sccm/apps/get-started/creating-mac-computer-applications#supplemental-procedures-to-create-and-deploy-applications-for-mac-computers)」を参照してください。  
+   詳細については、「[Mac コンピューターのアプリケーションを作成および展開するための補足手順](/sccm/apps/get-started/creating-mac-computer-applications#supplemental-procedures-to-create-and-deploy-applications-for-mac-computers)」を参照してください。  
 
 ## <a name="step-5-create-and-deploy-an-application-containing-the-mac-client-files"></a>**手順 5:** Mac クライアント ファイルを含むアプリケーションを作成および展開する  
 
-1.  Configuration Manager コンソールで、クライアント インストール ファイルを含む **CMClient.pkg.cmmac** ファイルからアプリケーションを作成します。  
+1. Configuration Manager コンソールで、クライアント インストール ファイルを含む **CMClient.pkg.cmmac** ファイルからアプリケーションを作成します。  
 
-2.  このアプリケーションを階層内の Mac コンピューターに展開します。  
+2. このアプリケーションを階層内の Mac コンピューターに展開します。  
 
- 詳細については、「[System Center Configuration Manager での Mac コンピューター アプリケーションの作成](../../../../apps/get-started/creating-mac-computer-applications.md)」を参照してください。  
+   詳細については、「[System Center Configuration Manager での Mac コンピューター アプリケーションの作成](../../../../apps/get-started/creating-mac-computer-applications.md)」を参照してください。  
 
 ## <a name="step-6-users-install-the-latest-client"></a>手順 6: ユーザーが最新のクライアントをインストールする  
  Mac クライアントのユーザーに、Configuration Manager クライアントの更新プログラムを使用可能であり、インストールする必要がある、というメッセージが表示されます。 ユーザーは、クライアントをインストールした後に Mac コンピューターを再起動する必要があります。  
@@ -63,38 +63,38 @@ System Center Configuration Manager アプリケーションを使用して Mac 
 ##  <a name="BKMK_UpgradingClient_MachineEnrollment"></a> アップグレードしたクライアントが既存の証明書を使用するように構成する  
  次の手順に従って、コンピューターの登録ウィザードの実行を回避し、アップグレードしたクライアントが既存のクライアント証明書を使用するように構成します。  
 
--   Configuration Manager コンソールで、種類が **[Mac OS X]** の構成項目を作成します。  
+- Configuration Manager コンソールで、種類が **[Mac OS X]** の構成項目を作成します。  
 
--   **[スクリプト]** という設定の種類を使用して、この構成項目に設定を追加します。  
+- **[スクリプト]** という設定の種類を使用して、この構成項目に設定を追加します。  
 
--   次のスクリプトを設定に追加します。  
+- 次のスクリプトを設定に追加します。  
 
-    ```  
-    #!/bin/sh  
-    echo "Starting script\n"  
-    echo "Changing directory to MAC Client\n"  
-    cd /Users/Administrator/Desktop/'MAC Client'/  
-    echo "Import root cert\n"  
-    /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/Root.pfx -A -k /Library/Keychains/System.Keychain -P ROOT  
-    echo "Using openssl to convert pfx to a crt\n"  
-    /usr/bin/sudo openssl pkcs12 -in /Users/Administrator/Desktop/'MAC Client'/Root.pfx -out Root1.crt -nokeys -clcerts -passin pass:ROOT  
-    echo "Adding trust to root cert\n"  
-    /usr/bin/sudo /usr/bin/security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.Keychain Root1.crt  
-    echo "Import client cert\n"  
-    /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/MacClient.pfx -A -k /Library/Keychains/System.Keychain -P MAC  
-    echo "Executing ccmclient with MP\n"  
-    sudo ./ccmsetup -MP https://SCCM34387.SCCM34387DOM.NET/omadm/cimhandler.ashx  
-    echo "Editing Plist file\n"  
-    sudo /usr/libexec/Plistbuddy -c 'Add:SubjectName string CMMAC003L' /Library/'Application Support'/Microsoft/CCM/ccmclient.plist  
-    echo "Changing directory to CCM\n"  
-    cd /Library/'Application Support'/Microsoft/CCM/  
-    echo "Making connection to the server\n"  
-    sudo open ./CCMClient  
-    echo "Ending Script\n"  
-    exit  
+  ```  
+  #!/bin/sh  
+  echo "Starting script\n"  
+  echo "Changing directory to MAC Client\n"  
+  cd /Users/Administrator/Desktop/'MAC Client'/  
+  echo "Import root cert\n"  
+  /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/Root.pfx -A -k /Library/Keychains/System.Keychain -P ROOT  
+  echo "Using openssl to convert pfx to a crt\n"  
+  /usr/bin/sudo openssl pkcs12 -in /Users/Administrator/Desktop/'MAC Client'/Root.pfx -out Root1.crt -nokeys -clcerts -passin pass:ROOT  
+  echo "Adding trust to root cert\n"  
+  /usr/bin/sudo /usr/bin/security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.Keychain Root1.crt  
+  echo "Import client cert\n"  
+  /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/MacClient.pfx -A -k /Library/Keychains/System.Keychain -P MAC  
+  echo "Executing ccmclient with MP\n"  
+  sudo ./ccmsetup -MP https://SCCM34387.SCCM34387DOM.NET/omadm/cimhandler.ashx  
+  echo "Editing Plist file\n"  
+  sudo /usr/libexec/Plistbuddy -c 'Add:SubjectName string CMMAC003L' /Library/'Application Support'/Microsoft/CCM/ccmclient.plist  
+  echo "Changing directory to CCM\n"  
+  cd /Library/'Application Support'/Microsoft/CCM/  
+  echo "Making connection to the server\n"  
+  sudo open ./CCMClient  
+  echo "Ending Script\n"  
+  exit  
 
-    ```  
+  ```  
 
--   構成項目を構成基準に追加し、Configuration Manager とは独立して証明書をインストールする構成基準をすべての Mac コンピューターに展開します。  
+- 構成項目を構成基準に追加し、Configuration Manager とは独立して証明書をインストールする構成基準をすべての Mac コンピューターに展開します。  
 
- Mac コンピューター用の構成項目を作成し、展開する方法の詳細については、「[System Center Configuration Manager クライアントを使用して管理されている Mac OS X デバイスの構成項目を作成する方法](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)」と「[System Center Configuration Manager で構成基準を展開する方法](../../../../compliance/deploy-use/deploy-configuration-baselines.md)」を参照してください。  
+  Mac コンピューター用の構成項目を作成し、展開する方法の詳細については、「[System Center Configuration Manager クライアントを使用して管理されている Mac OS X デバイスの構成項目を作成する方法](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)」と「[System Center Configuration Manager で構成基準を展開する方法](../../../../compliance/deploy-use/deploy-configuration-baselines.md)」を参照してください。  

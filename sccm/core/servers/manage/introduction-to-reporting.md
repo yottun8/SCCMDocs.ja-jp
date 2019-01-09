@@ -10,16 +10,16 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 579e9494a4f44f41a411af88bf58df7dcc5e8075
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3cdc4ef389e4d46ad1c572b8785cb8ea26d90fcd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340472"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416658"
 ---
 # <a name="introduction-to-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager のレポートの概要
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager のレポートでは、SQL Reporting Services の高度なレポート機能と Reporting Services レポート ビルダーの充実したオーサリング機能を活用するために役立つ一連のツールとリソースを利用できます。 レポートは、組織内のユーザー、ハードウェアおよびソフトウェア インベントリ、ソフトウェアの更新、アプリケーション、サイト ステータス、およびその他の Configuration Manager 操作に関する情報を収集、整理、および提示するのに役立ちます。 レポート機能には、そのまま利用することも、必要に応じて変更することもできる定義済みレポートが多数用意されています。また、カスタム レポートを作成することもできます。 Configuration Manager のレポートを管理す際は、次のセクションを参考にしてください。  
 
@@ -28,17 +28,17 @@ System Center Configuration Manager のレポートでは、SQL Reporting Servic
 
  Configuration Manager は、SQL Server Reporting Services をレポート ソリューションとして使用します。 この Reporting Services との統合の利点は、次のとおりです。  
 
--   Configuration Manager データベースのクエリに業界標準のレポート システムを使用できます。  
+- Configuration Manager データベースのクエリに業界標準のレポート システムを使用できます。  
 
--   Configuration Manager レポート ビューアー、または Web ベースでレポートに接続するレポート マネージャーを使用してレポートを表示できます。  
+- Configuration Manager レポート ビューアー、または Web ベースでレポートに接続するレポート マネージャーを使用してレポートを表示できます。  
 
--   優れたパフォーマンス、可用性、およびスケーラビリティを実現します。  
+- 優れたパフォーマンス、可用性、およびスケーラビリティを実現します。  
 
--   ユーザーがサブスクライブ可能なレポートのサブスクリプション機能を利用できます。たとえば管理者は、ソフトウェア更新プログラムのロールアウト ステータスの詳細を示すレポートにサブスクライブし、毎日自動的に電子メールでレポートを受信することができます。  
+- ユーザーがサブスクライブ可能なレポートのサブスクリプション機能を利用できます。たとえば管理者は、ソフトウェア更新プログラムのロールアウト ステータスの詳細を示すレポートにサブスクライブし、毎日自動的に電子メールでレポートを受信することができます。  
 
--   ユーザーが選択できる各種の標準形式でレポートをエクスポートできます。  
+- ユーザーが選択できる各種の標準形式でレポートをエクスポートできます。  
 
- Reporting Services の詳細については、SQL Server 2008 オンライン ブックの「 [SQL Server Reporting Services](http://go.microsoft.com/fwlink/p/?LinkID=212032) 」を参照してください。  
+  Reporting Services の詳細については、SQL Server 2008 オンライン ブックの「 [SQL Server Reporting Services](http://go.microsoft.com/fwlink/p/?LinkID=212032) 」を参照してください。  
 
 ##  <a name="BKMK_ReportingServicesPoint"></a> レポート サービス ポイント  
  レポート サービス ポイントはサイト システムの役割の 1 つで、Microsoft SQL Server Reporting Services を実行しているサーバー上にインストールされます。 レポート サービス ポイントは、Configuration Manager レポートの定義を Reporting Services にコピーし、レポート カテゴリを基にレポート フォルダーを作成し、Configuration Manager 管理ユーザーの役割に基づいた権限に従ってレポート フォルダーとレポートのセキュリティ ポリシーを設定します。 レポート マネージャーなどを使用して、10 分間隔でレポート サービス ポイントが Reporting Services に接続し、変更があったセキュリティ ポリシーを再度適用します。 レポート サービス ポイントの計画とインストールの詳細については、次のドキュメントを参照してください。  
@@ -80,30 +80,30 @@ System Center Configuration Manager のレポートでは、SQL Reporting Servic
 
  レポート ビルダーのインストールにより、20 言語のサポートが追加されます。 レポート ビルダーを実行すると、ローカル コンピューターで実行中のオペレーティング システムの言語でデータが表示されます。 レポート ビルダーがその言語をサポートしない場合は、データは英語で表示されます。 レポート ビルダーは SQL Server 2008 Reporting Services の全機能をサポートします。以下の機能が含まれます。  
 
--   Microsoft Office のような外観の直観的なレポート オーサリング環境  
+- Microsoft Office のような外観の直観的なレポート オーサリング環境  
 
--   SQL Server 2008 レポート定義言語 (RDL) の柔軟なレポート レイアウト  
+- SQL Server 2008 レポート定義言語 (RDL) の柔軟なレポート レイアウト  
 
--   チャートやゲージなど多様なデータ表示形式  
+- チャートやゲージなど多様なデータ表示形式  
 
--   リッチ形式のテキスト ボックス  
+- リッチ形式のテキスト ボックス  
 
--   Microsoft Word 形式のエクスポート  
+- Microsoft Word 形式のエクスポート  
 
- レポート ビルダーは、SQL Server Reporting Services から開くこともできます。  
+  レポート ビルダーは、SQL Server Reporting Services から開くこともできます。  
 
 ##  <a name="BKMK_ReportModels"></a> SQL Server Reporting Services のレポート モデル  
  Configuration Manager の SQL Reporting Services では、レポート モデルを使用することで、管理ユーザーがモデルベースのレポートに含める項目をデータベースから容易に選択することができます。 レポートを構築する管理ユーザーには、レポート モデルで指定したビューと項目のみが選択用に表示されます。 モデルベースのレポートを作成するには、少なくとも 1 つのレポート モデルが必要です。 レポート モデルには、次の特長があります。  
 
--   データベースのフィールドとビューに論理的な事業名を設定し、レポート生成を効率化することができます。 レポートを生成するには、データベース構造に関する知識は必要ありません。  
+- データベースのフィールドとビューに論理的な事業名を設定し、レポート生成を効率化することができます。 レポートを生成するには、データベース構造に関する知識は必要ありません。  
 
--   項目は論理的にグループ化できます。  
+- 項目は論理的にグループ化できます。  
 
--   項目間のリレーションシップ  
+- 項目間のリレーションシップ  
 
--   モデルの要素にセキュリティ保護を適用することで、管理ユーザーが表示のアクセス許可を持っているデータのみが表示されるように管理できます。  
+- モデルの要素にセキュリティ保護を適用することで、管理ユーザーが表示のアクセス許可を持っているデータのみが表示されるように管理できます。  
 
- Configuration Manager にはレポート モデルのサンプルが用意されていますが、それぞれの業務要件に適したレポート モデルを定義することもできます。 レポート モデルの作成方法の詳細については、「[SQL Server Reporting Services での System Center Configuration Manager のカスタム レポート モデルの作成](creating-custom-report-models-in-sql-server-reporting-services.md)」を参照してください。  
+  Configuration Manager にはレポート モデルのサンプルが用意されていますが、それぞれの業務要件に適したレポート モデルを定義することもできます。 レポート モデルの作成方法の詳細については、「[SQL Server Reporting Services での System Center Configuration Manager のカスタム レポート モデルの作成](creating-custom-report-models-in-sql-server-reporting-services.md)」を参照してください。  
 
 ## <a name="next-steps"></a>次のステップ
 [レポートの計画](planning-for-reporting.md)

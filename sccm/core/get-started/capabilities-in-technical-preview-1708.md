@@ -10,16 +10,16 @@ ms.assetid: 3c061ceb-3bdb-4d4f-8c60-344964bd416b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b6764acf3ecc1aaad4a19c9d56880e7bd5692464
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b751dab7ca02112959a9a7d6ed8a51b037f25b0e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334618"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422659"
 ---
 # <a name="capabilities-in-technical-preview-1708-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1708 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+*適用対象:System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1708 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 このバージョンの Technical Preview をインストールする前に、「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。     
 
@@ -30,7 +30,7 @@ ms.locfileid: "32334618"
     Workaround details.
 -->
 **この Technical Preview の既知の問題:**
--   **サイト サーバーがパッシブ モードの場合、プレビュー バージョン 1708 への更新に失敗します**。 プレビュー バージョン 1706 または 1707 を実行し、[プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)の場合、プレビュー サイトをバージョン 1708 に正常に更新するには、パッシブ モードのサイト サーバーをアンインストールする必要があります。 パッシブ モードのサイト サーバーは、サイトでバージョン 1708 が実行された後に再インストールできます。
+- **サイト サーバーがパッシブ モードの場合、プレビュー バージョン 1708 への更新に失敗します**。 プレビュー バージョン 1706 または 1707 を実行し、[プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)の場合、プレビュー サイトをバージョン 1708 に正常に更新するには、パッシブ モードのサイト サーバーをアンインストールする必要があります。 パッシブ モードのサイト サーバーは、サイトでバージョン 1708 が実行された後に再インストールできます。
 
   パッシブ モードのサイト サーバーをアンインストールするには、次の手順を実行します。
   1. コンソールで **[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
@@ -72,16 +72,14 @@ Configuration Manager 1706 以降では、「[Configuration Manager コンソー
 スクリプトを実行すると、設定したパラメーター値があればそれが使用されます。 必須のパラメーターを構成しなかった場合、エンド ユーザーはスクリプトの実行時にパラメーターを指定するように求められます。
 
 ## <a name="management-insights"></a>管理分析情報
-<!-- 1353967 -->
-お使いの環境の現在の状態に関して、サイト データベース内のデータ分析に基づく情報を得られるようになりました。 分析情報を利用することで、ご利用の環境についての理解を深め、その情報に基づいてアクションを実行できます。 Configuration Manager コンソールで **[管理]**  >  **[Management Insights]\(管理分析情報\)**  >  **[All Insights]\(すべての分析情報\)** の順に移動して、管理分析情報を確認します。 このリリースでは、次の分析情報が使用可能になりました。
+<!-- 1353967 --> お使いの環境の現在の状態に関して、サイト データベース内のデータ分析に基づく情報を得られるようになりました。 分析情報を利用することで、ご利用の環境についての理解を深め、その情報に基づいてアクションを実行できます。 Configuration Manager コンソールで **[管理]**  >  **[Management Insights]\(管理分析情報\)**  >  **[All Insights]\(すべての分析情報\)** の順に移動して、管理分析情報を確認します。 このリリースでは、次の分析情報が使用可能になりました。
 
-- **展開されていないアプリケーション**: ご利用の環境内でアクティブに展開されていないアプリケーションを一覧表示します。 この情報により、使用されていないアプリケーションの発見と削除が容易になり、コンソール上に表示されるアプリケーションの一覧を把握しやすくなります。
-- **空のコレクション**: ご利用の環境内でメンバーをもたないコレクションを一覧表示します。 たとえば、これらのコレクションを削除して、オブジェクトを展開するときに表示されるコレクションの一覧を把握しやすくできます。
+- **展開されていないアプリケーション**:ご利用の環境内でアクティブに展開されていないアプリケーションを一覧表示します。 この情報により、使用されていないアプリケーションの発見と削除が容易になり、コンソール上に表示されるアプリケーションの一覧を把握しやすくなります。
+- **空のコレクション**:ご利用の環境内でメンバーがいないコレクションを一覧表示します。 たとえば、これらのコレクションを削除して、オブジェクトを展開するときに表示されるコレクションの一覧を把握しやすくできます。
 
 
 ## <a name="restart-computers-from-the-configuration-manager-console"></a>Configuration Manager コンソールからコンピューターを再起動   
-<!-- 1356283 -->
-これ以降のリリースでは、Configuration Manager コンソールを使用して再起動を必要とするクライアント デバイスを識別し、再起動するようにクライアント通知を行うアクションを使用できます。
+<!-- 1356283 --> これ以降のリリースでは、Configuration Manager コンソールを使用して再起動を必要とするクライアント デバイスを識別し、再起動するようにクライアント通知を行うアクションを使用できます。
 
 再起動を保留しているデバイスを識別するには、**[資産とコンプライアンス]**  >  **[デバイス]** の順に移動し、再起動が必要な可能性のあるデバイスが含まれるコレクションを選択します。 コレクションを選択すると、**[再起動待ち]** という名前の新しい列にある詳細ウィンドウで、各デバイスの状態を表示できます。 各デバイスには、**[はい]** または **[いいえ]** の値があります。
 
@@ -100,19 +98,18 @@ Configuration Manager 1706 以降では、「[Configuration Manager コンソー
 
 
 ## <a name="software-center-customization"></a>ソフトウェア センターのカスタマイズ
-<!-- 1351224 -->
-エンタープライズ ブランド要素を追加して、ソフトウェア センターのタブの表示を指定できます。 ソフトウェア センターに特定の会社名を追加したり、ソフトウェア センターの構成の基調となる色を設定したり、会社のロゴを設定したり、またはクライアント デバイスに表示されるタブを設定したりできます。
+<!-- 1351224 -->エンタープライズ ブランド要素を追加して、ソフトウェア センターのタブの表示を指定できます。 ソフトウェア センターに特定の会社名を追加したり、ソフトウェア センターの構成の基調となる色を設定したり、会社のロゴを設定したり、またはクライアント デバイスに表示されるタブを設定したりできます。
 
 ### <a name="customize-software-center"></a>ソフトウェア センターのカスタマイズ
 
 ソフトウェア センターを変更する方法
 
-1. **Configuration Manager** コンソールで、**[管理]**  >  **[クライアント設定]** の順に選択します。 対象のクライアント設定のインスタンスをクリックします。
-2. **[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** を選択します。
-3. **[既定の設定]** ダイアログ ボックスで、**[ソフトウェア センター]** を選択します。
-4. **[Select new settings to specify company information]\(新しい設定を選択して会社情報を指定する\)** に対して **[はい]** を選択し、ソフトウェア センターのカスタマイズ設定を有効にします。
+1. **Configuration Manager** コンソールで、 **[管理]** > **[クライアント設定]** の順に選択します。 対象のクライアント設定のインスタンスをクリックします。
+2.  **[ホーム]**  タブの  **[プロパティ]**  グループで、 **[プロパティ]** を選びます。
+3.  **[既定の設定]**  ダイアログ ボックスで、 **[ソフトウェア センター]** を選択します。
+4. **[Select new settings to specify company information] (新しい設定を選択して会社情報を指定する\)** に対して **[はい]** を選択し、ソフトウェア センターのカスタマイズ設定を有効にします。
 5. **[会社名]** を入力します。
-6. **[Color Scheme for Software Center]\(ソフトウェア センターのカラー スキーマ\)** を選択します。
+6. **[Color Scheme for Software Center] (ソフトウェア センターのカラー スキーマ\)** を選択します。
 7. **[参照]** をクリックしてソフトウェア センターのロゴに移動します。 ロゴは 400 x 100 ピクセルの JPEG または PNG とし、サイズは 750 KB までとする必要があります。
 8. **[はい]** を選択して、クライアント デバイスにソフトウェア センターのタブが表示されるようにします。 少なくとも 1 つのタブが表示されている必要があります。
 
@@ -125,4 +122,4 @@ Configuration Manager 1706 以降では、「[Configuration Manager コンソー
 
 ### <a name="next-steps"></a>次のステップ
 
-Configuration Manager でのアプリケーション管理の詳細については、「[System Center Configuration Manager でのアプリケーション管理の概要](\sccm\apps\understand\introduction-to-application-management)」をご覧ください。
+Configuration Manager でのアプリケーション管理の詳細については、「[System Center Configuration Manager でのアプリケーション管理の概要](/sccm/apps/understand/introduction-to-application-management)」をご覧ください。

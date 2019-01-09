@@ -10,26 +10,26 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0cb94f8d14ff525687909290085e16ecd47fa39f
-ms.sourcegitcommit: 22257e35a7d7263939a6802602050190897412a8
+ms.openlocfilehash: cf5b55dddae34ac855f21e7d70967d3b9ab1c2dc
+ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51562050"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53747162"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>Configuration Manager で SQL Server Always On 可用性グループを使用するための準備
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 この記事では、SQL Server Always On 可用性グループを使用するように Configuration Manager を準備します。 この機能では、サイト データベースに対して高可用性とディザスター リカバリー ソリューションが提供されます。  
 
 Configuration Manager では、次の場所での可用性グループの使用がサポートされます。
--     プライマリ サイトと中央管理サイト。
--     オンプレミス、または Microsoft Azure。
+- プライマリ サイトと中央管理サイト。
+- オンプレミス、または Microsoft Azure。
 
 Microsoft Azure で可用性グループを使用する場合は、*Azure 可用性セット*を使用することで、サイト データベースの可用性をさらに向上できます。 Azure 可用性セットの詳細については、「 [仮想マシンの可用性管理](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/)」を参照してください。
 
->  [!Important]   
+> [!Important]
 >  作業を続行する前に、SQL Server と SQL Server 可用性グループの構成に慣れておいてください。 以下の情報では、SQL Server ドキュメント ライブラリと手順を示します。
 
 
@@ -38,12 +38,12 @@ Microsoft Azure で可用性グループを使用する場合は、*Azure 可用
 
 Configuration Manager で可用性グループを使用する場合にサポートされるシナリオを以下に示します。 各シナリオの詳細と手順については、「[Configuration Manager の SQL Server Always On 可用性グループを構成する](/sccm/core/servers/deploy/configure/configure-aoag)」をご覧ください。
 
--      [Configuration Manager で使用する可用性グループを作成する](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)  
--     [可用性グループを使用するようにサイトを構成する](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)  
--     [サイト データベースをホストする可用性グループで同期レプリカ メンバーを追加または削除する](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)  
--     [非同期コミット レプリカを構成する](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca)  
--     [非同期コミット レプリカからサイトを復旧する](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site)  
--     [サイト データベースを、可用性グループから、スタンドアロン SQL Server の指定したインスタンスまたは既定のインスタンスに移動する](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)  
+- [Configuration Manager で使用する可用性グループを作成する](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)  
+- [可用性グループを使用するようにサイトを構成する](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)  
+- [サイト データベースをホストする可用性グループで同期レプリカ メンバーを追加または削除する](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)  
+- [非同期コミット レプリカを構成する](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca)  
+- [非同期コミット レプリカからサイトを復旧する](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site)  
+- [サイト データベースを、可用性グループから、スタンドアロン SQL Server の指定したインスタンスまたは既定のインスタンスに移動する](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)  
 
 
 
@@ -95,34 +95,34 @@ Configuration Manager では、最新であることを確認するための非�
 
 - "*既定のインスタンス*" または "*名前付きインスタンス*" を使用します  
 
-- **[プライマリ ロールでの接続]** を **[はい]** に設定します  
+- **[プライマリ ロールでの接続]** 設定は **[すべての接続を許可]** です  
 
 - **[読み取り可能なセカンダリ]** を **[はい]** に設定します  
 
 - **[手動フェールオーバー]** を有効にします     
 
-    >  [!TIP]  
-    >  Configuration Manager では、**[自動フェールオーバー]** に設定されている場合、可用性グループ同期レプリカの使用がサポートされます。 次のときは**手動フェールオーバー**を設定します。
-    >  -  Configuration Manager のセットアップを実行して、可用性グループでのサイト データベースの使用を指定する。  
-    >  -  Configuration Manager にすべての更新プログラムをインストールする  (サイト データベースに適用される更新プログラムだけでなく)。  
+  > [!TIP]
+  >  Configuration Manager では、**[自動フェールオーバー]** に設定されている場合、可用性グループ同期レプリカの使用がサポートされます。 次のときは**手動フェールオーバー**を設定します。
+  >  -  Configuration Manager のセットアップを実行して、可用性グループでのサイト データベースの使用を指定する。  
+  >  -  Configuration Manager にすべての更新プログラムをインストールする  (サイト データベースに適用される更新プログラムだけでなく)。  
 
 #### <a name="replica-member-location"></a>レプリカ メンバーの場所
 すべてのレプリカを、オンプレミスまたは Microsoft Azure どちらかの可用性グループでホストします。 オンプレミス メンバーと Azure のメンバーを 1 つのグループに含めることはサポートされていません。     
 
 Configuration Manager のセットアップでは、各レプリカに接続する必要があります。 Azure で可用性グループをセットアップし、グループが内部または外部ロード バランサーの背後にある場合、次の既定ポートを開きます。   
 
-- RCP エンドポイント マッパー: **TCP 135**   
+- RCP エンドポイント マッパー:**TCP 135**   
 
-- SQL Server Service Broker: **TCP 4022**  
+- SQL Server Service Broker:**TCP 4022**  
 
-- SQL over TCP: **TCP 1433**   
+- SQL over TCP:**TCP 1433**   
 
 
 セットアップの完了後、次のポートを Configuration Manager 用に開けておく必要があります。  
 
-- SQL Server Service Broker: **TCP 4022**  
+- SQL Server Service Broker:**TCP 4022**  
 
-- SQL over TCP: **TCP 1433**  
+- SQL over TCP:**TCP 1433**  
 
 これらの構成ではカスタム ポートを使用することができます。 エンドポイントと、可用性グループ内のすべてのレプリカで、同じカスタム ポートを使用します。
 
@@ -239,11 +239,11 @@ Configuration Manager のセットアップを使用して可用性グループ�
 
 #### <a name="unsupported-sql-server-options-and-configurations"></a>サポートされていない SQL Server のオプションと構成
 
-- **基本的な可用性グループ**: SQL Server 2016 Standard エディションで導入された基本的な可用性グループでは、セカンダリ レプリカに対する読み取りアクセスがサポートされていません。 構成にはこのアクセスが必要です。 詳しくは、[基本的な SQL Server 可用性グループ](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017)に関するページをご覧ください。  
+- **基本的な可用性グループ**:SQL Server 2016 Standard エディションで導入された基本的な可用性グループでは、セカンダリ レプリカに対する読み取りアクセスがサポートされていません。 構成にはこのアクセスが必要です。 詳しくは、[基本的な SQL Server 可用性グループ](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017)に関するページをご覧ください。  
 
-- **フェールオーバー クラスター インスタンス**: フェールオーバー クラスター インスタンスは、Configuration Manager で使用するレプリカではサポートされていません。 詳しくは、「[AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)」をご覧ください。  
+- **フェールオーバー クラスター インスタンス**:フェールオーバー クラスター インスタンスは、Configuration Manager で使用するレプリカではサポートされていません。 詳しくは、「[AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)」をご覧ください。  
 
-- **MutliSubnetFailover**: Configuration Manager でマルチサブネット構成の可用性グループを使用することはサポートされていません。 [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) キーワードを含む接続文字列も使用できません。  
+- **MultiSubnetFailover**:Configuration Manager でマルチサブネット構成の可用性グループを使用することはサポートされていません。 [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) キーワードを含む接続文字列も使用できません。  
 
 #### <a name="sql-servers-that-host-additional-availability-groups"></a>追加の可用性グループをホストする SQL Server
 <!--SCCMDocs issue 649--> Configuration Manager で使用するグループに加えて、SQL Server が 1 つ以上の可用性グループをホストするときは、Configuration Manager のセットアップを実行するときに特定の設定が必要です。 これらの設定は、Configuration Manager に対する更新プログラムをインストールするときにも必要です。 各可用性グループ内の各レプリカでは、次の構成が必要です。
@@ -253,7 +253,7 @@ Configuration Manager のセットアップを使用して可用性グループ�
 
 #### <a name="unsupported-database-use"></a>サポートされていないデータベースの使用
 
-- **Configuration Manager は可用性グループ内のサイト データベースのみをサポートする:** SQL Server Always On 可用性グループ内の次のデータベースは、Configuration Manager ではサポートされていません。  
+- **Configuration Manager は可用性グループ内のサイト データベースのみをサポートする:** 次のデータベースは、SQL Server Always On 可用性グループの Configuration Manager でサポートされていません。  
     - レポート データベース  
     - WSUS データベース  
 

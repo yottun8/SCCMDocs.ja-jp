@@ -10,16 +10,16 @@ ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 65e4d68f05087d24bc83e8e4a3dd67489fdbaed3
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: be4f60bbc6114abc1c4537cc83ee8c2dd0aeef42
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893585"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421928"
 ---
 # <a name="security-and-privacy-for-application-management-in-configuration-manager"></a>Configuration Manager でのアプリケーション管理のセキュリティとプライバシー
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 
 ##  <a name="security-guidance-for-application-management"></a>アプリケーション管理に関するセキュリティのガイダンス  
@@ -213,11 +213,11 @@ Web アプリケーションの展開の種類を構成する場合、HTTPS を�
     > [!Note]  
     > Configuration Manager 1802 以降では、アプリケーション カタログの主な機能はソフトウェア センターに含まれるようになりました。 詳しくは、「[ソフトウェア センターの構成](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)」をご覧ください。  
 
--  Configuration Manager クライアントをインストールすると、**ソフトウェア センター**がデバイスに自動的にインストールされます。 ユーザーはソフトウェア センターから設定を変更し、アプリケーションを参照して、アプリケーションをインストールします。  
+- Configuration Manager クライアントをインストールすると、**ソフトウェア センター**がデバイスに自動的にインストールされます。 ユーザーはソフトウェア センターから設定を変更し、アプリケーションを参照して、アプリケーションをインストールします。  
 
- [ユーザーとデバイスのアフィニティ](#bkmk_privacy-uda)および[ソフトウェア センターとアプリケーション カタログ](#bkmk_privacy-userex)のプライバシー情報については、以降のセクションを参照してください。  
+  [ユーザーとデバイスのアフィニティ](#bkmk_privacy-uda)および[ソフトウェア センターとアプリケーション カタログ](#bkmk_privacy-userex)のプライバシー情報については、以降のセクションを参照してください。  
 
- アプリケーション管理を構成する前に、プライバシー要件について検討してください。  
+  アプリケーション管理を構成する前に、プライバシー要件について検討してください。  
 
 
 ### <a name="bkmk_privacy-uda"></a> ユーザーとデバイスのアフィニティ  

@@ -10,16 +10,16 @@ ms.assetid: cb405ba0-8792-4ab7-988b-2f835f3a9550
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 375c743e1094f3b3f52090ae520ee9d8e86acbe0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5500b7458935c83207a5e54f8fd1d4d7f40dc333
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336971"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421639"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1707 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+*適用対象:System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1707 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 このバージョンの Technical Preview をインストールする前に、「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。     
 
@@ -31,7 +31,7 @@ ms.locfileid: "32336971"
 -->
 
 **この Technical Preview の既知の問題:**
--   **サイト サーバーがパッシブ モードの場合、プレビュー バージョン 1707 への更新に失敗します**。 プレビュー バージョン 1706 を実行し、[プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)の場合、プレビュー サイトをバージョン 1707 に正常に更新するには、パッシブ モードのサイト サーバーをアンインストールする必要があります。 パッシブ モードのサイト サーバーは、サイトでバージョン 1707 が実行された後に再インストールできます。
+- **サイト サーバーがパッシブ モードの場合、プレビュー バージョン 1707 への更新に失敗します**。 プレビュー バージョン 1706 を実行し、[プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)の場合、プレビュー サイトをバージョン 1707 に正常に更新するには、パッシブ モードのサイト サーバーをアンインストールする必要があります。 パッシブ モードのサイト サーバーは、サイトでバージョン 1707 が実行された後に再インストールできます。
 
   パッシブ モードのサイト サーバーをアンインストールするには、次の手順を実行します。
   1. コンソールで **[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
@@ -54,12 +54,10 @@ ms.locfileid: "32336971"
 -->
 
 ## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>クライアント ピア キャッシュで、Windows 10 と Office 365 の高速インストール ファイルに対応
-<!-- 1352486 -->
-今回のリリースから、ピア キャッシュで、Windows 10 のコンテンツ高速インストール ファイルと Office 365 の更新ファイルを配信できるようになりました。 追加の構成は必要ありません。
+<!-- 1352486 -->今回のリリースから、ピア キャッシュで、Windows 10 のコンテンツ高速インストール ファイルと Office 365 の更新ファイルを配信できるようになりました。 追加の構成は必要ありません。
 
 ## <a name="surface-device-dashboard"></a>Surface デバイス ダッシュボード
-<!--1355788-->
-Surface デバイス ダッシュボードに、お使いの環境で検出された Surface デバイスに関する情報が表示されます。 コンソールでは、**[監視]** > **[Surface Devices]\(Surface デバイス\)** の順に進みます。 次を表示できます。
+<!--1355788--> Surface デバイス ダッシュボードには、お使いの環境内で見つかった Surface デバイスに関する情報が示されます。 コンソールでは、**[監視]** > **[Surface Devices]\(Surface デバイス\)** の順に進みます。 次を表示できます。
 - Surface の割合
 - Surface モデルの割合
 - 上位 5 つのオペレーティング システム バージョン

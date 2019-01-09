@@ -10,16 +10,16 @@ ms.assetid: 4884a2d3-13ce-44e5-88c4-a66dc7ec6014
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c960ee37e5f4b7b3b644afd06a04c2747cc1f1eb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a71fff51f39e6292489a28436dfd18a3755698dc
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343223"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417015"
 ---
 # <a name="capabilities-in-technical-preview-1802-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1802 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1802 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 
 
@@ -32,14 +32,14 @@ ms.locfileid: "32343223"
     Workaround details.
 -->
 ## <a name="known-issues-in-this-technical-preview"></a>この Technical Preview の既知の問題
--   **サイト サーバーがパッシブ モードの場合、新しいプレビュー バージョンへの更新に失敗します**。 [プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)の場合は、この新しいプレビュー バージョンに更新する前にパッシブ モードのサイト サーバーをアンインストールする必要があります。 パッシブ モードのサイト サーバーは、サイトの更新を完了したあとに再インストールできます。
+- **サイト サーバーがパッシブ モードの場合、新しいプレビュー バージョンへの更新に失敗します**。 [プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)の場合は、この新しいプレビュー バージョンに更新する前にパッシブ モードのサイト サーバーをアンインストールする必要があります。 パッシブ モードのサイト サーバーは、サイトの更新を完了したあとに再インストールできます。
 
   パッシブ モードのサイト サーバーをアンインストールするには、次の手順を実行します。
   1. Configuration Manager コンソールで **[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
   2. **[サイト システムの役割]** ウィンドウで、**[サイト サーバー]** の役割を右クリックし、**[役割の削除]** を選択します。
   3. パッシブ モードのサイト サーバーを右クリックし、**[削除]** を選択します。
   4. サイト サーバーのアンインストール後に、アクティブなプライマリ サイト サーバーで **CONFIGURATION_MANAGER_UPDATE** のサービスを再起動します。
-<!--sms 489412-->
+  <!--sms 489412-->
 
 
 </br>
@@ -48,14 +48,12 @@ ms.locfileid: "32343223"
 
 
 ## <a name="transition-endpoint-protection-workload-to-intune-using-co-management"></a>共同管理を使用して Intune に Endpoint Protection ワークロードを移行する    
-<!-- 1357365 -->
-このリリースでは、共同管理を有効にした後に、Configuration Manager から Intune に Endpoint Protection ワークロードを移行できるようになります。 Endpoint Protection ワークロードを移行するには、共同管理のプロパティ ページに移動し、スライダー バーを Configuration Manager から **[パイロット]** または **[すべて]** に移動します。 詳細については、「[Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)」をご覧ください。
+<!-- 1357365 --> このリリースでは、共同管理を有効にした後に、Configuration Manager から Intune に Endpoint Protection ワークロードを移行できるようになります。 Endpoint Protection ワークロードを移行するには、共同管理のプロパティ ページに移動し、スライダー バーを Configuration Manager から **[パイロット]** または **[すべて]** に移動します。 詳細については、「[Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)」をご覧ください。
 
 
  
 ## <a name="configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups"></a>Configuration Manager 境界グループを使用するように Windows の配信の最適化を構成する
-<!-- 1324696 -->
-Configuration Manager の境界グループを使って、企業ネットワークおよびリモート オフィスへのコンテンツ配布を定義して調整します。 [Windows の配信最適化](/windows/deployment/update/waas-delivery-optimization)は、Windows 10 デバイス間でコンテンツを共有するための、クラウド ベースのピア ツー ピア テクノロジです。 このリリース以降、ピア間でコンテンツを共有するときは、境界グループを使うように配信の最適化を構成します。 新しいクライアント設定は、クライアントでの配信最適化グループ識別子として境界グループ識別子を適用します。 クライアントは、配信の最適化クラウド サービスと通信するとき、この識別子を使って目的のコンテンツを含むピアを探します。 
+<!-- 1324696 --> Configuration Manager の境界グループを使って、企業ネットワークおよびリモート オフィスへのコンテンツ配布を定義して調整します。 [Windows の配信最適化](/windows/deployment/update/waas-delivery-optimization)は、Windows 10 デバイス間でコンテンツを共有するための、クラウド ベースのピア ツー ピア テクノロジです。 このリリース以降、ピア間でコンテンツを共有するときは、境界グループを使うように配信の最適化を構成します。 新しいクライアント設定は、クライアントでの配信最適化グループ識別子として境界グループ識別子を適用します。 クライアントは、配信の最適化クラウド サービスと通信するとき、この識別子を使って目的のコンテンツを含むピアを探します。 
 
 ### <a name="prerequisites"></a>[前提条件]
 - 配信の最適化は Windows 10 クライアントでのみ利用できます
@@ -86,22 +84,21 @@ Windows 10 の[一括アップグレード タスク シーケンス](/sccm/osd/
 
 
 ## <a name="improvements-to-windows-10-in-place-upgrade-task-sequence"></a>Windows 10 一括アップグレード タスク シーケンスの機能強化
-<!-- 1357425 -->
-Windows 10 の一括アップグレード用の既定のタスク シーケンス テンプレートに、アップグレード プロセスの前後に追加する推奨アクションを含む追加グループが含まれるようになりました。 これらのアクションは、Windows 10 にデバイスを正常にアップグレードしている多くのユーザーに共通するものです。 
+<!-- 1357425 --> Windows 10 の一括アップグレード用の既定のタスク シーケンス テンプレートに、アップグレード プロセスの前後に追加する推奨アクションを含む追加グループが含まれるようになりました。 これらのアクションは、Windows 10 にデバイスを正常にアップグレードしている多くのユーザーに共通するものです。 
 
 ### <a name="new-groups-under-prepare-for-upgrade"></a>**[アップグレードの準備]** の新しいグループ
-- **[バッテリのチェック]**: コンピューターがバッテリを使っているか、または有線の電源を使っているかを確認するには、このグループにステップを追加します。 このアクションには、このチェックを実行するためのカスタム スクリプトまたはユーティリティが必要です。
-- **[ネットワーク接続およびワイヤード接続のチェック]**: コンピューターがネットワークに接続されているか、またワイヤレス接続を使っていないかどうかを確認するには、このグループにステップを追加します。 このアクションには、このチェックを実行するためのカスタム スクリプトまたはユーティリティが必要です。
-- **[互換性のないアプリケーションを削除する]**: このバージョンの Windows 10 と互換性がないすべてのアプリケーションを削除するには、このグループにステップを追加します。 アプリケーションをアンインストールする方法はさまざまです。 アプリケーションが Windows インストーラーを使っている場合は、アプリケーションの Windows インストーラー展開の種類プロパティの **[プログラム]** タブから、**[アンインストール プログラム]** コマンド ラインをコピーします。 そして、アンインストール プログラムのコマンド ラインの **[コマンド ラインの実行]** ステップを、このグループに追加します。 次に例を示します。 </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
-- **[互換性のないドライバーを削除する]**: このバージョンの Windows 10 と互換性がないすべてのドライバーを削除するには、このグループにステップを追加します。
-- **[サード パーティ セキュリティの削除/停止]**: ウイルス対策ソフトウェアなど、サード パーティのセキュリティ プログラムを削除または中断するには、このグループにステップを追加します。
+- **バッテリのチェック**:このグループにステップを追加して、コンピューターがバッテリまたは有線の電源を使用しているかどうかを確認します。 このアクションには、このチェックを実行するためのカスタム スクリプトまたはユーティリティが必要です。
+- **ネットワーク接続およびワイヤード接続のチェック**:コンピューターがネットワークに接続されているか、またワイヤレス接続を使っていないかどうかを確認するには、このグループにステップを追加します。 このアクションには、このチェックを実行するためのカスタム スクリプトまたはユーティリティが必要です。
+- **互換性のないアプリケーションを削除する**:このグループにステップを追加して、この Windows 10 のバージョンと互換性のないすべてのアプリケーションを削除します。 アプリケーションをアンインストールする方法はさまざまです。 アプリケーションが Windows インストーラーを使っている場合は、アプリケーションの Windows インストーラー展開の種類プロパティの **[プログラム]** タブから、**[アンインストール プログラム]** コマンド ラインをコピーします。 そして、アンインストール プログラムのコマンド ラインの **[コマンド ラインの実行]** ステップを、このグループに追加します。 次に例を示します。 </br>`msiexec /x {150031D8-1234-4BA8-9F52-D6E5190D1CBA} /q`</br> 
+- **互換性のないドライバーを削除する**:このグループにステップを追加して、この Windows 10 のバージョンと互換性のないすべてのドライバーを削除します。
+- **サード パーティ セキュリティの削除/停止**:このグループにステップを追加して、サード パーティ セキュリティ プログラム (ウイルス対策など) を削除または停止します。
    - サード パーティのディスク暗号化プログラムを使っている場合は、**/ReflectDrivers** [コマンド ライン オプション](/windows-hardware/manufacture/desktop/windows-setup-command-line-options)で、Windows セットアップにその暗号化ドライバーを提供します。 [[タスク シーケンス変数の設定]](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) ステップを、このグループのタスク シーケンスに追加します。 タスク シーケンス変数を **OSDSetupAdditionalUpgradeOptions** に設定します。 値をドライバーへのパス **/ReflectDriver** に設定します。 この[タスク シーケンス アクション変数](/sccm/osd/understand/task-sequence-action-variables#upgrade-operating-system)をタスク シーケンスで使われる Windows セットアップ コマンド ラインに追加します。 このプロセスの他のガイダンスについては、ソフトウェアの製造元にお問い合わせください。
 
 ### <a name="new-groups-under-post-processing"></a>**[後処理]** の新しいグループ
-- **[セットアップ ベースのドライバーを適用する]**: パッケージからセットアップ ベースのドライバー (.exe) をインストールするには、このグループにステップを追加します。
-- **[サード パーティ セキュリティのインストール/有効化]**: ウイルス対策ソフトウェアなど、サードパーティ製のセキュリティ プログラムをインストールするか有効にするには、このグループにステップを追加します。 
-- **[Windows の既定のアプリと関連付けを設定する]**: Windows の既定のアプリとファイルの関連付けを設定するには、このグループにステップを追加します。 最初に、必要なアプリの関連付けで参照コンピューターを準備します。 それから、次のコマンドを実行してエクスポートします。 </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>XML ファイルをパッケージに追加します。 [[コマンド ラインの実行]](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) ステップをこのグループに追加します。 XML ファイルを含むパッケージを指定し、次のコマンド ラインを指定します。 </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> 詳細については、「[Export or import default application associations](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)」(既定のアプリケーションの関連付けをエクスポートまたはインポートする) を参照してください。
-- **[Apply customizations and personalization]\(カスタマイズと個人用設定を適用する\)**: プログラム グループの整理など、[スタート] メニューのカスタマイズを適用するには、このグループにステップを追加します。 詳細については、「[Customize the Start screen](/windows-hardware/manufacture/desktop/customize-the-start-screen)」(スタート画面をカスタマイズする) を参照してください。
+- **セットアップ ベースのドライバーを適用する**:このグループにステップを追加して、パッケージからセットアップ ベースのドライバー (.exe) をインストールします。
+- **サード パーティ セキュリティのインストール/有効化**:このグループにステップを追加して、サード パーティ セキュリティ プログラム (ウイルス対策など) をインストールまたは有効にします。 
+- **Windows の既定のアプリと関連付けを設定する**このグループにステップを追加して、Windows の既定のアプリとファイルの関連付けを設定します。 最初に、必要なアプリの関連付けで参照コンピューターを準備します。 それから、次のコマンドを実行してエクスポートします。 </br>`dism /online /Export-DefaultAppAssociations:"%UserProfile%\Desktop\DefaultAppAssociations.xml"`</br>XML ファイルをパッケージに追加します。 [[コマンド ラインの実行]](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) ステップをこのグループに追加します。 XML ファイルを含むパッケージを指定し、次のコマンド ラインを指定します。 </br>`dism /online /Import-DefaultAppAssociations:DefaultAppAssocations.xml`</br> 詳細については、「[Export or import default application associations](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)」(既定のアプリケーションの関連付けをエクスポートまたはインポートする) を参照してください。
+- **カスタマイズと個人用設定を適用する**:このグループにステップを追加して、[スタート] メニューのカスタマイズ (プログラム グループの整理など) を適用します。 詳細については、「[Customize the Start screen](/windows-hardware/manufacture/desktop/customize-the-start-screen)」(スタート画面をカスタマイズする) を参照してください。
 
 ### <a name="additional-recommendations"></a>その他の推奨事項
 - Windows のドキュメント「[Windows 10 のアップグレード エラーの解決](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors)」を参照してください。 この記事には、アップグレード プロセスに関する詳細情報も含まれています。
@@ -118,8 +115,7 @@ Windows 10 の一括アップグレード用の既定のタスク シーケン�
 
 
 ## <a name="improvements-to-pxe-enabled-distribution-points"></a>PXE 対応の配布ポイントの機能強化
-<!-- 1357580 -->
-Technical Preview バージョン 1706 で初めて導入された[新しい PXE の機能](/sccm/core/get-started/capabilities-in-technical-preview-1706#pxe-network-boot-support-for-ipv6)の動作がはっきりわかるように、**[Support IPv6]\(IPv6 のサポート\)** オプションの名前を変更しました。 配布ポイントのプロパティの **[PXE]** タブで、**[Windows 展開サービスなしで PXE レスポンダーを有効にする]** をオンにします。 
+<!-- 1357580 --> Technical Preview バージョン 1706 で初めて導入された[新しい PXE の機能](/sccm/core/get-started/capabilities-in-technical-preview-1706#pxe-network-boot-support-for-ipv6)の動作がはっきりわかるように、**[IPv6 をサポートします]** オプションの名前を変更しました。 配布ポイントのプロパティの **[PXE]** タブで、**[Windows 展開サービスなしで PXE レスポンダーを有効にする]** をオンにします。 
 
 このオプションは、配布ポイントで PXE レスポンダーを有効にし、Windows 展開サービス (WDS) を必要としません。 既に PXE が有効になっている配布ポイントでこの新しいオプションを有効にした場合、Configuration Manager は WDS サービスを一時停止させます。 この新しいオプションを無効にした場合、**[クライアントの PXE サポートを有効にする]** がまだ指定されていると、配布ポイントは WDS を再び有効にします。
 
@@ -136,8 +132,7 @@ WDS が必要ないため、Windows Server Core などのクライアントま�
 
 
 ## <a name="deployment-templates-for-task-sequences"></a>タスク シーケンスの展開テンプレート
-<!-- 1357391 -->
-タスク シーケンスの展開ウィザードは、展開テンプレートを作成できるようになりました。 展開テンプレートを保存して、展開を作成する既存または新規のタスク シーケンスに適用できます。 
+<!-- 1357391 --> タスク シーケンスの展開ウィザードで、展開テンプレートを作成できるようになりました。 展開テンプレートを保存して、展開を作成する既存または新規のタスク シーケンスに適用できます。 
 
 ### <a name="try-it-out"></a>試してみましょう。  
 タスクを実行してみます。 その後、**[ホーム]** タブから**フィードバック**を送信して、どのように動作したかを報告します。 
@@ -154,22 +149,19 @@ WDS が必要ないため、Windows Server Core などのクライアントま�
 
 
 ## <a name="product-lifecycle-dashboard"></a>製品ライフサイクル ダッシュボード
-<!--1319632-->
-新しい[製品ライフサイクル ダッシュボード](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard)には、Configuration Manager で管理されているデバイスにインストールされている Microsoft 製品の Microsoft 製品ライフサイクル ポリシーの状態が表示されます。 このダッシュボードでは、環境内にある Microsoft 製品についての情報、サポート可能性の状態、およびサポート終了日が提供されます。 このダッシュボードを使って、各製品のサポートを利用できるかどうかを理解することができます。 
+<!--1319632--> 新しい[製品ライフサイクル ダッシュボード](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard)には、Configuration Manager で管理されているデバイスにインストールされている Microsoft 製品の Microsoft 製品ライフサイクル ポリシーの状態が表示されます。 このダッシュボードでは、環境内にある Microsoft 製品についての情報、サポート可能性の状態、およびサポート終了日が提供されます。 このダッシュボードを使って、各製品のサポートを利用できるかどうかを理解することができます。 
 
 Configuration Manager コンソールのライフサイクル ダッシュボードにアクセスするには、**[資産とコンプライアンス]** >**[資産インテリジェンス]** >**[製品のライフサイクル]** の順に移動します。
 
 
 
 ## <a name="improvements-to-reporting"></a>レポートの機能強化
-<!--1357653-->
-[ユーザーからのフィードバック](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/32434147-new-builtin-reports-about-windows-10-versions-and)の結果として、**[特定のコレクションに対する Windows 10 サービスの詳細]** という新しいレポートが追加されました。 このレポートには、リソース ID、NetBIOS 名、OS 名、OS リリース名、ビルド、OS ブランチ、および Windows 10 デバイスのサービス状態が表示されます。 このレポートにアクセスするには、**[監視]** >**[レポート]** >**[レポート]** >**[オペレーティング システム]** >**[特定のコレクションに対する Windows 10 サービスの詳細]** の順に移動します。
+<!--1357653--> [ユーザーからのフィードバック](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/32434147-new-builtin-reports-about-windows-10-versions-and)の結果として、**[特定のコレクションに対する Windows 10 サービスの詳細]** という新しいレポートが追加されました。 このレポートには、リソース ID、NetBIOS 名、OS 名、OS リリース名、ビルド、OS ブランチ、および Windows 10 デバイスのサービス状態が表示されます。 このレポートにアクセスするには、**[監視]** >**[レポート]** >**[レポート]** >**[オペレーティング システム]** >**[特定のコレクションに対する Windows 10 サービスの詳細]** の順に移動します。
 
 
 
 ## <a name="improvements-to-software-center"></a>ソフトウェア センターの機能強化
-<!--1357592-->
-[ユーザーからのフィードバック](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/13002684-software-center-show-only-available-software-hid)の結果として、インストールされているアプリケーションをソフトウェア センターで非表示にできるようになりました。 このオプションを有効にすると、既にインストールされているアプリケーションが、[アプリケーション] タブに表示されなくなります。 
+<!--1357592--> [ユーザーからのフィードバック](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/13002684-software-center-show-only-available-software-hid)の結果として、インストールされているアプリケーションをソフトウェア センターで非表示にできるようになりました。 このオプションを有効にすると、既にインストールされているアプリケーションが、[アプリケーション] タブに表示されなくなります。 
 
 ### <a name="try-it-out"></a>試してみましょう。
 ソフトウェア センターのクライアント設定で、**[インストールされたアプリケーションをソフトウェア センターで非表示にする]** 設定を有効にします。 エンド ユーザーがアプリケーションをインストールするときに、ソフトウェア センターで動作を確認してください。
@@ -177,14 +169,12 @@ Configuration Manager コンソールのライフサイクル ダッシュボー
 
 
 ## <a name="improvements-to-run-scripts"></a>スクリプトの実行の改善
-<!--1236459-->
-[スクリプトの実行](/sccm/apps/deploy-use/create-deploy-scripts)機能が、JSON 形式を使ってスクリプトの出力を返すようになりました。 この形式は、読み取り可能なスクリプトの出力を一貫して返します。 スクリプトの実行が失敗した場合、出力が返されないことがあります。 
+<!--1236459--> [スクリプトの実行](/sccm/apps/deploy-use/create-deploy-scripts)機能が、JSON 形式を使ってスクリプトの出力を返すようになりました。 この形式は、読み取り可能なスクリプトの出力を一貫して返します。 スクリプトの実行が失敗した場合、出力が返されないことがあります。 
 
 
 
 ## <a name="boundary-group-fallback-for-management-points"></a>管理ポイントに対する境界グループのフォールバック
-<!-- 1324594 -->
-このリリースから、[境界グループ](/sccm/core/servers/deploy/configure/boundary-groups)間の管理ポイントのフォールバック関係を構成できるようになりました。 この動作では、クライアントが使う管理ポイントをいっそうきめ細かく制御できます。 境界グループのプロパティの **[関係]** タブに、管理ポイント用の新しい列があります。 新しいフォールバック境界グループを追加するとき、現在は、管理ポイントのフォールバック時間が常にゼロ (0) になります。 この動作は、サイトの既定の境界グループの **[既定の動作]** でも同じです。
+<!-- 1324594 --> このリリースから、[境界グループ](/sccm/core/servers/deploy/configure/boundary-groups)間の管理ポイントのフォールバック関係を構成できるようになりました。 この動作では、クライアントが使う管理ポイントをいっそうきめ細かく制御できます。 境界グループのプロパティの **[関係]** タブに、管理ポイント用の新しい列があります。 新しいフォールバック境界グループを追加するとき、現在は、管理ポイントのフォールバック時間が常にゼロ (0) になります。 この動作は、サイトの既定の境界グループの **[既定の動作]** でも同じです。
 
 これまでは、セキュリティで保護されたネットワークに保護された管理ポイントがあると、一般的な問題が発生します。 メインの企業ネットワーク上のクライアントは、ファイアウォールを経由してこの保護された管理ポイントと通信できない場合でも、保護された管理ポイントを含むポリシーを受け取ります。 この問題に対処するには、**[フォールバックしない]** オプションを使って、クライアントが通信できる管理ポイントに対してのみフォールバックするようにします。
 
@@ -200,10 +190,10 @@ Configuration Manager コンソールのライフサイクル ダッシュボー
 
 ### <a name="troubleshooting"></a>トラブルシューティング
 **LocationServices.log** に新しいエントリが追加されます。 **Locality** 属性は、次のいずれかの状態を示します。
-- 0: 不明
-- 1: 指定された管理ポイントは、フォールバックに対するサイトの既定の境界グループにのみ存在します
-- 2: 指定された管理ポイントは、リモート境界グループまたは近隣の境界グループに存在します。 管理ポイントが近隣の境界グループとサイトの既定の境界グループの両方に存在する場合、ローカリティは 2 です。
-- 3: 指定された管理ポイントは、ローカル境界グループまたは現在の境界グループに存在します。 管理ポイントが現在の境界グループと共に、近隣の境界グループまたはサイトの既定の境界グループのどちらかに存在する場合、ローカリティは 3 です。 階層設定で優先管理ポイントの設定を有効にしていない場合は、管理ポイントが存在する境界グループに関係なく、ローカリティは常に 3 です。
+- 0:不明
+- 1:指定された管理ポイントは、フォールバックに対するサイトの既定の境界グループにのみ存在します
+- 2:指定された管理ポイントは、リモート境界グループまたは近隣の境界グループに存在します。 管理ポイントが近隣の境界グループとサイトの既定の境界グループの両方に存在する場合、ローカリティは 2 です。
+- 3:指定された管理ポイントは、ローカル境界グループまたは現在の境界グループに存在します。 管理ポイントが現在の境界グループと共に、近隣の境界グループまたはサイトの既定の境界グループのどちらかに存在する場合、ローカリティは 3 です。 階層設定で優先管理ポイントの設定を有効にしていない場合は、管理ポイントが存在する境界グループに関係なく、ローカリティは常に 3 です。
 
 クライアントは、最初にローカル管理ポイント (ローカリティ 3)、次にリモート (ローカリティ 2)、最後にフォールバック (ローカリティ 1) を使います。 
 
@@ -212,8 +202,7 @@ Configuration Manager コンソールのライフサイクル ダッシュボー
 
 
 ## <a name="improved-support-for-cng-certificates"></a>CNG 証明書のサポートの強化
-<!-- 1357314 -->
-Configuration Manager (現在のブランチ) バージョン 1710 は、[Cryptography: Next Generation (CNG) 証明書](/sccm/core/plan-design/network/cng-certificates-overview)をサポートしています。 バージョン 1710 では、一部のシナリオでクライアント証明書のサポートに制限があります。 
+<!-- 1357314 --> Configuration Manager (Current Branch) バージョン 1710 では、[Cryptography:Next Generation (CNG) 証明書](/sccm/core/plan-design/network/cng-certificates-overview)がサポートされています。 バージョン 1710 では、一部のシナリオでクライアント証明書のサポートに制限があります。 
 
 この Technical Preview リリース以降、以下の HTTPS が有効なサーバーの役割には CNG 証明書を使ってください。
 - 管理ポイント
@@ -225,8 +214,7 @@ Configuration Manager (現在のブランチ) バージョン 1710 は、[Crypto
 
 
 ## <a name="cloud-management-gateway-support-for-azure-resource-manager"></a>Azure Resource Manager に対するクラウド管理ゲートウェイのサポート
-<!-- 1324735 -->
-[クラウド管理ゲートウェイ](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG) のインスタンスを作成するとき、**Azure Resource Manager の展開**を作成するためのオプションがウィザードで提供されるようになりました。 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager で CMG を展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
+<!-- 1324735 --> [クラウド管理ゲートウェイ](/sccm/core/clients/manage/plan-cloud-management-gateway) (CMG) のインスタンスを作成するとき、**Azure Resource Manager の展開**を作成するためのオプションがウィザードで提供されるようになりました。 [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) は、[リソース グループ](/azure/azure-resource-manager/resource-group-overview#resource-groups)と呼ばれる単一のエンティティとしてすべてのソリューション リソースを管理するための最新のプラットフォームです。 Azure Resource Manager で CMG を展開するとき、サイトは Azure Active Directory (Azure AD) を使って必要なクラウド リソースの認証と作成を行います。 この最新の展開では、従来の Azure 管理証明書は必要ありません。  
 
 CMG ウィザードでは、Azure 管理証明書を使う**従来のサービス展開**のためのオプションがまだ提供されています。 リソースの展開と管理を簡単にするため、すべての新しい CMG インスタンスに Azure Resource Manager デプロイ モデルを使うことをお勧めします。 可能であれば、Resource Manager で既存の CMG インスタンスを再展開してください。
 
@@ -255,8 +243,7 @@ Configuration Manager では、既存の従来の CMG インスタンスが Azur
 
 
 ## <a name="approve-application-requests-for-users-per-device"></a>デバイスごとにユーザーのアプリケーション要求を承認する
-<!-- 1357015 -->
-このリリース以降では、承認を必要とするアプリケーションをユーザーが要求したとき、特定のデバイス名が要求の一部になります。 管理者が要求を承認した場合、ユーザーはそのデバイスにのみアプリケーションをインストールできます。 別のデバイスにアプリケーションをインストールするには、ユーザーは別の要求を送信する必要があります。 
+<!-- 1357015 --> このリリース以降では、承認を必要とするアプリケーションをユーザーが要求したとき、特定のデバイス名が要求の一部になります。 管理者が要求を承認した場合、ユーザーはそのデバイスにのみアプリケーションをインストールできます。 別のデバイスにアプリケーションをインストールするには、ユーザーは別の要求を送信する必要があります。 
 
 > [!NOTE]
 > この機能はオプションです。 このリリースを更新するときに、更新ウィザードでこの機能を有効にします。 または、後からコンソールで機能を有効にします。 詳細については、「[Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」 (更新プログラムのオプション機能の有効化) を参照してください。
@@ -269,15 +256,14 @@ Configuration Manager では、既存の従来の CMG インスタンスが Azur
  タスクを実行してみます。 その後、**[ホーム]** タブから**フィードバック**を送信して、どのように動作したかを報告します。
 
 1. 使用できるアプリケーションをユーザー コレクションに展開します。
-2. **[展開設定]** ページで、**[管理者は、デバイス上のこのアプリケーションへの要求を承認する必要があります]** オプションをオンにします。
+2. **[展開の設定]** ページで、オプション **[管理者は、デバイス上のこのアプリケーションへの要求を承認する必要があります]** を有効にします。
 3. 対象のユーザーは、ソフトウェア センターを使ってアプリケーションの要求を送信します。 
 4. Configuration Manager コンソールの **[ソフトウェア ライブラリ]** ワークスペースで **[アプリケーション管理]** の **[承認要求]** を確認します。 各要求のリストに、**[デバイス]** 列が追加されています。 要求に対するアクションを実行するとき、[アプリケーションの要求] ダイアログ ボックスには、ユーザーが要求を送信したデバイスの名前も表示されます。
 
 
 
 ## <a name="use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices"></a>ソフトウェア センターを使用してユーザーが利用できるアプリケーションを参照し、Azure AD に参加しているデバイスにインストールする
-<!-- 1322613 -->
-ユーザーが利用できるようにアプリケーションを展開した場合、ユーザーは Azure Active Directory (Azure AD) デバイスのソフトウェア センターでアプリケーションを参照してインストールできるようになりました。  
+<!-- 1322613 --> ユーザーが利用できるようにアプリケーションを展開した場合、ユーザーは Azure Active Directory (Azure AD) デバイスのソフトウェア センターでアプリケーションを参照してインストールできるようになりました。  
 
 ### <a name="prerequisites"></a>[前提条件]
 - 管理ポイントで HTTPS を有効にします。
@@ -290,7 +276,7 @@ Configuration Manager では、既存の従来の CMG インスタンスが Azur
    - Azure AD に参加していること (クラウド ドメイン参加とも呼ばれます)
 - インターネット ベースのクライアントをサポートするには:
     - [クラウド管理ゲートウェイ](/sccm/core/clients/manage/plan-cloud-management-gateway) 
-    - [[クライアント ポリシー]](/sccm/core/clients/deploy/about-client-settings#client-policy) グループでクライアント設定 **[インターネット クライアントからのユーザー ポリシー要求を有効にする]** をオンにします。
+    - クライアント設定 **[インターネット クライアントからのユーザー ポリシー要求を有効にする]** を [[クライアント ポリシー]](/sccm/core/clients/deploy/about-client-settings#client-policy) グループで有効にします。
 - 企業ネットワーク上のクライアントをサポートするには:
     - クライアントによって使われる境界グループに、クラウド配布ポイントを追加します
     - クライアントは、HTTPS が有効な管理ポイントの完全修飾ドメイン名 (FQDN) を解決できる必要があります
@@ -298,8 +284,7 @@ Configuration Manager では、既存の従来の CMG インスタンスが Azur
 
 
 ## <a name="report-on-windows-autopilot-device-information"></a>Windows AutoPilot のデバイス情報についてのレポート
-<!-- 1351442 -->
-Windows AutoPilot は、最新の方法で新しい Windows 10 デバイスをオンボーディングおよび構成するためのソリューションです。 詳細については、「[Windows AutoPilot の概要](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)」を参照してください。 既存のデバイスを Windows AutoPilot に登録する 1 つの方法は、ビジネス向け Microsoft Store および教育機関向け Microsoft Store にデバイスの情報をアップロードすることです。 この情報には、デバイスのシリアル番号、Windows 製品識別子、およびハードウェア ID が含まれます。 Configuration Manager を使って、このデバイス情報を収集およびレポートします。 
+<!-- 1351442 --> Windows AutoPilot は、最新の方法で新しい Windows 10 デバイスをオンボーディングおよび構成するためのソリューションです。 詳細については、「[Windows AutoPilot の概要](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)」を参照してください。 既存のデバイスを Windows AutoPilot に登録する 1 つの方法は、ビジネス向け Microsoft Store および教育機関向け Microsoft Store にデバイスの情報をアップロードすることです。 この情報には、デバイスのシリアル番号、Windows 製品識別子、およびハードウェア ID が含まれます。 Configuration Manager を使って、このデバイス情報を収集およびレポートします。 
 
 ### <a name="prerequisites"></a>[前提条件]
 - このデバイス情報は、Windows 10 バージョン 1703 以降のクライアントにのみ適用されます。
@@ -315,8 +300,7 @@ Windows AutoPilot は、最新の方法で新しい Windows 10 デバイスを�
 
 
 ## <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>Windows Defender Exploit Guard に対する Configuration Manager ポリシーの機能強化
-<!-- 1356220 -->
-攻撃の回避およびフォルダー アクセスの制御コンポーネントに対する新しいポリシー設定が、[Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) 用に Configuration Manager に追加されました。
+<!-- 1356220 --> 攻撃の回避およびフォルダー アクセスの制御コンポーネントに対する新しいポリシー設定が、[Windows Defender Exploit Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) 用に Configuration Manager に追加されました。
 
 **フォルダー アクセスの制御の新しい設定**<br/>
 フォルダー アクセスの制御を構成するときのオプションとして、**[ディスク セクターのみをブロックする]** と **[ディスク セクターのみを監査する]** の 2 つが新しく追加されました。 これら 2 つの設定を使うと、ブート セクターに対してだけフォルダー アクセスの制御を有効にし、特定のフォルダーまたは既定の保護されたフォルダーの保護を有効にしないことができます。 
@@ -330,21 +314,20 @@ Windows AutoPilot は、最新の方法で新しい Windows 10 デバイスを�
 
 
 ## <a name="microsoft-edge-browser-policies"></a>Microsoft Edge ブラウザーのポリシー
-<!-- 1357310 -->
-Windows 10 クライアントで [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) Web ブラウザーを使うユーザーは、Configuration Manager のコンプライアンス設定ポリシーを作成して、Microsoft Edge の一部の設定を構成できるようになりました。 現在、このポリシーには次の設定が含まれます。
+<!-- 1357310 --> Windows 10 クライアントで [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) Web ブラウザーを使うユーザーは、Configuration Manager のコンプライアンス設定ポリシーを作成して、Microsoft Edge の一部の設定を構成できるようになりました。 現在、このポリシーには次の設定が含まれます。
 - **[Set Microsoft Edge browser as default]\(Microsoft Edge ブラウザーを既定として設定する\)**: Windows 10 既定アプリの設定で、Web ブラウザーを Microsoft Edge に構成します
-- **[アドレス バーのドロップダウンを許可する]**: Windows 10 バージョン 1703 以降が必要です。 詳細については、[AllowAddressBarDropdown ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)に関する説明を参照してください。
-- **[Microsoft のブラウザー間でお気に入りの同期を許可する]**: Windows 10 バージョン 1703 以降が必要です。 詳細については、[SyncFavoritesBetweenIEAndMicrosoftEdge ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)に関する説明を参照してください。
-- **[終了時に閲覧データをクリアすることを許可する]**: Windows 10 バージョン 1703 以降が必要です。 詳細については、[ClearBrowsingDataOnExit ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)に関する説明を参照してください。
-- **[トラッキング拒否ヘッダーを許可する]**: 詳細については、[AllowDoNotTrack ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)に関する説明を参照してください。
-- **[オートフィルを許可する]**: 詳細については、[AllowAutofill ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill)に関する説明を参照してください。
-- **[Cookie を許可する]**: 詳細については、[AllowCookies ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)に関する説明を参照してください。
-- **[ポップアップ ブロックを許可する]**: 詳細については、[AllowPopups ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)に関する説明を参照してください。
-- **[アドレス バーで検索候補を許可する]**: 詳細については、[AllowSearchSuggestionsinAddressBar ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)に関する説明を参照してください。
-- **[Internet Explorer へのイントラネット トラフィックの送信を許可する]**: 詳細については、[SendIntranetTraffictoInternetExplorer ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer)に関する説明を参照してください。
-- **[Password Manager を許可する]**: 詳細については、[AllowPasswordManager ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)に関する説明を参照してください。
-- **[開発者ツールを許可する]**: 詳細については、[AllowDeveloperTools ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools)に関する説明を参照してください。
-- **[拡張機能を許可する]**: 詳細については、[AllowExtensions ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)に関する説明を参照してください。
+- **アドレス バーのドロップダウンを許可する**:Windows 10 バージョン 1703 以降が必要です。 詳細については、[AllowAddressBarDropdown ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowaddressbardropdown)に関する説明を参照してください。
+- **Microsoft のブラウザー間でお気に入りの同期を許可する**:Windows 10 バージョン 1703 以降が必要です。 詳細については、[SyncFavoritesBetweenIEAndMicrosoftEdge ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-syncfavoritesbetweenieandmicrosoftedge)に関する説明を参照してください。
+- **終了時に閲覧データをクリアすることを許可する**:Windows 10 バージョン 1703 以降が必要です。 詳細については、[ClearBrowsingDataOnExit ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-clearbrowsingdataonexit)に関する説明を参照してください。
+- **トラッキング拒否ヘッダーを許可する**:詳細については、[AllowDoNotTrack ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowdonottrack)に関する記事を参照してください。
+- **オートコンプリートを使用する**:詳細については、[AllowAutofill ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowautofill)に関する記事を参照してください。
+- **Cookie を使用する**:詳細については、[AllowCookies ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowcookies)に関する記事を参照してください。
+- **ポップアップ ブロックを許可する**:詳細については、[AllowPopups ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowpopups)に関する記事を参照してください。
+- **アドレス バーで検索候補を許可する**:詳細については、[AllowSearchSuggestionsinAddressBar ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowsearchsuggestionsinaddressbar)に関する記事を参照してください。
+- **Internet Explorer へのイントラネット トラフィックの送信を許可する**:詳細については、[SendIntranetTraffictoInternetExplorer ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-sendintranettraffictointernetexplorer)に関する記事を参照してください。
+- **Password Manager を許可する**:詳細については、[AllowPasswordManager ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)に関する記事を参照してください。
+- **開発者ツールを許可する**:詳細については、[AllowDeveloperTools ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowdevelopertools)に関する記事を参照してください。
+- **拡張機能を許可する**:詳細については、[AllowExtensions ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)に関する記事を参照してください。
 
 ### <a name="prerequisites"></a>[前提条件]
 - Azure Active Directory に参加している Windows 10 クライアント。 
@@ -373,8 +356,7 @@ Windows 10 クライアントで [Microsoft Edge](https://technet.microsoft.com/
 
 
 ## <a name="report-for-default-browser-counts"></a>既定のブラウザー数についてのレポート
-<!-- 1357830 -->
-特定の Web ブラウザーが Windows の既定値になっているクライアントの数を表示する新しいレポートが追加されました。 
+<!-- 1357830 --> 特定の Web ブラウザーが Windows の既定値になっているクライアントの数を表示する新しいレポートが追加されました。 
 
 ### <a name="known-issues"></a>既知の問題
 - 最初にレポートを開いたときは、数だけが表示され、BrowserProgID は表示されません。 この問題を回避するには、レポートのクエリを次の構文に編集します。  
@@ -388,21 +370,19 @@ Windows 10 クライアントで [Microsoft Edge](https://technet.microsoft.com/
 2. **[既定のブラウザーの数]** レポートを実行します。
 
 一般的な BrowserProgID については以下をご覧ください。
-- **AppXq0fevzme2pys62n3e0fbqa7peapykr8v**: Microsoft Edge
-- **IE.HTTP**: Microsoft Internet Explorer
-- **ChromeHTML**: Google Chrome
-- **OperaStable**: Opera Software
-- **FirefoxURL-308046B0AF4A39CB**: Mozilla Firefox
+- **AppXq0fevzme2pys62n3e0fbqa7peapykr8v**:Microsoft Edge
+- **IE.HTTP**:Microsoft Internet Explorer
+- **ChromeHTML**:Google Chrome
+- **OperaStable**:Opera Software
+- **FirefoxURL-308046B0AF4A39CB**:Mozilla Firefox
 
 
 
 ## <a name="support-for-windows-10-arm64-devices"></a>Windows 10 ARM64 デバイスのサポート
-<!-- 1353704 -->
-このリリースから、Configuration Manager クライアントは Windows 10 ARM64 デバイスでサポートされるようになりました。 既存のクライアント管理機能は、これらの新しいデバイスで動作します。 たとえば、ハードウェアとソフトウェアのインベントリ、ソフトウェア更新プログラム、アプリケーション管理などです。 オペレーティング システムの展開は現在はサポートされていません。 
+<!-- 1353704 --> このリリースから、Configuration Manager クライアントは Windows 10 ARM64 デバイスでサポートされるようになりました。 既存のクライアント管理機能は、これらの新しいデバイスで動作します。 たとえば、ハードウェアとソフトウェアのインベントリ、ソフトウェア更新プログラム、アプリケーション管理などです。 オペレーティング システムの展開は現在はサポートされていません。 
 
 ## <a name="changes-to-phased-deployments"></a>段階的展開に対する変更
-<!-- 1357405 -->
-段階的展開は、複数のコレクションでのソフトウェアの調整および順序付けされたロールアウトを自動化します。 この Technical Preview バージョンでは、管理コンソールでタスク シーケンスの段階的展開ウィザードを実行でき、展開が作成されます。 ただし、1 番目のフェーズの成功条件が満たされた後、2 番目のフェーズは自動的に開始しません。 2 番目のフェーズは、SQL ステートメントを使って手動で開始できます。   
+<!-- 1357405 --> 段階的展開は、複数のコレクションでのソフトウェアの調整および順序付けされたロールアウトを自動化します。 この Technical Preview バージョンでは、管理コンソールでタスク シーケンスの段階的展開ウィザードを実行でき、展開が作成されます。 ただし、1 番目のフェーズの成功条件が満たされた後、2 番目のフェーズは自動的に開始しません。 2 番目のフェーズは、SQL ステートメントを使って手動で開始できます。   
 
 ### <a name="try-it-out"></a>試してみましょう。  
   タスクを実行してみます。 その後、**[ホーム]** タブから**フィードバック**を送信して、どのように動作したかを報告します。

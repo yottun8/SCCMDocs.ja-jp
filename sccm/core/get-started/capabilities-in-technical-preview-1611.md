@@ -10,16 +10,16 @@ ms.assetid: d2ad00e8-9f10-41b6-816a-d8542c23a22e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d610b9f5980376bc9859fcd1e8bb34660e068b09
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 71ad5ae8ff823d03951d5f9ae1a13e8051cba23e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335016"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416573"
 ---
 # <a name="capabilities-in-technical-preview-1611-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1611 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 
 
@@ -30,11 +30,11 @@ ms.locfileid: "32335016"
   - SQL インデックス作成メモリのオプション
   - SQL Server のバージョンがサポートされているかどうかの確認  
 
- これらは警告にすぎないので、無視することができます。
+  これらは警告にすぎないので、無視することができます。
 
-- ***PowerShell***: Configuration Manager コンソールから Windows PowerShell に接続する場合に、次のエラーが表示される可能性があります: **Microsoft.ConfigurationManagement.PowerShell.Types.ps1xml がデジタル署名されていない**  
+- ***PowerShell***:Configuration Manager コンソールから Windows PowerShell に接続するとき、次のエラーが表示される可能性があります: **Microsoft.ConfigurationManagement.PowerShell.Types.ps1xml がデジタル署名されていない**。  
 
-   この問題は、特定のファイルをバージョン 1610 の署名付きバージョンのファイルに置き換えることで解決できます。 バージョン 1610 のインストールの *&lt;install directory>\AdminConsole\bin\** フォルダーから拡張子 **.psd1**、**.ps1xml**、**.psm1** を持つすべてのファイルをコピーします。 これらのファイルを、Technical Preview 1611 がインストールされている *&lt;install directory>\AdminConsole\bin\** フォルダーに貼り付けて、1611 バージョンのファイルを上書きします。
+   この問題は、特定のファイルをバージョン 1610 の署名付きバージョンのファイルに置き換えることで解決できます。 バージョン 1610 のインストールの **&lt;install directory>\AdminConsole\bin\\** フォルダーから拡張子 **.psd1**、**.ps1xml**、**.psm1** を持つすべてのファイルをコピーします。 これらのファイルを、ご利用の Technical Preview 1611 がインストールされている **&lt;install directory>\AdminConsole\bin\\** フォルダーに貼り付けて、1611 バージョンのファイルを上書きします。
 
 
 **このバージョンでお試しいただける新機能を次に示します。**  

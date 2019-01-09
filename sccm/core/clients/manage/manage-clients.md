@@ -10,16 +10,16 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623d7b6a048b7728e40adb3655dc1017408fb1d7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 488a24284e814effea23db0b221d62b7d25c483e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342224"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419531"
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアントを管理する方法
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 デバイスに Configuration Manager クライアントがインストールされてサイトに正常に割り当てられると、**[デバイス]** ノードの **[資産とコンプライアンス]** ワークスペース、および **[デバイス コレクション]** ノードの 1 つまたは複数のコレクションにデバイスが表示されます。 デバイスまたはコレクションを選択するときに、管理操作を実行できます。 ただし、コンソールの他のワークスペースを使用するか、コンソールの外部のタスクを実行して、別の方法でクライアントを管理することもできます。  
 
@@ -36,119 +36,119 @@ ms.locfileid: "32342224"
 
 デバイスの種類によっては、一部のオプションを使用できません。  
 
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** >  **[デバイス]** を選択します。  
+1. Configuration Manager コンソールで、**[資産とコンプライアンス]** >  **[デバイス]** を選択します。  
 
-3.  1 つまたは複数のデバイスを選択してから、リボンからクライアント管理タスクのいずれかを選択するか、デバイスを右クリックします。  
+2. 1 つまたは複数のデバイスを選択してから、リボンからクライアント管理タスクのいずれかを選択するか、デバイスを右クリックします。  
 
-    -   **ユーザー デバイスのアフィニティ情報を管理する**  
+   - **ユーザー デバイスのアフィニティ情報を管理する**  
 
-         ユーザーとデバイスの関連付けを構成して、ユーザーにソフトウェアを効率的に展開することができます。  
+      ユーザーとデバイスの関連付けを構成して、ユーザーにソフトウェアを効率的に展開することができます。  
 
-         「[System Center Configuration Manager でのユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)」を参照してください  
+      「[System Center Configuration Manager でのユーザーとデバイスのアフィニティへのユーザーとデバイスの関連付け](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)」を参照してください  
 
-    -   **新規または既存のコレクションにデバイスを追加する**  
+   - **新規または既存のコレクションにデバイスを追加する**  
 
-         ダイレクト規則でデバイスをコレクションに追加します。  
+      ダイレクト規則でデバイスをコレクションに追加します。  
 
-    -   **クライアント プッシュ ウィザードを使用してクライアントのインストールと再インストールを実行する**  
+   - **クライアント プッシュ ウィザードを使用してクライアントのインストールと再インストールを実行する**  
 
-         Configuration Manager クライアントをインストールまたは再インストールして、修復または再構成します。 このオプションには、サイトの構成設定と、クライアントのプッシュ インストール用に設定した client.msi プロパティが含まれます。  
+      Configuration Manager クライアントをインストールまたは再インストールして、修復または再構成します。 このオプションには、サイトの構成設定と、クライアントのプッシュ インストール用に設定した client.msi プロパティが含まれます。  
 
-        > [!TIP]  
-        >  Configuration Manager クライアントのインストール (および再インストール) を実行するには、さまざまな方法があります。 クライアント プッシュ ウィザードはコンソールから実行できるため、クライアントのインストールには便利な方法ですが、この方法には数多くの依存関係があり、すべての環境に適しているわけではありません。 依存関係の詳細については、「[System Center Configuration Manager で Windows コンピューターにクライアントを展開するための前提条件](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)」を参照してください。 他のクライアント インストール方法の詳細については、「[System Center Configuration Manager でのクライアントのインストール方法](../../../core/clients/deploy/plan/client-installation-methods.md)」を参照してください。  
+     > [!TIP]  
+     >  Configuration Manager クライアントのインストール (および再インストール) を実行するには、さまざまな方法があります。 クライアント プッシュ ウィザードはコンソールから実行できるため、クライアントのインストールには便利な方法ですが、この方法には数多くの依存関係があり、すべての環境に適しているわけではありません。 依存関係の詳細については、「[System Center Configuration Manager で Windows コンピューターにクライアントを展開するための前提条件](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)」を参照してください。 他のクライアント インストール方法の詳細については、「[System Center Configuration Manager でのクライアントのインストール方法](../../../core/clients/deploy/plan/client-installation-methods.md)」を参照してください。  
 
-         「 [クライアント プッシュを使用した Configuration Manager クライアントのインストール方法](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush)」を参照してください。  
+      「 [クライアント プッシュを使用した Configuration Manager クライアントのインストール方法](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush)」を参照してください。  
 
-    -   **サイトの再割り当て**  
+   - **サイトの再割り当て**  
 
-         1 つまたは複数のクライアント (管理しているモバイル デバイスを含む) を、階層内の別のプライマリ サイトに再割り当てします。 新しいサイトへのクライアントの再割り当ては、個別に行うことも、複数のクライアントを選択して一括で行うこともできます。  
+      1 つまたは複数のクライアント (管理しているモバイル デバイスを含む) を、階層内の別のプライマリ サイトに再割り当てします。 新しいサイトへのクライアントの再割り当ては、個別に行うことも、複数のクライアントを選択して一括で行うこともできます。  
 
-    -   **クライアントをリモート管理する**  
+   - **クライアントをリモート管理する**  
 
-         リソース エクスプローラーを実行して、Windows クライアントからのハードウェアとソフトウェアのインベントリ情報を表示します。 リモート制御、リモート アシスタンス、またはリモート デスクトップを使用して、デバイスをリモートで管理します。  
+      リソース エクスプローラーを実行して、Windows クライアントからのハードウェアとソフトウェアのインベントリ情報を表示します。 リモート制御、リモート アシスタンス、またはリモート デスクトップを使用して、デバイスをリモートで管理します。  
 
-         「[リソース エクスプローラーを使用してハードウェア インベントリを表示する方法](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)」と「[リソース エクスプローラーを使用してソフトウェア インベントリを表示する方法](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)」を参照してください。  
+      「[リソース エクスプローラーを使用してハードウェア インベントリを表示する方法](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)」と「[リソース エクスプローラーを使用してソフトウェア インベントリを表示する方法](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)」を参照してください。  
 
-         「[Windows クライアント コンピューターをリモート管理する方法](../../../core/clients/manage/remote-control/remotely-administer-a-windows-client-computer.md)」を参照してください。  
+      「[Windows クライアント コンピューターをリモート管理する方法](../../../core/clients/manage/remote-control/remotely-administer-a-windows-client-computer.md)」を参照してください。  
 
-    -   **クライアントを承認する**  
+   - **クライアントを承認する**  
 
-         クライアントが HTTP および自己署名証明書を使用してサイト システムと通信する場合、信頼されるコンピューターとして識別されるように、これらのクライアントを承認する必要があります。 既定では、各クライアントを手動で承認せずに済むように、サイト構成により、同じ Active Directory フォレストおよび信頼されるフォレストのクライアントは自動的に承認されます。 ただし、信頼できるワークグループ コンピューター、および信頼できるが承認されていないその他のコンピューターは手動で承認する必要があります。  
+      クライアントが HTTP および自己署名証明書を使用してサイト システムと通信する場合、信頼されるコンピューターとして識別されるように、これらのクライアントを承認する必要があります。 既定では、各クライアントを手動で承認せずに済むように、サイト構成により、同じ Active Directory フォレストおよび信頼されるフォレストのクライアントは自動的に承認されます。 ただし、信頼できるワークグループ コンピューター、および信頼できるが承認されていないその他のコンピューターは手動で承認する必要があります。  
 
-        > [!WARNING]  
-        >  一部の管理機能は承認されていないクライアントでも動作する可能性がありますが、このシナリオは Configuration Manager ではサポートされていません。  
+     > [!WARNING]  
+     >  一部の管理機能は承認されていないクライアントでも動作する可能性がありますが、このシナリオは Configuration Manager ではサポートされていません。  
 
-         常に HTTPS を使用してサイト システムと通信するクライアントや、HTTP を使用してサイト システムと通信する際に PKI 証明書を使用するクライアントは、承認する必要はありません。 これらのクライアントは、PKI 証明書を使用して信頼を確立します。  
+      常に HTTPS を使用してサイト システムと通信するクライアントや、HTTP を使用してサイト システムと通信する際に PKI 証明書を使用するクライアントは、承認する必要はありません。 これらのクライアントは、PKI 証明書を使用して信頼を確立します。  
 
-    -   **クライアントをブロックまたはブロック解除する**  
+   - **クライアントをブロックまたはブロック解除する**  
 
-         信頼できなくなったクライアントをブロックします。 ブロックすると、クライアントはポリシーを受信できなくなり、サイト システムはクライアントと通信できなくなります。  
+      信頼できなくなったクライアントをブロックします。 ブロックすると、クライアントはポリシーを受信できなくなり、サイト システムはクライアントと通信できなくなります。  
 
-        > [!WARNING]  
-        >  クライアントをブロックすると、クライアントから Configuration Manager サイト システムへの通信のみ防ぐことができます。クライアントから他のデバイスへの通信を防ぐことはできません。 また、HTTPS の代わりに HTTP を使用してクライアントがサイト システムに通信する場合、セキュリティ上の制限がいくつか生じます。  
+     > [!WARNING]  
+     >  クライアントをブロックすると、クライアントから Configuration Manager サイト システムへの通信のみ防ぐことができます。クライアントから他のデバイスへの通信を防ぐことはできません。 また、HTTPS の代わりに HTTP を使用してクライアントがサイト システムに通信する場合、セキュリティ上の制限がいくつか生じます。  
 
-         ブロックされているクライアントのブロックを解除することもできます。 
+      ブロックされているクライアントのブロックを解除することもできます。 
 
-         「[System Center Configuration Manager でクライアントをブロックするかどうかの判断](../../../core/clients/deploy/plan/determine-whether-to-block-clients.md)」を参照してください。  
+      「 [System Center Configuration Manager でクライアントをブロックするかどうかの判断](../../../core/clients/deploy/plan/determine-whether-to-block-clients.md)」を参照してください。  
 
-    -   **必要な PXE 展開をクリアする**  
+   - **必要な PXE 展開をクリアする**  
 
-         コンピューターに必要な PXE 展開を再展開します。  
+      コンピューターに必要な PXE 展開を再展開します。  
 
-         「[System Center Configuration Manager で PXE を使用してネットワーク経由で Windows を展開する](../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md)」を参照してください。  
+      「 [System Center Configuration Manager で PXE を使用してネットワーク経由で Windows を展開する](../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md)」を参照してください。  
 
-    -   **クライアントのプロパティを管理する**  
+   - **クライアントのプロパティを管理する**  
 
-         クライアントを対象とした探索データと展開を表示します。 また、オペレーティング システムをデバイスに展開するためにタスク シーケンスで使用される変数を構成することもできます。  
+      クライアントを対象とした探索データと展開を表示します。 また、オペレーティング システムをデバイスに展開するためにタスク シーケンスで使用される変数を構成することもできます。  
 
-    -   **クライアントを削除する**  
+   - **クライアントを削除する**  
 
-        > [!WARNING]  
-        >  Configuration Manager クライアントをアンインストールする場合やコレクションから削除する際、クライアントを削除しないでください。  
+     > [!WARNING]  
+     >  Configuration Manager クライアントをアンインストールする場合やコレクションから削除する際、クライアントを削除しないでください。  
 
-         **[削除]** 操作を実行して、Configuration Manager データベースからクライアント レコードを手動で削除します。通常、この操作は、トラブルシューティング以外では使用しないでください。 クライアント レコードを削除しても、クライアントがまだインストールされており、サイトと通信している場合は、定期探索でクライアント レコードが再作成されます。 クライアント履歴とすべての以前の関連付けは失われますが、Configuration Manager コンソールにはクライアント レコードが再表示されます。  
+      **[削除]** 操作を実行して、Configuration Manager データベースからクライアント レコードを手動で削除します。通常、この操作は、トラブルシューティング以外では使用しないでください。 クライアント レコードを削除しても、クライアントがまだインストールされており、サイトと通信している場合は、定期探索でクライアント レコードが再作成されます。 クライアント履歴とすべての以前の関連付けは失われますが、Configuration Manager コンソールにはクライアント レコードが再表示されます。  
 
-        > [!NOTE]  
-        >  Configuration Manager によって登録されているモバイル デバイス クライアントを削除すると、この操作により、モバイル デバイス クライアントに発行された PKI 証明書が失効し、IIS によって CRL がチェックされない場合でも、この証明書が管理ポイントで拒否されるようになります。 モバイル デバイス レガシ クライアントを削除しても、これらのクライアントの証明書は失効しません。  
+     > [!NOTE]  
+     >  Configuration Manager によって登録されているモバイル デバイス クライアントを削除すると、この操作により、モバイル デバイス クライアントに発行された PKI 証明書が失効し、IIS によって CRL がチェックされない場合でも、この証明書が管理ポイントで拒否されるようになります。 モバイル デバイス レガシ クライアントを削除しても、これらのクライアントの証明書は失効しません。  
 
-         クライアントをアンインストールするには、「 [Configuration Manager クライアントのアンインストール](#BKMK_UninstalClient)」を参照してください。  
+      クライアントをアンインストールするには、「 [Configuration Manager クライアントのアンインストール](#BKMK_UninstalClient)」を参照してください。  
 
-         クライアントを新しいプライマリ サイトに割り当てるには、「[System Center Configuration Manager でクライアントをサイトに割り当てる方法](../../../core/clients/deploy/assign-clients-to-a-site.md)」を参照してください。  
+      クライアントを新しいプライマリ サイトに割り当てるには、「[System Center Configuration Manager でクライアントをサイトに割り当てる方法](../../../core/clients/deploy/assign-clients-to-a-site.md)」を参照してください。  
 
-         クライアントをコレクションから削除するには、コレクションのプロパティを再構成します。 「[System Center Configuration Manager でコレクションを管理する方法](../../../core/clients/manage/collections/manage-collections.md)」を参照してください。  
+      クライアントをコレクションから削除するには、コレクションのプロパティを再構成します。 「[System Center Configuration Manager でコレクションを管理する方法](../../../core/clients/manage/collections/manage-collections.md)」を参照してください。  
 
-    -   **モバイル デバイスをワイプする**  
+   - **モバイル デバイスをワイプする**  
 
-         ワイプ コマンドをサポートするモバイル デバイスをワイプできます。  
+      ワイプ コマンドをサポートするモバイル デバイスをワイプできます。  
 
-         この操作により、個人設定や個人データを含め、モバイル デバイスのすべてのデータが削除されます。 通常、この操作で、モバイル デバイスが工場出荷時の設定にリセットされます。 モバイル デバイスを信頼できなくなった場合にはワイプします。 たとえば、デバイスの紛失時や盗難時などです。  
+      この操作により、個人設定や個人データを含め、モバイル デバイスのすべてのデータが削除されます。 通常、この操作で、モバイル デバイスが工場出荷時の設定にリセットされます。 モバイル デバイスを信頼できなくなった場合にはワイプします。 たとえば、デバイスの紛失時や盗難時などです。  
 
-        > [!TIP]  
-        >  モバイル デバイスでリモート ワイプ コマンドがどのように処理されるかについては、製造元のドキュメントを参照してください。  
+     > [!TIP]  
+     >  モバイル デバイスでリモート ワイプ コマンドがどのように処理されるかについては、製造元のドキュメントを参照してください。  
 
-         モバイル デバイスがワイプ コマンドを受信するまで、通常、待ち時間が発生します。  
+      モバイル デバイスがワイプ コマンドを受信するまで、通常、待ち時間が発生します。  
 
-        -   モバイル デバイスが Configuration Manager または Microsoft Intune によって登録されている場合、クライアントは、クライアント ポリシーのダウンロード時にコマンドを受信します。  
+     - モバイル デバイスが Configuration Manager または Microsoft Intune によって登録されている場合、クライアントは、クライアント ポリシーのダウンロード時にコマンドを受信します。  
 
-        -   モバイル デバイスが Exchange Server コネクタによって管理されている場合、Exchange との同期時にコマンドを受信します。  
+     - モバイル デバイスが Exchange Server コネクタによって管理されている場合、Exchange との同期時にコマンドを受信します。  
 
-         **[ワイプのステータス]** 列を使用して、デバイスがワイプ コマンドをいつ受信するのかを監視できます。 デバイスが Configuration Manager にワイプ確認を送信するまで、ワイプ コマンドをキャンセルできます。  
+       **[ワイプのステータス]** 列を使用して、デバイスがワイプ コマンドをいつ受信するのかを監視できます。 デバイスが Configuration Manager にワイプ確認を送信するまで、ワイプ コマンドをキャンセルできます。  
 
-    -   **モバイル デバイスをインベントリから削除する**  
+   - **モバイル デバイスをインベントリから削除する**  
 
-         **[インベントリから削除する]** オプションは、Microsoft Intune または\-オンプレミス モバイル デバイス管理で登録されたモバイル デバイスでのみサポートされます。  
+      **[インベントリから削除する]** オプションは、Microsoft Intune または\-オンプレミス モバイル デバイス管理で登録されたモバイル デバイスでのみサポートされます。  
 
-         詳細については、「 [System Center Configuration Manager によるリモート ワイプ、リモート ロック、パスコードのリセットを使用したデータの保護](../../../mdm/deploy-use/wipe-lock-reset-devices.md)」をご覧ください。  
+      詳細については、「 [System Center Configuration Manager によるリモート ワイプ、リモート ロック、パスコードのリセットを使用したデータの保護](../../../mdm/deploy-use/wipe-lock-reset-devices.md)」をご覧ください。  
 
-    -   **デバイスの所有権を変更する**  
+   - **デバイスの所有権を変更する**  
 
-         デバイスがドメインに参加しておらず、Configuration Manager クライアントがインストールされていない場合は、このオプションを使用して、所有権を **[会社]** または **[個人]** に変更できます。  
+      デバイスがドメインに参加しておらず、Configuration Manager クライアントがインストールされていない場合は、このオプションを使用して、所有権を **[会社]** または **[個人]** に変更できます。  
 
-         アプリケーションの要件にこの値を使用して、展開を制御できます。また、ユーザー デバイスから収集するインベントリの量を制御できます。  
+      アプリケーションの要件にこの値を使用して、展開を制御できます。また、ユーザー デバイスから収集するインベントリの量を制御できます。  
 
-        また、必要に応じて、列見出しを右クリックして選択し、ビューに **[デバイスの所有者]** 列を追加することもできます。
+     また、必要に応じて、列見出しを右クリックして選択し、ビューに **[デバイスの所有者]** 列を追加することもできます。
 
-         詳細については、「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)」を参照してください。  
+      詳細については、「[System Center Configuration Manager と Microsoft Intune を使用するハイブリッド モバイル デバイス管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)」を参照してください。  
 
 ##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> [デバイス コレクション] ノードからクライアントを管理する  
   **[デバイス]** ノードのデバイスで使用可能なタスクの多くは、コレクションでも使用可能です。 コンソールは、コレクション内の対象となるすべてのデバイスに操作を自動的に適用します。 コレクション全体でのこのアクションにより、追加のネットワーク パケットが生成され、サイト サーバー上の CPU 使用率が増加します。  
@@ -178,7 +178,7 @@ ms.locfileid: "32342224"
 
     -   **電源管理設定を構成する**  
 
-         「[System Center Configuration Manager で電源プランを作成して適用する方法](../../../core/clients/manage/power/create-and-apply-power-plans.md)」を参照してください。 電源プランは Windows を実行するコンピューターにのみ使用できます。  
+         「 [System Center Configuration Manager で電源プランを作成して適用する方法](../../../core/clients/manage/power/create-and-apply-power-plans.md)」を参照してください。 電源プランは Windows を実行するコンピューターにのみ使用できます。  
 
     -   **直ちにポリシーをダウンロードするようにコンピューターに通知する**  
 
@@ -224,7 +224,7 @@ Configuration Manager クライアントは、展開を受けた後まもなく�
 クライアントがキャッシュのサイズより大きいプログラムまたはアプリケーションのコンテンツをダウンロードしようとすると、キャッシュ サイズが十分でないため、展開が失敗します。 キャッシュ サイズが十分でない場合、クライアントはステータス メッセージ 10050 を生成します。 後でキャッシュ サイズを増やすと、結果は次のようになります。  
 
 -   要求されるプログラムの場合:クライアントは、コンテンツのダウンロードを自動的に再試行しません。 クライアントにパッケージとプログラムを再展開します。  
--   要求されるアプリケーションの場合: クライアントは、クライアント ポリシーをダウンロードするときに、自動的にコンテンツのダウンロードを再試行します。  
+-   要求されるアプリケーションの場合:クライアントは、クライアント ポリシーをダウンロードするときに、自動的にコンテンツのダウンロードを再試行します。  
 
 クライアントがダウンロードしようとするパッケージのサイズがキャッシュ サイズより小さくても、キャッシュに空きがない場合、キャッシュ領域が利用可能になるまで、またはダウンロードがタイムアウトするまで、あるいは再試行回数の制限に達するまで、要求されたすべての展開は再試行を繰り返します。 キャッシュ サイズが後で拡大されると、Configuration Manager クライアントは、次回の再試行時に再びパッケージのダウンロードを試みます。 クライアントは 4 時間ごとに 18 回になるまでコンテンツのダウンロードを試みます。  
 
@@ -236,39 +236,39 @@ Configuration Manager クライアントは、展開を受けた後まもなく�
 
 必要に応じて次のプロパティを指定して、インストール ソースの場所から CCMSetup.exe コマンドを実行します。プロパティはスペースで区切ります。  
 
-   -   DISABLECACHEOPT  
+- DISABLECACHEOPT  
 
-    -   SMSCACHEDIR  
+  - SMSCACHEDIR  
 
-    -   SMSCACHEFLAGS  
+  - SMSCACHEFLAGS  
 
-    -   SMSCACHESIZE  
+  - SMSCACHESIZE  
 
-        > [!NOTE]
-        > バージョン 1606 では、SMSCACHESIZE ではなく Configuration Manager コンソールの **[クライアント設定]** で使用可能なキャッシュ サイズ設定を使用します。 詳細については、「[クライアントのキャッシュ設定](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)」を参照してください。
+    > [!NOTE]
+    > バージョン 1606 では、SMSCACHESIZE ではなく Configuration Manager コンソールの **[クライアント設定]** で使用可能なキャッシュ サイズ設定を使用します。 詳細については、「[クライアントのキャッシュ設定](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)」を参照してください。
 
 CCMSetup.exe のこれらのコマンド ライン プロパティの使用方法の詳細については、「[クライアント インストールのプロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
 
 ### <a name="to-configure-the-client-cache-folder-when-you-install-clients-by-using-client-push-installation"></a>クライアント プッシュ インストールによってクライアントをインストールするときにクライアント キャッシュを構成するには  
 
-1.  Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** > **[サイト]** を選択します。  
+1. Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** > **[サイト]** を選択します。  
 
-3.  適切なサイトを選択し、**[ホーム]** タブの **[設定]** グループで **[クライアント インストール設定]** > **[インストールのプロパティ]** タブを選択します。  
+2. 適切なサイトを選択し、**[ホーム]** タブの **[設定]** グループで **[クライアント インストール設定]** > **[インストールのプロパティ]** タブを選択します。  
 
-5.  スペース区切りで次のプロパティを指定します。  
+3. スペース区切りで次のプロパティを指定します。  
 
-    -   DISABLECACHEOPT  
+   - DISABLECACHEOPT  
 
-    -   SMSCACHEDIR  
+   - SMSCACHEDIR  
 
-    -   SMSCACHEFLAGS  
+   - SMSCACHEFLAGS  
 
-    -   SMSCACHESIZE  
+   - SMSCACHESIZE  
 
-        > [!NOTE]
-        > バージョン 1606 では、SMSCACHESIZE ではなく Configuration Manager コンソールの **[クライアント設定]** で使用可能なキャッシュ サイズ設定を使用します。 詳細については、「[クライアントのキャッシュ設定](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)」を参照してください。
+     > [!NOTE]
+     > バージョン 1606 では、SMSCACHESIZE ではなく Configuration Manager コンソールの **[クライアント設定]** で使用可能なキャッシュ サイズ設定を使用します。 詳細については、「[クライアントのキャッシュ設定](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)」を参照してください。
 
-       CCMSetup.exe のこれらのコマンド ライン プロパティの使用方法の詳細については、「[クライアント インストールのプロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
+     CCMSetup.exe のこれらのコマンド ライン プロパティの使用方法の詳細については、「[クライアント インストールのプロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
 
 ### <a name="to-configure-the-client-cache-folder-on-the-client-computer"></a>クライアント コンピューターでクライアント キャッシュ フォルダーを構成するには  
 
@@ -285,11 +285,11 @@ Configuration Manager コンソールで [クライアント設定] を使用し
 1. Configuration Manager コンソールで、 **[管理]** > **[クライアント設定]** に移動します。
 
 2. **[既定のクライアント設定]** をダブルクリックします。
-  また、キャッシュ サイズをより選択的に適用するためにカスタム クライアント設定を作成することもできます。 既定およびカスタムのクライアント設定の詳細については、「[System Center Configuration Manager でクライアント設定を構成する方法](../../../core/clients/deploy/configure-client-settings.md)」を参照してください。
+   また、キャッシュ サイズをより選択的に適用するためにカスタム クライアント設定を作成することもできます。 既定およびカスタムのクライアント設定の詳細については、「[System Center Configuration Manager でクライアント設定を構成する方法](../../../core/clients/deploy/configure-client-settings.md)」を参照してください。
 
- 3. **[クライアント キャッシュの設定]** を選択し、**[クライアント キャッシュ サイズの構成]** で **[はい]** を選択して、ディスク設定の **[MB]** または **[割合]** のいずれかを使用します。 いずれか小さい方のサイズにキャッシュが調整されます。
+   3. **[クライアント キャッシュの設定]** を選択し、**[クライアント キャッシュ サイズの構成]** で **[はい]** を選択して、ディスク設定の **[MB]** または **[割合]** のいずれかを使用します。 いずれか小さい方のサイズにキャッシュが調整されます。
 
-     Configuration Manager クライアントは、次のクライアント ポリシーがダウンロードされるときにこれらの設定値を使ってキャッシュ サイズを構成します。
+      Configuration Manager クライアントは、次のクライアント ポリシーがダウンロードされるときにこれらの設定値を使ってキャッシュ サイズを構成します。
 
 
 

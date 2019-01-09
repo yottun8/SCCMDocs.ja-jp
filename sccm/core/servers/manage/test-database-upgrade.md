@@ -10,16 +10,16 @@ ms.assetid: abb696f3-a816-4f12-a9f1-0503a81e1976
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3bd64cd937bf0a90a00ea6b17664d80394dcafab
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4168b36553dacff69fab0972011a7d4c2843d787
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339309"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421945"
 ---
 # <a name="test-the-database-upgrade-when-installing-an-update"></a>更新プログラムをインストールする際にデータベース アップグレードをテストする
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 このトピックの情報は、現在のブランチの Configuration Manager 用のコンソール内の更新プログラムをインストールする前にデータベース アップグレードのテストを実行するのに役立ちます。 ただし、データベースが未確認である場合や、Configuration Manager で明示的にサポートされていないカスタマイズで変更されている場合を除き、アップグレードのテストは必須の手順あるいは推奨される手順ではなくなりました。
 
@@ -45,21 +45,21 @@ ms.locfileid: "32339309"
 更新プログラムのインストールが失敗した場合に、サイトを回復する必要はありません。 代わりに、コンソール内から更新プログラムのインストールを再試行できます。
 
 ##  <a name="run-the-test-upgrade"></a>アップグレードのテストを実行する    
-1.  Configuration Manager セットアップと、更新する予定のバージョンを実行するサイトの **CD.Latest** フォルダーにあるソース ファイルを使用します。  
+1. Configuration Manager セットアップと、更新する予定のバージョンを実行するサイトの **CD.Latest** フォルダーにあるソース ファイルを使用します。  
 
-2.  データベース アップグレードのテストを実行するために使用する SQL Server インスタンスの場所に **CD.Latest** フォルダーをコピーします。
+2. データベース アップグレードのテストを実行するために使用する SQL Server インスタンスの場所に **CD.Latest** フォルダーをコピーします。
 
-3.  アップグレードをテストするサイト データベースのバックアップを作成します。 次に、Configuration Manager サイトをホストしていない SQL Server のインスタンスにそのデータベースのコピーを復元します。 SQL Server インスタンスは、サイト データベースと同じエディションの SQL Server を使用する必要があります。  
+3. アップグレードをテストするサイト データベースのバックアップを作成します。 次に、Configuration Manager サイトをホストしていない SQL Server のインスタンスにそのデータベースのコピーを復元します。 SQL Server インスタンスは、サイト データベースと同じエディションの SQL Server を使用する必要があります。  
 
-4.  データベースのコピーを復元したら、更新するバージョンのソース ファイルを含む CD.Latest フォルダーから**セットアップ**を実行します。 セットアップを実行する際は、 **/TESTDBUPGRADE** コマンド ライン オプションを使います。 データベースのコピーをホストする SQL Server インスタンスが既定のインスタンスでない場合は、コマンドライン引数を指定して、サイト データベースのコピーをホストするインスタンスを識別します。   
+4. データベースのコピーを復元したら、更新するバージョンのソース ファイルを含む CD.Latest フォルダーから**セットアップ**を実行します。 セットアップを実行する際は、 **/TESTDBUPGRADE** コマンド ライン オプションを使います。 データベースのコピーをホストする SQL Server インスタンスが既定のインスタンスでない場合は、コマンドライン引数を指定して、サイト データベースのコピーをホストするインスタンスを識別します。   
 
-  たとえば、データベース名が *SMS_ABC* のサイト データベースがあるとします。 このサイト データベースのコピーを、インスタンス名が *DBTest* の SQL Server のサポートされているインスタンスに復元します。 このサイト データベースのコピーのアップグレードをテストするには、**Setup.exe /TESTDBUPGRADE DBtest\CM_ABC** というコマンド ラインを使用します。  
+   たとえば、データベース名が *SMS_ABC* のサイト データベースがあるとします。 このサイト データベースのコピーを、インスタンス名が *DBTest* の SQL Server のサポートされているインスタンスに復元します。 サイト データベースのこのコピーのアップグレードをテストするには、次のコマンド ラインを使用します。**Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**。  
 
-  Setup.exe は、System Center Configuration Manager のソース メディアの **SMSSETUP\BIN\X64** にあります。  
+   Setup.exe は、System Center Configuration Manager のソース メディアの **SMSSETUP\BIN\X64** にあります。  
 
-5.  アップグレード テストを実行する SQL Server インスタンスで、システム ドライブのルート内の *ConfigMgrSetup.log* を確認し、進行状況と成功状態を監視します。  
+5. アップグレード テストを実行する SQL Server インスタンスで、システム ドライブのルート内の *ConfigMgrSetup.log* を確認し、進行状況と成功状態を監視します。  
 
-     アップグレード テストに失敗した場合は、サイト データベースのアップグレード失敗に関する問題をすべて修正します。 次に、サイト データベースの新しいバックアップを作成し、データベースの新しいコピーのアップグレードをテストします。  
+    アップグレード テストに失敗した場合は、サイト データベースのアップグレード失敗に関する問題をすべて修正します。 次に、サイト データベースの新しいバックアップを作成し、データベースの新しいコピーのアップグレードをテストします。  
 
 
 

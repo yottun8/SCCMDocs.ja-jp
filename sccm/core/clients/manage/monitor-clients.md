@@ -10,16 +10,16 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 976aeaacfadfa7d2f189f20ab001486d486b764e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c88907b82e0066024128985e2d31522a2ea897ee
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335883"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416777"
 ---
 # <a name="how-to-monitor-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアントを監視する方法
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 
  System Center Configuration Manager クライアント アプリケーションがサイト内の Windows コンピューターとデバイスにインストールされたら、それらのヘルスとアクティビティを Configuration Manager コンソールで監視できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "32335883"
 
      Windows 7 を実行するコンピューターでは、クライアント チェックは、スケジュールされたタスクとして実行されます。 それより後のオペレーティング システムの場合、クライアント チェックは、Windows のメンテナンス期間中に自動的に実行されます。  
 
-     ビジネスにとって重要なサーバーなどの特定のコンピューターに対して修復を実行しないように構成することもできます。 また、評価する追加項目がある場合は、Configuration Manager コンプライアンス設定を使用して、組織内のコンピューターの全体的な正常性、アクティビティ、コンプライアンスを監視する総合的なソリューションを設定することもできます。 コンプライアンス設定の詳細については、「[System Center Configuration Manager におけるコンプライアンス設定の計画と構成](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)」を参照してください。  
+     ビジネスにとって重要なサーバーなどの特定のコンピューターに対して修復を実行しないように構成することもできます。 また、評価する追加項目がある場合は、Configuration Manager コンプライアンス設定を使用して、組織内のコンピューターの全体的な正常性、アクティビティ、コンプライアンスを監視する総合的なソリューションを設定することもできます。 コンプライアンス設定の詳細については、「 [System Center Configuration Manager におけるコンプライアンス設定の計画と構成](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)」を参照してください。  
 
 ##  <a name="bkmk_indStatus"></a> 各クライアントのステータスの監視  
 
@@ -62,15 +62,15 @@ ms.locfileid: "32335883"
 
 ##  <a name="bkmk_allStatus"></a> すべてのクライアントのステータスの監視  
 
-1.  Configuration Manager コンソールで、**[監視]** > **[クライアントのステータス]** の順にクリックします。 コンソールのこのページでは、サイト全体でのクライアントのアクティビティとクライアント チェックの全体的な統計情報を確認できます。  別のコレクションを選択して、情報のスコープを変更することもできます。  
+1. Configuration Manager コンソールで、**[監視]** > **[クライアントのステータス]** の順にクリックします。 コンソールのこのページでは、サイト全体でのクライアントのアクティビティとクライアント チェックの全体的な統計情報を確認できます。  別のコレクションを選択して、情報のスコープを変更することもできます。  
 
-2.  報告された統計情報の詳細にドリル ダウンするには、報告された情報 (**クライアント チェックに合格したアクティブなクライアント、または結果なしなど**) の名前をクリックして、各クライアントに関する情報を確認します。  
+2. 報告された統計情報の詳細にドリル ダウンするには、報告された情報 (**クライアント チェックに合格したアクティブなクライアント、または結果なしなど**) の名前をクリックして、各クライアントに関する情報を確認します。  
 
-3.  **[クライアント アクティビティ]** をクリックすると、Configuration Manager サイトのクライアント アクティビティを示すグラフが表示されます。  
+3. **[クライアント アクティビティ]** をクリックすると、Configuration Manager サイトのクライアント アクティビティを示すグラフが表示されます。  
 
-4.  **[クライアント チェック]** をクリックすると、Configuration Manager サイトのクライアント チェックの状態を示すグラフが表示されます。  
+4. **[クライアント チェック]** をクリックすると、Configuration Manager サイトのクライアント チェックの状態を示すグラフが表示されます。  
 
- クライアント チェックの結果またはクライアント アクティビティがコレクション内の指定した割合のクライアントより少なくなった場合、または、指定した割合のクライアントで修復が失敗した場合に通知するアラートを構成できます。 クライアント ステータスの構成方法については、「[System Center Configuration Manager でクライアント ステータスを構成する方法](../../../core/clients/deploy/configure-client-status.md)」を参照してください。  
+   クライアント チェックの結果またはクライアント アクティビティがコレクション内の指定した割合のクライアントより少なくなった場合、または、指定した割合のクライアントで修復が失敗した場合に通知するアラートを構成できます。 クライアント ステータスの構成方法については、「[System Center Configuration Manager でクライアント ステータスを構成する方法](../../../core/clients/deploy/configure-client-status.md)」を参照してください。  
 
 ##  <a name="BKMK_ClientHealth"></a> クライアント チェックで実行される確認と修復  
  次の確認と修復をクライアント チェックで実行できます。  
@@ -103,8 +103,8 @@ ms.locfileid: "32335883"
 |Configuration Manager リモート コントロール サービスのスタートアップの種類が自動であるか手動であるかの確認|サービスのスタートアップの種類の自動へのリセット|詳細情報なし|  
 |Configuration Manager リモート コントロール サービスが実行されているかどうかの確認|リモート コントロール サービスの起動|詳細情報なし|  
 |クライアント WMI プロバイダーが正常であるかどうかの確認|Windows Management Instrumentation サービスの再起動|このクライアント チェックの修復は、Windows Server 2003 以前のバージョンまたは Windows XP (64 ビット) 以前のバージョンを実行するコンピューターでのみ実行されます。|  
-|ウェイクアップ プロキシ サービス (ConfigMgr Wake-up Proxy) が実行されているかどうかの確認|ConfigMgr Wakeup Proxy サービスの起動|**[電源管理]** が次の場合にのみ、このクライアント チェックが行われます。**[ウェイクアップ プロキシを有効にする]** のクライアント設定は、サポートされるクライアント オペレーティング システム上で **[はい]** に設定されています。|  
-|ウェイクアップ プロキシ サービス (ConfigMgr Wake-up Proxy) のスタートアップの種類が自動であるかどうかの確認|ConfigMgr Wakeup Proxy サービスのスタートアップの種類の自動へのリセット|**[電源管理]** が次の場合にのみ、このクライアント チェックが行われます。**[ウェイクアップ プロキシを有効にする]** のクライアント設定は、サポートされるクライアント オペレーティング システム上で **[はい]** に設定されています。|  
+|ウェイクアップ プロキシ サービス (ConfigMgr Wake-up Proxy) が実行されているかどうかの確認|ConfigMgr Wakeup Proxy サービスの起動|このクライアント チェックが行われるのは、**[電源管理**:**ウェイクアップ プロキシを有効にする]** のクライアント設定が、サポートされるクライアント オペレーティング システム上で **[はい]** に設定されている場合のみです。|  
+|ウェイクアップ プロキシ サービス (ConfigMgr Wake-up Proxy) のスタートアップの種類が自動であるかどうかの確認|ConfigMgr Wakeup Proxy サービスのスタートアップの種類の自動へのリセット|このクライアント チェックが行われるのは、**[電源管理**:**ウェイクアップ プロキシを有効にする]** のクライアント設定が、サポートされるクライアント オペレーティング システム上で **[はい]** に設定されている場合のみです。|  
 
 ## <a name="client-deployment-log-files"></a>クライアント展開のログ ファイル
 クライアント展開と管理操作で使用するログ ファイルの詳細については、「[System Center Configuration Manager のログ ファイル](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs)を参照してください。

@@ -10,16 +10,16 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 735a8da57c0225aee533568eb997dc82d9816d6b
-ms.sourcegitcommit: db6074317d5c68ebb5fc478be5bceeb441aa0737
+ms.openlocfilehash: 61b51fcf9f624f5c2e21a99add1b55f6d6812c84
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220430"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421367"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-system-center-configuration-manager"></a>System Center Configuration Manager のクライアント インストール パラメーターとプロパティについて
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 CCMSetup.exe コマンドを使用して、Configuration Manager クライアントをインストールします。 コマンド ラインでクライアント インストール パラメーターを指定すると、インストール動作が変更されます。 コマンド ラインでクライアント インストール プロパティを指定すると、インストールされたクライアント エージェントの初期構成が変更されます。
 
@@ -110,8 +110,7 @@ FQDN を使用する場合の例: `ccmsetup.exe /mp:smsmp01.contoso.com`
 このパラメーターでは、クラウド管理ゲートウェイの URL を指定できます。 この URL を使用して、インターネット ベースのデバイスにクライアントをインストールします。 このパラメーターの値を取得するには、次の手順を使用します。
 - クラウド管理ゲートウェイを作成します。
 - アクティブなクライアントで、管理者として Windows PowerShell コマンド プロンプトを開きます。 
-- 
-          `(Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP` コマンドを実行します。
+- `(Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP` コマンドを実行します。
 - **/mp** パラメーターで使用する "https://" プレフィックスを追加します。
 
 クラウド管理ゲートウェイの URL を使用する場合の例: `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
@@ -136,7 +135,7 @@ CCMSetup がサービスとして実行 (既定) されるのを防ぎます。 
 
 CCMSetup がローカル システム アカウントを使用してサービスとして実行されることを指定します。  
 
-例: `ccmsetup.exe /service`  
+例:`ccmsetup.exe /service`  
 
 ### <a name="uninstall"></a>/uninstall
 
@@ -160,17 +159,17 @@ CCMSetup がローカル システム アカウントを使用してサービス
 
  クライアント インストール ファイルが HTTP 接続を介してダウンロードされるときのダウンロードの優先順位を指定します。 使用できる値は次のとおりです。  
 
--   FOREGROUND  
+- FOREGROUND  
 
--   HIGH  
+- HIGH  
 
--   NORMAL  
+- NORMAL  
 
--   LOW  
+- LOW  
 
- 既定値は NORMAL です。  
+  既定値は NORMAL です。  
 
- 例: `ccmsetup.exe /BITSPriority:HIGH`  
+  例: `ccmsetup.exe /BITSPriority:HIGH`  
 
 ### <a name="downloadtimeoutltminutes"></a>/downloadtimeout:&lt;分\>
 
@@ -206,7 +205,7 @@ CCMSetup がインストール ファイルのダウンロードを試行して�
 
 例: `CCMSetup.exe /config:&lt;Configuration File Name.txt\>`  
 
-正しいファイル形式を提供するには、サイト サーバーの &lt;Configuration Manager ディレクトリ\>\\bin\\&lt;プラットフォーム\> フォルダーにある mobileclienttemplate.tcf ファイルを使用します。 このファイルには、セクションに関するコメントと、その使用方法に関する情報も含まれています。 **Install=INSTALL=ALL**というテキストに続く [Client Install] セクションに、クライアント インストールのプロパティを指定します。  
+正しいファイル形式を提供するには、サイト サーバーの &lt;Configuration Manager ディレクトリ\>\\bin\\&lt;プラットフォーム\> フォルダーにある mobileclienttemplate.tcf ファイルを使用します。 このファイルには、セクションに関するコメントと、その使用方法に関する情報も含まれています。 次のテキストに続く [Client Install] セクションに、クライアント インストールのプロパティを指定します。**Install=INSTALL=ALL**。  
 
 [Client Install] セクション エントリの例: `Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
@@ -284,12 +283,11 @@ Azure 管理者は、Azure Portal からこのプロパティの値を取得す�
 
 Azure AD テナントの ID を指定します。 このテナントは、クラウド管理用に [Azure サービスを構成する](/sccm/core/servers/deploy/configure/azure-services-wizard)際に Configuration Manager にリンクされます。 このプロパティの値を取得するには、次の手順を使用します。
 - 同じ Azure AD テナントに参加している Windows 10 デバイスで、コマンド プロンプトを開きます。
-- 
-          `dsregcmd.exe /status` コマンドを実行します。
+- `dsregcmd.exe /status` コマンドを実行します。
 - [デバイスの状態] セクションで、**TenantId** の値を見つけます。 たとえば、`TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a` などです。
 
- > [!Note]
- > Azure 管理者は、Azure Portal でこの値を取得することもできます。 詳細については、「[テナント ID を取得する](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id)」を参照してください。
+  > [!Note]
+  > Azure 管理者は、Azure Portal でこの値を取得することもできます。 詳細については、「[テナント ID を取得する](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id)」を参照してください。
 
 例: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -317,7 +315,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 > [!IMPORTANT]  
 >  ユーザーがログオンしている場合でも、コンピューターは警告なしで再起動します。  
 
-例: **CCMSetup.exe  CCMALLOWSILENTREBOOT**  
+例:**CCMSetup.exe CCMALLOWSILENTREBOOT**  
 
 ### <a name="ccmalwaysinf"></a>CCMALWAYSINF
 
@@ -358,10 +356,10 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
  `CCMCERTSEL="SubjectAttr:OU = Computers"` と指定すると、識別名として表される組織単位属性および指定したコンピューターを検索します。  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  [サブジェクト名] ボックスを使用する場合、**Subject:** では大文字と小文字が区別され、**SubjectStr:** では区別されません。  
->   
->  [サブジェクトの別名] ボックスを使用する場合、**Subject:** と **SubjectStr:** では大文字と小文字は区別されません。  
+> 
+>  [サブジェクトの別名] ボックスを使用する場合、<strong>Subject:</strong> と **SubjectStr:** では大文字と小文字は区別されません。  
 
  証明書の選択に使用できる属性の完全な一覧は、「[PKI 証明書の選択条件としてサポートされている属性値](#BKMK_attributevalues)」に記載されています。  
 
@@ -411,8 +409,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 このプロパティでは、クラウド管理ゲートウェイのアドレスを指定できます。 このプロパティの値を取得するには、次の手順を使用します。
 - クラウド管理ゲートウェイを作成します。
 - アクティブなクライアントで、管理者として Windows PowerShell コマンド プロンプトを開きます。 
-- 
-          `(Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP` コマンドを実行します。
+- `(Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP` コマンドを実行します。
 - **CCMHOSTNAME** プロパティで戻り値をそのまま使用します。
 
 例: `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
@@ -464,7 +461,7 @@ Configuration Manager ログ ファイルが最大サイズに達した場合、
 
  このプロパティを TRUE に設定すると、管理ユーザーは、**Configuration Manager** コントロール パネルで割り当て済みサイトを変更できなくなります。  
 
- 例: **CCMSetup.exe DISABLESITEOPT=TRUE**  
+ 例:**CCMSetup.exe DISABLESITEOPT=TRUE**  
 
 ### <a name="disablecacheopt"></a>DISABLECACHEOPT
 
@@ -541,19 +538,19 @@ Configuration Manager クライアント コンピューターによって送信
 
 ［プロパティ］:  
 
--   PERCENTDISKSPACE: フォルダー サイズを合計ディスク領域に対する割合として指定します。 このプロパティを指定する場合は、SMSCACHESIZE プロパティを使用する割合値として指定する必要もあります。  
+-   PERCENTDISKSPACE:フォルダー サイズを合計ディスク領域に対する割合として指定します。 このプロパティを指定する場合は、SMSCACHESIZE プロパティを使用する割合値として指定する必要もあります。  
 
--   PERCENTFREEDISKSPACE: フォルダー サイズをディスク空き領域に対する割合として指定します。 このプロパティを指定する場合は、SMSCACHESIZE プロパティを使用する割合値として指定する必要もあります。 たとえば、ディスクに 10 MB の空き領域があり、SMSCACHESIZE を 50 に指定した場合、フォルダー サイズは 5 MB に設定されます。 このプロパティを PERCENTDISKSPACE プロパティと共に使用することはできません。  
+-   PERCENTFREEDISKSPACE:フォルダー サイズをディスク空き領域に対する割合として指定します。 このプロパティを指定する場合は、SMSCACHESIZE プロパティを使用する割合値として指定する必要もあります。 たとえば、ディスクに 10 MB の空き領域があり、SMSCACHESIZE を 50 に指定した場合、フォルダー サイズは 5 MB に設定されます。 このプロパティを PERCENTDISKSPACE プロパティと共に使用することはできません。  
 
--   MAXDRIVE: 利用できる最も大きいディスクにフォルダーをインストールすることを指定します。 この値は、パスが SMSCACHEDIR プロパティと共に指定されている場合は無視されます。  
+-   MAXDRIVE:利用可能な最大のディスクにフォルダーをインストールすることを指定します。 この値は、パスが SMSCACHEDIR プロパティと共に指定されている場合は無視されます。  
 
--   MAXDRIVESPACE: 空き領域が最も大きいディスク ドライブにフォルダーをインストールするように指定します。 この値は、パスが SMSCACHEDIR プロパティと共に指定されている場合は無視されます。  
+-   MAXDRIVESPACE:最大の空き領域があるディスク ドライブにフォルダーをインストールするように指定します。 この値は、パスが SMSCACHEDIR プロパティと共に指定されている場合は無視されます。  
 
--   NTFSONLY: NTFS ディスク ドライブにのみフォルダーをインストールするように指定します。 この値は、パスが SMSCACHEDIR プロパティと共に指定されている場合は無視されます。  
+-   NTFSONLY:NTFS ディスク ドライブにのみフォルダーをインストールするように指定します。 この値は、パスが SMSCACHEDIR プロパティと共に指定されている場合は無視されます。  
 
--   COMPRESS: フォルダーを圧縮形式で格納するように指定します。  
+-   COMPRESS:フォルダーを圧縮形式で格納するように指定します。  
 
--   FAILIFNOSPACE: フォルダーをインストールするための領域が十分にない場合にクライアント ソフトウェアを削除するように指定します。  
+-   FAILIFNOSPACE:フォルダーをインストールするための領域が十分にない場合は、クライアント ソフトウェアを削除するように指定します。  
 
 例: `CCMSetup.exe SMSCACHEFLAGS=NTFSONLY;COMPRESS`  
 
@@ -579,19 +576,19 @@ Configuration Manager クライアント コンピューターによって送信
 
 Configuration Manager インストーラーで構成設定を確認する場所と順序を指定します。 このプロパティは、各文字が特定の構成ソースを定義する 1 つまたは複数の文字で構成される文字列です。 R、P、M、および U の文字の値を単独で、または組み合わせて使用します。  
 
--   R: レジストリで構成設定を確認します。  
+- R:レジストリで構成設定を確認します。  
 
-   詳細については、[レジストリ内のクライアント インストール プロパティの格納に関する情報](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision)を参照してください。  
+  詳細については、[レジストリ内のクライアント インストール プロパティの格納に関する情報](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision)を参照してください。  
 
--   P: コマンド プロンプトで指定したインストール プロパティで構成設定を確認します。  
+- P:コマンド プロンプトで指定したインストール プロパティで構成設定を確認します。  
 
--   M: 古いクライアントを Configuration Manager クライアント ソフトウェアでアップグレードするときに既存の設定を確認します。  
+- M:古いクライアントを構成マネージャー クライアント ソフトウェアでアップグレードするときに既存の設定を確認します。  
 
--   U: インストールしたクライアントを新しいバージョンにアップグレードします (さらに、割り当てられたサイト コードを使用します)。  
+- U:インストールしたクライアントを新しいバージョンにアップグレードします (そして割り当てられたサイト コードを使用します)。  
 
- 既定では、クライアント インストールでは `PU` が使用され、最初にインストール プロパティ、次に既存の設定がチェックされます。  
+  既定では、クライアント インストールでは `PU` が使用され、最初にインストール プロパティ、次に既存の設定がチェックされます。  
 
- 例: `CCMSetup.exe SMSCONFIGSOURCE=RP`  
+  例: `CCMSetup.exe SMSCONFIGSOURCE=RP`  
 
 ### <a name="smsdirectorylookup"></a>SMSDIRECTORYLOOKUP
 
@@ -601,9 +598,9 @@ Configuration Manager インストーラーで構成設定を確認する場所�
 
  このプロパティでは 2 つの異なるモードを構成できます。  
 
--   NOWINS: この値はこのプロパティでは最も安全な設定であり、クライアントが WINS で管理ポイントを探すのを防ぎます。 この設定を使用する場合は、クライアントには、Active Directory ドメイン サービスといったイントラネット上、または DNS 公開の使用などで管理ポイントを探す代替の方法が用意されている必要があります。  
+-   NOWINS:この値はこのプロパティでは最も安全な設定であり、クライアントが WINS で管理ポイントを探すのを防ぎます。 この設定を使用する場合は、クライアントには、Active Directory ドメイン サービスといったイントラネット上、または DNS 公開の使用などで管理ポイントを探す代替の方法が用意されている必要があります。  
 
--   WINSSECURE (既定): このモードでは、HTTP 通信を使用するクライアントは、WIN を使用して管理ポイントを探すことができます。 しかし、クライアントは管理ポイントへ接続する前に信頼されたルート キーを持っている必要があります。 詳細については、「[信頼されたルート キーの計画](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)」を参照してください。  
+-   WINSSECURE (既定値):このモードでは、HTTP 接続を使用するクライアントは、WIN を使用して管理ポイントを探せます。 しかし、クライアントは管理ポイントへ接続する前に信頼されたルート キーを持っている必要があります。 詳細については、「[信頼されたルート キーの計画](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)」を参照してください。  
 
 
  例: `CCMSetup.exe SMSDIRECTORYLOOKUP=NOWINS`  
@@ -630,7 +627,7 @@ Configuration Manager クライアントが使用する最初の管理ポイン�
 
  Configuration Manager の信頼されたルート キーを再インストールするために使用します。 信頼されたルート キーを含むファイルの完全なパスとファイル名を指定します。 このプロパティは、HTTP および HTTPS クライアント接続を使用するクライアントに適用されます。 詳細については、「[信頼されたルート キーの計画](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)」を参照してください。  
 
- 例: CCMSetup.exe SMSROOTKEYPATH=&lt;完全なパスとファイル名\>`  
+ 例:'CCMSetup.exe SMSROOTKEYPATH=&lt;完全なパスとファイル名\>`  
 
 ### <a name="smssigncert"></a>SMSSIGNCERT
 
@@ -638,7 +635,7 @@ Configuration Manager クライアントが使用する最初の管理ポイン�
 
  この証明書は、 **SMS** 証明書ストアに保存されています。サブジェクト名は **Site Server** 、フレンドリ名は **Site Server Signing Certificate**です。  
 
- 例: **CCMSetup.exe /UsePKICert SMSSIGNCERT=&lt;完全なパスとファイル名\>**  
+ 例:**CCMSetup.exe /UsePKICert SMSSIGNCERT=&lt;完全なパスとファイル名\>**  
 
 ### <a name="smssitecode"></a>SMSSITECODE
 

@@ -10,16 +10,16 @@ ms.assetid: dec1e0d7-5864-43a8-9f56-413923b3914e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7cdcb6306632df79fe69edd1d526afaf2321bad0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0bb7ccfb2aa516a5deb712bd2ecd82f36c4f282c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343849"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416726"
 ---
 # <a name="boundary-groups-for-system-center-configuration-manager-version-1511-1602-and-1606"></a>System Center Configuration Manager バージョン 1511、1602、1606 の境界グループ
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 <!-- This topic drops from TOC with the release of version 1706 -->
 
 このトピックの情報は、System Center Configuration Manager のバージョン 1511、1602、1606 での境界グループの使用に関するものです。
@@ -109,15 +109,15 @@ ms.locfileid: "32343849"
 
 #### <a name="to-set-up-a-fallback-site-for-automatic-site-assignment"></a>サイトの自動割り当てでのフォールバック サイトを設定するには  
 
-1.  Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** >  **[サイト]** を選択します。  
+1. Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** >  **[サイト]** を選択します。  
 
-2.  **[ホーム]** タブの **[サイト]** グループで、**[階層設定]** を選択します。  
+2. **[ホーム]** タブの **[サイト]** グループで、**[階層設定]** を選択します。  
 
-3.  **[全般]** タブで、**[フォールバック サイトを使用する]** のチェック ボックスをオンにして、**[フォールバック サイト]** のドロップダウン リストからサイトを選択します。  
+3. **[全般]** タブで、**[フォールバック サイトを使用する]** のチェック ボックスをオンにして、**[フォールバック サイト]** のドロップダウン リストからサイトを選択します。  
 
-4.  **[OK]** をクリックして構成を保存します。  
+4. **[OK]** をクリックして構成を保存します。  
 
- 次のセクションでは、境界グループの構成に関する追加情報について説明します。  
+   次のセクションでは、境界グループの構成に関する追加情報について説明します。  
 
 ###  <a name="BKMK_BoundarySiteAssignment"></a> サイトの割り当てについて  
  各境界グループごとに、クライアント用の割り当てられたサイトを設定できます。  

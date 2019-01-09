@@ -10,16 +10,16 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4331ec4120141ab9aa20301b9a99c3c6ebeef568
-ms.sourcegitcommit: 0305e710f634529793ae73e5aac24168ee4fe02f
+ms.openlocfilehash: 35e1675e74b0df768d143441fa4cbb2dda47affc
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042747"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418229"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>適切な Configuration Manager のブランチを選択する
 
-*適用対象: System Center Configuration Manager (Current Branch)、(Long-Term Servicing Branch)、(Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)、(Long-Term Servicing Branch)、(Technical Preview)*
 
 
 System Center Configuration Manager で使用できるブランチは、Current Branch、Long-Term Servicing Branch、Technical Preview Branch の 3 つです。 このトピックは、適切なブランチを選択するのに役立ちます。
@@ -43,11 +43,11 @@ Microsoft は、System Center Configuration Manager の Current Branch に対し
 
 この基準メディアを使用して、Current Branch の評価版の新しいサイトをインストールすることもできます。 評価版にはライセンスは不要です。 評価版は 180 日間使用できます。 Current Branch の製品版へのアップグレードをサポートします。 評価版のみをインストールするには、[TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) から入手します。
 
->  [!NOTE]  
+> [!NOTE]
 > 新しい Configuration Manager 階層のサイトをインストールするには、基準メディアを使用します。 基準バージョンをインストール済みの場合は、コンソール内の更新プログラムを使用して、サイトを新しいバージョンに更新します。  
->  
+> 
 > コンソール内の更新プログラムを使用して更新されたサイトは、基準メディアを使用してインストールされた新しいサイトと同一になります。
->
+> 
 > 詳細については、「[System Center Configuration Manager の更新プログラム](/sccm/core/servers/manage/updates)」を参照してください。  
 
 

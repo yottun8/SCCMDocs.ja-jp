@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 1791217e22e2bcc6d5fd2603abee3aaced816afe
-ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
+ms.openlocfilehash: 6434ba443cb884c7fbb5d727c5db3c80d2d88aad
+ms.sourcegitcommit: 12b71da551350c99c5916df3629e33e31040db15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223740"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53530933"
 ---
 # <a name="co-management-for-windows-10-devices"></a>Windows 10 デバイスの共同管理    
 
@@ -58,9 +58,9 @@ ms.locfileid: "51223740"
 
  共同管理を達成するには、主に 2 つのパスがあります。  
 
-   - Configuration Manager が共同管理をプロビジョニングする: 構成マネージャー クライアントを既にインストールしてある Azure AD 参加済み Windows 10 デバイスを Intune に登録します。  
+   - Configuration Manager が共同管理をプロビジョニングする:構成マネージャー クライアントを既にインストールしてある Azure AD 参加済み Windows 10 デバイスを Intune に登録します。  
 
-   - Intune でプロビジョニングする: Intune に既に登録されているデバイスの場合、構成マネージャー クライアントをインストールして共同管理状態にします。 
+   - Intune でプロビジョニングする:Intune に既に登録されているデバイスの場合、構成マネージャー クライアントをインストールして共同管理状態にします。 
 
 
 ### <a name="configuration-manager"></a>Configuration Manager
@@ -72,21 +72,21 @@ ms.locfileid: "51223740"
 
  - Windows 10 デバイスは、Azure AD に参加している必要があります。 次のいずれかの種類です。  
 
-     - [Hybrid Azure AD 参加済み](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup): デバイスがオンプレミスの Active Directory に参加し、Azure Active Directory に登録されている場合。
+     - [Hybrid Azure AD 参加済み](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan): デバイスがオンプレミスの Active Directory に参加し、Azure Active Directory に登録されている場合。
 
-     - Azure AD のみに参加。 (このタイプは "クラウド ドメイン参加済み" とも呼ばれます)<!--SCCMDocs issue 605-->
+     - [Azure AD のみに参加](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)。 (このタイプは "クラウド ドメイン参加済み" とも呼ばれます)<!--SCCMDocs issue 605-->
 
  - [Windows 10 の自動登録の有効化](https://docs.microsoft.com/intune/windows-enroll)。  
 
 
 ### <a name="intune"></a>Intune
 
- - [Intune サブスクリプションのセットアップ方法](/sccm/mdm/deploy-use/configure-intune-subscription)または [Intune のセットアップ](/intune/setup-steps)  
+- [Intune サブスクリプションのセットアップ方法](/sccm/mdm/deploy-use/configure-intune-subscription)または [Intune のセットアップ](/intune/setup-steps)  
 
- - [ハイブリッド MDM から Intune スタンドアロンへの移行を開始する](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)  
+- [ハイブリッド MDM から Intune スタンドアロンへの移行を開始する](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)  
 
- > [!Note]  
- > ハイブリッド MDM 環境 (Intune と Configuration Manager が統合された環境) では、共同管理を有効にできません。 ただし、Intune スタンドアロンへのユーザー移行を開始し、関連 Windows 10 デバイスの共同管理を有効にできます。 Intune スタンドアロンへの移行については、[ハイブリッド MDM から Intune スタンドアロンへの移行の開始](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)に関する記事をご覧ください。  
+  > [!Note]  
+  > ハイブリッド MDM 環境 (Intune と Configuration Manager が統合された環境) では、共同管理を有効にできません。 ただし、Intune スタンドアロンへのユーザー移行を開始し、関連 Windows 10 デバイスの共同管理を有効にできます。 Intune スタンドアロンへの移行については、[ハイブリッド MDM から Intune スタンドアロンへの移行の開始](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)に関する記事をご覧ください。  
 
 
 ### <a name="enable-co-management"></a>共同管理を有効にする 

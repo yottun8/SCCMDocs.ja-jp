@@ -10,30 +10,30 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9fce0c0a8602b51c3d05e5181023a0f9d05ab0ca
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9fa55c29d6f67132b4d98fd12d8e249093009c67
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335145"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419548"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager で Windows コンピューター用クライアントをアップグレードする方法
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 クライアント インストール方法または Configuration Manager の自動クライアント アップグレード機能を使用して、Windows コンピューター上のクライアントをアップグレードできます。 次のクライアント インストール方法は、Windows コンピューター上のクライアント ソフトウェアをアップグレードする有効な方法です。  
 
--   グループ ポリシーによるインストール  
+- グループ ポリシーによるインストール  
 
--   ログオン スクリプトによるインストール  
+- ログオン スクリプトによるインストール  
 
--   手動インストール  
+- 手動インストール  
 
--   アップグレード インストール  
+- アップグレード インストール  
 
- クライアント インストール方法を使用してクライアントをアップグレードする場合は、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」で、その方法について詳細を確認してください。
+  クライアント インストール方法を使用してクライアントをアップグレードする場合は、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)」で、その方法について詳細を確認してください。
 
- バージョン 1610 以降では、除外グループを指定して、クライアントをアップグレード対象から除外することができます。 詳細については、「[Windows コンピューター用クライアントをアップグレードする方法](exclude-clients-windows.md)」を参照してください。  
+  バージョン 1610 以降では、除外グループを指定して、クライアントをアップグレード対象から除外することができます。 詳細については、「[Windows コンピューター用クライアントをアップグレードする方法](exclude-clients-windows.md)」を参照してください。  
 
 
 > [!TIP]  

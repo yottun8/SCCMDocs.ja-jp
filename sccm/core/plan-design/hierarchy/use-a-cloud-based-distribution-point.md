@@ -10,16 +10,16 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4673da59da7fede2f425948472c31a620d13a258
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 00c04190b954a7b19d4bea0e43b2dc6ecf9d8388
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456296"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414992"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>Configuration Manager でクラウド配布ポイントを使用する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 クラウド配布ポイントとは、Microsoft Azure でプラットフォームとしてのサービス (PaaS) としてホストされている Configuration Manager 配布ポイントです。 このサービスは次のシナリオをサポートします。  
 
@@ -102,9 +102,9 @@ Configuration Manager では、既存の従来のクラウド配布ポイント�
 
 クラウド配布ポイントを作成する場所は、クライアントがアクセスする必要があるコンテンツに依存します。 バージョン 1806 以降では、3 種類のクラウド配布ポイントがあります。  
 
-- 従来のサービス展開: この種類は、プライマリ サイトでのみ作成します。  
+- 従来のサービス展開: この型はプライマリ サイトでのみ作成します。  
 
-- Azure Resource Manager の展開: この種類は、プライマリ サイトまたは中央管理サイトで作成します。  
+- Azure Resource Manager の展開: この種類はプライマリ サイトまたは中央管理サイトで作成します。  
 
 - クラウド管理ゲートウェイも、クライアントにコンテンツを提供することができます。 この機能により、Azure VM の必要な証明書とコストが削減されます。 詳細については、「[クラウド管理ゲートウェイの計画](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)」を参照してください。<!--1358651-->  
 
@@ -161,10 +161,10 @@ Azure の特定のリージョンにクラウド配布ポイントをインス�
 - クラウド配付ポイントは、[クライアントとデバイスのサポートされるオペレーティング](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)に関するページに記載されているすべての Windows バージョンをサポートします。  
 
 - 管理者は、次の種類のサポートされているソフトウェアのコンテンツを配布します。  
-    - アプリケーション
-    - パッケージ
-    - OS アップグレード パッケージ
-    - サード パーティ製ソフトウェアの更新プログラム  
+  - アプリケーション
+  - パッケージ
+  - OS アップグレード パッケージ
+  - サード パーティ製ソフトウェアの更新プログラム  
 
     > [!Important]  
     > Configuration Manager コンソールでは Microsoft ソフトウェア更新プログラムのクラウド配付ポイントへの配布はブロックされませんが、クライアントが使用していないコンテンツを格納するために Azure のコストを支払っていることになります。 インターネットベースのクライアントは常に、Microsoft Update クラウド サービスから Microsoft ソフトウェア更新プログラムのコンテンツを受け取ります。 Microsoft ソフトウェア更新プログラムをクラウド配布ポイントに配布しないでください。    
@@ -203,11 +203,11 @@ Configuration Manager には、コストの管理とデータ アクセスの監
 - クライアント ダウンロードのしきい値に達するか、月ごとの制限を超えたときに、アラートを送信するように Configuration Manager を構成します。 詳細については、[データ転送のしきい値アラート](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure#bkmk_alerts)に関するセクションを参照してください。   
 
 - クライアントによるクラウド配布ポイントからのデータ転送の数を減らすには、次のピア キャッシュ テクノロジのいずれかを使用します。  
-    - Configuration Manager のピア キャッシュ
-    - Windows BranchCache
-    - Windows 10 配信の最適化  
+  - Configuration Manager のピア キャッシュ
+  - Windows BranchCache
+  - Windows 10 配信の最適化  
 
-   詳しくは、「[コンテンツ管理の基本的な概念](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)」を参照してください。   
+    詳しくは、「[コンテンツ管理の基本的な概念](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)」を参照してください。   
 
 
 ### <a name="components"></a>コンポーネント
@@ -276,7 +276,7 @@ Configuration Manager には、コストの管理とデータ アクセスの監
 
 2. 管理ポイントは、クライアントの場所の要求に対して、クラウド配布ポイントの**サービスの FQDN** で応答します。 このプロパティは、サーバー認証証明書の共通名と同じです。  
 
-    自分のドメイン名 (WallaceFalls.contoso.com など) を使用している場合、クライアントはこの FQDN の解決をまず試みます。 クライアントが Azure サービス名を解決するには、ドメインのインターネット向け DNS に CNAME エイリアスを含める必要があります (例: WallaceFalls.cloudapp.net)。  
+    自分のドメイン名 (WallaceFalls.contoso.com など) を使用している場合、クライアントはこの FQDN の解決をまず試みます。 クライアントで Azure サービス名を解決するには、ご利用のドメインのインターネット向け DNS に CNAME エイリアスを含める必要があります (例: WallaceFalls.cloudapp.net)。  
 
 3. クライアントは次に Azure サービス名 (WallaceFalls.cloudapp.net など) を有効な IP アドレスに解決します。 この応答は、Azure の DNS で処理される必要があります。  
 
@@ -319,7 +319,7 @@ Azure ストレージ サービスは、1 つのファイルに対して 1 秒�
 
 - バージョン 1710 以降、**バージョン 3** の証明書のサポート。 詳細については、「[CNG certificates overview](/sccm/core/plan-design/network/cng-certificates-overview)」(CNG 証明書の概要) を参照してください。  
 
-- バージョン 1802 以降、ポリシー: **[システム暗号化: 暗号化、ハッシュ、署名のための FIPS 準拠アルゴリズムを使う]** を使用して Windows を構成した場合。  
+- バージョン 1802 以降で、ポリシー: **[システム暗号化: 暗号化、ハッシュ、署名のための FIPS 準拠アルゴリズムを使う]** を使用して Windows を構成した場合。  
 
 - バージョン 1802 より、**TLS 1.2** のサポート。 詳細については、「[暗号化コントロールのテクニカル リファレンス](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities)」を参照してください。  
 

@@ -10,57 +10,57 @@ ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a6c989b1eabe47f3360ceec660d5eba32811d60
-ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
+ms.openlocfilehash: dcf12016206fe0c4296d08ad8404b163607313e1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49943293"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417168"
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>コマンド ラインを使用して System Center Configuration Manager サイトをインストールする
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
  さまざまなサイトのインストールで、コマンド プロンプトから System Center Configuration Manager セットアップを実行できます。
 
 ## <a name="supported-tasks-for-command-line-installations"></a>コマンド ラインでのインストールでサポートされているタスク
  この方法でセットアップを実行する場合、次のサイト インストール タスクとサイト メンテナンス タスクがサポートされます。
 
--   **コマンド プロンプトから中央管理サイトまたはプライマリ サイトをインストールする**  
+- **コマンド プロンプトから中央管理サイトまたはプライマリ サイトをインストールする**  
   [セットアップのコマンド ライン オプション](../../../../core/servers/deploy/install/command-line-options-for-setup.md)を表示する
 
--  **中央管理サイトまたはプライマリ サイトで使用する言語を変更する**  
-    サイトにインストールされている言語 (モバイル デバイスの言語を含む) をコマンド プロンプトから変更するには、次の操作を実行する必要があります。  
+- **中央管理サイトまたはプライマリ サイトで使用する言語を変更する**  
+   サイトにインストールされている言語 (モバイル デバイスの言語を含む) をコマンド プロンプトから変更するには、次の操作を実行する必要があります。  
 
-     -   サイト サーバーの **&lt;ConfigMgrInstallationPath\>\Bin\X64** からセットアップを実行します
-     -   **/MANAGELANGS** コマンド ライン オプションを使用します
-     -   追加または削除する言語を指定した言語スクリプト ファイルを指定します  
+  - サイト サーバーの **&lt;ConfigMgrInstallationPath\>\Bin\X64** からセットアップを実行します
+  - **/MANAGELANGS** コマンド ライン オプションを使用します
+  - 追加または削除する言語を指定した言語スクリプト ファイルを指定します  
 
     たとえば、次のコマンド構文を使用します: **setupwpf.exe/MANAGELANGS &lt;言語スクリプト ファイル\>**  
 
     言語スクリプト ファイルを作成するには、「[Command line options to manage languages](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Lang)」(言語を管理するためのコマンド ライン オプション) に記載されている情報を参考にしてください。  
 
--  **サイトの無人インストールまたはサイトの回復にインストール スクリプト ファイルを使用する**  
-    インストール スクリプトを使用してコマンド プロンプトからセットアップを実行し、サイトの無人インストールを実行できます。 また、この方法で、サイトを回復することもできます。    
+- **サイトの無人インストールまたはサイトの回復にインストール スクリプト ファイルを使用する**  
+   インストール スクリプトを使用してコマンド プロンプトからセットアップを実行し、サイトの無人インストールを実行できます。 また、この方法で、サイトを回復することもできます。    
 
-    セットアップでスクリプトを使用するには:  
+   セットアップでスクリプトを使用するには:  
 
-    -   コマンド ライン オプション **/SCRIPT** を使用してセットアップを実行し、スクリプト ファイルを指定します。  
+  - コマンド ライン オプション **/SCRIPT** を使用してセットアップを実行し、スクリプト ファイルを指定します。  
 
-    -   スクリプト ファイルは、必要なキーと値を使用して構成する必要があります。  
+  - スクリプト ファイルは、必要なキーと値を使用して構成する必要があります。  
 
     中央管理サイトまたはプライマリ サイトの無人インストールの場合は、次のセクションがスクリプト ファイルに含まれている必要があります。  
 
-    -   Identification    
-    -   Options    
-    -   SQLConfigOptions    
-      -   HierarchyOptions    
-    -   CloudConnectorOptions   
+  - Identification    
+  - Options    
+  - SQLConfigOptions    
+    -   HierarchyOptions    
+  - CloudConnectorOptions   
 
     サイトを回復するには、スクリプト ファイルの次のセクションも含める必要があります。  
 
-    -   Identification  
-    -   復元
+  - Identification  
+  - 復元
 
 詳細については、「[Configuration Manager のサイトの無人回復](/sccm/protect/understand/unattended-recovery)」を参照してください。  
 

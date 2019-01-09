@@ -10,28 +10,28 @@ ms.assetid: d827cf91-b18f-4ee7-b538-24ba6f003ab9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 68370a09dda49e16edd05fb545922f2e182f79a5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2fe6f2490b1ec527b7e6e09e9ce476e66342d7c9
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331908"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421163"
 ---
 # <a name="how-to-monitor-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>System Center Configuration Manager で Linux および UNIX サーバーのクライアントを監視する方法
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 Windows ベースのクライアントからの情報を表示する場合と同じ方法を使用して、Linux および UNIX サーバーからの情報を System Center Configuration Manager コンソールで表示できます。  
 
  表示できる情報は次のとおりです。  
 
--   クライアントからの状態の詳細 (Configuration Manager コンソール ダッシュボード)  
+- クライアントからの状態の詳細 (Configuration Manager コンソール ダッシュボード)  
 
--   クライアントについての詳細 (既定の Configuration Manager レポート)  
+- クライアントについての詳細 (既定の Configuration Manager レポート)  
 
--   インベントリの詳細 (リソース エクスプローラー)  
+- インベントリの詳細 (リソース エクスプローラー)  
 
- 以下のセクションでは、リソース エクスプローラーとレポートからこれらの詳細情報を取得する方法について説明します。  
+  以下のセクションでは、リソース エクスプローラーとレポートからこれらの詳細情報を取得する方法について説明します。  
 
 ##  <a name="BKMK_UseResourceExpforLnU"></a> リソース エクスプローラーを使用して Linux および UNIX サーバーのインベントリを表示する  
 

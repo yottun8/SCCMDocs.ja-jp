@@ -10,16 +10,16 @@ ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4e4d380319704eda608930ac938232513800b81a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9fac81f08f4750ab6cc133ddc3a3bb9f73780fcd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331643"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422540"
 ---
 # <a name="configuring-remote-control-in-system-center-configuration-manager"></a>System Center Configuration Manager でのリモート コントロールの構成
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
  この手順では、リモート コントロールの既定のクライアント設定を構成する方法について説明します。 これらの設定は、階層内のすべてのコンピューターに適用されます。 これらの設定を一部のコンピューターのみに適用する必要がある場合は、カスタム クライアント デバイス設定を、これらのコンピューターを含むコレクションに割り当てます。 詳細については、「[System Center Configuration Manager でクライアント設定を構成する方法](../../../../core/clients/deploy/configure-client-settings.md)」をご覧ください。 
 
@@ -27,17 +27,17 @@ ms.locfileid: "32331643"
 
 #### <a name="to-enable-remote-control-and-configure-client-settings"></a>リモート コントロールを有効にしてクライアント設定を構成するには  
 
-1.  Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** > **[既定のクライアント設定]** の順に選択します。  
+1. Configuration Manager コンソールで、**[管理]** > **[クライアント設定]** > **[既定のクライアント設定]** の順に選択します。  
 
-4.  **[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** を選択します。  
+2. **[ホーム]** タブの **[プロパティ]** グループで、**[プロパティ]** を選択します。  
 
-5.  **[既定]** ダイアログ ボックスで、**[リモート ツール]** を選択します。  
+3. **[既定]** ダイアログ ボックスで、**[リモート ツール]** を選択します。  
 
-6.  リモート コントロール、リモート アシスタンス、およびリモート デスクトップのクライアント設定を構成します。 構成できるリモート ツールのクライアント設定の一覧については、「[リモート ツール](../../../../core/clients/deploy/about-client-settings.md#remote-tools)」を参照してください。  
+4. リモート コントロール、リモート アシスタンス、およびリモート デスクトップのクライアント設定を構成します。 構成できるリモート ツールのクライアント設定の一覧については、「[リモート ツール](../../../../core/clients/deploy/about-client-settings.md#remote-tools)」を参照してください。  
 
-    表示される会社の名前を変更する、 **ConfigMgr リモート コントロール**  ダイアログ ボックスの値を構成する **ソフトウェア センターで表示される組織名** で、 **コンピューター エージェント** クライアント設定します。  
+   表示される会社の名前を変更する、 **ConfigMgr リモート コントロール**  ダイアログ ボックスの値を構成する **ソフトウェア センターで表示される組織名** で、 **コンピューター エージェント** クライアント設定します。  
 
- クライアント コンピューターは、次にクライアント ポリシーをダウンロードするときに、これらの設定で構成されます。 1 つのクライアントのポリシーの取得を開始する場合は、「 [System Center Configuration Manager でクライアントを管理する方法](../../../../core/clients/manage/manage-clients.md)」を参照してください。  
+   クライアント コンピューターは、次にクライアント ポリシーをダウンロードするときに、これらの設定で構成されます。 1 つのクライアントのポリシーの取得を開始する場合は、「 [System Center Configuration Manager でクライアントを管理する方法](../../../../core/clients/manage/manage-clients.md)」を参照してください。  
 
 #### <a name="enable-keyboard-translation"></a>キーボード変換を有効にする
 

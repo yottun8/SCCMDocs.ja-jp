@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: cb9b19c95caaf914fa1cbf040258c30ede2dc54a
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: f53dbbf341d3c6474c1c5dd5066b8d1f2a0fdc63
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229315"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424240"
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1610 の新機能
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager の現在のブランチの更新プログラム 1610 は、以前にインストールされておりバージョン 1511、1602、または 1606 を実行するサイトを対象とする、コンソール内の更新プログラムとして使用可能です。
 
@@ -36,7 +36,7 @@ System Center Configuration Manager の現在のブランチの更新プログ�
 
 
 ## <a name="in-console-monitoring-of-update-installation-status"></a>更新プログラムのインストール状態をコンソール内で監視する  
-バージョン 1610 以降、更新プログラム パックをインストールし、コンソールでインストールを監視すると、**[Post Installation (インストール後)]** という新しいフェーズが表示されるようになります。 このフェーズには、主要なサービスの再起動、レプリケーション監視の初期化など、タスクの状態が含まれます (このフェーズを使用するには、サイトをバージョン 1610 に更新する必要があります)。更新プログラムのインストール状態の詳細については、「[Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates)」(コンソール内の更新プログラムのインストール) を参照してください。
+バージョン 1610 以降、更新プログラム パックをインストールし、コンソールでインストールを監視すると、**[インストール後]** という新しいフェーズが表示されるようになります。 このフェーズには、主要なサービスの再起動、レプリケーション監視の初期化など、タスクの状態が含まれます (このフェーズを使用するには、サイトをバージョン 1610 に更新する必要があります)。更新プログラムのインストール状態の詳細については、「[Install in-console updates](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates)」(コンソール内の更新プログラムのインストール) を参照してください。
 
 
 ## <a name="exclude-clients-from-automatic-upgrade"></a>自動アップグレードからクライアントを除外する
@@ -131,8 +131,8 @@ Configuration Manager コンソールの構成項目を使用して、Intune に
 場合によっては、必要なアプリケーション展開またはソフトウェア更新プログラムをインストールできるように、設定期限よりも長い時間をユーザーに与える必要があります。 これは、たとえばコンピューターが長期間オフになっていて、多数のアプリケーションや更新プログラムの展開をインストールする必要がある場合に必要になります。 たとえば、エンド ユーザーが休暇から戻って来たばかりの場合、期限切れのアプリケーションの展開がインストールされるまで、長時間待たなければならない場合があります。 この問題を解決するため、Configuration Manager クライアント設定をコレクションに展開することで、適用猶予期間を定義できるようになりました。 
 
 猶予期間を設定するには、次の操作を実行します。
-1.      クライアント設定の **[コンピューター エージェント]** ページで、新しいプロパティ **[展開期限後の実施の猶予期間 (時間)]** の値を **1** ～ **120** 時間で設定します。
-2.      新しい必須アプリケーションの展開または既存の展開のプロパティの **[スケジュール]** ページで、**[Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings (ユーザー設定に従い、クライアント設定で定義された猶予期間が終了するまでこの展開の実施を延期する)]** チェック ボックスをオンにします。 このチェック ボックスがオンになっていて、クライアント設定も展開するデバイスを対象としているすべての展開が、適用猶予期間を使用します。
+1. クライアント設定の **[コンピューター エージェント]** ページで、新しいプロパティ **[展開期限後の実施の猶予期間 (時間)]** の値を **1** ～ **120** 時間で設定します。
+2. 新しい必須アプリケーションの展開または既存の展開のプロパティの **[スケジュール]** ページで、**[Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings (ユーザー設定に従い、クライアント設定で定義された猶予期間が終了するまでこの展開の実施を延期する)]** チェック ボックスをオンにします。 このチェック ボックスがオンになっていて、クライアント設定も展開するデバイスを対象としているすべての展開が、適用猶予期間を使用します。
 
 適用猶予期間を構成し、チェック ボックスをオンにすると、アプリケーションのインストール期限になると、ユーザーがその猶予期間までに設定した最初の非ビジネス ウィンドウで、アプリケーションがインストールされます。 ただし、ユーザーはソフトウェア センターを開いて、いつでもアプリケーションをインストールすることもできます。 猶予期間が切れると、適用は期限切れの展開に対する通常の動作に戻ります。 ソフトウェア更新プログラムの展開ウィザード、自動展開規則の作成ウィザード、およびプロパティ ページに、同様のオプションが追加されています。
 
@@ -191,7 +191,7 @@ Configuration Manager コンソールで Office 365 クライアント管理ダ�
 ## <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>BIOS からUEFI への変換を管理するためのタスク シーケンス手順
 **コンピューターの再起動**のステップで、UEFI に移行するためにハード ドライブに FAT32 パーティションを準備するため、新しい変数 TSUEFIDrive を使用して、オペレーティング システムの展開タスク シーケンスをカスタマイズできるようになりました。 次の手順では、タスク シーケンスのステップを作成して BIOS からUEFI への変換のためにハード ドライブを準備する方法の例を示します。 詳細については、「[BIOS から UEFI への変換を管理するためのタスク シーケンス手順](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion)」を参照してください。
 
-##  <a name="improvements-to-the-task-sequence-step-prepare-configmgr-client-for-capture"></a>タスク シーケンス ステップの向上: ConfigMgr クライアントのキャプチャの準備  
+##  <a name="improvements-to-the-task-sequence-step-prepare-configmgr-client-for-capture"></a>タスク シーケンス ステップの向上:Prepare ConfigMgr Client for Capture  
 ConfigMgr クライアントの準備手順で、キー情報だけではなく、Configuration Manager クライアントが完全に削除されるようになりました。 タスク シーケンスでキャプチャしたオペレーティング システム イメージを展開すると、毎回新しい Configuration Manager クライアントがインストールされます。 詳細については、「[Task sequence steps](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture)」(タスク シーケンスのステップ) を参照してください。
 
 

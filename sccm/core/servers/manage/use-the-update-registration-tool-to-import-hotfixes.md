@@ -10,16 +10,16 @@ ms.assetid: 8cc13635-85d6-4b07-a3ec-c42188bc5c74
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 94f0da3fa9f4aa43ce4818b7b6edf752df53d66a
-ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
+ms.openlocfilehash: 70322e01e33cdf857768db812450f27a0f17939e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49943276"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418239"
 ---
 # <a name="use-the-update-registration-tool-to-import-hotfixes-to-system-center-configuration-manager"></a>修正プログラムを System Center Configuration Manager にインポートするには、更新登録ツールを使用します。
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 一部の Configuration Manager の更新プログラムは、Microsoft クラウド サービスからは使用できず、帯域外でのみ取得されます。 たとえば、特定の問題に対処する限定リリース修正プログラムです。   
 帯域外のリリースをインストールする必要があり、更新プログラムまたは修正プログラムのファイル名の末尾に拡張子 **update.exe** が付いている場合、**更新登録ツール**を使用して手動で更新プログラムを Configuration Manager コンソールにインポートします。 このツールを使用すると、更新プログラム パッケージを抽出し、サイト サーバーに転送して、Configuration Manager コンソールに更新プログラムを登録できます。  
@@ -43,26 +43,26 @@ ms.locfileid: "49943276"
 
 -   ツールを実行するために使用するアカウントには、サービス接続ポイントをホストするコンピューター (ツールが実行される) の**ローカル管理者**のアクセス許可が必要です。  
 
--   ツールの実行に使用するアカウントには、サービス接続ポイントをホストするコンピューターの **&lt;ConfigMgr インストール ディレクトリ\>EasySetupPayload\offline** フォルダーへの**書き込み**アクセス許可が必要です。  
+-   ツールの実行に使用するアカウントには、サービス接続ポイントをホストするコンピューターの **&lt;ConfigMgr Installation directory\>\EasySetupPayload\offline** フォルダーへの**書き込み**アクセス許可が必要です。  
 
 ### <a name="to-use-the-update-registration-tool"></a>更新登録ツールを使用するには  
 
-1.  サービス接続ポイントをホストするコンピューターで、以下を実行します。  
+1. サービス接続ポイントをホストするコンピューターで、以下を実行します。  
 
-    -   管理者特権でコマンド プロンプトを開き、**&lt;製品\>-&lt;製品バージョン\>-&lt;サポート技術情報の記事 ID\>-ConfigMgr.Update.exe** を格納する場所にディレクトリを変更します。  
+   -   管理者特権でコマンド プロンプトを開き、**&lt;製品\>-&lt;製品バージョン\>-&lt;サポート技術情報の記事 ID\>-ConfigMgr.Update.exe** を格納する場所にディレクトリを変更します。  
 
-2.  更新登録ツールを起動するには、次のコマンドを実行します。  
+2. 更新登録ツールを起動するには、次のコマンドを実行します。  
 
-    -   **&lt;製品\>-&lt;製品バージョン\>-&lt;サポート技術情報の記事 ID\>-ConfigMgr.Update.exe**  
+   -   **&lt;製品\>-&lt;製品バージョン\>-&lt;サポート技術情報の記事 ID\>-ConfigMgr.Update.exe**  
 
-    修正プログラムが登録されると、24 時間以内にコンソールに新しい更新プログラムとして表示されます。  次のようにして、プロセスを高速化できます。
+   修正プログラムが登録されると、24 時間以内にコンソールに新しい更新プログラムとして表示されます。  次のようにして、プロセスを高速化できます。
 
-    - Configuration Manager コンソールを開き、**[管理]** > **[更新とサービス]** の順に移動して、**[更新プログラムの確認]** をクリックします  (1702 より前のバージョンでは、[更新とサービス] は、**[管理]** > **[クラウド サービス]** にありました)。 
+   - Configuration Manager コンソールを開き、**[管理]** > **[更新とサービス]** の順に移動して、**[更新プログラムの確認]** をクリックします  (1702 より前のバージョンでは、[更新とサービス] は、**[管理]** > **[クラウド サービス]** にありました)。 
 
-    更新登録ツールは、ローカル コンピューター上の .log ファイルにその操作を記録します。 ログ ファイルは、修正プログラムの .exe ファイルと同じ名前で、**%SystemRoot%Temp** フォルダーに保存されます。  
+   更新登録ツールは、ローカル コンピューター上の .log ファイルにその操作を記録します。 ログ ファイルは、修正プログラムの .exe ファイルと同じ名前で、**%SystemRoot%Temp** フォルダーに保存されます。  
 
-     更新プログラムが登録されると、更新登録ツールを閉じることができます。  
+    更新プログラムが登録されると、更新登録ツールを閉じることができます。  
 
-3.  Configuration Manager コンソールを開き、**[管理]** > **[更新とサービス]** の順に移動します。 インポートされた修正プログラムは、インストールできるようになりました  (1702 より前のバージョンでは、[更新とサービス] は、**[管理]** > **[クラウド サービス]** にありました)。
+3. Configuration Manager コンソールを開き、**[管理]** > **[更新とサービス]** の順に移動します。 インポートされた修正プログラムは、インストールできるようになりました  (1702 より前のバージョンでは、[更新とサービス] は、**[管理]** > **[クラウド サービス]** にありました)。
 
- 更新プログラムのインストールの詳細については、「[Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)」(System Center Configuration Manager の更新プログラムのコンソール内インストール) を参照してください。  
+   更新プログラムのインストールの詳細については、「[Install in-console updates for System Center Configuration Manager](../../../core/servers/manage/install-in-console-updates.md)」(System Center Configuration Manager の更新プログラムのコンソール内インストール) を参照してください。  

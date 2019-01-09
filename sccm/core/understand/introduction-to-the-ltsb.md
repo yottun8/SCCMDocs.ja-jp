@@ -10,16 +10,16 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 20151eeac8a0a430b38ce9537748e0fef019df64
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 446a5fa47cdf55060b960d8846c913cbafc78da8
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338076"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415859"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager の Long-Term Servicing Branch の概要
 
-*適用対象: System Center Configuration Manager (Long-Term Servicing Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Long-Term Servicing Branch)*
 
 System Center Configuration Manager の Long-Term Servicing Branch (LTSB) は、Configuration Manager のブランチの 1 つで、すべてのユーザーが使用できるインストール オプションとして設計されています。 ただし、Configuration Manager のソフトウェア アシュアランス (SA) または同等のサブスクリプションが期限切れになったユーザーにとっては、この LTSB が唯一の選択肢になります。
 
@@ -49,17 +49,17 @@ Configuration Manager の Current Branch では、LTSB の場合には使用で�
 ## <a name="find-documentation-for-the-ltsb"></a>LTSB のドキュメントを検索する
 LTSB は、Current Branch バージョン 1606 に基づいています。 製品ドキュメントについては、[Current Branch の ドキュメント](https://docs.microsoft.com/sccm/)に関するページをご覧ください。LTSB 固有の注意事項と制限事項があります。 次のオンライン トピックで、注意事項と制限事項を確認できます。
 
--     [Long-Term Servicing Branch の概要](introduction-to-the-ltsb.md): (このトピック)
--     [Long-Term Servicing Branch のインストール](install-the-ltsb.md)
--     [Long-Term Servicing Branch の Current Branch へのアップグレード](convert-to-current-branch.md)
--     [Long-Term Servicing Branch でサポートされている構成](supported-configurations-for-ltsb.md)
--   [Configuration Manager の Long-Term Servicing Branch の管理](manage-the-ltsb.md)
+- [Long-Term Servicing Branch の概要](introduction-to-the-ltsb.md): (このトピック)
+- [Long-Term Servicing Branch のインストール](install-the-ltsb.md)
+- [Long-Term Servicing Branch の Current Branch へのアップグレード](convert-to-current-branch.md)
+- [Long-Term Servicing Branch でサポートされている構成](supported-configurations-for-ltsb.md)
+- [Configuration Manager の Long-Term Servicing Branch の管理](manage-the-ltsb.md)
 
 LTSB について Current Branch ドキュメントを参照する場合、バージョン 1606 についての説明は LTSB にも当てはまります。 バージョン 1610 以降で導入された機能や説明は LTSB ではサポートされません。
 
 
 ## <a name="licensing-overview-for-the-ltsb"></a>LTSB のライセンスの概要   
-2016 年 10 月 1 日の時点で System Center Configuration Manager ライセンスに対してソフトウェア アシュアランス (SA) が有効になっているお客様または同等のサブスクリプション権限を持っているお客様には、2016 年 10 月リリースのバージョン 1606 の System Center Configuration Manager を使用する権限があります。 2016 年 10 月 1 日以降、System Center Configuration Manager に対する権限を持つお客様には、インストール時に Current Branch および Long-Term Servicing Branch (LTSB) の 2 つのライセンス オプションが表示されます。
+2016 年 10 月 1 日の時点で System Center Configuration Manager ライセンスに対してソフトウェア アシュアランス (SA) が有効になっているお客様または同等のサブスクリプション権限を持っているお客様には、2016 年 10 月リリースのバージョン 1606 の System Center Configuration Manager を使用する権限があります。 2016 年 10 月 1 日以降、System Center Configuration Manager バージョン 1606 に対する権限を持つお客様には、インストール時に次の 2 つのライセンス オプション、Current Branch と Long-Term Servicing Branch (LTSB) が表示されます。
 
 System Center Configuration Manager に対して永続的な権利を持つお客様または、10 月 1 日の後に SA またはサブスクリプションが期限切れになったお客様は、該当する時点で最新のバージョンである System Center Configuration Manager LTSB をインストールできます。
 

@@ -10,16 +10,16 @@ ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 4aed4ecda35fded9314ae54b6601deb6f8e07197
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 129223a111085854ede038575653655ad13884dd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343890"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423815"
 ---
 # <a name="monitor-applications-from-the-system-center-configuration-manager-console"></a>System Center Configuration Manager コンソールからのアプリケーションの監視
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 
 System Center Configuration Managerでは、ソフトウェア更新プログラム、コンプライアンス設定、アプリケーション、タスク シーケンス、パッケージ、プログラムなど、すべてのソフトウェアの展開を監視できます。 展開の監視には、Configuration Manager コンソールの **[監視]** ワークスペースまたはレポートを使用できます。  
@@ -41,17 +41,17 @@ System Center Configuration Managerでは、ソフトウェア更新プログラ
 
 コンプライアンス対応状態のサブカテゴリ、階層内のユーザーとデバイスの数などの、各コンプライアンス対応状態の詳細情報を表示できます。 たとえば、**[エラー]** コンプライアンス対応状態には、次のサブカテゴリがあります。  
 
--   エラー評価要件  
+- エラー評価要件  
 
--   コンテンツ関連のエラー  
+- コンテンツ関連のエラー  
 
--   インストール エラー  
+- インストール エラー  
 
- アプリケーションの展開に複数のコンプライアンス対応状態が該当するときは、最も低い対応状態を示す集合状態が表示されます。 次に例を示します。  
+  アプリケーションの展開に複数のコンプライアンス対応状態が該当するときは、最も低い対応状態を示す集合状態が表示されます。 次に例を示します。  
 
-    -   ユーザーが 2 つのデバイスにサインインしており、アプリケーションのインストールが一方のデバイスでは成功したがもう一方のデバイスでは失敗した場合、このユーザーのアプリケーションの総合的な展開状態は **[エラー]** と表示されます。  
+  -   ユーザーが 2 つのデバイスにサインインしており、アプリケーションのインストールが一方のデバイスでは成功したがもう一方のデバイスでは失敗した場合、このユーザーのアプリケーションの総合的な展開状態は **[エラー]** と表示されます。  
 
-    -   アプリケーションが 1 つのコンピューターにサインインするすべてのユーザーに対して展開された場合は、そのコンピューターについて複数の展開結果が報告されます。 いずれかの展開が失敗すると、このコンピューターの総合的な展開状態は **[エラー]** と表示されます。  
+  -   アプリケーションが 1 つのコンピューターにサインインするすべてのユーザーに対して展開された場合は、そのコンピューターについて複数の展開結果が報告されます。 いずれかの展開が失敗すると、このコンピューターの総合的な展開状態は **[エラー]** と表示されます。  
 
 パッケージ展開とプログラム展開の展開状態は統合されません。  
 

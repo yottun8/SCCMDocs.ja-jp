@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: b9602d6641e1bb28a3af7c24c64073ba019e0f3e
-ms.sourcegitcommit: 6126dfdf5c879db7d12c3eec019a88fa44521361
+ms.openlocfilehash: a71aa0834a241332d3390e1d888d99b6e3f986f7
+ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52830508"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53444571"
 ---
 <!-- 
 - Feature 1357546
@@ -89,7 +89,7 @@ ms.locfileid: "52830508"
 ## <a name="troubleshooting-articles"></a>トラブルシューティングの記事
 Configuration Manager のコンポーネントと機能のトラブルシューティングに役立つガイド付きチュートリアル。
 
-- [PXE ブートの問題のトラブルシューティング](https://support.microsoft.com/help/10082)
+- [PXE ブートの問題のトラブルシューティング](https://support.microsoft.com/help/4468612)
 - [ソフトウェア更新プログラムの同期の問題のトラブルシューティング](https://support.microsoft.com/help/10059)
 - [コンテンツ配布の理解およびトラブルシューティング](https://support.microsoft.com/help/4000401)
 - [ビジネス向け Microsoft ストアの統合の理解およびトラブルシューティング](https://support.microsoft.com/help/4010214)
@@ -101,12 +101,12 @@ Configuration Manager のコンポーネントと機能のトラブルシュー�
 ## <a name="new-and-updated-support-articles"></a>新規および更新のサポートに関する記事
 2018 年 11 月の新規または更新のサポートに関する記事。
 
-- [KB 4468362: Configuration Manager で Windows 言語パックをアプリケーションとして展開する方法](https://support.microsoft.com/help/4468362)
-- [KB 4469580: 自己署名証明書が作成されていないため、ConfigMgr PXE が機能しない](https://support.microsoft.com/help/4469580/)
-- [KB 4471003: 別のネットワークにある PXE サーバーから起動する方法](https://support.microsoft.com/help/4471003)
-- [KB 4462978: System Center Configuration Manager Current Branch バージョン 1806 の更新プログラムのロールアップ](https://support.microsoft.com/help/4462978)
-- [KB 4471061: クライアント コンピューターは、イメージング中に不明なコンピューター オブジェクトの Configuration Manager GUID を "盗む" ことができる](https://support.microsoft.com/help/4471061)
-- [KB 4471115: Windows PE でタスク シーケンス ウィザードが実行されていると、Configuration Manager で動的メディアが管理ポイントの場所を取得できない](https://support.microsoft.com/help/4471115)
+- [KB 4468362:Configuration Manager で Windows 言語パックをアプリケーションとして展開する方法](https://support.microsoft.com/help/4468362)
+- [KB 4469580:自己署名証明書が作成されていないため、ConfigMgr PXE が機能しない](https://support.microsoft.com/help/4469580/)
+- [KB 4471003:別のネットワークにある PXE サーバーから起動する方法](https://support.microsoft.com/help/4471003)
+- [KB 4462978:System Center Configuration Manager Current Branch バージョン 1806 の更新プログラムのロールアップ](https://support.microsoft.com/help/4462978)
+- [KB 4471061:クライアント コンピューターは、イメージング中に不明なコンピューター オブジェクトの Configuration Manager GUID を "盗む" ことができる](https://support.microsoft.com/help/4471061)
+- [KB 4471115:Windows PE でタスク シーケンス ウィザードが実行されていると、Configuration Manager で動的メディアが管理ポイントの場所を取得できない](https://support.microsoft.com/help/4471115)
 
 
 新規 Configuration Manager サポート記事の Atom または RSS 通知をサブスクライブするには、「[サポート コンテンツの更新情報](https://support.microsoft.com/help/4089498/)」を参照して、**[System Center Configuration Manager]** を選択します。  

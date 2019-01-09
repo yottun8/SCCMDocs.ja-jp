@@ -10,16 +10,16 @@ ms.assetid: a3ef6bdc-a204-4c4c-a02f-2bd03f35183e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 74ffd06f8b9786d627dc7fd9cecb15215228313d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 79d7488e0554a36eb274bf4ef76cff92b48a71ba
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341153"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418443"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1709 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1709 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 このバージョンの Technical Preview をインストールする前に、「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。     
 
@@ -30,7 +30,7 @@ ms.locfileid: "32341153"
     Workaround details.
 -->
 **この Technical Preview の既知の問題:**
--   **サイト サーバーがパッシブ モードの場合、プレビュー バージョン 1709 への更新に失敗します**。 プレビュー バージョン 1706、1707、または 1708 を実行し、[プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)の場合、プレビュー サイトをバージョン 1709 に正常に更新するには、パッシブ モードのサイト サーバーをアンインストールする必要があります。 パッシブ モードのサイト サーバーは、サイトでバージョン 1709 が実行された後に再インストールできます。
+- **サイト サーバーがパッシブ モードの場合、プレビュー バージョン 1709 への更新に失敗します**。 プレビュー バージョン 1706、1707、または 1708 を実行し、[プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)の場合、プレビュー サイトをバージョン 1709 に正常に更新するには、パッシブ モードのサイト サーバーをアンインストールする必要があります。 パッシブ モードのサイト サーバーは、サイトでバージョン 1709 が実行された後に再インストールできます。
 
   パッシブ モードのサイト サーバーをアンインストールするには、次の手順を実行します。
   1. コンソールで **[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
@@ -42,8 +42,7 @@ ms.locfileid: "32341153"
 **このバージョンでお試しいただける新機能を次に示します。**  
 
 ## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Configuration Manager コンソールの VPN プロファイル エクスペリエンスの向上
-<!-- 1313282 -->
-このリリースでは、選択したプラットフォームに適した設定が表示されるように、VPN プロファイル ウィザードとプロパティ ページが更新されました。 具体的には次のとおりです。
+<!-- 1313282 --> このリリースでは、選択したプラットフォームに適した設定が表示されるように、VPN プロファイル ウィザードとプロパティ ページが更新されました。 具体的には次のとおりです。
 
 - 各プラットフォームには独自のワークフローがあります。つまり、新しい VPN プロファイルには、プラットフォームによってサポートされる設定のみが含まれます。
 - **[全般]** ページの後に、**[サポートされているプラットフォーム]** ページが表示されるようになりました。  プロパティの値を設定する前に、プラットフォームを選ぶことができます。
@@ -77,8 +76,7 @@ ms.locfileid: "32341153"
 異なるプラットフォームを選ぶと、選んだプラットフォームに関連する設定のみが表示されることに注意してください。
 
 ## <a name="co-management-for-windows-10-devices"></a>Windows 10 デバイスの共同管理    
-<!-- 1350871 -->
-多くのユーザーは、モバイル デバイスを管理する場合と同じ低コストで簡単なクラウド ベースのソリューションを使って、Windows 10 デバイスを管理することを望んでいます。 ただし、従来の管理から最新の管理への移行は困難な場合があります。 Windows 10 バージョン 1607 (Anniversary Update とも呼ばれます) より、Windows 10 デバイスをオンプレミスの Active Directory (AD) とクラウドベースの Azure AD (ハイブリッド Azure AD) に同時に結合できるようになりました。 共同管理ではこの機能強化を活用し、Configuration Manager と Intune の両方を使用して複数の Windows 10 デバイスを同時に管理できます。 これは、従来の管理から最新の管理への橋渡しとなるソリューションであり、段階的なアプローチを使って移行する方向を提示します。 
+<!-- 1350871 --> 多くのユーザーは、モバイル デバイスを管理する場合と同じ低コストで簡単なクラウド ベースのソリューションを使って、Windows 10 デバイスを管理することを望んでいます。 ただし、従来の管理から最新の管理への移行は困難な場合があります。 Windows 10 バージョン 1607 (Anniversary Update とも呼ばれます) より、Windows 10 デバイスをオンプレミスの Active Directory (AD) とクラウドベースの Azure AD (ハイブリッド Azure AD) に同時に結合できるようになりました。 共同管理ではこの機能強化を活用し、Configuration Manager と Intune の両方を使用して複数の Windows 10 デバイスを同時に管理できます。 これは、従来の管理から最新の管理への橋渡しとなるソリューションであり、段階的なアプローチを使って移行する方向を提示します。 
 
 ### <a name="prerequisites"></a>[前提条件]
 共同管理を有効にする前に、次の前提条件が満たされている必要があります。 一般的な前提条件のほか、既存の Configuration Manager クライアントとクライアント以外のデバイスで異なる前提条件があります。
@@ -161,11 +159,11 @@ ccmsetup.msi CCMSETUPCMD="/mp:&#60;*クラウド管理ゲートウェイ相互�
    >**クラウド管理ゲートウェイ相互認証エンドポイントの URL** の値には、**vProxy_Roles** SQL ビューの **MutualAuthPath** の値を使います。
 
 - **管理ポイント (MP) の FQDN**: sccmmp.corp.contoso.com    
-- **サイト コード**: PS1    
-- **Azure AD テナント ID**: 72F988BF-86F1-41AF-91AB-2D7CD011XXXX    
+- **サイトコード**:PS1    
+- **Azure AD テナント ID**:72F988BF-86F1-41AF-91AB-2D7CD011XXXX    
 - **Azure AD テナント名**: contoso    
 - **Azure AD クライアント アプリ ID**: bef323b3-042f-41a6-907a-f9faf0d1XXXX     
-- **AAD リソース ID URI**: ConfigMgrServer    
+- **AAD リソース ID URI**:ConfigMgrServer    
 
   > [!Note]    
   > **AAD リソース ID URI** の値には、**vSMS_AAD_Application_Ex** SQL ビューの **IdentifierUri** の値を使います。
@@ -203,8 +201,8 @@ Intune に既に登録されている Windows 10 デバイスの場合は、Intu
 2. [ホーム] タブの [管理] グループで、 **[Configure co-management]\(共同管理の構成\)** を選んで共同管理オンボード ウィザードを開きます。    
 3. [サブスクリプション] ページで **[サインイン]** をクリックして Intune テナントにサインインし、**[次へ]** をクリックします。   
 4. [ステージング] ページで、次の設定を構成した後、**[次へ]** をクリックします。
-    - **[Pilot group]\(パイロット グループ\)**: パイロット グループには、選択した 1 つまたは複数のコレクションが含まれます。 共同管理の段階的なロールアウトの一部としてこのグループを使います。 小規模なテスト コレクションで開始し、共同管理をロールアウトするユーザーとデバイスを増やしながら、パイロット グループにコレクションを追加します。 パイロット グループのコレクションは共同管理のプロパティからいつでも変更できます。
-    - **[Production]\(運用\)**: この設定を選ぶと、サポートされているすべての Windows 10 デバイスで共同管理が有効になります。 1 つまたは複数のコレクションで **[Exclusion group]\(除外グループ\)** を構成します。 このグループのいずれかのコレクションのメンバーであるデバイスは、共同管理から除外されます。 
+    - **パイロット グループ**:パイロット グループには、選択した 1 つまたは複数のコレクションが含まれます。 共同管理の段階的なロールアウトの一部としてこのグループを使います。 小規模なテスト コレクションで開始し、共同管理をロールアウトするユーザーとデバイスを増やしながら、パイロット グループにコレクションを追加します。 パイロット グループのコレクションは共同管理のプロパティからいつでも変更できます。
+    - **Production**:この設定を選ぶと、サポートされているすべての Windows 10 デバイスで共同管理が有効になります。 1 つまたは複数のコレクションで **[Exclusion group]\(除外グループ\)** を構成します。 このグループのいずれかのコレクションのメンバーであるデバイスは、共同管理から除外されます。 
 5. [Enablement]\(有効化\) ページで、**[パイロット]** または **[すべて]** ([ステージング] ページで構成した設定に応じて) を選んで Intune での自動登録を有効にし、**[次へ]** をクリックします。 **[パイロット]** を選ぶと、パイロット グループのメンバーである Configuration manager クライアントのみが Intune に自動的に登録されます。 これにより、クライアントのサブセットで共同管理を有効にして初期テストを行ってから、段階的アプローチでロールアウトできます。 
 6. [Workloads]\(ワークロード\) ページで、Configuration Manager のワークロードを Intune による管理に切り替えるかどうかを選び、**[次へ]** をクリックします。 スライダーを使って、ワークロードを ([ステージング] ページで構成した設定に応じて) パイロット グループまたはすべての Windows 10 クライアントに切り替えるかどうかを選びます。 
 7. 共同管理を有効にするには、ウィザードを終了します。  

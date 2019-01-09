@@ -10,16 +10,16 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d32a2997da45f02dfd4d2abaf3bf292295f88224
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b42012bdd6eb0456d25f9970ed2cf18f881a1c14
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335577"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424818"
 ---
 # <a name="revise-and-supersede-applications-in-system-center-configuration-manager"></a>System Center Configuration Manager でアプリケーションを修正して置き換える
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 このトピックでは、System Center Configuration Manager アプリケーションのバージョンを操作する方法と、アプリケーションを新しいバージョンで置き換える方法について説明します。  
 
@@ -76,13 +76,13 @@ ms.locfileid: "32335577"
 
  置き換えの関係を作成することによって、依存アプリケーションを新しいバージョンに更新できます。  
 
-1.  新しい依存アプリケーションと元の依存アプリケーションの両方がマスターのアプリケーションの同じ依存関係グループに含まれていることを確認します。  
+1. 新しい依存アプリケーションと元の依存アプリケーションの両方がマスターのアプリケーションの同じ依存関係グループに含まれていることを確認します。  
 
-2.  元の依存アプリケーションを新しい依存アプリケーションに置き換える、置き換えの関係を作成します。  
+2. 元の依存アプリケーションを新しい依存アプリケーションに置き換える、置き換えの関係を作成します。  
 
- マスター アプリケーションの新規インストール中に、この新しい依存アプリケーションがインストールされます。 マスター アプリケーションの既存のインストールは、新しい依存アプリケーションで更新されます。  
+   マスター アプリケーションの新規インストール中に、この新しい依存アプリケーションがインストールされます。 マスター アプリケーションの既存のインストールは、新しい依存アプリケーションで更新されます。  
 
- 最終的に、マスター アプリケーションのすべての展開で、新しい依存アプリケーションが使用されることになります。  
+   最終的に、マスター アプリケーションのすべての展開で、新しい依存アプリケーションが使用されることになります。  
 
 ### <a name="further-considerations"></a>その他の注意事項  
 

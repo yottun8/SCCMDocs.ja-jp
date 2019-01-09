@@ -11,16 +11,16 @@ author: aczechowski
 robots: noindex,nofollow
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 8a805d6b7075d61b0e7669200670ac8434eccdf5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d58a780ecf6232bd8ef6e7f0d9851ead34486177
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336563"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414754"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1511 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1511 で使用できる機能について説明します。 このバージョンは、新しい Technical Preview サイトをインストールまたは以前のバージョンの Technical Preview からアップグレードするために使用できる Technical Preview の基準インストールです。   このバージョンの Technical Preview をインストールする前に、説明のトピック「[System Center Configuration Manager の Technical Preview](/sccm/core/get-started/technical-preview)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。  
 
@@ -59,15 +59,15 @@ Microsoft から、Windows Server Updates Services (WSUS) に新しい Office 36
 ### <a name="try-it-out"></a>試してみましょう。  
  次のタスクを実行してから、このトピックの先頭付近にあるフィードバック情報を使用してその動作を報告してください。  
 
-1.  Office 365 の更新プログラムを Configuration Manager サイト サーバーと同期して、Configuration Manager コンソールから表示できます。  
+1. Office 365 の更新プログラムを Configuration Manager サイト サーバーと同期して、Configuration Manager コンソールから表示できます。  
 
-2.  Office 365 の更新プログラムを承認して、正常に展開できます。  
+2. Office 365 の更新プログラムを承認して、正常に展開できます。  
 
-3.  クライアントに Office 365 の更新プログラムを正常にダウンロードできます。  
+3. クライアントに Office 365 の更新プログラムを正常にダウンロードできます。  
 
-4.  コンソール内の監視機能またはレポートを使用して、Office 365 の更新プログラムのコンプライアンス対応を確認できます。  
+4. コンソール内の監視機能またはレポートを使用して、Office 365 の更新プログラムのコンプライアンス対応を確認できます。  
 
- 詳しい手順については、「 [System Center Configuration Manager Technical Preview による Office 365 クライアント更新プログラムの管理](https://technet.microsoft.com/library/mt628083.aspx)」をご覧ください。  
+   詳しい手順については、「 [System Center Configuration Manager Technical Preview による Office 365 クライアント更新プログラムの管理](https://technet.microsoft.com/library/mt628083.aspx)」をご覧ください。  
 
 ##  <a name="BKMK_AlwasyOn"></a> 高可用性データベース用の SQL Server AlwaysOn のサポート  
  Configuration Manager は、SQL Server AlwaysOn 可用性グループを使用したサイト データベースのホスティングをサポートします。  新しいサイトをインストールするときに、SQL Server の通常のインスタンスではなく、可用性グループを使用するようにセットアップに指示できます。  
@@ -131,7 +131,7 @@ SQL Server 可用性グループを使用するサイトをインストールす
 
 1.  Configuration Manager セットアップから要求されたら、以下を代入します。  
 
-    -   **SQL Server 名**: 可用性グループを作成するときに構成したエンドポイントの仮想名を入力します。 仮想名は、**&lt;endpointServer\>.fabrikam.com** のように完全な DNS 名にする必要があります。  
+    -   **SQL Server 名**:可用性グループを作成するときに構成したエンドポイントの仮想名を入力します。 仮想名は、**&lt;endpointServer\>.fabrikam.com** のように完全な DNS 名にする必要があります。  
 
     -   **インスタンス**: この値は空白のままにする必要があります。 この構成内にはインスタンスが存在しません。  
 

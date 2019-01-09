@@ -10,16 +10,16 @@ ms.assetid: 58a0d2ae-de76-401f-b854-7a5243949033
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18e50806868955eac807645a5378aea53acdc899
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9e297842a82ac3ae39f4e3a75962aaef115e35a4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348608"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420976"
 ---
 # <a name="use-stand-alone-media-to-deploy-windows-without-using-the-network-in-system-center-configuration-manager"></a>System Center Configuration Manager でのネットワークではなくスタンドアロン メディアを使用した Windows の展開
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager のスタンドアロン メディアには、コンピューターにオペレーティング システムを展開するのに必要なすべてが含まれています。 これには、アプリケーションやドライバーなどを含めてオペレーティング システムをインストールするための、ブート イメージ、オペレーティング システム イメージ、およびタスク シーケンスが含まれます。 スタンドアロン メディアによる展開では、次のような状況でオペレーティング システムを展開できます。  
 
@@ -29,13 +29,13 @@ System Center Configuration Manager のスタンドアロン メディアには�
 
 スタンドアロン メディアは、次のオペレーティング システム展開シナリオで使用できます。  
 
--   [新しいバージョンの Windows で既存のコンピューターを更新する](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+- [新しいバージョンの Windows で既存のコンピューターを更新する](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
--   [新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする](install-new-windows-version-new-computer-bare-metal.md)  
+- [新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [Windows を最新バージョンにアップグレードする](upgrade-windows-to-the-latest-version.md)  
+- [Windows を最新バージョンにアップグレードする](upgrade-windows-to-the-latest-version.md)  
 
- いずれかのオペレーティング システムの展開シナリオのステップを完了させてから、次のセクションを参照して、スタンドアロン メディアを準備および作成します。  
+  いずれかのオペレーティング システムの展開シナリオのステップを完了させてから、次のセクションを参照して、スタンドアロン メディアを準備および作成します。  
 
 ## <a name="task-sequence-actions-not-supported-when-using-stand-alone-media"></a>スタンドアロン メディアを使用する場合にサポートされないタスク シーケンス アクション  
  サポートされているいずれかのオペレーティング システム展開シナリオのステップが完了している場合は、オペレーティング システムを展開またはアップグレードするためのタスク シーケンスが作成され、関連するすべてのコンテンツが配布ポイントに配布されています。 スタンドアロン メディアを使用した場合、タスク シーケンスでは、次のアクションはサポートされません。  
@@ -59,7 +59,7 @@ System Center Configuration Manager のスタンドアロン メディアには�
 >   
 >  **[パッケージのインストール]** ステップを含むスタンドアロン メディアの場合、ソフトウェアの配布エージェントが有効なプライマリ サイトにスタンドアロン メディアを作成するか、または [[Windows と ConfigMgr のセットアップ]](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) ステップの後かつタスク シーケンスの最初の **[パッケージのインストール]** ステップの前に [[コマンド ラインの実行]](../understand/task-sequence-steps.md#BKMK_RunCommandLine) ステップを追加する必要があります。 **[コマンド ラインの実行]** ステップでは、最初の [パッケージのインストール] ステップを実行する前に、ソフトウェアの配布エージェントを有効にする WMIC コマンドを実行します。 **[コマンド ラインの実行]** タスク シーケンス ステップでは、次のコマンド ラインを使用できます。  
 >   
->  **コマンド ライン**: **WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE**  
+>  **コマンド ライン**:**WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE**  
 
 ## <a name="configure-deployment-settings"></a>展開の設定の構成  
  スタンドアロン メディアを使用してオペレーティング システムの展開プロセスを開始する場合、オペレーティング システムをメディアから使用できるように展開を構成する必要があります。 これはソフトウェアの展開ウィザードの **[展開の設定]** ページか展開のプロパティの **[配置の設定]** タブで構成することができます。  **[利用できるようにする項目]** の設定では、次のいずれかを設定します。  

@@ -10,32 +10,32 @@ ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7251ac6bf623236492f0843b8562a06e547c9cb1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d9d9fd940c21e0fc8d20c86c51cb3443f21a9339
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343686"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419450"
 ---
 # <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>System Center Configuration Manager での Linux コンピューターおよび UNIX コンピューターへのクライアント展開の計画
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager クライアントは、Linux または UNIX を実行しているコンピューターにインストールできます。 このクライアントは、ワークグループ コンピューターとして動作するサーバー用に設計され、クライアントは、ログオンしたユーザーとの対話をサポートしていません。 クライアント ソフトウェアをインストールし、クライアントが Configuration Manager サイトとの通信を確立した後で、Configuration Manager コンソールとレポートを使用して、クライアントを管理します。  
 
-> [!NOTE]  
+> [!NOTE]
 >  Linux および UNIX コンピューター向けの Configuration Manager クライアントでは、次の管理機能はサポートされていません。  
->   
->  -   クライアント プッシュ インストール  
-> -   オペレーティング システムの展開  
-> -   アプリケーションの展開 (代わりに、パッケージとプログラムを使ってソフトウェアを展開)  
-> -   ソフトウェア インベントリ  
-> -   ソフトウェア更新プログラム  
-> -   コンプライアンス設定  
-> -   リモート コントロール  
-> -   電源管理  
-> -   クライアント ステータスのクライアント チェックと修復  
-> -   インターネット ベースのクライアント管理  
+> 
+> - クライアント プッシュ インストール  
+>   -   オペレーティング システムの展開  
+>   -   アプリケーションの展開 (代わりに、パッケージとプログラムを使ってソフトウェアを展開)  
+>   -   ソフトウェア インベントリ  
+>   -   ソフトウェア更新プログラム  
+>   -   コンプライアンス設定  
+>   -   リモート コントロール  
+>   -   電源管理  
+>   -   クライアント ステータスのクライアント チェックと修復  
+>   -   インターネット ベースのクライアント管理  
 
  サポートされる Linux ディストリビューションと UNIX ディストリビューション、および Linux と UNIX 用のクライアントをサポートするために必要となるハードウェアの詳細については、「[System Center Configuration Manager の推奨ハードウェア](../../../../core/plan-design/configs/recommended-hardware.md)」をご覧ください。  
 
@@ -238,7 +238,7 @@ System Center Configuration Manager クライアントは、Linux または UNIX
 -   クライアントでは、配布ポイントからダウンロードしたパッケージのハッシュは検証されません。  
 
 > [!IMPORTANT]  
->  **IgnoreSHA256validation** オプションでは、安全性の低いモードでの Linux および UNIX のコンピューター用のクライアントを実行できます。 これは sha-256 のサポートが含まれていません古いプラットフォームで使用するためのものです。 この、セキュリティ設定を優先とは、Microsoft で勧めしませんが、サポートされて、セキュリティで保護された信頼できるデータ センター環境で使用するためです。  
+>  **IgnoreSHA256validation** オプションでは、安全性の低いモードでの Linux および UNIX のコンピューター用のクライアントを実行できます。 これは sha-256 のサポートが含まれていません古いプラットフォームで使用するためのものです。 これはセキュリティ設定をオーバーライドするため、Microsoft では推奨していませんが、セキュリティで保護された信頼できるデータ センター環境で使用するためにサポートされています。  
 
  Linux および UNIX 用の Configuration Manager クライアントをインストールする際に、インストール スクリプトがオペレーティング システムのバージョンを確認します。 既定では、オペレーティング システムのバージョンが SHA-256 をサポートしているバージョンの OpenSSL でリリースされていないことが識別されると、Configuration Manager クライアントのインストールが失敗します。  
 

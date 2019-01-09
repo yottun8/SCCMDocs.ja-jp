@@ -10,16 +10,16 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3981d454d0b007f5b057ccca4c8888da609dba97
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.openlocfilehash: d1a10f2381d6820d685ec8ff871c83c2a4c39bb1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52259082"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415060"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager で使用されるアカウント
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Configuration Manager で使用される Windows グループとアカウント、それらの使用方法、および要件を確認するには、以下の情報を参照してください。  
 
@@ -223,14 +223,14 @@ Configuration Manager は、グループ メンバーシップを自動的に管
 ### <a name="active-directory-group-discovery-account"></a>Active Directory グループ探索アカウント  
 
  サイトでは、ユーザーが指定した Active Directory Domain Services 内の場所から次のオブジェクトを探索するために、**Active Directory グループ探索アカウント**が使用されます。
- - ローカル、グローバル、およびユニバーサル セキュリティ グループ
- - これらのグループ内のメンバーシップ
- - 配布グループ内のメンバーシップ
-    - 配布グループは、グループ リソースとしては探索されません
+- ローカル、グローバル、およびユニバーサル セキュリティ グループ
+- これらのグループ内のメンバーシップ
+- 配布グループ内のメンバーシップ
+   - 配布グループは、グループ リソースとしては探索されません
 
- このアカウントは、探索を実行するサイト サーバーのコンピューター アカウントでも、Windows ユーザー アカウントでも構いません。 このアカウントには、探索対象に指定された Active Directory の場所に対する**読み取り**アクセス許可が必要です。  
+  このアカウントは、探索を実行するサイト サーバーのコンピューター アカウントでも、Windows ユーザー アカウントでも構いません。 このアカウントには、探索対象に指定された Active Directory の場所に対する**読み取り**アクセス許可が必要です。  
 
- 詳細については、「[Active Directory グループの探索](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutGroup)」をご覧ください。
+  詳細については、「[Active Directory グループの探索](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutGroup)」をご覧ください。
 
 
 ### <a name="active-directory-system-discovery-account"></a>Active Directory システム探索アカウント  
@@ -402,11 +402,11 @@ Configuration Manager は、グループ メンバーシップを自動的に管
 
 2.  **[ソフトウェア ライブラリ]** ワークスペースで、アクセス アカウントの管理対象となるコンテンツの種類を決定し、それぞれに用意されている手順に従います。  
 
-    -   **アプリケーション**: **[アプリケーション管理]** を展開し、**[アプリケーション]** をクリックして、アクセス アカウントを管理するアプリケーションを選択します。  
+    -   **アプリケーション**: **[アプリケーション管理]** を展開し、**[アプリケーション]** を選択してから、アクセス アカウントを管理するアプリケーションを選択します。  
 
     -   **パッケージ**: **[アプリケーション管理]** を展開し、**[パッケージ]** を選択して、アクセス アカウントを管理するパッケージを選択します。  
 
-    -   **ソフトウェア更新展開パッケージ**: **[ソフトウェア更新プログラム]** を展開し、**[展開パッケージ]** を選択して、アクセス アカウントを管理する展開パッケージを選択します。  
+    -   **ソフトウェア更新プログラムの展開パッケージ**: **[ソフトウェア更新プログラム]** を展開し、**[展開パッケージ]** を選択して、アクセス アカウントを管理する展開パッケージを選択します。  
 
     -   **ドライバー パッケージ**: **[オペレーティング システム]** を展開し、**[ドライバー パッケージ]** を選択して、アクセス アカウントを管理するドライバー パッケージを選択します。  
 

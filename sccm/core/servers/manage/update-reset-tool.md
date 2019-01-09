@@ -10,16 +10,16 @@ ms.assetid: 25fa89d6-7e47-45a6-8f4e-70b77560fba6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e6ae6ed46cc1db5f545182e4b4f6b46374b5c174
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: de5c98e45c6f5d6dca1569de812825cce80d6f70
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344090"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417344"
 ---
 # <a name="update-reset-tool"></a>更新のリセット ツール
 
-*適用対象: System Center Configuration Manager (Current Branch)*  
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*  
 
 
 バージョン 1706 以降、Configuration Manager のプライマリ サイトと中央管理サイトには、Configuration Manager 更新のリセット ツール **CMUpdateReset.exe** が含まれています。 このツールを使用して、コンソール内の更新プログラムのダウンロードやレプリケートに問題がある場合に、問題を修正します。 このツールはサイト サーバーの ***\cd.latest\SMSSETUP\TOOLS*** フォルダーにあります。
@@ -62,14 +62,16 @@ ms.locfileid: "32344090"
 
 **コマンドライン パラメーター:**  
 
-| パラメーター        |説明                 |  
-|------------------|----------------------------|  
-|**-S &lt;最上位層サイトの SQL Server の FQDN>** | *必須* <br> 階層の最上位層サイトのサイト データベースをホストする SQL Server の FQDN を指定します。    |  
-| **-D &lt;データベース名>**                        | *必須* <br> 最上位層サイトにあるデータベースの名前を指定します。  |  
-| **-P &lt;パッケージ GUID>**                         | *必須* <br> リセットする更新プログラム パッケージの GUID を指定します。   |  
-| **-I &lt;SQL Server インスタンス名>**             | *省略可能* <br> サイト データベースをホストする SQL Server のインスタンスを識別します。 |
-| **-FDELETE**                              | *省略可能* <br> 正常にダウンロードした更新プログラム パッケージを強制的に削除します。 |  
- **例:**  
- 一般的なシナリオで、ダウンロードに関する問題のある更新プログラムをリセットするとします。 SQL Server の FQDN が *server1.fabrikam.com* で、サイト データベースが *CM_XYZ*、パッケージ GUID が *61F16B3C-F1F6-4F9F-8647-2A524B0C802C* の場合、  次を実行します: ***CMUpdateReset.exe-s server1.fabrikam.com-d CM_XYZ-p 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
- より極端なシナリオで、問題のある更新プログラム パッケージの削除を強制するとします。 SQL Server の FQDN が *server1.fabrikam.com* で、サイト データベースが *CM_XYZ*、パッケージ GUID が *61F16B3C-F1F6-4F9F-8647-2A524B0C802C* の場合、  次を実行します: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+|                        パラメーター                         |                                                       説明                                                        |
+|----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| **-S &lt;最上位層サイトの SQL Server の FQDN>** | *必須* <br> 階層の最上位層サイトのサイト データベースをホストする SQL Server の FQDN を指定します。 |
+|                **-D &lt;データベース名>**                 |                          *必須* <br> 最上位層サイトにあるデータベースの名前を指定します。                          |
+|                 **-P &lt;パッケージ GUID>**                 |                        *必須* <br> リセットする更新プログラム パッケージの GUID を指定します。                        |
+|           **-I &lt;SQL Server インスタンス名>**           |                    *省略可能* <br> サイト データベースをホストする SQL Server のインスタンスを識別します。                     |
+|                       **-FDELETE**                       |                       *省略可能* <br> 正常にダウンロードした更新プログラム パッケージを強制的に削除します。                        |
+
+ **例:**  
+ 一般的なシナリオで、ダウンロードに関する問題のある更新プログラムをリセットするとします。 SQL Server の FQDN が *server1.fabrikam.com* で、サイト データベースが *CM_XYZ*、パッケージ GUID が *61F16B3C-F1F6-4F9F-8647-2A524B0C802C* の場合、  次を実行します。***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+
+ より極端なシナリオで、問題のある更新プログラム パッケージの削除を強制するとします。 SQL Server の FQDN が *server1.fabrikam.com* で、サイト データベースが *CM_XYZ*、パッケージ GUID が *61F16B3C-F1F6-4F9F-8647-2A524B0C802C* の場合、  次を実行します。***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***

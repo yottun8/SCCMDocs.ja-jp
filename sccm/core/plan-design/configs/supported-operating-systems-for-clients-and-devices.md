@@ -10,16 +10,16 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 48eb4abcc328c57fdb35e3511e49500099a68cf2
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 6f60d7f3a8c3bd81f4de38b2ce4080f54756de14
+ms.sourcegitcommit: c60e057075a83f07d1ca2577c3de1c7d7c8e9cec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456483"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626465"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager でクライアントとデバイスに対してサポートされる OS のバージョン
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
  Configuration Manager は、Windows、Mac、Linux、および UNIX コンピューター上のクライアント ソフトウェアのインストールをサポートします。  
 
@@ -42,33 +42,33 @@ ms.locfileid: "52456483"
 
     詳細については、[Windows 10 のサポート](/sccm/core/plan-design/configs/support-for-windows-10)に関するページをご覧ください。  
 
--   **Windows 8.1** (x86、x64): Professional、Enterprise    
+-   **Windows 8.1** (x86、x64):Professional、Enterprise    
 
--   **Windows 7 SP1** (x86、x64): Professional、Enterprise、Ultimate    
+-   **Windows 7 SP1** (x86、x64):Professional、Enterprise、および Ultimate    
 
 
 ### <a name="supported-server-os-versions"></a>サポートされているサーバーの OS のバージョン
 
--  **Windows Server 2019**: Standard、Datacenter <sup>[注 1](#bkmk_note1)</sup>  
+-  **Windows Server 2019**:Standard、Datacenter <sup>[注 1](#bkmk_note1)</sup>  
     (Configuration Manager バージョン 1806 以降。)
 
--  **Windows Server 2016**: Standard、Datacenter <sup>[注 1](#bkmk_note1)</sup>  
+-  **Windows Server 2016**:Standard、Datacenter <sup>[注 1](#bkmk_note1)</sup>  
 
--   **Windows Storage Server 2016**: Workgroup、Standard  
+-   **Windows Storage Server 2016**:Workgroup、Standard  
 
--   **Windows Server 2012 R2** (x64): Standard、Datacenter <sup>[注 1](#bkmk_note1)</sup>    
+-   **Windows Server 2012 R2** (x64):Standard、Datacenter <sup>[注 1](#bkmk_note1)</sup>    
 
 -   **Windows Storage Server 2012 R2** (x64)    
 
--   **Windows Server 2012** (x64): Standard、Datacenter <sup>[注 1](#bkmk_note1)</sup>    
+-   **Windows Server 2012** (x64):Standard、Datacenter <sup>[注 1](#bkmk_note1)</sup>    
 
 -   **Windows Storage Server 2012** (x64)    
 
--   **Windows Server 2008 R2 SP1** (x64): Standard、Enterprise、Datacenter <sup>[注 1](#bkmk_note1)</sup>    
+-   **Windows Server 2008 R2 SP1** (x64):Standard、Enterprise、Datacenter <sup>[注 1](#bkmk_note1)</sup>    
 
--   **Windows Storage Server 2008 R2** (x86、x64): Workgroup、Standard、Enterprise    
+-   **Windows Storage Server 2008 R2** (x86、x64):Workgroup、Standard、Enterprise    
 
--   **Windows Server 2008 SP2** (x86、x64): Standard、Enterprise、Datacenter <sup>[注 1](#bkmk_note1)</sup>    
+-   **Windows Server 2008 SP2** (x86、x64):Standard、Enterprise、Datacenter <sup>[注 1](#bkmk_note1)</sup>    
 
 
 #### <a name="server-core"></a>Server Core
@@ -360,10 +360,10 @@ Configuration Manager は、Configuration Manager クライアントをインス
 
 ### <a name="supported-versions-of-exchange-server"></a>サポートされている Exchange Server のバージョン
 
--   **Exchange Server 2010 SP1**  
+- **Exchange Online (Office 365)**:このバージョンには、Business Productivity Online Standard Suite が含まれます  
 
--   **Exchange Server 2010 SP2**  
+- **Exchange Server 2016** (バージョン 1802 以降)  
 
--   **Exchange Server 2013**  
+- **Exchange Server 2013**  
 
--   **Exchange Online (Office 365)**: このバージョンには、Business Productivity Online Standard Suite が含まれます。  
+- **Exchange Server 2010 SP1** または **Exchange Server 2010 SP2** 

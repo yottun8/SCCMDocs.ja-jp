@@ -10,16 +10,16 @@ ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f2dbdb4702a1deac4ae130e89c501e3d122f1b49
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: cee5a57b708e94d7443efeb517249c44c1323cb4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333343"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417933"
 ---
 # <a name="plan-for-the-site-database-for-system-center-configuration-manager"></a>System Center Configuration Manager のサイト データベースの計画
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 サイト データベース サーバーとは、Microsoft SQL Server のサポートされているバージョンを実行するコンピューターのことです。 SQL Server を使用して、Configuration Manager サイトの情報を格納します。 Configuration Manager 階層内の各サイトには、サイト データベースと、サイト データベース サーバーの役割を持つサーバーがあります。  
 

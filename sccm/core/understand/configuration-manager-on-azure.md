@@ -9,15 +9,15 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2b952e76fc21e3190430cdf34cb4a264918fd199
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: fa201029b81bb3e0ca8fb5e97f126c899497d503
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342598"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422931"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure の Configuration Manager - よく寄せられる質問
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 次の質問と回答が、Microsoft Azure での Configuration Manager の使用のタイミングと構成方法を理解するのに役立つ場合があります。
 
@@ -45,13 +45,13 @@ Azure でホストする場合、サイト間の近接通信 (ファイルベー
 ### <a name="what-about-networking-requirements-should-i-use-expressroute-or-an-azure-vpn-gateway"></a>ネットワーク要件はどうなっていますか? ExpressRoute または Azure VPN Gateway を使用する必要がありますか?
 ネットワークは非常に重要な決定事項です。 ネットワークの速度と待機時間が、サイト サーバーとリモート サイト システムおよびサイト システムへのクライアント通信機能に影響する可能性があります。 したがって、ExpressRoute を使用することをお勧めします。 ただし、Configuration Manager で Azure VPN Gateway を使用できないわけではありません。 このインフラストラクチャの要件 (パフォーマンス、修正プログラムの適用、ソフトウェアの配布、オペレーティング システムの展開) をよく確認したうえで、決定する必要があります。 各ソリューションの考慮事項は次のとおりです。
 
- - **ExpressRoute** (推奨)
+- **ExpressRoute** (推奨)
   - データセンターへの自然な拡張 (複数のデータセンターをつなげることができる)
   - Azure データセンターとインフラストラクチャ間のプライベート接続
   - パブリック インターネットを経由しない
   - 信頼性、高速、低待機時間、高セキュリティを提供
-  - 最大で 10 gbps の速度と無制限データ通信プラン オプションを提供
- - **VPN Gateway**
+  - 最大で 10 gbps の速度と無制限データ通信プラン オプションをオファー
+- **VPN Gateway**
   - サイト間/ポイント対サイト VPN
   - パブリック インターネット経由のトラフィック
   - インターネット プロトコル セキュリティ (IPsec) とインターネット キー交換 (IKE) を使用
@@ -107,11 +107,11 @@ Configuration Manager は Azure Load Balancer でテストされていません�
 
 | デスクトップ クライアント    |推奨 VM サイズ|推奨ディスク |
 |--------------------|-------------------|------------------|
-|**最大 25 K**       | サイト サーバー: F4S </br>データベース サーバー: DS12_V2 | サイト サーバー: 1xP30 </br>データベース サーバー: 2xP30 (ストライプ)  |
-|**25 K から 50 K**      | サイト サーバー: F4S </br>データベース サーバー: DS13_V2 | サイト サーバー: 1xP30 </br>データベース サーバー: 2xP30 (ストライプ)   |
-|**50 K から 100 K**     | サイト サーバー: F8S </br>データベース サーバー: DS14_V2 | サイト サーバー: 2xP30 (ストライプ)   </br>データベース サーバー: 3xP30 (ストライプ)   |
+|**最大 25 K**       | サイト サーバー:F4S </br>データベース サーバー:DS12_V2 | サイト サーバー:1xP30 </br>データベース サーバー:2xP30 (ストライプ)  |
+|**25 K から 50 K**      | サイト サーバー:F4S </br>データベース サーバー:DS13_V2 | サイト サーバー:1xP30 </br>データベース サーバー:2xP30 (ストライプ)   |
+|**50 K から 100 K**     | サイト サーバー:F8S </br>データベース サーバー:DS14_V2 | サイト サーバー:2xP30 (ストライプ)   </br>データベース サーバー:3xP30 (ストライプ)   |
 
-以下は、DS14_V2 で 50k ～ 100k クライアントを構成した例です。3xP30 のディスクがストライプ ボリュームで構成されており、別の論理ボリュームが Configuration Manager インストールとデータベース ファイルのために割り当てられています。 ![VM)disks](media/vm_disks.png)  
+以下は、DS14_V2 で 50k から 100k クライアントを構成した例です。3xP30 のディスクがストライプ ボリュームで構成されており、別の論理ボリュームが Configuration Manager インストールとデータベース ファイルのために割り当てられています。![VM)disks](media/vm_disks.png)  
 
 
 

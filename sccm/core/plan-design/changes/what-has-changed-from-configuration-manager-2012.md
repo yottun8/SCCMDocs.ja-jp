@@ -9,16 +9,16 @@ ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a58e5924fc34bad514ca6f01bb23aa84443705c6
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: df78f6ebfece28d01402272814e8527c3ca4a5fd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340711"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422829"
 ---
 # <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>System Center 2012 Configuration Manager からの System Center Configuration Manager の変更点
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 
  System Center Configuration Manager Current Branch には、System Center 2012 Configuration Manager からの重要な変更点があります。 このトピックでは、System Center Configuration Manager の基準バージョン 1511 における重要な変更点と新機能について紹介します。 System Center Configuration Manager の後続の更新で導入された変更点の詳細については、「[System Center Configuration Manager 増分バージョンの新機能](/sccm/core/plan-design/changes/whats-new-incremental-versions)」を参照してください。
@@ -122,27 +122,27 @@ System Center 2012 Configuration Manager での帯域外管理は、この変更
 
 コンプライアンス設定に関する次の変更に注意してください。
 
--   System Center Configuration Manager では、構成項目を作成するためのワークフローが改良されています。 これで、構成項目を作成し、サポートされているプラットフォームを選択するときに、そのプラットフォームに関連する設定のみが使用できるようになります。 「[System Center Configuration Manager のコンプライアンス設定を使ってみる](../../../compliance/get-started/get-started-with-compliance-settings.md)」を参照してください。  
+- System Center Configuration Manager では、構成項目を作成するためのワークフローが改良されています。 これで、構成項目を作成し、サポートされているプラットフォームを選択するときに、そのプラットフォームに関連する設定のみが使用できるようになります。 「[System Center Configuration Manager のコンプライアンス設定を使ってみる](../../../compliance/get-started/get-started-with-compliance-settings.md)」を参照してください。  
 
--   **構成項目の作成**ウィザードでは、作成する構成項目の種類が選択しやすくなりました。 さらに、次のものに対して使用できる構成項目が追加および更新されています。  
+- **構成項目の作成**ウィザードでは、作成する構成項目の種類が選択しやすくなりました。 さらに、次のものに対して使用できる構成項目が追加および更新されています。  
 
-    -   Configuration Manager クライアントを使用して管理されている Windows 10 デバイス  
+  -   Configuration Manager クライアントを使用して管理されている Windows 10 デバイス  
 
-    -   Configuration Manager クライアントを使用して管理されている Mac OS X デバイス  
+  -   Configuration Manager クライアントを使用して管理されている Mac OS X デバイス  
 
-    -   Configuration Manager クライアントを使用して管理されている Windows デスクトップおよびサーバー コンピューター  
+  -   Configuration Manager クライアントを使用して管理されている Windows デスクトップおよびサーバー コンピューター  
 
-    -   Configuration Manager クライアントを使用せずに管理されている Windows 8.1 および Windows 10 デバイス  
+  -   Configuration Manager クライアントを使用せずに管理されている Windows 8.1 および Windows 10 デバイス  
 
-    -   Configuration Manager クライアントを使用せずに管理されている Windows Phone デバイス  
+  -   Configuration Manager クライアントを使用せずに管理されている Windows Phone デバイス  
 
-    -   Configuration Manager クライアントを使用せずに管理されている iOS および Mac OS X デバイス  
+  -   Configuration Manager クライアントを使用せずに管理されている iOS および Mac OS X デバイス  
 
-    -   Configuration Manager クライアントを使用せずに管理されている Android および Samsung KNOX Standard デバイス  
+  -   Configuration Manager クライアントを使用せずに管理されている Android および Samsung KNOX Standard デバイス  
 
- 「[System Center Configuration Manager で構成項目を作成する方法](../../../compliance/deploy-use/create-configuration-items.md)」を参照してください。  
+  「[System Center Configuration Manager で構成項目を作成する方法](../../../compliance/deploy-use/create-configuration-items.md)」を参照してください。  
 
--   Microsoft Intune に登録されているか、Configuration Manager クライアントを使用して管理されている、Mac OS X コンピューター上の設定を管理するためのサポート。 「[System Center Configuration Manager クライアントを使用せずに管理されている iOS デバイスと Mac OS X デバイスの構成項目を作成する方法](../../../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)」を参照してください。  
+- Microsoft Intune に登録されているか、Configuration Manager クライアントを使用して管理されている、Mac OS X コンピューター上の設定を管理するためのサポート。 「[System Center Configuration Manager クライアントを使用せずに管理されている iOS デバイスと Mac OS X デバイスの構成項目を作成する方法](../../../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)」を参照してください。  
 
 ## <a name="protect-data-and-site-infrastructure"></a>データとサイト インフラストラクチャの保護  
 System Center Configuration Manager を Windows Hello for Business (旧称: Microsoft Passport for Windows) と統合することができます。 Windows Hello for Business は、Active Directory や Azure Active Directory アカウントを使った代替サインイン方法であり、Windows 10 を実行しているデバイス上のパスワード、スマート カード、または仮想スマート カードに取って代わります。 「[System Center Configuration Manager における Windows Hello for Business 設定について](../../../protect/deploy-use/windows-hello-for-business-settings.md)」を参照してください。

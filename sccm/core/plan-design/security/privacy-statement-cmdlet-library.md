@@ -9,16 +9,16 @@ ms.assetid: bec00fb4-1ac0-4e49-b330-0871b3722459
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6a996c4f1e00c05c0b3766b8955130529832063
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: bb48f192146a3c0d4bbbe6f005dda537db871da7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344502"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415485"
 ---
 # <a name="system-center-configuration-manager-privacy-statement---configuration-manager-cmdlet-library"></a>System Center Configuration Manager のプライバシーに関する声明 - Configuration Manager コマンドレット ライブラリ
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 このプライバシーに関する声明は、System Center Configuration Manager Cmdlet Library の機能に適用されます。  
 
@@ -42,11 +42,11 @@ Microsoft ではこの情報を Microsoft が提供する製品およびサー�
 
  完全に停止するには、これら 2 つのレジストリ キーの値を設定します。 これらは、各 Event Tracing for Windows (ETW) プロバイダー用です。  
 
--   HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Provider:CeipLevel=0 (ドライブ プロバイダーの使用状況データの停止)  
+- HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Provider:CeipLevel=0 (ドライブ プロバイダーの使用状況データの停止)  
 
--   HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Cmdlets:CeipLevel=0 (コマンドレットの使用状況データの停止)  
+- HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Cmdlets:CeipLevel=0 (コマンドレットの使用状況データの停止)  
 
- 使用状況データ設定を変更する際は、コンピューターに応じて固有の変更を行います。  
+  使用状況データ設定を変更する際は、コンピューターに応じて固有の変更を行います。  
 
 
 ## <a name="next-steps"></a>次のステップ

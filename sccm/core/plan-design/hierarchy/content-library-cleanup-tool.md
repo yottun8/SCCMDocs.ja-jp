@@ -10,16 +10,16 @@ ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e71b95642160d519f222a50a66bc8f636628d6e
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: bd347cecce0ae1317fe51a701ce67b4766fbcd10
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383525"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423186"
 ---
 # <a name="content-library-cleanup-tool"></a>コンテンツ ライブラリのクリーンアップ ツール
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 配布ポイントのパッケージまたはアプリケーションと関連付けられなくなったコンテンツを削除するには、コンテンツ ライブラリ クリーンアップ コマンドライン ツールを使います。 この種類のコンテンツのことを "*孤立コンテンツ*" と呼びます。 このツールは、過去の Configuration Manager 製品用にリリースされた同様のツールの古いバージョンに代わるものです。  
 
@@ -41,7 +41,7 @@ ms.locfileid: "39383525"
 
 ## <a name="modes-of-operation"></a>操作モード
 
-ツールの実行モードは、[What-if](#what-if-mode) モードと[削除](#delete-mode)モードの 2 つです。
+このツールは、次の 2 つのモードで実行します。[What-if](#what-if-mode) と[削除](#delete-mode)。
 
 > [!Tip]  
 > 最初に *What-if* モードを使います。 結果に満足した後、"*削除*" モードでツールを実行します。  
@@ -93,16 +93,17 @@ ms.locfileid: "39383525"
 以下のコマンド ライン パラメーターを任意の順で使います。   
 
 ### <a name="required-parameters"></a>必須のパラメーター
+
 |パラメーター|詳細|
 |---------|-------|
 | `/dp <distribution point FQDN>`  | クリーンアップする配布ポイントの完全修飾ドメイン名 (FQDN) を指定します。 |
 | `/ps <primary site FQDN>` | セカンダリ サイトで配布ポイントからコンテンツをクリーンアップする場合にのみ "*必須*" です。 このツールは、親プライマリ サイトに接続して、SMS プロバイダーに対するクエリを実行します。 これらのクエリにより、ツールは配布ポイントに必要なコンテンツを決定します。 その後、削除する孤立コンテンツを特定できます。 必要な情報がセカンダリ サイトからは直接入手できないため、親プライマリ サイトへのこの接続はセカンダリ サイトの配布ポイントに対して行う必要があります。|
 | `/sc <primary site code>`  | セカンダリ サイトで配布ポイントからコンテンツをクリーンアップする場合にのみ "*必須*" です。 親プライマリ サイトのサイト コードを指定します。 |
 
-#### <a name="example-scan-and-log-what-content-it-would-delete-what-if"></a>例: 削除するコンテンツをスキャンしてログに記録する (What-if)
+#### <a name="example-scan-and-log-what-content-it-would-delete-what-if"></a>例:削除するコンテンツをスキャンしてログに記録する (What-if)
 `ContentLibraryCleanup.exe /dp server1.contoso.com`
 
-#### <a name="example-scan-and-log-content-for-a-dp-at-a-secondary-site"></a>例: セカンダリ サイトの配布ポイントをスキャンしてコンテンツを記録する
+#### <a name="example-scan-and-log-content-for-a-dp-at-a-secondary-site"></a>例:セカンダリ サイトの配布ポイントをスキャンしてコンテンツをログに記録する
 `ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com /sc ABC` 
 
 
@@ -116,16 +117,16 @@ ms.locfileid: "39383525"
 | `/sc <primary site code>` | プライマリ サイトで配布ポイントからコンテンツをクリーニングする場合にのみ省略可能です。 配布ポイントが属するプライマリ サイトのサイト コードを指定します。 |
 | `/log <log file directory>` | ツールがログ ファイルを書き込む場所を指定します。 ローカル ドライブやネットワーク共有上の場所を指定できます。</br></br> このパラメーターを使用しないと、ログ ファイルはツールを実行ているコンピューター上のユーザーの一時ディレクトリに格納されます。|
 
-#### <a name="example-delete-content"></a>例: コンテンツを削除する 
+#### <a name="example-delete-content"></a>例:コンテンツを削除する 
 `ContentLibraryCleanup.exe /dp server1.contoso.com /delete`
 
-#### <a name="example-delete-content-without-prompts"></a>例: プロンプトを表示せずにコンテンツを削除する
+#### <a name="example-delete-content-without-prompts"></a>例:プロンプトを表示せずにコンテンツを削除する
 `ContentLibraryCleanup.exe /q /dp server1.contoso.com /delete` 
 
-#### <a name="example-log-to-local-drive"></a>例: ローカル ドライブにログを格納する
+#### <a name="example-log-to-local-drive"></a>例:ローカル ドライブにログを格納する
 `ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop` 
 
-#### <a name="example-log-to-network-share"></a>例: ネットワーク共有にログを格納する
+#### <a name="example-log-to-network-share"></a>例:ネットワーク共有にログを格納する
 `ContentLibraryCleanup.exe /dp server1.contoso.com /log \\server\share`
 
 

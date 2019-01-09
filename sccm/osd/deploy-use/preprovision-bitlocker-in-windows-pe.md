@@ -10,35 +10,35 @@ ms.assetid: c7c94ba0-d709-4129-8077-075a8abaea1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ad4bfe99e841af5ccc4f6792fda664b8259a5369
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 10c072c89064472398c068a62079d1af120b1a11
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350529"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416556"
 ---
 # <a name="preprovision-bitlocker-in-windows-pe-with-system-center-configuration-manager"></a>System Center Configuration Manager による Windows PE での BitLocker の事前準備
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager のタスク シーケンスの **BitLocker の事前プロビジョニング** ステップで、オペレーティング システムを展開する前に Windows プレインストール環境 (Windows PE) で BitLocker を有効にすることができます。 使用されているドライブ領域のみが暗号化されるため、暗号化にかかる時間が大幅に短くなります。 Windows のセットアップ プロセスを実行する前に、フォーマットしたボリュームを、無作為に作成されたクリア キーによるキー保護機能を使って暗号化します。 BitLocker を事前プロビジョニングする機能は、Windows 8 と Windows Server 2012 に導入されています。 BitLocker をハード ドライブに事前プロビジョニングして Windows 7 をインストールできますが、これには特別な手順が必要です。 Windows 7 のセットアップが終わったら、BitLocker のキー保護機能を設定する必要があります。これは、Windows 7 の BitLocker コントロール パネルでは、クリア キーによるキー保護と一緒に BitLocker を使えないからです。 したがって、 **BitLocker の有効化** ステップか、manage-bde.exe コマンドライン ツールを使って、キー保護機能を追加する必要があります。  
 
  通常、BitLocker を事前プロビジョニングして Windows 7 をインストールするには、次の作業を行う必要があります。  
 
--   Windows PE でコンピューターを再起動します。  
+- Windows PE でコンピューターを再起動します。  
 
-    > [!IMPORTANT]  
-    >  BitLocker を事前プロビジョニングするには、Windows PE 4 以降のブート イメージを使用する必要があります。 Configuration Manage がサポートしている Windows PE のバージョンの詳細については、「[Configuration Manager 外部の依存関係](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_ExternalDependencies)」を参照してください。  
+  > [!IMPORTANT]  
+  >  BitLocker を事前プロビジョニングするには、Windows PE 4 以降のブート イメージを使用する必要があります。 Configuration Manage がサポートしている Windows PE のバージョンの詳細については、「[Configuration Manager 外部の依存関係](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_ExternalDependencies)」を参照してください。  
 
--   ハード ドライブのパーティションを作成してフォーマットします。  
+- ハード ドライブのパーティションを作成してフォーマットします。  
 
--   のタスク シーケンスの  
+- のタスク シーケンスの  
 
--   オペレーティング システムとネットワークの特定の設定を行って、Windows 7 をインストールします。  
+- オペレーティング システムとネットワークの特定の設定を行って、Windows 7 をインストールします。  
 
--   BitLocker にキー保護機能を追加します。  
+- BitLocker にキー保護機能を追加します。  
 
- Configuration Manager でハード ドライブに BitLocker を事前プロビジョニングして Windows 7 をインストールする場合、新しいタスク シーケンスを作成して、**タスク シーケンスの作成ウィザード**の **[新しいタスク シーケンスの作成]** ページで **[既存のイメージ パッケージをインストールする]** を選択する方法をお勧めします。 次の表に示すステップから成るタスク シーケンスが作成されます。  
+  Configuration Manager でハード ドライブに BitLocker を事前プロビジョニングして Windows 7 をインストールする場合、新しいタスク シーケンスを作成して、**タスク シーケンスの作成ウィザード**の **[新しいタスク シーケンスの作成]** ページで **[既存のイメージ パッケージをインストールする]** を選択する方法をお勧めします。 次の表に示すステップから成るタスク シーケンスが作成されます。  
 
 > [!NOTE]  
 >  ウィザードで選択した設定によっては、他のステップが含まれることがあります。 たとえば、ウィザードの **[状態移行]** ページで **[キャプチャした Microsoft Windows 設定]** を選択した場合は、 **[Windows 設定のキャプチャ]** というステップが追加されます。  

@@ -10,16 +10,16 @@ ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 019b275177e1f264a4bfc2926cfe45ebd0be8eae
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 94ef3ce54db0efb7be7e9d6d0709f48bb212f7e7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334574"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416539"
 ---
 # <a name="how-to-test-client-upgrades-in-a-pre-production-collection-in-system-center-configuration-manager"></a>System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストする方法
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 サイトの他の部分をアップグレードする前に、実稼働前コレクションで新しい Configuration Manager クライアント バージョンをテストできます。  これを行うと、テスト コレクションに含まれるデバイスのみがアップグレードされます。 クライアントをテストし終えた後で、そのクライアントを昇格できます。これにより、サイトの他の部分で新しいバージョンのクライアント ソフトウェアを使用できるようになります。
 
@@ -38,15 +38,15 @@ ms.locfileid: "32334574"
 > [!IMPORTANT]
 > ワークグループ コンピューターでは、実稼働前クライアントの展開はサポートされていません。 ワークグループ コンピューターは、配布ポイントで実稼働前クライアント パッケージにアクセスするために必要な認証を使用できません。  実稼働クライアントへの昇格時、最新のクライアントを受け取ります。
 
-1. 実稼働前クライアントを展開するコンピューターを含む[コレクションを設定](..\collections\create-collections.md)します。   
+1. 実稼働前クライアントを展開するコンピューターを含む[コレクションを設定](../collections/create-collections.md)します。   
 
-1.  Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** > **[サイト]** の順に選択し、**[階層設定]** を選択します。  
+2. Configuration Manager コンソールで、**[管理]** > **[サイトの構成]** > **[サイト]** の順に選択し、**[階層設定]** を選択します。  
 
-     **[階層設定のプロパティ]** の **[クライアント アップグレード]** タブで次の操作を実行します。  
+    **[階層設定のプロパティ]** の **[クライアント アップグレード]** タブで次の操作を実行します。  
 
-    -   **[実稼働前クライアントを使用して実稼働前コレクション内のすべてのクライアントを自動的にアップグレードする]** を選びます。  
+   -    **[実稼働前クライアントを使用して実稼働前コレクション内のすべてのクライアントを自動的にアップグレードする]** を選びます。  
 
-    -   実稼働前コレクションとして使用するコレクションの名前を入力します。  
+   -   実稼働前コレクションとして使用するコレクションの名前を入力します。  
 
 ![クライアントのアップグレードをテストする](media/test-client-upgrades.png)
 

@@ -10,16 +10,16 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f063034ed7cdc22a92df8d07d8be03ece12f663
-ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
+ms.openlocfilehash: 4587549ef2f43be3dcc5e18021f60c42770f5800
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46533747"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415519"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>Configuration Manager のコンテンツ ライブラリ
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 コンテンツ ライブラリは、Configuration Manager でのコンテンツの単一インスタンス ストアです。 サイトではこれを使用して配布するコンテンツの合計サイズを減らします。 コンテンツ ライブラリにはソフトウェア更新プログラム、アプリケーション、OS の展開などのソフトウェア展開に使用するすべてのコンテンツ ファイルが格納されます。  
 
@@ -45,7 +45,7 @@ Configuration Manager は、優先順位が最も高いドライブの空き領�
 配布ポイントのドライブ設定の構成方法については、[コンテンツとコンテンツ インフラストラクチャの管理](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)に関するページを参照してください。  
 
 
->  [!IMPORTANT]  
+> [!IMPORTANT]
 >  インストール後にコンテンツ ライブラリを配布ポイントの別の場所に移動するには、Configuration Manager Toolkit の **Content Library Transfer** ツールを使用します。 詳細については、[Content Library Transfer ツール](/sccm/core/support/content-library-transfer)に関するページを参照してください。  
 
 
@@ -112,13 +112,13 @@ Configuration Manager は、次のシナリオで中央管理サイトのコン�
 
 5. 詳細ウィンドウの [概要] タブで [コンテンツ ライブラリ] 列の **[状態]** の値に注目してください。 コンテンツ ライブラリの移動時には、サイトの進行状況に合わせて更新されます。  
 
-    - **[進行中]** の間は、**[移動の進行状況 (%)]** の値に完了率が表示されます。  
+   - **[進行中]** の間は、**[移動の進行状況 (%)]** の値に完了率が表示されます。  
 
-    - エラー状態がある場合、状態にエラーが表示されます。 一般的なエラーには、**アクセスが拒否されました**や、**ディスクがいっぱいです**が含まれます。  
+   - エラー状態がある場合、状態にエラーが表示されます。 一般的なエラーには、**アクセスが拒否されました**や、**ディスクがいっぱいです**が含まれます。  
 
-    - 完了すると、**[完了]** と表示されます。  
+   - 完了すると、**[完了]** と表示されます。  
     
-    詳細については、**distmgr.log** を参照してください。 詳細については、「[サイト サーバーとサイト システムのログ ファイル](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog)」を参照してください。  
+     詳細については、**distmgr.log** を参照してください。 詳細については、「[サイト サーバーとサイト システムのログ ファイル](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog)」を参照してください。  
 
 このプロセスの詳細については、「[Flowchart - Manage content library](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart)」(フローチャート - コンテンツ ライブラリの管理) を参照してください。
 
@@ -138,11 +138,11 @@ Configuration Manager は、次のシナリオで中央管理サイトのコン�
 
 既定では、コンテンツ ライブラリは **SCCMContentLib** という名前のフォルダーのドライブのルートに保存されます。 既定では、このフォルダーは **SCCMContentLib$** として共有されます。 フォルダーおよび共有のアクセス許可は、誤って破損しないようにするために制限されています。 すべての変更は、Configuration Manager コンソールから行ってください。 このフォルダー内には、次のオブジェクトがあります。  
 
-- パッケージ ライブラリ (**PkgLib** フォルダー): 配布ポイントにどのようなパッケージが存在するかに関する情報。  
+- パッケージ ライブラリ (**PkgLib** フォルダー): 配布ポイントにどのようなパッケージが存在するかに関する情報です。  
 
-- データ ライブラリ (**DataLib** フォルダー): パッケージの元の構造に関する情報。  
+- データ ライブラリ (**DataLib** フォルダー): パッケージの元の構造に関する情報です。  
 
-- ファイル ライブラリ (**FileLib** フォルダー): パッケージ内の元のファイル。 このフォルダーは通常、記憶域の大部分を使用します。  
+- ライブラリ ファイル (**FileLib**フォルダー): パッケージ内の元のファイルです。 このフォルダーは通常、記憶域の大部分を使用します。  
 
 ![Configuration Manager コンテンツ ライブラリの概要の図](media/content-library-overview.png)
 

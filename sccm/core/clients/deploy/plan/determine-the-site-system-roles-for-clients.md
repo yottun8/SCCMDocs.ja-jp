@@ -10,16 +10,16 @@ ms.assetid: 984e8d92-7327-4b08-9228-0c955e6ac778
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eac38757ed2147d664b3bdbf2f7e0eb11947dcac
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 8fdb7faee21904c504470c2bca86a674d59559cf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334077"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419820"
 ---
 # <a name="determine-the-site-system-roles-for-system-center-configuration-manager-clients"></a>System Center Configuration Manager クライアントのサイト システムの役割の決定
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 このトピックは、Configuration Manager クライアントを展開するうえで必要なサイト システムの役割を特定するのに役立ちます。  
 
@@ -45,15 +45,15 @@ ms.locfileid: "32334077"
 
  次の条件すべてに該当する場合は、フォールバック ステータス ポイントをインストールしてください。  
 
--   クライアント コンピューターが管理ポイントと通信できなくても、Windows コンピューターからのクライアント通信エラーをサイトに送る。  
+- クライアント コンピューターが管理ポイントと通信できなくても、Windows コンピューターからのクライアント通信エラーをサイトに送る。  
 
--   フォールバック ステータス ポイントから送信されるデータを表示する、構成マネージャー クライアントの展開レポートを使用する。  
+- フォールバック ステータス ポイントから送信されるデータを表示する、構成マネージャー クライアントの展開レポートを使用する。  
 
--   このサイト システムの役割専用のサーバーがあり、サーバーを攻撃から保護することができるセキュリティ手段が他にもある。  
+- このサイト システムの役割専用のサーバーがあり、サーバーを攻撃から保護することができるセキュリティ手段が他にもある。  
 
--   接続時の認証がなく HTTP トラフィックでは平文のままデータが転送されるためセキュリティ上のリスクはありますが、それよりもフォールバック ステータス ポイントを使用する利点の方が高くなります。  
+- 接続時の認証がなく HTTP トラフィックでは平文のままデータが転送されるためセキュリティ上のリスクはありますが、それよりもフォールバック ステータス ポイントを使用する利点の方が高くなります。  
 
- 接続時の認証がなく、データをクリア テキストで送信するために発生する、Web サイト実行上のセキュリティ リスクが、クライアントで発生する通信上の問題を特定することによる利点よりも高い場合は、フォールバック ステータス ポイントをインストールしないでください。  
+  接続時の認証がなく、データをクリア テキストで送信するために発生する、Web サイト実行上のセキュリティ リスクが、クライアントで発生する通信上の問題を特定することによる利点よりも高い場合は、フォールバック ステータス ポイントをインストールしないでください。  
 
 ##  <a name="determine-whether-you-need-a-reporting-services-point"></a>レポート サービス ポイントが必要かどうかを判断する  
  Configuration Manager には、Configuration Manager コンソールでのクライアントのインストール、割り当て、および管理を監視するのに役立つ多数のレポートがあります。 一部のクライアント展開レポートは、クライアントがフォールバック ステータス ポイントに割り当てられていることが必要です。  

@@ -10,16 +10,16 @@ ms.assetid: 2e801f8c-d331-41ee-8f27-908448fc0951
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4750d9e31eb41fdad7f655faa4e8058156e922a1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: aed9ec403496b309b1b556355c955743d43b2dc4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337158"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420211"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1703 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1703 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 このバージョンの Technical Preview をインストールする前に、説明のトピック「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。    
 
@@ -61,7 +61,7 @@ ms.locfileid: "32337158"
 3.  **[アプリケーション]** ビューで、列ヘッダーのいずれかを右クリックし、一覧から **[CI の固有 ID]** を選択します。 各アプリケーションの一意の ID が一覧に表示されます。
 4.  リンク先のアプリケーションの **[CI の固有 ID]** (**ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2** など) をメモしておきます。
 5.  次に、アプリケーション GUID の後に続くテキスト (この例では **/2**) をすべて削除します。 これにより、アプリケーション識別子が得られます。
-6.  最後に、リンクの作成を完了するために、アプリケーション識別子の前に **Softwarecenter:SoftwareID=** を付けます。 上記の例では、最終的なリンクは **Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f** のようになります。
+6.  最後に、リンクの作成を完了するために、アプリケーション識別子の前に **Softwarecenter:SoftwareID=** を付けます。 上記の例を使用して、次の最終的なリンクが表示されます。**Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**。
 
 このリンクを使用することにより、エンド ユーザーは、ソフトウェア センターで指定したアプリケーションを直接開くことができます。
 
@@ -106,18 +106,18 @@ Azure Active Directory で、Configuration Manager を Web アプリケーショ
 4. **[アプリ]** ページで、Azure 環境を指定し、**[参照]** をクリックして[サーバー アプリ] ウィンドウを開きます。
 
 5. **[サーバー アプリ]** ウィンドウで、使用するサーバー アプリを選択し、**[OK]** をクリックします。
-サーバー アプリとは、Azure アカウントの構成 (クライアントのテナント ID、クライアント ID、シークレット キーなど) を格納する Azure Web アプリです。 利用可能なサーバー アプリがない場合は、次のいずれかを使用します。
-  - **作成**: 新しいセッションを作成するには、**[作成]** をクリックします。 アプリとテナントのフレンドリ名を指定します。 次に、Azure にサインインすると、Configuration Manager によって、Azure で Web アプリと、Web アプリで使用するクライアント ID やシークレット キーが作成されます。 その後、Azure Portal からこれらを表示できます。
-  - **インポート**: Azure サブスクリプションに既に存在する Web アプリを使用するには、**[インポート]** をクリックします。 アプリとテナントのフレンドリ名を指定し、Configuration Manager で使用する Azure Web アプリのテナント ID、クライアント ID、シークレット キーを指定します。 情報を**確認**した後、**[OK]** をクリックして続行します。  </br></br>
+   サーバー アプリとは、Azure アカウントの構成 (クライアントのテナント ID、クライアント ID、シークレット キーなど) を格納する Azure Web アプリです。 利用可能なサーバー アプリがない場合は、次のいずれかを使用します。
+   - **作成**: 新しいサーバー アプリを作成するには、**[作成]** をクリックします。 アプリとテナントのフレンドリ名を指定します。 次に、Azure にサインインすると、Configuration Manager によって、Azure で Web アプリと、Web アプリで使用するクライアント ID やシークレット キーが作成されます。 その後、Azure Portal からこれらを表示できます。
+   - **インポート**: ご利用の Azure サブスクリプションに既に存在する Web アプリを使用するには、**[インポート]** をクリックします。 アプリとテナントのフレンドリ名を指定し、Configuration Manager で使用する Azure Web アプリのテナント ID、クライアント ID、シークレット キーを指定します。 情報を**確認**した後、**[OK]** をクリックして続行します。  </br></br>
 
 6. **[情報]** ページを確認し、指示に従って、追加の手順と構成を完了します。 これらの構成は、Configuration Manager でサービスを使用するために必要です。
-たとえば、WSfB を構成するには次を実行します。
+   たとえば、WSfB を構成するには次を実行します。
 
-  1. Azure で、Configuration Manager を Web アプリケーションまたは Web API 管理ツールとして登録し、クライアント ID を記録します。 また、管理ツール (Configuration Manager) で使用するためのクライアント キーを指定します。
+   1. Azure で、Configuration Manager を Web アプリケーションまたは Web API 管理ツールとして登録し、クライアント ID を記録します。 また、管理ツール (Configuration Manager) で使用するためのクライアント キーを指定します。
 
-  2.    WSfB コンソールで、ストアの管理ツールとして Configuration Manager を構成し、オフラインのライセンスされたアプリのサポートを有効にするには、少なくとも 1 つのアプリを購入する必要があります。   </br>
+   2.    WSfB コンソールで、ストアの管理ツールとして Configuration Manager を構成し、オフラインのライセンスされたアプリのサポートを有効にするには、少なくとも 1 つのアプリを購入する必要があります。   </br>
 
-  操作を続行する準備ができたら **[次へ]** をクリックします。
+   操作を続行する準備ができたら **[次へ]** をクリックします。
 
 7. **[アプリケーションの構成]** ページで、このサービスのアプリケーション カタログと言語の構成を完了し、**[次へ]** をクリックします。
 8. ウィザードが完了したのち、Configuration Manager コンソールに**ビジネス向け Windows ストア**を**クラウド サービスの種類**として構成したことが示されます。
@@ -137,7 +137,7 @@ Windows 10 Creators Update では、EFI 対応ハードウェアのハード デ
 
 
 ## <a name="client-settings-to-configure-windows-analytics-for-upgrade-readiness"></a>Windows Analytics for Upgrade Readiness を構成するためのクライアント設定
-これ以降のバージョンでは、デバイス クライアントの設定を使用して、Windows 利用統計情報の構成を簡略化できます。この構成は、Configuration Manager で [Upgrade Readiness](https://www.microsoft.com/en-us/WindowsForBusiness/windows-analytics) のような [Windows Analytics](/sccm/core/clients/manage/upgrade/upgrade-analytics) ソリューションを使用するために必要です。 Configuration Manager は Windows Analytics からデータを取得し、クライアント コンピューターから送信される Windows 利用統計情報データに基づいて、お使いの環境の現在の状態に関する貴重な情報を提供します。 Windows 利用統計情報データは、クライアント コンピューターによって Windows 利用統計情報サービスに報告されます。その後、組織の OMS ワークスペースのいずれかでホストされている Windows Analytics ソリューションに、関連データが転送されます。 Upgrade Readiness は Windows Analytics ソリューションの 1 つで、管理対象デバイスでの Windows アップグレードに関する決定の優先順位を付ける際に役立ちます。
+これ以降のバージョンでは、デバイス クライアントの設定を使用して、Windows 利用統計情報の構成を簡略化できます。この構成は、Configuration Manager で [Upgrade Readiness](https://www.microsoft.com/en-us/WindowsForBusiness/windows-analytics) のような [Windows Analytics](/sccm/core/clients/manage/upgrade/upgrade-analytics) ソリューションを使用するために必要です。 Configuration Manager は Windows Analytics からデータを取得し、クライアント コンピューターから送信される Windows 利用統計情報データに基づいて、お使いの環境の現在の状態に関する貴重な情報を提供します。 Windows 利用統計情報データは、クライアント コンピューターによって Windows 利用統計情報サービスに報告されます。その後、組織の OMS ワークスペースのいずれかでホストされている Windows Analytics ソリューションに、関連データが転送されます。 Upgrade Readiness は Windows Analytics ソリューションの 1 つで、マネージド デバイスでの Windows アップグレードに関する決定の優先順位を付ける際に役立ちます。
 
 Windows 利用統計情報の設定については、「[組織内の Windows 利用統計情報の構成](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)」を参照してください。
 

@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cc98ee85ffe4fd419ccc2a2e16bf566144f8b670
-ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
+ms.openlocfilehash: 6d25c6a11821b73f34c8a3cd6aa95d4a78c86587
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49943310"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418400"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>暗号化コントロールのテクニカル リファレンス
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 
 System Center Configuration Manager では、署名と暗号化を使用して、Configuration Manager 階層内のデバイスの管理を効果的に保護することができます。 署名を使用した場合、転送中にデータが改変されると、そのデータは破棄されます。 暗号化は、攻撃者がネットワーク プロトコル アナライザーを使用してデータを読み取ることを防ぐのに有効です。  
@@ -100,19 +100,19 @@ System Center Configuration Manager では、署名と暗号化を使用して�
 
  次の場合に、PKI 証明書が必要です。  
 
--   インターネット上の Configuration Manager クライアントを管理する場合。  
+- インターネット上の Configuration Manager クライアントを管理する場合。  
 
--   モバイル デバイス上の Configuration Manager クライアントを管理する場合。  
+- モバイル デバイス上の Configuration Manager クライアントを管理する場合。  
 
--   Mac コンピューターを管理する場合  
+- Mac コンピューターを管理する場合  
 
--   クラウドベースの配布ポイントを使用する場合  
+- クラウドベースの配布ポイントを使用する場合  
 
--   Intel AMT 搭載コンピューターを帯域外で管理する場合。  
+- Intel AMT 搭載コンピューターを帯域外で管理する場合。  
 
- 認証、署名、または暗号化に証明書を必要とするその他ほとんどの Configuration Manager 通信では、Configuration Manager は、使用可能な場合は自動的に PKI 証明書を使用します。 証明書を使用できない場合は、Configuration Manager により自己署名入り証明書が生成されます。  
+  認証、署名、または暗号化に証明書を必要とするその他ほとんどの Configuration Manager 通信では、Configuration Manager は、使用可能な場合は自動的に PKI 証明書を使用します。 証明書を使用できない場合は、Configuration Manager により自己署名入り証明書が生成されます。  
 
- Exchange Server コネクタを使用してモバイル デバイスを管理する場合、Configuration Manager は PKI 証明書を使用しません。  
+  Exchange Server コネクタを使用してモバイル デバイスを管理する場合、Configuration Manager は PKI 証明書を使用しません。  
 
 ### <a name="mobile-device-management-and-pki-certificates"></a>モバイル デバイスの管理および PKI 証明書  
  モバイル デバイスが携帯電話会社によってロックされていない場合は、Configuration Manager または Microsoft Intune を使用してクライアント証明書を要求してインストールできます。 この証明書は、モバイル デバイス上のクライアントと Configuration Manager サイト システムまたは Microsoft Intune サービスとの間に相互認証を提供します。 モバイル デバイスがロックされている場合は、Configuration Manager または Microsoft Intune を使用して証明書を展開することはできません。  
@@ -180,39 +180,39 @@ System Center Configuration Manager では、署名と暗号化を使用して�
 
  各サイト システム サーバーのこの証明書に加えて、Configuration Manager は、ほとんどのサイト システムの役割に対して、自己署名入り証明書を生成します。 同じサイトに複数のサイト システムの役割のインスタンスがある場合、それらは同じ証明書を共有します。 たとえば、同じサイトに複数の管理ポイントまたは複数の登録ポイントがある場合があります。 この自己署名入り証明書も、SHA-256 を使用し、キーの長さは 2048 ビットです。 これは、それを信頼する必要があるサイト システム サーバー上の信頼されたユーザー ストアにもコピーされます。 次のサイト システムの役割はこの証明書を生成します。  
 
--   アプリケーション カタログ Web サービス ポイント  
+- アプリケーション カタログ Web サービス ポイント  
 
--   アプリケーション カタログ Web サイト ポイント  
+- アプリケーション カタログ Web サイト ポイント  
 
--   資産インテリジェンス同期ポイント  
+- 資産インテリジェンス同期ポイント  
 
--   証明書登録ポイント  
+- 証明書登録ポイント  
 
--   Endpoint Protection ポイント  
+- Endpoint Protection ポイント  
 
--   登録ポイント  
+- 登録ポイント  
 
--   フォールバック ステータス ポイント  
+- フォールバック ステータス ポイント  
 
--   管理ポイント  
+- 管理ポイント  
 
--   マルチキャスト対応の配布ポイント  
+- マルチキャスト対応の配布ポイント  
 
--   帯域外サービス ポイント  
+- 帯域外サービス ポイント  
 
--   レポート サービス ポイント  
+- レポート サービス ポイント  
 
--   ソフトウェアの更新ポイント  
+- ソフトウェアの更新ポイント  
 
--   状態移行ポイント  
+- 状態移行ポイント  
 
--   システム正常性検証ツール ポイント  
+- システム正常性検証ツール ポイント  
 
--   Microsoft Intune コネクタ  
+- Microsoft Intune コネクタ  
 
- これらの証明書は、Configuration Manager によって自動的に管理され、必要に応じて自動的に生成されます。  
+  これらの証明書は、Configuration Manager によって自動的に管理され、必要に応じて自動的に生成されます。  
 
- また、Configuration Manager は配布ポイントから管理ポイントにステータス メッセージを送信するために、クライアント認証証明書も使用します。 管理ポイントが HTTPS クライアント接続用のみに構成されている場合は、PKI 証明書を使用する必要があります。 管理ポイントが HTTP 接続を受け入れる場合は、PKI 証明書を使用するか、自己署名入り証明書 (クライアント認証機能があり、SHA-256 を使用し、キーの長さが 2048 ビット) を使用するオプションを選択できます。  
+  また、Configuration Manager は配布ポイントから管理ポイントにステータス メッセージを送信するために、クライアント認証証明書も使用します。 管理ポイントが HTTPS クライアント接続用のみに構成されている場合は、PKI 証明書を使用する必要があります。 管理ポイントが HTTP 接続を受け入れる場合は、PKI 証明書を使用するか、自己署名入り証明書 (クライアント認証機能があり、SHA-256 を使用し、キーの長さが 2048 ビット) を使用するオプションを選択できます。  
 
 ### <a name="server-communication-between-sites"></a>サイト間のサーバー通信  
  Configuration Manager は、データベースのレプリケーションとファイルベースのレプリケーションを使ってサイト間でデータを転送します。 詳細については、「[System Center Configuration Manager でのエンドポイント間の通信](/sccm/core/plan-design/hierarchy/communications-between-endpoints)」をご覧ください。  
@@ -223,11 +223,11 @@ System Center Configuration Manager では、署名と暗号化を使用して�
 
  Configuration Manager のデータベース レプリケーションは、SQL Server Service Broker を使用し、次のメカニズムを使用して、サイト間でデータを転送します。  
 
--   SQL Server 間の接続: これは、サーバー認証および自己署名入り証明書 (1024 ビット) に Windows 資格情報を使用し、Advanced Encryption Standard (AES) を使用してデータに署名および暗号化します。 サーバー認証機能を持つ PKI 証明書を利用できる場合は、それらが使用されます。 証明書は、コンピューター証明書ストアの個人用ストアに保存されている必要があります。  
+- SQL Server 間の接続:これは、サーバー認証および自己署名入り証明書 (1024 ビット) に Windows 資格情報を使用し、Advanced Encryption Standard (AES) を使用してデータに署名および暗号化します。 サーバー認証機能を持つ PKI 証明書を利用できる場合は、それらが使用されます。 証明書は、コンピューター証明書ストアの個人用ストアに保存されている必要があります。  
 
--   SQL Service Broker: これは、認証に 2048 ビットの自己署名入り証明書を使用し、Advanced Encryption Standard (AES) を使用してデータに署名および暗号化します。 この証明書は、SQL Server マスター データベースに保存されている必要があります。  
+- SQL サービス ブローカー:これは、認証に 2048 ビットの自己署名入り証明書を使用し、Advanced Encryption Standard (AES) を使用してデータに署名および暗号化します。 この証明書は、SQL Server マスター データベースに保存されている必要があります。  
 
- ファイル ベースのレプリケーションは、サーバー メッセージ ブロック (SMB) プロトコルを使用しており、SHA-256 を使用してこのデータ (暗号化されていないが、機密データが含まれていない) に署名します。 このデータを暗号化する場合は、IPsec を使用できますが、Configuration Manager とは別にそれを実装する必要があります。  
+  ファイル ベースのレプリケーションは、サーバー メッセージ ブロック (SMB) プロトコルを使用しており、SHA-256 を使用してこのデータ (暗号化されていないが、機密データが含まれていない) に署名します。 このデータを暗号化する場合は、IPsec を使用できますが、Configuration Manager とは別にそれを実装する必要があります。  
 
 ##  <a name="cryptographic-controls-for-clients-that-use-https-communication-to-site-systems"></a>サイト システムに対して HTTPS 通信を使用するクライアントの暗号化制御  
  サイト システムの役割がクライアント接続を受け入れる場合は、HTTPS 接続および HTTP 接続を受け入れるように、または HTTPS 接続のみを受け入れるように構成できます。 インターネットからの接続を受け入れるサイト システムの役割は、HTTPS を使用したクライアント接続のみを受け入れます。  
@@ -240,17 +240,17 @@ System Center Configuration Manager では、署名と暗号化を使用して�
 ### <a name="communication-that-is-unencrypted-when-clients-use-https-communication"></a>クライアントが HTTPS 通信を使用する場合に暗号化されない通信  
  クライアントが HTTPS を使用してサイト システムと通信する場合、通常、通信は SSL を使用して暗号化されます。 ただし、次のような状況では、クライアントは暗号化を使用せずにサイト システムと通信します。  
 
--   クライアントがイントラネット上での HTTPS 接続に失敗し、代替で HTTP を使用する (サイト システムがこの構成を許可する場合)。  
+- クライアントがイントラネット上での HTTPS 接続に失敗し、代替で HTTP を使用する (サイト システムがこの構成を許可する場合)。  
 
--   次のサイト システムの役割への通信:  
+- 次のサイト システムの役割への通信:  
 
-    -   クライアントが状態メッセージをフォールバック ステータス ポイントに送信する。  
+  -   クライアントが状態メッセージをフォールバック ステータス ポイントに送信する。  
 
-    -   クライアントが PXE 要求を PXE 対応配布ポイントに送信する。  
+  -   クライアントが PXE 要求を PXE 対応配布ポイントに送信する。  
 
-    -   クライアントが通知データを管理ポイントに送信する  
+  -   クライアントが通知データを管理ポイントに送信する  
 
- レポート サービス ポイントは、クライアントの通信モードに関係なく、HTTP または HTTPS を使用するように構成されています。  
+  レポート サービス ポイントは、クライアントの通信モードに関係なく、HTTP または HTTPS を使用するように構成されています。  
 
 ##  <a name="cryptographic-controls-for-clients-chat-use-http-communication-to-site-systems"></a>サイト システムに対して HTTP 通信を使用するクライアントの暗号化制御  
  クライアントがサイト システムの役割に対して HTTP 通信を使用する場合、クライアント認証に PKI 証明書、または Configuration Manager が生成した自己署名入り証明書を使用できます。 Configuration Manager が生成した自己署名入り証明書には、署名と暗号化用のカスタム オブジェクト識別子が付いており、この証明書によってクライアントが識別されます。 Windows Server 2003 を除き、サポートされているすべてのオペレーティング システムの自己署名入り証明書で SHA-256 アルゴリズムが使用され、キーの長さは 2048 ビットです。 Windows Server 2003 では、SHA1 アルゴリズムが使用され、キーの長さは 1024 ビットです。  

@@ -10,16 +10,16 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbba0306cececebeb7a0e20757e7de3b0d4d0e70
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 35312c92a20f8e3842b5ee47dd3b916631671e45
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348336"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417355"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用して、Windows を最新のバージョンにアップグレードする
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 この記事では、Configuration Manager でコンピューター上の OS をアップグレードする手順について説明します。 スタンドアロン メディアやソフトウェア センターなどのさまざまな展開方法の中から選ぶことができます。 一括アップグレード シナリオには、次の機能があります。  
 
@@ -46,21 +46,21 @@ ms.locfileid: "32348336"
 
 OS をアップグレードするタスク シーケンスの次の要件と制限を確認して、ニーズに合うかどうかを確かめます。  
 
-  -   OS のアップグレードの主要タスクに関連するタスク シーケンス手順のみを追加します。 この手順には、主にパッケージ、アプリケーション、または更新プログラムのインストールが含まれます。 コマンド ライン、PowerShell を実行する手順、または動的変数を設定する手順も使用します。  
+- OS のアップグレードの主要タスクに関連するタスク シーケンス手順のみを追加します。 この手順には、主にパッケージ、アプリケーション、または更新プログラムのインストールが含まれます。 コマンド ライン、PowerShell を実行する手順、または動的変数を設定する手順も使用します。  
 
-  -   アップグレード タスク シーケンスを展開する前に、コンピューターにインストールされたドライバーとアプリケーションを確認して、それらが Windows 10 と互換性があることを確かめます。  
+- アップグレード タスク シーケンスを展開する前に、コンピューターにインストールされたドライバーとアプリケーションを確認して、それらが Windows 10 と互換性があることを確かめます。  
 
-  -   次のタスクは、一括アップグレードと互換性がありません。 これらのタスクでは、従来の OS 展開方法を使用する必要があります。  
+- 次のタスクは、一括アップグレードと互換性がありません。 これらのタスクでは、従来の OS 展開方法を使用する必要があります。  
 
-     -   コンピューターのドメイン メンバーシップを変更する。またはローカル管理者グループを更新する。  
+  - コンピューターのドメイン メンバーシップを変更する。またはローカル管理者グループを更新する。  
 
-     -   次のようなコンピューターの基本的な変更を実装する。 
-         - ディスク パーティションを変更する
-         - x86 から x64 にシステム アーキテクチャを変更する
-         - UEFI を実装する (使用できるオプションの詳細については、「[インプレース アップグレード時に BIOS から UEFI に変換する](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)」を参照してください)。
-         - 基本の OS 言語を変更する  
+  - 次のようなコンピューターの基本的な変更を実装する。 
+    - ディスク パーティションを変更する
+    - x86 から x64 にシステム アーキテクチャを変更する
+    - UEFI を実装する (使用できるオプションの詳細については、「[インプレース アップグレード時に BIOS から UEFI に変換する](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)」を参照してください)。
+    - 基本の OS 言語を変更する  
 
-     -   カスタム基本イメージの使用、サードパーティ ディスク暗号化の使用、WinPE オフライン操作の採用などのカスタム要件があります。  
+  - カスタム基本イメージの使用、サードパーティ ディスク暗号化の使用、WinPE オフライン操作の採用などのカスタム要件があります。  
 
 ### <a name="infrastructure-requirements"></a>インフラストラクチャの要件  
 

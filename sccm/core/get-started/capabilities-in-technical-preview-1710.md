@@ -10,16 +10,16 @@ ms.assetid: f4706a58-1f11-4eab-b1eb-3d1a0da02d0f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 730d14c5985c088d964761bb83043f3a34924486
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: e8f7a8fbdbd52a8f872583cf2237a06ee8c1420e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340337"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414720"
 ---
 # <a name="capabilities-in-technical-preview-1710-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1710 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1710 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 このバージョンの Technical Preview をインストールする前に、「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。     
 
@@ -30,8 +30,8 @@ ms.locfileid: "32340337"
     Workaround details.
 -->
 **この Technical Preview の既知の問題:**
--   **Windows 10、バージョン 1709 (Fall Creators Update とも呼ばれます) のサポート**。  この Windows リリース以降、Windows メディアには複数のエディションが含まれます。 オペレーティング システム アップグレード パッケージまたはオペレーティング システム イメージを使用するようにタスク シーケンスを構成する場合は、必ず [Configuration Manager による使用をサポートしているエディション](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client)を選択してください。
--   **サイト サーバーがパッシブ モードの場合、新しいプレビュー バージョンへの更新に失敗します**。 [プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)であるプレビュー バージョンを実行する場合は、プレビュー サイトをこの新しいプレビュー バージョンに正常に更新するため、あらかじめパッシブ モードのサイト サーバーをアンインストールしておく必要があります。 パッシブ モードのサイト サーバーは、サイトの更新を完了したあとに再インストールできます。
+- **Windows 10、バージョン 1709 (Fall Creators Update とも呼ばれます) のサポート**。  この Windows リリース以降、Windows メディアには複数のエディションが含まれます。 オペレーティング システム アップグレード パッケージまたはオペレーティング システム イメージを使用するようにタスク シーケンスを構成する場合は、必ず [Configuration Manager による使用をサポートしているエディション](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client)を選択してください。
+- **サイト サーバーがパッシブ モードの場合、新しいプレビュー バージョンへの更新に失敗します**。 [プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)であるプレビュー バージョンを実行する場合は、プレビュー サイトをこの新しいプレビュー バージョンに正常に更新するため、あらかじめパッシブ モードのサイト サーバーをアンインストールしておく必要があります。 パッシブ モードのサイト サーバーは、サイトの更新を完了したあとに再インストールできます。
 
   パッシブ モードのサイト サーバーをアンインストールするには、次の手順を実行します。
   1. コンソールで **[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
@@ -86,8 +86,7 @@ PowerShell スクリプトの展開は、Technical Preview [Tech Preview 1706](/
 
 
 ## <a name="check-compliance-from-software-center-for-co-managed-devices"></a>ソフトウェア センターから共同管理対象デバイスのコンプライアンスを確認する
-<!-- 1356374 -->
-今回のリリースでは、条件付きアクセスが Intune によって管理されている場合でも、ユーザーはソフトウェア センターを使用して共同管理対象 Windows 10 デバイスのコンプライアンスを確認できます。 詳細については、「[Windows 10 デバイスの共同管理](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)」をご覧ください。
+<!-- 1356374 --> 今回のリリースでは、条件付きアクセスが Intune によって管理されている場合でも、ユーザーはソフトウェア センターを使用して共同管理対象 Windows 10 デバイスのコンプライアンスを確認できます。 詳細については、「[Windows 10 デバイスの共同管理](./capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)」をご覧ください。
 
 
 ## <a name="support-for-exploit-guard"></a>Exploit Guard のサポート
@@ -102,7 +101,7 @@ Exploit Guard ポリシーのコンプライアンス データは、Configurati
 Exploit Guard と特定のコンポーネントおよび規則の詳細については、Windows ドキュメント ライブラリの「[Windows Defender Exploit Guard](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard)」をご覧ください。
 
 ### <a name="prerequisites"></a>[前提条件]
-管理対象デバイスでは、Windows 10 1709 Fall Creators Update 以降を実行し、構成するコンポーネントと規則に応じて次の要件を満たす必要があります。
+マネージド デバイスでは、Windows 10 1709 Fall Creators Update 以降を実行し、構成するコンポーネントと規則に応じて次の要件を満たす必要があります。
 
 |Exploit Guard コンポーネント |追加の前提条件|
 |------------------------|------------------------|
@@ -112,22 +111,21 @@ Exploit Guard と特定のコンポーネントおよび規則の詳細につい
 | ネットワーク保護  |  デバイスで [Windows Defender AV のリアルタイム保護]( https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard)を有効にする必要があります。  |
 
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>Exploit Guard ポリシーを作成する  <!--1355468 -->
-1.  Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[Endpoint Protection]** の順に移動し、**[Windows Defender Exploit Guard]** をクリックします。
-2.  **[ホーム]** タブの **[作成]** グループで、**[Create Exploit Policy]\(Exploit Policy の作成\)** をクリックします。
-3.  **構成項目の作成ウィザード** の **[全般]** ページで、構成項目の名前と、必要に応じて説明を入力します。
-4.  次に、このポリシーで管理する Exploit Guard コンポーネントを選択します。 選択したコンポーネントごとに、追加の詳細を構成できます。
-  - **攻撃の回避:** ブロックまたは監査する Office に関連する脅威、スクリプトに関連する脅威、メールに関連する脅威について構成します。 この規則から特定のファイルまたはフォルダーを除外することもできます。
-  - **フォルダー アクセスの制御:** ブロックと監査を構成し、このポリシーをバイパスできるアプリを追加します。  既定では保護されない追加のフォルダーを指定することもできます。
-  - **悪用に対する保護:** システム プロセスとアプリの悪用を緩和するための設定が記述された XML ファイルを指定します。 これらの設定は、Windows 10 デバイス上の Windows Defender Security Center アプリからエクスポートできます。
-  - **ネットワーク保護**: 疑わしいドメインへのアクセスをブロックまたは監査するネットワーク保護を設定します。
-5.  ポリシーを作成するウィザードを完了します。このポリシーはあとでデバイスに展開できます。
+1. Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[Endpoint Protection]** の順に移動し、**[Windows Defender Exploit Guard]** をクリックします。
+2. **[ホーム]** タブの **[作成]** グループで、**[Create Exploit Policy]\(Exploit Policy の作成\)** をクリックします。
+3. **構成項目の作成ウィザード** の **[全般]** ページで、構成項目の名前と、必要に応じて説明を入力します。
+4. 次に、このポリシーで管理する Exploit Guard コンポーネントを選択します。 選択したコンポーネントごとに、追加の詳細を構成できます。
+   - **攻撃の回避:** ブロックまたは監査する Office に関連する脅威、スクリプトに関連する脅威、メールに関連する脅威について構成します。 この規則から特定のファイルまたはフォルダーを除外することもできます。
+   - **フォルダー アクセスの制御:** ブロックまたは監査を構成してから、このポリシーをバイパスできるアプリを追加します。  既定では保護されない追加のフォルダーを指定することもできます。
+   - **悪用に対する保護:** システム プロセスとアプリの悪用を緩和するための設定が記述された XML ファイルを指定します。 これらの設定は、Windows 10 デバイス上の Windows Defender Security Center アプリからエクスポートできます。
+   - **ネットワーク保護:** 疑わしいドメインへのアクセスをブロックまたは監査するネットワーク保護を設定します。
+5. ポリシーを作成するウィザードを完了します。このポリシーはあとでデバイスに展開できます。
 
 ### <a name="deploy-an-exploit-guard-policy"></a>Exploit Guard ポリシーを展開する     
 Exploit Guard ポリシーを作成したら、Deploy Exploit Guard Policy ウィザードを使用してポリシーを展開します。 そのためには、Configuration Manager コンソールで、**[資産とコンプライアンス]** > **[Endpoint Protection]** の順に移動し、**[Deploy Exploit Guard Policy]\(Exploit Guard ポリシーの展開\)** をクリックします。
 
 ## <a name="limited-support-for-cng-certificates"></a>CNG 証明書の制限付きサポート
-<!-- 1356191 -->
-今回のリリース以降、次のシナリオ向けに [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) 証明書テンプレートを使用できます。
+<!-- 1356191 --> このリリース以降では、次のシナリオに [Cryptography API: Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) 証明書テンプレートを使用できるようになりました。
 
 - HTTPS 管理ポイントを使用したクライアントの登録と通信。   
 - HTTPS 配布ポイントを使用したソフトウェアの配布とアプリケーションの展開。   

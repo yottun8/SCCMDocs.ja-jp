@@ -10,16 +10,16 @@ ms.assetid: 2e68dc12-6776-437a-9138-45cd7d4bf9cf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6353b765f769dfa57ea57926d12bf2b254ba8f68
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4a28f05e813a375f72d15113a01092924eb2245e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343873"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424903"
 ---
 # <a name="capabilities-in-technical-preview-1711-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1711 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+*適用対象:System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1711 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 このバージョンの Technical Preview をインストールする前に、「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。     
 
@@ -30,8 +30,8 @@ ms.locfileid: "32343873"
     Workaround details.
 -->
 **この Technical Preview の既知の問題:**
--   **Windows 10、バージョン 1709 (Fall Creators Update とも呼ばれます) のサポート**。  この Windows リリース以降、Windows メディアには複数のエディションが含まれます。 オペレーティング システム アップグレード パッケージまたはオペレーティング システム イメージを使用するようにタスク シーケンスを構成する場合は、必ず [Configuration Manager による使用をサポートしているエディション](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client)を選択してください。
--   **サイト サーバーがパッシブ モードの場合、新しいプレビュー バージョンへの更新に失敗します**。 [プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)であるプレビュー バージョンを実行する場合は、プレビュー サイトをこの新しいプレビュー バージョンに正常に更新するため、あらかじめパッシブ モードのサイト サーバーをアンインストールしておく必要があります。 パッシブ モードのサイト サーバーは、サイトの更新を完了したあとに再インストールできます。
+- **Windows 10、バージョン 1709 (Fall Creators Update とも呼ばれます) のサポート**。  この Windows リリース以降、Windows メディアには複数のエディションが含まれます。 オペレーティング システム アップグレード パッケージまたはオペレーティング システム イメージを使用するようにタスク シーケンスを構成する場合は、必ず [Configuration Manager による使用をサポートしているエディション](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client)を選択してください。
+- **サイト サーバーがパッシブ モードの場合、新しいプレビュー バージョンへの更新に失敗します**。 [プライマリ サイト サーバーがパッシブ モード](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)であるプレビュー バージョンを実行する場合は、プレビュー サイトをこの新しいプレビュー バージョンに正常に更新するため、あらかじめパッシブ モードのサイト サーバーをアンインストールしておく必要があります。 パッシブ モードのサイト サーバーは、サイトの更新を完了したあとに再インストールできます。
 
   パッシブ モードのサイト サーバーをアンインストールするには、次の手順を実行します。
   1. コンソールで **[管理]** > **[概要]** > **[サイトの構成]** > **[サーバーとサイト システムの役割]** の順に移動し、パッシブ モードのサイト サーバーを選択します。
@@ -84,7 +84,7 @@ ms.locfileid: "32343873"
 
     c. **[Log on requirement]\(ログオン要件\)** に **[ユーザーのログオン状態に関係なし]** を選択します。
 
-    d. **[インストール プログラムの表示]** に **[ノーマル]** を選択します。 **[最小化]**、**[標準]**、または **[最大化]** の 3 つのオプションから選択できます。
+    d. **[インストール プログラムの表示]** に **[ノーマル]** を選択します。 次の 3 つのオプション、**[最小化]**、**[標準]**、または **[最大化]** から選択できます。
 
     e. **[Allow users to interact with the program installation]\(プログラムのインストールの対話をユーザーに許可する\)** ボックスを選択します。
 

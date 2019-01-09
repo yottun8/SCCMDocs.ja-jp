@@ -10,21 +10,21 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 33cd99fd51bd7fabc1ae7f8379bcf2a69a5c4898
-ms.sourcegitcommit: f195190347a98b6c5be957564d33b6c4dfb610d7
+ms.openlocfilehash: 42a19d690e694ad3ca930dbf89fd0420bb5a45b5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39309376"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416811"
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>System Center Configuration Manager のライセンスとブランチ
 
-*適用対象: System Center Configuration Manager (Current Branch)、(Long-Term Servicing Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)、(Long-Term Servicing Branch)*
 
 このトピックでは、2016 年 10 月リリースの System Center Configuration Manager バージョン 1606 で利用可能なインストール オプションのライセンス要件について説明します。 これらのインストール オプションには、Current Branch バージョン 1606、Long-Term Servicing Branch (LTSB)、および Current Branch バージョン 1606 の評価版インストールが含まれます。
 
 **ライセンスの概要:**   
-2016 年 10 月 1 日の時点で System Center Configuration Manager ライセンスに対してソフトウェア アシュアランス (SA) が有効になっているお客様または同等のサブスクリプション権限を持っているお客様には、2016 年 10 月リリースのバージョン 1606 の System Center Configuration Manager を使用する権限があります。 2016 年 10 月 1 日以降、System Center Configuration Manager に対する権限を持つお客様には、インストール時に Current Branch および Long-Term Servicing Branch (LTSB) の 2 つのライセンス オプションが表示されます。
+2016 年 10 月 1 日の時点で System Center Configuration Manager ライセンスに対してソフトウェア アシュアランス (SA) が有効になっているお客様または同等のサブスクリプション権限を持っているお客様には、2016 年 10 月リリースのバージョン 1606 の System Center Configuration Manager を使用する権限があります。 2016 年 10 月 1 日以降、System Center Configuration Manager バージョン 1606 に対する権限を持つお客様には、インストール時に 2 つのライセンス オプション、Current Branch と Long-Term Servicing Branch (LTSB) が表示されます。
 
 
 **ライセンスの詳細:**  
@@ -80,7 +80,7 @@ LTSB は、Current Branch バージョン 1606 をベースにしており、次
 ### <a name="software-assurance-expiration-date"></a>ソフトウェア アシュアランスの有効期限
 System Center Configuration Manager については、2016 年 10 月リリースのバージョン 1606 基準メディア以降、ソフトウェア アシュアランス契約の有効期限の日付を指定できます。 **ソフトウェア アシュアランスの有効期限の日付**は、Configuration Manager のセットアップを実行するとき、またはこのセットアップを後で Configuration Manager コンソールから実行するときに指定できる省略可能な値であり、アラームとして利用できます。
 
->  [!NOTE]   
+> [!NOTE]
 >  Microsoft では、お客様が指定した有効期限の日付を確認していません。また、ライセンスを検証する場合もこの日付を使用しません。  お客様は有効期限を通知するアラームとして、この日付を使用することができます。 Configuration Manager ではオンラインで新しいソフトウェア更新プログラムが提供されていないか定期的に確認します。このような追加の更新プログラムを取得するためにはソフトウェア アシュアランス ライセンスが最新の状態になっている必要があります。このため有効期限を通知するアラーム機能は便利です。    
 
 **日付を指定するには:**

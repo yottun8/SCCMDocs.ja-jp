@@ -10,16 +10,16 @@ ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc1fc6668c61f2eafe04f92fc6b9ea27520ddc43
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d87ef098b096f1dc04bc424a3a100955b12f6f57
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342462"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419021"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1702 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1702 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 このバージョンの Technical Preview をインストールする前に、説明のトピック「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。    
 
@@ -30,9 +30,9 @@ ms.locfileid: "32342462"
 
 このプレビューでは、Configuration Manager コンソールの新しいフィードバック オプションを紹介します。 このフィードバック オプションを使用すると、Configuration Manager UserVoice フィードバック Web サイトから開発チームにフィードバックを直接送信できます。  
 
->**[フィードバック]** オプションは、次の場所に表示されます。
--  各ノードのリボンの [ホーム] タブの左端。  
-   ![リボン](./media/feedback-home.png)
+> **[フィードバック]** オプションは、次の場所に表示されます。
+> -  各ノードのリボンの [ホーム] タブの左端。  
+>    ![リボン](./media/feedback-home.png)
 
 -  コンソールのオブジェクトを右クリックしたとき。   
     ![右クリック オプション](./media/feedback-option.png)   
@@ -63,7 +63,7 @@ ms.locfileid: "32342462"
 
 ## <a name="azurediscovery"></a> Azure Active Directory Domain Services を使用してデバイス、ユーザー、グループを管理する
 
-この Technical Preview バージョンでは、Azure Active Directory (AD) Domain Services 管理ドメインに参加しているデバイスを管理できます。 また、Configuration Manager のさまざまな探索方法を使用して、そのドメイン内のデバイス、ユーザー、およびグループを探索することもできます。
+この Technical Preview バージョンでは、Azure Active Directory (AD) Domain Services マネージド ドメインに参加しているデバイスを管理できます。 また、Configuration Manager のさまざまな探索方法を使用して、そのドメイン内のデバイス、ユーザー、およびグループを探索することもできます。
 
 Technical Preview サイトのインフラストラクチャ、クライアント、および Azure AD Domain Services ドメインは、すべて Azure で実行される必要があります。
 
@@ -86,8 +86,8 @@ Azure AD 内で実行するように Configuration Manager を設定したら、
 使用する方法ごとに、オンプレミス Active Directory の場合に一般的なコンテナーではなく、Azure AD OU 構造を検索するように LDAP クエリを編集します。 そのためには、Azure サブスクリプションの Active Directory を検索するようにクエリを指定する必要があります。  
 
 次の例では、*contoso.onmicrosoft.com* の Azure AD を使用しています。
- - **システムの探索**   
-Azure AD は、**AADDC Computers** OU 以下にデバイスを格納します。  次を構成します。  
+- **システムの探索**   
+  Azure AD は、**AADDC Computers** OU 以下にデバイスを格納します。  次を構成します。  
   - *LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
 
 
@@ -113,7 +113,7 @@ Azure AD の詳細については、以下を参照してください。
 
 ### <a name="try-it-out"></a>試してみましょう
 
-**シナリオ:** 社外に会社データを送信してデータ漏えいを引き起こしている可能性があるアプリ、または過度なデータ使用を引き起こしているアプリを特定します。次に、このようなアプリをアプリのコンプライアンス非対応リストに追加する[条件付きアクセス デバイス コンプライアンス ポリシーを作成します](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy)。 これによって、ユーザーがブロックされたアプリを削除するまで、条件付きアクセスをサポートする会社のリソースに対するアクセスはブロックされます。
+**シナリオ:** 社外に会社データを送信してデータ漏えいを引き起こしている可能性があるアプリ、または過度なデータ使用を引き起こしているアプリを特定します。次に、このようなアプリをアプリのコンプライアンス非準拠リストに追加する[条件付きアクセス デバイス コンプライアンス ポリシーを作成します](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy)。 これによって、ユーザーがブロックされたアプリを削除するまで、条件付きアクセスをサポートする会社のリソースに対するアクセスはブロックされます。
 
 ## <a name="antimalware-client-version-alert"></a>マルウェア対策クライアントのバージョンのアラート
 このプレビュー バージョン以降、管理対象のクライアントの 20% 超 (既定) が期限切れバージョンのマルウェア対策クライアント (つまり Windows Defender または Endpoint Protection クライアント) を使用している場合、Configuration Manager Endpoint Protection でアラートが発生します。
@@ -174,34 +174,34 @@ Windows Update for Business 更新プログラムのコンプライアンス評�
 1. Configuration Manager コンソールの **[ソフトウェア ライブラリ]** > **[オペレーティング システム]** > **[タスク シーケンス]** の順に選択します。
 2. 編集するタスク シーケンスを選択し、**[プロパティ]** をクリックします。
 3. **[ユーザー通知]** タブの **[カスタム テキストを使用する]** をオンにします。
->  [!NOTE]
->  **[これは、インパクトのあるタスク シーケンスです]** がオンの場合にのみ、ユーザー通知テキストを設定できます。
+   > [!NOTE]
+   >  **[これは、インパクトのあるタスク シーケンスです]** がオンの場合にのみ、ユーザー通知テキストを設定できます。
 
 4. 次の設定を構成します (各テキスト ボックスは最大 255 文字です)。
 
-   **ユーザー通知の見出しテキスト**: ソフトウェア センターのユーザー通知に表示する青色のテキストを指定します。 たとえば、既定のユーザー通知では、このセクションに "このコンピューターのオペレーティング システムをアップグレードすることを確認します" のようなテキストが表示されます。
+   **ユーザー通知の見出しテキスト**:ソフトウェア センターのユーザー通知に表示する青色のテキストを指定します。 たとえば、既定のユーザー通知では、このセクションに "このコンピューターのオペレーティング システムをアップグレードすることを確認します" のようなテキストが表示されます。
 
-   **ユーザー通知のメッセージ テキスト**: カスタム通知の本文を入力する 3 つのテキスト ボックスがあります。
-   - 1 つ目のテキスト ボックス: ユーザーの手順など、テキストのメインの本文を指定します。 たとえば、既定のユーザー通知では、このセクションには "オペレーティング システムのアップグレードには時間がかかります。また、コンピューターが数回再起動される場合があります" のようなテキストが表示されます。
-   - 2 つ目のテキスト ボックス: メインの本文の下に表示される太字のテキストを指定します。 たとえば、既定のユーザー通知では、このセクションに "このインプレース アップグレードでは、新しいオペレーティング システムがインストールされ、アプリ、データ、設定が自動的に移行されます" のようなテキストが表示されます。
-   - 3 つ目のテキスト ボックス: 太字のテキストの下の最終行を指定します。 たとえば、既定のユーザー通知では、このセクションに "インストールを開始するには、開始するには [インストール]、 それ以外の場合は [キャンセル] をクリックしてください" のようなテキストが表示されます。   
+   **ユーザー通知のメッセージ テキスト**:カスタム通知の本文を入力する 3 つのテキスト ボックスがあります。
+   - 1 つ目のテキスト ボックス:ユーザーの手順など、テキストのメインの本文を指定します。 たとえば、既定のユーザー通知では、このセクションには "オペレーティング システムのアップグレードには時間がかかります。また、コンピューターが数回再起動される場合があります" のようなテキストが表示されます。
+   - 2 つ目のテキスト ボックス:メインの本文の下に表示される太字のテキストを指定します。 たとえば、既定のユーザー通知では、このセクションに "このインプレース アップグレードでは、新しいオペレーティング システムがインストールされ、アプリ、データ、設定が自動的に移行されます" のようなテキストが表示されます。
+   - 3 つ目のテキスト ボックス:太字のテキストの下の最終行を指定します。 たとえば、既定のユーザー通知では、このセクションに "インストールを開始するには、開始するには [インストール]、 それ以外の場合は [キャンセル] をクリックしてください" のようなテキストが表示されます。   
 
    たとえば、プロパティでは次のようなカスタム通知を構成できます。
 
-   ![タスク シーケンスのカスタム通知](.\media\user-notification.png)
+   ![タスク シーケンスのカスタム通知](./media/user-notification.png)
 
    エンドユーザーがソフトウェア センターからインストールを開くときに、次の通知メッセージが表示されます。
 
-   ![タスク シーケンスのカスタム通知](.\media\user-notification-enduser.png)
+   ![タスク シーケンスのカスタム通知](./media/user-notification-enduser.png)
 
 ### <a name="configure-software-center-properties"></a>ソフトウェア センターのプロパティを構成する
 ソフトウェア センターに表示されるタスク シーケンスの詳細を構成するには、次の手順を実行します。 これは参考目的のみの情報です。  
 1. Configuration Manager コンソールの **[ソフトウェア ライブラリ]** > **[オペレーティング システム]** > **[タスク シーケンス]** の順に選択します。
 2. 編集するタスク シーケンスを選択し、**[プロパティ]** をクリックします。
 3. **[全般]** タブでは、ソフトウェア センターの次の設定を使用できます。
-  - **再起動が必要**: インストール時に再起動が必要かどうかをユーザーに通知します。
-  - **ダウンロード サイズ (MB)**: タスク シーケンスについてソフトウェア センターに表示するサイズ (MB) を指定します。  
-  - **推定実行時間 (分)**: タスク シーケンスについてソフトウェア センターに表示する推定実行時間を分単位で指定します。
+   - **再起動が必要**:インストール時に再起動が必要かどうかをユーザーに通知します。
+   - **ダウンロード サイズ (MB)**:タスク シーケンスについてソフトウェア センターに表示するサイズ (MB) を指定します。  
+   - **推定実行時間 (分)**: タスク シーケンスについてソフトウェア センターに表示する推定実行時間を分単位で指定します。
 
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>アプリケーションをインストールする前に実行中の実行可能ファイルを確認する
@@ -264,8 +264,7 @@ iOS デバイスの構成アイテムで使用できる新しい設定が追加�
 - **予測表示キーボード** (監視モードのみ)
 - **自動修正** (監視モードのみ)
 - **キーボード スペル チェック** (監視モードのみ)
-- **キーボード ショートカット** (監視モードのみ)
-<!--- - **Enterprise app trust settings modification** --->
+- **キーボード ショートカット** (監視モードのみ) <!--- - **Enterprise app trust settings modification** --->
 - **Apple Configurator と iTunes を使ったアプリのインストールのみ** (監視モードのみ)
 - **アプリの自動ダウンロード** (監視モードのみ)
 - **"友達を探す" アプリの設定の変更** (監視モードのみ)
@@ -298,17 +297,17 @@ Android for Work は Android とは別のプラットフォームです。仕事
 #### <a name="enable-android-for-work-management"></a>Android for Work の管理を有効にする
 1. https://accounts.google.com/SignUp で、Android for Work 管理者アカウントとして使用する Google アカウントを作成します。このアカウントは、この Intune テナントのすべての Android for Work 管理タスクに関連付けられます。 これは、Android デバイスを管理する管理者間で共有する Google アカウントにすることができます。 これは、組織が Play for Work コンソールでアプリを管理および発行するときに使用する Google アカウントです。 このアカウントを使用して、Play for Work ストアのアプリを承認し、アカウント名とパスワードを追跡します。
 2. Android の登録を有効にするには、Google アカウントを Configuration Manager で管理される Intune テナントにバインドします。
-  1. **[管理]** > **[概要]** > **[Cloud Services]** > **[Microsoft Intune サブスクリプション]** の順に選択し、Intune サブスクリプションを選択します。
-  2. リボンの **[プラットフォームの構成]** > **[Android]** をクリックし、**[Android の登録を有効にする]** をオンにします。
-  3. リボンの **[プラットフォームの構成]** > **[Android for Work]** をクリックします。
-  4. ダイアログ ボックスの **[Intune コンソールで Android for Work を構成する]** をクリックします。 Web ブラウザーで Intune コンソールが開きます。
-  5. Intune 管理者の資格情報を使用して Intune ポータルにログインします。
-  6. **[構成]** をクリックして Google Play の Android for Work Web サイトを開きます。
-  7. Google のサインイン コンポーネントで、手順 1 の Google アカウントの資格情報を入力し、会社情報を入力します。
+   1. **[管理]** > **[概要]** > **[Cloud Services]** > **[Microsoft Intune サブスクリプション]** の順に選択し、Intune サブスクリプションを選択します。
+   2. リボンの **[プラットフォームの構成]** > **[Android]** をクリックし、**[Android の登録を有効にする]** をオンにします。
+   3. リボンの **[プラットフォームの構成]** > **[Android for Work]** をクリックします。
+   4. ダイアログ ボックスの **[Intune コンソールで Android for Work を構成する]** をクリックします。 Web ブラウザーで Intune コンソールが開きます。
+   5. Intune 管理者の資格情報を使用して Intune ポータルにログインします。
+   6. **[構成]** をクリックして Google Play の Android for Work Web サイトを開きます。
+   7. Google のサインイン コンポーネントで、手順 1 の Google アカウントの資格情報を入力し、会社情報を入力します。
 3. Intune ポータルに戻ると、Android for Work が有効になり、Android for Work デバイスの 3 つの登録オプションが表示されます。
-  - **すべてのデバイスを Android として管理する** - (無効) Android for Work をサポートするデバイスを含め、すべての Android デバイスが従来の Android デバイスとして登録されます。
-  - **サポートされているデバイスを Android for Work として管理する** - (有効) Android for Work をサポートするすべてのデバイスが Android for Work デバイスとして登録されます。 Android for Work をサポートしない Android デバイスは、従来の Android デバイスとして登録されます。
-  - **これらのグループに所属するユーザーのサポートされているデバイスのみを Android for Work として管理する** - (テスト) Android for Work の管理を特定のユーザー グループを対象にしてみましょう。 選択したグループのメンバーのうち、Android for Work をサポートするデバイスを登録しているメンバーのみが、Android for Work デバイスとして登録されます。 それ以外は Android デバイスとして登録されます。
+   - **すべてのデバイスを Android として管理する** - (無効) Android for Work をサポートするデバイスを含め、すべての Android デバイスが従来の Android デバイスとして登録されます。
+   - **サポートされているデバイスを Android for Work として管理する** - (有効) Android for Work をサポートするすべてのデバイスが Android for Work デバイスとして登録されます。 Android for Work をサポートしない Android デバイスは、従来の Android デバイスとして登録されます。
+   - **これらのグループに所属するユーザーのサポートされているデバイスのみを Android for Work として管理する** - (テスト) Android for Work の管理を特定のユーザー グループを対象にしてみましょう。 選択したグループのメンバーのうち、Android for Work をサポートするデバイスを登録しているメンバーのみが、Android for Work デバイスとして登録されます。 それ以外は Android デバイスとして登録されます。
   
 > [!NOTE]
 > ある既知の問題では、**[これらのグループに所属するユーザーのサポートされているデバイスのみを Android for Work として管理する]** オプションが期待どおり動作しません。 指定の Azure AD グループにあるユーザーのデバイスが Android for Work ではなく Android として登録されます。 Android for Work をテストするには、**[Manage all supported devices as Android for Work (サポートされているすべてのデバイスを Android for Work として管理する)]** を利用する必要があります。
@@ -321,7 +320,7 @@ Android for Work は Android とは別のプラットフォームです。仕事
 #### <a name="approve-and-deploy-android-for-work-apps"></a>Android for Work アプリの承認と展開
 Play for Work ストアのアプリを承認し、Configuration Manager コンソールと同期し、管理対象の Android for Work デバイスに展開するには、次の手順を実行します。 アプリをユーザーの仕事用プロファイルに展開するには、Play for Work でアプリを承認し、アプリを Configuration Manager コンソールと同期する必要があります。
 
-1. ブラウザーを開き、https://play.google.com/work に移動します。
+1. ブラウザーを開き、 https://play.google.com/work に移動します。
 2. Intune テナントにバインドした Google 管理者アカウントを使用してサインインします。
 3. 環境に展開するアプリを参照し、各アプリについて **[承認]** をクリックします。
 4. Configuration Manager コンソールで **[管理者]** > **[概要]** > **[クラウド サービス]** > **[Android for Work]** の順にクリックし、**[同期]** をクリックします。

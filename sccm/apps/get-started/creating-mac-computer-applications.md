@@ -10,16 +10,16 @@ ms.assetid: ab1aecdd-d943-44f5-b0a9-e8fe7439e5d6
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3cbb7281cd7dd39a32a71105fe173f868947eef9
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 1ff2b135d38c819804cc7873effa3bff5f9254e7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338246"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422098"
 ---
 # <a name="create-mac-computer-applications-with-system-center-configuration-manager"></a>System Center Configuration Manager で Mac コンピューター アプリケーションを作成する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 Mac コンピューター用アプリケーションを作成して展開するときに、以下の考慮事項について留意してください。  
 
@@ -46,18 +46,19 @@ Mac コンピューター用アプリケーションを作成して展開する�
 ## <a name="steps-to-create-and-deploy-an-application"></a>アプリケーションの作成手順と展開手順  
  次の表に、Mac コンピューターのアプリケーションを作成および展開するための手順、詳細、および情報を示します。  
 
-|手順|詳細|  
-|----------|-------------|  
-|**手順 1**: Mac アプリケーションを Configuration Manager 用に準備する|Mac ソフトウェア パッケージから Configuration Manager アプリケーションを作成するには、その前に Mac コンピューターで **CMAppUtil** ツールを使用して、Mac ソフトウェアを Configuration Manager **.cmmac** ファイルに変換する必要があります。|  
-|**手順 2**: Mac ソフトウェアが含まれた Configuration Manager アプリケーションを作成する|**アプリケーションの作成ウィザード**を使用して、Mac ソフトウェアのアプリケーションを作成します。|  
-|**手順 3**: Mac アプリケーションの展開の種類を作成する|この手順は、この情報をアプリケーションから自動的にインポートしなかった場合のみ必要です。|  
-|**手順 4**: Mac アプリケーションを展開する|**ソフトウェアの展開ウィザード**を使用して、Mac コンピューターにアプリケーションを展開します。|  
-|**手順 5**: Mac アプリケーションの展開を監視する|Mac コンピューターのアプリケーションの展開が成功したかどうかを監視します。|  
+
+|                                         手順                                          |                                                                                                             詳細                                                                                                              |
+|---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|            **手順 1**:Mac アプリケーションを Configuration Manager 用に準備する             | Mac ソフトウェア パッケージから Configuration Manager アプリケーションを作成するには、その前に Mac コンピューターで **CMAppUtil** ツールを使用して、Mac ソフトウェアを Configuration Manager<strong>.cmmac</strong> ファイルに変換する必要があります。 |
+| **手順 2**:Mac ソフトウェアが含まれた Configuration Manager アプリケーションを作成する |                                                                       **アプリケーションの作成ウィザード**を使用して、Mac ソフトウェアのアプリケーションを作成します。                                                                       |
+|             **手順 3**:Mac アプリケーションの展開の種類を作成する              |                                                              この手順は、この情報をアプリケーションから自動的にインポートしなかった場合のみ必要です。                                                               |
+|                        **手順 4**:Mac アプリケーションを展開する                         |                                                                          **ソフトウェアの展開ウィザード**を使用して、Mac コンピューターにアプリケーションを展開します。                                                                          |
+|               **手順 5**:Mac アプリケーションの展開を監視する               |                                                                                 Mac コンピューターのアプリケーションの展開が成功したかどうかを監視します。                                                                                 |
 
 ## <a name="supplemental-procedures-to-create-and-deploy-applications-for-mac-computers"></a>Mac コンピューターのアプリケーションを作成および展開するための補足手順  
  Configuration Manager で管理する Mac コンピューターのアプリケーションを作成および展開するには、次の手順に従います。  
 
-###  <a name="step-1-prepare-mac-applications-for-configuration-manager"></a>手順 1: Mac アプリケーションを Configuration Manager に準備する  
+###  <a name="step-1-prepare-mac-applications-for-configuration-manager"></a>手順 1: Mac アプリケーションを Configuration Manager 用に準備する  
  Mac コンピューターに Configuration Manager アプリケーションを作成および展開するためのプロセスは、Windows コンピューターの展開プロセスと同様です。 ただし、Mac の展開の種類が含まれる Configuration Manager アプリケーションを作成する前に、**CMAppUtil** ツールを使用してアプリケーションを準備する必要があります。 このツールは、Mac クライアント インストール ファイルと共にダウンロードされます。 **CMAppUtil** ツールを使用すると、次の Mac パッケージの検出データを含め、アプリケーションに関する情報を収集できます。  
 
 -   Apple ディスク イメージ (.dmg)  
@@ -132,7 +133,7 @@ Configuration Manager で管理する Mac コンピューターのアプリケ�
 
 11. Configuration Manager コンソールの **[アプリケーション]** ノードに、新しいアプリケーションが表示されます。  
 
-###  <a name="step-3-create-a-deployment-type-for-the-mac-application"></a>手順 3: Mac アプリケーションの展開の種類を作成する  
+###  <a name="step-3-create-a-deployment-type-for-the-mac-application"></a>手順 3:Mac アプリケーションの展開の種類を作成する  
  Configuration Manager で管理する Mac コンピューターの展開の種類を作成するには、次の手順に従います。  
 
 > [!NOTE]  
@@ -206,7 +207,7 @@ Configuration Manager で管理する Mac コンピューターのアプリケ�
 
  詳細については、「[アプリケーションの展開](../../apps/deploy-use/deploy-applications.md)」をご覧ください。  
 
-###  <a name="step-5-monitor-the-deployment-of-the-mac-application"></a>手順 5: Mac アプリケーションの展開を監視する  
+###  <a name="step-5-monitor-the-deployment-of-the-mac-application"></a>手順 5:Mac アプリケーションの展開を監視する  
  Windows コンピューターへのアプリケーション展開の監視の場合と同じプロセスを使用して、Mac コンピューターへのアプリケーション展開を監視できます。  
 
  詳細については、「[アプリケーションの監視](/sccm/apps/deploy-use/monitor-applications-from-the-console)」を参照してください。  

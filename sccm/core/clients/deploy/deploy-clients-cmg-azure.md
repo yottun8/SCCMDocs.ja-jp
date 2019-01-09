@@ -10,16 +10,16 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 490e5a614a98633629df98abcd554b02cec1261a
-ms.sourcegitcommit: ae03ad403b1732a5a61dec981e3a3010a0f09188
+ms.openlocfilehash: b722187a895a71b4195200354180cdbc8b2813e6
+ms.sourcegitcommit: 12b71da551350c99c5916df3629e33e31040db15
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51860248"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53530916"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>認証のため Azure AD を使用して、Configuration Manager の Windows 10 クライアントをインストールして割り当てる
 
-Azure AD 認証を使用して Windows 10 デバイスで Configuration Manager クライアントをインストールするには、Azure Active Directory (Azure AD) と Configuration Manager を統合します。 クライアントは、HTTPS が有効な管理ポイントと直接通信するイントラネット上に配置することができます。 CMG を通じて、あるいはインターネット ベース管理ポイントでインターネット ベースの通信を行うこともできます。 このプロセスでは Azure AD を使用して、Configuration Manager サイトに対してクライアントを認証します。 Azure AD を使用すると、クライアント認証証明書を構成して使用する必要がなくなります。
+Azure AD 認証を使用して Windows 10 デバイスで Configuration Manager クライアントをインストールするには、Azure Active Directory (Azure AD) と Configuration Manager を統合します。 クライアントは、HTTPS が有効な管理ポイントまたは拡張 HTTP 用に有効化されたサイト内の任意の管理ポイントと直接通信するイントラネット上に配置することができます。 CMG を通じて、あるいはインターネット ベース管理ポイントでインターネット ベースの通信を行うこともできます。 このプロセスでは Azure AD を使用して、Configuration Manager サイトに対してクライアントを認証します。 Azure AD を使用すると、クライアント認証証明書を構成して使用する必要がなくなります。
 
 
 
@@ -62,9 +62,9 @@ Azure AD 認証を使用して Windows 10 デバイスで Configuration Manager 
 
 1.  「[クライアント設定を構成する方法](/sccm/core/clients/deploy/configure-client-settings)」の情報を使用して、**[クラウド サービス]** セクションの次のクライアント設定を構成します。  
 
-    - **クラウド配布ポイントへのアクセスを許可する**: この設定を有効にすると、インターネットベースのデバイスが、構成マネージャー クライアントのインストールに必要なコンテンツを取得できるようになります。 クラウド配布ポイントでコンテンツを使用できない場合、デバイスは CMG からコンテンツを取得できます。 クライアント インストール ブートストラップでは、CMG にフォールバックするまで 4 時間、クラウド配布ポイントを再試行します。<!--495533-->  
+    - **クラウド配布ポイントへのアクセスを許可する**:この設定を有効にすると、インターネットベースのデバイスが、構成マネージャー クライアントのインストールに必要なコンテンツを取得できるようになります。 クラウド配布ポイントでコンテンツを使用できない場合、デバイスは CMG からコンテンツを取得できます。 クライアント インストール ブートストラップでは、CMG にフォールバックするまで 4 時間、クラウド配布ポイントを再試行します。<!--495533-->  
 
-    - **[新しい Windows 10 ドメインに参加しているデバイスを自動的に Azure Active Directory に登録する]**: **[はい]** または **[いいえ]** に設定します。 既定の設定は **[はい]** です。 この動作は、Windows 10 バージョン 1709 の既定でもあります。
+    - **[新しい Windows 10 ドメインに参加しているデバイスを自動的に Azure Active Directory に登録する]**:**[はい]** または **[いいえ]** に設定します。 既定の設定は **[はい]** です。 この動作は、Windows 10 バージョン 1709 の既定でもあります。
 
     - **[クライアントでクラウド管理ゲートウェイを使用できるようにする]**: **[はい]** (既定) または **[いいえ]** に設定します。  
 

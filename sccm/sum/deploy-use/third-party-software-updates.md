@@ -10,16 +10,16 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbcf7a7d76146cc11dd4bb57b86fe4752c694e02
-ms.sourcegitcommit: 1e782268d6c0211bd854b5860de72cfd6c6985c6
+ms.openlocfilehash: 32aced9e14f98008dfd769564c553370d067896e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44697040"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423101"
 ---
 # <a name="enable-third-party-updates"></a>サード パーティの更新プログラムを有効にする 
 
-*適用対象: System Center Configuration Manager バージョン 1806*
+*適用対象:System Center Configuration Manager バージョン 1806*
 
 バージョン 1806 以降では、Configuration Manager コンソールの **[サード パーティのソフトウェア更新プログラムのカタログ]** ノードで、サード パーティのカタログをサブスクライブし、その更新プログラムをソフトウェア更新ポイント (SUP) に発行してからクライアントに展開できます。  <!--1357605, 1352101, 1358714-->
 
@@ -53,7 +53,7 @@ ms.locfileid: "44697040"
 4. リモート SUP サーバー上で信頼された発行元ストアと信頼されたルート ストアへの自己署名済みの WSUS 署名証明書のインストールを有効にするには:
    - **WSUS サーバー接続アカウント**に、SUP サーバーに対するリモート管理アクセス許可が必要です。
 
-    この要件を満たせない場合は、証明書をローカル コンピューターの WSUS ストアから信頼された発行元ストアと信頼されたルート ストアにエクスポートします。 
+     この要件を満たせない場合は、証明書をローカル コンピューターの WSUS ストアから信頼された発行元ストアと信頼されたルート ストアにエクスポートします。 
 
 > [!NOTE] 
 >SUP のサイト システムの役割プロパティにある **[プロキシとアカウントの設定]** タブを表示することで、**WSUS サーバー接続アカウント**を識別できます。 アカウントが指定されていない場合は、サイト サーバーのコンピューター アカウントが使用されます。
@@ -107,12 +107,12 @@ PKI 証明書を使用する必要がない場合は、サード パーティの
 
      ![サード パーティの更新プログラムのカスタム カタログの追加](media/third-party-updates-custom-catalog.png)
 1. **[全般]** ページで、次の項目を指定します。 
-    - **[ダウンロード URL]**: カスタム カタログの有効な HTTPS アドレス。
-    - **[発行者]**: カタログを発行している組織の名前。 
-    - **[名前]**: Configuration Manager コンソールに表示されるカタログの名前。 
-    - **[説明]**: カタログの説明。 
-    - **[サポート URL]** (省略可能): カタログのヘルプを取得するための Web サイトの有効な HTTPS アドレス。 
-    - **[サポートの連絡先]** (省略可能): カタログのヘルプを得るための連絡先情報。 
+    - **[ダウンロード URL]**:カスタム カタログの有効な HTTPS アドレス。
+    - **[発行者]**:カタログを発行している組織の名前。 
+    - **[名前]**:Configuration Manager コンソールに表示されるカタログの名前。 
+    - **説明**:カタログの説明。 
+    - **[サポート URL]** (省略可能):カタログのヘルプを取得するための Web サイトの有効な HTTPS アドレス。 
+    - **[サポートの連絡先]** (省略可能):カタログのヘルプを得るための連絡先情報。 
 2. **[次へ]** をクリックして、カタログの概要を確認し、操作を続行して**サード パーティのソフトウェア更新プログラムのカスタム カタログ ウィザード**を完了します。
 
 
@@ -122,17 +122,17 @@ Configuration Manager コンソールでサード パーティのカタログを
 1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** ワークスペースに移動します。 **[ソフトウェア更新プログラム]** を展開し、**[サード パーティのソフトウェア更新プログラムのカタログ]** ノードを選択します。  
 2. サブスクライブするカタログを選択し、リボンの **[カタログのサブスクライブ]** をクリックします。 
     ![サード パーティの更新プログラムのカスタム カタログの追加](media/third-party-updates-subscribe.png)
-1. カタログの証明書を確認して承認します。  
-    >[!NOTE]
-    
-    > サード パーティのソフトウェア更新プログラム カタログをサブスクライブすると、ウィザードで確認して承認した証明書がサイトに追加されます。 この証明書の種類は、**サード パーティ製のソフトウェア更新プログラム カタログ**です。 これは、**[管理]** ワークスペースの **[セキュリティ]** の下にある **[証明書]** ノードから管理できます。  
-2. ウィザードを完了します。 初期サブスクリプションの後、数分でカタログのダウンロードが開始されます。 
+3. カタログの証明書を確認して承認します。  
+   > [!NOTE]
+   > 
+   > サード パーティのソフトウェア更新プログラム カタログをサブスクライブすると、ウィザードで確認して承認した証明書がサイトに追加されます。 この証明書の種類は、**サード パーティ製のソフトウェア更新プログラム カタログ**です。 これは、**[管理]** ワークスペースの **[セキュリティ]** の下にある **[証明書]** ノードから管理できます。  
+4. ウィザードを完了します。 初期サブスクリプションの後、数分でカタログのダウンロードが開始されます。 
     - カタログは 7 日おきに自動的に同期されます。
     - 強制的に同期するには、リボンの **[今すぐ同期]** をクリックします。
-3. カタログがダウンロードされた後、WSUS データベースから Configuration Manager データベースに製品メタデータを同期する必要があります。 製品情報を同期するには、[ソフトウェア更新プログラムの同期を手動で開始](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization)します。
-4. 製品情報が同期されたら、Configuration Manager に[必要な製品を同期するように SUP を構成](../get-started/configure-classifications-and-products.md#to-configure-classifications-and-products-to-synchronize)します。  
-5. Configuration Manager に新しい製品の更新プログラムを同期するには、[ソフトウェア更新プログラムの同期を手動で開始](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization)します。  
-6. 同期が完了したら、**[すべての更新プログラム]** ノードでサード パーティの更新プログラムを確認できます。 これらの更新プログラムは、発行するように選択するまで、**メタデータのみ**の更新プログラムとして発行されます。 
+5. カタログがダウンロードされた後、WSUS データベースから Configuration Manager データベースに製品メタデータを同期する必要があります。 製品情報を同期するには、[ソフトウェア更新プログラムの同期を手動で開始](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization)します。
+6. 製品情報が同期されたら、Configuration Manager に[必要な製品を同期するように SUP を構成](../get-started/configure-classifications-and-products.md#to-configure-classifications-and-products-to-synchronize)します。  
+7. Configuration Manager に新しい製品の更新プログラムを同期するには、[ソフトウェア更新プログラムの同期を手動で開始](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization)します。  
+8. 同期が完了したら、**[すべての更新プログラム]** ノードでサード パーティの更新プログラムを確認できます。 これらの更新プログラムは、発行するように選択するまで、**メタデータのみ**の更新プログラムとして発行されます。 
      - 青い矢印の付いたアイコンは、メタデータのみのソフトウェア更新プログラムを表します。 ![メタデータのみのソフトウェア更新プログラムのアイコン](media/MetadataOnly.png)
 
 

@@ -2,7 +2,7 @@
 title: リリース ノート
 titleSuffix: Configuration Manager
 description: 製品でまだ修正されていないまたは Microsoft サポート技術情報の記事で説明されていない緊急の問題について説明します。
-ms.date: 11/27/2018
+ms.date: 12/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 41039ec31c11573424f044df009e9c364491b5f7
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 41b068da0524333ae25ea2228a71bf27344f4f58
+ms.sourcegitcommit: f5fa9e657350ceb963a7928497d2adca9caef3d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456347"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53748495"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager のリリース ノート
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 Configuration Manager 製品のリリース ノートには、緊急の問題のみが記載されています。 これらの問題はまだ、製品で修正されていないか、または Microsoft サポート技術情報の記事で詳しく説明されていません。  
 
@@ -35,7 +35,7 @@ Configuration Manager 製品のリリース ノートには、緊急の問題の
 
 
 
-## <a name="setup-and-upgrade"></a>セットアップとアップグレード  
+## <a name="set-up-and-upgrade"></a>セットアップしてアップグレードする  
 
 
 ### <a name="when-using-redistributable-files-from-the-cdlatest-folder-setup-fails-with-a-manifest-verification-error"></a>CD.Latest フォルダーの再頒布可能ファイルを使用すると、マニフェスト検証エラーでセットアップが失敗する
@@ -54,7 +54,7 @@ Configuration Manager 製品のリリース ノートには、緊急の問題の
 
 ### <a name="setup-command-line-option-joinceip-must-be-specified"></a>セットアップのコマンドライン オプション JoinCEIP を指定する必要がある
 <!--510806-->
-*適用対象: Configuration Manager バージョン 1802*
+*適用対象:Configuration Manager バージョン 1802*
 
 Configuration Manager バージョン 1802 以降では、カスタマー エクスペリエンス向上プログラム (CEIP) 機能が製品から削除されます。 コマンドラインまたは無人スクリプトから新しいサイトの[インストールを自動化する](/sccm/core/servers/deploy/install/command-line-options-for-setup)ときに、セットアップから必要なパラメーターが不足しているというエラーが返されます。 
 
@@ -67,7 +67,7 @@ Configuration Manager バージョン 1802 以降では、カスタマー エク
 
 ### <a name="cloud-service-manager-component-stopped-on-site-server-in-passive-mode"></a>パッシブ モードのサイト サーバー上でクラウド サービス マネージャー コンポーネントが停止している
 <!--VSO 2858826, SCCMDocs issue 772-->
-*適用対象: Configuration Manager バージョン 1806*
+*適用対象:Configuration Manager バージョン 1806*
 
 [サービス接続ポイント](/sccm/core/servers/deploy/configure/about-the-service-connection-point)が[パッシブ モードのサイト サーバー](/sccm/core/servers/deploy/configure/site-server-high-availability)と同じ場所にある場合、[クラウド管理ゲートウェイ](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)の展開および監視は開始しません。 クラウド サービス マネージャー コンポーネント (SMS_CLOUD_SERVICES_MANAGER) は停止状態になります。
 
@@ -89,9 +89,33 @@ Configuration Manager バージョン 1802 以降では、カスタマー エク
 
 ## <a name="software-updates"></a>ソフトウェア更新プログラム
 
+### <a name="security-roles-are-missing-for-phased-deployments"></a>段階的展開のためのセキュリティ ロールがない
+<!--3479337, SCCMDocs-pr issue 3095-->
+*適用対象:Configuration Manager バージョン 1810*
+
+**OS 展開マネージャー**組み込みセキュリティ ロールには、[段階的展開](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)のためのセキュリティ ロールがあります。 次のロールには、これらのアクセス許可がありません。  
+
+- **アプリケーション管理者**  
+- **アプリケーション展開マネージャー**  
+- **ソフトウェア更新マネージャー**  
+
+**アプリ作成者**ロールは段階的展開のためのアクセス許可を持っているように見えますが、展開を作成することはできません。 
+
+これらのロールのいずれかを持つユーザーは、段階的な展開の作成ウィザードを開始して、アプリケーションまたはソフトウェアの更新プログラムの段階的な展開を表示することはできます。 ウィザードを完了したり、既存の展開を変更したりすることはできません。
+
+#### <a name="workaround"></a>回避策
+カスタム セキュリティ ロールを作成します。 既存のセキュリティ ロールをコピーし、**段階的展開**オブジェクト クラスに対する次のアクセス許可を追加します。
+- 作成  
+- 削除  
+- 変更  
+- 読み取り  
+
+詳しくは、「[カスタム セキュリティ ロールの作成](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole)」をご覧ください
+
+
 ### <a name="changing-office-365-client-setting-doesnt-apply"></a>Office 365 クライアント設定の変更が適用されない 
 <!--511551-->
-*適用対象: Configuration Manager バージョン 1802*  
+*適用対象:Configuration Manager バージョン 1802*  
 
 **[Enable Management of the Office 365 Client Agent]\(Office 365 クライアント エージェントの管理を有効にする\)** を `Yes` に構成した状態で、[クライアント設定](/sccm/core/clients/deploy/about-client-settings#enable-management-of-the-office-365-client-agent)をデプロイします。 その後で、その設定を `No` または `Not Configured` に変更します。 Office 365 更新プログラムは、ターゲットのクライアント上でポリシーを更新した後も、Configuration Manager によって管理されます。 
 
@@ -109,7 +133,7 @@ Configuration Manager バージョン 1802 以降では、カスタマー エク
 
 ### <a name="you-can-no-longer-deploy-windows-phone-81-vpn-profiles-to-windows-10"></a>Windows Phone 8.1 の VPN プロファイルを Windows 10 に展開できなくなった
 <!-- 503274  -->
-*適用対象: Configuration Manager バージョン 1710*
+*適用対象:Configuration Manager バージョン 1710*
 
 Windows Phone 8.1 ワークフローを使用して、Windows 10 デバイスにも適用可能な VPN プロファイルを作成することができなくなりました。 これらのプロファイルについては、[サポートされているプラットフォーム] ページが作成ウィザードに表示されなくなります。 バックエンドでは Windows Phone 8.1 が自動的に選択されます。 プロファイルのプロパティでは [サポートされているプラットフォーム] ページを使用できますが、Windows 10 のオプションは表示されません。
 

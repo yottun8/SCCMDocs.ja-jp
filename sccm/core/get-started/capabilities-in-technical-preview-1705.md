@@ -10,16 +10,16 @@ ms.assetid: 00684289-d21a-45f8-b1e3-c5c787d73096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 49205ac1d1fc2dd20cbd4a0844632c5f3d181e45
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a9a5aeb35137a74152333a78e95781fb727eecdf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341901"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421605"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1705 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+*適用対象:System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1705 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 このバージョンの Technical Preview をインストールする前に、「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。    
 
@@ -81,15 +81,17 @@ ms.locfileid: "32341901"
 
 **コマンド ライン パラメーター**  
 
-| パラメーター        |説明                 |  
-|------------------|----------------------------|  
-|**-S &lt;最上位層サイトの SQL Server の FQDN>** | *必須* <br> 階層の最上位層サイトのサイト データベースをホストする SQL Server の FQDN を指定する必要があります。    |  
-| **-D &lt;データベース名>**                        | *必須* <br> 最上位層サイト データベースの名前を指定する必要があります。  |  
-| **-P &lt;パッケージ GUID>**                         | *必須* <br> リセットする更新プログラム パッケージの GUID を指定する必要があります。   |  
-| **-I &lt;SQL Server インスタンス名>**             | *省略可能* <br> サイト データベースをホストする SQL Server のインスタンスを識別するには、これを使用します。 |
-| **-FDELETE**                              | *省略可能* <br> 正常にダウンロードした更新プログラム パッケージの削除を強制するには、これを使用します。 |  
+
+|                        パラメーター                         |                                                            説明                                                            |
+|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| **-S &lt;最上位層サイトの SQL Server の FQDN>** | *必須* <br> 階層の最上位層サイトのサイト データベースをホストする SQL Server の FQDN を指定する必要があります。 |
+|                **-D &lt;データベース名>**                 |                             *必須* <br> 最上位層サイト データベースの名前を指定する必要があります。                             |
+|                 **-P &lt;パッケージ GUID>**                 |                        *必須* <br> リセットする更新プログラム パッケージの GUID を指定する必要があります。                        |
+|           **-I &lt;SQL Server インスタンス名>**           |                   *省略可能* <br> サイト データベースをホストする SQL Server のインスタンスを識別するには、これを使用します。                   |
+|                       **-FDELETE**                       |                      *省略可能* <br> 正常にダウンロードした更新プログラム パッケージの削除を強制するには、これを使用します。                      |
+
  **例:**  
- 一般的なシナリオで、ダウンロードに関する問題のある更新プログラムをリセットするとします。 SQL Server の FQDN が *server1.fabrikam.com* で、サイト データベースが *CM_XYZ*、パッケージ GUID が *61F16B3C-F1F6-4F9F-8647-2A524B0C802C* の場合、  次を実行します: ***CMUpdateReset.exe-s server1.fabrikam.com-d CM_XYZ-p 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+ 一般的なシナリオで、ダウンロードに関する問題のある更新プログラムをリセットするとします。 SQL Server の FQDN が *server1.fabrikam.com* で、サイト データベースが *CM_XYZ*、パッケージ GUID が *61F16B3C-F1F6-4F9F-8647-2A524B0C802C* の場合、  次を実行します: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
  より極端なシナリオで、問題のある更新プログラム パッケージの削除を強制するとします。 SQL Server の FQDN が *server1.fabrikam.com* で、サイト データベースが *CM_XYZ*、パッケージ GUID が *61F16B3C-F1F6-4F9F-8647-2A524B0C802C* の場合、  次を実行します: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
@@ -114,13 +116,13 @@ ms.locfileid: "32341901"
 ## <a name="improvements-for-sql-server-always-on-availability-groups"></a>SQL Server Always On 可用性グループの機能強化  
 このリリースでは、Configuration Manager で使用する SQL Server Always On 可用性グループで非同期コミット レプリカを使用できるようになりました。  これにより、オフサイトの (リモート) バックアップとして使用する追加のレプリカを可用性グループに追加して、それらをディザスター リカバリー シナリオで使用することができます。  
 
--   Configuration Manager は、同期レプリカを復旧するために非同期コミット レプリカの使用をサポートしています。  これを実行する方法については、バックアップと回復に関するトピックで[サイト データベースの回復オプション](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)を参照してください。
+- Configuration Manager は、同期レプリカを復旧するために非同期コミット レプリカの使用をサポートしています。  これを実行する方法については、バックアップと回復に関するトピックで[サイト データベースの回復オプション](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)を参照してください。
 
--   このリリースでは、非同期コミット レプリカをサイト データベースとして使用するためのフェールオーバーはサポートされていません。
-> [!CAUTION]  
-> Configuration Manager では、非同期コミット レプリカが最新のものかどうかを確認するために状態を検証せず、また、[このようなレプリカは意図的に非同期にできる](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes)ため、非同期コミット レプリカをサイト データベースとして使用すると、サイトとデータの整合性が危険にさらされる場合があります。  
+- このリリースでは、非同期コミット レプリカをサイト データベースとして使用するためのフェールオーバーはサポートされていません。
+  > [!CAUTION]  
+  > Configuration Manager では、非同期コミット レプリカが最新のものかどうかを確認するために状態を検証せず、また、[このようなレプリカは意図的に非同期にできる](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes)ため、非同期コミット レプリカをサイト データベースとして使用すると、サイトとデータの整合性が危険にさらされる場合があります。  
 
--   可用性グループでは、使用する SQL Server のバージョンでサポートされているのと同じ数と種類のレプリカを使用できます    (以前のサポートでは、同期コミット レプリカは 2 つに制限されていました)。
+- 可用性グループでは、使用する SQL Server のバージョンでサポートされているのと同じ数と種類のレプリカを使用できます    (以前のサポートでは、同期コミット レプリカは 2 つに制限されていました)。
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>非同期コミット レプリカを構成する
 非同期レプリカを[ Configuration Manager で使用する可用性グループ](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)に追加するために、同期レプリカの構成に必要な構成スクリプトを実行する必要はありません  (これは、その非同期レプリカをサイト データベースとして使用するためのサポートがないためです)。セカンダリ レプリカを可用性グループに追加する方法については、[SQL Server のドキュメント](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot))を参照してください。
@@ -128,7 +130,7 @@ ms.locfileid: "32341901"
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>非同期レプリカを使用してサイトを回復する
 非同期レプリカを使用してサイト データベースを回復する前に、サイト データベースへの追加の書き込みを防止するために、アクティブなプライマリ サイトを停止する必要があります。 サイトの停止後、[手動で回復したデータベース](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)の代わりに、非同期レプリカを使用することができます。
 
-サイトを停止するには、[階層のメンテナンス ツール](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe)を使用して、サイト サーバーの主要なサービスを停止します。 次のコマンド ラインを使用します: **Preinst.exe/stopsite**   
+サイトを停止するには、[階層のメンテナンス ツール](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe)を使用して、サイト サーバーの主要なサービスを停止します。 コマンド ラインを使用します: **Preinst.exe /stopsite**   
 
 サイトを停止することは、サイト サーバーでサイト コンポーネント マネージャー サービス (sitecomp) に続いて SMS_Executive サービスを停止することと同じです。
 
@@ -224,20 +226,20 @@ Windows Defender Application Guard の詳細については、[このブログ�
 
 これにより、Configuration Manager サイトを Azure AD に接続します。これは、このセクションの他のすべての操作の前提条件です。 手順は次のとおりです。
 
-1.  Configuration Manager コンソールの **[管理]** ワークスペースで、**[クラウド サービス]** を展開して、**[Azure サービス]** をクリックします。
-2.  **[ホーム]** タブの **[Azure サービス]** グループで、**[Azure サービスの構成]** をクリックします。
-3.  Azure サービス ウィザードの **[Azure サービス]** ページで、**[クラウド管理]** を選択して、クライアントが Azure AD を使用して、階層で認証できるようにします。
-4.  ウィザードの **[全般]** ページで、Azure サービスの名前と説明を指定します。
-5.  ウィザードの **[アプリ]** ページで、リストからご使用の Azure 環境を選択し、**[参照]** をクリックして Azure サービスの構成に使用されるサーバーとクライアント アプリを選択します。
-    - **[サーバー アプリ]** ウィンドウで、使用するサーバー アプリを選択し、**[OK]** をクリックします。 サーバー アプリとは、Azure アカウントの構成 (クライアントのテナント ID、クライアント ID、シークレット キーなど) を格納する Azure Web アプリです。 利用可能なサーバー アプリがない場合は、次のいずれかを使用します。
-        - **作成**: 新しいセッションを作成するには、**[作成]** をクリックします。 アプリとテナントのフレンドリ名を指定します。 次に、Azure にサインインすると、Configuration Manager によって、Azure で Web アプリと、Web アプリで使用するクライアント ID やシークレット キーが作成されます。 その後、Azure Portal からこれらを表示できます。
-        - **インポート**: Azure サブスクリプションに既に存在する Web アプリを使用するには、**[インポート]** をクリックします。 アプリとテナントのフレンドリ名を指定し、Configuration Manager で使用する Azure Web アプリのテナント ID、クライアント ID、シークレット キーを指定します。 情報を確認した後、**[OK]** をクリックして続行します。 このオプションは、この Technical Preview では現在使用できません。
-    - クライアント アプリに同じプロセスを繰り返します。
+1. Configuration Manager コンソールの **[管理]** ワークスペースで、**[クラウド サービス]** を展開して、**[Azure サービス]** をクリックします。
+2. **[ホーム]** タブの **[Azure サービス]** グループで、**[Azure サービスの構成]** をクリックします。
+3. Azure サービス ウィザードの **[Azure サービス]** ページで、**[クラウド管理]** を選択して、クライアントが Azure AD を使用して、階層で認証できるようにします。
+4. ウィザードの **[全般]** ページで、Azure サービスの名前と説明を指定します。
+5. ウィザードの **[アプリ]** ページで、リストからご使用の Azure 環境を選択し、**[参照]** をクリックして Azure サービスの構成に使用されるサーバーとクライアント アプリを選択します。
+   - **[サーバー アプリ]** ウィンドウで、使用するサーバー アプリを選択し、**[OK]** をクリックします。 サーバー アプリとは、Azure アカウントの構成 (クライアントのテナント ID、クライアント ID、シークレット キーなど) を格納する Azure Web アプリです。 利用可能なサーバー アプリがない場合は、次のいずれかを使用します。
+       - **作成**:新しいサーバー アプリを作成するには、**[作成]** をクリックします。 アプリとテナントのフレンドリ名を指定します。 次に、Azure にサインインすると、Configuration Manager によって、Azure で Web アプリと、Web アプリで使用するクライアント ID やシークレット キーが作成されます。 その後、Azure Portal からこれらを表示できます。
+       - **インポート**:Azure サブスクリプションに既に存在する Web アプリを使用するには、**[インポート]** をクリックします。 アプリとテナントのフレンドリ名を指定し、Configuration Manager で使用する Azure Web アプリのテナント ID、クライアント ID、シークレット キーを指定します。 情報を確認した後、**[OK]** をクリックして続行します。 このオプションは、この Technical Preview では現在使用できません。
+   - クライアント アプリに同じプロセスを繰り返します。
 
-  アプリケーションのインポートを使用して、ポータルで適切なアクセス許可を設定する場合には、*ディレクトリ データの読み取り*アプリケーションのアクセス許可を付与する必要があります。 アプリケーションでアクセス許可が自動的に作成されるアプリケーションの作成を使用した場合でも、Azure ポータルでアプリケーションに承諾を与える必要があります。
-6.  ウィザードの **[検出]** ページで、オプションで **[Azure Active Directory ユーザーの探索を有効にする]**、**[設定]** の順にクリックします。
-**[Azure AD ユーザー探索設定]** ダイアログ ボックスで、検出を実行するスケジュールを設定します。 Azure AD の新規または変更されたアカウントのみをチェックする差分探索を有効にすることもできます。
-7.  ウィザードを完了します。
+   アプリケーションのインポートを使用して、ポータルで適切なアクセス許可を設定する場合には、*ディレクトリ データの読み取り*アプリケーションのアクセス許可を付与する必要があります。 アプリケーションでアクセス許可が自動的に作成されるアプリケーションの作成を使用した場合でも、Azure ポータルでアプリケーションに承諾を与える必要があります。
+6. ウィザードの **[検出]** ページで、オプションで **[Azure Active Directory ユーザーの探索を有効にする]**、**[設定]** の順にクリックします。
+   **[Azure AD ユーザー探索設定]** ダイアログ ボックスで、検出を実行するスケジュールを設定します。 Azure AD の新規または変更されたアカウントのみをチェックする差分探索を有効にすることもできます。
+7. ウィザードを完了します。
 
 この時点で、Configuration Manager サイトが Azure AD に接続されています。
 
@@ -247,16 +249,16 @@ Windows Defender Application Guard の詳細については、[このブログ�
 開始する前に、クライアント インストール ソース ファイルが、クライアントをインストールするデバイスのローカルに保存されていることを確認します。
 次に、次のインストール コマンド ラインを使用して (例の値は、独自の値に置き換えてください)、「[System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-clients-manually)」の手順に従います。
 
-**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=https://contososerver**
+**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=<https://contososerver>**
 
-- **/NoCrlCheck**: 管理ポイントまたはクラウド管理ゲートウェイが非公開のサーバー証明書を使用する場合、クライアントが CRL の場所に到達できない場合があります。
-- **/Source**: ローカル フォルダー: クライアントのインストール ファイルの場所。
-- **CCMHOSTNAME**: インターネット管理ポイントの名前。 これを見つけるには、管理対象クライアントのコマンド プロンプトから **gwmi -namespace root\ccm\locationservices -class SMS_ActiveMPCandidate** を実行します。
-- **SMSMP**: ルックアップ管理ポイントの名前。イントラネットを指定することもできます。
-- **SMSSiteCode**: Configuration Manager サイトのサイト コード。
-- **AADTENANTID**、**AADTENANTNAME**: Configuration Manager にリンクした Azure AD テナントの ID と名前。 これを見つけるには、Azure AD に参加しているデバイスで、コマンド プロンプトから dsregcmd.exe/status を実行します。
-- **AADCLIENTAPPID**: Azure AD のクライアント アプリ ID。 これを見つけるには、「[リソースにアクセスできる Azure Active Directory アプリケーションとサービス プリンシパルをポータルで作成する](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key)」を参照してください。
-- **AADResourceUri**: 搭載された Azure AD サーバー アプリの識別子 URI。
+- **/NoCrlCheck**:管理ポイントまたはクラウド管理ゲートウェイが非公開のサーバー証明書を使用する場合、クライアントが CRL の場所に到達できない場合があります。
+- **/Source**:ローカル フォルダー: クライアント インストール ファイルの場所。
+- **CCMHOSTNAME**:インターネット管理ポイントの名前。 これを見つけるには、管理対象クライアントのコマンド プロンプトから **gwmi -namespace root\ccm\locationservices -class SMS_ActiveMPCandidate** を実行します。
+- **SMSMP**:ルックアップ管理ポイントの名前。イントラネットを指定することもできます。
+- **SMSSiteCode**:Configuration Manager サイトのサイト コード。
+- **AADTENANTID**、**AADTENANTNAME**:Configuration Manager にリンクした Azure AD テナントの ID と名前。 これを見つけるには、Azure AD に参加しているデバイスで、コマンド プロンプトから dsregcmd.exe/status を実行します。
+- **AADCLIENTAPPID**:Azure AD クライアント アプリ ID。 これを見つけるには、「[リソースにアクセスできる Azure Active Directory アプリケーションとサービス プリンシパルをポータルで作成する](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key)」を参照してください。
+- **AADResourceUri**:搭載された Azure AD サーバー アプリの識別子 URI。
 
 ## <a name="use-azure-services-wizard-to-configure-a-connection-to-oms"></a>Azure サービス ウィザードを使用して、OMS への接続を構成する
 Technical Preview リリース 1705 からは、**Azure サービス ウィザード**を使用して、Configuration Manager から Operations Management Suite (OMS) のクラウド サービスへの接続を構成します。 ウィザードは、前のワークフローを置き換えてこの接続を構成します。
@@ -285,7 +287,7 @@ OMS への接続を構成するための前提条件は、[Current Branch バー
 
 4.  Web アプリを選択します。
 
-    -   **インポート**: Azure サブスクリプションに既に存在する Web アプリを使用するには、**[インポート]** をクリックします。 アプリとテナントのフレンドリ名を指定し、Configuration Manager で使用する Azure Web アプリのテナント ID、クライアント ID、シークレット キーを指定します。 情報を**確認**した後、**[OK]** をクリックして続行します。   
+    -   **インポート**:Azure サブスクリプションに既に存在する Web アプリを使用するには、**[インポート]** をクリックします。 アプリとテナントのフレンドリ名を指定し、Configuration Manager で使用する Azure Web アプリのテナント ID、クライアント ID、シークレット キーを指定します。 情報を**確認**した後、**[OK]** をクリックして続行します。   
 
     > [!NOTE]   
     > このプレビューで OMS を構成すると、OMS は Web アプリの*インポート*機能のみをサポートします。 新しい Web アプリの作成はサポートされません。 同様に、OMS に既存のアプリを再利用することはできません。

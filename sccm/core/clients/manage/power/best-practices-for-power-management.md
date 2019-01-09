@@ -10,16 +10,16 @@ ms.assetid: 9f7142e1-c972-4384-853b-2da1568cb3e3
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 480f7a890e82b46e2b2d69180763f39504a47e0c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a08162f36c247136dd346140480e2d29be0c4017
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344485"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424801"
 ---
 # <a name="best-practices-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager の電源管理のベスト プラクティス
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager の電源管理に関する以下のベスト プラクティスを使用してください。  
 
@@ -40,17 +40,17 @@ System Center Configuration Manager の電源管理に関する以下のベス�
 
  次のようなコンピューターは、電源管理に適していません。  
 
--   電源を常にオンにしておく必要のあるコンピューター  
+- 電源を常にオンにしておく必要のあるコンピューター  
 
--   ユーザーがリモート デスクトップ接続を使って接続する必要のあるコンピューター  
+- ユーザーがリモート デスクトップ接続を使って接続する必要のあるコンピューター  
 
--   電源管理機能を使用できないコンピューター  
+- 電源管理機能を使用できないコンピューター  
 
--   配布ポイント サイト システムの役割を持つコンピューター  
+- 配布ポイント サイト システムの役割を持つコンピューター  
 
--   キオスク コンピューター、情報表示用コンピューター、監視用コンソールなど、コンピューターおよびモニターを常にオンにしておく必要のある、公共のコンピューター  
+- キオスク コンピューター、情報表示用コンピューター、監視用コンソールなど、コンピューターおよびモニターを常にオンにしておく必要のある、公共のコンピューター  
 
- 詳細については、「[System Center Configuration Manager での電源管理の構成](../../../../core/clients/manage/power/configuring-power-management.md)」を参照してください。  
+  詳細については、「[System Center Configuration Manager での電源管理の構成](../../../../core/clients/manage/power/configuring-power-management.md)」を参照してください。  
 
 ## <a name="first-apply-power-plans-to-a-test-collection-of-computers"></a>電源プランは、まずテスト用のコンピューター コレクションに適用する  
  電源管理プランを多数のコンピューターが含まれるコレクションに適用する前に、テスト用のコレクションに適用して、電源プランの効果をテストします。  
@@ -65,9 +65,9 @@ System Center Configuration Manager の電源管理に関する以下のベス�
 
  コンピューターが、それぞれ異なる電源プランが適用されている複数のコレクションのメンバーである場合、次の処理が行われます。  
 
--   電源プラン: 1 台のコンピューターに複数の電源設定値が適用されている場合、最も制限の緩い値が使用されます。  
+-   電源プラン:1 台のコンピューターに複数の電源設定値が適用されている場合、最も制限の緩い値が使用されます。  
 
--   ウェイクアップ時間: 1 台のデスクトップ コンピューターに複数のウェイクアップ時間が適用されている場合、深夜に最も近い時間が使用されます。  
+-   ウェイクアップ時間:1 台のデスクトップ コンピューターに複数のウェイクアップ時間が適用されている場合、深夜に最も近い時間が使用されます。  
 
      詳細については、「[System Center Configuration Manager で電源管理を監視して計画する方法](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)」トピックの「[電源プランが複数あるコンピューター](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md#BKMK_Multiple)」を参照してください。 電源管理が競合を解決する方法の詳細については、「[System Center Configuration Manager で電源プランを作成して適用する方法](../../../../core/clients/manage/power/create-and-apply-power-plans.md)」を参照してください。  
 

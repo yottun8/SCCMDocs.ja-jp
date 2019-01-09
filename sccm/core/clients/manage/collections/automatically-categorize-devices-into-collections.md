@@ -10,21 +10,21 @@ ms.assetid: 98b038b4-1a13-4228-bdb8-a12194e32b0e
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2730464afe21705d020943d3e1566b3130c9c780
-ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
+ms.openlocfilehash: b3605bc694000a86c407fcc456bb8e4115159490
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49943259"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421095"
 ---
 # <a name="automatically-categorize-devices-into-collections-with-system-center-configuration-manager"></a>System Center Configuration Manager でデバイスをコレクションに自動的に分類する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 Microsoft Intune と Configuration Manager を使用している場合に、デバイス コレクションにデバイスを自動的に配置するために使用できるデバイス カテゴリを作成することができます。 ユーザーは Intune にデバイスを登録するときに、デバイス カテゴリを選択する必要があります。 デバイス カテゴリは、Configuration Manager コンソールから変更できます。
 
-> [!IMPORTANT]  
-    >  この機能は、Microsoft Intune の **2016 年 6 月**以降のリリースで動作します。 これらの手順を実行する前に、今回のリリースに更新していることを確認してください。
+> [!IMPORTANT]
+>  この機能は、Microsoft Intune の **2016 年 6 月**以降のリリースで動作します。 これらの手順を実行する前に、今回のリリースに更新していることを確認してください。
 
 ## <a name="create-device-categories"></a>デバイス カテゴリを作成する
 

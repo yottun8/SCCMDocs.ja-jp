@@ -2,7 +2,7 @@
 title: Technical Preview リリース
 titleSuffix: Configuration Manager
 description: Configuration Manager の新機能を体験する Technical Preview Branch について説明します。
-ms.date: 12/03/2018
+ms.date: 12/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9381980f490d543b3018c206359d4a68b9ca69e4
-ms.sourcegitcommit: 6126dfdf5c879db7d12c3eec019a88fa44521361
+ms.openlocfilehash: d2c1e93378711a19b10f9b67fcaad9973e53ee2e
+ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52830491"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53444639"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager の Technical Preview
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+*適用対象:System Center Configuration Manager (Technical Preview)*
 
 この記事では、Configuration Manager の毎月の Technical Preview Branch の詳細を説明します。 Technical Preview では、マイクロソフトが取り組んでいる新しい機能が紹介されます。 Configuration Manager の Current Branch にまだ組み込まれていない新機能が導入されています。 これらの機能は、最終的に Current Branch の更新プログラムに組み込まれる可能性があります。 機能が最終的に確定する前に実際に試してみて、フィードバックを提供してください。  
 
@@ -104,7 +104,7 @@ Configuration Manager の Technical Preview Branch では、次の製品とテ�
    
 リリース後、最長 1 年間、ベースライン バージョンをインストールできます。 新しい Technical Preview サイトをインストールする時点で、使用できるベースライン バージョンが複数ある場合は、最新のベースライン バージョンを使用します。
 
--  **Technical Preview バージョン 1810.2**: Configuration Manager Technical Preview バージョン 1810.2 は、コンソール内更新と、新しいベースライン バージョンの両方として使用できます。 ベースライン バージョンを [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) からダウンロードします。
+-  **Technical Preview バージョン 1810.2**:Configuration Manager Technical Preview バージョン 1810.2 は、コンソール内更新と、新しいベースライン バージョンの両方として使用できます。 ベースライン バージョンを [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) からダウンロードします。
 
 
 
@@ -124,15 +124,15 @@ Technical Preview の新機能に関するフィードバックをお寄せく�
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1811"></a>Technical Preview バージョン 1811
+### <a name="technical-preview-version-1812"></a>Technical Preview バージョン 1812
 
-<!--capabilities-in-technical-preview-1811.md#bkmk_anchor-->
+<!--capabilities-in-technical-preview-1812.md#bkmk_anchor-->
 
-- [Windows PowerShell プロファイルを読み込まない](capabilities-in-technical-preview-1811.md#bkmk_noprofile) <!--1359239-->
-- [オンプレミスの MDM に Intune 接続は不要になった](capabilities-in-technical-preview-1811.md#bkmk_opmdm) <!--1359124-->
-- [Configuration Manager コンソールの通知](capabilities-in-technical-preview-1811.md#bkmk_notify) <!--1318035-->
-- [タスク シーケンス メディアの作成の改善](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) <!--1359388-->
-- [PowerShell スクリプトの実行タスク シーケンス ステップの改善](capabilities-in-technical-preview-1811.md#bkmk_posh) <!--1359389-->
+- [PowerShell スクリプトの実行タスク シーケンス ステップの改善](capabilities-in-technical-preview-1812.md#bkmk_posh) <!--3556028 fka 1359389-->  
+- [電子メールを使用したアプリケーション承認の改善](capabilities-in-technical-preview-1812.md#bkmk_email) <!--3594063-->  
+- [ソフトウェア センターでのユーザーとデバイスのアフィニティの構成](capabilities-in-technical-preview-1812.md#bkmk_uda) <!--3485366-->  
+- [Configuration Manager コンソールの機能拡張](capabilities-in-technical-preview-1812.md#bkmk_console) <!--3594151-->  
+- [コミュニティ ハブからレポートのダウンロード](capabilities-in-technical-preview-1812.md#bkmk_hub)<!--3555936-->  
 
 
 > [!Note]  
@@ -151,6 +151,11 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | 機能 | Technical Preview のバージョン | Current Branch のバージョン |  
  |---------|---------------------------|------------------------|
+ | Windows PowerShell プロファイルを読み込まない <!--1359239--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_noprofile) | ![追加されていません](media/Red_X.gif) | 
+ | オンプレミスの MDM に Intune 接続は不要になった <!--1359124--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_opmdm) | ![追加されていません](media/Red_X.gif) | 
+ | Configuration Manager コンソールの通知 <!--1318035--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | ![追加されていません](media/Red_X.gif) | 
+ | タスク シーケンス メディアの作成の改善 <!--1359388--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) | ![追加されていません](media/Red_X.gif) | 
+ | PowerShell スクリプトの実行タスク シーケンス ステップの改善 <!--1359389--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_posh) | ![追加されていません](media/Red_X.gif) | 
  | コレクションの評価の機能強化 <!--1358981--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) | バージョン 1810 | 
  | Configuration Manager 管理者の認証 <!--1357013--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_auth) | バージョン 1810 | 
  | ピア キャッシュ ソースのクライアントのバージョンに関するマネジメントの分析情報の規則 <!--1358008--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_insights) | バージョン 1810 | 
@@ -169,10 +174,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | コンソール内ドキュメント ダッシュボード <!--1357546--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | ![追加されていません](media/Red_X.gif) | 
  | ドライバーのメンテナンスの機能強化 <!--1358270--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_drivers) | バージョン 1810 | 
  | 既存デバイス向けの Windows Autopilot のタスク シーケンスのサポート <!--1358333--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_autopilot) | バージョン 1810 | 
- | CMPivot の改善 <!--1359068--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_cmpivot) | バージョン 1810 | 
- | ライフサイクル ダッシュボードの改善 <!--1358702--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_lifecycle) | バージョン 1810 | 
- | データ ウェアハウスの機能強化 <!--1358870--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_dataw) | バージョン 1810 | 
- | ソフトウェア更新プログラムのメンテナンス期間の改善 <!--vso2839307--> | [Tech Preview 1809](capabilities-in-technical-preview-1809.md#bkmk_sum-mw) | バージョン 1810 | 
 
 
 

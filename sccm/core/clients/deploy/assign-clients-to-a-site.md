@@ -10,16 +10,16 @@ ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2eb75af410ae1511ae105aa7a3a56659c8ef0442
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: 0d2e3c7bc6cba90ebc24bdfdf244f54d1752d749
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862415"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420466"
 ---
 # <a name="how-to-assign-clients-to-a-site-in-system-center-configuration-manager"></a>System Center Configuration Manager でクライアントをサイトに割り当てる方法
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager クライアントをインストールした後、それを管理するには、Configuration Manager プライマリ サイトに参加させる必要があります。 クライアントが参加するサイトのことを、*割り当てられたサイト*と呼びます。 クライアントを中央管理サイトまたはセカンダリ サイトに割り当てることはできません。  
 
@@ -94,30 +94,30 @@ Configuration Manager の登録中にモバイル デバイス クライアン�
 
 また、Configuration Manager では、Configuration Manager (現在のブランチ) クライアントをサポートしているサイトにそのクライアントが割り当てられていることも確認します。 Configuration Manager の以前のバージョンからの移行中に生じる可能性があるシナリオは次のとおりです。  
 
--   シナリオ: サイトの自動割り当てを使用していて、境界が、以前のバージョンの Configuration Manager で定義されている境界と重複する。  
+- シナリオ: あなたはサイトの自動割り当てを使用していて、ご利用の境界は、以前のバージョンの Configuration Manager で定義されている境界と重複している。  
 
-     この場合、クライアントは Configuration Manager (現在のブランチ) サイトの検索を自動的に試行します。  
+   この場合、クライアントは Configuration Manager (現在のブランチ) サイトの検索を自動的に試行します。  
 
-     最初にクライアントは、Active Directory Domain Services を確認します。発行されている Configuration Manager (現在のブランチ) サイトが見つかった場合は、サイトの割り当てが成功します。 これが失敗した場合 (たとえば、Configuration Manager サイトが公開されていない場合や、コンピューターがワークグループ クライアントである)、クライアントは、割り当てられている管理ポイントからのサイト情報を確認します。  
+   最初にクライアントは、Active Directory Domain Services を確認します。発行されている Configuration Manager (現在のブランチ) サイトが見つかった場合は、サイトの割り当てが成功します。 これが失敗した場合 (たとえば、Configuration Manager サイトが公開されていない場合や、コンピューターがワークグループ クライアントである)、クライアントは、割り当てられている管理ポイントからのサイト情報を確認します。  
 
-    > [!NOTE]  
-    >  クライアントのインストール時に、Client.msi のプロパティ **SMSMP=&lt;server_name>** を使用して、クライアントに管理ポイントを割り当てることができます。  
+  > [!NOTE]  
+  >  クライアントのインストール時に、Client.msi のプロパティ **SMSMP=&lt;server_name>** を使用して、クライアントに管理ポイントを割り当てることができます。  
 
-     どちらの方法も失敗した場合は、サイト割り当てが失敗し、クライアントを手動で割り当てる必要があります。  
+   どちらの方法も失敗した場合は、サイト割り当てが失敗し、クライアントを手動で割り当てる必要があります。  
 
--   シナリオ: サイトの自動割り当てを使用せずに、特定のサイト コードを使用して Configuration Manager (現在のブランチ) クライアントを割り当てたときに、System Center 2012 R2 Configuration Manager より前のバージョンの Configuration Manager のサイト コードを誤って指定した。  
+- シナリオ: サイトの自動割り当てを使用せずに、特定のサイト コードを使用して Configuration Manager (現在のブランチ) クライアントを割り当てたときに、System Center 2012 R2 Configuration Manager より前のバージョンの Configuration Manager のサイト コードを誤って指定した。  
 
-     この場合は、サイトの割り当ては失敗します。クライアントを Configuration Manager (現在のブランチ) サイトに手動で再び割り当てる必要があります。  
+   この場合は、サイトの割り当ては失敗します。クライアントを Configuration Manager (現在のブランチ) サイトに手動で再び割り当てる必要があります。  
 
- サイト互換性チェックには、次のうちいずれかの条件が必要です。  
+  サイト互換性チェックには、次のうちいずれかの条件が必要です。  
 
--   クライアントが、Active Directory ドメイン サービスに発行されているサイト情報にアクセスできる  
+- クライアントが、Active Directory ドメイン サービスに発行されているサイト情報にアクセスできる  
 
--   クライアントが、サイト内の管理ポイントと通信できる  
+- クライアントが、サイト内の管理ポイントと通信できる  
 
- サイト互換性チェックが正常に完了しない場合、サイトの割り当ては失敗し、サイト互換性チェックが再度実行されて正常に完了するまで、クライアントは管理されないままになります。  
+  サイト互換性チェックが正常に完了しない場合、サイトの割り当ては失敗し、サイト互換性チェックが再度実行されて正常に完了するまで、クライアントは管理されないままになります。  
 
- サイト互換性チェックは、クライアントがインターネット ベースの管理ポイント用に構成されている場合は、例外的に実行されません。 この場合、サイト互換性チェックは実行されません。 クライアントをインターネット ベースのサイト システムが含まれているサイトに割り当てて、インターネット ベースの管理ポイントを指定する場合は、クライアントを正しいサイトに割り当てていることを確認する必要があります。 Configuration Manager 2007 サイト、System Center 2012 Configuration Manager サイト、またはインターネット ベースのサイト システムのない Configuration Manager サイトに誤ってクライアントを割り当てた場合、このクライアントは管理されません。  
+  サイト互換性チェックは、クライアントがインターネット ベースの管理ポイント用に構成されている場合は、例外的に実行されません。 この場合、サイト互換性チェックは実行されません。 クライアントをインターネット ベースのサイト システムが含まれているサイトに割り当てて、インターネット ベースの管理ポイントを指定する場合は、クライアントを正しいサイトに割り当てていることを確認する必要があります。 Configuration Manager 2007 サイト、System Center 2012 Configuration Manager サイト、またはインターネット ベースのサイト システムのない Configuration Manager サイトに誤ってクライアントを割り当てた場合、このクライアントは管理されません。  
 
 ##  <a name="locating-management-points"></a>管理ポイントを検出する  
  クライアントは、サイトに正常に割り当てられると、サイト内の管理ポイントを検出します。  
@@ -135,7 +135,7 @@ Configuration Manager に登録されているモバイル デバイス クラ�
 ##  <a name="downloading-site-settings"></a>サイト設定をダウンロードする  
  サイト割り当てが完了し、クライアントが管理ポイントを検出すると、サイト互換性チェックに Active Directory ドメイン サービスを使用するクライアント コンピューターは、割り当てられたサイトのクライアント関連のサイト設定をダウンロードします。 これらの設定には、クライアント証明書の選択条件、証明書失効リストを使用するかどうか、およびクライアント要求のポート番号が含まれています。 クライアントはこれらの設定を定期的に確認します。  
 
- Active Directory ドメイン サービスからサイト設定を取得できない場合、クライアント コンピューターは管理ポイントからサイト設定をダウンロードします。 クライアント コンピューターは、クライアント プッシュを使用したインストール時にサイト設定を取得することもできます。また、CCMSetup.exe とクライアント インストールのプロパティを使用して手動で指定することもできます。 クライアント インストールのプロパティの詳細については、「[System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
+ Active Directory ドメイン サービスからサイト設定を取得できない場合、クライアント コンピューターは管理ポイントからサイト設定をダウンロードします。 クライアント コンピューターは、クライアント プッシュを使用したインストール時にサイト設定を取得することもできます。また、CCMSetup.exe とクライアント インストールのプロパティを使用して手動で指定することもできます。 クライアント インストールのプロパティの詳細については、「 [System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
 
 ##  <a name="downloading-client-settings"></a>クライアント設定をダウンロードする  
  すべてのクライアントが、既定のクライアント設定ポリシーと適切なカスタムのクライアント設定ポリシーをダウンロードします。 ソフトウェア センターは、Windows コンピューターのこれらのクライアント構成ポリシーを使用するため、この構成情報がダウンロードされるまでソフトウェア センターが正常に実行されないことをユーザーに通知します。 構成されているクライアント設定によっては、クライアント設定の初回ダウンロードに時間がかかることがあります。また、このプロセスが完了するまで、一部の管理タスクが実行されない可能性があります。  

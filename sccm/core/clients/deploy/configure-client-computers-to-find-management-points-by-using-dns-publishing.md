@@ -10,16 +10,16 @@ ms.assetid: 03cec407-0f9f-454f-a360-b005af738d29
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3735e2cc8ac2f7e4a5c05b49783cad3981a04930
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 84345e26f30c1339ad1f386606ad11f1bb127eae
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333836"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421435"
 ---
 # <a name="how-to-configure-client-computers-to-find-management-points-by-using-dns-publishing-in-system-center-configuration-manager"></a>System Center Configuration Manager で DNS 発行を使用して、管理ポイントを検出するようにクライアント コンピューターを構成する方法
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager のクライアントは、サイトの割り当てを完了しても、実行中のプロセスとして管理対象にとどまるために、管理ポイントを特定する必要があります。 Active Directory ドメイン サービスは、イントラネット上のクライアントが管理ポイントを見つけるのに最も安全な方法を提供します。 しかし、クライアントがこのサービスの場所検索方法を利用できない場合は (たとえば Active Directory スキーマを拡張していない、クライアントがワークグループに所属するなど)、DNS 発行を代替方法として使用します。  
 
@@ -38,13 +38,13 @@ System Center Configuration Manager のクライアントは、サイトの割�
 
 #### <a name="to-configure-clients-for-a-management-point-suffix-during-client-installation"></a>クライアントのインストール中に、クライアントに管理ポイントのサフィックスを構成するには  
 
--   次の CCMSetup client.msi プロパティを使用してクライアントをインストールします。  
+- 次の CCMSetup client.msi プロパティを使用してクライアントをインストールします。  
 
-    -   **DNSSUFFIX=** *&lt;管理ポイント ドメイン\>*  
+  - **DNSSUFFIX=** *&lt;管理ポイント ドメイン\>*  
 
-         サイトに複数の管理ポイントがあり、その管理ポイントが複数のドメインに存在する場合は、一つのドメインだけを指定します。 このドメインの管理ポイントにクライアントが接続すると、クライアントは、使用可能な管理ポイントの一覧をダウンロードします。この一覧には、ほかのドメインにある管理ポイントも含まれます。  
+     サイトに複数の管理ポイントがあり、その管理ポイントが複数のドメインに存在する場合は、一つのドメインだけを指定します。 このドメインの管理ポイントにクライアントが接続すると、クライアントは、使用可能な管理ポイントの一覧をダウンロードします。この一覧には、ほかのドメインにある管理ポイントも含まれます。  
 
-     CCMSetup のコマンドライン プロパティの詳細については、「[System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」をご覧ください。  
+    CCMSetup のコマンドライン プロパティの詳細については、「[System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」をご覧ください。  
 
 #### <a name="to-configure-clients-for-a-management-point-suffix-after-client-installation"></a>クライアントのインストール後に、クライアントに管理ポイントのサフィックスを構成するには  
 

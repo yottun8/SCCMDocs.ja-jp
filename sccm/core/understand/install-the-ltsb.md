@@ -10,16 +10,16 @@ ms.assetid: f4f9a5fd-f573-4b99-ad93-b2c76812e922
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d6b957ebcc19dfe8c14dd781f71678db8e160af
-ms.sourcegitcommit: 1a1bac2d5ee0f20ce565d29798ee4dd99aaca044
+ms.openlocfilehash: c4ceec8c0d5482456d3257106ee067bf3d9ec1fb
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281908"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418103"
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1606 構成基準メディアでインストールし、アップグレードする
 
-*適用対象: System Center Configuration Manager (Current Branch)、(Long-Term Servicing Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)、(Long-Term Servicing Branch)*
 
 Configuration Manager のバージョン 1606 基準メディアからセットアップを実行する場合は、System Center Configuration Manager の Long-Term Servicing Branch または Current Branch サイトをインストールできます。
 
@@ -71,17 +71,17 @@ LTSB でサポートされていないサイト システムの役割をアン�
 ライセンスされるブランチを無人スクリプトでインストールするときは、次のセクション、キー名、値をスクリーンショットのオプション セクションに追加する必要があります。 Current Branch の評価版インストールをスクリプト化する場合、これらの値を使用する必要はありません。  
 
  **SABranchOptions**
--   **キー名: SAActive**
-  - 値: 0 または 1。  
-  - 詳細:  0 の場合、Current Branch の「ライセンスなし」評価版がインストールされます。1 の場合、「ライセンスを取得した」製品版がインストールされます。   
+- **キー名:SAActive**
+  - ［値］:0 または 1  
+  - 詳細:0 の場合、Current Branch の「ライセンスなし」評価版がインストールされます。1 の場合、「ライセンスを取得した」製品版がインストールされます。   
 
 - **CurrentBranch**
-  - 値: 0 または 1。  
-  - 詳細: 0 の場合、Long-Term Servicing Branch がインストールされます。1 の場合、Current Branch がインストールされます。  
+  - ［値］:0 または 1  
+  - 詳細:0 の場合、Long-Term Servicing Branch がインストールされます。1 の場合、Current Branch がインストールされます。  
 
 たとえば、Current Branch のライセンス取得版をインストールするには、次の値を利用します。
 
-  **キー名: SABranchOptions**
+  **キー名:SABranchOptions**
    -    **SAActive = 1**
    - **CurrentBranch = 1**
 

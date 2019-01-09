@@ -10,26 +10,26 @@ ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d0beb10dca04fe26fb4add22b64ab61b53154185
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0d8f5cf6b30bb465dea5ae680510f16814287daa
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349169"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419123"
 ---
 # <a name="scenarios-to-deploy-enterprise-operating-systems-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用してエンタープライズ オペレーティング システムを展開するシナリオ
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager では、次のオペレーティング システムの展開シナリオを使用できます。  
 
--   [Windows を最新バージョンにアップグレードする](upgrade-windows-to-the-latest-version.md): このシナリオでは、現在 Windows 7、Windows 8、Windows 8.1、または Windows 10 を実行しているコンピューター上のオペレーティング システムをアップグレードします。 アップグレード プロセスでは、コンピューター上のアプリケーション、設定、およびユーザー データが保持されます。 Windows ADK などの外部の依存関係はなく、このプロセスは、従来のオペレーティング システムの展開よりも高速で、回復性に優れています。  
+-   [Windows を最新バージョンにアップグレードする](upgrade-windows-to-the-latest-version.md):このシナリオでは、現在 Windows 7、Windows 8、Windows 8.1、または Windows 10 を実行しているコンピューター上のオペレーティング システムをアップグレードします。 アップグレード プロセスでは、コンピューター上のアプリケーション、設定、およびユーザー データが保持されます。 Windows ADK などの外部の依存関係はなく、このプロセスは、従来のオペレーティング システムの展開よりも高速で、回復性に優れています。  
 
--   [既存のコンピューターを Windows の新しいバージョンに更新する](refresh-an-existing-computer-with-a-new-version-of-windows.md): このシナリオでは、既存のコンピューターにパーティションを作成してフォーマットし (ワイプ)、コンピューターに新しいオペレーティング システムをインストールします。 オペレーティング システムをインストールした後、設定とユーザー データを移行できます。  
+-   [既存のコンピューターを Windows の新しいバージョンに更新する](refresh-an-existing-computer-with-a-new-version-of-windows.md):このシナリオでは、既存のコンピューターにパーティションを作成してフォーマットし (ワイプ)、コンピューターに新しいオペレーティング システムをインストールします。 オペレーティング システムをインストールした後、設定とユーザー データを移行できます。  
 
--   [新しいバージョンの Windows を新しいコンピューターにインストールする (ベア メタル) ](install-new-windows-version-new-computer-bare-metal.md): このシナリオでは、新しいコンピューターにオペレーティング システムをインストールします。 これは、オペレーティング システムの新規インストールであり、設定やユーザー データの移行は含まれません。  
+-   [新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする](install-new-windows-version-new-computer-bare-metal.md):このシナリオでは、新しいコンピューターにオペレーティング システムをインストールします。 これは、オペレーティング システムの新規インストールであり、設定やユーザー データの移行は含まれません。  
 
--   [既存のコンピューターの置き換えと設定の転送](replace-an-existing-computer-and-transfer-settings.md): このシナリオでは、新しいコンピューターにオペレーティング システムをインストールします。 必要に応じて、古いコンピューターから新しいコンピューターに設定およびユーザー データを移行できます。  
+-   [既存のコンピューターの置き換えと設定の転送](replace-an-existing-computer-and-transfer-settings.md):このシナリオでは、新しいコンピューターにオペレーティング システムをインストールします。 必要に応じて、古いコンピューターから新しいコンピューターに設定およびユーザー データを移行できます。  
 
 ## <a name="things-to-consider-before-you-deploy-operating-system-images"></a>オペレーティング システム イメージを配置する前に考慮すべきこと  
  オペレーティング システムを展開する前に考慮すべきいくつかの点があります。  
@@ -51,12 +51,12 @@ System Center Configuration Manager では、次のオペレーティング シ�
 ## <a name="task-sequence-deployments"></a>タスク シーケンスの展開  
  作成したタスク シーケンスは、次のいずれかの方法で、Configuration Manager クライアント コンピューターにオペレーティング システム イメージを展開できます。  
 
--   まず配布ポイントからイメージとコンテンツを Configuration Manager クライアント キャッシュにダウンロードして、インストールする。  
+- まず配布ポイントからイメージとコンテンツを Configuration Manager クライアント キャッシュにダウンロードして、インストールする。  
 
--   配布ポイントのイメージとコンテンツを即座にインストールする。  
+- 配布ポイントのイメージとコンテンツを即座にインストールする。  
 
--   配布ポイントが定めたようにイメージとコンテンツをインストールする。  
+- 配布ポイントが定めたようにイメージとコンテンツをインストールする。  
 
- タスク シーケンスの展開を作成すると、既定では、イメージは Configuration Manager クライアントのキャッシュにダウンロードされてからインストールされます。 イメージを Configuration Manager クライアントのキャッシュにダウンロードしてから実行する場合、タスク シーケンスにハード ドライブのパーティション再作成ステップが設定されていると、パーティション再作成ステップでエラーが発生します。これは、ハード ドライブのパーティションが作成されるときに Configuration Manager クライアントのキャッシュの内容が消去されるためです。 タスク シーケンスでハード ドライブのパーティションを再作成する必要がある場合は、タスク シーケンスをデプロイするときに **[配布ポイントからプログラムを実行する]**  オプションを使用して、配布ポイントからイメージのインストールを実行する必要があります。  
+  タスク シーケンスの展開を作成すると、既定では、イメージは Configuration Manager クライアントのキャッシュにダウンロードされてからインストールされます。 イメージを Configuration Manager クライアントのキャッシュにダウンロードしてから実行する場合、タスク シーケンスにハード ドライブのパーティション再作成ステップが設定されていると、パーティション再作成ステップでエラーが発生します。これは、ハード ドライブのパーティションが作成されるときに Configuration Manager クライアントのキャッシュの内容が消去されるためです。 タスク シーケンスでハード ドライブのパーティションを再作成する必要がある場合は、タスク シーケンスをデプロイするときに **[配布ポイントからプログラムを実行する]**  オプションを使用して、配布ポイントからイメージのインストールを実行する必要があります。  
 
- 詳細については、「 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)」をご覧ください。  
+  詳細については、「 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)」をご覧ください。  

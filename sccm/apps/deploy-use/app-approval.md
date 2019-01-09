@@ -2,7 +2,7 @@
 title: アプリケーションの承認
 titleSuffix: Configuration Manager
 description: Configuration Manager でのアプリケーション承認の設定と動作について説明します。
-ms.date: 11/27/2018
+ms.date: 12/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f19146da963055ffc20b274e1017802274844698
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 666df71b32ea0dc95411b8ffd58d18f7666d7b23
+ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458128"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53444588"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Configuration Manager でアプリケーションを承認する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 Configuration Manager で[アプリケーションを展開する](/sccm/apps/deploy-use/deploy-applications)ときに、インストールする前に承認を要求することができます。 ソフトウェア センターでユーザーからアプリケーションを要求されたら、その要求を Configuration Manager コンソールで確認します。 要求を承認または拒否することができます。 
 
@@ -45,7 +45,7 @@ Configuration Manager で[アプリケーションを展開する](/sccm/apps/de
 <a name="bkmk_note1"></a>
 
 > [!Note]  
-> **注 1**: Configuration Manager では、このオプション機能は既定で無効になっています。 この機能は、使用する前に有効にする必要があります。 詳細については、「[Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」 (更新プログラムのオプション機能の有効化) を参照してください。 
+> **注 1**:Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[Enable optional features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」 (更新プログラムのオプション機能の有効化) を参照してください。 
 > 
 > この機能を有効にしない場合、前のエクスペリエンスが表示されます。  
 
@@ -80,6 +80,14 @@ Configuration Manager コンソールの **[ソフトウェア ライブラリ]*
 
 - [アラートのメール通知](/sccm/core/servers/manage/use-alerts-and-the-status-system#to-configure-email-notification-for-alerts)を構成します。  
 
+- 証明書を使用するため SMS プロバイダーを有効にします。<!--SCCMDocs-pr issue 3135--> 次のいずれかのオプションを使用します。  
+
+    - [拡張 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http) を有効にする (推奨)  
+
+        > [!Note]  
+        > サイトによって SMS プロバイダー用に証明書が作成されると、そのプロバイダーはクライアント上の Web ブラウザーで信頼されません。 セキュリティの設定によっては、アプリケーションの要求に応答するときに、セキュリティ警告が表示されることがあります。  
+
+    - SMS プロバイダーの役割をホストするサーバー上の IIS でポート 443 に PKI ベースの証明書を手動でバインドします。  
 
 
 #### <a name="to-take-action-from-internet"></a>インターネットからアクションを実行するには

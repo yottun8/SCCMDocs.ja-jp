@@ -10,16 +10,16 @@ ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0757e7f3fac12c2945a3eab860851b0debf28fd5
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: a0e16c137604480ab23e15b52723692491d1816d
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893891"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414856"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1802 の新機能
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Configuration Manager Current Branch の更新プログラム 1802 はコンソール内の更新プログラムとして利用できます。 バージョン 1702、1706、1710 を実行しているサイトでこの更新プログラムを適用します。 <!-- baseline only statement: -->新しいサイトをインストールするときにも基準のバージョンとしても利用できます。
 
@@ -58,7 +58,7 @@ Version 1802 drops support for the following products:
 <!-- 1353704 --> このリリースから、Configuration Manager クライアントは Windows 10 ARM64 デバイスでサポートされるようになりました。 既存のクライアント管理機能は、これらの新しいデバイスで動作します。 たとえば、ハードウェアとソフトウェアのインベントリ、ソフトウェア更新プログラム、アプリケーション管理などです。 オペレーティング システムの展開は現在はサポートされていません。 
 
 ### <a name="improved-support-for-cng-certificates"></a>CNG 証明書のサポートの強化
-<!-- 1357314 --> Configuration Manager (Current Branch) バージョン 1710 は、[Cryptography: Next Generation (CNG) 証明書](/sccm/core/plan-design/network/cng-certificates-overview)をサポートしています。 バージョン 1710 では、一部のシナリオでクライアント証明書のサポートに制限があります。 
+<!-- 1357314 --> Configuration Manager (Current Branch) バージョン 1710 では、[Cryptography: Next Generation (CNG) 証明書](/sccm/core/plan-design/network/cng-certificates-overview)がサポートされています。 バージョン 1710 では、一部のシナリオでクライアント証明書のサポートに制限があります。 
 
 このリリース以降、以下の HTTPS が有効なサーバーの役割には CNG 証明書を使ってください。
 - 管理ポイント
@@ -147,7 +147,7 @@ Configuration Manager 1802 では、次の分析情報を利用できます。
 <!-- 1357365 --> 共同管理を有効にした後、Endpoint Protection のワークロードを Intune に移行できます。 Endpoint Protection ワークロードを移行するには、共同管理のプロパティ ページに移動し、スライダー バーを Configuration Manager から **[パイロット]** または **[すべて]** に移動します。 ワークロードの詳細については、[Intune に移行できるワークロード](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune)に関するページを参照してください。 共同管理の詳細については、「[Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)」を参照してください。
  
 ### <a name="co-management-dashboard-in-system-center-configuration-manager"></a>System Center Configuration Manager の共同管理ダッシュボード
-<!--1356648--> このリリースより、共同管理に関する情報をダッシュボードに表示できます。 ダッシュボードを利用すれば、お使いの環境で共同管理しているコンピューターを確認できます。 各種グラフを見ることで、対処が必要なデバイスを特定できます。 詳細については、[共同管理ダッシュボード](\sccm\core\clients\manage\client-management-dashboard)に関する記事を参照してください。 
+<!--1356648--> このリリースより、共同管理に関する情報をダッシュボードに表示できます。 ダッシュボードを利用すれば、お使いの環境で共同管理しているコンピューターを確認できます。 各種グラフを見ることで、対処が必要なデバイスを特定できます。 詳細については、[共同管理ダッシュボード](/sccm/core/clients/manage/client-management-dashboard)に関する記事を参照してください。 
 
 
 ## <a name="compliance-settings"></a>コンプライアンス設定

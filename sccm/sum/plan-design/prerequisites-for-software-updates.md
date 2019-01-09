@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: ffe1546e3d7561a0bbda787ef6b1aaeac6e8d2e0
-ms.sourcegitcommit: 2504617dc4db90e205327d06cab32f050e88dbf2
+ms.openlocfilehash: cbaaa84b0c4b3c9b05e7ffbae565a7b6da7c7426
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51505127"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423883"
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager でのソフトウェア更新プログラムの前提条件
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 この記事では、System Center Configuration Manager でのソフトウェア更新プログラムの前提条件の一覧を示します。 前提条件ごとに、外部の依存関係と内部の依存関係を別の表にまとめています。  
 

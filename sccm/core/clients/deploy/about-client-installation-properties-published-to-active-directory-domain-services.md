@@ -10,16 +10,16 @@ ms.assetid: 101d7d4d-92db-419d-b2ae-3c1c1dea68e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 46ede93e8366b4ae387f7e04b83dcb33ce854c5e
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: dccd893cc4a22fddf09598376bdcd05b091e6c2c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862517"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421554"
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>Active Directory Domain Services に発行されたクライアント インストールのプロパティについて
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 Active Directory スキーマを System Center Configuration Manager 用に拡張して、サイトを Active Directory Domain Services に公開すると、多くのクライアント インストール プロパティが Active Directory Domain Services に発行されます。 コンピューターでこれらのクライアント インストール プロパティを見つけることができる場合は、Configuration Manager クライアントの展開時にそれらを使用できます。  
 
@@ -35,29 +35,29 @@ Active Directory スキーマを System Center Configuration Manager 用に拡�
 ## <a name="client-installation-properties-published-to-active-directory-domain-services"></a>Active Directory Domain Services に発行されたクライアント インストール プロパティ  
 クライアント インストール プロパティの一覧を次に示します。 下記一覧の各項目の詳細については、「[System Center Configuration Manager のクライアント インストール プロパティについて](../../../core/clients/deploy/about-client-installation-properties.md)」を参照してください。  
 
--   Configuration Manager サイト コード。  
+- Configuration Manager サイト コード。  
 
--   サイト サーバー署名証明書。  
+- サイト サーバー署名証明書。  
 
--   信頼されたルート キー。  
+- 信頼されたルート キー。  
 
--   HTTP おようび HTTPS 用のクライアント通信ポート。  
+- HTTP おようび HTTPS 用のクライアント通信ポート。  
 
--   フォールバック ステータス ポイント。 サイトに複数のフォールバック ステータス ポイントがある場合は、最初にインストールしたフォールバック ステータス ポイントのみが Active Directory Domain Services に発行されます。  
+- フォールバック ステータス ポイント。 サイトに複数のフォールバック ステータス ポイントがある場合は、最初にインストールしたフォールバック ステータス ポイントのみが Active Directory Domain Services に発行されます。  
 
--   クライアントが HTTPS のみを使用して通信する必要があることを示す設定。  
+- クライアントが HTTPS のみを使用して通信する必要があることを示す設定。  
 
--   PKI 証明書に関する設定:  
+- PKI 証明書に関する設定:  
 
-   -   クライアントの PKI 証明書を使用するかどうか。  
+  -   クライアントの PKI 証明書を使用するかどうか。  
 
-   -   証明書の選択条件。 これは、Configuration Manager に使用できる有効な PKI 証明書がクライアントに複数ある場合に必要になります。  
+  -   証明書の選択条件。 これは、Configuration Manager に使用できる有効な PKI 証明書がクライアントに複数ある場合に必要になります。  
 
-   -   どの証明書を使用するかを判断する設定（証明書選択プロセスの後に有効な証明書がクライアントに複数ある場合）。  
+  -   どの証明書を使用するかを判断する設定（証明書選択プロセスの後に有効な証明書がクライアントに複数ある場合）。  
 
-   -   信頼されたルート（CA）証明書の一覧を含む証明書発行者の一覧  
+  -   信頼されたルート（CA）証明書の一覧を含む証明書発行者の一覧  
 
--   ｃlient.msi インストール プロパティは、**[クライアント プッシュ インストールのプロパティ]** ダイアログ ボックスの **[クライアント]** タブで指定します。
+- ｃlient.msi インストール プロパティは、**[クライアント プッシュ インストールのプロパティ]** ダイアログ ボックスの **[クライアント]** タブで指定します。
 
 クライアント インストール (CCMSetup) では、次のいずれかを使用して指定されたプロパティが他にない場合にのみ、Active Directory Domain Services に発行されたプロパティを使用します。  
 

@@ -11,16 +11,16 @@ author: aczechowski
 robots: noindex,nofollow
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: eaae10b191876915517a928a3f6ee15aafba2760
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 875ee80050b10561471f98ec73625055c5975257
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343618"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416675"
 ---
 # <a name="capabilities-in-technical-preview-1602-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1602 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1602 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 このバージョンの Technical Preview をインストールする前に、説明のトピック「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。  
 
@@ -31,15 +31,15 @@ ms.locfileid: "32343618"
 ### <a name="ios-activation-lock"></a>iOS のアクティベーション ロック  
  System Center Configuration Manager は、iOS 7.1 以降向けの「iPhone を探す」アプリの機能である、iOS のアクティベーション ロックを管理するために役立ちます。 iPhone を探すアプリをデバイスで使用すると、アクティブ化ロックが自動的に有効になります。 有効になると、ユーザーの Apple ID とパスワードを入力しない限り、以下の操作を実行できなくなります。  
 
--   iPhone を探すアプリをオフにする  
+- iPhone を探すアプリをオフにする  
 
--   デバイスを消去する  
+- デバイスを消去する  
 
--   ディスクを再アクティブ化する  
+- ディスクを再アクティブ化する  
 
- Configuration Manager では、iOS 7.1 以降を実行している監視対象と監視対象外の両方のデバイスのアクティベーション ロックの状態を要求できます。 監視対象のデバイスの場合、Intune では、アクティベーション ロックのバイパス コードを取得し、直接デバイスに発行できます。  
+  Configuration Manager では、iOS 7.1 以降を実行している監視対象と監視対象外の両方のデバイスのアクティベーション ロックの状態を要求できます。 監視対象のデバイスの場合、Intune では、アクティベーション ロックのバイパス コードを取得し、直接デバイスに発行できます。  
 
- 詳しくは「[Configuration Manager でアクティベーション ロックのバイパスを使用して iOS デバイスを保護する](/sccm/mdm/deploy-use/manage-ios-activation-lock)」をご覧ください。  
+  詳しくは「[Configuration Manager でアクティベーション ロックのバイパスを使用して iOS デバイスを保護する](/sccm/mdm/deploy-use/manage-ios-activation-lock)」をご覧ください。  
 
 ##  <a name="BKMK_SC1601"></a> バージョン 1602 でのソフトウェア センターの機能強化  
 

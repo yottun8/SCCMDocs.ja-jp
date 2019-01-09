@@ -10,21 +10,21 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6a2fe20896a781d7c897bd5a827d25a7b70390b7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b0fa269199f7f3bf4299f90faef9e55766f775d4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351515"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421333"
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>System Center Configuration Manager でのブート イメージの管理
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 Configuration Manager のブート イメージは、オペレーティング システムの展開中に使用される [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) のイメージです。 ブート イメージは、コンピューターを WinPE で起動するために使用されます。 この最小限のオペレーティング システムには、限られたコンポーネントとサービスが含まれています。 Configuration Manager では、WinPE を使用して、Windows インストール用にセットアップ先のコンピューターを準備します。 ブート イメージを管理するときは、以下のセクションを参照してください。
 
 ## <a name="BKMK_BootImageDefault"></a> 既定のブート イメージ
-Configuration Manager には 2 つの既定のブート イメージがあります。一方は x86 プラットフォームをサポートし、もう一方は x64 プラットフォームをサポートします。 これらのイメージは次の場所に格納されています: \\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64*> または <*i386*>。 既定のブート イメージは、実行する操作に応じて更新または再生成されます。
+既定では、Configuration Manager には、x86 プラットフォームをサポートするブート イメージと x64 プラットフォームをサポートするブート イメージの、2 つのブート イメージが用意されています。 これらのイメージは次の場所に格納されています: \\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64*> または <*i386*>。 既定のブート イメージは、実行する操作に応じて更新または再生成されます。
 
 既定のブート イメージに記載されている任意の操作に対して、次の動作を考慮します。
 - ソース ドライバー オブジェクトが有効である必要があります。 これらのオブジェクトには、ドライバーのソース ファイルが含まれます。 オブジェクトが有効でない場合、サイトでブート イメージにドライバーが追加されません。
@@ -62,51 +62,51 @@ Configuration Manager バージョン 1706 以降、Windows ADK インストー�
 
  サイトのインストール中に、Configuration Manager は、Windows ADK のサポートされているバージョンから、WinPE バージョンに基づくブート イメージを自動的に追加します。 Configuration Manager のバージョンによっては、サポートされているバージョンの Windows ADK とは異なるバージョンの WinPE に基づくブート イメージを追加できる場合があります。 サポートされていないバージョンの WinPE が含まれるブート イメージを追加しようとすると、エラーが発生します。 次のリストに、現在サポートされている Windows ADK と WinPE バージョンを示します。 
 
--   **Windows ADK バージョン**  
+- **Windows ADK バージョン**  
 
-     Windows 10 用 Windows ADK  
+   Windows 10 用 Windows ADK  
 
--   **Configuration Manager コンソールでカスタマイズできる Windows PE ブート イメージのバージョン**  
+- **Configuration Manager コンソールでカスタマイズできる Windows PE ブート イメージのバージョン**  
 
-     Windows PE 10  
+   Windows PE 10  
 
--   **Configuration Manager コンソールでカスタマイズできない Windows PE ブート イメージのバージョン**  
+- **Configuration Manager コンソールでカスタマイズできない Windows PE ブート イメージのバージョン**  
 
-     Windows PE 3.1<sup>1</sup> および Windows PE 5  
+   Windows PE 3.1<sup>1</sup> および Windows PE 5  
 
-     <sup>1</sup> Windows PE 3.1 のブートイメージしか Configuration Manager に追加することができません。 Windows AIK for Windows 7 (Windows PE 3.0 の構築用) を Windows AIK Supplement for Windows 7 SP1 (Windows PE 3.1 の構築用) にアップグレードします。 Windows AIK Supplement for Windows 7 SP1 は、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=5188)からダウンロードできます。  
+   <sup>1</sup> Windows PE 3.1 のブートイメージしか Configuration Manager に追加することができません。 Windows AIK for Windows 7 (Windows PE 3.0 の構築用) を Windows AIK Supplement for Windows 7 SP1 (Windows PE 3.1 の構築用) にアップグレードします。 Windows AIK Supplement for Windows 7 SP1 は、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=5188)からダウンロードできます。  
 
-     たとえば、Configuration Manager コンソールを使用して、Windows ADK for Windows 10 (Windows PE 10 の構築用) で構築したブート イメージをカスタマイズします。 Windows PE 5 に基づくブート イメージの場合、Windows ADK for Windows 8 の DISM のバージョンを使用して別のコンピューターからカスタマイズします。 その後、カスタム ブート イメージを Configuration Manager コンソールに追加します。 詳細については、「[ブート イメージのカスタマイズ](customize-boot-images.md)」を参照してください。
+   たとえば、Configuration Manager コンソールを使用して、Windows ADK for Windows 10 (Windows PE 10 の構築用) で構築したブート イメージをカスタマイズします。 Windows PE 5 に基づくブート イメージの場合、Windows ADK for Windows 8 の DISM のバージョンを使用して別のコンピューターからカスタマイズします。 その後、カスタム ブート イメージを Configuration Manager コンソールに追加します。 詳細については、「[ブート イメージのカスタマイズ](customize-boot-images.md)」を参照してください。
 
- ブート イメージを手動で追加するには、次の手順に従います。  
+  ブート イメージを手動で追加するには、次の手順に従います。  
 
 #### <a name="to-add-a-boot-image"></a>ブート イメージを追加するには  
 
-1.  Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
+1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** をクリックします。  
 
-2.  **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開し、**[ブート イメージ]** をクリックします。  
+2. **[ソフトウェア ライブラリ]** ワークスペースで **[オペレーティング システム]** を展開し、**[ブート イメージ]** をクリックします。  
 
-3.  **[ホーム]** タブの **[作成]** グループで、**[ブート イメージの追加]** をクリックし、ブート イメージの追加ウィザードを開始します。  
+3. **[ホーム]** タブの **[作成]** グループで、**[ブート イメージの追加]** をクリックし、ブート イメージの追加ウィザードを開始します。  
 
-4.  **[データ ソース]** ページで以下のオプションを指定し、**[次へ]** をクリックします。  
+4. **[データ ソース]** ページで以下のオプションを指定し、**[次へ]** をクリックします。  
 
-    -   **[パス]** ボックスで、ブート イメージの WIM ファイルへのパスを指定します。  
+   -   **[パス]** ボックスで、ブート イメージの WIM ファイルへのパスを指定します。  
 
-         このパスは、UNC 形式の有効なネットワーク パスでなければなりません。 例: \\\\<*servername*\\<*sharename*>\\<*bootimagename*>.wim  
+        このパスは、UNC 形式の有効なネットワーク パスでなければなりません。 例: \\\\<*servername*\\<*sharename*>\\<*bootimagename*>.wim  
 
-    -   **[ブート イメージ]** ドロップダウン リストで、インポートするブート イメージを選択します。 WIM ファイルに複数のブート イメージが含まれている場合、該当するイメージを選びます。  
+   -   **[ブート イメージ]** ドロップダウン リストで、インポートするブート イメージを選択します。 WIM ファイルに複数のブート イメージが含まれている場合、該当するイメージを選びます。  
 
-5.  **[全般]** ページで、以下のオプションを指定して **[次へ]** をクリックします。  
+5. **[全般]** ページで、以下のオプションを指定して **[次へ]** をクリックします。  
 
-    -   **[名前]** ボックスで、ブート イメージの一意の名前を指定します。  
+   -   **[名前]** ボックスで、ブート イメージの一意の名前を指定します。  
 
-    -   **[バージョン]** ボックスで、ブート イメージのバージョン番号を指定します。  
+   -   **[バージョン]** ボックスで、ブート イメージのバージョン番号を指定します。  
 
-    -   **[コメント]** ボックスで、ブート イメージの使用方法について簡単な説明を指定します。  
+   -   **[コメント]** ボックスで、ブート イメージの使用方法について簡単な説明を指定します。  
 
-6.  ウィザードを完了します。  
+6. ウィザードを完了します。  
 
- Configuration Manager コンソールの **[ ブート イメージ]** ノードに、ブート イメージが一覧表示されます。 ブート イメージを使用してオペレーティング システムを展開する前に、配布ポイントにブート イメージを配布します。 
+   Configuration Manager コンソールの **[ ブート イメージ]** ノードに、ブート イメージが一覧表示されます。 ブート イメージを使用してオペレーティング システムを展開する前に、配布ポイントにブート イメージを配布します。 
 
 > [!NOTE]  
 >  コンソールの **[ブート イメージ]** ノードの **[サイズ (KB)]** 列に、各ブート イメージの圧縮解除後のサイズが表示されます。 サイトは、ネットワーク経由でブート イメージを送信するときに、圧縮コピーを送信します。 このコピーは、通常は **[サイズ (KB)]** 列で表示されているサイズより小さくなります。  
@@ -127,13 +127,13 @@ Configuration Manager バージョン 1706 以降、Windows ADK インストー�
 ##  <a name="BKMK_ModifyBootImages"></a> ブート イメージの変更  
  デバイス ドライバーをイメージに追加または削除したり、ブート イメージに関連付けられているプロパティを編集したりできます。 追加または削除するデバイス ドライバーには、ネットワーク アダプターまたは大容量記憶装置のデバイス ドライバーが含まれる可能性があります。 ブート イメージを変更する際には、以下の点をご考慮ください。  
 
--   デバイス ドライバーをブート イメージに追加する前に、デバイス ドライバー カタログのデバイス ドライバーをインポートして有効にします。  
+- デバイス ドライバーをブート イメージに追加する前に、デバイス ドライバー カタログのデバイス ドライバーをインポートして有効にします。  
 
--   ブート イメージを変更しても、ブート イメージが参照する関連パッケージは一切変更されません。  
+- ブート イメージを変更しても、ブート イメージが参照する関連パッケージは一切変更されません。  
 
--   ブート イメージに変更を加えたら、既にある配布ポイントでブート イメージを**更新**します。 このプロセスにより、ブート イメージの最新バージョンがクライアントに使用可能になります。 詳細については、「 [Manage content you have distributed](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage)」を参照してください。  
+- ブート イメージに変更を加えたら、既にある配布ポイントでブート イメージを**更新**します。 このプロセスにより、ブート イメージの最新バージョンがクライアントに使用可能になります。 詳細については、「 [Manage content you have distributed](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage)」を参照してください。  
 
- ブート イメージを変更するには、次の手順に従います。  
+  ブート イメージを変更するには、次の手順に従います。  
 
 #### <a name="to-modify-the-properties-of-a-boot-image"></a>ブート イメージのプロパティを変更するには  
 
@@ -220,7 +220,7 @@ Configuration Manager バージョン 1706 以降、Windows ADK インストー�
 
         -   選択した配布ポイントまたは配布ポイント グループのブート イメージ パッケージの整合性を確認するには、**[検証]** をクリックします。  
 
-    -   **[オプション コンポーネント]** タブで、Configuration Manager で使用するために Windows PE に追加するコンポーネントを指定します。 使用可能なオプション コンポーネントについて詳しくは、「 [WinPE: パッケージの追加 (オプション コンポーネント リファレンス)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)」をご覧ください。  
+    -   **[オプション コンポーネント]** タブで、Configuration Manager で使用するために Windows PE に追加するコンポーネントを指定します。 使用可能なオプション コンポーネントの詳細については、[WinPE: パッケージの追加 (オプション コンポーネント リファレンス)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference) に関するページを参照してください。  
 
     -   **[セキュリティ]** タブで、管理ユーザーを選択して、その管理ユーザーが実行できる操作を変更します。  
 
@@ -249,14 +249,14 @@ Configuration Manager バージョン 1706 以降、Windows ADK インストー�
 ##  <a name="BKMK_BootImageLanguage"></a> ブート イメージの展開のための複数言語の構成  
  ブート イメージは言語に依存しません。 この機能により、1 つのブート イメージを使用して、WinPE でタスク シーケンス テキストを複数の言語で表示することができます。 ブート イメージの **[オプション コンポーネント]** タブから適切な言語のサポートを含めます。次に、表示する言語を示すための適切なタスク シーケンス変数を設定します。 展開されたオペレーティング システムの言語は、WinPE の言語に依存しません。 WinPE でユーザーに表示される言語は、次のように決定されます。  
 
--   ユーザーが既存のオペレーティング システムからタスク シーケンスを実行すると、Configuration Manager はユーザー用に構成された言語を自動的に使用します。 必須の展開期限の結果としてタスク シーケンスが自動的に実行された場合、Configuration Manager はオペレーティング システムの言語を使用します。  
+- ユーザーが既存のオペレーティング システムからタスク シーケンスを実行すると、Configuration Manager はユーザー用に構成された言語を自動的に使用します。 必須の展開期限の結果としてタスク シーケンスが自動的に実行された場合、Configuration Manager はオペレーティング システムの言語を使用します。  
 
--   PXE またはメディアを使用するオペレーティング システム展開の場合、起動前コマンドの一部として **SMSTSLanguageFolder** 変数で言語 ID 値を設定します。 コンピューターを WinPE で起動すると、変数で指定した言語でメッセージが表示されます。 指定したフォルダーの言語リソース ファイルにアクセスできない場合、または変数を設定しなかった場合、WinPE ではメッセージが既定の言語で表示されます。  
+- PXE またはメディアを使用するオペレーティング システム展開の場合、起動前コマンドの一部として **SMSTSLanguageFolder** 変数で言語 ID 値を設定します。 コンピューターを WinPE で起動すると、変数で指定した言語でメッセージが表示されます。 指定したフォルダーの言語リソース ファイルにアクセスできない場合、または変数を設定しなかった場合、WinPE ではメッセージが既定の言語で表示されます。  
 
-    > [!NOTE]  
-    >  メディアがパスワードで保護されている場合、パスワードの入力をユーザーに求めるテキストは、常に WinPE の言語で表示されます。  
+  > [!NOTE]  
+  >  メディアがパスワードで保護されている場合、パスワードの入力をユーザーに求めるテキストは、常に WinPE の言語で表示されます。  
 
- PXE またはメディアから開始されたオペレーティング システムの展開の場合、次の手順で WinPE の言語を設定します。  
+  PXE またはメディアから開始されたオペレーティング システムの展開の場合、次の手順で WinPE の言語を設定します。  
 
 #### <a name="to-set-the-windows-pe-language-for-a-pxe-or-media-initiated-operating-system-deployment"></a>PXE またはメディアから開始されたオペレーティング システムの展開の場合に Windows PE の言語を設定するには  
 

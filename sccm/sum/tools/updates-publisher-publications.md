@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: a6a1f8257c2a334b539499a5febbdb77729f0fb2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f0ec652a9fb7d4ef6bef881bfc96f1be2b4e297a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349917"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424342"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>Updates Publisher でパブリケーションを管理する
 
-*適用対象: System Center Updates Publisher*
+*適用対象:System Center Updates Publisher*
 
 パブリケーションを使用することで、更新プログラムとバンドルのグループを単一オブジェクトとして管理できます。 これには、管理サーバーに更新プログラムを公開して、Updates Publisher の他のインストールと共に使用するグループとしてパブリケーションをエクスポートすることも含まれます。
 
@@ -41,9 +41,9 @@ ms.locfileid: "32349917"
 
 2. 次に、**[ホーム]** タブで以下のオプションのいずれかを選択します。 使用できるオプションは、選択した更新プログラムのパブリケーションの種類によって異なります。
 
-  -   **自動**
-  -   **コンテンツ全体**
-  -   **メタデータのみ**
+   -   **自動**
+   -   **コンテンツ全体**
+   -   **メタデータのみ**
 
 変更後は、新しい値を確認するためにパブリケーションの表示を更新する必要がある場合があります。
 
@@ -67,13 +67,13 @@ ms.locfileid: "32349917"
 
 ### <a name="to-publish-a-publication"></a>パプリケーションを公開するには
 
-1.  **[パブリケーション] ワークスペース**に移動し、公開またはエクスポートする更新プログラムとバンドルのグループを含むパブリケーションを選択します。 次に、リボンの **[ホーム]** タブから **[公開]** を選択します。
+1. **[パブリケーション] ワークスペース**に移動し、公開またはエクスポートする更新プログラムとバンドルのグループを含むパブリケーションを選択します。 次に、リボンの **[ホーム]** タブから **[公開]** を選択します。
 
-2.  **[公開]** ウィザードの **[選択]** ページで、新しく証明書を発行してすべての更新プログラムを署名することを選択できますが、パブリケーションの種類は変更できません。
+2. **[公開]** ウィザードの **[選択]** ページで、新しく証明書を発行してすべての更新プログラムを署名することを選択できますが、パブリケーションの種類は変更できません。
 
-3.  ウィザードを完了します。
+3. ウィザードを完了します。
 
-  公開に失敗した場合は UpdatesPublisher.log ファイルへのリンクが表示され、詳しい情報を確認できます。
+   公開に失敗した場合は UpdatesPublisher.log ファイルへのリンクが表示され、詳しい情報を確認できます。
 
 ## <a name="export-a-publication"></a>パブリケーションをエクスポートする
 Updates Publisher のリポジトリからパブリケーションをエクスポートできます。 これにより、そのパブリケーションに割り当てられている更新プログラムとバンドルがエクスポートされ、更新プログラム カタログが作成されます。 作成後、このカタログを Updates Publisher の別のインスタンスに[追加](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs)および[インポート](/sccm/sum/tools/updates-publisher-catalogs#mport-updates)できます。 また、パブリケーションの一部ではない[更新プログラムのエクスポート](/sccm/sum/tools/manage-updates-with-updates-publisher#export-updates)もできます。

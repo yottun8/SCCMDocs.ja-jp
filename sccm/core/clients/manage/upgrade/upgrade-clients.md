@@ -10,16 +10,16 @@ ms.assetid: 446c83b5-c292-4e74-ba19-0792ac6b3472
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76b6b3e1e3ee8e1cdbfbb61890b5a1f7ac5e853f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d63100e5525b24ffd8deba447a10325c8209ea00
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334016"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416692"
 ---
 # <a name="upgrade-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager でのクライアントのアップグレード
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Windows コンピューター、UNIX/Linux サーバー、および Mac コンピューターで System Center Configuration Manager クライアント ソフトウェアをアップグレードするには、さまざまな方法があります。 各方法の利点と欠点の詳細について以下に説明します。  
 
@@ -31,19 +31,19 @@ Windows コンピューター、UNIX/Linux サーバー、および Mac コン�
 
  **長所**  
 
--   クライアントをアップグレードする前に、コンピューターが検出されている必要はありません。  
+- クライアントをアップグレードする前に、コンピューターが検出されている必要はありません。  
 
--   新しいクライアントのインストールまたは更新で使用できます。  
+- 新しいクライアントのインストールまたは更新で使用できます。  
 
--   コンピューターは、Active Directory ドメイン サービスに公表されたクライアント インストール プロパティを読み取ることができます。  
+- コンピューターは、Active Directory ドメイン サービスに公表されたクライアント インストール プロパティを読み取ることができます。  
 
--   目的のクライアント コンピューターのインストール アカウントを構成してメンテナンスを行う必要はありません。  
+- 目的のクライアント コンピューターのインストール アカウントを構成してメンテナンスを行う必要はありません。  
 
- **短所**  
+  **短所**  
 
--   多数のクライアントをアップグレードする場合、大量のネットワーク トラフィックを発生させる可能性があります。  
+- 多数のクライアントをアップグレードする場合、大量のネットワーク トラフィックを発生させる可能性があります。  
 
--   Active Directory スキーマが Configuration Manager 向けに拡張されていない場合、[グループ ポリシー設定](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP)を使用してサイト内のコンピューターにクライアント インストール プロパティを追加する必要があります。  
+- Active Directory スキーマが Configuration Manager 向けに拡張されていない場合、[グループ ポリシー設定](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP)を使用してサイト内のコンピューターにクライアント インストール プロパティを追加する必要があります。  
 
 
 ## <a name="logon-script-installation"></a>ログオン スクリプトによるインストール  
@@ -51,42 +51,42 @@ Windows コンピューター、UNIX/Linux サーバー、および Mac コン�
 
  **長所**  
 
--   クライアントをインストールする前に、コンピューターが検出されている必要はありません。  
+- クライアントをインストールする前に、コンピューターが検出されている必要はありません。  
 
--   新しいクライアントのインストールまたは更新で使用できます。  
+- 新しいクライアントのインストールまたは更新で使用できます。  
 
--   CCMSetup のコマンド ライン プロパティを使用してサポートします。  
+- CCMSetup のコマンド ライン プロパティを使用してサポートします。  
 
- **短所**  
+  **短所**  
 
--   多数のクライアントをアップグレードする場合、短時間で大量のネットワーク トラフィックを発生させる可能性があります。  
+- 多数のクライアントをアップグレードする場合、短時間で大量のネットワーク トラフィックを発生させる可能性があります。  
 
--   ユーザーがネットワークに頻繁にログオンしない場合は、すべてのクライアント コンピューターでアップグレードするのに長時間かかる場合があります。  
+- ユーザーがネットワークに頻繁にログオンしない場合は、すべてのクライアント コンピューターでアップグレードするのに長時間かかる場合があります。  
 
- 詳細については、「[ログオン スクリプトを使用した Configuration Manager クライアントのインストール方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientLogonScript)」を参照してください。  
+  詳細については、「[ログオン スクリプトを使用した Configuration Manager クライアントのインストール方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientLogonScript)」を参照してください。  
 
 ## <a name="manual-installation"></a>手動インストール  
  **サポートされるクライアント プラットフォーム:** Windows、UNIX/Linux、Mac OS X  
 
  **長所**  
 
--   クライアントをアップグレードする前に、コンピューターが検出されている必要はありません。  
+- クライアントをアップグレードする前に、コンピューターが検出されている必要はありません。  
 
--   テストの目的で役立ちます。  
+- テストの目的で役立ちます。  
 
--   CCMSetup のコマンド ライン プロパティを使用してサポートします。  
+- CCMSetup のコマンド ライン プロパティを使用してサポートします。  
 
- **短所**  
+  **短所**  
 
--   自動化されていないため、時間を削減できます。  
+- 自動化されていないため、時間を削減できます。  
 
- 詳細については、以下のトピックを参照してください。  
+  詳細については、以下のトピックを参照してください。  
 
--   [Configuration Manager クライアントの手動インストール方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)  
+- [Configuration Manager クライアントの手動インストール方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)  
 
--   [System Center Configuration Manager で Linux および UNIX サーバーのクライアントをアップグレードする方法](../../../../core/clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)  
+- [System Center Configuration Manager で Linux および UNIX サーバーのクライアントをアップグレードする方法](../../../../core/clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)  
 
--   [System Center Configuration Manager で Mac コンピューター上のクライアントをアップグレードする方法](../../../../core/clients/manage/upgrade/upgrade-clients-on-mac-computers.md)  
+- [System Center Configuration Manager で Mac コンピューター上のクライアントをアップグレードする方法](../../../../core/clients/manage/upgrade/upgrade-clients-on-mac-computers.md)  
 
 ## <a name="upgrade-installation-application-management"></a>アップグレード インストール (アプリケーション管理)  
  **サポートされるクライアント プラットフォーム:** Windows  
@@ -96,15 +96,15 @@ Windows コンピューター、UNIX/Linux サーバー、および Mac コン�
 
  **長所**  
 
--   CCMSetup のコマンド ライン プロパティを使用してサポートします。  
+- CCMSetup のコマンド ライン プロパティを使用してサポートします。  
 
- **短所**  
+  **短所**  
 
--   大規模なコレクションに対してクライアントを配布する場合、ネットワーク トラフィックの量が増大する可能性があります。  
+- 大規模なコレクションに対してクライアントを配布する場合、ネットワーク トラフィックの量が増大する可能性があります。  
 
--   サイトで探索または割り当てられたコンピューター上のクライアント ソフトウェアをアップグレードするときのみ使用できます。  
+- サイトで探索または割り当てられたコンピューター上のクライアント ソフトウェアをアップグレードするときのみ使用できます。  
 
- 詳細については、「[パッケージとプログラムを使用した Configuration Manager クライアントのインストール方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientApp)」を参照してください。  
+  詳細については、「[パッケージとプログラムを使用した Configuration Manager クライアントのインストール方法](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientApp)」を参照してください。  
 
 ## <a name="automatic-client-upgrade"></a>自動クライアント アップグレード  
 
@@ -115,33 +115,33 @@ Windows コンピューター、UNIX/Linux サーバー、および Mac コン�
 
  **長所**  
 
--   サイト内のクライアントを自動的に最新バージョンに保つのに使用できます。  
+- サイト内のクライアントを自動的に最新バージョンに保つのに使用できます。  
 
--   最小限の管理が必要です。  
+- 最小限の管理が必要です。  
 
- **短所**  
+  **短所**  
 
--   クライアント ソフトウェアのアップグレードにのみ使用できます。新しいクライアントのインストールには使用できません。  
+- クライアント ソフトウェアのアップグレードにのみ使用できます。新しいクライアントのインストールには使用できません。  
 
--   同時に多くのクライアントをアップグレードするには適していません。  
+- 同時に多くのクライアントをアップグレードするには適していません。  
 
--   サイトに関連付けられた階層内のすべてのクライアントに対して適用します。 コレクションでスコープを設定することはできません。  
+- サイトに関連付けられた階層内のすべてのクライアントに対して適用します。 コレクションでスコープを設定することはできません。  
 
--   スケジュール オプションは限定されています。  
+- スケジュール オプションは限定されています。  
 
- 詳細については、「[System Center Configuration Manager で Windows コンピューター用クライアントをアップグレードする方法](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)」を参照してください。  
+  詳細については、「[System Center Configuration Manager で Windows コンピューター用クライアントをアップグレードする方法](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)」を参照してください。  
 
 ## <a name="client-testing"></a>クライアントのテスト  
  **サポートされるクライアント プラットフォーム:** Windows  
 
  **長所**  
 
--   小規模な実稼働前環境コレクションで新しいクライアント バージョンをテストするために使用できます。  
+- 小規模な実稼働前環境コレクションで新しいクライアント バージョンをテストするために使用できます。  
 
--   テストが完了すると、実稼働前環境のクライアントは実稼働環境に昇格され、Configuration Manager サイト全体で自動的にアップグレードされます。  
+- テストが完了すると、実稼働前環境のクライアントは実稼働環境に昇格され、Configuration Manager サイト全体で自動的にアップグレードされます。  
 
- **短所**  
+  **短所**  
 
--   クライアント ソフトウェアのアップグレードにのみ使用できます。新しいクライアントのインストールには使用できません。  
+- クライアント ソフトウェアのアップグレードにのみ使用できます。新しいクライアントのインストールには使用できません。  
 
- [System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストする方法](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  
+  [System Center Configuration Manager で実稼働前コレクションのクライアント アップグレードをテストする方法](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  

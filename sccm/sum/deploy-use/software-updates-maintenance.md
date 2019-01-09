@@ -10,16 +10,16 @@ ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3a44643870234a08169db1d55cc834e4ca5fcbb5
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: d2196890070aa842ac58bc127af8aaa876640ec4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385492"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417032"
 ---
 # <a name="software-updates-maintenance"></a>ソフトウェア更新プログラムのメンテナンス
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 WSUS クリーンアップ タスクは、Configuration Manager コンソールから、またはソフトウェアの更新ポイント コンポーネントのプロパティから、スケジュールして実行することができます。 最初に WSUS クリーンアップ タスクを実行することを選ぶと、次回から、ソフトウェア更新プログラムを最新に保つときにこのタスクが実行されます。  
 
@@ -68,7 +68,7 @@ Configuration Manager バージョン 1806 より前のバージョンでは、W
 - サーバーに接続しないコンピューター
 - 不要な更新ファイル
 
- 詳細と手順については、ブログ記事「[The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/)」 (Microsoft WSUS と Configuration Manager SUP のメンテナンスの完全ガイド) を参照してください。 
+  詳細と手順については、ブログ記事「[The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/)」 (Microsoft WSUS と Configuration Manager SUP のメンテナンスの完全ガイド) を参照してください。 
 
 ## <a name="updates-cleanup-log-entries"></a>更新プログラムのログ エントリのクリーンアップ
  

@@ -2,7 +2,7 @@
 title: バージョン 1810 の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager Current Branch のバージョン 1810 で導入された変更点および新機能について説明します。
-ms.date: 11/27/2018
+ms.date: 12/20/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 80c4798a93d2424759b85b7d8fe106b9251714a4
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: f93b9c7e96c66fd2279d8d6e42f605a763c75025
+ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458178"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53747145"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1810 の新機能
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 Configuration Manager Current Branch の更新プログラム 1810 はコンソール内の更新プログラムとして利用できます。 バージョン 1710、1802、1806 を実行しているサイトでこの更新プログラムを適用します。 <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
 
@@ -28,9 +28,9 @@ Configuration Manager Current Branch の更新プログラム 1810 はコンソ�
 > [!Note]  
 > この記事では現在、このバージョンの重要な機能をすべて取り上げています。 しかしながら、一部のセクションのコンテンツは、新機能に関する後続情報で更新されていません。 更新がないか、このページを定期的にご確認ください。 変更には ***[更新]*** タグが付きます。 コンテンツが最終的に承認されると、この注記は削除されます。  
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4459701).
+このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Summary of changes in Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4482169)」(Configuration Manager Current Branch バージョン 1810 での変更の概要) をご覧ください。
 
+<!--
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1810 Release Notes](https://docs.microsoft.com/powershell/sccm/1810_release_notes?view=sccm-ps).
 
 The following additional updates to this release are also now available:
@@ -77,13 +77,13 @@ Version 1810 drops support for the following products:
 
 バージョン 1810 のインストールまたはバージョン 1810 への更新では、Configuration Manager のセットアップで次の前提条件チェックが追加または改良されました。
 
-- **保留中のシステム再起動**: この前提条件チェックは回復性が強化されました。 Windows 機能の追加のレジストリ キーが確認されます。 詳しくは、「[保留中のシステムの再起動](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#pending-system-restart)」をご覧ください。 <!--SCCMDocs-pr issue 3010-->  
+- **保留中のシステム再起動**:この前提条件チェックは回復性が強化されました。 Windows 機能の追加のレジストリ キーが確認されます。 詳しくは、「[保留中のシステムの再起動](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#pending-system-restart)」をご覧ください。 <!--SCCMDocs-pr issue 3010-->  
 
-- **SQL 変更追跡のクリーンアップ**: サイト データベースに SQL 変更追跡データのバックログがあるかどうかの新しい確認です。 このバックログの確認とクリーンアップの手順など、詳しくは、「[SQL 変更追跡のクリーンアップ](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#bkmk_changetracking)」をご覧ください。 <!--SCCMDocs-pr issue 3023-->  
+- **SQL 変更追跡のクリーンアップ**:サイト データベースに SQL 変更追跡データのバックログがあるかどうかの新しい確認です。 このバックログの確認とクリーンアップの手順など、詳しくは、「[SQL 変更追跡のクリーンアップ](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#bkmk_changetracking)」をご覧ください。 <!--SCCMDocs-pr issue 3023-->  
 
-<!-- - **SQL Native Client version**: This prerequisite check is updated for versions of SQL Native Client that support TLS 1.2. The minimum version is 11.4.7001.0. For more information, see [SQL Native Client version](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client). <!--SCCMDocs-pr issue 3094->  
- -->
-- **Windows クラスター ノード上のサイト システム**: Configuration Manager の設定手順では、フェールオーバー クラスタリング用の Windows ロールで、コンピューターにサイト サーバー ロールがインストールされるのをブロックしなくなりました。 SQL Always On では、このロールが必要なため、以前はサイト サーバーにサイト データベースを同時に配置できませんでした。 この変更により、SQL Always On とパッシブ モードのサイト サーバーを使用して、少ないサーバー数で高可用性サイトを作成できます。 詳しくは、「[Windows フェールオーバー クラスター](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster)」をご覧ください。 <!--1359132-->  
+- **SQL Native Client バージョン**:この前提条件の確認は、TLS 1.2 をサポートする SQL Native Client のバージョン用に更新されています。 最小バージョンは [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402) です。 詳細については、[SQL Native Client バージョン](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client)に関するトピックを参照してください。 <!--SCCMDocs-pr issue 3094->  
+
+- **Windows クラスター ノード上のサイト システム**:Configuration Manager の設定手順では、フェールオーバー クラスタリング用の Windows ロールで、コンピューターにサイト サーバー ロールがインストールされるのをブロックしなくなりました。 SQL Always On では、このロールが必要なため、以前はサイト サーバーにサイト データベースを同時に配置できませんでした。 この変更により、SQL Always On とパッシブ モードのサイト サーバーを使用して、少ないサーバー数で高可用性サイトを作成できます。 詳しくは、「[Windows フェールオーバー クラスター](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster)」をご覧ください。 <!--1359132-->  
 
 
 
@@ -104,9 +104,9 @@ Version 1810 drops support for the following products:
 ### <a name="new-boundary-group-options"></a>新しい境界グループのオプション
 <!--1358749--> 境界グループに、環境内のコンテンツ配布をより細かく制御するための、以下の追加設定が組み込まれました。
 
-- **同じサブネット内のピアの配布ポイントより優先**: 管理ポイントは、既定で、コンテンツの場所の一覧の最上位にピア キャッシュ ソースを順位付けします。 この設定は、ピア キャッシュ ソースと同じサブネット内にあるクライアントのその優先順位を入れ替えます。  
+- **同じサブネット内のピアの配布ポイントより優先**:管理ポイントは、既定で、コンテンツの場所の一覧の最上位にピア キャッシュ ソースを順位付けします。 この設定は、ピア キャッシュ ソースと同じサブネット内にあるクライアントのその優先順位を入れ替えます。  
 
-- **配布ポイントよりクラウドの配布ポイントを優先**: より高速なインターネット リンクが使用されている支店がある場合、クラウドのコンテンツを優先できるようになりました。  
+- **配布ポイントよりクラウドの配布ポイントを優先**:より高速なインターネット リンクが使用されている支店がある場合、クラウドのコンテンツを優先できるようになりました。  
 
 詳細については、「[ピアのダウンロードの境界グループのオプション](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions)」を参照してください。
 
@@ -213,7 +213,7 @@ PowerShell プロファイルは、PowerShell の開始時に実行されるス�
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>既存デバイス向けの Windows Autopilot のタスク シーケンスのサポート
 <!--1358333-->
 
-[既存デバイス向けの Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) を、Windows 10 Insider Preview で利用できるようになりました。 この新しい機能を使用すると、単一のネイティブな Configuration Manager タスク シーケンスを使用して、[Windows Autopilot ユーザー駆動モード](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)用に Windows 7 デバイスを再イメージ化およびプロビジョニングできます。 
+[既存デバイス向けの Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) を、Windows 10 バージョン 1809 以降で利用できるようになりました。 この新しい機能を使用すると、単一のネイティブな Configuration Manager タスク シーケンスを使用して、[Windows Autopilot ユーザー駆動モード](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)用に Windows 7 デバイスを再イメージ化およびプロビジョニングできます。 
 
 <!--For more information, see []().--> 
 
@@ -310,13 +310,13 @@ PowerShell プロファイルは、PowerShell の開始時に実行されるス�
 
 **管理分析情報**ノードにグラフィック ダッシュボードが追加されました。 このダッシュボードにはルールの状態の概要が表示されるので、進捗状況を簡単に表示できます。 ダッシュボードには次のタイルが含まれています。
 
-- **管理分析情報インデックス**: 管理分析情報ルールの全体的進捗状況を追跡記録します。 インデックスは加重平均です。 クリティカル ルールが最も重要です。 このインデックスは、任意のルールに最も軽い重みを与えます。  
+- **管理分析情報インデックス**:管理分析情報ルールの全体的進捗状況を追跡記録します。 インデックスは加重平均です。 クリティカル ルールが最も重要です。 このインデックスは、任意のルールに最も軽い重みを与えます。  
 
-- **管理分析情報グループ**: 各グループのルールがパーセント表示されます。  
+- **管理分析情報グループ**:各グループのルールがパーセント表示されます。  
 
-- **管理分析情報の優先順位**: 優先順位別のルールがパーセント表示されます。  
+- **管理分析情報の優先順位**:優先順位別のルールがパーセント表示されます。  
 
-- **すべての分析情報**: 優先順位と状態を含む、分析情報のテーブル。  
+- **すべての分析情報**:優先順位と状態を含む、分析情報のテーブル。  
 
 ![管理分析情報ダッシュボードのスクリーンショット](media/1357979-management-insights-dashboard.png)
 

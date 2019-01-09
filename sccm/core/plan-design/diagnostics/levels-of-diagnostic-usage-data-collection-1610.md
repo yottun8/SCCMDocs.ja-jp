@@ -10,16 +10,16 @@ ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 658d005234469d8729b515e9deeb02e20e94c748
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b29044858bb9a9d57db1c2229c826630d0905860
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340898"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416522"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-system-center-configuration-manager"></a>System Center Configuration Manager バージョン 1610 により収集される診断結果および使用状況データのレベル
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager バージョン 1610 では、**基本**、**エンハンス**、**フル**の 3 つのレベルの診断結果と使用状況データが収集されます。 既定では、この機能は、エンハンス レベルに設定されます。 以降のセクションでは、各レベルで収集されるデータについて詳しく説明します。
 
@@ -40,18 +40,18 @@ System Center Configuration Manager バージョン 1610 では、**基本**、*
  System Center Configuration Manager バージョン 1610 では、このレベルには次の情報が含まれます。
 
 
--   セットアップ情報:
-      - ビルド、インストールの種類、言語パック、有効にされた機能  
+- セットアップ情報:
+    - ビルド、インストールの種類、言語パック、有効にされた機能  
 
-      - 更新プログラム パックの展開の状態とエラー、ダウンロードの進行状況、前提条件エラー    
+    - 更新プログラム パックの展開の状態とエラー、ダウンロードの進行状況、前提条件エラー    
 
-      - アップグレード後のスクリプトのバージョン
+    - アップグレード後のスクリプトのバージョン
 
-      - 更新プログラムの高速リングの使用
+    - 更新プログラムの高速リングの使用
 
-    - ***[新規]*** リリース前の使用、セットアップ メディアの種類、ブランチの種類
+  - ***[新規]*** リリース前の使用、セットアップ メディアの種類、ブランチの種類
 
-    - ***[新規]*** ソフトウェア アシュアランスの有効期限
+  - ***[新規]*** ソフトウェア アシュアランスの有効期限
 
 - データベースのパフォーマンス指標 (レプリケーション処理情報、プロセッサおよびディスク使用率が上位の SQL Server ストアド プロシージャ)
 
@@ -61,7 +61,7 @@ System Center Configuration Manager バージョン 1610 では、**基本**、*
 
 - Configuration Manager クライアント バージョンとオペレーティング システム バージョンの数
 
-- 管理対象デバイスのオペレーティング システムおよび Exchange Connector によって設定されたポリシーの数
+- マネージド デバイスのオペレーティング システムおよび Exchange Connector によって設定されたポリシーの数
 
 - クライアントの言語とロケールの数
 

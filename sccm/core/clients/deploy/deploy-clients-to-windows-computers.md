@@ -10,16 +10,16 @@ ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6eaac644b876fa3adfa1a2c79e7c4c5810942d9f
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 187f876999f39dd1d2d4aa345a7e9037f745a0ed
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385577"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418902"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>Configuration Manager でクライアントを Windows コンピューターに展開する方法
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 この記事では、構成マネージャー クライアントを Windows コンピューターに展開する方法を説明します。 クライアントの展開の計画と準備について詳しくは、次の記事をご覧ください。
 - [クライアント インストール方法](/sccm/core/clients/deploy/plan/client-installation-methods)  
@@ -147,7 +147,7 @@ Active Directory スキーマを拡張していない場合は、グループ �
 
 3.  設定 **[イントラネットの Microsoft 更新サービスの場所を指定する]** のプロパティを開いてから、**[有効]** を選択します。  
 
-4.  **[更新を検出するためのイントラネットの更新サービスを設定する]**: ソフトウェアの更新ポイント サーバーの名前とポートを指定します。  
+4.  **[更新を検出するためのイントラネットの更新サービスを設定する]**:ソフトウェア更新ポイント サーバーの名前とポートを指定します。  
 
     -   完全修飾ドメイン名 (FQDN) を使うように Configuration Manager サイト システムを構成した場合は、FQDN 形式を使います。  
 
@@ -158,7 +158,7 @@ Active Directory スキーマを拡張していない場合は、グループ �
 
      FQDN 形式の例: `http://server1.contoso.com:8530`  
 
-5.  **イントラネット統計サーバーの設定**: 通常、この設定は同じサーバー名です。   
+5.  **[イントラネット統計サーバーの設定]**:通常、この設定は同じサーバー名です。   
 
 6.  クライアントをインストールしてソフトウェア更新プログラムを受け取るコンピューターに、グループ ポリシー オブジェクトを割り当てます。  
 
@@ -256,7 +256,7 @@ CCMSetup.exe は、必要なすべての前提条件をクライアント コン
 
 この例では、追加のパラメーターまたはプロパティなしでクライアントをインストールします。 クライアントは、次の設定を含む、Active Directory Domain Services に対して発行されたクライアント インストール プロパティで自動的に構成されます。  
 
-- サイト コード: この設定では、クライアントの割り当て用に構成されている境界グループに、クライアントのネットワークの場所が含まれる必要があります。  
+- サイト コード:この設定では、クライアントの割り当て用に構成されている境界グループに、クライアントのネットワークの場所が含まれる必要があります。  
 - 管理ポイント
 - フォールバック ステータス ポイント
 - HTTPS のみを使って通信します  
@@ -340,7 +340,7 @@ Azure AD の ID を使って最新の Windows 10 デバイスに構成マネー�
 
 2. Intune ソフトウェア パブリッシャーで、コマンド ライン パラメーターを入力します。 たとえば、イントラネット上の従来のクライアントでは次のコマンド ラインを使います。  
 
-  `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<Your site code> DNSSUFFIX=<DNS Suffix of management point>"`  
+   `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<Your site code> DNSSUFFIX=<DNS Suffix of management point>"`  
 
    > [!Note]  
    > Azure AD 認証を使う最新の Windows 10 クライアントで使うコマンド ラインの例については、「[共同管理用に Windows 10 デバイスを準備する](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)」をご覧ください。  
@@ -392,7 +392,7 @@ Configuration Manager は、ワークグループ内のコンピューターへ�
 
 -   各ワークグループ コンピューターにクライアントを手動でインストールします。 インストール時に、対話ユーザーはローカル管理者権限を持っている必要があります。  
 
--   Configuration Manager サイト サーバーのドメイン内のリソースにアクセスするには、このサイト用にネットワーク アクセス アカウントを構成します。 このアカウントをソフトウェアの配布サイト コンポーネントで指定します。 詳しくは、[サイト コンポーネント](/sccm/core/servers/deploy/configure/site-components)に関するページをご覧ください。  
+-   Configuration Manager サイト サーバーのドメイン内のリソースにアクセスするには、このサイト用にネットワーク アクセス アカウントを構成します。 このアカウントをソフトウェアの配布サイト コンポーネントで指定します。 詳しくは、「[サイト コンポーネント](/sccm/core/servers/deploy/configure/site-components)」をご覧ください。  
 
 
 ### <a name="limitations"></a>制限事項  

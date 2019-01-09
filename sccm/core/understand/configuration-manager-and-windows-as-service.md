@@ -10,16 +10,16 @@ ms.assetid: c8534a1e-57b8-4688-b6e6-299d82cfcec9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e2fb6b022526ce4bae1de21012ac996dbcea35cf
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: 329f5c2f227cbd8a51b1c9ccc21810cda9f6a2cf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260909"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417141"
 ---
 # <a name="configuration-manager-and-windows-as-a-service"></a>Configuration Manager とサービスとしての Windows
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager では、Windows 10 の機能更新プログラムを包括的に制御できます。 サービス モデルとして Windows を完全に導入するには、Configuration Manager の Current Branch モデルを導入する必要もあります。 Windows 10 を最新の状態に保つには、最適なエクスペリエンスを実現するために Configuration Manager を最新の状態に保つ必要があります。 Windows 10 の魅力的な新しい企業の機能を最大限に活用するには、新しいバージョンの Configuration Manager が必要です。 この記事は、Configuration Manager の Current Branch を導入するために必要な主な記事のランディング ページとして提供されています。 Configuration Manager の Current Branch を準備してからサービスとしての Windows に進みます。
 
@@ -39,6 +39,7 @@ System Center Configuration Manager では、Windows 10 の機能更新プログ
 
 
 ## <a name="key-articles-about-adopting-windows-as-a-service"></a>サービスとしての Windows の導入に関する主な記事
+
 | アーティクル        | 説明          | 
 | ------------- |-------------|
 |[サービスとしての Windows の管理](/sccm/osd/deploy-use/manage-windows-as-a-service)|サービス プランを使用して Windows 10 の機能更新プログラムを展開する方法について説明します。|

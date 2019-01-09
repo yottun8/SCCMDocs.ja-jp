@@ -10,16 +10,16 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: fd606ff7068b7c14047e445d16ea78d20a5c12ea
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d011272c42f3347f555e4fb5322464e9c5e754da
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342649"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424699"
 ---
 # <a name="creating-custom-report-models-for-system-center-configuration-manager-in-sql-server-reporting-services"></a>SQL Server Reporting Services での System Center Configuration Manager のカスタム レポート モデルの作成
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 サンプルのレポート モデルは System Center Configuration Manager に含まれていますが、それぞれの業務要件に適したレポート モデルを定義し、そのレポート モデルを Configuration Manager に展開して、新しいモデルベースのレポートの作成時に使用できます。 次の表に、基本レポート モデルを作成して展開するための手順を示します。  
 
@@ -68,7 +68,7 @@ ms.locfileid: "32342649"
 
 4.  **[接続マネージャー]** ダイアログ ボックスで、データ ソースの次の接続プロパティを指定します。  
 
-    -   **サーバー名**: Configuration Manager サイト データベース サーバーの名前を入力するか、一覧から選択します。 既定のインスタンスではなく、名前が付けられたインスタンスを使用している場合、&lt;*データベース サーバー*>\\&lt;*インスタンス名*> の形式で入力します。  
+    -   **サーバー名**:Configuration Manager サイト データベース サーバーの名前を入力するか、一覧から選択します。 既定のインスタンスではなく、名前が付けられたインスタンスを使用している場合、&lt;*データベース サーバー*>\\&lt;*インスタンス名*> の形式で入力します。  
 
     -   **[Windows 認証を使用する]** を選択します。  
 
@@ -136,37 +136,37 @@ ms.locfileid: "32342649"
 
 ###  <a name="BKMK_DeployReportModel"></a> To deploy the custom report model to Configuration Manager  
 
-1.  レポート モデル プロジェクトを作成したフォルダーを検索します。 例: *USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;プロジェクト名\>*  
+1. レポート モデル プロジェクトを作成したフォルダーを検索します。 例: *USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;プロジェクト名\>*  
 
-2.  レポート モデル プロジェクト ファルダから次のファイルを、コンピューター上の一時ファルダにコピーします。  
+2. レポート モデル プロジェクト ファルダから次のファイルを、コンピューター上の一時ファルダにコピーします。  
 
-    -   *&lt;モデル名\>* **.dsv**  
+   -   *&lt;モデル名\>* **.dsv**  
 
-    -   *&lt;モデル名\>* **.smdl**  
+   -   *&lt;モデル名\>* **.smdl**  
 
-3.  メモ帳などのテキスト エディターを使用して前のファイルを開きます。  
+3. メモ帳などのテキスト エディターを使用して前のファイルを開きます。  
 
-4.  *&lt;モデル名\>***.dsv** というファイルで、次のように記述された最初の行を見つけます。  
+4. *&lt;モデル名\>***.dsv** というファイルで、次のように記述された最初の行を見つけます。  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
+    **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
-     この行を次のように編集します。  
+    この行を次のように編集します。  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" xmlns:xsi="RelationalDataSourceView"\>**  
+    **&lt;DataSourceView xmlns="<http://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView"\>**  
 
-5.  ファイルの内容をすべてを Windows クリップボードにコピーします。  
+5. ファイルの内容をすべてを Windows クリップボードにコピーします。  
 
-6.  ファイル *&lt;モデル名\>***.dsv** を閉じます。  
+6. ファイル *&lt;モデル名\>***.dsv** を閉じます。  
 
-7.  *&lt;モデル名\>***.smdl** というファイルで、次のように記述された最後の 3 行を見つけます。  
+7. *&lt;モデル名\>***.smdl** というファイルで、次のように記述された最後の 3 行を見つけます。  
 
-     `</Entity>`  
+    `</Entity>`  
 
-     `</Entities>`  
+    `</Entities>`  
 
-     `</SemanticModel>`  
+    `</SemanticModel>`  
 
-8.  ファイル *&lt;モデル名\>***.dsv** の内容を、ファイルの最後の行 (**&lt;SemanticModel\>**) の直前に貼り付けます。  
+8. ファイル *&lt;モデル名\>***.dsv** の内容を、ファイルの最後の行 (**&lt;SemanticModel\>**) の直前に貼り付けます。  
 
 9. ファイル *&lt;モデル名\>***.smdl** を保存して閉じます。  
 
@@ -178,13 +178,13 @@ ms.locfileid: "32342649"
 ##  <a name="AdvancedReportModel"></a> SQL Server Reporting Services で詳細レポート モデルを作成する手順  
  以下の手順に従って、サイト内のユーザーが Configuration Manager データベースの複数のビューのデータに基づいて、特定のモデルベースのレポートを作成する際に使用できる詳細レポート モデルを作成できます。 クライアント コンピューターとそれらのコンピューターにインストールされているオペレーティング システムに関する情報をレポート作成者に示す、レポート モデルを作成します。 この情報は、Configuration Manager データベースの次のビューから取得します。  
 
--   **V_R_System**: 検出されたコンピューターと Configuration Manager クライアントに関する情報が含まれています。  
+- **V_R_System**:検出されたコンピューターと構成マネージャー クライアントに関する情報が含まれています。  
 
--   **V_GS_OPERATING_SYSTEM**: クライアント コンピューターにインストールされているオペレーティング システムに関する情報が含まれています。  
+- **V_GS_OPERATING_SYSTEM**:クライアント コンピューターにインストールされているオペレーティング システムに関する情報が含まれています。  
 
- 前述のビューから選択した項目は 1 つのリストにまとめられ、フレンドリ名が与えられ、その後、特定のレポートに含めることができるようにレポート ビルダーでレポートの作成者に表示されます。  
+  前述のビューから選択した項目は 1 つのリストにまとめられ、フレンドリ名が与えられ、その後、特定のレポートに含めることができるようにレポート ビルダーでレポートの作成者に表示されます。  
 
- これらの手順を実行するコンピューターに SQL Server Business Intelligence Development がインストールされていること、また、このコンピューターからネットワーク接続を介してレポート サービス ポイント サーバーにアクセスできることを確認します。 SQL Server Business Intelligence Development Studio の詳細については、SQL Server のドキュメントを参照してください。  
+  これらの手順を実行するコンピューターに SQL Server Business Intelligence Development がインストールされていること、また、このコンピューターからネットワーク接続を介してレポート サービス ポイント サーバーにアクセスできることを確認します。 SQL Server Business Intelligence Development Studio の詳細については、SQL Server のドキュメントを参照してください。  
 
 #### <a name="to-create-the-report-model-project"></a>To create the report model project  
 
@@ -213,7 +213,7 @@ ms.locfileid: "32342649"
 
 4.  **[接続マネージャー]** ダイアログ ボックスで、データ ソースの次の接続プロパティを指定します。  
 
-    -   **サーバー名**: Configuration Manager サイト データベース サーバーの名前を入力するか、一覧から選択します。 既定のインスタンスではなく、名前が付けられたインスタンスを使用している場合、&lt;*データベース サーバー*>\\&lt;*インスタンス名*> の形式で入力します。  
+    -   **サーバー名**:Configuration Manager サイト データベース サーバーの名前を入力するか、一覧から選択します。 既定のインスタンスではなく、名前が付けられたインスタンスを使用している場合、&lt;*データベース サーバー*>\\&lt;*インスタンス名*> の形式で入力します。  
 
     -   **[Windows 認証を使用する]** を選択します。  
 
@@ -234,28 +234,28 @@ ms.locfileid: "32342649"
 
 #### <a name="to-define-the-data-source-view-for-the-report-model"></a>レポート モデル用のデータ ソース ビューを定義するには  
 
-1.  **[ソリューション エクスプローラー]** で **[データ ソース ビュー]** を右クリックし、 **[新しいデータ ソース ビューの追加]** を選択します。  
+1. **[ソリューション エクスプローラー]** で **[データ ソース ビュー]** を右クリックし、 **[新しいデータ ソース ビューの追加]** を選択します。  
 
-2.  **[データ ソース ビュー ウィザードへようこそ]** ページで **[次へ]** をクリックします。 **[データ ソースの選択]** ページが表示されます。  
+2. **[データ ソース ビュー ウィザードへようこそ]** ページで **[次へ]** をクリックします。 **[データ ソースの選択]** ページが表示されます。  
 
-3.  **[リレーショナル データ ソース]** ウィンドウで、 **[Advanced_Model]** データ ソースが選択されていることを確認し、 **[次へ]** をクリックします。  
+3. **[リレーショナル データ ソース]** ウィンドウで、 **[Advanced_Model]** データ ソースが選択されていることを確認し、 **[次へ]** をクリックします。  
 
-4.  **[テーブルとビューの選択]** ページの **[使用可能なオブジェクト]** リストで、レポート モデルで使用する以下のビューを選択します。  
+4. **[テーブルとビューの選択]** ページの **[使用可能なオブジェクト]** リストで、レポート モデルで使用する以下のビューを選択します。  
 
-    -   **[[v_R_System (dbo)]]**  
+   - **[[v_R_System (dbo)]]**  
 
-    -   **v_GS_OPERATING_SYSTEM (dbo)**  
+   - **v_GS_OPERATING_SYSTEM (dbo)**  
 
      各ビューを選択した後、 **>** をクリックして、オブジェクトを **[含まれるオブジェクト]** を選択します。  
 
-    > [!TIP]  
-    >  **[使用可能なオブジェクト]** リストでビューを見つけやすいように、リスト上部の見出しで **[名前]** をクリックして、オブジェクトをアルファベット順に並べ替えます。  
+   > [!TIP]  
+   >  **[使用可能なオブジェクト]** リストでビューを見つけやすいように、リスト上部の見出しで **[名前]** をクリックして、オブジェクトをアルファベット順に並べ替えます。  
 
-5.  **[名前の一致]** ダイアログ ボックスが表示された場合、既定値をそのまま使用し、 **[次へ]** をクリックします。  
+5. **[名前の一致]** ダイアログ ボックスが表示された場合、既定値をそのまま使用し、 **[次へ]** をクリックします。  
 
-6.  必要なオブジェクトを選択したら、**[次へ]** をクリックして、データ ソース ビューの名前を指定します。 この例では、「 **Advanced_Model**」と入力します。  
+6. 必要なオブジェクトを選択したら、**[次へ]** をクリックして、データ ソース ビューの名前を指定します。 この例では、「 **Advanced_Model**」と入力します。  
 
-7.  **[完了]** をクリックします。 **Advanced_Model.dsv** データ ソース ビューが、 **[ソリューション エクスプローラー]** の **[データ ソース ビュー]** フォルダーに表示されます。  
+7. **[完了]** をクリックします。 **Advanced_Model.dsv** データ ソース ビューが、 **[ソリューション エクスプローラー]** の **[データ ソース ビュー]** フォルダーに表示されます。  
 
 #### <a name="to-define-relationships-in-the-data-source-view"></a>データ ソース ビュー内の各関係を定義するには  
 
@@ -271,9 +271,9 @@ ms.locfileid: "32342649"
 
 6.  **[名前付きクエリの作成]** ダイアログ ボックスで、次の項目を指定します。  
 
-    -   **名前** : クエリの名前を指定します。 この例では、「 **Advanced_Model**」と入力します。  
+    -   **名前**:クエリの名前を指定します。 この例では、「 **Advanced_Model**」と入力します。  
 
-    -   **説明** : クエリの説明を指定します。 この例では、「 **Reporting Services レポート モデルの例**」という説明を入力します。  
+    -   **説明:** クエリの説明を指定します。 この例では、「 **Reporting Services レポート モデルの例**」という説明を入力します。  
 
 7.  **[v_R_System]** ウィンドウで、オブジェクトの一覧からレポート モデルに表示する以下の項目を選択します。  
 
@@ -379,37 +379,37 @@ ms.locfileid: "32342649"
 
 #### <a name="to-deploy-the-custom-report-model-to-configuration-manager"></a>To deploy the custom report model to Configuration Manager  
 
-1.  レポート モデル プロジェクトを作成したフォルダーを検索します。 例: *USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;プロジェクト名\>*  
+1. レポート モデル プロジェクトを作成したフォルダーを検索します。 例: *USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;プロジェクト名\>*  
 
-2.  レポート モデル プロジェクト ファルダから次のファイルを、コンピューター上の一時ファルダにコピーします。  
+2. レポート モデル プロジェクト ファルダから次のファイルを、コンピューター上の一時ファルダにコピーします。  
 
-    -   *&lt;モデル名\>* **.dsv**  
+   -   *&lt;モデル名\>* **.dsv**  
 
-    -   *&lt;モデル名\>* **.smdl**  
+   -   *&lt;モデル名\>* **.smdl**  
 
-3.  メモ帳などのテキスト エディターを使用して前のファイルを開きます。  
+3. メモ帳などのテキスト エディターを使用して前のファイルを開きます。  
 
-4.  *&lt;モデル名\>***.dsv** というファイルで、次のように記述された最初の行を見つけます。  
+4. *&lt;モデル名\>***.dsv** というファイルで、次のように記述された最初の行を見つけます。  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
+    **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
-     この行を次のように編集します。  
+    この行を次のように編集します。  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" xmlns:xsi="RelationalDataSourceView"\>**  
+    **&lt;DataSourceView xmlns="<http://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView"\>**  
 
-5.  ファイルの内容をすべてを Windows クリップボードにコピーします。  
+5. ファイルの内容をすべてを Windows クリップボードにコピーします。  
 
-6.  ファイル *&lt;モデル名\>***.dsv** を閉じます。  
+6. ファイル *&lt;モデル名\>***.dsv** を閉じます。  
 
-7.  *&lt;モデル名\>***.smdl** というファイルで、次のように記述された最後の 3 行を見つけます。  
+7. *&lt;モデル名\>***.smdl** というファイルで、次のように記述された最後の 3 行を見つけます。  
 
-     `</Entity>`  
+    `</Entity>`  
 
-     `</Entities>`  
+    `</Entities>`  
 
-     `</SemanticModel>`  
+    `</SemanticModel>`  
 
-8.  ファイル *&lt;モデル名\>***.dsv** の内容を、ファイルの最後の行 (**&lt;SemanticModel\>**) の直前に貼り付けます。  
+8. ファイル *&lt;モデル名\>***.dsv** の内容を、ファイルの最後の行 (**&lt;SemanticModel\>**) の直前に貼り付けます。  
 
 9. ファイル *&lt;モデル名\>***.smdl** を保存して閉じます。  
 

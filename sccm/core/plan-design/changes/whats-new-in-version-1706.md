@@ -10,16 +10,16 @@ ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7519971f05813edbf601c598b9281bcfdf19c83b
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: a9fe9c0b2f779558161e7995a01863e6415838ee
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229332"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423084"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1706 の新機能
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager の現在のブランチの更新プログラム 1706 は、以前にインストールされておりバージョン 1606、1610、または 1702 を実行するサイトを対象とする、コンソール内の更新プログラムとして使用可能です。
 
@@ -130,30 +130,30 @@ Windows 10 の設定の詳細については、「[System Center Configuration M
 
 ### <a name="new-device-compliance-policy-rules"></a>新しいデバイス コンプライアンス ポリシー ルール
 
-* **必要なパスワードの種類**。 ユーザーが英数字のパスワードまたは数字のパスワードのどちらを使用する必要があるかを指定します。 英数字のパスワードの場合、パスワードに最低限必要な文字セットの数も指定します。 文字セットには、小文字、大文字、記号、および数字の 4 種類があります。
+* **必要なパスワードの種類**。 ユーザーが英数字のパスワードまたは数字のパスワードのどちらを使用する必要があるかを指定します。 英数字のパスワードの場合、パスワードに最低限必要な文字セットの数も指定します。 次の 4 つの文字セットがあります。小文字、大文字、記号、および数字です。
 
- **以下でサポートされています。**
- * Windows Phone 8+
- * Windows 8.1+
- * iOS 6+
-<br></br>
+  **以下でサポートされています。**
+  * Windows Phone 8+
+  * Windows 8.1+
+  * iOS 6+
+  <br></br>
 * **デバイスでの USB デバッグをブロックする**。 USB デバッグは Android for Work デバイスでは既に無効になっているため、この設定を構成する必要はありません。
 
- **以下でサポートされています。**
- * Android 4.0 以降
- * Samsung KNOX Standard 4.0+
-<br></br>
+  **以下でサポートされています。**
+  * Android 4.0 以降
+  * Samsung KNOX Standard 4.0+
+  <br></br>
 * **提供元不明のアプリをブロックする**。 デバイスが不明なソースからのアプリのインストールを許可しないことが必要です。 Android for Work デバイスでは、不明なソースからのインストールは常に制限されるため、この設定を構成する必要はありません。
 
   **以下でサポートされています。**
   * Android 4.0 以降
   * Samsung KNOX Standard 4.0+
-<br></br>
+  <br></br>
 * **アプリの脅威のスキャンが必要**。 この設定は、デバイスでアプリの確認機能が有効になっていることを指定します。
 
- **以下でサポートされています。**
- * Android 4.2 から 4.4
- * Samsung KNOX Standard 4.0+
+  **以下でサポートされています。**
+  * Android 4.2 から 4.4
+  * Samsung KNOX Standard 4.0+
 
 「[デバイス コンプライアンス ポリシーを作成して展開する](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy)」を参照して、新しいデバイス コンプライアンス ルールを試してください。
 
@@ -175,7 +175,7 @@ Configuration Manager では、パッケージとプログラムを使用して�
 ### <a name="new-mobile-application-management-policy-settings"></a>新しいモバイル アプリケーション管理ポリシーの設定    
 <!--1324760-->このリリースから、3 つの新しいモバイル アプリケーション管理 (MAM) ポリシー設定が使用できます。
 
-- **画面キャプチャの禁止 (Android デバイスのみ):** このアプリを使用するときに、デバイスの画面キャプチャ機能をブロックするように指定します。
+- **画面キャプチャをブロック (Android デバイスのみ):** このアプリを使用するときに、デバイスの画面キャプチャ機能をブロックするように指定します。
 
 「[Configuration Manager のモバイル アプリケーション管理ポリシーを使ったアプリの保護](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies)」を参照し、新しいアプリの保護のポリシー設定を試してください。
 

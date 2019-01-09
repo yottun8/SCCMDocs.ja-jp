@@ -10,16 +10,16 @@ ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 616bf5549c80c94b1dd5d27dc15ea693c86e2ca2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a520e4e43ca2d7de080272c213c5768cbd284501
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335077"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415842"
 ---
 # <a name="choose-a-device-management-solution-for-system-center-configuration-manager"></a>System Center Configuration Manager のデバイス管理ソリューションの選択
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager (ConfgMgr または SCCM とも呼ばれます) には、PC、サーバー、およびデバイスを管理するためのさまざまなソリューションが備わっています。 管理する必要のあるデバイス プラットフォームや、必要な管理機能に基づいて、適切なソリューションを選択できます。  
 
@@ -68,7 +68,7 @@ System Center Configuration Manager (ConfgMgr または SCCM とも呼ばれま�
 |Windows Phone||はい||はい|  
 |Windows Server|はい|||はい|  
 
- サポート対象プラットフォームの一覧については、「[Supported operating systems for clients and devices for System Center Configuration Manager](configs\supported-operating-systems-for-clients-and-devices.md)」 (System Center Configuration Manager のクライアントとデバイスでサポートされるオペレーティング システム) を参照してください。
+ サポート対象プラットフォームの一覧については、「[Supported operating systems for clients and devices for System Center Configuration Manager](configs/supported-operating-systems-for-clients-and-devices.md)」 (System Center Configuration Manager のクライアントとデバイスでサポートされるオペレーティング システム) を参照してください。
 
 ##  <a name="bkmk_comp2"></a> 管理機能に基づいたモバイル デバイス管理ソリューションの比較  
 

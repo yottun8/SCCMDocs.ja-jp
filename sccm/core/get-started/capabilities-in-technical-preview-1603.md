@@ -11,26 +11,26 @@ author: aczechowski
 robots: noindex,nofollow
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6d5ecf4e2d231a596012aa9f7d371f18ef0705a1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c7a0c1438fe08e1efae9d2bfe5fb608214486031
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343553"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423050"
 ---
 # <a name="capabilities-in-technical-preview-1603-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1603 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+*適用対象:System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1603 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 代わりに、System Center Technical Preview 5 を使用すると、このバージョンは System Center Configuration Manager Technical Preview の基準バージョンとしてインストールされます。 このバージョンの Technical Preview をインストールする前に、説明のトピック「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。  
 
  **この Technical Preview の既知の問題:**  
 
--   このリリースには、以前にリリースされた機能の更新プログラムが含まれていますが、新機能は導入していません。 そのため、以前に 1602 にアップグレードし、1602 に含まれる機能をすべて有効にした場合、更新プログラム ウィザードの [機能] ページは空になります。  
+- このリリースには、以前にリリースされた機能の更新プログラムが含まれていますが、新機能は導入していません。 そのため、以前に 1602 にアップグレードし、1602 に含まれる機能をすべて有効にした場合、更新プログラム ウィザードの [機能] ページは空になります。  
 
--   サイト サーバーが Technical Preview 1603 に更新されたら、クライアントもバージョン 1603 に更新されるまで、リモート制御機能を使用できません。  
+- サイト サーバーが Technical Preview 1603 に更新されたら、クライアントもバージョン 1603 に更新されるまで、リモート制御機能を使用できません。  
 
- **このバージョンでお試しいただける新機能を次に示します。**  
+  **このバージョンでお試しいただける新機能を次に示します。**  
 
 ##  <a name="BKMK_SC1603"></a> ソフトウェア センターの機能強化  
 
@@ -53,9 +53,9 @@ ms.locfileid: "32343553"
  1603 Technical Preview では、PXE 対応配布ポイントの RamDisk TFTP ブロック サイズとウィンドウ サイズをカスタマイズできます。 ネットワークをカスタマイズしている場合、ブロックまたはウィンドウのサイズが大きすぎるために、ブート イメージのダウンロードがタイムアウト エラーで失敗する可能性があります。 RamDisk TFTP ブロック サイズとウィンドウ サイズのカスタマイズにより、特定のネットワーク要件に対応する PXE を使用する場合に、TFTP トラフィックを最適化できます。   
 最も効率的な内容を確認するために、環境内でカスタマイズした設定をテストする必要があります。  
 
--   **TFTP ブロック サイズ**: ブロック サイズは、ファイルをダウンロードしているクライアントにサーバーによって送信されるデータ パケットのサイズです (RFC 2347 に記載)。 ブロック サイズを大きくすると、サーバーとクライアントの間のラウンド トリップ遅延が少なくなるように、サーバーが送信するパケットを少なくすることができます。 ただし、大きいサイズのブロックにより、ほとんどの PXE クライアントの実装がサポートしていない、断片化されたパケットが生成されます。  
+-   **TFTP ブロック サイズ**:ブロック サイズは、ファイルをダウンロードしているクライアントにサーバーによって送信されるデータ パケットのサイズです (RFC 2347 に記載)。 ブロック サイズを大きくすると、サーバーとクライアントの間のラウンド トリップ遅延が少なくなるように、サーバーが送信するパケットを少なくすることができます。 ただし、大きいサイズのブロックにより、ほとんどの PXE クライアントの実装がサポートしていない、断片化されたパケットが生成されます。  
 
--   **TFTP ウィンドウ サイズ**: TFTP では、送信されるデータの各ブロックの確認 (ACK) パケットが必要です。 前のブロックの ACK パケットを受信するまで、サーバーは、シーケンス内の次のブロックを送信しません。 TFTP ウィンドウは、ウィンドウがいっぱいになるまでのデータ ブロックの数を定義できる、Windows 展開サービスの機能です。 サーバーは、ウィンドウがいっぱいになるまでデータ ブロックを連続で送信し、その後クライアントが ACK パケットを送信します。 このウィンドウのサイズを増やすことで、クライアントとサーバーの間のラウンド トリップ遅延回数が減少し、ブート イメージをダウンロードするために必要な全体の時間が短縮します。  
+-   **TFTP ウィンドウ サイズ**:TFTP では、送信されるデータの各ブロックの確認 (ACK) パケットが必要です。 前のブロックの ACK パケットを受信するまで、サーバーは、シーケンス内の次のブロックを送信しません。 TFTP ウィンドウは、ウィンドウがいっぱいになるまでのデータ ブロックの数を定義できる、Windows 展開サービスの機能です。 サーバーは、ウィンドウがいっぱいになるまでデータ ブロックを連続で送信し、その後クライアントが ACK パケットを送信します。 このウィンドウのサイズを増やすことで、クライアントとサーバーの間のラウンド トリップ遅延回数が減少し、ブート イメージをダウンロードするために必要な全体の時間が短縮します。  
 
 ### <a name="try-it-out"></a>試してみましょう。  
  次のタスクを実行してから、このトピックの先頭付近にあるフィードバック情報を使用してその動作を報告してください。  
@@ -66,26 +66,26 @@ ms.locfileid: "32343553"
 
 ### <a name="to-modify-the-ramdisk-tftp-window-size"></a>RamDisk TFTP ウィンドウ サイズを変更するには  
 
--   RamDisk TFTP ウィンドウ サイズをカスタマイズするには、PXE 対応配布ポイント上に次のレジストリ キーを追加します。  
+- RamDisk TFTP ウィンドウ サイズをカスタマイズするには、PXE 対応配布ポイント上に次のレジストリ キーを追加します。  
 
-     **場所**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
-    名前: RamDiskTFTPWindowSize  
+   **[場所]**:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
+  名前:RamDiskTFTPWindowSize  
 
-     **型**: REG_DWORD  
+   **種類**:REG_DWORD  
 
-     **値**: &lt;カスタマイズされたウィンドウのサイズ\>  
+   **値**: &lt;カスタマイズされたウィンドウのサイズ\>  
 
- 既定値は 1 (1 つのデータ ブロックでウィンドウがいっぱいになります)  
+  既定値は 1 (1 つのデータ ブロックでウィンドウがいっぱいになります)  
 
 ### <a name="to-modify-the-ramdisk-tftp-block-size"></a>RamDisk TFTP ブロック サイズを変更するには  
 
--   RamDisk TFTP ウィンドウ サイズをカスタマイズするには、PXE 対応配布ポイント上に次のレジストリ キーを追加します。  
+- RamDisk TFTP ウィンドウ サイズをカスタマイズするには、PXE 対応配布ポイント上に次のレジストリ キーを追加します。  
 
-     **場所**: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
-    名前: RamDiskTFTPBlockSize  
+   **[場所]**:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
+  名前:RamDiskTFTPBlockSize  
 
-     **型**: REG_DWORD  
+   **種類**:REG_DWORD  
 
-     **値**: &lt;カスタマイズされたブロック サイズ\>  
+   **値**: &lt;カスタマイズされたブロック サイズ\>  
 
- 既定値は 4096 (4k) です。  
+  既定値は 4096 (4k) です。  

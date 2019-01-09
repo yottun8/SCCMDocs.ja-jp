@@ -10,16 +10,16 @@ ms.assetid: 127ce713-d085-430f-ac7b-2701637fe126
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: faa974fda68c9448902f2f5c8e8fcf8ef2f2d386
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0eec065c9b5d4f75e6a66260760ba08e7bb2c481
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340239"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422557"
 ---
 # <a name="select-discovery-methods-to-use-for-system-center-configuration-manager"></a>System Center Configuration Manager に使用する探索方法の選択
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 Center Configuration Manager の探索を正常かつ効率的に使用するには、使用する方法とそれらを実行するサイトについて検討する必要があります。  
 
@@ -104,22 +104,22 @@ Center Configuration Manager の探索を正常かつ効率的に使用するに
 ##  <a name="bkmk_best"></a> 探索のベスト プラクティス  
 探索で最適な結果を得るために、次のことをお勧めします。
 
- - **[Active Directory グループの探索] を実行する前に [Active Directory システムの探索] および [Active Directory ユーザーの探索] を実行する**  
+- **[Active Directory グループの探索] を実行する前に [Active Directory システムの探索] および [Active Directory ユーザーの探索] を実行する**  
 
- [Active Directory グループの探索] で、グループのメンバーとして以前に探索されていないユーザーまたはコンピューターが特定されるときに、そのユーザーまたはコンピューターの基本情報の探索が試行されます。 [Active Directory グループの探索] はこの種類の探索用に最適化されていないため、このプロセスによって実行速度が低下する可能性があります。 さらに、[Active Directory グループの探索] では、ユーザーおよびコンピューターに関する基本情報のみが探索され、完全なユーザーまたはコンピューターの探索レコードは作成されません。 [Active Directory システムの探索] および [Active Directory ユーザーの探索] を実行すると、オブジェクトの種類ごとに追加の Active Directory 属性を使用できます。 結果として、[Active Directory グループの探索] がより効率的に実行されます。  
+  [Active Directory グループの探索] で、グループのメンバーとして以前に探索されていないユーザーまたはコンピューターが特定されるときに、そのユーザーまたはコンピューターの基本情報の探索が試行されます。 [Active Directory グループの探索] はこの種類の探索用に最適化されていないため、このプロセスによって実行速度が低下する可能性があります。 さらに、[Active Directory グループの探索] では、ユーザーおよびコンピューターに関する基本情報のみが探索され、完全なユーザーまたはコンピューターの探索レコードは作成されません。 [Active Directory システムの探索] および [Active Directory ユーザーの探索] を実行すると、オブジェクトの種類ごとに追加の Active Directory 属性を使用できます。 結果として、[Active Directory グループの探索] がより効率的に実行されます。  
 
 - **[Active Directory グループの探索] を設定する場合、Configuration Manager で使用するグループのみを指定する**  
 
- [Active Directory グループの探索] でリソースの使用を制御するには、Configuration Manager で使用する Active Directory グループのみを指定します。 これは、[Active Directory グループの探索] が、ユーザー、コンピューター、および入れ子のグループについて、探索する各グループを再帰的に検索するためです。 入れ子の各グループの検索で [Active Directory グループの探索] の範囲を拡張できますが、パフォーマンスは低下します。 さらに、[Active Directory グループの探索] で差分探索を設定すると、この探索方法では、各グループの変更が監視されます。 この方法では、不要なグループを検索する必要があるときに、パフォーマンスがさらに低下します。  
+  [Active Directory グループの探索] でリソースの使用を制御するには、Configuration Manager で使用する Active Directory グループのみを指定します。 これは、[Active Directory グループの探索] が、ユーザー、コンピューター、および入れ子のグループについて、探索する各グループを再帰的に検索するためです。 入れ子の各グループの検索で [Active Directory グループの探索] の範囲を拡張できますが、パフォーマンスは低下します。 さらに、[Active Directory グループの探索] で差分探索を設定すると、この探索方法では、各グループの変更が監視されます。 この方法では、不要なグループを検索する必要があるときに、パフォーマンスがさらに低下します。  
 
 - **完全探索は長い間隔、差分探索は短い頻度で探索方法を設定する**  
 
- 差分探索は完全探索サイクルよりも使用リソースが少なく、Active Directory で新規または変更されたリソースを特定できるため、完全探索サイクルの頻度を 1 週間に 1 度以下に減らすことができます。 [Active Directory システムの探索]、[Active Directory ユーザーの探索]、および [Active Directory グループの探索] の差分探索によって、Active Directory オブジェクトのほぼすべての変更が特定されます。また、リソースの正確な探索データが維持されます。  
+  差分探索は完全探索サイクルよりも使用リソースが少なく、Active Directory で新規または変更されたリソースを特定できるため、完全探索サイクルの頻度を 1 週間に 1 度以下に減らすことができます。 [Active Directory システムの探索]、[Active Directory ユーザーの探索]、および [Active Directory グループの探索] の差分探索によって、Active Directory オブジェクトのほぼすべての変更が特定されます。また、リソースの正確な探索データが維持されます。  
 
 - **Active Directory ドメイン コントローラーに最も近いネットワークの場所にあるプライマリ サイトで Active Directory の探索方法を実行する**  
 
- Active Directory の探索のパフォーマンスを改善するには、ドメイン コントローラーに対する高速なネットワーク接続があるプライマリ サイトで探索を実行することが推奨されます。 複数のサイトで同じ Active Directory の探索方法を実行する場合、重複を防ぐように各探索方法を設定してください。 これまでのバージョンの Configuration Manager とは異なり、探索データは複数のサイトで共有されます。 そのため、複数のサイトで同じ情報を探索する必要はありません。 詳細については、「[探索データは複数のサイトで共有される](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md#bkmk_shared)」を参照してください。  
+  Active Directory の探索のパフォーマンスを改善するには、ドメイン コントローラーに対する高速なネットワーク接続があるプライマリ サイトで探索を実行することが推奨されます。 複数のサイトで同じ Active Directory の探索方法を実行する場合、重複を防ぐように各探索方法を設定してください。 これまでのバージョンの Configuration Manager とは異なり、探索データは複数のサイトで共有されます。 そのため、複数のサイトで同じ情報を探索する必要はありません。 詳細については、「[探索データは複数のサイトで共有される](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md#bkmk_shared)」を参照してください。  
 
 - **探索データから境界を自動的に作成する予定の場合は、1 つのサイトでのみ [Active Directory フォレストの探索] を実行する**  
 
- 階層内の複数のサイトで [Active Directory フォレストの探索] を実行する場合、1 つのサイトで境界を自動的に作成するオプションのみを有効にすることが推奨されます。 [Active Directory フォレストの探索] は各サイトで実行し、境界を作成するため、Configuration Manager ではこのような境界を 1 つの境界オブジェクトに結合できません。 複数のサイトで境界を自動的に作成するように [Active Directory フォレストの探索] を構成すると、Configuration Manager コンソールで境界オブジェクトが重複する結果になる可能性があります。  
+  階層内の複数のサイトで [Active Directory フォレストの探索] を実行する場合、1 つのサイトで境界を自動的に作成するオプションのみを有効にすることが推奨されます。 [Active Directory フォレストの探索] は各サイトで実行し、境界を作成するため、Configuration Manager ではこのような境界を 1 つの境界オブジェクトに結合できません。 複数のサイトで境界を自動的に作成するように [Active Directory フォレストの探索] を構成すると、Configuration Manager コンソールで境界オブジェクトが重複する結果になる可能性があります。  

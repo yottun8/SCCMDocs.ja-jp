@@ -9,12 +9,12 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d9665d67bd0d6fe75efbea851d631d49a508ff9
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 40bc33779cd67cc2105bb7ba52336fc933622641
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334302"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419616"
 ---
 # <a name="online-documentation-for-system-center-configuration-manager"></a>System Center Configuration Manager のオンライン ドキュメント
 
@@ -47,9 +47,9 @@ System Center Configuration Manager ドキュメント ライブラリへよう�
 
 **リリース ノート:** リリース ノートには、製品ドキュメントに含まれていない情報、および System Center Configuration Manager を正しくインストールして使用するために必要な情報が記載されています。 「[System Center Configuration Manager リリース ノート](https://technet.microsoft.com/library/mt592024.aspx)」を参照してください。  
 
-**ヘルプの検索**: 「[System Center Configuration Manager の使用に関するヘルプの検索](https://technet.microsoft.com/library/mt628521.aspx)」を参照してください。  
+**ヘルプの検索:** 「[System Center Configuration Manager の使用に関するヘルプの検索](https://technet.microsoft.com/library/mt628521.aspx)」を参照してください。  
 
-**ユーザー補助:** 「[Configuration Manager コンソールのユーザー補助機能](https://technet.microsoft.com/library/mt628521.aspx)」を参照してください。  
+**アクセシビリティ:** 「[Configuration Manager コンソールのユーザー補助機能](https://technet.microsoft.com/library/mt628521.aspx)」を参照してください。  
 
 
 ## <a name="system-center-configuration-manager-technical-preview"></a>System Center Configuration Manager Technical Preview  
@@ -70,30 +70,30 @@ System Center Configuration Manager ドキュメント ライブラリへよう�
 
 TechNet で、以下のガイドのオンライン ドキュメントを確認できます。  
 
--   [System Center 2012 Configuration Manager の概要](https://go.microsoft.com/fwlink/p/?LinkId=210632)  
+- [System Center 2012 Configuration Manager の概要](https://go.microsoft.com/fwlink/p/?LinkId=210632)  
 
--   [System Center 2012 Configuration Manager のサイト管理](https://go.microsoft.com/fwlink/p/?LinkId=210636)  
+- [System Center 2012 Configuration Manager のサイト管理](https://go.microsoft.com/fwlink/p/?LinkId=210636)  
 
--   [System Center 2012 Configuration Manager の階層の移行](https://go.microsoft.com/fwlink/p/?LinkId=210645)  
+- [System Center 2012 Configuration Manager の階層の移行](https://go.microsoft.com/fwlink/p/?LinkId=210645)  
 
--   [System Center 2012 Configuration Manager のクライアントの展開](https://go.microsoft.com/fwlink/p/?LinkId=210638)  
+- [System Center 2012 Configuration Manager のクライアントの展開](https://go.microsoft.com/fwlink/p/?LinkId=210638)  
 
--   [Managing Mobile Devices with Microsoft Intune and Configuration Manager (Microsoft Intune と Configuration Manager を使用したモバイル デバイスの管理) (Microsoft Intune と Configuration Manager を使用したモバイル デバイスの管理)](https://go.microsoft.com/fwlink/?LinkId=529959)  
+- [Managing Mobile Devices with Microsoft Intune and Configuration Manager (Microsoft Intune と Configuration Manager を使用したモバイル デバイスの管理) (Microsoft Intune と Configuration Manager を使用したモバイル デバイスの管理)](https://go.microsoft.com/fwlink/?LinkId=529959)  
 
--   [System Center 2012 Configuration Manager でのソフトウェアとオペレーティング システムの展開](https://go.microsoft.com/fwlink/p/?LinkId=210635)  
+- [System Center 2012 Configuration Manager でのソフトウェアとオペレーティング システムの展開](https://go.microsoft.com/fwlink/p/?LinkId=210635)  
 
--   [System Center 2012 Configuration Manager の資産とコンプライアンス](https://go.microsoft.com/fwlink/p/?LinkId=210639)  
+- [System Center 2012 Configuration Manager の資産とコンプライアンス](https://go.microsoft.com/fwlink/p/?LinkId=210639)  
 
--   [System Center 2012 Configuration Manager のセキュリティとプライバシー](https://go.microsoft.com/fwlink/p/?LinkId=210640)  
+- [System Center 2012 Configuration Manager のセキュリティとプライバシー](https://go.microsoft.com/fwlink/p/?LinkId=210640)  
 
--   [System Center 2012 Configuration Manager を使用したシナリオとソリューション](https://go.microsoft.com/fwlink/p/?LinkId=290889)  
+- [System Center 2012 Configuration Manager を使用したシナリオとソリューション](https://go.microsoft.com/fwlink/p/?LinkId=290889)  
 
- **リリース ノートと技術文書:** リリース ノートと技術文書は、Configuration Manager のガイドを補足するものです。 リリース ノートには、製品ドキュメントに含まれていない情報、および Configuration Manager を正しくインストールするために必要な情報が記載されています。 技術文書では、Configuration Manager に関する追加情報を提供します。  
+  **リリース ノートと技術発行物:** リリース ノートと技術発行物は、Configuration Manager ガイドを補足するものです。 リリース ノートには、製品ドキュメントに含まれていない情報、および Configuration Manager を正しくインストールするために必要な情報が記載されています。 技術文書では、Configuration Manager に関する追加情報を提供します。  
 
--   [System Center 2012 Configuration Manager リリース ノート](http://go.microsoft.com/fwlink/?LinkId=529437)  
+- [System Center 2012 Configuration Manager リリース ノート](http://go.microsoft.com/fwlink/?LinkId=529437)  
 
--   [System Center 2012 Configuration Manager のテクニカル文書](http://go.microsoft.com/fwlink/p/?LinkId=261032)  
+- [System Center 2012 Configuration Manager のテクニカル文書](http://go.microsoft.com/fwlink/p/?LinkId=261032)  
 
-**アクセシビリティ:** Configuration Manager を障碍のある方にとってより使いやすくするための機能、製品、サービスについては、「 [Configuration Manager のユーザー補助機能](http://go.microsoft.com/fwlink/p/?LinkId=258586)」をご覧ください。  
+**アクセシビリティ:** Configuration Manager を障碍のある方にとってより使いやすくするための機能、製品、サービスについては、「[Configuration Manager のユーザー補助機能](http://go.microsoft.com/fwlink/p/?LinkId=258586)」をご覧ください。  
 
-**ダウンロード可能なドキュメント:** [Microsoft ダウンロード センターからこの技術文書のコピー](http://go.microsoft.com/fwlink/?LinkId=253643)から変更がありません。 最新情報については、オンラインの TechNet ライブラリでご確認ください。
+**ダウンロード可能なマニュアル:**[Microsoft ダウンロード センターからこのマニュアルのコピー](http://go.microsoft.com/fwlink/?LinkId=253643)をダウンロードできます。 最新情報については、オンラインの TechNet ライブラリでご確認ください。

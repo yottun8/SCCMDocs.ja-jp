@@ -10,16 +10,16 @@ ms.assetid: 62e20d86-db6d-4a1f-b14a-905a9de31698
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 948aa0b261f9214dc08b76b25a70133141a1113f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2f2cdddc27fd07b806bef8ad729c0a8be4bb29e5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336036"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423067"
 ---
 # <a name="security-and-privacy-for-hardware-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager におけるハードウェア インベントリのセキュリティとプライバシー
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 このトピックには、System Center Configuration Manager におけるハードウェア インベントリのセキュリティとプライバシーの情報が含まれています。  
 
@@ -34,15 +34,15 @@ ms.locfileid: "32336036"
 ### <a name="security-issues-for-hardware-inventory"></a>ハードウェア インベントリのセキュリティに関する問題  
  インベントリを収集すると、潜在的な脆弱性が露出します。 攻撃者は、次のような攻撃を行う可能性があります。  
 
--   ソフトウェア インベントリ クライアント設定が無効化され、ファイル コレクションが有効化されていない場合でも、管理ポイントが受け付けてしまう、無効なデータを送信する。  
+- ソフトウェア インベントリ クライアント設定が無効化され、ファイル コレクションが有効化されていない場合でも、管理ポイントが受け付けてしまう、無効なデータを送信する。  
 
--   単一ファイル、あるいは多くのファイルで極めて大量のデータを送信し、その結果サービス拒否攻撃を引き起こす可能性がある。  
+- 単一ファイル、あるいは多くのファイルで極めて大量のデータを送信し、その結果サービス拒否攻撃を引き起こす可能性がある。  
 
--   インベントリ情報が Configuration Manager に転送されたときに、インベントリ情報にアクセスする。  
+- インベントリ情報が Configuration Manager に転送されたときに、インベントリ情報にアクセスする。  
 
- ローカル管理権限を持つユーザーはどんな情報でもインベントリ データとして送信できるので、Configuration Manager が収集したインベントリ データが必ず正しいとは考えないでください。  
+  ローカル管理権限を持つユーザーはどんな情報でもインベントリ データとして送信できるので、Configuration Manager が収集したインベントリ データが必ず正しいとは考えないでください。  
 
- 既定では、ハードウェア インベントリはクライアント設定として有効になっています。  
+  既定では、ハードウェア インベントリはクライアント設定として有効になっています。  
 
 ##  <a name="BKMK_Privacy_HardwareInventory"></a> ハードウェア インベントリに関するプライバシー情報  
  ハードウェア インベントリを使うと、Configuration Manager クライアントのレジストリと WMI に格納されているすべての情報を取得できます。 ソフトウェア インベントリにより、クライアントにある指定された種類のすべてのファイルの探索、および指定されたすべてのファイルの収集を行うことができます。 資産インテリジェンスは、ハードウェアおよびソフトウェア インベントリを拡張し、新しいライセンス管理機能を追加することで、インベントリの機能を強化します。  

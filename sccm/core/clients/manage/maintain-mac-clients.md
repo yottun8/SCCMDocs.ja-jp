@@ -10,15 +10,15 @@ ms.assetid: cf6337a2-700c-47f3-b6f8-5814f9b81e59
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 32d36f041ed42ef0afa8fe0c0e052389587a2c8f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 337df4d64b6edda589344b52a100e5a90381676c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335220"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421197"
 ---
 # <a name="maintain-mac-clients"></a>Mac クライアントを維持する
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 ここでは、Mac クライアントをアンインストールし、その証明書を更新するための手順を示します。
 
@@ -44,26 +44,26 @@ ms.locfileid: "32335220"
 
 ###  <a name="renew-certificate-wizard"></a>証明書の更新ウィザード  
 
-1.  ccmclient.plist ファイルで "*文字列*" として次の値を構成して、証明書の更新ウィザードがいつ開くかを制御します。  
+1. ccmclient.plist ファイルで "*文字列*" として次の値を構成して、証明書の更新ウィザードがいつ開くかを制御します。  
 
- -   **RenewalPeriod1**: ユーザーが証明書を更新できる 1 番目の更新期間を秒単位で指定します。 既定値は 3,888,000 秒 (45 日) です。 期間は既定値に戻されるため、300 より小さい値に構成しないでください。 
+   - **RenewalPeriod1**: ユーザーが証明書を更新できる 1 番目の更新期間を秒単位で指定します。 既定値は 3,888,000 秒 (45 日) です。 期間は既定値に戻されるため、300 より小さい値に構成しないでください。 
 
- -   **RenewalPeriod2**: ユーザーが証明書を更新できる 2 番目の更新期間を秒単位で指定します。 既定値は 259,200 秒 (3 日) です。 この値を 300 秒以上、**RenewalPeriod1** の値以下に設定した場合は、その値が使われます。 **RenewalPeriod1** の値が 3 日より大きい場合は、 **RenewalPeriod2**の値として 3 日が使われます。  **RenewalPeriod1** の値が 3 日より小さい場合は、 **RenewalPeriod2** が **RenewalPeriod1**と同じ値に設定されます。  
+   - **RenewalPeriod2**: ユーザーが証明書を更新できる 2 番目の更新期間を秒単位で指定します。 既定値は 259,200 秒 (3 日) です。 この値を 300 秒以上、**RenewalPeriod1** の値以下に設定した場合は、その値が使われます。 **RenewalPeriod1** の値が 3 日より大きい場合は、 **RenewalPeriod2**の値として 3 日が使われます。  **RenewalPeriod1** の値が 3 日より小さい場合は、 **RenewalPeriod2** が **RenewalPeriod1**と同じ値に設定されます。  
 
- -   **RenewalReminderInterval1**: 1 番目の更新期間中に、証明書の更新ウィザードがユーザーに表示される頻度を秒単位で指定します。 既定値は 86,400 秒 (1 日) です。 **RenewalReminderInterval1** を 300 秒以上、 **RenewalPeriod1**の値未満に設定した場合は、その値が使われます。 それ以外の場合は、既定値の 1 日が使われます。  
+   - **RenewalReminderInterval1**: 1 番目の更新期間中に、証明書の更新ウィザードがユーザーに表示される頻度を秒単位で指定します。 既定値は 86,400 秒 (1 日) です。 **RenewalReminderInterval1** を 300 秒以上、 **RenewalPeriod1**の値未満に設定した場合は、その値が使われます。 それ以外の場合は、既定値の 1 日が使われます。  
 
- -   **RenewalReminderInterval2**: 2 番目の更新期間中に、証明書の更新ウィザードがユーザーに表示される頻度を秒単位で指定します。 既定値は 28,800 秒 (8 時間) です。 **RenewalReminderInterval2** を 300 秒以上、 **RenewalReminderInterval1** の値以下、且つ **RenewalPeriod2**の値以下に設定した場合は、その値が使われます。 それ以外の場合は、8 時間が使われます。  
+   - **RenewalReminderInterval2**: 2 番目の更新期間中に、証明書の更新ウィザードがユーザーに表示される頻度を秒単位で指定します。 既定値は 28,800 秒 (8 時間) です。 **RenewalReminderInterval2** を 300 秒以上、 **RenewalReminderInterval1** の値以下、且つ **RenewalPeriod2**の値以下に設定した場合は、その値が使われます。 それ以外の場合は、8 時間が使われます。  
 
-     **例:** すべて既定値のままにすると、証明書が失効する 45 日前から、24 時間に 1 回の割合でウィザードが開きます。  証明書が失効する 3 日前になると、8 時間に 1 回ウィザードが開くようになります。  
+     **例:** 既定値のままにすると、証明書が失効する 45 日前から、24 時間ごとにウィザードが開きます。  証明書が失効する 3 日前になると、8 時間に 1 回ウィザードが開くようになります。  
 
      **例:** 1 回目の更新期間を 20 日に設定するには、次のコマンドライン (またはスクリプト) を使用します。  
 
      `sudo defaults write com.microsoft.ccmclient RenewalPeriod1 1728000`  
 
-2.  証明書の更新ウィザードが開いたときには、通常、 **[ユーザー名]** フィールドと **[サーバー名]** フィールドに既に値が挿入されており、ユーザーはパスワードを入力するだけで証明書を更新できます。  
+2. 証明書の更新ウィザードが開いたときには、通常、 **[ユーザー名]** フィールドと **[サーバー名]** フィールドに既に値が挿入されており、ユーザーはパスワードを入力するだけで証明書を更新できます。  
 
-    > [!NOTE]  
-    >  ウィザードが表示されなかった場合や、間違ってウィザードを閉じてしまった場合は、 **Configuration Manager** の環境設定ページで **[更新]** をクリックして、ウィザードを開いてください。  
+   > [!NOTE]  
+   >  ウィザードが表示されなかった場合や、間違ってウィザードを閉じてしまった場合は、 **Configuration Manager** の環境設定ページで **[更新]** をクリックして、ウィザードを開いてください。  
 
 ###  <a name="renew-certificate-manually"></a>証明書を手動で更新する  
  Mac クライアント証明書の一般的な有効期間は 1 年間です。 Configuration Manager への登録時に必要なユーザー証明書は、自動的に更新されません。そのため、次の手順に従って証明書を手動で更新する必要があります。  
@@ -120,7 +120,7 @@ ms.locfileid: "32335220"
 
     -   **[名前]:Mac の SMSID の削除**  
 
-    -   **[選択した設定]:** **[参照]** を選択し、前に指定した探索スクリプトを選びます。  
+    -   **選択された設定:****[参照]** を選んで、前に指定した探索スクリプトを選択します。  
 
     -   **[次の値]** フィールドに「**存在しないドメインと既定のペア (com.microsoft.ccmclient, SMSID)**」と入力します。  
 

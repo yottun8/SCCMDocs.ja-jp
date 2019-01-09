@@ -10,16 +10,16 @@ ms.assetid: 8e68e1fb-a8ec-4543-bb8a-cbbaf184a418
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5fef3c1892c015fcec42197c9af373506d8e426a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5bd03980c772edf8033ddc4a8ccce336ba924c07
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333112"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423169"
 ---
 # <a name="security-and-privacy-for-software-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager のソフトウェア インベントリのセキュリティとプライバシー
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 このトピックには、System Center Configuration Manager におけるソフトウェア インベントリのセキュリティとプライバシーの情報が含まれています。  
 
@@ -35,17 +35,17 @@ ms.locfileid: "32333112"
 ### <a name="security-issues-for-software-inventory"></a>ソフトウェア インベントリのセキュリティに関する問題  
  インベントリを収集すると、潜在的な脆弱性が露出します。 攻撃者は、次のような攻撃を行う可能性があります。  
 
--   ソフトウェア インベントリ クライアント設定が無効化され、ファイル コレクションが有効化されていない場合でも、管理ポイントが受け付けてしまう、無効なデータを送信する。  
+- ソフトウェア インベントリ クライアント設定が無効化され、ファイル コレクションが有効化されていない場合でも、管理ポイントが受け付けてしまう、無効なデータを送信する。  
 
--   単一ファイル、あるいは多くのファイルで極めて大量のデータを送信し、その結果サービス拒否攻撃を引き起こす可能性がある。  
+- 単一ファイル、あるいは多くのファイルで極めて大量のデータを送信し、その結果サービス拒否攻撃を引き起こす可能性がある。  
 
--   インベントリ情報が Configuration Manager に転送されたときに、インベントリ情報にアクセスする。  
+- インベントリ情報が Configuration Manager に転送されたときに、インベントリ情報にアクセスする。  
 
- **Skpswi.dat** という名前の隠しファイルを作成し、そのファイルをクライアントのハード ドライブのルートに配置すると、そのハード ドライブをソフトウェア インベントリから除外できるという事実をユーザーが知っていた場合、ソフトウェア インベントリ データをそのコンピューターから収集することはできなくなります。  
+  **Skpswi.dat** という名前の隠しファイルを作成し、そのファイルをクライアントのハード ドライブのルートに配置すると、そのハード ドライブをソフトウェア インベントリから除外できるという事実をユーザーが知っていた場合、ソフトウェア インベントリ データをそのコンピューターから収集することはできなくなります。  
 
- ローカル管理権限を持つユーザーはどんな情報でもインベントリ データとして送信できるので、Configuration Manager が収集したインベントリ データが必ず正しいとは考えないでください。  
+  ローカル管理権限を持つユーザーはどんな情報でもインベントリ データとして送信できるので、Configuration Manager が収集したインベントリ データが必ず正しいとは考えないでください。  
 
- ソフトウェア インベントリは、クライアント設定として既定で有効になっています。  
+  ソフトウェア インベントリは、クライアント設定として既定で有効になっています。  
 
 ##  <a name="BKMK_Privacy_HardwareInventory"></a> ソフトウェア インベントリに関するプライバシー情報  
  ハードウェア インベントリを使うと、Configuration Manager クライアントのレジストリと WMI に格納されているすべての情報を取得できます。 ソフトウェア インベントリにより、クライアントにある指定された種類のすべてのファイルの探索、および指定されたすべてのファイルの収集を行うことができます。 資産インテリジェンスは、ハードウェアおよびソフトウェア インベントリを拡張し、新しいライセンス管理機能を追加することで、インベントリの機能を強化します。  

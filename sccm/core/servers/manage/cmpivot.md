@@ -10,18 +10,18 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 29b0f577ad291899467d9c6fd305af9ef6b892eb
-ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
+ms.openlocfilehash: 85bd23130826c7ca23e10125efba58bf14555fb1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083804"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424223"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>Configuration Manager でのリアルタイム データ用の CMPivot
 
 <!--1358456-->
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 Configuration Manager では、レポートを目的として顧客が使用する、デバイス データの大規模な一元化ストアを常に提供しています。 このサイトでは、通常、週次でこのデータが収集されます。 バージョン 1806 以降導入された CMPivot は、お使いの環境でリアルタイム状態のデバイスへのアクセスを提供する、新しいコンソール内ユーティリティです。 対象となるコレクション内の現在接続されているすべてのデバイス上で直ちにクエリを実行して、結果を返します。 次に、ツール内で、このデータをフィルター処理およびグループ化します。 オンライン クライアントからリアルタイム データを提供することで、業務上の質問に迅速に回答し、問題をトラブルシューティングし、セキュリティの問題に対応できます。
 
@@ -99,11 +99,11 @@ CMPivot ウィンドウには、次の要素があります。
 
     - 次のアクション用にエンティティを右クリックします。  
 
-       - **挿入**: 現在のカーソルの位置でクエリにエンティティを追加します。 クエリは自動的には実行されません。 このアクションは、エンティティをダブルクリックしたときの既定です。 クエリを構築するときには、このアクションを使用します。  
+       - **挿入**:現在のカーソルの位置でクエリにエンティティを追加します。 クエリは自動的には実行されません。 このアクションは、エンティティをダブルクリックしたときの既定です。 クエリを構築するときには、このアクションを使用します。  
 
-       - **クエリをすべて実行**: すべてのプロパティを含むこのエンティティ用のクエリを実行します。 1 つのエンティティを迅速にクエリするには、このアクションを使用します。  
+       - **クエリをすべて実行**:すべてのプロパティを含むこのエンティティ用のクエリを実行します。 1 つのエンティティを迅速にクエリするには、このアクションを使用します。  
 
-       - **デバイスでクエリ実行**: このエンティティ用にクエリを実行し、結果をグループ化します。 たとえば、`Disk | summarize dcount( Device ) by Name` などです。  
+       - **デバイスでクエリ実行**:このエンティティ用にクエリを実行し、結果をグループ化します。 たとえば、`Disk | summarize dcount( Device ) by Name` などです。  
 
     - エンティティを拡張し、各エンティティで利用可能な特定のプロパティを参照します。 プロパティをダブルクリックし、現在のカーソル位置にクエリに追加します。  
 
@@ -131,51 +131,51 @@ CMPivot ウィンドウには、次の要素があります。
 
 6. 結果ウィンドウには、クエリのアクティブ クライアントによって返されたデータが表示されます。  
 
-    - 利用可能な列は、エンティティとクエリによって異なります。  
+   - 利用可能な列は、エンティティとクエリによって異なります。  
 
-    - 列名をクリックし、プロパティで結果を並べ替えます。  
+   - 列名をクリックし、プロパティで結果を並べ替えます。  
 
-    - 任意の列名を右クリックし、その列の同じ情報で結果をグループ化するか、結果を並べ替えます。  
+   - 任意の列名を右クリックし、その列の同じ情報で結果をグループ化するか、結果を並べ替えます。  
 
-    - デバイス名を右クリックし、デバイスで次の追加のアクションを実行します。  
+   - デバイス名を右クリックし、デバイスで次の追加のアクションを実行します。  
 
-       - **ピボット先**: デバイスの別のエンティティに対してクエリを実行します。  
+      - **ピボット先**:デバイスの別のエンティティに対してクエリを実行します。  
 
-       - **スクリプトの実行**: スクリプトの実行ウィザードを起動し、デバイスで既存の PowerShell スクリプトを実行します。 詳細については、「[スクリプトの実行](/sccm/apps/deploy-use/create-deploy-scripts#run-a-script)」を参照してください。  
+      - **スクリプトの実行**:スクリプトの実行ウィザードを起動し、デバイスで既存の PowerShell スクリプトを実行します。 詳細については、「[スクリプトの実行](/sccm/apps/deploy-use/create-deploy-scripts#run-a-script)」を参照してください。  
 
-       - **リモート コントロール**: このデバイスで、Configuration Manager リモート コントロール セッションを起動します。 詳細については、「[Windows クライアント コンピューターをリモート管理する方法](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer)」を参照してください。  
+      - **リモート コントロール**:このデバイスで、Configuration Manager リモート コントロール セッションを起動します。 詳細については、「[Windows クライアント コンピューターをリモート管理する方法](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer)」を参照してください。  
 
-       - **リソース エクスプローラー**: このデバイスの Configuration Manager リソース エクスプローラーを起動します。 詳細については、[ハードウェア インベントリの表示](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory)に関するページ、または[ソフトウェア インベントリの表示](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory)に関するページを参照してください。  
+      - **リソース エクスプローラー**:このデバイスの Configuration Manager リソース エクスプローラーを起動します。 詳細については、[ハードウェア インベントリの表示](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory)に関するページ、または[ソフトウェア インベントリの表示](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory)に関するページを参照してください。  
 
-    - デバイスではない任意のセルを右クリックして、次の追加のアクションを実行します。  
+   - デバイスではない任意のセルを右クリックして、次の追加のアクションを実行します。  
 
-       - **コピー**: セルのテキストをクリップボードにコピーします。  
+     - **コピー**:セルのテキストをクリップボードにコピーします。  
 
-       - **次を含むデバイスを表示**: このプロパティの値のデバイスに対し、クエリを実行します。 たとえば、`OS` クエリの結果から、[Version] 列のセルからこのオプション `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)` を選択します。  
+     - **次を含むデバイスを表示**:このプロパティの値のデバイスに対し、クエリを実行します。 たとえば、`OS` クエリの結果から、[Version] 列のセルからこのオプション `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)` を選択します。  
 
-       - **次を含まないデバイスを表示**: このプロパティにこの値がないデバイスに対し、クエリを実行します。 たとえば、`OS` クエリの結果から、[Version] 列のセルからこのオプション `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device` を選択します。  
+     - **次を含まないデバイスを表示**:このプロパティにこの値がないデバイスに対し、クエリを実行します。 たとえば、`OS` クエリの結果から、[Version] 列のセルからこのオプション `OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device` を選択します。  
 
-       - **Bing で検索する**: この値をクエリ文字列として使用し、既定の Web ブラウザーで www.bing.com を開きます。  
+     - **Bing で検索する**:この値をクエリ文字列として使用し、既定の Web ブラウザーで www.bing.com を開きます。  
 
-    - 任意のハイパーリンクが設定されたテキストをクリックし、ビューの中心がその特定の情報になるようにします。  
+   - 任意のハイパーリンクが設定されたテキストをクリックし、ビューの中心がその特定の情報になるようにします。  
 
-    - 結果ウィンドウには 20,000 行しか表示されません。 データをさらにフィルタリングするには、クエリを調整するか、より小規模なコレクションで CMPivot を再開します。  
+   - 結果ウィンドウには 20,000 行しか表示されません。 データをさらにフィルタリングするには、クエリを調整するか、より小規模なコレクションで CMPivot を再開します。  
 
 7. ステータス バーには、次の情報が表示されます (左から右へ)。  
 
-    - ターゲット コレクションへの現在のクエリの状態。 状態には次が含まれます。  
-        - クエリが完了したアクティブなクライアントの数 (3)  
-        - クライアント数の合計 (5)  
-        - オフライン クライアントの数 (2)  
-        - エラーを返したすべてのクライアント (0)  
+   - ターゲット コレクションへの現在のクエリの状態。 状態には次が含まれます。  
+     - クエリが完了したアクティブなクライアントの数 (3)  
+     - クライアント数の合計 (5)  
+     - オフライン クライアントの数 (2)  
+     - エラーを返したすべてのクライアント (0)  
 
-        例: `Query completed on 3 of 5 clients (2 clients offline and 0 failure)`  
+       例: `Query completed on 3 of 5 clients (2 clients offline and 0 failure)`  
 
-    - クライアント操作の ID。 例: `id(16780221)`  
+   - クライアント操作の ID。 例: `id(16780221)`  
 
-    - 現在のコレクション。 例: `PM_Team_Machines`  
+   - 現在のコレクション。 例: `PM_Team_Machines`  
 
-    - 結果ウィンドウ内の行の合計数。 たとえば、`1 objects` などです。  
+   - 結果ウィンドウ内の行の合計数。 たとえば、`1 objects` などです。  
 
 
 
@@ -184,7 +184,7 @@ CMPivot ウィンドウには、次の要素があります。
 次のセクションには、環境で CMPivot を使用する例があります。
 
 
-### <a name="example-1-stop-a-running-service"></a>例 1: 実行中のサービスの停止
+### <a name="example-1-stop-a-running-service"></a>例 1:実行中のサービスの停止
 
 会計部署のすべてのデバイスのコンピューター ブラウザーを停止して無効にするよう、セキュリティ管理者から求められました。 会計のすべてのデバイスのコレクションで CMPivot を起動し、**[サービス]** エンティティで **[クエリをすべて実行]** を選択します。 
 
@@ -203,19 +203,19 @@ CMPivot ウィンドウには、次の要素があります。
 ![ブラウザー サービスおよびスクリプトの実行アクション用の CMPivot の例](media/cmpivot-example1.png)
 
 
-### <a name="example-2-proactively-resolve-application-failures"></a>例 2: アプリケーションのエラーの先を見越した解決  
+### <a name="example-2-proactively-resolve-application-failures"></a>例 2:アプリケーションのエラーの先を見越した解決  
 
 先を見越した運用保守を行うには、管理しているサーバーに対して、1 週間に一度 CMPivot を実行し、**[AppCrash]** エンティティに対して **[クエリをすべて実行]** を実行します。 **[FileName]** 列を右クリックし、**[昇順で並べ替え]** を選択します。 1 台のデバイスは、毎日約 03:00 のタイムスタンプで sqlsqm.exe から 7 件の結果を返します。 1 つの行でファイル名を選択し、それを右クリックして **[Bing で検索する]** を選択します。 Web ブラウザーで検索結果を参照すると、この問題の情報および解決方法がある Microsoft サポート記事が見つかります。 
 
 
-### <a name="example-3-bios-version"></a>例 3: BIOS のバージョン
+### <a name="example-3-bios-version"></a>例 3:BIOS バージョン
 
 [予測実行によるサイド チャネルの脆弱性を緩和する](https://blogs.technet.microsoft.com/configurationmgr/2018/01/08/additional-guidance-to-mitigate-speculative-execution-side-channel-vulnerabilities/)には、システムの BIOS の更新が要件の 1 つになっています。 **BIOS** エンティティ用のクエリで開始します。 次いで、**[バージョン]** プロパティを **[グループ化]** します。 次いで "LENOVO - 1140" などの特定の値を右クリックし、**[次を含むデバイスを表示]** を選択します。  
 
 `Bios | summarize countif( (Version == 'LENOVO - 1140') ) by Device | where (countif_ > 0)`
 
 
-### <a name="example-4-free-disk-space"></a>例 4: ディスクの空き領域
+### <a name="example-4-free-disk-space"></a>例 4:ディスクの空き領域
 
 ネットワーク ファイル サーバーに一時的に大容量のファイルを保存したいが、十分な容量があるのがどれだかわからない場合があります。 ファイル サーバーのまとまりに対して CMPivot を起動し、**[ディスク]** エンティティに対しクエリを実行します。 CMPivot のクエリを変更し、ストレージのリアルタイム データを含むアクティブなサーバーの一覧を迅速に返します。  
 

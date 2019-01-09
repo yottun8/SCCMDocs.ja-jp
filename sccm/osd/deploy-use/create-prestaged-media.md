@@ -10,27 +10,27 @@ ms.assetid: ff6e7267-302a-4563-815e-cdc0d1a4b60f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61c54ad6c0224dfae03a26784f0b3f61271b172c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 97c4bde7e589e5d3d3c3ee3683055ca8e7412a03
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353064"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419837"
 ---
 # <a name="create-prestaged-media-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用した事前設定されたメディアの作成
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager で事前設定されたファイルは、Windows Imaging Format (WIM) と呼ばれる形式のファイルであり、製造元によるベア メタル コンピューター、または Configuration Manager 環境に接続していない企業の準備センターにインストールすることができます。  
 事前設定されたメディアには展開先のコンピューターを起動するのに使用するブート イメージと、展開先のコンピューターに適用されるオペレーティング システム イメージを含んでいます。 また、事前設定されたメディアの一部として含める、アプリケーション、パッケージ、およびドライバー パッケージを指定できます。 オペレーティング システムを展開するタスク シーケンスはメディアに含まれていません。 事前設定されたメディアは、コンピューターがエンドユーザーに渡る前に、新しいコンピューターのハード ドライブに適用されます。 事前設定されたメディアは、次のオペレーティング システムの展開シナリオに使用します。  
 
--   [工場出荷時の OEM 用、または現地保管場所用のイメージの作成](../../osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
+- [工場出荷時の OEM 用、または現地保管場所用のイメージの作成](../../osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
 
--   [新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする](install-new-windows-version-new-computer-bare-metal.md)  
+- [新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [Windows to Go の展開](deploy-windows-to-go.md)  
+- [Windows to Go の展開](deploy-windows-to-go.md)  
 
- 事前設定されたメディアを適用して初めてコンピューターを起動すると、コンピューターは Windows PE を起動し、オペレーティング システム展開プロセスを完了するタスク シーケンスが置かれている管理ポイントに接続します。 事前設定されたメディアの一部として、アプリケーション、パッケージ、およびドライバー パッケージを含めることができます。 事前設定されたメディアを使用するタスク シーケンスを展開すると、ウィザードによって、まずローカルのタスク シーケンス キャッシュ内に有効なコンテンツがあることが確認され、コンテンツが見つからない場合、またはコンテンツが改訂された場合は、配布ポイントからコンテンツがダウンロードされます。  
+  事前設定されたメディアを適用して初めてコンピューターを起動すると、コンピューターは Windows PE を起動し、オペレーティング システム展開プロセスを完了するタスク シーケンスが置かれている管理ポイントに接続します。 事前設定されたメディアの一部として、アプリケーション、パッケージ、およびドライバー パッケージを含めることができます。 事前設定されたメディアを使用するタスク シーケンスを展開すると、ウィザードによって、まずローカルのタスク シーケンス キャッシュ内に有効なコンテンツがあることが確認され、コンテンツが見つからない場合、またはコンテンツが改訂された場合は、配布ポイントからコンテンツがダウンロードされます。  
 
 ##  <a name="BKMK_CreatePrestagedMedia"></a> 事前設定されたメディアの作成方法  
  タスク シーケンス メディアの作成ウィザードを使用して、事前設定されたメディアを作成する前に、次の条件がすべて満たされていることを確認してください。  

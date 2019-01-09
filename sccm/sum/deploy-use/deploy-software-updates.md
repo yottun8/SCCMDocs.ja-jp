@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-ms.openlocfilehash: f59ca099325028ccf29904a2108939d0047df745
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 80effa7ec3439925248e19dbf9d35efcf1694b8a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52455949"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419361"
 ---
 # <a name="deploy-software-updates"></a>ソフトウェアの更新を展開する  
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 ソフトウェア更新プログラムの展開フェーズは、ソフトウェア更新プログラムを展開するプロセスです。 ソフトウェア更新プログラムの展開方法に関係なく、サイトでは次のように処理されます。
 - ソフトウェア更新プログラム グループに更新プログラムを追加します
@@ -98,13 +98,13 @@ ADR を作成した後、ルールにさらに他の展開を追加します。 
 
 追加した新しい展開ごとに:  
 
--   ADR を初めて実行するときに作成されるものと同じ更新グループとパッケージを使います。  
--   別のコレクションをターゲットにできます  
--   次のような独自の展開プロパティをサポートします。  
-   -   アクティベーション時間  
-   -   期限  
-   -   ユーザー側の表示と操作  
-   -   展開ごとに個別のアラート  
+- ADR を初めて実行するときに作成されるものと同じ更新グループとパッケージを使います。  
+- 別のコレクションをターゲットにできます  
+- 次のような独自の展開プロパティをサポートします。  
+  -   アクティベーション時間  
+  -   期限  
+  -   ユーザー側の表示と操作  
+  -   展開ごとに個別のアラート  
 
 
 詳細な手順については、「[ソフトウェア更新プログラムの自動展開](automatically-deploy-software-updates.md)」をご覧ください。

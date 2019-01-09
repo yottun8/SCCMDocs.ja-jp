@@ -10,16 +10,16 @@ ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6abf61488a96ec3299b606b10901b0787b82edc9
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: bdeed74504611589b36e31eff3c1957725345b8a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229349"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421843"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1702 の新機能
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager の現在のブランチの更新プログラム 1702 は、以前にインストールされておりバージョン 1602, 1606 または 1610 を実行しているサイトを対象とする、コンソール内の更新プログラムとして利用可能です。 また、新しい展開をインストールするときに使用する基準のバージョンとしても利用可能です。
 
@@ -63,13 +63,13 @@ Configuration Manager コンソールでの検索機能の強化の内容を次�
  コンソール内のフィードバック オプションを使用すれば、開発チームに直接フィードバックを送信することができます。
 
  **[フィードバック]** オプションは、次の場所に表示されます。
- -  各ノードのリボンの [ホーム] タブの左端。  
-    ![リボン](./media/feedback-home.png)
+- 各ノードのリボンの [ホーム] タブの左端。  
+  ![リボン](./media/feedback-home.png)
 
- -  コンソールのオブジェクトを右クリックしたとき。   
-     ![右クリック オプション](./media/feedback-option.png)   
+- コンソールのオブジェクトを右クリックしたとき。   
+   ![右クリック オプション](./media/feedback-option.png)   
 
- **[フィードバック]** を選択すると、ブラウザーが開いて [Configuration Manager UserVoice フィードバック Web サイト](https://go.microsoft.com/fwlink/?linkid=617029) が表示されます。
+  **[フィードバック]** を選択すると、ブラウザーが開いて [Configuration Manager UserVoice フィードバック Web サイト](https://go.microsoft.com/fwlink/?linkid=617029) が表示されます。
 
 
 ###  <a name="changes-for-updates-and-servicing"></a>更新プログラムとサービスの変更
@@ -200,13 +200,13 @@ Windows 10 Creators Update では、EFI 対応ハードウェアのハード デ
 ### <a name="improvements-to-the-auto-apply-driver-task-sequence"></a>[ドライバーの自動適用] タスク シーケンスの機能強化
 HTTP カタログの要求時に [ドライバーの自動適用] タスク シーケンス ステップでタイムアウト値を構成する場合に、新しいタスク シーケンス変数を使用できるようになりました。 次の変数と既定値 (秒) を使用できます。
    - SMSTSDriverRequestResolveTimeOut  
-     既定値: 60
+     既定:60
    - SMSTSDriverRequestConnectTimeOut  
-     既定値: 60
+     既定:60
    - SMSTSDriverRequestSendTimeOut  
-     既定値: 60
+     既定:60
    - SMSTSDriverRequestReceiveTimeOut  
-     既定値: 480
+     既定:480
 
 ### <a name="windows-10-adk-tracked-by-build-version"></a>ビルド バージョンによる Windows 10 ADK の追跡
 ビルド バージョンで Windows 10 ADK を追跡できるようになりました。これで、Windows 10 ブート イメージのカスタマイズ時により多くの操作がサポートされるようになります。 たとえば、サイトで Windows ADK for Windows 10 バージョン 1607 を使用する場合、コンソールでカスタマイズできるのはバージョン 10.0.14393 のブート イメージのみになります。 WinPE バージョンのカスタマイズの詳細については、「[ブート イメージのカスタマイズ](/sccm/osd/get-started/customize-boot-images)」を参照してください。

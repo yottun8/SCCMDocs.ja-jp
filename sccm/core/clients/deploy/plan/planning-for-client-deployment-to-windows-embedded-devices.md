@@ -10,16 +10,16 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ca987411775ec3a6fbe626d4b34f83313673f5b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4dd547f0126fa9e77b4d49db7c0de4ec912d2b23
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334829"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421622"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager での Windows Embedded デバイスへのクライアント展開の計画
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 <a name="BKMK_DeployClientEmbedded"></a> Windows Embedded デバイスに System Center Configuration Manager クライアントが含まれていない場合、デバイスが必要な依存関係を満たしていれば、任意のクライアント インストール方法を使用できます。 Embedded デバイスで書き込みフィルターがサポートされている場合、クライアントをインストールする前にこれらのフィルターを無効にし、クライアントがインストールされ、サイトに割り当てられた後で、フィルターを再度有効にする必要があります。  
 
@@ -46,60 +46,60 @@ ms.locfileid: "32334829"
 
  Configuration Manager では、次の種類の書き込みフィルターの管理がサポートされています。  
 
--   ファイル ベースの書き込みフィルター (FBWF) - 詳細については、「[ファイル ベースの書き込みフィルター](http://go.microsoft.com/fwlink/?LinkID=204717)」を参照してください。  
+- ファイル ベースの書き込みフィルター (FBWF) - 詳細については、「[ファイル ベースの書き込みフィルター](http://go.microsoft.com/fwlink/?LinkID=204717)」を参照してください。  
 
--   拡張書き込みフィルター (EWF) - 詳細については、「[拡張書き込みフィルター](http://go.microsoft.com/fwlink/?LinkId=204718)」を参照してください。  
+- 拡張書き込みフィルター (EWF) - 詳細については、「[拡張書き込みフィルター](http://go.microsoft.com/fwlink/?LinkId=204718)」を参照してください。  
 
--   統合書き込みフィルター (UWF) - 詳細については、「[統合書き込みフィルター](http://go.microsoft.com/fwlink/?LinkId=309236)」を参照してください。  
+- 統合書き込みフィルター (UWF) - 詳細については、「[統合書き込みフィルター](http://go.microsoft.com/fwlink/?LinkId=309236)」を参照してください。  
 
- Configuration Manager では、Windows Embedded デバイスが EWF RAM Reg モードの場合の書き込みフィルター操作をサポートしていません。  
+  Configuration Manager では、Windows Embedded デバイスが EWF RAM Reg モードの場合の書き込みフィルター操作をサポートしていません。  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  使用できる場合は、効率を高め、スケーラビリティを向上させるため、Configuration Manager でファイル ベースの書き込みフィルター (FBWF) を使用してください。
->
+> 
 > **FBWF のみを使用するデバイスの場合:** デバイスを再起動した後でクライアントの状態とインベントリ データを保持するには、次の例外を構成します。  
->   
->  -   CCMINSTALLDIR\\\*.sdf  
-> -   CCMINSTALLDIR\ServiceData  
-> -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
->   
->  Windows Embedded 8.0 以降を実行するデバイスでは、ワイルドカード文字を含む除外はサポートされていません。 これらのデバイスでは、次の除外を個別に構成する必要があります。  
->   
->  -   CCMINSTALLDIR 内のすべてのファイルには、拡張子 .sdf が付きます。通常は次のようになります。  
->   
->     -   UserAffinityStore.sdf  
->     -   InventoryStore.sdf  
->     -   CcmStore.sdf  
->     -   StateMessageStore.sdf  
->     -   CertEnrollmentStore.sdf  
-> -   CCMINSTALLDIR\ServiceData  
-> -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
->   
+> 
+> - CCMINSTALLDIR\\\*.sdf  
+>   -   CCMINSTALLDIR\ServiceData  
+>   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
+> 
+>   Windows Embedded 8.0 以降を実行するデバイスでは、ワイルドカード文字を含む除外はサポートされていません。 これらのデバイスでは、次の除外を個別に構成する必要があります。  
+> 
+> - CCMINSTALLDIR 内のすべてのファイルには、拡張子 .sdf が付きます。通常は次のようになります。  
+> 
+>   -   UserAffinityStore.sdf  
+>   -   InventoryStore.sdf  
+>   -   CcmStore.sdf  
+>   -   StateMessageStore.sdf  
+>   -   CertEnrollmentStore.sdf  
+>   -   CCMINSTALLDIR\ServiceData  
+>   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
+> 
 > **FBWF と UWF のみを使用するデバイスの場合:** ワークグループ内のクライアントが管理ポイントへの認証に証明書を使用する場合は、クライアントが管理ポイントと引き続き通信できるように、秘密キーも除外する必要があります。 これらのデバイスでは、次の例外を構成します。  
->   
->  -   c:\Windows\System32\Microsoft\Protect  
-> -   c:\ProgramData\Microsoft\Crypto  
-> -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
+> 
+> - c:\Windows\System32\Microsoft\Protect  
+>   -   c:\ProgramData\Microsoft\Crypto  
+>   -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
 
  Configuration Manager で書き込みフィルターが有効になった Windows Embedded デバイスを展開および管理するシナリオの例については、「[Windows Embedded デバイスで System Center Configuration Manager クライアントを展開および管理するシナリオ例](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md)」を参照してください。  
 
  Windows Embedded デバイスのイメージを作成し、書き込みフィルターを構成する方法の詳細については、Windows Embedded のドキュメントを参照するか、OEM にお問い合せください。  
 
-> [!NOTE]  
+> [!NOTE]
 >  ソフトウェア展開と構成項目の適用可能なプラットフォームを選択すると、特定のバージョンではなく、Windows Embedded ファミリーが表示されます。 特定バージョンの Windows Embedded と、リスト ボックスのオプションの対応については、次の一覧をご覧ください。  
->   
->  -   **Windows XP (32-bit) ベースの Embedded オペレーティング システム** には、次のものがあります。  
->   
->      -   Windows XP Embedded  
->     -   Windows Embedded for Point of Service  
->     -   Windows Embedded Standard 2009  
->     -   Windows Embedded POSReady 2009  
-> -   **Windows 7 (32-bit) ベースの Embedded オペレーティング システム** には、次のものがあります。  
->   
->      -   Windows Embedded Standard 7 (32-bit)  
->     -   Windows Embedded POSReady 7 (32-bit)  
->     -   Windows の ThinPC  
-> -   **Windows 7 (64 ビット) ベースの Embedded オペレーティング システム** には、次のものがあります。  
->   
->      -   Windows Embedded Standard 7 (64 ビット)  
->     -   Windows Embedded POSReady 7 (64 ビット)
+> 
+> - **Windows XP (32-bit) ベースの Embedded オペレーティング システム** には、次のものがあります。  
+> 
+>   -   Windows XP Embedded  
+>   -   Windows Embedded for Point of Service  
+>   -   Windows Embedded Standard 2009  
+>   -   Windows Embedded POSReady 2009  
+>   -   **Windows 7 (32-bit) ベースの Embedded オペレーティング システム** には、次のものがあります。  
+> 
+>   -   Windows Embedded Standard 7 (32-bit)  
+>   -   Windows Embedded POSReady 7 (32-bit)  
+>   -   Windows の ThinPC  
+>   -   **Windows 7 (64 ビット) ベースの Embedded オペレーティング システム** には、次のものがあります。  
+> 
+>   -   Windows Embedded Standard 7 (64 ビット)  
+>   -   Windows Embedded POSReady 7 (64 ビット)

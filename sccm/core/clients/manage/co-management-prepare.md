@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 9aab4273129e6a3032d7e85d2545e6abc5b616c4
-ms.sourcegitcommit: 8dd9199bfe8e27f62e9df307f1c6ac58a3b81717
+ms.openlocfilehash: ac7f67a02602473a7635d8c70e4b1b1dc04363bc
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237158"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417049"
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>共同管理用に Windows 10 デバイスを準備する
 AD と Azure AD に参加し Microsoft Intune に登録されている Windows 10 デバイスと、Configuration Manager のクライアントで、共同管理を有効にできます。 新しい Windows 10 デバイスおよび Intune に既に登録されているデバイスでは、共同管理を有効にする前に Configuration Manager クライアントをインストールします。 既に Configuration Manager クライアントになっている Windows 10 デバイスの場合は、デバイスを Intune に登録して、Configuration Manager コンソールで共同管理を有効にできます。
@@ -49,12 +49,13 @@ AD と Azure AD に参加し Microsoft Intune に登録されている Windows 1
     - [混在機関](/sccm/mdm/deploy-use/migrate-mixed-authority)を使用している場合、まず Intune スタンドアロンへの移行を完了します。 次に、MDM 機関を Intune に設定してから、共同管理をセットアップします。<!--SCCMDocs issue #797-->
 
 
-> [!Note]  
+> [!NOTE]
 > ハイブリッド MDM 環境 (Intune と Configuration Manager が統合された環境) では、共同管理を有効にできません。 ただし、Intune スタンドアロンへのユーザー移行を開始し、関連 Windows 10 デバイスの共同管理を有効にできます。 Intune スタンドアロンへの移行については、[ハイブリッド MDM から Intune スタンドアロンへの移行の開始](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)に関する記事をご覧ください。
 
 
 ### <a name="prerequisite-azure-resource-manager-roles"></a>前提条件となる Azure Resource Manager の役割
 <!--SCCMDocs issue #667-->Azure の役割の詳細については、[さまざまな役割](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles)に関するページをご覧ください。
+
 |操作|必要な役割|
 |----|----|
 |クラウド管理ゲートウェイの設定|Azure サブスクリプション マネージャー|
@@ -68,7 +69,7 @@ AD と Azure AD に参加し Microsoft Intune に登録されている Windows 1
 
 - Windows 10 バージョン 1709 以降  
 
-- [ハイブリッド Azure AD 参加済み](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) (AD と Azure AD に参加) または Azure AD のみ参加済み (この種類は "クラウド ドメイン参加済み" と呼ばれることがあります)。
+- [ハイブリッド Azure AD 参加済み](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) (AD と Azure AD に参加) または Azure AD のみ参加済み (この種類は "クラウド ドメイン参加済み" と呼ばれることがあります)。
 
 
 ### <a name="additional-prerequisites-for-devices-without-the-configuration-manager-client"></a>Configuration Manager クライアントがインストールされていないデバイスの追加の前提条件
@@ -85,16 +86,22 @@ AD と Azure AD に参加し Microsoft Intune に登録されている Windows 1
 
 ## <a name="command-line-to-install-configuration-manager-client"></a>Configuration Manager クライアントをインストールするためのコマンド ライン
 
-まだ Configuration Manager クライアントではない Windows 10 デバイスの Intune でアプリを作成します。 次のセクションでアプリを作成するときは、次のコマンド ラインを使います。
+まだ Configuration Manager クライアントではない Windows 10 デバイスの Intune でアプリを作成します。 この操作を行うには、次の手順に従います。
+
+1. portal.azure.com に移動し、Intune ブレードを開きます。
+2. **[クライアント アプリ]** > **[アプリ]** > **[追加]** をクリックします。 
+3. **[その他]** で **[基幹業務アプリ]** を選択します。
+4. Ccmsetup.msi アプリ パッケージ ファイルをアップロードします (このファイルは、サイト サーバーの <*ConfigMgr インストール ディレクトリ*>\bin\i386 フォルダーにあります)。 
+5. アプリがアップロードされたら、次のコマンドライン引数を実行して、アプリ情報を構成します。
 
 `ccmsetup.msi CCMSETUPCMD="/mp:<URL of cloud management gateway mutual auth endpoint> CCMHOSTNAME=<URL of cloud management gateway mutual auth endpoint> SMSSiteCode=<Sitecode> SMSMP=https://<FQDN of MP> AADTENANTID=<AAD tenant ID> AADCLIENTAPPID=<Server AppID for AAD Integration> AADRESOURCEURI=https://<Resource ID>"`
 
-#### <a name="example-command-line"></a>コマンドラインの例
+#### <a name="example-command-line-input"></a>コマンドライン入力の例
 次の値がある場合:
 
 - **クラウド管理ゲートウェイ相互認証エンドポイントの URL**: `https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500`    
 
-   >[!Note]    
+   >[!NOTE]    
    >**クラウド管理ゲートウェイ相互認証エンドポイントの URL** の値には、**vProxy_Roles** SQL ビューの **MutualAuthPath** の値を使います。  
 
 - **管理ポイント (MP) の FQDN**: `mp1.contoso.com`    
@@ -103,7 +110,7 @@ AD と Azure AD に参加し Microsoft Intune に登録されている Windows 1
 - **Azure AD クライアント アプリ ID**: `51e781eb-aac6-4265-8030-4cd1ddaa9dd0`     
 - **AAD リソース ID URI**: `ConfigMgrServer`    
 
-  > [!Note]    
+  > [!NOTE]    
   > **AAD リソース ID URI** の値には、**vSMS_AAD_Application_Ex** SQL ビューの **IdentifierUri** の値を使います。  
 
 次のコマンド ラインを使います。
@@ -130,7 +137,7 @@ AD と Azure AD に参加し Microsoft Intune に登録されている Windows 1
 詳細については、「[クライアント インストールのプロパティ](/sccm/core/clients/deploy/about-client-installation-properties)」を参照してください。
 
 
-> [!Tip]
+> [!TIP]
 > 次の手順を使って、サイトのコマンド ライン パラメーターを探します。     
 > 
 > 1. Configuration Manager コンソールで、**[管理]** ワークスペースに移動し、**[Cloud Services]** を展開して **[共同管理]** を選択します。  
@@ -143,7 +150,7 @@ AD と Azure AD に参加し Microsoft Intune に登録されている Windows 1
 > 
 > 5. **[キャンセル]** をクリックしてウィザードを終了します。  
 
-> [!Important]    
+> [!IMPORTANT]    
 > コマンドラインをカスタマイズして Configuration Manager クライアントをインストールする場合は、コマンドラインが 1024 文字を超えていないことを確認してください。 コマンドラインが 1024 文字を超えると、クライアントのインストールは失敗します。
 
 

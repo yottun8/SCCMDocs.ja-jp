@@ -9,16 +9,16 @@ ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1cea0a54bc4c4c2d69f979bb09d83d7f5fac7706
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 00a6723dd56aa41287d34a7fcdc9f549d792d666
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342717"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417916"
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>System Center Configuration Manager へのアップグレード
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center 2012 Configuration Manager を実行しているサイトおよび階層から System Center Configuration Manager にアップグレードする、一括アップグレードを実行できます。  
 
@@ -31,19 +31,19 @@ System Center 2012 Configuration Manager を実行しているサイトおよび
 
 **バージョン 1802 へのアップグレード**   
 バージョン 1802 基準メディアがある場合は、次のバージョンを System Center Configuration Manager バージョン 1802 の正規ライセンス版にアップグレードできます。   
--     System Center Configuration Manager バージョン 1802 の評価版のインストール
--     System Center 2012 Configuration Manager Service Pack 1
--     System Center 2012 Configuration Manager Service Pack 2
--     System Center 2012 R2 Configuration Manager
--     System Center 2012 R2 Configuration Manager Service Pack 1
+- System Center Configuration Manager バージョン 1802 の評価版のインストール
+- System Center 2012 Configuration Manager Service Pack 1
+- System Center 2012 Configuration Manager Service Pack 2
+- System Center 2012 R2 Configuration Manager
+- System Center 2012 R2 Configuration Manager Service Pack 1
 
 **バージョン 1702 へのアップグレード**   
 バージョン 1702 基準メディアがある場合は、次のバージョンを System Center Configuration Manager バージョン 1702 の正規ライセンス版にアップグレードできます。   
--     System Center Configuration Manager バージョン 1702 の評価版のインストール
--     System Center 2012 Configuration Manager Service Pack 1
--     System Center 2012 Configuration Manager Service Pack 2
--     System Center 2012 R2 Configuration Manager
--     System Center 2012 R2 Configuration Manager Service Pack 1
+- System Center Configuration Manager バージョン 1702 の評価版のインストール
+- System Center 2012 Configuration Manager Service Pack 1
+- System Center 2012 Configuration Manager Service Pack 2
+- System Center 2012 R2 Configuration Manager
+- System Center 2012 R2 Configuration Manager Service Pack 1
 
 **バージョン 1606 へのアップグレード**  
 2016 年 12 月 15 日に、バージョン 1606 の基準メディアが再リリースされ、追加のアップグレード シナリオのサポートが追加されました。 この新しいリリースでは、次のバージョンを System Center Configuration Manager バージョン 1606 の正規ライセンス版にアップグレードできます。  
@@ -87,7 +87,7 @@ When you have version 1511 baseline media, you can upgrade the following to a fu
 
 ### <a name="before-you-upgrade"></a>アップグレードする前に  
 
-**System Center 2012 Configuration Manager 環境を確認し**、問題を解決する (詳細は KB4018655 にあり): [Configuration Manager クライアントが繰り返し発生する再試行タスクに起因して 5 時間おきに再インストールし、不注意なクライアント アップグレードを引き起こす可能性があります](https://support.microsoft.com/help/4018655)。
+**System Center 2012 Configuration Manager 環境を確認し**、KB4018655 に詳細が説明されている問題を解決する [Configuration Manager クライアントで繰り返し発生される再試行タスクにのために 5 時間おきに再インストールされ、不注意によるクライアント アップグレードが引き起こされる可能性があります](https://support.microsoft.com/help/4018655)。
 
 System Center Configuration Manager へのアップグレードに必要な**サポート対象構成をコンピューター環境が満たしていることを確認する**:  
 
@@ -125,8 +125,8 @@ Configuration Manager では、管理ポイントのデータベース レプリ
 -   実稼働サイトを System Center Configuration Manager にアップグレードする  
 
 詳細については、次をご覧ください。  
--   System Center 2012 Configuration Manager: 「[管理ポイントのデータベース レプリカの構成](https://technet.microsoft.com/library/hh846234.aspx)」  
--   System Center Configuration Manager: 「[System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)」   
+-   System Center 2012 Configuration Manager:[管理ポイントのデータベース レプリカの構成](https://technet.microsoft.com/library/hh846234.aspx)  
+-   System Center Configuration Manager:[System Center Configuration Manager の管理ポイントのデータベース レプリカ](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)  
 
 **NLB を使用するソフトウェアの更新ポイントを再構成する:**  
 Configuration Manager では、ネットワーク負荷分散 (NLB) クラスターを使用してソフトウェアの更新ポイントをホストしているサイトは、アップグレードできません。  
@@ -146,14 +146,14 @@ System Center Configuration Manager にアップグレードする前に、ア�
 
 サイトのメンテナンス タスクについて詳しくは、次をご覧ください。  
 
--   System Center 2012 Configuration Manager: 「[Configuration Manager のメンテナンス タスクの計画](https://technet.microsoft.com/library/gg712686.aspx)」  
--   System Center Configuration Manager: 「[System Center Configuration Manager のメンテナンス タスクのリファレンス](../../../../core/servers/manage/reference-for-maintenance-tasks.md)」  
+-   System Center 2012 Configuration Manager:[Configuration Manager のメンテナンス タスクの計画](https://technet.microsoft.com/library/gg712686.aspx)  
+-   System Center Configuration Manager:[Reference for maintenance tasks for System Center Configuration Manager](../../../../core/servers/manage/reference-for-maintenance-tasks.md)  
 
 **セットアップ前提条件チェッカーを実行する**:  
 サイトをアップグレードする前に、セットアップとは別に **前提条件チェッカー** を実行して、サイトが前提条件を満たしていることを検証できます。 後でサイトをアップグレードしたときに、前提条件チェッカーが再度実行されます。  
 
 2016 年 10 月リリースのバージョン 1606 の基準メディアを使用する場合、個別の前提条件チェックにより、System Center Configuration Manager の Current Branch と Long-Term Servicing Branch (LTSB) の両方にアップグレードするためにサイトが評価されます。 LTSB でサポートされていない機能がいくつかあるため、次のようなエントリが *ConfigMgrPrereq.log* に表示される場合があります。
- - 情報: サイトが LTSB エディションではありません。
+ - 情報:このサイトは LTSB エディションです。
  - LTSB エディションでサポートされていないサイト システムの役割 '資産インテリジェンス同期ポイント';    エラー;    Configuration Manager は '資産インテリジェンス同期ポイント' がインストールされていることを検出しました。 資産インテリジェンスは LTSB エディションでサポートされていません。 続行する前に、資産インテリジェンス同期ポイント サイト システムの役割をアンインストールする必要があります。
 
 Current Branch にアップグレードする予定の場合は、LTSB エディションに関するエラーは無視してかまいません。 これらは、LTSB にアップグレードする予定の場合にのみ当てはまります。
@@ -289,8 +289,8 @@ System Center Configuration Manager にアップグレードすると、自動�
 >   
 >  5 日以上前のサイト データベースのコピーに対してデータベース アップグレードのテストを実行すると、次のいずれかのメッセージを受け取ることがあります:  
 >   
->  -   警告: アップグレードするとクラウドへの完全同期が実行されます。  
->  -   エラー: データベースをアップグレードするとクラウドへの完全同期が実行されます。  
+>  -   警告:アップグレードするとクラウドへの完全同期が実行されます。  
+>  -   エラー:データベースをアップグレードするとクラウドへの完全同期が実行されます。  
 >   
 > どちらも、アップグレード テストの失敗や問題を示すものではないため、データベース アップグレードのテスト中には無視してかまいません。 これは、実際のアップグレード中に **Cloud** データベース レプリケーション グループからのデータが Microsoft Intune と同期される可能性があることを示しています。  
 
@@ -302,7 +302,7 @@ System Center Configuration Manager にアップグレードすると、自動�
 
 2.  データベースのコピーを復元した後で、新しいバージョンの System Center Configuration Manager のソース メディアからセットアップを実行します。 セットアップを実行する際は、 **/TESTDBUPGRADE** コマンド ライン オプションを使います。 データベースのコピーをホストしている SQL Server インスタンスが既定のインスタンスでない場合は、コマンド ライン引数を指定してサイト データベースのコピーをホストしているインスタンスを特定することも必要になります。  
 
-     たとえば、SMS_ABC というデータベース名のサイト データベースをアップグレードすることを計画しているとします。 このサイト データベースのコピーを、DBTest というインスタンス名のサポートされている SQL Server インスタンスに復元します。 サイト データベースのこのコピーのアップグレードをテストするには、次のコマンド ラインを使います: **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**  
+     たとえば、SMS_ABC というデータベース名のサイト データベースをアップグレードすることを計画しているとします。 このサイト データベースのコピーを、DBTest というインスタンス名のサポートされている SQL Server インスタンスに復元します。 サイト データベースのこのコピーのアップグレードをテストするには、次のコマンド ラインを使用します。**Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**  
 
      Setup.exe は、System Center Configuration Manager のソース メディアの **SMSSETUP\BIN\X64** にあります。  
 
@@ -329,33 +329,33 @@ Configuration Manager サイトをアップグレードするには、次の手�
 
 #### <a name="to-upgrade-a-central-administration-site-or-primary-site"></a>中央管理サイトまたはプライマリ サイトをアップグレードするには  
 
-1.  セットアップを実行するユーザーが、次のセキュリティ権限を持っていることを確認します。  
+1. セットアップを実行するユーザーが、次のセキュリティ権限を持っていることを確認します。  
 
-    -   サイト サーバー コンピューターのローカル管理者権限  
-    -   サイトがリモートの場合は、そのリモート サイト データベース サーバーのローカル管理者権限    </br></br>
+   -   サイト サーバー コンピューターのローカル管理者権限  
+   -   サイトがリモートの場合は、そのリモート サイト データベース サーバーのローカル管理者権限    </br></br>
 
-2.  サイト サーバー コンピューターでエクスプローラーを開き、**&lt;ConfigMgSourceMedia\>\SMSSETUP\BIN\X64** に移動します。  
+2. サイト サーバー コンピューターでエクスプローラーを開き、**&lt;ConfigMgSourceMedia\>\SMSSETUP\BIN\X64** に移動します。  
 
-3.  **Setup.exe**をダブルクリックします。 Configuration Manager のセットアップ ウィザードが起動します。  
+3. **Setup.exe**をダブルクリックします。 Configuration Manager のセットアップ ウィザードが起動します。  
 
-4.  **[開始する前に]** ページで **[次へ]** をクリックします。  
+4. **[開始する前に]** ページで **[次へ]** をクリックします。  
 
-5.  **[はじめに]** ページで **[Configuration Manager サイトをアップグレードする]** を選択してから、**[次へ]** をクリックします。  
+5. **[はじめに]** ページで **[Configuration Manager サイトをアップグレードする]** を選択してから、**[次へ]** をクリックします。  
 
-6.  **[プロダクト キー]** ページで **[次へ]** をクリックします。  
+6. **[プロダクト キー]** ページで **[次へ]** をクリックします。  
 
-     以前に Configuration Manager 評価版をインストールした場合、**[この製品の製品版をインストール]** を選択し、Configuration Manager の完全インストール用のプロダクト キーを入力して、サイトを完全なバージョンに変換できます。  
+    以前に Configuration Manager 評価版をインストールした場合、**[この製品の製品版をインストール]** を選択し、Configuration Manager の完全インストール用のプロダクト キーを入力して、サイトを完全なバージョンに変換できます。  
 
-     System Center Configuration Manager については、2016 年 10 月リリースのバージョン 1606 基準メディア以降、ソフトウェア アシュアランス契約の有効期限の日付を指定できます。 ライセンス契約の**ソフトウェア アシュアランスの有効期限**を通知する便利なアラームとして、この日付を指定することもできます。 セットアップ時に入力しなかった場合は、後で Configuration Manager コンソール内から指定できます。
+    System Center Configuration Manager については、2016 年 10 月リリースのバージョン 1606 基準メディア以降、ソフトウェア アシュアランス契約の有効期限の日付を指定できます。 ライセンス契約の**ソフトウェア アシュアランスの有効期限**を通知する便利なアラームとして、この日付を指定することもできます。 セットアップ時に入力しなかった場合は、後で Configuration Manager コンソール内から指定できます。
 
-     >  [!NOTE]   
-     >  Microsoft では、お客様が入力した有効期限の日付を確認していません。また、ライセンスを検証する場合もこの日付を使用しません。  お客様は有効期限を通知するアラームとして、この日付を使用することができます。 Configuration Manager ではオンラインで新しいソフトウェア更新プログラムが提供されていないか定期的に確認します。このような追加の更新プログラムを取得するためにはソフトウェア アシュアランス ライセンスが最新の状態になっている必要があります。このため有効期限を通知するアラーム機能は便利です。    
+   > [!NOTE]
+   >  Microsoft では、お客様が入力した有効期限の日付を確認していません。また、ライセンスを検証する場合もこの日付を使用しません。  お客様は有効期限を通知するアラームとして、この日付を使用することができます。 Configuration Manager ではオンラインで新しいソフトウェア更新プログラムが提供されていないか定期的に確認します。このような追加の更新プログラムを取得するためにはソフトウェア アシュアランス ライセンスが最新の状態になっている必要があります。このため有効期限を通知するアラーム機能は便利です。    
 
-     詳細については、「[System Center Configuration Manager のライセンスとブランチ](/sccm/core/understand/learn-more-editions)」を参照してください。
+    詳細については、「[System Center Configuration Manager のライセンスとブランチ](/sccm/core/understand/learn-more-editions)」を参照してください。
 
-7.  **[マイクロソフト ソフトウェア ライセンス条項]** ページで、ライセンス条項を読んで同意し、**[次へ]** をクリックします。  
+7. **[マイクロソフト ソフトウェア ライセンス条項]** ページで、ライセンス条項を読んで同意し、**[次へ]** をクリックします。  
 
-8.  **[必須ライセンス]** ページで、必須ソフトウェアのライセンス条項を読んで同意し、**[次へ]** をクリックします。 ソフトウェアがダウンロードされ、必要に応じて、サイト システムまたはクライアントに自動的にインストールされます。 次のページに進む前に、すべてのチェック ボックスをオンにする必要があります。  
+8. **[必須ライセンス]** ページで、必須ソフトウェアのライセンス条項を読んで同意し、**[次へ]** をクリックします。 ソフトウェアがダウンロードされ、必要に応じて、サイト システムまたはクライアントに自動的にインストールされます。 次のページに進む前に、すべてのチェック ボックスをオンにする必要があります。  
 
 9. **[必須ファイルのダウンロード]** ページで、前提条件の最新の再頒布可能ファイル、言語パック、および製品の最新の更新プログラムをインターネットからダウンロードするか、以前にダウンロードしたファイルを使用するかを指定し、**[次へ]** をクリックします。 セットアップ ダウンローダーを使用して既にファイルをダウンロードしている場合は、**[ダウンロード済みのファイルを使用する]** を選択して、ダウンロード先フォルダーを指定します。 詳細については、「[セットアップ ダウンローダー](/sccm/core/servers/deploy/install/setup-downloader)」を参照してください。
 

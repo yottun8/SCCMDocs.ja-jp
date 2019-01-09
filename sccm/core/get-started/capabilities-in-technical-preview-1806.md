@@ -10,16 +10,16 @@ ms.assetid: 52d64ef0-8c0d-42c3-857e-07d7ec776f29
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4933e4e6d9037edd01d80c9535627287275f7462
-ms.sourcegitcommit: 10b3a571e2a822bbd7b58a25840ee1e6f703a7a2
+ms.openlocfilehash: 8914c9ff7a33d24b5d68893018edff8d8e0de444
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814299"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424314"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1806 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+*適用対象:System Center Configuration Manager (Technical Preview)*
 
 この記事では、Configuration Manager の Technical Preview バージョン 1806 で利用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Technical Preview サイトに追加できます。 
 
@@ -39,8 +39,7 @@ Steps to workaround, if any.
 ## <a name="known-issues-in-this-technical-preview"></a>この Technical Preview の既知の問題
 
 ### <a name="ki_contentlib"></a> サイトでリモート コンテンツ ライブラリを使用してアップグレードできない
-<!--514642-->
-**cmupdate.log** に示される以下のエラーが発生し、サイトでアップグレードできません。  
+<!--514642--> **cmupdate.log** に示される以下のエラーが発生し、サイトでアップグレードできません。  
 ```  
 Failed to find any valid drives  
 GetContentLibraryParameters failed; 0x80070057  
@@ -61,10 +60,10 @@ ERROR: Failed to process configuration manager update.
 
 
 ## <a name="bkmk-3pupdate"></a> サード パーティのソフトウェア更新プログラム
-<!--1352101-->
-皆さまからの [UserVoice フィードバック](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co)を反映し、このリリースではサード パーティのソフトウェア更新プログラムのサポートをさらに繰り返し行います。 いくつかの一般的なシナリオでは、System Center Updates Publisher (SCUP) を使用する必要がなくなりました。 Configuration Manager コンソールの新しい **[サード パーティのソフトウェア更新プログラムのカタログ]** ノードでは、サード パーティのカタログをサブスクライブし、更新プログラムをソフトウェア更新ポイントに発行してからクライアントに展開できます。 
+<!--1352101--> [UserVoice フィードバック](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co)を反映し、このリリースではサード パーティ製ソフトウェアの更新プログラムのサポートをさらに追加します。 いくつかの一般的なシナリオでは、System Center Updates Publisher (SCUP) を使用する必要がなくなりました。 Configuration Manager コンソールの新しい **[サード パーティのソフトウェア更新プログラムのカタログ]** ノードでは、サード パーティのカタログをサブスクライブし、更新プログラムをソフトウェア更新ポイントに発行してからクライアントに展開できます。 
 
 このリリースでは、次のサード パーティのソフトウェア更新プログラムのカタログを利用できます。
+
  | 発行者 | カタログ名 |
  |--------|---------------------|
  | HP | HP クライアント更新プログラム カタログ |
@@ -74,7 +73,12 @@ SCUP では引き続き、他のカタログとシナリオがサポートされ
 
 ### <a name="prerequisites"></a>[前提条件]
 - HTTPS が有効なソフトウェア更新ポイントで、ソフトウェア更新管理を設定します。 詳細については、「[Prepare for software updates management](/sccm/sum/get-started/prepare-for-software-updates-management)」 (ソフトウェア更新管理の準備) を参照してください。  
-   - このリリースのこの機能を利用するには、ソフトウェア更新ポイントがサイト サーバー上にある必要があります。 <!--515810--> 
+  - このリリースのこの機能を利用するには、ソフトウェア更新ポイントがサイト サーバー上にある必要があります。 <!--515810--> 
+
+    > [!Tip]  
+    > ソフトウェアの更新ポイントでは HTTPS が必要です。これは、署名証明書を処理するために使用される WSUS API の前提条件だからです。 クライアントが HTTPS 対応である必要はありません。 WSUS での HTTPS の有効化の詳細については、次の記事を参照してください。  
+    > - [Secure Sockets Layer (SSL) プロトコルを使用して WSUS をセキュリティで保護する](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL) 
+    > - [WSUS サポートのブログ記事](https://blogs.technet.microsoft.com/sus/2011/05/09/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names/)
 
 - ソフトウェア更新ポイントの WSUSContent フォルダーに、サード パーティのソフトウェア更新プログラムのソース バイナリ コンテンツを格納するのに十分なディスク領域がある必要があります。 必要な記憶域の容量は、ベンダー、更新プログラムの種類、および展開のために発行する特定の更新プログラムによって異なります。 WSUSContent フォルダーを、空き領域がより多い別のドライブに移動する必要がある場合は、WSUS サポート チームのブログ記事「[How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/)」 (WSUS で更新プログラムをローカルに格納する場所を変更する方法) を参照してください。  
 
@@ -87,7 +91,7 @@ SCUP では引き続き、他のカタログとシナリオがサポートされ
  タスクを実行してみます。 試した結果の[フィードバック](capabilities-in-technical-preview-1804.md#bkmk_feedback)をお送りください。
 
 
-#### <a name="phase-1-enable-and-set-up-the-feature"></a>フェーズ 1: 機能を有効にして設定する
+#### <a name="phase-1-enable-and-set-up-the-feature"></a>フェーズ 1:機能を有効にして設定する
 *階層ごとに 1 回*、次の手順を実行して、機能を使用できるように設定します。  
 
 1. Configuration Manager コンソールで、**[管理]** ワークスペースに移動します。 **[サイトの構成]** を展開し、**[サイト]** ノードを選択します。  
@@ -100,7 +104,7 @@ SCUP では引き続き、他のカタログとシナリオがサポートされ
    > Configuration Manager の既定のオプションを使用して、この証明書を管理する場合、**[管理]** ワークスペースの **[セキュリティ]** の下にある **[証明書]** ノードに、**サード パーティの WSUS 署名**という種類の新しい証明書が作成されます。  
 
 
-#### <a name="phase-2-subscribe-to-a-third-party-catalog-and-sync-updates"></a>フェーズ 2: サード パーティのカタログをサブスクライブして更新プログラムを同期する
+#### <a name="phase-2-subscribe-to-a-third-party-catalog-and-sync-updates"></a>フェーズ 2:サード パーティのカタログをサブスクライブして更新プログラムを同期する
 サブスクライブする*サード パーティのカタログごと*に、次の手順を実行します。  
 
 1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** ワークスペースに移動します。 **[ソフトウェア更新プログラム]** を展開し、**[サード パーティのソフトウェア更新プログラムのカタログ]** ノードを選択します。  
@@ -124,7 +128,7 @@ SCUP では引き続き、他のカタログとシナリオがサポートされ
 クライアントからのコンプライアンス結果を表示するには、更新プログラムをスキャンして評価する必要があります。 **ソフトウェア更新プログラムのスキャン サイクル**操作を実行することで、クライアントの Configuration Manager コンソール パネルからこのサイクルを手動でトリガーできます。 プロセスの詳細については、「[Software updates introduction](/sccm/sum/understand/software-updates-introduction)」 (ソフトウェア更新プログラムの概要) を参照してください。
 
 
-#### <a name="phase-3-deploy-third-party-software-updates"></a>フェーズ 3: サード パーティのソフトウェア更新プログラムを展開する
+#### <a name="phase-3-deploy-third-party-software-updates"></a>フェーズ 3:サード パーティのソフトウェア更新プログラムを展開する
 クライアントに展開する*すべてのサード パーティのソフトウェア更新プログラム*について、次の手順を実行します。  
 
 1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** ワークスペースに移動します。 **[ソフトウェア更新プログラム]** を展開し、**[すべてのソフトウェア更新プログラム]** ノードを選択します。  
@@ -154,23 +158,20 @@ SCUP では引き続き、他のカタログとシナリオがサポートされ
 
 
 ## <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge"></a>Microsoft Edge 用に Windows Defender SmartScreen 設定を構成する
-<!--1353701-->
-このリリースでは、[Microsoft Edge ブラウザー コンプライアンスの設定ポリシー](/sccm/compliance/deploy-use/browser-profiles)に、[Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) の 3 つの設定が追加されています。 ポリシーには、**[SmartScreen の設定]** ページの次の追加設定が含まれるようになりました。
-- **SmartScreen を許可する**: Windows Defender SmartScreen を許可するかどうかを指定します。 詳細については、[AllowSmartScreen ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)に関するページを参照してください。
-- **サイトの SmartScreen プロンプトをユーザーがオーバーライドできる**: 悪意のある可能性がある Web サイトに関する Windows Defender SmartScreen フィルターの警告をユーザーがオーバーライドできるかどうかを指定します。 詳細については、[PreventSmartScreenPromptOverride ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)に関するページを参照してください。
-- **Users can override SmartScreen prompt for files (ファイルの SmartScreen プロンプトをユーザーがオーバーライドできる)**: 確認されていないファイルのダウンロードに関する Windows Defender SmartScreen フィルターの警告をユーザーがオーバーライドできるかどうかを指定します。 詳細については、[PreventSmartScreenPromptOverrideForFiles ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)に関するページを参照してください。
+<!--1353701--> このリリースでは、[Microsoft Edge ブラウザー コンプライアンスの設定ポリシー](/sccm/compliance/deploy-use/browser-profiles)に、[Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) の 3 つの設定が追加されています。 ポリシーには、**[SmartScreen の設定]** ページの次の追加設定が含まれるようになりました。
+- **SmartScreen を許可する**:Windows Defender SmartScreen を許可するかどうかを指定します。 詳細については、[AllowSmartScreen ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)に関するページを参照してください。
+- **サイトの SmartScreen プロンプトをユーザーがオーバーライドできる**:悪意のある可能性がある Web サイトに関する Windows Defender SmartScreen フィルターの警告をユーザーがオーバーライドできるかどうかを指定します。 詳細については、[PreventSmartScreenPromptOverride ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)に関するページを参照してください。
+- **ファイルの SmartScreen プロンプトをユーザーがオーバーライドできる**:確認されていないファイルのダウンロードに関する Windows Defender SmartScreen フィルターの警告をユーザーがオーバーライドできるかどうかを指定します。 詳細については、[PreventSmartScreenPromptOverrideForFiles ブラウザー ポリシー](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)に関するページを参照してください。
 
 
 
 ## <a name="sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device"></a>共同管理されたデバイスのために MDM ポリシーを Microsoft Intune から同期する
-<!--1357377-->
-このリリース以降、[共同管理ワークロードを切り替える](/sccm/core/clients/manage/co-management-switch-workloads)ときに、共同管理されたデバイスで自動的に Microsoft Intune から MDM ポリシーが同期されます。 この同期は、Configuration Manager コンソールのクライアント通知から**コンピューター ポリシーのダウンロード**操作を開始するときにも行われます。 詳細については、「[クライアント通知を使用してクライアント ポリシーの取得を開始する](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification)」を参照してください。
+<!--1357377--> このリリース以降、[共同管理ワークロードを切り替える](/sccm/core/clients/manage/co-management-switch-workloads)ときに、共同管理されたデバイスで自動的に Microsoft Intune から MDM ポリシーが同期されます。 この同期は、Configuration Manager コンソールのクライアント通知から**コンピューター ポリシーのダウンロード**操作を開始するときにも行われます。 詳細については、「[クライアント通知を使用してクライアント ポリシーの取得を開始する](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification)」を参照してください。
 
 
 
 ## <a name="transition-office-365-workload-to-intune-using-co-management"></a>共同管理を使用して Intune に Office 365 ワークロードを移行する
-<!--1357841-->
-共同管理を有効にした後に、Configuration Manager から Microsoft Intune に Office 365 ワークロードを移行できるようになりました。 このワークロードを移行するには、共同管理プロパティ ページに移動して、スライド バーを Configuration Manager から [パイロット] または [すべて] に移動します。 詳細については、「[Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)」を参照してください。
+<!--1357841--> 共同管理を有効にした後に、Configuration Manager から Microsoft Intune に Office 365 ワークロードを移行できるようになりました。 このワークロードを移行するには、共同管理プロパティ ページに移動して、スライド バーを Configuration Manager から [パイロット] または [すべて] に移動します。 詳細については、「[Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)」を参照してください。
 
 **Office 365 アプリケーションがデバイス上の Intune で管理されているか**という新しいグローバル条件もあります。 この条件は、新しい Office 365 アプリケーションの要件として既定で追加されます。 このワークロードを移行すると、共同管理されたクライアントでアプリケーションの要件が満たされなくなるため、Configuration Manager で展開される Office 365 がインストールされません。
 
@@ -180,8 +181,7 @@ SCUP では引き続き、他のカタログとシナリオがサポートされ
 
 
 ## <a name="package-conversion-manager"></a>Package Conversion Manager 
-<!--1357861-->
-Package Conversion Manager は統合ツールとなりました。これを使用して、従来の Configuration Manager 2007 パッケージを Configuration Manager の現在のブランチのアプリケーションに変換することができます。 その後、依存関係、要件の規則、およびユーザーとデバイスのアフィニティなど、アプリケーションの機能を使用することができます。
+<!--1357861--> Package Conversion Manager は統合ツールとなりました。これを使用して、従来の Configuration Manager 2007 パッケージを Configuration Manager の現在のブランチのアプリケーションに変換することができます。 その後、依存関係、要件の規則、およびユーザーとデバイスのアフィニティなど、アプリケーションの機能を使用することができます。
 
 > [!Tip]  
 > Package Conversion Manager の既存の機能に関する以前のドキュメントについては、[TechNet](https://technet.microsoft.com/library/hh531519.aspx) を参照してください。 関連する情報は docs.microsoft.com ライブラリに移行中です。
@@ -194,9 +194,9 @@ Package Conversion Manager は統合ツールとなりました。これを使�
 
 1. Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** ワークスペースに移動します。 **[アプリケーション管理]** を展開し、**[パッケージ]** を選択します。  
 2. パッケージを選択します。 リボンの **[Package Conversion]\(パッケージ変換\)** グループで、次の 3 つのオプションを使用できます。  
-     - **パッケージの分析**: パッケージを分析して、変換プロセスを開始します。
-     - **Convert Package (パッケージの変換)**: 一部のパッケージは、この操作でアプリケーションに簡単に変換することができます。
-     - **Fix and Convert (修正と変換)**: 一部のパッケージでは、アプリケーションに変換する前に問題を修正する必要があります。  
+     - **パッケージの分析**:パッケージを分析して、変換プロセスを開始します。
+     - **Convert Package\(パッケージ変換\)**:一部のパッケージは、この操作でアプリケーションに簡単に変換することができます。
+     - **修正と変換**:一部のパッケージでは、アプリケーションに変換する前に問題を修正する必要があります。  
 
    これらの操作の詳細については、[パッケージを分析および変換する方法](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/hh846244%28v%3dtechnet.10%29)に関するページを参照してください。  
 
@@ -210,8 +210,7 @@ Package Conversion Manager は統合ツールとなりました。これを使�
 
 
 ## <a name="deploy-software-updates-without-content"></a>コンテンツなしのソフトウェア更新プログラムの展開
-<!--1357933-->
-最初にソフトウェア更新プログラムのコンテンツをダウンロードして配布ポイントに配布することなく、ソフトウェア更新プログラムをデバイスに展開できるようになりました。 この機能は、非常に大きい更新プログラムのコンテンツを処理する場合や、常にクライアントで Microsoft Update クラウド サービスからコンテンツを取得する場合に役立ちます。 このシナリオのクライアントでは、既に必要なコンテンツがあるピアからコンテンツをダウンロードすることもできます。 Configuration Manager クライアントで引き続きコンテンツのダウンロードが管理されるため、Configuration Manager のピア キャッシュ機能や、配信の最適化などの他のテクノロジを利用することができます。 この機能では、Windows および Office の更新プログラムを含む、Configuration Manager ソフトウェア更新プログラム管理でサポートされるすべての更新プログラムの種類がサポートされます。 
+<!--1357933--> 最初にソフトウェア更新プログラムのコンテンツをダウンロードして配布ポイントに配布することなく、ソフトウェア更新プログラムをデバイスに展開できるようになりました。 この機能は、非常に大きい更新プログラムのコンテンツを処理する場合や、常にクライアントで Microsoft Update クラウド サービスからコンテンツを取得する場合に役立ちます。 このシナリオのクライアントでは、既に必要なコンテンツがあるピアからコンテンツをダウンロードすることもできます。 Configuration Manager クライアントで引き続きコンテンツのダウンロードが管理されるため、Configuration Manager のピア キャッシュ機能や、配信の最適化などの他のテクノロジを利用することができます。 この機能では、Windows および Office の更新プログラムを含む、Configuration Manager ソフトウェア更新プログラム管理でサポートされるすべての更新プログラムの種類がサポートされます。 
 
 ### <a name="try-it-out"></a>試してみましょう。
  タスクを実行してみます。 試した結果の[フィードバック](capabilities-in-technical-preview-1804.md#bkmk_feedback)をお送りください。
@@ -226,8 +225,7 @@ Package Conversion Manager は統合ツールとなりました。これを使�
 
 
 ## <a name="office-customization-tool-integration-with-the-office-365-installer"></a>Office 365 インストーラーと Office カスタマイズ ツールの統合
-<!--1358149-->
-Office カスタマイズ ツールが、Configuration Manager コンソールの Office 365 インストーラーと統合されました。 Office 365 の展開を作成するときに、最新の Office の管理容易性設定を動的に構成できるようになりました。 Office カスタマイズ ツールは、Office 365 の新しいビルドのリリースと同時に更新されます。 Office 365 の新しい管理容易性設定は、使用可能になるとすぐに利用できるようになりました。 
+<!--1358149--> Office カスタマイズ ツールが、Configuration Manager コンソールの Office 365 インストーラーと統合されました。 Office 365 の展開を作成するときに、最新の Office の管理容易性設定を動的に構成できるようになりました。 Office カスタマイズ ツールは、Office 365 の新しいビルドのリリースと同時に更新されます。 Office 365 の新しい管理容易性設定は、使用可能になるとすぐに利用できるようになりました。 
 
 ### <a name="prerequisites"></a>[前提条件]
 - Configuration Manager コンソールを実行しているコンピューターには、HTTPS ポート 443 経由のインターネット アクセスが必要です。 Office 365 クライアント インストール ウィザードでは、Windows の標準的な Web ブラウザー API を使用して https://config.office.com を開きます。 インターネット プロキシが使用されている場合、ユーザーはこの URL にアクセスできる必要があります。
@@ -246,8 +244,7 @@ Office カスタマイズ ツールが、Configuration Manager コンソール�
 このリリースでは、クラウド管理ゲートウェイ (CMG) が次の点で機能強化されています。
 
 ### <a name="simplified-client-bootstrap-command-line"></a>簡略化されたクライアント ブートストラップ コマンド ライン
-<!--1358215-->
-CMG を介してインターネット上に Configuration Manager クライアントをインストールするときに、必要なコマンド ライン プロパティが少なくなりました。 このシナリオの 1 つの例の詳細については、共同管理の準備を行う場合の「[Configuration Manager クライアントをインストールするためのコマンド ライン](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)」を参照してください。 
+<!--1358215--> CMG を介してインターネット上に構成マネージャー クライアントをインストールするときに、必要なコマンド ライン プロパティが少なくなりました。 このシナリオの 1 つの例の詳細については、共同管理の準備を行う場合の「[Configuration Manager クライアントをインストールするためのコマンド ライン](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)」を参照してください。 
 
 すべてのシナリオで次のコマンド ライン プロパティが必要になります。
   - CCMHOSTNAME  
@@ -266,12 +263,10 @@ PKI ベースのクライアント認証証明書ではなく、クライアン�
 詳細については、「[クライアント インストールのプロパティ](/sccm/core/clients/deploy/about-client-installation-properties)」を参照してください。
 
 ### <a name="download-content-from-a-cmg"></a>CMG からコンテンツをダウンロードする
-<!--1358651-->
-これまでは、別の役割として、クラウド配布ポイントと CMG を展開する必要がありました。 このリリースでは、CMG でクライアントにコンテンツを提供できるようにもなりました。 この機能により、Azure VM の必要な証明書とコストが削減されます。 この機能を有効にするには、CMG プロパティの **[設定]** タブで **[Allow CMG to function as a cloud distribution point and serve content from Azure storage]\(CMG をクラウド配布ポイントとして機能させて、Azure Storage からのコンテンツを提供できるようにする\)** という新しいオプションを有効にします。 
+<!--1358651--> これまでは、別の役割として、クラウド配布ポイントと CMG を展開する必要がありました。 このリリースでは、CMG でクライアントにコンテンツを提供できるようにもなりました。 この機能により、Azure VM の必要な証明書とコストが削減されます。 この機能を有効にするには、CMG プロパティの **[設定]** タブで **[Allow CMG to function as a cloud distribution point and serve content from Azure storage]\(CMG をクラウド配布ポイントとして機能させて、Azure Storage からのコンテンツを提供できるようにする\)** という新しいオプションを有効にします。 
 
 ### <a name="trusted-root-certificate-isnt-required-with-azure-ad"></a>Azure AD では信頼されたルート証明書が必要ない
-<!--503899-->
-CMG を作成するときに、[設定] ページで[信頼されたルート証明書](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients)を指定する必要はなくなりました。 クライアント認証で Azure Active Directory (Azure AD) を使用するときにこの証明書は必要ありませんが、ウィザードで必要な場合は使用されます。
+<!--503899--> CMG を作成するときに、[設定] ページで[信頼されたルート証明書](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients)を指定する必要はなくなりました。 クライアント認証で Azure Active Directory (Azure AD) を使用するときにこの証明書は必要ありませんが、ウィザードで必要な場合は使用されます。
 
 > [!Important]  
 > PKI クライアント認証証明書を使用する場合は、引き続き信頼されたルート証明書を CMG に追加する必要があります。
@@ -279,8 +274,7 @@ CMG を作成するときに、[設定] ページで[信頼されたルート証
 
 
 ## <a name="improvements-to-secure-client-communications"></a>セキュアなクライアント通信の改善
-<!--1358278,1358279-->
-このリリースでは引き続き、ネットワーク アクセス アカウントの追加の依存関係を削除することで、[セキュアなクライアント通信の改善](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications)を繰り返し行います。 **[Use Configuration Manager-generated certificates for HTTP site systems]\(HTTP サイト システム用に Configuration Manager で生成された証明書を使用する\)** という新しいサイト オプションを有効にする場合、次のシナリオでは、配布ポイントからコンテンツをダウンロードするためのネットワーク アクセス アカウントは必要ありません。  
+<!--1358278,1358279--> このリリースでは引き続き、ネットワーク アクセス アカウントの追加の依存関係を削除することで、[セキュアなクライアント通信の改善](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications)を繰り返し行います。 **[Use Configuration Manager-generated certificates for HTTP site systems]\(HTTP サイト システム用に Configuration Manager で生成された証明書を使用する\)** という新しいサイト オプションを有効にする場合、次のシナリオでは、配布ポイントからコンテンツをダウンロードするためのネットワーク アクセス アカウントは必要ありません。  
 
 - ブート メディアまたは PXE から実行されているタスク シーケンス
 - ソフトウェア センターから実行されているタスク シーケンス  
@@ -290,8 +284,7 @@ CMG を作成するときに、[設定] ページで[信頼されたルート証
 
 
 ## <a name="software-center-infrastructure-improvements"></a>ソフトウェア センターのインフラストラクチャの改善
-<!--1358309-->
-ユーザーが利用できるアプリケーションをソフトウェア センターに表示するのにアプリケーション カタログの役割は必要なくなりました。 この変更は、ユーザーにアプリケーションを配布するために必要なサーバー インフラストラクチャを減らすのに役立ちます。 ソフトウェア センターは、この情報を取得するために管理ポイントに依存するようになりました。より大規模な環境を、[境界グループ](/sccm/core/servers/deploy/configure/boundary-groups#management-points)に割り当てることでより適切にスケーリングすることができます。
+<!--1358309--> ユーザーが利用できるアプリケーションをソフトウェア センターに表示するのにアプリケーション カタログの役割は必要なくなりました。 この変更は、ユーザーにアプリケーションを配布するために必要なサーバー インフラストラクチャを減らすのに役立ちます。 ソフトウェア センターは、この情報を取得するために管理ポイントに依存するようになりました。より大規模な環境を、[境界グループ](/sccm/core/servers/deploy/configure/boundary-groups#management-points)に割り当てることでより適切にスケーリングすることができます。
 
 ### <a name="try-it-out"></a>試してみましょう。
  タスクを実行してみます。 試した結果の[フィードバック](capabilities-in-technical-preview-1804.md#bkmk_feedback)をお送りください。
@@ -306,8 +299,7 @@ CMG を作成するときに、[設定] ページで[信頼されたルート証
 
 
 ## <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>デバイス上のすべてのユーザーに対して Windows アプリ パッケージをプロビジョニングする
-<!--1358310-->
-デバイス上のすべてのユーザーに対して、Windows アプリ パッケージを含むアプリケーションをプロビジョニングできるようになりました。 このシナリオの 1 つの一般的な例では、ある学校の生徒が使用するすべてのデバイスに、Minecraft: Education Edition などの、ビジネス向け Microsoft Store および教育機関向け Microsoft Store からアプリをプロビジョニングします。 これまでは、Configuration Manager では、これらのアプリケーションのユーザーごとのインストールのみがサポートされていました。 新しいデバイスにサインインした後、学生はアプリにアクセスするまで待機する必要があります。 これからは、すべてのユーザー用のデバイスにアプリがプロビジョニングされている場合、より迅速に生産性を高めることができます。
+<!--1358310--> デバイス上のすべてのユーザーに対して、Windows アプリ パッケージを含むアプリケーションをプロビジョニングできるようになりました。 このシナリオの 1 つの一般的な例では、ある学校の生徒が使用するすべてのデバイスに、Minecraft:Education Edition などの、ビジネス向け Microsoft Store および教育機関向け Microsoft Store からアプリをプロビジョニングします。 これまでは、Configuration Manager では、これらのアプリケーションのユーザーごとのインストールのみがサポートされていました。 新しいデバイスにサインインした後、学生はアプリにアクセスするまで待機する必要があります。 これからは、すべてのユーザー用のデバイスにアプリがプロビジョニングされている場合、より迅速に生産性を高めることができます。
 
 > [!Important]  
 > 予期しない結果になる場合があるため、1 つのデバイス上で同じ Windows アプリ パッケージの異なるバージョンのインストール、プロビジョニング、および更新を行う際には注意してください。 この動作は、Configuration Manager を使用してアプリをプロビジョニングするが、ユーザーに Microsoft Store からのアプリの更新を許可する場合に発生する可能性があります。 詳細については、[ビジネス向け Microsoft Store からアプリを管理する](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#next-steps)場合の「次のステップ」のガイダンスを参照してください。  
@@ -334,8 +326,7 @@ CMG を作成するときに、[設定] ページで[信頼されたルート証
 
 
 ## <a name="improvements-to-the-surface-dashboard"></a>Surface ダッシュボードの改善
-<!--1358654-->
-このリリースでは、[Surface ダッシュボード](/sccm/core/clients/manage/surface-device-dashboard)が次の点で改善されています。
+<!--1358654--> このリリースでは、[Surface ダッシュボード](/sccm/core/clients/manage/surface-device-dashboard)が次の点で改善されています。
 - Surface ダッシュボードに、グラフ セクションが選択されたときに関連するデバイスのリストが表示されるようになりました。
    - **[Surface デバイスの割合]** タイルをクリックすると、Surface デバイスのリストが開きます。
    - **[上位 5 つのファームウェアのバージョン]** タイルのバーをクリックすると、その特定のファームウェアのバージョンを示す Surface デバイスのリストが開きます。
@@ -344,8 +335,7 @@ CMG を作成するときに、[設定] ページで[信頼されたルート証
 
 
 ## <a name="hardware-inventory-default-unit-revision"></a>ハードウェア インベントリの既定の単位のリビジョン
-<!--514442-->
-[Configuration Manager バージョン 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710#site-infrastructure) では、多くのレポート ビューで使用される既定の単位が、メガバイト (MB) からギガバイト (GB) に変更されました。 [より大きな整数値のハードウェア インベントリの機能強化](/sccm/core/get-started/capabilities-in-technical-preview-1805#improvement-to-hardware-inventory-for-large-integer-values)により、また、お客様からのフィードバックに基づき、この既定の単位が再度 MB になりました。
+<!--514442--> [Configuration Manager バージョン 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710#site-infrastructure) では、多くのレポート ビューで使用される既定の単位が、メガバイト (MB) からギガバイト (GB) に変更されました。 [より大きな整数値のハードウェア インベントリの機能強化](/sccm/core/get-started/capabilities-in-technical-preview-1805#improvement-to-hardware-inventory-for-large-integer-values)により、また、お客様からのフィードバックに基づき、この既定の単位が再度 MB になりました。
 
 
 
