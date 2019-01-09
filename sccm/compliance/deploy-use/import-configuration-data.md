@@ -10,26 +10,26 @@ ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2a779f80f42439fe6526c05d7027c22fb191e41e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 1c5f4b9cd76379d94c1cedb40ce38eda651b5845
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332112"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416760"
 ---
 # <a name="import-configuration-data-with-system-center-configuration-manager"></a>System Center Configuration Manager で構成データをインポートする
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager コンソールで構成基準と構成項目を作成するほか、構成項目がキャビネット (cab) ファイル形式で、サポートされる Service Modeling Language (SML) スキーマに準拠している場合は、構成データをインポートできます。 構成データのインポート元:  
 
--   Microsoft または他のソフトウェア ベンダー サイトからダウンロードしたベスト プラクティス構成データ (構成パック)。  
+- Microsoft または他のソフトウェア ベンダー サイトからダウンロードしたベスト プラクティス構成データ (構成パック)。  
 
--   System Center 2012 Configuration Manager 以降からエクスポートされた構成データ。  
+- System Center 2012 Configuration Manager 以降からエクスポートされた構成データ。  
 
--   外部で作成され、SML スキーマに従う構成データ。  
+- 外部で作成され、SML スキーマに従う構成データ。  
 
- System Center 2012 Configuration Manager サイト サーバーの役割のコンプライアンスを管理するのに役立つ構成パックの例については、 [System Center 2012 Configuration Manager 構成パック](http://www.microsoft.com/en-us/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all)に関するページを参照してください。  
+  System Center 2012 Configuration Manager サイト サーバーの役割のコンプライアンスを管理するのに役立つ構成パックの例については、 [System Center 2012 Configuration Manager 構成パック](http://www.microsoft.com/en-us/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all)に関するページを参照してください。  
 
 構成基準をインポートするとき、構成基準で参照される一部またはすべての構成項目をキャビネット ファイルにも含める必要がある場合があります。 インポート処理中に、Configuration Manager は、構成基準で参照されるすべての構成項目がキャビネット ファイルにも含まれているかどうかや、既に Configuration Manager に存在するかどうかを確認します。 構成基準のインポートを試みたときに、その構成基準が参照する構成データが見つからない場合は、そのインポート処理は失敗します。  
 

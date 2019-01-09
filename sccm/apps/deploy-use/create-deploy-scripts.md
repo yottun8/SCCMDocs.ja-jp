@@ -10,16 +10,16 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c9f3bc1b85ee9b8fbd8af47e22a826fe8d88377d
-ms.sourcegitcommit: c2c44329f1f9a2e6c14095360b4fc4aafabc27f0
+ms.openlocfilehash: 882af6e50a8619684225de53ce700fcc23923a06
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694962"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418403"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>Configuration Manager コンソールから PowerShell スクリプトを作成して実行する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 <!--1236459--> System Center Configuration Manager には、PowerShell スクリプトを実行するための統合機能があります。 PowerShell には、高度な自動化されたスクリプトを作成できるという利点があります。PowerShell スクリプトは、多くの方が参加するコミュニティで理解され、共有されています。 このスクリプトを使用すると、ソフトウェアを管理するカスタム ツールを簡単に構築できます。また、大規模なジョブをより簡単に、一貫した方法で実行できるので、日常のタスクをすぐに完了できるようになります。  
 
@@ -60,7 +60,7 @@ Configuration Manager セキュリティ ロールの詳細については、以
 
 現在、スクリプトの実行は以下をサポートしています。
 
-- スクリプト言語: PowerShell
+- スクリプト言語:PowerShell
 - パラメーターの型: 整数、文字列、リスト。
 
 
@@ -113,8 +113,8 @@ Configuration Manager では、スクリプトを実行するために使用さ�
 
 ### <a name="security-role-permissions"></a>セキュリティ ロールのアクセス許可  
 
-**ロール名**: スクリプト ランナー  
-- **説明**: これらのアクセス許可では、このロールで、以前他のロールで作成および承認されたスクリプトのみを実行できるようにします。  
+**ロール名**:スクリプト ランナー  
+- **説明**:これらのアクセス許可では、このロールで、以前他のロールで作成および承認されたスクリプトのみを実行できるようにします。  
 - **アクセス許可:** 以下が **[はい]** に設定されていることを確認します。  
 
 |カテゴリ|アクセス許可|状態|
@@ -125,9 +125,9 @@ Configuration Manager では、スクリプトを実行するために使用さ�
 |SMS スクリプト|読み取り|はい|
 
 
-**ロール名**: スクリプト作成者  
-- **説明**: これらのアクセス許可では、このロールでスクリプトを作成できるようにしますが、承認したり、実行したりすることはできません。  
-- **アクセス許可:** 以下のアクセス許可が設定されていることを確認します。
+**ロール名**:スクリプトの作成者  
+- **説明**:これらのアクセス許可では、このロールでスクリプトを作成できるようにしますが、承認したり、実行したりすることはできません。  
+- **アクセス許可**:次のアクセス許可が設定されていることを確認します。
  
 |カテゴリ|アクセス許可|状態|
 |---|---|---|
@@ -139,9 +139,9 @@ Configuration Manager では、スクリプトを実行するために使用さ�
 |SMS スクリプト|変更|はい|
 
 
-**ロール名**: スクリプト承認者  
-- **説明**: これらのアクセス許可では、このロールでスクリプトを承認できますが、作成したり、実行したりすることはできません。  
-- **アクセス許可:** 以下のアクセス許可が設定されていることを確認します。  
+**ロール名**:スクリプトの承認者  
+- **説明**:これらのアクセス許可によってこのロールでスクリプトを承認することが可能になりますが、スクリプトを作成したり、実行したりすることはできません。  
+- **アクセス許可:** 次のアクセス許可が設定されていることを確認します。  
 
 |カテゴリ|アクセス許可|状態|
 |---|---|---|
@@ -172,8 +172,8 @@ Configuration Manager では、スクリプトを実行するために使用さ�
 5. ウィザードを完了します。 新しいスクリプトが **[承認を待っています]** の状態で **[スクリプト]** リストに表示されます。 このスクリプトをクライアント デバイスで実行するには、先にそのスクリプトを承認する必要があります。 
 
 > [!IMPORTANT]
-    >スクリプトの実行機能を使用する場合は、デバイスのリブートや Configuration Manager エージェントの再起動のスクリプトを実行することは避けてください。 そうすると、リブート状態が続くことになりかねません。 必要な場合は、クライアント通知機能を拡張して、デバイスの再起動を有効にできます (Configuration Manager 1710 以降)。 [[再起動を保留しています] 列](/sccm/core/clients/manage/manage-clients#Restart-clients)は、再起動が必要なデバイスを特定するのに役立ちます。 
-<!--SMS503978  -->
+> スクリプトの実行機能を使用する場合は、デバイスのリブートや Configuration Manager エージェントの再起動のスクリプトを実行することは避けてください。 そうすると、リブート状態が続くことになりかねません。 必要な場合は、クライアント通知機能を拡張して、デバイスの再起動を有効にできます (Configuration Manager 1710 以降)。 [[再起動を保留しています] 列](/sccm/core/clients/manage/manage-clients#Restart-clients)は、再起動が必要なデバイスを特定するのに役立ちます。 
+> <!--SMS503978  -->
 
 ## <a name="script-parameters"></a>スクリプト パラメーター
 *(バージョン 1710 で導入されました)*  
@@ -192,7 +192,7 @@ Configuration Manager では、スクリプトを実行するために使用さ�
 
 スクリプト内の各パラメーターには、そのパラメーターに検証を追加するための **[Script Parameter Properties]\(スクリプト パラメーター プロパティ\)** ダイアログがあります。 検証を追加した後に、その検証を満たしていないパラメーターの値を入力すると、エラーが発生します。
 
-#### <a name="example-firstname"></a>例: *FirstName*
+#### <a name="example-firstname"></a>例:*FirstName*
 
 この例では、文字列パラメーター *FirstName* のプロパティを設定できます。
 
