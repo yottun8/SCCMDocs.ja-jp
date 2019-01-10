@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 8f743514af8b89212b10073c07b24990ffedcb1a
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 0ad348c47ff7e97d8d9b3bfba91bd8a0c0ae48ff
+ms.sourcegitcommit: 32a257fafbb29aece8b4f435dd5614fcef305328
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420398"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "54005417"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>Configuration Manager のクラウド管理ゲートウェイを設定する
 
@@ -41,6 +41,8 @@ ms.locfileid: "53420398"
 - バージョン 1802 以降では、**[Azure Resource Manager の展開]** を選択します。 詳細については、[Azure Resource Manager](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager) に関するページを参照してください。 CMG の Azure Resource Manager の展開には、以下の要件が必要です。  
 
     - **クラウド管理**のための [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) との統合。 Azure AD のユーザー探索は必要ありません。  
+    
+    - **Microsoft.ClassicCompute** リソース プロバイダーは、Azure サブスクリプション内に登録する必要があります。 詳細については、[Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services) に関するページを参照してください。
 
     - サブスクリプション管理者はサインインする必要があります。  
 
@@ -54,6 +56,8 @@ ms.locfileid: "53420398"
     - Azure 管理証明書  
 
 - サービスのグローバル一意名。 この名前は、[CMG サーバー認証証明書](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate)に含まれています。  
+
+- クラウド配布ポイントとして CMG を有効にする場合、選択したグローバルに一意の同じ CMG サービス名も、グローバルに一意なストレージ アカウント名として使用できる必要があります。 この名前は、[CMG サーバー認証証明書](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate)に含まれています。
 
 - この CMG 展開の Azure リージョン。  
 
@@ -91,7 +95,7 @@ ms.locfileid: "53420398"
 7. **[リージョン]** ドロップダウン リストを選択して、この CMG の Azure リージョンを選択します。  
 
 8. バージョン 1802 で Azure Resource Manager の展開を使用する場合は、**[リソース グループ]** オプションを選択します。 
-   1. **[既存のものを使用]** を選択した場合は、ドロップダウン リストから既存のリソース グループを選びます。
+   1. **[既存のものを使用]** を選択した場合は、ドロップダウン リストから既存のリソース グループを選びます。 選択したリソース グループは、手順 7 で選択したリージョンに存在している必要があります。 選択した既存のリソース グループが前に選択したリージョンと別のリージョンにある場合、CMG はプロビジョニングに失敗します。
    2. **[新規作成]** を選択した場合は、新しいリソース グループの名前を入力します。
 
 9. **[VM インスタンス]** フィールドに、このサービスの VM の数を入力します。 既定値は 1 ですが、CMG ごとに VM の数を 16 まで指定できます。  

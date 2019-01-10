@@ -10,12 +10,12 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0ab848051d5eaa85d2b515145ff64471aee81a31
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 430931e8bfba3f40a8d970b7ae7b97e24d3381ec
+ms.sourcegitcommit: f2a1fa59fb3870a6bebca61daf15c0c157e9fdd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415043"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031024"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>Configuration Manager の配布ポイントのインストールと構成
 
@@ -341,6 +341,9 @@ PXE を有効にすると、必要に応じて、Configuration Manager がサー
 - **不明なコンピューターのサポートを有効にする**: Configuration Manager で管理されていないコンピューターのサポートを有効にするかどうかを指定します。 詳細については、「[不明なコンピューターの展開の準備](/sccm/osd/get-started/prepare-for-unknown-computer-deployments)」を参照してください。  
 
 - **Windows 展開サービスなしで PXE レスポンダーを有効にする**: バージョン 1806 以降では、このオプションにより、配布ポイントで PXE レスポンダーが有効にされるため、Windows 展開サービス (WDS) は必要ありません。 この PXE レスポンダーでは、IPv6 ネットワークがサポートされています。 既に PXE が有効になっている配布ポイントでこのオプションを有効にした場合、Configuration Manager により WDS サービスが一時停止されます。 このオプションを無効にしたとき、**[クライアントの PXE サポートを有効にする]** がまだ指定されていると、配布ポイントでは WDS が再び有効になります。<!--1357580-->  
+
+    > [!Note]
+    >DHCP サーバーも実行しているサーバーで、WDS なしで PXE レスポンダーを使用することはできません。
 
 - **コンピューターで PXE を使用する場合にパスワードを要求する**: PXE 展開のセキュリティを強化するには、強力なパスワードを指定します。  
 
