@@ -10,12 +10,12 @@ ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f7b8b18cbec5a3b5972a448e8a70339533dc11fb
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 46e948a215535bf57153e5a97dbdc9cad2e35e3b
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456011"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817853"
 ---
 # <a name="manage-os-upgrade-packages-with-configuration-manager"></a>Configuration Manager で OS アップグレード パッケージを管理する
 
@@ -23,6 +23,8 @@ ms.locfileid: "52456011"
 
 Configuration Manager の OS アップグレード パッケージには、コンピューターの既存の OS をアップグレードする Windows セットアップのソース ファイルが含まれています。 この記事では、OS アップグレード パッケージを追加、配布、およびサービスを提供する方法について説明します。
 
+>[!NOTE]
+>OS アップグレード パッケージは、Windows の新規インストールのためにも使用できます。 ただし、これはこの方法と互換性があるドライバーに依存しています。 OS アップグレード パッケージから Windows の新規インストールを実行する場合、ドライバーは、単純に Windows PE にいる間に挿入されるのと比較して、Windows PE にいる間にインストールされます。 一部のドライバーは、Windows PE にいる間のインストールと互換性がありません。 ドライバーが Windows PE にいる間のインストールと互換性がない場合は、代わりに **install.wim** などの [OS イメージ](/sccm/osd/get-started/manage-operating-system-images)を使います。
 
 
 ##  <a name="BKMK_AddOSUpgradePkgs"></a> OS アップグレード パッケージを追加する  
@@ -49,9 +51,9 @@ OS アップグレード パッケージを使用するには、最初にご使�
 
     -   **名前**: OS アップグレード パッケージの一意の名前。  
 
-    -   **バージョン**: 省略可能なバージョン識別子。 このプロパティは、アップグレード パッケージの OS バージョンにする必要はありません。 多くの場合は、パッケージの組織のバージョンです。  
+    -   **バージョン**:省略可能なバージョン識別子。 このプロパティは、アップグレード パッケージの OS バージョンにする必要はありません。 多くの場合は、パッケージの組織のバージョンです。  
 
-    -   **コメント**: 省略可能な簡単な説明。  
+    -   **コメント**:省略可能な簡単な説明。  
 
 5.  ウィザードを完了します。  
 

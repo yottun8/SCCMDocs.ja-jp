@@ -10,16 +10,16 @@ ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: da6204a78ce45c72d2b8d5586d02c8692405f295
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d3155faaa0ccad4e4f98ee72d09f67b1676dc2f4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350427"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421860"
 ---
 # <a name="synchronize-software-updates-from-a-disconnected-software-update-point"></a>切断されているソフトウェアの更新ポイントからのソフトウェア更新プログラムの同期  
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
  最上位サイトのソフトウェアの更新ポイントがインターネットから切断されている場合、WSUSUtil ツールのエクスポート機能とインポート機能を使ってソフトウェア更新プログラムのメタデータを同期させる必要があります。 Configuration Manager 階層に含まれていない既存の WSUS サーバーを同期ソースとして選択することができます。 このトピックでは、WSUSUtil ツールのエクスポート機能とインポート機能を使用する方法について説明します。  
 
@@ -38,7 +38,7 @@ ms.locfileid: "32350427"
 
 1.  WSUS 管理コンソールを開き、エクスポート サーバーの WSUS データベースに接続します。  
 
-2.  WSUS 管理コンソールで、**[同期]** をクリックします。 試行されたソフトウェア更新プログラムの同期の一覧が結果ウィンドウに表示されます。  
+2.  WSUS 管理コンソールで、[同期 ****] をクリックします。 試行されたソフトウェア更新プログラムの同期の一覧が結果ウィンドウに表示されます。  
 
 3.  結果ウィンドウで、最新のソフトウェア更新プログラムの同期を見つけ、それが正常に完了していることを確認します。  
 
@@ -52,11 +52,11 @@ ms.locfileid: "32350427"
 
 #### <a name="to-copy-local-files-from-the-export-server-to-the-disconnected-software-update-point-server"></a>切断されているソフトウェアの更新ポイント サーバーにエクスポート サーバーからローカル ファイルをコピーするには  
 
-1.  エクスポート サーバーで、ソフトウェアの更新、およびソフトウェアの更新のライセンス条項が保存されているフォルダーに移動します。 既定では、WSUS サーバーによって、このファイルは<*WSUSInstallationDrive*>\WSUS\WSUSContent\\ に保存されています。ここで、*WSUSInstallationDrive* は、WSUS がインストールされているドライブです。  
+1. エクスポート サーバーで、ソフトウェアの更新、およびソフトウェアの更新のライセンス条項が保存されているフォルダーに移動します。 既定では、WSUS サーバーによって、このファイルは<*WSUSInstallationDrive*>\WSUS\WSUSContent\\ に保存されています。ここで、*WSUSInstallationDrive* は、WSUS がインストールされているドライブです。  
 
-2.  この場所のすべてのファイルおよびフォルダーをソフトウェアの更新ポイント サーバーの WSUSContent フォルダーにコピーします。  
+2. この場所のすべてのファイルおよびフォルダーをソフトウェアの更新ポイント サーバーの WSUSContent フォルダーにコピーします。  
 
- ソフトウェア更新プログラムのメタデータをエクスポート サーバーの WSUS データベースからエクスポートするには、次の手順に従います。  
+   ソフトウェア更新プログラムのメタデータをエクスポート サーバーの WSUS データベースからエクスポートするには、次の手順に従います。  
 
 #### <a name="to-export-software-updates-metadata-from-the-wsus-database-on-the-export-server"></a>ソフトウェア更新プログラムのメタデータをエクスポート サーバーの WSUS データベースからエクスポートするには  
 

@@ -10,16 +10,16 @@ ms.assetid: 9089e1b5-cba4-42bd-a2de-126ef882a3af
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f07a321ac6f10f5287a88d0df7064920f538ae5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3de7b19eb7d997ef72cc7a413eb143172c4ce40e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341697"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424359"
 ---
-# <a name="prepare-to-install-system-center-configuration-manager-sites"></a>System Center Configuration Manager サイトのインストールを準備する
+# <a name="prepare-to-install-system-center-configuration-manager-sites"></a> System Center Configuration Manager サイトのインストールを準備する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 1 つ以上の System Center Configuration Manager サイトの適切な展開を準備するには、この記事の詳細を理解してください。 次の手順で、複数のサイトのインストールの時間を節約し、1 つ以上のサイトの再インストールが必要になるような失敗を防ぎます。
 
@@ -35,9 +35,9 @@ ms.locfileid: "32341697"
 ### <a name="first-site"></a>最初のサイト
 階層にインストールするこの最初のサイトは、スタンドアロンのプライマリ サイトまたは中央管理サイトのいずれかです。
 
-**インストール メディア**: 中央管理サイトまたはスタンドアロンのプライマリ サイトを新しい階層で最初のサイトとしてインストールするには、Configuration Manager の[基準バージョンを使用する](../../../../core/servers/manage/updates.md#bkmk_Baselines)必要があります。 サイトの [CD.Latest フォルダー](../../../../core/servers/manage/the-cd.latest-folder.md)から更新されたソース ファイルを使用して、新しい階層の最初のサイトをインストールしないでください。
+**インストール メディア**:中央管理サイトまたはスタンドアロンのプライマリ サイトを新しい階層で最初のサイトとしてインストールするには、Configuration Manager の[基準バージョンを使用する](../../../../core/servers/manage/updates.md#bkmk_Baselines)必要があります。 サイトの [CD.Latest フォルダー](../../../../core/servers/manage/the-cd.latest-folder.md)から更新されたソース ファイルを使用して、新しい階層の最初のサイトをインストールしないでください。
 
-**インストール方法**: [Configuration Manager のセットアップ ウィザード](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)を使用していずれかの種類のサイトをインストールするか、[スクリプトを使用してコマンドラインからインストール](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md)するために使用するスクリプトを構成することができます。
+**インストール方法**:[Configuration Manager のセットアップ ウィザード](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)を使用していずれかの種類のサイトをインストールするか、[スクリプトを使用してコマンドラインからインストール](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md)するために使用するスクリプトを構成することができます。
 
 
 ### <a name="additional-sites"></a>追加のサイト
@@ -49,17 +49,17 @@ ms.locfileid: "32341697"
 |子プライマリ サイト|セカンダリ サイト|
 |スタンドアロン プライマリ サイト|セカンダリ サイト (プライマリ サイトを拡張でき、それにより、スタンドアロン プライマリ サイトが子プライマリ サイトに変換されます)|
 
-**インストール メディア**: 中央管理サイトをスタンドアロン プライマリ サイトにインストールして拡張する場合、または新しい子プライマリ サイトを既存の階層にインストールする場合は、既存のサイトのバージョンに対応するインストール メディア (ソース ファイルを格納する) を使用する必要があります。
+**インストール メディア**:中央管理サイトをスタンドアロン プライマリ サイトにインストールして拡張する場合、または新しい子プライマリ サイトを既存の階層にインストールする場合は、既存のサイトのバージョンに対応するインストール メディア (ソース ファイルを格納する) を使用する必要があります。
 
 > [!IMPORTANT]
 > コンソール内の更新プログラムをインストールした結果、以前にインストールしたサイトのバージョンが変更された場合は、元のインストール メディアを使用しないでください。 代わりに、そのシナリオでは、更新されたサイトの [CD.Latest フォルダー](../../../../core/servers/manage/the-cd.latest-folder.md)にあるソース ファイルを使用してください。 Configuration Manager では、新しいサイトが接続する既存のサイトのバージョンに対応したソース ファイルを使用する必要があります。
 
 セカンダリ サイトは、Configuration Manager コンソールからインストールする必要があります。 このように、セカンダリ サイトは常に親プライマリ サイトのソース ファイルを使用してインストールします。
 
-**インストール方法**: 追加のサイトのインストールに使用する方法は、インストールするサイトの種類によって異なります。
--   **中央管理サイトを追加する**: Configuration Manager のセットアップ ウィザードまたはスクリプト化されたコマンド ラインを使用すると、既存のスタンドアロン プライマリ サイトに親サイトとして新しい中央管理サイトをインストールすることができます。 詳細については、「[スタンドアロン プライマリ サイトを拡張する](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand)」を参照してください。
--   **子プライマリ サイトを追加する**: Configuration Manager のセットアップ ウィザードまたはコマンド ライン インストールを使用すると、中央管理サイトの下に子プライマリ サイトを追加することができます。
--   **セカンダリ サイトを追加する**: Configuration Manager コンソールを使用して、プライマリ サイトの下に子サイトとしてセカンダリ サイトをインストールします。 セカンダリ サイトの追加では、その他の方法はサポートされていません。
+**インストール方法**:追加のサイトのインストールに使用する方法は、インストールするサイトの種類によって異なります。
+-   **中央管理サイトを追加する**:Configuration Manager のセットアップ ウィザードまたはスクリプト化されたコマンド ラインを使用すると、既存のスタンドアロン プライマリ サイトに親サイトとして新しい中央管理サイトをインストールすることができます。 詳細については、「[スタンドアロン プライマリ サイトを拡張する](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand)」を参照してください。
+-   **子プライマリ サイトを追加する**:Configuration Manager のセットアップ ウィザードまたはコマンド ライン インストールを使用すると、中央管理サイトの下に子プライマリ サイトを追加することができます。
+-   **セカンダリ サイトを追加する**:Configuration Manager コンソールを使用して、プライマリ サイトの下に子サイトとしてセカンダリ サイトをインストールします。 セカンダリ サイトの追加では、その他の方法はサポートされていません。
 
 ## <a name="bkmk_tasks"></a> インストールを開始する前に完了する一般的なタスク
 -   **展開に使用する階層トポロジを把握します**    
@@ -105,11 +105,11 @@ Configuration Manager 階層内で中央管理サイトまたはプライマリ 
 
 ## <a name="limits-and-restrictions-for-installed-sites"></a>インストール後のサイトの制限と制約
 サイトをインストールする前に、サイトとサイトの階層に適用される次の制限事項を理解することが重要です。
--   セットアップの実行後は、サイトをアンインストールしてから新しい値を使用して再インストールしない限り、次のサイトのプロパティを変更することはできません。  
+- セットアップの実行後は、サイトをアンインストールしてから新しい値を使用して再インストールしない限り、次のサイトのプロパティを変更することはできません。  
   -   プログラム ファイルのインストール ディレクトリ  
   -   サイト コード  
   -   サイトの説明  
--   階層に中央管理サイトが含まれている場合:  
+- 階層に中央管理サイトが含まれている場合:  
   -   Configuration Manager では、階層から子プライマリ サイトを移動して、スタンドアロン プライマリ サイトを作成したり異なる階層に接続したりすることはできません。 代わりに、子プライマリ サイトをアンインストールし、新しいスタンドアロンのプライマリ サイトまたは別の階層の中央管理サイトの子サイトとして再インストールします。  
 
 
@@ -130,7 +130,7 @@ Configuration Manager の更新されたセットアップ ファイルをダウ
 **オプションのポートを特定する**
 
 サイト システムとクライアントが使用するオプションのポートを特定できます。 追加情報を次に示します。
- -  既定では、サイト システムとクライアントは通信に定義済みのポートを使用します。
- -  セットアップ時に、代替ポートを構成することができます。
+- 既定では、サイト システムとクライアントは通信に定義済みのポートを使用します。
+- セットアップ時に、代替ポートを構成することができます。
 
- 詳細については、「[System Center Configuration Manager で使用されるポート](../../../../core/plan-design/hierarchy/ports.md)」を参照してください。
+  詳細については、「[System Center Configuration Manager で使用されるポート](../../../../core/plan-design/hierarchy/ports.md)」を参照してください。

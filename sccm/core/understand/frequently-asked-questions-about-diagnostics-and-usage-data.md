@@ -10,12 +10,12 @@ ms.assetid: 3fe32aa2-d594-4ad0-a291-b8f5395ac50b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b4174c68d5a6ccd31355d976b7830b6d09f39d91
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 38b59e520baf9fddb09f71f459de409f38adad2b
+ms.sourcegitcommit: 32a257fafbb29aece8b4f435dd5614fcef305328
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339878"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "54005451"
 ---
 # <a name="frequently-asked-questions-about-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>System Center Configuration Manager の診断および使用状況データに関してよく寄せられる質問
 
@@ -50,7 +50,7 @@ Configuration Manager の現在のブランチは、Windows 10 と Microsoft Int
  いいえ。 データを収集するストアド プロシージャは、サイト データベースに限定されます。  
 
 ### <a name="bkmk_gdpr"></a> Configuration Manager は、一般データ保護規則 (GDPR) の対象ですか?
- いいえ。 Configuration Manager は、GDPR の監視対象ではありません。 ユーザーが直接展開、管理、操作する、オンプレミスの製品です。 Microsoft が収集する診断結果と使用状況データにより、今後のリリースのインストールのエクスペリエンス、品質、セキュリティが向上します。 このデータは、GDPR の監視対象です。 エンド ユーザー識別情報 (EUII) またはエンドユーザー疑似識別子 (EUPI) は、収集されたり、Microsoft に送信されたりすることはありません。 GDPR の詳細については、[Microsoft の GDPR セキュリティ センター](https://microsoft.com/gdpr)を参照してください。 Configuration Manager のデータの詳細については、「[診断結果と使用状況データ](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data)」を参照してください。
+ いいえ。 Configuration Manager は、GDPR の監視対象ではありません。 ユーザーが直接展開、管理、操作する、オンプレミスの製品です。 Microsoft が収集する診断結果と使用状況データにより、今後のリリースのインストールのエクスペリエンス、品質、セキュリティが向上します。 この診断と使用状況データは、GDPR の監視対象です。 ただし、エンド ユーザー識別情報 (EUII) やエンドユーザー疑似識別子 (EUPI) が収集されたり、Microsoft に送信されたりすることはありません。 GDPR の詳細については、[Microsoft の GDPR セキュリティ センター](https://microsoft.com/gdpr)を参照してください。 Configuration Manager のデータの詳細については、「[診断結果と使用状況データ](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data)」を参照してください。
 
 
 ## <a name="see-also"></a>関連項目  

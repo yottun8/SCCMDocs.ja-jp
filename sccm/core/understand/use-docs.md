@@ -11,16 +11,16 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6bd4675d3b366c5f414467b76627e25b91259ef2
-ms.sourcegitcommit: 240d3199e1c6fa47af6eda499492b2527516ab18
+ms.openlocfilehash: 27eea5c93ec66207e48390e3c7a0352a3a255ceb
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44326205"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424739"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>Configuration Manager ドキュメントの使用方法
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 この記事の各セクションでは、Configuration Manager ドキュメント ライブラリの使用に関する複数のリソースとヒントを紹介しています。  
 
@@ -45,7 +45,7 @@ ms.locfileid: "44326205"
 
     - さらに検索結果を現在のコンテンツ ライブラリに絞るには、`site:docs.microsoft.com` を含め、検索エンジンの範囲を指定します。  
 
--   ユーザー インターフェイスとオンライン ドキュメントの用語と一致する検索用語を使用します。 コミュニティ コンテンツで見られる非公式な用語や略語は使用しないでください。 たとえば、「MP」ではなく「管理ポイント」、「DT」ではなく「展開の種類」、「SUM」ではなく「ソフトウェア更新プログラム」のように検索します。  
+-   ユーザー インターフェイスとオンライン ドキュメントの用語と一致する検索用語を使用します。 コミュニティ コンテンツで見られる非公式な用語や略語は使用しないでください。 たとえば、「MP」ではなく「管理ポイント」、「DT」ではなく「展開の種類」、「SUM」ではなく「ソフトウェア更新プログラム」のように検索します。  
 
 -   現在表示されている記事の中で検索するには、ブラウザーの**検索**機能を使用します。 ほとんどの最新 Web ブラウザーで、**Ctrl**+**F** キーを押し、検索語句を入力します。  
 
@@ -71,13 +71,13 @@ Configuration Manager 製品自体のフィードバックを投稿するには�
 
 #### <a name="types-of-feedback"></a>フィードバックの種類
 GitHub Issues を使用し、次の種類のフィードバックを送信します。
-- ドキュメント バグ: 内容が古い、はっきりしない、紛らわしい、あるいは不完全です。
-- ドキュメント改善: 記事を良くするための提案。
-- ドキュメント質問: 既存のドキュメントが見つからず、困っています。
-- ドキュメント アイデア: 新しい記事の提案。 ドキュメントに関するフィードバックとして、UserVoice の代わりにこの方法を使用します。
-- 称賛: 情報が役立った記事に関する好意的なフィードバック。
-- ローカリゼーション: コンテンツの翻訳に関するフィードバック。
-- 検索エンジン最適化 (SEO): コンテンツを検索できない問題に関するフィードバック。 コメントには、検索エンジン、キーワード、対象記事を含めます。
+- ドキュメント バグ:内容が古い、はっきりしない、紛らわしい、あるいは不完全です。
+- ドキュメント改善:記事を良くするための提案。
+- ドキュメント質問:既存のドキュメントが見つからず、困っています。
+- ドキュメント アイデア:新しい記事の提案。 ドキュメントに関するフィードバックとして、UserVoice の代わりにこの方法を使用します。
+- 称賛:情報が役立った記事に関する好意的なフィードバック。
+- ローカリゼーション:コンテンツの翻訳に関するフィードバック。
+- 検索エンジン最適化 (SEO):コンテンツを検索できない問題に関するフィードバック。 コメントには、検索エンジン、キーワード、対象記事を含めます。
 
 [製品フィードバック](/sccm/core/understand/find-help#product-feedback)、[製品質問](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)、[サポート依頼](https://aka.ms/cmcbsupport)など、ドキュメント以外のトピックで問題が投稿された場合、その問題は完了とされ、ユーザーはその問題の本来のフィードバック チャンネルにリダイレクトされます。
 
@@ -90,7 +90,7 @@ docs.microsoft.com プラットフォームに関するフィードバックを�
 ドキュメント ライブラリの内容が変わったときに通知を受け取るには、次の手順を使用します。
 
 1. [ドキュメント検索](https://docs.microsoft.com/search/index?scope=ConfigMgr)を使用し、1 件または一連の記事を見つけます。 次に例を示します。
-    - ["Log files for troubleshooting - Configuration Manager"](https://docs.microsoft.com/search/index?search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22&scope=ConfigMgr) というタイトルの 1 件の記事を検索します
+    - タイトルが["Log files for troubleshooting - Configuration Manager"](https://docs.microsoft.com/search/index?search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22&scope=ConfigMgr) という 1 件の記事を検索します
     - [SQL](https://docs.microsoft.com/search/index?search=SQL&scope=ConfigMgr) に関するあらゆる記事を検索します
 2. 右上隅にある **RSS** リンクをクリックします。 
 3. あらゆる RSS アプリケーションでこのフィードを利用し、検索結果に変更があったときに通知を受け取ることができます。
@@ -114,7 +114,7 @@ Configuration Manager ドキュメント ライブラリは、docs.microsoft.com
 
 4. ファイル変更の提案セクションで、公開コミット コメントを入力し、自分が "変更した内容" を説明します。 **[Propose file change]\(ファイル変更の提案\)** をクリックします。  
 
-5. 下にスクロールし、行った変更を確認します。 **[プル要求の作成]** をクリックし、フォームを開きます。 この変更を行った "理由" を説明します。 記事の作成者のタグを付け、確認を求めます。 **[プル要求の作成]** をクリックします。  
+5. 下にスクロールし、行った変更を確認します。 **[pull request の作成]** をクリックし、フォームを開きます。 この変更を行った "理由" を説明します。 記事の作成者のタグを付け、確認を求めます。 **[pull request の作成]** をクリックします。  
 
 
 ### <a name="what-to-contribute"></a>貢献できること
@@ -122,8 +122,8 @@ Configuration Manager ドキュメント ライブラリは、docs.microsoft.com
 投稿に関心があるがどこから始めればよいかわからない場合は、以下の提案をご覧ください。  
 
 - 問題の一覧を見て、コミュニティ宛てのラベルを探します。  
-    - [good-first-issue](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:good-first-issue)   
-    - [help-wanted](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:help-wanted)  
+  - [good-first-issue](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:good-first-issue)   
+  - [help-wanted](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:help-wanted)  
 
     このようなラベルは、コミュニティの貢献が求められる問題に対して Microsoft の作成者が割り当てるものです。  
 

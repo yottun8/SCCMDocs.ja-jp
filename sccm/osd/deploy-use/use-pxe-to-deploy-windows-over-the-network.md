@@ -10,12 +10,12 @@ ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1efd4197e63ddc12c0afc9e37b633c38d0df0f14
-ms.sourcegitcommit: a52255da16c9f8b0b60a6c299a369347c7e01bef
+ms.openlocfilehash: 75e463d27475e82677e91b00bfba4c4287d463ee
+ms.sourcegitcommit: f2a1fa59fb3870a6bebca61daf15c0c157e9fdd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989146"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030990"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>Configuration Manager で PXE を使用して Windows をネットワーク経由で展開する
 
@@ -43,13 +43,16 @@ PXE ブート要求を作成する Configuration Manager クライアントに�
 > [!NOTE]  
 >  複数のサブネットをサポートする目的で PXE 対応配布ポイントを 1 つ構成するとき、DHCP オプションの使用はサポートされません。 PXE 対応配布ポイントへの PXE 要求の転送を許可するようにルーター上で IP ヘルパーを構成してください。
 
+> [!NOTE]  
+>  DHCP サーバーも実行しているサーバーで、WDS なしで PXE レスポンダーを使用することはできません。
+
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>PXE 対応のブート イメージの作成
 
 PXE を使用して OS を展開するには、1 つ以上の PXE 対応配布ポイントに配布される、x86 と x64 の両方の PXE 対応ブート イメージが必要です。 この情報を使用して、ブート イメージで PXE を有効にして、配布ポイントにブート イメージを配布します。
 
 -   ブート イメージで PXE を有効にするには、**[データ ソース]** タブのブート イメージ プロパティで、**[このブート イメージを PXE 対応の配布ポイントから展開する]** を選択します。
 
--   ブート イメージのプロパティを変更する場合は、再配布ポイントにブート イメージを再配布します。 詳細については、「[コンテンツの配布](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute)」をご覧ください。
+-   ブート イメージのプロパティを変更する場合は、ブート イメージを更新して配布ポイントに再配布します。 詳細については、「[コンテンツの配布](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute)」をご覧ください。
 
 
 
@@ -104,9 +107,9 @@ PXE による OS の展開を使用するには、OS を PXE ブート要求か�
 
 ターゲット コレクションに OS を展開します。 詳細については、「 [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)」をご覧ください。 PXE を使用してオペレーティング システムを展開するとき、展開が必須か使用可能かを設定することができます。
 
--   **必要な展開**: 必要な展開では、ユーザーの介入なしに、PXE を使用します。 ユーザーは PXE ブートをバイパスできません。 ただし、ユーザーが配布ポイントが応答する前に PXE ブートをキャンセルすれば、OS は展開されません。
+-   **必要な展開**:必要な展開では、ユーザーの介入なしに、PXE を使用します。 ユーザーは PXE ブートをバイパスできません。 ただし、ユーザーが配布ポイントが応答する前に PXE ブートをキャンセルすれば、OS は展開されません。
 
--   **利用可能な展開**: 利用可能な展開では、ユーザーがセットアップ先のコンピューターにいる必要があります。 ユーザーは、PXE ブート プロセスを続けるために **F12** キーを押す必要があります。 **F12** キーを押すユーザーがいない場合、コンピューターは現在の OS、または次に利用可能なブート デバイスから起動します。
+-   **利用可能な展開**:利用可能な展開では、ユーザーがセットアップ先のコンピューターにいる必要があります。 ユーザーは、PXE ブート プロセスを続けるために **F12** キーを押す必要があります。 **F12** キーを押すユーザーがいない場合、コンピューターは現在の OS、または次に利用可能なブート デバイスから起動します。
 
 Configuration Manager コレクションまたはコンピューターに割り当てられた最終の PXE 展開の状態をクリアすることにより、必要な PXE 展開を再展開することができます。 **必須の PXE 展開の消去**アクションの詳細については、[クライアントの管理](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode)または[コレクションの管理](/sccm/core/clients/manage/collections/manage-collections#how-to-manage-device-collections)に関するトピックを参照してください。 この操作でその展開の状態がリセットされ、最新の必要な展開が再インストールされます。
 

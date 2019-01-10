@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 4ef9746b9a1eb90beeec6a477ad1d406acebbb05
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 60fa4176d44b530b2cab6c2b9b4b35c968fae3c1
+ms.sourcegitcommit: 32a257fafbb29aece8b4f435dd5614fcef305328
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456568"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "54005485"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>クラウド管理ゲートウェイの証明書
 
@@ -62,8 +62,11 @@ CMG によって、インターネットベースのクライアントが接続�
  > [!TIP]
  > この証明書には、Azure のサービスを識別するために、一意の名前が必要になります。 証明書を要求する前に、希望する Azure ドメイン名が一意であることを確認します。 たとえば、*GraniteFalls.CloudApp.Net* にします。 [Microsoft Azure ポータル](https://portal.azure.com)にログオンします。 **[リソースの作成]** を選択し、**[コンピューティング]** カテゴリを選択して、**[クラウド サービス]** を選択します。 **[DNS 名]** フィールドに任意のプレフィックスを入力します。たとえば、*GraniteFalls* にします。 ドメイン名が使用できるか、既に別のサービスで使用されているかがインターフェイスに表示されます。 ポータルではサービスを作成しないでください。名前を利用できるかどうかはこのプロセスを利用して確認してください。 
   
+ > [!TIP]
+ > CMG もクラウド配布ポイントとして有効にする場合は、選択した CMG サービス名も一意の Azure Storage アカウント名になっていることを確認します。 たとえば、*GraniteFalls* です。 [Microsoft Azure portal] (https://portal.azure.com) にログオンします。 **[リソースの作成]** を選択し、**[ストレージ]** カテゴリを選択したら、**[ストレージ アカウント - Blob、File、Table、Queue]** を選択します。 **[作成]** をクリックし、**[インスタンスの詳細]** の下に CMG サービス用に選択したのと同じ名前 (例: *GraniteFalls*) を入力します。 ストレージ アカウント名が使用できるか、既に別のサービスで使用されているかがインターフェイスに表示されます。 ポータルではストレージ アカウントを作成しないでください。名前を利用できるかどうかはこのプロセスを利用して確認してください。 CMG クラウド サービス名が一意でも、ストレージ アカウント名がそうでない場合はプロビジョニングは失敗します。
+ 
  > [!NOTE]
- > バージョン 1802 以降、CMG サーバー認証証明書はワイルドカードに対応しています。 一部の証明書機関は、ホスト名にワイルドカード文字を使用して証明書を発行します。 たとえば、**\*.contoso.com** です。 ワイルドカード証明書を利用して PKI を簡素化し、保守管理コストを下げる組織もあります。<!--491233-->  
+ > バージョン 1802 以降では、CMG サーバー認証証明書でワイルドカードがサポートされます。 一部の証明書機関は、ホスト名にワイルドカード文字を使用して証明書を発行します。 たとえば、**\*.contoso.com** です。 ワイルドカード証明書を利用して PKI を簡素化し、保守管理コストを下げる組織もあります。<!--491233-->  
  > 
  > CMG でワイルドカード証明書を使用する方法の詳細については、「[CMG を設定する](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#set-up-a-cmg)」を参照してください。<!--SCCMDocs issue #565-->  
 
@@ -103,7 +106,7 @@ CMG によって、インターネットベースのクライアントが接続�
 
     - たとえば、Contoso が CMG を作成すると、Configuration Manager によって証明書 CN からホスト名 **GraniteFalls** が抽出されます。 Azure によって、**GraniteFalls.CloudApp.net** として実際のサービスが作成されます。  
 
-Configuration Manager で CMG インスタンスを作成する際には、証明書に GraniteFalls.Contoso.com が含まれるものの、Configuration Manager によってホスト名 (たとえば、GraniteFalls) のみが抽出されます。 このホスト名は CloudApp.net に追加されます。Azure でクラウド サービスを作成する際には、このドメインが必要となります。 Contoso.com ドメインの DNS 名前空間内の CNAME エイリアスにより、これらの 2 つの FQDN がまとめてマップされます。 Configuration Manager により、この CMG にアクセスするためのポリシーがクライアントに提供され、DNS マッピングによって結び付けられて、クライアントが Azure のサービスに安全にアクセスできるようになります。<!--SCCMDocs issue #565-->  
+Configuration Manager で CMG インスタンスを作成する場合、証明書には GraniteFalls.Contoso.com が含まれますが、Configuration Manager によって抽出されるものはホスト名 (GraniteFalls など) のみです。 このホスト名は CloudApp.net に追加されます。Azure でクラウド サービスを作成する際には、このドメインが必要となります。 Contoso.com ドメインの DNS 名前空間内の CNAME エイリアスにより、これらの 2 つの FQDN がまとめてマップされます。 Configuration Manager により、この CMG にアクセスするためのポリシーがクライアントに提供され、DNS マッピングによって結び付けられて、クライアントが Azure のサービスに安全にアクセスできるようになります。<!--SCCMDocs issue #565-->  
 
 
 ### <a name="bkmk_serverauthpki"></a> エンタープライズ PKI から発行されたサーバー認証証明書
@@ -225,7 +228,7 @@ CMG はクライアント認証証明書を信頼する必要があります。 
 <a name="bkmk_note1"></a> 
 
 > [!Note]  
-> **注 1**: この構成では、クライアントに[クライアント認証証明書](#bkmk_clientauth)が必要で、デバイス中心のシナリオのみがサポートされます。  
+> **注 1**:この構成では、クライアントに[クライアント認証証明書](#bkmk_clientauth)が必要で、デバイス中心のシナリオのみがサポートされます。  
 
 #### <a name="for-on-premises-clients-communicating-with-the-on-premises-management-point"></a>オンプレミスの管理ポイントと通信するオンプレミスのクライアントの場合
 次のクライアント接続モードを使用して、オンプレミスの管理ポイントを構成します。
@@ -244,13 +247,13 @@ CMG はクライアント認証証明書を信頼する必要があります。 
 
 
 #### <a name="legend-of-terms"></a>用語の凡例
-- *ワークグループ*: デバイスはドメインまたは Azure AD に参加していませんが、[クライアント認証証明書](#bkmk_clientauth)を持っています。  
-- *AD ドメイン参加済み*: デバイスをオンプレミスの Active Directory ドメインに参加させます。  
-- *Azure AD 参加済み*: クラウド ドメイン参加済みとも呼ばれ、デバイスを Azure Active Directory テナントに参加させます。  
-- *ハイブリッド参加済み*: デバイスを Active Directory ドメインと Azure AD テナントの両方に参加させます。  
-- *HTTP*: 管理ポイント プロパティで、クライアント接続を **[HTTP]** に設定します。  
-- *HTTPS*: 管理ポイント プロパティで、クライアント接続を **[HTTPS]** に設定します。  
-- *E-HTTP*: サイトのプロパティの [クライアント コンピューターの通信方法] タブで、サイト システムの設定を **[HTTPS または HTTP]** に設定し、**[HTTP サイト システムには Configuration Manager によって生成された証明書を使用する]** のオプションを有効にします。 管理ポイントを HTTP または HTTPS に構成します。  
+- *ワークグループ*:デバイスはドメインまたは Azure AD に参加していませんが、[クライアント認証証明書](#bkmk_clientauth)を持っています。  
+- *AD ドメイン参加済み*:デバイスをオンプレミスの Active Directory ドメインに参加させます。  
+- *Azure AD 参加済み*:クラウド ドメイン参加済みとも呼ばれ、デバイスを Azure Active Directory テナントに参加させます。  
+- *ハイブリッド参加済み*:デバイスを Active Directory ドメインと Azure AD テナントの両方に参加させます。  
+- *HTTP*:管理ポイント プロパティで、クライアント接続を **[HTTP]** に設定します。  
+- *HTTPS*:管理ポイント プロパティで、クライアント接続を **[HTTPS]** に設定します。  
+- *E-HTTP*:サイトのプロパティの [クライアント コンピューターの通信方法] タブで、サイト システムの設定を **[HTTPS または HTTP]** に設定し、**[HTTP サイト システムには Configuration Manager によって生成された証明書を使用する]** のオプションを有効にします。 HTTP 用の管理ポイントはご自身で構成します。HTTP と HTTPS の両方の通信用の HTTP 管理ポイントは用意されています (トークン認証のシナリオ)。   
 
 
 

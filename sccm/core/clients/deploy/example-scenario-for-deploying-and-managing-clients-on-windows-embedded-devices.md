@@ -10,16 +10,16 @@ ms.assetid: 10049c89-b37c-472b-b317-ce4f56cd4be7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fdca69faefa693299d8975ec1af60f7624bc73c2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ba2f80009378337a8e1b669716fdbe290d92edc7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336835"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422897"
 ---
 # <a name="example-scenario-for-deploying-and-managing-system-center-configuration-manager-clients-on-windows-embedded-devices"></a>Windows Embedded デバイスで System Center Configuration Manager クライアントを展開および管理するシナリオ例
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象:System Center Configuration Manager (Current Branch)*
 
 このシナリオでは、Configuration Manager で書き込みフィルター対応 Windows Embedded デバイスを管理する方法について説明します。埋め込みデバイスが書き込みフィルターをサポートしていない場合、標準の Configuration Manager クライアントとして動作し、これらの手順は適用されません。  
 
@@ -29,84 +29,84 @@ ms.locfileid: "32336835"
 
  書き込みフィルターが有効にされたこれらの Windows Embedded デバイスを管理するために、加藤さんは次の手順に従って、構成マネージャー クライアントをインストールし、Endpoint Protection を使用してクライアントを保護して、インタラクティブな案内ソフトウェアをインストールします。  
 
-1.  Windows Embedded デバイスで書き込みフィルターを使用する方法と、Configuration Manager では、自動的に書き込みフィルターを無効にしてから再度有効にすることで、簡単にソフトウェアのインストールを保持できることを確認します。  
+1. Windows Embedded デバイスで書き込みフィルターを使用する方法と、Configuration Manager では、自動的に書き込みフィルターを無効にしてから再度有効にすることで、簡単にソフトウェアのインストールを保持できることを確認します。  
 
-     詳細については、「[System Center Configuration Manager での Windows Embedded デバイスへのクライアント展開の計画](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)」をご覧ください。  
+    詳細については、「[System Center Configuration Manager での Windows Embedded デバイスへのクライアント展開の計画](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)」をご覧ください。  
 
-2.  構成マネージャー クライアントをインストールする前に、Windows Embedded デバイス用に新しいクエリ ベースのデバイス コレクションを作成します。 会社ではコンピューターの識別に標準の命名規則を使用しているため、加藤さんはコンピューター名の最初の 6 文字 ( **WEMDVC** ) で Windows Embedded デバイスを一意に識別できます。 加藤さんは、このコレクションを作成するために、次の WQL クエリを使用します。 **select SMS_R_System.NetbiosName from SMS_R_System where SMS_R_System.NetbiosName like "WEMDVC%"**  
+2. 構成マネージャー クライアントをインストールする前に、Windows Embedded デバイス用に新しいクエリ ベースのデバイス コレクションを作成します。 会社では、コンピューターの識別に標準の命名規則を使用しているため、コンピューター名の最初の 6 文字 (**WEMDVC**) で Windows Embedded デバイスを一意に識別できます。 加藤さんは、このコレクションを作成するために、次の WQL クエリを使用します。 **select SMS_R_System.NetbiosName from SMS_R_System where SMS_R_System.NetbiosName like "WEMDVC%"**  
 
-     このコレクションを使用して、他のデバイスとは異なる構成オプションで Windows Embedded デバイスを管理できます。 このコレクションは、再起動の制御、Endpoint Protection へのクライアント設定の展開、インタラクティブな案内アプリケーションの展開に使用されます。  
+    このコレクションを使用して、他のデバイスとは異なる構成オプションで Windows Embedded デバイスを管理できます。 このコレクションは、再起動の制御、Endpoint Protection へのクライアント設定の展開、インタラクティブな案内アプリケーションの展開に使用されます。  
 
-     「[System Center Configuration Manager でコレクションを作成する方法](../../../core/clients/manage/collections/create-collections.md)」をご覧ください。  
+    「[System Center Configuration Manager でコレクションを作成する方法](../../../core/clients/manage/collections/create-collections.md)」をご覧ください。  
 
-3.  コレクションのメンテナンス期間を構成して、案内アプリケーションとアップグレードのインストールに必要な再起動が観光案内所の営業時間中に発生しないようにします。 営業時間は、月曜日から日曜日の 9:00 ～ 18:00 です。 メンテナンス期間は、毎日 18:30 ～ 6:00 に構成します。  
+3. コレクションのメンテナンス期間を構成して、案内アプリケーションとアップグレードのインストールに必要な再起動が観光案内所の営業時間中に発生しないようにします。 営業時間は、月曜日から日曜日の 9:00 ～ 18:00 です。 メンテナンス期間は、毎日 18:30 ～ 6:00 に構成します。  
 
-4.  詳細については、「[System Center Configuration Manager でメンテナンス期間を使用する方法](../../../core/clients/manage/collections/use-maintenance-windows.md)」をご覧ください。  
+4. 詳細については、「[System Center Configuration Manager でメンテナンス期間を使用する方法](../../../core/clients/manage/collections/use-maintenance-windows.md)」をご覧ください。  
 
-5.  さらに、次の設定で **[はい]** を選択することで、Endpoint Protection をインストールするカスタム デバイス クライアント設定を構成し、このカスタム クライアント設定を Windows Embedded デバイス コレクションに展開します。  
+5. さらに、次の設定で **[はい]** を選択することで、Endpoint Protection をインストールするカスタム デバイス クライアント設定を構成し、このカスタム クライアント設定を Windows Embedded デバイス コレクションに展開します。  
 
-    -   **[Endpoint Protection クライアントをクライアント コンピューターにインストールする]**  
+   - **[Endpoint Protection クライアントをクライアント コンピューターにインストールする]**  
 
-    -   **[書き込みフィルターのある Windows Embedded デバイスに対し、Endpoint Protection クライアントのインストールをコミットする (再起動が必要)]**  
+   - **[書き込みフィルターのある Windows Embedded デバイスに対し、Endpoint Protection クライアントのインストールをコミットする (再起動が必要)]**  
 
-    -   **[メンテナンス期間外の Endpoint Protection クライアントのインストールと再起動を許可する]**  
+   - **[メンテナンス期間外の Endpoint Protection クライアントのインストールと再起動を許可する]**  
 
      構成マネージャー クライアントをインストールするときに、これらの設定によって Endpoint Protection クライアントがインストールされ、オーバーレイへの書き込みだけではなく、インストールの一部としてオペレーティング システムに保持されます。 会社のセキュリティ ポリシーでは、マルウェア対策ソフトウェアのインストールが常に必要で、キオスクを再起動する場合に、わずかな時間であっても、キオスクが保護されない状態になるリスクを避けたいと加藤さんは考えています。  
 
-    > [!NOTE]  
-    >  Endpoint Protection クライアントのインストールに必要な再起動は、1 回限りの実行で、デバイスのセットアップ期間中、観光案内所の営業前に実行されます。 定期的なアプリケーションまたはソフトウェア定義の更新プログラムの展開とは異なり、次回、同じデバイスに Endpoint Protection クライアントがインストールされるのは、会社が次のバージョンの Configuration Manager にアップグレードするときになるでしょう。  
+   > [!NOTE]  
+   >  Endpoint Protection クライアントのインストールに必要な再起動は、1 回限りの実行で、デバイスのセットアップ期間中、観光案内所の営業前に実行されます。 定期的なアプリケーションまたはソフトウェア定義の更新プログラムの展開とは異なり、次回、同じデバイスに Endpoint Protection クライアントがインストールされるのは、会社が次のバージョンの Configuration Manager にアップグレードするときになるでしょう。  
 
-     詳細については、「[System Center Configuration Manager での Endpoint Protection の構成](../../../protect/deploy-use/configure-endpoint-protection.md)」をご覧ください。  
+    詳細については、「[System Center Configuration Manager での Endpoint Protection の構成](../../../protect/deploy-use/configure-endpoint-protection.md)」をご覧ください。  
 
-6.  クライアントの構成設定の準備ができたため、加藤さんは、構成マネージャー クライアントのインストールを準備します。 クライアントをインストールする前に、Windows Embedded デバイスの書き込みフィルターを手動で無効にする必要があります。 キオスクに付属する OEM ドキュメントを読んで、指示に従って書き込みフィルターを無効にします。  
+6. クライアントの構成設定の準備ができたため、加藤さんは、構成マネージャー クライアントのインストールを準備します。 クライアントをインストールする前に、Windows Embedded デバイスの書き込みフィルターを手動で無効にする必要があります。 キオスクに付属する OEM ドキュメントを読んで、指示に従って書き込みフィルターを無効にします。  
 
-     加藤さんは、会社の標準の命名規則に従ってデバイスの名前を変更し、クライアント ソース ファイルがあるマップされたドライブから、次のコマンドを指定して CCMSetup を実行し、クライアントを手動でインストールします。 **CCMSetup.exe /MP:mpserver.cohovineyardandwinery.com SMSSITECODE=CO1**  
+    加藤さんは、会社の標準の命名規則に従ってデバイスの名前を変更し、クライアント ソース ファイルがあるマップされたドライブから、次のコマンドを指定して CCMSetup を実行し、クライアントを手動でインストールします。**CCMSetup.exe /MP:mpserver.cohovineyardandwinery.com SMSSITECODE=CO1**  
 
-     このコマンドで、クライアントをインストールし、イントラネット FQDN **mpserver.cohovineyardandwinery.com** を持つ管理ポイントにクライアントを割り当て、 **CO1** という名前のプライマリ サイトにクライアントを割り当てます。  
+    このコマンドで、クライアントをインストールし、イントラネット FQDN **mpserver.cohovineyardandwinery.com** を持つ管理ポイントにクライアントを割り当て、 **CO1** という名前のプライマリ サイトにクライアントを割り当てます。  
 
-     クライアントのインストールと、サイトへのステータスの返信には少し時間がかかります。 クライアントが正常にインストールされ、サイトに割り当てられて、Windows Embedded デバイス用に作成したコレクションにクライアントとして表示されることを確認するまで、しばらく待機します。  
+    クライアントのインストールと、サイトへのステータスの返信には少し時間がかかります。 クライアントが正常にインストールされ、サイトに割り当てられて、Windows Embedded デバイス用に作成したコレクションにクライアントとして表示されることを確認するまで、しばらく待機します。  
 
-     追加の確認として、デバイスのコントロール パネルで Configuration Manager のプロパティを確認し、サイトで管理される標準の Windows コンピューターと比較します。 たとえば、**[コンポーネント]** タブの **[ハードウェア インベントリ エージェント]** には **[有効]** が表示され、**[操作]** タブには **[アプリケーション展開の評価サイクル]** や **[探索データ収集サイクル]** などの 11 個の使用可能な操作が表示されることを確認します。  
+    追加の確認として、デバイスのコントロール パネルで Configuration Manager のプロパティを確認し、サイトで管理される標準の Windows コンピューターと比較します。 たとえば、**[コンポーネント]** タブの **[ハードウェア インベントリ エージェント]** には **[有効]** が表示され、**[操作]** タブには **[アプリケーション展開の評価サイクル]** や **[探索データ収集サイクル]** などの 11 個の使用可能な操作が表示されることを確認します。  
 
-     クライアントのインストールと割り当てが正常に完了し、管理ポイントからクライアント ポリシーを受信したことを確認してから、OEM からの指示に従って、書き込みフィルターを手動で有効にします。  
+    クライアントのインストールと割り当てが正常に完了し、管理ポイントからクライアント ポリシーを受信したことを確認してから、OEM からの指示に従って、書き込みフィルターを手動で有効にします。  
 
-     詳細については、次をご覧ください。  
+    詳細については、次をご覧ください。  
 
-    -   [System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../core/clients/deploy/deploy-clients-to-windows-computers.md)  
+   -   [System Center Configuration Manager でクライアントを Windows コンピューターに展開する方法](../../../core/clients/deploy/deploy-clients-to-windows-computers.md)  
 
-    -   [System Center Configuration Manager でクライアントをサイトに割り当てる方法](../../../core/clients/deploy/assign-clients-to-a-site.md)  
+   -   [System Center Configuration Manager でクライアントをサイトに割り当てる方法](../../../core/clients/deploy/assign-clients-to-a-site.md)  
 
-7.  構成マネージャー クライアントが Windows Embedded デバイスにインストールされたので、標準の Windows クライアントと同じ方法でデバイスを管理できることを確認します。 たとえば、Configuration Manager コンソールから、リモート コントロールを使用してデバイスをリモート管理したり、デバイスのクライアント ポリシーを開始したり、クライアントのプロパティとハードウェア インベントリを表示したりできます。  
+7. 構成マネージャー クライアントが Windows Embedded デバイスにインストールされたので、標準の Windows クライアントと同じ方法でデバイスを管理できることを確認します。 たとえば、Configuration Manager コンソールから、リモート コントロールを使用してデバイスをリモート管理したり、デバイスのクライアント ポリシーを開始したり、クライアントのプロパティとハードウェア インベントリを表示したりできます。  
 
-     これらのデバイスは Active Directory ドメインに参加しているため、信頼されたクライアントとして手動でデバイスを承認する必要はなく、Configuration Manager コンソールから、デバイスが承認されていることを確認します。  
+    これらのデバイスは Active Directory ドメインに参加しているため、信頼されたクライアントとして手動でデバイスを承認する必要はなく、Configuration Manager コンソールから、デバイスが承認されていることを確認します。  
 
-     詳細については、「 [System Center Configuration Manager でクライアントを管理する方法](../../../core/clients/manage/manage-clients.md)」をご覧ください。  
+    詳細については、「 [System Center Configuration Manager でクライアントを管理する方法](../../../core/clients/manage/manage-clients.md)」をご覧ください。  
 
-8.  インタラクティブな案内ソフトウェアをインストールするために、加藤さんは、 **ソフトウェアの展開ウィザード** を実行して、必要なアプリケーションを構成します。 ウィザードの **[ユーザー側の表示と操作]** ページの、**[Windows Embedded デバイスに対してフィルター処理を書き込む]** セクションで、既定のオプション **[メンテナンスの期限または期間中の変更を確定する (再起動が必要)]** をそのまま使用します。  
+8. インタラクティブな案内ソフトウェアをインストールするために、加藤さんは、 **ソフトウェアの展開ウィザード** を実行して、必要なアプリケーションを構成します。 ウィザードの **[ユーザー側の表示と操作]** ページの、**[Windows Embedded デバイスに対してフィルター処理を書き込む]** セクションで、既定のオプション **[メンテナンスの期限または期間中の変更を確定する (再起動が必要)]** をそのまま使用します。  
 
-     書き込みフィルターでこの既定のオプションを使用することで、再起動後もアプリケーションは保持され、キオスクを使用する訪問者は常にアプリケーションを使用できます。 毎日のメンテナンス期間は、インストールのための再起動と、更新を実行するための安全な期間です。  
+    書き込みフィルターでこの既定のオプションを使用することで、再起動後もアプリケーションは保持され、キオスクを使用する訪問者は常にアプリケーションを使用できます。 毎日のメンテナンス期間は、インストールのための再起動と、更新を実行するための安全な期間です。  
 
-     加藤さんは、アプリケーションを Windows Embedded デバイス コレクションに展開します。  
+    加藤さんは、アプリケーションを Windows Embedded デバイス コレクションに展開します。  
 
-     詳細については、「[System Center Configuration Manager でアプリケーションを展開する方法](../../../apps/deploy-use/deploy-applications.md)」を参照してください。  
+    詳細については、「[System Center Configuration Manager でアプリケーションを展開する方法](../../../apps/deploy-use/deploy-applications.md)」を参照してください。  
 
 9. Endpoint Protection の定義ファイルの更新を構成するために、加藤さんは、ソフトウェア更新プログラムを使用し、自動展開規則の作成ウィザードを実行します。 **[定義ファイルの更新]** テンプレートを選択して、ウィザードで、Endpoint Protection に適切な設定を指定します。  
 
      ウィザードの **[ユーザー側の表示と操作]** ページには、次の設定があります。  
 
-    -   **期限に達したときの操作**: **[ソフトウェアのインストール]** チェック ボックスはオフになっています。  
+   - **期限に達したときの操作**:**[ソフトウェアのインストール]** チェック ボックスはオフになっています。  
 
-    -   **Windows Embedded デバイス用の書き込みフィルター処理**: **[メンテナンスの期限または期間中の変更を確定する (再起動が必要)]** チェック ボックスはオフになっています。  
+   - **Windows Embedded デバイスに対してフィルター処理を書き込む**:**[メンテナンスの期限または期間中の変更を確定する (再起動が必要)]** チェック ボックスはオフになっています。  
 
      加藤さんは既定の設定をそのまま使用します。 また、これらの 2 つのオプションをこの構成にすると、メンテナンス期間のインストールとコミットまで待機せずに、Endpoint Protection のソフトウェア更新プログラムの定義を日中にオーバーレイにインストールできます。 この構成は、最新のマルウェア対策保護を実行するという企業のセキュリティ ポリシーに最も適合します。  
 
-    > [!NOTE]  
-    >  アプリケーションのソフトウェア インストールとは異なり、Endpoint Protection のソフトウェア更新プログラムの定義は、1 日に複数回など、頻繁に発生することがあります。 ソフトウェア更新プログラムの定義は、通常は小さなファイルです。 こうした種類のセキュリティ関連の展開では、メンテナンス期間まで待機するよりも、常にオーバーレイにインストールする方が、多くの場合、有益です。 構成マネージャー クライアントは、デバイスが再起動されると、すぐにソフトウェア定義更新プログラムを再インストールします。この操作で評価チェックが開始され、次回のスケジュールされた評価まで待機しないためです。  
+     > [!NOTE]  
+     >  アプリケーションのソフトウェア インストールとは異なり、Endpoint Protection のソフトウェア更新プログラムの定義は、1 日に複数回など、頻繁に発生することがあります。 ソフトウェア更新プログラムの定義は、通常は小さなファイルです。 こうした種類のセキュリティ関連の展開では、メンテナンス期間まで待機するよりも、常にオーバーレイにインストールする方が、多くの場合、有益です。 構成マネージャー クライアントは、デバイスが再起動されると、すぐにソフトウェア定義更新プログラムを再インストールします。この操作で評価チェックが開始され、次回のスケジュールされた評価まで待機しないためです。  
 
      加藤さんは、自動展開規則用に、Windows Embedded デバイス コレクションを選択します。  
 
      詳細については、次を参照してください:  
-                  「[System Center Configuration Manager での Endpoint Protection の構成](../../../protect/deploy-use/configure-endpoint-protection.md)」の「手順 3: Configuration Manager ソフトウェアの更新プログラムを構成して、クライアント コンピューターに定義の更新を配信する」  
+               手順 3:Configuration Manager ソフトウェアの更新プログラムを構成して、クライアント コンピューターに定義の更新を配信する ([System Center Configuration Manager での Endpoint Protection の構成](../../../protect/deploy-use/configure-endpoint-protection.md)に関するページ内)  
 
 10. 加藤さんは、オーバーレイのすべての変更を定期的にコミットするように、メンテナンス タスクを構成することにしました。 このタスクで、ソフトウェア定義更新プログラムの展開をサポートし、累積して、デバイスが再起動するたびに再度インストールする必要がある更新プログラムの数を減らすことができます。 経験上、この方法で、マルウェア対策プログラムを効率よく実行できます。  
 
@@ -115,50 +115,50 @@ ms.locfileid: "32336835"
 
      加藤さんは、最初に、名前以外に設定がないカスタム タスク シーケンスを作成します。 次に、タスク シーケンスの作成ウィザードを実行します。  
 
-    1.  **[新しいタスク シーケンスの作成]** ページで **[新しいカスタム タスク シーケンスを作成する]** を選択し、**[次へ]** をクリックします。  
+    1. **[新しいタスク シーケンスの作成]** ページで **[新しいカスタム タスク シーケンスを作成する]** を選択し、**[次へ]** をクリックします。  
 
-    2.  **[タスク シーケンス情報]** ページで、加藤さんはタスク シーケンスの名前に「 **Maintenance task to commit changes on embedded devices** 」と入力し、 **[次へ]** をクリックします。  
+    2. **[タスク シーケンス情報]** ページで、加藤さんはタスク シーケンスの名前に「 **Maintenance task to commit changes on embedded devices** 」と入力し、 **[次へ]** をクリックします。  
 
-    3.  **[概要]** ページで、**[次へ]** を選択し、ウィザードを完了します。  
+    3. **[概要]** ページで、**[次へ]** を選択し、ウィザードを完了します。  
 
-     加藤さんは、このカスタム タスク シーケンスを Windows Embedded デバイス コレクションに展開し、毎月実行するスケジュールを構成します。 展開設定の一部として、再起動後に変更を保持するために、**[メンテナンスの期限または期間中の変更を確定する (再起動が必要)]** チェック ボックスを選択します。 この展開を構成するために、作成したカスタム タスク シーケンスを選択し、**[ホーム]** タブの **[展開 ]** グループで、**[展開]** をクリックして、ソフトウェアの展開ウィザードを開始します。  
+       加藤さんは、このカスタム タスク シーケンスを Windows Embedded デバイス コレクションに展開し、毎月実行するスケジュールを構成します。 展開設定の一部として、再起動後に変更を保持するために、**[メンテナンスの期限または期間中の変更を確定する (再起動が必要)]** チェック ボックスを選択します。 この展開を構成するために、作成したカスタム タスク シーケンスを選択し、**[ホーム]** タブの [ **** 展開 ] グループで、**[展開]** をクリックして、ソフトウェアの展開ウィザードを開始します。  
 
-    1.  **[全般]** ページで、Windows Embedded デバイス コレクションを選択して、**[次へ]** をクリックします。  
+    4. **[全般]** ページで、Windows Embedded デバイス コレクションを選択して、**[次へ]** をクリックします。  
 
-    2.  **[展開設定]** ページで、**[目的]** に **[必須]** を選択して、**[次へ]** をクリックします。  
+    5. **[展開設定]** ページで、**[目的]** に **[必須]** を選択して、**[次へ]** をクリックします。  
 
-    3.  **[スケジュール]** ページで、**[新規]** をクリックして、メンテナンス期間中の週ごとのスケジュールを指定し、**[次へ]** をクリックします。  
+    6. **[スケジュール]** ページで、**[新規]** をクリックして、メンテナンス期間中の週ごとのスケジュールを指定し、**[次へ]** をクリックします。  
 
-    4.  それ以上は変更せずに、ウィザードを完了します。  
+    7. それ以上は変更せずに、ウィザードを完了します。  
 
-     詳細については、次を参照してください:  
-                  [System Center Configuration Manager でのタスクを自動化するためのタスク シーケンスの管理](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)  
+       詳細については、次を参照してください:  
+                 [System Center Configuration Manager でのタスクを自動化するためのタスク シーケンスの管理](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)  
 
 11. キオスクを自動的に実行するために、加藤さんは、デバイスに次の設定を構成するスクリプトを記述します。  
 
-    -   パスワードなしのゲスト アカウントを使用した自動ログオン  
+    - パスワードなしのゲスト アカウントを使用した自動ログオン  
 
-    -   起動時に対話型プレゼンテーション ソフトウェアを自動実行する。  
+    - 起動時に対話型プレゼンテーション ソフトウェアを自動実行する。  
 
-     加藤さんは、パッケージとプログラムを使用して、このスクリプトを Windows Embedded デバイス コレクションに展開します。 ソフトウェアの展開ウィザードを実行するときに、もう一度 **[メンテナンスの期限または期間中の変更を確定する (再起動が必要)]** チェック ボックスをオンにして、再起動後も変更が維持されるようにします。  
+      加藤さんは、パッケージとプログラムを使用して、このスクリプトを Windows Embedded デバイス コレクションに展開します。 ソフトウェアの展開ウィザードを実行するときに、もう一度 **[メンテナンスの期限または期間中の変更を確定する (再起動が必要)]** チェック ボックスをオンにして、再起動後も変更が維持されるようにします。  
 
-     詳細については、「[System Center Configuration Manager のパッケージとプログラム](../../../apps/deploy-use/packages-and-programs.md)」を参照してください。  
+      詳細については、「[System Center Configuration Manager のパッケージとプログラム](../../../apps/deploy-use/packages-and-programs.md)」を参照してください。  
 
 12. 翌朝、加藤さんは Windows Embedded デバイスを見て、 次の点を確認します。  
 
-    -   キオスクがゲスト アカウントを使用して自動ログオンされている。  
+    - キオスクがゲスト アカウントを使用して自動ログオンされている。  
 
-    -   対話型プレゼンテーション ソフトウェアが実行中である。  
+    - 対話型プレゼンテーション ソフトウェアが実行中である。  
 
-    -   Endpoint Protection クライアントがインストールされ、最新のソフトウェア更新プログラム定義がある。  
+    - Endpoint Protection クライアントがインストールされ、最新のソフトウェア更新プログラム定義がある。  
 
-    -   メンテナンス期間中にデバイスが再起動した。  
+    - メンテナンス期間中にデバイスが再起動した。  
 
-     詳細については、次をご覧ください。  
+      詳細については、次をご覧ください。  
 
-    -   [System Center Configuration Manager で Endpoint Protection を監視する方法](../../../protect/deploy-use/monitor-endpoint-protection.md)  
+    - [System Center Configuration Manager で Endpoint Protection を監視する方法](../../../protect/deploy-use/monitor-endpoint-protection.md)  
 
-    -   [System Center Configuration Manager でアプリケーションを監視する](/sccm/apps/deploy-use/monitor-applications-from-the-console)  
+    - [System Center Configuration Manager でアプリケーションを監視する](/sccm/apps/deploy-use/monitor-applications-from-the-console)  
 
 13. 加藤さんはキオスクを監視し、キオスクが正常に管理されていることを上司に報告します。 その結果、ビジター センター用に 20 台のキオスクを注文することになりました。  
 
