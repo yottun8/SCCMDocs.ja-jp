@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 88fa98de0f9f0a113adeef3a30536628706484ab
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 5f7cb374859d2605021a3f1ec98d6a6b6081bfc4
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424682"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817904"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>Configuration Manager でのセキュリティの計画
 
@@ -109,7 +109,7 @@ Configuration Manager で PKI 証明書を使用する場合は、証明書失�
 
 IIS では常にクライアント証明書の CRL が確認され、Configuration Manager でこの構成を変更することはできません。 既定では、Configuration Manager クライアントは常にサイト システムの CRL をチェックします。 サイトのプロパティを指定し、CCMSetup プロパティを指定することにより、この設定を無効にします。  
 
-証明書失効確認を使用していても、CRL を検出できないコンピューターは、証明チェーンのすべての証明書が失効しているかのように動作します。 このような動作になるのは、リストに証明書があるかどうかを確認できないためです。 このシナリオでは、証明書が必要な、CRL を使用するすべての接続が失敗します。  
+証明書失効確認を使用していても、CRL を検出できないコンピューターは、証明チェーンのすべての証明書が失効しているかのように動作します。 この動作の原因は、証明書が証明書失効リストにあるかどうかをそれらが確認できないためです。 このシナリオでは、証明書が必要で、CRL チェックを含んでいるすべての接続が失敗します。 CRL にアクセスできることを、その http の場所を参照することで確認するときは、構成マネージャー クライアントがローカル システムとして実行されることに注意する必要があります。 そのため、ユーザー コンテキストで実行されている Web ブラウザーを使った CRL へのアクセスのテストは成功する場合がありますが、同じ CRL の URL に http 接続を試みたときに、内部のフィルター処理に関する Web ソリューションが原因でコンピューター アカウントがブロックされる可能性があります。 このような状況では、フィルター処理に関するすべての Web ソリューション上で CRL の URL をホワイトリスト登録することが必要となる場合があります。
 
 証明書が使用されるたびに CRL を確認することで、失効した証明書の使用に対するセキュリティが強化されます。 しかし、これにより、接続が遅くなり、クライアントでの処理が増えます。 組織では、インターネットまたは信頼されていないネットワーク上にあるクライアントでこのような追加のセキュリティ チェックが必要になる場合があります。  
 

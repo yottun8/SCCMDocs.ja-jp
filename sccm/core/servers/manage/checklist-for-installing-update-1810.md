@@ -10,12 +10,12 @@ ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: efce5242c5de148d6922144af27f47a267b3c6c3
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 6ea093b71d19c2cee35caa748ae60f76a95b078c
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458188"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817768"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>Configuration Manager の更新プログラム 1810 をインストールするためのチェックリスト
 
@@ -89,6 +89,9 @@ Configuration Manager の Current Branch を使用している場合、バージ
 Windows 10 アセスメント & デプロイメント キット (ADK) のバージョンは、Configuration Manager バージョン 1810 でサポートされている必要があります。 サポートされている Windows ADK バージョンの詳細については、「[Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)」を参照してください。 Windows ADK を更新する必要がある場合は、Configuration Manager の更新を開始する前に行います。 この順番により、既定のブート イメージが Windows PE の最新バージョンに自動的に更新されることが保証されます。 サイトの更新後、カスタム ブート イメージを手動で更新します。
 
 Windows ADK を更新する前にサイトを更新する場合は、「[ブート イメージを使用して配布ポイントを更新する](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image)」を参照してください。
+
+#### <a name="review-sql-server-native-client-version"></a>SQL Server Native Client バージョンを確認する
+TLS 1.2 をサポートしている最小バージョンの SQL Server 2012 Native Client をインストールする必要があります。 詳細については、[前提条件の確認の一覧](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client)を参照してください。
 
 #### <a name="review-the-site-and-hierarchy-status-for-unresolved-issues"></a>サイトと階層の状態で未解決の問題を確認する 
 運用上の問題があると、サイトの更新が失敗する可能性があります。 サイトを更新する前に、次のシステムに対する運用上のすべての問題を解決します。  

@@ -10,12 +10,12 @@ ms.assetid: f5ad22d5-7df1-49c6-8a0f-db1c3f0cda19
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 41ce74ee0978f561a855c5d3952071f68568dee0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 23c3a8b379accac0e514cfb8a88197baa6463fee
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347639"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817734"
 ---
 # <a name="install-a-new-version-of-windows-on-a-new-computer-bare-metal-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用して、新しいコンピューター (ベア メタル) に新しいバージョンの Windows をインストールする
 
@@ -49,7 +49,12 @@ Windows の新しいバージョンで既存のコンピューターを更新す
 
     -   オペレーティング システム イメージを作成する方法の詳細については、「[オペレーティング システム イメージを管理する](../get-started/manage-operating-system-images.md)」を参照してください。
 
-    -   オペレーティング システム イメージを配布ポイントに配布します。 詳細については、「[コンテンツの配布](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)」をご覧ください。
+    -   オペレーティング システム イメージを配布ポイントに配布します。 詳細については、「[コンテンツの配布](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)」をご覧ください。  
+
+    > [!NOTE]
+    > Windows の新規インストールは、インストール ソース ファイルから OS アップグレード パッケージを使って実行することもできますが、代わりに **install.wim** などの OS イメージを使ってください。
+    >
+    > OS アップグレード パッケージを使った Windows の新規インストールの展開は、引き続きサポートされますが、これはこの方法と互換性があるドライバーに依存しています。 OS アップグレード パッケージから Windows をインストールする場合、ドライバーは、単純に Windows PE にいる間に挿入されるのと比較して、Windows PE にいる間にインストールされます。 一部のドライバーは、Windows PE にいる間のインストールと互換性がありません。 ドライバーが Windows PE にいる間のインストールと互換性がない場合は、代わりに OS イメージを使います。  
 
 3.  **オペレーティング システムをネットワーク経由で展開するためのタスク シーケンスの作成**  
 
