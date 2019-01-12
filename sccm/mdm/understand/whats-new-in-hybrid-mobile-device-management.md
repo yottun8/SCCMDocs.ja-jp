@@ -2,7 +2,7 @@
 title: ハイブリッド MDM の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。
-ms.date: 12/14/2018
+ms.date: 01/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7cf1adf7d73e60fba0d748022ab7c241d60ffed7
-ms.sourcegitcommit: c60e057075a83f07d1ca2577c3de1c7d7c8e9cec
+ms.openlocfilehash: 610dfb7391347663fd92c0839d20eb7a4a703438
+ms.sourcegitcommit: c80abe7e4b7b2f80e957e45ff205f67d1b715688
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626499"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226225"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 この記事では、System Center Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理 (MDM) の新機能の詳細について説明します。     
 
@@ -44,6 +44,33 @@ ms.locfileid: "53626499"
 |**Microsoft Intune の新機能** | 通常、このカテゴリに一覧表示されたすべての機能は、Configuration Manager のすべてのリリースで動作します。 これには System Center 2012 R2 Configuration Manager リリースが含まれています。これらの機能では Intune サービスのみが必要であり、Configuration Manager の追加機能は不要なためです。|
 |**Configuration Manager Technical Preview の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Technical Preview Branch でのみ動作します。 これらの機能を試すには、機能の説明で指定されたバージョンの Technical Preview をインストールする必要があります。 詳細については、「[Configuration Manager の Technical Preview](/sccm/core/get-started/technical-preview)」を参照してください。|
 |**Configuration Manager (現在のブランチ) の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Configuration Manager (Current Branch) でのみ動作します。 ハイブリッド展開に旧バージョンの Configuration Manager を使用している場合は、機能の説明で指定されたバージョンの Configuration Manager (現在の分岐) にアップグレードします。 詳細については、「[System Center Configuration Manager へのアップグレード](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)」を参照してください。|
+
+
+
+## <a name="january-2019"></a>2019 年 1 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+#### <a name="tenant-status-dashboard"></a>テナントの状態ダッシュ ボード
+<!--1124854--> 新しい[テナントの状態ページ](https://docs.microsoft.com/intune/tenant-status)テナントの状態および関連する詳細を表示できます 1 つの場所を提供します。 ダッシュ ボードは、4 つの領域に分かれています。
+
+- **詳細をテナント**:テナントの名前と場所、MDM 機関を含む情報を表示、合計がテナントでは、デバイスを登録して、ライセンスの数します。 このセクションでは、テナントの現在のサービス リリースも一覧表示します。  
+
+- **コネクタの状態**:使用可能なコネクタを構成し、まだ有効にしなかったものを一覧できますもに関する情報が表示されます。  
+
+    各コネクタの現在の状態に基づいてと健全、警告、または異常として見なされます。 ドリルスルーし詳細の表示または追加情報を構成するためのコネクタを選択します。  
+
+- **Intune サービスの正常性**:テナントのアクティブなインシデントまたは障害に関する詳細を表示します。 このセクションの情報は、Office メッセージ センターから直接取得されます。  
+
+- **Intune のニュース**:テナントのアクティブなメッセージが表示されます。 メッセージには、テナントが最新の Intune 機能を受信すると、通知などが含まれます。  このセクションの情報は、Office メッセージ センターから直接取得されます。  
+
+#### <a name="new-help-and-support-experience-in-company-portal-for-windows-10"></a>新しいヘルプとサポートの Company Portal for Windows 10 でのエクスペリエンス 
+<!--1488939--> 新しい会社ポータルのヘルプとサポート ページには、ユーザーのトラブルシューティングを行うし、アプリとアクセスの問題についてヘルプを要求が役立つことです。 新しいページで、エラーと診断ログの詳細を電子メールで送信し、組織のヘルプデスクの詳細を確認できます。 関連する Intune のドキュメントへのリンクの FAQ セクションもあります。 詳細とスクリーン ショットは、次を参照してください。[ヘルプとサポート Company Portal for Windows 10 で](https://docs.microsoft.com/intune-user-help/help-and-support-windows-cpapp)します。
+
+#### <a name="some-bitlocker-settings-support-windows-10-pro-edition"></a>Windows 10 Pro エディションをサポートして BitLocker 設定の一部
+<!--2727036--> BitLocker をなど、Windows 10 デバイスで endpoint protection の設定を設定する構成項目を作成することができます。 この更新プログラムは、BitLocker 設定の一部の Windows 10 Professional edition のサポートを追加します。
+
+詳細については、次を参照してください。 [Windows 10 用の暗号化設定](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#encryption)します。
 
 
 
@@ -408,8 +435,8 @@ Windows 10 バージョン 1607 以降を利用しているエンド ユーザ�
 
 - **新しいモバイル アプリケーション管理ポリシーの設定**     
   次の設定がモバイル アプリケーション管理ポリシーの設定に追加されました。
-  - **連絡先の同期を無効にする**:アプリがデバイス上のネイティブ連絡先アプリにデータを保存するを防ぎます。
-  - **印刷を無効にする**:印刷の職場または学校のデータからアプリをできないようにします。
+  - **連絡先の同期を無効にする**:アプリでデバイス上のネイティブ連絡先アプリにデータを保存できなくなります。
+  - **印刷を無効にする**:アプリで職場または学校のデータを印刷できなくなります。
   <!-- 1324760 -->    
 
   「[Configuration Manager のモバイル アプリケーション管理ポリシーを使ったアプリの保護](/sccm/mdm/deploy-use/protect-apps-using-mam-policies)」を参照し、新しいアプリの保護のポリシー設定を試してください。
