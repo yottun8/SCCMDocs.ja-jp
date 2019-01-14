@@ -10,16 +10,16 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f3d25120701c12b547727259002fc58a8f8f0780
-ms.sourcegitcommit: 97083c51057e2c4e0fe12c3b1f1b512250874c6a
-ms.translationtype: HT
+ms.openlocfilehash: a84dfc33fe79f5eb4d5397505a12052b8e92aebf
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50968137"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250614"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用するハイブリッド MDM
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 > [!Important]  
 > 2018 年 8 月 14 日の時点では、ハイブリッド モバイル デバイス管理は[非推奨の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)です。
@@ -28,7 +28,7 @@ ms.locfileid: "50968137"
 > 
 > その結果、ほとんどのお客様は、ハイブリッド MDM ではなく Azure での Intune を選択されています。 クラウドに移行するお客様の増加により、ハイブリッド MDM を使用するお客様の数は減り続けています。 そのため、2019 年 9 月 1 日をもって、Microsoft はハイブリッド MDM サービスの提供を終了します。 MDM のニーズを [Azure での Intune に移行する](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)ことを計画してください。 
 > 
-> この変更は、オンプレミスの Configuration Manager または [Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)には影響しません。 ハイブリッド MDM を使用しているかどうかわからない場合は、Configuration Manager コンソールの **[管理]** ワークスペースに移動し、**[クラウド サービス]** を展開して、**[Microsoft Intune サブスクリプション]** をクリックします。 Microsoft Intune のサブスクリプションが設定されている場合、そのテナントはハイブリッド MDM 用に構成されています。
+> この変更は、オンプレミスの Configuration Manager または [Windows 10 デバイスの共同管理](/sccm/comanage/overview)には影響しません。 ハイブリッド MDM を使用しているかどうかわからない場合は、Configuration Manager コンソールの **[管理]** ワークスペースに移動し、**[クラウド サービス]** を展開して、**[Microsoft Intune サブスクリプション]** をクリックします。 Microsoft Intune のサブスクリプションが設定されている場合、そのテナントはハイブリッド MDM 用に構成されています。
 > 
 > **ユーザーへの影響**
 > 
@@ -86,8 +86,8 @@ Configuration Manager のハイブリッド モバイル デバイス管理 (MDM
 
 デバイスをハイブリッド管理するには、サービスに登録する必要があります。 デバイスの登録方法は、デバイスの種類、所有権、必要な管理のレベルによって異なります。
 
-- **"Bring your own device" (BYOD)**: ユーザーは個人のスマートフォン、タブレット、PC を登録します  
+- **"Bring your own device"(BYOD)**:ユーザーが個人のスマート フォン、タブレット、または Pc を登録します。  
 
-- **企業所有デバイス (COD)**: リモート ワイプ、共有デバイス、デバイスのユーザー アフィニティなどの管理シナリオを有効にします  
+- **企業所有のデバイス (COD)**:リモート ワイプ、共有デバイス、またはユーザーとデバイスのアフィニティなどの管理シナリオを有効にします。  
 
 - オンプレミスの、あるいはクラウドでホストされている [Exchange ActiveSync](/sccm/mdm/plan-design/device-enrollment-methods#mobile-device-management-with-exchange-activesync-and-configuration-manager) を使用する場合、登録なしの簡単な Intune 管理を有効にできます。 Windows PC は [Intune クライアント ソフトウェア](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune)でも管理できます。
