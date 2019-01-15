@@ -1,8 +1,8 @@
 ---
 title: Windows Hello for Business の設定
 titleSuffix: Configuration Manager
-description: System Center Configuration Manager に Windows Hello for Business を統合する方法について説明します。
-ms.date: 04/10/2018
+description: Windows Hello for Business を Configuration Manager と統合する方法について説明します。
+ms.date: 12/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,21 +10,23 @@ ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 60dcf98b83fb4650a10e5503d42b9f49d3aba359
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 81086b01cef3d60af6e0c93d25b2ad937252d4ba
+ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350087"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152402"
 ---
-# <a name="windows-hello-for-business-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager における Windows Hello for Business の設定
+# <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Configuration Manager における Windows Hello for Business の設定
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
-<!--1245704-->
-System Center Configuration Manager を、Windows 10 デバイスの代替サインイン方法である Windows Hello for Business (旧称: Microsoft Passport for Windows) と統合することができます。 Hello for Business では、パスワード、スマート カード、または仮想スマート カードの代わりに Active Directory または Azure Active Directory アカウントを使用します。  
+<!--1245704-->Configuration Manager を、Windows 10 デバイスの代替サインイン方法である Windows Hello for Business (旧称: Microsoft Passport for Windows) と統合することができます。 Hello for Business では、パスワード、スマート カード、または仮想スマート カードの代わりに Active Directory または Azure Active Directory アカウントを使用します。 Hello for Business を使用すると、パスワードの代わりに**ユーザー ジェスチャ**を使用してログインできます。 ユーザー ジェスチャには、単純な暗証番号 (PIN)、生体認証、または指紋リーダーなどの外部のデバイスがあります。
 
-Hello for Business を使用すると、パスワードの代わりに**ユーザー ジェスチャ**を使用してログインできます。 ユーザー ジェスチャには、単純な暗証番号 (PIN)、生体認証、または指紋リーダーなどの外部のデバイスがあります。
+
+> [!Important]  
+> 2017 年 12 月の時点で Windows こんにちは for Business の設定の構成マネージャーでは、[非推奨の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)します。 Windows Server 2016 Active Directory フェデレーション サービス登録機関 (ADFS RA) 展開は、方が簡単です、優れたユーザー エクスペリエンスを提供およびより明確な証明書の登録エクスペリエンスを備えています。  
+
 
 詳細については、「[Windows Hello for Business](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)」を参照してください。
 
@@ -33,19 +35,24 @@ Hello for Business を使用すると、パスワードの代わりに**ユー�
 > Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[更新プログラムのオプション機能の有効化](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」を参照してください。<!--505213-->  
 
 
- Configuration Manager と Windows Hello for Business を統合するには、次の 2 つの方法があります。  
+Configuration Manager と Windows Hello for Business を統合するには、次の 2 つの方法があります。  
 
--   Configuration Manager を使用して、ユーザーがサインインに使用できるジェスチャと使用できないジェスチャを制御できます。  
+- Configuration Manager を使用して、ユーザーがサインインに使用できるジェスチャと使用できないジェスチャを制御できます。  
 
--   Windows Hello for Business のキー格納プロバイダー (KSP) に認証証明書を格納できます。 詳細については、「[Certificate profiles](introduction-to-certificate-profiles.md)」 (証明書プロファイル) をご覧ください。  
+- Windows Hello for Business のキー格納プロバイダー (KSP) に認証証明書を格納できます。 詳細については、「[Certificate profiles](introduction-to-certificate-profiles.md)」 (証明書プロファイル) をご覧ください。  
 
-- ドメインに参加しており構成マネージャー クライアントを実行している Windows 10 デバイスに Windows Hello for Business ポリシーを展開できます。 この構成については、「[ドメインに参加している Windows 10 デバイスで Windows Hello for Business を構成する](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices)」セクションで説明されています。 Configuration Manager と Microsoft Intune を使用する (ハイブリッド) の場合は、Windows 10、および Windows 10 モバイル デバイスでこれらの設定を構成できます。 詳細については、「[Windows Hello for Business 設定を構成する (ハイブリッド)](../../mdm/deploy-use/windows-hello-for-business-settings.md)」を参照してください。
+- ドメインに参加しており構成マネージャー クライアントを実行している Windows 10 デバイスに Windows Hello for Business ポリシーを展開できます。 この構成については、「[ドメインに参加している Windows 10 デバイスで Windows Hello for Business を構成する](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices)」セクションで説明されています。 Configuration Manager と Microsoft Intune を使用する (ハイブリッド) の場合は、Windows 10、および Windows 10 モバイル デバイスでこれらの設定を構成できます。 詳細については、「[Windows Hello for Business 設定を構成する (ハイブリッド)](/sccm/mdm/deploy-use/windows-hello-for-business-settings)」を参照してください。
+
+
 
 ## <a name="configure-windows-hello-for-business-on-domain-joined-windows-10-devices"></a>ドメインに参加している Windows 10 デバイスで Windows Hello for Business を構成する
+
 Windows Hello for Business プロファイルを作成して展開することで、ドメインに参加している Windows 10 デバイスで Windows Hello for Business の設定を制御できます。 このアプローチは推奨されます。
 
 
 証明書ベースの認証を使用している場合は、[証明書プロファイルの構成](#configure-a-certificate-profile)に関するセクションで説明されているように、証明書プロファイルも展開する必要があります。 キー ベースの認証を使用している場合は、証明書プロファイルを展開する必要はありません。
+
+
 
 ## <a name="configure-a-windows-hello-for-business-profile"></a>Windows Hello for Business プロファイルの構成  
 
@@ -53,8 +60,11 @@ Configuration Manager コンソールの **[会社のリソースへのアクセ
 
 ![使用可能な設定の一覧を表示する Windows Hello for Business ポリシー ウィザード](../media/Hello-for-Business-settings.png)
 
+
+
 ## <a name="configure-a-certificate-profile-to-enroll-the-windows-hello-for-business-enrollment-certificate-in-configuration-manager"></a>Configuration Manager で証明書プロファイルを構成して、Windows Hello for Business の登録証明書を登録する  
- Windows Hello for Business の証明書ベースのログオンを使用する場合は、次のコンポーネントを構成します。  
+
+Windows Hello for Business の証明書ベースのログオンを使用する場合は、次のコンポーネントを構成します。  
 
 -   Configuration Manager の証明書プロファイル。  
 

@@ -94,7 +94,7 @@ ms.locfileid: "53422217"
 ## <a name="assign-dep-devices-for-management"></a>DEP デバイスを管理対象にする
 
 1. [Device Enrollment Program ポータル](https://deploy.apple.com) (https://deploy.apple.com) に移動し、会社の Apple ID でサインインします。
-2.  **[Deployment Program]** > **[Device Enrollment Program]** > **[デバイスの管理]** で管理することができます。 **デバイスの選択**方法を指定し、デバイス情報を入力して、デバイスの **シリアル番号**、 **注文番号**、または **CSV ファイルのアップロード**で詳細を指定します。 次に、**[Assign to Server]** (サーバーに割り当て) を選択し、手順 3 で指定した <*サーバー名*> を選択して、**[OK]** をクリックします。  
+2. **[Deployment Program]** > **[Device Enrollment Program]** > **[デバイスの管理]** で管理することができます。 **デバイスの選択**方法を指定し、デバイス情報を入力して、デバイスの **シリアル番号**、 **注文番号**、または **CSV ファイルのアップロード**で詳細を指定します。 次に、**[Assign to Server]** (サーバーに割り当て) を選択し、手順 3 で指定した <*サーバー名*> を選択して、**[OK]** をクリックします。  
 ![Apple Device Enrollment Program ポータルへのデバイスの追加のスクリーンショット](../media/enrollment-program-token-specify-serial.png)
 
 3.  **DEP で管理されたデバイスの同期**   
