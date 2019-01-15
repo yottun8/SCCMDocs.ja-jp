@@ -10,12 +10,12 @@ ms.assetid: c8534a1e-57b8-4688-b6e6-299d82cfcec9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 329f5c2f227cbd8a51b1c9ccc21810cda9f6a2cf
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 26b6d68f634a230f56a93b6cc1691ce98fa77852
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417141"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250687"
 ---
 # <a name="configuration-manager-and-windows-as-a-service"></a>Configuration Manager とサービスとしての Windows
 
@@ -25,7 +25,7 @@ System Center Configuration Manager では、Windows 10 の機能更新プログ
 
 ## <a name="key-articles-about-adopting-configuration-manager-current-branch"></a>Configuration Manager の Current Branch の導入に関する主な記事
 
-| アーティクル        | 説明          | 
+| アーティクル        | [説明]          | 
 | ------------- |-------------|
 |[Configuration Manager Current Branch の概要](/sccm/core/plan-design/changes/whats-new-incremental-versions)|Configuration Manager (Current Branch) の新しいサービス モデルの要点を簡単に説明します。|
 |[サポート ライフサイクル](/sccm/core/servers/manage/current-branch-versions-supported)|新しいサポートおよびサービス モデルについて説明します。|
@@ -40,7 +40,7 @@ System Center Configuration Manager では、Windows 10 の機能更新プログ
 
 ## <a name="key-articles-about-adopting-windows-as-a-service"></a>サービスとしての Windows の導入に関する主な記事
 
-| アーティクル        | 説明          | 
+| アーティクル        | [説明]          | 
 | ------------- |-------------|
 |[サービスとしての Windows の管理](/sccm/osd/deploy-use/manage-windows-as-a-service)|サービス プランを使用して Windows 10 の機能更新プログラムを展開する方法について説明します。|
 |[タスク シーケンスによる Windows 10 のアップグレード](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)|追加の推奨事項で Windows 10 をアップグレードするためのタスク シーケンスの作成に関する詳細。|
@@ -48,7 +48,7 @@ System Center Configuration Manager では、Windows 10 の機能更新プログ
 |[Windows 10 更新プログラムの配信の最適化](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)|Configuration Manager を使用して、Windows 10 を最新の状態に保つための更新プログラムのコンテンツを管理します。|
 |[Upgrade Readiness との統合](/sccm/core/clients/manage/upgrade/upgrade-analytics)|Upgrade Readiness を使用すると、Windows 10 にアップグレードするため、環境内のデバイスの対応性を評価および分析することができます。| 
 |[Windows Update for Business 統合 (オプション)](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)|Configuration Manager を使用して、Windows Update for Business (WUfB) ポリシーを定義して展開する方法について説明します。|
-|[Microsoft Intune と Windows Update for Business での共同管理の使用 (オプション)](/sccm/core/clients/manage/co-management-overview)|共同管理の概要を示します。| 
+|[Microsoft Intune と Windows Update for Business での共同管理の使用 (オプション)](/sccm/comanage/overview)|共同管理の概要を示します。| 
 
 
 ## <a name="related-articles"></a>関連記事

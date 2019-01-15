@@ -10,16 +10,16 @@ ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 024714c564036cd61a6c1340724aa3b9cad782d2
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: d59e5e5bc1dfdf962517b4c364b74aa0df6b650a
+ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456398"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152453"
 ---
 # <a name="plan-for-the-sms-provider"></a>SMS プロバイダーの計画 
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Configuration Manager を管理するには、**SMS プロバイダー**のインスタンスに接続する Configuration Manager コンソールを使用します。 既定では、中央管理サイトまたはプライマリ サイトのインストール時に、SMS プロバイダーがサイト サーバーにインストールされます。 
 
@@ -165,11 +165,11 @@ SMS プロバイダーは、Configuration Manager にセキュリティを強制
 
 次のレベルを使用できます。
 
-- **Windows 認証**: Active Directory ドメイン資格情報による認証が必要です。 この設定は以前の動作であり、現在の既定の設定です。 サイトを更新するとき、認証レベルは変更されません。  
+- **Windows 認証**:Active Directory ドメイン資格情報による認証が必要です。 この設定は以前の動作であり、現在の既定の設定です。 サイトを更新するとき、認証レベルは変更されません。  
 
-- **証明書認証**: 信頼された PKI 証明機関によって発行された有効な証明書による認証が必要です。 この証明書は Configuration Manager では構成しません。 Configuration Manager では、管理者は PKI を使用して Windows にサインインする必要があります。  
+- **証明書認証**:信頼された PKI 証明機関によって発行された有効な証明書による認証が必要です。 この証明書は Configuration Manager では構成しません。 Configuration Manager では、管理者は PKI を使用して Windows にサインインする必要があります。  
 
-- **Windows Hello for Business 認証**: デバイスに関連付けられた、生体認証か PIN を使用する強力な 2 要素認証による認証が必要です。 Windows Hello for Business ポリシーは、Configuration Manager を使用して管理および展開できます。 詳細については、[Windows Hello for Business の設定](/sccm/protect/deploy-use/windows-hello-for-business-settings) に関するページを参照してください。  
+- **Windows Hello for Business 認証**:デバイスに関連付けられた、生体認証か PIN を使用する強力な 2 要素認証による認証が必要です。 詳細については、「[Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification)」を参照してください。   
 
 
 ### <a name="exclusions"></a>除外
@@ -219,7 +219,7 @@ Configuration Manager によってデータベースにオブジェクトのデ�
 
 Configuration Manager の WMI スキーマでは、SMS プロバイダーの構造を定義します。 SMS プロバイダーのスキーマ内の Configuration Manager データの場所は、スキーマの名前空間で記述します。 次の表には、SMS プロバイダーで使用される一般的な名前空間がいくつか含まれています。  
 
-|Namespace|説明|  
+|Namespace|[説明]|  
 |---------------|-----------------|  
 |`Root\SMS\site_<site code>`|Configuration Manager コンソール、リソース エクスプローラー、Configuration Manager のツール、スクリプトによって使用される SMS プロバイダー。|  
 |`Root\SMS\SMS_ProviderLocation`|サイトの SMS プロバイダーのコンピューターの場所。|  
