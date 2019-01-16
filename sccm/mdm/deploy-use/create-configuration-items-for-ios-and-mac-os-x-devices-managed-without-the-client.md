@@ -10,12 +10,12 @@ ms.assetid: 613a48ac-c55d-4c4a-94ea-d3747a1b10cb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bf5f580d10c48bb44b3c202832ffff3a06c5c37f
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 708a9fc1f3a2f10a602dc5d926cd8b8df0cbc7cf
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416182"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316577"
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>Intune で管理されている iOS および Mac OS X デバイスの構成項目を作成する方法
 System Center Configuration Manager の **iOS および Mac OS X** 構成項目を使用して、Microsoft Intune に登録されているか、Configuration Manager によってオンプレミスで管理されている iOS デバイスと Mac OS X デバイスの設定を管理します。  
@@ -275,7 +275,7 @@ System Center Configuration Manager の **iOS および Mac OS X** 構成項目�
      >  アプリのバンドル ID を検索するには、アプリがインストールされている Mac コンピューターで次の手順を使用します。  
      > 
      > 1. アプリがインストールされているフォルダーを開きます (たとえば、 **/Applications**)。  
-     >    2.  *<アプリ名\>***.app** バンドルを選択し、**[パッケージの内容を表示]** を選びます。  
+     >    2.  _<アプリ名\>_**.app** バンドルを選び、**[パッケージの内容を表示]** を選びます。  
      >    3.  **Info.plist** ファイルを開きます。  
      >    4.  キー **CFBundleIdentifier**に関連付けられた値を確認します。  
      > 
