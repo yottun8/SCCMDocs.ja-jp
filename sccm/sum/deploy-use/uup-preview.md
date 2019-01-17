@@ -2,7 +2,7 @@
 title: UUP プレビュー
 titleSuffix: Configuration Manager
 description: UUP 統合のプレビューについての説明
-ms.date: 01/04/2018
+ms.date: 01/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: cfc83f4d076a05ea1847c0d073bd824ad10aa731
-ms.sourcegitcommit: 1bf26b83fa7da637d299a21e1d3bc61f2d7d8c10
+ms.openlocfilehash: 17a9abf2f20f53ba69ad160db421be51471cc311
+ms.sourcegitcommit: 27b2594087e8c54062db6b2a30ab843bab17f8cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54060384"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270462"
 ---
 # <a name="uup-private-preview-instructions"></a>UUP プライベート プレビューの説明
 
@@ -160,8 +160,8 @@ UUP 更新プログラムの同期と試用を始める準備ができて、パ�
 
 5. **[製品]** タブでは、WSUS サーバーがプレビューに追加されると、2 つの新しい製品が表示されます。 これらの製品には、プレビュー UUP コンテンツが含まれます。  
 
-    - **Windows 10 UUP パイロット**:Windows ワークステーション UUP 更新プログラム  
-    - **Windows Server 2016 UUP**:Windows Server UUP 更新プログラム  
+    - **Windows 10 UUP プレビュー**  
+    - **Windows Server UUP プレビュー**  
 
 6. **[分類]** タブで、以下を選択します。  
 

@@ -10,16 +10,16 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5fd7c26c190407ba5e497068582704b03c71f00
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: fe8fb2a8138433d00686530f76916a1ee4e88dac
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411512"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250801"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1806 の新機能
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Configuration Manager Current Branch の更新プログラム 1806 はコンソール内の更新プログラムとして利用できます。 バージョン 1706、1710、1802 を実行しているサイトでこの更新プログラムを適用します。 <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
 
@@ -134,9 +134,9 @@ Version 1806 drops support for the following products:
 ### <a name="boundary-group-options-for-peer-downloads"></a>ピアのダウンロードの境界グループのオプション
 <!--1356193--> 環境内のコンテンツ配布をより細かく制御できるように、境界グループに追加の設定が設けられました。 このリリースでは、次のオプションが追加されます。  
 
-- **[この境界グループのピアのダウンロードを許可する]**: 管理ポイントでは、ピア ソースを含むコンテンツの場所のリストがクライアントに提供されます。 この設定は、配信の最適化のグループ ID 適用にも反映されます。  
+- **この境界グループのピアのダウンロードを許可する**:管理ポイントでは、ピア ソースを含むコンテンツの場所のリストがクライアントに提供されます。 この設定は、配信の最適化のグループ ID 適用にも反映されます。  
 
-- **[ピアのダウンロード中に、同じサブネット内のピアのみを使用する]**: 管理ポイントのコンテンツの場所のリストには、クライアントと同じサブネット内にあるピア ソースのみが含まれます。  
+- **ピアのダウンロード中に、同じサブネット内のピアのみを使用する**: 管理ポイントのコンテンツの場所のリストには、クライアントと同じサブネット内にあるピア ソースのみが含まれます。  
 
 詳細については、「[ピアのダウンロードの境界グループのオプション](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions)」を参照してください。
 
@@ -197,7 +197,7 @@ Version 1806 drops support for the following products:
 #### <a name="simplified-client-bootstrap-command-line"></a>簡略化されたクライアント ブートストラップ コマンド ライン
 <!--1358215--> CMG を介してインターネット上に Configuration Manager クライアントをインストールするときに、コマンド ラインで必要となるプロパティが少なくなりました。 この改善により、共同管理のための準備をするとき、Microsoft Intune で使用されるコマンド ラインのサイズが縮小されます。 
 
-詳細については、「[共同管理用に Windows 10 デバイスを準備する](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)」を参照してください。
+詳細については、「[How to prepare internet-based devices for co-management](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client)」 (共同管理用にインターネット ベースのデバイスを準備する方法) を参照してください。
 
 #### <a name="download-content-from-a-cmg"></a>CMG からコンテンツをダウンロードする
 <!--1358651--> これまでは、別の役割として、クラウド配布ポイントと CMG を展開する必要がありました。 CMG では、コンテンツをクライアントに提供できるようになりました。 この機能により、Azure VM の必要な証明書とコストが削減されます。 
@@ -214,27 +214,27 @@ Version 1806 drops support for the following products:
 ### <a name="sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device"></a>共同管理されたデバイスのために MDM ポリシーを Microsoft Intune から同期する
 <!--1357377--> 共同管理ワークロードを切り替えるときに、共同管理されたデバイスで自動的に Microsoft Intune から MDM ポリシーが同期されます。 この同期は、Configuration Manager コンソールのクライアント通知から**コンピューター ポリシーのダウンロード**操作を開始するときにも行われます。 
 
-詳細については、「[Configuration Manager のワークロードを Intune に切り替える](/sccm/core/clients/manage/co-management-switch-workloads)」を参照してください。
+詳細については、「[How to switch Configuration Manager workloads to Intune](/sccm/comanage/how-to-switch-workloads)」 (Configuration Manager のワークロードを Intune に切り替える) を参照してください。
 
 
 ### <a name="transition-new-workloads-to-intune-using-co-management"></a>共同管理を使用して Intune に新しいワークロードを移行する
 次のワークロードは、共同管理を有効にした後に、Configuration Manager から Intune に移行できるようになりました。  
 
-- **デバイス構成**<!--1357903-->: このワークロードでは、Intune を使用して MDM ポリシーを展開できます。アプリケーションの展開には Configuration Manager を引き続き使用します。  
+- **デバイスの構成**<!--1357903-->: このワークロードでは、アプリケーションの展開に Configuration Manager を引き続き使用したうえで、Intune を使用して MDM ポリシーを展開できるようになります。  
 
-- **Office 365**<!--1357841-->: デバイスでは、Configuration Manager から Office 365 展開をインストールしません。  
+- **Office 365**<!--1357841-->: デバイスでは、Configuration Manager から Office 365 展開はインストールされません。  
 
 - **モバイル アプリ**<!--1357892-->: Intune から展開された使用可能なアプリが、すべてポータル サイトで使用可能になります。 Configuration Manager から展開するアプリは、ソフトウェア センターで使用できます。 この機能は[プレリリース版の機能](/sccm/core/servers/manage/pre-release-features)です。  
 
 これらのワークロードを切り替えるには、共同管理プロパティ ページに進み、ワークロード スライド バーを Configuration Manager から**パイロット**または**すべて**に動かします。 
 
-詳細については、「[Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)」を参照してください。
+詳細については、「[Windows 10 デバイスの共同管理](/sccm/comanage/overview)」を参照してください。
 
 
 ### <a name="support-for-multiple-hierarchies-to-one-intune-tenant"></a>1 つの Intune テナントで複数の階層をサポート
 <!--1357944--> 一部のお客様は Configuration Manager 階層を複数持ち、将来、Azure Active Directory と Microsoft Intune のシングル テナントに統合することを希望します。 共同管理では、複数の Configuration Manager 環境を同じ Intune テナントに接続できるようになりました。
 
-詳細については、「[共同管理用に Windows 10 デバイスを準備する](/sccm/core/clients/manage/co-management-prepare)」を参照してください。
+詳細については、[共同管理の前提条件](/sccm/comanage/overview#prerequisites)に関するページご覧ください。
  
 
 
@@ -269,7 +269,7 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>デバイス上のすべてのユーザーに対して Windows アプリ パッケージをプロビジョニングする
-<!--1358310--> デバイス上のすべてのユーザーに対して、Windows アプリ パッケージを含むアプリケーションをプロビジョニングします。 このシナリオの 1 つの一般的な例では、ある学校の生徒が使用するすべてのデバイスに、Minecraft: Education Edition などの、ビジネス向け Microsoft Store および教育機関向け Microsoft Store からアプリをプロビジョニングします。 これまでは、Configuration Manager では、これらのアプリケーションのユーザーごとのインストールのみがサポートされていました。 新しいデバイスにサインインした後、学生はアプリにアクセスするまで待機する必要があります。 これからは、すべてのユーザー用のデバイスにアプリがプロビジョニングされている場合、より迅速に生産性を高めることができます。 
+<!--1358310--> デバイス上のすべてのユーザーに対して、Windows アプリ パッケージを含むアプリケーションをプロビジョニングします。 このシナリオの 1 つの一般的な例では、ある学校の生徒が使用するすべてのデバイスに、Minecraft:Education Edition などの、ビジネス向け Microsoft Store および教育機関向け Microsoft Store からアプリをプロビジョニングします。 これまでは、Configuration Manager では、これらのアプリケーションのユーザーごとのインストールのみがサポートされていました。 新しいデバイスにサインインした後、学生はアプリにアクセスするまで待機する必要があります。 これからは、すべてのユーザー用のデバイスにアプリがプロビジョニングされている場合、より迅速に生産性を高めることができます。 
 
 詳しくは、「[Windows アプリケーションを作成する](/sccm/apps/get-started/creating-windows-applications#bkmk_provision)」をご覧ください。
 

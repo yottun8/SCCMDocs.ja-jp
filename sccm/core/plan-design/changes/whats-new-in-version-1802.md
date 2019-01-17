@@ -10,12 +10,12 @@ ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a0e16c137604480ab23e15b52723692491d1816d
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 763826a1a308130415fb972f7f3dc3e577b8e573
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414856"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250733"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1802 の新機能
 
@@ -58,7 +58,7 @@ Version 1802 drops support for the following products:
 <!-- 1353704 --> このリリースから、Configuration Manager クライアントは Windows 10 ARM64 デバイスでサポートされるようになりました。 既存のクライアント管理機能は、これらの新しいデバイスで動作します。 たとえば、ハードウェアとソフトウェアのインベントリ、ソフトウェア更新プログラム、アプリケーション管理などです。 オペレーティング システムの展開は現在はサポートされていません。 
 
 ### <a name="improved-support-for-cng-certificates"></a>CNG 証明書のサポートの強化
-<!-- 1357314 --> Configuration Manager (Current Branch) バージョン 1710 では、[Cryptography: Next Generation (CNG) 証明書](/sccm/core/plan-design/network/cng-certificates-overview)がサポートされています。 バージョン 1710 では、一部のシナリオでクライアント証明書のサポートに制限があります。 
+<!-- 1357314 --> Configuration Manager (Current Branch) バージョン 1710 では、[Cryptography:Next Generation (CNG) 証明書](/sccm/core/plan-design/network/cng-certificates-overview)がサポートされています。 バージョン 1710 では、一部のシナリオでクライアント証明書のサポートに制限があります。 
 
 このリリース以降、以下の HTTPS が有効なサーバーの役割には CNG 証明書を使ってください。
 - 管理ポイント
@@ -144,7 +144,7 @@ Configuration Manager 1802 では、次の分析情報を利用できます。
 ## <a name="co-management"></a>共同管理
 
 ### <a name="transition-endpoint-protection-workload-to-intune-using-co-management"></a>共同管理を使用して Intune に Endpoint Protection ワークロードを移行する
-<!-- 1357365 --> 共同管理を有効にした後、Endpoint Protection のワークロードを Intune に移行できます。 Endpoint Protection ワークロードを移行するには、共同管理のプロパティ ページに移動し、スライダー バーを Configuration Manager から **[パイロット]** または **[すべて]** に移動します。 ワークロードの詳細については、[Intune に移行できるワークロード](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune)に関するページを参照してください。 共同管理の詳細については、「[Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)」を参照してください。
+<!-- 1357365 --> 共同管理を有効にした後、Endpoint Protection のワークロードを Intune に移行できます。 Endpoint Protection ワークロードを移行するには、共同管理のプロパティ ページに移動し、スライダー バーを Configuration Manager から **[パイロット]** または **[すべて]** に移動します。 ワークロードの詳細については、[共同管理ワークロード](/sccm/comanage/workloads)に関するページを参照してください。 共同管理の詳細については、「[Windows 10 デバイスの共同管理](/sccm/comanage/overview)」を参照してください。
  
 ### <a name="co-management-dashboard-in-system-center-configuration-manager"></a>System Center Configuration Manager の共同管理ダッシュボード
 <!--1356648--> このリリースより、共同管理に関する情報をダッシュボードに表示できます。 ダッシュボードを利用すれば、お使いの環境で共同管理しているコンピューターを確認できます。 各種グラフを見ることで、対処が必要なデバイスを特定できます。 詳細については、[共同管理ダッシュボード](/sccm/core/clients/manage/client-management-dashboard)に関する記事を参照してください。 
@@ -234,8 +234,8 @@ Configuration Manager 1802 では、次の分析情報を利用できます。
 ### <a name="report-for-default-browser-counts"></a>既定のブラウザー数についてのレポート
 <!-- 1357830 --> 特定の Web ブラウザーが Windows の既定値になっているクライアントの数を表示する新しいレポートが追加されました。 **ソフトウェア - 会社と製品**レポート グループの**既定のブラウザー カウント** レポートを参照してください。 詳細については、[レポートの一覧](/sccm/core/servers/manage/list-of-reports#software---companies-and-products)を参照してください。
 
-### <a name="report-on-windows-autopilot-device-information"></a>Windows AutoPilot のデバイス情報についてのレポート
-<!-- 1351442 --> Windows AutoPilot は、最新の方法で新しい Windows 10 デバイスをオンボーディングおよび構成するためのソリューションです。 詳細については、「[Windows AutoPilot の概要](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)」を参照してください。 既存のデバイスを Windows AutoPilot に登録する 1 つの方法は、ビジネス向け Microsoft Store および教育機関向け Microsoft Store にデバイスの情報をアップロードすることです。 この情報には、デバイスのシリアル番号、Windows 製品識別子、およびハードウェア ID が含まれます。 Configuration Manager を利用し、**ハードウェア - 全般**レポート ノードの新しいレポート、**Windows AutoPilot デバイス情報**でこのデバイスの情報を収集し、報告します。 詳細については、共同管理のための準備の「[新しい Windows 10 デバイス](/sccm/core/clients/manage/co-management-prepare#new-windows-10-devices)」を参照してください。
+### <a name="report-on-windows-autopilot-device-information"></a>Windows Autopilot のデバイス情報についてのレポート
+<!-- 1351442 --> Windows Autopilot は、最新の方法で新しい Windows 10 デバイスをオンボーディングおよび構成するためのソリューションです。 詳細については、「[Windows Autopilot の概要](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)」を参照してください。 既存のデバイスを Windows Autopilot に登録する 1 つの方法は、ビジネス向け Microsoft Store および教育機関向け Microsoft Store にデバイスの情報をアップロードすることです。 この情報には、デバイスのシリアル番号、Windows 製品識別子、およびハードウェア ID が含まれます。 Configuration Manager を利用し、**ハードウェア - 全般**レポート ノードの新しいレポート、**Windows Autopilot デバイス情報**でこのデバイスの情報を収集し、報告します。 詳細については、共同管理の準備での「[How to prepare internet-based devices for co-management](/sccm/comanage/how-to-prepare-win10#windows-autopilot)」 (共同管理用のインターネット ベースのデバイスを準備する方法) を参照してください。
 
 ### <a name="report-on-windows-10-servicing-details-for-a-specific-collection"></a>特定のコレクションに対する Windows 10 サービスの詳細を報告する
 <!--1357653--> **特定のコレクションに対する Windows 10 サービスの詳細**レポートには、特定のコレクションに対する Windows 10 サービスに関する全般情報が表示されます。 このレポートには、リソース ID、NetBIOS 名、OS 名、OS リリース名、ビルド、OS ブランチ、および Windows 10 デバイスのサービス状態が表示されます。 詳細については、[レポートの一覧](/sccm/core/servers/manage/list-of-reports#operating-system)を参照してください。

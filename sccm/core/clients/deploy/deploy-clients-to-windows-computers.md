@@ -10,12 +10,12 @@ ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 187f876999f39dd1d2d4aa345a7e9037f745a0ed
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 64aca2b4840027226ad6fcba2df0bd62b112f602
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418902"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250784"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>Configuration Manager でクライアントを Windows コンピューターに展開する方法
 
@@ -218,7 +218,7 @@ CCMSetup.exe は、必要なすべての前提条件をクライアント コン
 
 この例では、クライアントは次のオプションを使ってインストールします。  
 
-|オプション|説明|  
+|オプション|[説明]|  
 |--------------|-----------------|  
 |`/mp:SMSMP01`|この CCMSetup パラメーターは、必要なクライアント インストール ファイルをダウンロードする管理ポイント SMSMP01 を指定します。|  
 |`/logon`|この CCMSetup パラメーターは、既存の構成マネージャー クライアントがコンピューターで見つかった場合はインストールを停止するように指定します。|  
@@ -331,7 +331,7 @@ Azure AD の ID を使って最新の Windows 10 デバイスに構成マネー�
 > [!NOTE]  
 > 既定では、クライアント ソフトウェアがインストールされると、デバイスは Intune から登録解除されます。
 > 
-> バージョン 1710 以降では、クライアントは Intune から登録解除されません。 クライアントは、構成マネージャー クライアントと MDM の登録の両方を同時に持つことができます。 詳しくは、[共同管理の概要](/sccm/core/clients/manage/co-management-overview)に関するページをご覧ください。  
+> バージョン 1710 以降では、クライアントは Intune から登録解除されません。 クライアントは、構成マネージャー クライアントと MDM の登録の両方を同時に持つことができます。 詳しくは、[共同管理の概要](/sccm/comanage/overview)に関するページをご覧ください。  
 
 
 ###  <a name="install-clients-with-intune"></a>Intune でクライアントをインストールする  
@@ -343,7 +343,7 @@ Azure AD の ID を使って最新の Windows 10 デバイスに構成マネー�
    `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<Your site code> DNSSUFFIX=<DNS Suffix of management point>"`  
 
    > [!Note]  
-   > Azure AD 認証を使う最新の Windows 10 クライアントで使うコマンド ラインの例については、「[共同管理用に Windows 10 デバイスを準備する](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)」をご覧ください。  
+   > Azure AD 認証を使用する最新の Windows 10 クライアントで使うコマンド ラインの例については、「[How to prepare internet-based devices for co-management](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client)」 (共同管理用に Windows 10 デバイスを準備する方法) をご覧ください。  
 
 3. 登録済みの Windows コンピューターのグループに[アプリを割り当て](https://docs.microsoft.com/intune/deploy-use/deploy-apps-in-microsoft-intune)ます。  
 

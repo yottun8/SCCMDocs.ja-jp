@@ -2,7 +2,7 @@
 title: 非推奨の機能
 titleSuffix: Configuration Manager
 description: Configuration Manager でサポートされなくなった機能について説明します。
-ms.date: 11/27/2018
+ms.date: 12/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 089f1f69f8df87b1d4b30cd8df6e735f5c79f312
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 441fb520fcf3e82bd284eb20db44f14cab52224f
+ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52455787"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152470"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager から削除された機能と非推奨の機能
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 この記事では、Configuration Manager のサポートから非推奨になった、または削除された機能を示します。 非推奨の機能は、今後の更新で削除されます。 これらの将来的な変更は、Configuration Manager の使用に影響する可能性があります。  
 
@@ -34,11 +34,12 @@ ms.locfileid: "52455787"
 |クラウド管理ゲートウェイとクラウドの配布ポイントのための Azure への従来のサービス展開。 詳細については、[CMG の計画](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)に関するページを参照してください。|2018 年 11 月|2019 年 7 月 1 日以降にリリースされる最初のバージョン| 
 |Mac および Linux 用 System Center Endpoint Protection<br>詳しくは、[サポートの終了ブログ投稿](https://go.microsoft.com/fwlink/?linkid=870182)をご覧ください。|2018 年 10 月|2018 年 12 月 31 日|
 |ハイブリッド モバイル デバイス管理。 詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。<!--Intune feature 2683117-->|2018 年 8 月 14 日|2019 年 9 月 1 日|
-|アプリケーション カタログ Web サイト ポイントの **Silverlight ユーザー エクスペリエンス**は現在サポートされていません。 新しいソフトウェア センターを使う必要があります。 注: アプリケーション カタログの Web サイト ポイントの役割と Web サービス ポイントの役割は、まだサポートされています。 一部のシナリオでは、新しいソフトウェア センターはアプリケーション カタログ Web サイト ポイントと通信します。 詳細については、「[ソフトウェア センターの構成](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)」をご覧ください。<!--1358309-->|2017 年 8 月 11 日| バージョン 1806|
+|Configuration Manager における Windows Hello for Business の設定<br>詳細については、[Windows Hello for Business の設定](/sccm/protect/deploy-use/windows-hello-for-business-settings) に関するページを参照してください。|2017 年 12 月|2019 年 11 月 1 日以降にリリースされる最初のバージョン|
+|アプリケーション カタログ Web サイト ポイントの **Silverlight ユーザー エクスペリエンス**は現在サポートされていません。 新しいソフトウェア センターを使う必要があります。 メモ:アプリケーション カタログの Web サイト ポイントの役割と Web サービス ポイントの役割は、引き続きサポートされます。 一部のシナリオでは、新しいソフトウェア センターはアプリケーション カタログ Web サイト ポイントと通信します。 詳細については、「[ソフトウェア センターの構成](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)」をご覧ください。<!--1358309-->|2017 年 8 月 11 日| バージョン 1806|
 |以前のバージョンのソフトウェア センター。<br><br>ソフトウェア センターの詳細については、「[アプリケーション管理の計画と構成](/sccm/apps/plan-design/plan-for-and-configure-application-management##bkmk_userex)」をご覧ください。|2016 年 12 月 13 日|バージョン 1802|
-|Configuration Manager によるバーチャル ハード ディスク (VHD) の管理。 </br></br>この非推奨機能には、新しい VHD の作成オプション、またはタスク シーケンスを使用した VHD の管理オプションの削除と、Configuration Manager コンソールからのバーチャル ハード ディスクのノードの削除が含まれます。 </br></br>既存の VHD は削除されませんが、Configuration Manager コンソール内からはアクセスできなくなります。  |2017 年 1 月 6 日 |バージョン 1710|
+|Configuration Manager によるバーチャル ハード ディスク (VHD) の管理。 <br><br>この非推奨機能には、新しい VHD の作成オプション、またはタスク シーケンスを使用した VHD の管理オプションの削除と、Configuration Manager コンソールからのバーチャル ハード ディスクのノードの削除が含まれます。 <br><br>既存の VHD は削除されませんが、Configuration Manager コンソール内からはアクセスできなくなります。  |2017 年 1 月 6 日 |バージョン 1710|
 |タスク シーケンス: <br /> - ディスクをダイナミックに変換 <br /> - 展開ツールのインストール |2016 年 11 月 18 日|バージョン 1710|
-|System Center Configuration Manager Upgrade Assessment Tool。 </br></br>Upgrade Assessment Tool は、System Center Configuration Manager と Application Compatibility Toolkit (ACT) 6.x の両方に依存します。 ACT の最終バージョンは、Windows 10 v1511 ADK に同梱されていました。 今後、ACT が更新されることはないため、Upgrade Assessment Tool のサポートは廃止されます。 </br></br>Upgrade Assessment Tool は、[アップグレードの準備](/sccm/core/clients/manage/upgrade/upgrade-analytics)機能に置き換えられます。 非推奨に関する注記は、2016 年 9 月 12 日に [UAT のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=37145)に追加されました。 | 2016 年 9 月 12 日  | 2017 年 7 月 11 日 |
+|System Center Configuration Manager Upgrade Assessment Tool。 <br><br>Upgrade Assessment Tool は、System Center Configuration Manager と Application Compatibility Toolkit (ACT) 6.x の両方に依存します。 ACT の最終バージョンは、Windows 10 v1511 ADK に同梱されていました。 今後、ACT が更新されることはないため、Upgrade Assessment Tool のサポートは廃止されます。 <br><br>Upgrade Assessment Tool は、[アップグレードの準備](/sccm/core/clients/manage/upgrade/upgrade-analytics)機能に置き換えられます。 非推奨に関する注記は、2016 年 9 月 12 日に [UAT のダウンロード ページ](https://www.microsoft.com/download/details.aspx?id=37145)に追加されました。 | 2016 年 9 月 12 日  | 2017 年 7 月 11 日 |
 |ネットワーク負荷分散 (NLB) クラスターを備えたソフトウェアの更新ポイント | 2016 年 2 月 27 日 | バージョン 1702 | 
 |タスク シーケンス: <br /> - OSDPreserveDriveLetter  <br /><br /> 既定で、オペレーティング システムの展開中に、Windows セットアップが使用する最適なドライブ文字を決定するようになりました (通常は C:)。 別のドライブを使用するように指定する場合は、オペレーティング システムの適用タスク シーケンスのステップで場所を変更できます。 **[このオペレーティング システムの適用先を選択してください。]** の設定に進みます。 **[特定の論理ドライブ文字]** を選び、使うドライブを選びます。 |2016 年 6 月 20 日 |バージョン 1606 |
 |ネットワーク アクセス保護 (NAP) - System Center 2012 Configuration Manager の機能|2015 年 7 月 10 日|バージョン 1511|  

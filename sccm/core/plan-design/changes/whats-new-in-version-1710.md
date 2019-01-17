@@ -10,16 +10,16 @@ ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 821c7f32799020948630cd873fead144ae21e39e
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: 4dcf5ce0c31f72db1e6af3ac9e024c83afe92337
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229264"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250665"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1710 の新機能
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager Current Branch の更新プログラム 1710 は、バージョン 1610、1702、または 1706 を実行しているインストール済みのサイトで、コンソール内の更新プログラムとして利用可能です。
 
@@ -64,7 +64,7 @@ Azure Government クラウドで[クラウドベースの配布ポイント](/sc
 ## <a name="client-management"></a>クライアント管理
 
 ### <a name="co-management-for-windows-10-devices"></a>Windows 10 デバイスの共同管理    
-<!-- 1350871 -->以前の Windows 10 の更新プログラムで、Windows 10 デバイスをオンプレミスの Active Directory (AD) とクラウドベースの Azure AD に同時に結合できるようになっています (ハイブリッド Azure AD)。 Configuration Manager バージョン 1710 以降、共同管理ではこの機能強化を活用し、Configuration Manager と Intune の両方を使用して複数の Windows 10 バージョン 1709 (Fall Creators Update とも呼ばれる) のデバイスを同時に管理できるようになりました。 これは、従来の管理から最新の管理への橋渡しとなるソリューションであり、段階的なアプローチを使って移行する方向を提示します。 詳細については、「[Windows 10 デバイスの共同管理](/sccm/core/clients/manage/co-management-overview)」をご覧ください。
+<!-- 1350871 -->以前の Windows 10 の更新プログラムで、Windows 10 デバイスをオンプレミスの Active Directory (AD) とクラウドベースの Azure AD に同時に結合できるようになっています (ハイブリッド Azure AD)。 Configuration Manager バージョン 1710 以降、共同管理ではこの機能強化を活用し、Configuration Manager と Intune の両方を使用して複数の Windows 10 バージョン 1709 (Fall Creators Update とも呼ばれる) のデバイスを同時に管理できるようになりました。 これは、従来の管理から最新の管理への橋渡しとなるソリューションであり、段階的なアプローチを使って移行する方向を提示します。 詳細については、「[Windows 10 デバイスの共同管理](/sccm/comanage/overview)」をご覧ください。
 
 ### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>Configuration Manager コンソールからコンピューターを再起動 <!-- 1356283 -->
 これ以降のリリースでは、Configuration Manager コンソールを使用して再起動を必要とするクライアント デバイスを識別し、再起動するようにクライアント通知を行うアクションを使用できます。
@@ -88,8 +88,8 @@ Azure Government クラウドで[クラウドベースの配布ポイント](/sc
 
 ### <a name="new-mobile-application-management-policy-settings"></a>新しいモバイル アプリケーション管理ポリシーの設定
 <!-- 1324760 -->次の設定がモバイル アプリケーション管理ポリシーの設定に追加されました。
-- **連絡先の同期を無効にする:** アプリでデバイス上のネイティブ連絡先アプリにデータを保存できなくなります。
-- **印刷を無効にする:** アプリで職場または学校のデータを印刷できなくなります。
+- **連絡先の同期を無効にする**: アプリでデバイス上のネイティブ連絡先アプリにデータを保存できなくなります。
+- **印刷を無効にする**: アプリで職場または学校のデータを印刷できなくなります。
 
 ### <a name="software-center-no-longer-distorts-icons-larger-than-250x250"></a>ソフトウェア センターで 250x250 を超えるアイコンが変形しなくなります  
 <!-- 1356194 -->
@@ -179,9 +179,9 @@ Windows 10 を実行する ARM64 デバイスを使用できるようになる�
 
 詳細については、「[System Center Configuration Manager のモバイル デバイスの VPN プロファイル](../../../mdm/deploy-use/create-vpn-profiles.md)」を参照してください。
 
-### <a name="limited-support-for-cryptography-next-generation-cng-certificates----1356191---"></a>Cryptography: Next Generation (CNG) 証明書のサポートの制限 <!-- 1356191 -->
+### <a name="limited-support-for-cryptography-next-generation-cng-certificates----1356191---"></a>Cryptography: Next Generation (CNG) 証明書のサポートの制限<!-- 1356191 -->
 
-Configuration Manager の Cryptography: Next Generation (CNG) 証明書のサポートは制限されています。 Configuration Manager クライアントは、PKI クライアント認証証明書と CNG キー格納プロバイダー (KSP) の秘密キーを使用できます。 Configuration Manager クライアントは KSP をサポートしているので、PKI クライアント認証証明書用の TPM KSP など、ハードウェアベースの秘密キーをサポートしています。
+Configuration Manager では、Cryptography: Next Generation (CNG) 証明書がサポートされます。 Configuration Manager クライアントは、PKI クライアント認証証明書と CNG キー格納プロバイダー (KSP) の秘密キーを使用できます。 Configuration Manager クライアントは KSP をサポートしているので、PKI クライアント認証証明書用の TPM KSP など、ハードウェアベースの秘密キーをサポートしています。
 
 詳細については、「[CNG certificates overview](../network/cng-certificates-overview.md)」(CNG 証明書の概要) を参照してください。
 

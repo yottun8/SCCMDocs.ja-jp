@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 050cf81a99f29d24cad6eb13e691e332174627c3
-ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.openlocfilehash: 60d1c93acc2fcc2c04d09cd8f0ec0c083089a8ec
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53818023"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250597"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1810 の新機能
 
@@ -123,7 +123,10 @@ Version 1810 drops support for the following products:
 ### <a name="new-client-notification-action-to-wake-up-device"></a>デバイスを復帰させる新しいクライアント通知アクション
 <!--1317364--> クライアントとサイト サーバーのサブネットが異なる場合でも、Configuration Manager コンソールからクライアントを復帰させることができるようになりました。 メンテナンスを実行したり、デバイスにクエリを実行したりする必要がある場合、スリープ状態にあるリモート クライアントで制限されることがありません。 サイト サーバーでは、クライアント通知チャネルを利用し、同じリモート サブネット上で起動状態にある別のクライアントが識別されます。 その後、復帰したクライアントは、Wake On LAN 要求 (マジック パケット) を送信します。
 
-<!--For more information, see [Plan how to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).-->
+### <a name="new-option-to-perform-client-notification-from-devices-node"></a>デバイス ノードからクライアント通知を実行する新しいオプション
+<!--1317364--> 1810 まで、**[クライアント通知]** オプションは、デバイス コレクション ノードから利用できるか、またはデバイス コレクションのメンバーシップを表示するときに利用できるだけでした。 **[デバイス]** ノードから **[クライアント通知]** を直接実行できるようになりました。 コレクション メンバーシップ ビュー内に要件は存在しなくなりました。 
+
+詳細については、[クライアント通知](/sccm/core/clients/manage/client-notification)に関するページをご覧ください。
 
 
 ### <a name="improvements-to-collection-evaluation"></a>コレクションの評価の機能強化
@@ -169,7 +172,7 @@ Version 1810 drops support for the following products:
 
 ![共同管理ダッシュボードのスクリーンショット。上の 4 つのタイルを確認できます。](media/1358980-comgmt-dashboard.png)
 
-詳しくは、「[共同管理ダッシュボード](/sccm/core/clients/manage/co-management-dashboard)」をご覧ください。
+詳しくは、「[共同管理ダッシュボード](/sccm/comanage/how-to-monitor#co-management-dashboard)」をご覧ください。
 
 
 

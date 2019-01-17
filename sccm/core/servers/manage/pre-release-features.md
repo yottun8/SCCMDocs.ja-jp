@@ -10,16 +10,16 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fb24c3e262f3d1f3991ab549592e3f21631b32d
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 4d892e8d194f61fece977c91ce36ba46cf9dd53d
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456135"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250716"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Configuration Manager のプレリリース機能
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 プレリリース機能は、運用環境での初期テスト用の Current Branch に含まれている機能です。 これらの機能は完全にサポートされていますが、現在開発中です。 プレリリース カテゴリから移動するまでは変更が行われる可能性があります。
 
@@ -77,7 +77,7 @@ ms.locfileid: "52456135"
 |------------------|----------------------|-------------------------|
 | SMS プロバイダー API <!--1359052--> | バージョン 1810 | ![未追加](media/red_x.png) |
 | [拡張 HTTP サイト システム](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | バージョン 1806 | バージョン 1810 |
-| [共同管理デバイス向けのモバイル アプリ](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune) <!--1357892--> | バージョン 1806 | ![未追加](media/red_x.png) |
+| [共同管理デバイス向けのクライアント アプリ](/sccm/comanage/workloads#client-apps) <!--1357892--> | バージョン 1806 | ![未追加](media/red_x.png) |
 | [パッケージ変換マネージャー](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | バージョン 1806 | バージョン 1810 |
 | [iOS 向け Cisco AnyConnect 4.0.07x 以降のサポート](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | バージョン 1802 | バージョン 1802 <br>更新プログラム 4163547 適用 |
 | [段階的展開](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | バージョン 1802 | バージョン 1806 |
