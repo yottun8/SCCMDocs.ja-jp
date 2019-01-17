@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
-ms.openlocfilehash: f7c0f0d9dc52c39e0ec33abb8df565d4918471f7
-ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.openlocfilehash: 3f7d880f7e220966a9baa71ac6ad9286a398ffaa
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53818040"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342858"
 ---
 # <a name="prepare-intune-for-user-migration"></a>Intune でのユーザーの移行を準備する 
 
-*適用対象: System Center Configuration Manager (Current Branch)*    
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*    
 ユーザーをハイブリッド MDM から Intune スタンドアロンに移行する前に、Intune を準備する手順を実行します。 次の手順は、移行されたユーザーとそのデバイスが継続して管理することを確認するのに役立ちます。 次の手順し、Intune への移行を開始すると、ユーザーへの影響を大幅はありません。  
 
 ## <a name="fix-issues-found-during-data-collection-and-import"></a>データの収集とインポート中に見つかった問題の修正
@@ -50,7 +50,7 @@ Intune スタンドアロンにでは、各ユーザーの Intune のライセ�
 - [ポリシーの割り当て](https://docs.microsoft.com/intune/get-started-policies)  
 - [プロファイルの割り当て](https://docs.microsoft.com/intune/device-profile-assign)  
     > [!NOTE]  
-    > Intune では、新しい電子メール プロファイルを展開、ユーザーは自分のパスワードを再入力を求めるメッセージを受け取ります。  
+    > Intune では、新しい電子メール プロファイルを展開、ユーザーは自分のパスワードを再入力を求めるメッセージを受け取ります。 この動作は、電子メールがユーザーのデバイスに矛盾する結果します。 ユーザーによって行われた任意のカスタム変更は、もう一度実行する必要があります。 
 - [アプリの割り当て](https://docs.microsoft.com/intune/get-started-apps) 
 
 ## <a name="terms-and-conditions-policy"></a>使用条件ポリシー
