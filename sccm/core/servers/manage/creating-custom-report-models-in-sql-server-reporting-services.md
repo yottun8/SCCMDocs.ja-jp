@@ -10,12 +10,12 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d011272c42f3347f555e4fb5322464e9c5e754da
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: b28a5be9a494d2568bbdfdee29f9e757ef97f940
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424699"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316560"
 ---
 # <a name="creating-custom-report-models-for-system-center-configuration-manager-in-sql-server-reporting-services"></a>SQL Server Reporting Services での System Center Configuration Manager のカスタム レポート モデルの作成
 
@@ -26,7 +26,7 @@ ms.locfileid: "53424699"
 > [!NOTE]  
 >  詳細なレポート モデルを作成する手順については、このトピックの「 [SQL Server Reporting Services で詳細レポート モデルを作成する手順](#AdvancedReportModel) 」セクションを参照してください。  
 
-|手順|説明|説明|  
+|手順|[説明]|説明|  
 |----------|-----------------|----------------------|  
 |SQL Server Business Intelligence Development Studio がインストールされていることを確認する|レポート モデルの設計と作成には、SQL Server Business Intelligence Development Studio を使用します。 カスタム レポート モデルを作成するコンピューターに、SQL Server Business Intelligence Development Studio がインストールされていることを確認します。|SQL Server Business Intelligence Development Studio の詳細については、SQL Server 2008 のドキュメントを参照してください。|  
 |レポート モデル プロジェクトを作成する|レポート モデル プロジェクトには、データ ソースの定義 (.ds ファイル)、データ ソース ビューの定義 (.dsv ファイル)、およびレポート モデル (.smdl ファイル) が含まれます。|詳細については、このトピックの「 [レポート モデル プロジェクトを作成するには](#BKMK_CreateReportModelProject) 」セクションを参照してください。|  
@@ -146,7 +146,7 @@ ms.locfileid: "53424699"
 
 3. メモ帳などのテキスト エディターを使用して前のファイルを開きます。  
 
-4. *&lt;モデル名\>***.dsv** というファイルで、次のように記述された最初の行を見つけます。  
+4. _&lt;モデル名\>_**.dsv** というファイルで、次のように記述された最初の行を見つけます。  
 
     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
@@ -156,9 +156,9 @@ ms.locfileid: "53424699"
 
 5. ファイルの内容をすべてを Windows クリップボードにコピーします。  
 
-6. ファイル *&lt;モデル名\>***.dsv** を閉じます。  
+6. ファイル _&lt;モデル名\>_**.dsv** を閉じます。  
 
-7. *&lt;モデル名\>***.smdl** というファイルで、次のように記述された最後の 3 行を見つけます。  
+7. _&lt;モデル名\>_**.smdl** というファイルで、次のように記述された最後の 3 行を見つけます。  
 
     `</Entity>`  
 
@@ -166,11 +166,11 @@ ms.locfileid: "53424699"
 
     `</SemanticModel>`  
 
-8. ファイル *&lt;モデル名\>***.dsv** の内容を、ファイルの最後の行 (**&lt;SemanticModel\>**) の直前に貼り付けます。  
+8. ファイル _&lt;モデル名\>_**.dsv** の内容を、ファイルの最後の行 (**&lt;SemanticModel\>**) の直前に貼り付けます。  
 
-9. ファイル *&lt;モデル名\>***.smdl** を保存して閉じます。  
+9. ファイル _&lt;モデル名\>_**.smdl** を保存して閉じます。  
 
-10. ファイル *&lt;モデル名\>**.smdl** を、Configuration Manager サイト サーバー上のフォルダー *%programfiles%* \Microsoft Configuration Manager\AdminConsole\XmlStorage\Other にコピーします。  
+10. ファイル _&lt;モデル名\>_**.smdl** を、Configuration Manager サイト サーバー上の フォルダー *%programfiles%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other にコピーします。  
 
     > [!IMPORTANT]  
     >  レポート モデル ファイルを Configuration Manager サイト サーバーにコピーした後は、まず Configuration Manager コンソールを終了し再起動しないと、**レポートの作成ウィザード**でレポート モデルを使用できません。  
@@ -389,7 +389,7 @@ ms.locfileid: "53424699"
 
 3. メモ帳などのテキスト エディターを使用して前のファイルを開きます。  
 
-4. *&lt;モデル名\>***.dsv** というファイルで、次のように記述された最初の行を見つけます。  
+4. _&lt;モデル名\>_**.dsv** というファイルで、次のように記述された最初の行を見つけます。  
 
     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
@@ -399,9 +399,9 @@ ms.locfileid: "53424699"
 
 5. ファイルの内容をすべてを Windows クリップボードにコピーします。  
 
-6. ファイル *&lt;モデル名\>***.dsv** を閉じます。  
+6. ファイル _&lt;モデル名\>_**.dsv** を閉じます。  
 
-7. *&lt;モデル名\>***.smdl** というファイルで、次のように記述された最後の 3 行を見つけます。  
+7. _&lt;モデル名\>_**.smdl** というファイルで、次のように記述された最後の 3 行を見つけます。  
 
     `</Entity>`  
 
@@ -409,11 +409,11 @@ ms.locfileid: "53424699"
 
     `</SemanticModel>`  
 
-8. ファイル *&lt;モデル名\>***.dsv** の内容を、ファイルの最後の行 (**&lt;SemanticModel\>**) の直前に貼り付けます。  
+8. ファイル _&lt;モデル名\>_**.dsv** の内容を、ファイルの最後の行 (**&lt;SemanticModel\>**) の直前に貼り付けます。  
 
-9. ファイル *&lt;モデル名\>***.smdl** を保存して閉じます。  
+9. ファイル _&lt;モデル名\>_**.smdl** を保存して閉じます。  
 
-10. ファイル *&lt;モデル名\>***.smdl** を、Configuration Manager サイト サーバー上のフォルダー *%programfiles%* \Microsoft Configuration Manager\AdminConsole\XmlStorage\Other にコピーします。  
+10. ファイル _&lt;モデル名\>_**.smdl** を、Configuration Manager サイト サーバー上の フォルダー *%programfiles%* \Microsoft Configuration Manager\AdminConsole\XmlStorage\Other にコピーします。  
 
     > [!IMPORTANT]  
     >  レポート モデル ファイルを Configuration Manager サイト サーバーにコピーした後は、まず Configuration Manager コンソールを終了し再起動しないと、**レポートの作成ウィザード**でレポート モデルを使用できません。  

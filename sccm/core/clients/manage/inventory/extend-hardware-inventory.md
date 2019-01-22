@@ -10,12 +10,12 @@ ms.assetid: d5bfab4f-c55e-4545-877c-5c8db8bc1891
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f1fa9f1bb2e036e0208a72e744f66da5c1887593
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 5679e74474d161250cd9cef1c2e4866a0702c521
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53423305"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316509"
 ---
 # <a name="how-to-extend-hardware-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager でのハードウェア インベントリの拡張方法
 
@@ -158,12 +158,12 @@ Configuration Manager 1802 以降、ハードウェア インベントリ プロ
 > [!IMPORTANT]  
 >  NOIDMIF ファイルを作成するときに、ANSI でエンコードされた形式で保存する必要があります。 NOIDMIF ファイルを UTF-8 でエンコードされた形式で保存すると、Configuration Manager で読み取ることができません。  
 
- NOIDMIF ファイルを作成したら、各クライアントの *%Windir%***\CCM\Inventory\Noidmifs** フォルダーに保存します。 Configuration Manager は、次回のスケジュールされたハードウェア インベントリ サイクル中に、このフォルダーの NODMIF ファイルから情報を収集します。  
+ NOIDMIF ファイルを作成したら、各クライアントの _%Windir%_**\CCM\Inventory\Noidmifs** フォルダーに保存します。 Configuration Manager は、次回のスケジュールされたハードウェア インベントリ サイクル中に、このフォルダーの NODMIF ファイルから情報を収集します。  
 
 ###  <a name="BKMK_IDMIF"></a> IDMIF ファイルを作成するには  
  IDMIF ファイルを使用すると、Configuration Manager では通常インベントリできない、特定のクライアント デバイスに関連付けられていない資産に関する情報を Configuration Manager データベースに追加できます。 たとえば、IDMIFS を使用して、プロジェクター、DVD プレーヤー、複写機、または構成マネージャー クライアントが含まれていないその他の機器に関する情報を収集できます。 IDMIF ファイルの作成の詳細については、Configuration Manager の SDK ドキュメントをご覧ください。  
 
- IDMIF ファイルを作成したら、クライアント コンピューターの *%Windir%***\CCM\Inventory\Idmifs** フォルダーに保存します。 Configuration Manager は、次回のスケジュールされたハードウェア インベントリ サイクル中に、このファイルから情報を収集します。 クラスを追加またはインポートして、ファイルに含まれる情報の新しいクラスを宣言する必要があります。  
+ IDMIF ファイルを作成したら、クライアント コンピューターの _%Windir%_**\CCM\Inventory\Idmifs** フォルダーに保存します。 Configuration Manager は、次回のスケジュールされたハードウェア インベントリ サイクル中に、このファイルから情報を収集します。 クラスを追加またはインポートして、ファイルに含まれる情報の新しいクラスを宣言する必要があります。  
 
 > [!NOTE]
 > MIF ファイルは大量のデータを格納することができ、このデータを収集するのはサイトのパフォーマンスに悪影響を与える場合があります。 MIF コレクションは必要なときだけ有効化し、ハードウェア インベントリ設定の **[カスタム MIF ファイルの最大サイズ (KB)]** オプションを構成します。 詳細については、「[System Center Configuration Manager のハードウェア インベントリの概要](introduction-to-hardware-inventory.md)」をご覧ください。
