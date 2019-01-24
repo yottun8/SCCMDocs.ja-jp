@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 666df71b32ea0dc95411b8ffd58d18f7666d7b23
-ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
+ms.openlocfilehash: 776d0a477d56a178927fb2d09866eacf63b4895a
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53444588"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342790"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>Configuration Manager でアプリケーションを承認する
 
@@ -69,6 +69,10 @@ Configuration Manager コンソールの **[ソフトウェア ライブラリ]*
 <!--1321550-->
 
 バージョン 1810 以降では、アプリケーションの承認を要求するメール通知を構成します。 ユーザーがアプリケーションを要求すると、管理者はメールを受け取ります。 メールのリンクをクリックして、要求を承認または拒否できます。Configuration Manager コンソールは必要ありません。
+
+アプリケーションの新しい展開の作成中、要求を承認または却下できるユーザーのメール アドレスを定義できます。 後でメール アドレスの一覧を変更しなければならなくなった場合、**[監視]** ワークスペースに移動し、**[アラート]** を展開し、**[サブスクリプション]** ノードを選択します。 アプリケーション展開に関連する **[電子メールでアプリケーションを承認する]** サブスクリプションの 1 つから **[プロパティ]** を選択します。 
+
+アラートが複数ある場合、アラートと展開の組み合わせを判断できます。 アラートのプロパティを開き、[全般] タブで **[選択した警告]** の一覧を表示します。このサブスクリプションのアラートとして展開が有効になっています。 
 
 
 ### <a name="prerequisites"></a>[前提条件]

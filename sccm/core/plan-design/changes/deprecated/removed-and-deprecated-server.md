@@ -1,8 +1,8 @@
 ---
-title: Configuration Manager サイト サーバーで非推奨とされた項目
+title: サイト サーバーの非推奨機能
 titleSuffix: Configuration Manager
-description: System Center Configuration Manager でサポートされなくなったサイト サーバーの製品およびオペレーティング システムについて説明します。
-ms.date: 01/25/2018
+description: Configuration Manager でサポートされなくなったサイト サーバーの製品およびオペレーティング システムについて説明します。
+ms.date: 01/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,37 +10,48 @@ ms.assetid: d53ac075-438b-41da-ab85-42f33982da0c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b92eb8083ce886fcab4d9957b2a79999d72a1a5a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c8ea24e141d0e01512ed81ca96e88f2f0f2d07bc
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332765"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342722"
 ---
-# <a name="removed-and-deprecated-for-system-center-configuration-manager-site-servers"></a>System Center Configuration Manager サイト サーバーから削除された項目と非推奨の項目
+# <a name="removed-and-deprecated-for-configuration-manager-site-servers"></a>Configuration Manager サイト サーバーで削除され、非推奨となったもの
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
-この記事では、System Center Configuration Manager サイト サーバーのサポート対象から削除されたか、今後の更新で削除される予定 (非推奨) の製品およびオペレーティング システムについて説明します。 この記事は、Configuration Manager の使用に影響する可能性のある将来の変更について早期に注意するものです。  
+この記事では、Configuration Manager サイト サーバーのサポート対象から削除されたか、今後の更新で削除される予定 (非推奨) の製品およびオペレーティング システムについて説明します。 Configuration Manager の使用に影響する可能性のある将来の変更について早期に注意するものです。  
 
-この情報は、今後のリリースで変更される可能性があります。また、非推奨の機能、製品、またはオペレーティング システムをすべて記載しているわけではありません。  
+この情報は将来、変更される可能性があります。 非推奨の機能、製品、オペレーティング システムにはここで取り上げられていないものもある可能性があります。  
 
 
-## <a name="deprecated-server-operating-systems"></a>非推奨のサーバー オペレーティング システム  
+
+## <a name="server-os"></a>サーバー OS  
 
 |**オペレーティング システム**|**最初に非推奨と発表**|**サポートの削除** |  
 |-|-|-| 
-|Windows Server 2008 R2|2015 年 7 月 10 日| バージョン 1702 (注 1 を参照)| 
-|Windows Server 2008|2015 年 7 月 10 日|バージョン 1511 </br></br>サイト システムとしてのサポートは削除されています  (注 2 を参照)。|  
+|Windows Server 2008 R2 SP1|2015 年 7 月 10 日| バージョン 1702 <sup>[注 1](#bkmk_note1)</sup>| 
+|Windows Server 2008 SP2|2015 年 7 月 10 日|バージョン 1511 <sup>[注 2](#bkmk_note2)</sup>|  
 
->[!NOTE]
->-   バージョン 1702 以降、Windows Server 2008 R2 はサイト サーバーまたはほとんどのサイト システムの役割に対してサポートされません。 ただし、1702 より前のバージョンでは、その使用は引き続きサポートされます。 このサポートの廃止が発表されるまで、またはこのオペレーティング システムの延長サポート期間が終了するまで、配布ポイントのサイト システムの役割 (プル配布ポイント、PXE およびマルチキャストの場合を含む) に対してこのオペレーティング システムは引き続きサポートされます。 バージョン 1602 より、サイト サーバーのオペレーティング システムを Windows Server 2008 R2 から Windows Server 2012 R2 にインプレース アップグレードできます。  
->- サイト サーバーのオペレーティング システムのインプレース アップグレードにについては、「[System Center Configuration Manager をサポートするオンプレミス インフラストラクチャのアップグレード](/sccm/core/servers/manage/upgrade-on-premises-infrastructure)」の「[Windows Server 2008 R2 を実行するサイト サーバーのオペレーティング システムのインプレース アップグレード](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#bkmk_from2008r2)」セクションを参照してください。
+#### <a name="bkmk_note1"></a> 注 1:Windows Server 2008 R2 SP1
+Windows Server 2008 R2 SP1 は、サイト サーバーやほとんどのサイト システムの役割に対してサポートされていません。 配布ポイントの役割に対しては、この OS は引き続きサポートされます。 このサポートには、プル配布ポイント、PXE、マルチキャストが含まれます。 
 
->[!NOTE]
->-   Windows Server 2008 は、サイト サーバーとして、または配布ポイントとプル配布ポイントを除くサイト システムの役割としてはサポートされていません。 サポートの廃止が発表されるまで、またはこのオペレーティング システムの拡張サポート期間が終了するまでは、このオペレーティング システムを配布ポイントとして使用し続けることができます。 詳細については、「[Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)」 (Windows Server 2008 で System Center Configuration Manager CB および LTSB のインストールに失敗する) を参照してください。
+> [!Important]  
+> Windows Server 2008 R2 SP1 の延長サポート終了日は、2020 年 1 月 14 日です。 この日以降、Configuration Manager はサイト システムの役割としてこの OS をサポートしません。 
 
-## <a name="deprecated-support-for-sql-server-versions-as-a-site-database"></a>サイト データベースとしてのサポートが非推奨とされた SQL Server バージョン  
+サイト サーバー OS は、Windows Server 2008 R2 から Windows Server 2012 R2 にアップグレードできます。 詳細については、「[Windows Server 2008 R2 を実行するサイト サーバーのオペレーティング システムのインプレース アップグレード](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#bkmk_from2008r2)」を参照してください。  
+
+
+#### <a name="bkmk_note2"></a> 注 2:Windows Server 2008 SP2
+Windows Server 2008 SP2 は、サイト サーバーやほとんどのサイト システムの役割に対してサポートされていません。 配布ポイントの役割に対しては、この OS は引き続きサポートされます。 このサポートには、プル配布ポイント、PXE、マルチキャストが含まれます。 
+
+> [!Important]  
+> Windows Server 2008 SP2 の延長サポート終了日は、2020 年 1 月 14 日です。 この日以降、Configuration Manager はサイト システムの役割としてこの OS をサポートしません。  
+
+
+
+## <a name="sql-server"></a>SQL Server   
 
 |**SQL Server バージョン**|**最初に非推奨と発表**|**サポートの削除**|   
 |-|-|-| 
@@ -49,13 +60,22 @@ ms.locfileid: "32332765"
 
 
 使用している SQL Server のバージョンをアップグレードする必要がある場合は、次の方法 (簡単な方法から順に示されています) を使用することをお勧めします。
-1. [SQL Server をインプレースでアップグレードします](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (推奨)。
-2. 新しいコンピューターに新バージョンの SQL Server をインストールします。 次に、Configuration Manager セットアップの[データベースの移動オプションを使用](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)して、サイト サーバーを新しい SQL Server にポイントします。
-3. [バックアップと回復](/sccm/protect/understand/backup-and-recovery)を使用します。
+
+1. [SQL Server をインプレースでアップグレードします](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server) (推奨)。  
+
+2. 新しいコンピューターに新バージョンの SQL Server をインストールします。 次に、Configuration Manager セットアップの[データベースの移動オプションを使用](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)し、サイト サーバーを新しい SQL Server にポイントします。  
+
+3. [バックアップと回復](/sccm/protect/understand/backup-and-recovery)を使用します。  
+
 
 
 ## <a name="more-information"></a>説明
-詳細については、次をご覧ください。
- - [削除と非推奨](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)
- - [Microsoft サポート ライフサイクル](https://support.microsoft.com/lifecycle) Web サイト
- - [Configuration Manager の Current Branch バージョンのサポート](/sccm/core/servers/manage/current-branch-versions-supported)
+
+詳細については、以下の記事を参照してください。 
+
+- [削除と非推奨](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)  
+
+- [マイクロソフト サポート ライフサイクル](https://support.microsoft.com/lifecycle)  
+
+- [Configuration Manager の Current Branch バージョンのサポート](/sccm/core/servers/manage/current-branch-versions-supported)  
+

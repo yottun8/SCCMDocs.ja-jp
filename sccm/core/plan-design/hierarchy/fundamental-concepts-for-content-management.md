@@ -10,16 +10,16 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b73ead1492b143260d327f428db5a6183f84434c
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 4a777ec74fb4006df056b4e69d7cbdfb380bcf72
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411342"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342756"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager でのコンテンツ管理の基本的な概念
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Configuration Manager では、ソフトウェア コンテンツを管理するためのツールとオプションの信頼性の高いシステムがサポートされます。 アプリケーション、パッケージ、ソフトウェア更新プログラム、OS の展開などのソフトウェアの展開にはすべてコンテンツが必要です。 Configuration Manager は、サイト サーバーと配布ポイントの両方にコンテンツを格納します。 このコンテンツを地点間で転送するときに、大きなネットワーク帯域幅が必要になります。 コンテンツ管理インフラストラクチャを効果的に計画および使用するには、まず、利用可能なオプションと構成を理解します。 その後、ネットワーク環境やコンテンツ展開ニーズに最適な使い方を検討します。  
 
@@ -57,7 +57,7 @@ Configuration Manager では、ソフトウェア コンテンツを管理する
 
 
 ## <a name="binary-differential-replication"></a>バイナリ差分レプリケーション  
- バイナリ差分レプリケーション (BDR) は、配布ポイントの前提条件です。 これは、デルタ レプリケーションとも呼ばれます。 以前に他のサイトまたはリモート配布ポイントに展開したコンテンツに更新プログラムを配布すると、帯域幅を減らすために BDR が自動的に使われます。  
+ バイナリ差分レプリケーション (BDR) は差分レプリケーションと呼ばれることもあります。 以前に他のサイトまたはリモート配布ポイントに展開したコンテンツに更新プログラムを配布する目的で使用されます。 配布ポイントに **Remote Differential Compression** 機能をインストールすると、BDR の使用時に帯域幅の使用を減らすことができます。 詳細については、「[配布ポイントの前提条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012dppreq)」を参照してください。
 
  BDR は、配布されたコンテンツの更新プログラムの送信に使われるネットワーク帯域幅を最小限に抑えます。 ファイルを変更するたびにコンテンツ ソース ファイルのセット全体が送信される代わりに、新しいまたは変更されたコンテンツのみが再送信します。  
 
@@ -173,9 +173,9 @@ Configuration Manager で新しい OS を展開するとき、タスク シー�
 
  基本的な (特殊化されていない) 配布ポイントは、標準配布ポイントとも呼ばれます。 標準配布ポイントには次の 2 つのバリエーションがあることに注目してください。  
 
--   **プル配布ポイント**: 配布ポイントが他の配布ポイント (ソース配布ポイント) からコンテンツを取得する、配布ポイントのバリエーションの 1 つ。 このプロセスは、クライアントが配布ポイントからコンテンツをダウンロードするのと同じです。 プル配布ポイントを使用すると、サイト サーバーが各配布ポイントにコンテンツを直接配布する必要があるときに発生するネットワーク帯域幅のボトルネックを解消することができます。 [プル配布ポイントを使う](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)。
+-   **プル配布ポイント**:配布ポイントが他の配布ポイント (ソース配布ポイント) からコンテンツを取得する、配布ポイントのバリエーションの 1 つ。 このプロセスは、クライアントが配布ポイントからコンテンツをダウンロードするのと同じです。 プル配布ポイントを使用すると、サイト サーバーが各配布ポイントにコンテンツを直接配布する必要があるときに発生するネットワーク帯域幅のボトルネックを解消することができます。 [プル配布ポイントを使う](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)。
 
--   **クラウド配布ポイント**: Microsoft Azure にインストールされている配布ポイントのバリエーションの 1 つ。 クラウド配布ポイントの使い方については、[こちら](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)を参照してください。  
+-   **クラウド配布ポイント**:Microsoft Azure にインストールされている配布ポイントのバリエーションの 1 つ。 クラウド配布ポイントの使い方については、[こちら](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)を参照してください。  
 
 
 標準配布ポイントは、さまざまな構成と機能をサポートします。  
@@ -236,9 +236,9 @@ Configuration Manager で新しい OS を展開するとき、タスク シー�
 ## <a name="network-bandwidth"></a>ネットワークの帯域幅  
  コンテンツを配布するときに使用されるネットワーク帯域幅を管理するために、次のオプションを使用できます。  
 
--   **事前設定されたコンテンツ**: ネットワーク経由でコンテンツを配布せずに、配布ポイントにコンテンツを転送。  
+-   **事前設定されたコンテンツ**:ネットワーク経由でコンテンツを配布せずに、配布ポイントにコンテンツを転送。  
 
--   **スケジュールと調整**: 配布ポイントにコンテンツを配布するタイミングと方法を制御するための構成。  
+-   **スケジュールと調整**:配布ポイントにコンテンツを配布するタイミングと方法を制御するための構成。  
 
 詳細については、「[ネットワーク帯域幅の管理](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)」を参照してください。
 

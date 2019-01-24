@@ -10,16 +10,16 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cde62242fc4db99d762d670037aad22bd25d6c00
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: e7a2801b7efa513b2b15a58a7a89eee5d4727a21
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456738"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342899"
 ---
 # <a name="task-sequence-variables-in-configuration-manager"></a>Configuration Manager でのタスク シーケンス変数
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 この記事では、使用できるすべての変数をアルファベット順で示します。 特定の変数を探すには、ブラウザーの**検索**機能 (通常は **Ctrl** + **F**) を使用してください。 変数では、特定のステップに固有かどうかが示されています。 [タスク シーケンスのステップ](/sccm/osd/understand/task-sequence-steps)に関する記事には、各ステップに固有の変数の一覧が含まれます。 
 
@@ -153,13 +153,13 @@ ms.locfileid: "52456738"
 
  次のいずれかの方法でタスク シーケンスが開始したことを指定します。  
 
- - **SMS**: Configuration Manager クライアント (ユーザーがソフトウェア センターから開始した場合など)
- - **UFD**: レガシ USB メディア
- - **UFD+FORMAT**: 新しい USB メディア
- - **CD**: 起動可能な CD
- - **DVD**: 起動可能な DVD
- - **PXE**: PXE によるネットワーク ブート
- - **HD**: ハード ディスク上の事前設定されたメディア
+ - **SMS**:Configuration Manager クライアント (ユーザーがソフトウェア センターから開始した場合など)
+ - **UFD**:レガシ USB メディア
+ - **UFD+FORMAT**:新しい USB メディア
+ - **CD**:起動可能な CD
+ - **DVD**:起動可能な DVD
+ - **PXE**:PXE によるネットワーク ブート
+ - **HD**:ハード ディスク上の事前設定されたメディア
 
 
 ### <a name="SMSTSLogPath"></a> _SMSTSLogPath
@@ -289,8 +289,8 @@ ms.locfileid: "52456738"
 
  現在実行中のタスク シーケンスの種類です。 次のいずれかの値になります。  
 
- - **1**: 一般タスク シーケンス
- - **2**: OS 展開のタスク シーケンス
+ - **1**:一般タスク シーケンス
+ - **2**:OS 展開のタスク シーケンス
 
 
 ### <a name="SMSTSUseCRL"></a> _SMSTSUseCRL
@@ -304,9 +304,9 @@ ms.locfileid: "52456738"
 
  この変数は次の値のいずれかを取ります。  
 
- - `true`: タスク シーケンスがユーザーによってソフトウェア センターから手動で開始されたことを示します。  
+ - `true`:タスク シーケンスがユーザーによってソフトウェア センターから手動で開始されたことを示します。  
 
- - `false`: タスク シーケンスが Configuration Manager スケジューラによって自動的に開始されたことを示します。
+ - `false`:タスク シーケンスが Configuration Manager スケジューラによって自動的に開始されたことを示します。
 
 
 ### <a name="SMSTSUseSSL"></a> _SMSTSUseSSL
@@ -334,7 +334,7 @@ ms.locfileid: "52456738"
 
  - **エラー**: [アプリケーションのインストール] ステップで、エラーのために少なくとも 1 つのアプリケーションが失敗しました。  
 
- - **Warning**: アプリケーションのインストール ステップでエラーは発生していません。 要件が満たされなかったため、1 つ以上のアプリケーション、または必要な依存関係がインストールされませんでした。  
+ - **警告**: アプリケーションのインストール ステップでエラーは発生していません。 要件が満たされなかったため、1 つ以上のアプリケーション、または必要な依存関係がインストールされませんでした。  
 
  - **成功**: [アプリケーションのインストール] ステップで、エラーや警告は検出されていません。  
 
@@ -347,7 +347,7 @@ ms.locfileid: "52456738"
 
  このタスク シーケンス変数は、"*配列*" 変数です。 配列内の各要素は、コンピューター上の単一ネットワーク アダプターの設定を表します。 各アダプターの設定にアクセスするには、配列変数名にゼロから始まるネットワーク アダプター インデックスとプロパティ名を組み合わせます。
 
- ネットワーク設定の適用ステップで複数のネットワーク アダプターを構成する場合、変数名のインデックス **1** を使用して、"*2 番目*" のネットワーク アダプターのプロパティが定義されます。 たとえば、OSDAdapter1EnableDHCP、OSDAdapter1IPAddressList、OSDAdapter1DNSDomain のようになります。
+ ネットワーク設定の適用ステップで複数のネットワーク アダプターを構成する場合、変数名のインデックス **1** を使用して、"*2 番目*" のネットワーク アダプターのプロパティが定義されます。 次に例を示します。OSDAdapter1EnableDHCP、OSDAdapter1IPAddressList、OSDAdapter1DNSDomain。
 
  次の変数名を使用して、ステップで構成する "*1 番目*" のネットワーク アダプターのプロパティを定義します。
 
@@ -392,9 +392,9 @@ ms.locfileid: "52456738"
 #### <a name="osdadapter0tcpipnetbiosoptions"></a>OSDAdapter0TcpipNetbiosOptions
  NetBIOS over TCP/IP のオプションです。 使用できる値は次のとおりです。  
 
- - `0`: DHCP サーバーから NetBIOS 設定を使用します  
- - `1`: NetBIOS over TCP/IP を有効にします  
- - `2`: NetBIOS over TCP/IP を無効にします  
+ - `0`:DHCP サーバーから NetBIOS 設定を使用します  
+ - `1`:［NetBIOS over TCP/IP を有効にする］  
+ - `2`:［NetBIOS over TCP/IP を無効にする］  
 
 #### <a name="osdadapter0enablewins"></a>OSDAdapter0EnableWINS
  名前解決に WINS を使用するには、`true` に設定します。
@@ -483,9 +483,9 @@ ms.locfileid: "52456738"
  ハードウェア デバイスと互換性のある複数のデバイス ドライバーがドライバー カタログにある場合は、この変数でステップのアクションが決定します。 
 
  #### <a name="valid-values"></a>有効な値
- - `true` (既定): 最適なデバイス ドライバーのみをインストールします。  
+ - `true` (既定):最適なデバイス ドライバーのみをインストールします。  
 
- - `false`: 互換性のあるすべてのデバイス ドライバーをインストールし、Windows で使用に最適なドライバーが選択されます。  
+ - `false`:互換性のあるすべてのデバイス ドライバーをインストールし、Windows で使用に最適なドライバーが選択されます。  
 
 
 ### <a name="OSDAutoApplyDriverCategoryList"></a> OSDAutoApplyDriverCategoryList
@@ -780,8 +780,8 @@ ms.locfileid: "52456738"
  対象コンピューターを Windows ドメインに参加させるか、ワークグループに参加させるかを指定します。 
 
  #### <a name="valid-values"></a>有効な値
- - `0`: 対象コンピューターを Windows ドメインに参加させます  
- - `1`: 対象コンピューターをワークグループに参加させます  
+ - `0`:対象コンピューターを Windows ドメインに参加させます  
+ - `1`:対象コンピューターをワークグループに参加させます  
 
 
 ### <a name="OSDJoinWorkgroupName"></a> OSDJoinWorkgroupName
@@ -952,9 +952,9 @@ ms.locfileid: "52456738"
  USMT によってキャプチャされたファイルをカスタマイズできます。 
 
  #### <a name="valid-values"></a>有効な値
- - `Simple`: タスク シーケンスでは標準の USMT 構成ファイルのみが使用されます  
+ - `Simple`:タスク シーケンスでは標準の USMT 構成ファイルのみが使用されます  
 
- - `Advanced`: タスク シーケンス変数 [OSDMigrateConfigFiles](#OSDMigrateConfigFiles) により、USMT が使用する構成ファイルが指定されます  
+ - `Advanced`:タスク シーケンス変数 [OSDMigrateConfigFiles](#OSDMigrateConfigFiles) により、USMT が使用する構成ファイルが指定されます  
 
 
 ### <a name="OSDMigrateNetworkMembership"></a> OSDMigrateNetworkMembership
@@ -1018,8 +1018,8 @@ ms.locfileid: "52456738"
  対象コンピューターを Active Directory ドメインに参加させるか、ワークグループに参加させるかを指定します。
 
  #### <a name="value-values"></a>値
- - `0`: Active Directory ドメインに参加します  
- - `1`: ワークグループに参加します
+ - `0`:Active Directory ドメインに参加します  
+ - `1`:ワークグループに参加
 
 
 ### <a name="OSDPartitions"></a> OSDPartitions
@@ -1056,7 +1056,7 @@ ms.locfileid: "52456738"
  #### <a name="osdpartitions0volumelettervariable"></a>OSDPartitions0VolumeLetterVariable
  このステップでパーティションを作成するときに、Windows PE で次に利用可能なドライブ文字が常に使用されます。 別のタスク シーケンス変数の名前を指定する場合は、この省略可能なプロパティを使用します。 ステップではこの変数を使用して、今後の参照用に新しいドライブ文字を保存します。
 
- このタスク シーケンス ステップで複数のパーティションを定義する場合、"*2 番目*" のパーティションのプロパティは変数名でインデックス **1** を使用して定義されます。 たとえば、**OSDPartitions1Type**、**OSDPartitions1FileSystem**、**OSDPartitions1Bootable**、**OSDPartitions1QuickFormat**、**OSDPartitions1VolumeName** のようになります。
+ このタスク シーケンス ステップで複数のパーティションを定義する場合、"*2 番目*" のパーティションのプロパティは変数名でインデックス **1** を使用して定義されます。 次に例を示します。**OSDPartitions1Type**、**OSDPartitions1FileSystem**、**OSDPartitions1Bootable**、**OSDPartitions1QuickFormat**、**OSDPartitions1VolumeName**。
 
 
 ### <a name="OSDPartitionStyle"></a> OSDPartitionStyle
@@ -1068,8 +1068,8 @@ ms.locfileid: "52456738"
  ディスクをパーティション分割するときに使用するパーティション スタイルを指定します。 
 
  #### <a name="valid-values"></a>有効な値
- - `GPT`: GUID パーティション テーブル スタイルを使用します
- - `MBR`: マスター ブート レコード パーティション スタイルを使用します
+ - `GPT`:GUID パーティション テーブル スタイルを使用します
+ - `MBR`:マスター ブート レコード パーティション スタイルを使用します
 
 
 ### <a name="OSDProductKey"></a> OSDProductKey
@@ -1090,9 +1090,9 @@ ms.locfileid: "52456738"
  新しい OS のローカル管理者アカウントにランダム生成パスワードを使用するかどうかを指定します。 
 
  #### <a name="valid-values"></a>有効な値
- - `true` (既定): Windows セットアップで対象コンピューターのローカル管理者アカウントが無効になります  
+ - `true` (既定):Windows セットアップで対象コンピューターのローカル管理者アカウントが無効になります  
 
- - `false`: Windows セットアップで対象コンピューターのローカル管理者アカウントが有効になり、アカウント パスワードが [OSDLocalAdminPassword](#OSDLocalAdminPassword) の値に設定されます  
+ - `false`:Windows セットアップで対象コンピューターのローカル管理者アカウントが有効になり、アカウント パスワードが [OSDLocalAdminPassword](#OSDLocalAdminPassword) の値に設定されます  
 
 
 ### <a name="OSDRegisteredOrgName-input"></a> OSDRegisteredOrgName (input)
@@ -1349,8 +1349,8 @@ ms.locfileid: "52456738"
  コンピューターが再起動される前にユーザーに警告を表示する秒数を指定します。 
 
  #### <a name="examples"></a>例
- - `0` (既定): 再起動メッセージを表示しません  
- - `60`: 1 分間の警告を表示します  
+ - `0` (既定):再起動メッセージを表示しません  
+ - `60`:1 分間の警告を表示します  
 
 
 ### <a name="SMSTSAssignmentsDownloadInterval"></a> SMSTSAssignmentsDownloadInterval
@@ -1371,11 +1371,11 @@ ms.locfileid: "52456738"
 
  タスク シーケンスがユーザーを対象コンピューターと関連付ける方法を示します。 変数に次のいずれかの値を設定します。  
 
- - **Auto**: タスク シーケンスは、対象のコンピューターに OS を展開するとき、指定されたユーザーと対象のコンピューターの間に関係を作成します。  
+ - **Auto**:タスク シーケンスは、対象のコンピューターに OS を展開するとき、指定されたユーザーと対象のコンピューターの間に関係を作成します。  
 
- - **Pending**: タスク シーケンスは、指定されたユーザーと対象のコンピューターの間に関係を作成します。 管理者は関係を承認して設定する必要があります。  
+ - **Pending**:タスク シーケンスは、指定されたユーザーと対象のコンピューターの間に関係を作成します。 管理者は関係を承認して設定する必要があります。  
 
- - **Disabled**: タスク シーケンスは、OS の展開時にユーザーを対象のコンピューターに関連付けません。
+ - **Disabled**:タスク シーケンスは、OS の展開時にユーザーを対象のコンピューターに関連付けません。
 
 
 ### <a name="SMSTSDisableStatusRetry"></a> SMSTSDisableStatusRetry
@@ -1580,6 +1580,8 @@ ms.locfileid: "52456738"
 
  このステップにおけるソフトウェア更新プログラムのスキャンのタイムアウトを制御します。 たとえば、スキャン中に多数の更新プログラムが予想される場合は、この値を増やします。 既定値は `1800` 秒 (30 分) です。 変数値は秒単位で設定されます。
 
+> [!NOTE] 
+> バージョン 1802 以降の既定値は `3600` 秒 (60 分) です。
 
 ### <a name="SMSTSUDAUsers"></a> SMSTSUDAUsers
 
@@ -1605,9 +1607,9 @@ ms.locfileid: "52456738"
 ### <a name="TSDisableProgressUI"></a> TSDisableProgressUI
  <!-- 1354291 --> この変数を使って、タスク シーケンスが進行状況をエンド ユーザーに表示するタイミングを制御します。 異なる時点で進行状況の非表示または表示を切り替えるには、タスク シーケンス内で複数回この変数を設定します。  
 
- - `true`: タスク シーケンスの進行状況を非表示にします  
+ - `true`:タスク シーケンスの進行状況を非表示にする  
 
- - `false`: タスク シーケンスの進行状況を表示します  
+ - `false`:タスク シーケンスの進行状況を表示します  
 
 
 ### <a name="TSErrorOnWarning"></a> TSErrorOnWarning 
@@ -1637,11 +1639,11 @@ ms.locfileid: "52456738"
 
 以下の変数は非推奨です。
 
-- **OSDAllowUnsignedDriver**: Windows Vista 以降のオペレーティング システムの展開時には使用されません
-- **OSDBuildStorageDriverList**: Windows XP および Windows Server 2003 にのみ適用されます
-- **OSDDiskpartBiosCompatibilityMode**: Windows XP または Windows Server 2003 を展開する場合にのみ必要です
-- **OSDInstallEditionIndex**: Windows Vista より後では必要ありません
-- **OSDPreserveDriveLetter**: 詳しくは、「[OSDPreserveDriveLetter](#OSDPreserveDriveLetter)」をご覧ください
+- **OSDAllowUnsignedDriver**:Windows Vista 以降のオペレーティング システムの展開時には使用されません
+- **OSDBuildStorageDriverList**:Windows XP および Windows Server 2003 にのみ適用されます
+- **OSDDiskpartBiosCompatibilityMode**:Windows XP または Windows Server 2003 を展開する場合にのみ必要です
+- **OSDInstallEditionIndex**:Windows Vista より後のモデルでは必要ありません
+- **OSDPreserveDriveLetter**:詳しくは、「[OSDPreserveDriveLetter](#OSDPreserveDriveLetter)」をご覧ください
 
 ### <a name="osdpreservedriveletter"></a>OSDPreserveDriveLetter
 

@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 85bd23130826c7ca23e10125efba58bf14555fb1
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 2027bf271a39dbe577580fa547ff09a4bd3483a8
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424223"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342739"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>Configuration Manager でのリアルタイム データ用の CMPivot
 
@@ -35,7 +35,7 @@ Configuration Manager では、レポートを目的として顧客が使用す�
 
 - 対象のデバイスを、Configuration Manager クライアントの最新バージョンにアップグレードします。  
 
-- Configuration Manager の管理者には、**[SMS スクリプト]** オブジェクトの **[読み取り]** アクセス許可、**[コレクション]** の **[スクリプトの実行]** アクセス許可、既定のスコープが必要です。 **[Scripts Runner]\(スクリプト実行\)** ロールには、これらのアクセス許可があります。 詳細については、[スクリプトのセキュリティ ロール](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_ScriptRoles)に関するセクションを参照してください。  
+- Configuration Manager の管理者には、**[SMS スクリプト]** オブジェクトの **[読み取り]** アクセス許可、**[コレクション]** の **[スクリプトの実行]** アクセス許可、既定のスコープが必要です。 **スクリプト ランナー** ロールには、既定では作成されない、3 つのアクセス許可が与えられます。 このカスタム セキュリティ ロールの作成方法については、「[スクリプトのセキュリティ ロール](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_ScriptRoles)」を参照してください。  
 
 - 次のエンティティのデータを収集するには、ターゲット クライアントに PowerShell バージョン 5.0 が必要です。  
     - 管理者

@@ -10,16 +10,16 @@ ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 54034ec94ad2a0ea2b7ce095d9da669aea02f0b3
-ms.sourcegitcommit: 702e6017b6dee4629b67bb9f3bd5d9b5a889ebee
+ms.openlocfilehash: 9f6b10706638a476242051757145f725b262a7fc
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37340228"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316441"
 ---
 # <a name="language-packs-in-configuration-manager"></a>Configuration Manager の言語パック
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 この記事では、Configuration Manager の言語サポートに関する技術的な詳細情報について説明します。 Configuration Manager のサイト サーバーとクライアントは、言語に依存しないと見なされます。 中央管理サイトおよびプライマリ サイトに **サーバー言語パック** または **クライアント言語パック** をインストールすることで、表示言語のサポートを追加できます。 サイトのインストール中、そのサイトでサポートするサーバーとクライアントの言語を利用可能な言語パック ファイルから選びます。
  
@@ -31,9 +31,9 @@ ms.locfileid: "37340228"
 
 次のコンポーネントに一致する言語のサポートをインストールする場合について:  
 
-- コンピューターの表示言語: Configuration Manager コンソールおよびそのコンピューターで実行されるクライアント ユーザー インターフェイスの両方において、その言語で情報が表示されます。  
+- コンピューターの表示言語:Configuration Manager コンソールおよびそのコンピューターで実行されるクライアント ユーザー インターフェイスの両方において、その言語で情報が表示されます。  
 
-- コンピューターの Web ブラウザーで使用している言語設定: アプリケーション カタログや SQL Server Reporting Services などの Web ベースの情報への接続時に、その言語で情報が表示されます。  
+- コンピューターの Web ブラウザーで使用している言語設定:アプリケーション カタログや SQL Server Reporting Services などの Web ベースの情報への接続時に、その言語で情報が表示されます。  
 
 
 Configuration Manager のセットアップを実行すると、前提条件および再配布可能なファイルの一部として、言語パック ファイルがダウンロードされます。 [セットアップ ダウンローダー](setup-downloader.md)を使用して、セットアップを実行する前にこれらのファイルをダウンロードすることもできます。   
@@ -47,7 +47,6 @@ Configuration Manager のセットアップを実行すると、前提条件お�
 |サーバーの言語|ロケール ID (LCID)|3 文字コード|  
 |---------------------|------------------------|-----------------------|  
 |英語 (既定)|0409|ENU|  
-|中国語 (繁体字、香港特別行政区)|0c04|ZHH|  
 |中国語 (簡体字)|0804|CHS|  
 |中国語 (繁体字、台湾)|0404|CHT|  
 |チェコ語|0405|CSY|  
@@ -75,7 +74,6 @@ Configuration Manager のセットアップを実行すると、前提条件お�
 |クライアントの言語|ロケール ID (LCID)|3 文字コード|  
 |---------------------|------------------------|-----------------------|  
 |英語 (既定)|0409|ENG|  
-|中国語 (繁体字、香港特別行政区)|0c04|ZHH|  
 |中国語 - 簡体字|0804|CHS|  
 |中国語 (繁体字、台湾)|0404|CHT|  
 |チェコ語|0405|CSY|  

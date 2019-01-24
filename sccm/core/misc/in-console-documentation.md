@@ -1,6 +1,6 @@
 ---
 title: コンソール内ドキュメント
-ms.date: 11/30/2018
+ms.date: 01/14/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: 151862c390518cf68450c3eb3727a777bc575c5a
-ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.openlocfilehash: f5bb59cb5912ef638058b09d90132a579a7e651c
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54250648"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316407"
 ---
 <!-- 
 - Feature 1357546
@@ -51,20 +51,20 @@ ms.locfileid: "54250648"
 
 
 ## <a name="trending"></a>トレンド
-2018 年 11 月に最も人気があった記事。
+2018 年 12 月に最も人気があった記事。
 
  | ページ ビュー | タイトル | 
  |------------|-------| 
- | 16701 | [トラブルシューティングのためのログ ファイル](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) | 
- | 11417 | [バージョン 1806 の新機能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
- | 8346 | [接続に使用するポート](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) | 
- | 8038 | [Windows にクライアントを展開する](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) | 
- | 7104 | [Windows 10 のサポート](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) | 
- | 6957 | [コンソールをインストールする](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) | 
- | 6765 | [クライアント インストール パラメーターとプロパティ](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) | 
- | 6091 | [Windows 10 デバイスの共同管理](https://docs.microsoft.com/sccm/comanage/overview) | 
- | 6043 | [アプリケーションの展開](https://docs.microsoft.com/sccm/apps/deploy-use/deploy-applications) | 
- | 5833 | [配布ポイントの管理](https://docs.microsoft.com/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) | 
+ | 16430 | [トラブルシューティングのためのログ ファイル](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+ | 15155 | [バージョン 1810 の新機能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
+ | 8581 | [Windows にクライアントを展開する](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+ | 7866 | [接続に使用するポート](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+ | 7434 | [Windows 10 のサポート](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+ | 7088 | [バージョン 1806 の新機能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+ | 7086 | [クライアント インストール パラメーターとプロパティ](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
+ | 6914 | [コンソールをインストールする](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
+ | 6087 | [アプリケーションの展開](https://docs.microsoft.com/sccm/apps/deploy-use/deploy-applications) |
+ | 5817 | [更新プログラムとサービス](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
 
 
 
@@ -73,16 +73,16 @@ ms.locfileid: "54250648"
 
  | 最終確認 | タイトル | 
  |---------------|-------|
- | 2018 年 11 月 27 日 | [アプリケーションの承認](https://docs.microsoft.com/sccm/apps/deploy-use/app-approval) | 
- | 2018 年 11 月 27 日 | [境界グループの手順](https://docs.microsoft.com/sccm/core/servers/deploy/configure/boundary-group-procedures) | 
- | 2018 年 11 月 27 日 | [サポート センター](https://docs.microsoft.com/sccm/core/support/support-center) | 
- | 2018 年 11 月 26 日 | [クラウド管理ゲートウェイの計画](https://docs.microsoft.com/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) | 
- | 2018 年 11 月 16 日 | [ソフトウェア更新プログラムの展開](https://docs.microsoft.com/sccm/sum/deploy-use/deploy-software-updates) | 
- | 2018 年 11 月 16 日 | [クライアント通知](https://docs.microsoft.com/sccm/core/clients/manage/client-notification) | 
- | 2018 年 11 月 15 日 | [Add-CMScriptDeploymentType](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmscriptdeploymenttype) | 
- | 2018 年 11 月 15 日 | [Set-CMScriptDeploymentType](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmscriptdeploymenttype) | 
- | 2018 年 11 月 15 日 | [Invoke-CMScript](https://docs.microsoft.com/powershell/module/configurationmanager/invoke-cmscript) | 
- | 2018 年 11 月 15 日 | [Get-CMScript](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmscript) | 
+ | 12/26/2018 | [Intune でのユーザーの移行を準備する](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-prepare-intune) |
+ | 12/21/2018 | [非推奨の機能](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
+ | 12/21/2018 | [リリース ノート](https://docs.microsoft.com/sccm/core/servers/deploy/install/release-notes) |
+ | 12/21/2018 | [Windows Hello for Business の設定](https://docs.microsoft.com/sccm/mdm/deploy-use/windows-hello-for-business-settings) |
+ | 12/20/2018 | [ソフトウェア更新プログラムの同期の管理](https://docs.microsoft.com/sccm/sum/get-started/synchronize-software-updates) |
+ | 12/14/2018 | [前提条件の確認](https://docs.microsoft.com/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
+ | 12/14/2018 | [Technical Preview リリース](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
+ | 12/14/2018 | [Technical Preview 1812](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1812) |
+ | 12/14/2018 | [アプリケーションの承認](https://docs.microsoft.com/sccm/apps/deploy-use/app-approval) |
+ | 12/14/2018 | [ハイブリッド MDM の新機能](https://docs.microsoft.com/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
 
 
 
@@ -99,14 +99,13 @@ Configuration Manager のコンポーネントと機能のトラブルシュー�
 
 
 ## <a name="new-and-updated-support-articles"></a>新規および更新のサポートに関する記事
-2018 年 11 月の新規または更新のサポートに関する記事。
+2018 年 12 月の新規または更新のサポートに関する記事。
 
-- [KB 4468362:Configuration Manager で Windows 言語パックをアプリケーションとして展開する方法](https://support.microsoft.com/help/4468362)
-- [KB 4469580:自己署名証明書が作成されていないため、ConfigMgr PXE が機能しない](https://support.microsoft.com/help/4469580/)
+- [KB 4040243:Configuration Manager で TLS 1.2 を有効にする方法](https://support.microsoft.com/help/4040243)
+- [KB 4477073:更新プログラムのインストール時に発生するエラー 0x800f0831](https://support.microsoft.com/help/4477073)
 - [KB 4471003:別のネットワークにある PXE サーバーから起動する方法](https://support.microsoft.com/help/4471003)
-- [KB 4462978:System Center Configuration Manager Current Branch バージョン 1806 の更新プログラムのロールアップ](https://support.microsoft.com/help/4462978)
-- [KB 4471061:クライアント コンピューターは、イメージング中に不明なコンピューター オブジェクトの Configuration Manager GUID を "盗む" ことができる](https://support.microsoft.com/help/4471061)
-- [KB 4471115:Windows PE でタスク シーケンス ウィザードが実行されていると、Configuration Manager で動的メディアが管理ポイントの場所を取得できない](https://support.microsoft.com/help/4471115)
+- [KB 4474026:Configuration Manager で BitLocker の有効化に失敗し、エラー 80070057 が表示される](https://support.microsoft.com/help/4474026)
+- [KB 4483868:Azure のサブスクリプション レベルで Web アプリに対して共同作成者ロールが割り当てられない](https://support.microsoft.com/help/4483868)
 
 
 新規 Configuration Manager サポート記事の Atom または RSS 通知をサブスクライブするには、「[サポート コンテンツの更新情報](https://support.microsoft.com/help/4089498/)」を参照して、**[System Center Configuration Manager]** を選択します。  
