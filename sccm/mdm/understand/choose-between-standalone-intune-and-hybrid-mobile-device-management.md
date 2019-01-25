@@ -1,7 +1,7 @@
 ---
-title: Intune スタンドアロンまたはハイブリッド MDM の選択
+title: Intune スタンドアロンを選択します。
 titleSuffix: Configuration Manager
-description: Intune と Configuration Manager を使用してハイブリッド モバイル デバイス管理を展開するか、Intune スタンドアロンを実行するかを選択します。
+description: Intune スタンドアロンを選択します。
 ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -10,75 +10,77 @@ ms.assetid: 73ff9bb9-e605-4b68-92a1-487684fed42d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: 153c1208cef8a940cc06412322e8112d53d17e58
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
-ms.translationtype: HT
+ROBOTS: NOINDEX
+ms.openlocfilehash: 32c28eef77976d83f881a17595fb5e9ec4bb08d4
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584415"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898292"
 ---
 # <a name="choose-between-microsoft-intune-standalone-and-hybrid-mdm-with-configuration-manager"></a>Microsoft Intune スタンドアロンまたは Configuration Manager とのハイブリッド MDM を選択する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
-
-Microsoft Intune によるモバイル デバイス管理 (MDM) について最もよく寄せられる質問の 1 つは、"Intune と Configuration Manager を統合するべきか (ハイブリッド MDM)、クラウドのみの構成で Intune スタンドアロンを実行すべきか" というものです。 
-
-Azure 上の Intune は、Microsoft が推奨する MDM ソリューションです。     
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 
-> [!Important]  
-> 2018 年 8 月 14 日の時点では、ハイブリッド モバイル デバイス管理は[非推奨の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)です。 詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。<!--Intune feature 2683117-->  
+ハイブリッド モバイル デバイス管理 (MDM) は、2018 年 8 月 14 日の時点で、[非推奨の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)します。 Azure 上の Intune は、Microsoft が推奨する MDM ソリューションです。  
+
+詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。<!--Intune feature 2683117-->  
+
+
+<!--
+One of the most commonly asked questions regarding mobile device management (MDM) with Microsoft Intune is "Should I integrate Intune with Configuration Manager (hybrid MDM) or run Intune standalone in the cloud only configuration?" 
+
 
 
  
-## <a name="intune-standalone"></a>Intune スタンドアロン
+## Intune standalone
 
-Intune スタンドアロンは、Microsoft が推奨する展開トポロジです。 Intune スタンドアロンはクラウドのみの MDM ソリューションであり、世界中のどこからでもアクセスできる Web コンソールを使用して管理します。 Intune のデータ センターは、北米、ヨーロッパ、アジアでホストされています。 Intune はクラウド サービスであるため、すばやくデバイスに Intune 管理を展開できます。
+Intune standalone is Microsoft’s recommended deployment topology. Intune standalone is a cloud-only MDM solution that you manage using a web console accessed from anywhere in the world. Intune data centers are hosted in North America, Europe, and Asia. Because Intune is a cloud service, you can quickly deploy Intune management to your devices.
 
-オンプロミスのコンポーネントへの依存関係がないため、スタンドアロン トポロジの方が早く簡単に展開できると感じるお客様は多くおられます。 現在、Intune スタンドアロンは Microsoft Azure クラウド プラットフォームに移行し、次のような高度な機能を数多く提供しています。  
+Customers generally find it faster and easier to deploy the standalone topology because there's no dependency for on-premise components. Intune standalone is now on the Microsoft Azure cloud platform and provides many advanced features, such as:  
 
-- 統合エンタープライズ モビリティ管理プラットフォーム: Intune、Azure AD Premium、Azure Information Protection 向けの Azure portal での統合されたクラウド プラットフォームおよび管理者エクスペリエンスです  
+- Integrated enterprise mobility management platform: An integrated cloud platform and admin experience in Azure portal for Intune, Azure AD Premium, and Azure Information Protection  
 
-- モバイル デバイス管理: モバイル デバイスの豊富な管理機能および情報保護機能です  
+- Mobile device management: Rich mobile device management and information protection capabilities  
 
-- スケーリング: スケーリングの心配をすることなく、モバイル デバイスの展開および管理が可能です  
+- Scale: Deploy and manage mobile devices without worrying about scale  
 
-- ロール ベースのアクセス制御: 割り当てられた役割やスコープに基づき、管理機能へのアクセスを制限します  
+- Role-based access control: Restrict access to administrative functions based on assigned roles and scopes  
 
-- プログラムによるアクセス (API): Microsoft Graph API サポート、および SDK と PowerShell の管理オプションです  
+- Programmatic access (API): Microsoft Graph API support, and SDK and PowerShell management options  
 
-- Web コンソール: 最新の Web ブラウザーに対応した、Web 標準を基盤とする HTML 5 ベースのコンソールです  
+- Web console: An HTML 5-based console built on web standards with support for most modern web browsers  
 
-- 高度なレポート機能: カスタマイズされたレポートを作成する機能です  
+- Advanced reporting: Ability to create customized reports  
 
-- 機敏性: 新しい機能を簡単にセットアップし、迅速に配信できます  
+- Agility: Simple setup and rapid delivery of new capabilities  
 
 
 
-## <a name="hybrid-mdm-with-configuration-manager"></a>Configuration Manager とのハイブリッド MDM
+## Hybrid MDM with Configuration Manager
 
 > [!Important]  
-> 2018 年 8 月 14 日の時点では、ハイブリッド モバイル デバイス管理は[非推奨の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)です。 詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。  
+> As of August 14, 2018, hybrid mobile device management is a [deprecated feature](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures). For more information, see [What is hybrid MDM](/sccm/mdm/understand/hybrid-mobile-device-management).  
 
-ハイブリッド MDM は、Intune のモバイル デバイス管理機能を Configuration Manager に統合するソリューションです。 ポリシー、プロファイル、アプリケーションをデバイスに配信するためのチャネルとして Intune を利用し、Configuration Manager のオンプレミス インフラストラクチャを使用してコンテンツとデバイスを管理します。 ハイブリッドを導入すると、"1 枚のガラス窓" から制御できます。 これはつまり、同じオンプレミス インフラストラクチャと管理コンソールを利用して、Intune でモバイル デバイスを管理しつつ、従来の Configuration Manager クライアントで PC やサーバーを管理できるということです。 
+Hybrid MDM is a solution that integrates Intune's mobile device management capabilities into Configuration Manager. It uses Intune as the delivery channel for policies, profiles, and applications to devices but uses Configuration Manager on-premises infrastructure to administer content and manage the devices. A hybrid implementation gives you "single pane of glass" control. This means you can use the same on-premises infrastructure and administrative console to manage mobile devices with Intune as well as PCs and servers with the traditional Configuration Manager client. 
 
-ハイブリッド MDM を選択する理由には、次のようなものが挙げられます。  
+You may choose hybrid MDM for the following reasons:  
 
-- Intune に登録されているモバイル デバイスと、Configuration Manager クライアントで管理しているデバイスの両方を、同じ管理コンソールから管理したい  
+- You want to manage both mobile devices enrolled in Intune and devices managed with the Configuration Manager client from the same administrative console  
 
-- ご利用のインフラストラクチャで、モバイル デバイスへの証明書の配信に複数の NDES サーバーが必要  
+- Your infrastructure requires that you have multiple NDES servers for certificate delivery to mobile devices  
 
-- ご利用のインフラストラクチャで、複数の Exchange コネクタが必要  
+- Your infrastructure requires that you have multiple Exchange connectors  
 
-- S/MIME 暗号化サポートが必要
+- You require S/MIME encryption support
 
 > [!Note]  
-> オンプレミスの Exchange による条件付きアクセスのために Configuration Manager でハイブリッド MDM を設定した場合でも、ユーザーは Outlook for iOS 用および Outlook for Android でメールにアクセスできます。 Intune スタンドアロンでこれと同じように構成すると、メールはこれらのクライアントに対してブロックされます。<!--Intune bug 2285890-->  
+> If you set up hybrid MDM in Configuration Manager for conditional access with on-premises Exchange, users can still access email in Outlook for iOS and Android. This same configuration with Intune standalone blocks email for these clients.<!--Intune bug 2285890-->  
 
 
 
-## <a name="change-the-mdm-authority"></a>MDM 機関を変更する
+#### <a name="change-the-mdm-authority"></a>MDM 機関を変更する
 
-MDM 機関の設定を変更する必要がある場合は、Microsoft サポートに連絡しなくても、また、既存のマネージド デバイスの登録を解除して再登録しなくても、お客様自身で変更できます。 詳細については、「[Change your MDM authority](/sccm/mdm/deploy-use/change-mdm-authority)」(MDM 機関を変更する) を参照してください。
+MDM 機関の設定を変更する必要がある場合は、Microsoft サポートに連絡しなくても、また、既存のマネージド デバイスの登録を解除して再登録しなくても、お客様自身で変更できます。 詳細については、次を参照してください。 [、MDM 機関を変更](/sccm/mdm/deploy-use/change-mdm-authority)します。
 

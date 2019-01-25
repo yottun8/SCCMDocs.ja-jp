@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 610dfb7391347663fd92c0839d20eb7a4a703438
-ms.sourcegitcommit: c80abe7e4b7b2f80e957e45ff205f67d1b715688
+ms.openlocfilehash: 1ec1155ec578e0eab957baa991628ed18eef6c62
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226225"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898649"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -435,8 +435,8 @@ Windows 10 バージョン 1607 以降を利用しているエンド ユーザ�
 
 - **新しいモバイル アプリケーション管理ポリシーの設定**     
   次の設定がモバイル アプリケーション管理ポリシーの設定に追加されました。
-  - **連絡先の同期を無効にする**:アプリでデバイス上のネイティブ連絡先アプリにデータを保存できなくなります。
-  - **印刷を無効にする**:アプリで職場または学校のデータを印刷できなくなります。
+  - **連絡先の同期を無効にする**: アプリでデバイス上のネイティブ連絡先アプリにデータを保存できなくなります。
+  - **印刷を無効にする**: アプリで職場または学校のデータを印刷できなくなります。
   <!-- 1324760 -->    
 
   「[Configuration Manager のモバイル アプリケーション管理ポリシーを使ったアプリの保護](/sccm/mdm/deploy-use/protect-apps-using-mam-policies)」を参照し、新しいアプリの保護のポリシー設定を試してください。
@@ -592,24 +592,24 @@ macOS 10.12 以降は現在、以下でサポートされています。
 詳細については、「[ポータル サイト アプリで Intune に macOS デバイスを登録する](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp)」を参照してください。
 
 
-### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>変更を計画します。Premier の顧客をエクスペリエンスの新しい Intune のサポート 
+### <a name="intune-support-experience-for-premier-customers-now-in-azure-instead-of-mpo"></a>Premier の MPO はなく Azure の顧客をエクスペリエンスの Intune のサポート  
 <!--2828727-->
 
-2018 年 12 月 4 日の更新:このプロセスを改善しようとしています。 年 12 月 3 日に MPO でサポート リクエストの作成を無効にならないでしょう。 メッセージ センターから知っているし、この変更のタイムラインを共有するには、すぐにこの投稿を更新するお知らせします。
-
-Microsoft Premier のお客様では、現在使用できます、 [Microsoft Premier オンライン (MPO) ポータル](https://premier.microsoft.com)と[Azure での Intune](https://portal.azure.com) Intune のサポート要求を作成します。 2018 年 12 月 3 日以降、Premier サポートを引き続き強化するには、Azure での Intune でのみサポート要求を作成できます。
+MC147649 の 9 月、12 月に Microsoft Premier オンライン (MPO) ポータル (premier.microsoft.com) から Intune サポート要求を作成する機能を削除する共有。 次に、若干の遅延の後、1 月の最後にリダイレクトされます Azure での Intune でのみサポート要求を作成します。
 
 #### <a name="how-does-this-affect-me"></a>ユーザーへの影響
-12 月 3 日以降、MPO ではサポート要求を作成できません。 作成しようとすると、Azure での Intune へのリダイレクトを拒否できないと表示されます。 Azure portal でサポート要求を作成するとき、Intune 専用の Microsoft サポートにルーティングされます。 迅速に問題が診断され、解決されます。 MPO ポータルでサポート要求を作成する場合、Azure portal でそれを表示できません。 サポート要求の作成は、Azure での Intune でのみ開始してください。  
+Premier の強化を続行する、1 月の終了後、エクスペリエンスをサポート MPO でサポート要求を作成することはできません。 この操作を実行するときは、Azure での Intune にリダイレクトしていますを無視することはできません、プロンプトを確認します。 ここでは、Intune 専用の Microsoft サポートにルーティングがサポート要求を作成できます。 これらのサポート エンジニアが診断および適切なタイミングで問題が解決されます。 MPO ポータルで作成した Azure portal でサポート要求を表示することはできません。
 
-ハイブリッド MDM (ハイブリッド モバイル デバイス管理) を使用するか、共同管理を使用する場合、引き続き MPO を使用して Configuration Manager のサポート要求を作成しますが、Intune のサポート要求作成には Azure portal を使用してください。 もう一度お伝えしますが、ハイブリッド MDM は非推奨になりました。Azure での Intune への移行をできるだけ早く計画してください。 詳細については、「[Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification)」 (ハイブリッド MDM から Azure での Intune に移行する) を参照してください。
+Azure のポータルでは、MC171941 で最近発表したように、新しいエクスペリエンスをサポートがあります。 詳細については、次を参照してください。 [Microsoft Intune のサポートを受ける方法](https://aka.ms/new_support_experience)します。
 
-役割としてグローバル管理者、Intune サービス管理者、サービス サポート管理者が与えられているユーザーのみが Azure portal でサポート チケットを作成できます。
+ハイブリッド MDM または共同管理を使用する場合は、MPO を使用して、Configuration Manager のサポート要求を作成する続行します。 Azure portal を使用すると、Intune のサポート要求を作成できます。 もう一度お伝えしますが、ハイブリッド MDM は非推奨になりました。Azure での Intune への移行をできるだけ早く計画してください。 詳細については、「[Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification)」 (ハイブリッド MDM から Azure での Intune に移行する) を参照してください。
+
+グローバル管理者、Intune サービス管理者、およびサービス サポート管理者の役割を持つユーザーだけでは、Azure portal でサポート チケットを作成できます。
 
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>この変更に対して必要な準備
 - Intune 関連のサポート要求に MPO を使用することを止めます。 Azure での Intune を使用し、Intune のすべてのサポート要求を作成し、管理します。  
 - ヘルプデスクに通知し、必要に応じてドキュメントを更新します。  
-- グローバル管理者または Intune サービス管理者の役割を持たないユーザーが現在、MPO でサポート要求を作成している場合、Azure Active Directory でそれらのユーザーにサービス サポート管理者の役割を与えてください。 Azure portal でサポート チケットを作成する目的で、ユーザーはこれらの役割の 1 つを必要とします。  
+- MPO でサポート要求を現在作成中のグローバル管理者または Intune サービス管理者のロールがないユーザーが存在する場合により Azure Active Directory でのサービス サポート管理者ロールと割り当てます。 Azure portal でサポート チケットを作成する目的で、ユーザーはこれらの役割の 1 つを必要とします。  
 
 #### <a name="additional-information"></a>追加情報
 詳細については、[Microsoft Intune サポート チームのブログ投稿](https://aka.ms/IntuneSupport_MPO_to_Azure)を参照してください。
