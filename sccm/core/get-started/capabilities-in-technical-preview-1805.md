@@ -10,16 +10,17 @@ ms.assetid: 7996b3eb-5259-483b-af40-adae2943d123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebd51b397e37c69e8f6e8d1e154fc369347bd63a
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ROBOTS: NOINDEX
+ms.openlocfilehash: 6108a6d90a18277275e50ba980a9d81099ba116a
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229366"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898496"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1805 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、Configuration Manager の Technical Preview バージョン 1805 で利用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Technical Preview サイトに追加できます。 
 
@@ -65,15 +66,15 @@ Steps to workaround, if any.
 6. **[フェーズの設定]** タブで、各スケジュール設定に対して以下のいずれか 1 つのオプションを選択し、完了したら **[次へ]** を選択します。  
 
     - 前のフェーズの成功基準 (このオプションは、最初のフェーズでは無効になっています)
-        - **[展開の成功率]**: 前のフェーズの成功基準に対して展開を正常に完了したデバイスの割合を指定します。  
+        - **[展開の成功率]**:前のフェーズの成功基準に対して展開を正常に完了したデバイスの割合を指定します。  
 
     - 前のフェーズが成功した後に展開のこのフェーズを開始するための条件  
-        - **[この段階は遅延期間 (日数) の後、自動的に開始する]** : 前の段階が成功した後に次の段階を開始するまでに待機する日数を選択します。 
-        - **[この段階の展開を手動で開始する]** : 前の段階が成功した後に自動的にこの段階を開始しません。  
+        - **[この段階は遅延期間 (日数) の後、自動的に開始する]** :前の段階が成功した後に次の段階を開始するまでに待機する日数を選択します。 
+        - **[この段階の展開を手動で開始する]** :前の段階が成功した後に自動的にこの段階を開始しません。  
 
     - デバイスが対象になったら、ソフトウェアをインストールする
-        - **[直ちに]** : デバイスが対象になったらすぐに、デバイスへのインストール期限を設定します。
-        - **[期限 (デバイスが対象となった時点からの時間)]** : デバイスが対象となってから一定の日数後にインストールの期限を設定します。  
+        - **直ちに**: デバイスがターゲットになったらすぐに、デバイスへのインストール期限を設定します。
+        - **[期限 (デバイスが対象となった時点からの時間)]** :デバイスがターゲットになってから一定の日数後にインストールの期限を設定します。  
      
 7. フェーズの設定ウィザードを完了します。
 
@@ -275,14 +276,14 @@ CMPivot は、お使いの環境でリアルタイム状態のデバイスへの
 ### <a name="bkmk_token"></a> シナリオ
 これらの強化によって、次のシナリオでの動作が向上しました。  
 
-#### <a name="bkmk_token1"></a> シナリオ 1: 管理ポイントに対するクライアント
+#### <a name="bkmk_token1"></a> シナリオ 1:管理ポイントに対するクライアント
 <!--1356889-->
 [Azure AD に参加したデバイス](/azure/active-directory/device-management-introduction#azure-ad-joined-devices)は、HTTP 用に構成された管理ポイントを使用して、クラウド管理ゲートウェイ (CMG) 経由で通信できます。 サイト サーバーは、管理ポイントに対する証明書を生成して、安全なチャネル経由での通信を可能にします。   
 
 > [!Note]  
 > この動作は、このシナリオに HTTPS を有効化した管理ポイントを必要とする Configuration Manager の現在のブランチ バージョン 1802 から変更されました。 詳細については、「[HTTPS 用の管理ポイントを有効にする](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https)」を参照してください。  
 
-#### <a name="bkmk_token2"></a> シナリオ 2: 配布ポイントに対するクライアント
+#### <a name="bkmk_token2"></a> シナリオ 2:配布ポイントに対するクライアント
 <!--1358228--> ワークグループまたは Azure AD に参加しているクライアントは、HTTP 用に構成されている配布ポイントから安全なチャネル経由でコンテンツをダウンロードできます。   
 
 #### <a name="bkmk_token3"></a> シナリオ 3 Azure AD デバイス ID 
@@ -359,7 +360,7 @@ SCUP ツールの一般的な用途の詳細については、「[System Center 
 Windows 10 の一括アップグレード用の既定のタスク シーケンス テンプレートに、アップグレード プロセスが失敗した場合に追加する推奨アクションを備えた、新しい別のグループが含まれるようになりました。 これらのアクションによって、トラブルシューティングが容易になりました。
 
 ### <a name="new-groups-under-run-actions-on-failure"></a>**[Run actions on failure]\(エラー時にアクションを実行する\)** にある新しいグループ
-- **ログの収集**: クライアントからログを収集するには、このグループに手順を追加します。 
+- **ログの収集**:クライアントからログを収集するには、このグループに手順を追加します。 
     - 通常は、ログ ファイルをネットワーク共有にコピーします。 この接続を確立するには、[ネットワーク フォルダーへの接続](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder)の手順を使用します。 
     - コピー操作を実行するには、「[コマンド ラインの実行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)」または「[PowerShell スクリプトの実行](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript)」の手順のどちらかに従って、カスタム スクリプトまたはユーティリティを使用します。
     - 収集するファイルには、次のログ ファイルが含まれる可能性があります。  
@@ -369,7 +370,7 @@ Windows 10 の一括アップグレード用の既定のタスク シーケン�
     - Configuration Manager クライアント ログ ファイルの詳細については、「[Configuration Manager クライアントのログ ファイル](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs)」セクションをご覧ください。
     - _SMSTSLogPath および他の便利な変数の詳細については、[タスク シーケンス組み込み変数](/sccm/osd/understand/task-sequence-built-in-variables)に関するページをご覧ください。
 
-- **診断ツールの実行**: 追加の診断ツールを実行するには、このグループで手順を追加します。 これらのツールは、エラー発生後できるだけすぐに、システムから追加情報を収集するために、自動化される必要があります。
+- **診断ツールの実行**:追加の診断ツールを実行するには、このグループで手順を追加します。 これらのツールは、エラー発生後できるだけすぐに、システムから追加情報を収集するために、自動化される必要があります。
     - このようなツールの 1 つが、Windows の [SetupDiag](/windows/deployment/upgrade/setupdiag) です。 これは、Windows 10 がアップグレードに失敗した詳細な理由の取得に使用できる、スタンドアロンの診断ツールです。
          - Configuration Manager で、ツールの[パッケージを作成](/sccm/apps/deploy-use/packages-and-programs#create-a-package-and-program)します。
          - [コマンド ラインの実行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)手順を、タスク シーケンスのこのグループに追加します。 **[パッケージ]** オプションを使用して、ツールを参照します。 次の文字列は、**コマンド ライン**のサンプルです。  
@@ -405,7 +406,7 @@ CMTrace ログ表示ツールが、Configuration Manager クライアントと�
 - オフラインのフィードバックがサポートされるようになりました。 コンソールから自分のフィードバックを保存して、インターネット接続システムから Microsoft にアップロードしてください。 `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe` に配置されている新しいオフライン フィードバック アップロード ツールを使用してください。 使用可能および必須のコマンド ライン オプションを確認するには、`--help` オプションを指定してツールを実行します。 接続されたシステムでは、**petrol.office.microsoft.com** へのアクセスが必要になります。
 
 ### <a name="known-issues"></a>既知の問題
-インターネットに接続されたコンピューターのコンソールから **[気に入った機能の報告]** または **[問題点、改善点の報告]** を使用すると、"フィードバックの送信中にエラーが発生しました。" というメッセージが返される場合があります。 **[詳細]** をクリックすると、「`{"Message":""}`」というテキストが表示されます。 このエラーは、バックエンドのフィードバック システムの応答に関連する既知の問題が原因で発生します。 このエラーは無視できます。 Microsoft では、引き続きお客様のフィードバックも受信しています。 (詳細で別のメッセージが表示される場合は、オフラインのフィードバック オプションを使用して、後でフィードバックを送信し直してください。)
+インターネットに接続されたコンピューターのコンソールから **[気に入った機能の報告]** または **[問題点、改善点の報告]** を使用すると、次のメッセージが返される場合があります。"フィードバックの送信中にエラーが発生しました。" **[詳細]** をクリックすると、「`{"Message":""}`」というテキストが表示されます。 このエラーは、バックエンドのフィードバック システムの応答に関連する既知の問題が原因で発生します。 このエラーは無視できます。 Microsoft では、引き続きお客様のフィードバックも受信しています。 (詳細で別のメッセージが表示される場合は、オフラインのフィードバック オプションを使用して、後でフィードバックを送信し直してください。)
 
 
 

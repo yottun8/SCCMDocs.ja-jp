@@ -10,16 +10,17 @@ ms.assetid: 8af43618-ec60-4c3e-a007-12399d1335b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a796c8cc23ab15e3fbeb09fca6ffa6f1dbd45bc3
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ROBOTS: NOINDEX
+ms.openlocfilehash: 80f16244c10899ed264b83f6c7a9a050fba7a224
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "34474345"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898309"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1804 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、Configuration Manager の Technical Preview バージョン 1804 で利用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Technical Preview サイトに追加できます。 
 
@@ -97,11 +98,11 @@ HTTP 接続を使用して通信するようにアプリケーション カタ�
 
 2. ドロップダウン リストを使用して、使用できるオプションのいずれかを選択します。  
 
-   - **気に入った機能の報告**: 気に入った機能があったら、 このオプションでフィードバックの詳細を入力してください。 必要に応じてスクリーンショットとメール アドレスを含めることができます。  
+   - **気に入った機能の報告**:気に入った機能があったら、 このオプションでフィードバックの詳細を入力してください。 必要に応じてスクリーンショットとメール アドレスを含めることができます。  
 
-   - **問題点、改善点の報告**: コンソールに問題が発生した場合、または何かが期待どおりに機能しなかった場合は、 このオプションで製品の問題の可能性について詳しく入力してください。 必要に応じてスクリーンショット、メール アドレス、診断データを含めることができます。  
+   - **問題点、改善点の報告**:コンソールに問題が発生した場合、または何かが期待どおりに機能しなかった場合は、 このオプションで製品の問題の可能性について詳しく入力してください。 必要に応じてスクリーンショット、メール アドレス、診断データを含めることができます。  
 
-   - **提案の送信**: Configuration Manager を変更および改善するアイデアがある場合は、 このオプションを選択してください。Web ブラウザーに [UserVoice](https://configurationmanager.uservoice.com) サイトが表示されます。  
+   - **提案の送信**:Configuration Manager を変更して改善するアイデアがある場合は、 このオプションを選択してください。Web ブラウザーに [UserVoice](https://configurationmanager.uservoice.com) サイトが表示されます。  
 
 このフィードバックは、Configuration Manager の Microsoft 製品チームに直接送られます。 Windows 10 フィードバック ハブも使用できますが、コンソール内のフィードバック機能を使用することをお勧めします。  
 
@@ -148,29 +149,29 @@ Configuration Manager のサーバー ツールとクライアント ツール�
 
 #### <a name="server-tools"></a>サーバー ツール  
 
- - **DP Job Manage**: 配布ポイントに対するコンテンツ配布ジョブの問題を解決します  
+ - **DP Job Manage**:配布ポイントに対するコンテンツ配布ジョブの問題を解決します  
 
- - **Collection Evaluation Viewer**: コレクション評価の詳細を表示します  
+ - **Collection Evaluation Viewer**:コレクション評価の詳細を表示します  
 
- - **Content Library Explorer**: コンテンツ ライブラリの単一インスタンス ストアのコンテンツを表示します  
+ - **Content Library Explorer**:コンテンツ ライブラリの単一インスタンス ストアのコンテンツを表示します  
 
- - **Content Library Transfer**: ドライブ間でコンテンツ ライブラリを転送します  
+ - **Content Library Transfer**:ドライブ間でコンテンツ ライブラリを転送します  
 
- - **Content Ownership Tool**: 孤立したパッケージの所有権を変更します。 これらのパッケージは、所有するサイト サーバーがないサイトに存在します。  
+ - **Content Ownership Tool**:孤立したパッケージの所有権を変更します。 これらのパッケージは、所有するサイト サーバーがないサイトに存在します。  
 
- - **Role-based Administration and Auditing Tool**: 管理者の監査ロールの構成を支援します  
+ - **Role-based Administration and Auditing Tool**:管理者の監査ロールの構成を支援します  
 
 #### <a name="client-tools"></a>クライアント ツール
 
- - **CMTrace**: ログを表示します  
+ - **CMTrace**:ログを表示します  
 
- - **Deployment Monitoring Tool**: アプリケーション、更新プログラム、およびベースラインの展開の問題を解決します  
+ - **Deployment Monitoring Tool**:アプリケーション、更新プログラム、およびベースラインの展開の問題を解決します  
 
- - **Policy Spy**: ポリシーの割り当てを表示します  
+ - **Policy Spy**:ポリシーの割り当てを表示します  
 
- - **Power Viewer Tool**: 電源管理機能の状態を表示します  
+ - **Power Viewer Tool**:電源管理機能の状態を表示します  
 
- - **Send Schedule Tool**: DCM ベースラインのスケジュールと評価をトリガーします  
+ - **Send Schedule Tool**:DCM ベースラインのスケジュールと評価をトリガーします  
 
 > [!Important]  
 > [サポート センター](#support-center)には、次のツールと同じ機能または改善された機能が含まれているので、ほとんどのユース ケースにお勧めします。  
@@ -288,7 +289,7 @@ Configuration Manager のサーバー ツールとクライアント ツール�
 ## <a name="improvements-to-os-deployment"></a>OS 展開の機能強化
 OS の展開について、次のような機能拡張を行いました。一部は皆さまからのフィードバックに基づくものです。  
 
- - [タスク シーケンス変数に格納されている機密データをマスキングする](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): [[タスク シーケンス変数の設定]](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) 手順で **[Do not display this value]\(この値を表示しない\)** という新しいオプションを選択します。 たとえば、パスワードを指定するときに使用します。<!--1358330--> このオプションを有効にすると、次の動作が適用されます。
+ - [タスク シーケンス変数に格納されている機密データをマスキングする](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed):[[タスク シーケンス変数の設定]](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable) 手順で **[この値を表示しない]** という新しいオプションを選択します。 たとえば、パスワードを指定するときに使用します。<!--1358330--> このオプションを有効にすると、次の動作が適用されます。
    - 変数の値は smsts.log に表示されません。
    - Configuration Manager コンソールと SMS プロバイダーは、この値をパスワードなど他のシークレットと同じように扱います。
    - タスク シーケンスをエクスポートするときに、この値は含まれません。
@@ -298,7 +299,7 @@ OS の展開について、次のような機能拡張を行いました。一�
    > 変数とその値は、タスク シーケンスと共に XML 形式で保存され、データベース内で難読化されます。 クライアントが管理ポイントからタスク シーケンス ポリシーを要求すると、送信中とクライアント上の保存時には暗号化されます。 ただし、クライアント上での実行中、メモリ内のタスク シーケンス環境では、すべての変数値はプレーン テキストです。 タスク シーケンスに変数の値を出力するステップがある場合、この出力はプレーン テキストです。 この動作には、管理者がこのようなステップを含める明示的なアクションが必要です。 
 
 
- - [タスク シーケンスの 'コマンドの実行ステップ' 中に 'ProgramName' をマスキングする](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed): 機密性が高い可能性のあるデータが表示または記録されないようにするには、タスク シーケンス変数 **OSDDoNotLogCommand** を `TRUE` に設定します。 この変数は、[[コマンド ラインの実行]](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) タスク シーケンス ステップ中に smsts.log のプログラム名をマスキングします。 <!--1358493-->  
+ - [タスク シーケンスのコマンドの実行ステップ中にプログラム名をマスキングする](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed):機密性が高い可能性のあるデータが表示または記録されないようにするには、タスク シーケンス変数 **OSDDoNotLogCommand** を `TRUE` に設定します。 この変数は、[[コマンド ラインの実行]](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine) タスク シーケンス ステップ中に smsts.log のプログラム名をマスキングします。 <!--1358493-->  
 
 
 
