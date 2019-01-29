@@ -10,12 +10,13 @@ ms.assetid: b587779e-1bd3-4ee3-8146-8e31f53499bd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be6d3bc210bfc672efc21b3c9397f679f00f2a82
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ROBOTS: NOINDEX
+ms.openlocfilehash: 53b09c5652eed1a1fad6cac0a2cb146863886d24
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416407"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897480"
 ---
 # <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager の更新プログラム 1702 をインストールするためのチェックリスト
 
@@ -98,9 +99,9 @@ ADK を更新する前にサイトを更新する場合は、ブート イメー
 サイト間のファイルとデータベースのレプリケーションが機能していて最新の状態であることを確認します。 遅延またはバックログにより、円滑で正常な更新が行われない場合があります。
 データベース レプリケーションには、更新プログラムを開始する前に問題を解決するために、レプリケーション リンク アナライザーを使用できます。
 
-詳細については、トピック「  [System Center Configuration Manager での階層とレプリケーション インフラストラクチャの監視](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure) 」の「[レプリケーション リンク アナライザーについて](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)」を参照してください。
+詳細については、トピック「 [System Center Configuration Manager での階層とレプリケーション インフラストラクチャの監視](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure) 」の「[レプリケーション リンク アナライザーについて](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA) 」を参照してください。
 
-**サイト、サイト データベース サーバー、リモートのサイト システムの役割をホストするコンピューターのオペレーティング システムに適用できる、重要な更新プログラムすべてをインストールする:**  Configuration Manager 用の更新プログラムをインストールする前に、該当する各サイト システムに重要な更新プログラムをインストールします。 更新のインストール時に再起動が必要な場合は、アップグレードを開始する前に該当するコンピューターを再起動します。
+**サイト、サイト データベース サーバー、リモートのサイト システムの役割をホストするコンピューターのオペレーティング システムに適用できる、重要な更新プログラムすべてをインストールする:** Configuration Manager 用の更新プログラムをインストールする前に、該当する各サイト システムに重要な更新プログラムをインストールします。 更新のインストール時に再起動が必要な場合は、アップグレードを開始する前に該当するコンピューターを再起動します。
 
 **プライマリ サイトの管理ポイントのデータベース レプリカを無効にする:**   
 Configuration Manager では、管理ポイントのデータベース レプリカが有効になっているプライマリ サイトを正常に更新することはできません。 データベースのレプリケーションを無効にしてから、Configuration Manager の更新プログラムをインストールしてください。
@@ -129,7 +130,7 @@ Configuration Manager では、ネットワーク負荷分散 (NLB) クラスタ
 
 **Configuration Manager サーバー上でウイルス対策ソフトウェアを一時的に停止する:** サイトを更新する前に、Configuration Manager サーバー上でウイルス対策ソフトウェアを確実に停止します。 <!--SMS.503481--> 
 
-**中央管理サイトとプライマリ サイトのサイト データベースのバックアップを作成する:**  サイトを更新する前に、サイト データベースをバックアップして、ディザスター リカバリーに使用する正常なバックアップを確実に作成できるようにします。
+**中央管理サイトとプライマリ サイトのサイト データベースのバックアップを作成する:** サイトを更新する前に、サイト データベースをバックアップして、ディザスター リカバリーに使用する正常なバックアップを確実に作成できるようにします。
 
 詳細については、 [System Center Configuration Manager のバックアップと回復](/sccm/protect/understand/backup-and-recovery)に関するページを参照してください。
 

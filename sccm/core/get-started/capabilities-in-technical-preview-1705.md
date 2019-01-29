@@ -10,12 +10,13 @@ ms.assetid: 00684289-d21a-45f8-b1e3-c5c787d73096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a9a5aeb35137a74152333a78e95781fb727eecdf
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ROBOTS: NOINDEX
+ms.openlocfilehash: cf42e357abf40593484867186c9f3753df6bb94a
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421605"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897952"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1705 の機能
 
@@ -82,7 +83,7 @@ ms.locfileid: "53421605"
 **コマンド ライン パラメーター**  
 
 
-|                        パラメーター                         |                                                            説明                                                            |
+|                        パラメーター                         |                                                            [説明]                                                            |
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | **-S &lt;最上位層サイトの SQL Server の FQDN>** | *必須* <br> 階層の最上位層サイトのサイト データベースをホストする SQL Server の FQDN を指定する必要があります。 |
 |                **-D &lt;データベース名>**                 |                             *必須* <br> 最上位層サイト データベースの名前を指定する必要があります。                             |
@@ -91,9 +92,9 @@ ms.locfileid: "53421605"
 |                       **-FDELETE**                       |                      *省略可能* <br> 正常にダウンロードした更新プログラム パッケージの削除を強制するには、これを使用します。                      |
 
  **例:**  
- 一般的なシナリオで、ダウンロードに関する問題のある更新プログラムをリセットするとします。 SQL Server の FQDN が *server1.fabrikam.com* で、サイト データベースが *CM_XYZ*、パッケージ GUID が *61F16B3C-F1F6-4F9F-8647-2A524B0C802C* の場合、  次を実行します: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+ 一般的なシナリオで、ダウンロードに関する問題のある更新プログラムをリセットするとします。 SQL Server の FQDN が *server1.fabrikam.com* で、サイト データベースが *CM_XYZ*、パッケージ GUID が *61F16B3C-F1F6-4F9F-8647-2A524B0C802C* の場合、  次を実行します。***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
- より極端なシナリオで、問題のある更新プログラム パッケージの削除を強制するとします。 SQL Server の FQDN が *server1.fabrikam.com* で、サイト データベースが *CM_XYZ*、パッケージ GUID が *61F16B3C-F1F6-4F9F-8647-2A524B0C802C* の場合、  次を実行します: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
+ より極端なシナリオで、問題のある更新プログラム パッケージの削除を強制するとします。 SQL Server の FQDN が *server1.fabrikam.com* で、サイト データベースが *CM_XYZ*、パッケージ GUID が *61F16B3C-F1F6-4F9F-8647-2A524B0C802C* の場合、  次を実行します。***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
 ### <a name="test-the-tool-with-the-technical-preview"></a>Technical Preview でツールをテストする  
 このツールは、Technical Preview バージョン 1606 以降で使用できます。 この後方互換のサポートは、Technical Preview のより多くの更新シナリオでツールが使用できるようにするためと、Technical Preview の次のバージョンが使用可能になるまで待たなくても済むように提供されています。
@@ -130,7 +131,7 @@ ms.locfileid: "53421605"
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>非同期レプリカを使用してサイトを回復する
 非同期レプリカを使用してサイト データベースを回復する前に、サイト データベースへの追加の書き込みを防止するために、アクティブなプライマリ サイトを停止する必要があります。 サイトの停止後、[手動で回復したデータベース](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)の代わりに、非同期レプリカを使用することができます。
 
-サイトを停止するには、[階層のメンテナンス ツール](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe)を使用して、サイト サーバーの主要なサービスを停止します。 コマンド ラインを使用します: **Preinst.exe /stopsite**   
+サイトを停止するには、[階層のメンテナンス ツール](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe)を使用して、サイト サーバーの主要なサービスを停止します。 次のコマンド ラインを使用します:**Preinst.exe /stopsite**   
 
 サイトを停止することは、サイト サーバーでサイト コンポーネント マネージャー サービス (sitecomp) に続いて SMS_Executive サービスを停止することと同じです。
 
@@ -232,8 +233,8 @@ Windows Defender Application Guard の詳細については、[このブログ�
 4. ウィザードの **[全般]** ページで、Azure サービスの名前と説明を指定します。
 5. ウィザードの **[アプリ]** ページで、リストからご使用の Azure 環境を選択し、**[参照]** をクリックして Azure サービスの構成に使用されるサーバーとクライアント アプリを選択します。
    - **[サーバー アプリ]** ウィンドウで、使用するサーバー アプリを選択し、**[OK]** をクリックします。 サーバー アプリとは、Azure アカウントの構成 (クライアントのテナント ID、クライアント ID、シークレット キーなど) を格納する Azure Web アプリです。 利用可能なサーバー アプリがない場合は、次のいずれかを使用します。
-       - **作成**:新しいサーバー アプリを作成するには、**[作成]** をクリックします。 アプリとテナントのフレンドリ名を指定します。 次に、Azure にサインインすると、Configuration Manager によって、Azure で Web アプリと、Web アプリで使用するクライアント ID やシークレット キーが作成されます。 その後、Azure Portal からこれらを表示できます。
-       - **インポート**:Azure サブスクリプションに既に存在する Web アプリを使用するには、**[インポート]** をクリックします。 アプリとテナントのフレンドリ名を指定し、Configuration Manager で使用する Azure Web アプリのテナント ID、クライアント ID、シークレット キーを指定します。 情報を確認した後、**[OK]** をクリックして続行します。 このオプションは、この Technical Preview では現在使用できません。
+       - **作成**: 新しいサーバー アプリを作成するには、**[作成]** をクリックします。 アプリとテナントのフレンドリ名を指定します。 次に、Azure にサインインすると、Configuration Manager によって、Azure で Web アプリと、Web アプリで使用するクライアント ID やシークレット キーが作成されます。 その後、Azure Portal からこれらを表示できます。
+       - **インポート**: ご利用の Azure サブスクリプションに既に存在する Web アプリを使用するには、**[インポート]** をクリックします。 アプリとテナントのフレンドリ名を指定し、Configuration Manager で使用する Azure Web アプリのテナント ID、クライアント ID、シークレット キーを指定します。 情報を確認した後、**[OK]** をクリックして続行します。 このオプションは、この Technical Preview では現在使用できません。
    - クライアント アプリに同じプロセスを繰り返します。
 
    アプリケーションのインポートを使用して、ポータルで適切なアクセス許可を設定する場合には、*ディレクトリ データの読み取り*アプリケーションのアクセス許可を付与する必要があります。 アプリケーションでアクセス許可が自動的に作成されるアプリケーションの作成を使用した場合でも、Azure ポータルでアプリケーションに承諾を与える必要があります。
@@ -287,7 +288,7 @@ OMS への接続を構成するための前提条件は、[Current Branch バー
 
 4.  Web アプリを選択します。
 
-    -   **インポート**:Azure サブスクリプションに既に存在する Web アプリを使用するには、**[インポート]** をクリックします。 アプリとテナントのフレンドリ名を指定し、Configuration Manager で使用する Azure Web アプリのテナント ID、クライアント ID、シークレット キーを指定します。 情報を**確認**した後、**[OK]** をクリックして続行します。   
+    -   **インポート**:ご利用の Azure サブスクリプションに既に存在する Web アプリを使用するには、**[インポート]** をクリックします。 アプリとテナントのフレンドリ名を指定し、Configuration Manager で使用する Azure Web アプリのテナント ID、クライアント ID、シークレット キーを指定します。 情報を**確認**した後、**[OK]** をクリックして続行します。   
 
     > [!NOTE]   
     > このプレビューで OMS を構成すると、OMS は Web アプリの*インポート*機能のみをサポートします。 新しい Web アプリの作成はサポートされません。 同様に、OMS に既存のアプリを再利用することはできません。
