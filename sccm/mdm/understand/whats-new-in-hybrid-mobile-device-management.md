@@ -2,7 +2,7 @@
 title: ハイブリッド MDM の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。
-ms.date: 01/10/2019
+ms.date: 01/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ec1155ec578e0eab957baa991628ed18eef6c62
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.openlocfilehash: 84c244a959bb9a087d33410fe0605bc6ddcadfbc
+ms.sourcegitcommit: a2ecd84d93f431ee77848134386fec14031aed6a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898649"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230904"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -50,6 +50,15 @@ ms.locfileid: "54898649"
 ## <a name="january-2019"></a>2019 年 1 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+#### <a name="intune-app-protection-policies-ui-update"></a>Intune アプリ保護ポリシーの UI の更新 
+<!--3251427--> 設定のラベルと各を理解しやすいように、Intune アプリ保護のためのボタンが変更されました。 変更のいくつか挙げます。  
+
+- コントロールがから変更された**はい** / **ありません**主にコントロールを**ブロック** / **を許可する**と**を無効にする** / **を有効にする**コントロール。 ラベルも更新されます。  
+
+- 設定が再フォーマットされ、設定とそのラベルがサイド バイ サイドでナビゲーションを向上させるため、コントロールにします。   
+
+既定の設定と設定の数は同じままですが、この変更により、理解、移動、および選択したアプリ保護ポリシーを適用するには、簡単には、複数の設定を利用するユーザー。 詳細については、次を参照してください。 [iOS 設定](https://docs.microsoft.com/intune/app-protection-policy-settings-ios#access-requirements)と[Android 設定](https://docs.microsoft.com/intune/app-protection-policy-settings-android#access-requirements)します。
 
 #### <a name="tenant-status-dashboard"></a>テナントの状態ダッシュ ボード
 <!--1124854--> 新しい[テナントの状態ページ](https://docs.microsoft.com/intune/tenant-status)テナントの状態および関連する詳細を表示できます 1 つの場所を提供します。 ダッシュ ボードは、4 つの領域に分かれています。
