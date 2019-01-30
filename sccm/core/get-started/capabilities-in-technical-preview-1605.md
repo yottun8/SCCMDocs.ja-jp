@@ -10,12 +10,13 @@ ms.assetid: 2bafd028-1923-4463-9e3e-ee41bc0c437b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 4eb41ba3a55d0de026d38a673d4e5dfad8e22cd7
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ROBOTS: NOINDEX
+ms.openlocfilehash: 2f8843a5d4e3b49126e2d0898a5bd006422957d2
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416131"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898156"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1605 の機能
 
@@ -158,7 +159,7 @@ ms.locfileid: "53416131"
 
 -   このリリースでは、ビジネス向け Windows ストアおよび iOS App Store のボリューム購入アプリが同じビューの **[ストア アプリのライセンス情報]** に統合されています。  
 
--   iOS のボリューム購入アプリの場合、アプリケーションの作成ウィザードの **[iOS アプリケーション パッケージ ブラウザー]** ダイアログ ボックスから [Apple Volume Purchase Program] タブが削除されています。 iOS のボリューム購入アプリを作成するには、次の手順を使用します。  
+-   iOS のボリューム購入アプリの場合、アプリケーションの作成ウィザードの **[iOS アプリケーション パッケージ ブラウザー]** ダイアログ ボックスから [Apple Volume Purchase Program タブが削除されています。 iOS のボリューム購入アプリを作成するには、次の手順を使用します。  
 
     1.  1.  Configuration Manager コンソールの **[ソフトウェア ライブラリ]** ワークスペースで **[アプリケーション管理]** を展開し、**[ストア アプリのライセンス情報]** をクリックします。  
 
@@ -253,7 +254,7 @@ ms.locfileid: "53416131"
    > - **[資産とコンプライアンス]** ワークスペースで、構成項目 **OnPremMDM Portal Configuration CI - server urls** を検索します。  
    >   -   **[コンプライアンス規則]** の値をアプリケーション カタログの役割が配置されているサイト システムの完全修飾ドメイン名に変更します。  
 
-2. 会社のポータル アプリケーションとその構成がどちらも展開されたら、Configuration Manager コンソールの **[展開]** セクションを使用して、アプリケーションと構成基準が特定のデバイスに対応していることを確認します。 デバイスの [スタート] メニューに、会社のポータルが **[会社のポータル (Technical Preview)]** として表示されます。  
+2. 会社のポータル アプリケーションとその構成がどちらも展開されたら、Configuration Manager コンソールの **[展開]** セクションを使用して、アプリケーションと構成基準が特定のデバイスに対応していることを確認します。 デバイスの スタート] メニューに、会社のポータルが **[会社のポータル (Technical Preview)]** として表示されます。  
 
 ### <a name="try-it-out"></a>試してみましょう。  
  次のタスクを完了し、Microsoft Connect サイトの「[Configuration Manager feedback program](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback)」 (Configuration Manager フィードバック プログラム) ページのフィードバック フォームを使用して、どのように動作したかをお知らせください。  

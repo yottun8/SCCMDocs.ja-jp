@@ -10,16 +10,17 @@ ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0dcd2db7543d68a97e00244536d2aac218d440e7
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ROBOTS: NOINDEX
+ms.openlocfilehash: 0d45586267e06185752f597549f798be19d4d47b
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52259065"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897051"
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1606 の新機能
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager の更新プログラム 1606 は、以前にインストール済みで、バージョン 1511 または 1602 を実行するサイトを対象とする、コンソール内の更新プログラムとして使用可能な更新プログラムです。 バージョン 1511 は、新しい Configuration Manager サイトのインストールに使用する初期の基準バージョンです。
 > [!TIP]  
@@ -146,7 +147,7 @@ Configuration Manager コンソールの **[クライアント設定]** で、�
 
 ## <a name="operating-system-deployment"></a>オペレーティング システムの展開
 
-### <a name="improvements-to-the-task-sequence-step-install-software-updates"></a>タスク シーケンスのステップの向上: ソフトウェア更新プログラムのインストール
+### <a name="improvements-to-the-task-sequence-step-install-software-updates"></a>タスク シーケンス ステップの向上:ソフトウェア更新プログラムのインストール
 **[キャッシュされているスキャン結果からソフトウェア更新プログラムを評価する]** という新しい設定により、キャッシュされたスキャン結果を使用する代わりに、ソフトウェア更新プログラムのフル スキャンを実行するオプションを利用できるようになりました。 詳細については、「[System Center Configuration Manager のタスク シーケンスのステップ](../../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)」をご覧ください。
 
 また、新しいタスク シーケンス変数 **SMSTSSoftwareUpdateScanTimeout** が使用できるようになりました。 この変数を使用すると、ソフトウェア更新プログラムのインストール タスク シーケンスのステップ中に、ソフトウェア更新プログラムのスキャンのタイムアウトを制御することができます。 既定値は 30 分です。 詳細については、「[System Center Configuration Manager のタスク シーケンス組み込み変数](../../../osd/understand/task-sequence-built-in-variables.md)」をご覧ください。
