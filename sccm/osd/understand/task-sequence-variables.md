@@ -1090,9 +1090,9 @@ ms.locfileid: "54342899"
  新しい OS のローカル管理者アカウントにランダム生成パスワードを使用するかどうかを指定します。 
 
  #### <a name="valid-values"></a>有効な値
- - `true` (既定):Windows セットアップで対象コンピューターのローカル管理者アカウントが無効になります  
+ - `true` (既定):Windows セットアップでターゲット コンピューターのローカル管理者アカウントが無効になります  
 
- - `false`:Windows セットアップで対象コンピューターのローカル管理者アカウントが有効になり、アカウント パスワードが [OSDLocalAdminPassword](#OSDLocalAdminPassword) の値に設定されます  
+ - `false`:Windows セットアップでターゲット コンピューターのローカル管理者アカウントが有効になり、アカウント パスワードが [OSDLocalAdminPassword](#OSDLocalAdminPassword) の値に設定されます  
 
 
 ### <a name="OSDRegisteredOrgName-input"></a> OSDRegisteredOrgName (input)
