@@ -8,19 +8,19 @@ ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: e4d9e414-1346-4ed4-85d0-64d602b68731
 author: aczechowski
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 939a767820983c1fe2d575d7a745d6dabb45f25c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 970f86849572d6b360c5b92a42a3d131a38fe1d7
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335662"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896466"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1512 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1512 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 このバージョンの Technical Preview をインストールする前に、説明のトピック「[System Center Configuration Manager の Technical Preview](technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。  
 
@@ -57,17 +57,17 @@ Technical Preview 1512 以降、Configuration Manager を Microsoft Intune と�
 ##  <a name="bkmk_EPpolicy"></a> Endpoint Protection のポリシー設定の機能強化  
 1512 Technical Preview では、Endpoint Protection マルウェア対策ポリシーに次の新しい設定が追加されました。  
 
--   リアルタイム保護: **望ましくない可能性のあるアプリケーションのダウンロード時およびインストール前のブロック**  
+-   リアルタイム保護: **ダウンロード時およびインストール前に、望ましくない可能性のあるアプリケーションをブロックする**  
 
     -   望ましくない可能性のあるアプリケーション (PUA) とは、評価および研究主導の識別に基づく脅威の分類の 1 つです。 ほとんどの場合、これらは望ましくないアプリケーションバンドラーか、そのバンドルされたアプリケーションです。  
 
     -   この保護ポリシーの設定は既定で有効になっています ([はい] に設定)。 この設定が有効な場合、PUA はダウンロード時とインストール時にブロックされます。 ただし、特定のファイルやフォルダーに環境内の特定のニーズを満たすを除外することができます。  
 
--   スキャンの設定: **フル スキャンの実行時にマップされたネットワーク ドライブをスキャンする**  
+-   スキャンの設定: **フル スキャンの実行時に、マップされたネットワーク ドライブをスキャンする**  
 
     -   この設定により、管理者はより詳細な操作ができるようになり、スケジュールされたフル スキャン中にマップされたネットワーク ドライブが必ずスキャンされるリスクなしに、ネットワーク ファイルのオンデマンド スキャンができるようになります。  
 
-    -   この設定を構成できるようにするには、設定 **[ネットワーク ファイルをスキャンする]** を最初に有効 ([はい) にする必要があります。  
+    -   この設定を構成できるようにするには、設定 **[ネットワーク ファイルをスキャンする]** を最初に有効 ([はい]) にする必要があります。  
 
     -   既定で、この設定は [いいえ] になっており、マップされたネットワーク ドライブはフル スキャンでアクセスされません。  
 
@@ -75,9 +75,9 @@ Technical Preview 1512 以降、Configuration Manager を Microsoft Intune と�
 
      マルウェア対策エンジンは、さらに詳しい分析のために Microsoft へのファイルのサンプルの送信を要求することがあります。 既定では、このようなサンプルを送信する前に必ず確認が求められます。 管理者は、この動作を構成する次の設定を管理できるようになりました。  
 
-    -   詳細: **サンプル ファイルの自動送信を有効にして、検出された特定項目が危険かどうかをマイクロソフトが特定できるようにする**: サンプル ファイルの自動送信を有効にするには、この設定を [はい] に変更します。 既定では、この設定は [いいえ] で、サンプル ファイルの自動送信は無効であり、サンプルの送信前にユーザーに確認が求められます。   (この設定は、System Center 2012 R2 Configuration Manager SP1 で初めて導入されました)  
+    -   詳細: **サンプル ファイルの自動送信を有効にすると、Microsoft は検出された特定の項目が危険であるかどうかを判断できます**。この設定を [はい] に設定して、サンプル ファイルの自動送信を有効にします。 既定では、この設定は [いいえ] で、サンプル ファイルの自動送信は無効であり、サンプルの送信前にユーザーに確認が求められます。   (この設定は、System Center 2012 R2 Configuration Manager SP1 で初めて導入されました)  
 
-    -   詳細: **サンプル ファイルの自動送信の設定の変更をユーザーに許可する**: この設定は、デバイス上のローカルの管理者権限を持つユーザーがクライアント インターフェイスでサンプル ファイルの自動送信の設定を変更できるかどうかを決定します。 既定では、この設定は [いいえ] です。つまり、設定は Configuration Manager コンソール内からのみ変更でき、デバイスのローカル管理者はこの構成を変更できません。  
+    -   詳細: **サンプル ファイルの自動送信の設定を変更することをユーザーに許可します**。この設定は、デバイス上のローカルの管理者権限を持つユーザーがクライアント インターフェイスでサンプル ファイルの自動送信の設定を変更できるかどうかを決定します。 既定では、この設定は [いいえ] です。つまり、設定は Configuration Manager コンソール内からのみ変更でき、デバイスのローカル管理者はこの構成を変更できません。  
 
          たとえば、管理者によって設定され、ユーザーが変更を許可されていない Windows 10 の Windows Defender の設定を次に示します。  
 

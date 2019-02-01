@@ -10,17 +10,16 @@ ms.assetid: cd64994c-b426-4465-96cd-54b0edc2778d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: d0d69990fe99f9b08c9c14222a2d1a9c6ec06b4c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4de365b7df3a18abdfc5a92e9516bad84818ac35
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351838"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896746"
 ---
 # <a name="manage-software-updates-in-updates-publisher"></a>Updates Publisher のソフトウェア更新プログラムの管理
 
-*適用対象: System Center Updates Publisher*     
+「オブジェクトの*適用対象: System Center Updates Publisher*     
 
 System Center Updates Publisher で、リポジトリにインポートしたソフトウェア更新プログラムとバンドルを管理するため、**[更新プログラム] ワークスペース**を使用します。  
 
@@ -90,7 +89,7 @@ System Center Updates Publisher で、リポジトリにインポートしたソ
 ### <a name="to-publish-updates-and-bundles"></a>更新プログラムとバンドルを発行するには
 1.  **[更新プログラム] ワークスペース**に移動し、発行する更新プログラムとバンドルを 1 つまたは複数選択します。 次に、リボンの **[ホーム]** タブで **[発行]** を選択します。
 
-2.  **[発行]** ウィザードの **[選択]** ページで、更新プログラムの発行方法を選択します。 オプションは[更新プログラムの割り当て](#assign-updates-and-bundles-to-a-publication)と同じ次の 3 つです: **[Full Content]\(すべてのコンテンツ)**、**[Metadata only]\(メタデータのみ)**、**[自動]**。
+2.  **[発行]** ウィザードの **[選択]** ページで、更新プログラムの発行方法を選択します。 このオプションは、[更新プログラムの割り当て](#assign-updates-and-bundles-to-a-publication)に対するものと同じです (**すべてのコンテンツ**、**メタデータのみ**、または**自動**)。
 
     また、すべての更新プログラムを新しい発行元証明書で署名することも選択できます。
 
