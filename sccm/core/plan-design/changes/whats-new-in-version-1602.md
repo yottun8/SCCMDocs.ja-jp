@@ -10,17 +10,17 @@ ms.assetid: 4021eca1-adfb-4e5a-adee-159263c29637
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: c6d085fd33513a32207a3b9acfdfe6fe91657a88
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ROBOTS: NOINDEX
+ms.openlocfilehash: 86d36921939b611fa6647d4a0bf3af6d11f27ee7
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52259048"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897629"
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>System Center Configuration Manager のバージョン 1602 の新機能
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 
 System Center Configuration Manager の更新プログラム 1602 は、以前にインストール済みで、バージョン 1511 を実行するサイトを対象とする、コンソール内の更新プログラムとしてのみ使用可能な更新プログラムです。 バージョン 1511 は、新しい Configuration Manager サイトのインストールに使用する初期の基準バージョンです。  
@@ -132,7 +132,7 @@ System Center Configuration Manager の更新プログラム 1602 は、以前�
  詳細については、「[System Center Configuration Manager でのデバイス コンプライアンス ポリシー](../../../protect/deploy-use/device-compliance-policies.md)」をご覧ください。  
 
 ### <a name="make-sure-enrolled-and-compliant-devices-always-have-access-to-exchange-on-premises"></a>登録された準拠デバイスがいつも Exchange On-Premises ポリシーにアクセスできるかどうかを確認します。  
- **[既定の規則をオーバーライド - Intune に登録された準拠デバイスに Exchange On-Premises へのアクセスを常に許可する]** オプションをオンにすると、Intune に登録されていてコンプライアンス ポリシーに準拠しているデバイスが Exchange On-Premises にアクセスすることを許可されます。 この規則は、Exchange On-Premises の**条件付きアクセス ポリシーの構成ウィザード**の **[全般]** ページにあります。
+ 次のオプションをオンにすると、Intune に登録され、コンプライアンス ポリシーに準拠しているデバイスはオンプレミスの Exchange へのアクセスが許可されます。**既定ルールをオーバーライド - Intune に登録された準拠デバイスがオンプレミスの Exchange にいつでもアクセスできるようにする:** この規則は、Exchange On-Premises の**条件付きアクセス ポリシーの構成ウィザード**の **[全般]** ページにあります。
 
  このルールは既定のルールをオーバーライドします。つまり、アクセスを検疫またはブロックする既定のルールを設定した場合でも、登録された準拠デバイスは引き続きオンプレミスの Exchange にアクセスできます。 登録された準拠デバイスが Exchange On-Premises 経由で電子メールにいつでもアクセスできるようにするには、この設定を使用します。   
 
@@ -173,17 +173,17 @@ System Center Configuration Manager の更新プログラム 1602 は、以前�
 ### <a name="improvements-to-endpoint-protection-antimalware-settings"></a>Endpoint Protection マルウェア対策の設定の機能強化  
  1602 では、Windows Defender の Endpoint Protection マルウェア対策ポリシーに次の新しい設定が追加されました。  
 
--   リアルタイム保護: 望ましくない可能性のあるアプリケーションのダウンロード時およびインストール前にブロックします。  
+-   リアルタイム保護: ダウンロード時およびインストール前に、望ましくない可能性のあるアプリケーションをブロックする  
 
--   スキャンの設定: フル スキャンの実行時にマップされたネットワーク ドライブをスキャンします。  
+-   スキャンの設定: フル スキャン中に、マップされたネットワーク ドライブをスキャンする  
 
 -   自動サンプル ファイルの送信の設定:  
 
      マルウェア対策エンジンは、さらに詳しい分析のために Microsoft へのファイルのサンプルの送信を要求することがあります。 既定では、このようなサンプルを送信する前に必ず確認が求められます。 管理者は、この動作を構成する次の設定を管理できるようになりました。  
 
-    -   詳細設定: サンプル ファイルの自動送信を有効にすると、マイクロソフトは検出された特定の項目が危険であるかどうかを判断できます。  
+    -   詳細: サンプル ファイルの自動送信を有効にすると、Microsoft は検出された特定の項目が危険であるかどうかを判断できます。  
 
-    -   詳細設定: サンプル ファイルの自動送信の設定を変更することをユーザーに許可します。  
+    -   詳細: サンプル ファイルの自動送信の設定を変更することをユーザーに許可します。  
 
     さらに、Endpoint Protection マルウェア対策ポリシーの [除外の設定] セクションの既存の **[ファイルとフォルダーを除外する]** 設定でデバイスを除外できるようになりました。  
 
@@ -209,10 +209,10 @@ Configuration Manager では、iOS 7.1 以降を実行している監視対象�
 
  使用条件の展開を展開の一覧から選択します。 概要領域には、以下の統計情報が表示されます。  
 
--   **[対応]**: ユーザーが最新バージョンの使用条件に同意しました  
+-   **対応**: ユーザーが最新バージョンの使用条件に同意しました。  
 
 -   **エラー**  
 
--   **[非対応]**: ユーザーが最新のバージョンではない使用条件に同意しました  
+-   **非対応**: ユーザーが最新のバージョンではない使用条件に同意しました。  
 
--   **[不明]**: 登録済みデバイスのない使用条件を含めて、ユーザーが使用条件に同意したことはありません  
+-   **不明**: 登録済みデバイスのない使用条件を含めて、ユーザーが使用条件に同意したことはありません。  

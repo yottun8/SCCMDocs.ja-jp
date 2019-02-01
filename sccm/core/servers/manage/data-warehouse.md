@@ -10,12 +10,12 @@ ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c04ee9a62b6c629060f79df2f4b104fe78ca794
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: a4d95495f2f200eaff39699c65cc391a2a81b009
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418987"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897561"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>Configuration Manager のデータ ウェアハウス サービス ポイント
 
@@ -237,7 +237,7 @@ A connection was successfully established with the server, but then an error occ
 
     2. **[SQL Server 構成マネージャー]** を開きます。 **[SQL Server ネットワークの構成]** の下にある **[MSSQLSERVER のプロトコル]** で、右クリックして **[プロパティ]** を選択します。 **[証明書]** タブに切り替え、**[Data Warehouse SQL Server Identification Certificate] (データ ウェアハウス SQL サーバーの識別証明書)** を証明書として選択し、変更を保存します。  
 
-    3. **SQL Server 構成マネージャー**の **[SQL Server サービス]** で、**SQL Server サービス**と**レポート サービス**の各サービスを再開します。  
+    3. **SQL Server 構成マネージャー**の **[SQL Server サービス]** で、**SQL Server サービス**を再開します。 SQL Reporting Services がデータ ウェアハウス データベースをホストするサーバー上にもインストールされている場合は、**Reporting Service** サービスも再開します。  
 
     4. Microsoft 管理コンソール (MMC) を開き、**証明書**スナップインを追加します。 ローカル コンピューターの **[コンピューター アカウント]** を選択します。 **[個人用]** フォルダーを展開し、**[証明書]** を選択します。 **Data Warehouse SQL Server Identification Certificate (データ ウェアハウス SQL サーバーの識別証明書)** を **DER encoded binary X.509 (.CER)** ファイルとしてエクスポートします。  
 

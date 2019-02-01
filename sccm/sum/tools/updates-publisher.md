@@ -10,17 +10,16 @@ ms.assetid: 2200b02b-e76b-4aa7-a77a-6dc5e70f1333
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 3a9c7758e394118041700192a393aff98f0d9087
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2047874bb44c89e510abd52a387277e749cf65db
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347333"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896449"
 ---
 # <a name="system-center-updates-publisher"></a>System Center Updates Publisher
 
-*適用対象: System Center Updates Publisher*
+「オブジェクトの*適用対象: System Center Updates Publisher*
 
 System Center Updates Publisher (Updates Publisher) は、独立系ソフトウェア ベンダーまたは基幹業務アプリケーション開発者によるカスタム更新プログラムの管理を可能にするスタンドアロン ツールです。 これには、ドライバーと更新プログラムのバンドルなどの依存関係のある更新プログラムが含まれています。
 
@@ -31,7 +30,7 @@ Updates Publisher を使用すると、次の操作が行えます。
 -   外部カタログへの更新プログラムのエクスポート。
 -   更新サーバーへの更新プログラムの公開。
 
-更新サーバーに更新プログラムを公開した後に System Center Configuration Manager を使用することで、管理対象デバイスに対してこれらの更新プログラムを検出および展開できます。
+更新サーバーに更新プログラムを公開した後に System Center Configuration Manager を使用することで、マネージド デバイスに対してこれらの更新プログラムを検出および展開できます。
 
 > [!TIP]  
 > 前のバージョンの [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/?LinkId=848111) は引き続きサポートされます。 今回の更新バージョンには機能に関する変更はありませんが、サポートされるオペレーティング システムの追加、タスクを簡略化するための新機能、更新されたユーザーインターフェースなどが含まれています。
@@ -47,13 +46,13 @@ Updates Publisher には、整理に役立つ 4 つのワークスペースが�
 
 **[更新プログラム] ワークスペース:** このワークスペースは、ソフトウェア更新プログラムの[作成](/sccm/sum/tools/create-updates-with-updates-publisher)と[管理](/sccm/sum/tools/manage-updates-with-updates-publisher)、バンドルの更新などに使用します。 これには、パブリケーションへの更新プログラムとバンドルの割り当て、公開、別の Updates Publisher のリポジトリへのエクスポートなどが含まれています。
 
-**[パブリケーション] ワークスペース:** このワークスペースでは、[パブリケーションを管理](/sccm/sum/tools/updates-publisher-publications)します。 パブリケーションは作成した更新プログラムのグループで、更新プログラムのエクスポートと公開を簡略化します。
+**[パブリケーション] ワークスペース:** ここでは、[パブリケーションを管理](/sccm/sum/tools/updates-publisher-publications)します。 パブリケーションは作成した更新プログラムのグループで、更新プログラムのエクスポートと公開を簡略化します。
 
 パブリケーションの管理には、更新プログラムをサーバに公開してクライアントが更新プログラムを見つけてインストールできること、他の Updates Publisher によるインストール用途のために更新プログラムとバンドルをエクスポートすること、またはパブリケーションのコンテンツや詳細を変更することなどが含まれています。
 
 
 
-**[規則] ワークスペース:** このワークスペースは、[適用規則を管理](/sccm/sum/tools/updates-publisher-applicability-rules)します。この規則は保存でき、後に展開した更新プログラムと共に使用できます。 規則には以下の 2 種類があります。
+**[動作規則] ワークスペース:** ここでは、[適用規則を管理](/sccm/sum/tools/updates-publisher-applicability-rules)します。この規則は保存でき、展開した更新プログラムと共に使用できます。 規則には以下の 2 種類があります。
 
 -   インストール可能な規則 – この規則は、クライアントによる更新プログラムのインストールの判断に役立ちます。
 -   インストール済みの規則 – この規則は、更新プログラムが既にインストールされていることを確認します。

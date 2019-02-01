@@ -2,7 +2,7 @@
 title: UUP プレビュー
 titleSuffix: Configuration Manager
 description: UUP 統合のプレビューについての説明
-ms.date: 01/14/2018
+ms.date: 01/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,13 +10,13 @@ ms.assetid: 0b0da585-0096-410b-8035-6b7a312f37f5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: 17a9abf2f20f53ba69ad160db421be51471cc311
-ms.sourcegitcommit: 27b2594087e8c54062db6b2a30ab843bab17f8cc
+ROBOTS: NOINDEX
+ms.openlocfilehash: 27a960758d8d3939798ae270404d5dd1afbea62d
+ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54270462"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072987"
 ---
 # <a name="uup-private-preview-instructions"></a>UUP プライベート プレビューの説明
 
@@ -56,28 +56,28 @@ UUP のプライベート プレビューに参加するには、ユーザーの
 $server = Get-WsusServer
 $config = $server.GetConfiguration()
 $config.ServerId
+
+# also check MUUrl
+$config.MUUrl
 ```
 
-### <a name="2-update-configmgr-to-a-supported-version"></a>2.ConfigMgr をサポートされるバージョンに更新します
+**MUUrl** プロパティは `https://sws.update.microsoft.com` である必要があります。 これを変更する場合は、サポート記事の「[WSUS synchronization fails with SoapException](https://support.microsoft.com/help/4482416/wsus-synchronization-fails-with-soapexception)」 (WSUS の同期が SoapException で失敗する) の解決方法を参照してください。
+
+
+### <a name="2-update-configmgr"></a>2.ConfigMgr を更新します
 
 環境内の高速インストール ファイルを同期している場合、運用環境では ConfigMgr 1810 の現在のブランチが、ラボ環境では 1812 のテクニカル プレビュー ブランチが必要です。
 
 環境内の高速インストール ファイルを同期していない場合、運用環境ではさらに ConfigMgr 1810 の修正プログラム KB4482615 が、ラボ環境では 1812 のテクニカル プレビュー ブランチが必要です。
 
 
-#### <a name="configmgr-1810-uup-hotfix-kb4482615"></a>ConfigMgr 1810 UUP 修正プログラム (KB4482615)
-
-> [!Important]  
-> 以下のプロセスは、2018 年 12 月 19 日以降に一般公開されてからバージョン 1810 に更新した現在のブランチ サイトが対象です。
->
-> 2018 年の 11 月後半または 12 月前半に PowerShell スクリプトを実行して 1810 の更新を選択した場合、この修正プログラムはまだ使用できません。 
+#### <a name="diagnostics-and-usage-data-level"></a>診断結果と使用状況データのレベル
+このプレビュー期間中に、Configuration Manager の診断結果とデータの使用状況のレベルを上げることを検討します。 **フル**  レベルは、Microsoft でこの新機能に関する問題をより適切に分析し、トラブルシューティングするのに役立ちます。 詳細については、「[バージョン 1810 での診断の使用状況データ収集のレベル](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810)」を参照してください。
 
 
-1. サイトを更新する
+#### <a name="update-rollup-for-configmgr-1810-4486457"></a>ConfigMgr 1810 の更新プログラムのロールアップ (4486457)
 
-    1. [Microsoft ダウンロード センター]<!--(https://download.microsoft.com/download/0/9/0/09081E12-A2CF-40B6-82D8-9B8914A1C2D3/KB4482615/CM1810-KB4482615.ConfigMgr.Update.exe)--> から修正プログラム KB4482615 をダウンロードします。 この修正プログラムにより、非高速のシナリオ用に UUP が有効になります。  
-
-    2. [更新登録ツールを使用して修正プログラムをインポートする](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
+1. バージョン 1810 の更新プログラム ロールアップを使用して、サイトを更新します。 詳細については、[コンソール内の更新プログラムのインストール](/sccm/core/servers/manage/install-in-console-updates)に関するページを参照してください。  
 
 2. クライアントを更新します。  
 
@@ -85,11 +85,15 @@ $config.ServerId
 
     - 使用されていないコンテンツの**約 6 GB の不必要なダウンロード**をクライアントに対して行わなくてもよいように、UUP 更新プログラムの対象であるすべてのクライアントをアップグレードする必要があります。
 
+この更新プログラムの詳細については、「[Update rollup for System Center Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457)」 (System Center Configuration Manager Current Branch バージョン 1810 の更新プログラムのロールアップ) を参照してください。
 
-#### <a name="1812-technical-preview"></a>1812 Technical Preview
-1812 Technical Preview は、サポートされる UUP のシナリオについては ConfigMgr 1810 UUP Hotfix (KB4482615) と同じです。
 
-唯一の注意点は、1812 Technical Preview のクライアント アップグレードは 1810.1 TP または 1811 TP からでは壊れることです。 この問題を回避するには、1810.1 TP および 1811 TP クライアントをアンインストールした後、1812 TP クライアントをクリーンにインストールする必要があります。 使用されていないコンテンツの**約 6 GB の不必要なダウンロード**をクライアントに対して行わなくてもよいように、UUP 更新プログラムの対象であるすべてのクライアントを、1812 Technical Preview (以降) にする必要があります。
+<!-- 
+#### 1812 Technical Preview
+The 1812 Technical Preview is equivalent in supported UUP scenarios to the ConfigMgr 1810 UUP Hotfix (KB4482615).
+
+The only note is that client upgrade of 1812 Technical Preview is broken from 1810.1 TP or 1811 TP. To work around this issue, you'll need to uninstall 1810.1 TP and 1811 TP clients, then install the 1812 TP client cleanly. All clients you target UUP updates to must be on 1812 Technical Preview (or later) to prevent **unnecessarily downloading around 6 GB** of unused content to the client.
+ -->
 
 
 ### <a name="3-update-windows-clients-to-supported-versions"></a>3.サポートされているバージョンに Windows クライアントを更新します
@@ -97,26 +101,26 @@ $config.ServerId
 #### <a name="for-express-installation-file-sync"></a>高速インストール ファイル同期の場合
 高速コンテンツの場合、次の Windows バージョンがサポートされています。
 
-- **Windows 10 バージョン 1709** と [KB4338825](https://support.microsoft.com/help/4338825) (2017 年 7 月の累積的セキュリティ更新プログラム) 以降  
+- **Windows 10 バージョン 1809** とセキュリティ以外の累積的更新プログラム [KB4476976](https://support.microsoft.com/help/4476976/windows-10-update-kb4476976) (1 月 22 日リリース) 以降。 この更新プログラムはカタログでのみ使用でき、WSUS には直接同期されません。 展開のために環境内に更新プログラムをインポートするには、「[Microsoft Update カタログから更新プログラムをインポートする](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog)」をご覧ください。
 
 - **Windows 10 バージョン 1803** と [KB4284835](https://support.microsoft.com/help/4284835) (2017 年 6 月の累積的セキュリティ更新プログラム) 以降  
 
-- **Windows 10 バージョン 1809**と、まだリリースされていない 1 月の累積的非セキュリティ更新プログラム (または、次の 2 月の累積的セキュリティ更新プログラム) 以降
+- **Windows 10 バージョン 1709** と [KB4338825](https://support.microsoft.com/help/4338825) (2017 年 7 月の累積的セキュリティ更新プログラム) 以降  
+
 
 #### <a name="for-non-express-installation-file-sync"></a>非高速インストール ファイル同期の場合
-非高速コンテンツの場合は、追加のパッチを適用する必要があります。 このパスは、カタログ 12/20 において非累積的形式で利用可能になっており、1 月下旬の通常の累積的形式で使用できるようになります。
+非高速コンテンツの場合は、追加のパッチを適用する必要があります。 約 6 GB の使用されていないコンテンツの不必要なダウンロードがクライアントに対して行われないようにするには、この更新プログラムが不可欠です。 サポートされている Windows バージョンには、次のビルドが含まれます。
 
-**Windows 10 バージョン 1709** および **Windows 10 バージョン 1803** と次のいずれか:
-- 12 月 - 1 月:クライアントには、ベースの累積的更新プログラム レベルに加えて、非累積的更新プログラムが必要です  
-    - 累積的更新プログラム  
-        - 1709:[KB4338825](https://support.microsoft.com/help/4338825) (2017 年 7 月の累積的セキュリティ更新プログラム) から 2019 年 1 月の累積的セキュリティ更新プログラムまで (両端を含む)  
-        - 1803:[KB4284835](https://support.microsoft.com/help/4284835) (2017 年 6 月の累積的セキュリティ更新プログラム) から 2019 年 1 月の累積的セキュリティ更新プログラムまで (両端を含む)  
-    - 非累積的更新プログラム:この更新プログラムはカタログでのみ使用でき、WSUS には直接同期されません。 展開のために環境内に更新プログラムをインポートするには、「[Microsoft Update カタログから更新プログラムをインポートする](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog)」をご覧ください。  
-        - 1709:[KB4483530](https://support.microsoft.com/help/4483530)  
-        - 1803:[KB4483541](https://support.microsoft.com/help/4483541)  
-- 2 月以降:累積的更新プログラムのみの場合、まだリリースされていない 1 月の累積的非セキュリティ更新プログラム (または、次の 2 月の累積的セキュリティ更新プログラム) 以降   
+- **Windows 10 バージョン 1809** とセキュリティ以外の累積的更新プログラム [KB4476976](https://support.microsoft.com/help/4476976/windows-10-update-kb4476976) (1 月 22 日リリース) 以降。 この更新プログラムはカタログでのみ使用でき、WSUS には直接同期されません。 展開のために環境内に更新プログラムをインポートするには、「[Microsoft Update カタログから更新プログラムをインポートする](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog)」をご覧ください。
 
-**Windows 10 バージョン 1809**と、まだリリースされていない 1 月の累積的非セキュリティ更新プログラム (または、次の 2 月の累積的セキュリティ更新プログラム) 以降
+
+- **Windows 10 バージョン 1803** と **Windows 10 バージョン 1709** のクライアントには、ベースの累積的更新プログラム レベルに加えて、非累積的更新プログラムが必要です。
+    - 累積的更新プログラム
+        - 1803:[KB4284835](https://support.microsoft.com/help/4284835) (2017 年 6 月の累積的セキュリティ更新プログラム) から 2019 年 1 月の累積的セキュリティ更新プログラムまで (両端を含む)
+        - 1709:[KB4338825](https://support.microsoft.com/help/4338825) (2017 年 7 月の累積的セキュリティ更新プログラム) から 2019 年 1 月の累積的セキュリティ更新プログラムまで (両端を含む)
+    - 非累積的更新プログラム:この更新プログラムはカタログでのみ使用でき、WSUS には直接同期されません。 展開のために環境内に更新プログラムをインポートするには、「[Microsoft Update カタログから更新プログラムをインポートする](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog)」をご覧ください。
+        - 1803:[KB4483541](https://support.microsoft.com/help/4483541)
+        - 1709:[KB4483530](https://support.microsoft.com/help/4483530)
 
 
 ### <a name="4-enable-express-installation-on-clients-in-client-settings"></a>4.クライアント設定でクライアントの高速インストールを有効にします
@@ -182,10 +186,7 @@ UUP 更新プログラムを環境に同期した後は、テストのために�
 
 ### <a name="updates-available-during-preview"></a>プレビュー期間中に使用可能な更新プログラム
 
-- Windows 10 1709 累積的更新プログラム
-    - 12 月のセキュリティ更新プログラム (12/11)
-    - 1 月のセキュリティ更新プログラム (1/8)
-    - 1 月の非セキュリティ更新プログラム (1/15)
+- Windows 10 1809 累積的更新プログラム
     - 2 月のセキュリティ更新プログラム (2/12)  
 
 - Windows 10 1803 累積的更新プログラム
@@ -194,17 +195,20 @@ UUP 更新プログラムを環境に同期した後は、テストのために�
     - 1 月の非セキュリティ更新プログラム (1/15)
     - 2 月のセキュリティ更新プログラム (2/12)  
 
-- Windows 10 1809 累積的更新プログラム
+- Windows 10 1709 累積的更新プログラム
+    - 12 月のセキュリティ更新プログラム (12/11)
+    - 1 月のセキュリティ更新プログラム (1/8)
+    - 1 月の非セキュリティ更新プログラム (1/15)
     - 2 月のセキュリティ更新プログラム (2/12)  
-
-- Windows 10 1803 機能更新プログラム (1709 または 1803 から)   
-    - 12 月のセキュリティ更新プログラムのコンプライアンス (12/11)
-    - 1 月のセキュリティ更新プログラムのコンプライアンス (1/8)
-    - 2 月のセキュリティ更新プログラムのコンプライアンス (2/12)  
 
 - Windows 10 1809 機能更新プログラム (1709 または 1803 から)
     - 12 月 (12/11) のセキュリティ更新プログラムのコンプライアンス
     - 1 月 (1/8) のセキュリティ更新プログラムのコンプライアンス
+    - 2 月のセキュリティ更新プログラムのコンプライアンス (2/12)  
+
+- Windows 10 1803 機能更新プログラム (1709 または 1803 から)   
+    - 12 月のセキュリティ更新プログラムのコンプライアンス (12/11)
+    - 1 月のセキュリティ更新プログラムのコンプライアンス (1/8)
     - 2 月のセキュリティ更新プログラムのコンプライアンス (2/12)  
 
 UUP がまだプレビュー段階 (プライベートまたはパブリック) の場合、必要に応じて、3 月およびそれ以降のセキュリティ更新プログラムも、引き続きこれらすべての領域で公開されます。 プレビューが完了した後は、Windows 10 バージョン 1809 累積的更新プログラムおよび機能更新プログラム (Windows 10 バージョン 1803 から) のみが、運用環境でサポートされます。
@@ -226,7 +230,7 @@ UUP がまだプレビュー段階 (プライベートまたはパブリック) 
 プレビュー期間中は、複数の連続する更新プログラムに対して UUP 型の更新プログラムを使用してクライアントの準拠を維持し、継続的に予測が行われているような感覚にします。
 
 #### <a name="content"></a>Content
-各メジャー バージョン (1709、1803、1809)、アーキテクチャ、および言語の組み合わせに対する最初の更新プログラムは、ファイルの数とディスク容量の両方の点で、以前の非 UUP 更新プログラムと比較して、大きく見えるはずです。 この余分なコンテンツは、主に累積的更新プログラムに対するすべての FOD と言語パックによるものです。 機能更新プログラムの場合 (特に高速が有効になっている場合)、その最初の更新プログラムには大きい追加コンテンツがあります。 
+各メジャー バージョン (1809、1803、1709)、アーキテクチャ、および言語の組み合わせに対する最初の更新プログラムは、ファイルの数とディスク容量の両方の点で、以前の非 UUP 更新プログラムと比較して、大きく見えるはずです。 この余分なコンテンツは、主に累積的更新プログラムに対するすべての FOD と言語パックによるものです。 機能更新プログラムの場合 (特に高速が有効になっている場合)、その最初の更新プログラムには大きい追加コンテンツがあります。 
 
 ただし、以降の更新プログラムでは (累積的更新プログラムと、高コンプライアンス レベルでの月単位の機能更新プログラムの両方)、すべての FOD と言語パックのコンテンツは更新プログラム間でインテリジェントに共有されて、再ダウンロードまたは再配布の必要がないため、ダウンロードして配布する必要がある新しいコンテンツの量ははるかに少なくなります。 プレビュー期間中の 1709 と 1803 では、この月単位のダウンロードのサイズは、非 UUP のシナリオでの累積的更新プログラムのサイズとほぼ同じになります。 ただし、1809 では、累積的更新プログラムの増分ダウンロードが月ごとにどんどん小さくなるため、状況ははるかによくなります。 
 

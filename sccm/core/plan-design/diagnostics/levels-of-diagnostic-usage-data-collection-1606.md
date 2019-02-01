@@ -10,16 +10,17 @@ ms.assetid: f7350d03-f440-4744-82d4-75f8c6c25028
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 902e5e91b64cf3061862deeb98b0d9bf427e4598
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: af82e3b5d0f555494705a28fba291253c83b00ea
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340915"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898020"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager バージョン 1606 により収集される診断結果および使用状況データのレベル
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager バージョン 1606 では、**基本**、**エンハンス**、**フル**の 3 つのレベルの診断結果と使用状況データが収集されます。 既定では、この機能は、エンハンス レベルに設定されます。 以降のセクションでは、各レベルで収集されるデータについて詳しく説明します。
 
@@ -57,7 +58,7 @@ System Center Configuration Manager バージョン 1606 では、**基本**、*
 
 -   Configuration Manager クライアント バージョンとオペレーティング システム バージョンの数
 
--   管理対象デバイスのオペレーティング システムおよび Exchange Connector によって設定されたポリシーの数
+-   マネージド デバイスのオペレーティング システムおよび Exchange Connector によって設定されたポリシーの数
 
 -   クライアントの言語とロケールの数
 

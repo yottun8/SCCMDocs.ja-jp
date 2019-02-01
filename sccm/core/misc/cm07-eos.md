@@ -10,17 +10,17 @@ ms.assetid: 422aa328-7d9c-47d9-ab54-49668085881b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: 04679fc70ffa326066f5755646193c8d0072f989
-ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
+ROBOTS: NOINDEX
+ms.openlocfilehash: dd13ef6d3ab9f2085bd73f02a0208bbb97bd582d
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223621"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896415"
 ---
 # <a name="product-end-of-support"></a>製品とサポート
 
-*適用対象: System Center Configuration Manager 2007*
+「オブジェクトの*適用対象: System Center Configuration Manager 2007*
 
 **System Center Configuration Manager 2007** と **Forefront Endpoint Protection 2010** のサポートは 2019 年 7 月 9 日をもって終了します。 この日以降、Microsoft はこれらの製品に対して次のサービスを提供しません。 
 - セキュリティ更新

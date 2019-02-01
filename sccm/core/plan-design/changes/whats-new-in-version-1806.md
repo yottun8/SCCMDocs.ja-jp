@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe8fb2a8138433d00686530f76916a1ee4e88dac
-ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.openlocfilehash: cb0d5d1982bb0b109b83f30f1101ddd50316d53e
+ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54250801"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55073035"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1806 の新機能
 
@@ -29,14 +29,6 @@ Configuration Manager Current Branch の更新プログラム 1806 はコンソ�
 > [!Important]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
 -->
-
-このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Summary of changes in Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4459701)」(Configuration Manager Current Branch バージョン 1806 での変更の概要) をご覧ください。
-
-Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell 1806 リリース ノート](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps)を参照してください。
-
-このリリースでは、次の追加の更新プログラムも利用できるようになりました。
-- [Configuration Manager Current Branch バージョン 1806 の更新プログラムのロールアップ](https://support.microsoft.com/help/4462978)
-
 
 次の各セクションでは、Configuration Manager Current Branch のバージョン 1806 の変更点と新機能について説明します。  
 
@@ -529,6 +521,27 @@ Version 1806 drops support for the following products:
 [気に入った機能の報告] を使ってみましょう。 Configuration Manager チームに使用感を直接伝えることができるようになりました。 フィードバックは、Configuration Manager コンソールから簡単に送信できます。 称賛、問題、提案など、あらゆるフィードバックを歓迎します。 Configuration Manager コンソールで、リボンの右上にあるスマイル ボタンをクリックします。 このフィードバックは、Configuration Manager の Microsoft 製品チームに直接送られます。 Windows 10 フィードバック ハブも使用できますが、コンソール内のフィードバック機能を使用することをお勧めします。  
 
 詳細については、「[バージョン 1806 のコンソールの機能強化](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806)」と[製品フィードバック](/sccm/core/understand/find-help#BKMK_1806Feedback)に関するページを参照してください。
+
+
+
+## <a name="other-updates"></a>その他の更新内容
+
+このリリースには、新機能に加え、バグ修正などの追加の変更も含まれています。 詳細については、「[Summary of changes in Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4459701)」(Configuration Manager Current Branch バージョン 1806 での変更の概要) をご覧ください。
+
+Configuration Manager 向け Windows PowerShell コマンドレットの変更に関する詳細については、[PowerShell 1806 リリース ノート](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps)を参照してください。
+
+2018 年 10 月 24 日以降、コンソールで、[Configuration Manager Current Branch バージョン 1806 の更新プログラムのロールアップ](https://support.microsoft.com/help/4462978) (4462978) が利用できるようになりました。
+
+
+### <a name="hotfixes"></a>修正プログラム
+
+次の追加の修正プログラムは、特定の問題を解決するために利用できます。
+
+| ID | タイトル | 日付 | コンソール内 |
+|---------|---------|---------|---------|
+| [4346645](https://support.microsoft.com/help/4346645) | System Center Configuration Manager バージョン 1806 の更新プログラム (第 1 弾) | 2018 年 8 月 31 日 | はい |
+| [4465865](https://support.microsoft.com/help/4465865) | WSUS が切断された場合、ソフトウェア更新プログラムは Configuration Manager 環境にダウンロードされません<br><br>この更新プログラムは、更新プログラムのロールアップ (4462978) にもあります | 2018 年 10 月 1 日 | はい |
+| [4471892](https://support.microsoft.com/help/4471892) | PXE レスポンダーは、Configuration Manager 1806 のサブネットでは機能しません | 2018 年 11 月 23 日 | いいえ |
 
 
 

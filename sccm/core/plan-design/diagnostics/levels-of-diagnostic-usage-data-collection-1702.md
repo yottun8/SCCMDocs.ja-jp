@@ -10,16 +10,17 @@ ms.assetid: d43ab033-2902-4681-8716-b4b17a6df372
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b77f2d38cb24b681aec4123621ffbbf8ba1be579
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: 575611f8267d4ba10f5c471e63713e121abfc252
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341714"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897850"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager バージョン 1702 で収集される診断結果および使用状況データのレベル
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager バージョン 1702 では、**基本**、**エンハンス**、**フル**の 3 つのレベルの診断結果と使用状況データが収集されます。 既定では、この機能は、エンハンス レベルに設定されます。 以降のセクションでは、各レベルで収集されるデータについて詳しく説明します。
 
@@ -68,7 +69,7 @@ System Center Configuration Manager バージョン 1702 では、このレベ�
 
 - Configuration Manager クライアント バージョンとオペレーティング システム バージョンの数
 
-- 管理対象デバイスのオペレーティング システムおよび Exchange Connector によって設定されたポリシーの数
+- マネージド デバイスのオペレーティング システムおよび Exchange Connector によって設定されたポリシーの数
 
 - Windows 10 デバイスの数 (ブランチおよびビルド別)
 

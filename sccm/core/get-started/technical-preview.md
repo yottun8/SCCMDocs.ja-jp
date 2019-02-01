@@ -2,7 +2,7 @@
 title: Technical Preview リリース
 titleSuffix: Configuration Manager
 description: Configuration Manager の新機能を体験する Technical Preview Branch について説明します。
-ms.date: 12/14/2018
+ms.date: 01/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d2c1e93378711a19b10f9b67fcaad9973e53ee2e
-ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
+ms.openlocfilehash: cf432ea32e5946a98b59e158752b3e82cf63b3b3
+ms.sourcegitcommit: b8167a60fd6f2d8387b2db723976c0e2c4198d33
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53444639"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54832773"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager の Technical Preview
 
@@ -25,7 +25,7 @@ ms.locfileid: "53444639"
 
 このリリースはテクニカル プレビューであるため、詳細や機能は変更されることがあります。  
 
-この情報は、Configuration Manager Technical Preview Branch のすべてのバージョンに適用されます。 この記事では、各新機能とそれが最初に組み込まれる Technical Preview バージョンの一覧を示します。 たとえば、2018 年 (18) 9 月 (09) のバージョンは **1809** です。 個々の機能の詳細については、Preview バージョンごとの記事で説明します。  
+この情報は、Configuration Manager Technical Preview Branch のすべてのバージョンに適用されます。 この記事では、各新機能とそれが最初に組み込まれる Technical Preview バージョンの一覧を示します。 たとえば、2019 年 (19) 1 月 (01) のバージョンは **1901** です。 個々の機能の詳細については、Preview バージョンごとの記事で説明します。  
 
 Configuration Manager の *Current Branch* の新機能については、「[System Center Configuration Manager の増分バージョンの新機能](/sccm/core/plan-design/changes/whats-new-incremental-versions)」をご覧ください。
 
@@ -124,15 +124,30 @@ Technical Preview の新機能に関するフィードバックをお寄せく�
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1812"></a>Technical Preview バージョン 1812
+### <a name="technical-preview-version-1901"></a>Technical Preview バージョン 1901
 
-<!--capabilities-in-technical-preview-1812.md#bkmk_anchor-->
+<!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor)<!--ID-->
 
-- [PowerShell スクリプトの実行タスク シーケンス ステップの改善](capabilities-in-technical-preview-1812.md#bkmk_posh) <!--3556028 fka 1359389-->  
-- [電子メールを使用したアプリケーション承認の改善](capabilities-in-technical-preview-1812.md#bkmk_email) <!--3594063-->  
-- [ソフトウェア センターでのユーザーとデバイスのアフィニティの構成](capabilities-in-technical-preview-1812.md#bkmk_uda) <!--3485366-->  
-- [Configuration Manager コンソールの機能拡張](capabilities-in-technical-preview-1812.md#bkmk_console) <!--3594151-->  
-- [コミュニティ ハブからレポートのダウンロード](capabilities-in-technical-preview-1812.md#bkmk_hub)<!--3555936-->  
+
+- [クライアントの正常性ダッシュボード](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health)<!--3599209-->  
+- [Windows 10 サービスで機能更新プログラムの優先順位を指定する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo)<!--3734525-->  
+- [段階的な展開に対する専用の監視](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod)<!--3555949--> 
+- [中央管理サイトから CMPivot を実行する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot)<!--3610960-->  
+- [PowerShell スクリプトの実行タスク シーケンス ステップの改善](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh)<!--3556028-->  
+- [ライフサイクル ダッシュボードでの Office 製品](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle)<!--3556026-->  
+- [コレクションのマネジメント インサイト規則](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll)<!--3555752-->  
+- [MAC アドレスを使用してデバイス ビューを検索する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac)<!--3600878-->  
+- [配布ポイント メンテナンス モード](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint)<!--3555754-->  
+- [最適化されたイメージ サービス](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase)<!--3555951-->  
+- [OS イメージの 1 つのインデックスをインポートする](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index)<!--3719699--> 
+- [クラウド サービスに Azure Resource Manager を使用する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm)<!--3605704-->  
+- [コンソール フィードバックの確認](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback)<!--3556010--> 
+- [Azure で Configuration Manager Technical Preview ラボを作成する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm)<!--3556017-->  
+- [ピア ウェイクアップ用のカスタム ポートを指定する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep)<!--3605925-->  
+- [最近接続されたコンソールを表示する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console)<!--3699367-->  
+- [しきい値を超えたときにクラウド サービスを停止する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg)<!--3735092--> 
+- [クライアント プロビジョニング モードのタイムアウト](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov)<!--3197824-->
+- [OS 展開の機能強化](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd)<!--3633146,3641475,3654172,3734270-->
 
 
 > [!Note]  
@@ -151,6 +166,11 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | 機能 | Technical Preview のバージョン | Current Branch のバージョン |  
  |---------|---------------------------|------------------------|
+ | PowerShell スクリプトの実行タスク シーケンス ステップの改善 <!--3556028 fka 1359389--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_posh) | ![追加されていません](media/Red_X.gif) | 
+ | 電子メールを使用したアプリケーション承認の改善 <!--3594063--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_email) | ![追加されていません](media/Red_X.gif) | 
+ | ソフトウェア センターでのユーザーとデバイスのアフィニティの構成 <!--3485366--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_uda) | ![追加されていません](media/Red_X.gif) | 
+ | Configuration Manager コンソールの機能拡張 <!--3594151--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_console) | ![追加されていません](media/Red_X.gif) | 
+ | コミュニティ ハブからレポートのダウンロード<!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) | ![追加されていません](media/Red_X.gif) | 
  | Windows PowerShell プロファイルを読み込まない <!--1359239--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_noprofile) | ![追加されていません](media/Red_X.gif) | 
  | オンプレミスの MDM に Intune 接続は不要になった <!--1359124--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_opmdm) | ![追加されていません](media/Red_X.gif) | 
  | Configuration Manager コンソールの通知 <!--1318035--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | ![追加されていません](media/Red_X.gif) | 
@@ -161,19 +181,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | ピア キャッシュ ソースのクライアントのバージョンに関するマネジメントの分析情報の規則 <!--1358008--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_insights) | バージョン 1810 | 
  | インターネット ベースのクライアント セットアップの機能強化 <!--1359181--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_cmg) | バージョン 1810 | 
  | アプリケーションを MSIX に変換する <!--1359029--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_msix) | バージョン 1810 | 
- | クライアント インストールの改善 <!--1358840--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_ccmsetup) | バージョン 1810 | 
- | 共同管理デバイスに必要なアプリ コンプライアンス ポリシー <!--1358196--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_app-compliance) | バージョン 1810 | 
- | 共同管理ダッシュボードの改善 <!--1358980--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_comgmt-report) | バージョン 1810 | 
- | 新しい境界グループのオプション <!--1358749--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_bgoptions) | バージョン 1810 | 
- | Windows クラスター ノード上のサイト システム <!--1359132--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_cluster) | バージョン 1810 | 
- | CMPivot の改善 <!--1359068--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_cmpivot) | バージョン 1810 | 
- | スクリプトの改善 <!--1358239--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_scripts) | バージョン 1810 | 
- | デバイスを復帰させる新しいクライアント通知アクション <!--1317364--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_wakeup) | バージョン 1810 | 
- | 境界グループのタスク シーケンス サポート <!--1359025--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_bgr-osd) | バージョン 1810 | 
- | 管理分析情報ダッシュボード <!--1357979--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_insights) | バージョン 1810 | 
- | コンソール内ドキュメント ダッシュボード <!--1357546--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | ![追加されていません](media/Red_X.gif) | 
- | ドライバーのメンテナンスの機能強化 <!--1358270--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_drivers) | バージョン 1810 | 
- | 既存デバイス向けの Windows Autopilot のタスク シーケンスのサポート <!--1358333--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_autopilot) | バージョン 1810 | 
 
 
 
@@ -189,6 +196,7 @@ With each CB release, review and remove from this list for anything that's now a
 
 | 機能        | Technical Preview のバージョン |  
 |----------------|---------------------------|
+| コンソール内ドキュメント ダッシュボード <!--1357546--> | [Tech Preview 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | 
 | コミュニティ ハブ <!--1357766--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) | 
 | Intune での共同管理されたデバイス同期アクティビティ <!--1358565--> | [Tech Preview 1807](capabilities-in-technical-preview-1807.md#bkmk_comgmt) | 
 | クライアント ベースの PXE レスポンダー サービス <!--1357148--> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |

@@ -10,16 +10,17 @@ ms.assetid: bcde47a7-433e-4944-964b-539b17d15d64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9095bdf431525a66a570267c4fff07a382a16fe4
-ms.sourcegitcommit: af4f8bd8dffe6fb05f51322ea9e94d335a2cc0c0
+ROBOTS: NOINDEX
+ms.openlocfilehash: c443f561392f95d875a681319ebb9db4ff3fb66b
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39360768"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898479"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Configuration Manager Technical Preview バージョン 1807 の機能 
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、Configuration Manager の Technical Preview バージョン 1807 で利用できる機能について説明します。 このバージョンをインストールすると、Technical Preview サイトが更新され、新機能が追加されます。 
 
@@ -71,9 +72,9 @@ Steps to workaround, if any.
 
 **[コミュニティ]** ワークスペースには、次のノードも含まれています。
 
-- **ドキュメント**: Configuration Manager の[ドキュメント ライブラリ](https://docs.microsoft.com/sccm/)が表示されます  
+- **ドキュメント**:Configuration Manager の[ドキュメント ライブラリ](https://docs.microsoft.com/sccm/)が表示されます。  
 
-- **フィードバック**: Configuration Manager の [UserVoice サイト](https://configurationmanager.uservoice.com/)が表示されます  
+- **フィードバック**:Configuration Manager の [UserVoice サイト](https://configurationmanager.uservoice.com/)が表示されます  
 
 
 ### <a name="prerequisites"></a>[前提条件]
@@ -219,7 +220,7 @@ Configuration Manager コンソールに、共同管理されたデバイスが 
 
 詳細なスクリプトの出力を、手が加えられていない形式または構造化された JSON 形式で表示できるようになりました。 この書式設定を行うと、出力の読み取りと分析が容易になります。 スクリプトが有効な JSON 形式のテキストを返す場合は、詳細な出力を **JSON 出力**または**未フォーマット出力**として表示できます。 それ以外の場合は、**[スクリプトの出力]** が唯一のオプションです。 
 
-#### <a name="example-script-output-is-valid-json"></a>例: スクリプト出力が有効な JSON である
+#### <a name="example-script-output-is-valid-json"></a>例:スクリプト出力が有効な JSON である
 コマンド: `$PSVersionTable.PSVersion`  
 
 出力:  
@@ -229,7 +230,7 @@ Major  Minor  Build  Revision
 5      1      16299  551
 ```
 
-#### <a name="example-script-output-isnt-valid-json"></a>例: スクリプト出力が有効な JSON ではない
+#### <a name="example-script-output-isnt-valid-json"></a>例:スクリプト出力が有効な JSON ではない
 コマンド: `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 出力:  

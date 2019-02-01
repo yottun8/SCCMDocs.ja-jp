@@ -10,16 +10,17 @@ ms.assetid: 56dc4b07-5aa4-43e2-9be8-d26ae5ff5613
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc4dc88b2a8fa9ba075fee51e187e02ae55c2cce
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: 672257141c0672a76b89ee9d78184d2a4230280f
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344519"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898360"
 ---
 # <a name="capabilities-in-technical-preview-1803-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1803 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、Configuration Manager の Technical Preview バージョン 1803 で利用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Technical Preview サイトに追加できます。 
 
@@ -41,8 +42,7 @@ ms.locfileid: "32344519"
 
  
 ## <a name="pull-distribution-points-support-cloud-distribution-points-as-source"></a>ソースとしてのクラウド配布ポイントのプル配布ポイントのサポート  
-<!--1321554-->
-多くのお客様がリモート オフィスまたは支社で[プル配布ポイント](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)を使用して、WAN 経由でソース配布ポイントからコンテンツをダウンロードします。 リモート オフィスでより良好なインターネット接続を確保したい場合、あるいは WAN リンクへの負荷を減らすために、Microsoft Azure でソースとして[クラウド配布ポイント](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)を使用できるようになりました。 配布ポイント プロパティの **[プル配布ポイント]** タブでソースを追加する場合に、サイトのクラウド配布ポイントが利用可能な配布ポイントとしてリストされるようになりました。 それ以外の場合、両方のサイト システムの役割の動作は変わりません。 
+<!--1321554--> 多くのお客様がリモート オフィスまたは支社で[プル配布ポイント](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)を使用して、WAN 全体でソース配布ポイントからコンテンツをダウンロードします。 リモート オフィスでより良好なインターネット接続を確保したい場合、あるいは WAN リンクへの負荷を減らすために、Microsoft Azure でソースとして[クラウド配布ポイント](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)を使用できるようになりました。 配布ポイント プロパティの **[プル配布ポイント]** タブでソースを追加する場合に、サイトのクラウド配布ポイントが利用可能な配布ポイントとしてリストされるようになりました。 それ以外の場合、両方のサイト システムの役割の動作は変わりません。 
 
 ### <a name="prerequisites"></a>[前提条件]
 - プル配布ポイントは、Microsoft Azure と通信するためにインターネットにアクセスする必要があります。
@@ -54,11 +54,10 @@ ms.locfileid: "32344519"
 
 
 ## <a name="partial-download-support-in-client-peer-cache-to-reduce-wan-utilization"></a>WAN の使用率を減らすためのクライアント ピア キャッシュでの部分的なダウンロードのサポート
-<!--1357346-->
-クライアント ピア キャッシュ ソースのコンテンツを分割できるようになりました。 これにより、ネットワーク転送が最小限に抑えられ、WAN の使用率が減ります。 管理ポイントでは、コンテンツの各パートをより詳細に追跡することができます。 境界グループごとに同じ内容が複数回ダウンロードされないようにします。 
+<!--1357346--> クライアント ピア キャッシュ ソースのコンテンツを分割できるようになりました。 これにより、ネットワーク転送が最小限に抑えられ、WAN の使用率が減ります。 管理ポイントでは、コンテンツの各パートをより詳細に追跡することができます。 境界グループごとに同じ内容が複数回ダウンロードされないようにします。 
 
 ### <a name="example-scenario"></a>シナリオ例
-Contoso には、2 つの境界グループ (本社 (HQ) と支社) を持つ 1 つのプライマリ サイトがあります。 2 つの境界グループ間には 30 分のフォールバック リレーションシップがあります。 サイトの管理ポイントと配布ポイントは HQ 境界にのみ存在します。 支社の場所にはローカル配布ポイントはありません。 支社の 4 つのクライアントのうち 2 つは、ピア キャッシュ ソースとして構成されています。 
+Contoso には、本社 (HQ) および支社という 2 つの境界グループを持つ 1 つのプライマリ サイトがあります。 2 つの境界グループ間には 30 分のフォールバック リレーションシップがあります。 サイトの管理ポイントと配布ポイントは HQ 境界にのみ存在します。 支社の場所にはローカル配布ポイントはありません。 支社の 4 つのクライアントのうち 2 つは、ピア キャッシュ ソースとして構成されています。 
 
 ![シナリオ例で説明されているネットワーク構成の図](media/1357346-peer-cache-source-parts.png)
 
@@ -93,15 +92,13 @@ Contoso には、2 つの境界グループ (本社 (HQ) と支社) を持つ 1 
 
 
 ## <a name="maintenance-windows-in-software-center"></a>ソフトウェア センターのメンテナンス期間
-<!--1358131-->
-ソフトウェア センターでは、次のスケジュールされたメンテナンス期間が表示されるようになりました。 [インストールのステータス] タブで、[すべて] のビューを [今後のタスク] に切り替えます。 ここには、スケジュールされている展開のリストと時間の範囲が表示されます。 今後のメンテナンス期間がない場合、リストは空白です。 
+<!--1358131--> ソフトウェア センターでは、次のスケジュールされたメンテナンス期間が表示されるようになりました。 [インストールのステータス] タブで、[すべて] のビューを [今後のタスク] に切り替えます。 ここには、スケジュールされている展開のリストと時間の範囲が表示されます。 今後のメンテナンス期間がない場合、リストは空白です。 
 
 ![[インストールのステータス] タブに今後の展開のリストが示されているソフトウェア センター](media/1358131-software-center-maintenance-windows.png)
 
 
 ## <a name="custom-tab-for-webpage-in-software-center"></a>ソフトウェア センターの Web ページのカスタム タブ
-<!--1358132-->
-カスタマイズされたタブを作成して、ソフトウェア センターで Web ページを開けるようになりました。 この機能では、一貫性のある信頼性の高い方法で、エンドユーザーにコンテンツを表示することができます。 以下のリストには例がいくつか含まれています。
+<!--1358132--> カスタマイズされたタブを作成して、ソフトウェア センターで Web ページを開けるようになりました。 この機能では、一貫性のある信頼性の高い方法で、エンドユーザーにコンテンツを表示することができます。 以下のリストには例がいくつか含まれています。
 - IT に連絡: 組織の IT 部門に連絡する方法に関する情報
 - IT サポート センター: サポート技術情報を検索する、サポート チケットを開くなどの IT セルフ サービス アクション。
 - エンドユーザー文書: アプリケーションの使用や Windows 10 へのアップグレードなど、さまざまな IT トピックに関する組織内のユーザー向けの記事。

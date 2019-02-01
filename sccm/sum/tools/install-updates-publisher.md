@@ -10,17 +10,16 @@ ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: f74d7925528e48c691ce7ca61b6dc0b5136f1df7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f97decbe40293ee45cdc75c3fb36f4c57662ac06
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349478"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896779"
 ---
 # <a name="install-updates-publisher"></a>Updates Publisher のインストール
 
-*適用対象: System Center Updates Publisher*
+「オブジェクトの*適用対象: System Center Updates Publisher*
 
 このトピックの情報を参考にすると、お使いの環境で使用する Updates Publisher を取得、インストール、セットアップできます。
 
@@ -39,19 +38,19 @@ ms.locfileid: "32349478"
 ### <a name="prerequisites"></a>[前提条件]
 Updates Publisher を実行するコンピューターには、以下のものが必要です。
 
--   **64 ビット オペレーティング システム**: Updates Publisher をインストールするコンピューターは、64 ビット版のオペレーティング システムで動作している必要があります。
+-   **64 ビット オペレーティング システム**: Updates Publisher をインストールするコンピューターは、64 ビット版のオペレーティング システムを実行している必要があります。
 -   **WSUS 4.0 以降**:
     -   この要件を満たすために、Windows Server に既定の管理コンソールをインストールします。
     -   Windows 10 と Windows 8.1 の場合は、[Windows オペレーティング システム用のリモート サーバー管理ツール (RSAT)](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems) をインストールします。 これにより、Updates Publisher を使用するために必要なサポート (*API と PowerShell コマンドレット*、*ユーザー インターフェイス管理コンソール*) がインストールされます。
 -   **アクセス許可**:
-    -   インストール: ローカル管理者
+    -   インストール:ローカル管理者
     -   ほとんどの操作: ローカル ユーザー
-    -   発行または WSUS に関連する操作: WSUS サーバー上の WSUS 管理者グループのメンバー
+    -   発行、または WSUS に関連する操作: WSUS サーバー上の WSUS 管理者グループのメンバー
 
 ### <a name="supported-languages"></a>サポートされる言語
 Updates Publisher で使用できる言語は英語のみですが、他言語向けの更新プログラムを管理できます。 言語サポートは、更新プログラムの発行、作成、編集などのタスクによって異なります。
 
-更新プログラムをエクスポートまたは発行するとき、Updates Publisher は Updates Publisher がインストールされているコンピューターのロケール設定に基づいて、ソフトウェア更新プログラムのタイトルと説明を表示します。
+更新プログラムをエクスポートまたは発行するとき、Updates Publisher では Updates Publisher がインストールされているコンピューターのロケール設定に基づいて、ソフトウェア更新プログラムのタイトルと説明を表示します。
 
 たとえば、英語とスペイン語のタイトルを持つソフトウェア更新プログラムを作成します。
 
@@ -116,5 +115,5 @@ Updates Publisher をインストールするには、上記の*前提条件*を
 ## <a name="next-steps"></a>次のステップ
  Updates Publisher のインストールが完了したら、Updates Publisher の[オプションを構成する](updates-publisher-options.md)ことをお勧めします。 Updates Publisher の一部の機能を使用するためには、オプションを構成する必要があります。
 
- ただし、更新サーバーや管理対象デバイスに更新プログラムを展開するつもりがなく、既定のままで使用する場合は、[ソフトウェア更新カタログの管理](updates-publisher-catalogs.md)または[ソフトウェア更新プログラムの作成](create-updates-with-updates-publisher.md)に進んで、ご自身の更新カタログを作成できます。
+ ただし、更新サーバーやマネージド デバイスに更新プログラムを展開するつもりがなく、既定のままで使用する場合は、[ソフトウェア更新カタログの管理](updates-publisher-catalogs.md)または[ソフトウェア更新プログラムの作成](create-updates-with-updates-publisher.md)に進んで、ご自身の更新カタログを作成できます。
 

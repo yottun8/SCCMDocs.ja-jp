@@ -10,16 +10,17 @@ ms.assetid: e318e705-20f2-417d-8cde-7dfe661b2fa7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b86b1a4b8400be29f9b4c468c280fdd0a47385c3
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: 0b47d64a350a9cf0a8838809604d1a38b55ea3b1
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343492"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896738"
 ---
 # <a name="capabilities-in-technical-preview-1704-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1704 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1704 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。 このバージョンの Technical Preview をインストールする前に、説明のトピック「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。    
 
@@ -31,7 +32,7 @@ System Center Configuration Manager (Configuration Manager) のアプリ構成�
 
 ### <a name="try-it-out"></a>試してみましょう                 
 
-Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリ構成ポリシー]** の順に選択し、**[アプリ構成ポリシーの作成]** を選択します。 ウィザードの **[全般]** ページで、**[構成ポリシーの種類の選択]** ができます。 アプリの構成ポリシー **[Android for Work アプリの構成ポリシー]** の対象となるプラットフォームを指定します。 次に、**[名前と値のペアを指定します]** または **[プロパティ一覧 JSON ファイルを参照します]** を選択します。 新しいアプリ構成ポリシーが **[ソフトウェア ライブラリ]** ワークスペースの **[アプリ構成ポリシー]** ノードに表示されます。 アプリ構成ポリシーと Android for Work アプリの展開を関連付けるには、「[アプリケーションの展開](/sccm/apps/deploy-use/deploy-applications)」トピックの手順に従い、通常どおりにアプリを展開します。
+Configuration Manager コンソールで、**[ソフトウェア ライブラリ]** > **[アプリケーション管理]** > **[アプリ構成ポリシー]** の順に選択し、**[アプリ構成ポリシーの作成]** を選択します。 ウィザードの **[全般]** ページで、**[構成ポリシーの種類の選択]** ができます。 アプリ構成ポリシーの対象となるプラットフォームを指定します (**[Android for Work アプリ用の構成ポリシー]**)。 次に、**[名前と値のペアを指定します]** または **[プロパティ一覧 JSON ファイルを参照します]** を選択します。 新しいアプリ構成ポリシーが **[ソフトウェア ライブラリ]** ワークスペースの **[アプリ構成ポリシー]** ノードに表示されます。 アプリ構成ポリシーと Android for Work アプリの展開を関連付けるには、「[アプリケーションの展開](/sccm/apps/deploy-use/deploy-applications)」トピックの手順に従い、通常どおりにアプリを展開します。
 
 ## <a name="hardware-inventory-collects-secure-boot-information"></a>ハードウェア インベントリでのセキュア ブート情報の収集
 ハードウェア インベントリは、クライアントでセキュア ブートが有効になっているかどうかの情報を収集します。 この情報は、**SMS_Firmware** クラス (バージョン 1702 で導入) に格納されており、ハードウェア インベントリでは既定で有効になっています。 ハードウェア インベントリの詳細については、[ハードウェア インベントリを構成する方法](/sccm/core/clients/manage/inventory/configure-hardware-inventory)に関する記事を参照してください。
@@ -66,6 +67,6 @@ Configuration Manager コンソールで、**[ソフトウェア ライブラリ
 ## <a name="improvements-to-operating-system-deployment"></a>オペレーティング システムの展開に関する機能拡張
 オペレーティング システムの展開について、皆さまからのフィードバックを基に、次のような機能拡張を行いました。
 
-- [オペレーティング システム イメージに追加された新しい **[OS バージョン]** 列](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17558407-add-a-column-to-the-operating-system-images-node-f): イメージのオペレーティング システムのバージョンを表示する **[OS バージョン]** 列を追加しました。この列は、**[オペレーティング システム イメージ]** や **[オペレーティング システム アップグレード パッケージ]** ノードを開いた際に表示され、バージョン情報を確認できます。 .WIM ファイル内の最初のインデックスのバージョンだけが表示されます。 他のインデックスのオペレーティング システムのバージョンを確認するには、そのイメージの **[詳細]** タブに移動してください。
+- [オペレーティング システム イメージに使用される新しい **[OS バージョン]** 列](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17558407-add-a-column-to-the-operating-system-images-node-f): **[オペレーティング システム イメージ]** ノードや **[オペレーティング システム アップグレード パッケージ]** ノードで情報を表示したときに、イメージのオペレーティング システムのバージョンを表示するように、**[OS バージョン]** という名前の新しい列を追加しました。 .WIM ファイル内の最初のインデックスのバージョンだけが表示されます。 他のインデックスのオペレーティング システムのバージョンを確認するには、そのイメージの **[詳細]** タブに移動してください。
 
 - [smsts.log によるより効率的なログの記録](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16791919-stop-filling-smsts-log-with-useless): このバージョンから、CCM_CIVersionInfo.PolicyID 情報のために smsts.log ファイルにエントリを書き込む必要はなくなりました。 以前のバージョンでは、この情報のために多くのエントリが書き込まれ、ログ ファイル内で関連情報を探しにくくなっていました。

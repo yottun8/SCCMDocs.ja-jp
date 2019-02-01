@@ -10,17 +10,17 @@ ms.assetid: 940cc075-4066-44d5-972a-927c0b0a1143
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: 863beac218dd493d75294686a00f9bda569fdfbb
-ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ROBOTS: NOINDEX
+ms.openlocfilehash: 8fda0e2cc2d820904e1fb9ec893c4453fe26bfc2
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43297248"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897444"
 ---
 # <a name="technical-reference-for-the-package-conversion-manager-plug-in-configuration-xml"></a>Package Conversion Manager プラグイン構成 XML のテクニカル リファレンス
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 <!--1357861-->
 
@@ -32,7 +32,7 @@ ms.locfileid: "43297248"
 
 次の表は、Package Conversion Manager プラグインに関する Configuration Manager 構成ファイルの XML 要素を示します。
 
-|要素  |「  |説明  |
+|要素  |「  |[説明]  |
 |---------|---------|---------|
 |**PcmPlugIn**|文字列型|Package Conversion Manager プラグインとして使用するスクリプトまたは実行可能ファイルの名前。|
 |**PcmPlugInTimeoutMilliseconds**|整数型|Package Conversion Manager プラグインのスクリプトまたは実行可能ファイルがパッケージの処理を完了するのを待つ最大の時間 (ミリ秒単位)。|

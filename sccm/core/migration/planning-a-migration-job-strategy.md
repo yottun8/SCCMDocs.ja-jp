@@ -10,17 +10,16 @@ ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex
-ms.openlocfilehash: 0481abfb1ed881355a489b99b0c3f7ec9c595e69
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0e77225fb378a5851dbba9718dd3810463255cf7
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342326"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898428"
 ---
 # <a name="plan-a-migration-job-strategy-in-system-center-configuration-manager"></a>System Center Configuration Manager での移行ジョブ戦略の計画
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager 環境に移行する特定のデータを構成するには、移行ジョブを使用します。 移行ジョブは、移行を計画しているオブジェクトを識別するもので、移行先階層の最上位サイトで実行します。 ソース サイトごとに 1 つまたは複数の移行ジョブを設定できます。 これにより、一度にすべてのオブジェクトを移行したり、各ジョブを使って、データの限定されたサブセットを移行したりできます。  
 
@@ -45,11 +44,11 @@ System Center Configuration Manager 環境に移行する特定のデータを�
 ##  <a name="Types_of_Migration"></a> 移行ジョブの種類  
  Configuration Manager では、次の種類の移行ジョブをサポートしています。 各ジョブの種類は、そのジョブに含めることができるオブジェクトを定義できるように設計されています。  
 
- **コレクションの移行** (Configuration Manager 2007 SP2 から移行する場合のみサポート): 選んだコレクションに関連するオブジェクトを移行します。 既定では、コレクションの移行には、コレクションのメンバーに関連付けられているすべてのオブジェクトが含まれます。 コレクションの移行ジョブを使用すると、特定のオブジェクトのインスタンスを除外できます。  
+ **コレクションの移行** (Configuration Manager 2007 SP2 から移行する場合にのみサポート):選択したコレクションに関連するオブジェクトを移行します。 既定では、コレクションの移行には、コレクションのメンバーに関連付けられているすべてのオブジェクトが含まれます。 コレクションの移行ジョブを使用すると、特定のオブジェクトのインスタンスを除外できます。  
 
- **オブジェクトの移行**: 選んだ個々のオブジェクトを移行します。 移行する特定のデータのみを選択します。  
+ **オブジェクトの移行**:選択した個々のオブジェクトを移行します。 移行する特定のデータのみを選択します。  
 
- **移行済みオブジェクトの移行**: 以前に移行したオブジェクトが前回の移行後にソース階層で更新されている場合に、これらのオブジェクトを移行します。  
+ **移行済みオブジェクトの移行**:以前に移行したオブジェクトが前回の移行後にソース階層で更新されている場合に、オブジェクトを移行します。  
 
 ###  <a name="Objects_that_can_migrate"></a> 移行できるオブジェクト  
  特定の種類の移行ジョブで、すべてのオブジェクトを移行できるわけではありません。 次の一覧に、各種類の移行ジョブで移行することができるオブジェクトの種類を示します。  
@@ -285,7 +284,7 @@ System Center Configuration Manager 環境に移行する特定のデータを�
 ### <a name="collection-dependencies-and-include-objects"></a>コレクションの依存関係および含まれるオブジェクト  
  移行ジョブの作成ウィザードで移行するコレクションを指定すると、依存するコレクションがジョブに含められるように自動的に選択されます。 この動作により、必要なすべてのリソースが移行後に利用可能になることが保証されます。  
 
- たとえば、**[Win_7]** という名前の Windows 7 を実行するデバイス用のコレクションを選択します。 このコレクションは、すべてのクライアント オペレーティング システムが含まれている **[All_Clients]** という名前のコレクションに限定されています。 この場合、コレクション **[All_Clients]** が、移行のために自動的に選択されます。  
+ 次に例を示します。**Win_7** という名前の、Windows 7 を実行するデバイス用のコレクションを選択します。 このコレクションは、すべてのクライアント オペレーティング システムが含まれている **[All_Clients]** という名前のコレクションに限定されています。 この場合、コレクション **[All_Clients]** が、移行のために自動的に選択されます。  
 
 ### <a name="collection-limiting"></a>コレクションの限定  
  System Center Configuration Manager では、コレクションはグローバル データであり、階層内の各サイトで評価されます。 このため、移行後にコレクションのスコープを制限する方法を計画します。 移行されるコレクションに予期しないメンバーが含まれないように、移行中に、移行先階層からのコレクションを識別して、移行するコレクションのスコープを限定できます。  

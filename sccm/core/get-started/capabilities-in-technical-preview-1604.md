@@ -8,19 +8,19 @@ ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 684a5559-9e6e-469b-86ae-e768e9f0c9ac
 author: aczechowski
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 113e22c33e9e8545c382373f3ba093dba3969939
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9aecb8f744185116b85232bd9b2893cdf20a3b6d
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340694"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897544"
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>System Center Configuration Manager の Technical Preview 1604 の機能
 
-*適用対象: System Center Configuration Manager (Technical Preview)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Technical Preview)*
 
 この記事では、System Center Configuration Manager の Technical Preview バージョン 1604 で使用できる機能について説明します。 このバージョンをインストールして更新し、新機能を Configuration Manager の Technical Preview サイトに追加できます。      このバージョンの Technical Preview をインストールする前に、説明のトピック「[System Center Configuration Manager の Technical Preview](../../core/get-started/technical-preview.md)」を確認して、Technical Preview の使用に関する一般的な要件と制限、バージョン間の更新方法、および Technical Preview の機能に関するフィードバックを提供する方法について理解してください。  
 
@@ -37,7 +37,7 @@ ms.locfileid: "32340694"
 
 ### <a name="try-it-out"></a>試してみましょう。  
 
-##### <a name="scenario-1-set-up-windows-store-for-business-synchronization"></a>シナリオ 1: ビジネス向け Windows ストアの同期の設定  
+##### <a name="scenario-1-set-up-windows-store-for-business-synchronization"></a>シナリオ 1 :ビジネス向け Windows ストアの同期の設定  
 
 1.  Azure Active Directory で、"Web アプリケーションや Web API" 管理ツールとして Configuration Manager を登録します。 後で必要なクライアント ID が表示されます。  
 
@@ -63,7 +63,7 @@ ms.locfileid: "32340694"
 
     2.  要求された場合は、使用条件に同意します。  
 
-    3.  **[管理ツール]** で、**[Add a management tool]** \(管理ツールを追加) をクリックします。  
+    3.  **[管理ツール]** で、**[Add a management tool]** (管理ツールを追加) をクリックします。  
 
     4.  **[Search for the tool by name]** (名前でツールを検索) で、先ほど AAD で作成したアプリケーションの名前を入力して、**[追加]** クリックします。  
 
@@ -81,7 +81,7 @@ ms.locfileid: "32340694"
 
 8.  完了した時点で、Configuration Manager コンソールの **[ビジネス向け Windows ストア]** で構成されたアカウントが表示されます。  
 
-##### <a name="scenario-2-create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-offline-licensed-app"></a>シナリオ 2: ビジネス向け Windows ストアのオフライン ライセンス付きアプリから Configuration Manager アプリケーションを作成して展開する  
+##### <a name="scenario-2-create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-offline-licensed-app"></a>シナリオ 2 :ビジネス向け Windows ストアのオフライン ライセンス付きアプリから Configuration Manager アプリケーションを作成して展開します。  
 
 1.  Configuration Manager コンソールの **[ソフトウェア ライブラリ]** ワークスペースで **[アプリケーション管理]** を展開し、**[ストア アプリのライセンス情報]** をクリックします。  
 
