@@ -2,7 +2,7 @@
 title: ハイブリッド MDM の新機能
 titleSuffix: Configuration Manager
 description: Configuration Manager と Intune のハイブリッド展開で使用できるモバイル デバイス管理の新機能について説明します。
-ms.date: 01/28/2019
+ms.date: 02/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 84c244a959bb9a087d33410fe0605bc6ddcadfbc
-ms.sourcegitcommit: a2ecd84d93f431ee77848134386fec14031aed6a
+ms.openlocfilehash: d6b54466f72c56d830954f8641b9f06f5f6e76e7
+ms.sourcegitcommit: 7e020ce097360e8703ac8cd6bd871c33f72a441e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55230904"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742058"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用したハイブリッド モバイル デバイス管理の新機能
 
@@ -44,6 +44,15 @@ ms.locfileid: "55230904"
 |**Microsoft Intune の新機能** | 通常、このカテゴリに一覧表示されたすべての機能は、Configuration Manager のすべてのリリースで動作します。 これには System Center 2012 R2 Configuration Manager リリースが含まれています。これらの機能では Intune サービスのみが必要であり、Configuration Manager の追加機能は不要なためです。|
 |**Configuration Manager Technical Preview の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Technical Preview Branch でのみ動作します。 これらの機能を試すには、機能の説明で指定されたバージョンの Technical Preview をインストールする必要があります。 詳細については、「[Configuration Manager の Technical Preview](/sccm/core/get-started/technical-preview)」を参照してください。|
 |**Configuration Manager (現在のブランチ) の新機能**| このカテゴリに一覧表示されたすべての機能は、指定されたバージョンの Configuration Manager (Current Branch) でのみ動作します。 ハイブリッド展開に旧バージョンの Configuration Manager を使用している場合は、機能の説明で指定されたバージョンの Configuration Manager (現在の分岐) にアップグレードします。 詳細については、「[System Center Configuration Manager へのアップグレード](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)」を参照してください。|
+
+
+
+## <a name="february-2019"></a>2 月 2019
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune の新機能
+
+#### <a name="intune-macos-company-portal-dark-mode"></a>Intune の macOS の会社ポータルのダーク モード
+<!--3300524--> Intune の macOS ポータル サイトで、macOS のダーク モードできるようになりました。 MacOS 10.14 + デバイスでダーク モードを有効にすると、ポータル サイトは色が、そのモードを反映するには、その外観を調整します。
 
 
 
