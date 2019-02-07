@@ -10,20 +10,24 @@ ms.assetid: 7b04727b-d563-422f-8d59-4dd66215d0b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6724113633ab7043c65bad0664ae4a338c829fce
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 37688e1bf992e6b48f3d871f09b7b357453cfc3f
+ms.sourcegitcommit: 33e066aceaf321add1031df00e552e942c8351a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422574"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55764346"
 ---
 # <a name="manage-access-to-services-in-system-center-configuration-manager"></a>System Center Configuration Manager でサービスへのアクセスを管理する
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
-
-## <a name="conditional-access-in-system-center-configuration-manager"></a>System Center Configuration Manager での条件付きアクセス
 条件付きアクセスを使用して、Microsoft Intune に登録されているデバイスで、電子メールやその他のサービスをセキュリティで保護するための条件を指定します。  
+
+> [!Important]  
+> ハイブリッド MDM を含め、オンプレミスの条件付きアクセスは[非推奨の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)します。 詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。<!--Intune feature 2683117-->  
+> 
+> Configuration Manager クライアントで管理されるデバイスで条件付きアクセスを使用する場合、まだ保護されているかどうかを確認するまず有効にするそれらのデバイスの Intune で条件付きアクセスを移行する前にします。 Configuration Manager での共同管理を有効にする、コンプライアンス ポリシーのワークロードを Intune に移動し Intune ハイブリッドから Intune スタンドアロンへの移行を完了します。 詳細については、次を参照してください。[と共同管理の条件付きアクセス](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access)します。 
+
 
  Configuration Manager で管理されているデバイスの条件付きアクセスに関する詳細は、「[System Center Configuration Manager で管理されている PC の O365 サービスへのアクセスを管理する](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)」を参照してください。  
 

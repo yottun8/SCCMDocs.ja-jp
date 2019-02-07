@@ -10,24 +10,30 @@ ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f4e67050740b9d05dd33f2f79b7820b6dc8d9093
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 8bd926535f56e32430ae41c883623b80d142aebc
+ms.sourcegitcommit: 33e066aceaf321add1031df00e552e942c8351a7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415808"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55764431"
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>System Center Configuration Manager で管理されている PC の O365 サービスへのアクセスを管理する
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 <!--1191496--> Configuration Manager によって管理される Pc の Office 365 サービスへの条件付きアクセスを構成します。  
+
+> [!Important]  
+> ハイブリッド MDM を含め、オンプレミスの条件付きアクセスは[非推奨の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)します。 詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。<!--Intune feature 2683117-->  
+> 
+> Configuration Manager クライアントで管理されるデバイスで条件付きアクセスを使用する場合、まだ保護されているかどうかを確認するまず有効にするそれらのデバイスの Intune で条件付きアクセスを移行する前にします。 Configuration Manager での共同管理を有効にする、コンプライアンス ポリシーのワークロードを Intune に移動し Intune ハイブリッドから Intune スタンドアロンへの移行を完了します。 詳細については、次を参照してください。[と共同管理の条件付きアクセス](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access)します。 
+
+
+Microsoft Intune で登録および管理されるデバイスの条件付きアクセスの構成については、「[System Center Configuration Manager でサービスへのアクセスを管理する](../../protect/deploy-use/manage-access-to-services.md)」を参照してください。 その記事では、ドメインに参加しているデバイスのうち、コンプライアンス評価対象でないデバイスについても説明します。
 
 > [!Note]  
 > Configuration Manager では、このオプション機能は既定で無効です。 この機能は、使用する前に有効にする必要があります。 詳細については、「[更新プログラムのオプション機能の有効化](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)」を参照してください。<!--505213-->  
 
-
-Microsoft Intune で登録および管理されるデバイスの条件付きアクセスの構成については、「[System Center Configuration Manager でサービスへのアクセスを管理する](../../protect/deploy-use/manage-access-to-services.md)」を参照してください。 その記事では、ドメインに参加しているデバイスのうち、コンプライアンス評価対象でないデバイスについても説明します。
 
 ## <a name="supported-services"></a>サポートされているサービス  
 
@@ -78,11 +84,11 @@ Microsoft Intune で登録および管理されるデバイスの条件付きア
 
 -   **Azure Active Directory への登録が必要です。** このルールは、ユーザーのデバイスがワークプ レースであり、Azure AD に参加していて、デバイスが Azure AD に自動的に登録されない場合は、確認します。 自動登録がサポートされているのは Windows 8.1 のみです。 Windows 7 PC の場合には、MSI を展開して自動登録を実行します。 詳細については、[Azure Active Directory への自動デバイス登録](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)に関するページを参照してください。  
 
--   **特定の日数より古い、期限付きでインストールされているすべての必要な更新プログラム:** ユーザーのデバイスに必要な更新プログラムの展開期限からの猶予期間の値を指定します。 この規則を追加すると、保留中の必要な更新プログラムも自動的にインストールされます。 **必須の自動更新**規則で、必要な更新プログラムを指定します。   
+-   **必要な更新が特定の日数の期限を過ぎている場合、そのすべてをインストール:** ユーザーのデバイスに必要な更新プログラムの展開期限からの猶予期間の値を指定します。 この規則を追加すると、保留中の必要な更新プログラムも自動的にインストールされます。 **必須の自動更新**規則で、必要な更新プログラムを指定します。   
 
--   **BitLocker ドライブ暗号化が必要です。** このルールは、場合を確認します。 プライマリ ドライブ (c: たとえば、\\) デバイスは、BitLocker で暗号化されました。 Bitlocker 暗号化がプライマリ デバイスで有効でない場合、電子メール サービスおよび SharePoint サービスへのアクセスがブロックされます。  
+-   **BitLocker ドライブ暗号化が必要:** このルールは、場合を確認します。 プライマリ ドライブ (c: たとえば、\\) デバイスは、BitLocker で暗号化されました。 Bitlocker 暗号化がプライマリ デバイスで有効でない場合、電子メール サービスおよび SharePoint サービスへのアクセスがブロックされます。  
 
--   **マルウェア対策が必要です。** このルールは、System Center Endpoint Protection または Windows Defender が有効にして実行を確認します。 無効な場合、電子メール サービスおよび SharePoint サービスへのアクセスがブロックされます。  
+-   **マルウェア対策が必要:** このルールは、System Center Endpoint Protection または Windows Defender が有効にして実行を確認します。 無効な場合、電子メール サービスおよび SharePoint サービスへのアクセスがブロックされます。  
 
 -   **正常性構成証明サービスにより正常として報告されます。** この条件には、デバイスの正常性構成証明サービスに対するデバイスのコンプライアンスをチェックする 4 つのサブが含まれています。 詳細については、[正常性構成証明書](/sccm/core/servers/manage/health-attestation)に関するページを参照してください。 
 
