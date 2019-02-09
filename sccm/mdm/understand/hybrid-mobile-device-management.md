@@ -10,19 +10,19 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a744463aa82951d68125c0d17d88ba5e8a1f2703
-ms.sourcegitcommit: 33e066aceaf321add1031df00e552e942c8351a7
+ms.openlocfilehash: dd91d8afb092f855179edaa07163d5fcaa2ac350
+ms.sourcegitcommit: 38f56f1d5803370f4262931c2dc4a532bfcf0594
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764414"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905592"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager と Microsoft Intune を使用するハイブリッド MDM
 
 「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 > [!Important]  
-> 2018 年 8 月 14 日の時点では、ハイブリッド モバイル デバイス管理は[非推奨の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)です。
+> 2018 年 8 月 14 日の時点では、ハイブリッド モバイル デバイス管理は[非推奨の機能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)です。 新規のお客様は、年 2 月の 2019年の終わりが必要です、1902 Intune サービスのリリース以降、新しいハイブリッド接続を作成できません。 
 > <!--Intune feature 2683117-->  
 > 1 年以上前に Azure で利用できるようになってから、Intune には、お客様からの要望や市場の発展に従って何百もの新しいサービス機能が追加されています。 ハイブリッド モバイル デバイス管理 (MDM) で提供されるものよりはるかに多くの機能が用意されています。 Azure での Intune では、エンタープライズ モビリティのニーズに対していっそう統合された効率的な管理エクスペリエンスが提供されています。
 > 
@@ -36,13 +36,20 @@ ms.locfileid: "55764414"
 > 
 > - ハイブリッド MDM 提供終了前に Azure での Intune に移行する場合、エンドユーザーに対する影響はありません。  
 > 
+> - 2019 年 9 月 1 日をもって、残っているハイブリッド MDM のデバイスは、ポリシー、アプリ、またはセキュリティの更新プログラムを受け取らなくなります。  
+> 
 > - ライセンスは同じままです。 Azure での Intune のライセンスは、ハイブリッド MDM に含まれています。  
 > 
 > - Configuration Manager オンプレミス MDM の機能の非推奨とされていません。 Configuration Manager バージョン 1810 以降、Intune に接続せずに、オンプレミス MDM を使用できます。 詳細については、次を参照してください。 [、Intune の接続は新しいオンプレミス MDM の展開の必要なくなりました](/sccm/core/plan-design/changes/whats-new-in-version-1810#bkmk_opmdm)します。 
 > 
-> - Configuration Manager のオンプレミスの条件付きアクセス機能がハイブリッド MDM. も非推奨と Configuration Manager クライアントで管理されるデバイスで条件付きアクセスを使用する場合、まだ保護されているかどうかを確認するまず有効にするそれらのデバイスの Intune で条件付きアクセスを移行する前にします。 Configuration Manager での共同管理を有効にする、コンプライアンス ポリシーのワークロードを Intune に移動し Intune ハイブリッドから Intune スタンドアロンへの移行を完了します。 詳細については、次を参照してください。[と共同管理の条件付きアクセス](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access)します。 
-> 
-> - 2019 年 9 月 1 日をもって、残っているハイブリッド MDM のデバイスは、ポリシー、アプリ、またはセキュリティの更新プログラムを受け取らなくなります。  
+> - Configuration Manager のオンプレミスの条件付きアクセス機能がハイブリッド MDM. も非推奨と で Configuration Manager クライアントで管理されるデバイスを条件付きアクセスを使用する場合は、移行する前に保護されていることを確認してください。 
+>     1. Azure での条件付きアクセス ポリシーを設定します。
+>     2. Intune ポータルでのコンプライアンス ポリシーを設定します。 
+>     3. ハイブリッドの移行を完了して、MDM 機関を Intune に設定
+>     4. 共同管理を有効にする
+>     5. コンプライアンス ポリシーの共同管理のワークロードを Intune に移動します。 
+>
+>     詳細については、次を参照してください。[と共同管理の条件付きアクセス](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access)します。 
 > 
 > **この変更に対して必要な準備**
 > 
