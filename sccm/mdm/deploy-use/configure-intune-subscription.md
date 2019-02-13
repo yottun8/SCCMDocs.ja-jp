@@ -10,16 +10,17 @@ ms.assetid: 99de8fe7-560e-401a-8ab2-6d87d091be17
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a009159a4bd0588f80f140f588b17911101cc72c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9ec6756e5c180561bef10bba799e3fdba3dcc303
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418562"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137628"
 ---
 # <a name="configure-your-intune-subscription-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager と Microsoft Intune を使用した Intune サブスクリプションの構成
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Intune サブスクリプションを使用すると、インターネット上でデバイスを管理できます。 たとえば、デバイスを登録できるユーザー コレクションを指定したり、ユーザーに表示される情報を定義したりすることができます。 Intune サブスクリプションを作成するときに、Intune の会社のポータルに会社のロゴや独自のカラー スキームを含めて、会社のブランドを追加できます。
 

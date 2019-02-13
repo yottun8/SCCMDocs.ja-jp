@@ -10,16 +10,17 @@ ms.assetid: e2745bac-e1b4-4dac-8ac7-32f1c820bc9c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4550116bd4635e7320e9cbdf18997e2e17ae0466
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8a695a0b777f4adf3d2fb336df6aced8702e9dab
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349152"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125257"
 ---
 # <a name="manage-ios-activation-lock-with-system-center-configuration-manager"></a>System Center Configuration Manager を使用した iOS のアクティベーション ロックの管理
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 
 System Center Configuration Manager は、iOS 7.1 以降向けの「iPhone を探す」アプリの機能である、iOS のアクティベーション ロックを管理するために役立ちます。 アクティベーション ロックを有効にすると、ユーザーの Apple ID とパスワードを入力しない限り、以下の操作を実行できなくなります。
@@ -68,7 +69,7 @@ Configuration Manager を使ってアクティベーション ロックを管理
 
 Configuration Manager のコンプライアンス設定を使用して、 **iOS および Mac OS X** タイプの構成項目を作成して展開し、監視対象のデバイスでアクティベーション ロックを有効にします。
 
-1. トピック「[System Center Configuration Manager クライアントを使用せずに管理されている iOS デバイスと Mac OS X デバイスの構成項目を作成する方法](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)」の情報を使用して、**iOS および Mac OS X** タイプの構成項目を作成します。
+1. トピック「 [System Center Configuration Manager クライアントを使用せずに管理されている iOS デバイスと Mac OS X デバイスの構成項目を作成する方法](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client) 」の情報を使用して、 **iOS および Mac OS X**タイプの構成項目を作成します。
 2. 構成項目の作成ウィザードの「 **システム セキュリティ** 」ページで、 **[アクティブ化ロックを許可する (監視モードのみ)]** を **[許可]** に設定します。
 3. [構成基準に構成項目を追加します](/sccm/compliance/deploy-use/create-configuration-baselines)。
 4. アクティベーション ロックを有効にする iOS デバイスが属するコレクションに、[この構成基準を展開](/sccm/compliance/deploy-use/deploy-configuration-baselines)します。

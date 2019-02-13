@@ -10,16 +10,17 @@ ms.assetid: e025c48c-1514-4ab7-836c-e0635aaa993a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a95a7735cc7f7afb6a16b030de6925926335e403
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ef070186112642d204aade24039da87c0e3a22f0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385220"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139672"
 ---
 # <a name="create-android-applications-in-configuration-manager"></a>Configuration Manager で Android アプリケーションを作成する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Configuration Manager アプリケーションには、1 つ以上の展開の種類があります。 展開の種類は、インストール ファイルとデバイスにソフトウェアを展開するために必要な情報で構成されています。 また、展開の種類には、ソフトウェアを展開するタイミングと方法を指定する規則があります。  
 
@@ -37,7 +38,7 @@ Configuration Manager では、Android の .apk パッケージの展開がサ�
 
 |デバイスの種類|サポートされている操作|
 |-|-|
-|Android|**利用可能**、**必須**: インストールとアンインストールの両方に、ユーザーが同意する必要があります。|
+|Android|**使用可能な**、**必要**:インストールとアンインストールの両方に、ユーザーが同意する必要があります。|
 |Android for Work |**利用可能**、**必須** |
 
 

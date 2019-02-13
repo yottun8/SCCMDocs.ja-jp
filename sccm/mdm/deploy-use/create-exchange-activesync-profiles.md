@@ -10,16 +10,17 @@ ms.assetid: 120442be-179e-450c-a0c4-284046895da3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: decd16a03a0381718ada3e4c977d10c159c6be25
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3bf178465f5aff508daca1d87b1b548a42db931d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417066"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139274"
 ---
 # <a name="exchange-activesync-email-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager で Exchange ActiveSync 電子メール プロファイルを作成する
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Microsoft Intune と Exchange ActiveSync を利用すると、デバイスに電子メール プロファイルと制約を設定できます。 ユーザーは最小限の設定で自分のデバイスから会社の電子メールにアクセスできるようになります。  
 

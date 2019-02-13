@@ -10,16 +10,17 @@ ms.assetid: 6087b279-ba05-4824-b5e3-3af14f3d3cfe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 85c2ae1039058f39bd96c7d0752f798504b0dd4d
-ms.sourcegitcommit: 9cff0702c2cc0f214173b47ec241f7e5a40f84e6
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6f914cba7eee44f340bf5b696aca1854128aeb8b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34746112"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141308"
 ---
 # <a name="set-up-your-subscription-for-lookout-mobile-threat-defense"></a>Lookout Mobile Threat Defense のサブスクリプションを設定する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Lookout Mobile Threat Defense のサブスクリプションを設定するには、次の手順が必要です。
 
@@ -61,8 +62,8 @@ Lookout Mobility Endpoint Security テナントは、Lookout と Intune を統�
 
    Lookout コンソールは 2 つのレベルのアクセスをサポートします。  
 
-   - **フル アクセス:** Azure AD の管理者は、フル アクセス権を持つユーザーのグループを作成できるだけでなく、必要に応じて制限付きアクセス権を持つユーザーのグループも作成できます。 これらのグループのユーザーだけが、**Lookout コンソール**にサインインできます。
-   - **制限付きアクセス:** このグループのユーザーは、Lookout コンソールの構成と登録に関連する複数のモジュールにアクセスできず、Lookout コンソールの**セキュリティ ポリシー** モジュールには読み取りアクセス権だけがあります。  
+   - **フル アクセス:** Azure AD の管理者は、完全なアクセス権を持つユーザー用のグループを作成し、必要に応じて制限付きアクセスはユーザー用のグループを作成できます。 これらのグループのユーザーだけが、**Lookout コンソール**にサインインできます。
+   - **制限付きアクセス:** このグループ内のユーザーがいくつかの構成と、Lookout コンソールの登録に関するモジュールへのアクセスし、読み取り専用アクセスはありませんが、**セキュリティ ポリシー** Lookout コンソールのモジュール。  
 
      > [!TIP]  
      > アクセス許可の詳細については、[Lookout サポートに関するこの記事](https://personal.support.lookout.com/hc/articles/114094105653)をご覧ください。
@@ -105,7 +106,7 @@ Lookout Mobility Endpoint Security テナントは、Lookout と Intune を統�
     >![Azure Portal での Azure Active Directory サービスの [プロパティ] ページのスクリーンショット](media/aad-group-display-name.png)
 
     >[!NOTE]  
-    >新しいデバイスをチェックする時間の増分には既定値 (5 分) を使うのがベスト プラクティスです。 現時点での制限事項、**Lookout はグループの表示名を検証できません:** Azure Portal の **[表示名]** フィールドが Azure AD セキュリティ グループと厳密に一致していることを確認してください。 **入れ子のグループを作成することはできません:** Lookout で使用する Azure AD セキュリティ グループには、ユーザーのみを含める必要があります。 他のグループを含めることはできません。
+    >新しいデバイスをチェックする時間の増分には既定値 (5 分) を使うのがベスト プラクティスです。 現在の制限事項、 **Lookout はグループの表示名を検証できません。** 確認、**表示名**フィールドは、Azure portal で Azure AD セキュリティ グループを完全に一致します。 **入れ子のグループを作成することはサポートされていません。** Azure AD セキュリティ グループが Lookout で使用されるユーザーのみを含める必要があります。 他のグループを含めることはできません。
 
 3.  グループを追加して、次にサポートされるデバイスでユーザーが Lookout for Work アプリを開いたときに、そのデバイスが Lookout でアクティブ化されます。
 

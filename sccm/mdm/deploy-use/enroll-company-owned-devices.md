@@ -10,16 +10,17 @@ ms.assetid: e2754ce6-1460-4ddd-9050-2cc87e7964f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 36b4169f3bed1957f8ea14159902f408ba642944
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a3586f51b7112f8667b7e120ea278ceb9adbbe89
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346551"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129444"
 ---
 # <a name="enroll-company-owned-devices-for-hybrid-deployments-with-configuration-manager"></a>Configuration Manager を使用してハイブリッド展開用に会社所有のデバイスを登録する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 組織または会社所有のデバイス (COD) は、デバイスおよびその購入方法に応じて、さまざまな方法で管理対象に含めることができます。  
 
@@ -32,12 +33,12 @@ ms.locfileid: "32346551"
 ## <a name="device-enrollment-manager"></a>デバイス登録マネージャー  
  組織は Intune を使用して、デバイス登録マネージャー アカウントと呼ばれる単一のユーザー アカウントで多数のモバイル デバイスを管理することができます。 デバイス登録マネージャー アカウントを作成すると、そのアカウントをマネージャーが使用して、通常のユーザーに既定で許可されている標準の 5 台を超えるデバイスを登録することができます。 デバイス登録マネージャーを使用したデバイスの登録は、特定のユーザーが使用していないデバイスに対してのみ機能します。 これらのデバイスは、たとえば販売時点管理 (POS) アプリやユーティリティ アプリには適していますが、電子メールや会社のリソースにアクセスする必要があるユーザーには適していません。 「[デバイス登録マネージャーと Configuration Manager を使用したデバイスの登録](../../mdm/deploy-use/enroll-devices-with-device-enrollment-manager.md)」をご覧ください。  
 
-## <a name="user-affinity-for-managed-devices"></a>管理対象デバイスのユーザー アフィニティ  
- 管理者は会社所有のデバイスのプロファイルを構成するときに、管理対象デバイスが*ユーザー アフィニティ*をサポートするかどうかを指定できます (ユーザー アフィニティはデバイスで特定のユーザーを識別します)。 **ユーザー アフィニティ**が構成されているデバイスは、会社のポータル アプリをインストールして実行することにより、アプリをダウンロードしてデバイスを管理できるようになります。 「[Configuration Manager でのハイブリッド管理のデバイス向けユーザー アフィニティ](../../mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md)」をご覧ください。  
+## <a name="user-affinity-for-managed-devices"></a>マネージド デバイスのユーザー アフィニティ  
+ 管理者は会社所有のデバイスのプロファイルを構成するときに、マネージド デバイスが*ユーザー アフィニティ*をサポートするかどうかを指定できます (ユーザー アフィニティはデバイスで特定のユーザーを識別します)。 **ユーザー アフィニティ**が構成されているデバイスは、会社のポータル アプリをインストールして実行することにより、アプリをダウンロードしてデバイスを管理できるようになります。 「[User affinity for hybrid managed devices in Configuration Manager](../../mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md)」(Configuration Manager でのハイブリッド管理のデバイス向けユーザー アフィニティ) を参照してください。  
 
 ## <a name="manage-devices-with-activation-lock"></a>アクティブ化ロックによるデバイスの管理  
  Microsoft Intune は、iOS 7.1 以降のデバイス向けの iPhone を探すアプリの機能である iOS のアクティベーション ロックを管理するために役立ちます。 iPhone を探すアプリをデバイスで使用すると、アクティブ化ロックが自動的に有効になります。 「[System Center Configuration Manager を使用した iOS のアクティベーション ロックの管理](../../mdm/deploy-use/manage-ios-activation-lock.md)」をご覧ください。
 
- ## <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>IMEI または iOS シリアル番号を持つデバイスの事前宣言
+ ## <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>IMEI または iOS シリアル番号によるデバイスの事前宣言
 
 会社所有のデバイスの International station Mobile Equipment Identity (IMEI) 番号または iOS シリアル番号をインポートすることで、それらのデバイスを識別できます。 デバイスの IMEI 番号を含むコンマ区切り値 (.csv) ファイルをアップロードするか、デバイス情報を手動で入力することができます。  「[Predeclare devices with hardware ID numbers](../../mdm/deploy-use/predeclare-devices-with-hardware-id.md)」 (ハードウェア ID 番号によるデバイスの事前宣言) をご覧ください。

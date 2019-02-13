@@ -10,16 +10,17 @@ ms.assetid: 28115475-e563-4e16-bf30-f4c9fe704754
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35064653fc00d63a1e5ad371ce337fea9b141684
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d7da4767bd8ef26ebf3f56010e99bc1cbd0b0c10
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424750"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120393"
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager のモバイル アプリケーション管理ポリシーを使ったアプリの保護
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager アプリケーション管理ポリシーを使用すると、会社のコンプライアンス ポリシーやセキュリティ ポリシーに合わせて、展開するアプリの機能を変更することができます。 たとえば、制限付きアプリでの切り取り、コピー、貼り付け操作を制限することや、すべての URL を管理対象ブラウザー内で開くようにアプリを構成することができます。 アプリ管理ポリシーでは以下をサポートします。  
 

@@ -10,16 +10,17 @@ ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: de83706e92150a654967ec5cf38c5b18508d4e2b
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 04b67b324927f4918ff5c0835896cb0d63a9e48c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416913"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126659"
 ---
 # <a name="ios-hybrid-enrollment-using-apple-configurator-with-configuration-manager"></a>Apple Configurator と Configuration Manager を使用した iOS ハイブリッド登録
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 企業で、従業員が使用する iOS デバイスを購入した場合、Microsoft Intune を使用してそのデバイスを管理できます。 企業所有の iOS デバイスの登録を準備するには、Configuration Manager コンソールで登録プロファイルを構成し、Apple Configurator で使用できるようにプロファイルの URL をエクスポートします。 登録のための iOS デバイスの準備として、USB ケーブルで Mac コンピューターにデバイスを接続し、Apple Configurator を使ってデバイスをセットアップします。 Apple Configurator はデバイスを出荷時の設定に戻して登録プロファイルを追加し、ユーザーが最初に電源をオンにしてセットアップ アシスタントのプロセスを実行したときに、デバイスを登録できるようにします。
 

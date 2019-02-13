@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
-ms.openlocfilehash: 692ffb04546da4f65b2198e582999582c996fdb2
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c0420113feaaf9c9485b8d1e3d488b07878c61b5
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584810"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131967"
 ---
 # <a name="change-your-mdm-authority"></a>MDM 機関を変更する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Microsoft サポートに問い合わせずに、また、既存のマネージド デバイスの登録解除と再登録を行わずに、MDM 機関を変更できます。 この記事では、Configuration Manager コンソール (ハイブリッド) から構成された既存の Microsoft Intune テナントを Intune スタンドアロンに変更する手順を説明します。 この記事の手順を完了すると、デバイスが [Azure Portal](https://portal.azure.com) の Microsoft Intune で管理されます。 
 

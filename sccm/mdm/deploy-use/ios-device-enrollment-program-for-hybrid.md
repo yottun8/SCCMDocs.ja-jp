@@ -10,16 +10,17 @@ ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4628dd18ed865088c68cf38810e984a18f0ba0ad
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 044ea01729b61f55dca74ac0e77b7007e05b346a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422217"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140968"
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>Configuration Manager とのハイブリッド展開に対応する iOS Device Enrollment Program (DEP) 登録
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 企業は、Apple のデバイス登録プログラムで iOS デバイスを購入してから、Microsoft Intune を使用してそのデバイスを管理することができます。 Apple Device Enrollment Program (DEP) を使用して企業所有の iOS デバイスを管理するには、企業は Apple の手順を実行してプログラムに参加し、そのプログラムを使用してデバイスを取得する必要があります。 そのプロセスの詳細については、[https://deploy.apple.com](https://deploy.apple.com) を参照してください。 このプログラムの利点として、各デバイスをコンピューターに USB 接続することなく、デバイスを楽に設定できる点があります。  
 

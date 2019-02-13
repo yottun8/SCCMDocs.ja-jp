@@ -10,16 +10,17 @@ ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 26aff6a374da4c6822943083b24c1a7ac04ee91d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4ff166d93812b07c37c31228ca395f0cfcf94de6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346500"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156959"
 ---
 # <a name="manage-applications-in-system-center-configuration-manager"></a>System Center Configuration Manager でのアプリケーションの管理
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Microsoft Intune または Configuration Manager のオンプレミス デバイス管理でデバイスを管理すると、さらに次のアプリケーションの種類も管理できます。
 - Windows Phone アプリケーション パッケージ (*.xap ファイル)

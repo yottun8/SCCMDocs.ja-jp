@@ -10,16 +10,17 @@ ms.assetid: e36b98c7-d0f4-4dd6-bac3-6a6c4b4bf841
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ee978543248e70182e12a3d6234cfd12be80dc98
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e6055efad94952a7dcd7714cdfb5730289d8dafc
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348584"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136145"
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>Intune による Lookout 統合のトラブルシューティング
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 ## <a name="troubleshoot-login-errors"></a>ログイン エラーのトラブルシューティング
 ### <a name="403-errors"></a>403 エラー
@@ -47,7 +48,7 @@ Azure AD グローバル管理者ユーザーが初期の Lookout セットア�
 これは、次のシナリオのいずれかで発生する可能性があります。
 * このデバイスを所有するユーザーが、**Lookout MTP コンソール**で指定されている**登録グループ**に属していない場合。  **[システム]** モジュールから、**[Intune コネクタ]** タブに移動し、**[登録管理]** 設定を確認します。  1 つ以上の Azure AD グループが登録用に構成されている必要があります。  表示されないデバイスを所有するユーザーが、指定されている Azure AD グループのいずれかのメンバーであることを確認します。  新しいユーザーが登録グループに追加されてから、Lookout MTP コンソールの **[デバイス]** モジュールにデバイスが表示されるようになるまで、最大で構成されているポーリング間隔 (既定値は 5 分) かかります。
 
-* Lookout MTP でデバイスがサポートされていない場合。  サポートされていないデバイスは、Lookout MTP コンソールのコネクタ設定の **[管理対象デバイス]** セクションに表示されます。
+* Lookout MTP でデバイスがサポートされていない場合。  サポートされていないデバイスは、Lookout MTP コンソールのコネクタ設定の **[マネージド デバイス]** セクションに表示されます。
 
 ### <a name="device-continues-to-be-reported-as-pending"></a>デバイスは**保留中**と表示され続ける
 

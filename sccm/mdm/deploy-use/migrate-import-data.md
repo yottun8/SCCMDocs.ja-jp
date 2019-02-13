@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
-ms.openlocfilehash: 26d6f9b928a7acdfbeb6baac3c3ce1c29cc127d9
-ms.sourcegitcommit: d021f82e4bc35a8e9b5d291bf779ce52b4f47eb8
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 46b5034cb95193a07421fe79a445dac0f5b28503
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656460"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124263"
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>Configuration Manager のデータの Microsoft Intune へのインポート 
 
-*適用対象します。System Center Configuration Manager (Current Branch)*    
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*    
 
 [ハイブリッド MDM のユーザーとデバイスを、クラウド専用構成の Intune スタンドアロンに移行する](migrate-hybridmdm-to-intunesa.md)プロセスの推奨される最初のフェーズは、Intune Data Importer ツールを使用することです。 このフェーズをスキップして [Intune でのユーザーの移行を準備する](migrate-prepare-intune.md)フェーズに進むこともできます。 ただし、このツールは、次のフェーズでの時間を大幅に節約できる、次の機能を実行します。  
 

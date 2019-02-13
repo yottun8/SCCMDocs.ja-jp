@@ -10,16 +10,17 @@ ms.assetid: 2bdaa8a7-6a64-4b0e-b617-309dcd912c45
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 198e5b65b85e10a1aa64f06361f1ba425e156662
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8b6d56309238acc2889ac39ab39d5982fb8d535c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32345728"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124440"
 ---
 # <a name="enroll-user-owned-devices-for-hybrid-deployments-with-configuration-manager"></a>Configuration Manager を使用してハイブリッド展開用にユーザー所有のデバイスを登録する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 ユーザー所有のデバイスは、"bring your own devices"、略して "BYOD" と呼ばれるプロセスで登録を行うことで管理対象にすることができます。 これを行うには、ユーザーがポータル サイト アプリをインストールしてデバイス (iOS、macOS、Android) にサインインするか、職場または学校アカウントをデバイスに追加してドメイン (Windows) に参加します。 このプロセスによりデバイスが Intune に登録され、ユーザーが Intune で管理されるリソースにアクセスできるようになり、Intune が PIN の要求などの特定のデバイス設定を管理できるようになります。
 

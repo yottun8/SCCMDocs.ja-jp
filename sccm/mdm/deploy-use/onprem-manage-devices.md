@@ -10,16 +10,17 @@ ms.assetid: 6e233f17-8ead-4984-a3fa-12687c4381ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a189b5467b1c76287e47ef4ad615d4bff7f4de6
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 817e1b3a37ea5e40eb8787b23c56ae69bda8bf19
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32345667"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129512"
 ---
 # <a name="manage-devices-for-on-premises-mobile-device-management"></a>オンプレミス モバイル デバイス管理の対象となるデバイスの管理
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager のオンプレミス モバイル デバイス管理 (MDM) でコンピューターとデバイスを管理できます。 そのためには、Configuration Manager が管理タスク用デバイスと通信できるよう、[デバイスを登録する必要](enroll-devices-on-premises-mdm.md)があります。
 

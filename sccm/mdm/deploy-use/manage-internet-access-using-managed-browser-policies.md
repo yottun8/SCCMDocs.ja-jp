@@ -10,16 +10,17 @@ ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2483a15286a2784f2fb8a4256029004374a313dc
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ede2563adbd517dbcda0a408fa5b9b166e8e3c12
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419786"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129359"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>System Center Configuration Manager での Managed Browser ポリシーを使用したインターネット アクセスの管理
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager では、Intune Managed Browser という Web 閲覧アプリケーションを展開し、アプリケーションを Managed Browser ポリシーに関連付けることができます。 Managed Browser ポリシーは、Managed Browser のユーザーがアクセスできる Web サイトを制限する許可リストまたはブロック リストをセットアップするものです。  
 

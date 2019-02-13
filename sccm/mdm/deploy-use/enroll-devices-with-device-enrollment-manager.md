@@ -10,16 +10,17 @@ ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cc1be1d602c3f9f8e65e0523d64c5b6a8e579c90
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 15ccbb201b7db02f51ccec322e5a320e143d8da3
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415554"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141393"
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>デバイス登録マネージャーと Configuration Manager を使用したデバイスの登録
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 組織は Intune を使用して、単一のユーザー アカウントで多数のモバイル デバイスを管理することができます。 *デバイス登録マネージャー* (DEM) アカウントは、デバイスの登録に使用される特別なユーザー アカウントです。 既存のユーザーを DEM アカウントに追加し、特別な DEM 機能を与えます。 登録される各デバイスは 1 つのライセンスを使用します。 このアカウントで登録したデバイスは、個人用デバイスではなく、ユーザー アフィニティのない共有デバイスとして使用することをお勧めします。  
 

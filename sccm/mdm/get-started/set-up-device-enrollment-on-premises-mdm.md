@@ -10,16 +10,17 @@ ms.assetid: 9ffaea91-1379-4b86-9953-b25e152f56a9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d0424b662df4baba7374685dd7631347501352c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d3b761eac32daf591789a790209e25e62f1ea81d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349084"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121484"
 ---
 # <a name="set-up-device-enrollment-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のデバイス登録の設定
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 ユーザーが System Center Configuration Manager のオンプレミス モバイル デバイス管理に自分のデバイスを登録できるようにするには、そのためのアクセス許可をユーザーに付与する必要があります。 ユーザーにアクセス許可を付与してデバイスを登録するには、以下のタスクを実行します。
 
@@ -45,14 +46,14 @@ ms.locfileid: "32349084"
 5.  [登録プロファイルの作成] で登録プロファイルの名前を入力し、登録プロファイルを持つユーザーが使用する管理サイト コードを選びます。 **[OK]** を何回かクリックして、[既定の設定] ページを終了します。  
 
 > [!NOTE]  
->  検出されたユーザーのサブセットに登録プロファイルを展開する場合は、ユーザーのコレクションを使用し、そのコレクションに展開するためのカスタム クライアント設定を作成できます。 カスタム クライアント設定を作成する方法については、「 [System Center Configuration Manager でクライアント設定を構成する方法](../../core/clients/deploy/configure-client-settings.md)」をご覧ください  
+>  検出されたユーザーのサブセットに登録プロファイルを展開する場合は、ユーザーのコレクションを使用し、そのコレクションに展開するためのカスタム クライアント設定を作成できます。 カスタム クライアント設定を作成する方法については、「 [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md)」をご覧ください。  
 
 ##  <a name="bkmk_addClient"></a> 登録されているデバイスの追加のクライアント設定のセットアップ  
  最新のデバイスの登録プロファイルをセットアップするだけでなく、登録時に、デバイスを構成する他のクライアント設定をセットアップすることができます。  クライアント設定をセットアップする方法については、「[System Center Configuration Manager でクライアント設定を構成する方法](../../core/clients/deploy/configure-client-settings.md)」を参照してください。  
 
  オンプレミス モバイル デバイス管理では使用できないクライアント設定があります。 Configuration Manager の現在のブランチでは、オンプレミス モバイル デバイス管理について、次のクライアント設定がサポートされています。  
 
--   登録 - これらの設定は、管理対象デバイスの登録プロファイルを指定します。 登録プロファイルをセットアップする方法の詳細については、「 [ユーザーが最新のデバイスを登録できるようにするための登録プロファイルを作成する](#bkmk_createProf)」を参照してください。  
+-   登録 - これらの設定は、マネージド デバイスの登録プロファイルを指定します。 登録プロファイルをセットアップする方法の詳細については、「 [ユーザーが最新のデバイスを登録できるようにするための登録プロファイルを作成する](#bkmk_createProf)」を参照してください。  
 
 -   クライアント ポリシー - これらの設定は、デバイスにクライアント ポリシーをダウンロードする頻度を指定します。 また、ポリシーのポーリングを使用した対象ユーザーの設定を有効にすることができます。 クライアント ポリシー設定の詳細については、「[System Center Configuration Manager のクライアント設定について](../../core/clients/deploy/about-client-settings.md)」の「クライアント ポリシー」セクションを参照してください。  
 

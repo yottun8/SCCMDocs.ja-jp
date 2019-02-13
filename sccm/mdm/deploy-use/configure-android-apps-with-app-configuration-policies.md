@@ -10,16 +10,17 @@ ms.assetid: 9126d188-7780-45a4-b21d-7fcf4fad7da2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6f83f26f746c54e3d1defe31df47b3c7c8a7e117
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7d6f8c25902be857e0eec3cd4b969d1fb5bda136
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417950"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136332"
 ---
 # <a name="apply-settings-to-android-for-work-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager でアプリ構成ポリシーを使用し、Android for Work アプリに設定を適用する
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager のアプリ構成ポリシーを使用し、ユーザーがアプリを実行するときに必要となるような設定を配布できます。 たとえば、アプリで次のような詳細の指定がユーザーに要求されます。
 - カスタム ポート番号
@@ -41,7 +42,7 @@ Android アプリ構成ポリシーは、Android for Work を実行している�
 3. アプリ構成ポリシーの作成ウィザードの **[全般]** ページで、ポリシーの次の情報を設定します。
    - **名前**。 ポリシーの一意の名前を入力します。
    - **説明**。 (オプション) ポリシーの識別を簡単にするために、説明を追加できます。
-   -  **構成ポリシーの種類を選択します**。 アプリ構成ポリシーの対象とするプラットフォームを指定します。**Android for Work アプリ構成ポリシー**します。
+   -  **構成ポリシーの種類を選択します**。 アプリ構成ポリシーの対象となるプラットフォームを指定します (**[Android for Work アプリ用の構成ポリシー]**)。
    -  **検索とフィルター処理を向上させるために割り当てたカテゴリ**。 (オプション) カテゴリを作成し、ポリシーに割り当てるには、**[カテゴリ]** を選択します。 カテゴリを利用すると、Configuration Manager コンソールの項目を並べ替えたり、検索したりするときに便利です。
 4. **[Android for Work ポリシー]** ページで、構成ポリシー情報の設定方法を選択します。
    - **名前と値のペアを指定します**。 入れ子を利用しないプロパティ リスト ファイルにこのオプションを利用できます。 名前と値のペアを指定するには

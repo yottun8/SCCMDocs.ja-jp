@@ -10,16 +10,17 @@ ms.assetid: c3cf9f64-c2b9-4ace-9527-2aba6d4eef04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a24edacba97dcce91057e2403585a0843a4b212
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e5d81d385c48d9653e1596e6a5d9d1163e84f314
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424427"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141757"
 ---
 # <a name="install-site-system-roles-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミス モバイル デバイス管理のサイト システムの役割のインストール
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager のオンプレミス モバイル デバイス管理では、Configuration Manager サイト インフラストラクチャに次のサイト システムの役割を必要とします。  
 

@@ -9,16 +9,17 @@ ms.assetid: 7e4ada34-63bf-4b9f-8246-31816aa44196
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 179aae5fdbd8d6c09a34dca6dd01437d5f61f7b8
-ms.sourcegitcommit: 0a4556820fabe004d45a82b0ee1176f6891ac9f0
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b36e98edfffcc26b7fb2670cbfdc31c165331f0f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37949596"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139393"
 ---
 # <a name="enable-lookout-mtd-connection-in-the-intune-admin-console"></a>Intune 管理コンソールで Lookout MTD 接続を有効にする
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 この記事では、Microsoft Intune で Lookout Mobile Threat Defense (MTD) を有効にする方法について説明します。 この手順を実行する前に、Lookout コンソールで Intune コネクタを構成しておきます。 まだ構成していない場合は、「[Lookout デバイス脅威保護のサブスクリプションを設定する](set-up-your-subscription-with-lookout.md)」で説明されている手順を実行します。
 
@@ -46,11 +47,11 @@ ms.locfileid: "37949596"
 
 組織の要件に基づき、有効にする MTD 切り替えオプションを決定できます。 詳細を次に示します。
 
-- **[Connect Android 4.1+ devices to Lookout for Work MTD]\(Android 4.1+ デバイスを Lookout for Work MTD に接続する\)**: このオプションを有効にすると、Android 4.1+ デバイスでセキュリティ リスクを Intune に報告できます。  
-    - **[Mark as noncompliant if no data is received]\(データが受け取られない場合、非準拠としてマークする\)**: このプラットフォームに関するデータを Intune が Lookout から受け取らない場合、デバイスは非準拠として見なされます。  
+- **Connect Android 4.1 + デバイスを Lookout for Work を MTD**:このオプションを有効にすることが Android 4.1 + デバイスを Intune にセキュリティ上のリスクを報告します。  
+    - **データが受信されない場合は、非準拠としてマーク**:Intune が Lookout からこのプラットフォーム上のデバイスに関するデータを受信しない場合、デバイスは準拠していない検討してください。  
 
-- **[Connect iOS 8.0+ devices to Lookout for Work MTD]\(iOS 8.0+ デバイスを Lookout for Work MTD に接続する\)**: このオプションを有効にすると、iOS 8.0+ デバイスでセキュリティ リスクを Intune に報告できます。
-    - **[Mark as noncompliant if no data is received]\(データが受け取られない場合、非準拠としてマークする\)**: このプラットフォームに関するデータを Intune が Lookout から受け取らない場合、デバイスは非準拠として見なされます。  
+- **IOS 8.0 + デバイスを Lookout for Work MTD に接続**:このオプションを有効にすると、iOS 8.0 + デバイスのセキュリティ上のリスクを Intune に報告することできます。
+    - **データが受信されない場合は、非準拠としてマーク**:Intune が Lookout からこのプラットフォーム上のデバイスに関するデータを受信しない場合、デバイスは準拠していない検討してください。  
 
 > [!TIP]  
 > [Mobile Threat Defense] ウィンドウでは、Intune と Lookout の**接続状態**と両者が**前回同期された時刻**を確認できます。

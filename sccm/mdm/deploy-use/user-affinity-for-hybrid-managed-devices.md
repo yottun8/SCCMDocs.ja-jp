@@ -1,7 +1,7 @@
 ---
-title: ハイブリッド管理のデバイス向けユーザー アフィニティ
+title: ハイブリッド マネージド デバイス向けユーザー アフィニティ
 titleSuffix: Configuration Manager
-description: Configuration Manager で管理対象デバイスのユーザー アフィニティを構成します。
+description: Configuration Manager でマネージド デバイスのユーザー アフィニティを構成します。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
@@ -10,20 +10,21 @@ ms.assetid: b5d520a7-e9e5-40ee-91f9-f2684214beb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 11b448d27dbf639eaccf0f41ed97b7961a01adb6
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 54ca57956db37a26e2edad27c6cf6b92aecd1645
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347435"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138910"
 ---
-# <a name="user-affinity-for-hybrid-managed-devices-in-configuration-manager"></a>Configuration Manager でのハイブリッド管理のデバイス向けユーザー アフィニティ
+# <a name="user-affinity-for-hybrid-managed-devices-in-configuration-manager"></a>Configuration Manager でのハイブリッド マネージド デバイス向けユーザー アフィニティ
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
-管理者は企業所有のデバイスのプロファイルを構成するときに、管理対象デバイスに*ユーザー アフィニティ*を設定できるかどうかを指定できます (ユーザー アフィニティはデバイスで特定のユーザーを識別します)。  
+管理者は企業所有のデバイスのプロファイルを構成するときに、マネージド デバイスに*ユーザー アフィニティ*を設定できるかどうかを指定できます (ユーザー アフィニティはデバイスで特定のユーザーを識別します)。  
 
-##  <a name="BKMK_iOSCP"></a> ユーザー アフィニティありの管理対象デバイス  
+##  <a name="BKMK_iOSCP"></a> ユーザー アフィニティありのマネージド デバイス  
  **ユーザー アフィニティ**が構成されているデバイスは、会社のポータル アプリをインストールして実行することにより、アプリをダウンロードしてデバイスを管理できるようになります。 デバイスを受け取ったユーザーは、セットアップ アシスタントを完了して会社ポータル アプリをインストールするために、いくつもの追加の手順を完了する必要があります。  
 
 #### <a name="how-to-enroll-ios-devices-with-user-affinity"></a>ユーザー アフィニティありで iOS デバイスを登録するには  
@@ -48,5 +49,5 @@ ms.locfileid: "32347435"
 
 8.  これで登録が完了します。 このデバイスのすべての機能を使用できるようになります。  
 
-##  <a name="BKMK_noUA"></a> ユーザー アフィニティなしの管理対象デバイス  
+##  <a name="BKMK_noUA"></a> ユーザー アフィニティなしのマネージド デバイス  
  **ユーザー アフィニティなし**で構成されているデバイスは、会社ポータルをサポートしませんので、アプリをインストールしないでください。 会社ポータルは、会社の資格情報を持ち、カスタマイズされた企業リソース (電子メールなど) へのアクセスを必要とするユーザー向けです。 **ユーザー アフィニティなし** で登録されたデバイスは、専用ユーザー サインインのためのデバイスではありません。 キオスク、販売時点管理 (POS)、または共有ユーティリティ デバイスは、ユーザー アフィニティなしで登録されたデバイスの一般的なユース ケースです。 ユーザー アフィニティが必要な場合は、デバイスの登録プロファイルで **[ユーザー アフィニティ]** が選択されていることを確認してから、デバイスを登録します。 デバイスのアフィニティ ステータスを変更するには、デバイスをインベントリから削除してから再登録する必要があります。

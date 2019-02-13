@@ -10,16 +10,17 @@ ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e7f5eefe532c3a0a48bc0703365bf07028bfae71
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a836ec8c15e89a7959db9f10d1329c9182f3998c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419633"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156646"
 ---
 # <a name="add-terms-and-conditions-with-system-center-configuration-manager"></a>System Center Configuration Manager での使用条件の追加
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager の使用条件をユーザー グループに展開すると、デバイスの登録、会社のリソースへのアクセス、会社のポータルの使用によるデバイスとユーザーへの影響を説明できます。 ユーザーは、会社のポータルを使用して登録したり作業にアクセスしたりする前に、使用条件に同意する必要があります。  
 

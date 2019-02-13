@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: 4ded99c2084f274d519680e78fdc54825b3857cb
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: bcd70b708208e2c49a1a7b6fff12d0a1cf5f16f0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419514"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132937"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>MDM 機関を Intune スタンドアロンに変更する
 
-*適用対象します。System Center Configuration Manager (Current Branch)*    
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*    
 
 Configuration Manager コンソール (ハイブリッド MDM) から構成された既存の Microsoft Intune テナントを Intune スタンドアロンに変更できます。 テナント レベルの MDM 機関を Intune に変更するのは、[ハイブリッド MDM のユーザーとデバイスを、クラウド専用構成の Intune スタンドアロンに移行する](migrate-hybridmdm-to-intunesa.md) プロセスの最後のフェーズです。    
 

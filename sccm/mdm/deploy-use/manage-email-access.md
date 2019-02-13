@@ -10,16 +10,17 @@ ms.assetid: fa648e73-5fb8-4818-ab57-7466ffaf888e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f1dbe514e8beca7250b7bfa62a9af7997bf5246c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f976b63b4580b5df9c6e609ff6b361538860c41c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417243"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137645"
 ---
 # <a name="manage-email-access-in-configuration-manager"></a>Configuration Manager での電子メール アクセスを管理します。
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 指定した条件に基づいて Exchange 電子メールへのアクセスを管理する条件付きアクセスを構成マネージャーを使用します。  
 
@@ -124,7 +125,7 @@ Configuration Manager コンソールから、Exchange On-premises の条件付�
 
 - **AAD に登録されている**:Azure Active Directory (社内参加と呼ばれます) とデバイスが登録されます。  
 
-- **準拠している**:デバイスがデプロイしたすべてのコンプライアンス ポリシーに準拠します。  
+- **対応**: デバイスがデプロイしたすべてのコンプライアンス ポリシーに準拠します。  
 
 - **EAS アクティブ化**: iOS および Android デバイスが、Exchange ActiveSync ID が Azure Active Directory でのデバイス登録レコードに関連付けられているが必要です。 これは、ユーザーが検疫電子メールで **[電子メールのアクティブ化]** のリンクをクリックしたときに発生します。  
 

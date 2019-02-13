@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
-ms.openlocfilehash: 79cf4c2ec217a245bb5c4abbad40aad7188e0ac0
-ms.sourcegitcommit: 3772ece83823714b2aae46ec20523cc094701760
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7ede0049847eda2b87731f4cfbce0bda8984f158
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51688467"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120250"
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>特定のユーザー (混在 MDM 機関) の MDM 機関を変更する 
 
-*適用対象します。System Center Configuration Manager (Current Branch)*    
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*    
 
 同じテナントで混在 MDM 機関を構成できます。 一部のユーザーをハイブリッド MDM. でおよびその他の Microsoft Intune の管理します。 この記事では、ユーザーを Intune スタンドアロンに移行を開始する方法について説明します。 これにより、次の手順を完了したことを前提としています。  
 

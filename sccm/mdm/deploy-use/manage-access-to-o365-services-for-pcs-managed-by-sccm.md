@@ -10,12 +10,13 @@ ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8bd926535f56e32430ae41c883623b80d142aebc
-ms.sourcegitcommit: 33e066aceaf321add1031df00e552e942c8351a7
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b45e9f586616a1f620864a6e6dc8d0777a118251
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764431"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122289"
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>System Center Configuration Manager で管理されている PC の O365 サービスへのアクセスを管理する
 
@@ -86,7 +87,7 @@ Microsoft Intune で登録および管理されるデバイスの条件付きア
 
 -   **必要な更新が特定の日数の期限を過ぎている場合、そのすべてをインストール:** ユーザーのデバイスに必要な更新プログラムの展開期限からの猶予期間の値を指定します。 この規則を追加すると、保留中の必要な更新プログラムも自動的にインストールされます。 **必須の自動更新**規則で、必要な更新プログラムを指定します。   
 
--   **BitLocker ドライブ暗号化が必要:** このルールは、場合を確認します。 プライマリ ドライブ (c: たとえば、\\) デバイスは、BitLocker で暗号化されました。 Bitlocker 暗号化がプライマリ デバイスで有効でない場合、電子メール サービスおよび SharePoint サービスへのアクセスがブロックされます。  
+-   **BitLocker ドライブ暗号化が必要:** このルールは、場合を確認します。 プライマリ ドライブ (c: たとえば、\\) デバイスは、BitLocker で暗号化されました。 場合は、電子メールおよび SharePoint サービスへのアクセスのプライマリ デバイスで暗号化が有効でない BitLocker がブロックされます。  
 
 -   **マルウェア対策が必要:** このルールは、System Center Endpoint Protection または Windows Defender が有効にして実行を確認します。 無効な場合、電子メール サービスおよび SharePoint サービスへのアクセスがブロックされます。  
 

@@ -10,18 +10,19 @@ ms.assetid: 9083c571-f4fc-4a78-adc5-8aec84dabcbd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c8e984c6eb76716e031ed793a7753840842f0ea7
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 62db216d2047ee0272c6b3fa226493b5e8af5f84
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584564"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128723"
 ---
 # <a name="manage-access-to-company-resource-based-on-device-network-and-application-risk"></a>デバイス、ネットワーク、アプリケーションのリスクに基づき、会社のリソースへのアクセスを管理する
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
-Lookout によって実施されたリスク評価に基づいて、モバイル デバイスから会社のリソースへのアクセスを制御します。 Lookout は、Microsoft Intune に統合されているデバイス脅威保護ソリューションです。 リスクは、Lookout サービスによって収集されたデータに基づきます。 Lookout は、OS の脆弱性、インストールされている悪意のあるアプリケーション、および悪意のあるネットワーク プロファイルについてのデータを、デバイスから収集します。 
+Lookout によって実施されたリスク評価に基づいて、モバイル デバイスから会社のリソースへのアクセスを制御します。 Lookout は、Microsoft Intune に統合されているデバイス脅威保護ソリューションです。 リスクは、Lookout サービスによって収集されたデータに基づきます。 Lookout は、OS の脆弱性、インストールされている悪意のあるアプリケーション、および悪意のあるネットワーク プロファイルについてのデータを、デバイスから収集します。 
 
 Configuration Manager のコンプライアンス ポリシーによって有効にされた、Lookout がレポートするリスク評価に基づいて、条件付きアクセス ポリシーを構成します。 これらのポリシーは、デバイスを許可したり、デバイスで検出された脅威のために Configuration Manager が非準拠と決定したデバイスをブロックしたりします。
 

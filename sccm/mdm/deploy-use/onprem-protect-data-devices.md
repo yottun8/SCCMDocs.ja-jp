@@ -10,16 +10,17 @@ ms.assetid: 692b86d5-dea7-4414-9e1f-043d2cadfd3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ac369b7797258f847772548c49f5613566ef3d49
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 37a1b1bf6ca1b14933ce03005a5b6b8681ef4db0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353496"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139359"
 ---
 # <a name="protect-data-and-devices-in-on-premises-mobile-device-management"></a>オンプレミス モバイル デバイス管理でのデータとデバイスの保護
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 インフラストラクチャとデータの両方が公開や悪意のある攻撃から保護されるように、ユーザーが組織のリソースに安全にアクセスできるようにします。
 

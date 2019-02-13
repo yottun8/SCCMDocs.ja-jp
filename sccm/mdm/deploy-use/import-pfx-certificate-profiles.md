@@ -10,16 +10,17 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 214dcdca927e515f776e99f005f968a4b98f4112
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e694b81943dda937f1d95765f75f182e072bc7da
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418834"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156908"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-by-importing-certificate-details"></a>証明書の詳細をインポートして PFX 証明書プロファイルを作成する方法
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 
 ここでは、外部証明書から資格情報をインポートして証明書プロファイルを作成する方法を説明します。  
@@ -53,11 +54,11 @@ System Center Configuration Manager では、証明書資格情報をインポ�
 
     -   **名前**:証明書プロファイルの一意の名前を入力します。 最大 256 文字を使用できます。  
 
-    -   **説明**:証明書プロファイルと System Center Configuration Manager コンソールで識別するのに役立つその他の関連する情報の概要を簡単な説明を提供します。 最大 256 文字を使用できます。  
+    -   **説明**:System Center Configuration Manager コンソールで証明書プロファイルを区別しやすくなるように、簡単な説明と他の関連情報を入力します。 最大 256 文字を使用できます。  
 
-    -   **作成する証明書プロファイルの種類を指定**:PFX 証明書の場合に、次のオプションのいずれかを選択します。  
+    -   **作成する証明書プロファイルの種類を指定します**: PFX 証明書の場合に、次のオプションのいずれかを選択します。  
 
-        -   **個人情報交換 PKCS #12 (PFX) 設定--インポート**:プログラムで既存の証明書から情報をインポートして、証明書プロファイルを作成します。  
+        -   **Personal Information Exchange PKCS #12 (PFX) の設定 - インポート**: プログラムで既存の証明書から情報をインポートして、証明書プロファイルを作成します。  
 
         -   **Personal Information Exchange - PKCS #12 (PFX) 設定 - 作成**:証明機関によって提供された資格情報を使用して PFX 証明書プロファイルを作成します。  詳細については、「[System Center Configuration Manager で PFX 証明書プロファイルを作成する方法](../../mdm/deploy-use/create-pfx-certificate-profiles.md)」を参照してください。
 

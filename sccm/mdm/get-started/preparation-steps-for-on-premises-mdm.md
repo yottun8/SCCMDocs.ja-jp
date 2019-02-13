@@ -10,16 +10,17 @@ ms.assetid: 1ef60106-8f31-46d6-95a6-25a6495f22c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 711af365353d68020a7bbbef8026f452d4203ce3
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7b97d30e1d5cc5cdca0cd69e260910c7981d1cec
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346758"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56134216"
 ---
 # <a name="preparation-steps-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミス モバイル デバイス管理の準備手順
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager オンプレミス モバイル デバイス管理でデバイスを管理するには、Configuration Manager インフラストラクチャをセットアップして、必要なサイト システムの役割 (登録プロキシ ポイント、登録ポイント、デバイス管理ポイント、および配布ポイント) が信頼されたチャネル経由で管理対象のモバイル デバイスと通信できるようにする必要があります。\-  
 
@@ -35,7 +36,7 @@ System Center Configuration Manager オンプレミス モバイル デバイス
 
 -   [System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために信頼された通信用の証明書をセットアップする](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)  
 
-     このタスクでは、オンプレミスの Configuration Manager インフラストラクチャを構成して、管理対象のデバイスと、必要なサイト システムの役割をホストするサーバーとの間の信頼できる通信 (HTTPS) を許可します。  
+     このタスクでは、オンプレミスの Configuration Manager インフラストラクチャを構成して、マネージド デバイスと、必要なサイト システムの役割をホストするサーバーとの間の信頼できる通信 (HTTPS) を許可します。  
 
 -   [System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のデバイス登録の設定](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
 

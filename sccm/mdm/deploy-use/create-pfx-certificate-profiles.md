@@ -10,16 +10,17 @@ ms.assetid: d240a836-c49b-49ab-a920-784c062d6748
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a186e0b2c4b355cabcaaeb3b3124b65d3588fbc8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6bbe52a282db016077cb96144938a0d443955f6c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350964"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127441"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-using-a-certificate-authority"></a>証明機関を使用して PFX 証明書プロファイルを作成する方法
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 ここでは、資格情報として証明機関を使用する証明書プロファイルを作成する方法について説明します。
 
@@ -41,9 +42,9 @@ System Center Configuration Manager では、証明機関から発行された�
 
 4.  **[証明書プロファイルの作成]** ウィザードの **[全般]** ページで、次の情報を指定します。  
 
-    -   **名前**: 証明書プロファイルの固有な名前を入力します。 最大 256 文字を使用できます。  
+    -   **名前**:証明書プロファイルの一意の名前を入力します。 最大 256 文字を使用できます。  
 
-    -   **説明**: System Center Configuration Manager コンソールで証明書プロファイルを区別しやすくなるように、簡単な説明と他の関連情報を入力します。 最大 256 文字を使用できます。  
+    -   **説明**:System Center Configuration Manager コンソールで証明書プロファイルを区別しやすくなるように、簡単な説明と他の関連情報を入力します。 最大 256 文字を使用できます。  
 
     -   **[作成する証明書プロファイルの種類を指定します]** で **[Personal Information Exchange -- PKCS #12 (PFX) 設定 -- 作成]** を選択し、ドロップダウン リストから証明機関を選択します。  バージョン 1706 以降は、**[Microsoft]** または **[Entrust]** を選択できるようになりました。
 

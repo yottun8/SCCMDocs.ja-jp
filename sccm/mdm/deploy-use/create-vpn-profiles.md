@@ -10,16 +10,17 @@ ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1c90525b20107cbc926e3775f10d75b7c7083cac
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d7accfe4c329b61c7791bc4b82028d48fdc81931
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424563"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122623"
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager のモバイル デバイスの VPN プロファイル
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Configuration Manager の VPN プロファイルを使用して、VPN 設定を組織内のモバイル デバイス ユーザーに展開します。 これらの設定を展開して、企業ネットワーク上のリソースに接続するために必要なエンド ユーザーの作業を最小化します。  
 
@@ -39,15 +40,15 @@ VPN プロファイルを作成するときに、さまざまなセキュリテ�
  |---------------|---------------|-------|-----------|----------|--------------|-----------------|-----------------------------|  
  |Cisco AnyConnect|○<sup>1</sup>|はい|いいえ|いいえ|いいえ|いいえ|いいえ|
  |Cisco (IPSec)|iOS のみ|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|  
- |Pulse Secure|はい|[はい]|はい|いいえ|はい|[はい]|はい|  
- |F5 Edge Client|はい|[はい]|はい|いいえ|はい|[はい]|はい|  
- |Dell SonicWALL Mobile Connect|はい|[はい]|はい|いいえ|はい|[はい]|はい|  
- |チェック ポイント モバイル VPN|はい|[はい]|はい|いいえ|はい|[はい]|はい|  
- |Microsoft SSL (SSTP)|いいえ|いいえ|はい|[はい]|はい|いいえ|いいえ|  
- |Microsoft 自動|いいえ|いいえ|はい|[はい]|はい|いいえ|はい|  
+ |Pulse Secure|はい|[はい]|[はい]|いいえ|はい|[はい]|はい|  
+ |F5 Edge Client|はい|[はい]|[はい]|いいえ|はい|[はい]|はい|  
+ |Dell SonicWALL Mobile Connect|はい|[はい]|[はい]|いいえ|はい|[はい]|はい|  
+ |チェック ポイント モバイル VPN|はい|[はい]|[はい]|いいえ|はい|[はい]|はい|  
+ |Microsoft SSL (SSTP)|いいえ|いいえ|はい|[はい]|[はい]|いいえ|いいえ|  
+ |Microsoft 自動|いいえ|いいえ|はい|[はい]|[はい]|いいえ|はい|  
  |IKEv2|はい (カスタム ポリシー、iOS 9 以降)|いいえ|はい|[はい]|[はい]|[はい]|はい|  
- |PPTP|はい|いいえ|はい|[はい]|はい|いいえ|はい|  
- |L2TP|はい|いいえ|はい|[はい]|はい|いいえ|はい (OMA-URI)|  
+ |PPTP|はい|いいえ|はい|[はい]|[はい]|いいえ|はい|  
+ |L2TP|はい|いいえ|はい|[はい]|[はい]|いいえ|はい (OMA-URI)|  
 
 <sup>1</sup> バージョン 1802 以降では、Cisco AnyConnect 接続の種類の使用法が異なります。<!--1357393-->  
    - 次のバージョンの VPN プロファイルには **Cisco Legacy AnyConnect** オプションを使用します。
@@ -122,7 +123,7 @@ Windows 10 では、すべての接続の種類に次のオプションを使用
 
      - **ログオンのたびにユーザー資格情報を記憶**:ユーザーが接続するたびに入力する必要があるないように、ユーザーの資格情報は保持されません。  
 
-     - **クライアント認証用のクライアント証明書を選択します**:。以前に作成したクライアント選択[SCEP 証明書](create-pfx-certificate-profiles.md)VPN 接続の認証に使用されます。   
+     - **[クライアント認証用のクライアント証明書の選択]**: 以前に作成したクライアント選択[SCEP 証明書](create-pfx-certificate-profiles.md)VPN 接続の認証に使用されます。   
 
        > [!NOTE]  
        >  iOS デバイスの場合、選択する SCEP プロファイルは VPN プロファイルに埋め込まれます。 その他のプラットフォームでは、証明書が存在しないか準拠していない場合に VPN プロファイルがインストールされないようにする適用規則が追加されます。  

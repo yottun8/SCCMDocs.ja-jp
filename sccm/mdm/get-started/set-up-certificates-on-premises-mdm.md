@@ -10,16 +10,17 @@ ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 391ecbd4ff9f863f41454786e8f8232b31a112a5
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8443430b55ee61e9ad5eeac1e70342dfa6e85851
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418324"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122374"
 ---
 # <a name="set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でのオンプレミスのモバイル デバイス管理のために信頼された通信用の証明書をセットアップする
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 オンプレミスのモバイル デバイス管理の System Center Configuration Manager は、マネージド デバイスとの信頼された通信のために、登録ポイント、登録プロキシ ポイント、配布ポイント、およびデバイス管理ポイントのサイト システムの役割をセットアップする必要があります。 1 つまたは複数のこれらの役割をホストしているサイト システム サーバーには、そのシステムの Web サーバーにバインドされた一意な PKI 証明書が必要です。 サーバーの証明書と同じルートの証明書も、信頼された通信を確立するためにマネージド デバイスに格納されます。  
 
@@ -90,7 +91,7 @@ ms.locfileid: "53418324"
     >   
     >  **証明機関**:**Windows Server 2003**  
     >   
-    >  **証明書の受信者**:**Windows XP/Server 2003**  
+    >  **証明書の受信者**:**Windows XP / Server 2003**  
 
 5.  **[新しいテンプレートのプロパティ]** ダイアログ ボックスの **[全般]** タブで、「**ConfigMgr MDM Web Server**」など、Configuration Manager のサイト システムで使用される Web 証明書を生成するテンプレート名を入力します。  
 

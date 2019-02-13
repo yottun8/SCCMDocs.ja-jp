@@ -10,16 +10,17 @@ ms.assetid: aba688d9-fd5b-4c42-8cb4-f7e1b161ef50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 98b573dcf72f4bbf3cde73cb9a5cd7905b8a0248
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a157e8696a9b4b24acb722be037185351f94ccdc
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417321"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127883"
 ---
 # <a name="manage-mobile-devices-with-system-center-configuration-manager-and-exchange"></a>System Center Configuration Manager と Exchange によるモバイル デバイスの管理
 
-*適用対象します。System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Microsoft Exchange ActiveSync プロトコルを使って Exchange Server (社内またはオンライン) に接続するモバイル デバイスを管理したいけれども、Configuration Manager でそのデバイスを登録できない場合は、System Center Configuration Manager の Exchange Server コネクタを使います。 Configuration Manager コンソールから、複数の Exchange サーバー向けにリモート デバイス ワイプおよび設定コントロールといった、Exchange モバイル デバイス管理機能を構成できます。  
 
@@ -44,7 +45,7 @@ Microsoft Exchange ActiveSync プロトコルを使って Exchange Server (社�
 ## <a name="required-security-permissions"></a>必要なセキュリティのアクセス許可  
  Exchange Server コネクタを構成するには、次のセキュリティのアクセス許可を持っている必要があります。  
 
-- 追加するには、変更、および Exchange Server コネクタを削除します。**変更**に対するアクセス許可、**サイト**オブジェクト。  
+- 追加するには、変更、および Exchange Server コネクタを削除します。**サイト** オブジェクトのアクセス許可の**変更**  
 
 - モバイル デバイスの設定を構成するには。**ModifyConnectorPolicy**に対するアクセス許可、**サイト**オブジェクト。  
 
@@ -52,11 +53,11 @@ Microsoft Exchange ActiveSync プロトコルを使って Exchange Server (社�
 
   モバイル デバイスを管理するには、次のセキュリティのアクセス許可が必要です。  
 
-- モバイル デバイスをワイプするには。**リソースを削除する**の**コレクション**オブジェクト。  
+- モバイル デバイスをワイプするには。**コレクション** オブジェクトの**リソースの削除**。  
 
-- ワイプ コマンドをキャンセルします。**リソースの変更**の**コレクション**オブジェクト。  
+- ワイプ コマンドをキャンセルします。**コレクション** オブジェクトの**リソースの変更**。  
 
-- 許可し、モバイル デバイスをブロックします。**リソースの変更**の**コレクション**オブジェクト。  
+- 許可し、モバイル デバイスをブロックします。**コレクション** オブジェクトの**リソースの変更**。  
 
   **[オペレーション管理者]** のセキュリティの役割には、Exchange Server コネクタを使用してモバイル デバイスを管理するために必要な許可が含まれています。  
 

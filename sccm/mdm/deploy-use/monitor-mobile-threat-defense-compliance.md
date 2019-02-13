@@ -10,16 +10,17 @@ ms.assetid: 408190da-bea6-4122-9dd6-f90155040e88
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 24a066b30d6c220ecb5be8455a3150bd27936da7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cc5b38894155df35812d14397fb0d3aaea79c585
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347537"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122493"
 ---
 # <a name="monitor-mobile-threat-defense-compliance"></a>**Mobile Threat Defense コンプライアンスの監視**
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 ## <a name="to-monitor-the-overall-compliance-status"></a>全体的なコンプライアンス ステータスを監視するには
 
@@ -58,11 +59,11 @@ Mobile Threat Defense のステータスを監視するには、次のように�
 |-|-|-|
 |**説明**| はい | Mobile Threat Defense パートナーによって提供される脅威に関する詳細。 |
 |**最終更新時刻**| はい | Mobile Threat Defense パートナーが Intune に脅威に関する更新済みの詳細情報を最後に送信した時刻。 |
-|**脅威の重要度**| はい | 脅威の重要度は、Mobile Threat Defense パートナー コンソールでの管理者の構成に基づく個々の脅威の定義です。 3 つの値 (**低**、**中**、**高**) のいずれかになります。 |
-|**脅威の状態**| はい | デバイスの脅威の現在の状態。 使用可能な値は、**Active** (アクティブ)、**Resolved** (解決済み)、**Ignored** (無視) です。無視の場合、ユーザーはデバイスの脅威を無視したが、脅威はまだ存在していることを意味します。 |
-|**脅威の種類**| はい | Mobile Threat Defense パートナーの脅威の種類。 使用可能な値: **App** (アプリ)、**File** (ファイル)、**OS** |
+|**脅威の重要度**| はい | 脅威の重要度は、Mobile Threat Defense パートナー コンソールでの管理者の構成に基づく個々の脅威の定義です。 次の 3 つの値の 1 つがあります。**低**、 **Medium**または**高** |
+|**脅威の状態**| はい | デバイスの脅威の現在の状態。 状態があります。**アクティブな**、**解決**または**無視されます。** ユーザーが自分のデバイス上の脅威を無視、脅威がまだ存在することを示します。 |
+|**脅威の種類**| はい | Mobile Threat Defense パートナーの脅威の種類。 使用可能な値:**アプリ**、**ファイル**または**OS** |
 |**AAD アカウント ID**| いいえ | Azure Active Directory の一意の識別子です。 |
-|**分類**| はい | Mobile Threat Defense パートナーにより提供される脅威の分類。 使用可能な値: **Root Enabler, Riskware, Adware, Chargeware, DataLeak, Trojan, Worm, Virus, Exploit, Backdoor, Bot, AppDropper, ClickFraud, Spam, Spyware, SurveillanceWare, Vulnerability, Unknown, Root Jailbrake, Connectivity, TollFraud, SideloadedApp (ルート イネーブラー、リスクウェア、アドウェア、チャージウェア、データのリーク、トロイの木馬、ワーム、ウイルス、エクスプロイト、バックドア、ボット、アプリ ドロッパー、クリック詐欺、スパム、スパイウェア、監視ウェア、脆弱性、不明、root 化/脱獄、接続、料金詐欺、サイドロードされたアプリ)** |
+|**分類**| はい | Mobile Threat Defense パートナーにより提供される脅威の分類。 使用可能な値:**ルート イネーブラー、Riskware、アドウェア、Chargeware DataLeak、トロイの木馬、ワーム、ウイルスを攻撃、バックドア、ボット、AppDropper、ClickFraud、スパム、スパイウェア、SurveillanceWare、脆弱性、不明、Root Jailbrake、接続、TollFraud、SideloadedApp** |
 |**デバイス ID**| いいえ | 脅威にさらされている社内参加済みデバイスに関する情報を示す Azure Active Directory のオブジェクト ID。 |
 |**脅威 ID**| いいえ | Mobile Threat Defense パートナーで生成される脅威の一意の識別子。 脅威 ID は解決方法を追跡するために使用されます。 |
 |**脅威 URL**| いいえ | 脅威 URL がある場合は、特定の脅威の Mobile Threat Defense パートナーの管理コンソール ビューに戻るリンクが示されます。 |
