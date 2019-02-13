@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
-ms.openlocfilehash: ad084aabca6f3b0fd920fd2c9b406efff36005a1
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 0ba5a484fe11185b46125de0d8764bce153f577d
+ms.sourcegitcommit: a2ecd84d93f431ee77848134386fec14031aed6a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43995354"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230853"
 ---
 # <a name="integrate-upgrade-readiness-with-configuration-manager"></a>Upgrade Readiness と Configuration Manager の統合
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Upgrade Readiness は [Windows Analytics](https://docs.microsoft.com/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness) の一部です。 これを使用すると、Windows 10 にアップグレードするため、環境内のデバイスの対応性を評価および分析することができます。 Upgrade Readiness と Configuration Manager を統合することで、Configuration Manager コンソールでクライアントのアップグレードの互換性データにアクセスできます。 次にこのデータを使用してコレクションを作成し、アップグレードまたは修復対象のデバイスを指定します。
 
@@ -50,10 +50,14 @@ Configuration Manager クライアント設定を使用してこれらの設定�
 
 [Azure サービス ウィザード](/sccm/core/servers/deploy/configure/azure-services-wizard)を使用して、Configuration Manager で使用する Azure サービスを構成するプロセスを簡略化します。 Configuration Manager と Upgrade Readiness を接続するには、[Azure portal](https://portal.azure.com) で *[Web アプリ/API]* タイプの Azure Active Directory (Azure AD) アプリ登録を作成します。 アプリ登録の作成方法について詳しくは、「[Azure Active Directory テナントにアプリケーションを登録する](/azure/active-directory/active-directory-app-registration)」をご覧ください。 
 
-Azure portal で、新しく登録した Web アプリに "*共同作成者*" のアクセス許可を付与します。 Upgrade Readiness データをホストする Log Analytics ワークスペースを含むリソース グループに対して、これらのアクセス許可を設定します。 Azure サービス ウィザードは、このアプリ登録を使用して、Configuration Manager が Azure AD と安全に通信し、インフラストラクチャを Upgrade Readiness データに接続できるようにします。
+Azure portal で、新しく登録した Web アプリに次のアクセス許可を付与します。
+- Log Analytics ワークスペースと Upgrade Readiness データを含むリソース グループに対して、"*閲覧者*" アクセス許可
+- Upgrade Readiness データをホストしている Log Analytics ワークスペースに対して、"*共同作成者*" アクセス許可
+
+Azure サービス ウィザードは、このアプリ登録を使用して、Configuration Manager が Azure AD と安全に通信し、インフラストラクチャを Upgrade Readiness データに接続できるようにします。
 
 > [!IMPORTANT]  
-> "*共同作成者*" アクセス許可を、Azure AD ユーザー ID ではなく、アプリ自体に付与します。 Configuration Manager インフラストラクチャの代わりにデータにアクセスするのは、登録済みアプリです。 アクセス許可を与えるには、アクセス許可を割り当てるときに **[ユーザーの追加]** ブレードでアプリ登録名を検索します。 
+> Azure AD ユーザー ID ではなく、アプリ自体にアクセス許可を付与します。 Configuration Manager インフラストラクチャの代わりにデータにアクセスするのは、登録済みアプリです。 アクセス許可を与えるには、アクセス許可を割り当てるときに **[ユーザーの追加]** ブレードでアプリ登録名を検索します。 
 > 
 > このプロセスは、Log Analytics へのアクセス許可を Configuration Manager に提供する場合と同じです。 これらの手順は、*Azure サービス ウィザード*を使用してアプリ登録が Configuration Manager にインポートされる前に完了する必要があります。
 > 

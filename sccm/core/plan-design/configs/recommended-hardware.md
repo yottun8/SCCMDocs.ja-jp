@@ -10,16 +10,17 @@ ms.assetid: 5267f0af-34d3-47a0-9ab8-986c41276e6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 51d3a537fd7aa874fb2662bb6ec15fcfaa2124e5
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b773696d5967d9ed1779ee822168d7177f10f585
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "34474328"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130447"
 ---
 # <a name="recommended-hardware-for-system-center-configuration-manager"></a>System Center Configuration Manager の推奨ハードウェア
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 以下の推奨事項は、サイト、サイト システム、およびクライアントのごく基本的な展開以上のものをサポートするために、System Center Configuration Manager 環境を拡張する場合に役立つガイドラインです。 考えられるすべてのサイトと階層構成について説明することを意図したものではありません。  
 
@@ -101,9 +102,9 @@ ms.locfileid: "34474328"
 
 -   セカンダリ サイトのデータベースには、次のサイズ制限があります。  
 
-    -   SQL Server 2012 Express: 10 GB  
+    -   SQL Server 2012 Express:10 GB  
 
-    -   SQL Server 2014 Express: 10 GB  
+    -   SQL Server 2014 Express:10 GB  
 
 ##  <a name="bkmk_ScaleClient"></a> クライアント  
  このセクションでは、Configuration Manager クライアント ソフトウェアを使用して管理するコンピューター用の推奨ハードウェア構成を示します。  
@@ -113,7 +114,7 @@ ms.locfileid: "34474328"
 
 -   **プロセッサとメモリ:** コンピューターのオペレーティング システムのプロセッサと RAM に関する要件を参照してください。  
 
--   **ディスク領域:** 500 MB の空きディスク領域。Configuration Manager クライアントのキャッシュには、5 GB の空きディスク領域をお勧めします。 次に示すように、カスタマイズした設定を使用して Configuration Manager クライアントをインストールすると、必要とされるディスク領域が少なくなります。  
+-   **ディスク領域:** 500MB の空きディスク領域。Configuration Manager クライアントのキャッシュには、5 GB の空きディスク領域をお勧めします。 次に示すように、カスタマイズした設定を使用して Configuration Manager クライアントをインストールすると、必要とされるディスク領域が少なくなります。  
 
     -   CCMSetup のコマンドライン プロパティ /skipprereq を使用して、クライアントには不要なファイルがインストールされないようにします。 たとえば、クライアントがアプリケーション カタログを使用しない場合は、`CCMSetup.exe /skipprereq:silverlight.exe` を実行します。 Configuration Manager 1802 以降では、Silverlight は自動的にインストールされなくなりました。  
 
@@ -132,7 +133,7 @@ ms.locfileid: "34474328"
 
 -   **ソフトウェア センター:** 500 MHz のプロセッサ  
 
--   **リモート コントロール:** Pentium 4 ハイパー スレッド 3 GHz (シングル コア) または同等の CPU。最適な結果を得るには少なくとも 1 GB の RAM が必要です。  
+-   **リモート コントロール:** Pentium 4 ハイパー スレッド 3 GHz (シングル コア) または同等の CPU。最適な結果を得るには少なくとも 1 GB の RAM が必要です  
 
 ### <a name="client-for-linux-and-unix"></a>Linux および UNIX 用のクライアント  
  以下は、Configuration Manager で管理する Linux および UNIX サーバーの最小要件です。  

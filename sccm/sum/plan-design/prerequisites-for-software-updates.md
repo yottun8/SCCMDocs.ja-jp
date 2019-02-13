@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: cbaaa84b0c4b3c9b05e7ffbae565a7b6da7c7426
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 5ec545fd2ae6c775fbbd0d984dcdd487359ab043
+ms.sourcegitcommit: f7b2fe522134cf102a3447505841cee315d3680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53423883"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570168"
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager でのソフトウェア更新プログラムの前提条件
 
@@ -32,7 +32,8 @@ ms.locfileid: "53423883"
 ### <a name="windows-server-update-services"></a>Windows Server Update Services  
  ソフトウェア更新プログラムの同期と、クライアントでのソフトウェア更新プログラムの適用性スキャンを行うには、Windows Server Update Services (WSUS) が必要です。 WSUS サーバーは、ソフトウェア更新ポイントの役割を作成する前にインストールする必要があります。 ソフトウェアの更新ポイントでは、次のバージョンの WSUS がサポートされています。  
 
--   WSUS 10.0 (Windows Server 2016 における役割)
+-   WSUS 10.0.14393 (Windows Server 2016 における役割)
+-   WSUS 10.0.17763 (Windows Server 2019 における役割) (Configuration Manager 1810 以降が必要)
 -   WSUS 6.2 および 6.3 (Windows Server 2012 および Windows Server 2012 R2 における役割)
 
 >[!NOTE]

@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be1bbc8319a67b4aa2b4c27be9e9bbe6e935d087
-ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
+ms.openlocfilehash: 6870f5100ad4ed929adad3f376b6c2e1bbda15de
+ms.sourcegitcommit: 30c608339dd1fc3ddb4bde01210f8eaeebee400c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072970"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55689561"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1810 の新機能
 
@@ -368,17 +368,14 @@ For more information on changes to the Windows PowerShell cmdlets for Configurat
 
 2019 年 1 月 25 日以降、コンソールで、[Configuration Manager Current Branch バージョン 1810 の更新プログラムのロールアップ](https://support.microsoft.com/help/4486457) (4486457) が利用できるようになりました。
 
-<!-- 
-### Hotfixes
 
-The following additional hotfixes are available to address specific issues:
+### <a name="hotfixes"></a>修正プログラム
 
-| ID | Title | Date | In-console |
+次の追加の修正プログラムは、特定の問題を解決するために利用できます。
+
+| ID | タイトル | 日付 | コンソール内 |
 |---------|---------|---------|---------|
-| [4346645](https://support.microsoft.com/help/4346645) | Update for System Center Configuration Manager version 1806, first wave | 31 August 2018 | Yes | 
-
--->
-
+| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune のコネクタ証明書が Configuration Manager で更新されない | 2019 年 1 月 18 日 | はい |
 
 
 ## <a name="next-steps"></a>次のステップ

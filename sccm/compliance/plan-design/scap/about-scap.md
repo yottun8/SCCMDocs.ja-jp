@@ -2,7 +2,7 @@
 title: SCAP 拡張機能
 titleSuffix: Configuration Manager
 description: Configuration Manager の Security Content Automation Protocol (SCAP) 拡張機能について説明します。
-ms.date: 07/30/2018
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -10,18 +10,25 @@ ms.assetid: a315489d-5e12-46d6-903e-3a35235b72c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0cf248704d49f429bf4ca9dc4ea2be375093f92c
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.openlocfilehash: e42027663f06bff715cb7e9087ececbc421cc495
+ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52259014"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55482454"
 ---
 # <a name="about-the-security-content-automation-protocol-scap-extensions"></a>Security Content Automation Protocol (SCAP) 拡張機能について
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 Configuration Manager の SCAP 拡張機能は、Security Content Automation Protocol (SCAP) に準拠するためにネットワーク環境の分析と評価を実行するのに役立ちます。 SCAP は、米国標準技術研究所 (NIST) によって定義および管理されています。 詳細については、[SCAP プロジェクトの概要](https://csrc.nist.gov/projects/security-content-automation-protocol)を参照してください。
+
+> [!Note]  
+> このバージョンのツールは、バージョン 1806 でのみ利用できるプレリリース機能です。 このバージョンは、NIST に認定されていません。 <!--SCCMDocs-pr issue 3323-->
+> 
+> 認定されたツールが必要な場合、または別のバージョンの Configuration Manager Current Branch を使っている場合は、次のバージョンの SCAP 拡張機能を使います。
+> - [System Center Configuration Manager の SCAP 拡張機能のダウンロード](https://www.microsoft.com/download/details.aspx?id=48741)
+> - [SCAP 拡張機能バージョン 3.0 に関するドキュメント](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/mt228311\(v%3dtechnet.10\))
 
 Configuration Manager の SCAP 拡張機能では、コンプライアンス設定機能を使用して、まず環境内のコンピューターをスキャンします。 次に、United States Government Configuration Baseline (USGCB) へのコンプライアンスのレベルを文書化します。
 
@@ -68,11 +75,11 @@ Configuration Manager の SCAP 拡張機能では、コンプライアンス設�
 
 ## <a name="terms"></a>用語
 
-- **OVAL ID**: 特定の OVAL を定義する識別子であり、OVAL ID の形式に準拠します。  
+- **OVAL ID**:特定の OVAL を定義する識別子であり、OVAL ID の形式に準拠します。  
 
-- **SCAP 結果データ ストリーム**: 出力 (結果) コンテンツを保持する SCAP コンポーネントの集合に SCAP コンポーネント間の参照マッピングが追加されたもの。  
+- **SCAP 結果データ ストリーム**:出力 (結果) コンテンツを保持する SCAP コンポーネントの集合に SCAP コンポーネント間の参照マッピングが追加されたもの。  
 
-- **SCAP ソース データ ストリーム**: 入力 (ソース) コンテンツを保持する SCAP コンポーネントの集合に SCAP コンポーネント間の参照マッピングが追加されたもの。
+- **SCAP ソース データ ストリーム**:入力 (ソース) コンテンツを保持する SCAP コンポーネントの集合に SCAP コンポーネント間の参照マッピングが追加されたもの。
 
 
 

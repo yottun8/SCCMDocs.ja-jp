@@ -10,16 +10,17 @@ ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 437f6e6068fb56f1a906cbb8bea24cd3c707f0e3
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e0c007a2414a68701584967ee21e3cf046e42be3
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350240"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130624"
 ---
 # <a name="how-to-bulk-enroll-devices-with-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager オンプレミス モバイル デバイス管理を使ったデバイスの一括登録の方法
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 
 System Center Configuration Manager のオンプレミス モバイル デバイス管理での一括登録は、ユーザー登録 (デバイスを登録するためにユーザーが資格情報を入力する必要がある) と比較して、より自動化されたデバイスの登録手段です。  一括登録では、登録パッケージを使用して、登録時にデバイスを認証します。 パッケージ (.ppkg ファイル) には、証明書プロファイルが含まれています。また、必要に応じて、登録をサポートするためにデバイスでイントラネット接続が必要な場合には Wi-Fi プロファイルも含まれています。  
@@ -65,9 +66,9 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 >
 > - Configuration Manager の現在のブランチでは、オンプレミス モバイル デバイス管理について、次の Wi-Fi セキュリティのみがサポートされます。  
 >   
->   - セキュリティの種類: **[WPA2 Enterprise]** または **[WPA2 Personal]**  
->   - 暗号化の種類: **[AES]** または **[TKIP]**  
->   - EAP の種類: **[スマート カードまたは他の証明書]** または **[PEAP]**  
+>   - セキュリティの種類:**WPA2 Enterprise**または**WPA2 Personal**  
+>   - 暗号化の種類:**AES**または **[tkip]**  
+>   - EAP の種類: **[スマート カードまたはその他の証明書]** または **[PEAP]**  
 >
 >
 > - Configuration Manager の Wi-Fi プロファイルにはプロキシ サーバー情報の設定がありますが、デバイスの登録時にプロキシは構成されません。 登録済みデバイスでプロキシ サーバーをセットアップする必要がある場合は、デバイスの登録後に構成アイテムを使用して設定を展開するか、Windows イメージングおよび構成デザイナー (ICD) を使用して 2 番目のパッケージを作成し、一括登録パッケージと共に展開することができます。
@@ -150,7 +151,7 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 
 4.  **[設定]** を開きます。  
 
-5.   [アカウント][作業のアクセス]が必要とするサイト システムの役割との間で信頼された通信を行うために必要です。 登録が正常に行われると、 **[企業のアプリ]** の下にアカウントが表示されます。  
+5.  **[アカウント]** > **[作業のアクセス]** が必要とするサイト システムの役割との間で信頼された通信を行うために必要です。 登録が正常に行われると、 **[企業のアプリ]** の下にアカウントが表示されます。  
 
 6.  アカウントをクリックし、**[同期]** をクリックすると、Configuration Manager による管理が開始します。  
 
@@ -159,4 +160,4 @@ System Center Configuration Manager のオンプレミス モバイル デバイ
 
 -   Configuration Manager コンソールを起動します。  
 
--   [資産とコンプライアンス][概要][デバイス]が必要とするサイト システムの役割との間で信頼された通信を行うために必要です。 登録されているデバイスが一覧に表示されます。  
+-   **[資産とコンプライアンス]** > **[概要]** > **[デバイス]** が必要とするサイト システムの役割との間で信頼された通信を行うために必要です。 登録されているデバイスが一覧に表示されます。  

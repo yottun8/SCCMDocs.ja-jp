@@ -10,12 +10,12 @@ ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ce1596a6882b7756339eff3a9bf65a9420a6cec
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: f334c4ec1ef66ba85026da6bc970e34b94b51204
+ms.sourcegitcommit: a2ecd84d93f431ee77848134386fec14031aed6a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424529"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230870"
 ---
 # <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>System Center Configuration Manager でインターネット ベースのクライアント管理を計画する
 
@@ -48,8 +48,8 @@ ms.locfileid: "53424529"
 
   インターネットからの接続を受け付けるように構成したソフトウェアの更新ポイントがある場合は、インターネット上にある Configuration Manager のインターネット ベースのクライアントは、必ずこのソフトウェアの更新ポイントをスキャンして、どのソフトウェア更新プログラムが必要かを判断します。 ただし、これらのクライアントがインターネット上にある場合は、インターネット ベースの配布ポイントからではなく、まず Microsoft Update からソフトウェア更新プログラムをダウンロードしようとします。 Microsoft Update からダウンロードできなかった場合だけ、クライアントに割り当てられているサイトのインターネットベースの配布ポイントからダウンロードします。 インターネット ベースのクライアント管理用に構成されていないクライアントは、Microsoft Update からはソフトウェア更新プログラムをダウンロードせず、常に Configuration Manager の配布ポイントを使用します。  
  
-[!Tip]  
-Configuration Manager クライアントは、イントラネット上にあるか、インターネット上にあるかを自動的に判断します。 クライアントがドメイン コントローラーまたはオンプレミス管理ポイントに接続できる場合、その接続の種類が [現在はイントラネット] に設定されます。 それ以外の場合は [現在はインターネット] に切り替わり、クライアントの通信にはそのサイトに割り当てられている管理ポイント、ソフトウェアの更新ポイント、配布ポイントが使用されます。
+> [!Tip]  
+> Configuration Manager クライアントは、イントラネット上にあるか、インターネット上にあるかを自動的に判断します。 クライアントがドメイン コントローラーまたはオンプレミス管理ポイントに接続できる場合、その接続の種類が [現在はイントラネット] に設定されます。 それ以外の場合は [現在はインターネット] に切り替わり、クライアントの通信にはそのサイトに割り当てられている管理ポイント、ソフトウェアの更新ポイント、配布ポイントが使用されます。
 
 ##  <a name="considerations-for-client-communications-from-the-internet-or-untrusted-forest"></a>インターネットや信頼されていないフォレストからのクライアント通信に関する考慮事項  
  プライマリ サイトにインストールされた次のサイト システムの役割では、インターネットや信頼されていないフォレストなどの信頼されていない場所にあるクライアントからの接続がサポートされます (セカンダリ サイトでは信頼されていない場所からのクライアント接続はサポートされません)。  

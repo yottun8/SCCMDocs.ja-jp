@@ -2,7 +2,7 @@
 title: サポート センター
 titleSuffix: Configuration Manager
 description: サポート センターで Configuration Manager クライアントのトラブルシューティングを行います。
-ms.date: 11/27/2018
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6d9a4df006619278504d3a4967b813aa2989ebf7
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 828edc3c90b4dd93f4d86772b863816bbc8c9130
+ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458121"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55482420"
 ---
 # <a name="support-center-for-configuration-manager"></a>Configuration Manager のサポート センター
 
-*適用対象: System Center Configuration Manager (Current Branch)*
+「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
 
 <!--1357489--> バージョン 1810 以降では、サポート センターを使用して、クライアントをトラブルシューティングしたり、リアルタイムでログを表示したり、後で分析するために Configuration Manager クライアント コンピューターの状態をキャプチャしたりします。 サポート センターは、多くの管理者用トラブルシューティング ツールを統合する 1 つのツールです。 
 
@@ -88,6 +88,8 @@ ms.locfileid: "52458121"
 [New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542) PowerShell コマンドレットを使用してリモート クライアントに接続すると、サポート センターは、各リモート クライアントへのサーバー メッセージ ブロック (SMB) 接続を作成します。 データ収集の完了後、それらの接続が保持されます。 Windows のリモート接続の最大数を超えることを防止するには、`net use` コマンドを使用して、現在アクティブなリモート接続のセットを確認します。 その後、次のコマンドを使用して、不要な接続を無効にします: `net use <connection_name> /d`。 
 ここで、`<connection_name>` はリモート接続の名前です。
 
+#### <a name="application-deployment-evaluation-cycle-request-isnt-sent-correctly-to-remote-machines"></a>アプリケーション展開の評価サイクルの要求がリモート コンピューターに正しく送信されない
+<!--2849356--> サポート センター内で、**[コンテンツ]** タブの **Invoke trigger (トリガーの起動)** アクションから **[アプリケーション展開の評価]** を選択した場合、展開されたアプリケーションを評価するタスクがこのアクションによって起動されます。 ローカル クライアントに接続している場合は、コンピューターとユーザー アプリケーションの展開の両方が評価されます。 ただし、リモート クライアントに接続している場合は、マシンのアプリケーションの展開のみが評価されます。
 
 
 ## <a name="next-steps"></a>次のステップ

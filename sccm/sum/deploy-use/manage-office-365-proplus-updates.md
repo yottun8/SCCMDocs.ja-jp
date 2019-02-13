@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 1fa5646b17646258e4863b3a53960c9c15497389
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 7ef9c7d734c74d578c188576b3b03d66fcb1de06
+ms.sourcegitcommit: f7b2fe522134cf102a3447505841cee315d3680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418188"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570236"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>Configuration Manager での Office 365 ProPlus の管理
 
@@ -108,7 +108,6 @@ Office 365 アプリを展開すると、アプリを維持するための自動
 
 
 ## <a name="deploy-office-365-updates"></a>Office 365 更新プログラムを展開する
-1 週間に複数回実行される、スケジュールされている [Office 365 の自動更新タスク](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus)があります。 Office 365 を最近インストールした場合は、更新チャネルがまだ設定されておらず、更新プログラムのスキャンで適用できる更新プログラムが見つからないことがあります。 テスト目的で、更新タスクを手動で開始することができます。 
 
 Configuration Manager で Office 365 の更新プログラムを展開するには、次の手順を使用します。
 
@@ -133,6 +132,11 @@ Configuration Manager で Office 365 の更新プログラムを展開するに�
 > - Configuration Manager バージョン 1706 以降では、Office 365 のクライアント更新プログラムは **[Office 365 クライアント管理]** > **[Office 365 の更新プログラム]** ノードに移動されています。 この移動による現在の ADR 構成への影響はありません。 
 > - バージョン 1610 より前の Configuration Manager では、Office 365 クライアントに構成されているものと同じ言語の更新プログラムをダウンロードして展開する必要があります。 たとえば、Office 365 クライアントに en-us と de-de の言語を構成しているとします。 サイト サーバーで、適用可能な Office 365 更新プログラムに対して en-us のコンテンツのみをダウンロードして展開します。 ユーザーがソフトウェア センターからこの更新プログラムのインストールを開始すると、更新プログラムは de-de のコンテンツのダウンロード中にハングします。   
 
+> [!NOTE]  
+>
+> Office 365 ProPlus が最近インストールされた場合、そのインストール方法によっては、更新チャネルがまだ設定されていない可能性があります。 その場合、展開された更新プログラムは適用外として検出されます。 Office 365 ProPlus をインストールするときに、[スケジュール済みの自動更新タスク](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus)が作成されます。 この状況では、更新チャネルを設定し、更新プログラムが適用可能として検出されるようにするために、このタスクを少なくとも 1 回実行する必要があります。
+>
+> Office 365 ProPlus が最近インストールされていて、展開された更新プログラムが検出されない場合は、クライアント上で、テストのために Office 自動更新タスクを手動で起動してから、[ソフトウェア更新プログラムの展開評価サイクル](https://docs.microsoft.com/sccm/sum/understand/software-updates-introduction#scan-for-software-updates-compliance-process)を開始できます。 タスク シーケンスでこれを実行する手順について詳しくは、[タスク シーケンスでの Office 365 ProPlus の更新](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#updating-office-365-ProPlus-in-a-task-sequence)に関する記事をご覧ください。
 
 ## <a name="restart-behavior-and-client-notifications-for-office-365-updates"></a>Office 365 の更新プログラムの動作とクライアント通知を再起動する
 Office 365 クライアントに更新プログラムを展開する場合、再起動の動作とクライアント通知は、Configuration Manager のバージョンによって異なります。 次の表では、クライアントが Office 365 の更新プログラムを受け取るときのエンド ユーザーのエクスペリエンスに関する情報を示します。
@@ -185,17 +189,28 @@ Office 365 でサポートされている言語であれば、Configuration Mana
 11. 以後、Office 365 更新プログラムをダウンロードすると、ウィザードで選択した言語およびこの手順で構成した言語の更新プログラムがダウンロードされます。 正しい言語の更新プログラムがダウンロードされたことを確認するには、その更新プログラムのパッケージ ソースにアクセスし、その言語コードを名前に含んだファイルを探します。  
     ![Filenames with additional languages](../media/5-verification.png)
 
-## <a name="updating-office-365-during-task-sequences-when-office-365-is-installed-in-the-base-image"></a>基本イメージに Office 365 がインストールされている場合のタスク シーケンス中の Office 365 の更新
-イメージに Office 365 が既にインストールされているオペレーティング システムをインストールするときに、更新チャネル レジストリ キーの値に元のインストールの場所が含まれている可能性があります。 この場合、更新プログラム スキャンでは、Office 365 クライアントの更新プログラムが適切に表示されません。 1 週間に複数回実行される、スケジュールされている Office 自動更新タスクがあります。 そのタスクが実行されると、更新チャネルは構成済みの Office CDN URL を指し、スキャンでこれらの更新プログラムが適切に表示されます。 <!--510452-->
+## <a name="updating-office-365-proplus-in-a-task-sequence"></a>タスク シーケンスでの Office 365 ProPlus の更新
+Office 365 の更新プログラムをインストールするために[ソフトウェア更新プログラムのインストール](https://docs.microsoft.com/sccm/osd/understand/task-sequence-steps#BKMK_InstallSoftwareUpdates) タスク シーケンスの手順を使う場合、展開された更新プログラムが適用外として検出される可能性があります。  これは、スケジュールされている Office 自動更新タスクが一度も実行されていない場合に発生する可能性があります (「[Office 365 更新プログラムを展開する](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-updates)」の注を参照)。 たとえば、この手順を実行する直前に Office 365 ProPlus をインストールした場合、これが発生する可能性があります。
 
-適切な更新プログラムが見つかるように更新チャネルが設定されていることを確認するには、以下の手順を実行します。
-1. OS 基本イメージと同じバージョンの Office 365 があるコンピューターで、タスク スケジューラ (taskschd.msc) を開き、Office 365 自動更新タスクを特定します。 通常は **[タスク スケジューラ ライブラリ]** >**[Microsoft]**>**[Office]** にあります。
+展開された更新プログラムが正しく検出されるように、更新チャネルを確実に設定するためには、次の方法のいずれかを使います。
+
+**方法 1:**
+1. 同じバージョンの Office 365 ProPlus があるコンピューターで、タスク スケジューラ (taskschd.msc) を開き、Office 365 自動更新タスクを特定します。 通常は **[タスク スケジューラ ライブラリ]** >**[Microsoft]**>**[Office]** にあります。
 2. 自動更新タスクを右クリックして、**[プロパティ]** を選択します。
 3. **[アクション]** タブに移動して、**[編集]** をクリックします。 コマンドとすべての引数をコピーします。 
 4. Configuration Manager コンソールで、タスク シーケンスを編集します。
-5. タスク シーケンスの**更新プログラムのインストール**手順の前に、新しい**コマンド ラインの実行**手順を追加します。 
+5. タスク シーケンスの**ソフトウェア更新プログラムのインストール**手順の前に、新しい**コマンド ラインの実行**手順を追加します。 同じタスク シーケンスの一部として Office 365 ProPlus をインストールする場合は、Office のインストール後にこの手順を実行することを確認します。
 6. Office 自動更新のスケジュールされたタスクから収集した引数とコマンドをコピーします。 
 7. **[OK]** をクリックします。 
+
+**方法 2:**
+1. 同じバージョンの Office 365 ProPlus があるコンピューターで、タスク スケジューラ (taskschd.msc) を開き、Office 365 自動更新タスクを特定します。 通常は **[タスク スケジューラ ライブラリ]** >**[Microsoft]**>**[Office]** にあります。
+2. Configuration Manager コンソールで、タスク シーケンスを編集します。
+3. タスク シーケンスの**ソフトウェア更新プログラムのインストール**手順の前に、新しい**コマンド ラインの実行**手順を追加します。 同じタスク シーケンスの一部として Office 365 ProPlus をインストールする場合は、Office のインストール後にこの手順を実行することを確認します。
+4. コマンド ライン フィールドに、スケジュールされたタスクを実行するコマンド ラインを入力します。 次の例を見て、引用符で囲まれた文字列が手順 1 で特定したタスクのパスおよび名前と一致していることを確認します。  
+
+    例: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates"`
+5. **[OK]** をクリックします。 
 
 ## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>Configuration Manager から更新プログラムを適用できるように Office 365 クライアントを設定した後で更新チャネルを変更する
 Configuration Manager から更新プログラムを適用できるように Office 365 クライアントを設定した後で更新チャネルを変更するには、グループ ポリシーを使用して、レジストリ キー値の変更を Office 365 クライアントに配信します。 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** というレジストリ キーを次のいずれかの値を使用するように変更します。

@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4d892e8d194f61fece977c91ce36ba46cf9dd53d
-ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.openlocfilehash: e1becb8cc719466edabfb55ce82f9aa5e3345e3f
+ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54250716"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55482437"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Configuration Manager のプレリリース機能
 
@@ -78,6 +78,7 @@ ms.locfileid: "54250716"
 | SMS プロバイダー API <!--1359052--> | バージョン 1810 | ![未追加](media/red_x.png) |
 | [拡張 HTTP サイト システム](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | バージョン 1806 | バージョン 1810 |
 | [共同管理デバイス向けのクライアント アプリ](/sccm/comanage/workloads#client-apps) <!--1357892--> | バージョン 1806 | ![未追加](media/red_x.png) |
+| [SCAP 拡張機能](/sccm/compliance/plan-design/scap/about-scap) <!--3607889--> | バージョン 1806 | ![未追加](media/red_x.png) |
 | [パッケージ変換マネージャー](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | バージョン 1806 | バージョン 1810 |
 | [iOS 向け Cisco AnyConnect 4.0.07x 以降のサポート](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | バージョン 1802 | バージョン 1802 <br>更新プログラム 4163547 適用 |
 | [段階的展開](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | バージョン 1802 | バージョン 1806 |

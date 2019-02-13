@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb0d5d1982bb0b109b83f30f1101ddd50316d53e
-ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
+ms.openlocfilehash: 1cc8a2abaf6deff54db569416b91316e23cb4a69
+ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55073035"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55482522"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch のバージョン 1806 の新機能
 
@@ -542,7 +542,7 @@ Configuration Manager 向け Windows PowerShell コマンドレットの変更�
 | [4346645](https://support.microsoft.com/help/4346645) | System Center Configuration Manager バージョン 1806 の更新プログラム (第 1 弾) | 2018 年 8 月 31 日 | はい |
 | [4465865](https://support.microsoft.com/help/4465865) | WSUS が切断された場合、ソフトウェア更新プログラムは Configuration Manager 環境にダウンロードされません<br><br>この更新プログラムは、更新プログラムのロールアップ (4462978) にもあります | 2018 年 10 月 1 日 | はい |
 | [4471892](https://support.microsoft.com/help/4471892) | PXE レスポンダーは、Configuration Manager 1806 のサブネットでは機能しません | 2018 年 11 月 23 日 | いいえ |
-
+| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune のコネクタ証明書が Configuration Manager で更新されない | 2019 年 1 月 18 日 | はい |
 
 
 ## <a name="next-steps"></a>次のステップ

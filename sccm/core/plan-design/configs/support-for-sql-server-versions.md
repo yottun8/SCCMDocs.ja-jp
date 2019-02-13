@@ -10,12 +10,13 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 43093f38a2769c46d3d96a51afbf47f33ed38b51
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5f2d2b10419cec019cc3c0791c7a7aadc016c15b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53423798"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133801"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager のサポートされている SQL Server バージョン
 
@@ -252,7 +253,7 @@ SQL Server サービスで使用されるアカウントを変更する方法に
 レポートを実行できるようにするレポート サービス ポイントをインストールするには、SQL Server Reporting Services が必要です。  
 
 > [!IMPORTANT]  
-> 以前のバージョンから SQL Server をアップグレードした後に、「*Report Builder Does Not Exist*」 (レポート ビルダーが存在しません) というエラーが表示されることがあります。  
+> 以前のバージョンから SQL Server をアップグレードした後に、次のエラーが表示されることがあります:*Report Builder Does Not Exist* (レポート ビルダーが存在しません)。  
 > このエラーを解決するには、レポート サービス ポイント サイト システムの役割を再インストールする必要があります。  
 
 ### <a name="sql-server-ports"></a>SQL Server のポート  

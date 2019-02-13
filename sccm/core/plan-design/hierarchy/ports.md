@@ -2,7 +2,7 @@
 title: 接続に使用するポート
 titleSuffix: Configuration Manager
 description: Configuration Manager が接続に使用する必要なポートとカスタマイズ可能なネットワーク ポートについて説明します。
-ms.date: 09/10/2018
+ms.date: 01/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8338e08ffb6d09299123e363f27e586b650452fe
-ms.sourcegitcommit: 231111a704777789629911369f4d9593d2053fc0
+ms.openlocfilehash: a65b1f30815eca411a64a72b1a35acc9d7dad34c
+ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065101"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55482539"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Configuration Manager で使用されるポート
 
@@ -126,6 +126,10 @@ Configuration Manager では、次の種類の通信用にポートを構成す�
 |-----------------|---------|---------|  
 |Wake On LAN|9 <sup>[注 2](#bkmk_note2) 代替ポートを利用可能</sup>|--|  
 |ウェイクアップ プロキシ|25536 <sup>[注 2](#bkmk_note2) 代替ポートを利用可能</sup>|--|  
+|Windows PE ピア キャッシュのブロードキャスト|8004|--|  
+|Windows PE ピア キャッシュのダウンロード|--|8003|  
+
+詳細については、「[Windows PE ピア キャッシュ](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md#-requirements-for-a-client-to-use-a--windows-pe-peer-cache-source)」をご覧ください。
 
 
 ###  <a name="BKMK_PortsClient-PolicyModule"></a> クライアント -- > Configuration Manager ネットワーク デバイス登録サービス (NDES) ポリシー モジュール   

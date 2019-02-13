@@ -2,7 +2,7 @@
 title: UUP プレビュー
 titleSuffix: Configuration Manager
 description: UUP 統合のプレビューについての説明
-ms.date: 01/25/2019
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 27a960758d8d3939798ae270404d5dd1afbea62d
-ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
+ms.openlocfilehash: fde592b02d78c0a2ab29d77f7e55273c143b09ee
+ms.sourcegitcommit: f7b2fe522134cf102a3447505841cee315d3680c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072987"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570134"
 ---
 # <a name="uup-private-preview-instructions"></a>UUP プライベート プレビューの説明
 
@@ -40,7 +40,9 @@ UUP について詳しくは、Windows に関するブログの投稿「[An upda
 
 ### <a name="cumulative-updates"></a>累積的更新プログラム
 
-UUP の累積的更新プログラムでは、FOD と言語パックの内容をオフラインで配布できます。エンド ユーザーは必要に応じてそれらを取得でき、インターネットへのアクセスや、管理者による面倒なステージング作業は必要ありません。
+- UUP の累積的更新プログラムでは、FOD と言語パックの内容をオフラインで配布できます。エンド ユーザーは必要に応じてそれらを取得でき、インターネットへのアクセスや、管理者による面倒なステージング作業は必要ありません。
+
+- UUP での累積的更新プログラムには、毎月の累積的なセキュリティ更新プログラムと共にサービス スタックの更新プログラムが含まれます。 この動作によって、これら 2 つの更新プログラムの調整に伴う問題が解決されます。 これにより、サービス スタックの更新プログラムがインプレースであることが保証され、ご自分でリレーションシップを管理および調整する必要なく累積的更新プログラムをインストールできます。
 
 
 
@@ -66,9 +68,7 @@ $config.MUUrl
 
 ### <a name="2-update-configmgr"></a>2.ConfigMgr を更新します
 
-環境内の高速インストール ファイルを同期している場合、運用環境では ConfigMgr 1810 の現在のブランチが、ラボ環境では 1812 のテクニカル プレビュー ブランチが必要です。
-
-環境内の高速インストール ファイルを同期していない場合、運用環境ではさらに ConfigMgr 1810 の修正プログラム KB4482615 が、ラボ環境では 1812 のテクニカル プレビュー ブランチが必要です。
+Configuration Manager サイトに以下の変更を加えて、この UUP プレビューをサポートします。
 
 
 #### <a name="diagnostics-and-usage-data-level"></a>診断結果と使用状況データのレベル
