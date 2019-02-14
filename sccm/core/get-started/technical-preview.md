@@ -2,7 +2,7 @@
 title: Technical Preview リリース
 titleSuffix: Configuration Manager
 description: Configuration Manager の新機能を体験する Technical Preview Branch について説明します。
-ms.date: 01/23/2019
+ms.date: 02/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cf432ea32e5946a98b59e158752b3e82cf63b3b3
-ms.sourcegitcommit: b8167a60fd6f2d8387b2db723976c0e2c4198d33
+ms.openlocfilehash: 69fd77df25465910776eb413601efef5d87842aa
+ms.sourcegitcommit: 4317bd20050f582a068d0a813e71c449d655e4b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54832773"
+ms.lasthandoff: 02/09/2019
+ms.locfileid: "55971899"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager の Technical Preview
 
@@ -69,8 +69,8 @@ Configuration Manager の Technical Preview Branch では、次の製品とテ�
 
 -   次のバージョンの **SQL Server** のみをサポートします。  
 
-    -   Configuration Manager バージョン 1710 以降の SQL Server 2017 (累積的な更新プログラム 2 以降適用済み)
-    -   SQL Server 2016 (Service Pack なし、およびそれ以降)
+    -   SQL Server 2017 (累積的な更新プログラム 2 以降) 
+    -   SQL Server 2016 (Service Pack なし、またはそれ以降)
     -   SQL Server 2014 (Service Pack 1 以降)
     -   SQL Server 2012 (Service Pack 3 以降)  
 
@@ -124,30 +124,19 @@ Technical Preview の新機能に関するフィードバックをお寄せく�
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1901"></a>Technical Preview バージョン 1901
+### <a name="technical-preview-version-1902"></a>Technical Preview バージョン 1902
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor)<!--ID-->
 
+- [ダイアログ ウィンドウでトースト通知を置き換える](/sccm/core/get-started/2019/technical-preview-1902#bkmk_impact)<!--3555947-->
+- [インプレース アップグレード タスク シーケンスの進行状況](/sccm/core/get-started/2019/technical-preview-1902#bkmk_ipu)<!--3747129-->
+- [Windows の既知のフォルダーを OneDrive にリダイレクト](/sccm/core/get-started/2019/technical-preview-1902#bkmk_odfb)<!--3556021-->
+- [リモート制御中にのみ最初の画面を表示する](/sccm/core/get-started/2019/technical-preview-1902#bkmk_rcmulti)<!--3231732-->
+- [PowerShell スクリプトの編集またはコピー](/sccm/core/get-started/2019/technical-preview-1902#bkmk_psedit)<!--3705507-->
+- [クラウド管理ゲートウェイを境界グループに追加する](/sccm/core/get-started/2019/technical-preview-1902#bkmk_cmgbg)<!--3640932-->
+- [ソフトウェア センターで既定のビューを構成する](/sccm/core/get-started/2019/technical-preview-1902#bkmk_swctr)<!--3612112-->
+- [クライアントの正常性ダッシュボードの機能強化](/sccm/core/get-started/2019/technical-preview-1902#bkmk_health)<!--3599209-->
 
-- [クライアントの正常性ダッシュボード](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health)<!--3599209-->  
-- [Windows 10 サービスで機能更新プログラムの優先順位を指定する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo)<!--3734525-->  
-- [段階的な展開に対する専用の監視](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod)<!--3555949--> 
-- [中央管理サイトから CMPivot を実行する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot)<!--3610960-->  
-- [PowerShell スクリプトの実行タスク シーケンス ステップの改善](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh)<!--3556028-->  
-- [ライフサイクル ダッシュボードでの Office 製品](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle)<!--3556026-->  
-- [コレクションのマネジメント インサイト規則](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll)<!--3555752-->  
-- [MAC アドレスを使用してデバイス ビューを検索する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac)<!--3600878-->  
-- [配布ポイント メンテナンス モード](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint)<!--3555754-->  
-- [最適化されたイメージ サービス](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase)<!--3555951-->  
-- [OS イメージの 1 つのインデックスをインポートする](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index)<!--3719699--> 
-- [クラウド サービスに Azure Resource Manager を使用する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm)<!--3605704-->  
-- [コンソール フィードバックの確認](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback)<!--3556010--> 
-- [Azure で Configuration Manager Technical Preview ラボを作成する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm)<!--3556017-->  
-- [ピア ウェイクアップ用のカスタム ポートを指定する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep)<!--3605925-->  
-- [最近接続されたコンソールを表示する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console)<!--3699367-->  
-- [しきい値を超えたときにクラウド サービスを停止する](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg)<!--3735092--> 
-- [クライアント プロビジョニング モードのタイムアウト](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov)<!--3197824-->
-- [OS 展開の機能強化](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd)<!--3633146,3641475,3654172,3734270-->
 
 
 > [!Note]  
@@ -166,6 +155,25 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | 機能 | Technical Preview のバージョン | Current Branch のバージョン |  
  |---------|---------------------------|------------------------|
+ | クライアントの正常性ダッシュボード <!--3599209--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health) | ![追加されていません](media/Red_X.gif) | 
+ | Windows 10 サービスで機能更新プログラムの優先順位を指定する <!--3734525--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo) | ![追加されていません](media/Red_X.gif) | 
+ | 段階的な展開に対する専用の監視 <!--3555949--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod) | ![追加されていません](media/Red_X.gif) | 
+ | 中央管理サイトから CMPivot を実行する <!--3610960--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot) | ![追加されていません](media/Red_X.gif) | 
+ | PowerShell スクリプトの実行タスク シーケンス ステップの改善 <!--3556028--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh) | ![追加されていません](media/Red_X.gif) | 
+ | ライフサイクル ダッシュボードでの Office 製品 <!--3556026--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle) | ![追加されていません](media/Red_X.gif) | 
+ | コレクションのマネジメント インサイト規則 <!--3555752--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll) | ![追加されていません](media/Red_X.gif) | 
+ | MAC アドレスを使用してデバイス ビューを検索する <!--3600878--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac) | ![追加されていません](media/Red_X.gif) | 
+ | 配布ポイント メンテナンス モード <!--3555754--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint) | ![追加されていません](media/Red_X.gif) | 
+ | 最適化されたイメージ サービス <!--3555951--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase) | ![追加されていません](media/Red_X.gif) | 
+ | OS イメージの 1 つのインデックスをインポートする <!--3719699--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index) | ![追加されていません](media/Red_X.gif) | 
+ | クラウド サービスに Azure Resource Manager を使用する <!--3605704--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm) | ![追加されていません](media/Red_X.gif) | 
+ | コンソール フィードバックの確認 <!--3556010--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback) | ![追加されていません](media/Red_X.gif) | 
+ | Azure で Configuration Manager Technical Preview ラボを作成する <!--3556017--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm) | ![追加されていません](media/Red_X.gif) | 
+ | ピア ウェイクアップ用のカスタム ポートを指定する <!--3605925--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep) | ![追加されていません](media/Red_X.gif) | 
+ | 最近接続されたコンソールを表示する <!--3699367--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console) | ![追加されていません](media/Red_X.gif) | 
+ | しきい値を超えたときにクラウド サービスを停止する <!--3735092--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg) | ![追加されていません](media/Red_X.gif) | 
+ | クライアント プロビジョニング モードのタイムアウト <!--3197824--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov) | ![追加されていません](media/Red_X.gif) | 
+ | OS 展開の機能強化 <!--3633146,3641475,3654172,3734270--> | [Tech Preview 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd) | ![追加されていません](media/Red_X.gif) | 
  | PowerShell スクリプトの実行タスク シーケンス ステップの改善 <!--3556028 fka 1359389--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_posh) | ![追加されていません](media/Red_X.gif) | 
  | 電子メールを使用したアプリケーション承認の改善 <!--3594063--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_email) | ![追加されていません](media/Red_X.gif) | 
  | ソフトウェア センターでのユーザーとデバイスのアフィニティの構成 <!--3485366--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_uda) | ![追加されていません](media/Red_X.gif) | 
@@ -176,11 +184,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Configuration Manager コンソールの通知 <!--1318035--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | ![追加されていません](media/Red_X.gif) | 
  | タスク シーケンス メディアの作成の改善 <!--1359388--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) | ![追加されていません](media/Red_X.gif) | 
  | PowerShell スクリプトの実行タスク シーケンス ステップの改善 <!--1359389--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_posh) | ![追加されていません](media/Red_X.gif) | 
- | コレクションの評価の機能強化 <!--1358981--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) | バージョン 1810 | 
- | Configuration Manager 管理者の認証 <!--1357013--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_auth) | バージョン 1810 | 
- | ピア キャッシュ ソースのクライアントのバージョンに関するマネジメントの分析情報の規則 <!--1358008--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_insights) | バージョン 1810 | 
- | インターネット ベースのクライアント セットアップの機能強化 <!--1359181--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_cmg) | バージョン 1810 | 
- | アプリケーションを MSIX に変換する <!--1359029--> | [Tech Preview 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_msix) | バージョン 1810 | 
 
 
 

@@ -10,12 +10,12 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 430931e8bfba3f40a8d970b7ae7b97e24d3381ec
-ms.sourcegitcommit: f2a1fa59fb3870a6bebca61daf15c0c157e9fdd6
+ms.openlocfilehash: 78eb7f360230951184ec645b78081b4ff6995984
+ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031024"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986571"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>Configuration Manager の配布ポイントのインストールと構成
 
@@ -409,8 +409,7 @@ PXE を有効にすると、必要に応じて、Configuration Manager がサー
 
 既存の配布ポイント グループに配布ポイントをメンバーとして追加するには、**[追加]** をクリックします。 [配布ポイント グループに追加] ウィンドウで既存のグループを選択し、**[OK]** をクリックします。  
 
-この配布ポイントを配布ポイント グループから削除するには、一覧でグループを選択して **[削除]** をクリックします。  
-
+この配布ポイントを配布ポイント グループから削除するには、一覧でグループを選択して **[削除]** をクリックします。 配布ポイント グループから配布ポイントを削除しても、配布ポイントからコンテンツは削除されません。
 
 ### <a name="bkmk_config-content"></a> コンテンツ  
 

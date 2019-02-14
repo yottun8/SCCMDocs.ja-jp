@@ -10,12 +10,12 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4fdc882d63e7bf7d3189e770f230412f17ca0b63
-ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
+ms.openlocfilehash: ffcb60ff355a67304b057ef2d1b632fb9e0c21dc
+ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53444656"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986537"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Configuration Manager の前提条件の確認の一覧
 
@@ -526,7 +526,7 @@ Configuration Manager では、サイト サーバーのインストールに Ac
 
 バージョン 1810 以降では、サイト データベースに SQL 変更追跡データのバックログがあるかどうかを確認します。<!--SCCMDocs-pr issue 3023-->  
 
-サイト データベースで診断ストアド プロシージャを実行することで、この確認を手動で検証します。 最初に、サイト データベースへの[診断接続](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017)を作成します。 最も簡単な方法は、SQL Server Management Studio クエリ エディターを使用して、`admin:<instance name>` に接続することです。 
+サイト データベースで診断ストアド プロシージャを実行することで、この確認を手動で検証します。 最初に、サイト データベースへの[診断接続](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017)を作成します。 最も簡単な方法は、SQL Server Management Studio のデータベース エンジン クエリ エディターを使用して、`admin:<instance name>` に接続することです。 
 
 専用管理者接続クエリ ウィンドウで、次のコマンドを実行します。
 

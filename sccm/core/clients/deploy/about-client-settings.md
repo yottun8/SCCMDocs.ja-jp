@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c4cd6c45d21c58459fcd23ee02db4b5900996939
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: b272a8988a3e8d2e09b4043c087207e62c59b274
+ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421996"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986588"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>Configuration Manager のクライアント設定について
 
@@ -624,7 +624,7 @@ Configuration Manager バージョン 1806 以降、ソフトウェア センタ
 すべての展開に関して、Configuration Manager によって要件の規則を再評価するスケジュールを構成します。 既定値は 7 日ごとです。  
 
 > [!IMPORTANT]  
->  この値を既定値より小さい値に変更しないでください。 より頻繁にスケジュールを再評価すると、ネットワークとクライアント コンピューターのパフォーマンスが低下します。  
+> これは、ネットワークやサイト サーバーよりもローカル クライアントに対する影響が大きい設定です。 より頻繁にスケジュールを再評価すると、ネットワークとクライアント コンピューターのパフォーマンスが低下します。 Microsoft は、既定よりも低い値を設定することをお勧めしません。 この値を変更した場合は、パフォーマンスをよく監視してください。  
 
 クライアントからこのアクションを開始するには、**[Configuration Manager]** コントロール パネルの **[アクション]** タブで **[アプリケーション展開の評価サイクル]** を選びます。  
 

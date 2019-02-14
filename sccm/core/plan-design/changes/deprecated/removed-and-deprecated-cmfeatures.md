@@ -2,7 +2,7 @@
 title: 非推奨の機能
 titleSuffix: Configuration Manager
 description: Configuration Manager でサポートされなくなった機能について説明します。
-ms.date: 12/21/2018
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 441fb520fcf3e82bd284eb20db44f14cab52224f
-ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
+ms.openlocfilehash: a46f2cb84e447a9b76e812dcb98805e83e31f701
+ms.sourcegitcommit: 38f56f1d5803370f4262931c2dc4a532bfcf0594
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152470"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905633"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager から削除された機能と非推奨の機能
 
@@ -33,7 +33,8 @@ ms.locfileid: "54152470"
 |-----------|---|--------------|  
 |クラウド管理ゲートウェイとクラウドの配布ポイントのための Azure への従来のサービス展開。 詳細については、[CMG の計画](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)に関するページを参照してください。|2018 年 11 月|2019 年 7 月 1 日以降にリリースされる最初のバージョン| 
 |Mac および Linux 用 System Center Endpoint Protection<br>詳しくは、[サポートの終了ブログ投稿](https://go.microsoft.com/fwlink/?linkid=870182)をご覧ください。|2018 年 10 月|2018 年 12 月 31 日|
-|ハイブリッド モバイル デバイス管理。 詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。<!--Intune feature 2683117-->|2018 年 8 月 14 日|2019 年 9 月 1 日|
+|オンプレミスの条件付きアクセス<br>詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。|2019 年 1 月 30 日|2019 年 9 月 1 日|
+|ハイブリッド モバイル デバイス管理 (MDM)<br>詳細については、[ハイブリッド MDM の概要](/sccm/mdm/understand/hybrid-mobile-device-management)に関するページを参照してください。<br><br>2019 年 2 月末に予定されている 1902 Intune サービス リリース以降、新規のお客様は新しいハイブリッド接続を作成できなくなります。<!--Intune feature 2683117-->|2018 年 8 月 14 日|2019 年 9 月 1 日|
 |Configuration Manager における Windows Hello for Business の設定<br>詳細については、[Windows Hello for Business の設定](/sccm/protect/deploy-use/windows-hello-for-business-settings) に関するページを参照してください。|2017 年 12 月|2019 年 11 月 1 日以降にリリースされる最初のバージョン|
 |アプリケーション カタログ Web サイト ポイントの **Silverlight ユーザー エクスペリエンス**は現在サポートされていません。 新しいソフトウェア センターを使う必要があります。 メモ:アプリケーション カタログの Web サイト ポイントの役割と Web サービス ポイントの役割は、引き続きサポートされます。 一部のシナリオでは、新しいソフトウェア センターはアプリケーション カタログ Web サイト ポイントと通信します。 詳細については、「[ソフトウェア センターの構成](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)」をご覧ください。<!--1358309-->|2017 年 8 月 11 日| バージョン 1806|
 |以前のバージョンのソフトウェア センター。<br><br>ソフトウェア センターの詳細については、「[アプリケーション管理の計画と構成](/sccm/apps/plan-design/plan-for-and-configure-application-management##bkmk_userex)」をご覧ください。|2016 年 12 月 13 日|バージョン 1802|
