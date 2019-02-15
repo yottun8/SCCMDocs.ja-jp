@@ -10,16 +10,17 @@ ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 5214723b5679f4a44110329b96d4d5ec3d660673
-ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 60e8121e62a9d82f29d9a5011b197b2929390178
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152385"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127611"
 ---
 # <a name="protect-data-and-site-infrastructure-with-configuration-manager"></a>Configuration Manager でのデータとサイト インフラストラクチャの保護
 
-「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
 インフラストラクチャとデータの両方が公開や悪意のある攻撃から保護されるように、ユーザーが組織のリソースに安全にアクセスできるようにします。 次の記事では、Configuration Manager を使用してアクセスできるようにする方法と、組織のリソースを保護する方法について説明します。  
 

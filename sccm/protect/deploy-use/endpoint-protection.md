@@ -10,12 +10,13 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 160713fe480b0a47c2ad57376c4a1dccdbfb00b1
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1048b24dba0658610471d37f12f75fd1d06b8d03
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418953"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123880"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -111,7 +112,7 @@ Endpoint Protection では Windows Defender Advanced Threat Protection (ATP) を
 2. Web サイトの上部にある **[Downloads and Keys]**(ダウンロードとキー) タブを選択します。
 3. 製品 **System Center Endpoint Protection (Current Branch)** でフィルター処理します。
 4. **[ダウンロード]** リンクをクリックします。
-5. **[続行]** をクリックします。 など、いくつかのファイルが表示されます。**System Center Endpoint Protection (現在のブランチ - バージョン 1606) for Linux OS and Macintosh OS Multilanguage 32/64 bit 1878 MB ISO**します。
+5. **[続行]** をクリックします。 **System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1878 MB ISO** など、複数のファイルが表示されます。
 6. ファイルをダウンロードするには、矢印アイコンをクリックします。 ファイル名は **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-3_EptProt_Lin_Mac_MLF_X21-67050.ISO** です。
 
 2018 年 1 月の更新 (X21-67050) には、次のバージョンが含まれます。

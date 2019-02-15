@@ -10,16 +10,17 @@ ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 81086b01cef3d60af6e0c93d25b2ad937252d4ba
-ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d23fee65cec798440449a00bf8a22d58cc373132
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152402"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133784"
 ---
 # <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Configuration Manager における Windows Hello for Business の設定
 
-「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
 <!--1245704-->Configuration Manager を、Windows 10 デバイスの代替サインイン方法である Windows Hello for Business (旧称: Microsoft Passport for Windows) と統合することができます。 Hello for Business では、パスワード、スマート カード、または仮想スマート カードの代わりに Active Directory または Azure Active Directory アカウントを使用します。 Hello for Business を使用すると、パスワードの代わりに**ユーザー ジェスチャ**を使用してログインできます。 ユーザー ジェスチャには、単純な暗証番号 (PIN)、生体認証、または指紋リーダーなどの外部のデバイスがあります。
 

@@ -10,12 +10,13 @@ ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be8d8e70267630a048d68f1415928a7245b75368
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8c885920fa1e413468d09201ddaecc728ffb7b53
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419412"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135376"
 ---
 # <a name="planning-for-certificate-template-permissions-for-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager の証明書プロファイルに関する証明書テンプレート アクセス許可の計画
 
@@ -35,7 +36,7 @@ ms.locfileid: "53419412"
 
   上記の既定の構成を使うと、ユーザーとデバイスは証明書テンプレートから直接証明書を要求することはできず、すべての要求が、必ず、ネットワーク デバイス登録サービスから発信されるようになります。 この制限は、セキュリティ上、重要なことです。というのは、これらの証明書テンプレートでは、証明書のサブジェクトを **[要求に含まれる]** に構成しなければならないので、権限のないはずのユーザーやデバイスが正規ユーザーになりすまして証明書を要求する可能性があるからです。 既定の構成では、必ず、ネットワーク デバイス登録サービスが要求を開始しなければなりません。 ただし、ネットワーク デバイス登録サービスを実行するサービスが侵害された場合、依然として、このなりすましのリスクがあります。 このリスクを回避するには、ネットワーク デバイス登録サービスおよびこの役割サービスを実行するコンピューターに対する、セキュリティ上のすべてのベスト プラクティスに従ってください。  
 
-  既定のセキュリティ アクセス許可には、ビジネス要件が満たされていない場合、証明書テンプレートのセキュリティのアクセス許可を構成するための別のオプションがあります。ユーザーとコンピューターに証明書テンプレートの読み取りと登録アクセス許可を付与する  
+  既定のセキュリティ アクセス許可のままでは業務上支障がある場合は、ユーザーとコンピューターに、証明書テンプレートの読み取りと登録のアクセス許可を付与するという方法もあります。  
 
 ## <a name="adding-read-and-enroll-permissions-for-users-and-computers"></a>ユーザーとコンピューターに証明書テンプレートの読み取りと登録アクセス許可を付与する  
  ユーザーとコンピューターに読み取りと登録アクセス許可を付与するのは、会社の証明機関 (CA) を管理しているチームが別にあり、そのチームが、ユーザー証明書要求用の証明書プロファイルがユーザーに送信される前に、そのユーザーが Active Directory Domain Services アカウントを持っていることを System Center Configuration Manager で検証したい場合に適しています。 このためには、ユーザーを含む 1 つまたは複数のセキュリティ グループを指定して、これらのグループに証明書テンプレートの読み取りと登録アクセス許可を付与する必要があります。 この場合は、CA 管理者がセキュリティを制御します。  
@@ -54,6 +55,6 @@ ms.locfileid: "53419412"
 
 2.  ドメイン コントローラーから応答がないためアカウントを認証できない場合に、アクセス許可の確認をバイパスするには、次の操作行います。  
 
-    -   証明書登録ポイントをホストするサイト システム サーバーで、次の DWORD レジストリ キー値を 0 に設定して作成します。Hkey_local_machine \software\microsoft\sccm\crp\skiptemplatecheckonlyifaccountaccessdenied  
+    -   証明書登録ポイントをホストするサイト システム サーバーで、次の DWORD レジストリ キー値を 1 に設定して作成します。HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SCCM\CRP\SkipTemplateCheckOnlyIfAccountAccessDenied  
 
 3.  発行元 CA の証明書テンプレートのプロパティの **[セキュリティ]** タブで、ユーザー アカウントまたはデバイス アカウントに読み取りと登録アクセス許可を付与する 1 つまたは複数のセキュリティ グループを追加します。  

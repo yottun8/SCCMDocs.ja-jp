@@ -10,12 +10,13 @@ author: aczechowski
 description: 定義ファイルの更新を自動的に承認するように Windows Server Update Services を構成する方法を説明します。
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: b66c55da65f65c219b5c961949244f105885ba8f
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 74a1dc94a30f56e22b181446422a8b5f99790ffc
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424287"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127628"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>Configuration Manager で Endpoint Protection のマルウェア定義を Windows Server Update Services (WSUS) からダウンロードできるようにする
 
@@ -74,19 +75,19 @@ ms.locfileid: "53424287"
 
 2.  **[更新規則]** タブで **[新しい規則]** をクリックします。
 
-3.  **規則の追加**ダイアログ ボックスで、**手順 1。プロパティを選択します。** を選択、**更新プログラムが特定の分類の場合に**チェック ボックスをオンします。
+3.  **[ルールの追加]** ダイアログ ボックスで、 **[ステップ 1: プロパティを選択します]** を選び、 **[更新が特定の分類に含まれる場合]** チェック ボックスをオンにします。
 
-4.  **手順 2。ステップ 2: プロパティを変更します**で **任意の分類**をクリックします。
+4.  **[ステップ 2: プロパティを変更します]** で **任意の分類**をクリックします。
 
 5.  **[定義ファイルの更新]** 以外のすべてのチェック ボックスをオフにし、 **[OK]** をクリックします。
 
-6.  **規則の追加**ダイアログ ボックスで、**手順 1。プロパティを選択します。** を選択、**更新プログラムが特定の製品の場合に**チェック ボックスをオンします。
+6.  **[ルールの追加]** ダイアログ ボックスで、 **[ステップ 1: プロパティを選択します]** を選び、 **[更新が特定の製品に含まれる場合]** チェック ボックスをオンにします。
 
-7.  **手順 2。ステップ 2: プロパティを変更します**で **任意の製品**をクリックします。
+7.  **[ステップ 2: プロパティを変更します]** で **任意の製品**をクリックします。
 
 8.  Windows 8.1 以前については **[Forefront Endpoint Protection]** 、Windows 10 以降については **[Windows Defender]** 以外のすべてのチェック ボックスをオフにし、 **[OK]** をクリックします。
 
-9. **手順 3。ステップ 3: 名前を指定します**で、規則の名前を入力して **OK**をクリックします。
+9. **[ステップ 3: 名前を指定します]** で、規則の名前を入力して **[OK]** をクリックします。
 
 10. **[自動承認]** ダイアログ ボックスで、新しく作成した規則のチェック ボックスをオンにし、 **[規則の実行]** をクリックします。
 

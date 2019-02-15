@@ -10,12 +10,13 @@ ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5de0ab2eb56ad671a43a6a40fab4e1f4dcc051a4
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4d35ec2f02befec0221a1555be19046d3751b3b9
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424395"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131406"
 ---
 # <a name="how-to-monitor-endpoint-protection-status"></a>Endpoint Protection 状態を監視する方法
 
@@ -58,7 +59,7 @@ ms.locfileid: "53424395"
 ##  <a name="BKMK_3"></a> レポートを使用して Endpoint Protection を監視する方法  
  階層にある Endpoint Protection の情報を表示するには、次のレポートを使用します。 Endpoint Protection に問題があれば、これらのレポートを使用して、トラブルシューティングを行うこともできます。 System Center Configuration Manager でのレポートの構成方法に関して詳しくは、「[System Center Configuration Manager のレポート](../../core/servers/manage/reporting.md)」および「[System Center Configuration Manager のログ ファイル](../../core/plan-design/hierarchy/log-files.md)」を参照してください。 Endpoint Protection レポートは、Endpoint Protection フォルダーにあります。  
 
-|レポート名|説明|  
+|レポート名|[説明]|  
 |-----------------|-----------------|  
 |**マルウェア対策アクティビティ レポート**|指定したコレクションのマルウェア対策アクティビティを表示します。|  
 |**感染したコンピューター**|指定された脅威が検出されたコンピューターの一覧を表示します。|  
@@ -68,7 +69,7 @@ ms.locfileid: "53424395"
 ## <a name="malware-alert-levels"></a>マルウェア アラートのレベル  
  レポートまたは Configuration Manager コンソールに表示される可能性のある Endpoint Protection の各種アラート レベルを、次の表に示します。  
 
-|アラート レベル|説明|  
+|アラート レベル|[説明]|  
 |-----------------|-----------------|  
 |**失敗**|Endpoint Protection がマルウェアの修復に失敗しました。 エラーの詳細については、ログを確認します。<br /><br /> **注:** Configuration Manager および Endpoint Protection のログ ファイルの一覧については、「[System Center Configuration Manager のログ ファイル](../../core/plan-design/hierarchy/log-files.md)」トピックの「Endpoint Protection」セクションを参照してください。|  
 |**削除済み**|Endpoint Protection がマルウェアを正常に削除しました。|  

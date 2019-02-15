@@ -10,16 +10,17 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 783512841b61d6fa10e3f2832100e9000576e65a
-ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 95a5166433ef35b3c2ab7108bfc83a2d403558e0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54316526"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128172"
 ---
 # <a name="configure-certificate-infrastructure"></a>証明書インフラストラクチャの構成
 
-「オブジェクトの*適用対象: System Center Configuration Manager (Current Branch)*
+*適用対象: System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager で証明書インフラストラクチャを構成する方法について説明します。 また、作業を始める前に、「[System Center Configuration Manager での証明書プロファイルの前提条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)」にある前提条件を確認してください。  
 
@@ -42,12 +43,12 @@ System Center Configuration Manager で証明書インフラストラクチャ�
 
         このアクセス許可は、証明書プロファイルの作成ウィザードを実行して、SCEP 設定プロファイルの作成に使用する証明書テンプレートを参照して選択するときに必要です。 証明書テンプレートを選択すると、ウィザードのページに設定値がいくつか自動的に挿入されます。そのため、手動で入力する手間が省けるだけでなく、ネットワーク デバイス登録サービスが使用している証明書テンプレートと適合しない設定を選択する危険性が低くなります。  
 
-   -   ネットワーク デバイス登録サービスのアプリケーション プールで使用する SCEP サービス アカウントの場合:**[読み取り]** および **[登録]** のアクセス許可。  
+   -   ネットワーク デバイス登録サービスのアプリケーション プールで使用する SCEP サービス アカウントの場合:**[読み取り]** および **[登録]** のアクセス許可  
 
         この要件は System Center Configuration Manager に固有ではありませんが、ネットワーク デバイス登録サービスの構成に含まれます。 詳細については、TechNet の Active Directory 証明書サービスの「 [Network Device Enrollment Service Guidance (ネットワーク デバイス登録サービス ガイド)](http://go.microsoft.com/fwlink/p/?LinkId=309016) 」を参照してください。  
 
    > [!TIP]  
-   >  どの証明書テンプレートをネットワーク デバイス登録サービスで使用しているかを調べるには、ネットワーク デバイス登録サービスを実行しているサーバーの次のレジストリ キーを表示します。HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP  
+   >  どの証明書テンプレートをネットワーク デバイス登録サービスで使用しているかを調べるには、ネットワーク デバイス登録サービスを実行しているサーバーの「HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP」というレジストリ キーを開きます。  
 
    > [!NOTE]  
    >  これらは、ほとんどの環境に適した既定のセキュリティ アクセス許可です。 ただし、別のセキュリティ構成を使用することもできます。 詳細については、「[System Center Configuration Manager の証明書プロファイルに関する証明書テンプレート アクセス許可の計画](../../protect/plan-design/planning-for-certificate-template-permissions.md)」を参照してください。  
@@ -69,7 +70,7 @@ System Center Configuration Manager で証明書インフラストラクチャ�
 
    - **MaxRequestBytes** キーを **16777216**に設定します。  
 
-     詳細については、Microsoft サポート技術情報「[820129: Windows 用の Http.sys レジストリ設定](http://go.microsoft.com/fwlink/?LinkId=309013)」を参照してください。  
+     詳細については、Microsoft サポート技術情報の記事「 [820129: Windows 用 Http.sys レジストリ設定](http://go.microsoft.com/fwlink/?LinkId=309013) 」を参照してください。  
 
 6. 同じサーバーでインターネット インフォーメーション サービス (IIS) マネージャーを開き、/certsrv/mscep アプリケーションの要求のフィルタリング設定を変更してサーバーを再起動します。 **[要求フィルター設定の編集]** ダイアログ ボックスの **[要求制限]** 設定は次のように設定されています。  
 
@@ -126,7 +127,7 @@ System Center Configuration Manager の階層に証明書登録ポイントを�
      -   証明書登録ポイントの **[Web サイト名]**、**[HTTPS ポート番号]**、**[仮想アプリケーション名]**。 これらのフィールドには既定値が自動的に入力されます。 
      -   **ネットワーク デバイス登録サービスの URL とルート CA 証明書** - **[追加]** をクリックし、**[URL とルート証明機関証明書の追加]** ダイアログ ボックスで次を指定します。
          - **ネットワーク デバイス登録サービスの URL**: https://*<server_FQDN>*/certsrv/mscep/mscep.dll たとえば、ネットワーク デバイス登録サービスを実行しているサーバーの FQDN が server1.contoso.com の場合は、「**https://server1.contoso.com/certsrv/mscep/mscep.dll**」と入力します。
-         - **ルート CA 証明書**: 次で作成し、保存した証明書 (.cer) ファイルを参照して選択します: **手順 1:ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成する** このルート CA 証明書を使用することで、証明書登録ポイントで、System Center Configuration Manager ポリシー モジュールが使用するクライアント認証証明書を検証できます。  
+         - **ルート CA 証明書**:証明書 (.cer) ファイルを参照して選択します。これは、 **手順 1: ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成する**で作成および保存したファイルです。 このルート CA 証明書を使用することで、証明書登録ポイントで、System Center Configuration Manager ポリシー モジュールが使用するクライアント認証証明書を検証できます。  
 
    - **[PFX 証明書要求を処理する]** を選択した場合、選択した証明書機関の接続詳細と資格情報を構成します。
 
@@ -189,9 +190,9 @@ System Center Configuration Manager の階層に証明書登録ポイントを�
 
 6. **[443]** という既定のポートをそのまま使用するか、証明書登録ポイントが使用する別のポート番号を指定して、**[次へ]** をクリックします。  
 
-7. **[ポリシー モジュールのクライアント証明書]** ページで、「**手順 1: ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成する**」で展開したクライアント認証証明書を参照して指定し、**[次へ]** をクリックします。  
+7. **[ポリシー モジュールのクライアント証明書]** ページで、「 **手順 1: ネットワーク デバイス登録サービスおよび依存する要素をインストールして構成する**」で展開したクライアント認証証明書を参照して指定し、 **[次へ]** をクリックします。  
 
-8. **[証明書登録ポイント証明書]** ページで **[参照]** をクリックし、「**手順 2: 証明書登録ポイントをインストールおよび構成する**」の最後で見つけて保存した、ルート CA にエクスポートされた証明書ファイルを選択します。  
+8. **[証明書登録ポイント証明書]** ページで **[参照]** をクリックし、「 **手順 2: 証明書登録ポイントをインストールおよび構成する**」の最後で見つけて保存した、ルート CA にエクスポートされた証明書ファイルを選択します。  
 
    > [!NOTE]  
    >  この証明書ファイルを以前に保存していない場合は、サイト サーバー コンピューターの <ConfigMgr インストール パス\>\inboxes\certmgr.box にあります。  

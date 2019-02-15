@@ -10,12 +10,13 @@ ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: abae42358e6baba660841eab9443410c0b818428
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 63b52b42a9957ed8728d0942988067fef2be6271
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419259"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129716"
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager でのプロファイルの展開
 
@@ -54,7 +55,7 @@ ms.locfileid: "53419259"
 
     -   **アラートを生成する**: このオプションを有効にすると、プロファイルのコンプライアンスが、指定した日付と時刻までに指定した割合に達しなかった場合に生成されるアラートを構成できます。 アラートを System Center Operations Manager に送信するかどうかも指定できます。  
 
-    -   -   **ランダム遅延 (時間)**: (Simple Certificate Enrollment Protocol 設定を含む証明書プロファイルのみ) - ネットワーク デバイス登録サービスの処理量が多くなりすぎないように、処理を延期できる期間を指定します。 既定値は **64** 時間です。  
+    -   -   **ランダム遅延 (時間)**: (Simple Certificate Enrollment Protocol 設定を含む証明書プロファイルのみ) ネットワーク デバイス登録サービスの処理量が多くなりすぎないように、処理を延期できる期間を指定します。 既定値は **64** 時間です。  
 
     -   **この <type> プロファイルのコンプライアンス評価スケジュールを指定してください**: 展開されたプロファイルをクライアント コンピューターで評価するスケジュールを指定します。 単純なスケジュールとカスタム スケジュールの 2種類あります。  
 

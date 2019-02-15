@@ -10,12 +10,13 @@ ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b6cbee02b0f3eaa34891019e305572f854575b86
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4f7528f15c67e8ce339013db583d545cb252712d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420820"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125665"
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>Windows Defender または Endpoint Protection クライアントのトラブルシューティング
 
@@ -73,7 +74,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 8.  問題が解決しない場合は、次の手順に進みます。  
 
-### <a name="step-2-set-internet-explorer-as-the-default-browser"></a>手順 2:Internet Explorer を既定のブラウザーとして設定する  
+### <a name="step-2-set-internet-explorer-as-the-default-browser"></a>手順 2: Internet Explorer を既定のブラウザーとして設定する  
 
 1.  Internet Explorer を含め、開いているすべてのプログラムを終了します。  
 
@@ -89,7 +90,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 7.  問題が解決しない場合は、次の手順に進みます。  
 
-### <a name="step-3-ensure-that-the-date-and-time-are-set-correctly-on-your-computer"></a>手順 3:コンピューターの日付と時刻が正しく設定されていることを確認する  
+### <a name="step-3-ensure-that-the-date-and-time-are-set-correctly-on-your-computer"></a>手順 3: コンピューターの日付と時刻が正しく設定されていることを確認する  
 
 1.  Windows Defender または Endpoint Protection を開きます。  
 
@@ -97,7 +98,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 3.  コンピューターの日付と時刻の設定を再設定する場合は、「[診断ツール Fix it: デスクトップ アイコンが動かないなど一般的なシステムの問題](http://go.microsoft.com/fwlink/?LinkId=155579)」 (http://go.microsoft.com/fwlink/?LinkId=155579) にある手順に従ってください。  
 
-### <a name="step-4-rename-the-software-distribution-folder-on-your-computer"></a>手順 4:コンピューターにあるソフトウェア配布フォルダーの名前を変更する  
+### <a name="step-4-rename-the-software-distribution-folder-on-your-computer"></a>手順 4: コンピューターにあるソフトウェア配布フォルダーの名前を変更する  
 
 1. 自動更新サービスを停止します。  
 
@@ -125,7 +126,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
     3.  [サービス] スナップイン ウィンドウを閉じます。  
 
-### <a name="step-5-reset-the-microsoft-antivirus-update-engine-on-your-computer"></a>手順 5:コンピューターの Microsoft ウイルス対策更新エンジンをリセットする  
+### <a name="step-5-reset-the-microsoft-antivirus-update-engine-on-your-computer"></a>手順 5: コンピューターの Microsoft ウイルス対策更新エンジンをリセットする  
 
 1.  **[スタート]** をクリックし、  **cmd**を検索して **[OK]** をクリックした後、 **[コマンド プロンプト]** を右クリックし、 **[管理者として実行]** を選びます。  
 
@@ -146,7 +147,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 5.  問題が解決しない場合は、次の手順に進みます。  
 
-### <a name="step-6-manually-install-the-virus-and-spyware-definition-updates"></a>手順 6:ウイルスおよびスパイウェア定義の更新を手動でインストールする  
+### <a name="step-6-manually-install-the-virus-and-spyware-definition-updates"></a>手順 6: ウイルスおよびスパイウェア定義の更新を手動でインストールする  
 
 -   32 ビット Windows オペレーティング システムを実行している場合は、[http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) (http://go.microsoft.com/fwlink/?LinkID=87342) で最新の更新プログラムを手動でダウンロードします。  
 
@@ -155,7 +156,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 -   **[実行]** をクリックします。 最新の更新プログラムが、お使いのコンピューターに手動でインストールされます。  
 
 
-### <a name="step-7-contact-support"></a>手順 7:サポートに問い合わせる  
+### <a name="step-7-contact-support"></a>手順 7: サポートに問い合わせる  
 
 -   これらの手順を実行しても問題が解決しない場合は、サポートにお問い合わせください。 詳細については、「[カスタマー サポート](http://go.microsoft.com/fwlink/?LinkID=196174)」 (http://go.microsoft.com/fwlink/?LinkID=196174) を参照してください。  
 
@@ -170,7 +171,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 -   すべてのアプリケーションを閉じて、コンピューターを再起動します。  
 
-### <a name="step-2-make-sure-the-windows-defender-or-endpoint-protection-service-is-set-to-automatic-and-is-started"></a>手順 2:"Windows Defender" または "Endpoint Protection サービス" が自動に設定され、開始していることを確認する  
+### <a name="step-2-make-sure-the-windows-defender-or-endpoint-protection-service-is-set-to-automatic-and-is-started"></a>手順 2: "Windows Defender" または "Endpoint Protection サービス" が自動に設定され、開始していることを確認する  
 
 1.  **[スタート]** をクリックし、 **services.msc**を検索して、 **Enter**キーを押します。  
 
@@ -182,7 +183,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 5.  このプロセスの間に表示されるエラーは必ずメモしておき、オンラインで問い合わせるときに、そのエラー情報を含めるようにします。  
 
-### <a name="step-3-remove-any-existing-internet-security-programs"></a>手順 3:既存のすべてのインターネット セキュリティ プログラムを削除する  
+### <a name="step-3-remove-any-existing-internet-security-programs"></a>手順 3: 既存のすべてのインターネット セキュリティ プログラムを削除する  
 
 1.  **[スタート]** をクリックし、 **appwiz.cpl**を検索して、 **Enter**キーを押します。  
 
@@ -199,7 +200,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 >       Endpoint Protection のインストールに問題がある場合は、Windows Defender または   
 >       Endpoint Protection サポートにお問い合わせください。このためには、ケース オンラインを送信します (詳細については、「[How to Submit a Case Online](http://www.microsoft.com/en-ph/security_essentials/Support/8c9074b6-1558-4d14-bc39-d294ced11096.aspx)」 (ケース オンラインの送信方法) を参照してください)。  
 
-### <a name="step-4-uninstallreinstall-endpoint-protection"></a>手順 4:Endpoint Protection のアンインストール/再インストール  
+### <a name="step-4-uninstallreinstall-endpoint-protection"></a>手順 4: Endpoint Protection のアンインストール/再インストール  
 
 1.  **[スタート]** をクリックし、 **appwiz.cpl**を検索して、 **Enter**キーを押します。  
 
@@ -220,11 +221,11 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 4.  コンピューターが接続されていない場合は、接続名を右クリックし、 **[接続]**、 **[有効にする]**、 **[認証]**、または **[修復]** をクリックします。  
 
-### <a name="step-3-restart-your-computer"></a>手順 3:コンピューターを再起動する  
+### <a name="step-3-restart-your-computer"></a>手順 3: コンピューターを再起動する  
 
 -   開いているプログラムをすべて閉じて、コンピューターを再起動します。  
 
-### <a name="step-4-if-you-still-cant-connect-to-the-internet-check-your-connections"></a>手順 4:まだインターネットに接続できない場合は、接続を確認する  
+### <a name="step-4-if-you-still-cant-connect-to-the-internet-check-your-connections"></a>手順 4: まだインターネットに接続できない場合は、接続を確認する  
 
 1.  ダイヤルアップ接続を使用している場合は、電話ケーブルが壁のジャックとモデムにしっかり接続されていることを確認します。  
 
@@ -276,7 +277,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 3.  もう一度 Endpoint Protection をインストールします。 これで問題が解決しない場合は、次の手順に進みます。  
 
-### <a name="step-2-ensure-that-the-windows-installer-service-is-running"></a>手順 2:Windows Installer サービスが実行されていることを確認する  
+### <a name="step-2-ensure-that-the-windows-installer-service-is-running"></a>手順 2: Windows インストーラー サービスが実行されていることを確認する  
 
 1.  **[スタート]** をクリックし、 **services.msc**を検索して、 **Enter**キーを押します。  
 
@@ -293,7 +294,7 @@ Windows Defender または Endpoint Protection で問題が発生した場合は
 
 6.  もう一度 Endpoint Protection をインストールします。 これで問題が解決しない場合は、次の手順に進みます。  
 
-### <a name="step-3-start-windows-in-selective-startup-mode"></a>手順 3:Windows をスタートアップのオプションを選択するモードで開始する  
+### <a name="step-3-start-windows-in-selective-startup-mode"></a>手順 3: スタートアップのオプションを選択するモードで Windows を起動する  
 
 1.  **[スタート]** をクリックし、 **msconfig**を検索して、 **Enter**キーを押します。  
 

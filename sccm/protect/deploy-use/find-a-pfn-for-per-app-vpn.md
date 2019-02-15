@@ -10,12 +10,13 @@ ms.assetid: 47118499-3d26-4c25-bfde-b129de7eaa59
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 1228133baca139fb17975f91139a8dedaee9ebe9
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6e578b0f7ff5cf228afa8221be66134fce15e55c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350454"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136128"
 ---
 # <a name="find-a-package-family-name-pfn-for-per-app-vpn"></a>アプリごとの VPN のパッケージ ファミリ名 (PFN) の検索
 
@@ -72,7 +73,7 @@ OneNote について取得された情報を次に示します。
 1.  https://www.microsoft.com/en-us/store/apps に移動します。
 2.  検索バーで、アプリの名前を入力します。 この例では、OneNote を検索します。
 3.  アプリへのリンクをクリックします。 アクセスする URL の末尾には一連の文字が含まれていることに注意してください。 この例では、URL は次のようになります: `https://www.microsoft.com/en-us/store/apps/onenote/9wzdncrfhvjl`
-4.  別のタブに、`https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata` という URL を貼り付けます。ここで `<app id>` を、https://www.microsoft.com/en-us/store/apps から取得したアプリ ID (手順 3 の URL の末尾に含まれる一連の文字) で置き換えます。 ここでの OneNote の例では、次の URL を貼り付けます: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`
+4.  別のタブに、`https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/<app id>/applockerdata` という URL を貼り付けます。ここで `<app id>` を、 https://www.microsoft.com/en-us/store/apps から取得したアプリ ID (手順 3 の URL の末尾に含まれる一連の文字) で置き換えます。 ここでの OneNote の例では、次の URL を貼り付けます: `https://bspmts.mp.microsoft.com/v1/public/catalog/Retail/Products/9wzdncrfhvjl/applockerdata`
 
 Microsoft Edge では、必要な情報が表示されます。Internet Explorer では、**[開く]** をクリックすると情報が表示されます。 PFN 値は 1 行目に記述されています。 この例での結果を次に示します。
 

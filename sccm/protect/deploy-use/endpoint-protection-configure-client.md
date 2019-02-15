@@ -10,12 +10,13 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a7d66f11e67d8623eca696a5c996294a89e7458f
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6669ad415b3c39c805989fd056b68ce7d3bcb24b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420568"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126618"
 ---
 # <a name="configure-custom-client-settings-for-endpoint-protection"></a>Endpoint Protection のカスタム クライアント設定を構成する
 
@@ -95,7 +96,7 @@ Configuration Manager の OS の展開でディスク イメージ ソースと�
 2. コマンド プロンプトを管理者として開きます。 ディレクトリをインストーラーが格納されているフォルダーに変更します。 次に、必要な他のコマンド ライン プロパティを追加して `scepinstall.exe` を実行します。
 
 
-   |  プロパティ   |                                  説明                                   |
+   |  プロパティ   |                                  [説明]                                   |
    |-------------|--------------------------------------------------------------------------------|
    |    `/s`     |                           インストーラーをサイレント モードで実行します                           |
    |    `/q`     |                        セットアップ ファイルをサイレント モードで抽出します                        |
